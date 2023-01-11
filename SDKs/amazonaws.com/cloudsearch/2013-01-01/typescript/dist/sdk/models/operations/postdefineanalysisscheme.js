@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDefineAnalysisSchemeActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDefineAnalysisSchemeResponse = exports.PostDefineAnalysisSchemeRequest = exports.PostDefineAnalysisSchemeHeaders = exports.PostDefineAnalysisSchemeQueryParams = exports.PostDefineAnalysisSchemeVersionEnum = exports.PostDefineAnalysisSchemeActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDefineAnalysisSchemeActionEnum;
 (function (PostDefineAnalysisSchemeActionEnum) {
     PostDefineAnalysisSchemeActionEnum["DefineAnalysisScheme"] = "DefineAnalysisScheme";
-})(PostDefineAnalysisSchemeActionEnum || (PostDefineAnalysisSchemeActionEnum = {}));
-export var PostDefineAnalysisSchemeVersionEnum;
+})(PostDefineAnalysisSchemeActionEnum = exports.PostDefineAnalysisSchemeActionEnum || (exports.PostDefineAnalysisSchemeActionEnum = {}));
+var PostDefineAnalysisSchemeVersionEnum;
 (function (PostDefineAnalysisSchemeVersionEnum) {
     PostDefineAnalysisSchemeVersionEnum["TwoThousandAndThirteen0101"] = "2013-01-01";
-})(PostDefineAnalysisSchemeVersionEnum || (PostDefineAnalysisSchemeVersionEnum = {}));
+})(PostDefineAnalysisSchemeVersionEnum = exports.PostDefineAnalysisSchemeVersionEnum || (exports.PostDefineAnalysisSchemeVersionEnum = {}));
 var PostDefineAnalysisSchemeQueryParams = /** @class */ (function (_super) {
     __extends(PostDefineAnalysisSchemeQueryParams, _super);
     function PostDefineAnalysisSchemeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDefineAnalysisSchemeQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDefineAnalysisSchemeQueryParams.prototype, "version", void 0);
     return PostDefineAnalysisSchemeQueryParams;
-}(SpeakeasyBase));
-export { PostDefineAnalysisSchemeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDefineAnalysisSchemeQueryParams = PostDefineAnalysisSchemeQueryParams;
 var PostDefineAnalysisSchemeHeaders = /** @class */ (function (_super) {
     __extends(PostDefineAnalysisSchemeHeaders, _super);
     function PostDefineAnalysisSchemeHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDefineAnalysisSchemeHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDefineAnalysisSchemeHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDefineAnalysisSchemeHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDefineAnalysisSchemeHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDefineAnalysisSchemeHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDefineAnalysisSchemeHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDefineAnalysisSchemeHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDefineAnalysisSchemeHeaders;
-}(SpeakeasyBase));
-export { PostDefineAnalysisSchemeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDefineAnalysisSchemeHeaders = PostDefineAnalysisSchemeHeaders;
 var PostDefineAnalysisSchemeRequest = /** @class */ (function (_super) {
     __extends(PostDefineAnalysisSchemeRequest, _super);
     function PostDefineAnalysisSchemeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDefineAnalysisSchemeQueryParams)
     ], PostDefineAnalysisSchemeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDefineAnalysisSchemeHeaders)
     ], PostDefineAnalysisSchemeRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDefineAnalysisSchemeRequest.prototype, "request", void 0);
     return PostDefineAnalysisSchemeRequest;
-}(SpeakeasyBase));
-export { PostDefineAnalysisSchemeRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDefineAnalysisSchemeRequest = PostDefineAnalysisSchemeRequest;
 var PostDefineAnalysisSchemeResponse = /** @class */ (function (_super) {
     __extends(PostDefineAnalysisSchemeResponse, _super);
     function PostDefineAnalysisSchemeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDefineAnalysisSchemeResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDefineAnalysisSchemeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDefineAnalysisSchemeResponse.prototype, "statusCode", void 0);
     return PostDefineAnalysisSchemeResponse;
-}(SpeakeasyBase));
-export { PostDefineAnalysisSchemeResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDefineAnalysisSchemeResponse = PostDefineAnalysisSchemeResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TestGridSessionStatusEnum } from "./testgridsessionstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListTestGridSessionsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var testgridsessionstatusenum_1 = require("./testgridsessionstatusenum");
 var ListTestGridSessionsRequest = /** @class */ (function (_super) {
     __extends(ListTestGridSessionsRequest, _super);
     function ListTestGridSessionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTimeAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTimeAfter" }),
         __metadata("design:type", Date)
     ], ListTestGridSessionsRequest.prototype, "creationTimeAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTimeBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTimeBefore" }),
         __metadata("design:type", Date)
     ], ListTestGridSessionsRequest.prototype, "creationTimeBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTimeAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTimeAfter" }),
         __metadata("design:type", Date)
     ], ListTestGridSessionsRequest.prototype, "endTimeAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTimeBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTimeBefore" }),
         __metadata("design:type", Date)
     ], ListTestGridSessionsRequest.prototype, "endTimeBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxResult" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxResult" }),
         __metadata("design:type", Number)
     ], ListTestGridSessionsRequest.prototype, "maxResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListTestGridSessionsRequest.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectArn" }),
         __metadata("design:type", String)
     ], ListTestGridSessionsRequest.prototype, "projectArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ListTestGridSessionsRequest.prototype, "status", void 0);
     return ListTestGridSessionsRequest;
-}(SpeakeasyBase));
-export { ListTestGridSessionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListTestGridSessionsRequest = ListTestGridSessionsRequest;

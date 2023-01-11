@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ErrorModelStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorModel = exports.ErrorModelStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ErrorModelStatusEnum;
 (function (ErrorModelStatusEnum) {
     ErrorModelStatusEnum["Error"] = "error";
-})(ErrorModelStatusEnum || (ErrorModelStatusEnum = {}));
+})(ErrorModelStatusEnum = exports.ErrorModelStatusEnum || (exports.ErrorModelStatusEnum = {}));
 var ErrorModel = /** @class */ (function (_super) {
     __extends(ErrorModel, _super);
     function ErrorModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=api" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=api" }),
         __metadata("design:type", String)
     ], ErrorModel.prototype, "api", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], ErrorModel.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=response" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=response" }),
         __metadata("design:type", String)
     ], ErrorModel.prototype, "response", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ErrorModel.prototype, "status", void 0);
     return ErrorModel;
-}(SpeakeasyBase));
-export { ErrorModel };
+}(utils_1.SpeakeasyBase));
+exports.ErrorModel = ErrorModel;

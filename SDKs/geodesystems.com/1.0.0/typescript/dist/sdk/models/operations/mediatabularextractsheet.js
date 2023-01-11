@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MediaTabularExtractsheetResponse = exports.MediaTabularExtractsheetRequest = exports.MediaTabularExtractsheetQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var MediaTabularExtractsheetQueryParams = /** @class */ (function (_super) {
     __extends(MediaTabularExtractsheetQueryParams, _super);
     function MediaTabularExtractsheetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=arg1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=arg1" }),
         __metadata("design:type", String)
     ], MediaTabularExtractsheetQueryParams.prototype, "arg1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=entryid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=entryid" }),
         __metadata("design:type", String)
     ], MediaTabularExtractsheetQueryParams.prototype, "entryid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=output" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=output" }),
         __metadata("design:type", String)
     ], MediaTabularExtractsheetQueryParams.prototype, "output", void 0);
     return MediaTabularExtractsheetQueryParams;
-}(SpeakeasyBase));
-export { MediaTabularExtractsheetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.MediaTabularExtractsheetQueryParams = MediaTabularExtractsheetQueryParams;
 var MediaTabularExtractsheetRequest = /** @class */ (function (_super) {
     __extends(MediaTabularExtractsheetRequest, _super);
     function MediaTabularExtractsheetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MediaTabularExtractsheetQueryParams)
     ], MediaTabularExtractsheetRequest.prototype, "queryParams", void 0);
     return MediaTabularExtractsheetRequest;
-}(SpeakeasyBase));
-export { MediaTabularExtractsheetRequest };
+}(utils_1.SpeakeasyBase));
+exports.MediaTabularExtractsheetRequest = MediaTabularExtractsheetRequest;
 var MediaTabularExtractsheetResponse = /** @class */ (function (_super) {
     __extends(MediaTabularExtractsheetResponse, _super);
     function MediaTabularExtractsheetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MediaTabularExtractsheetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MediaTabularExtractsheetResponse.prototype, "statusCode", void 0);
     return MediaTabularExtractsheetResponse;
-}(SpeakeasyBase));
-export { MediaTabularExtractsheetResponse };
+}(utils_1.SpeakeasyBase));
+exports.MediaTabularExtractsheetResponse = MediaTabularExtractsheetResponse;

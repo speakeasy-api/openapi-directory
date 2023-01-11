@@ -14,7 +14,6 @@ export declare class GetSandboxSandboxIdRequest extends SpeakeasyBase {
 export declare class GetSandboxSandboxIdResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
-    headers: Map<string, string[]>;
     sandbox?: shared.Sandbox;
     statusCode: number;
 }

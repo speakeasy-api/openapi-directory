@@ -1,5 +1,8 @@
-export var MulticastSupportValueEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MulticastSupportValueEnum = void 0;
+var MulticastSupportValueEnum;
 (function (MulticastSupportValueEnum) {
     MulticastSupportValueEnum["Enable"] = "enable";
     MulticastSupportValueEnum["Disable"] = "disable";
-})(MulticastSupportValueEnum || (MulticastSupportValueEnum = {}));
+})(MulticastSupportValueEnum = exports.MulticastSupportValueEnum || (exports.MulticastSupportValueEnum = {}));

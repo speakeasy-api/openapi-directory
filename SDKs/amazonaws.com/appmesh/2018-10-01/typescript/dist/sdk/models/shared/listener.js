@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HealthCheckPolicy } from "./healthcheckpolicy";
-import { PortMapping } from "./portmapping";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Listener = void 0;
+var utils_1 = require("../../../internal/utils");
+var healthcheckpolicy_1 = require("./healthcheckpolicy");
+var portmapping_1 = require("./portmapping");
 // Listener
 /**
  * An object representing a listener for a virtual node.
@@ -35,13 +38,13 @@ var Listener = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthCheck" }),
-        __metadata("design:type", HealthCheckPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthCheck" }),
+        __metadata("design:type", healthcheckpolicy_1.HealthCheckPolicy)
     ], Listener.prototype, "healthCheck", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portMapping" }),
-        __metadata("design:type", PortMapping)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portMapping" }),
+        __metadata("design:type", portmapping_1.PortMapping)
     ], Listener.prototype, "portMapping", void 0);
     return Listener;
-}(SpeakeasyBase));
-export { Listener };
+}(utils_1.SpeakeasyBase));
+exports.Listener = Listener;

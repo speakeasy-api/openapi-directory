@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AbusiveexperiencereportSitesGetRequest, AbusiveexperiencereportSitesGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,20 +28,20 @@ const sdk = new SDK();
     
 const req: AbusiveexperiencereportSitesGetRequest = {
   pathParams: {
-    name: "vero",
+    name: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "alias",
-    alt: "proto",
-    callback: "itaque",
-    fields: "adipisci",
-    key: "consequatur",
-    oauthToken: "necessitatibus",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "eius",
-    uploadType: "officia",
-    uploadProtocol: "labore",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
 };
 

@@ -1,0 +1,175 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateServiceConversationMessageResponse = exports.UpdateServiceConversationMessageRequest = exports.UpdateServiceConversationMessageSecurity = exports.UpdateServiceConversationMessageUpdateServiceConversationMessageRequest = exports.UpdateServiceConversationMessageHeaders = exports.UpdateServiceConversationMessagePathParams = exports.UpdateServiceConversationMessageServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+exports.UpdateServiceConversationMessageServerList = [
+    "https://conversations.twilio.com",
+];
+var UpdateServiceConversationMessagePathParams = /** @class */ (function (_super) {
+    __extends(UpdateServiceConversationMessagePathParams, _super);
+    function UpdateServiceConversationMessagePathParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ChatServiceSid" }),
+        __metadata("design:type", String)
+    ], UpdateServiceConversationMessagePathParams.prototype, "chatServiceSid", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ConversationSid" }),
+        __metadata("design:type", String)
+    ], UpdateServiceConversationMessagePathParams.prototype, "conversationSid", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=Sid" }),
+        __metadata("design:type", String)
+    ], UpdateServiceConversationMessagePathParams.prototype, "sid", void 0);
+    return UpdateServiceConversationMessagePathParams;
+}(utils_1.SpeakeasyBase));
+exports.UpdateServiceConversationMessagePathParams = UpdateServiceConversationMessagePathParams;
+var UpdateServiceConversationMessageHeaders = /** @class */ (function (_super) {
+    __extends(UpdateServiceConversationMessageHeaders, _super);
+    function UpdateServiceConversationMessageHeaders() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Twilio-Webhook-Enabled" }),
+        __metadata("design:type", String)
+    ], UpdateServiceConversationMessageHeaders.prototype, "xTwilioWebhookEnabled", void 0);
+    return UpdateServiceConversationMessageHeaders;
+}(utils_1.SpeakeasyBase));
+exports.UpdateServiceConversationMessageHeaders = UpdateServiceConversationMessageHeaders;
+var UpdateServiceConversationMessageUpdateServiceConversationMessageRequest = /** @class */ (function (_super) {
+    __extends(UpdateServiceConversationMessageUpdateServiceConversationMessageRequest, _super);
+    function UpdateServiceConversationMessageUpdateServiceConversationMessageRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=Attributes;" }),
+        __metadata("design:type", String)
+    ], UpdateServiceConversationMessageUpdateServiceConversationMessageRequest.prototype, "attributes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=Author;" }),
+        __metadata("design:type", String)
+    ], UpdateServiceConversationMessageUpdateServiceConversationMessageRequest.prototype, "author", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=Body;" }),
+        __metadata("design:type", String)
+    ], UpdateServiceConversationMessageUpdateServiceConversationMessageRequest.prototype, "body", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=DateCreated;" }),
+        __metadata("design:type", Date)
+    ], UpdateServiceConversationMessageUpdateServiceConversationMessageRequest.prototype, "dateCreated", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=DateUpdated;" }),
+        __metadata("design:type", Date)
+    ], UpdateServiceConversationMessageUpdateServiceConversationMessageRequest.prototype, "dateUpdated", void 0);
+    return UpdateServiceConversationMessageUpdateServiceConversationMessageRequest;
+}(utils_1.SpeakeasyBase));
+exports.UpdateServiceConversationMessageUpdateServiceConversationMessageRequest = UpdateServiceConversationMessageUpdateServiceConversationMessageRequest;
+var UpdateServiceConversationMessageSecurity = /** @class */ (function (_super) {
+    __extends(UpdateServiceConversationMessageSecurity, _super);
+    function UpdateServiceConversationMessageSecurity() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=basic" }),
+        __metadata("design:type", shared.SchemeAccountSidAuthToken)
+    ], UpdateServiceConversationMessageSecurity.prototype, "accountSidAuthToken", void 0);
+    return UpdateServiceConversationMessageSecurity;
+}(utils_1.SpeakeasyBase));
+exports.UpdateServiceConversationMessageSecurity = UpdateServiceConversationMessageSecurity;
+var UpdateServiceConversationMessageRequest = /** @class */ (function (_super) {
+    __extends(UpdateServiceConversationMessageRequest, _super);
+    function UpdateServiceConversationMessageRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], UpdateServiceConversationMessageRequest.prototype, "serverURL", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", UpdateServiceConversationMessagePathParams)
+    ], UpdateServiceConversationMessageRequest.prototype, "pathParams", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", UpdateServiceConversationMessageHeaders)
+    ], UpdateServiceConversationMessageRequest.prototype, "headers", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        __metadata("design:type", UpdateServiceConversationMessageUpdateServiceConversationMessageRequest)
+    ], UpdateServiceConversationMessageRequest.prototype, "request", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", UpdateServiceConversationMessageSecurity)
+    ], UpdateServiceConversationMessageRequest.prototype, "security", void 0);
+    return UpdateServiceConversationMessageRequest;
+}(utils_1.SpeakeasyBase));
+exports.UpdateServiceConversationMessageRequest = UpdateServiceConversationMessageRequest;
+var UpdateServiceConversationMessageResponse = /** @class */ (function (_super) {
+    __extends(UpdateServiceConversationMessageResponse, _super);
+    function UpdateServiceConversationMessageResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], UpdateServiceConversationMessageResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], UpdateServiceConversationMessageResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.ConversationsV1ServiceServiceConversationServiceConversationMessage)
+    ], UpdateServiceConversationMessageResponse.prototype, "conversationsV1ServiceServiceConversationServiceConversationMessage", void 0);
+    return UpdateServiceConversationMessageResponse;
+}(utils_1.SpeakeasyBase));
+exports.UpdateServiceConversationMessageResponse = UpdateServiceConversationMessageResponse;

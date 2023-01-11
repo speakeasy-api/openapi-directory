@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ScoutingTag } from "./scoutingtag";
-export var ScoutingObservationLocationDisplayColorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScoutingObservation = exports.ScoutingObservationTimespanEnum = exports.ScoutingObservationStatusEnum = exports.ScoutingObservationLocationDisplayColorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var scoutingtag_1 = require("./scoutingtag");
+var ScoutingObservationLocationDisplayColorEnum;
 (function (ScoutingObservationLocationDisplayColorEnum) {
     ScoutingObservationLocationDisplayColorEnum["Number307af7"] = "#307af7";
     ScoutingObservationLocationDisplayColorEnum["Number38d753"] = "#38d753";
@@ -33,70 +36,70 @@ export var ScoutingObservationLocationDisplayColorEnum;
     ScoutingObservationLocationDisplayColorEnum["NumberF7ec41"] = "#f7ec41";
     ScoutingObservationLocationDisplayColorEnum["NumberFf8439"] = "#ff8439";
     ScoutingObservationLocationDisplayColorEnum["Number808080"] = "#808080";
-})(ScoutingObservationLocationDisplayColorEnum || (ScoutingObservationLocationDisplayColorEnum = {}));
-export var ScoutingObservationStatusEnum;
+})(ScoutingObservationLocationDisplayColorEnum = exports.ScoutingObservationLocationDisplayColorEnum || (exports.ScoutingObservationLocationDisplayColorEnum = {}));
+var ScoutingObservationStatusEnum;
 (function (ScoutingObservationStatusEnum) {
     ScoutingObservationStatusEnum["Active"] = "ACTIVE";
     ScoutingObservationStatusEnum["Deleted"] = "DELETED";
-})(ScoutingObservationStatusEnum || (ScoutingObservationStatusEnum = {}));
-export var ScoutingObservationTimespanEnum;
+})(ScoutingObservationStatusEnum = exports.ScoutingObservationStatusEnum || (exports.ScoutingObservationStatusEnum = {}));
+var ScoutingObservationTimespanEnum;
 (function (ScoutingObservationTimespanEnum) {
     ScoutingObservationTimespanEnum["Permanent"] = "PERMANENT";
     ScoutingObservationTimespanEnum["Seasonal"] = "SEASONAL";
-})(ScoutingObservationTimespanEnum || (ScoutingObservationTimespanEnum = {}));
+})(ScoutingObservationTimespanEnum = exports.ScoutingObservationTimespanEnum || (exports.ScoutingObservationTimespanEnum = {}));
 var ScoutingObservation = /** @class */ (function (_super) {
     __extends(ScoutingObservation, _super);
     function ScoutingObservation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Date)
     ], ScoutingObservation.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldIds" }),
         __metadata("design:type", Array)
     ], ScoutingObservation.prototype, "fieldIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ScoutingObservation.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", Object)
     ], ScoutingObservation.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationDisplayColor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationDisplayColor" }),
         __metadata("design:type", String)
     ], ScoutingObservation.prototype, "locationDisplayColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=note" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=note" }),
         __metadata("design:type", String)
     ], ScoutingObservation.prototype, "note", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], ScoutingObservation.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ScoutingObservation.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: ScoutingTag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: scoutingtag_1.ScoutingTag }),
         __metadata("design:type", Array)
     ], ScoutingObservation.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timespan" }),
         __metadata("design:type", String)
     ], ScoutingObservation.prototype, "timespan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], ScoutingObservation.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], ScoutingObservation.prototype, "updatedAt", void 0);
     return ScoutingObservation;
-}(SpeakeasyBase));
-export { ScoutingObservation };
+}(utils_1.SpeakeasyBase));
+exports.ScoutingObservation = ScoutingObservation;

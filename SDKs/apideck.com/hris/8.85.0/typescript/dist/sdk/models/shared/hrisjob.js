@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,63 +23,65 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var HrisJobEmploymentStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HrisJob = exports.HrisJobLocation = exports.HrisJobEmploymentStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var HrisJobEmploymentStatusEnum;
 (function (HrisJobEmploymentStatusEnum) {
     HrisJobEmploymentStatusEnum["Active"] = "active";
     HrisJobEmploymentStatusEnum["Inactive"] = "inactive";
     HrisJobEmploymentStatusEnum["Terminated"] = "terminated";
     HrisJobEmploymentStatusEnum["Other"] = "other";
-})(HrisJobEmploymentStatusEnum || (HrisJobEmploymentStatusEnum = {}));
+})(HrisJobEmploymentStatusEnum = exports.HrisJobEmploymentStatusEnum || (exports.HrisJobEmploymentStatusEnum = {}));
 var HrisJobLocation = /** @class */ (function (_super) {
     __extends(HrisJobLocation, _super);
     function HrisJobLocation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], HrisJobLocation.prototype, "name", void 0);
     return HrisJobLocation;
-}(SpeakeasyBase));
-export { HrisJobLocation };
+}(utils_1.SpeakeasyBase));
+exports.HrisJobLocation = HrisJobLocation;
 var HrisJob = /** @class */ (function (_super) {
     __extends(HrisJob, _super);
     function HrisJob() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=department" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=department" }),
         __metadata("design:type", String)
     ], HrisJob.prototype, "department", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employee_id" }),
         __metadata("design:type", String)
     ], HrisJob.prototype, "employeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employment_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employment_status" }),
         __metadata("design:type", String)
     ], HrisJob.prototype, "employmentStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_date" }),
         __metadata("design:type", Date)
     ], HrisJob.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], HrisJob.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", HrisJobLocation)
     ], HrisJob.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_date" }),
         __metadata("design:type", Date)
     ], HrisJob.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], HrisJob.prototype, "title", void 0);
     return HrisJob;
-}(SpeakeasyBase));
-export { HrisJob };
+}(utils_1.SpeakeasyBase));
+exports.HrisJob = HrisJob;

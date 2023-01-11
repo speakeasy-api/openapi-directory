@@ -8,6 +8,6 @@ export declare class DeleteArtifactRequest extends SpeakeasyBase {
 }
 export declare class DeleteArtifactResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

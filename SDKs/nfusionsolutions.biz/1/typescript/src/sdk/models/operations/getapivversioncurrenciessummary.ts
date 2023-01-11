@@ -38,7 +38,7 @@ export class GetApiVVersionCurrenciesSummaryResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  problemDetails?: Map<string, any>;
+  problemDetails?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

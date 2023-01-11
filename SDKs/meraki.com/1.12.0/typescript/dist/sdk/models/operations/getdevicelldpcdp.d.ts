@@ -8,5 +8,5 @@ export declare class GetDeviceLldpCdpRequest extends SpeakeasyBase {
 export declare class GetDeviceLldpCdpResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceLldpCdp200ApplicationJsonObject?: Map<string, any>;
+    getDeviceLldpCdp200ApplicationJSONObject?: Record<string, any>;
 }

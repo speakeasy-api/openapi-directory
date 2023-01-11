@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLocationResponse = exports.GetLocationRequest = exports.GetLocationQueryParams = exports.GetLocationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetLocationPathParams = /** @class */ (function (_super) {
     __extends(GetLocationPathParams, _super);
     function GetLocationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetLocationPathParams.prototype, "id", void 0);
     return GetLocationPathParams;
-}(SpeakeasyBase));
-export { GetLocationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetLocationPathParams = GetLocationPathParams;
 var GetLocationQueryParams = /** @class */ (function (_super) {
     __extends(GetLocationQueryParams, _super);
     function GetLocationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_chargestations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_chargestations" }),
         __metadata("design:type", Boolean)
     ], GetLocationQueryParams.prototype, "includeChargestations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_organization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_organization" }),
         __metadata("design:type", Boolean)
     ], GetLocationQueryParams.prototype, "includeOrganization", void 0);
     return GetLocationQueryParams;
-}(SpeakeasyBase));
-export { GetLocationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetLocationQueryParams = GetLocationQueryParams;
 var GetLocationRequest = /** @class */ (function (_super) {
     __extends(GetLocationRequest, _super);
     function GetLocationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLocationPathParams)
     ], GetLocationRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLocationQueryParams)
     ], GetLocationRequest.prototype, "queryParams", void 0);
     return GetLocationRequest;
-}(SpeakeasyBase));
-export { GetLocationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetLocationRequest = GetLocationRequest;
 var GetLocationResponse = /** @class */ (function (_super) {
     __extends(GetLocationResponse, _super);
     function GetLocationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetLocationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetLocationResponse.prototype, "statusCode", void 0);
     return GetLocationResponse;
-}(SpeakeasyBase));
-export { GetLocationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetLocationResponse = GetLocationResponse;

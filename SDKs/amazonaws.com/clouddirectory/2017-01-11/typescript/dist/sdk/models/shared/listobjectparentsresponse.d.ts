@@ -3,5 +3,5 @@ import { ObjectIdentifierAndLinkNameTuple } from "./objectidentifierandlinknamet
 export declare class ListObjectParentsResponse extends SpeakeasyBase {
     nextToken?: string;
     parentLinks?: ObjectIdentifierAndLinkNameTuple[];
-    parents?: Map<string, string>;
+    parents?: Record<string, string>;
 }

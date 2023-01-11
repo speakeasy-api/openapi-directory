@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActiveDirectoryComputerAttribute } from "./activedirectorycomputerattribute";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LaunchProfileInitializationActiveDirectory = void 0;
+var utils_1 = require("../../../internal/utils");
+var activedirectorycomputerattribute_1 = require("./activedirectorycomputerattribute");
 var LaunchProfileInitializationActiveDirectory = /** @class */ (function (_super) {
     __extends(LaunchProfileInitializationActiveDirectory, _super);
     function LaunchProfileInitializationActiveDirectory() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computerAttributes", elemType: ActiveDirectoryComputerAttribute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computerAttributes", elemType: activedirectorycomputerattribute_1.ActiveDirectoryComputerAttribute }),
         __metadata("design:type", Array)
     ], LaunchProfileInitializationActiveDirectory.prototype, "computerAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directoryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directoryId" }),
         __metadata("design:type", String)
     ], LaunchProfileInitializationActiveDirectory.prototype, "directoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directoryName" }),
         __metadata("design:type", String)
     ], LaunchProfileInitializationActiveDirectory.prototype, "directoryName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dnsIpAddresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dnsIpAddresses" }),
         __metadata("design:type", Array)
     ], LaunchProfileInitializationActiveDirectory.prototype, "dnsIpAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organizationalUnitDistinguishedName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organizationalUnitDistinguishedName" }),
         __metadata("design:type", String)
     ], LaunchProfileInitializationActiveDirectory.prototype, "organizationalUnitDistinguishedName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=studioComponentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=studioComponentId" }),
         __metadata("design:type", String)
     ], LaunchProfileInitializationActiveDirectory.prototype, "studioComponentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=studioComponentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=studioComponentName" }),
         __metadata("design:type", String)
     ], LaunchProfileInitializationActiveDirectory.prototype, "studioComponentName", void 0);
     return LaunchProfileInitializationActiveDirectory;
-}(SpeakeasyBase));
-export { LaunchProfileInitializationActiveDirectory };
+}(utils_1.SpeakeasyBase));
+exports.LaunchProfileInitializationActiveDirectory = LaunchProfileInitializationActiveDirectory;

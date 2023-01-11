@@ -60,7 +60,7 @@ export class StartAppReplicationResponse extends SpeakeasyBase {
   operationNotPermittedException?: any;
 
   @SpeakeasyMetadata()
-  startAppReplicationResponse?: Map<string, any>;
+  startAppReplicationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ExternalEventEntityEventTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExternalEventEntity = exports.ExternalEventEntityStatusEnum = exports.ExternalEventEntityEventTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ExternalEventEntityEventTypeEnum;
 (function (ExternalEventEntityEventTypeEnum) {
     ExternalEventEntityEventTypeEnum["LdapSync"] = "ldap_sync";
     ExternalEventEntityEventTypeEnum["RemoteServerSync"] = "remote_server_sync";
@@ -32,13 +35,13 @@ export var ExternalEventEntityEventTypeEnum;
     ExternalEventEntityEventTypeEnum["SamlLogin"] = "saml_login";
     ExternalEventEntityEventTypeEnum["ClientLog"] = "client_log";
     ExternalEventEntityEventTypeEnum["PendingWork"] = "pending_work";
-})(ExternalEventEntityEventTypeEnum || (ExternalEventEntityEventTypeEnum = {}));
-export var ExternalEventEntityStatusEnum;
+})(ExternalEventEntityEventTypeEnum = exports.ExternalEventEntityEventTypeEnum || (exports.ExternalEventEntityEventTypeEnum = {}));
+var ExternalEventEntityStatusEnum;
 (function (ExternalEventEntityStatusEnum) {
     ExternalEventEntityStatusEnum["Success"] = "success";
     ExternalEventEntityStatusEnum["Error"] = "error";
     ExternalEventEntityStatusEnum["PartialFailure"] = "partial_failure";
-})(ExternalEventEntityStatusEnum || (ExternalEventEntityStatusEnum = {}));
+})(ExternalEventEntityStatusEnum = exports.ExternalEventEntityStatusEnum || (exports.ExternalEventEntityStatusEnum = {}));
 // ExternalEventEntity
 /**
  * List External Events
@@ -49,49 +52,49 @@ var ExternalEventEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], ExternalEventEntity.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body_url" }),
         __metadata("design:type", String)
     ], ExternalEventEntity.prototype, "bodyUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bytes_synced" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bytes_synced" }),
         __metadata("design:type", Number)
     ], ExternalEventEntity.prototype, "bytesSynced", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], ExternalEventEntity.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errored_files" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errored_files" }),
         __metadata("design:type", Number)
     ], ExternalEventEntity.prototype, "erroredFiles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event_type" }),
         __metadata("design:type", String)
     ], ExternalEventEntity.prototype, "eventType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=folder_behavior_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=folder_behavior_id" }),
         __metadata("design:type", Number)
     ], ExternalEventEntity.prototype, "folderBehaviorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ExternalEventEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remote_server_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remote_server_type" }),
         __metadata("design:type", String)
     ], ExternalEventEntity.prototype, "remoteServerType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ExternalEventEntity.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successful_files" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successful_files" }),
         __metadata("design:type", Number)
     ], ExternalEventEntity.prototype, "successfulFiles", void 0);
     return ExternalEventEntity;
-}(SpeakeasyBase));
-export { ExternalEventEntity };
+}(utils_1.SpeakeasyBase));
+exports.ExternalEventEntity = ExternalEventEntity;

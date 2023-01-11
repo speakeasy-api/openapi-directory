@@ -17,7 +17,7 @@ export class RegisterSenderQueryParams extends SpeakeasyBase {
 
 export class RegisterSenderRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   queryParams: RegisterSenderQueryParams;

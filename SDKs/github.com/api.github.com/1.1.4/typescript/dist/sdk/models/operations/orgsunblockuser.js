@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrgsUnblockUserResponse = exports.OrgsUnblockUserRequest = exports.OrgsUnblockUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var OrgsUnblockUserPathParams = /** @class */ (function (_super) {
     __extends(OrgsUnblockUserPathParams, _super);
     function OrgsUnblockUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], OrgsUnblockUserPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], OrgsUnblockUserPathParams.prototype, "username", void 0);
     return OrgsUnblockUserPathParams;
-}(SpeakeasyBase));
-export { OrgsUnblockUserPathParams };
+}(utils_1.SpeakeasyBase));
+exports.OrgsUnblockUserPathParams = OrgsUnblockUserPathParams;
 var OrgsUnblockUserRequest = /** @class */ (function (_super) {
     __extends(OrgsUnblockUserRequest, _super);
     function OrgsUnblockUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OrgsUnblockUserPathParams)
     ], OrgsUnblockUserRequest.prototype, "pathParams", void 0);
     return OrgsUnblockUserRequest;
-}(SpeakeasyBase));
-export { OrgsUnblockUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.OrgsUnblockUserRequest = OrgsUnblockUserRequest;
 var OrgsUnblockUserResponse = /** @class */ (function (_super) {
     __extends(OrgsUnblockUserResponse, _super);
     function OrgsUnblockUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OrgsUnblockUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OrgsUnblockUserResponse.prototype, "statusCode", void 0);
     return OrgsUnblockUserResponse;
-}(SpeakeasyBase));
-export { OrgsUnblockUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.OrgsUnblockUserResponse = OrgsUnblockUserResponse;

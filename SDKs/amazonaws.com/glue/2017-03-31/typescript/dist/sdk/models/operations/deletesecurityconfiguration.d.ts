@@ -19,7 +19,7 @@ export declare class DeleteSecurityConfigurationRequest extends SpeakeasyBase {
 }
 export declare class DeleteSecurityConfigurationResponse extends SpeakeasyBase {
     contentType: string;
-    deleteSecurityConfigurationResponse?: Map<string, any>;
+    deleteSecurityConfigurationResponse?: Record<string, any>;
     entityNotFoundException?: any;
     internalServiceException?: any;
     invalidInputException?: any;

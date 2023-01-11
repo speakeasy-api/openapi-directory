@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GamesConfigurationAchievementConfigurationsDeleteRequest, GamesConfigurationAchievementConfigurationsDeleteResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,26 +30,26 @@ const req: GamesConfigurationAchievementConfigurationsDeleteRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    achievementId: "occaecati",
+    achievementId: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "consequatur",
-    alt: "proto",
-    callback: "officia",
-    fields: "perspiciatis",
-    key: "illo",
-    oauthToken: "quam",
-    prettyPrint: false,
-    quotaUser: "eum",
-    uploadType: "ducimus",
-    uploadProtocol: "sed",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
 };
 
@@ -70,10 +69,6 @@ sdk.achievementConfigurations.gamesConfigurationAchievementConfigurationsDelete(
 * `gamesConfigurationAchievementConfigurationsInsert` - Insert a new achievement configuration in this application.
 * `gamesConfigurationAchievementConfigurationsList` - Returns a list of the achievement configurations in this application.
 * `gamesConfigurationAchievementConfigurationsUpdate` - Update the metadata of the achievement configuration with the given ID.
-
-### imageConfigurations
-
-* `gamesConfigurationImageConfigurationsUpload` - Uploads an image for a resource with the given ID and image type.
 
 ### leaderboardConfigurations
 

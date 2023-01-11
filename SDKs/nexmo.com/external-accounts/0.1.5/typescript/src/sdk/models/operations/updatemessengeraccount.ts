@@ -104,8 +104,8 @@ export class UpdateMessengerAccountResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateMessengerAccount200ApplicationJsonObject?: UpdateMessengerAccount200ApplicationJson;
+  updateMessengerAccount200ApplicationJSONObject?: UpdateMessengerAccount200ApplicationJson;
 
   @SpeakeasyMetadata()
-  updateMessengerAccount400ApplicationJsonObject?: UpdateMessengerAccount400ApplicationJson;
+  updateMessengerAccount400ApplicationJSONObject?: UpdateMessengerAccount400ApplicationJson;
 }

@@ -43,5 +43,5 @@ export class PromoteToRelayResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  promoteToRelay200ApplicationJsonObject?: PromoteToRelay200ApplicationJson;
+  promoteToRelay200ApplicationJSONObject?: PromoteToRelay200ApplicationJson;
 }

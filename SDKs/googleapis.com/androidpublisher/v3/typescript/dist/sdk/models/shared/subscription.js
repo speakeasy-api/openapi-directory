@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,43 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BasePlanInput } from "./baseplan";
-import { SubscriptionListing } from "./subscriptionlisting";
-import { SubscriptionTaxAndComplianceSettings } from "./subscriptiontaxandcompliancesettings";
-import { BasePlan } from "./baseplan";
-// SubscriptionInput
-/**
- * A single subscription for an app.
-**/
-var SubscriptionInput = /** @class */ (function (_super) {
-    __extends(SubscriptionInput, _super);
-    function SubscriptionInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=basePlans", elemType: BasePlanInput }),
-        __metadata("design:type", Array)
-    ], SubscriptionInput.prototype, "basePlans", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=listings", elemType: SubscriptionListing }),
-        __metadata("design:type", Array)
-    ], SubscriptionInput.prototype, "listings", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=packageName" }),
-        __metadata("design:type", String)
-    ], SubscriptionInput.prototype, "packageName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=productId" }),
-        __metadata("design:type", String)
-    ], SubscriptionInput.prototype, "productId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxAndComplianceSettings" }),
-        __metadata("design:type", SubscriptionTaxAndComplianceSettings)
-    ], SubscriptionInput.prototype, "taxAndComplianceSettings", void 0);
-    return SubscriptionInput;
-}(SpeakeasyBase));
-export { SubscriptionInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionInput = exports.Subscription = void 0;
+var utils_1 = require("../../../internal/utils");
+var baseplan_1 = require("./baseplan");
+var subscriptionlisting_1 = require("./subscriptionlisting");
+var subscriptiontaxandcompliancesettings_1 = require("./subscriptiontaxandcompliancesettings");
+var baseplan_2 = require("./baseplan");
 // Subscription
 /**
  * A single subscription for an app.
@@ -69,29 +40,61 @@ var Subscription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=archived" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=archived" }),
         __metadata("design:type", Boolean)
     ], Subscription.prototype, "archived", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=basePlans", elemType: BasePlan }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=basePlans", elemType: baseplan_1.BasePlan }),
         __metadata("design:type", Array)
     ], Subscription.prototype, "basePlans", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listings", elemType: SubscriptionListing }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listings", elemType: subscriptionlisting_1.SubscriptionListing }),
         __metadata("design:type", Array)
     ], Subscription.prototype, "listings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packageName" }),
         __metadata("design:type", String)
     ], Subscription.prototype, "packageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productId" }),
         __metadata("design:type", String)
     ], Subscription.prototype, "productId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxAndComplianceSettings" }),
-        __metadata("design:type", SubscriptionTaxAndComplianceSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxAndComplianceSettings" }),
+        __metadata("design:type", subscriptiontaxandcompliancesettings_1.SubscriptionTaxAndComplianceSettings)
     ], Subscription.prototype, "taxAndComplianceSettings", void 0);
     return Subscription;
-}(SpeakeasyBase));
-export { Subscription };
+}(utils_1.SpeakeasyBase));
+exports.Subscription = Subscription;
+// SubscriptionInput
+/**
+ * A single subscription for an app.
+**/
+var SubscriptionInput = /** @class */ (function (_super) {
+    __extends(SubscriptionInput, _super);
+    function SubscriptionInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=basePlans", elemType: baseplan_2.BasePlanInput }),
+        __metadata("design:type", Array)
+    ], SubscriptionInput.prototype, "basePlans", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listings", elemType: subscriptionlisting_1.SubscriptionListing }),
+        __metadata("design:type", Array)
+    ], SubscriptionInput.prototype, "listings", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packageName" }),
+        __metadata("design:type", String)
+    ], SubscriptionInput.prototype, "packageName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productId" }),
+        __metadata("design:type", String)
+    ], SubscriptionInput.prototype, "productId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxAndComplianceSettings" }),
+        __metadata("design:type", subscriptiontaxandcompliancesettings_1.SubscriptionTaxAndComplianceSettings)
+    ], SubscriptionInput.prototype, "taxAndComplianceSettings", void 0);
+    return SubscriptionInput;
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionInput = SubscriptionInput;

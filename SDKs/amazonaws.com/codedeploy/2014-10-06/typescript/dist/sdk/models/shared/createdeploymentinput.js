@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoRollbackConfiguration } from "./autorollbackconfiguration";
-import { FileExistsBehaviorEnum } from "./fileexistsbehaviorenum";
-import { RevisionLocation } from "./revisionlocation";
-import { TargetInstances } from "./targetinstances";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDeploymentInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var autorollbackconfiguration_1 = require("./autorollbackconfiguration");
+var fileexistsbehaviorenum_1 = require("./fileexistsbehaviorenum");
+var revisionlocation_1 = require("./revisionlocation");
+var targetinstances_1 = require("./targetinstances");
 // CreateDeploymentInput
 /**
  * Represents the input of a <code>CreateDeployment</code> operation.
@@ -37,45 +40,45 @@ var CreateDeploymentInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationName" }),
         __metadata("design:type", String)
     ], CreateDeploymentInput.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoRollbackConfiguration" }),
-        __metadata("design:type", AutoRollbackConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoRollbackConfiguration" }),
+        __metadata("design:type", autorollbackconfiguration_1.AutoRollbackConfiguration)
     ], CreateDeploymentInput.prototype, "autoRollbackConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentConfigName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentConfigName" }),
         __metadata("design:type", String)
     ], CreateDeploymentInput.prototype, "deploymentConfigName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentGroupName" }),
         __metadata("design:type", String)
     ], CreateDeploymentInput.prototype, "deploymentGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CreateDeploymentInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileExistsBehavior" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileExistsBehavior" }),
         __metadata("design:type", String)
     ], CreateDeploymentInput.prototype, "fileExistsBehavior", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ignoreApplicationStopFailures" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ignoreApplicationStopFailures" }),
         __metadata("design:type", Boolean)
     ], CreateDeploymentInput.prototype, "ignoreApplicationStopFailures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revision" }),
-        __metadata("design:type", RevisionLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revision" }),
+        __metadata("design:type", revisionlocation_1.RevisionLocation)
     ], CreateDeploymentInput.prototype, "revision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetInstances" }),
-        __metadata("design:type", TargetInstances)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetInstances" }),
+        __metadata("design:type", targetinstances_1.TargetInstances)
     ], CreateDeploymentInput.prototype, "targetInstances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateOutdatedInstancesOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateOutdatedInstancesOnly" }),
         __metadata("design:type", Boolean)
     ], CreateDeploymentInput.prototype, "updateOutdatedInstancesOnly", void 0);
     return CreateDeploymentInput;
-}(SpeakeasyBase));
-export { CreateDeploymentInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeploymentInput = CreateDeploymentInput;

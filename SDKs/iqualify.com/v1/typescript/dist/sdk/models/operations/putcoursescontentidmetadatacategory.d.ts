@@ -13,6 +13,6 @@ export declare class PutCoursesContentIdMetadataCategoryRequest extends Speakeas
 export declare class PutCoursesContentIdMetadataCategoryResponse extends SpeakeasyBase {
     contentType: string;
     courseMetaResponse?: shared.CourseMetaResponse;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

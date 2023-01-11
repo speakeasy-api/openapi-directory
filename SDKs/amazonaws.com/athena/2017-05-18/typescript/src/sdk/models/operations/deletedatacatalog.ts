@@ -48,7 +48,7 @@ export class DeleteDataCatalogResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteDataCatalogOutput?: Map<string, any>;
+  deleteDataCatalogOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

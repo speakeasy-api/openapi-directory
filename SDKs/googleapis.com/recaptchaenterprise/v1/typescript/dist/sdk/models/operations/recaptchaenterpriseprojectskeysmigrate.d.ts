@@ -23,7 +23,7 @@ export declare class RecaptchaenterpriseProjectsKeysMigrateSecurity extends Spea
 export declare class RecaptchaenterpriseProjectsKeysMigrateRequest extends SpeakeasyBase {
     pathParams: RecaptchaenterpriseProjectsKeysMigratePathParams;
     queryParams: RecaptchaenterpriseProjectsKeysMigrateQueryParams;
-    request?: Map<string, any>;
+    request?: shared.GoogleCloudRecaptchaenterpriseV1MigrateKeyRequest;
     security: RecaptchaenterpriseProjectsKeysMigrateSecurity;
 }
 export declare class RecaptchaenterpriseProjectsKeysMigrateResponse extends SpeakeasyBase {

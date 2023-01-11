@@ -23,7 +23,7 @@ export declare class RealtimebiddingBiddersCreativesWatchSecurity extends Speake
 export declare class RealtimebiddingBiddersCreativesWatchRequest extends SpeakeasyBase {
     pathParams: RealtimebiddingBiddersCreativesWatchPathParams;
     queryParams: RealtimebiddingBiddersCreativesWatchQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: RealtimebiddingBiddersCreativesWatchSecurity;
 }
 export declare class RealtimebiddingBiddersCreativesWatchResponse extends SpeakeasyBase {

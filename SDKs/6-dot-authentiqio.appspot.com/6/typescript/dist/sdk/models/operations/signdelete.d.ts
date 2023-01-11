@@ -13,5 +13,5 @@ export declare class SignDeleteResponse extends SpeakeasyBase {
     contentType: string;
     error?: any;
     statusCode: number;
-    signDelete200ApplicationJsonObject?: SignDelete200ApplicationJson;
+    signDelete200ApplicationJSONObject?: SignDelete200ApplicationJson;
 }

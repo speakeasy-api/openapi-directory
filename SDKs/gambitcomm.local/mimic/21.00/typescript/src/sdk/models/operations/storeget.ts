@@ -22,5 +22,5 @@ export class StoreGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  storeGet200ApplicationJsonString?: string;
+  storeGet200ApplicationJSONString?: string;
 }

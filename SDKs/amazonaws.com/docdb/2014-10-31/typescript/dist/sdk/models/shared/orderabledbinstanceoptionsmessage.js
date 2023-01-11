@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrderableDbInstanceOption } from "./orderabledbinstanceoption";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderableDbInstanceOptionsMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var orderabledbinstanceoptionslist_1 = require("./orderabledbinstanceoptionslist");
 // OrderableDbInstanceOptionsMessage
 /**
  * Represents the output of <a>DescribeOrderableDBInstanceOptions</a>.
@@ -34,13 +37,13 @@ var OrderableDbInstanceOptionsMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OrderableDbInstanceOptionsMessage.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: OrderableDbInstanceOption }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: orderabledbinstanceoptionslist_1.OrderableDbInstanceOptionsList }),
         __metadata("design:type", Array)
-    ], OrderableDbInstanceOptionsMessage.prototype, "orderableDbInstanceOptions", void 0);
+    ], OrderableDbInstanceOptionsMessage.prototype, "orderableDBInstanceOptions", void 0);
     return OrderableDbInstanceOptionsMessage;
-}(SpeakeasyBase));
-export { OrderableDbInstanceOptionsMessage };
+}(utils_1.SpeakeasyBase));
+exports.OrderableDbInstanceOptionsMessage = OrderableDbInstanceOptionsMessage;

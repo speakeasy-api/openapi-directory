@@ -30,7 +30,7 @@ export class CheckSuite extends SpeakeasyBase {
   after: string;
 
   @SpeakeasyMetadata({ data: "json, name=app" })
-  app: Map<string, any>;
+  app: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=before" })
   before: string;

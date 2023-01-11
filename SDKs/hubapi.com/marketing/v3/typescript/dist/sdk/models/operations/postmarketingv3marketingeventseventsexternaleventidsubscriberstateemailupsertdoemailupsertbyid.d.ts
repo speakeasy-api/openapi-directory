@@ -8,7 +8,6 @@ export declare class PostMarketingV3MarketingEventsEventsExternalEventIdSubscrib
     externalAccountId: string;
 }
 export declare class PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdSecurity extends SpeakeasyBase {
-    hapikey?: shared.SchemeHapikey;
     privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
     oauth2Legacy?: shared.SchemeOauth2Legacy;
 }

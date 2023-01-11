@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DomainNameStatusEnum } from "./domainnamestatusenum";
-import { EndpointTypeEnum } from "./endpointtypeenum";
-import { SecurityPolicyEnum } from "./securitypolicyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DomainNameConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
 // DomainNameConfiguration
 /**
  * The domain name configuration.
@@ -36,45 +36,45 @@ var DomainNameConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApiGatewayDomainName" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApiGatewayDomainName" }),
+        __metadata("design:type", Object)
     ], DomainNameConfiguration.prototype, "apiGatewayDomainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CertificateArn" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CertificateArn" }),
+        __metadata("design:type", Object)
     ], DomainNameConfiguration.prototype, "certificateArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CertificateName" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CertificateName" }),
+        __metadata("design:type", Object)
     ], DomainNameConfiguration.prototype, "certificateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CertificateUploadDate" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CertificateUploadDate" }),
+        __metadata("design:type", Object)
     ], DomainNameConfiguration.prototype, "certificateUploadDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DomainNameStatus" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DomainNameStatus" }),
+        __metadata("design:type", Object)
     ], DomainNameConfiguration.prototype, "domainNameStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DomainNameStatusMessage" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DomainNameStatusMessage" }),
+        __metadata("design:type", Object)
     ], DomainNameConfiguration.prototype, "domainNameStatusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointType" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointType" }),
+        __metadata("design:type", Object)
     ], DomainNameConfiguration.prototype, "endpointType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HostedZoneId" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HostedZoneId" }),
+        __metadata("design:type", Object)
     ], DomainNameConfiguration.prototype, "hostedZoneId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OwnershipVerificationCertificateArn" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OwnershipVerificationCertificateArn" }),
+        __metadata("design:type", Object)
     ], DomainNameConfiguration.prototype, "ownershipVerificationCertificateArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityPolicy" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityPolicy" }),
+        __metadata("design:type", Object)
     ], DomainNameConfiguration.prototype, "securityPolicy", void 0);
     return DomainNameConfiguration;
-}(SpeakeasyBase));
-export { DomainNameConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.DomainNameConfiguration = DomainNameConfiguration;

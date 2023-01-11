@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class ServicePrincipalsDeletePathParams extends SpeakeasyBase {
     objectId: string;
-    tenantId: string;
+    tenantID: string;
 }
 export declare class ServicePrincipalsDeleteQueryParams extends SpeakeasyBase {
     apiVersion: string;

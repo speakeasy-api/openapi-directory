@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KmsGrantConfiguration } from "./kmsgrantconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KmsKeyConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var kmsgrantconfiguration_1 = require("./kmsgrantconfiguration");
 // KmsKeyConfiguration
 /**
  * <p>Proposed access control configuration for a KMS key. You can propose a configuration for a new KMS key or an existing KMS key that you own by specifying the key policy and KMS grant configuration. If the configuration is for an existing key and you do not specify the key policy, the access preview uses the existing policy for the key. If the access preview is for a new resource and you do not specify the key policy, then the access preview uses the default key policy. The proposed key policy cannot be an empty string. For more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default">Default key policy</a>. For more information about key policy limits, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/resource-limits.html">Resource quotas</a>.</p> <p/>
@@ -34,13 +37,13 @@ var KmsKeyConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grants", elemType: KmsGrantConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grants", elemType: kmsgrantconfiguration_1.KmsGrantConfiguration }),
         __metadata("design:type", Array)
     ], KmsKeyConfiguration.prototype, "grants", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyPolicies" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyPolicies" }),
+        __metadata("design:type", Object)
     ], KmsKeyConfiguration.prototype, "keyPolicies", void 0);
     return KmsKeyConfiguration;
-}(SpeakeasyBase));
-export { KmsKeyConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.KmsKeyConfiguration = KmsKeyConfiguration;

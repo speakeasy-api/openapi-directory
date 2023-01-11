@@ -4,7 +4,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class DbClusterSnapshot extends SpeakeasyBase {
     allocatedStorage?: number;
-    availabilityZones?: string[];
+    availabilityZones?: Record<string, any>[];
     clusterCreateTime?: Date;
     dbClusterIdentifier?: string;
     dbClusterSnapshotArn?: string;
@@ -19,7 +19,7 @@ export declare class DbClusterSnapshot extends SpeakeasyBase {
     port?: number;
     snapshotCreateTime?: Date;
     snapshotType?: string;
-    sourceDbClusterSnapshotArn?: string;
+    sourceDBClusterSnapshotArn?: string;
     status?: string;
     storageEncrypted?: boolean;
     vpcId?: string;

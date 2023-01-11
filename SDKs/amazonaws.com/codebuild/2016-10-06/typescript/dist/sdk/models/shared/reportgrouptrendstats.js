@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportGroupTrendStats = void 0;
+var utils_1 = require("../../../internal/utils");
 // ReportGroupTrendStats
 /**
  * Contains trend statistics for a set of reports. The actual values depend on the type of trend being collected. For more information, see .
@@ -33,17 +36,17 @@ var ReportGroupTrendStats = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=average" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=average" }),
         __metadata("design:type", String)
     ], ReportGroupTrendStats.prototype, "average", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max" }),
         __metadata("design:type", String)
     ], ReportGroupTrendStats.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=min" }),
         __metadata("design:type", String)
     ], ReportGroupTrendStats.prototype, "min", void 0);
     return ReportGroupTrendStats;
-}(SpeakeasyBase));
-export { ReportGroupTrendStats };
+}(utils_1.SpeakeasyBase));
+exports.ReportGroupTrendStats = ReportGroupTrendStats;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SourceSchema } from "./sourceschema";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiscoverInputSchemaResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var sourceschema_1 = require("./sourceschema");
 // DiscoverInputSchemaResponse
 /**
  * <p/>
@@ -34,21 +37,21 @@ var DiscoverInputSchemaResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InputSchema" }),
-        __metadata("design:type", SourceSchema)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InputSchema" }),
+        __metadata("design:type", sourceschema_1.SourceSchema)
     ], DiscoverInputSchemaResponse.prototype, "inputSchema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParsedInputRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParsedInputRecords" }),
         __metadata("design:type", Array)
     ], DiscoverInputSchemaResponse.prototype, "parsedInputRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProcessedInputRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProcessedInputRecords" }),
         __metadata("design:type", Array)
     ], DiscoverInputSchemaResponse.prototype, "processedInputRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RawInputRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RawInputRecords" }),
         __metadata("design:type", Array)
     ], DiscoverInputSchemaResponse.prototype, "rawInputRecords", void 0);
     return DiscoverInputSchemaResponse;
-}(SpeakeasyBase));
-export { DiscoverInputSchemaResponse };
+}(utils_1.SpeakeasyBase));
+exports.DiscoverInputSchemaResponse = DiscoverInputSchemaResponse;

@@ -14,7 +14,7 @@ export class CommonFeatureState extends SpeakeasyBase {
   appdevexperience?: AppDevExperienceFeatureState;
 
   @SpeakeasyMetadata({ data: "json, name=fleetobservability" })
-  fleetobservability?: Map<string, any>;
+  fleetobservability?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=servicemesh" })
   servicemesh?: ServiceMeshFeatureState;

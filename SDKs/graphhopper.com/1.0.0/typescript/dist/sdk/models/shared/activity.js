@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResponseAddress } from "./responseaddress";
-export var ActivityTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Activity = exports.ActivityTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var responseaddress_1 = require("./responseaddress");
+var ActivityTypeEnum;
 (function (ActivityTypeEnum) {
     ActivityTypeEnum["Start"] = "start";
     ActivityTypeEnum["End"] = "end";
@@ -34,68 +37,68 @@ export var ActivityTypeEnum;
     ActivityTypeEnum["Pickup"] = "pickup";
     ActivityTypeEnum["Delivery"] = "delivery";
     ActivityTypeEnum["Break"] = "break";
-})(ActivityTypeEnum || (ActivityTypeEnum = {}));
+})(ActivityTypeEnum = exports.ActivityTypeEnum || (exports.ActivityTypeEnum = {}));
 var Activity = /** @class */ (function (_super) {
     __extends(Activity, _super);
     function Activity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
-        __metadata("design:type", ResponseAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", responseaddress_1.ResponseAddress)
     ], Activity.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arr_date_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arr_date_time" }),
         __metadata("design:type", Date)
     ], Activity.prototype, "arrDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arr_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arr_time" }),
         __metadata("design:type", Number)
     ], Activity.prototype, "arrTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distance" }),
         __metadata("design:type", Number)
     ], Activity.prototype, "distance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driving_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driving_time" }),
         __metadata("design:type", Number)
     ], Activity.prototype, "drivingTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_date_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_date_time" }),
         __metadata("design:type", Date)
     ], Activity.prototype, "endDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_time" }),
         __metadata("design:type", Number)
     ], Activity.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Activity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=load_after" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=load_after" }),
         __metadata("design:type", Array)
     ], Activity.prototype, "loadAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=load_before" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=load_before" }),
         __metadata("design:type", Array)
     ], Activity.prototype, "loadBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location_id" }),
         __metadata("design:type", String)
     ], Activity.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preparation_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preparation_time" }),
         __metadata("design:type", Number)
     ], Activity.prototype, "preparationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Activity.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=waiting_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=waiting_time" }),
         __metadata("design:type", Number)
     ], Activity.prototype, "waitingTime", void 0);
     return Activity;
-}(SpeakeasyBase));
-export { Activity };
+}(utils_1.SpeakeasyBase));
+exports.Activity = Activity;

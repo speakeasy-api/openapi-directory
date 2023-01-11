@@ -17,7 +17,7 @@ export declare class PostCoursesRootContentIdPermissionsUserEmailRequest extends
 }
 export declare class PostCoursesRootContentIdPermissionsUserEmailResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
-    postCoursesRootContentIdPermissionsUserEmail201ApplicationJsonObject?: PostCoursesRootContentIdPermissionsUserEmail201ApplicationJson;
+    error?: shared.ErrorT;
     statusCode: number;
+    postCoursesRootContentIdPermissionsUserEmail201ApplicationJSONObject?: PostCoursesRootContentIdPermissionsUserEmail201ApplicationJson;
 }

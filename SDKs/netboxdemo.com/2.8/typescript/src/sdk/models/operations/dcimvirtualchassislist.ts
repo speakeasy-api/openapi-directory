@@ -134,5 +134,5 @@ export class DcimVirtualChassisListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimVirtualChassisList200ApplicationJsonObject?: DcimVirtualChassisList200ApplicationJson;
+  dcimVirtualChassisList200ApplicationJSONObject?: DcimVirtualChassisList200ApplicationJson;
 }

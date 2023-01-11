@@ -5,13 +5,6 @@ import { NativeContent } from "./nativecontent";
 import { VideoContent } from "./videocontent";
 
 
-export enum CreativeCreativeFormatEnum {
-    CreativeFormatUnspecified = "CREATIVE_FORMAT_UNSPECIFIED",
-    Html = "HTML",
-    Video = "VIDEO",
-    Native = "NATIVE"
-}
-
 export enum CreativeDeclaredAttributesEnum {
     AttributeUnspecified = "ATTRIBUTE_UNSPECIFIED",
     ImageRichMedia = "IMAGE_RICH_MEDIA",
@@ -61,6 +54,65 @@ export enum CreativeDeclaredRestrictedCategoriesEnum {
 export enum CreativeRestrictedCategoriesEnum {
     RestrictedCategoryUnspecified = "RESTRICTED_CATEGORY_UNSPECIFIED",
     Alcohol = "ALCOHOL"
+}
+
+export enum CreativeCreativeFormatEnum {
+    CreativeFormatUnspecified = "CREATIVE_FORMAT_UNSPECIFIED",
+    Html = "HTML",
+    Video = "VIDEO",
+    Native = "NATIVE"
+}
+
+
+// CreativeInput
+/** 
+ * A creative and its classification data.
+**/
+export class CreativeInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=adChoicesDestinationUrl" })
+  adChoicesDestinationUrl?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=advertiserName" })
+  advertiserName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=agencyId" })
+  agencyId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=creativeId" })
+  creativeId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=creativeServingDecision" })
+  creativeServingDecision?: CreativeServingDecision;
+
+  @SpeakeasyMetadata({ data: "json, name=declaredAttributes" })
+  declaredAttributes?: CreativeDeclaredAttributesEnum[];
+
+  @SpeakeasyMetadata({ data: "json, name=declaredClickThroughUrls" })
+  declaredClickThroughUrls?: string[];
+
+  @SpeakeasyMetadata({ data: "json, name=declaredRestrictedCategories" })
+  declaredRestrictedCategories?: CreativeDeclaredRestrictedCategoriesEnum[];
+
+  @SpeakeasyMetadata({ data: "json, name=declaredVendorIds" })
+  declaredVendorIds?: number[];
+
+  @SpeakeasyMetadata({ data: "json, name=html" })
+  html?: HtmlContent;
+
+  @SpeakeasyMetadata({ data: "json, name=impressionTrackingUrls" })
+  impressionTrackingUrls?: string[];
+
+  @SpeakeasyMetadata({ data: "json, name=native" })
+  native?: NativeContent;
+
+  @SpeakeasyMetadata({ data: "json, name=renderUrl" })
+  renderUrl?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=restrictedCategories" })
+  restrictedCategories?: CreativeRestrictedCategoriesEnum[];
+
+  @SpeakeasyMetadata({ data: "json, name=video" })
+  video?: VideoContent;
 }
 
 
@@ -128,58 +180,6 @@ export class Creative extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=version" })
   version?: number;
-
-  @SpeakeasyMetadata({ data: "json, name=video" })
-  video?: VideoContent;
-}
-
-
-// CreativeInput
-/** 
- * A creative and its classification data.
-**/
-export class CreativeInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=adChoicesDestinationUrl" })
-  adChoicesDestinationUrl?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=advertiserName" })
-  advertiserName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=agencyId" })
-  agencyId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=creativeId" })
-  creativeId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=creativeServingDecision" })
-  creativeServingDecision?: CreativeServingDecision;
-
-  @SpeakeasyMetadata({ data: "json, name=declaredAttributes" })
-  declaredAttributes?: CreativeDeclaredAttributesEnum[];
-
-  @SpeakeasyMetadata({ data: "json, name=declaredClickThroughUrls" })
-  declaredClickThroughUrls?: string[];
-
-  @SpeakeasyMetadata({ data: "json, name=declaredRestrictedCategories" })
-  declaredRestrictedCategories?: CreativeDeclaredRestrictedCategoriesEnum[];
-
-  @SpeakeasyMetadata({ data: "json, name=declaredVendorIds" })
-  declaredVendorIds?: number[];
-
-  @SpeakeasyMetadata({ data: "json, name=html" })
-  html?: HtmlContent;
-
-  @SpeakeasyMetadata({ data: "json, name=impressionTrackingUrls" })
-  impressionTrackingUrls?: string[];
-
-  @SpeakeasyMetadata({ data: "json, name=native" })
-  native?: NativeContent;
-
-  @SpeakeasyMetadata({ data: "json, name=renderUrl" })
-  renderUrl?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=restrictedCategories" })
-  restrictedCategories?: CreativeRestrictedCategoriesEnum[];
 
   @SpeakeasyMetadata({ data: "json, name=video" })
   video?: VideoContent;

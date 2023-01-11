@@ -1,6 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Meta } from "./meta";
+export declare class OpenAqResultMeta extends SpeakeasyBase {
+    found?: number;
+    license?: string;
+    limit?: number;
+    name?: string;
+    page?: number;
+    website?: string;
+}
 export declare class OpenAqResult extends SpeakeasyBase {
-    meta?: Meta;
+    meta?: OpenAqResultMeta;
     results?: any[];
 }

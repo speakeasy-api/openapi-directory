@@ -22,5 +22,5 @@ export class GetNetworkSwitchAlternateManagementInterfaceResponse extends Speake
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSwitchAlternateManagementInterface200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSwitchAlternateManagementInterface200ApplicationJSONObject?: Record<string, any>;
 }

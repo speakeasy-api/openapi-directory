@@ -57,5 +57,5 @@ export class UpdateJobShipmentStateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateJobShipmentStateResult?: Map<string, any>;
+  updateJobShipmentStateResult?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChangedAssetDetail = void 0;
+var utils_1 = require("../../../internal/utils");
 var ChangedAssetDetail = /** @class */ (function (_super) {
     __extends(ChangedAssetDetail, _super);
     function ChangedAssetDetail() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asset_changed_utc_datetime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asset_changed_utc_datetime" }),
         __metadata("design:type", Date)
     ], ChangedAssetDetail.prototype, "assetChangedUtcDatetime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asset_lifecycle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asset_lifecycle" }),
         __metadata("design:type", String)
     ], ChangedAssetDetail.prototype, "assetLifecycle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asset_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asset_type" }),
         __metadata("design:type", String)
     ], ChangedAssetDetail.prototype, "assetType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ChangedAssetDetail.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], ChangedAssetDetail.prototype, "uri", void 0);
     return ChangedAssetDetail;
-}(SpeakeasyBase));
-export { ChangedAssetDetail };
+}(utils_1.SpeakeasyBase));
+exports.ChangedAssetDetail = ChangedAssetDetail;

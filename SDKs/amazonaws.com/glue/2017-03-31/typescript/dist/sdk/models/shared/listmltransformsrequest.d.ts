@@ -6,5 +6,5 @@ export declare class ListMlTransformsRequest extends SpeakeasyBase {
     maxResults?: number;
     nextToken?: string;
     sort?: TransformSortCriteria;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

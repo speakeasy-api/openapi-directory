@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MonetaryAmount } from "./monetaryamount";
-import { RecurringChargeFrequencyEnum } from "./recurringchargefrequencyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecurringCharge = void 0;
+var utils_1 = require("../../../internal/utils");
+var monetaryamount_1 = require("./monetaryamount");
+var recurringchargefrequencyenum_1 = require("./recurringchargefrequencyenum");
 // RecurringCharge
 /**
  * Specifies whether charges for devices are recurring.
@@ -35,13 +38,13 @@ var RecurringCharge = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cost" }),
-        __metadata("design:type", MonetaryAmount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cost" }),
+        __metadata("design:type", monetaryamount_1.MonetaryAmount)
     ], RecurringCharge.prototype, "cost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequency" }),
         __metadata("design:type", String)
     ], RecurringCharge.prototype, "frequency", void 0);
     return RecurringCharge;
-}(SpeakeasyBase));
-export { RecurringCharge };
+}(utils_1.SpeakeasyBase));
+exports.RecurringCharge = RecurringCharge;

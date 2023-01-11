@@ -24,6 +24,6 @@ export declare class TaskListResponse extends SpeakeasyBase {
     batchError?: any;
     cloudTaskListResult?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

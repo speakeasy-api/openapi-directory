@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LongTermPricingTypeEnum } from "./longtermpricingtypeenum";
-import { SnowballTypeEnum } from "./snowballtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LongTermPricingListEntry = void 0;
+var utils_1 = require("../../../internal/utils");
+var longtermpricingtypeenum_1 = require("./longtermpricingtypeenum");
+var snowballtypeenum_1 = require("./snowballtypeenum");
 // LongTermPricingListEntry
 /**
  * Each <code>LongTermPricingListEntry</code> object contains information about a long-term pricing type.
@@ -35,45 +38,45 @@ var LongTermPricingListEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CurrentActiveJob" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CurrentActiveJob" }),
         __metadata("design:type", String)
     ], LongTermPricingListEntry.prototype, "currentActiveJob", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsLongTermPricingAutoRenew" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsLongTermPricingAutoRenew" }),
         __metadata("design:type", Boolean)
     ], LongTermPricingListEntry.prototype, "isLongTermPricingAutoRenew", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobIds" }),
         __metadata("design:type", Array)
     ], LongTermPricingListEntry.prototype, "jobIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LongTermPricingEndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LongTermPricingEndDate" }),
         __metadata("design:type", Date)
     ], LongTermPricingListEntry.prototype, "longTermPricingEndDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LongTermPricingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LongTermPricingId" }),
         __metadata("design:type", String)
     ], LongTermPricingListEntry.prototype, "longTermPricingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LongTermPricingStartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LongTermPricingStartDate" }),
         __metadata("design:type", Date)
     ], LongTermPricingListEntry.prototype, "longTermPricingStartDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LongTermPricingStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LongTermPricingStatus" }),
         __metadata("design:type", String)
     ], LongTermPricingListEntry.prototype, "longTermPricingStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LongTermPricingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LongTermPricingType" }),
         __metadata("design:type", String)
     ], LongTermPricingListEntry.prototype, "longTermPricingType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplacementJob" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplacementJob" }),
         __metadata("design:type", String)
     ], LongTermPricingListEntry.prototype, "replacementJob", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnowballType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnowballType" }),
         __metadata("design:type", String)
     ], LongTermPricingListEntry.prototype, "snowballType", void 0);
     return LongTermPricingListEntry;
-}(SpeakeasyBase));
-export { LongTermPricingListEntry };
+}(utils_1.SpeakeasyBase));
+exports.LongTermPricingListEntry = LongTermPricingListEntry;

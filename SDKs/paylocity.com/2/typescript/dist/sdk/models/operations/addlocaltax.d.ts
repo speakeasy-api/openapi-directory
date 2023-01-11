@@ -15,5 +15,5 @@ export declare class AddLocalTaxRequest extends SpeakeasyBase {
 export declare class AddLocalTaxResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }

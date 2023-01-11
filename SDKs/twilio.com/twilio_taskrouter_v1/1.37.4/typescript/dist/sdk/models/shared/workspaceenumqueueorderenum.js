@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkspaceEnumQueueOrderEnum = void 0;
+var WorkspaceEnumQueueOrderEnum;
+(function (WorkspaceEnumQueueOrderEnum) {
+    WorkspaceEnumQueueOrderEnum["Fifo"] = "FIFO";
+    WorkspaceEnumQueueOrderEnum["Lifo"] = "LIFO";
+})(WorkspaceEnumQueueOrderEnum = exports.WorkspaceEnumQueueOrderEnum || (exports.WorkspaceEnumQueueOrderEnum = {}));

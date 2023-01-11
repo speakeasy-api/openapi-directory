@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OriginProtocolPolicyEnumEnum } from "./originprotocolpolicyenumenum";
-import { RegionNameEnum } from "./regionnameenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InputOrigin = void 0;
+var utils_1 = require("../../../internal/utils");
+var originprotocolpolicyenumenum_1 = require("./originprotocolpolicyenumenum");
+var regionnameenum_1 = require("./regionnameenum");
 // InputOrigin
 /**
  * <p>Describes the origin resource of an Amazon Lightsail content delivery network (CDN) distribution.</p> <p>An origin can be a Lightsail instance or load balancer. A distribution pulls content from an origin, caches it, and serves it to viewers via a worldwide network of edge servers.</p>
@@ -35,17 +38,17 @@ var InputOrigin = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], InputOrigin.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocolPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocolPolicy" }),
         __metadata("design:type", String)
     ], InputOrigin.prototype, "protocolPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionName" }),
         __metadata("design:type", String)
     ], InputOrigin.prototype, "regionName", void 0);
     return InputOrigin;
-}(SpeakeasyBase));
-export { InputOrigin };
+}(utils_1.SpeakeasyBase));
+exports.InputOrigin = InputOrigin;

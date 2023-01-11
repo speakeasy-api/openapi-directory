@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudWebriskV1RawIndices } from "./googlecloudwebriskv1rawindices";
-import { GoogleCloudWebriskV1RiceDeltaEncoding } from "./googlecloudwebriskv1ricedeltaencoding";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudWebriskV1ThreatEntryRemovals = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudwebriskv1rawindices_1 = require("./googlecloudwebriskv1rawindices");
+var googlecloudwebriskv1ricedeltaencoding_1 = require("./googlecloudwebriskv1ricedeltaencoding");
 // GoogleCloudWebriskV1ThreatEntryRemovals
 /**
  * Contains the set of entries to remove from a local database.
@@ -35,13 +38,13 @@ var GoogleCloudWebriskV1ThreatEntryRemovals = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rawIndices" }),
-        __metadata("design:type", GoogleCloudWebriskV1RawIndices)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rawIndices" }),
+        __metadata("design:type", googlecloudwebriskv1rawindices_1.GoogleCloudWebriskV1RawIndices)
     ], GoogleCloudWebriskV1ThreatEntryRemovals.prototype, "rawIndices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=riceIndices" }),
-        __metadata("design:type", GoogleCloudWebriskV1RiceDeltaEncoding)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=riceIndices" }),
+        __metadata("design:type", googlecloudwebriskv1ricedeltaencoding_1.GoogleCloudWebriskV1RiceDeltaEncoding)
     ], GoogleCloudWebriskV1ThreatEntryRemovals.prototype, "riceIndices", void 0);
     return GoogleCloudWebriskV1ThreatEntryRemovals;
-}(SpeakeasyBase));
-export { GoogleCloudWebriskV1ThreatEntryRemovals };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudWebriskV1ThreatEntryRemovals = GoogleCloudWebriskV1ThreatEntryRemovals;

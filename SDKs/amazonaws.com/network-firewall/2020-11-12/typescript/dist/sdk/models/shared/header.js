@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StatefulRuleDirectionEnum } from "./statefulruledirectionenum";
-import { StatefulRuleProtocolEnum } from "./statefulruleprotocolenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Header = void 0;
+var utils_1 = require("../../../internal/utils");
+var statefulruledirectionenum_1 = require("./statefulruledirectionenum");
+var statefulruleprotocolenum_1 = require("./statefulruleprotocolenum");
 // Header
 /**
  * The 5-tuple criteria for AWS Network Firewall to use to inspect packet headers in stateful traffic flow inspection. Traffic flows that match the criteria are a match for the corresponding <a>StatefulRule</a>.
@@ -35,29 +38,29 @@ var Header = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Destination" }),
         __metadata("design:type", String)
     ], Header.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationPort" }),
         __metadata("design:type", String)
     ], Header.prototype, "destinationPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Direction" }),
         __metadata("design:type", String)
     ], Header.prototype, "direction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Protocol" }),
         __metadata("design:type", String)
     ], Header.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Source" }),
         __metadata("design:type", String)
     ], Header.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourcePort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourcePort" }),
         __metadata("design:type", String)
     ], Header.prototype, "sourcePort", void 0);
     return Header;
-}(SpeakeasyBase));
-export { Header };
+}(utils_1.SpeakeasyBase));
+exports.Header = Header;

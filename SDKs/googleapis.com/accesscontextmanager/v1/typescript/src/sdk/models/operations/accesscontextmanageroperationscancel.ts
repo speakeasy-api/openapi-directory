@@ -62,7 +62,7 @@ export class AccesscontextmanagerOperationsCancelRequest extends SpeakeasyBase {
   queryParams: AccesscontextmanagerOperationsCancelQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: AccesscontextmanagerOperationsCancelSecurity;
@@ -74,7 +74,7 @@ export class AccesscontextmanagerOperationsCancelResponse extends SpeakeasyBase 
   contentType: string;
 
   @SpeakeasyMetadata()
-  empty?: Map<string, any>;
+  empty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

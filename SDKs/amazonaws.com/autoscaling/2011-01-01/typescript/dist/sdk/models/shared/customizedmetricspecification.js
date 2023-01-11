@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MetricDimension } from "./metricdimension";
-import { MetricStatisticEnum } from "./metricstatisticenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomizedMetricSpecification = void 0;
+var utils_1 = require("../../../internal/utils");
+var metricdimension_1 = require("./metricdimension");
+var metricstatisticenum_1 = require("./metricstatisticenum");
 // CustomizedMetricSpecification
 /**
  * <p>Represents a CloudWatch metric of your choosing for a target tracking scaling policy to use with Amazon EC2 Auto Scaling.</p> <p>To create your customized metric specification:</p> <ul> <li> <p>Add values for each required parameter from CloudWatch. You can use an existing metric, or a new metric that you create. To use your own metric, you must first publish the metric to CloudWatch. For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html">Publish Custom Metrics</a> in the <i>Amazon CloudWatch User Guide</i>.</p> </li> <li> <p>Choose a metric that changes proportionally with capacity. The value of the metric should increase or decrease in inverse proportion to the number of capacity units. That is, the value of the metric should decrease when capacity increases.</p> </li> </ul> <p>For more information about CloudWatch, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html">Amazon CloudWatch Concepts</a>.</p>
@@ -35,25 +38,25 @@ var CustomizedMetricSpecification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: MetricDimension }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: metricdimension_1.MetricDimension }),
         __metadata("design:type", Array)
     ], CustomizedMetricSpecification.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CustomizedMetricSpecification.prototype, "metricName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CustomizedMetricSpecification.prototype, "namespace", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CustomizedMetricSpecification.prototype, "statistic", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CustomizedMetricSpecification.prototype, "unit", void 0);
     return CustomizedMetricSpecification;
-}(SpeakeasyBase));
-export { CustomizedMetricSpecification };
+}(utils_1.SpeakeasyBase));
+exports.CustomizedMetricSpecification = CustomizedMetricSpecification;

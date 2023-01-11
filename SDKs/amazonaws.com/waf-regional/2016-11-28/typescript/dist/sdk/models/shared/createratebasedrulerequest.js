@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RateKeyEnum } from "./ratekeyenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateRateBasedRuleRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var ratekeyenum_1 = require("./ratekeyenum");
+var tag_1 = require("./tag");
 var CreateRateBasedRuleRequest = /** @class */ (function (_super) {
     __extends(CreateRateBasedRuleRequest, _super);
     function CreateRateBasedRuleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChangeToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChangeToken" }),
         __metadata("design:type", String)
     ], CreateRateBasedRuleRequest.prototype, "changeToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MetricName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MetricName" }),
         __metadata("design:type", String)
     ], CreateRateBasedRuleRequest.prototype, "metricName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], CreateRateBasedRuleRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RateKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RateKey" }),
         __metadata("design:type", String)
     ], CreateRateBasedRuleRequest.prototype, "rateKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RateLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RateLimit" }),
         __metadata("design:type", Number)
     ], CreateRateBasedRuleRequest.prototype, "rateLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateRateBasedRuleRequest.prototype, "tags", void 0);
     return CreateRateBasedRuleRequest;
-}(SpeakeasyBase));
-export { CreateRateBasedRuleRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateRateBasedRuleRequest = CreateRateBasedRuleRequest;

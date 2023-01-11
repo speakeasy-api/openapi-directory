@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NotificationTransportEnum } from "./notificationtransportenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NotificationSpecification = void 0;
+var utils_1 = require("../../../internal/utils");
+var notificationtransportenum_1 = require("./notificationtransportenum");
 // NotificationSpecification
 /**
  * The NotificationSpecification data structure describes a HIT event notification for a HIT type.
@@ -34,21 +37,21 @@ var NotificationSpecification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Destination" }),
         __metadata("design:type", String)
     ], NotificationSpecification.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventTypes" }),
         __metadata("design:type", Array)
     ], NotificationSpecification.prototype, "eventTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Transport" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Transport" }),
         __metadata("design:type", String)
     ], NotificationSpecification.prototype, "transport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Version" }),
         __metadata("design:type", String)
     ], NotificationSpecification.prototype, "version", void 0);
     return NotificationSpecification;
-}(SpeakeasyBase));
-export { NotificationSpecification };
+}(utils_1.SpeakeasyBase));
+exports.NotificationSpecification = NotificationSpecification;

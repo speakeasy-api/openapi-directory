@@ -57,5 +57,5 @@ export class UpdateLocationNfsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateLocationNfsResponse?: Map<string, any>;
+  updateLocationNfsResponse?: Record<string, any>;
 }

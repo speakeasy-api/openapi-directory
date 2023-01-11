@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,105 +14,130 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetScriptTagsResponse = exports.GetScriptTagsRequest = exports.GetScriptTags200ApplicationJson = exports.GetScriptTags200ApplicationJsonScriptTags = exports.GetScriptTags200ApplicationJsonScriptTagsDisplayScopeEnum = exports.GetScriptTagsSecurity = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetScriptTagsSecurity = /** @class */ (function (_super) {
     __extends(GetScriptTagsSecurity, _super);
     function GetScriptTagsSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOAuth2)
     ], GetScriptTagsSecurity.prototype, "oAuth2", void 0);
     return GetScriptTagsSecurity;
-}(SpeakeasyBase));
-export { GetScriptTagsSecurity };
-export var GetScriptTags200ApplicationJsonScriptTagsDisplayScopeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetScriptTagsSecurity = GetScriptTagsSecurity;
+var GetScriptTags200ApplicationJsonScriptTagsDisplayScopeEnum;
 (function (GetScriptTags200ApplicationJsonScriptTagsDisplayScopeEnum) {
     GetScriptTags200ApplicationJsonScriptTagsDisplayScopeEnum["All"] = "all";
     GetScriptTags200ApplicationJsonScriptTagsDisplayScopeEnum["Shop"] = "shop";
     GetScriptTags200ApplicationJsonScriptTagsDisplayScopeEnum["ThanksPage"] = "thanks_page";
     GetScriptTags200ApplicationJsonScriptTagsDisplayScopeEnum["Cart"] = "cart";
-})(GetScriptTags200ApplicationJsonScriptTagsDisplayScopeEnum || (GetScriptTags200ApplicationJsonScriptTagsDisplayScopeEnum = {}));
+})(GetScriptTags200ApplicationJsonScriptTagsDisplayScopeEnum = exports.GetScriptTags200ApplicationJsonScriptTagsDisplayScopeEnum || (exports.GetScriptTags200ApplicationJsonScriptTagsDisplayScopeEnum = {}));
 var GetScriptTags200ApplicationJsonScriptTags = /** @class */ (function (_super) {
     __extends(GetScriptTags200ApplicationJsonScriptTags, _super);
     function GetScriptTags200ApplicationJsonScriptTags() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_scope" }),
         __metadata("design:type", String)
     ], GetScriptTags200ApplicationJsonScriptTags.prototype, "displayScope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetScriptTags200ApplicationJsonScriptTags.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=make_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=make_date" }),
         __metadata("design:type", Number)
     ], GetScriptTags200ApplicationJsonScriptTags.prototype, "makeDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=src" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=src" }),
         __metadata("design:type", String)
     ], GetScriptTags200ApplicationJsonScriptTags.prototype, "src", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=update_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=update_date" }),
         __metadata("design:type", Number)
     ], GetScriptTags200ApplicationJsonScriptTags.prototype, "updateDate", void 0);
     return GetScriptTags200ApplicationJsonScriptTags;
-}(SpeakeasyBase));
-export { GetScriptTags200ApplicationJsonScriptTags };
+}(utils_1.SpeakeasyBase));
+exports.GetScriptTags200ApplicationJsonScriptTags = GetScriptTags200ApplicationJsonScriptTags;
 var GetScriptTags200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetScriptTags200ApplicationJson, _super);
     function GetScriptTags200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=script_tags", elemType: GetScriptTags200ApplicationJsonScriptTags }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=script_tags", elemType: GetScriptTags200ApplicationJsonScriptTags }),
         __metadata("design:type", Array)
     ], GetScriptTags200ApplicationJson.prototype, "scriptTags", void 0);
     return GetScriptTags200ApplicationJson;
-}(SpeakeasyBase));
-export { GetScriptTags200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetScriptTags200ApplicationJson = GetScriptTags200ApplicationJson;
 var GetScriptTagsRequest = /** @class */ (function (_super) {
     __extends(GetScriptTagsRequest, _super);
     function GetScriptTagsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetScriptTagsSecurity)
     ], GetScriptTagsRequest.prototype, "security", void 0);
     return GetScriptTagsRequest;
-}(SpeakeasyBase));
-export { GetScriptTagsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetScriptTagsRequest = GetScriptTagsRequest;
 var GetScriptTagsResponse = /** @class */ (function (_super) {
     __extends(GetScriptTagsResponse, _super);
     function GetScriptTagsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetScriptTagsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetScriptTagsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetScriptTags200ApplicationJson)
-    ], GetScriptTagsResponse.prototype, "getScriptTags200ApplicationJsonObject", void 0);
+    ], GetScriptTagsResponse.prototype, "getScriptTags200ApplicationJSONObject", void 0);
     return GetScriptTagsResponse;
-}(SpeakeasyBase));
-export { GetScriptTagsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetScriptTagsResponse = GetScriptTagsResponse;

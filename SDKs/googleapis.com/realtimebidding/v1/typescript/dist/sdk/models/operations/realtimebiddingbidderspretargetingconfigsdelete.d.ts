@@ -27,6 +27,6 @@ export declare class RealtimebiddingBiddersPretargetingConfigsDeleteRequest exte
 }
 export declare class RealtimebiddingBiddersPretargetingConfigsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

@@ -14,7 +14,7 @@ export class DatabaseUpdateDocumentPathParams extends SpeakeasyBase {
 
 export class DatabaseUpdateDocumentRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data: Map<string, any>;
+  data: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=read" })
   read?: string[];
@@ -53,5 +53,5 @@ export class DatabaseUpdateDocumentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  document?: Map<string, any>;
+  document?: Record<string, any>;
 }

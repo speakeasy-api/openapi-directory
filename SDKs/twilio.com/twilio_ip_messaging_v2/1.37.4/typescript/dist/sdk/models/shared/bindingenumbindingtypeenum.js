@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BindingEnumBindingTypeEnum = void 0;
+var BindingEnumBindingTypeEnum;
+(function (BindingEnumBindingTypeEnum) {
+    BindingEnumBindingTypeEnum["Gcm"] = "gcm";
+    BindingEnumBindingTypeEnum["Apn"] = "apn";
+    BindingEnumBindingTypeEnum["Fcm"] = "fcm";
+})(BindingEnumBindingTypeEnum = exports.BindingEnumBindingTypeEnum || (exports.BindingEnumBindingTypeEnum = {}));

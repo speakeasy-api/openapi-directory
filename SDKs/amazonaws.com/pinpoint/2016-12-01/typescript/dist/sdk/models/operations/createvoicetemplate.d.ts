@@ -21,7 +21,7 @@ export declare class CreateVoiceTemplateRequestBodyVoiceTemplateRequest extends 
     languageCode?: string;
     templateDescription?: string;
     voiceId?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateVoiceTemplateRequestBody extends SpeakeasyBase {
     voiceTemplateRequest: CreateVoiceTemplateRequestBodyVoiceTemplateRequest;

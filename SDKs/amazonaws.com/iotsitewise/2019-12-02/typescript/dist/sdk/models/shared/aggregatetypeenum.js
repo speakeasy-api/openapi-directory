@@ -1,4 +1,7 @@
-export var AggregateTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AggregateTypeEnum = void 0;
+var AggregateTypeEnum;
 (function (AggregateTypeEnum) {
     AggregateTypeEnum["Average"] = "AVERAGE";
     AggregateTypeEnum["Count"] = "COUNT";
@@ -6,4 +9,4 @@ export var AggregateTypeEnum;
     AggregateTypeEnum["Minimum"] = "MINIMUM";
     AggregateTypeEnum["Sum"] = "SUM";
     AggregateTypeEnum["StandardDeviation"] = "STANDARD_DEVIATION";
-})(AggregateTypeEnum || (AggregateTypeEnum = {}));
+})(AggregateTypeEnum = exports.AggregateTypeEnum || (exports.AggregateTypeEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataExecutionStatus } from "./dataexecutionstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataSourceFormula = void 0;
+var utils_1 = require("../../../internal/utils");
+var dataexecutionstatus_1 = require("./dataexecutionstatus");
 // DataSourceFormula
 /**
  * A data source formula.
@@ -34,13 +37,13 @@ var DataSourceFormula = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataExecutionStatus" }),
-        __metadata("design:type", DataExecutionStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataExecutionStatus" }),
+        __metadata("design:type", dataexecutionstatus_1.DataExecutionStatus)
     ], DataSourceFormula.prototype, "dataExecutionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceId" }),
         __metadata("design:type", String)
     ], DataSourceFormula.prototype, "dataSourceId", void 0);
     return DataSourceFormula;
-}(SpeakeasyBase));
-export { DataSourceFormula };
+}(utils_1.SpeakeasyBase));
+exports.DataSourceFormula = DataSourceFormula;

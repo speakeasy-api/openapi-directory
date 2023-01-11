@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DestinationNotCrawlableEvidenceReasonEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DestinationNotCrawlableEvidence = exports.DestinationNotCrawlableEvidenceReasonEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DestinationNotCrawlableEvidenceReasonEnum;
 (function (DestinationNotCrawlableEvidenceReasonEnum) {
     DestinationNotCrawlableEvidenceReasonEnum["ReasonUnspecified"] = "REASON_UNSPECIFIED";
     DestinationNotCrawlableEvidenceReasonEnum["UnreachableRobots"] = "UNREACHABLE_ROBOTS";
     DestinationNotCrawlableEvidenceReasonEnum["TimeoutRobots"] = "TIMEOUT_ROBOTS";
     DestinationNotCrawlableEvidenceReasonEnum["RobotedDenied"] = "ROBOTED_DENIED";
     DestinationNotCrawlableEvidenceReasonEnum["Unknown"] = "UNKNOWN";
-})(DestinationNotCrawlableEvidenceReasonEnum || (DestinationNotCrawlableEvidenceReasonEnum = {}));
+})(DestinationNotCrawlableEvidenceReasonEnum = exports.DestinationNotCrawlableEvidenceReasonEnum || (exports.DestinationNotCrawlableEvidenceReasonEnum = {}));
 // DestinationNotCrawlableEvidence
 /**
  * Evidence that the creative's destination URL was not crawlable by Google.
@@ -41,17 +44,17 @@ var DestinationNotCrawlableEvidence = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crawlTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crawlTime" }),
         __metadata("design:type", String)
     ], DestinationNotCrawlableEvidence.prototype, "crawlTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crawledUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crawledUrl" }),
         __metadata("design:type", String)
     ], DestinationNotCrawlableEvidence.prototype, "crawledUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], DestinationNotCrawlableEvidence.prototype, "reason", void 0);
     return DestinationNotCrawlableEvidence;
-}(SpeakeasyBase));
-export { DestinationNotCrawlableEvidence };
+}(utils_1.SpeakeasyBase));
+exports.DestinationNotCrawlableEvidence = DestinationNotCrawlableEvidence;

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class PrfndRequestBodyCertificateParameters extends SpeakeasyBase {
-    acNo: string;
+    acNO: string;
     dob: string;
 }
 export declare enum PrfndRequestBodyFormatEnum {
@@ -106,11 +106,11 @@ export declare class PrfndRequest extends SpeakeasyBase {
 export declare class PrfndResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    prfnd400ApplicationJsonObject?: Prfnd400ApplicationJson;
-    prfnd401ApplicationJsonObject?: Prfnd401ApplicationJson;
-    prfnd404ApplicationJsonObject?: Prfnd404ApplicationJson;
-    prfnd500ApplicationJsonObject?: Prfnd500ApplicationJson;
-    prfnd502ApplicationJsonObject?: Prfnd502ApplicationJson;
-    prfnd503ApplicationJsonObject?: Prfnd503ApplicationJson;
-    prfnd504ApplicationJsonObject?: Prfnd504ApplicationJson;
+    prfnd400ApplicationJSONObject?: Prfnd400ApplicationJson;
+    prfnd401ApplicationJSONObject?: Prfnd401ApplicationJson;
+    prfnd404ApplicationJSONObject?: Prfnd404ApplicationJson;
+    prfnd500ApplicationJSONObject?: Prfnd500ApplicationJson;
+    prfnd502ApplicationJSONObject?: Prfnd502ApplicationJson;
+    prfnd503ApplicationJSONObject?: Prfnd503ApplicationJson;
+    prfnd504ApplicationJSONObject?: Prfnd504ApplicationJson;
 }

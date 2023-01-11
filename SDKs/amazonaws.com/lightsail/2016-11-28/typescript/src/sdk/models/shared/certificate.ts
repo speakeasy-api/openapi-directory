@@ -33,7 +33,7 @@ export class Certificate extends SpeakeasyBase {
   issuedAt?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=issuerCA" })
-  issuerCa?: string;
+  issuerCA?: string;
 
   @SpeakeasyMetadata({ data: "json, name=keyAlgorithm" })
   keyAlgorithm?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2CharsToIgnore = exports.GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum;
 (function (GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum) {
     GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum["CommonCharsToIgnoreUnspecified"] = "COMMON_CHARS_TO_IGNORE_UNSPECIFIED";
     GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum["Numeric"] = "NUMERIC";
@@ -31,7 +34,7 @@ export var GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum;
     GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum["AlphaLowerCase"] = "ALPHA_LOWER_CASE";
     GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum["Punctuation"] = "PUNCTUATION";
     GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum["Whitespace"] = "WHITESPACE";
-})(GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum || (GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum = {}));
+})(GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum = exports.GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum || (exports.GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum = {}));
 // GooglePrivacyDlpV2CharsToIgnore
 /**
  * Characters to skip when doing deidentification of a value. These will be left alone and skipped.
@@ -42,13 +45,13 @@ var GooglePrivacyDlpV2CharsToIgnore = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=charactersToSkip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=charactersToSkip" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2CharsToIgnore.prototype, "charactersToSkip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commonCharactersToIgnore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commonCharactersToIgnore" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2CharsToIgnore.prototype, "commonCharactersToIgnore", void 0);
     return GooglePrivacyDlpV2CharsToIgnore;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2CharsToIgnore };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2CharsToIgnore = GooglePrivacyDlpV2CharsToIgnore;

@@ -22,7 +22,7 @@ export declare class ContainerProperties extends SpeakeasyBase {
     jobRoleArn?: string;
     linuxParameters?: LinuxParameters;
     logConfiguration?: LogConfiguration;
-    memory?: number;
+    memory?: Record<string, any>;
     mountPoints?: MountPoint[];
     networkConfiguration?: NetworkConfiguration;
     privileged?: boolean;
@@ -31,6 +31,6 @@ export declare class ContainerProperties extends SpeakeasyBase {
     secrets?: Secret[];
     ulimits?: Ulimit[];
     user?: string;
-    vcpus?: number;
+    vcpus?: Record<string, any>;
     volumes?: Volume[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateRelationalDatabaseFromSnapshotRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var tag_1 = require("./tag");
 var CreateRelationalDatabaseFromSnapshotRequest = /** @class */ (function (_super) {
     __extends(CreateRelationalDatabaseFromSnapshotRequest, _super);
     function CreateRelationalDatabaseFromSnapshotRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availabilityZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availabilityZone" }),
         __metadata("design:type", String)
     ], CreateRelationalDatabaseFromSnapshotRequest.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publiclyAccessible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publiclyAccessible" }),
         __metadata("design:type", Boolean)
     ], CreateRelationalDatabaseFromSnapshotRequest.prototype, "publiclyAccessible", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationalDatabaseBundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationalDatabaseBundleId" }),
         __metadata("design:type", String)
     ], CreateRelationalDatabaseFromSnapshotRequest.prototype, "relationalDatabaseBundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationalDatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationalDatabaseName" }),
         __metadata("design:type", String)
     ], CreateRelationalDatabaseFromSnapshotRequest.prototype, "relationalDatabaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationalDatabaseSnapshotName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationalDatabaseSnapshotName" }),
         __metadata("design:type", String)
     ], CreateRelationalDatabaseFromSnapshotRequest.prototype, "relationalDatabaseSnapshotName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restoreTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restoreTime" }),
         __metadata("design:type", Date)
     ], CreateRelationalDatabaseFromSnapshotRequest.prototype, "restoreTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceRelationalDatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceRelationalDatabaseName" }),
         __metadata("design:type", String)
     ], CreateRelationalDatabaseFromSnapshotRequest.prototype, "sourceRelationalDatabaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateRelationalDatabaseFromSnapshotRequest.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useLatestRestorableTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useLatestRestorableTime" }),
         __metadata("design:type", Boolean)
     ], CreateRelationalDatabaseFromSnapshotRequest.prototype, "useLatestRestorableTime", void 0);
     return CreateRelationalDatabaseFromSnapshotRequest;
-}(SpeakeasyBase));
-export { CreateRelationalDatabaseFromSnapshotRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateRelationalDatabaseFromSnapshotRequest = CreateRelationalDatabaseFromSnapshotRequest;

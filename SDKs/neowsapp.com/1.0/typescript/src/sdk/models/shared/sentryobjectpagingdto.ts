@@ -6,7 +6,7 @@ import { SentryImpactRiskObject } from "./sentryimpactriskobject";
 
 export class SentryObjectPagingDto extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=links" })
-  links?: Map<string, any>;
+  links?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=page" })
   page?: PageMetaData;

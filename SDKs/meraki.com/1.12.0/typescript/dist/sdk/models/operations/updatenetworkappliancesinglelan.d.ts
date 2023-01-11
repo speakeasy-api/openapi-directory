@@ -13,5 +13,5 @@ export declare class UpdateNetworkApplianceSingleLanRequest extends SpeakeasyBas
 export declare class UpdateNetworkApplianceSingleLanResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkApplianceSingleLan200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkApplianceSingleLan200ApplicationJSONObject?: Record<string, any>;
 }

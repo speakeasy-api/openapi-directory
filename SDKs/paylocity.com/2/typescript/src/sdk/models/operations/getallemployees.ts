@@ -49,6 +49,6 @@ export class GetAllEmployeesResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ elemType: shared.EmployeeInfo })
   employeeInfos?: shared.EmployeeInfo[];
 
-  @SpeakeasyMetadata({ elemType: shared.Error })
-  errors?: shared.Error[];
+  @SpeakeasyMetadata({ elemType: shared.ErrorT })
+  errors?: shared.ErrorT[];
 }

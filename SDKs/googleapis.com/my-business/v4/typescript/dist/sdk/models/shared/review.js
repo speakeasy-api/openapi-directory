@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReviewReply } from "./reviewreply";
-import { Reviewer } from "./reviewer";
-export var ReviewStarRatingEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Review = exports.ReviewStarRatingEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var reviewreply_1 = require("./reviewreply");
+var reviewer_1 = require("./reviewer");
+var ReviewStarRatingEnum;
 (function (ReviewStarRatingEnum) {
     ReviewStarRatingEnum["StarRatingUnspecified"] = "STAR_RATING_UNSPECIFIED";
     ReviewStarRatingEnum["One"] = "ONE";
@@ -33,7 +36,7 @@ export var ReviewStarRatingEnum;
     ReviewStarRatingEnum["Three"] = "THREE";
     ReviewStarRatingEnum["Four"] = "FOUR";
     ReviewStarRatingEnum["Five"] = "FIVE";
-})(ReviewStarRatingEnum || (ReviewStarRatingEnum = {}));
+})(ReviewStarRatingEnum = exports.ReviewStarRatingEnum || (exports.ReviewStarRatingEnum = {}));
 // Review
 /**
  * Output only. Represents a review for a location.
@@ -44,37 +47,37 @@ var Review = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment" }),
         __metadata("design:type", String)
     ], Review.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Review.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Review.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reviewId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reviewId" }),
         __metadata("design:type", String)
     ], Review.prototype, "reviewId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reviewReply" }),
-        __metadata("design:type", ReviewReply)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reviewReply" }),
+        __metadata("design:type", reviewreply_1.ReviewReply)
     ], Review.prototype, "reviewReply", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reviewer" }),
-        __metadata("design:type", Reviewer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reviewer" }),
+        __metadata("design:type", reviewer_1.Reviewer)
     ], Review.prototype, "reviewer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=starRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=starRating" }),
         __metadata("design:type", String)
     ], Review.prototype, "starRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Review.prototype, "updateTime", void 0);
     return Review;
-}(SpeakeasyBase));
-export { Review };
+}(utils_1.SpeakeasyBase));
+exports.Review = Review;

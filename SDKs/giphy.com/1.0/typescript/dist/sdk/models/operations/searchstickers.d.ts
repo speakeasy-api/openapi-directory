@@ -18,5 +18,5 @@ export declare class SearchStickersRequest extends SpeakeasyBase {
 export declare class SearchStickersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    searchStickers200ApplicationJsonObject?: SearchStickers200ApplicationJson;
+    searchStickers200ApplicationJSONObject?: SearchStickers200ApplicationJson;
 }

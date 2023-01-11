@@ -35,8 +35,8 @@ export class PostAssetsCorrelationMatrixValidationResponse extends SpeakeasyBase
   contentType: string;
 
   @SpeakeasyMetadata()
-  postAssetsCorrelationMatrixValidation200ApplicationJsonObject?: PostAssetsCorrelationMatrixValidation200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postAssetsCorrelationMatrixValidation200ApplicationJSONObject?: PostAssetsCorrelationMatrixValidation200ApplicationJson;
 }

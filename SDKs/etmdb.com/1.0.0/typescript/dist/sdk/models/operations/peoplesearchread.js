@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PeopleSearchReadResponse = exports.PeopleSearchReadRequest = exports.PeopleSearchReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PeopleSearchReadPathParams = /** @class */ (function (_super) {
     __extends(PeopleSearchReadPathParams, _super);
     function PeopleSearchReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=user" }),
         __metadata("design:type", String)
     ], PeopleSearchReadPathParams.prototype, "user", void 0);
     return PeopleSearchReadPathParams;
-}(SpeakeasyBase));
-export { PeopleSearchReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PeopleSearchReadPathParams = PeopleSearchReadPathParams;
 var PeopleSearchReadRequest = /** @class */ (function (_super) {
     __extends(PeopleSearchReadRequest, _super);
     function PeopleSearchReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PeopleSearchReadPathParams)
     ], PeopleSearchReadRequest.prototype, "pathParams", void 0);
     return PeopleSearchReadRequest;
-}(SpeakeasyBase));
-export { PeopleSearchReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.PeopleSearchReadRequest = PeopleSearchReadRequest;
 var PeopleSearchReadResponse = /** @class */ (function (_super) {
     __extends(PeopleSearchReadResponse, _super);
     function PeopleSearchReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PeopleSearchReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PeopleSearchReadResponse.prototype, "statusCode", void 0);
     return PeopleSearchReadResponse;
-}(SpeakeasyBase));
-export { PeopleSearchReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.PeopleSearchReadResponse = PeopleSearchReadResponse;

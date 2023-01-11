@@ -9,5 +9,5 @@ export declare class ProtocolGetConfigRequest extends SpeakeasyBase {
 export declare class ProtocolGetConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolGetConfig200ApplicationJsonObject?: Map<string, any>;
+    protocolGetConfig200ApplicationJSONObject?: Record<string, any>;
 }

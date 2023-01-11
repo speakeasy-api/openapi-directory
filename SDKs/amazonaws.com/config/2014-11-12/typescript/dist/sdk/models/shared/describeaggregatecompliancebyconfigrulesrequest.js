@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigRuleComplianceFilters } from "./configrulecompliancefilters";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeAggregateComplianceByConfigRulesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var configrulecompliancefilters_1 = require("./configrulecompliancefilters");
 var DescribeAggregateComplianceByConfigRulesRequest = /** @class */ (function (_super) {
     __extends(DescribeAggregateComplianceByConfigRulesRequest, _super);
     function DescribeAggregateComplianceByConfigRulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigurationAggregatorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigurationAggregatorName" }),
         __metadata("design:type", String)
     ], DescribeAggregateComplianceByConfigRulesRequest.prototype, "configurationAggregatorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Filters" }),
-        __metadata("design:type", ConfigRuleComplianceFilters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Filters" }),
+        __metadata("design:type", configrulecompliancefilters_1.ConfigRuleComplianceFilters)
     ], DescribeAggregateComplianceByConfigRulesRequest.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Limit" }),
         __metadata("design:type", Number)
     ], DescribeAggregateComplianceByConfigRulesRequest.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeAggregateComplianceByConfigRulesRequest.prototype, "nextToken", void 0);
     return DescribeAggregateComplianceByConfigRulesRequest;
-}(SpeakeasyBase));
-export { DescribeAggregateComplianceByConfigRulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.DescribeAggregateComplianceByConfigRulesRequest = DescribeAggregateComplianceByConfigRulesRequest;

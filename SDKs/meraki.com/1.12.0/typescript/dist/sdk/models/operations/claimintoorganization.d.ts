@@ -22,5 +22,5 @@ export declare class ClaimIntoOrganizationRequest extends SpeakeasyBase {
 export declare class ClaimIntoOrganizationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    claimIntoOrganization200ApplicationJsonObject?: Map<string, any>;
+    claimIntoOrganization200ApplicationJSONObject?: Record<string, any>;
 }

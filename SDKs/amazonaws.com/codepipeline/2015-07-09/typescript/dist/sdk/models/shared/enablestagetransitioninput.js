@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StageTransitionTypeEnum } from "./stagetransitiontypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnableStageTransitionInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var stagetransitiontypeenum_1 = require("./stagetransitiontypeenum");
 // EnableStageTransitionInput
 /**
  * Represents the input of an <code>EnableStageTransition</code> action.
@@ -34,17 +37,17 @@ var EnableStageTransitionInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipelineName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipelineName" }),
         __metadata("design:type", String)
     ], EnableStageTransitionInput.prototype, "pipelineName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stageName" }),
         __metadata("design:type", String)
     ], EnableStageTransitionInput.prototype, "stageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transitionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transitionType" }),
         __metadata("design:type", String)
     ], EnableStageTransitionInput.prototype, "transitionType", void 0);
     return EnableStageTransitionInput;
-}(SpeakeasyBase));
-export { EnableStageTransitionInput };
+}(utils_1.SpeakeasyBase));
+exports.EnableStageTransitionInput = EnableStageTransitionInput;

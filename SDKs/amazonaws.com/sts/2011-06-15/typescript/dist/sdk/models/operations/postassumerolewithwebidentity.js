@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostAssumeRoleWithWebIdentityActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAssumeRoleWithWebIdentityResponse = exports.PostAssumeRoleWithWebIdentityRequest = exports.PostAssumeRoleWithWebIdentityHeaders = exports.PostAssumeRoleWithWebIdentityQueryParams = exports.PostAssumeRoleWithWebIdentityVersionEnum = exports.PostAssumeRoleWithWebIdentityActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostAssumeRoleWithWebIdentityActionEnum;
 (function (PostAssumeRoleWithWebIdentityActionEnum) {
     PostAssumeRoleWithWebIdentityActionEnum["AssumeRoleWithWebIdentity"] = "AssumeRoleWithWebIdentity";
-})(PostAssumeRoleWithWebIdentityActionEnum || (PostAssumeRoleWithWebIdentityActionEnum = {}));
-export var PostAssumeRoleWithWebIdentityVersionEnum;
+})(PostAssumeRoleWithWebIdentityActionEnum = exports.PostAssumeRoleWithWebIdentityActionEnum || (exports.PostAssumeRoleWithWebIdentityActionEnum = {}));
+var PostAssumeRoleWithWebIdentityVersionEnum;
 (function (PostAssumeRoleWithWebIdentityVersionEnum) {
     PostAssumeRoleWithWebIdentityVersionEnum["TwoThousandAndEleven0615"] = "2011-06-15";
-})(PostAssumeRoleWithWebIdentityVersionEnum || (PostAssumeRoleWithWebIdentityVersionEnum = {}));
+})(PostAssumeRoleWithWebIdentityVersionEnum = exports.PostAssumeRoleWithWebIdentityVersionEnum || (exports.PostAssumeRoleWithWebIdentityVersionEnum = {}));
 var PostAssumeRoleWithWebIdentityQueryParams = /** @class */ (function (_super) {
     __extends(PostAssumeRoleWithWebIdentityQueryParams, _super);
     function PostAssumeRoleWithWebIdentityQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostAssumeRoleWithWebIdentityQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostAssumeRoleWithWebIdentityQueryParams.prototype, "version", void 0);
     return PostAssumeRoleWithWebIdentityQueryParams;
-}(SpeakeasyBase));
-export { PostAssumeRoleWithWebIdentityQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAssumeRoleWithWebIdentityQueryParams = PostAssumeRoleWithWebIdentityQueryParams;
 var PostAssumeRoleWithWebIdentityHeaders = /** @class */ (function (_super) {
     __extends(PostAssumeRoleWithWebIdentityHeaders, _super);
     function PostAssumeRoleWithWebIdentityHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostAssumeRoleWithWebIdentityHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostAssumeRoleWithWebIdentityHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostAssumeRoleWithWebIdentityHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostAssumeRoleWithWebIdentityHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostAssumeRoleWithWebIdentityHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostAssumeRoleWithWebIdentityHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostAssumeRoleWithWebIdentityHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostAssumeRoleWithWebIdentityHeaders;
-}(SpeakeasyBase));
-export { PostAssumeRoleWithWebIdentityHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostAssumeRoleWithWebIdentityHeaders = PostAssumeRoleWithWebIdentityHeaders;
 var PostAssumeRoleWithWebIdentityRequest = /** @class */ (function (_super) {
     __extends(PostAssumeRoleWithWebIdentityRequest, _super);
     function PostAssumeRoleWithWebIdentityRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAssumeRoleWithWebIdentityQueryParams)
     ], PostAssumeRoleWithWebIdentityRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAssumeRoleWithWebIdentityHeaders)
     ], PostAssumeRoleWithWebIdentityRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostAssumeRoleWithWebIdentityRequest.prototype, "request", void 0);
     return PostAssumeRoleWithWebIdentityRequest;
-}(SpeakeasyBase));
-export { PostAssumeRoleWithWebIdentityRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAssumeRoleWithWebIdentityRequest = PostAssumeRoleWithWebIdentityRequest;
 var PostAssumeRoleWithWebIdentityResponse = /** @class */ (function (_super) {
     __extends(PostAssumeRoleWithWebIdentityResponse, _super);
     function PostAssumeRoleWithWebIdentityResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostAssumeRoleWithWebIdentityResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAssumeRoleWithWebIdentityResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAssumeRoleWithWebIdentityResponse.prototype, "statusCode", void 0);
     return PostAssumeRoleWithWebIdentityResponse;
-}(SpeakeasyBase));
-export { PostAssumeRoleWithWebIdentityResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAssumeRoleWithWebIdentityResponse = PostAssumeRoleWithWebIdentityResponse;

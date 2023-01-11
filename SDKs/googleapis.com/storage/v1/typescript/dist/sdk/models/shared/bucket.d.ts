@@ -139,7 +139,7 @@ export declare class Bucket extends SpeakeasyBase {
     iamConfiguration?: BucketIamConfiguration;
     id?: string;
     kind?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     lifecycle?: BucketLifecycle;
     location?: string;
     locationType?: string;
@@ -150,7 +150,7 @@ export declare class Bucket extends SpeakeasyBase {
     projectNumber?: string;
     retentionPolicy?: BucketRetentionPolicy;
     rpo?: string;
-    satisfiesPzs?: boolean;
+    satisfiesPZS?: boolean;
     selfLink?: string;
     storageClass?: string;
     timeCreated?: Date;

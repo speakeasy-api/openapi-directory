@@ -22,5 +22,5 @@ export class GetScenResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getScen200ApplicationJsonInt32Integer?: number;
+  getScen200ApplicationJSONInt32Integer?: number;
 }

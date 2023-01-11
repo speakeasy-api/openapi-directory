@@ -22,5 +22,5 @@ export class GetNetworkApplianceWarmSpareResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceWarmSpare200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceWarmSpare200ApplicationJSONObject?: Record<string, any>;
 }

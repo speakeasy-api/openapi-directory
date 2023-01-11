@@ -107,5 +107,5 @@ export class UpdateOrganizationApplianceVpnThirdPartyVpnPeersResponse extends Sp
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateOrganizationApplianceVpnThirdPartyVpnPeers200ApplicationJsonObject?: Map<string, any>;
+  updateOrganizationApplianceVPNThirdPartyVPNPeers200ApplicationJSONObject?: Record<string, any>;
 }

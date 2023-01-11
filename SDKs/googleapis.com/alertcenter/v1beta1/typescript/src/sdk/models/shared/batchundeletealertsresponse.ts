@@ -9,7 +9,7 @@ import { Status } from "./status";
 **/
 export class BatchUndeleteAlertsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=failedAlertStatus", elemType: Status })
-  failedAlertStatus?: Map<string, Status>;
+  failedAlertStatus?: Record<string, Status>;
 
   @SpeakeasyMetadata({ data: "json, name=successAlertIds" })
   successAlertIds?: string[];

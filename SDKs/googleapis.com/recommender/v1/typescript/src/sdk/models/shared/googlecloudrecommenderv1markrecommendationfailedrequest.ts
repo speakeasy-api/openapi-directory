@@ -11,5 +11,5 @@ export class GoogleCloudRecommenderV1MarkRecommendationFailedRequest extends Spe
   etag?: string;
 
   @SpeakeasyMetadata({ data: "json, name=stateMetadata" })
-  stateMetadata?: Map<string, string>;
+  stateMetadata?: Record<string, string>;
 }

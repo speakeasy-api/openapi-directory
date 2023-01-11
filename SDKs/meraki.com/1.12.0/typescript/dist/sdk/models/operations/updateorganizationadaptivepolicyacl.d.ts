@@ -37,5 +37,5 @@ export declare class UpdateOrganizationAdaptivePolicyAclRequest extends Speakeas
 export declare class UpdateOrganizationAdaptivePolicyAclResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateOrganizationAdaptivePolicyAcl200ApplicationJsonObject?: Map<string, any>;
+    updateOrganizationAdaptivePolicyAcl200ApplicationJSONObject?: Record<string, any>;
 }

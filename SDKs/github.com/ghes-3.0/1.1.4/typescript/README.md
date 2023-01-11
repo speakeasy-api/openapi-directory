@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest, ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,9 +28,9 @@ const sdk = new SDK();
     
 const req: ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest = {
   pathParams: {
-    org: "similique",
-    repositoryId: 4720841853374531491,
-    runnerGroupId: 2062157674888119143,
+    org: "sit",
+    repositoryId: 2259404117704393152,
+    runnerGroupId: 6050128673802995827,
   },
 };
 

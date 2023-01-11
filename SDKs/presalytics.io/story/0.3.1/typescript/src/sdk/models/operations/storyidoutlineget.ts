@@ -28,5 +28,5 @@ export class StoryIdOutlineGetResponse extends SpeakeasyBase {
   status?: any;
 
   @SpeakeasyMetadata()
-  storyIdOutlineGet200ApplicationJsonString?: string;
+  storyIdOutlineGet200ApplicationJSONString?: string;
 }

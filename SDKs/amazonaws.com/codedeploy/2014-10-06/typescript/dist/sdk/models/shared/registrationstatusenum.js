@@ -1,5 +1,8 @@
-export var RegistrationStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistrationStatusEnum = void 0;
+var RegistrationStatusEnum;
 (function (RegistrationStatusEnum) {
     RegistrationStatusEnum["Registered"] = "Registered";
     RegistrationStatusEnum["Deregistered"] = "Deregistered";
-})(RegistrationStatusEnum || (RegistrationStatusEnum = {}));
+})(RegistrationStatusEnum = exports.RegistrationStatusEnum || (exports.RegistrationStatusEnum = {}));

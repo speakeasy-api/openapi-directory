@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Core = void 0;
+var utils_1 = require("../../../internal/utils");
 // Core
 /**
  * Information about a core.
@@ -33,21 +36,21 @@ var Core = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CertificateArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CertificateArn" }),
         __metadata("design:type", String)
     ], Core.prototype, "certificateArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], Core.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SyncShadow" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SyncShadow" }),
         __metadata("design:type", Boolean)
     ], Core.prototype, "syncShadow", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ThingArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ThingArn" }),
         __metadata("design:type", String)
     ], Core.prototype, "thingArn", void 0);
     return Core;
-}(SpeakeasyBase));
-export { Core };
+}(utils_1.SpeakeasyBase));
+exports.Core = Core;

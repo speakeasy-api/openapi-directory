@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayRouteTable } from "./transitgatewayroutetable";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateTransitGatewayRouteTableResult = exports.CreateTransitGatewayRouteTableResultTransitGatewayRouteTable = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateTransitGatewayRouteTableResultTransitGatewayRouteTable
+/**
+ * Information about the transit gateway route table.
+**/
+var CreateTransitGatewayRouteTableResultTransitGatewayRouteTable = /** @class */ (function (_super) {
+    __extends(CreateTransitGatewayRouteTableResultTransitGatewayRouteTable, _super);
+    function CreateTransitGatewayRouteTableResultTransitGatewayRouteTable() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayRouteTableResultTransitGatewayRouteTable.prototype, "creationTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayRouteTableResultTransitGatewayRouteTable.prototype, "defaultAssociationRouteTable", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayRouteTableResultTransitGatewayRouteTable.prototype, "defaultPropagationRouteTable", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayRouteTableResultTransitGatewayRouteTable.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayRouteTableResultTransitGatewayRouteTable.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayRouteTableResultTransitGatewayRouteTable.prototype, "transitGatewayId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayRouteTableResultTransitGatewayRouteTable.prototype, "transitGatewayRouteTableId", void 0);
+    return CreateTransitGatewayRouteTableResultTransitGatewayRouteTable;
+}(utils_1.SpeakeasyBase));
+exports.CreateTransitGatewayRouteTableResultTransitGatewayRouteTable = CreateTransitGatewayRouteTableResultTransitGatewayRouteTable;
 var CreateTransitGatewayRouteTableResult = /** @class */ (function (_super) {
     __extends(CreateTransitGatewayRouteTableResult, _super);
     function CreateTransitGatewayRouteTableResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TransitGatewayRouteTable)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateTransitGatewayRouteTableResultTransitGatewayRouteTable)
     ], CreateTransitGatewayRouteTableResult.prototype, "transitGatewayRouteTable", void 0);
     return CreateTransitGatewayRouteTableResult;
-}(SpeakeasyBase));
-export { CreateTransitGatewayRouteTableResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateTransitGatewayRouteTableResult = CreateTransitGatewayRouteTableResult;

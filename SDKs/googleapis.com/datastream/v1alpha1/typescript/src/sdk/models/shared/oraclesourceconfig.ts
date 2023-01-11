@@ -12,7 +12,7 @@ export class OracleSourceConfig extends SpeakeasyBase {
   allowlist?: OracleRdbms;
 
   @SpeakeasyMetadata({ data: "json, name=dropLargeObjects" })
-  dropLargeObjects?: Map<string, any>;
+  dropLargeObjects?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=rejectlist" })
   rejectlist?: OracleRdbms;

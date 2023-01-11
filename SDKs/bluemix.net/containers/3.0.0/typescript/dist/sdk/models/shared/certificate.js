@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Certificate = void 0;
+var utils_1 = require("../../../internal/utils");
 var Certificate = /** @class */ (function (_super) {
     __extends(Certificate, _super);
     function Certificate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ca_cert" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ca_cert" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "caCert", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server_cert" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server_cert" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "serverCert", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_cert" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_cert" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "userCert", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_key" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "userKey", void 0);
     return Certificate;
-}(SpeakeasyBase));
-export { Certificate };
+}(utils_1.SpeakeasyBase));
+exports.Certificate = Certificate;

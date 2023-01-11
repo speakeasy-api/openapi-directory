@@ -1,15 +1,14 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UnsuccessfulItem } from "./unsuccessfulitem";
 
 
 
 export class CreateFlowLogsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  clientToken?: string;
+  clientToken?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  flowLogIds?: string[];
+  flowLogIds?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: UnsuccessfulItem })
-  unsuccessful?: UnsuccessfulItem[];
+  @SpeakeasyMetadata()
+  unsuccessful?: Record<string, any>;
 }

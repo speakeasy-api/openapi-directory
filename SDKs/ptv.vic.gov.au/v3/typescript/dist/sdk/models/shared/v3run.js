@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,66 +23,68 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { V3VehicleDescriptor } from "./v3vehicledescriptor";
-import { V3VehiclePosition } from "./v3vehicleposition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3Run = void 0;
+var utils_1 = require("../../../internal/utils");
+var v3vehicledescriptor_1 = require("./v3vehicledescriptor");
+var v3vehicleposition_1 = require("./v3vehicleposition");
 var V3Run = /** @class */ (function (_super) {
     __extends(V3Run, _super);
     function V3Run() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination_name" }),
         __metadata("design:type", String)
     ], V3Run.prototype, "destinationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=direction_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=direction_id" }),
         __metadata("design:type", Number)
     ], V3Run.prototype, "directionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=express_stop_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=express_stop_count" }),
         __metadata("design:type", Number)
     ], V3Run.prototype, "expressStopCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=final_stop_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=final_stop_id" }),
         __metadata("design:type", Number)
     ], V3Run.prototype, "finalStopId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=geopath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=geopath" }),
         __metadata("design:type", Array)
     ], V3Run.prototype, "geopath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=route_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=route_id" }),
         __metadata("design:type", Number)
     ], V3Run.prototype, "routeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=route_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=route_type" }),
         __metadata("design:type", Number)
     ], V3Run.prototype, "routeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=run_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=run_id" }),
         __metadata("design:type", Number)
     ], V3Run.prototype, "runId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=run_ref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=run_ref" }),
         __metadata("design:type", String)
     ], V3Run.prototype, "runRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=run_sequence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=run_sequence" }),
         __metadata("design:type", Number)
     ], V3Run.prototype, "runSequence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], V3Run.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vehicle_descriptor" }),
-        __metadata("design:type", V3VehicleDescriptor)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vehicle_descriptor" }),
+        __metadata("design:type", v3vehicledescriptor_1.V3VehicleDescriptor)
     ], V3Run.prototype, "vehicleDescriptor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vehicle_position" }),
-        __metadata("design:type", V3VehiclePosition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vehicle_position" }),
+        __metadata("design:type", v3vehicleposition_1.V3VehiclePosition)
     ], V3Run.prototype, "vehiclePosition", void 0);
     return V3Run;
-}(SpeakeasyBase));
-export { V3Run };
+}(utils_1.SpeakeasyBase));
+exports.V3Run = V3Run;

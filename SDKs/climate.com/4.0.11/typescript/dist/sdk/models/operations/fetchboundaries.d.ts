@@ -11,7 +11,7 @@ export declare class FetchBoundariesRequest extends SpeakeasyBase {
 export declare class FetchBoundariesResponse extends SpeakeasyBase {
     boundaries?: any;
     contentType: string;
-    error?: shared.Error;
-    headers: Map<string, string[]>;
+    error?: shared.ErrorT;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

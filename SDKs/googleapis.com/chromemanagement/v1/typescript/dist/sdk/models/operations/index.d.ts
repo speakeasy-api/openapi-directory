@@ -7,3 +7,4 @@ export * from "./chromemanagementcustomersreportscountinstalledapps";
 export * from "./chromemanagementcustomersreportsfindinstalledappdevices";
 export * from "./chromemanagementcustomerstelemetrydevicesget";
 export * from "./chromemanagementcustomerstelemetrydeviceslist";
+export * from "./chromemanagementcustomerstelemetryeventslist";

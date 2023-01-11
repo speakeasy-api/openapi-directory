@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImageTagPrediction } from "./imagetagprediction";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImagePredictionResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var imagetagprediction_1 = require("./imagetagprediction");
 // ImagePredictionResult
 /**
  * result of an image prediction request
@@ -34,25 +37,25 @@ var ImagePredictionResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Created" }),
         __metadata("design:type", Date)
     ], ImagePredictionResult.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], ImagePredictionResult.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Iteration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Iteration" }),
         __metadata("design:type", String)
     ], ImagePredictionResult.prototype, "iteration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Predictions", elemType: ImageTagPrediction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Predictions", elemType: imagetagprediction_1.ImageTagPrediction }),
         __metadata("design:type", Array)
     ], ImagePredictionResult.prototype, "predictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Project" }),
         __metadata("design:type", String)
     ], ImagePredictionResult.prototype, "project", void 0);
     return ImagePredictionResult;
-}(SpeakeasyBase));
-export { ImagePredictionResult };
+}(utils_1.SpeakeasyBase));
+exports.ImagePredictionResult = ImagePredictionResult;

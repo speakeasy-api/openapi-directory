@@ -13,7 +13,7 @@ export declare class TeamsListChildLegacyRequest extends SpeakeasyBase {
 }
 export declare class TeamsListChildLegacyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     teams?: shared.Team[];

@@ -10,7 +10,7 @@ import { PhysicalConnectionRequirements } from "./physicalconnectionrequirements
 **/
 export class Connection extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ConnectionProperties" })
-  connectionProperties?: Map<string, string>;
+  connectionProperties?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=ConnectionType" })
   connectionType?: ConnectionTypeEnum;

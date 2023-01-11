@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,18 +14,43 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var IssuesListForAuthenticatedUserFilterEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IssuesListForAuthenticatedUserResponse = exports.IssuesListForAuthenticatedUserRequest = exports.IssuesListForAuthenticatedUserQueryParams = exports.IssuesListForAuthenticatedUserStateEnum = exports.IssuesListForAuthenticatedUserFilterEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var IssuesListForAuthenticatedUserFilterEnum;
 (function (IssuesListForAuthenticatedUserFilterEnum) {
     IssuesListForAuthenticatedUserFilterEnum["Assigned"] = "assigned";
     IssuesListForAuthenticatedUserFilterEnum["Created"] = "created";
@@ -32,96 +58,90 @@ export var IssuesListForAuthenticatedUserFilterEnum;
     IssuesListForAuthenticatedUserFilterEnum["Subscribed"] = "subscribed";
     IssuesListForAuthenticatedUserFilterEnum["Repos"] = "repos";
     IssuesListForAuthenticatedUserFilterEnum["All"] = "all";
-})(IssuesListForAuthenticatedUserFilterEnum || (IssuesListForAuthenticatedUserFilterEnum = {}));
-export var IssuesListForAuthenticatedUserSortEnum;
-(function (IssuesListForAuthenticatedUserSortEnum) {
-    IssuesListForAuthenticatedUserSortEnum["Created"] = "created";
-    IssuesListForAuthenticatedUserSortEnum["Updated"] = "updated";
-    IssuesListForAuthenticatedUserSortEnum["Comments"] = "comments";
-})(IssuesListForAuthenticatedUserSortEnum || (IssuesListForAuthenticatedUserSortEnum = {}));
-export var IssuesListForAuthenticatedUserStateEnum;
+})(IssuesListForAuthenticatedUserFilterEnum = exports.IssuesListForAuthenticatedUserFilterEnum || (exports.IssuesListForAuthenticatedUserFilterEnum = {}));
+var IssuesListForAuthenticatedUserStateEnum;
 (function (IssuesListForAuthenticatedUserStateEnum) {
     IssuesListForAuthenticatedUserStateEnum["Open"] = "open";
     IssuesListForAuthenticatedUserStateEnum["Closed"] = "closed";
     IssuesListForAuthenticatedUserStateEnum["All"] = "all";
-})(IssuesListForAuthenticatedUserStateEnum || (IssuesListForAuthenticatedUserStateEnum = {}));
+})(IssuesListForAuthenticatedUserStateEnum = exports.IssuesListForAuthenticatedUserStateEnum || (exports.IssuesListForAuthenticatedUserStateEnum = {}));
 var IssuesListForAuthenticatedUserQueryParams = /** @class */ (function (_super) {
     __extends(IssuesListForAuthenticatedUserQueryParams, _super);
     function IssuesListForAuthenticatedUserQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=direction" }),
         __metadata("design:type", String)
     ], IssuesListForAuthenticatedUserQueryParams.prototype, "direction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], IssuesListForAuthenticatedUserQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=labels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=labels" }),
         __metadata("design:type", String)
     ], IssuesListForAuthenticatedUserQueryParams.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], IssuesListForAuthenticatedUserQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=per_page" }),
         __metadata("design:type", Number)
     ], IssuesListForAuthenticatedUserQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=since" }),
         __metadata("design:type", Date)
     ], IssuesListForAuthenticatedUserQueryParams.prototype, "since", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], IssuesListForAuthenticatedUserQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=state" }),
         __metadata("design:type", String)
     ], IssuesListForAuthenticatedUserQueryParams.prototype, "state", void 0);
     return IssuesListForAuthenticatedUserQueryParams;
-}(SpeakeasyBase));
-export { IssuesListForAuthenticatedUserQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.IssuesListForAuthenticatedUserQueryParams = IssuesListForAuthenticatedUserQueryParams;
 var IssuesListForAuthenticatedUserRequest = /** @class */ (function (_super) {
     __extends(IssuesListForAuthenticatedUserRequest, _super);
     function IssuesListForAuthenticatedUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", IssuesListForAuthenticatedUserQueryParams)
     ], IssuesListForAuthenticatedUserRequest.prototype, "queryParams", void 0);
     return IssuesListForAuthenticatedUserRequest;
-}(SpeakeasyBase));
-export { IssuesListForAuthenticatedUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.IssuesListForAuthenticatedUserRequest = IssuesListForAuthenticatedUserRequest;
 var IssuesListForAuthenticatedUserResponse = /** @class */ (function (_super) {
     __extends(IssuesListForAuthenticatedUserResponse, _super);
     function IssuesListForAuthenticatedUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], IssuesListForAuthenticatedUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], IssuesListForAuthenticatedUserResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], IssuesListForAuthenticatedUserResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BasicError)
     ], IssuesListForAuthenticatedUserResponse.prototype, "basicError", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.Issue }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.Issue }),
         __metadata("design:type", Array)
     ], IssuesListForAuthenticatedUserResponse.prototype, "issues", void 0);
     return IssuesListForAuthenticatedUserResponse;
-}(SpeakeasyBase));
-export { IssuesListForAuthenticatedUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.IssuesListForAuthenticatedUserResponse = IssuesListForAuthenticatedUserResponse;

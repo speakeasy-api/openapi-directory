@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // DeviceInfo
 /**
  * Signals associated with the device making the request.
@@ -33,33 +36,33 @@ var DeviceInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceModelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceModelName" }),
         __metadata("design:type", String)
     ], DeviceInfo.prototype, "deviceModelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], DeviceInfo.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCodeFromWebview" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCodeFromWebview" }),
         __metadata("design:type", String)
     ], DeviceInfo.prototype, "languageCodeFromWebview", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCodeRaw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCodeRaw" }),
         __metadata("design:type", String)
     ], DeviceInfo.prototype, "languageCodeRaw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenResolutionHeight" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenResolutionHeight" }),
         __metadata("design:type", String)
     ], DeviceInfo.prototype, "screenResolutionHeight", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenResolutionWidth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenResolutionWidth" }),
         __metadata("design:type", String)
     ], DeviceInfo.prototype, "screenResolutionWidth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezone" }),
         __metadata("design:type", String)
     ], DeviceInfo.prototype, "timezone", void 0);
     return DeviceInfo;
-}(SpeakeasyBase));
-export { DeviceInfo };
+}(utils_1.SpeakeasyBase));
+exports.DeviceInfo = DeviceInfo;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetFolderInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetFolderInput = /** @class */ (function (_super) {
     __extends(GetFolderInput, _super);
     function GetFolderInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commitSpecifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commitSpecifier" }),
         __metadata("design:type", String)
     ], GetFolderInput.prototype, "commitSpecifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=folderPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=folderPath" }),
         __metadata("design:type", String)
     ], GetFolderInput.prototype, "folderPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositoryName" }),
         __metadata("design:type", String)
     ], GetFolderInput.prototype, "repositoryName", void 0);
     return GetFolderInput;
-}(SpeakeasyBase));
-export { GetFolderInput };
+}(utils_1.SpeakeasyBase));
+exports.GetFolderInput = GetFolderInput;

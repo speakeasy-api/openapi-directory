@@ -11,6 +11,9 @@ export declare class UserResponsePhoto extends SpeakeasyBase {
     image36x36?: string;
     image60x60?: string;
 }
+/**
+ * A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.
+**/
 export declare class UserResponse extends SpeakeasyBase {
     email?: string;
     gid?: string;

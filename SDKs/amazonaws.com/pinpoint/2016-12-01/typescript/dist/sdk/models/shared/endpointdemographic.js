@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointDemographic = void 0;
+var utils_1 = require("../../../internal/utils");
 // EndpointDemographic
 /**
  * Specifies demographic information about an endpoint, such as the applicable time zone and platform.
@@ -33,37 +36,37 @@ var EndpointDemographic = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AppVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AppVersion" }),
         __metadata("design:type", String)
     ], EndpointDemographic.prototype, "appVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Locale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Locale" }),
         __metadata("design:type", String)
     ], EndpointDemographic.prototype, "locale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Make" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Make" }),
         __metadata("design:type", String)
     ], EndpointDemographic.prototype, "make", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Model" }),
         __metadata("design:type", String)
     ], EndpointDemographic.prototype, "model", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ModelVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ModelVersion" }),
         __metadata("design:type", String)
     ], EndpointDemographic.prototype, "modelVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Platform" }),
         __metadata("design:type", String)
     ], EndpointDemographic.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PlatformVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PlatformVersion" }),
         __metadata("design:type", String)
     ], EndpointDemographic.prototype, "platformVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Timezone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Timezone" }),
         __metadata("design:type", String)
     ], EndpointDemographic.prototype, "timezone", void 0);
     return EndpointDemographic;
-}(SpeakeasyBase));
-export { EndpointDemographic };
+}(utils_1.SpeakeasyBase));
+exports.EndpointDemographic = EndpointDemographic;

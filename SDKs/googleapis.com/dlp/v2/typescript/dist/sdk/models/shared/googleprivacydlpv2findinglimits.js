@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2InfoTypeLimit } from "./googleprivacydlpv2infotypelimit";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2FindingLimits = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2infotypelimit_1 = require("./googleprivacydlpv2infotypelimit");
 // GooglePrivacyDlpV2FindingLimits
 /**
  * Configuration to control the number of findings returned for inspection. This is not used for de-identification or data profiling. When redacting sensitive data from images, finding limits don't apply. They can cause unexpected or inconsistent results, where only some data is redacted. Don't include finding limits in RedactImage requests. Otherwise, Cloud DLP returns an error.
@@ -34,17 +37,17 @@ var GooglePrivacyDlpV2FindingLimits = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxFindingsPerInfoType", elemType: GooglePrivacyDlpV2InfoTypeLimit }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxFindingsPerInfoType", elemType: googleprivacydlpv2infotypelimit_1.GooglePrivacyDlpV2InfoTypeLimit }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2FindingLimits.prototype, "maxFindingsPerInfoType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxFindingsPerItem" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxFindingsPerItem" }),
         __metadata("design:type", Number)
     ], GooglePrivacyDlpV2FindingLimits.prototype, "maxFindingsPerItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxFindingsPerRequest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxFindingsPerRequest" }),
         __metadata("design:type", Number)
     ], GooglePrivacyDlpV2FindingLimits.prototype, "maxFindingsPerRequest", void 0);
     return GooglePrivacyDlpV2FindingLimits;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2FindingLimits };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2FindingLimits = GooglePrivacyDlpV2FindingLimits;

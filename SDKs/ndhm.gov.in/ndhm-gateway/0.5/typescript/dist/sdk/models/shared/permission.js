@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,79 +23,81 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PermissionAccessModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Permission = exports.PermissionFrequency = exports.PermissionFrequencyUnitEnum = exports.PermissionDateRange = exports.PermissionAccessModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PermissionAccessModeEnum;
 (function (PermissionAccessModeEnum) {
     PermissionAccessModeEnum["View"] = "VIEW";
     PermissionAccessModeEnum["Store"] = "STORE";
     PermissionAccessModeEnum["Query"] = "QUERY";
     PermissionAccessModeEnum["Stream"] = "STREAM";
-})(PermissionAccessModeEnum || (PermissionAccessModeEnum = {}));
+})(PermissionAccessModeEnum = exports.PermissionAccessModeEnum || (exports.PermissionAccessModeEnum = {}));
 var PermissionDateRange = /** @class */ (function (_super) {
     __extends(PermissionDateRange, _super);
     function PermissionDateRange() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", Date)
     ], PermissionDateRange.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to" }),
         __metadata("design:type", Date)
     ], PermissionDateRange.prototype, "to", void 0);
     return PermissionDateRange;
-}(SpeakeasyBase));
-export { PermissionDateRange };
-export var PermissionFrequencyUnitEnum;
+}(utils_1.SpeakeasyBase));
+exports.PermissionDateRange = PermissionDateRange;
+var PermissionFrequencyUnitEnum;
 (function (PermissionFrequencyUnitEnum) {
     PermissionFrequencyUnitEnum["Hour"] = "HOUR";
     PermissionFrequencyUnitEnum["Week"] = "WEEK";
     PermissionFrequencyUnitEnum["Day"] = "DAY";
     PermissionFrequencyUnitEnum["Month"] = "MONTH";
     PermissionFrequencyUnitEnum["Year"] = "YEAR";
-})(PermissionFrequencyUnitEnum || (PermissionFrequencyUnitEnum = {}));
+})(PermissionFrequencyUnitEnum = exports.PermissionFrequencyUnitEnum || (exports.PermissionFrequencyUnitEnum = {}));
 var PermissionFrequency = /** @class */ (function (_super) {
     __extends(PermissionFrequency, _super);
     function PermissionFrequency() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repeats" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repeats" }),
         __metadata("design:type", Number)
     ], PermissionFrequency.prototype, "repeats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unit" }),
         __metadata("design:type", String)
     ], PermissionFrequency.prototype, "unit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], PermissionFrequency.prototype, "value", void 0);
     return PermissionFrequency;
-}(SpeakeasyBase));
-export { PermissionFrequency };
+}(utils_1.SpeakeasyBase));
+exports.PermissionFrequency = PermissionFrequency;
 var Permission = /** @class */ (function (_super) {
     __extends(Permission, _super);
     function Permission() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessMode" }),
         __metadata("design:type", String)
     ], Permission.prototype, "accessMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataEraseAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataEraseAt" }),
         __metadata("design:type", Date)
     ], Permission.prototype, "dataEraseAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateRange" }),
         __metadata("design:type", PermissionDateRange)
     ], Permission.prototype, "dateRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequency" }),
         __metadata("design:type", PermissionFrequency)
     ], Permission.prototype, "frequency", void 0);
     return Permission;
-}(SpeakeasyBase));
-export { Permission };
+}(utils_1.SpeakeasyBase));
+exports.Permission = Permission;

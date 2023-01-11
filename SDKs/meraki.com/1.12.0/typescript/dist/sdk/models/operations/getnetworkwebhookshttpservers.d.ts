@@ -8,5 +8,5 @@ export declare class GetNetworkWebhooksHttpServersRequest extends SpeakeasyBase 
 export declare class GetNetworkWebhooksHttpServersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkWebhooksHttpServers200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWebhooksHttpServers200ApplicationJSONObject?: Record<string, any>;
 }

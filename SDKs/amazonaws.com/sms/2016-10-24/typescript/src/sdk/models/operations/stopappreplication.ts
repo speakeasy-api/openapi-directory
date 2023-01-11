@@ -63,7 +63,7 @@ export class StopAppReplicationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  stopAppReplicationResponse?: Map<string, any>;
+  stopAppReplicationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   unauthorizedOperationException?: any;

@@ -194,23 +194,23 @@ export class MicerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  micer400ApplicationJsonObject?: Micer400ApplicationJson;
+  micer400ApplicationJSONObject?: Micer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  micer401ApplicationJsonObject?: Micer401ApplicationJson;
+  micer401ApplicationJSONObject?: Micer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  micer404ApplicationJsonObject?: Micer404ApplicationJson;
+  micer404ApplicationJSONObject?: Micer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  micer500ApplicationJsonObject?: Micer500ApplicationJson;
+  micer500ApplicationJSONObject?: Micer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  micer502ApplicationJsonObject?: Micer502ApplicationJson;
+  micer502ApplicationJSONObject?: Micer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  micer503ApplicationJsonObject?: Micer503ApplicationJson;
+  micer503ApplicationJSONObject?: Micer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  micer504ApplicationJsonObject?: Micer504ApplicationJson;
+  micer504ApplicationJSONObject?: Micer504ApplicationJson;
 }

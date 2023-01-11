@@ -51,7 +51,7 @@ export class DeleteApplicationsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteApplicationsResponse?: Map<string, any>;
+  deleteApplicationsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   homeRegionNotSetException?: any;

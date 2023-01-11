@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.View = void 0;
+var utils_1 = require("../../../internal/utils");
 // View
 /**
- * A Page view within a session-create
+ * Base model for all types
 **/
 var View = /** @class */ (function (_super) {
     __extends(View, _super);
@@ -33,53 +36,53 @@ var View = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active_msecs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active_msecs" }),
         __metadata("design:type", Number)
     ], View.prototype, "activeMsecs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additional" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additional" }),
         __metadata("design:type", String)
     ], View.prototype, "additional", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], View.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
         __metadata("design:type", String)
     ], View.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_time" }),
         __metadata("design:type", Date)
     ], View.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], View.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page_number" }),
         __metadata("design:type", Number)
     ], View.prototype, "pageNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=session_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=session_id" }),
         __metadata("design:type", String)
     ], View.prototype, "sessionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_time" }),
         __metadata("design:type", Date)
     ], View.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_msecs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_msecs" }),
         __metadata("design:type", Number)
     ], View.prototype, "totalMsecs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], View.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_by" }),
         __metadata("design:type", String)
     ], View.prototype, "updatedBy", void 0);
     return View;
-}(SpeakeasyBase));
-export { View };
+}(utils_1.SpeakeasyBase));
+exports.View = View;

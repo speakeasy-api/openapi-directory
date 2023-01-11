@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ShardConfiguration } from "./shardconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShardDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var shardconfiguration_1 = require("./shardconfiguration");
 // ShardDetail
 /**
  * Provides details of a shard in a snapshot
@@ -34,21 +37,21 @@ var ShardDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Configuration" }),
-        __metadata("design:type", ShardConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Configuration" }),
+        __metadata("design:type", shardconfiguration_1.ShardConfiguration)
     ], ShardDetail.prototype, "configuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], ShardDetail.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Size" }),
         __metadata("design:type", String)
     ], ShardDetail.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnapshotCreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnapshotCreationTime" }),
         __metadata("design:type", Date)
     ], ShardDetail.prototype, "snapshotCreationTime", void 0);
     return ShardDetail;
-}(SpeakeasyBase));
-export { ShardDetail };
+}(utils_1.SpeakeasyBase));
+exports.ShardDetail = ShardDetail;

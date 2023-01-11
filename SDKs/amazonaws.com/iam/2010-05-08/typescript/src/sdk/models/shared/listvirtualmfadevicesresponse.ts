@@ -15,5 +15,5 @@ export class ListVirtualMfaDevicesResponse extends SpeakeasyBase {
   marker?: string;
 
   @SpeakeasyMetadata({ elemType: VirtualMfaDevice })
-  virtualMfaDevices: VirtualMfaDevice[];
+  virtualMFADevices: VirtualMfaDevice[];
 }

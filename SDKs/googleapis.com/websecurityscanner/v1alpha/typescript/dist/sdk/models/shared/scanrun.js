@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ScanRunExecutionStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScanRun = exports.ScanRunResultStateEnum = exports.ScanRunExecutionStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ScanRunExecutionStateEnum;
 (function (ScanRunExecutionStateEnum) {
     ScanRunExecutionStateEnum["ExecutionStateUnspecified"] = "EXECUTION_STATE_UNSPECIFIED";
     ScanRunExecutionStateEnum["Queued"] = "QUEUED";
     ScanRunExecutionStateEnum["Scanning"] = "SCANNING";
     ScanRunExecutionStateEnum["Finished"] = "FINISHED";
-})(ScanRunExecutionStateEnum || (ScanRunExecutionStateEnum = {}));
-export var ScanRunResultStateEnum;
+})(ScanRunExecutionStateEnum = exports.ScanRunExecutionStateEnum || (exports.ScanRunExecutionStateEnum = {}));
+var ScanRunResultStateEnum;
 (function (ScanRunResultStateEnum) {
     ScanRunResultStateEnum["ResultStateUnspecified"] = "RESULT_STATE_UNSPECIFIED";
     ScanRunResultStateEnum["Success"] = "SUCCESS";
     ScanRunResultStateEnum["Error"] = "ERROR";
     ScanRunResultStateEnum["Killed"] = "KILLED";
-})(ScanRunResultStateEnum || (ScanRunResultStateEnum = {}));
+})(ScanRunResultStateEnum = exports.ScanRunResultStateEnum || (exports.ScanRunResultStateEnum = {}));
 // ScanRun
 /**
  * A ScanRun is a output-only resource representing an actual run of the scan.
@@ -47,41 +50,41 @@ var ScanRun = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], ScanRun.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionState" }),
         __metadata("design:type", String)
     ], ScanRun.prototype, "executionState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasVulnerabilities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasVulnerabilities" }),
         __metadata("design:type", Boolean)
     ], ScanRun.prototype, "hasVulnerabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ScanRun.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progressPercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progressPercent" }),
         __metadata("design:type", Number)
     ], ScanRun.prototype, "progressPercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resultState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resultState" }),
         __metadata("design:type", String)
     ], ScanRun.prototype, "resultState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], ScanRun.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlsCrawledCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlsCrawledCount" }),
         __metadata("design:type", String)
     ], ScanRun.prototype, "urlsCrawledCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlsTestedCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlsTestedCount" }),
         __metadata("design:type", String)
     ], ScanRun.prototype, "urlsTestedCount", void 0);
     return ScanRun;
-}(SpeakeasyBase));
-export { ScanRun };
+}(utils_1.SpeakeasyBase));
+exports.ScanRun = ScanRun;

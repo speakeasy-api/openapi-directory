@@ -1,6 +1,9 @@
-export var PriceClassEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PriceClassEnum = void 0;
+var PriceClassEnum;
 (function (PriceClassEnum) {
     PriceClassEnum["PriceClass100"] = "PriceClass_100";
     PriceClassEnum["PriceClass200"] = "PriceClass_200";
     PriceClassEnum["PriceClassAll"] = "PriceClass_All";
-})(PriceClassEnum || (PriceClassEnum = {}));
+})(PriceClassEnum = exports.PriceClassEnum || (exports.PriceClassEnum = {}));

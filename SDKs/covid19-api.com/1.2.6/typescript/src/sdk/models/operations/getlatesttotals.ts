@@ -51,5 +51,5 @@ export class GetLatestTotalsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: GetLatestTotals200ApplicationJson })
-  getLatestTotals200ApplicationJsonObjects?: GetLatestTotals200ApplicationJson[];
+  getLatestTotals200ApplicationJSONObjects?: GetLatestTotals200ApplicationJson[];
 }

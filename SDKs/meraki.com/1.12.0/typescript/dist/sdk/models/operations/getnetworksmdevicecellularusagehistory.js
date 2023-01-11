@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkSmDeviceCellularUsageHistoryResponse = exports.GetNetworkSmDeviceCellularUsageHistoryRequest = exports.GetNetworkSmDeviceCellularUsageHistoryPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkSmDeviceCellularUsageHistoryPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkSmDeviceCellularUsageHistoryPathParams, _super);
     function GetNetworkSmDeviceCellularUsageHistoryPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
         __metadata("design:type", String)
     ], GetNetworkSmDeviceCellularUsageHistoryPathParams.prototype, "deviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkSmDeviceCellularUsageHistoryPathParams.prototype, "networkId", void 0);
     return GetNetworkSmDeviceCellularUsageHistoryPathParams;
-}(SpeakeasyBase));
-export { GetNetworkSmDeviceCellularUsageHistoryPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmDeviceCellularUsageHistoryPathParams = GetNetworkSmDeviceCellularUsageHistoryPathParams;
 var GetNetworkSmDeviceCellularUsageHistoryRequest = /** @class */ (function (_super) {
     __extends(GetNetworkSmDeviceCellularUsageHistoryRequest, _super);
     function GetNetworkSmDeviceCellularUsageHistoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkSmDeviceCellularUsageHistoryPathParams)
     ], GetNetworkSmDeviceCellularUsageHistoryRequest.prototype, "pathParams", void 0);
     return GetNetworkSmDeviceCellularUsageHistoryRequest;
-}(SpeakeasyBase));
-export { GetNetworkSmDeviceCellularUsageHistoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmDeviceCellularUsageHistoryRequest = GetNetworkSmDeviceCellularUsageHistoryRequest;
 var GetNetworkSmDeviceCellularUsageHistoryResponse = /** @class */ (function (_super) {
     __extends(GetNetworkSmDeviceCellularUsageHistoryResponse, _super);
     function GetNetworkSmDeviceCellularUsageHistoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkSmDeviceCellularUsageHistoryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkSmDeviceCellularUsageHistoryResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkSmDeviceCellularUsageHistoryResponse.prototype, "getNetworkSmDeviceCellularUsageHistory200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkSmDeviceCellularUsageHistoryResponse.prototype, "getNetworkSmDeviceCellularUsageHistory200ApplicationJSONObject", void 0);
     return GetNetworkSmDeviceCellularUsageHistoryResponse;
-}(SpeakeasyBase));
-export { GetNetworkSmDeviceCellularUsageHistoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmDeviceCellularUsageHistoryResponse = GetNetworkSmDeviceCellularUsageHistoryResponse;

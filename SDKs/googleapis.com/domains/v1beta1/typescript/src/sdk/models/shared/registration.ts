@@ -1,9 +1,9 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { ContactSettings } from "./contactsettings";
-import { DnsSettingsInput } from "./dnssettings";
-import { ManagementSettingsInput } from "./managementsettings";
 import { DnsSettings } from "./dnssettings";
 import { ManagementSettings } from "./managementsettings";
+import { DnsSettingsInput } from "./dnssettings";
+import { ManagementSettingsInput } from "./managementsettings";
 
 
 export enum RegistrationIssuesEnum {
@@ -53,31 +53,6 @@ export enum RegistrationTransferFailureReasonEnum {
 }
 
 
-// RegistrationInput
-/** 
- * The `Registration` resource facilitates managing and configuring domain name registrations. There are several ways to create a new `Registration` resource: To create a new `Registration` resource, find a suitable domain name by calling the `SearchDomains` method with a query to see available domain name options. After choosing a name, call `RetrieveRegisterParameters` to ensure availability and obtain information like pricing, which is needed to build a call to `RegisterDomain`. Another way to create a new `Registration` is to transfer an existing domain from another registrar. First, go to the current registrar to unlock the domain for transfer and retrieve the domain's transfer authorization code. Then call `RetrieveTransferParameters` to confirm that the domain is unlocked and to get values needed to build a call to `TransferDomain`. Finally, you can create a new `Registration` by importing an existing domain managed with [Google Domains](https://domains.google/). First, call `RetrieveImportableDomains` to list domains to which the calling user has sufficient access. Then call `ImportDomain` on any domain names you want to use with Cloud Domains.
-**/
-export class RegistrationInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=contactSettings" })
-  contactSettings?: ContactSettings;
-
-  @SpeakeasyMetadata({ data: "json, name=dnsSettings" })
-  dnsSettings?: DnsSettingsInput;
-
-  @SpeakeasyMetadata({ data: "json, name=domainName" })
-  domainName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=managementSettings" })
-  managementSettings?: ManagementSettingsInput;
-
-  @SpeakeasyMetadata({ data: "json, name=pendingContactSettings" })
-  pendingContactSettings?: ContactSettings;
-}
-
-
 // Registration
 /** 
  * The `Registration` resource facilitates managing and configuring domain name registrations. There are several ways to create a new `Registration` resource: To create a new `Registration` resource, find a suitable domain name by calling the `SearchDomains` method with a query to see available domain name options. After choosing a name, call `RetrieveRegisterParameters` to ensure availability and obtain information like pricing, which is needed to build a call to `RegisterDomain`. Another way to create a new `Registration` is to transfer an existing domain from another registrar. First, go to the current registrar to unlock the domain for transfer and retrieve the domain's transfer authorization code. Then call `RetrieveTransferParameters` to confirm that the domain is unlocked and to get values needed to build a call to `TransferDomain`. Finally, you can create a new `Registration` by importing an existing domain managed with [Google Domains](https://domains.google/). First, call `RetrieveImportableDomains` to list domains to which the calling user has sufficient access. Then call `ImportDomain` on any domain names you want to use with Cloud Domains.
@@ -102,7 +77,7 @@ export class Registration extends SpeakeasyBase {
   issues?: RegistrationIssuesEnum[];
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=managementSettings" })
   managementSettings?: ManagementSettings;
@@ -124,4 +99,29 @@ export class Registration extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=transferFailureReason" })
   transferFailureReason?: RegistrationTransferFailureReasonEnum;
+}
+
+
+// RegistrationInput
+/** 
+ * The `Registration` resource facilitates managing and configuring domain name registrations. There are several ways to create a new `Registration` resource: To create a new `Registration` resource, find a suitable domain name by calling the `SearchDomains` method with a query to see available domain name options. After choosing a name, call `RetrieveRegisterParameters` to ensure availability and obtain information like pricing, which is needed to build a call to `RegisterDomain`. Another way to create a new `Registration` is to transfer an existing domain from another registrar. First, go to the current registrar to unlock the domain for transfer and retrieve the domain's transfer authorization code. Then call `RetrieveTransferParameters` to confirm that the domain is unlocked and to get values needed to build a call to `TransferDomain`. Finally, you can create a new `Registration` by importing an existing domain managed with [Google Domains](https://domains.google/). First, call `RetrieveImportableDomains` to list domains to which the calling user has sufficient access. Then call `ImportDomain` on any domain names you want to use with Cloud Domains.
+**/
+export class RegistrationInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=contactSettings" })
+  contactSettings?: ContactSettings;
+
+  @SpeakeasyMetadata({ data: "json, name=dnsSettings" })
+  dnsSettings?: DnsSettingsInput;
+
+  @SpeakeasyMetadata({ data: "json, name=domainName" })
+  domainName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=managementSettings" })
+  managementSettings?: ManagementSettingsInput;
+
+  @SpeakeasyMetadata({ data: "json, name=pendingContactSettings" })
+  pendingContactSettings?: ContactSettings;
 }

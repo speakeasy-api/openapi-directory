@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ByeWeeksFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ByeWeeksResponse = exports.ByeWeeksRequest = exports.ByeWeeksPathParams = exports.ByeWeeksFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ByeWeeksFormatEnum;
 (function (ByeWeeksFormatEnum) {
     ByeWeeksFormatEnum["Xml"] = "XML";
     ByeWeeksFormatEnum["Json"] = "JSON";
-})(ByeWeeksFormatEnum || (ByeWeeksFormatEnum = {}));
+})(ByeWeeksFormatEnum = exports.ByeWeeksFormatEnum || (exports.ByeWeeksFormatEnum = {}));
 var ByeWeeksPathParams = /** @class */ (function (_super) {
     __extends(ByeWeeksPathParams, _super);
     function ByeWeeksPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], ByeWeeksPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], ByeWeeksPathParams.prototype, "season", void 0);
     return ByeWeeksPathParams;
-}(SpeakeasyBase));
-export { ByeWeeksPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ByeWeeksPathParams = ByeWeeksPathParams;
 var ByeWeeksRequest = /** @class */ (function (_super) {
     __extends(ByeWeeksRequest, _super);
     function ByeWeeksRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ByeWeeksPathParams)
     ], ByeWeeksRequest.prototype, "pathParams", void 0);
     return ByeWeeksRequest;
-}(SpeakeasyBase));
-export { ByeWeeksRequest };
+}(utils_1.SpeakeasyBase));
+exports.ByeWeeksRequest = ByeWeeksRequest;
 var ByeWeeksResponse = /** @class */ (function (_super) {
     __extends(ByeWeeksResponse, _super);
     function ByeWeeksResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ByeWeeksResponse.prototype, "byes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ByeWeeksResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ByeWeeksResponse.prototype, "statusCode", void 0);
     return ByeWeeksResponse;
-}(SpeakeasyBase));
-export { ByeWeeksResponse };
+}(utils_1.SpeakeasyBase));
+exports.ByeWeeksResponse = ByeWeeksResponse;

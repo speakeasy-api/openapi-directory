@@ -7,5 +7,5 @@ export declare class SchemeXRapidApiKey extends SpeakeasyBase {
 }
 export declare class Security extends SpeakeasyBase {
     advSecurityToken?: SchemeAdvSecurityToken;
-    xRapidApiKey?: SchemeXRapidApiKey;
+    xRapidAPIKey?: SchemeXRapidApiKey;
 }

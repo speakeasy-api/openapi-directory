@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TrunkInterfaceAssociation } from "./trunkinterfaceassociation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssociateTrunkInterfaceResult = exports.AssociateTrunkInterfaceResultInterfaceAssociation = void 0;
+var utils_1 = require("../../../internal/utils");
+// AssociateTrunkInterfaceResultInterfaceAssociation
+/**
+ * Information about the association between the trunk network interface and branch network interface.
+**/
+var AssociateTrunkInterfaceResultInterfaceAssociation = /** @class */ (function (_super) {
+    __extends(AssociateTrunkInterfaceResultInterfaceAssociation, _super);
+    function AssociateTrunkInterfaceResultInterfaceAssociation() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateTrunkInterfaceResultInterfaceAssociation.prototype, "associationId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateTrunkInterfaceResultInterfaceAssociation.prototype, "branchInterfaceId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateTrunkInterfaceResultInterfaceAssociation.prototype, "greKey", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateTrunkInterfaceResultInterfaceAssociation.prototype, "interfaceProtocol", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateTrunkInterfaceResultInterfaceAssociation.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateTrunkInterfaceResultInterfaceAssociation.prototype, "trunkInterfaceId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], AssociateTrunkInterfaceResultInterfaceAssociation.prototype, "vlanId", void 0);
+    return AssociateTrunkInterfaceResultInterfaceAssociation;
+}(utils_1.SpeakeasyBase));
+exports.AssociateTrunkInterfaceResultInterfaceAssociation = AssociateTrunkInterfaceResultInterfaceAssociation;
 var AssociateTrunkInterfaceResult = /** @class */ (function (_super) {
     __extends(AssociateTrunkInterfaceResult, _super);
     function AssociateTrunkInterfaceResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], AssociateTrunkInterfaceResult.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TrunkInterfaceAssociation)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", AssociateTrunkInterfaceResultInterfaceAssociation)
     ], AssociateTrunkInterfaceResult.prototype, "interfaceAssociation", void 0);
     return AssociateTrunkInterfaceResult;
-}(SpeakeasyBase));
-export { AssociateTrunkInterfaceResult };
+}(utils_1.SpeakeasyBase));
+exports.AssociateTrunkInterfaceResult = AssociateTrunkInterfaceResult;

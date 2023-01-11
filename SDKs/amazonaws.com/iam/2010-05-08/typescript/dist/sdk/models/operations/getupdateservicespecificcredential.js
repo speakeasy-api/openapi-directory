@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,117 +23,119 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetUpdateServiceSpecificCredentialActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUpdateServiceSpecificCredentialResponse = exports.GetUpdateServiceSpecificCredentialRequest = exports.GetUpdateServiceSpecificCredentialHeaders = exports.GetUpdateServiceSpecificCredentialQueryParams = exports.GetUpdateServiceSpecificCredentialVersionEnum = exports.GetUpdateServiceSpecificCredentialStatusEnum = exports.GetUpdateServiceSpecificCredentialActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetUpdateServiceSpecificCredentialActionEnum;
 (function (GetUpdateServiceSpecificCredentialActionEnum) {
     GetUpdateServiceSpecificCredentialActionEnum["UpdateServiceSpecificCredential"] = "UpdateServiceSpecificCredential";
-})(GetUpdateServiceSpecificCredentialActionEnum || (GetUpdateServiceSpecificCredentialActionEnum = {}));
-export var GetUpdateServiceSpecificCredentialStatusEnum;
+})(GetUpdateServiceSpecificCredentialActionEnum = exports.GetUpdateServiceSpecificCredentialActionEnum || (exports.GetUpdateServiceSpecificCredentialActionEnum = {}));
+var GetUpdateServiceSpecificCredentialStatusEnum;
 (function (GetUpdateServiceSpecificCredentialStatusEnum) {
     GetUpdateServiceSpecificCredentialStatusEnum["Active"] = "Active";
     GetUpdateServiceSpecificCredentialStatusEnum["Inactive"] = "Inactive";
-})(GetUpdateServiceSpecificCredentialStatusEnum || (GetUpdateServiceSpecificCredentialStatusEnum = {}));
-export var GetUpdateServiceSpecificCredentialVersionEnum;
+})(GetUpdateServiceSpecificCredentialStatusEnum = exports.GetUpdateServiceSpecificCredentialStatusEnum || (exports.GetUpdateServiceSpecificCredentialStatusEnum = {}));
+var GetUpdateServiceSpecificCredentialVersionEnum;
 (function (GetUpdateServiceSpecificCredentialVersionEnum) {
     GetUpdateServiceSpecificCredentialVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetUpdateServiceSpecificCredentialVersionEnum || (GetUpdateServiceSpecificCredentialVersionEnum = {}));
+})(GetUpdateServiceSpecificCredentialVersionEnum = exports.GetUpdateServiceSpecificCredentialVersionEnum || (exports.GetUpdateServiceSpecificCredentialVersionEnum = {}));
 var GetUpdateServiceSpecificCredentialQueryParams = /** @class */ (function (_super) {
     __extends(GetUpdateServiceSpecificCredentialQueryParams, _super);
     function GetUpdateServiceSpecificCredentialQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetUpdateServiceSpecificCredentialQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ServiceSpecificCredentialId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ServiceSpecificCredentialId" }),
         __metadata("design:type", String)
     ], GetUpdateServiceSpecificCredentialQueryParams.prototype, "serviceSpecificCredentialId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Status" }),
         __metadata("design:type", String)
     ], GetUpdateServiceSpecificCredentialQueryParams.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=UserName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=UserName" }),
         __metadata("design:type", String)
     ], GetUpdateServiceSpecificCredentialQueryParams.prototype, "userName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetUpdateServiceSpecificCredentialQueryParams.prototype, "version", void 0);
     return GetUpdateServiceSpecificCredentialQueryParams;
-}(SpeakeasyBase));
-export { GetUpdateServiceSpecificCredentialQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateServiceSpecificCredentialQueryParams = GetUpdateServiceSpecificCredentialQueryParams;
 var GetUpdateServiceSpecificCredentialHeaders = /** @class */ (function (_super) {
     __extends(GetUpdateServiceSpecificCredentialHeaders, _super);
     function GetUpdateServiceSpecificCredentialHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetUpdateServiceSpecificCredentialHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetUpdateServiceSpecificCredentialHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetUpdateServiceSpecificCredentialHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetUpdateServiceSpecificCredentialHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetUpdateServiceSpecificCredentialHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetUpdateServiceSpecificCredentialHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetUpdateServiceSpecificCredentialHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetUpdateServiceSpecificCredentialHeaders;
-}(SpeakeasyBase));
-export { GetUpdateServiceSpecificCredentialHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateServiceSpecificCredentialHeaders = GetUpdateServiceSpecificCredentialHeaders;
 var GetUpdateServiceSpecificCredentialRequest = /** @class */ (function (_super) {
     __extends(GetUpdateServiceSpecificCredentialRequest, _super);
     function GetUpdateServiceSpecificCredentialRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUpdateServiceSpecificCredentialQueryParams)
     ], GetUpdateServiceSpecificCredentialRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUpdateServiceSpecificCredentialHeaders)
     ], GetUpdateServiceSpecificCredentialRequest.prototype, "headers", void 0);
     return GetUpdateServiceSpecificCredentialRequest;
-}(SpeakeasyBase));
-export { GetUpdateServiceSpecificCredentialRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateServiceSpecificCredentialRequest = GetUpdateServiceSpecificCredentialRequest;
 var GetUpdateServiceSpecificCredentialResponse = /** @class */ (function (_super) {
     __extends(GetUpdateServiceSpecificCredentialResponse, _super);
     function GetUpdateServiceSpecificCredentialResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetUpdateServiceSpecificCredentialResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUpdateServiceSpecificCredentialResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUpdateServiceSpecificCredentialResponse.prototype, "statusCode", void 0);
     return GetUpdateServiceSpecificCredentialResponse;
-}(SpeakeasyBase));
-export { GetUpdateServiceSpecificCredentialResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateServiceSpecificCredentialResponse = GetUpdateServiceSpecificCredentialResponse;

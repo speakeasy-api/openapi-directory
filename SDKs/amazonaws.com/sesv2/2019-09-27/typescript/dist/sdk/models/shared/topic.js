@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SubscriptionStatusEnum } from "./subscriptionstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Topic = void 0;
+var utils_1 = require("../../../internal/utils");
+var subscriptionstatusenum_1 = require("./subscriptionstatusenum");
 // Topic
 /**
  * An interest group, theme, or label within a list. Lists can have multiple topics.
@@ -34,21 +37,21 @@ var Topic = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DefaultSubscriptionStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DefaultSubscriptionStatus" }),
         __metadata("design:type", String)
     ], Topic.prototype, "defaultSubscriptionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], Topic.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DisplayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DisplayName" }),
         __metadata("design:type", String)
     ], Topic.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TopicName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TopicName" }),
         __metadata("design:type", String)
     ], Topic.prototype, "topicName", void 0);
     return Topic;
-}(SpeakeasyBase));
-export { Topic };
+}(utils_1.SpeakeasyBase));
+exports.Topic = Topic;

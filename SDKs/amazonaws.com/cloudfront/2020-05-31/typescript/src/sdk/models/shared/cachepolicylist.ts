@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CachePolicySummary } from "./cachepolicysummary";
+import { CachePolicySummaryList } from "./cachepolicysummarylist";
 
 
 
@@ -8,8 +8,8 @@ import { CachePolicySummary } from "./cachepolicysummary";
  * A list of cache policies.
 **/
 export class CachePolicyList extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: CachePolicySummary })
-  items?: CachePolicySummary[];
+  @SpeakeasyMetadata({ elemType: CachePolicySummaryList })
+  items?: CachePolicySummaryList[];
 
   @SpeakeasyMetadata()
   maxItems: number;

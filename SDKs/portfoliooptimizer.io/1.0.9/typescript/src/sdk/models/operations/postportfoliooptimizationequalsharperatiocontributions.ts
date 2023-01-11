@@ -34,8 +34,8 @@ export class PostPortfolioOptimizationEqualSharpeRatioContributionsResponse exte
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJsonObject?: PostPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSONObject?: PostPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJson;
 }

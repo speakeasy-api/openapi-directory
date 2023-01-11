@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetObjectsWithReferenceCountUsingGetResponse = exports.GetObjectsWithReferenceCountUsingGetRequest = exports.GetObjectsWithReferenceCountUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetObjectsWithReferenceCountUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetObjectsWithReferenceCountUsingGetPathParams, _super);
     function GetObjectsWithReferenceCountUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetObjectsWithReferenceCountUsingGetPathParams.prototype, "dateYyyymmdd", void 0);
+    ], GetObjectsWithReferenceCountUsingGetPathParams.prototype, "dateYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
         __metadata("design:type", Number)
     ], GetObjectsWithReferenceCountUsingGetPathParams.prototype, "speciesTypeKey", void 0);
     return GetObjectsWithReferenceCountUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetObjectsWithReferenceCountUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetObjectsWithReferenceCountUsingGetPathParams = GetObjectsWithReferenceCountUsingGetPathParams;
 var GetObjectsWithReferenceCountUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetObjectsWithReferenceCountUsingGetRequest, _super);
     function GetObjectsWithReferenceCountUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetObjectsWithReferenceCountUsingGetPathParams)
     ], GetObjectsWithReferenceCountUsingGetRequest.prototype, "pathParams", void 0);
     return GetObjectsWithReferenceCountUsingGetRequest;
-}(SpeakeasyBase));
-export { GetObjectsWithReferenceCountUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetObjectsWithReferenceCountUsingGetRequest = GetObjectsWithReferenceCountUsingGetRequest;
 var GetObjectsWithReferenceCountUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetObjectsWithReferenceCountUsingGetResponse, _super);
     function GetObjectsWithReferenceCountUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetObjectsWithReferenceCountUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetObjectsWithReferenceCountUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetObjectsWithReferenceCountUsingGetResponse.prototype, "statusCode", void 0);
     return GetObjectsWithReferenceCountUsingGetResponse;
-}(SpeakeasyBase));
-export { GetObjectsWithReferenceCountUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetObjectsWithReferenceCountUsingGetResponse = GetObjectsWithReferenceCountUsingGetResponse;

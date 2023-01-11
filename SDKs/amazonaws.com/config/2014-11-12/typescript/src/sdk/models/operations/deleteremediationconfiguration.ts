@@ -48,7 +48,7 @@ export class DeleteRemediationConfigurationResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteRemediationConfigurationResponse?: Map<string, any>;
+  deleteRemediationConfigurationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   insufficientPermissionsException?: any;

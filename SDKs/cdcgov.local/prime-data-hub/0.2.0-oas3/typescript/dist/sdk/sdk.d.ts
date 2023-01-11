@@ -1,9 +1,10 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://cdcgov.local"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -11,7 +12,7 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * deleteSettingsOrganizationsOrganizationName - Delete an organization (and the associated receivers and senders)
     **/
@@ -69,4 +70,3 @@ export declare class SDK {
     **/
     putSettingsOrganizationsOrganizationNameSendersSenderName(req: operations.PutSettingsOrganizationsOrganizationNameSendersSenderNameRequest, config?: AxiosRequestConfig): Promise<operations.PutSettingsOrganizationsOrganizationNameSendersSenderNameResponse>;
 }
-export {};

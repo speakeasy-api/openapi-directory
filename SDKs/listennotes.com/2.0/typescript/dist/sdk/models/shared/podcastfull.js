@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EpisodeMinimum } from "./episodeminimum";
-import { PodcastExtraField } from "./podcastextrafield";
-import { PodcastLookingForField } from "./podcastlookingforfield";
-import { PodcastTypeFieldEnum } from "./podcasttypefieldenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PodcastFull = void 0;
+var utils_1 = require("../../../internal/utils");
+var episodeminimum_1 = require("./episodeminimum");
+var podcastextrafield_1 = require("./podcastextrafield");
+var podcastlookingforfield_1 = require("./podcastlookingforfield");
+var podcasttypefieldenum_1 = require("./podcasttypefieldenum");
 var PodcastFull = /** @class */ (function (_super) {
     __extends(PodcastFull, _super);
     function PodcastFull() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], PodcastFull.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], PodcastFull.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=earliest_pub_date_ms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=earliest_pub_date_ms" }),
         __metadata("design:type", Number)
     ], PodcastFull.prototype, "earliestPubDateMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], PodcastFull.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=episodes", elemType: EpisodeMinimum }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=episodes", elemType: episodeminimum_1.EpisodeMinimum }),
         __metadata("design:type", Array)
     ], PodcastFull.prototype, "episodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explicit_content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explicit_content" }),
         __metadata("design:type", Boolean)
     ], PodcastFull.prototype, "explicitContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extra" }),
-        __metadata("design:type", PodcastExtraField)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extra" }),
+        __metadata("design:type", podcastextrafield_1.PodcastExtraField)
     ], PodcastFull.prototype, "extra", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=genre_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=genre_ids" }),
         __metadata("design:type", Array)
     ], PodcastFull.prototype, "genreIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PodcastFull.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", String)
     ], PodcastFull.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_claimed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_claimed" }),
         __metadata("design:type", Boolean)
     ], PodcastFull.prototype, "isClaimed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itunes_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itunes_id" }),
         __metadata("design:type", Number)
     ], PodcastFull.prototype, "itunesId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], PodcastFull.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latest_pub_date_ms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latest_pub_date_ms" }),
         __metadata("design:type", Number)
     ], PodcastFull.prototype, "latestPubDateMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listen_score" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listen_score" }),
         __metadata("design:type", Number)
     ], PodcastFull.prototype, "listenScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listen_score_global_rank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listen_score_global_rank" }),
         __metadata("design:type", String)
     ], PodcastFull.prototype, "listenScoreGlobalRank", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listennotes_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listennotes_url" }),
         __metadata("design:type", String)
     ], PodcastFull.prototype, "listennotesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=looking_for" }),
-        __metadata("design:type", PodcastLookingForField)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=looking_for" }),
+        __metadata("design:type", podcastlookingforfield_1.PodcastLookingForField)
     ], PodcastFull.prototype, "lookingFor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next_episode_pub_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_episode_pub_date" }),
         __metadata("design:type", Number)
     ], PodcastFull.prototype, "nextEpisodePubDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisher" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisher" }),
         __metadata("design:type", String)
     ], PodcastFull.prototype, "publisher", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rss" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rss" }),
         __metadata("design:type", String)
     ], PodcastFull.prototype, "rss", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnail" }),
         __metadata("design:type", String)
     ], PodcastFull.prototype, "thumbnail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], PodcastFull.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_episodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_episodes" }),
         __metadata("design:type", Number)
     ], PodcastFull.prototype, "totalEpisodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PodcastFull.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=website" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website" }),
         __metadata("design:type", String)
     ], PodcastFull.prototype, "website", void 0);
     return PodcastFull;
-}(SpeakeasyBase));
-export { PodcastFull };
+}(utils_1.SpeakeasyBase));
+exports.PodcastFull = PodcastFull;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SubscriptionView } from "./subscriptionview";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductView = void 0;
+var utils_1 = require("../../../internal/utils");
+var subscriptionview_1 = require("./subscriptionview");
 var ProductView = /** @class */ (function (_super) {
     __extends(ProductView, _super);
     function ProductView() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], ProductView.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom" }),
         __metadata("design:type", Object)
     ], ProductView.prototype, "custom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ProductView.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serial" }),
         __metadata("design:type", String)
     ], ProductView.prototype, "serial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptions", elemType: SubscriptionView }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptions", elemType: subscriptionview_1.SubscriptionView }),
         __metadata("design:type", Array)
     ], ProductView.prototype, "subscriptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", Date)
     ], ProductView.prototype, "updated", void 0);
     return ProductView;
-}(SpeakeasyBase));
-export { ProductView };
+}(utils_1.SpeakeasyBase));
+exports.ProductView = ProductView;

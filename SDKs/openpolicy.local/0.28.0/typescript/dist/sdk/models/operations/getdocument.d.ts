@@ -5,7 +5,7 @@ export declare class GetDocumentPathParams extends SpeakeasyBase {
 }
 export declare class GetDocumentQueryParams extends SpeakeasyBase {
     explain?: string;
-    input?: Map<string, any>;
+    input?: Record<string, any>;
     instrument?: boolean;
     metrics?: boolean;
     pretty?: boolean;
@@ -82,7 +82,7 @@ export declare class GetDocument200ApplicationJsonProvenance extends SpeakeasyBa
     buildCommit?: string;
     buildHostname?: string;
     buildTimestamp?: string;
-    bundles?: Map<string, any>;
+    bundles?: Record<string, any>;
     version?: string;
 }
 export declare class GetDocument200ApplicationJson extends SpeakeasyBase {
@@ -99,5 +99,5 @@ export declare class GetDocumentResponse extends SpeakeasyBase {
     fourHundred?: shared.FourHundred;
     contentType: string;
     statusCode: number;
-    getDocument200ApplicationJsonObject?: GetDocument200ApplicationJson;
+    getDocument200ApplicationJSONObject?: GetDocument200ApplicationJson;
 }

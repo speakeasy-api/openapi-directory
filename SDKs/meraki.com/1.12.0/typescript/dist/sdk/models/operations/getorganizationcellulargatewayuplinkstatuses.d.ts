@@ -16,7 +16,7 @@ export declare class GetOrganizationCellularGatewayUplinkStatusesRequest extends
 }
 export declare class GetOrganizationCellularGatewayUplinkStatusesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getOrganizationCellularGatewayUplinkStatuses200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationCellularGatewayUplinkStatuses200ApplicationJSONObject?: Record<string, any>;
 }

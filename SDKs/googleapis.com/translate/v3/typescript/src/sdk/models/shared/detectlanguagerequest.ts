@@ -11,7 +11,7 @@ export class DetectLanguageRequest extends SpeakeasyBase {
   content?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=mimeType" })
   mimeType?: string;

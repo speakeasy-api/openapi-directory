@@ -49,5 +49,5 @@ export class SingleMockResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  singleMock200ApplicationJsonObject?: SingleMock200ApplicationJson;
+  singleMock200ApplicationJSONObject?: SingleMock200ApplicationJson;
 }

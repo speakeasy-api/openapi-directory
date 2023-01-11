@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PolicysimulatorProjectsLocationsReplaysCreateRequest, PolicysimulatorProjectsLocationsReplaysCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,208 +30,123 @@ const req: PolicysimulatorProjectsLocationsReplaysCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "quaerat",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "doloremque",
-    alt: "json",
-    callback: "numquam",
-    fields: "a",
-    key: "non",
-    oauthToken: "itaque",
-    prettyPrint: false,
-    quotaUser: "quo",
-    uploadType: "nisi",
-    uploadProtocol: "deleniti",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     config: {
-      logSource: "LOG_SOURCE_UNSPECIFIED",
+      logSource: "RECENT_ACCESSES",
       policyOverlay: {
-        "consequatur": {
+        "voluptatum": {
           auditConfigs: [
             {
               auditLogConfigs: [
                 {
                   exemptedMembers: [
-                    "voluptas",
-                  ],
-                  logType: "DATA_WRITE",
-                },
-              ],
-              service: "minima",
-            },
-            {
-              auditLogConfigs: [
-                {
-                  exemptedMembers: [
-                    "alias",
-                  ],
-                  logType: "DATA_READ",
-                },
-                {
-                  exemptedMembers: [
                     "et",
+                    "voluptate",
+                    "iste",
                   ],
-                  logType: "DATA_READ",
+                  logType: "LOG_TYPE_UNSPECIFIED",
                 },
                 {
                   exemptedMembers: [
-                    "et",
-                    "magnam",
-                    "blanditiis",
+                    "dolores",
+                    "illum",
+                    "debitis",
                   ],
-                  logType: "ADMIN_READ",
-                },
-              ],
-              service: "debitis",
-            },
-            {
-              auditLogConfigs: [
-                {
-                  exemptedMembers: [
-                    "maiores",
-                    "reprehenderit",
-                    "quia",
-                  ],
-                  logType: "DATA_WRITE",
+                  logType: "LOG_TYPE_UNSPECIFIED",
                 },
                 {
                   exemptedMembers: [
-                    "officia",
-                    "sunt",
-                    "voluptatem",
-                  ],
-                  logType: "ADMIN_READ",
-                },
-              ],
-              service: "esse",
-            },
-          ],
-          bindings: [
-            {
-              condition: {
-                description: "id",
-                expression: "maxime",
-                location: "minus",
-                title: "sed",
-              },
-              members: [
-                "distinctio",
-                "rerum",
-              ],
-              role: "totam",
-            },
-            {
-              condition: {
-                description: "alias",
-                expression: "temporibus",
-                location: "delectus",
-                title: "nemo",
-              },
-              members: [
-                "accusantium",
-                "illum",
-              ],
-              role: "quas",
-            },
-          ],
-          etag: "in",
-          version: 6969309311508923998,
-        },
-        "aut": {
-          auditConfigs: [
-            {
-              auditLogConfigs: [
-                {
-                  exemptedMembers: [
-                    "rerum",
-                    "qui",
-                  ],
-                  logType: "DATA_WRITE",
-                },
-              ],
-              service: "incidunt",
-            },
-            {
-              auditLogConfigs: [
-                {
-                  exemptedMembers: [
-                    "odio",
+                    "dolore",
                   ],
                   logType: "LOG_TYPE_UNSPECIFIED",
                 },
               ],
-              service: "aperiam",
+              service: "aspernatur",
             },
           ],
           bindings: [
             {
               condition: {
-                description: "dolorem",
-                expression: "dolor",
-                location: "iusto",
-                title: "iusto",
+                description: "totam",
+                expression: "commodi",
+                location: "quis",
+                title: "est",
               },
               members: [
-                "alias",
-                "atque",
+                "odit",
+                "non",
+                "voluptas",
               ],
-              role: "vero",
+              role: "omnis",
             },
             {
               condition: {
-                description: "est",
-                expression: "quia",
-                location: "qui",
-                title: "iusto",
+                description: "aut",
+                expression: "illo",
+                location: "sed",
+                title: "officiis",
               },
               members: [
-                "delectus",
-                "recusandae",
+                "consectetur",
+                "nobis",
               ],
-              role: "repellat",
+              role: "odio",
             },
             {
               condition: {
-                description: "suscipit",
-                expression: "autem",
-                location: "accusamus",
-                title: "autem",
+                description: "qui",
+                expression: "recusandae",
+                location: "at",
+                title: "ipsum",
               },
               members: [
-                "laudantium",
+                "modi",
+                "sint",
               ],
-              role: "debitis",
+              role: "inventore",
             },
           ],
-          etag: "sapiente",
-          version: 4681406324211410955,
+          etag: "ut",
+          version: 406703151708498928,
         },
       },
     },
     resultsSummary: {
-      differenceCount: 5234953397910843034,
-      errorCount: 5846958317667548146,
-      logCount: 7346453447501218193,
+      differenceCount: 4756106358532488297,
+      errorCount: 5837486892148644279,
+      logCount: 4736217237333769909,
       newestDate: {
-        day: 2943922309746592043,
-        month: 4494203844848527318,
-        year: 2227584911989376714,
+        day: 2264299874001785192,
+        month: 1061380815263676471,
+        year: 7242748068272024738,
       },
       oldestDate: {
-        day: 2288355997085519707,
-        month: 8427404750346864572,
-        year: 8392707394207074712,
+        day: 7719717197379695442,
+        month: 4112921325496946042,
+        year: 2671030200101705776,
       },
-      unchangedCount: 2636727003386611254,
+      unchangedCount: 3508963237347473586,
     },
   },
 };

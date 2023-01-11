@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigManagementSyncError } from "./configmanagementsyncerror";
-export var ConfigManagementSyncStateCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigManagementSyncState = exports.ConfigManagementSyncStateCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var configmanagementsyncerror_1 = require("./configmanagementsyncerror");
+var ConfigManagementSyncStateCodeEnum;
 (function (ConfigManagementSyncStateCodeEnum) {
     ConfigManagementSyncStateCodeEnum["SyncCodeUnspecified"] = "SYNC_CODE_UNSPECIFIED";
     ConfigManagementSyncStateCodeEnum["Synced"] = "SYNCED";
@@ -34,7 +37,7 @@ export var ConfigManagementSyncStateCodeEnum;
     ConfigManagementSyncStateCodeEnum["NotInstalled"] = "NOT_INSTALLED";
     ConfigManagementSyncStateCodeEnum["Unauthorized"] = "UNAUTHORIZED";
     ConfigManagementSyncStateCodeEnum["Unreachable"] = "UNREACHABLE";
-})(ConfigManagementSyncStateCodeEnum || (ConfigManagementSyncStateCodeEnum = {}));
+})(ConfigManagementSyncStateCodeEnum = exports.ConfigManagementSyncStateCodeEnum || (exports.ConfigManagementSyncStateCodeEnum = {}));
 // ConfigManagementSyncState
 /**
  * State indicating an ACM's progress syncing configurations to a cluster
@@ -45,33 +48,33 @@ var ConfigManagementSyncState = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], ConfigManagementSyncState.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: ConfigManagementSyncError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: configmanagementsyncerror_1.ConfigManagementSyncError }),
         __metadata("design:type", Array)
     ], ConfigManagementSyncState.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importToken" }),
         __metadata("design:type", String)
     ], ConfigManagementSyncState.prototype, "importToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastSync" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastSync" }),
         __metadata("design:type", String)
     ], ConfigManagementSyncState.prototype, "lastSync", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastSyncTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastSyncTime" }),
         __metadata("design:type", String)
     ], ConfigManagementSyncState.prototype, "lastSyncTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceToken" }),
         __metadata("design:type", String)
     ], ConfigManagementSyncState.prototype, "sourceToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=syncToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=syncToken" }),
         __metadata("design:type", String)
     ], ConfigManagementSyncState.prototype, "syncToken", void 0);
     return ConfigManagementSyncState;
-}(SpeakeasyBase));
-export { ConfigManagementSyncState };
+}(utils_1.SpeakeasyBase));
+exports.ConfigManagementSyncState = ConfigManagementSyncState;

@@ -1,4 +1,7 @@
-export var ErrorCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorCodeEnum = void 0;
+var ErrorCodeEnum;
 (function (ErrorCodeEnum) {
     ErrorCodeEnum["SubnetNotFound"] = "SubnetNotFound";
     ErrorCodeEnum["SecurityGroupNotFound"] = "SecurityGroupNotFound";
@@ -17,4 +20,4 @@ export var ErrorCodeEnum;
     ErrorCodeEnum["AdmissionRequestDenied"] = "AdmissionRequestDenied";
     ErrorCodeEnum["UnsupportedAddonModification"] = "UnsupportedAddonModification";
     ErrorCodeEnum["K8sResourceNotFound"] = "K8sResourceNotFound";
-})(ErrorCodeEnum || (ErrorCodeEnum = {}));
+})(ErrorCodeEnum = exports.ErrorCodeEnum || (exports.ErrorCodeEnum = {}));

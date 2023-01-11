@@ -29,10 +29,10 @@ export class GetListOfIssuedDocumentsVersion1IdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getListOfIssuedDocumentsVersion1Id401ApplicationJsonObject?: GetListOfIssuedDocumentsVersion1Id401ApplicationJson;
+  getListOfIssuedDocumentsVersion1Id401ApplicationJSONObject?: GetListOfIssuedDocumentsVersion1Id401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getListOfIssuedDocumentsVersion1Id500ApplicationJsonOneOf?: any;
+  getListOfIssuedDocumentsVersion1Id500ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
   sample?: any;

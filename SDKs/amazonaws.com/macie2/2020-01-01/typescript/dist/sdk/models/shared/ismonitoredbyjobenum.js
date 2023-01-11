@@ -1,6 +1,9 @@
-export var IsMonitoredByJobEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IsMonitoredByJobEnum = void 0;
+var IsMonitoredByJobEnum;
 (function (IsMonitoredByJobEnum) {
     IsMonitoredByJobEnum["True"] = "TRUE";
     IsMonitoredByJobEnum["False"] = "FALSE";
     IsMonitoredByJobEnum["Unknown"] = "UNKNOWN";
-})(IsMonitoredByJobEnum || (IsMonitoredByJobEnum = {}));
+})(IsMonitoredByJobEnum = exports.IsMonitoredByJobEnum || (exports.IsMonitoredByJobEnum = {}));

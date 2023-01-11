@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEthereumBalance = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetEthereumBalance = /** @class */ (function (_super) {
     __extends(GetEthereumBalance, _super);
     function GetEthereumBalance() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balance" }),
         __metadata("design:type", Number)
     ], GetEthereumBalance.prototype, "balance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ethereumaddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ethereumaddress" }),
         __metadata("design:type", String)
     ], GetEthereumBalance.prototype, "ethereumaddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ok" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ok" }),
         __metadata("design:type", Boolean)
     ], GetEthereumBalance.prototype, "ok", void 0);
     return GetEthereumBalance;
-}(SpeakeasyBase));
-export { GetEthereumBalance };
+}(utils_1.SpeakeasyBase));
+exports.GetEthereumBalance = GetEthereumBalance;

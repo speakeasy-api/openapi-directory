@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FeaturizationMethodNameEnum } from "./featurizationmethodnameenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FeaturizationMethod = void 0;
+var utils_1 = require("../../../internal/utils");
+var featurizationmethodnameenum_1 = require("./featurizationmethodnameenum");
 // FeaturizationMethod
 /**
  * <p>Provides information about the method that featurizes (transforms) a dataset field. The method is part of the <code>FeaturizationPipeline</code> of the <a>Featurization</a> object. </p> <p>The following is an example of how you specify a <code>FeaturizationMethod</code> object.</p> <p> <code>{</code> </p> <p> <code>"FeaturizationMethodName": "filling",</code> </p> <p> <code>"FeaturizationMethodParameters": {"aggregation": "sum", "middlefill": "zero", "backfill": "zero"}</code> </p> <p> <code>}</code> </p>
@@ -34,13 +37,13 @@ var FeaturizationMethod = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeaturizationMethodName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeaturizationMethodName" }),
         __metadata("design:type", String)
     ], FeaturizationMethod.prototype, "featurizationMethodName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeaturizationMethodParameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeaturizationMethodParameters" }),
+        __metadata("design:type", Object)
     ], FeaturizationMethod.prototype, "featurizationMethodParameters", void 0);
     return FeaturizationMethod;
-}(SpeakeasyBase));
-export { FeaturizationMethod };
+}(utils_1.SpeakeasyBase));
+exports.FeaturizationMethod = FeaturizationMethod;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TrafficRule } from "./trafficrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NetworkConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var trafficrule_1 = require("./trafficrule");
 var NetworkConfiguration = /** @class */ (function (_super) {
     __extends(NetworkConfiguration, _super);
     function NetworkConfiguration() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downRule" }),
-        __metadata("design:type", TrafficRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downRule" }),
+        __metadata("design:type", trafficrule_1.TrafficRule)
     ], NetworkConfiguration.prototype, "downRule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], NetworkConfiguration.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upRule" }),
-        __metadata("design:type", TrafficRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upRule" }),
+        __metadata("design:type", trafficrule_1.TrafficRule)
     ], NetworkConfiguration.prototype, "upRule", void 0);
     return NetworkConfiguration;
-}(SpeakeasyBase));
-export { NetworkConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.NetworkConfiguration = NetworkConfiguration;

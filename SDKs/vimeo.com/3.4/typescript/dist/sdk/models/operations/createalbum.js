@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,41 +14,66 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateAlbumResponse = exports.CreateAlbumRequest = exports.CreateAlbumSecurity = exports.CreateAlbumRequestBody = exports.CreateAlbumRequestBodyThemeEnum = exports.CreateAlbumRequestBodySortEnum = exports.CreateAlbumRequestBodyPrivacyEnum = exports.CreateAlbumRequestBodyLayoutEnum = exports.CreateAlbumPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CreateAlbumPathParams = /** @class */ (function (_super) {
     __extends(CreateAlbumPathParams, _super);
     function CreateAlbumPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=user_id" }),
         __metadata("design:type", Number)
     ], CreateAlbumPathParams.prototype, "userId", void 0);
     return CreateAlbumPathParams;
-}(SpeakeasyBase));
-export { CreateAlbumPathParams };
-export var CreateAlbumRequestBodyLayoutEnum;
+}(utils_1.SpeakeasyBase));
+exports.CreateAlbumPathParams = CreateAlbumPathParams;
+var CreateAlbumRequestBodyLayoutEnum;
 (function (CreateAlbumRequestBodyLayoutEnum) {
     CreateAlbumRequestBodyLayoutEnum["Grid"] = "grid";
     CreateAlbumRequestBodyLayoutEnum["Player"] = "player";
-})(CreateAlbumRequestBodyLayoutEnum || (CreateAlbumRequestBodyLayoutEnum = {}));
-export var CreateAlbumRequestBodyPrivacyEnum;
+})(CreateAlbumRequestBodyLayoutEnum = exports.CreateAlbumRequestBodyLayoutEnum || (exports.CreateAlbumRequestBodyLayoutEnum = {}));
+var CreateAlbumRequestBodyPrivacyEnum;
 (function (CreateAlbumRequestBodyPrivacyEnum) {
     CreateAlbumRequestBodyPrivacyEnum["Anybody"] = "anybody";
     CreateAlbumRequestBodyPrivacyEnum["EmbedOnly"] = "embed_only";
     CreateAlbumRequestBodyPrivacyEnum["Password"] = "password";
-})(CreateAlbumRequestBodyPrivacyEnum || (CreateAlbumRequestBodyPrivacyEnum = {}));
-export var CreateAlbumRequestBodySortEnum;
+})(CreateAlbumRequestBodyPrivacyEnum = exports.CreateAlbumRequestBodyPrivacyEnum || (exports.CreateAlbumRequestBodyPrivacyEnum = {}));
+var CreateAlbumRequestBodySortEnum;
 (function (CreateAlbumRequestBodySortEnum) {
     CreateAlbumRequestBodySortEnum["AddedFirst"] = "added_first";
     CreateAlbumRequestBodySortEnum["AddedLast"] = "added_last";
@@ -58,113 +84,113 @@ export var CreateAlbumRequestBodySortEnum;
     CreateAlbumRequestBodySortEnum["Newest"] = "newest";
     CreateAlbumRequestBodySortEnum["Oldest"] = "oldest";
     CreateAlbumRequestBodySortEnum["Plays"] = "plays";
-})(CreateAlbumRequestBodySortEnum || (CreateAlbumRequestBodySortEnum = {}));
-export var CreateAlbumRequestBodyThemeEnum;
+})(CreateAlbumRequestBodySortEnum = exports.CreateAlbumRequestBodySortEnum || (exports.CreateAlbumRequestBodySortEnum = {}));
+var CreateAlbumRequestBodyThemeEnum;
 (function (CreateAlbumRequestBodyThemeEnum) {
     CreateAlbumRequestBodyThemeEnum["Dark"] = "dark";
     CreateAlbumRequestBodyThemeEnum["Standard"] = "standard";
-})(CreateAlbumRequestBodyThemeEnum || (CreateAlbumRequestBodyThemeEnum = {}));
+})(CreateAlbumRequestBodyThemeEnum = exports.CreateAlbumRequestBodyThemeEnum || (exports.CreateAlbumRequestBodyThemeEnum = {}));
 var CreateAlbumRequestBody = /** @class */ (function (_super) {
     __extends(CreateAlbumRequestBody, _super);
     function CreateAlbumRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brand_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brand_color" }),
         __metadata("design:type", String)
     ], CreateAlbumRequestBody.prototype, "brandColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CreateAlbumRequestBody.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hide_nav" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hide_nav" }),
         __metadata("design:type", Boolean)
     ], CreateAlbumRequestBody.prototype, "hideNav", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=layout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=layout" }),
         __metadata("design:type", String)
     ], CreateAlbumRequestBody.prototype, "layout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateAlbumRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], CreateAlbumRequestBody.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privacy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privacy" }),
         __metadata("design:type", String)
     ], CreateAlbumRequestBody.prototype, "privacy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=review_mode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=review_mode" }),
         __metadata("design:type", Boolean)
     ], CreateAlbumRequestBody.prototype, "reviewMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sort" }),
         __metadata("design:type", String)
     ], CreateAlbumRequestBody.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=theme" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=theme" }),
         __metadata("design:type", String)
     ], CreateAlbumRequestBody.prototype, "theme", void 0);
     return CreateAlbumRequestBody;
-}(SpeakeasyBase));
-export { CreateAlbumRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateAlbumRequestBody = CreateAlbumRequestBody;
 var CreateAlbumSecurity = /** @class */ (function (_super) {
     __extends(CreateAlbumSecurity, _super);
     function CreateAlbumSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CreateAlbumSecurity.prototype, "oauth2", void 0);
     return CreateAlbumSecurity;
-}(SpeakeasyBase));
-export { CreateAlbumSecurity };
+}(utils_1.SpeakeasyBase));
+exports.CreateAlbumSecurity = CreateAlbumSecurity;
 var CreateAlbumRequest = /** @class */ (function (_super) {
     __extends(CreateAlbumRequest, _super);
     function CreateAlbumRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateAlbumPathParams)
     ], CreateAlbumRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/vnd.vimeo.album+json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/vnd.vimeo.album+json" }),
         __metadata("design:type", CreateAlbumRequestBody)
     ], CreateAlbumRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateAlbumSecurity)
     ], CreateAlbumRequest.prototype, "security", void 0);
     return CreateAlbumRequest;
-}(SpeakeasyBase));
-export { CreateAlbumRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateAlbumRequest = CreateAlbumRequest;
 var CreateAlbumResponse = /** @class */ (function (_super) {
     __extends(CreateAlbumResponse, _super);
     function CreateAlbumResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateAlbumResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateAlbumResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Album)
     ], CreateAlbumResponse.prototype, "album", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.LegacyError)
     ], CreateAlbumResponse.prototype, "legacyError", void 0);
     return CreateAlbumResponse;
-}(SpeakeasyBase));
-export { CreateAlbumResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateAlbumResponse = CreateAlbumResponse;

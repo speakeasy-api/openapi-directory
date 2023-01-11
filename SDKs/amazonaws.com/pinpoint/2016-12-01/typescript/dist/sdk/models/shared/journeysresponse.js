@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { JourneyResponse } from "./journeyresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JourneysResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var journeyresponse_1 = require("./journeyresponse");
 // JourneysResponse
 /**
  * Provides information about the status, configuration, and other settings for all the journeys that are associated with an application.
@@ -34,13 +37,13 @@ var JourneysResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Item", elemType: JourneyResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Item", elemType: journeyresponse_1.JourneyResponse }),
         __metadata("design:type", Array)
     ], JourneysResponse.prototype, "item", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], JourneysResponse.prototype, "nextToken", void 0);
     return JourneysResponse;
-}(SpeakeasyBase));
-export { JourneysResponse };
+}(utils_1.SpeakeasyBase));
+exports.JourneysResponse = JourneysResponse;

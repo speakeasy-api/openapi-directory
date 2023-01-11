@@ -17,7 +17,7 @@ export declare class OrgsListAppInstallationsRequest extends SpeakeasyBase {
 }
 export declare class OrgsListAppInstallationsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    orgsListAppInstallations200ApplicationJsonObject?: OrgsListAppInstallations200ApplicationJson;
+    orgsListAppInstallations200ApplicationJSONObject?: OrgsListAppInstallations200ApplicationJson;
 }

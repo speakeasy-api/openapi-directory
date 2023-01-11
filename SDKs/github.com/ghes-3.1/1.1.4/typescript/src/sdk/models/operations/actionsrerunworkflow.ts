@@ -28,5 +28,5 @@ export class ActionsReRunWorkflowResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  actionsReRunWorkflow201ApplicationJsonObject?: Map<string, any>;
+  actionsReRunWorkflow201ApplicationJSONObject?: Record<string, any>;
 }

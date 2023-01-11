@@ -14,8 +14,8 @@ export declare class AppsListReposAccessibleToInstallationRequest extends Speake
 }
 export declare class AppsListReposAccessibleToInstallationResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    appsListReposAccessibleToInstallation200ApplicationJsonObject?: AppsListReposAccessibleToInstallation200ApplicationJson;
+    appsListReposAccessibleToInstallation200ApplicationJSONObject?: AppsListReposAccessibleToInstallation200ApplicationJson;
     basicError?: shared.BasicError;
 }

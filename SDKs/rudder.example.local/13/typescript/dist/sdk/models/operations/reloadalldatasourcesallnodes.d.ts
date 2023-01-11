@@ -13,6 +13,6 @@ export declare class ReloadAllDatasourcesAllNodes200ApplicationJson extends Spea
 }
 export declare class ReloadAllDatasourcesAllNodesResponse extends SpeakeasyBase {
     contentType: string;
-    reloadAllDatasourcesAllNodes200ApplicationJsonObject?: ReloadAllDatasourcesAllNodes200ApplicationJson;
+    reloadAllDatasourcesAllNodes200ApplicationJSONObject?: ReloadAllDatasourcesAllNodes200ApplicationJson;
     statusCode: number;
 }

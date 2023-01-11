@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetContentproSearchRequest, GetContentproSearchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,11 +28,11 @@ const sdk = new SDK();
     
 const req: GetContentproSearchRequest = {
   queryParams: {
-    terms: "aliquam",
+    terms: "sit",
   },
 };
 
-sdk.sdk.getContentproSearch(req).then((res: GetContentproSearchResponse | AxiosError) => {
+sdk.contentproSearch.getContentproSearch(req).then((res: GetContentproSearchResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -42,12 +41,21 @@ sdk.sdk.getContentproSearch(req).then((res: GetContentproSearchResponse | AxiosE
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### contentpro-search
 
 * `getContentproSearch` - Send search terms to receive the most relevant articles and companies.
-* `getSearch` - Send search terms to receive the most relevant companies along with text snippets.
-* `getSimilar` - Send a company website to receive a list of companies related to them.
+
+### contentpro-similar-text
+
 * `postContentproSimilarText` - The /contentpro-similar-text endpoint accepts and arbitrary piece of text and returns similar articles and blogs written by companies.
+
+### search
+
+* `getSearch` - Send search terms to receive the most relevant companies along with text snippets.
+
+### similar
+
+* `getSimilar` - Send a company website to receive a list of companies related to them.
 
 <!-- End SDK Available Operations -->
 

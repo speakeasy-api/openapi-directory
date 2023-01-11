@@ -6,7 +6,7 @@ import { TranslateTextGlossaryConfig } from "./translatetextglossaryconfig";
 export declare class TranslateTextRequest extends SpeakeasyBase {
     contents?: string[];
     glossaryConfig?: TranslateTextGlossaryConfig;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     mimeType?: string;
     model?: string;
     sourceLanguageCode?: string;

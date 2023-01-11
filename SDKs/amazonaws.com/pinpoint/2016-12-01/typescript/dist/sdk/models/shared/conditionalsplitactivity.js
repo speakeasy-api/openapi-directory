@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Condition } from "./condition";
-import { WaitTime } from "./waittime";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConditionalSplitActivity = void 0;
+var utils_1 = require("../../../internal/utils");
+var condition_1 = require("./condition");
+var waittime_1 = require("./waittime");
 // ConditionalSplitActivity
 /**
  * <p>Specifies the settings for a yes/no split activity in a journey. This type of activity sends participants down one of two paths in a journey, based on conditions that you specify.</p> <note><p>To create yes/no split activities that send participants down different paths based on push notification events (such as Open or Received events), your mobile app has to specify the User ID and Endpoint ID values. For more information, see <a href="https://docs.aws.amazon.com/pinpoint/latest/developerguide/integrate.html">Integrating Amazon Pinpoint with your application</a> in the <i>Amazon Pinpoint Developer Guide</i>.</p></note>
@@ -35,21 +38,21 @@ var ConditionalSplitActivity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Condition" }),
-        __metadata("design:type", Condition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Condition" }),
+        __metadata("design:type", condition_1.Condition)
     ], ConditionalSplitActivity.prototype, "condition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EvaluationWaitTime" }),
-        __metadata("design:type", WaitTime)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EvaluationWaitTime" }),
+        __metadata("design:type", waittime_1.WaitTime)
     ], ConditionalSplitActivity.prototype, "evaluationWaitTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FalseActivity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FalseActivity" }),
         __metadata("design:type", String)
     ], ConditionalSplitActivity.prototype, "falseActivity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrueActivity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrueActivity" }),
         __metadata("design:type", String)
     ], ConditionalSplitActivity.prototype, "trueActivity", void 0);
     return ConditionalSplitActivity;
-}(SpeakeasyBase));
-export { ConditionalSplitActivity };
+}(utils_1.SpeakeasyBase));
+exports.ConditionalSplitActivity = ConditionalSplitActivity;

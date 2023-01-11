@@ -8,6 +8,10 @@ export class PageBuildError extends SpeakeasyBase {
 }
 
 
+// PageBuildSimpleUser
+/** 
+ * Simple User
+**/
 export class PageBuildSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

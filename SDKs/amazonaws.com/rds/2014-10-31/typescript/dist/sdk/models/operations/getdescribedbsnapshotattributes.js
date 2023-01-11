@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeDbSnapshotAttributesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeDbSnapshotAttributesResponse = exports.GetDescribeDbSnapshotAttributesRequest = exports.GetDescribeDbSnapshotAttributesHeaders = exports.GetDescribeDbSnapshotAttributesQueryParams = exports.GetDescribeDbSnapshotAttributesVersionEnum = exports.GetDescribeDbSnapshotAttributesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeDbSnapshotAttributesActionEnum;
 (function (GetDescribeDbSnapshotAttributesActionEnum) {
     GetDescribeDbSnapshotAttributesActionEnum["DescribeDbSnapshotAttributes"] = "DescribeDBSnapshotAttributes";
-})(GetDescribeDbSnapshotAttributesActionEnum || (GetDescribeDbSnapshotAttributesActionEnum = {}));
-export var GetDescribeDbSnapshotAttributesVersionEnum;
+})(GetDescribeDbSnapshotAttributesActionEnum = exports.GetDescribeDbSnapshotAttributesActionEnum || (exports.GetDescribeDbSnapshotAttributesActionEnum = {}));
+var GetDescribeDbSnapshotAttributesVersionEnum;
 (function (GetDescribeDbSnapshotAttributesVersionEnum) {
     GetDescribeDbSnapshotAttributesVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(GetDescribeDbSnapshotAttributesVersionEnum || (GetDescribeDbSnapshotAttributesVersionEnum = {}));
+})(GetDescribeDbSnapshotAttributesVersionEnum = exports.GetDescribeDbSnapshotAttributesVersionEnum || (exports.GetDescribeDbSnapshotAttributesVersionEnum = {}));
 var GetDescribeDbSnapshotAttributesQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeDbSnapshotAttributesQueryParams, _super);
     function GetDescribeDbSnapshotAttributesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeDbSnapshotAttributesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DBSnapshotIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DBSnapshotIdentifier" }),
         __metadata("design:type", String)
     ], GetDescribeDbSnapshotAttributesQueryParams.prototype, "dbSnapshotIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeDbSnapshotAttributesQueryParams.prototype, "version", void 0);
     return GetDescribeDbSnapshotAttributesQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeDbSnapshotAttributesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeDbSnapshotAttributesQueryParams = GetDescribeDbSnapshotAttributesQueryParams;
 var GetDescribeDbSnapshotAttributesHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeDbSnapshotAttributesHeaders, _super);
     function GetDescribeDbSnapshotAttributesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeDbSnapshotAttributesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeDbSnapshotAttributesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeDbSnapshotAttributesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeDbSnapshotAttributesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeDbSnapshotAttributesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeDbSnapshotAttributesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeDbSnapshotAttributesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeDbSnapshotAttributesHeaders;
-}(SpeakeasyBase));
-export { GetDescribeDbSnapshotAttributesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeDbSnapshotAttributesHeaders = GetDescribeDbSnapshotAttributesHeaders;
 var GetDescribeDbSnapshotAttributesRequest = /** @class */ (function (_super) {
     __extends(GetDescribeDbSnapshotAttributesRequest, _super);
     function GetDescribeDbSnapshotAttributesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeDbSnapshotAttributesQueryParams)
     ], GetDescribeDbSnapshotAttributesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeDbSnapshotAttributesHeaders)
     ], GetDescribeDbSnapshotAttributesRequest.prototype, "headers", void 0);
     return GetDescribeDbSnapshotAttributesRequest;
-}(SpeakeasyBase));
-export { GetDescribeDbSnapshotAttributesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeDbSnapshotAttributesRequest = GetDescribeDbSnapshotAttributesRequest;
 var GetDescribeDbSnapshotAttributesResponse = /** @class */ (function (_super) {
     __extends(GetDescribeDbSnapshotAttributesResponse, _super);
     function GetDescribeDbSnapshotAttributesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeDbSnapshotAttributesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeDbSnapshotAttributesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeDbSnapshotAttributesResponse.prototype, "statusCode", void 0);
     return GetDescribeDbSnapshotAttributesResponse;
-}(SpeakeasyBase));
-export { GetDescribeDbSnapshotAttributesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeDbSnapshotAttributesResponse = GetDescribeDbSnapshotAttributesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AlgorithmObjectiveEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Algorithm = exports.AlgorithmProblemTypeEnum = exports.AlgorithmObjectiveEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AlgorithmObjectiveEnum;
 (function (AlgorithmObjectiveEnum) {
     AlgorithmObjectiveEnum["TransportTime"] = "transport_time";
     AlgorithmObjectiveEnum["CompletionTime"] = "completion_time";
-})(AlgorithmObjectiveEnum || (AlgorithmObjectiveEnum = {}));
-export var AlgorithmProblemTypeEnum;
+})(AlgorithmObjectiveEnum = exports.AlgorithmObjectiveEnum || (exports.AlgorithmObjectiveEnum = {}));
+var AlgorithmProblemTypeEnum;
 (function (AlgorithmProblemTypeEnum) {
     AlgorithmProblemTypeEnum["Min"] = "min";
     AlgorithmProblemTypeEnum["MinMax"] = "min-max";
-})(AlgorithmProblemTypeEnum || (AlgorithmProblemTypeEnum = {}));
+})(AlgorithmProblemTypeEnum = exports.AlgorithmProblemTypeEnum || (exports.AlgorithmProblemTypeEnum = {}));
 // Algorithm
 /**
  * Use `objectives` instead.
@@ -43,13 +46,13 @@ var Algorithm = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objective" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objective" }),
         __metadata("design:type", String)
     ], Algorithm.prototype, "objective", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=problem_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=problem_type" }),
         __metadata("design:type", String)
     ], Algorithm.prototype, "problemType", void 0);
     return Algorithm;
-}(SpeakeasyBase));
-export { Algorithm };
+}(utils_1.SpeakeasyBase));
+exports.Algorithm = Algorithm;

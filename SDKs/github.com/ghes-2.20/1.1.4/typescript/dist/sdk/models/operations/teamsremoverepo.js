@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsRemoveRepoResponse = exports.TeamsRemoveRepoRequest = exports.TeamsRemoveRepoPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamsRemoveRepoPathParams = /** @class */ (function (_super) {
     __extends(TeamsRemoveRepoPathParams, _super);
     function TeamsRemoveRepoPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], TeamsRemoveRepoPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], TeamsRemoveRepoPathParams.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_id" }),
         __metadata("design:type", Number)
     ], TeamsRemoveRepoPathParams.prototype, "teamId", void 0);
     return TeamsRemoveRepoPathParams;
-}(SpeakeasyBase));
-export { TeamsRemoveRepoPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveRepoPathParams = TeamsRemoveRepoPathParams;
 var TeamsRemoveRepoRequest = /** @class */ (function (_super) {
     __extends(TeamsRemoveRepoRequest, _super);
     function TeamsRemoveRepoRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsRemoveRepoPathParams)
     ], TeamsRemoveRepoRequest.prototype, "pathParams", void 0);
     return TeamsRemoveRepoRequest;
-}(SpeakeasyBase));
-export { TeamsRemoveRepoRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveRepoRequest = TeamsRemoveRepoRequest;
 var TeamsRemoveRepoResponse = /** @class */ (function (_super) {
     __extends(TeamsRemoveRepoResponse, _super);
     function TeamsRemoveRepoResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsRemoveRepoResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsRemoveRepoResponse.prototype, "statusCode", void 0);
     return TeamsRemoveRepoResponse;
-}(SpeakeasyBase));
-export { TeamsRemoveRepoResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveRepoResponse = TeamsRemoveRepoResponse;

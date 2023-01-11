@@ -44,5 +44,5 @@ export class DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse extends
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

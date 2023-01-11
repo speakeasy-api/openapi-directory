@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResetResponse = exports.ResetRequest = exports.Reset201ApplicationJson = exports.ResetRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var ResetRequestBody = /** @class */ (function (_super) {
     __extends(ResetRequestBody, _super);
     function ResetRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chargestation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chargestation" }),
         __metadata("design:type", String)
     ], ResetRequestBody.prototype, "chargestation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ResetRequestBody.prototype, "type", void 0);
     return ResetRequestBody;
-}(SpeakeasyBase));
-export { ResetRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ResetRequestBody = ResetRequestBody;
 var Reset201ApplicationJson = /** @class */ (function (_super) {
     __extends(Reset201ApplicationJson, _super);
     function Reset201ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], Reset201ApplicationJson.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ok" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ok" }),
         __metadata("design:type", Boolean)
     ], Reset201ApplicationJson.prototype, "ok", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
+        __metadata("design:type", Object)
     ], Reset201ApplicationJson.prototype, "result", void 0);
     return Reset201ApplicationJson;
-}(SpeakeasyBase));
-export { Reset201ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.Reset201ApplicationJson = Reset201ApplicationJson;
 var ResetRequest = /** @class */ (function (_super) {
     __extends(ResetRequest, _super);
     function ResetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ResetRequestBody)
     ], ResetRequest.prototype, "request", void 0);
     return ResetRequest;
-}(SpeakeasyBase));
-export { ResetRequest };
+}(utils_1.SpeakeasyBase));
+exports.ResetRequest = ResetRequest;
 var ResetResponse = /** @class */ (function (_super) {
     __extends(ResetResponse, _super);
     function ResetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ResetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ResetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Reset201ApplicationJson)
-    ], ResetResponse.prototype, "reset201ApplicationJsonObject", void 0);
+    ], ResetResponse.prototype, "reset201ApplicationJSONObject", void 0);
     return ResetResponse;
-}(SpeakeasyBase));
-export { ResetResponse };
+}(utils_1.SpeakeasyBase));
+exports.ResetResponse = ResetResponse;

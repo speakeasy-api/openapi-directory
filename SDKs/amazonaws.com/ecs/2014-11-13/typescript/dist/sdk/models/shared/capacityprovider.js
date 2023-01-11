@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoScalingGroupProvider } from "./autoscalinggroupprovider";
-import { CapacityProviderStatusEnum } from "./capacityproviderstatusenum";
-import { Tag } from "./tag";
-import { CapacityProviderUpdateStatusEnum } from "./capacityproviderupdatestatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CapacityProvider = void 0;
+var utils_1 = require("../../../internal/utils");
+var autoscalinggroupprovider_1 = require("./autoscalinggroupprovider");
+var capacityproviderstatusenum_1 = require("./capacityproviderstatusenum");
+var tag_1 = require("./tag");
+var capacityproviderupdatestatusenum_1 = require("./capacityproviderupdatestatusenum");
 // CapacityProvider
 /**
  * The details of a capacity provider.
@@ -37,33 +40,33 @@ var CapacityProvider = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoScalingGroupProvider" }),
-        __metadata("design:type", AutoScalingGroupProvider)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoScalingGroupProvider" }),
+        __metadata("design:type", autoscalinggroupprovider_1.AutoScalingGroupProvider)
     ], CapacityProvider.prototype, "autoScalingGroupProvider", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capacityProviderArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capacityProviderArn" }),
         __metadata("design:type", String)
     ], CapacityProvider.prototype, "capacityProviderArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CapacityProvider.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], CapacityProvider.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CapacityProvider.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateStatus" }),
         __metadata("design:type", String)
     ], CapacityProvider.prototype, "updateStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateStatusReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateStatusReason" }),
         __metadata("design:type", String)
     ], CapacityProvider.prototype, "updateStatusReason", void 0);
     return CapacityProvider;
-}(SpeakeasyBase));
-export { CapacityProvider };
+}(utils_1.SpeakeasyBase));
+exports.CapacityProvider = CapacityProvider;

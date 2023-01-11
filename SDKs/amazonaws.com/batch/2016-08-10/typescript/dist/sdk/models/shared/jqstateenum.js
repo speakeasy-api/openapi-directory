@@ -1,5 +1,8 @@
-export var JqStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JqStateEnum = void 0;
+var JqStateEnum;
 (function (JqStateEnum) {
     JqStateEnum["Enabled"] = "ENABLED";
     JqStateEnum["Disabled"] = "DISABLED";
-})(JqStateEnum || (JqStateEnum = {}));
+})(JqStateEnum = exports.JqStateEnum || (exports.JqStateEnum = {}));

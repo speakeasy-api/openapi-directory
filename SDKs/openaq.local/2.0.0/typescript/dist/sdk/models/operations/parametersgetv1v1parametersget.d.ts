@@ -5,7 +5,7 @@ export declare class ParametersGetv1V1ParametersGetQueryParams extends Speakeasy
     offset?: number;
     orderBy?: any;
     page?: number;
-    sort?: shared.SortEnum;
+    sort?: Record<string, any>;
     sourceId?: number[];
     sourceName?: string[];
     sourceSlug?: string[];
@@ -16,6 +16,6 @@ export declare class ParametersGetv1V1ParametersGetRequest extends SpeakeasyBase
 export declare class ParametersGetv1V1ParametersGetResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
-    openAqParametersResult?: shared.OpenAqParametersResult;
+    openAQParametersResult?: shared.OpenAqParametersResult;
     statusCode: number;
 }

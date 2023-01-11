@@ -39,7 +39,7 @@ export class GetNotificationChannelRequest extends SpeakeasyBase {
   headers: GetNotificationChannelHeaders;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 

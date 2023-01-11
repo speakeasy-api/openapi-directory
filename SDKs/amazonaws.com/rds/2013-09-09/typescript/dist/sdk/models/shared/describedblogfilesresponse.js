@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DescribeDbLogFilesDetails } from "./describedblogfilesdetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeDbLogFilesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var describedblogfileslist_1 = require("./describedblogfileslist");
 var DescribeDbLogFilesResponse = /** @class */ (function (_super) {
     __extends(DescribeDbLogFilesResponse, _super);
     function DescribeDbLogFilesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: DescribeDbLogFilesDetails }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: describedblogfileslist_1.DescribeDbLogFilesList }),
         __metadata("design:type", Array)
-    ], DescribeDbLogFilesResponse.prototype, "describeDbLogFiles", void 0);
+    ], DescribeDbLogFilesResponse.prototype, "describeDBLogFiles", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DescribeDbLogFilesResponse.prototype, "marker", void 0);
     return DescribeDbLogFilesResponse;
-}(SpeakeasyBase));
-export { DescribeDbLogFilesResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeDbLogFilesResponse = DescribeDbLogFilesResponse;

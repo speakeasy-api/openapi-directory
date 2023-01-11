@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IpAddressTypeEnum } from "./ipaddresstypeenum";
-import { IpSet } from "./ipset";
-import { AcceleratorStatusEnum } from "./acceleratorstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Accelerator = void 0;
+var utils_1 = require("../../../internal/utils");
+var ipaddresstypeenum_1 = require("./ipaddresstypeenum");
+var ipset_1 = require("./ipset");
+var acceleratorstatusenum_1 = require("./acceleratorstatusenum");
 // Accelerator
 /**
  * An accelerator is a complex type that includes one or more listeners that process inbound connections and then direct traffic to one or more endpoint groups, each of which includes endpoints, such as load balancers.
@@ -36,41 +39,41 @@ var Accelerator = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AcceleratorArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AcceleratorArn" }),
         __metadata("design:type", String)
     ], Accelerator.prototype, "acceleratorArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedTime" }),
         __metadata("design:type", Date)
     ], Accelerator.prototype, "createdTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DnsName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DnsName" }),
         __metadata("design:type", String)
     ], Accelerator.prototype, "dnsName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Enabled" }),
         __metadata("design:type", Boolean)
     ], Accelerator.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IpAddressType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IpAddressType" }),
         __metadata("design:type", String)
     ], Accelerator.prototype, "ipAddressType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IpSets", elemType: IpSet }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IpSets", elemType: ipset_1.IpSet }),
         __metadata("design:type", Array)
     ], Accelerator.prototype, "ipSets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedTime" }),
         __metadata("design:type", Date)
     ], Accelerator.prototype, "lastModifiedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Accelerator.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], Accelerator.prototype, "status", void 0);
     return Accelerator;
-}(SpeakeasyBase));
-export { Accelerator };
+}(utils_1.SpeakeasyBase));
+exports.Accelerator = Accelerator;

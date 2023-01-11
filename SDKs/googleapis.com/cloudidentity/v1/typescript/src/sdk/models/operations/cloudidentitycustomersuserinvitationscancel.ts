@@ -53,7 +53,7 @@ export class CloudidentityCustomersUserinvitationsCancelRequest extends Speakeas
   queryParams: CloudidentityCustomersUserinvitationsCancelQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 }
 
 

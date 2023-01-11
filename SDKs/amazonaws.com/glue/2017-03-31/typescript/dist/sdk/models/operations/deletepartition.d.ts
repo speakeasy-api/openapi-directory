@@ -19,7 +19,7 @@ export declare class DeletePartitionRequest extends SpeakeasyBase {
 }
 export declare class DeletePartitionResponse extends SpeakeasyBase {
     contentType: string;
-    deletePartitionResponse?: Map<string, any>;
+    deletePartitionResponse?: Record<string, any>;
     entityNotFoundException?: any;
     internalServiceException?: any;
     invalidInputException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse = exports.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeRequest = exports.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeQueryParams = exports.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetExportDep131RegistrierkassenRegistrierkasseUuidBelegePathParams = /** @class */ (function (_super) {
     __extends(GetExportDep131RegistrierkassenRegistrierkasseUuidBelegePathParams, _super);
     function GetExportDep131RegistrierkassenRegistrierkasseUuidBelegePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=registrierkasseUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=registrierkasseUuid" }),
         __metadata("design:type", String)
     ], GetExportDep131RegistrierkassenRegistrierkasseUuidBelegePathParams.prototype, "registrierkasseUuid", void 0);
     return GetExportDep131RegistrierkassenRegistrierkasseUuidBelegePathParams;
-}(SpeakeasyBase));
-export { GetExportDep131RegistrierkassenRegistrierkasseUuidBelegePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegePathParams = GetExportDep131RegistrierkassenRegistrierkasseUuidBelegePathParams;
 var GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeQueryParams = /** @class */ (function (_super) {
     __extends(GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeQueryParams, _super);
     function GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=after" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=after" }),
         __metadata("design:type", String)
     ], GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeQueryParams.prototype, "after", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=before" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=before" }),
         __metadata("design:type", String)
     ], GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeQueryParams.prototype, "before", void 0);
     return GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeQueryParams;
-}(SpeakeasyBase));
-export { GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeQueryParams = GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeQueryParams;
 var GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeRequest = /** @class */ (function (_super) {
     __extends(GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeRequest, _super);
     function GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetExportDep131RegistrierkassenRegistrierkasseUuidBelegePathParams)
     ], GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeQueryParams)
     ], GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeRequest.prototype, "queryParams", void 0);
     return GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeRequest;
-}(SpeakeasyBase));
-export { GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeRequest = GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeRequest;
 var GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse = /** @class */ (function (_super) {
     __extends(GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse, _super);
     function GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse.prototype, "statusCode", void 0);
     return GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse;
-}(SpeakeasyBase));
-export { GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse = GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse;

@@ -34,7 +34,7 @@ export declare class ReposCreateDeploymentStatusRequest extends SpeakeasyBase {
 }
 export declare class ReposCreateDeploymentStatusResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     deploymentStatus?: shared.DeploymentStatus;
     validationError?: shared.ValidationError;

@@ -8,5 +8,5 @@ export declare class ProtocolMqttGetArgsRequest extends SpeakeasyBase {
 export declare class ProtocolMqttGetArgsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolMqttGetArgs200ApplicationJsonObject?: Map<string, any>;
+    protocolMqttGetArgs200ApplicationJSONObject?: Record<string, any>;
 }

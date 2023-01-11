@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MlUserDataEncryption } from "./mluserdataencryption";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransformEncryption = void 0;
+var utils_1 = require("../../../internal/utils");
+var mluserdataencryption_1 = require("./mluserdataencryption");
 // TransformEncryption
 /**
  * <p>The encryption-at-rest settings of the transform that apply to accessing user data. Machine learning transforms can access user data encrypted in Amazon S3 using KMS.</p> <p>Additionally, imported labels and trained transforms can now be encrypted using a customer provided KMS key.</p>
@@ -34,13 +37,13 @@ var TransformEncryption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MlUserDataEncryption" }),
-        __metadata("design:type", MlUserDataEncryption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MlUserDataEncryption" }),
+        __metadata("design:type", mluserdataencryption_1.MlUserDataEncryption)
     ], TransformEncryption.prototype, "mlUserDataEncryption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaskRunSecurityConfigurationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaskRunSecurityConfigurationName" }),
         __metadata("design:type", String)
     ], TransformEncryption.prototype, "taskRunSecurityConfigurationName", void 0);
     return TransformEncryption;
-}(SpeakeasyBase));
-export { TransformEncryption };
+}(utils_1.SpeakeasyBase));
+exports.TransformEncryption = TransformEncryption;

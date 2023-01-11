@@ -17,6 +17,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecRequest ext
 export declare class GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    commit?: Map<string, any>;
-    error?: Map<string, any>;
+    commit?: Record<string, any>;
+    error?: Record<string, any>;
 }

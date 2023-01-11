@@ -5,7 +5,7 @@ import { TaskStateEnum } from "./taskstateenum";
 **/
 export declare class TaskSummary extends SpeakeasyBase {
     state?: TaskStateEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     taskArn?: string;
     taskId: string;
 }

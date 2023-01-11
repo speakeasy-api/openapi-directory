@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1HumanAnnotationConfig } from "./googleclouddatalabelingv1beta1humanannotationconfig";
-import { GoogleCloudDatalabelingV1beta1TextClassificationConfig } from "./googleclouddatalabelingv1beta1textclassificationconfig";
-import { GoogleCloudDatalabelingV1beta1TextEntityExtractionConfig } from "./googleclouddatalabelingv1beta1textentityextractionconfig";
-export var GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1LabelTextRequest = exports.GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1humanannotationconfig_1 = require("./googleclouddatalabelingv1beta1humanannotationconfig");
+var googleclouddatalabelingv1beta1textclassificationconfig_1 = require("./googleclouddatalabelingv1beta1textclassificationconfig");
+var googleclouddatalabelingv1beta1textentityextractionconfig_1 = require("./googleclouddatalabelingv1beta1textentityextractionconfig");
+var GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum;
 (function (GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum) {
     GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum["FeatureUnspecified"] = "FEATURE_UNSPECIFIED";
     GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum["TextClassification"] = "TEXT_CLASSIFICATION";
     GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum["TextEntityExtraction"] = "TEXT_ENTITY_EXTRACTION";
-})(GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum || (GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum = {}));
+})(GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum = exports.GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum || (exports.GoogleCloudDatalabelingV1beta1LabelTextRequestFeatureEnum = {}));
 // GoogleCloudDatalabelingV1beta1LabelTextRequest
 /**
  * Request message for LabelText.
@@ -42,21 +45,21 @@ var GoogleCloudDatalabelingV1beta1LabelTextRequest = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=basicConfig" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1HumanAnnotationConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=basicConfig" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1humanannotationconfig_1.GoogleCloudDatalabelingV1beta1HumanAnnotationConfig)
     ], GoogleCloudDatalabelingV1beta1LabelTextRequest.prototype, "basicConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feature" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1LabelTextRequest.prototype, "feature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textClassificationConfig" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1TextClassificationConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textClassificationConfig" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1textclassificationconfig_1.GoogleCloudDatalabelingV1beta1TextClassificationConfig)
     ], GoogleCloudDatalabelingV1beta1LabelTextRequest.prototype, "textClassificationConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textEntityExtractionConfig" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1TextEntityExtractionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textEntityExtractionConfig" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1textentityextractionconfig_1.GoogleCloudDatalabelingV1beta1TextEntityExtractionConfig)
     ], GoogleCloudDatalabelingV1beta1LabelTextRequest.prototype, "textEntityExtractionConfig", void 0);
     return GoogleCloudDatalabelingV1beta1LabelTextRequest;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1LabelTextRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1LabelTextRequest = GoogleCloudDatalabelingV1beta1LabelTextRequest;

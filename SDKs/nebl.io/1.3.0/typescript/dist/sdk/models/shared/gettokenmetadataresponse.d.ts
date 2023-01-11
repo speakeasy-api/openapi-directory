@@ -25,7 +25,7 @@ export declare class GetTokenMetadataResponseMetadataOfIssuance extends Speakeas
  * Metadata set by user on token for UTXO
 **/
 export declare class GetTokenMetadataResponseMetadataOfUtxoUserData extends SpeakeasyBase {
-    meta?: Map<string, any>[];
+    meta?: Record<string, any>[];
 }
 /**
  * Metadata set for UTXO

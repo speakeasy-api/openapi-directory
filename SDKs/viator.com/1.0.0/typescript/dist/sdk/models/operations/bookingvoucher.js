@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,144 +23,146 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BookingVoucherResponse = exports.BookingVoucherRequest = exports.BookingVoucher200ApplicationJson = exports.BookingVoucherHeaders = exports.BookingVoucherQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var BookingVoucherQueryParams = /** @class */ (function (_super) {
     __extends(BookingVoucherQueryParams, _super);
     function BookingVoucherQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=embeddedResources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=embeddedResources" }),
         __metadata("design:type", Boolean)
     ], BookingVoucherQueryParams.prototype, "embeddedResources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fullHTML" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fullHTML" }),
         __metadata("design:type", Boolean)
-    ], BookingVoucherQueryParams.prototype, "fullHtml", void 0);
+    ], BookingVoucherQueryParams.prototype, "fullHTML", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=itemId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=itemId" }),
         __metadata("design:type", Number)
     ], BookingVoucherQueryParams.prototype, "itemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=leadLastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=leadLastName" }),
         __metadata("design:type", String)
     ], BookingVoucherQueryParams.prototype, "leadLastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=mobileVoucher" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=mobileVoucher" }),
         __metadata("design:type", Boolean)
     ], BookingVoucherQueryParams.prototype, "mobileVoucher", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=voucherKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=voucherKey" }),
         __metadata("design:type", String)
     ], BookingVoucherQueryParams.prototype, "voucherKey", void 0);
     return BookingVoucherQueryParams;
-}(SpeakeasyBase));
-export { BookingVoucherQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.BookingVoucherQueryParams = BookingVoucherQueryParams;
 var BookingVoucherHeaders = /** @class */ (function (_super) {
     __extends(BookingVoucherHeaders, _super);
     function BookingVoucherHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Accept-Language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Accept-Language" }),
         __metadata("design:type", String)
     ], BookingVoucherHeaders.prototype, "acceptLanguage", void 0);
     return BookingVoucherHeaders;
-}(SpeakeasyBase));
-export { BookingVoucherHeaders };
+}(utils_1.SpeakeasyBase));
+exports.BookingVoucherHeaders = BookingVoucherHeaders;
 var BookingVoucher200ApplicationJson = /** @class */ (function (_super) {
     __extends(BookingVoucher200ApplicationJson, _super);
     function BookingVoucher200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", String)
     ], BookingVoucher200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateStamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateStamp" }),
         __metadata("design:type", String)
     ], BookingVoucher200ApplicationJson.prototype, "dateStamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorCodes" }),
         __metadata("design:type", Array)
     ], BookingVoucher200ApplicationJson.prototype, "errorCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessage" }),
         __metadata("design:type", Array)
     ], BookingVoucher200ApplicationJson.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessageText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessageText" }),
         __metadata("design:type", String)
     ], BookingVoucher200ApplicationJson.prototype, "errorMessageText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorName" }),
         __metadata("design:type", String)
     ], BookingVoucher200ApplicationJson.prototype, "errorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorReference" }),
         __metadata("design:type", String)
     ], BookingVoucher200ApplicationJson.prototype, "errorReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorType" }),
         __metadata("design:type", String)
     ], BookingVoucher200ApplicationJson.prototype, "errorType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extraInfo" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extraInfo" }),
+        __metadata("design:type", Object)
     ], BookingVoucher200ApplicationJson.prototype, "extraInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extraObject" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extraObject" }),
+        __metadata("design:type", Object)
     ], BookingVoucher200ApplicationJson.prototype, "extraObject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], BookingVoucher200ApplicationJson.prototype, "success", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCount" }),
         __metadata("design:type", Number)
     ], BookingVoucher200ApplicationJson.prototype, "totalCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmid" }),
         __metadata("design:type", String)
     ], BookingVoucher200ApplicationJson.prototype, "vmid", void 0);
     return BookingVoucher200ApplicationJson;
-}(SpeakeasyBase));
-export { BookingVoucher200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.BookingVoucher200ApplicationJson = BookingVoucher200ApplicationJson;
 var BookingVoucherRequest = /** @class */ (function (_super) {
     __extends(BookingVoucherRequest, _super);
     function BookingVoucherRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BookingVoucherQueryParams)
     ], BookingVoucherRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BookingVoucherHeaders)
     ], BookingVoucherRequest.prototype, "headers", void 0);
     return BookingVoucherRequest;
-}(SpeakeasyBase));
-export { BookingVoucherRequest };
+}(utils_1.SpeakeasyBase));
+exports.BookingVoucherRequest = BookingVoucherRequest;
 var BookingVoucherResponse = /** @class */ (function (_super) {
     __extends(BookingVoucherResponse, _super);
     function BookingVoucherResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BookingVoucherResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BookingVoucherResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BookingVoucher200ApplicationJson)
-    ], BookingVoucherResponse.prototype, "bookingVoucher200ApplicationJsonObject", void 0);
+    ], BookingVoucherResponse.prototype, "bookingVoucher200ApplicationJSONObject", void 0);
     return BookingVoucherResponse;
-}(SpeakeasyBase));
-export { BookingVoucherResponse };
+}(utils_1.SpeakeasyBase));
+exports.BookingVoucherResponse = BookingVoucherResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,106 +23,108 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateNetworkMerakiAuthUserResponse = exports.CreateNetworkMerakiAuthUserRequest = exports.CreateNetworkMerakiAuthUserRequestBody = exports.CreateNetworkMerakiAuthUserRequestBodyAuthorizations = exports.CreateNetworkMerakiAuthUserRequestBodyAccountTypeEnum = exports.CreateNetworkMerakiAuthUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateNetworkMerakiAuthUserPathParams = /** @class */ (function (_super) {
     __extends(CreateNetworkMerakiAuthUserPathParams, _super);
     function CreateNetworkMerakiAuthUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], CreateNetworkMerakiAuthUserPathParams.prototype, "networkId", void 0);
     return CreateNetworkMerakiAuthUserPathParams;
-}(SpeakeasyBase));
-export { CreateNetworkMerakiAuthUserPathParams };
-export var CreateNetworkMerakiAuthUserRequestBodyAccountTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkMerakiAuthUserPathParams = CreateNetworkMerakiAuthUserPathParams;
+var CreateNetworkMerakiAuthUserRequestBodyAccountTypeEnum;
 (function (CreateNetworkMerakiAuthUserRequestBodyAccountTypeEnum) {
     CreateNetworkMerakiAuthUserRequestBodyAccountTypeEnum["Guest"] = "Guest";
     CreateNetworkMerakiAuthUserRequestBodyAccountTypeEnum["EightHundredAndTwo1X"] = "802.1X";
     CreateNetworkMerakiAuthUserRequestBodyAccountTypeEnum["ClientVpn"] = "Client VPN";
-})(CreateNetworkMerakiAuthUserRequestBodyAccountTypeEnum || (CreateNetworkMerakiAuthUserRequestBodyAccountTypeEnum = {}));
+})(CreateNetworkMerakiAuthUserRequestBodyAccountTypeEnum = exports.CreateNetworkMerakiAuthUserRequestBodyAccountTypeEnum || (exports.CreateNetworkMerakiAuthUserRequestBodyAccountTypeEnum = {}));
 var CreateNetworkMerakiAuthUserRequestBodyAuthorizations = /** @class */ (function (_super) {
     __extends(CreateNetworkMerakiAuthUserRequestBodyAuthorizations, _super);
     function CreateNetworkMerakiAuthUserRequestBodyAuthorizations() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiresAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiresAt" }),
         __metadata("design:type", String)
     ], CreateNetworkMerakiAuthUserRequestBodyAuthorizations.prototype, "expiresAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssidNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssidNumber" }),
         __metadata("design:type", Number)
     ], CreateNetworkMerakiAuthUserRequestBodyAuthorizations.prototype, "ssidNumber", void 0);
     return CreateNetworkMerakiAuthUserRequestBodyAuthorizations;
-}(SpeakeasyBase));
-export { CreateNetworkMerakiAuthUserRequestBodyAuthorizations };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkMerakiAuthUserRequestBodyAuthorizations = CreateNetworkMerakiAuthUserRequestBodyAuthorizations;
 var CreateNetworkMerakiAuthUserRequestBody = /** @class */ (function (_super) {
     __extends(CreateNetworkMerakiAuthUserRequestBody, _super);
     function CreateNetworkMerakiAuthUserRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountType" }),
         __metadata("design:type", String)
     ], CreateNetworkMerakiAuthUserRequestBody.prototype, "accountType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorizations", elemType: CreateNetworkMerakiAuthUserRequestBodyAuthorizations }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorizations", elemType: CreateNetworkMerakiAuthUserRequestBodyAuthorizations }),
         __metadata("design:type", Array)
     ], CreateNetworkMerakiAuthUserRequestBody.prototype, "authorizations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], CreateNetworkMerakiAuthUserRequestBody.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emailPasswordToUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emailPasswordToUser" }),
         __metadata("design:type", Boolean)
     ], CreateNetworkMerakiAuthUserRequestBody.prototype, "emailPasswordToUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateNetworkMerakiAuthUserRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], CreateNetworkMerakiAuthUserRequestBody.prototype, "password", void 0);
     return CreateNetworkMerakiAuthUserRequestBody;
-}(SpeakeasyBase));
-export { CreateNetworkMerakiAuthUserRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkMerakiAuthUserRequestBody = CreateNetworkMerakiAuthUserRequestBody;
 var CreateNetworkMerakiAuthUserRequest = /** @class */ (function (_super) {
     __extends(CreateNetworkMerakiAuthUserRequest, _super);
     function CreateNetworkMerakiAuthUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateNetworkMerakiAuthUserPathParams)
     ], CreateNetworkMerakiAuthUserRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateNetworkMerakiAuthUserRequestBody)
     ], CreateNetworkMerakiAuthUserRequest.prototype, "request", void 0);
     return CreateNetworkMerakiAuthUserRequest;
-}(SpeakeasyBase));
-export { CreateNetworkMerakiAuthUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkMerakiAuthUserRequest = CreateNetworkMerakiAuthUserRequest;
 var CreateNetworkMerakiAuthUserResponse = /** @class */ (function (_super) {
     __extends(CreateNetworkMerakiAuthUserResponse, _super);
     function CreateNetworkMerakiAuthUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateNetworkMerakiAuthUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateNetworkMerakiAuthUserResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], CreateNetworkMerakiAuthUserResponse.prototype, "createNetworkMerakiAuthUser201ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkMerakiAuthUserResponse.prototype, "createNetworkMerakiAuthUser201ApplicationJSONObject", void 0);
     return CreateNetworkMerakiAuthUserResponse;
-}(SpeakeasyBase));
-export { CreateNetworkMerakiAuthUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkMerakiAuthUserResponse = CreateNetworkMerakiAuthUserResponse;

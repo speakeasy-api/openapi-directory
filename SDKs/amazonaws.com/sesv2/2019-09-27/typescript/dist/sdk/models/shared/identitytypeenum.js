@@ -1,6 +1,9 @@
-export var IdentityTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IdentityTypeEnum = void 0;
+var IdentityTypeEnum;
 (function (IdentityTypeEnum) {
     IdentityTypeEnum["EmailAddress"] = "EMAIL_ADDRESS";
     IdentityTypeEnum["Domain"] = "DOMAIN";
     IdentityTypeEnum["ManagedDomain"] = "MANAGED_DOMAIN";
-})(IdentityTypeEnum || (IdentityTypeEnum = {}));
+})(IdentityTypeEnum = exports.IdentityTypeEnum || (exports.IdentityTypeEnum = {}));

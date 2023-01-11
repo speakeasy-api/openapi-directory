@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudWatchLogsConfig } from "./cloudwatchlogsconfig";
-import { S3LogsConfig } from "./s3logsconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LogsLocation = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudwatchlogsconfig_1 = require("./cloudwatchlogsconfig");
+var s3logsconfig_1 = require("./s3logsconfig");
 // LogsLocation
 /**
  * Information about build logs in CloudWatch Logs.
@@ -35,37 +38,37 @@ var LogsLocation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudWatchLogs" }),
-        __metadata("design:type", CloudWatchLogsConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudWatchLogs" }),
+        __metadata("design:type", cloudwatchlogsconfig_1.CloudWatchLogsConfig)
     ], LogsLocation.prototype, "cloudWatchLogs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudWatchLogsArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudWatchLogsArn" }),
         __metadata("design:type", String)
     ], LogsLocation.prototype, "cloudWatchLogsArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deepLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deepLink" }),
         __metadata("design:type", String)
     ], LogsLocation.prototype, "deepLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupName" }),
         __metadata("design:type", String)
     ], LogsLocation.prototype, "groupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3DeepLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3DeepLink" }),
         __metadata("design:type", String)
     ], LogsLocation.prototype, "s3DeepLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3Logs" }),
-        __metadata("design:type", S3LogsConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3Logs" }),
+        __metadata("design:type", s3logsconfig_1.S3LogsConfig)
     ], LogsLocation.prototype, "s3Logs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3LogsArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3LogsArn" }),
         __metadata("design:type", String)
     ], LogsLocation.prototype, "s3LogsArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streamName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streamName" }),
         __metadata("design:type", String)
     ], LogsLocation.prototype, "streamName", void 0);
     return LogsLocation;
-}(SpeakeasyBase));
-export { LogsLocation };
+}(utils_1.SpeakeasyBase));
+exports.LogsLocation = LogsLocation;

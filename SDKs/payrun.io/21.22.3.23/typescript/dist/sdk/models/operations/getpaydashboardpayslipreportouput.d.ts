@@ -22,6 +22,6 @@ export declare class GetPayDashboardPayslipReportOuputRequest extends SpeakeasyB
 export declare class GetPayDashboardPayslipReportOuputResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getPayDashboardPayslipReportOuput200ApplicationJsonBinaryString?: Uint8Array;
+    getPayDashboardPayslipReportOuput200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,47 +23,49 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Location } from "./location";
-import { Links } from "./links";
-import { Meta } from "./meta";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLocationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var location_1 = require("./location");
+var links_1 = require("./links");
+var meta_1 = require("./meta");
 var GetLocationsResponse = /** @class */ (function (_super) {
     __extends(GetLocationsResponse, _super);
     function GetLocationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: Location }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: location_1.Location }),
         __metadata("design:type", Array)
     ], GetLocationsResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
-        __metadata("design:type", Links)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
+        __metadata("design:type", links_1.Links)
     ], GetLocationsResponse.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", Meta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", meta_1.Meta)
     ], GetLocationsResponse.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operation" }),
         __metadata("design:type", String)
     ], GetLocationsResponse.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
         __metadata("design:type", String)
     ], GetLocationsResponse.prototype, "resource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service" }),
         __metadata("design:type", String)
     ], GetLocationsResponse.prototype, "service", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetLocationsResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status_code" }),
         __metadata("design:type", Number)
     ], GetLocationsResponse.prototype, "statusCode", void 0);
     return GetLocationsResponse;
-}(SpeakeasyBase));
-export { GetLocationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetLocationsResponse = GetLocationsResponse;

@@ -22,8 +22,8 @@ export class WebAcl extends SpeakeasyBase {
   rules: ActivatedRule[];
 
   @SpeakeasyMetadata({ data: "json, name=WebACLArn" })
-  webAclArn?: string;
+  webACLArn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=WebACLId" })
-  webAclId: string;
+  webACLId: string;
 }

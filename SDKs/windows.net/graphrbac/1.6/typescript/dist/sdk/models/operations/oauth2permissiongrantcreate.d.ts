@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class OAuth2PermissionGrantCreatePathParams extends SpeakeasyBase {
-    tenantId: string;
+    tenantID: string;
 }
 export declare class OAuth2PermissionGrantCreateQueryParams extends SpeakeasyBase {
     apiVersion: string;

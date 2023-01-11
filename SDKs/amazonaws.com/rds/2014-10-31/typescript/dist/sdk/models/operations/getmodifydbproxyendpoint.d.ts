@@ -8,7 +8,7 @@ export declare enum GetModifyDbProxyEndpointVersionEnum {
 export declare class GetModifyDbProxyEndpointQueryParams extends SpeakeasyBase {
     action: GetModifyDbProxyEndpointActionEnum;
     dbProxyEndpointName: string;
-    newDbProxyEndpointName?: string;
+    newDBProxyEndpointName?: string;
     version: GetModifyDbProxyEndpointVersionEnum;
     vpcSecurityGroupIds?: string[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Table } from "./table";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeTableResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var table_1 = require("./table");
 var DescribeTableResponse = /** @class */ (function (_super) {
     __extends(DescribeTableResponse, _super);
     function DescribeTableResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Table" }),
-        __metadata("design:type", Table)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Table" }),
+        __metadata("design:type", table_1.Table)
     ], DescribeTableResponse.prototype, "table", void 0);
     return DescribeTableResponse;
-}(SpeakeasyBase));
-export { DescribeTableResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeTableResponse = DescribeTableResponse;

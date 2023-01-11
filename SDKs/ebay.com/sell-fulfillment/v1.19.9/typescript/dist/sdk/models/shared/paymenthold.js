@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
-import { SellerActionsToRelease } from "./selleractionstorelease";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentHold = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
+var selleractionstorelease_1 = require("./selleractionstorelease");
 // PaymentHold
 /**
  * This type contains information about a hold placed on a payment to a seller for an order, including the reason why the buyer's payment for the order is being held, the expected release date of the funds into the seller's account, the current state of the hold, and the actual release date if the payment has been released, and possible actions the seller can take to expedite the payout of funds into their account.
@@ -35,29 +38,29 @@ var PaymentHold = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expectedReleaseDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expectedReleaseDate" }),
         __metadata("design:type", String)
     ], PaymentHold.prototype, "expectedReleaseDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=holdAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=holdAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], PaymentHold.prototype, "holdAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=holdReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=holdReason" }),
         __metadata("design:type", String)
     ], PaymentHold.prototype, "holdReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=holdState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=holdState" }),
         __metadata("design:type", String)
     ], PaymentHold.prototype, "holdState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=releaseDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=releaseDate" }),
         __metadata("design:type", String)
     ], PaymentHold.prototype, "releaseDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sellerActionsToRelease", elemType: SellerActionsToRelease }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sellerActionsToRelease", elemType: selleractionstorelease_1.SellerActionsToRelease }),
         __metadata("design:type", Array)
     ], PaymentHold.prototype, "sellerActionsToRelease", void 0);
     return PaymentHold;
-}(SpeakeasyBase));
-export { PaymentHold };
+}(utils_1.SpeakeasyBase));
+exports.PaymentHold = PaymentHold;

@@ -5,7 +5,7 @@ export declare class CollectionsMetadataSubjectsRelationshipsUpdatePathParams ex
 }
 export declare class CollectionsMetadataSubjectsRelationshipsUpdateRequest extends SpeakeasyBase {
     pathParams: CollectionsMetadataSubjectsRelationshipsUpdatePathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class CollectionsMetadataSubjectsRelationshipsUpdateResponse extends SpeakeasyBase {
     contentType: string;

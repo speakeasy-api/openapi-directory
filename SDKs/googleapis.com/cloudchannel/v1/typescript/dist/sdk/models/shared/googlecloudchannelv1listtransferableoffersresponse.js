@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1TransferableOffer } from "./googlecloudchannelv1transferableoffer";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1ListTransferableOffersResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1transferableoffer_1 = require("./googlecloudchannelv1transferableoffer");
 // GoogleCloudChannelV1ListTransferableOffersResponse
 /**
  * Response message for CloudChannelService.ListTransferableOffers.
@@ -34,13 +37,13 @@ var GoogleCloudChannelV1ListTransferableOffersResponse = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1ListTransferableOffersResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transferableOffers", elemType: GoogleCloudChannelV1TransferableOffer }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transferableOffers", elemType: googlecloudchannelv1transferableoffer_1.GoogleCloudChannelV1TransferableOffer }),
         __metadata("design:type", Array)
     ], GoogleCloudChannelV1ListTransferableOffersResponse.prototype, "transferableOffers", void 0);
     return GoogleCloudChannelV1ListTransferableOffersResponse;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1ListTransferableOffersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1ListTransferableOffersResponse = GoogleCloudChannelV1ListTransferableOffersResponse;

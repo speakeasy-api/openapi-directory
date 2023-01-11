@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class Settings extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=closed_caption" })
-  closedCaption: Map<string, any>;
+  closedCaption: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=control_notifications" })
   controlNotifications: number;

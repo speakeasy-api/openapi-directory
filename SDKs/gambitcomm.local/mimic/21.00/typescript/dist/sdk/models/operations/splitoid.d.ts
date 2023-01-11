@@ -9,5 +9,5 @@ export declare class SplitOidRequest extends SpeakeasyBase {
 export declare class SplitOidResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    splitOid200ApplicationJsonStrings?: string[];
+    splitOid200ApplicationJSONStrings?: string[];
 }

@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class UpdateLeaveApplicationPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=LeaveApplicationID" })
-  leaveApplicationId: string;
+  leaveApplicationID: string;
 }
 
 

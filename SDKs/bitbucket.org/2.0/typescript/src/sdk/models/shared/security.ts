@@ -2,6 +2,12 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
+export class SchemeApiKey extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "security, name=Authorization" })
+  apiKey: string;
+}
+
+
 export class SchemeBasic extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "security, name=password" })
   password: string;
@@ -14,10 +20,4 @@ export class SchemeBasic extends SpeakeasyBase {
 export class SchemeOauth2 extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "security, name=Authorization" })
   authorization: string;
-}
-
-
-export class SchemeApiKey extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "security, name=Authorization" })
-  apiKey: string;
 }

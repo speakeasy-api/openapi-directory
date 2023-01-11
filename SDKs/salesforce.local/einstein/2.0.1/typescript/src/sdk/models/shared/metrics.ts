@@ -16,7 +16,7 @@ export class Metrics extends SpeakeasyBase {
   language?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metricsData" })
-  metricsData?: Map<string, any>;
+  metricsData?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=object" })
   object?: string;

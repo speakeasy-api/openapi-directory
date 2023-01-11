@@ -5,7 +5,7 @@ export declare enum WritableDeviceTypeParentChildStatusEnum {
 }
 export declare class WritableDeviceTypeInput extends SpeakeasyBase {
     comments?: string;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     isFullDepth?: boolean;
     manufacturer: number;
     model: string;

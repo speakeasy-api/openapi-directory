@@ -15,7 +15,7 @@ export class JsonRpcSecurity extends SpeakeasyBase {
 
 export class JsonRpcRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   request: shared.RpcRequest;
@@ -30,7 +30,7 @@ export class JsonRpcResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

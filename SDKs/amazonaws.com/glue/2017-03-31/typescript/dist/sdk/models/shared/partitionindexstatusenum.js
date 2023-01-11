@@ -1,7 +1,10 @@
-export var PartitionIndexStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PartitionIndexStatusEnum = void 0;
+var PartitionIndexStatusEnum;
 (function (PartitionIndexStatusEnum) {
     PartitionIndexStatusEnum["Creating"] = "CREATING";
     PartitionIndexStatusEnum["Active"] = "ACTIVE";
     PartitionIndexStatusEnum["Deleting"] = "DELETING";
     PartitionIndexStatusEnum["Failed"] = "FAILED";
-})(PartitionIndexStatusEnum || (PartitionIndexStatusEnum = {}));
+})(PartitionIndexStatusEnum = exports.PartitionIndexStatusEnum || (exports.PartitionIndexStatusEnum = {}));

@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class ErrorTemplate extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=messages" })
-  messages: Map<string, string>;
+  messages: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=serviceId" })
   serviceId: string;

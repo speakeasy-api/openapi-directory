@@ -21,5 +21,5 @@ export declare class UpdateDeviceCellularGatewayPortForwardingRulesRequest exten
 export declare class UpdateDeviceCellularGatewayPortForwardingRulesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateDeviceCellularGatewayPortForwardingRules200ApplicationJsonObject?: Map<string, any>;
+    updateDeviceCellularGatewayPortForwardingRules200ApplicationJSONObject?: Record<string, any>;
 }

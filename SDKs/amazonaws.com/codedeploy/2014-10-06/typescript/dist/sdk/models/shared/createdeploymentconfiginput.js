@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComputePlatformEnum } from "./computeplatformenum";
-import { MinimumHealthyHosts } from "./minimumhealthyhosts";
-import { TrafficRoutingConfig } from "./trafficroutingconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDeploymentConfigInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var computeplatformenum_1 = require("./computeplatformenum");
+var minimumhealthyhosts_1 = require("./minimumhealthyhosts");
+var trafficroutingconfig_1 = require("./trafficroutingconfig");
 // CreateDeploymentConfigInput
 /**
  * Represents the input of a <code>CreateDeploymentConfig</code> operation.
@@ -36,21 +39,21 @@ var CreateDeploymentConfigInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computePlatform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computePlatform" }),
         __metadata("design:type", String)
     ], CreateDeploymentConfigInput.prototype, "computePlatform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentConfigName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentConfigName" }),
         __metadata("design:type", String)
     ], CreateDeploymentConfigInput.prototype, "deploymentConfigName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimumHealthyHosts" }),
-        __metadata("design:type", MinimumHealthyHosts)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimumHealthyHosts" }),
+        __metadata("design:type", minimumhealthyhosts_1.MinimumHealthyHosts)
     ], CreateDeploymentConfigInput.prototype, "minimumHealthyHosts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trafficRoutingConfig" }),
-        __metadata("design:type", TrafficRoutingConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trafficRoutingConfig" }),
+        __metadata("design:type", trafficroutingconfig_1.TrafficRoutingConfig)
     ], CreateDeploymentConfigInput.prototype, "trafficRoutingConfig", void 0);
     return CreateDeploymentConfigInput;
-}(SpeakeasyBase));
-export { CreateDeploymentConfigInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeploymentConfigInput = CreateDeploymentConfigInput;

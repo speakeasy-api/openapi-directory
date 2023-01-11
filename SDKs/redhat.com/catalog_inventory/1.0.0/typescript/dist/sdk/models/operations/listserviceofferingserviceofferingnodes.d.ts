@@ -4,10 +4,10 @@ export declare class ListServiceOfferingServiceOfferingNodesPathParams extends S
     id: string;
 }
 export declare class ListServiceOfferingServiceOfferingNodesQueryParams extends SpeakeasyBase {
-    filter?: Map<string, any>;
+    filter?: Record<string, any>;
     limit?: number;
     offset?: number;
-    sortBy?: Map<string, any>;
+    sortBy?: Record<string, any>;
 }
 export declare class ListServiceOfferingServiceOfferingNodesRequest extends SpeakeasyBase {
     pathParams: ListServiceOfferingServiceOfferingNodesPathParams;

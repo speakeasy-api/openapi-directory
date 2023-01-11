@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { FailoverState } from "./failoverstate";
-import { GlobalClusterMember } from "./globalclustermember";
+import { GlobalClusterMemberList } from "./globalclustermemberlist";
 
 
 
@@ -30,8 +30,8 @@ export class GlobalCluster extends SpeakeasyBase {
   @SpeakeasyMetadata()
   globalClusterIdentifier?: string;
 
-  @SpeakeasyMetadata({ elemType: GlobalClusterMember })
-  globalClusterMembers?: GlobalClusterMember[];
+  @SpeakeasyMetadata({ elemType: GlobalClusterMemberList })
+  globalClusterMembers?: GlobalClusterMemberList[];
 
   @SpeakeasyMetadata()
   globalClusterResourceId?: string;

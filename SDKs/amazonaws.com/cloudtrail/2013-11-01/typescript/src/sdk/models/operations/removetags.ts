@@ -45,7 +45,7 @@ export class RemoveTagsRequest extends SpeakeasyBase {
 
 export class RemoveTagsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  cloudTrailArnInvalidException?: any;
+  cloudTrailARNInvalidException?: any;
 
   @SpeakeasyMetadata()
   contentType: string;
@@ -63,7 +63,7 @@ export class RemoveTagsResponse extends SpeakeasyBase {
   operationNotPermittedException?: any;
 
   @SpeakeasyMetadata()
-  removeTagsResponse?: Map<string, any>;
+  removeTagsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

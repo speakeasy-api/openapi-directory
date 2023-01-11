@@ -1,4 +1,7 @@
-export var ResourceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceTypeEnum = void 0;
+var ResourceTypeEnum;
 (function (ResourceTypeEnum) {
     ResourceTypeEnum["AwsEc2CustomerGateway"] = "AWS::EC2::CustomerGateway";
     ResourceTypeEnum["AwsEc2Eip"] = "AWS::EC2::EIP";
@@ -108,4 +111,4 @@ export var ResourceTypeEnum;
     ResourceTypeEnum["AwsEfsAccessPoint"] = "AWS::EFS::AccessPoint";
     ResourceTypeEnum["AwsEfsFileSystem"] = "AWS::EFS::FileSystem";
     ResourceTypeEnum["AwsEksCluster"] = "AWS::EKS::Cluster";
-})(ResourceTypeEnum || (ResourceTypeEnum = {}));
+})(ResourceTypeEnum = exports.ResourceTypeEnum || (exports.ResourceTypeEnum = {}));

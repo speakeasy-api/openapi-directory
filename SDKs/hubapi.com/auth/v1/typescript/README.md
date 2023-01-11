@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetOauthV1AccessTokensTokenGetAccessTokenRequest, GetOauthV1AccessTokensTokenGetAccessTokenResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,7 +28,7 @@ const sdk = new SDK();
     
 const req: GetOauthV1AccessTokensTokenGetAccessTokenRequest = {
   pathParams: {
-    token: "a",
+    token: "sit",
   },
 };
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var EventRecordFailureFailureCauseEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventRecordFailure = exports.EventRecordFailureFailureCauseEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var EventRecordFailureFailureCauseEnum;
 (function (EventRecordFailureFailureCauseEnum) {
     EventRecordFailureFailureCauseEnum["EventUpdateFailureCauseUnspecified"] = "EVENT_UPDATE_FAILURE_CAUSE_UNSPECIFIED";
     EventRecordFailureFailureCauseEnum["NotFound"] = "NOT_FOUND";
     EventRecordFailureFailureCauseEnum["InvalidUpdateValue"] = "INVALID_UPDATE_VALUE";
-})(EventRecordFailureFailureCauseEnum || (EventRecordFailureFailureCauseEnum = {}));
+})(EventRecordFailureFailureCauseEnum = exports.EventRecordFailureFailureCauseEnum || (exports.EventRecordFailureFailureCauseEnum = {}));
 // EventRecordFailure
 /**
  * An event update failure resource.
@@ -39,17 +42,17 @@ var EventRecordFailure = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventId" }),
         __metadata("design:type", String)
     ], EventRecordFailure.prototype, "eventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureCause" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureCause" }),
         __metadata("design:type", String)
     ], EventRecordFailure.prototype, "failureCause", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], EventRecordFailure.prototype, "kind", void 0);
     return EventRecordFailure;
-}(SpeakeasyBase));
-export { EventRecordFailure };
+}(utils_1.SpeakeasyBase));
+exports.EventRecordFailure = EventRecordFailure;

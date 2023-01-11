@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateGroupResponse = exports.UpdateGroupRequest = exports.UpdateGroupRequestBody = exports.UpdateGroupHeaders = exports.UpdateGroupPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateGroupPathParams = /** @class */ (function (_super) {
     __extends(UpdateGroupPathParams, _super);
     function UpdateGroupPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=GroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=GroupId" }),
         __metadata("design:type", String)
     ], UpdateGroupPathParams.prototype, "groupId", void 0);
     return UpdateGroupPathParams;
-}(SpeakeasyBase));
-export { UpdateGroupPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateGroupPathParams = UpdateGroupPathParams;
 var UpdateGroupHeaders = /** @class */ (function (_super) {
     __extends(UpdateGroupHeaders, _super);
     function UpdateGroupHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], UpdateGroupHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], UpdateGroupHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], UpdateGroupHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], UpdateGroupHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], UpdateGroupHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], UpdateGroupHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], UpdateGroupHeaders.prototype, "xAmzSignedHeaders", void 0);
     return UpdateGroupHeaders;
-}(SpeakeasyBase));
-export { UpdateGroupHeaders };
+}(utils_1.SpeakeasyBase));
+exports.UpdateGroupHeaders = UpdateGroupHeaders;
 var UpdateGroupRequestBody = /** @class */ (function (_super) {
     __extends(UpdateGroupRequestBody, _super);
     function UpdateGroupRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], UpdateGroupRequestBody.prototype, "name", void 0);
     return UpdateGroupRequestBody;
-}(SpeakeasyBase));
-export { UpdateGroupRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateGroupRequestBody = UpdateGroupRequestBody;
 var UpdateGroupRequest = /** @class */ (function (_super) {
     __extends(UpdateGroupRequest, _super);
     function UpdateGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateGroupPathParams)
     ], UpdateGroupRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateGroupHeaders)
     ], UpdateGroupRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateGroupRequestBody)
     ], UpdateGroupRequest.prototype, "request", void 0);
     return UpdateGroupRequest;
-}(SpeakeasyBase));
-export { UpdateGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateGroupRequest = UpdateGroupRequest;
 var UpdateGroupResponse = /** @class */ (function (_super) {
     __extends(UpdateGroupResponse, _super);
     function UpdateGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateGroupResponse.prototype, "badRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateGroupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateGroupResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdateGroupResponse.prototype, "updateGroupResponse", void 0);
     return UpdateGroupResponse;
-}(SpeakeasyBase));
-export { UpdateGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateGroupResponse = UpdateGroupResponse;

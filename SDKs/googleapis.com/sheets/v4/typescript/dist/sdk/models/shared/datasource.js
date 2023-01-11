@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSourceColumn } from "./datasourcecolumn";
-import { DataSourceSpec } from "./datasourcespec";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataSource = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasourcecolumn_1 = require("./datasourcecolumn");
+var datasourcespec_1 = require("./datasourcespec");
 // DataSource
 /**
  * Information about an external data source in the spreadsheet.
@@ -35,21 +38,21 @@ var DataSource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=calculatedColumns", elemType: DataSourceColumn }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=calculatedColumns", elemType: datasourcecolumn_1.DataSourceColumn }),
         __metadata("design:type", Array)
     ], DataSource.prototype, "calculatedColumns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceId" }),
         __metadata("design:type", String)
     ], DataSource.prototype, "dataSourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sheetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sheetId" }),
         __metadata("design:type", Number)
     ], DataSource.prototype, "sheetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
-        __metadata("design:type", DataSourceSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
+        __metadata("design:type", datasourcespec_1.DataSourceSpec)
     ], DataSource.prototype, "spec", void 0);
     return DataSource;
-}(SpeakeasyBase));
-export { DataSource };
+}(utils_1.SpeakeasyBase));
+exports.DataSource = DataSource;

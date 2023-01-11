@@ -58,8 +58,8 @@ export class ImportExportedDataResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  importExportedData200ApplicationJsonObject?: ImportExportedData200ApplicationJson;
+  importExportedData200ApplicationJSONObject?: ImportExportedData200ApplicationJson;
 
   @SpeakeasyMetadata()
-  importExportedData400ApplicationJsonObject?: ImportExportedData400ApplicationJson;
+  importExportedData400ApplicationJSONObject?: ImportExportedData400ApplicationJson;
 }

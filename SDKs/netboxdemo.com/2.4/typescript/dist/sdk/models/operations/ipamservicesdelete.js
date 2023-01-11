@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IpamServicesDeleteResponse = exports.IpamServicesDeleteRequest = exports.IpamServicesDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var IpamServicesDeletePathParams = /** @class */ (function (_super) {
     __extends(IpamServicesDeletePathParams, _super);
     function IpamServicesDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], IpamServicesDeletePathParams.prototype, "id", void 0);
     return IpamServicesDeletePathParams;
-}(SpeakeasyBase));
-export { IpamServicesDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.IpamServicesDeletePathParams = IpamServicesDeletePathParams;
 var IpamServicesDeleteRequest = /** @class */ (function (_super) {
     __extends(IpamServicesDeleteRequest, _super);
     function IpamServicesDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", IpamServicesDeletePathParams)
     ], IpamServicesDeleteRequest.prototype, "pathParams", void 0);
     return IpamServicesDeleteRequest;
-}(SpeakeasyBase));
-export { IpamServicesDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.IpamServicesDeleteRequest = IpamServicesDeleteRequest;
 var IpamServicesDeleteResponse = /** @class */ (function (_super) {
     __extends(IpamServicesDeleteResponse, _super);
     function IpamServicesDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], IpamServicesDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], IpamServicesDeleteResponse.prototype, "statusCode", void 0);
     return IpamServicesDeleteResponse;
-}(SpeakeasyBase));
-export { IpamServicesDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.IpamServicesDeleteResponse = IpamServicesDeleteResponse;

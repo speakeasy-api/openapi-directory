@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Airport } from "./airport";
-import { Link } from "./link";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AirportResource = exports.AirportResourceMeta = exports.AirportResourceAirports = void 0;
+var utils_1 = require("../../../internal/utils");
+var airport_1 = require("./airport");
+var link_1 = require("./link");
 // AirportResourceAirports
 /**
  * Container for airport elements.
@@ -35,12 +38,12 @@ var AirportResourceAirports = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Airport" }),
-        __metadata("design:type", Airport)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Airport" }),
+        __metadata("design:type", airport_1.Airport)
     ], AirportResourceAirports.prototype, "airport", void 0);
     return AirportResourceAirports;
-}(SpeakeasyBase));
-export { AirportResourceAirports };
+}(utils_1.SpeakeasyBase));
+exports.AirportResourceAirports = AirportResourceAirports;
 // AirportResourceMeta
 /**
  * Container for meta links.
@@ -51,20 +54,20 @@ var AirportResourceMeta = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@Version" }),
         __metadata("design:type", String)
     ], AirportResourceMeta.prototype, "atVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Link", elemType: Link }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Link", elemType: link_1.Link }),
         __metadata("design:type", Array)
     ], AirportResourceMeta.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalCount" }),
         __metadata("design:type", Number)
     ], AirportResourceMeta.prototype, "totalCount", void 0);
     return AirportResourceMeta;
-}(SpeakeasyBase));
-export { AirportResourceMeta };
+}(utils_1.SpeakeasyBase));
+exports.AirportResourceMeta = AirportResourceMeta;
 // AirportResource
 /**
  * Root element of airport response.
@@ -75,13 +78,13 @@ var AirportResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Airports" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Airports" }),
         __metadata("design:type", AirportResourceAirports)
     ], AirportResource.prototype, "airports", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Meta" }),
         __metadata("design:type", AirportResourceMeta)
     ], AirportResource.prototype, "meta", void 0);
     return AirportResource;
-}(SpeakeasyBase));
-export { AirportResource };
+}(utils_1.SpeakeasyBase));
+exports.AirportResource = AirportResource;

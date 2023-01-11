@@ -18,7 +18,7 @@ export declare class AddApplicationReferenceDataSourceRequest extends SpeakeasyB
     request: shared.AddApplicationReferenceDataSourceRequest;
 }
 export declare class AddApplicationReferenceDataSourceResponse extends SpeakeasyBase {
-    addApplicationReferenceDataSourceResponse?: Map<string, any>;
+    addApplicationReferenceDataSourceResponse?: Record<string, any>;
     concurrentModificationException?: any;
     contentType: string;
     invalidArgumentException?: any;

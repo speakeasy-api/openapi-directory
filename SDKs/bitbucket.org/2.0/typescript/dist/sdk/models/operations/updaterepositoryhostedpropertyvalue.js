@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateRepositoryHostedPropertyValueResponse = exports.UpdateRepositoryHostedPropertyValueRequest = exports.UpdateRepositoryHostedPropertyValuePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateRepositoryHostedPropertyValuePathParams = /** @class */ (function (_super) {
     __extends(UpdateRepositoryHostedPropertyValuePathParams, _super);
     function UpdateRepositoryHostedPropertyValuePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=app_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=app_key" }),
         __metadata("design:type", String)
     ], UpdateRepositoryHostedPropertyValuePathParams.prototype, "appKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=property_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=property_name" }),
         __metadata("design:type", String)
     ], UpdateRepositoryHostedPropertyValuePathParams.prototype, "propertyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], UpdateRepositoryHostedPropertyValuePathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], UpdateRepositoryHostedPropertyValuePathParams.prototype, "workspace", void 0);
     return UpdateRepositoryHostedPropertyValuePathParams;
-}(SpeakeasyBase));
-export { UpdateRepositoryHostedPropertyValuePathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryHostedPropertyValuePathParams = UpdateRepositoryHostedPropertyValuePathParams;
 var UpdateRepositoryHostedPropertyValueRequest = /** @class */ (function (_super) {
     __extends(UpdateRepositoryHostedPropertyValueRequest, _super);
     function UpdateRepositoryHostedPropertyValueRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateRepositoryHostedPropertyValuePathParams)
     ], UpdateRepositoryHostedPropertyValueRequest.prototype, "pathParams", void 0);
     return UpdateRepositoryHostedPropertyValueRequest;
-}(SpeakeasyBase));
-export { UpdateRepositoryHostedPropertyValueRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryHostedPropertyValueRequest = UpdateRepositoryHostedPropertyValueRequest;
 var UpdateRepositoryHostedPropertyValueResponse = /** @class */ (function (_super) {
     __extends(UpdateRepositoryHostedPropertyValueResponse, _super);
     function UpdateRepositoryHostedPropertyValueResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateRepositoryHostedPropertyValueResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateRepositoryHostedPropertyValueResponse.prototype, "statusCode", void 0);
     return UpdateRepositoryHostedPropertyValueResponse;
-}(SpeakeasyBase));
-export { UpdateRepositoryHostedPropertyValueResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryHostedPropertyValueResponse = UpdateRepositoryHostedPropertyValueResponse;

@@ -8,7 +8,7 @@ export declare enum GetDeleteDbInstanceVersionEnum {
 export declare class GetDeleteDbInstanceQueryParams extends SpeakeasyBase {
     action: GetDeleteDbInstanceActionEnum;
     dbInstanceIdentifier: string;
-    finalDbSnapshotIdentifier?: string;
+    finalDBSnapshotIdentifier?: string;
     skipFinalSnapshot?: boolean;
     version: GetDeleteDbInstanceVersionEnum;
 }

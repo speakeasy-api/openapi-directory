@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoRollbackConfiguration } from "./autorollbackconfiguration";
-import { BlueGreenDeploymentConfiguration } from "./bluegreendeploymentconfiguration";
-import { ComputePlatformEnum } from "./computeplatformenum";
-import { DeploymentCreatorEnum } from "./deploymentcreatorenum";
-import { DeploymentOverview } from "./deploymentoverview";
-import { DeploymentStyle } from "./deploymentstyle";
-import { ErrorInformation } from "./errorinformation";
-import { FileExistsBehaviorEnum } from "./fileexistsbehaviorenum";
-import { LoadBalancerInfo } from "./loadbalancerinfo";
-import { RevisionLocation } from "./revisionlocation";
-import { RelatedDeployments } from "./relateddeployments";
-import { RollbackInfo } from "./rollbackinfo";
-import { DeploymentStatusEnum } from "./deploymentstatusenum";
-import { TargetInstances } from "./targetinstances";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeploymentInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var autorollbackconfiguration_1 = require("./autorollbackconfiguration");
+var bluegreendeploymentconfiguration_1 = require("./bluegreendeploymentconfiguration");
+var computeplatformenum_1 = require("./computeplatformenum");
+var deploymentcreatorenum_1 = require("./deploymentcreatorenum");
+var deploymentoverview_1 = require("./deploymentoverview");
+var deploymentstyle_1 = require("./deploymentstyle");
+var errorinformation_1 = require("./errorinformation");
+var fileexistsbehaviorenum_1 = require("./fileexistsbehaviorenum");
+var loadbalancerinfo_1 = require("./loadbalancerinfo");
+var revisionlocation_1 = require("./revisionlocation");
+var relateddeployments_1 = require("./relateddeployments");
+var rollbackinfo_1 = require("./rollbackinfo");
+var deploymentstatusenum_1 = require("./deploymentstatusenum");
+var targetinstances_1 = require("./targetinstances");
 // DeploymentInfo
 /**
  * Information about a deployment.
@@ -47,121 +50,121 @@ var DeploymentInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalDeploymentStatusInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalDeploymentStatusInfo" }),
         __metadata("design:type", String)
     ], DeploymentInfo.prototype, "additionalDeploymentStatusInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationName" }),
         __metadata("design:type", String)
     ], DeploymentInfo.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoRollbackConfiguration" }),
-        __metadata("design:type", AutoRollbackConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoRollbackConfiguration" }),
+        __metadata("design:type", autorollbackconfiguration_1.AutoRollbackConfiguration)
     ], DeploymentInfo.prototype, "autoRollbackConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blueGreenDeploymentConfiguration" }),
-        __metadata("design:type", BlueGreenDeploymentConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blueGreenDeploymentConfiguration" }),
+        __metadata("design:type", bluegreendeploymentconfiguration_1.BlueGreenDeploymentConfiguration)
     ], DeploymentInfo.prototype, "blueGreenDeploymentConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=completeTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=completeTime" }),
         __metadata("design:type", Date)
     ], DeploymentInfo.prototype, "completeTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computePlatform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computePlatform" }),
         __metadata("design:type", String)
     ], DeploymentInfo.prototype, "computePlatform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", Date)
     ], DeploymentInfo.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creator" }),
         __metadata("design:type", String)
     ], DeploymentInfo.prototype, "creator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentConfigName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentConfigName" }),
         __metadata("design:type", String)
     ], DeploymentInfo.prototype, "deploymentConfigName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentGroupName" }),
         __metadata("design:type", String)
     ], DeploymentInfo.prototype, "deploymentGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentId" }),
         __metadata("design:type", String)
     ], DeploymentInfo.prototype, "deploymentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentOverview" }),
-        __metadata("design:type", DeploymentOverview)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentOverview" }),
+        __metadata("design:type", deploymentoverview_1.DeploymentOverview)
     ], DeploymentInfo.prototype, "deploymentOverview", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentStatusMessages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentStatusMessages" }),
         __metadata("design:type", Array)
     ], DeploymentInfo.prototype, "deploymentStatusMessages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentStyle" }),
-        __metadata("design:type", DeploymentStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentStyle" }),
+        __metadata("design:type", deploymentstyle_1.DeploymentStyle)
     ], DeploymentInfo.prototype, "deploymentStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], DeploymentInfo.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorInformation" }),
-        __metadata("design:type", ErrorInformation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorInformation" }),
+        __metadata("design:type", errorinformation_1.ErrorInformation)
     ], DeploymentInfo.prototype, "errorInformation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalId" }),
         __metadata("design:type", String)
     ], DeploymentInfo.prototype, "externalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileExistsBehavior" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileExistsBehavior" }),
         __metadata("design:type", String)
     ], DeploymentInfo.prototype, "fileExistsBehavior", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ignoreApplicationStopFailures" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ignoreApplicationStopFailures" }),
         __metadata("design:type", Boolean)
     ], DeploymentInfo.prototype, "ignoreApplicationStopFailures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceTerminationWaitTimeStarted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceTerminationWaitTimeStarted" }),
         __metadata("design:type", Boolean)
     ], DeploymentInfo.prototype, "instanceTerminationWaitTimeStarted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loadBalancerInfo" }),
-        __metadata("design:type", LoadBalancerInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loadBalancerInfo" }),
+        __metadata("design:type", loadbalancerinfo_1.LoadBalancerInfo)
     ], DeploymentInfo.prototype, "loadBalancerInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previousRevision" }),
-        __metadata("design:type", RevisionLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previousRevision" }),
+        __metadata("design:type", revisionlocation_1.RevisionLocation)
     ], DeploymentInfo.prototype, "previousRevision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relatedDeployments" }),
-        __metadata("design:type", RelatedDeployments)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relatedDeployments" }),
+        __metadata("design:type", relateddeployments_1.RelatedDeployments)
     ], DeploymentInfo.prototype, "relatedDeployments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revision" }),
-        __metadata("design:type", RevisionLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revision" }),
+        __metadata("design:type", revisionlocation_1.RevisionLocation)
     ], DeploymentInfo.prototype, "revision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rollbackInfo" }),
-        __metadata("design:type", RollbackInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rollbackInfo" }),
+        __metadata("design:type", rollbackinfo_1.RollbackInfo)
     ], DeploymentInfo.prototype, "rollbackInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], DeploymentInfo.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], DeploymentInfo.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetInstances" }),
-        __metadata("design:type", TargetInstances)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetInstances" }),
+        __metadata("design:type", targetinstances_1.TargetInstances)
     ], DeploymentInfo.prototype, "targetInstances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateOutdatedInstancesOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateOutdatedInstancesOnly" }),
         __metadata("design:type", Boolean)
     ], DeploymentInfo.prototype, "updateOutdatedInstancesOnly", void 0);
     return DeploymentInfo;
-}(SpeakeasyBase));
-export { DeploymentInfo };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentInfo = DeploymentInfo;

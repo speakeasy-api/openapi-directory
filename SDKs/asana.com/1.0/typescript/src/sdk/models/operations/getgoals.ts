@@ -59,5 +59,5 @@ export class GetGoalsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getGoals200ApplicationJsonObject?: GetGoals200ApplicationJson;
+  getGoals200ApplicationJSONObject?: GetGoals200ApplicationJson;
 }

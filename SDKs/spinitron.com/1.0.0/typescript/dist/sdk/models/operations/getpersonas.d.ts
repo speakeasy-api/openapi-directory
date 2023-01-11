@@ -21,6 +21,6 @@ export declare class GetPersonasRequest extends SpeakeasyBase {
 export declare class GetPersonasResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    getPersonas200ApplicationJsonObject?: GetPersonas200ApplicationJson;
     statusCode: number;
+    getPersonas200ApplicationJSONObject?: GetPersonas200ApplicationJson;
 }

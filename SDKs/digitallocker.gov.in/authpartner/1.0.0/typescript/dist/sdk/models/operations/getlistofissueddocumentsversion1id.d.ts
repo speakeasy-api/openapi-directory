@@ -12,8 +12,8 @@ export declare class GetListOfIssuedDocumentsVersion1IdRequest extends Speakeasy
 }
 export declare class GetListOfIssuedDocumentsVersion1IdResponse extends SpeakeasyBase {
     contentType: string;
-    getListOfIssuedDocumentsVersion1Id401ApplicationJsonObject?: GetListOfIssuedDocumentsVersion1Id401ApplicationJson;
-    getListOfIssuedDocumentsVersion1Id500ApplicationJsonOneOf?: any;
+    getListOfIssuedDocumentsVersion1Id401ApplicationJSONObject?: GetListOfIssuedDocumentsVersion1Id401ApplicationJson;
+    getListOfIssuedDocumentsVersion1Id500ApplicationJSONOneOf?: any;
     sample?: any;
     statusCode: number;
 }

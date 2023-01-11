@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Action } from "./action";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Event = void 0;
+var utils_1 = require("../../../internal/utils");
+var action_1 = require("./action");
 // Event
 /**
  * Specifies the <code>actions</code> to be performed when the <code>condition</code> evaluates to TRUE.
@@ -34,17 +37,17 @@ var Event = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actions", elemType: Action }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actions", elemType: action_1.Action }),
         __metadata("design:type", Array)
     ], Event.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=condition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=condition" }),
         __metadata("design:type", String)
     ], Event.prototype, "condition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventName" }),
         __metadata("design:type", String)
     ], Event.prototype, "eventName", void 0);
     return Event;
-}(SpeakeasyBase));
-export { Event };
+}(utils_1.SpeakeasyBase));
+exports.Event = Event;

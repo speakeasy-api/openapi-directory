@@ -18,5 +18,5 @@ export declare class DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachments
 export declare class DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

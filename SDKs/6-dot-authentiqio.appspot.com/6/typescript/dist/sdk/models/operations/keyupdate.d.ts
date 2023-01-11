@@ -14,5 +14,5 @@ export declare class KeyUpdateResponse extends SpeakeasyBase {
     contentType: string;
     error?: any;
     statusCode: number;
-    keyUpdate200ApplicationJsonObject?: KeyUpdate200ApplicationJson;
+    keyUpdate200ApplicationJSONObject?: KeyUpdate200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Bin = void 0;
+var utils_1 = require("../../../internal/utils");
 // Bin
 /**
  * A bin is a discrete portion of data spanning from start to end, or if no end is given, then from start to +inf. A bin's start and end values are given in the value type of the metric it represents. For example, "first contentful paint" is measured in milliseconds and exposed as ints, therefore its metric bins will use int32s for its start and end types. However, "cumulative layout shift" is measured in unitless decimals and is exposed as a decimal encoded as a string, therefore its metric bins will use strings for its value type.
@@ -33,17 +36,17 @@ var Bin = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=density" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=density" }),
         __metadata("design:type", Number)
     ], Bin.prototype, "density", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end" }),
         __metadata("design:type", Object)
     ], Bin.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
         __metadata("design:type", Object)
     ], Bin.prototype, "start", void 0);
     return Bin;
-}(SpeakeasyBase));
-export { Bin };
+}(utils_1.SpeakeasyBase));
+exports.Bin = Bin;

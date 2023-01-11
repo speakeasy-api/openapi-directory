@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JourneyExecutionMetricsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 // JourneyExecutionMetricsResponse
 /**
  * Provides the results of a query that retrieved the data for a standard execution metric that applies to a journey, and provides information about that query.
@@ -33,21 +36,21 @@ var JourneyExecutionMetricsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationId" }),
         __metadata("design:type", String)
     ], JourneyExecutionMetricsResponse.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JourneyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JourneyId" }),
         __metadata("design:type", String)
     ], JourneyExecutionMetricsResponse.prototype, "journeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastEvaluatedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastEvaluatedTime" }),
         __metadata("design:type", String)
     ], JourneyExecutionMetricsResponse.prototype, "lastEvaluatedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Metrics" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Metrics" }),
+        __metadata("design:type", Object)
     ], JourneyExecutionMetricsResponse.prototype, "metrics", void 0);
     return JourneyExecutionMetricsResponse;
-}(SpeakeasyBase));
-export { JourneyExecutionMetricsResponse };
+}(utils_1.SpeakeasyBase));
+exports.JourneyExecutionMetricsResponse = JourneyExecutionMetricsResponse;

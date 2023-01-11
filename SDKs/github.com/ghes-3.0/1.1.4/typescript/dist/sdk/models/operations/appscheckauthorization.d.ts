@@ -22,6 +22,9 @@ export declare class AppsCheckAuthorizationAuthorizationScopedInstallation exten
     singleFileName: string;
     singleFilePaths?: string[];
 }
+/**
+ * Simple User
+**/
 export declare class AppsCheckAuthorizationAuthorizationSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -43,6 +46,9 @@ export declare class AppsCheckAuthorizationAuthorizationSimpleUser extends Speak
     type: string;
     url: string;
 }
+/**
+ * The authorization for an OAuth app, GitHub App, or a Personal Access Token.
+**/
 export declare class AppsCheckAuthorizationAuthorization extends SpeakeasyBase {
     app: AppsCheckAuthorizationAuthorizationApp;
     createdAt: Date;

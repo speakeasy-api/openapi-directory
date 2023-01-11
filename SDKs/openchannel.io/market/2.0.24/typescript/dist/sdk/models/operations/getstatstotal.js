@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetStatsTotalResponse = exports.GetStatsTotalRequest = exports.GetStatsTotalQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetStatsTotalQueryParams = /** @class */ (function (_super) {
     __extends(GetStatsTotalQueryParams, _super);
     function GetStatsTotalQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=end" }),
         __metadata("design:type", Number)
     ], GetStatsTotalQueryParams.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], GetStatsTotalQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], GetStatsTotalQueryParams.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=start" }),
         __metadata("design:type", Number)
     ], GetStatsTotalQueryParams.prototype, "start", void 0);
     return GetStatsTotalQueryParams;
-}(SpeakeasyBase));
-export { GetStatsTotalQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetStatsTotalQueryParams = GetStatsTotalQueryParams;
 var GetStatsTotalRequest = /** @class */ (function (_super) {
     __extends(GetStatsTotalRequest, _super);
     function GetStatsTotalRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetStatsTotalQueryParams)
     ], GetStatsTotalRequest.prototype, "queryParams", void 0);
     return GetStatsTotalRequest;
-}(SpeakeasyBase));
-export { GetStatsTotalRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetStatsTotalRequest = GetStatsTotalRequest;
 var GetStatsTotalResponse = /** @class */ (function (_super) {
     __extends(GetStatsTotalResponse, _super);
     function GetStatsTotalResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetStatsTotalResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetStatsTotalResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetStatsTotalResponse.prototype, "statusCode", void 0);
     return GetStatsTotalResponse;
-}(SpeakeasyBase));
-export { GetStatsTotalResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetStatsTotalResponse = GetStatsTotalResponse;

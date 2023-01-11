@@ -6,5 +6,5 @@ export declare class InstitutionsSearchRequestOptions extends SpeakeasyBase {
     includeOptionalMetadata?: boolean;
     includePaymentInitiationMetadata?: boolean;
     oauth?: boolean;
-    paymentInitiation?: Map<string, any>;
+    paymentInitiation?: Record<string, any>;
 }

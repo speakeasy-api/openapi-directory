@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1ArticleSuggestionData = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudContactcenterinsightsV1ArticleSuggestionData
 /**
  * Agent Assist Article Suggestion data.
@@ -33,29 +36,29 @@ var GoogleCloudContactcenterinsightsV1ArticleSuggestionData = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confidenceScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confidenceScore" }),
         __metadata("design:type", Number)
     ], GoogleCloudContactcenterinsightsV1ArticleSuggestionData.prototype, "confidenceScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], GoogleCloudContactcenterinsightsV1ArticleSuggestionData.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryRecord" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryRecord" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ArticleSuggestionData.prototype, "queryRecord", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ArticleSuggestionData.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ArticleSuggestionData.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ArticleSuggestionData.prototype, "uri", void 0);
     return GoogleCloudContactcenterinsightsV1ArticleSuggestionData;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1ArticleSuggestionData };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1ArticleSuggestionData = GoogleCloudContactcenterinsightsV1ArticleSuggestionData;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Operation = exports.OperationWarnings = exports.OperationWarningsData = exports.OperationWarningsCodeEnum = exports.OperationStatusEnum = exports.OperationError = exports.OperationErrorErrors = void 0;
+var utils_1 = require("../../../internal/utils");
 var OperationErrorErrors = /** @class */ (function (_super) {
     __extends(OperationErrorErrors, _super);
     function OperationErrorErrors() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], OperationErrorErrors.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], OperationErrorErrors.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], OperationErrorErrors.prototype, "message", void 0);
     return OperationErrorErrors;
-}(SpeakeasyBase));
-export { OperationErrorErrors };
+}(utils_1.SpeakeasyBase));
+exports.OperationErrorErrors = OperationErrorErrors;
 // OperationError
 /**
  * [Output Only] If errors are generated during processing of the operation, this field will be populated.
@@ -53,19 +56,19 @@ var OperationError = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: OperationErrorErrors }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: OperationErrorErrors }),
         __metadata("design:type", Array)
     ], OperationError.prototype, "errors", void 0);
     return OperationError;
-}(SpeakeasyBase));
-export { OperationError };
-export var OperationStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.OperationError = OperationError;
+var OperationStatusEnum;
 (function (OperationStatusEnum) {
     OperationStatusEnum["Pending"] = "PENDING";
     OperationStatusEnum["Running"] = "RUNNING";
     OperationStatusEnum["Done"] = "DONE";
-})(OperationStatusEnum || (OperationStatusEnum = {}));
-export var OperationWarningsCodeEnum;
+})(OperationStatusEnum = exports.OperationStatusEnum || (exports.OperationStatusEnum = {}));
+var OperationWarningsCodeEnum;
 (function (OperationWarningsCodeEnum) {
     OperationWarningsCodeEnum["DeprecatedResourceUsed"] = "DEPRECATED_RESOURCE_USED";
     OperationWarningsCodeEnum["NoResultsOnPage"] = "NO_RESULTS_ON_PAGE";
@@ -94,43 +97,43 @@ export var OperationWarningsCodeEnum;
     OperationWarningsCodeEnum["LargeDeploymentWarning"] = "LARGE_DEPLOYMENT_WARNING";
     OperationWarningsCodeEnum["NextHopInstanceHasNoIpv6Interface"] = "NEXT_HOP_INSTANCE_HAS_NO_IPV6_INTERFACE";
     OperationWarningsCodeEnum["InvalidHealthCheckForDynamicWieghtedLb"] = "INVALID_HEALTH_CHECK_FOR_DYNAMIC_WIEGHTED_LB";
-})(OperationWarningsCodeEnum || (OperationWarningsCodeEnum = {}));
+})(OperationWarningsCodeEnum = exports.OperationWarningsCodeEnum || (exports.OperationWarningsCodeEnum = {}));
 var OperationWarningsData = /** @class */ (function (_super) {
     __extends(OperationWarningsData, _super);
     function OperationWarningsData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], OperationWarningsData.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], OperationWarningsData.prototype, "value", void 0);
     return OperationWarningsData;
-}(SpeakeasyBase));
-export { OperationWarningsData };
+}(utils_1.SpeakeasyBase));
+exports.OperationWarningsData = OperationWarningsData;
 var OperationWarnings = /** @class */ (function (_super) {
     __extends(OperationWarnings, _super);
     function OperationWarnings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], OperationWarnings.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: OperationWarningsData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: OperationWarningsData }),
         __metadata("design:type", Array)
     ], OperationWarnings.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], OperationWarnings.prototype, "message", void 0);
     return OperationWarnings;
-}(SpeakeasyBase));
-export { OperationWarnings };
+}(utils_1.SpeakeasyBase));
+exports.OperationWarnings = OperationWarnings;
 // Operation
 /**
  * Represents an Operation resource. Google Compute Engine has three Operation resources: * [Global](/compute/docs/reference/rest/{$api_version}/globalOperations) * [Regional](/compute/docs/reference/rest/{$api_version}/regionOperations) * [Zonal](/compute/docs/reference/rest/{$api_version}/zoneOperations) You can use an operation resource to manage asynchronous API requests. For more information, read Handling API responses. Operations can be global, regional or zonal. - For global operations, use the `globalOperations` resource. - For regional operations, use the `regionOperations` resource. - For zonal operations, use the `zonalOperations` resource. For more information, read Global, Regional, and Zonal Resources.
@@ -141,101 +144,101 @@ var Operation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientOperationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientOperationId" }),
         __metadata("design:type", String)
     ], Operation.prototype, "clientOperationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTimestamp" }),
         __metadata("design:type", String)
     ], Operation.prototype, "creationTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Operation.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], Operation.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", OperationError)
     ], Operation.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpErrorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpErrorMessage" }),
         __metadata("design:type", String)
     ], Operation.prototype, "httpErrorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpErrorStatusCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpErrorStatusCode" }),
         __metadata("design:type", Number)
     ], Operation.prototype, "httpErrorStatusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Operation.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insertTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insertTime" }),
         __metadata("design:type", String)
     ], Operation.prototype, "insertTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Operation.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Operation.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operationGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operationGroupId" }),
         __metadata("design:type", String)
     ], Operation.prototype, "operationGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operationType" }),
         __metadata("design:type", String)
     ], Operation.prototype, "operationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], Operation.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], Operation.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Operation.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], Operation.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Operation.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusMessage" }),
         __metadata("design:type", String)
     ], Operation.prototype, "statusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetId" }),
         __metadata("design:type", String)
     ], Operation.prototype, "targetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetLink" }),
         __metadata("design:type", String)
     ], Operation.prototype, "targetLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
         __metadata("design:type", String)
     ], Operation.prototype, "user", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warnings", elemType: OperationWarnings }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warnings", elemType: OperationWarnings }),
         __metadata("design:type", Array)
     ], Operation.prototype, "warnings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zone" }),
         __metadata("design:type", String)
     ], Operation.prototype, "zone", void 0);
     return Operation;
-}(SpeakeasyBase));
-export { Operation };
+}(utils_1.SpeakeasyBase));
+exports.Operation = Operation;

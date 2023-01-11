@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleTypeDate } from "./googletypedate";
-import { GoogleTypeTimeOfDay } from "./googletypetimeofday";
-import { GooglePrivacyDlpV2TimeZone } from "./googleprivacydlpv2timezone";
-export var GooglePrivacyDlpV2DateTimeDayOfWeekEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2DateTime = exports.GooglePrivacyDlpV2DateTimeDayOfWeekEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googletypedate_1 = require("./googletypedate");
+var googletypetimeofday_1 = require("./googletypetimeofday");
+var googleprivacydlpv2timezone_1 = require("./googleprivacydlpv2timezone");
+var GooglePrivacyDlpV2DateTimeDayOfWeekEnum;
 (function (GooglePrivacyDlpV2DateTimeDayOfWeekEnum) {
     GooglePrivacyDlpV2DateTimeDayOfWeekEnum["DayOfWeekUnspecified"] = "DAY_OF_WEEK_UNSPECIFIED";
     GooglePrivacyDlpV2DateTimeDayOfWeekEnum["Monday"] = "MONDAY";
@@ -36,7 +39,7 @@ export var GooglePrivacyDlpV2DateTimeDayOfWeekEnum;
     GooglePrivacyDlpV2DateTimeDayOfWeekEnum["Friday"] = "FRIDAY";
     GooglePrivacyDlpV2DateTimeDayOfWeekEnum["Saturday"] = "SATURDAY";
     GooglePrivacyDlpV2DateTimeDayOfWeekEnum["Sunday"] = "SUNDAY";
-})(GooglePrivacyDlpV2DateTimeDayOfWeekEnum || (GooglePrivacyDlpV2DateTimeDayOfWeekEnum = {}));
+})(GooglePrivacyDlpV2DateTimeDayOfWeekEnum = exports.GooglePrivacyDlpV2DateTimeDayOfWeekEnum || (exports.GooglePrivacyDlpV2DateTimeDayOfWeekEnum = {}));
 // GooglePrivacyDlpV2DateTime
 /**
  * Message for a date time object. e.g. 2018-01-01, 5th August.
@@ -47,21 +50,21 @@ var GooglePrivacyDlpV2DateTime = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
-        __metadata("design:type", GoogleTypeDate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
+        __metadata("design:type", googletypedate_1.GoogleTypeDate)
     ], GooglePrivacyDlpV2DateTime.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dayOfWeek" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dayOfWeek" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DateTime.prototype, "dayOfWeek", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time" }),
-        __metadata("design:type", GoogleTypeTimeOfDay)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time" }),
+        __metadata("design:type", googletypetimeofday_1.GoogleTypeTimeOfDay)
     ], GooglePrivacyDlpV2DateTime.prototype, "time", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
-        __metadata("design:type", GooglePrivacyDlpV2TimeZone)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
+        __metadata("design:type", googleprivacydlpv2timezone_1.GooglePrivacyDlpV2TimeZone)
     ], GooglePrivacyDlpV2DateTime.prototype, "timeZone", void 0);
     return GooglePrivacyDlpV2DateTime;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2DateTime };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2DateTime = GooglePrivacyDlpV2DateTime;

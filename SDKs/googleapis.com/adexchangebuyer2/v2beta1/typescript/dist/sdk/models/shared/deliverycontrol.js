@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FrequencyCap } from "./frequencycap";
-export var DeliveryControlCreativeBlockingLevelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeliveryControl = exports.DeliveryControlDeliveryRateTypeEnum = exports.DeliveryControlCreativeBlockingLevelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var frequencycap_1 = require("./frequencycap");
+var DeliveryControlCreativeBlockingLevelEnum;
 (function (DeliveryControlCreativeBlockingLevelEnum) {
     DeliveryControlCreativeBlockingLevelEnum["CreativeBlockingLevelUnspecified"] = "CREATIVE_BLOCKING_LEVEL_UNSPECIFIED";
     DeliveryControlCreativeBlockingLevelEnum["PublisherBlockingRules"] = "PUBLISHER_BLOCKING_RULES";
     DeliveryControlCreativeBlockingLevelEnum["AdxPolicyBlockingOnly"] = "ADX_POLICY_BLOCKING_ONLY";
-})(DeliveryControlCreativeBlockingLevelEnum || (DeliveryControlCreativeBlockingLevelEnum = {}));
-export var DeliveryControlDeliveryRateTypeEnum;
+})(DeliveryControlCreativeBlockingLevelEnum = exports.DeliveryControlCreativeBlockingLevelEnum || (exports.DeliveryControlCreativeBlockingLevelEnum = {}));
+var DeliveryControlDeliveryRateTypeEnum;
 (function (DeliveryControlDeliveryRateTypeEnum) {
     DeliveryControlDeliveryRateTypeEnum["DeliveryRateTypeUnspecified"] = "DELIVERY_RATE_TYPE_UNSPECIFIED";
     DeliveryControlDeliveryRateTypeEnum["Evenly"] = "EVENLY";
     DeliveryControlDeliveryRateTypeEnum["FrontLoaded"] = "FRONT_LOADED";
     DeliveryControlDeliveryRateTypeEnum["AsFastAsPossible"] = "AS_FAST_AS_POSSIBLE";
-})(DeliveryControlDeliveryRateTypeEnum || (DeliveryControlDeliveryRateTypeEnum = {}));
+})(DeliveryControlDeliveryRateTypeEnum = exports.DeliveryControlDeliveryRateTypeEnum || (exports.DeliveryControlDeliveryRateTypeEnum = {}));
 // DeliveryControl
 /**
  * Message contains details about how the deals will be paced.
@@ -47,17 +50,17 @@ var DeliveryControl = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativeBlockingLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativeBlockingLevel" }),
         __metadata("design:type", String)
     ], DeliveryControl.prototype, "creativeBlockingLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryRateType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryRateType" }),
         __metadata("design:type", String)
     ], DeliveryControl.prototype, "deliveryRateType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequencyCaps", elemType: FrequencyCap }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequencyCaps", elemType: frequencycap_1.FrequencyCap }),
         __metadata("design:type", Array)
     ], DeliveryControl.prototype, "frequencyCaps", void 0);
     return DeliveryControl;
-}(SpeakeasyBase));
-export { DeliveryControl };
+}(utils_1.SpeakeasyBase));
+exports.DeliveryControl = DeliveryControl;

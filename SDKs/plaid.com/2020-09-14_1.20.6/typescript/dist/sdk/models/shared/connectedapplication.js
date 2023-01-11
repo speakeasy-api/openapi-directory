@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RequestedScopes } from "./requestedscopes";
-export var ConnectedApplicationProductDataTypesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConnectedApplication = exports.ConnectedApplicationProductDataTypesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var requestedscopes_1 = require("./requestedscopes");
+var ConnectedApplicationProductDataTypesEnum;
 (function (ConnectedApplicationProductDataTypesEnum) {
     ConnectedApplicationProductDataTypesEnum["AccountBalance"] = "ACCOUNT_BALANCE";
     ConnectedApplicationProductDataTypesEnum["AccountUserInfo"] = "ACCOUNT_USER_INFO";
     ConnectedApplicationProductDataTypesEnum["AccountTransactions"] = "ACCOUNT_TRANSACTIONS";
-})(ConnectedApplicationProductDataTypesEnum || (ConnectedApplicationProductDataTypesEnum = {}));
+})(ConnectedApplicationProductDataTypesEnum = exports.ConnectedApplicationProductDataTypesEnum || (exports.ConnectedApplicationProductDataTypesEnum = {}));
 // ConnectedApplication
 /**
  * Describes the connected application for a particular end user.
@@ -40,45 +43,45 @@ var ConnectedApplication = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=application_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=application_id" }),
         __metadata("design:type", String)
     ], ConnectedApplication.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=application_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=application_url" }),
         __metadata("design:type", String)
     ], ConnectedApplication.prototype, "applicationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", String)
     ], ConnectedApplication.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logo" }),
         __metadata("design:type", String)
     ], ConnectedApplication.prototype, "logo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logo_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logo_url" }),
         __metadata("design:type", String)
     ], ConnectedApplication.prototype, "logoUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ConnectedApplication.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=product_data_types" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=product_data_types" }),
         __metadata("design:type", Array)
     ], ConnectedApplication.prototype, "productDataTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason_for_access" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason_for_access" }),
         __metadata("design:type", String)
     ], ConnectedApplication.prototype, "reasonForAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requested_scopes" }),
-        __metadata("design:type", RequestedScopes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requested_scopes" }),
+        __metadata("design:type", requestedscopes_1.RequestedScopes)
     ], ConnectedApplication.prototype, "requestedScopes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scopes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scopes" }),
+        __metadata("design:type", Object)
     ], ConnectedApplication.prototype, "scopes", void 0);
     return ConnectedApplication;
-}(SpeakeasyBase));
-export { ConnectedApplication };
+}(utils_1.SpeakeasyBase));
+exports.ConnectedApplication = ConnectedApplication;

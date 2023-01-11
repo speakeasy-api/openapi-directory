@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 /**
  * Sadly, sometimes requests to the API are not successful. Failures can
  * occur for a wide range of reasons. In all cases, the API should return
@@ -15,5 +15,5 @@ import { Error } from "./error";
  * error.
 **/
 export declare class ErrorResponse extends SpeakeasyBase {
-    errors?: Error[];
+    errors?: ErrorT[];
 }

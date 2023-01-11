@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostBatchStopUpdateActionActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostBatchStopUpdateActionResponse = exports.PostBatchStopUpdateActionRequest = exports.PostBatchStopUpdateActionHeaders = exports.PostBatchStopUpdateActionQueryParams = exports.PostBatchStopUpdateActionVersionEnum = exports.PostBatchStopUpdateActionActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostBatchStopUpdateActionActionEnum;
 (function (PostBatchStopUpdateActionActionEnum) {
     PostBatchStopUpdateActionActionEnum["BatchStopUpdateAction"] = "BatchStopUpdateAction";
-})(PostBatchStopUpdateActionActionEnum || (PostBatchStopUpdateActionActionEnum = {}));
-export var PostBatchStopUpdateActionVersionEnum;
+})(PostBatchStopUpdateActionActionEnum = exports.PostBatchStopUpdateActionActionEnum || (exports.PostBatchStopUpdateActionActionEnum = {}));
+var PostBatchStopUpdateActionVersionEnum;
 (function (PostBatchStopUpdateActionVersionEnum) {
     PostBatchStopUpdateActionVersionEnum["TwoThousandAndFifteen0202"] = "2015-02-02";
-})(PostBatchStopUpdateActionVersionEnum || (PostBatchStopUpdateActionVersionEnum = {}));
+})(PostBatchStopUpdateActionVersionEnum = exports.PostBatchStopUpdateActionVersionEnum || (exports.PostBatchStopUpdateActionVersionEnum = {}));
 var PostBatchStopUpdateActionQueryParams = /** @class */ (function (_super) {
     __extends(PostBatchStopUpdateActionQueryParams, _super);
     function PostBatchStopUpdateActionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostBatchStopUpdateActionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostBatchStopUpdateActionQueryParams.prototype, "version", void 0);
     return PostBatchStopUpdateActionQueryParams;
-}(SpeakeasyBase));
-export { PostBatchStopUpdateActionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostBatchStopUpdateActionQueryParams = PostBatchStopUpdateActionQueryParams;
 var PostBatchStopUpdateActionHeaders = /** @class */ (function (_super) {
     __extends(PostBatchStopUpdateActionHeaders, _super);
     function PostBatchStopUpdateActionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostBatchStopUpdateActionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostBatchStopUpdateActionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostBatchStopUpdateActionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostBatchStopUpdateActionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostBatchStopUpdateActionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostBatchStopUpdateActionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostBatchStopUpdateActionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostBatchStopUpdateActionHeaders;
-}(SpeakeasyBase));
-export { PostBatchStopUpdateActionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostBatchStopUpdateActionHeaders = PostBatchStopUpdateActionHeaders;
 var PostBatchStopUpdateActionRequest = /** @class */ (function (_super) {
     __extends(PostBatchStopUpdateActionRequest, _super);
     function PostBatchStopUpdateActionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostBatchStopUpdateActionQueryParams)
     ], PostBatchStopUpdateActionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostBatchStopUpdateActionHeaders)
     ], PostBatchStopUpdateActionRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostBatchStopUpdateActionRequest.prototype, "request", void 0);
     return PostBatchStopUpdateActionRequest;
-}(SpeakeasyBase));
-export { PostBatchStopUpdateActionRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostBatchStopUpdateActionRequest = PostBatchStopUpdateActionRequest;
 var PostBatchStopUpdateActionResponse = /** @class */ (function (_super) {
     __extends(PostBatchStopUpdateActionResponse, _super);
     function PostBatchStopUpdateActionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostBatchStopUpdateActionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostBatchStopUpdateActionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostBatchStopUpdateActionResponse.prototype, "statusCode", void 0);
     return PostBatchStopUpdateActionResponse;
-}(SpeakeasyBase));
-export { PostBatchStopUpdateActionResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostBatchStopUpdateActionResponse = PostBatchStopUpdateActionResponse;

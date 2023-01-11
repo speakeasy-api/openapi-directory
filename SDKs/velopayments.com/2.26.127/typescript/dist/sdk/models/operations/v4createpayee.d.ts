@@ -13,7 +13,7 @@ export declare class V4CreatePayeeRequest extends SpeakeasyBase {
 }
 export declare class V4CreatePayeeResponse extends SpeakeasyBase {
     contentType: string;
-    createPayeesCsvResponse2?: shared.CreatePayeesCsvResponse2;
+    createPayeesCSVResponse2?: shared.CreatePayeesCsvResponse2;
     statusCode: number;
     inlineResponse400?: any;
     inlineResponse401?: any;

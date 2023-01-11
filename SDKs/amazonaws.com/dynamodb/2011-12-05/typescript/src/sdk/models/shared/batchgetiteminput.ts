@@ -5,5 +5,5 @@ import { KeysAndAttributes } from "./keysandattributes";
 
 export class BatchGetItemInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=RequestItems", elemType: KeysAndAttributes })
-  requestItems: Map<string, KeysAndAttributes>;
+  requestItems: Record<string, KeysAndAttributes>;
 }

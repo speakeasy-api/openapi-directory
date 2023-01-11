@@ -8,7 +8,7 @@ export declare class DeleteSectionQueryParams extends SpeakeasyBase {
     optPretty?: boolean;
 }
 export declare class DeleteSection200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class DeleteSectionRequest extends SpeakeasyBase {
     pathParams: DeleteSectionPathParams;
@@ -18,5 +18,5 @@ export declare class DeleteSectionResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    deleteSection200ApplicationJsonObject?: DeleteSection200ApplicationJson;
+    deleteSection200ApplicationJSONObject?: DeleteSection200ApplicationJson;
 }

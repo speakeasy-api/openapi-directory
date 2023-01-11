@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Testers = void 0;
+var utils_1 = require("../../../internal/utils");
 // Testers
 /**
  * The testers of an app. The resource for TestersService. Note: while it is possible in the Play Console UI to add testers via email lists, email lists are not supported by this resource.
@@ -33,9 +36,9 @@ var Testers = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleGroups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleGroups" }),
         __metadata("design:type", Array)
     ], Testers.prototype, "googleGroups", void 0);
     return Testers;
-}(SpeakeasyBase));
-export { Testers };
+}(utils_1.SpeakeasyBase));
+exports.Testers = Testers;

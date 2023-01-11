@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { JourneyCustomMessage } from "./journeycustommessage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomMessageActivity = void 0;
+var utils_1 = require("../../../internal/utils");
+var journeycustommessage_1 = require("./journeycustommessage");
 // CustomMessageActivity
 /**
  * The settings for a custom message activity. This type of activity calls an AWS Lambda function or web hook that sends messages to participants.
@@ -34,29 +37,29 @@ var CustomMessageActivity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeliveryUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeliveryUri" }),
         __metadata("design:type", String)
     ], CustomMessageActivity.prototype, "deliveryUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointTypes" }),
         __metadata("design:type", Array)
     ], CustomMessageActivity.prototype, "endpointTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessageConfig" }),
-        __metadata("design:type", JourneyCustomMessage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessageConfig" }),
+        __metadata("design:type", journeycustommessage_1.JourneyCustomMessage)
     ], CustomMessageActivity.prototype, "messageConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextActivity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextActivity" }),
         __metadata("design:type", String)
     ], CustomMessageActivity.prototype, "nextActivity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateName" }),
         __metadata("design:type", String)
     ], CustomMessageActivity.prototype, "templateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateVersion" }),
         __metadata("design:type", String)
     ], CustomMessageActivity.prototype, "templateVersion", void 0);
     return CustomMessageActivity;
-}(SpeakeasyBase));
-export { CustomMessageActivity };
+}(utils_1.SpeakeasyBase));
+exports.CustomMessageActivity = CustomMessageActivity;

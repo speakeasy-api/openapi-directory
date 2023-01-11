@@ -10,5 +10,5 @@ export class GetActiveDataListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getActiveDataList200ApplicationJsonInt32Integers?: number[];
+  getActiveDataList200ApplicationJSONInt32Integers?: number[];
 }

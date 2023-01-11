@@ -25,5 +25,5 @@ export declare class PostApplicationChargeRequest extends SpeakeasyBase {
 export declare class PostApplicationChargeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postApplicationCharge201ApplicationJsonObject?: PostApplicationCharge201ApplicationJson;
+    postApplicationCharge201ApplicationJSONObject?: PostApplicationCharge201ApplicationJson;
 }

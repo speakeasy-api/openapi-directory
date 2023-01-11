@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiagnosticConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // DiagnosticConfig
 /**
  * Defines flags that are used to run the diagnostic tool
@@ -33,25 +36,25 @@ var DiagnosticConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=copyHomeFilesFlagEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=copyHomeFilesFlagEnabled" }),
         __metadata("design:type", Boolean)
     ], DiagnosticConfig.prototype, "copyHomeFilesFlagEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcsBucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcsBucket" }),
         __metadata("design:type", String)
     ], DiagnosticConfig.prototype, "gcsBucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packetCaptureFlagEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packetCaptureFlagEnabled" }),
         __metadata("design:type", Boolean)
     ], DiagnosticConfig.prototype, "packetCaptureFlagEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relativePath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relativePath" }),
         __metadata("design:type", String)
     ], DiagnosticConfig.prototype, "relativePath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repairFlagEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repairFlagEnabled" }),
         __metadata("design:type", Boolean)
     ], DiagnosticConfig.prototype, "repairFlagEnabled", void 0);
     return DiagnosticConfig;
-}(SpeakeasyBase));
-export { DiagnosticConfig };
+}(utils_1.SpeakeasyBase));
+exports.DiagnosticConfig = DiagnosticConfig;

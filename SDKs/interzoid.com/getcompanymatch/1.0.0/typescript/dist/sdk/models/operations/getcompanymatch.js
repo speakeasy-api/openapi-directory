@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetcompanymatchResponse = exports.GetcompanymatchRequest = exports.Getcompanymatch200ApplicationJson = exports.GetcompanymatchQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetcompanymatchQueryParams = /** @class */ (function (_super) {
     __extends(GetcompanymatchQueryParams, _super);
     function GetcompanymatchQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=company" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=company" }),
         __metadata("design:type", String)
     ], GetcompanymatchQueryParams.prototype, "company", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=license" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=license" }),
         __metadata("design:type", String)
     ], GetcompanymatchQueryParams.prototype, "license", void 0);
     return GetcompanymatchQueryParams;
-}(SpeakeasyBase));
-export { GetcompanymatchQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetcompanymatchQueryParams = GetcompanymatchQueryParams;
 var Getcompanymatch200ApplicationJson = /** @class */ (function (_super) {
     __extends(Getcompanymatch200ApplicationJson, _super);
     function Getcompanymatch200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], Getcompanymatch200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Credits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Credits" }),
         __metadata("design:type", String)
     ], Getcompanymatch200ApplicationJson.prototype, "credits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Simkey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Simkey" }),
         __metadata("design:type", String)
     ], Getcompanymatch200ApplicationJson.prototype, "simkey", void 0);
     return Getcompanymatch200ApplicationJson;
-}(SpeakeasyBase));
-export { Getcompanymatch200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.Getcompanymatch200ApplicationJson = Getcompanymatch200ApplicationJson;
 var GetcompanymatchRequest = /** @class */ (function (_super) {
     __extends(GetcompanymatchRequest, _super);
     function GetcompanymatchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetcompanymatchQueryParams)
     ], GetcompanymatchRequest.prototype, "queryParams", void 0);
     return GetcompanymatchRequest;
-}(SpeakeasyBase));
-export { GetcompanymatchRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetcompanymatchRequest = GetcompanymatchRequest;
 var GetcompanymatchResponse = /** @class */ (function (_super) {
     __extends(GetcompanymatchResponse, _super);
     function GetcompanymatchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetcompanymatchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetcompanymatchResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Getcompanymatch200ApplicationJson)
-    ], GetcompanymatchResponse.prototype, "getcompanymatch200ApplicationJsonObject", void 0);
+    ], GetcompanymatchResponse.prototype, "getcompanymatch200ApplicationJSONObject", void 0);
     return GetcompanymatchResponse;
-}(SpeakeasyBase));
-export { GetcompanymatchResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetcompanymatchResponse = GetcompanymatchResponse;

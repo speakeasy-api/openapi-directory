@@ -1,4 +1,7 @@
-export var InstanceRecommendationFindingReasonCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceRecommendationFindingReasonCodeEnum = void 0;
+var InstanceRecommendationFindingReasonCodeEnum;
 (function (InstanceRecommendationFindingReasonCodeEnum) {
     InstanceRecommendationFindingReasonCodeEnum["CpuOverprovisioned"] = "CPUOverprovisioned";
     InstanceRecommendationFindingReasonCodeEnum["CpuUnderprovisioned"] = "CPUUnderprovisioned";
@@ -16,4 +19,4 @@ export var InstanceRecommendationFindingReasonCodeEnum;
     InstanceRecommendationFindingReasonCodeEnum["DiskIopsUnderprovisioned"] = "DiskIOPSUnderprovisioned";
     InstanceRecommendationFindingReasonCodeEnum["DiskThroughputOverprovisioned"] = "DiskThroughputOverprovisioned";
     InstanceRecommendationFindingReasonCodeEnum["DiskThroughputUnderprovisioned"] = "DiskThroughputUnderprovisioned";
-})(InstanceRecommendationFindingReasonCodeEnum || (InstanceRecommendationFindingReasonCodeEnum = {}));
+})(InstanceRecommendationFindingReasonCodeEnum = exports.InstanceRecommendationFindingReasonCodeEnum || (exports.InstanceRecommendationFindingReasonCodeEnum = {}));

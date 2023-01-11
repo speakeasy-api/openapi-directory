@@ -13,6 +13,9 @@ export declare enum InstallationGhes2RepositorySelectionEnum {
     All = "all",
     Selected = "selected"
 }
+/**
+ * Simple User
+**/
 export declare class InstallationGhes2SimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

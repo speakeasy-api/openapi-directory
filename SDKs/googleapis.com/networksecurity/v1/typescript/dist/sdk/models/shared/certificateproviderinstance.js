@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CertificateProviderInstance = void 0;
+var utils_1 = require("../../../internal/utils");
 // CertificateProviderInstance
 /**
  * Specification of a TLS certificate provider instance. Workloads may have one or more CertificateProvider instances (plugins) and one of them is enabled and configured by specifying this message. Workloads use the values from this message to locate and load the CertificateProvider instance configuration.
@@ -33,9 +36,9 @@ var CertificateProviderInstance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pluginInstance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pluginInstance" }),
         __metadata("design:type", String)
     ], CertificateProviderInstance.prototype, "pluginInstance", void 0);
     return CertificateProviderInstance;
-}(SpeakeasyBase));
-export { CertificateProviderInstance };
+}(utils_1.SpeakeasyBase));
+exports.CertificateProviderInstance = CertificateProviderInstance;

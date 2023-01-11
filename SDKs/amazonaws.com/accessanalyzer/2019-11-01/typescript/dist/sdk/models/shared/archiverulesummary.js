@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Criterion } from "./criterion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArchiveRuleSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var criterion_1 = require("./criterion");
 // ArchiveRuleSummary
 /**
  * Contains information about an archive rule.
@@ -34,21 +37,21 @@ var ArchiveRuleSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], ArchiveRuleSummary.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter", elemType: Criterion }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter", elemType: criterion_1.Criterion }),
+        __metadata("design:type", Object)
     ], ArchiveRuleSummary.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleName" }),
         __metadata("design:type", String)
     ], ArchiveRuleSummary.prototype, "ruleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], ArchiveRuleSummary.prototype, "updatedAt", void 0);
     return ArchiveRuleSummary;
-}(SpeakeasyBase));
-export { ArchiveRuleSummary };
+}(utils_1.SpeakeasyBase));
+exports.ArchiveRuleSummary = ArchiveRuleSummary;

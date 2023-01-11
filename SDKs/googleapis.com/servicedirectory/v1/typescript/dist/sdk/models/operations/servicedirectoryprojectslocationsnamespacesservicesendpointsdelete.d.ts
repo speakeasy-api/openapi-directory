@@ -27,6 +27,6 @@ export declare class ServicedirectoryProjectsLocationsNamespacesServicesEndpoint
 }
 export declare class ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

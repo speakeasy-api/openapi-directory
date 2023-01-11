@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReplacementTemplate } from "./replacementtemplate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplacementEmailContent = void 0;
+var utils_1 = require("../../../internal/utils");
+var replacementtemplate_1 = require("./replacementtemplate");
 // ReplacementEmailContent
 /**
  * The <code>ReplaceEmailContent</code> object to be used for a specific <code>BulkEmailEntry</code>. The <code>ReplacementTemplate</code> can be specified within this object.
@@ -34,9 +37,9 @@ var ReplacementEmailContent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplacementTemplate" }),
-        __metadata("design:type", ReplacementTemplate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplacementTemplate" }),
+        __metadata("design:type", replacementtemplate_1.ReplacementTemplate)
     ], ReplacementEmailContent.prototype, "replacementTemplate", void 0);
     return ReplacementEmailContent;
-}(SpeakeasyBase));
-export { ReplacementEmailContent };
+}(utils_1.SpeakeasyBase));
+exports.ReplacementEmailContent = ReplacementEmailContent;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CalendarAclDeleteRequest, CalendarAclDeleteResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,23 +30,23 @@ const req: CalendarAclDeleteRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    calendarId: "eius",
-    ruleId: "voluptatem",
+    calendarId: "sit",
+    ruleId: "voluptas",
   },
   queryParams: {
     alt: "json",
-    fields: "pariatur",
-    key: "reprehenderit",
-    oauthToken: "rerum",
-    prettyPrint: false,
-    quotaUser: "ut",
-    userIp: "omnis",
+    fields: "expedita",
+    key: "consequuntur",
+    oauthToken: "dolor",
+    prettyPrint: true,
+    quotaUser: "voluptas",
+    userIp: "fugit",
   },
 };
 

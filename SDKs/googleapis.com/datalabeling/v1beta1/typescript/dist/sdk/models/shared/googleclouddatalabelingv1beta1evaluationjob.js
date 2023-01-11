@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1Attempt } from "./googleclouddatalabelingv1beta1attempt";
-import { GoogleCloudDatalabelingV1beta1EvaluationJobConfig } from "./googleclouddatalabelingv1beta1evaluationjobconfig";
-export var GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1EvaluationJob = exports.GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1attempt_1 = require("./googleclouddatalabelingv1beta1attempt");
+var googleclouddatalabelingv1beta1evaluationjobconfig_1 = require("./googleclouddatalabelingv1beta1evaluationjobconfig");
+var GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum;
 (function (GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum) {
     GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum["Scheduled"] = "SCHEDULED";
     GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum["Running"] = "RUNNING";
     GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum["Paused"] = "PAUSED";
     GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum["Stopped"] = "STOPPED";
-})(GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum || (GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum = {}));
+})(GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum = exports.GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum || (exports.GoogleCloudDatalabelingV1beta1EvaluationJobStateEnum = {}));
 // GoogleCloudDatalabelingV1beta1EvaluationJob
 /**
  * Defines an evaluation job that runs periodically to generate Evaluations. [Creating an evaluation job](/ml-engine/docs/continuous-evaluation/create-job) is the starting point for using continuous evaluation.
@@ -43,45 +46,45 @@ var GoogleCloudDatalabelingV1beta1EvaluationJob = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotationSpecSet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotationSpecSet" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1EvaluationJob.prototype, "annotationSpecSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attempts", elemType: GoogleCloudDatalabelingV1beta1Attempt }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attempts", elemType: googleclouddatalabelingv1beta1attempt_1.GoogleCloudDatalabelingV1beta1Attempt }),
         __metadata("design:type", Array)
     ], GoogleCloudDatalabelingV1beta1EvaluationJob.prototype, "attempts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1EvaluationJob.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1EvaluationJob.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evaluationJobConfig" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1EvaluationJobConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evaluationJobConfig" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1evaluationjobconfig_1.GoogleCloudDatalabelingV1beta1EvaluationJobConfig)
     ], GoogleCloudDatalabelingV1beta1EvaluationJob.prototype, "evaluationJobConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelMissingGroundTruth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelMissingGroundTruth" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudDatalabelingV1beta1EvaluationJob.prototype, "labelMissingGroundTruth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modelVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modelVersion" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1EvaluationJob.prototype, "modelVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1EvaluationJob.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schedule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schedule" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1EvaluationJob.prototype, "schedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1EvaluationJob.prototype, "state", void 0);
     return GoogleCloudDatalabelingV1beta1EvaluationJob;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1EvaluationJob };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1EvaluationJob = GoogleCloudDatalabelingV1beta1EvaluationJob;

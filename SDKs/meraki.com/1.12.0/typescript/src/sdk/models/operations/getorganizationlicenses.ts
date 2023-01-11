@@ -52,11 +52,11 @@ export class GetOrganizationLicensesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationLicenses200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationLicenses200ApplicationJSONObject?: Record<string, any>;
 }

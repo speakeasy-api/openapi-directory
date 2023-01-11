@@ -9,7 +9,7 @@ import { FirelensConfigurationTypeEnum } from "./firelensconfigurationtypeenum";
 **/
 export class FirelensConfiguration extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=options" })
-  options?: Map<string, string>;
+  options?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type: FirelensConfigurationTypeEnum;

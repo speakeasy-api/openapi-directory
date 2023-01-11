@@ -28,8 +28,8 @@ export class PostPortfolioOptimizationMarketCapitalizationWeightedResponse exten
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJsonObject?: PostPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJSONObject?: PostPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJson;
 }

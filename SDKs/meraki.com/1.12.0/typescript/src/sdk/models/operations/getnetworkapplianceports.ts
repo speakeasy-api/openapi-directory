@@ -22,5 +22,5 @@ export class GetNetworkAppliancePortsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkAppliancePorts200ApplicationJsonObject?: Map<string, any>;
+  getNetworkAppliancePorts200ApplicationJSONObject?: Record<string, any>;
 }

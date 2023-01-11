@@ -32,5 +32,5 @@ export class FollowUsersAlt1Response extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 }

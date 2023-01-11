@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NeighborConnectionDetail } from "./neighborconnectiondetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListServerNeighborsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var neighborconnectiondetail_1 = require("./neighborconnectiondetail");
 var ListServerNeighborsResponse = /** @class */ (function (_super) {
     __extends(ListServerNeighborsResponse, _super);
     function ListServerNeighborsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=knownDependencyCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=knownDependencyCount" }),
         __metadata("design:type", Number)
     ], ListServerNeighborsResponse.prototype, "knownDependencyCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=neighbors", elemType: NeighborConnectionDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=neighbors", elemType: neighborconnectiondetail_1.NeighborConnectionDetail }),
         __metadata("design:type", Array)
     ], ListServerNeighborsResponse.prototype, "neighbors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListServerNeighborsResponse.prototype, "nextToken", void 0);
     return ListServerNeighborsResponse;
-}(SpeakeasyBase));
-export { ListServerNeighborsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListServerNeighborsResponse = ListServerNeighborsResponse;

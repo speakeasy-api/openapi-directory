@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PdfWriteStringOptionsInput } from "./pdfwritestringoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PdfWriteStringRequestDtoInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var pdfwritestringoptions_1 = require("./pdfwritestringoptions");
 // PdfWriteStringRequestDtoInput
 /**
  * The request dto object to write a string on pdf page
@@ -34,17 +37,17 @@ var PdfWriteStringRequestDtoInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FontFileBase64String" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FontFileBase64String" }),
         __metadata("design:type", String)
     ], PdfWriteStringRequestDtoInput.prototype, "fontFileBase64String", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Options" }),
-        __metadata("design:type", PdfWriteStringOptionsInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Options" }),
+        __metadata("design:type", pdfwritestringoptions_1.PdfWriteStringOptionsInput)
     ], PdfWriteStringRequestDtoInput.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PdfFileBase64String" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PdfFileBase64String" }),
         __metadata("design:type", String)
     ], PdfWriteStringRequestDtoInput.prototype, "pdfFileBase64String", void 0);
     return PdfWriteStringRequestDtoInput;
-}(SpeakeasyBase));
-export { PdfWriteStringRequestDtoInput };
+}(utils_1.SpeakeasyBase));
+exports.PdfWriteStringRequestDtoInput = PdfWriteStringRequestDtoInput;

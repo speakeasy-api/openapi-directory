@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TrackingOptions = void 0;
+var utils_1 = require("../../../internal/utils");
 // TrackingOptions
 /**
  * <p>An object that defines the tracking options for a configuration set. When you use the Amazon SES API v2 to send an email, it contains an invisible image that's used to track when recipients open your email. If your email contains links, those links are changed slightly in order to track when recipients click them.</p> <p>These images and links include references to a domain operated by AWS. You can optionally configure the Amazon SES to use a domain that you operate for these images and links.</p>
@@ -33,9 +36,9 @@ var TrackingOptions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomRedirectDomain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomRedirectDomain" }),
         __metadata("design:type", String)
     ], TrackingOptions.prototype, "customRedirectDomain", void 0);
     return TrackingOptions;
-}(SpeakeasyBase));
-export { TrackingOptions };
+}(utils_1.SpeakeasyBase));
+exports.TrackingOptions = TrackingOptions;

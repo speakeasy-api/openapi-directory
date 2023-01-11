@@ -26,7 +26,7 @@ export class RemoveSubgoalRequestBody extends SpeakeasyBase {
 
 export class RemoveSubgoal200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -53,5 +53,5 @@ export class RemoveSubgoalResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  removeSubgoal200ApplicationJsonObject?: RemoveSubgoal200ApplicationJson;
+  removeSubgoal200ApplicationJSONObject?: RemoveSubgoal200ApplicationJson;
 }

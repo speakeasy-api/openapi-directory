@@ -3,7 +3,7 @@ import * as shared from "../shared";
 export declare class GetListings2Listings2GetQueryParams extends SpeakeasyBase {
     brandName?: string;
     daysBack?: number;
-    dealerId?: number;
+    dealerID?: number;
     endDate?: Date;
     extendedSearch?: boolean;
     jwt: string;

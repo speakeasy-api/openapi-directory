@@ -1,5 +1,8 @@
-export var ParameterApplyTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ParameterApplyTypeEnum = void 0;
+var ParameterApplyTypeEnum;
 (function (ParameterApplyTypeEnum) {
     ParameterApplyTypeEnum["Static"] = "static";
     ParameterApplyTypeEnum["Dynamic"] = "dynamic";
-})(ParameterApplyTypeEnum || (ParameterApplyTypeEnum = {}));
+})(ParameterApplyTypeEnum = exports.ParameterApplyTypeEnum || (exports.ParameterApplyTypeEnum = {}));

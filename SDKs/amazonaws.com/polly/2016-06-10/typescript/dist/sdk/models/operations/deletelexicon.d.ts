@@ -17,7 +17,7 @@ export declare class DeleteLexiconRequest extends SpeakeasyBase {
 }
 export declare class DeleteLexiconResponse extends SpeakeasyBase {
     contentType: string;
-    deleteLexiconOutput?: Map<string, any>;
+    deleteLexiconOutput?: Record<string, any>;
     lexiconNotFoundException?: any;
     serviceFailureException?: any;
     statusCode: number;

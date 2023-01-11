@@ -2,15 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-export class OrderTypeInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=default" })
-  default?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-}
-
-
 export class OrderType extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=created_at" })
   createdAt?: Date;
@@ -32,4 +23,13 @@ export class OrderType extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updated_by" })
   updatedBy?: string;
+}
+
+
+export class OrderTypeInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=default" })
+  default?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
 }

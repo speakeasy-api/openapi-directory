@@ -9,5 +9,5 @@ export declare class SetDropsRequest extends SpeakeasyBase {
 export declare class SetDropsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setDrops200ApplicationJsonInt32Integer?: number;
+    setDrops200ApplicationJSONInt32Integer?: number;
 }

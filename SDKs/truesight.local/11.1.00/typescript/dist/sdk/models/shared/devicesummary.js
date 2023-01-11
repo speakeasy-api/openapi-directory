@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DeviceSummaryTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceSummary = exports.DeviceSummaryTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DeviceSummaryTypeEnum;
 (function (DeviceSummaryTypeEnum) {
     DeviceSummaryTypeEnum["Default"] = "DEFAULT";
     DeviceSummaryTypeEnum["EsxHost"] = "ESX_HOST";
@@ -134,84 +137,84 @@ export var DeviceSummaryTypeEnum;
     DeviceSummaryTypeEnum["AwsAmi"] = "AWS_AMI";
     DeviceSummaryTypeEnum["MsAzure"] = "MS_AZURE";
     DeviceSummaryTypeEnum["Unknown"] = "UNKNOWN";
-})(DeviceSummaryTypeEnum || (DeviceSummaryTypeEnum = {}));
+})(DeviceSummaryTypeEnum = exports.DeviceSummaryTypeEnum || (exports.DeviceSummaryTypeEnum = {}));
 var DeviceSummary = /** @class */ (function (_super) {
     __extends(DeviceSummary, _super);
     function DeviceSummary() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeviceSummary.prototype, "agentId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeviceSummary.prototype, "agentName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeviceSummary.prototype, "ambientTemperature", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeviceSummary.prototype, "collectTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], DeviceSummary.prototype, "deviceTsmoKey", void 0);
+    ], DeviceSummary.prototype, "deviceTSMOKey", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeviceSummary.prototype, "deviceUrl", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeviceSummary.prototype, "heatingMargin", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeviceSummary.prototype, "heatingMarginUnit", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeviceSummary.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeviceSummary.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeviceSummary.prototype, "powerConsumption", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeviceSummary.prototype, "powerConsumptionUnit", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeviceSummary.prototype, "productVersion", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeviceSummary.prototype, "serverId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeviceSummary.prototype, "serverName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeviceSummary.prototype, "sid", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeviceSummary.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeviceSummary.prototype, "updateTimestamp", void 0);
     return DeviceSummary;
-}(SpeakeasyBase));
-export { DeviceSummary };
+}(utils_1.SpeakeasyBase));
+exports.DeviceSummary = DeviceSummary;

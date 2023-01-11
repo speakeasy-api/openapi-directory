@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BatchProjectsLocationsJobsCreateRequest, BatchProjectsLocationsJobsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,258 +30,155 @@ const req: BatchProjectsLocationsJobsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "neque",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "alias",
-    alt: "json",
-    callback: "et",
-    fields: "amet",
-    jobId: "magnam",
-    key: "nihil",
-    oauthToken: "ipsa",
-    prettyPrint: true,
-    quotaUser: "laboriosam",
-    requestId: "placeat",
-    uploadType: "aliquid",
-    uploadProtocol: "iusto",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    jobId: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    prettyPrint: false,
+    quotaUser: "nihil",
+    requestId: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
   request: {
     allocationPolicy: {
       instances: [
         {
           installGpuDrivers: false,
-          instanceTemplate: "nisi",
+          instanceTemplate: "ut",
           policy: {
             accelerators: [
               {
-                count: "quis",
-                installGpuDrivers: true,
-                type: "suscipit",
-              },
-              {
-                count: "eveniet",
-                installGpuDrivers: true,
-                type: "quasi",
-              },
-            ],
-            disks: [
-              {
-                deviceName: "non",
-                existingDisk: "atque",
-                newDisk: {
-                  diskInterface: "sint",
-                  image: "rem",
-                  sizeGb: "excepturi",
-                  snapshot: "quisquam",
-                  type: "nulla",
-                },
-              },
-              {
-                deviceName: "enim",
-                existingDisk: "repellat",
-                newDisk: {
-                  diskInterface: "nisi",
-                  image: "esse",
-                  sizeGb: "non",
-                  snapshot: "minima",
-                  type: "aperiam",
-                },
-              },
-            ],
-            machineType: "molestiae",
-            minCpuPlatform: "provident",
-            provisioningModel: "PREEMPTIBLE",
-          },
-        },
-        {
-          installGpuDrivers: true,
-          instanceTemplate: "eveniet",
-          policy: {
-            accelerators: [
-              {
-                count: "porro",
+                count: "et",
                 installGpuDrivers: false,
-                type: "consequuntur",
+                type: "iste",
               },
               {
-                count: "sit",
-                installGpuDrivers: false,
+                count: "vitae",
+                installGpuDrivers: true,
+                type: "dolores",
+              },
+              {
+                count: "illum",
+                installGpuDrivers: true,
                 type: "vel",
               },
             ],
             disks: [
               {
-                deviceName: "itaque",
-                existingDisk: "similique",
+                deviceName: "dolore",
+                existingDisk: "id",
                 newDisk: {
-                  diskInterface: "ut",
-                  image: "rerum",
-                  sizeGb: "iusto",
-                  snapshot: "adipisci",
-                  type: "repellendus",
-                },
-              },
-            ],
-            machineType: "et",
-            minCpuPlatform: "et",
-            provisioningModel: "PREEMPTIBLE",
-          },
-        },
-        {
-          installGpuDrivers: true,
-          instanceTemplate: "blanditiis",
-          policy: {
-            accelerators: [
-              {
-                count: "quia",
-                installGpuDrivers: true,
-                type: "necessitatibus",
-              },
-              {
-                count: "nostrum",
-                installGpuDrivers: false,
-                type: "repudiandae",
-              },
-            ],
-            disks: [
-              {
-                deviceName: "cumque",
-                existingDisk: "ipsa",
-                newDisk: {
-                  diskInterface: "enim",
-                  image: "animi",
-                  sizeGb: "iusto",
-                  snapshot: "veritatis",
-                  type: "ea",
-                },
-              },
-              {
-                deviceName: "rerum",
-                existingDisk: "minus",
-                newDisk: {
-                  diskInterface: "ab",
-                  image: "assumenda",
-                  sizeGb: "fuga",
-                  snapshot: "et",
-                  type: "quam",
+                  diskInterface: "aspernatur",
+                  image: "accusantium",
+                  sizeGb: "totam",
+                  snapshot: "commodi",
+                  type: "quis",
                 },
               },
             ],
             machineType: "est",
-            minCpuPlatform: "perspiciatis",
-            provisioningModel: "STANDARD",
+            minCpuPlatform: "aut",
+            provisioningModel: "SPOT",
           },
         },
       ],
       labels: {
-        "aut": "quas",
-        "est": "iusto",
+        "voluptas": "omnis",
+        "aut": "illo",
+        "sed": "officiis",
       },
       location: {
         allowedLocations: [
-          "molestias",
+          "consectetur",
+          "nobis",
         ],
       },
       network: {
         networkInterfaces: [
           {
-            network: "ab",
+            network: "qui",
             noExternalIpAddress: true,
-            subnetwork: "fugiat",
-          },
-          {
-            network: "consectetur",
-            noExternalIpAddress: false,
-            subnetwork: "quaerat",
-          },
-          {
-            network: "ab",
-            noExternalIpAddress: true,
-            subnetwork: "ullam",
+            subnetwork: "at",
           },
         ],
       },
       serviceAccount: {
-        email: "dignissimos",
+        email: "ipsum",
       },
     },
     labels: {
-      "quas": "dolor",
+      "modi": "sint",
+      "inventore": "ut",
     },
     logsPolicy: {
       destination: "PATH",
-      logsPath: "ducimus",
+      logsPath: "aut",
     },
     notifications: [
       {
         message: {
-          newJobState: "RUNNING",
-          newTaskState: "PENDING",
-          type: "TYPE_UNSPECIFIED",
+          newJobState: "FAILED",
+          newTaskState: "RUNNING",
+          type: "TASK_STATE_CHANGED",
         },
-        pubsubTopic: "optio",
-      },
-      {
-        message: {
-          newJobState: "SCHEDULED",
-          newTaskState: "FAILED",
-          type: "TYPE_UNSPECIFIED",
-        },
-        pubsubTopic: "illo",
-      },
-      {
-        message: {
-          newJobState: "DELETION_IN_PROGRESS",
-          newTaskState: "FAILED",
-          type: "JOB_STATE_CHANGED",
-        },
-        pubsubTopic: "assumenda",
+        pubsubTopic: "dolor",
       },
     ],
-    priority: "aspernatur",
+    priority: "beatae",
     status: {
-      runDuration: "in",
-      state: "SCHEDULED",
+      runDuration: "veritatis",
+      state: "FAILED",
       statusEvents: [
         {
-          description: "quia",
-          eventTime: "voluptatum",
+          description: "omnis",
+          eventTime: "ipsum",
           taskExecution: {
-            exitCode: 3978957507316565666,
+            exitCode: 1198006251912892506,
           },
-          type: "sit",
+          type: "dolores",
+        },
+        {
+          description: "placeat",
+          eventTime: "vel",
+          taskExecution: {
+            exitCode: 2587000937929698613,
+          },
+          type: "mollitia",
+        },
+        {
+          description: "voluptas",
+          eventTime: "quam",
+          taskExecution: {
+            exitCode: 7481608503761597087,
+          },
+          type: "qui",
         },
       ],
       taskGroups: {
-        "ea": {
+        "unde": {
           counts: {
-            "perferendis": "esse",
-            "aut": "nihil",
-            "ea": "doloremque",
+            "autem": "qui",
+            "ut": "itaque",
           },
           instances: [
             {
-              machineType: "iusto",
+              machineType: "neque",
               provisioningModel: "PROVISIONING_MODEL_UNSPECIFIED",
-              taskPack: "molestiae",
-            },
-            {
-              machineType: "in",
-              provisioningModel: "SPOT",
-              taskPack: "sunt",
-            },
-            {
-              machineType: "harum",
-              provisioningModel: "SPOT",
-              taskPack: "eos",
+              taskPack: "et",
             },
           ],
         },
@@ -290,172 +186,496 @@ const req: BatchProjectsLocationsJobsCreateRequest = {
     },
     taskGroups: [
       {
-        parallelism: "aut",
-        permissiveSsh: false,
-        requireHostsFile: true,
-        taskCount: "provident",
-        taskCountPerNode: "aut",
+        parallelism: "esse",
+        permissiveSsh: true,
+        requireHostsFile: false,
+        taskCount: "velit",
+        taskCountPerNode: "cumque",
         taskEnvironments: [
           {
             variables: {
-              "sapiente": "et",
-              "aut": "rerum",
-            },
-          },
-          {
-            variables: {
-              "doloremque": "incidunt",
-              "provident": "voluptas",
+              "voluptates": "magni",
+              "et": "optio",
             },
           },
         ],
         taskSpec: {
           computeResource: {
-            bootDiskMib: "assumenda",
-            cpuMilli: "sunt",
-            memoryMib: "nemo",
+            bootDiskMib: "qui",
+            cpuMilli: "earum",
+            memoryMib: "illo",
           },
           environment: {
             variables: {
-              "quia": "voluptatem",
-              "culpa": "illum",
-              "mollitia": "ex",
+              "ut": "consequatur",
+              "dolor": "commodi",
             },
           },
           environments: {
-            "molestiae": "dignissimos",
-            "laudantium": "quo",
-            "voluptatem": "totam",
+            "reprehenderit": "consectetur",
           },
           lifecyclePolicies: [
             {
-              action: "FAIL_TASK",
+              action: "ACTION_UNSPECIFIED",
               actionCondition: {
                 exitCodes: [
-                  2867170436337082363,
-                  7615081996316769988,
-                ],
-              },
-            },
-            {
-              action: "RETRY_TASK",
-              actionCondition: {
-                exitCodes: [
-                  2130911999686545789,
-                ],
-              },
-            },
-            {
-              action: "FAIL_TASK",
-              actionCondition: {
-                exitCodes: [
-                  3871201309715112538,
+                  1937101031588528881,
+                  6604365855503062775,
+                  1836598054518427835,
                 ],
               },
             },
           ],
-          maxRetryCount: 1677093497499828344,
-          maxRunDuration: "enim",
+          maxRetryCount: 7540276489530073149,
+          maxRunDuration: "quas",
           runnables: [
             {
               alwaysRun: false,
-              background: false,
+              background: true,
               barrier: {
-                name: "recusandae",
+                name: "ipsa",
               },
               container: {
                 blockExternalNetwork: false,
                 commands: [
-                  "sunt",
+                  "perferendis",
                 ],
-                entrypoint: "ipsum",
-                imageUri: "qui",
-                options: "autem",
-                password: "enim",
-                username: "ab",
+                entrypoint: "atque",
+                imageUri: "ratione",
+                options: "quisquam",
+                password: "explicabo",
+                username: "ea",
                 volumes: [
-                  "molestiae",
-                  "accusantium",
+                  "eum",
                 ],
               },
               environment: {
                 variables: {
-                  "sint": "quo",
+                  "et": "rerum",
+                  "reiciendis": "quis",
                 },
               },
               ignoreExitStatus: true,
               script: {
-                path: "tenetur",
-                text: "assumenda",
+                path: "minima",
+                text: "necessitatibus",
               },
-              timeout: "voluptatum",
+              timeout: "est",
+            },
+            {
+              alwaysRun: true,
+              background: true,
+              barrier: {
+                name: "labore",
+              },
+              container: {
+                blockExternalNetwork: false,
+                commands: [
+                  "ad",
+                  "expedita",
+                ],
+                entrypoint: "vel",
+                imageUri: "qui",
+                options: "modi",
+                password: "nihil",
+                username: "tempora",
+                volumes: [
+                  "eaque",
+                ],
+              },
+              environment: {
+                variables: {
+                  "sit": "autem",
+                  "quis": "vel",
+                },
+              },
+              ignoreExitStatus: false,
+              script: {
+                path: "placeat",
+                text: "qui",
+              },
+              timeout: "nisi",
             },
             {
               alwaysRun: true,
               background: false,
               barrier: {
-                name: "maxime",
+                name: "porro",
               },
               container: {
-                blockExternalNetwork: false,
+                blockExternalNetwork: true,
                 commands: [
-                  "ea",
-                  "temporibus",
-                  "perspiciatis",
+                  "accusamus",
                 ],
-                entrypoint: "natus",
-                imageUri: "saepe",
-                options: "natus",
-                password: "fugit",
-                username: "qui",
+                entrypoint: "numquam",
+                imageUri: "laborum",
+                options: "rerum",
+                password: "ut",
+                username: "laborum",
                 volumes: [
-                  "et",
-                  "ullam",
+                  "quis",
                 ],
               },
               environment: {
                 variables: {
-                  "porro": "sit",
-                  "modi": "est",
+                  "soluta": "aperiam",
+                  "consequuntur": "excepturi",
                 },
               },
-              ignoreExitStatus: false,
+              ignoreExitStatus: true,
               script: {
-                path: "cum",
-                text: "dolorem",
+                path: "inventore",
+                text: "delectus",
               },
-              timeout: "qui",
+              timeout: "ipsa",
             },
           ],
           volumes: [
             {
-              deviceName: "ex",
+              deviceName: "animi",
               gcs: {
-                remotePath: "fugiat",
+                remotePath: "ut",
               },
               mountOptions: [
-                "soluta",
-                "exercitationem",
-                "repudiandae",
+                "fuga",
               ],
-              mountPath: "possimus",
+              mountPath: "sed",
               nfs: {
-                remotePath: "rerum",
-                server: "iusto",
+                remotePath: "sed",
+                server: "et",
               },
             },
             {
-              deviceName: "architecto",
+              deviceName: "consequuntur",
               gcs: {
-                remotePath: "eaque",
+                remotePath: "non",
               },
               mountOptions: [
-                "vel",
+                "provident",
+                "molestiae",
+                "pariatur",
               ],
-              mountPath: "ullam",
+              mountPath: "quasi",
               nfs: {
-                remotePath: "ut",
-                server: "numquam",
+                remotePath: "corrupti",
+                server: "enim",
+              },
+            },
+          ],
+        },
+      },
+      {
+        parallelism: "qui",
+        permissiveSsh: true,
+        requireHostsFile: false,
+        taskCount: "modi",
+        taskCountPerNode: "neque",
+        taskEnvironments: [
+          {
+            variables: {
+              "et": "est",
+            },
+          },
+          {
+            variables: {
+              "ex": "voluptatem",
+            },
+          },
+          {
+            variables: {
+              "temporibus": "velit",
+              "quae": "est",
+              "ut": "necessitatibus",
+            },
+          },
+        ],
+        taskSpec: {
+          computeResource: {
+            bootDiskMib: "in",
+            cpuMilli: "possimus",
+            memoryMib: "voluptatem",
+          },
+          environment: {
+            variables: {
+              "doloribus": "saepe",
+            },
+          },
+          environments: {
+            "earum": "et",
+            "ut": "asperiores",
+          },
+          lifecyclePolicies: [
+            {
+              action: "ACTION_UNSPECIFIED",
+              actionCondition: {
+                exitCodes: [
+                  6787227741588449494,
+                ],
+              },
+            },
+          ],
+          maxRetryCount: 4883506937319508494,
+          maxRunDuration: "nihil",
+          runnables: [
+            {
+              alwaysRun: false,
+              background: true,
+              barrier: {
+                name: "non",
+              },
+              container: {
+                blockExternalNetwork: false,
+                commands: [
+                  "possimus",
+                  "illo",
+                  "qui",
+                ],
+                entrypoint: "quia",
+                imageUri: "ipsam",
+                options: "ducimus",
+                password: "enim",
+                username: "blanditiis",
+                volumes: [
+                  "delectus",
+                ],
+              },
+              environment: {
+                variables: {
+                  "dolore": "repellat",
+                  "velit": "officia",
+                },
+              },
+              ignoreExitStatus: true,
+              script: {
+                path: "sunt",
+                text: "voluptas",
+              },
+              timeout: "amet",
+            },
+          ],
+          volumes: [
+            {
+              deviceName: "a",
+              gcs: {
+                remotePath: "qui",
+              },
+              mountOptions: [
+                "autem",
+              ],
+              mountPath: "corporis",
+              nfs: {
+                remotePath: "dicta",
+                server: "rem",
+              },
+            },
+            {
+              deviceName: "doloremque",
+              gcs: {
+                remotePath: "quae",
+              },
+              mountOptions: [
+                "recusandae",
+                "qui",
+              ],
+              mountPath: "minus",
+              nfs: {
+                remotePath: "et",
+                server: "rerum",
+              },
+            },
+            {
+              deviceName: "ut",
+              gcs: {
+                remotePath: "rem",
+              },
+              mountOptions: [
+                "et",
+                "reiciendis",
+                "aspernatur",
+              ],
+              mountPath: "praesentium",
+              nfs: {
+                remotePath: "porro",
+                server: "nihil",
+              },
+            },
+          ],
+        },
+      },
+      {
+        parallelism: "adipisci",
+        permissiveSsh: false,
+        requireHostsFile: false,
+        taskCount: "accusantium",
+        taskCountPerNode: "atque",
+        taskEnvironments: [
+          {
+            variables: {
+              "quidem": "est",
+              "quo": "vero",
+            },
+          },
+          {
+            variables: {
+              "totam": "deserunt",
+            },
+          },
+          {
+            variables: {
+              "repellat": "beatae",
+              "omnis": "totam",
+            },
+          },
+        ],
+        taskSpec: {
+          computeResource: {
+            bootDiskMib: "aut",
+            cpuMilli: "et",
+            memoryMib: "magni",
+          },
+          environment: {
+            variables: {
+              "et": "culpa",
+              "repellendus": "voluptas",
+            },
+          },
+          environments: {
+            "veniam": "architecto",
+            "molestias": "rerum",
+          },
+          lifecyclePolicies: [
+            {
+              action: "ACTION_UNSPECIFIED",
+              actionCondition: {
+                exitCodes: [
+                  1215184329252422444,
+                  4178331056796501958,
+                  8590975497400104807,
+                ],
+              },
+            },
+            {
+              action: "ACTION_UNSPECIFIED",
+              actionCondition: {
+                exitCodes: [
+                  5127216006209335150,
+                ],
+              },
+            },
+            {
+              action: "ACTION_UNSPECIFIED",
+              actionCondition: {
+                exitCodes: [
+                  5850174490929081658,
+                  434570727381690637,
+                  2506834319279501248,
+                ],
+              },
+            },
+          ],
+          maxRetryCount: 8019821597217977465,
+          maxRunDuration: "et",
+          runnables: [
+            {
+              alwaysRun: true,
+              background: true,
+              barrier: {
+                name: "ipsum",
+              },
+              container: {
+                blockExternalNetwork: false,
+                commands: [
+                  "et",
+                  "vero",
+                ],
+                entrypoint: "voluptatem",
+                imageUri: "ex",
+                options: "magni",
+                password: "vero",
+                username: "distinctio",
+                volumes: [
+                  "ea",
+                  "non",
+                ],
+              },
+              environment: {
+                variables: {
+                  "nam": "beatae",
+                  "quae": "qui",
+                  "magni": "minus",
+                },
+              },
+              ignoreExitStatus: true,
+              script: {
+                path: "aut",
+                text: "neque",
+              },
+              timeout: "iusto",
+            },
+            {
+              alwaysRun: false,
+              background: false,
+              barrier: {
+                name: "debitis",
+              },
+              container: {
+                blockExternalNetwork: true,
+                commands: [
+                  "enim",
+                  "ut",
+                ],
+                entrypoint: "non",
+                imageUri: "nihil",
+                options: "laborum",
+                password: "recusandae",
+                username: "nihil",
+                volumes: [
+                  "iste",
+                  "perferendis",
+                  "id",
+                ],
+              },
+              environment: {
+                variables: {
+                  "hic": "voluptatem",
+                },
+              },
+              ignoreExitStatus: false,
+              script: {
+                path: "libero",
+                text: "qui",
+              },
+              timeout: "omnis",
+            },
+          ],
+          volumes: [
+            {
+              deviceName: "nostrum",
+              gcs: {
+                remotePath: "non",
+              },
+              mountOptions: [
+                "repellat",
+                "quo",
+              ],
+              mountPath: "dolorum",
+              nfs: {
+                remotePath: "laboriosam",
+                server: "velit",
+              },
+            },
+            {
+              deviceName: "ea",
+              gcs: {
+                remotePath: "tempore",
+              },
+              mountOptions: [
+                "aut",
+              ],
+              mountPath: "tempora",
+              nfs: {
+                remotePath: "aliquid",
+                server: "mollitia",
               },
             },
           ],

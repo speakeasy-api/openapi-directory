@@ -5,5 +5,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class MetricFilterMatchRecord extends SpeakeasyBase {
     eventMessage?: string;
     eventNumber?: number;
-    extractedValues?: Map<string, string>;
+    extractedValues?: Record<string, string>;
 }

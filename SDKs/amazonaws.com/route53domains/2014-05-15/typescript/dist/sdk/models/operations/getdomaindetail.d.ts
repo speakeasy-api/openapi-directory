@@ -22,5 +22,5 @@ export declare class GetDomainDetailResponse extends SpeakeasyBase {
     getDomainDetailResponse?: shared.GetDomainDetailResponse;
     invalidInput?: any;
     statusCode: number;
-    unsupportedTld?: any;
+    unsupportedTLD?: any;
 }

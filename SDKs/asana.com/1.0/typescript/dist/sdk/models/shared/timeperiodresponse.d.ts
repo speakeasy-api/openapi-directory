@@ -9,6 +9,9 @@ export declare enum TimePeriodResponsePeriodEnum {
     Q3 = "Q3",
     Q4 = "Q4"
 }
+/**
+ * A generic Asana Resource, containing a globally unique identifier.
+**/
 export declare class TimePeriodResponse extends SpeakeasyBase {
     endOn?: string;
     gid?: string;

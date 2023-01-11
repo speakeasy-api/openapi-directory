@@ -9,7 +9,7 @@ export declare class OrgsListForAuthenticatedUserRequest extends SpeakeasyBase {
 }
 export declare class OrgsListForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     organizationSimples?: shared.OrganizationSimple[];

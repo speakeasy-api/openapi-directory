@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FirstLastNameOriginedOut = void 0;
+var utils_1 = require("../../../internal/utils");
 // FirstLastNameOriginedOut
 /**
  * Represents the output of inferring the LIKELY country of Origin from a personal name.
@@ -33,57 +36,57 @@ var FirstLastNameOriginedOut = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countriesOriginTop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countriesOriginTop" }),
         __metadata("design:type", Array)
     ], FirstLastNameOriginedOut.prototype, "countriesOriginTop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countryOrigin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countryOrigin" }),
         __metadata("design:type", String)
     ], FirstLastNameOriginedOut.prototype, "countryOrigin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countryOriginAlt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countryOriginAlt" }),
         __metadata("design:type", String)
     ], FirstLastNameOriginedOut.prototype, "countryOriginAlt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstName" }),
         __metadata("design:type", String)
     ], FirstLastNameOriginedOut.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], FirstLastNameOriginedOut.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastName" }),
         __metadata("design:type", String)
     ], FirstLastNameOriginedOut.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=probabilityAltCalibrated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=probabilityAltCalibrated" }),
         __metadata("design:type", Number)
     ], FirstLastNameOriginedOut.prototype, "probabilityAltCalibrated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=probabilityCalibrated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=probabilityCalibrated" }),
         __metadata("design:type", Number)
     ], FirstLastNameOriginedOut.prototype, "probabilityCalibrated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionOrigin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionOrigin" }),
         __metadata("design:type", String)
     ], FirstLastNameOriginedOut.prototype, "regionOrigin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=score" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=score" }),
         __metadata("design:type", Number)
     ], FirstLastNameOriginedOut.prototype, "score", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=script" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=script" }),
         __metadata("design:type", String)
     ], FirstLastNameOriginedOut.prototype, "script", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subRegionOrigin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subRegionOrigin" }),
         __metadata("design:type", String)
     ], FirstLastNameOriginedOut.prototype, "subRegionOrigin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topRegionOrigin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topRegionOrigin" }),
         __metadata("design:type", String)
     ], FirstLastNameOriginedOut.prototype, "topRegionOrigin", void 0);
     return FirstLastNameOriginedOut;
-}(SpeakeasyBase));
-export { FirstLastNameOriginedOut };
+}(utils_1.SpeakeasyBase));
+exports.FirstLastNameOriginedOut = FirstLastNameOriginedOut;

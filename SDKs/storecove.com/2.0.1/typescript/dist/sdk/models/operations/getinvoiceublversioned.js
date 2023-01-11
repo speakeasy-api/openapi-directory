@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetInvoiceUblVersionedPackageVersionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetInvoiceUblVersionedResponse = exports.GetInvoiceUblVersionedRequest = exports.GetInvoiceUblVersionedPathParams = exports.GetInvoiceUblVersionedPackagingEnum = exports.GetInvoiceUblVersionedPackageVersionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetInvoiceUblVersionedPackageVersionEnum;
 (function (GetInvoiceUblVersionedPackageVersionEnum) {
     GetInvoiceUblVersionedPackageVersionEnum["Original"] = "original";
     GetInvoiceUblVersionedPackageVersionEnum["Si11"] = "si11";
@@ -31,60 +34,60 @@ export var GetInvoiceUblVersionedPackageVersionEnum;
     GetInvoiceUblVersionedPackageVersionEnum["Si20"] = "si20";
     GetInvoiceUblVersionedPackageVersionEnum["Aunz"] = "aunz";
     GetInvoiceUblVersionedPackageVersionEnum["Sg"] = "sg";
-})(GetInvoiceUblVersionedPackageVersionEnum || (GetInvoiceUblVersionedPackageVersionEnum = {}));
-export var GetInvoiceUblVersionedPackagingEnum;
+})(GetInvoiceUblVersionedPackageVersionEnum = exports.GetInvoiceUblVersionedPackageVersionEnum || (exports.GetInvoiceUblVersionedPackageVersionEnum = {}));
+var GetInvoiceUblVersionedPackagingEnum;
 (function (GetInvoiceUblVersionedPackagingEnum) {
     GetInvoiceUblVersionedPackagingEnum["Ubl"] = "ubl";
-})(GetInvoiceUblVersionedPackagingEnum || (GetInvoiceUblVersionedPackagingEnum = {}));
+})(GetInvoiceUblVersionedPackagingEnum = exports.GetInvoiceUblVersionedPackagingEnum || (exports.GetInvoiceUblVersionedPackagingEnum = {}));
 var GetInvoiceUblVersionedPathParams = /** @class */ (function (_super) {
     __extends(GetInvoiceUblVersionedPathParams, _super);
     function GetInvoiceUblVersionedPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=guid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=guid" }),
         __metadata("design:type", String)
     ], GetInvoiceUblVersionedPathParams.prototype, "guid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=package_version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=package_version" }),
         __metadata("design:type", String)
     ], GetInvoiceUblVersionedPathParams.prototype, "packageVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=packaging" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=packaging" }),
         __metadata("design:type", String)
     ], GetInvoiceUblVersionedPathParams.prototype, "packaging", void 0);
     return GetInvoiceUblVersionedPathParams;
-}(SpeakeasyBase));
-export { GetInvoiceUblVersionedPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetInvoiceUblVersionedPathParams = GetInvoiceUblVersionedPathParams;
 var GetInvoiceUblVersionedRequest = /** @class */ (function (_super) {
     __extends(GetInvoiceUblVersionedRequest, _super);
     function GetInvoiceUblVersionedRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetInvoiceUblVersionedPathParams)
     ], GetInvoiceUblVersionedRequest.prototype, "pathParams", void 0);
     return GetInvoiceUblVersionedRequest;
-}(SpeakeasyBase));
-export { GetInvoiceUblVersionedRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetInvoiceUblVersionedRequest = GetInvoiceUblVersionedRequest;
 var GetInvoiceUblVersionedResponse = /** @class */ (function (_super) {
     __extends(GetInvoiceUblVersionedResponse, _super);
     function GetInvoiceUblVersionedResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetInvoiceUblVersionedResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetInvoiceUblVersionedResponse.prototype, "purchaseInvoiceUbl", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetInvoiceUblVersionedResponse.prototype, "statusCode", void 0);
     return GetInvoiceUblVersionedResponse;
-}(SpeakeasyBase));
-export { GetInvoiceUblVersionedResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetInvoiceUblVersionedResponse = GetInvoiceUblVersionedResponse;

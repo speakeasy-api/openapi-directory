@@ -60,7 +60,7 @@ export class FailoverShardResponse extends SpeakeasyBase {
   invalidClusterStateFault?: any;
 
   @SpeakeasyMetadata()
-  invalidKmsKeyFault?: any;
+  invalidKMSKeyFault?: any;
 
   @SpeakeasyMetadata()
   invalidParameterCombinationException?: any;

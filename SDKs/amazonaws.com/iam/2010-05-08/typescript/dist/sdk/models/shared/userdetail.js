@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttachedPolicy } from "./attachedpolicy";
-import { AttachedPermissionsBoundary } from "./attachedpermissionsboundary";
-import { Tag } from "./tag";
-import { PolicyDetail } from "./policydetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var attachedpolicy_1 = require("./attachedpolicy");
+var attachedpermissionsboundary_1 = require("./attachedpermissionsboundary");
+var tag_1 = require("./tag");
+var policydetail_1 = require("./policydetail");
 // UserDetail
 /**
  * <p>Contains information about an IAM user, including all the user's policies and all the IAM groups the user is in.</p> <p>This data type is used as a response element in the <a>GetAccountAuthorizationDetails</a> operation.</p>
@@ -37,45 +40,45 @@ var UserDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UserDetail.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: AttachedPolicy }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: attachedpolicy_1.AttachedPolicy }),
         __metadata("design:type", Array)
     ], UserDetail.prototype, "attachedManagedPolicies", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], UserDetail.prototype, "createDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], UserDetail.prototype, "groupList", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UserDetail.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AttachedPermissionsBoundary)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", attachedpermissionsboundary_1.AttachedPermissionsBoundary)
     ], UserDetail.prototype, "permissionsBoundary", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], UserDetail.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UserDetail.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UserDetail.prototype, "userName", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: PolicyDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: policydetail_1.PolicyDetail }),
         __metadata("design:type", Array)
     ], UserDetail.prototype, "userPolicyList", void 0);
     return UserDetail;
-}(SpeakeasyBase));
-export { UserDetail };
+}(utils_1.SpeakeasyBase));
+exports.UserDetail = UserDetail;

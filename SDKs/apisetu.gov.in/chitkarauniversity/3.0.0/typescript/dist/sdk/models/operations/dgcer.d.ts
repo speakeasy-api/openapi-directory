@@ -107,11 +107,11 @@ export declare class DgcerRequest extends SpeakeasyBase {
 export declare class DgcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dgcer400ApplicationJsonObject?: Dgcer400ApplicationJson;
-    dgcer401ApplicationJsonObject?: Dgcer401ApplicationJson;
-    dgcer404ApplicationJsonObject?: Dgcer404ApplicationJson;
-    dgcer500ApplicationJsonObject?: Dgcer500ApplicationJson;
-    dgcer502ApplicationJsonObject?: Dgcer502ApplicationJson;
-    dgcer503ApplicationJsonObject?: Dgcer503ApplicationJson;
-    dgcer504ApplicationJsonObject?: Dgcer504ApplicationJson;
+    dgcer400ApplicationJSONObject?: Dgcer400ApplicationJson;
+    dgcer401ApplicationJSONObject?: Dgcer401ApplicationJson;
+    dgcer404ApplicationJSONObject?: Dgcer404ApplicationJson;
+    dgcer500ApplicationJSONObject?: Dgcer500ApplicationJson;
+    dgcer502ApplicationJSONObject?: Dgcer502ApplicationJson;
+    dgcer503ApplicationJSONObject?: Dgcer503ApplicationJson;
+    dgcer504ApplicationJSONObject?: Dgcer504ApplicationJson;
 }

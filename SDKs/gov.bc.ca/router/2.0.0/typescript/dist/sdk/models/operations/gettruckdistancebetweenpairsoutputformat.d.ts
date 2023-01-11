@@ -22,7 +22,7 @@ export declare class GetTruckDistanceBetweenPairsOutputFormatQueryParams extends
     distanceUnit?: GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum;
     fromPoints: string;
     maxPairs?: number;
-    outputSrs?: number;
+    outputSRS?: number;
     routeDescription?: string;
     toPoints: string;
 }

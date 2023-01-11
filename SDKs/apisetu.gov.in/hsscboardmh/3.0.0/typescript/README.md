@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { HpcerRequest, HpcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,26 +30,26 @@ const req: HpcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      fullName: "fugit",
-      exsession: "et",
-      rollnumber: "aut",
-      totalmarks: "aliquam",
-      year: "reprehenderit",
+      fullName: "sit",
+      exsession: "voluptas",
+      rollnumber: "culpa",
+      totalmarks: "expedita",
+      year: "consequuntur",
     },
-    consentArtifact: "excepturi",
-    format: "xml",
-    txnId: "facere",
+    consentArtifact: "dolor",
+    format: "pdf",
+    txnId: "voluptas",
   },
 };
 
-sdk.sdk.hpcer(req).then((res: HpcerResponse | AxiosError) => {
+sdk.apIs.hpcer(req).then((res: HpcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -59,7 +58,7 @@ sdk.sdk.hpcer(req).then((res: HpcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `hpcer` - Class XII Passing Certificate
 * `hscer` - Class XII Marksheet

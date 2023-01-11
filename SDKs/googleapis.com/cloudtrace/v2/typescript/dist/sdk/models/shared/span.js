@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Attributes } from "./attributes";
-import { TruncatableString } from "./truncatablestring";
-import { Links } from "./links";
-import { StackTrace } from "./stacktrace";
-import { Status } from "./status";
-import { TimeEvents } from "./timeevents";
-export var SpanSpanKindEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Span = exports.SpanSpanKindEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var attributes_1 = require("./attributes");
+var truncatablestring_1 = require("./truncatablestring");
+var links_1 = require("./links");
+var stacktrace_1 = require("./stacktrace");
+var status_1 = require("./status");
+var timeevents_1 = require("./timeevents");
+var SpanSpanKindEnum;
 (function (SpanSpanKindEnum) {
     SpanSpanKindEnum["SpanKindUnspecified"] = "SPAN_KIND_UNSPECIFIED";
     SpanSpanKindEnum["Internal"] = "INTERNAL";
@@ -37,7 +40,7 @@ export var SpanSpanKindEnum;
     SpanSpanKindEnum["Client"] = "CLIENT";
     SpanSpanKindEnum["Producer"] = "PRODUCER";
     SpanSpanKindEnum["Consumer"] = "CONSUMER";
-})(SpanSpanKindEnum || (SpanSpanKindEnum = {}));
+})(SpanSpanKindEnum = exports.SpanSpanKindEnum || (exports.SpanSpanKindEnum = {}));
 // Span
 /**
  * A span represents a single operation within a trace. Spans can be nested to form a trace tree. Often, a trace contains a root span that describes the end-to-end latency, and one or more subspans for its sub-operations. A trace can also contain multiple root spans, or none at all. Spans do not need to be contiguous—there might be gaps or overlaps between spans in a trace.
@@ -48,61 +51,61 @@ var Span = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
-        __metadata("design:type", Attributes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
+        __metadata("design:type", attributes_1.Attributes)
     ], Span.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=childSpanCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=childSpanCount" }),
         __metadata("design:type", Number)
     ], Span.prototype, "childSpanCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
-        __metadata("design:type", TruncatableString)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", truncatablestring_1.TruncatableString)
     ], Span.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], Span.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
-        __metadata("design:type", Links)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
+        __metadata("design:type", links_1.Links)
     ], Span.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Span.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentSpanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentSpanId" }),
         __metadata("design:type", String)
     ], Span.prototype, "parentSpanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sameProcessAsParentSpan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sameProcessAsParentSpan" }),
         __metadata("design:type", Boolean)
     ], Span.prototype, "sameProcessAsParentSpan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spanId" }),
         __metadata("design:type", String)
     ], Span.prototype, "spanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spanKind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spanKind" }),
         __metadata("design:type", String)
     ], Span.prototype, "spanKind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stackTrace" }),
-        __metadata("design:type", StackTrace)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stackTrace" }),
+        __metadata("design:type", stacktrace_1.StackTrace)
     ], Span.prototype, "stackTrace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], Span.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", status_1.Status)
     ], Span.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeEvents" }),
-        __metadata("design:type", TimeEvents)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeEvents" }),
+        __metadata("design:type", timeevents_1.TimeEvents)
     ], Span.prototype, "timeEvents", void 0);
     return Span;
-}(SpeakeasyBase));
-export { Span };
+}(utils_1.SpeakeasyBase));
+exports.Span = Span;

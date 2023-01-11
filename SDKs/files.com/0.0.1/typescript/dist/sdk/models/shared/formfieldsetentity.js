@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FormFieldEntity } from "./formfieldentity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FormFieldSetEntity = void 0;
+var utils_1 = require("../../../internal/utils");
+var formfieldentity_1 = require("./formfieldentity");
 // FormFieldSetEntity
 /**
  * Create Form Field Set
@@ -34,33 +37,33 @@ var FormFieldSetEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=form_fields" }),
-        __metadata("design:type", FormFieldEntity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=form_fields" }),
+        __metadata("design:type", formfieldentity_1.FormFieldEntity)
     ], FormFieldSetEntity.prototype, "formFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=form_layout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=form_layout" }),
         __metadata("design:type", Number)
     ], FormFieldSetEntity.prototype, "formLayout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], FormFieldSetEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skip_company" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skip_company" }),
         __metadata("design:type", Boolean)
     ], FormFieldSetEntity.prototype, "skipCompany", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skip_email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skip_email" }),
         __metadata("design:type", Boolean)
     ], FormFieldSetEntity.prototype, "skipEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skip_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skip_name" }),
         __metadata("design:type", Boolean)
     ], FormFieldSetEntity.prototype, "skipName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], FormFieldSetEntity.prototype, "title", void 0);
     return FormFieldSetEntity;
-}(SpeakeasyBase));
-export { FormFieldSetEntity };
+}(utils_1.SpeakeasyBase));
+exports.FormFieldSetEntity = FormFieldSetEntity;

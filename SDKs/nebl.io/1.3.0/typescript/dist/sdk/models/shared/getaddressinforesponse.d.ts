@@ -11,7 +11,7 @@ export declare class GetAddressInfoResponseUtxos extends SpeakeasyBase {
     blockheight?: number;
     blocktime?: number;
     index?: number;
-    scriptPubKey?: Map<string, any>;
+    scriptPubKey?: Record<string, any>;
     tokens?: GetAddressInfoResponseUtxosTokens[];
     txid?: string;
     used?: boolean;

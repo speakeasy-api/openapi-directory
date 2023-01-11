@@ -51,7 +51,7 @@ export class CreateTagsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createTagsResponse?: Map<string, any>;
+  createTagsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   homeRegionNotSetException?: any;

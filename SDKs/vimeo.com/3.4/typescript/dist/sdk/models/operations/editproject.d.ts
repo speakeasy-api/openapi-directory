@@ -18,6 +18,6 @@ export declare class EditProjectRequest extends SpeakeasyBase {
 export declare class EditProjectResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     project?: shared.Project;
 }

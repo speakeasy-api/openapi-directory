@@ -28,6 +28,6 @@ export class AddClientSecretResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ elemType: shared.ClientCredentialsResponse })
   clientCredentialsResponses?: shared.ClientCredentialsResponse[];
 
-  @SpeakeasyMetadata({ elemType: shared.Error })
-  errors?: shared.Error[];
+  @SpeakeasyMetadata({ elemType: shared.ErrorT })
+  errors?: shared.ErrorT[];
 }

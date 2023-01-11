@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteTransitGatewayPeeringAttachmentActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteTransitGatewayPeeringAttachmentResponse = exports.PostDeleteTransitGatewayPeeringAttachmentRequest = exports.PostDeleteTransitGatewayPeeringAttachmentHeaders = exports.PostDeleteTransitGatewayPeeringAttachmentQueryParams = exports.PostDeleteTransitGatewayPeeringAttachmentVersionEnum = exports.PostDeleteTransitGatewayPeeringAttachmentActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteTransitGatewayPeeringAttachmentActionEnum;
 (function (PostDeleteTransitGatewayPeeringAttachmentActionEnum) {
     PostDeleteTransitGatewayPeeringAttachmentActionEnum["DeleteTransitGatewayPeeringAttachment"] = "DeleteTransitGatewayPeeringAttachment";
-})(PostDeleteTransitGatewayPeeringAttachmentActionEnum || (PostDeleteTransitGatewayPeeringAttachmentActionEnum = {}));
-export var PostDeleteTransitGatewayPeeringAttachmentVersionEnum;
+})(PostDeleteTransitGatewayPeeringAttachmentActionEnum = exports.PostDeleteTransitGatewayPeeringAttachmentActionEnum || (exports.PostDeleteTransitGatewayPeeringAttachmentActionEnum = {}));
+var PostDeleteTransitGatewayPeeringAttachmentVersionEnum;
 (function (PostDeleteTransitGatewayPeeringAttachmentVersionEnum) {
     PostDeleteTransitGatewayPeeringAttachmentVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostDeleteTransitGatewayPeeringAttachmentVersionEnum || (PostDeleteTransitGatewayPeeringAttachmentVersionEnum = {}));
+})(PostDeleteTransitGatewayPeeringAttachmentVersionEnum = exports.PostDeleteTransitGatewayPeeringAttachmentVersionEnum || (exports.PostDeleteTransitGatewayPeeringAttachmentVersionEnum = {}));
 var PostDeleteTransitGatewayPeeringAttachmentQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteTransitGatewayPeeringAttachmentQueryParams, _super);
     function PostDeleteTransitGatewayPeeringAttachmentQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPeeringAttachmentQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPeeringAttachmentQueryParams.prototype, "version", void 0);
     return PostDeleteTransitGatewayPeeringAttachmentQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteTransitGatewayPeeringAttachmentQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteTransitGatewayPeeringAttachmentQueryParams = PostDeleteTransitGatewayPeeringAttachmentQueryParams;
 var PostDeleteTransitGatewayPeeringAttachmentHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteTransitGatewayPeeringAttachmentHeaders, _super);
     function PostDeleteTransitGatewayPeeringAttachmentHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPeeringAttachmentHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPeeringAttachmentHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPeeringAttachmentHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPeeringAttachmentHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPeeringAttachmentHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPeeringAttachmentHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPeeringAttachmentHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteTransitGatewayPeeringAttachmentHeaders;
-}(SpeakeasyBase));
-export { PostDeleteTransitGatewayPeeringAttachmentHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteTransitGatewayPeeringAttachmentHeaders = PostDeleteTransitGatewayPeeringAttachmentHeaders;
 var PostDeleteTransitGatewayPeeringAttachmentRequest = /** @class */ (function (_super) {
     __extends(PostDeleteTransitGatewayPeeringAttachmentRequest, _super);
     function PostDeleteTransitGatewayPeeringAttachmentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteTransitGatewayPeeringAttachmentQueryParams)
     ], PostDeleteTransitGatewayPeeringAttachmentRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteTransitGatewayPeeringAttachmentHeaders)
     ], PostDeleteTransitGatewayPeeringAttachmentRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteTransitGatewayPeeringAttachmentRequest.prototype, "request", void 0);
     return PostDeleteTransitGatewayPeeringAttachmentRequest;
-}(SpeakeasyBase));
-export { PostDeleteTransitGatewayPeeringAttachmentRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteTransitGatewayPeeringAttachmentRequest = PostDeleteTransitGatewayPeeringAttachmentRequest;
 var PostDeleteTransitGatewayPeeringAttachmentResponse = /** @class */ (function (_super) {
     __extends(PostDeleteTransitGatewayPeeringAttachmentResponse, _super);
     function PostDeleteTransitGatewayPeeringAttachmentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteTransitGatewayPeeringAttachmentResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPeeringAttachmentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteTransitGatewayPeeringAttachmentResponse.prototype, "statusCode", void 0);
     return PostDeleteTransitGatewayPeeringAttachmentResponse;
-}(SpeakeasyBase));
-export { PostDeleteTransitGatewayPeeringAttachmentResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteTransitGatewayPeeringAttachmentResponse = PostDeleteTransitGatewayPeeringAttachmentResponse;

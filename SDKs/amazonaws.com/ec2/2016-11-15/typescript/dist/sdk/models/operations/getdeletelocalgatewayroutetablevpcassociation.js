@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteLocalGatewayRouteTableVpcAssociationActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteLocalGatewayRouteTableVpcAssociationResponse = exports.GetDeleteLocalGatewayRouteTableVpcAssociationRequest = exports.GetDeleteLocalGatewayRouteTableVpcAssociationHeaders = exports.GetDeleteLocalGatewayRouteTableVpcAssociationQueryParams = exports.GetDeleteLocalGatewayRouteTableVpcAssociationVersionEnum = exports.GetDeleteLocalGatewayRouteTableVpcAssociationActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteLocalGatewayRouteTableVpcAssociationActionEnum;
 (function (GetDeleteLocalGatewayRouteTableVpcAssociationActionEnum) {
     GetDeleteLocalGatewayRouteTableVpcAssociationActionEnum["DeleteLocalGatewayRouteTableVpcAssociation"] = "DeleteLocalGatewayRouteTableVpcAssociation";
-})(GetDeleteLocalGatewayRouteTableVpcAssociationActionEnum || (GetDeleteLocalGatewayRouteTableVpcAssociationActionEnum = {}));
-export var GetDeleteLocalGatewayRouteTableVpcAssociationVersionEnum;
+})(GetDeleteLocalGatewayRouteTableVpcAssociationActionEnum = exports.GetDeleteLocalGatewayRouteTableVpcAssociationActionEnum || (exports.GetDeleteLocalGatewayRouteTableVpcAssociationActionEnum = {}));
+var GetDeleteLocalGatewayRouteTableVpcAssociationVersionEnum;
 (function (GetDeleteLocalGatewayRouteTableVpcAssociationVersionEnum) {
     GetDeleteLocalGatewayRouteTableVpcAssociationVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDeleteLocalGatewayRouteTableVpcAssociationVersionEnum || (GetDeleteLocalGatewayRouteTableVpcAssociationVersionEnum = {}));
+})(GetDeleteLocalGatewayRouteTableVpcAssociationVersionEnum = exports.GetDeleteLocalGatewayRouteTableVpcAssociationVersionEnum || (exports.GetDeleteLocalGatewayRouteTableVpcAssociationVersionEnum = {}));
 var GetDeleteLocalGatewayRouteTableVpcAssociationQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteLocalGatewayRouteTableVpcAssociationQueryParams, _super);
     function GetDeleteLocalGatewayRouteTableVpcAssociationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteLocalGatewayRouteTableVpcAssociationQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDeleteLocalGatewayRouteTableVpcAssociationQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=LocalGatewayRouteTableVpcAssociationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=LocalGatewayRouteTableVpcAssociationId" }),
         __metadata("design:type", String)
     ], GetDeleteLocalGatewayRouteTableVpcAssociationQueryParams.prototype, "localGatewayRouteTableVpcAssociationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteLocalGatewayRouteTableVpcAssociationQueryParams.prototype, "version", void 0);
     return GetDeleteLocalGatewayRouteTableVpcAssociationQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteLocalGatewayRouteTableVpcAssociationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteLocalGatewayRouteTableVpcAssociationQueryParams = GetDeleteLocalGatewayRouteTableVpcAssociationQueryParams;
 var GetDeleteLocalGatewayRouteTableVpcAssociationHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteLocalGatewayRouteTableVpcAssociationHeaders, _super);
     function GetDeleteLocalGatewayRouteTableVpcAssociationHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteLocalGatewayRouteTableVpcAssociationHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteLocalGatewayRouteTableVpcAssociationHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteLocalGatewayRouteTableVpcAssociationHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteLocalGatewayRouteTableVpcAssociationHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteLocalGatewayRouteTableVpcAssociationHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteLocalGatewayRouteTableVpcAssociationHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteLocalGatewayRouteTableVpcAssociationHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteLocalGatewayRouteTableVpcAssociationHeaders;
-}(SpeakeasyBase));
-export { GetDeleteLocalGatewayRouteTableVpcAssociationHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteLocalGatewayRouteTableVpcAssociationHeaders = GetDeleteLocalGatewayRouteTableVpcAssociationHeaders;
 var GetDeleteLocalGatewayRouteTableVpcAssociationRequest = /** @class */ (function (_super) {
     __extends(GetDeleteLocalGatewayRouteTableVpcAssociationRequest, _super);
     function GetDeleteLocalGatewayRouteTableVpcAssociationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteLocalGatewayRouteTableVpcAssociationQueryParams)
     ], GetDeleteLocalGatewayRouteTableVpcAssociationRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteLocalGatewayRouteTableVpcAssociationHeaders)
     ], GetDeleteLocalGatewayRouteTableVpcAssociationRequest.prototype, "headers", void 0);
     return GetDeleteLocalGatewayRouteTableVpcAssociationRequest;
-}(SpeakeasyBase));
-export { GetDeleteLocalGatewayRouteTableVpcAssociationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteLocalGatewayRouteTableVpcAssociationRequest = GetDeleteLocalGatewayRouteTableVpcAssociationRequest;
 var GetDeleteLocalGatewayRouteTableVpcAssociationResponse = /** @class */ (function (_super) {
     __extends(GetDeleteLocalGatewayRouteTableVpcAssociationResponse, _super);
     function GetDeleteLocalGatewayRouteTableVpcAssociationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteLocalGatewayRouteTableVpcAssociationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteLocalGatewayRouteTableVpcAssociationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteLocalGatewayRouteTableVpcAssociationResponse.prototype, "statusCode", void 0);
     return GetDeleteLocalGatewayRouteTableVpcAssociationResponse;
-}(SpeakeasyBase));
-export { GetDeleteLocalGatewayRouteTableVpcAssociationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteLocalGatewayRouteTableVpcAssociationResponse = GetDeleteLocalGatewayRouteTableVpcAssociationResponse;

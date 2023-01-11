@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMonitorRelationsResponse = exports.GetMonitorRelationsRequest = exports.GetMonitorRelations200ApplicationJson = exports.GetMonitorRelations200ApplicationJsonMonitor = exports.GetMonitorRelationsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetMonitorRelationsPathParams = /** @class */ (function (_super) {
     __extends(GetMonitorRelationsPathParams, _super);
     function GetMonitorRelationsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=apiId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=apiId" }),
         __metadata("design:type", String)
     ], GetMonitorRelationsPathParams.prototype, "apiId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=apiVersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=apiVersionId" }),
         __metadata("design:type", String)
     ], GetMonitorRelationsPathParams.prototype, "apiVersionId", void 0);
     return GetMonitorRelationsPathParams;
-}(SpeakeasyBase));
-export { GetMonitorRelationsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMonitorRelationsPathParams = GetMonitorRelationsPathParams;
 var GetMonitorRelations200ApplicationJsonMonitor = /** @class */ (function (_super) {
     __extends(GetMonitorRelations200ApplicationJsonMonitor, _super);
     function GetMonitorRelations200ApplicationJsonMonitor() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GetMonitorRelations200ApplicationJsonMonitor.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monitorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monitorId" }),
         __metadata("design:type", String)
     ], GetMonitorRelations200ApplicationJsonMonitor.prototype, "monitorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetMonitorRelations200ApplicationJsonMonitor.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", String)
     ], GetMonitorRelations200ApplicationJsonMonitor.prototype, "updatedAt", void 0);
     return GetMonitorRelations200ApplicationJsonMonitor;
-}(SpeakeasyBase));
-export { GetMonitorRelations200ApplicationJsonMonitor };
+}(utils_1.SpeakeasyBase));
+exports.GetMonitorRelations200ApplicationJsonMonitor = GetMonitorRelations200ApplicationJsonMonitor;
 var GetMonitorRelations200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetMonitorRelations200ApplicationJson, _super);
     function GetMonitorRelations200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monitor", elemType: GetMonitorRelations200ApplicationJsonMonitor }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monitor", elemType: GetMonitorRelations200ApplicationJsonMonitor }),
         __metadata("design:type", Array)
     ], GetMonitorRelations200ApplicationJson.prototype, "monitor", void 0);
     return GetMonitorRelations200ApplicationJson;
-}(SpeakeasyBase));
-export { GetMonitorRelations200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetMonitorRelations200ApplicationJson = GetMonitorRelations200ApplicationJson;
 var GetMonitorRelationsRequest = /** @class */ (function (_super) {
     __extends(GetMonitorRelationsRequest, _super);
     function GetMonitorRelationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMonitorRelationsPathParams)
     ], GetMonitorRelationsRequest.prototype, "pathParams", void 0);
     return GetMonitorRelationsRequest;
-}(SpeakeasyBase));
-export { GetMonitorRelationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMonitorRelationsRequest = GetMonitorRelationsRequest;
 var GetMonitorRelationsResponse = /** @class */ (function (_super) {
     __extends(GetMonitorRelationsResponse, _super);
     function GetMonitorRelationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMonitorRelationsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMonitorRelationsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMonitorRelations200ApplicationJson)
-    ], GetMonitorRelationsResponse.prototype, "getMonitorRelations200ApplicationJsonObject", void 0);
+    ], GetMonitorRelationsResponse.prototype, "getMonitorRelations200ApplicationJSONObject", void 0);
     return GetMonitorRelationsResponse;
-}(SpeakeasyBase));
-export { GetMonitorRelationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMonitorRelationsResponse = GetMonitorRelationsResponse;

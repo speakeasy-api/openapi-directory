@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InputConfiguration } from "./inputconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateInputResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var inputconfiguration_1 = require("./inputconfiguration");
 var CreateInputResponse = /** @class */ (function (_super) {
     __extends(CreateInputResponse, _super);
     function CreateInputResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputConfiguration" }),
-        __metadata("design:type", InputConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputConfiguration" }),
+        __metadata("design:type", inputconfiguration_1.InputConfiguration)
     ], CreateInputResponse.prototype, "inputConfiguration", void 0);
     return CreateInputResponse;
-}(SpeakeasyBase));
-export { CreateInputResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateInputResponse = CreateInputResponse;

@@ -28,6 +28,6 @@ export declare class SasportalNodesDevicesSignDeviceRequest extends SpeakeasyBas
 }
 export declare class SasportalNodesDevicesSignDeviceResponse extends SpeakeasyBase {
     contentType: string;
-    sasPortalEmpty?: Map<string, any>;
+    sasPortalEmpty?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,92 +23,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetInvalidation20180618Response = exports.GetInvalidation20180618Request = exports.GetInvalidation20180618Headers = exports.GetInvalidation20180618PathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetInvalidation20180618PathParams = /** @class */ (function (_super) {
     __extends(GetInvalidation20180618PathParams, _super);
     function GetInvalidation20180618PathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=DistributionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=DistributionId" }),
         __metadata("design:type", String)
     ], GetInvalidation20180618PathParams.prototype, "distributionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=Id" }),
         __metadata("design:type", String)
     ], GetInvalidation20180618PathParams.prototype, "id", void 0);
     return GetInvalidation20180618PathParams;
-}(SpeakeasyBase));
-export { GetInvalidation20180618PathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetInvalidation20180618PathParams = GetInvalidation20180618PathParams;
 var GetInvalidation20180618Headers = /** @class */ (function (_super) {
     __extends(GetInvalidation20180618Headers, _super);
     function GetInvalidation20180618Headers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetInvalidation20180618Headers.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetInvalidation20180618Headers.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetInvalidation20180618Headers.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetInvalidation20180618Headers.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetInvalidation20180618Headers.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetInvalidation20180618Headers.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetInvalidation20180618Headers.prototype, "xAmzSignedHeaders", void 0);
     return GetInvalidation20180618Headers;
-}(SpeakeasyBase));
-export { GetInvalidation20180618Headers };
+}(utils_1.SpeakeasyBase));
+exports.GetInvalidation20180618Headers = GetInvalidation20180618Headers;
 var GetInvalidation20180618Request = /** @class */ (function (_super) {
     __extends(GetInvalidation20180618Request, _super);
     function GetInvalidation20180618Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetInvalidation20180618PathParams)
     ], GetInvalidation20180618Request.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetInvalidation20180618Headers)
     ], GetInvalidation20180618Request.prototype, "headers", void 0);
     return GetInvalidation20180618Request;
-}(SpeakeasyBase));
-export { GetInvalidation20180618Request };
+}(utils_1.SpeakeasyBase));
+exports.GetInvalidation20180618Request = GetInvalidation20180618Request;
 var GetInvalidation20180618Response = /** @class */ (function (_super) {
     __extends(GetInvalidation20180618Response, _super);
     function GetInvalidation20180618Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetInvalidation20180618Response.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetInvalidation20180618Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetInvalidation20180618Response.prototype, "statusCode", void 0);
     return GetInvalidation20180618Response;
-}(SpeakeasyBase));
-export { GetInvalidation20180618Response };
+}(utils_1.SpeakeasyBase));
+exports.GetInvalidation20180618Response = GetInvalidation20180618Response;

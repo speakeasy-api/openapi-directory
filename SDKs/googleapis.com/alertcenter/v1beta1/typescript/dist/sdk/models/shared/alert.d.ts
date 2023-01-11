@@ -7,7 +7,7 @@ export declare class Alert extends SpeakeasyBase {
     alertId?: string;
     createTime?: string;
     customerId?: string;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     deleted?: boolean;
     endTime?: string;
     etag?: string;

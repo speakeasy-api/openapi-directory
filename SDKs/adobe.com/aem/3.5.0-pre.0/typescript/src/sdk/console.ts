@@ -1,0 +1,223 @@
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import * as operations from "./models/operations";
+import * as utils from "../internal/utils";
+
+export class Console {
+  _defaultClient: AxiosInstance;
+  _securityClient: AxiosInstance;
+  _serverURL: string;
+  _language: string;
+  _sdkVersion: string;
+  _genVersion: string;
+
+  constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string) {
+    this._defaultClient = defaultClient;
+    this._securityClient = securityClient;
+    this._serverURL = serverURL;
+    this._language = language;
+    this._sdkVersion = sdkVersion;
+    this._genVersion = genVersion;
+  }
+  
+  getAemProductInfo(
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetAemProductInfoResponse> {
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/system/console/status-productinfo.json";
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetAemProductInfoResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getAemProductInfoDefaultApplicationJSONStrings = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  getConfigMgr(
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetConfigMgrResponse> {
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/system/console/configMgr";
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetConfigMgrResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `text/xml`)) {
+                res.getConfigMgr200TextXMLString = JSON.stringify(httpRes?.data);
+            }
+            break;
+          case (httpRes?.status >= 500 && httpRes?.status < 600):
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  postBundle(
+    req: operations.PostBundleRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.PostBundleResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.PostBundleRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/system/console/bundles/{name}", req.pathParams);
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.PostBundleResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          default:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  postJmxRepository(
+    req: operations.PostJmxRepositoryRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.PostJmxRepositoryResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.PostJmxRepositoryRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/system/console/jmx/com.adobe.granite:type=Repository/op/{action}", req.pathParams);
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.PostJmxRepositoryResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          default:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  postSamlConfiguration(
+    req: operations.PostSamlConfigurationRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.PostSamlConfigurationResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.PostSamlConfigurationRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/system/console/configMgr/com.adobe.granite.auth.saml.SamlAuthenticationHandler";
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.PostSamlConfigurationResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `text/plain`)) {
+                res.samlConfigurationInfo = JSON.stringify(httpRes?.data);
+            }
+            break;
+          case httpRes?.status == 302:
+            if (utils.matchContentType(contentType, `text/plain`)) {
+                res.postSamlConfiguration302TextPlainString = JSON.stringify(httpRes?.data);
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `text/plain`)) {
+                res.postSamlConfigurationDefaultTextPlainString = JSON.stringify(httpRes?.data);
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+}

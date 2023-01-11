@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteRepositoryPipelineKnownHostResponse = exports.DeleteRepositoryPipelineKnownHostRequest = exports.DeleteRepositoryPipelineKnownHostPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteRepositoryPipelineKnownHostPathParams = /** @class */ (function (_super) {
     __extends(DeleteRepositoryPipelineKnownHostPathParams, _super);
     function DeleteRepositoryPipelineKnownHostPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=known_host_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=known_host_uuid" }),
         __metadata("design:type", String)
     ], DeleteRepositoryPipelineKnownHostPathParams.prototype, "knownHostUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], DeleteRepositoryPipelineKnownHostPathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], DeleteRepositoryPipelineKnownHostPathParams.prototype, "workspace", void 0);
     return DeleteRepositoryPipelineKnownHostPathParams;
-}(SpeakeasyBase));
-export { DeleteRepositoryPipelineKnownHostPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteRepositoryPipelineKnownHostPathParams = DeleteRepositoryPipelineKnownHostPathParams;
 var DeleteRepositoryPipelineKnownHostRequest = /** @class */ (function (_super) {
     __extends(DeleteRepositoryPipelineKnownHostRequest, _super);
     function DeleteRepositoryPipelineKnownHostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteRepositoryPipelineKnownHostPathParams)
     ], DeleteRepositoryPipelineKnownHostRequest.prototype, "pathParams", void 0);
     return DeleteRepositoryPipelineKnownHostRequest;
-}(SpeakeasyBase));
-export { DeleteRepositoryPipelineKnownHostRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteRepositoryPipelineKnownHostRequest = DeleteRepositoryPipelineKnownHostRequest;
 var DeleteRepositoryPipelineKnownHostResponse = /** @class */ (function (_super) {
     __extends(DeleteRepositoryPipelineKnownHostResponse, _super);
     function DeleteRepositoryPipelineKnownHostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteRepositoryPipelineKnownHostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteRepositoryPipelineKnownHostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeleteRepositoryPipelineKnownHostResponse.prototype, "error", void 0);
     return DeleteRepositoryPipelineKnownHostResponse;
-}(SpeakeasyBase));
-export { DeleteRepositoryPipelineKnownHostResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteRepositoryPipelineKnownHostResponse = DeleteRepositoryPipelineKnownHostResponse;

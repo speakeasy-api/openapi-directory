@@ -1,5 +1,8 @@
-export var EncryptionModeValueEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EncryptionModeValueEnum = void 0;
+var EncryptionModeValueEnum;
 (function (EncryptionModeValueEnum) {
     EncryptionModeValueEnum["SseS3"] = "sse-s3";
     EncryptionModeValueEnum["SseKms"] = "sse-kms";
-})(EncryptionModeValueEnum || (EncryptionModeValueEnum = {}));
+})(EncryptionModeValueEnum = exports.EncryptionModeValueEnum || (exports.EncryptionModeValueEnum = {}));

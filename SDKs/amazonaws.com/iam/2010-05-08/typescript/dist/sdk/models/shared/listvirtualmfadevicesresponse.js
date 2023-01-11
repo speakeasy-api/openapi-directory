@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VirtualMfaDevice } from "./virtualmfadevice";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListVirtualMfaDevicesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var virtualmfadevice_1 = require("./virtualmfadevice");
 // ListVirtualMfaDevicesResponse
 /**
  * Contains the response to a successful <a>ListVirtualMFADevices</a> request.
@@ -34,17 +37,17 @@ var ListVirtualMfaDevicesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ListVirtualMfaDevicesResponse.prototype, "isTruncated", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListVirtualMfaDevicesResponse.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: VirtualMfaDevice }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: virtualmfadevice_1.VirtualMfaDevice }),
         __metadata("design:type", Array)
-    ], ListVirtualMfaDevicesResponse.prototype, "virtualMfaDevices", void 0);
+    ], ListVirtualMfaDevicesResponse.prototype, "virtualMFADevices", void 0);
     return ListVirtualMfaDevicesResponse;
-}(SpeakeasyBase));
-export { ListVirtualMfaDevicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListVirtualMfaDevicesResponse = ListVirtualMfaDevicesResponse;

@@ -40,8 +40,8 @@ export class PostPortfolioOptimizationEqualRiskContributionsResponse extends Spe
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioOptimizationEqualRiskContributions200ApplicationJsonObject?: PostPortfolioOptimizationEqualRiskContributions200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioOptimizationEqualRiskContributions200ApplicationJSONObject?: PostPortfolioOptimizationEqualRiskContributions200ApplicationJson;
 }

@@ -12,8 +12,8 @@ export declare class RetrieveApiSecretsRequest extends SpeakeasyBase {
 }
 export declare class RetrieveApiSecretsResponse extends SpeakeasyBase {
     contentType: string;
-    errorApiKeyNotFound?: shared.ErrorApiKeyNotFound;
+    errorAPIKeyNotFound?: shared.ErrorApiKeyNotFound;
     statusCode: number;
-    retrieveApiSecrets200ApplicationJsonAny?: any;
-    retrieveApiSecrets401ApplicationJsonAny?: any;
+    retrieveAPISecrets200ApplicationJSONAny?: any;
+    retrieveAPISecrets401ApplicationJSONAny?: any;
 }

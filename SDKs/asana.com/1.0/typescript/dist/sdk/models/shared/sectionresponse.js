@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProjectCompact } from "./projectcompact";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SectionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var projectcompact_1 = require("./projectcompact");
+// SectionResponse
+/**
+ * A *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.
+**/
 var SectionResponse = /** @class */ (function (_super) {
     __extends(SectionResponse, _super);
     function SectionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], SectionResponse.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], SectionResponse.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SectionResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=project" }),
-        __metadata("design:type", ProjectCompact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=project" }),
+        __metadata("design:type", projectcompact_1.ProjectCompact)
     ], SectionResponse.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projects", elemType: ProjectCompact }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projects", elemType: projectcompact_1.ProjectCompact }),
         __metadata("design:type", Array)
     ], SectionResponse.prototype, "projects", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], SectionResponse.prototype, "resourceType", void 0);
     return SectionResponse;
-}(SpeakeasyBase));
-export { SectionResponse };
+}(utils_1.SpeakeasyBase));
+exports.SectionResponse = SectionResponse;

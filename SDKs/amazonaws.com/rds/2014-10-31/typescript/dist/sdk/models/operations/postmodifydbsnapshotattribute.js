@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostModifyDbSnapshotAttributeActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostModifyDbSnapshotAttributeResponse = exports.PostModifyDbSnapshotAttributeRequest = exports.PostModifyDbSnapshotAttributeHeaders = exports.PostModifyDbSnapshotAttributeQueryParams = exports.PostModifyDbSnapshotAttributeVersionEnum = exports.PostModifyDbSnapshotAttributeActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostModifyDbSnapshotAttributeActionEnum;
 (function (PostModifyDbSnapshotAttributeActionEnum) {
     PostModifyDbSnapshotAttributeActionEnum["ModifyDbSnapshotAttribute"] = "ModifyDBSnapshotAttribute";
-})(PostModifyDbSnapshotAttributeActionEnum || (PostModifyDbSnapshotAttributeActionEnum = {}));
-export var PostModifyDbSnapshotAttributeVersionEnum;
+})(PostModifyDbSnapshotAttributeActionEnum = exports.PostModifyDbSnapshotAttributeActionEnum || (exports.PostModifyDbSnapshotAttributeActionEnum = {}));
+var PostModifyDbSnapshotAttributeVersionEnum;
 (function (PostModifyDbSnapshotAttributeVersionEnum) {
     PostModifyDbSnapshotAttributeVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostModifyDbSnapshotAttributeVersionEnum || (PostModifyDbSnapshotAttributeVersionEnum = {}));
+})(PostModifyDbSnapshotAttributeVersionEnum = exports.PostModifyDbSnapshotAttributeVersionEnum || (exports.PostModifyDbSnapshotAttributeVersionEnum = {}));
 var PostModifyDbSnapshotAttributeQueryParams = /** @class */ (function (_super) {
     __extends(PostModifyDbSnapshotAttributeQueryParams, _super);
     function PostModifyDbSnapshotAttributeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostModifyDbSnapshotAttributeQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostModifyDbSnapshotAttributeQueryParams.prototype, "version", void 0);
     return PostModifyDbSnapshotAttributeQueryParams;
-}(SpeakeasyBase));
-export { PostModifyDbSnapshotAttributeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyDbSnapshotAttributeQueryParams = PostModifyDbSnapshotAttributeQueryParams;
 var PostModifyDbSnapshotAttributeHeaders = /** @class */ (function (_super) {
     __extends(PostModifyDbSnapshotAttributeHeaders, _super);
     function PostModifyDbSnapshotAttributeHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostModifyDbSnapshotAttributeHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostModifyDbSnapshotAttributeHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostModifyDbSnapshotAttributeHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostModifyDbSnapshotAttributeHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostModifyDbSnapshotAttributeHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostModifyDbSnapshotAttributeHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostModifyDbSnapshotAttributeHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostModifyDbSnapshotAttributeHeaders;
-}(SpeakeasyBase));
-export { PostModifyDbSnapshotAttributeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyDbSnapshotAttributeHeaders = PostModifyDbSnapshotAttributeHeaders;
 var PostModifyDbSnapshotAttributeRequest = /** @class */ (function (_super) {
     __extends(PostModifyDbSnapshotAttributeRequest, _super);
     function PostModifyDbSnapshotAttributeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyDbSnapshotAttributeQueryParams)
     ], PostModifyDbSnapshotAttributeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyDbSnapshotAttributeHeaders)
     ], PostModifyDbSnapshotAttributeRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostModifyDbSnapshotAttributeRequest.prototype, "request", void 0);
     return PostModifyDbSnapshotAttributeRequest;
-}(SpeakeasyBase));
-export { PostModifyDbSnapshotAttributeRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyDbSnapshotAttributeRequest = PostModifyDbSnapshotAttributeRequest;
 var PostModifyDbSnapshotAttributeResponse = /** @class */ (function (_super) {
     __extends(PostModifyDbSnapshotAttributeResponse, _super);
     function PostModifyDbSnapshotAttributeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostModifyDbSnapshotAttributeResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostModifyDbSnapshotAttributeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostModifyDbSnapshotAttributeResponse.prototype, "statusCode", void 0);
     return PostModifyDbSnapshotAttributeResponse;
-}(SpeakeasyBase));
-export { PostModifyDbSnapshotAttributeResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyDbSnapshotAttributeResponse = PostModifyDbSnapshotAttributeResponse;

@@ -7,5 +7,5 @@ export class ListObjectParentsResponse extends SpeakeasyBase {
   nextToken?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Parents" })
-  parents?: Map<string, string>;
+  parents?: Record<string, string>;
 }

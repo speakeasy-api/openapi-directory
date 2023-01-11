@@ -9,5 +9,5 @@ import { VirtualMfaDevice } from "./virtualmfadevice";
 **/
 export class CreateVirtualMfaDeviceResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  virtualMfaDevice: VirtualMfaDevice;
+  virtualMFADevice: VirtualMfaDevice;
 }

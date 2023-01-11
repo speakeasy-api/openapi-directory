@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostModifyCacheParameterGroupActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostModifyCacheParameterGroupResponse = exports.PostModifyCacheParameterGroupRequest = exports.PostModifyCacheParameterGroupHeaders = exports.PostModifyCacheParameterGroupQueryParams = exports.PostModifyCacheParameterGroupVersionEnum = exports.PostModifyCacheParameterGroupActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostModifyCacheParameterGroupActionEnum;
 (function (PostModifyCacheParameterGroupActionEnum) {
     PostModifyCacheParameterGroupActionEnum["ModifyCacheParameterGroup"] = "ModifyCacheParameterGroup";
-})(PostModifyCacheParameterGroupActionEnum || (PostModifyCacheParameterGroupActionEnum = {}));
-export var PostModifyCacheParameterGroupVersionEnum;
+})(PostModifyCacheParameterGroupActionEnum = exports.PostModifyCacheParameterGroupActionEnum || (exports.PostModifyCacheParameterGroupActionEnum = {}));
+var PostModifyCacheParameterGroupVersionEnum;
 (function (PostModifyCacheParameterGroupVersionEnum) {
     PostModifyCacheParameterGroupVersionEnum["TwoThousandAndFifteen0202"] = "2015-02-02";
-})(PostModifyCacheParameterGroupVersionEnum || (PostModifyCacheParameterGroupVersionEnum = {}));
+})(PostModifyCacheParameterGroupVersionEnum = exports.PostModifyCacheParameterGroupVersionEnum || (exports.PostModifyCacheParameterGroupVersionEnum = {}));
 var PostModifyCacheParameterGroupQueryParams = /** @class */ (function (_super) {
     __extends(PostModifyCacheParameterGroupQueryParams, _super);
     function PostModifyCacheParameterGroupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostModifyCacheParameterGroupQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostModifyCacheParameterGroupQueryParams.prototype, "version", void 0);
     return PostModifyCacheParameterGroupQueryParams;
-}(SpeakeasyBase));
-export { PostModifyCacheParameterGroupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyCacheParameterGroupQueryParams = PostModifyCacheParameterGroupQueryParams;
 var PostModifyCacheParameterGroupHeaders = /** @class */ (function (_super) {
     __extends(PostModifyCacheParameterGroupHeaders, _super);
     function PostModifyCacheParameterGroupHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostModifyCacheParameterGroupHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostModifyCacheParameterGroupHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostModifyCacheParameterGroupHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostModifyCacheParameterGroupHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostModifyCacheParameterGroupHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostModifyCacheParameterGroupHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostModifyCacheParameterGroupHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostModifyCacheParameterGroupHeaders;
-}(SpeakeasyBase));
-export { PostModifyCacheParameterGroupHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyCacheParameterGroupHeaders = PostModifyCacheParameterGroupHeaders;
 var PostModifyCacheParameterGroupRequest = /** @class */ (function (_super) {
     __extends(PostModifyCacheParameterGroupRequest, _super);
     function PostModifyCacheParameterGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyCacheParameterGroupQueryParams)
     ], PostModifyCacheParameterGroupRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyCacheParameterGroupHeaders)
     ], PostModifyCacheParameterGroupRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostModifyCacheParameterGroupRequest.prototype, "request", void 0);
     return PostModifyCacheParameterGroupRequest;
-}(SpeakeasyBase));
-export { PostModifyCacheParameterGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyCacheParameterGroupRequest = PostModifyCacheParameterGroupRequest;
 var PostModifyCacheParameterGroupResponse = /** @class */ (function (_super) {
     __extends(PostModifyCacheParameterGroupResponse, _super);
     function PostModifyCacheParameterGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostModifyCacheParameterGroupResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostModifyCacheParameterGroupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostModifyCacheParameterGroupResponse.prototype, "statusCode", void 0);
     return PostModifyCacheParameterGroupResponse;
-}(SpeakeasyBase));
-export { PostModifyCacheParameterGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyCacheParameterGroupResponse = PostModifyCacheParameterGroupResponse;

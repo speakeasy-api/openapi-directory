@@ -50,5 +50,5 @@ export class ReplaceConversationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  replaceConversation200ApplicationJsonObject?: ReplaceConversation200ApplicationJson;
+  replaceConversation200ApplicationJSONObject?: ReplaceConversation200ApplicationJson;
 }

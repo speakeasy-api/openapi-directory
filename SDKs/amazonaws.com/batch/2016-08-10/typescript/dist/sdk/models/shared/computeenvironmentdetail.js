@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComputeResource } from "./computeresource";
-import { CeStateEnum } from "./cestateenum";
-import { CeStatusEnum } from "./cestatusenum";
-import { CeTypeEnum } from "./cetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComputeEnvironmentDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var computeresource_1 = require("./computeresource");
+var cestateenum_1 = require("./cestateenum");
+var cestatusenum_1 = require("./cestatusenum");
+var cetypeenum_1 = require("./cetypeenum");
 // ComputeEnvironmentDetail
 /**
  * An object representing an Batch compute environment.
@@ -37,45 +40,45 @@ var ComputeEnvironmentDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeEnvironmentArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeEnvironmentArn" }),
         __metadata("design:type", String)
     ], ComputeEnvironmentDetail.prototype, "computeEnvironmentArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeEnvironmentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeEnvironmentName" }),
         __metadata("design:type", String)
     ], ComputeEnvironmentDetail.prototype, "computeEnvironmentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeResources" }),
-        __metadata("design:type", ComputeResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeResources" }),
+        __metadata("design:type", computeresource_1.ComputeResource)
     ], ComputeEnvironmentDetail.prototype, "computeResources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ecsClusterArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ecsClusterArn" }),
         __metadata("design:type", String)
     ], ComputeEnvironmentDetail.prototype, "ecsClusterArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceRole" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceRole" }),
         __metadata("design:type", String)
     ], ComputeEnvironmentDetail.prototype, "serviceRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ComputeEnvironmentDetail.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ComputeEnvironmentDetail.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusReason" }),
         __metadata("design:type", String)
     ], ComputeEnvironmentDetail.prototype, "statusReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], ComputeEnvironmentDetail.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ComputeEnvironmentDetail.prototype, "type", void 0);
     return ComputeEnvironmentDetail;
-}(SpeakeasyBase));
-export { ComputeEnvironmentDetail };
+}(utils_1.SpeakeasyBase));
+exports.ComputeEnvironmentDetail = ComputeEnvironmentDetail;

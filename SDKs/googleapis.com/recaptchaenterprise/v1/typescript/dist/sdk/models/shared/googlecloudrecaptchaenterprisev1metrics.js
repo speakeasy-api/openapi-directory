@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecaptchaenterpriseV1ChallengeMetrics } from "./googlecloudrecaptchaenterprisev1challengemetrics";
-import { GoogleCloudRecaptchaenterpriseV1ScoreMetrics } from "./googlecloudrecaptchaenterprisev1scoremetrics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecaptchaenterpriseV1Metrics = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecaptchaenterprisev1challengemetrics_1 = require("./googlecloudrecaptchaenterprisev1challengemetrics");
+var googlecloudrecaptchaenterprisev1scoremetrics_1 = require("./googlecloudrecaptchaenterprisev1scoremetrics");
 // GoogleCloudRecaptchaenterpriseV1Metrics
 /**
  * Metrics for a single Key.
@@ -35,21 +38,21 @@ var GoogleCloudRecaptchaenterpriseV1Metrics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=challengeMetrics", elemType: GoogleCloudRecaptchaenterpriseV1ChallengeMetrics }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=challengeMetrics", elemType: googlecloudrecaptchaenterprisev1challengemetrics_1.GoogleCloudRecaptchaenterpriseV1ChallengeMetrics }),
         __metadata("design:type", Array)
     ], GoogleCloudRecaptchaenterpriseV1Metrics.prototype, "challengeMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1Metrics.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scoreMetrics", elemType: GoogleCloudRecaptchaenterpriseV1ScoreMetrics }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scoreMetrics", elemType: googlecloudrecaptchaenterprisev1scoremetrics_1.GoogleCloudRecaptchaenterpriseV1ScoreMetrics }),
         __metadata("design:type", Array)
     ], GoogleCloudRecaptchaenterpriseV1Metrics.prototype, "scoreMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1Metrics.prototype, "startTime", void 0);
     return GoogleCloudRecaptchaenterpriseV1Metrics;
-}(SpeakeasyBase));
-export { GoogleCloudRecaptchaenterpriseV1Metrics };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecaptchaenterpriseV1Metrics = GoogleCloudRecaptchaenterpriseV1Metrics;

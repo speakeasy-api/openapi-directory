@@ -1,0 +1,133 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AmendRequest = exports.AmendRequestPreviewOptions = exports.AmendRequestAmendOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+var electronicpaymentoptions_1 = require("./electronicpaymentoptions");
+var externalpaymentoptions_1 = require("./externalpaymentoptions");
+var invoiceprocessingoptions_1 = require("./invoiceprocessingoptions");
+var amendment_1 = require("./amendment");
+// AmendRequestAmendOptions
+/**
+ * Use the `AmendOptions` container to specify billing options, such as invoice generation and when to process payments.
+ *
+**/
+var AmendRequestAmendOptions = /** @class */ (function (_super) {
+    __extends(AmendRequestAmendOptions, _super);
+    function AmendRequestAmendOptions() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationOrder" }),
+        __metadata("design:type", Array)
+    ], AmendRequestAmendOptions.prototype, "applicationOrder", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplyCredit" }),
+        __metadata("design:type", Boolean)
+    ], AmendRequestAmendOptions.prototype, "applyCredit", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplyCreditBalance" }),
+        __metadata("design:type", Boolean)
+    ], AmendRequestAmendOptions.prototype, "applyCreditBalance", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ElectronicPaymentOptions" }),
+        __metadata("design:type", electronicpaymentoptions_1.ElectronicPaymentOptions)
+    ], AmendRequestAmendOptions.prototype, "electronicPaymentOptions", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExternalPaymentOptions" }),
+        __metadata("design:type", externalpaymentoptions_1.ExternalPaymentOptions)
+    ], AmendRequestAmendOptions.prototype, "externalPaymentOptions", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GenerateInvoice" }),
+        __metadata("design:type", Boolean)
+    ], AmendRequestAmendOptions.prototype, "generateInvoice", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InvoiceProcessingOptions" }),
+        __metadata("design:type", invoiceprocessingoptions_1.InvoiceProcessingOptions)
+    ], AmendRequestAmendOptions.prototype, "invoiceProcessingOptions", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProcessPayments" }),
+        __metadata("design:type", Boolean)
+    ], AmendRequestAmendOptions.prototype, "processPayments", void 0);
+    return AmendRequestAmendOptions;
+}(utils_1.SpeakeasyBase));
+exports.AmendRequestAmendOptions = AmendRequestAmendOptions;
+// AmendRequestPreviewOptions
+/**
+ * Use the `PreviewOptions` container to preview an amendment before committing its changes to a subscription.
+ * You can use a preview to provide a quote of the new charges to a customer before the customer commits to the amended subscription.
+ * For example, make an Amend call with an Amendment object that removes an existing rate plan,
+ * another Amendment object that adds a new rate plan, and turn on the preview options.
+ *
+**/
+var AmendRequestPreviewOptions = /** @class */ (function (_super) {
+    __extends(AmendRequestPreviewOptions, _super);
+    function AmendRequestPreviewOptions() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnablePreviewMode" }),
+        __metadata("design:type", Boolean)
+    ], AmendRequestPreviewOptions.prototype, "enablePreviewMode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludeExistingDraftInvoiceItems" }),
+        __metadata("design:type", Boolean)
+    ], AmendRequestPreviewOptions.prototype, "includeExistingDraftInvoiceItems", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfPeriods" }),
+        __metadata("design:type", Number)
+    ], AmendRequestPreviewOptions.prototype, "numberOfPeriods", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PreviewThroughTermEnd" }),
+        __metadata("design:type", Boolean)
+    ], AmendRequestPreviewOptions.prototype, "previewThroughTermEnd", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PreviewType" }),
+        __metadata("design:type", String)
+    ], AmendRequestPreviewOptions.prototype, "previewType", void 0);
+    return AmendRequestPreviewOptions;
+}(utils_1.SpeakeasyBase));
+exports.AmendRequestPreviewOptions = AmendRequestPreviewOptions;
+var AmendRequest = /** @class */ (function (_super) {
+    __extends(AmendRequest, _super);
+    function AmendRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AmendOptions" }),
+        __metadata("design:type", AmendRequestAmendOptions)
+    ], AmendRequest.prototype, "amendOptions", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Amendments", elemType: amendment_1.Amendment }),
+        __metadata("design:type", Array)
+    ], AmendRequest.prototype, "amendments", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PreviewOptions" }),
+        __metadata("design:type", AmendRequestPreviewOptions)
+    ], AmendRequest.prototype, "previewOptions", void 0);
+    return AmendRequest;
+}(utils_1.SpeakeasyBase));
+exports.AmendRequest = AmendRequest;

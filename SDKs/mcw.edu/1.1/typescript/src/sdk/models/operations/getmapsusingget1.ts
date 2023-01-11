@@ -22,5 +22,5 @@ export class GetMapsUsingGet1Response extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getMapsUsingGet1200WildcardString?: string;
+  getMapsUsingGET1200WildcardString?: string;
 }

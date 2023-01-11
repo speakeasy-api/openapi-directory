@@ -11,12 +11,12 @@ export declare class PostRepositoriesWorkspaceRepoSlugSecurity extends Speakeasy
 }
 export declare class PostRepositoriesWorkspaceRepoSlugRequest extends SpeakeasyBase {
     pathParams: PostRepositoriesWorkspaceRepoSlugPathParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: PostRepositoriesWorkspaceRepoSlugSecurity;
 }
 export declare class PostRepositoriesWorkspaceRepoSlugResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    repository?: Map<string, any>;
+    error?: Record<string, any>;
+    repository?: Record<string, any>;
 }

@@ -3,7 +3,7 @@ export declare class ServiceInventory extends SpeakeasyBase {
     archivedAt?: Date;
     createdAt?: Date;
     description?: string;
-    extra?: Map<string, any>;
+    extra?: Record<string, any>;
     id?: string;
     lastSeenAt?: Date;
     name?: string;

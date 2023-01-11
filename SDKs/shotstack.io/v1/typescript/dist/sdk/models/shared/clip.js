@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Offset } from "./offset";
-import { Transition } from "./transition";
-export var ClipEffectEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Clip = exports.ClipPositionEnum = exports.ClipFitEnum = exports.ClipFilterEnum = exports.ClipEffectEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var offset_1 = require("./offset");
+var transition_1 = require("./transition");
+var ClipEffectEnum;
 (function (ClipEffectEnum) {
     ClipEffectEnum["ZoomIn"] = "zoomIn";
     ClipEffectEnum["ZoomOut"] = "zoomOut";
@@ -33,8 +36,8 @@ export var ClipEffectEnum;
     ClipEffectEnum["SlideRight"] = "slideRight";
     ClipEffectEnum["SlideUp"] = "slideUp";
     ClipEffectEnum["SlideDown"] = "slideDown";
-})(ClipEffectEnum || (ClipEffectEnum = {}));
-export var ClipFilterEnum;
+})(ClipEffectEnum = exports.ClipEffectEnum || (exports.ClipEffectEnum = {}));
+var ClipFilterEnum;
 (function (ClipFilterEnum) {
     ClipFilterEnum["Boost"] = "boost";
     ClipFilterEnum["Contrast"] = "contrast";
@@ -43,15 +46,15 @@ export var ClipFilterEnum;
     ClipFilterEnum["Lighten"] = "lighten";
     ClipFilterEnum["Muted"] = "muted";
     ClipFilterEnum["Negative"] = "negative";
-})(ClipFilterEnum || (ClipFilterEnum = {}));
-export var ClipFitEnum;
+})(ClipFilterEnum = exports.ClipFilterEnum || (exports.ClipFilterEnum = {}));
+var ClipFitEnum;
 (function (ClipFitEnum) {
     ClipFitEnum["Cover"] = "cover";
     ClipFitEnum["Contain"] = "contain";
     ClipFitEnum["Crop"] = "crop";
     ClipFitEnum["None"] = "none";
-})(ClipFitEnum || (ClipFitEnum = {}));
-export var ClipPositionEnum;
+})(ClipFitEnum = exports.ClipFitEnum || (exports.ClipFitEnum = {}));
+var ClipPositionEnum;
 (function (ClipPositionEnum) {
     ClipPositionEnum["Top"] = "top";
     ClipPositionEnum["TopRight"] = "topRight";
@@ -62,7 +65,7 @@ export var ClipPositionEnum;
     ClipPositionEnum["Left"] = "left";
     ClipPositionEnum["TopLeft"] = "topLeft";
     ClipPositionEnum["Center"] = "center";
-})(ClipPositionEnum || (ClipPositionEnum = {}));
+})(ClipPositionEnum = exports.ClipPositionEnum || (exports.ClipPositionEnum = {}));
 // Clip
 /**
  * A clip is a container for a specific type of asset, i.e. a title, image, video, audio or html. You use a Clip to define when an asset will display on the timeline, how long it will play for and transitions, filters and effects to apply to it.
@@ -73,49 +76,49 @@ var Clip = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asset" }),
         __metadata("design:type", Object)
     ], Clip.prototype, "asset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effect" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effect" }),
         __metadata("design:type", String)
     ], Clip.prototype, "effect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
         __metadata("design:type", String)
     ], Clip.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fit" }),
         __metadata("design:type", String)
     ], Clip.prototype, "fit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=length" }),
         __metadata("design:type", Number)
     ], Clip.prototype, "length", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
-        __metadata("design:type", Offset)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
+        __metadata("design:type", offset_1.Offset)
     ], Clip.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=opacity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=opacity" }),
         __metadata("design:type", Number)
     ], Clip.prototype, "opacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=position" }),
         __metadata("design:type", String)
     ], Clip.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scale" }),
         __metadata("design:type", Number)
     ], Clip.prototype, "scale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
         __metadata("design:type", Number)
     ], Clip.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transition" }),
-        __metadata("design:type", Transition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transition" }),
+        __metadata("design:type", transition_1.Transition)
     ], Clip.prototype, "transition", void 0);
     return Clip;
-}(SpeakeasyBase));
-export { Clip };
+}(utils_1.SpeakeasyBase));
+exports.Clip = Clip;

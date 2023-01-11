@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MergePullRequestByFastForwardInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var MergePullRequestByFastForwardInput = /** @class */ (function (_super) {
     __extends(MergePullRequestByFastForwardInput, _super);
     function MergePullRequestByFastForwardInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pullRequestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pullRequestId" }),
         __metadata("design:type", String)
     ], MergePullRequestByFastForwardInput.prototype, "pullRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositoryName" }),
         __metadata("design:type", String)
     ], MergePullRequestByFastForwardInput.prototype, "repositoryName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceCommitId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceCommitId" }),
         __metadata("design:type", String)
     ], MergePullRequestByFastForwardInput.prototype, "sourceCommitId", void 0);
     return MergePullRequestByFastForwardInput;
-}(SpeakeasyBase));
-export { MergePullRequestByFastForwardInput };
+}(utils_1.SpeakeasyBase));
+exports.MergePullRequestByFastForwardInput = MergePullRequestByFastForwardInput;

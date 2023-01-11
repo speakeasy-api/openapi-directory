@@ -108,11 +108,11 @@ export declare class HvcerRequest extends SpeakeasyBase {
 export declare class HvcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    hvcer400ApplicationJsonObject?: Hvcer400ApplicationJson;
-    hvcer401ApplicationJsonObject?: Hvcer401ApplicationJson;
-    hvcer404ApplicationJsonObject?: Hvcer404ApplicationJson;
-    hvcer500ApplicationJsonObject?: Hvcer500ApplicationJson;
-    hvcer502ApplicationJsonObject?: Hvcer502ApplicationJson;
-    hvcer503ApplicationJsonObject?: Hvcer503ApplicationJson;
-    hvcer504ApplicationJsonObject?: Hvcer504ApplicationJson;
+    hvcer400ApplicationJSONObject?: Hvcer400ApplicationJson;
+    hvcer401ApplicationJSONObject?: Hvcer401ApplicationJson;
+    hvcer404ApplicationJSONObject?: Hvcer404ApplicationJson;
+    hvcer500ApplicationJSONObject?: Hvcer500ApplicationJson;
+    hvcer502ApplicationJSONObject?: Hvcer502ApplicationJson;
+    hvcer503ApplicationJSONObject?: Hvcer503ApplicationJson;
+    hvcer504ApplicationJSONObject?: Hvcer504ApplicationJson;
 }

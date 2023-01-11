@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeductionTypeCalculationTypeEnum } from "./deductiontypecalculationtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeductionLine = void 0;
+var utils_1 = require("../../../internal/utils");
+var deductiontypecalculationtypeenum_1 = require("./deductiontypecalculationtypeenum");
 var DeductionLine = /** @class */ (function (_super) {
     __extends(DeductionLine, _super);
     function DeductionLine() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Amount" }),
         __metadata("design:type", Number)
     ], DeductionLine.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CalculationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CalculationType" }),
         __metadata("design:type", String)
     ], DeductionLine.prototype, "calculationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeductionTypeID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeductionTypeID" }),
         __metadata("design:type", String)
-    ], DeductionLine.prototype, "deductionTypeId", void 0);
+    ], DeductionLine.prototype, "deductionTypeID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfUnits" }),
         __metadata("design:type", Number)
     ], DeductionLine.prototype, "numberOfUnits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Percentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Percentage" }),
         __metadata("design:type", Number)
     ], DeductionLine.prototype, "percentage", void 0);
     return DeductionLine;
-}(SpeakeasyBase));
-export { DeductionLine };
+}(utils_1.SpeakeasyBase));
+exports.DeductionLine = DeductionLine;

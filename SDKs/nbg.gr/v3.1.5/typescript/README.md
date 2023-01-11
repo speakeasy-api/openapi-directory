@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeleteAccountAccessConsentsConsentIdRequest, DeleteAccountAccessConsentsConsentIdResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,24 +30,24 @@ const req: DeleteAccountAccessConsentsConsentIdRequest = {
   security: {
     clientCredentialsToken: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   pathParams: {
-    consentId: "at",
+    consentId: "sit",
   },
   headers: {
-    sandboxId: "voluptate",
-    xCustomerUserAgent: "molestiae",
-    xFapiAuthDate: "mollitia",
-    xFapiCustomerIpAddress: "consequatur",
-    xFapiInteractionId: "harum",
+    sandboxId: "voluptas",
+    xCustomerUserAgent: "culpa",
+    xFapiAuthDate: "expedita",
+    xFapiCustomerIpAddress: "consequuntur",
+    xFapiInteractionId: "dolor",
   },
 };
 
-sdk.sdk.deleteAccountAccessConsentsConsentId(req).then((res: DeleteAccountAccessConsentsConsentIdResponse | AxiosError) => {
+sdk.accountAccess.deleteAccountAccessConsentsConsentId(req).then((res: DeleteAccountAccessConsentsConsentIdResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -57,29 +56,56 @@ sdk.sdk.deleteAccountAccessConsentsConsentId(req).then((res: DeleteAccountAccess
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### AccountAccess
 
 * `deleteAccountAccessConsentsConsentId` - Delete Account Access Consents
-* `deleteSandboxSandboxId` - Delete Sandbox
 * `getAccountAccessConsentsConsentId` - Get Account Access Consents
+* `postAccountAccessConsents` - Create Account Access Consents
+
+### Accounts
+
 * `getAccounts` - Get Accounts
 * `getAccountsAccountId` - Get Accounts
+
+### Balances
+
 * `getAccountsAccountIdBalances` - Get Balances
+
+### Beneficiaries
+
 * `getAccountsAccountIdBeneficiaries` - Get Beneficiaries
+
+### Parties
+
 * `getAccountsAccountIdParties` - Get Parties
 * `getAccountsAccountIdParty` - Get Party
+* `getParty` - Get Party
+
+### Sandbox
+
+* `deleteSandboxSandboxId` - Delete Sandbox
+* `getSandboxSandboxId` - Export Sandbox
+* `postSandbox` - Create Sandbox
+* `putSandbox` - Import Sandbox
+
+### ScheduledPayments
+
 * `getAccountsAccountIdScheduledPayments` - Get Scheduled Payments
+
+### StandingOrders
+
 * `getAccountsAccountIdStandingOrders` - Get Standing Orders
+
+### Statements
+
 * `getAccountsAccountIdStatements` - Get Statements
 * `getAccountsAccountIdStatementsStatementId` - Get Statements
 * `getAccountsAccountIdStatementsStatementIdFile` - Get Statements
+
+### Transactions
+
 * `getAccountsAccountIdStatementsStatementIdTransactions` - Get Transactions
 * `getAccountsAccountIdTransactions` - Get Transactions
-* `getParty` - Get Party
-* `getSandboxSandboxId` - Export Sandbox
-* `postAccountAccessConsents` - Create Account Access Consents
-* `postSandbox` - Create Sandbox
-* `putSandbox` - Import Sandbox
 
 <!-- End SDK Available Operations -->
 

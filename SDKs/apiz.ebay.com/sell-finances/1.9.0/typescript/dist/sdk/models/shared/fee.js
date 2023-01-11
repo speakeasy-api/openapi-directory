@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Fee = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
 // Fee
 /**
  * This type is used to display fees that are automatically deducted from seller payouts.
@@ -34,17 +37,17 @@ var Fee = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", amount_1.Amount)
     ], Fee.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feeMemo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feeMemo" }),
         __metadata("design:type", String)
     ], Fee.prototype, "feeMemo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feeType" }),
         __metadata("design:type", String)
     ], Fee.prototype, "feeType", void 0);
     return Fee;
-}(SpeakeasyBase));
-export { Fee };
+}(utils_1.SpeakeasyBase));
+exports.Fee = Fee;

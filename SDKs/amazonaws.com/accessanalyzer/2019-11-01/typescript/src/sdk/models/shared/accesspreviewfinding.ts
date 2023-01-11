@@ -18,7 +18,7 @@ export class AccessPreviewFinding extends SpeakeasyBase {
   changeType: FindingChangeTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=condition" })
-  condition?: Map<string, string>;
+  condition?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=createdAt" })
   createdAt: Date;
@@ -39,7 +39,7 @@ export class AccessPreviewFinding extends SpeakeasyBase {
   isPublic?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=principal" })
-  principal?: Map<string, string>;
+  principal?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=resource" })
   resource?: string;

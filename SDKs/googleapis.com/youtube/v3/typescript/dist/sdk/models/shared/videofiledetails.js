@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VideoFileDetailsAudioStream } from "./videofiledetailsaudiostream";
-import { VideoFileDetailsVideoStream } from "./videofiledetailsvideostream";
-export var VideoFileDetailsFileTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoFileDetails = exports.VideoFileDetailsFileTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var videofiledetailsaudiostream_1 = require("./videofiledetailsaudiostream");
+var videofiledetailsvideostream_1 = require("./videofiledetailsvideostream");
+var VideoFileDetailsFileTypeEnum;
 (function (VideoFileDetailsFileTypeEnum) {
     VideoFileDetailsFileTypeEnum["Video"] = "video";
     VideoFileDetailsFileTypeEnum["Audio"] = "audio";
@@ -34,7 +37,7 @@ export var VideoFileDetailsFileTypeEnum;
     VideoFileDetailsFileTypeEnum["Document"] = "document";
     VideoFileDetailsFileTypeEnum["Project"] = "project";
     VideoFileDetailsFileTypeEnum["Other"] = "other";
-})(VideoFileDetailsFileTypeEnum || (VideoFileDetailsFileTypeEnum = {}));
+})(VideoFileDetailsFileTypeEnum = exports.VideoFileDetailsFileTypeEnum || (exports.VideoFileDetailsFileTypeEnum = {}));
 // VideoFileDetails
 /**
  * Describes original video file properties, including technical details about audio and video streams, but also metadata information like content length, digitization time, or geotagging information.
@@ -45,41 +48,41 @@ var VideoFileDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audioStreams", elemType: VideoFileDetailsAudioStream }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audioStreams", elemType: videofiledetailsaudiostream_1.VideoFileDetailsAudioStream }),
         __metadata("design:type", Array)
     ], VideoFileDetails.prototype, "audioStreams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bitrateBps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bitrateBps" }),
         __metadata("design:type", String)
     ], VideoFileDetails.prototype, "bitrateBps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=container" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=container" }),
         __metadata("design:type", String)
     ], VideoFileDetails.prototype, "container", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTime" }),
         __metadata("design:type", String)
     ], VideoFileDetails.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=durationMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=durationMs" }),
         __metadata("design:type", String)
     ], VideoFileDetails.prototype, "durationMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileName" }),
         __metadata("design:type", String)
     ], VideoFileDetails.prototype, "fileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileSize" }),
         __metadata("design:type", String)
     ], VideoFileDetails.prototype, "fileSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileType" }),
         __metadata("design:type", String)
     ], VideoFileDetails.prototype, "fileType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoStreams", elemType: VideoFileDetailsVideoStream }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoStreams", elemType: videofiledetailsvideostream_1.VideoFileDetailsVideoStream }),
         __metadata("design:type", Array)
     ], VideoFileDetails.prototype, "videoStreams", void 0);
     return VideoFileDetails;
-}(SpeakeasyBase));
-export { VideoFileDetails };
+}(utils_1.SpeakeasyBase));
+exports.VideoFileDetails = VideoFileDetails;

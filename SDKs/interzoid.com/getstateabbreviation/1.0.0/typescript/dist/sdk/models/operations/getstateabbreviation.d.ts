@@ -15,5 +15,5 @@ export declare class GetstateabbreviationRequest extends SpeakeasyBase {
 export declare class GetstateabbreviationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getstateabbreviation200ApplicationJsonObject?: Getstateabbreviation200ApplicationJson;
+    getstateabbreviation200ApplicationJSONObject?: Getstateabbreviation200ApplicationJson;
 }

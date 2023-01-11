@@ -49,5 +49,5 @@ export class ListInflectedFormsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: ListInflectedForms200ApplicationJson })
-  listInflectedForms200ApplicationJsonObjects?: ListInflectedForms200ApplicationJson[];
+  listInflectedForms200ApplicationJSONObjects?: ListInflectedForms200ApplicationJson[];
 }

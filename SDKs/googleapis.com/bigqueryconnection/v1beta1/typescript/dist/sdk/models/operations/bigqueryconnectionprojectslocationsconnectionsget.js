@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,166 +14,191 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BigqueryconnectionProjectsLocationsConnectionsGetResponse = exports.BigqueryconnectionProjectsLocationsConnectionsGetRequest = exports.BigqueryconnectionProjectsLocationsConnectionsGetSecurity = exports.BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption2 = exports.BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption1 = exports.BigqueryconnectionProjectsLocationsConnectionsGetQueryParams = exports.BigqueryconnectionProjectsLocationsConnectionsGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var BigqueryconnectionProjectsLocationsConnectionsGetPathParams = /** @class */ (function (_super) {
     __extends(BigqueryconnectionProjectsLocationsConnectionsGetPathParams, _super);
     function BigqueryconnectionProjectsLocationsConnectionsGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], BigqueryconnectionProjectsLocationsConnectionsGetPathParams.prototype, "name", void 0);
     return BigqueryconnectionProjectsLocationsConnectionsGetPathParams;
-}(SpeakeasyBase));
-export { BigqueryconnectionProjectsLocationsConnectionsGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.BigqueryconnectionProjectsLocationsConnectionsGetPathParams = BigqueryconnectionProjectsLocationsConnectionsGetPathParams;
 var BigqueryconnectionProjectsLocationsConnectionsGetQueryParams = /** @class */ (function (_super) {
     __extends(BigqueryconnectionProjectsLocationsConnectionsGetQueryParams, _super);
     function BigqueryconnectionProjectsLocationsConnectionsGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], BigqueryconnectionProjectsLocationsConnectionsGetQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], BigqueryconnectionProjectsLocationsConnectionsGetQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], BigqueryconnectionProjectsLocationsConnectionsGetQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], BigqueryconnectionProjectsLocationsConnectionsGetQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], BigqueryconnectionProjectsLocationsConnectionsGetQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], BigqueryconnectionProjectsLocationsConnectionsGetQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], BigqueryconnectionProjectsLocationsConnectionsGetQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], BigqueryconnectionProjectsLocationsConnectionsGetQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], BigqueryconnectionProjectsLocationsConnectionsGetQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], BigqueryconnectionProjectsLocationsConnectionsGetQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], BigqueryconnectionProjectsLocationsConnectionsGetQueryParams.prototype, "uploadProtocol", void 0);
     return BigqueryconnectionProjectsLocationsConnectionsGetQueryParams;
-}(SpeakeasyBase));
-export { BigqueryconnectionProjectsLocationsConnectionsGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.BigqueryconnectionProjectsLocationsConnectionsGetQueryParams = BigqueryconnectionProjectsLocationsConnectionsGetQueryParams;
 var BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption1 = /** @class */ (function (_super) {
     __extends(BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption1, _super);
     function BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption1.prototype, "oauth2c", void 0);
     return BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption1;
-}(SpeakeasyBase));
-export { BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption1 = BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption1;
 var BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption2 = /** @class */ (function (_super) {
     __extends(BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption2, _super);
     function BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption2.prototype, "oauth2c", void 0);
     return BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption2;
-}(SpeakeasyBase));
-export { BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption2 = BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption2;
 var BigqueryconnectionProjectsLocationsConnectionsGetSecurity = /** @class */ (function (_super) {
     __extends(BigqueryconnectionProjectsLocationsConnectionsGetSecurity, _super);
     function BigqueryconnectionProjectsLocationsConnectionsGetSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption1)
     ], BigqueryconnectionProjectsLocationsConnectionsGetSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", BigqueryconnectionProjectsLocationsConnectionsGetSecurityOption2)
     ], BigqueryconnectionProjectsLocationsConnectionsGetSecurity.prototype, "option2", void 0);
     return BigqueryconnectionProjectsLocationsConnectionsGetSecurity;
-}(SpeakeasyBase));
-export { BigqueryconnectionProjectsLocationsConnectionsGetSecurity };
+}(utils_1.SpeakeasyBase));
+exports.BigqueryconnectionProjectsLocationsConnectionsGetSecurity = BigqueryconnectionProjectsLocationsConnectionsGetSecurity;
 var BigqueryconnectionProjectsLocationsConnectionsGetRequest = /** @class */ (function (_super) {
     __extends(BigqueryconnectionProjectsLocationsConnectionsGetRequest, _super);
     function BigqueryconnectionProjectsLocationsConnectionsGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BigqueryconnectionProjectsLocationsConnectionsGetPathParams)
     ], BigqueryconnectionProjectsLocationsConnectionsGetRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BigqueryconnectionProjectsLocationsConnectionsGetQueryParams)
     ], BigqueryconnectionProjectsLocationsConnectionsGetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BigqueryconnectionProjectsLocationsConnectionsGetSecurity)
     ], BigqueryconnectionProjectsLocationsConnectionsGetRequest.prototype, "security", void 0);
     return BigqueryconnectionProjectsLocationsConnectionsGetRequest;
-}(SpeakeasyBase));
-export { BigqueryconnectionProjectsLocationsConnectionsGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.BigqueryconnectionProjectsLocationsConnectionsGetRequest = BigqueryconnectionProjectsLocationsConnectionsGetRequest;
 var BigqueryconnectionProjectsLocationsConnectionsGetResponse = /** @class */ (function (_super) {
     __extends(BigqueryconnectionProjectsLocationsConnectionsGetResponse, _super);
     function BigqueryconnectionProjectsLocationsConnectionsGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Connection)
     ], BigqueryconnectionProjectsLocationsConnectionsGetResponse.prototype, "connection", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BigqueryconnectionProjectsLocationsConnectionsGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BigqueryconnectionProjectsLocationsConnectionsGetResponse.prototype, "statusCode", void 0);
     return BigqueryconnectionProjectsLocationsConnectionsGetResponse;
-}(SpeakeasyBase));
-export { BigqueryconnectionProjectsLocationsConnectionsGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.BigqueryconnectionProjectsLocationsConnectionsGetResponse = BigqueryconnectionProjectsLocationsConnectionsGetResponse;

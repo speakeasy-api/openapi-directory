@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ConsentAcknowledgementStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsentAcknowledgement = exports.ConsentAcknowledgementStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ConsentAcknowledgementStatusEnum;
 (function (ConsentAcknowledgementStatusEnum) {
     ConsentAcknowledgementStatusEnum["Ok"] = "OK";
     ConsentAcknowledgementStatusEnum["Unknown"] = "UNKNOWN";
-})(ConsentAcknowledgementStatusEnum || (ConsentAcknowledgementStatusEnum = {}));
+})(ConsentAcknowledgementStatusEnum = exports.ConsentAcknowledgementStatusEnum || (exports.ConsentAcknowledgementStatusEnum = {}));
 var ConsentAcknowledgement = /** @class */ (function (_super) {
     __extends(ConsentAcknowledgement, _super);
     function ConsentAcknowledgement() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consentId" }),
         __metadata("design:type", String)
     ], ConsentAcknowledgement.prototype, "consentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ConsentAcknowledgement.prototype, "status", void 0);
     return ConsentAcknowledgement;
-}(SpeakeasyBase));
-export { ConsentAcknowledgement };
+}(utils_1.SpeakeasyBase));
+exports.ConsentAcknowledgement = ConsentAcknowledgement;

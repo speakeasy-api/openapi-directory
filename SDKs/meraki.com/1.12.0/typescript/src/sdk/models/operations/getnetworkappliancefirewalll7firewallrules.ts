@@ -22,5 +22,5 @@ export class GetNetworkApplianceFirewallL7FirewallRulesResponse extends Speakeas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceFirewallL7FirewallRules200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceFirewallL7FirewallRules200ApplicationJSONObject?: Record<string, any>;
 }

@@ -2,29 +2,19 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
-export enum GetDailyStatsCarTypeEnum {
-    New = "new",
-    Used = "used"
-}
-
-export enum GetDailyStatsCountryEnum {
-    Us = "us",
-    Ca = "ca"
-}
-
 
 export class GetDailyStatsQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api_key" })
   apiKey?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=car_type" })
-  carType?: GetDailyStatsCarTypeEnum;
+  carType?: shared.ApiKeyEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=city_state" })
   cityState?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=country" })
-  country?: GetDailyStatsCountryEnum;
+  country?: shared.ApiKeyEnum8;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" })
   state?: string;
@@ -57,7 +47,7 @@ export class GetDailyStatsResponse extends SpeakeasyBase {
   dailyStats?: shared.DailyStats;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;

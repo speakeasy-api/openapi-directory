@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,105 +23,107 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RepeatViewModel } from "./repeatviewmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceAllocationViewModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var repeatviewmodel_1 = require("./repeatviewmodel");
 var ServiceAllocationViewModel = /** @class */ (function (_super) {
     __extends(ServiceAllocationViewModel, _super);
     function ServiceAllocationViewModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingCount" }),
         __metadata("design:type", Number)
     ], ServiceAllocationViewModel.prototype, "bookingCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingLimit" }),
         __metadata("design:type", Number)
     ], ServiceAllocationViewModel.prototype, "bookingLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", String)
     ], ServiceAllocationViewModel.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Number)
     ], ServiceAllocationViewModel.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ServiceAllocationViewModel.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationId" }),
         __metadata("design:type", String)
     ], ServiceAllocationViewModel.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectName" }),
         __metadata("design:type", String)
     ], ServiceAllocationViewModel.prototype, "objectName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], ServiceAllocationViewModel.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repeat" }),
-        __metadata("design:type", RepeatViewModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repeat" }),
+        __metadata("design:type", repeatviewmodel_1.RepeatViewModel)
     ], ServiceAllocationViewModel.prototype, "repeat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repeats" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repeats" }),
         __metadata("design:type", Boolean)
     ], ServiceAllocationViewModel.prototype, "repeats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceDescription" }),
         __metadata("design:type", String)
     ], ServiceAllocationViewModel.prototype, "resourceDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceId" }),
         __metadata("design:type", String)
     ], ServiceAllocationViewModel.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceImageUrl" }),
         __metadata("design:type", String)
     ], ServiceAllocationViewModel.prototype, "resourceImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceName" }),
         __metadata("design:type", String)
     ], ServiceAllocationViewModel.prototype, "resourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceDescription" }),
         __metadata("design:type", String)
     ], ServiceAllocationViewModel.prototype, "serviceDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceDuration" }),
         __metadata("design:type", Number)
     ], ServiceAllocationViewModel.prototype, "serviceDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceId" }),
         __metadata("design:type", String)
     ], ServiceAllocationViewModel.prototype, "serviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceImageUrl" }),
         __metadata("design:type", String)
     ], ServiceAllocationViewModel.prototype, "serviceImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceName" }),
         __metadata("design:type", String)
     ], ServiceAllocationViewModel.prototype, "serviceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", String)
     ], ServiceAllocationViewModel.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Number)
     ], ServiceAllocationViewModel.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezoneName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezoneName" }),
         __metadata("design:type", String)
     ], ServiceAllocationViewModel.prototype, "timezoneName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezoneOffset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezoneOffset" }),
         __metadata("design:type", Number)
     ], ServiceAllocationViewModel.prototype, "timezoneOffset", void 0);
     return ServiceAllocationViewModel;
-}(SpeakeasyBase));
-export { ServiceAllocationViewModel };
+}(utils_1.SpeakeasyBase));
+exports.ServiceAllocationViewModel = ServiceAllocationViewModel;

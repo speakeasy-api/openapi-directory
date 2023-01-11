@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Disk } from "./disk";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceHardware = void 0;
+var utils_1 = require("../../../internal/utils");
+var disk_1 = require("./disk");
 // InstanceHardware
 /**
  * Describes the hardware for the instance.
@@ -34,17 +37,17 @@ var InstanceHardware = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuCount" }),
         __metadata("design:type", Number)
     ], InstanceHardware.prototype, "cpuCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disks", elemType: Disk }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disks", elemType: disk_1.Disk }),
         __metadata("design:type", Array)
     ], InstanceHardware.prototype, "disks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ramSizeInGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ramSizeInGb" }),
         __metadata("design:type", Number)
     ], InstanceHardware.prototype, "ramSizeInGb", void 0);
     return InstanceHardware;
-}(SpeakeasyBase));
-export { InstanceHardware };
+}(utils_1.SpeakeasyBase));
+exports.InstanceHardware = InstanceHardware;

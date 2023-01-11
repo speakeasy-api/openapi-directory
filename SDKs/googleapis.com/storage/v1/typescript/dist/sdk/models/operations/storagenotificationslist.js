@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,218 +14,243 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StorageNotificationsListResponse = exports.StorageNotificationsListRequest = exports.StorageNotificationsListSecurity = exports.StorageNotificationsListSecurityOption5 = exports.StorageNotificationsListSecurityOption4 = exports.StorageNotificationsListSecurityOption3 = exports.StorageNotificationsListSecurityOption2 = exports.StorageNotificationsListSecurityOption1 = exports.StorageNotificationsListQueryParams = exports.StorageNotificationsListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var StorageNotificationsListPathParams = /** @class */ (function (_super) {
     __extends(StorageNotificationsListPathParams, _super);
     function StorageNotificationsListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=bucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=bucket" }),
         __metadata("design:type", String)
     ], StorageNotificationsListPathParams.prototype, "bucket", void 0);
     return StorageNotificationsListPathParams;
-}(SpeakeasyBase));
-export { StorageNotificationsListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.StorageNotificationsListPathParams = StorageNotificationsListPathParams;
 var StorageNotificationsListQueryParams = /** @class */ (function (_super) {
     __extends(StorageNotificationsListQueryParams, _super);
     function StorageNotificationsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], StorageNotificationsListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], StorageNotificationsListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], StorageNotificationsListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], StorageNotificationsListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], StorageNotificationsListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], StorageNotificationsListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], StorageNotificationsListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], StorageNotificationsListQueryParams.prototype, "userIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userProject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userProject" }),
         __metadata("design:type", String)
     ], StorageNotificationsListQueryParams.prototype, "userProject", void 0);
     return StorageNotificationsListQueryParams;
-}(SpeakeasyBase));
-export { StorageNotificationsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.StorageNotificationsListQueryParams = StorageNotificationsListQueryParams;
 var StorageNotificationsListSecurityOption1 = /** @class */ (function (_super) {
     __extends(StorageNotificationsListSecurityOption1, _super);
     function StorageNotificationsListSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageNotificationsListSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageNotificationsListSecurityOption1.prototype, "oauth2c", void 0);
     return StorageNotificationsListSecurityOption1;
-}(SpeakeasyBase));
-export { StorageNotificationsListSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.StorageNotificationsListSecurityOption1 = StorageNotificationsListSecurityOption1;
 var StorageNotificationsListSecurityOption2 = /** @class */ (function (_super) {
     __extends(StorageNotificationsListSecurityOption2, _super);
     function StorageNotificationsListSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageNotificationsListSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageNotificationsListSecurityOption2.prototype, "oauth2c", void 0);
     return StorageNotificationsListSecurityOption2;
-}(SpeakeasyBase));
-export { StorageNotificationsListSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.StorageNotificationsListSecurityOption2 = StorageNotificationsListSecurityOption2;
 var StorageNotificationsListSecurityOption3 = /** @class */ (function (_super) {
     __extends(StorageNotificationsListSecurityOption3, _super);
     function StorageNotificationsListSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageNotificationsListSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageNotificationsListSecurityOption3.prototype, "oauth2c", void 0);
     return StorageNotificationsListSecurityOption3;
-}(SpeakeasyBase));
-export { StorageNotificationsListSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.StorageNotificationsListSecurityOption3 = StorageNotificationsListSecurityOption3;
 var StorageNotificationsListSecurityOption4 = /** @class */ (function (_super) {
     __extends(StorageNotificationsListSecurityOption4, _super);
     function StorageNotificationsListSecurityOption4() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageNotificationsListSecurityOption4.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageNotificationsListSecurityOption4.prototype, "oauth2c", void 0);
     return StorageNotificationsListSecurityOption4;
-}(SpeakeasyBase));
-export { StorageNotificationsListSecurityOption4 };
+}(utils_1.SpeakeasyBase));
+exports.StorageNotificationsListSecurityOption4 = StorageNotificationsListSecurityOption4;
 var StorageNotificationsListSecurityOption5 = /** @class */ (function (_super) {
     __extends(StorageNotificationsListSecurityOption5, _super);
     function StorageNotificationsListSecurityOption5() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageNotificationsListSecurityOption5.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageNotificationsListSecurityOption5.prototype, "oauth2c", void 0);
     return StorageNotificationsListSecurityOption5;
-}(SpeakeasyBase));
-export { StorageNotificationsListSecurityOption5 };
+}(utils_1.SpeakeasyBase));
+exports.StorageNotificationsListSecurityOption5 = StorageNotificationsListSecurityOption5;
 var StorageNotificationsListSecurity = /** @class */ (function (_super) {
     __extends(StorageNotificationsListSecurity, _super);
     function StorageNotificationsListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageNotificationsListSecurityOption1)
     ], StorageNotificationsListSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageNotificationsListSecurityOption2)
     ], StorageNotificationsListSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageNotificationsListSecurityOption3)
     ], StorageNotificationsListSecurity.prototype, "option3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageNotificationsListSecurityOption4)
     ], StorageNotificationsListSecurity.prototype, "option4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageNotificationsListSecurityOption5)
     ], StorageNotificationsListSecurity.prototype, "option5", void 0);
     return StorageNotificationsListSecurity;
-}(SpeakeasyBase));
-export { StorageNotificationsListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.StorageNotificationsListSecurity = StorageNotificationsListSecurity;
 var StorageNotificationsListRequest = /** @class */ (function (_super) {
     __extends(StorageNotificationsListRequest, _super);
     function StorageNotificationsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StorageNotificationsListPathParams)
     ], StorageNotificationsListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StorageNotificationsListQueryParams)
     ], StorageNotificationsListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StorageNotificationsListSecurity)
     ], StorageNotificationsListRequest.prototype, "security", void 0);
     return StorageNotificationsListRequest;
-}(SpeakeasyBase));
-export { StorageNotificationsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.StorageNotificationsListRequest = StorageNotificationsListRequest;
 var StorageNotificationsListResponse = /** @class */ (function (_super) {
     __extends(StorageNotificationsListResponse, _super);
     function StorageNotificationsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StorageNotificationsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Notifications)
     ], StorageNotificationsListResponse.prototype, "notifications", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StorageNotificationsListResponse.prototype, "statusCode", void 0);
     return StorageNotificationsListResponse;
-}(SpeakeasyBase));
-export { StorageNotificationsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.StorageNotificationsListResponse = StorageNotificationsListResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// SasPortalDeploymentInput
-/**
- * The Deployment.
-**/
-var SasPortalDeploymentInput = /** @class */ (function (_super) {
-    __extends(SasPortalDeploymentInput, _super);
-    function SasPortalDeploymentInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
-        __metadata("design:type", String)
-    ], SasPortalDeploymentInput.prototype, "displayName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=sasUserIds" }),
-        __metadata("design:type", Array)
-    ], SasPortalDeploymentInput.prototype, "sasUserIds", void 0);
-    return SasPortalDeploymentInput;
-}(SpeakeasyBase));
-export { SasPortalDeploymentInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SasPortalDeploymentInput = exports.SasPortalDeployment = void 0;
+var utils_1 = require("../../../internal/utils");
 // SasPortalDeployment
 /**
  * The Deployment.
@@ -53,21 +36,41 @@ var SasPortalDeployment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], SasPortalDeployment.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frns" }),
         __metadata("design:type", Array)
     ], SasPortalDeployment.prototype, "frns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SasPortalDeployment.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sasUserIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sasUserIds" }),
         __metadata("design:type", Array)
     ], SasPortalDeployment.prototype, "sasUserIds", void 0);
     return SasPortalDeployment;
-}(SpeakeasyBase));
-export { SasPortalDeployment };
+}(utils_1.SpeakeasyBase));
+exports.SasPortalDeployment = SasPortalDeployment;
+// SasPortalDeploymentInput
+/**
+ * The Deployment.
+**/
+var SasPortalDeploymentInput = /** @class */ (function (_super) {
+    __extends(SasPortalDeploymentInput, _super);
+    function SasPortalDeploymentInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], SasPortalDeploymentInput.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sasUserIds" }),
+        __metadata("design:type", Array)
+    ], SasPortalDeploymentInput.prototype, "sasUserIds", void 0);
+    return SasPortalDeploymentInput;
+}(utils_1.SpeakeasyBase));
+exports.SasPortalDeploymentInput = SasPortalDeploymentInput;

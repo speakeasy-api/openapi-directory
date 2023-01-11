@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigTftp = void 0;
+var utils_1 = require("../../../internal/utils");
 var ConfigTftp = /** @class */ (function (_super) {
     __extends(ConfigTftp, _super);
     function ConfigTftp() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cache" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cache" }),
         __metadata("design:type", Number)
     ], ConfigTftp.prototype, "cache", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client" }),
         __metadata("design:type", String)
     ], ConfigTftp.prototype, "client", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dstfile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dstfile" }),
         __metadata("design:type", String)
     ], ConfigTftp.prototype, "dstfile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mode" }),
         __metadata("design:type", String)
     ], ConfigTftp.prototype, "mode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], ConfigTftp.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retries" }),
         __metadata("design:type", Number)
     ], ConfigTftp.prototype, "retries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=script" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=script" }),
         __metadata("design:type", String)
     ], ConfigTftp.prototype, "script", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server" }),
         __metadata("design:type", String)
     ], ConfigTftp.prototype, "server", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=srcfile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=srcfile" }),
         __metadata("design:type", String)
     ], ConfigTftp.prototype, "srcfile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeout" }),
         __metadata("design:type", Number)
     ], ConfigTftp.prototype, "timeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trace" }),
         __metadata("design:type", String)
     ], ConfigTftp.prototype, "trace", void 0);
     return ConfigTftp;
-}(SpeakeasyBase));
-export { ConfigTftp };
+}(utils_1.SpeakeasyBase));
+exports.ConfigTftp = ConfigTftp;

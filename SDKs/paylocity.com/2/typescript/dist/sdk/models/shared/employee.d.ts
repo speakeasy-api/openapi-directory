@@ -174,9 +174,9 @@ export declare class EmployeeLocalTax extends SpeakeasyBase {
     exemptions?: number;
     exemptions2?: number;
     filingStatus?: string;
-    residentPsd?: string;
+    residentPSD?: string;
     taxCode?: string;
-    workPsd?: string;
+    workPSD?: string;
 }
 /**
  * Add the main direct deposit account. After deposits are made to any additional direct deposit accounts, the remaining net check is deposited in the main direct deposit account. IMPORTANT: A direct deposit update will remove ALL existing main and additional direct deposit information in WebPay and replace with what is provided on the request. GET API will not return direct deposit data.
@@ -334,7 +334,7 @@ export declare class Employee extends SpeakeasyBase {
     additionalRate?: EmployeeAdditionalRate[];
     benefitSetup?: EmployeeBenefitSetup;
     birthDate?: string;
-    companyFein?: string;
+    companyFEIN?: string;
     companyName?: string;
     currency?: string;
     customBooleanFields?: EmployeeCustomBooleanFields[];

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServiceTemplateVersion } from "./servicetemplateversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateServiceTemplateVersionOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var servicetemplateversion_1 = require("./servicetemplateversion");
 var CreateServiceTemplateVersionOutput = /** @class */ (function (_super) {
     __extends(CreateServiceTemplateVersionOutput, _super);
     function CreateServiceTemplateVersionOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceTemplateVersion" }),
-        __metadata("design:type", ServiceTemplateVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceTemplateVersion" }),
+        __metadata("design:type", servicetemplateversion_1.ServiceTemplateVersion)
     ], CreateServiceTemplateVersionOutput.prototype, "serviceTemplateVersion", void 0);
     return CreateServiceTemplateVersionOutput;
-}(SpeakeasyBase));
-export { CreateServiceTemplateVersionOutput };
+}(utils_1.SpeakeasyBase));
+exports.CreateServiceTemplateVersionOutput = CreateServiceTemplateVersionOutput;

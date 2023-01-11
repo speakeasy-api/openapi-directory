@@ -23,11 +23,11 @@ export class GetSignInAttemptsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getSignInAttempts200ApplicationJsonAny?: any;
+  getSignInAttempts200ApplicationJSONAny?: any;
 }

@@ -13,8 +13,8 @@ export class PostUserHerokuKeyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postUserHerokuKey403ApplicationJsonObject?: PostUserHerokuKey403ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postUserHerokuKey403ApplicationJSONObject?: PostUserHerokuKey403ApplicationJson;
 }

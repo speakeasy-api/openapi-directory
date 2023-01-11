@@ -21,6 +21,6 @@ export declare class PutExternalEvaluationResponse extends SpeakeasyBase {
     contentType: string;
     invalidParameterValueException?: any;
     noSuchConfigRuleException?: any;
-    putExternalEvaluationResponse?: Map<string, any>;
+    putExternalEvaluationResponse?: Record<string, any>;
     statusCode: number;
 }

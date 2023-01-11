@@ -53,7 +53,7 @@ export class ProjectsAddCollaboratorResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  projectsAddCollaborator415ApplicationJsonObject?: ProjectsAddCollaborator415ApplicationJson;
+  projectsAddCollaborator415ApplicationJSONObject?: ProjectsAddCollaborator415ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

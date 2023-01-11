@@ -23,11 +23,11 @@ export class DeleteCourseMappingsOfferingIdExternalCourseIdResponse extends Spea
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteCourseMappingsOfferingIdExternalCourseId200ApplicationJsonStrings?: string[];
-
-  @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  deleteCourseMappingsOfferingIdExternalCourseId200ApplicationJSONStrings?: string[];
 }

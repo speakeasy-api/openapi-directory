@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VirtualServiceBackend } from "./virtualservicebackend";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Backend = void 0;
+var utils_1 = require("../../../internal/utils");
+var virtualservicebackend_1 = require("./virtualservicebackend");
 // Backend
 /**
  * An object that represents the backends that a virtual node is expected to send outbound traffic to.
@@ -34,9 +37,9 @@ var Backend = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualService" }),
-        __metadata("design:type", VirtualServiceBackend)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualService" }),
+        __metadata("design:type", virtualservicebackend_1.VirtualServiceBackend)
     ], Backend.prototype, "virtualService", void 0);
     return Backend;
-}(SpeakeasyBase));
-export { Backend };
+}(utils_1.SpeakeasyBase));
+exports.Backend = Backend;

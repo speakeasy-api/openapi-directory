@@ -8,5 +8,5 @@ export declare class AccessDelRequest extends SpeakeasyBase {
 export declare class AccessDelResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    accessDel200ApplicationJsonString?: string;
+    accessDel200ApplicationJSONString?: string;
 }

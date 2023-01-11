@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EncryptionConfiguration } from "./encryptionconfiguration";
-import { ImageScanningConfiguration } from "./imagescanningconfiguration";
-import { ImageTagMutabilityEnum } from "./imagetagmutabilityenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateRepositoryRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var encryptionconfiguration_1 = require("./encryptionconfiguration");
+var imagescanningconfiguration_1 = require("./imagescanningconfiguration");
+var imagetagmutabilityenum_1 = require("./imagetagmutabilityenum");
+var tag_1 = require("./tag");
 var CreateRepositoryRequest = /** @class */ (function (_super) {
     __extends(CreateRepositoryRequest, _super);
     function CreateRepositoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionConfiguration" }),
-        __metadata("design:type", EncryptionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionConfiguration" }),
+        __metadata("design:type", encryptionconfiguration_1.EncryptionConfiguration)
     ], CreateRepositoryRequest.prototype, "encryptionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageScanningConfiguration" }),
-        __metadata("design:type", ImageScanningConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageScanningConfiguration" }),
+        __metadata("design:type", imagescanningconfiguration_1.ImageScanningConfiguration)
     ], CreateRepositoryRequest.prototype, "imageScanningConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageTagMutability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageTagMutability" }),
         __metadata("design:type", String)
     ], CreateRepositoryRequest.prototype, "imageTagMutability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositoryName" }),
         __metadata("design:type", String)
     ], CreateRepositoryRequest.prototype, "repositoryName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateRepositoryRequest.prototype, "tags", void 0);
     return CreateRepositoryRequest;
-}(SpeakeasyBase));
-export { CreateRepositoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateRepositoryRequest = CreateRepositoryRequest;

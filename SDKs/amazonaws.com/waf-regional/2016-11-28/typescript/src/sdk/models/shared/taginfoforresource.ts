@@ -9,7 +9,7 @@ import { Tag } from "./tag";
 **/
 export class TagInfoForResource extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ResourceARN" })
-  resourceArn?: string;
+  resourceARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=TagList", elemType: Tag })
   tagList?: Tag[];

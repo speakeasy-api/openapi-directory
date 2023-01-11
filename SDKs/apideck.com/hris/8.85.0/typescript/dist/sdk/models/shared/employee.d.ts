@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Address } from "./address";
 import { CurrencyEnum } from "./currencyenum";
 import { PaymentUnitEnum } from "./paymentunitenum";
+import { Address } from "./address";
+import { GenderEnum } from "./genderenum";
 import { CustomField } from "./customfield";
 import { Email } from "./email";
-import { GenderEnum } from "./genderenum";
 import { PhoneNumber } from "./phonenumber";
 export declare enum EmployeeCompensationsFlsaStatusEnum {
     Exempt = "exempt",
@@ -140,6 +140,7 @@ export declare class Employee extends SpeakeasyBase {
     directReports?: string[];
     displayName?: string;
     division?: string;
+    divisionId?: string;
     emails?: Email[];
     employeeNumber?: string;
     employmentEndDate?: string;
@@ -198,6 +199,7 @@ export declare class EmployeeInput extends SpeakeasyBase {
     directReports?: string[];
     displayName?: string;
     division?: string;
+    divisionId?: string;
     emails?: Email[];
     employeeNumber?: string;
     employmentEndDate?: string;

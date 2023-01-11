@@ -34,5 +34,5 @@ export class GetDeviceClientsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceClients200ApplicationJsonObject?: Map<string, any>;
+  getDeviceClients200ApplicationJSONObject?: Record<string, any>;
 }

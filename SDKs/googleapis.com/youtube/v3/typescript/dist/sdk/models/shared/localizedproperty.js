@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LanguageTag } from "./languagetag";
-import { LocalizedString } from "./localizedstring";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocalizedProperty = void 0;
+var utils_1 = require("../../../internal/utils");
+var languagetag_1 = require("./languagetag");
+var localizedstring_1 = require("./localizedstring");
 var LocalizedProperty = /** @class */ (function (_super) {
     __extends(LocalizedProperty, _super);
     function LocalizedProperty() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultLanguage" }),
-        __metadata("design:type", LanguageTag)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultLanguage" }),
+        __metadata("design:type", languagetag_1.LanguageTag)
     ], LocalizedProperty.prototype, "defaultLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localized", elemType: LocalizedString }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localized", elemType: localizedstring_1.LocalizedString }),
         __metadata("design:type", Array)
     ], LocalizedProperty.prototype, "localized", void 0);
     return LocalizedProperty;
-}(SpeakeasyBase));
-export { LocalizedProperty };
+}(utils_1.SpeakeasyBase));
+exports.LocalizedProperty = LocalizedProperty;

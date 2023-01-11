@@ -1,5 +1,8 @@
-export var ReservedNodeOfferingTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReservedNodeOfferingTypeEnum = void 0;
+var ReservedNodeOfferingTypeEnum;
 (function (ReservedNodeOfferingTypeEnum) {
     ReservedNodeOfferingTypeEnum["Regular"] = "Regular";
     ReservedNodeOfferingTypeEnum["Upgradable"] = "Upgradable";
-})(ReservedNodeOfferingTypeEnum || (ReservedNodeOfferingTypeEnum = {}));
+})(ReservedNodeOfferingTypeEnum = exports.ReservedNodeOfferingTypeEnum || (exports.ReservedNodeOfferingTypeEnum = {}));

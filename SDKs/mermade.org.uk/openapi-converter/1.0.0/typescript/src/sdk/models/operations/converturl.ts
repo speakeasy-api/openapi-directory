@@ -25,5 +25,5 @@ export class ConvertUrlResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  convertUrl200ApplicationJsonAny?: any;
+  convertUrl200ApplicationJSONAny?: any;
 }

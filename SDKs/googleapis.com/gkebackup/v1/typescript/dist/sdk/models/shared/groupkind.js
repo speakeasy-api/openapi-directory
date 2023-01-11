@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GroupKind = void 0;
+var utils_1 = require("../../../internal/utils");
 // GroupKind
 /**
  * This is a direct map to the Kubernetes GroupKind type [GroupKind](https://godoc.org/k8s.io/apimachinery/pkg/runtime/schema#GroupKind) and is used for identifying specific "types" of resources to restore.
@@ -33,13 +36,13 @@ var GroupKind = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceGroup" }),
         __metadata("design:type", String)
     ], GroupKind.prototype, "resourceGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceKind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceKind" }),
         __metadata("design:type", String)
     ], GroupKind.prototype, "resourceKind", void 0);
     return GroupKind;
-}(SpeakeasyBase));
-export { GroupKind };
+}(utils_1.SpeakeasyBase));
+exports.GroupKind = GroupKind;

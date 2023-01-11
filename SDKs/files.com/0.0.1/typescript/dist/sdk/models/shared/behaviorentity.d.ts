@@ -7,5 +7,5 @@ export declare class BehaviorEntity extends SpeakeasyBase {
     behavior?: string;
     id?: number;
     path?: string;
-    value?: Map<string, any>;
+    value?: Record<string, any>;
 }

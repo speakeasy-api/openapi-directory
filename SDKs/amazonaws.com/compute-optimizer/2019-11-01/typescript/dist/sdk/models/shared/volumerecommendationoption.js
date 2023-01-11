@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VolumeConfiguration } from "./volumeconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VolumeRecommendationOption = void 0;
+var utils_1 = require("../../../internal/utils");
+var volumeconfiguration_1 = require("./volumeconfiguration");
 // VolumeRecommendationOption
 /**
  * Describes a recommendation option for an Amazon Elastic Block Store (Amazon EBS) instance.
@@ -34,17 +37,17 @@ var VolumeRecommendationOption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configuration" }),
-        __metadata("design:type", VolumeConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configuration" }),
+        __metadata("design:type", volumeconfiguration_1.VolumeConfiguration)
     ], VolumeRecommendationOption.prototype, "configuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=performanceRisk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=performanceRisk" }),
         __metadata("design:type", Number)
     ], VolumeRecommendationOption.prototype, "performanceRisk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rank" }),
         __metadata("design:type", Number)
     ], VolumeRecommendationOption.prototype, "rank", void 0);
     return VolumeRecommendationOption;
-}(SpeakeasyBase));
-export { VolumeRecommendationOption };
+}(utils_1.SpeakeasyBase));
+exports.VolumeRecommendationOption = VolumeRecommendationOption;

@@ -28,8 +28,8 @@ export class GetAdminScenariosResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getAdminScenarios200ApplicationJsonObject?: GetAdminScenarios200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getAdminScenarios200ApplicationJSONObject?: GetAdminScenarios200ApplicationJson;
 }

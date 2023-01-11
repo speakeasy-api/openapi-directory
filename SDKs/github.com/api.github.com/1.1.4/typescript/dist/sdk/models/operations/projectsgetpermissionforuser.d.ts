@@ -15,7 +15,7 @@ export declare class ProjectsGetPermissionForUserResponse extends SpeakeasyBase 
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    projectsGetPermissionForUser415ApplicationJsonObject?: ProjectsGetPermissionForUser415ApplicationJson;
+    projectsGetPermissionForUser415ApplicationJSONObject?: ProjectsGetPermissionForUser415ApplicationJson;
     repositoryCollaboratorPermission?: shared.RepositoryCollaboratorPermission;
     validationError?: shared.ValidationError;
 }

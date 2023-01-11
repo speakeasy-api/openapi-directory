@@ -10,6 +10,6 @@ export declare class GetConsumerV1CustomersIdPlanlimitsServiceIdResourceIdDateTi
 }
 export declare class GetConsumerV1CustomersIdPlanlimitsServiceIdResourceIdDateTimeTzResponse extends SpeakeasyBase {
     contentType: string;
-    planLimitListViewModel?: Map<string, any>;
+    planLimitListViewModel?: Record<string, any>;
     statusCode: number;
 }

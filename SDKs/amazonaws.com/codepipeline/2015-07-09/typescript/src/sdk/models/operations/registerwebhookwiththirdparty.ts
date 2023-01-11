@@ -48,7 +48,7 @@ export class RegisterWebhookWithThirdPartyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  registerWebhookWithThirdPartyOutput?: Map<string, any>;
+  registerWebhookWithThirdPartyOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

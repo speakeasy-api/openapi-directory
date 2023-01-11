@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var FirstLastNameUsRaceEthnicityOutRaceEthnicityEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FirstLastNameUsRaceEthnicityOut = exports.FirstLastNameUsRaceEthnicityOutRaceEthnicityAltEnum = exports.FirstLastNameUsRaceEthnicityOutRaceEthnicityEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var FirstLastNameUsRaceEthnicityOutRaceEthnicityEnum;
 (function (FirstLastNameUsRaceEthnicityOutRaceEthnicityEnum) {
     FirstLastNameUsRaceEthnicityOutRaceEthnicityEnum["WNl"] = "W_NL";
     FirstLastNameUsRaceEthnicityOutRaceEthnicityEnum["Hl"] = "HL";
@@ -31,8 +34,8 @@ export var FirstLastNameUsRaceEthnicityOutRaceEthnicityEnum;
     FirstLastNameUsRaceEthnicityOutRaceEthnicityEnum["BNl"] = "B_NL";
     FirstLastNameUsRaceEthnicityOutRaceEthnicityEnum["AiAn"] = "AI_AN";
     FirstLastNameUsRaceEthnicityOutRaceEthnicityEnum["Pi"] = "PI";
-})(FirstLastNameUsRaceEthnicityOutRaceEthnicityEnum || (FirstLastNameUsRaceEthnicityOutRaceEthnicityEnum = {}));
-export var FirstLastNameUsRaceEthnicityOutRaceEthnicityAltEnum;
+})(FirstLastNameUsRaceEthnicityOutRaceEthnicityEnum = exports.FirstLastNameUsRaceEthnicityOutRaceEthnicityEnum || (exports.FirstLastNameUsRaceEthnicityOutRaceEthnicityEnum = {}));
+var FirstLastNameUsRaceEthnicityOutRaceEthnicityAltEnum;
 (function (FirstLastNameUsRaceEthnicityOutRaceEthnicityAltEnum) {
     FirstLastNameUsRaceEthnicityOutRaceEthnicityAltEnum["WNl"] = "W_NL";
     FirstLastNameUsRaceEthnicityOutRaceEthnicityAltEnum["Hl"] = "HL";
@@ -40,7 +43,7 @@ export var FirstLastNameUsRaceEthnicityOutRaceEthnicityAltEnum;
     FirstLastNameUsRaceEthnicityOutRaceEthnicityAltEnum["BNl"] = "B_NL";
     FirstLastNameUsRaceEthnicityOutRaceEthnicityAltEnum["AiAn"] = "AI_AN";
     FirstLastNameUsRaceEthnicityOutRaceEthnicityAltEnum["Pi"] = "PI";
-})(FirstLastNameUsRaceEthnicityOutRaceEthnicityAltEnum || (FirstLastNameUsRaceEthnicityOutRaceEthnicityAltEnum = {}));
+})(FirstLastNameUsRaceEthnicityOutRaceEthnicityAltEnum = exports.FirstLastNameUsRaceEthnicityOutRaceEthnicityAltEnum || (exports.FirstLastNameUsRaceEthnicityOutRaceEthnicityAltEnum = {}));
 // FirstLastNameUsRaceEthnicityOut
 /**
  * Represents the output of inferring the LIKELY US 'race/ethnicity' from a personal name, given US country of residence and (optionally) a ZIP5 code.
@@ -51,45 +54,45 @@ var FirstLastNameUsRaceEthnicityOut = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstName" }),
         __metadata("design:type", String)
     ], FirstLastNameUsRaceEthnicityOut.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], FirstLastNameUsRaceEthnicityOut.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastName" }),
         __metadata("design:type", String)
     ], FirstLastNameUsRaceEthnicityOut.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=probabilityAltCalibrated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=probabilityAltCalibrated" }),
         __metadata("design:type", Number)
     ], FirstLastNameUsRaceEthnicityOut.prototype, "probabilityAltCalibrated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=probabilityCalibrated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=probabilityCalibrated" }),
         __metadata("design:type", Number)
     ], FirstLastNameUsRaceEthnicityOut.prototype, "probabilityCalibrated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=raceEthnicitiesTop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=raceEthnicitiesTop" }),
         __metadata("design:type", Array)
     ], FirstLastNameUsRaceEthnicityOut.prototype, "raceEthnicitiesTop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=raceEthnicity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=raceEthnicity" }),
         __metadata("design:type", String)
     ], FirstLastNameUsRaceEthnicityOut.prototype, "raceEthnicity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=raceEthnicityAlt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=raceEthnicityAlt" }),
         __metadata("design:type", String)
     ], FirstLastNameUsRaceEthnicityOut.prototype, "raceEthnicityAlt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=score" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=score" }),
         __metadata("design:type", Number)
     ], FirstLastNameUsRaceEthnicityOut.prototype, "score", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=script" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=script" }),
         __metadata("design:type", String)
     ], FirstLastNameUsRaceEthnicityOut.prototype, "script", void 0);
     return FirstLastNameUsRaceEthnicityOut;
-}(SpeakeasyBase));
-export { FirstLastNameUsRaceEthnicityOut };
+}(utils_1.SpeakeasyBase));
+exports.FirstLastNameUsRaceEthnicityOut = FirstLastNameUsRaceEthnicityOut;

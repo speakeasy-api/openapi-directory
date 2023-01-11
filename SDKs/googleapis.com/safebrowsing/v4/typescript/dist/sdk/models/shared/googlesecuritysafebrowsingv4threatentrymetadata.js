@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleSecuritySafebrowsingV4ThreatEntryMetadataMetadataEntry } from "./googlesecuritysafebrowsingv4threatentrymetadatametadataentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleSecuritySafebrowsingV4ThreatEntryMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlesecuritysafebrowsingv4threatentrymetadatametadataentry_1 = require("./googlesecuritysafebrowsingv4threatentrymetadatametadataentry");
 // GoogleSecuritySafebrowsingV4ThreatEntryMetadata
 /**
  * The metadata associated with a specific threat entry. The client is expected to know the metadata key/value pairs associated with each threat type.
@@ -34,9 +37,9 @@ var GoogleSecuritySafebrowsingV4ThreatEntryMetadata = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entries", elemType: GoogleSecuritySafebrowsingV4ThreatEntryMetadataMetadataEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entries", elemType: googlesecuritysafebrowsingv4threatentrymetadatametadataentry_1.GoogleSecuritySafebrowsingV4ThreatEntryMetadataMetadataEntry }),
         __metadata("design:type", Array)
     ], GoogleSecuritySafebrowsingV4ThreatEntryMetadata.prototype, "entries", void 0);
     return GoogleSecuritySafebrowsingV4ThreatEntryMetadata;
-}(SpeakeasyBase));
-export { GoogleSecuritySafebrowsingV4ThreatEntryMetadata };
+}(utils_1.SpeakeasyBase));
+exports.GoogleSecuritySafebrowsingV4ThreatEntryMetadata = GoogleSecuritySafebrowsingV4ThreatEntryMetadata;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayRoute } from "./transitgatewayroute";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateTransitGatewayRouteResult = exports.CreateTransitGatewayRouteResultRoute = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateTransitGatewayRouteResultRoute
+/**
+ * Information about the route.
+**/
+var CreateTransitGatewayRouteResultRoute = /** @class */ (function (_super) {
+    __extends(CreateTransitGatewayRouteResultRoute, _super);
+    function CreateTransitGatewayRouteResultRoute() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayRouteResultRoute.prototype, "destinationCidrBlock", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayRouteResultRoute.prototype, "prefixListId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayRouteResultRoute.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayRouteResultRoute.prototype, "transitGatewayAttachments", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayRouteResultRoute.prototype, "type", void 0);
+    return CreateTransitGatewayRouteResultRoute;
+}(utils_1.SpeakeasyBase));
+exports.CreateTransitGatewayRouteResultRoute = CreateTransitGatewayRouteResultRoute;
 var CreateTransitGatewayRouteResult = /** @class */ (function (_super) {
     __extends(CreateTransitGatewayRouteResult, _super);
     function CreateTransitGatewayRouteResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TransitGatewayRoute)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateTransitGatewayRouteResultRoute)
     ], CreateTransitGatewayRouteResult.prototype, "route", void 0);
     return CreateTransitGatewayRouteResult;
-}(SpeakeasyBase));
-export { CreateTransitGatewayRouteResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateTransitGatewayRouteResult = CreateTransitGatewayRouteResult;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1FeedbackThread } from "./googleclouddatalabelingv1beta1feedbackthread";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1ListFeedbackThreadsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1feedbackthread_1 = require("./googleclouddatalabelingv1beta1feedbackthread");
 // GoogleCloudDatalabelingV1beta1ListFeedbackThreadsResponse
 /**
  * Results for listing FeedbackThreads.
@@ -34,13 +37,13 @@ var GoogleCloudDatalabelingV1beta1ListFeedbackThreadsResponse = /** @class */ (f
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feedbackThreads", elemType: GoogleCloudDatalabelingV1beta1FeedbackThread }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feedbackThreads", elemType: googleclouddatalabelingv1beta1feedbackthread_1.GoogleCloudDatalabelingV1beta1FeedbackThread }),
         __metadata("design:type", Array)
     ], GoogleCloudDatalabelingV1beta1ListFeedbackThreadsResponse.prototype, "feedbackThreads", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1ListFeedbackThreadsResponse.prototype, "nextPageToken", void 0);
     return GoogleCloudDatalabelingV1beta1ListFeedbackThreadsResponse;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1ListFeedbackThreadsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1ListFeedbackThreadsResponse = GoogleCloudDatalabelingV1beta1ListFeedbackThreadsResponse;

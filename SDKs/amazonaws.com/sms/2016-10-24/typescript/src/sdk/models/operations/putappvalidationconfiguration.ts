@@ -60,7 +60,7 @@ export class PutAppValidationConfigurationResponse extends SpeakeasyBase {
   operationNotPermittedException?: any;
 
   @SpeakeasyMetadata()
-  putAppValidationConfigurationResponse?: Map<string, any>;
+  putAppValidationConfigurationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

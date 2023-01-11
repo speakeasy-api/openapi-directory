@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HeaderOverride } from "./headeroverride";
-import { OAuthToken } from "./oauthtoken";
-import { OidcToken } from "./oidctoken";
-import { UriOverride } from "./urioverride";
-export var HttpTargetHttpMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpTarget = exports.HttpTargetHttpMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var headeroverride_1 = require("./headeroverride");
+var oauthtoken_1 = require("./oauthtoken");
+var oidctoken_1 = require("./oidctoken");
+var urioverride_1 = require("./urioverride");
+var HttpTargetHttpMethodEnum;
 (function (HttpTargetHttpMethodEnum) {
     HttpTargetHttpMethodEnum["HttpMethodUnspecified"] = "HTTP_METHOD_UNSPECIFIED";
     HttpTargetHttpMethodEnum["Post"] = "POST";
@@ -37,7 +40,7 @@ export var HttpTargetHttpMethodEnum;
     HttpTargetHttpMethodEnum["Delete"] = "DELETE";
     HttpTargetHttpMethodEnum["Patch"] = "PATCH";
     HttpTargetHttpMethodEnum["Options"] = "OPTIONS";
-})(HttpTargetHttpMethodEnum || (HttpTargetHttpMethodEnum = {}));
+})(HttpTargetHttpMethodEnum = exports.HttpTargetHttpMethodEnum || (exports.HttpTargetHttpMethodEnum = {}));
 // HttpTarget
 /**
  * HTTP target. When specified as a Queue, all the tasks with [HttpRequest] will be overridden according to the target.
@@ -48,25 +51,25 @@ var HttpTarget = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headerOverrides", elemType: HeaderOverride }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headerOverrides", elemType: headeroverride_1.HeaderOverride }),
         __metadata("design:type", Array)
     ], HttpTarget.prototype, "headerOverrides", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpMethod" }),
         __metadata("design:type", String)
     ], HttpTarget.prototype, "httpMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauthToken" }),
-        __metadata("design:type", OAuthToken)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauthToken" }),
+        __metadata("design:type", oauthtoken_1.OAuthToken)
     ], HttpTarget.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oidcToken" }),
-        __metadata("design:type", OidcToken)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oidcToken" }),
+        __metadata("design:type", oidctoken_1.OidcToken)
     ], HttpTarget.prototype, "oidcToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uriOverride" }),
-        __metadata("design:type", UriOverride)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uriOverride" }),
+        __metadata("design:type", urioverride_1.UriOverride)
     ], HttpTarget.prototype, "uriOverride", void 0);
     return HttpTarget;
-}(SpeakeasyBase));
-export { HttpTarget };
+}(utils_1.SpeakeasyBase));
+exports.HttpTarget = HttpTarget;

@@ -6,7 +6,7 @@ import { SasPortalStatus } from "./sasportalstatus";
 export declare class SasPortalOperation extends SpeakeasyBase {
     done?: boolean;
     error?: SasPortalStatus;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     name?: string;
-    response?: Map<string, any>;
+    response?: Record<string, any>;
 }

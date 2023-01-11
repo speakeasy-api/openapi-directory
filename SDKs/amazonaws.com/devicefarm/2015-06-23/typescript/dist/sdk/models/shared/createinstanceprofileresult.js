@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceProfile } from "./instanceprofile";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateInstanceProfileResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var instanceprofile_1 = require("./instanceprofile");
 var CreateInstanceProfileResult = /** @class */ (function (_super) {
     __extends(CreateInstanceProfileResult, _super);
     function CreateInstanceProfileResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceProfile" }),
-        __metadata("design:type", InstanceProfile)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceProfile" }),
+        __metadata("design:type", instanceprofile_1.InstanceProfile)
     ], CreateInstanceProfileResult.prototype, "instanceProfile", void 0);
     return CreateInstanceProfileResult;
-}(SpeakeasyBase));
-export { CreateInstanceProfileResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateInstanceProfileResult = CreateInstanceProfileResult;

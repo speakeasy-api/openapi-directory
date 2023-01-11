@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ValidationAuthority = void 0;
+var utils_1 = require("../../../internal/utils");
 // ValidationAuthority
 /**
  * Settings to access a validation authority server
@@ -33,57 +36,57 @@ var ValidationAuthority = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alwaysValid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alwaysValid" }),
         __metadata("design:type", Boolean)
     ], ValidationAuthority.prototype, "alwaysValid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=badTtl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=badTtl" }),
         __metadata("design:type", Number)
     ], ValidationAuthority.prototype, "badTtl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ValidationAuthority.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=goodTtl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=goodTtl" }),
         __metadata("design:type", Number)
     ], ValidationAuthority.prototype, "goodTtl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], ValidationAuthority.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", String)
     ], ValidationAuthority.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ValidationAuthority.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], ValidationAuthority.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ValidationAuthority.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noCache" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noCache" }),
         __metadata("design:type", Boolean)
     ], ValidationAuthority.prototype, "noCache", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], ValidationAuthority.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeout" }),
         __metadata("design:type", Number)
     ], ValidationAuthority.prototype, "timeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ValidationAuthority.prototype, "url", void 0);
     return ValidationAuthority;
-}(SpeakeasyBase));
-export { ValidationAuthority };
+}(utils_1.SpeakeasyBase));
+exports.ValidationAuthority = ValidationAuthority;

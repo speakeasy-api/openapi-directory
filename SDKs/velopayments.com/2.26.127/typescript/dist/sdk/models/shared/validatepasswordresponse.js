@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ValidatePasswordResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var ValidatePasswordResponse = /** @class */ (function (_super) {
     __extends(ValidatePasswordResponse, _super);
     function ValidatePasswordResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=score" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=score" }),
         __metadata("design:type", Number)
     ], ValidatePasswordResponse.prototype, "score", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suggestions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suggestions" }),
         __metadata("design:type", Array)
     ], ValidatePasswordResponse.prototype, "suggestions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valid" }),
         __metadata("design:type", Boolean)
     ], ValidatePasswordResponse.prototype, "valid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warning" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warning" }),
         __metadata("design:type", String)
     ], ValidatePasswordResponse.prototype, "warning", void 0);
     return ValidatePasswordResponse;
-}(SpeakeasyBase));
-export { ValidatePasswordResponse };
+}(utils_1.SpeakeasyBase));
+exports.ValidatePasswordResponse = ValidatePasswordResponse;

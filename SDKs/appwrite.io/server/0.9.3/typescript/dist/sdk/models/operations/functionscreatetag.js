@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,98 +14,123 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FunctionsCreateTagResponse = exports.FunctionsCreateTagRequest = exports.FunctionsCreateTagSecurity = exports.FunctionsCreateTagRequestBody = exports.FunctionsCreateTagPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var FunctionsCreateTagPathParams = /** @class */ (function (_super) {
     __extends(FunctionsCreateTagPathParams, _super);
     function FunctionsCreateTagPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=functionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=functionId" }),
         __metadata("design:type", String)
     ], FunctionsCreateTagPathParams.prototype, "functionId", void 0);
     return FunctionsCreateTagPathParams;
-}(SpeakeasyBase));
-export { FunctionsCreateTagPathParams };
+}(utils_1.SpeakeasyBase));
+exports.FunctionsCreateTagPathParams = FunctionsCreateTagPathParams;
 var FunctionsCreateTagRequestBody = /** @class */ (function (_super) {
     __extends(FunctionsCreateTagRequestBody, _super);
     function FunctionsCreateTagRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=code" }),
         __metadata("design:type", String)
     ], FunctionsCreateTagRequestBody.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=command" }),
         __metadata("design:type", String)
     ], FunctionsCreateTagRequestBody.prototype, "command", void 0);
     return FunctionsCreateTagRequestBody;
-}(SpeakeasyBase));
-export { FunctionsCreateTagRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.FunctionsCreateTagRequestBody = FunctionsCreateTagRequestBody;
 var FunctionsCreateTagSecurity = /** @class */ (function (_super) {
     __extends(FunctionsCreateTagSecurity, _super);
     function FunctionsCreateTagSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeKey)
     ], FunctionsCreateTagSecurity.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeProject)
     ], FunctionsCreateTagSecurity.prototype, "project", void 0);
     return FunctionsCreateTagSecurity;
-}(SpeakeasyBase));
-export { FunctionsCreateTagSecurity };
+}(utils_1.SpeakeasyBase));
+exports.FunctionsCreateTagSecurity = FunctionsCreateTagSecurity;
 var FunctionsCreateTagRequest = /** @class */ (function (_super) {
     __extends(FunctionsCreateTagRequest, _super);
     function FunctionsCreateTagRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FunctionsCreateTagPathParams)
     ], FunctionsCreateTagRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", FunctionsCreateTagRequestBody)
     ], FunctionsCreateTagRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FunctionsCreateTagSecurity)
     ], FunctionsCreateTagRequest.prototype, "security", void 0);
     return FunctionsCreateTagRequest;
-}(SpeakeasyBase));
-export { FunctionsCreateTagRequest };
+}(utils_1.SpeakeasyBase));
+exports.FunctionsCreateTagRequest = FunctionsCreateTagRequest;
 var FunctionsCreateTagResponse = /** @class */ (function (_super) {
     __extends(FunctionsCreateTagResponse, _super);
     function FunctionsCreateTagResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FunctionsCreateTagResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FunctionsCreateTagResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Tag)
     ], FunctionsCreateTagResponse.prototype, "tag", void 0);
     return FunctionsCreateTagResponse;
-}(SpeakeasyBase));
-export { FunctionsCreateTagResponse };
+}(utils_1.SpeakeasyBase));
+exports.FunctionsCreateTagResponse = FunctionsCreateTagResponse;

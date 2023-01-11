@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetMediaRequest, GetMediaResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,27 +33,27 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetMediaRequest = {
   headers: {
-    xAmzAlgorithm: "laborum",
-    xAmzContentSha256: "quibusdam",
-    xAmzCredential: "eum",
-    xAmzDate: "magnam",
-    xAmzSecurityToken: "veniam",
-    xAmzSignature: "dolores",
-    xAmzSignedHeaders: "rerum",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
     startSelector: {
-      afterFragmentNumber: "et",
-      continuationToken: "voluptatem",
-      startSelectorType: "CONTINUATION_TOKEN",
-      startTimestamp: "2007-03-18T05:55:44Z",
+      afterFragmentNumber: "voluptas",
+      continuationToken: "fugit",
+      startSelectorType: "FRAGMENT_NUMBER",
+      startTimestamp: "2003-05-13T04:57:12Z",
     },
-    streamArn: "est",
-    streamName: "natus",
+    streamARN: "rerum",
+    streamName: "dicta",
   },
 };
 
-sdk.sdk.getMedia(req).then((res: GetMediaResponse | AxiosError) => {
+sdk.getMedia(req).then((res: GetMediaResponse | AxiosError) => {
    // handle response
 });
 ```

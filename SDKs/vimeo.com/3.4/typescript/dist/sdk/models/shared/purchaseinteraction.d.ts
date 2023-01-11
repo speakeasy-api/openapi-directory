@@ -24,6 +24,6 @@ export declare class PurchaseInteractionSubscribe extends SpeakeasyBase {
 }
 export declare class PurchaseInteraction extends SpeakeasyBase {
     buy?: PurchaseInteractionBuy;
-    rent?: Map<string, any>;
+    rent?: Record<string, any>;
     subscribe?: PurchaseInteractionSubscribe;
 }

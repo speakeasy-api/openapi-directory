@@ -43,11 +43,11 @@ export class GetOrganizationCellularGatewayUplinkStatusesResponse extends Speake
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationCellularGatewayUplinkStatuses200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationCellularGatewayUplinkStatuses200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ErrorObject } from "./errorobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorResponseObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var errorobject_1 = require("./errorobject");
 var ErrorResponseObject = /** @class */ (function (_super) {
     __extends(ErrorResponseObject, _super);
     function ErrorResponseObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", ErrorObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", errorobject_1.ErrorObject)
     ], ErrorResponseObject.prototype, "error", void 0);
     return ErrorResponseObject;
-}(SpeakeasyBase));
-export { ErrorResponseObject };
+}(utils_1.SpeakeasyBase));
+exports.ErrorResponseObject = ErrorResponseObject;

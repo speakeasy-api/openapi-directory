@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAemHealthCheckResponse = exports.GetAemHealthCheckRequest = exports.GetAemHealthCheckQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAemHealthCheckQueryParams = /** @class */ (function (_super) {
     __extends(GetAemHealthCheckQueryParams, _super);
     function GetAemHealthCheckQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=combineTagsOr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=combineTagsOr" }),
         __metadata("design:type", Boolean)
     ], GetAemHealthCheckQueryParams.prototype, "combineTagsOr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tags" }),
         __metadata("design:type", String)
     ], GetAemHealthCheckQueryParams.prototype, "tags", void 0);
     return GetAemHealthCheckQueryParams;
-}(SpeakeasyBase));
-export { GetAemHealthCheckQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAemHealthCheckQueryParams = GetAemHealthCheckQueryParams;
 var GetAemHealthCheckRequest = /** @class */ (function (_super) {
     __extends(GetAemHealthCheckRequest, _super);
     function GetAemHealthCheckRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAemHealthCheckQueryParams)
     ], GetAemHealthCheckRequest.prototype, "queryParams", void 0);
     return GetAemHealthCheckRequest;
-}(SpeakeasyBase));
-export { GetAemHealthCheckRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAemHealthCheckRequest = GetAemHealthCheckRequest;
 var GetAemHealthCheckResponse = /** @class */ (function (_super) {
     __extends(GetAemHealthCheckResponse, _super);
     function GetAemHealthCheckResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAemHealthCheckResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAemHealthCheckResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], GetAemHealthCheckResponse.prototype, "getAemHealthCheckDefaultApplicationJsonString", void 0);
+    ], GetAemHealthCheckResponse.prototype, "getAemHealthCheckDefaultApplicationJSONString", void 0);
     return GetAemHealthCheckResponse;
-}(SpeakeasyBase));
-export { GetAemHealthCheckResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAemHealthCheckResponse = GetAemHealthCheckResponse;

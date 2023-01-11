@@ -30,6 +30,10 @@ export class GetTrackingSnippet200ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// GetTrackingSnippet200ApplicationJson
+/** 
+ * The basic response containing the unique ID of the request and the response status
+**/
 export class GetTrackingSnippet200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
   data: GetTrackingSnippet200ApplicationJsonData;
@@ -45,13 +49,13 @@ export class GetTrackingSnippet200ApplicationJson extends SpeakeasyBase {
 **/
 export class GetTrackingSnippet400ApplicationJsonErrorsParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=header" })
-  header?: Map<string, string>;
+  header?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=path" })
-  path?: Map<string, string>;
+  path?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=query" })
-  query?: Map<string, string>;
+  query?: Record<string, string>;
 }
 
 
@@ -61,7 +65,7 @@ export class GetTrackingSnippet400ApplicationJsonErrorsParameters extends Speake
 **/
 export class GetTrackingSnippet400ApplicationJsonErrors extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=fields" })
-  fields?: Map<string, string>;
+  fields?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
   parameters?: GetTrackingSnippet400ApplicationJsonErrorsParameters;
@@ -77,6 +81,10 @@ export class GetTrackingSnippet400ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// GetTrackingSnippet400ApplicationJson
+/** 
+ * Specify the fields and/ or parameters that had errors
+**/
 export class GetTrackingSnippet400ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
   errors: GetTrackingSnippet400ApplicationJsonErrors;
@@ -98,6 +106,10 @@ export class GetTrackingSnippet401ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// GetTrackingSnippet401ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class GetTrackingSnippet401ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -116,6 +128,10 @@ export class GetTrackingSnippet403ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// GetTrackingSnippet403ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class GetTrackingSnippet403ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -134,6 +150,10 @@ export class GetTrackingSnippet404ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// GetTrackingSnippet404ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class GetTrackingSnippet404ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -152,6 +172,10 @@ export class GetTrackingSnippet429ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// GetTrackingSnippet429ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class GetTrackingSnippet429ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -170,6 +194,10 @@ export class GetTrackingSnippet500ApplicationJsonMeta extends SpeakeasyBase {
 }
 
 
+// GetTrackingSnippet500ApplicationJson
+/** 
+ * The error message should specify what cause the error
+**/
 export class GetTrackingSnippet500ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -190,29 +218,29 @@ export class GetTrackingSnippetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getTrackingSnippet200ApplicationJsonObject?: GetTrackingSnippet200ApplicationJson;
+  getTrackingSnippet200ApplicationJSONObject?: GetTrackingSnippet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getTrackingSnippet400ApplicationJsonObject?: GetTrackingSnippet400ApplicationJson;
+  getTrackingSnippet400ApplicationJSONObject?: GetTrackingSnippet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getTrackingSnippet401ApplicationJsonObject?: GetTrackingSnippet401ApplicationJson;
+  getTrackingSnippet401ApplicationJSONObject?: GetTrackingSnippet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getTrackingSnippet403ApplicationJsonObject?: GetTrackingSnippet403ApplicationJson;
+  getTrackingSnippet403ApplicationJSONObject?: GetTrackingSnippet403ApplicationJson;
 
   @SpeakeasyMetadata()
-  getTrackingSnippet404ApplicationJsonObject?: GetTrackingSnippet404ApplicationJson;
+  getTrackingSnippet404ApplicationJSONObject?: GetTrackingSnippet404ApplicationJson;
 
   @SpeakeasyMetadata()
-  getTrackingSnippet429ApplicationJsonObject?: GetTrackingSnippet429ApplicationJson;
+  getTrackingSnippet429ApplicationJSONObject?: GetTrackingSnippet429ApplicationJson;
 
   @SpeakeasyMetadata()
-  getTrackingSnippet500ApplicationJsonObject?: GetTrackingSnippet500ApplicationJson;
+  getTrackingSnippet500ApplicationJSONObject?: GetTrackingSnippet500ApplicationJson;
 }

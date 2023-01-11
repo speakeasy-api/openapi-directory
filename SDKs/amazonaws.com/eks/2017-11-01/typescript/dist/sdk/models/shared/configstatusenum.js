@@ -1,6 +1,9 @@
-export var ConfigStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigStatusEnum = void 0;
+var ConfigStatusEnum;
 (function (ConfigStatusEnum) {
     ConfigStatusEnum["Creating"] = "CREATING";
     ConfigStatusEnum["Deleting"] = "DELETING";
     ConfigStatusEnum["Active"] = "ACTIVE";
-})(ConfigStatusEnum || (ConfigStatusEnum = {}));
+})(ConfigStatusEnum = exports.ConfigStatusEnum || (exports.ConfigStatusEnum = {}));

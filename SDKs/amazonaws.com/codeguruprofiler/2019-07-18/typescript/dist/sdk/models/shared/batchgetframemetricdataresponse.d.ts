@@ -11,5 +11,5 @@ export declare class BatchGetFrameMetricDataResponse extends SpeakeasyBase {
     frameMetricData: FrameMetricDatum[];
     resolution: AggregationPeriodEnum;
     startTime: Date;
-    unprocessedEndTimes: Map<string, TimestampStructure[]>;
+    unprocessedEndTimes: Record<string, TimestampStructure[]>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddressInputModel } from "./addressinputmodel";
-import { BusinessHoursInputModel } from "./businesshoursinputmodel";
-import { BusinessDefaultsInputModel } from "./businessdefaultsinputmodel";
-import { OnlineSettingsInputModel } from "./onlinesettingsinputmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocationInputModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var addressinputmodel_1 = require("./addressinputmodel");
+var businesshoursinputmodel_1 = require("./businesshoursinputmodel");
+var businessdefaultsinputmodel_1 = require("./businessdefaultsinputmodel");
+var onlinesettingsinputmodel_1 = require("./onlinesettingsinputmodel");
 var LocationInputModel = /** @class */ (function (_super) {
     __extends(LocationInputModel, _super);
     function LocationInputModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
-        __metadata("design:type", AddressInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", addressinputmodel_1.AddressInputModel)
     ], LocationInputModel.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adminEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adminEmail" }),
         __metadata("design:type", String)
     ], LocationInputModel.prototype, "adminEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adminName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adminName" }),
         __metadata("design:type", String)
     ], LocationInputModel.prototype, "adminName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessHours" }),
-        __metadata("design:type", BusinessHoursInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessHours" }),
+        __metadata("design:type", businesshoursinputmodel_1.BusinessHoursInputModel)
     ], LocationInputModel.prototype, "businessHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaults" }),
-        __metadata("design:type", BusinessDefaultsInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaults" }),
+        __metadata("design:type", businessdefaultsinputmodel_1.BusinessDefaultsInputModel)
     ], LocationInputModel.prototype, "defaults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], LocationInputModel.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fax" }),
         __metadata("design:type", String)
     ], LocationInputModel.prototype, "fax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=friendlyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=friendlyId" }),
         __metadata("design:type", String)
     ], LocationInputModel.prototype, "friendlyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxCapacity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxCapacity" }),
         __metadata("design:type", Number)
     ], LocationInputModel.prototype, "maxCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxGroupSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxGroupSize" }),
         __metadata("design:type", Number)
     ], LocationInputModel.prototype, "maxGroupSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], LocationInputModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phone" }),
         __metadata("design:type", String)
     ], LocationInputModel.prototype, "phone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionId" }),
         __metadata("design:type", String)
     ], LocationInputModel.prototype, "regionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", OnlineSettingsInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", onlinesettingsinputmodel_1.OnlineSettingsInputModel)
     ], LocationInputModel.prototype, "settings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezoneName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezoneName" }),
         __metadata("design:type", String)
     ], LocationInputModel.prototype, "timezoneName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=website" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website" }),
         __metadata("design:type", String)
     ], LocationInputModel.prototype, "website", void 0);
     return LocationInputModel;
-}(SpeakeasyBase));
-export { LocationInputModel };
+}(utils_1.SpeakeasyBase));
+exports.LocationInputModel = LocationInputModel;

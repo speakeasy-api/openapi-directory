@@ -4,7 +4,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class MacSecKey extends SpeakeasyBase {
     ckn?: string;
-    secretArn?: string;
+    secretARN?: string;
     startOn?: string;
     state?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NewsByPlayerResponse = exports.NewsByPlayerRequest = exports.NewsByPlayerPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var NewsByPlayerPathParams = /** @class */ (function (_super) {
     __extends(NewsByPlayerPathParams, _super);
     function NewsByPlayerPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], NewsByPlayerPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=playerid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=playerid" }),
         __metadata("design:type", String)
     ], NewsByPlayerPathParams.prototype, "playerid", void 0);
     return NewsByPlayerPathParams;
-}(SpeakeasyBase));
-export { NewsByPlayerPathParams };
+}(utils_1.SpeakeasyBase));
+exports.NewsByPlayerPathParams = NewsByPlayerPathParams;
 var NewsByPlayerRequest = /** @class */ (function (_super) {
     __extends(NewsByPlayerRequest, _super);
     function NewsByPlayerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NewsByPlayerPathParams)
     ], NewsByPlayerRequest.prototype, "pathParams", void 0);
     return NewsByPlayerRequest;
-}(SpeakeasyBase));
-export { NewsByPlayerRequest };
+}(utils_1.SpeakeasyBase));
+exports.NewsByPlayerRequest = NewsByPlayerRequest;
 var NewsByPlayerResponse = /** @class */ (function (_super) {
     __extends(NewsByPlayerResponse, _super);
     function NewsByPlayerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NewsByPlayerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], NewsByPlayerResponse.prototype, "news", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], NewsByPlayerResponse.prototype, "statusCode", void 0);
     return NewsByPlayerResponse;
-}(SpeakeasyBase));
-export { NewsByPlayerResponse };
+}(utils_1.SpeakeasyBase));
+exports.NewsByPlayerResponse = NewsByPlayerResponse;

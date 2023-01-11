@@ -29,5 +29,5 @@ export class TwilioMessagePostTwilioPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  twilioMessagePostTwilioPost200ApplicationJsonAny?: any;
+  twilioMessagePostTwilioPost200ApplicationJSONAny?: any;
 }

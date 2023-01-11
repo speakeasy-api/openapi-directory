@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2Error } from "./googleprivacydlpv2error";
-import { GooglePrivacyDlpV2InspectDataSourceDetails } from "./googleprivacydlpv2inspectdatasourcedetails";
-import { GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails } from "./googleprivacydlpv2analyzedatasourceriskdetails";
-export var GooglePrivacyDlpV2DlpJobStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2DlpJob = exports.GooglePrivacyDlpV2DlpJobTypeEnum = exports.GooglePrivacyDlpV2DlpJobStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2error_1 = require("./googleprivacydlpv2error");
+var googleprivacydlpv2inspectdatasourcedetails_1 = require("./googleprivacydlpv2inspectdatasourcedetails");
+var googleprivacydlpv2analyzedatasourceriskdetails_1 = require("./googleprivacydlpv2analyzedatasourceriskdetails");
+var GooglePrivacyDlpV2DlpJobStateEnum;
 (function (GooglePrivacyDlpV2DlpJobStateEnum) {
     GooglePrivacyDlpV2DlpJobStateEnum["JobStateUnspecified"] = "JOB_STATE_UNSPECIFIED";
     GooglePrivacyDlpV2DlpJobStateEnum["Pending"] = "PENDING";
@@ -35,13 +38,13 @@ export var GooglePrivacyDlpV2DlpJobStateEnum;
     GooglePrivacyDlpV2DlpJobStateEnum["Canceled"] = "CANCELED";
     GooglePrivacyDlpV2DlpJobStateEnum["Failed"] = "FAILED";
     GooglePrivacyDlpV2DlpJobStateEnum["Active"] = "ACTIVE";
-})(GooglePrivacyDlpV2DlpJobStateEnum || (GooglePrivacyDlpV2DlpJobStateEnum = {}));
-export var GooglePrivacyDlpV2DlpJobTypeEnum;
+})(GooglePrivacyDlpV2DlpJobStateEnum = exports.GooglePrivacyDlpV2DlpJobStateEnum || (exports.GooglePrivacyDlpV2DlpJobStateEnum = {}));
+var GooglePrivacyDlpV2DlpJobTypeEnum;
 (function (GooglePrivacyDlpV2DlpJobTypeEnum) {
     GooglePrivacyDlpV2DlpJobTypeEnum["DlpJobTypeUnspecified"] = "DLP_JOB_TYPE_UNSPECIFIED";
     GooglePrivacyDlpV2DlpJobTypeEnum["InspectJob"] = "INSPECT_JOB";
     GooglePrivacyDlpV2DlpJobTypeEnum["RiskAnalysisJob"] = "RISK_ANALYSIS_JOB";
-})(GooglePrivacyDlpV2DlpJobTypeEnum || (GooglePrivacyDlpV2DlpJobTypeEnum = {}));
+})(GooglePrivacyDlpV2DlpJobTypeEnum = exports.GooglePrivacyDlpV2DlpJobTypeEnum || (exports.GooglePrivacyDlpV2DlpJobTypeEnum = {}));
 // GooglePrivacyDlpV2DlpJob
 /**
  * Combines all of the information about a DLP job.
@@ -52,45 +55,45 @@ var GooglePrivacyDlpV2DlpJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DlpJob.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DlpJob.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: GooglePrivacyDlpV2Error }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: googleprivacydlpv2error_1.GooglePrivacyDlpV2Error }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2DlpJob.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inspectDetails" }),
-        __metadata("design:type", GooglePrivacyDlpV2InspectDataSourceDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inspectDetails" }),
+        __metadata("design:type", googleprivacydlpv2inspectdatasourcedetails_1.GooglePrivacyDlpV2InspectDataSourceDetails)
     ], GooglePrivacyDlpV2DlpJob.prototype, "inspectDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobTriggerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobTriggerName" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DlpJob.prototype, "jobTriggerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DlpJob.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=riskDetails" }),
-        __metadata("design:type", GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=riskDetails" }),
+        __metadata("design:type", googleprivacydlpv2analyzedatasourceriskdetails_1.GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails)
     ], GooglePrivacyDlpV2DlpJob.prototype, "riskDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DlpJob.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DlpJob.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DlpJob.prototype, "type", void 0);
     return GooglePrivacyDlpV2DlpJob;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2DlpJob };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2DlpJob = GooglePrivacyDlpV2DlpJob;

@@ -1,9 +1,21 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientVpnAuthorizationRuleStatus } from "./clientvpnauthorizationrulestatus";
 
+
+
+// AuthorizeClientVpnIngressResultStatus
+/** 
+ * The current state of the authorization rule.
+**/
+export class AuthorizeClientVpnIngressResultStatus extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  code?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  message?: Record<string, any>;
+}
 
 
 export class AuthorizeClientVpnIngressResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  status?: ClientVpnAuthorizationRuleStatus;
+  status?: AuthorizeClientVpnIngressResultStatus;
 }

@@ -89,7 +89,7 @@ export class CloudiotProjectsLocationsRegistriesBindDeviceToGatewayRequest exten
 
 export class CloudiotProjectsLocationsRegistriesBindDeviceToGatewayResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  bindDeviceToGatewayResponse?: Map<string, any>;
+  bindDeviceToGatewayResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

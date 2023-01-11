@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Action } from "./action";
-import { EventBatchingCondition } from "./eventbatchingcondition";
-import { Predicate } from "./predicate";
-import { TriggerStateEnum } from "./triggerstateenum";
-import { TriggerTypeEnum } from "./triggertypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Trigger = void 0;
+var utils_1 = require("../../../internal/utils");
+var action_1 = require("./action");
+var eventbatchingcondition_1 = require("./eventbatchingcondition");
+var predicate_1 = require("./predicate");
+var triggerstateenum_1 = require("./triggerstateenum");
+var triggertypeenum_1 = require("./triggertypeenum");
 // Trigger
 /**
  * Information about a specific trigger.
@@ -38,45 +41,45 @@ var Trigger = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Actions", elemType: Action }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Actions", elemType: action_1.Action }),
         __metadata("design:type", Array)
     ], Trigger.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], Trigger.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventBatchingCondition" }),
-        __metadata("design:type", EventBatchingCondition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventBatchingCondition" }),
+        __metadata("design:type", eventbatchingcondition_1.EventBatchingCondition)
     ], Trigger.prototype, "eventBatchingCondition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], Trigger.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Trigger.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Predicate" }),
-        __metadata("design:type", Predicate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Predicate" }),
+        __metadata("design:type", predicate_1.Predicate)
     ], Trigger.prototype, "predicate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Schedule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Schedule" }),
         __metadata("design:type", String)
     ], Trigger.prototype, "schedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], Trigger.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], Trigger.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkflowName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkflowName" }),
         __metadata("design:type", String)
     ], Trigger.prototype, "workflowName", void 0);
     return Trigger;
-}(SpeakeasyBase));
-export { Trigger };
+}(utils_1.SpeakeasyBase));
+exports.Trigger = Trigger;

@@ -69,7 +69,7 @@ export class ProjectsUpdateResponse extends SpeakeasyBase {
   project?: shared.Project;
 
   @SpeakeasyMetadata()
-  projectsUpdate403ApplicationJsonObject?: ProjectsUpdate403ApplicationJson;
+  projectsUpdate403ApplicationJSONObject?: ProjectsUpdate403ApplicationJson;
 
   @SpeakeasyMetadata()
   validationErrorSimple?: shared.ValidationErrorSimple;

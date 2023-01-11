@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StatusEnum } from "./statusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreamInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var statusenum_1 = require("./statusenum");
 // StreamInfo
 /**
  * An object describing a Kinesis video stream.
@@ -34,41 +37,41 @@ var StreamInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], StreamInfo.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataRetentionInHours" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataRetentionInHours" }),
         __metadata("design:type", Number)
     ], StreamInfo.prototype, "dataRetentionInHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeviceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeviceName" }),
         __metadata("design:type", String)
     ], StreamInfo.prototype, "deviceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KmsKeyId" }),
         __metadata("design:type", String)
     ], StreamInfo.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MediaType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MediaType" }),
         __metadata("design:type", String)
     ], StreamInfo.prototype, "mediaType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], StreamInfo.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StreamARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StreamARN" }),
         __metadata("design:type", String)
-    ], StreamInfo.prototype, "streamArn", void 0);
+    ], StreamInfo.prototype, "streamARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StreamName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StreamName" }),
         __metadata("design:type", String)
     ], StreamInfo.prototype, "streamName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Version" }),
         __metadata("design:type", String)
     ], StreamInfo.prototype, "version", void 0);
     return StreamInfo;
-}(SpeakeasyBase));
-export { StreamInfo };
+}(utils_1.SpeakeasyBase));
+exports.StreamInfo = StreamInfo;

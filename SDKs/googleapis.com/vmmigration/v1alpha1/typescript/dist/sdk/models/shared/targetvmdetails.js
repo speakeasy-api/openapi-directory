@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,117 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppliedLicense } from "./appliedlicense";
-import { ComputeScheduling } from "./computescheduling";
-import { NetworkInterface } from "./networkinterface";
-export var TargetVmDetailsBootOptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetVmDetailsInput = exports.TargetVmDetails = exports.TargetVmDetailsLicenseTypeEnum = exports.TargetVmDetailsDiskTypeEnum = exports.TargetVmDetailsBootOptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var appliedlicense_1 = require("./appliedlicense");
+var computescheduling_1 = require("./computescheduling");
+var networkinterface_1 = require("./networkinterface");
+var TargetVmDetailsBootOptionEnum;
 (function (TargetVmDetailsBootOptionEnum) {
     TargetVmDetailsBootOptionEnum["BootOptionUnspecified"] = "BOOT_OPTION_UNSPECIFIED";
     TargetVmDetailsBootOptionEnum["Efi"] = "EFI";
     TargetVmDetailsBootOptionEnum["Bios"] = "BIOS";
-})(TargetVmDetailsBootOptionEnum || (TargetVmDetailsBootOptionEnum = {}));
-export var TargetVmDetailsDiskTypeEnum;
+})(TargetVmDetailsBootOptionEnum = exports.TargetVmDetailsBootOptionEnum || (exports.TargetVmDetailsBootOptionEnum = {}));
+var TargetVmDetailsDiskTypeEnum;
 (function (TargetVmDetailsDiskTypeEnum) {
     TargetVmDetailsDiskTypeEnum["DiskTypeUnspecified"] = "DISK_TYPE_UNSPECIFIED";
     TargetVmDetailsDiskTypeEnum["Standard"] = "STANDARD";
     TargetVmDetailsDiskTypeEnum["Balanced"] = "BALANCED";
     TargetVmDetailsDiskTypeEnum["Ssd"] = "SSD";
-})(TargetVmDetailsDiskTypeEnum || (TargetVmDetailsDiskTypeEnum = {}));
-export var TargetVmDetailsLicenseTypeEnum;
+})(TargetVmDetailsDiskTypeEnum = exports.TargetVmDetailsDiskTypeEnum || (exports.TargetVmDetailsDiskTypeEnum = {}));
+var TargetVmDetailsLicenseTypeEnum;
 (function (TargetVmDetailsLicenseTypeEnum) {
     TargetVmDetailsLicenseTypeEnum["Default"] = "DEFAULT";
     TargetVmDetailsLicenseTypeEnum["Payg"] = "PAYG";
     TargetVmDetailsLicenseTypeEnum["Byol"] = "BYOL";
-})(TargetVmDetailsLicenseTypeEnum || (TargetVmDetailsLicenseTypeEnum = {}));
-// TargetVmDetailsInput
-/**
- * TargetVMDetails is a collection of details for creating a VM in a target Compute Engine project.
-**/
-var TargetVmDetailsInput = /** @class */ (function (_super) {
-    __extends(TargetVmDetailsInput, _super);
-    function TargetVmDetailsInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=appliedLicense" }),
-        __metadata("design:type", AppliedLicense)
-    ], TargetVmDetailsInput.prototype, "appliedLicense", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeScheduling" }),
-        __metadata("design:type", ComputeScheduling)
-    ], TargetVmDetailsInput.prototype, "computeScheduling", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskType" }),
-        __metadata("design:type", String)
-    ], TargetVmDetailsInput.prototype, "diskType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalIp" }),
-        __metadata("design:type", String)
-    ], TargetVmDetailsInput.prototype, "externalIp", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=internalIp" }),
-        __metadata("design:type", String)
-    ], TargetVmDetailsInput.prototype, "internalIp", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], TargetVmDetailsInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=licenseType" }),
-        __metadata("design:type", String)
-    ], TargetVmDetailsInput.prototype, "licenseType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineType" }),
-        __metadata("design:type", String)
-    ], TargetVmDetailsInput.prototype, "machineType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineTypeSeries" }),
-        __metadata("design:type", String)
-    ], TargetVmDetailsInput.prototype, "machineTypeSeries", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
-    ], TargetVmDetailsInput.prototype, "metadata", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], TargetVmDetailsInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
-        __metadata("design:type", String)
-    ], TargetVmDetailsInput.prototype, "network", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkInterfaces", elemType: NetworkInterface }),
-        __metadata("design:type", Array)
-    ], TargetVmDetailsInput.prototype, "networkInterfaces", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkTags" }),
-        __metadata("design:type", Array)
-    ], TargetVmDetailsInput.prototype, "networkTags", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=secureBoot" }),
-        __metadata("design:type", Boolean)
-    ], TargetVmDetailsInput.prototype, "secureBoot", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccount" }),
-        __metadata("design:type", String)
-    ], TargetVmDetailsInput.prototype, "serviceAccount", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=subnetwork" }),
-        __metadata("design:type", String)
-    ], TargetVmDetailsInput.prototype, "subnetwork", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetProject" }),
-        __metadata("design:type", String)
-    ], TargetVmDetailsInput.prototype, "targetProject", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=zone" }),
-        __metadata("design:type", String)
-    ], TargetVmDetailsInput.prototype, "zone", void 0);
-    return TargetVmDetailsInput;
-}(SpeakeasyBase));
-export { TargetVmDetailsInput };
+})(TargetVmDetailsLicenseTypeEnum = exports.TargetVmDetailsLicenseTypeEnum || (exports.TargetVmDetailsLicenseTypeEnum = {}));
 // TargetVmDetails
 /**
  * TargetVMDetails is a collection of details for creating a VM in a target Compute Engine project.
@@ -143,89 +58,177 @@ var TargetVmDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appliedLicense" }),
-        __metadata("design:type", AppliedLicense)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appliedLicense" }),
+        __metadata("design:type", appliedlicense_1.AppliedLicense)
     ], TargetVmDetails.prototype, "appliedLicense", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootOption" }),
         __metadata("design:type", String)
     ], TargetVmDetails.prototype, "bootOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeScheduling" }),
-        __metadata("design:type", ComputeScheduling)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeScheduling" }),
+        __metadata("design:type", computescheduling_1.ComputeScheduling)
     ], TargetVmDetails.prototype, "computeScheduling", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskType" }),
         __metadata("design:type", String)
     ], TargetVmDetails.prototype, "diskType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalIp" }),
         __metadata("design:type", String)
     ], TargetVmDetails.prototype, "externalIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=internalIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=internalIp" }),
         __metadata("design:type", String)
     ], TargetVmDetails.prototype, "internalIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], TargetVmDetails.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=licenseType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=licenseType" }),
         __metadata("design:type", String)
     ], TargetVmDetails.prototype, "licenseType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineType" }),
         __metadata("design:type", String)
     ], TargetVmDetails.prototype, "machineType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineTypeSeries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineTypeSeries" }),
         __metadata("design:type", String)
     ], TargetVmDetails.prototype, "machineTypeSeries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], TargetVmDetails.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TargetVmDetails.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
         __metadata("design:type", String)
     ], TargetVmDetails.prototype, "network", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkInterfaces", elemType: NetworkInterface }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkInterfaces", elemType: networkinterface_1.NetworkInterface }),
         __metadata("design:type", Array)
     ], TargetVmDetails.prototype, "networkInterfaces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkTags" }),
         __metadata("design:type", Array)
     ], TargetVmDetails.prototype, "networkTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=project" }),
         __metadata("design:type", String)
     ], TargetVmDetails.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secureBoot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secureBoot" }),
         __metadata("design:type", Boolean)
     ], TargetVmDetails.prototype, "secureBoot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccount" }),
         __metadata("design:type", String)
     ], TargetVmDetails.prototype, "serviceAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subnetwork" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subnetwork" }),
         __metadata("design:type", String)
     ], TargetVmDetails.prototype, "subnetwork", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetProject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetProject" }),
         __metadata("design:type", String)
     ], TargetVmDetails.prototype, "targetProject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zone" }),
         __metadata("design:type", String)
     ], TargetVmDetails.prototype, "zone", void 0);
     return TargetVmDetails;
-}(SpeakeasyBase));
-export { TargetVmDetails };
+}(utils_1.SpeakeasyBase));
+exports.TargetVmDetails = TargetVmDetails;
+// TargetVmDetailsInput
+/**
+ * TargetVMDetails is a collection of details for creating a VM in a target Compute Engine project.
+**/
+var TargetVmDetailsInput = /** @class */ (function (_super) {
+    __extends(TargetVmDetailsInput, _super);
+    function TargetVmDetailsInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appliedLicense" }),
+        __metadata("design:type", appliedlicense_1.AppliedLicense)
+    ], TargetVmDetailsInput.prototype, "appliedLicense", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeScheduling" }),
+        __metadata("design:type", computescheduling_1.ComputeScheduling)
+    ], TargetVmDetailsInput.prototype, "computeScheduling", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskType" }),
+        __metadata("design:type", String)
+    ], TargetVmDetailsInput.prototype, "diskType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalIp" }),
+        __metadata("design:type", String)
+    ], TargetVmDetailsInput.prototype, "externalIp", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=internalIp" }),
+        __metadata("design:type", String)
+    ], TargetVmDetailsInput.prototype, "internalIp", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], TargetVmDetailsInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=licenseType" }),
+        __metadata("design:type", String)
+    ], TargetVmDetailsInput.prototype, "licenseType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineType" }),
+        __metadata("design:type", String)
+    ], TargetVmDetailsInput.prototype, "machineType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineTypeSeries" }),
+        __metadata("design:type", String)
+    ], TargetVmDetailsInput.prototype, "machineTypeSeries", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
+    ], TargetVmDetailsInput.prototype, "metadata", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], TargetVmDetailsInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
+        __metadata("design:type", String)
+    ], TargetVmDetailsInput.prototype, "network", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkInterfaces", elemType: networkinterface_1.NetworkInterface }),
+        __metadata("design:type", Array)
+    ], TargetVmDetailsInput.prototype, "networkInterfaces", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkTags" }),
+        __metadata("design:type", Array)
+    ], TargetVmDetailsInput.prototype, "networkTags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secureBoot" }),
+        __metadata("design:type", Boolean)
+    ], TargetVmDetailsInput.prototype, "secureBoot", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccount" }),
+        __metadata("design:type", String)
+    ], TargetVmDetailsInput.prototype, "serviceAccount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subnetwork" }),
+        __metadata("design:type", String)
+    ], TargetVmDetailsInput.prototype, "subnetwork", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetProject" }),
+        __metadata("design:type", String)
+    ], TargetVmDetailsInput.prototype, "targetProject", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zone" }),
+        __metadata("design:type", String)
+    ], TargetVmDetailsInput.prototype, "zone", void 0);
+    return TargetVmDetailsInput;
+}(utils_1.SpeakeasyBase));
+exports.TargetVmDetailsInput = TargetVmDetailsInput;

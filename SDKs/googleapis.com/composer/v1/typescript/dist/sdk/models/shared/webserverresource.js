@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebServerResource = void 0;
+var utils_1 = require("../../../internal/utils");
 // WebServerResource
 /**
  * Configuration for resources used by Airflow web server.
@@ -33,17 +36,17 @@ var WebServerResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpu" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpu" }),
         __metadata("design:type", Number)
     ], WebServerResource.prototype, "cpu", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memoryGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memoryGb" }),
         __metadata("design:type", Number)
     ], WebServerResource.prototype, "memoryGb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageGb" }),
         __metadata("design:type", Number)
     ], WebServerResource.prototype, "storageGb", void 0);
     return WebServerResource;
-}(SpeakeasyBase));
-export { WebServerResource };
+}(utils_1.SpeakeasyBase));
+exports.WebServerResource = WebServerResource;

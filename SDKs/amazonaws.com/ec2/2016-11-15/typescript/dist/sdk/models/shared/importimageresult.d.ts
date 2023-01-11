@@ -1,22 +1,19 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ImportImageLicenseConfigurationResponse } from "./importimagelicenseconfigurationresponse";
-import { SnapshotDetail } from "./snapshotdetail";
-import { Tag } from "./tag";
 export declare class ImportImageResult extends SpeakeasyBase {
-    architecture?: string;
-    description?: string;
-    encrypted?: boolean;
-    hypervisor?: string;
-    imageId?: string;
-    importTaskId?: string;
-    kmsKeyId?: string;
-    licenseSpecifications?: ImportImageLicenseConfigurationResponse[];
-    licenseType?: string;
-    platform?: string;
-    progress?: string;
-    snapshotDetails?: SnapshotDetail[];
-    status?: string;
-    statusMessage?: string;
-    tags?: Tag[];
-    usageOperation?: string;
+    architecture?: Record<string, any>;
+    description?: Record<string, any>;
+    encrypted?: Record<string, any>;
+    hypervisor?: Record<string, any>;
+    imageId?: Record<string, any>;
+    importTaskId?: Record<string, any>;
+    kmsKeyId?: Record<string, any>;
+    licenseSpecifications?: Record<string, any>;
+    licenseType?: Record<string, any>;
+    platform?: Record<string, any>;
+    progress?: Record<string, any>;
+    snapshotDetails?: Record<string, any>;
+    status?: Record<string, any>;
+    statusMessage?: Record<string, any>;
+    tags?: Record<string, any>;
+    usageOperation?: Record<string, any>;
 }

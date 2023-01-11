@@ -188,23 +188,23 @@ export class DncerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dncer400ApplicationJsonObject?: Dncer400ApplicationJson;
+  dncer400ApplicationJSONObject?: Dncer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  dncer401ApplicationJsonObject?: Dncer401ApplicationJson;
+  dncer401ApplicationJSONObject?: Dncer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  dncer404ApplicationJsonObject?: Dncer404ApplicationJson;
+  dncer404ApplicationJSONObject?: Dncer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  dncer500ApplicationJsonObject?: Dncer500ApplicationJson;
+  dncer500ApplicationJSONObject?: Dncer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  dncer502ApplicationJsonObject?: Dncer502ApplicationJson;
+  dncer502ApplicationJSONObject?: Dncer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  dncer503ApplicationJsonObject?: Dncer503ApplicationJson;
+  dncer503ApplicationJSONObject?: Dncer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  dncer504ApplicationJsonObject?: Dncer504ApplicationJson;
+  dncer504ApplicationJSONObject?: Dncer504ApplicationJson;
 }

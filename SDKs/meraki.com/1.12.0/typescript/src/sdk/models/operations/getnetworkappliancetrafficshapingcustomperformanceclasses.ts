@@ -22,5 +22,5 @@ export class GetNetworkApplianceTrafficShapingCustomPerformanceClassesResponse e
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceTrafficShapingCustomPerformanceClasses200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceTrafficShapingCustomPerformanceClasses200ApplicationJSONObject?: Record<string, any>;
 }

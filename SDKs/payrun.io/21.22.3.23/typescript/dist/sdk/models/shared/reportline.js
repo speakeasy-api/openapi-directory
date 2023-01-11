@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportLine = exports.ReportLineReportLine = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReportLineReportLine = /** @class */ (function (_super) {
     __extends(ReportLineReportLine, _super);
     function ReportLineReportLine() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], ReportLineReportLine.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Generated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Generated" }),
         __metadata("design:type", Date)
     ], ReportLineReportLine.prototype, "generated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxMonth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxMonth" }),
         __metadata("design:type", Number)
     ], ReportLineReportLine.prototype, "taxMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxYear" }),
         __metadata("design:type", Number)
     ], ReportLineReportLine.prototype, "taxYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Value" }),
         __metadata("design:type", Number)
     ], ReportLineReportLine.prototype, "value", void 0);
     return ReportLineReportLine;
-}(SpeakeasyBase));
-export { ReportLineReportLine };
+}(utils_1.SpeakeasyBase));
+exports.ReportLineReportLine = ReportLineReportLine;
 var ReportLine = /** @class */ (function (_super) {
     __extends(ReportLine, _super);
     function ReportLine() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReportLine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReportLine" }),
         __metadata("design:type", ReportLineReportLine)
     ], ReportLine.prototype, "reportLine", void 0);
     return ReportLine;
-}(SpeakeasyBase));
-export { ReportLine };
+}(utils_1.SpeakeasyBase));
+exports.ReportLine = ReportLine;

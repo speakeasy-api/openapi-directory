@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetSaveOntologyTagFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSaveOntologyTagResponse = exports.GetSaveOntologyTagRequest = exports.GetSaveOntologyTagQueryParams = exports.GetSaveOntologyTagFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetSaveOntologyTagFormatEnum;
 (function (GetSaveOntologyTagFormatEnum) {
     GetSaveOntologyTagFormatEnum["Json"] = "json";
     GetSaveOntologyTagFormatEnum["Xml"] = "xml";
@@ -31,64 +34,64 @@ export var GetSaveOntologyTagFormatEnum;
     GetSaveOntologyTagFormatEnum["Dump"] = "dump";
     GetSaveOntologyTagFormatEnum["Jpg"] = "jpg";
     GetSaveOntologyTagFormatEnum["Pdf"] = "pdf";
-})(GetSaveOntologyTagFormatEnum || (GetSaveOntologyTagFormatEnum = {}));
+})(GetSaveOntologyTagFormatEnum = exports.GetSaveOntologyTagFormatEnum || (exports.GetSaveOntologyTagFormatEnum = {}));
 var GetSaveOntologyTagQueryParams = /** @class */ (function (_super) {
     __extends(GetSaveOntologyTagQueryParams, _super);
     function GetSaveOntologyTagQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=auth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=auth" }),
         __metadata("design:type", String)
     ], GetSaveOntologyTagQueryParams.prototype, "auth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetSaveOntologyTagQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pwId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pwId" }),
         __metadata("design:type", String)
     ], GetSaveOntologyTagQueryParams.prototype, "pwId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=term" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=term" }),
         __metadata("design:type", String)
     ], GetSaveOntologyTagQueryParams.prototype, "term", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=termId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=termId" }),
         __metadata("design:type", String)
     ], GetSaveOntologyTagQueryParams.prototype, "termId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=user" }),
         __metadata("design:type", String)
     ], GetSaveOntologyTagQueryParams.prototype, "user", void 0);
     return GetSaveOntologyTagQueryParams;
-}(SpeakeasyBase));
-export { GetSaveOntologyTagQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSaveOntologyTagQueryParams = GetSaveOntologyTagQueryParams;
 var GetSaveOntologyTagRequest = /** @class */ (function (_super) {
     __extends(GetSaveOntologyTagRequest, _super);
     function GetSaveOntologyTagRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSaveOntologyTagQueryParams)
     ], GetSaveOntologyTagRequest.prototype, "queryParams", void 0);
     return GetSaveOntologyTagRequest;
-}(SpeakeasyBase));
-export { GetSaveOntologyTagRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSaveOntologyTagRequest = GetSaveOntologyTagRequest;
 var GetSaveOntologyTagResponse = /** @class */ (function (_super) {
     __extends(GetSaveOntologyTagResponse, _super);
     function GetSaveOntologyTagResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSaveOntologyTagResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSaveOntologyTagResponse.prototype, "statusCode", void 0);
     return GetSaveOntologyTagResponse;
-}(SpeakeasyBase));
-export { GetSaveOntologyTagResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSaveOntologyTagResponse = GetSaveOntologyTagResponse;

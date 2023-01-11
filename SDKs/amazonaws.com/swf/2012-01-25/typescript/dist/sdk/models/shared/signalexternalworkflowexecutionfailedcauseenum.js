@@ -1,6 +1,9 @@
-export var SignalExternalWorkflowExecutionFailedCauseEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SignalExternalWorkflowExecutionFailedCauseEnum = void 0;
+var SignalExternalWorkflowExecutionFailedCauseEnum;
 (function (SignalExternalWorkflowExecutionFailedCauseEnum) {
     SignalExternalWorkflowExecutionFailedCauseEnum["UnknownExternalWorkflowExecution"] = "UNKNOWN_EXTERNAL_WORKFLOW_EXECUTION";
     SignalExternalWorkflowExecutionFailedCauseEnum["SignalExternalWorkflowExecutionRateExceeded"] = "SIGNAL_EXTERNAL_WORKFLOW_EXECUTION_RATE_EXCEEDED";
     SignalExternalWorkflowExecutionFailedCauseEnum["OperationNotPermitted"] = "OPERATION_NOT_PERMITTED";
-})(SignalExternalWorkflowExecutionFailedCauseEnum || (SignalExternalWorkflowExecutionFailedCauseEnum = {}));
+})(SignalExternalWorkflowExecutionFailedCauseEnum = exports.SignalExternalWorkflowExecutionFailedCauseEnum || (exports.SignalExternalWorkflowExecutionFailedCauseEnum = {}));

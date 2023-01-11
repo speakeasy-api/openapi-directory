@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Certificate } from "./certificate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeCertificatesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var certificate_1 = require("./certificate");
 var DescribeCertificatesResponse = /** @class */ (function (_super) {
     __extends(DescribeCertificatesResponse, _super);
     function DescribeCertificatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Certificates", elemType: Certificate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Certificates", elemType: certificate_1.Certificate }),
         __metadata("design:type", Array)
     ], DescribeCertificatesResponse.prototype, "certificates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Marker" }),
         __metadata("design:type", String)
     ], DescribeCertificatesResponse.prototype, "marker", void 0);
     return DescribeCertificatesResponse;
-}(SpeakeasyBase));
-export { DescribeCertificatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeCertificatesResponse = DescribeCertificatesResponse;

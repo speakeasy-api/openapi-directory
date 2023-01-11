@@ -1,4 +1,7 @@
-export var BackupPolicyEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BackupPolicyEnum = void 0;
+var BackupPolicyEnum;
 (function (BackupPolicyEnum) {
     BackupPolicyEnum["Default"] = "DEFAULT";
-})(BackupPolicyEnum || (BackupPolicyEnum = {}));
+})(BackupPolicyEnum = exports.BackupPolicyEnum || (exports.BackupPolicyEnum = {}));

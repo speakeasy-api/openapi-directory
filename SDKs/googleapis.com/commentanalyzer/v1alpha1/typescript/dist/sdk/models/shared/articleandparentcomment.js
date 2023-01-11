@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TextEntry } from "./textentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArticleAndParentComment = void 0;
+var utils_1 = require("../../../internal/utils");
+var textentry_1 = require("./textentry");
 // ArticleAndParentComment
 /**
  * A type of context specific to a comment left on a single-threaded comment message board, where comments are either a top level comment or the child of a top level comment.
@@ -34,13 +37,13 @@ var ArticleAndParentComment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=article" }),
-        __metadata("design:type", TextEntry)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=article" }),
+        __metadata("design:type", textentry_1.TextEntry)
     ], ArticleAndParentComment.prototype, "article", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentComment" }),
-        __metadata("design:type", TextEntry)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentComment" }),
+        __metadata("design:type", textentry_1.TextEntry)
     ], ArticleAndParentComment.prototype, "parentComment", void 0);
     return ArticleAndParentComment;
-}(SpeakeasyBase));
-export { ArticleAndParentComment };
+}(utils_1.SpeakeasyBase));
+exports.ArticleAndParentComment = ArticleAndParentComment;

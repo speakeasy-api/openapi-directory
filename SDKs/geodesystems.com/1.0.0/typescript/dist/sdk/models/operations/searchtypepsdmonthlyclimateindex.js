@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchTypePsdMonthlyClimateIndexResponse = exports.SearchTypePsdMonthlyClimateIndexRequest = exports.SearchTypePsdMonthlyClimateIndexQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SearchTypePsdMonthlyClimateIndexQueryParams = /** @class */ (function (_super) {
     __extends(SearchTypePsdMonthlyClimateIndexQueryParams, _super);
     function SearchTypePsdMonthlyClimateIndexQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
         __metadata("design:type", Date)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "changedateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
         __metadata("design:type", Date)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "changedateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
         __metadata("design:type", Date)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "createdateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
         __metadata("design:type", Date)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "createdateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description" }),
         __metadata("design:type", String)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
         __metadata("design:type", String)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "filesuffix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Date)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=group" }),
         __metadata("design:type", String)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", Number)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
         __metadata("design:type", Number)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "maxlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
         __metadata("design:type", Number)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "maxlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
         __metadata("design:type", Number)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "minlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
         __metadata("design:type", Number)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "minlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.type_psd_monthly_climate_index.units" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.type_psd_monthly_climate_index.units" }),
         __metadata("design:type", String)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "searchTypePsdMonthlyClimateIndexUnits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=skip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=skip" }),
         __metadata("design:type", Number)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "skip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Date)
     ], SearchTypePsdMonthlyClimateIndexQueryParams.prototype, "todate", void 0);
     return SearchTypePsdMonthlyClimateIndexQueryParams;
-}(SpeakeasyBase));
-export { SearchTypePsdMonthlyClimateIndexQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SearchTypePsdMonthlyClimateIndexQueryParams = SearchTypePsdMonthlyClimateIndexQueryParams;
 var SearchTypePsdMonthlyClimateIndexRequest = /** @class */ (function (_super) {
     __extends(SearchTypePsdMonthlyClimateIndexRequest, _super);
     function SearchTypePsdMonthlyClimateIndexRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchTypePsdMonthlyClimateIndexQueryParams)
     ], SearchTypePsdMonthlyClimateIndexRequest.prototype, "queryParams", void 0);
     return SearchTypePsdMonthlyClimateIndexRequest;
-}(SpeakeasyBase));
-export { SearchTypePsdMonthlyClimateIndexRequest };
+}(utils_1.SpeakeasyBase));
+exports.SearchTypePsdMonthlyClimateIndexRequest = SearchTypePsdMonthlyClimateIndexRequest;
 var SearchTypePsdMonthlyClimateIndexResponse = /** @class */ (function (_super) {
     __extends(SearchTypePsdMonthlyClimateIndexResponse, _super);
     function SearchTypePsdMonthlyClimateIndexResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SearchTypePsdMonthlyClimateIndexResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SearchTypePsdMonthlyClimateIndexResponse.prototype, "statusCode", void 0);
     return SearchTypePsdMonthlyClimateIndexResponse;
-}(SpeakeasyBase));
-export { SearchTypePsdMonthlyClimateIndexResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchTypePsdMonthlyClimateIndexResponse = SearchTypePsdMonthlyClimateIndexResponse;

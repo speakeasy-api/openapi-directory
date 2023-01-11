@@ -8,7 +8,7 @@ import { ScaStatusEnum } from "./scastatusenum";
  * Body of the JSON response for a Start SCA authorisation request.
 **/
 export declare class StartScaprocessResponse extends SpeakeasyBase {
-    links: Map<string, HrefType>;
+    links: Record<string, HrefType>;
     authorisationId: string;
     challengeData?: ChallengeData;
     chosenScaMethod?: ChosenScaMethod;

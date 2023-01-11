@@ -6,7 +6,7 @@ import { MultiClusterIngressFeatureSpec } from "./multiclusteringressfeaturespec
 **/
 export declare class CommonFeatureSpec extends SpeakeasyBase {
     anthosobservability?: AnthosObservabilityFeatureSpec;
-    appdevexperience?: Map<string, any>;
-    fleetobservability?: Map<string, any>;
+    appdevexperience?: Record<string, any>;
+    fleetobservability?: Record<string, any>;
     multiclusteringress?: MultiClusterIngressFeatureSpec;
 }

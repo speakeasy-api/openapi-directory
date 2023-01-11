@@ -1,14 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CurrencyEnum } from "./currencyenum";
-export declare class ModifierInput extends SpeakeasyBase {
-    alternateName?: string;
-    available?: boolean;
-    currency?: CurrencyEnum;
-    idempotencyKey?: string;
-    modifierGroupId: string;
-    name: string;
-    priceAmount?: number;
-}
 export declare class Modifier extends SpeakeasyBase {
     alternateName?: string;
     available?: boolean;
@@ -22,4 +13,13 @@ export declare class Modifier extends SpeakeasyBase {
     priceAmount?: number;
     updatedAt?: Date;
     updatedBy?: string;
+}
+export declare class ModifierInput extends SpeakeasyBase {
+    alternateName?: string;
+    available?: boolean;
+    currency?: CurrencyEnum;
+    idempotencyKey?: string;
+    modifierGroupId: string;
+    name: string;
+    priceAmount?: number;
 }

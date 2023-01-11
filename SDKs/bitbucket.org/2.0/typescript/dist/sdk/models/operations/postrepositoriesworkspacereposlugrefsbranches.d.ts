@@ -16,6 +16,6 @@ export declare class PostRepositoriesWorkspaceRepoSlugRefsBranchesRequest extend
 export declare class PostRepositoriesWorkspaceRepoSlugRefsBranchesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    branch?: Map<string, any>;
-    error?: Map<string, any>;
+    branch?: Record<string, any>;
+    error?: Record<string, any>;
 }

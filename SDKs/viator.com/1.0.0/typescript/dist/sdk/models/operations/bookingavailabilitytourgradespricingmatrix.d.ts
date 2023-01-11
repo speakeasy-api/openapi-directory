@@ -56,8 +56,8 @@ export declare class BookingAvailabilityTourgradesPricingmatrix200ApplicationJso
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -69,5 +69,5 @@ export declare class BookingAvailabilityTourgradesPricingmatrixRequest extends S
 export declare class BookingAvailabilityTourgradesPricingmatrixResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    bookingAvailabilityTourgradesPricingmatrix200ApplicationJsonObject?: BookingAvailabilityTourgradesPricingmatrix200ApplicationJson;
+    bookingAvailabilityTourgradesPricingmatrix200ApplicationJSONObject?: BookingAvailabilityTourgradesPricingmatrix200ApplicationJson;
 }

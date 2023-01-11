@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNotificationChannelResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNotificationChannelResponse = /** @class */ (function (_super) {
     __extends(GetNotificationChannelResponse, _super);
     function GetNotificationChannelResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnsRoleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnsRoleName" }),
         __metadata("design:type", String)
     ], GetNotificationChannelResponse.prototype, "snsRoleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnsTopicArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnsTopicArn" }),
         __metadata("design:type", String)
     ], GetNotificationChannelResponse.prototype, "snsTopicArn", void 0);
     return GetNotificationChannelResponse;
-}(SpeakeasyBase));
-export { GetNotificationChannelResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNotificationChannelResponse = GetNotificationChannelResponse;

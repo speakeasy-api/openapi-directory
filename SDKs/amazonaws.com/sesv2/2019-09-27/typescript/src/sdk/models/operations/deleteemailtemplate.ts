@@ -49,7 +49,7 @@ export class DeleteEmailTemplateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteEmailTemplateResponse?: Map<string, any>;
+  deleteEmailTemplateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   notFoundException?: any;

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ApplyArchiveRuleRequest, ApplyArchiveRuleResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,22 +33,22 @@ const sdk = new SDK(WithSecurity(
     
 const req: ApplyArchiveRuleRequest = {
   headers: {
-    xAmzAlgorithm: "aut",
-    xAmzContentSha256: "quas",
-    xAmzCredential: "consequuntur",
-    xAmzDate: "laudantium",
-    xAmzSecurityToken: "autem",
-    xAmzSignature: "ipsa",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
     xAmzSignedHeaders: "expedita",
   },
   request: {
-    analyzerArn: "doloremque",
-    clientToken: "perferendis",
-    ruleName: "atque",
+    analyzerArn: "voluptas",
+    clientToken: "fugit",
+    ruleName: "et",
   },
 };
 
-sdk.sdk.applyArchiveRule(req).then((res: ApplyArchiveRuleResponse | AxiosError) => {
+sdk.applyArchiveRule(req).then((res: ApplyArchiveRuleResponse | AxiosError) => {
    // handle response
 });
 ```

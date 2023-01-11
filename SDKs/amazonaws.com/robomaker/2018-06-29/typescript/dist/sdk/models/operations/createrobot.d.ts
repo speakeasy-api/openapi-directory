@@ -18,7 +18,7 @@ export declare class CreateRobotRequestBody extends SpeakeasyBase {
     architecture: CreateRobotRequestBodyArchitectureEnum;
     greengrassGroupId: string;
     name: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateRobotRequest extends SpeakeasyBase {
     headers: CreateRobotHeaders;

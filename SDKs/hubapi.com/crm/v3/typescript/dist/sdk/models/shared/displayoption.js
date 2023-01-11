@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DisplayOptionTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DisplayOption = exports.DisplayOptionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DisplayOptionTypeEnum;
 (function (DisplayOptionTypeEnum) {
     DisplayOptionTypeEnum["Default"] = "DEFAULT";
     DisplayOptionTypeEnum["Success"] = "SUCCESS";
     DisplayOptionTypeEnum["Warning"] = "WARNING";
     DisplayOptionTypeEnum["Danger"] = "DANGER";
     DisplayOptionTypeEnum["Info"] = "INFO";
-})(DisplayOptionTypeEnum || (DisplayOptionTypeEnum = {}));
+})(DisplayOptionTypeEnum = exports.DisplayOptionTypeEnum || (exports.DisplayOptionTypeEnum = {}));
 // DisplayOption
 /**
  * Option definition for STATUS dataTypes.
@@ -41,17 +44,17 @@ var DisplayOption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], DisplayOption.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DisplayOption.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], DisplayOption.prototype, "type", void 0);
     return DisplayOption;
-}(SpeakeasyBase));
-export { DisplayOption };
+}(utils_1.SpeakeasyBase));
+exports.DisplayOption = DisplayOption;

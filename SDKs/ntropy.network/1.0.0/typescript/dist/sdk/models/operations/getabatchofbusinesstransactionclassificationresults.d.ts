@@ -22,5 +22,5 @@ export declare class GetABatchOfBusinessTransactionClassificationResultsRequest 
 export declare class GetABatchOfBusinessTransactionClassificationResultsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getABatchOfBusinessTransactionClassificationResults200ApplicationJsonObject?: GetABatchOfBusinessTransactionClassificationResults200ApplicationJson;
+    getABatchOfBusinessTransactionClassificationResults200ApplicationJSONObject?: GetABatchOfBusinessTransactionClassificationResults200ApplicationJson;
 }

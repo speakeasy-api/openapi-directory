@@ -1,6 +1,43 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NetworkInterfacePermission } from "./networkinterfacepermission";
 
+
+
+// CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState
+/** 
+ * Information about the state of the permission.
+**/
+export class CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  state?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  statusMessage?: Record<string, any>;
+}
+
+
+// CreateNetworkInterfacePermissionResultInterfacePermission
+/** 
+ * Information about the permission for the network interface.
+**/
+export class CreateNetworkInterfacePermissionResultInterfacePermission extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  awsAccountId?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  awsService?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  networkInterfaceId?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  networkInterfacePermissionId?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  permission?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  permissionState?: CreateNetworkInterfacePermissionResultInterfacePermissionPermissionState;
+}
 
 
 // CreateNetworkInterfacePermissionResult
@@ -9,5 +46,5 @@ import { NetworkInterfacePermission } from "./networkinterfacepermission";
 **/
 export class CreateNetworkInterfacePermissionResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  interfacePermission?: NetworkInterfacePermission;
+  interfacePermission?: CreateNetworkInterfacePermissionResultInterfacePermission;
 }

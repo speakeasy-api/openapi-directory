@@ -22,5 +22,5 @@ export class GetOrganizationWebhooksAlertTypesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationWebhooksAlertTypes200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationWebhooksAlertTypes200ApplicationJSONObject?: Record<string, any>;
 }

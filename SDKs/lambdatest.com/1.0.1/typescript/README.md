@@ -16,27 +16,29 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { LocationsRequest, LocationsResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { DevicesRequest, DevicesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: LocationsRequest = {
+const req: DevicesRequest = {
   security: {
     basicAuth: {
       password: "YOUR_PASSWORD_HERE",
       username: "YOUR_USERNAME_HERE",
     },
   },
+  queryParams: {
+    os: "sit",
+  },
 };
 
-sdk.sdk.locations(req).then((res: LocationsResponse | AxiosError) => {
+sdk.getDevices.devices(req).then((res: DevicesResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -45,16 +47,40 @@ sdk.sdk.locations(req).then((res: LocationsResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Get Devices
+
+* `devices` - Fetch all available device combinations.
+
+### Get Locations
 
 * `locations` - Fetch Locations
-* `profiles` - Fetch login profiles
-* `resolutions` - Fetch all available resolution on different OS
-* `startScreenshotTest` - Start Screenshot Test
-* `zippedScreenshots` - Fetch Zipped Screenshots
-* `devices` - Fetch all available device combinations.
+
+### Get OS-Browsers
+
 * `osBrowsers` - Fetch all available os-browser combinations.
+
+### Get Profiles
+
+* `profiles` - Fetch login profiles
+
+### Get Resolutions
+
+* `resolutions` - Fetch all available resolution on different OS
+
+### Get Screenshots
+
 * `screenshots` - Fetch specified screenshot details
+
+### Get Zipped Screenshots
+
+* `zippedScreenshots` - Fetch Zipped Screenshots
+
+### Start Screenshot Test
+
+* `startScreenshotTest` - Start Screenshot Test
+
+### Stop Screenshot Test
+
 * `stopScreenshotsTest` - Stop specified screenshot test
 
 <!-- End SDK Available Operations -->

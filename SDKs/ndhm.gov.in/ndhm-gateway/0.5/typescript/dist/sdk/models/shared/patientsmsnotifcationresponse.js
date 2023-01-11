@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,39 +23,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
-import { RequestReference } from "./requestreference";
-export var PatientSmsNotifcationResponseStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatientSmsNotifcationResponse = exports.PatientSmsNotifcationResponseStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var error_1 = require("./error");
+var requestreference_1 = require("./requestreference");
+var PatientSmsNotifcationResponseStatusEnum;
 (function (PatientSmsNotifcationResponseStatusEnum) {
     PatientSmsNotifcationResponseStatusEnum["Acknowledged"] = "ACKNOWLEDGED";
     PatientSmsNotifcationResponseStatusEnum["Errored"] = "ERRORED";
-})(PatientSmsNotifcationResponseStatusEnum || (PatientSmsNotifcationResponseStatusEnum = {}));
+})(PatientSmsNotifcationResponseStatusEnum = exports.PatientSmsNotifcationResponseStatusEnum || (exports.PatientSmsNotifcationResponseStatusEnum = {}));
 var PatientSmsNotifcationResponse = /** @class */ (function (_super) {
     __extends(PatientSmsNotifcationResponse, _super);
     function PatientSmsNotifcationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Error)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", error_1.ErrorT)
     ], PatientSmsNotifcationResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], PatientSmsNotifcationResponse.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resp" }),
-        __metadata("design:type", RequestReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resp" }),
+        __metadata("design:type", requestreference_1.RequestReference)
     ], PatientSmsNotifcationResponse.prototype, "resp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PatientSmsNotifcationResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], PatientSmsNotifcationResponse.prototype, "timestamp", void 0);
     return PatientSmsNotifcationResponse;
-}(SpeakeasyBase));
-export { PatientSmsNotifcationResponse };
+}(utils_1.SpeakeasyBase));
+exports.PatientSmsNotifcationResponse = PatientSmsNotifcationResponse;

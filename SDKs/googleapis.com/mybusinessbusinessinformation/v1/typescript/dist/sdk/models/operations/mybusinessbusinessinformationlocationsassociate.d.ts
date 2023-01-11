@@ -23,6 +23,6 @@ export declare class MybusinessbusinessinformationLocationsAssociateRequest exte
 }
 export declare class MybusinessbusinessinformationLocationsAssociateResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

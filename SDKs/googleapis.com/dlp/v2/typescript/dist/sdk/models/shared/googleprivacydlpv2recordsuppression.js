@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2RecordCondition } from "./googleprivacydlpv2recordcondition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2RecordSuppression = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2recordcondition_1 = require("./googleprivacydlpv2recordcondition");
 // GooglePrivacyDlpV2RecordSuppression
 /**
  * Configuration to suppress records whose suppression conditions evaluate to true.
@@ -34,9 +37,9 @@ var GooglePrivacyDlpV2RecordSuppression = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=condition" }),
-        __metadata("design:type", GooglePrivacyDlpV2RecordCondition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=condition" }),
+        __metadata("design:type", googleprivacydlpv2recordcondition_1.GooglePrivacyDlpV2RecordCondition)
     ], GooglePrivacyDlpV2RecordSuppression.prototype, "condition", void 0);
     return GooglePrivacyDlpV2RecordSuppression;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2RecordSuppression };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2RecordSuppression = GooglePrivacyDlpV2RecordSuppression;

@@ -39,7 +39,7 @@ export class InstanceInput extends SpeakeasyBase {
   instanceMessages?: InstanceMessage[];
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=maintenancePolicy" })
   maintenancePolicy?: GoogleCloudMemcacheV1MaintenancePolicyInput;
@@ -85,7 +85,7 @@ export class Instance extends SpeakeasyBase {
   instanceMessages?: InstanceMessage[];
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=maintenancePolicy" })
   maintenancePolicy?: GoogleCloudMemcacheV1MaintenancePolicy;

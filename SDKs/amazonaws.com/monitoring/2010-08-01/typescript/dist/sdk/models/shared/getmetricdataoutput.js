@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MessageData } from "./messagedata";
-import { MetricDataResult } from "./metricdataresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMetricDataOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var messagedata_1 = require("./messagedata");
+var metricdataresult_1 = require("./metricdataresult");
 var GetMetricDataOutput = /** @class */ (function (_super) {
     __extends(GetMetricDataOutput, _super);
     function GetMetricDataOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: MessageData }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: messagedata_1.MessageData }),
         __metadata("design:type", Array)
     ], GetMetricDataOutput.prototype, "messages", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: MetricDataResult }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: metricdataresult_1.MetricDataResult }),
         __metadata("design:type", Array)
     ], GetMetricDataOutput.prototype, "metricDataResults", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMetricDataOutput.prototype, "nextToken", void 0);
     return GetMetricDataOutput;
-}(SpeakeasyBase));
-export { GetMetricDataOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetMetricDataOutput = GetMetricDataOutput;

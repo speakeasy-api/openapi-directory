@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PlayerLevel } from "./playerlevel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerExperienceInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var playerlevel_1 = require("./playerlevel");
 // PlayerExperienceInfo
 /**
  * 1P/3P metadata about the player's experience.
@@ -34,25 +37,25 @@ var PlayerExperienceInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentExperiencePoints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentExperiencePoints" }),
         __metadata("design:type", String)
     ], PlayerExperienceInfo.prototype, "currentExperiencePoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentLevel" }),
-        __metadata("design:type", PlayerLevel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentLevel" }),
+        __metadata("design:type", playerlevel_1.PlayerLevel)
     ], PlayerExperienceInfo.prototype, "currentLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], PlayerExperienceInfo.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastLevelUpTimestampMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastLevelUpTimestampMillis" }),
         __metadata("design:type", String)
     ], PlayerExperienceInfo.prototype, "lastLevelUpTimestampMillis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextLevel" }),
-        __metadata("design:type", PlayerLevel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextLevel" }),
+        __metadata("design:type", playerlevel_1.PlayerLevel)
     ], PlayerExperienceInfo.prototype, "nextLevel", void 0);
     return PlayerExperienceInfo;
-}(SpeakeasyBase));
-export { PlayerExperienceInfo };
+}(utils_1.SpeakeasyBase));
+exports.PlayerExperienceInfo = PlayerExperienceInfo;

@@ -37,7 +37,7 @@ export class GetSetupV1ServicesIdBlocksResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  serviceBlockListViewModel?: Map<string, any>;
+  serviceBlockListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

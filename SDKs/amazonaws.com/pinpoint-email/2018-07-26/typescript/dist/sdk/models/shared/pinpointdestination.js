@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PinpointDestination = void 0;
+var utils_1 = require("../../../internal/utils");
 // PinpointDestination
 /**
  * An object that defines a Amazon Pinpoint destination for email events. You can use Amazon Pinpoint events to create attributes in Amazon Pinpoint projects. You can use these attributes to create segments for your campaigns.
@@ -33,9 +36,9 @@ var PinpointDestination = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationArn" }),
         __metadata("design:type", String)
     ], PinpointDestination.prototype, "applicationArn", void 0);
     return PinpointDestination;
-}(SpeakeasyBase));
-export { PinpointDestination };
+}(utils_1.SpeakeasyBase));
+exports.PinpointDestination = PinpointDestination;

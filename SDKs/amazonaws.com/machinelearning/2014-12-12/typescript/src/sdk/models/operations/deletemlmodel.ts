@@ -48,7 +48,7 @@ export class DeleteMlModelResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteMlModelOutput?: shared.DeleteMlModelOutput;
+  deleteMLModelOutput?: shared.DeleteMlModelOutput;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

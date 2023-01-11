@@ -11,10 +11,11 @@ import { PretargetingConfig } from "./pretargetingconfig";
 import { Products } from "./products";
 import { Proposals } from "./proposals";
 import { Pubprofiles } from "./pubprofiles";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://www.googleapis.com/adexchangebuyer/v1.4"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     accounts: Accounts;
     billingInfo: BillingInfo;
@@ -34,6 +35,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

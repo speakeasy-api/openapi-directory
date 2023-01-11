@@ -22,5 +22,5 @@ export class GetDeviceCameraVideoSettingsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceCameraVideoSettings200ApplicationJsonObject?: Map<string, any>;
+  getDeviceCameraVideoSettings200ApplicationJSONObject?: Record<string, any>;
 }

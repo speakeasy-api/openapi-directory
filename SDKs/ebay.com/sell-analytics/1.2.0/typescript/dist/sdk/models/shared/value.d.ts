@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class Value extends SpeakeasyBase {
     applicable?: boolean;
-    value?: Map<string, any>;
+    value?: Record<string, any>;
 }

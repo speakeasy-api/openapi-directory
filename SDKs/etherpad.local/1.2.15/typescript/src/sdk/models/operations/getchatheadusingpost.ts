@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetChatHeadUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -46,7 +46,7 @@ export class GetChatHeadUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,7 +58,7 @@ export class GetChatHeadUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,7 +70,7 @@ export class GetChatHeadUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -91,14 +91,14 @@ export class GetChatHeadUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getChatHeadUsingPost200ApplicationJsonObject?: GetChatHeadUsingPost200ApplicationJson;
+  getChatHeadUsingPOST200ApplicationJSONObject?: GetChatHeadUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getChatHeadUsingPost400ApplicationJsonObject?: GetChatHeadUsingPost400ApplicationJson;
+  getChatHeadUsingPOST400ApplicationJSONObject?: GetChatHeadUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getChatHeadUsingPost401ApplicationJsonObject?: GetChatHeadUsingPost401ApplicationJson;
+  getChatHeadUsingPOST401ApplicationJSONObject?: GetChatHeadUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getChatHeadUsingPost500ApplicationJsonObject?: GetChatHeadUsingPost500ApplicationJson;
+  getChatHeadUsingPOST500ApplicationJSONObject?: GetChatHeadUsingPost500ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Dimension } from "./dimension";
-import { Metric } from "./metric";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DimensionMetric = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimension_1 = require("./dimension");
+var metric_1 = require("./metric");
 // DimensionMetric
 /**
  * This complex type defines a the customer service metrics and seller benchmark performance related to a given dimension.
@@ -35,13 +38,13 @@ var DimensionMetric = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimension" }),
-        __metadata("design:type", Dimension)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimension" }),
+        __metadata("design:type", dimension_1.Dimension)
     ], DimensionMetric.prototype, "dimension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics", elemType: Metric }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics", elemType: metric_1.Metric }),
         __metadata("design:type", Array)
     ], DimensionMetric.prototype, "metrics", void 0);
     return DimensionMetric;
-}(SpeakeasyBase));
-export { DimensionMetric };
+}(utils_1.SpeakeasyBase));
+exports.DimensionMetric = DimensionMetric;

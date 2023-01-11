@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeliverabilityTestReport } from "./deliverabilitytestreport";
-import { IspPlacement } from "./ispplacement";
-import { PlacementStatistics } from "./placementstatistics";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeliverabilityTestReportResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var deliverabilitytestreport_1 = require("./deliverabilitytestreport");
+var ispplacement_1 = require("./ispplacement");
+var placementstatistics_1 = require("./placementstatistics");
+var tag_1 = require("./tag");
 // GetDeliverabilityTestReportResponse
 /**
  * The results of the predictive inbox placement test.
@@ -37,25 +40,25 @@ var GetDeliverabilityTestReportResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeliverabilityTestReport" }),
-        __metadata("design:type", DeliverabilityTestReport)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeliverabilityTestReport" }),
+        __metadata("design:type", deliverabilitytestreport_1.DeliverabilityTestReport)
     ], GetDeliverabilityTestReportResponse.prototype, "deliverabilityTestReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IspPlacements", elemType: IspPlacement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IspPlacements", elemType: ispplacement_1.IspPlacement }),
         __metadata("design:type", Array)
     ], GetDeliverabilityTestReportResponse.prototype, "ispPlacements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Message" }),
         __metadata("design:type", String)
     ], GetDeliverabilityTestReportResponse.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OverallPlacement" }),
-        __metadata("design:type", PlacementStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OverallPlacement" }),
+        __metadata("design:type", placementstatistics_1.PlacementStatistics)
     ], GetDeliverabilityTestReportResponse.prototype, "overallPlacement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], GetDeliverabilityTestReportResponse.prototype, "tags", void 0);
     return GetDeliverabilityTestReportResponse;
-}(SpeakeasyBase));
-export { GetDeliverabilityTestReportResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeliverabilityTestReportResponse = GetDeliverabilityTestReportResponse;

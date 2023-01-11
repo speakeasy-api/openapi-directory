@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BillingbudgetsBillingAccountsBudgetsCreateRequest, BillingbudgetsBillingAccountsBudgetsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,10 +31,10 @@ const req: BillingbudgetsBillingAccountsBudgetsCreateRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   pathParams: {
@@ -43,89 +42,95 @@ const req: BillingbudgetsBillingAccountsBudgetsCreateRequest = {
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "voluptas",
+    accessToken: "culpa",
     alt: "media",
-    callback: "in",
-    fields: "qui",
+    callback: "consequuntur",
+    fields: "dolor",
     key: "expedita",
-    oauthToken: "dicta",
-    prettyPrint: false,
-    quotaUser: "voluptatem",
-    uploadType: "et",
-    uploadProtocol: "quibusdam",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     amount: {
       lastPeriodAmount: {
-        "neque": "soluta",
-        "voluptate": "minima",
+        "debitis": "voluptatum",
+        "et": "ut",
+        "dolorem": "et",
       },
       specifiedAmount: {
-        currencyCode: "libero",
-        nanos: 6204113631619794035,
-        units: "ratione",
+        currencyCode: "voluptate",
+        nanos: 3287288577352441706,
+        units: "vitae",
       },
     },
     budgetFilter: {
-      calendarPeriod: "MONTH",
+      calendarPeriod: "QUARTER",
       creditTypes: [
-        "minima",
-        "velit",
+        "illum",
       ],
       creditTypesTreatment: "EXCLUDE_ALL_CREDITS",
       customPeriod: {
         endDate: {
-          day: 1521486426180571951,
-          month: 9000291902311776059,
-          year: 4786425625306782624,
+          day: 3706853784096366226,
+          month: 2627038740284806767,
+          year: 6303220950515014660,
         },
         startDate: {
-          day: 3524430840374632814,
-          month: 121253028379321650,
-          year: 4275829936943250503,
+          day: 4035568504096476779,
+          month: 959367522974354090,
+          year: 2914295034816259174,
         },
       },
       labels: {
-        "ex": [
-          "perferendis",
-          "dolores",
-          "molestiae",
+        "commodi": [
+          "est",
+          "aut",
+          "odit",
+        ],
+        "non": [
+          "omnis",
+        ],
+        "aut": [
+          "sed",
         ],
       },
       projects: [
-        "maxime",
-        "amet",
+        "autem",
+        "consectetur",
       ],
       services: [
-        "quia",
+        "odio",
       ],
       subaccounts: [
-        "cupiditate",
+        "recusandae",
       ],
     },
-    displayName: "excepturi",
-    etag: "itaque",
+    displayName: "at",
+    etag: "ipsum",
     notificationsRule: {
-      disableDefaultIamRecipients: false,
+      disableDefaultIamRecipients: true,
       monitoringNotificationChannels: [
-        "ut",
-        "excepturi",
+        "sint",
+        "inventore",
       ],
-      pubsubTopic: "autem",
-      schemaVersion: "neque",
+      pubsubTopic: "ut",
+      schemaVersion: "exercitationem",
     },
     thresholdRules: [
       {
+        spendBasis: "BASIS_UNSPECIFIED",
+        thresholdPercent: 7.200000,
+      },
+      {
         spendBasis: "FORECASTED_SPEND",
-        thresholdPercent: 98.199997,
+        thresholdPercent: 94.199997,
       },
       {
-        spendBasis: "BASIS_UNSPECIFIED",
-        thresholdPercent: 53.099998,
-      },
-      {
-        spendBasis: "BASIS_UNSPECIFIED",
-        thresholdPercent: 69.099998,
+        spendBasis: "CURRENT_SPEND",
+        thresholdPercent: 80.199997,
       },
     ],
   },

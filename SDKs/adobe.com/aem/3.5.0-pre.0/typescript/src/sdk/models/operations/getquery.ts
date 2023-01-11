@@ -31,5 +31,5 @@ export class GetQueryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getQueryDefaultApplicationJsonString?: string;
+  getQueryDefaultApplicationJSONString?: string;
 }

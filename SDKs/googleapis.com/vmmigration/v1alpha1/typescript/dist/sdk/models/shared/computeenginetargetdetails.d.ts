@@ -28,11 +28,11 @@ export declare class ComputeEngineTargetDetails extends SpeakeasyBase {
     computeScheduling?: ComputeScheduling;
     diskType?: ComputeEngineTargetDetailsDiskTypeEnum;
     hostname?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     licenseType?: ComputeEngineTargetDetailsLicenseTypeEnum;
     machineType?: string;
     machineTypeSeries?: string;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     networkInterfaces?: NetworkInterface[];
     networkTags?: string[];
     project?: string;

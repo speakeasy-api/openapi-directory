@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppEngineRouting } from "./appenginerouting";
-export var AppEngineHttpRequestHttpMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppEngineHttpRequest = exports.AppEngineHttpRequestHttpMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var appenginerouting_1 = require("./appenginerouting");
+var AppEngineHttpRequestHttpMethodEnum;
 (function (AppEngineHttpRequestHttpMethodEnum) {
     AppEngineHttpRequestHttpMethodEnum["HttpMethodUnspecified"] = "HTTP_METHOD_UNSPECIFIED";
     AppEngineHttpRequestHttpMethodEnum["Post"] = "POST";
@@ -34,7 +37,7 @@ export var AppEngineHttpRequestHttpMethodEnum;
     AppEngineHttpRequestHttpMethodEnum["Delete"] = "DELETE";
     AppEngineHttpRequestHttpMethodEnum["Patch"] = "PATCH";
     AppEngineHttpRequestHttpMethodEnum["Options"] = "OPTIONS";
-})(AppEngineHttpRequestHttpMethodEnum || (AppEngineHttpRequestHttpMethodEnum = {}));
+})(AppEngineHttpRequestHttpMethodEnum = exports.AppEngineHttpRequestHttpMethodEnum || (exports.AppEngineHttpRequestHttpMethodEnum = {}));
 // AppEngineHttpRequest
 /**
  * App Engine HTTP request. The message defines the HTTP request that is sent to an App Engine app when the task is dispatched. This proto can only be used for tasks in a queue which has app_engine_http_target set. Using AppEngineHttpRequest requires [`appengine.applications.get`](https://cloud.google.com/appengine/docs/admin-api/access-control) Google IAM permission for the project and the following scope: `https://www.googleapis.com/auth/cloud-platform` The task will be delivered to the App Engine app which belongs to the same project as the queue. For more information, see [How Requests are Routed](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and how routing is affected by [dispatch files](https://cloud.google.com/appengine/docs/python/config/dispatchref). Traffic is encrypted during transport and never leaves Google datacenters. Because this traffic is carried over a communication mechanism internal to Google, you cannot explicitly set the protocol (for example, HTTP or HTTPS). The request to the handler, however, will appear to have used the HTTP protocol. The AppEngineRouting used to construct the URL that the task is delivered to can be set at the queue-level or task-level: * If set, app_engine_routing_override is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing. The `url` that the task will be sent to is: * `url =` host `+` relative_url Tasks can be dispatched to secure app handlers, unsecure app handlers, and URIs restricted with [`login: admin`](https://cloud.google.com/appengine/docs/standard/python/config/appref). Because tasks are not run as any user, they cannot be dispatched to URIs restricted with [`login: required`](https://cloud.google.com/appengine/docs/standard/python/config/appref) Task dispatches also do not follow redirects. The task attempt has succeeded if the app's request handler returns an HTTP response code in the range [`200` - `299`]. The task attempt has failed if the app's handler returns a non-2xx response code or Cloud Tasks does not receive response before the deadline. Failed tasks will be retried according to the retry configuration. `503` (Service Unavailable) is considered an App Engine system error instead of an application error and will cause Cloud Tasks' traffic congestion control to temporarily throttle the queue's dispatches. Unlike other types of task targets, a `429` (Too Many Requests) response from an app handler does not cause traffic congestion control to throttle the queue.
@@ -45,25 +48,25 @@ var AppEngineHttpRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appEngineRouting" }),
-        __metadata("design:type", AppEngineRouting)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appEngineRouting" }),
+        __metadata("design:type", appenginerouting_1.AppEngineRouting)
     ], AppEngineHttpRequest.prototype, "appEngineRouting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], AppEngineHttpRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpMethod" }),
         __metadata("design:type", String)
     ], AppEngineHttpRequest.prototype, "httpMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payload" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payload" }),
         __metadata("design:type", String)
     ], AppEngineHttpRequest.prototype, "payload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relativeUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relativeUrl" }),
         __metadata("design:type", String)
     ], AppEngineHttpRequest.prototype, "relativeUrl", void 0);
     return AppEngineHttpRequest;
-}(SpeakeasyBase));
-export { AppEngineHttpRequest };
+}(utils_1.SpeakeasyBase));
+exports.AppEngineHttpRequest = AppEngineHttpRequest;

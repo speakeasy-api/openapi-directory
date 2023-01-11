@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class WritableVrfInput extends SpeakeasyBase {
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     enforceUnique?: boolean;
     name: string;

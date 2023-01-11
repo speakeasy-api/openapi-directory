@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetServiceLastAccessedDetailsWithEntitiesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetServiceLastAccessedDetailsWithEntitiesResponse = exports.GetGetServiceLastAccessedDetailsWithEntitiesRequest = exports.GetGetServiceLastAccessedDetailsWithEntitiesHeaders = exports.GetGetServiceLastAccessedDetailsWithEntitiesQueryParams = exports.GetGetServiceLastAccessedDetailsWithEntitiesVersionEnum = exports.GetGetServiceLastAccessedDetailsWithEntitiesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetServiceLastAccessedDetailsWithEntitiesActionEnum;
 (function (GetGetServiceLastAccessedDetailsWithEntitiesActionEnum) {
     GetGetServiceLastAccessedDetailsWithEntitiesActionEnum["GetServiceLastAccessedDetailsWithEntities"] = "GetServiceLastAccessedDetailsWithEntities";
-})(GetGetServiceLastAccessedDetailsWithEntitiesActionEnum || (GetGetServiceLastAccessedDetailsWithEntitiesActionEnum = {}));
-export var GetGetServiceLastAccessedDetailsWithEntitiesVersionEnum;
+})(GetGetServiceLastAccessedDetailsWithEntitiesActionEnum = exports.GetGetServiceLastAccessedDetailsWithEntitiesActionEnum || (exports.GetGetServiceLastAccessedDetailsWithEntitiesActionEnum = {}));
+var GetGetServiceLastAccessedDetailsWithEntitiesVersionEnum;
 (function (GetGetServiceLastAccessedDetailsWithEntitiesVersionEnum) {
     GetGetServiceLastAccessedDetailsWithEntitiesVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetGetServiceLastAccessedDetailsWithEntitiesVersionEnum || (GetGetServiceLastAccessedDetailsWithEntitiesVersionEnum = {}));
+})(GetGetServiceLastAccessedDetailsWithEntitiesVersionEnum = exports.GetGetServiceLastAccessedDetailsWithEntitiesVersionEnum || (exports.GetGetServiceLastAccessedDetailsWithEntitiesVersionEnum = {}));
 var GetGetServiceLastAccessedDetailsWithEntitiesQueryParams = /** @class */ (function (_super) {
     __extends(GetGetServiceLastAccessedDetailsWithEntitiesQueryParams, _super);
     function GetGetServiceLastAccessedDetailsWithEntitiesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetGetServiceLastAccessedDetailsWithEntitiesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=JobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=JobId" }),
         __metadata("design:type", String)
     ], GetGetServiceLastAccessedDetailsWithEntitiesQueryParams.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetGetServiceLastAccessedDetailsWithEntitiesQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
         __metadata("design:type", Number)
     ], GetGetServiceLastAccessedDetailsWithEntitiesQueryParams.prototype, "maxItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ServiceNamespace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ServiceNamespace" }),
         __metadata("design:type", String)
     ], GetGetServiceLastAccessedDetailsWithEntitiesQueryParams.prototype, "serviceNamespace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetGetServiceLastAccessedDetailsWithEntitiesQueryParams.prototype, "version", void 0);
     return GetGetServiceLastAccessedDetailsWithEntitiesQueryParams;
-}(SpeakeasyBase));
-export { GetGetServiceLastAccessedDetailsWithEntitiesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetServiceLastAccessedDetailsWithEntitiesQueryParams = GetGetServiceLastAccessedDetailsWithEntitiesQueryParams;
 var GetGetServiceLastAccessedDetailsWithEntitiesHeaders = /** @class */ (function (_super) {
     __extends(GetGetServiceLastAccessedDetailsWithEntitiesHeaders, _super);
     function GetGetServiceLastAccessedDetailsWithEntitiesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetGetServiceLastAccessedDetailsWithEntitiesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetGetServiceLastAccessedDetailsWithEntitiesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetGetServiceLastAccessedDetailsWithEntitiesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetGetServiceLastAccessedDetailsWithEntitiesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetGetServiceLastAccessedDetailsWithEntitiesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetGetServiceLastAccessedDetailsWithEntitiesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetGetServiceLastAccessedDetailsWithEntitiesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetGetServiceLastAccessedDetailsWithEntitiesHeaders;
-}(SpeakeasyBase));
-export { GetGetServiceLastAccessedDetailsWithEntitiesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetGetServiceLastAccessedDetailsWithEntitiesHeaders = GetGetServiceLastAccessedDetailsWithEntitiesHeaders;
 var GetGetServiceLastAccessedDetailsWithEntitiesRequest = /** @class */ (function (_super) {
     __extends(GetGetServiceLastAccessedDetailsWithEntitiesRequest, _super);
     function GetGetServiceLastAccessedDetailsWithEntitiesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetServiceLastAccessedDetailsWithEntitiesQueryParams)
     ], GetGetServiceLastAccessedDetailsWithEntitiesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetServiceLastAccessedDetailsWithEntitiesHeaders)
     ], GetGetServiceLastAccessedDetailsWithEntitiesRequest.prototype, "headers", void 0);
     return GetGetServiceLastAccessedDetailsWithEntitiesRequest;
-}(SpeakeasyBase));
-export { GetGetServiceLastAccessedDetailsWithEntitiesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetServiceLastAccessedDetailsWithEntitiesRequest = GetGetServiceLastAccessedDetailsWithEntitiesRequest;
 var GetGetServiceLastAccessedDetailsWithEntitiesResponse = /** @class */ (function (_super) {
     __extends(GetGetServiceLastAccessedDetailsWithEntitiesResponse, _super);
     function GetGetServiceLastAccessedDetailsWithEntitiesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGetServiceLastAccessedDetailsWithEntitiesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetServiceLastAccessedDetailsWithEntitiesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetServiceLastAccessedDetailsWithEntitiesResponse.prototype, "statusCode", void 0);
     return GetGetServiceLastAccessedDetailsWithEntitiesResponse;
-}(SpeakeasyBase));
-export { GetGetServiceLastAccessedDetailsWithEntitiesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetServiceLastAccessedDetailsWithEntitiesResponse = GetGetServiceLastAccessedDetailsWithEntitiesResponse;

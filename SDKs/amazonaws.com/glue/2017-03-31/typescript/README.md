@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BatchCreatePartitionRequest, BatchCreatePartitionResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,299 +33,107 @@ const sdk = new SDK(WithSecurity(
     
 const req: BatchCreatePartitionRequest = {
   headers: {
-    xAmzAlgorithm: "iste",
-    xAmzContentSha256: "deleniti",
-    xAmzCredential: "libero",
-    xAmzDate: "saepe",
-    xAmzSecurityToken: "et",
-    xAmzSignature: "corporis",
-    xAmzSignedHeaders: "a",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AWSGlue.BatchCreatePartition",
   },
   request: {
-    catalogId: "numquam",
-    databaseName: "dolores",
+    catalogId: "fugit",
+    databaseName: "et",
     partitionInputList: [
       {
-        lastAccessTime: "1997-09-15T17:21:50Z",
-        lastAnalyzedTime: "2012-08-01T13:42:31Z",
+        lastAccessTime: "2004-06-02T10:14:12Z",
+        lastAnalyzedTime: "1981-07-21T06:30:48Z",
         parameters: {
-          "repudiandae": "quo",
-          "omnis": "adipisci",
+          "ut": "dolorem",
         },
         storageDescriptor: {
           bucketColumns: [
-            "qui",
+            "voluptate",
+            "iste",
           ],
           columns: [
             {
-              comment: "in",
-              name: "et",
+              comment: "totam",
+              name: "dolores",
               parameters: {
-                "eos": "quas",
-                "commodi": "eum",
-                "ex": "aut",
+                "debitis": "vel",
+                "odio": "dolore",
+                "id": "aspernatur",
               },
-              type: "deleniti",
-            },
-            {
-              comment: "quam",
-              name: "in",
-              parameters: {
-                "aperiam": "molestiae",
-              },
-              type: "molestias",
-            },
-            {
-              comment: "magnam",
-              name: "voluptatem",
-              parameters: {
-                "et": "recusandae",
-              },
-              type: "error",
+              type: "accusantium",
             },
           ],
           compressed: false,
-          inputFormat: "et",
-          location: "ratione",
-          numberOfBuckets: 3189238340560411873,
-          outputFormat: "in",
+          inputFormat: "commodi",
+          location: "quis",
+          numberOfBuckets: 3398579248012586914,
+          outputFormat: "aut",
           parameters: {
-            "dolores": "perferendis",
+            "non": "voluptas",
+            "omnis": "aut",
           },
           schemaReference: {
             schemaId: {
-              registryName: "laboriosam",
-              schemaArn: "numquam",
-              schemaName: "necessitatibus",
+              registryName: "illo",
+              schemaArn: "sed",
+              schemaName: "officiis",
             },
-            schemaVersionId: "aperiam",
-            schemaVersionNumber: 5993925161476307471,
+            schemaVersionId: "autem",
+            schemaVersionNumber: 8514850266767180993,
           },
           serdeInfo: {
-            name: "velit",
+            name: "nobis",
             parameters: {
-              "hic": "quis",
-              "sunt": "quo",
-              "eveniet": "veniam",
+              "qui": "recusandae",
             },
-            serializationLibrary: "reiciendis",
+            serializationLibrary: "at",
           },
           skewedInfo: {
             skewedColumnNames: [
-              "dolor",
+              "eveniet",
+            ],
+            skewedColumnValueLocationMaps: {
+              "sint": "inventore",
+              "ut": "exercitationem",
+            },
+            skewedColumnValues: [
+              "reprehenderit",
+              "tempore",
               "maiores",
             ],
-            skewedColumnValueLocationMaps: {
-              "pariatur": "ad",
-              "aperiam": "earum",
-              "ea": "earum",
-            },
-            skewedColumnValues: [
-              "error",
-              "ipsa",
-              "sint",
-            ],
           },
           sortColumns: [
             {
-              column: "qui",
-              sortOrder: 6086645338585357339,
+              column: "dolor",
+              sortOrder: 7719717197379695442,
             },
             {
-              column: "neque",
-              sortOrder: 2732100335356235297,
+              column: "veritatis",
+              sortOrder: 2671030200101705776,
             },
             {
-              column: "ab",
-              sortOrder: 3152036969321635858,
-            },
-          ],
-          storedAsSubDirectories: true,
-        },
-        values: [
-          "enim",
-          "dignissimos",
-          "rerum",
-        ],
-      },
-      {
-        lastAccessTime: "1985-07-03T17:55:52Z",
-        lastAnalyzedTime: "1993-02-24T02:19:50Z",
-        parameters: {
-          "ut": "assumenda",
-        },
-        storageDescriptor: {
-          bucketColumns: [
-            "aut",
-          ],
-          columns: [
-            {
-              comment: "amet",
-              name: "et",
-              parameters: {
-                "voluptatem": "nesciunt",
-              },
-              type: "natus",
-            },
-            {
-              comment: "quasi",
-              name: "et",
-              parameters: {
-                "autem": "quod",
-                "impedit": "nostrum",
-              },
-              type: "repudiandae",
-            },
-            {
-              comment: "dicta",
-              name: "vero",
-              parameters: {
-                "delectus": "nam",
-              },
-              type: "deleniti",
-            },
-          ],
-          compressed: false,
-          inputFormat: "eius",
-          location: "consequuntur",
-          numberOfBuckets: 5084441811407222667,
-          outputFormat: "laudantium",
-          parameters: {
-            "ullam": "quis",
-          },
-          schemaReference: {
-            schemaId: {
-              registryName: "facilis",
-              schemaArn: "fugit",
-              schemaName: "aut",
-            },
-            schemaVersionId: "id",
-            schemaVersionNumber: 1104912452871584628,
-          },
-          serdeInfo: {
-            name: "dicta",
-            parameters: {
-              "molestiae": "aliquam",
-              "quos": "omnis",
-              "illum": "repellat",
-            },
-            serializationLibrary: "id",
-          },
-          skewedInfo: {
-            skewedColumnNames: [
-              "possimus",
-              "eius",
-            ],
-            skewedColumnValueLocationMaps: {
-              "adipisci": "quasi",
-            },
-            skewedColumnValues: [
-              "in",
-              "fuga",
-              "nemo",
-            ],
-          },
-          sortColumns: [
-            {
-              column: "suscipit",
-              sortOrder: 4754108277802182697,
-            },
-            {
-              column: "ratione",
-              sortOrder: 5969817432109258462,
+              column: "et",
+              sortOrder: 8565714761387219319,
             },
           ],
           storedAsSubDirectories: false,
         },
         values: [
-          "autem",
-        ],
-      },
-      {
-        lastAccessTime: "1998-10-04T05:25:30Z",
-        lastAnalyzedTime: "2010-02-05T01:48:43Z",
-        parameters: {
-          "recusandae": "quos",
-        },
-        storageDescriptor: {
-          bucketColumns: [
-            "veniam",
-          ],
-          columns: [
-            {
-              comment: "harum",
-              name: "et",
-              parameters: {
-                "aliquam": "vel",
-              },
-              type: "cumque",
-            },
-          ],
-          compressed: true,
-          inputFormat: "earum",
-          location: "quisquam",
-          numberOfBuckets: 5627190705484135544,
-          outputFormat: "id",
-          parameters: {
-            "esse": "dolores",
-            "cum": "consequuntur",
-          },
-          schemaReference: {
-            schemaId: {
-              registryName: "vero",
-              schemaArn: "quia",
-              schemaName: "cupiditate",
-            },
-            schemaVersionId: "sed",
-            schemaVersionNumber: 3120941714676877055,
-          },
-          serdeInfo: {
-            name: "expedita",
-            parameters: {
-              "excepturi": "ut",
-              "ipsa": "sit",
-              "aliquid": "eos",
-            },
-            serializationLibrary: "itaque",
-          },
-          skewedInfo: {
-            skewedColumnNames: [
-              "soluta",
-            ],
-            skewedColumnValueLocationMaps: {
-              "vel": "iusto",
-              "voluptatum": "illo",
-              "exercitationem": "aut",
-            },
-            skewedColumnValues: [
-              "voluptate",
-              "harum",
-              "in",
-            ],
-          },
-          sortColumns: [
-            {
-              column: "ut",
-              sortOrder: 4835256354221490868,
-            },
-            {
-              column: "sit",
-              sortOrder: 7361183010849730604,
-            },
-          ],
-          storedAsSubDirectories: false,
-        },
-        values: [
-          "cum",
+          "dolores",
         ],
       },
     ],
-    tableName: "dicta",
+    tableName: "placeat",
   },
 };
 
-sdk.sdk.batchCreatePartition(req).then((res: BatchCreatePartitionResponse | AxiosError) => {
+sdk.batchCreatePartition(req).then((res: BatchCreatePartitionResponse | AxiosError) => {
    // handle response
 });
 ```

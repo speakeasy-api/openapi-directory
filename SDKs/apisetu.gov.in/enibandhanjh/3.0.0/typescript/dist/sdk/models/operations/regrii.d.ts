@@ -108,11 +108,11 @@ export declare class RegriiRequest extends SpeakeasyBase {
 export declare class RegriiResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    regrii400ApplicationJsonObject?: Regrii400ApplicationJson;
-    regrii401ApplicationJsonObject?: Regrii401ApplicationJson;
-    regrii404ApplicationJsonObject?: Regrii404ApplicationJson;
-    regrii500ApplicationJsonObject?: Regrii500ApplicationJson;
-    regrii502ApplicationJsonObject?: Regrii502ApplicationJson;
-    regrii503ApplicationJsonObject?: Regrii503ApplicationJson;
-    regrii504ApplicationJsonObject?: Regrii504ApplicationJson;
+    regrii400ApplicationJSONObject?: Regrii400ApplicationJson;
+    regrii401ApplicationJSONObject?: Regrii401ApplicationJson;
+    regrii404ApplicationJSONObject?: Regrii404ApplicationJson;
+    regrii500ApplicationJSONObject?: Regrii500ApplicationJson;
+    regrii502ApplicationJSONObject?: Regrii502ApplicationJson;
+    regrii503ApplicationJSONObject?: Regrii503ApplicationJson;
+    regrii504ApplicationJSONObject?: Regrii504ApplicationJson;
 }

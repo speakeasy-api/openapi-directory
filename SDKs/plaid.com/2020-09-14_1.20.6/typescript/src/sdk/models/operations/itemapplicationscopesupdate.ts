@@ -14,7 +14,7 @@ export class ItemApplicationScopesUpdateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   itemApplicationScopesUpdateResponse?: shared.ItemApplicationScopesUpdateResponse;

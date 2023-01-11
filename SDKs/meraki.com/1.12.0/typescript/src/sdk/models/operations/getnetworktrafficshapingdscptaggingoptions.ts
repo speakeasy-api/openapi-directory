@@ -22,5 +22,5 @@ export class GetNetworkTrafficShapingDscpTaggingOptionsResponse extends Speakeas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkTrafficShapingDscpTaggingOptions200ApplicationJsonObject?: Map<string, any>;
+  getNetworkTrafficShapingDscpTaggingOptions200ApplicationJSONObject?: Record<string, any>;
 }

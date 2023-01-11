@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Category } from "./category";
-import { EmbedSettings } from "./embedsettings";
 import { User } from "./user";
 import { Picture } from "./picture";
+import { Category } from "./category";
+import { EmbedSettings } from "./embedsettings";
 import { Tag } from "./tag";
 export declare enum VideoContextActionEnum {
     AddedTo = "Added to",
@@ -15,7 +15,7 @@ export declare enum VideoContextActionEnum {
 **/
 export declare class VideoContext extends SpeakeasyBase {
     action: VideoContextActionEnum;
-    resource: Map<string, any>;
+    resource: Record<string, any>;
     resourceType: string;
 }
 export declare enum VideoLicenseEnum {

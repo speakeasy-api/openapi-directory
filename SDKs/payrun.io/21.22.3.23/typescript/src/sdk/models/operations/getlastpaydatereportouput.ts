@@ -38,7 +38,7 @@ export class GetLastPayDateReportOuputResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getLastPayDateReportOuput200ApplicationJsonBinaryString?: Uint8Array;
+  getLastPayDateReportOuput200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

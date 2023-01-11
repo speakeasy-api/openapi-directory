@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetApodRequest, GetApodResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,8 +33,8 @@ const req: GetApodRequest = {
     },
   },
   queryParams: {
-    date: "praesentium",
-    hd: true,
+    date: "sit",
+    hd: false,
   },
 };
 

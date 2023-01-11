@@ -10,6 +10,6 @@ export declare class DeleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDo
 }
 export declare class DeleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentIdResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

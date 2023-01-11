@@ -14,5 +14,5 @@ export class PlayMediaIntentHandlingResolveMediaItemsInvocationResponse extends 
   metrics?: ExecutionMetrics;
 
   @SpeakeasyMetadata({ data: "json, name=result" })
-  result: Map<string, any>;
+  result: Record<string, any>;
 }

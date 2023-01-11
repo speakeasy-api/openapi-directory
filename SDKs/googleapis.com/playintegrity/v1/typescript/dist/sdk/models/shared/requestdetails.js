@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RequestDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 // RequestDetails
 /**
  * Contains the integrity request information.
@@ -33,17 +36,17 @@ var RequestDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nonce" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nonce" }),
         __metadata("design:type", String)
     ], RequestDetails.prototype, "nonce", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestPackageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestPackageName" }),
         __metadata("design:type", String)
     ], RequestDetails.prototype, "requestPackageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestampMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestampMillis" }),
         __metadata("design:type", String)
     ], RequestDetails.prototype, "timestampMillis", void 0);
     return RequestDetails;
-}(SpeakeasyBase));
-export { RequestDetails };
+}(utils_1.SpeakeasyBase));
+exports.RequestDetails = RequestDetails;

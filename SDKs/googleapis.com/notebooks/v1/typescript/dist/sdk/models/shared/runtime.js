@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuntimeAccessConfigInput } from "./runtimeaccessconfig";
-import { RuntimeSoftwareConfigInput } from "./runtimesoftwareconfig";
-import { VirtualMachineInput } from "./virtualmachine";
-import { RuntimeAccessConfig } from "./runtimeaccessconfig";
-import { RuntimeMetrics } from "./runtimemetrics";
-import { RuntimeSoftwareConfig } from "./runtimesoftwareconfig";
-import { VirtualMachine } from "./virtualmachine";
-export var RuntimeHealthStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Runtime = exports.RuntimeInput = exports.RuntimeStateEnum = exports.RuntimeHealthStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var runtimeaccessconfig_1 = require("./runtimeaccessconfig");
+var runtimesoftwareconfig_1 = require("./runtimesoftwareconfig");
+var virtualmachine_1 = require("./virtualmachine");
+var runtimeaccessconfig_2 = require("./runtimeaccessconfig");
+var runtimemetrics_1 = require("./runtimemetrics");
+var runtimesoftwareconfig_2 = require("./runtimesoftwareconfig");
+var virtualmachine_2 = require("./virtualmachine");
+var RuntimeHealthStateEnum;
 (function (RuntimeHealthStateEnum) {
     RuntimeHealthStateEnum["HealthStateUnspecified"] = "HEALTH_STATE_UNSPECIFIED";
     RuntimeHealthStateEnum["Healthy"] = "HEALTHY";
     RuntimeHealthStateEnum["Unhealthy"] = "UNHEALTHY";
     RuntimeHealthStateEnum["AgentNotInstalled"] = "AGENT_NOT_INSTALLED";
     RuntimeHealthStateEnum["AgentNotRunning"] = "AGENT_NOT_RUNNING";
-})(RuntimeHealthStateEnum || (RuntimeHealthStateEnum = {}));
-export var RuntimeStateEnum;
+})(RuntimeHealthStateEnum = exports.RuntimeHealthStateEnum || (exports.RuntimeHealthStateEnum = {}));
+var RuntimeStateEnum;
 (function (RuntimeStateEnum) {
     RuntimeStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     RuntimeStateEnum["Starting"] = "STARTING";
@@ -49,7 +52,7 @@ export var RuntimeStateEnum;
     RuntimeStateEnum["Deleting"] = "DELETING";
     RuntimeStateEnum["Upgrading"] = "UPGRADING";
     RuntimeStateEnum["Initializing"] = "INITIALIZING";
-})(RuntimeStateEnum || (RuntimeStateEnum = {}));
+})(RuntimeStateEnum = exports.RuntimeStateEnum || (exports.RuntimeStateEnum = {}));
 // RuntimeInput
 /**
  * The definition of a Runtime for a managed notebook instance.
@@ -60,20 +63,20 @@ var RuntimeInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessConfig" }),
-        __metadata("design:type", RuntimeAccessConfigInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessConfig" }),
+        __metadata("design:type", runtimeaccessconfig_1.RuntimeAccessConfigInput)
     ], RuntimeInput.prototype, "accessConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=softwareConfig" }),
-        __metadata("design:type", RuntimeSoftwareConfigInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=softwareConfig" }),
+        __metadata("design:type", runtimesoftwareconfig_1.RuntimeSoftwareConfigInput)
     ], RuntimeInput.prototype, "softwareConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualMachine" }),
-        __metadata("design:type", VirtualMachineInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualMachine" }),
+        __metadata("design:type", virtualmachine_1.VirtualMachineInput)
     ], RuntimeInput.prototype, "virtualMachine", void 0);
     return RuntimeInput;
-}(SpeakeasyBase));
-export { RuntimeInput };
+}(utils_1.SpeakeasyBase));
+exports.RuntimeInput = RuntimeInput;
 // Runtime
 /**
  * The definition of a Runtime for a managed notebook instance.
@@ -84,41 +87,41 @@ var Runtime = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessConfig" }),
-        __metadata("design:type", RuntimeAccessConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessConfig" }),
+        __metadata("design:type", runtimeaccessconfig_2.RuntimeAccessConfig)
     ], Runtime.prototype, "accessConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Runtime.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthState" }),
         __metadata("design:type", String)
     ], Runtime.prototype, "healthState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics" }),
-        __metadata("design:type", RuntimeMetrics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics" }),
+        __metadata("design:type", runtimemetrics_1.RuntimeMetrics)
     ], Runtime.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Runtime.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=softwareConfig" }),
-        __metadata("design:type", RuntimeSoftwareConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=softwareConfig" }),
+        __metadata("design:type", runtimesoftwareconfig_2.RuntimeSoftwareConfig)
     ], Runtime.prototype, "softwareConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Runtime.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Runtime.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualMachine" }),
-        __metadata("design:type", VirtualMachine)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualMachine" }),
+        __metadata("design:type", virtualmachine_2.VirtualMachine)
     ], Runtime.prototype, "virtualMachine", void 0);
     return Runtime;
-}(SpeakeasyBase));
-export { Runtime };
+}(utils_1.SpeakeasyBase));
+exports.Runtime = Runtime;

@@ -22,7 +22,7 @@ export declare class GetNetworkApplianceClientSecurityEventsRequest extends Spea
 }
 export declare class GetNetworkApplianceClientSecurityEventsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getNetworkApplianceClientSecurityEvents200ApplicationJsonObject?: Map<string, any>;
+    getNetworkApplianceClientSecurityEvents200ApplicationJSONObject?: Record<string, any>;
 }

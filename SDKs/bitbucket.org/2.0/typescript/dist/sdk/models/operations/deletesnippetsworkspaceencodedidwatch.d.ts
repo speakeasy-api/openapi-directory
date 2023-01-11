@@ -16,6 +16,6 @@ export declare class DeleteSnippetsWorkspaceEncodedIdWatchRequest extends Speake
 export declare class DeleteSnippetsWorkspaceEncodedIdWatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedUsers?: shared.PaginatedUsers;
 }

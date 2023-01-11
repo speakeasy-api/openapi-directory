@@ -41,7 +41,7 @@ export class CreateRuleCategoryResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createRuleCategory200ApplicationJsonObject?: CreateRuleCategory200ApplicationJson;
+  createRuleCategory200ApplicationJSONObject?: CreateRuleCategory200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

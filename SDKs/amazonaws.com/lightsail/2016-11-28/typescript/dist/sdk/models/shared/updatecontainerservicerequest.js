@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContainerServicePowerNameEnum } from "./containerservicepowernameenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateContainerServiceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var containerservicepowernameenum_1 = require("./containerservicepowernameenum");
 var UpdateContainerServiceRequest = /** @class */ (function (_super) {
     __extends(UpdateContainerServiceRequest, _super);
     function UpdateContainerServiceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDisabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDisabled" }),
         __metadata("design:type", Boolean)
     ], UpdateContainerServiceRequest.prototype, "isDisabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=power" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=power" }),
         __metadata("design:type", String)
     ], UpdateContainerServiceRequest.prototype, "power", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicDomainNames" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicDomainNames" }),
+        __metadata("design:type", Object)
     ], UpdateContainerServiceRequest.prototype, "publicDomainNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scale" }),
         __metadata("design:type", Number)
     ], UpdateContainerServiceRequest.prototype, "scale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceName" }),
         __metadata("design:type", String)
     ], UpdateContainerServiceRequest.prototype, "serviceName", void 0);
     return UpdateContainerServiceRequest;
-}(SpeakeasyBase));
-export { UpdateContainerServiceRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateContainerServiceRequest = UpdateContainerServiceRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LdapMappingTeam = void 0;
+var utils_1 = require("../../../internal/utils");
 var LdapMappingTeam = /** @class */ (function (_super) {
     __extends(LdapMappingTeam, _super);
     function LdapMappingTeam() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], LdapMappingTeam.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], LdapMappingTeam.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], LdapMappingTeam.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ldap_dn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ldap_dn" }),
         __metadata("design:type", String)
     ], LdapMappingTeam.prototype, "ldapDn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members_url" }),
         __metadata("design:type", String)
     ], LdapMappingTeam.prototype, "membersUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], LdapMappingTeam.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], LdapMappingTeam.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent" }),
         __metadata("design:type", Object)
     ], LdapMappingTeam.prototype, "parent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission" }),
         __metadata("design:type", String)
     ], LdapMappingTeam.prototype, "permission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privacy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privacy" }),
         __metadata("design:type", String)
     ], LdapMappingTeam.prototype, "privacy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositories_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositories_url" }),
         __metadata("design:type", String)
     ], LdapMappingTeam.prototype, "repositoriesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], LdapMappingTeam.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], LdapMappingTeam.prototype, "url", void 0);
     return LdapMappingTeam;
-}(SpeakeasyBase));
-export { LdapMappingTeam };
+}(utils_1.SpeakeasyBase));
+exports.LdapMappingTeam = LdapMappingTeam;

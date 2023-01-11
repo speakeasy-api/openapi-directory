@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetApiPhoneValidateResponse = exports.GetApiPhoneValidateRequest = exports.GetApiPhoneValidateHeaders = exports.GetApiPhoneValidateQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetApiPhoneValidateQueryParams = /** @class */ (function (_super) {
     __extends(GetApiPhoneValidateQueryParams, _super);
     function GetApiPhoneValidateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=CountryCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=CountryCode" }),
         __metadata("design:type", String)
     ], GetApiPhoneValidateQueryParams.prototype, "countryCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=telephone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=telephone" }),
         __metadata("design:type", String)
     ], GetApiPhoneValidateQueryParams.prototype, "telephone", void 0);
     return GetApiPhoneValidateQueryParams;
-}(SpeakeasyBase));
-export { GetApiPhoneValidateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetApiPhoneValidateQueryParams = GetApiPhoneValidateQueryParams;
 var GetApiPhoneValidateHeaders = /** @class */ (function (_super) {
     __extends(GetApiPhoneValidateHeaders, _super);
     function GetApiPhoneValidateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
         __metadata("design:type", String)
     ], GetApiPhoneValidateHeaders.prototype, "xApiKey", void 0);
     return GetApiPhoneValidateHeaders;
-}(SpeakeasyBase));
-export { GetApiPhoneValidateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetApiPhoneValidateHeaders = GetApiPhoneValidateHeaders;
 var GetApiPhoneValidateRequest = /** @class */ (function (_super) {
     __extends(GetApiPhoneValidateRequest, _super);
     function GetApiPhoneValidateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetApiPhoneValidateQueryParams)
     ], GetApiPhoneValidateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetApiPhoneValidateHeaders)
     ], GetApiPhoneValidateRequest.prototype, "headers", void 0);
     return GetApiPhoneValidateRequest;
-}(SpeakeasyBase));
-export { GetApiPhoneValidateRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetApiPhoneValidateRequest = GetApiPhoneValidateRequest;
 var GetApiPhoneValidateResponse = /** @class */ (function (_super) {
     __extends(GetApiPhoneValidateResponse, _super);
     function GetApiPhoneValidateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetApiPhoneValidateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetApiPhoneValidateResponse.prototype, "statusCode", void 0);
     return GetApiPhoneValidateResponse;
-}(SpeakeasyBase));
-export { GetApiPhoneValidateResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetApiPhoneValidateResponse = GetApiPhoneValidateResponse;

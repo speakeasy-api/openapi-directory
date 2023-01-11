@@ -8,6 +8,6 @@ export declare class PostContainersFloatingIpsRequestRequest extends SpeakeasyBa
 }
 export declare class PostContainersFloatingIpsRequestResponse extends SpeakeasyBase {
     contentType: string;
-    postContainersFloatingIpsRequest200ApplicationJsonString?: string;
     statusCode: number;
+    postContainersFloatingIpsRequest200ApplicationJSONString?: string;
 }

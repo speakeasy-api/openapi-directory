@@ -48,5 +48,5 @@ export class LoadServiceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  loadService200ApplicationJsonObject?: LoadService200ApplicationJson;
+  loadService200ApplicationJSONObject?: LoadService200ApplicationJson;
 }

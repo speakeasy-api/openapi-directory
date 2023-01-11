@@ -48,7 +48,7 @@ export class CreateComputeEnvironmentRequestBodyComputeResources extends Speakea
   ec2KeyPair?: string;
 
   @SpeakeasyMetadata({ data: "json, name=imageId" })
-  imageId?: string;
+  imageId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=instanceRole" })
   instanceRole?: string;
@@ -78,7 +78,7 @@ export class CreateComputeEnvironmentRequestBodyComputeResources extends Speakea
   subnets?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: shared.CrTypeEnum;
@@ -109,7 +109,7 @@ export class CreateComputeEnvironmentRequestBody extends SpeakeasyBase {
   state?: CreateComputeEnvironmentRequestBodyStateEnum;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type: CreateComputeEnvironmentRequestBodyTypeEnum;

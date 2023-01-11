@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReactionsDeleteForTeamDiscussionCommentResponse = exports.ReactionsDeleteForTeamDiscussionCommentRequest = exports.ReactionsDeleteForTeamDiscussionCommentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReactionsDeleteForTeamDiscussionCommentPathParams = /** @class */ (function (_super) {
     __extends(ReactionsDeleteForTeamDiscussionCommentPathParams, _super);
     function ReactionsDeleteForTeamDiscussionCommentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=comment_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=comment_number" }),
         __metadata("design:type", Number)
     ], ReactionsDeleteForTeamDiscussionCommentPathParams.prototype, "commentNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=discussion_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=discussion_number" }),
         __metadata("design:type", Number)
     ], ReactionsDeleteForTeamDiscussionCommentPathParams.prototype, "discussionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], ReactionsDeleteForTeamDiscussionCommentPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=reaction_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=reaction_id" }),
         __metadata("design:type", Number)
     ], ReactionsDeleteForTeamDiscussionCommentPathParams.prototype, "reactionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_slug" }),
         __metadata("design:type", String)
     ], ReactionsDeleteForTeamDiscussionCommentPathParams.prototype, "teamSlug", void 0);
     return ReactionsDeleteForTeamDiscussionCommentPathParams;
-}(SpeakeasyBase));
-export { ReactionsDeleteForTeamDiscussionCommentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteForTeamDiscussionCommentPathParams = ReactionsDeleteForTeamDiscussionCommentPathParams;
 var ReactionsDeleteForTeamDiscussionCommentRequest = /** @class */ (function (_super) {
     __extends(ReactionsDeleteForTeamDiscussionCommentRequest, _super);
     function ReactionsDeleteForTeamDiscussionCommentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReactionsDeleteForTeamDiscussionCommentPathParams)
     ], ReactionsDeleteForTeamDiscussionCommentRequest.prototype, "pathParams", void 0);
     return ReactionsDeleteForTeamDiscussionCommentRequest;
-}(SpeakeasyBase));
-export { ReactionsDeleteForTeamDiscussionCommentRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteForTeamDiscussionCommentRequest = ReactionsDeleteForTeamDiscussionCommentRequest;
 var ReactionsDeleteForTeamDiscussionCommentResponse = /** @class */ (function (_super) {
     __extends(ReactionsDeleteForTeamDiscussionCommentResponse, _super);
     function ReactionsDeleteForTeamDiscussionCommentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReactionsDeleteForTeamDiscussionCommentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReactionsDeleteForTeamDiscussionCommentResponse.prototype, "statusCode", void 0);
     return ReactionsDeleteForTeamDiscussionCommentResponse;
-}(SpeakeasyBase));
-export { ReactionsDeleteForTeamDiscussionCommentResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteForTeamDiscussionCommentResponse = ReactionsDeleteForTeamDiscussionCommentResponse;

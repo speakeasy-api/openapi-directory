@@ -5,10 +5,11 @@ import { Public } from "./public";
 import { Retrieve } from "./retrieve";
 import { Search } from "./search";
 import { Utils } from "./utils";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://opentargets.io//platform-api.opentargets.io/v3"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     filter: Filter;
     private: Private;
@@ -22,6 +23,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

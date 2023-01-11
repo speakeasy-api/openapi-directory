@@ -38,16 +38,16 @@ export class PreprocessingBinarizeResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  preprocessingBinarize200ApplicationJsonByteString?: string;
+  preprocessingBinarize200ApplicationJSONByteString?: string;
 
   @SpeakeasyMetadata()
-  preprocessingBinarize200ApplicationXmlByteString?: string;
+  preprocessingBinarize200ApplicationXMLByteString?: string;
 
   @SpeakeasyMetadata()
-  preprocessingBinarize200TextJsonByteString?: string;
+  preprocessingBinarize200TextJSONByteString?: string;
 
   @SpeakeasyMetadata()
-  preprocessingBinarize200TextXmlByteString?: string;
+  preprocessingBinarize200TextXMLByteString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

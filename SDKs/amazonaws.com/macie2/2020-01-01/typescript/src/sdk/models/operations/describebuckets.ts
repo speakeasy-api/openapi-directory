@@ -51,7 +51,7 @@ export class DescribeBucketsRequestBodySortCriteria extends SpeakeasyBase {
 
 export class DescribeBucketsRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=criteria", elemType: shared.BucketCriteriaAdditionalProperties })
-  criteria?: Map<string, shared.BucketCriteriaAdditionalProperties>;
+  criteria?: Record<string, shared.BucketCriteriaAdditionalProperties>;
 
   @SpeakeasyMetadata({ data: "json, name=maxResults" })
   maxResults?: number;

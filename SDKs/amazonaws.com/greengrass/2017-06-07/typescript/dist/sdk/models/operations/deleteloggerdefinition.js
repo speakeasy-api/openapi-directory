@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,92 +23,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteLoggerDefinitionResponse = exports.DeleteLoggerDefinitionRequest = exports.DeleteLoggerDefinitionHeaders = exports.DeleteLoggerDefinitionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteLoggerDefinitionPathParams = /** @class */ (function (_super) {
     __extends(DeleteLoggerDefinitionPathParams, _super);
     function DeleteLoggerDefinitionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=LoggerDefinitionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=LoggerDefinitionId" }),
         __metadata("design:type", String)
     ], DeleteLoggerDefinitionPathParams.prototype, "loggerDefinitionId", void 0);
     return DeleteLoggerDefinitionPathParams;
-}(SpeakeasyBase));
-export { DeleteLoggerDefinitionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteLoggerDefinitionPathParams = DeleteLoggerDefinitionPathParams;
 var DeleteLoggerDefinitionHeaders = /** @class */ (function (_super) {
     __extends(DeleteLoggerDefinitionHeaders, _super);
     function DeleteLoggerDefinitionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DeleteLoggerDefinitionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DeleteLoggerDefinitionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DeleteLoggerDefinitionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DeleteLoggerDefinitionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DeleteLoggerDefinitionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DeleteLoggerDefinitionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DeleteLoggerDefinitionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return DeleteLoggerDefinitionHeaders;
-}(SpeakeasyBase));
-export { DeleteLoggerDefinitionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteLoggerDefinitionHeaders = DeleteLoggerDefinitionHeaders;
 var DeleteLoggerDefinitionRequest = /** @class */ (function (_super) {
     __extends(DeleteLoggerDefinitionRequest, _super);
     function DeleteLoggerDefinitionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteLoggerDefinitionPathParams)
     ], DeleteLoggerDefinitionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteLoggerDefinitionHeaders)
     ], DeleteLoggerDefinitionRequest.prototype, "headers", void 0);
     return DeleteLoggerDefinitionRequest;
-}(SpeakeasyBase));
-export { DeleteLoggerDefinitionRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteLoggerDefinitionRequest = DeleteLoggerDefinitionRequest;
 var DeleteLoggerDefinitionResponse = /** @class */ (function (_super) {
     __extends(DeleteLoggerDefinitionResponse, _super);
     function DeleteLoggerDefinitionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteLoggerDefinitionResponse.prototype, "badRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteLoggerDefinitionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeleteLoggerDefinitionResponse.prototype, "deleteLoggerDefinitionResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteLoggerDefinitionResponse.prototype, "statusCode", void 0);
     return DeleteLoggerDefinitionResponse;
-}(SpeakeasyBase));
-export { DeleteLoggerDefinitionResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteLoggerDefinitionResponse = DeleteLoggerDefinitionResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,78 +23,80 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CurrencyEnum } from "./currencyenum";
-export var ServiceChargeTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceChargeInput = exports.ServiceCharge = exports.ServiceChargeTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var currencyenum_1 = require("./currencyenum");
+var ServiceChargeTypeEnum;
 (function (ServiceChargeTypeEnum) {
     ServiceChargeTypeEnum["AutoGratuity"] = "auto_gratuity";
     ServiceChargeTypeEnum["Custom"] = "custom";
-})(ServiceChargeTypeEnum || (ServiceChargeTypeEnum = {}));
-var ServiceChargeInput = /** @class */ (function (_super) {
-    __extends(ServiceChargeInput, _super);
-    function ServiceChargeInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
-        __metadata("design:type", Boolean)
-    ], ServiceChargeInput.prototype, "active", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
-        __metadata("design:type", Number)
-    ], ServiceChargeInput.prototype, "amount", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
-        __metadata("design:type", String)
-    ], ServiceChargeInput.prototype, "currency", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], ServiceChargeInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentage" }),
-        __metadata("design:type", Number)
-    ], ServiceChargeInput.prototype, "percentage", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
-        __metadata("design:type", String)
-    ], ServiceChargeInput.prototype, "type", void 0);
-    return ServiceChargeInput;
-}(SpeakeasyBase));
-export { ServiceChargeInput };
+})(ServiceChargeTypeEnum = exports.ServiceChargeTypeEnum || (exports.ServiceChargeTypeEnum = {}));
 var ServiceCharge = /** @class */ (function (_super) {
     __extends(ServiceCharge, _super);
     function ServiceCharge() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], ServiceCharge.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], ServiceCharge.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], ServiceCharge.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ServiceCharge.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ServiceCharge.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentage" }),
         __metadata("design:type", Number)
     ], ServiceCharge.prototype, "percentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ServiceCharge.prototype, "type", void 0);
     return ServiceCharge;
-}(SpeakeasyBase));
-export { ServiceCharge };
+}(utils_1.SpeakeasyBase));
+exports.ServiceCharge = ServiceCharge;
+var ServiceChargeInput = /** @class */ (function (_super) {
+    __extends(ServiceChargeInput, _super);
+    function ServiceChargeInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
+        __metadata("design:type", Boolean)
+    ], ServiceChargeInput.prototype, "active", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", Number)
+    ], ServiceChargeInput.prototype, "amount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
+        __metadata("design:type", String)
+    ], ServiceChargeInput.prototype, "currency", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], ServiceChargeInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentage" }),
+        __metadata("design:type", Number)
+    ], ServiceChargeInput.prototype, "percentage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], ServiceChargeInput.prototype, "type", void 0);
+    return ServiceChargeInput;
+}(utils_1.SpeakeasyBase));
+exports.ServiceChargeInput = ServiceChargeInput;

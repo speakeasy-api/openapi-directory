@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteOrganizationBrandingPolicyResponse = exports.DeleteOrganizationBrandingPolicyRequest = exports.DeleteOrganizationBrandingPolicyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteOrganizationBrandingPolicyPathParams = /** @class */ (function (_super) {
     __extends(DeleteOrganizationBrandingPolicyPathParams, _super);
     function DeleteOrganizationBrandingPolicyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=brandingPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=brandingPolicyId" }),
         __metadata("design:type", String)
     ], DeleteOrganizationBrandingPolicyPathParams.prototype, "brandingPolicyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], DeleteOrganizationBrandingPolicyPathParams.prototype, "organizationId", void 0);
     return DeleteOrganizationBrandingPolicyPathParams;
-}(SpeakeasyBase));
-export { DeleteOrganizationBrandingPolicyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteOrganizationBrandingPolicyPathParams = DeleteOrganizationBrandingPolicyPathParams;
 var DeleteOrganizationBrandingPolicyRequest = /** @class */ (function (_super) {
     __extends(DeleteOrganizationBrandingPolicyRequest, _super);
     function DeleteOrganizationBrandingPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteOrganizationBrandingPolicyPathParams)
     ], DeleteOrganizationBrandingPolicyRequest.prototype, "pathParams", void 0);
     return DeleteOrganizationBrandingPolicyRequest;
-}(SpeakeasyBase));
-export { DeleteOrganizationBrandingPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteOrganizationBrandingPolicyRequest = DeleteOrganizationBrandingPolicyRequest;
 var DeleteOrganizationBrandingPolicyResponse = /** @class */ (function (_super) {
     __extends(DeleteOrganizationBrandingPolicyResponse, _super);
     function DeleteOrganizationBrandingPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteOrganizationBrandingPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteOrganizationBrandingPolicyResponse.prototype, "statusCode", void 0);
     return DeleteOrganizationBrandingPolicyResponse;
-}(SpeakeasyBase));
-export { DeleteOrganizationBrandingPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteOrganizationBrandingPolicyResponse = DeleteOrganizationBrandingPolicyResponse;

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { WorkerTypeEnum } from "./workertypeenum";
 export declare class CreateDevEndpointResponse extends SpeakeasyBase {
-    arguments?: Map<string, string>;
+    arguments?: Record<string, string>;
     availabilityZone?: string;
     createdTimestamp?: Date;
     endpointName?: string;

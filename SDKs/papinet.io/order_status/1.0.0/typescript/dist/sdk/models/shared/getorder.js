@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PaginationLinks } from "./paginationlinks";
-import { OrderLineItem } from "./orderlineitem";
-export var GetOrderOrderStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrder = exports.GetOrderOrderStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var paginationlinks_1 = require("./paginationlinks");
+var orderlineitem_1 = require("./orderlineitem");
+var GetOrderOrderStatusEnum;
 (function (GetOrderOrderStatusEnum) {
     GetOrderOrderStatusEnum["Active"] = "Active";
     GetOrderOrderStatusEnum["Cancelled"] = "Cancelled";
     GetOrderOrderStatusEnum["Completed"] = "Completed";
-})(GetOrderOrderStatusEnum || (GetOrderOrderStatusEnum = {}));
+})(GetOrderOrderStatusEnum = exports.GetOrderOrderStatusEnum || (exports.GetOrderOrderStatusEnum = {}));
 var GetOrder = /** @class */ (function (_super) {
     __extends(GetOrder, _super);
     function GetOrder() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GetOrder.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
-        __metadata("design:type", PaginationLinks)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
+        __metadata("design:type", paginationlinks_1.PaginationLinks)
     ], GetOrder.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberOfLineItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberOfLineItems" }),
         __metadata("design:type", Number)
     ], GetOrder.prototype, "numberOfLineItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderLineItems", elemType: OrderLineItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderLineItems", elemType: orderlineitem_1.OrderLineItem }),
         __metadata("design:type", Array)
     ], GetOrder.prototype, "orderLineItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderNumber" }),
         __metadata("design:type", String)
     ], GetOrder.prototype, "orderNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderStatus" }),
         __metadata("design:type", String)
     ], GetOrder.prototype, "orderStatus", void 0);
     return GetOrder;
-}(SpeakeasyBase));
-export { GetOrder };
+}(utils_1.SpeakeasyBase));
+exports.GetOrder = GetOrder;

@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class AssociateEnclaveCertificateIamRoleResult extends SpeakeasyBase {
-    certificateS3BucketName?: string;
-    certificateS3ObjectKey?: string;
-    encryptionKmsKeyId?: string;
+    certificateS3BucketName?: Record<string, any>;
+    certificateS3ObjectKey?: Record<string, any>;
+    encryptionKmsKeyId?: Record<string, any>;
 }

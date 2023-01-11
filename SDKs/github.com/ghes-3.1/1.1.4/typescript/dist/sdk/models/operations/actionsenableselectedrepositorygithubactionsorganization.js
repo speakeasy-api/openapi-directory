@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsEnableSelectedRepositoryGithubActionsOrganizationResponse = exports.ActionsEnableSelectedRepositoryGithubActionsOrganizationRequest = exports.ActionsEnableSelectedRepositoryGithubActionsOrganizationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsEnableSelectedRepositoryGithubActionsOrganizationPathParams = /** @class */ (function (_super) {
     __extends(ActionsEnableSelectedRepositoryGithubActionsOrganizationPathParams, _super);
     function ActionsEnableSelectedRepositoryGithubActionsOrganizationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], ActionsEnableSelectedRepositoryGithubActionsOrganizationPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repository_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repository_id" }),
         __metadata("design:type", Number)
     ], ActionsEnableSelectedRepositoryGithubActionsOrganizationPathParams.prototype, "repositoryId", void 0);
     return ActionsEnableSelectedRepositoryGithubActionsOrganizationPathParams;
-}(SpeakeasyBase));
-export { ActionsEnableSelectedRepositoryGithubActionsOrganizationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsEnableSelectedRepositoryGithubActionsOrganizationPathParams = ActionsEnableSelectedRepositoryGithubActionsOrganizationPathParams;
 var ActionsEnableSelectedRepositoryGithubActionsOrganizationRequest = /** @class */ (function (_super) {
     __extends(ActionsEnableSelectedRepositoryGithubActionsOrganizationRequest, _super);
     function ActionsEnableSelectedRepositoryGithubActionsOrganizationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsEnableSelectedRepositoryGithubActionsOrganizationPathParams)
     ], ActionsEnableSelectedRepositoryGithubActionsOrganizationRequest.prototype, "pathParams", void 0);
     return ActionsEnableSelectedRepositoryGithubActionsOrganizationRequest;
-}(SpeakeasyBase));
-export { ActionsEnableSelectedRepositoryGithubActionsOrganizationRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsEnableSelectedRepositoryGithubActionsOrganizationRequest = ActionsEnableSelectedRepositoryGithubActionsOrganizationRequest;
 var ActionsEnableSelectedRepositoryGithubActionsOrganizationResponse = /** @class */ (function (_super) {
     __extends(ActionsEnableSelectedRepositoryGithubActionsOrganizationResponse, _super);
     function ActionsEnableSelectedRepositoryGithubActionsOrganizationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsEnableSelectedRepositoryGithubActionsOrganizationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsEnableSelectedRepositoryGithubActionsOrganizationResponse.prototype, "statusCode", void 0);
     return ActionsEnableSelectedRepositoryGithubActionsOrganizationResponse;
-}(SpeakeasyBase));
-export { ActionsEnableSelectedRepositoryGithubActionsOrganizationResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsEnableSelectedRepositoryGithubActionsOrganizationResponse = ActionsEnableSelectedRepositoryGithubActionsOrganizationResponse;

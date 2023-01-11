@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationSnmpResponse = exports.GetOrganizationSnmpRequest = exports.GetOrganizationSnmpPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationSnmpPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationSnmpPathParams, _super);
     function GetOrganizationSnmpPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationSnmpPathParams.prototype, "organizationId", void 0);
     return GetOrganizationSnmpPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationSnmpPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationSnmpPathParams = GetOrganizationSnmpPathParams;
 var GetOrganizationSnmpRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationSnmpRequest, _super);
     function GetOrganizationSnmpRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationSnmpPathParams)
     ], GetOrganizationSnmpRequest.prototype, "pathParams", void 0);
     return GetOrganizationSnmpRequest;
-}(SpeakeasyBase));
-export { GetOrganizationSnmpRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationSnmpRequest = GetOrganizationSnmpRequest;
 var GetOrganizationSnmpResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationSnmpResponse, _super);
     function GetOrganizationSnmpResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationSnmpResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationSnmpResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationSnmpResponse.prototype, "getOrganizationSnmp200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationSnmpResponse.prototype, "getOrganizationSnmp200ApplicationJSONObject", void 0);
     return GetOrganizationSnmpResponse;
-}(SpeakeasyBase));
-export { GetOrganizationSnmpResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationSnmpResponse = GetOrganizationSnmpResponse;

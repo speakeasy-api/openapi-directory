@@ -6,7 +6,7 @@ export declare class ChangeAccountSettingsQueryParams extends SpeakeasyBase {
     apiSecret: string;
 }
 export declare class ChangeAccountSettingsRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     queryParams: ChangeAccountSettingsQueryParams;
     request?: shared.AccountSettingsRequest;
 }

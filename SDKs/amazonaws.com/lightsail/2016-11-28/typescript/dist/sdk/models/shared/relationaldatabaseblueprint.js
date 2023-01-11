@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RelationalDatabaseEngineEnum } from "./relationaldatabaseengineenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelationalDatabaseBlueprint = void 0;
+var utils_1 = require("../../../internal/utils");
+var relationaldatabaseengineenum_1 = require("./relationaldatabaseengineenum");
 // RelationalDatabaseBlueprint
 /**
  * Describes a database image, or blueprint. A blueprint describes the major engine version of a database.
@@ -34,29 +37,29 @@ var RelationalDatabaseBlueprint = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blueprintId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blueprintId" }),
         __metadata("design:type", String)
     ], RelationalDatabaseBlueprint.prototype, "blueprintId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=engine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=engine" }),
         __metadata("design:type", String)
     ], RelationalDatabaseBlueprint.prototype, "engine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=engineDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=engineDescription" }),
         __metadata("design:type", String)
     ], RelationalDatabaseBlueprint.prototype, "engineDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=engineVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=engineVersion" }),
         __metadata("design:type", String)
     ], RelationalDatabaseBlueprint.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=engineVersionDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=engineVersionDescription" }),
         __metadata("design:type", String)
     ], RelationalDatabaseBlueprint.prototype, "engineVersionDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isEngineDefault" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isEngineDefault" }),
         __metadata("design:type", Boolean)
     ], RelationalDatabaseBlueprint.prototype, "isEngineDefault", void 0);
     return RelationalDatabaseBlueprint;
-}(SpeakeasyBase));
-export { RelationalDatabaseBlueprint };
+}(utils_1.SpeakeasyBase));
+exports.RelationalDatabaseBlueprint = RelationalDatabaseBlueprint;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ScheduleRunConfiguration } from "./schedulerunconfiguration";
-import { DeviceSelectionConfiguration } from "./deviceselectionconfiguration";
-import { ExecutionConfiguration } from "./executionconfiguration";
-import { ScheduleRunTest } from "./scheduleruntest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduleRunRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var schedulerunconfiguration_1 = require("./schedulerunconfiguration");
+var deviceselectionconfiguration_1 = require("./deviceselectionconfiguration");
+var executionconfiguration_1 = require("./executionconfiguration");
+var scheduleruntest_1 = require("./scheduleruntest");
 // ScheduleRunRequest
 /**
  * Represents a request to the schedule run operation.
@@ -37,37 +40,37 @@ var ScheduleRunRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appArn" }),
         __metadata("design:type", String)
     ], ScheduleRunRequest.prototype, "appArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configuration" }),
-        __metadata("design:type", ScheduleRunConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configuration" }),
+        __metadata("design:type", schedulerunconfiguration_1.ScheduleRunConfiguration)
     ], ScheduleRunRequest.prototype, "configuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePoolArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePoolArn" }),
         __metadata("design:type", String)
     ], ScheduleRunRequest.prototype, "devicePoolArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceSelectionConfiguration" }),
-        __metadata("design:type", DeviceSelectionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceSelectionConfiguration" }),
+        __metadata("design:type", deviceselectionconfiguration_1.DeviceSelectionConfiguration)
     ], ScheduleRunRequest.prototype, "deviceSelectionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionConfiguration" }),
-        __metadata("design:type", ExecutionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionConfiguration" }),
+        __metadata("design:type", executionconfiguration_1.ExecutionConfiguration)
     ], ScheduleRunRequest.prototype, "executionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ScheduleRunRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectArn" }),
         __metadata("design:type", String)
     ], ScheduleRunRequest.prototype, "projectArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=test" }),
-        __metadata("design:type", ScheduleRunTest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=test" }),
+        __metadata("design:type", scheduleruntest_1.ScheduleRunTest)
     ], ScheduleRunRequest.prototype, "test", void 0);
     return ScheduleRunRequest;
-}(SpeakeasyBase));
-export { ScheduleRunRequest };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleRunRequest = ScheduleRunRequest;

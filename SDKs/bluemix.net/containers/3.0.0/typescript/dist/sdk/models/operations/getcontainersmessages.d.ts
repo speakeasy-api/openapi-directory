@@ -12,6 +12,6 @@ export declare class GetContainersMessagesRequest extends SpeakeasyBase {
 }
 export declare class GetContainersMessagesResponse extends SpeakeasyBase {
     contentType: string;
-    getContainersMessages200ApplicationJsonObject?: GetContainersMessages200ApplicationJson;
     statusCode: number;
+    getContainersMessages200ApplicationJSONObject?: GetContainersMessages200ApplicationJson;
 }

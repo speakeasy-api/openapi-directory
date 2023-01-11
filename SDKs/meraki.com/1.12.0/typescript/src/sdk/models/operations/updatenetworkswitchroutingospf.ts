@@ -77,5 +77,5 @@ export class UpdateNetworkSwitchRoutingOspfResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkSwitchRoutingOspf200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkSwitchRoutingOspf200ApplicationJSONObject?: Record<string, any>;
 }

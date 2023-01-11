@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Verification } from "./verification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GitTag = exports.GitTagTagger = exports.GitTagObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var verification_1 = require("./verification");
 var GitTagObject = /** @class */ (function (_super) {
     __extends(GitTagObject, _super);
     function GitTagObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha" }),
         __metadata("design:type", String)
     ], GitTagObject.prototype, "sha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GitTagObject.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GitTagObject.prototype, "url", void 0);
     return GitTagObject;
-}(SpeakeasyBase));
-export { GitTagObject };
+}(utils_1.SpeakeasyBase));
+exports.GitTagObject = GitTagObject;
 var GitTagTagger = /** @class */ (function (_super) {
     __extends(GitTagTagger, _super);
     function GitTagTagger() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", String)
     ], GitTagTagger.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], GitTagTagger.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GitTagTagger.prototype, "name", void 0);
     return GitTagTagger;
-}(SpeakeasyBase));
-export { GitTagTagger };
+}(utils_1.SpeakeasyBase));
+exports.GitTagTagger = GitTagTagger;
 // GitTag
 /**
  * Metadata for a Git tag
@@ -74,37 +77,37 @@ var GitTag = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GitTag.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], GitTag.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object" }),
         __metadata("design:type", GitTagObject)
     ], GitTag.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha" }),
         __metadata("design:type", String)
     ], GitTag.prototype, "sha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tag" }),
         __metadata("design:type", String)
     ], GitTag.prototype, "tag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagger" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagger" }),
         __metadata("design:type", GitTagTagger)
     ], GitTag.prototype, "tagger", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GitTag.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verification" }),
-        __metadata("design:type", Verification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verification" }),
+        __metadata("design:type", verification_1.Verification)
     ], GitTag.prototype, "verification", void 0);
     return GitTag;
-}(SpeakeasyBase));
-export { GitTag };
+}(utils_1.SpeakeasyBase));
+exports.GitTag = GitTag;

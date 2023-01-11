@@ -23,7 +23,7 @@ export declare class CloudprivatecatalogproducerOperationsCancelSecurity extends
 export declare class CloudprivatecatalogproducerOperationsCancelRequest extends SpeakeasyBase {
     pathParams: CloudprivatecatalogproducerOperationsCancelPathParams;
     queryParams: CloudprivatecatalogproducerOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: CloudprivatecatalogproducerOperationsCancelSecurity;
 }
 export declare class CloudprivatecatalogproducerOperationsCancelResponse extends SpeakeasyBase {

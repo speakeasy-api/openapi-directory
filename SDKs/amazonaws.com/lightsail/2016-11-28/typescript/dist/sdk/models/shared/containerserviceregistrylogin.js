@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContainerServiceRegistryLogin = void 0;
+var utils_1 = require("../../../internal/utils");
 // ContainerServiceRegistryLogin
 /**
  * Describes the login information for the container image registry of an Amazon Lightsail account.
@@ -33,21 +36,21 @@ var ContainerServiceRegistryLogin = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiresAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiresAt" }),
         __metadata("design:type", Date)
     ], ContainerServiceRegistryLogin.prototype, "expiresAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], ContainerServiceRegistryLogin.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registry" }),
         __metadata("design:type", String)
     ], ContainerServiceRegistryLogin.prototype, "registry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], ContainerServiceRegistryLogin.prototype, "username", void 0);
     return ContainerServiceRegistryLogin;
-}(SpeakeasyBase));
-export { ContainerServiceRegistryLogin };
+}(utils_1.SpeakeasyBase));
+exports.ContainerServiceRegistryLogin = ContainerServiceRegistryLogin;

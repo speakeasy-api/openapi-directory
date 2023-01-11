@@ -1,0 +1,33 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class IpProbeResponse extends SpeakeasyBase {
+    asAge: number;
+    asCidr: string;
+    asCountryCode: string;
+    asCountryCode3: string;
+    asDescription: string;
+    asDomains: string[];
+    asn: string;
+    city: string;
+    continentCode: string;
+    country: string;
+    countryCode: string;
+    countryCode3: string;
+    currencyCode: string;
+    hostDomain: string;
+    hostname: string;
+    ip: string;
+    isBogon: boolean;
+    isHosting: boolean;
+    isIsp: boolean;
+    isProxy: boolean;
+    isV4Mapped: boolean;
+    isV6: boolean;
+    isVpn: boolean;
+    providerDescription: string;
+    providerDomain: string;
+    providerType: string;
+    providerWebsite: string;
+    region: string;
+    valid: boolean;
+    vpnDomain: string;
+}

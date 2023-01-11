@@ -5,6 +5,6 @@ export declare class IdentityGetRequest extends SpeakeasyBase {
 }
 export declare class IdentityGetResponse extends SpeakeasyBase {
     contentType: string;
-    identityGetResponse?: Map<string, any>;
+    identityGetResponse?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AlarmState } from "./alarmstate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Alarm = void 0;
+var utils_1 = require("../../../internal/utils");
+var alarmstate_1 = require("./alarmstate");
 // Alarm
 /**
  * Contains information about an alarm.
@@ -34,33 +37,33 @@ var Alarm = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmModelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmModelName" }),
         __metadata("design:type", String)
     ], Alarm.prototype, "alarmModelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmModelVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmModelVersion" }),
         __metadata("design:type", String)
     ], Alarm.prototype, "alarmModelVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmState" }),
-        __metadata("design:type", AlarmState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmState" }),
+        __metadata("design:type", alarmstate_1.AlarmState)
     ], Alarm.prototype, "alarmState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTime" }),
         __metadata("design:type", Date)
     ], Alarm.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyValue" }),
         __metadata("design:type", String)
     ], Alarm.prototype, "keyValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdateTime" }),
         __metadata("design:type", Date)
     ], Alarm.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=severity" }),
         __metadata("design:type", Number)
     ], Alarm.prototype, "severity", void 0);
     return Alarm;
-}(SpeakeasyBase));
-export { Alarm };
+}(utils_1.SpeakeasyBase));
+exports.Alarm = Alarm;

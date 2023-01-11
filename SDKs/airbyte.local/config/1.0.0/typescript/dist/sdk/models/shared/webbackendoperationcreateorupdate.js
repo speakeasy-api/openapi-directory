@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OperatorConfiguration } from "./operatorconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebBackendOperationCreateOrUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
+var operatorconfiguration_1 = require("./operatorconfiguration");
 var WebBackendOperationCreateOrUpdate = /** @class */ (function (_super) {
     __extends(WebBackendOperationCreateOrUpdate, _super);
     function WebBackendOperationCreateOrUpdate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WebBackendOperationCreateOrUpdate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operationId" }),
         __metadata("design:type", String)
     ], WebBackendOperationCreateOrUpdate.prototype, "operationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operatorConfiguration" }),
-        __metadata("design:type", OperatorConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operatorConfiguration" }),
+        __metadata("design:type", operatorconfiguration_1.OperatorConfiguration)
     ], WebBackendOperationCreateOrUpdate.prototype, "operatorConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workspaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workspaceId" }),
         __metadata("design:type", String)
     ], WebBackendOperationCreateOrUpdate.prototype, "workspaceId", void 0);
     return WebBackendOperationCreateOrUpdate;
-}(SpeakeasyBase));
-export { WebBackendOperationCreateOrUpdate };
+}(utils_1.SpeakeasyBase));
+exports.WebBackendOperationCreateOrUpdate = WebBackendOperationCreateOrUpdate;

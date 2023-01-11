@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,102 +14,127 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatchBehaviorsIdResponse = exports.PatchBehaviorsIdRequest = exports.PatchBehaviorsIdRequestBody = exports.PatchBehaviorsIdRequestBodyAttachmentFile = exports.PatchBehaviorsIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var PatchBehaviorsIdPathParams = /** @class */ (function (_super) {
     __extends(PatchBehaviorsIdPathParams, _super);
     function PatchBehaviorsIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PatchBehaviorsIdPathParams.prototype, "id", void 0);
     return PatchBehaviorsIdPathParams;
-}(SpeakeasyBase));
-export { PatchBehaviorsIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PatchBehaviorsIdPathParams = PatchBehaviorsIdPathParams;
 var PatchBehaviorsIdRequestBodyAttachmentFile = /** @class */ (function (_super) {
     __extends(PatchBehaviorsIdRequestBodyAttachmentFile, _super);
     function PatchBehaviorsIdRequestBodyAttachmentFile() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=attachment_file" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=attachment_file" }),
         __metadata("design:type", String)
     ], PatchBehaviorsIdRequestBodyAttachmentFile.prototype, "attachmentFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, content=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
         __metadata("design:type", Uint8Array)
     ], PatchBehaviorsIdRequestBodyAttachmentFile.prototype, "content", void 0);
     return PatchBehaviorsIdRequestBodyAttachmentFile;
-}(SpeakeasyBase));
-export { PatchBehaviorsIdRequestBodyAttachmentFile };
+}(utils_1.SpeakeasyBase));
+exports.PatchBehaviorsIdRequestBodyAttachmentFile = PatchBehaviorsIdRequestBodyAttachmentFile;
 var PatchBehaviorsIdRequestBody = /** @class */ (function (_super) {
     __extends(PatchBehaviorsIdRequestBody, _super);
     function PatchBehaviorsIdRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, file=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
         __metadata("design:type", PatchBehaviorsIdRequestBodyAttachmentFile)
     ], PatchBehaviorsIdRequestBody.prototype, "attachmentFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=behavior" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=behavior" }),
         __metadata("design:type", String)
     ], PatchBehaviorsIdRequestBody.prototype, "behavior", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=path" }),
         __metadata("design:type", String)
     ], PatchBehaviorsIdRequestBody.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=value" }),
         __metadata("design:type", String)
     ], PatchBehaviorsIdRequestBody.prototype, "value", void 0);
     return PatchBehaviorsIdRequestBody;
-}(SpeakeasyBase));
-export { PatchBehaviorsIdRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PatchBehaviorsIdRequestBody = PatchBehaviorsIdRequestBody;
 var PatchBehaviorsIdRequest = /** @class */ (function (_super) {
     __extends(PatchBehaviorsIdRequest, _super);
     function PatchBehaviorsIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PatchBehaviorsIdPathParams)
     ], PatchBehaviorsIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", PatchBehaviorsIdRequestBody)
     ], PatchBehaviorsIdRequest.prototype, "request", void 0);
     return PatchBehaviorsIdRequest;
-}(SpeakeasyBase));
-export { PatchBehaviorsIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.PatchBehaviorsIdRequest = PatchBehaviorsIdRequest;
 var PatchBehaviorsIdResponse = /** @class */ (function (_super) {
     __extends(PatchBehaviorsIdResponse, _super);
     function PatchBehaviorsIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BehaviorEntity)
     ], PatchBehaviorsIdResponse.prototype, "behaviorEntity", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PatchBehaviorsIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PatchBehaviorsIdResponse.prototype, "statusCode", void 0);
     return PatchBehaviorsIdResponse;
-}(SpeakeasyBase));
-export { PatchBehaviorsIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.PatchBehaviorsIdResponse = PatchBehaviorsIdResponse;

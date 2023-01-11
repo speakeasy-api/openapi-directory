@@ -8,7 +8,7 @@ export declare enum GetRulesCompliance200ApplicationJsonActionEnum {
 export declare class GetRulesCompliance200ApplicationJsonDataRulesComplianceDetails extends SpeakeasyBase {
     error?: number;
     noReport?: number;
-    successAlreadyOk?: number;
+    successAlreadyOK?: number;
     successNotApplicable?: number;
     successRepaired?: number;
     unexpectedMissingComponent?: number;
@@ -43,5 +43,5 @@ export declare class GetRulesComplianceRequest extends SpeakeasyBase {
 export declare class GetRulesComplianceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getRulesCompliance200ApplicationJsonObject?: GetRulesCompliance200ApplicationJson;
+    getRulesCompliance200ApplicationJSONObject?: GetRulesCompliance200ApplicationJson;
 }

@@ -11,7 +11,7 @@ export declare enum GetTagQueueVersionEnum {
 }
 export declare class GetTagQueueQueryParams extends SpeakeasyBase {
     action: GetTagQueueActionEnum;
-    tags: Map<string, string>;
+    tags: Record<string, string>;
     version: GetTagQueueVersionEnum;
 }
 export declare class GetTagQueueHeaders extends SpeakeasyBase {

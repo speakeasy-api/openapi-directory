@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-var KeyInput = /** @class */ (function (_super) {
-    __extends(KeyInput, _super);
-    function KeyInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_read_only" }),
-        __metadata("design:type", Boolean)
-    ], KeyInput.prototype, "isReadOnly", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
-        __metadata("design:type", String)
-    ], KeyInput.prototype, "label", void 0);
-    return KeyInput;
-}(SpeakeasyBase));
-export { KeyInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeyInput = exports.Key = void 0;
+var utils_1 = require("../../../internal/utils");
 var Key = /** @class */ (function (_super) {
     __extends(Key, _super);
     function Key() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Key.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_read_only" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_read_only" }),
         __metadata("design:type", Boolean)
     ], Key.prototype, "isReadOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], Key.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], Key.prototype, "secret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_created" }),
         __metadata("design:type", String)
     ], Key.prototype, "timeCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_updated" }),
         __metadata("design:type", String)
     ], Key.prototype, "timeUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Key.prototype, "url", void 0);
     return Key;
-}(SpeakeasyBase));
-export { Key };
+}(utils_1.SpeakeasyBase));
+exports.Key = Key;
+var KeyInput = /** @class */ (function (_super) {
+    __extends(KeyInput, _super);
+    function KeyInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_read_only" }),
+        __metadata("design:type", Boolean)
+    ], KeyInput.prototype, "isReadOnly", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
+        __metadata("design:type", String)
+    ], KeyInput.prototype, "label", void 0);
+    return KeyInput;
+}(utils_1.SpeakeasyBase));
+exports.KeyInput = KeyInput;

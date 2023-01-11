@@ -1,0 +1,67 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import { CacheNodeUpdateStatusList } from "./cachenodeupdatestatuslist";
+import { NodeGroupUpdateStatusList } from "./nodegroupupdatestatuslist";
+import { ServiceUpdateSeverityEnum } from "./serviceupdateseverityenum";
+import { ServiceUpdateStatusEnum } from "./serviceupdatestatusenum";
+import { ServiceUpdateTypeEnum } from "./serviceupdatetypeenum";
+import { SlaMetEnum } from "./slametenum";
+import { UpdateActionStatusEnum } from "./updateactionstatusenum";
+
+
+
+// UpdateActionList
+/** 
+ * The status of the service update for a specific replication group
+**/
+export class UpdateActionList extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  cacheClusterId?: string;
+
+  @SpeakeasyMetadata({ elemType: CacheNodeUpdateStatusList })
+  cacheNodeUpdateStatus?: CacheNodeUpdateStatusList[];
+
+  @SpeakeasyMetadata()
+  engine?: string;
+
+  @SpeakeasyMetadata()
+  estimatedUpdateTime?: string;
+
+  @SpeakeasyMetadata({ elemType: NodeGroupUpdateStatusList })
+  nodeGroupUpdateStatus?: NodeGroupUpdateStatusList[];
+
+  @SpeakeasyMetadata()
+  nodesUpdated?: string;
+
+  @SpeakeasyMetadata()
+  replicationGroupId?: string;
+
+  @SpeakeasyMetadata()
+  serviceUpdateName?: string;
+
+  @SpeakeasyMetadata()
+  serviceUpdateRecommendedApplyByDate?: Date;
+
+  @SpeakeasyMetadata()
+  serviceUpdateReleaseDate?: Date;
+
+  @SpeakeasyMetadata()
+  serviceUpdateSeverity?: ServiceUpdateSeverityEnum;
+
+  @SpeakeasyMetadata()
+  serviceUpdateStatus?: ServiceUpdateStatusEnum;
+
+  @SpeakeasyMetadata()
+  serviceUpdateType?: ServiceUpdateTypeEnum;
+
+  @SpeakeasyMetadata()
+  slaMet?: SlaMetEnum;
+
+  @SpeakeasyMetadata()
+  updateActionAvailableDate?: Date;
+
+  @SpeakeasyMetadata()
+  updateActionStatus?: UpdateActionStatusEnum;
+
+  @SpeakeasyMetadata()
+  updateActionStatusModifiedDate?: Date;
+}

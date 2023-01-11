@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReplicationEndpointTypeValueEnum } from "./replicationendpointtypevalueenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SupportedEndpointType = void 0;
+var utils_1 = require("../../../internal/utils");
+var replicationendpointtypevalueenum_1 = require("./replicationendpointtypevalueenum");
 // SupportedEndpointType
 /**
  * Provides information about types of supported endpoints in response to a request by the <code>DescribeEndpointTypes</code> operation. This information includes the type of endpoint, the database engine name, and whether change data capture (CDC) is supported.
@@ -34,25 +37,25 @@ var SupportedEndpointType = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointType" }),
         __metadata("design:type", String)
     ], SupportedEndpointType.prototype, "endpointType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EngineDisplayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EngineDisplayName" }),
         __metadata("design:type", String)
     ], SupportedEndpointType.prototype, "engineDisplayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EngineName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EngineName" }),
         __metadata("design:type", String)
     ], SupportedEndpointType.prototype, "engineName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationInstanceEngineMinimumVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationInstanceEngineMinimumVersion" }),
         __metadata("design:type", String)
     ], SupportedEndpointType.prototype, "replicationInstanceEngineMinimumVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SupportsCDC" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SupportsCDC" }),
         __metadata("design:type", Boolean)
-    ], SupportedEndpointType.prototype, "supportsCdc", void 0);
+    ], SupportedEndpointType.prototype, "supportsCDC", void 0);
     return SupportedEndpointType;
-}(SpeakeasyBase));
-export { SupportedEndpointType };
+}(utils_1.SpeakeasyBase));
+exports.SupportedEndpointType = SupportedEndpointType;

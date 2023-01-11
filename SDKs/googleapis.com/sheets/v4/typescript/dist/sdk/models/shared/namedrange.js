@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GridRange } from "./gridrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NamedRange = void 0;
+var utils_1 = require("../../../internal/utils");
+var gridrange_1 = require("./gridrange");
 // NamedRange
 /**
  * A named range.
@@ -34,17 +37,17 @@ var NamedRange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], NamedRange.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=namedRangeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=namedRangeId" }),
         __metadata("design:type", String)
     ], NamedRange.prototype, "namedRangeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], NamedRange.prototype, "range", void 0);
     return NamedRange;
-}(SpeakeasyBase));
-export { NamedRange };
+}(utils_1.SpeakeasyBase));
+exports.NamedRange = NamedRange;

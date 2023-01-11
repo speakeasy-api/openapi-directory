@@ -20,10 +20,10 @@ export declare class CompileRequest extends SpeakeasyBase {
     pathParams: CompilePathParams;
     queryParams: CompileQueryParams;
     headers: CompileHeaders;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class CompileResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    compile200ApplicationJsonObject?: Map<string, any>;
+    compile200ApplicationJSONObject?: Record<string, any>;
 }

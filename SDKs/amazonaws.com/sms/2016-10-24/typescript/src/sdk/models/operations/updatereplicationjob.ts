@@ -75,5 +75,5 @@ export class UpdateReplicationJobResponse extends SpeakeasyBase {
   unauthorizedOperationException?: any;
 
   @SpeakeasyMetadata()
-  updateReplicationJobResponse?: Map<string, any>;
+  updateReplicationJobResponse?: Record<string, any>;
 }

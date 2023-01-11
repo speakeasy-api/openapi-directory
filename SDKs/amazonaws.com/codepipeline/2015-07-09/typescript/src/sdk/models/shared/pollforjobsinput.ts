@@ -15,5 +15,5 @@ export class PollForJobsInput extends SpeakeasyBase {
   maxBatchSize?: number;
 
   @SpeakeasyMetadata({ data: "json, name=queryParam" })
-  queryParam?: Map<string, string>;
+  queryParam?: Record<string, string>;
 }

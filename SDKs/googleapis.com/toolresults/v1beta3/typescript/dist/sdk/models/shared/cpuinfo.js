@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CpuInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 var CpuInfo = /** @class */ (function (_super) {
     __extends(CpuInfo, _super);
     function CpuInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuProcessor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuProcessor" }),
         __metadata("design:type", String)
     ], CpuInfo.prototype, "cpuProcessor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuSpeedInGhz" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuSpeedInGhz" }),
         __metadata("design:type", Number)
     ], CpuInfo.prototype, "cpuSpeedInGhz", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberOfCores" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberOfCores" }),
         __metadata("design:type", Number)
     ], CpuInfo.prototype, "numberOfCores", void 0);
     return CpuInfo;
-}(SpeakeasyBase));
-export { CpuInfo };
+}(utils_1.SpeakeasyBase));
+exports.CpuInfo = CpuInfo;

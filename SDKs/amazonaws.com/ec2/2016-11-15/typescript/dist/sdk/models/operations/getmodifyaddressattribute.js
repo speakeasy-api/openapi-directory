@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetModifyAddressAttributeActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetModifyAddressAttributeResponse = exports.GetModifyAddressAttributeRequest = exports.GetModifyAddressAttributeHeaders = exports.GetModifyAddressAttributeQueryParams = exports.GetModifyAddressAttributeVersionEnum = exports.GetModifyAddressAttributeActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetModifyAddressAttributeActionEnum;
 (function (GetModifyAddressAttributeActionEnum) {
     GetModifyAddressAttributeActionEnum["ModifyAddressAttribute"] = "ModifyAddressAttribute";
-})(GetModifyAddressAttributeActionEnum || (GetModifyAddressAttributeActionEnum = {}));
-export var GetModifyAddressAttributeVersionEnum;
+})(GetModifyAddressAttributeActionEnum = exports.GetModifyAddressAttributeActionEnum || (exports.GetModifyAddressAttributeActionEnum = {}));
+var GetModifyAddressAttributeVersionEnum;
 (function (GetModifyAddressAttributeVersionEnum) {
     GetModifyAddressAttributeVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetModifyAddressAttributeVersionEnum || (GetModifyAddressAttributeVersionEnum = {}));
+})(GetModifyAddressAttributeVersionEnum = exports.GetModifyAddressAttributeVersionEnum || (exports.GetModifyAddressAttributeVersionEnum = {}));
 var GetModifyAddressAttributeQueryParams = /** @class */ (function (_super) {
     __extends(GetModifyAddressAttributeQueryParams, _super);
     function GetModifyAddressAttributeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetModifyAddressAttributeQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AllocationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AllocationId" }),
         __metadata("design:type", String)
     ], GetModifyAddressAttributeQueryParams.prototype, "allocationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DomainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DomainName" }),
         __metadata("design:type", String)
     ], GetModifyAddressAttributeQueryParams.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetModifyAddressAttributeQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetModifyAddressAttributeQueryParams.prototype, "version", void 0);
     return GetModifyAddressAttributeQueryParams;
-}(SpeakeasyBase));
-export { GetModifyAddressAttributeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyAddressAttributeQueryParams = GetModifyAddressAttributeQueryParams;
 var GetModifyAddressAttributeHeaders = /** @class */ (function (_super) {
     __extends(GetModifyAddressAttributeHeaders, _super);
     function GetModifyAddressAttributeHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetModifyAddressAttributeHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetModifyAddressAttributeHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetModifyAddressAttributeHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetModifyAddressAttributeHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetModifyAddressAttributeHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetModifyAddressAttributeHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetModifyAddressAttributeHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetModifyAddressAttributeHeaders;
-}(SpeakeasyBase));
-export { GetModifyAddressAttributeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyAddressAttributeHeaders = GetModifyAddressAttributeHeaders;
 var GetModifyAddressAttributeRequest = /** @class */ (function (_super) {
     __extends(GetModifyAddressAttributeRequest, _super);
     function GetModifyAddressAttributeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyAddressAttributeQueryParams)
     ], GetModifyAddressAttributeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyAddressAttributeHeaders)
     ], GetModifyAddressAttributeRequest.prototype, "headers", void 0);
     return GetModifyAddressAttributeRequest;
-}(SpeakeasyBase));
-export { GetModifyAddressAttributeRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyAddressAttributeRequest = GetModifyAddressAttributeRequest;
 var GetModifyAddressAttributeResponse = /** @class */ (function (_super) {
     __extends(GetModifyAddressAttributeResponse, _super);
     function GetModifyAddressAttributeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetModifyAddressAttributeResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetModifyAddressAttributeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetModifyAddressAttributeResponse.prototype, "statusCode", void 0);
     return GetModifyAddressAttributeResponse;
-}(SpeakeasyBase));
-export { GetModifyAddressAttributeResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyAddressAttributeResponse = GetModifyAddressAttributeResponse;

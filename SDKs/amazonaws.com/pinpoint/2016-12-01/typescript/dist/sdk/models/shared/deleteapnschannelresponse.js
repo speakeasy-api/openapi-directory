@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApnsChannelResponse } from "./apnschannelresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteApnsChannelResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var apnschannelresponse_1 = require("./apnschannelresponse");
 var DeleteApnsChannelResponse = /** @class */ (function (_super) {
     __extends(DeleteApnsChannelResponse, _super);
     function DeleteApnsChannelResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=APNSChannelResponse" }),
-        __metadata("design:type", ApnsChannelResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=APNSChannelResponse" }),
+        __metadata("design:type", apnschannelresponse_1.ApnsChannelResponse)
     ], DeleteApnsChannelResponse.prototype, "apnsChannelResponse", void 0);
     return DeleteApnsChannelResponse;
-}(SpeakeasyBase));
-export { DeleteApnsChannelResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteApnsChannelResponse = DeleteApnsChannelResponse;

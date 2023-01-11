@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetStopActivityStreamActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetStopActivityStreamResponse = exports.GetStopActivityStreamRequest = exports.GetStopActivityStreamHeaders = exports.GetStopActivityStreamQueryParams = exports.GetStopActivityStreamVersionEnum = exports.GetStopActivityStreamActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetStopActivityStreamActionEnum;
 (function (GetStopActivityStreamActionEnum) {
     GetStopActivityStreamActionEnum["StopActivityStream"] = "StopActivityStream";
-})(GetStopActivityStreamActionEnum || (GetStopActivityStreamActionEnum = {}));
-export var GetStopActivityStreamVersionEnum;
+})(GetStopActivityStreamActionEnum = exports.GetStopActivityStreamActionEnum || (exports.GetStopActivityStreamActionEnum = {}));
+var GetStopActivityStreamVersionEnum;
 (function (GetStopActivityStreamVersionEnum) {
     GetStopActivityStreamVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(GetStopActivityStreamVersionEnum || (GetStopActivityStreamVersionEnum = {}));
+})(GetStopActivityStreamVersionEnum = exports.GetStopActivityStreamVersionEnum || (exports.GetStopActivityStreamVersionEnum = {}));
 var GetStopActivityStreamQueryParams = /** @class */ (function (_super) {
     __extends(GetStopActivityStreamQueryParams, _super);
     function GetStopActivityStreamQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetStopActivityStreamQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ApplyImmediately" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ApplyImmediately" }),
         __metadata("design:type", Boolean)
     ], GetStopActivityStreamQueryParams.prototype, "applyImmediately", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ResourceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ResourceArn" }),
         __metadata("design:type", String)
     ], GetStopActivityStreamQueryParams.prototype, "resourceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetStopActivityStreamQueryParams.prototype, "version", void 0);
     return GetStopActivityStreamQueryParams;
-}(SpeakeasyBase));
-export { GetStopActivityStreamQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetStopActivityStreamQueryParams = GetStopActivityStreamQueryParams;
 var GetStopActivityStreamHeaders = /** @class */ (function (_super) {
     __extends(GetStopActivityStreamHeaders, _super);
     function GetStopActivityStreamHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetStopActivityStreamHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetStopActivityStreamHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetStopActivityStreamHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetStopActivityStreamHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetStopActivityStreamHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetStopActivityStreamHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetStopActivityStreamHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetStopActivityStreamHeaders;
-}(SpeakeasyBase));
-export { GetStopActivityStreamHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetStopActivityStreamHeaders = GetStopActivityStreamHeaders;
 var GetStopActivityStreamRequest = /** @class */ (function (_super) {
     __extends(GetStopActivityStreamRequest, _super);
     function GetStopActivityStreamRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetStopActivityStreamQueryParams)
     ], GetStopActivityStreamRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetStopActivityStreamHeaders)
     ], GetStopActivityStreamRequest.prototype, "headers", void 0);
     return GetStopActivityStreamRequest;
-}(SpeakeasyBase));
-export { GetStopActivityStreamRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetStopActivityStreamRequest = GetStopActivityStreamRequest;
 var GetStopActivityStreamResponse = /** @class */ (function (_super) {
     __extends(GetStopActivityStreamResponse, _super);
     function GetStopActivityStreamResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetStopActivityStreamResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetStopActivityStreamResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetStopActivityStreamResponse.prototype, "statusCode", void 0);
     return GetStopActivityStreamResponse;
-}(SpeakeasyBase));
-export { GetStopActivityStreamResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetStopActivityStreamResponse = GetStopActivityStreamResponse;

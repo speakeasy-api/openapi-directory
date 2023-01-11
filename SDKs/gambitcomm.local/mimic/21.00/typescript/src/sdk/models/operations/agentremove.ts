@@ -22,5 +22,5 @@ export class AgentRemoveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  agentRemove200ApplicationJsonString?: string;
+  agentRemove200ApplicationJSONString?: string;
 }

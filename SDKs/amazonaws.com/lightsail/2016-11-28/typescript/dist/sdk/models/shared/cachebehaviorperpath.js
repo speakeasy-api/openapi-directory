@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BehaviorEnumEnum } from "./behaviorenumenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CacheBehaviorPerPath = void 0;
+var utils_1 = require("../../../internal/utils");
+var behaviorenumenum_1 = require("./behaviorenumenum");
 // CacheBehaviorPerPath
 /**
  * <p>Describes the per-path cache behavior of an Amazon Lightsail content delivery network (CDN) distribution.</p> <p>A per-path cache behavior is used to override, or add an exception to, the default cache behavior of a distribution. For example, if the <code>cacheBehavior</code> is set to <code>cache</code>, then a per-path cache behavior can be used to specify a directory, file, or file type that your distribution will cache. Alternately, if the distribution's <code>cacheBehavior</code> is <code>dont-cache</code>, then a per-path cache behavior can be used to specify a directory, file, or file type that your distribution will not cache.</p> <p>if the cacheBehavior's behavior is set to 'cache', then</p>
@@ -34,13 +37,13 @@ var CacheBehaviorPerPath = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=behavior" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=behavior" }),
         __metadata("design:type", String)
     ], CacheBehaviorPerPath.prototype, "behavior", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], CacheBehaviorPerPath.prototype, "path", void 0);
     return CacheBehaviorPerPath;
-}(SpeakeasyBase));
-export { CacheBehaviorPerPath };
+}(utils_1.SpeakeasyBase));
+exports.CacheBehaviorPerPath = CacheBehaviorPerPath;

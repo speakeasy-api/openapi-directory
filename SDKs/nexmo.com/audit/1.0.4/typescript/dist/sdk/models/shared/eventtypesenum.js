@@ -1,4 +1,7 @@
-export var EventTypesEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventTypesEnum = void 0;
+var EventTypesEnum;
 (function (EventTypesEnum) {
     EventTypesEnum["UserStatus"] = "USER_STATUS";
     EventTypesEnum["UserUpdate"] = "USER_UPDATE";
@@ -27,4 +30,4 @@ export var EventTypesEnum;
     EventTypesEnum["AutoreloadEnable"] = "AUTORELOAD_ENABLE";
     EventTypesEnum["AutoreloadUpdate"] = "AUTORELOAD_UPDATE";
     EventTypesEnum["AutoreloadDisable"] = "AUTORELOAD_DISABLE";
-})(EventTypesEnum || (EventTypesEnum = {}));
+})(EventTypesEnum = exports.EventTypesEnum || (exports.EventTypesEnum = {}));

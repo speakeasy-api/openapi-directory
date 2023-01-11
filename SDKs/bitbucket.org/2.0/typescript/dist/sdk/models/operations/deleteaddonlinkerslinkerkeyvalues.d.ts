@@ -15,5 +15,5 @@ export declare class DeleteAddonLinkersLinkerKeyValuesRequest extends SpeakeasyB
 export declare class DeleteAddonLinkersLinkerKeyValuesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

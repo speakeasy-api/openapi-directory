@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StoryIdCollaboratorsUseridPermissiontypeGetResponse = exports.StoryIdCollaboratorsUseridPermissiontypeGetRequest = exports.StoryIdCollaboratorsUseridPermissiontypeGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var StoryIdCollaboratorsUseridPermissiontypeGetPathParams = /** @class */ (function (_super) {
     __extends(StoryIdCollaboratorsUseridPermissiontypeGetPathParams, _super);
     function StoryIdCollaboratorsUseridPermissiontypeGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], StoryIdCollaboratorsUseridPermissiontypeGetPathParams.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=permissiontype" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=permissiontype" }),
         __metadata("design:type", String)
     ], StoryIdCollaboratorsUseridPermissiontypeGetPathParams.prototype, "permissiontype", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=story_collaborator_userid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=story_collaborator_userid" }),
         __metadata("design:type", String)
     ], StoryIdCollaboratorsUseridPermissiontypeGetPathParams.prototype, "storyCollaboratorUserid", void 0);
     return StoryIdCollaboratorsUseridPermissiontypeGetPathParams;
-}(SpeakeasyBase));
-export { StoryIdCollaboratorsUseridPermissiontypeGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdCollaboratorsUseridPermissiontypeGetPathParams = StoryIdCollaboratorsUseridPermissiontypeGetPathParams;
 var StoryIdCollaboratorsUseridPermissiontypeGetRequest = /** @class */ (function (_super) {
     __extends(StoryIdCollaboratorsUseridPermissiontypeGetRequest, _super);
     function StoryIdCollaboratorsUseridPermissiontypeGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StoryIdCollaboratorsUseridPermissiontypeGetPathParams)
     ], StoryIdCollaboratorsUseridPermissiontypeGetRequest.prototype, "pathParams", void 0);
     return StoryIdCollaboratorsUseridPermissiontypeGetRequest;
-}(SpeakeasyBase));
-export { StoryIdCollaboratorsUseridPermissiontypeGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdCollaboratorsUseridPermissiontypeGetRequest = StoryIdCollaboratorsUseridPermissiontypeGetRequest;
 var StoryIdCollaboratorsUseridPermissiontypeGetResponse = /** @class */ (function (_super) {
     __extends(StoryIdCollaboratorsUseridPermissiontypeGetResponse, _super);
     function StoryIdCollaboratorsUseridPermissiontypeGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StoryIdCollaboratorsUseridPermissiontypeGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StoryIdCollaboratorsUseridPermissiontypeGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StoryIdCollaboratorsUseridPermissiontypeGetResponse.prototype, "problemDetail", void 0);
     return StoryIdCollaboratorsUseridPermissiontypeGetResponse;
-}(SpeakeasyBase));
-export { StoryIdCollaboratorsUseridPermissiontypeGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdCollaboratorsUseridPermissiontypeGetResponse = StoryIdCollaboratorsUseridPermissiontypeGetResponse;

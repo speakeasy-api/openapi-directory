@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAdsHomeservicesLocalservicesV1AggregatorInfo } from "./googleadshomeserviceslocalservicesv1aggregatorinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAdsHomeservicesLocalservicesV1AccountReport = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleadshomeserviceslocalservicesv1aggregatorinfo_1 = require("./googleadshomeserviceslocalservicesv1aggregatorinfo");
 // GoogleAdsHomeservicesLocalservicesV1AccountReport
 /**
  * An Account Report of a GLS account identified by their account id containing aggregate data gathered from a particular date range. Next ID: 18
@@ -34,73 +37,73 @@ var GoogleAdsHomeservicesLocalservicesV1AccountReport = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1AccountReport.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aggregatorInfo" }),
-        __metadata("design:type", GoogleAdsHomeservicesLocalservicesV1AggregatorInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aggregatorInfo" }),
+        __metadata("design:type", googleadshomeserviceslocalservicesv1aggregatorinfo_1.GoogleAdsHomeservicesLocalservicesV1AggregatorInfo)
     ], GoogleAdsHomeservicesLocalservicesV1AccountReport.prototype, "aggregatorInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=averageFiveStarRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=averageFiveStarRating" }),
         __metadata("design:type", Number)
     ], GoogleAdsHomeservicesLocalservicesV1AccountReport.prototype, "averageFiveStarRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=averageWeeklyBudget" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=averageWeeklyBudget" }),
         __metadata("design:type", Number)
     ], GoogleAdsHomeservicesLocalservicesV1AccountReport.prototype, "averageWeeklyBudget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessName" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1AccountReport.prototype, "businessName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1AccountReport.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentPeriodChargedLeads" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentPeriodChargedLeads" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1AccountReport.prototype, "currentPeriodChargedLeads", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentPeriodConnectedPhoneCalls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentPeriodConnectedPhoneCalls" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1AccountReport.prototype, "currentPeriodConnectedPhoneCalls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentPeriodPhoneCalls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentPeriodPhoneCalls" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1AccountReport.prototype, "currentPeriodPhoneCalls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentPeriodTotalCost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentPeriodTotalCost" }),
         __metadata("design:type", Number)
     ], GoogleAdsHomeservicesLocalservicesV1AccountReport.prototype, "currentPeriodTotalCost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=impressionsLastTwoDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=impressionsLastTwoDays" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1AccountReport.prototype, "impressionsLastTwoDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneLeadResponsiveness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneLeadResponsiveness" }),
         __metadata("design:type", Number)
     ], GoogleAdsHomeservicesLocalservicesV1AccountReport.prototype, "phoneLeadResponsiveness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previousPeriodChargedLeads" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previousPeriodChargedLeads" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1AccountReport.prototype, "previousPeriodChargedLeads", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previousPeriodConnectedPhoneCalls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previousPeriodConnectedPhoneCalls" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1AccountReport.prototype, "previousPeriodConnectedPhoneCalls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previousPeriodPhoneCalls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previousPeriodPhoneCalls" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1AccountReport.prototype, "previousPeriodPhoneCalls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previousPeriodTotalCost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previousPeriodTotalCost" }),
         __metadata("design:type", Number)
     ], GoogleAdsHomeservicesLocalservicesV1AccountReport.prototype, "previousPeriodTotalCost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalReview" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalReview" }),
         __metadata("design:type", Number)
     ], GoogleAdsHomeservicesLocalservicesV1AccountReport.prototype, "totalReview", void 0);
     return GoogleAdsHomeservicesLocalservicesV1AccountReport;
-}(SpeakeasyBase));
-export { GoogleAdsHomeservicesLocalservicesV1AccountReport };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAdsHomeservicesLocalservicesV1AccountReport = GoogleAdsHomeservicesLocalservicesV1AccountReport;

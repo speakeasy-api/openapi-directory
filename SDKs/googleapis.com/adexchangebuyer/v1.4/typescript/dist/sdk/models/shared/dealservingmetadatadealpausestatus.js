@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DealServingMetadataDealPauseStatus = void 0;
+var utils_1 = require("../../../internal/utils");
 // DealServingMetadataDealPauseStatus
 /**
  * Tracks which parties (if any) have paused a deal. The deal is considered paused if has_buyer_paused || has_seller_paused. Each of the has_buyer_paused or the has_seller_paused bits can be set independently.
@@ -33,25 +36,25 @@ var DealServingMetadataDealPauseStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buyerPauseReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buyerPauseReason" }),
         __metadata("design:type", String)
     ], DealServingMetadataDealPauseStatus.prototype, "buyerPauseReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstPausedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstPausedBy" }),
         __metadata("design:type", String)
     ], DealServingMetadataDealPauseStatus.prototype, "firstPausedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasBuyerPaused" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasBuyerPaused" }),
         __metadata("design:type", Boolean)
     ], DealServingMetadataDealPauseStatus.prototype, "hasBuyerPaused", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasSellerPaused" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasSellerPaused" }),
         __metadata("design:type", Boolean)
     ], DealServingMetadataDealPauseStatus.prototype, "hasSellerPaused", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sellerPauseReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sellerPauseReason" }),
         __metadata("design:type", String)
     ], DealServingMetadataDealPauseStatus.prototype, "sellerPauseReason", void 0);
     return DealServingMetadataDealPauseStatus;
-}(SpeakeasyBase));
-export { DealServingMetadataDealPauseStatus };
+}(utils_1.SpeakeasyBase));
+exports.DealServingMetadataDealPauseStatus = DealServingMetadataDealPauseStatus;

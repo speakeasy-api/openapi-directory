@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,132 +23,134 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PreReceiveHook = exports.PreReceiveHookScriptRepository = exports.PreReceiveHookEnvironment = exports.PreReceiveHookEnvironmentDownload = void 0;
+var utils_1 = require("../../../internal/utils");
 var PreReceiveHookEnvironmentDownload = /** @class */ (function (_super) {
     __extends(PreReceiveHookEnvironmentDownload, _super);
     function PreReceiveHookEnvironmentDownload() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downloaded_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downloaded_at" }),
         __metadata("design:type", String)
     ], PreReceiveHookEnvironmentDownload.prototype, "downloadedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PreReceiveHookEnvironmentDownload.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], PreReceiveHookEnvironmentDownload.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PreReceiveHookEnvironmentDownload.prototype, "url", void 0);
     return PreReceiveHookEnvironmentDownload;
-}(SpeakeasyBase));
-export { PreReceiveHookEnvironmentDownload };
+}(utils_1.SpeakeasyBase));
+exports.PreReceiveHookEnvironmentDownload = PreReceiveHookEnvironmentDownload;
 var PreReceiveHookEnvironment = /** @class */ (function (_super) {
     __extends(PreReceiveHookEnvironment, _super);
     function PreReceiveHookEnvironment() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", String)
     ], PreReceiveHookEnvironment.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=default_environment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=default_environment" }),
         __metadata("design:type", Boolean)
     ], PreReceiveHookEnvironment.prototype, "defaultEnvironment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download" }),
         __metadata("design:type", PreReceiveHookEnvironmentDownload)
     ], PreReceiveHookEnvironment.prototype, "download", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hooks_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hooks_count" }),
         __metadata("design:type", Number)
     ], PreReceiveHookEnvironment.prototype, "hooksCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], PreReceiveHookEnvironment.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PreReceiveHookEnvironment.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image_url" }),
         __metadata("design:type", String)
     ], PreReceiveHookEnvironment.prototype, "imageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PreReceiveHookEnvironment.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PreReceiveHookEnvironment.prototype, "url", void 0);
     return PreReceiveHookEnvironment;
-}(SpeakeasyBase));
-export { PreReceiveHookEnvironment };
+}(utils_1.SpeakeasyBase));
+exports.PreReceiveHookEnvironment = PreReceiveHookEnvironment;
 var PreReceiveHookScriptRepository = /** @class */ (function (_super) {
     __extends(PreReceiveHookScriptRepository, _super);
     function PreReceiveHookScriptRepository() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=full_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=full_name" }),
         __metadata("design:type", String)
     ], PreReceiveHookScriptRepository.prototype, "fullName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], PreReceiveHookScriptRepository.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PreReceiveHookScriptRepository.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PreReceiveHookScriptRepository.prototype, "url", void 0);
     return PreReceiveHookScriptRepository;
-}(SpeakeasyBase));
-export { PreReceiveHookScriptRepository };
+}(utils_1.SpeakeasyBase));
+exports.PreReceiveHookScriptRepository = PreReceiveHookScriptRepository;
 var PreReceiveHook = /** @class */ (function (_super) {
     __extends(PreReceiveHook, _super);
     function PreReceiveHook() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allow_downstream_configuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allow_downstream_configuration" }),
         __metadata("design:type", Boolean)
     ], PreReceiveHook.prototype, "allowDownstreamConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforcement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforcement" }),
         __metadata("design:type", String)
     ], PreReceiveHook.prototype, "enforcement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
         __metadata("design:type", PreReceiveHookEnvironment)
     ], PreReceiveHook.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PreReceiveHook.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PreReceiveHook.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=script" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=script" }),
         __metadata("design:type", String)
     ], PreReceiveHook.prototype, "script", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=script_repository" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=script_repository" }),
         __metadata("design:type", PreReceiveHookScriptRepository)
     ], PreReceiveHook.prototype, "scriptRepository", void 0);
     return PreReceiveHook;
-}(SpeakeasyBase));
-export { PreReceiveHook };
+}(utils_1.SpeakeasyBase));
+exports.PreReceiveHook = PreReceiveHook;

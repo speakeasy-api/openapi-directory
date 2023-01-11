@@ -61,7 +61,7 @@ export class PutDedicatedIpInPoolResponse extends SpeakeasyBase {
   notFoundException?: any;
 
   @SpeakeasyMetadata()
-  putDedicatedIpInPoolResponse?: Map<string, any>;
+  putDedicatedIpInPoolResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

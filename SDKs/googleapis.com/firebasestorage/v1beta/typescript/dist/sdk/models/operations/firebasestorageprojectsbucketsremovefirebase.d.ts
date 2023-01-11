@@ -31,11 +31,11 @@ export declare class FirebasestorageProjectsBucketsRemoveFirebaseSecurity extend
 export declare class FirebasestorageProjectsBucketsRemoveFirebaseRequest extends SpeakeasyBase {
     pathParams: FirebasestorageProjectsBucketsRemoveFirebasePathParams;
     queryParams: FirebasestorageProjectsBucketsRemoveFirebaseQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: FirebasestorageProjectsBucketsRemoveFirebaseSecurity;
 }
 export declare class FirebasestorageProjectsBucketsRemoveFirebaseResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

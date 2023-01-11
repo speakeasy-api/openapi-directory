@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataPrivacy } from "./dataprivacy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BotImportSpecification = void 0;
+var utils_1 = require("../../../internal/utils");
+var dataprivacy_1 = require("./dataprivacy");
 // BotImportSpecification
 /**
  * Provides the bot parameters required for importing a bot.
@@ -34,29 +37,29 @@ var BotImportSpecification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botName" }),
         __metadata("design:type", String)
     ], BotImportSpecification.prototype, "botName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botTags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botTags" }),
+        __metadata("design:type", Object)
     ], BotImportSpecification.prototype, "botTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataPrivacy" }),
-        __metadata("design:type", DataPrivacy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataPrivacy" }),
+        __metadata("design:type", dataprivacy_1.DataPrivacy)
     ], BotImportSpecification.prototype, "dataPrivacy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=idleSessionTTLInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=idleSessionTTLInSeconds" }),
         __metadata("design:type", Number)
-    ], BotImportSpecification.prototype, "idleSessionTtlInSeconds", void 0);
+    ], BotImportSpecification.prototype, "idleSessionTTLInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleArn" }),
         __metadata("design:type", String)
     ], BotImportSpecification.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testBotAliasTags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testBotAliasTags" }),
+        __metadata("design:type", Object)
     ], BotImportSpecification.prototype, "testBotAliasTags", void 0);
     return BotImportSpecification;
-}(SpeakeasyBase));
-export { BotImportSpecification };
+}(utils_1.SpeakeasyBase));
+exports.BotImportSpecification = BotImportSpecification;

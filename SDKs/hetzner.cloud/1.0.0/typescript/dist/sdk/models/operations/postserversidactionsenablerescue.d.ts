@@ -47,6 +47,6 @@ export declare class PostServersIdActionsEnableRescueRequest extends SpeakeasyBa
 }
 export declare class PostServersIdActionsEnableRescueResponse extends SpeakeasyBase {
     contentType: string;
-    postServersIdActionsEnableRescue201ApplicationJsonObject?: PostServersIdActionsEnableRescue201ApplicationJson;
     statusCode: number;
+    postServersIdActionsEnableRescue201ApplicationJSONObject?: PostServersIdActionsEnableRescue201ApplicationJson;
 }

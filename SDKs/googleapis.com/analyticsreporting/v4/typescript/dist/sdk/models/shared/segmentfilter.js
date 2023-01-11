@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SequenceSegment } from "./sequencesegment";
-import { SimpleSegment } from "./simplesegment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SegmentFilter = void 0;
+var utils_1 = require("../../../internal/utils");
+var sequencesegment_1 = require("./sequencesegment");
+var simplesegment_1 = require("./simplesegment");
 // SegmentFilter
 /**
  * SegmentFilter defines the segment to be either a simple or a sequence segment. A simple segment condition contains dimension and metric conditions to select the sessions or users. A sequence segment condition can be used to select users or sessions based on sequential conditions.
@@ -35,17 +38,17 @@ var SegmentFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=not" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=not" }),
         __metadata("design:type", Boolean)
     ], SegmentFilter.prototype, "not", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sequenceSegment" }),
-        __metadata("design:type", SequenceSegment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sequenceSegment" }),
+        __metadata("design:type", sequencesegment_1.SequenceSegment)
     ], SegmentFilter.prototype, "sequenceSegment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=simpleSegment" }),
-        __metadata("design:type", SimpleSegment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=simpleSegment" }),
+        __metadata("design:type", simplesegment_1.SimpleSegment)
     ], SegmentFilter.prototype, "simpleSegment", void 0);
     return SegmentFilter;
-}(SpeakeasyBase));
-export { SegmentFilter };
+}(utils_1.SpeakeasyBase));
+exports.SegmentFilter = SegmentFilter;

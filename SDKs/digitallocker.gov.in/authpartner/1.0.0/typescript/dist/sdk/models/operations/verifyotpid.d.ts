@@ -19,7 +19,7 @@ export declare class VerifyOtpIdResponse extends SpeakeasyBase {
     contentType: string;
     demoAuthVerifyResponse?: any;
     statusCode: number;
-    verifyOtpId400ApplicationJsonOneOf?: any;
-    verifyOtpId401ApplicationJsonObject?: VerifyOtpId401ApplicationJson;
-    verifyOtpId500ApplicationJsonObject?: VerifyOtpId500ApplicationJson;
+    verifyOTPId400ApplicationJSONOneOf?: any;
+    verifyOTPId401ApplicationJSONObject?: VerifyOtpId401ApplicationJson;
+    verifyOTPId500ApplicationJSONObject?: VerifyOtpId500ApplicationJson;
 }

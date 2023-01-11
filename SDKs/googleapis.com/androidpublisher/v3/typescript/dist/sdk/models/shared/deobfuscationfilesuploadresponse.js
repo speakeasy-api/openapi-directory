@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeobfuscationFile } from "./deobfuscationfile";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeobfuscationFilesUploadResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var deobfuscationfile_1 = require("./deobfuscationfile");
 // DeobfuscationFilesUploadResponse
 /**
  * Responses for the upload.
@@ -34,9 +37,9 @@ var DeobfuscationFilesUploadResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deobfuscationFile" }),
-        __metadata("design:type", DeobfuscationFile)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deobfuscationFile" }),
+        __metadata("design:type", deobfuscationfile_1.DeobfuscationFile)
     ], DeobfuscationFilesUploadResponse.prototype, "deobfuscationFile", void 0);
     return DeobfuscationFilesUploadResponse;
-}(SpeakeasyBase));
-export { DeobfuscationFilesUploadResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeobfuscationFilesUploadResponse = DeobfuscationFilesUploadResponse;

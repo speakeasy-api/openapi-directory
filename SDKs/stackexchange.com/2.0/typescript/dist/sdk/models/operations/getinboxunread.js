@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetInboxUnreadResponse = exports.GetInboxUnreadRequest = exports.GetInboxUnreadQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetInboxUnreadQueryParams = /** @class */ (function (_super) {
     __extends(GetInboxUnreadQueryParams, _super);
     function GetInboxUnreadQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetInboxUnreadQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetInboxUnreadQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetInboxUnreadQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetInboxUnreadQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=since" }),
         __metadata("design:type", Number)
     ], GetInboxUnreadQueryParams.prototype, "since", void 0);
     return GetInboxUnreadQueryParams;
-}(SpeakeasyBase));
-export { GetInboxUnreadQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetInboxUnreadQueryParams = GetInboxUnreadQueryParams;
 var GetInboxUnreadRequest = /** @class */ (function (_super) {
     __extends(GetInboxUnreadRequest, _super);
     function GetInboxUnreadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetInboxUnreadQueryParams)
     ], GetInboxUnreadRequest.prototype, "queryParams", void 0);
     return GetInboxUnreadRequest;
-}(SpeakeasyBase));
-export { GetInboxUnreadRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetInboxUnreadRequest = GetInboxUnreadRequest;
 var GetInboxUnreadResponse = /** @class */ (function (_super) {
     __extends(GetInboxUnreadResponse, _super);
     function GetInboxUnreadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetInboxUnreadResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetInboxUnreadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetInboxUnreadResponse.prototype, "statusCode", void 0);
     return GetInboxUnreadResponse;
-}(SpeakeasyBase));
-export { GetInboxUnreadResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetInboxUnreadResponse = GetInboxUnreadResponse;

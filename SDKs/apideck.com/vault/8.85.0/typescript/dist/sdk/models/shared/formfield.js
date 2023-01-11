@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FormField = void 0;
+var utils_1 = require("../../../internal/utils");
 var FormField = /** @class */ (function (_super) {
     __extends(FormField, _super);
     function FormField() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allow_custom_values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allow_custom_values" }),
         __metadata("design:type", Boolean)
     ], FormField.prototype, "allowCustomValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_field" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_field" }),
         __metadata("design:type", Boolean)
     ], FormField.prototype, "customField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], FormField.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabled" }),
         __metadata("design:type", Boolean)
     ], FormField.prototype, "disabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hidden" }),
+        __metadata("design:type", Boolean)
+    ], FormField.prototype, "hidden", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], FormField.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], FormField.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], FormField.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placeholder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placeholder" }),
         __metadata("design:type", String)
     ], FormField.prototype, "placeholder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required" }),
         __metadata("design:type", Boolean)
     ], FormField.prototype, "required", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sensitive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sensitive" }),
         __metadata("design:type", Boolean)
     ], FormField.prototype, "sensitive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", Object)
     ], FormField.prototype, "type", void 0);
     return FormField;
-}(SpeakeasyBase));
-export { FormField };
+}(utils_1.SpeakeasyBase));
+exports.FormField = FormField;

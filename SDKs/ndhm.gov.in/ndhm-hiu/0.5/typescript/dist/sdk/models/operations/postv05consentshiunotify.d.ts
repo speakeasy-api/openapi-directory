@@ -3,10 +3,10 @@ import * as shared from "../shared";
 export declare const PostV05ConsentsHiuNotifyServerList: readonly ["https://dev.ndhm.gov.in/hiu"];
 export declare class PostV05ConsentsHiuNotifyHeaders extends SpeakeasyBase {
     authorization: string;
-    xHiuId: string;
+    xHIUID: string;
 }
 export declare class PostV05ConsentsHiuNotifyRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     headers: PostV05ConsentsHiuNotifyHeaders;
     request: shared.HiuConsentNotificationEvent;
 }

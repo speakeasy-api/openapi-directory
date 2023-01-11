@@ -107,11 +107,11 @@ export declare class LocerRequest extends SpeakeasyBase {
 export declare class LocerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    locer400ApplicationJsonObject?: Locer400ApplicationJson;
-    locer401ApplicationJsonObject?: Locer401ApplicationJson;
-    locer404ApplicationJsonObject?: Locer404ApplicationJson;
-    locer500ApplicationJsonObject?: Locer500ApplicationJson;
-    locer502ApplicationJsonObject?: Locer502ApplicationJson;
-    locer503ApplicationJsonObject?: Locer503ApplicationJson;
-    locer504ApplicationJsonObject?: Locer504ApplicationJson;
+    locer400ApplicationJSONObject?: Locer400ApplicationJson;
+    locer401ApplicationJSONObject?: Locer401ApplicationJson;
+    locer404ApplicationJSONObject?: Locer404ApplicationJson;
+    locer500ApplicationJSONObject?: Locer500ApplicationJson;
+    locer502ApplicationJSONObject?: Locer502ApplicationJson;
+    locer503ApplicationJSONObject?: Locer503ApplicationJson;
+    locer504ApplicationJSONObject?: Locer504ApplicationJson;
 }

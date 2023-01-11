@@ -85,7 +85,7 @@ export class GetImagesId200ApplicationJsonImage extends SpeakeasyBase {
   imageSize: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
@@ -127,8 +127,8 @@ export class GetImagesIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getImagesId200ApplicationJsonObject?: GetImagesId200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getImagesId200ApplicationJSONObject?: GetImagesId200ApplicationJson;
 }

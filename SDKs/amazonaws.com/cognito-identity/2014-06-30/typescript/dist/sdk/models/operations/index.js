@@ -1,23 +1,39 @@
-export * from "./createidentitypool";
-export * from "./deleteidentities";
-export * from "./deleteidentitypool";
-export * from "./describeidentity";
-export * from "./describeidentitypool";
-export * from "./getcredentialsforidentity";
-export * from "./getid";
-export * from "./getidentitypoolroles";
-export * from "./getopenidtoken";
-export * from "./getopenidtokenfordeveloperidentity";
-export * from "./getprincipaltagattributemap";
-export * from "./listidentities";
-export * from "./listidentitypools";
-export * from "./listtagsforresource";
-export * from "./lookupdeveloperidentity";
-export * from "./mergedeveloperidentities";
-export * from "./setidentitypoolroles";
-export * from "./setprincipaltagattributemap";
-export * from "./tagresource";
-export * from "./unlinkdeveloperidentity";
-export * from "./unlinkidentity";
-export * from "./untagresource";
-export * from "./updateidentitypool";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./createidentitypool"), exports);
+__exportStar(require("./deleteidentities"), exports);
+__exportStar(require("./deleteidentitypool"), exports);
+__exportStar(require("./describeidentity"), exports);
+__exportStar(require("./describeidentitypool"), exports);
+__exportStar(require("./getcredentialsforidentity"), exports);
+__exportStar(require("./getid"), exports);
+__exportStar(require("./getidentitypoolroles"), exports);
+__exportStar(require("./getopenidtoken"), exports);
+__exportStar(require("./getopenidtokenfordeveloperidentity"), exports);
+__exportStar(require("./getprincipaltagattributemap"), exports);
+__exportStar(require("./listidentities"), exports);
+__exportStar(require("./listidentitypools"), exports);
+__exportStar(require("./listtagsforresource"), exports);
+__exportStar(require("./lookupdeveloperidentity"), exports);
+__exportStar(require("./mergedeveloperidentities"), exports);
+__exportStar(require("./setidentitypoolroles"), exports);
+__exportStar(require("./setprincipaltagattributemap"), exports);
+__exportStar(require("./tagresource"), exports);
+__exportStar(require("./unlinkdeveloperidentity"), exports);
+__exportStar(require("./unlinkidentity"), exports);
+__exportStar(require("./untagresource"), exports);
+__exportStar(require("./updateidentitypool"), exports);

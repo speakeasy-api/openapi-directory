@@ -92,7 +92,7 @@ export declare class TripsTripDetailsRequest extends SpeakeasyBase {
 }
 export declare class TripsTripDetailsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    tripsTripDetails200ApplicationJsonObject?: TripsTripDetails200ApplicationJson;
+    tripsTripDetails200ApplicationJSONObject?: TripsTripDetails200ApplicationJson;
 }

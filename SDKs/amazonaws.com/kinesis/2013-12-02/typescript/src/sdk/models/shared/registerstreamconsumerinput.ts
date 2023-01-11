@@ -7,5 +7,5 @@ export class RegisterStreamConsumerInput extends SpeakeasyBase {
   consumerName: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamARN" })
-  streamArn: string;
+  streamARN: string;
 }

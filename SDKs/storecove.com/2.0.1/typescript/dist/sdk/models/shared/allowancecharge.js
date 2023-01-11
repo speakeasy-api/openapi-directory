@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tax } from "./tax";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllowanceCharge = void 0;
+var utils_1 = require("../../../internal/utils");
+var tax_1 = require("./tax");
 var AllowanceCharge = /** @class */ (function (_super) {
     __extends(AllowanceCharge, _super);
     function AllowanceCharge() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountExcludingVat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountExcludingVat" }),
         __metadata("design:type", Number)
     ], AllowanceCharge.prototype, "amountExcludingVat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], AllowanceCharge.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasonCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasonCode" }),
         __metadata("design:type", String)
     ], AllowanceCharge.prototype, "reasonCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tax" }),
-        __metadata("design:type", Tax)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tax" }),
+        __metadata("design:type", tax_1.Tax)
     ], AllowanceCharge.prototype, "tax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxes_duties_fees", elemType: Tax }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxes_duties_fees", elemType: tax_1.Tax }),
         __metadata("design:type", Array)
     ], AllowanceCharge.prototype, "taxesDutiesFees", void 0);
     return AllowanceCharge;
-}(SpeakeasyBase));
-export { AllowanceCharge };
+}(utils_1.SpeakeasyBase));
+exports.AllowanceCharge = AllowanceCharge;

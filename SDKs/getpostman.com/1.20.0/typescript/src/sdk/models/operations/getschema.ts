@@ -61,5 +61,5 @@ export class GetSchemaResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getSchema200ApplicationJsonObject?: GetSchema200ApplicationJson;
+  getSchema200ApplicationJSONObject?: GetSchema200ApplicationJson;
 }

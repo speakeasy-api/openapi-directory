@@ -1,7 +1,10 @@
-export var MessageFormatTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MessageFormatTypeEnum = void 0;
+var MessageFormatTypeEnum;
 (function (MessageFormatTypeEnum) {
     MessageFormatTypeEnum["PlainText"] = "PlainText";
     MessageFormatTypeEnum["CustomPayload"] = "CustomPayload";
     MessageFormatTypeEnum["Ssml"] = "SSML";
     MessageFormatTypeEnum["Composite"] = "Composite";
-})(MessageFormatTypeEnum || (MessageFormatTypeEnum = {}));
+})(MessageFormatTypeEnum = exports.MessageFormatTypeEnum || (exports.MessageFormatTypeEnum = {}));

@@ -25,5 +25,5 @@ export class SetHostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setHost200ApplicationJsonString?: string;
+  setHost200ApplicationJSONString?: string;
 }

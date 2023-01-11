@@ -40,7 +40,7 @@ export class JobGetAllJobsLifetimeStatisticsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   jobStatistics?: any;

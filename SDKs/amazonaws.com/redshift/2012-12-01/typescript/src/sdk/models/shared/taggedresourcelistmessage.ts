@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TaggedResource } from "./taggedresource";
+import { TaggedResourceList } from "./taggedresourcelist";
 
 
 
@@ -11,6 +11,6 @@ export class TaggedResourceListMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: TaggedResource })
-  taggedResources?: TaggedResource[];
+  @SpeakeasyMetadata({ elemType: TaggedResourceList })
+  taggedResources?: TaggedResourceList[];
 }

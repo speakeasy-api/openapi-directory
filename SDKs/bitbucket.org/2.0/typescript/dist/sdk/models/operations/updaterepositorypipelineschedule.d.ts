@@ -6,11 +6,11 @@ export declare class UpdateRepositoryPipelineSchedulePathParams extends Speakeas
 }
 export declare class UpdateRepositoryPipelineScheduleRequest extends SpeakeasyBase {
     pathParams: UpdateRepositoryPipelineSchedulePathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class UpdateRepositoryPipelineScheduleResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pipelineSchedule?: Map<string, any>;
+    error?: Record<string, any>;
+    pipelineSchedule?: Record<string, any>;
 }

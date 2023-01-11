@@ -107,11 +107,11 @@ export declare class LlcerRequest extends SpeakeasyBase {
 export declare class LlcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    llcer400ApplicationJsonObject?: Llcer400ApplicationJson;
-    llcer401ApplicationJsonObject?: Llcer401ApplicationJson;
-    llcer404ApplicationJsonObject?: Llcer404ApplicationJson;
-    llcer500ApplicationJsonObject?: Llcer500ApplicationJson;
-    llcer502ApplicationJsonObject?: Llcer502ApplicationJson;
-    llcer503ApplicationJsonObject?: Llcer503ApplicationJson;
-    llcer504ApplicationJsonObject?: Llcer504ApplicationJson;
+    llcer400ApplicationJSONObject?: Llcer400ApplicationJson;
+    llcer401ApplicationJSONObject?: Llcer401ApplicationJson;
+    llcer404ApplicationJSONObject?: Llcer404ApplicationJson;
+    llcer500ApplicationJSONObject?: Llcer500ApplicationJson;
+    llcer502ApplicationJSONObject?: Llcer502ApplicationJson;
+    llcer503ApplicationJSONObject?: Llcer503ApplicationJson;
+    llcer504ApplicationJSONObject?: Llcer504ApplicationJson;
 }

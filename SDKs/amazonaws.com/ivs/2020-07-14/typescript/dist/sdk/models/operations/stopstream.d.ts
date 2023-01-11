@@ -21,7 +21,7 @@ export declare class StopStreamResponse extends SpeakeasyBase {
     contentType: string;
     resourceNotFoundException?: any;
     statusCode: number;
-    stopStreamResponse?: Map<string, any>;
+    stopStreamResponse?: Record<string, any>;
     streamUnavailable?: any;
     validationException?: any;
 }

@@ -1,0 +1,776 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Accounts = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
+var Accounts = /** @class */ (function () {
+    function Accounts(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
+        this._defaultClient = defaultClient;
+        this._securityClient = securityClient;
+        this._serverURL = serverURL;
+        this._language = language;
+        this._sdkVersion = sdkVersion;
+        this._genVersion = genVersion;
+    }
+    /**
+     * account - Get sub account details
+     *
+     * Get details of a sub account that is listed under a master account. Your account must be a master account in order to retrieve sub accounts' details. Zoom allows only [approved partners](https://marketplace.zoom.us/docs/api-reference/master-account-apis) to use master APIs and create sub accounts. Email the partner programs team at **partner-success@zoom.us** for more details.
+     *
+     * **Prerequisites:**
+     * * Pro or a higher paid account with master account option enabled. <br>
+     *
+     * **Scope**: `account:write:admin`<br>
+     * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+     *
+     *
+    **/
+    Accounts.prototype.account = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.AccountRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/accounts/{accountId}", req.pathParams);
+        var client = this._securityClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.account200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * accountCreate - Create a sub account
+     *
+     * Create a sub account under a master account. Your account must be a master account in order to create sub accounts.
+     * <br><br>Zoom allows only [approved partners](https://marketplace.zoom.us/docs/api-reference/master-account-apis) to use master APIs and manage sub accounts. Email the partner programs team at partner-success@zoom.us. for more details. Please note that the created account user will receive a confirmation email.<br><br>
+     * <br>
+     * **Prerequisites:**<br>
+     * * Pro or a higher paid account with master account option enabled. <br>
+     *
+     * **Scope**: `account:write:admin`<br>
+     * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+     *
+    **/
+    Accounts.prototype.accountCreate = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.AccountCreateRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/accounts";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 201:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.accountCreate201ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 409:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * accountDisassociate - Disassociate a sub account
+     *
+     * Disassociate a sub account from its master account. This will leave the sub account intact but it will no longer be associated with the master account.<br>
+     *
+     * **Prerequisites:**
+     * * Pro or a higher paid account with master account option enabled. <br>
+     * * The account making this API request must be a [master account](https://marketplace.zoom.us/docs/api-reference/master-account-apis).<br><br>
+     *
+     *
+     * **Scope**: `account:write:admin`<br>
+     * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+     *
+    **/
+    Accounts.prototype.accountDisassociate = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.AccountDisassociateRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/accounts/{accountId}", req.pathParams);
+        var client = this._securityClient;
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * accountManagedDomain - Get managed domains
+     *
+     * Get a sub account's [managed domains](https://support.zoom.us/hc/en-us/articles/203395207-What-is-Managed-Domain-).<br><br>
+     *
+     * **Note:** This API can be used by Zoom Accounts that are on a Pro or a higher plan as well accounts that have master and sub accounts options enabled. <br><br>
+     * To get managed domains of the master account, provide `me` as the value for accountId in the path parameter. Provide the sub account's Account ID as the value of accountId path parameter to get managed domains of the sub account.<br><br>
+     * **Prerequisites:**<br>
+     * * Pro or a higher paid account with master account option enabled. <br>
+     *
+     * **Scope:** `account:read:admin`<br>
+     * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+     *
+     *
+    **/
+    Accounts.prototype.accountManagedDomain = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.AccountManagedDomainRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/accounts/{accountId}/managed_domains", req.pathParams);
+        var client = this._securityClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.accountManagedDomain200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * accountOptionsUpdate - Update options
+     *
+     * Update a sub account's options under the master account.<br> <aside>Your account must be a master account in order to update the options for sub accounts. Zoom only assigns this privilege to trusted partners. </aside>
+     *
+     * **Prerequisites:**
+     * * Pro or a higher paid account with master account option enabled.
+     * * The account making this API request must be a [master account](https://marketplace.zoom.us/docs/api-reference/master-account-apis).<br><br>
+     *
+     * **Scope**: `account:write:admin`<br>
+     * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+     *
+    **/
+    Accounts.prototype.accountOptionsUpdate = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.AccountOptionsUpdateRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/accounts/{accountId}/options", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "patch", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * accountSettings - Get settings
+     *
+     * Get the settings of an account.<br>
+     * To get the settings of a master account, use `me` as the value for the `accountId` path parameter.<br><br>
+     *  **Prerequisites**:
+     *  * The account must be a paid account.<br>
+     * **Scopes**: `account:read:admin`
+     * <br>
+     * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+    **/
+    Accounts.prototype.accountSettings = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.AccountSettingsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/accounts/{accountId}/settings", req.pathParams);
+        var client = this._securityClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.accountSettings200ApplicationJSONOneOf = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * accountSettingsUpdate - Update settings
+     *
+     * Update the settings of a sub account that is under a master account.<br> To update the settings of the master account, use `me` as the value of the `accountId` path parameter.<br><br>
+     * **Prerequisites**:
+     *  * The sub account must be a paid account.<br>
+     * **Scopes**: `account:write:admin`
+     * <br>
+     * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+    **/
+    Accounts.prototype.accountSettingsUpdate = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.AccountSettingsUpdateRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/accounts/{accountId}/settings", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        if (reqBody == null || Object.keys(reqBody).length === 0)
+            throw new Error("request body is required");
+        var r = client.request(__assign({ url: url, method: "patch", headers: headers, data: reqBody }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 300:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * accountTrustedDomain - Get trusted domains
+     *
+     * Get trusted domains of a sub account. To get the trusted domains of a master account, use `me` as the value for the `accountId` path parameter.
+     *
+     * **Prerequisites:**<br>
+     * * The sub account must be a paid account.<br>
+     * **Scope:** `account:read:admin`<br>
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+    **/
+    Accounts.prototype.accountTrustedDomain = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.AccountTrustedDomainRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/accounts/{accountId}/trusted_domains", req.pathParams);
+        var client = this._securityClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.accountTrustedDomain200ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * accounts - List sub accounts
+     *
+     * List all the sub accounts that have been created by a master account.<br><br>Zoom allows only [approved partners](https://marketplace.zoom.us/docs/api-reference/master-account-apis) to use master APIs and manage sub accounts. Email the partner programs team at **partner-success@zoom.us** for more details.
+     *
+     * <br>**Prerequisites:**<br>
+     * * Pro or a higher paid account with master account option enabled. <br>
+     *
+     * **Scope**: `account:read:admin`
+     * <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
+     *
+     *
+    **/
+    Accounts.prototype.accounts = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.AccountsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/accounts";
+        var client = this._securityClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.accountList = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * delVb - Delete virtual background files
+     *
+     * Delete existing virtual background file(s) from an account.
+     *
+     * **Prerequisites:**<br>
+     * * Virtual background feature must be [enabled](https://support.zoom.us/hc/en-us/articles/210707503-Virtual-Background#h_2ef28080-fce9-4ac2-b567-dc958afab1b7) on the account.
+     * <br> **Scope:** `account:write:admin`<br> <br>
+     * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+    **/
+    Accounts.prototype.delVb = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.DelVbRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/accounts/{accountId}/settings/virtual_backgrounds", req.pathParams);
+        var client = this._securityClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "delete" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getAccountLockSettings - Get locked settings
+     *
+     * [Account Locked Settings](https://support.zoom.us/hc/en-us/articles/115005269866) allow you turn settings on or off for all users in your account. No user except the account admin or account owner can change these settings. With lock settings, you force the settings on for all users.
+     * Use this API to retrieve an account's locked settings.
+     *
+     * **Note:** This API can be used by Zoom Accounts that are on a Pro or a higher plan as well accounts that have master and sub accounts options enabled. <br><br>
+     * **Prerequisites:**
+     * * Pro or a higher paid account. <br>
+     *
+     * **Scope**: `account:read:admin`.
+     * <br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
+     *
+     *
+     *
+     *
+     *
+     * **Scope:** account:read:admin
+    **/
+    Accounts.prototype.getAccountLockSettings = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetAccountLockSettingsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/accounts/{accountId}/lock_settings", req.pathParams);
+        var client = this._securityClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getAccountLockSettings200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * updateAccountLockSettings - Update locked settings
+     *
+     * [Account Locked Settings](https://support.zoom.us/hc/en-us/articles/115005269866) allow you turn settings on or off for all users in your account. No user except the account admin or account owner can change these settings. With lock settings, you force the settings on for all users. Use this API to update an account's locked settings.
+     *
+     * **Note:** This API can be used by Zoom Accounts that are on a Pro or a higher plan as well accounts that have master and sub accounts options enabled.<br><br>
+     * **Prerequisites:**<br>
+     * * Pro or a higher paid account. <br>
+     *
+     * **Scope:** `account:write:admin`<br>
+     * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
+     *
+     *
+     *
+    **/
+    Accounts.prototype.updateAccountLockSettings = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.UpdateAccountLockSettingsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/accounts/{accountId}/lock_settings", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "patch", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updateAccountLockSettings200ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updateAccountLockSettings204ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * updateAccountOwner - Update the account owner
+     *
+     * The current account owner can [change the owner of an account](https://support.zoom.us/hc/en-us/articles/115005686983-Change-Account-Owner) to another user on the same account.<br> Use this API to change the owner of a sub account.
+     *
+     * **Prerequisites**: <br>
+     * * Account owner or admin permissions of an account.
+     * * The account making this API request must be on a pro or a hiigher plan with [master account](https://marketplace.zoom.us/docs/api-reference/master-account-apis) privilege.<br><br>
+     *
+     * **Scopes:**  `account:write:admin` or `account:master`<br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+     *
+     *
+     * <br>
+    **/
+    Accounts.prototype.updateAccountOwner = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.UpdateAccountOwnerRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/accounts/{accountId}/owner", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updateAccountOwner204ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * uploadVb - Upload virtual background files
+     *
+     * Use this API to [upload virtual background files](https://support.zoom.us/hc/en-us/articles/210707503-Virtual-Background#h_01EJF3YFEWGT8YA0ZJ079JEDQE) for all users on the account to use.
+     *
+     *
+     * **Prerequisites:**<br>
+     * * Virtual background feature must be [enabled](https://support.zoom.us/hc/en-us/articles/210707503-Virtual-Background#h_2ef28080-fce9-4ac2-b567-dc958afab1b7) on the account.
+     * <br> **Scope:** `account:write:admin`<br><br>
+     * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
+     *
+     *
+    **/
+    Accounts.prototype.uploadVb = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.UploadVbRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/accounts/{accountId}/settings/virtual_backgrounds", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 201:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.uploadVB201ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    return Accounts;
+}());
+exports.Accounts = Accounts;

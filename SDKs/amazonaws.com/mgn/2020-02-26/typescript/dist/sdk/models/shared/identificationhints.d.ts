@@ -3,7 +3,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
  * Identification hints.
 **/
 export declare class IdentificationHints extends SpeakeasyBase {
-    awsInstanceId?: string;
+    awsInstanceID?: string;
     fqdn?: string;
     hostname?: string;
     vmWareUuid?: string;

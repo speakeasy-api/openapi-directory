@@ -1,8 +1,11 @@
-export var ClusterFieldEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClusterFieldEnum = void 0;
+var ClusterFieldEnum;
 (function (ClusterFieldEnum) {
     ClusterFieldEnum["Attachments"] = "ATTACHMENTS";
     ClusterFieldEnum["Configurations"] = "CONFIGURATIONS";
     ClusterFieldEnum["Settings"] = "SETTINGS";
     ClusterFieldEnum["Statistics"] = "STATISTICS";
     ClusterFieldEnum["Tags"] = "TAGS";
-})(ClusterFieldEnum || (ClusterFieldEnum = {}));
+})(ClusterFieldEnum = exports.ClusterFieldEnum || (exports.ClusterFieldEnum = {}));

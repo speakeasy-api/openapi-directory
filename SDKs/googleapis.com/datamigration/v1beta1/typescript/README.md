@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DatamigrationProjectsLocationsConnectionProfilesCreateRequest, DatamigrationProjectsLocationsConnectionProfilesCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,110 +30,108 @@ const req: DatamigrationProjectsLocationsConnectionProfilesCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "expedita",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "eaque",
-    alt: "json",
-    callback: "consequatur",
-    connectionProfileId: "laudantium",
-    fields: "fugit",
-    key: "a",
-    oauthToken: "ducimus",
-    prettyPrint: true,
-    quotaUser: "et",
-    requestId: "amet",
-    uploadType: "exercitationem",
-    uploadProtocol: "et",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    connectionProfileId: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    prettyPrint: false,
+    quotaUser: "nihil",
+    requestId: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
   request: {
     cloudsql: {
       settings: {
         activationPolicy: "SQL_ACTIVATION_POLICY_UNSPECIFIED",
         autoStorageIncrease: false,
-        dataDiskSizeGb: "consequuntur",
-        dataDiskType: "SQL_DATA_DISK_TYPE_UNSPECIFIED",
+        dataDiskSizeGb: "ut",
+        dataDiskType: "PD_HDD",
         databaseFlags: {
-          "iusto": "est",
-          "eveniet": "quia",
-          "accusantium": "quibusdam",
+          "voluptate": "iste",
+          "vitae": "totam",
         },
-        databaseVersion: "MYSQL_5_6",
+        databaseVersion: "SQL_DATABASE_VERSION_UNSPECIFIED",
         ipConfig: {
           authorizedNetworks: [
             {
-              expireTime: "voluptatibus",
-              label: "consequatur",
-              ttl: "tenetur",
-              value: "consequatur",
+              expireTime: "debitis",
+              label: "vel",
+              ttl: "odio",
+              value: "dolore",
             },
             {
-              expireTime: "sit",
-              label: "amet",
-              ttl: "quia",
-              value: "sed",
+              expireTime: "id",
+              label: "aspernatur",
+              ttl: "accusantium",
+              value: "totam",
             },
             {
-              expireTime: "ut",
-              label: "dolorem",
-              ttl: "repudiandae",
-              value: "tempore",
+              expireTime: "commodi",
+              label: "quis",
+              ttl: "est",
+              value: "aut",
             },
           ],
           enableIpv4: true,
-          privateNetwork: "aut",
-          requireSsl: true,
+          privateNetwork: "non",
+          requireSsl: false,
         },
-        rootPassword: "voluptas",
-        sourceId: "sint",
-        storageAutoResizeLimit: "animi",
-        tier: "repudiandae",
+        rootPassword: "omnis",
+        sourceId: "aut",
+        storageAutoResizeLimit: "illo",
+        tier: "sed",
         userLabels: {
-          "eligendi": "iure",
-          "est": "ut",
+          "autem": "consectetur",
+          "nobis": "odio",
         },
-        zone: "distinctio",
+        zone: "qui",
       },
     },
-    displayName: "et",
+    displayName: "recusandae",
     error: {
-      code: 3622039482314880459,
+      code: 7561811714888168464,
       details: [
         {
-          "ipsa": "vel",
-          "qui": "voluptatum",
-          "inventore": "quis",
+          "modi": "sint",
+          "inventore": "ut",
         },
       ],
-      message: "quis",
+      message: "exercitationem",
     },
     labels: {
-      "quasi": "architecto",
-      "suscipit": "voluptates",
-      "ad": "laborum",
+      "reprehenderit": "tempore",
+      "maiores": "incidunt",
+      "dolor": "beatae",
     },
     mysql: {
-      cloudSqlId: "id",
-      host: "odio",
-      password: "saepe",
-      port: 5731875210557201765,
+      cloudSqlId: "veritatis",
+      host: "in",
+      password: "et",
+      port: 8565714761387219319,
       ssl: {
-        caCertificate: "hic",
-        clientCertificate: "voluptate",
-        clientKey: "reprehenderit",
+        caCertificate: "ipsum",
+        clientCertificate: "ex",
+        clientKey: "dolores",
       },
-      username: "voluptas",
+      username: "placeat",
     },
-    name: "porro",
+    name: "vel",
     provider: "RDS",
-    state: "DELETED",
+    state: "DRAFT",
   },
 };
 

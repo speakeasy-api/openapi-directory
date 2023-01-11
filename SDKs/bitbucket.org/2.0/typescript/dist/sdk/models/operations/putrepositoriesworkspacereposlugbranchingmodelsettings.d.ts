@@ -16,6 +16,6 @@ export declare class PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsReque
 export declare class PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    branchingModelSettings?: Map<string, any>;
-    error?: Map<string, any>;
+    branchingModelSettings?: Record<string, any>;
+    error?: Record<string, any>;
 }

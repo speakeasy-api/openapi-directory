@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceShareAssociationTypeEnum } from "./resourceshareassociationtypeenum";
-import { ResourceShareAssociationStatusEnum } from "./resourceshareassociationstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceShareAssociation = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourceshareassociationtypeenum_1 = require("./resourceshareassociationtypeenum");
+var resourceshareassociationstatusenum_1 = require("./resourceshareassociationstatusenum");
 // ResourceShareAssociation
 /**
  * Describes an association with a resource share.
@@ -35,41 +38,41 @@ var ResourceShareAssociation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=associatedEntity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=associatedEntity" }),
         __metadata("design:type", String)
     ], ResourceShareAssociation.prototype, "associatedEntity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=associationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=associationType" }),
         __metadata("design:type", String)
     ], ResourceShareAssociation.prototype, "associationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTime" }),
         __metadata("design:type", Date)
     ], ResourceShareAssociation.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=external" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=external" }),
         __metadata("design:type", Boolean)
     ], ResourceShareAssociation.prototype, "external", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedTime" }),
         __metadata("design:type", Date)
     ], ResourceShareAssociation.prototype, "lastUpdatedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceShareArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceShareArn" }),
         __metadata("design:type", String)
     ], ResourceShareAssociation.prototype, "resourceShareArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceShareName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceShareName" }),
         __metadata("design:type", String)
     ], ResourceShareAssociation.prototype, "resourceShareName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ResourceShareAssociation.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusMessage" }),
         __metadata("design:type", String)
     ], ResourceShareAssociation.prototype, "statusMessage", void 0);
     return ResourceShareAssociation;
-}(SpeakeasyBase));
-export { ResourceShareAssociation };
+}(utils_1.SpeakeasyBase));
+exports.ResourceShareAssociation = ResourceShareAssociation;

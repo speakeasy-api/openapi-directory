@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DockerVolumeConfiguration } from "./dockervolumeconfiguration";
-import { EfsVolumeConfiguration } from "./efsvolumeconfiguration";
-import { FSxWindowsFileServerVolumeConfiguration } from "./fsxwindowsfileservervolumeconfiguration";
-import { HostVolumeProperties } from "./hostvolumeproperties";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Volume = void 0;
+var utils_1 = require("../../../internal/utils");
+var dockervolumeconfiguration_1 = require("./dockervolumeconfiguration");
+var efsvolumeconfiguration_1 = require("./efsvolumeconfiguration");
+var fsxwindowsfileservervolumeconfiguration_1 = require("./fsxwindowsfileservervolumeconfiguration");
+var hostvolumeproperties_1 = require("./hostvolumeproperties");
 // Volume
 /**
  * A data volume used in a task definition. For tasks that use the Amazon Elastic File System (Amazon EFS), specify an <code>efsVolumeConfiguration</code>. For Windows tasks that use Amazon FSx for Windows File Server file system, specify a <code>fsxWindowsFileServerVolumeConfiguration</code>. For tasks that use a Docker volume, specify a <code>DockerVolumeConfiguration</code>. For tasks that use a bind mount host volume, specify a <code>host</code> and optional <code>sourcePath</code>. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html">Using Data Volumes in Tasks</a>.
@@ -37,25 +40,25 @@ var Volume = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dockerVolumeConfiguration" }),
-        __metadata("design:type", DockerVolumeConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dockerVolumeConfiguration" }),
+        __metadata("design:type", dockervolumeconfiguration_1.DockerVolumeConfiguration)
     ], Volume.prototype, "dockerVolumeConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=efsVolumeConfiguration" }),
-        __metadata("design:type", EfsVolumeConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=efsVolumeConfiguration" }),
+        __metadata("design:type", efsvolumeconfiguration_1.EfsVolumeConfiguration)
     ], Volume.prototype, "efsVolumeConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fsxWindowsFileServerVolumeConfiguration" }),
-        __metadata("design:type", FSxWindowsFileServerVolumeConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fsxWindowsFileServerVolumeConfiguration" }),
+        __metadata("design:type", fsxwindowsfileservervolumeconfiguration_1.FSxWindowsFileServerVolumeConfiguration)
     ], Volume.prototype, "fsxWindowsFileServerVolumeConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
-        __metadata("design:type", HostVolumeProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
+        __metadata("design:type", hostvolumeproperties_1.HostVolumeProperties)
     ], Volume.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Volume.prototype, "name", void 0);
     return Volume;
-}(SpeakeasyBase));
-export { Volume };
+}(utils_1.SpeakeasyBase));
+exports.Volume = Volume;

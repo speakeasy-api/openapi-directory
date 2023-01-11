@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Source } from "./source";
-import { SourceInput } from "./source";
-export var PersonMetadataObjectTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PersonMetadataInput = exports.PersonMetadata = exports.PersonMetadataObjectTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var source_1 = require("./source");
+var source_2 = require("./source");
+var PersonMetadataObjectTypeEnum;
 (function (PersonMetadataObjectTypeEnum) {
     PersonMetadataObjectTypeEnum["ObjectTypeUnspecified"] = "OBJECT_TYPE_UNSPECIFIED";
     PersonMetadataObjectTypeEnum["Person"] = "PERSON";
     PersonMetadataObjectTypeEnum["Page"] = "PAGE";
-})(PersonMetadataObjectTypeEnum || (PersonMetadataObjectTypeEnum = {}));
+})(PersonMetadataObjectTypeEnum = exports.PersonMetadataObjectTypeEnum || (exports.PersonMetadataObjectTypeEnum = {}));
 // PersonMetadata
 /**
  * The metadata about a person.
@@ -41,28 +44,28 @@ var PersonMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], PersonMetadata.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkedPeopleResourceNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkedPeopleResourceNames" }),
         __metadata("design:type", Array)
     ], PersonMetadata.prototype, "linkedPeopleResourceNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectType" }),
         __metadata("design:type", String)
     ], PersonMetadata.prototype, "objectType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previousResourceNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previousResourceNames" }),
         __metadata("design:type", Array)
     ], PersonMetadata.prototype, "previousResourceNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sources", elemType: Source }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sources", elemType: source_1.Source }),
         __metadata("design:type", Array)
     ], PersonMetadata.prototype, "sources", void 0);
     return PersonMetadata;
-}(SpeakeasyBase));
-export { PersonMetadata };
+}(utils_1.SpeakeasyBase));
+exports.PersonMetadata = PersonMetadata;
 // PersonMetadataInput
 /**
  * The metadata about a person.
@@ -73,9 +76,9 @@ var PersonMetadataInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sources", elemType: SourceInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sources", elemType: source_2.SourceInput }),
         __metadata("design:type", Array)
     ], PersonMetadataInput.prototype, "sources", void 0);
     return PersonMetadataInput;
-}(SpeakeasyBase));
-export { PersonMetadataInput };
+}(utils_1.SpeakeasyBase));
+exports.PersonMetadataInput = PersonMetadataInput;

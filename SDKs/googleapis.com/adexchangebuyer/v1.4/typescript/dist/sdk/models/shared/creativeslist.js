@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Creative } from "./creative";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreativesList = void 0;
+var utils_1 = require("../../../internal/utils");
+var creative_1 = require("./creative");
 // CreativesList
 /**
  * The creatives feed lists the active creatives for the Ad Exchange buyer accounts that the user has access to. Each entry in the feed corresponds to a single creative.
@@ -34,17 +37,17 @@ var CreativesList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: Creative }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: creative_1.Creative }),
         __metadata("design:type", Array)
     ], CreativesList.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], CreativesList.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], CreativesList.prototype, "nextPageToken", void 0);
     return CreativesList;
-}(SpeakeasyBase));
-export { CreativesList };
+}(utils_1.SpeakeasyBase));
+exports.CreativesList = CreativesList;

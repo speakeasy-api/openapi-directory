@@ -18,7 +18,7 @@ export declare class AddApplicationCloudWatchLoggingOptionRequest extends Speake
     request: shared.AddApplicationCloudWatchLoggingOptionRequest;
 }
 export declare class AddApplicationCloudWatchLoggingOptionResponse extends SpeakeasyBase {
-    addApplicationCloudWatchLoggingOptionResponse?: Map<string, any>;
+    addApplicationCloudWatchLoggingOptionResponse?: Record<string, any>;
     concurrentModificationException?: any;
     contentType: string;
     invalidArgumentException?: any;

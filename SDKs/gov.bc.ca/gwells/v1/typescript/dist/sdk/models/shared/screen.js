@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Screen = void 0;
+var utils_1 = require("../../../internal/utils");
 var Screen = /** @class */ (function (_super) {
     __extends(Screen, _super);
     function Screen() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assembly_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assembly_type" }),
         __metadata("design:type", String)
     ], Screen.prototype, "assemblyType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end" }),
         __metadata("design:type", String)
     ], Screen.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=internal_diameter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=internal_diameter" }),
         __metadata("design:type", String)
     ], Screen.prototype, "internalDiameter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slot_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slot_size" }),
         __metadata("design:type", String)
     ], Screen.prototype, "slotSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
         __metadata("design:type", String)
     ], Screen.prototype, "start", void 0);
     return Screen;
-}(SpeakeasyBase));
-export { Screen };
+}(utils_1.SpeakeasyBase));
+exports.Screen = Screen;

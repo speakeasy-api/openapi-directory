@@ -1,17 +1,33 @@
-export * from "./altenum";
-export * from "./googlecloudvideointelligencev1p2beta1annotatevideorequest";
-export * from "./googlecloudvideointelligencev1p2beta1explicitcontentdetectionconfig";
-export * from "./googlecloudvideointelligencev1p2beta1facedetectionconfig";
-export * from "./googlecloudvideointelligencev1p2beta1labeldetectionconfig";
-export * from "./googlecloudvideointelligencev1p2beta1objecttrackingconfig";
-export * from "./googlecloudvideointelligencev1p2beta1persondetectionconfig";
-export * from "./googlecloudvideointelligencev1p2beta1shotchangedetectionconfig";
-export * from "./googlecloudvideointelligencev1p2beta1speechcontext";
-export * from "./googlecloudvideointelligencev1p2beta1speechtranscriptionconfig";
-export * from "./googlecloudvideointelligencev1p2beta1textdetectionconfig";
-export * from "./googlecloudvideointelligencev1p2beta1videocontext";
-export * from "./googlecloudvideointelligencev1p2beta1videosegment";
-export * from "./googlelongrunningoperation";
-export * from "./googlerpcstatus";
-export * from "./security";
-export * from "./xgafvenum";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./altenum"), exports);
+__exportStar(require("./googlecloudvideointelligencev1p2beta1annotatevideorequest"), exports);
+__exportStar(require("./googlecloudvideointelligencev1p2beta1explicitcontentdetectionconfig"), exports);
+__exportStar(require("./googlecloudvideointelligencev1p2beta1facedetectionconfig"), exports);
+__exportStar(require("./googlecloudvideointelligencev1p2beta1labeldetectionconfig"), exports);
+__exportStar(require("./googlecloudvideointelligencev1p2beta1objecttrackingconfig"), exports);
+__exportStar(require("./googlecloudvideointelligencev1p2beta1persondetectionconfig"), exports);
+__exportStar(require("./googlecloudvideointelligencev1p2beta1shotchangedetectionconfig"), exports);
+__exportStar(require("./googlecloudvideointelligencev1p2beta1speechcontext"), exports);
+__exportStar(require("./googlecloudvideointelligencev1p2beta1speechtranscriptionconfig"), exports);
+__exportStar(require("./googlecloudvideointelligencev1p2beta1textdetectionconfig"), exports);
+__exportStar(require("./googlecloudvideointelligencev1p2beta1videocontext"), exports);
+__exportStar(require("./googlecloudvideointelligencev1p2beta1videosegment"), exports);
+__exportStar(require("./googlelongrunningoperation"), exports);
+__exportStar(require("./googlerpcstatus"), exports);
+__exportStar(require("./security"), exports);
+__exportStar(require("./xgafvenum"), exports);

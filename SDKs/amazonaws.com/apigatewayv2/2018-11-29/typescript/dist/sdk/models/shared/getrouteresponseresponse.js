@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ParameterConstraints } from "./parameterconstraints";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRouteResponseResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var parameterconstraints_1 = require("./parameterconstraints");
 var GetRouteResponseResponse = /** @class */ (function (_super) {
     __extends(GetRouteResponseResponse, _super);
     function GetRouteResponseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ModelSelectionExpression" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ModelSelectionExpression" }),
+        __metadata("design:type", Object)
     ], GetRouteResponseResponse.prototype, "modelSelectionExpression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResponseModels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResponseModels" }),
+        __metadata("design:type", Object)
     ], GetRouteResponseResponse.prototype, "responseModels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResponseParameters", elemType: ParameterConstraints }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResponseParameters", elemType: parameterconstraints_1.ParameterConstraints }),
+        __metadata("design:type", Object)
     ], GetRouteResponseResponse.prototype, "responseParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RouteResponseId" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RouteResponseId" }),
+        __metadata("design:type", Object)
     ], GetRouteResponseResponse.prototype, "routeResponseId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RouteResponseKey" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RouteResponseKey" }),
+        __metadata("design:type", Object)
     ], GetRouteResponseResponse.prototype, "routeResponseKey", void 0);
     return GetRouteResponseResponse;
-}(SpeakeasyBase));
-export { GetRouteResponseResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRouteResponseResponse = GetRouteResponseResponse;

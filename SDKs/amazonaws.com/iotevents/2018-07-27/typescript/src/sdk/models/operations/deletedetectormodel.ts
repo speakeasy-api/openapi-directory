@@ -46,7 +46,7 @@ export class DeleteDetectorModelResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteDetectorModelResponse?: Map<string, any>;
+  deleteDetectorModelResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalFailureException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetImportClientVpnClientCertificateRevocationListActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetImportClientVpnClientCertificateRevocationListResponse = exports.GetImportClientVpnClientCertificateRevocationListRequest = exports.GetImportClientVpnClientCertificateRevocationListHeaders = exports.GetImportClientVpnClientCertificateRevocationListQueryParams = exports.GetImportClientVpnClientCertificateRevocationListVersionEnum = exports.GetImportClientVpnClientCertificateRevocationListActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetImportClientVpnClientCertificateRevocationListActionEnum;
 (function (GetImportClientVpnClientCertificateRevocationListActionEnum) {
     GetImportClientVpnClientCertificateRevocationListActionEnum["ImportClientVpnClientCertificateRevocationList"] = "ImportClientVpnClientCertificateRevocationList";
-})(GetImportClientVpnClientCertificateRevocationListActionEnum || (GetImportClientVpnClientCertificateRevocationListActionEnum = {}));
-export var GetImportClientVpnClientCertificateRevocationListVersionEnum;
+})(GetImportClientVpnClientCertificateRevocationListActionEnum = exports.GetImportClientVpnClientCertificateRevocationListActionEnum || (exports.GetImportClientVpnClientCertificateRevocationListActionEnum = {}));
+var GetImportClientVpnClientCertificateRevocationListVersionEnum;
 (function (GetImportClientVpnClientCertificateRevocationListVersionEnum) {
     GetImportClientVpnClientCertificateRevocationListVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetImportClientVpnClientCertificateRevocationListVersionEnum || (GetImportClientVpnClientCertificateRevocationListVersionEnum = {}));
+})(GetImportClientVpnClientCertificateRevocationListVersionEnum = exports.GetImportClientVpnClientCertificateRevocationListVersionEnum || (exports.GetImportClientVpnClientCertificateRevocationListVersionEnum = {}));
 var GetImportClientVpnClientCertificateRevocationListQueryParams = /** @class */ (function (_super) {
     __extends(GetImportClientVpnClientCertificateRevocationListQueryParams, _super);
     function GetImportClientVpnClientCertificateRevocationListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetImportClientVpnClientCertificateRevocationListQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=CertificateRevocationList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=CertificateRevocationList" }),
         __metadata("design:type", String)
     ], GetImportClientVpnClientCertificateRevocationListQueryParams.prototype, "certificateRevocationList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ClientVpnEndpointId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ClientVpnEndpointId" }),
         __metadata("design:type", String)
     ], GetImportClientVpnClientCertificateRevocationListQueryParams.prototype, "clientVpnEndpointId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetImportClientVpnClientCertificateRevocationListQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetImportClientVpnClientCertificateRevocationListQueryParams.prototype, "version", void 0);
     return GetImportClientVpnClientCertificateRevocationListQueryParams;
-}(SpeakeasyBase));
-export { GetImportClientVpnClientCertificateRevocationListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetImportClientVpnClientCertificateRevocationListQueryParams = GetImportClientVpnClientCertificateRevocationListQueryParams;
 var GetImportClientVpnClientCertificateRevocationListHeaders = /** @class */ (function (_super) {
     __extends(GetImportClientVpnClientCertificateRevocationListHeaders, _super);
     function GetImportClientVpnClientCertificateRevocationListHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetImportClientVpnClientCertificateRevocationListHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetImportClientVpnClientCertificateRevocationListHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetImportClientVpnClientCertificateRevocationListHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetImportClientVpnClientCertificateRevocationListHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetImportClientVpnClientCertificateRevocationListHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetImportClientVpnClientCertificateRevocationListHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetImportClientVpnClientCertificateRevocationListHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetImportClientVpnClientCertificateRevocationListHeaders;
-}(SpeakeasyBase));
-export { GetImportClientVpnClientCertificateRevocationListHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetImportClientVpnClientCertificateRevocationListHeaders = GetImportClientVpnClientCertificateRevocationListHeaders;
 var GetImportClientVpnClientCertificateRevocationListRequest = /** @class */ (function (_super) {
     __extends(GetImportClientVpnClientCertificateRevocationListRequest, _super);
     function GetImportClientVpnClientCertificateRevocationListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetImportClientVpnClientCertificateRevocationListQueryParams)
     ], GetImportClientVpnClientCertificateRevocationListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetImportClientVpnClientCertificateRevocationListHeaders)
     ], GetImportClientVpnClientCertificateRevocationListRequest.prototype, "headers", void 0);
     return GetImportClientVpnClientCertificateRevocationListRequest;
-}(SpeakeasyBase));
-export { GetImportClientVpnClientCertificateRevocationListRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetImportClientVpnClientCertificateRevocationListRequest = GetImportClientVpnClientCertificateRevocationListRequest;
 var GetImportClientVpnClientCertificateRevocationListResponse = /** @class */ (function (_super) {
     __extends(GetImportClientVpnClientCertificateRevocationListResponse, _super);
     function GetImportClientVpnClientCertificateRevocationListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetImportClientVpnClientCertificateRevocationListResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetImportClientVpnClientCertificateRevocationListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetImportClientVpnClientCertificateRevocationListResponse.prototype, "statusCode", void 0);
     return GetImportClientVpnClientCertificateRevocationListResponse;
-}(SpeakeasyBase));
-export { GetImportClientVpnClientCertificateRevocationListResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetImportClientVpnClientCertificateRevocationListResponse = GetImportClientVpnClientCertificateRevocationListResponse;

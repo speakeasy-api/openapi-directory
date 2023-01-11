@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteNetworkSwitchStackRoutingInterfaceResponse = exports.DeleteNetworkSwitchStackRoutingInterfaceRequest = exports.DeleteNetworkSwitchStackRoutingInterfacePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteNetworkSwitchStackRoutingInterfacePathParams = /** @class */ (function (_super) {
     __extends(DeleteNetworkSwitchStackRoutingInterfacePathParams, _super);
     function DeleteNetworkSwitchStackRoutingInterfacePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=interfaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=interfaceId" }),
         __metadata("design:type", String)
     ], DeleteNetworkSwitchStackRoutingInterfacePathParams.prototype, "interfaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], DeleteNetworkSwitchStackRoutingInterfacePathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=switchStackId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=switchStackId" }),
         __metadata("design:type", String)
     ], DeleteNetworkSwitchStackRoutingInterfacePathParams.prototype, "switchStackId", void 0);
     return DeleteNetworkSwitchStackRoutingInterfacePathParams;
-}(SpeakeasyBase));
-export { DeleteNetworkSwitchStackRoutingInterfacePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkSwitchStackRoutingInterfacePathParams = DeleteNetworkSwitchStackRoutingInterfacePathParams;
 var DeleteNetworkSwitchStackRoutingInterfaceRequest = /** @class */ (function (_super) {
     __extends(DeleteNetworkSwitchStackRoutingInterfaceRequest, _super);
     function DeleteNetworkSwitchStackRoutingInterfaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteNetworkSwitchStackRoutingInterfacePathParams)
     ], DeleteNetworkSwitchStackRoutingInterfaceRequest.prototype, "pathParams", void 0);
     return DeleteNetworkSwitchStackRoutingInterfaceRequest;
-}(SpeakeasyBase));
-export { DeleteNetworkSwitchStackRoutingInterfaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkSwitchStackRoutingInterfaceRequest = DeleteNetworkSwitchStackRoutingInterfaceRequest;
 var DeleteNetworkSwitchStackRoutingInterfaceResponse = /** @class */ (function (_super) {
     __extends(DeleteNetworkSwitchStackRoutingInterfaceResponse, _super);
     function DeleteNetworkSwitchStackRoutingInterfaceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteNetworkSwitchStackRoutingInterfaceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteNetworkSwitchStackRoutingInterfaceResponse.prototype, "statusCode", void 0);
     return DeleteNetworkSwitchStackRoutingInterfaceResponse;
-}(SpeakeasyBase));
-export { DeleteNetworkSwitchStackRoutingInterfaceResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkSwitchStackRoutingInterfaceResponse = DeleteNetworkSwitchStackRoutingInterfaceResponse;

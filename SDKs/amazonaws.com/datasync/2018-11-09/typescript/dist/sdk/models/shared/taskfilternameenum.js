@@ -1,5 +1,8 @@
-export var TaskFilterNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskFilterNameEnum = void 0;
+var TaskFilterNameEnum;
 (function (TaskFilterNameEnum) {
     TaskFilterNameEnum["LocationId"] = "LocationId";
     TaskFilterNameEnum["CreationTime"] = "CreationTime";
-})(TaskFilterNameEnum || (TaskFilterNameEnum = {}));
+})(TaskFilterNameEnum = exports.TaskFilterNameEnum || (exports.TaskFilterNameEnum = {}));

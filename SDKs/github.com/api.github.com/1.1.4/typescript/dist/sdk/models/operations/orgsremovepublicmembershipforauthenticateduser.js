@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrgsRemovePublicMembershipForAuthenticatedUserResponse = exports.OrgsRemovePublicMembershipForAuthenticatedUserRequest = exports.OrgsRemovePublicMembershipForAuthenticatedUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var OrgsRemovePublicMembershipForAuthenticatedUserPathParams = /** @class */ (function (_super) {
     __extends(OrgsRemovePublicMembershipForAuthenticatedUserPathParams, _super);
     function OrgsRemovePublicMembershipForAuthenticatedUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], OrgsRemovePublicMembershipForAuthenticatedUserPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], OrgsRemovePublicMembershipForAuthenticatedUserPathParams.prototype, "username", void 0);
     return OrgsRemovePublicMembershipForAuthenticatedUserPathParams;
-}(SpeakeasyBase));
-export { OrgsRemovePublicMembershipForAuthenticatedUserPathParams };
+}(utils_1.SpeakeasyBase));
+exports.OrgsRemovePublicMembershipForAuthenticatedUserPathParams = OrgsRemovePublicMembershipForAuthenticatedUserPathParams;
 var OrgsRemovePublicMembershipForAuthenticatedUserRequest = /** @class */ (function (_super) {
     __extends(OrgsRemovePublicMembershipForAuthenticatedUserRequest, _super);
     function OrgsRemovePublicMembershipForAuthenticatedUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OrgsRemovePublicMembershipForAuthenticatedUserPathParams)
     ], OrgsRemovePublicMembershipForAuthenticatedUserRequest.prototype, "pathParams", void 0);
     return OrgsRemovePublicMembershipForAuthenticatedUserRequest;
-}(SpeakeasyBase));
-export { OrgsRemovePublicMembershipForAuthenticatedUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.OrgsRemovePublicMembershipForAuthenticatedUserRequest = OrgsRemovePublicMembershipForAuthenticatedUserRequest;
 var OrgsRemovePublicMembershipForAuthenticatedUserResponse = /** @class */ (function (_super) {
     __extends(OrgsRemovePublicMembershipForAuthenticatedUserResponse, _super);
     function OrgsRemovePublicMembershipForAuthenticatedUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OrgsRemovePublicMembershipForAuthenticatedUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OrgsRemovePublicMembershipForAuthenticatedUserResponse.prototype, "statusCode", void 0);
     return OrgsRemovePublicMembershipForAuthenticatedUserResponse;
-}(SpeakeasyBase));
-export { OrgsRemovePublicMembershipForAuthenticatedUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.OrgsRemovePublicMembershipForAuthenticatedUserResponse = OrgsRemovePublicMembershipForAuthenticatedUserResponse;

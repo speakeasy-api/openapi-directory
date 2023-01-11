@@ -4,7 +4,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class Resource extends SpeakeasyBase {
     arn?: string;
-    attributes?: Map<string, string>;
+    attributes?: Record<string, string>;
     feature?: string;
     name?: string;
     type?: string;

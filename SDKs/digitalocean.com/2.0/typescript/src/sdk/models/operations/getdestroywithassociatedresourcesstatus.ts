@@ -1,16 +1,11 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class GetDestroyWithAssociatedResourcesStatusPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=droplet_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=droplet_id" })
   dropletId: number;
-}
-
-
-export class GetDestroyWithAssociatedResourcesStatusRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: GetDestroyWithAssociatedResourcesStatusPathParams;
 }
 
 
@@ -19,16 +14,16 @@ export class GetDestroyWithAssociatedResourcesStatusRequest extends SpeakeasyBas
  * An object containing information about a resource scheduled for deletion.
 **/
 export class GetDestroyWithAssociatedResourcesStatus200ApplicationJsonDroplet extends SpeakeasyBase {
-  @Metadata({ data: "json, name=destroyed_at" })
+  @SpeakeasyMetadata({ data: "json, name=destroyed_at" })
   destroyedAt?: Date;
 
-  @Metadata({ data: "json, name=error_message" })
+  @SpeakeasyMetadata({ data: "json, name=error_message" })
   errorMessage?: string;
 
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
 
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 }
 
@@ -38,13 +33,13 @@ export class GetDestroyWithAssociatedResourcesStatus200ApplicationJsonDroplet ex
  * An object containing additional information about resource related to a Droplet requested to be destroyed.
 **/
 export class GetDestroyWithAssociatedResourcesStatus200ApplicationJsonResources extends SpeakeasyBase {
-  @Metadata({ data: "json, name=snapshots", elemType: shared.Onev21droplets1Percent7BdropletIdPercent7D1destroyWithAssociatedResources1statusGetResponses200ContentApplication1jsonSchemaPropertiesDroplet })
+  @SpeakeasyMetadata({ data: "json, name=snapshots", elemType: shared.Onev21droplets1Percent7BdropletIdPercent7D1destroyWithAssociatedResources1statusGetResponses200ContentApplication1jsonSchemaPropertiesDroplet })
   snapshots?: shared.Onev21droplets1Percent7BdropletIdPercent7D1destroyWithAssociatedResources1statusGetResponses200ContentApplication1jsonSchemaPropertiesDroplet[];
 
-  @Metadata({ data: "json, name=volume_snapshots", elemType: shared.Onev21droplets1Percent7BdropletIdPercent7D1destroyWithAssociatedResources1statusGetResponses200ContentApplication1jsonSchemaPropertiesDroplet })
+  @SpeakeasyMetadata({ data: "json, name=volume_snapshots", elemType: shared.Onev21droplets1Percent7BdropletIdPercent7D1destroyWithAssociatedResources1statusGetResponses200ContentApplication1jsonSchemaPropertiesDroplet })
   volumeSnapshots?: shared.Onev21droplets1Percent7BdropletIdPercent7D1destroyWithAssociatedResources1statusGetResponses200ContentApplication1jsonSchemaPropertiesDroplet[];
 
-  @Metadata({ data: "json, name=volumes", elemType: shared.Onev21droplets1Percent7BdropletIdPercent7D1destroyWithAssociatedResources1statusGetResponses200ContentApplication1jsonSchemaPropertiesDroplet })
+  @SpeakeasyMetadata({ data: "json, name=volumes", elemType: shared.Onev21droplets1Percent7BdropletIdPercent7D1destroyWithAssociatedResources1statusGetResponses200ContentApplication1jsonSchemaPropertiesDroplet })
   volumes?: shared.Onev21droplets1Percent7BdropletIdPercent7D1destroyWithAssociatedResources1statusGetResponses200ContentApplication1jsonSchemaPropertiesDroplet[];
 }
 
@@ -54,48 +49,54 @@ export class GetDestroyWithAssociatedResourcesStatus200ApplicationJsonResources 
  * An objects containing information about a resources scheduled for deletion.
 **/
 export class GetDestroyWithAssociatedResourcesStatus200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=completed_at" })
+  @SpeakeasyMetadata({ data: "json, name=completed_at" })
   completedAt?: Date;
 
-  @Metadata({ data: "json, name=droplet" })
+  @SpeakeasyMetadata({ data: "json, name=droplet" })
   droplet?: GetDestroyWithAssociatedResourcesStatus200ApplicationJsonDroplet;
 
-  @Metadata({ data: "json, name=failures" })
+  @SpeakeasyMetadata({ data: "json, name=failures" })
   failures?: number;
 
-  @Metadata({ data: "json, name=resources" })
+  @SpeakeasyMetadata({ data: "json, name=resources" })
   resources?: GetDestroyWithAssociatedResourcesStatus200ApplicationJsonResources;
 }
 
 
 export class GetDestroyWithAssociatedResourcesStatus401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class GetDestroyWithAssociatedResourcesStatusRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: GetDestroyWithAssociatedResourcesStatusPathParams;
+}
+
+
 export class GetDestroyWithAssociatedResourcesStatusResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  getDestroyWithAssociatedResourcesStatus200ApplicationJsonObject?: GetDestroyWithAssociatedResourcesStatus200ApplicationJson;
+  @SpeakeasyMetadata()
+  getDestroyWithAssociatedResourcesStatus200ApplicationJSONObject?: GetDestroyWithAssociatedResourcesStatus200ApplicationJson;
 
-  @Metadata()
-  getDestroyWithAssociatedResourcesStatus401ApplicationJsonObject?: GetDestroyWithAssociatedResourcesStatus401ApplicationJson;
+  @SpeakeasyMetadata()
+  getDestroyWithAssociatedResourcesStatus401ApplicationJSONObject?: GetDestroyWithAssociatedResourcesStatus401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

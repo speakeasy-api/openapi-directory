@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NewsFeedCardAnalyticsResponse = exports.NewsFeedCardAnalyticsRequest = exports.NewsFeedCardAnalyticsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var NewsFeedCardAnalyticsQueryParams = /** @class */ (function (_super) {
     __extends(NewsFeedCardAnalyticsQueryParams, _super);
     function NewsFeedCardAnalyticsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=card_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=card_id" }),
         __metadata("design:type", String)
     ], NewsFeedCardAnalyticsQueryParams.prototype, "cardId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ending_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ending_at" }),
         __metadata("design:type", String)
     ], NewsFeedCardAnalyticsQueryParams.prototype, "endingAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=length" }),
         __metadata("design:type", String)
     ], NewsFeedCardAnalyticsQueryParams.prototype, "length", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=unit" }),
         __metadata("design:type", String)
     ], NewsFeedCardAnalyticsQueryParams.prototype, "unit", void 0);
     return NewsFeedCardAnalyticsQueryParams;
-}(SpeakeasyBase));
-export { NewsFeedCardAnalyticsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.NewsFeedCardAnalyticsQueryParams = NewsFeedCardAnalyticsQueryParams;
 var NewsFeedCardAnalyticsRequest = /** @class */ (function (_super) {
     __extends(NewsFeedCardAnalyticsRequest, _super);
     function NewsFeedCardAnalyticsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NewsFeedCardAnalyticsQueryParams)
     ], NewsFeedCardAnalyticsRequest.prototype, "queryParams", void 0);
     return NewsFeedCardAnalyticsRequest;
-}(SpeakeasyBase));
-export { NewsFeedCardAnalyticsRequest };
+}(utils_1.SpeakeasyBase));
+exports.NewsFeedCardAnalyticsRequest = NewsFeedCardAnalyticsRequest;
 var NewsFeedCardAnalyticsResponse = /** @class */ (function (_super) {
     __extends(NewsFeedCardAnalyticsResponse, _super);
     function NewsFeedCardAnalyticsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NewsFeedCardAnalyticsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], NewsFeedCardAnalyticsResponse.prototype, "statusCode", void 0);
     return NewsFeedCardAnalyticsResponse;
-}(SpeakeasyBase));
-export { NewsFeedCardAnalyticsResponse };
+}(utils_1.SpeakeasyBase));
+exports.NewsFeedCardAnalyticsResponse = NewsFeedCardAnalyticsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,92 +23,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostPortfolioAnalysisDiversificationRatioResponse = exports.PostPortfolioAnalysisDiversificationRatioRequest = exports.PostPortfolioAnalysisDiversificationRatio200ApplicationJson = exports.PostPortfolioAnalysisDiversificationRatio200ApplicationJsonPortfolios = exports.PostPortfolioAnalysisDiversificationRatioRequestBody = exports.PostPortfolioAnalysisDiversificationRatioRequestBodyPortfolios = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostPortfolioAnalysisDiversificationRatioRequestBodyPortfolios = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisDiversificationRatioRequestBodyPortfolios, _super);
     function PostPortfolioAnalysisDiversificationRatioRequestBodyPortfolios() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsWeights" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsWeights" }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisDiversificationRatioRequestBodyPortfolios.prototype, "assetsWeights", void 0);
     return PostPortfolioAnalysisDiversificationRatioRequestBodyPortfolios;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisDiversificationRatioRequestBodyPortfolios };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisDiversificationRatioRequestBodyPortfolios = PostPortfolioAnalysisDiversificationRatioRequestBodyPortfolios;
 var PostPortfolioAnalysisDiversificationRatioRequestBody = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisDiversificationRatioRequestBody, _super);
     function PostPortfolioAnalysisDiversificationRatioRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets" }),
         __metadata("design:type", Number)
     ], PostPortfolioAnalysisDiversificationRatioRequestBody.prototype, "assets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsCovarianceMatrix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsCovarianceMatrix" }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisDiversificationRatioRequestBody.prototype, "assetsCovarianceMatrix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolios", elemType: PostPortfolioAnalysisDiversificationRatioRequestBodyPortfolios }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolios", elemType: PostPortfolioAnalysisDiversificationRatioRequestBodyPortfolios }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisDiversificationRatioRequestBody.prototype, "portfolios", void 0);
     return PostPortfolioAnalysisDiversificationRatioRequestBody;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisDiversificationRatioRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisDiversificationRatioRequestBody = PostPortfolioAnalysisDiversificationRatioRequestBody;
 var PostPortfolioAnalysisDiversificationRatio200ApplicationJsonPortfolios = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisDiversificationRatio200ApplicationJsonPortfolios, _super);
     function PostPortfolioAnalysisDiversificationRatio200ApplicationJsonPortfolios() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolioDiversificationRatio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolioDiversificationRatio" }),
         __metadata("design:type", Number)
     ], PostPortfolioAnalysisDiversificationRatio200ApplicationJsonPortfolios.prototype, "portfolioDiversificationRatio", void 0);
     return PostPortfolioAnalysisDiversificationRatio200ApplicationJsonPortfolios;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisDiversificationRatio200ApplicationJsonPortfolios };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisDiversificationRatio200ApplicationJsonPortfolios = PostPortfolioAnalysisDiversificationRatio200ApplicationJsonPortfolios;
 var PostPortfolioAnalysisDiversificationRatio200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisDiversificationRatio200ApplicationJson, _super);
     function PostPortfolioAnalysisDiversificationRatio200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolios", elemType: PostPortfolioAnalysisDiversificationRatio200ApplicationJsonPortfolios }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolios", elemType: PostPortfolioAnalysisDiversificationRatio200ApplicationJsonPortfolios }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisDiversificationRatio200ApplicationJson.prototype, "portfolios", void 0);
     return PostPortfolioAnalysisDiversificationRatio200ApplicationJson;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisDiversificationRatio200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisDiversificationRatio200ApplicationJson = PostPortfolioAnalysisDiversificationRatio200ApplicationJson;
 var PostPortfolioAnalysisDiversificationRatioRequest = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisDiversificationRatioRequest, _super);
     function PostPortfolioAnalysisDiversificationRatioRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostPortfolioAnalysisDiversificationRatioRequestBody)
     ], PostPortfolioAnalysisDiversificationRatioRequest.prototype, "request", void 0);
     return PostPortfolioAnalysisDiversificationRatioRequest;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisDiversificationRatioRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisDiversificationRatioRequest = PostPortfolioAnalysisDiversificationRatioRequest;
 var PostPortfolioAnalysisDiversificationRatioResponse = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisDiversificationRatioResponse, _super);
     function PostPortfolioAnalysisDiversificationRatioResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostPortfolioAnalysisDiversificationRatioResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostPortfolioAnalysisDiversificationRatio200ApplicationJson)
-    ], PostPortfolioAnalysisDiversificationRatioResponse.prototype, "postPortfolioAnalysisDiversificationRatio200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostPortfolioAnalysisDiversificationRatioResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostPortfolioAnalysisDiversificationRatio200ApplicationJson)
+    ], PostPortfolioAnalysisDiversificationRatioResponse.prototype, "postPortfolioAnalysisDiversificationRatio200ApplicationJSONObject", void 0);
     return PostPortfolioAnalysisDiversificationRatioResponse;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisDiversificationRatioResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisDiversificationRatioResponse = PostPortfolioAnalysisDiversificationRatioResponse;

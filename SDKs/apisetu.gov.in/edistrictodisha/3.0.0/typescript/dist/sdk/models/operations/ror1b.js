@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,314 +14,339 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Ror1bResponse = exports.Ror1bRequest = exports.Ror1b504ApplicationJson = exports.Ror1b504ApplicationJsonErrorDescriptionEnum = exports.Ror1b504ApplicationJsonErrorEnum = exports.Ror1b503ApplicationJson = exports.Ror1b503ApplicationJsonErrorDescriptionEnum = exports.Ror1b503ApplicationJsonErrorEnum = exports.Ror1b502ApplicationJson = exports.Ror1b502ApplicationJsonErrorDescriptionEnum = exports.Ror1b502ApplicationJsonErrorEnum = exports.Ror1b500ApplicationJson = exports.Ror1b500ApplicationJsonErrorDescriptionEnum = exports.Ror1b500ApplicationJsonErrorEnum = exports.Ror1b404ApplicationJson = exports.Ror1b404ApplicationJsonErrorDescriptionEnum = exports.Ror1b404ApplicationJsonErrorEnum = exports.Ror1b401ApplicationJson = exports.Ror1b401ApplicationJsonErrorDescriptionEnum = exports.Ror1b401ApplicationJsonErrorEnum = exports.Ror1b400ApplicationJson = exports.Ror1b400ApplicationJsonErrorDescriptionEnum = exports.Ror1b400ApplicationJsonErrorEnum = exports.Ror1bSecurity = exports.Ror1bRequestBody = exports.Ror1bRequestBodyFormatEnum = exports.Ror1bRequestBodyCertificateParameters = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var Ror1bRequestBodyCertificateParameters = /** @class */ (function (_super) {
     __extends(Ror1bRequestBodyCertificateParameters, _super);
     function Ror1bRequestBodyCertificateParameters() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UID" }),
         __metadata("design:type", String)
     ], Ror1bRequestBodyCertificateParameters.prototype, "uid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refno" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refno" }),
         __metadata("design:type", String)
     ], Ror1bRequestBodyCertificateParameters.prototype, "refno", void 0);
     return Ror1bRequestBodyCertificateParameters;
-}(SpeakeasyBase));
-export { Ror1bRequestBodyCertificateParameters };
-export var Ror1bRequestBodyFormatEnum;
+}(utils_1.SpeakeasyBase));
+exports.Ror1bRequestBodyCertificateParameters = Ror1bRequestBodyCertificateParameters;
+var Ror1bRequestBodyFormatEnum;
 (function (Ror1bRequestBodyFormatEnum) {
     Ror1bRequestBodyFormatEnum["Pdf"] = "pdf";
-})(Ror1bRequestBodyFormatEnum || (Ror1bRequestBodyFormatEnum = {}));
+})(Ror1bRequestBodyFormatEnum = exports.Ror1bRequestBodyFormatEnum || (exports.Ror1bRequestBodyFormatEnum = {}));
 var Ror1bRequestBody = /** @class */ (function (_super) {
     __extends(Ror1bRequestBody, _super);
     function Ror1bRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateParameters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateParameters" }),
         __metadata("design:type", Ror1bRequestBodyCertificateParameters)
     ], Ror1bRequestBody.prototype, "certificateParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consentArtifact" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consentArtifact" }),
         __metadata("design:type", Object)
     ], Ror1bRequestBody.prototype, "consentArtifact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], Ror1bRequestBody.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txnId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txnId" }),
         __metadata("design:type", String)
     ], Ror1bRequestBody.prototype, "txnId", void 0);
     return Ror1bRequestBody;
-}(SpeakeasyBase));
-export { Ror1bRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.Ror1bRequestBody = Ror1bRequestBody;
 var Ror1bSecurity = /** @class */ (function (_super) {
     __extends(Ror1bSecurity, _super);
     function Ror1bSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], Ror1bSecurity.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeClientId)
     ], Ror1bSecurity.prototype, "clientId", void 0);
     return Ror1bSecurity;
-}(SpeakeasyBase));
-export { Ror1bSecurity };
-export var Ror1b400ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Ror1bSecurity = Ror1bSecurity;
+var Ror1b400ApplicationJsonErrorEnum;
 (function (Ror1b400ApplicationJsonErrorEnum) {
     Ror1b400ApplicationJsonErrorEnum["MissingParameter"] = "missing_parameter";
     Ror1b400ApplicationJsonErrorEnum["InvalidParameter"] = "invalid_parameter";
     Ror1b400ApplicationJsonErrorEnum["InvalidFormat"] = "invalid_format";
     Ror1b400ApplicationJsonErrorEnum["InvalidTxnid"] = "invalid_txnid";
     Ror1b400ApplicationJsonErrorEnum["InvalidConsentid"] = "invalid_consentid";
-})(Ror1b400ApplicationJsonErrorEnum || (Ror1b400ApplicationJsonErrorEnum = {}));
-export var Ror1b400ApplicationJsonErrorDescriptionEnum;
+})(Ror1b400ApplicationJsonErrorEnum = exports.Ror1b400ApplicationJsonErrorEnum || (exports.Ror1b400ApplicationJsonErrorEnum = {}));
+var Ror1b400ApplicationJsonErrorDescriptionEnum;
 (function (Ror1b400ApplicationJsonErrorDescriptionEnum) {
     Ror1b400ApplicationJsonErrorDescriptionEnum["PleaseProvideAllMandatoryParameters"] = "Please provide all mandatory parameters";
     Ror1b400ApplicationJsonErrorDescriptionEnum["BadRequest"] = "Bad request";
     Ror1b400ApplicationJsonErrorDescriptionEnum["TheFormatParameterIsInvalid"] = "The format parameter is invalid";
     Ror1b400ApplicationJsonErrorDescriptionEnum["TheTxnIdParameterMustBeInUuidFormat"] = "The txnId parameter must be in UUID format";
     Ror1b400ApplicationJsonErrorDescriptionEnum["TheConsentIdParameterMustBeInUuidFormat"] = "The consentId parameter must be in UUID format";
-})(Ror1b400ApplicationJsonErrorDescriptionEnum || (Ror1b400ApplicationJsonErrorDescriptionEnum = {}));
+})(Ror1b400ApplicationJsonErrorDescriptionEnum = exports.Ror1b400ApplicationJsonErrorDescriptionEnum || (exports.Ror1b400ApplicationJsonErrorDescriptionEnum = {}));
 var Ror1b400ApplicationJson = /** @class */ (function (_super) {
     __extends(Ror1b400ApplicationJson, _super);
     function Ror1b400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Ror1b400ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Ror1b400ApplicationJson.prototype, "errorDescription", void 0);
     return Ror1b400ApplicationJson;
-}(SpeakeasyBase));
-export { Ror1b400ApplicationJson };
-export var Ror1b401ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Ror1b400ApplicationJson = Ror1b400ApplicationJson;
+var Ror1b401ApplicationJsonErrorEnum;
 (function (Ror1b401ApplicationJsonErrorEnum) {
     Ror1b401ApplicationJsonErrorEnum["InvalidAuthentication"] = "invalid_authentication";
     Ror1b401ApplicationJsonErrorEnum["InvalidAuthorization"] = "invalid_authorization";
-})(Ror1b401ApplicationJsonErrorEnum || (Ror1b401ApplicationJsonErrorEnum = {}));
-export var Ror1b401ApplicationJsonErrorDescriptionEnum;
+})(Ror1b401ApplicationJsonErrorEnum = exports.Ror1b401ApplicationJsonErrorEnum || (exports.Ror1b401ApplicationJsonErrorEnum = {}));
+var Ror1b401ApplicationJsonErrorDescriptionEnum;
 (function (Ror1b401ApplicationJsonErrorDescriptionEnum) {
     Ror1b401ApplicationJsonErrorDescriptionEnum["AuthenticationFailed"] = "Authentication failed";
     Ror1b401ApplicationJsonErrorDescriptionEnum["YouAreNotAuthorizedToUseThisApi"] = "You are not authorized to use this API";
-})(Ror1b401ApplicationJsonErrorDescriptionEnum || (Ror1b401ApplicationJsonErrorDescriptionEnum = {}));
+})(Ror1b401ApplicationJsonErrorDescriptionEnum = exports.Ror1b401ApplicationJsonErrorDescriptionEnum || (exports.Ror1b401ApplicationJsonErrorDescriptionEnum = {}));
 var Ror1b401ApplicationJson = /** @class */ (function (_super) {
     __extends(Ror1b401ApplicationJson, _super);
     function Ror1b401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Ror1b401ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Ror1b401ApplicationJson.prototype, "errorDescription", void 0);
     return Ror1b401ApplicationJson;
-}(SpeakeasyBase));
-export { Ror1b401ApplicationJson };
-export var Ror1b404ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Ror1b401ApplicationJson = Ror1b401ApplicationJson;
+var Ror1b404ApplicationJsonErrorEnum;
 (function (Ror1b404ApplicationJsonErrorEnum) {
     Ror1b404ApplicationJsonErrorEnum["RecordNotFound"] = "record_not_found";
     Ror1b404ApplicationJsonErrorEnum["UrlNotFound"] = "url_not_found";
-})(Ror1b404ApplicationJsonErrorEnum || (Ror1b404ApplicationJsonErrorEnum = {}));
-export var Ror1b404ApplicationJsonErrorDescriptionEnum;
+})(Ror1b404ApplicationJsonErrorEnum = exports.Ror1b404ApplicationJsonErrorEnum || (exports.Ror1b404ApplicationJsonErrorEnum = {}));
+var Ror1b404ApplicationJsonErrorDescriptionEnum;
 (function (Ror1b404ApplicationJsonErrorDescriptionEnum) {
     Ror1b404ApplicationJsonErrorDescriptionEnum["NoRecordFound"] = "No record found";
     Ror1b404ApplicationJsonErrorDescriptionEnum["YourApiUrlOrPathIsIncorrect"] = "Your API url or path is incorrect";
-})(Ror1b404ApplicationJsonErrorDescriptionEnum || (Ror1b404ApplicationJsonErrorDescriptionEnum = {}));
+})(Ror1b404ApplicationJsonErrorDescriptionEnum = exports.Ror1b404ApplicationJsonErrorDescriptionEnum || (exports.Ror1b404ApplicationJsonErrorDescriptionEnum = {}));
 var Ror1b404ApplicationJson = /** @class */ (function (_super) {
     __extends(Ror1b404ApplicationJson, _super);
     function Ror1b404ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Ror1b404ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Ror1b404ApplicationJson.prototype, "errorDescription", void 0);
     return Ror1b404ApplicationJson;
-}(SpeakeasyBase));
-export { Ror1b404ApplicationJson };
-export var Ror1b500ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Ror1b404ApplicationJson = Ror1b404ApplicationJson;
+var Ror1b500ApplicationJsonErrorEnum;
 (function (Ror1b500ApplicationJsonErrorEnum) {
     Ror1b500ApplicationJsonErrorEnum["InternalServerError"] = "internal_server_error";
-})(Ror1b500ApplicationJsonErrorEnum || (Ror1b500ApplicationJsonErrorEnum = {}));
-export var Ror1b500ApplicationJsonErrorDescriptionEnum;
+})(Ror1b500ApplicationJsonErrorEnum = exports.Ror1b500ApplicationJsonErrorEnum || (exports.Ror1b500ApplicationJsonErrorEnum = {}));
+var Ror1b500ApplicationJsonErrorDescriptionEnum;
 (function (Ror1b500ApplicationJsonErrorDescriptionEnum) {
     Ror1b500ApplicationJsonErrorDescriptionEnum["InternalServerError"] = "Internal server error";
-})(Ror1b500ApplicationJsonErrorDescriptionEnum || (Ror1b500ApplicationJsonErrorDescriptionEnum = {}));
+})(Ror1b500ApplicationJsonErrorDescriptionEnum = exports.Ror1b500ApplicationJsonErrorDescriptionEnum || (exports.Ror1b500ApplicationJsonErrorDescriptionEnum = {}));
 var Ror1b500ApplicationJson = /** @class */ (function (_super) {
     __extends(Ror1b500ApplicationJson, _super);
     function Ror1b500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Ror1b500ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Ror1b500ApplicationJson.prototype, "errorDescription", void 0);
     return Ror1b500ApplicationJson;
-}(SpeakeasyBase));
-export { Ror1b500ApplicationJson };
-export var Ror1b502ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Ror1b500ApplicationJson = Ror1b500ApplicationJson;
+var Ror1b502ApplicationJsonErrorEnum;
 (function (Ror1b502ApplicationJsonErrorEnum) {
     Ror1b502ApplicationJsonErrorEnum["BadGatewy"] = "bad_gatewy";
-})(Ror1b502ApplicationJsonErrorEnum || (Ror1b502ApplicationJsonErrorEnum = {}));
-export var Ror1b502ApplicationJsonErrorDescriptionEnum;
+})(Ror1b502ApplicationJsonErrorEnum = exports.Ror1b502ApplicationJsonErrorEnum || (exports.Ror1b502ApplicationJsonErrorEnum = {}));
+var Ror1b502ApplicationJsonErrorDescriptionEnum;
 (function (Ror1b502ApplicationJsonErrorDescriptionEnum) {
     Ror1b502ApplicationJsonErrorDescriptionEnum["PublisherServiceReturnedAnInvalidResponse"] = "Publisher service returned an invalid response";
-})(Ror1b502ApplicationJsonErrorDescriptionEnum || (Ror1b502ApplicationJsonErrorDescriptionEnum = {}));
+})(Ror1b502ApplicationJsonErrorDescriptionEnum = exports.Ror1b502ApplicationJsonErrorDescriptionEnum || (exports.Ror1b502ApplicationJsonErrorDescriptionEnum = {}));
 var Ror1b502ApplicationJson = /** @class */ (function (_super) {
     __extends(Ror1b502ApplicationJson, _super);
     function Ror1b502ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Ror1b502ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Ror1b502ApplicationJson.prototype, "errorDescription", void 0);
     return Ror1b502ApplicationJson;
-}(SpeakeasyBase));
-export { Ror1b502ApplicationJson };
-export var Ror1b503ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Ror1b502ApplicationJson = Ror1b502ApplicationJson;
+var Ror1b503ApplicationJsonErrorEnum;
 (function (Ror1b503ApplicationJsonErrorEnum) {
     Ror1b503ApplicationJsonErrorEnum["ServiceUnavailable"] = "service_unavailable";
-})(Ror1b503ApplicationJsonErrorEnum || (Ror1b503ApplicationJsonErrorEnum = {}));
-export var Ror1b503ApplicationJsonErrorDescriptionEnum;
+})(Ror1b503ApplicationJsonErrorEnum = exports.Ror1b503ApplicationJsonErrorEnum || (exports.Ror1b503ApplicationJsonErrorEnum = {}));
+var Ror1b503ApplicationJsonErrorDescriptionEnum;
 (function (Ror1b503ApplicationJsonErrorDescriptionEnum) {
     Ror1b503ApplicationJsonErrorDescriptionEnum["PublisherServiceIsTemporarilyUnavailable"] = "Publisher service is temporarily unavailable";
-})(Ror1b503ApplicationJsonErrorDescriptionEnum || (Ror1b503ApplicationJsonErrorDescriptionEnum = {}));
+})(Ror1b503ApplicationJsonErrorDescriptionEnum = exports.Ror1b503ApplicationJsonErrorDescriptionEnum || (exports.Ror1b503ApplicationJsonErrorDescriptionEnum = {}));
 var Ror1b503ApplicationJson = /** @class */ (function (_super) {
     __extends(Ror1b503ApplicationJson, _super);
     function Ror1b503ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Ror1b503ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Ror1b503ApplicationJson.prototype, "errorDescription", void 0);
     return Ror1b503ApplicationJson;
-}(SpeakeasyBase));
-export { Ror1b503ApplicationJson };
-export var Ror1b504ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Ror1b503ApplicationJson = Ror1b503ApplicationJson;
+var Ror1b504ApplicationJsonErrorEnum;
 (function (Ror1b504ApplicationJsonErrorEnum) {
     Ror1b504ApplicationJsonErrorEnum["GatewayTimeout"] = "gateway_timeout";
-})(Ror1b504ApplicationJsonErrorEnum || (Ror1b504ApplicationJsonErrorEnum = {}));
-export var Ror1b504ApplicationJsonErrorDescriptionEnum;
+})(Ror1b504ApplicationJsonErrorEnum = exports.Ror1b504ApplicationJsonErrorEnum || (exports.Ror1b504ApplicationJsonErrorEnum = {}));
+var Ror1b504ApplicationJsonErrorDescriptionEnum;
 (function (Ror1b504ApplicationJsonErrorDescriptionEnum) {
     Ror1b504ApplicationJsonErrorDescriptionEnum["PublisherServiceDidNotRespondInTime"] = "Publisher service did not respond in time";
-})(Ror1b504ApplicationJsonErrorDescriptionEnum || (Ror1b504ApplicationJsonErrorDescriptionEnum = {}));
+})(Ror1b504ApplicationJsonErrorDescriptionEnum = exports.Ror1b504ApplicationJsonErrorDescriptionEnum || (exports.Ror1b504ApplicationJsonErrorDescriptionEnum = {}));
 var Ror1b504ApplicationJson = /** @class */ (function (_super) {
     __extends(Ror1b504ApplicationJson, _super);
     function Ror1b504ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Ror1b504ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Ror1b504ApplicationJson.prototype, "errorDescription", void 0);
     return Ror1b504ApplicationJson;
-}(SpeakeasyBase));
-export { Ror1b504ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.Ror1b504ApplicationJson = Ror1b504ApplicationJson;
 var Ror1bRequest = /** @class */ (function (_super) {
     __extends(Ror1bRequest, _super);
     function Ror1bRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Ror1bRequestBody)
     ], Ror1bRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Ror1bSecurity)
     ], Ror1bRequest.prototype, "security", void 0);
     return Ror1bRequest;
-}(SpeakeasyBase));
-export { Ror1bRequest };
+}(utils_1.SpeakeasyBase));
+exports.Ror1bRequest = Ror1bRequest;
 var Ror1bResponse = /** @class */ (function (_super) {
     __extends(Ror1bResponse, _super);
     function Ror1bResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Ror1bResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Ror1bResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Ror1b400ApplicationJson)
-    ], Ror1bResponse.prototype, "ror1b400ApplicationJsonObject", void 0);
+    ], Ror1bResponse.prototype, "ror1b400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Ror1b401ApplicationJson)
-    ], Ror1bResponse.prototype, "ror1b401ApplicationJsonObject", void 0);
+    ], Ror1bResponse.prototype, "ror1b401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Ror1b404ApplicationJson)
-    ], Ror1bResponse.prototype, "ror1b404ApplicationJsonObject", void 0);
+    ], Ror1bResponse.prototype, "ror1b404ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Ror1b500ApplicationJson)
-    ], Ror1bResponse.prototype, "ror1b500ApplicationJsonObject", void 0);
+    ], Ror1bResponse.prototype, "ror1b500ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Ror1b502ApplicationJson)
-    ], Ror1bResponse.prototype, "ror1b502ApplicationJsonObject", void 0);
+    ], Ror1bResponse.prototype, "ror1b502ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Ror1b503ApplicationJson)
-    ], Ror1bResponse.prototype, "ror1b503ApplicationJsonObject", void 0);
+    ], Ror1bResponse.prototype, "ror1b503ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Ror1b504ApplicationJson)
-    ], Ror1bResponse.prototype, "ror1b504ApplicationJsonObject", void 0);
+    ], Ror1bResponse.prototype, "ror1b504ApplicationJSONObject", void 0);
     return Ror1bResponse;
-}(SpeakeasyBase));
-export { Ror1bResponse };
+}(utils_1.SpeakeasyBase));
+exports.Ror1bResponse = Ror1bResponse;

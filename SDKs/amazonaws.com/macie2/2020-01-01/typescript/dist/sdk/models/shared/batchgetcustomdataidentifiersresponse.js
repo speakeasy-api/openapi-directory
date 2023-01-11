@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BatchGetCustomDataIdentifierSummary } from "./batchgetcustomdataidentifiersummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetCustomDataIdentifiersResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var batchgetcustomdataidentifiersummary_1 = require("./batchgetcustomdataidentifiersummary");
 var BatchGetCustomDataIdentifiersResponse = /** @class */ (function (_super) {
     __extends(BatchGetCustomDataIdentifiersResponse, _super);
     function BatchGetCustomDataIdentifiersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customDataIdentifiers", elemType: BatchGetCustomDataIdentifierSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customDataIdentifiers", elemType: batchgetcustomdataidentifiersummary_1.BatchGetCustomDataIdentifierSummary }),
         __metadata("design:type", Array)
     ], BatchGetCustomDataIdentifiersResponse.prototype, "customDataIdentifiers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notFoundIdentifierIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notFoundIdentifierIds" }),
         __metadata("design:type", Array)
     ], BatchGetCustomDataIdentifiersResponse.prototype, "notFoundIdentifierIds", void 0);
     return BatchGetCustomDataIdentifiersResponse;
-}(SpeakeasyBase));
-export { BatchGetCustomDataIdentifiersResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetCustomDataIdentifiersResponse = BatchGetCustomDataIdentifiersResponse;

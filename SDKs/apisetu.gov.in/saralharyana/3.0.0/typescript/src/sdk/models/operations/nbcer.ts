@@ -188,23 +188,23 @@ export class NbcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  nbcer400ApplicationJsonObject?: Nbcer400ApplicationJson;
+  nbcer400ApplicationJSONObject?: Nbcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  nbcer401ApplicationJsonObject?: Nbcer401ApplicationJson;
+  nbcer401ApplicationJSONObject?: Nbcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  nbcer404ApplicationJsonObject?: Nbcer404ApplicationJson;
+  nbcer404ApplicationJSONObject?: Nbcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  nbcer500ApplicationJsonObject?: Nbcer500ApplicationJson;
+  nbcer500ApplicationJSONObject?: Nbcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  nbcer502ApplicationJsonObject?: Nbcer502ApplicationJson;
+  nbcer502ApplicationJSONObject?: Nbcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  nbcer503ApplicationJsonObject?: Nbcer503ApplicationJson;
+  nbcer503ApplicationJSONObject?: Nbcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  nbcer504ApplicationJsonObject?: Nbcer504ApplicationJson;
+  nbcer504ApplicationJSONObject?: Nbcer504ApplicationJson;
 }

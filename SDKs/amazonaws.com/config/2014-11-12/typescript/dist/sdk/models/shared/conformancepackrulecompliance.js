@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConformancePackComplianceTypeEnum } from "./conformancepackcompliancetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConformancePackRuleCompliance = void 0;
+var utils_1 = require("../../../internal/utils");
+var conformancepackcompliancetypeenum_1 = require("./conformancepackcompliancetypeenum");
 // ConformancePackRuleCompliance
 /**
  * Compliance information of one or more Config rules within a conformance pack. You can filter using Config rule names and compliance types.
@@ -34,17 +37,17 @@ var ConformancePackRuleCompliance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComplianceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComplianceType" }),
         __metadata("design:type", String)
     ], ConformancePackRuleCompliance.prototype, "complianceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigRuleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigRuleName" }),
         __metadata("design:type", String)
     ], ConformancePackRuleCompliance.prototype, "configRuleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Controls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Controls" }),
         __metadata("design:type", Array)
     ], ConformancePackRuleCompliance.prototype, "controls", void 0);
     return ConformancePackRuleCompliance;
-}(SpeakeasyBase));
-export { ConformancePackRuleCompliance };
+}(utils_1.SpeakeasyBase));
+exports.ConformancePackRuleCompliance = ConformancePackRuleCompliance;

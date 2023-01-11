@@ -1,16 +1,32 @@
-export * from "./cloudiotprojectslocationsregistriesbinddevicetogateway";
-export * from "./cloudiotprojectslocationsregistriescreate";
-export * from "./cloudiotprojectslocationsregistriesdevicesconfigversionslist";
-export * from "./cloudiotprojectslocationsregistriesdevicescreate";
-export * from "./cloudiotprojectslocationsregistriesdevicesdelete";
-export * from "./cloudiotprojectslocationsregistriesdevicesget";
-export * from "./cloudiotprojectslocationsregistriesdevicesmodifycloudtodeviceconfig";
-export * from "./cloudiotprojectslocationsregistriesdevicespatch";
-export * from "./cloudiotprojectslocationsregistriesdevicessendcommandtodevice";
-export * from "./cloudiotprojectslocationsregistriesdevicesstateslist";
-export * from "./cloudiotprojectslocationsregistriesgroupsdeviceslist";
-export * from "./cloudiotprojectslocationsregistriesgroupsgetiampolicy";
-export * from "./cloudiotprojectslocationsregistriesgroupssetiampolicy";
-export * from "./cloudiotprojectslocationsregistriesgroupstestiampermissions";
-export * from "./cloudiotprojectslocationsregistrieslist";
-export * from "./cloudiotprojectslocationsregistriesunbinddevicefromgateway";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./cloudiotprojectslocationsregistriesbinddevicetogateway"), exports);
+__exportStar(require("./cloudiotprojectslocationsregistriescreate"), exports);
+__exportStar(require("./cloudiotprojectslocationsregistriesdevicesconfigversionslist"), exports);
+__exportStar(require("./cloudiotprojectslocationsregistriesdevicescreate"), exports);
+__exportStar(require("./cloudiotprojectslocationsregistriesdevicesdelete"), exports);
+__exportStar(require("./cloudiotprojectslocationsregistriesdevicesget"), exports);
+__exportStar(require("./cloudiotprojectslocationsregistriesdevicesmodifycloudtodeviceconfig"), exports);
+__exportStar(require("./cloudiotprojectslocationsregistriesdevicespatch"), exports);
+__exportStar(require("./cloudiotprojectslocationsregistriesdevicessendcommandtodevice"), exports);
+__exportStar(require("./cloudiotprojectslocationsregistriesdevicesstateslist"), exports);
+__exportStar(require("./cloudiotprojectslocationsregistriesgroupsdeviceslist"), exports);
+__exportStar(require("./cloudiotprojectslocationsregistriesgroupsgetiampolicy"), exports);
+__exportStar(require("./cloudiotprojectslocationsregistriesgroupssetiampolicy"), exports);
+__exportStar(require("./cloudiotprojectslocationsregistriesgroupstestiampermissions"), exports);
+__exportStar(require("./cloudiotprojectslocationsregistrieslist"), exports);
+__exportStar(require("./cloudiotprojectslocationsregistriesunbinddevicefromgateway"), exports);

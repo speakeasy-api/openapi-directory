@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Order } from "./order";
-import { PackageSpecification } from "./packagespecification";
-import { Rate } from "./rate";
-import { Contact } from "./contact";
-import { Error } from "./error";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShippingQuote = void 0;
+var utils_1 = require("../../../internal/utils");
+var order_1 = require("./order");
+var packagespecification_1 = require("./packagespecification");
+var rate_1 = require("./rate");
+var contact_1 = require("./contact");
+var error_1 = require("./error");
 // ShippingQuote
 /**
  * This complex type describes a &quot;shipping quote,&quot; which contains the parameters for a package shipment. The shipping quote contains a list of &quot;live quotes&quot; or rates for the shipment. Rates are offerd by a carrier for a particular service, of set of services, for shipping the package. Included in the shipping quote are the package specifications, the shipment's origin and destination addresses, and the shipping parameters specified by the seller. Use the rateId value to select the specific service you want when you create a shipment by calling createFromShippingQuote.
@@ -38,41 +41,41 @@ var ShippingQuote = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDate" }),
         __metadata("design:type", String)
     ], ShippingQuote.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expirationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expirationDate" }),
         __metadata("design:type", String)
     ], ShippingQuote.prototype, "expirationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orders", elemType: Order }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orders", elemType: order_1.Order }),
         __metadata("design:type", Array)
     ], ShippingQuote.prototype, "orders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packageSpecification" }),
-        __metadata("design:type", PackageSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packageSpecification" }),
+        __metadata("design:type", packagespecification_1.PackageSpecification)
     ], ShippingQuote.prototype, "packageSpecification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rates", elemType: Rate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rates", elemType: rate_1.Rate }),
         __metadata("design:type", Array)
     ], ShippingQuote.prototype, "rates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipFrom" }),
-        __metadata("design:type", Contact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipFrom" }),
+        __metadata("design:type", contact_1.Contact)
     ], ShippingQuote.prototype, "shipFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipTo" }),
-        __metadata("design:type", Contact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipTo" }),
+        __metadata("design:type", contact_1.Contact)
     ], ShippingQuote.prototype, "shipTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingQuoteId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingQuoteId" }),
         __metadata("design:type", String)
     ], ShippingQuote.prototype, "shippingQuoteId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warnings", elemType: Error }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warnings", elemType: error_1.ErrorT }),
         __metadata("design:type", Array)
     ], ShippingQuote.prototype, "warnings", void 0);
     return ShippingQuote;
-}(SpeakeasyBase));
-export { ShippingQuote };
+}(utils_1.SpeakeasyBase));
+exports.ShippingQuote = ShippingQuote;

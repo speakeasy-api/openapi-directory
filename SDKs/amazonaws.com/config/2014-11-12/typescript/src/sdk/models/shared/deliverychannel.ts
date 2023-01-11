@@ -24,5 +24,5 @@ export class DeliveryChannel extends SpeakeasyBase {
   s3KmsKeyArn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=snsTopicARN" })
-  snsTopicArn?: string;
+  snsTopicARN?: string;
 }

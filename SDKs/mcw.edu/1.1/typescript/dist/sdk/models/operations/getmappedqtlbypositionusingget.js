@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMappedQtlByPositionUsingGetResponse = exports.GetMappedQtlByPositionUsingGetRequest = exports.GetMappedQtlByPositionUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetMappedQtlByPositionUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetMappedQtlByPositionUsingGetPathParams, _super);
     function GetMappedQtlByPositionUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=chr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=chr" }),
         __metadata("design:type", String)
     ], GetMappedQtlByPositionUsingGetPathParams.prototype, "chr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=mapKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=mapKey" }),
         __metadata("design:type", Number)
     ], GetMappedQtlByPositionUsingGetPathParams.prototype, "mapKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=start" }),
         __metadata("design:type", Number)
     ], GetMappedQtlByPositionUsingGetPathParams.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=stop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=stop" }),
         __metadata("design:type", Number)
     ], GetMappedQtlByPositionUsingGetPathParams.prototype, "stop", void 0);
     return GetMappedQtlByPositionUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetMappedQtlByPositionUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMappedQtlByPositionUsingGetPathParams = GetMappedQtlByPositionUsingGetPathParams;
 var GetMappedQtlByPositionUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetMappedQtlByPositionUsingGetRequest, _super);
     function GetMappedQtlByPositionUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMappedQtlByPositionUsingGetPathParams)
     ], GetMappedQtlByPositionUsingGetRequest.prototype, "pathParams", void 0);
     return GetMappedQtlByPositionUsingGetRequest;
-}(SpeakeasyBase));
-export { GetMappedQtlByPositionUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMappedQtlByPositionUsingGetRequest = GetMappedQtlByPositionUsingGetRequest;
 var GetMappedQtlByPositionUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetMappedQtlByPositionUsingGetResponse, _super);
     function GetMappedQtlByPositionUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetMappedQtlByPositionUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMappedQtlByPositionUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMappedQtlByPositionUsingGetResponse.prototype, "statusCode", void 0);
     return GetMappedQtlByPositionUsingGetResponse;
-}(SpeakeasyBase));
-export { GetMappedQtlByPositionUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMappedQtlByPositionUsingGetResponse = GetMappedQtlByPositionUsingGetResponse;

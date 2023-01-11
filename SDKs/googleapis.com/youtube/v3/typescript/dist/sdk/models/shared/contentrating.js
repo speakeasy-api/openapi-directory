@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ContentRatingAcbRatingEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContentRatingMoctwRatingEnum = exports.ContentRatingMocRatingEnum = exports.ContentRatingMibacRatingEnum = exports.ContentRatingMenaMpaaRatingEnum = exports.ContentRatingMekuRatingEnum = exports.ContentRatingMedietilsynetRatingEnum = exports.ContentRatingMdaRatingEnum = exports.ContentRatingMcstRatingEnum = exports.ContentRatingMccypRatingEnum = exports.ContentRatingMccaaRatingEnum = exports.ContentRatingLsfRatingEnum = exports.ContentRatingKmrbRatingEnum = exports.ContentRatingKijkwijzerRatingEnum = exports.ContentRatingKfcbRatingEnum = exports.ContentRatingIncaaRatingEnum = exports.ContentRatingIlfilmRatingEnum = exports.ContentRatingIfcoRatingEnum = exports.ContentRatingIcaaRatingEnum = exports.ContentRatingGrfilmRatingEnum = exports.ContentRatingFskRatingEnum = exports.ContentRatingFpbRatingReasonsEnum = exports.ContentRatingFpbRatingEnum = exports.ContentRatingFmocRatingEnum = exports.ContentRatingFcoRatingEnum = exports.ContentRatingFcbmRatingEnum = exports.ContentRatingEirinRatingEnum = exports.ContentRatingEgfilmRatingEnum = exports.ContentRatingEefilmRatingEnum = exports.ContentRatingEcbmctRatingEnum = exports.ContentRatingDjctqRatingReasonsEnum = exports.ContentRatingDjctqRatingEnum = exports.ContentRatingCzfilmRatingEnum = exports.ContentRatingCscfRatingEnum = exports.ContentRatingCsaRatingEnum = exports.ContentRatingCncRatingEnum = exports.ContentRatingCnaRatingEnum = exports.ContentRatingCicfRatingEnum = exports.ContentRatingChvrsRatingEnum = exports.ContentRatingChfilmRatingEnum = exports.ContentRatingCceRatingEnum = exports.ContentRatingCccRatingEnum = exports.ContentRatingCbfcRatingEnum = exports.ContentRatingCatvfrRatingEnum = exports.ContentRatingCatvRatingEnum = exports.ContentRatingBmukkRatingEnum = exports.ContentRatingBfvcRatingEnum = exports.ContentRatingBbfcRatingEnum = exports.ContentRatingAnatelRatingEnum = exports.ContentRatingAgcomRatingEnum = exports.ContentRatingAcbRatingEnum = void 0;
+exports.ContentRating = exports.ContentRatingYtRatingEnum = exports.ContentRatingTvpgRatingEnum = exports.ContentRatingSmsaRatingEnum = exports.ContentRatingSmaisRatingEnum = exports.ContentRatingSkfilmRatingEnum = exports.ContentRatingRussiaRatingEnum = exports.ContentRatingRteRatingEnum = exports.ContentRatingRtcRatingEnum = exports.ContentRatingResorteviolenciaRatingEnum = exports.ContentRatingRcnofRatingEnum = exports.ContentRatingPefilmRatingEnum = exports.ContentRatingOflcRatingEnum = exports.ContentRatingNmcRatingEnum = exports.ContentRatingNkclvRatingEnum = exports.ContentRatingNfvcbRatingEnum = exports.ContentRatingNfrcRatingEnum = exports.ContentRatingNbcplRatingEnum = exports.ContentRatingNbcRatingEnum = exports.ContentRatingMtrcbRatingEnum = exports.ContentRatingMpaatRatingEnum = exports.ContentRatingMpaaRatingEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ContentRatingAcbRatingEnum;
 (function (ContentRatingAcbRatingEnum) {
     ContentRatingAcbRatingEnum["AcbUnspecified"] = "acbUnspecified";
     ContentRatingAcbRatingEnum["AcbE"] = "acbE";
@@ -35,16 +39,16 @@ export var ContentRatingAcbRatingEnum;
     ContentRatingAcbRatingEnum["AcbMa15plus"] = "acbMa15plus";
     ContentRatingAcbRatingEnum["AcbR18plus"] = "acbR18plus";
     ContentRatingAcbRatingEnum["AcbUnrated"] = "acbUnrated";
-})(ContentRatingAcbRatingEnum || (ContentRatingAcbRatingEnum = {}));
-export var ContentRatingAgcomRatingEnum;
+})(ContentRatingAcbRatingEnum = exports.ContentRatingAcbRatingEnum || (exports.ContentRatingAcbRatingEnum = {}));
+var ContentRatingAgcomRatingEnum;
 (function (ContentRatingAgcomRatingEnum) {
     ContentRatingAgcomRatingEnum["AgcomUnspecified"] = "agcomUnspecified";
     ContentRatingAgcomRatingEnum["AgcomT"] = "agcomT";
     ContentRatingAgcomRatingEnum["AgcomVm14"] = "agcomVm14";
     ContentRatingAgcomRatingEnum["AgcomVm18"] = "agcomVm18";
     ContentRatingAgcomRatingEnum["AgcomUnrated"] = "agcomUnrated";
-})(ContentRatingAgcomRatingEnum || (ContentRatingAgcomRatingEnum = {}));
-export var ContentRatingAnatelRatingEnum;
+})(ContentRatingAgcomRatingEnum = exports.ContentRatingAgcomRatingEnum || (exports.ContentRatingAgcomRatingEnum = {}));
+var ContentRatingAnatelRatingEnum;
 (function (ContentRatingAnatelRatingEnum) {
     ContentRatingAnatelRatingEnum["AnatelUnspecified"] = "anatelUnspecified";
     ContentRatingAnatelRatingEnum["AnatelF"] = "anatelF";
@@ -55,8 +59,8 @@ export var ContentRatingAnatelRatingEnum;
     ContentRatingAnatelRatingEnum["AnatelR"] = "anatelR";
     ContentRatingAnatelRatingEnum["AnatelA"] = "anatelA";
     ContentRatingAnatelRatingEnum["AnatelUnrated"] = "anatelUnrated";
-})(ContentRatingAnatelRatingEnum || (ContentRatingAnatelRatingEnum = {}));
-export var ContentRatingBbfcRatingEnum;
+})(ContentRatingAnatelRatingEnum = exports.ContentRatingAnatelRatingEnum || (exports.ContentRatingAnatelRatingEnum = {}));
+var ContentRatingBbfcRatingEnum;
 (function (ContentRatingBbfcRatingEnum) {
     ContentRatingBbfcRatingEnum["BbfcUnspecified"] = "bbfcUnspecified";
     ContentRatingBbfcRatingEnum["BbfcU"] = "bbfcU";
@@ -67,8 +71,8 @@ export var ContentRatingBbfcRatingEnum;
     ContentRatingBbfcRatingEnum["Bbfc18"] = "bbfc18";
     ContentRatingBbfcRatingEnum["BbfcR18"] = "bbfcR18";
     ContentRatingBbfcRatingEnum["BbfcUnrated"] = "bbfcUnrated";
-})(ContentRatingBbfcRatingEnum || (ContentRatingBbfcRatingEnum = {}));
-export var ContentRatingBfvcRatingEnum;
+})(ContentRatingBbfcRatingEnum = exports.ContentRatingBbfcRatingEnum || (exports.ContentRatingBbfcRatingEnum = {}));
+var ContentRatingBfvcRatingEnum;
 (function (ContentRatingBfvcRatingEnum) {
     ContentRatingBfvcRatingEnum["BfvcUnspecified"] = "bfvcUnspecified";
     ContentRatingBfvcRatingEnum["BfvcG"] = "bfvcG";
@@ -79,8 +83,8 @@ export var ContentRatingBfvcRatingEnum;
     ContentRatingBfvcRatingEnum["Bfvc20"] = "bfvc20";
     ContentRatingBfvcRatingEnum["BfvcB"] = "bfvcB";
     ContentRatingBfvcRatingEnum["BfvcUnrated"] = "bfvcUnrated";
-})(ContentRatingBfvcRatingEnum || (ContentRatingBfvcRatingEnum = {}));
-export var ContentRatingBmukkRatingEnum;
+})(ContentRatingBfvcRatingEnum = exports.ContentRatingBfvcRatingEnum || (exports.ContentRatingBfvcRatingEnum = {}));
+var ContentRatingBmukkRatingEnum;
 (function (ContentRatingBmukkRatingEnum) {
     ContentRatingBmukkRatingEnum["BmukkUnspecified"] = "bmukkUnspecified";
     ContentRatingBmukkRatingEnum["BmukkAa"] = "bmukkAa";
@@ -91,8 +95,8 @@ export var ContentRatingBmukkRatingEnum;
     ContentRatingBmukkRatingEnum["Bmukk14"] = "bmukk14";
     ContentRatingBmukkRatingEnum["Bmukk16"] = "bmukk16";
     ContentRatingBmukkRatingEnum["BmukkUnrated"] = "bmukkUnrated";
-})(ContentRatingBmukkRatingEnum || (ContentRatingBmukkRatingEnum = {}));
-export var ContentRatingCatvRatingEnum;
+})(ContentRatingBmukkRatingEnum = exports.ContentRatingBmukkRatingEnum || (exports.ContentRatingBmukkRatingEnum = {}));
+var ContentRatingCatvRatingEnum;
 (function (ContentRatingCatvRatingEnum) {
     ContentRatingCatvRatingEnum["CatvUnspecified"] = "catvUnspecified";
     ContentRatingCatvRatingEnum["CatvC"] = "catvC";
@@ -103,8 +107,8 @@ export var ContentRatingCatvRatingEnum;
     ContentRatingCatvRatingEnum["Catv18plus"] = "catv18plus";
     ContentRatingCatvRatingEnum["CatvUnrated"] = "catvUnrated";
     ContentRatingCatvRatingEnum["CatvE"] = "catvE";
-})(ContentRatingCatvRatingEnum || (ContentRatingCatvRatingEnum = {}));
-export var ContentRatingCatvfrRatingEnum;
+})(ContentRatingCatvRatingEnum = exports.ContentRatingCatvRatingEnum || (exports.ContentRatingCatvRatingEnum = {}));
+var ContentRatingCatvfrRatingEnum;
 (function (ContentRatingCatvfrRatingEnum) {
     ContentRatingCatvfrRatingEnum["CatvfrUnspecified"] = "catvfrUnspecified";
     ContentRatingCatvfrRatingEnum["CatvfrG"] = "catvfrG";
@@ -114,8 +118,8 @@ export var ContentRatingCatvfrRatingEnum;
     ContentRatingCatvfrRatingEnum["Catvfr18plus"] = "catvfr18plus";
     ContentRatingCatvfrRatingEnum["CatvfrUnrated"] = "catvfrUnrated";
     ContentRatingCatvfrRatingEnum["CatvfrE"] = "catvfrE";
-})(ContentRatingCatvfrRatingEnum || (ContentRatingCatvfrRatingEnum = {}));
-export var ContentRatingCbfcRatingEnum;
+})(ContentRatingCatvfrRatingEnum = exports.ContentRatingCatvfrRatingEnum || (exports.ContentRatingCatvfrRatingEnum = {}));
+var ContentRatingCbfcRatingEnum;
 (function (ContentRatingCbfcRatingEnum) {
     ContentRatingCbfcRatingEnum["CbfcUnspecified"] = "cbfcUnspecified";
     ContentRatingCbfcRatingEnum["CbfcU"] = "cbfcU";
@@ -126,8 +130,8 @@ export var ContentRatingCbfcRatingEnum;
     ContentRatingCbfcRatingEnum["CbfcA"] = "cbfcA";
     ContentRatingCbfcRatingEnum["CbfcS"] = "cbfcS";
     ContentRatingCbfcRatingEnum["CbfcUnrated"] = "cbfcUnrated";
-})(ContentRatingCbfcRatingEnum || (ContentRatingCbfcRatingEnum = {}));
-export var ContentRatingCccRatingEnum;
+})(ContentRatingCbfcRatingEnum = exports.ContentRatingCbfcRatingEnum || (exports.ContentRatingCbfcRatingEnum = {}));
+var ContentRatingCccRatingEnum;
 (function (ContentRatingCccRatingEnum) {
     ContentRatingCccRatingEnum["CccUnspecified"] = "cccUnspecified";
     ContentRatingCccRatingEnum["CccTe"] = "cccTe";
@@ -137,8 +141,8 @@ export var ContentRatingCccRatingEnum;
     ContentRatingCccRatingEnum["Ccc18v"] = "ccc18v";
     ContentRatingCccRatingEnum["Ccc18s"] = "ccc18s";
     ContentRatingCccRatingEnum["CccUnrated"] = "cccUnrated";
-})(ContentRatingCccRatingEnum || (ContentRatingCccRatingEnum = {}));
-export var ContentRatingCceRatingEnum;
+})(ContentRatingCccRatingEnum = exports.ContentRatingCccRatingEnum || (exports.ContentRatingCccRatingEnum = {}));
+var ContentRatingCceRatingEnum;
 (function (ContentRatingCceRatingEnum) {
     ContentRatingCceRatingEnum["CceUnspecified"] = "cceUnspecified";
     ContentRatingCceRatingEnum["CceM4"] = "cceM4";
@@ -148,8 +152,8 @@ export var ContentRatingCceRatingEnum;
     ContentRatingCceRatingEnum["CceM18"] = "cceM18";
     ContentRatingCceRatingEnum["CceUnrated"] = "cceUnrated";
     ContentRatingCceRatingEnum["CceM14"] = "cceM14";
-})(ContentRatingCceRatingEnum || (ContentRatingCceRatingEnum = {}));
-export var ContentRatingChfilmRatingEnum;
+})(ContentRatingCceRatingEnum = exports.ContentRatingCceRatingEnum || (exports.ContentRatingCceRatingEnum = {}));
+var ContentRatingChfilmRatingEnum;
 (function (ContentRatingChfilmRatingEnum) {
     ContentRatingChfilmRatingEnum["ChfilmUnspecified"] = "chfilmUnspecified";
     ContentRatingChfilmRatingEnum["Chfilm0"] = "chfilm0";
@@ -158,8 +162,8 @@ export var ContentRatingChfilmRatingEnum;
     ContentRatingChfilmRatingEnum["Chfilm16"] = "chfilm16";
     ContentRatingChfilmRatingEnum["Chfilm18"] = "chfilm18";
     ContentRatingChfilmRatingEnum["ChfilmUnrated"] = "chfilmUnrated";
-})(ContentRatingChfilmRatingEnum || (ContentRatingChfilmRatingEnum = {}));
-export var ContentRatingChvrsRatingEnum;
+})(ContentRatingChfilmRatingEnum = exports.ContentRatingChfilmRatingEnum || (exports.ContentRatingChfilmRatingEnum = {}));
+var ContentRatingChvrsRatingEnum;
 (function (ContentRatingChvrsRatingEnum) {
     ContentRatingChvrsRatingEnum["ChvrsUnspecified"] = "chvrsUnspecified";
     ContentRatingChvrsRatingEnum["ChvrsG"] = "chvrsG";
@@ -169,16 +173,16 @@ export var ContentRatingChvrsRatingEnum;
     ContentRatingChvrsRatingEnum["ChvrsR"] = "chvrsR";
     ContentRatingChvrsRatingEnum["ChvrsE"] = "chvrsE";
     ContentRatingChvrsRatingEnum["ChvrsUnrated"] = "chvrsUnrated";
-})(ContentRatingChvrsRatingEnum || (ContentRatingChvrsRatingEnum = {}));
-export var ContentRatingCicfRatingEnum;
+})(ContentRatingChvrsRatingEnum = exports.ContentRatingChvrsRatingEnum || (exports.ContentRatingChvrsRatingEnum = {}));
+var ContentRatingCicfRatingEnum;
 (function (ContentRatingCicfRatingEnum) {
     ContentRatingCicfRatingEnum["CicfUnspecified"] = "cicfUnspecified";
     ContentRatingCicfRatingEnum["CicfE"] = "cicfE";
     ContentRatingCicfRatingEnum["CicfKtEa"] = "cicfKtEa";
     ContentRatingCicfRatingEnum["CicfKntEna"] = "cicfKntEna";
     ContentRatingCicfRatingEnum["CicfUnrated"] = "cicfUnrated";
-})(ContentRatingCicfRatingEnum || (ContentRatingCicfRatingEnum = {}));
-export var ContentRatingCnaRatingEnum;
+})(ContentRatingCicfRatingEnum = exports.ContentRatingCicfRatingEnum || (exports.ContentRatingCicfRatingEnum = {}));
+var ContentRatingCnaRatingEnum;
 (function (ContentRatingCnaRatingEnum) {
     ContentRatingCnaRatingEnum["CnaUnspecified"] = "cnaUnspecified";
     ContentRatingCnaRatingEnum["CnaAp"] = "cnaAp";
@@ -187,8 +191,8 @@ export var ContentRatingCnaRatingEnum;
     ContentRatingCnaRatingEnum["Cna18"] = "cna18";
     ContentRatingCnaRatingEnum["Cna18plus"] = "cna18plus";
     ContentRatingCnaRatingEnum["CnaUnrated"] = "cnaUnrated";
-})(ContentRatingCnaRatingEnum || (ContentRatingCnaRatingEnum = {}));
-export var ContentRatingCncRatingEnum;
+})(ContentRatingCnaRatingEnum = exports.ContentRatingCnaRatingEnum || (exports.ContentRatingCnaRatingEnum = {}));
+var ContentRatingCncRatingEnum;
 (function (ContentRatingCncRatingEnum) {
     ContentRatingCncRatingEnum["CncUnspecified"] = "cncUnspecified";
     ContentRatingCncRatingEnum["CncT"] = "cncT";
@@ -199,8 +203,8 @@ export var ContentRatingCncRatingEnum;
     ContentRatingCncRatingEnum["CncE"] = "cncE";
     ContentRatingCncRatingEnum["CncInterdiction"] = "cncInterdiction";
     ContentRatingCncRatingEnum["CncUnrated"] = "cncUnrated";
-})(ContentRatingCncRatingEnum || (ContentRatingCncRatingEnum = {}));
-export var ContentRatingCsaRatingEnum;
+})(ContentRatingCncRatingEnum = exports.ContentRatingCncRatingEnum || (exports.ContentRatingCncRatingEnum = {}));
+var ContentRatingCsaRatingEnum;
 (function (ContentRatingCsaRatingEnum) {
     ContentRatingCsaRatingEnum["CsaUnspecified"] = "csaUnspecified";
     ContentRatingCsaRatingEnum["CsaT"] = "csaT";
@@ -210,8 +214,8 @@ export var ContentRatingCsaRatingEnum;
     ContentRatingCsaRatingEnum["Csa18"] = "csa18";
     ContentRatingCsaRatingEnum["CsaInterdiction"] = "csaInterdiction";
     ContentRatingCsaRatingEnum["CsaUnrated"] = "csaUnrated";
-})(ContentRatingCsaRatingEnum || (ContentRatingCsaRatingEnum = {}));
-export var ContentRatingCscfRatingEnum;
+})(ContentRatingCsaRatingEnum = exports.ContentRatingCsaRatingEnum || (exports.ContentRatingCsaRatingEnum = {}));
+var ContentRatingCscfRatingEnum;
 (function (ContentRatingCscfRatingEnum) {
     ContentRatingCscfRatingEnum["CscfUnspecified"] = "cscfUnspecified";
     ContentRatingCscfRatingEnum["CscfAl"] = "cscfAl";
@@ -222,8 +226,8 @@ export var ContentRatingCscfRatingEnum;
     ContentRatingCscfRatingEnum["Cscf16"] = "cscf16";
     ContentRatingCscfRatingEnum["Cscf18"] = "cscf18";
     ContentRatingCscfRatingEnum["CscfUnrated"] = "cscfUnrated";
-})(ContentRatingCscfRatingEnum || (ContentRatingCscfRatingEnum = {}));
-export var ContentRatingCzfilmRatingEnum;
+})(ContentRatingCscfRatingEnum = exports.ContentRatingCscfRatingEnum || (exports.ContentRatingCscfRatingEnum = {}));
+var ContentRatingCzfilmRatingEnum;
 (function (ContentRatingCzfilmRatingEnum) {
     ContentRatingCzfilmRatingEnum["CzfilmUnspecified"] = "czfilmUnspecified";
     ContentRatingCzfilmRatingEnum["CzfilmU"] = "czfilmU";
@@ -231,8 +235,8 @@ export var ContentRatingCzfilmRatingEnum;
     ContentRatingCzfilmRatingEnum["Czfilm14"] = "czfilm14";
     ContentRatingCzfilmRatingEnum["Czfilm18"] = "czfilm18";
     ContentRatingCzfilmRatingEnum["CzfilmUnrated"] = "czfilmUnrated";
-})(ContentRatingCzfilmRatingEnum || (ContentRatingCzfilmRatingEnum = {}));
-export var ContentRatingDjctqRatingEnum;
+})(ContentRatingCzfilmRatingEnum = exports.ContentRatingCzfilmRatingEnum || (exports.ContentRatingCzfilmRatingEnum = {}));
+var ContentRatingDjctqRatingEnum;
 (function (ContentRatingDjctqRatingEnum) {
     ContentRatingDjctqRatingEnum["DjctqUnspecified"] = "djctqUnspecified";
     ContentRatingDjctqRatingEnum["DjctqL"] = "djctqL";
@@ -258,8 +262,8 @@ export var ContentRatingDjctqRatingEnum;
     ContentRatingDjctqRatingEnum["Djctq1418"] = "djctq1418";
     ContentRatingDjctqRatingEnum["Djctq1618"] = "djctq1618";
     ContentRatingDjctqRatingEnum["DjctqUnrated"] = "djctqUnrated";
-})(ContentRatingDjctqRatingEnum || (ContentRatingDjctqRatingEnum = {}));
-export var ContentRatingDjctqRatingReasonsEnum;
+})(ContentRatingDjctqRatingEnum = exports.ContentRatingDjctqRatingEnum || (exports.ContentRatingDjctqRatingEnum = {}));
+var ContentRatingDjctqRatingReasonsEnum;
 (function (ContentRatingDjctqRatingReasonsEnum) {
     ContentRatingDjctqRatingReasonsEnum["DjctqRatingReasonUnspecified"] = "djctqRatingReasonUnspecified";
     ContentRatingDjctqRatingReasonsEnum["DjctqViolence"] = "djctqViolence";
@@ -274,8 +278,8 @@ export var ContentRatingDjctqRatingReasonsEnum;
     ContentRatingDjctqRatingReasonsEnum["DjctqInappropriateLanguage"] = "djctqInappropriateLanguage";
     ContentRatingDjctqRatingReasonsEnum["DjctqCriminalActs"] = "djctqCriminalActs";
     ContentRatingDjctqRatingReasonsEnum["DjctqImpactingContent"] = "djctqImpactingContent";
-})(ContentRatingDjctqRatingReasonsEnum || (ContentRatingDjctqRatingReasonsEnum = {}));
-export var ContentRatingEcbmctRatingEnum;
+})(ContentRatingDjctqRatingReasonsEnum = exports.ContentRatingDjctqRatingReasonsEnum || (exports.ContentRatingDjctqRatingReasonsEnum = {}));
+var ContentRatingEcbmctRatingEnum;
 (function (ContentRatingEcbmctRatingEnum) {
     ContentRatingEcbmctRatingEnum["EcbmctUnspecified"] = "ecbmctUnspecified";
     ContentRatingEcbmctRatingEnum["EcbmctG"] = "ecbmctG";
@@ -287,8 +291,8 @@ export var ContentRatingEcbmctRatingEnum;
     ContentRatingEcbmctRatingEnum["Ecbmct15plus"] = "ecbmct15plus";
     ContentRatingEcbmctRatingEnum["Ecbmct18plus"] = "ecbmct18plus";
     ContentRatingEcbmctRatingEnum["EcbmctUnrated"] = "ecbmctUnrated";
-})(ContentRatingEcbmctRatingEnum || (ContentRatingEcbmctRatingEnum = {}));
-export var ContentRatingEefilmRatingEnum;
+})(ContentRatingEcbmctRatingEnum = exports.ContentRatingEcbmctRatingEnum || (exports.ContentRatingEcbmctRatingEnum = {}));
+var ContentRatingEefilmRatingEnum;
 (function (ContentRatingEefilmRatingEnum) {
     ContentRatingEefilmRatingEnum["EefilmUnspecified"] = "eefilmUnspecified";
     ContentRatingEefilmRatingEnum["EefilmPere"] = "eefilmPere";
@@ -300,16 +304,16 @@ export var ContentRatingEefilmRatingEnum;
     ContentRatingEefilmRatingEnum["EefilmK14"] = "eefilmK14";
     ContentRatingEefilmRatingEnum["EefilmK16"] = "eefilmK16";
     ContentRatingEefilmRatingEnum["EefilmUnrated"] = "eefilmUnrated";
-})(ContentRatingEefilmRatingEnum || (ContentRatingEefilmRatingEnum = {}));
-export var ContentRatingEgfilmRatingEnum;
+})(ContentRatingEefilmRatingEnum = exports.ContentRatingEefilmRatingEnum || (exports.ContentRatingEefilmRatingEnum = {}));
+var ContentRatingEgfilmRatingEnum;
 (function (ContentRatingEgfilmRatingEnum) {
     ContentRatingEgfilmRatingEnum["EgfilmUnspecified"] = "egfilmUnspecified";
     ContentRatingEgfilmRatingEnum["EgfilmGn"] = "egfilmGn";
     ContentRatingEgfilmRatingEnum["Egfilm18"] = "egfilm18";
     ContentRatingEgfilmRatingEnum["EgfilmBn"] = "egfilmBn";
     ContentRatingEgfilmRatingEnum["EgfilmUnrated"] = "egfilmUnrated";
-})(ContentRatingEgfilmRatingEnum || (ContentRatingEgfilmRatingEnum = {}));
-export var ContentRatingEirinRatingEnum;
+})(ContentRatingEgfilmRatingEnum = exports.ContentRatingEgfilmRatingEnum || (exports.ContentRatingEgfilmRatingEnum = {}));
+var ContentRatingEirinRatingEnum;
 (function (ContentRatingEirinRatingEnum) {
     ContentRatingEirinRatingEnum["EirinUnspecified"] = "eirinUnspecified";
     ContentRatingEirinRatingEnum["EirinG"] = "eirinG";
@@ -317,8 +321,8 @@ export var ContentRatingEirinRatingEnum;
     ContentRatingEirinRatingEnum["EirinR15plus"] = "eirinR15plus";
     ContentRatingEirinRatingEnum["EirinR18plus"] = "eirinR18plus";
     ContentRatingEirinRatingEnum["EirinUnrated"] = "eirinUnrated";
-})(ContentRatingEirinRatingEnum || (ContentRatingEirinRatingEnum = {}));
-export var ContentRatingFcbmRatingEnum;
+})(ContentRatingEirinRatingEnum = exports.ContentRatingEirinRatingEnum || (exports.ContentRatingEirinRatingEnum = {}));
+var ContentRatingFcbmRatingEnum;
 (function (ContentRatingFcbmRatingEnum) {
     ContentRatingFcbmRatingEnum["FcbmUnspecified"] = "fcbmUnspecified";
     ContentRatingFcbmRatingEnum["FcbmU"] = "fcbmU";
@@ -330,8 +334,8 @@ export var ContentRatingFcbmRatingEnum;
     ContentRatingFcbmRatingEnum["Fcbm18sg"] = "fcbm18sg";
     ContentRatingFcbmRatingEnum["Fcbm18pl"] = "fcbm18pl";
     ContentRatingFcbmRatingEnum["FcbmUnrated"] = "fcbmUnrated";
-})(ContentRatingFcbmRatingEnum || (ContentRatingFcbmRatingEnum = {}));
-export var ContentRatingFcoRatingEnum;
+})(ContentRatingFcbmRatingEnum = exports.ContentRatingFcbmRatingEnum || (exports.ContentRatingFcbmRatingEnum = {}));
+var ContentRatingFcoRatingEnum;
 (function (ContentRatingFcoRatingEnum) {
     ContentRatingFcoRatingEnum["FcoUnspecified"] = "fcoUnspecified";
     ContentRatingFcoRatingEnum["FcoI"] = "fcoI";
@@ -340,8 +344,8 @@ export var ContentRatingFcoRatingEnum;
     ContentRatingFcoRatingEnum["FcoIi"] = "fcoIi";
     ContentRatingFcoRatingEnum["FcoIii"] = "fcoIii";
     ContentRatingFcoRatingEnum["FcoUnrated"] = "fcoUnrated";
-})(ContentRatingFcoRatingEnum || (ContentRatingFcoRatingEnum = {}));
-export var ContentRatingFmocRatingEnum;
+})(ContentRatingFcoRatingEnum = exports.ContentRatingFcoRatingEnum || (exports.ContentRatingFcoRatingEnum = {}));
+var ContentRatingFmocRatingEnum;
 (function (ContentRatingFmocRatingEnum) {
     ContentRatingFmocRatingEnum["FmocUnspecified"] = "fmocUnspecified";
     ContentRatingFmocRatingEnum["FmocU"] = "fmocU";
@@ -351,8 +355,8 @@ export var ContentRatingFmocRatingEnum;
     ContentRatingFmocRatingEnum["Fmoc18"] = "fmoc18";
     ContentRatingFmocRatingEnum["FmocE"] = "fmocE";
     ContentRatingFmocRatingEnum["FmocUnrated"] = "fmocUnrated";
-})(ContentRatingFmocRatingEnum || (ContentRatingFmocRatingEnum = {}));
-export var ContentRatingFpbRatingEnum;
+})(ContentRatingFmocRatingEnum = exports.ContentRatingFmocRatingEnum || (exports.ContentRatingFmocRatingEnum = {}));
+var ContentRatingFpbRatingEnum;
 (function (ContentRatingFpbRatingEnum) {
     ContentRatingFpbRatingEnum["FpbUnspecified"] = "fpbUnspecified";
     ContentRatingFpbRatingEnum["FpbA"] = "fpbA";
@@ -366,8 +370,8 @@ export var ContentRatingFpbRatingEnum;
     ContentRatingFpbRatingEnum["FpbXx"] = "fpbXx";
     ContentRatingFpbRatingEnum["FpbUnrated"] = "fpbUnrated";
     ContentRatingFpbRatingEnum["Fpb10"] = "fpb10";
-})(ContentRatingFpbRatingEnum || (ContentRatingFpbRatingEnum = {}));
-export var ContentRatingFpbRatingReasonsEnum;
+})(ContentRatingFpbRatingEnum = exports.ContentRatingFpbRatingEnum || (exports.ContentRatingFpbRatingEnum = {}));
+var ContentRatingFpbRatingReasonsEnum;
 (function (ContentRatingFpbRatingReasonsEnum) {
     ContentRatingFpbRatingReasonsEnum["FpbRatingReasonUnspecified"] = "fpbRatingReasonUnspecified";
     ContentRatingFpbRatingReasonsEnum["FpbBlasphemy"] = "fpbBlasphemy";
@@ -381,8 +385,8 @@ export var ContentRatingFpbRatingReasonsEnum;
     ContentRatingFpbRatingReasonsEnum["FpbHorror"] = "fpbHorror";
     ContentRatingFpbRatingReasonsEnum["FpbCriminalTechniques"] = "fpbCriminalTechniques";
     ContentRatingFpbRatingReasonsEnum["FpbImitativeActsTechniques"] = "fpbImitativeActsTechniques";
-})(ContentRatingFpbRatingReasonsEnum || (ContentRatingFpbRatingReasonsEnum = {}));
-export var ContentRatingFskRatingEnum;
+})(ContentRatingFpbRatingReasonsEnum = exports.ContentRatingFpbRatingReasonsEnum || (exports.ContentRatingFpbRatingReasonsEnum = {}));
+var ContentRatingFskRatingEnum;
 (function (ContentRatingFskRatingEnum) {
     ContentRatingFskRatingEnum["FskUnspecified"] = "fskUnspecified";
     ContentRatingFskRatingEnum["Fsk0"] = "fsk0";
@@ -391,8 +395,8 @@ export var ContentRatingFskRatingEnum;
     ContentRatingFskRatingEnum["Fsk16"] = "fsk16";
     ContentRatingFskRatingEnum["Fsk18"] = "fsk18";
     ContentRatingFskRatingEnum["FskUnrated"] = "fskUnrated";
-})(ContentRatingFskRatingEnum || (ContentRatingFskRatingEnum = {}));
-export var ContentRatingGrfilmRatingEnum;
+})(ContentRatingFskRatingEnum = exports.ContentRatingFskRatingEnum || (exports.ContentRatingFskRatingEnum = {}));
+var ContentRatingGrfilmRatingEnum;
 (function (ContentRatingGrfilmRatingEnum) {
     ContentRatingGrfilmRatingEnum["GrfilmUnspecified"] = "grfilmUnspecified";
     ContentRatingGrfilmRatingEnum["GrfilmK"] = "grfilmK";
@@ -403,8 +407,8 @@ export var ContentRatingGrfilmRatingEnum;
     ContentRatingGrfilmRatingEnum["GrfilmK17"] = "grfilmK17";
     ContentRatingGrfilmRatingEnum["GrfilmK18"] = "grfilmK18";
     ContentRatingGrfilmRatingEnum["GrfilmUnrated"] = "grfilmUnrated";
-})(ContentRatingGrfilmRatingEnum || (ContentRatingGrfilmRatingEnum = {}));
-export var ContentRatingIcaaRatingEnum;
+})(ContentRatingGrfilmRatingEnum = exports.ContentRatingGrfilmRatingEnum || (exports.ContentRatingGrfilmRatingEnum = {}));
+var ContentRatingIcaaRatingEnum;
 (function (ContentRatingIcaaRatingEnum) {
     ContentRatingIcaaRatingEnum["IcaaUnspecified"] = "icaaUnspecified";
     ContentRatingIcaaRatingEnum["IcaaApta"] = "icaaApta";
@@ -415,8 +419,8 @@ export var ContentRatingIcaaRatingEnum;
     ContentRatingIcaaRatingEnum["Icaa18"] = "icaa18";
     ContentRatingIcaaRatingEnum["IcaaX"] = "icaaX";
     ContentRatingIcaaRatingEnum["IcaaUnrated"] = "icaaUnrated";
-})(ContentRatingIcaaRatingEnum || (ContentRatingIcaaRatingEnum = {}));
-export var ContentRatingIfcoRatingEnum;
+})(ContentRatingIcaaRatingEnum = exports.ContentRatingIcaaRatingEnum || (exports.ContentRatingIcaaRatingEnum = {}));
+var ContentRatingIfcoRatingEnum;
 (function (ContentRatingIfcoRatingEnum) {
     ContentRatingIfcoRatingEnum["IfcoUnspecified"] = "ifcoUnspecified";
     ContentRatingIfcoRatingEnum["IfcoG"] = "ifcoG";
@@ -428,8 +432,8 @@ export var ContentRatingIfcoRatingEnum;
     ContentRatingIfcoRatingEnum["Ifco16"] = "ifco16";
     ContentRatingIfcoRatingEnum["Ifco18"] = "ifco18";
     ContentRatingIfcoRatingEnum["IfcoUnrated"] = "ifcoUnrated";
-})(ContentRatingIfcoRatingEnum || (ContentRatingIfcoRatingEnum = {}));
-export var ContentRatingIlfilmRatingEnum;
+})(ContentRatingIfcoRatingEnum = exports.ContentRatingIfcoRatingEnum || (exports.ContentRatingIfcoRatingEnum = {}));
+var ContentRatingIlfilmRatingEnum;
 (function (ContentRatingIlfilmRatingEnum) {
     ContentRatingIlfilmRatingEnum["IlfilmUnspecified"] = "ilfilmUnspecified";
     ContentRatingIlfilmRatingEnum["IlfilmAa"] = "ilfilmAa";
@@ -438,8 +442,8 @@ export var ContentRatingIlfilmRatingEnum;
     ContentRatingIlfilmRatingEnum["Ilfilm16"] = "ilfilm16";
     ContentRatingIlfilmRatingEnum["Ilfilm18"] = "ilfilm18";
     ContentRatingIlfilmRatingEnum["IlfilmUnrated"] = "ilfilmUnrated";
-})(ContentRatingIlfilmRatingEnum || (ContentRatingIlfilmRatingEnum = {}));
-export var ContentRatingIncaaRatingEnum;
+})(ContentRatingIlfilmRatingEnum = exports.ContentRatingIlfilmRatingEnum || (exports.ContentRatingIlfilmRatingEnum = {}));
+var ContentRatingIncaaRatingEnum;
 (function (ContentRatingIncaaRatingEnum) {
     ContentRatingIncaaRatingEnum["IncaaUnspecified"] = "incaaUnspecified";
     ContentRatingIncaaRatingEnum["IncaaAtp"] = "incaaAtp";
@@ -448,8 +452,8 @@ export var ContentRatingIncaaRatingEnum;
     ContentRatingIncaaRatingEnum["IncaaSam18"] = "incaaSam18";
     ContentRatingIncaaRatingEnum["IncaaC"] = "incaaC";
     ContentRatingIncaaRatingEnum["IncaaUnrated"] = "incaaUnrated";
-})(ContentRatingIncaaRatingEnum || (ContentRatingIncaaRatingEnum = {}));
-export var ContentRatingKfcbRatingEnum;
+})(ContentRatingIncaaRatingEnum = exports.ContentRatingIncaaRatingEnum || (exports.ContentRatingIncaaRatingEnum = {}));
+var ContentRatingKfcbRatingEnum;
 (function (ContentRatingKfcbRatingEnum) {
     ContentRatingKfcbRatingEnum["KfcbUnspecified"] = "kfcbUnspecified";
     ContentRatingKfcbRatingEnum["KfcbG"] = "kfcbG";
@@ -457,8 +461,8 @@ export var ContentRatingKfcbRatingEnum;
     ContentRatingKfcbRatingEnum["Kfcb16plus"] = "kfcb16plus";
     ContentRatingKfcbRatingEnum["KfcbR"] = "kfcbR";
     ContentRatingKfcbRatingEnum["KfcbUnrated"] = "kfcbUnrated";
-})(ContentRatingKfcbRatingEnum || (ContentRatingKfcbRatingEnum = {}));
-export var ContentRatingKijkwijzerRatingEnum;
+})(ContentRatingKfcbRatingEnum = exports.ContentRatingKfcbRatingEnum || (exports.ContentRatingKfcbRatingEnum = {}));
+var ContentRatingKijkwijzerRatingEnum;
 (function (ContentRatingKijkwijzerRatingEnum) {
     ContentRatingKijkwijzerRatingEnum["KijkwijzerUnspecified"] = "kijkwijzerUnspecified";
     ContentRatingKijkwijzerRatingEnum["KijkwijzerAl"] = "kijkwijzerAl";
@@ -468,8 +472,8 @@ export var ContentRatingKijkwijzerRatingEnum;
     ContentRatingKijkwijzerRatingEnum["Kijkwijzer16"] = "kijkwijzer16";
     ContentRatingKijkwijzerRatingEnum["Kijkwijzer18"] = "kijkwijzer18";
     ContentRatingKijkwijzerRatingEnum["KijkwijzerUnrated"] = "kijkwijzerUnrated";
-})(ContentRatingKijkwijzerRatingEnum || (ContentRatingKijkwijzerRatingEnum = {}));
-export var ContentRatingKmrbRatingEnum;
+})(ContentRatingKijkwijzerRatingEnum = exports.ContentRatingKijkwijzerRatingEnum || (exports.ContentRatingKijkwijzerRatingEnum = {}));
+var ContentRatingKmrbRatingEnum;
 (function (ContentRatingKmrbRatingEnum) {
     ContentRatingKmrbRatingEnum["KmrbUnspecified"] = "kmrbUnspecified";
     ContentRatingKmrbRatingEnum["KmrbAll"] = "kmrbAll";
@@ -478,8 +482,8 @@ export var ContentRatingKmrbRatingEnum;
     ContentRatingKmrbRatingEnum["KmrbTeenr"] = "kmrbTeenr";
     ContentRatingKmrbRatingEnum["KmrbR"] = "kmrbR";
     ContentRatingKmrbRatingEnum["KmrbUnrated"] = "kmrbUnrated";
-})(ContentRatingKmrbRatingEnum || (ContentRatingKmrbRatingEnum = {}));
-export var ContentRatingLsfRatingEnum;
+})(ContentRatingKmrbRatingEnum = exports.ContentRatingKmrbRatingEnum || (exports.ContentRatingKmrbRatingEnum = {}));
+var ContentRatingLsfRatingEnum;
 (function (ContentRatingLsfRatingEnum) {
     ContentRatingLsfRatingEnum["LsfUnspecified"] = "lsfUnspecified";
     ContentRatingLsfRatingEnum["LsfSu"] = "lsfSu";
@@ -491,8 +495,8 @@ export var ContentRatingLsfRatingEnum;
     ContentRatingLsfRatingEnum["LsfD"] = "lsfD";
     ContentRatingLsfRatingEnum["Lsf21"] = "lsf21";
     ContentRatingLsfRatingEnum["LsfUnrated"] = "lsfUnrated";
-})(ContentRatingLsfRatingEnum || (ContentRatingLsfRatingEnum = {}));
-export var ContentRatingMccaaRatingEnum;
+})(ContentRatingLsfRatingEnum = exports.ContentRatingLsfRatingEnum || (exports.ContentRatingLsfRatingEnum = {}));
+var ContentRatingMccaaRatingEnum;
 (function (ContentRatingMccaaRatingEnum) {
     ContentRatingMccaaRatingEnum["MccaaUnspecified"] = "mccaaUnspecified";
     ContentRatingMccaaRatingEnum["MccaaU"] = "mccaaU";
@@ -504,8 +508,8 @@ export var ContentRatingMccaaRatingEnum;
     ContentRatingMccaaRatingEnum["Mccaa16"] = "mccaa16";
     ContentRatingMccaaRatingEnum["Mccaa18"] = "mccaa18";
     ContentRatingMccaaRatingEnum["MccaaUnrated"] = "mccaaUnrated";
-})(ContentRatingMccaaRatingEnum || (ContentRatingMccaaRatingEnum = {}));
-export var ContentRatingMccypRatingEnum;
+})(ContentRatingMccaaRatingEnum = exports.ContentRatingMccaaRatingEnum || (exports.ContentRatingMccaaRatingEnum = {}));
+var ContentRatingMccypRatingEnum;
 (function (ContentRatingMccypRatingEnum) {
     ContentRatingMccypRatingEnum["MccypUnspecified"] = "mccypUnspecified";
     ContentRatingMccypRatingEnum["MccypA"] = "mccypA";
@@ -513,8 +517,8 @@ export var ContentRatingMccypRatingEnum;
     ContentRatingMccypRatingEnum["Mccyp11"] = "mccyp11";
     ContentRatingMccypRatingEnum["Mccyp15"] = "mccyp15";
     ContentRatingMccypRatingEnum["MccypUnrated"] = "mccypUnrated";
-})(ContentRatingMccypRatingEnum || (ContentRatingMccypRatingEnum = {}));
-export var ContentRatingMcstRatingEnum;
+})(ContentRatingMccypRatingEnum = exports.ContentRatingMccypRatingEnum || (exports.ContentRatingMccypRatingEnum = {}));
+var ContentRatingMcstRatingEnum;
 (function (ContentRatingMcstRatingEnum) {
     ContentRatingMcstRatingEnum["McstUnspecified"] = "mcstUnspecified";
     ContentRatingMcstRatingEnum["McstP"] = "mcstP";
@@ -525,8 +529,8 @@ export var ContentRatingMcstRatingEnum;
     ContentRatingMcstRatingEnum["McstC18"] = "mcstC18";
     ContentRatingMcstRatingEnum["McstGPg"] = "mcstGPg";
     ContentRatingMcstRatingEnum["McstUnrated"] = "mcstUnrated";
-})(ContentRatingMcstRatingEnum || (ContentRatingMcstRatingEnum = {}));
-export var ContentRatingMdaRatingEnum;
+})(ContentRatingMcstRatingEnum = exports.ContentRatingMcstRatingEnum || (exports.ContentRatingMcstRatingEnum = {}));
+var ContentRatingMdaRatingEnum;
 (function (ContentRatingMdaRatingEnum) {
     ContentRatingMdaRatingEnum["MdaUnspecified"] = "mdaUnspecified";
     ContentRatingMdaRatingEnum["MdaG"] = "mdaG";
@@ -536,8 +540,8 @@ export var ContentRatingMdaRatingEnum;
     ContentRatingMdaRatingEnum["MdaM18"] = "mdaM18";
     ContentRatingMdaRatingEnum["MdaR21"] = "mdaR21";
     ContentRatingMdaRatingEnum["MdaUnrated"] = "mdaUnrated";
-})(ContentRatingMdaRatingEnum || (ContentRatingMdaRatingEnum = {}));
-export var ContentRatingMedietilsynetRatingEnum;
+})(ContentRatingMdaRatingEnum = exports.ContentRatingMdaRatingEnum || (exports.ContentRatingMdaRatingEnum = {}));
+var ContentRatingMedietilsynetRatingEnum;
 (function (ContentRatingMedietilsynetRatingEnum) {
     ContentRatingMedietilsynetRatingEnum["MedietilsynetUnspecified"] = "medietilsynetUnspecified";
     ContentRatingMedietilsynetRatingEnum["MedietilsynetA"] = "medietilsynetA";
@@ -549,8 +553,8 @@ export var ContentRatingMedietilsynetRatingEnum;
     ContentRatingMedietilsynetRatingEnum["Medietilsynet15"] = "medietilsynet15";
     ContentRatingMedietilsynetRatingEnum["Medietilsynet18"] = "medietilsynet18";
     ContentRatingMedietilsynetRatingEnum["MedietilsynetUnrated"] = "medietilsynetUnrated";
-})(ContentRatingMedietilsynetRatingEnum || (ContentRatingMedietilsynetRatingEnum = {}));
-export var ContentRatingMekuRatingEnum;
+})(ContentRatingMedietilsynetRatingEnum = exports.ContentRatingMedietilsynetRatingEnum || (exports.ContentRatingMedietilsynetRatingEnum = {}));
+var ContentRatingMekuRatingEnum;
 (function (ContentRatingMekuRatingEnum) {
     ContentRatingMekuRatingEnum["MekuUnspecified"] = "mekuUnspecified";
     ContentRatingMekuRatingEnum["MekuS"] = "mekuS";
@@ -559,8 +563,8 @@ export var ContentRatingMekuRatingEnum;
     ContentRatingMekuRatingEnum["Meku16"] = "meku16";
     ContentRatingMekuRatingEnum["Meku18"] = "meku18";
     ContentRatingMekuRatingEnum["MekuUnrated"] = "mekuUnrated";
-})(ContentRatingMekuRatingEnum || (ContentRatingMekuRatingEnum = {}));
-export var ContentRatingMenaMpaaRatingEnum;
+})(ContentRatingMekuRatingEnum = exports.ContentRatingMekuRatingEnum || (exports.ContentRatingMekuRatingEnum = {}));
+var ContentRatingMenaMpaaRatingEnum;
 (function (ContentRatingMenaMpaaRatingEnum) {
     ContentRatingMenaMpaaRatingEnum["MenaMpaaUnspecified"] = "menaMpaaUnspecified";
     ContentRatingMenaMpaaRatingEnum["MenaMpaaG"] = "menaMpaaG";
@@ -568,8 +572,8 @@ export var ContentRatingMenaMpaaRatingEnum;
     ContentRatingMenaMpaaRatingEnum["MenaMpaaPg13"] = "menaMpaaPg13";
     ContentRatingMenaMpaaRatingEnum["MenaMpaaR"] = "menaMpaaR";
     ContentRatingMenaMpaaRatingEnum["MenaMpaaUnrated"] = "menaMpaaUnrated";
-})(ContentRatingMenaMpaaRatingEnum || (ContentRatingMenaMpaaRatingEnum = {}));
-export var ContentRatingMibacRatingEnum;
+})(ContentRatingMenaMpaaRatingEnum = exports.ContentRatingMenaMpaaRatingEnum || (exports.ContentRatingMenaMpaaRatingEnum = {}));
+var ContentRatingMibacRatingEnum;
 (function (ContentRatingMibacRatingEnum) {
     ContentRatingMibacRatingEnum["MibacUnspecified"] = "mibacUnspecified";
     ContentRatingMibacRatingEnum["MibacT"] = "mibacT";
@@ -580,8 +584,8 @@ export var ContentRatingMibacRatingEnum;
     ContentRatingMibacRatingEnum["MibacVm16"] = "mibacVm16";
     ContentRatingMibacRatingEnum["MibacVm18"] = "mibacVm18";
     ContentRatingMibacRatingEnum["MibacUnrated"] = "mibacUnrated";
-})(ContentRatingMibacRatingEnum || (ContentRatingMibacRatingEnum = {}));
-export var ContentRatingMocRatingEnum;
+})(ContentRatingMibacRatingEnum = exports.ContentRatingMibacRatingEnum || (exports.ContentRatingMibacRatingEnum = {}));
+var ContentRatingMocRatingEnum;
 (function (ContentRatingMocRatingEnum) {
     ContentRatingMocRatingEnum["MocUnspecified"] = "mocUnspecified";
     ContentRatingMocRatingEnum["MocE"] = "mocE";
@@ -593,8 +597,8 @@ export var ContentRatingMocRatingEnum;
     ContentRatingMocRatingEnum["MocX"] = "mocX";
     ContentRatingMocRatingEnum["MocBanned"] = "mocBanned";
     ContentRatingMocRatingEnum["MocUnrated"] = "mocUnrated";
-})(ContentRatingMocRatingEnum || (ContentRatingMocRatingEnum = {}));
-export var ContentRatingMoctwRatingEnum;
+})(ContentRatingMocRatingEnum = exports.ContentRatingMocRatingEnum || (exports.ContentRatingMocRatingEnum = {}));
+var ContentRatingMoctwRatingEnum;
 (function (ContentRatingMoctwRatingEnum) {
     ContentRatingMoctwRatingEnum["MoctwUnspecified"] = "moctwUnspecified";
     ContentRatingMoctwRatingEnum["MoctwG"] = "moctwG";
@@ -604,8 +608,8 @@ export var ContentRatingMoctwRatingEnum;
     ContentRatingMoctwRatingEnum["MoctwUnrated"] = "moctwUnrated";
     ContentRatingMoctwRatingEnum["MoctwR12"] = "moctwR12";
     ContentRatingMoctwRatingEnum["MoctwR15"] = "moctwR15";
-})(ContentRatingMoctwRatingEnum || (ContentRatingMoctwRatingEnum = {}));
-export var ContentRatingMpaaRatingEnum;
+})(ContentRatingMoctwRatingEnum = exports.ContentRatingMoctwRatingEnum || (exports.ContentRatingMoctwRatingEnum = {}));
+var ContentRatingMpaaRatingEnum;
 (function (ContentRatingMpaaRatingEnum) {
     ContentRatingMpaaRatingEnum["MpaaUnspecified"] = "mpaaUnspecified";
     ContentRatingMpaaRatingEnum["MpaaG"] = "mpaaG";
@@ -615,14 +619,14 @@ export var ContentRatingMpaaRatingEnum;
     ContentRatingMpaaRatingEnum["MpaaNc17"] = "mpaaNc17";
     ContentRatingMpaaRatingEnum["MpaaX"] = "mpaaX";
     ContentRatingMpaaRatingEnum["MpaaUnrated"] = "mpaaUnrated";
-})(ContentRatingMpaaRatingEnum || (ContentRatingMpaaRatingEnum = {}));
-export var ContentRatingMpaatRatingEnum;
+})(ContentRatingMpaaRatingEnum = exports.ContentRatingMpaaRatingEnum || (exports.ContentRatingMpaaRatingEnum = {}));
+var ContentRatingMpaatRatingEnum;
 (function (ContentRatingMpaatRatingEnum) {
     ContentRatingMpaatRatingEnum["MpaatUnspecified"] = "mpaatUnspecified";
     ContentRatingMpaatRatingEnum["MpaatGb"] = "mpaatGb";
     ContentRatingMpaatRatingEnum["MpaatRb"] = "mpaatRb";
-})(ContentRatingMpaatRatingEnum || (ContentRatingMpaatRatingEnum = {}));
-export var ContentRatingMtrcbRatingEnum;
+})(ContentRatingMpaatRatingEnum = exports.ContentRatingMpaatRatingEnum || (exports.ContentRatingMpaatRatingEnum = {}));
+var ContentRatingMtrcbRatingEnum;
 (function (ContentRatingMtrcbRatingEnum) {
     ContentRatingMtrcbRatingEnum["MtrcbUnspecified"] = "mtrcbUnspecified";
     ContentRatingMtrcbRatingEnum["MtrcbG"] = "mtrcbG";
@@ -632,8 +636,8 @@ export var ContentRatingMtrcbRatingEnum;
     ContentRatingMtrcbRatingEnum["MtrcbR18"] = "mtrcbR18";
     ContentRatingMtrcbRatingEnum["MtrcbX"] = "mtrcbX";
     ContentRatingMtrcbRatingEnum["MtrcbUnrated"] = "mtrcbUnrated";
-})(ContentRatingMtrcbRatingEnum || (ContentRatingMtrcbRatingEnum = {}));
-export var ContentRatingNbcRatingEnum;
+})(ContentRatingMtrcbRatingEnum = exports.ContentRatingMtrcbRatingEnum || (exports.ContentRatingMtrcbRatingEnum = {}));
+var ContentRatingNbcRatingEnum;
 (function (ContentRatingNbcRatingEnum) {
     ContentRatingNbcRatingEnum["NbcUnspecified"] = "nbcUnspecified";
     ContentRatingNbcRatingEnum["NbcG"] = "nbcG";
@@ -644,8 +648,8 @@ export var ContentRatingNbcRatingEnum;
     ContentRatingNbcRatingEnum["Nbc18plusr"] = "nbc18plusr";
     ContentRatingNbcRatingEnum["NbcPu"] = "nbcPu";
     ContentRatingNbcRatingEnum["NbcUnrated"] = "nbcUnrated";
-})(ContentRatingNbcRatingEnum || (ContentRatingNbcRatingEnum = {}));
-export var ContentRatingNbcplRatingEnum;
+})(ContentRatingNbcRatingEnum = exports.ContentRatingNbcRatingEnum || (exports.ContentRatingNbcRatingEnum = {}));
+var ContentRatingNbcplRatingEnum;
 (function (ContentRatingNbcplRatingEnum) {
     ContentRatingNbcplRatingEnum["NbcplUnspecified"] = "nbcplUnspecified";
     ContentRatingNbcplRatingEnum["NbcplI"] = "nbcplI";
@@ -654,8 +658,8 @@ export var ContentRatingNbcplRatingEnum;
     ContentRatingNbcplRatingEnum["NbcplIv"] = "nbcplIv";
     ContentRatingNbcplRatingEnum["Nbcpl18plus"] = "nbcpl18plus";
     ContentRatingNbcplRatingEnum["NbcplUnrated"] = "nbcplUnrated";
-})(ContentRatingNbcplRatingEnum || (ContentRatingNbcplRatingEnum = {}));
-export var ContentRatingNfrcRatingEnum;
+})(ContentRatingNbcplRatingEnum = exports.ContentRatingNbcplRatingEnum || (exports.ContentRatingNbcplRatingEnum = {}));
+var ContentRatingNfrcRatingEnum;
 (function (ContentRatingNfrcRatingEnum) {
     ContentRatingNfrcRatingEnum["NfrcUnspecified"] = "nfrcUnspecified";
     ContentRatingNfrcRatingEnum["NfrcA"] = "nfrcA";
@@ -664,8 +668,8 @@ export var ContentRatingNfrcRatingEnum;
     ContentRatingNfrcRatingEnum["NfrcD"] = "nfrcD";
     ContentRatingNfrcRatingEnum["NfrcX"] = "nfrcX";
     ContentRatingNfrcRatingEnum["NfrcUnrated"] = "nfrcUnrated";
-})(ContentRatingNfrcRatingEnum || (ContentRatingNfrcRatingEnum = {}));
-export var ContentRatingNfvcbRatingEnum;
+})(ContentRatingNfrcRatingEnum = exports.ContentRatingNfrcRatingEnum || (exports.ContentRatingNfrcRatingEnum = {}));
+var ContentRatingNfvcbRatingEnum;
 (function (ContentRatingNfvcbRatingEnum) {
     ContentRatingNfvcbRatingEnum["NfvcbUnspecified"] = "nfvcbUnspecified";
     ContentRatingNfvcbRatingEnum["NfvcbG"] = "nfvcbG";
@@ -676,8 +680,8 @@ export var ContentRatingNfvcbRatingEnum;
     ContentRatingNfvcbRatingEnum["Nfvcb18"] = "nfvcb18";
     ContentRatingNfvcbRatingEnum["NfvcbRe"] = "nfvcbRe";
     ContentRatingNfvcbRatingEnum["NfvcbUnrated"] = "nfvcbUnrated";
-})(ContentRatingNfvcbRatingEnum || (ContentRatingNfvcbRatingEnum = {}));
-export var ContentRatingNkclvRatingEnum;
+})(ContentRatingNfvcbRatingEnum = exports.ContentRatingNfvcbRatingEnum || (exports.ContentRatingNfvcbRatingEnum = {}));
+var ContentRatingNkclvRatingEnum;
 (function (ContentRatingNkclvRatingEnum) {
     ContentRatingNkclvRatingEnum["NkclvUnspecified"] = "nkclvUnspecified";
     ContentRatingNkclvRatingEnum["NkclvU"] = "nkclvU";
@@ -686,8 +690,8 @@ export var ContentRatingNkclvRatingEnum;
     ContentRatingNkclvRatingEnum["Nkclv16plus"] = "nkclv16plus";
     ContentRatingNkclvRatingEnum["Nkclv18plus"] = "nkclv18plus";
     ContentRatingNkclvRatingEnum["NkclvUnrated"] = "nkclvUnrated";
-})(ContentRatingNkclvRatingEnum || (ContentRatingNkclvRatingEnum = {}));
-export var ContentRatingNmcRatingEnum;
+})(ContentRatingNkclvRatingEnum = exports.ContentRatingNkclvRatingEnum || (exports.ContentRatingNkclvRatingEnum = {}));
+var ContentRatingNmcRatingEnum;
 (function (ContentRatingNmcRatingEnum) {
     ContentRatingNmcRatingEnum["NmcUnspecified"] = "nmcUnspecified";
     ContentRatingNmcRatingEnum["NmcG"] = "nmcG";
@@ -698,8 +702,8 @@ export var ContentRatingNmcRatingEnum;
     ContentRatingNmcRatingEnum["Nmc18plus"] = "nmc18plus";
     ContentRatingNmcRatingEnum["Nmc18tc"] = "nmc18tc";
     ContentRatingNmcRatingEnum["NmcUnrated"] = "nmcUnrated";
-})(ContentRatingNmcRatingEnum || (ContentRatingNmcRatingEnum = {}));
-export var ContentRatingOflcRatingEnum;
+})(ContentRatingNmcRatingEnum = exports.ContentRatingNmcRatingEnum || (exports.ContentRatingNmcRatingEnum = {}));
+var ContentRatingOflcRatingEnum;
 (function (ContentRatingOflcRatingEnum) {
     ContentRatingOflcRatingEnum["OflcUnspecified"] = "oflcUnspecified";
     ContentRatingOflcRatingEnum["OflcG"] = "oflcG";
@@ -713,8 +717,8 @@ export var ContentRatingOflcRatingEnum;
     ContentRatingOflcRatingEnum["OflcRp13"] = "oflcRp13";
     ContentRatingOflcRatingEnum["OflcRp16"] = "oflcRp16";
     ContentRatingOflcRatingEnum["OflcRp18"] = "oflcRp18";
-})(ContentRatingOflcRatingEnum || (ContentRatingOflcRatingEnum = {}));
-export var ContentRatingPefilmRatingEnum;
+})(ContentRatingOflcRatingEnum = exports.ContentRatingOflcRatingEnum || (exports.ContentRatingOflcRatingEnum = {}));
+var ContentRatingPefilmRatingEnum;
 (function (ContentRatingPefilmRatingEnum) {
     ContentRatingPefilmRatingEnum["PefilmUnspecified"] = "pefilmUnspecified";
     ContentRatingPefilmRatingEnum["PefilmPt"] = "pefilmPt";
@@ -722,8 +726,8 @@ export var ContentRatingPefilmRatingEnum;
     ContentRatingPefilmRatingEnum["Pefilm14"] = "pefilm14";
     ContentRatingPefilmRatingEnum["Pefilm18"] = "pefilm18";
     ContentRatingPefilmRatingEnum["PefilmUnrated"] = "pefilmUnrated";
-})(ContentRatingPefilmRatingEnum || (ContentRatingPefilmRatingEnum = {}));
-export var ContentRatingRcnofRatingEnum;
+})(ContentRatingPefilmRatingEnum = exports.ContentRatingPefilmRatingEnum || (exports.ContentRatingPefilmRatingEnum = {}));
+var ContentRatingRcnofRatingEnum;
 (function (ContentRatingRcnofRatingEnum) {
     ContentRatingRcnofRatingEnum["RcnofUnspecified"] = "rcnofUnspecified";
     ContentRatingRcnofRatingEnum["RcnofI"] = "rcnofI";
@@ -733,8 +737,8 @@ export var ContentRatingRcnofRatingEnum;
     ContentRatingRcnofRatingEnum["RcnofV"] = "rcnofV";
     ContentRatingRcnofRatingEnum["RcnofVi"] = "rcnofVi";
     ContentRatingRcnofRatingEnum["RcnofUnrated"] = "rcnofUnrated";
-})(ContentRatingRcnofRatingEnum || (ContentRatingRcnofRatingEnum = {}));
-export var ContentRatingResorteviolenciaRatingEnum;
+})(ContentRatingRcnofRatingEnum = exports.ContentRatingRcnofRatingEnum || (exports.ContentRatingRcnofRatingEnum = {}));
+var ContentRatingResorteviolenciaRatingEnum;
 (function (ContentRatingResorteviolenciaRatingEnum) {
     ContentRatingResorteviolenciaRatingEnum["ResorteviolenciaUnspecified"] = "resorteviolenciaUnspecified";
     ContentRatingResorteviolenciaRatingEnum["ResorteviolenciaA"] = "resorteviolenciaA";
@@ -743,8 +747,8 @@ export var ContentRatingResorteviolenciaRatingEnum;
     ContentRatingResorteviolenciaRatingEnum["ResorteviolenciaD"] = "resorteviolenciaD";
     ContentRatingResorteviolenciaRatingEnum["ResorteviolenciaE"] = "resorteviolenciaE";
     ContentRatingResorteviolenciaRatingEnum["ResorteviolenciaUnrated"] = "resorteviolenciaUnrated";
-})(ContentRatingResorteviolenciaRatingEnum || (ContentRatingResorteviolenciaRatingEnum = {}));
-export var ContentRatingRtcRatingEnum;
+})(ContentRatingResorteviolenciaRatingEnum = exports.ContentRatingResorteviolenciaRatingEnum || (exports.ContentRatingResorteviolenciaRatingEnum = {}));
+var ContentRatingRtcRatingEnum;
 (function (ContentRatingRtcRatingEnum) {
     ContentRatingRtcRatingEnum["RtcUnspecified"] = "rtcUnspecified";
     ContentRatingRtcRatingEnum["RtcAa"] = "rtcAa";
@@ -754,8 +758,8 @@ export var ContentRatingRtcRatingEnum;
     ContentRatingRtcRatingEnum["RtcC"] = "rtcC";
     ContentRatingRtcRatingEnum["RtcD"] = "rtcD";
     ContentRatingRtcRatingEnum["RtcUnrated"] = "rtcUnrated";
-})(ContentRatingRtcRatingEnum || (ContentRatingRtcRatingEnum = {}));
-export var ContentRatingRteRatingEnum;
+})(ContentRatingRtcRatingEnum = exports.ContentRatingRtcRatingEnum || (exports.ContentRatingRtcRatingEnum = {}));
+var ContentRatingRteRatingEnum;
 (function (ContentRatingRteRatingEnum) {
     ContentRatingRteRatingEnum["RteUnspecified"] = "rteUnspecified";
     ContentRatingRteRatingEnum["RteGa"] = "rteGa";
@@ -763,8 +767,8 @@ export var ContentRatingRteRatingEnum;
     ContentRatingRteRatingEnum["RtePs"] = "rtePs";
     ContentRatingRteRatingEnum["RteMa"] = "rteMa";
     ContentRatingRteRatingEnum["RteUnrated"] = "rteUnrated";
-})(ContentRatingRteRatingEnum || (ContentRatingRteRatingEnum = {}));
-export var ContentRatingRussiaRatingEnum;
+})(ContentRatingRteRatingEnum = exports.ContentRatingRteRatingEnum || (exports.ContentRatingRteRatingEnum = {}));
+var ContentRatingRussiaRatingEnum;
 (function (ContentRatingRussiaRatingEnum) {
     ContentRatingRussiaRatingEnum["RussiaUnspecified"] = "russiaUnspecified";
     ContentRatingRussiaRatingEnum["Russia0"] = "russia0";
@@ -773,8 +777,8 @@ export var ContentRatingRussiaRatingEnum;
     ContentRatingRussiaRatingEnum["Russia16"] = "russia16";
     ContentRatingRussiaRatingEnum["Russia18"] = "russia18";
     ContentRatingRussiaRatingEnum["RussiaUnrated"] = "russiaUnrated";
-})(ContentRatingRussiaRatingEnum || (ContentRatingRussiaRatingEnum = {}));
-export var ContentRatingSkfilmRatingEnum;
+})(ContentRatingRussiaRatingEnum = exports.ContentRatingRussiaRatingEnum || (exports.ContentRatingRussiaRatingEnum = {}));
+var ContentRatingSkfilmRatingEnum;
 (function (ContentRatingSkfilmRatingEnum) {
     ContentRatingSkfilmRatingEnum["SkfilmUnspecified"] = "skfilmUnspecified";
     ContentRatingSkfilmRatingEnum["SkfilmG"] = "skfilmG";
@@ -782,8 +786,8 @@ export var ContentRatingSkfilmRatingEnum;
     ContentRatingSkfilmRatingEnum["SkfilmP5"] = "skfilmP5";
     ContentRatingSkfilmRatingEnum["SkfilmP8"] = "skfilmP8";
     ContentRatingSkfilmRatingEnum["SkfilmUnrated"] = "skfilmUnrated";
-})(ContentRatingSkfilmRatingEnum || (ContentRatingSkfilmRatingEnum = {}));
-export var ContentRatingSmaisRatingEnum;
+})(ContentRatingSkfilmRatingEnum = exports.ContentRatingSkfilmRatingEnum || (exports.ContentRatingSkfilmRatingEnum = {}));
+var ContentRatingSmaisRatingEnum;
 (function (ContentRatingSmaisRatingEnum) {
     ContentRatingSmaisRatingEnum["SmaisUnspecified"] = "smaisUnspecified";
     ContentRatingSmaisRatingEnum["SmaisL"] = "smaisL";
@@ -793,8 +797,8 @@ export var ContentRatingSmaisRatingEnum;
     ContentRatingSmaisRatingEnum["Smais16"] = "smais16";
     ContentRatingSmaisRatingEnum["Smais18"] = "smais18";
     ContentRatingSmaisRatingEnum["SmaisUnrated"] = "smaisUnrated";
-})(ContentRatingSmaisRatingEnum || (ContentRatingSmaisRatingEnum = {}));
-export var ContentRatingSmsaRatingEnum;
+})(ContentRatingSmaisRatingEnum = exports.ContentRatingSmaisRatingEnum || (exports.ContentRatingSmaisRatingEnum = {}));
+var ContentRatingSmsaRatingEnum;
 (function (ContentRatingSmsaRatingEnum) {
     ContentRatingSmsaRatingEnum["SmsaUnspecified"] = "smsaUnspecified";
     ContentRatingSmsaRatingEnum["SmsaA"] = "smsaA";
@@ -802,8 +806,8 @@ export var ContentRatingSmsaRatingEnum;
     ContentRatingSmsaRatingEnum["Smsa11"] = "smsa11";
     ContentRatingSmsaRatingEnum["Smsa15"] = "smsa15";
     ContentRatingSmsaRatingEnum["SmsaUnrated"] = "smsaUnrated";
-})(ContentRatingSmsaRatingEnum || (ContentRatingSmsaRatingEnum = {}));
-export var ContentRatingTvpgRatingEnum;
+})(ContentRatingSmsaRatingEnum = exports.ContentRatingSmsaRatingEnum || (exports.ContentRatingSmsaRatingEnum = {}));
+var ContentRatingTvpgRatingEnum;
 (function (ContentRatingTvpgRatingEnum) {
     ContentRatingTvpgRatingEnum["TvpgUnspecified"] = "tvpgUnspecified";
     ContentRatingTvpgRatingEnum["TvpgY"] = "tvpgY";
@@ -814,12 +818,12 @@ export var ContentRatingTvpgRatingEnum;
     ContentRatingTvpgRatingEnum["Pg14"] = "pg14";
     ContentRatingTvpgRatingEnum["TvpgMa"] = "tvpgMa";
     ContentRatingTvpgRatingEnum["TvpgUnrated"] = "tvpgUnrated";
-})(ContentRatingTvpgRatingEnum || (ContentRatingTvpgRatingEnum = {}));
-export var ContentRatingYtRatingEnum;
+})(ContentRatingTvpgRatingEnum = exports.ContentRatingTvpgRatingEnum || (exports.ContentRatingTvpgRatingEnum = {}));
+var ContentRatingYtRatingEnum;
 (function (ContentRatingYtRatingEnum) {
     ContentRatingYtRatingEnum["YtUnspecified"] = "ytUnspecified";
     ContentRatingYtRatingEnum["YtAgeRestricted"] = "ytAgeRestricted";
-})(ContentRatingYtRatingEnum || (ContentRatingYtRatingEnum = {}));
+})(ContentRatingYtRatingEnum = exports.ContentRatingYtRatingEnum || (exports.ContentRatingYtRatingEnum = {}));
 // ContentRating
 /**
  * Ratings schemes. The country-specific ratings are mostly for movies and shows. LINT.IfChange
@@ -830,289 +834,289 @@ var ContentRating = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acbRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acbRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "acbRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agcomRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agcomRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "agcomRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=anatelRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=anatelRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "anatelRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bbfcRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bbfcRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "bbfcRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bfvcRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bfvcRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "bfvcRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bmukkRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bmukkRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "bmukkRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=catvRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=catvRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "catvRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=catvfrRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=catvfrRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "catvfrRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cbfcRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cbfcRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "cbfcRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cccRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cccRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "cccRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cceRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cceRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "cceRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chfilmRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chfilmRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "chfilmRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chvrsRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chvrsRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "chvrsRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cicfRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cicfRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "cicfRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cnaRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cnaRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "cnaRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cncRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cncRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "cncRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=csaRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=csaRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "csaRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cscfRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cscfRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "cscfRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=czfilmRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=czfilmRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "czfilmRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=djctqRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=djctqRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "djctqRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=djctqRatingReasons" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=djctqRatingReasons" }),
         __metadata("design:type", Array)
     ], ContentRating.prototype, "djctqRatingReasons", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ecbmctRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ecbmctRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "ecbmctRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eefilmRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eefilmRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "eefilmRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=egfilmRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=egfilmRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "egfilmRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eirinRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eirinRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "eirinRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fcbmRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fcbmRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "fcbmRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fcoRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fcoRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "fcoRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fmocRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fmocRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "fmocRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fpbRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fpbRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "fpbRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fpbRatingReasons" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fpbRatingReasons" }),
         __metadata("design:type", Array)
     ], ContentRating.prototype, "fpbRatingReasons", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fskRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fskRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "fskRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grfilmRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grfilmRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "grfilmRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icaaRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icaaRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "icaaRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ifcoRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ifcoRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "ifcoRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ilfilmRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ilfilmRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "ilfilmRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=incaaRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=incaaRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "incaaRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kfcbRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kfcbRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "kfcbRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kijkwijzerRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kijkwijzerRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "kijkwijzerRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmrbRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmrbRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "kmrbRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lsfRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lsfRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "lsfRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mccaaRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mccaaRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "mccaaRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mccypRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mccypRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "mccypRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mcstRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mcstRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "mcstRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mdaRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mdaRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "mdaRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=medietilsynetRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=medietilsynetRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "medietilsynetRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mekuRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mekuRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "mekuRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=menaMpaaRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=menaMpaaRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "menaMpaaRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mibacRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mibacRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "mibacRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mocRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mocRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "mocRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=moctwRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=moctwRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "moctwRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mpaaRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mpaaRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "mpaaRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mpaatRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mpaatRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "mpaatRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mtrcbRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mtrcbRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "mtrcbRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nbcRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nbcRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "nbcRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nbcplRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nbcplRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "nbcplRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nfrcRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nfrcRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "nfrcRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nfvcbRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nfvcbRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "nfvcbRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nkclvRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nkclvRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "nkclvRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nmcRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nmcRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "nmcRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oflcRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oflcRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "oflcRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pefilmRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pefilmRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "pefilmRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rcnofRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rcnofRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "rcnofRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resorteviolenciaRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resorteviolenciaRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "resorteviolenciaRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rtcRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rtcRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "rtcRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rteRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rteRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "rteRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=russiaRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=russiaRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "russiaRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skfilmRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skfilmRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "skfilmRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smaisRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smaisRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "smaisRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smsaRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smsaRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "smsaRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tvpgRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tvpgRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "tvpgRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ytRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ytRating" }),
         __metadata("design:type", String)
     ], ContentRating.prototype, "ytRating", void 0);
     return ContentRating;
-}(SpeakeasyBase));
-export { ContentRating };
+}(utils_1.SpeakeasyBase));
+exports.ContentRating = ContentRating;

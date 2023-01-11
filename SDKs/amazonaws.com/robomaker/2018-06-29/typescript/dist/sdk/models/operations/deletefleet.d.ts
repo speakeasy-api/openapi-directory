@@ -17,7 +17,7 @@ export declare class DeleteFleetRequest extends SpeakeasyBase {
 }
 export declare class DeleteFleetResponse extends SpeakeasyBase {
     contentType: string;
-    deleteFleetResponse?: Map<string, any>;
+    deleteFleetResponse?: Record<string, any>;
     internalServerException?: any;
     invalidParameterException?: any;
     statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayerGameStatsDeltaFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerGameStatsDeltaResponse = exports.PlayerGameStatsDeltaRequest = exports.PlayerGameStatsDeltaPathParams = exports.PlayerGameStatsDeltaFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayerGameStatsDeltaFormatEnum;
 (function (PlayerGameStatsDeltaFormatEnum) {
     PlayerGameStatsDeltaFormatEnum["Xml"] = "XML";
     PlayerGameStatsDeltaFormatEnum["Json"] = "JSON";
-})(PlayerGameStatsDeltaFormatEnum || (PlayerGameStatsDeltaFormatEnum = {}));
+})(PlayerGameStatsDeltaFormatEnum = exports.PlayerGameStatsDeltaFormatEnum || (exports.PlayerGameStatsDeltaFormatEnum = {}));
 var PlayerGameStatsDeltaPathParams = /** @class */ (function (_super) {
     __extends(PlayerGameStatsDeltaPathParams, _super);
     function PlayerGameStatsDeltaPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayerGameStatsDeltaPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=minutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=minutes" }),
         __metadata("design:type", String)
     ], PlayerGameStatsDeltaPathParams.prototype, "minutes", void 0);
     return PlayerGameStatsDeltaPathParams;
-}(SpeakeasyBase));
-export { PlayerGameStatsDeltaPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayerGameStatsDeltaPathParams = PlayerGameStatsDeltaPathParams;
 var PlayerGameStatsDeltaRequest = /** @class */ (function (_super) {
     __extends(PlayerGameStatsDeltaRequest, _super);
     function PlayerGameStatsDeltaRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayerGameStatsDeltaPathParams)
     ], PlayerGameStatsDeltaRequest.prototype, "pathParams", void 0);
     return PlayerGameStatsDeltaRequest;
-}(SpeakeasyBase));
-export { PlayerGameStatsDeltaRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayerGameStatsDeltaRequest = PlayerGameStatsDeltaRequest;
 var PlayerGameStatsDeltaResponse = /** @class */ (function (_super) {
     __extends(PlayerGameStatsDeltaResponse, _super);
     function PlayerGameStatsDeltaResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayerGameStatsDeltaResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayerGameStatsDeltaResponse.prototype, "playerGames", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayerGameStatsDeltaResponse.prototype, "statusCode", void 0);
     return PlayerGameStatsDeltaResponse;
-}(SpeakeasyBase));
-export { PlayerGameStatsDeltaResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerGameStatsDeltaResponse = PlayerGameStatsDeltaResponse;

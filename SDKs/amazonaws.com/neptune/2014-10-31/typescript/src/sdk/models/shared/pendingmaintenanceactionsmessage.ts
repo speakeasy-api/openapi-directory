@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourcePendingMaintenanceActions } from "./resourcependingmaintenanceactions";
+import { PendingMaintenanceActions } from "./pendingmaintenanceactions";
 
 
 
@@ -7,6 +7,6 @@ export class PendingMaintenanceActionsMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: ResourcePendingMaintenanceActions })
-  pendingMaintenanceActions?: ResourcePendingMaintenanceActions[];
+  @SpeakeasyMetadata({ elemType: PendingMaintenanceActions })
+  pendingMaintenanceActions?: PendingMaintenanceActions[];
 }

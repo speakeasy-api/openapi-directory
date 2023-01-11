@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TargetDbTypeEnum } from "./targetdbtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MySqlSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var targetdbtypeenum_1 = require("./targetdbtypeenum");
 // MySqlSettings
 /**
  * Provides information that defines a MySQL endpoint.
@@ -34,61 +37,61 @@ var MySqlSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AfterConnectScript" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AfterConnectScript" }),
         __metadata("design:type", String)
     ], MySqlSettings.prototype, "afterConnectScript", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CleanSourceMetadataOnMismatch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CleanSourceMetadataOnMismatch" }),
         __metadata("design:type", Boolean)
     ], MySqlSettings.prototype, "cleanSourceMetadataOnMismatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseName" }),
         __metadata("design:type", String)
     ], MySqlSettings.prototype, "databaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventsPollInterval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventsPollInterval" }),
         __metadata("design:type", Number)
     ], MySqlSettings.prototype, "eventsPollInterval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxFileSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxFileSize" }),
         __metadata("design:type", Number)
     ], MySqlSettings.prototype, "maxFileSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParallelLoadThreads" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParallelLoadThreads" }),
         __metadata("design:type", Number)
     ], MySqlSettings.prototype, "parallelLoadThreads", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Password" }),
         __metadata("design:type", String)
     ], MySqlSettings.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Port" }),
         __metadata("design:type", Number)
     ], MySqlSettings.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretsManagerAccessRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretsManagerAccessRoleArn" }),
         __metadata("design:type", String)
     ], MySqlSettings.prototype, "secretsManagerAccessRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretsManagerSecretId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretsManagerSecretId" }),
         __metadata("design:type", String)
     ], MySqlSettings.prototype, "secretsManagerSecretId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServerName" }),
         __metadata("design:type", String)
     ], MySqlSettings.prototype, "serverName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServerTimezone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServerTimezone" }),
         __metadata("design:type", String)
     ], MySqlSettings.prototype, "serverTimezone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetDbType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetDbType" }),
         __metadata("design:type", String)
     ], MySqlSettings.prototype, "targetDbType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Username" }),
         __metadata("design:type", String)
     ], MySqlSettings.prototype, "username", void 0);
     return MySqlSettings;
-}(SpeakeasyBase));
-export { MySqlSettings };
+}(utils_1.SpeakeasyBase));
+exports.MySqlSettings = MySqlSettings;

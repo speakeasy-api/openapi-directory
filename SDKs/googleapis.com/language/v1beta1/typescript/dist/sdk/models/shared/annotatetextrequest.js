@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Document } from "./document";
-import { Features } from "./features";
-export var AnnotateTextRequestEncodingTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnnotateTextRequest = exports.AnnotateTextRequestEncodingTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var document_1 = require("./document");
+var features_1 = require("./features");
+var AnnotateTextRequestEncodingTypeEnum;
 (function (AnnotateTextRequestEncodingTypeEnum) {
     AnnotateTextRequestEncodingTypeEnum["None"] = "NONE";
     AnnotateTextRequestEncodingTypeEnum["Utf8"] = "UTF8";
     AnnotateTextRequestEncodingTypeEnum["Utf16"] = "UTF16";
     AnnotateTextRequestEncodingTypeEnum["Utf32"] = "UTF32";
-})(AnnotateTextRequestEncodingTypeEnum || (AnnotateTextRequestEncodingTypeEnum = {}));
+})(AnnotateTextRequestEncodingTypeEnum = exports.AnnotateTextRequestEncodingTypeEnum || (exports.AnnotateTextRequestEncodingTypeEnum = {}));
 // AnnotateTextRequest
 /**
  * The request message for the text annotation API, which can perform multiple analysis types (sentiment, entities, and syntax) in one call.
@@ -42,17 +45,17 @@ var AnnotateTextRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=document" }),
-        __metadata("design:type", Document)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=document" }),
+        __metadata("design:type", document_1.Document)
     ], AnnotateTextRequest.prototype, "document", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encodingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encodingType" }),
         __metadata("design:type", String)
     ], AnnotateTextRequest.prototype, "encodingType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=features" }),
-        __metadata("design:type", Features)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=features" }),
+        __metadata("design:type", features_1.Features)
     ], AnnotateTextRequest.prototype, "features", void 0);
     return AnnotateTextRequest;
-}(SpeakeasyBase));
-export { AnnotateTextRequest };
+}(utils_1.SpeakeasyBase));
+exports.AnnotateTextRequest = AnnotateTextRequest;

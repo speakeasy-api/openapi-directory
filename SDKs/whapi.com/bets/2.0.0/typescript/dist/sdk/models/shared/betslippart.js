@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Betslippart = void 0;
+var utils_1 = require("../../../internal/utils");
 var Betslippart = /** @class */ (function (_super) {
     __extends(Betslippart, _super);
     function Betslippart() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eachWayAvailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eachWayAvailable" }),
         __metadata("design:type", Boolean)
     ], Betslippart.prototype, "eachWayAvailable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeInMultiple" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeInMultiple" }),
         __metadata("design:type", Boolean)
     ], Betslippart.prototype, "includeInMultiple", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legGroup" }),
         __metadata("design:type", Number)
     ], Betslippart.prototype, "legGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceChanged" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceChanged" }),
         __metadata("design:type", Boolean)
     ], Betslippart.prototype, "priceChanged", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceDen" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceDen" }),
         __metadata("design:type", Number)
     ], Betslippart.prototype, "priceDen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceNum" }),
         __metadata("design:type", Number)
     ], Betslippart.prototype, "priceNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceType" }),
         __metadata("design:type", Number)
     ], Betslippart.prototype, "priceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectionId" }),
         __metadata("design:type", Number)
     ], Betslippart.prototype, "selectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=singleAvailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=singleAvailable" }),
         __metadata("design:type", Boolean)
     ], Betslippart.prototype, "singleAvailable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startingPriceAvailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startingPriceAvailable" }),
         __metadata("design:type", Boolean)
     ], Betslippart.prototype, "startingPriceAvailable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Betslippart.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusChanged" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusChanged" }),
         __metadata("design:type", Boolean)
     ], Betslippart.prototype, "statusChanged", void 0);
     return Betslippart;
-}(SpeakeasyBase));
-export { Betslippart };
+}(utils_1.SpeakeasyBase));
+exports.Betslippart = Betslippart;

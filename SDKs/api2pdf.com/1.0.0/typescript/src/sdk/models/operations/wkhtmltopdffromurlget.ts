@@ -41,5 +41,5 @@ export class WkhtmltopdfFromUrlGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  wkhtmltopdfFromUrlGet200ApplicationPdfBinaryString?: Uint8Array;
+  wkhtmltopdfFromUrlGET200ApplicationPdfBinaryString?: Uint8Array;
 }

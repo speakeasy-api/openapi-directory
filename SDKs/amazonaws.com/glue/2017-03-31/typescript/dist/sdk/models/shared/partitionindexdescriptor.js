@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BackfillError } from "./backfillerror";
-import { PartitionIndexStatusEnum } from "./partitionindexstatusenum";
-import { KeySchemaElement } from "./keyschemaelement";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PartitionIndexDescriptor = void 0;
+var utils_1 = require("../../../internal/utils");
+var backfillerror_1 = require("./backfillerror");
+var partitionindexstatusenum_1 = require("./partitionindexstatusenum");
+var keyschemaelement_1 = require("./keyschemaelement");
 // PartitionIndexDescriptor
 /**
  * A descriptor for a partition index in a table.
@@ -36,21 +39,21 @@ var PartitionIndexDescriptor = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BackfillErrors", elemType: BackfillError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BackfillErrors", elemType: backfillerror_1.BackfillError }),
         __metadata("design:type", Array)
     ], PartitionIndexDescriptor.prototype, "backfillErrors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IndexName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IndexName" }),
         __metadata("design:type", String)
     ], PartitionIndexDescriptor.prototype, "indexName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IndexStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IndexStatus" }),
         __metadata("design:type", String)
     ], PartitionIndexDescriptor.prototype, "indexStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Keys", elemType: KeySchemaElement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Keys", elemType: keyschemaelement_1.KeySchemaElement }),
         __metadata("design:type", Array)
     ], PartitionIndexDescriptor.prototype, "keys", void 0);
     return PartitionIndexDescriptor;
-}(SpeakeasyBase));
-export { PartitionIndexDescriptor };
+}(utils_1.SpeakeasyBase));
+exports.PartitionIndexDescriptor = PartitionIndexDescriptor;

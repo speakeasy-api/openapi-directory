@@ -9,6 +9,6 @@ export declare class LiveChatModeratorListResponse extends SpeakeasyBase {
     nextPageToken?: string;
     pageInfo?: PageInfo;
     prevPageToken?: string;
-    tokenPagination?: Map<string, any>;
+    tokenPagination?: Record<string, any>;
     visitorId?: string;
 }

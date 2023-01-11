@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkPiiPiiKeysResponse = exports.GetNetworkPiiPiiKeysRequest = exports.GetNetworkPiiPiiKeysQueryParams = exports.GetNetworkPiiPiiKeysPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkPiiPiiKeysPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkPiiPiiKeysPathParams, _super);
     function GetNetworkPiiPiiKeysPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkPiiPiiKeysPathParams.prototype, "networkId", void 0);
     return GetNetworkPiiPiiKeysPathParams;
-}(SpeakeasyBase));
-export { GetNetworkPiiPiiKeysPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkPiiPiiKeysPathParams = GetNetworkPiiPiiKeysPathParams;
 var GetNetworkPiiPiiKeysQueryParams = /** @class */ (function (_super) {
     __extends(GetNetworkPiiPiiKeysQueryParams, _super);
     function GetNetworkPiiPiiKeysQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=bluetoothMac" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=bluetoothMac" }),
         __metadata("design:type", String)
     ], GetNetworkPiiPiiKeysQueryParams.prototype, "bluetoothMac", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=email" }),
         __metadata("design:type", String)
     ], GetNetworkPiiPiiKeysQueryParams.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=imei" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=imei" }),
         __metadata("design:type", String)
     ], GetNetworkPiiPiiKeysQueryParams.prototype, "imei", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=mac" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=mac" }),
         __metadata("design:type", String)
     ], GetNetworkPiiPiiKeysQueryParams.prototype, "mac", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=serial" }),
         __metadata("design:type", String)
     ], GetNetworkPiiPiiKeysQueryParams.prototype, "serial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=username" }),
         __metadata("design:type", String)
     ], GetNetworkPiiPiiKeysQueryParams.prototype, "username", void 0);
     return GetNetworkPiiPiiKeysQueryParams;
-}(SpeakeasyBase));
-export { GetNetworkPiiPiiKeysQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkPiiPiiKeysQueryParams = GetNetworkPiiPiiKeysQueryParams;
 var GetNetworkPiiPiiKeysRequest = /** @class */ (function (_super) {
     __extends(GetNetworkPiiPiiKeysRequest, _super);
     function GetNetworkPiiPiiKeysRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkPiiPiiKeysPathParams)
     ], GetNetworkPiiPiiKeysRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkPiiPiiKeysQueryParams)
     ], GetNetworkPiiPiiKeysRequest.prototype, "queryParams", void 0);
     return GetNetworkPiiPiiKeysRequest;
-}(SpeakeasyBase));
-export { GetNetworkPiiPiiKeysRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkPiiPiiKeysRequest = GetNetworkPiiPiiKeysRequest;
 var GetNetworkPiiPiiKeysResponse = /** @class */ (function (_super) {
     __extends(GetNetworkPiiPiiKeysResponse, _super);
     function GetNetworkPiiPiiKeysResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkPiiPiiKeysResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkPiiPiiKeysResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkPiiPiiKeysResponse.prototype, "getNetworkPiiPiiKeys200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkPiiPiiKeysResponse.prototype, "getNetworkPiiPiiKeys200ApplicationJSONObject", void 0);
     return GetNetworkPiiPiiKeysResponse;
-}(SpeakeasyBase));
-export { GetNetworkPiiPiiKeysResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkPiiPiiKeysResponse = GetNetworkPiiPiiKeysResponse;

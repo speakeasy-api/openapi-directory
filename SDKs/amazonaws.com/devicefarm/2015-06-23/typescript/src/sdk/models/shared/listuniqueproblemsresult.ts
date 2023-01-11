@@ -12,5 +12,5 @@ export class ListUniqueProblemsResult extends SpeakeasyBase {
   nextToken?: string;
 
   @SpeakeasyMetadata({ data: "json, name=uniqueProblems", elemType: UniqueProblem, elemDepth: 2 })
-  uniqueProblems?: Map<string, UniqueProblem[]>;
+  uniqueProblems?: Record<string, UniqueProblem[]>;
 }

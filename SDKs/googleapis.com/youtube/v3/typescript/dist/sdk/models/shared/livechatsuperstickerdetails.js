@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SuperStickerMetadata } from "./superstickermetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiveChatSuperStickerDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var superstickermetadata_1 = require("./superstickermetadata");
 var LiveChatSuperStickerDetails = /** @class */ (function (_super) {
     __extends(LiveChatSuperStickerDetails, _super);
     function LiveChatSuperStickerDetails() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountDisplayString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountDisplayString" }),
         __metadata("design:type", String)
     ], LiveChatSuperStickerDetails.prototype, "amountDisplayString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountMicros" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountMicros" }),
         __metadata("design:type", String)
     ], LiveChatSuperStickerDetails.prototype, "amountMicros", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], LiveChatSuperStickerDetails.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=superStickerMetadata" }),
-        __metadata("design:type", SuperStickerMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=superStickerMetadata" }),
+        __metadata("design:type", superstickermetadata_1.SuperStickerMetadata)
     ], LiveChatSuperStickerDetails.prototype, "superStickerMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tier" }),
         __metadata("design:type", Number)
     ], LiveChatSuperStickerDetails.prototype, "tier", void 0);
     return LiveChatSuperStickerDetails;
-}(SpeakeasyBase));
-export { LiveChatSuperStickerDetails };
+}(utils_1.SpeakeasyBase));
+exports.LiveChatSuperStickerDetails = LiveChatSuperStickerDetails;

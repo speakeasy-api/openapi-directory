@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudVideointelligenceV1p2beta1SpeechContext = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudVideointelligenceV1p2beta1SpeechContext
 /**
  * Provides "hints" to the speech recognizer to favor specific words and phrases in the results.
@@ -33,9 +36,9 @@ var GoogleCloudVideointelligenceV1p2beta1SpeechContext = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phrases" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phrases" }),
         __metadata("design:type", Array)
     ], GoogleCloudVideointelligenceV1p2beta1SpeechContext.prototype, "phrases", void 0);
     return GoogleCloudVideointelligenceV1p2beta1SpeechContext;
-}(SpeakeasyBase));
-export { GoogleCloudVideointelligenceV1p2beta1SpeechContext };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudVideointelligenceV1p2beta1SpeechContext = GoogleCloudVideointelligenceV1p2beta1SpeechContext;

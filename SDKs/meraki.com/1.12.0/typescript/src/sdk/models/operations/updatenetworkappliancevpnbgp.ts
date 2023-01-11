@@ -61,5 +61,5 @@ export class UpdateNetworkApplianceVpnBgpResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkApplianceVpnBgp200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkApplianceVpnBgp200ApplicationJSONObject?: Record<string, any>;
 }

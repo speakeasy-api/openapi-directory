@@ -44,7 +44,7 @@ export class PostRepositoriesWorkspaceRepoSlugCommitsRevisionResponse extends Sp
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   paginatedChangeset?: shared.PaginatedChangeset;

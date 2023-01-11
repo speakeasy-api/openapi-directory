@@ -66,5 +66,5 @@ export class UpdateNetworkApplianceFirewallPortForwardingRulesResponse extends S
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkApplianceFirewallPortForwardingRules200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkApplianceFirewallPortForwardingRules200ApplicationJSONObject?: Record<string, any>;
 }

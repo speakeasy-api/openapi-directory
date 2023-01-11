@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,115 +14,140 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetImagePerformancesResponse = exports.GetImagePerformancesRequest = exports.GetImagePerformancesHeaders = exports.GetImagePerformancesQueryParams = exports.GetImagePerformancesOrderByEnum = exports.GetImagePerformancesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetImagePerformancesPathParams = /** @class */ (function (_super) {
     __extends(GetImagePerformancesPathParams, _super);
     function GetImagePerformancesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=iterationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=iterationId" }),
         __metadata("design:type", String)
     ], GetImagePerformancesPathParams.prototype, "iterationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=projectId" }),
         __metadata("design:type", String)
     ], GetImagePerformancesPathParams.prototype, "projectId", void 0);
     return GetImagePerformancesPathParams;
-}(SpeakeasyBase));
-export { GetImagePerformancesPathParams };
-export var GetImagePerformancesOrderByEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetImagePerformancesPathParams = GetImagePerformancesPathParams;
+var GetImagePerformancesOrderByEnum;
 (function (GetImagePerformancesOrderByEnum) {
     GetImagePerformancesOrderByEnum["Newest"] = "Newest";
     GetImagePerformancesOrderByEnum["Oldest"] = "Oldest";
-})(GetImagePerformancesOrderByEnum || (GetImagePerformancesOrderByEnum = {}));
+})(GetImagePerformancesOrderByEnum = exports.GetImagePerformancesOrderByEnum || (exports.GetImagePerformancesOrderByEnum = {}));
 var GetImagePerformancesQueryParams = /** @class */ (function (_super) {
     __extends(GetImagePerformancesQueryParams, _super);
     function GetImagePerformancesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=orderBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=orderBy" }),
         __metadata("design:type", String)
     ], GetImagePerformancesQueryParams.prototype, "orderBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=skip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=skip" }),
         __metadata("design:type", Number)
     ], GetImagePerformancesQueryParams.prototype, "skip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=tagIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=tagIds" }),
         __metadata("design:type", Array)
     ], GetImagePerformancesQueryParams.prototype, "tagIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=take" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=take" }),
         __metadata("design:type", Number)
     ], GetImagePerformancesQueryParams.prototype, "take", void 0);
     return GetImagePerformancesQueryParams;
-}(SpeakeasyBase));
-export { GetImagePerformancesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetImagePerformancesQueryParams = GetImagePerformancesQueryParams;
 var GetImagePerformancesHeaders = /** @class */ (function (_super) {
     __extends(GetImagePerformancesHeaders, _super);
     function GetImagePerformancesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Training-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Training-Key" }),
         __metadata("design:type", String)
     ], GetImagePerformancesHeaders.prototype, "trainingKey", void 0);
     return GetImagePerformancesHeaders;
-}(SpeakeasyBase));
-export { GetImagePerformancesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetImagePerformancesHeaders = GetImagePerformancesHeaders;
 var GetImagePerformancesRequest = /** @class */ (function (_super) {
     __extends(GetImagePerformancesRequest, _super);
     function GetImagePerformancesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetImagePerformancesPathParams)
     ], GetImagePerformancesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetImagePerformancesQueryParams)
     ], GetImagePerformancesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetImagePerformancesHeaders)
     ], GetImagePerformancesRequest.prototype, "headers", void 0);
     return GetImagePerformancesRequest;
-}(SpeakeasyBase));
-export { GetImagePerformancesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetImagePerformancesRequest = GetImagePerformancesRequest;
 var GetImagePerformancesResponse = /** @class */ (function (_super) {
     __extends(GetImagePerformancesResponse, _super);
     function GetImagePerformancesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetImagePerformancesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetImagePerformancesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.ImagePerformance }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.ImagePerformance }),
         __metadata("design:type", Array)
     ], GetImagePerformancesResponse.prototype, "imagePerformances", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetImagePerformancesResponse.prototype, "statusCode", void 0);
     return GetImagePerformancesResponse;
-}(SpeakeasyBase));
-export { GetImagePerformancesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetImagePerformancesResponse = GetImagePerformancesResponse;

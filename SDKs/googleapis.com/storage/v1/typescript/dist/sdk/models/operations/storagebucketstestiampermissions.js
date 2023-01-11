@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,222 +14,247 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StorageBucketsTestIamPermissionsResponse = exports.StorageBucketsTestIamPermissionsRequest = exports.StorageBucketsTestIamPermissionsSecurity = exports.StorageBucketsTestIamPermissionsSecurityOption5 = exports.StorageBucketsTestIamPermissionsSecurityOption4 = exports.StorageBucketsTestIamPermissionsSecurityOption3 = exports.StorageBucketsTestIamPermissionsSecurityOption2 = exports.StorageBucketsTestIamPermissionsSecurityOption1 = exports.StorageBucketsTestIamPermissionsQueryParams = exports.StorageBucketsTestIamPermissionsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var StorageBucketsTestIamPermissionsPathParams = /** @class */ (function (_super) {
     __extends(StorageBucketsTestIamPermissionsPathParams, _super);
     function StorageBucketsTestIamPermissionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=bucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=bucket" }),
         __metadata("design:type", String)
     ], StorageBucketsTestIamPermissionsPathParams.prototype, "bucket", void 0);
     return StorageBucketsTestIamPermissionsPathParams;
-}(SpeakeasyBase));
-export { StorageBucketsTestIamPermissionsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsTestIamPermissionsPathParams = StorageBucketsTestIamPermissionsPathParams;
 var StorageBucketsTestIamPermissionsQueryParams = /** @class */ (function (_super) {
     __extends(StorageBucketsTestIamPermissionsQueryParams, _super);
     function StorageBucketsTestIamPermissionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], StorageBucketsTestIamPermissionsQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], StorageBucketsTestIamPermissionsQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], StorageBucketsTestIamPermissionsQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], StorageBucketsTestIamPermissionsQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=permissions" }),
         __metadata("design:type", Array)
     ], StorageBucketsTestIamPermissionsQueryParams.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], StorageBucketsTestIamPermissionsQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], StorageBucketsTestIamPermissionsQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], StorageBucketsTestIamPermissionsQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], StorageBucketsTestIamPermissionsQueryParams.prototype, "userIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userProject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userProject" }),
         __metadata("design:type", String)
     ], StorageBucketsTestIamPermissionsQueryParams.prototype, "userProject", void 0);
     return StorageBucketsTestIamPermissionsQueryParams;
-}(SpeakeasyBase));
-export { StorageBucketsTestIamPermissionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsTestIamPermissionsQueryParams = StorageBucketsTestIamPermissionsQueryParams;
 var StorageBucketsTestIamPermissionsSecurityOption1 = /** @class */ (function (_super) {
     __extends(StorageBucketsTestIamPermissionsSecurityOption1, _super);
     function StorageBucketsTestIamPermissionsSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageBucketsTestIamPermissionsSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageBucketsTestIamPermissionsSecurityOption1.prototype, "oauth2c", void 0);
     return StorageBucketsTestIamPermissionsSecurityOption1;
-}(SpeakeasyBase));
-export { StorageBucketsTestIamPermissionsSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsTestIamPermissionsSecurityOption1 = StorageBucketsTestIamPermissionsSecurityOption1;
 var StorageBucketsTestIamPermissionsSecurityOption2 = /** @class */ (function (_super) {
     __extends(StorageBucketsTestIamPermissionsSecurityOption2, _super);
     function StorageBucketsTestIamPermissionsSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageBucketsTestIamPermissionsSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageBucketsTestIamPermissionsSecurityOption2.prototype, "oauth2c", void 0);
     return StorageBucketsTestIamPermissionsSecurityOption2;
-}(SpeakeasyBase));
-export { StorageBucketsTestIamPermissionsSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsTestIamPermissionsSecurityOption2 = StorageBucketsTestIamPermissionsSecurityOption2;
 var StorageBucketsTestIamPermissionsSecurityOption3 = /** @class */ (function (_super) {
     __extends(StorageBucketsTestIamPermissionsSecurityOption3, _super);
     function StorageBucketsTestIamPermissionsSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageBucketsTestIamPermissionsSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageBucketsTestIamPermissionsSecurityOption3.prototype, "oauth2c", void 0);
     return StorageBucketsTestIamPermissionsSecurityOption3;
-}(SpeakeasyBase));
-export { StorageBucketsTestIamPermissionsSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsTestIamPermissionsSecurityOption3 = StorageBucketsTestIamPermissionsSecurityOption3;
 var StorageBucketsTestIamPermissionsSecurityOption4 = /** @class */ (function (_super) {
     __extends(StorageBucketsTestIamPermissionsSecurityOption4, _super);
     function StorageBucketsTestIamPermissionsSecurityOption4() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageBucketsTestIamPermissionsSecurityOption4.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageBucketsTestIamPermissionsSecurityOption4.prototype, "oauth2c", void 0);
     return StorageBucketsTestIamPermissionsSecurityOption4;
-}(SpeakeasyBase));
-export { StorageBucketsTestIamPermissionsSecurityOption4 };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsTestIamPermissionsSecurityOption4 = StorageBucketsTestIamPermissionsSecurityOption4;
 var StorageBucketsTestIamPermissionsSecurityOption5 = /** @class */ (function (_super) {
     __extends(StorageBucketsTestIamPermissionsSecurityOption5, _super);
     function StorageBucketsTestIamPermissionsSecurityOption5() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageBucketsTestIamPermissionsSecurityOption5.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageBucketsTestIamPermissionsSecurityOption5.prototype, "oauth2c", void 0);
     return StorageBucketsTestIamPermissionsSecurityOption5;
-}(SpeakeasyBase));
-export { StorageBucketsTestIamPermissionsSecurityOption5 };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsTestIamPermissionsSecurityOption5 = StorageBucketsTestIamPermissionsSecurityOption5;
 var StorageBucketsTestIamPermissionsSecurity = /** @class */ (function (_super) {
     __extends(StorageBucketsTestIamPermissionsSecurity, _super);
     function StorageBucketsTestIamPermissionsSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageBucketsTestIamPermissionsSecurityOption1)
     ], StorageBucketsTestIamPermissionsSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageBucketsTestIamPermissionsSecurityOption2)
     ], StorageBucketsTestIamPermissionsSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageBucketsTestIamPermissionsSecurityOption3)
     ], StorageBucketsTestIamPermissionsSecurity.prototype, "option3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageBucketsTestIamPermissionsSecurityOption4)
     ], StorageBucketsTestIamPermissionsSecurity.prototype, "option4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageBucketsTestIamPermissionsSecurityOption5)
     ], StorageBucketsTestIamPermissionsSecurity.prototype, "option5", void 0);
     return StorageBucketsTestIamPermissionsSecurity;
-}(SpeakeasyBase));
-export { StorageBucketsTestIamPermissionsSecurity };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsTestIamPermissionsSecurity = StorageBucketsTestIamPermissionsSecurity;
 var StorageBucketsTestIamPermissionsRequest = /** @class */ (function (_super) {
     __extends(StorageBucketsTestIamPermissionsRequest, _super);
     function StorageBucketsTestIamPermissionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StorageBucketsTestIamPermissionsPathParams)
     ], StorageBucketsTestIamPermissionsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StorageBucketsTestIamPermissionsQueryParams)
     ], StorageBucketsTestIamPermissionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StorageBucketsTestIamPermissionsSecurity)
     ], StorageBucketsTestIamPermissionsRequest.prototype, "security", void 0);
     return StorageBucketsTestIamPermissionsRequest;
-}(SpeakeasyBase));
-export { StorageBucketsTestIamPermissionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsTestIamPermissionsRequest = StorageBucketsTestIamPermissionsRequest;
 var StorageBucketsTestIamPermissionsResponse = /** @class */ (function (_super) {
     __extends(StorageBucketsTestIamPermissionsResponse, _super);
     function StorageBucketsTestIamPermissionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StorageBucketsTestIamPermissionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StorageBucketsTestIamPermissionsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.TestIamPermissionsResponse)
     ], StorageBucketsTestIamPermissionsResponse.prototype, "testIamPermissionsResponse", void 0);
     return StorageBucketsTestIamPermissionsResponse;
-}(SpeakeasyBase));
-export { StorageBucketsTestIamPermissionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsTestIamPermissionsResponse = StorageBucketsTestIamPermissionsResponse;

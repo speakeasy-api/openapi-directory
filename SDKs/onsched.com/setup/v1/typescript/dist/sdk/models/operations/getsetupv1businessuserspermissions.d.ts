@@ -8,7 +8,7 @@ export declare class GetSetupV1BusinessusersPermissionsRequest extends Speakeasy
     queryParams: GetSetupV1BusinessusersPermissionsQueryParams;
 }
 export declare class GetSetupV1BusinessusersPermissionsResponse extends SpeakeasyBase {
-    businessPermissionListViewModel?: Map<string, any>;
+    businessPermissionListViewModel?: Record<string, any>;
     contentType: string;
     statusCode: number;
 }

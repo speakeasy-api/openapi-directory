@@ -2,19 +2,13 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
-export enum RestoreArchiveArchiveRestoreKindEnum {
-    LatestArchive = "latestArchive",
-    LatestCommit = "latestCommit",
-    ArchiveId = "archive ID"
-}
-
 
 export class RestoreArchivePathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=archiveKind" })
   archiveKind: shared.ArchiveKindEnum;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=archiveRestoreKind" })
-  archiveRestoreKind: RestoreArchiveArchiveRestoreKindEnum;
+  archiveRestoreKind: shared.ArchiveKindEnum1;
 }
 
 export enum RestoreArchive200ApplicationJsonActionEnum {
@@ -85,5 +79,5 @@ export class RestoreArchiveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  restoreArchive200ApplicationJsonObject?: RestoreArchive200ApplicationJson;
+  restoreArchive200ApplicationJSONObject?: RestoreArchive200ApplicationJson;
 }

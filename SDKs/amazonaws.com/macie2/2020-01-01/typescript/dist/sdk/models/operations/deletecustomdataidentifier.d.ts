@@ -19,7 +19,7 @@ export declare class DeleteCustomDataIdentifierResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     conflictException?: any;
     contentType: string;
-    deleteCustomDataIdentifierResponse?: Map<string, any>;
+    deleteCustomDataIdentifierResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     serviceQuotaExceededException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Updated = exports.UpdatedBy = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdatedBy = /** @class */ (function (_super) {
     __extends(UpdatedBy, _super);
     function UpdatedBy() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstName" }),
         __metadata("design:type", String)
     ], UpdatedBy.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], UpdatedBy.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastName" }),
         __metadata("design:type", String)
     ], UpdatedBy.prototype, "lastName", void 0);
     return UpdatedBy;
-}(SpeakeasyBase));
-export { UpdatedBy };
+}(utils_1.SpeakeasyBase));
+exports.UpdatedBy = UpdatedBy;
 var Updated = /** @class */ (function (_super) {
     __extends(Updated, _super);
     function Updated() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=at" }),
         __metadata("design:type", Date)
     ], Updated.prototype, "at", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=by" }),
         __metadata("design:type", UpdatedBy)
     ], Updated.prototype, "by", void 0);
     return Updated;
-}(SpeakeasyBase));
-export { Updated };
+}(utils_1.SpeakeasyBase));
+exports.Updated = Updated;

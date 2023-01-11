@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlatformPlatformTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Platform = exports.PlatformPlatformTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlatformPlatformTypeEnum;
 (function (PlatformPlatformTypeEnum) {
     PlatformPlatformTypeEnum["PlatformTypeUnspecified"] = "PLATFORM_TYPE_UNSPECIFIED";
     PlatformPlatformTypeEnum["Win"] = "WIN";
@@ -40,7 +43,7 @@ export var PlatformPlatformTypeEnum;
     PlatformPlatformTypeEnum["Chromeos"] = "CHROMEOS";
     PlatformPlatformTypeEnum["LacrosArm64"] = "LACROS_ARM64";
     PlatformPlatformTypeEnum["Fuchsia"] = "FUCHSIA";
-})(PlatformPlatformTypeEnum || (PlatformPlatformTypeEnum = {}));
+})(PlatformPlatformTypeEnum = exports.PlatformPlatformTypeEnum || (exports.PlatformPlatformTypeEnum = {}));
 // Platform
 /**
  * Each Platform is owned by a Product and owns a collection of channels. Available platforms are listed in Platform enum below. Not all Channels are available for every Platform (e.g. CANARY does not exist for LINUX).
@@ -51,13 +54,13 @@ var Platform = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Platform.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platformType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platformType" }),
         __metadata("design:type", String)
     ], Platform.prototype, "platformType", void 0);
     return Platform;
-}(SpeakeasyBase));
-export { Platform };
+}(utils_1.SpeakeasyBase));
+exports.Platform = Platform;

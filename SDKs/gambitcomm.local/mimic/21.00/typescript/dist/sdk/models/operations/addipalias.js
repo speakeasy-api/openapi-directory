@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddIpaliasResponse = exports.AddIpaliasRequest = exports.AddIpaliasPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AddIpaliasPathParams = /** @class */ (function (_super) {
     __extends(AddIpaliasPathParams, _super);
     function AddIpaliasPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=IP" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=IP" }),
         __metadata("design:type", String)
     ], AddIpaliasPathParams.prototype, "ip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], AddIpaliasPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=interface" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=interface" }),
         __metadata("design:type", String)
     ], AddIpaliasPathParams.prototype, "interface", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=mask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=mask" }),
         __metadata("design:type", String)
     ], AddIpaliasPathParams.prototype, "mask", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=port" }),
         __metadata("design:type", Number)
     ], AddIpaliasPathParams.prototype, "port", void 0);
     return AddIpaliasPathParams;
-}(SpeakeasyBase));
-export { AddIpaliasPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AddIpaliasPathParams = AddIpaliasPathParams;
 var AddIpaliasRequest = /** @class */ (function (_super) {
     __extends(AddIpaliasRequest, _super);
     function AddIpaliasRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AddIpaliasPathParams)
     ], AddIpaliasRequest.prototype, "pathParams", void 0);
     return AddIpaliasRequest;
-}(SpeakeasyBase));
-export { AddIpaliasRequest };
+}(utils_1.SpeakeasyBase));
+exports.AddIpaliasRequest = AddIpaliasRequest;
 var AddIpaliasResponse = /** @class */ (function (_super) {
     __extends(AddIpaliasResponse, _super);
     function AddIpaliasResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AddIpaliasResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AddIpaliasResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], AddIpaliasResponse.prototype, "addIpalias200ApplicationJsonString", void 0);
+    ], AddIpaliasResponse.prototype, "addIpalias200ApplicationJSONString", void 0);
     return AddIpaliasResponse;
-}(SpeakeasyBase));
-export { AddIpaliasResponse };
+}(utils_1.SpeakeasyBase));
+exports.AddIpaliasResponse = AddIpaliasResponse;

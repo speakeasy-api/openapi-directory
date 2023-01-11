@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetRemoveSourceIdentifierFromSubscriptionActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRemoveSourceIdentifierFromSubscriptionResponse = exports.GetRemoveSourceIdentifierFromSubscriptionRequest = exports.GetRemoveSourceIdentifierFromSubscriptionHeaders = exports.GetRemoveSourceIdentifierFromSubscriptionQueryParams = exports.GetRemoveSourceIdentifierFromSubscriptionVersionEnum = exports.GetRemoveSourceIdentifierFromSubscriptionActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetRemoveSourceIdentifierFromSubscriptionActionEnum;
 (function (GetRemoveSourceIdentifierFromSubscriptionActionEnum) {
     GetRemoveSourceIdentifierFromSubscriptionActionEnum["RemoveSourceIdentifierFromSubscription"] = "RemoveSourceIdentifierFromSubscription";
-})(GetRemoveSourceIdentifierFromSubscriptionActionEnum || (GetRemoveSourceIdentifierFromSubscriptionActionEnum = {}));
-export var GetRemoveSourceIdentifierFromSubscriptionVersionEnum;
+})(GetRemoveSourceIdentifierFromSubscriptionActionEnum = exports.GetRemoveSourceIdentifierFromSubscriptionActionEnum || (exports.GetRemoveSourceIdentifierFromSubscriptionActionEnum = {}));
+var GetRemoveSourceIdentifierFromSubscriptionVersionEnum;
 (function (GetRemoveSourceIdentifierFromSubscriptionVersionEnum) {
     GetRemoveSourceIdentifierFromSubscriptionVersionEnum["TwoThousandAndThirteen0110"] = "2013-01-10";
-})(GetRemoveSourceIdentifierFromSubscriptionVersionEnum || (GetRemoveSourceIdentifierFromSubscriptionVersionEnum = {}));
+})(GetRemoveSourceIdentifierFromSubscriptionVersionEnum = exports.GetRemoveSourceIdentifierFromSubscriptionVersionEnum || (exports.GetRemoveSourceIdentifierFromSubscriptionVersionEnum = {}));
 var GetRemoveSourceIdentifierFromSubscriptionQueryParams = /** @class */ (function (_super) {
     __extends(GetRemoveSourceIdentifierFromSubscriptionQueryParams, _super);
     function GetRemoveSourceIdentifierFromSubscriptionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetRemoveSourceIdentifierFromSubscriptionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SourceIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SourceIdentifier" }),
         __metadata("design:type", String)
     ], GetRemoveSourceIdentifierFromSubscriptionQueryParams.prototype, "sourceIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SubscriptionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SubscriptionName" }),
         __metadata("design:type", String)
     ], GetRemoveSourceIdentifierFromSubscriptionQueryParams.prototype, "subscriptionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetRemoveSourceIdentifierFromSubscriptionQueryParams.prototype, "version", void 0);
     return GetRemoveSourceIdentifierFromSubscriptionQueryParams;
-}(SpeakeasyBase));
-export { GetRemoveSourceIdentifierFromSubscriptionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveSourceIdentifierFromSubscriptionQueryParams = GetRemoveSourceIdentifierFromSubscriptionQueryParams;
 var GetRemoveSourceIdentifierFromSubscriptionHeaders = /** @class */ (function (_super) {
     __extends(GetRemoveSourceIdentifierFromSubscriptionHeaders, _super);
     function GetRemoveSourceIdentifierFromSubscriptionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetRemoveSourceIdentifierFromSubscriptionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetRemoveSourceIdentifierFromSubscriptionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetRemoveSourceIdentifierFromSubscriptionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetRemoveSourceIdentifierFromSubscriptionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetRemoveSourceIdentifierFromSubscriptionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetRemoveSourceIdentifierFromSubscriptionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetRemoveSourceIdentifierFromSubscriptionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetRemoveSourceIdentifierFromSubscriptionHeaders;
-}(SpeakeasyBase));
-export { GetRemoveSourceIdentifierFromSubscriptionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveSourceIdentifierFromSubscriptionHeaders = GetRemoveSourceIdentifierFromSubscriptionHeaders;
 var GetRemoveSourceIdentifierFromSubscriptionRequest = /** @class */ (function (_super) {
     __extends(GetRemoveSourceIdentifierFromSubscriptionRequest, _super);
     function GetRemoveSourceIdentifierFromSubscriptionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRemoveSourceIdentifierFromSubscriptionQueryParams)
     ], GetRemoveSourceIdentifierFromSubscriptionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRemoveSourceIdentifierFromSubscriptionHeaders)
     ], GetRemoveSourceIdentifierFromSubscriptionRequest.prototype, "headers", void 0);
     return GetRemoveSourceIdentifierFromSubscriptionRequest;
-}(SpeakeasyBase));
-export { GetRemoveSourceIdentifierFromSubscriptionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveSourceIdentifierFromSubscriptionRequest = GetRemoveSourceIdentifierFromSubscriptionRequest;
 var GetRemoveSourceIdentifierFromSubscriptionResponse = /** @class */ (function (_super) {
     __extends(GetRemoveSourceIdentifierFromSubscriptionResponse, _super);
     function GetRemoveSourceIdentifierFromSubscriptionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetRemoveSourceIdentifierFromSubscriptionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRemoveSourceIdentifierFromSubscriptionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRemoveSourceIdentifierFromSubscriptionResponse.prototype, "statusCode", void 0);
     return GetRemoveSourceIdentifierFromSubscriptionResponse;
-}(SpeakeasyBase));
-export { GetRemoveSourceIdentifierFromSubscriptionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveSourceIdentifierFromSubscriptionResponse = GetRemoveSourceIdentifierFromSubscriptionResponse;

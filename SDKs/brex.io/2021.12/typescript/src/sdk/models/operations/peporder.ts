@@ -92,10 +92,10 @@ export class PepOrderResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  pepOrder200ApplicationJsonAny?: any;
+  pepOrder200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  pepOrderDefaultApplicationJsonAny?: any;
+  pepOrderDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

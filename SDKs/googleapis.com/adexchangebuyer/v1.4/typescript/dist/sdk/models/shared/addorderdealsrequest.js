@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MarketplaceDeal } from "./marketplacedeal";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddOrderDealsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var marketplacedeal_1 = require("./marketplacedeal");
 var AddOrderDealsRequest = /** @class */ (function (_super) {
     __extends(AddOrderDealsRequest, _super);
     function AddOrderDealsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deals", elemType: MarketplaceDeal }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deals", elemType: marketplacedeal_1.MarketplaceDeal }),
         __metadata("design:type", Array)
     ], AddOrderDealsRequest.prototype, "deals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proposalRevisionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proposalRevisionNumber" }),
         __metadata("design:type", String)
     ], AddOrderDealsRequest.prototype, "proposalRevisionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateAction" }),
         __metadata("design:type", String)
     ], AddOrderDealsRequest.prototype, "updateAction", void 0);
     return AddOrderDealsRequest;
-}(SpeakeasyBase));
-export { AddOrderDealsRequest };
+}(utils_1.SpeakeasyBase));
+exports.AddOrderDealsRequest = AddOrderDealsRequest;

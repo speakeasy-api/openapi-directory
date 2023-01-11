@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DirectConnectGatewayAttachment } from "./directconnectgatewayattachment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeDirectConnectGatewayAttachmentsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var directconnectgatewayattachment_1 = require("./directconnectgatewayattachment");
 var DescribeDirectConnectGatewayAttachmentsResult = /** @class */ (function (_super) {
     __extends(DescribeDirectConnectGatewayAttachmentsResult, _super);
     function DescribeDirectConnectGatewayAttachmentsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directConnectGatewayAttachments", elemType: DirectConnectGatewayAttachment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directConnectGatewayAttachments", elemType: directconnectgatewayattachment_1.DirectConnectGatewayAttachment }),
         __metadata("design:type", Array)
     ], DescribeDirectConnectGatewayAttachmentsResult.prototype, "directConnectGatewayAttachments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], DescribeDirectConnectGatewayAttachmentsResult.prototype, "nextToken", void 0);
     return DescribeDirectConnectGatewayAttachmentsResult;
-}(SpeakeasyBase));
-export { DescribeDirectConnectGatewayAttachmentsResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeDirectConnectGatewayAttachmentsResult = DescribeDirectConnectGatewayAttachmentsResult;

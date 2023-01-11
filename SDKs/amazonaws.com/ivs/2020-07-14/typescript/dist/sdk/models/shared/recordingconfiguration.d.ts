@@ -9,5 +9,5 @@ export declare class RecordingConfiguration extends SpeakeasyBase {
     destinationConfiguration: DestinationConfiguration;
     name?: string;
     state: RecordingConfigurationStateEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

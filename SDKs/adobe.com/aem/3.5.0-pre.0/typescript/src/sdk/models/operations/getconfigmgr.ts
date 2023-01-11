@@ -10,5 +10,5 @@ export class GetConfigMgrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getConfigMgr200TextXmlString?: string;
+  getConfigMgr200TextXMLString?: string;
 }

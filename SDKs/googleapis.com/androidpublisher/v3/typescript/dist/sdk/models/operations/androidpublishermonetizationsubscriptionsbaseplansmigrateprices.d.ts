@@ -30,6 +30,6 @@ export declare class AndroidpublisherMonetizationSubscriptionsBasePlansMigratePr
 }
 export declare class AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResponse extends SpeakeasyBase {
     contentType: string;
-    migrateBasePlanPricesResponse?: Map<string, any>;
+    migrateBasePlanPricesResponse?: Record<string, any>;
     statusCode: number;
 }

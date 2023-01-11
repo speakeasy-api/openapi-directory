@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DimensionRange } from "./dimensionrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DimensionGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimensionrange_1 = require("./dimensionrange");
 // DimensionGroup
 /**
  * A group over an interval of rows or columns on a sheet, which can contain or be contained within other groups. A group can be collapsed or expanded as a unit on the sheet.
@@ -34,17 +37,17 @@ var DimensionGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collapsed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collapsed" }),
         __metadata("design:type", Boolean)
     ], DimensionGroup.prototype, "collapsed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=depth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=depth" }),
         __metadata("design:type", Number)
     ], DimensionGroup.prototype, "depth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
-        __metadata("design:type", DimensionRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
+        __metadata("design:type", dimensionrange_1.DimensionRange)
     ], DimensionGroup.prototype, "range", void 0);
     return DimensionGroup;
-}(SpeakeasyBase));
-export { DimensionGroup };
+}(utils_1.SpeakeasyBase));
+exports.DimensionGroup = DimensionGroup;

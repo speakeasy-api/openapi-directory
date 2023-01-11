@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ConsumerMetadata } from "./consumermetadata";
 import { UnifiedApiIdEnum } from "./unifiedapiidenum";
+import { ConsumerMetadata } from "./consumermetadata";
 export declare class SessionSettings extends SpeakeasyBase {
     autoRedirect?: boolean;
     hideResourceSettings?: boolean;
@@ -23,7 +23,7 @@ export declare class SessionTheme extends SpeakeasyBase {
 }
 export declare class Session extends SpeakeasyBase {
     consumerMetadata?: ConsumerMetadata;
-    customConsumerSettings?: Map<string, any>;
+    customConsumerSettings?: Record<string, any>;
     redirectUri?: string;
     settings?: SessionSettings;
     theme?: SessionTheme;

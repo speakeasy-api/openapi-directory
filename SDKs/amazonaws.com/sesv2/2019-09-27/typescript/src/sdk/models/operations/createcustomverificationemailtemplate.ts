@@ -28,13 +28,13 @@ export class CreateCustomVerificationEmailTemplateHeaders extends SpeakeasyBase 
 
 export class CreateCustomVerificationEmailTemplateRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=FailureRedirectionURL" })
-  failureRedirectionUrl: string;
+  failureRedirectionURL: string;
 
   @SpeakeasyMetadata({ data: "json, name=FromEmailAddress" })
   fromEmailAddress: string;
 
   @SpeakeasyMetadata({ data: "json, name=SuccessRedirectionURL" })
-  successRedirectionUrl: string;
+  successRedirectionURL: string;
 
   @SpeakeasyMetadata({ data: "json, name=TemplateContent" })
   templateContent: string;
@@ -67,7 +67,7 @@ export class CreateCustomVerificationEmailTemplateResponse extends SpeakeasyBase
   contentType: string;
 
   @SpeakeasyMetadata()
-  createCustomVerificationEmailTemplateResponse?: Map<string, any>;
+  createCustomVerificationEmailTemplateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   limitExceededException?: any;

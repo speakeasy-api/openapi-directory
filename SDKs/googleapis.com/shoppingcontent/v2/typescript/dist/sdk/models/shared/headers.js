@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LocationIdSet } from "./locationidset";
-import { Price } from "./price";
-import { Weight } from "./weight";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Headers = void 0;
+var utils_1 = require("../../../internal/utils");
+var locationidset_1 = require("./locationidset");
+var price_1 = require("./price");
+var weight_1 = require("./weight");
 // Headers
 /**
  * A non-empty list of row or column headers for a table. Exactly one of `prices`, `weights`, `numItems`, `postalCodeGroupNames`, or `location` must be set.
@@ -36,25 +39,25 @@ var Headers = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locations", elemType: LocationIdSet }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locations", elemType: locationidset_1.LocationIdSet }),
         __metadata("design:type", Array)
     ], Headers.prototype, "locations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberOfItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberOfItems" }),
         __metadata("design:type", Array)
     ], Headers.prototype, "numberOfItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postalCodeGroupNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postalCodeGroupNames" }),
         __metadata("design:type", Array)
     ], Headers.prototype, "postalCodeGroupNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prices", elemType: Price }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prices", elemType: price_1.Price }),
         __metadata("design:type", Array)
     ], Headers.prototype, "prices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weights", elemType: Weight }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weights", elemType: weight_1.Weight }),
         __metadata("design:type", Array)
     ], Headers.prototype, "weights", void 0);
     return Headers;
-}(SpeakeasyBase));
-export { Headers };
+}(utils_1.SpeakeasyBase));
+exports.Headers = Headers;

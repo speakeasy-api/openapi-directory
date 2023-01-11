@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExtensionConfigurationResponse = exports.ExtensionConfigurationRequest = exports.ExtensionConfigurationHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var ExtensionConfigurationHeaders = /** @class */ (function (_super) {
     __extends(ExtensionConfigurationHeaders, _super);
     function ExtensionConfigurationHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Accept-Language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Accept-Language" }),
         __metadata("design:type", String)
     ], ExtensionConfigurationHeaders.prototype, "acceptLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Cache-Control" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Cache-Control" }),
         __metadata("design:type", String)
     ], ExtensionConfigurationHeaders.prototype, "cacheControl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-None-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-None-Match" }),
         __metadata("design:type", String)
     ], ExtensionConfigurationHeaders.prototype, "ifNoneMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Request-Timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Request-Timeout" }),
         __metadata("design:type", Number)
     ], ExtensionConfigurationHeaders.prototype, "requestTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=User-Agent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=User-Agent" }),
         __metadata("design:type", String)
     ], ExtensionConfigurationHeaders.prototype, "userAgent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-applecloudextension-retry-count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-applecloudextension-retry-count" }),
         __metadata("design:type", Number)
     ], ExtensionConfigurationHeaders.prototype, "xApplecloudextensionRetryCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-applecloudextension-session-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-applecloudextension-session-id" }),
         __metadata("design:type", String)
     ], ExtensionConfigurationHeaders.prototype, "xApplecloudextensionSessionId", void 0);
     return ExtensionConfigurationHeaders;
-}(SpeakeasyBase));
-export { ExtensionConfigurationHeaders };
+}(utils_1.SpeakeasyBase));
+exports.ExtensionConfigurationHeaders = ExtensionConfigurationHeaders;
 var ExtensionConfigurationRequest = /** @class */ (function (_super) {
     __extends(ExtensionConfigurationRequest, _super);
     function ExtensionConfigurationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ExtensionConfigurationHeaders)
     ], ExtensionConfigurationRequest.prototype, "headers", void 0);
     return ExtensionConfigurationRequest;
-}(SpeakeasyBase));
-export { ExtensionConfigurationRequest };
+}(utils_1.SpeakeasyBase));
+exports.ExtensionConfigurationRequest = ExtensionConfigurationRequest;
 var ExtensionConfigurationResponse = /** @class */ (function (_super) {
     __extends(ExtensionConfigurationResponse, _super);
     function ExtensionConfigurationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], ExtensionConfigurationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ExtensionConfigurationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ExtensionConfigurationResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ExtensionConfigurationResponse.prototype, "statusCode", void 0);
     return ExtensionConfigurationResponse;
-}(SpeakeasyBase));
-export { ExtensionConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.ExtensionConfigurationResponse = ExtensionConfigurationResponse;

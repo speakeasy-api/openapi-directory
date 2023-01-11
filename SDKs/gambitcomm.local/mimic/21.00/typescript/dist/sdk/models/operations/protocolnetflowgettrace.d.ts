@@ -7,7 +7,7 @@ export declare class ProtocolNetflowGetTraceRequest extends SpeakeasyBase {
     pathParams: ProtocolNetflowGetTracePathParams;
 }
 export declare class ProtocolNetflowGetTraceResponse extends SpeakeasyBase {
-    configNetflow?: shared.ConfigNetflow;
+    configNETFLOW?: shared.ConfigNetflow;
     contentType: string;
     statusCode: number;
 }

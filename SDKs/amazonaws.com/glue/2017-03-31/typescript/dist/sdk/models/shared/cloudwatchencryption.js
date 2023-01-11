@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudWatchEncryptionModeEnum } from "./cloudwatchencryptionmodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudWatchEncryption = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudwatchencryptionmodeenum_1 = require("./cloudwatchencryptionmodeenum");
 // CloudWatchEncryption
 /**
  * Specifies how Amazon CloudWatch data should be encrypted.
@@ -34,13 +37,13 @@ var CloudWatchEncryption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CloudWatchEncryptionMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CloudWatchEncryptionMode" }),
         __metadata("design:type", String)
     ], CloudWatchEncryption.prototype, "cloudWatchEncryptionMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KmsKeyArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KmsKeyArn" }),
         __metadata("design:type", String)
     ], CloudWatchEncryption.prototype, "kmsKeyArn", void 0);
     return CloudWatchEncryption;
-}(SpeakeasyBase));
-export { CloudWatchEncryption };
+}(utils_1.SpeakeasyBase));
+exports.CloudWatchEncryption = CloudWatchEncryption;

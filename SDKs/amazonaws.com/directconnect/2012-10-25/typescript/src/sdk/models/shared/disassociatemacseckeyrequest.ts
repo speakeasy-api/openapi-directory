@@ -7,5 +7,5 @@ export class DisassociateMacSecKeyRequest extends SpeakeasyBase {
   connectionId: string;
 
   @SpeakeasyMetadata({ data: "json, name=secretARN" })
-  secretArn: string;
+  secretARN: string;
 }

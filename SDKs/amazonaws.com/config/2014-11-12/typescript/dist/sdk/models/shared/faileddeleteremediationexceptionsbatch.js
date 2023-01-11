@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RemediationExceptionResourceKey } from "./remediationexceptionresourcekey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FailedDeleteRemediationExceptionsBatch = void 0;
+var utils_1 = require("../../../internal/utils");
+var remediationexceptionresourcekey_1 = require("./remediationexceptionresourcekey");
 // FailedDeleteRemediationExceptionsBatch
 /**
  * List of each of the failed delete remediation exceptions with specific reasons.
@@ -34,13 +37,13 @@ var FailedDeleteRemediationExceptionsBatch = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FailedItems", elemType: RemediationExceptionResourceKey }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FailedItems", elemType: remediationexceptionresourcekey_1.RemediationExceptionResourceKey }),
         __metadata("design:type", Array)
     ], FailedDeleteRemediationExceptionsBatch.prototype, "failedItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FailureMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FailureMessage" }),
         __metadata("design:type", String)
     ], FailedDeleteRemediationExceptionsBatch.prototype, "failureMessage", void 0);
     return FailedDeleteRemediationExceptionsBatch;
-}(SpeakeasyBase));
-export { FailedDeleteRemediationExceptionsBatch };
+}(utils_1.SpeakeasyBase));
+exports.FailedDeleteRemediationExceptionsBatch = FailedDeleteRemediationExceptionsBatch;

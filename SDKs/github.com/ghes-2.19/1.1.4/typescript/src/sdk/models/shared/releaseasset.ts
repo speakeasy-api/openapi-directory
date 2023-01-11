@@ -7,6 +7,10 @@ export enum ReleaseAssetStateEnum {
 }
 
 
+// ReleaseAssetSimpleUser
+/** 
+ * Simple User
+**/
 export class ReleaseAssetSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

@@ -63,5 +63,5 @@ export class StopCrawlerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  stopCrawlerResponse?: Map<string, any>;
+  stopCrawlerResponse?: Record<string, any>;
 }

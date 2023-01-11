@@ -44,5 +44,5 @@ export class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse extends S
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

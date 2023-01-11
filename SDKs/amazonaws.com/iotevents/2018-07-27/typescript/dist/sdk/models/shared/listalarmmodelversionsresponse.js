@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AlarmModelVersionSummary } from "./alarmmodelversionsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListAlarmModelVersionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var alarmmodelversionsummary_1 = require("./alarmmodelversionsummary");
 var ListAlarmModelVersionsResponse = /** @class */ (function (_super) {
     __extends(ListAlarmModelVersionsResponse, _super);
     function ListAlarmModelVersionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmModelVersionSummaries", elemType: AlarmModelVersionSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmModelVersionSummaries", elemType: alarmmodelversionsummary_1.AlarmModelVersionSummary }),
         __metadata("design:type", Array)
     ], ListAlarmModelVersionsResponse.prototype, "alarmModelVersionSummaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListAlarmModelVersionsResponse.prototype, "nextToken", void 0);
     return ListAlarmModelVersionsResponse;
-}(SpeakeasyBase));
-export { ListAlarmModelVersionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListAlarmModelVersionsResponse = ListAlarmModelVersionsResponse;

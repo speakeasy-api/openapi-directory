@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShipmentTrackingInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 var ShipmentTrackingInfo = /** @class */ (function (_super) {
     __extends(ShipmentTrackingInfo, _super);
     function ShipmentTrackingInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=carrier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=carrier" }),
         __metadata("design:type", String)
     ], ShipmentTrackingInfo.prototype, "carrier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trackingNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trackingNumber" }),
         __metadata("design:type", String)
     ], ShipmentTrackingInfo.prototype, "trackingNumber", void 0);
     return ShipmentTrackingInfo;
-}(SpeakeasyBase));
-export { ShipmentTrackingInfo };
+}(utils_1.SpeakeasyBase));
+exports.ShipmentTrackingInfo = ShipmentTrackingInfo;

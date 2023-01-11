@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UnsetValueResponse = exports.UnsetValueRequest = exports.UnsetValuePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UnsetValuePathParams = /** @class */ (function (_super) {
     __extends(UnsetValuePathParams, _super);
     function UnsetValuePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], UnsetValuePathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=instance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=instance" }),
         __metadata("design:type", String)
     ], UnsetValuePathParams.prototype, "instance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=object" }),
         __metadata("design:type", String)
     ], UnsetValuePathParams.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=variable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=variable" }),
         __metadata("design:type", String)
     ], UnsetValuePathParams.prototype, "variable", void 0);
     return UnsetValuePathParams;
-}(SpeakeasyBase));
-export { UnsetValuePathParams };
+}(utils_1.SpeakeasyBase));
+exports.UnsetValuePathParams = UnsetValuePathParams;
 var UnsetValueRequest = /** @class */ (function (_super) {
     __extends(UnsetValueRequest, _super);
     function UnsetValueRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UnsetValuePathParams)
     ], UnsetValueRequest.prototype, "pathParams", void 0);
     return UnsetValueRequest;
-}(SpeakeasyBase));
-export { UnsetValueRequest };
+}(utils_1.SpeakeasyBase));
+exports.UnsetValueRequest = UnsetValueRequest;
 var UnsetValueResponse = /** @class */ (function (_super) {
     __extends(UnsetValueResponse, _super);
     function UnsetValueResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UnsetValueResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UnsetValueResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], UnsetValueResponse.prototype, "unsetValue200ApplicationJsonString", void 0);
+    ], UnsetValueResponse.prototype, "unsetValue200ApplicationJSONString", void 0);
     return UnsetValueResponse;
-}(SpeakeasyBase));
-export { UnsetValueResponse };
+}(utils_1.SpeakeasyBase));
+exports.UnsetValueResponse = UnsetValueResponse;

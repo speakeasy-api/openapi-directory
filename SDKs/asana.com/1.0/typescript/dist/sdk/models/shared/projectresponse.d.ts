@@ -28,6 +28,9 @@ export declare enum ProjectResponseCurrentStatusColorEnum {
     Red = "red",
     Blue = "blue"
 }
+/**
+ * A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: "green" for projects that are on track, "yellow" for projects at risk, and "red" for projects that are behind.
+**/
 export declare class ProjectResponseCurrentStatus extends SpeakeasyBase {
     author?: UserCompact;
     color: ProjectResponseCurrentStatusColorEnum;
@@ -81,23 +84,32 @@ export declare enum ProjectResponseIconEnum {
     Coins = "coins"
 }
 /**
- * The current owner of the project, may be null.
+ * A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.
 **/
 export declare class ProjectResponseOwner extends SpeakeasyBase {
     gid?: string;
     name?: string;
     resourceType?: string;
 }
+/**
+ * *Create-only*. The team that this project is shared with. This field only exists for projects in organizations.
+**/
 export declare class ProjectResponseTeam extends SpeakeasyBase {
     gid?: string;
     name?: string;
     resourceType?: string;
 }
+/**
+ * *Create-only*. The workspace or organization this project is associated with. Once created, projects cannot be moved to a different workspace. This attribute can only be specified at creation time.
+**/
 export declare class ProjectResponseWorkspace extends SpeakeasyBase {
     gid?: string;
     name?: string;
     resourceType?: string;
 }
+/**
+ * A *project* represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.
+**/
 export declare class ProjectResponse extends SpeakeasyBase {
     archived?: boolean;
     color?: ProjectResponseColorEnum;

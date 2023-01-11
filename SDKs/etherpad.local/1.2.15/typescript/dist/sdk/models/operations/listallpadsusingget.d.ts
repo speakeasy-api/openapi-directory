@@ -9,24 +9,24 @@ export declare class ListAllPadsUsingGet200ApplicationJson extends SpeakeasyBase
 }
 export declare class ListAllPadsUsingGet400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class ListAllPadsUsingGet401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class ListAllPadsUsingGet500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class ListAllPadsUsingGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listAllPadsUsingGet200ApplicationJsonObject?: ListAllPadsUsingGet200ApplicationJson;
-    listAllPadsUsingGet400ApplicationJsonObject?: ListAllPadsUsingGet400ApplicationJson;
-    listAllPadsUsingGet401ApplicationJsonObject?: ListAllPadsUsingGet401ApplicationJson;
-    listAllPadsUsingGet500ApplicationJsonObject?: ListAllPadsUsingGet500ApplicationJson;
+    listAllPadsUsingGET200ApplicationJSONObject?: ListAllPadsUsingGet200ApplicationJson;
+    listAllPadsUsingGET400ApplicationJSONObject?: ListAllPadsUsingGet400ApplicationJson;
+    listAllPadsUsingGET401ApplicationJSONObject?: ListAllPadsUsingGet401ApplicationJson;
+    listAllPadsUsingGET500ApplicationJSONObject?: ListAllPadsUsingGet500ApplicationJson;
 }

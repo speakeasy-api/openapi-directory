@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteV3BoardsBoardIdCommentsCommentIdResponse = exports.DeleteV3BoardsBoardIdCommentsCommentIdRequest = exports.DeleteV3BoardsBoardIdCommentsCommentIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteV3BoardsBoardIdCommentsCommentIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteV3BoardsBoardIdCommentsCommentIdPathParams, _super);
     function DeleteV3BoardsBoardIdCommentsCommentIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=board_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=board_id" }),
         __metadata("design:type", String)
     ], DeleteV3BoardsBoardIdCommentsCommentIdPathParams.prototype, "boardId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=comment_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=comment_id" }),
         __metadata("design:type", String)
     ], DeleteV3BoardsBoardIdCommentsCommentIdPathParams.prototype, "commentId", void 0);
     return DeleteV3BoardsBoardIdCommentsCommentIdPathParams;
-}(SpeakeasyBase));
-export { DeleteV3BoardsBoardIdCommentsCommentIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteV3BoardsBoardIdCommentsCommentIdPathParams = DeleteV3BoardsBoardIdCommentsCommentIdPathParams;
 var DeleteV3BoardsBoardIdCommentsCommentIdRequest = /** @class */ (function (_super) {
     __extends(DeleteV3BoardsBoardIdCommentsCommentIdRequest, _super);
     function DeleteV3BoardsBoardIdCommentsCommentIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteV3BoardsBoardIdCommentsCommentIdPathParams)
     ], DeleteV3BoardsBoardIdCommentsCommentIdRequest.prototype, "pathParams", void 0);
     return DeleteV3BoardsBoardIdCommentsCommentIdRequest;
-}(SpeakeasyBase));
-export { DeleteV3BoardsBoardIdCommentsCommentIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteV3BoardsBoardIdCommentsCommentIdRequest = DeleteV3BoardsBoardIdCommentsCommentIdRequest;
 var DeleteV3BoardsBoardIdCommentsCommentIdResponse = /** @class */ (function (_super) {
     __extends(DeleteV3BoardsBoardIdCommentsCommentIdResponse, _super);
     function DeleteV3BoardsBoardIdCommentsCommentIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteV3BoardsBoardIdCommentsCommentIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteV3BoardsBoardIdCommentsCommentIdResponse.prototype, "statusCode", void 0);
     return DeleteV3BoardsBoardIdCommentsCommentIdResponse;
-}(SpeakeasyBase));
-export { DeleteV3BoardsBoardIdCommentsCommentIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteV3BoardsBoardIdCommentsCommentIdResponse = DeleteV3BoardsBoardIdCommentsCommentIdResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,39 +23,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChangeRequest = exports.ChangeRequestStatusEnum = exports.ChangeRequestChanges = exports.ChangeRequestChangesRules = void 0;
+var utils_1 = require("../../../internal/utils");
 var ChangeRequestChangesRules = /** @class */ (function (_super) {
     __extends(ChangeRequestChangesRules, _super);
     function ChangeRequestChangesRules() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], ChangeRequestChangesRules.prototype, "action", void 0);
     return ChangeRequestChangesRules;
-}(SpeakeasyBase));
-export { ChangeRequestChangesRules };
+}(utils_1.SpeakeasyBase));
+exports.ChangeRequestChangesRules = ChangeRequestChangesRules;
 var ChangeRequestChanges = /** @class */ (function (_super) {
     __extends(ChangeRequestChanges, _super);
     function ChangeRequestChanges() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: ChangeRequestChangesRules }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: ChangeRequestChangesRules }),
         __metadata("design:type", Array)
     ], ChangeRequestChanges.prototype, "rules", void 0);
     return ChangeRequestChanges;
-}(SpeakeasyBase));
-export { ChangeRequestChanges };
-export var ChangeRequestStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.ChangeRequestChanges = ChangeRequestChanges;
+var ChangeRequestStatusEnum;
 (function (ChangeRequestStatusEnum) {
     ChangeRequestStatusEnum["Deployed"] = "Deployed";
     ChangeRequestStatusEnum["PendingDeployment"] = "Pending deployment";
     ChangeRequestStatusEnum["Cancelled"] = "Cancelled";
     ChangeRequestStatusEnum["PendingValidation"] = "Pending validation";
     ChangeRequestStatusEnum["Open"] = "Open";
-})(ChangeRequestStatusEnum || (ChangeRequestStatusEnum = {}));
+})(ChangeRequestStatusEnum = exports.ChangeRequestStatusEnum || (exports.ChangeRequestStatusEnum = {}));
 // ChangeRequest
 /**
  * Content of the change request
@@ -65,33 +68,33 @@ var ChangeRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acceptable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acceptable" }),
         __metadata("design:type", Boolean)
     ], ChangeRequest.prototype, "acceptable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=changes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=changes" }),
         __metadata("design:type", ChangeRequestChanges)
     ], ChangeRequest.prototype, "changes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created by" }),
         __metadata("design:type", String)
     ], ChangeRequest.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ChangeRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ChangeRequest.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ChangeRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ChangeRequest.prototype, "status", void 0);
     return ChangeRequest;
-}(SpeakeasyBase));
-export { ChangeRequest };
+}(utils_1.SpeakeasyBase));
+exports.ChangeRequest = ChangeRequest;

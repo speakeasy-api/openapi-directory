@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayerDetailsByPlayerFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerDetailsByPlayerResponse = exports.PlayerDetailsByPlayerRequest = exports.PlayerDetailsByPlayerPathParams = exports.PlayerDetailsByPlayerFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayerDetailsByPlayerFormatEnum;
 (function (PlayerDetailsByPlayerFormatEnum) {
     PlayerDetailsByPlayerFormatEnum["Xml"] = "XML";
     PlayerDetailsByPlayerFormatEnum["Json"] = "JSON";
-})(PlayerDetailsByPlayerFormatEnum || (PlayerDetailsByPlayerFormatEnum = {}));
+})(PlayerDetailsByPlayerFormatEnum = exports.PlayerDetailsByPlayerFormatEnum || (exports.PlayerDetailsByPlayerFormatEnum = {}));
 var PlayerDetailsByPlayerPathParams = /** @class */ (function (_super) {
     __extends(PlayerDetailsByPlayerPathParams, _super);
     function PlayerDetailsByPlayerPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayerDetailsByPlayerPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=playerid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=playerid" }),
         __metadata("design:type", String)
     ], PlayerDetailsByPlayerPathParams.prototype, "playerid", void 0);
     return PlayerDetailsByPlayerPathParams;
-}(SpeakeasyBase));
-export { PlayerDetailsByPlayerPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayerDetailsByPlayerPathParams = PlayerDetailsByPlayerPathParams;
 var PlayerDetailsByPlayerRequest = /** @class */ (function (_super) {
     __extends(PlayerDetailsByPlayerRequest, _super);
     function PlayerDetailsByPlayerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayerDetailsByPlayerPathParams)
     ], PlayerDetailsByPlayerRequest.prototype, "pathParams", void 0);
     return PlayerDetailsByPlayerRequest;
-}(SpeakeasyBase));
-export { PlayerDetailsByPlayerRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayerDetailsByPlayerRequest = PlayerDetailsByPlayerRequest;
 var PlayerDetailsByPlayerResponse = /** @class */ (function (_super) {
     __extends(PlayerDetailsByPlayerResponse, _super);
     function PlayerDetailsByPlayerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayerDetailsByPlayerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayerDetailsByPlayerResponse.prototype, "players", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayerDetailsByPlayerResponse.prototype, "statusCode", void 0);
     return PlayerDetailsByPlayerResponse;
-}(SpeakeasyBase));
-export { PlayerDetailsByPlayerResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerDetailsByPlayerResponse = PlayerDetailsByPlayerResponse;

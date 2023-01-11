@@ -18,7 +18,7 @@ export declare enum MediaTypeEnum {
  * The `Media` object contains a reference for most any media associated with a team or event on TBA.
 **/
 export declare class Media extends SpeakeasyBase {
-    details?: Map<string, any>;
+    details?: Record<string, any>;
     directUrl?: string;
     foreignKey: string;
     preferred?: boolean;

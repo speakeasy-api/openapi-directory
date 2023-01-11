@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateClusterRequest, CreateClusterResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,46 +33,47 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateClusterRequest = {
   headers: {
-    xAmzAlgorithm: "incidunt",
-    xAmzContentSha256: "inventore",
-    xAmzCredential: "voluptatem",
-    xAmzDate: "voluptates",
-    xAmzSecurityToken: "quisquam",
-    xAmzSignature: "architecto",
-    xAmzSignedHeaders: "sunt",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AmazonDAXV3.CreateCluster",
   },
   request: {
     availabilityZones: [
-      "ut",
       "et",
     ],
-    clusterEndpointEncryptionType: "TLS",
-    clusterName: "et",
-    description: "ipsam",
-    iamRoleArn: "magni",
-    nodeType: "et",
-    notificationTopicArn: "inventore",
-    parameterGroupName: "impedit",
-    preferredMaintenanceWindow: "molestiae",
-    replicationFactor: 8112620927975136660,
+    clusterEndpointEncryptionType: "NONE",
+    clusterName: "rerum",
+    description: "dicta",
+    iamRoleArn: "debitis",
+    nodeType: "voluptatum",
+    notificationTopicArn: "et",
+    parameterGroupName: "ut",
+    preferredMaintenanceWindow: "dolorem",
+    replicationFactor: 7259475919510918339,
     sseSpecification: {
-      enabled: true,
+      enabled: false,
     },
     securityGroupIds: [
-      "repellendus",
+      "vitae",
+      "totam",
+      "dolores",
     ],
-    subnetGroupName: "molestias",
+    subnetGroupName: "illum",
     tags: [
       {
-        key: "quia",
-        value: "ipsa",
+        key: "vel",
+        value: "odio",
       },
     ],
   },
 };
 
-sdk.sdk.createCluster(req).then((res: CreateClusterResponse | AxiosError) => {
+sdk.createCluster(req).then((res: CreateClusterResponse | AxiosError) => {
    // handle response
 });
 ```

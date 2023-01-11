@@ -44,7 +44,7 @@ export class CreateDashboardRequestBody extends SpeakeasyBase {
   projectId: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

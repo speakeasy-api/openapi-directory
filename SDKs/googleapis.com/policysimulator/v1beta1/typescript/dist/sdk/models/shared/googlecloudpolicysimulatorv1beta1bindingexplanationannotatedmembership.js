@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipMembershipEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembership = exports.GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipRelevanceEnum = exports.GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipMembershipEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipMembershipEnum;
 (function (GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipMembershipEnum) {
     GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipMembershipEnum["MembershipUnspecified"] = "MEMBERSHIP_UNSPECIFIED";
     GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipMembershipEnum["MembershipIncluded"] = "MEMBERSHIP_INCLUDED";
     GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipMembershipEnum["MembershipNotIncluded"] = "MEMBERSHIP_NOT_INCLUDED";
     GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipMembershipEnum["MembershipUnknownInfoDenied"] = "MEMBERSHIP_UNKNOWN_INFO_DENIED";
     GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipMembershipEnum["MembershipUnknownUnsupported"] = "MEMBERSHIP_UNKNOWN_UNSUPPORTED";
-})(GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipMembershipEnum || (GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipMembershipEnum = {}));
-export var GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipRelevanceEnum;
+})(GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipMembershipEnum = exports.GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipMembershipEnum || (exports.GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipMembershipEnum = {}));
+var GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipRelevanceEnum;
 (function (GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipRelevanceEnum) {
     GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipRelevanceEnum["HeuristicRelevanceUnspecified"] = "HEURISTIC_RELEVANCE_UNSPECIFIED";
     GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipRelevanceEnum["Normal"] = "NORMAL";
     GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipRelevanceEnum["High"] = "HIGH";
-})(GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipRelevanceEnum || (GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipRelevanceEnum = {}));
-// GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembership
-/**
- * Details about whether the binding includes the principal.
-**/
+})(GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipRelevanceEnum = exports.GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipRelevanceEnum || (exports.GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembershipRelevanceEnum = {}));
 var GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembership = /** @class */ (function (_super) {
     __extends(GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembership, _super);
     function GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembership() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membership" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membership" }),
         __metadata("design:type", String)
     ], GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembership.prototype, "membership", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relevance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relevance" }),
         __metadata("design:type", String)
     ], GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembership.prototype, "relevance", void 0);
     return GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembership;
-}(SpeakeasyBase));
-export { GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembership };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembership = GoogleCloudPolicysimulatorV1beta1BindingExplanationAnnotatedMembership;

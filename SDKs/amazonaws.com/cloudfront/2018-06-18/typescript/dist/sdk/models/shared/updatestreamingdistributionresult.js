@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StreamingDistribution } from "./streamingdistribution";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateStreamingDistributionResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var streamingdistribution_1 = require("./streamingdistribution");
 // UpdateStreamingDistributionResult
 /**
  * The returned result of the corresponding request.
@@ -34,9 +37,9 @@ var UpdateStreamingDistributionResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", StreamingDistribution)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", streamingdistribution_1.StreamingDistribution)
     ], UpdateStreamingDistributionResult.prototype, "streamingDistribution", void 0);
     return UpdateStreamingDistributionResult;
-}(SpeakeasyBase));
-export { UpdateStreamingDistributionResult };
+}(utils_1.SpeakeasyBase));
+exports.UpdateStreamingDistributionResult = UpdateStreamingDistributionResult;

@@ -52,7 +52,7 @@ export declare class CreateConfigurationSetResponse extends SpeakeasyBase {
     badRequestException?: any;
     concurrentModificationException?: any;
     contentType: string;
-    createConfigurationSetResponse?: Map<string, any>;
+    createConfigurationSetResponse?: Record<string, any>;
     limitExceededException?: any;
     notFoundException?: any;
     statusCode: number;

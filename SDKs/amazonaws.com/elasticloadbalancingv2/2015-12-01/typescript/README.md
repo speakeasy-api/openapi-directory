@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetDeleteListenerRequest, GetDeleteListenerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -35,21 +34,21 @@ const sdk = new SDK(WithSecurity(
 const req: GetDeleteListenerRequest = {
   queryParams: {
     action: "DeleteListener",
-    listenerArn: "soluta",
+    listenerArn: "voluptas",
     version: "2015-12-01",
   },
   headers: {
-    xAmzAlgorithm: "ullam",
-    xAmzContentSha256: "et",
-    xAmzCredential: "rerum",
-    xAmzDate: "est",
-    xAmzSecurityToken: "neque",
-    xAmzSignature: "dolor",
-    xAmzSignedHeaders: "nobis",
+    xAmzAlgorithm: "expedita",
+    xAmzContentSha256: "consequuntur",
+    xAmzCredential: "dolor",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "voluptas",
+    xAmzSignature: "fugit",
+    xAmzSignedHeaders: "et",
   },
 };
 
-sdk.sdk.getDeleteListener(req).then((res: GetDeleteListenerResponse | AxiosError) => {
+sdk.getDeleteListener(req).then((res: GetDeleteListenerResponse | AxiosError) => {
    // handle response
 });
 ```

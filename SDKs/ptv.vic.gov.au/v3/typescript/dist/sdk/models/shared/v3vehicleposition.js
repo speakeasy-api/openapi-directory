@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3VehiclePosition = void 0;
+var utils_1 = require("../../../internal/utils");
 var V3VehiclePosition = /** @class */ (function (_super) {
     __extends(V3VehiclePosition, _super);
     function V3VehiclePosition() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bearing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bearing" }),
         __metadata("design:type", Number)
     ], V3VehiclePosition.prototype, "bearing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datetime_utc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datetime_utc" }),
         __metadata("design:type", Date)
     ], V3VehiclePosition.prototype, "datetimeUtc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=direction" }),
         __metadata("design:type", String)
     ], V3VehiclePosition.prototype, "direction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=easting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=easting" }),
         __metadata("design:type", Number)
     ], V3VehiclePosition.prototype, "easting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiry_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiry_time" }),
         __metadata("design:type", Date)
     ], V3VehiclePosition.prototype, "expiryTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], V3VehiclePosition.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], V3VehiclePosition.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=northing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=northing" }),
         __metadata("design:type", Number)
     ], V3VehiclePosition.prototype, "northing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supplier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supplier" }),
         __metadata("design:type", String)
     ], V3VehiclePosition.prototype, "supplier", void 0);
     return V3VehiclePosition;
-}(SpeakeasyBase));
-export { V3VehiclePosition };
+}(utils_1.SpeakeasyBase));
+exports.V3VehiclePosition = V3VehiclePosition;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StatefulRuleGroupReference } from "./statefulrulegroupreference";
-import { CustomAction } from "./customaction";
-import { StatelessRuleGroupReference } from "./statelessrulegroupreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FirewallPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var statefulrulegroupreference_1 = require("./statefulrulegroupreference");
+var customaction_1 = require("./customaction");
+var statelessrulegroupreference_1 = require("./statelessrulegroupreference");
 // FirewallPolicy
 /**
  * <p>The firewall policy defines the behavior of a firewall using a collection of stateless and stateful rule groups and other settings. You can use one firewall policy for multiple firewalls. </p> <p>This, along with <a>FirewallPolicyResponse</a>, define the policy. You can retrieve all objects for a firewall policy by calling <a>DescribeFirewallPolicy</a>.</p>
@@ -36,25 +39,25 @@ var FirewallPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatefulRuleGroupReferences", elemType: StatefulRuleGroupReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatefulRuleGroupReferences", elemType: statefulrulegroupreference_1.StatefulRuleGroupReference }),
         __metadata("design:type", Array)
     ], FirewallPolicy.prototype, "statefulRuleGroupReferences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatelessCustomActions", elemType: CustomAction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatelessCustomActions", elemType: customaction_1.CustomAction }),
         __metadata("design:type", Array)
     ], FirewallPolicy.prototype, "statelessCustomActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatelessDefaultActions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatelessDefaultActions" }),
         __metadata("design:type", Array)
     ], FirewallPolicy.prototype, "statelessDefaultActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatelessFragmentDefaultActions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatelessFragmentDefaultActions" }),
         __metadata("design:type", Array)
     ], FirewallPolicy.prototype, "statelessFragmentDefaultActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatelessRuleGroupReferences", elemType: StatelessRuleGroupReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatelessRuleGroupReferences", elemType: statelessrulegroupreference_1.StatelessRuleGroupReference }),
         __metadata("design:type", Array)
     ], FirewallPolicy.prototype, "statelessRuleGroupReferences", void 0);
     return FirewallPolicy;
-}(SpeakeasyBase));
-export { FirewallPolicy };
+}(utils_1.SpeakeasyBase));
+exports.FirewallPolicy = FirewallPolicy;

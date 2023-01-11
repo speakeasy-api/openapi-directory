@@ -16,7 +16,7 @@ export declare class GetUntaggedImageCountRequest extends SpeakeasyBase {
 export declare class GetUntaggedImageCountResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    getUntaggedImageCount200ApplicationJsonInt32Integer?: number;
-    getUntaggedImageCount200TextJsonInt32Integer?: number;
+    getUntaggedImageCount200ApplicationJSONInt32Integer?: number;
+    getUntaggedImageCount200TextJSONInt32Integer?: number;
     statusCode: number;
 }

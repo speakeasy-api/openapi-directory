@@ -4,16 +4,16 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class ListSessionsOfGroupUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=groupID" })
-  groupId?: string;
+  groupID?: string;
 }
 
 
 export class ListSessionsOfGroupUsingGet200ApplicationJsonDataSessions extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=authorID" })
-  authorId?: string;
+  authorID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=groupID" })
-  groupId?: string;
+  groupID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
@@ -46,7 +46,7 @@ export class ListSessionsOfGroupUsingGet400ApplicationJson extends SpeakeasyBase
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,7 +58,7 @@ export class ListSessionsOfGroupUsingGet401ApplicationJson extends SpeakeasyBase
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,7 +70,7 @@ export class ListSessionsOfGroupUsingGet500ApplicationJson extends SpeakeasyBase
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -91,14 +91,14 @@ export class ListSessionsOfGroupUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listSessionsOfGroupUsingGet200ApplicationJsonObject?: ListSessionsOfGroupUsingGet200ApplicationJson;
+  listSessionsOfGroupUsingGET200ApplicationJSONObject?: ListSessionsOfGroupUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  listSessionsOfGroupUsingGet400ApplicationJsonObject?: ListSessionsOfGroupUsingGet400ApplicationJson;
+  listSessionsOfGroupUsingGET400ApplicationJSONObject?: ListSessionsOfGroupUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  listSessionsOfGroupUsingGet401ApplicationJsonObject?: ListSessionsOfGroupUsingGet401ApplicationJson;
+  listSessionsOfGroupUsingGET401ApplicationJSONObject?: ListSessionsOfGroupUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  listSessionsOfGroupUsingGet500ApplicationJsonObject?: ListSessionsOfGroupUsingGet500ApplicationJson;
+  listSessionsOfGroupUsingGET500ApplicationJSONObject?: ListSessionsOfGroupUsingGet500ApplicationJson;
 }

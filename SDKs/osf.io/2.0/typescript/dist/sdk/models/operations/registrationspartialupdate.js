@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistrationsPartialUpdateResponse = exports.RegistrationsPartialUpdateRequest = exports.RegistrationsPartialUpdatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RegistrationsPartialUpdatePathParams = /** @class */ (function (_super) {
     __extends(RegistrationsPartialUpdatePathParams, _super);
     function RegistrationsPartialUpdatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=registration_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=registration_id" }),
         __metadata("design:type", String)
     ], RegistrationsPartialUpdatePathParams.prototype, "registrationId", void 0);
     return RegistrationsPartialUpdatePathParams;
-}(SpeakeasyBase));
-export { RegistrationsPartialUpdatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistrationsPartialUpdatePathParams = RegistrationsPartialUpdatePathParams;
 var RegistrationsPartialUpdateRequest = /** @class */ (function (_super) {
     __extends(RegistrationsPartialUpdateRequest, _super);
     function RegistrationsPartialUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistrationsPartialUpdatePathParams)
     ], RegistrationsPartialUpdateRequest.prototype, "pathParams", void 0);
     return RegistrationsPartialUpdateRequest;
-}(SpeakeasyBase));
-export { RegistrationsPartialUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegistrationsPartialUpdateRequest = RegistrationsPartialUpdateRequest;
 var RegistrationsPartialUpdateResponse = /** @class */ (function (_super) {
     __extends(RegistrationsPartialUpdateResponse, _super);
     function RegistrationsPartialUpdateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RegistrationsPartialUpdateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RegistrationsPartialUpdateResponse.prototype, "statusCode", void 0);
     return RegistrationsPartialUpdateResponse;
-}(SpeakeasyBase));
-export { RegistrationsPartialUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.RegistrationsPartialUpdateResponse = RegistrationsPartialUpdateResponse;

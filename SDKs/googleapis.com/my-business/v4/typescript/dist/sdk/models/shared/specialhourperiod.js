@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Date } from "./date";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SpecialHourPeriod = void 0;
+var utils_1 = require("../../../internal/utils");
+var date_1 = require("./date");
 // SpecialHourPeriod
 /**
  * Represents a single time period when a location's operational hours differ from its normal business hours. A special hour period must represent a range of less than 24 hours. The `open_time` and `start_date` must predate the `close_time` and `end_date`. The `close_time` and `end_date` can extend to 11:59 a.m. on the day after the specified `start_date`. For example, the following inputs are valid: start_date=2015-11-23, open_time=08:00, close_time=18:00 start_date=2015-11-23, end_date=2015-11-23, open_time=08:00, close_time=18:00 start_date=2015-11-23, end_date=2015-11-24, open_time=13:00, close_time=11:59 The following inputs are not valid: start_date=2015-11-23, open_time=13:00, close_time=11:59 start_date=2015-11-23, end_date=2015-11-24, open_time=13:00, close_time=12:00 start_date=2015-11-23, end_date=2015-11-25, open_time=08:00, close_time=18:00
@@ -34,25 +37,25 @@ var SpecialHourPeriod = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=closeTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=closeTime" }),
         __metadata("design:type", String)
     ], SpecialHourPeriod.prototype, "closeTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
+        __metadata("design:type", date_1.Date)
     ], SpecialHourPeriod.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isClosed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isClosed" }),
         __metadata("design:type", Boolean)
     ], SpecialHourPeriod.prototype, "isClosed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=openTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openTime" }),
         __metadata("design:type", String)
     ], SpecialHourPeriod.prototype, "openTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
+        __metadata("design:type", date_1.Date)
     ], SpecialHourPeriod.prototype, "startDate", void 0);
     return SpecialHourPeriod;
-}(SpeakeasyBase));
-export { SpecialHourPeriod };
+}(utils_1.SpeakeasyBase));
+exports.SpecialHourPeriod = SpecialHourPeriod;

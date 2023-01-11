@@ -44,7 +44,7 @@ export class GetTeamMediaByTagYearResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata({ elemType: shared.Media })
   media?: shared.Media[];

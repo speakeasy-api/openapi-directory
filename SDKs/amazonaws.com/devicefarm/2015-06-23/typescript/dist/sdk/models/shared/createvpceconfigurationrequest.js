@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateVpceConfigurationRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateVpceConfigurationRequest = /** @class */ (function (_super) {
     __extends(CreateVpceConfigurationRequest, _super);
     function CreateVpceConfigurationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceDnsName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceDnsName" }),
         __metadata("design:type", String)
     ], CreateVpceConfigurationRequest.prototype, "serviceDnsName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpceConfigurationDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpceConfigurationDescription" }),
         __metadata("design:type", String)
     ], CreateVpceConfigurationRequest.prototype, "vpceConfigurationDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpceConfigurationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpceConfigurationName" }),
         __metadata("design:type", String)
     ], CreateVpceConfigurationRequest.prototype, "vpceConfigurationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpceServiceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpceServiceName" }),
         __metadata("design:type", String)
     ], CreateVpceConfigurationRequest.prototype, "vpceServiceName", void 0);
     return CreateVpceConfigurationRequest;
-}(SpeakeasyBase));
-export { CreateVpceConfigurationRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateVpceConfigurationRequest = CreateVpceConfigurationRequest;

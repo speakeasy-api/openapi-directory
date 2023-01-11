@@ -53,5 +53,5 @@ export class GetSnippetsWorkspaceEncodedIdRevisionDiffResponse extends Speakeasy
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

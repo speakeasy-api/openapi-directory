@@ -4,9 +4,9 @@ import { PortForwardingConfig } from "./portforwardingconfig";
  * Information about a launch configuration.
 **/
 export declare class LaunchConfig extends SpeakeasyBase {
-    environmentVariables?: Map<string, string>;
+    environmentVariables?: Record<string, string>;
     launchFile: string;
     packageName: string;
     portForwardingConfig?: PortForwardingConfig;
-    streamUi?: boolean;
+    streamUI?: boolean;
 }

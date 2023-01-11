@@ -6,6 +6,6 @@ export declare class Http extends SpeakeasyBase {
     clientIp?: string;
     httpMethod?: string;
     httpStatus?: number;
-    httpUrl?: string;
+    httpURL?: string;
     userAgent?: string;
 }

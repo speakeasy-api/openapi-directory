@@ -12,12 +12,12 @@ export declare class PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildS
 }
 export declare class PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildRequest extends SpeakeasyBase {
     pathParams: PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildPathParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildSecurity;
 }
 export declare class PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    commitstatus?: Map<string, any>;
-    error?: Map<string, any>;
+    commitstatus?: Record<string, any>;
+    error?: Record<string, any>;
 }

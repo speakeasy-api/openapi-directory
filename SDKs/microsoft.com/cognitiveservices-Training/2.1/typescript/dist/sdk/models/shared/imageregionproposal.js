@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RegionProposal } from "./regionproposal";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageRegionProposal = void 0;
+var utils_1 = require("../../../internal/utils");
+var regionproposal_1 = require("./regionproposal");
 var ImageRegionProposal = /** @class */ (function (_super) {
     __extends(ImageRegionProposal, _super);
     function ImageRegionProposal() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageId" }),
         __metadata("design:type", String)
     ], ImageRegionProposal.prototype, "imageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
         __metadata("design:type", String)
     ], ImageRegionProposal.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proposals", elemType: RegionProposal }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proposals", elemType: regionproposal_1.RegionProposal }),
         __metadata("design:type", Array)
     ], ImageRegionProposal.prototype, "proposals", void 0);
     return ImageRegionProposal;
-}(SpeakeasyBase));
-export { ImageRegionProposal };
+}(utils_1.SpeakeasyBase));
+exports.ImageRegionProposal = ImageRegionProposal;

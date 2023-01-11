@@ -49,7 +49,7 @@ export enum UpdateAnswerRequestBodyReasonEnum {
 
 export class UpdateAnswerRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ChoiceUpdates", elemType: shared.ChoiceUpdate })
-  choiceUpdates?: Map<string, shared.ChoiceUpdate>;
+  choiceUpdates?: Record<string, shared.ChoiceUpdate>;
 
   @SpeakeasyMetadata({ data: "json, name=IsApplicable" })
   isApplicable?: boolean;

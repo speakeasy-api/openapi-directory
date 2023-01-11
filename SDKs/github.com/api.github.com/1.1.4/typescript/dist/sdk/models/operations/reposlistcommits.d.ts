@@ -21,7 +21,7 @@ export declare class ReposListCommitsRequest extends SpeakeasyBase {
 }
 export declare class ReposListCommitsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     commits?: shared.Commit[];

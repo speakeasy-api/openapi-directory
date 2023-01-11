@@ -11,7 +11,7 @@ export class LandlordControllerGetTenancyPathParams extends SpeakeasyBase {
 
 export class LandlordControllerGetTenancyQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenancyID" })
-  tenancyId: string;
+  tenancyID: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=token" })
   token: string;

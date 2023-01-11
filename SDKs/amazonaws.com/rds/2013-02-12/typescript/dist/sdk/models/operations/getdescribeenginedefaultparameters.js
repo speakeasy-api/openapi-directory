@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeEngineDefaultParametersActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeEngineDefaultParametersResponse = exports.GetDescribeEngineDefaultParametersRequest = exports.GetDescribeEngineDefaultParametersHeaders = exports.GetDescribeEngineDefaultParametersQueryParams = exports.GetDescribeEngineDefaultParametersVersionEnum = exports.GetDescribeEngineDefaultParametersActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeEngineDefaultParametersActionEnum;
 (function (GetDescribeEngineDefaultParametersActionEnum) {
     GetDescribeEngineDefaultParametersActionEnum["DescribeEngineDefaultParameters"] = "DescribeEngineDefaultParameters";
-})(GetDescribeEngineDefaultParametersActionEnum || (GetDescribeEngineDefaultParametersActionEnum = {}));
-export var GetDescribeEngineDefaultParametersVersionEnum;
+})(GetDescribeEngineDefaultParametersActionEnum = exports.GetDescribeEngineDefaultParametersActionEnum || (exports.GetDescribeEngineDefaultParametersActionEnum = {}));
+var GetDescribeEngineDefaultParametersVersionEnum;
 (function (GetDescribeEngineDefaultParametersVersionEnum) {
     GetDescribeEngineDefaultParametersVersionEnum["TwoThousandAndThirteen0212"] = "2013-02-12";
-})(GetDescribeEngineDefaultParametersVersionEnum || (GetDescribeEngineDefaultParametersVersionEnum = {}));
+})(GetDescribeEngineDefaultParametersVersionEnum = exports.GetDescribeEngineDefaultParametersVersionEnum || (exports.GetDescribeEngineDefaultParametersVersionEnum = {}));
 var GetDescribeEngineDefaultParametersQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeEngineDefaultParametersQueryParams, _super);
     function GetDescribeEngineDefaultParametersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeEngineDefaultParametersQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DBParameterGroupFamily" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DBParameterGroupFamily" }),
         __metadata("design:type", String)
     ], GetDescribeEngineDefaultParametersQueryParams.prototype, "dbParameterGroupFamily", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetDescribeEngineDefaultParametersQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", Number)
     ], GetDescribeEngineDefaultParametersQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeEngineDefaultParametersQueryParams.prototype, "version", void 0);
     return GetDescribeEngineDefaultParametersQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeEngineDefaultParametersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeEngineDefaultParametersQueryParams = GetDescribeEngineDefaultParametersQueryParams;
 var GetDescribeEngineDefaultParametersHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeEngineDefaultParametersHeaders, _super);
     function GetDescribeEngineDefaultParametersHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeEngineDefaultParametersHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeEngineDefaultParametersHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeEngineDefaultParametersHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeEngineDefaultParametersHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeEngineDefaultParametersHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeEngineDefaultParametersHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeEngineDefaultParametersHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeEngineDefaultParametersHeaders;
-}(SpeakeasyBase));
-export { GetDescribeEngineDefaultParametersHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeEngineDefaultParametersHeaders = GetDescribeEngineDefaultParametersHeaders;
 var GetDescribeEngineDefaultParametersRequest = /** @class */ (function (_super) {
     __extends(GetDescribeEngineDefaultParametersRequest, _super);
     function GetDescribeEngineDefaultParametersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeEngineDefaultParametersQueryParams)
     ], GetDescribeEngineDefaultParametersRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeEngineDefaultParametersHeaders)
     ], GetDescribeEngineDefaultParametersRequest.prototype, "headers", void 0);
     return GetDescribeEngineDefaultParametersRequest;
-}(SpeakeasyBase));
-export { GetDescribeEngineDefaultParametersRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeEngineDefaultParametersRequest = GetDescribeEngineDefaultParametersRequest;
 var GetDescribeEngineDefaultParametersResponse = /** @class */ (function (_super) {
     __extends(GetDescribeEngineDefaultParametersResponse, _super);
     function GetDescribeEngineDefaultParametersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeEngineDefaultParametersResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeEngineDefaultParametersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeEngineDefaultParametersResponse.prototype, "statusCode", void 0);
     return GetDescribeEngineDefaultParametersResponse;
-}(SpeakeasyBase));
-export { GetDescribeEngineDefaultParametersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeEngineDefaultParametersResponse = GetDescribeEngineDefaultParametersResponse;

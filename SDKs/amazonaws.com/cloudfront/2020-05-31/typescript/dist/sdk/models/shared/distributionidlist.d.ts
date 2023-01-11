@@ -4,7 +4,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class DistributionIdList extends SpeakeasyBase {
     isTruncated: boolean;
-    items?: string[];
+    items?: Record<string, any>[];
     marker: string;
     maxItems: number;
     nextMarker?: string;

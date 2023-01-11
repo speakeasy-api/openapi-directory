@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransactionDetail } from "./transactiondetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionResponse = exports.TransactionResponseData = void 0;
+var utils_1 = require("../../../internal/utils");
+var transactiondetail_1 = require("./transactiondetail");
 var TransactionResponseData = /** @class */ (function (_super) {
     __extends(TransactionResponseData, _super);
     function TransactionResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transaction" }),
-        __metadata("design:type", TransactionDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transaction" }),
+        __metadata("design:type", transactiondetail_1.TransactionDetail)
     ], TransactionResponseData.prototype, "transaction", void 0);
     return TransactionResponseData;
-}(SpeakeasyBase));
-export { TransactionResponseData };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResponseData = TransactionResponseData;
 var TransactionResponse = /** @class */ (function (_super) {
     __extends(TransactionResponse, _super);
     function TransactionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", TransactionResponseData)
     ], TransactionResponse.prototype, "data", void 0);
     return TransactionResponse;
-}(SpeakeasyBase));
-export { TransactionResponse };
+}(utils_1.SpeakeasyBase));
+exports.TransactionResponse = TransactionResponse;

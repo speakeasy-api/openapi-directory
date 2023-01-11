@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostAssociateTransitGatewayMulticastDomainActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAssociateTransitGatewayMulticastDomainResponse = exports.PostAssociateTransitGatewayMulticastDomainRequest = exports.PostAssociateTransitGatewayMulticastDomainHeaders = exports.PostAssociateTransitGatewayMulticastDomainQueryParams = exports.PostAssociateTransitGatewayMulticastDomainVersionEnum = exports.PostAssociateTransitGatewayMulticastDomainActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostAssociateTransitGatewayMulticastDomainActionEnum;
 (function (PostAssociateTransitGatewayMulticastDomainActionEnum) {
     PostAssociateTransitGatewayMulticastDomainActionEnum["AssociateTransitGatewayMulticastDomain"] = "AssociateTransitGatewayMulticastDomain";
-})(PostAssociateTransitGatewayMulticastDomainActionEnum || (PostAssociateTransitGatewayMulticastDomainActionEnum = {}));
-export var PostAssociateTransitGatewayMulticastDomainVersionEnum;
+})(PostAssociateTransitGatewayMulticastDomainActionEnum = exports.PostAssociateTransitGatewayMulticastDomainActionEnum || (exports.PostAssociateTransitGatewayMulticastDomainActionEnum = {}));
+var PostAssociateTransitGatewayMulticastDomainVersionEnum;
 (function (PostAssociateTransitGatewayMulticastDomainVersionEnum) {
     PostAssociateTransitGatewayMulticastDomainVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostAssociateTransitGatewayMulticastDomainVersionEnum || (PostAssociateTransitGatewayMulticastDomainVersionEnum = {}));
+})(PostAssociateTransitGatewayMulticastDomainVersionEnum = exports.PostAssociateTransitGatewayMulticastDomainVersionEnum || (exports.PostAssociateTransitGatewayMulticastDomainVersionEnum = {}));
 var PostAssociateTransitGatewayMulticastDomainQueryParams = /** @class */ (function (_super) {
     __extends(PostAssociateTransitGatewayMulticastDomainQueryParams, _super);
     function PostAssociateTransitGatewayMulticastDomainQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostAssociateTransitGatewayMulticastDomainQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostAssociateTransitGatewayMulticastDomainQueryParams.prototype, "version", void 0);
     return PostAssociateTransitGatewayMulticastDomainQueryParams;
-}(SpeakeasyBase));
-export { PostAssociateTransitGatewayMulticastDomainQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociateTransitGatewayMulticastDomainQueryParams = PostAssociateTransitGatewayMulticastDomainQueryParams;
 var PostAssociateTransitGatewayMulticastDomainHeaders = /** @class */ (function (_super) {
     __extends(PostAssociateTransitGatewayMulticastDomainHeaders, _super);
     function PostAssociateTransitGatewayMulticastDomainHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostAssociateTransitGatewayMulticastDomainHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostAssociateTransitGatewayMulticastDomainHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostAssociateTransitGatewayMulticastDomainHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostAssociateTransitGatewayMulticastDomainHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostAssociateTransitGatewayMulticastDomainHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostAssociateTransitGatewayMulticastDomainHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostAssociateTransitGatewayMulticastDomainHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostAssociateTransitGatewayMulticastDomainHeaders;
-}(SpeakeasyBase));
-export { PostAssociateTransitGatewayMulticastDomainHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociateTransitGatewayMulticastDomainHeaders = PostAssociateTransitGatewayMulticastDomainHeaders;
 var PostAssociateTransitGatewayMulticastDomainRequest = /** @class */ (function (_super) {
     __extends(PostAssociateTransitGatewayMulticastDomainRequest, _super);
     function PostAssociateTransitGatewayMulticastDomainRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAssociateTransitGatewayMulticastDomainQueryParams)
     ], PostAssociateTransitGatewayMulticastDomainRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAssociateTransitGatewayMulticastDomainHeaders)
     ], PostAssociateTransitGatewayMulticastDomainRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostAssociateTransitGatewayMulticastDomainRequest.prototype, "request", void 0);
     return PostAssociateTransitGatewayMulticastDomainRequest;
-}(SpeakeasyBase));
-export { PostAssociateTransitGatewayMulticastDomainRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociateTransitGatewayMulticastDomainRequest = PostAssociateTransitGatewayMulticastDomainRequest;
 var PostAssociateTransitGatewayMulticastDomainResponse = /** @class */ (function (_super) {
     __extends(PostAssociateTransitGatewayMulticastDomainResponse, _super);
     function PostAssociateTransitGatewayMulticastDomainResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostAssociateTransitGatewayMulticastDomainResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAssociateTransitGatewayMulticastDomainResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAssociateTransitGatewayMulticastDomainResponse.prototype, "statusCode", void 0);
     return PostAssociateTransitGatewayMulticastDomainResponse;
-}(SpeakeasyBase));
-export { PostAssociateTransitGatewayMulticastDomainResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociateTransitGatewayMulticastDomainResponse = PostAssociateTransitGatewayMulticastDomainResponse;

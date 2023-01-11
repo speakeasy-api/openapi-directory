@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostRemoveFromGlobalClusterActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostRemoveFromGlobalClusterResponse = exports.PostRemoveFromGlobalClusterRequest = exports.PostRemoveFromGlobalClusterHeaders = exports.PostRemoveFromGlobalClusterQueryParams = exports.PostRemoveFromGlobalClusterVersionEnum = exports.PostRemoveFromGlobalClusterActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostRemoveFromGlobalClusterActionEnum;
 (function (PostRemoveFromGlobalClusterActionEnum) {
     PostRemoveFromGlobalClusterActionEnum["RemoveFromGlobalCluster"] = "RemoveFromGlobalCluster";
-})(PostRemoveFromGlobalClusterActionEnum || (PostRemoveFromGlobalClusterActionEnum = {}));
-export var PostRemoveFromGlobalClusterVersionEnum;
+})(PostRemoveFromGlobalClusterActionEnum = exports.PostRemoveFromGlobalClusterActionEnum || (exports.PostRemoveFromGlobalClusterActionEnum = {}));
+var PostRemoveFromGlobalClusterVersionEnum;
 (function (PostRemoveFromGlobalClusterVersionEnum) {
     PostRemoveFromGlobalClusterVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostRemoveFromGlobalClusterVersionEnum || (PostRemoveFromGlobalClusterVersionEnum = {}));
+})(PostRemoveFromGlobalClusterVersionEnum = exports.PostRemoveFromGlobalClusterVersionEnum || (exports.PostRemoveFromGlobalClusterVersionEnum = {}));
 var PostRemoveFromGlobalClusterQueryParams = /** @class */ (function (_super) {
     __extends(PostRemoveFromGlobalClusterQueryParams, _super);
     function PostRemoveFromGlobalClusterQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostRemoveFromGlobalClusterQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostRemoveFromGlobalClusterQueryParams.prototype, "version", void 0);
     return PostRemoveFromGlobalClusterQueryParams;
-}(SpeakeasyBase));
-export { PostRemoveFromGlobalClusterQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostRemoveFromGlobalClusterQueryParams = PostRemoveFromGlobalClusterQueryParams;
 var PostRemoveFromGlobalClusterHeaders = /** @class */ (function (_super) {
     __extends(PostRemoveFromGlobalClusterHeaders, _super);
     function PostRemoveFromGlobalClusterHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostRemoveFromGlobalClusterHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostRemoveFromGlobalClusterHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostRemoveFromGlobalClusterHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostRemoveFromGlobalClusterHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostRemoveFromGlobalClusterHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostRemoveFromGlobalClusterHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostRemoveFromGlobalClusterHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostRemoveFromGlobalClusterHeaders;
-}(SpeakeasyBase));
-export { PostRemoveFromGlobalClusterHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostRemoveFromGlobalClusterHeaders = PostRemoveFromGlobalClusterHeaders;
 var PostRemoveFromGlobalClusterRequest = /** @class */ (function (_super) {
     __extends(PostRemoveFromGlobalClusterRequest, _super);
     function PostRemoveFromGlobalClusterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRemoveFromGlobalClusterQueryParams)
     ], PostRemoveFromGlobalClusterRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRemoveFromGlobalClusterHeaders)
     ], PostRemoveFromGlobalClusterRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostRemoveFromGlobalClusterRequest.prototype, "request", void 0);
     return PostRemoveFromGlobalClusterRequest;
-}(SpeakeasyBase));
-export { PostRemoveFromGlobalClusterRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostRemoveFromGlobalClusterRequest = PostRemoveFromGlobalClusterRequest;
 var PostRemoveFromGlobalClusterResponse = /** @class */ (function (_super) {
     __extends(PostRemoveFromGlobalClusterResponse, _super);
     function PostRemoveFromGlobalClusterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostRemoveFromGlobalClusterResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostRemoveFromGlobalClusterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostRemoveFromGlobalClusterResponse.prototype, "statusCode", void 0);
     return PostRemoveFromGlobalClusterResponse;
-}(SpeakeasyBase));
-export { PostRemoveFromGlobalClusterResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostRemoveFromGlobalClusterResponse = PostRemoveFromGlobalClusterResponse;

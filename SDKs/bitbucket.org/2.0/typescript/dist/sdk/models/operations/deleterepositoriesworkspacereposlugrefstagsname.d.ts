@@ -17,5 +17,5 @@ export declare class DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest exte
 export declare class DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

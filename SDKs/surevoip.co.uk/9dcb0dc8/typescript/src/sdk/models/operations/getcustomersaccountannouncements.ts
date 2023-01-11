@@ -26,10 +26,10 @@ export class GetCustomersAccountAnnouncementsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getCustomersAccountAnnouncements200ApplicationJsonObject?: GetCustomersAccountAnnouncements200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getCustomersAccountAnnouncements200ApplicationJSONObject?: GetCustomersAccountAnnouncements200ApplicationJson;
 
   @SpeakeasyMetadata()
   oneannouncementsPostResponses403ContentApplication1jsonSchema?: shared.OneannouncementsPostResponses403ContentApplication1jsonSchema;

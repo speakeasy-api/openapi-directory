@@ -28,5 +28,5 @@ export declare class GetRole200ApplicationJson extends SpeakeasyBase {
 export declare class GetRoleResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getRole200ApplicationJsonObject?: GetRole200ApplicationJson;
+    getRole200ApplicationJSONObject?: GetRole200ApplicationJson;
 }

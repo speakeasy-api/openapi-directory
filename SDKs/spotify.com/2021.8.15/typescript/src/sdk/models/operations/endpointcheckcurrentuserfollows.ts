@@ -47,5 +47,5 @@ export class EndpointCheckCurrentUserFollowsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  endpointCheckCurrentUserFollows200ApplicationJsonBooleans?: boolean[];
+  endpointCheckCurrentUserFollows200ApplicationJSONBooleans?: boolean[];
 }

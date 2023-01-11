@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ClientUserStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClientUserInput = exports.ClientUser = exports.ClientUserStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ClientUserStateEnum;
 (function (ClientUserStateEnum) {
     ClientUserStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     ClientUserStateEnum["Invited"] = "INVITED";
     ClientUserStateEnum["Active"] = "ACTIVE";
     ClientUserStateEnum["Inactive"] = "INACTIVE";
-})(ClientUserStateEnum || (ClientUserStateEnum = {}));
+})(ClientUserStateEnum = exports.ClientUserStateEnum || (exports.ClientUserStateEnum = {}));
 // ClientUser
 /**
  * A user of a client who has restricted access to the Marketplace and certain other sections of the Authorized Buyers UI based on the role granted to the associated client.
@@ -40,20 +43,20 @@ var ClientUser = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], ClientUser.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ClientUser.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ClientUser.prototype, "state", void 0);
     return ClientUser;
-}(SpeakeasyBase));
-export { ClientUser };
+}(utils_1.SpeakeasyBase));
+exports.ClientUser = ClientUser;
 // ClientUserInput
 /**
  * A user of a client who has restricted access to the Marketplace and certain other sections of the Authorized Buyers UI based on the role granted to the associated client.
@@ -64,9 +67,9 @@ var ClientUserInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], ClientUserInput.prototype, "email", void 0);
     return ClientUserInput;
-}(SpeakeasyBase));
-export { ClientUserInput };
+}(utils_1.SpeakeasyBase));
+exports.ClientUserInput = ClientUserInput;

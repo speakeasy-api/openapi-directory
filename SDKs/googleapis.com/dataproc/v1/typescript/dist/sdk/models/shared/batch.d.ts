@@ -24,7 +24,7 @@ export declare class Batch extends SpeakeasyBase {
     createTime?: string;
     creator?: string;
     environmentConfig?: EnvironmentConfig;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     operation?: string;
     pysparkBatch?: PySparkBatch;
@@ -44,7 +44,7 @@ export declare class Batch extends SpeakeasyBase {
 **/
 export declare class BatchInput extends SpeakeasyBase {
     environmentConfig?: EnvironmentConfig;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     pysparkBatch?: PySparkBatch;
     runtimeConfig?: RuntimeConfig;
     runtimeInfo?: RuntimeInfoInput;

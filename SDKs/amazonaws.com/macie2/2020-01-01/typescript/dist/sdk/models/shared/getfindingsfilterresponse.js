@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FindingsFilterActionEnum } from "./findingsfilteractionenum";
-import { FindingCriteria } from "./findingcriteria";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetFindingsFilterResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var findingsfilteractionenum_1 = require("./findingsfilteractionenum");
+var findingcriteria_1 = require("./findingcriteria");
 var GetFindingsFilterResponse = /** @class */ (function (_super) {
     __extends(GetFindingsFilterResponse, _super);
     function GetFindingsFilterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], GetFindingsFilterResponse.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], GetFindingsFilterResponse.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetFindingsFilterResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=findingCriteria" }),
-        __metadata("design:type", FindingCriteria)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=findingCriteria" }),
+        __metadata("design:type", findingcriteria_1.FindingCriteria)
     ], GetFindingsFilterResponse.prototype, "findingCriteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GetFindingsFilterResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetFindingsFilterResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=position" }),
         __metadata("design:type", Number)
     ], GetFindingsFilterResponse.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], GetFindingsFilterResponse.prototype, "tags", void 0);
     return GetFindingsFilterResponse;
-}(SpeakeasyBase));
-export { GetFindingsFilterResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetFindingsFilterResponse = GetFindingsFilterResponse;

@@ -1,4 +1,7 @@
-export var FindingSeverityEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindingSeverityEnum = void 0;
+var FindingSeverityEnum;
 (function (FindingSeverityEnum) {
     FindingSeverityEnum["Informational"] = "INFORMATIONAL";
     FindingSeverityEnum["Low"] = "LOW";
@@ -6,4 +9,4 @@ export var FindingSeverityEnum;
     FindingSeverityEnum["High"] = "HIGH";
     FindingSeverityEnum["Critical"] = "CRITICAL";
     FindingSeverityEnum["Undefined"] = "UNDEFINED";
-})(FindingSeverityEnum || (FindingSeverityEnum = {}));
+})(FindingSeverityEnum = exports.FindingSeverityEnum || (exports.FindingSeverityEnum = {}));

@@ -21,7 +21,7 @@ export declare class GetLfTagResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
     entityNotFoundException?: any;
-    getLfTagResponse?: shared.GetLfTagResponse;
+    getLFTagResponse?: shared.GetLfTagResponse;
     internalServiceException?: any;
     invalidInputException?: any;
     operationTimeoutException?: any;

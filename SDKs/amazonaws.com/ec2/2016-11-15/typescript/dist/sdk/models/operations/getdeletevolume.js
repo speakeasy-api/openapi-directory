@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteVolumeActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteVolumeResponse = exports.GetDeleteVolumeRequest = exports.GetDeleteVolumeHeaders = exports.GetDeleteVolumeQueryParams = exports.GetDeleteVolumeVersionEnum = exports.GetDeleteVolumeActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteVolumeActionEnum;
 (function (GetDeleteVolumeActionEnum) {
     GetDeleteVolumeActionEnum["DeleteVolume"] = "DeleteVolume";
-})(GetDeleteVolumeActionEnum || (GetDeleteVolumeActionEnum = {}));
-export var GetDeleteVolumeVersionEnum;
+})(GetDeleteVolumeActionEnum = exports.GetDeleteVolumeActionEnum || (exports.GetDeleteVolumeActionEnum = {}));
+var GetDeleteVolumeVersionEnum;
 (function (GetDeleteVolumeVersionEnum) {
     GetDeleteVolumeVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDeleteVolumeVersionEnum || (GetDeleteVolumeVersionEnum = {}));
+})(GetDeleteVolumeVersionEnum = exports.GetDeleteVolumeVersionEnum || (exports.GetDeleteVolumeVersionEnum = {}));
 var GetDeleteVolumeQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteVolumeQueryParams, _super);
     function GetDeleteVolumeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteVolumeQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDeleteVolumeQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteVolumeQueryParams.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=VolumeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=VolumeId" }),
         __metadata("design:type", String)
     ], GetDeleteVolumeQueryParams.prototype, "volumeId", void 0);
     return GetDeleteVolumeQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteVolumeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteVolumeQueryParams = GetDeleteVolumeQueryParams;
 var GetDeleteVolumeHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteVolumeHeaders, _super);
     function GetDeleteVolumeHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteVolumeHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteVolumeHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteVolumeHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteVolumeHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteVolumeHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteVolumeHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteVolumeHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteVolumeHeaders;
-}(SpeakeasyBase));
-export { GetDeleteVolumeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteVolumeHeaders = GetDeleteVolumeHeaders;
 var GetDeleteVolumeRequest = /** @class */ (function (_super) {
     __extends(GetDeleteVolumeRequest, _super);
     function GetDeleteVolumeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteVolumeQueryParams)
     ], GetDeleteVolumeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteVolumeHeaders)
     ], GetDeleteVolumeRequest.prototype, "headers", void 0);
     return GetDeleteVolumeRequest;
-}(SpeakeasyBase));
-export { GetDeleteVolumeRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteVolumeRequest = GetDeleteVolumeRequest;
 var GetDeleteVolumeResponse = /** @class */ (function (_super) {
     __extends(GetDeleteVolumeResponse, _super);
     function GetDeleteVolumeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteVolumeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteVolumeResponse.prototype, "statusCode", void 0);
     return GetDeleteVolumeResponse;
-}(SpeakeasyBase));
-export { GetDeleteVolumeResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteVolumeResponse = GetDeleteVolumeResponse;

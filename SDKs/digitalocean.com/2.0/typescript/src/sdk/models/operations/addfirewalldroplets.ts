@@ -1,47 +1,48 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class AddFirewallDropletsPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=firewall_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=firewall_id" })
   firewallId: string;
 }
 
 
-export class AddFirewallDropletsRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: AddFirewallDropletsPathParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request?: any;
-}
-
-
 export class AddFirewallDroplets401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class AddFirewallDropletsRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: AddFirewallDropletsPathParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request?: any;
+}
+
+
 export class AddFirewallDropletsResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  addFirewallDroplets401ApplicationJsonObject?: AddFirewallDroplets401ApplicationJson;
+  @SpeakeasyMetadata()
+  addFirewallDroplets401ApplicationJSONObject?: AddFirewallDroplets401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

@@ -20,7 +20,7 @@ export declare class DeleteVpceConfigurationRequest extends SpeakeasyBase {
 export declare class DeleteVpceConfigurationResponse extends SpeakeasyBase {
     argumentException?: any;
     contentType: string;
-    deleteVpceConfigurationResult?: Map<string, any>;
+    deleteVPCEConfigurationResult?: Record<string, any>;
     invalidOperationException?: any;
     notFoundException?: any;
     serviceAccountException?: any;

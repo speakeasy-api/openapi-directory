@@ -41,5 +41,5 @@ export class DeleteProjectAlt1Response extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 }

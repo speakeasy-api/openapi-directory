@@ -18,7 +18,7 @@ export declare class DescribeObjectRequest extends SpeakeasyBase {
 export declare class DescribeObjectResponse extends SpeakeasyBase {
     containerNotFoundException?: any;
     contentType: string;
-    describeObjectResponse?: Map<string, any>;
+    describeObjectResponse?: Record<string, any>;
     internalServerError?: any;
     objectNotFoundException?: any;
     statusCode: number;

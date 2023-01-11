@@ -1,0 +1,244 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Scan = exports.ScanScanner = exports.ScanScannerStatus = exports.ScanScannerStateEnum = exports.ScanFingerprinter = exports.ScanFingerprinterStateEnum = exports.ScanCrawler = exports.ScanCrawlerStatus = exports.ScanCrawlerStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var changedby_1 = require("./changedby");
+var createdby_1 = require("./createdby");
+var scanprofileenum_1 = require("./scanprofileenum");
+var scanstatusenum_1 = require("./scanstatusenum");
+var targetsimple_1 = require("./targetsimple");
+var ScanCrawlerStateEnum;
+(function (ScanCrawlerStateEnum) {
+    ScanCrawlerStateEnum["Started"] = "started";
+    ScanCrawlerStateEnum["Ended"] = "ended";
+})(ScanCrawlerStateEnum = exports.ScanCrawlerStateEnum || (exports.ScanCrawlerStateEnum = {}));
+// ScanCrawlerStatus
+/**
+ * The number of crawled URLs and total number of URLs in the queue
+**/
+var ScanCrawlerStatus = /** @class */ (function (_super) {
+    __extends(ScanCrawlerStatus, _super);
+    function ScanCrawlerStatus() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=0" }),
+        __metadata("design:type", Number)
+    ], ScanCrawlerStatus.prototype, "zero", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=1" }),
+        __metadata("design:type", Number)
+    ], ScanCrawlerStatus.prototype, "one", void 0);
+    return ScanCrawlerStatus;
+}(utils_1.SpeakeasyBase));
+exports.ScanCrawlerStatus = ScanCrawlerStatus;
+// ScanCrawler
+/**
+ * Information on the status of the crawling step of the scanning process
+**/
+var ScanCrawler = /** @class */ (function (_super) {
+    __extends(ScanCrawler, _super);
+    function ScanCrawler() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", Array)
+    ], ScanCrawler.prototype, "error", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", String)
+    ], ScanCrawler.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", ScanCrawlerStatus)
+    ], ScanCrawler.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warning" }),
+        __metadata("design:type", Array)
+    ], ScanCrawler.prototype, "warning", void 0);
+    return ScanCrawler;
+}(utils_1.SpeakeasyBase));
+exports.ScanCrawler = ScanCrawler;
+var ScanFingerprinterStateEnum;
+(function (ScanFingerprinterStateEnum) {
+    ScanFingerprinterStateEnum["Started"] = "started";
+    ScanFingerprinterStateEnum["Ended"] = "ended";
+})(ScanFingerprinterStateEnum = exports.ScanFingerprinterStateEnum || (exports.ScanFingerprinterStateEnum = {}));
+// ScanFingerprinter
+/**
+ * Information on the status of the crawling step of the scanning process
+**/
+var ScanFingerprinter = /** @class */ (function (_super) {
+    __extends(ScanFingerprinter, _super);
+    function ScanFingerprinter() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
+        __metadata("design:type", Number)
+    ], ScanFingerprinter.prototype, "count", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", Array)
+    ], ScanFingerprinter.prototype, "error", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", String)
+    ], ScanFingerprinter.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warning" }),
+        __metadata("design:type", Array)
+    ], ScanFingerprinter.prototype, "warning", void 0);
+    return ScanFingerprinter;
+}(utils_1.SpeakeasyBase));
+exports.ScanFingerprinter = ScanFingerprinter;
+var ScanScannerStateEnum;
+(function (ScanScannerStateEnum) {
+    ScanScannerStateEnum["Started"] = "started";
+    ScanScannerStateEnum["Ended"] = "ended";
+})(ScanScannerStateEnum = exports.ScanScannerStateEnum || (exports.ScanScannerStateEnum = {}));
+// ScanScannerStatus
+/**
+ * The number of scanner tasks completed and total number of tasks in the queue
+**/
+var ScanScannerStatus = /** @class */ (function (_super) {
+    __extends(ScanScannerStatus, _super);
+    function ScanScannerStatus() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=0" }),
+        __metadata("design:type", Number)
+    ], ScanScannerStatus.prototype, "zero", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=1" }),
+        __metadata("design:type", Number)
+    ], ScanScannerStatus.prototype, "one", void 0);
+    return ScanScannerStatus;
+}(utils_1.SpeakeasyBase));
+exports.ScanScannerStatus = ScanScannerStatus;
+// ScanScanner
+/**
+ * Information on the status of the search for vulnerabilities of the scanning process
+**/
+var ScanScanner = /** @class */ (function (_super) {
+    __extends(ScanScanner, _super);
+    function ScanScanner() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", Array)
+    ], ScanScanner.prototype, "error", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", String)
+    ], ScanScanner.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", ScanScannerStatus)
+    ], ScanScanner.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warning" }),
+        __metadata("design:type", Array)
+    ], ScanScanner.prototype, "warning", void 0);
+    return ScanScanner;
+}(utils_1.SpeakeasyBase));
+exports.ScanScanner = ScanScanner;
+var Scan = /** @class */ (function (_super) {
+    __extends(Scan, _super);
+    function Scan() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=changed" }),
+        __metadata("design:type", Date)
+    ], Scan.prototype, "changed", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=changed_by" }),
+        __metadata("design:type", changedby_1.ChangedBy)
+    ], Scan.prototype, "changedBy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=completed" }),
+        __metadata("design:type", Date)
+    ], Scan.prototype, "completed", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crawler" }),
+        __metadata("design:type", ScanCrawler)
+    ], Scan.prototype, "crawler", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
+        __metadata("design:type", Date)
+    ], Scan.prototype, "created", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
+        __metadata("design:type", createdby_1.CreatedBy)
+    ], Scan.prototype, "createdBy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fingerprinter" }),
+        __metadata("design:type", ScanFingerprinter)
+    ], Scan.prototype, "fingerprinter", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=highs" }),
+        __metadata("design:type", Number)
+    ], Scan.prototype, "highs", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], Scan.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lows" }),
+        __metadata("design:type", Number)
+    ], Scan.prototype, "lows", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mediums" }),
+        __metadata("design:type", Number)
+    ], Scan.prototype, "mediums", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scan_profile" }),
+        __metadata("design:type", String)
+    ], Scan.prototype, "scanProfile", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scanner" }),
+        __metadata("design:type", ScanScanner)
+    ], Scan.prototype, "scanner", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
+        __metadata("design:type", Date)
+    ], Scan.prototype, "started", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", String)
+    ], Scan.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
+        __metadata("design:type", targetsimple_1.TargetSimple)
+    ], Scan.prototype, "target", void 0);
+    return Scan;
+}(utils_1.SpeakeasyBase));
+exports.Scan = Scan;

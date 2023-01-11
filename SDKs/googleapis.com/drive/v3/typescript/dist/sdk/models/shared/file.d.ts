@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { Label } from "./label";
 import { ContentRestriction } from "./contentrestriction";
 import { User } from "./user";
-import { PermissionInput } from "./permission";
-import { Label } from "./label";
 import { Permission } from "./permission";
+import { PermissionInput } from "./permission";
 /**
  * Capabilities the current user has on this file. Each capability corresponds to a fine-grained action that a user may take.
 **/
@@ -127,8 +127,75 @@ export declare class FileVideoMediaMetadata extends SpeakeasyBase {
 /**
  * The metadata for a file.
 **/
+export declare class File extends SpeakeasyBase {
+    appProperties?: Record<string, string>;
+    capabilities?: FileCapabilities;
+    contentHints?: FileContentHints;
+    contentRestrictions?: ContentRestriction[];
+    copyRequiresWriterPermission?: boolean;
+    createdTime?: Date;
+    description?: string;
+    driveId?: string;
+    explicitlyTrashed?: boolean;
+    exportLinks?: Record<string, string>;
+    fileExtension?: string;
+    folderColorRgb?: string;
+    fullFileExtension?: string;
+    hasAugmentedPermissions?: boolean;
+    hasThumbnail?: boolean;
+    headRevisionId?: string;
+    iconLink?: string;
+    id?: string;
+    imageMediaMetadata?: FileImageMediaMetadata;
+    isAppAuthorized?: boolean;
+    kind?: string;
+    labelInfo?: FileLabelInfo;
+    lastModifyingUser?: User;
+    linkShareMetadata?: FileLinkShareMetadata;
+    md5Checksum?: string;
+    mimeType?: string;
+    modifiedByMe?: boolean;
+    modifiedByMeTime?: Date;
+    modifiedTime?: Date;
+    name?: string;
+    originalFilename?: string;
+    ownedByMe?: boolean;
+    owners?: User[];
+    parents?: string[];
+    permissionIds?: string[];
+    permissions?: Permission[];
+    properties?: Record<string, string>;
+    quotaBytesUsed?: string;
+    resourceKey?: string;
+    sha1Checksum?: string;
+    sha256Checksum?: string;
+    shared?: boolean;
+    sharedWithMeTime?: Date;
+    sharingUser?: User;
+    shortcutDetails?: FileShortcutDetails;
+    size?: string;
+    spaces?: string[];
+    starred?: boolean;
+    teamDriveId?: string;
+    thumbnailLink?: string;
+    thumbnailVersion?: string;
+    trashed?: boolean;
+    trashedTime?: Date;
+    trashingUser?: User;
+    version?: string;
+    videoMediaMetadata?: FileVideoMediaMetadata;
+    viewedByMe?: boolean;
+    viewedByMeTime?: Date;
+    viewersCanCopyContent?: boolean;
+    webContentLink?: string;
+    webViewLink?: string;
+    writersCanShare?: boolean;
+}
+/**
+ * The metadata for a file.
+**/
 export declare class FileInput extends SpeakeasyBase {
-    appProperties?: Map<string, string>;
+    appProperties?: Record<string, string>;
     capabilities?: FileCapabilities;
     contentHints?: FileContentHints;
     contentRestrictions?: ContentRestriction[];
@@ -163,74 +230,7 @@ export declare class FileInput extends SpeakeasyBase {
     parents?: string[];
     permissionIds?: string[];
     permissions?: PermissionInput[];
-    properties?: Map<string, string>;
-    quotaBytesUsed?: string;
-    resourceKey?: string;
-    sha1Checksum?: string;
-    sha256Checksum?: string;
-    shared?: boolean;
-    sharedWithMeTime?: Date;
-    sharingUser?: User;
-    shortcutDetails?: FileShortcutDetails;
-    size?: string;
-    spaces?: string[];
-    starred?: boolean;
-    teamDriveId?: string;
-    thumbnailLink?: string;
-    thumbnailVersion?: string;
-    trashed?: boolean;
-    trashedTime?: Date;
-    trashingUser?: User;
-    version?: string;
-    videoMediaMetadata?: FileVideoMediaMetadata;
-    viewedByMe?: boolean;
-    viewedByMeTime?: Date;
-    viewersCanCopyContent?: boolean;
-    webContentLink?: string;
-    webViewLink?: string;
-    writersCanShare?: boolean;
-}
-/**
- * The metadata for a file.
-**/
-export declare class File extends SpeakeasyBase {
-    appProperties?: Map<string, string>;
-    capabilities?: FileCapabilities;
-    contentHints?: FileContentHints;
-    contentRestrictions?: ContentRestriction[];
-    copyRequiresWriterPermission?: boolean;
-    createdTime?: Date;
-    description?: string;
-    driveId?: string;
-    explicitlyTrashed?: boolean;
-    exportLinks?: Map<string, string>;
-    fileExtension?: string;
-    folderColorRgb?: string;
-    fullFileExtension?: string;
-    hasAugmentedPermissions?: boolean;
-    hasThumbnail?: boolean;
-    headRevisionId?: string;
-    iconLink?: string;
-    id?: string;
-    imageMediaMetadata?: FileImageMediaMetadata;
-    isAppAuthorized?: boolean;
-    kind?: string;
-    labelInfo?: FileLabelInfo;
-    lastModifyingUser?: User;
-    linkShareMetadata?: FileLinkShareMetadata;
-    md5Checksum?: string;
-    mimeType?: string;
-    modifiedByMe?: boolean;
-    modifiedByMeTime?: Date;
-    modifiedTime?: Date;
-    name?: string;
-    originalFilename?: string;
-    ownedByMe?: boolean;
-    owners?: User[];
-    parents?: string[];
-    permissionIds?: string[];
-    permissions?: Permission[];
-    properties?: Map<string, string>;
+    properties?: Record<string, string>;
     quotaBytesUsed?: string;
     resourceKey?: string;
     sha1Checksum?: string;

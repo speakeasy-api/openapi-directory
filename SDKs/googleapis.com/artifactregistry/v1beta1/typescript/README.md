@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ArtifactregistryProjectsLocationsListRequest, ArtifactregistryProjectsLocationsListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,30 +31,30 @@ const req: ArtifactregistryProjectsLocationsListRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   pathParams: {
-    name: "tempore",
+    name: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "nihil",
-    alt: "json",
-    callback: "voluptatem",
-    fields: "aliquid",
-    filter: "ipsam",
-    key: "modi",
-    oauthToken: "eum",
-    pageSize: 7587979128628761928,
-    pageToken: "id",
-    prettyPrint: false,
-    quotaUser: "culpa",
-    uploadType: "et",
-    uploadProtocol: "ut",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    filter: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    pageSize: 1543572285742637646,
+    pageToken: "nihil",
+    prettyPrint: true,
+    quotaUser: "dicta",
+    uploadType: "debitis",
+    uploadProtocol: "voluptatum",
   },
 };
 

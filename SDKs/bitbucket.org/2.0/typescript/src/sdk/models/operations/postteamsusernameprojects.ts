@@ -26,7 +26,7 @@ export class PostTeamsUsernameProjectsRequest extends SpeakeasyBase {
   pathParams: PostTeamsUsernameProjectsPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: PostTeamsUsernameProjectsSecurity;
@@ -38,14 +38,14 @@ export class PostTeamsUsernameProjectsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  project?: Map<string, any>;
+  project?: Record<string, any>;
 }

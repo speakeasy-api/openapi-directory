@@ -19,6 +19,6 @@ export declare class PriceOffersRequest extends SpeakeasyBase {
 }
 export declare class PriceOffersResponse extends SpeakeasyBase {
     contentType: string;
-    priceOffers200ApplicationJsonString?: string;
+    priceOffers200ApplicationJSONString?: string;
     statusCode: number;
 }

@@ -38,7 +38,7 @@ export class BankTransferCreateRequest extends SpeakeasyBase {
   isoCurrencyCode: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, string>;
+  metadata?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=network" })
   network: BankTransferNetworkEnum;
@@ -53,5 +53,5 @@ export class BankTransferCreateRequest extends SpeakeasyBase {
   type: BankTransferTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=user" })
-  user: Map<string, any>;
+  user: Record<string, any>;
 }

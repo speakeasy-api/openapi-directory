@@ -2,5 +2,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetInterfacesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getInterfaces200ApplicationJsonObject?: Map<string, number>;
+    getInterfaces200ApplicationJSONObject?: Record<string, number>;
 }

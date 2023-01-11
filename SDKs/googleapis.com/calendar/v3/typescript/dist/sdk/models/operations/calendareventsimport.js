@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,162 +14,187 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CalendarEventsImportResponse = exports.CalendarEventsImportRequest = exports.CalendarEventsImportSecurity = exports.CalendarEventsImportSecurityOption2 = exports.CalendarEventsImportSecurityOption1 = exports.CalendarEventsImportQueryParams = exports.CalendarEventsImportPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CalendarEventsImportPathParams = /** @class */ (function (_super) {
     __extends(CalendarEventsImportPathParams, _super);
     function CalendarEventsImportPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=calendarId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=calendarId" }),
         __metadata("design:type", String)
     ], CalendarEventsImportPathParams.prototype, "calendarId", void 0);
     return CalendarEventsImportPathParams;
-}(SpeakeasyBase));
-export { CalendarEventsImportPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CalendarEventsImportPathParams = CalendarEventsImportPathParams;
 var CalendarEventsImportQueryParams = /** @class */ (function (_super) {
     __extends(CalendarEventsImportQueryParams, _super);
     function CalendarEventsImportQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], CalendarEventsImportQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=conferenceDataVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=conferenceDataVersion" }),
         __metadata("design:type", Number)
     ], CalendarEventsImportQueryParams.prototype, "conferenceDataVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], CalendarEventsImportQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], CalendarEventsImportQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], CalendarEventsImportQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], CalendarEventsImportQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], CalendarEventsImportQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=supportsAttachments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=supportsAttachments" }),
         __metadata("design:type", Boolean)
     ], CalendarEventsImportQueryParams.prototype, "supportsAttachments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], CalendarEventsImportQueryParams.prototype, "userIp", void 0);
     return CalendarEventsImportQueryParams;
-}(SpeakeasyBase));
-export { CalendarEventsImportQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CalendarEventsImportQueryParams = CalendarEventsImportQueryParams;
 var CalendarEventsImportSecurityOption1 = /** @class */ (function (_super) {
     __extends(CalendarEventsImportSecurityOption1, _super);
     function CalendarEventsImportSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CalendarEventsImportSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CalendarEventsImportSecurityOption1.prototype, "oauth2c", void 0);
     return CalendarEventsImportSecurityOption1;
-}(SpeakeasyBase));
-export { CalendarEventsImportSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.CalendarEventsImportSecurityOption1 = CalendarEventsImportSecurityOption1;
 var CalendarEventsImportSecurityOption2 = /** @class */ (function (_super) {
     __extends(CalendarEventsImportSecurityOption2, _super);
     function CalendarEventsImportSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CalendarEventsImportSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CalendarEventsImportSecurityOption2.prototype, "oauth2c", void 0);
     return CalendarEventsImportSecurityOption2;
-}(SpeakeasyBase));
-export { CalendarEventsImportSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.CalendarEventsImportSecurityOption2 = CalendarEventsImportSecurityOption2;
 var CalendarEventsImportSecurity = /** @class */ (function (_super) {
     __extends(CalendarEventsImportSecurity, _super);
     function CalendarEventsImportSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CalendarEventsImportSecurityOption1)
     ], CalendarEventsImportSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CalendarEventsImportSecurityOption2)
     ], CalendarEventsImportSecurity.prototype, "option2", void 0);
     return CalendarEventsImportSecurity;
-}(SpeakeasyBase));
-export { CalendarEventsImportSecurity };
+}(utils_1.SpeakeasyBase));
+exports.CalendarEventsImportSecurity = CalendarEventsImportSecurity;
 var CalendarEventsImportRequest = /** @class */ (function (_super) {
     __extends(CalendarEventsImportRequest, _super);
     function CalendarEventsImportRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CalendarEventsImportPathParams)
     ], CalendarEventsImportRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CalendarEventsImportQueryParams)
     ], CalendarEventsImportRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.Event)
     ], CalendarEventsImportRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CalendarEventsImportSecurity)
     ], CalendarEventsImportRequest.prototype, "security", void 0);
     return CalendarEventsImportRequest;
-}(SpeakeasyBase));
-export { CalendarEventsImportRequest };
+}(utils_1.SpeakeasyBase));
+exports.CalendarEventsImportRequest = CalendarEventsImportRequest;
 var CalendarEventsImportResponse = /** @class */ (function (_super) {
     __extends(CalendarEventsImportResponse, _super);
     function CalendarEventsImportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CalendarEventsImportResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Event)
     ], CalendarEventsImportResponse.prototype, "event", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CalendarEventsImportResponse.prototype, "statusCode", void 0);
     return CalendarEventsImportResponse;
-}(SpeakeasyBase));
-export { CalendarEventsImportResponse };
+}(utils_1.SpeakeasyBase));
+exports.CalendarEventsImportResponse = CalendarEventsImportResponse;

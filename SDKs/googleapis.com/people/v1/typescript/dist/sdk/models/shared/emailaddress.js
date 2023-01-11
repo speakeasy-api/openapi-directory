@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FieldMetadata } from "./fieldmetadata";
-import { FieldMetadataInput } from "./fieldmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmailAddressInput = exports.EmailAddress = void 0;
+var utils_1 = require("../../../internal/utils");
+var fieldmetadata_1 = require("./fieldmetadata");
+var fieldmetadata_2 = require("./fieldmetadata");
 // EmailAddress
 /**
  * A person's email address.
@@ -35,28 +38,28 @@ var EmailAddress = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], EmailAddress.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formattedType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formattedType" }),
         __metadata("design:type", String)
     ], EmailAddress.prototype, "formattedType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_1.FieldMetadata)
     ], EmailAddress.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], EmailAddress.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], EmailAddress.prototype, "value", void 0);
     return EmailAddress;
-}(SpeakeasyBase));
-export { EmailAddress };
+}(utils_1.SpeakeasyBase));
+exports.EmailAddress = EmailAddress;
 // EmailAddressInput
 /**
  * A person's email address.
@@ -67,21 +70,21 @@ var EmailAddressInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], EmailAddressInput.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadataInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_2.FieldMetadataInput)
     ], EmailAddressInput.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], EmailAddressInput.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], EmailAddressInput.prototype, "value", void 0);
     return EmailAddressInput;
-}(SpeakeasyBase));
-export { EmailAddressInput };
+}(utils_1.SpeakeasyBase));
+exports.EmailAddressInput = EmailAddressInput;

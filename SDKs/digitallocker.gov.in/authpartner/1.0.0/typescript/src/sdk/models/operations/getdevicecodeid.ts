@@ -35,13 +35,13 @@ export class GetDeviceCodeIdResponse extends SpeakeasyBase {
   deviceAuthorizationCodeResponse?: shared.DeviceAuthorizationCodeResponse;
 
   @SpeakeasyMetadata()
-  getDeviceCodeId400ApplicationJsonOneOf?: any;
+  getDeviceCodeId400ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
-  getDeviceCodeId401ApplicationJsonObject?: GetDeviceCodeId401ApplicationJson;
+  getDeviceCodeId401ApplicationJSONObject?: GetDeviceCodeId401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getDeviceCodeId500ApplicationJsonOneOf?: any;
+  getDeviceCodeId500ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

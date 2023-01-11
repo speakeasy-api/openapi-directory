@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QualificationTypeStatusEnum } from "./qualificationtypestatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QualificationType = void 0;
+var utils_1 = require("../../../internal/utils");
+var qualificationtypestatusenum_1 = require("./qualificationtypestatusenum");
 // QualificationType
 /**
  *  The QualificationType data structure represents a Qualification type, a description of a property of a Worker that must match the requirements of a HIT for the Worker to be able to accept the HIT. The type also describes how a Worker can obtain a Qualification of that type, such as through a Qualification test.
@@ -34,57 +37,57 @@ var QualificationType = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AnswerKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AnswerKey" }),
         __metadata("design:type", String)
     ], QualificationType.prototype, "answerKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoGranted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoGranted" }),
         __metadata("design:type", Boolean)
     ], QualificationType.prototype, "autoGranted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoGrantedValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoGrantedValue" }),
         __metadata("design:type", Number)
     ], QualificationType.prototype, "autoGrantedValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], QualificationType.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], QualificationType.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsRequestable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsRequestable" }),
         __metadata("design:type", Boolean)
     ], QualificationType.prototype, "isRequestable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Keywords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Keywords" }),
         __metadata("design:type", String)
     ], QualificationType.prototype, "keywords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], QualificationType.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QualificationTypeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QualificationTypeId" }),
         __metadata("design:type", String)
     ], QualificationType.prototype, "qualificationTypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QualificationTypeStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QualificationTypeStatus" }),
         __metadata("design:type", String)
     ], QualificationType.prototype, "qualificationTypeStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RetryDelayInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RetryDelayInSeconds" }),
         __metadata("design:type", Number)
     ], QualificationType.prototype, "retryDelayInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Test" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Test" }),
         __metadata("design:type", String)
     ], QualificationType.prototype, "test", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TestDurationInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TestDurationInSeconds" }),
         __metadata("design:type", Number)
     ], QualificationType.prototype, "testDurationInSeconds", void 0);
     return QualificationType;
-}(SpeakeasyBase));
-export { QualificationType };
+}(utils_1.SpeakeasyBase));
+exports.QualificationType = QualificationType;

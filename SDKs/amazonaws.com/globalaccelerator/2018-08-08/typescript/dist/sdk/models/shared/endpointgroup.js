@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EndpointDescription } from "./endpointdescription";
-import { HealthCheckProtocolEnum } from "./healthcheckprotocolenum";
-import { PortOverride } from "./portoverride";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var endpointdescription_1 = require("./endpointdescription");
+var healthcheckprotocolenum_1 = require("./healthcheckprotocolenum");
+var portoverride_1 = require("./portoverride");
 // EndpointGroup
 /**
  * A complex type for the endpoint group. An AWS Region can have only one endpoint group for a specific listener.
@@ -36,45 +39,45 @@ var EndpointGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointDescriptions", elemType: EndpointDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointDescriptions", elemType: endpointdescription_1.EndpointDescription }),
         __metadata("design:type", Array)
     ], EndpointGroup.prototype, "endpointDescriptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointGroupArn" }),
         __metadata("design:type", String)
     ], EndpointGroup.prototype, "endpointGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointGroupRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointGroupRegion" }),
         __metadata("design:type", String)
     ], EndpointGroup.prototype, "endpointGroupRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HealthCheckIntervalSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HealthCheckIntervalSeconds" }),
         __metadata("design:type", Number)
     ], EndpointGroup.prototype, "healthCheckIntervalSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HealthCheckPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HealthCheckPath" }),
         __metadata("design:type", String)
     ], EndpointGroup.prototype, "healthCheckPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HealthCheckPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HealthCheckPort" }),
         __metadata("design:type", Number)
     ], EndpointGroup.prototype, "healthCheckPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HealthCheckProtocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HealthCheckProtocol" }),
         __metadata("design:type", String)
     ], EndpointGroup.prototype, "healthCheckProtocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PortOverrides", elemType: PortOverride }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PortOverrides", elemType: portoverride_1.PortOverride }),
         __metadata("design:type", Array)
     ], EndpointGroup.prototype, "portOverrides", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ThresholdCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ThresholdCount" }),
         __metadata("design:type", Number)
     ], EndpointGroup.prototype, "thresholdCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrafficDialPercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrafficDialPercentage" }),
         __metadata("design:type", Number)
     ], EndpointGroup.prototype, "trafficDialPercentage", void 0);
     return EndpointGroup;
-}(SpeakeasyBase));
-export { EndpointGroup };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGroup = EndpointGroup;

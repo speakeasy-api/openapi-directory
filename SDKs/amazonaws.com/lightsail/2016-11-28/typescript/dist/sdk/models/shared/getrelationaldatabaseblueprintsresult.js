@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RelationalDatabaseBlueprint } from "./relationaldatabaseblueprint";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRelationalDatabaseBlueprintsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var relationaldatabaseblueprint_1 = require("./relationaldatabaseblueprint");
 var GetRelationalDatabaseBlueprintsResult = /** @class */ (function (_super) {
     __extends(GetRelationalDatabaseBlueprintsResult, _super);
     function GetRelationalDatabaseBlueprintsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blueprints", elemType: RelationalDatabaseBlueprint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blueprints", elemType: relationaldatabaseblueprint_1.RelationalDatabaseBlueprint }),
         __metadata("design:type", Array)
     ], GetRelationalDatabaseBlueprintsResult.prototype, "blueprints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GetRelationalDatabaseBlueprintsResult.prototype, "nextPageToken", void 0);
     return GetRelationalDatabaseBlueprintsResult;
-}(SpeakeasyBase));
-export { GetRelationalDatabaseBlueprintsResult };
+}(utils_1.SpeakeasyBase));
+exports.GetRelationalDatabaseBlueprintsResult = GetRelationalDatabaseBlueprintsResult;

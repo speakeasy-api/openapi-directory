@@ -61,8 +61,8 @@ export class PostPortfolioConstructionMimickingResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioConstructionMimicking200ApplicationJsonObject?: PostPortfolioConstructionMimicking200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioConstructionMimicking200ApplicationJSONObject?: PostPortfolioConstructionMimicking200ApplicationJson;
 }

@@ -24,7 +24,7 @@ export declare class Adexchangebuyer2AccountsProposalsCompleteSetupSecurity exte
 export declare class Adexchangebuyer2AccountsProposalsCompleteSetupRequest extends SpeakeasyBase {
     pathParams: Adexchangebuyer2AccountsProposalsCompleteSetupPathParams;
     queryParams: Adexchangebuyer2AccountsProposalsCompleteSetupQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: Adexchangebuyer2AccountsProposalsCompleteSetupSecurity;
 }
 export declare class Adexchangebuyer2AccountsProposalsCompleteSetupResponse extends SpeakeasyBase {

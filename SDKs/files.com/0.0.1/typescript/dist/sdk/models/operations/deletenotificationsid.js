@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteNotificationsIdResponse = exports.DeleteNotificationsIdRequest = exports.DeleteNotificationsIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteNotificationsIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteNotificationsIdPathParams, _super);
     function DeleteNotificationsIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], DeleteNotificationsIdPathParams.prototype, "id", void 0);
     return DeleteNotificationsIdPathParams;
-}(SpeakeasyBase));
-export { DeleteNotificationsIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNotificationsIdPathParams = DeleteNotificationsIdPathParams;
 var DeleteNotificationsIdRequest = /** @class */ (function (_super) {
     __extends(DeleteNotificationsIdRequest, _super);
     function DeleteNotificationsIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteNotificationsIdPathParams)
     ], DeleteNotificationsIdRequest.prototype, "pathParams", void 0);
     return DeleteNotificationsIdRequest;
-}(SpeakeasyBase));
-export { DeleteNotificationsIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNotificationsIdRequest = DeleteNotificationsIdRequest;
 var DeleteNotificationsIdResponse = /** @class */ (function (_super) {
     __extends(DeleteNotificationsIdResponse, _super);
     function DeleteNotificationsIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteNotificationsIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteNotificationsIdResponse.prototype, "statusCode", void 0);
     return DeleteNotificationsIdResponse;
-}(SpeakeasyBase));
-export { DeleteNotificationsIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNotificationsIdResponse = DeleteNotificationsIdResponse;

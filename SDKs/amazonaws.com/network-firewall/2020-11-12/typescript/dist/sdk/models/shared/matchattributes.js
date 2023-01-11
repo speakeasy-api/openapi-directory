@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PortRange } from "./portrange";
-import { Address } from "./address";
-import { TcpFlagField } from "./tcpflagfield";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MatchAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
+var portrange_1 = require("./portrange");
+var address_1 = require("./address");
+var tcpflagfield_1 = require("./tcpflagfield");
 // MatchAttributes
 /**
  * Criteria for Network Firewall to use to inspect an individual packet in stateless rule inspection. Each match attributes set can include one or more items such as IP address, CIDR range, port number, protocol, and TCP flags.
@@ -36,29 +39,29 @@ var MatchAttributes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationPorts", elemType: PortRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationPorts", elemType: portrange_1.PortRange }),
         __metadata("design:type", Array)
     ], MatchAttributes.prototype, "destinationPorts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Destinations", elemType: Address }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Destinations", elemType: address_1.Address }),
         __metadata("design:type", Array)
     ], MatchAttributes.prototype, "destinations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Protocols" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Protocols" }),
         __metadata("design:type", Array)
     ], MatchAttributes.prototype, "protocols", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourcePorts", elemType: PortRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourcePorts", elemType: portrange_1.PortRange }),
         __metadata("design:type", Array)
     ], MatchAttributes.prototype, "sourcePorts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Sources", elemType: Address }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Sources", elemType: address_1.Address }),
         __metadata("design:type", Array)
     ], MatchAttributes.prototype, "sources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TCPFlags", elemType: TcpFlagField }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TCPFlags", elemType: tcpflagfield_1.TcpFlagField }),
         __metadata("design:type", Array)
     ], MatchAttributes.prototype, "tcpFlags", void 0);
     return MatchAttributes;
-}(SpeakeasyBase));
-export { MatchAttributes };
+}(utils_1.SpeakeasyBase));
+exports.MatchAttributes = MatchAttributes;

@@ -11,7 +11,7 @@ import { PermissionsBoundaryDecisionDetail } from "./permissionsboundarydecision
 **/
 export class ResourceSpecificResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  evalDecisionDetails?: Map<string, PolicyEvaluationDecisionTypeEnum>;
+  evalDecisionDetails?: Record<string, string>;
 
   @SpeakeasyMetadata()
   evalResourceDecision: PolicyEvaluationDecisionTypeEnum;

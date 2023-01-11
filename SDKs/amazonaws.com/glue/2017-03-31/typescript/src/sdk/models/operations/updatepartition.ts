@@ -66,5 +66,5 @@ export class UpdatePartitionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updatePartitionResponse?: Map<string, any>;
+  updatePartitionResponse?: Record<string, any>;
 }

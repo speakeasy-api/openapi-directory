@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ConfirmPaymentOfTransaction5ServerList = [
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfirmPaymentOfTransaction5Response = exports.ConfirmPaymentOfTransaction5Request = exports.ConfirmPaymentOfTransaction5RequestBody = exports.ConfirmPaymentOfTransaction5ServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+exports.ConfirmPaymentOfTransaction5ServerList = [
     "http://api.climatekuul.com:8000/footprint",
 ];
 var ConfirmPaymentOfTransaction5RequestBody = /** @class */ (function (_super) {
@@ -32,45 +35,45 @@ var ConfirmPaymentOfTransaction5RequestBody = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=confirmTransaction;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=confirmTransaction;" }),
         __metadata("design:type", String)
     ], ConfirmPaymentOfTransaction5RequestBody.prototype, "confirmTransaction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=transaction_id;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=transaction_id;" }),
         __metadata("design:type", String)
     ], ConfirmPaymentOfTransaction5RequestBody.prototype, "transactionId", void 0);
     return ConfirmPaymentOfTransaction5RequestBody;
-}(SpeakeasyBase));
-export { ConfirmPaymentOfTransaction5RequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ConfirmPaymentOfTransaction5RequestBody = ConfirmPaymentOfTransaction5RequestBody;
 var ConfirmPaymentOfTransaction5Request = /** @class */ (function (_super) {
     __extends(ConfirmPaymentOfTransaction5Request, _super);
     function ConfirmPaymentOfTransaction5Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ConfirmPaymentOfTransaction5Request.prototype, "serverUrl", void 0);
+    ], ConfirmPaymentOfTransaction5Request.prototype, "serverURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", ConfirmPaymentOfTransaction5RequestBody)
     ], ConfirmPaymentOfTransaction5Request.prototype, "request", void 0);
     return ConfirmPaymentOfTransaction5Request;
-}(SpeakeasyBase));
-export { ConfirmPaymentOfTransaction5Request };
+}(utils_1.SpeakeasyBase));
+exports.ConfirmPaymentOfTransaction5Request = ConfirmPaymentOfTransaction5Request;
 var ConfirmPaymentOfTransaction5Response = /** @class */ (function (_super) {
     __extends(ConfirmPaymentOfTransaction5Response, _super);
     function ConfirmPaymentOfTransaction5Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConfirmPaymentOfTransaction5Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ConfirmPaymentOfTransaction5Response.prototype, "statusCode", void 0);
     return ConfirmPaymentOfTransaction5Response;
-}(SpeakeasyBase));
-export { ConfirmPaymentOfTransaction5Response };
+}(utils_1.SpeakeasyBase));
+exports.ConfirmPaymentOfTransaction5Response = ConfirmPaymentOfTransaction5Response;

@@ -1,0 +1,112 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlanDetails = exports.PlanDetailsWebhookOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlanDetailsWebhookOptions = /** @class */ (function (_super) {
+    __extends(PlanDetailsWebhookOptions, _super);
+    function PlanDetailsWebhookOptions() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", Number)
+    ], PlanDetailsWebhookOptions.prototype, "amount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeTriggers" }),
+        __metadata("design:type", String)
+    ], PlanDetailsWebhookOptions.prototype, "includeTriggers", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictionTypes" }),
+        __metadata("design:type", Array)
+    ], PlanDetailsWebhookOptions.prototype, "restrictionTypes", void 0);
+    return PlanDetailsWebhookOptions;
+}(utils_1.SpeakeasyBase));
+exports.PlanDetailsWebhookOptions = PlanDetailsWebhookOptions;
+var PlanDetails = /** @class */ (function (_super) {
+    __extends(PlanDetails, _super);
+    function PlanDetails() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiKeys" }),
+        __metadata("design:type", Number)
+    ], PlanDetails.prototype, "apiKeys", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiTokens" }),
+        __metadata("design:type", Number)
+    ], PlanDetails.prototype, "apiTokens", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=colorSchema" }),
+        __metadata("design:type", Boolean)
+    ], PlanDetails.prototype, "colorSchema", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customDomain" }),
+        __metadata("design:type", Boolean)
+    ], PlanDetails.prototype, "customDomain", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customName" }),
+        __metadata("design:type", Boolean)
+    ], PlanDetails.prototype, "customName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directLinks" }),
+        __metadata("design:type", Boolean)
+    ], PlanDetails.prototype, "directLinks", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipWhitelist" }),
+        __metadata("design:type", Boolean)
+    ], PlanDetails.prototype, "ipWhitelist", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sharingOptions" }),
+        __metadata("design:type", Array)
+    ], PlanDetails.prototype, "sharingOptions", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sshKeys" }),
+        __metadata("design:type", Number)
+    ], PlanDetails.prototype, "sshKeys", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageAddOn" }),
+        __metadata("design:type", Number)
+    ], PlanDetails.prototype, "storageAddOn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unlimitedUsers" }),
+        __metadata("design:type", Boolean)
+    ], PlanDetails.prototype, "unlimitedUsers", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userExpiration" }),
+        __metadata("design:type", Boolean)
+    ], PlanDetails.prototype, "userExpiration", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userImport" }),
+        __metadata("design:type", Boolean)
+    ], PlanDetails.prototype, "userImport", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webhookOptions" }),
+        __metadata("design:type", PlanDetailsWebhookOptions)
+    ], PlanDetails.prototype, "webhookOptions", void 0);
+    return PlanDetails;
+}(utils_1.SpeakeasyBase));
+exports.PlanDetails = PlanDetails;

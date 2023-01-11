@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoParticipantSummaryEnumRoomStatusEnum = void 0;
+var VideoParticipantSummaryEnumRoomStatusEnum;
+(function (VideoParticipantSummaryEnumRoomStatusEnum) {
+    VideoParticipantSummaryEnumRoomStatusEnum["InProgress"] = "in_progress";
+    VideoParticipantSummaryEnumRoomStatusEnum["Completed"] = "completed";
+})(VideoParticipantSummaryEnumRoomStatusEnum = exports.VideoParticipantSummaryEnumRoomStatusEnum || (exports.VideoParticipantSummaryEnumRoomStatusEnum = {}));

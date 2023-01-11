@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComputeNodeListResponse = exports.ComputeNodeListRequest = exports.ComputeNodeListHeaders = exports.ComputeNodeListQueryParams = exports.ComputeNodeListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ComputeNodeListPathParams = /** @class */ (function (_super) {
     __extends(ComputeNodeListPathParams, _super);
     function ComputeNodeListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=poolId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=poolId" }),
         __metadata("design:type", String)
     ], ComputeNodeListPathParams.prototype, "poolId", void 0);
     return ComputeNodeListPathParams;
-}(SpeakeasyBase));
-export { ComputeNodeListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeListPathParams = ComputeNodeListPathParams;
 var ComputeNodeListQueryParams = /** @class */ (function (_super) {
     __extends(ComputeNodeListQueryParams, _super);
     function ComputeNodeListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$filter" }),
         __metadata("design:type", String)
     ], ComputeNodeListQueryParams.prototype, "dollarFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$select" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$select" }),
         __metadata("design:type", String)
     ], ComputeNodeListQueryParams.prototype, "dollarSelect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], ComputeNodeListQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxresults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxresults" }),
         __metadata("design:type", Number)
     ], ComputeNodeListQueryParams.prototype, "maxresults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], ComputeNodeListQueryParams.prototype, "timeout", void 0);
     return ComputeNodeListQueryParams;
-}(SpeakeasyBase));
-export { ComputeNodeListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeListQueryParams = ComputeNodeListQueryParams;
 var ComputeNodeListHeaders = /** @class */ (function (_super) {
     __extends(ComputeNodeListHeaders, _super);
     function ComputeNodeListHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], ComputeNodeListHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], ComputeNodeListHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], ComputeNodeListHeaders.prototype, "returnClientRequestId", void 0);
     return ComputeNodeListHeaders;
-}(SpeakeasyBase));
-export { ComputeNodeListHeaders };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeListHeaders = ComputeNodeListHeaders;
 var ComputeNodeListRequest = /** @class */ (function (_super) {
     __extends(ComputeNodeListRequest, _super);
     function ComputeNodeListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ComputeNodeListPathParams)
     ], ComputeNodeListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ComputeNodeListQueryParams)
     ], ComputeNodeListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ComputeNodeListHeaders)
     ], ComputeNodeListRequest.prototype, "headers", void 0);
     return ComputeNodeListRequest;
-}(SpeakeasyBase));
-export { ComputeNodeListRequest };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeListRequest = ComputeNodeListRequest;
 var ComputeNodeListResponse = /** @class */ (function (_super) {
     __extends(ComputeNodeListResponse, _super);
     function ComputeNodeListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], ComputeNodeListResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], ComputeNodeListResponse.prototype, "computeNodeListResult", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ComputeNodeListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ComputeNodeListResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ComputeNodeListResponse.prototype, "statusCode", void 0);
     return ComputeNodeListResponse;
-}(SpeakeasyBase));
-export { ComputeNodeListResponse };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeListResponse = ComputeNodeListResponse;

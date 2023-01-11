@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccessDeniedPageSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 // AccessDeniedPageSettings
 /**
  * Custom content configuration for access denied page. IAP allows customers to define a custom URI to use as the error page when access is denied to users. If IAP prevents access to this page, the default IAP error page will be displayed instead.
@@ -33,17 +36,17 @@ var AccessDeniedPageSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessDeniedPageUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessDeniedPageUri" }),
         __metadata("design:type", String)
     ], AccessDeniedPageSettings.prototype, "accessDeniedPageUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=generateTroubleshootingUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=generateTroubleshootingUri" }),
         __metadata("design:type", Boolean)
     ], AccessDeniedPageSettings.prototype, "generateTroubleshootingUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remediationTokenGenerationEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remediationTokenGenerationEnabled" }),
         __metadata("design:type", Boolean)
     ], AccessDeniedPageSettings.prototype, "remediationTokenGenerationEnabled", void 0);
     return AccessDeniedPageSettings;
-}(SpeakeasyBase));
-export { AccessDeniedPageSettings };
+}(utils_1.SpeakeasyBase));
+exports.AccessDeniedPageSettings = AccessDeniedPageSettings;

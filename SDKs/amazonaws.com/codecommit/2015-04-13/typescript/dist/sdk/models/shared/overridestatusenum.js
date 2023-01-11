@@ -1,5 +1,8 @@
-export var OverrideStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OverrideStatusEnum = void 0;
+var OverrideStatusEnum;
 (function (OverrideStatusEnum) {
     OverrideStatusEnum["Override"] = "OVERRIDE";
     OverrideStatusEnum["Revoke"] = "REVOKE";
-})(OverrideStatusEnum || (OverrideStatusEnum = {}));
+})(OverrideStatusEnum = exports.OverrideStatusEnum || (exports.OverrideStatusEnum = {}));

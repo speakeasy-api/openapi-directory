@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetIntersectionsIntersectionIdOutputFormatResponse = exports.GetIntersectionsIntersectionIdOutputFormatRequest = exports.GetIntersectionsIntersectionIdOutputFormatQueryParams = exports.GetIntersectionsIntersectionIdOutputFormatPathParams = exports.GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum;
 (function (GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum) {
     GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum["Json"] = "json";
     GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum["Geojson"] = "geojson";
@@ -32,64 +35,64 @@ export var GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum;
     GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum["Gml"] = "gml";
     GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum["Csv"] = "csv";
     GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum["Shpz"] = "shpz";
-})(GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum || (GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum = {}));
+})(GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum = exports.GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum || (exports.GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum = {}));
 var GetIntersectionsIntersectionIdOutputFormatPathParams = /** @class */ (function (_super) {
     __extends(GetIntersectionsIntersectionIdOutputFormatPathParams, _super);
     function GetIntersectionsIntersectionIdOutputFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=intersectionID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=intersectionID" }),
         __metadata("design:type", String)
-    ], GetIntersectionsIntersectionIdOutputFormatPathParams.prototype, "intersectionId", void 0);
+    ], GetIntersectionsIntersectionIdOutputFormatPathParams.prototype, "intersectionID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
         __metadata("design:type", String)
     ], GetIntersectionsIntersectionIdOutputFormatPathParams.prototype, "outputFormat", void 0);
     return GetIntersectionsIntersectionIdOutputFormatPathParams;
-}(SpeakeasyBase));
-export { GetIntersectionsIntersectionIdOutputFormatPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetIntersectionsIntersectionIdOutputFormatPathParams = GetIntersectionsIntersectionIdOutputFormatPathParams;
 var GetIntersectionsIntersectionIdOutputFormatQueryParams = /** @class */ (function (_super) {
     __extends(GetIntersectionsIntersectionIdOutputFormatQueryParams, _super);
     function GetIntersectionsIntersectionIdOutputFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
         __metadata("design:type", Number)
-    ], GetIntersectionsIntersectionIdOutputFormatQueryParams.prototype, "outputSrs", void 0);
+    ], GetIntersectionsIntersectionIdOutputFormatQueryParams.prototype, "outputSRS", void 0);
     return GetIntersectionsIntersectionIdOutputFormatQueryParams;
-}(SpeakeasyBase));
-export { GetIntersectionsIntersectionIdOutputFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetIntersectionsIntersectionIdOutputFormatQueryParams = GetIntersectionsIntersectionIdOutputFormatQueryParams;
 var GetIntersectionsIntersectionIdOutputFormatRequest = /** @class */ (function (_super) {
     __extends(GetIntersectionsIntersectionIdOutputFormatRequest, _super);
     function GetIntersectionsIntersectionIdOutputFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetIntersectionsIntersectionIdOutputFormatPathParams)
     ], GetIntersectionsIntersectionIdOutputFormatRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetIntersectionsIntersectionIdOutputFormatQueryParams)
     ], GetIntersectionsIntersectionIdOutputFormatRequest.prototype, "queryParams", void 0);
     return GetIntersectionsIntersectionIdOutputFormatRequest;
-}(SpeakeasyBase));
-export { GetIntersectionsIntersectionIdOutputFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetIntersectionsIntersectionIdOutputFormatRequest = GetIntersectionsIntersectionIdOutputFormatRequest;
 var GetIntersectionsIntersectionIdOutputFormatResponse = /** @class */ (function (_super) {
     __extends(GetIntersectionsIntersectionIdOutputFormatResponse, _super);
     function GetIntersectionsIntersectionIdOutputFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetIntersectionsIntersectionIdOutputFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetIntersectionsIntersectionIdOutputFormatResponse.prototype, "statusCode", void 0);
     return GetIntersectionsIntersectionIdOutputFormatResponse;
-}(SpeakeasyBase));
-export { GetIntersectionsIntersectionIdOutputFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetIntersectionsIntersectionIdOutputFormatResponse = GetIntersectionsIntersectionIdOutputFormatResponse;

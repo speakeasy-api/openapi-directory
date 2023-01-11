@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class RestoreRevisionUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=rev" })
   rev?: string;
@@ -16,7 +16,7 @@ export class RestoreRevisionUsingPost200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -28,7 +28,7 @@ export class RestoreRevisionUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -40,7 +40,7 @@ export class RestoreRevisionUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -52,7 +52,7 @@ export class RestoreRevisionUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -73,14 +73,14 @@ export class RestoreRevisionUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  restoreRevisionUsingPost200ApplicationJsonObject?: RestoreRevisionUsingPost200ApplicationJson;
+  restoreRevisionUsingPOST200ApplicationJSONObject?: RestoreRevisionUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  restoreRevisionUsingPost400ApplicationJsonObject?: RestoreRevisionUsingPost400ApplicationJson;
+  restoreRevisionUsingPOST400ApplicationJSONObject?: RestoreRevisionUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  restoreRevisionUsingPost401ApplicationJsonObject?: RestoreRevisionUsingPost401ApplicationJson;
+  restoreRevisionUsingPOST401ApplicationJSONObject?: RestoreRevisionUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  restoreRevisionUsingPost500ApplicationJsonObject?: RestoreRevisionUsingPost500ApplicationJson;
+  restoreRevisionUsingPOST500ApplicationJSONObject?: RestoreRevisionUsingPost500ApplicationJson;
 }

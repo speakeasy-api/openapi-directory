@@ -8,13 +8,13 @@ export class PostV05HealthInformationHipRequestHeaders extends SpeakeasyBase {
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-HIP-ID" })
-  xHipId: string;
+  xHIPID: string;
 }
 
 
 export class PostV05HealthInformationHipRequestRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   hiphiRequest?: shared.HiphiRequest;

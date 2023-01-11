@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SignUpdateResponse = exports.SignUpdateRequest = exports.SignUpdatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SignUpdatePathParams = /** @class */ (function (_super) {
     __extends(SignUpdatePathParams, _super);
     function SignUpdatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=job" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=job" }),
         __metadata("design:type", String)
     ], SignUpdatePathParams.prototype, "job", void 0);
     return SignUpdatePathParams;
-}(SpeakeasyBase));
-export { SignUpdatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.SignUpdatePathParams = SignUpdatePathParams;
 var SignUpdateRequest = /** @class */ (function (_super) {
     __extends(SignUpdateRequest, _super);
     function SignUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SignUpdatePathParams)
     ], SignUpdateRequest.prototype, "pathParams", void 0);
     return SignUpdateRequest;
-}(SpeakeasyBase));
-export { SignUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.SignUpdateRequest = SignUpdateRequest;
 var SignUpdateResponse = /** @class */ (function (_super) {
     __extends(SignUpdateResponse, _super);
     function SignUpdateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], SignUpdateResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SignUpdateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SignUpdateResponse.prototype, "statusCode", void 0);
     return SignUpdateResponse;
-}(SpeakeasyBase));
-export { SignUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.SignUpdateResponse = SignUpdateResponse;

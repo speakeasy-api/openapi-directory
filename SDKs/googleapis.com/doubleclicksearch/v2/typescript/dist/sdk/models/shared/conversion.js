@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomDimension } from "./customdimension";
-import { CustomMetric } from "./custommetric";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Conversion = void 0;
+var utils_1 = require("../../../internal/utils");
+var customdimension_1 = require("./customdimension");
+var custommetric_1 = require("./custommetric");
 // Conversion
 /**
  * A conversion containing data relevant to DoubleClick Search.
@@ -35,141 +38,141 @@ var Conversion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adGroupId" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "adGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adId" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "adId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=advertiserId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=advertiserId" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "advertiserId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agencyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agencyId" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "agencyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributionModel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributionModel" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "attributionModel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=campaignId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=campaignId" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "campaignId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channel" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "channel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clickId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clickId" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "clickId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conversionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conversionId" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "conversionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conversionModifiedTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conversionModifiedTimestamp" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "conversionModifiedTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conversionTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conversionTimestamp" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "conversionTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countMillis" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "countMillis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=criterionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=criterionId" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "criterionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customDimension", elemType: CustomDimension }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customDimension", elemType: customdimension_1.CustomDimension }),
         __metadata("design:type", Array)
     ], Conversion.prototype, "customDimension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customMetric", elemType: CustomMetric }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customMetric", elemType: custommetric_1.CustomMetric }),
         __metadata("design:type", Array)
     ], Conversion.prototype, "customMetric", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerId" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "customerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceType" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "deviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dsConversionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dsConversionId" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "dsConversionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=engineAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=engineAccountId" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "engineAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=floodlightOrderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=floodlightOrderId" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "floodlightOrderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventoryAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventoryAccountId" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "inventoryAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productCountry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productCountry" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "productCountry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productGroupId" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "productGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productId" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "productId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productLanguage" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "productLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantityMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantityMillis" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "quantityMillis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revenueMicros" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revenueMicros" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "revenueMicros", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=segmentationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segmentationId" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "segmentationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=segmentationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segmentationName" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "segmentationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=segmentationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segmentationType" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "segmentationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storeId" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "storeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Conversion.prototype, "type", void 0);
     return Conversion;
-}(SpeakeasyBase));
-export { Conversion };
+}(utils_1.SpeakeasyBase));
+exports.Conversion = Conversion;

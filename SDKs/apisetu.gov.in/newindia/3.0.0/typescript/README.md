@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CripcRequest, CripcResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,25 +30,25 @@ const req: CripcRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      fullName: "debitis",
-      udf1: "maiores",
-      udf2: "laudantium",
-      udf3: "quam",
+      fullName: "sit",
+      udf1: "voluptas",
+      udf2: "culpa",
+      udf3: "expedita",
     },
-    consentArtifact: "et",
+    consentArtifact: "consequuntur",
     format: "pdf",
-    txnId: "facere",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.cripc(req).then((res: CripcResponse | AxiosError) => {
+sdk.apIs.cripc(req).then((res: CripcResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -58,7 +57,7 @@ sdk.sdk.cripc(req).then((res: CripcResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `cripc` - Insurance Policy - Car
 * `cvipc` - Insurance Policy - Commercial Vehicle

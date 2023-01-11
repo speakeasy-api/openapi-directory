@@ -72,8 +72,8 @@ export class GetSectionFormatResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getSectionFormat200ApplicationJsonObject?: GetSectionFormat200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getSectionFormat200ApplicationJSONObject?: GetSectionFormat200ApplicationJson;
 }

@@ -9,7 +9,7 @@ export declare class FunctionsUpdateRequestBody extends SpeakeasyBase {
     name: string;
     schedule?: string;
     timeout?: number;
-    vars?: Map<string, any>;
+    vars?: Record<string, any>;
 }
 export declare class FunctionsUpdateSecurity extends SpeakeasyBase {
     key: shared.SchemeKey;

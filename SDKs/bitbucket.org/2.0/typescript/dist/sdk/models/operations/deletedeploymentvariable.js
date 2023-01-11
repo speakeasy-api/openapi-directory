@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteDeploymentVariableResponse = exports.DeleteDeploymentVariableRequest = exports.DeleteDeploymentVariablePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteDeploymentVariablePathParams = /** @class */ (function (_super) {
     __extends(DeleteDeploymentVariablePathParams, _super);
     function DeleteDeploymentVariablePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=environment_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=environment_uuid" }),
         __metadata("design:type", String)
     ], DeleteDeploymentVariablePathParams.prototype, "environmentUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], DeleteDeploymentVariablePathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=variable_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=variable_uuid" }),
         __metadata("design:type", String)
     ], DeleteDeploymentVariablePathParams.prototype, "variableUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], DeleteDeploymentVariablePathParams.prototype, "workspace", void 0);
     return DeleteDeploymentVariablePathParams;
-}(SpeakeasyBase));
-export { DeleteDeploymentVariablePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDeploymentVariablePathParams = DeleteDeploymentVariablePathParams;
 var DeleteDeploymentVariableRequest = /** @class */ (function (_super) {
     __extends(DeleteDeploymentVariableRequest, _super);
     function DeleteDeploymentVariableRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteDeploymentVariablePathParams)
     ], DeleteDeploymentVariableRequest.prototype, "pathParams", void 0);
     return DeleteDeploymentVariableRequest;
-}(SpeakeasyBase));
-export { DeleteDeploymentVariableRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDeploymentVariableRequest = DeleteDeploymentVariableRequest;
 var DeleteDeploymentVariableResponse = /** @class */ (function (_super) {
     __extends(DeleteDeploymentVariableResponse, _super);
     function DeleteDeploymentVariableResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteDeploymentVariableResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteDeploymentVariableResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeleteDeploymentVariableResponse.prototype, "error", void 0);
     return DeleteDeploymentVariableResponse;
-}(SpeakeasyBase));
-export { DeleteDeploymentVariableResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDeploymentVariableResponse = DeleteDeploymentVariableResponse;

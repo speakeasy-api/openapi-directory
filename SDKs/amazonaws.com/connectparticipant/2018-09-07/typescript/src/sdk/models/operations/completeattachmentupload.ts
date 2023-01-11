@@ -52,7 +52,7 @@ export class CompleteAttachmentUploadResponse extends SpeakeasyBase {
   accessDeniedException?: any;
 
   @SpeakeasyMetadata()
-  completeAttachmentUploadResponse?: Map<string, any>;
+  completeAttachmentUploadResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   conflictException?: any;

@@ -25,7 +25,7 @@ export class ListAllPadsUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -37,7 +37,7 @@ export class ListAllPadsUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -49,7 +49,7 @@ export class ListAllPadsUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -64,14 +64,14 @@ export class ListAllPadsUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listAllPadsUsingGet200ApplicationJsonObject?: ListAllPadsUsingGet200ApplicationJson;
+  listAllPadsUsingGET200ApplicationJSONObject?: ListAllPadsUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  listAllPadsUsingGet400ApplicationJsonObject?: ListAllPadsUsingGet400ApplicationJson;
+  listAllPadsUsingGET400ApplicationJSONObject?: ListAllPadsUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  listAllPadsUsingGet401ApplicationJsonObject?: ListAllPadsUsingGet401ApplicationJson;
+  listAllPadsUsingGET401ApplicationJSONObject?: ListAllPadsUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  listAllPadsUsingGet500ApplicationJsonObject?: ListAllPadsUsingGet500ApplicationJson;
+  listAllPadsUsingGET500ApplicationJSONObject?: ListAllPadsUsingGet500ApplicationJson;
 }

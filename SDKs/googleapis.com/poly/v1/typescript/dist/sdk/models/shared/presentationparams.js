@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Quaternion } from "./quaternion";
-export var PresentationParamsColorSpaceEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PresentationParams = exports.PresentationParamsColorSpaceEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var quaternion_1 = require("./quaternion");
+var PresentationParamsColorSpaceEnum;
 (function (PresentationParamsColorSpaceEnum) {
     PresentationParamsColorSpaceEnum["Unknown"] = "UNKNOWN";
     PresentationParamsColorSpaceEnum["Linear"] = "LINEAR";
     PresentationParamsColorSpaceEnum["Gamma"] = "GAMMA";
-})(PresentationParamsColorSpaceEnum || (PresentationParamsColorSpaceEnum = {}));
+})(PresentationParamsColorSpaceEnum = exports.PresentationParamsColorSpaceEnum || (exports.PresentationParamsColorSpaceEnum = {}));
 // PresentationParams
 /**
  * Hints for displaying the asset, based on information available when the asset was uploaded.
@@ -40,17 +43,17 @@ var PresentationParams = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backgroundColor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backgroundColor" }),
         __metadata("design:type", String)
     ], PresentationParams.prototype, "backgroundColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=colorSpace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=colorSpace" }),
         __metadata("design:type", String)
     ], PresentationParams.prototype, "colorSpace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orientingRotation" }),
-        __metadata("design:type", Quaternion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orientingRotation" }),
+        __metadata("design:type", quaternion_1.Quaternion)
     ], PresentationParams.prototype, "orientingRotation", void 0);
     return PresentationParams;
-}(SpeakeasyBase));
-export { PresentationParams };
+}(utils_1.SpeakeasyBase));
+exports.PresentationParams = PresentationParams;

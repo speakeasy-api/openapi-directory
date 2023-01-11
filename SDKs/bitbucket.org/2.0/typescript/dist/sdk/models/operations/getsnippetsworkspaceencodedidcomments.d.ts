@@ -16,6 +16,6 @@ export declare class GetSnippetsWorkspaceEncodedIdCommentsRequest extends Speake
 export declare class GetSnippetsWorkspaceEncodedIdCommentsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedSnippetComments?: shared.PaginatedSnippetComments;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgentStoreSetResponse = exports.AgentStoreSetRequest = exports.AgentStoreSetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AgentStoreSetPathParams = /** @class */ (function (_super) {
     __extends(AgentStoreSetPathParams, _super);
     function AgentStoreSetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], AgentStoreSetPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=persist" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=persist" }),
         __metadata("design:type", Number)
     ], AgentStoreSetPathParams.prototype, "persist", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=var" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=var" }),
         __metadata("design:type", String)
     ], AgentStoreSetPathParams.prototype, "var", void 0);
     return AgentStoreSetPathParams;
-}(SpeakeasyBase));
-export { AgentStoreSetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AgentStoreSetPathParams = AgentStoreSetPathParams;
 var AgentStoreSetRequest = /** @class */ (function (_super) {
     __extends(AgentStoreSetRequest, _super);
     function AgentStoreSetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AgentStoreSetPathParams)
     ], AgentStoreSetRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", String)
     ], AgentStoreSetRequest.prototype, "request", void 0);
     return AgentStoreSetRequest;
-}(SpeakeasyBase));
-export { AgentStoreSetRequest };
+}(utils_1.SpeakeasyBase));
+exports.AgentStoreSetRequest = AgentStoreSetRequest;
 var AgentStoreSetResponse = /** @class */ (function (_super) {
     __extends(AgentStoreSetResponse, _super);
     function AgentStoreSetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AgentStoreSetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AgentStoreSetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], AgentStoreSetResponse.prototype, "agentStoreSet200ApplicationJsonString", void 0);
+    ], AgentStoreSetResponse.prototype, "agentStoreSet200ApplicationJSONString", void 0);
     return AgentStoreSetResponse;
-}(SpeakeasyBase));
-export { AgentStoreSetResponse };
+}(utils_1.SpeakeasyBase));
+exports.AgentStoreSetResponse = AgentStoreSetResponse;

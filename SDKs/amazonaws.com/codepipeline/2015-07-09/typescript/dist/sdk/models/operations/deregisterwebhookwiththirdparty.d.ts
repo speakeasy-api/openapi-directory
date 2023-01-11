@@ -19,7 +19,7 @@ export declare class DeregisterWebhookWithThirdPartyRequest extends SpeakeasyBas
 }
 export declare class DeregisterWebhookWithThirdPartyResponse extends SpeakeasyBase {
     contentType: string;
-    deregisterWebhookWithThirdPartyOutput?: Map<string, any>;
+    deregisterWebhookWithThirdPartyOutput?: Record<string, any>;
     statusCode: number;
     validationException?: any;
     webhookNotFoundException?: any;

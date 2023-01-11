@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ListingSettingsNamingEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListingSettings = exports.ListingSettingsSidebarPositionEnum = exports.ListingSettingsNamingEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ListingSettingsNamingEnum;
 (function (ListingSettingsNamingEnum) {
     ListingSettingsNamingEnum["Listing"] = "LISTING";
     ListingSettingsNamingEnum["Listings"] = "LISTINGS";
@@ -37,67 +40,67 @@ export var ListingSettingsNamingEnum;
     ListingSettingsNamingEnum["Channels"] = "CHANNELS";
     ListingSettingsNamingEnum["Connections"] = "CONNECTIONS";
     ListingSettingsNamingEnum["Extensions"] = "EXTENSIONS";
-})(ListingSettingsNamingEnum || (ListingSettingsNamingEnum = {}));
-export var ListingSettingsSidebarPositionEnum;
+})(ListingSettingsNamingEnum = exports.ListingSettingsNamingEnum || (exports.ListingSettingsNamingEnum = {}));
+var ListingSettingsSidebarPositionEnum;
 (function (ListingSettingsSidebarPositionEnum) {
     ListingSettingsSidebarPositionEnum["Top"] = "TOP";
     ListingSettingsSidebarPositionEnum["Left"] = "LEFT";
     ListingSettingsSidebarPositionEnum["Right"] = "RIGHT";
     ListingSettingsSidebarPositionEnum["Hidden"] = "HIDDEN";
-})(ListingSettingsSidebarPositionEnum || (ListingSettingsSidebarPositionEnum = {}));
+})(ListingSettingsSidebarPositionEnum = exports.ListingSettingsSidebarPositionEnum || (exports.ListingSettingsSidebarPositionEnum = {}));
 var ListingSettings = /** @class */ (function (_super) {
     __extends(ListingSettings, _super);
     function ListingSettings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description_text_template" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description_text_template" }),
         __metadata("design:type", String)
     ], ListingSettings.prototype, "descriptionTextTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description_title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description_title" }),
         __metadata("design:type", String)
     ], ListingSettings.prototype, "descriptionTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=features_text_template" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=features_text_template" }),
         __metadata("design:type", String)
     ], ListingSettings.prototype, "featuresTextTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=features_title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=features_title" }),
         __metadata("design:type", String)
     ], ListingSettings.prototype, "featuresTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=install_button_label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=install_button_label" }),
         __metadata("design:type", String)
     ], ListingSettings.prototype, "installButtonLabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name_postfix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name_postfix" }),
         __metadata("design:type", String)
     ], ListingSettings.prototype, "namePostfix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=naming" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=naming" }),
         __metadata("design:type", String)
     ], ListingSettings.prototype, "naming", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=native_integration_link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=native_integration_link" }),
         __metadata("design:type", String)
     ], ListingSettings.prototype, "nativeIntegrationLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pricing_disabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pricing_disabled" }),
         __metadata("design:type", Boolean)
     ], ListingSettings.prototype, "pricingDisabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pricing_text_template" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pricing_text_template" }),
         __metadata("design:type", String)
     ], ListingSettings.prototype, "pricingTextTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pricing_title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pricing_title" }),
         __metadata("design:type", String)
     ], ListingSettings.prototype, "pricingTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sidebar_position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sidebar_position" }),
         __metadata("design:type", String)
     ], ListingSettings.prototype, "sidebarPosition", void 0);
     return ListingSettings;
-}(SpeakeasyBase));
-export { ListingSettings };
+}(utils_1.SpeakeasyBase));
+exports.ListingSettings = ListingSettings;

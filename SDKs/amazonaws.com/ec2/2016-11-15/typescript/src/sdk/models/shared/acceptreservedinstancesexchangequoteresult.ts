@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class AcceptReservedInstancesExchangeQuoteResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  exchangeId?: string;
+  exchangeId?: Record<string, any>;
 }

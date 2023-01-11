@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MailerGenericExporterConfigTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MailerGenericExporterConfig = exports.MailerGenericExporterConfigTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MailerGenericExporterConfigTypeEnum;
 (function (MailerGenericExporterConfigTypeEnum) {
     MailerGenericExporterConfigTypeEnum["Generic"] = "generic";
-})(MailerGenericExporterConfigTypeEnum || (MailerGenericExporterConfigTypeEnum = {}));
+})(MailerGenericExporterConfigTypeEnum = exports.MailerGenericExporterConfigTypeEnum || (exports.MailerGenericExporterConfigTypeEnum = {}));
 var MailerGenericExporterConfig = /** @class */ (function (_super) {
     __extends(MailerGenericExporterConfig, _super);
     function MailerGenericExporterConfig() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], MailerGenericExporterConfig.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to" }),
         __metadata("design:type", Array)
     ], MailerGenericExporterConfig.prototype, "to", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], MailerGenericExporterConfig.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], MailerGenericExporterConfig.prototype, "url", void 0);
     return MailerGenericExporterConfig;
-}(SpeakeasyBase));
-export { MailerGenericExporterConfig };
+}(utils_1.SpeakeasyBase));
+exports.MailerGenericExporterConfig = MailerGenericExporterConfig;

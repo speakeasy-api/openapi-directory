@@ -16,7 +16,7 @@ export class VirtualMfaDevice extends SpeakeasyBase {
   enableDate?: Date;
 
   @SpeakeasyMetadata()
-  qrCodePng?: string;
+  qrCodePNG?: string;
 
   @SpeakeasyMetadata()
   serialNumber: string;

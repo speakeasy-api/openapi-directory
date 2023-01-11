@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,30 +14,55 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DriveFilesPatchResponse = exports.DriveFilesPatchRequest = exports.DriveFilesPatchSecurity = exports.DriveFilesPatchSecurityOption6 = exports.DriveFilesPatchSecurityOption5 = exports.DriveFilesPatchSecurityOption4 = exports.DriveFilesPatchSecurityOption3 = exports.DriveFilesPatchSecurityOption2 = exports.DriveFilesPatchSecurityOption1 = exports.DriveFilesPatchQueryParams = exports.DriveFilesPatchModifiedDateBehaviorEnum = exports.DriveFilesPatchPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DriveFilesPatchPathParams = /** @class */ (function (_super) {
     __extends(DriveFilesPatchPathParams, _super);
     function DriveFilesPatchPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=fileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=fileId" }),
         __metadata("design:type", String)
     ], DriveFilesPatchPathParams.prototype, "fileId", void 0);
     return DriveFilesPatchPathParams;
-}(SpeakeasyBase));
-export { DriveFilesPatchPathParams };
-export var DriveFilesPatchModifiedDateBehaviorEnum;
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesPatchPathParams = DriveFilesPatchPathParams;
+var DriveFilesPatchModifiedDateBehaviorEnum;
 (function (DriveFilesPatchModifiedDateBehaviorEnum) {
     DriveFilesPatchModifiedDateBehaviorEnum["FromBody"] = "fromBody";
     DriveFilesPatchModifiedDateBehaviorEnum["FromBodyIfNeeded"] = "fromBodyIfNeeded";
@@ -44,284 +70,284 @@ export var DriveFilesPatchModifiedDateBehaviorEnum;
     DriveFilesPatchModifiedDateBehaviorEnum["NoChange"] = "noChange";
     DriveFilesPatchModifiedDateBehaviorEnum["Now"] = "now";
     DriveFilesPatchModifiedDateBehaviorEnum["NowIfNeeded"] = "nowIfNeeded";
-})(DriveFilesPatchModifiedDateBehaviorEnum || (DriveFilesPatchModifiedDateBehaviorEnum = {}));
+})(DriveFilesPatchModifiedDateBehaviorEnum = exports.DriveFilesPatchModifiedDateBehaviorEnum || (exports.DriveFilesPatchModifiedDateBehaviorEnum = {}));
 var DriveFilesPatchQueryParams = /** @class */ (function (_super) {
     __extends(DriveFilesPatchQueryParams, _super);
     function DriveFilesPatchQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=addParents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=addParents" }),
         __metadata("design:type", String)
     ], DriveFilesPatchQueryParams.prototype, "addParents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], DriveFilesPatchQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=convert" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=convert" }),
         __metadata("design:type", Boolean)
     ], DriveFilesPatchQueryParams.prototype, "convert", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=enforceSingleParent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=enforceSingleParent" }),
         __metadata("design:type", Boolean)
     ], DriveFilesPatchQueryParams.prototype, "enforceSingleParent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], DriveFilesPatchQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includeLabels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includeLabels" }),
         __metadata("design:type", String)
     ], DriveFilesPatchQueryParams.prototype, "includeLabels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includePermissionsForView" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includePermissionsForView" }),
         __metadata("design:type", String)
     ], DriveFilesPatchQueryParams.prototype, "includePermissionsForView", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], DriveFilesPatchQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=modifiedDateBehavior" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=modifiedDateBehavior" }),
         __metadata("design:type", String)
     ], DriveFilesPatchQueryParams.prototype, "modifiedDateBehavior", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=newRevision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=newRevision" }),
         __metadata("design:type", Boolean)
     ], DriveFilesPatchQueryParams.prototype, "newRevision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], DriveFilesPatchQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ocr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ocr" }),
         __metadata("design:type", Boolean)
     ], DriveFilesPatchQueryParams.prototype, "ocr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ocrLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ocrLanguage" }),
         __metadata("design:type", String)
     ], DriveFilesPatchQueryParams.prototype, "ocrLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pinned" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pinned" }),
         __metadata("design:type", Boolean)
     ], DriveFilesPatchQueryParams.prototype, "pinned", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], DriveFilesPatchQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], DriveFilesPatchQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=removeParents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=removeParents" }),
         __metadata("design:type", String)
     ], DriveFilesPatchQueryParams.prototype, "removeParents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=setModifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=setModifiedDate" }),
         __metadata("design:type", Boolean)
     ], DriveFilesPatchQueryParams.prototype, "setModifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=supportsAllDrives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=supportsAllDrives" }),
         __metadata("design:type", Boolean)
     ], DriveFilesPatchQueryParams.prototype, "supportsAllDrives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=supportsTeamDrives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=supportsTeamDrives" }),
         __metadata("design:type", Boolean)
     ], DriveFilesPatchQueryParams.prototype, "supportsTeamDrives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timedTextLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timedTextLanguage" }),
         __metadata("design:type", String)
     ], DriveFilesPatchQueryParams.prototype, "timedTextLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timedTextTrackName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timedTextTrackName" }),
         __metadata("design:type", String)
     ], DriveFilesPatchQueryParams.prototype, "timedTextTrackName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=updateViewedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=updateViewedDate" }),
         __metadata("design:type", Boolean)
     ], DriveFilesPatchQueryParams.prototype, "updateViewedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=useContentAsIndexableText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=useContentAsIndexableText" }),
         __metadata("design:type", Boolean)
     ], DriveFilesPatchQueryParams.prototype, "useContentAsIndexableText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], DriveFilesPatchQueryParams.prototype, "userIp", void 0);
     return DriveFilesPatchQueryParams;
-}(SpeakeasyBase));
-export { DriveFilesPatchQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesPatchQueryParams = DriveFilesPatchQueryParams;
 var DriveFilesPatchSecurityOption1 = /** @class */ (function (_super) {
     __extends(DriveFilesPatchSecurityOption1, _super);
     function DriveFilesPatchSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveFilesPatchSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveFilesPatchSecurityOption1.prototype, "oauth2c", void 0);
     return DriveFilesPatchSecurityOption1;
-}(SpeakeasyBase));
-export { DriveFilesPatchSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesPatchSecurityOption1 = DriveFilesPatchSecurityOption1;
 var DriveFilesPatchSecurityOption2 = /** @class */ (function (_super) {
     __extends(DriveFilesPatchSecurityOption2, _super);
     function DriveFilesPatchSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveFilesPatchSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveFilesPatchSecurityOption2.prototype, "oauth2c", void 0);
     return DriveFilesPatchSecurityOption2;
-}(SpeakeasyBase));
-export { DriveFilesPatchSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesPatchSecurityOption2 = DriveFilesPatchSecurityOption2;
 var DriveFilesPatchSecurityOption3 = /** @class */ (function (_super) {
     __extends(DriveFilesPatchSecurityOption3, _super);
     function DriveFilesPatchSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveFilesPatchSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveFilesPatchSecurityOption3.prototype, "oauth2c", void 0);
     return DriveFilesPatchSecurityOption3;
-}(SpeakeasyBase));
-export { DriveFilesPatchSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesPatchSecurityOption3 = DriveFilesPatchSecurityOption3;
 var DriveFilesPatchSecurityOption4 = /** @class */ (function (_super) {
     __extends(DriveFilesPatchSecurityOption4, _super);
     function DriveFilesPatchSecurityOption4() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveFilesPatchSecurityOption4.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveFilesPatchSecurityOption4.prototype, "oauth2c", void 0);
     return DriveFilesPatchSecurityOption4;
-}(SpeakeasyBase));
-export { DriveFilesPatchSecurityOption4 };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesPatchSecurityOption4 = DriveFilesPatchSecurityOption4;
 var DriveFilesPatchSecurityOption5 = /** @class */ (function (_super) {
     __extends(DriveFilesPatchSecurityOption5, _super);
     function DriveFilesPatchSecurityOption5() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveFilesPatchSecurityOption5.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveFilesPatchSecurityOption5.prototype, "oauth2c", void 0);
     return DriveFilesPatchSecurityOption5;
-}(SpeakeasyBase));
-export { DriveFilesPatchSecurityOption5 };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesPatchSecurityOption5 = DriveFilesPatchSecurityOption5;
 var DriveFilesPatchSecurityOption6 = /** @class */ (function (_super) {
     __extends(DriveFilesPatchSecurityOption6, _super);
     function DriveFilesPatchSecurityOption6() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveFilesPatchSecurityOption6.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveFilesPatchSecurityOption6.prototype, "oauth2c", void 0);
     return DriveFilesPatchSecurityOption6;
-}(SpeakeasyBase));
-export { DriveFilesPatchSecurityOption6 };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesPatchSecurityOption6 = DriveFilesPatchSecurityOption6;
 var DriveFilesPatchSecurity = /** @class */ (function (_super) {
     __extends(DriveFilesPatchSecurity, _super);
     function DriveFilesPatchSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveFilesPatchSecurityOption1)
     ], DriveFilesPatchSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveFilesPatchSecurityOption2)
     ], DriveFilesPatchSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveFilesPatchSecurityOption3)
     ], DriveFilesPatchSecurity.prototype, "option3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveFilesPatchSecurityOption4)
     ], DriveFilesPatchSecurity.prototype, "option4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveFilesPatchSecurityOption5)
     ], DriveFilesPatchSecurity.prototype, "option5", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveFilesPatchSecurityOption6)
     ], DriveFilesPatchSecurity.prototype, "option6", void 0);
     return DriveFilesPatchSecurity;
-}(SpeakeasyBase));
-export { DriveFilesPatchSecurity };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesPatchSecurity = DriveFilesPatchSecurity;
 var DriveFilesPatchRequest = /** @class */ (function (_super) {
     __extends(DriveFilesPatchRequest, _super);
     function DriveFilesPatchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DriveFilesPatchPathParams)
     ], DriveFilesPatchRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DriveFilesPatchQueryParams)
     ], DriveFilesPatchRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.FileInput)
     ], DriveFilesPatchRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DriveFilesPatchSecurity)
     ], DriveFilesPatchRequest.prototype, "security", void 0);
     return DriveFilesPatchRequest;
-}(SpeakeasyBase));
-export { DriveFilesPatchRequest };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesPatchRequest = DriveFilesPatchRequest;
 var DriveFilesPatchResponse = /** @class */ (function (_super) {
     __extends(DriveFilesPatchResponse, _super);
     function DriveFilesPatchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DriveFilesPatchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.File)
     ], DriveFilesPatchResponse.prototype, "file", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DriveFilesPatchResponse.prototype, "statusCode", void 0);
     return DriveFilesPatchResponse;
-}(SpeakeasyBase));
-export { DriveFilesPatchResponse };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesPatchResponse = DriveFilesPatchResponse;

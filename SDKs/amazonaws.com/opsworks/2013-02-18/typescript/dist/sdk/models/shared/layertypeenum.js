@@ -1,4 +1,7 @@
-export var LayerTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LayerTypeEnum = void 0;
+var LayerTypeEnum;
 (function (LayerTypeEnum) {
     LayerTypeEnum["AwsFlowRuby"] = "aws-flow-ruby";
     LayerTypeEnum["EcsCluster"] = "ecs-cluster";
@@ -12,4 +15,4 @@ export var LayerTypeEnum;
     LayerTypeEnum["DbMaster"] = "db-master";
     LayerTypeEnum["MonitoringMaster"] = "monitoring-master";
     LayerTypeEnum["Custom"] = "custom";
-})(LayerTypeEnum || (LayerTypeEnum = {}));
+})(LayerTypeEnum = exports.LayerTypeEnum || (exports.LayerTypeEnum = {}));

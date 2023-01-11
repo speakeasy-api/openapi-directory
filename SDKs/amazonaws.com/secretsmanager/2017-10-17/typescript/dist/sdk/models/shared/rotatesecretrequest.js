@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RotationRulesType } from "./rotationrulestype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RotateSecretRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var rotationrulestype_1 = require("./rotationrulestype");
 var RotateSecretRequest = /** @class */ (function (_super) {
     __extends(RotateSecretRequest, _super);
     function RotateSecretRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClientRequestToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClientRequestToken" }),
         __metadata("design:type", String)
     ], RotateSecretRequest.prototype, "clientRequestToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RotationLambdaARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RotationLambdaARN" }),
         __metadata("design:type", String)
-    ], RotateSecretRequest.prototype, "rotationLambdaArn", void 0);
+    ], RotateSecretRequest.prototype, "rotationLambdaARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RotationRules" }),
-        __metadata("design:type", RotationRulesType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RotationRules" }),
+        __metadata("design:type", rotationrulestype_1.RotationRulesType)
     ], RotateSecretRequest.prototype, "rotationRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretId" }),
         __metadata("design:type", String)
     ], RotateSecretRequest.prototype, "secretId", void 0);
     return RotateSecretRequest;
-}(SpeakeasyBase));
-export { RotateSecretRequest };
+}(utils_1.SpeakeasyBase));
+exports.RotateSecretRequest = RotateSecretRequest;

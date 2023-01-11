@@ -8,5 +8,5 @@ export declare class SwapNetworkApplianceWarmSpareRequest extends SpeakeasyBase 
 export declare class SwapNetworkApplianceWarmSpareResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    swapNetworkApplianceWarmSpare200ApplicationJsonObject?: Map<string, any>;
+    swapNetworkApplianceWarmSpare200ApplicationJSONObject?: Record<string, any>;
 }

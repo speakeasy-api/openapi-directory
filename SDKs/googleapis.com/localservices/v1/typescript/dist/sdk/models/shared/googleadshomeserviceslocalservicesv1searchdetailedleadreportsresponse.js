@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport } from "./googleadshomeserviceslocalservicesv1detailedleadreport";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleadshomeserviceslocalservicesv1detailedleadreport_1 = require("./googleadshomeserviceslocalservicesv1detailedleadreport");
 // GoogleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse
 /**
  * A page of the response received from the SearchDetailedLeadReports method. A paginated response where more pages are available has `next_page_token` set. This token can be used in a subsequent request to retrieve the next request page.
@@ -34,13 +37,13 @@ var GoogleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse = /** 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detailedLeadReports", elemType: GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detailedLeadReports", elemType: googleadshomeserviceslocalservicesv1detailedleadreport_1.GoogleAdsHomeservicesLocalservicesV1DetailedLeadReport }),
         __metadata("design:type", Array)
     ], GoogleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse.prototype, "detailedLeadReports", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse.prototype, "nextPageToken", void 0);
     return GoogleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse;
-}(SpeakeasyBase));
-export { GoogleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse = GoogleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse;

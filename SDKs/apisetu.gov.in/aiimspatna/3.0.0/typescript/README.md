@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { LabrpRequest, LabrpResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,25 +30,25 @@ const req: LabrpRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      dob: "saepe",
-      fullName: "et",
-      gender: "quas",
-      mobileNoRq: "odio",
+      dob: "sit",
+      fullName: "voluptas",
+      gender: "culpa",
+      mobileNoRQ: "expedita",
     },
-    consentArtifact: "perferendis",
+    consentArtifact: "consequuntur",
     format: "pdf",
-    txnId: "nisi",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.labrp(req).then((res: LabrpResponse | AxiosError) => {
+sdk.apIs.labrp(req).then((res: LabrpResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -58,7 +57,7 @@ sdk.sdk.labrp(req).then((res: LabrpResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `labrp` - Clinical Laboratory Report
 

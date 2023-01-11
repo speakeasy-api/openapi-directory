@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,154 +14,179 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListResponse = exports.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListRequest = exports.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListSecurity = exports.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams = exports.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListPathParams = /** @class */ (function (_super) {
     __extends(ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListPathParams, _super);
     function ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=executionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=executionId" }),
         __metadata("design:type", String)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListPathParams.prototype, "executionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=historyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=historyId" }),
         __metadata("design:type", String)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListPathParams.prototype, "historyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=projectId" }),
         __metadata("design:type", String)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListPathParams.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=stepId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=stepId" }),
         __metadata("design:type", String)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListPathParams.prototype, "stepId", void 0);
     return ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListPathParams;
-}(SpeakeasyBase));
-export { ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListPathParams = ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListPathParams;
 var ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams = /** @class */ (function (_super) {
     __extends(ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams, _super);
     function ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageSize" }),
         __metadata("design:type", Number)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams.prototype, "uploadProtocol", void 0);
     return ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams;
-}(SpeakeasyBase));
-export { ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams = ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams;
 var ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListSecurity = /** @class */ (function (_super) {
     __extends(ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListSecurity, _super);
     function ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListSecurity.prototype, "oauth2c", void 0);
     return ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListSecurity;
-}(SpeakeasyBase));
-export { ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListSecurity = ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListSecurity;
 var ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListRequest = /** @class */ (function (_super) {
     __extends(ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListRequest, _super);
     function ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListPathParams)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListSecurity)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListRequest.prototype, "security", void 0);
     return ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListRequest;
-}(SpeakeasyBase));
-export { ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListRequest = ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListRequest;
 var ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListResponse = /** @class */ (function (_super) {
     __extends(ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListResponse, _super);
     function ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ListStepThumbnailsResponse)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListResponse.prototype, "listStepThumbnailsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListResponse.prototype, "statusCode", void 0);
     return ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListResponse;
-}(SpeakeasyBase));
-export { ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListResponse = ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListResponse;

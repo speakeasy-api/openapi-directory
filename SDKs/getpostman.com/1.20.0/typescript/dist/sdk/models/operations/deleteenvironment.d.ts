@@ -22,6 +22,6 @@ export declare class DeleteEnvironmentRequest extends SpeakeasyBase {
 export declare class DeleteEnvironmentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteEnvironment200ApplicationJsonObject?: DeleteEnvironment200ApplicationJson;
-    deleteEnvironment404ApplicationJsonObject?: DeleteEnvironment404ApplicationJson;
+    deleteEnvironment200ApplicationJSONObject?: DeleteEnvironment200ApplicationJson;
+    deleteEnvironment404ApplicationJSONObject?: DeleteEnvironment404ApplicationJson;
 }

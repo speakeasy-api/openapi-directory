@@ -4,8 +4,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class ConfirmProductInstanceResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  ownerId?: string;
+  ownerId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  return?: boolean;
+  return?: Record<string, any>;
 }

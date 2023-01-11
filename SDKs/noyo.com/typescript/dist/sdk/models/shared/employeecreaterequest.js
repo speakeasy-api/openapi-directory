@@ -1,0 +1,654 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmployeeCreateRequest = exports.EmployeeCreateRequestPerson = exports.EmployeeCreateRequestPersonSexEnum = exports.EmployeeCreateRequestPersonMaritalStatusEnum = exports.EmployeeCreateRequestPersonMailingAddress = exports.EmployeeCreateRequestPersonMailingAddressStateEnum = exports.EmployeeCreateRequestPersonHomeAddress = exports.EmployeeCreateRequestPersonHomeAddressStateEnum = exports.EmployeeCreateRequestPersonDetails = exports.EmployeeCreateRequestPersonDetailsTobacco = exports.EmployeeCreateRequestPersonDetailsTobaccoTypesEnum = exports.EmployeeCreateRequestPersonDetailsDisability = exports.EmployeeCreateRequestPersonDetailsAmericanIndian = exports.EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum = exports.EmployeeCreateRequestPersonContact = exports.EmployeeCreateRequestPersonContactPreferredMethodEnum = exports.EmployeeCreateRequestPersonContactEmailAddressTypeEnum = exports.EmployeeCreateRequestEmployment = exports.EmployeeCreateRequestEmploymentSalary = exports.EmployeeCreateRequestEmploymentSalaryUnitEnum = exports.EmployeeCreateRequestEmploymentSalaryTypeEnum = exports.EmployeeCreateRequestEmploymentEmploymentStatusEnum = exports.EmployeeCreateRequestEmploymentEmploymentDates = void 0;
+var utils_1 = require("../../../internal/utils");
+// EmployeeCreateRequestEmploymentEmploymentDates
+/**
+ * Employee employment dates
+**/
+var EmployeeCreateRequestEmploymentEmploymentDates = /** @class */ (function (_super) {
+    __extends(EmployeeCreateRequestEmploymentEmploymentDates, _super);
+    function EmployeeCreateRequestEmploymentEmploymentDates() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=full_time_start" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestEmploymentEmploymentDates.prototype, "fullTimeStart", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hire_date" }),
+        __metadata("design:type", Date)
+    ], EmployeeCreateRequestEmploymentEmploymentDates.prototype, "hireDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rehire" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestEmploymentEmploymentDates.prototype, "rehire", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retirement" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestEmploymentEmploymentDates.prototype, "retirement", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=terminated" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestEmploymentEmploymentDates.prototype, "terminated", void 0);
+    return EmployeeCreateRequestEmploymentEmploymentDates;
+}(utils_1.SpeakeasyBase));
+exports.EmployeeCreateRequestEmploymentEmploymentDates = EmployeeCreateRequestEmploymentEmploymentDates;
+var EmployeeCreateRequestEmploymentEmploymentStatusEnum;
+(function (EmployeeCreateRequestEmploymentEmploymentStatusEnum) {
+    EmployeeCreateRequestEmploymentEmploymentStatusEnum["Contract"] = "contract";
+    EmployeeCreateRequestEmploymentEmploymentStatusEnum["Disabled"] = "disabled";
+    EmployeeCreateRequestEmploymentEmploymentStatusEnum["FullTime"] = "full-time";
+    EmployeeCreateRequestEmploymentEmploymentStatusEnum["PartTime"] = "part-time";
+    EmployeeCreateRequestEmploymentEmploymentStatusEnum["Retired"] = "retired";
+    EmployeeCreateRequestEmploymentEmploymentStatusEnum["Terminated"] = "terminated";
+})(EmployeeCreateRequestEmploymentEmploymentStatusEnum = exports.EmployeeCreateRequestEmploymentEmploymentStatusEnum || (exports.EmployeeCreateRequestEmploymentEmploymentStatusEnum = {}));
+var EmployeeCreateRequestEmploymentSalaryTypeEnum;
+(function (EmployeeCreateRequestEmploymentSalaryTypeEnum) {
+    EmployeeCreateRequestEmploymentSalaryTypeEnum["Hourly"] = "hourly";
+    EmployeeCreateRequestEmploymentSalaryTypeEnum["Salary"] = "salary";
+})(EmployeeCreateRequestEmploymentSalaryTypeEnum = exports.EmployeeCreateRequestEmploymentSalaryTypeEnum || (exports.EmployeeCreateRequestEmploymentSalaryTypeEnum = {}));
+var EmployeeCreateRequestEmploymentSalaryUnitEnum;
+(function (EmployeeCreateRequestEmploymentSalaryUnitEnum) {
+    EmployeeCreateRequestEmploymentSalaryUnitEnum["Annual"] = "annual";
+    EmployeeCreateRequestEmploymentSalaryUnitEnum["Hour"] = "hour";
+    EmployeeCreateRequestEmploymentSalaryUnitEnum["Month"] = "month";
+    EmployeeCreateRequestEmploymentSalaryUnitEnum["SemiMonthly"] = "semi-monthly";
+    EmployeeCreateRequestEmploymentSalaryUnitEnum["Week"] = "week";
+})(EmployeeCreateRequestEmploymentSalaryUnitEnum = exports.EmployeeCreateRequestEmploymentSalaryUnitEnum || (exports.EmployeeCreateRequestEmploymentSalaryUnitEnum = {}));
+// EmployeeCreateRequestEmploymentSalary
+/**
+ * Employee salary information
+**/
+var EmployeeCreateRequestEmploymentSalary = /** @class */ (function (_super) {
+    __extends(EmployeeCreateRequestEmploymentSalary, _super);
+    function EmployeeCreateRequestEmploymentSalary() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", Number)
+    ], EmployeeCreateRequestEmploymentSalary.prototype, "amount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestEmploymentSalary.prototype, "type", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unit" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestEmploymentSalary.prototype, "unit", void 0);
+    return EmployeeCreateRequestEmploymentSalary;
+}(utils_1.SpeakeasyBase));
+exports.EmployeeCreateRequestEmploymentSalary = EmployeeCreateRequestEmploymentSalary;
+// EmployeeCreateRequestEmployment
+/**
+ * Employment information for the employee
+**/
+var EmployeeCreateRequestEmployment = /** @class */ (function (_super) {
+    __extends(EmployeeCreateRequestEmployment, _super);
+    function EmployeeCreateRequestEmployment() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employment_dates" }),
+        __metadata("design:type", EmployeeCreateRequestEmploymentEmploymentDates)
+    ], EmployeeCreateRequestEmployment.prototype, "employmentDates", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employment_status" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestEmployment.prototype, "employmentStatus", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hours_worked" }),
+        __metadata("design:type", Number)
+    ], EmployeeCreateRequestEmployment.prototype, "hoursWorked", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=occupation" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestEmployment.prototype, "occupation", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=salary" }),
+        __metadata("design:type", EmployeeCreateRequestEmploymentSalary)
+    ], EmployeeCreateRequestEmployment.prototype, "salary", void 0);
+    return EmployeeCreateRequestEmployment;
+}(utils_1.SpeakeasyBase));
+exports.EmployeeCreateRequestEmployment = EmployeeCreateRequestEmployment;
+var EmployeeCreateRequestPersonContactEmailAddressTypeEnum;
+(function (EmployeeCreateRequestPersonContactEmailAddressTypeEnum) {
+    EmployeeCreateRequestPersonContactEmailAddressTypeEnum["Home"] = "home";
+    EmployeeCreateRequestPersonContactEmailAddressTypeEnum["Work"] = "work";
+})(EmployeeCreateRequestPersonContactEmailAddressTypeEnum = exports.EmployeeCreateRequestPersonContactEmailAddressTypeEnum || (exports.EmployeeCreateRequestPersonContactEmailAddressTypeEnum = {}));
+var EmployeeCreateRequestPersonContactPreferredMethodEnum;
+(function (EmployeeCreateRequestPersonContactPreferredMethodEnum) {
+    EmployeeCreateRequestPersonContactPreferredMethodEnum["Email"] = "email";
+    EmployeeCreateRequestPersonContactPreferredMethodEnum["HomePhone"] = "home-phone";
+    EmployeeCreateRequestPersonContactPreferredMethodEnum["Mail"] = "mail";
+    EmployeeCreateRequestPersonContactPreferredMethodEnum["Other"] = "other";
+    EmployeeCreateRequestPersonContactPreferredMethodEnum["WorkPhone"] = "work-phone";
+})(EmployeeCreateRequestPersonContactPreferredMethodEnum = exports.EmployeeCreateRequestPersonContactPreferredMethodEnum || (exports.EmployeeCreateRequestPersonContactPreferredMethodEnum = {}));
+// EmployeeCreateRequestPersonContact
+/**
+ * Contact information for the person
+**/
+var EmployeeCreateRequestPersonContact = /** @class */ (function (_super) {
+    __extends(EmployeeCreateRequestPersonContact, _super);
+    function EmployeeCreateRequestPersonContact() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email_address" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonContact.prototype, "emailAddress", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email_address_type" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonContact.prototype, "emailAddressType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=home_phone" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonContact.prototype, "homePhone", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferred_language" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonContact.prototype, "preferredLanguage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferred_method" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonContact.prototype, "preferredMethod", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=speaks_english" }),
+        __metadata("design:type", Boolean)
+    ], EmployeeCreateRequestPersonContact.prototype, "speaksEnglish", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=work_phone" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonContact.prototype, "workPhone", void 0);
+    return EmployeeCreateRequestPersonContact;
+}(utils_1.SpeakeasyBase));
+exports.EmployeeCreateRequestPersonContact = EmployeeCreateRequestPersonContact;
+var EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum;
+(function (EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum) {
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Ak"] = "AK";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Al"] = "AL";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Ar"] = "AR";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["As"] = "AS";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Az"] = "AZ";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Ca"] = "CA";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Co"] = "CO";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Ct"] = "CT";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Dc"] = "DC";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["De"] = "DE";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Fl"] = "FL";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Fm"] = "FM";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Ga"] = "GA";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Gu"] = "GU";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Hi"] = "HI";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Ia"] = "IA";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Id"] = "ID";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Il"] = "IL";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["In"] = "IN";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Ks"] = "KS";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Ky"] = "KY";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["La"] = "LA";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Ma"] = "MA";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Md"] = "MD";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Me"] = "ME";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Mh"] = "MH";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Mi"] = "MI";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Mn"] = "MN";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Mo"] = "MO";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Mp"] = "MP";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Ms"] = "MS";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Mt"] = "MT";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Nc"] = "NC";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Nd"] = "ND";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Ne"] = "NE";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Nh"] = "NH";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Nj"] = "NJ";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Nm"] = "NM";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Nv"] = "NV";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Ny"] = "NY";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Oh"] = "OH";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Ok"] = "OK";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Or"] = "OR";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Pa"] = "PA";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Pr"] = "PR";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Pw"] = "PW";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Ri"] = "RI";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Sc"] = "SC";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Sd"] = "SD";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Tn"] = "TN";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Tx"] = "TX";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Um"] = "UM";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Ut"] = "UT";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Va"] = "VA";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Vi"] = "VI";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Vt"] = "VT";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Wa"] = "WA";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Wi"] = "WI";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Wv"] = "WV";
+    EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum["Wy"] = "WY";
+})(EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum = exports.EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum || (exports.EmployeeCreateRequestPersonDetailsAmericanIndianStateEnum = {}));
+// EmployeeCreateRequestPersonDetailsAmericanIndian
+/**
+ * American Indian status details (if applicable)
+**/
+var EmployeeCreateRequestPersonDetailsAmericanIndian = /** @class */ (function (_super) {
+    __extends(EmployeeCreateRequestPersonDetailsAmericanIndian, _super);
+    function EmployeeCreateRequestPersonDetailsAmericanIndian() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonDetailsAmericanIndian.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tribe" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonDetailsAmericanIndian.prototype, "tribe", void 0);
+    return EmployeeCreateRequestPersonDetailsAmericanIndian;
+}(utils_1.SpeakeasyBase));
+exports.EmployeeCreateRequestPersonDetailsAmericanIndian = EmployeeCreateRequestPersonDetailsAmericanIndian;
+// EmployeeCreateRequestPersonDetailsDisability
+/**
+ * Disability details (if applicable)
+**/
+var EmployeeCreateRequestPersonDetailsDisability = /** @class */ (function (_super) {
+    __extends(EmployeeCreateRequestPersonDetailsDisability, _super);
+    function EmployeeCreateRequestPersonDetailsDisability() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=communication" }),
+        __metadata("design:type", Boolean)
+    ], EmployeeCreateRequestPersonDetailsDisability.prototype, "communication", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabled" }),
+        __metadata("design:type", Boolean)
+    ], EmployeeCreateRequestPersonDetailsDisability.prototype, "disabled", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonDetailsDisability.prototype, "reason", void 0);
+    return EmployeeCreateRequestPersonDetailsDisability;
+}(utils_1.SpeakeasyBase));
+exports.EmployeeCreateRequestPersonDetailsDisability = EmployeeCreateRequestPersonDetailsDisability;
+var EmployeeCreateRequestPersonDetailsTobaccoTypesEnum;
+(function (EmployeeCreateRequestPersonDetailsTobaccoTypesEnum) {
+    EmployeeCreateRequestPersonDetailsTobaccoTypesEnum["ChewingTobacco"] = "chewing-tobacco";
+    EmployeeCreateRequestPersonDetailsTobaccoTypesEnum["Cigarettes"] = "cigarettes";
+    EmployeeCreateRequestPersonDetailsTobaccoTypesEnum["Pipe"] = "pipe";
+})(EmployeeCreateRequestPersonDetailsTobaccoTypesEnum = exports.EmployeeCreateRequestPersonDetailsTobaccoTypesEnum || (exports.EmployeeCreateRequestPersonDetailsTobaccoTypesEnum = {}));
+// EmployeeCreateRequestPersonDetailsTobacco
+/**
+ * Tobacco usage details (if applicable)
+**/
+var EmployeeCreateRequestPersonDetailsTobacco = /** @class */ (function (_super) {
+    __extends(EmployeeCreateRequestPersonDetailsTobacco, _super);
+    function EmployeeCreateRequestPersonDetailsTobacco() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonDetailsTobacco.prototype, "duration", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequency" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonDetailsTobacco.prototype, "frequency", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=types" }),
+        __metadata("design:type", Array)
+    ], EmployeeCreateRequestPersonDetailsTobacco.prototype, "types", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", Boolean)
+    ], EmployeeCreateRequestPersonDetailsTobacco.prototype, "user", void 0);
+    return EmployeeCreateRequestPersonDetailsTobacco;
+}(utils_1.SpeakeasyBase));
+exports.EmployeeCreateRequestPersonDetailsTobacco = EmployeeCreateRequestPersonDetailsTobacco;
+// EmployeeCreateRequestPersonDetails
+/**
+ * Additional personal details of the person
+**/
+var EmployeeCreateRequestPersonDetails = /** @class */ (function (_super) {
+    __extends(EmployeeCreateRequestPersonDetails, _super);
+    function EmployeeCreateRequestPersonDetails() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=american_indian" }),
+        __metadata("design:type", EmployeeCreateRequestPersonDetailsAmericanIndian)
+    ], EmployeeCreateRequestPersonDetails.prototype, "americanIndian", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disability" }),
+        __metadata("design:type", EmployeeCreateRequestPersonDetailsDisability)
+    ], EmployeeCreateRequestPersonDetails.prototype, "disability", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_military" }),
+        __metadata("design:type", Boolean)
+    ], EmployeeCreateRequestPersonDetails.prototype, "isMilitary", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_student" }),
+        __metadata("design:type", Boolean)
+    ], EmployeeCreateRequestPersonDetails.prototype, "isStudent", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tobacco" }),
+        __metadata("design:type", EmployeeCreateRequestPersonDetailsTobacco)
+    ], EmployeeCreateRequestPersonDetails.prototype, "tobacco", void 0);
+    return EmployeeCreateRequestPersonDetails;
+}(utils_1.SpeakeasyBase));
+exports.EmployeeCreateRequestPersonDetails = EmployeeCreateRequestPersonDetails;
+var EmployeeCreateRequestPersonHomeAddressStateEnum;
+(function (EmployeeCreateRequestPersonHomeAddressStateEnum) {
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Ak"] = "AK";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Al"] = "AL";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Ar"] = "AR";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["As"] = "AS";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Az"] = "AZ";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Ca"] = "CA";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Co"] = "CO";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Ct"] = "CT";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Dc"] = "DC";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["De"] = "DE";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Fl"] = "FL";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Fm"] = "FM";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Ga"] = "GA";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Gu"] = "GU";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Hi"] = "HI";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Ia"] = "IA";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Id"] = "ID";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Il"] = "IL";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["In"] = "IN";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Ks"] = "KS";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Ky"] = "KY";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["La"] = "LA";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Ma"] = "MA";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Md"] = "MD";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Me"] = "ME";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Mh"] = "MH";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Mi"] = "MI";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Mn"] = "MN";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Mo"] = "MO";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Mp"] = "MP";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Ms"] = "MS";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Mt"] = "MT";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Nc"] = "NC";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Nd"] = "ND";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Ne"] = "NE";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Nh"] = "NH";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Nj"] = "NJ";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Nm"] = "NM";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Nv"] = "NV";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Ny"] = "NY";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Oh"] = "OH";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Ok"] = "OK";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Or"] = "OR";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Pa"] = "PA";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Pr"] = "PR";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Pw"] = "PW";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Ri"] = "RI";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Sc"] = "SC";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Sd"] = "SD";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Tn"] = "TN";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Tx"] = "TX";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Um"] = "UM";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Ut"] = "UT";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Va"] = "VA";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Vi"] = "VI";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Vt"] = "VT";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Wa"] = "WA";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Wi"] = "WI";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Wv"] = "WV";
+    EmployeeCreateRequestPersonHomeAddressStateEnum["Wy"] = "WY";
+})(EmployeeCreateRequestPersonHomeAddressStateEnum = exports.EmployeeCreateRequestPersonHomeAddressStateEnum || (exports.EmployeeCreateRequestPersonHomeAddressStateEnum = {}));
+// EmployeeCreateRequestPersonHomeAddress
+/**
+ * Home address of the person
+**/
+var EmployeeCreateRequestPersonHomeAddress = /** @class */ (function (_super) {
+    __extends(EmployeeCreateRequestPersonHomeAddress, _super);
+    function EmployeeCreateRequestPersonHomeAddress() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonHomeAddress.prototype, "city", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=county" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonHomeAddress.prototype, "county", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonHomeAddress.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=street_one" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonHomeAddress.prototype, "streetOne", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=street_two" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonHomeAddress.prototype, "streetTwo", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zip_code" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonHomeAddress.prototype, "zipCode", void 0);
+    return EmployeeCreateRequestPersonHomeAddress;
+}(utils_1.SpeakeasyBase));
+exports.EmployeeCreateRequestPersonHomeAddress = EmployeeCreateRequestPersonHomeAddress;
+var EmployeeCreateRequestPersonMailingAddressStateEnum;
+(function (EmployeeCreateRequestPersonMailingAddressStateEnum) {
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Ak"] = "AK";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Al"] = "AL";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Ar"] = "AR";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["As"] = "AS";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Az"] = "AZ";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Ca"] = "CA";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Co"] = "CO";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Ct"] = "CT";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Dc"] = "DC";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["De"] = "DE";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Fl"] = "FL";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Fm"] = "FM";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Ga"] = "GA";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Gu"] = "GU";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Hi"] = "HI";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Ia"] = "IA";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Id"] = "ID";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Il"] = "IL";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["In"] = "IN";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Ks"] = "KS";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Ky"] = "KY";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["La"] = "LA";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Ma"] = "MA";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Md"] = "MD";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Me"] = "ME";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Mh"] = "MH";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Mi"] = "MI";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Mn"] = "MN";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Mo"] = "MO";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Mp"] = "MP";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Ms"] = "MS";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Mt"] = "MT";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Nc"] = "NC";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Nd"] = "ND";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Ne"] = "NE";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Nh"] = "NH";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Nj"] = "NJ";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Nm"] = "NM";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Nv"] = "NV";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Ny"] = "NY";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Oh"] = "OH";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Ok"] = "OK";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Or"] = "OR";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Pa"] = "PA";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Pr"] = "PR";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Pw"] = "PW";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Ri"] = "RI";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Sc"] = "SC";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Sd"] = "SD";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Tn"] = "TN";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Tx"] = "TX";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Um"] = "UM";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Ut"] = "UT";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Va"] = "VA";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Vi"] = "VI";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Vt"] = "VT";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Wa"] = "WA";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Wi"] = "WI";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Wv"] = "WV";
+    EmployeeCreateRequestPersonMailingAddressStateEnum["Wy"] = "WY";
+})(EmployeeCreateRequestPersonMailingAddressStateEnum = exports.EmployeeCreateRequestPersonMailingAddressStateEnum || (exports.EmployeeCreateRequestPersonMailingAddressStateEnum = {}));
+// EmployeeCreateRequestPersonMailingAddress
+/**
+ * Mailing address of the person
+**/
+var EmployeeCreateRequestPersonMailingAddress = /** @class */ (function (_super) {
+    __extends(EmployeeCreateRequestPersonMailingAddress, _super);
+    function EmployeeCreateRequestPersonMailingAddress() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonMailingAddress.prototype, "city", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=county" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonMailingAddress.prototype, "county", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonMailingAddress.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=street_one" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonMailingAddress.prototype, "streetOne", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=street_two" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonMailingAddress.prototype, "streetTwo", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zip_code" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPersonMailingAddress.prototype, "zipCode", void 0);
+    return EmployeeCreateRequestPersonMailingAddress;
+}(utils_1.SpeakeasyBase));
+exports.EmployeeCreateRequestPersonMailingAddress = EmployeeCreateRequestPersonMailingAddress;
+var EmployeeCreateRequestPersonMaritalStatusEnum;
+(function (EmployeeCreateRequestPersonMaritalStatusEnum) {
+    EmployeeCreateRequestPersonMaritalStatusEnum["Divorced"] = "divorced";
+    EmployeeCreateRequestPersonMaritalStatusEnum["DomesticPartner"] = "domestic-partner";
+    EmployeeCreateRequestPersonMaritalStatusEnum["LegallySeparated"] = "legally-separated";
+    EmployeeCreateRequestPersonMaritalStatusEnum["Married"] = "married";
+    EmployeeCreateRequestPersonMaritalStatusEnum["Single"] = "single";
+    EmployeeCreateRequestPersonMaritalStatusEnum["Widowed"] = "widowed";
+})(EmployeeCreateRequestPersonMaritalStatusEnum = exports.EmployeeCreateRequestPersonMaritalStatusEnum || (exports.EmployeeCreateRequestPersonMaritalStatusEnum = {}));
+var EmployeeCreateRequestPersonSexEnum;
+(function (EmployeeCreateRequestPersonSexEnum) {
+    EmployeeCreateRequestPersonSexEnum["F"] = "F";
+    EmployeeCreateRequestPersonSexEnum["M"] = "M";
+    EmployeeCreateRequestPersonSexEnum["U"] = "U";
+    EmployeeCreateRequestPersonSexEnum["X"] = "X";
+})(EmployeeCreateRequestPersonSexEnum = exports.EmployeeCreateRequestPersonSexEnum || (exports.EmployeeCreateRequestPersonSexEnum = {}));
+// EmployeeCreateRequestPerson
+/**
+ * Personal information for the employee
+**/
+var EmployeeCreateRequestPerson = /** @class */ (function (_super) {
+    __extends(EmployeeCreateRequestPerson, _super);
+    function EmployeeCreateRequestPerson() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contact" }),
+        __metadata("design:type", EmployeeCreateRequestPersonContact)
+    ], EmployeeCreateRequestPerson.prototype, "contact", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_of_birth" }),
+        __metadata("design:type", Date)
+    ], EmployeeCreateRequestPerson.prototype, "dateOfBirth", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details" }),
+        __metadata("design:type", EmployeeCreateRequestPersonDetails)
+    ], EmployeeCreateRequestPerson.prototype, "details", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_name" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPerson.prototype, "firstName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=home_address" }),
+        __metadata("design:type", EmployeeCreateRequestPersonHomeAddress)
+    ], EmployeeCreateRequestPerson.prototype, "homeAddress", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_name" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPerson.prototype, "lastName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mailing_address" }),
+        __metadata("design:type", EmployeeCreateRequestPersonMailingAddress)
+    ], EmployeeCreateRequestPerson.prototype, "mailingAddress", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marital_status" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPerson.prototype, "maritalStatus", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=middle_name" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPerson.prototype, "middleName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sex" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPerson.prototype, "sex", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssn" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPerson.prototype, "ssn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suffix" }),
+        __metadata("design:type", String)
+    ], EmployeeCreateRequestPerson.prototype, "suffix", void 0);
+    return EmployeeCreateRequestPerson;
+}(utils_1.SpeakeasyBase));
+exports.EmployeeCreateRequestPerson = EmployeeCreateRequestPerson;
+var EmployeeCreateRequest = /** @class */ (function (_super) {
+    __extends(EmployeeCreateRequest, _super);
+    function EmployeeCreateRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employment" }),
+        __metadata("design:type", EmployeeCreateRequestEmployment)
+    ], EmployeeCreateRequest.prototype, "employment", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=person" }),
+        __metadata("design:type", EmployeeCreateRequestPerson)
+    ], EmployeeCreateRequest.prototype, "person", void 0);
+    return EmployeeCreateRequest;
+}(utils_1.SpeakeasyBase));
+exports.EmployeeCreateRequest = EmployeeCreateRequest;

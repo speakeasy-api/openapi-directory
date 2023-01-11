@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,73 +14,98 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LookupPolicyResponse = exports.LookupPolicyRequest = exports.LookupPolicyRequestBody = exports.LookupPolicyRequestBodyObjectReference = exports.LookupPolicyHeaders = exports.LookupPolicyQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var LookupPolicyQueryParams = /** @class */ (function (_super) {
     __extends(LookupPolicyQueryParams, _super);
     function LookupPolicyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
         __metadata("design:type", String)
     ], LookupPolicyQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], LookupPolicyQueryParams.prototype, "nextToken", void 0);
     return LookupPolicyQueryParams;
-}(SpeakeasyBase));
-export { LookupPolicyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.LookupPolicyQueryParams = LookupPolicyQueryParams;
 var LookupPolicyHeaders = /** @class */ (function (_super) {
     __extends(LookupPolicyHeaders, _super);
     function LookupPolicyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], LookupPolicyHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], LookupPolicyHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], LookupPolicyHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], LookupPolicyHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], LookupPolicyHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], LookupPolicyHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], LookupPolicyHeaders.prototype, "xAmzSignedHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-amz-data-partition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-amz-data-partition" }),
         __metadata("design:type", String)
     ], LookupPolicyHeaders.prototype, "xAmzDataPartition", void 0);
     return LookupPolicyHeaders;
-}(SpeakeasyBase));
-export { LookupPolicyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.LookupPolicyHeaders = LookupPolicyHeaders;
 // LookupPolicyRequestBodyObjectReference
 /**
  * The reference that identifies an object.
@@ -90,105 +116,105 @@ var LookupPolicyRequestBodyObjectReference = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Selector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Selector" }),
         __metadata("design:type", String)
     ], LookupPolicyRequestBodyObjectReference.prototype, "selector", void 0);
     return LookupPolicyRequestBodyObjectReference;
-}(SpeakeasyBase));
-export { LookupPolicyRequestBodyObjectReference };
+}(utils_1.SpeakeasyBase));
+exports.LookupPolicyRequestBodyObjectReference = LookupPolicyRequestBodyObjectReference;
 var LookupPolicyRequestBody = /** @class */ (function (_super) {
     __extends(LookupPolicyRequestBody, _super);
     function LookupPolicyRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], LookupPolicyRequestBody.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], LookupPolicyRequestBody.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ObjectReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ObjectReference" }),
         __metadata("design:type", LookupPolicyRequestBodyObjectReference)
     ], LookupPolicyRequestBody.prototype, "objectReference", void 0);
     return LookupPolicyRequestBody;
-}(SpeakeasyBase));
-export { LookupPolicyRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.LookupPolicyRequestBody = LookupPolicyRequestBody;
 var LookupPolicyRequest = /** @class */ (function (_super) {
     __extends(LookupPolicyRequest, _super);
     function LookupPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LookupPolicyQueryParams)
     ], LookupPolicyRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LookupPolicyHeaders)
     ], LookupPolicyRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", LookupPolicyRequestBody)
     ], LookupPolicyRequest.prototype, "request", void 0);
     return LookupPolicyRequest;
-}(SpeakeasyBase));
-export { LookupPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.LookupPolicyRequest = LookupPolicyRequest;
 var LookupPolicyResponse = /** @class */ (function (_super) {
     __extends(LookupPolicyResponse, _super);
     function LookupPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.AccessDeniedException)
     ], LookupPolicyResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LookupPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.DirectoryNotEnabledException)
     ], LookupPolicyResponse.prototype, "directoryNotEnabledException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.InternalServiceException)
     ], LookupPolicyResponse.prototype, "internalServiceException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.InvalidArnException)
     ], LookupPolicyResponse.prototype, "invalidArnException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.InvalidNextTokenException)
     ], LookupPolicyResponse.prototype, "invalidNextTokenException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.LimitExceededException)
     ], LookupPolicyResponse.prototype, "limitExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.LookupPolicyResponse)
     ], LookupPolicyResponse.prototype, "lookupPolicyResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ResourceNotFoundException)
     ], LookupPolicyResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.RetryableConflictException)
     ], LookupPolicyResponse.prototype, "retryableConflictException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LookupPolicyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ValidationException)
     ], LookupPolicyResponse.prototype, "validationException", void 0);
     return LookupPolicyResponse;
-}(SpeakeasyBase));
-export { LookupPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.LookupPolicyResponse = LookupPolicyResponse;

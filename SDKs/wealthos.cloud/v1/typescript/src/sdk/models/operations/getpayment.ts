@@ -44,20 +44,20 @@ export class GetPaymentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getPayment400ApplicationJsonAny?: any;
+  getPayment400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPayment401ApplicationJsonAny?: any;
+  getPayment401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPayment403ApplicationJsonAny?: any;
+  getPayment403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPayment404ApplicationJsonAny?: any;
+  getPayment404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPayment429ApplicationJsonAny?: any;
+  getPayment429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPayment500ApplicationJsonAny?: any;
+  getPayment500ApplicationJSONAny?: any;
 }

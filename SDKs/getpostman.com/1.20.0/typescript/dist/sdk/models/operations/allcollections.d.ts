@@ -11,5 +11,5 @@ export declare class AllCollections200ApplicationJson extends SpeakeasyBase {
 export declare class AllCollectionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    allCollections200ApplicationJsonObject?: AllCollections200ApplicationJson;
+    allCollections200ApplicationJSONObject?: AllCollections200ApplicationJson;
 }

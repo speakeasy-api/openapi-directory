@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ClusterAssociatedToSchedule } from "./clusterassociatedtoschedule";
-import { Tag } from "./tag";
+import { AssociatedClusterList } from "./associatedclusterlist";
+import { TagList } from "./taglist";
 /**
  * Describes a snapshot schedule. You can set a regular interval for creating snapshots of a cluster. You can also schedule snapshots for specific dates.
 **/
 export declare class SnapshotSchedule extends SpeakeasyBase {
     associatedClusterCount?: number;
-    associatedClusters?: ClusterAssociatedToSchedule[];
-    nextInvocations?: Date[];
-    scheduleDefinitions?: string[];
+    associatedClusters?: AssociatedClusterList[];
+    nextInvocations?: Record<string, any>[];
+    scheduleDefinitions?: Record<string, any>[];
     scheduleDescription?: string;
     scheduleIdentifier?: string;
-    tags?: Tag[];
+    tags?: TagList[];
 }

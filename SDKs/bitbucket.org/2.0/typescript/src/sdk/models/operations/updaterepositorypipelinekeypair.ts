@@ -16,7 +16,7 @@ export class UpdateRepositoryPipelineKeyPairRequest extends SpeakeasyBase {
   pathParams: UpdateRepositoryPipelineKeyPairPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -28,8 +28,8 @@ export class UpdateRepositoryPipelineKeyPairResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  pipelineSshKeyPair?: Map<string, any>;
+  pipelineSshKeyPair?: Record<string, any>;
 }

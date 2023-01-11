@@ -15,7 +15,7 @@ export declare class DisableMacieResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     conflictException?: any;
     contentType: string;
-    disableMacieResponse?: Map<string, any>;
+    disableMacieResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     serviceQuotaExceededException?: any;

@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServiceConfiguration } from "./serviceconfiguration";
 
 
 
 export class DescribeVpcEndpointServiceConfigurationsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: ServiceConfiguration })
-  serviceConfigurations?: ServiceConfiguration[];
+  @SpeakeasyMetadata()
+  serviceConfigurations?: Record<string, any>;
 }

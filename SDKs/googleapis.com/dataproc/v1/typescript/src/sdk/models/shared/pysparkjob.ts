@@ -27,7 +27,7 @@ export class PySparkJob extends SpeakeasyBase {
   mainPythonFileUri?: string;
 
   @SpeakeasyMetadata({ data: "json, name=properties" })
-  properties?: Map<string, string>;
+  properties?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=pythonFileUris" })
   pythonFileUris?: string[];

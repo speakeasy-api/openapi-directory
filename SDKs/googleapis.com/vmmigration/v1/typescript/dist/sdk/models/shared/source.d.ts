@@ -6,7 +6,7 @@ import { VmwareSourceDetails } from "./vmwaresourcedetails";
 export declare class Source extends SpeakeasyBase {
     createTime?: string;
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     updateTime?: string;
     vmware?: VmwareSourceDetails;
@@ -16,6 +16,6 @@ export declare class Source extends SpeakeasyBase {
 **/
 export declare class SourceInput extends SpeakeasyBase {
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     vmware?: VmwareSourceDetails;
 }

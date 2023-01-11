@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities } from "./googleappsdrivelabelsv2betafieldselectionoptionschoiceappliedcapabilities";
-import { GoogleAppsDriveLabelsV2betaUserInfo } from "./googleappsdrivelabelsv2betauserinfo";
-import { GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints } from "./googleappsdrivelabelsv2betafieldselectionoptionschoicedisplayhints";
-import { GoogleAppsDriveLabelsV2betaLifecycle } from "./googleappsdrivelabelsv2betalifecycle";
-import { GoogleAppsDriveLabelsV2betaLockStatus } from "./googleappsdrivelabelsv2betalockstatus";
-import { GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties } from "./googleappsdrivelabelsv2betafieldselectionoptionschoiceproperties";
-import { GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities } from "./googleappsdrivelabelsv2betafieldselectionoptionschoiceschemacapabilities";
-import { GoogleAppsDriveLabelsV2betaLifecycleInput } from "./googleappsdrivelabelsv2betalifecycle";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput = exports.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betafieldselectionoptionschoiceappliedcapabilities_1 = require("./googleappsdrivelabelsv2betafieldselectionoptionschoiceappliedcapabilities");
+var googleappsdrivelabelsv2betauserinfo_1 = require("./googleappsdrivelabelsv2betauserinfo");
+var googleappsdrivelabelsv2betafieldselectionoptionschoicedisplayhints_1 = require("./googleappsdrivelabelsv2betafieldselectionoptionschoicedisplayhints");
+var googleappsdrivelabelsv2betalifecycle_1 = require("./googleappsdrivelabelsv2betalifecycle");
+var googleappsdrivelabelsv2betalockstatus_1 = require("./googleappsdrivelabelsv2betalockstatus");
+var googleappsdrivelabelsv2betafieldselectionoptionschoiceproperties_1 = require("./googleappsdrivelabelsv2betafieldselectionoptionschoiceproperties");
+var googleappsdrivelabelsv2betafieldselectionoptionschoiceschemacapabilities_1 = require("./googleappsdrivelabelsv2betafieldselectionoptionschoiceschemacapabilities");
+var googleappsdrivelabelsv2betalifecycle_2 = require("./googleappsdrivelabelsv2betalifecycle");
 // GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice
 /**
  * Selection field choice.
@@ -41,68 +44,68 @@ var GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice = /** @class */ (func
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appliedCapabilities" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appliedCapabilities" }),
+        __metadata("design:type", googleappsdrivelabelsv2betafieldselectionoptionschoiceappliedcapabilities_1.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice.prototype, "appliedCapabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creator" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaUserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creator" }),
+        __metadata("design:type", googleappsdrivelabelsv2betauserinfo_1.GoogleAppsDriveLabelsV2betaUserInfo)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice.prototype, "creator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disableTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disableTime" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice.prototype, "disableTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabler" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaUserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabler" }),
+        __metadata("design:type", googleappsdrivelabelsv2betauserinfo_1.GoogleAppsDriveLabelsV2betaUserInfo)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice.prototype, "disabler", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayHints" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayHints" }),
+        __metadata("design:type", googleappsdrivelabelsv2betafieldselectionoptionschoicedisplayhints_1.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice.prototype, "displayHints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifecycle" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLifecycle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifecycle" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalifecycle_1.GoogleAppsDriveLabelsV2betaLifecycle)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice.prototype, "lifecycle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lockStatus" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLockStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lockStatus" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalockstatus_1.GoogleAppsDriveLabelsV2betaLockStatus)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice.prototype, "lockStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", googleappsdrivelabelsv2betafieldselectionoptionschoiceproperties_1.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishTime" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice.prototype, "publishTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisher" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaUserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisher" }),
+        __metadata("design:type", googleappsdrivelabelsv2betauserinfo_1.GoogleAppsDriveLabelsV2betaUserInfo)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice.prototype, "publisher", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemaCapabilities" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemaCapabilities" }),
+        __metadata("design:type", googleappsdrivelabelsv2betafieldselectionoptionschoiceschemacapabilities_1.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice.prototype, "schemaCapabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updater" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaUserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updater" }),
+        __metadata("design:type", googleappsdrivelabelsv2betauserinfo_1.GoogleAppsDriveLabelsV2betaUserInfo)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice.prototype, "updater", void 0);
     return GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice = GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoice;
 // GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput
 /**
  * Selection field choice.
@@ -113,45 +116,45 @@ var GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput = /** @class */ 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appliedCapabilities" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appliedCapabilities" }),
+        __metadata("design:type", googleappsdrivelabelsv2betafieldselectionoptionschoiceappliedcapabilities_1.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput.prototype, "appliedCapabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creator" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaUserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creator" }),
+        __metadata("design:type", googleappsdrivelabelsv2betauserinfo_1.GoogleAppsDriveLabelsV2betaUserInfo)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput.prototype, "creator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabler" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaUserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabler" }),
+        __metadata("design:type", googleappsdrivelabelsv2betauserinfo_1.GoogleAppsDriveLabelsV2betaUserInfo)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput.prototype, "disabler", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayHints" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayHints" }),
+        __metadata("design:type", googleappsdrivelabelsv2betafieldselectionoptionschoicedisplayhints_1.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput.prototype, "displayHints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifecycle" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLifecycleInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifecycle" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalifecycle_2.GoogleAppsDriveLabelsV2betaLifecycleInput)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput.prototype, "lifecycle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", googleappsdrivelabelsv2betafieldselectionoptionschoiceproperties_1.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisher" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaUserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisher" }),
+        __metadata("design:type", googleappsdrivelabelsv2betauserinfo_1.GoogleAppsDriveLabelsV2betaUserInfo)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput.prototype, "publisher", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemaCapabilities" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemaCapabilities" }),
+        __metadata("design:type", googleappsdrivelabelsv2betafieldselectionoptionschoiceschemacapabilities_1.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput.prototype, "schemaCapabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updater" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaUserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updater" }),
+        __metadata("design:type", googleappsdrivelabelsv2betauserinfo_1.GoogleAppsDriveLabelsV2betaUserInfo)
     ], GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput.prototype, "updater", void 0);
     return GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput = GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput;

@@ -1,0 +1,93 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderDeltaTcb = void 0;
+var utils_1 = require("../../../internal/utils");
+// OrderDeltaTcb
+/**
+ * Order Delta Tcb. This is a metric that reflects the change to the estimated billing on Rate Plan Charge object, or the estimated billing for an Order Line Item as the result of the order
+ *
+**/
+var OrderDeltaTcb = /** @class */ (function (_super) {
+    __extends(OrderDeltaTcb, _super);
+    function OrderDeltaTcb() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chargeNumber" }),
+        __metadata("design:type", String)
+    ], OrderDeltaTcb.prototype, "chargeNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
+        __metadata("design:type", String)
+    ], OrderDeltaTcb.prototype, "currency", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
+        __metadata("design:type", Date)
+    ], OrderDeltaTcb.prototype, "endDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grossAmount" }),
+        __metadata("design:type", Number)
+    ], OrderDeltaTcb.prototype, "grossAmount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=netAmount" }),
+        __metadata("design:type", Number)
+    ], OrderDeltaTcb.prototype, "netAmount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderActionId" }),
+        __metadata("design:type", String)
+    ], OrderDeltaTcb.prototype, "orderActionId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderActionSequence" }),
+        __metadata("design:type", String)
+    ], OrderDeltaTcb.prototype, "orderActionSequence", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderActionType" }),
+        __metadata("design:type", String)
+    ], OrderDeltaTcb.prototype, "orderActionType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderLineItemId" }),
+        __metadata("design:type", String)
+    ], OrderDeltaTcb.prototype, "orderLineItemId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productRatePlanChargeId" }),
+        __metadata("design:type", String)
+    ], OrderDeltaTcb.prototype, "productRatePlanChargeId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ratePlanChargeId" }),
+        __metadata("design:type", String)
+    ], OrderDeltaTcb.prototype, "ratePlanChargeId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
+        __metadata("design:type", Date)
+    ], OrderDeltaTcb.prototype, "startDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptionNumber" }),
+        __metadata("design:type", String)
+    ], OrderDeltaTcb.prototype, "subscriptionNumber", void 0);
+    return OrderDeltaTcb;
+}(utils_1.SpeakeasyBase));
+exports.OrderDeltaTcb = OrderDeltaTcb;

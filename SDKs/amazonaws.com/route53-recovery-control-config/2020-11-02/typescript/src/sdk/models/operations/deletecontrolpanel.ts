@@ -52,7 +52,7 @@ export class DeleteControlPanelResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteControlPanelResponse?: Map<string, any>;
+  deleteControlPanelResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

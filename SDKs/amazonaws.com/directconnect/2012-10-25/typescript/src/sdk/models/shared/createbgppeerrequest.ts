@@ -5,7 +5,7 @@ import { NewBgpPeer } from "./newbgppeer";
 
 export class CreateBgpPeerRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=newBGPPeer" })
-  newBgpPeer?: NewBgpPeer;
+  newBGPPeer?: NewBgpPeer;
 
   @SpeakeasyMetadata({ data: "json, name=virtualInterfaceId" })
   virtualInterfaceId?: string;

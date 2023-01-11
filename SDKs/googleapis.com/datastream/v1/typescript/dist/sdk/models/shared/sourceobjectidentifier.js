@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MysqlObjectIdentifier } from "./mysqlobjectidentifier";
-import { OracleObjectIdentifier } from "./oracleobjectidentifier";
-import { PostgresqlObjectIdentifier } from "./postgresqlobjectidentifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SourceObjectIdentifier = void 0;
+var utils_1 = require("../../../internal/utils");
+var mysqlobjectidentifier_1 = require("./mysqlobjectidentifier");
+var oracleobjectidentifier_1 = require("./oracleobjectidentifier");
+var postgresqlobjectidentifier_1 = require("./postgresqlobjectidentifier");
 // SourceObjectIdentifier
 /**
  * Represents an identifier of an object in the data source.
@@ -36,17 +39,17 @@ var SourceObjectIdentifier = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mysqlIdentifier" }),
-        __metadata("design:type", MysqlObjectIdentifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mysqlIdentifier" }),
+        __metadata("design:type", mysqlobjectidentifier_1.MysqlObjectIdentifier)
     ], SourceObjectIdentifier.prototype, "mysqlIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oracleIdentifier" }),
-        __metadata("design:type", OracleObjectIdentifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oracleIdentifier" }),
+        __metadata("design:type", oracleobjectidentifier_1.OracleObjectIdentifier)
     ], SourceObjectIdentifier.prototype, "oracleIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postgresqlIdentifier" }),
-        __metadata("design:type", PostgresqlObjectIdentifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postgresqlIdentifier" }),
+        __metadata("design:type", postgresqlobjectidentifier_1.PostgresqlObjectIdentifier)
     ], SourceObjectIdentifier.prototype, "postgresqlIdentifier", void 0);
     return SourceObjectIdentifier;
-}(SpeakeasyBase));
-export { SourceObjectIdentifier };
+}(utils_1.SpeakeasyBase));
+exports.SourceObjectIdentifier = SourceObjectIdentifier;

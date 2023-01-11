@@ -62,5 +62,5 @@ export declare class UpdateDeviceSwitchRoutingInterfaceDhcpRequest extends Speak
 export declare class UpdateDeviceSwitchRoutingInterfaceDhcpResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateDeviceSwitchRoutingInterfaceDhcp200ApplicationJsonObject?: Map<string, any>;
+    updateDeviceSwitchRoutingInterfaceDhcp200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrderLineItems } from "./orderlineitems";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EvidenceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var orderlineitems_1 = require("./orderlineitems");
 // EvidenceRequest
 /**
  * This type is used by the evidenceRequests array that is returned in the getPaymentDispute response if one or more evidential documents are being requested to help resolve the payment dispute.
@@ -34,25 +37,25 @@ var EvidenceRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evidenceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evidenceId" }),
         __metadata("design:type", String)
     ], EvidenceRequest.prototype, "evidenceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evidenceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evidenceType" }),
         __metadata("design:type", String)
     ], EvidenceRequest.prototype, "evidenceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineItems", elemType: OrderLineItems }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineItems", elemType: orderlineitems_1.OrderLineItems }),
         __metadata("design:type", Array)
     ], EvidenceRequest.prototype, "lineItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestDate" }),
         __metadata("design:type", String)
     ], EvidenceRequest.prototype, "requestDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=respondByDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=respondByDate" }),
         __metadata("design:type", String)
     ], EvidenceRequest.prototype, "respondByDate", void 0);
     return EvidenceRequest;
-}(SpeakeasyBase));
-export { EvidenceRequest };
+}(utils_1.SpeakeasyBase));
+exports.EvidenceRequest = EvidenceRequest;

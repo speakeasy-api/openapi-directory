@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventCategoryDetail } from "./eventcategorydetail";
-import { OrganizationRepresentation } from "./organizationrepresentation";
-import { ConsentManagerPatientId } from "./consentmanagerpatientid";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HiuSubscriptionEventContent = void 0;
+var utils_1 = require("../../../internal/utils");
+var eventcategorydetail_1 = require("./eventcategorydetail");
+var organizationrepresentation_1 = require("./organizationrepresentation");
+var consentmanagerpatientid_1 = require("./consentmanagerpatientid");
 var HiuSubscriptionEventContent = /** @class */ (function (_super) {
     __extends(HiuSubscriptionEventContent, _super);
     function HiuSubscriptionEventContent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=context", elemType: EventCategoryDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=context", elemType: eventcategorydetail_1.EventCategoryDetail }),
         __metadata("design:type", Array)
     ], HiuSubscriptionEventContent.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hip" }),
-        __metadata("design:type", OrganizationRepresentation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hip" }),
+        __metadata("design:type", organizationrepresentation_1.OrganizationRepresentation)
     ], HiuSubscriptionEventContent.prototype, "hip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=patient" }),
-        __metadata("design:type", ConsentManagerPatientId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patient" }),
+        __metadata("design:type", consentmanagerpatientid_1.ConsentManagerPatientId)
     ], HiuSubscriptionEventContent.prototype, "patient", void 0);
     return HiuSubscriptionEventContent;
-}(SpeakeasyBase));
-export { HiuSubscriptionEventContent };
+}(utils_1.SpeakeasyBase));
+exports.HiuSubscriptionEventContent = HiuSubscriptionEventContent;

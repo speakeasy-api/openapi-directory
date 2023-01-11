@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventCategoriesMap } from "./eventcategoriesmap";
+import { EventCategoriesMapList } from "./eventcategoriesmaplist";
 
 
 
@@ -8,6 +8,6 @@ import { EventCategoriesMap } from "./eventcategoriesmap";
  * Represents the output of <a>DescribeEventCategories</a>.
 **/
 export class EventCategoriesMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: EventCategoriesMap })
-  eventCategoriesMapList?: EventCategoriesMap[];
+  @SpeakeasyMetadata({ elemType: EventCategoriesMapList })
+  eventCategoriesMapList?: EventCategoriesMapList[];
 }

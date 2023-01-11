@@ -108,11 +108,11 @@ export declare class MicerRequest extends SpeakeasyBase {
 export declare class MicerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    micer400ApplicationJsonObject?: Micer400ApplicationJson;
-    micer401ApplicationJsonObject?: Micer401ApplicationJson;
-    micer404ApplicationJsonObject?: Micer404ApplicationJson;
-    micer500ApplicationJsonObject?: Micer500ApplicationJson;
-    micer502ApplicationJsonObject?: Micer502ApplicationJson;
-    micer503ApplicationJsonObject?: Micer503ApplicationJson;
-    micer504ApplicationJsonObject?: Micer504ApplicationJson;
+    micer400ApplicationJSONObject?: Micer400ApplicationJson;
+    micer401ApplicationJSONObject?: Micer401ApplicationJson;
+    micer404ApplicationJSONObject?: Micer404ApplicationJson;
+    micer500ApplicationJSONObject?: Micer500ApplicationJson;
+    micer502ApplicationJSONObject?: Micer502ApplicationJson;
+    micer503ApplicationJSONObject?: Micer503ApplicationJson;
+    micer504ApplicationJSONObject?: Micer504ApplicationJson;
 }

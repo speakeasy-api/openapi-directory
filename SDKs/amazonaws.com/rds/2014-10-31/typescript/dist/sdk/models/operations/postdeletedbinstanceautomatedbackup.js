@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteDbInstanceAutomatedBackupActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteDbInstanceAutomatedBackupResponse = exports.PostDeleteDbInstanceAutomatedBackupRequest = exports.PostDeleteDbInstanceAutomatedBackupHeaders = exports.PostDeleteDbInstanceAutomatedBackupQueryParams = exports.PostDeleteDbInstanceAutomatedBackupVersionEnum = exports.PostDeleteDbInstanceAutomatedBackupActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteDbInstanceAutomatedBackupActionEnum;
 (function (PostDeleteDbInstanceAutomatedBackupActionEnum) {
     PostDeleteDbInstanceAutomatedBackupActionEnum["DeleteDbInstanceAutomatedBackup"] = "DeleteDBInstanceAutomatedBackup";
-})(PostDeleteDbInstanceAutomatedBackupActionEnum || (PostDeleteDbInstanceAutomatedBackupActionEnum = {}));
-export var PostDeleteDbInstanceAutomatedBackupVersionEnum;
+})(PostDeleteDbInstanceAutomatedBackupActionEnum = exports.PostDeleteDbInstanceAutomatedBackupActionEnum || (exports.PostDeleteDbInstanceAutomatedBackupActionEnum = {}));
+var PostDeleteDbInstanceAutomatedBackupVersionEnum;
 (function (PostDeleteDbInstanceAutomatedBackupVersionEnum) {
     PostDeleteDbInstanceAutomatedBackupVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostDeleteDbInstanceAutomatedBackupVersionEnum || (PostDeleteDbInstanceAutomatedBackupVersionEnum = {}));
+})(PostDeleteDbInstanceAutomatedBackupVersionEnum = exports.PostDeleteDbInstanceAutomatedBackupVersionEnum || (exports.PostDeleteDbInstanceAutomatedBackupVersionEnum = {}));
 var PostDeleteDbInstanceAutomatedBackupQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteDbInstanceAutomatedBackupQueryParams, _super);
     function PostDeleteDbInstanceAutomatedBackupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteDbInstanceAutomatedBackupQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteDbInstanceAutomatedBackupQueryParams.prototype, "version", void 0);
     return PostDeleteDbInstanceAutomatedBackupQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteDbInstanceAutomatedBackupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteDbInstanceAutomatedBackupQueryParams = PostDeleteDbInstanceAutomatedBackupQueryParams;
 var PostDeleteDbInstanceAutomatedBackupHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteDbInstanceAutomatedBackupHeaders, _super);
     function PostDeleteDbInstanceAutomatedBackupHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteDbInstanceAutomatedBackupHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteDbInstanceAutomatedBackupHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteDbInstanceAutomatedBackupHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteDbInstanceAutomatedBackupHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteDbInstanceAutomatedBackupHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteDbInstanceAutomatedBackupHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteDbInstanceAutomatedBackupHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteDbInstanceAutomatedBackupHeaders;
-}(SpeakeasyBase));
-export { PostDeleteDbInstanceAutomatedBackupHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteDbInstanceAutomatedBackupHeaders = PostDeleteDbInstanceAutomatedBackupHeaders;
 var PostDeleteDbInstanceAutomatedBackupRequest = /** @class */ (function (_super) {
     __extends(PostDeleteDbInstanceAutomatedBackupRequest, _super);
     function PostDeleteDbInstanceAutomatedBackupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteDbInstanceAutomatedBackupQueryParams)
     ], PostDeleteDbInstanceAutomatedBackupRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteDbInstanceAutomatedBackupHeaders)
     ], PostDeleteDbInstanceAutomatedBackupRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteDbInstanceAutomatedBackupRequest.prototype, "request", void 0);
     return PostDeleteDbInstanceAutomatedBackupRequest;
-}(SpeakeasyBase));
-export { PostDeleteDbInstanceAutomatedBackupRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteDbInstanceAutomatedBackupRequest = PostDeleteDbInstanceAutomatedBackupRequest;
 var PostDeleteDbInstanceAutomatedBackupResponse = /** @class */ (function (_super) {
     __extends(PostDeleteDbInstanceAutomatedBackupResponse, _super);
     function PostDeleteDbInstanceAutomatedBackupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteDbInstanceAutomatedBackupResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteDbInstanceAutomatedBackupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteDbInstanceAutomatedBackupResponse.prototype, "statusCode", void 0);
     return PostDeleteDbInstanceAutomatedBackupResponse;
-}(SpeakeasyBase));
-export { PostDeleteDbInstanceAutomatedBackupResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteDbInstanceAutomatedBackupResponse = PostDeleteDbInstanceAutomatedBackupResponse;

@@ -97,7 +97,7 @@ export class DistributionsResponseResultElements extends SpeakeasyBase {
   createdDate: string;
 
   @SpeakeasyMetadata({ data: "json, name=customHeaders" })
-  customHeaders: Map<string, any>;
+  customHeaders: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=embeddedData" })
   embeddedData: any;

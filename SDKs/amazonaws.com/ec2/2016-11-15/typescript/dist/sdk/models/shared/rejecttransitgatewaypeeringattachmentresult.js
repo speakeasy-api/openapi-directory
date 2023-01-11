@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,126 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayPeeringAttachment } from "./transitgatewaypeeringattachment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RejectTransitGatewayPeeringAttachmentResult = exports.RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment = exports.RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus = exports.RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentRequesterTgwInfo = exports.RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+// RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo
+/**
+ * Information about the accepter transit gateway.
+**/
+var RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo = /** @class */ (function (_super) {
+    __extends(RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo, _super);
+    function RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo.prototype, "ownerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo.prototype, "region", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo.prototype, "transitGatewayId", void 0);
+    return RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo;
+}(utils_1.SpeakeasyBase));
+exports.RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo = RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo;
+// RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentRequesterTgwInfo
+/**
+ * Information about the requester transit gateway.
+**/
+var RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentRequesterTgwInfo = /** @class */ (function (_super) {
+    __extends(RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentRequesterTgwInfo, _super);
+    function RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentRequesterTgwInfo() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentRequesterTgwInfo.prototype, "ownerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentRequesterTgwInfo.prototype, "region", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentRequesterTgwInfo.prototype, "transitGatewayId", void 0);
+    return RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentRequesterTgwInfo;
+}(utils_1.SpeakeasyBase));
+exports.RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentRequesterTgwInfo = RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentRequesterTgwInfo;
+// RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus
+/**
+ * The status of the transit gateway peering attachment.
+**/
+var RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus = /** @class */ (function (_super) {
+    __extends(RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus, _super);
+    function RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus.prototype, "code", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus.prototype, "message", void 0);
+    return RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus;
+}(utils_1.SpeakeasyBase));
+exports.RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus = RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus;
+// RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment
+/**
+ * The transit gateway peering attachment.
+**/
+var RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment = /** @class */ (function (_super) {
+    __extends(RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment, _super);
+    function RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentAccepterTgwInfo)
+    ], RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment.prototype, "accepterTgwInfo", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment.prototype, "creationTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentRequesterTgwInfo)
+    ], RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment.prototype, "requesterTgwInfo", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachmentStatus)
+    ], RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment.prototype, "transitGatewayAttachmentId", void 0);
+    return RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment;
+}(utils_1.SpeakeasyBase));
+exports.RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment = RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment;
 var RejectTransitGatewayPeeringAttachmentResult = /** @class */ (function (_super) {
     __extends(RejectTransitGatewayPeeringAttachmentResult, _super);
     function RejectTransitGatewayPeeringAttachmentResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TransitGatewayPeeringAttachment)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", RejectTransitGatewayPeeringAttachmentResultTransitGatewayPeeringAttachment)
     ], RejectTransitGatewayPeeringAttachmentResult.prototype, "transitGatewayPeeringAttachment", void 0);
     return RejectTransitGatewayPeeringAttachmentResult;
-}(SpeakeasyBase));
-export { RejectTransitGatewayPeeringAttachmentResult };
+}(utils_1.SpeakeasyBase));
+exports.RejectTransitGatewayPeeringAttachmentResult = RejectTransitGatewayPeeringAttachmentResult;

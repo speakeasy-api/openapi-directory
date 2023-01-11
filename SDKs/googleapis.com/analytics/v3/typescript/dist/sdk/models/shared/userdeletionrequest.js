@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserDeletionRequest = exports.UserDeletionRequestInput = exports.UserDeletionRequestId = void 0;
+var utils_1 = require("../../../internal/utils");
 // UserDeletionRequestId
 /**
  * User ID.
@@ -33,52 +36,16 @@ var UserDeletionRequestId = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], UserDeletionRequestId.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userId" }),
         __metadata("design:type", String)
     ], UserDeletionRequestId.prototype, "userId", void 0);
     return UserDeletionRequestId;
-}(SpeakeasyBase));
-export { UserDeletionRequestId };
-// UserDeletionRequest
-/**
- * JSON template for a user deletion request resource.
-**/
-var UserDeletionRequest = /** @class */ (function (_super) {
-    __extends(UserDeletionRequest, _super);
-    function UserDeletionRequest() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletionRequestTime" }),
-        __metadata("design:type", Date)
-    ], UserDeletionRequest.prototype, "deletionRequestTime", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=firebaseProjectId" }),
-        __metadata("design:type", String)
-    ], UserDeletionRequest.prototype, "firebaseProjectId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
-        __metadata("design:type", UserDeletionRequestId)
-    ], UserDeletionRequest.prototype, "id", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
-        __metadata("design:type", String)
-    ], UserDeletionRequest.prototype, "kind", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=propertyId" }),
-        __metadata("design:type", String)
-    ], UserDeletionRequest.prototype, "propertyId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=webPropertyId" }),
-        __metadata("design:type", String)
-    ], UserDeletionRequest.prototype, "webPropertyId", void 0);
-    return UserDeletionRequest;
-}(SpeakeasyBase));
-export { UserDeletionRequest };
+}(utils_1.SpeakeasyBase));
+exports.UserDeletionRequestId = UserDeletionRequestId;
 // UserDeletionRequestInput
 /**
  * JSON template for a user deletion request resource.
@@ -89,25 +56,61 @@ var UserDeletionRequestInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firebaseProjectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firebaseProjectId" }),
         __metadata("design:type", String)
     ], UserDeletionRequestInput.prototype, "firebaseProjectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", UserDeletionRequestId)
     ], UserDeletionRequestInput.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], UserDeletionRequestInput.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=propertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=propertyId" }),
         __metadata("design:type", String)
     ], UserDeletionRequestInput.prototype, "propertyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webPropertyId" }),
         __metadata("design:type", String)
     ], UserDeletionRequestInput.prototype, "webPropertyId", void 0);
     return UserDeletionRequestInput;
-}(SpeakeasyBase));
-export { UserDeletionRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.UserDeletionRequestInput = UserDeletionRequestInput;
+// UserDeletionRequest
+/**
+ * JSON template for a user deletion request resource.
+**/
+var UserDeletionRequest = /** @class */ (function (_super) {
+    __extends(UserDeletionRequest, _super);
+    function UserDeletionRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletionRequestTime" }),
+        __metadata("design:type", Date)
+    ], UserDeletionRequest.prototype, "deletionRequestTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firebaseProjectId" }),
+        __metadata("design:type", String)
+    ], UserDeletionRequest.prototype, "firebaseProjectId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", UserDeletionRequestId)
+    ], UserDeletionRequest.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
+        __metadata("design:type", String)
+    ], UserDeletionRequest.prototype, "kind", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=propertyId" }),
+        __metadata("design:type", String)
+    ], UserDeletionRequest.prototype, "propertyId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webPropertyId" }),
+        __metadata("design:type", String)
+    ], UserDeletionRequest.prototype, "webPropertyId", void 0);
+    return UserDeletionRequest;
+}(utils_1.SpeakeasyBase));
+exports.UserDeletionRequest = UserDeletionRequest;

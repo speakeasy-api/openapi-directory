@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CurrentRevision } from "./currentrevision";
-import { ExecutionDetails } from "./executiondetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutJobSuccessResultInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var currentrevision_1 = require("./currentrevision");
+var executiondetails_1 = require("./executiondetails");
 // PutJobSuccessResultInput
 /**
  * Represents the input of a <code>PutJobSuccessResult</code> action.
@@ -35,25 +38,25 @@ var PutJobSuccessResultInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=continuationToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=continuationToken" }),
         __metadata("design:type", String)
     ], PutJobSuccessResultInput.prototype, "continuationToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentRevision" }),
-        __metadata("design:type", CurrentRevision)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentRevision" }),
+        __metadata("design:type", currentrevision_1.CurrentRevision)
     ], PutJobSuccessResultInput.prototype, "currentRevision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionDetails" }),
-        __metadata("design:type", ExecutionDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionDetails" }),
+        __metadata("design:type", executiondetails_1.ExecutionDetails)
     ], PutJobSuccessResultInput.prototype, "executionDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobId" }),
         __metadata("design:type", String)
     ], PutJobSuccessResultInput.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputVariables" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputVariables" }),
+        __metadata("design:type", Object)
     ], PutJobSuccessResultInput.prototype, "outputVariables", void 0);
     return PutJobSuccessResultInput;
-}(SpeakeasyBase));
-export { PutJobSuccessResultInput };
+}(utils_1.SpeakeasyBase));
+exports.PutJobSuccessResultInput = PutJobSuccessResultInput;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EmbeddedObjectPosition } from "./embeddedobjectposition";
-import { SlicerSpec } from "./slicerspec";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Slicer = void 0;
+var utils_1 = require("../../../internal/utils");
+var embeddedobjectposition_1 = require("./embeddedobjectposition");
+var slicerspec_1 = require("./slicerspec");
 // Slicer
 /**
  * A slicer in a sheet.
@@ -35,17 +38,17 @@ var Slicer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=position" }),
-        __metadata("design:type", EmbeddedObjectPosition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=position" }),
+        __metadata("design:type", embeddedobjectposition_1.EmbeddedObjectPosition)
     ], Slicer.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slicerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slicerId" }),
         __metadata("design:type", Number)
     ], Slicer.prototype, "slicerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
-        __metadata("design:type", SlicerSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
+        __metadata("design:type", slicerspec_1.SlicerSpec)
     ], Slicer.prototype, "spec", void 0);
     return Slicer;
-}(SpeakeasyBase));
-export { Slicer };
+}(utils_1.SpeakeasyBase));
+exports.Slicer = Slicer;

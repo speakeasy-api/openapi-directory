@@ -51,7 +51,7 @@ export class DeleteApplicationOutputResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteApplicationOutputResponse?: Map<string, any>;
+  deleteApplicationOutputResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidArgumentException?: any;

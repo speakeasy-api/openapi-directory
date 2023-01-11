@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IpAddressAssignmentEnum } from "./ipaddressassignmentenum";
-import { PhysicalConnectorTypeEnum } from "./physicalconnectortypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PhysicalNetworkInterface = void 0;
+var utils_1 = require("../../../internal/utils");
+var ipaddressassignmentenum_1 = require("./ipaddressassignmentenum");
+var physicalconnectortypeenum_1 = require("./physicalconnectortypeenum");
 // PhysicalNetworkInterface
 /**
  * The details about the physical network interface for the device.
@@ -35,33 +38,33 @@ var PhysicalNetworkInterface = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultGateway" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultGateway" }),
         __metadata("design:type", String)
     ], PhysicalNetworkInterface.prototype, "defaultGateway", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddress" }),
         __metadata("design:type", String)
     ], PhysicalNetworkInterface.prototype, "ipAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddressAssignment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddressAssignment" }),
         __metadata("design:type", String)
     ], PhysicalNetworkInterface.prototype, "ipAddressAssignment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=macAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=macAddress" }),
         __metadata("design:type", String)
     ], PhysicalNetworkInterface.prototype, "macAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=netmask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=netmask" }),
         __metadata("design:type", String)
     ], PhysicalNetworkInterface.prototype, "netmask", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=physicalConnectorType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=physicalConnectorType" }),
         __metadata("design:type", String)
     ], PhysicalNetworkInterface.prototype, "physicalConnectorType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=physicalNetworkInterfaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=physicalNetworkInterfaceId" }),
         __metadata("design:type", String)
     ], PhysicalNetworkInterface.prototype, "physicalNetworkInterfaceId", void 0);
     return PhysicalNetworkInterface;
-}(SpeakeasyBase));
-export { PhysicalNetworkInterface };
+}(utils_1.SpeakeasyBase));
+exports.PhysicalNetworkInterface = PhysicalNetworkInterface;

@@ -19,6 +19,6 @@ export declare class GetChannelPrivacyUsersRequest extends SpeakeasyBase {
 export declare class GetChannelPrivacyUsersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     users?: shared.User[];
 }

@@ -10,12 +10,12 @@ import { ViewerProtocolPolicyEnum } from "./viewerprotocolpolicyenum";
 export declare class DefaultCacheBehavior extends SpeakeasyBase {
     allowedMethods?: AllowedMethods;
     compress?: boolean;
-    defaultTtl?: number;
+    defaultTTL?: number;
     fieldLevelEncryptionId?: string;
     forwardedValues: ForwardedValues;
     lambdaFunctionAssociations?: LambdaFunctionAssociations;
-    maxTtl?: number;
-    minTtl: number;
+    maxTTL?: number;
+    minTTL: number;
     smoothStreaming?: boolean;
     targetOriginId: string;
     trustedSigners: TrustedSigners;

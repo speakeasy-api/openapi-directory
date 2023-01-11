@@ -130,7 +130,7 @@ export class GetApiV2PerformanceStats200ApplicationJson extends SpeakeasyBase {
 
 export class GetApiV2PerformanceStats404ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
-  errors?: Map<string, any>;
+  errors?: Record<string, any>;
 }
 
 
@@ -145,11 +145,11 @@ export class GetApiV2PerformanceStatsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getApiV2PerformanceStats200ApplicationJsonObject?: GetApiV2PerformanceStats200ApplicationJson;
-
-  @SpeakeasyMetadata()
-  getApiV2PerformanceStats404ApplicationJsonObject?: GetApiV2PerformanceStats404ApplicationJson;
-
-  @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getApiV2PerformanceStats200ApplicationJSONObject?: GetApiV2PerformanceStats200ApplicationJson;
+
+  @SpeakeasyMetadata()
+  getApiV2PerformanceStats404ApplicationJSONObject?: GetApiV2PerformanceStats404ApplicationJson;
 }

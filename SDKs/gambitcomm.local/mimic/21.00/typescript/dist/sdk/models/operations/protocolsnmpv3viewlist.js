@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolSnmpv3ViewListResponse = exports.ProtocolSnmpv3ViewListRequest = exports.ProtocolSnmpv3ViewListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolSnmpv3ViewListPathParams = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3ViewListPathParams, _super);
     function ProtocolSnmpv3ViewListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolSnmpv3ViewListPathParams.prototype, "agentNum", void 0);
     return ProtocolSnmpv3ViewListPathParams;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3ViewListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3ViewListPathParams = ProtocolSnmpv3ViewListPathParams;
 var ProtocolSnmpv3ViewListRequest = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3ViewListRequest, _super);
     function ProtocolSnmpv3ViewListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolSnmpv3ViewListPathParams)
     ], ProtocolSnmpv3ViewListRequest.prototype, "pathParams", void 0);
     return ProtocolSnmpv3ViewListRequest;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3ViewListRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3ViewListRequest = ProtocolSnmpv3ViewListRequest;
 var ProtocolSnmpv3ViewListResponse = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3ViewListResponse, _super);
     function ProtocolSnmpv3ViewListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolSnmpv3ViewListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolSnmpv3ViewListResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolSnmpv3ViewListResponse.prototype, "protocolSnmpv3ViewList200ApplicationJsonStrings", void 0);
+    ], ProtocolSnmpv3ViewListResponse.prototype, "protocolSnmpv3ViewList200ApplicationJSONStrings", void 0);
     return ProtocolSnmpv3ViewListResponse;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3ViewListResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3ViewListResponse = ProtocolSnmpv3ViewListResponse;

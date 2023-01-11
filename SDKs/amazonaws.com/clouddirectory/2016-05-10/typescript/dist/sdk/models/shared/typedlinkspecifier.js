@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttributeNameAndValue } from "./attributenameandvalue";
-import { ObjectReference } from "./objectreference";
-import { TypedLinkSchemaAndFacetName } from "./typedlinkschemaandfacetname";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TypedLinkSpecifier = void 0;
+var utils_1 = require("../../../internal/utils");
+var attributenameandvalue_1 = require("./attributenameandvalue");
+var objectreference_1 = require("./objectreference");
+var typedlinkschemaandfacetname_1 = require("./typedlinkschemaandfacetname");
 // TypedLinkSpecifier
 /**
  * Contains all the information that is used to uniquely identify a typed link. The parameters discussed in this topic are used to uniquely specify the typed link being operated on. The <a>AttachTypedLink</a> API returns a typed link specifier while the <a>DetachTypedLink</a> API accepts one as input. Similarly, the <a>ListIncomingTypedLinks</a> and <a>ListOutgoingTypedLinks</a> API operations provide typed link specifiers as output. You can also construct a typed link specifier from scratch.
@@ -36,21 +39,21 @@ var TypedLinkSpecifier = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentityAttributeValues", elemType: AttributeNameAndValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentityAttributeValues", elemType: attributenameandvalue_1.AttributeNameAndValue }),
         __metadata("design:type", Array)
     ], TypedLinkSpecifier.prototype, "identityAttributeValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceObjectReference" }),
-        __metadata("design:type", ObjectReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceObjectReference" }),
+        __metadata("design:type", objectreference_1.ObjectReference)
     ], TypedLinkSpecifier.prototype, "sourceObjectReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetObjectReference" }),
-        __metadata("design:type", ObjectReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetObjectReference" }),
+        __metadata("design:type", objectreference_1.ObjectReference)
     ], TypedLinkSpecifier.prototype, "targetObjectReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TypedLinkFacet" }),
-        __metadata("design:type", TypedLinkSchemaAndFacetName)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TypedLinkFacet" }),
+        __metadata("design:type", typedlinkschemaandfacetname_1.TypedLinkSchemaAndFacetName)
     ], TypedLinkSpecifier.prototype, "typedLinkFacet", void 0);
     return TypedLinkSpecifier;
-}(SpeakeasyBase));
-export { TypedLinkSpecifier };
+}(utils_1.SpeakeasyBase));
+exports.TypedLinkSpecifier = TypedLinkSpecifier;

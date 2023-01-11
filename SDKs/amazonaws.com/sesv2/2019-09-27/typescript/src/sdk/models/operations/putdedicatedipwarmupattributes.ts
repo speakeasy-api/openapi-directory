@@ -61,7 +61,7 @@ export class PutDedicatedIpWarmupAttributesResponse extends SpeakeasyBase {
   notFoundException?: any;
 
   @SpeakeasyMetadata()
-  putDedicatedIpWarmupAttributesResponse?: Map<string, any>;
+  putDedicatedIpWarmupAttributesResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

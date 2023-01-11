@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class ListAuthorsOfPadUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -31,7 +31,7 @@ export class ListAuthorsOfPadUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class ListAuthorsOfPadUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class ListAuthorsOfPadUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class ListAuthorsOfPadUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listAuthorsOfPadUsingGet200ApplicationJsonObject?: ListAuthorsOfPadUsingGet200ApplicationJson;
+  listAuthorsOfPadUsingGET200ApplicationJSONObject?: ListAuthorsOfPadUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  listAuthorsOfPadUsingGet400ApplicationJsonObject?: ListAuthorsOfPadUsingGet400ApplicationJson;
+  listAuthorsOfPadUsingGET400ApplicationJSONObject?: ListAuthorsOfPadUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  listAuthorsOfPadUsingGet401ApplicationJsonObject?: ListAuthorsOfPadUsingGet401ApplicationJson;
+  listAuthorsOfPadUsingGET401ApplicationJSONObject?: ListAuthorsOfPadUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  listAuthorsOfPadUsingGet500ApplicationJsonObject?: ListAuthorsOfPadUsingGet500ApplicationJson;
+  listAuthorsOfPadUsingGET500ApplicationJSONObject?: ListAuthorsOfPadUsingGet500ApplicationJson;
 }

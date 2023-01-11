@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class GetPayrollCalendarPathParams extends SpeakeasyBase {
-    payrollCalendarId: string;
+    payrollCalendarID: string;
 }
 export declare class GetPayrollCalendarHeaders extends SpeakeasyBase {
     xeroTenantId: string;

@@ -42,5 +42,5 @@ export class ConnectedApplication extends SpeakeasyBase {
   requestedScopes?: RequestedScopes;
 
   @SpeakeasyMetadata({ data: "json, name=scopes" })
-  scopes?: Map<string, any>;
+  scopes?: Record<string, any>;
 }

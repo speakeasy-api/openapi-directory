@@ -14,7 +14,7 @@ export declare class OrgsListInvitationTeamsRequest extends SpeakeasyBase {
 }
 export declare class OrgsListInvitationTeamsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     teams?: shared.Team[];

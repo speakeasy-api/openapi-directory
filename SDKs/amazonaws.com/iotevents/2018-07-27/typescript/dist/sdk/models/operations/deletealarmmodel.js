@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteAlarmModelResponse = exports.DeleteAlarmModelRequest = exports.DeleteAlarmModelHeaders = exports.DeleteAlarmModelPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteAlarmModelPathParams = /** @class */ (function (_super) {
     __extends(DeleteAlarmModelPathParams, _super);
     function DeleteAlarmModelPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=alarmModelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=alarmModelName" }),
         __metadata("design:type", String)
     ], DeleteAlarmModelPathParams.prototype, "alarmModelName", void 0);
     return DeleteAlarmModelPathParams;
-}(SpeakeasyBase));
-export { DeleteAlarmModelPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAlarmModelPathParams = DeleteAlarmModelPathParams;
 var DeleteAlarmModelHeaders = /** @class */ (function (_super) {
     __extends(DeleteAlarmModelHeaders, _super);
     function DeleteAlarmModelHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DeleteAlarmModelHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DeleteAlarmModelHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DeleteAlarmModelHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DeleteAlarmModelHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DeleteAlarmModelHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DeleteAlarmModelHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DeleteAlarmModelHeaders.prototype, "xAmzSignedHeaders", void 0);
     return DeleteAlarmModelHeaders;
-}(SpeakeasyBase));
-export { DeleteAlarmModelHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAlarmModelHeaders = DeleteAlarmModelHeaders;
 var DeleteAlarmModelRequest = /** @class */ (function (_super) {
     __extends(DeleteAlarmModelRequest, _super);
     function DeleteAlarmModelRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteAlarmModelPathParams)
     ], DeleteAlarmModelRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteAlarmModelHeaders)
     ], DeleteAlarmModelRequest.prototype, "headers", void 0);
     return DeleteAlarmModelRequest;
-}(SpeakeasyBase));
-export { DeleteAlarmModelRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAlarmModelRequest = DeleteAlarmModelRequest;
 var DeleteAlarmModelResponse = /** @class */ (function (_super) {
     __extends(DeleteAlarmModelResponse, _super);
     function DeleteAlarmModelResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteAlarmModelResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeleteAlarmModelResponse.prototype, "deleteAlarmModelResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteAlarmModelResponse.prototype, "internalFailureException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteAlarmModelResponse.prototype, "invalidRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteAlarmModelResponse.prototype, "resourceInUseException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteAlarmModelResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteAlarmModelResponse.prototype, "serviceUnavailableException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteAlarmModelResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteAlarmModelResponse.prototype, "throttlingException", void 0);
     return DeleteAlarmModelResponse;
-}(SpeakeasyBase));
-export { DeleteAlarmModelResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAlarmModelResponse = DeleteAlarmModelResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostInviteFromWaitlistResponse = exports.PostInviteFromWaitlistRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostInviteFromWaitlistRequest = /** @class */ (function (_super) {
     __extends(PostInviteFromWaitlistRequest, _super);
     function PostInviteFromWaitlistRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], PostInviteFromWaitlistRequest.prototype, "request", void 0);
     return PostInviteFromWaitlistRequest;
-}(SpeakeasyBase));
-export { PostInviteFromWaitlistRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostInviteFromWaitlistRequest = PostInviteFromWaitlistRequest;
 var PostInviteFromWaitlistResponse = /** @class */ (function (_super) {
     __extends(PostInviteFromWaitlistResponse, _super);
     function PostInviteFromWaitlistResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostInviteFromWaitlistResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostInviteFromWaitlistResponse.prototype, "statusCode", void 0);
     return PostInviteFromWaitlistResponse;
-}(SpeakeasyBase));
-export { PostInviteFromWaitlistResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostInviteFromWaitlistResponse = PostInviteFromWaitlistResponse;

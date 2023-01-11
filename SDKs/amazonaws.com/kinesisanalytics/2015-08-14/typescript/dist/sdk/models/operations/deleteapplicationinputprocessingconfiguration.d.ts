@@ -20,7 +20,7 @@ export declare class DeleteApplicationInputProcessingConfigurationRequest extend
 export declare class DeleteApplicationInputProcessingConfigurationResponse extends SpeakeasyBase {
     concurrentModificationException?: any;
     contentType: string;
-    deleteApplicationInputProcessingConfigurationResponse?: Map<string, any>;
+    deleteApplicationInputProcessingConfigurationResponse?: Record<string, any>;
     invalidArgumentException?: any;
     resourceInUseException?: any;
     resourceNotFoundException?: any;

@@ -10,5 +10,5 @@ export declare class GistsCheckIsStarredResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    gistsCheckIsStarred404ApplicationJsonObject?: Map<string, any>;
+    gistsCheckIsStarred404ApplicationJSONObject?: Record<string, any>;
 }

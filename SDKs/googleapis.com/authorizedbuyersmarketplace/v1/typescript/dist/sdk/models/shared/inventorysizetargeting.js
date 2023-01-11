@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdSize } from "./adsize";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InventorySizeTargeting = void 0;
+var utils_1 = require("../../../internal/utils");
+var adsize_1 = require("./adsize");
 // InventorySizeTargeting
 /**
  * Represents the size of an ad unit that can be targeted on a bid request.
@@ -34,13 +37,13 @@ var InventorySizeTargeting = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludedInventorySizes", elemType: AdSize }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludedInventorySizes", elemType: adsize_1.AdSize }),
         __metadata("design:type", Array)
     ], InventorySizeTargeting.prototype, "excludedInventorySizes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetedInventorySizes", elemType: AdSize }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetedInventorySizes", elemType: adsize_1.AdSize }),
         __metadata("design:type", Array)
     ], InventorySizeTargeting.prototype, "targetedInventorySizes", void 0);
     return InventorySizeTargeting;
-}(SpeakeasyBase));
-export { InventorySizeTargeting };
+}(utils_1.SpeakeasyBase));
+exports.InventorySizeTargeting = InventorySizeTargeting;

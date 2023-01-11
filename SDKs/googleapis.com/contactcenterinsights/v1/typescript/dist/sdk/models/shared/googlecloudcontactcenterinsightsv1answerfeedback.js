@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1AnswerFeedback = exports.GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum;
 (function (GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum) {
     GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum["CorrectnessLevelUnspecified"] = "CORRECTNESS_LEVEL_UNSPECIFIED";
     GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum["NotCorrect"] = "NOT_CORRECT";
     GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum["PartiallyCorrect"] = "PARTIALLY_CORRECT";
     GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum["FullyCorrect"] = "FULLY_CORRECT";
-})(GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum || (GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum = {}));
+})(GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum = exports.GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum || (exports.GoogleCloudContactcenterinsightsV1AnswerFeedbackCorrectnessLevelEnum = {}));
 // GoogleCloudContactcenterinsightsV1AnswerFeedback
 /**
  * The feedback that the customer has about a certain answer in the conversation.
@@ -40,17 +43,17 @@ var GoogleCloudContactcenterinsightsV1AnswerFeedback = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clicked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clicked" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudContactcenterinsightsV1AnswerFeedback.prototype, "clicked", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=correctnessLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=correctnessLevel" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1AnswerFeedback.prototype, "correctnessLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayed" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudContactcenterinsightsV1AnswerFeedback.prototype, "displayed", void 0);
     return GoogleCloudContactcenterinsightsV1AnswerFeedback;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1AnswerFeedback };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1AnswerFeedback = GoogleCloudContactcenterinsightsV1AnswerFeedback;

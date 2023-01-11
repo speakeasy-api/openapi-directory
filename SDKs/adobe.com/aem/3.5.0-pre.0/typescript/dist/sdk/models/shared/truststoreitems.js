@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TruststoreItems = void 0;
+var utils_1 = require("../../../internal/utils");
 var TruststoreItems = /** @class */ (function (_super) {
     __extends(TruststoreItems, _super);
     function TruststoreItems() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alias" }),
         __metadata("design:type", String)
     ], TruststoreItems.prototype, "alias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entryType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entryType" }),
         __metadata("design:type", String)
     ], TruststoreItems.prototype, "entryType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuer" }),
         __metadata("design:type", String)
     ], TruststoreItems.prototype, "issuer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notAfter" }),
         __metadata("design:type", String)
     ], TruststoreItems.prototype, "notAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notBefore" }),
         __metadata("design:type", String)
     ], TruststoreItems.prototype, "notBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serialNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serialNumber" }),
         __metadata("design:type", Number)
     ], TruststoreItems.prototype, "serialNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subject" }),
         __metadata("design:type", String)
     ], TruststoreItems.prototype, "subject", void 0);
     return TruststoreItems;
-}(SpeakeasyBase));
-export { TruststoreItems };
+}(utils_1.SpeakeasyBase));
+exports.TruststoreItems = TruststoreItems;

@@ -8,6 +8,6 @@ export declare class CreateLagRequest extends SpeakeasyBase {
     location: string;
     numberOfConnections: number;
     providerName?: string;
-    requestMacSec?: boolean;
+    requestMACSec?: boolean;
     tags?: Tag[];
 }

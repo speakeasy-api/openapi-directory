@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,85 +23,87 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetListOfCountriesFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetListOfCountriesResponse = exports.GetListOfCountriesRequest = exports.GetListOfCountries200ApplicationJson = exports.GetListOfCountriesQueryParams = exports.GetListOfCountriesFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetListOfCountriesFormatEnum;
 (function (GetListOfCountriesFormatEnum) {
     GetListOfCountriesFormatEnum["Json"] = "json";
     GetListOfCountriesFormatEnum["Xml"] = "xml";
-})(GetListOfCountriesFormatEnum || (GetListOfCountriesFormatEnum = {}));
+})(GetListOfCountriesFormatEnum = exports.GetListOfCountriesFormatEnum || (exports.GetListOfCountriesFormatEnum = {}));
 var GetListOfCountriesQueryParams = /** @class */ (function (_super) {
     __extends(GetListOfCountriesQueryParams, _super);
     function GetListOfCountriesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetListOfCountriesQueryParams.prototype, "format", void 0);
     return GetListOfCountriesQueryParams;
-}(SpeakeasyBase));
-export { GetListOfCountriesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetListOfCountriesQueryParams = GetListOfCountriesQueryParams;
 var GetListOfCountries200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetListOfCountries200ApplicationJson, _super);
     function GetListOfCountries200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alpha-2-code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alpha-2-code" }),
         __metadata("design:type", String)
     ], GetListOfCountries200ApplicationJson.prototype, "alpha2Code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alpha-3-code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alpha-3-code" }),
         __metadata("design:type", String)
     ], GetListOfCountries200ApplicationJson.prototype, "alpha3Code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], GetListOfCountries200ApplicationJson.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], GetListOfCountries200ApplicationJson.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetListOfCountries200ApplicationJson.prototype, "name", void 0);
     return GetListOfCountries200ApplicationJson;
-}(SpeakeasyBase));
-export { GetListOfCountries200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetListOfCountries200ApplicationJson = GetListOfCountries200ApplicationJson;
 var GetListOfCountriesRequest = /** @class */ (function (_super) {
     __extends(GetListOfCountriesRequest, _super);
     function GetListOfCountriesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListOfCountriesQueryParams)
     ], GetListOfCountriesRequest.prototype, "queryParams", void 0);
     return GetListOfCountriesRequest;
-}(SpeakeasyBase));
-export { GetListOfCountriesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetListOfCountriesRequest = GetListOfCountriesRequest;
 var GetListOfCountriesResponse = /** @class */ (function (_super) {
     __extends(GetListOfCountriesResponse, _super);
     function GetListOfCountriesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetListOfCountriesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetListOfCountriesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetListOfCountriesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: GetListOfCountries200ApplicationJson }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: GetListOfCountries200ApplicationJson }),
         __metadata("design:type", Array)
-    ], GetListOfCountriesResponse.prototype, "getListOfCountries200ApplicationJsonObjects", void 0);
+    ], GetListOfCountriesResponse.prototype, "getListOfCountries200ApplicationJSONObjects", void 0);
     return GetListOfCountriesResponse;
-}(SpeakeasyBase));
-export { GetListOfCountriesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetListOfCountriesResponse = GetListOfCountriesResponse;

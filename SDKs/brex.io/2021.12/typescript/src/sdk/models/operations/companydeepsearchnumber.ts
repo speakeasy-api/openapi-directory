@@ -29,10 +29,10 @@ export class CompanyDeepsearchNumberRequest extends SpeakeasyBase {
 
 export class CompanyDeepsearchNumberResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  companyDeepsearchNumber200ApplicationJsonAnies?: any[];
+  companyDeepsearchNumber200ApplicationJSONAnies?: any[];
 
   @SpeakeasyMetadata()
-  companyDeepsearchNumberDefaultApplicationJsonAny?: any;
+  companyDeepsearchNumberDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   contentType: string;

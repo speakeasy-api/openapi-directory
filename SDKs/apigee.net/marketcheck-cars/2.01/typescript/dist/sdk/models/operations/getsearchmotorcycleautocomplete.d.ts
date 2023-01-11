@@ -1,23 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetSearchMotorcycleAutoCompleteFieldEnum {
-    Make = "make",
-    Model = "model",
-    Trim = "trim",
-    BodyType = "body_type",
-    VehicleType = "vehicle_type",
-    Transmission = "transmission",
-    Drivetrain = "drivetrain",
-    FuelType = "fuel_type",
-    Color = "color",
-    Engine = "engine",
-    State = "state",
-    City = "city"
-}
-export declare enum GetSearchMotorcycleAutoCompleteSortByEnum {
-    Index = "index",
-    Count = "count"
-}
 export declare class GetSearchMotorcycleAutoCompleteQueryParams extends SpeakeasyBase {
     apiKey?: string;
     bodyType?: string;
@@ -25,14 +7,14 @@ export declare class GetSearchMotorcycleAutoCompleteQueryParams extends Speakeas
     color?: string;
     drivetrain?: string;
     engine?: string;
-    field: GetSearchMotorcycleAutoCompleteFieldEnum;
+    field: shared.ApiKeyEnum5;
     fuelType?: string;
     ignoreCase?: boolean;
     input: string;
     inventoryType?: shared.InventoryTypeEnum;
     make?: string;
     model?: string;
-    sortBy?: GetSearchMotorcycleAutoCompleteSortByEnum;
+    sortBy?: shared.InventoryTypeEnum1;
     state?: string;
     termCounts?: boolean;
     transmission?: string;
@@ -45,7 +27,7 @@ export declare class GetSearchMotorcycleAutoCompleteRequest extends SpeakeasyBas
 }
 export declare class GetSearchMotorcycleAutoCompleteResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     searchAutoCompleteResponse?: shared.SearchAutoCompleteResponse;
     statusCode: number;
 }

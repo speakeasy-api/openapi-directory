@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetListAvailableSolutionStacksActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetListAvailableSolutionStacksResponse = exports.GetListAvailableSolutionStacksRequest = exports.GetListAvailableSolutionStacksHeaders = exports.GetListAvailableSolutionStacksQueryParams = exports.GetListAvailableSolutionStacksVersionEnum = exports.GetListAvailableSolutionStacksActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetListAvailableSolutionStacksActionEnum;
 (function (GetListAvailableSolutionStacksActionEnum) {
     GetListAvailableSolutionStacksActionEnum["ListAvailableSolutionStacks"] = "ListAvailableSolutionStacks";
-})(GetListAvailableSolutionStacksActionEnum || (GetListAvailableSolutionStacksActionEnum = {}));
-export var GetListAvailableSolutionStacksVersionEnum;
+})(GetListAvailableSolutionStacksActionEnum = exports.GetListAvailableSolutionStacksActionEnum || (exports.GetListAvailableSolutionStacksActionEnum = {}));
+var GetListAvailableSolutionStacksVersionEnum;
 (function (GetListAvailableSolutionStacksVersionEnum) {
     GetListAvailableSolutionStacksVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetListAvailableSolutionStacksVersionEnum || (GetListAvailableSolutionStacksVersionEnum = {}));
+})(GetListAvailableSolutionStacksVersionEnum = exports.GetListAvailableSolutionStacksVersionEnum || (exports.GetListAvailableSolutionStacksVersionEnum = {}));
 var GetListAvailableSolutionStacksQueryParams = /** @class */ (function (_super) {
     __extends(GetListAvailableSolutionStacksQueryParams, _super);
     function GetListAvailableSolutionStacksQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetListAvailableSolutionStacksQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetListAvailableSolutionStacksQueryParams.prototype, "version", void 0);
     return GetListAvailableSolutionStacksQueryParams;
-}(SpeakeasyBase));
-export { GetListAvailableSolutionStacksQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetListAvailableSolutionStacksQueryParams = GetListAvailableSolutionStacksQueryParams;
 var GetListAvailableSolutionStacksHeaders = /** @class */ (function (_super) {
     __extends(GetListAvailableSolutionStacksHeaders, _super);
     function GetListAvailableSolutionStacksHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetListAvailableSolutionStacksHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetListAvailableSolutionStacksHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetListAvailableSolutionStacksHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetListAvailableSolutionStacksHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetListAvailableSolutionStacksHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetListAvailableSolutionStacksHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetListAvailableSolutionStacksHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetListAvailableSolutionStacksHeaders;
-}(SpeakeasyBase));
-export { GetListAvailableSolutionStacksHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetListAvailableSolutionStacksHeaders = GetListAvailableSolutionStacksHeaders;
 var GetListAvailableSolutionStacksRequest = /** @class */ (function (_super) {
     __extends(GetListAvailableSolutionStacksRequest, _super);
     function GetListAvailableSolutionStacksRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListAvailableSolutionStacksQueryParams)
     ], GetListAvailableSolutionStacksRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListAvailableSolutionStacksHeaders)
     ], GetListAvailableSolutionStacksRequest.prototype, "headers", void 0);
     return GetListAvailableSolutionStacksRequest;
-}(SpeakeasyBase));
-export { GetListAvailableSolutionStacksRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetListAvailableSolutionStacksRequest = GetListAvailableSolutionStacksRequest;
 var GetListAvailableSolutionStacksResponse = /** @class */ (function (_super) {
     __extends(GetListAvailableSolutionStacksResponse, _super);
     function GetListAvailableSolutionStacksResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetListAvailableSolutionStacksResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetListAvailableSolutionStacksResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetListAvailableSolutionStacksResponse.prototype, "statusCode", void 0);
     return GetListAvailableSolutionStacksResponse;
-}(SpeakeasyBase));
-export { GetListAvailableSolutionStacksResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetListAvailableSolutionStacksResponse = GetListAvailableSolutionStacksResponse;

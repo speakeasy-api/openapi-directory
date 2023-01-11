@@ -1,4 +1,7 @@
-export var AssessmentRunStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssessmentRunStateEnum = void 0;
+var AssessmentRunStateEnum;
 (function (AssessmentRunStateEnum) {
     AssessmentRunStateEnum["Created"] = "CREATED";
     AssessmentRunStateEnum["StartDataCollectionPending"] = "START_DATA_COLLECTION_PENDING";
@@ -13,4 +16,4 @@ export var AssessmentRunStateEnum;
     AssessmentRunStateEnum["Completed"] = "COMPLETED";
     AssessmentRunStateEnum["CompletedWithErrors"] = "COMPLETED_WITH_ERRORS";
     AssessmentRunStateEnum["Canceled"] = "CANCELED";
-})(AssessmentRunStateEnum || (AssessmentRunStateEnum = {}));
+})(AssessmentRunStateEnum = exports.AssessmentRunStateEnum || (exports.AssessmentRunStateEnum = {}));

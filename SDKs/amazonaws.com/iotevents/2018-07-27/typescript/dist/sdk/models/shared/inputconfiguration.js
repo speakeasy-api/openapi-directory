@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InputStatusEnum } from "./inputstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InputConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var inputstatusenum_1 = require("./inputstatusenum");
 // InputConfiguration
 /**
  * Information about the configuration of an input.
@@ -34,29 +37,29 @@ var InputConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTime" }),
         __metadata("design:type", Date)
     ], InputConfiguration.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputArn" }),
         __metadata("design:type", String)
     ], InputConfiguration.prototype, "inputArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputDescription" }),
         __metadata("design:type", String)
     ], InputConfiguration.prototype, "inputDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputName" }),
         __metadata("design:type", String)
     ], InputConfiguration.prototype, "inputName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdateTime" }),
         __metadata("design:type", Date)
     ], InputConfiguration.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], InputConfiguration.prototype, "status", void 0);
     return InputConfiguration;
-}(SpeakeasyBase));
-export { InputConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.InputConfiguration = InputConfiguration;

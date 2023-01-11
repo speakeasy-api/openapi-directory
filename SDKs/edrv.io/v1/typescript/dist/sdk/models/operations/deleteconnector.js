@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteConnectorResponse = exports.DeleteConnectorRequest = exports.DeleteConnectorPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteConnectorPathParams = /** @class */ (function (_super) {
     __extends(DeleteConnectorPathParams, _super);
     function DeleteConnectorPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], DeleteConnectorPathParams.prototype, "id", void 0);
     return DeleteConnectorPathParams;
-}(SpeakeasyBase));
-export { DeleteConnectorPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteConnectorPathParams = DeleteConnectorPathParams;
 var DeleteConnectorRequest = /** @class */ (function (_super) {
     __extends(DeleteConnectorRequest, _super);
     function DeleteConnectorRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteConnectorPathParams)
     ], DeleteConnectorRequest.prototype, "pathParams", void 0);
     return DeleteConnectorRequest;
-}(SpeakeasyBase));
-export { DeleteConnectorRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteConnectorRequest = DeleteConnectorRequest;
 var DeleteConnectorResponse = /** @class */ (function (_super) {
     __extends(DeleteConnectorResponse, _super);
     function DeleteConnectorResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteConnectorResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteConnectorResponse.prototype, "statusCode", void 0);
     return DeleteConnectorResponse;
-}(SpeakeasyBase));
-export { DeleteConnectorResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteConnectorResponse = DeleteConnectorResponse;

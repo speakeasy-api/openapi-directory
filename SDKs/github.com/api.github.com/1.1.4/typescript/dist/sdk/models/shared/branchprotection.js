@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,70 +23,72 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProtectedBranchAdminEnforced } from "./protectedbranchadminenforced";
-import { ProtectedBranchPullRequestReview } from "./protectedbranchpullrequestreview";
-import { BranchRestrictionPolicy } from "./branchrestrictionpolicy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BranchProtection = exports.BranchProtectionRequiredStatusChecks = exports.BranchProtectionRequiredLinearHistory = exports.BranchProtectionAllowForcePushes = exports.BranchProtectionAllowDeletions = void 0;
+var utils_1 = require("../../../internal/utils");
+var protectedbranchadminenforced_1 = require("./protectedbranchadminenforced");
+var protectedbranchpullrequestreview_1 = require("./protectedbranchpullrequestreview");
+var branchrestrictionpolicy_1 = require("./branchrestrictionpolicy");
 var BranchProtectionAllowDeletions = /** @class */ (function (_super) {
     __extends(BranchProtectionAllowDeletions, _super);
     function BranchProtectionAllowDeletions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], BranchProtectionAllowDeletions.prototype, "enabled", void 0);
     return BranchProtectionAllowDeletions;
-}(SpeakeasyBase));
-export { BranchProtectionAllowDeletions };
+}(utils_1.SpeakeasyBase));
+exports.BranchProtectionAllowDeletions = BranchProtectionAllowDeletions;
 var BranchProtectionAllowForcePushes = /** @class */ (function (_super) {
     __extends(BranchProtectionAllowForcePushes, _super);
     function BranchProtectionAllowForcePushes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], BranchProtectionAllowForcePushes.prototype, "enabled", void 0);
     return BranchProtectionAllowForcePushes;
-}(SpeakeasyBase));
-export { BranchProtectionAllowForcePushes };
+}(utils_1.SpeakeasyBase));
+exports.BranchProtectionAllowForcePushes = BranchProtectionAllowForcePushes;
 var BranchProtectionRequiredLinearHistory = /** @class */ (function (_super) {
     __extends(BranchProtectionRequiredLinearHistory, _super);
     function BranchProtectionRequiredLinearHistory() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], BranchProtectionRequiredLinearHistory.prototype, "enabled", void 0);
     return BranchProtectionRequiredLinearHistory;
-}(SpeakeasyBase));
-export { BranchProtectionRequiredLinearHistory };
+}(utils_1.SpeakeasyBase));
+exports.BranchProtectionRequiredLinearHistory = BranchProtectionRequiredLinearHistory;
 var BranchProtectionRequiredStatusChecks = /** @class */ (function (_super) {
     __extends(BranchProtectionRequiredStatusChecks, _super);
     function BranchProtectionRequiredStatusChecks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contexts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contexts" }),
         __metadata("design:type", Array)
     ], BranchProtectionRequiredStatusChecks.prototype, "contexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contexts_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contexts_url" }),
         __metadata("design:type", String)
     ], BranchProtectionRequiredStatusChecks.prototype, "contextsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforcement_level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforcement_level" }),
         __metadata("design:type", String)
     ], BranchProtectionRequiredStatusChecks.prototype, "enforcementLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], BranchProtectionRequiredStatusChecks.prototype, "url", void 0);
     return BranchProtectionRequiredStatusChecks;
-}(SpeakeasyBase));
-export { BranchProtectionRequiredStatusChecks };
+}(utils_1.SpeakeasyBase));
+exports.BranchProtectionRequiredStatusChecks = BranchProtectionRequiredStatusChecks;
 // BranchProtection
 /**
  * Branch Protection
@@ -96,49 +99,49 @@ var BranchProtection = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allow_deletions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allow_deletions" }),
         __metadata("design:type", BranchProtectionAllowDeletions)
     ], BranchProtection.prototype, "allowDeletions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allow_force_pushes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allow_force_pushes" }),
         __metadata("design:type", BranchProtectionAllowForcePushes)
     ], BranchProtection.prototype, "allowForcePushes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], BranchProtection.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforce_admins" }),
-        __metadata("design:type", ProtectedBranchAdminEnforced)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforce_admins" }),
+        __metadata("design:type", protectedbranchadminenforced_1.ProtectedBranchAdminEnforced)
     ], BranchProtection.prototype, "enforceAdmins", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BranchProtection.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protection_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protection_url" }),
         __metadata("design:type", String)
     ], BranchProtection.prototype, "protectionUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required_linear_history" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required_linear_history" }),
         __metadata("design:type", BranchProtectionRequiredLinearHistory)
     ], BranchProtection.prototype, "requiredLinearHistory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required_pull_request_reviews" }),
-        __metadata("design:type", ProtectedBranchPullRequestReview)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required_pull_request_reviews" }),
+        __metadata("design:type", protectedbranchpullrequestreview_1.ProtectedBranchPullRequestReview)
     ], BranchProtection.prototype, "requiredPullRequestReviews", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required_status_checks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required_status_checks" }),
         __metadata("design:type", BranchProtectionRequiredStatusChecks)
     ], BranchProtection.prototype, "requiredStatusChecks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restrictions" }),
-        __metadata("design:type", BranchRestrictionPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictions" }),
+        __metadata("design:type", branchrestrictionpolicy_1.BranchRestrictionPolicy)
     ], BranchProtection.prototype, "restrictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], BranchProtection.prototype, "url", void 0);
     return BranchProtection;
-}(SpeakeasyBase));
-export { BranchProtection };
+}(utils_1.SpeakeasyBase));
+exports.BranchProtection = BranchProtection;

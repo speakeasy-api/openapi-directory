@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkspaceCompact } from "./workspacecompact";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserResponse = exports.UserResponsePhoto = void 0;
+var utils_1 = require("../../../internal/utils");
+var workspacecompact_1 = require("./workspacecompact");
 // UserResponsePhoto
 /**
  * A map of the user’s profile photo in various sizes, or null if no photo is set. Sizes provided are 21, 27, 36, 60, 128, and 1024. All images are in PNG format, except for 1024 (which is in JPEG format).
@@ -34,61 +37,65 @@ var UserResponsePhoto = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image_1024x1024" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image_1024x1024" }),
         __metadata("design:type", String)
     ], UserResponsePhoto.prototype, "image1024x1024", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image_128x128" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image_128x128" }),
         __metadata("design:type", String)
     ], UserResponsePhoto.prototype, "image128x128", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image_21x21" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image_21x21" }),
         __metadata("design:type", String)
     ], UserResponsePhoto.prototype, "image21x21", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image_27x27" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image_27x27" }),
         __metadata("design:type", String)
     ], UserResponsePhoto.prototype, "image27x27", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image_36x36" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image_36x36" }),
         __metadata("design:type", String)
     ], UserResponsePhoto.prototype, "image36x36", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image_60x60" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image_60x60" }),
         __metadata("design:type", String)
     ], UserResponsePhoto.prototype, "image60x60", void 0);
     return UserResponsePhoto;
-}(SpeakeasyBase));
-export { UserResponsePhoto };
+}(utils_1.SpeakeasyBase));
+exports.UserResponsePhoto = UserResponsePhoto;
+// UserResponse
+/**
+ * A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.
+**/
 var UserResponse = /** @class */ (function (_super) {
     __extends(UserResponse, _super);
     function UserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=photo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=photo" }),
         __metadata("design:type", UserResponsePhoto)
     ], UserResponse.prototype, "photo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workspaces", elemType: WorkspaceCompact }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workspaces", elemType: workspacecompact_1.WorkspaceCompact }),
         __metadata("design:type", Array)
     ], UserResponse.prototype, "workspaces", void 0);
     return UserResponse;
-}(SpeakeasyBase));
-export { UserResponse };
+}(utils_1.SpeakeasyBase));
+exports.UserResponse = UserResponse;

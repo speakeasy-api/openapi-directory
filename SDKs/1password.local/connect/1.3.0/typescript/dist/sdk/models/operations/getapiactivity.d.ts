@@ -15,6 +15,6 @@ export declare class GetApiActivityResponse extends SpeakeasyBase {
     apiRequests?: shared.ApiRequest[];
     contentType: string;
     errorResponse?: shared.ErrorResponse;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

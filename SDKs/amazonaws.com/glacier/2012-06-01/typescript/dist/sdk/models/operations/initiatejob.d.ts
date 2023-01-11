@@ -38,7 +38,7 @@ export declare class InitiateJobRequest extends SpeakeasyBase {
 }
 export declare class InitiateJobResponse extends SpeakeasyBase {
     contentType: string;
-    initiateJobOutput?: Map<string, any>;
+    initiateJobOutput?: Record<string, any>;
     insufficientCapacityException?: any;
     invalidParameterValueException?: any;
     missingParameterValueException?: any;

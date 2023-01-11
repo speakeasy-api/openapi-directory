@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImportImageTask } from "./importimagetask";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeImportImageTasksResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var DescribeImportImageTasksResult = /** @class */ (function (_super) {
     __extends(DescribeImportImageTasksResult, _super);
     function DescribeImportImageTasksResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: ImportImageTask }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DescribeImportImageTasksResult.prototype, "importImageTasks", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DescribeImportImageTasksResult.prototype, "nextToken", void 0);
     return DescribeImportImageTasksResult;
-}(SpeakeasyBase));
-export { DescribeImportImageTasksResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeImportImageTasksResult = DescribeImportImageTasksResult;

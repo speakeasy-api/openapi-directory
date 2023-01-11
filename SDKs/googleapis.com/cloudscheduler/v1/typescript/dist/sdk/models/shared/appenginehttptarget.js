@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppEngineRouting } from "./appenginerouting";
-export var AppEngineHttpTargetHttpMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppEngineHttpTarget = exports.AppEngineHttpTargetHttpMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var appenginerouting_1 = require("./appenginerouting");
+var AppEngineHttpTargetHttpMethodEnum;
 (function (AppEngineHttpTargetHttpMethodEnum) {
     AppEngineHttpTargetHttpMethodEnum["HttpMethodUnspecified"] = "HTTP_METHOD_UNSPECIFIED";
     AppEngineHttpTargetHttpMethodEnum["Post"] = "POST";
@@ -34,7 +37,7 @@ export var AppEngineHttpTargetHttpMethodEnum;
     AppEngineHttpTargetHttpMethodEnum["Delete"] = "DELETE";
     AppEngineHttpTargetHttpMethodEnum["Patch"] = "PATCH";
     AppEngineHttpTargetHttpMethodEnum["Options"] = "OPTIONS";
-})(AppEngineHttpTargetHttpMethodEnum || (AppEngineHttpTargetHttpMethodEnum = {}));
+})(AppEngineHttpTargetHttpMethodEnum = exports.AppEngineHttpTargetHttpMethodEnum || (exports.AppEngineHttpTargetHttpMethodEnum = {}));
 // AppEngineHttpTarget
 /**
  * App Engine target. The job will be pushed to a job handler by means of an HTTP request via an http_method such as HTTP POST, HTTP GET, etc. The job is acknowledged by means of an HTTP response code in the range [200 - 299]. Error 503 is considered an App Engine system error instead of an application error. Requests returning error 503 will be retried regardless of retry configuration and not counted against retry counts. Any other response code, or a failure to receive a response before the deadline, constitutes a failed attempt.
@@ -45,25 +48,25 @@ var AppEngineHttpTarget = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appEngineRouting" }),
-        __metadata("design:type", AppEngineRouting)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appEngineRouting" }),
+        __metadata("design:type", appenginerouting_1.AppEngineRouting)
     ], AppEngineHttpTarget.prototype, "appEngineRouting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], AppEngineHttpTarget.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], AppEngineHttpTarget.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpMethod" }),
         __metadata("design:type", String)
     ], AppEngineHttpTarget.prototype, "httpMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relativeUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relativeUri" }),
         __metadata("design:type", String)
     ], AppEngineHttpTarget.prototype, "relativeUri", void 0);
     return AppEngineHttpTarget;
-}(SpeakeasyBase));
-export { AppEngineHttpTarget };
+}(utils_1.SpeakeasyBase));
+exports.AppEngineHttpTarget = AppEngineHttpTarget;

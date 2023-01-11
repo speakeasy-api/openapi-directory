@@ -33,7 +33,7 @@ export declare class GitCreateTreeRequest extends SpeakeasyBase {
 }
 export declare class GitCreateTreeResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     gitTree?: shared.GitTree;

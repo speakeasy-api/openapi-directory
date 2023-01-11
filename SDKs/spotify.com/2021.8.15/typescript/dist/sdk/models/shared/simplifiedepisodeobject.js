@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExternalUrlObject } from "./externalurlobject";
-import { ImageObject } from "./imageobject";
-import { EpisodeRestrictionObject } from "./episoderestrictionobject";
-import { ResumePointObject } from "./resumepointobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SimplifiedEpisodeObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var externalurlobject_1 = require("./externalurlobject");
+var imageobject_1 = require("./imageobject");
+var episoderestrictionobject_1 = require("./episoderestrictionobject");
+var resumepointobject_1 = require("./resumepointobject");
 // SimplifiedEpisodeObject
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-simplifiedepisodeobject - Find more info on the official Spotify Web API Reference
@@ -37,85 +40,85 @@ var SimplifiedEpisodeObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audio_preview_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audio_preview_url" }),
         __metadata("design:type", String)
     ], SimplifiedEpisodeObject.prototype, "audioPreviewUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], SimplifiedEpisodeObject.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration_ms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration_ms" }),
         __metadata("design:type", Number)
     ], SimplifiedEpisodeObject.prototype, "durationMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explicit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explicit" }),
         __metadata("design:type", Boolean)
     ], SimplifiedEpisodeObject.prototype, "explicit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=external_urls" }),
-        __metadata("design:type", ExternalUrlObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=external_urls" }),
+        __metadata("design:type", externalurlobject_1.ExternalUrlObject)
     ], SimplifiedEpisodeObject.prototype, "externalUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], SimplifiedEpisodeObject.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_description" }),
         __metadata("design:type", String)
     ], SimplifiedEpisodeObject.prototype, "htmlDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], SimplifiedEpisodeObject.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=images", elemType: ImageObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=images", elemType: imageobject_1.ImageObject }),
         __metadata("design:type", Array)
     ], SimplifiedEpisodeObject.prototype, "images", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_externally_hosted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_externally_hosted" }),
         __metadata("design:type", Boolean)
     ], SimplifiedEpisodeObject.prototype, "isExternallyHosted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_playable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_playable" }),
         __metadata("design:type", Boolean)
     ], SimplifiedEpisodeObject.prototype, "isPlayable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], SimplifiedEpisodeObject.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languages" }),
         __metadata("design:type", Array)
     ], SimplifiedEpisodeObject.prototype, "languages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SimplifiedEpisodeObject.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=release_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=release_date" }),
         __metadata("design:type", String)
     ], SimplifiedEpisodeObject.prototype, "releaseDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=release_date_precision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=release_date_precision" }),
         __metadata("design:type", String)
     ], SimplifiedEpisodeObject.prototype, "releaseDatePrecision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restrictions" }),
-        __metadata("design:type", EpisodeRestrictionObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictions" }),
+        __metadata("design:type", episoderestrictionobject_1.EpisodeRestrictionObject)
     ], SimplifiedEpisodeObject.prototype, "restrictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resume_point" }),
-        __metadata("design:type", ResumePointObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resume_point" }),
+        __metadata("design:type", resumepointobject_1.ResumePointObject)
     ], SimplifiedEpisodeObject.prototype, "resumePoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], SimplifiedEpisodeObject.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], SimplifiedEpisodeObject.prototype, "uri", void 0);
     return SimplifiedEpisodeObject;
-}(SpeakeasyBase));
-export { SimplifiedEpisodeObject };
+}(utils_1.SpeakeasyBase));
+exports.SimplifiedEpisodeObject = SimplifiedEpisodeObject;

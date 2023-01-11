@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FunctionExecutionConfig } from "./functionexecutionconfig";
-import { ResourceAccessPolicy } from "./resourceaccesspolicy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FunctionConfigurationEnvironment = void 0;
+var utils_1 = require("../../../internal/utils");
+var functionexecutionconfig_1 = require("./functionexecutionconfig");
+var resourceaccesspolicy_1 = require("./resourceaccesspolicy");
 // FunctionConfigurationEnvironment
 /**
  * The environment configuration of the function.
@@ -35,21 +38,21 @@ var FunctionConfigurationEnvironment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccessSysfs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccessSysfs" }),
         __metadata("design:type", Boolean)
     ], FunctionConfigurationEnvironment.prototype, "accessSysfs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Execution" }),
-        __metadata("design:type", FunctionExecutionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Execution" }),
+        __metadata("design:type", functionexecutionconfig_1.FunctionExecutionConfig)
     ], FunctionConfigurationEnvironment.prototype, "execution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceAccessPolicies", elemType: ResourceAccessPolicy }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceAccessPolicies", elemType: resourceaccesspolicy_1.ResourceAccessPolicy }),
         __metadata("design:type", Array)
     ], FunctionConfigurationEnvironment.prototype, "resourceAccessPolicies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Variables" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Variables" }),
+        __metadata("design:type", Object)
     ], FunctionConfigurationEnvironment.prototype, "variables", void 0);
     return FunctionConfigurationEnvironment;
-}(SpeakeasyBase));
-export { FunctionConfigurationEnvironment };
+}(utils_1.SpeakeasyBase));
+exports.FunctionConfigurationEnvironment = FunctionConfigurationEnvironment;

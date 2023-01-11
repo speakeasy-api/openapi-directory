@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OptInStatusEnum } from "./optinstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OpsCenterIntegration = void 0;
+var utils_1 = require("../../../internal/utils");
+var optinstatusenum_1 = require("./optinstatusenum");
 // OpsCenterIntegration
 /**
  *  Information about whether DevOps Guru is configured to create an OpsItem in AWS Systems Manager OpsCenter for each created insight.
@@ -34,9 +37,9 @@ var OpsCenterIntegration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OptInStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OptInStatus" }),
         __metadata("design:type", String)
     ], OpsCenterIntegration.prototype, "optInStatus", void 0);
     return OpsCenterIntegration;
-}(SpeakeasyBase));
-export { OpsCenterIntegration };
+}(utils_1.SpeakeasyBase));
+exports.OpsCenterIntegration = OpsCenterIntegration;

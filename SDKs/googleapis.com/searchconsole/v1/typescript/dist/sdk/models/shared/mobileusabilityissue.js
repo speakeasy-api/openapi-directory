@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MobileUsabilityIssueIssueTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MobileUsabilityIssue = exports.MobileUsabilityIssueSeverityEnum = exports.MobileUsabilityIssueIssueTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MobileUsabilityIssueIssueTypeEnum;
 (function (MobileUsabilityIssueIssueTypeEnum) {
     MobileUsabilityIssueIssueTypeEnum["MobileUsabilityIssueTypeUnspecified"] = "MOBILE_USABILITY_ISSUE_TYPE_UNSPECIFIED";
     MobileUsabilityIssueIssueTypeEnum["UsesIncompatiblePlugins"] = "USES_INCOMPATIBLE_PLUGINS";
@@ -32,13 +35,13 @@ export var MobileUsabilityIssueIssueTypeEnum;
     MobileUsabilityIssueIssueTypeEnum["SizeContentToViewport"] = "SIZE_CONTENT_TO_VIEWPORT";
     MobileUsabilityIssueIssueTypeEnum["UseLegibleFontSizes"] = "USE_LEGIBLE_FONT_SIZES";
     MobileUsabilityIssueIssueTypeEnum["TapTargetsTooClose"] = "TAP_TARGETS_TOO_CLOSE";
-})(MobileUsabilityIssueIssueTypeEnum || (MobileUsabilityIssueIssueTypeEnum = {}));
-export var MobileUsabilityIssueSeverityEnum;
+})(MobileUsabilityIssueIssueTypeEnum = exports.MobileUsabilityIssueIssueTypeEnum || (exports.MobileUsabilityIssueIssueTypeEnum = {}));
+var MobileUsabilityIssueSeverityEnum;
 (function (MobileUsabilityIssueSeverityEnum) {
     MobileUsabilityIssueSeverityEnum["SeverityUnspecified"] = "SEVERITY_UNSPECIFIED";
     MobileUsabilityIssueSeverityEnum["Warning"] = "WARNING";
     MobileUsabilityIssueSeverityEnum["Error"] = "ERROR";
-})(MobileUsabilityIssueSeverityEnum || (MobileUsabilityIssueSeverityEnum = {}));
+})(MobileUsabilityIssueSeverityEnum = exports.MobileUsabilityIssueSeverityEnum || (exports.MobileUsabilityIssueSeverityEnum = {}));
 // MobileUsabilityIssue
 /**
  * Mobile-usability issue.
@@ -49,17 +52,17 @@ var MobileUsabilityIssue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issueType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issueType" }),
         __metadata("design:type", String)
     ], MobileUsabilityIssue.prototype, "issueType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], MobileUsabilityIssue.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=severity" }),
         __metadata("design:type", String)
     ], MobileUsabilityIssue.prototype, "severity", void 0);
     return MobileUsabilityIssue;
-}(SpeakeasyBase));
-export { MobileUsabilityIssue };
+}(utils_1.SpeakeasyBase));
+exports.MobileUsabilityIssue = MobileUsabilityIssue;

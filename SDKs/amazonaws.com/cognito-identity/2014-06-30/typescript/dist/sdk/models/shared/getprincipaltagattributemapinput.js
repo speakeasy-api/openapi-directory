@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPrincipalTagAttributeMapInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPrincipalTagAttributeMapInput = /** @class */ (function (_super) {
     __extends(GetPrincipalTagAttributeMapInput, _super);
     function GetPrincipalTagAttributeMapInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentityPoolId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentityPoolId" }),
         __metadata("design:type", String)
     ], GetPrincipalTagAttributeMapInput.prototype, "identityPoolId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentityProviderName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentityProviderName" }),
         __metadata("design:type", String)
     ], GetPrincipalTagAttributeMapInput.prototype, "identityProviderName", void 0);
     return GetPrincipalTagAttributeMapInput;
-}(SpeakeasyBase));
-export { GetPrincipalTagAttributeMapInput };
+}(utils_1.SpeakeasyBase));
+exports.GetPrincipalTagAttributeMapInput = GetPrincipalTagAttributeMapInput;

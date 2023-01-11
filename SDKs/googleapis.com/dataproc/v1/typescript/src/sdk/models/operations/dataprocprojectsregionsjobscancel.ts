@@ -68,7 +68,7 @@ export class DataprocProjectsRegionsJobsCancelRequest extends SpeakeasyBase {
   queryParams: DataprocProjectsRegionsJobsCancelQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: DataprocProjectsRegionsJobsCancelSecurity;

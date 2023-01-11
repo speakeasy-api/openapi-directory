@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsPropertiesCurrency } from "./oneaccountsgetresponses200contentapplication1jsonschemapropertiesaccountsitemspropertiescurrency";
-export var OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsSchemeRejectReasonCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems = exports.OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsTypeEnum = exports.OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsStatusEnum = exports.OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsSchemeRejectReasonCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var oneaccountsgetresponses200contentapplication1jsonschemapropertiesaccountsitemspropertiescurrency_1 = require("./oneaccountsgetresponses200contentapplication1jsonschemapropertiesaccountsitemspropertiescurrency");
+var OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsSchemeRejectReasonCodeEnum;
 (function (OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsSchemeRejectReasonCodeEnum) {
     OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsSchemeRejectReasonCodeEnum["Zero"] = "0";
     OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsSchemeRejectReasonCodeEnum["One"] = "1";
@@ -38,8 +41,8 @@ export var OnedirectdebitsGetResponses200ContentApplication1jsonSchemaProperties
     OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsSchemeRejectReasonCodeEnum["Nine"] = "9";
     OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsSchemeRejectReasonCodeEnum["A"] = "A";
     OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsSchemeRejectReasonCodeEnum["B"] = "B";
-})(OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsSchemeRejectReasonCodeEnum || (OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsSchemeRejectReasonCodeEnum = {}));
-export var OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsStatusEnum;
+})(OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsSchemeRejectReasonCodeEnum = exports.OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsSchemeRejectReasonCodeEnum || (exports.OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsSchemeRejectReasonCodeEnum = {}));
+var OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsStatusEnum;
 (function (OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsStatusEnum) {
     OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsStatusEnum["Recieved"] = "RECIEVED";
     OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsStatusEnum["RejectRequested"] = "REJECT_REQUESTED";
@@ -54,87 +57,87 @@ export var OnedirectdebitsGetResponses200ContentApplication1jsonSchemaProperties
     OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsStatusEnum["RefundRecorded"] = "REFUND_RECORDED";
     OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsStatusEnum["RefundFileCreated"] = "REFUND_FILE_CREATED";
     OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsStatusEnum["RefundFileSent"] = "REFUND_FILE_SENT";
-})(OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsStatusEnum || (OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsStatusEnum = {}));
-export var OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsTypeEnum;
+})(OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsStatusEnum = exports.OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsStatusEnum || (exports.OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsStatusEnum = {}));
+var OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsTypeEnum;
 (function (OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsTypeEnum) {
     OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsTypeEnum["FirstCollection"] = "FIRST_COLLECTION";
     OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsTypeEnum["OngoingCollection"] = "ONGOING_COLLECTION";
     OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsTypeEnum["RepresentedCollection"] = "REPRESENTED_COLLECTION";
     OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsTypeEnum["FinalCollection"] = "FINAL_COLLECTION";
-})(OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsTypeEnum || (OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsTypeEnum = {}));
+})(OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsTypeEnum = exports.OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsTypeEnum || (exports.OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItemsTypeEnum = {}));
 var OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems = /** @class */ (function (_super) {
     __extends(OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems, _super);
     function OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
-        __metadata("design:type", OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsPropertiesCurrency)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
+        __metadata("design:type", oneaccountsgetresponses200contentapplication1jsonschemapropertiesaccountsitemspropertiescurrency_1.OneaccountsGetResponses200ContentApplication1jsonSchemaPropertiesAccountsItemsPropertiesCurrency)
     ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateCreated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateCreated" }),
         __metadata("design:type", Date)
     ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "dateCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directDebitReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directDebitReference" }),
         __metadata("design:type", String)
     ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "directDebitReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directDebitUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directDebitUuid" }),
         __metadata("design:type", String)
     ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "directDebitUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDDIC" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDDIC" }),
         __metadata("design:type", Boolean)
-    ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "isDdic", void 0);
+    ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "isDDIC", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdated" }),
         __metadata("design:type", Date)
     ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mandateUUid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mandateUUid" }),
         __metadata("design:type", String)
     ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "mandateUUid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originatorAlias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originatorAlias" }),
         __metadata("design:type", String)
     ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "originatorAlias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originatorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originatorName" }),
         __metadata("design:type", String)
     ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "originatorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originatorReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originatorReference" }),
         __metadata("design:type", String)
     ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "originatorReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemeRejectReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemeRejectReason" }),
         __metadata("design:type", String)
     ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "schemeRejectReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemeRejectReasonCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemeRejectReasonCode" }),
         __metadata("design:type", String)
     ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "schemeRejectReasonCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetIcan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetIcan" }),
         __metadata("design:type", Number)
     ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "targetIcan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetPayeeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetPayeeId" }),
         __metadata("design:type", Number)
     ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "targetPayeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems.prototype, "type", void 0);
     return OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems;
-}(SpeakeasyBase));
-export { OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems };
+}(utils_1.SpeakeasyBase));
+exports.OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems = OnedirectdebitsGetResponses200ContentApplication1jsonSchemaPropertiesDirectdebitsItems;

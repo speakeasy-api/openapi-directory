@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints } from "./googlesecuritysafebrowsingv4fetchthreatlistupdatesrequestlistupdaterequestconstraints";
-export var GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestPlatformTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest = exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatTypeEnum = exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatEntryTypeEnum = exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestPlatformTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlesecuritysafebrowsingv4fetchthreatlistupdatesrequestlistupdaterequestconstraints_1 = require("./googlesecuritysafebrowsingv4fetchthreatlistupdatesrequestlistupdaterequestconstraints");
+var GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestPlatformTypeEnum;
 (function (GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestPlatformTypeEnum) {
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestPlatformTypeEnum["PlatformTypeUnspecified"] = "PLATFORM_TYPE_UNSPECIFIED";
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestPlatformTypeEnum["Windows"] = "WINDOWS";
@@ -35,8 +38,8 @@ export var GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRe
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestPlatformTypeEnum["AnyPlatform"] = "ANY_PLATFORM";
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestPlatformTypeEnum["AllPlatforms"] = "ALL_PLATFORMS";
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestPlatformTypeEnum["Chrome"] = "CHROME";
-})(GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestPlatformTypeEnum || (GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestPlatformTypeEnum = {}));
-export var GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatEntryTypeEnum;
+})(GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestPlatformTypeEnum = exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestPlatformTypeEnum || (exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestPlatformTypeEnum = {}));
+var GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatEntryTypeEnum;
 (function (GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatEntryTypeEnum) {
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatEntryTypeEnum["ThreatEntryTypeUnspecified"] = "THREAT_ENTRY_TYPE_UNSPECIFIED";
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatEntryTypeEnum["Url"] = "URL";
@@ -45,8 +48,8 @@ export var GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRe
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatEntryTypeEnum["ChromeExtension"] = "CHROME_EXTENSION";
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatEntryTypeEnum["Filename"] = "FILENAME";
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatEntryTypeEnum["Cert"] = "CERT";
-})(GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatEntryTypeEnum || (GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatEntryTypeEnum = {}));
-export var GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatTypeEnum;
+})(GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatEntryTypeEnum = exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatEntryTypeEnum || (exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatEntryTypeEnum = {}));
+var GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatTypeEnum;
 (function (GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatTypeEnum) {
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatTypeEnum["ThreatTypeUnspecified"] = "THREAT_TYPE_UNSPECIFIED";
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatTypeEnum["Malware"] = "MALWARE";
@@ -67,7 +70,7 @@ export var GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRe
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatTypeEnum["HighConfidenceAllowlist"] = "HIGH_CONFIDENCE_ALLOWLIST";
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatTypeEnum["AccuracyTips"] = "ACCURACY_TIPS";
     GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatTypeEnum["SocialEngineeringLowerPrecision"] = "SOCIAL_ENGINEERING_LOWER_PRECISION";
-})(GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatTypeEnum || (GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatTypeEnum = {}));
+})(GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatTypeEnum = exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatTypeEnum || (exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestThreatTypeEnum = {}));
 // GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest
 /**
  * A single list update request.
@@ -78,25 +81,25 @@ var GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest =
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=constraints" }),
-        __metadata("design:type", GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=constraints" }),
+        __metadata("design:type", googlesecuritysafebrowsingv4fetchthreatlistupdatesrequestlistupdaterequestconstraints_1.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequestConstraints)
     ], GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest.prototype, "constraints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platformType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platformType" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest.prototype, "platformType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=threatEntryType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=threatEntryType" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest.prototype, "threatEntryType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=threatType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=threatType" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest.prototype, "threatType", void 0);
     return GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest;
-}(SpeakeasyBase));
-export { GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest = GoogleSecuritySafebrowsingV4FetchThreatListUpdatesRequestListUpdateRequest;

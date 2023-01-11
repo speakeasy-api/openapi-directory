@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserAsset } from "./userasset";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListUserAssetsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var userasset_1 = require("./userasset");
 // ListUserAssetsResponse
 /**
  * A response message from a request to list.
@@ -34,17 +37,17 @@ var ListUserAssetsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListUserAssetsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalSize" }),
         __metadata("design:type", Number)
     ], ListUserAssetsResponse.prototype, "totalSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userAssets", elemType: UserAsset }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userAssets", elemType: userasset_1.UserAsset }),
         __metadata("design:type", Array)
     ], ListUserAssetsResponse.prototype, "userAssets", void 0);
     return ListUserAssetsResponse;
-}(SpeakeasyBase));
-export { ListUserAssetsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListUserAssetsResponse = ListUserAssetsResponse;

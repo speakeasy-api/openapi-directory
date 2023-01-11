@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetEventsV3EventsGetPageRequest, GetEventsV3EventsGetPageResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,16 +33,16 @@ const req: GetEventsV3EventsGetPageRequest = {
     },
   },
   queryParams: {
-    after: "culpa",
-    before: "libero",
-    eventType: "mollitia",
-    limit: 7141689443649356981,
-    objectId: 1288557390006708125,
-    objectType: "culpa",
-    occurredAfter: "1977-10-23T20:04:06Z",
-    occurredBefore: "1976-06-04T00:07:29Z",
+    after: "sit",
+    before: "voluptas",
+    eventType: "culpa",
+    limit: 501233450539197794,
+    objectId: 3390393562759376202,
+    objectType: "dolor",
+    occurredAfter: "2009-11-26T21:53:53Z",
+    occurredBefore: "1978-05-28T16:08:43Z",
     sort: [
-      "beatae",
+      "et",
     ],
   },
 };

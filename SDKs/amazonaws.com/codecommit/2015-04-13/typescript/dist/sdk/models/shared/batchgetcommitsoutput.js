@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Commit } from "./commit";
-import { BatchGetCommitsError } from "./batchgetcommitserror";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetCommitsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var commit_1 = require("./commit");
+var batchgetcommitserror_1 = require("./batchgetcommitserror");
 var BatchGetCommitsOutput = /** @class */ (function (_super) {
     __extends(BatchGetCommitsOutput, _super);
     function BatchGetCommitsOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commits", elemType: Commit }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commits", elemType: commit_1.Commit }),
         __metadata("design:type", Array)
     ], BatchGetCommitsOutput.prototype, "commits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: BatchGetCommitsError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: batchgetcommitserror_1.BatchGetCommitsError }),
         __metadata("design:type", Array)
     ], BatchGetCommitsOutput.prototype, "errors", void 0);
     return BatchGetCommitsOutput;
-}(SpeakeasyBase));
-export { BatchGetCommitsOutput };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetCommitsOutput = BatchGetCommitsOutput;

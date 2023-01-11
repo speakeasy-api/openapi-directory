@@ -15,8 +15,8 @@ export declare class CompanyNotificationRegisterRequest extends SpeakeasyBase {
     security: CompanyNotificationRegisterSecurity;
 }
 export declare class CompanyNotificationRegisterResponse extends SpeakeasyBase {
-    companyNotificationRegister200ApplicationJsonAny?: any;
-    companyNotificationRegisterDefaultApplicationJsonAny?: any;
+    companyNotificationRegister200ApplicationJSONAny?: any;
+    companyNotificationRegisterDefaultApplicationJSONAny?: any;
     contentType: string;
     statusCode: number;
 }

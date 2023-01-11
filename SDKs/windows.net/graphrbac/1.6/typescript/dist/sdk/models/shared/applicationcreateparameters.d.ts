@@ -6,7 +6,7 @@ import { OAuth2Permission } from "./oauth2permission";
 import { OptionalClaims } from "./optionalclaims";
 import { PreAuthorizedApplication } from "./preauthorizedapplication";
 /**
- * Request parameters for creating a new application.
+ * Active Directive Application common properties shared among GET, POST and PATCH
 **/
 export declare class ApplicationCreateParameters extends SpeakeasyBase {
     allowGuestsSignIn?: boolean;
@@ -22,7 +22,7 @@ export declare class ApplicationCreateParameters extends SpeakeasyBase {
     identifierUris?: string[];
     informationalUrls?: InformationalUrl;
     isDeviceOnlyAuthSupported?: boolean;
-    keyCredentials?: Map<string, Map<string, any>>[];
+    keyCredentials?: Record<string, Record<string, any>>[];
     knownClientApplications?: string[];
     logoutUrl?: string;
     oauth2AllowImplicitFlow?: boolean;
@@ -31,12 +31,12 @@ export declare class ApplicationCreateParameters extends SpeakeasyBase {
     oauth2RequirePostResponse?: boolean;
     optionalClaims?: OptionalClaims;
     orgRestrictions?: string[];
-    passwordCredentials?: Map<string, Map<string, any>>[];
+    passwordCredentials?: Record<string, Record<string, any>>[];
     preAuthorizedApplications?: PreAuthorizedApplication[];
     publicClient?: boolean;
     publisherDomain?: string;
     replyUrls?: string[];
-    requiredResourceAccess?: Map<string, Map<string, any>>[];
+    requiredResourceAccess?: Record<string, Record<string, any>>[];
     samlMetadataUrl?: string;
     signInAudience?: string;
     wwwHomepage?: string;

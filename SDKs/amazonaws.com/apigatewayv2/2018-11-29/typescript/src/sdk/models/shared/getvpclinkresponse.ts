@@ -1,34 +1,32 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VpcLinkStatusEnum } from "./vpclinkstatusenum";
-import { VpcLinkVersionEnum } from "./vpclinkversionenum";
 
 
 
 export class GetVpcLinkResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=CreatedDate" })
-  createdDate?: Date;
+  createdDate?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Name" })
-  name?: string;
+  name?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=SecurityGroupIds" })
-  securityGroupIds?: string[];
+  securityGroupIds?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=SubnetIds" })
-  subnetIds?: string[];
+  subnetIds?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=VpcLinkId" })
-  vpcLinkId?: string;
+  vpcLinkId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=VpcLinkStatus" })
-  vpcLinkStatus?: VpcLinkStatusEnum;
+  vpcLinkStatus?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=VpcLinkStatusMessage" })
-  vpcLinkStatusMessage?: string;
+  vpcLinkStatusMessage?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=VpcLinkVersion" })
-  vpcLinkVersion?: VpcLinkVersionEnum;
+  vpcLinkVersion?: Record<string, any>;
 }

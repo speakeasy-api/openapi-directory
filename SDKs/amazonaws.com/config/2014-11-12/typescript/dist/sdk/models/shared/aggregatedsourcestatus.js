@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AggregatedSourceStatusTypeEnum } from "./aggregatedsourcestatustypeenum";
-import { AggregatedSourceTypeEnum } from "./aggregatedsourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AggregatedSourceStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var aggregatedsourcestatustypeenum_1 = require("./aggregatedsourcestatustypeenum");
+var aggregatedsourcetypeenum_1 = require("./aggregatedsourcetypeenum");
 // AggregatedSourceStatus
 /**
  * The current sync status between the source and the aggregator account.
@@ -35,33 +38,33 @@ var AggregatedSourceStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AwsRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AwsRegion" }),
         __metadata("design:type", String)
     ], AggregatedSourceStatus.prototype, "awsRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastErrorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastErrorCode" }),
         __metadata("design:type", String)
     ], AggregatedSourceStatus.prototype, "lastErrorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastErrorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastErrorMessage" }),
         __metadata("design:type", String)
     ], AggregatedSourceStatus.prototype, "lastErrorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdateStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdateStatus" }),
         __metadata("design:type", String)
     ], AggregatedSourceStatus.prototype, "lastUpdateStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdateTime" }),
         __metadata("design:type", Date)
     ], AggregatedSourceStatus.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceId" }),
         __metadata("design:type", String)
     ], AggregatedSourceStatus.prototype, "sourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceType" }),
         __metadata("design:type", String)
     ], AggregatedSourceStatus.prototype, "sourceType", void 0);
     return AggregatedSourceStatus;
-}(SpeakeasyBase));
-export { AggregatedSourceStatus };
+}(utils_1.SpeakeasyBase));
+exports.AggregatedSourceStatus = AggregatedSourceStatus;

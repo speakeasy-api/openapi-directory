@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AgentHealthEnum } from "./agenthealthenum";
-import { AgentHealthCodeEnum } from "./agenthealthcodeenum";
-import { TelemetryMetadata } from "./telemetrymetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssessmentRunAgent = void 0;
+var utils_1 = require("../../../internal/utils");
+var agenthealthenum_1 = require("./agenthealthenum");
+var agenthealthcodeenum_1 = require("./agenthealthcodeenum");
+var telemetrymetadata_1 = require("./telemetrymetadata");
 // AssessmentRunAgent
 /**
  * Contains information about an Amazon Inspector agent. This data type is used as a response element in the <a>ListAssessmentRunAgents</a> action.
@@ -36,33 +39,33 @@ var AssessmentRunAgent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentHealth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentHealth" }),
         __metadata("design:type", String)
     ], AssessmentRunAgent.prototype, "agentHealth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentHealthCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentHealthCode" }),
         __metadata("design:type", String)
     ], AssessmentRunAgent.prototype, "agentHealthCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentHealthDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentHealthDetails" }),
         __metadata("design:type", String)
     ], AssessmentRunAgent.prototype, "agentHealthDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentId" }),
         __metadata("design:type", String)
     ], AssessmentRunAgent.prototype, "agentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assessmentRunArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assessmentRunArn" }),
         __metadata("design:type", String)
     ], AssessmentRunAgent.prototype, "assessmentRunArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoScalingGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoScalingGroup" }),
         __metadata("design:type", String)
     ], AssessmentRunAgent.prototype, "autoScalingGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=telemetryMetadata", elemType: TelemetryMetadata }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=telemetryMetadata", elemType: telemetrymetadata_1.TelemetryMetadata }),
         __metadata("design:type", Array)
     ], AssessmentRunAgent.prototype, "telemetryMetadata", void 0);
     return AssessmentRunAgent;
-}(SpeakeasyBase));
-export { AssessmentRunAgent };
+}(utils_1.SpeakeasyBase));
+exports.AssessmentRunAgent = AssessmentRunAgent;

@@ -16,7 +16,7 @@ export declare class LaunchProfile extends SpeakeasyBase {
     statusMessage?: string;
     streamConfiguration?: StreamConfiguration;
     studioComponentIds?: string[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     updatedAt?: Date;
     updatedBy?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NamedQuery = void 0;
+var utils_1 = require("../../../internal/utils");
 // NamedQuery
 /**
  * A query, where <code>QueryString</code> is the list of SQL query statements that comprise the query.
@@ -33,29 +36,29 @@ var NamedQuery = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Database" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Database" }),
         __metadata("design:type", String)
     ], NamedQuery.prototype, "database", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], NamedQuery.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], NamedQuery.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NamedQueryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NamedQueryId" }),
         __metadata("design:type", String)
     ], NamedQuery.prototype, "namedQueryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QueryString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QueryString" }),
         __metadata("design:type", String)
     ], NamedQuery.prototype, "queryString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkGroup" }),
         __metadata("design:type", String)
     ], NamedQuery.prototype, "workGroup", void 0);
     return NamedQuery;
-}(SpeakeasyBase));
-export { NamedQuery };
+}(utils_1.SpeakeasyBase));
+exports.NamedQuery = NamedQuery;

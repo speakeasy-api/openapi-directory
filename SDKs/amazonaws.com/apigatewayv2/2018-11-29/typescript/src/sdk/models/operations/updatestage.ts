@@ -42,10 +42,10 @@ export class UpdateStageHeaders extends SpeakeasyBase {
 **/
 export class UpdateStageRequestBodyAccessLogSettings extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=DestinationArn" })
-  destinationArn?: string;
+  destinationArn?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Format" })
-  format?: string;
+  format?: Record<string, any>;
 }
 
 
@@ -55,19 +55,19 @@ export class UpdateStageRequestBodyAccessLogSettings extends SpeakeasyBase {
 **/
 export class UpdateStageRequestBodyDefaultRouteSettings extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=DataTraceEnabled" })
-  dataTraceEnabled?: boolean;
+  dataTraceEnabled?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=DetailedMetricsEnabled" })
-  detailedMetricsEnabled?: boolean;
+  detailedMetricsEnabled?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=LoggingLevel" })
-  loggingLevel?: shared.LoggingLevelEnum;
+  loggingLevel?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ThrottlingBurstLimit" })
-  throttlingBurstLimit?: number;
+  throttlingBurstLimit?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ThrottlingRateLimit" })
-  throttlingRateLimit?: number;
+  throttlingRateLimit?: Record<string, any>;
 }
 
 
@@ -91,10 +91,10 @@ export class UpdateStageRequestBody extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=routeSettings", elemType: shared.RouteSettings })
-  routeSettings?: Map<string, shared.RouteSettings>;
+  routeSettings?: Record<string, shared.RouteSettings>;
 
   @SpeakeasyMetadata({ data: "json, name=stageVariables" })
-  stageVariables?: Map<string, string>;
+  stageVariables?: Record<string, string>;
 }
 
 

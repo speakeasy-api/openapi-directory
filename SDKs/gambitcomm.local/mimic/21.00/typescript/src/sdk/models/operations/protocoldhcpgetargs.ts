@@ -22,5 +22,5 @@ export class ProtocolDhcpGetArgsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolDhcpGetArgs200ApplicationJsonObject?: Map<string, any>;
+  protocolDhcpGetArgs200ApplicationJSONObject?: Record<string, any>;
 }

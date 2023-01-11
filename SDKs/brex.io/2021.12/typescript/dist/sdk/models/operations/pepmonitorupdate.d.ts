@@ -16,7 +16,7 @@ export declare class PepMonitorUpdateRequest extends SpeakeasyBase {
 }
 export declare class PepMonitorUpdateResponse extends SpeakeasyBase {
     contentType: string;
-    pepMonitorUpdate200ApplicationJsonAny?: any;
-    pepMonitorUpdateDefaultApplicationJsonAny?: any;
+    pepMonitorUpdate200ApplicationJSONAny?: any;
+    pepMonitorUpdateDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

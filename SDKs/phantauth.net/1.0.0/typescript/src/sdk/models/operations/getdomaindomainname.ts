@@ -40,8 +40,8 @@ export class GetDomainDomainnameResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getDomainDomainname200ApplicationJsonObject?: GetDomainDomainname200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getDomainDomainname200ApplicationJSONObject?: GetDomainDomainname200ApplicationJson;
 }

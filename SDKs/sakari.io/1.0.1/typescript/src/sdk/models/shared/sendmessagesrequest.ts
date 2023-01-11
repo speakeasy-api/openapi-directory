@@ -5,7 +5,7 @@ import { ContactRequest } from "./contactrequest";
 
 export class SendMessagesRequestFilters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=attributes" })
-  attributes?: Map<string, any>[];
+  attributes?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
   tags?: string[];

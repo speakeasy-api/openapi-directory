@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SortDirectionEnum } from "./sortdirectionenum";
-export var CompaniesSortByEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompaniesSort = exports.CompaniesSortByEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var sortdirectionenum_1 = require("./sortdirectionenum");
+var CompaniesSortByEnum;
 (function (CompaniesSortByEnum) {
     CompaniesSortByEnum["CreatedAt"] = "created_at";
     CompaniesSortByEnum["UpdatedAt"] = "updated_at";
     CompaniesSortByEnum["Name"] = "name";
-})(CompaniesSortByEnum || (CompaniesSortByEnum = {}));
+})(CompaniesSortByEnum = exports.CompaniesSortByEnum || (exports.CompaniesSortByEnum = {}));
 var CompaniesSort = /** @class */ (function (_super) {
     __extends(CompaniesSort, _super);
     function CompaniesSort() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=by" }),
         __metadata("design:type", String)
     ], CompaniesSort.prototype, "by", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=direction" }),
         __metadata("design:type", String)
     ], CompaniesSort.prototype, "direction", void 0);
     return CompaniesSort;
-}(SpeakeasyBase));
-export { CompaniesSort };
+}(utils_1.SpeakeasyBase));
+exports.CompaniesSort = CompaniesSort;

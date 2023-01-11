@@ -10,16 +10,16 @@ import { SecurityServicePolicyData } from "./securityservicepolicydata";
 **/
 export class Policy extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=DeleteUnusedFMManagedResources" })
-  deleteUnusedFmManagedResources?: boolean;
+  deleteUnusedFMManagedResources?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=ExcludeMap" })
-  excludeMap?: Map<string, string[]>;
+  excludeMap?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=ExcludeResourceTags" })
   excludeResourceTags: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=IncludeMap" })
-  includeMap?: Map<string, string[]>;
+  includeMap?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=PolicyId" })
   policyId?: string;

@@ -47,5 +47,5 @@ export class SearchStickersResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  searchStickers200ApplicationJsonObject?: SearchStickers200ApplicationJson;
+  searchStickers200ApplicationJSONObject?: SearchStickers200ApplicationJson;
 }

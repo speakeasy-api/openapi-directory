@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayerSeasonAwayStatsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerSeasonAwayStatsResponse = exports.PlayerSeasonAwayStatsRequest = exports.PlayerSeasonAwayStatsPathParams = exports.PlayerSeasonAwayStatsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayerSeasonAwayStatsFormatEnum;
 (function (PlayerSeasonAwayStatsFormatEnum) {
     PlayerSeasonAwayStatsFormatEnum["Xml"] = "XML";
     PlayerSeasonAwayStatsFormatEnum["Json"] = "JSON";
-})(PlayerSeasonAwayStatsFormatEnum || (PlayerSeasonAwayStatsFormatEnum = {}));
+})(PlayerSeasonAwayStatsFormatEnum = exports.PlayerSeasonAwayStatsFormatEnum || (exports.PlayerSeasonAwayStatsFormatEnum = {}));
 var PlayerSeasonAwayStatsPathParams = /** @class */ (function (_super) {
     __extends(PlayerSeasonAwayStatsPathParams, _super);
     function PlayerSeasonAwayStatsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayerSeasonAwayStatsPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], PlayerSeasonAwayStatsPathParams.prototype, "season", void 0);
     return PlayerSeasonAwayStatsPathParams;
-}(SpeakeasyBase));
-export { PlayerSeasonAwayStatsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonAwayStatsPathParams = PlayerSeasonAwayStatsPathParams;
 var PlayerSeasonAwayStatsRequest = /** @class */ (function (_super) {
     __extends(PlayerSeasonAwayStatsRequest, _super);
     function PlayerSeasonAwayStatsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayerSeasonAwayStatsPathParams)
     ], PlayerSeasonAwayStatsRequest.prototype, "pathParams", void 0);
     return PlayerSeasonAwayStatsRequest;
-}(SpeakeasyBase));
-export { PlayerSeasonAwayStatsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonAwayStatsRequest = PlayerSeasonAwayStatsRequest;
 var PlayerSeasonAwayStatsResponse = /** @class */ (function (_super) {
     __extends(PlayerSeasonAwayStatsResponse, _super);
     function PlayerSeasonAwayStatsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayerSeasonAwayStatsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayerSeasonAwayStatsResponse.prototype, "playerSeasons", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayerSeasonAwayStatsResponse.prototype, "statusCode", void 0);
     return PlayerSeasonAwayStatsResponse;
-}(SpeakeasyBase));
-export { PlayerSeasonAwayStatsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerSeasonAwayStatsResponse = PlayerSeasonAwayStatsResponse;

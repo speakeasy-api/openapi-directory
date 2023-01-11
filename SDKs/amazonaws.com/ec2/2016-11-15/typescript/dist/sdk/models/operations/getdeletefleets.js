@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteFleetsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteFleetsResponse = exports.GetDeleteFleetsRequest = exports.GetDeleteFleetsHeaders = exports.GetDeleteFleetsQueryParams = exports.GetDeleteFleetsVersionEnum = exports.GetDeleteFleetsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteFleetsActionEnum;
 (function (GetDeleteFleetsActionEnum) {
     GetDeleteFleetsActionEnum["DeleteFleets"] = "DeleteFleets";
-})(GetDeleteFleetsActionEnum || (GetDeleteFleetsActionEnum = {}));
-export var GetDeleteFleetsVersionEnum;
+})(GetDeleteFleetsActionEnum = exports.GetDeleteFleetsActionEnum || (exports.GetDeleteFleetsActionEnum = {}));
+var GetDeleteFleetsVersionEnum;
 (function (GetDeleteFleetsVersionEnum) {
     GetDeleteFleetsVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDeleteFleetsVersionEnum || (GetDeleteFleetsVersionEnum = {}));
+})(GetDeleteFleetsVersionEnum = exports.GetDeleteFleetsVersionEnum || (exports.GetDeleteFleetsVersionEnum = {}));
 var GetDeleteFleetsQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteFleetsQueryParams, _super);
     function GetDeleteFleetsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteFleetsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDeleteFleetsQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=FleetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=FleetId" }),
         __metadata("design:type", Array)
     ], GetDeleteFleetsQueryParams.prototype, "fleetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TerminateInstances" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TerminateInstances" }),
         __metadata("design:type", Boolean)
     ], GetDeleteFleetsQueryParams.prototype, "terminateInstances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteFleetsQueryParams.prototype, "version", void 0);
     return GetDeleteFleetsQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteFleetsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteFleetsQueryParams = GetDeleteFleetsQueryParams;
 var GetDeleteFleetsHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteFleetsHeaders, _super);
     function GetDeleteFleetsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteFleetsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteFleetsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteFleetsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteFleetsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteFleetsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteFleetsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteFleetsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteFleetsHeaders;
-}(SpeakeasyBase));
-export { GetDeleteFleetsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteFleetsHeaders = GetDeleteFleetsHeaders;
 var GetDeleteFleetsRequest = /** @class */ (function (_super) {
     __extends(GetDeleteFleetsRequest, _super);
     function GetDeleteFleetsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteFleetsQueryParams)
     ], GetDeleteFleetsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteFleetsHeaders)
     ], GetDeleteFleetsRequest.prototype, "headers", void 0);
     return GetDeleteFleetsRequest;
-}(SpeakeasyBase));
-export { GetDeleteFleetsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteFleetsRequest = GetDeleteFleetsRequest;
 var GetDeleteFleetsResponse = /** @class */ (function (_super) {
     __extends(GetDeleteFleetsResponse, _super);
     function GetDeleteFleetsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteFleetsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteFleetsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteFleetsResponse.prototype, "statusCode", void 0);
     return GetDeleteFleetsResponse;
-}(SpeakeasyBase));
-export { GetDeleteFleetsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteFleetsResponse = GetDeleteFleetsResponse;

@@ -22,7 +22,7 @@ export declare class CreateEmailTemplateRequestBodyEmailTemplateRequest extends 
     subject?: string;
     templateDescription?: string;
     textPart?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateEmailTemplateRequestBody extends SpeakeasyBase {
     emailTemplateRequest: CreateEmailTemplateRequestBodyEmailTemplateRequest;

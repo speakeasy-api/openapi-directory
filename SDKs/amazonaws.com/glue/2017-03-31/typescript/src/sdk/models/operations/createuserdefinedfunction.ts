@@ -51,7 +51,7 @@ export class CreateUserDefinedFunctionResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createUserDefinedFunctionResponse?: Map<string, any>;
+  createUserDefinedFunctionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   entityNotFoundException?: any;

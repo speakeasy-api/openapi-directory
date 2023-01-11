@@ -14,7 +14,7 @@ export class SandboxItemSetVerificationStatusResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  sandboxItemSetVerificationStatusResponse?: Map<string, any>;
+  sandboxItemSetVerificationStatusResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

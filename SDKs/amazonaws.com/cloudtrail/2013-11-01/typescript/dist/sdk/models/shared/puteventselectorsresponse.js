@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdvancedEventSelector } from "./advancedeventselector";
-import { EventSelector } from "./eventselector";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutEventSelectorsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var advancedeventselector_1 = require("./advancedeventselector");
+var eventselector_1 = require("./eventselector");
 var PutEventSelectorsResponse = /** @class */ (function (_super) {
     __extends(PutEventSelectorsResponse, _super);
     function PutEventSelectorsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AdvancedEventSelectors", elemType: AdvancedEventSelector }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AdvancedEventSelectors", elemType: advancedeventselector_1.AdvancedEventSelector }),
         __metadata("design:type", Array)
     ], PutEventSelectorsResponse.prototype, "advancedEventSelectors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventSelectors", elemType: EventSelector }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventSelectors", elemType: eventselector_1.EventSelector }),
         __metadata("design:type", Array)
     ], PutEventSelectorsResponse.prototype, "eventSelectors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrailARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrailARN" }),
         __metadata("design:type", String)
-    ], PutEventSelectorsResponse.prototype, "trailArn", void 0);
+    ], PutEventSelectorsResponse.prototype, "trailARN", void 0);
     return PutEventSelectorsResponse;
-}(SpeakeasyBase));
-export { PutEventSelectorsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutEventSelectorsResponse = PutEventSelectorsResponse;

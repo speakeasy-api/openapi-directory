@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CertificateInfo } from "./certificateinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AndroidAppAsset = void 0;
+var utils_1 = require("../../../internal/utils");
+var certificateinfo_1 = require("./certificateinfo");
 // AndroidAppAsset
 /**
  * Describes an android app asset.
@@ -34,13 +37,13 @@ var AndroidAppAsset = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificate" }),
-        __metadata("design:type", CertificateInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificate" }),
+        __metadata("design:type", certificateinfo_1.CertificateInfo)
     ], AndroidAppAsset.prototype, "certificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packageName" }),
         __metadata("design:type", String)
     ], AndroidAppAsset.prototype, "packageName", void 0);
     return AndroidAppAsset;
-}(SpeakeasyBase));
-export { AndroidAppAsset };
+}(utils_1.SpeakeasyBase));
+exports.AndroidAppAsset = AndroidAppAsset;

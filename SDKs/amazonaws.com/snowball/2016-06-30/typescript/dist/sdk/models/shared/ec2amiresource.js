@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Ec2AmiResource = void 0;
+var utils_1 = require("../../../internal/utils");
 // Ec2AmiResource
 /**
  * A JSON-formatted object that contains the IDs for an Amazon Machine Image (AMI), including the Amazon EC2 AMI ID and the Snow device AMI ID. Each AMI has these two IDs to simplify identifying the AMI in both the AWS Cloud and on the device.
@@ -33,13 +36,13 @@ var Ec2AmiResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AmiId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AmiId" }),
         __metadata("design:type", String)
     ], Ec2AmiResource.prototype, "amiId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnowballAmiId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnowballAmiId" }),
         __metadata("design:type", String)
     ], Ec2AmiResource.prototype, "snowballAmiId", void 0);
     return Ec2AmiResource;
-}(SpeakeasyBase));
-export { Ec2AmiResource };
+}(utils_1.SpeakeasyBase));
+exports.Ec2AmiResource = Ec2AmiResource;

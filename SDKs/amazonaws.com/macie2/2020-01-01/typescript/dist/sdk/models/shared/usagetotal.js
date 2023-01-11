@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CurrencyEnum } from "./currencyenum";
-import { UsageTypeEnum } from "./usagetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UsageTotal = void 0;
+var utils_1 = require("../../../internal/utils");
+var currencyenum_1 = require("./currencyenum");
+var usagetypeenum_1 = require("./usagetypeenum");
 // UsageTotal
 /**
  * Provides aggregated data for an Amazon Macie usage metric. The value for the metric reports estimated usage data for an account for the preceding 30 days or the current calendar month to date, depending on the time period (timeRange) specified in the request.
@@ -35,17 +38,17 @@ var UsageTotal = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], UsageTotal.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=estimatedCost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=estimatedCost" }),
         __metadata("design:type", String)
     ], UsageTotal.prototype, "estimatedCost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], UsageTotal.prototype, "type", void 0);
     return UsageTotal;
-}(SpeakeasyBase));
-export { UsageTotal };
+}(utils_1.SpeakeasyBase));
+exports.UsageTotal = UsageTotal;

@@ -43,5 +43,5 @@ export class GetEnvironmentRelationsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getEnvironmentRelations200ApplicationJsonObject?: GetEnvironmentRelations200ApplicationJson;
+  getEnvironmentRelations200ApplicationJSONObject?: GetEnvironmentRelations200ApplicationJson;
 }

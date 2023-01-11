@@ -34,11 +34,11 @@ export class GetNetworkWirelessMeshStatusesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessMeshStatuses200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessMeshStatuses200ApplicationJSONObject?: Record<string, any>;
 }

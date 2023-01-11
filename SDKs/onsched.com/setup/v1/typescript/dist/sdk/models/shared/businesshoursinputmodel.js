@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BusinessHourInputModel } from "./businesshourinputmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BusinessHoursInputModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var businesshourinputmodel_1 = require("./businesshourinputmodel");
 var BusinessHoursInputModel = /** @class */ (function (_super) {
     __extends(BusinessHoursInputModel, _super);
     function BusinessHoursInputModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fri" }),
-        __metadata("design:type", BusinessHourInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fri" }),
+        __metadata("design:type", businesshourinputmodel_1.BusinessHourInputModel)
     ], BusinessHoursInputModel.prototype, "fri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mon" }),
-        __metadata("design:type", BusinessHourInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mon" }),
+        __metadata("design:type", businesshourinputmodel_1.BusinessHourInputModel)
     ], BusinessHoursInputModel.prototype, "mon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sat" }),
-        __metadata("design:type", BusinessHourInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sat" }),
+        __metadata("design:type", businesshourinputmodel_1.BusinessHourInputModel)
     ], BusinessHoursInputModel.prototype, "sat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sun" }),
-        __metadata("design:type", BusinessHourInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sun" }),
+        __metadata("design:type", businesshourinputmodel_1.BusinessHourInputModel)
     ], BusinessHoursInputModel.prototype, "sun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thu" }),
-        __metadata("design:type", BusinessHourInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thu" }),
+        __metadata("design:type", businesshourinputmodel_1.BusinessHourInputModel)
     ], BusinessHoursInputModel.prototype, "thu", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tue" }),
-        __metadata("design:type", BusinessHourInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tue" }),
+        __metadata("design:type", businesshourinputmodel_1.BusinessHourInputModel)
     ], BusinessHoursInputModel.prototype, "tue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wed" }),
-        __metadata("design:type", BusinessHourInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wed" }),
+        __metadata("design:type", businesshourinputmodel_1.BusinessHourInputModel)
     ], BusinessHoursInputModel.prototype, "wed", void 0);
     return BusinessHoursInputModel;
-}(SpeakeasyBase));
-export { BusinessHoursInputModel };
+}(utils_1.SpeakeasyBase));
+exports.BusinessHoursInputModel = BusinessHoursInputModel;

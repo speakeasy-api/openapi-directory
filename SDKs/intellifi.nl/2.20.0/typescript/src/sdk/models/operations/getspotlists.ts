@@ -110,5 +110,5 @@ export class GetSpotListsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getSpotLists200ApplicationJsonObject?: GetSpotLists200ApplicationJson;
+  getSpotLists200ApplicationJSONObject?: GetSpotLists200ApplicationJson;
 }

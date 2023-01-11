@@ -9,7 +9,7 @@ export declare class PrestoJob extends SpeakeasyBase {
     continueOnFailure?: boolean;
     loggingConfig?: LoggingConfig;
     outputFormat?: string;
-    properties?: Map<string, string>;
+    properties?: Record<string, string>;
     queryFileUri?: string;
     queryList?: QueryList;
 }

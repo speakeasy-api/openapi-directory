@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CurrentRole } from "./currentrole";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompactPerson = void 0;
+var utils_1 = require("../../../internal/utils");
+var currentrole_1 = require("./currentrole");
 var CompactPerson = /** @class */ (function (_super) {
     __extends(CompactPerson, _super);
     function CompactPerson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current_role" }),
-        __metadata("design:type", CurrentRole)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current_role" }),
+        __metadata("design:type", currentrole_1.CurrentRole)
     ], CompactPerson.prototype, "currentRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CompactPerson.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CompactPerson.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=party" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=party" }),
         __metadata("design:type", String)
     ], CompactPerson.prototype, "party", void 0);
     return CompactPerson;
-}(SpeakeasyBase));
-export { CompactPerson };
+}(utils_1.SpeakeasyBase));
+exports.CompactPerson = CompactPerson;

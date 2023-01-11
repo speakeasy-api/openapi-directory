@@ -53,7 +53,7 @@ export class MybusinessAccountsGenerateAccountNumberRequest extends SpeakeasyBas
   queryParams: MybusinessAccountsGenerateAccountNumberQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 }
 
 

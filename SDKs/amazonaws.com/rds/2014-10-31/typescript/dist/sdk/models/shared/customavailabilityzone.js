@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VpnDetails } from "./vpndetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomAvailabilityZone = void 0;
+var utils_1 = require("../../../internal/utils");
+var vpndetails_1 = require("./vpndetails");
 // CustomAvailabilityZone
 /**
  * <p>A custom Availability Zone (AZ) is an on-premises AZ that is integrated with a VMware vSphere cluster.</p> <p>For more information about RDS on VMware, see the <a href="https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html"> RDS on VMware User Guide.</a> </p>
@@ -34,21 +37,21 @@ var CustomAvailabilityZone = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CustomAvailabilityZone.prototype, "customAvailabilityZoneId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CustomAvailabilityZone.prototype, "customAvailabilityZoneName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CustomAvailabilityZone.prototype, "customAvailabilityZoneStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", VpnDetails)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", vpndetails_1.VpnDetails)
     ], CustomAvailabilityZone.prototype, "vpnDetails", void 0);
     return CustomAvailabilityZone;
-}(SpeakeasyBase));
-export { CustomAvailabilityZone };
+}(utils_1.SpeakeasyBase));
+exports.CustomAvailabilityZone = CustomAvailabilityZone;

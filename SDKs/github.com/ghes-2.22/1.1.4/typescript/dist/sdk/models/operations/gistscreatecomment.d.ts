@@ -12,7 +12,7 @@ export declare class GistsCreateCommentRequest extends SpeakeasyBase {
 }
 export declare class GistsCreateCommentResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     gistComment?: shared.GistComment;

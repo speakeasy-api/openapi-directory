@@ -186,7 +186,7 @@ export class PostCompileRequest extends SpeakeasyBase {
   queryParams: PostCompileQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 }
 
 
@@ -201,5 +201,5 @@ export class PostCompileResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  postCompile200ApplicationJsonObject?: PostCompile200ApplicationJson;
+  postCompile200ApplicationJSONObject?: PostCompile200ApplicationJson;
 }

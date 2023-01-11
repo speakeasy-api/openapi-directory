@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudWatchLogGroupLogDestination = void 0;
+var utils_1 = require("../../../internal/utils");
 // CloudWatchLogGroupLogDestination
 /**
  * The Amazon CloudWatch Logs log group where the text and metadata logs are delivered. The log group must exist before you enable logging.
@@ -33,13 +36,13 @@ var CloudWatchLogGroupLogDestination = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudWatchLogGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudWatchLogGroupArn" }),
         __metadata("design:type", String)
     ], CloudWatchLogGroupLogDestination.prototype, "cloudWatchLogGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logPrefix" }),
         __metadata("design:type", String)
     ], CloudWatchLogGroupLogDestination.prototype, "logPrefix", void 0);
     return CloudWatchLogGroupLogDestination;
-}(SpeakeasyBase));
-export { CloudWatchLogGroupLogDestination };
+}(utils_1.SpeakeasyBase));
+exports.CloudWatchLogGroupLogDestination = CloudWatchLogGroupLogDestination;

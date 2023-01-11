@@ -13,7 +13,7 @@ export declare class GetNetworkWirelessMeshStatusesRequest extends SpeakeasyBase
 }
 export declare class GetNetworkWirelessMeshStatusesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getNetworkWirelessMeshStatuses200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessMeshStatuses200ApplicationJSONObject?: Record<string, any>;
 }

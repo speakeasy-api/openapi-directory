@@ -1,14 +1,30 @@
-export * from "./servicedirectoryprojectslocationslist";
-export * from "./servicedirectoryprojectslocationsnamespacescreate";
-export * from "./servicedirectoryprojectslocationsnamespaceslist";
-export * from "./servicedirectoryprojectslocationsnamespacesservicescreate";
-export * from "./servicedirectoryprojectslocationsnamespacesservicesendpointscreate";
-export * from "./servicedirectoryprojectslocationsnamespacesservicesendpointsdelete";
-export * from "./servicedirectoryprojectslocationsnamespacesservicesendpointsget";
-export * from "./servicedirectoryprojectslocationsnamespacesservicesendpointslist";
-export * from "./servicedirectoryprojectslocationsnamespacesservicesendpointspatch";
-export * from "./servicedirectoryprojectslocationsnamespacesservicesgetiampolicy";
-export * from "./servicedirectoryprojectslocationsnamespacesserviceslist";
-export * from "./servicedirectoryprojectslocationsnamespacesservicesresolve";
-export * from "./servicedirectoryprojectslocationsnamespacesservicessetiampolicy";
-export * from "./servicedirectoryprojectslocationsnamespacesservicestestiampermissions";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./servicedirectoryprojectslocationslist"), exports);
+__exportStar(require("./servicedirectoryprojectslocationsnamespacescreate"), exports);
+__exportStar(require("./servicedirectoryprojectslocationsnamespaceslist"), exports);
+__exportStar(require("./servicedirectoryprojectslocationsnamespacesservicescreate"), exports);
+__exportStar(require("./servicedirectoryprojectslocationsnamespacesservicesendpointscreate"), exports);
+__exportStar(require("./servicedirectoryprojectslocationsnamespacesservicesendpointsdelete"), exports);
+__exportStar(require("./servicedirectoryprojectslocationsnamespacesservicesendpointsget"), exports);
+__exportStar(require("./servicedirectoryprojectslocationsnamespacesservicesendpointslist"), exports);
+__exportStar(require("./servicedirectoryprojectslocationsnamespacesservicesendpointspatch"), exports);
+__exportStar(require("./servicedirectoryprojectslocationsnamespacesservicesgetiampolicy"), exports);
+__exportStar(require("./servicedirectoryprojectslocationsnamespacesserviceslist"), exports);
+__exportStar(require("./servicedirectoryprojectslocationsnamespacesservicesresolve"), exports);
+__exportStar(require("./servicedirectoryprojectslocationsnamespacesservicessetiampolicy"), exports);
+__exportStar(require("./servicedirectoryprojectslocationsnamespacesservicestestiampermissions"), exports);

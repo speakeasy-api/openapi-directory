@@ -4,7 +4,7 @@ import { Answer } from "./answer";
  * A form response.
 **/
 export declare class FormResponse extends SpeakeasyBase {
-    answers?: Map<string, Answer>;
+    answers?: Record<string, Answer>;
     createTime?: string;
     formId?: string;
     lastSubmittedTime?: string;

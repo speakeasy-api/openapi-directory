@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DateArrayOptions } from "./datearrayoptions";
-import { DateOptions } from "./dateoptions";
-import { DoubleArrayOptions } from "./doublearrayoptions";
-import { DoubleOptions } from "./doubleoptions";
-import { IndexFieldTypeEnum } from "./indexfieldtypeenum";
-import { IntArrayOptions } from "./intarrayoptions";
-import { IntOptions } from "./intoptions";
-import { LatLonOptions } from "./latlonoptions";
-import { LiteralArrayOptions } from "./literalarrayoptions";
-import { LiteralOptions } from "./literaloptions";
-import { TextArrayOptions } from "./textarrayoptions";
-import { TextOptions } from "./textoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IndexField = void 0;
+var utils_1 = require("../../../internal/utils");
+var datearrayoptions_1 = require("./datearrayoptions");
+var dateoptions_1 = require("./dateoptions");
+var doublearrayoptions_1 = require("./doublearrayoptions");
+var doubleoptions_1 = require("./doubleoptions");
+var indexfieldtypeenum_1 = require("./indexfieldtypeenum");
+var intarrayoptions_1 = require("./intarrayoptions");
+var intoptions_1 = require("./intoptions");
+var latlonoptions_1 = require("./latlonoptions");
+var literalarrayoptions_1 = require("./literalarrayoptions");
+var literaloptions_1 = require("./literaloptions");
+var textarrayoptions_1 = require("./textarrayoptions");
+var textoptions_1 = require("./textoptions");
 // IndexField
 /**
  * Configuration information for a field in the index, including its name, type, and options. The supported options depend on the <code><a>IndexFieldType</a></code>.
@@ -45,57 +48,57 @@ var IndexField = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DateArrayOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", datearrayoptions_1.DateArrayOptions)
     ], IndexField.prototype, "dateArrayOptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DateOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", dateoptions_1.DateOptions)
     ], IndexField.prototype, "dateOptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DoubleArrayOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", doublearrayoptions_1.DoubleArrayOptions)
     ], IndexField.prototype, "doubleArrayOptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DoubleOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", doubleoptions_1.DoubleOptions)
     ], IndexField.prototype, "doubleOptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], IndexField.prototype, "indexFieldName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], IndexField.prototype, "indexFieldType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", IntArrayOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", intarrayoptions_1.IntArrayOptions)
     ], IndexField.prototype, "intArrayOptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", IntOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", intoptions_1.IntOptions)
     ], IndexField.prototype, "intOptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", LatLonOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", latlonoptions_1.LatLonOptions)
     ], IndexField.prototype, "latLonOptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", LiteralArrayOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", literalarrayoptions_1.LiteralArrayOptions)
     ], IndexField.prototype, "literalArrayOptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", LiteralOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", literaloptions_1.LiteralOptions)
     ], IndexField.prototype, "literalOptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TextArrayOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", textarrayoptions_1.TextArrayOptions)
     ], IndexField.prototype, "textArrayOptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TextOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", textoptions_1.TextOptions)
     ], IndexField.prototype, "textOptions", void 0);
     return IndexField;
-}(SpeakeasyBase));
-export { IndexField };
+}(utils_1.SpeakeasyBase));
+exports.IndexField = IndexField;

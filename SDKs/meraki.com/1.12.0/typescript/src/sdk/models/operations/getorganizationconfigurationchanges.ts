@@ -49,11 +49,11 @@ export class GetOrganizationConfigurationChangesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationConfigurationChanges200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationConfigurationChanges200ApplicationJSONObject?: Record<string, any>;
 }

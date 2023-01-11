@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ActiveTrustedSigners } from "./activetrustedsigners";
-import { AliasIcpRecordal } from "./aliasicprecordal";
+import { AliasIcpRecordals } from "./aliasicprecordals";
 import { DistributionConfig } from "./distributionconfig";
 /**
  * A distribution tells CloudFront where you want content to be delivered from, and the details about how to track and manage content delivery.
@@ -8,7 +8,7 @@ import { DistributionConfig } from "./distributionconfig";
 export declare class Distribution extends SpeakeasyBase {
     arn: string;
     activeTrustedSigners: ActiveTrustedSigners;
-    aliasIcpRecordals?: AliasIcpRecordal[];
+    aliasICPRecordals?: AliasIcpRecordals[];
     distributionConfig: DistributionConfig;
     domainName: string;
     id: string;

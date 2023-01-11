@@ -44,5 +44,5 @@ export class RemoveVideosFromProjectAlt1Response extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 }

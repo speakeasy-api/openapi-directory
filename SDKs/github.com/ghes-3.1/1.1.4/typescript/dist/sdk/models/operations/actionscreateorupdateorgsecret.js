@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,86 +23,88 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsCreateOrUpdateOrgSecretResponse = exports.ActionsCreateOrUpdateOrgSecretRequest = exports.ActionsCreateOrUpdateOrgSecretRequestBody = exports.ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum = exports.ActionsCreateOrUpdateOrgSecretPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsCreateOrUpdateOrgSecretPathParams = /** @class */ (function (_super) {
     __extends(ActionsCreateOrUpdateOrgSecretPathParams, _super);
     function ActionsCreateOrUpdateOrgSecretPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], ActionsCreateOrUpdateOrgSecretPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=secret_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=secret_name" }),
         __metadata("design:type", String)
     ], ActionsCreateOrUpdateOrgSecretPathParams.prototype, "secretName", void 0);
     return ActionsCreateOrUpdateOrgSecretPathParams;
-}(SpeakeasyBase));
-export { ActionsCreateOrUpdateOrgSecretPathParams };
-export var ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum;
+}(utils_1.SpeakeasyBase));
+exports.ActionsCreateOrUpdateOrgSecretPathParams = ActionsCreateOrUpdateOrgSecretPathParams;
+var ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum;
 (function (ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum) {
     ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum["All"] = "all";
     ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum["Private"] = "private";
     ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum["Selected"] = "selected";
-})(ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum || (ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum = {}));
+})(ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum = exports.ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum || (exports.ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum = {}));
 var ActionsCreateOrUpdateOrgSecretRequestBody = /** @class */ (function (_super) {
     __extends(ActionsCreateOrUpdateOrgSecretRequestBody, _super);
     function ActionsCreateOrUpdateOrgSecretRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encrypted_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encrypted_value" }),
         __metadata("design:type", String)
     ], ActionsCreateOrUpdateOrgSecretRequestBody.prototype, "encryptedValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key_id" }),
         __metadata("design:type", String)
     ], ActionsCreateOrUpdateOrgSecretRequestBody.prototype, "keyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selected_repository_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selected_repository_ids" }),
         __metadata("design:type", Array)
     ], ActionsCreateOrUpdateOrgSecretRequestBody.prototype, "selectedRepositoryIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visibility" }),
         __metadata("design:type", String)
     ], ActionsCreateOrUpdateOrgSecretRequestBody.prototype, "visibility", void 0);
     return ActionsCreateOrUpdateOrgSecretRequestBody;
-}(SpeakeasyBase));
-export { ActionsCreateOrUpdateOrgSecretRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ActionsCreateOrUpdateOrgSecretRequestBody = ActionsCreateOrUpdateOrgSecretRequestBody;
 var ActionsCreateOrUpdateOrgSecretRequest = /** @class */ (function (_super) {
     __extends(ActionsCreateOrUpdateOrgSecretRequest, _super);
     function ActionsCreateOrUpdateOrgSecretRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsCreateOrUpdateOrgSecretPathParams)
     ], ActionsCreateOrUpdateOrgSecretRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ActionsCreateOrUpdateOrgSecretRequestBody)
     ], ActionsCreateOrUpdateOrgSecretRequest.prototype, "request", void 0);
     return ActionsCreateOrUpdateOrgSecretRequest;
-}(SpeakeasyBase));
-export { ActionsCreateOrUpdateOrgSecretRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsCreateOrUpdateOrgSecretRequest = ActionsCreateOrUpdateOrgSecretRequest;
 var ActionsCreateOrUpdateOrgSecretResponse = /** @class */ (function (_super) {
     __extends(ActionsCreateOrUpdateOrgSecretResponse, _super);
     function ActionsCreateOrUpdateOrgSecretResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsCreateOrUpdateOrgSecretResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsCreateOrUpdateOrgSecretResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ActionsCreateOrUpdateOrgSecretResponse.prototype, "emptyObject", void 0);
     return ActionsCreateOrUpdateOrgSecretResponse;
-}(SpeakeasyBase));
-export { ActionsCreateOrUpdateOrgSecretResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsCreateOrUpdateOrgSecretResponse = ActionsCreateOrUpdateOrgSecretResponse;

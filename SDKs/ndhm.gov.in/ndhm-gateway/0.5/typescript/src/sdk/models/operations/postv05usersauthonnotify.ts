@@ -8,13 +8,13 @@ export class PostV05UsersAuthOnNotifyHeaders extends SpeakeasyBase {
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-CM-ID" })
-  xCmId: string;
+  xCMID: string;
 }
 
 
 export class PostV05UsersAuthOnNotifyRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   patientAuthNotificationAcknowledgement?: shared.PatientAuthNotificationAcknowledgement;

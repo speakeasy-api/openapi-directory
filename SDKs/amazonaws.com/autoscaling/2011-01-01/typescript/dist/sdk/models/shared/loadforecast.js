@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PredictiveScalingMetricSpecification } from "./predictivescalingmetricspecification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadForecast = void 0;
+var utils_1 = require("../../../internal/utils");
+var predictivescalingmetricspecification_1 = require("./predictivescalingmetricspecification");
 // LoadForecast
 /**
  * A <code>GetPredictiveScalingForecast</code> call returns the load forecast for a predictive scaling policy. This structure includes the data points for that load forecast, along with the timestamps of those data points and the metric specification.
@@ -34,17 +37,17 @@ var LoadForecast = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PredictiveScalingMetricSpecification)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", predictivescalingmetricspecification_1.PredictiveScalingMetricSpecification)
     ], LoadForecast.prototype, "metricSpecification", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], LoadForecast.prototype, "timestamps", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], LoadForecast.prototype, "values", void 0);
     return LoadForecast;
-}(SpeakeasyBase));
-export { LoadForecast };
+}(utils_1.SpeakeasyBase));
+exports.LoadForecast = LoadForecast;

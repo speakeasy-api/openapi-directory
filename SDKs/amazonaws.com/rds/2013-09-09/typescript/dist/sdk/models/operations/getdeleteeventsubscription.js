@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteEventSubscriptionActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteEventSubscriptionResponse = exports.GetDeleteEventSubscriptionRequest = exports.GetDeleteEventSubscriptionHeaders = exports.GetDeleteEventSubscriptionQueryParams = exports.GetDeleteEventSubscriptionVersionEnum = exports.GetDeleteEventSubscriptionActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteEventSubscriptionActionEnum;
 (function (GetDeleteEventSubscriptionActionEnum) {
     GetDeleteEventSubscriptionActionEnum["DeleteEventSubscription"] = "DeleteEventSubscription";
-})(GetDeleteEventSubscriptionActionEnum || (GetDeleteEventSubscriptionActionEnum = {}));
-export var GetDeleteEventSubscriptionVersionEnum;
+})(GetDeleteEventSubscriptionActionEnum = exports.GetDeleteEventSubscriptionActionEnum || (exports.GetDeleteEventSubscriptionActionEnum = {}));
+var GetDeleteEventSubscriptionVersionEnum;
 (function (GetDeleteEventSubscriptionVersionEnum) {
     GetDeleteEventSubscriptionVersionEnum["TwoThousandAndThirteen0909"] = "2013-09-09";
-})(GetDeleteEventSubscriptionVersionEnum || (GetDeleteEventSubscriptionVersionEnum = {}));
+})(GetDeleteEventSubscriptionVersionEnum = exports.GetDeleteEventSubscriptionVersionEnum || (exports.GetDeleteEventSubscriptionVersionEnum = {}));
 var GetDeleteEventSubscriptionQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteEventSubscriptionQueryParams, _super);
     function GetDeleteEventSubscriptionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteEventSubscriptionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SubscriptionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SubscriptionName" }),
         __metadata("design:type", String)
     ], GetDeleteEventSubscriptionQueryParams.prototype, "subscriptionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteEventSubscriptionQueryParams.prototype, "version", void 0);
     return GetDeleteEventSubscriptionQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteEventSubscriptionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteEventSubscriptionQueryParams = GetDeleteEventSubscriptionQueryParams;
 var GetDeleteEventSubscriptionHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteEventSubscriptionHeaders, _super);
     function GetDeleteEventSubscriptionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteEventSubscriptionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteEventSubscriptionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteEventSubscriptionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteEventSubscriptionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteEventSubscriptionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteEventSubscriptionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteEventSubscriptionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteEventSubscriptionHeaders;
-}(SpeakeasyBase));
-export { GetDeleteEventSubscriptionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteEventSubscriptionHeaders = GetDeleteEventSubscriptionHeaders;
 var GetDeleteEventSubscriptionRequest = /** @class */ (function (_super) {
     __extends(GetDeleteEventSubscriptionRequest, _super);
     function GetDeleteEventSubscriptionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteEventSubscriptionQueryParams)
     ], GetDeleteEventSubscriptionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteEventSubscriptionHeaders)
     ], GetDeleteEventSubscriptionRequest.prototype, "headers", void 0);
     return GetDeleteEventSubscriptionRequest;
-}(SpeakeasyBase));
-export { GetDeleteEventSubscriptionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteEventSubscriptionRequest = GetDeleteEventSubscriptionRequest;
 var GetDeleteEventSubscriptionResponse = /** @class */ (function (_super) {
     __extends(GetDeleteEventSubscriptionResponse, _super);
     function GetDeleteEventSubscriptionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteEventSubscriptionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteEventSubscriptionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteEventSubscriptionResponse.prototype, "statusCode", void 0);
     return GetDeleteEventSubscriptionResponse;
-}(SpeakeasyBase));
-export { GetDeleteEventSubscriptionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteEventSubscriptionResponse = GetDeleteEventSubscriptionResponse;

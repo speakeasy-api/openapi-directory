@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActivityType } from "./activitytype";
-import { TaskList } from "./tasklist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduleActivityTaskDecisionAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
+var activitytype_1 = require("./activitytype");
+var tasklist_1 = require("./tasklist");
 // ScheduleActivityTaskDecisionAttributes
 /**
  * <p>Provides the details of the <code>ScheduleActivityTask</code> decision.</p> <p> <b>Access Control</b> </p> <p>You can use IAM policies to control this decision's access to Amazon SWF resources as follows:</p> <ul> <li> <p>Use a <code>Resource</code> element with the domain name to limit the action to only specified domains.</p> </li> <li> <p>Use an <code>Action</code> element to allow or deny permission to call this action.</p> </li> <li> <p>Constrain the following parameters by using a <code>Condition</code> element with the appropriate keys.</p> <ul> <li> <p> <code>activityType.name</code> – String constraint. The key is <code>swf:activityType.name</code>.</p> </li> <li> <p> <code>activityType.version</code> – String constraint. The key is <code>swf:activityType.version</code>.</p> </li> <li> <p> <code>taskList</code> – String constraint. The key is <code>swf:taskList.name</code>.</p> </li> </ul> </li> </ul> <p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
@@ -35,45 +38,45 @@ var ScheduleActivityTaskDecisionAttributes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activityId" }),
         __metadata("design:type", String)
     ], ScheduleActivityTaskDecisionAttributes.prototype, "activityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activityType" }),
-        __metadata("design:type", ActivityType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activityType" }),
+        __metadata("design:type", activitytype_1.ActivityType)
     ], ScheduleActivityTaskDecisionAttributes.prototype, "activityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=control" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=control" }),
         __metadata("design:type", String)
     ], ScheduleActivityTaskDecisionAttributes.prototype, "control", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=heartbeatTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=heartbeatTimeout" }),
         __metadata("design:type", String)
     ], ScheduleActivityTaskDecisionAttributes.prototype, "heartbeatTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=input" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=input" }),
         __metadata("design:type", String)
     ], ScheduleActivityTaskDecisionAttributes.prototype, "input", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduleToCloseTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduleToCloseTimeout" }),
         __metadata("design:type", String)
     ], ScheduleActivityTaskDecisionAttributes.prototype, "scheduleToCloseTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduleToStartTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduleToStartTimeout" }),
         __metadata("design:type", String)
     ], ScheduleActivityTaskDecisionAttributes.prototype, "scheduleToStartTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startToCloseTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startToCloseTimeout" }),
         __metadata("design:type", String)
     ], ScheduleActivityTaskDecisionAttributes.prototype, "startToCloseTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskList" }),
-        __metadata("design:type", TaskList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskList" }),
+        __metadata("design:type", tasklist_1.TaskList)
     ], ScheduleActivityTaskDecisionAttributes.prototype, "taskList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskPriority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskPriority" }),
         __metadata("design:type", String)
     ], ScheduleActivityTaskDecisionAttributes.prototype, "taskPriority", void 0);
     return ScheduleActivityTaskDecisionAttributes;
-}(SpeakeasyBase));
-export { ScheduleActivityTaskDecisionAttributes };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleActivityTaskDecisionAttributes = ScheduleActivityTaskDecisionAttributes;

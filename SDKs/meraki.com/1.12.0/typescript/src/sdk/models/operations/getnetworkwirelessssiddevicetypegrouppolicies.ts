@@ -25,5 +25,5 @@ export class GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse extends Speak
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessSsidDeviceTypeGroupPolicies200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessSsidDeviceTypeGroupPolicies200ApplicationJSONObject?: Record<string, any>;
 }

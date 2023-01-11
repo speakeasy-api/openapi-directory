@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResponseInfo } from "./responseinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MatrixResponse = exports.MatrixResponseHints = void 0;
+var utils_1 = require("../../../internal/utils");
+var responseinfo_1 = require("./responseinfo");
 var MatrixResponseHints = /** @class */ (function (_super) {
     __extends(MatrixResponseHints, _super);
     function MatrixResponseHints() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details" }),
         __metadata("design:type", String)
     ], MatrixResponseHints.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invalid_from_points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invalid_from_points" }),
         __metadata("design:type", Array)
     ], MatrixResponseHints.prototype, "invalidFromPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invalid_to_points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invalid_to_points" }),
         __metadata("design:type", Array)
     ], MatrixResponseHints.prototype, "invalidToPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], MatrixResponseHints.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=point_pairs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=point_pairs" }),
         __metadata("design:type", Array)
     ], MatrixResponseHints.prototype, "pointPairs", void 0);
     return MatrixResponseHints;
-}(SpeakeasyBase));
-export { MatrixResponseHints };
+}(utils_1.SpeakeasyBase));
+exports.MatrixResponseHints = MatrixResponseHints;
 var MatrixResponse = /** @class */ (function (_super) {
     __extends(MatrixResponse, _super);
     function MatrixResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distances" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distances" }),
         __metadata("design:type", Array)
     ], MatrixResponse.prototype, "distances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hints", elemType: MatrixResponseHints }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hints", elemType: MatrixResponseHints }),
         __metadata("design:type", Array)
     ], MatrixResponse.prototype, "hints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=info" }),
-        __metadata("design:type", ResponseInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=info" }),
+        __metadata("design:type", responseinfo_1.ResponseInfo)
     ], MatrixResponse.prototype, "info", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=times" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=times" }),
         __metadata("design:type", Array)
     ], MatrixResponse.prototype, "times", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weights" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weights" }),
         __metadata("design:type", Array)
     ], MatrixResponse.prototype, "weights", void 0);
     return MatrixResponse;
-}(SpeakeasyBase));
-export { MatrixResponse };
+}(utils_1.SpeakeasyBase));
+exports.MatrixResponse = MatrixResponse;

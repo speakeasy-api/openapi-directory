@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SasPortalPolicy } from "./sasportalpolicy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SasPortalSetPolicyRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var sasportalpolicy_1 = require("./sasportalpolicy");
 // SasPortalSetPolicyRequest
 /**
  * Request message for `SetPolicy` method.
@@ -34,17 +37,17 @@ var SasPortalSetPolicyRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disableNotification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disableNotification" }),
         __metadata("design:type", Boolean)
     ], SasPortalSetPolicyRequest.prototype, "disableNotification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policy" }),
-        __metadata("design:type", SasPortalPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policy" }),
+        __metadata("design:type", sasportalpolicy_1.SasPortalPolicy)
     ], SasPortalSetPolicyRequest.prototype, "policy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
         __metadata("design:type", String)
     ], SasPortalSetPolicyRequest.prototype, "resource", void 0);
     return SasPortalSetPolicyRequest;
-}(SpeakeasyBase));
-export { SasPortalSetPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.SasPortalSetPolicyRequest = SasPortalSetPolicyRequest;

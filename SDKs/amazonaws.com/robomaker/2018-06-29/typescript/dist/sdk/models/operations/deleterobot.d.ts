@@ -17,7 +17,7 @@ export declare class DeleteRobotRequest extends SpeakeasyBase {
 }
 export declare class DeleteRobotResponse extends SpeakeasyBase {
     contentType: string;
-    deleteRobotResponse?: Map<string, any>;
+    deleteRobotResponse?: Record<string, any>;
     internalServerException?: any;
     invalidParameterException?: any;
     statusCode: number;

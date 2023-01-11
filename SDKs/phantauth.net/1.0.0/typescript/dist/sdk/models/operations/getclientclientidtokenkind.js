@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,54 +23,56 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetClientClientIdTokenKindKindEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetClientClientIdTokenKindResponse = exports.GetClientClientIdTokenKindRequest = exports.GetClientClientIdTokenKindPathParams = exports.GetClientClientIdTokenKindKindEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetClientClientIdTokenKindKindEnum;
 (function (GetClientClientIdTokenKindKindEnum) {
     GetClientClientIdTokenKindKindEnum["Registration"] = "'registration'";
     GetClientClientIdTokenKindKindEnum["Selfie"] = "'selfie'";
     GetClientClientIdTokenKindKindEnum["Plain"] = "'plain'";
-})(GetClientClientIdTokenKindKindEnum || (GetClientClientIdTokenKindKindEnum = {}));
+})(GetClientClientIdTokenKindKindEnum = exports.GetClientClientIdTokenKindKindEnum || (exports.GetClientClientIdTokenKindKindEnum = {}));
 var GetClientClientIdTokenKindPathParams = /** @class */ (function (_super) {
     __extends(GetClientClientIdTokenKindPathParams, _super);
     function GetClientClientIdTokenKindPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=client_id" }),
         __metadata("design:type", String)
     ], GetClientClientIdTokenKindPathParams.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=kind" }),
         __metadata("design:type", String)
     ], GetClientClientIdTokenKindPathParams.prototype, "kind", void 0);
     return GetClientClientIdTokenKindPathParams;
-}(SpeakeasyBase));
-export { GetClientClientIdTokenKindPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetClientClientIdTokenKindPathParams = GetClientClientIdTokenKindPathParams;
 var GetClientClientIdTokenKindRequest = /** @class */ (function (_super) {
     __extends(GetClientClientIdTokenKindRequest, _super);
     function GetClientClientIdTokenKindRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetClientClientIdTokenKindPathParams)
     ], GetClientClientIdTokenKindRequest.prototype, "pathParams", void 0);
     return GetClientClientIdTokenKindRequest;
-}(SpeakeasyBase));
-export { GetClientClientIdTokenKindRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetClientClientIdTokenKindRequest = GetClientClientIdTokenKindRequest;
 var GetClientClientIdTokenKindResponse = /** @class */ (function (_super) {
     __extends(GetClientClientIdTokenKindResponse, _super);
     function GetClientClientIdTokenKindResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetClientClientIdTokenKindResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetClientClientIdTokenKindResponse.prototype, "statusCode", void 0);
     return GetClientClientIdTokenKindResponse;
-}(SpeakeasyBase));
-export { GetClientClientIdTokenKindResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetClientClientIdTokenKindResponse = GetClientClientIdTokenKindResponse;

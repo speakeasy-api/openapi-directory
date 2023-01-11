@@ -1,0 +1,184 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTargetsResponse = exports.GetTargetsRequest = exports.GetTargets500ApplicationJson = exports.GetTargets404ApplicationJson = exports.GetTargets401ApplicationJson = exports.GetTargets200ApplicationJson = exports.GetTargetsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var GetTargetsQueryParams = /** @class */ (function (_super) {
+    __extends(GetTargetsQueryParams, _super);
+    function GetTargetsQueryParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=length" }),
+        __metadata("design:type", Number)
+    ], GetTargetsQueryParams.prototype, "length", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ordering" }),
+        __metadata("design:type", String)
+    ], GetTargetsQueryParams.prototype, "ordering", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
+        __metadata("design:type", Number)
+    ], GetTargetsQueryParams.prototype, "page", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search" }),
+        __metadata("design:type", String)
+    ], GetTargetsQueryParams.prototype, "search", void 0);
+    return GetTargetsQueryParams;
+}(utils_1.SpeakeasyBase));
+exports.GetTargetsQueryParams = GetTargetsQueryParams;
+var GetTargets200ApplicationJson = /** @class */ (function (_super) {
+    __extends(GetTargets200ApplicationJson, _super);
+    function GetTargets200ApplicationJson() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=length" }),
+        __metadata("design:type", Number)
+    ], GetTargets200ApplicationJson.prototype, "length", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
+        __metadata("design:type", Number)
+    ], GetTargets200ApplicationJson.prototype, "page", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page_total" }),
+        __metadata("design:type", Number)
+    ], GetTargets200ApplicationJson.prototype, "pageTotal", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination_count" }),
+        __metadata("design:type", Number)
+    ], GetTargets200ApplicationJson.prototype, "paginationCount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: shared.Target }),
+        __metadata("design:type", Array)
+    ], GetTargets200ApplicationJson.prototype, "results", void 0);
+    return GetTargets200ApplicationJson;
+}(utils_1.SpeakeasyBase));
+exports.GetTargets200ApplicationJson = GetTargets200ApplicationJson;
+var GetTargets401ApplicationJson = /** @class */ (function (_super) {
+    __extends(GetTargets401ApplicationJson, _super);
+    function GetTargets401ApplicationJson() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
+        __metadata("design:type", String)
+    ], GetTargets401ApplicationJson.prototype, "detail", void 0);
+    return GetTargets401ApplicationJson;
+}(utils_1.SpeakeasyBase));
+exports.GetTargets401ApplicationJson = GetTargets401ApplicationJson;
+var GetTargets404ApplicationJson = /** @class */ (function (_super) {
+    __extends(GetTargets404ApplicationJson, _super);
+    function GetTargets404ApplicationJson() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
+        __metadata("design:type", String)
+    ], GetTargets404ApplicationJson.prototype, "detail", void 0);
+    return GetTargets404ApplicationJson;
+}(utils_1.SpeakeasyBase));
+exports.GetTargets404ApplicationJson = GetTargets404ApplicationJson;
+var GetTargets500ApplicationJson = /** @class */ (function (_super) {
+    __extends(GetTargets500ApplicationJson, _super);
+    function GetTargets500ApplicationJson() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
+        __metadata("design:type", String)
+    ], GetTargets500ApplicationJson.prototype, "detail", void 0);
+    return GetTargets500ApplicationJson;
+}(utils_1.SpeakeasyBase));
+exports.GetTargets500ApplicationJson = GetTargets500ApplicationJson;
+var GetTargetsRequest = /** @class */ (function (_super) {
+    __extends(GetTargetsRequest, _super);
+    function GetTargetsRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetTargetsQueryParams)
+    ], GetTargetsRequest.prototype, "queryParams", void 0);
+    return GetTargetsRequest;
+}(utils_1.SpeakeasyBase));
+exports.GetTargetsRequest = GetTargetsRequest;
+var GetTargetsResponse = /** @class */ (function (_super) {
+    __extends(GetTargetsResponse, _super);
+    function GetTargetsResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], GetTargetsResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], GetTargetsResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetTargets200ApplicationJson)
+    ], GetTargetsResponse.prototype, "getTargets200ApplicationJSONObject", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetTargets401ApplicationJson)
+    ], GetTargetsResponse.prototype, "getTargets401ApplicationJSONObject", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetTargets404ApplicationJson)
+    ], GetTargetsResponse.prototype, "getTargets404ApplicationJSONObject", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetTargets500ApplicationJson)
+    ], GetTargetsResponse.prototype, "getTargets500ApplicationJSONObject", void 0);
+    return GetTargetsResponse;
+}(utils_1.SpeakeasyBase));
+exports.GetTargetsResponse = GetTargetsResponse;

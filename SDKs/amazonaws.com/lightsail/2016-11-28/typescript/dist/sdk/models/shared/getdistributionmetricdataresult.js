@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MetricDatapoint } from "./metricdatapoint";
-import { DistributionMetricNameEnum } from "./distributionmetricnameenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDistributionMetricDataResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var metricdatapoint_1 = require("./metricdatapoint");
+var distributionmetricnameenum_1 = require("./distributionmetricnameenum");
 var GetDistributionMetricDataResult = /** @class */ (function (_super) {
     __extends(GetDistributionMetricDataResult, _super);
     function GetDistributionMetricDataResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricData", elemType: MetricDatapoint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricData", elemType: metricdatapoint_1.MetricDatapoint }),
         __metadata("design:type", Array)
     ], GetDistributionMetricDataResult.prototype, "metricData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricName" }),
         __metadata("design:type", String)
     ], GetDistributionMetricDataResult.prototype, "metricName", void 0);
     return GetDistributionMetricDataResult;
-}(SpeakeasyBase));
-export { GetDistributionMetricDataResult };
+}(utils_1.SpeakeasyBase));
+exports.GetDistributionMetricDataResult = GetDistributionMetricDataResult;

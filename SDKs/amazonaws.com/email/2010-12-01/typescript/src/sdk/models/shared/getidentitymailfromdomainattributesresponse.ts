@@ -9,5 +9,5 @@ import { IdentityMailFromDomainAttributes } from "./identitymailfromdomainattrib
 **/
 export class GetIdentityMailFromDomainAttributesResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ elemType: IdentityMailFromDomainAttributes })
-  mailFromDomainAttributes: Map<string, IdentityMailFromDomainAttributes>;
+  mailFromDomainAttributes: Record<string, IdentityMailFromDomainAttributes>;
 }

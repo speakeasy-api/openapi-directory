@@ -62,7 +62,7 @@ export class RealtimebiddingBiddersBiddingFunctionsActivateRequest extends Speak
   queryParams: RealtimebiddingBiddersBiddingFunctionsActivateQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: RealtimebiddingBiddersBiddingFunctionsActivateSecurity;

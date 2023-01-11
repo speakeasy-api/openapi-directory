@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GeneratedPolicyResult } from "./generatedpolicyresult";
-import { JobDetails } from "./jobdetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGeneratedPolicyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var generatedpolicyresult_1 = require("./generatedpolicyresult");
+var jobdetails_1 = require("./jobdetails");
 var GetGeneratedPolicyResponse = /** @class */ (function (_super) {
     __extends(GetGeneratedPolicyResponse, _super);
     function GetGeneratedPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=generatedPolicyResult" }),
-        __metadata("design:type", GeneratedPolicyResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=generatedPolicyResult" }),
+        __metadata("design:type", generatedpolicyresult_1.GeneratedPolicyResult)
     ], GetGeneratedPolicyResponse.prototype, "generatedPolicyResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobDetails" }),
-        __metadata("design:type", JobDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobDetails" }),
+        __metadata("design:type", jobdetails_1.JobDetails)
     ], GetGeneratedPolicyResponse.prototype, "jobDetails", void 0);
     return GetGeneratedPolicyResponse;
-}(SpeakeasyBase));
-export { GetGeneratedPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGeneratedPolicyResponse = GetGeneratedPolicyResponse;

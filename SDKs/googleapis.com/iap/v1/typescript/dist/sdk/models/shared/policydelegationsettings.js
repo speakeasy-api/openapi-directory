@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PolicyName } from "./policyname";
-import { Resource } from "./resource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PolicyDelegationSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var policyname_1 = require("./policyname");
+var resource_1 = require("./resource");
 // PolicyDelegationSettings
 /**
  * PolicyDelegationConfig allows google-internal teams to use IAP for apps hosted in a tenant project. Using these settings, the app can delegate permission check to happen against the linked customer project. This is only ever supposed to be used by google internal teams, hence the restriction on the proto.
@@ -35,21 +38,21 @@ var PolicyDelegationSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iamPermission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iamPermission" }),
         __metadata("design:type", String)
     ], PolicyDelegationSettings.prototype, "iamPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iamServiceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iamServiceName" }),
         __metadata("design:type", String)
     ], PolicyDelegationSettings.prototype, "iamServiceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policyName" }),
-        __metadata("design:type", PolicyName)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policyName" }),
+        __metadata("design:type", policyname_1.PolicyName)
     ], PolicyDelegationSettings.prototype, "policyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
-        __metadata("design:type", Resource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
+        __metadata("design:type", resource_1.Resource)
     ], PolicyDelegationSettings.prototype, "resource", void 0);
     return PolicyDelegationSettings;
-}(SpeakeasyBase));
-export { PolicyDelegationSettings };
+}(utils_1.SpeakeasyBase));
+exports.PolicyDelegationSettings = PolicyDelegationSettings;

@@ -7,7 +7,7 @@ export class CheckTokenUsingPost200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -19,7 +19,7 @@ export class CheckTokenUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -31,7 +31,7 @@ export class CheckTokenUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class CheckTokenUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,14 +58,14 @@ export class CheckTokenUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  checkTokenUsingPost200ApplicationJsonObject?: CheckTokenUsingPost200ApplicationJson;
+  checkTokenUsingPOST200ApplicationJSONObject?: CheckTokenUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  checkTokenUsingPost400ApplicationJsonObject?: CheckTokenUsingPost400ApplicationJson;
+  checkTokenUsingPOST400ApplicationJSONObject?: CheckTokenUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  checkTokenUsingPost401ApplicationJsonObject?: CheckTokenUsingPost401ApplicationJson;
+  checkTokenUsingPOST401ApplicationJSONObject?: CheckTokenUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  checkTokenUsingPost500ApplicationJsonObject?: CheckTokenUsingPost500ApplicationJson;
+  checkTokenUsingPOST500ApplicationJSONObject?: CheckTokenUsingPost500ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ScheduledTransactionDetail } from "./scheduledtransactiondetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduledTransactionsResponse = exports.ScheduledTransactionsResponseData = void 0;
+var utils_1 = require("../../../internal/utils");
+var scheduledtransactiondetail_1 = require("./scheduledtransactiondetail");
 var ScheduledTransactionsResponseData = /** @class */ (function (_super) {
     __extends(ScheduledTransactionsResponseData, _super);
     function ScheduledTransactionsResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduled_transactions", elemType: ScheduledTransactionDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduled_transactions", elemType: scheduledtransactiondetail_1.ScheduledTransactionDetail }),
         __metadata("design:type", Array)
     ], ScheduledTransactionsResponseData.prototype, "scheduledTransactions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server_knowledge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server_knowledge" }),
         __metadata("design:type", Number)
     ], ScheduledTransactionsResponseData.prototype, "serverKnowledge", void 0);
     return ScheduledTransactionsResponseData;
-}(SpeakeasyBase));
-export { ScheduledTransactionsResponseData };
+}(utils_1.SpeakeasyBase));
+exports.ScheduledTransactionsResponseData = ScheduledTransactionsResponseData;
 var ScheduledTransactionsResponse = /** @class */ (function (_super) {
     __extends(ScheduledTransactionsResponse, _super);
     function ScheduledTransactionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", ScheduledTransactionsResponseData)
     ], ScheduledTransactionsResponse.prototype, "data", void 0);
     return ScheduledTransactionsResponse;
-}(SpeakeasyBase));
-export { ScheduledTransactionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ScheduledTransactionsResponse = ScheduledTransactionsResponse;

@@ -41,8 +41,8 @@ export class GetRepositoriesWorkspaceRepoSlugResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  repository?: Map<string, any>;
+  repository?: Record<string, any>;
 }

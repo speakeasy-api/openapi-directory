@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,43 +23,45 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DistrictRanking = exports.DistrictRankingEventPoints = void 0;
+var utils_1 = require("../../../internal/utils");
 var DistrictRankingEventPoints = /** @class */ (function (_super) {
     __extends(DistrictRankingEventPoints, _super);
     function DistrictRankingEventPoints() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alliance_points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alliance_points" }),
         __metadata("design:type", Number)
     ], DistrictRankingEventPoints.prototype, "alliancePoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=award_points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=award_points" }),
         __metadata("design:type", Number)
     ], DistrictRankingEventPoints.prototype, "awardPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=district_cmp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=district_cmp" }),
         __metadata("design:type", Boolean)
     ], DistrictRankingEventPoints.prototype, "districtCmp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=elim_points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=elim_points" }),
         __metadata("design:type", Number)
     ], DistrictRankingEventPoints.prototype, "elimPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event_key" }),
         __metadata("design:type", String)
     ], DistrictRankingEventPoints.prototype, "eventKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=qual_points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=qual_points" }),
         __metadata("design:type", Number)
     ], DistrictRankingEventPoints.prototype, "qualPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], DistrictRankingEventPoints.prototype, "total", void 0);
     return DistrictRankingEventPoints;
-}(SpeakeasyBase));
-export { DistrictRankingEventPoints };
+}(utils_1.SpeakeasyBase));
+exports.DistrictRankingEventPoints = DistrictRankingEventPoints;
 // DistrictRanking
 /**
  * Rank of a team in a district.
@@ -69,25 +72,25 @@ var DistrictRanking = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event_points", elemType: DistrictRankingEventPoints }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event_points", elemType: DistrictRankingEventPoints }),
         __metadata("design:type", Array)
     ], DistrictRanking.prototype, "eventPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=point_total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=point_total" }),
         __metadata("design:type", Number)
     ], DistrictRanking.prototype, "pointTotal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rank" }),
         __metadata("design:type", Number)
     ], DistrictRanking.prototype, "rank", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rookie_bonus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rookie_bonus" }),
         __metadata("design:type", Number)
     ], DistrictRanking.prototype, "rookieBonus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team_key" }),
         __metadata("design:type", String)
     ], DistrictRanking.prototype, "teamKey", void 0);
     return DistrictRanking;
-}(SpeakeasyBase));
-export { DistrictRanking };
+}(utils_1.SpeakeasyBase));
+exports.DistrictRanking = DistrictRanking;

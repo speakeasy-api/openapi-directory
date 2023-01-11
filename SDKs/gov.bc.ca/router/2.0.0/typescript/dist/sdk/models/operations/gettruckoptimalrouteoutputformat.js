@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetTruckOptimalRouteOutputFormatOutputFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTruckOptimalRouteOutputFormatResponse = exports.GetTruckOptimalRouteOutputFormatRequest = exports.GetTruckOptimalRouteOutputFormatQueryParams = exports.GetTruckOptimalRouteOutputFormatDistanceUnitEnum = exports.GetTruckOptimalRouteOutputFormatCriteriaEnum = exports.GetTruckOptimalRouteOutputFormatPathParams = exports.GetTruckOptimalRouteOutputFormatOutputFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetTruckOptimalRouteOutputFormatOutputFormatEnum;
 (function (GetTruckOptimalRouteOutputFormatOutputFormatEnum) {
     GetTruckOptimalRouteOutputFormatOutputFormatEnum["Json"] = "json";
     GetTruckOptimalRouteOutputFormatOutputFormatEnum["Kml"] = "kml";
     GetTruckOptimalRouteOutputFormatOutputFormatEnum["Html"] = "html";
-})(GetTruckOptimalRouteOutputFormatOutputFormatEnum || (GetTruckOptimalRouteOutputFormatOutputFormatEnum = {}));
+})(GetTruckOptimalRouteOutputFormatOutputFormatEnum = exports.GetTruckOptimalRouteOutputFormatOutputFormatEnum || (exports.GetTruckOptimalRouteOutputFormatOutputFormatEnum = {}));
 var GetTruckOptimalRouteOutputFormatPathParams = /** @class */ (function (_super) {
     __extends(GetTruckOptimalRouteOutputFormatPathParams, _super);
     function GetTruckOptimalRouteOutputFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
         __metadata("design:type", String)
     ], GetTruckOptimalRouteOutputFormatPathParams.prototype, "outputFormat", void 0);
     return GetTruckOptimalRouteOutputFormatPathParams;
-}(SpeakeasyBase));
-export { GetTruckOptimalRouteOutputFormatPathParams };
-export var GetTruckOptimalRouteOutputFormatCriteriaEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetTruckOptimalRouteOutputFormatPathParams = GetTruckOptimalRouteOutputFormatPathParams;
+var GetTruckOptimalRouteOutputFormatCriteriaEnum;
 (function (GetTruckOptimalRouteOutputFormatCriteriaEnum) {
     GetTruckOptimalRouteOutputFormatCriteriaEnum["Shortest"] = "shortest";
     GetTruckOptimalRouteOutputFormatCriteriaEnum["Fastest"] = "fastest";
-})(GetTruckOptimalRouteOutputFormatCriteriaEnum || (GetTruckOptimalRouteOutputFormatCriteriaEnum = {}));
-export var GetTruckOptimalRouteOutputFormatDistanceUnitEnum;
+})(GetTruckOptimalRouteOutputFormatCriteriaEnum = exports.GetTruckOptimalRouteOutputFormatCriteriaEnum || (exports.GetTruckOptimalRouteOutputFormatCriteriaEnum = {}));
+var GetTruckOptimalRouteOutputFormatDistanceUnitEnum;
 (function (GetTruckOptimalRouteOutputFormatDistanceUnitEnum) {
     GetTruckOptimalRouteOutputFormatDistanceUnitEnum["Km"] = "km";
     GetTruckOptimalRouteOutputFormatDistanceUnitEnum["Mi"] = "mi";
-})(GetTruckOptimalRouteOutputFormatDistanceUnitEnum || (GetTruckOptimalRouteOutputFormatDistanceUnitEnum = {}));
+})(GetTruckOptimalRouteOutputFormatDistanceUnitEnum = exports.GetTruckOptimalRouteOutputFormatDistanceUnitEnum || (exports.GetTruckOptimalRouteOutputFormatDistanceUnitEnum = {}));
 var GetTruckOptimalRouteOutputFormatQueryParams = /** @class */ (function (_super) {
     __extends(GetTruckOptimalRouteOutputFormatQueryParams, _super);
     function GetTruckOptimalRouteOutputFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=correctSide" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=correctSide" }),
         __metadata("design:type", Boolean)
     ], GetTruckOptimalRouteOutputFormatQueryParams.prototype, "correctSide", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=criteria" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=criteria" }),
         __metadata("design:type", String)
     ], GetTruckOptimalRouteOutputFormatQueryParams.prototype, "criteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=departure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=departure" }),
         __metadata("design:type", Date)
     ], GetTruckOptimalRouteOutputFormatQueryParams.prototype, "departure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=disable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=disable" }),
         __metadata("design:type", String)
     ], GetTruckOptimalRouteOutputFormatQueryParams.prototype, "disable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=distanceUnit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=distanceUnit" }),
         __metadata("design:type", String)
     ], GetTruckOptimalRouteOutputFormatQueryParams.prototype, "distanceUnit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
         __metadata("design:type", Number)
-    ], GetTruckOptimalRouteOutputFormatQueryParams.prototype, "outputSrs", void 0);
+    ], GetTruckOptimalRouteOutputFormatQueryParams.prototype, "outputSRS", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=points" }),
         __metadata("design:type", String)
     ], GetTruckOptimalRouteOutputFormatQueryParams.prototype, "points", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=roundTrip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=roundTrip" }),
         __metadata("design:type", Boolean)
     ], GetTruckOptimalRouteOutputFormatQueryParams.prototype, "roundTrip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=routeDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=routeDescription" }),
         __metadata("design:type", String)
     ], GetTruckOptimalRouteOutputFormatQueryParams.prototype, "routeDescription", void 0);
     return GetTruckOptimalRouteOutputFormatQueryParams;
-}(SpeakeasyBase));
-export { GetTruckOptimalRouteOutputFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTruckOptimalRouteOutputFormatQueryParams = GetTruckOptimalRouteOutputFormatQueryParams;
 var GetTruckOptimalRouteOutputFormatRequest = /** @class */ (function (_super) {
     __extends(GetTruckOptimalRouteOutputFormatRequest, _super);
     function GetTruckOptimalRouteOutputFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTruckOptimalRouteOutputFormatPathParams)
     ], GetTruckOptimalRouteOutputFormatRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTruckOptimalRouteOutputFormatQueryParams)
     ], GetTruckOptimalRouteOutputFormatRequest.prototype, "queryParams", void 0);
     return GetTruckOptimalRouteOutputFormatRequest;
-}(SpeakeasyBase));
-export { GetTruckOptimalRouteOutputFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTruckOptimalRouteOutputFormatRequest = GetTruckOptimalRouteOutputFormatRequest;
 var GetTruckOptimalRouteOutputFormatResponse = /** @class */ (function (_super) {
     __extends(GetTruckOptimalRouteOutputFormatResponse, _super);
     function GetTruckOptimalRouteOutputFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTruckOptimalRouteOutputFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTruckOptimalRouteOutputFormatResponse.prototype, "statusCode", void 0);
     return GetTruckOptimalRouteOutputFormatResponse;
-}(SpeakeasyBase));
-export { GetTruckOptimalRouteOutputFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTruckOptimalRouteOutputFormatResponse = GetTruckOptimalRouteOutputFormatResponse;

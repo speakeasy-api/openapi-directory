@@ -34,5 +34,5 @@ export declare class CreateApiVersionRequest extends SpeakeasyBase {
 export declare class CreateApiVersionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createApiVersion200ApplicationJsonObject?: CreateApiVersion200ApplicationJson;
+    createApiVersion200ApplicationJSONObject?: CreateApiVersion200ApplicationJson;
 }

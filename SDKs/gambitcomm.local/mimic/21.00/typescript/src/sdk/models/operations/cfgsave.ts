@@ -10,5 +10,5 @@ export class CfgSaveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cfgSave200ApplicationJsonObject?: Map<string, number>;
+  cfgSave200ApplicationJSONObject?: Record<string, number>;
 }

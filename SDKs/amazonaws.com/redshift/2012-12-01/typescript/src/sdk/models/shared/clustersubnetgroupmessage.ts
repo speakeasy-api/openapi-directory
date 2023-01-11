@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClusterSubnetGroup } from "./clustersubnetgroup";
+import { ClusterSubnetGroups } from "./clustersubnetgroups";
 
 
 
@@ -8,8 +8,8 @@ import { ClusterSubnetGroup } from "./clustersubnetgroup";
  * Contains the output from the <a>DescribeClusterSubnetGroups</a> action. 
 **/
 export class ClusterSubnetGroupMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: ClusterSubnetGroup })
-  clusterSubnetGroups?: ClusterSubnetGroup[];
+  @SpeakeasyMetadata({ elemType: ClusterSubnetGroups })
+  clusterSubnetGroups?: ClusterSubnetGroups[];
 
   @SpeakeasyMetadata()
   marker?: string;

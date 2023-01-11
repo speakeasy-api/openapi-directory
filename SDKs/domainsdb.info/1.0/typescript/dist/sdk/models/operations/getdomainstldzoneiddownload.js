@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDomainsTldZoneIdDownloadResponse = exports.GetDomainsTldZoneIdDownloadRequest = exports.GetDomainsTldZoneIdDownloadQueryParams = exports.GetDomainsTldZoneIdDownloadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDomainsTldZoneIdDownloadPathParams = /** @class */ (function (_super) {
     __extends(GetDomainsTldZoneIdDownloadPathParams, _super);
     function GetDomainsTldZoneIdDownloadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=zone_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=zone_id" }),
         __metadata("design:type", String)
     ], GetDomainsTldZoneIdDownloadPathParams.prototype, "zoneId", void 0);
     return GetDomainsTldZoneIdDownloadPathParams;
-}(SpeakeasyBase));
-export { GetDomainsTldZoneIdDownloadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainsTldZoneIdDownloadPathParams = GetDomainsTldZoneIdDownloadPathParams;
 var GetDomainsTldZoneIdDownloadQueryParams = /** @class */ (function (_super) {
     __extends(GetDomainsTldZoneIdDownloadQueryParams, _super);
     function GetDomainsTldZoneIdDownloadQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api_key" }),
         __metadata("design:type", String)
     ], GetDomainsTldZoneIdDownloadQueryParams.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=date" }),
         __metadata("design:type", String)
     ], GetDomainsTldZoneIdDownloadQueryParams.prototype, "date", void 0);
     return GetDomainsTldZoneIdDownloadQueryParams;
-}(SpeakeasyBase));
-export { GetDomainsTldZoneIdDownloadQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainsTldZoneIdDownloadQueryParams = GetDomainsTldZoneIdDownloadQueryParams;
 var GetDomainsTldZoneIdDownloadRequest = /** @class */ (function (_super) {
     __extends(GetDomainsTldZoneIdDownloadRequest, _super);
     function GetDomainsTldZoneIdDownloadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDomainsTldZoneIdDownloadPathParams)
     ], GetDomainsTldZoneIdDownloadRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDomainsTldZoneIdDownloadQueryParams)
     ], GetDomainsTldZoneIdDownloadRequest.prototype, "queryParams", void 0);
     return GetDomainsTldZoneIdDownloadRequest;
-}(SpeakeasyBase));
-export { GetDomainsTldZoneIdDownloadRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainsTldZoneIdDownloadRequest = GetDomainsTldZoneIdDownloadRequest;
 var GetDomainsTldZoneIdDownloadResponse = /** @class */ (function (_super) {
     __extends(GetDomainsTldZoneIdDownloadResponse, _super);
     function GetDomainsTldZoneIdDownloadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDomainsTldZoneIdDownloadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDomainsTldZoneIdDownloadResponse.prototype, "statusCode", void 0);
     return GetDomainsTldZoneIdDownloadResponse;
-}(SpeakeasyBase));
-export { GetDomainsTldZoneIdDownloadResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainsTldZoneIdDownloadResponse = GetDomainsTldZoneIdDownloadResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,90 +14,115 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountUpdateRecoveryResponse = exports.AccountUpdateRecoveryRequest = exports.AccountUpdateRecoverySecurity = exports.AccountUpdateRecoveryRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var AccountUpdateRecoveryRequestBody = /** @class */ (function (_super) {
     __extends(AccountUpdateRecoveryRequestBody, _super);
     function AccountUpdateRecoveryRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], AccountUpdateRecoveryRequestBody.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passwordAgain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passwordAgain" }),
         __metadata("design:type", String)
     ], AccountUpdateRecoveryRequestBody.prototype, "passwordAgain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], AccountUpdateRecoveryRequestBody.prototype, "secret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userId" }),
         __metadata("design:type", String)
     ], AccountUpdateRecoveryRequestBody.prototype, "userId", void 0);
     return AccountUpdateRecoveryRequestBody;
-}(SpeakeasyBase));
-export { AccountUpdateRecoveryRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.AccountUpdateRecoveryRequestBody = AccountUpdateRecoveryRequestBody;
 var AccountUpdateRecoverySecurity = /** @class */ (function (_super) {
     __extends(AccountUpdateRecoverySecurity, _super);
     function AccountUpdateRecoverySecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeJwt)
     ], AccountUpdateRecoverySecurity.prototype, "jwt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeProject)
     ], AccountUpdateRecoverySecurity.prototype, "project", void 0);
     return AccountUpdateRecoverySecurity;
-}(SpeakeasyBase));
-export { AccountUpdateRecoverySecurity };
+}(utils_1.SpeakeasyBase));
+exports.AccountUpdateRecoverySecurity = AccountUpdateRecoverySecurity;
 var AccountUpdateRecoveryRequest = /** @class */ (function (_super) {
     __extends(AccountUpdateRecoveryRequest, _super);
     function AccountUpdateRecoveryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", AccountUpdateRecoveryRequestBody)
     ], AccountUpdateRecoveryRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AccountUpdateRecoverySecurity)
     ], AccountUpdateRecoveryRequest.prototype, "security", void 0);
     return AccountUpdateRecoveryRequest;
-}(SpeakeasyBase));
-export { AccountUpdateRecoveryRequest };
+}(utils_1.SpeakeasyBase));
+exports.AccountUpdateRecoveryRequest = AccountUpdateRecoveryRequest;
 var AccountUpdateRecoveryResponse = /** @class */ (function (_super) {
     __extends(AccountUpdateRecoveryResponse, _super);
     function AccountUpdateRecoveryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AccountUpdateRecoveryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AccountUpdateRecoveryResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Token)
     ], AccountUpdateRecoveryResponse.prototype, "token", void 0);
     return AccountUpdateRecoveryResponse;
-}(SpeakeasyBase));
-export { AccountUpdateRecoveryResponse };
+}(utils_1.SpeakeasyBase));
+exports.AccountUpdateRecoveryResponse = AccountUpdateRecoveryResponse;

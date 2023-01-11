@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MatterPermission } from "./matterpermission";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddMatterPermissionsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var matterpermission_1 = require("./matterpermission");
 // AddMatterPermissionsRequest
 /**
  * Add an account with the permission specified. The role cannot be owner. If an account already has a role in the matter, the existing role is overwritten.
@@ -34,17 +37,17 @@ var AddMatterPermissionsRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ccMe" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ccMe" }),
         __metadata("design:type", Boolean)
     ], AddMatterPermissionsRequest.prototype, "ccMe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matterPermission" }),
-        __metadata("design:type", MatterPermission)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matterPermission" }),
+        __metadata("design:type", matterpermission_1.MatterPermission)
     ], AddMatterPermissionsRequest.prototype, "matterPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sendEmails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sendEmails" }),
         __metadata("design:type", Boolean)
     ], AddMatterPermissionsRequest.prototype, "sendEmails", void 0);
     return AddMatterPermissionsRequest;
-}(SpeakeasyBase));
-export { AddMatterPermissionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.AddMatterPermissionsRequest = AddMatterPermissionsRequest;

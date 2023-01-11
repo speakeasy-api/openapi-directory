@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GamesManagementAchievementsResetRequest, GamesManagementAchievementsResetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,26 +30,26 @@ const req: GamesManagementAchievementsResetRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    achievementId: "harum",
+    achievementId: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "harum",
+    accessToken: "culpa",
     alt: "media",
-    callback: "reprehenderit",
-    fields: "cupiditate",
-    key: "sint",
-    oauthToken: "quibusdam",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "illum",
+    quotaUser: "et",
     uploadType: "nihil",
-    uploadProtocol: "magni",
+    uploadProtocol: "rerum",
   },
 };
 

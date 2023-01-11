@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 var CustomSettings = /** @class */ (function (_super) {
     __extends(CustomSettings, _super);
     function CustomSettings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=css" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=css" }),
         __metadata("design:type", String)
     ], CustomSettings.prototype, "css", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=css_link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=css_link" }),
         __metadata("design:type", String)
     ], CustomSettings.prototype, "cssLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], CustomSettings.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_footer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_footer" }),
         __metadata("design:type", String)
     ], CustomSettings.prototype, "htmlFooter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_nav" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_nav" }),
         __metadata("design:type", String)
     ], CustomSettings.prototype, "htmlNav", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=java_script_link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=java_script_link" }),
         __metadata("design:type", String)
     ], CustomSettings.prototype, "javaScriptLink", void 0);
     return CustomSettings;
-}(SpeakeasyBase));
-export { CustomSettings };
+}(utils_1.SpeakeasyBase));
+exports.CustomSettings = CustomSettings;

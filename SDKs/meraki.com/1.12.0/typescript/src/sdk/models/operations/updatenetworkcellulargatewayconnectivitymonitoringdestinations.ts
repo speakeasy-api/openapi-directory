@@ -43,5 +43,5 @@ export class UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRespo
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkCellularGatewayConnectivityMonitoringDestinations200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkCellularGatewayConnectivityMonitoringDestinations200ApplicationJSONObject?: Record<string, any>;
 }

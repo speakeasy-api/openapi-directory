@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SasPortalFrequencyRange } from "./sasportalfrequencyrange";
-import { SasPortalDpaMoveList } from "./sasportaldpamovelist";
-export var SasPortalDeviceGrantChannelTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SasPortalDeviceGrant = exports.SasPortalDeviceGrantStateEnum = exports.SasPortalDeviceGrantChannelTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var sasportalfrequencyrange_1 = require("./sasportalfrequencyrange");
+var sasportaldpamovelist_1 = require("./sasportaldpamovelist");
+var SasPortalDeviceGrantChannelTypeEnum;
 (function (SasPortalDeviceGrantChannelTypeEnum) {
     SasPortalDeviceGrantChannelTypeEnum["ChannelTypeUnspecified"] = "CHANNEL_TYPE_UNSPECIFIED";
     SasPortalDeviceGrantChannelTypeEnum["ChannelTypeGaa"] = "CHANNEL_TYPE_GAA";
     SasPortalDeviceGrantChannelTypeEnum["ChannelTypePal"] = "CHANNEL_TYPE_PAL";
-})(SasPortalDeviceGrantChannelTypeEnum || (SasPortalDeviceGrantChannelTypeEnum = {}));
-export var SasPortalDeviceGrantStateEnum;
+})(SasPortalDeviceGrantChannelTypeEnum = exports.SasPortalDeviceGrantChannelTypeEnum || (exports.SasPortalDeviceGrantChannelTypeEnum = {}));
+var SasPortalDeviceGrantStateEnum;
 (function (SasPortalDeviceGrantStateEnum) {
     SasPortalDeviceGrantStateEnum["GrantStateUnspecified"] = "GRANT_STATE_UNSPECIFIED";
     SasPortalDeviceGrantStateEnum["GrantStateGranted"] = "GRANT_STATE_GRANTED";
@@ -39,7 +42,7 @@ export var SasPortalDeviceGrantStateEnum;
     SasPortalDeviceGrantStateEnum["GrantStateSuspended"] = "GRANT_STATE_SUSPENDED";
     SasPortalDeviceGrantStateEnum["GrantStateAuthorized"] = "GRANT_STATE_AUTHORIZED";
     SasPortalDeviceGrantStateEnum["GrantStateExpired"] = "GRANT_STATE_EXPIRED";
-})(SasPortalDeviceGrantStateEnum || (SasPortalDeviceGrantStateEnum = {}));
+})(SasPortalDeviceGrantStateEnum = exports.SasPortalDeviceGrantStateEnum || (exports.SasPortalDeviceGrantStateEnum = {}));
 // SasPortalDeviceGrant
 /**
  * Device grant. It is an authorization provided by the Spectrum Access System to a device to transmit using specified operating parameters after a successful heartbeat by the device.
@@ -50,41 +53,41 @@ var SasPortalDeviceGrant = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelType" }),
         __metadata("design:type", String)
     ], SasPortalDeviceGrant.prototype, "channelType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expireTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expireTime" }),
         __metadata("design:type", String)
     ], SasPortalDeviceGrant.prototype, "expireTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequencyRange" }),
-        __metadata("design:type", SasPortalFrequencyRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequencyRange" }),
+        __metadata("design:type", sasportalfrequencyrange_1.SasPortalFrequencyRange)
     ], SasPortalDeviceGrant.prototype, "frequencyRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grantId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grantId" }),
         __metadata("design:type", String)
     ], SasPortalDeviceGrant.prototype, "grantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastHeartbeatTransmitExpireTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastHeartbeatTransmitExpireTime" }),
         __metadata("design:type", String)
     ], SasPortalDeviceGrant.prototype, "lastHeartbeatTransmitExpireTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxEirp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxEirp" }),
         __metadata("design:type", Number)
     ], SasPortalDeviceGrant.prototype, "maxEirp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=moveList", elemType: SasPortalDpaMoveList }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=moveList", elemType: sasportaldpamovelist_1.SasPortalDpaMoveList }),
         __metadata("design:type", Array)
     ], SasPortalDeviceGrant.prototype, "moveList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], SasPortalDeviceGrant.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suspensionReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suspensionReason" }),
         __metadata("design:type", Array)
     ], SasPortalDeviceGrant.prototype, "suspensionReason", void 0);
     return SasPortalDeviceGrant;
-}(SpeakeasyBase));
-export { SasPortalDeviceGrant };
+}(utils_1.SpeakeasyBase));
+exports.SasPortalDeviceGrant = SasPortalDeviceGrant;

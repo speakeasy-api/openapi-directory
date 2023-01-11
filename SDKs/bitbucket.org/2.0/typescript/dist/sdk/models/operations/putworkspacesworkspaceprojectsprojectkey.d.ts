@@ -11,13 +11,13 @@ export declare class PutWorkspacesWorkspaceProjectsProjectKeySecurity extends Sp
 }
 export declare class PutWorkspacesWorkspaceProjectsProjectKeyRequest extends SpeakeasyBase {
     pathParams: PutWorkspacesWorkspaceProjectsProjectKeyPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
     security: PutWorkspacesWorkspaceProjectsProjectKeySecurity;
 }
 export declare class PutWorkspacesWorkspaceProjectsProjectKeyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    error?: Map<string, any>;
-    project?: Map<string, any>;
+    error?: Record<string, any>;
+    project?: Record<string, any>;
 }

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ApigatewayProjectsLocationsApisConfigsCreateRequest, ApigatewayProjectsLocationsApisConfigsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,113 +30,79 @@ const req: ApigatewayProjectsLocationsApisConfigsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "et",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "odit",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    apiConfigId: "repellat",
-    callback: "voluptatum",
-    fields: "consequatur",
-    key: "provident",
-    oauthToken: "laboriosam",
-    prettyPrint: true,
-    quotaUser: "dignissimos",
-    uploadType: "quos",
-    uploadProtocol: "reiciendis",
+    apiConfigId: "consequuntur",
+    callback: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    prettyPrint: false,
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
-    displayName: "omnis",
-    gatewayServiceAccount: "quis",
+    displayName: "debitis",
+    gatewayServiceAccount: "voluptatum",
     grpcServices: [
       {
         fileDescriptorSet: {
-          contents: "velit",
-          path: "in",
+          contents: "ut",
+          path: "dolorem",
         },
         source: [
           {
-            contents: "at",
-            path: "molestiae",
+            contents: "voluptate",
+            path: "iste",
           },
           {
-            contents: "odio",
-            path: "ipsam",
-          },
-        ],
-      },
-      {
-        fileDescriptorSet: {
-          contents: "eos",
-          path: "eos",
-        },
-        source: [
-          {
-            contents: "et",
-            path: "maxime",
-          },
-          {
-            contents: "similique",
-            path: "esse",
-          },
-          {
-            contents: "quo",
-            path: "et",
-          },
-        ],
-      },
-      {
-        fileDescriptorSet: {
-          contents: "a",
-          path: "commodi",
-        },
-        source: [
-          {
-            contents: "qui",
-            path: "et",
-          },
-          {
-            contents: "maxime",
-            path: "beatae",
-          },
-          {
-            contents: "doloremque",
-            path: "omnis",
+            contents: "vitae",
+            path: "totam",
           },
         ],
       },
     ],
     labels: {
-      "asperiores": "nulla",
+      "illum": "debitis",
     },
     managedServiceConfigs: [
       {
-        contents: "velit",
-        path: "et",
+        contents: "odio",
+        path: "dolore",
       },
       {
-        contents: "velit",
-        path: "et",
+        contents: "id",
+        path: "aspernatur",
       },
     ],
     openapiDocuments: [
       {
         document: {
-          contents: "voluptas",
-          path: "ab",
+          contents: "totam",
+          path: "commodi",
         },
       },
       {
         document: {
-          contents: "sed",
-          path: "qui",
+          contents: "quis",
+          path: "est",
+        },
+      },
+      {
+        document: {
+          contents: "aut",
+          path: "odit",
         },
       },
     ],

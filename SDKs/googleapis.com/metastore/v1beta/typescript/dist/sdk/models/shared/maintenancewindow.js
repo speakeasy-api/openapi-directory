@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MaintenanceWindowDayOfWeekEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MaintenanceWindow = exports.MaintenanceWindowDayOfWeekEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MaintenanceWindowDayOfWeekEnum;
 (function (MaintenanceWindowDayOfWeekEnum) {
     MaintenanceWindowDayOfWeekEnum["DayOfWeekUnspecified"] = "DAY_OF_WEEK_UNSPECIFIED";
     MaintenanceWindowDayOfWeekEnum["Monday"] = "MONDAY";
@@ -33,7 +36,7 @@ export var MaintenanceWindowDayOfWeekEnum;
     MaintenanceWindowDayOfWeekEnum["Friday"] = "FRIDAY";
     MaintenanceWindowDayOfWeekEnum["Saturday"] = "SATURDAY";
     MaintenanceWindowDayOfWeekEnum["Sunday"] = "SUNDAY";
-})(MaintenanceWindowDayOfWeekEnum || (MaintenanceWindowDayOfWeekEnum = {}));
+})(MaintenanceWindowDayOfWeekEnum = exports.MaintenanceWindowDayOfWeekEnum || (exports.MaintenanceWindowDayOfWeekEnum = {}));
 // MaintenanceWindow
 /**
  * Maintenance window. This specifies when Dataproc Metastore may perform system maintenance operation to the service.
@@ -44,13 +47,13 @@ var MaintenanceWindow = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dayOfWeek" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dayOfWeek" }),
         __metadata("design:type", String)
     ], MaintenanceWindow.prototype, "dayOfWeek", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hourOfDay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hourOfDay" }),
         __metadata("design:type", Number)
     ], MaintenanceWindow.prototype, "hourOfDay", void 0);
     return MaintenanceWindow;
-}(SpeakeasyBase));
-export { MaintenanceWindow };
+}(utils_1.SpeakeasyBase));
+exports.MaintenanceWindow = MaintenanceWindow;

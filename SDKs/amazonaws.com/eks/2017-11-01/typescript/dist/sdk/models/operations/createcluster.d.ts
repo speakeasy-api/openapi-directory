@@ -39,7 +39,7 @@ export declare class CreateClusterRequestBody extends SpeakeasyBase {
     name: string;
     resourcesVpcConfig: CreateClusterRequestBodyResourcesVpcConfig;
     roleArn: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     version?: string;
 }
 export declare class CreateClusterRequest extends SpeakeasyBase {

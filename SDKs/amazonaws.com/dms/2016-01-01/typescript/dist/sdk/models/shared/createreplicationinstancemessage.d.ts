@@ -10,7 +10,7 @@ export declare class CreateReplicationInstanceMessage extends SpeakeasyBase {
     dnsNameServers?: string;
     engineVersion?: string;
     kmsKeyId?: string;
-    multiAz?: boolean;
+    multiAZ?: boolean;
     preferredMaintenanceWindow?: string;
     publiclyAccessible?: boolean;
     replicationInstanceClass: string;

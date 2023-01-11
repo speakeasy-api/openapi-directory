@@ -25,9 +25,8 @@ export declare class PostProxyRequest extends SpeakeasyBase {
 }
 export declare class PostProxyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
     statusCode: number;
-    postProxy200ApplicationJsonAny?: any;
-    postProxy401ApplicationJsonObject?: PostProxy401ApplicationJson;
-    postProxyDefaultApplicationJsonAny?: any;
+    postProxy200ApplicationJSONAny?: any;
+    postProxy401ApplicationJSONObject?: PostProxy401ApplicationJson;
+    postProxyDefaultApplicationJSONAny?: any;
 }

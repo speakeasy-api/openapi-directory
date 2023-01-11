@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { JobBookmarkEntry } from "./jobbookmarkentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResetJobBookmarkResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var jobbookmarkentry_1 = require("./jobbookmarkentry");
 var ResetJobBookmarkResponse = /** @class */ (function (_super) {
     __extends(ResetJobBookmarkResponse, _super);
     function ResetJobBookmarkResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobBookmarkEntry" }),
-        __metadata("design:type", JobBookmarkEntry)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobBookmarkEntry" }),
+        __metadata("design:type", jobbookmarkentry_1.JobBookmarkEntry)
     ], ResetJobBookmarkResponse.prototype, "jobBookmarkEntry", void 0);
     return ResetJobBookmarkResponse;
-}(SpeakeasyBase));
-export { ResetJobBookmarkResponse };
+}(utils_1.SpeakeasyBase));
+exports.ResetJobBookmarkResponse = ResetJobBookmarkResponse;

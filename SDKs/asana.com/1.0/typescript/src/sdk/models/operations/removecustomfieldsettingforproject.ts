@@ -23,7 +23,7 @@ export class RemoveCustomFieldSettingForProjectRequestBody extends SpeakeasyBase
 
 export class RemoveCustomFieldSettingForProject200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -50,5 +50,5 @@ export class RemoveCustomFieldSettingForProjectResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  removeCustomFieldSettingForProject200ApplicationJsonObject?: RemoveCustomFieldSettingForProject200ApplicationJson;
+  removeCustomFieldSettingForProject200ApplicationJSONObject?: RemoveCustomFieldSettingForProject200ApplicationJson;
 }

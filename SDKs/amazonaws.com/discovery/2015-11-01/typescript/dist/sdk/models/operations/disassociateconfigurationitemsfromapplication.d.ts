@@ -20,7 +20,7 @@ export declare class DisassociateConfigurationItemsFromApplicationRequest extend
 export declare class DisassociateConfigurationItemsFromApplicationResponse extends SpeakeasyBase {
     authorizationErrorException?: any;
     contentType: string;
-    disassociateConfigurationItemsFromApplicationResponse?: Map<string, any>;
+    disassociateConfigurationItemsFromApplicationResponse?: Record<string, any>;
     homeRegionNotSetException?: any;
     invalidParameterException?: any;
     invalidParameterValueException?: any;

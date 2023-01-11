@@ -32,16 +32,16 @@ export class CreateApiSecretResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  errorApiKeyNotFound?: shared.ErrorApiKeyNotFound;
+  errorAPIKeyNotFound?: shared.ErrorApiKeyNotFound;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createApiSecret400ApplicationJsonAny?: any;
+  createAPISecret400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createApiSecret401ApplicationJsonAny?: any;
+  createAPISecret401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   secretInfo?: shared.SecretInfo;

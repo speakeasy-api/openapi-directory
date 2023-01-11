@@ -20,7 +20,7 @@ export class InAppTemplateResponse extends SpeakeasyBase {
   creationDate: string;
 
   @SpeakeasyMetadata({ data: "json, name=CustomConfig" })
-  customConfig?: Map<string, string>;
+  customConfig?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=LastModifiedDate" })
   lastModifiedDate: string;
@@ -41,5 +41,5 @@ export class InAppTemplateResponse extends SpeakeasyBase {
   version?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }

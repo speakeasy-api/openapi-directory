@@ -31,5 +31,5 @@ export class UpdateDeviceCameraVideoSettingsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateDeviceCameraVideoSettings200ApplicationJsonObject?: Map<string, any>;
+  updateDeviceCameraVideoSettings200ApplicationJSONObject?: Record<string, any>;
 }

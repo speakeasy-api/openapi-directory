@@ -25,7 +25,7 @@ export class Permission extends SpeakeasyBase {
   allowDiscovery?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=anyone" })
-  anyone?: Map<string, any>;
+  anyone?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=domain" })
   domain?: Domain;

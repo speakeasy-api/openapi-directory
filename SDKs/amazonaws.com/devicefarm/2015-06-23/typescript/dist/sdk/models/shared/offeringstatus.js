@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Offering } from "./offering";
-import { OfferingTransactionTypeEnum } from "./offeringtransactiontypeenum";
-// OfferingStatus
-/**
- * The status of the offering.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OfferingStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var offering_1 = require("./offering");
+var offeringtransactiontypeenum_1 = require("./offeringtransactiontypeenum");
 var OfferingStatus = /** @class */ (function (_super) {
     __extends(OfferingStatus, _super);
     function OfferingStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effectiveOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effectiveOn" }),
         __metadata("design:type", Date)
     ], OfferingStatus.prototype, "effectiveOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offering" }),
-        __metadata("design:type", Offering)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offering" }),
+        __metadata("design:type", offering_1.Offering)
     ], OfferingStatus.prototype, "offering", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantity" }),
         __metadata("design:type", Number)
     ], OfferingStatus.prototype, "quantity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], OfferingStatus.prototype, "type", void 0);
     return OfferingStatus;
-}(SpeakeasyBase));
-export { OfferingStatus };
+}(utils_1.SpeakeasyBase));
+exports.OfferingStatus = OfferingStatus;

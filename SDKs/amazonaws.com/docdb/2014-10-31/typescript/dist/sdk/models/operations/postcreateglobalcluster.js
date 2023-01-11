@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCreateGlobalClusterActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCreateGlobalClusterResponse = exports.PostCreateGlobalClusterRequest = exports.PostCreateGlobalClusterHeaders = exports.PostCreateGlobalClusterQueryParams = exports.PostCreateGlobalClusterVersionEnum = exports.PostCreateGlobalClusterActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCreateGlobalClusterActionEnum;
 (function (PostCreateGlobalClusterActionEnum) {
     PostCreateGlobalClusterActionEnum["CreateGlobalCluster"] = "CreateGlobalCluster";
-})(PostCreateGlobalClusterActionEnum || (PostCreateGlobalClusterActionEnum = {}));
-export var PostCreateGlobalClusterVersionEnum;
+})(PostCreateGlobalClusterActionEnum = exports.PostCreateGlobalClusterActionEnum || (exports.PostCreateGlobalClusterActionEnum = {}));
+var PostCreateGlobalClusterVersionEnum;
 (function (PostCreateGlobalClusterVersionEnum) {
     PostCreateGlobalClusterVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostCreateGlobalClusterVersionEnum || (PostCreateGlobalClusterVersionEnum = {}));
+})(PostCreateGlobalClusterVersionEnum = exports.PostCreateGlobalClusterVersionEnum || (exports.PostCreateGlobalClusterVersionEnum = {}));
 var PostCreateGlobalClusterQueryParams = /** @class */ (function (_super) {
     __extends(PostCreateGlobalClusterQueryParams, _super);
     function PostCreateGlobalClusterQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCreateGlobalClusterQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCreateGlobalClusterQueryParams.prototype, "version", void 0);
     return PostCreateGlobalClusterQueryParams;
-}(SpeakeasyBase));
-export { PostCreateGlobalClusterQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateGlobalClusterQueryParams = PostCreateGlobalClusterQueryParams;
 var PostCreateGlobalClusterHeaders = /** @class */ (function (_super) {
     __extends(PostCreateGlobalClusterHeaders, _super);
     function PostCreateGlobalClusterHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCreateGlobalClusterHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCreateGlobalClusterHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCreateGlobalClusterHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCreateGlobalClusterHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCreateGlobalClusterHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCreateGlobalClusterHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCreateGlobalClusterHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCreateGlobalClusterHeaders;
-}(SpeakeasyBase));
-export { PostCreateGlobalClusterHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateGlobalClusterHeaders = PostCreateGlobalClusterHeaders;
 var PostCreateGlobalClusterRequest = /** @class */ (function (_super) {
     __extends(PostCreateGlobalClusterRequest, _super);
     function PostCreateGlobalClusterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateGlobalClusterQueryParams)
     ], PostCreateGlobalClusterRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateGlobalClusterHeaders)
     ], PostCreateGlobalClusterRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCreateGlobalClusterRequest.prototype, "request", void 0);
     return PostCreateGlobalClusterRequest;
-}(SpeakeasyBase));
-export { PostCreateGlobalClusterRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateGlobalClusterRequest = PostCreateGlobalClusterRequest;
 var PostCreateGlobalClusterResponse = /** @class */ (function (_super) {
     __extends(PostCreateGlobalClusterResponse, _super);
     function PostCreateGlobalClusterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCreateGlobalClusterResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCreateGlobalClusterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCreateGlobalClusterResponse.prototype, "statusCode", void 0);
     return PostCreateGlobalClusterResponse;
-}(SpeakeasyBase));
-export { PostCreateGlobalClusterResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateGlobalClusterResponse = PostCreateGlobalClusterResponse;

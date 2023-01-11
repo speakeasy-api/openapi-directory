@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Endpoint } from "./endpoint";
-import { ReachabilityDetails } from "./reachabilitydetails";
-// ConnectivityTest
-/**
- * A Connectivity Test for a network reachability analysis.
-**/
-var ConnectivityTest = /** @class */ (function (_super) {
-    __extends(ConnectivityTest, _super);
-    function ConnectivityTest() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
-        __metadata("design:type", String)
-    ], ConnectivityTest.prototype, "createTime", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], ConnectivityTest.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
-        __metadata("design:type", Endpoint)
-    ], ConnectivityTest.prototype, "destination", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
-        __metadata("design:type", String)
-    ], ConnectivityTest.prototype, "displayName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], ConnectivityTest.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], ConnectivityTest.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
-        __metadata("design:type", String)
-    ], ConnectivityTest.prototype, "protocol", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=reachabilityDetails" }),
-        __metadata("design:type", ReachabilityDetails)
-    ], ConnectivityTest.prototype, "reachabilityDetails", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=relatedProjects" }),
-        __metadata("design:type", Array)
-    ], ConnectivityTest.prototype, "relatedProjects", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", Endpoint)
-    ], ConnectivityTest.prototype, "source", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
-        __metadata("design:type", String)
-    ], ConnectivityTest.prototype, "updateTime", void 0);
-    return ConnectivityTest;
-}(SpeakeasyBase));
-export { ConnectivityTest };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConnectivityTest = exports.ConnectivityTestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var endpoint_1 = require("./endpoint");
+var reachabilitydetails_1 = require("./reachabilitydetails");
 // ConnectivityTestInput
 /**
  * A Connectivity Test for a network reachability analysis.
@@ -91,37 +38,93 @@ var ConnectivityTestInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ConnectivityTestInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
-        __metadata("design:type", Endpoint)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
+        __metadata("design:type", endpoint_1.Endpoint)
     ], ConnectivityTestInput.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], ConnectivityTestInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ConnectivityTestInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], ConnectivityTestInput.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reachabilityDetails" }),
-        __metadata("design:type", ReachabilityDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reachabilityDetails" }),
+        __metadata("design:type", reachabilitydetails_1.ReachabilityDetails)
     ], ConnectivityTestInput.prototype, "reachabilityDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relatedProjects" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relatedProjects" }),
         __metadata("design:type", Array)
     ], ConnectivityTestInput.prototype, "relatedProjects", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", Endpoint)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", endpoint_1.Endpoint)
     ], ConnectivityTestInput.prototype, "source", void 0);
     return ConnectivityTestInput;
-}(SpeakeasyBase));
-export { ConnectivityTestInput };
+}(utils_1.SpeakeasyBase));
+exports.ConnectivityTestInput = ConnectivityTestInput;
+// ConnectivityTest
+/**
+ * A Connectivity Test for a network reachability analysis.
+**/
+var ConnectivityTest = /** @class */ (function (_super) {
+    __extends(ConnectivityTest, _super);
+    function ConnectivityTest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
+        __metadata("design:type", String)
+    ], ConnectivityTest.prototype, "createTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], ConnectivityTest.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
+        __metadata("design:type", endpoint_1.Endpoint)
+    ], ConnectivityTest.prototype, "destination", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], ConnectivityTest.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], ConnectivityTest.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], ConnectivityTest.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
+        __metadata("design:type", String)
+    ], ConnectivityTest.prototype, "protocol", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reachabilityDetails" }),
+        __metadata("design:type", reachabilitydetails_1.ReachabilityDetails)
+    ], ConnectivityTest.prototype, "reachabilityDetails", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relatedProjects" }),
+        __metadata("design:type", Array)
+    ], ConnectivityTest.prototype, "relatedProjects", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", endpoint_1.Endpoint)
+    ], ConnectivityTest.prototype, "source", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
+        __metadata("design:type", String)
+    ], ConnectivityTest.prototype, "updateTime", void 0);
+    return ConnectivityTest;
+}(utils_1.SpeakeasyBase));
+exports.ConnectivityTest = ConnectivityTest;

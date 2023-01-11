@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IosModel } from "./iosmodel";
-import { IosRuntimeConfiguration } from "./iosruntimeconfiguration";
-import { IosVersion } from "./iosversion";
-import { XcodeVersion } from "./xcodeversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IosDeviceCatalog = void 0;
+var utils_1 = require("../../../internal/utils");
+var iosmodel_1 = require("./iosmodel");
+var iosruntimeconfiguration_1 = require("./iosruntimeconfiguration");
+var iosversion_1 = require("./iosversion");
+var xcodeversion_1 = require("./xcodeversion");
 // IosDeviceCatalog
 /**
  * The currently supported iOS devices.
@@ -37,21 +40,21 @@ var IosDeviceCatalog = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=models", elemType: IosModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=models", elemType: iosmodel_1.IosModel }),
         __metadata("design:type", Array)
     ], IosDeviceCatalog.prototype, "models", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runtimeConfiguration" }),
-        __metadata("design:type", IosRuntimeConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runtimeConfiguration" }),
+        __metadata("design:type", iosruntimeconfiguration_1.IosRuntimeConfiguration)
     ], IosDeviceCatalog.prototype, "runtimeConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versions", elemType: IosVersion }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versions", elemType: iosversion_1.IosVersion }),
         __metadata("design:type", Array)
     ], IosDeviceCatalog.prototype, "versions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=xcodeVersions", elemType: XcodeVersion }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=xcodeVersions", elemType: xcodeversion_1.XcodeVersion }),
         __metadata("design:type", Array)
     ], IosDeviceCatalog.prototype, "xcodeVersions", void 0);
     return IosDeviceCatalog;
-}(SpeakeasyBase));
-export { IosDeviceCatalog };
+}(utils_1.SpeakeasyBase));
+exports.IosDeviceCatalog = IosDeviceCatalog;

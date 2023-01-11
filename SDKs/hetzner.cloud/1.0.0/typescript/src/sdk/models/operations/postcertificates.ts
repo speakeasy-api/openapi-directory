@@ -15,7 +15,7 @@ export class PostCertificatesCreateCertificateRequest extends SpeakeasyBase {
   domainNames?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, any>;
+  labels?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
@@ -156,7 +156,7 @@ export class PostCertificatesCreateCertificateResponseCertificate extends Speake
   id: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;

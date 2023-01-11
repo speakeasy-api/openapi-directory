@@ -57,7 +57,7 @@ export class AddRestrictionsV1RequestBody extends SpeakeasyBase {
 
 export class AddRestrictionsV14XxApplicationProblemPlusJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
-  errors?: Map<string, any>;
+  errors?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: number;
@@ -87,5 +87,5 @@ export class AddRestrictionsV1Response extends SpeakeasyBase {
   addRestrictionsV1200ApplicationPdfBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
-  addRestrictionsV14XxApplicationProblemPlusJsonObject?: AddRestrictionsV14XxApplicationProblemPlusJson;
+  addRestrictionsV14XXApplicationProblemPlusJsonObject?: AddRestrictionsV14XxApplicationProblemPlusJson;
 }

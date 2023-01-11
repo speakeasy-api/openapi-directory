@@ -28,5 +28,5 @@ export class ProtocolNetflowSetConfigResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolNetflowSetConfig200ApplicationJsonString?: string;
+  protocolNetflowSetConfig200ApplicationJSONString?: string;
 }

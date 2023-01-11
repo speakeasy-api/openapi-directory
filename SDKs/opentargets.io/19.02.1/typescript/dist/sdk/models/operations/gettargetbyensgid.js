@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTargetByEnsgidResponse = exports.GetTargetByEnsgidRequest = exports.GetTargetByEnsgidPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTargetByEnsgidPathParams = /** @class */ (function (_super) {
     __extends(GetTargetByEnsgidPathParams, _super);
     function GetTargetByEnsgidPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=target" }),
         __metadata("design:type", String)
     ], GetTargetByEnsgidPathParams.prototype, "target", void 0);
     return GetTargetByEnsgidPathParams;
-}(SpeakeasyBase));
-export { GetTargetByEnsgidPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTargetByEnsgidPathParams = GetTargetByEnsgidPathParams;
 var GetTargetByEnsgidRequest = /** @class */ (function (_super) {
     __extends(GetTargetByEnsgidRequest, _super);
     function GetTargetByEnsgidRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTargetByEnsgidPathParams)
     ], GetTargetByEnsgidRequest.prototype, "pathParams", void 0);
     return GetTargetByEnsgidRequest;
-}(SpeakeasyBase));
-export { GetTargetByEnsgidRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTargetByEnsgidRequest = GetTargetByEnsgidRequest;
 var GetTargetByEnsgidResponse = /** @class */ (function (_super) {
     __extends(GetTargetByEnsgidResponse, _super);
     function GetTargetByEnsgidResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTargetByEnsgidResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTargetByEnsgidResponse.prototype, "statusCode", void 0);
     return GetTargetByEnsgidResponse;
-}(SpeakeasyBase));
-export { GetTargetByEnsgidResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTargetByEnsgidResponse = GetTargetByEnsgidResponse;

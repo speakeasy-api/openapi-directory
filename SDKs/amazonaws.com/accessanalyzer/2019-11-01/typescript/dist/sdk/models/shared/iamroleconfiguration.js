@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IamRoleConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
 // IamRoleConfiguration
 /**
  * The proposed access control configuration for an IAM role. You can propose a configuration for a new IAM role or an existing IAM role that you own by specifying the trust policy. If the configuration is for a new IAM role, you must specify the trust policy. If the configuration is for an existing IAM role that you own and you do not propose the trust policy, the access preview uses the existing trust policy for the role. The proposed trust policy cannot be an empty string. For more information about role trust policy limits, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html">IAM and STS quotas</a>.
@@ -33,9 +36,9 @@ var IamRoleConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trustPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trustPolicy" }),
         __metadata("design:type", String)
     ], IamRoleConfiguration.prototype, "trustPolicy", void 0);
     return IamRoleConfiguration;
-}(SpeakeasyBase));
-export { IamRoleConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.IamRoleConfiguration = IamRoleConfiguration;

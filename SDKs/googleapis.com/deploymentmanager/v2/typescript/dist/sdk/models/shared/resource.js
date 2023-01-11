@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceAccessControl } from "./resourceaccesscontrol";
-import { ResourceUpdate } from "./resourceupdate";
-export var ResourceWarningsCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Resource = exports.ResourceWarnings = exports.ResourceWarningsData = exports.ResourceWarningsCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourceaccesscontrol_1 = require("./resourceaccesscontrol");
+var resourceupdate_1 = require("./resourceupdate");
+var ResourceWarningsCodeEnum;
 (function (ResourceWarningsCodeEnum) {
     ResourceWarningsCodeEnum["DeprecatedResourceUsed"] = "DEPRECATED_RESOURCE_USED";
     ResourceWarningsCodeEnum["NoResultsOnPage"] = "NO_RESULTS_ON_PAGE";
@@ -54,96 +57,96 @@ export var ResourceWarningsCodeEnum;
     ResourceWarningsCodeEnum["LargeDeploymentWarning"] = "LARGE_DEPLOYMENT_WARNING";
     ResourceWarningsCodeEnum["NextHopInstanceHasNoIpv6Interface"] = "NEXT_HOP_INSTANCE_HAS_NO_IPV6_INTERFACE";
     ResourceWarningsCodeEnum["InvalidHealthCheckForDynamicWieghtedLb"] = "INVALID_HEALTH_CHECK_FOR_DYNAMIC_WIEGHTED_LB";
-})(ResourceWarningsCodeEnum || (ResourceWarningsCodeEnum = {}));
+})(ResourceWarningsCodeEnum = exports.ResourceWarningsCodeEnum || (exports.ResourceWarningsCodeEnum = {}));
 var ResourceWarningsData = /** @class */ (function (_super) {
     __extends(ResourceWarningsData, _super);
     function ResourceWarningsData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], ResourceWarningsData.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], ResourceWarningsData.prototype, "value", void 0);
     return ResourceWarningsData;
-}(SpeakeasyBase));
-export { ResourceWarningsData };
+}(utils_1.SpeakeasyBase));
+exports.ResourceWarningsData = ResourceWarningsData;
 var ResourceWarnings = /** @class */ (function (_super) {
     __extends(ResourceWarnings, _super);
     function ResourceWarnings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], ResourceWarnings.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: ResourceWarningsData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: ResourceWarningsData }),
         __metadata("design:type", Array)
     ], ResourceWarnings.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ResourceWarnings.prototype, "message", void 0);
     return ResourceWarnings;
-}(SpeakeasyBase));
-export { ResourceWarnings };
+}(utils_1.SpeakeasyBase));
+exports.ResourceWarnings = ResourceWarnings;
 var Resource = /** @class */ (function (_super) {
     __extends(Resource, _super);
     function Resource() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessControl" }),
-        __metadata("design:type", ResourceAccessControl)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessControl" }),
+        __metadata("design:type", resourceaccesscontrol_1.ResourceAccessControl)
     ], Resource.prototype, "accessControl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finalProperties" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finalProperties" }),
         __metadata("design:type", String)
     ], Resource.prototype, "finalProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Resource.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insertTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insertTime" }),
         __metadata("design:type", String)
     ], Resource.prototype, "insertTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manifest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manifest" }),
         __metadata("design:type", String)
     ], Resource.prototype, "manifest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Resource.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
         __metadata("design:type", String)
     ], Resource.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Resource.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=update" }),
-        __metadata("design:type", ResourceUpdate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=update" }),
+        __metadata("design:type", resourceupdate_1.ResourceUpdate)
     ], Resource.prototype, "update", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Resource.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Resource.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warnings", elemType: ResourceWarnings }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warnings", elemType: ResourceWarnings }),
         __metadata("design:type", Array)
     ], Resource.prototype, "warnings", void 0);
     return Resource;
-}(SpeakeasyBase));
-export { Resource };
+}(utils_1.SpeakeasyBase));
+exports.Resource = Resource;

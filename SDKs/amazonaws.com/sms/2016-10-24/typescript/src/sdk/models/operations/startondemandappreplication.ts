@@ -60,7 +60,7 @@ export class StartOnDemandAppReplicationResponse extends SpeakeasyBase {
   operationNotPermittedException?: any;
 
   @SpeakeasyMetadata()
-  startOnDemandAppReplicationResponse?: Map<string, any>;
+  startOnDemandAppReplicationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

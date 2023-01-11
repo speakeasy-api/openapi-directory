@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SiteSummaryResponseAbusiveStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SiteSummaryResponse = exports.SiteSummaryResponseFilterStatusEnum = exports.SiteSummaryResponseAbusiveStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SiteSummaryResponseAbusiveStatusEnum;
 (function (SiteSummaryResponseAbusiveStatusEnum) {
     SiteSummaryResponseAbusiveStatusEnum["Unknown"] = "UNKNOWN";
     SiteSummaryResponseAbusiveStatusEnum["Passing"] = "PASSING";
     SiteSummaryResponseAbusiveStatusEnum["Failing"] = "FAILING";
-})(SiteSummaryResponseAbusiveStatusEnum || (SiteSummaryResponseAbusiveStatusEnum = {}));
-export var SiteSummaryResponseFilterStatusEnum;
+})(SiteSummaryResponseAbusiveStatusEnum = exports.SiteSummaryResponseAbusiveStatusEnum || (exports.SiteSummaryResponseAbusiveStatusEnum = {}));
+var SiteSummaryResponseFilterStatusEnum;
 (function (SiteSummaryResponseFilterStatusEnum) {
     SiteSummaryResponseFilterStatusEnum["Unknown"] = "UNKNOWN";
     SiteSummaryResponseFilterStatusEnum["On"] = "ON";
     SiteSummaryResponseFilterStatusEnum["Off"] = "OFF";
     SiteSummaryResponseFilterStatusEnum["Paused"] = "PAUSED";
     SiteSummaryResponseFilterStatusEnum["Pending"] = "PENDING";
-})(SiteSummaryResponseFilterStatusEnum || (SiteSummaryResponseFilterStatusEnum = {}));
+})(SiteSummaryResponseFilterStatusEnum = exports.SiteSummaryResponseFilterStatusEnum || (exports.SiteSummaryResponseFilterStatusEnum = {}));
 // SiteSummaryResponse
 /**
  * Response message for GetSiteSummary.
@@ -47,33 +50,33 @@ var SiteSummaryResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=abusiveStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=abusiveStatus" }),
         __metadata("design:type", String)
     ], SiteSummaryResponse.prototype, "abusiveStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforcementTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforcementTime" }),
         __metadata("design:type", String)
     ], SiteSummaryResponse.prototype, "enforcementTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filterStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filterStatus" }),
         __metadata("design:type", String)
     ], SiteSummaryResponse.prototype, "filterStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastChangeTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastChangeTime" }),
         __metadata("design:type", String)
     ], SiteSummaryResponse.prototype, "lastChangeTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportUrl" }),
         __metadata("design:type", String)
     ], SiteSummaryResponse.prototype, "reportUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reviewedSite" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reviewedSite" }),
         __metadata("design:type", String)
     ], SiteSummaryResponse.prototype, "reviewedSite", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=underReview" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=underReview" }),
         __metadata("design:type", Boolean)
     ], SiteSummaryResponse.prototype, "underReview", void 0);
     return SiteSummaryResponse;
-}(SpeakeasyBase));
-export { SiteSummaryResponse };
+}(utils_1.SpeakeasyBase));
+exports.SiteSummaryResponse = SiteSummaryResponse;

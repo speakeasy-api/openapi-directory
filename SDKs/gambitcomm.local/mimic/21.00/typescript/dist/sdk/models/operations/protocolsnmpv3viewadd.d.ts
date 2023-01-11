@@ -12,5 +12,5 @@ export declare class ProtocolSnmpv3ViewAddRequest extends SpeakeasyBase {
 export declare class ProtocolSnmpv3ViewAddResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSnmpv3ViewAdd200ApplicationJsonString?: string;
+    protocolSnmpv3ViewAdd200ApplicationJSONString?: string;
 }

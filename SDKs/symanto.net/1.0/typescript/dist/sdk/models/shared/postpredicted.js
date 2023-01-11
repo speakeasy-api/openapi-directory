@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Prediction } from "./prediction";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostPredicted = void 0;
+var utils_1 = require("../../../internal/utils");
+var prediction_1 = require("./prediction");
 var PostPredicted = /** @class */ (function (_super) {
     __extends(PostPredicted, _super);
     function PostPredicted() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PostPredicted.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=predictions", elemType: Prediction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=predictions", elemType: prediction_1.Prediction }),
         __metadata("design:type", Array)
     ], PostPredicted.prototype, "predictions", void 0);
     return PostPredicted;
-}(SpeakeasyBase));
-export { PostPredicted };
+}(utils_1.SpeakeasyBase));
+exports.PostPredicted = PostPredicted;

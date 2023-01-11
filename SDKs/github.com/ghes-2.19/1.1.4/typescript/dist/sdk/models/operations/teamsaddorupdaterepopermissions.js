@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,74 +23,76 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsAddOrUpdateRepoPermissionsResponse = exports.TeamsAddOrUpdateRepoPermissionsRequest = exports.TeamsAddOrUpdateRepoPermissionsRequestBody = exports.TeamsAddOrUpdateRepoPermissionsRequestBodyPermissionEnum = exports.TeamsAddOrUpdateRepoPermissionsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamsAddOrUpdateRepoPermissionsPathParams = /** @class */ (function (_super) {
     __extends(TeamsAddOrUpdateRepoPermissionsPathParams, _super);
     function TeamsAddOrUpdateRepoPermissionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], TeamsAddOrUpdateRepoPermissionsPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], TeamsAddOrUpdateRepoPermissionsPathParams.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_id" }),
         __metadata("design:type", Number)
     ], TeamsAddOrUpdateRepoPermissionsPathParams.prototype, "teamId", void 0);
     return TeamsAddOrUpdateRepoPermissionsPathParams;
-}(SpeakeasyBase));
-export { TeamsAddOrUpdateRepoPermissionsPathParams };
-export var TeamsAddOrUpdateRepoPermissionsRequestBodyPermissionEnum;
+}(utils_1.SpeakeasyBase));
+exports.TeamsAddOrUpdateRepoPermissionsPathParams = TeamsAddOrUpdateRepoPermissionsPathParams;
+var TeamsAddOrUpdateRepoPermissionsRequestBodyPermissionEnum;
 (function (TeamsAddOrUpdateRepoPermissionsRequestBodyPermissionEnum) {
     TeamsAddOrUpdateRepoPermissionsRequestBodyPermissionEnum["Pull"] = "pull";
     TeamsAddOrUpdateRepoPermissionsRequestBodyPermissionEnum["Push"] = "push";
     TeamsAddOrUpdateRepoPermissionsRequestBodyPermissionEnum["Admin"] = "admin";
-})(TeamsAddOrUpdateRepoPermissionsRequestBodyPermissionEnum || (TeamsAddOrUpdateRepoPermissionsRequestBodyPermissionEnum = {}));
+})(TeamsAddOrUpdateRepoPermissionsRequestBodyPermissionEnum = exports.TeamsAddOrUpdateRepoPermissionsRequestBodyPermissionEnum || (exports.TeamsAddOrUpdateRepoPermissionsRequestBodyPermissionEnum = {}));
 var TeamsAddOrUpdateRepoPermissionsRequestBody = /** @class */ (function (_super) {
     __extends(TeamsAddOrUpdateRepoPermissionsRequestBody, _super);
     function TeamsAddOrUpdateRepoPermissionsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission" }),
         __metadata("design:type", String)
     ], TeamsAddOrUpdateRepoPermissionsRequestBody.prototype, "permission", void 0);
     return TeamsAddOrUpdateRepoPermissionsRequestBody;
-}(SpeakeasyBase));
-export { TeamsAddOrUpdateRepoPermissionsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.TeamsAddOrUpdateRepoPermissionsRequestBody = TeamsAddOrUpdateRepoPermissionsRequestBody;
 var TeamsAddOrUpdateRepoPermissionsRequest = /** @class */ (function (_super) {
     __extends(TeamsAddOrUpdateRepoPermissionsRequest, _super);
     function TeamsAddOrUpdateRepoPermissionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsAddOrUpdateRepoPermissionsPathParams)
     ], TeamsAddOrUpdateRepoPermissionsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", TeamsAddOrUpdateRepoPermissionsRequestBody)
     ], TeamsAddOrUpdateRepoPermissionsRequest.prototype, "request", void 0);
     return TeamsAddOrUpdateRepoPermissionsRequest;
-}(SpeakeasyBase));
-export { TeamsAddOrUpdateRepoPermissionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsAddOrUpdateRepoPermissionsRequest = TeamsAddOrUpdateRepoPermissionsRequest;
 var TeamsAddOrUpdateRepoPermissionsResponse = /** @class */ (function (_super) {
     __extends(TeamsAddOrUpdateRepoPermissionsResponse, _super);
     function TeamsAddOrUpdateRepoPermissionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsAddOrUpdateRepoPermissionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsAddOrUpdateRepoPermissionsResponse.prototype, "statusCode", void 0);
     return TeamsAddOrUpdateRepoPermissionsResponse;
-}(SpeakeasyBase));
-export { TeamsAddOrUpdateRepoPermissionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsAddOrUpdateRepoPermissionsResponse = TeamsAddOrUpdateRepoPermissionsResponse;

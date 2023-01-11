@@ -65,17 +65,14 @@ export class PutProxyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
-
-  @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  putProxy200ApplicationJsonAny?: any;
+  putProxy200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  putProxy401ApplicationJsonObject?: PutProxy401ApplicationJson;
+  putProxy401ApplicationJSONObject?: PutProxy401ApplicationJson;
 
   @SpeakeasyMetadata()
-  putProxyDefaultApplicationJsonAny?: any;
+  putProxyDefaultApplicationJSONAny?: any;
 }

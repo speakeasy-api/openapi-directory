@@ -1,0 +1,39 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+
+
+
+export class AccountInstitutionCurationPathParams extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=curation_id" })
+  curationId: number;
+}
+
+
+export class AccountInstitutionCurationSecurity extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" })
+  oAuth2: shared.SchemeOAuth2;
+}
+
+
+export class AccountInstitutionCurationRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: AccountInstitutionCurationPathParams;
+
+  @SpeakeasyMetadata()
+  security: AccountInstitutionCurationSecurity;
+}
+
+
+export class AccountInstitutionCurationResponse extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  contentType: string;
+
+  @SpeakeasyMetadata()
+  curationDetail?: shared.CurationDetail;
+
+  @SpeakeasyMetadata()
+  errorMessage?: shared.ErrorMessage;
+
+  @SpeakeasyMetadata()
+  statusCode: number;
+}

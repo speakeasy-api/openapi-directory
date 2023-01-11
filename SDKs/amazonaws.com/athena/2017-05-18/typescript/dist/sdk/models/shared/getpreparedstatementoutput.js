@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PreparedStatement } from "./preparedstatement";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPreparedStatementOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var preparedstatement_1 = require("./preparedstatement");
 var GetPreparedStatementOutput = /** @class */ (function (_super) {
     __extends(GetPreparedStatementOutput, _super);
     function GetPreparedStatementOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PreparedStatement" }),
-        __metadata("design:type", PreparedStatement)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PreparedStatement" }),
+        __metadata("design:type", preparedstatement_1.PreparedStatement)
     ], GetPreparedStatementOutput.prototype, "preparedStatement", void 0);
     return GetPreparedStatementOutput;
-}(SpeakeasyBase));
-export { GetPreparedStatementOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetPreparedStatementOutput = GetPreparedStatementOutput;

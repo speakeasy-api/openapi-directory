@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2CryptoKey } from "./googleprivacydlpv2cryptokey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2CryptoHashConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2cryptokey_1 = require("./googleprivacydlpv2cryptokey");
 // GooglePrivacyDlpV2CryptoHashConfig
 /**
  * Pseudonymization method that generates surrogates via cryptographic hashing. Uses SHA-256. The key size must be either 32 or 64 bytes. Outputs a base64 encoded representation of the hashed output (for example, L7k0BHmF1ha5U3NfGykjro4xWi1MPVQPjhMAZbSV9mM=). Currently, only string and integer values can be hashed. See https://cloud.google.com/dlp/docs/pseudonymization to learn more.
@@ -34,9 +37,9 @@ var GooglePrivacyDlpV2CryptoHashConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cryptoKey" }),
-        __metadata("design:type", GooglePrivacyDlpV2CryptoKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cryptoKey" }),
+        __metadata("design:type", googleprivacydlpv2cryptokey_1.GooglePrivacyDlpV2CryptoKey)
     ], GooglePrivacyDlpV2CryptoHashConfig.prototype, "cryptoKey", void 0);
     return GooglePrivacyDlpV2CryptoHashConfig;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2CryptoHashConfig };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2CryptoHashConfig = GooglePrivacyDlpV2CryptoHashConfig;

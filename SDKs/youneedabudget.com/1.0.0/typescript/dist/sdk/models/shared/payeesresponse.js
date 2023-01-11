@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Payee } from "./payee";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayeesResponse = exports.PayeesResponseData = void 0;
+var utils_1 = require("../../../internal/utils");
+var payee_1 = require("./payee");
 var PayeesResponseData = /** @class */ (function (_super) {
     __extends(PayeesResponseData, _super);
     function PayeesResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payees", elemType: Payee }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payees", elemType: payee_1.Payee }),
         __metadata("design:type", Array)
     ], PayeesResponseData.prototype, "payees", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server_knowledge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server_knowledge" }),
         __metadata("design:type", Number)
     ], PayeesResponseData.prototype, "serverKnowledge", void 0);
     return PayeesResponseData;
-}(SpeakeasyBase));
-export { PayeesResponseData };
+}(utils_1.SpeakeasyBase));
+exports.PayeesResponseData = PayeesResponseData;
 var PayeesResponse = /** @class */ (function (_super) {
     __extends(PayeesResponse, _super);
     function PayeesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", PayeesResponseData)
     ], PayeesResponse.prototype, "data", void 0);
     return PayeesResponse;
-}(SpeakeasyBase));
-export { PayeesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PayeesResponse = PayeesResponse;

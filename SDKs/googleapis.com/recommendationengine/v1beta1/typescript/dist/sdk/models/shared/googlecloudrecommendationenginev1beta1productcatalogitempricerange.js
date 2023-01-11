@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange
 /**
  * Product price range when there are a range of prices for different variations of the same product.
@@ -33,13 +36,13 @@ var GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange = /** @cl
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max" }),
         __metadata("design:type", Number)
     ], GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=min" }),
         __metadata("design:type", Number)
     ], GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange.prototype, "min", void 0);
     return GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange;
-}(SpeakeasyBase));
-export { GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange = GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,67 +23,69 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigModel } from "./configmodel";
-import { EnvironmentModel } from "./environmentmodel";
-import { IntegrationLinkModel } from "./integrationlinkmodel";
-import { RolloutPercentageItemModel } from "./rolloutpercentageitemmodel";
-import { RolloutRuleModel } from "./rolloutrulemodel";
-import { SettingDataModel } from "./settingdatamodel";
-import { SettingTagModel } from "./settingtagmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SettingValueModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var configmodel_1 = require("./configmodel");
+var environmentmodel_1 = require("./environmentmodel");
+var integrationlinkmodel_1 = require("./integrationlinkmodel");
+var rolloutpercentageitemmodel_1 = require("./rolloutpercentageitemmodel");
+var rolloutrulemodel_1 = require("./rolloutrulemodel");
+var settingdatamodel_1 = require("./settingdatamodel");
+var settingtagmodel_1 = require("./settingtagmodel");
 var SettingValueModel = /** @class */ (function (_super) {
     __extends(SettingValueModel, _super);
     function SettingValueModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
-        __metadata("design:type", ConfigModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
+        __metadata("design:type", configmodel_1.ConfigModel)
     ], SettingValueModel.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
-        __metadata("design:type", EnvironmentModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
+        __metadata("design:type", environmentmodel_1.EnvironmentModel)
     ], SettingValueModel.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=integrationLinks", elemType: IntegrationLinkModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=integrationLinks", elemType: integrationlinkmodel_1.IntegrationLinkModel }),
         __metadata("design:type", Array)
     ], SettingValueModel.prototype, "integrationLinks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdaterUserEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdaterUserEmail" }),
         __metadata("design:type", String)
     ], SettingValueModel.prototype, "lastUpdaterUserEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdaterUserFullName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdaterUserFullName" }),
         __metadata("design:type", String)
     ], SettingValueModel.prototype, "lastUpdaterUserFullName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readOnly" }),
         __metadata("design:type", Boolean)
     ], SettingValueModel.prototype, "readOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rolloutPercentageItems", elemType: RolloutPercentageItemModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rolloutPercentageItems", elemType: rolloutpercentageitemmodel_1.RolloutPercentageItemModel }),
         __metadata("design:type", Array)
     ], SettingValueModel.prototype, "rolloutPercentageItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rolloutRules", elemType: RolloutRuleModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rolloutRules", elemType: rolloutrulemodel_1.RolloutRuleModel }),
         __metadata("design:type", Array)
     ], SettingValueModel.prototype, "rolloutRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=setting" }),
-        __metadata("design:type", SettingDataModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=setting" }),
+        __metadata("design:type", settingdatamodel_1.SettingDataModel)
     ], SettingValueModel.prototype, "setting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settingTags", elemType: SettingTagModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settingTags", elemType: settingtagmodel_1.SettingTagModel }),
         __metadata("design:type", Array)
     ], SettingValueModel.prototype, "settingTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], SettingValueModel.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", Object)
     ], SettingValueModel.prototype, "value", void 0);
     return SettingValueModel;
-}(SpeakeasyBase));
-export { SettingValueModel };
+}(utils_1.SpeakeasyBase));
+exports.SettingValueModel = SettingValueModel;

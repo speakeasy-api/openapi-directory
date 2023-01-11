@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,310 +14,335 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LpgsvResponse = exports.LpgsvRequest = exports.Lpgsv504ApplicationJson = exports.Lpgsv504ApplicationJsonErrorDescriptionEnum = exports.Lpgsv504ApplicationJsonErrorEnum = exports.Lpgsv503ApplicationJson = exports.Lpgsv503ApplicationJsonErrorDescriptionEnum = exports.Lpgsv503ApplicationJsonErrorEnum = exports.Lpgsv502ApplicationJson = exports.Lpgsv502ApplicationJsonErrorDescriptionEnum = exports.Lpgsv502ApplicationJsonErrorEnum = exports.Lpgsv500ApplicationJson = exports.Lpgsv500ApplicationJsonErrorDescriptionEnum = exports.Lpgsv500ApplicationJsonErrorEnum = exports.Lpgsv404ApplicationJson = exports.Lpgsv404ApplicationJsonErrorDescriptionEnum = exports.Lpgsv404ApplicationJsonErrorEnum = exports.Lpgsv401ApplicationJson = exports.Lpgsv401ApplicationJsonErrorDescriptionEnum = exports.Lpgsv401ApplicationJsonErrorEnum = exports.Lpgsv400ApplicationJson = exports.Lpgsv400ApplicationJsonErrorDescriptionEnum = exports.Lpgsv400ApplicationJsonErrorEnum = exports.LpgsvSecurity = exports.LpgsvRequestBody = exports.LpgsvRequestBodyFormatEnum = exports.LpgsvRequestBodyCertificateParameters = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var LpgsvRequestBodyCertificateParameters = /** @class */ (function (_super) {
     __extends(LpgsvRequestBodyCertificateParameters, _super);
     function LpgsvRequestBodyCertificateParameters() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UID" }),
         __metadata("design:type", String)
     ], LpgsvRequestBodyCertificateParameters.prototype, "uid", void 0);
     return LpgsvRequestBodyCertificateParameters;
-}(SpeakeasyBase));
-export { LpgsvRequestBodyCertificateParameters };
-export var LpgsvRequestBodyFormatEnum;
+}(utils_1.SpeakeasyBase));
+exports.LpgsvRequestBodyCertificateParameters = LpgsvRequestBodyCertificateParameters;
+var LpgsvRequestBodyFormatEnum;
 (function (LpgsvRequestBodyFormatEnum) {
     LpgsvRequestBodyFormatEnum["Pdf"] = "pdf";
-})(LpgsvRequestBodyFormatEnum || (LpgsvRequestBodyFormatEnum = {}));
+})(LpgsvRequestBodyFormatEnum = exports.LpgsvRequestBodyFormatEnum || (exports.LpgsvRequestBodyFormatEnum = {}));
 var LpgsvRequestBody = /** @class */ (function (_super) {
     __extends(LpgsvRequestBody, _super);
     function LpgsvRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateParameters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateParameters" }),
         __metadata("design:type", LpgsvRequestBodyCertificateParameters)
     ], LpgsvRequestBody.prototype, "certificateParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consentArtifact" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consentArtifact" }),
         __metadata("design:type", Object)
     ], LpgsvRequestBody.prototype, "consentArtifact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], LpgsvRequestBody.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txnId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txnId" }),
         __metadata("design:type", String)
     ], LpgsvRequestBody.prototype, "txnId", void 0);
     return LpgsvRequestBody;
-}(SpeakeasyBase));
-export { LpgsvRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.LpgsvRequestBody = LpgsvRequestBody;
 var LpgsvSecurity = /** @class */ (function (_super) {
     __extends(LpgsvSecurity, _super);
     function LpgsvSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], LpgsvSecurity.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeClientId)
     ], LpgsvSecurity.prototype, "clientId", void 0);
     return LpgsvSecurity;
-}(SpeakeasyBase));
-export { LpgsvSecurity };
-export var Lpgsv400ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.LpgsvSecurity = LpgsvSecurity;
+var Lpgsv400ApplicationJsonErrorEnum;
 (function (Lpgsv400ApplicationJsonErrorEnum) {
     Lpgsv400ApplicationJsonErrorEnum["MissingParameter"] = "missing_parameter";
     Lpgsv400ApplicationJsonErrorEnum["InvalidParameter"] = "invalid_parameter";
     Lpgsv400ApplicationJsonErrorEnum["InvalidFormat"] = "invalid_format";
     Lpgsv400ApplicationJsonErrorEnum["InvalidTxnid"] = "invalid_txnid";
     Lpgsv400ApplicationJsonErrorEnum["InvalidConsentid"] = "invalid_consentid";
-})(Lpgsv400ApplicationJsonErrorEnum || (Lpgsv400ApplicationJsonErrorEnum = {}));
-export var Lpgsv400ApplicationJsonErrorDescriptionEnum;
+})(Lpgsv400ApplicationJsonErrorEnum = exports.Lpgsv400ApplicationJsonErrorEnum || (exports.Lpgsv400ApplicationJsonErrorEnum = {}));
+var Lpgsv400ApplicationJsonErrorDescriptionEnum;
 (function (Lpgsv400ApplicationJsonErrorDescriptionEnum) {
     Lpgsv400ApplicationJsonErrorDescriptionEnum["PleaseProvideAllMandatoryParameters"] = "Please provide all mandatory parameters";
     Lpgsv400ApplicationJsonErrorDescriptionEnum["BadRequest"] = "Bad request";
     Lpgsv400ApplicationJsonErrorDescriptionEnum["TheFormatParameterIsInvalid"] = "The format parameter is invalid";
     Lpgsv400ApplicationJsonErrorDescriptionEnum["TheTxnIdParameterMustBeInUuidFormat"] = "The txnId parameter must be in UUID format";
     Lpgsv400ApplicationJsonErrorDescriptionEnum["TheConsentIdParameterMustBeInUuidFormat"] = "The consentId parameter must be in UUID format";
-})(Lpgsv400ApplicationJsonErrorDescriptionEnum || (Lpgsv400ApplicationJsonErrorDescriptionEnum = {}));
+})(Lpgsv400ApplicationJsonErrorDescriptionEnum = exports.Lpgsv400ApplicationJsonErrorDescriptionEnum || (exports.Lpgsv400ApplicationJsonErrorDescriptionEnum = {}));
 var Lpgsv400ApplicationJson = /** @class */ (function (_super) {
     __extends(Lpgsv400ApplicationJson, _super);
     function Lpgsv400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Lpgsv400ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Lpgsv400ApplicationJson.prototype, "errorDescription", void 0);
     return Lpgsv400ApplicationJson;
-}(SpeakeasyBase));
-export { Lpgsv400ApplicationJson };
-export var Lpgsv401ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Lpgsv400ApplicationJson = Lpgsv400ApplicationJson;
+var Lpgsv401ApplicationJsonErrorEnum;
 (function (Lpgsv401ApplicationJsonErrorEnum) {
     Lpgsv401ApplicationJsonErrorEnum["InvalidAuthentication"] = "invalid_authentication";
     Lpgsv401ApplicationJsonErrorEnum["InvalidAuthorization"] = "invalid_authorization";
-})(Lpgsv401ApplicationJsonErrorEnum || (Lpgsv401ApplicationJsonErrorEnum = {}));
-export var Lpgsv401ApplicationJsonErrorDescriptionEnum;
+})(Lpgsv401ApplicationJsonErrorEnum = exports.Lpgsv401ApplicationJsonErrorEnum || (exports.Lpgsv401ApplicationJsonErrorEnum = {}));
+var Lpgsv401ApplicationJsonErrorDescriptionEnum;
 (function (Lpgsv401ApplicationJsonErrorDescriptionEnum) {
     Lpgsv401ApplicationJsonErrorDescriptionEnum["AuthenticationFailed"] = "Authentication failed";
     Lpgsv401ApplicationJsonErrorDescriptionEnum["YouAreNotAuthorizedToUseThisApi"] = "You are not authorized to use this API";
-})(Lpgsv401ApplicationJsonErrorDescriptionEnum || (Lpgsv401ApplicationJsonErrorDescriptionEnum = {}));
+})(Lpgsv401ApplicationJsonErrorDescriptionEnum = exports.Lpgsv401ApplicationJsonErrorDescriptionEnum || (exports.Lpgsv401ApplicationJsonErrorDescriptionEnum = {}));
 var Lpgsv401ApplicationJson = /** @class */ (function (_super) {
     __extends(Lpgsv401ApplicationJson, _super);
     function Lpgsv401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Lpgsv401ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Lpgsv401ApplicationJson.prototype, "errorDescription", void 0);
     return Lpgsv401ApplicationJson;
-}(SpeakeasyBase));
-export { Lpgsv401ApplicationJson };
-export var Lpgsv404ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Lpgsv401ApplicationJson = Lpgsv401ApplicationJson;
+var Lpgsv404ApplicationJsonErrorEnum;
 (function (Lpgsv404ApplicationJsonErrorEnum) {
     Lpgsv404ApplicationJsonErrorEnum["RecordNotFound"] = "record_not_found";
     Lpgsv404ApplicationJsonErrorEnum["UrlNotFound"] = "url_not_found";
-})(Lpgsv404ApplicationJsonErrorEnum || (Lpgsv404ApplicationJsonErrorEnum = {}));
-export var Lpgsv404ApplicationJsonErrorDescriptionEnum;
+})(Lpgsv404ApplicationJsonErrorEnum = exports.Lpgsv404ApplicationJsonErrorEnum || (exports.Lpgsv404ApplicationJsonErrorEnum = {}));
+var Lpgsv404ApplicationJsonErrorDescriptionEnum;
 (function (Lpgsv404ApplicationJsonErrorDescriptionEnum) {
     Lpgsv404ApplicationJsonErrorDescriptionEnum["NoRecordFound"] = "No record found";
     Lpgsv404ApplicationJsonErrorDescriptionEnum["YourApiUrlOrPathIsIncorrect"] = "Your API url or path is incorrect";
-})(Lpgsv404ApplicationJsonErrorDescriptionEnum || (Lpgsv404ApplicationJsonErrorDescriptionEnum = {}));
+})(Lpgsv404ApplicationJsonErrorDescriptionEnum = exports.Lpgsv404ApplicationJsonErrorDescriptionEnum || (exports.Lpgsv404ApplicationJsonErrorDescriptionEnum = {}));
 var Lpgsv404ApplicationJson = /** @class */ (function (_super) {
     __extends(Lpgsv404ApplicationJson, _super);
     function Lpgsv404ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Lpgsv404ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Lpgsv404ApplicationJson.prototype, "errorDescription", void 0);
     return Lpgsv404ApplicationJson;
-}(SpeakeasyBase));
-export { Lpgsv404ApplicationJson };
-export var Lpgsv500ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Lpgsv404ApplicationJson = Lpgsv404ApplicationJson;
+var Lpgsv500ApplicationJsonErrorEnum;
 (function (Lpgsv500ApplicationJsonErrorEnum) {
     Lpgsv500ApplicationJsonErrorEnum["InternalServerError"] = "internal_server_error";
-})(Lpgsv500ApplicationJsonErrorEnum || (Lpgsv500ApplicationJsonErrorEnum = {}));
-export var Lpgsv500ApplicationJsonErrorDescriptionEnum;
+})(Lpgsv500ApplicationJsonErrorEnum = exports.Lpgsv500ApplicationJsonErrorEnum || (exports.Lpgsv500ApplicationJsonErrorEnum = {}));
+var Lpgsv500ApplicationJsonErrorDescriptionEnum;
 (function (Lpgsv500ApplicationJsonErrorDescriptionEnum) {
     Lpgsv500ApplicationJsonErrorDescriptionEnum["InternalServerError"] = "Internal server error";
-})(Lpgsv500ApplicationJsonErrorDescriptionEnum || (Lpgsv500ApplicationJsonErrorDescriptionEnum = {}));
+})(Lpgsv500ApplicationJsonErrorDescriptionEnum = exports.Lpgsv500ApplicationJsonErrorDescriptionEnum || (exports.Lpgsv500ApplicationJsonErrorDescriptionEnum = {}));
 var Lpgsv500ApplicationJson = /** @class */ (function (_super) {
     __extends(Lpgsv500ApplicationJson, _super);
     function Lpgsv500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Lpgsv500ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Lpgsv500ApplicationJson.prototype, "errorDescription", void 0);
     return Lpgsv500ApplicationJson;
-}(SpeakeasyBase));
-export { Lpgsv500ApplicationJson };
-export var Lpgsv502ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Lpgsv500ApplicationJson = Lpgsv500ApplicationJson;
+var Lpgsv502ApplicationJsonErrorEnum;
 (function (Lpgsv502ApplicationJsonErrorEnum) {
     Lpgsv502ApplicationJsonErrorEnum["BadGatewy"] = "bad_gatewy";
-})(Lpgsv502ApplicationJsonErrorEnum || (Lpgsv502ApplicationJsonErrorEnum = {}));
-export var Lpgsv502ApplicationJsonErrorDescriptionEnum;
+})(Lpgsv502ApplicationJsonErrorEnum = exports.Lpgsv502ApplicationJsonErrorEnum || (exports.Lpgsv502ApplicationJsonErrorEnum = {}));
+var Lpgsv502ApplicationJsonErrorDescriptionEnum;
 (function (Lpgsv502ApplicationJsonErrorDescriptionEnum) {
     Lpgsv502ApplicationJsonErrorDescriptionEnum["PublisherServiceReturnedAnInvalidResponse"] = "Publisher service returned an invalid response";
-})(Lpgsv502ApplicationJsonErrorDescriptionEnum || (Lpgsv502ApplicationJsonErrorDescriptionEnum = {}));
+})(Lpgsv502ApplicationJsonErrorDescriptionEnum = exports.Lpgsv502ApplicationJsonErrorDescriptionEnum || (exports.Lpgsv502ApplicationJsonErrorDescriptionEnum = {}));
 var Lpgsv502ApplicationJson = /** @class */ (function (_super) {
     __extends(Lpgsv502ApplicationJson, _super);
     function Lpgsv502ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Lpgsv502ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Lpgsv502ApplicationJson.prototype, "errorDescription", void 0);
     return Lpgsv502ApplicationJson;
-}(SpeakeasyBase));
-export { Lpgsv502ApplicationJson };
-export var Lpgsv503ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Lpgsv502ApplicationJson = Lpgsv502ApplicationJson;
+var Lpgsv503ApplicationJsonErrorEnum;
 (function (Lpgsv503ApplicationJsonErrorEnum) {
     Lpgsv503ApplicationJsonErrorEnum["ServiceUnavailable"] = "service_unavailable";
-})(Lpgsv503ApplicationJsonErrorEnum || (Lpgsv503ApplicationJsonErrorEnum = {}));
-export var Lpgsv503ApplicationJsonErrorDescriptionEnum;
+})(Lpgsv503ApplicationJsonErrorEnum = exports.Lpgsv503ApplicationJsonErrorEnum || (exports.Lpgsv503ApplicationJsonErrorEnum = {}));
+var Lpgsv503ApplicationJsonErrorDescriptionEnum;
 (function (Lpgsv503ApplicationJsonErrorDescriptionEnum) {
     Lpgsv503ApplicationJsonErrorDescriptionEnum["PublisherServiceIsTemporarilyUnavailable"] = "Publisher service is temporarily unavailable";
-})(Lpgsv503ApplicationJsonErrorDescriptionEnum || (Lpgsv503ApplicationJsonErrorDescriptionEnum = {}));
+})(Lpgsv503ApplicationJsonErrorDescriptionEnum = exports.Lpgsv503ApplicationJsonErrorDescriptionEnum || (exports.Lpgsv503ApplicationJsonErrorDescriptionEnum = {}));
 var Lpgsv503ApplicationJson = /** @class */ (function (_super) {
     __extends(Lpgsv503ApplicationJson, _super);
     function Lpgsv503ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Lpgsv503ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Lpgsv503ApplicationJson.prototype, "errorDescription", void 0);
     return Lpgsv503ApplicationJson;
-}(SpeakeasyBase));
-export { Lpgsv503ApplicationJson };
-export var Lpgsv504ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Lpgsv503ApplicationJson = Lpgsv503ApplicationJson;
+var Lpgsv504ApplicationJsonErrorEnum;
 (function (Lpgsv504ApplicationJsonErrorEnum) {
     Lpgsv504ApplicationJsonErrorEnum["GatewayTimeout"] = "gateway_timeout";
-})(Lpgsv504ApplicationJsonErrorEnum || (Lpgsv504ApplicationJsonErrorEnum = {}));
-export var Lpgsv504ApplicationJsonErrorDescriptionEnum;
+})(Lpgsv504ApplicationJsonErrorEnum = exports.Lpgsv504ApplicationJsonErrorEnum || (exports.Lpgsv504ApplicationJsonErrorEnum = {}));
+var Lpgsv504ApplicationJsonErrorDescriptionEnum;
 (function (Lpgsv504ApplicationJsonErrorDescriptionEnum) {
     Lpgsv504ApplicationJsonErrorDescriptionEnum["PublisherServiceDidNotRespondInTime"] = "Publisher service did not respond in time";
-})(Lpgsv504ApplicationJsonErrorDescriptionEnum || (Lpgsv504ApplicationJsonErrorDescriptionEnum = {}));
+})(Lpgsv504ApplicationJsonErrorDescriptionEnum = exports.Lpgsv504ApplicationJsonErrorDescriptionEnum || (exports.Lpgsv504ApplicationJsonErrorDescriptionEnum = {}));
 var Lpgsv504ApplicationJson = /** @class */ (function (_super) {
     __extends(Lpgsv504ApplicationJson, _super);
     function Lpgsv504ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Lpgsv504ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Lpgsv504ApplicationJson.prototype, "errorDescription", void 0);
     return Lpgsv504ApplicationJson;
-}(SpeakeasyBase));
-export { Lpgsv504ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.Lpgsv504ApplicationJson = Lpgsv504ApplicationJson;
 var LpgsvRequest = /** @class */ (function (_super) {
     __extends(LpgsvRequest, _super);
     function LpgsvRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", LpgsvRequestBody)
     ], LpgsvRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LpgsvSecurity)
     ], LpgsvRequest.prototype, "security", void 0);
     return LpgsvRequest;
-}(SpeakeasyBase));
-export { LpgsvRequest };
+}(utils_1.SpeakeasyBase));
+exports.LpgsvRequest = LpgsvRequest;
 var LpgsvResponse = /** @class */ (function (_super) {
     __extends(LpgsvResponse, _super);
     function LpgsvResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LpgsvResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LpgsvResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Lpgsv400ApplicationJson)
-    ], LpgsvResponse.prototype, "lpgsv400ApplicationJsonObject", void 0);
+    ], LpgsvResponse.prototype, "lpgsv400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Lpgsv401ApplicationJson)
-    ], LpgsvResponse.prototype, "lpgsv401ApplicationJsonObject", void 0);
+    ], LpgsvResponse.prototype, "lpgsv401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Lpgsv404ApplicationJson)
-    ], LpgsvResponse.prototype, "lpgsv404ApplicationJsonObject", void 0);
+    ], LpgsvResponse.prototype, "lpgsv404ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Lpgsv500ApplicationJson)
-    ], LpgsvResponse.prototype, "lpgsv500ApplicationJsonObject", void 0);
+    ], LpgsvResponse.prototype, "lpgsv500ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Lpgsv502ApplicationJson)
-    ], LpgsvResponse.prototype, "lpgsv502ApplicationJsonObject", void 0);
+    ], LpgsvResponse.prototype, "lpgsv502ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Lpgsv503ApplicationJson)
-    ], LpgsvResponse.prototype, "lpgsv503ApplicationJsonObject", void 0);
+    ], LpgsvResponse.prototype, "lpgsv503ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Lpgsv504ApplicationJson)
-    ], LpgsvResponse.prototype, "lpgsv504ApplicationJsonObject", void 0);
+    ], LpgsvResponse.prototype, "lpgsv504ApplicationJSONObject", void 0);
     return LpgsvResponse;
-}(SpeakeasyBase));
-export { LpgsvResponse };
+}(utils_1.SpeakeasyBase));
+exports.LpgsvResponse = LpgsvResponse;

@@ -23,5 +23,5 @@ export declare class UpdatePreparedStatementResponse extends SpeakeasyBase {
     invalidRequestException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    updatePreparedStatementOutput?: Map<string, any>;
+    updatePreparedStatementOutput?: Record<string, any>;
 }

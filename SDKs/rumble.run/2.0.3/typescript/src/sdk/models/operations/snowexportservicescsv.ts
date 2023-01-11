@@ -23,5 +23,5 @@ export class SnowExportServicesCsvResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  snowExportServicesCsv200TextCsvBinaryString?: Uint8Array;
+  snowExportServicesCSV200TextCSVBinaryString?: Uint8Array;
 }

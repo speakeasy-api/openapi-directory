@@ -12,7 +12,7 @@ import { SortSpec } from "./sortspec";
 **/
 export class BasicFilter extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=criteria", elemType: FilterCriteria })
-  criteria?: Map<string, FilterCriteria>;
+  criteria?: Record<string, FilterCriteria>;
 
   @SpeakeasyMetadata({ data: "json, name=filterSpecs", elemType: FilterSpec })
   filterSpecs?: FilterSpec[];

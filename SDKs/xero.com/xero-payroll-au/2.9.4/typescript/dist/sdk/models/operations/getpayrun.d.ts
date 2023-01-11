@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class GetPayRunPathParams extends SpeakeasyBase {
-    payRunId: string;
+    payRunID: string;
 }
 export declare class GetPayRunHeaders extends SpeakeasyBase {
     xeroTenantId: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthSchemeEnum } from "./authschemeenum";
-import { IamAuthModeEnum } from "./iamauthmodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserAuthConfigInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var authschemeenum_1 = require("./authschemeenum");
+var iamauthmodeenum_1 = require("./iamauthmodeenum");
 // UserAuthConfigInfo
 /**
  * Returns the details of authentication used by a proxy to log in as a specific database user.
@@ -35,25 +38,25 @@ var UserAuthConfigInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UserAuthConfigInfo.prototype, "authScheme", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UserAuthConfigInfo.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UserAuthConfigInfo.prototype, "iamAuth", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UserAuthConfigInfo.prototype, "secretArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UserAuthConfigInfo.prototype, "userName", void 0);
     return UserAuthConfigInfo;
-}(SpeakeasyBase));
-export { UserAuthConfigInfo };
+}(utils_1.SpeakeasyBase));
+exports.UserAuthConfigInfo = UserAuthConfigInfo;

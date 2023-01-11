@@ -25,5 +25,5 @@ export declare class StopWorkflowRunResponse extends SpeakeasyBase {
     invalidInputException?: any;
     operationTimeoutException?: any;
     statusCode: number;
-    stopWorkflowRunResponse?: Map<string, any>;
+    stopWorkflowRunResponse?: Record<string, any>;
 }

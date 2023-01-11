@@ -4,5 +4,5 @@ export declare class GetInstallStatusResponse extends SpeakeasyBase {
     contentType: string;
     installStatus?: shared.InstallStatus;
     statusCode: number;
-    getInstallStatusDefaultApplicationJsonString?: string;
+    getInstallStatusDefaultApplicationJSONString?: string;
 }

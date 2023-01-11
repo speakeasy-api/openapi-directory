@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SiteVerificationWebResourceResource = exports.SiteVerificationWebResourceResourceSite = void 0;
+var utils_1 = require("../../../internal/utils");
 // SiteVerificationWebResourceResourceSite
 /**
  * The address and type of a site that is verified or will be verified.
@@ -33,33 +36,33 @@ var SiteVerificationWebResourceResourceSite = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identifier" }),
         __metadata("design:type", String)
     ], SiteVerificationWebResourceResourceSite.prototype, "identifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], SiteVerificationWebResourceResourceSite.prototype, "type", void 0);
     return SiteVerificationWebResourceResourceSite;
-}(SpeakeasyBase));
-export { SiteVerificationWebResourceResourceSite };
+}(utils_1.SpeakeasyBase));
+exports.SiteVerificationWebResourceResourceSite = SiteVerificationWebResourceResourceSite;
 var SiteVerificationWebResourceResource = /** @class */ (function (_super) {
     __extends(SiteVerificationWebResourceResource, _super);
     function SiteVerificationWebResourceResource() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], SiteVerificationWebResourceResource.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owners" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owners" }),
         __metadata("design:type", Array)
     ], SiteVerificationWebResourceResource.prototype, "owners", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=site" }),
         __metadata("design:type", SiteVerificationWebResourceResourceSite)
     ], SiteVerificationWebResourceResource.prototype, "site", void 0);
     return SiteVerificationWebResourceResource;
-}(SpeakeasyBase));
-export { SiteVerificationWebResourceResource };
+}(utils_1.SpeakeasyBase));
+exports.SiteVerificationWebResourceResource = SiteVerificationWebResourceResource;

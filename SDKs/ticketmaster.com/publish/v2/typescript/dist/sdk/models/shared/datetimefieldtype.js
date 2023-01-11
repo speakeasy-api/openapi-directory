@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DurationFieldType } from "./durationfieldtype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DateTimeFieldType = void 0;
+var utils_1 = require("../../../internal/utils");
+var durationfieldtype_1 = require("./durationfieldtype");
 var DateTimeFieldType = /** @class */ (function (_super) {
     __extends(DateTimeFieldType, _super);
     function DateTimeFieldType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=durationType" }),
-        __metadata("design:type", DurationFieldType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=durationType" }),
+        __metadata("design:type", durationfieldtype_1.DurationFieldType)
     ], DateTimeFieldType.prototype, "durationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DateTimeFieldType.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rangeDurationType" }),
-        __metadata("design:type", DurationFieldType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rangeDurationType" }),
+        __metadata("design:type", durationfieldtype_1.DurationFieldType)
     ], DateTimeFieldType.prototype, "rangeDurationType", void 0);
     return DateTimeFieldType;
-}(SpeakeasyBase));
-export { DateTimeFieldType };
+}(utils_1.SpeakeasyBase));
+exports.DateTimeFieldType = DateTimeFieldType;

@@ -11,5 +11,5 @@ export declare class SnsPostSnsPostResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
     statusCode: number;
-    snsPostSnsPost200ApplicationJsonAny?: any;
+    snsPostSnsPost200ApplicationJSONAny?: any;
 }

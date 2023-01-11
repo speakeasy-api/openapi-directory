@@ -62,7 +62,7 @@ export class PutDeliverabilityDashboardOptionResponse extends SpeakeasyBase {
   notFoundException?: any;
 
   @SpeakeasyMetadata()
-  putDeliverabilityDashboardOptionResponse?: Map<string, any>;
+  putDeliverabilityDashboardOptionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

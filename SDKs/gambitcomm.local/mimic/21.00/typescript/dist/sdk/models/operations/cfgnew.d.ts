@@ -9,5 +9,5 @@ export declare class CfgNewRequest extends SpeakeasyBase {
 export declare class CfgNewResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    cfgNew200ApplicationJsonObject?: Map<string, number>;
+    cfgNew200ApplicationJSONObject?: Record<string, number>;
 }

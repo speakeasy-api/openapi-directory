@@ -287,7 +287,7 @@ export class EmployeeEmployee extends SpeakeasyBase {
   maritalStatus?: EmployeeEmployeeMaritalStatusEnum;
 
   @SpeakeasyMetadata({ data: "json, name=MetaData" })
-  metaData?: Map<string, any>;
+  metaData?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=MiddleName" })
   middleName?: string;

@@ -35,5 +35,5 @@ export class UsersGetPrefsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  preferences?: Map<string, any>;
+  preferences?: Record<string, any>;
 }

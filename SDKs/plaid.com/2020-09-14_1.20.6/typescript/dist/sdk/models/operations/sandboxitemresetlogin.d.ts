@@ -5,6 +5,6 @@ export declare class SandboxItemResetLoginRequest extends SpeakeasyBase {
 }
 export declare class SandboxItemResetLoginResponse extends SpeakeasyBase {
     contentType: string;
-    sandboxItemResetLoginResponse?: Map<string, any>;
+    sandboxItemResetLoginResponse?: Record<string, any>;
     statusCode: number;
 }

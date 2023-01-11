@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteReplicationConfigurationTemplateResponse = exports.DeleteReplicationConfigurationTemplateRequest = exports.DeleteReplicationConfigurationTemplateRequestBody = exports.DeleteReplicationConfigurationTemplateHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteReplicationConfigurationTemplateHeaders = /** @class */ (function (_super) {
     __extends(DeleteReplicationConfigurationTemplateHeaders, _super);
     function DeleteReplicationConfigurationTemplateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DeleteReplicationConfigurationTemplateHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DeleteReplicationConfigurationTemplateHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DeleteReplicationConfigurationTemplateHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DeleteReplicationConfigurationTemplateHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DeleteReplicationConfigurationTemplateHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DeleteReplicationConfigurationTemplateHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DeleteReplicationConfigurationTemplateHeaders.prototype, "xAmzSignedHeaders", void 0);
     return DeleteReplicationConfigurationTemplateHeaders;
-}(SpeakeasyBase));
-export { DeleteReplicationConfigurationTemplateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteReplicationConfigurationTemplateHeaders = DeleteReplicationConfigurationTemplateHeaders;
 var DeleteReplicationConfigurationTemplateRequestBody = /** @class */ (function (_super) {
     __extends(DeleteReplicationConfigurationTemplateRequestBody, _super);
     function DeleteReplicationConfigurationTemplateRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicationConfigurationTemplateID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicationConfigurationTemplateID" }),
         __metadata("design:type", String)
-    ], DeleteReplicationConfigurationTemplateRequestBody.prototype, "replicationConfigurationTemplateId", void 0);
+    ], DeleteReplicationConfigurationTemplateRequestBody.prototype, "replicationConfigurationTemplateID", void 0);
     return DeleteReplicationConfigurationTemplateRequestBody;
-}(SpeakeasyBase));
-export { DeleteReplicationConfigurationTemplateRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.DeleteReplicationConfigurationTemplateRequestBody = DeleteReplicationConfigurationTemplateRequestBody;
 var DeleteReplicationConfigurationTemplateRequest = /** @class */ (function (_super) {
     __extends(DeleteReplicationConfigurationTemplateRequest, _super);
     function DeleteReplicationConfigurationTemplateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteReplicationConfigurationTemplateHeaders)
     ], DeleteReplicationConfigurationTemplateRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", DeleteReplicationConfigurationTemplateRequestBody)
     ], DeleteReplicationConfigurationTemplateRequest.prototype, "request", void 0);
     return DeleteReplicationConfigurationTemplateRequest;
-}(SpeakeasyBase));
-export { DeleteReplicationConfigurationTemplateRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteReplicationConfigurationTemplateRequest = DeleteReplicationConfigurationTemplateRequest;
 var DeleteReplicationConfigurationTemplateResponse = /** @class */ (function (_super) {
     __extends(DeleteReplicationConfigurationTemplateResponse, _super);
     function DeleteReplicationConfigurationTemplateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteReplicationConfigurationTemplateResponse.prototype, "conflictException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteReplicationConfigurationTemplateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeleteReplicationConfigurationTemplateResponse.prototype, "deleteReplicationConfigurationTemplateResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteReplicationConfigurationTemplateResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteReplicationConfigurationTemplateResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteReplicationConfigurationTemplateResponse.prototype, "uninitializedAccountException", void 0);
     return DeleteReplicationConfigurationTemplateResponse;
-}(SpeakeasyBase));
-export { DeleteReplicationConfigurationTemplateResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteReplicationConfigurationTemplateResponse = DeleteReplicationConfigurationTemplateResponse;

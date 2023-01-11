@@ -14,5 +14,5 @@ export declare class Change extends SpeakeasyBase {
     from?: string;
     op: ChangeOpEnum;
     path: string;
-    value?: Map<string, any>;
+    value?: Record<string, any>;
 }

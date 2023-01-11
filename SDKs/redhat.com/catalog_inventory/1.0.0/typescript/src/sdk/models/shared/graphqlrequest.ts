@@ -10,5 +10,5 @@ export class GraphQlRequest extends SpeakeasyBase {
   query: string;
 
   @SpeakeasyMetadata({ data: "json, name=variables" })
-  variables?: Map<string, any>;
+  variables?: Record<string, any>;
 }

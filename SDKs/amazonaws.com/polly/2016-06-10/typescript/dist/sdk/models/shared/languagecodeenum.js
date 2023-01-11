@@ -1,4 +1,7 @@
-export var LanguageCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LanguageCodeEnum = void 0;
+var LanguageCodeEnum;
 (function (LanguageCodeEnum) {
     LanguageCodeEnum["Arb"] = "arb";
     LanguageCodeEnum["CmnCn"] = "cmn-CN";
@@ -31,4 +34,4 @@ export var LanguageCodeEnum;
     LanguageCodeEnum["TrTr"] = "tr-TR";
     LanguageCodeEnum["EnNz"] = "en-NZ";
     LanguageCodeEnum["EnZa"] = "en-ZA";
-})(LanguageCodeEnum || (LanguageCodeEnum = {}));
+})(LanguageCodeEnum = exports.LanguageCodeEnum || (exports.LanguageCodeEnum = {}));

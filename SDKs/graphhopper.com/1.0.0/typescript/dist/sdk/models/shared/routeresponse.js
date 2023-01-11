@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResponseInfo } from "./responseinfo";
-import { RouteResponsePath } from "./routeresponsepath";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RouteResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var responseinfo_1 = require("./responseinfo");
+var routeresponsepath_1 = require("./routeresponsepath");
 var RouteResponse = /** @class */ (function (_super) {
     __extends(RouteResponse, _super);
     function RouteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=info" }),
-        __metadata("design:type", ResponseInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=info" }),
+        __metadata("design:type", responseinfo_1.ResponseInfo)
     ], RouteResponse.prototype, "info", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paths", elemType: RouteResponsePath }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paths", elemType: routeresponsepath_1.RouteResponsePath }),
         __metadata("design:type", Array)
     ], RouteResponse.prototype, "paths", void 0);
     return RouteResponse;
-}(SpeakeasyBase));
-export { RouteResponse };
+}(utils_1.SpeakeasyBase));
+exports.RouteResponse = RouteResponse;

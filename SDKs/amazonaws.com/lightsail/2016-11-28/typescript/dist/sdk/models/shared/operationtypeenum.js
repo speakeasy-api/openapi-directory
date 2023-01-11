@@ -1,4 +1,7 @@
-export var OperationTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OperationTypeEnum = void 0;
+var OperationTypeEnum;
 (function (OperationTypeEnum) {
     OperationTypeEnum["DeleteKnownHostKeys"] = "DeleteKnownHostKeys";
     OperationTypeEnum["DeleteInstance"] = "DeleteInstance";
@@ -79,4 +82,4 @@ export var OperationTypeEnum;
     OperationTypeEnum["UpdateBucketBundle"] = "UpdateBucketBundle";
     OperationTypeEnum["UpdateBucket"] = "UpdateBucket";
     OperationTypeEnum["SetResourceAccessForBucket"] = "SetResourceAccessForBucket";
-})(OperationTypeEnum || (OperationTypeEnum = {}));
+})(OperationTypeEnum = exports.OperationTypeEnum || (exports.OperationTypeEnum = {}));

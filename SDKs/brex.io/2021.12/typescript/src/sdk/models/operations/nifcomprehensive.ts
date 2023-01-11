@@ -44,10 +44,10 @@ export class NifComprehensiveResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  nifComprehensive200ApplicationJsonAny?: any;
+  nifComprehensive200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  nifComprehensiveDefaultApplicationJsonAny?: any;
+  nifComprehensiveDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

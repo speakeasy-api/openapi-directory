@@ -1,44 +1,45 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class DestroyDropletPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=droplet_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=droplet_id" })
   dropletId: number;
 }
 
 
-export class DestroyDropletRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: DestroyDropletPathParams;
-}
-
-
 export class DestroyDroplet401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class DestroyDropletRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: DestroyDropletPathParams;
+}
+
+
 export class DestroyDropletResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  destroyDroplet401ApplicationJsonObject?: DestroyDroplet401ApplicationJson;
+  @SpeakeasyMetadata()
+  destroyDroplet401ApplicationJSONObject?: DestroyDroplet401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

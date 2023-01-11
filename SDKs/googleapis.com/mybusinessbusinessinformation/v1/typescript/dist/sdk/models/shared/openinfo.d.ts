@@ -9,15 +9,15 @@ export declare enum OpenInfoStatusEnum {
 /**
  * Information related to the opening state of the business.
 **/
-export declare class OpenInfo extends SpeakeasyBase {
-    canReopen?: boolean;
+export declare class OpenInfoInput extends SpeakeasyBase {
     openingDate?: Date;
     status?: OpenInfoStatusEnum;
 }
 /**
  * Information related to the opening state of the business.
 **/
-export declare class OpenInfoInput extends SpeakeasyBase {
+export declare class OpenInfo extends SpeakeasyBase {
+    canReopen?: boolean;
     openingDate?: Date;
     status?: OpenInfoStatusEnum;
 }

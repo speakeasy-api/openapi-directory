@@ -44,8 +44,8 @@ export class DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse extends Sp
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  issue?: Map<string, any>;
+  issue?: Record<string, any>;
 }

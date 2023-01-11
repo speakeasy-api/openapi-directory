@@ -6,7 +6,7 @@ import { SslConfiguration } from "./sslconfiguration";
 import { AppTypeEnum } from "./apptypeenum";
 export declare class CreateAppRequest extends SpeakeasyBase {
     appSource?: Source;
-    attributes?: Map<string, string>;
+    attributes?: Record<string, string>;
     dataSources?: DataSource[];
     description?: string;
     domains?: string[];

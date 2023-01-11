@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ColumnStatistics } from "./columnstatistics";
-import { ColumnError } from "./columnerror";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetColumnStatisticsForTableResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var columnstatistics_1 = require("./columnstatistics");
+var columnerror_1 = require("./columnerror");
 var GetColumnStatisticsForTableResponse = /** @class */ (function (_super) {
     __extends(GetColumnStatisticsForTableResponse, _super);
     function GetColumnStatisticsForTableResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ColumnStatisticsList", elemType: ColumnStatistics }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ColumnStatisticsList", elemType: columnstatistics_1.ColumnStatistics }),
         __metadata("design:type", Array)
     ], GetColumnStatisticsForTableResponse.prototype, "columnStatisticsList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Errors", elemType: ColumnError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Errors", elemType: columnerror_1.ColumnError }),
         __metadata("design:type", Array)
     ], GetColumnStatisticsForTableResponse.prototype, "errors", void 0);
     return GetColumnStatisticsForTableResponse;
-}(SpeakeasyBase));
-export { GetColumnStatisticsForTableResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetColumnStatisticsForTableResponse = GetColumnStatisticsForTableResponse;

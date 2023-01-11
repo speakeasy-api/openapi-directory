@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DeviceIntegrityDeviceRecognitionVerdictEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceIntegrity = exports.DeviceIntegrityDeviceRecognitionVerdictEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DeviceIntegrityDeviceRecognitionVerdictEnum;
 (function (DeviceIntegrityDeviceRecognitionVerdictEnum) {
     DeviceIntegrityDeviceRecognitionVerdictEnum["Unknown"] = "UNKNOWN";
     DeviceIntegrityDeviceRecognitionVerdictEnum["MeetsBasicIntegrity"] = "MEETS_BASIC_INTEGRITY";
     DeviceIntegrityDeviceRecognitionVerdictEnum["MeetsDeviceIntegrity"] = "MEETS_DEVICE_INTEGRITY";
     DeviceIntegrityDeviceRecognitionVerdictEnum["MeetsStrongIntegrity"] = "MEETS_STRONG_INTEGRITY";
     DeviceIntegrityDeviceRecognitionVerdictEnum["MeetsVirtualIntegrity"] = "MEETS_VIRTUAL_INTEGRITY";
-})(DeviceIntegrityDeviceRecognitionVerdictEnum || (DeviceIntegrityDeviceRecognitionVerdictEnum = {}));
+})(DeviceIntegrityDeviceRecognitionVerdictEnum = exports.DeviceIntegrityDeviceRecognitionVerdictEnum || (exports.DeviceIntegrityDeviceRecognitionVerdictEnum = {}));
 // DeviceIntegrity
 /**
  * Contains the device attestation information.
@@ -41,9 +44,9 @@ var DeviceIntegrity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceRecognitionVerdict" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceRecognitionVerdict" }),
         __metadata("design:type", Array)
     ], DeviceIntegrity.prototype, "deviceRecognitionVerdict", void 0);
     return DeviceIntegrity;
-}(SpeakeasyBase));
-export { DeviceIntegrity };
+}(utils_1.SpeakeasyBase));
+exports.DeviceIntegrity = DeviceIntegrity;

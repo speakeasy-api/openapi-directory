@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RegistrationStatusEnum } from "./registrationstatusenum";
-import { TagFilter } from "./tagfilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListOnPremisesInstancesInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var registrationstatusenum_1 = require("./registrationstatusenum");
+var tagfilter_1 = require("./tagfilter");
 // ListOnPremisesInstancesInput
 /**
  * Represents the input of a <code>ListOnPremisesInstances</code> operation.
@@ -35,17 +38,17 @@ var ListOnPremisesInstancesInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListOnPremisesInstancesInput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registrationStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registrationStatus" }),
         __metadata("design:type", String)
     ], ListOnPremisesInstancesInput.prototype, "registrationStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagFilters", elemType: TagFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagFilters", elemType: tagfilter_1.TagFilter }),
         __metadata("design:type", Array)
     ], ListOnPremisesInstancesInput.prototype, "tagFilters", void 0);
     return ListOnPremisesInstancesInput;
-}(SpeakeasyBase));
-export { ListOnPremisesInstancesInput };
+}(utils_1.SpeakeasyBase));
+exports.ListOnPremisesInstancesInput = ListOnPremisesInstancesInput;

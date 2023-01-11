@@ -41,7 +41,7 @@ export class UpdateArchiveRuleRequestBody extends SpeakeasyBase {
   clientToken?: string;
 
   @SpeakeasyMetadata({ data: "json, name=filter", elemType: shared.Criterion })
-  filter: Map<string, shared.Criterion>;
+  filter: Record<string, shared.Criterion>;
 }
 
 

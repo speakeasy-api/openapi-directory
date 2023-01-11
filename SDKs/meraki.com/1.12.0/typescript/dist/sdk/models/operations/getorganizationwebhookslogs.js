@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,92 +23,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationWebhooksLogsResponse = exports.GetOrganizationWebhooksLogsRequest = exports.GetOrganizationWebhooksLogsQueryParams = exports.GetOrganizationWebhooksLogsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationWebhooksLogsPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationWebhooksLogsPathParams, _super);
     function GetOrganizationWebhooksLogsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationWebhooksLogsPathParams.prototype, "organizationId", void 0);
     return GetOrganizationWebhooksLogsPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationWebhooksLogsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationWebhooksLogsPathParams = GetOrganizationWebhooksLogsPathParams;
 var GetOrganizationWebhooksLogsQueryParams = /** @class */ (function (_super) {
     __extends(GetOrganizationWebhooksLogsQueryParams, _super);
     function GetOrganizationWebhooksLogsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
         __metadata("design:type", String)
     ], GetOrganizationWebhooksLogsQueryParams.prototype, "endingBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=perPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=perPage" }),
         __metadata("design:type", Number)
     ], GetOrganizationWebhooksLogsQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
         __metadata("design:type", String)
     ], GetOrganizationWebhooksLogsQueryParams.prototype, "startingAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t0" }),
         __metadata("design:type", String)
     ], GetOrganizationWebhooksLogsQueryParams.prototype, "t0", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t1" }),
         __metadata("design:type", String)
     ], GetOrganizationWebhooksLogsQueryParams.prototype, "t1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timespan" }),
         __metadata("design:type", Number)
     ], GetOrganizationWebhooksLogsQueryParams.prototype, "timespan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=url" }),
         __metadata("design:type", String)
     ], GetOrganizationWebhooksLogsQueryParams.prototype, "url", void 0);
     return GetOrganizationWebhooksLogsQueryParams;
-}(SpeakeasyBase));
-export { GetOrganizationWebhooksLogsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationWebhooksLogsQueryParams = GetOrganizationWebhooksLogsQueryParams;
 var GetOrganizationWebhooksLogsRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationWebhooksLogsRequest, _super);
     function GetOrganizationWebhooksLogsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationWebhooksLogsPathParams)
     ], GetOrganizationWebhooksLogsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationWebhooksLogsQueryParams)
     ], GetOrganizationWebhooksLogsRequest.prototype, "queryParams", void 0);
     return GetOrganizationWebhooksLogsRequest;
-}(SpeakeasyBase));
-export { GetOrganizationWebhooksLogsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationWebhooksLogsRequest = GetOrganizationWebhooksLogsRequest;
 var GetOrganizationWebhooksLogsResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationWebhooksLogsResponse, _super);
     function GetOrganizationWebhooksLogsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationWebhooksLogsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetOrganizationWebhooksLogsResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationWebhooksLogsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationWebhooksLogsResponse.prototype, "getOrganizationWebhooksLogs200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationWebhooksLogsResponse.prototype, "getOrganizationWebhooksLogs200ApplicationJSONObject", void 0);
     return GetOrganizationWebhooksLogsResponse;
-}(SpeakeasyBase));
-export { GetOrganizationWebhooksLogsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationWebhooksLogsResponse = GetOrganizationWebhooksLogsResponse;

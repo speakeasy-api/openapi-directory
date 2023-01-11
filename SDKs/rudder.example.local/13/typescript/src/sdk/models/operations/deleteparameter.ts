@@ -80,8 +80,8 @@ export class DeleteParameterResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteParameter200ApplicationJsonObject?: DeleteParameter200ApplicationJson;
+  deleteParameter200ApplicationJSONObject?: DeleteParameter200ApplicationJson;
 
   @SpeakeasyMetadata()
-  deleteParameter500ApplicationJsonObject?: DeleteParameter500ApplicationJson;
+  deleteParameter500ApplicationJSONObject?: DeleteParameter500ApplicationJson;
 }

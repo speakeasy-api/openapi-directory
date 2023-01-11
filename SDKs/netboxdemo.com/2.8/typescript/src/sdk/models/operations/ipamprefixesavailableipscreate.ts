@@ -17,7 +17,7 @@ export class IpamPrefixesAvailableIpsCreateRequest extends SpeakeasyBase {
 
 export class IpamPrefixesAvailableIpsCreateResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ elemType: shared.AvailableIp })
-  availableIps?: shared.AvailableIp[];
+  availableIPS?: shared.AvailableIp[];
 
   @SpeakeasyMetadata()
   contentType: string;

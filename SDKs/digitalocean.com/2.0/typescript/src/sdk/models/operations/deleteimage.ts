@@ -1,44 +1,45 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class DeleteImagePathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=image_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=image_id" })
   imageId: number;
 }
 
 
-export class DeleteImageRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: DeleteImagePathParams;
-}
-
-
 export class DeleteImage401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class DeleteImageRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: DeleteImagePathParams;
+}
+
+
 export class DeleteImageResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  deleteImage401ApplicationJsonObject?: DeleteImage401ApplicationJson;
+  @SpeakeasyMetadata()
+  deleteImage401ApplicationJSONObject?: DeleteImage401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

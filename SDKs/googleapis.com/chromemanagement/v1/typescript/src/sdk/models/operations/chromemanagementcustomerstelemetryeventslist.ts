@@ -1,0 +1,90 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+
+
+
+export class ChromemanagementCustomersTelemetryEventsListPathParams extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=parent" })
+  parent: string;
+}
+
+
+export class ChromemanagementCustomersTelemetryEventsListQueryParams extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" })
+  dollarXgafv?: shared.XgafvEnum;
+
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" })
+  accessToken?: string;
+
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" })
+  alt?: shared.AltEnum;
+
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" })
+  callback?: string;
+
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" })
+  fields?: string;
+
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" })
+  filter?: string;
+
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" })
+  key?: string;
+
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" })
+  oauthToken?: string;
+
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageSize" })
+  pageSize?: number;
+
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" })
+  pageToken?: string;
+
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" })
+  prettyPrint?: boolean;
+
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" })
+  quotaUser?: string;
+
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=readMask" })
+  readMask?: string;
+
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" })
+  uploadType?: string;
+
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" })
+  uploadProtocol?: string;
+}
+
+
+export class ChromemanagementCustomersTelemetryEventsListSecurity extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" })
+  oauth2: shared.SchemeOauth2;
+
+  @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" })
+  oauth2c: shared.SchemeOauth2c;
+}
+
+
+export class ChromemanagementCustomersTelemetryEventsListRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: ChromemanagementCustomersTelemetryEventsListPathParams;
+
+  @SpeakeasyMetadata()
+  queryParams: ChromemanagementCustomersTelemetryEventsListQueryParams;
+
+  @SpeakeasyMetadata()
+  security: ChromemanagementCustomersTelemetryEventsListSecurity;
+}
+
+
+export class ChromemanagementCustomersTelemetryEventsListResponse extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  contentType: string;
+
+  @SpeakeasyMetadata()
+  googleChromeManagementV1ListTelemetryEventsResponse?: shared.GoogleChromeManagementV1ListTelemetryEventsResponse;
+
+  @SpeakeasyMetadata()
+  statusCode: number;
+}

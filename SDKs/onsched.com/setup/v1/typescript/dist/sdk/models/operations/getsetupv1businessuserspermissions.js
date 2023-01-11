@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSetupV1BusinessusersPermissionsResponse = exports.GetSetupV1BusinessusersPermissionsRequest = exports.GetSetupV1BusinessusersPermissionsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSetupV1BusinessusersPermissionsQueryParams = /** @class */ (function (_super) {
     __extends(GetSetupV1BusinessusersPermissionsQueryParams, _super);
     function GetSetupV1BusinessusersPermissionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetSetupV1BusinessusersPermissionsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], GetSetupV1BusinessusersPermissionsQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=role" }),
         __metadata("design:type", String)
     ], GetSetupV1BusinessusersPermissionsQueryParams.prototype, "role", void 0);
     return GetSetupV1BusinessusersPermissionsQueryParams;
-}(SpeakeasyBase));
-export { GetSetupV1BusinessusersPermissionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1BusinessusersPermissionsQueryParams = GetSetupV1BusinessusersPermissionsQueryParams;
 var GetSetupV1BusinessusersPermissionsRequest = /** @class */ (function (_super) {
     __extends(GetSetupV1BusinessusersPermissionsRequest, _super);
     function GetSetupV1BusinessusersPermissionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetupV1BusinessusersPermissionsQueryParams)
     ], GetSetupV1BusinessusersPermissionsRequest.prototype, "queryParams", void 0);
     return GetSetupV1BusinessusersPermissionsRequest;
-}(SpeakeasyBase));
-export { GetSetupV1BusinessusersPermissionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1BusinessusersPermissionsRequest = GetSetupV1BusinessusersPermissionsRequest;
 var GetSetupV1BusinessusersPermissionsResponse = /** @class */ (function (_super) {
     __extends(GetSetupV1BusinessusersPermissionsResponse, _super);
     function GetSetupV1BusinessusersPermissionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetSetupV1BusinessusersPermissionsResponse.prototype, "businessPermissionListViewModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSetupV1BusinessusersPermissionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSetupV1BusinessusersPermissionsResponse.prototype, "statusCode", void 0);
     return GetSetupV1BusinessusersPermissionsResponse;
-}(SpeakeasyBase));
-export { GetSetupV1BusinessusersPermissionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1BusinessusersPermissionsResponse = GetSetupV1BusinessusersPermissionsResponse;

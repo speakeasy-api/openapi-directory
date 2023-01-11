@@ -51,7 +51,7 @@ export class CreateConnectionResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createConnectionResponse?: Map<string, any>;
+  createConnectionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   glueEncryptionException?: any;

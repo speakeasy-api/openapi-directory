@@ -1,7 +1,10 @@
-export var AutoSnapshotStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AutoSnapshotStatusEnum = void 0;
+var AutoSnapshotStatusEnum;
 (function (AutoSnapshotStatusEnum) {
     AutoSnapshotStatusEnum["Success"] = "Success";
     AutoSnapshotStatusEnum["Failed"] = "Failed";
     AutoSnapshotStatusEnum["InProgress"] = "InProgress";
     AutoSnapshotStatusEnum["NotFound"] = "NotFound";
-})(AutoSnapshotStatusEnum || (AutoSnapshotStatusEnum = {}));
+})(AutoSnapshotStatusEnum = exports.AutoSnapshotStatusEnum || (exports.AutoSnapshotStatusEnum = {}));

@@ -15,5 +15,5 @@ export declare class AddEmployeeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     employeeIdResponses?: shared.EmployeeIdResponse[];
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }

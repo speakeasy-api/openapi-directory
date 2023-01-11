@@ -15,5 +15,5 @@ export declare class HealthCheckRequest extends SpeakeasyBase {
 export declare class HealthCheckResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    healthCheck200ApplicationJsonObject?: HealthCheck200ApplicationJson;
+    healthCheck200ApplicationJSONObject?: HealthCheck200ApplicationJson;
 }

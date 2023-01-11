@@ -19,7 +19,7 @@ export declare class DeleteDevEndpointRequest extends SpeakeasyBase {
 }
 export declare class DeleteDevEndpointResponse extends SpeakeasyBase {
     contentType: string;
-    deleteDevEndpointResponse?: Map<string, any>;
+    deleteDevEndpointResponse?: Record<string, any>;
     entityNotFoundException?: any;
     internalServiceException?: any;
     invalidInputException?: any;

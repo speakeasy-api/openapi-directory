@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CategoryDetails } from "./categorydetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Categories = void 0;
+var utils_1 = require("../../../internal/utils");
+var categorydetails_1 = require("./categorydetails");
 // Categories
 /**
  * Provides the category rules that are used to automatically categorize contacts based on uttered keywords and phrases.
@@ -34,13 +37,13 @@ var Categories = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MatchedCategories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MatchedCategories" }),
         __metadata("design:type", Array)
     ], Categories.prototype, "matchedCategories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MatchedDetails", elemType: CategoryDetails }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MatchedDetails", elemType: categorydetails_1.CategoryDetails }),
+        __metadata("design:type", Object)
     ], Categories.prototype, "matchedDetails", void 0);
     return Categories;
-}(SpeakeasyBase));
-export { Categories };
+}(utils_1.SpeakeasyBase));
+exports.Categories = Categories;

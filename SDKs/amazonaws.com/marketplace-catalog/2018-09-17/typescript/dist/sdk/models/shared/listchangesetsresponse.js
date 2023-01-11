@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChangeSetSummaryListItem } from "./changesetsummarylistitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListChangeSetsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var changesetsummarylistitem_1 = require("./changesetsummarylistitem");
 var ListChangeSetsResponse = /** @class */ (function (_super) {
     __extends(ListChangeSetsResponse, _super);
     function ListChangeSetsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChangeSetSummaryList", elemType: ChangeSetSummaryListItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChangeSetSummaryList", elemType: changesetsummarylistitem_1.ChangeSetSummaryListItem }),
         __metadata("design:type", Array)
     ], ListChangeSetsResponse.prototype, "changeSetSummaryList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListChangeSetsResponse.prototype, "nextToken", void 0);
     return ListChangeSetsResponse;
-}(SpeakeasyBase));
-export { ListChangeSetsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListChangeSetsResponse = ListChangeSetsResponse;

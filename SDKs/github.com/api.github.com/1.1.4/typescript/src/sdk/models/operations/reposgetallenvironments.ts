@@ -35,5 +35,5 @@ export class ReposGetAllEnvironmentsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  reposGetAllEnvironments200ApplicationJsonObject?: ReposGetAllEnvironments200ApplicationJson;
+  reposGetAllEnvironments200ApplicationJSONObject?: ReposGetAllEnvironments200ApplicationJson;
 }

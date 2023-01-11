@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Segment } from "./segment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Segments = void 0;
+var utils_1 = require("../../../internal/utils");
+var segment_1 = require("./segment");
 // Segments
 /**
  * An segment collection lists Analytics segments that the user has access to. Each resource in the collection corresponds to a single Analytics segment.
@@ -34,37 +37,37 @@ var Segments = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: Segment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: segment_1.Segment }),
         __metadata("design:type", Array)
     ], Segments.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemsPerPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemsPerPage" }),
         __metadata("design:type", Number)
     ], Segments.prototype, "itemsPerPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Segments.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextLink" }),
         __metadata("design:type", String)
     ], Segments.prototype, "nextLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previousLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previousLink" }),
         __metadata("design:type", String)
     ], Segments.prototype, "previousLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startIndex" }),
         __metadata("design:type", Number)
     ], Segments.prototype, "startIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalResults" }),
         __metadata("design:type", Number)
     ], Segments.prototype, "totalResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], Segments.prototype, "username", void 0);
     return Segments;
-}(SpeakeasyBase));
-export { Segments };
+}(utils_1.SpeakeasyBase));
+exports.Segments = Segments;

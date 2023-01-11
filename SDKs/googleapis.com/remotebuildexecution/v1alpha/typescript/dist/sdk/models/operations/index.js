@@ -1,8 +1,24 @@
-export * from "./remotebuildexecutionprojectsinstancescreate";
-export * from "./remotebuildexecutionprojectsinstanceslist";
-export * from "./remotebuildexecutionprojectsinstancestestnotify";
-export * from "./remotebuildexecutionprojectsinstancesworkerpoolscreate";
-export * from "./remotebuildexecutionprojectsinstancesworkerpoolsdelete";
-export * from "./remotebuildexecutionprojectsinstancesworkerpoolslist";
-export * from "./remotebuildexecutionprojectsinstancesworkerpoolspatch";
-export * from "./remotebuildexecutionprojectsoperationsget";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./remotebuildexecutionprojectsinstancescreate"), exports);
+__exportStar(require("./remotebuildexecutionprojectsinstanceslist"), exports);
+__exportStar(require("./remotebuildexecutionprojectsinstancestestnotify"), exports);
+__exportStar(require("./remotebuildexecutionprojectsinstancesworkerpoolscreate"), exports);
+__exportStar(require("./remotebuildexecutionprojectsinstancesworkerpoolsdelete"), exports);
+__exportStar(require("./remotebuildexecutionprojectsinstancesworkerpoolslist"), exports);
+__exportStar(require("./remotebuildexecutionprojectsinstancesworkerpoolspatch"), exports);
+__exportStar(require("./remotebuildexecutionprojectsoperationsget"), exports);

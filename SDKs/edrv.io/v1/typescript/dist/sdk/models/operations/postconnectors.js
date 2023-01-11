@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostConnectorsResponse = exports.PostConnectorsRequest = exports.PostConnectors200ApplicationJson = exports.PostConnectorsRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostConnectorsRequestBody = /** @class */ (function (_super) {
     __extends(PostConnectorsRequestBody, _super);
     function PostConnectorsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chargestation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chargestation" }),
         __metadata("design:type", String)
     ], PostConnectorsRequestBody.prototype, "chargestation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], PostConnectorsRequestBody.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=power" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=power" }),
         __metadata("design:type", Number)
     ], PostConnectorsRequestBody.prototype, "power", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=power_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=power_type" }),
         __metadata("design:type", String)
     ], PostConnectorsRequestBody.prototype, "powerType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rate" }),
         __metadata("design:type", String)
     ], PostConnectorsRequestBody.prototype, "rate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostConnectorsRequestBody.prototype, "type", void 0);
     return PostConnectorsRequestBody;
-}(SpeakeasyBase));
-export { PostConnectorsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostConnectorsRequestBody = PostConnectorsRequestBody;
 var PostConnectors200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostConnectors200ApplicationJson, _super);
     function PostConnectors200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostConnectors200ApplicationJson.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ok" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ok" }),
         __metadata("design:type", Boolean)
     ], PostConnectors200ApplicationJson.prototype, "ok", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
+        __metadata("design:type", Object)
     ], PostConnectors200ApplicationJson.prototype, "result", void 0);
     return PostConnectors200ApplicationJson;
-}(SpeakeasyBase));
-export { PostConnectors200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostConnectors200ApplicationJson = PostConnectors200ApplicationJson;
 var PostConnectorsRequest = /** @class */ (function (_super) {
     __extends(PostConnectorsRequest, _super);
     function PostConnectorsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostConnectorsRequestBody)
     ], PostConnectorsRequest.prototype, "request", void 0);
     return PostConnectorsRequest;
-}(SpeakeasyBase));
-export { PostConnectorsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostConnectorsRequest = PostConnectorsRequest;
 var PostConnectorsResponse = /** @class */ (function (_super) {
     __extends(PostConnectorsResponse, _super);
     function PostConnectorsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostConnectorsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostConnectorsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostConnectors200ApplicationJson)
-    ], PostConnectorsResponse.prototype, "postConnectors200ApplicationJsonObject", void 0);
+    ], PostConnectorsResponse.prototype, "postConnectors200ApplicationJSONObject", void 0);
     return PostConnectorsResponse;
-}(SpeakeasyBase));
-export { PostConnectorsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostConnectorsResponse = PostConnectorsResponse;

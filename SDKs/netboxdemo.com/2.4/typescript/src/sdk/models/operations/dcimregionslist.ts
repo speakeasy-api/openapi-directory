@@ -56,5 +56,5 @@ export class DcimRegionsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimRegionsList200ApplicationJsonObject?: DcimRegionsList200ApplicationJson;
+  dcimRegionsList200ApplicationJSONObject?: DcimRegionsList200ApplicationJson;
 }

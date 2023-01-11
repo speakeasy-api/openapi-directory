@@ -31,7 +31,7 @@ export declare class PullsCreateReviewCommentRequest extends SpeakeasyBase {
 }
 export declare class PullsCreateReviewCommentResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     pullRequestReviewComment?: shared.PullRequestReviewComment;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RegionalTaxRateInfo } from "./regionaltaxrateinfo";
-export var ManagedProductTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ManagedProductTaxAndComplianceSettings = exports.ManagedProductTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var regionaltaxrateinfo_1 = require("./regionaltaxrateinfo");
+var ManagedProductTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum;
 (function (ManagedProductTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum) {
     ManagedProductTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum["WithdrawalRightTypeUnspecified"] = "WITHDRAWAL_RIGHT_TYPE_UNSPECIFIED";
     ManagedProductTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum["WithdrawalRightDigitalContent"] = "WITHDRAWAL_RIGHT_DIGITAL_CONTENT";
     ManagedProductTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum["WithdrawalRightService"] = "WITHDRAWAL_RIGHT_SERVICE";
-})(ManagedProductTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum || (ManagedProductTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum = {}));
+})(ManagedProductTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum = exports.ManagedProductTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum || (exports.ManagedProductTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum = {}));
 // ManagedProductTaxAndComplianceSettings
 /**
  * Details about taxation and legal compliance for managed products.
@@ -40,13 +43,13 @@ var ManagedProductTaxAndComplianceSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eeaWithdrawalRightType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eeaWithdrawalRightType" }),
         __metadata("design:type", String)
     ], ManagedProductTaxAndComplianceSettings.prototype, "eeaWithdrawalRightType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxRateInfoByRegionCode", elemType: RegionalTaxRateInfo }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxRateInfoByRegionCode", elemType: regionaltaxrateinfo_1.RegionalTaxRateInfo }),
+        __metadata("design:type", Object)
     ], ManagedProductTaxAndComplianceSettings.prototype, "taxRateInfoByRegionCode", void 0);
     return ManagedProductTaxAndComplianceSettings;
-}(SpeakeasyBase));
-export { ManagedProductTaxAndComplianceSettings };
+}(utils_1.SpeakeasyBase));
+exports.ManagedProductTaxAndComplianceSettings = ManagedProductTaxAndComplianceSettings;

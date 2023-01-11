@@ -1,0 +1,38 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+
+
+
+export class DeleteImageTagsPathParams extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectId" })
+  projectId: string;
+}
+
+
+export class DeleteImageTagsQueryParams extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=imageIds" })
+  imageIds: string[];
+
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=tagIds" })
+  tagIds: string[];
+}
+
+
+export class DeleteImageTagsRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: DeleteImageTagsPathParams;
+
+  @SpeakeasyMetadata()
+  queryParams: DeleteImageTagsQueryParams;
+}
+
+
+export class DeleteImageTagsResponse extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  body?: Uint8Array;
+
+  @SpeakeasyMetadata()
+  contentType: string;
+
+  @SpeakeasyMetadata()
+  statusCode: number;
+}

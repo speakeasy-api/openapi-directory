@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataFormatEnum } from "./dataformatenum";
-import { SchemaVersionStatusEnum } from "./schemaversionstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSchemaByDefinitionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var dataformatenum_1 = require("./dataformatenum");
+var schemaversionstatusenum_1 = require("./schemaversionstatusenum");
 var GetSchemaByDefinitionResponse = /** @class */ (function (_super) {
     __extends(GetSchemaByDefinitionResponse, _super);
     function GetSchemaByDefinitionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedTime" }),
         __metadata("design:type", String)
     ], GetSchemaByDefinitionResponse.prototype, "createdTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataFormat" }),
         __metadata("design:type", String)
     ], GetSchemaByDefinitionResponse.prototype, "dataFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaArn" }),
         __metadata("design:type", String)
     ], GetSchemaByDefinitionResponse.prototype, "schemaArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaVersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaVersionId" }),
         __metadata("design:type", String)
     ], GetSchemaByDefinitionResponse.prototype, "schemaVersionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], GetSchemaByDefinitionResponse.prototype, "status", void 0);
     return GetSchemaByDefinitionResponse;
-}(SpeakeasyBase));
-export { GetSchemaByDefinitionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSchemaByDefinitionResponse = GetSchemaByDefinitionResponse;

@@ -104,20 +104,20 @@ export class GetWorkspaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getWorkspace200ApplicationJsonObject?: GetWorkspace200ApplicationJson;
+  getWorkspace200ApplicationJSONObject?: GetWorkspace200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getWorkspace401ApplicationJsonObject?: GetWorkspace401ApplicationJson;
+  getWorkspace401ApplicationJSONObject?: GetWorkspace401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getWorkspace403ApplicationJsonObject?: GetWorkspace403ApplicationJson;
+  getWorkspace403ApplicationJSONObject?: GetWorkspace403ApplicationJson;
 
   @SpeakeasyMetadata()
-  getWorkspace404ApplicationJsonObject?: GetWorkspace404ApplicationJson;
+  getWorkspace404ApplicationJSONObject?: GetWorkspace404ApplicationJson;
 
   @SpeakeasyMetadata()
-  getWorkspace422ApplicationJsonObject?: GetWorkspace422ApplicationJson;
+  getWorkspace422ApplicationJSONObject?: GetWorkspace422ApplicationJson;
 
   @SpeakeasyMetadata()
-  getWorkspace500ApplicationJsonObject?: GetWorkspace500ApplicationJson;
+  getWorkspace500ApplicationJSONObject?: GetWorkspace500ApplicationJson;
 }

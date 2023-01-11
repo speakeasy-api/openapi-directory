@@ -51,5 +51,5 @@ export class ClaimIntoOrganizationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  claimIntoOrganization200ApplicationJsonObject?: Map<string, any>;
+  claimIntoOrganization200ApplicationJSONObject?: Record<string, any>;
 }

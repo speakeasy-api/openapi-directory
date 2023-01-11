@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Color } from "./color";
-import { ColorStyle } from "./colorstyle";
-import { TextPosition } from "./textposition";
-import { TextFormat } from "./textformat";
-export var BaselineValueFormatComparisonTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BaselineValueFormat = exports.BaselineValueFormatComparisonTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var color_1 = require("./color");
+var colorstyle_1 = require("./colorstyle");
+var textposition_1 = require("./textposition");
+var textformat_1 = require("./textformat");
+var BaselineValueFormatComparisonTypeEnum;
 (function (BaselineValueFormatComparisonTypeEnum) {
     BaselineValueFormatComparisonTypeEnum["ComparisonTypeUndefined"] = "COMPARISON_TYPE_UNDEFINED";
     BaselineValueFormatComparisonTypeEnum["AbsoluteDifference"] = "ABSOLUTE_DIFFERENCE";
     BaselineValueFormatComparisonTypeEnum["PercentageDifference"] = "PERCENTAGE_DIFFERENCE";
-})(BaselineValueFormatComparisonTypeEnum || (BaselineValueFormatComparisonTypeEnum = {}));
+})(BaselineValueFormatComparisonTypeEnum = exports.BaselineValueFormatComparisonTypeEnum || (exports.BaselineValueFormatComparisonTypeEnum = {}));
 // BaselineValueFormat
 /**
  * Formatting options for baseline value.
@@ -43,37 +46,37 @@ var BaselineValueFormat = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparisonType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparisonType" }),
         __metadata("design:type", String)
     ], BaselineValueFormat.prototype, "comparisonType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], BaselineValueFormat.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=negativeColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=negativeColor" }),
+        __metadata("design:type", color_1.Color)
     ], BaselineValueFormat.prototype, "negativeColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=negativeColorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=negativeColorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], BaselineValueFormat.prototype, "negativeColorStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=position" }),
-        __metadata("design:type", TextPosition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=position" }),
+        __metadata("design:type", textposition_1.TextPosition)
     ], BaselineValueFormat.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=positiveColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=positiveColor" }),
+        __metadata("design:type", color_1.Color)
     ], BaselineValueFormat.prototype, "positiveColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=positiveColorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=positiveColorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], BaselineValueFormat.prototype, "positiveColorStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textFormat" }),
-        __metadata("design:type", TextFormat)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textFormat" }),
+        __metadata("design:type", textformat_1.TextFormat)
     ], BaselineValueFormat.prototype, "textFormat", void 0);
     return BaselineValueFormat;
-}(SpeakeasyBase));
-export { BaselineValueFormat };
+}(utils_1.SpeakeasyBase));
+exports.BaselineValueFormat = BaselineValueFormat;

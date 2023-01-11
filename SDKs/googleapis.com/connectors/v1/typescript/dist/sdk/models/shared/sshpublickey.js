@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Secret } from "./secret";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SshPublicKey = void 0;
+var utils_1 = require("../../../internal/utils");
+var secret_1 = require("./secret");
 // SshPublicKey
 /**
  * Parameters to support Ssh public key Authentication.
@@ -34,21 +37,21 @@ var SshPublicKey = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certType" }),
         __metadata("design:type", String)
     ], SshPublicKey.prototype, "certType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sshClientCert" }),
-        __metadata("design:type", Secret)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sshClientCert" }),
+        __metadata("design:type", secret_1.Secret)
     ], SshPublicKey.prototype, "sshClientCert", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sshClientCertPass" }),
-        __metadata("design:type", Secret)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sshClientCertPass" }),
+        __metadata("design:type", secret_1.Secret)
     ], SshPublicKey.prototype, "sshClientCertPass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], SshPublicKey.prototype, "username", void 0);
     return SshPublicKey;
-}(SpeakeasyBase));
-export { SshPublicKey };
+}(utils_1.SpeakeasyBase));
+exports.SshPublicKey = SshPublicKey;

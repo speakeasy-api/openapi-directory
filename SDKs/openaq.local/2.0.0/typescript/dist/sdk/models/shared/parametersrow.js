@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ParametersRow = void 0;
+var utils_1 = require("../../../internal/utils");
 var ParametersRow = /** @class */ (function (_super) {
     __extends(ParametersRow, _super);
     function ParametersRow() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ParametersRow.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], ParametersRow.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ParametersRow.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isCore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isCore" }),
         __metadata("design:type", Boolean)
     ], ParametersRow.prototype, "isCore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxColorValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxColorValue" }),
         __metadata("design:type", Number)
     ], ParametersRow.prototype, "maxColorValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ParametersRow.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferredUnit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferredUnit" }),
         __metadata("design:type", String)
     ], ParametersRow.prototype, "preferredUnit", void 0);
     return ParametersRow;
-}(SpeakeasyBase));
-export { ParametersRow };
+}(utils_1.SpeakeasyBase));
+exports.ParametersRow = ParametersRow;

@@ -1,6 +1,9 @@
-export var PermissionsEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PermissionsEnum = void 0;
+var PermissionsEnum;
 (function (PermissionsEnum) {
     PermissionsEnum["Owner"] = "owner";
     PermissionsEnum["ReadWrite"] = "read-write";
     PermissionsEnum["ReadOnly"] = "read-only";
-})(PermissionsEnum || (PermissionsEnum = {}));
+})(PermissionsEnum = exports.PermissionsEnum || (exports.PermissionsEnum = {}));

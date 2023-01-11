@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ConnectionState extends SpeakeasyBase {
     connectionId: string;
-    state?: Map<string, any>;
+    state?: Record<string, any>;
 }

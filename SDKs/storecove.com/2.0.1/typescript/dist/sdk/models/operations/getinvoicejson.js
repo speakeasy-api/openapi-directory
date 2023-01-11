@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetInvoiceJsonResponse = exports.GetInvoiceJsonRequest = exports.GetInvoiceJsonQueryParams = exports.GetInvoiceJsonPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetInvoiceJsonPathParams = /** @class */ (function (_super) {
     __extends(GetInvoiceJsonPathParams, _super);
     function GetInvoiceJsonPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=guid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=guid" }),
         __metadata("design:type", String)
     ], GetInvoiceJsonPathParams.prototype, "guid", void 0);
     return GetInvoiceJsonPathParams;
-}(SpeakeasyBase));
-export { GetInvoiceJsonPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetInvoiceJsonPathParams = GetInvoiceJsonPathParams;
 var GetInvoiceJsonQueryParams = /** @class */ (function (_super) {
     __extends(GetInvoiceJsonQueryParams, _super);
     function GetInvoiceJsonQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pmv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pmv" }),
         __metadata("design:type", String)
     ], GetInvoiceJsonQueryParams.prototype, "pmv", void 0);
     return GetInvoiceJsonQueryParams;
-}(SpeakeasyBase));
-export { GetInvoiceJsonQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetInvoiceJsonQueryParams = GetInvoiceJsonQueryParams;
 var GetInvoiceJsonRequest = /** @class */ (function (_super) {
     __extends(GetInvoiceJsonRequest, _super);
     function GetInvoiceJsonRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetInvoiceJsonPathParams)
     ], GetInvoiceJsonRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetInvoiceJsonQueryParams)
     ], GetInvoiceJsonRequest.prototype, "queryParams", void 0);
     return GetInvoiceJsonRequest;
-}(SpeakeasyBase));
-export { GetInvoiceJsonRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetInvoiceJsonRequest = GetInvoiceJsonRequest;
 var GetInvoiceJsonResponse = /** @class */ (function (_super) {
     __extends(GetInvoiceJsonResponse, _super);
     function GetInvoiceJsonResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetInvoiceJsonResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetInvoiceJsonResponse.prototype, "purchaseInvoice", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetInvoiceJsonResponse.prototype, "statusCode", void 0);
     return GetInvoiceJsonResponse;
-}(SpeakeasyBase));
-export { GetInvoiceJsonResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetInvoiceJsonResponse = GetInvoiceJsonResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AllowsUnencryptedObjectUploadsEnum } from "./allowsunencryptedobjectuploadsenum";
-import { ServerSideEncryption } from "./serversideencryption";
-import { S3BucketOwner } from "./s3bucketowner";
-import { BucketPublicAccess } from "./bucketpublicaccess";
-import { KeyValuePair } from "./keyvaluepair";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3Bucket = void 0;
+var utils_1 = require("../../../internal/utils");
+var allowsunencryptedobjectuploadsenum_1 = require("./allowsunencryptedobjectuploadsenum");
+var serversideencryption_1 = require("./serversideencryption");
+var s3bucketowner_1 = require("./s3bucketowner");
+var bucketpublicaccess_1 = require("./bucketpublicaccess");
+var keyvaluepair_1 = require("./keyvaluepair");
 // S3Bucket
 /**
  * Provides information about the S3 bucket that a finding applies to.
@@ -38,37 +41,37 @@ var S3Bucket = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowsUnencryptedObjectUploads" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowsUnencryptedObjectUploads" }),
         __metadata("design:type", String)
     ], S3Bucket.prototype, "allowsUnencryptedObjectUploads", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], S3Bucket.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], S3Bucket.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultServerSideEncryption" }),
-        __metadata("design:type", ServerSideEncryption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultServerSideEncryption" }),
+        __metadata("design:type", serversideencryption_1.ServerSideEncryption)
     ], S3Bucket.prototype, "defaultServerSideEncryption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], S3Bucket.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner" }),
-        __metadata("design:type", S3BucketOwner)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
+        __metadata("design:type", s3bucketowner_1.S3BucketOwner)
     ], S3Bucket.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicAccess" }),
-        __metadata("design:type", BucketPublicAccess)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicAccess" }),
+        __metadata("design:type", bucketpublicaccess_1.BucketPublicAccess)
     ], S3Bucket.prototype, "publicAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: KeyValuePair }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: keyvaluepair_1.KeyValuePair }),
         __metadata("design:type", Array)
     ], S3Bucket.prototype, "tags", void 0);
     return S3Bucket;
-}(SpeakeasyBase));
-export { S3Bucket };
+}(utils_1.SpeakeasyBase));
+exports.S3Bucket = S3Bucket;

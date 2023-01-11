@@ -188,23 +188,23 @@ export class AlsfcResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  alsfc400ApplicationJsonObject?: Alsfc400ApplicationJson;
+  alsfc400ApplicationJSONObject?: Alsfc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  alsfc401ApplicationJsonObject?: Alsfc401ApplicationJson;
+  alsfc401ApplicationJSONObject?: Alsfc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  alsfc404ApplicationJsonObject?: Alsfc404ApplicationJson;
+  alsfc404ApplicationJSONObject?: Alsfc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  alsfc500ApplicationJsonObject?: Alsfc500ApplicationJson;
+  alsfc500ApplicationJSONObject?: Alsfc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  alsfc502ApplicationJsonObject?: Alsfc502ApplicationJson;
+  alsfc502ApplicationJSONObject?: Alsfc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  alsfc503ApplicationJsonObject?: Alsfc503ApplicationJson;
+  alsfc503ApplicationJSONObject?: Alsfc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  alsfc504ApplicationJsonObject?: Alsfc504ApplicationJson;
+  alsfc504ApplicationJSONObject?: Alsfc504ApplicationJson;
 }

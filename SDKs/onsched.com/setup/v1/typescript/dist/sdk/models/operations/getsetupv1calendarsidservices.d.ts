@@ -12,6 +12,6 @@ export declare class GetSetupV1CalendarsIdServicesRequest extends SpeakeasyBase 
 }
 export declare class GetSetupV1CalendarsIdServicesResponse extends SpeakeasyBase {
     contentType: string;
-    serviceListViewModel?: Map<string, any>;
+    serviceListViewModel?: Record<string, any>;
     statusCode: number;
 }

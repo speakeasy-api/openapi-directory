@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountLevelPermissions } from "./accountlevelpermissions";
-import { BucketLevelPermissions } from "./bucketlevelpermissions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BucketPermissionConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountlevelpermissions_1 = require("./accountlevelpermissions");
+var bucketlevelpermissions_1 = require("./bucketlevelpermissions");
 // BucketPermissionConfiguration
 /**
  * Provides information about the account-level and bucket-level permissions settings for an S3 bucket.
@@ -35,13 +38,13 @@ var BucketPermissionConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountLevelPermissions" }),
-        __metadata("design:type", AccountLevelPermissions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountLevelPermissions" }),
+        __metadata("design:type", accountlevelpermissions_1.AccountLevelPermissions)
     ], BucketPermissionConfiguration.prototype, "accountLevelPermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketLevelPermissions" }),
-        __metadata("design:type", BucketLevelPermissions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketLevelPermissions" }),
+        __metadata("design:type", bucketlevelpermissions_1.BucketLevelPermissions)
     ], BucketPermissionConfiguration.prototype, "bucketLevelPermissions", void 0);
     return BucketPermissionConfiguration;
-}(SpeakeasyBase));
-export { BucketPermissionConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.BucketPermissionConfiguration = BucketPermissionConfiguration;

@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomerProfileEvaluationEnumStatusEnum = void 0;
+var CustomerProfileEvaluationEnumStatusEnum;
+(function (CustomerProfileEvaluationEnumStatusEnum) {
+    CustomerProfileEvaluationEnumStatusEnum["Compliant"] = "compliant";
+    CustomerProfileEvaluationEnumStatusEnum["Noncompliant"] = "noncompliant";
+})(CustomerProfileEvaluationEnumStatusEnum = exports.CustomerProfileEvaluationEnumStatusEnum || (exports.CustomerProfileEvaluationEnumStatusEnum = {}));

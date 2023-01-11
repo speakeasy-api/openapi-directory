@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceTypeEnum } from "./resourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MonitoredResourceInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcetypeenum_1 = require("./resourcetypeenum");
 // MonitoredResourceInfo
 /**
  * <p>Describes resource being monitored by an alarm.</p> <p>An alarm is a way to monitor your Amazon Lightsail resource metrics. For more information, see <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-alarms">Alarms in Amazon Lightsail</a>.</p>
@@ -34,17 +37,17 @@ var MonitoredResourceInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], MonitoredResourceInfo.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], MonitoredResourceInfo.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], MonitoredResourceInfo.prototype, "resourceType", void 0);
     return MonitoredResourceInfo;
-}(SpeakeasyBase));
-export { MonitoredResourceInfo };
+}(utils_1.SpeakeasyBase));
+exports.MonitoredResourceInfo = MonitoredResourceInfo;

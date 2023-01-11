@@ -19,7 +19,7 @@ export declare class DeleteTagsRequest extends SpeakeasyBase {
 }
 export declare class DeleteTagsResponse extends SpeakeasyBase {
     contentType: string;
-    deleteTagsResult?: Map<string, any>;
+    deleteTagsResult?: Record<string, any>;
     invalidParameterValuesException?: any;
     resourceNotFoundException?: any;
     statusCode: number;

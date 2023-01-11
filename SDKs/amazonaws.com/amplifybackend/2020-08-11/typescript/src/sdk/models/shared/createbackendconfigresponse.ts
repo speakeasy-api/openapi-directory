@@ -4,14 +4,14 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class CreateBackendConfigResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AppId" })
-  appId?: string;
+  appId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=BackendEnvironmentName" })
-  backendEnvironmentName?: string;
+  backendEnvironmentName?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=JobId" })
-  jobId?: string;
+  jobId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Status" })
-  status?: string;
+  status?: Record<string, any>;
 }

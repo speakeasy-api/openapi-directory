@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArrayPropertiesSummary } from "./arraypropertiessummary";
-import { ContainerSummary } from "./containersummary";
-import { NodePropertiesSummary } from "./nodepropertiessummary";
-import { JobStatusEnum } from "./jobstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var arraypropertiessummary_1 = require("./arraypropertiessummary");
+var containersummary_1 = require("./containersummary");
+var nodepropertiessummary_1 = require("./nodepropertiessummary");
+var jobstatusenum_1 = require("./jobstatusenum");
 // JobSummary
 /**
  * An object representing summary details of a job.
@@ -37,53 +40,53 @@ var JobSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arrayProperties" }),
-        __metadata("design:type", ArrayPropertiesSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arrayProperties" }),
+        __metadata("design:type", arraypropertiessummary_1.ArrayPropertiesSummary)
     ], JobSummary.prototype, "arrayProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=container" }),
-        __metadata("design:type", ContainerSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=container" }),
+        __metadata("design:type", containersummary_1.ContainerSummary)
     ], JobSummary.prototype, "container", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Number)
     ], JobSummary.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobArn" }),
         __metadata("design:type", String)
     ], JobSummary.prototype, "jobArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobDefinition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobDefinition" }),
         __metadata("design:type", String)
     ], JobSummary.prototype, "jobDefinition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobId" }),
         __metadata("design:type", String)
     ], JobSummary.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobName" }),
         __metadata("design:type", String)
     ], JobSummary.prototype, "jobName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeProperties" }),
-        __metadata("design:type", NodePropertiesSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeProperties" }),
+        __metadata("design:type", nodepropertiessummary_1.NodePropertiesSummary)
     ], JobSummary.prototype, "nodeProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startedAt" }),
         __metadata("design:type", Number)
     ], JobSummary.prototype, "startedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], JobSummary.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusReason" }),
         __metadata("design:type", String)
     ], JobSummary.prototype, "statusReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stoppedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stoppedAt" }),
         __metadata("design:type", Number)
     ], JobSummary.prototype, "stoppedAt", void 0);
     return JobSummary;
-}(SpeakeasyBase));
-export { JobSummary };
+}(utils_1.SpeakeasyBase));
+exports.JobSummary = JobSummary;

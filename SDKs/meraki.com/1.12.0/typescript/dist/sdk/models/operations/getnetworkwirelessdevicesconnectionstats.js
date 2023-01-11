@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,93 +23,95 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkWirelessDevicesConnectionStatsResponse = exports.GetNetworkWirelessDevicesConnectionStatsRequest = exports.GetNetworkWirelessDevicesConnectionStatsQueryParams = exports.GetNetworkWirelessDevicesConnectionStatsBandEnum = exports.GetNetworkWirelessDevicesConnectionStatsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkWirelessDevicesConnectionStatsPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessDevicesConnectionStatsPathParams, _super);
     function GetNetworkWirelessDevicesConnectionStatsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessDevicesConnectionStatsPathParams.prototype, "networkId", void 0);
     return GetNetworkWirelessDevicesConnectionStatsPathParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessDevicesConnectionStatsPathParams };
-export var GetNetworkWirelessDevicesConnectionStatsBandEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessDevicesConnectionStatsPathParams = GetNetworkWirelessDevicesConnectionStatsPathParams;
+var GetNetworkWirelessDevicesConnectionStatsBandEnum;
 (function (GetNetworkWirelessDevicesConnectionStatsBandEnum) {
     GetNetworkWirelessDevicesConnectionStatsBandEnum["Two4"] = "2.4";
     GetNetworkWirelessDevicesConnectionStatsBandEnum["Five"] = "5";
-})(GetNetworkWirelessDevicesConnectionStatsBandEnum || (GetNetworkWirelessDevicesConnectionStatsBandEnum = {}));
+})(GetNetworkWirelessDevicesConnectionStatsBandEnum = exports.GetNetworkWirelessDevicesConnectionStatsBandEnum || (exports.GetNetworkWirelessDevicesConnectionStatsBandEnum = {}));
 var GetNetworkWirelessDevicesConnectionStatsQueryParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessDevicesConnectionStatsQueryParams, _super);
     function GetNetworkWirelessDevicesConnectionStatsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=apTag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=apTag" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessDevicesConnectionStatsQueryParams.prototype, "apTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=band" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=band" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessDevicesConnectionStatsQueryParams.prototype, "band", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ssid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ssid" }),
         __metadata("design:type", Number)
     ], GetNetworkWirelessDevicesConnectionStatsQueryParams.prototype, "ssid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t0" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessDevicesConnectionStatsQueryParams.prototype, "t0", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t1" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessDevicesConnectionStatsQueryParams.prototype, "t1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timespan" }),
         __metadata("design:type", Number)
     ], GetNetworkWirelessDevicesConnectionStatsQueryParams.prototype, "timespan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=vlan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=vlan" }),
         __metadata("design:type", Number)
     ], GetNetworkWirelessDevicesConnectionStatsQueryParams.prototype, "vlan", void 0);
     return GetNetworkWirelessDevicesConnectionStatsQueryParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessDevicesConnectionStatsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessDevicesConnectionStatsQueryParams = GetNetworkWirelessDevicesConnectionStatsQueryParams;
 var GetNetworkWirelessDevicesConnectionStatsRequest = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessDevicesConnectionStatsRequest, _super);
     function GetNetworkWirelessDevicesConnectionStatsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessDevicesConnectionStatsPathParams)
     ], GetNetworkWirelessDevicesConnectionStatsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessDevicesConnectionStatsQueryParams)
     ], GetNetworkWirelessDevicesConnectionStatsRequest.prototype, "queryParams", void 0);
     return GetNetworkWirelessDevicesConnectionStatsRequest;
-}(SpeakeasyBase));
-export { GetNetworkWirelessDevicesConnectionStatsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessDevicesConnectionStatsRequest = GetNetworkWirelessDevicesConnectionStatsRequest;
 var GetNetworkWirelessDevicesConnectionStatsResponse = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessDevicesConnectionStatsResponse, _super);
     function GetNetworkWirelessDevicesConnectionStatsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkWirelessDevicesConnectionStatsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkWirelessDevicesConnectionStatsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkWirelessDevicesConnectionStatsResponse.prototype, "getNetworkWirelessDevicesConnectionStats200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkWirelessDevicesConnectionStatsResponse.prototype, "getNetworkWirelessDevicesConnectionStats200ApplicationJSONObject", void 0);
     return GetNetworkWirelessDevicesConnectionStatsResponse;
-}(SpeakeasyBase));
-export { GetNetworkWirelessDevicesConnectionStatsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessDevicesConnectionStatsResponse = GetNetworkWirelessDevicesConnectionStatsResponse;

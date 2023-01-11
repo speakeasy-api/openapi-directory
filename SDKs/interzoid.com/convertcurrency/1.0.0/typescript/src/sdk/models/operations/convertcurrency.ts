@@ -46,5 +46,5 @@ export class ConvertcurrencyResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  convertcurrency200ApplicationJsonObject?: Convertcurrency200ApplicationJson;
+  convertcurrency200ApplicationJSONObject?: Convertcurrency200ApplicationJson;
 }

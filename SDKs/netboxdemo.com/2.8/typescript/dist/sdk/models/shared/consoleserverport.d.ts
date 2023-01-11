@@ -45,7 +45,7 @@ export declare class ConsoleServerPortType extends SpeakeasyBase {
 }
 export declare class ConsoleServerPort extends SpeakeasyBase {
     cable?: NestedCable;
-    connectedEndpoint?: Map<string, string>;
+    connectedEndpoint?: Record<string, string>;
     connectedEndpointType?: string;
     connectionStatus?: ConsoleServerPortConnectionStatus;
     description?: string;

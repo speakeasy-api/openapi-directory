@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,74 +14,99 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetV3ProductsResponse = exports.GetV3ProductsRequest = exports.GetV3ProductsHeaders = exports.GetV3ProductsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetV3ProductsQueryParams = /** @class */ (function (_super) {
     __extends(GetV3ProductsQueryParams, _super);
     function GetV3ProductsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=fields" }),
         __metadata("design:type", Array)
     ], GetV3ProductsQueryParams.prototype, "fields", void 0);
     return GetV3ProductsQueryParams;
-}(SpeakeasyBase));
-export { GetV3ProductsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetV3ProductsQueryParams = GetV3ProductsQueryParams;
 var GetV3ProductsHeaders = /** @class */ (function (_super) {
     __extends(GetV3ProductsHeaders, _super);
     function GetV3ProductsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Accept-Language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Accept-Language" }),
         __metadata("design:type", String)
     ], GetV3ProductsHeaders.prototype, "acceptLanguage", void 0);
     return GetV3ProductsHeaders;
-}(SpeakeasyBase));
-export { GetV3ProductsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetV3ProductsHeaders = GetV3ProductsHeaders;
 var GetV3ProductsRequest = /** @class */ (function (_super) {
     __extends(GetV3ProductsRequest, _super);
     function GetV3ProductsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetV3ProductsQueryParams)
     ], GetV3ProductsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetV3ProductsHeaders)
     ], GetV3ProductsRequest.prototype, "headers", void 0);
     return GetV3ProductsRequest;
-}(SpeakeasyBase));
-export { GetV3ProductsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetV3ProductsRequest = GetV3ProductsRequest;
 var GetV3ProductsResponse = /** @class */ (function (_super) {
     __extends(GetV3ProductsResponse, _super);
     function GetV3ProductsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetV3ProductsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ProductsResult)
     ], GetV3ProductsResponse.prototype, "productsResult", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetV3ProductsResponse.prototype, "statusCode", void 0);
     return GetV3ProductsResponse;
-}(SpeakeasyBase));
-export { GetV3ProductsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetV3ProductsResponse = GetV3ProductsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateCaseRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateCaseRequest = /** @class */ (function (_super) {
     __extends(CreateCaseRequest, _super);
     function CreateCaseRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attachmentSetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attachmentSetId" }),
         __metadata("design:type", String)
     ], CreateCaseRequest.prototype, "attachmentSetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryCode" }),
         __metadata("design:type", String)
     ], CreateCaseRequest.prototype, "categoryCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ccEmailAddresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ccEmailAddresses" }),
         __metadata("design:type", Array)
     ], CreateCaseRequest.prototype, "ccEmailAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=communicationBody" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=communicationBody" }),
         __metadata("design:type", String)
     ], CreateCaseRequest.prototype, "communicationBody", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issueType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issueType" }),
         __metadata("design:type", String)
     ], CreateCaseRequest.prototype, "issueType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], CreateCaseRequest.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceCode" }),
         __metadata("design:type", String)
     ], CreateCaseRequest.prototype, "serviceCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=severityCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=severityCode" }),
         __metadata("design:type", String)
     ], CreateCaseRequest.prototype, "severityCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subject" }),
         __metadata("design:type", String)
     ], CreateCaseRequest.prototype, "subject", void 0);
     return CreateCaseRequest;
-}(SpeakeasyBase));
-export { CreateCaseRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateCaseRequest = CreateCaseRequest;

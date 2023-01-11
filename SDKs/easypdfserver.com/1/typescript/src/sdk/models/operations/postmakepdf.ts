@@ -25,8 +25,8 @@ export class PostMakePdfResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postMakePdf200ApplicationPdfBinaryString?: Uint8Array;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postMakePdf200ApplicationPdfBinaryString?: Uint8Array;
 }

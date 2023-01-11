@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeSubnetsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeSubnetsResponse = exports.PostDescribeSubnetsRequest = exports.PostDescribeSubnetsHeaders = exports.PostDescribeSubnetsQueryParams = exports.PostDescribeSubnetsVersionEnum = exports.PostDescribeSubnetsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeSubnetsActionEnum;
 (function (PostDescribeSubnetsActionEnum) {
     PostDescribeSubnetsActionEnum["DescribeSubnets"] = "DescribeSubnets";
-})(PostDescribeSubnetsActionEnum || (PostDescribeSubnetsActionEnum = {}));
-export var PostDescribeSubnetsVersionEnum;
+})(PostDescribeSubnetsActionEnum = exports.PostDescribeSubnetsActionEnum || (exports.PostDescribeSubnetsActionEnum = {}));
+var PostDescribeSubnetsVersionEnum;
 (function (PostDescribeSubnetsVersionEnum) {
     PostDescribeSubnetsVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostDescribeSubnetsVersionEnum || (PostDescribeSubnetsVersionEnum = {}));
+})(PostDescribeSubnetsVersionEnum = exports.PostDescribeSubnetsVersionEnum || (exports.PostDescribeSubnetsVersionEnum = {}));
 var PostDescribeSubnetsQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeSubnetsQueryParams, _super);
     function PostDescribeSubnetsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeSubnetsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
         __metadata("design:type", String)
     ], PostDescribeSubnetsQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], PostDescribeSubnetsQueryParams.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeSubnetsQueryParams.prototype, "version", void 0);
     return PostDescribeSubnetsQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeSubnetsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeSubnetsQueryParams = PostDescribeSubnetsQueryParams;
 var PostDescribeSubnetsHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeSubnetsHeaders, _super);
     function PostDescribeSubnetsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeSubnetsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeSubnetsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeSubnetsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeSubnetsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeSubnetsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeSubnetsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeSubnetsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeSubnetsHeaders;
-}(SpeakeasyBase));
-export { PostDescribeSubnetsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeSubnetsHeaders = PostDescribeSubnetsHeaders;
 var PostDescribeSubnetsRequest = /** @class */ (function (_super) {
     __extends(PostDescribeSubnetsRequest, _super);
     function PostDescribeSubnetsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeSubnetsQueryParams)
     ], PostDescribeSubnetsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeSubnetsHeaders)
     ], PostDescribeSubnetsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeSubnetsRequest.prototype, "request", void 0);
     return PostDescribeSubnetsRequest;
-}(SpeakeasyBase));
-export { PostDescribeSubnetsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeSubnetsRequest = PostDescribeSubnetsRequest;
 var PostDescribeSubnetsResponse = /** @class */ (function (_super) {
     __extends(PostDescribeSubnetsResponse, _super);
     function PostDescribeSubnetsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeSubnetsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeSubnetsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeSubnetsResponse.prototype, "statusCode", void 0);
     return PostDescribeSubnetsResponse;
-}(SpeakeasyBase));
-export { PostDescribeSubnetsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeSubnetsResponse = PostDescribeSubnetsResponse;

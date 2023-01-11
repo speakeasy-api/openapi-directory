@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Monatsbeleg = void 0;
+var utils_1 = require("../../../internal/utils");
 var Monatsbeleg = /** @class */ (function (_super) {
     __extends(Monatsbeleg, _super);
     function Monatsbeleg() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Beleg-UUID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Beleg-UUID" }),
         __metadata("design:type", String)
-    ], Monatsbeleg.prototype, "belegUuid", void 0);
+    ], Monatsbeleg.prototype, "belegUUID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FON-Geprueft-Datum-Uhrzeit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FON-Geprueft-Datum-Uhrzeit" }),
         __metadata("design:type", String)
     ], Monatsbeleg.prototype, "fonGeprueftDatumUhrzeit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FON-Geprueft-Erfolgreich" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FON-Geprueft-Erfolgreich" }),
         __metadata("design:type", Boolean)
     ], Monatsbeleg.prototype, "fonGeprueftErfolgreich", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Jahr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Jahr" }),
         __metadata("design:type", Number)
     ], Monatsbeleg.prototype, "jahr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Monat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Monat" }),
         __metadata("design:type", Number)
     ], Monatsbeleg.prototype, "monat", void 0);
     return Monatsbeleg;
-}(SpeakeasyBase));
-export { Monatsbeleg };
+}(utils_1.SpeakeasyBase));
+exports.Monatsbeleg = Monatsbeleg;

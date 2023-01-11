@@ -10,5 +10,5 @@ export class PredictInput extends SpeakeasyBase {
   predictEndpoint: string;
 
   @SpeakeasyMetadata({ data: "json, name=Record" })
-  record: Map<string, string>;
+  record: Record<string, string>;
 }

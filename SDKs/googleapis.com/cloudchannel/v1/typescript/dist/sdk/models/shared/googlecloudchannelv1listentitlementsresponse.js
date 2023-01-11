@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1Entitlement } from "./googlecloudchannelv1entitlement";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1ListEntitlementsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1entitlement_1 = require("./googlecloudchannelv1entitlement");
 // GoogleCloudChannelV1ListEntitlementsResponse
 /**
  * Response message for CloudChannelService.ListEntitlements.
@@ -34,13 +37,13 @@ var GoogleCloudChannelV1ListEntitlementsResponse = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entitlements", elemType: GoogleCloudChannelV1Entitlement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entitlements", elemType: googlecloudchannelv1entitlement_1.GoogleCloudChannelV1Entitlement }),
         __metadata("design:type", Array)
     ], GoogleCloudChannelV1ListEntitlementsResponse.prototype, "entitlements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1ListEntitlementsResponse.prototype, "nextPageToken", void 0);
     return GoogleCloudChannelV1ListEntitlementsResponse;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1ListEntitlementsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1ListEntitlementsResponse = GoogleCloudChannelV1ListEntitlementsResponse;

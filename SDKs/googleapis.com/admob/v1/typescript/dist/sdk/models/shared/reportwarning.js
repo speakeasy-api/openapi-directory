@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ReportWarningTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportWarning = exports.ReportWarningTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ReportWarningTypeEnum;
 (function (ReportWarningTypeEnum) {
     ReportWarningTypeEnum["TypeUnspecified"] = "TYPE_UNSPECIFIED";
     ReportWarningTypeEnum["DataBeforeAccountTimezoneChange"] = "DATA_BEFORE_ACCOUNT_TIMEZONE_CHANGE";
     ReportWarningTypeEnum["DataDelayed"] = "DATA_DELAYED";
     ReportWarningTypeEnum["Other"] = "OTHER";
     ReportWarningTypeEnum["ReportCurrencyNotAccountCurrency"] = "REPORT_CURRENCY_NOT_ACCOUNT_CURRENCY";
-})(ReportWarningTypeEnum || (ReportWarningTypeEnum = {}));
+})(ReportWarningTypeEnum = exports.ReportWarningTypeEnum || (exports.ReportWarningTypeEnum = {}));
 // ReportWarning
 /**
  * Warnings associated with generation of the report.
@@ -41,13 +44,13 @@ var ReportWarning = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ReportWarning.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ReportWarning.prototype, "type", void 0);
     return ReportWarning;
-}(SpeakeasyBase));
-export { ReportWarning };
+}(utils_1.SpeakeasyBase));
+exports.ReportWarning = ReportWarning;

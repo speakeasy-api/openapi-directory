@@ -19,7 +19,7 @@ export declare class DeleteDataCatalogRequest extends SpeakeasyBase {
 }
 export declare class DeleteDataCatalogResponse extends SpeakeasyBase {
     contentType: string;
-    deleteDataCatalogOutput?: Map<string, any>;
+    deleteDataCatalogOutput?: Record<string, any>;
     internalServerException?: any;
     invalidRequestException?: any;
     statusCode: number;

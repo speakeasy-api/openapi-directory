@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BackfillAllStrategy } from "./backfillallstrategy";
-import { DestinationConfig } from "./destinationconfig";
-import { Error } from "./error";
-import { SourceConfig } from "./sourceconfig";
-export var StreamStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Stream = exports.StreamInput = exports.StreamStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var backfillallstrategy_1 = require("./backfillallstrategy");
+var destinationconfig_1 = require("./destinationconfig");
+var sourceconfig_1 = require("./sourceconfig");
+var error_1 = require("./error");
+var StreamStateEnum;
 (function (StreamStateEnum) {
     StreamStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     StreamStateEnum["NotStarted"] = "NOT_STARTED";
@@ -38,67 +41,7 @@ export var StreamStateEnum;
     StreamStateEnum["FailedPermanently"] = "FAILED_PERMANENTLY";
     StreamStateEnum["Starting"] = "STARTING";
     StreamStateEnum["Draining"] = "DRAINING";
-})(StreamStateEnum || (StreamStateEnum = {}));
-// Stream
-/**
- * A resource representing streaming data from a source to a destination.
-**/
-var Stream = /** @class */ (function (_super) {
-    __extends(Stream, _super);
-    function Stream() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=backfillAll" }),
-        __metadata("design:type", BackfillAllStrategy)
-    ], Stream.prototype, "backfillAll", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=backfillNone" }),
-        __metadata("design:type", Map)
-    ], Stream.prototype, "backfillNone", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
-        __metadata("design:type", String)
-    ], Stream.prototype, "createTime", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerManagedEncryptionKey" }),
-        __metadata("design:type", String)
-    ], Stream.prototype, "customerManagedEncryptionKey", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationConfig" }),
-        __metadata("design:type", DestinationConfig)
-    ], Stream.prototype, "destinationConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
-        __metadata("design:type", String)
-    ], Stream.prototype, "displayName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: Error }),
-        __metadata("design:type", Array)
-    ], Stream.prototype, "errors", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], Stream.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], Stream.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceConfig" }),
-        __metadata("design:type", SourceConfig)
-    ], Stream.prototype, "sourceConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
-        __metadata("design:type", String)
-    ], Stream.prototype, "state", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
-        __metadata("design:type", String)
-    ], Stream.prototype, "updateTime", void 0);
-    return Stream;
-}(SpeakeasyBase));
-export { Stream };
+})(StreamStateEnum = exports.StreamStateEnum || (exports.StreamStateEnum = {}));
 // StreamInput
 /**
  * A resource representing streaming data from a source to a destination.
@@ -109,37 +52,97 @@ var StreamInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backfillAll" }),
-        __metadata("design:type", BackfillAllStrategy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backfillAll" }),
+        __metadata("design:type", backfillallstrategy_1.BackfillAllStrategy)
     ], StreamInput.prototype, "backfillAll", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backfillNone" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backfillNone" }),
+        __metadata("design:type", Object)
     ], StreamInput.prototype, "backfillNone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerManagedEncryptionKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerManagedEncryptionKey" }),
         __metadata("design:type", String)
     ], StreamInput.prototype, "customerManagedEncryptionKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationConfig" }),
-        __metadata("design:type", DestinationConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationConfig" }),
+        __metadata("design:type", destinationconfig_1.DestinationConfig)
     ], StreamInput.prototype, "destinationConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], StreamInput.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], StreamInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceConfig" }),
-        __metadata("design:type", SourceConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceConfig" }),
+        __metadata("design:type", sourceconfig_1.SourceConfig)
     ], StreamInput.prototype, "sourceConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], StreamInput.prototype, "state", void 0);
     return StreamInput;
-}(SpeakeasyBase));
-export { StreamInput };
+}(utils_1.SpeakeasyBase));
+exports.StreamInput = StreamInput;
+// Stream
+/**
+ * A resource representing streaming data from a source to a destination.
+**/
+var Stream = /** @class */ (function (_super) {
+    __extends(Stream, _super);
+    function Stream() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backfillAll" }),
+        __metadata("design:type", backfillallstrategy_1.BackfillAllStrategy)
+    ], Stream.prototype, "backfillAll", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backfillNone" }),
+        __metadata("design:type", Object)
+    ], Stream.prototype, "backfillNone", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
+        __metadata("design:type", String)
+    ], Stream.prototype, "createTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerManagedEncryptionKey" }),
+        __metadata("design:type", String)
+    ], Stream.prototype, "customerManagedEncryptionKey", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationConfig" }),
+        __metadata("design:type", destinationconfig_1.DestinationConfig)
+    ], Stream.prototype, "destinationConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], Stream.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: error_1.ErrorT }),
+        __metadata("design:type", Array)
+    ], Stream.prototype, "errors", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], Stream.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], Stream.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceConfig" }),
+        __metadata("design:type", sourceconfig_1.SourceConfig)
+    ], Stream.prototype, "sourceConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", String)
+    ], Stream.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
+        __metadata("design:type", String)
+    ], Stream.prototype, "updateTime", void 0);
+    return Stream;
+}(utils_1.SpeakeasyBase));
+exports.Stream = Stream;

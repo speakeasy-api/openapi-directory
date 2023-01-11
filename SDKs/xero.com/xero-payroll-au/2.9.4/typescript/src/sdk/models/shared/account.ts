@@ -5,7 +5,7 @@ import { AccountTypeEnum } from "./accounttypeenum";
 
 export class Account extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AccountID" })
-  accountId?: string;
+  accountID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Code" })
   code?: string;

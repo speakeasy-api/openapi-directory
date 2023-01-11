@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LayerFailureCodeEnum } from "./layerfailurecodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LayerFailure = void 0;
+var utils_1 = require("../../../internal/utils");
+var layerfailurecodeenum_1 = require("./layerfailurecodeenum");
 // LayerFailure
 /**
  * An object representing an Amazon ECR image layer failure.
@@ -34,17 +37,17 @@ var LayerFailure = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureCode" }),
         __metadata("design:type", String)
     ], LayerFailure.prototype, "failureCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureReason" }),
         __metadata("design:type", String)
     ], LayerFailure.prototype, "failureReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=layerDigest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=layerDigest" }),
         __metadata("design:type", String)
     ], LayerFailure.prototype, "layerDigest", void 0);
     return LayerFailure;
-}(SpeakeasyBase));
-export { LayerFailure };
+}(utils_1.SpeakeasyBase));
+exports.LayerFailure = LayerFailure;

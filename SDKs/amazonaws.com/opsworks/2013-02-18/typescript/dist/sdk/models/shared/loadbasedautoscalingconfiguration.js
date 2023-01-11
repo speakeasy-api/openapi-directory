@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoScalingThresholds } from "./autoscalingthresholds";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadBasedAutoScalingConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var autoscalingthresholds_1 = require("./autoscalingthresholds");
 // LoadBasedAutoScalingConfiguration
 /**
  * Describes a layer's load-based auto scaling configuration.
@@ -34,21 +37,21 @@ var LoadBasedAutoScalingConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DownScaling" }),
-        __metadata("design:type", AutoScalingThresholds)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DownScaling" }),
+        __metadata("design:type", autoscalingthresholds_1.AutoScalingThresholds)
     ], LoadBasedAutoScalingConfiguration.prototype, "downScaling", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Enable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Enable" }),
         __metadata("design:type", Boolean)
     ], LoadBasedAutoScalingConfiguration.prototype, "enable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LayerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LayerId" }),
         __metadata("design:type", String)
     ], LoadBasedAutoScalingConfiguration.prototype, "layerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpScaling" }),
-        __metadata("design:type", AutoScalingThresholds)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpScaling" }),
+        __metadata("design:type", autoscalingthresholds_1.AutoScalingThresholds)
     ], LoadBasedAutoScalingConfiguration.prototype, "upScaling", void 0);
     return LoadBasedAutoScalingConfiguration;
-}(SpeakeasyBase));
-export { LoadBasedAutoScalingConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.LoadBasedAutoScalingConfiguration = LoadBasedAutoScalingConfiguration;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NormalizedCoordinate } from "./normalizedcoordinate";
-export var AnimationFadeFadeTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnimationFade = exports.AnimationFadeFadeTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var normalizedcoordinate_1 = require("./normalizedcoordinate");
+var AnimationFadeFadeTypeEnum;
 (function (AnimationFadeFadeTypeEnum) {
     AnimationFadeFadeTypeEnum["FadeTypeUnspecified"] = "FADE_TYPE_UNSPECIFIED";
     AnimationFadeFadeTypeEnum["FadeIn"] = "FADE_IN";
     AnimationFadeFadeTypeEnum["FadeOut"] = "FADE_OUT";
-})(AnimationFadeFadeTypeEnum || (AnimationFadeFadeTypeEnum = {}));
+})(AnimationFadeFadeTypeEnum = exports.AnimationFadeFadeTypeEnum || (exports.AnimationFadeFadeTypeEnum = {}));
 // AnimationFade
 /**
  * Display overlay object with fade animation.
@@ -40,21 +43,21 @@ var AnimationFade = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTimeOffset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTimeOffset" }),
         __metadata("design:type", String)
     ], AnimationFade.prototype, "endTimeOffset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fadeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fadeType" }),
         __metadata("design:type", String)
     ], AnimationFade.prototype, "fadeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTimeOffset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTimeOffset" }),
         __metadata("design:type", String)
     ], AnimationFade.prototype, "startTimeOffset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=xy" }),
-        __metadata("design:type", NormalizedCoordinate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=xy" }),
+        __metadata("design:type", normalizedcoordinate_1.NormalizedCoordinate)
     ], AnimationFade.prototype, "xy", void 0);
     return AnimationFade;
-}(SpeakeasyBase));
-export { AnimationFade };
+}(utils_1.SpeakeasyBase));
+exports.AnimationFade = AnimationFade;

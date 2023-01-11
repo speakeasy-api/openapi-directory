@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AwsCloudMapInstanceAttribute } from "./awscloudmapinstanceattribute";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AwsCloudMapServiceDiscovery = void 0;
+var utils_1 = require("../../../internal/utils");
+var awscloudmapinstanceattribute_1 = require("./awscloudmapinstanceattribute");
 // AwsCloudMapServiceDiscovery
 /**
  * <p>An object that represents the Cloud Map service discovery information for your virtual node.</p> <note> <p>Cloud Map is not available in the eu-south-1 Region.</p> </note>
@@ -34,17 +37,17 @@ var AwsCloudMapServiceDiscovery = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes", elemType: AwsCloudMapInstanceAttribute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes", elemType: awscloudmapinstanceattribute_1.AwsCloudMapInstanceAttribute }),
         __metadata("design:type", Array)
     ], AwsCloudMapServiceDiscovery.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=namespaceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=namespaceName" }),
         __metadata("design:type", String)
     ], AwsCloudMapServiceDiscovery.prototype, "namespaceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceName" }),
         __metadata("design:type", String)
     ], AwsCloudMapServiceDiscovery.prototype, "serviceName", void 0);
     return AwsCloudMapServiceDiscovery;
-}(SpeakeasyBase));
-export { AwsCloudMapServiceDiscovery };
+}(utils_1.SpeakeasyBase));
+exports.AwsCloudMapServiceDiscovery = AwsCloudMapServiceDiscovery;

@@ -8,19 +8,6 @@ export enum FolderLifecycleStateEnum {
 }
 
 
-// FolderInput
-/** 
- * A Folder in an Organization's resource hierarchy, used to organize that Organization's resources.
-**/
-export class FolderInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=displayName" })
-  displayName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=parent" })
-  parent?: string;
-}
-
-
 // Folder
 /** 
  * A Folder in an Organization's resource hierarchy, used to organize that Organization's resources.
@@ -37,6 +24,19 @@ export class Folder extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=parent" })
+  parent?: string;
+}
+
+
+// FolderInput
+/** 
+ * A Folder in an Organization's resource hierarchy, used to organize that Organization's resources.
+**/
+export class FolderInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=displayName" })
+  displayName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=parent" })
   parent?: string;

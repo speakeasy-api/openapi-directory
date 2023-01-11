@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DateRange } from "./daterange";
-import { NetworkReportSpecDimensionFilter } from "./networkreportspecdimensionfilter";
-import { LocalizationSettings } from "./localizationsettings";
-import { NetworkReportSpecSortCondition } from "./networkreportspecsortcondition";
-export var NetworkReportSpecDimensionsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NetworkReportSpec = exports.NetworkReportSpecMetricsEnum = exports.NetworkReportSpecDimensionsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var daterange_1 = require("./daterange");
+var networkreportspecdimensionfilter_1 = require("./networkreportspecdimensionfilter");
+var localizationsettings_1 = require("./localizationsettings");
+var networkreportspecsortcondition_1 = require("./networkreportspecsortcondition");
+var NetworkReportSpecDimensionsEnum;
 (function (NetworkReportSpecDimensionsEnum) {
     NetworkReportSpecDimensionsEnum["DimensionUnspecified"] = "DIMENSION_UNSPECIFIED";
     NetworkReportSpecDimensionsEnum["Date"] = "DATE";
@@ -43,8 +46,8 @@ export var NetworkReportSpecDimensionsEnum;
     NetworkReportSpecDimensionsEnum["GmaSdkVersion"] = "GMA_SDK_VERSION";
     NetworkReportSpecDimensionsEnum["AppVersionName"] = "APP_VERSION_NAME";
     NetworkReportSpecDimensionsEnum["ServingRestriction"] = "SERVING_RESTRICTION";
-})(NetworkReportSpecDimensionsEnum || (NetworkReportSpecDimensionsEnum = {}));
-export var NetworkReportSpecMetricsEnum;
+})(NetworkReportSpecDimensionsEnum = exports.NetworkReportSpecDimensionsEnum || (exports.NetworkReportSpecDimensionsEnum = {}));
+var NetworkReportSpecMetricsEnum;
 (function (NetworkReportSpecMetricsEnum) {
     NetworkReportSpecMetricsEnum["MetricUnspecified"] = "METRIC_UNSPECIFIED";
     NetworkReportSpecMetricsEnum["AdRequests"] = "AD_REQUESTS";
@@ -56,7 +59,7 @@ export var NetworkReportSpecMetricsEnum;
     NetworkReportSpecMetricsEnum["MatchedRequests"] = "MATCHED_REQUESTS";
     NetworkReportSpecMetricsEnum["MatchRate"] = "MATCH_RATE";
     NetworkReportSpecMetricsEnum["ShowRate"] = "SHOW_RATE";
-})(NetworkReportSpecMetricsEnum || (NetworkReportSpecMetricsEnum = {}));
+})(NetworkReportSpecMetricsEnum = exports.NetworkReportSpecMetricsEnum || (exports.NetworkReportSpecMetricsEnum = {}));
 // NetworkReportSpec
 /**
  * The specification for generating an AdMob Network report. For example, the specification to get clicks and estimated earnings for only the 'US' and 'CN' countries can look like the following example: { 'date_range': { 'start_date': {'year': 2021, 'month': 9, 'day': 1}, 'end_date': {'year': 2021, 'month': 9, 'day': 30} }, 'dimensions': ['DATE', 'APP', 'COUNTRY'], 'metrics': ['CLICKS', 'ESTIMATED_EARNINGS'], 'dimension_filters': [ { 'dimension': 'COUNTRY', 'matches_any': {'values': [{'value': 'US', 'value': 'CN'}]} } ], 'sort_conditions': [ {'dimension':'APP', order: 'ASCENDING'}, {'metric':'CLICKS', order: 'DESCENDING'} ], 'localization_settings': { 'currency_code': 'USD', 'language_code': 'en-US' } } For a better understanding, you can treat the preceding specification like the following pseudo SQL: SELECT DATE, APP, COUNTRY, CLICKS, ESTIMATED_EARNINGS FROM NETWORK_REPORT WHERE DATE >= '2021-09-01' AND DATE <= '2021-09-30' AND COUNTRY IN ('US', 'CN') GROUP BY DATE, APP, COUNTRY ORDER BY APP ASC, CLICKS DESC;
@@ -67,37 +70,37 @@ var NetworkReportSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateRange" }),
-        __metadata("design:type", DateRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateRange" }),
+        __metadata("design:type", daterange_1.DateRange)
     ], NetworkReportSpec.prototype, "dateRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensionFilters", elemType: NetworkReportSpecDimensionFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensionFilters", elemType: networkreportspecdimensionfilter_1.NetworkReportSpecDimensionFilter }),
         __metadata("design:type", Array)
     ], NetworkReportSpec.prototype, "dimensionFilters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensions" }),
         __metadata("design:type", Array)
     ], NetworkReportSpec.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localizationSettings" }),
-        __metadata("design:type", LocalizationSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localizationSettings" }),
+        __metadata("design:type", localizationsettings_1.LocalizationSettings)
     ], NetworkReportSpec.prototype, "localizationSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxReportRows" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxReportRows" }),
         __metadata("design:type", Number)
     ], NetworkReportSpec.prototype, "maxReportRows", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics" }),
         __metadata("design:type", Array)
     ], NetworkReportSpec.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortConditions", elemType: NetworkReportSpecSortCondition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortConditions", elemType: networkreportspecsortcondition_1.NetworkReportSpecSortCondition }),
         __metadata("design:type", Array)
     ], NetworkReportSpec.prototype, "sortConditions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
         __metadata("design:type", String)
     ], NetworkReportSpec.prototype, "timeZone", void 0);
     return NetworkReportSpec;
-}(SpeakeasyBase));
-export { NetworkReportSpec };
+}(utils_1.SpeakeasyBase));
+exports.NetworkReportSpec = NetworkReportSpec;

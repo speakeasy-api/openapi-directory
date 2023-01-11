@@ -45,7 +45,7 @@ export class CancelClusterRequest extends SpeakeasyBase {
 
 export class CancelClusterResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  cancelClusterResult?: Map<string, any>;
+  cancelClusterResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

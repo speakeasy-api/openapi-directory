@@ -185,23 +185,23 @@ export class ChcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  chcer400ApplicationJsonObject?: Chcer400ApplicationJson;
+  chcer400ApplicationJSONObject?: Chcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  chcer401ApplicationJsonObject?: Chcer401ApplicationJson;
+  chcer401ApplicationJSONObject?: Chcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  chcer404ApplicationJsonObject?: Chcer404ApplicationJson;
+  chcer404ApplicationJSONObject?: Chcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  chcer500ApplicationJsonObject?: Chcer500ApplicationJson;
+  chcer500ApplicationJSONObject?: Chcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  chcer502ApplicationJsonObject?: Chcer502ApplicationJson;
+  chcer502ApplicationJSONObject?: Chcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  chcer503ApplicationJsonObject?: Chcer503ApplicationJson;
+  chcer503ApplicationJSONObject?: Chcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  chcer504ApplicationJsonObject?: Chcer504ApplicationJson;
+  chcer504ApplicationJSONObject?: Chcer504ApplicationJson;
 }

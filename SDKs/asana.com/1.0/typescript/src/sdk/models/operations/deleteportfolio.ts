@@ -20,7 +20,7 @@ export class DeletePortfolioQueryParams extends SpeakeasyBase {
 
 export class DeletePortfolio200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -44,5 +44,5 @@ export class DeletePortfolioResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deletePortfolio200ApplicationJsonObject?: DeletePortfolio200ApplicationJson;
+  deletePortfolio200ApplicationJSONObject?: DeletePortfolio200ApplicationJson;
 }

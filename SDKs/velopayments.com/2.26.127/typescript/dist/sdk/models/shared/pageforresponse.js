@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PageForResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var PageForResponse = /** @class */ (function (_super) {
     __extends(PageForResponse, _super);
     function PageForResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberOfElements" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberOfElements" }),
         __metadata("design:type", Number)
     ], PageForResponse.prototype, "numberOfElements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", Number)
     ], PageForResponse.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageSize" }),
         __metadata("design:type", Number)
     ], PageForResponse.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalElements" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalElements" }),
         __metadata("design:type", Number)
     ], PageForResponse.prototype, "totalElements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPages" }),
         __metadata("design:type", Number)
     ], PageForResponse.prototype, "totalPages", void 0);
     return PageForResponse;
-}(SpeakeasyBase));
-export { PageForResponse };
+}(utils_1.SpeakeasyBase));
+exports.PageForResponse = PageForResponse;

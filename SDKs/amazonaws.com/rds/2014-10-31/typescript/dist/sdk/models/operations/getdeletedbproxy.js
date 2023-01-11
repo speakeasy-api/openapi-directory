@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteDbProxyActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteDbProxyResponse = exports.GetDeleteDbProxyRequest = exports.GetDeleteDbProxyHeaders = exports.GetDeleteDbProxyQueryParams = exports.GetDeleteDbProxyVersionEnum = exports.GetDeleteDbProxyActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteDbProxyActionEnum;
 (function (GetDeleteDbProxyActionEnum) {
     GetDeleteDbProxyActionEnum["DeleteDbProxy"] = "DeleteDBProxy";
-})(GetDeleteDbProxyActionEnum || (GetDeleteDbProxyActionEnum = {}));
-export var GetDeleteDbProxyVersionEnum;
+})(GetDeleteDbProxyActionEnum = exports.GetDeleteDbProxyActionEnum || (exports.GetDeleteDbProxyActionEnum = {}));
+var GetDeleteDbProxyVersionEnum;
 (function (GetDeleteDbProxyVersionEnum) {
     GetDeleteDbProxyVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(GetDeleteDbProxyVersionEnum || (GetDeleteDbProxyVersionEnum = {}));
+})(GetDeleteDbProxyVersionEnum = exports.GetDeleteDbProxyVersionEnum || (exports.GetDeleteDbProxyVersionEnum = {}));
 var GetDeleteDbProxyQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteDbProxyQueryParams, _super);
     function GetDeleteDbProxyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DBProxyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DBProxyName" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyQueryParams.prototype, "dbProxyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyQueryParams.prototype, "version", void 0);
     return GetDeleteDbProxyQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteDbProxyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteDbProxyQueryParams = GetDeleteDbProxyQueryParams;
 var GetDeleteDbProxyHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteDbProxyHeaders, _super);
     function GetDeleteDbProxyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteDbProxyHeaders;
-}(SpeakeasyBase));
-export { GetDeleteDbProxyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteDbProxyHeaders = GetDeleteDbProxyHeaders;
 var GetDeleteDbProxyRequest = /** @class */ (function (_super) {
     __extends(GetDeleteDbProxyRequest, _super);
     function GetDeleteDbProxyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteDbProxyQueryParams)
     ], GetDeleteDbProxyRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteDbProxyHeaders)
     ], GetDeleteDbProxyRequest.prototype, "headers", void 0);
     return GetDeleteDbProxyRequest;
-}(SpeakeasyBase));
-export { GetDeleteDbProxyRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteDbProxyRequest = GetDeleteDbProxyRequest;
 var GetDeleteDbProxyResponse = /** @class */ (function (_super) {
     __extends(GetDeleteDbProxyResponse, _super);
     function GetDeleteDbProxyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteDbProxyResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteDbProxyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteDbProxyResponse.prototype, "statusCode", void 0);
     return GetDeleteDbProxyResponse;
-}(SpeakeasyBase));
-export { GetDeleteDbProxyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteDbProxyResponse = GetDeleteDbProxyResponse;

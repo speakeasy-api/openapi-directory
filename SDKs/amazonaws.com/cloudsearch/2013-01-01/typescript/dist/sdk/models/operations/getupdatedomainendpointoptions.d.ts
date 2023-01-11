@@ -7,7 +7,7 @@ export declare enum GetUpdateDomainEndpointOptionsActionEnum {
  * The domain's endpoint options.
 **/
 export declare class GetUpdateDomainEndpointOptionsDomainEndpointOptions extends SpeakeasyBase {
-    enforceHttps?: boolean;
+    enforceHTTPS?: boolean;
     tlsSecurityPolicy?: shared.TlsSecurityPolicyEnum;
 }
 export declare enum GetUpdateDomainEndpointOptionsVersionEnum {

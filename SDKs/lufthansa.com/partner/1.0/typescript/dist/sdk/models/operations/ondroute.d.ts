@@ -23,6 +23,6 @@ export declare class OndRouteRequest extends SpeakeasyBase {
 }
 export declare class OndRouteResponse extends SpeakeasyBase {
     contentType: string;
-    ondRoute200ApplicationJsonString?: string;
+    ondRoute200ApplicationJSONString?: string;
     statusCode: number;
 }

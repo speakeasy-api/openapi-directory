@@ -1,4 +1,7 @@
-export var ExtraParamNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExtraParamNameEnum = void 0;
+var ExtraParamNameEnum;
 (function (ExtraParamNameEnum) {
     ExtraParamNameEnum["DunsNumber"] = "DUNS_NUMBER";
     ExtraParamNameEnum["BrandNumber"] = "BRAND_NUMBER";
@@ -29,4 +32,4 @@ export var ExtraParamNameEnum;
     ExtraParamNameEnum["VatNumber"] = "VAT_NUMBER";
     ExtraParamNameEnum["UkContactType"] = "UK_CONTACT_TYPE";
     ExtraParamNameEnum["UkCompanyNumber"] = "UK_COMPANY_NUMBER";
-})(ExtraParamNameEnum || (ExtraParamNameEnum = {}));
+})(ExtraParamNameEnum = exports.ExtraParamNameEnum || (exports.ExtraParamNameEnum = {}));

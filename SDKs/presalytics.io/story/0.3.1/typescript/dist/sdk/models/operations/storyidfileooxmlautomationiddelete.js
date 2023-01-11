@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StoryIdFileOoxmlautomationidDeleteResponse = exports.StoryIdFileOoxmlautomationidDeleteRequest = exports.StoryIdFileOoxmlautomationidDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var StoryIdFileOoxmlautomationidDeletePathParams = /** @class */ (function (_super) {
     __extends(StoryIdFileOoxmlautomationidDeletePathParams, _super);
     function StoryIdFileOoxmlautomationidDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], StoryIdFileOoxmlautomationidDeletePathParams.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ooxml_automation_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ooxml_automation_id" }),
         __metadata("design:type", String)
     ], StoryIdFileOoxmlautomationidDeletePathParams.prototype, "ooxmlAutomationId", void 0);
     return StoryIdFileOoxmlautomationidDeletePathParams;
-}(SpeakeasyBase));
-export { StoryIdFileOoxmlautomationidDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdFileOoxmlautomationidDeletePathParams = StoryIdFileOoxmlautomationidDeletePathParams;
 var StoryIdFileOoxmlautomationidDeleteRequest = /** @class */ (function (_super) {
     __extends(StoryIdFileOoxmlautomationidDeleteRequest, _super);
     function StoryIdFileOoxmlautomationidDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StoryIdFileOoxmlautomationidDeletePathParams)
     ], StoryIdFileOoxmlautomationidDeleteRequest.prototype, "pathParams", void 0);
     return StoryIdFileOoxmlautomationidDeleteRequest;
-}(SpeakeasyBase));
-export { StoryIdFileOoxmlautomationidDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdFileOoxmlautomationidDeleteRequest = StoryIdFileOoxmlautomationidDeleteRequest;
 var StoryIdFileOoxmlautomationidDeleteResponse = /** @class */ (function (_super) {
     __extends(StoryIdFileOoxmlautomationidDeleteResponse, _super);
     function StoryIdFileOoxmlautomationidDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StoryIdFileOoxmlautomationidDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StoryIdFileOoxmlautomationidDeleteResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StoryIdFileOoxmlautomationidDeleteResponse.prototype, "problemDetail", void 0);
     return StoryIdFileOoxmlautomationidDeleteResponse;
-}(SpeakeasyBase));
-export { StoryIdFileOoxmlautomationidDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdFileOoxmlautomationidDeleteResponse = StoryIdFileOoxmlautomationidDeleteResponse;

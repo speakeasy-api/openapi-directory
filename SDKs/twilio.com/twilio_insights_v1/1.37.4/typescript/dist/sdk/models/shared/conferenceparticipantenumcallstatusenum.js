@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConferenceParticipantEnumCallStatusEnum = void 0;
+var ConferenceParticipantEnumCallStatusEnum;
+(function (ConferenceParticipantEnumCallStatusEnum) {
+    ConferenceParticipantEnumCallStatusEnum["Answered"] = "answered";
+    ConferenceParticipantEnumCallStatusEnum["Completed"] = "completed";
+    ConferenceParticipantEnumCallStatusEnum["Busy"] = "busy";
+    ConferenceParticipantEnumCallStatusEnum["Fail"] = "fail";
+    ConferenceParticipantEnumCallStatusEnum["Noanswer"] = "noanswer";
+    ConferenceParticipantEnumCallStatusEnum["Ringing"] = "ringing";
+    ConferenceParticipantEnumCallStatusEnum["Canceled"] = "canceled";
+})(ConferenceParticipantEnumCallStatusEnum = exports.ConferenceParticipantEnumCallStatusEnum || (exports.ConferenceParticipantEnumCallStatusEnum = {}));

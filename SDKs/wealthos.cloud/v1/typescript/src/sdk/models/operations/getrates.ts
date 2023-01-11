@@ -51,20 +51,20 @@ export class GetRatesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getRates200ApplicationJsonObject?: GetRates200ApplicationJson;
+  getRates200ApplicationJSONObject?: GetRates200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getRates401ApplicationJsonAny?: any;
+  getRates401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getRates403ApplicationJsonAny?: any;
+  getRates403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getRates404ApplicationJsonAny?: any;
+  getRates404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getRates429ApplicationJsonAny?: any;
+  getRates429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getRates500ApplicationJsonAny?: any;
+  getRates500ApplicationJSONAny?: any;
 }

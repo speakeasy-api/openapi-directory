@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdWordsLocationExtensions } from "./adwordslocationextensions";
-import { CategoryInput } from "./category";
-import { PostalAddress } from "./postaladdress";
-import { Attribute } from "./attribute";
-import { LatLng } from "./latlng";
-import { LocationKey } from "./locationkey";
-import { LocationStateInput } from "./locationstate";
-import { Metadata } from "./metadata";
-import { MoreHours } from "./morehours";
-import { OpenInfo } from "./openinfo";
-import { PriceList } from "./pricelist";
-import { Profile } from "./profile";
-import { BusinessHours } from "./businesshours";
-import { RelationshipData } from "./relationshipdata";
-import { ServiceAreaBusiness } from "./serviceareabusiness";
-import { SpecialHours } from "./specialhours";
-import { Category } from "./category";
-import { LocationState } from "./locationstate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Location = exports.LocationInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var adwordslocationextensions_1 = require("./adwordslocationextensions");
+var category_1 = require("./category");
+var postaladdress_1 = require("./postaladdress");
+var attribute_1 = require("./attribute");
+var latlng_1 = require("./latlng");
+var locationkey_1 = require("./locationkey");
+var locationstate_1 = require("./locationstate");
+var metadata_1 = require("./metadata");
+var morehours_1 = require("./morehours");
+var openinfo_1 = require("./openinfo");
+var pricelist_1 = require("./pricelist");
+var profile_1 = require("./profile");
+var businesshours_1 = require("./businesshours");
+var relationshipdata_1 = require("./relationshipdata");
+var serviceareabusiness_1 = require("./serviceareabusiness");
+var specialhours_1 = require("./specialhours");
+var category_2 = require("./category");
+var locationstate_2 = require("./locationstate");
 // LocationInput
 /**
  * A location. See the [help center article] (https://support.google.com/business/answer/3038177) for a detailed description of these fields, or the [category endpoint](/my-business/reference/rest/v4/categories) for a list of valid business categories.
@@ -51,108 +54,108 @@ var LocationInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adWordsLocationExtensions" }),
-        __metadata("design:type", AdWordsLocationExtensions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adWordsLocationExtensions" }),
+        __metadata("design:type", adwordslocationextensions_1.AdWordsLocationExtensions)
     ], LocationInput.prototype, "adWordsLocationExtensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalCategories", elemType: CategoryInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalCategories", elemType: category_1.CategoryInput }),
         __metadata("design:type", Array)
     ], LocationInput.prototype, "additionalCategories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalPhones" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalPhones" }),
         __metadata("design:type", Array)
     ], LocationInput.prototype, "additionalPhones", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
-        __metadata("design:type", PostalAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", postaladdress_1.PostalAddress)
     ], LocationInput.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes", elemType: Attribute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes", elemType: attribute_1.Attribute }),
         __metadata("design:type", Array)
     ], LocationInput.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
         __metadata("design:type", Array)
     ], LocationInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], LocationInput.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latlng" }),
-        __metadata("design:type", LatLng)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latlng" }),
+        __metadata("design:type", latlng_1.LatLng)
     ], LocationInput.prototype, "latlng", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationKey" }),
-        __metadata("design:type", LocationKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationKey" }),
+        __metadata("design:type", locationkey_1.LocationKey)
     ], LocationInput.prototype, "locationKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationName" }),
         __metadata("design:type", String)
     ], LocationInput.prototype, "locationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationState" }),
-        __metadata("design:type", LocationStateInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationState" }),
+        __metadata("design:type", locationstate_1.LocationStateInput)
     ], LocationInput.prototype, "locationState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Metadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", metadata_1.Metadata)
     ], LocationInput.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=moreHours", elemType: MoreHours }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=moreHours", elemType: morehours_1.MoreHours }),
         __metadata("design:type", Array)
     ], LocationInput.prototype, "moreHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], LocationInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=openInfo" }),
-        __metadata("design:type", OpenInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openInfo" }),
+        __metadata("design:type", openinfo_1.OpenInfo)
     ], LocationInput.prototype, "openInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceLists", elemType: PriceList }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceLists", elemType: pricelist_1.PriceList }),
         __metadata("design:type", Array)
     ], LocationInput.prototype, "priceLists", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryCategory" }),
-        __metadata("design:type", CategoryInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryCategory" }),
+        __metadata("design:type", category_1.CategoryInput)
     ], LocationInput.prototype, "primaryCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryPhone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryPhone" }),
         __metadata("design:type", String)
     ], LocationInput.prototype, "primaryPhone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profile" }),
-        __metadata("design:type", Profile)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile" }),
+        __metadata("design:type", profile_1.Profile)
     ], LocationInput.prototype, "profile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regularHours" }),
-        __metadata("design:type", BusinessHours)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regularHours" }),
+        __metadata("design:type", businesshours_1.BusinessHours)
     ], LocationInput.prototype, "regularHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationshipData" }),
-        __metadata("design:type", RelationshipData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationshipData" }),
+        __metadata("design:type", relationshipdata_1.RelationshipData)
     ], LocationInput.prototype, "relationshipData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceArea" }),
-        __metadata("design:type", ServiceAreaBusiness)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceArea" }),
+        __metadata("design:type", serviceareabusiness_1.ServiceAreaBusiness)
     ], LocationInput.prototype, "serviceArea", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=specialHours" }),
-        __metadata("design:type", SpecialHours)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=specialHours" }),
+        __metadata("design:type", specialhours_1.SpecialHours)
     ], LocationInput.prototype, "specialHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storeCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storeCode" }),
         __metadata("design:type", String)
     ], LocationInput.prototype, "storeCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=websiteUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=websiteUrl" }),
         __metadata("design:type", String)
     ], LocationInput.prototype, "websiteUrl", void 0);
     return LocationInput;
-}(SpeakeasyBase));
-export { LocationInput };
+}(utils_1.SpeakeasyBase));
+exports.LocationInput = LocationInput;
 // Location
 /**
  * A location. See the [help center article] (https://support.google.com/business/answer/3038177) for a detailed description of these fields, or the [category endpoint](/my-business/reference/rest/v4/categories) for a list of valid business categories.
@@ -163,105 +166,105 @@ var Location = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adWordsLocationExtensions" }),
-        __metadata("design:type", AdWordsLocationExtensions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adWordsLocationExtensions" }),
+        __metadata("design:type", adwordslocationextensions_1.AdWordsLocationExtensions)
     ], Location.prototype, "adWordsLocationExtensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalCategories", elemType: Category }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalCategories", elemType: category_2.Category }),
         __metadata("design:type", Array)
     ], Location.prototype, "additionalCategories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalPhones" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalPhones" }),
         __metadata("design:type", Array)
     ], Location.prototype, "additionalPhones", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
-        __metadata("design:type", PostalAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", postaladdress_1.PostalAddress)
     ], Location.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes", elemType: Attribute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes", elemType: attribute_1.Attribute }),
         __metadata("design:type", Array)
     ], Location.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
         __metadata("design:type", Array)
     ], Location.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], Location.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latlng" }),
-        __metadata("design:type", LatLng)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latlng" }),
+        __metadata("design:type", latlng_1.LatLng)
     ], Location.prototype, "latlng", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationKey" }),
-        __metadata("design:type", LocationKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationKey" }),
+        __metadata("design:type", locationkey_1.LocationKey)
     ], Location.prototype, "locationKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationName" }),
         __metadata("design:type", String)
     ], Location.prototype, "locationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationState" }),
-        __metadata("design:type", LocationState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationState" }),
+        __metadata("design:type", locationstate_2.LocationState)
     ], Location.prototype, "locationState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Metadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", metadata_1.Metadata)
     ], Location.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=moreHours", elemType: MoreHours }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=moreHours", elemType: morehours_1.MoreHours }),
         __metadata("design:type", Array)
     ], Location.prototype, "moreHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Location.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=openInfo" }),
-        __metadata("design:type", OpenInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openInfo" }),
+        __metadata("design:type", openinfo_1.OpenInfo)
     ], Location.prototype, "openInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceLists", elemType: PriceList }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceLists", elemType: pricelist_1.PriceList }),
         __metadata("design:type", Array)
     ], Location.prototype, "priceLists", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryCategory" }),
-        __metadata("design:type", Category)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryCategory" }),
+        __metadata("design:type", category_2.Category)
     ], Location.prototype, "primaryCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryPhone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryPhone" }),
         __metadata("design:type", String)
     ], Location.prototype, "primaryPhone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profile" }),
-        __metadata("design:type", Profile)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile" }),
+        __metadata("design:type", profile_1.Profile)
     ], Location.prototype, "profile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regularHours" }),
-        __metadata("design:type", BusinessHours)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regularHours" }),
+        __metadata("design:type", businesshours_1.BusinessHours)
     ], Location.prototype, "regularHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationshipData" }),
-        __metadata("design:type", RelationshipData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationshipData" }),
+        __metadata("design:type", relationshipdata_1.RelationshipData)
     ], Location.prototype, "relationshipData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceArea" }),
-        __metadata("design:type", ServiceAreaBusiness)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceArea" }),
+        __metadata("design:type", serviceareabusiness_1.ServiceAreaBusiness)
     ], Location.prototype, "serviceArea", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=specialHours" }),
-        __metadata("design:type", SpecialHours)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=specialHours" }),
+        __metadata("design:type", specialhours_1.SpecialHours)
     ], Location.prototype, "specialHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storeCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storeCode" }),
         __metadata("design:type", String)
     ], Location.prototype, "storeCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=websiteUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=websiteUrl" }),
         __metadata("design:type", String)
     ], Location.prototype, "websiteUrl", void 0);
     return Location;
-}(SpeakeasyBase));
-export { Location };
+}(utils_1.SpeakeasyBase));
+exports.Location = Location;

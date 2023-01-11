@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NamespacedGkeDeploymentTarget } from "./namespacedgkedeploymenttarget";
-import { GkeNodePoolTarget } from "./gkenodepooltarget";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GkeClusterConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var namespacedgkedeploymenttarget_1 = require("./namespacedgkedeploymenttarget");
+var gkenodepooltarget_1 = require("./gkenodepooltarget");
 // GkeClusterConfig
 /**
  * The cluster's GKE config.
@@ -35,17 +38,17 @@ var GkeClusterConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gkeClusterTarget" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gkeClusterTarget" }),
         __metadata("design:type", String)
     ], GkeClusterConfig.prototype, "gkeClusterTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=namespacedGkeDeploymentTarget" }),
-        __metadata("design:type", NamespacedGkeDeploymentTarget)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=namespacedGkeDeploymentTarget" }),
+        __metadata("design:type", namespacedgkedeploymenttarget_1.NamespacedGkeDeploymentTarget)
     ], GkeClusterConfig.prototype, "namespacedGkeDeploymentTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodePoolTarget", elemType: GkeNodePoolTarget }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodePoolTarget", elemType: gkenodepooltarget_1.GkeNodePoolTarget }),
         __metadata("design:type", Array)
     ], GkeClusterConfig.prototype, "nodePoolTarget", void 0);
     return GkeClusterConfig;
-}(SpeakeasyBase));
-export { GkeClusterConfig };
+}(utils_1.SpeakeasyBase));
+exports.GkeClusterConfig = GkeClusterConfig;

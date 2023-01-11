@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KeyId } from "./keyid";
-import { CertificateFingerprint } from "./certificatefingerprint";
-import { PublicKey } from "./publickey";
-import { SubjectDescription } from "./subjectdescription";
-import { X509Parameters } from "./x509parameters";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CertificateDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var keyid_1 = require("./keyid");
+var certificatefingerprint_1 = require("./certificatefingerprint");
+var publickey_1 = require("./publickey");
+var subjectdescription_1 = require("./subjectdescription");
+var x509parameters_1 = require("./x509parameters");
 // CertificateDescription
 /**
  * A CertificateDescription describes an X.509 certificate or CSR that has been issued, as an alternative to using ASN.1 / X.509.
@@ -38,37 +41,37 @@ var CertificateDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aiaIssuingCertificateUrls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aiaIssuingCertificateUrls" }),
         __metadata("design:type", Array)
     ], CertificateDescription.prototype, "aiaIssuingCertificateUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorityKeyId" }),
-        __metadata("design:type", KeyId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorityKeyId" }),
+        __metadata("design:type", keyid_1.KeyId)
     ], CertificateDescription.prototype, "authorityKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certFingerprint" }),
-        __metadata("design:type", CertificateFingerprint)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certFingerprint" }),
+        __metadata("design:type", certificatefingerprint_1.CertificateFingerprint)
     ], CertificateDescription.prototype, "certFingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crlDistributionPoints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crlDistributionPoints" }),
         __metadata("design:type", Array)
     ], CertificateDescription.prototype, "crlDistributionPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicKey" }),
-        __metadata("design:type", PublicKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicKey" }),
+        __metadata("design:type", publickey_1.PublicKey)
     ], CertificateDescription.prototype, "publicKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subjectDescription" }),
-        __metadata("design:type", SubjectDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subjectDescription" }),
+        __metadata("design:type", subjectdescription_1.SubjectDescription)
     ], CertificateDescription.prototype, "subjectDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subjectKeyId" }),
-        __metadata("design:type", KeyId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subjectKeyId" }),
+        __metadata("design:type", keyid_1.KeyId)
     ], CertificateDescription.prototype, "subjectKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=x509Description" }),
-        __metadata("design:type", X509Parameters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=x509Description" }),
+        __metadata("design:type", x509parameters_1.X509Parameters)
     ], CertificateDescription.prototype, "x509Description", void 0);
     return CertificateDescription;
-}(SpeakeasyBase));
-export { CertificateDescription };
+}(utils_1.SpeakeasyBase));
+exports.CertificateDescription = CertificateDescription;

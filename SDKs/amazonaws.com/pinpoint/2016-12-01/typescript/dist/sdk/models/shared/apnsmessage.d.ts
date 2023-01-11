@@ -10,14 +10,14 @@ export declare class ApnsMessage extends SpeakeasyBase {
     body?: string;
     category?: string;
     collapseId?: string;
-    data?: Map<string, string>;
+    data?: Record<string, string>;
     mediaUrl?: string;
     preferredAuthenticationMethod?: string;
     priority?: string;
     rawContent?: string;
     silentPush?: boolean;
     sound?: string;
-    substitutions?: Map<string, string[]>;
+    substitutions?: Record<string, string[]>;
     threadId?: string;
     timeToLive?: number;
     title?: string;

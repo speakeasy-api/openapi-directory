@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OracleTable } from "./oracletable";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OracleSchema = void 0;
+var utils_1 = require("../../../internal/utils");
+var oracletable_1 = require("./oracletable");
 // OracleSchema
 /**
  * Oracle schema.
@@ -34,13 +37,13 @@ var OracleSchema = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oracleTables", elemType: OracleTable }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oracleTables", elemType: oracletable_1.OracleTable }),
         __metadata("design:type", Array)
     ], OracleSchema.prototype, "oracleTables", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schema" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schema" }),
         __metadata("design:type", String)
     ], OracleSchema.prototype, "schema", void 0);
     return OracleSchema;
-}(SpeakeasyBase));
-export { OracleSchema };
+}(utils_1.SpeakeasyBase));
+exports.OracleSchema = OracleSchema;

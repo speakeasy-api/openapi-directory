@@ -54,7 +54,7 @@ export declare class IpAddressStatus extends SpeakeasyBase {
 export declare class IpAddress extends SpeakeasyBase {
     address: string;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     dnsName?: string;
     family?: IpAddressFamily;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VehHistory = void 0;
+var utils_1 = require("../../../internal/utils");
 var VehHistory = /** @class */ (function (_super) {
     __extends(VehHistory, _super);
     function VehHistory() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dealerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dealerName" }),
         __metadata("design:type", String)
     ], VehHistory.prototype, "dealerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstSeen" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstSeen" }),
         __metadata("design:type", Date)
     ], VehHistory.prototype, "firstSeen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastSeen" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastSeen" }),
         __metadata("design:type", Date)
     ], VehHistory.prototype, "lastSeen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=miles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=miles" }),
         __metadata("design:type", Number)
     ], VehHistory.prototype, "miles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=new" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=new" }),
         __metadata("design:type", Boolean)
     ], VehHistory.prototype, "new", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
         __metadata("design:type", Number)
     ], VehHistory.prototype, "price", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], VehHistory.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zip" }),
         __metadata("design:type", Number)
     ], VehHistory.prototype, "zip", void 0);
     return VehHistory;
-}(SpeakeasyBase));
-export { VehHistory };
+}(utils_1.SpeakeasyBase));
+exports.VehHistory = VehHistory;

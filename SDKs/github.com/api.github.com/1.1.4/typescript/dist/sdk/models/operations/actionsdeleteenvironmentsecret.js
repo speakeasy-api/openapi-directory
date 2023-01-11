@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsDeleteEnvironmentSecretResponse = exports.ActionsDeleteEnvironmentSecretRequest = exports.ActionsDeleteEnvironmentSecretPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsDeleteEnvironmentSecretPathParams = /** @class */ (function (_super) {
     __extends(ActionsDeleteEnvironmentSecretPathParams, _super);
     function ActionsDeleteEnvironmentSecretPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=environment_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=environment_name" }),
         __metadata("design:type", String)
     ], ActionsDeleteEnvironmentSecretPathParams.prototype, "environmentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repository_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repository_id" }),
         __metadata("design:type", Number)
     ], ActionsDeleteEnvironmentSecretPathParams.prototype, "repositoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=secret_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=secret_name" }),
         __metadata("design:type", String)
     ], ActionsDeleteEnvironmentSecretPathParams.prototype, "secretName", void 0);
     return ActionsDeleteEnvironmentSecretPathParams;
-}(SpeakeasyBase));
-export { ActionsDeleteEnvironmentSecretPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDeleteEnvironmentSecretPathParams = ActionsDeleteEnvironmentSecretPathParams;
 var ActionsDeleteEnvironmentSecretRequest = /** @class */ (function (_super) {
     __extends(ActionsDeleteEnvironmentSecretRequest, _super);
     function ActionsDeleteEnvironmentSecretRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsDeleteEnvironmentSecretPathParams)
     ], ActionsDeleteEnvironmentSecretRequest.prototype, "pathParams", void 0);
     return ActionsDeleteEnvironmentSecretRequest;
-}(SpeakeasyBase));
-export { ActionsDeleteEnvironmentSecretRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDeleteEnvironmentSecretRequest = ActionsDeleteEnvironmentSecretRequest;
 var ActionsDeleteEnvironmentSecretResponse = /** @class */ (function (_super) {
     __extends(ActionsDeleteEnvironmentSecretResponse, _super);
     function ActionsDeleteEnvironmentSecretResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsDeleteEnvironmentSecretResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsDeleteEnvironmentSecretResponse.prototype, "statusCode", void 0);
     return ActionsDeleteEnvironmentSecretResponse;
-}(SpeakeasyBase));
-export { ActionsDeleteEnvironmentSecretResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDeleteEnvironmentSecretResponse = ActionsDeleteEnvironmentSecretResponse;

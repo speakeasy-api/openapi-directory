@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataDestination } from "./datadestination";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateForecastExportJobRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var datadestination_1 = require("./datadestination");
+var tag_1 = require("./tag");
 var CreateForecastExportJobRequest = /** @class */ (function (_super) {
     __extends(CreateForecastExportJobRequest, _super);
     function CreateForecastExportJobRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Destination" }),
-        __metadata("design:type", DataDestination)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Destination" }),
+        __metadata("design:type", datadestination_1.DataDestination)
     ], CreateForecastExportJobRequest.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ForecastArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ForecastArn" }),
         __metadata("design:type", String)
     ], CreateForecastExportJobRequest.prototype, "forecastArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ForecastExportJobName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ForecastExportJobName" }),
         __metadata("design:type", String)
     ], CreateForecastExportJobRequest.prototype, "forecastExportJobName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateForecastExportJobRequest.prototype, "tags", void 0);
     return CreateForecastExportJobRequest;
-}(SpeakeasyBase));
-export { CreateForecastExportJobRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateForecastExportJobRequest = CreateForecastExportJobRequest;

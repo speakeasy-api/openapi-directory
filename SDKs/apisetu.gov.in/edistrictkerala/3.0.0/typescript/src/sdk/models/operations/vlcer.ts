@@ -191,23 +191,23 @@ export class VlcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  vlcer400ApplicationJsonObject?: Vlcer400ApplicationJson;
+  vlcer400ApplicationJSONObject?: Vlcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  vlcer401ApplicationJsonObject?: Vlcer401ApplicationJson;
+  vlcer401ApplicationJSONObject?: Vlcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  vlcer404ApplicationJsonObject?: Vlcer404ApplicationJson;
+  vlcer404ApplicationJSONObject?: Vlcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  vlcer500ApplicationJsonObject?: Vlcer500ApplicationJson;
+  vlcer500ApplicationJSONObject?: Vlcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  vlcer502ApplicationJsonObject?: Vlcer502ApplicationJson;
+  vlcer502ApplicationJSONObject?: Vlcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  vlcer503ApplicationJsonObject?: Vlcer503ApplicationJson;
+  vlcer503ApplicationJSONObject?: Vlcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  vlcer504ApplicationJsonObject?: Vlcer504ApplicationJson;
+  vlcer504ApplicationJSONObject?: Vlcer504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetAddRoleToInstanceProfileActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAddRoleToInstanceProfileResponse = exports.GetAddRoleToInstanceProfileRequest = exports.GetAddRoleToInstanceProfileHeaders = exports.GetAddRoleToInstanceProfileQueryParams = exports.GetAddRoleToInstanceProfileVersionEnum = exports.GetAddRoleToInstanceProfileActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetAddRoleToInstanceProfileActionEnum;
 (function (GetAddRoleToInstanceProfileActionEnum) {
     GetAddRoleToInstanceProfileActionEnum["AddRoleToInstanceProfile"] = "AddRoleToInstanceProfile";
-})(GetAddRoleToInstanceProfileActionEnum || (GetAddRoleToInstanceProfileActionEnum = {}));
-export var GetAddRoleToInstanceProfileVersionEnum;
+})(GetAddRoleToInstanceProfileActionEnum = exports.GetAddRoleToInstanceProfileActionEnum || (exports.GetAddRoleToInstanceProfileActionEnum = {}));
+var GetAddRoleToInstanceProfileVersionEnum;
 (function (GetAddRoleToInstanceProfileVersionEnum) {
     GetAddRoleToInstanceProfileVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetAddRoleToInstanceProfileVersionEnum || (GetAddRoleToInstanceProfileVersionEnum = {}));
+})(GetAddRoleToInstanceProfileVersionEnum = exports.GetAddRoleToInstanceProfileVersionEnum || (exports.GetAddRoleToInstanceProfileVersionEnum = {}));
 var GetAddRoleToInstanceProfileQueryParams = /** @class */ (function (_super) {
     __extends(GetAddRoleToInstanceProfileQueryParams, _super);
     function GetAddRoleToInstanceProfileQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetAddRoleToInstanceProfileQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=InstanceProfileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=InstanceProfileName" }),
         __metadata("design:type", String)
     ], GetAddRoleToInstanceProfileQueryParams.prototype, "instanceProfileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RoleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=RoleName" }),
         __metadata("design:type", String)
     ], GetAddRoleToInstanceProfileQueryParams.prototype, "roleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetAddRoleToInstanceProfileQueryParams.prototype, "version", void 0);
     return GetAddRoleToInstanceProfileQueryParams;
-}(SpeakeasyBase));
-export { GetAddRoleToInstanceProfileQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAddRoleToInstanceProfileQueryParams = GetAddRoleToInstanceProfileQueryParams;
 var GetAddRoleToInstanceProfileHeaders = /** @class */ (function (_super) {
     __extends(GetAddRoleToInstanceProfileHeaders, _super);
     function GetAddRoleToInstanceProfileHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetAddRoleToInstanceProfileHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetAddRoleToInstanceProfileHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetAddRoleToInstanceProfileHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetAddRoleToInstanceProfileHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetAddRoleToInstanceProfileHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetAddRoleToInstanceProfileHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetAddRoleToInstanceProfileHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetAddRoleToInstanceProfileHeaders;
-}(SpeakeasyBase));
-export { GetAddRoleToInstanceProfileHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetAddRoleToInstanceProfileHeaders = GetAddRoleToInstanceProfileHeaders;
 var GetAddRoleToInstanceProfileRequest = /** @class */ (function (_super) {
     __extends(GetAddRoleToInstanceProfileRequest, _super);
     function GetAddRoleToInstanceProfileRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAddRoleToInstanceProfileQueryParams)
     ], GetAddRoleToInstanceProfileRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAddRoleToInstanceProfileHeaders)
     ], GetAddRoleToInstanceProfileRequest.prototype, "headers", void 0);
     return GetAddRoleToInstanceProfileRequest;
-}(SpeakeasyBase));
-export { GetAddRoleToInstanceProfileRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAddRoleToInstanceProfileRequest = GetAddRoleToInstanceProfileRequest;
 var GetAddRoleToInstanceProfileResponse = /** @class */ (function (_super) {
     __extends(GetAddRoleToInstanceProfileResponse, _super);
     function GetAddRoleToInstanceProfileResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetAddRoleToInstanceProfileResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAddRoleToInstanceProfileResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAddRoleToInstanceProfileResponse.prototype, "statusCode", void 0);
     return GetAddRoleToInstanceProfileResponse;
-}(SpeakeasyBase));
-export { GetAddRoleToInstanceProfileResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAddRoleToInstanceProfileResponse = GetAddRoleToInstanceProfileResponse;

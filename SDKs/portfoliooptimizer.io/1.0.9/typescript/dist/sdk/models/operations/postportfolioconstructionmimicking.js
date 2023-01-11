@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostPortfolioConstructionMimickingResponse = exports.PostPortfolioConstructionMimickingRequest = exports.PostPortfolioConstructionMimicking200ApplicationJson = exports.PostPortfolioConstructionMimickingRequestBody = exports.PostPortfolioConstructionMimickingRequestBodyConstraints = exports.PostPortfolioConstructionMimickingRequestBodyAssets = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostPortfolioConstructionMimickingRequestBodyAssets = /** @class */ (function (_super) {
     __extends(PostPortfolioConstructionMimickingRequestBodyAssets, _super);
     function PostPortfolioConstructionMimickingRequestBodyAssets() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetReturns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetReturns" }),
         __metadata("design:type", Array)
     ], PostPortfolioConstructionMimickingRequestBodyAssets.prototype, "assetReturns", void 0);
     return PostPortfolioConstructionMimickingRequestBodyAssets;
-}(SpeakeasyBase));
-export { PostPortfolioConstructionMimickingRequestBodyAssets };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioConstructionMimickingRequestBodyAssets = PostPortfolioConstructionMimickingRequestBodyAssets;
 var PostPortfolioConstructionMimickingRequestBodyConstraints = /** @class */ (function (_super) {
     __extends(PostPortfolioConstructionMimickingRequestBodyConstraints, _super);
     function PostPortfolioConstructionMimickingRequestBodyConstraints() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsGroups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsGroups" }),
         __metadata("design:type", Array)
     ], PostPortfolioConstructionMimickingRequestBodyConstraints.prototype, "assetsGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsGroupsMatrix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsGroupsMatrix" }),
         __metadata("design:type", Array)
     ], PostPortfolioConstructionMimickingRequestBodyConstraints.prototype, "assetsGroupsMatrix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumAssetsGroupsWeights" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumAssetsGroupsWeights" }),
         __metadata("design:type", Array)
     ], PostPortfolioConstructionMimickingRequestBodyConstraints.prototype, "maximumAssetsGroupsWeights", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumAssetsWeights" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumAssetsWeights" }),
         __metadata("design:type", Array)
     ], PostPortfolioConstructionMimickingRequestBodyConstraints.prototype, "maximumAssetsWeights", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumPortfolioExposure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumPortfolioExposure" }),
         __metadata("design:type", Number)
     ], PostPortfolioConstructionMimickingRequestBodyConstraints.prototype, "maximumPortfolioExposure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimumAssetsWeights" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimumAssetsWeights" }),
         __metadata("design:type", Array)
     ], PostPortfolioConstructionMimickingRequestBodyConstraints.prototype, "minimumAssetsWeights", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimumPortfolioExposure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimumPortfolioExposure" }),
         __metadata("design:type", Number)
     ], PostPortfolioConstructionMimickingRequestBodyConstraints.prototype, "minimumPortfolioExposure", void 0);
     return PostPortfolioConstructionMimickingRequestBodyConstraints;
-}(SpeakeasyBase));
-export { PostPortfolioConstructionMimickingRequestBodyConstraints };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioConstructionMimickingRequestBodyConstraints = PostPortfolioConstructionMimickingRequestBodyConstraints;
 var PostPortfolioConstructionMimickingRequestBody = /** @class */ (function (_super) {
     __extends(PostPortfolioConstructionMimickingRequestBody, _super);
     function PostPortfolioConstructionMimickingRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets", elemType: PostPortfolioConstructionMimickingRequestBodyAssets }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets", elemType: PostPortfolioConstructionMimickingRequestBodyAssets }),
         __metadata("design:type", Array)
     ], PostPortfolioConstructionMimickingRequestBody.prototype, "assets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=benchmarkReturns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=benchmarkReturns" }),
         __metadata("design:type", Array)
     ], PostPortfolioConstructionMimickingRequestBody.prototype, "benchmarkReturns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=constraints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=constraints" }),
         __metadata("design:type", PostPortfolioConstructionMimickingRequestBodyConstraints)
     ], PostPortfolioConstructionMimickingRequestBody.prototype, "constraints", void 0);
     return PostPortfolioConstructionMimickingRequestBody;
-}(SpeakeasyBase));
-export { PostPortfolioConstructionMimickingRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioConstructionMimickingRequestBody = PostPortfolioConstructionMimickingRequestBody;
 var PostPortfolioConstructionMimicking200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostPortfolioConstructionMimicking200ApplicationJson, _super);
     function PostPortfolioConstructionMimicking200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsWeights" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsWeights" }),
         __metadata("design:type", Array)
     ], PostPortfolioConstructionMimicking200ApplicationJson.prototype, "assetsWeights", void 0);
     return PostPortfolioConstructionMimicking200ApplicationJson;
-}(SpeakeasyBase));
-export { PostPortfolioConstructionMimicking200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioConstructionMimicking200ApplicationJson = PostPortfolioConstructionMimicking200ApplicationJson;
 var PostPortfolioConstructionMimickingRequest = /** @class */ (function (_super) {
     __extends(PostPortfolioConstructionMimickingRequest, _super);
     function PostPortfolioConstructionMimickingRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostPortfolioConstructionMimickingRequestBody)
     ], PostPortfolioConstructionMimickingRequest.prototype, "request", void 0);
     return PostPortfolioConstructionMimickingRequest;
-}(SpeakeasyBase));
-export { PostPortfolioConstructionMimickingRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioConstructionMimickingRequest = PostPortfolioConstructionMimickingRequest;
 var PostPortfolioConstructionMimickingResponse = /** @class */ (function (_super) {
     __extends(PostPortfolioConstructionMimickingResponse, _super);
     function PostPortfolioConstructionMimickingResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostPortfolioConstructionMimickingResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostPortfolioConstructionMimicking200ApplicationJson)
-    ], PostPortfolioConstructionMimickingResponse.prototype, "postPortfolioConstructionMimicking200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostPortfolioConstructionMimickingResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostPortfolioConstructionMimicking200ApplicationJson)
+    ], PostPortfolioConstructionMimickingResponse.prototype, "postPortfolioConstructionMimicking200ApplicationJSONObject", void 0);
     return PostPortfolioConstructionMimickingResponse;
-}(SpeakeasyBase));
-export { PostPortfolioConstructionMimickingResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioConstructionMimickingResponse = PostPortfolioConstructionMimickingResponse;

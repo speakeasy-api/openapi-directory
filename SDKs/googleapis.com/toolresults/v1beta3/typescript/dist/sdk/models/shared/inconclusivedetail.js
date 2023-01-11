@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InconclusiveDetail = void 0;
+var utils_1 = require("../../../internal/utils");
 // InconclusiveDetail
 /**
  * Details for an outcome with an INCONCLUSIVE outcome summary.
@@ -33,17 +36,17 @@ var InconclusiveDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=abortedByUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=abortedByUser" }),
         __metadata("design:type", Boolean)
     ], InconclusiveDetail.prototype, "abortedByUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasErrorLogs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasErrorLogs" }),
         __metadata("design:type", Boolean)
     ], InconclusiveDetail.prototype, "hasErrorLogs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=infrastructureFailure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=infrastructureFailure" }),
         __metadata("design:type", Boolean)
     ], InconclusiveDetail.prototype, "infrastructureFailure", void 0);
     return InconclusiveDetail;
-}(SpeakeasyBase));
-export { InconclusiveDetail };
+}(utils_1.SpeakeasyBase));
+exports.InconclusiveDetail = InconclusiveDetail;

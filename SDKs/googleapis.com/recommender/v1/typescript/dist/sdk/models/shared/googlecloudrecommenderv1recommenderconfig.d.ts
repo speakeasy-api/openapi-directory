@@ -3,23 +3,23 @@ import { GoogleCloudRecommenderV1RecommenderGenerationConfig } from "./googleclo
 /**
  * Configuration for a Recommender.
 **/
-export declare class GoogleCloudRecommenderV1RecommenderConfig extends SpeakeasyBase {
-    annotations?: Map<string, string>;
+export declare class GoogleCloudRecommenderV1RecommenderConfigInput extends SpeakeasyBase {
+    annotations?: Record<string, string>;
     displayName?: string;
     etag?: string;
     name?: string;
     recommenderGenerationConfig?: GoogleCloudRecommenderV1RecommenderGenerationConfig;
-    revisionId?: string;
     updateTime?: string;
 }
 /**
  * Configuration for a Recommender.
 **/
-export declare class GoogleCloudRecommenderV1RecommenderConfigInput extends SpeakeasyBase {
-    annotations?: Map<string, string>;
+export declare class GoogleCloudRecommenderV1RecommenderConfig extends SpeakeasyBase {
+    annotations?: Record<string, string>;
     displayName?: string;
     etag?: string;
     name?: string;
     recommenderGenerationConfig?: GoogleCloudRecommenderV1RecommenderGenerationConfig;
+    revisionId?: string;
     updateTime?: string;
 }

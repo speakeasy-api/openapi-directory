@@ -1,8 +1,11 @@
-export var EmploymentBasisEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmploymentBasisEnum = void 0;
+var EmploymentBasisEnum;
 (function (EmploymentBasisEnum) {
     EmploymentBasisEnum["Fulltime"] = "FULLTIME";
     EmploymentBasisEnum["Parttime"] = "PARTTIME";
     EmploymentBasisEnum["Casual"] = "CASUAL";
     EmploymentBasisEnum["Labourhire"] = "LABOURHIRE";
     EmploymentBasisEnum["Superincomestream"] = "SUPERINCOMESTREAM";
-})(EmploymentBasisEnum || (EmploymentBasisEnum = {}));
+})(EmploymentBasisEnum = exports.EmploymentBasisEnum || (exports.EmploymentBasisEnum = {}));

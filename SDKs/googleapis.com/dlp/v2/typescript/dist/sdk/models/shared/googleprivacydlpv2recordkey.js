@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2BigQueryKey } from "./googleprivacydlpv2bigquerykey";
-import { GooglePrivacyDlpV2DatastoreKey } from "./googleprivacydlpv2datastorekey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2RecordKey = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2bigquerykey_1 = require("./googleprivacydlpv2bigquerykey");
+var googleprivacydlpv2datastorekey_1 = require("./googleprivacydlpv2datastorekey");
 // GooglePrivacyDlpV2RecordKey
 /**
  * Message for a unique key indicating a record that contains a finding.
@@ -35,17 +38,17 @@ var GooglePrivacyDlpV2RecordKey = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bigQueryKey" }),
-        __metadata("design:type", GooglePrivacyDlpV2BigQueryKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bigQueryKey" }),
+        __metadata("design:type", googleprivacydlpv2bigquerykey_1.GooglePrivacyDlpV2BigQueryKey)
     ], GooglePrivacyDlpV2RecordKey.prototype, "bigQueryKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datastoreKey" }),
-        __metadata("design:type", GooglePrivacyDlpV2DatastoreKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datastoreKey" }),
+        __metadata("design:type", googleprivacydlpv2datastorekey_1.GooglePrivacyDlpV2DatastoreKey)
     ], GooglePrivacyDlpV2RecordKey.prototype, "datastoreKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=idValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=idValues" }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2RecordKey.prototype, "idValues", void 0);
     return GooglePrivacyDlpV2RecordKey;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2RecordKey };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2RecordKey = GooglePrivacyDlpV2RecordKey;

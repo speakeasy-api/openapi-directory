@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCreateUsageLimitActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCreateUsageLimitResponse = exports.PostCreateUsageLimitRequest = exports.PostCreateUsageLimitHeaders = exports.PostCreateUsageLimitQueryParams = exports.PostCreateUsageLimitVersionEnum = exports.PostCreateUsageLimitActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCreateUsageLimitActionEnum;
 (function (PostCreateUsageLimitActionEnum) {
     PostCreateUsageLimitActionEnum["CreateUsageLimit"] = "CreateUsageLimit";
-})(PostCreateUsageLimitActionEnum || (PostCreateUsageLimitActionEnum = {}));
-export var PostCreateUsageLimitVersionEnum;
+})(PostCreateUsageLimitActionEnum = exports.PostCreateUsageLimitActionEnum || (exports.PostCreateUsageLimitActionEnum = {}));
+var PostCreateUsageLimitVersionEnum;
 (function (PostCreateUsageLimitVersionEnum) {
     PostCreateUsageLimitVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(PostCreateUsageLimitVersionEnum || (PostCreateUsageLimitVersionEnum = {}));
+})(PostCreateUsageLimitVersionEnum = exports.PostCreateUsageLimitVersionEnum || (exports.PostCreateUsageLimitVersionEnum = {}));
 var PostCreateUsageLimitQueryParams = /** @class */ (function (_super) {
     __extends(PostCreateUsageLimitQueryParams, _super);
     function PostCreateUsageLimitQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCreateUsageLimitQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCreateUsageLimitQueryParams.prototype, "version", void 0);
     return PostCreateUsageLimitQueryParams;
-}(SpeakeasyBase));
-export { PostCreateUsageLimitQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateUsageLimitQueryParams = PostCreateUsageLimitQueryParams;
 var PostCreateUsageLimitHeaders = /** @class */ (function (_super) {
     __extends(PostCreateUsageLimitHeaders, _super);
     function PostCreateUsageLimitHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCreateUsageLimitHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCreateUsageLimitHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCreateUsageLimitHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCreateUsageLimitHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCreateUsageLimitHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCreateUsageLimitHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCreateUsageLimitHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCreateUsageLimitHeaders;
-}(SpeakeasyBase));
-export { PostCreateUsageLimitHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateUsageLimitHeaders = PostCreateUsageLimitHeaders;
 var PostCreateUsageLimitRequest = /** @class */ (function (_super) {
     __extends(PostCreateUsageLimitRequest, _super);
     function PostCreateUsageLimitRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateUsageLimitQueryParams)
     ], PostCreateUsageLimitRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateUsageLimitHeaders)
     ], PostCreateUsageLimitRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCreateUsageLimitRequest.prototype, "request", void 0);
     return PostCreateUsageLimitRequest;
-}(SpeakeasyBase));
-export { PostCreateUsageLimitRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateUsageLimitRequest = PostCreateUsageLimitRequest;
 var PostCreateUsageLimitResponse = /** @class */ (function (_super) {
     __extends(PostCreateUsageLimitResponse, _super);
     function PostCreateUsageLimitResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCreateUsageLimitResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCreateUsageLimitResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCreateUsageLimitResponse.prototype, "statusCode", void 0);
     return PostCreateUsageLimitResponse;
-}(SpeakeasyBase));
-export { PostCreateUsageLimitResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateUsageLimitResponse = PostCreateUsageLimitResponse;

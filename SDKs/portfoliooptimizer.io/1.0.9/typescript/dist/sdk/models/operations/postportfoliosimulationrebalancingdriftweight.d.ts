@@ -20,6 +20,6 @@ export declare class PostPortfolioSimulationRebalancingDriftWeightRequest extend
 }
 export declare class PostPortfolioSimulationRebalancingDriftWeightResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioSimulationRebalancingDriftWeight200ApplicationJsonObject?: PostPortfolioSimulationRebalancingDriftWeight200ApplicationJson;
     statusCode: number;
+    postPortfolioSimulationRebalancingDriftWeight200ApplicationJSONObject?: PostPortfolioSimulationRebalancingDriftWeight200ApplicationJson;
 }

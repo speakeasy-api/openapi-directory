@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReservationValue } from "./reservationvalue";
-import { ReservedInstanceReservationValue } from "./reservedinstancereservationvalue";
-import { TargetReservationValue } from "./targetreservationvalue";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetReservedInstancesExchangeQuoteResult = exports.GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup = exports.GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup = void 0;
+var utils_1 = require("../../../internal/utils");
+// GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup
+/**
+ * The cost associated with the Reserved Instance.
+**/
+var GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup = /** @class */ (function (_super) {
+    __extends(GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup, _super);
+    function GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup.prototype, "hourlyPrice", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup.prototype, "remainingTotalValue", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup.prototype, "remainingUpfrontValue", void 0);
+    return GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup;
+}(utils_1.SpeakeasyBase));
+exports.GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup = GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup;
+// GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup
+/**
+ * The cost associated with the Reserved Instance.
+**/
+var GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup = /** @class */ (function (_super) {
+    __extends(GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup, _super);
+    function GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup.prototype, "hourlyPrice", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup.prototype, "remainingTotalValue", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup.prototype, "remainingUpfrontValue", void 0);
+    return GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup;
+}(utils_1.SpeakeasyBase));
+exports.GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup = GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup;
 // GetReservedInstancesExchangeQuoteResult
 /**
  * Contains the output of GetReservedInstancesExchangeQuote.
@@ -36,41 +84,41 @@ var GetReservedInstancesExchangeQuoteResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetReservedInstancesExchangeQuoteResult.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Boolean)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetReservedInstancesExchangeQuoteResult.prototype, "isValidExchange", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetReservedInstancesExchangeQuoteResult.prototype, "outputReservedInstancesWillExpireAt", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetReservedInstancesExchangeQuoteResult.prototype, "paymentDue", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ReservationValue)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetReservedInstancesExchangeQuoteResultReservedInstanceValueRollup)
     ], GetReservedInstancesExchangeQuoteResult.prototype, "reservedInstanceValueRollup", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ReservedInstanceReservationValue }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetReservedInstancesExchangeQuoteResult.prototype, "reservedInstanceValueSet", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ReservationValue)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetReservedInstancesExchangeQuoteResultTargetConfigurationValueRollup)
     ], GetReservedInstancesExchangeQuoteResult.prototype, "targetConfigurationValueRollup", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: TargetReservationValue }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetReservedInstancesExchangeQuoteResult.prototype, "targetConfigurationValueSet", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetReservedInstancesExchangeQuoteResult.prototype, "validationFailureReason", void 0);
     return GetReservedInstancesExchangeQuoteResult;
-}(SpeakeasyBase));
-export { GetReservedInstancesExchangeQuoteResult };
+}(utils_1.SpeakeasyBase));
+exports.GetReservedInstancesExchangeQuoteResult = GetReservedInstancesExchangeQuoteResult;

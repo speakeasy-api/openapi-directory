@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TagLanguageMarshaller } from "./taglanguagemarshaller";
-import { TagTypeMarshaller } from "./tagtypemarshaller";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagMarshaller = void 0;
+var utils_1 = require("../../../internal/utils");
+var taglanguagemarshaller_1 = require("./taglanguagemarshaller");
+var tagtypemarshaller_1 = require("./tagtypemarshaller");
 var TagMarshaller = /** @class */ (function (_super) {
     __extends(TagMarshaller, _super);
     function TagMarshaller() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], TagMarshaller.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
-        __metadata("design:type", TagLanguageMarshaller)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
+        __metadata("design:type", taglanguagemarshaller_1.TagLanguageMarshaller)
     ], TagMarshaller.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TagMarshaller.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
-        __metadata("design:type", TagTypeMarshaller)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", tagtypemarshaller_1.TagTypeMarshaller)
     ], TagMarshaller.prototype, "type", void 0);
     return TagMarshaller;
-}(SpeakeasyBase));
-export { TagMarshaller };
+}(utils_1.SpeakeasyBase));
+exports.TagMarshaller = TagMarshaller;

@@ -5,10 +5,11 @@ import { GlobalRules } from "./globalrules";
 import { Metadata } from "./metadata";
 import { Search } from "./search";
 import { Versions } from "./versions";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://apicurio.local"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     artifactRules: ArtifactRules;
     artifacts: Artifacts;
@@ -22,6 +23,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

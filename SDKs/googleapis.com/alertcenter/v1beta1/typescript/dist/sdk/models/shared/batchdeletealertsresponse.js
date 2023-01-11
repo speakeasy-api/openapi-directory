@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Status } from "./status";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchDeleteAlertsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var status_1 = require("./status");
 // BatchDeleteAlertsResponse
 /**
  * Response to batch delete operation on alerts.
@@ -34,13 +37,13 @@ var BatchDeleteAlertsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failedAlertStatus", elemType: Status }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failedAlertStatus", elemType: status_1.Status }),
+        __metadata("design:type", Object)
     ], BatchDeleteAlertsResponse.prototype, "failedAlertStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successAlertIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successAlertIds" }),
         __metadata("design:type", Array)
     ], BatchDeleteAlertsResponse.prototype, "successAlertIds", void 0);
     return BatchDeleteAlertsResponse;
-}(SpeakeasyBase));
-export { BatchDeleteAlertsResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchDeleteAlertsResponse = BatchDeleteAlertsResponse;

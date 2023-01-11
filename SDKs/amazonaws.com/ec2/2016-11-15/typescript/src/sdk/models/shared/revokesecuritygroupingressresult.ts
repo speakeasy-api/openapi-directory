@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IpPermission } from "./ippermission";
 
 
 
 export class RevokeSecurityGroupIngressResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  return?: boolean;
+  return?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: IpPermission })
-  unknownIpPermissions?: IpPermission[];
+  @SpeakeasyMetadata()
+  unknownIpPermissions?: Record<string, any>;
 }

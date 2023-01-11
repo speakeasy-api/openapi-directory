@@ -1,0 +1,175 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAnalyticsAdminV1betaPropertyInput = exports.GoogleAnalyticsAdminV1betaProperty = exports.GoogleAnalyticsAdminV1betaPropertyServiceLevelEnum = exports.GoogleAnalyticsAdminV1betaPropertyPropertyTypeEnum = exports.GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum;
+(function (GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum) {
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["IndustryCategoryUnspecified"] = "INDUSTRY_CATEGORY_UNSPECIFIED";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["Automotive"] = "AUTOMOTIVE";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["BusinessAndIndustrialMarkets"] = "BUSINESS_AND_INDUSTRIAL_MARKETS";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["Finance"] = "FINANCE";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["Healthcare"] = "HEALTHCARE";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["Technology"] = "TECHNOLOGY";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["Travel"] = "TRAVEL";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["Other"] = "OTHER";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["ArtsAndEntertainment"] = "ARTS_AND_ENTERTAINMENT";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["BeautyAndFitness"] = "BEAUTY_AND_FITNESS";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["BooksAndLiterature"] = "BOOKS_AND_LITERATURE";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["FoodAndDrink"] = "FOOD_AND_DRINK";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["Games"] = "GAMES";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["HobbiesAndLeisure"] = "HOBBIES_AND_LEISURE";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["HomeAndGarden"] = "HOME_AND_GARDEN";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["InternetAndTelecom"] = "INTERNET_AND_TELECOM";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["LawAndGovernment"] = "LAW_AND_GOVERNMENT";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["News"] = "NEWS";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["OnlineCommunities"] = "ONLINE_COMMUNITIES";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["PeopleAndSociety"] = "PEOPLE_AND_SOCIETY";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["PetsAndAnimals"] = "PETS_AND_ANIMALS";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["RealEstate"] = "REAL_ESTATE";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["Reference"] = "REFERENCE";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["Science"] = "SCIENCE";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["Sports"] = "SPORTS";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["JobsAndEducation"] = "JOBS_AND_EDUCATION";
+    GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum["Shopping"] = "SHOPPING";
+})(GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum = exports.GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum || (exports.GoogleAnalyticsAdminV1betaPropertyIndustryCategoryEnum = {}));
+var GoogleAnalyticsAdminV1betaPropertyPropertyTypeEnum;
+(function (GoogleAnalyticsAdminV1betaPropertyPropertyTypeEnum) {
+    GoogleAnalyticsAdminV1betaPropertyPropertyTypeEnum["PropertyTypeUnspecified"] = "PROPERTY_TYPE_UNSPECIFIED";
+    GoogleAnalyticsAdminV1betaPropertyPropertyTypeEnum["PropertyTypeOrdinary"] = "PROPERTY_TYPE_ORDINARY";
+    GoogleAnalyticsAdminV1betaPropertyPropertyTypeEnum["PropertyTypeSubproperty"] = "PROPERTY_TYPE_SUBPROPERTY";
+    GoogleAnalyticsAdminV1betaPropertyPropertyTypeEnum["PropertyTypeRollup"] = "PROPERTY_TYPE_ROLLUP";
+})(GoogleAnalyticsAdminV1betaPropertyPropertyTypeEnum = exports.GoogleAnalyticsAdminV1betaPropertyPropertyTypeEnum || (exports.GoogleAnalyticsAdminV1betaPropertyPropertyTypeEnum = {}));
+var GoogleAnalyticsAdminV1betaPropertyServiceLevelEnum;
+(function (GoogleAnalyticsAdminV1betaPropertyServiceLevelEnum) {
+    GoogleAnalyticsAdminV1betaPropertyServiceLevelEnum["ServiceLevelUnspecified"] = "SERVICE_LEVEL_UNSPECIFIED";
+    GoogleAnalyticsAdminV1betaPropertyServiceLevelEnum["GoogleAnalyticsStandard"] = "GOOGLE_ANALYTICS_STANDARD";
+    GoogleAnalyticsAdminV1betaPropertyServiceLevelEnum["GoogleAnalytics360"] = "GOOGLE_ANALYTICS_360";
+})(GoogleAnalyticsAdminV1betaPropertyServiceLevelEnum = exports.GoogleAnalyticsAdminV1betaPropertyServiceLevelEnum || (exports.GoogleAnalyticsAdminV1betaPropertyServiceLevelEnum = {}));
+// GoogleAnalyticsAdminV1betaProperty
+/**
+ * A resource message representing a Google Analytics GA4 property.
+**/
+var GoogleAnalyticsAdminV1betaProperty = /** @class */ (function (_super) {
+    __extends(GoogleAnalyticsAdminV1betaProperty, _super);
+    function GoogleAnalyticsAdminV1betaProperty() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaProperty.prototype, "account", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaProperty.prototype, "createTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaProperty.prototype, "currencyCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleteTime" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaProperty.prototype, "deleteTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaProperty.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expireTime" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaProperty.prototype, "expireTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=industryCategory" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaProperty.prototype, "industryCategory", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaProperty.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaProperty.prototype, "parent", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=propertyType" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaProperty.prototype, "propertyType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceLevel" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaProperty.prototype, "serviceLevel", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaProperty.prototype, "timeZone", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaProperty.prototype, "updateTime", void 0);
+    return GoogleAnalyticsAdminV1betaProperty;
+}(utils_1.SpeakeasyBase));
+exports.GoogleAnalyticsAdminV1betaProperty = GoogleAnalyticsAdminV1betaProperty;
+// GoogleAnalyticsAdminV1betaPropertyInput
+/**
+ * A resource message representing a Google Analytics GA4 property.
+**/
+var GoogleAnalyticsAdminV1betaPropertyInput = /** @class */ (function (_super) {
+    __extends(GoogleAnalyticsAdminV1betaPropertyInput, _super);
+    function GoogleAnalyticsAdminV1betaPropertyInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaPropertyInput.prototype, "account", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaPropertyInput.prototype, "currencyCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaPropertyInput.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=industryCategory" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaPropertyInput.prototype, "industryCategory", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaPropertyInput.prototype, "parent", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=propertyType" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaPropertyInput.prototype, "propertyType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaPropertyInput.prototype, "timeZone", void 0);
+    return GoogleAnalyticsAdminV1betaPropertyInput;
+}(utils_1.SpeakeasyBase));
+exports.GoogleAnalyticsAdminV1betaPropertyInput = GoogleAnalyticsAdminV1betaPropertyInput;

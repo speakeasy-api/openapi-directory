@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminDeletePersonalAccessTokenResponse = exports.EnterpriseAdminDeletePersonalAccessTokenRequest = exports.EnterpriseAdminDeletePersonalAccessTokenPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseAdminDeletePersonalAccessTokenPathParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeletePersonalAccessTokenPathParams, _super);
     function EnterpriseAdminDeletePersonalAccessTokenPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=token_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=token_id" }),
         __metadata("design:type", Number)
     ], EnterpriseAdminDeletePersonalAccessTokenPathParams.prototype, "tokenId", void 0);
     return EnterpriseAdminDeletePersonalAccessTokenPathParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeletePersonalAccessTokenPathParams };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeletePersonalAccessTokenPathParams = EnterpriseAdminDeletePersonalAccessTokenPathParams;
 var EnterpriseAdminDeletePersonalAccessTokenRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeletePersonalAccessTokenRequest, _super);
     function EnterpriseAdminDeletePersonalAccessTokenRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminDeletePersonalAccessTokenPathParams)
     ], EnterpriseAdminDeletePersonalAccessTokenRequest.prototype, "pathParams", void 0);
     return EnterpriseAdminDeletePersonalAccessTokenRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeletePersonalAccessTokenRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeletePersonalAccessTokenRequest = EnterpriseAdminDeletePersonalAccessTokenRequest;
 var EnterpriseAdminDeletePersonalAccessTokenResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeletePersonalAccessTokenResponse, _super);
     function EnterpriseAdminDeletePersonalAccessTokenResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminDeletePersonalAccessTokenResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminDeletePersonalAccessTokenResponse.prototype, "statusCode", void 0);
     return EnterpriseAdminDeletePersonalAccessTokenResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeletePersonalAccessTokenResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeletePersonalAccessTokenResponse = EnterpriseAdminDeletePersonalAccessTokenResponse;

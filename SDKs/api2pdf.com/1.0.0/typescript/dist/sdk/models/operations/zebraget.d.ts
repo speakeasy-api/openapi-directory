@@ -17,5 +17,5 @@ export declare class ZebraGetRequest extends SpeakeasyBase {
 export declare class ZebraGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    zebraGet200ImagePngBinaryString?: Uint8Array;
+    zebraGET200ImagePngBinaryString?: Uint8Array;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { X509Extension } from "./x509extension";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubjectAltNames = void 0;
+var utils_1 = require("../../../internal/utils");
+var x509extension_1 = require("./x509extension");
 // SubjectAltNames
 /**
  * SubjectAltNames corresponds to a more modern way of listing what the asserted identity is in a certificate (i.e., compared to the "common name" in the distinguished name).
@@ -34,25 +37,25 @@ var SubjectAltNames = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customSans", elemType: X509Extension }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customSans", elemType: x509extension_1.X509Extension }),
         __metadata("design:type", Array)
     ], SubjectAltNames.prototype, "customSans", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dnsNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dnsNames" }),
         __metadata("design:type", Array)
     ], SubjectAltNames.prototype, "dnsNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emailAddresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emailAddresses" }),
         __metadata("design:type", Array)
     ], SubjectAltNames.prototype, "emailAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddresses" }),
         __metadata("design:type", Array)
     ], SubjectAltNames.prototype, "ipAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uris" }),
         __metadata("design:type", Array)
     ], SubjectAltNames.prototype, "uris", void 0);
     return SubjectAltNames;
-}(SpeakeasyBase));
-export { SubjectAltNames };
+}(utils_1.SpeakeasyBase));
+exports.SubjectAltNames = SubjectAltNames;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FieldResult } from "./fieldresult";
-import { TableResult } from "./tableresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FormRecognitionResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var fieldresult_1 = require("./fieldresult");
+var tableresult_1 = require("./tableresult");
 // FormRecognitionResult
 /**
  * The result of extracting form field values
@@ -35,25 +38,25 @@ var FormRecognitionResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BestMatchFormSettingName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BestMatchFormSettingName" }),
         __metadata("design:type", String)
     ], FormRecognitionResult.prototype, "bestMatchFormSettingName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Diagnostics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Diagnostics" }),
         __metadata("design:type", Array)
     ], FormRecognitionResult.prototype, "diagnostics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FieldValueExtractionResult", elemType: FieldResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FieldValueExtractionResult", elemType: fieldresult_1.FieldResult }),
         __metadata("design:type", Array)
     ], FormRecognitionResult.prototype, "fieldValueExtractionResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Successful" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Successful" }),
         __metadata("design:type", Boolean)
     ], FormRecognitionResult.prototype, "successful", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableValueExtractionResults", elemType: TableResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableValueExtractionResults", elemType: tableresult_1.TableResult }),
         __metadata("design:type", Array)
     ], FormRecognitionResult.prototype, "tableValueExtractionResults", void 0);
     return FormRecognitionResult;
-}(SpeakeasyBase));
-export { FormRecognitionResult };
+}(utils_1.SpeakeasyBase));
+exports.FormRecognitionResult = FormRecognitionResult;

@@ -14,5 +14,5 @@ export class PublicSaleDates extends SpeakeasyBase {
   startDateTime?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=startTBD" })
-  startTbd?: boolean;
+  startTBD?: boolean;
 }

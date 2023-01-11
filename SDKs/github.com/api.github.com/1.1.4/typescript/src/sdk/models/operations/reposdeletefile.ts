@@ -94,7 +94,7 @@ export class ReposDeleteFileResponse extends SpeakeasyBase {
   fileCommit?: shared.FileCommit;
 
   @SpeakeasyMetadata()
-  reposDeleteFile503ApplicationJsonObject?: ReposDeleteFile503ApplicationJson;
+  reposDeleteFile503ApplicationJSONObject?: ReposDeleteFile503ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

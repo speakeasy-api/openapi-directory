@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { LanguageDocumentsAnalyzeEntitiesRequest, LanguageDocumentsAnalyzeEntitiesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,33 +31,33 @@ const req: LanguageDocumentsAnalyzeEntitiesRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "sed",
-    alt: "json",
-    callback: "eum",
-    fields: "sit",
-    key: "et",
-    oauthToken: "animi",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
     prettyPrint: true,
-    quotaUser: "atque",
-    uploadType: "ut",
-    uploadProtocol: "consequuntur",
+    quotaUser: "fugit",
+    uploadType: "et",
+    uploadProtocol: "nihil",
   },
   request: {
     document: {
-      content: "vel",
-      gcsContentUri: "consequuntur",
-      language: "ut",
+      content: "rerum",
+      gcsContentUri: "dicta",
+      language: "debitis",
       type: "TYPE_UNSPECIFIED",
     },
-    encodingType: "NONE",
+    encodingType: "UTF16",
   },
 };
 

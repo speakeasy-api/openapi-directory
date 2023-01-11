@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ContentTypeProfile } from "./contenttypeprofile";
+import { ContentTypeProfileList } from "./contenttypeprofilelist";
 /**
  * Field-level encryption content type-profile.
 **/
 export declare class ContentTypeProfiles extends SpeakeasyBase {
-    items?: ContentTypeProfile[];
+    items?: ContentTypeProfileList[];
     quantity: number;
 }

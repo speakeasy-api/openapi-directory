@@ -5,5 +5,5 @@ import { OcrPhotoTextElement } from "./ocrphototextelement";
 **/
 export declare class TableCellResult extends SpeakeasyBase {
     cellValues?: OcrPhotoTextElement[];
-    columnId?: string;
+    columnID?: string;
 }

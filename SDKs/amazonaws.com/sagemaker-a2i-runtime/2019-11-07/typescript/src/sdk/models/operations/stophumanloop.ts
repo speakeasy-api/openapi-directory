@@ -55,7 +55,7 @@ export class StopHumanLoopResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  stopHumanLoopResponse?: Map<string, any>;
+  stopHumanLoopResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   throttlingException?: any;

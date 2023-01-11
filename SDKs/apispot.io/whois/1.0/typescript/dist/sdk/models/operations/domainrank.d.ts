@@ -11,5 +11,5 @@ export declare class DomainRankRequest extends SpeakeasyBase {
 export declare class DomainRankResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    domainRank200ApplicationJsonObject?: DomainRank200ApplicationJson;
+    domainRank200ApplicationJSONObject?: DomainRank200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3BucketLogDestination = void 0;
+var utils_1 = require("../../../internal/utils");
 // S3BucketLogDestination
 /**
  * Specifies an Amazon S3 bucket for logging audio conversations
@@ -33,17 +36,17 @@ var S3BucketLogDestination = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsKeyArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsKeyArn" }),
         __metadata("design:type", String)
     ], S3BucketLogDestination.prototype, "kmsKeyArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logPrefix" }),
         __metadata("design:type", String)
     ], S3BucketLogDestination.prototype, "logPrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3BucketArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3BucketArn" }),
         __metadata("design:type", String)
     ], S3BucketLogDestination.prototype, "s3BucketArn", void 0);
     return S3BucketLogDestination;
-}(SpeakeasyBase));
-export { S3BucketLogDestination };
+}(utils_1.SpeakeasyBase));
+exports.S3BucketLogDestination = S3BucketLogDestination;

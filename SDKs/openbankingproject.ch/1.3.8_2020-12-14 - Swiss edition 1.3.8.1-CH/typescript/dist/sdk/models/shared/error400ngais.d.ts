@@ -6,6 +6,6 @@ import { TppMessage400Ais } from "./tppmessage400ais";
  *
 **/
 export declare class Error400NgAis extends SpeakeasyBase {
-    links?: Map<string, HrefType>;
+    links?: Record<string, HrefType>;
     tppMessages?: TppMessage400Ais[];
 }

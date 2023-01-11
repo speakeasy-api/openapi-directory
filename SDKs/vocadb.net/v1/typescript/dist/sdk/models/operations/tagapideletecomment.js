@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagApiDeleteCommentResponse = exports.TagApiDeleteCommentRequest = exports.TagApiDeleteCommentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TagApiDeleteCommentPathParams = /** @class */ (function (_super) {
     __extends(TagApiDeleteCommentPathParams, _super);
     function TagApiDeleteCommentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=commentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=commentId" }),
         __metadata("design:type", Number)
     ], TagApiDeleteCommentPathParams.prototype, "commentId", void 0);
     return TagApiDeleteCommentPathParams;
-}(SpeakeasyBase));
-export { TagApiDeleteCommentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TagApiDeleteCommentPathParams = TagApiDeleteCommentPathParams;
 var TagApiDeleteCommentRequest = /** @class */ (function (_super) {
     __extends(TagApiDeleteCommentRequest, _super);
     function TagApiDeleteCommentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TagApiDeleteCommentPathParams)
     ], TagApiDeleteCommentRequest.prototype, "pathParams", void 0);
     return TagApiDeleteCommentRequest;
-}(SpeakeasyBase));
-export { TagApiDeleteCommentRequest };
+}(utils_1.SpeakeasyBase));
+exports.TagApiDeleteCommentRequest = TagApiDeleteCommentRequest;
 var TagApiDeleteCommentResponse = /** @class */ (function (_super) {
     __extends(TagApiDeleteCommentResponse, _super);
     function TagApiDeleteCommentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TagApiDeleteCommentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagApiDeleteCommentResponse.prototype, "statusCode", void 0);
     return TagApiDeleteCommentResponse;
-}(SpeakeasyBase));
-export { TagApiDeleteCommentResponse };
+}(utils_1.SpeakeasyBase));
+exports.TagApiDeleteCommentResponse = TagApiDeleteCommentResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,98 +14,123 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSnippetsWorkspaceEncodedIdNodeIdResponse = exports.GetSnippetsWorkspaceEncodedIdNodeIdRequest = exports.GetSnippetsWorkspaceEncodedIdNodeIdSecurity = exports.GetSnippetsWorkspaceEncodedIdNodeIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetSnippetsWorkspaceEncodedIdNodeIdPathParams = /** @class */ (function (_super) {
     __extends(GetSnippetsWorkspaceEncodedIdNodeIdPathParams, _super);
     function GetSnippetsWorkspaceEncodedIdNodeIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=encoded_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=encoded_id" }),
         __metadata("design:type", String)
     ], GetSnippetsWorkspaceEncodedIdNodeIdPathParams.prototype, "encodedId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=node_id" }),
         __metadata("design:type", String)
     ], GetSnippetsWorkspaceEncodedIdNodeIdPathParams.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], GetSnippetsWorkspaceEncodedIdNodeIdPathParams.prototype, "workspace", void 0);
     return GetSnippetsWorkspaceEncodedIdNodeIdPathParams;
-}(SpeakeasyBase));
-export { GetSnippetsWorkspaceEncodedIdNodeIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSnippetsWorkspaceEncodedIdNodeIdPathParams = GetSnippetsWorkspaceEncodedIdNodeIdPathParams;
 var GetSnippetsWorkspaceEncodedIdNodeIdSecurity = /** @class */ (function (_super) {
     __extends(GetSnippetsWorkspaceEncodedIdNodeIdSecurity, _super);
     function GetSnippetsWorkspaceEncodedIdNodeIdSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], GetSnippetsWorkspaceEncodedIdNodeIdSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=http;subtype=basic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=basic" }),
         __metadata("design:type", shared.SchemeBasic)
     ], GetSnippetsWorkspaceEncodedIdNodeIdSecurity.prototype, "basic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], GetSnippetsWorkspaceEncodedIdNodeIdSecurity.prototype, "apiKey", void 0);
     return GetSnippetsWorkspaceEncodedIdNodeIdSecurity;
-}(SpeakeasyBase));
-export { GetSnippetsWorkspaceEncodedIdNodeIdSecurity };
+}(utils_1.SpeakeasyBase));
+exports.GetSnippetsWorkspaceEncodedIdNodeIdSecurity = GetSnippetsWorkspaceEncodedIdNodeIdSecurity;
 var GetSnippetsWorkspaceEncodedIdNodeIdRequest = /** @class */ (function (_super) {
     __extends(GetSnippetsWorkspaceEncodedIdNodeIdRequest, _super);
     function GetSnippetsWorkspaceEncodedIdNodeIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSnippetsWorkspaceEncodedIdNodeIdPathParams)
     ], GetSnippetsWorkspaceEncodedIdNodeIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSnippetsWorkspaceEncodedIdNodeIdSecurity)
     ], GetSnippetsWorkspaceEncodedIdNodeIdRequest.prototype, "security", void 0);
     return GetSnippetsWorkspaceEncodedIdNodeIdRequest;
-}(SpeakeasyBase));
-export { GetSnippetsWorkspaceEncodedIdNodeIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSnippetsWorkspaceEncodedIdNodeIdRequest = GetSnippetsWorkspaceEncodedIdNodeIdRequest;
 var GetSnippetsWorkspaceEncodedIdNodeIdResponse = /** @class */ (function (_super) {
     __extends(GetSnippetsWorkspaceEncodedIdNodeIdResponse, _super);
     function GetSnippetsWorkspaceEncodedIdNodeIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetSnippetsWorkspaceEncodedIdNodeIdResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSnippetsWorkspaceEncodedIdNodeIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSnippetsWorkspaceEncodedIdNodeIdResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetSnippetsWorkspaceEncodedIdNodeIdResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetSnippetsWorkspaceEncodedIdNodeIdResponse.prototype, "snippet", void 0);
     return GetSnippetsWorkspaceEncodedIdNodeIdResponse;
-}(SpeakeasyBase));
-export { GetSnippetsWorkspaceEncodedIdNodeIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSnippetsWorkspaceEncodedIdNodeIdResponse = GetSnippetsWorkspaceEncodedIdNodeIdResponse;

@@ -127,11 +127,11 @@ export class UserStatisticeDailyValueV1StatisticsIndividualDailyResponse extends
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  userStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJsonObject?: UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJson;
+  userStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJSONObject?: UserStatisticeDailyValueV1StatisticsIndividualDaily200ApplicationJson;
 }

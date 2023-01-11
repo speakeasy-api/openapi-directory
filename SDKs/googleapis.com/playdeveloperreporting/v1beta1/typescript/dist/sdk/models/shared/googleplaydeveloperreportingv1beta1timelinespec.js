@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleTypeDateTime } from "./googletypedatetime";
-export var GooglePlayDeveloperReportingV1beta1TimelineSpecAggregationPeriodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePlayDeveloperReportingV1beta1TimelineSpec = exports.GooglePlayDeveloperReportingV1beta1TimelineSpecAggregationPeriodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googletypedatetime_1 = require("./googletypedatetime");
+var GooglePlayDeveloperReportingV1beta1TimelineSpecAggregationPeriodEnum;
 (function (GooglePlayDeveloperReportingV1beta1TimelineSpecAggregationPeriodEnum) {
     GooglePlayDeveloperReportingV1beta1TimelineSpecAggregationPeriodEnum["AggregationPeriodUnspecified"] = "AGGREGATION_PERIOD_UNSPECIFIED";
     GooglePlayDeveloperReportingV1beta1TimelineSpecAggregationPeriodEnum["Hourly"] = "HOURLY";
     GooglePlayDeveloperReportingV1beta1TimelineSpecAggregationPeriodEnum["Daily"] = "DAILY";
-})(GooglePlayDeveloperReportingV1beta1TimelineSpecAggregationPeriodEnum || (GooglePlayDeveloperReportingV1beta1TimelineSpecAggregationPeriodEnum = {}));
+})(GooglePlayDeveloperReportingV1beta1TimelineSpecAggregationPeriodEnum = exports.GooglePlayDeveloperReportingV1beta1TimelineSpecAggregationPeriodEnum || (exports.GooglePlayDeveloperReportingV1beta1TimelineSpecAggregationPeriodEnum = {}));
 // GooglePlayDeveloperReportingV1beta1TimelineSpec
 /**
  * Specification of the time-related aggregation parameters of a timeline. Timelines have an aggregation period (`DAILY`, `HOURLY`, etc) which defines how events are aggregated in metrics. The points in a timeline are defined by the starting DateTime of the aggregation period. The duration is implicit in the AggregationPeriod. Hourly aggregation periods, when supported by a metric set, are always specified in UTC to avoid ambiguities around daylight saving time transitions, where an hour is skipped when adopting DST, and repeated when abandoning DST. For example, the timestamp '2021-11-07 01:00:00 America/Los_Angeles' is ambiguous since it can correspond to '2021-11-07 08:00:00 UTC' or '2021-11-07 09:00:00 UTC'. Daily aggregation periods require specifying a timezone which will determine the precise instants of the start and the end of the day. Not all metric sets support all timezones, so make sure to check which timezones are supported by the metric set you want to query.
@@ -40,17 +43,17 @@ var GooglePlayDeveloperReportingV1beta1TimelineSpec = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aggregationPeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aggregationPeriod" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1beta1TimelineSpec.prototype, "aggregationPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
-        __metadata("design:type", GoogleTypeDateTime)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
+        __metadata("design:type", googletypedatetime_1.GoogleTypeDateTime)
     ], GooglePlayDeveloperReportingV1beta1TimelineSpec.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
-        __metadata("design:type", GoogleTypeDateTime)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
+        __metadata("design:type", googletypedatetime_1.GoogleTypeDateTime)
     ], GooglePlayDeveloperReportingV1beta1TimelineSpec.prototype, "startTime", void 0);
     return GooglePlayDeveloperReportingV1beta1TimelineSpec;
-}(SpeakeasyBase));
-export { GooglePlayDeveloperReportingV1beta1TimelineSpec };
+}(utils_1.SpeakeasyBase));
+exports.GooglePlayDeveloperReportingV1beta1TimelineSpec = GooglePlayDeveloperReportingV1beta1TimelineSpec;

@@ -16,7 +16,7 @@ export class Channel extends SpeakeasyBase {
   kind?: string;
 
   @SpeakeasyMetadata({ data: "json, name=params" })
-  params?: Map<string, string>;
+  params?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=payload" })
   payload?: boolean;

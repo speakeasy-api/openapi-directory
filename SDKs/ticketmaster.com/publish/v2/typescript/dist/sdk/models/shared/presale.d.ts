@@ -3,9 +3,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
  * Event's Presale Info
 **/
 export declare class Presale extends SpeakeasyBase {
-    descriptions?: Map<string, string>;
+    descriptions?: Record<string, string>;
     endDateTime?: Date;
-    names?: Map<string, string>;
+    names?: Record<string, string>;
     startDateTime?: Date;
     url?: string;
 }

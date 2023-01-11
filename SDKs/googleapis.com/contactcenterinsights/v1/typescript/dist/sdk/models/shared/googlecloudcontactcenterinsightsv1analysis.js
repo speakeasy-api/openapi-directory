@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1AnalysisResult } from "./googlecloudcontactcenterinsightsv1analysisresult";
-// GoogleCloudContactcenterinsightsV1AnalysisInput
-/**
- * The analysis resource.
-**/
-var GoogleCloudContactcenterinsightsV1AnalysisInput = /** @class */ (function (_super) {
-    __extends(GoogleCloudContactcenterinsightsV1AnalysisInput, _super);
-    function GoogleCloudContactcenterinsightsV1AnalysisInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=analysisResult" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1AnalysisResult)
-    ], GoogleCloudContactcenterinsightsV1AnalysisInput.prototype, "analysisResult", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], GoogleCloudContactcenterinsightsV1AnalysisInput.prototype, "name", void 0);
-    return GoogleCloudContactcenterinsightsV1AnalysisInput;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1AnalysisInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1AnalysisInput = exports.GoogleCloudContactcenterinsightsV1Analysis = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1analysisresult_1 = require("./googlecloudcontactcenterinsightsv1analysisresult");
+var googlecloudcontactcenterinsightsv1annotatorselector_1 = require("./googlecloudcontactcenterinsightsv1annotatorselector");
 // GoogleCloudContactcenterinsightsV1Analysis
 /**
  * The analysis resource.
@@ -54,21 +38,49 @@ var GoogleCloudContactcenterinsightsV1Analysis = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analysisResult" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1AnalysisResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analysisResult" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1analysisresult_1.GoogleCloudContactcenterinsightsV1AnalysisResult)
     ], GoogleCloudContactcenterinsightsV1Analysis.prototype, "analysisResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotatorSelector" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1annotatorselector_1.GoogleCloudContactcenterinsightsV1AnnotatorSelector)
+    ], GoogleCloudContactcenterinsightsV1Analysis.prototype, "annotatorSelector", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1Analysis.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1Analysis.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestTime" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1Analysis.prototype, "requestTime", void 0);
     return GoogleCloudContactcenterinsightsV1Analysis;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1Analysis };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1Analysis = GoogleCloudContactcenterinsightsV1Analysis;
+// GoogleCloudContactcenterinsightsV1AnalysisInput
+/**
+ * The analysis resource.
+**/
+var GoogleCloudContactcenterinsightsV1AnalysisInput = /** @class */ (function (_super) {
+    __extends(GoogleCloudContactcenterinsightsV1AnalysisInput, _super);
+    function GoogleCloudContactcenterinsightsV1AnalysisInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analysisResult" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1analysisresult_1.GoogleCloudContactcenterinsightsV1AnalysisResult)
+    ], GoogleCloudContactcenterinsightsV1AnalysisInput.prototype, "analysisResult", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotatorSelector" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1annotatorselector_1.GoogleCloudContactcenterinsightsV1AnnotatorSelector)
+    ], GoogleCloudContactcenterinsightsV1AnalysisInput.prototype, "annotatorSelector", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], GoogleCloudContactcenterinsightsV1AnalysisInput.prototype, "name", void 0);
+    return GoogleCloudContactcenterinsightsV1AnalysisInput;
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1AnalysisInput = GoogleCloudContactcenterinsightsV1AnalysisInput;

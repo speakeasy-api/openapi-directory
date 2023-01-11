@@ -51,7 +51,7 @@ export class CreateChannelRequestBody extends SpeakeasyBase {
   recordingConfigurationArn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: CreateChannelRequestBodyTypeEnum;

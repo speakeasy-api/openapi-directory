@@ -9,7 +9,7 @@ export declare class VersionMetaData extends SpeakeasyBase {
     id: string;
     labels?: string[];
     name?: string;
-    properties?: Map<string, string>;
+    properties?: Record<string, string>;
     state?: ArtifactStateEnum;
     type: ArtifactTypeEnum;
     version: number;

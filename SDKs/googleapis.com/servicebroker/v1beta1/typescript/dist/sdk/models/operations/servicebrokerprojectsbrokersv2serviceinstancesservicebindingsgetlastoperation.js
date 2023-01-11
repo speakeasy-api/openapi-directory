@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,146 +14,171 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse = exports.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest = exports.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationSecurity = exports.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams = exports.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationPathParams = /** @class */ (function (_super) {
     __extends(ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationPathParams, _super);
     function ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationPathParams.prototype, "name", void 0);
     return ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationPathParams;
-}(SpeakeasyBase));
-export { ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationPathParams = ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationPathParams;
 var ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams = /** @class */ (function (_super) {
     __extends(ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams, _super);
     function ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=operation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=operation" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=planId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=planId" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams.prototype, "planId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=serviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=serviceId" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams.prototype, "serviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams.prototype, "uploadProtocol", void 0);
     return ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams;
-}(SpeakeasyBase));
-export { ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams = ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams;
 var ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationSecurity = /** @class */ (function (_super) {
     __extends(ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationSecurity, _super);
     function ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationSecurity.prototype, "oauth2c", void 0);
     return ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationSecurity;
-}(SpeakeasyBase));
-export { ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationSecurity };
+}(utils_1.SpeakeasyBase));
+exports.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationSecurity = ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationSecurity;
 var ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest = /** @class */ (function (_super) {
     __extends(ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest, _super);
     function ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationPathParams)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationSecurity)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest.prototype, "security", void 0);
     return ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest;
-}(SpeakeasyBase));
-export { ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest };
+}(utils_1.SpeakeasyBase));
+exports.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest = ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest;
 var ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse = /** @class */ (function (_super) {
     __extends(ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse, _super);
     function ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse.prototype, "statusCode", void 0);
     return ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse;
-}(SpeakeasyBase));
-export { ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse };
+}(utils_1.SpeakeasyBase));
+exports.ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse = ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationResponse;

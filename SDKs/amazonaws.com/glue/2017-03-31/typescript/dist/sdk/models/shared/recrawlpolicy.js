@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecrawlBehaviorEnum } from "./recrawlbehaviorenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecrawlPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var recrawlbehaviorenum_1 = require("./recrawlbehaviorenum");
 // RecrawlPolicy
 /**
  * When crawling an Amazon S3 data source after the first crawl is complete, specifies whether to crawl the entire dataset again or to crawl only folders that were added since the last crawler run. For more information, see <a href="https://docs.aws.amazon.com/glue/latest/dg/incremental-crawls.html">Incremental Crawls in Glue</a> in the developer guide.
@@ -34,9 +37,9 @@ var RecrawlPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecrawlBehavior" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecrawlBehavior" }),
         __metadata("design:type", String)
     ], RecrawlPolicy.prototype, "recrawlBehavior", void 0);
     return RecrawlPolicy;
-}(SpeakeasyBase));
-export { RecrawlPolicy };
+}(utils_1.SpeakeasyBase));
+exports.RecrawlPolicy = RecrawlPolicy;

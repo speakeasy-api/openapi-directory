@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkSwitchStackRoutingInterfaceResponse = exports.GetNetworkSwitchStackRoutingInterfaceRequest = exports.GetNetworkSwitchStackRoutingInterfacePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkSwitchStackRoutingInterfacePathParams = /** @class */ (function (_super) {
     __extends(GetNetworkSwitchStackRoutingInterfacePathParams, _super);
     function GetNetworkSwitchStackRoutingInterfacePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=interfaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=interfaceId" }),
         __metadata("design:type", String)
     ], GetNetworkSwitchStackRoutingInterfacePathParams.prototype, "interfaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkSwitchStackRoutingInterfacePathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=switchStackId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=switchStackId" }),
         __metadata("design:type", String)
     ], GetNetworkSwitchStackRoutingInterfacePathParams.prototype, "switchStackId", void 0);
     return GetNetworkSwitchStackRoutingInterfacePathParams;
-}(SpeakeasyBase));
-export { GetNetworkSwitchStackRoutingInterfacePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSwitchStackRoutingInterfacePathParams = GetNetworkSwitchStackRoutingInterfacePathParams;
 var GetNetworkSwitchStackRoutingInterfaceRequest = /** @class */ (function (_super) {
     __extends(GetNetworkSwitchStackRoutingInterfaceRequest, _super);
     function GetNetworkSwitchStackRoutingInterfaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkSwitchStackRoutingInterfacePathParams)
     ], GetNetworkSwitchStackRoutingInterfaceRequest.prototype, "pathParams", void 0);
     return GetNetworkSwitchStackRoutingInterfaceRequest;
-}(SpeakeasyBase));
-export { GetNetworkSwitchStackRoutingInterfaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSwitchStackRoutingInterfaceRequest = GetNetworkSwitchStackRoutingInterfaceRequest;
 var GetNetworkSwitchStackRoutingInterfaceResponse = /** @class */ (function (_super) {
     __extends(GetNetworkSwitchStackRoutingInterfaceResponse, _super);
     function GetNetworkSwitchStackRoutingInterfaceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkSwitchStackRoutingInterfaceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkSwitchStackRoutingInterfaceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkSwitchStackRoutingInterfaceResponse.prototype, "getNetworkSwitchStackRoutingInterface200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkSwitchStackRoutingInterfaceResponse.prototype, "getNetworkSwitchStackRoutingInterface200ApplicationJSONObject", void 0);
     return GetNetworkSwitchStackRoutingInterfaceResponse;
-}(SpeakeasyBase));
-export { GetNetworkSwitchStackRoutingInterfaceResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSwitchStackRoutingInterfaceResponse = GetNetworkSwitchStackRoutingInterfaceResponse;

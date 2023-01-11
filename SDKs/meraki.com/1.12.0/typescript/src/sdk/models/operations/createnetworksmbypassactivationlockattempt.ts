@@ -31,5 +31,5 @@ export class CreateNetworkSmBypassActivationLockAttemptResponse extends Speakeas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createNetworkSmBypassActivationLockAttempt201ApplicationJsonObject?: Map<string, any>;
+  createNetworkSmBypassActivationLockAttempt201ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NetworkFollow = exports.NetworkFollowEmbedded = void 0;
+var utils_1 = require("../../../internal/utils");
 var NetworkFollowEmbedded = /** @class */ (function (_super) {
     __extends(NetworkFollowEmbedded, _super);
     function NetworkFollowEmbedded() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
+        __metadata("design:type", Object)
     ], NetworkFollowEmbedded.prototype, "network", void 0);
     return NetworkFollowEmbedded;
-}(SpeakeasyBase));
-export { NetworkFollowEmbedded };
+}(utils_1.SpeakeasyBase));
+exports.NetworkFollowEmbedded = NetworkFollowEmbedded;
 var NetworkFollow = /** @class */ (function (_super) {
     __extends(NetworkFollow, _super);
     function NetworkFollow() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_embedded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_embedded" }),
         __metadata("design:type", NetworkFollowEmbedded)
     ], NetworkFollow.prototype, "embedded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network_id" }),
         __metadata("design:type", Number)
     ], NetworkFollow.prototype, "networkId", void 0);
     return NetworkFollow;
-}(SpeakeasyBase));
-export { NetworkFollow };
+}(utils_1.SpeakeasyBase));
+exports.NetworkFollow = NetworkFollow;

@@ -14,6 +14,6 @@ export declare class CategorizeChannelRequest extends SpeakeasyBase {
 export declare class CategorizeChannelResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     legacyError?: shared.LegacyError;
 }

@@ -8,7 +8,7 @@ export declare class MarkdownRenderRawRequest extends SpeakeasyBase {
 }
 export declare class MarkdownRenderRawResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    markdownRenderRaw200TextHtmlString?: string;
+    markdownRenderRaw200TextHTMLString?: string;
 }

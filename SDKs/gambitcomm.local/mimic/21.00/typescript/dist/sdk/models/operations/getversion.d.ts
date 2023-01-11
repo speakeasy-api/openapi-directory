@@ -2,5 +2,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetVersionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getVersion200ApplicationJsonString?: string;
+    getVersion200ApplicationJSONString?: string;
 }

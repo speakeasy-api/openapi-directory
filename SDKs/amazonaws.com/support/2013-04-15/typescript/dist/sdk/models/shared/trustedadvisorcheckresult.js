@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TrustedAdvisorCategorySpecificSummary } from "./trustedadvisorcategoryspecificsummary";
-import { TrustedAdvisorResourceDetail } from "./trustedadvisorresourcedetail";
-import { TrustedAdvisorResourcesSummary } from "./trustedadvisorresourcessummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TrustedAdvisorCheckResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var trustedadvisorcategoryspecificsummary_1 = require("./trustedadvisorcategoryspecificsummary");
+var trustedadvisorresourcedetail_1 = require("./trustedadvisorresourcedetail");
+var trustedadvisorresourcessummary_1 = require("./trustedadvisorresourcessummary");
 // TrustedAdvisorCheckResult
 /**
  * The results of a Trusted Advisor check returned by <a>DescribeTrustedAdvisorCheckResult</a>.
@@ -36,29 +39,29 @@ var TrustedAdvisorCheckResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categorySpecificSummary" }),
-        __metadata("design:type", TrustedAdvisorCategorySpecificSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categorySpecificSummary" }),
+        __metadata("design:type", trustedadvisorcategoryspecificsummary_1.TrustedAdvisorCategorySpecificSummary)
     ], TrustedAdvisorCheckResult.prototype, "categorySpecificSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=checkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=checkId" }),
         __metadata("design:type", String)
     ], TrustedAdvisorCheckResult.prototype, "checkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flaggedResources", elemType: TrustedAdvisorResourceDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flaggedResources", elemType: trustedadvisorresourcedetail_1.TrustedAdvisorResourceDetail }),
         __metadata("design:type", Array)
     ], TrustedAdvisorCheckResult.prototype, "flaggedResources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourcesSummary" }),
-        __metadata("design:type", TrustedAdvisorResourcesSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourcesSummary" }),
+        __metadata("design:type", trustedadvisorresourcessummary_1.TrustedAdvisorResourcesSummary)
     ], TrustedAdvisorCheckResult.prototype, "resourcesSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], TrustedAdvisorCheckResult.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", String)
     ], TrustedAdvisorCheckResult.prototype, "timestamp", void 0);
     return TrustedAdvisorCheckResult;
-}(SpeakeasyBase));
-export { TrustedAdvisorCheckResult };
+}(utils_1.SpeakeasyBase));
+exports.TrustedAdvisorCheckResult = TrustedAdvisorCheckResult;

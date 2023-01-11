@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CleverSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 // CleverSettings
 /**
  * Configuration for CleverCloud client
@@ -33,25 +36,25 @@ var CleverSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consumerKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consumerKey" }),
         __metadata("design:type", String)
     ], CleverSettings.prototype, "consumerKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consumerSecret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consumerSecret" }),
         __metadata("design:type", String)
     ], CleverSettings.prototype, "consumerSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orgaId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orgaId" }),
         __metadata("design:type", String)
     ], CleverSettings.prototype, "orgaId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], CleverSettings.prototype, "secret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], CleverSettings.prototype, "token", void 0);
     return CleverSettings;
-}(SpeakeasyBase));
-export { CleverSettings };
+}(utils_1.SpeakeasyBase));
+exports.CleverSettings = CleverSettings;

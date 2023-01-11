@@ -23,7 +23,7 @@ export declare class WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCance
 export declare class WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelRequest extends SpeakeasyBase {
     pathParams: WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelPathParams;
     queryParams: WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelSecurity;
 }
 export declare class WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelResponse extends SpeakeasyBase {

@@ -16,16 +16,16 @@ export class TaxDeclaration extends SpeakeasyBase {
   eligibleToReceiveLeaveLoading?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=EmployeeID" })
-  employeeId?: string;
+  employeeID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=EmploymentBasis" })
   employmentBasis?: EmploymentBasisEnum;
 
   @SpeakeasyMetadata({ data: "json, name=HasHELPDebt" })
-  hasHelpDebt?: boolean;
+  hasHELPDebt?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=HasSFSSDebt" })
-  hasSfssDebt?: boolean;
+  hasSFSSDebt?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=HasStudentStartupLoan" })
   hasStudentStartupLoan?: boolean;
@@ -49,7 +49,7 @@ export class TaxDeclaration extends SpeakeasyBase {
   taxOffsetEstimatedAmount?: number;
 
   @SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" })
-  updatedDateUtc?: string;
+  updatedDateUTC?: string;
 
   @SpeakeasyMetadata({ data: "json, name=UpwardVariationTaxWithholdingAmount" })
   upwardVariationTaxWithholdingAmount?: number;
@@ -67,16 +67,16 @@ export class TaxDeclarationInput extends SpeakeasyBase {
   eligibleToReceiveLeaveLoading?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=EmployeeID" })
-  employeeId?: string;
+  employeeID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=EmploymentBasis" })
   employmentBasis?: EmploymentBasisEnum;
 
   @SpeakeasyMetadata({ data: "json, name=HasHELPDebt" })
-  hasHelpDebt?: boolean;
+  hasHELPDebt?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=HasSFSSDebt" })
-  hasSfssDebt?: boolean;
+  hasSFSSDebt?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=HasStudentStartupLoan" })
   hasStudentStartupLoan?: boolean;

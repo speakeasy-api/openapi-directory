@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostPutWarmPoolActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostPutWarmPoolResponse = exports.PostPutWarmPoolRequest = exports.PostPutWarmPoolHeaders = exports.PostPutWarmPoolQueryParams = exports.PostPutWarmPoolVersionEnum = exports.PostPutWarmPoolActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostPutWarmPoolActionEnum;
 (function (PostPutWarmPoolActionEnum) {
     PostPutWarmPoolActionEnum["PutWarmPool"] = "PutWarmPool";
-})(PostPutWarmPoolActionEnum || (PostPutWarmPoolActionEnum = {}));
-export var PostPutWarmPoolVersionEnum;
+})(PostPutWarmPoolActionEnum = exports.PostPutWarmPoolActionEnum || (exports.PostPutWarmPoolActionEnum = {}));
+var PostPutWarmPoolVersionEnum;
 (function (PostPutWarmPoolVersionEnum) {
     PostPutWarmPoolVersionEnum["TwoThousandAndEleven0101"] = "2011-01-01";
-})(PostPutWarmPoolVersionEnum || (PostPutWarmPoolVersionEnum = {}));
+})(PostPutWarmPoolVersionEnum = exports.PostPutWarmPoolVersionEnum || (exports.PostPutWarmPoolVersionEnum = {}));
 var PostPutWarmPoolQueryParams = /** @class */ (function (_super) {
     __extends(PostPutWarmPoolQueryParams, _super);
     function PostPutWarmPoolQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostPutWarmPoolQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostPutWarmPoolQueryParams.prototype, "version", void 0);
     return PostPutWarmPoolQueryParams;
-}(SpeakeasyBase));
-export { PostPutWarmPoolQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostPutWarmPoolQueryParams = PostPutWarmPoolQueryParams;
 var PostPutWarmPoolHeaders = /** @class */ (function (_super) {
     __extends(PostPutWarmPoolHeaders, _super);
     function PostPutWarmPoolHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostPutWarmPoolHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostPutWarmPoolHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostPutWarmPoolHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostPutWarmPoolHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostPutWarmPoolHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostPutWarmPoolHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostPutWarmPoolHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostPutWarmPoolHeaders;
-}(SpeakeasyBase));
-export { PostPutWarmPoolHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostPutWarmPoolHeaders = PostPutWarmPoolHeaders;
 var PostPutWarmPoolRequest = /** @class */ (function (_super) {
     __extends(PostPutWarmPoolRequest, _super);
     function PostPutWarmPoolRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostPutWarmPoolQueryParams)
     ], PostPutWarmPoolRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostPutWarmPoolHeaders)
     ], PostPutWarmPoolRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostPutWarmPoolRequest.prototype, "request", void 0);
     return PostPutWarmPoolRequest;
-}(SpeakeasyBase));
-export { PostPutWarmPoolRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostPutWarmPoolRequest = PostPutWarmPoolRequest;
 var PostPutWarmPoolResponse = /** @class */ (function (_super) {
     __extends(PostPutWarmPoolResponse, _super);
     function PostPutWarmPoolResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostPutWarmPoolResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostPutWarmPoolResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostPutWarmPoolResponse.prototype, "statusCode", void 0);
     return PostPutWarmPoolResponse;
-}(SpeakeasyBase));
-export { PostPutWarmPoolResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostPutWarmPoolResponse = PostPutWarmPoolResponse;

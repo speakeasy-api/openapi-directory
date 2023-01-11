@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class SearchFlightOffersHeaders extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-HTTP-Method-Override" })
-  xHttpMethodOverride: string;
+  xHTTPMethodOverride: string;
 }
 
 

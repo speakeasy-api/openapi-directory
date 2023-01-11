@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var WritableVirtualMachineInterfaceModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritableVirtualMachineInterfaceInput = exports.WritableVirtualMachineInterfaceTypeEnum = exports.WritableVirtualMachineInterfaceModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var WritableVirtualMachineInterfaceModeEnum;
 (function (WritableVirtualMachineInterfaceModeEnum) {
     WritableVirtualMachineInterfaceModeEnum["Access"] = "access";
     WritableVirtualMachineInterfaceModeEnum["Tagged"] = "tagged";
     WritableVirtualMachineInterfaceModeEnum["TaggedAll"] = "tagged-all";
-})(WritableVirtualMachineInterfaceModeEnum || (WritableVirtualMachineInterfaceModeEnum = {}));
-export var WritableVirtualMachineInterfaceTypeEnum;
+})(WritableVirtualMachineInterfaceModeEnum = exports.WritableVirtualMachineInterfaceModeEnum || (exports.WritableVirtualMachineInterfaceModeEnum = {}));
+var WritableVirtualMachineInterfaceTypeEnum;
 (function (WritableVirtualMachineInterfaceTypeEnum) {
     WritableVirtualMachineInterfaceTypeEnum["Virtual"] = "virtual";
     WritableVirtualMachineInterfaceTypeEnum["Lag"] = "lag";
@@ -103,56 +106,56 @@ export var WritableVirtualMachineInterfaceTypeEnum;
     WritableVirtualMachineInterfaceTypeEnum["ExtremeSummitstack256"] = "extreme-summitstack-256";
     WritableVirtualMachineInterfaceTypeEnum["ExtremeSummitstack512"] = "extreme-summitstack-512";
     WritableVirtualMachineInterfaceTypeEnum["Other"] = "other";
-})(WritableVirtualMachineInterfaceTypeEnum || (WritableVirtualMachineInterfaceTypeEnum = {}));
+})(WritableVirtualMachineInterfaceTypeEnum = exports.WritableVirtualMachineInterfaceTypeEnum || (exports.WritableVirtualMachineInterfaceTypeEnum = {}));
 var WritableVirtualMachineInterfaceInput = /** @class */ (function (_super) {
     __extends(WritableVirtualMachineInterfaceInput, _super);
     function WritableVirtualMachineInterfaceInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], WritableVirtualMachineInterfaceInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], WritableVirtualMachineInterfaceInput.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mac_address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mac_address" }),
         __metadata("design:type", String)
     ], WritableVirtualMachineInterfaceInput.prototype, "macAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mode" }),
         __metadata("design:type", String)
     ], WritableVirtualMachineInterfaceInput.prototype, "mode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mtu" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mtu" }),
         __metadata("design:type", Number)
     ], WritableVirtualMachineInterfaceInput.prototype, "mtu", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WritableVirtualMachineInterfaceInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagged_vlans" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagged_vlans" }),
         __metadata("design:type", Array)
     ], WritableVirtualMachineInterfaceInput.prototype, "taggedVlans", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], WritableVirtualMachineInterfaceInput.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], WritableVirtualMachineInterfaceInput.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=untagged_vlan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=untagged_vlan" }),
         __metadata("design:type", Number)
     ], WritableVirtualMachineInterfaceInput.prototype, "untaggedVlan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtual_machine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtual_machine" }),
         __metadata("design:type", Number)
     ], WritableVirtualMachineInterfaceInput.prototype, "virtualMachine", void 0);
     return WritableVirtualMachineInterfaceInput;
-}(SpeakeasyBase));
-export { WritableVirtualMachineInterfaceInput };
+}(utils_1.SpeakeasyBase));
+exports.WritableVirtualMachineInterfaceInput = WritableVirtualMachineInterfaceInput;

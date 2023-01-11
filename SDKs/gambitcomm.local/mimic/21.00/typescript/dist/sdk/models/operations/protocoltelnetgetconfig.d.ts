@@ -7,7 +7,7 @@ export declare class ProtocolTelnetGetConfigRequest extends SpeakeasyBase {
     pathParams: ProtocolTelnetGetConfigPathParams;
 }
 export declare class ProtocolTelnetGetConfigResponse extends SpeakeasyBase {
-    configTelnet?: shared.ConfigTelnet;
+    configTELNET?: shared.ConfigTelnet;
     contentType: string;
     statusCode: number;
 }

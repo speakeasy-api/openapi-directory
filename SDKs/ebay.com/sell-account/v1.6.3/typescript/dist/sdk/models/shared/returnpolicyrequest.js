@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CategoryType } from "./categorytype";
-import { InternationalReturnOverrideType } from "./internationalreturnoverridetype";
-import { TimeDuration } from "./timeduration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReturnPolicyRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var categorytype_1 = require("./categorytype");
+var internationalreturnoverridetype_1 = require("./internationalreturnoverridetype");
+var timeduration_1 = require("./timeduration");
 // ReturnPolicyRequest
 /**
  * This root container defines a seller's return policy for a specific marketplace and category type. Used when creating or updating a return policy, returnPolicyRequest encapsulates a seller's terms for how buyers can return items. While each seller must define at least one payment policy for every marketplace into which they sell, sellers can define multiple payment policies for a single marketplace by specifying different configurations for the unique policies. A successful call returns a paymentPolicyId, plus the Location response header contains the URI to the resource. Use the Metadata API method to determine which categories in the marketplace(s) require you to provide a return policy. Also note that some marketplaces require you to provide a specific return policy for vehicle listings. Policy instructions can be localized by providing a locale in the Content-Language HTTP request header. For example: Content-Language: de-DE. Tip: For more on using business policies, see eBay business policies.
@@ -36,57 +39,57 @@ var ReturnPolicyRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryTypes", elemType: CategoryType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryTypes", elemType: categorytype_1.CategoryType }),
         __metadata("design:type", Array)
     ], ReturnPolicyRequest.prototype, "categoryTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ReturnPolicyRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extendedHolidayReturnsOffered" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extendedHolidayReturnsOffered" }),
         __metadata("design:type", Boolean)
     ], ReturnPolicyRequest.prototype, "extendedHolidayReturnsOffered", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=internationalOverride" }),
-        __metadata("design:type", InternationalReturnOverrideType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=internationalOverride" }),
+        __metadata("design:type", internationalreturnoverridetype_1.InternationalReturnOverrideType)
     ], ReturnPolicyRequest.prototype, "internationalOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marketplaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketplaceId" }),
         __metadata("design:type", String)
     ], ReturnPolicyRequest.prototype, "marketplaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ReturnPolicyRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refundMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refundMethod" }),
         __metadata("design:type", String)
     ], ReturnPolicyRequest.prototype, "refundMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restockingFeePercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restockingFeePercentage" }),
         __metadata("design:type", String)
     ], ReturnPolicyRequest.prototype, "restockingFeePercentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnInstructions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnInstructions" }),
         __metadata("design:type", String)
     ], ReturnPolicyRequest.prototype, "returnInstructions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnMethod" }),
         __metadata("design:type", String)
     ], ReturnPolicyRequest.prototype, "returnMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnPeriod" }),
-        __metadata("design:type", TimeDuration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnPeriod" }),
+        __metadata("design:type", timeduration_1.TimeDuration)
     ], ReturnPolicyRequest.prototype, "returnPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnShippingCostPayer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnShippingCostPayer" }),
         __metadata("design:type", String)
     ], ReturnPolicyRequest.prototype, "returnShippingCostPayer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnsAccepted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnsAccepted" }),
         __metadata("design:type", Boolean)
     ], ReturnPolicyRequest.prototype, "returnsAccepted", void 0);
     return ReturnPolicyRequest;
-}(SpeakeasyBase));
-export { ReturnPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReturnPolicyRequest = ReturnPolicyRequest;

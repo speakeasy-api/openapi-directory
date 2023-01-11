@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1SentimentData } from "./googlecloudcontactcenterinsightsv1sentimentdata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1sentimentdata_1 = require("./googlecloudcontactcenterinsightsv1sentimentdata");
 // GoogleCloudContactcenterinsightsV1ConversationLevelSentiment
 /**
  * One channel of conversation-level sentiment data.
@@ -34,13 +37,13 @@ var GoogleCloudContactcenterinsightsV1ConversationLevelSentiment = /** @class */
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelTag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelTag" }),
         __metadata("design:type", Number)
     ], GoogleCloudContactcenterinsightsV1ConversationLevelSentiment.prototype, "channelTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sentimentData" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1SentimentData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sentimentData" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1sentimentdata_1.GoogleCloudContactcenterinsightsV1SentimentData)
     ], GoogleCloudContactcenterinsightsV1ConversationLevelSentiment.prototype, "sentimentData", void 0);
     return GoogleCloudContactcenterinsightsV1ConversationLevelSentiment;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1ConversationLevelSentiment };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment = GoogleCloudContactcenterinsightsV1ConversationLevelSentiment;

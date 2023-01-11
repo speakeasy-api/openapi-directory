@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SystemTimezoneViewModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var SystemTimezoneViewModel = /** @class */ (function (_super) {
     __extends(SystemTimezoneViewModel, _super);
     function SystemTimezoneViewModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseUtcOffset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseUtcOffset" }),
         __metadata("design:type", Number)
     ], SystemTimezoneViewModel.prototype, "baseUtcOffset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=daylightName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=daylightName" }),
         __metadata("design:type", String)
     ], SystemTimezoneViewModel.prototype, "daylightName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], SystemTimezoneViewModel.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=standardName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=standardName" }),
         __metadata("design:type", String)
     ], SystemTimezoneViewModel.prototype, "standardName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportsDaylightSavingTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportsDaylightSavingTime" }),
         __metadata("design:type", Boolean)
     ], SystemTimezoneViewModel.prototype, "supportsDaylightSavingTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezoneIana" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezoneIana" }),
         __metadata("design:type", String)
     ], SystemTimezoneViewModel.prototype, "timezoneIana", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezoneId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezoneId" }),
         __metadata("design:type", String)
     ], SystemTimezoneViewModel.prototype, "timezoneId", void 0);
     return SystemTimezoneViewModel;
-}(SpeakeasyBase));
-export { SystemTimezoneViewModel };
+}(utils_1.SpeakeasyBase));
+exports.SystemTimezoneViewModel = SystemTimezoneViewModel;

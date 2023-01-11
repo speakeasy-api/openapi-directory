@@ -4,6 +4,10 @@ import { Repository } from "./repository";
 
 
 
+// FullRepositoryLicenseSimple
+/** 
+ * License Simple
+**/
 export class FullRepositoryLicenseSimple extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=html_url" })
   htmlUrl?: string;
@@ -25,6 +29,10 @@ export class FullRepositoryLicenseSimple extends SpeakeasyBase {
 }
 
 
+// FullRepositorySimpleUser
+/** 
+ * Simple User
+**/
 export class FullRepositorySimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -97,6 +105,10 @@ export class FullRepositoryPermissions extends SpeakeasyBase {
 }
 
 
+// FullRepositoryRepositoryLicenseSimple
+/** 
+ * License Simple
+**/
 export class FullRepositoryRepositoryLicenseSimple extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=html_url" })
   htmlUrl?: string;
@@ -118,6 +130,10 @@ export class FullRepositoryRepositoryLicenseSimple extends SpeakeasyBase {
 }
 
 
+// FullRepositoryRepositorySimpleUser
+/** 
+ * Simple User
+**/
 export class FullRepositoryRepositorySimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -508,6 +524,10 @@ export class FullRepositoryRepositoryTemplateRepository extends SpeakeasyBase {
 }
 
 
+// FullRepositoryRepository
+/** 
+ * A git repository
+**/
 export class FullRepositoryRepository extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=allow_merge_commit" })
   allowMergeCommit?: boolean;

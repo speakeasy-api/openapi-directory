@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateEventNotificationRequest, CreateEventNotificationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,13 +28,13 @@ const sdk = new SDK();
     
 const req: CreateEventNotificationRequest = {
   headers: {
-    xFapiFinancialId: "cumque",
-    xFapiInteractionId: "repudiandae",
+    xFapiFinancialId: "sit",
+    xFapiInteractionId: "voluptas",
   },
-  request: "suscipit",
+  request: "culpa",
 };
 
-sdk.sdk.createEventNotification(req).then((res: CreateEventNotificationResponse | AxiosError) => {
+sdk.eventNotification.createEventNotification(req).then((res: CreateEventNotificationResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -44,7 +43,7 @@ sdk.sdk.createEventNotification(req).then((res: CreateEventNotificationResponse 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Event Notification
 
 * `createEventNotification` - Send an event notification
 

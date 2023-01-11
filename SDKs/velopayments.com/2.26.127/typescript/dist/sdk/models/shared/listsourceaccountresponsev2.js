@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SourceAccountResponseV2 } from "./sourceaccountresponsev2";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListSourceAccountResponseV2 = void 0;
+var utils_1 = require("../../../internal/utils");
+var sourceaccountresponsev2_1 = require("./sourceaccountresponsev2");
 // ListSourceAccountResponseV2
 /**
  * List Source Accounts Response Object
@@ -34,17 +37,17 @@ var ListSourceAccountResponseV2 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content", elemType: SourceAccountResponseV2 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content", elemType: sourceaccountresponsev2_1.SourceAccountResponseV2 }),
         __metadata("design:type", Array)
     ], ListSourceAccountResponseV2.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
         __metadata("design:type", Array)
     ], ListSourceAccountResponseV2.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", Object)
     ], ListSourceAccountResponseV2.prototype, "page", void 0);
     return ListSourceAccountResponseV2;
-}(SpeakeasyBase));
-export { ListSourceAccountResponseV2 };
+}(utils_1.SpeakeasyBase));
+exports.ListSourceAccountResponseV2 = ListSourceAccountResponseV2;

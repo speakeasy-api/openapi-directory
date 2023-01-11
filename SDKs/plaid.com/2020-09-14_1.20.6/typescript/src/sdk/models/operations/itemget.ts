@@ -14,10 +14,10 @@ export class ItemGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  itemGetResponse?: Map<string, any>;
+  itemGetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

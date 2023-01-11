@@ -5,7 +5,7 @@ export declare class Tenant extends SpeakeasyBase {
     clusterCount?: number;
     comments?: string;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     deviceCount?: number;
     group?: NestedTenantGroup;

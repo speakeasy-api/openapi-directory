@@ -22,7 +22,7 @@ export declare class StartSuiteRunRequestBodySuiteRunConfiguration extends Speak
 export declare class StartSuiteRunRequestBody extends SpeakeasyBase {
     suiteDefinitionVersion?: string;
     suiteRunConfiguration?: StartSuiteRunRequestBodySuiteRunConfiguration;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class StartSuiteRunRequest extends SpeakeasyBase {
     pathParams: StartSuiteRunPathParams;

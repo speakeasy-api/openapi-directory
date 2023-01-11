@@ -1,0 +1,105 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DocumentInsert = void 0;
+var utils_1 = require("../../../internal/utils");
+var currencyenum_1 = require("./currencyenum");
+var documentlanguageenum_1 = require("./documentlanguageenum");
+var paymentmethodenum_1 = require("./paymentmethodenum");
+var documentsettings_1 = require("./documentsettings");
+var documentinserttypeenum_1 = require("./documentinserttypeenum");
+var DocumentInsert = /** @class */ (function (_super) {
+    __extends(DocumentInsert, _super);
+    function DocumentInsert() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bank_account_id" }),
+        __metadata("design:type", Number)
+    ], DocumentInsert.prototype, "bankAccountId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=block_id" }),
+        __metadata("design:type", Number)
+    ], DocumentInsert.prototype, "blockId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment" }),
+        __metadata("design:type", String)
+    ], DocumentInsert.prototype, "comment", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conversion_rate" }),
+        __metadata("design:type", Number)
+    ], DocumentInsert.prototype, "conversionRate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
+        __metadata("design:type", String)
+    ], DocumentInsert.prototype, "currency", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=due_date" }),
+        __metadata("design:type", Date)
+    ], DocumentInsert.prototype, "dueDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=electronic" }),
+        __metadata("design:type", Boolean)
+    ], DocumentInsert.prototype, "electronic", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fulfillment_date" }),
+        __metadata("design:type", Date)
+    ], DocumentInsert.prototype, "fulfillmentDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items" }),
+        __metadata("design:type", Array)
+    ], DocumentInsert.prototype, "items", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
+        __metadata("design:type", String)
+    ], DocumentInsert.prototype, "language", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paid" }),
+        __metadata("design:type", Boolean)
+    ], DocumentInsert.prototype, "paid", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=partner_id" }),
+        __metadata("design:type", Number)
+    ], DocumentInsert.prototype, "partnerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payment_method" }),
+        __metadata("design:type", String)
+    ], DocumentInsert.prototype, "paymentMethod", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", documentsettings_1.DocumentSettings)
+    ], DocumentInsert.prototype, "settings", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], DocumentInsert.prototype, "type", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vendor_id" }),
+        __metadata("design:type", String)
+    ], DocumentInsert.prototype, "vendorId", void 0);
+    return DocumentInsert;
+}(utils_1.SpeakeasyBase));
+exports.DocumentInsert = DocumentInsert;

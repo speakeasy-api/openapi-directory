@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,66 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CryptoKeyVersionInput } from "./cryptokeyversion";
-import { CryptoKeyVersionTemplate } from "./cryptokeyversiontemplate";
-import { CryptoKeyVersion } from "./cryptokeyversion";
-export var CryptoKeyPurposeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CryptoKeyInput = exports.CryptoKey = exports.CryptoKeyPurposeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var cryptokeyversion_1 = require("./cryptokeyversion");
+var cryptokeyversiontemplate_1 = require("./cryptokeyversiontemplate");
+var cryptokeyversion_2 = require("./cryptokeyversion");
+var CryptoKeyPurposeEnum;
 (function (CryptoKeyPurposeEnum) {
     CryptoKeyPurposeEnum["CryptoKeyPurposeUnspecified"] = "CRYPTO_KEY_PURPOSE_UNSPECIFIED";
     CryptoKeyPurposeEnum["EncryptDecrypt"] = "ENCRYPT_DECRYPT";
     CryptoKeyPurposeEnum["AsymmetricSign"] = "ASYMMETRIC_SIGN";
     CryptoKeyPurposeEnum["AsymmetricDecrypt"] = "ASYMMETRIC_DECRYPT";
     CryptoKeyPurposeEnum["Mac"] = "MAC";
-})(CryptoKeyPurposeEnum || (CryptoKeyPurposeEnum = {}));
-// CryptoKeyInput
-/**
- * A CryptoKey represents a logical key that can be used for cryptographic operations. A CryptoKey is made up of zero or more versions, which represent the actual key material used in cryptographic operations.
-**/
-var CryptoKeyInput = /** @class */ (function (_super) {
-    __extends(CryptoKeyInput, _super);
-    function CryptoKeyInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=cryptoKeyBackend" }),
-        __metadata("design:type", String)
-    ], CryptoKeyInput.prototype, "cryptoKeyBackend", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=destroyScheduledDuration" }),
-        __metadata("design:type", String)
-    ], CryptoKeyInput.prototype, "destroyScheduledDuration", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=importOnly" }),
-        __metadata("design:type", Boolean)
-    ], CryptoKeyInput.prototype, "importOnly", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], CryptoKeyInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextRotationTime" }),
-        __metadata("design:type", String)
-    ], CryptoKeyInput.prototype, "nextRotationTime", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary" }),
-        __metadata("design:type", CryptoKeyVersionInput)
-    ], CryptoKeyInput.prototype, "primary", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=purpose" }),
-        __metadata("design:type", String)
-    ], CryptoKeyInput.prototype, "purpose", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=rotationPeriod" }),
-        __metadata("design:type", String)
-    ], CryptoKeyInput.prototype, "rotationPeriod", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=versionTemplate" }),
-        __metadata("design:type", CryptoKeyVersionTemplate)
-    ], CryptoKeyInput.prototype, "versionTemplate", void 0);
-    return CryptoKeyInput;
-}(SpeakeasyBase));
-export { CryptoKeyInput };
+})(CryptoKeyPurposeEnum = exports.CryptoKeyPurposeEnum || (exports.CryptoKeyPurposeEnum = {}));
 // CryptoKey
 /**
  * A CryptoKey represents a logical key that can be used for cryptographic operations. A CryptoKey is made up of zero or more versions, which represent the actual key material used in cryptographic operations.
@@ -92,49 +47,97 @@ var CryptoKey = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], CryptoKey.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cryptoKeyBackend" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cryptoKeyBackend" }),
         __metadata("design:type", String)
     ], CryptoKey.prototype, "cryptoKeyBackend", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destroyScheduledDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destroyScheduledDuration" }),
         __metadata("design:type", String)
     ], CryptoKey.prototype, "destroyScheduledDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importOnly" }),
         __metadata("design:type", Boolean)
     ], CryptoKey.prototype, "importOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], CryptoKey.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CryptoKey.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextRotationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextRotationTime" }),
         __metadata("design:type", String)
     ], CryptoKey.prototype, "nextRotationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary" }),
-        __metadata("design:type", CryptoKeyVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary" }),
+        __metadata("design:type", cryptokeyversion_1.CryptoKeyVersion)
     ], CryptoKey.prototype, "primary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purpose" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purpose" }),
         __metadata("design:type", String)
     ], CryptoKey.prototype, "purpose", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rotationPeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rotationPeriod" }),
         __metadata("design:type", String)
     ], CryptoKey.prototype, "rotationPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versionTemplate" }),
-        __metadata("design:type", CryptoKeyVersionTemplate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versionTemplate" }),
+        __metadata("design:type", cryptokeyversiontemplate_1.CryptoKeyVersionTemplate)
     ], CryptoKey.prototype, "versionTemplate", void 0);
     return CryptoKey;
-}(SpeakeasyBase));
-export { CryptoKey };
+}(utils_1.SpeakeasyBase));
+exports.CryptoKey = CryptoKey;
+// CryptoKeyInput
+/**
+ * A CryptoKey represents a logical key that can be used for cryptographic operations. A CryptoKey is made up of zero or more versions, which represent the actual key material used in cryptographic operations.
+**/
+var CryptoKeyInput = /** @class */ (function (_super) {
+    __extends(CryptoKeyInput, _super);
+    function CryptoKeyInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cryptoKeyBackend" }),
+        __metadata("design:type", String)
+    ], CryptoKeyInput.prototype, "cryptoKeyBackend", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destroyScheduledDuration" }),
+        __metadata("design:type", String)
+    ], CryptoKeyInput.prototype, "destroyScheduledDuration", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importOnly" }),
+        __metadata("design:type", Boolean)
+    ], CryptoKeyInput.prototype, "importOnly", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], CryptoKeyInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextRotationTime" }),
+        __metadata("design:type", String)
+    ], CryptoKeyInput.prototype, "nextRotationTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary" }),
+        __metadata("design:type", cryptokeyversion_2.CryptoKeyVersionInput)
+    ], CryptoKeyInput.prototype, "primary", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purpose" }),
+        __metadata("design:type", String)
+    ], CryptoKeyInput.prototype, "purpose", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rotationPeriod" }),
+        __metadata("design:type", String)
+    ], CryptoKeyInput.prototype, "rotationPeriod", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versionTemplate" }),
+        __metadata("design:type", cryptokeyversiontemplate_1.CryptoKeyVersionTemplate)
+    ], CryptoKeyInput.prototype, "versionTemplate", void 0);
+    return CryptoKeyInput;
+}(utils_1.SpeakeasyBase));
+exports.CryptoKeyInput = CryptoKeyInput;

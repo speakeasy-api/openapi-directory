@@ -14,5 +14,5 @@ export declare class DeleteAppsAppIdQueuesQueueIdRequest extends SpeakeasyBase {
 export declare class DeleteAppsAppIdQueuesQueueIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
 }

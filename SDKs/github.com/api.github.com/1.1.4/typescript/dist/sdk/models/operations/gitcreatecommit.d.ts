@@ -34,7 +34,7 @@ export declare class GitCreateCommitRequest extends SpeakeasyBase {
 }
 export declare class GitCreateCommitResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     gitCommit?: shared.GitCommit;

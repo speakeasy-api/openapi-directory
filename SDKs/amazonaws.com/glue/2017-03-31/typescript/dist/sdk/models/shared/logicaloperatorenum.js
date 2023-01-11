@@ -1,4 +1,7 @@
-export var LogicalOperatorEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LogicalOperatorEnum = void 0;
+var LogicalOperatorEnum;
 (function (LogicalOperatorEnum) {
     LogicalOperatorEnum["Equals"] = "EQUALS";
-})(LogicalOperatorEnum || (LogicalOperatorEnum = {}));
+})(LogicalOperatorEnum = exports.LogicalOperatorEnum || (exports.LogicalOperatorEnum = {}));

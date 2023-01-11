@@ -11,16 +11,16 @@ export class PostSetupV1LocationsIdEmailTemplatesPathParams extends SpeakeasyBas
 
 export class PostSetupV1LocationsIdEmailTemplatesRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/*+json" })
-  emailTemplateInputModel?: Map<string, any>;
+  emailTemplateInputModel?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  emailTemplateInputModel1?: Map<string, any>;
+  emailTemplateInputModel1?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json-patch+json" })
-  emailTemplateInputModel2?: Map<string, any>;
+  emailTemplateInputModel2?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "request, media_type=text/json" })
-  emailTemplateInputModel3?: Map<string, any>;
+  emailTemplateInputModel3?: Record<string, any>;
 }
 
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileModeTypeEnumEnum } from "./filemodetypeenumenum";
-import { ReplacementTypeEnumEnum } from "./replacementtypeenumenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplaceContentEntry = void 0;
+var utils_1 = require("../../../internal/utils");
+var filemodetypeenumenum_1 = require("./filemodetypeenumenum");
+var replacementtypeenumenum_1 = require("./replacementtypeenumenum");
 // ReplaceContentEntry
 /**
  * Information about a replacement content entry in the conflict of a merge or pull request operation.
@@ -35,21 +38,21 @@ var ReplaceContentEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], ReplaceContentEntry.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileMode" }),
         __metadata("design:type", String)
     ], ReplaceContentEntry.prototype, "fileMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filePath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filePath" }),
         __metadata("design:type", String)
     ], ReplaceContentEntry.prototype, "filePath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replacementType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replacementType" }),
         __metadata("design:type", String)
     ], ReplaceContentEntry.prototype, "replacementType", void 0);
     return ReplaceContentEntry;
-}(SpeakeasyBase));
-export { ReplaceContentEntry };
+}(utils_1.SpeakeasyBase));
+exports.ReplaceContentEntry = ReplaceContentEntry;

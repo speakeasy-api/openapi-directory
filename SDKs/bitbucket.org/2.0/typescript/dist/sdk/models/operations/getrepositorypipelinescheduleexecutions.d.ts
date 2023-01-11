@@ -11,6 +11,6 @@ export declare class GetRepositoryPipelineScheduleExecutionsRequest extends Spea
 export declare class GetRepositoryPipelineScheduleExecutionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedPipelineScheduleExecutions?: shared.PaginatedPipelineScheduleExecutions;
 }

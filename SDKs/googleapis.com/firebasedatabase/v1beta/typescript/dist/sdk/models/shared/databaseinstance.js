@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DatabaseInstanceStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DatabaseInstanceInput = exports.DatabaseInstance = exports.DatabaseInstanceTypeEnum = exports.DatabaseInstanceStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DatabaseInstanceStateEnum;
 (function (DatabaseInstanceStateEnum) {
     DatabaseInstanceStateEnum["LifecycleStateUnspecified"] = "LIFECYCLE_STATE_UNSPECIFIED";
     DatabaseInstanceStateEnum["Active"] = "ACTIVE";
     DatabaseInstanceStateEnum["Disabled"] = "DISABLED";
     DatabaseInstanceStateEnum["Deleted"] = "DELETED";
-})(DatabaseInstanceStateEnum || (DatabaseInstanceStateEnum = {}));
-export var DatabaseInstanceTypeEnum;
+})(DatabaseInstanceStateEnum = exports.DatabaseInstanceStateEnum || (exports.DatabaseInstanceStateEnum = {}));
+var DatabaseInstanceTypeEnum;
 (function (DatabaseInstanceTypeEnum) {
     DatabaseInstanceTypeEnum["DatabaseInstanceTypeUnspecified"] = "DATABASE_INSTANCE_TYPE_UNSPECIFIED";
     DatabaseInstanceTypeEnum["DefaultDatabase"] = "DEFAULT_DATABASE";
     DatabaseInstanceTypeEnum["UserDatabase"] = "USER_DATABASE";
-})(DatabaseInstanceTypeEnum || (DatabaseInstanceTypeEnum = {}));
+})(DatabaseInstanceTypeEnum = exports.DatabaseInstanceTypeEnum || (exports.DatabaseInstanceTypeEnum = {}));
 // DatabaseInstance
 /**
  * Representation of a Realtime Database instance. Details on interacting with contents of a DatabaseInstance can be found at: https://firebase.google.com/docs/database/rest/start.
@@ -46,28 +49,28 @@ var DatabaseInstance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=databaseUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=databaseUrl" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "databaseUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=project" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], DatabaseInstance.prototype, "type", void 0);
     return DatabaseInstance;
-}(SpeakeasyBase));
-export { DatabaseInstance };
+}(utils_1.SpeakeasyBase));
+exports.DatabaseInstance = DatabaseInstance;
 // DatabaseInstanceInput
 /**
  * Representation of a Realtime Database instance. Details on interacting with contents of a DatabaseInstance can be found at: https://firebase.google.com/docs/database/rest/start.
@@ -78,13 +81,13 @@ var DatabaseInstanceInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], DatabaseInstanceInput.prototype, "type", void 0);
     return DatabaseInstanceInput;
-}(SpeakeasyBase));
-export { DatabaseInstanceInput };
+}(utils_1.SpeakeasyBase));
+exports.DatabaseInstanceInput = DatabaseInstanceInput;

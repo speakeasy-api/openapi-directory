@@ -1,8 +1,11 @@
-export var BundleTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BundleTypeEnum = void 0;
+var BundleTypeEnum;
 (function (BundleTypeEnum) {
     BundleTypeEnum["Tar"] = "tar";
     BundleTypeEnum["Tgz"] = "tgz";
     BundleTypeEnum["Zip"] = "zip";
     BundleTypeEnum["Yaml"] = "YAML";
     BundleTypeEnum["Json"] = "JSON";
-})(BundleTypeEnum || (BundleTypeEnum = {}));
+})(BundleTypeEnum = exports.BundleTypeEnum || (exports.BundleTypeEnum = {}));

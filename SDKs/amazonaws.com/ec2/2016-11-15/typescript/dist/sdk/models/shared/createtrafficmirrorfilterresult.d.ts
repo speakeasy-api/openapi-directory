@@ -1,6 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { TrafficMirrorFilter } from "./trafficmirrorfilter";
+/**
+ * Information about the Traffic Mirror filter.
+**/
+export declare class CreateTrafficMirrorFilterResultTrafficMirrorFilter extends SpeakeasyBase {
+    description?: Record<string, any>;
+    egressFilterRules?: Record<string, any>;
+    ingressFilterRules?: Record<string, any>;
+    networkServices?: Record<string, any>;
+    tags?: Record<string, any>;
+    trafficMirrorFilterId?: Record<string, any>;
+}
 export declare class CreateTrafficMirrorFilterResult extends SpeakeasyBase {
-    clientToken?: string;
-    trafficMirrorFilter?: TrafficMirrorFilter;
+    clientToken?: Record<string, any>;
+    trafficMirrorFilter?: CreateTrafficMirrorFilterResultTrafficMirrorFilter;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistryDeleteProjectResponse = exports.RegistryDeleteProjectRequest = exports.RegistryDeleteProjectPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RegistryDeleteProjectPathParams = /** @class */ (function (_super) {
     __extends(RegistryDeleteProjectPathParams, _super);
     function RegistryDeleteProjectPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], RegistryDeleteProjectPathParams.prototype, "project", void 0);
     return RegistryDeleteProjectPathParams;
-}(SpeakeasyBase));
-export { RegistryDeleteProjectPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistryDeleteProjectPathParams = RegistryDeleteProjectPathParams;
 var RegistryDeleteProjectRequest = /** @class */ (function (_super) {
     __extends(RegistryDeleteProjectRequest, _super);
     function RegistryDeleteProjectRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistryDeleteProjectPathParams)
     ], RegistryDeleteProjectRequest.prototype, "pathParams", void 0);
     return RegistryDeleteProjectRequest;
-}(SpeakeasyBase));
-export { RegistryDeleteProjectRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegistryDeleteProjectRequest = RegistryDeleteProjectRequest;
 var RegistryDeleteProjectResponse = /** @class */ (function (_super) {
     __extends(RegistryDeleteProjectResponse, _super);
     function RegistryDeleteProjectResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RegistryDeleteProjectResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RegistryDeleteProjectResponse.prototype, "statusCode", void 0);
     return RegistryDeleteProjectResponse;
-}(SpeakeasyBase));
-export { RegistryDeleteProjectResponse };
+}(utils_1.SpeakeasyBase));
+exports.RegistryDeleteProjectResponse = RegistryDeleteProjectResponse;

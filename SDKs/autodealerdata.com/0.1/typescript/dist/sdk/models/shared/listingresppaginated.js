@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Listing } from "./listing";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListingRespPaginated = void 0;
+var utils_1 = require("../../../internal/utils");
+var listing_1 = require("./listing");
 var ListingRespPaginated = /** @class */ (function (_super) {
     __extends(ListingRespPaginated, _super);
     function ListingRespPaginated() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listings", elemType: Listing }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listings", elemType: listing_1.Listing }),
         __metadata("design:type", Array)
     ], ListingRespPaginated.prototype, "listings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxPages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxPages" }),
         __metadata("design:type", Number)
     ], ListingRespPaginated.prototype, "maxPages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", Number)
     ], ListingRespPaginated.prototype, "page", void 0);
     return ListingRespPaginated;
-}(SpeakeasyBase));
-export { ListingRespPaginated };
+}(utils_1.SpeakeasyBase));
+exports.ListingRespPaginated = ListingRespPaginated;

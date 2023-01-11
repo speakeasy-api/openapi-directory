@@ -16,5 +16,5 @@ export declare class EnterpriseAdminUpdateUsernameForUserRequest extends Speakea
 export declare class EnterpriseAdminUpdateUsernameForUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    enterpriseAdminUpdateUsernameForUser202ApplicationJsonObject?: EnterpriseAdminUpdateUsernameForUser202ApplicationJson;
+    enterpriseAdminUpdateUsernameForUser202ApplicationJSONObject?: EnterpriseAdminUpdateUsernameForUser202ApplicationJson;
 }

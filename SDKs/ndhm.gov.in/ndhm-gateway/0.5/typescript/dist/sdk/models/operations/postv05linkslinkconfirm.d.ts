@@ -2,10 +2,10 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class PostV05LinksLinkConfirmHeaders extends SpeakeasyBase {
     authorization: string;
-    xHipId: string;
+    xHIPID: string;
 }
 export declare class PostV05LinksLinkConfirmRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     linkConfirmationRequest?: shared.LinkConfirmationRequest;
 }
 export declare class PostV05LinksLinkConfirmRequest extends SpeakeasyBase {

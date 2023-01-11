@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BuilderConfig } from "./builderconfig";
-import { Metadata } from "./metadata";
-import { Recipe } from "./recipe";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InTotoProvenance = void 0;
+var utils_1 = require("../../../internal/utils");
+var builderconfig_1 = require("./builderconfig");
+var metadata_1 = require("./metadata");
+var recipe_1 = require("./recipe");
 var InTotoProvenance = /** @class */ (function (_super) {
     __extends(InTotoProvenance, _super);
     function InTotoProvenance() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=builderConfig" }),
-        __metadata("design:type", BuilderConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=builderConfig" }),
+        __metadata("design:type", builderconfig_1.BuilderConfig)
     ], InTotoProvenance.prototype, "builderConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=materials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=materials" }),
         __metadata("design:type", Array)
     ], InTotoProvenance.prototype, "materials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Metadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", metadata_1.Metadata)
     ], InTotoProvenance.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recipe" }),
-        __metadata("design:type", Recipe)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recipe" }),
+        __metadata("design:type", recipe_1.Recipe)
     ], InTotoProvenance.prototype, "recipe", void 0);
     return InTotoProvenance;
-}(SpeakeasyBase));
-export { InTotoProvenance };
+}(utils_1.SpeakeasyBase));
+exports.InTotoProvenance = InTotoProvenance;

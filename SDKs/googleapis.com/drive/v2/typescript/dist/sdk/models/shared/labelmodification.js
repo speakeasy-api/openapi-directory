@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LabelFieldModification } from "./labelfieldmodification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LabelModification = void 0;
+var utils_1 = require("../../../internal/utils");
+var labelfieldmodification_1 = require("./labelfieldmodification");
 // LabelModification
 /**
  * A modification to a label on a file. A LabelModification can be used to apply a label to a file, update an existing label on a file, or remove a label from a file.
@@ -34,21 +37,21 @@ var LabelModification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldModifications", elemType: LabelFieldModification }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldModifications", elemType: labelfieldmodification_1.LabelFieldModification }),
         __metadata("design:type", Array)
     ], LabelModification.prototype, "fieldModifications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], LabelModification.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelId" }),
         __metadata("design:type", String)
     ], LabelModification.prototype, "labelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=removeLabel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=removeLabel" }),
         __metadata("design:type", Boolean)
     ], LabelModification.prototype, "removeLabel", void 0);
     return LabelModification;
-}(SpeakeasyBase));
-export { LabelModification };
+}(utils_1.SpeakeasyBase));
+exports.LabelModification = LabelModification;

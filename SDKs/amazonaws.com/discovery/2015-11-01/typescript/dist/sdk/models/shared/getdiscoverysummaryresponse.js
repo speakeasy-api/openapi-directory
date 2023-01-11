@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomerAgentInfo } from "./customeragentinfo";
-import { CustomerConnectorInfo } from "./customerconnectorinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDiscoverySummaryResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var customeragentinfo_1 = require("./customeragentinfo");
+var customerconnectorinfo_1 = require("./customerconnectorinfo");
 var GetDiscoverySummaryResponse = /** @class */ (function (_super) {
     __extends(GetDiscoverySummaryResponse, _super);
     function GetDiscoverySummaryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentSummary" }),
-        __metadata("design:type", CustomerAgentInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentSummary" }),
+        __metadata("design:type", customeragentinfo_1.CustomerAgentInfo)
     ], GetDiscoverySummaryResponse.prototype, "agentSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applications" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applications" }),
         __metadata("design:type", Number)
     ], GetDiscoverySummaryResponse.prototype, "applications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectorSummary" }),
-        __metadata("design:type", CustomerConnectorInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectorSummary" }),
+        __metadata("design:type", customerconnectorinfo_1.CustomerConnectorInfo)
     ], GetDiscoverySummaryResponse.prototype, "connectorSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servers" }),
         __metadata("design:type", Number)
     ], GetDiscoverySummaryResponse.prototype, "servers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serversMappedToApplications" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serversMappedToApplications" }),
         __metadata("design:type", Number)
     ], GetDiscoverySummaryResponse.prototype, "serversMappedToApplications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serversMappedtoTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serversMappedtoTags" }),
         __metadata("design:type", Number)
     ], GetDiscoverySummaryResponse.prototype, "serversMappedtoTags", void 0);
     return GetDiscoverySummaryResponse;
-}(SpeakeasyBase));
-export { GetDiscoverySummaryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDiscoverySummaryResponse = GetDiscoverySummaryResponse;

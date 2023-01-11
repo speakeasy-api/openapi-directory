@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentJobErrorCodeEnum } from "./deploymentjoberrorcodeenum";
-import { ProgressDetail } from "./progressdetail";
-import { RobotStatusEnum } from "./robotstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RobotDeployment = void 0;
+var utils_1 = require("../../../internal/utils");
+var deploymentjoberrorcodeenum_1 = require("./deploymentjoberrorcodeenum");
+var progressdetail_1 = require("./progressdetail");
+var robotstatusenum_1 = require("./robotstatusenum");
 // RobotDeployment
 /**
  * Information about a robot deployment.
@@ -36,33 +39,33 @@ var RobotDeployment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], RobotDeployment.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentFinishTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentFinishTime" }),
         __metadata("design:type", Date)
     ], RobotDeployment.prototype, "deploymentFinishTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentStartTime" }),
         __metadata("design:type", Date)
     ], RobotDeployment.prototype, "deploymentStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureCode" }),
         __metadata("design:type", String)
     ], RobotDeployment.prototype, "failureCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureReason" }),
         __metadata("design:type", String)
     ], RobotDeployment.prototype, "failureReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progressDetail" }),
-        __metadata("design:type", ProgressDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progressDetail" }),
+        __metadata("design:type", progressdetail_1.ProgressDetail)
     ], RobotDeployment.prototype, "progressDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], RobotDeployment.prototype, "status", void 0);
     return RobotDeployment;
-}(SpeakeasyBase));
-export { RobotDeployment };
+}(utils_1.SpeakeasyBase));
+exports.RobotDeployment = RobotDeployment;

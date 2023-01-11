@@ -21,5 +21,5 @@ export class Tool extends SpeakeasyBase {
   streamOutputToCloudWatch?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=streamUI" })
-  streamUi?: boolean;
+  streamUI?: boolean;
 }

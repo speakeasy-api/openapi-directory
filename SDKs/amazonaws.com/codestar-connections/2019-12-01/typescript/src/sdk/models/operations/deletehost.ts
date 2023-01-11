@@ -48,7 +48,7 @@ export class DeleteHostResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteHostOutput?: Map<string, any>;
+  deleteHostOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

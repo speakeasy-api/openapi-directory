@@ -16,18 +16,18 @@ export declare class CreateStageHeaders extends SpeakeasyBase {
  * Settings for logging access in a stage.
 **/
 export declare class CreateStageRequestBodyAccessLogSettings extends SpeakeasyBase {
-    destinationArn?: string;
-    format?: string;
+    destinationArn?: Record<string, any>;
+    format?: Record<string, any>;
 }
 /**
  * Represents a collection of route settings.
 **/
 export declare class CreateStageRequestBodyDefaultRouteSettings extends SpeakeasyBase {
-    dataTraceEnabled?: boolean;
-    detailedMetricsEnabled?: boolean;
-    loggingLevel?: shared.LoggingLevelEnum;
-    throttlingBurstLimit?: number;
-    throttlingRateLimit?: number;
+    dataTraceEnabled?: Record<string, any>;
+    detailedMetricsEnabled?: Record<string, any>;
+    loggingLevel?: Record<string, any>;
+    throttlingBurstLimit?: Record<string, any>;
+    throttlingRateLimit?: Record<string, any>;
 }
 export declare class CreateStageRequestBody extends SpeakeasyBase {
     accessLogSettings?: CreateStageRequestBodyAccessLogSettings;
@@ -36,10 +36,10 @@ export declare class CreateStageRequestBody extends SpeakeasyBase {
     defaultRouteSettings?: CreateStageRequestBodyDefaultRouteSettings;
     deploymentId?: string;
     description?: string;
-    routeSettings?: Map<string, shared.RouteSettings>;
+    routeSettings?: Record<string, shared.RouteSettings>;
     stageName: string;
-    stageVariables?: Map<string, string>;
-    tags?: Map<string, string>;
+    stageVariables?: Record<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateStageRequest extends SpeakeasyBase {
     pathParams: CreateStagePathParams;

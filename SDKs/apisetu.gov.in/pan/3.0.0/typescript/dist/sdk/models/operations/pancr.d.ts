@@ -112,11 +112,11 @@ export declare class PancrResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    pancr400ApplicationJsonObject?: Pancr400ApplicationJson;
-    pancr401ApplicationJsonObject?: Pancr401ApplicationJson;
-    pancr404ApplicationJsonObject?: Pancr404ApplicationJson;
-    pancr500ApplicationJsonObject?: Pancr500ApplicationJson;
-    pancr502ApplicationJsonObject?: Pancr502ApplicationJson;
-    pancr503ApplicationJsonObject?: Pancr503ApplicationJson;
-    pancr504ApplicationJsonObject?: Pancr504ApplicationJson;
+    pancr400ApplicationJSONObject?: Pancr400ApplicationJson;
+    pancr401ApplicationJSONObject?: Pancr401ApplicationJson;
+    pancr404ApplicationJSONObject?: Pancr404ApplicationJson;
+    pancr500ApplicationJSONObject?: Pancr500ApplicationJson;
+    pancr502ApplicationJSONObject?: Pancr502ApplicationJson;
+    pancr503ApplicationJSONObject?: Pancr503ApplicationJson;
+    pancr504ApplicationJSONObject?: Pancr504ApplicationJson;
 }

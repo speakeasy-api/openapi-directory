@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AccessTokenGrantTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccessToken = exports.AccessTokenGrantTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AccessTokenGrantTypeEnum;
 (function (AccessTokenGrantTypeEnum) {
     AccessTokenGrantTypeEnum["AuthorizationCode"] = "authorization_code";
-})(AccessTokenGrantTypeEnum || (AccessTokenGrantTypeEnum = {}));
+})(AccessTokenGrantTypeEnum = exports.AccessTokenGrantTypeEnum || (exports.AccessTokenGrantTypeEnum = {}));
 var AccessToken = /** @class */ (function (_super) {
     __extends(AccessToken, _super);
     function AccessToken() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], AccessToken.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_secret" }),
         __metadata("design:type", String)
     ], AccessToken.prototype, "clientSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], AccessToken.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code_verifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code_verifier" }),
         __metadata("design:type", String)
     ], AccessToken.prototype, "codeVerifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grant_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grant_type" }),
         __metadata("design:type", String)
     ], AccessToken.prototype, "grantType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=redirect_uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=redirect_uri" }),
         __metadata("design:type", String)
     ], AccessToken.prototype, "redirectUri", void 0);
     return AccessToken;
-}(SpeakeasyBase));
-export { AccessToken };
+}(utils_1.SpeakeasyBase));
+exports.AccessToken = AccessToken;

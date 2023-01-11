@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResponseTimeRootCauseEntity } from "./responsetimerootcauseentity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResponseTimeRootCauseService = void 0;
+var utils_1 = require("../../../internal/utils");
+var responsetimerootcauseentity_1 = require("./responsetimerootcauseentity");
 // ResponseTimeRootCauseService
 /**
  * A collection of fields identifying the service in a response time warning.
@@ -34,29 +37,29 @@ var ResponseTimeRootCauseService = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountId" }),
         __metadata("design:type", String)
     ], ResponseTimeRootCauseService.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EntityPath", elemType: ResponseTimeRootCauseEntity }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EntityPath", elemType: responsetimerootcauseentity_1.ResponseTimeRootCauseEntity }),
         __metadata("design:type", Array)
     ], ResponseTimeRootCauseService.prototype, "entityPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Inferred" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Inferred" }),
         __metadata("design:type", Boolean)
     ], ResponseTimeRootCauseService.prototype, "inferred", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], ResponseTimeRootCauseService.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Names" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Names" }),
         __metadata("design:type", Array)
     ], ResponseTimeRootCauseService.prototype, "names", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], ResponseTimeRootCauseService.prototype, "type", void 0);
     return ResponseTimeRootCauseService;
-}(SpeakeasyBase));
-export { ResponseTimeRootCauseService };
+}(utils_1.SpeakeasyBase));
+exports.ResponseTimeRootCauseService = ResponseTimeRootCauseService;

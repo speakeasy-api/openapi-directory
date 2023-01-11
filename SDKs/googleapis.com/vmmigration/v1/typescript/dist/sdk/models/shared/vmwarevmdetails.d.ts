@@ -13,7 +13,8 @@ export declare enum VmwareVmDetailsPowerStateEnum {
 /**
  * VmwareVmDetails describes a VM in vCenter.
 **/
-export declare class VmwareVmDetailsInput extends SpeakeasyBase {
+export declare class VmwareVmDetails extends SpeakeasyBase {
+    bootOption?: VmwareVmDetailsBootOptionEnum;
     committedStorageMb?: string;
     cpuCount?: number;
     datacenterDescription?: string;
@@ -29,8 +30,7 @@ export declare class VmwareVmDetailsInput extends SpeakeasyBase {
 /**
  * VmwareVmDetails describes a VM in vCenter.
 **/
-export declare class VmwareVmDetails extends SpeakeasyBase {
-    bootOption?: VmwareVmDetailsBootOptionEnum;
+export declare class VmwareVmDetailsInput extends SpeakeasyBase {
     committedStorageMb?: string;
     cpuCount?: number;
     datacenterDescription?: string;

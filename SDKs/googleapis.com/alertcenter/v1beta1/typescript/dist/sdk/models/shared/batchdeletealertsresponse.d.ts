@@ -4,6 +4,6 @@ import { Status } from "./status";
  * Response to batch delete operation on alerts.
 **/
 export declare class BatchDeleteAlertsResponse extends SpeakeasyBase {
-    failedAlertStatus?: Map<string, Status>;
+    failedAlertStatus?: Record<string, Status>;
     successAlertIds?: string[];
 }

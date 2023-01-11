@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InternalRange } from "./internalrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListInternalRangesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var internalrange_1 = require("./internalrange");
 // ListInternalRangesResponse
 /**
  * Response for InternalRange.ListInternalRanges
@@ -34,17 +37,17 @@ var ListInternalRangesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=internalRanges", elemType: InternalRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=internalRanges", elemType: internalrange_1.InternalRange }),
         __metadata("design:type", Array)
     ], ListInternalRangesResponse.prototype, "internalRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListInternalRangesResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unreachable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unreachable" }),
         __metadata("design:type", Array)
     ], ListInternalRangesResponse.prototype, "unreachable", void 0);
     return ListInternalRangesResponse;
-}(SpeakeasyBase));
-export { ListInternalRangesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListInternalRangesResponse = ListInternalRangesResponse;

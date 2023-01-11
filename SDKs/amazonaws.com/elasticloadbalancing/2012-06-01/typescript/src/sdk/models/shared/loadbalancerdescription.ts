@@ -23,7 +23,7 @@ export class LoadBalancerDescription extends SpeakeasyBase {
   canonicalHostedZoneName?: string;
 
   @SpeakeasyMetadata()
-  canonicalHostedZoneNameId?: string;
+  canonicalHostedZoneNameID?: string;
 
   @SpeakeasyMetadata()
   createdTime?: Date;

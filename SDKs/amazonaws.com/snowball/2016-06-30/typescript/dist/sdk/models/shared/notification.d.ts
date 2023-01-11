@@ -6,5 +6,5 @@ import { JobStateEnum } from "./jobstateenum";
 export declare class Notification extends SpeakeasyBase {
     jobStatesToNotify?: JobStateEnum[];
     notifyAll?: boolean;
-    snsTopicArn?: string;
+    snsTopicARN?: string;
 }

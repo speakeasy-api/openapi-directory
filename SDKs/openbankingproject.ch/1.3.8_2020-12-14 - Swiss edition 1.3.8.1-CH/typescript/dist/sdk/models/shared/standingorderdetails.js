@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DayOfExecutionEnum } from "./dayofexecutionenum";
-import { ExecutionRuleEnum } from "./executionruleenum";
-import { FrequencyCodeEnum } from "./frequencycodeenum";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StandingOrderDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var dayofexecutionenum_1 = require("./dayofexecutionenum");
+var executionruleenum_1 = require("./executionruleenum");
+var frequencycodeenum_1 = require("./frequencycodeenum");
+var amount_1 = require("./amount");
 // StandingOrderDetails
 /**
  * Details of underlying standing orders.
@@ -38,41 +41,41 @@ var StandingOrderDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dayOfExecution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dayOfExecution" }),
         __metadata("design:type", String)
     ], StandingOrderDetails.prototype, "dayOfExecution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", Date)
     ], StandingOrderDetails.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionRule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionRule" }),
         __metadata("design:type", String)
     ], StandingOrderDetails.prototype, "executionRule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequency" }),
         __metadata("design:type", String)
     ], StandingOrderDetails.prototype, "frequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limitAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limitAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], StandingOrderDetails.prototype, "limitAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monthsOfExecution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monthsOfExecution" }),
         __metadata("design:type", Array)
     ], StandingOrderDetails.prototype, "monthsOfExecution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=multiplicator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=multiplicator" }),
         __metadata("design:type", Number)
     ], StandingOrderDetails.prototype, "multiplicator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", Date)
     ], StandingOrderDetails.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=withinAMonthFlag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=withinAMonthFlag" }),
         __metadata("design:type", Boolean)
     ], StandingOrderDetails.prototype, "withinAMonthFlag", void 0);
     return StandingOrderDetails;
-}(SpeakeasyBase));
-export { StandingOrderDetails };
+}(utils_1.SpeakeasyBase));
+exports.StandingOrderDetails = StandingOrderDetails;

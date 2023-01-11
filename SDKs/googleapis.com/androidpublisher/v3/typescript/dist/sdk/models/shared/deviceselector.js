@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeviceRam } from "./deviceram";
-import { DeviceId } from "./deviceid";
-import { SystemFeature } from "./systemfeature";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceSelector = void 0;
+var utils_1 = require("../../../internal/utils");
+var deviceram_1 = require("./deviceram");
+var deviceid_1 = require("./deviceid");
+var systemfeature_1 = require("./systemfeature");
 // DeviceSelector
 /**
  * Selector for a device group. A selector consists of a set of conditions on the device that should all match (logical AND) to determine a device group eligibility. For instance, if a selector specifies RAM conditions, device model inclusion and device model exclusion, a device is considered to match if: device matches RAM conditions AND device matches one of the included device models AND device doesn't match excluded device models
@@ -36,25 +39,25 @@ var DeviceSelector = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceRam" }),
-        __metadata("design:type", DeviceRam)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceRam" }),
+        __metadata("design:type", deviceram_1.DeviceRam)
     ], DeviceSelector.prototype, "deviceRam", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludedDeviceIds", elemType: DeviceId }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludedDeviceIds", elemType: deviceid_1.DeviceId }),
         __metadata("design:type", Array)
     ], DeviceSelector.prototype, "excludedDeviceIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=forbiddenSystemFeatures", elemType: SystemFeature }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=forbiddenSystemFeatures", elemType: systemfeature_1.SystemFeature }),
         __metadata("design:type", Array)
     ], DeviceSelector.prototype, "forbiddenSystemFeatures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includedDeviceIds", elemType: DeviceId }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includedDeviceIds", elemType: deviceid_1.DeviceId }),
         __metadata("design:type", Array)
     ], DeviceSelector.prototype, "includedDeviceIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requiredSystemFeatures", elemType: SystemFeature }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requiredSystemFeatures", elemType: systemfeature_1.SystemFeature }),
         __metadata("design:type", Array)
     ], DeviceSelector.prototype, "requiredSystemFeatures", void 0);
     return DeviceSelector;
-}(SpeakeasyBase));
-export { DeviceSelector };
+}(utils_1.SpeakeasyBase));
+exports.DeviceSelector = DeviceSelector;

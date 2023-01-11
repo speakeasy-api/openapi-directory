@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportDefinition = exports.ReportDefinitionReportDefinition = exports.ReportDefinitionReportDefinitionReportQuery = exports.ReportDefinitionReportDefinitionReportQueryVariable = exports.ReportDefinitionReportDefinitionReportQueryGroup = void 0;
+var utils_1 = require("../../../internal/utils");
 // ReportDefinitionReportDefinitionReportQueryGroup
 /**
  * The querys' groups
@@ -33,12 +36,12 @@ var ReportDefinitionReportDefinitionReportQueryGroup = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Group" }),
         __metadata("design:type", Array)
     ], ReportDefinitionReportDefinitionReportQueryGroup.prototype, "group", void 0);
     return ReportDefinitionReportDefinitionReportQueryGroup;
-}(SpeakeasyBase));
-export { ReportDefinitionReportDefinitionReportQueryGroup };
+}(utils_1.SpeakeasyBase));
+exports.ReportDefinitionReportDefinitionReportQueryGroup = ReportDefinitionReportDefinitionReportQueryGroup;
 // ReportDefinitionReportDefinitionReportQueryVariable
 /**
  * The querys' variables
@@ -49,12 +52,12 @@ var ReportDefinitionReportDefinitionReportQueryVariable = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Variable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Variable" }),
         __metadata("design:type", Array)
     ], ReportDefinitionReportDefinitionReportQueryVariable.prototype, "variable", void 0);
     return ReportDefinitionReportDefinitionReportQueryVariable;
-}(SpeakeasyBase));
-export { ReportDefinitionReportDefinitionReportQueryVariable };
+}(utils_1.SpeakeasyBase));
+exports.ReportDefinitionReportDefinitionReportQueryVariable = ReportDefinitionReportDefinitionReportQueryVariable;
 // ReportDefinitionReportDefinitionReportQuery
 /**
  * The report definitions' report query
@@ -65,69 +68,69 @@ var ReportDefinitionReportDefinitionReportQuery = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExcludeNullOrEmptyElements" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExcludeNullOrEmptyElements" }),
         __metadata("design:type", Boolean)
     ], ReportDefinitionReportDefinitionReportQuery.prototype, "excludeNullOrEmptyElements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Groups" }),
         __metadata("design:type", ReportDefinitionReportDefinitionReportQueryGroup)
     ], ReportDefinitionReportDefinitionReportQuery.prototype, "groups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RootNodeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RootNodeName" }),
         __metadata("design:type", String)
     ], ReportDefinitionReportDefinitionReportQuery.prototype, "rootNodeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SuppressMetricAttributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SuppressMetricAttributes" }),
         __metadata("design:type", Boolean)
     ], ReportDefinitionReportDefinitionReportQuery.prototype, "suppressMetricAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Variables" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Variables" }),
         __metadata("design:type", ReportDefinitionReportDefinitionReportQueryVariable)
     ], ReportDefinitionReportDefinitionReportQuery.prototype, "variables", void 0);
     return ReportDefinitionReportDefinitionReportQuery;
-}(SpeakeasyBase));
-export { ReportDefinitionReportDefinitionReportQuery };
+}(utils_1.SpeakeasyBase));
+exports.ReportDefinitionReportDefinitionReportQuery = ReportDefinitionReportDefinitionReportQuery;
 var ReportDefinitionReportDefinition = /** @class */ (function (_super) {
     __extends(ReportDefinitionReportDefinition, _super);
     function ReportDefinitionReportDefinition() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Active" }),
         __metadata("design:type", Boolean)
     ], ReportDefinitionReportDefinition.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Readonly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Readonly" }),
         __metadata("design:type", Boolean)
     ], ReportDefinitionReportDefinition.prototype, "readonly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReportQuery" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReportQuery" }),
         __metadata("design:type", ReportDefinitionReportDefinitionReportQuery)
     ], ReportDefinitionReportDefinition.prototype, "reportQuery", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SupportedTransforms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SupportedTransforms" }),
         __metadata("design:type", String)
     ], ReportDefinitionReportDefinition.prototype, "supportedTransforms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Title" }),
         __metadata("design:type", String)
     ], ReportDefinitionReportDefinition.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Version" }),
         __metadata("design:type", String)
     ], ReportDefinitionReportDefinition.prototype, "version", void 0);
     return ReportDefinitionReportDefinition;
-}(SpeakeasyBase));
-export { ReportDefinitionReportDefinition };
+}(utils_1.SpeakeasyBase));
+exports.ReportDefinitionReportDefinition = ReportDefinitionReportDefinition;
 var ReportDefinition = /** @class */ (function (_super) {
     __extends(ReportDefinition, _super);
     function ReportDefinition() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReportDefinition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReportDefinition" }),
         __metadata("design:type", ReportDefinitionReportDefinition)
     ], ReportDefinition.prototype, "reportDefinition", void 0);
     return ReportDefinition;
-}(SpeakeasyBase));
-export { ReportDefinition };
+}(utils_1.SpeakeasyBase));
+exports.ReportDefinition = ReportDefinition;

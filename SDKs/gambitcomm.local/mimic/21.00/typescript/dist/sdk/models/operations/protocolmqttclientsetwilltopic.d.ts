@@ -9,5 +9,5 @@ export declare class ProtocolMqttClientSetWilltopicRequest extends SpeakeasyBase
 export declare class ProtocolMqttClientSetWilltopicResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolMqttClientSetWilltopic200ApplicationJsonInt32Integers?: number[];
+    protocolMqttClientSetWilltopic200ApplicationJSONInt32Integers?: number[];
 }

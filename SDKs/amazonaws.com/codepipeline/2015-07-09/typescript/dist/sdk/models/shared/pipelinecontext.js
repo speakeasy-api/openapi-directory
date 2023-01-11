@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActionContext } from "./actioncontext";
-import { StageContext } from "./stagecontext";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PipelineContext = void 0;
+var utils_1 = require("../../../internal/utils");
+var actioncontext_1 = require("./actioncontext");
+var stagecontext_1 = require("./stagecontext");
 // PipelineContext
 /**
  * <p>Represents information about a pipeline to a job worker.</p> <note> <p>PipelineContext contains <code>pipelineArn</code> and <code>pipelineExecutionId</code> for custom action jobs. The <code>pipelineArn</code> and <code>pipelineExecutionId</code> fields are not populated for ThirdParty action jobs.</p> </note>
@@ -35,25 +38,25 @@ var PipelineContext = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
-        __metadata("design:type", ActionContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
+        __metadata("design:type", actioncontext_1.ActionContext)
     ], PipelineContext.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipelineArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipelineArn" }),
         __metadata("design:type", String)
     ], PipelineContext.prototype, "pipelineArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipelineExecutionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipelineExecutionId" }),
         __metadata("design:type", String)
     ], PipelineContext.prototype, "pipelineExecutionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipelineName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipelineName" }),
         __metadata("design:type", String)
     ], PipelineContext.prototype, "pipelineName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stage" }),
-        __metadata("design:type", StageContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stage" }),
+        __metadata("design:type", stagecontext_1.StageContext)
     ], PipelineContext.prototype, "stage", void 0);
     return PipelineContext;
-}(SpeakeasyBase));
-export { PipelineContext };
+}(utils_1.SpeakeasyBase));
+exports.PipelineContext = PipelineContext;

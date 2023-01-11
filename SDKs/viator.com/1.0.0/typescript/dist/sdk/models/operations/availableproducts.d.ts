@@ -27,7 +27,7 @@ export declare class AvailableProducts200ApplicationJsonDataPasTourGrades extend
     availDates?: AvailableProducts200ApplicationJsonDataPasTourGradesAvailDates[];
     bookingEngine?: string;
     description?: string;
-    languageServices?: Map<string, any[]>;
+    languageServices?: Record<string, any[]>;
     sapi?: boolean;
     title?: string;
     tourGradeCode?: string;
@@ -41,7 +41,7 @@ export declare class AvailableProducts200ApplicationJsonDataPas extends Speakeas
     incompleteQuote?: boolean;
     productCode?: string;
     removedChildAges?: string[];
-    tourGrades?: Map<string, AvailableProducts200ApplicationJsonDataPasTourGrades>;
+    tourGrades?: Record<string, AvailableProducts200ApplicationJsonDataPasTourGrades>;
     travellerMix?: string;
 }
 export declare class AvailableProducts200ApplicationJsonData extends SpeakeasyBase {
@@ -84,13 +84,13 @@ export declare class AvailableProducts200ApplicationJsonData extends SpeakeasyBa
     subCatIds?: number[];
     supplierCode?: string;
     supplierName?: string;
-    thumbnailHiResUrl?: string;
-    thumbnailUrl?: string;
+    thumbnailHiResURL?: string;
+    thumbnailURL?: string;
     title?: string;
     translationLevel?: number;
     uniqueShortDescription?: string;
     videoCount?: number;
-    webUrl?: string;
+    webURL?: string;
 }
 export declare class AvailableProducts200ApplicationJson extends SpeakeasyBase {
     data?: AvailableProducts200ApplicationJsonData[];
@@ -101,8 +101,8 @@ export declare class AvailableProducts200ApplicationJson extends SpeakeasyBase {
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -114,5 +114,5 @@ export declare class AvailableProductsRequest extends SpeakeasyBase {
 export declare class AvailableProductsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    availableProducts200ApplicationJsonObject?: AvailableProducts200ApplicationJson;
+    availableProducts200ApplicationJSONObject?: AvailableProducts200ApplicationJson;
 }

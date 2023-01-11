@@ -8,13 +8,13 @@ export class PostV05ConsentRequestsOnInitHeaders extends SpeakeasyBase {
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-HIU-ID" })
-  xHiuId: string;
+  xHIUID: string;
 }
 
 
 export class PostV05ConsentRequestsOnInitRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   consentRequestInitResponse?: shared.ConsentRequestInitResponse;

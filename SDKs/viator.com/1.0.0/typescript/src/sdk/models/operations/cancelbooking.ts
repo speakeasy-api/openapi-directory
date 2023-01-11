@@ -66,7 +66,7 @@ export class CancelBooking404ApplicationJson extends SpeakeasyBase {
 
 export class CancelBookingRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   pathParams: CancelBookingPathParams;
@@ -81,16 +81,16 @@ export class CancelBookingRequest extends SpeakeasyBase {
 
 export class CancelBookingResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  fourHundredAndOneUnauthorized?: shared.FourHundredAndOneUnauthorized;
+  fourHundredAndOneUNAUTHORIZED?: shared.FourHundredAndOneUnauthorized;
 
   @SpeakeasyMetadata()
-  fourHundredAndSixNotAcceptable?: shared.FourHundredAndSixNotAcceptable;
+  fourHundredAndSixNOTACCEPTABLE?: shared.FourHundredAndSixNotAcceptable;
 
   @SpeakeasyMetadata()
-  fiveHundredInternalServerError?: shared.FiveHundredInternalServerError;
+  fiveHundredINTERNALSERVERERROR?: shared.FiveHundredInternalServerError;
 
   @SpeakeasyMetadata()
-  fiveHundredAndThreeServiceUnavailable?: shared.FiveHundredAndThreeServiceUnavailable;
+  fiveHundredAndThreeSERVICEUNAVAILABLE?: shared.FiveHundredAndThreeServiceUnavailable;
 
   @SpeakeasyMetadata()
   cancelBookingResponse?: shared.CancelBookingResponse;
@@ -102,8 +102,8 @@ export class CancelBookingResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cancelBooking400ApplicationJsonObject?: CancelBooking400ApplicationJson;
+  cancelBooking400ApplicationJSONObject?: CancelBooking400ApplicationJson;
 
   @SpeakeasyMetadata()
-  cancelBooking404ApplicationJsonObject?: CancelBooking404ApplicationJson;
+  cancelBooking404ApplicationJSONObject?: CancelBooking404ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LineItemReference } from "./lineitemreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShippingFulfillmentDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var lineitemreference_1 = require("./lineitemreference");
 // ShippingFulfillmentDetails
 /**
  * This type contains the details for creating a fulfillment for an order.
@@ -34,21 +37,21 @@ var ShippingFulfillmentDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineItems", elemType: LineItemReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineItems", elemType: lineitemreference_1.LineItemReference }),
         __metadata("design:type", Array)
     ], ShippingFulfillmentDetails.prototype, "lineItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippedDate" }),
         __metadata("design:type", String)
     ], ShippingFulfillmentDetails.prototype, "shippedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingCarrierCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingCarrierCode" }),
         __metadata("design:type", String)
     ], ShippingFulfillmentDetails.prototype, "shippingCarrierCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trackingNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trackingNumber" }),
         __metadata("design:type", String)
     ], ShippingFulfillmentDetails.prototype, "trackingNumber", void 0);
     return ShippingFulfillmentDetails;
-}(SpeakeasyBase));
-export { ShippingFulfillmentDetails };
+}(utils_1.SpeakeasyBase));
+exports.ShippingFulfillmentDetails = ShippingFulfillmentDetails;

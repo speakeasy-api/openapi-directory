@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GkehubProjectsLocationsListRequest, GkehubProjectsLocationsListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,29 +30,29 @@ const req: GkehubProjectsLocationsListRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "fuga",
+    name: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "tempore",
-    alt: "proto",
-    callback: "et",
-    fields: "voluptatem",
-    filter: "dolores",
-    key: "nulla",
-    oauthToken: "et",
-    pageSize: 6318403334757801594,
-    pageToken: "ab",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    filter: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    pageSize: 1543572285742637646,
+    pageToken: "nihil",
     prettyPrint: true,
-    quotaUser: "dolorem",
-    uploadType: "nisi",
-    uploadProtocol: "quibusdam",
+    quotaUser: "dicta",
+    uploadType: "debitis",
+    uploadProtocol: "voluptatum",
   },
 };
 

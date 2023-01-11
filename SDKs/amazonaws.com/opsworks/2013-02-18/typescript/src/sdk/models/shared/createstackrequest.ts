@@ -11,7 +11,7 @@ export class CreateStackRequest extends SpeakeasyBase {
   agentVersion?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Attributes" })
-  attributes?: Map<string, string>;
+  attributes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=ChefConfiguration" })
   chefConfiguration?: ChefConfiguration;

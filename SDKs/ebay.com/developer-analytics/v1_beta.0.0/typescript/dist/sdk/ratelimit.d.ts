@@ -1,0 +1,15 @@
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+import * as operations from "./models/operations";
+export declare class RateLimit {
+    _defaultClient: AxiosInstance;
+    _securityClient: AxiosInstance;
+    _serverURL: string;
+    _language: string;
+    _sdkVersion: string;
+    _genVersion: string;
+    constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
+    /**
+     * getRateLimits - This method retrieves the call limit and utilization data for an application. The data is retrieved for all RESTful APIs and resources. The response from getRateLimits includes a list of the applicable resources and the &quot;call limit&quot;, or quota, that is set for each resource. In addition to quota information, the response also includes the number of remaining calls available before the limit is reached, the time remaining before the quota resets, and the length of the &quot;time window&quot; to which the quota applies. By default, this method returns utilization data for all RESTful API resources. Use the api_name and api_context query parameters to filter the response to only the desired APIs. For more on call limits, see Compatible Application Check.
+    **/
+    getRateLimits(req: operations.GetRateLimitsRequest, config?: AxiosRequestConfig): Promise<operations.GetRateLimitsResponse>;
+}

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BusinessDayConfig } from "./businessdayconfig";
-import { WarehouseCutoffTime } from "./warehousecutofftime";
-import { Address } from "./address";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Warehouse = void 0;
+var utils_1 = require("../../../internal/utils");
+var businessdayconfig_1 = require("./businessdayconfig");
+var warehousecutofftime_1 = require("./warehousecutofftime");
+var address_1 = require("./address");
 // Warehouse
 /**
  * A fulfillment warehouse, which stores and handles inventory.
@@ -36,25 +39,25 @@ var Warehouse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessDayConfig" }),
-        __metadata("design:type", BusinessDayConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessDayConfig" }),
+        __metadata("design:type", businessdayconfig_1.BusinessDayConfig)
     ], Warehouse.prototype, "businessDayConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cutoffTime" }),
-        __metadata("design:type", WarehouseCutoffTime)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cutoffTime" }),
+        __metadata("design:type", warehousecutofftime_1.WarehouseCutoffTime)
     ], Warehouse.prototype, "cutoffTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=handlingDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=handlingDays" }),
         __metadata("design:type", String)
     ], Warehouse.prototype, "handlingDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Warehouse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingAddress" }),
-        __metadata("design:type", Address)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingAddress" }),
+        __metadata("design:type", address_1.Address)
     ], Warehouse.prototype, "shippingAddress", void 0);
     return Warehouse;
-}(SpeakeasyBase));
-export { Warehouse };
+}(utils_1.SpeakeasyBase));
+exports.Warehouse = Warehouse;

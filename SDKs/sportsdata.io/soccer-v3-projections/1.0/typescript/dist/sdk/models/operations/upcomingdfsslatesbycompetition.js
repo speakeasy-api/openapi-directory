@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var UpcomingDfsSlatesByCompetitionFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpcomingDfsSlatesByCompetitionResponse = exports.UpcomingDfsSlatesByCompetitionRequest = exports.UpcomingDfsSlatesByCompetitionPathParams = exports.UpcomingDfsSlatesByCompetitionFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var UpcomingDfsSlatesByCompetitionFormatEnum;
 (function (UpcomingDfsSlatesByCompetitionFormatEnum) {
     UpcomingDfsSlatesByCompetitionFormatEnum["Json"] = "json";
     UpcomingDfsSlatesByCompetitionFormatEnum["Xml"] = "xml";
-})(UpcomingDfsSlatesByCompetitionFormatEnum || (UpcomingDfsSlatesByCompetitionFormatEnum = {}));
+})(UpcomingDfsSlatesByCompetitionFormatEnum = exports.UpcomingDfsSlatesByCompetitionFormatEnum || (exports.UpcomingDfsSlatesByCompetitionFormatEnum = {}));
 var UpcomingDfsSlatesByCompetitionPathParams = /** @class */ (function (_super) {
     __extends(UpcomingDfsSlatesByCompetitionPathParams, _super);
     function UpcomingDfsSlatesByCompetitionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=competitionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=competitionId" }),
         __metadata("design:type", String)
     ], UpcomingDfsSlatesByCompetitionPathParams.prototype, "competitionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], UpcomingDfsSlatesByCompetitionPathParams.prototype, "format", void 0);
     return UpcomingDfsSlatesByCompetitionPathParams;
-}(SpeakeasyBase));
-export { UpcomingDfsSlatesByCompetitionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpcomingDfsSlatesByCompetitionPathParams = UpcomingDfsSlatesByCompetitionPathParams;
 var UpcomingDfsSlatesByCompetitionRequest = /** @class */ (function (_super) {
     __extends(UpcomingDfsSlatesByCompetitionRequest, _super);
     function UpcomingDfsSlatesByCompetitionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpcomingDfsSlatesByCompetitionPathParams)
     ], UpcomingDfsSlatesByCompetitionRequest.prototype, "pathParams", void 0);
     return UpcomingDfsSlatesByCompetitionRequest;
-}(SpeakeasyBase));
-export { UpcomingDfsSlatesByCompetitionRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpcomingDfsSlatesByCompetitionRequest = UpcomingDfsSlatesByCompetitionRequest;
 var UpcomingDfsSlatesByCompetitionResponse = /** @class */ (function (_super) {
     __extends(UpcomingDfsSlatesByCompetitionResponse, _super);
     function UpcomingDfsSlatesByCompetitionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpcomingDfsSlatesByCompetitionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], UpcomingDfsSlatesByCompetitionResponse.prototype, "dfsSlates", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpcomingDfsSlatesByCompetitionResponse.prototype, "statusCode", void 0);
     return UpcomingDfsSlatesByCompetitionResponse;
-}(SpeakeasyBase));
-export { UpcomingDfsSlatesByCompetitionResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpcomingDfsSlatesByCompetitionResponse = UpcomingDfsSlatesByCompetitionResponse;

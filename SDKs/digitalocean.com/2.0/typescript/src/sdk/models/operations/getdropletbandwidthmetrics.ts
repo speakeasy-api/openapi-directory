@@ -1,46 +1,41 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
+
 export enum GetDropletBandwidthMetricsDirectionEnum {
-    Inbound = "inbound"
-,    Outbound = "outbound"
+    Inbound = "inbound",
+    Outbound = "outbound"
 }
 
 export enum GetDropletBandwidthMetricsInterfaceEnum {
-    Private = "private"
-,    Public = "public"
+    Private = "private",
+    Public = "public"
 }
 
 
 export class GetDropletBandwidthMetricsQueryParams extends SpeakeasyBase {
-  @Metadata({ data: "queryParam, style=form;explode=true;name=direction" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
   direction: GetDropletBandwidthMetricsDirectionEnum;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=end" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=end" })
   end: string;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=host_id" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=host_id" })
   hostId: string;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=interface" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interface" })
   interface: GetDropletBandwidthMetricsInterfaceEnum;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=start" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=start" })
   start: string;
 }
 
 
-export class GetDropletBandwidthMetricsRequest extends SpeakeasyBase {
-  @Metadata()
-  queryParams: GetDropletBandwidthMetricsQueryParams;
-}
-
-
 export class GetDropletBandwidthMetrics200ApplicationJsonDataResult extends SpeakeasyBase {
-  @Metadata({ data: "json, name=metric" })
-  metric: Map<string, string>;
+  @SpeakeasyMetadata({ data: "json, name=metric" })
+  metric: Record<string, string>;
 
-  @Metadata({ data: "json, name=values" })
+  @SpeakeasyMetadata({ data: "json, name=values" })
   values: any[][];
 }
 
@@ -50,56 +45,62 @@ export enum GetDropletBandwidthMetrics200ApplicationJsonDataResultTypeEnum {
 
 
 export class GetDropletBandwidthMetrics200ApplicationJsonData extends SpeakeasyBase {
-  @Metadata({ data: "json, name=result", elemType: operations.GetDropletBandwidthMetrics200ApplicationJsonDataResult })
+  @SpeakeasyMetadata({ data: "json, name=result", elemType: GetDropletBandwidthMetrics200ApplicationJsonDataResult })
   result: GetDropletBandwidthMetrics200ApplicationJsonDataResult[];
 
-  @Metadata({ data: "json, name=resultType" })
+  @SpeakeasyMetadata({ data: "json, name=resultType" })
   resultType: GetDropletBandwidthMetrics200ApplicationJsonDataResultTypeEnum;
 }
 
 export enum GetDropletBandwidthMetrics200ApplicationJsonStatusEnum {
-    Success = "success"
-,    Error = "error"
+    Success = "success",
+    Error = "error"
 }
 
 
 export class GetDropletBandwidthMetrics200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=data" })
+  @SpeakeasyMetadata({ data: "json, name=data" })
   data: GetDropletBandwidthMetrics200ApplicationJsonData;
 
-  @Metadata({ data: "json, name=status" })
+  @SpeakeasyMetadata({ data: "json, name=status" })
   status: GetDropletBandwidthMetrics200ApplicationJsonStatusEnum;
 }
 
 
 export class GetDropletBandwidthMetrics401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class GetDropletBandwidthMetricsRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  queryParams: GetDropletBandwidthMetricsQueryParams;
+}
+
+
 export class GetDropletBandwidthMetricsResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  getDropletBandwidthMetrics200ApplicationJsonObject?: GetDropletBandwidthMetrics200ApplicationJson;
+  @SpeakeasyMetadata()
+  getDropletBandwidthMetrics200ApplicationJSONObject?: GetDropletBandwidthMetrics200ApplicationJson;
 
-  @Metadata()
-  getDropletBandwidthMetrics401ApplicationJsonObject?: GetDropletBandwidthMetrics401ApplicationJson;
+  @SpeakeasyMetadata()
+  getDropletBandwidthMetrics401ApplicationJSONObject?: GetDropletBandwidthMetrics401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

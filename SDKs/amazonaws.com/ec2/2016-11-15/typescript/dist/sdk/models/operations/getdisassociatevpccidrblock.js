@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDisassociateVpcCidrBlockActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDisassociateVpcCidrBlockResponse = exports.GetDisassociateVpcCidrBlockRequest = exports.GetDisassociateVpcCidrBlockHeaders = exports.GetDisassociateVpcCidrBlockQueryParams = exports.GetDisassociateVpcCidrBlockVersionEnum = exports.GetDisassociateVpcCidrBlockActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDisassociateVpcCidrBlockActionEnum;
 (function (GetDisassociateVpcCidrBlockActionEnum) {
     GetDisassociateVpcCidrBlockActionEnum["DisassociateVpcCidrBlock"] = "DisassociateVpcCidrBlock";
-})(GetDisassociateVpcCidrBlockActionEnum || (GetDisassociateVpcCidrBlockActionEnum = {}));
-export var GetDisassociateVpcCidrBlockVersionEnum;
+})(GetDisassociateVpcCidrBlockActionEnum = exports.GetDisassociateVpcCidrBlockActionEnum || (exports.GetDisassociateVpcCidrBlockActionEnum = {}));
+var GetDisassociateVpcCidrBlockVersionEnum;
 (function (GetDisassociateVpcCidrBlockVersionEnum) {
     GetDisassociateVpcCidrBlockVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDisassociateVpcCidrBlockVersionEnum || (GetDisassociateVpcCidrBlockVersionEnum = {}));
+})(GetDisassociateVpcCidrBlockVersionEnum = exports.GetDisassociateVpcCidrBlockVersionEnum || (exports.GetDisassociateVpcCidrBlockVersionEnum = {}));
 var GetDisassociateVpcCidrBlockQueryParams = /** @class */ (function (_super) {
     __extends(GetDisassociateVpcCidrBlockQueryParams, _super);
     function GetDisassociateVpcCidrBlockQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDisassociateVpcCidrBlockQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AssociationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AssociationId" }),
         __metadata("design:type", String)
     ], GetDisassociateVpcCidrBlockQueryParams.prototype, "associationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDisassociateVpcCidrBlockQueryParams.prototype, "version", void 0);
     return GetDisassociateVpcCidrBlockQueryParams;
-}(SpeakeasyBase));
-export { GetDisassociateVpcCidrBlockQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDisassociateVpcCidrBlockQueryParams = GetDisassociateVpcCidrBlockQueryParams;
 var GetDisassociateVpcCidrBlockHeaders = /** @class */ (function (_super) {
     __extends(GetDisassociateVpcCidrBlockHeaders, _super);
     function GetDisassociateVpcCidrBlockHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDisassociateVpcCidrBlockHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDisassociateVpcCidrBlockHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDisassociateVpcCidrBlockHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDisassociateVpcCidrBlockHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDisassociateVpcCidrBlockHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDisassociateVpcCidrBlockHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDisassociateVpcCidrBlockHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDisassociateVpcCidrBlockHeaders;
-}(SpeakeasyBase));
-export { GetDisassociateVpcCidrBlockHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDisassociateVpcCidrBlockHeaders = GetDisassociateVpcCidrBlockHeaders;
 var GetDisassociateVpcCidrBlockRequest = /** @class */ (function (_super) {
     __extends(GetDisassociateVpcCidrBlockRequest, _super);
     function GetDisassociateVpcCidrBlockRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDisassociateVpcCidrBlockQueryParams)
     ], GetDisassociateVpcCidrBlockRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDisassociateVpcCidrBlockHeaders)
     ], GetDisassociateVpcCidrBlockRequest.prototype, "headers", void 0);
     return GetDisassociateVpcCidrBlockRequest;
-}(SpeakeasyBase));
-export { GetDisassociateVpcCidrBlockRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDisassociateVpcCidrBlockRequest = GetDisassociateVpcCidrBlockRequest;
 var GetDisassociateVpcCidrBlockResponse = /** @class */ (function (_super) {
     __extends(GetDisassociateVpcCidrBlockResponse, _super);
     function GetDisassociateVpcCidrBlockResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDisassociateVpcCidrBlockResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDisassociateVpcCidrBlockResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDisassociateVpcCidrBlockResponse.prototype, "statusCode", void 0);
     return GetDisassociateVpcCidrBlockResponse;
-}(SpeakeasyBase));
-export { GetDisassociateVpcCidrBlockResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDisassociateVpcCidrBlockResponse = GetDisassociateVpcCidrBlockResponse;

@@ -1,4 +1,7 @@
-export var WorkflowRunStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkflowRunStatusEnum = void 0;
+var WorkflowRunStatusEnum;
 (function (WorkflowRunStatusEnum) {
     WorkflowRunStatusEnum["Completed"] = "completed";
     WorkflowRunStatusEnum["ActionRequired"] = "action_required";
@@ -13,4 +16,4 @@ export var WorkflowRunStatusEnum;
     WorkflowRunStatusEnum["Queued"] = "queued";
     WorkflowRunStatusEnum["Requested"] = "requested";
     WorkflowRunStatusEnum["Waiting"] = "waiting";
-})(WorkflowRunStatusEnum || (WorkflowRunStatusEnum = {}));
+})(WorkflowRunStatusEnum = exports.WorkflowRunStatusEnum || (exports.WorkflowRunStatusEnum = {}));

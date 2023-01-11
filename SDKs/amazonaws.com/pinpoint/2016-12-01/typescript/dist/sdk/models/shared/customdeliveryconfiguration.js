@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomDeliveryConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
 // CustomDeliveryConfiguration
 /**
  * Specifies the delivery configuration settings for sending a campaign or campaign treatment through a custom channel. This object is required if you use the CampaignCustomMessage object to define the message to send for the campaign or campaign treatment.
@@ -33,13 +36,13 @@ var CustomDeliveryConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeliveryUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeliveryUri" }),
         __metadata("design:type", String)
     ], CustomDeliveryConfiguration.prototype, "deliveryUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointTypes" }),
         __metadata("design:type", Array)
     ], CustomDeliveryConfiguration.prototype, "endpointTypes", void 0);
     return CustomDeliveryConfiguration;
-}(SpeakeasyBase));
-export { CustomDeliveryConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.CustomDeliveryConfiguration = CustomDeliveryConfiguration;

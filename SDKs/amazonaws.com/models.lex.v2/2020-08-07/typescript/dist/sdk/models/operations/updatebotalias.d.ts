@@ -27,7 +27,7 @@ export declare class UpdateBotAliasRequestBodySentimentAnalysisSettings extends 
     detectSentiment?: boolean;
 }
 export declare class UpdateBotAliasRequestBody extends SpeakeasyBase {
-    botAliasLocaleSettings?: Map<string, shared.BotAliasLocaleSettings>;
+    botAliasLocaleSettings?: Record<string, shared.BotAliasLocaleSettings>;
     botAliasName: string;
     botVersion?: string;
     conversationLogSettings?: UpdateBotAliasRequestBodyConversationLogSettings;

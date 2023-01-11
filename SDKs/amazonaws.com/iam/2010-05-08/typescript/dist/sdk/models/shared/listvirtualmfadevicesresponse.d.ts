@@ -6,5 +6,5 @@ import { VirtualMfaDevice } from "./virtualmfadevice";
 export declare class ListVirtualMfaDevicesResponse extends SpeakeasyBase {
     isTruncated?: boolean;
     marker?: string;
-    virtualMfaDevices: VirtualMfaDevice[];
+    virtualMFADevices: VirtualMfaDevice[];
 }

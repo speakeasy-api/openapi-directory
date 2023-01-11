@@ -32,7 +32,7 @@ export declare class GetNetworkEventsRequest extends SpeakeasyBase {
 }
 export declare class GetNetworkEventsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getNetworkEvents200ApplicationJsonObject?: Map<string, any>;
+    getNetworkEvents200ApplicationJSONObject?: Record<string, any>;
 }

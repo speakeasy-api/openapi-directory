@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListMlTransformsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListMlTransformsResponse = /** @class */ (function (_super) {
     __extends(ListMlTransformsResponse, _super);
     function ListMlTransformsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListMlTransformsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransformIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransformIds" }),
         __metadata("design:type", Array)
     ], ListMlTransformsResponse.prototype, "transformIds", void 0);
     return ListMlTransformsResponse;
-}(SpeakeasyBase));
-export { ListMlTransformsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListMlTransformsResponse = ListMlTransformsResponse;

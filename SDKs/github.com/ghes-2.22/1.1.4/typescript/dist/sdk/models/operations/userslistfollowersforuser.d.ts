@@ -13,7 +13,7 @@ export declare class UsersListFollowersForUserRequest extends SpeakeasyBase {
 }
 export declare class UsersListFollowersForUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     simpleUsers?: shared.SimpleUser[];
 }

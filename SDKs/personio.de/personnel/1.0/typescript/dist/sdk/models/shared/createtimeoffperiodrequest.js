@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateTimeOffPeriodRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateTimeOffPeriodRequest = /** @class */ (function (_super) {
     __extends(CreateTimeOffPeriodRequest, _super);
     function CreateTimeOffPeriodRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment" }),
         __metadata("design:type", String)
     ], CreateTimeOffPeriodRequest.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employee_id" }),
         __metadata("design:type", Number)
     ], CreateTimeOffPeriodRequest.prototype, "employeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_date" }),
         __metadata("design:type", Date)
     ], CreateTimeOffPeriodRequest.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=half_day_end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=half_day_end" }),
         __metadata("design:type", Boolean)
     ], CreateTimeOffPeriodRequest.prototype, "halfDayEnd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=half_day_start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=half_day_start" }),
         __metadata("design:type", Boolean)
     ], CreateTimeOffPeriodRequest.prototype, "halfDayStart", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_date" }),
         __metadata("design:type", Date)
     ], CreateTimeOffPeriodRequest.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_off_type_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_off_type_id" }),
         __metadata("design:type", Number)
     ], CreateTimeOffPeriodRequest.prototype, "timeOffTypeId", void 0);
     return CreateTimeOffPeriodRequest;
-}(SpeakeasyBase));
-export { CreateTimeOffPeriodRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateTimeOffPeriodRequest = CreateTimeOffPeriodRequest;

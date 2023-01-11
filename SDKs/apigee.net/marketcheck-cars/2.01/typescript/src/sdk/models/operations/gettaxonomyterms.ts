@@ -62,7 +62,7 @@ export class GetTaxonomyTermsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   specsAutoCompleteResponse?: shared.SpecsAutoCompleteResponse;

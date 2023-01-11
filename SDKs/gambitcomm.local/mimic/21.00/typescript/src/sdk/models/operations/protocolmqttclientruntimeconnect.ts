@@ -22,5 +22,5 @@ export class ProtocolMqttClientRuntimeConnectResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolMqttClientRuntimeConnect200ApplicationJsonStrings?: string[];
+  protocolMqttClientRuntimeConnect200ApplicationJSONStrings?: string[];
 }

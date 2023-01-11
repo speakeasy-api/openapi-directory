@@ -4,21 +4,12 @@ export declare class PullsListReviewCommentsForRepoPathParams extends SpeakeasyB
     owner: string;
     repo: string;
 }
-export declare enum PullsListReviewCommentsForRepoDirectionEnum {
-    Asc = "asc",
-    Desc = "desc"
-}
-export declare enum PullsListReviewCommentsForRepoSortEnum {
-    Created = "created",
-    Updated = "updated",
-    CreatedAt = "created_at"
-}
 export declare class PullsListReviewCommentsForRepoQueryParams extends SpeakeasyBase {
-    direction?: PullsListReviewCommentsForRepoDirectionEnum;
+    direction?: shared.RepoEnum4;
     page?: number;
     perPage?: number;
     since?: string;
-    sort?: PullsListReviewCommentsForRepoSortEnum;
+    sort?: shared.RepoEnum6;
 }
 export declare class PullsListReviewCommentsForRepoRequest extends SpeakeasyBase {
     pathParams: PullsListReviewCommentsForRepoPathParams;
@@ -26,7 +17,7 @@ export declare class PullsListReviewCommentsForRepoRequest extends SpeakeasyBase
 }
 export declare class PullsListReviewCommentsForRepoResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     pullRequestReviewComments?: shared.PullRequestReviewComment[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UploadLayerPartRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var UploadLayerPartRequest = /** @class */ (function (_super) {
     __extends(UploadLayerPartRequest, _super);
     function UploadLayerPartRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=layerPartBlob" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=layerPartBlob" }),
         __metadata("design:type", String)
     ], UploadLayerPartRequest.prototype, "layerPartBlob", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=partFirstByte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=partFirstByte" }),
         __metadata("design:type", Number)
     ], UploadLayerPartRequest.prototype, "partFirstByte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=partLastByte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=partLastByte" }),
         __metadata("design:type", Number)
     ], UploadLayerPartRequest.prototype, "partLastByte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registryId" }),
         __metadata("design:type", String)
     ], UploadLayerPartRequest.prototype, "registryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositoryName" }),
         __metadata("design:type", String)
     ], UploadLayerPartRequest.prototype, "repositoryName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uploadId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uploadId" }),
         __metadata("design:type", String)
     ], UploadLayerPartRequest.prototype, "uploadId", void 0);
     return UploadLayerPartRequest;
-}(SpeakeasyBase));
-export { UploadLayerPartRequest };
+}(utils_1.SpeakeasyBase));
+exports.UploadLayerPartRequest = UploadLayerPartRequest;

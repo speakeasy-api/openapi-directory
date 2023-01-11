@@ -1,6 +1,9 @@
-export var EnvironmentAccessTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentAccessTypeEnum = void 0;
+var EnvironmentAccessTypeEnum;
 (function (EnvironmentAccessTypeEnum) {
     EnvironmentAccessTypeEnum["Full"] = "full";
     EnvironmentAccessTypeEnum["ReadOnly"] = "readOnly";
     EnvironmentAccessTypeEnum["None"] = "none";
-})(EnvironmentAccessTypeEnum || (EnvironmentAccessTypeEnum = {}));
+})(EnvironmentAccessTypeEnum = exports.EnvironmentAccessTypeEnum || (exports.EnvironmentAccessTypeEnum = {}));

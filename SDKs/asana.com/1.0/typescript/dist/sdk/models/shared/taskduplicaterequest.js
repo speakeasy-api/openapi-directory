@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TaskDuplicateRequestIncludeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskDuplicateRequest = exports.TaskDuplicateRequestIncludeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TaskDuplicateRequestIncludeEnum;
 (function (TaskDuplicateRequestIncludeEnum) {
     TaskDuplicateRequestIncludeEnum["Notes"] = "notes";
     TaskDuplicateRequestIncludeEnum["Assignee"] = "assignee";
@@ -35,20 +38,20 @@ export var TaskDuplicateRequestIncludeEnum;
     TaskDuplicateRequestIncludeEnum["Dates"] = "dates";
     TaskDuplicateRequestIncludeEnum["Dependencies"] = "dependencies";
     TaskDuplicateRequestIncludeEnum["Parent"] = "parent";
-})(TaskDuplicateRequestIncludeEnum || (TaskDuplicateRequestIncludeEnum = {}));
+})(TaskDuplicateRequestIncludeEnum = exports.TaskDuplicateRequestIncludeEnum || (exports.TaskDuplicateRequestIncludeEnum = {}));
 var TaskDuplicateRequest = /** @class */ (function (_super) {
     __extends(TaskDuplicateRequest, _super);
     function TaskDuplicateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=include" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=include" }),
         __metadata("design:type", String)
     ], TaskDuplicateRequest.prototype, "include", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TaskDuplicateRequest.prototype, "name", void 0);
     return TaskDuplicateRequest;
-}(SpeakeasyBase));
-export { TaskDuplicateRequest };
+}(utils_1.SpeakeasyBase));
+exports.TaskDuplicateRequest = TaskDuplicateRequest;

@@ -17,6 +17,6 @@ export declare class ReportsIndexRequest extends SpeakeasyBase {
 }
 export declare class ReportsIndexResponse extends SpeakeasyBase {
     contentType: string;
-    object?: Map<string, any>;
+    object?: Record<string, any>;
     statusCode: number;
 }

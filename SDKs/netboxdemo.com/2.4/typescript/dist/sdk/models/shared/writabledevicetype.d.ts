@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class WritableDeviceTypeInput extends SpeakeasyBase {
     comments?: string;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     interfaceOrdering?: number;
     isConsoleServer?: boolean;
     isFullDepth?: boolean;

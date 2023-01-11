@@ -27,7 +27,7 @@ export enum UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsFormatEnum {
 
 export class UpdateNetworkWirelessSsidHotspot20RequestBodyNaiRealmsMethods extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=authenticationTypes" })
-  authenticationTypes?: Map<string, any>;
+  authenticationTypes?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
@@ -193,5 +193,5 @@ export class UpdateNetworkWirelessSsidHotspot20Response extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkWirelessSsidHotspot20200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkWirelessSsidHotspot20200ApplicationJSONObject?: Record<string, any>;
 }

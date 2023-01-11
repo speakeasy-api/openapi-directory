@@ -22,5 +22,5 @@ export class ProtocolMqttClientRuntimeAbortResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolMqttClientRuntimeAbort200ApplicationJsonStrings?: string[];
+  protocolMqttClientRuntimeAbort200ApplicationJSONStrings?: string[];
 }

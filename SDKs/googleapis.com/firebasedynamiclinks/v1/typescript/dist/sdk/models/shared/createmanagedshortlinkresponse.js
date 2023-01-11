@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ManagedShortLink } from "./managedshortlink";
-import { DynamicLinkWarning } from "./dynamiclinkwarning";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateManagedShortLinkResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var managedshortlink_1 = require("./managedshortlink");
+var dynamiclinkwarning_1 = require("./dynamiclinkwarning");
 // CreateManagedShortLinkResponse
 /**
  * Response to create a short Dynamic Link.
@@ -35,17 +38,17 @@ var CreateManagedShortLinkResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managedShortLink" }),
-        __metadata("design:type", ManagedShortLink)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managedShortLink" }),
+        __metadata("design:type", managedshortlink_1.ManagedShortLink)
     ], CreateManagedShortLinkResponse.prototype, "managedShortLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previewLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previewLink" }),
         __metadata("design:type", String)
     ], CreateManagedShortLinkResponse.prototype, "previewLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warning", elemType: DynamicLinkWarning }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warning", elemType: dynamiclinkwarning_1.DynamicLinkWarning }),
         __metadata("design:type", Array)
     ], CreateManagedShortLinkResponse.prototype, "warning", void 0);
     return CreateManagedShortLinkResponse;
-}(SpeakeasyBase));
-export { CreateManagedShortLinkResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateManagedShortLinkResponse = CreateManagedShortLinkResponse;

@@ -9,5 +9,5 @@ export declare class MsetValueRequest extends SpeakeasyBase {
 export declare class MsetValueResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    msetValue200ApplicationJsonString?: string;
+    msetValue200ApplicationJSONString?: string;
 }

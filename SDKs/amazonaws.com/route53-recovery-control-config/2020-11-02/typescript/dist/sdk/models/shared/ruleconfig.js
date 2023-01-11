@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleTypeEnum } from "./ruletypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuleConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var ruletypeenum_1 = require("./ruletypeenum");
 // RuleConfig
 /**
  * The rule configuration for an assertion rule. That is, the criteria that you set for specific assertion controls (routing controls) that specify how many controls must be enabled after a transaction completes.
@@ -34,17 +37,17 @@ var RuleConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Inverted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Inverted" }),
         __metadata("design:type", Boolean)
     ], RuleConfig.prototype, "inverted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Threshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Threshold" }),
         __metadata("design:type", Number)
     ], RuleConfig.prototype, "threshold", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], RuleConfig.prototype, "type", void 0);
     return RuleConfig;
-}(SpeakeasyBase));
-export { RuleConfig };
+}(utils_1.SpeakeasyBase));
+exports.RuleConfig = RuleConfig;

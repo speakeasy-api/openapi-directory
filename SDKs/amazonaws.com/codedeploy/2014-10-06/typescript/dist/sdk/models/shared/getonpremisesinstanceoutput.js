@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceInfo } from "./instanceinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOnPremisesInstanceOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var instanceinfo_1 = require("./instanceinfo");
 // GetOnPremisesInstanceOutput
 /**
  *  Represents the output of a <code>GetOnPremisesInstance</code> operation.
@@ -34,9 +37,9 @@ var GetOnPremisesInstanceOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceInfo" }),
-        __metadata("design:type", InstanceInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceInfo" }),
+        __metadata("design:type", instanceinfo_1.InstanceInfo)
     ], GetOnPremisesInstanceOutput.prototype, "instanceInfo", void 0);
     return GetOnPremisesInstanceOutput;
-}(SpeakeasyBase));
-export { GetOnPremisesInstanceOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetOnPremisesInstanceOutput = GetOnPremisesInstanceOutput;

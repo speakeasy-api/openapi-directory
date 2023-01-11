@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SettingMetadata } from "./settingmetadata";
-export var OrganizationJurisdictionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Organization = exports.OrganizationJurisdictionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var settingmetadata_1 = require("./settingmetadata");
+var OrganizationJurisdictionEnum;
 (function (OrganizationJurisdictionEnum) {
     OrganizationJurisdictionEnum["National"] = "National";
     OrganizationJurisdictionEnum["State"] = "State";
     OrganizationJurisdictionEnum["County"] = "County";
-})(OrganizationJurisdictionEnum || (OrganizationJurisdictionEnum = {}));
+})(OrganizationJurisdictionEnum = exports.OrganizationJurisdictionEnum || (exports.OrganizationJurisdictionEnum = {}));
 // Organization
 /**
  * An organization connected to data hub
@@ -40,29 +43,29 @@ var Organization = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countyName" }),
         __metadata("design:type", String)
     ], Organization.prototype, "countyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Organization.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jurisdiction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jurisdiction" }),
         __metadata("design:type", String)
     ], Organization.prototype, "jurisdiction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", SettingMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", settingmetadata_1.SettingMetadata)
     ], Organization.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Organization.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateCode" }),
         __metadata("design:type", String)
     ], Organization.prototype, "stateCode", void 0);
     return Organization;
-}(SpeakeasyBase));
-export { Organization };
+}(utils_1.SpeakeasyBase));
+exports.Organization = Organization;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TagListEntry } from "./taglistentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateLocationFsxWindowsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var taglistentry_1 = require("./taglistentry");
 var CreateLocationFsxWindowsRequest = /** @class */ (function (_super) {
     __extends(CreateLocationFsxWindowsRequest, _super);
     function CreateLocationFsxWindowsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Domain" }),
         __metadata("design:type", String)
     ], CreateLocationFsxWindowsRequest.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FsxFilesystemArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FsxFilesystemArn" }),
         __metadata("design:type", String)
     ], CreateLocationFsxWindowsRequest.prototype, "fsxFilesystemArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Password" }),
         __metadata("design:type", String)
     ], CreateLocationFsxWindowsRequest.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityGroupArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityGroupArns" }),
         __metadata("design:type", Array)
     ], CreateLocationFsxWindowsRequest.prototype, "securityGroupArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Subdirectory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Subdirectory" }),
         __metadata("design:type", String)
     ], CreateLocationFsxWindowsRequest.prototype, "subdirectory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: TagListEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: taglistentry_1.TagListEntry }),
         __metadata("design:type", Array)
     ], CreateLocationFsxWindowsRequest.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=User" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=User" }),
         __metadata("design:type", String)
     ], CreateLocationFsxWindowsRequest.prototype, "user", void 0);
     return CreateLocationFsxWindowsRequest;
-}(SpeakeasyBase));
-export { CreateLocationFsxWindowsRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateLocationFsxWindowsRequest = CreateLocationFsxWindowsRequest;

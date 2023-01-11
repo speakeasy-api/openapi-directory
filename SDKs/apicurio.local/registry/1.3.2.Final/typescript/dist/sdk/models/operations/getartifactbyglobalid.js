@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetArtifactByGlobalIdResponse = exports.GetArtifactByGlobalIdRequest = exports.GetArtifactByGlobalIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetArtifactByGlobalIdPathParams = /** @class */ (function (_super) {
     __extends(GetArtifactByGlobalIdPathParams, _super);
     function GetArtifactByGlobalIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=globalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=globalId" }),
         __metadata("design:type", Number)
     ], GetArtifactByGlobalIdPathParams.prototype, "globalId", void 0);
     return GetArtifactByGlobalIdPathParams;
-}(SpeakeasyBase));
-export { GetArtifactByGlobalIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetArtifactByGlobalIdPathParams = GetArtifactByGlobalIdPathParams;
 var GetArtifactByGlobalIdRequest = /** @class */ (function (_super) {
     __extends(GetArtifactByGlobalIdRequest, _super);
     function GetArtifactByGlobalIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetArtifactByGlobalIdPathParams)
     ], GetArtifactByGlobalIdRequest.prototype, "pathParams", void 0);
     return GetArtifactByGlobalIdRequest;
-}(SpeakeasyBase));
-export { GetArtifactByGlobalIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetArtifactByGlobalIdRequest = GetArtifactByGlobalIdRequest;
 var GetArtifactByGlobalIdResponse = /** @class */ (function (_super) {
     __extends(GetArtifactByGlobalIdResponse, _super);
     function GetArtifactByGlobalIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetArtifactByGlobalIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetArtifactByGlobalIdResponse.prototype, "statusCode", void 0);
     return GetArtifactByGlobalIdResponse;
-}(SpeakeasyBase));
-export { GetArtifactByGlobalIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetArtifactByGlobalIdResponse = GetArtifactByGlobalIdResponse;

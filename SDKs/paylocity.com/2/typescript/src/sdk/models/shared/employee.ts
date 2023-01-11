@@ -425,13 +425,13 @@ export class EmployeeLocalTax extends SpeakeasyBase {
   filingStatus?: string;
 
   @SpeakeasyMetadata({ data: "json, name=residentPSD" })
-  residentPsd?: string;
+  residentPSD?: string;
 
   @SpeakeasyMetadata({ data: "json, name=taxCode" })
   taxCode?: string;
 
   @SpeakeasyMetadata({ data: "json, name=workPSD" })
-  workPsd?: string;
+  workPSD?: string;
 }
 
 
@@ -825,7 +825,7 @@ export class Employee extends SpeakeasyBase {
   birthDate?: string;
 
   @SpeakeasyMetadata({ data: "json, name=companyFEIN" })
-  companyFein?: string;
+  companyFEIN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=companyName" })
   companyName?: string;

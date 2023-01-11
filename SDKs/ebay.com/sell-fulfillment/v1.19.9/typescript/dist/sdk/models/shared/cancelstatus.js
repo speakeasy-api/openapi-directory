@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CancelRequest } from "./cancelrequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CancelStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var cancelrequest_1 = require("./cancelrequest");
 // CancelStatus
 /**
  * This type contains information about any requests that have been made to cancel an order.
@@ -34,17 +37,17 @@ var CancelStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancelRequests", elemType: CancelRequest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancelRequests", elemType: cancelrequest_1.CancelRequest }),
         __metadata("design:type", Array)
     ], CancelStatus.prototype, "cancelRequests", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancelState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancelState" }),
         __metadata("design:type", String)
     ], CancelStatus.prototype, "cancelState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancelledDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancelledDate" }),
         __metadata("design:type", String)
     ], CancelStatus.prototype, "cancelledDate", void 0);
     return CancelStatus;
-}(SpeakeasyBase));
-export { CancelStatus };
+}(utils_1.SpeakeasyBase));
+exports.CancelStatus = CancelStatus;

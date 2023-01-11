@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdminAccount } from "./adminaccount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListOrganizationAdminAccountsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var adminaccount_1 = require("./adminaccount");
 var ListOrganizationAdminAccountsResponse = /** @class */ (function (_super) {
     __extends(ListOrganizationAdminAccountsResponse, _super);
     function ListOrganizationAdminAccountsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adminAccounts", elemType: AdminAccount }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adminAccounts", elemType: adminaccount_1.AdminAccount }),
         __metadata("design:type", Array)
     ], ListOrganizationAdminAccountsResponse.prototype, "adminAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListOrganizationAdminAccountsResponse.prototype, "nextToken", void 0);
     return ListOrganizationAdminAccountsResponse;
-}(SpeakeasyBase));
-export { ListOrganizationAdminAccountsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListOrganizationAdminAccountsResponse = ListOrganizationAdminAccountsResponse;

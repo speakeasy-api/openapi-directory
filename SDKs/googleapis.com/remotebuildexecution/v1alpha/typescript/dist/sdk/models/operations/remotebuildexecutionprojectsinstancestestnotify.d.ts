@@ -23,11 +23,11 @@ export declare class RemotebuildexecutionProjectsInstancesTestNotifySecurity ext
 export declare class RemotebuildexecutionProjectsInstancesTestNotifyRequest extends SpeakeasyBase {
     pathParams: RemotebuildexecutionProjectsInstancesTestNotifyPathParams;
     queryParams: RemotebuildexecutionProjectsInstancesTestNotifyQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: RemotebuildexecutionProjectsInstancesTestNotifySecurity;
 }
 export declare class RemotebuildexecutionProjectsInstancesTestNotifyResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

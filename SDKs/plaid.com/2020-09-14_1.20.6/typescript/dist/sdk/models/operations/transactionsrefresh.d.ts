@@ -5,7 +5,7 @@ export declare class TransactionsRefreshRequest extends SpeakeasyBase {
 }
 export declare class TransactionsRefreshResponse extends SpeakeasyBase {
     contentType: string;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     statusCode: number;
     transactionsRefreshResponse?: shared.TransactionsRefreshResponse;
 }

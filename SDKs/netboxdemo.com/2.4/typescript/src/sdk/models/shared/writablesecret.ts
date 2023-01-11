@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class WritableSecretInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=custom_fields" })
-  customFields?: Map<string, any>;
+  customFields?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=device" })
   device: number;

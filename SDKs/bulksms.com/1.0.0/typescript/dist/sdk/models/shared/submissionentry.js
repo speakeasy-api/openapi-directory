@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SubmissionEntryDeliveryReportsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubmissionEntry = exports.SubmissionEntryTo = exports.SubmissionEntryToTypeEnum = exports.SubmissionEntryRoutingGroupEnum = exports.SubmissionEntryProtocolIdEnum = exports.SubmissionEntryMessageClassEnum = exports.SubmissionEntryFrom = exports.SubmissionEntryFromTypeEnum = exports.SubmissionEntryEncodingEnum = exports.SubmissionEntryDeliveryReportsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SubmissionEntryDeliveryReportsEnum;
 (function (SubmissionEntryDeliveryReportsEnum) {
     SubmissionEntryDeliveryReportsEnum["All"] = "ALL";
     SubmissionEntryDeliveryReportsEnum["Errors"] = "ERRORS";
     SubmissionEntryDeliveryReportsEnum["None"] = "NONE";
-})(SubmissionEntryDeliveryReportsEnum || (SubmissionEntryDeliveryReportsEnum = {}));
-export var SubmissionEntryEncodingEnum;
+})(SubmissionEntryDeliveryReportsEnum = exports.SubmissionEntryDeliveryReportsEnum || (exports.SubmissionEntryDeliveryReportsEnum = {}));
+var SubmissionEntryEncodingEnum;
 (function (SubmissionEntryEncodingEnum) {
     SubmissionEntryEncodingEnum["Text"] = "TEXT";
     SubmissionEntryEncodingEnum["Unicode"] = "UNICODE";
     SubmissionEntryEncodingEnum["Binary"] = "BINARY";
-})(SubmissionEntryEncodingEnum || (SubmissionEntryEncodingEnum = {}));
-export var SubmissionEntryFromTypeEnum;
+})(SubmissionEntryEncodingEnum = exports.SubmissionEntryEncodingEnum || (exports.SubmissionEntryEncodingEnum = {}));
+var SubmissionEntryFromTypeEnum;
 (function (SubmissionEntryFromTypeEnum) {
     SubmissionEntryFromTypeEnum["International"] = "INTERNATIONAL";
     SubmissionEntryFromTypeEnum["Alphanumeric"] = "ALPHANUMERIC";
     SubmissionEntryFromTypeEnum["Shortcode"] = "SHORTCODE";
     SubmissionEntryFromTypeEnum["Repliable"] = "REPLIABLE";
-})(SubmissionEntryFromTypeEnum || (SubmissionEntryFromTypeEnum = {}));
+})(SubmissionEntryFromTypeEnum = exports.SubmissionEntryFromTypeEnum || (exports.SubmissionEntryFromTypeEnum = {}));
 // SubmissionEntryFrom
 /**
  * Identifies the sender.
@@ -56,24 +59,24 @@ var SubmissionEntryFrom = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], SubmissionEntryFrom.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], SubmissionEntryFrom.prototype, "type", void 0);
     return SubmissionEntryFrom;
-}(SpeakeasyBase));
-export { SubmissionEntryFrom };
-export var SubmissionEntryMessageClassEnum;
+}(utils_1.SpeakeasyBase));
+exports.SubmissionEntryFrom = SubmissionEntryFrom;
+var SubmissionEntryMessageClassEnum;
 (function (SubmissionEntryMessageClassEnum) {
     SubmissionEntryMessageClassEnum["FlashSms"] = "FLASH_SMS";
     SubmissionEntryMessageClassEnum["MeSpecific"] = "ME_SPECIFIC";
     SubmissionEntryMessageClassEnum["SimSpecific"] = "SIM_SPECIFIC";
     SubmissionEntryMessageClassEnum["TeSpecific"] = "TE_SPECIFIC";
-})(SubmissionEntryMessageClassEnum || (SubmissionEntryMessageClassEnum = {}));
-export var SubmissionEntryProtocolIdEnum;
+})(SubmissionEntryMessageClassEnum = exports.SubmissionEntryMessageClassEnum || (exports.SubmissionEntryMessageClassEnum = {}));
+var SubmissionEntryProtocolIdEnum;
 (function (SubmissionEntryProtocolIdEnum) {
     SubmissionEntryProtocolIdEnum["Implicit"] = "IMPLICIT";
     SubmissionEntryProtocolIdEnum["ShortMessageType0"] = "SHORT_MESSAGE_TYPE_0";
@@ -88,46 +91,46 @@ export var SubmissionEntryProtocolIdEnum;
     SubmissionEntryProtocolIdEnum["MeDownload"] = "ME_DOWNLOAD";
     SubmissionEntryProtocolIdEnum["MeDepersonalize"] = "ME_DEPERSONALIZE";
     SubmissionEntryProtocolIdEnum["SimDownload"] = "SIM_DOWNLOAD";
-})(SubmissionEntryProtocolIdEnum || (SubmissionEntryProtocolIdEnum = {}));
-export var SubmissionEntryRoutingGroupEnum;
+})(SubmissionEntryProtocolIdEnum = exports.SubmissionEntryProtocolIdEnum || (exports.SubmissionEntryProtocolIdEnum = {}));
+var SubmissionEntryRoutingGroupEnum;
 (function (SubmissionEntryRoutingGroupEnum) {
     SubmissionEntryRoutingGroupEnum["Economy"] = "ECONOMY";
     SubmissionEntryRoutingGroupEnum["Standard"] = "STANDARD";
     SubmissionEntryRoutingGroupEnum["Premium"] = "PREMIUM";
-})(SubmissionEntryRoutingGroupEnum || (SubmissionEntryRoutingGroupEnum = {}));
-export var SubmissionEntryToTypeEnum;
+})(SubmissionEntryRoutingGroupEnum = exports.SubmissionEntryRoutingGroupEnum || (exports.SubmissionEntryRoutingGroupEnum = {}));
+var SubmissionEntryToTypeEnum;
 (function (SubmissionEntryToTypeEnum) {
     SubmissionEntryToTypeEnum["International"] = "INTERNATIONAL";
     SubmissionEntryToTypeEnum["Group"] = "GROUP";
-})(SubmissionEntryToTypeEnum || (SubmissionEntryToTypeEnum = {}));
+})(SubmissionEntryToTypeEnum = exports.SubmissionEntryToTypeEnum || (exports.SubmissionEntryToTypeEnum = {}));
 var SubmissionEntryTo = /** @class */ (function (_super) {
     __extends(SubmissionEntryTo, _super);
     function SubmissionEntryTo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], SubmissionEntryTo.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields" }),
         __metadata("design:type", Array)
     ], SubmissionEntryTo.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], SubmissionEntryTo.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SubmissionEntryTo.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], SubmissionEntryTo.prototype, "type", void 0);
     return SubmissionEntryTo;
-}(SpeakeasyBase));
-export { SubmissionEntryTo };
+}(utils_1.SpeakeasyBase));
+exports.SubmissionEntryTo = SubmissionEntryTo;
 // SubmissionEntry
 /**
  * An object that you use when posting messages.
@@ -138,45 +141,45 @@ var SubmissionEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], SubmissionEntry.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryReports" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryReports" }),
         __metadata("design:type", String)
     ], SubmissionEntry.prototype, "deliveryReports", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encoding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encoding" }),
         __metadata("design:type", String)
     ], SubmissionEntry.prototype, "encoding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", SubmissionEntryFrom)
     ], SubmissionEntry.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longMessageMaxParts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longMessageMaxParts" }),
         __metadata("design:type", Number)
     ], SubmissionEntry.prototype, "longMessageMaxParts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageClass" }),
         __metadata("design:type", String)
     ], SubmissionEntry.prototype, "messageClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocolId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocolId" }),
         __metadata("design:type", String)
     ], SubmissionEntry.prototype, "protocolId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routingGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routingGroup" }),
         __metadata("design:type", String)
     ], SubmissionEntry.prototype, "routingGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to", elemType: SubmissionEntryTo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to", elemType: SubmissionEntryTo }),
         __metadata("design:type", Array)
     ], SubmissionEntry.prototype, "to", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userSuppliedId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userSuppliedId" }),
         __metadata("design:type", String)
     ], SubmissionEntry.prototype, "userSuppliedId", void 0);
     return SubmissionEntry;
-}(SpeakeasyBase));
-export { SubmissionEntry };
+}(utils_1.SpeakeasyBase));
+exports.SubmissionEntry = SubmissionEntry;

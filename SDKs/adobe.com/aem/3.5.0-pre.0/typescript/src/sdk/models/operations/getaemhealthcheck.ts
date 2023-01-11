@@ -25,5 +25,5 @@ export class GetAemHealthCheckResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getAemHealthCheckDefaultApplicationJsonString?: string;
+  getAemHealthCheckDefaultApplicationJSONString?: string;
 }

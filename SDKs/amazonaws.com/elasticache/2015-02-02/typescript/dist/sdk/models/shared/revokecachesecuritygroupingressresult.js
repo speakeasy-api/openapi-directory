@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CacheSecurityGroup } from "./cachesecuritygroup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RevokeCacheSecurityGroupIngressResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var cachesecuritygroup_1 = require("./cachesecuritygroup");
 var RevokeCacheSecurityGroupIngressResult = /** @class */ (function (_super) {
     __extends(RevokeCacheSecurityGroupIngressResult, _super);
     function RevokeCacheSecurityGroupIngressResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", CacheSecurityGroup)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", cachesecuritygroup_1.CacheSecurityGroup)
     ], RevokeCacheSecurityGroupIngressResult.prototype, "cacheSecurityGroup", void 0);
     return RevokeCacheSecurityGroupIngressResult;
-}(SpeakeasyBase));
-export { RevokeCacheSecurityGroupIngressResult };
+}(utils_1.SpeakeasyBase));
+exports.RevokeCacheSecurityGroupIngressResult = RevokeCacheSecurityGroupIngressResult;

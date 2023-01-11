@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AndroidModel } from "./androidmodel";
-import { AndroidRuntimeConfiguration } from "./androidruntimeconfiguration";
-import { AndroidVersion } from "./androidversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AndroidDeviceCatalog = void 0;
+var utils_1 = require("../../../internal/utils");
+var androidmodel_1 = require("./androidmodel");
+var androidruntimeconfiguration_1 = require("./androidruntimeconfiguration");
+var androidversion_1 = require("./androidversion");
 // AndroidDeviceCatalog
 /**
  * The currently supported Android devices.
@@ -36,17 +39,17 @@ var AndroidDeviceCatalog = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=models", elemType: AndroidModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=models", elemType: androidmodel_1.AndroidModel }),
         __metadata("design:type", Array)
     ], AndroidDeviceCatalog.prototype, "models", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runtimeConfiguration" }),
-        __metadata("design:type", AndroidRuntimeConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runtimeConfiguration" }),
+        __metadata("design:type", androidruntimeconfiguration_1.AndroidRuntimeConfiguration)
     ], AndroidDeviceCatalog.prototype, "runtimeConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versions", elemType: AndroidVersion }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versions", elemType: androidversion_1.AndroidVersion }),
         __metadata("design:type", Array)
     ], AndroidDeviceCatalog.prototype, "versions", void 0);
     return AndroidDeviceCatalog;
-}(SpeakeasyBase));
-export { AndroidDeviceCatalog };
+}(utils_1.SpeakeasyBase));
+exports.AndroidDeviceCatalog = AndroidDeviceCatalog;

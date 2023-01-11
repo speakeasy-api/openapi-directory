@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigModel } from "./configmodel";
-import { EnvironmentModel } from "./environmentmodel";
-import { ProductModel } from "./productmodel";
-import { SettingDataModel } from "./settingdatamodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IntegrationLinkDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var configmodel_1 = require("./configmodel");
+var environmentmodel_1 = require("./environmentmodel");
+var productmodel_1 = require("./productmodel");
+var settingdatamodel_1 = require("./settingdatamodel");
 var IntegrationLinkDetail = /** @class */ (function (_super) {
     __extends(IntegrationLinkDetail, _super);
     function IntegrationLinkDetail() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
-        __metadata("design:type", ConfigModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
+        __metadata("design:type", configmodel_1.ConfigModel)
     ], IntegrationLinkDetail.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
-        __metadata("design:type", EnvironmentModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
+        __metadata("design:type", environmentmodel_1.EnvironmentModel)
     ], IntegrationLinkDetail.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=product" }),
-        __metadata("design:type", ProductModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=product" }),
+        __metadata("design:type", productmodel_1.ProductModel)
     ], IntegrationLinkDetail.prototype, "product", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readOnly" }),
         __metadata("design:type", Boolean)
     ], IntegrationLinkDetail.prototype, "readOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=setting" }),
-        __metadata("design:type", SettingDataModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=setting" }),
+        __metadata("design:type", settingdatamodel_1.SettingDataModel)
     ], IntegrationLinkDetail.prototype, "setting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], IntegrationLinkDetail.prototype, "status", void 0);
     return IntegrationLinkDetail;
-}(SpeakeasyBase));
-export { IntegrationLinkDetail };
+}(utils_1.SpeakeasyBase));
+exports.IntegrationLinkDetail = IntegrationLinkDetail;

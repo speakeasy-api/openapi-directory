@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteAccountAliasActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteAccountAliasResponse = exports.PostDeleteAccountAliasRequest = exports.PostDeleteAccountAliasHeaders = exports.PostDeleteAccountAliasQueryParams = exports.PostDeleteAccountAliasVersionEnum = exports.PostDeleteAccountAliasActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteAccountAliasActionEnum;
 (function (PostDeleteAccountAliasActionEnum) {
     PostDeleteAccountAliasActionEnum["DeleteAccountAlias"] = "DeleteAccountAlias";
-})(PostDeleteAccountAliasActionEnum || (PostDeleteAccountAliasActionEnum = {}));
-export var PostDeleteAccountAliasVersionEnum;
+})(PostDeleteAccountAliasActionEnum = exports.PostDeleteAccountAliasActionEnum || (exports.PostDeleteAccountAliasActionEnum = {}));
+var PostDeleteAccountAliasVersionEnum;
 (function (PostDeleteAccountAliasVersionEnum) {
     PostDeleteAccountAliasVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostDeleteAccountAliasVersionEnum || (PostDeleteAccountAliasVersionEnum = {}));
+})(PostDeleteAccountAliasVersionEnum = exports.PostDeleteAccountAliasVersionEnum || (exports.PostDeleteAccountAliasVersionEnum = {}));
 var PostDeleteAccountAliasQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteAccountAliasQueryParams, _super);
     function PostDeleteAccountAliasQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteAccountAliasQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteAccountAliasQueryParams.prototype, "version", void 0);
     return PostDeleteAccountAliasQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteAccountAliasQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteAccountAliasQueryParams = PostDeleteAccountAliasQueryParams;
 var PostDeleteAccountAliasHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteAccountAliasHeaders, _super);
     function PostDeleteAccountAliasHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteAccountAliasHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteAccountAliasHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteAccountAliasHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteAccountAliasHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteAccountAliasHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteAccountAliasHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteAccountAliasHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteAccountAliasHeaders;
-}(SpeakeasyBase));
-export { PostDeleteAccountAliasHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteAccountAliasHeaders = PostDeleteAccountAliasHeaders;
 var PostDeleteAccountAliasRequest = /** @class */ (function (_super) {
     __extends(PostDeleteAccountAliasRequest, _super);
     function PostDeleteAccountAliasRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteAccountAliasQueryParams)
     ], PostDeleteAccountAliasRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteAccountAliasHeaders)
     ], PostDeleteAccountAliasRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteAccountAliasRequest.prototype, "request", void 0);
     return PostDeleteAccountAliasRequest;
-}(SpeakeasyBase));
-export { PostDeleteAccountAliasRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteAccountAliasRequest = PostDeleteAccountAliasRequest;
 var PostDeleteAccountAliasResponse = /** @class */ (function (_super) {
     __extends(PostDeleteAccountAliasResponse, _super);
     function PostDeleteAccountAliasResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteAccountAliasResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteAccountAliasResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteAccountAliasResponse.prototype, "statusCode", void 0);
     return PostDeleteAccountAliasResponse;
-}(SpeakeasyBase));
-export { PostDeleteAccountAliasResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteAccountAliasResponse = PostDeleteAccountAliasResponse;

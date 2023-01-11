@@ -9,5 +9,5 @@ export declare class CreateSchemaInput extends SpeakeasyBase {
     registryId?: RegistryId;
     schemaDefinition?: string;
     schemaName: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

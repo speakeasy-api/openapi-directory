@@ -8,7 +8,7 @@ export declare enum GetDeleteDbClusterVersionEnum {
 export declare class GetDeleteDbClusterQueryParams extends SpeakeasyBase {
     action: GetDeleteDbClusterActionEnum;
     dbClusterIdentifier: string;
-    finalDbSnapshotIdentifier?: string;
+    finalDBSnapshotIdentifier?: string;
     skipFinalSnapshot?: boolean;
     version: GetDeleteDbClusterVersionEnum;
 }

@@ -13,7 +13,7 @@ export declare class ProductAvailabilityRequest extends SpeakeasyBase {
 }
 export declare class ProductAvailabilityResponse extends SpeakeasyBase {
     contentType: string;
-    productAvailability200ApplicationJsonAny?: any;
-    productAvailabilityDefaultApplicationJsonAny?: any;
+    productAvailability200ApplicationJSONAny?: any;
+    productAvailabilityDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

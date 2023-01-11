@@ -25,9 +25,8 @@ export declare class PatchProxyRequest extends SpeakeasyBase {
 }
 export declare class PatchProxyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
     statusCode: number;
-    patchProxy200ApplicationJsonAny?: any;
-    patchProxy401ApplicationJsonObject?: PatchProxy401ApplicationJson;
-    patchProxyDefaultApplicationJsonAny?: any;
+    patchProxy200ApplicationJSONAny?: any;
+    patchProxy401ApplicationJSONObject?: PatchProxy401ApplicationJson;
+    patchProxyDefaultApplicationJSONAny?: any;
 }

@@ -14,5 +14,5 @@ export declare class GetcountrymatchRequest extends SpeakeasyBase {
 export declare class GetcountrymatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getcountrymatch200ApplicationJsonObject?: Getcountrymatch200ApplicationJson;
+    getcountrymatch200ApplicationJSONObject?: Getcountrymatch200ApplicationJson;
 }

@@ -109,11 +109,11 @@ export declare class VhtaxRequest extends SpeakeasyBase {
 export declare class VhtaxResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    vhtax400ApplicationJsonObject?: Vhtax400ApplicationJson;
-    vhtax401ApplicationJsonObject?: Vhtax401ApplicationJson;
-    vhtax404ApplicationJsonObject?: Vhtax404ApplicationJson;
-    vhtax500ApplicationJsonObject?: Vhtax500ApplicationJson;
-    vhtax502ApplicationJsonObject?: Vhtax502ApplicationJson;
-    vhtax503ApplicationJsonObject?: Vhtax503ApplicationJson;
-    vhtax504ApplicationJsonObject?: Vhtax504ApplicationJson;
+    vhtax400ApplicationJSONObject?: Vhtax400ApplicationJson;
+    vhtax401ApplicationJSONObject?: Vhtax401ApplicationJson;
+    vhtax404ApplicationJSONObject?: Vhtax404ApplicationJson;
+    vhtax500ApplicationJSONObject?: Vhtax500ApplicationJson;
+    vhtax502ApplicationJSONObject?: Vhtax502ApplicationJson;
+    vhtax503ApplicationJSONObject?: Vhtax503ApplicationJson;
+    vhtax504ApplicationJSONObject?: Vhtax504ApplicationJson;
 }

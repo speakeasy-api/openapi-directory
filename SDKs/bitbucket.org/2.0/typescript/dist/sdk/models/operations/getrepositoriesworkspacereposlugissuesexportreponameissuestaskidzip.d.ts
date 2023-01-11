@@ -18,6 +18,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesT
 export declare class GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     issueJobStatus?: shared.IssueJobStatus;
 }

@@ -103,13 +103,13 @@ export class Instance extends SpeakeasyBase {
   kmsKey?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=machineType" })
   machineType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, string>;
+  metadata?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -209,13 +209,13 @@ export class InstanceInput extends SpeakeasyBase {
   kmsKey?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=machineType" })
   machineType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, string>;
+  metadata?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=network" })
   network?: string;

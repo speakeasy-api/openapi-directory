@@ -4,7 +4,7 @@ import { GoogleCloudDatalabelingV1beta1AnnotationSpec } from "./googleclouddatal
  * Image segmentation annotation.
 **/
 export declare class GoogleCloudDatalabelingV1beta1ImageSegmentationAnnotation extends SpeakeasyBase {
-    annotationColors?: Map<string, GoogleCloudDatalabelingV1beta1AnnotationSpec>;
+    annotationColors?: Record<string, GoogleCloudDatalabelingV1beta1AnnotationSpec>;
     imageBytes?: string;
     mimeType?: string;
 }

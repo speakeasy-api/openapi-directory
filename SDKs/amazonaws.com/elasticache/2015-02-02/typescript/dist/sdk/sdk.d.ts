@@ -1,20 +1,20 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://elasticache.{region}.amazonaws.com", "https://elasticache.{region}.amazonaws.com", "http://elasticache.{region}.amazonaws.com.cn", "https://elasticache.{region}.amazonaws.com.cn"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * getAuthorizeCacheSecurityGroupIngress - <p>Allows network ingress to a cache security group. Applications using ElastiCache must be running on Amazon EC2, and Amazon EC2 security groups are used as the authorization mechanism.</p> <note> <p>You cannot authorize ingress from an Amazon EC2 security group in one region to an ElastiCache cluster in another region.</p> </note>
     **/
@@ -35,10 +35,6 @@ export declare class SDK {
      * getCreateGlobalReplicationGroup - <p>Global Datastore for Redis offers fully managed, fast, reliable and secure cross-region replication. Using Global Datastore for Redis, you can create cross-region read replica clusters for ElastiCache for Redis to enable low-latency reads and disaster recovery across regions. For more information, see <a href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Redis-Global-Datastore.html">Replication Across Regions Using Global Datastore</a>. </p> <ul> <li> <p>The <b>GlobalReplicationGroupIdSuffix</b> is the name of the Global datastore.</p> </li> <li> <p>The <b>PrimaryReplicationGroupId</b> represents the name of the primary cluster that accepts writes and will replicate updates to the secondary cluster.</p> </li> </ul>
     **/
     getCreateGlobalReplicationGroup(req: operations.GetCreateGlobalReplicationGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetCreateGlobalReplicationGroupResponse>;
-    /**
-     * getDecreaseNodeGroupsInGlobalReplicationGroup - Decreases the number of node groups in a Global datastore
-    **/
-    getDecreaseNodeGroupsInGlobalReplicationGroup(req: operations.GetDecreaseNodeGroupsInGlobalReplicationGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetDecreaseNodeGroupsInGlobalReplicationGroupResponse>;
     /**
      * getDeleteCacheCluster - <p>Deletes a previously provisioned cluster. <code>DeleteCacheCluster</code> deletes all associated cache nodes, node endpoints and the cluster itself. When you receive a successful response from this operation, Amazon ElastiCache immediately begins deleting the cluster; you cannot cancel or revert this operation.</p> <p>This operation is not valid for:</p> <ul> <li> <p>Redis (cluster mode enabled) clusters</p> </li> <li> <p>Redis (cluster mode disabled) clusters</p> </li> <li> <p>A cluster that is the last read replica of a replication group</p> </li> <li> <p>A cluster that is the primary node of a replication group</p> </li> <li> <p>A node group (shard) that has Multi-AZ mode enabled</p> </li> <li> <p>A cluster from a Redis (cluster mode enabled) replication group</p> </li> <li> <p>A cluster that is not in the <code>available</code> state</p> </li> </ul>
     **/
@@ -156,10 +152,6 @@ export declare class SDK {
     **/
     getListTagsForResource(req: operations.GetListTagsForResourceRequest, config?: AxiosRequestConfig): Promise<operations.GetListTagsForResourceResponse>;
     /**
-     * getModifyCacheSubnetGroup - Modifies an existing cache subnet group.
-    **/
-    getModifyCacheSubnetGroup(req: operations.GetModifyCacheSubnetGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyCacheSubnetGroupResponse>;
-    /**
      * getModifyGlobalReplicationGroup - Modifies the settings for a Global datastore.
     **/
     getModifyGlobalReplicationGroup(req: operations.GetModifyGlobalReplicationGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyGlobalReplicationGroupResponse>;
@@ -175,10 +167,6 @@ export declare class SDK {
      * getRebalanceSlotsInGlobalReplicationGroup - Redistribute slots to ensure uniform distribution across existing shards in the cluster.
     **/
     getRebalanceSlotsInGlobalReplicationGroup(req: operations.GetRebalanceSlotsInGlobalReplicationGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetRebalanceSlotsInGlobalReplicationGroupResponse>;
-    /**
-     * getRebootCacheCluster - <p>Reboots some, or all, of the cache nodes within a provisioned cluster. This operation applies any modified cache parameter groups to the cluster. The reboot operation takes place as soon as possible, and results in a momentary outage to the cluster. During the reboot, the cluster status is set to REBOOTING.</p> <p>The reboot causes the contents of the cache (for each cache node being rebooted) to be lost.</p> <p>When the reboot is complete, a cluster event is created.</p> <p>Rebooting a cluster is currently supported on Memcached and Redis (cluster mode disabled) clusters. Rebooting is not supported on Redis (cluster mode enabled) clusters.</p> <p>If you make changes to parameters that require a Redis (cluster mode enabled) cluster reboot for the changes to be applied, see <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.Rebooting.html">Rebooting a Cluster</a> for an alternate process.</p>
-    **/
-    getRebootCacheCluster(req: operations.GetRebootCacheClusterRequest, config?: AxiosRequestConfig): Promise<operations.GetRebootCacheClusterResponse>;
     /**
      * getRemoveTagsFromResource - Removes the tags identified by the <code>TagKeys</code> list from the named resource. A tag is a key-value pair where the key and value are case-sensitive. You can use tags to categorize and track all your ElastiCache resources, with the exception of global replication group. When you add or remove tags on replication groups, those actions will be replicated to all nodes in the replication group. For more information, see <a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ResourceLevelPermissions.html">Resource-level permissions</a>.
     **/
@@ -452,4 +440,3 @@ export declare class SDK {
     **/
     postTestFailover(req: operations.PostTestFailoverRequest, config?: AxiosRequestConfig): Promise<operations.PostTestFailoverResponse>;
 }
-export {};

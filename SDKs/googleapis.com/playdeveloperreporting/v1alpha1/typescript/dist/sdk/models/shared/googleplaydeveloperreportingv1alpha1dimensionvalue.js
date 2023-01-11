@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePlayDeveloperReportingV1alpha1DimensionValue = void 0;
+var utils_1 = require("../../../internal/utils");
 // GooglePlayDeveloperReportingV1alpha1DimensionValue
 /**
  * Represents the value of a single dimension.
@@ -33,21 +36,21 @@ var GooglePlayDeveloperReportingV1alpha1DimensionValue = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimension" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1alpha1DimensionValue.prototype, "dimension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=int64Value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=int64Value" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1alpha1DimensionValue.prototype, "int64Value", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stringValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stringValue" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1alpha1DimensionValue.prototype, "stringValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueLabel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueLabel" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1alpha1DimensionValue.prototype, "valueLabel", void 0);
     return GooglePlayDeveloperReportingV1alpha1DimensionValue;
-}(SpeakeasyBase));
-export { GooglePlayDeveloperReportingV1alpha1DimensionValue };
+}(utils_1.SpeakeasyBase));
+exports.GooglePlayDeveloperReportingV1alpha1DimensionValue = GooglePlayDeveloperReportingV1alpha1DimensionValue;

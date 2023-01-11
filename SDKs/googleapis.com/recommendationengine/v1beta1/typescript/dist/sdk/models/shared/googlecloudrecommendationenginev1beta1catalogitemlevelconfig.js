@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig = exports.GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum = exports.GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum;
 (function (GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum) {
     GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum["CatalogItemLevelUnspecified"] = "CATALOG_ITEM_LEVEL_UNSPECIFIED";
     GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum["Variant"] = "VARIANT";
     GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum["Master"] = "MASTER";
-})(GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum || (GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum = {}));
-export var GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum;
+})(GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum = exports.GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum || (exports.GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigEventItemLevelEnum = {}));
+var GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum;
 (function (GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum) {
     GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum["CatalogItemLevelUnspecified"] = "CATALOG_ITEM_LEVEL_UNSPECIFIED";
     GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum["Variant"] = "VARIANT";
     GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum["Master"] = "MASTER";
-})(GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum || (GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum = {}));
+})(GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum = exports.GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum || (exports.GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum = {}));
 // GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig
 /**
  * Configures the catalog level that users send events to, and the level at which predictions are made.
@@ -45,13 +48,13 @@ var GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig = /** @class */
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventItemLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventItemLevel" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig.prototype, "eventItemLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=predictItemLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=predictItemLevel" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig.prototype, "predictItemLevel", void 0);
     return GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig;
-}(SpeakeasyBase));
-export { GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig = GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig;

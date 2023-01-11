@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsGetMemberLegacyResponse = exports.TeamsGetMemberLegacyRequest = exports.TeamsGetMemberLegacyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamsGetMemberLegacyPathParams = /** @class */ (function (_super) {
     __extends(TeamsGetMemberLegacyPathParams, _super);
     function TeamsGetMemberLegacyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_id" }),
         __metadata("design:type", Number)
     ], TeamsGetMemberLegacyPathParams.prototype, "teamId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], TeamsGetMemberLegacyPathParams.prototype, "username", void 0);
     return TeamsGetMemberLegacyPathParams;
-}(SpeakeasyBase));
-export { TeamsGetMemberLegacyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamsGetMemberLegacyPathParams = TeamsGetMemberLegacyPathParams;
 var TeamsGetMemberLegacyRequest = /** @class */ (function (_super) {
     __extends(TeamsGetMemberLegacyRequest, _super);
     function TeamsGetMemberLegacyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsGetMemberLegacyPathParams)
     ], TeamsGetMemberLegacyRequest.prototype, "pathParams", void 0);
     return TeamsGetMemberLegacyRequest;
-}(SpeakeasyBase));
-export { TeamsGetMemberLegacyRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsGetMemberLegacyRequest = TeamsGetMemberLegacyRequest;
 var TeamsGetMemberLegacyResponse = /** @class */ (function (_super) {
     __extends(TeamsGetMemberLegacyResponse, _super);
     function TeamsGetMemberLegacyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsGetMemberLegacyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsGetMemberLegacyResponse.prototype, "statusCode", void 0);
     return TeamsGetMemberLegacyResponse;
-}(SpeakeasyBase));
-export { TeamsGetMemberLegacyResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsGetMemberLegacyResponse = TeamsGetMemberLegacyResponse;

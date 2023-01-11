@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BackendAuthAppleProviderConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // BackendAuthAppleProviderConfig
 /**
  * Describes Apple social federation configurations for allowing your app users to sign in using OAuth.
@@ -33,21 +36,21 @@ var BackendAuthAppleProviderConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClientId" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClientId" }),
+        __metadata("design:type", Object)
     ], BackendAuthAppleProviderConfig.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KeyId" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KeyId" }),
+        __metadata("design:type", Object)
     ], BackendAuthAppleProviderConfig.prototype, "keyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PrivateKey" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PrivateKey" }),
+        __metadata("design:type", Object)
     ], BackendAuthAppleProviderConfig.prototype, "privateKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TeamId" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TeamId" }),
+        __metadata("design:type", Object)
     ], BackendAuthAppleProviderConfig.prototype, "teamId", void 0);
     return BackendAuthAppleProviderConfig;
-}(SpeakeasyBase));
-export { BackendAuthAppleProviderConfig };
+}(utils_1.SpeakeasyBase));
+exports.BackendAuthAppleProviderConfig = BackendAuthAppleProviderConfig;

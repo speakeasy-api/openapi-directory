@@ -1,0 +1,261 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Institutions = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
+var Institutions = /** @class */ (function () {
+    function Institutions(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
+        this._defaultClient = defaultClient;
+        this._securityClient = securityClient;
+        this._serverURL = serverURL;
+        this._language = language;
+        this._sdkVersion = sdkVersion;
+        this._genVersion = genVersion;
+    }
+    /**
+     * institutionsDetail - Retrieve an institution
+     *
+     * Retrieves the details of an institution
+     * #### Returns
+     * Returns a JSON object with a `data` key containing the representation of the requested institution, if the request was successful.
+     *
+     * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
+    **/
+    Institutions.prototype.institutionsDetail = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.InstitutionsDetailRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/institutions/{institution_id}/", req.pathParams);
+        var client = this._defaultClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * institutionsList - List all institutions
+     *
+     *
+     * A paginated list of all verified institutions.
+     * #### Returns
+     * Returns a JSON object containing `data` and `links` keys.
+     *
+     * The `data` key contains an array of 10 institutions. Each resource in the array is a separate institution object.
+     *
+     * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+     *
+     * This request should never return an error.
+     * #### Filtering
+     * You can optionally request that the response only include institutions that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/institutions/?filter[id]=cos.
+     *
+     * Institutions may be filtered by their `id`, `name`, and `auth_url`
+    **/
+    Institutions.prototype.institutionsList = function (config) {
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/institutions/";
+        var client = this._defaultClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * institutionsNodeList - List all affiliated nodes
+     *
+     * A paginated list of all nodes affiliated with an institution.
+     * #### Versioning
+     * As of version `2.2`, affiliated components (in addition to affiliated top-level projects) are returned from this endpoint.
+     * #### Returns
+     * Returns a JSON object containing `data` and `links` keys.
+     *
+     * The `data` key contains an array of 10 nodes. Each resource in the array is a separate nodes object.
+     *
+     * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+     *
+     * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
+     * #### Filtering
+     * You can optionally request that the response only include nodes that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/institutions/cos/nodes?filter[title]=science.
+     *
+     * Nodes may be filtered by their `id`, `title`, `description`, `public`, `tags`, `category`, `date_created`, `date_modified`, `root`, `parent`, `contributors`, and `preprint`
+    **/
+    Institutions.prototype.institutionsNodeList = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.InstitutionsNodeListRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/institutions/{institution_id}/nodes/", req.pathParams);
+        var client = this._defaultClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * institutionsRegistrationList - List all affiliated registrations
+     *
+     * A paginated list of all registrations affiliated with an institution.
+     * #### Returns
+     * Returns a JSON object containing `data` and `links` keys.
+     *
+     * The `data` key contains an array of 10 registrations. Each resource in the array is a separate users object.
+     *
+     * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+     *
+     * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
+     * #### Filtering
+     * You can optionally request that the response only include registrations that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/institutions/cos/registrations?filter[title]=science.
+     *
+     * Registrations may be filtered by their  `id`, `title`, `description`, `public`, `tags`, `category`, `date_created`, `date_modified`, `root`, `parent`, `contributors`, and `preprint`
+    **/
+    Institutions.prototype.institutionsRegistrationList = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.InstitutionsRegistrationListRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/institutions/{institution_id}/registrations/", req.pathParams);
+        var client = this._defaultClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * institutionsUsersList - List all affiliated users
+     *
+     * A paginated list of all users affiliated with an institution.
+     * #### Returns
+     * Returns a JSON object containing `data` and `links` keys.
+     *
+     * The `data` key contains an array of 10 users. Each resource in the array is a separate users object.
+     *
+     * The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+     *
+     * If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
+     * #### Filtering
+     * You can optionally request that the response only include users that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/institutions/cos/users?filter[family_name]=Nosek.
+     *
+     * Users may be filtered by their `id`, `full_name`, `given_name`, `middle_names`, and `family_name`
+    **/
+    Institutions.prototype.institutionsUsersList = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.InstitutionsUsersListRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/institutions/{institution_id}/users/", req.pathParams);
+        var client = this._defaultClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "*/*")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    return Institutions;
+}());
+exports.Institutions = Institutions;

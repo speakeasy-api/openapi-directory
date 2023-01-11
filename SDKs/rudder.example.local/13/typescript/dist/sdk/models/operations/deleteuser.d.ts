@@ -26,5 +26,5 @@ export declare class DeleteUserRequest extends SpeakeasyBase {
 export declare class DeleteUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteUser200ApplicationJsonObject?: DeleteUser200ApplicationJson;
+    deleteUser200ApplicationJSONObject?: DeleteUser200ApplicationJson;
 }

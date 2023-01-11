@@ -38,14 +38,14 @@ export declare class ModifyEndpointMessage extends SpeakeasyBase {
     ibmDb2Settings?: IbmDb2Settings;
     kafkaSettings?: KafkaSettings;
     kinesisSettings?: KinesisSettings;
-    microsoftSqlServerSettings?: MicrosoftSqlServerSettings;
+    microsoftSQLServerSettings?: MicrosoftSqlServerSettings;
     mongoDbSettings?: MongoDbSettings;
-    mySqlSettings?: MySqlSettings;
+    mySQLSettings?: MySqlSettings;
     neptuneSettings?: NeptuneSettings;
     oracleSettings?: OracleSettings;
     password?: string;
     port?: number;
-    postgreSqlSettings?: PostgreSqlSettings;
+    postgreSQLSettings?: PostgreSqlSettings;
     redisSettings?: RedisSettings;
     redshiftSettings?: RedshiftSettings;
     s3Settings?: S3Settings;

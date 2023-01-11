@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccessDeniedPageSettings } from "./accessdeniedpagesettings";
-import { AttributePropagationSettings } from "./attributepropagationsettings";
-import { CsmSettings } from "./csmsettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var accessdeniedpagesettings_1 = require("./accessdeniedpagesettings");
+var attributepropagationsettings_1 = require("./attributepropagationsettings");
+var csmsettings_1 = require("./csmsettings");
 // ApplicationSettings
 /**
  * Wrapper over application specific settings for IAP.
@@ -36,21 +39,21 @@ var ApplicationSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessDeniedPageSettings" }),
-        __metadata("design:type", AccessDeniedPageSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessDeniedPageSettings" }),
+        __metadata("design:type", accessdeniedpagesettings_1.AccessDeniedPageSettings)
     ], ApplicationSettings.prototype, "accessDeniedPageSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributePropagationSettings" }),
-        __metadata("design:type", AttributePropagationSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributePropagationSettings" }),
+        __metadata("design:type", attributepropagationsettings_1.AttributePropagationSettings)
     ], ApplicationSettings.prototype, "attributePropagationSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cookieDomain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cookieDomain" }),
         __metadata("design:type", String)
     ], ApplicationSettings.prototype, "cookieDomain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=csmSettings" }),
-        __metadata("design:type", CsmSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=csmSettings" }),
+        __metadata("design:type", csmsettings_1.CsmSettings)
     ], ApplicationSettings.prototype, "csmSettings", void 0);
     return ApplicationSettings;
-}(SpeakeasyBase));
-export { ApplicationSettings };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationSettings = ApplicationSettings;

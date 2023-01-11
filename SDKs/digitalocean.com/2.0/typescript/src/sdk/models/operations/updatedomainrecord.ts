@@ -1,53 +1,54 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class UpdateDomainRecordPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=domain_name" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=domain_name" })
   domainName: string;
 
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=domain_record_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=domain_record_id" })
   domainRecordId: number;
 }
 
 
-export class UpdateDomainRecordRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: UpdateDomainRecordPathParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request?: shared.Onev21domains1Percent7BdomainNamePercent7D1recordsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDomainRecordsItems;
-}
-
-
 export class UpdateDomainRecord401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class UpdateDomainRecordRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: UpdateDomainRecordPathParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request?: shared.Onev21domains1Percent7BdomainNamePercent7D1recordsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDomainRecordsItemsInput;
+}
+
+
 export class UpdateDomainRecordResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  updateDomainRecord200ApplicationJsonAny?: any;
+  @SpeakeasyMetadata()
+  updateDomainRecord200ApplicationJSONAny?: any;
 
-  @Metadata()
-  updateDomainRecord401ApplicationJsonObject?: UpdateDomainRecord401ApplicationJson;
+  @SpeakeasyMetadata()
+  updateDomainRecord401ApplicationJSONObject?: UpdateDomainRecord401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

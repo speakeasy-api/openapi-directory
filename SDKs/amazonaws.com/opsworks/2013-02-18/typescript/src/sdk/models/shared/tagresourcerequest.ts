@@ -7,5 +7,5 @@ export class TagResourceRequest extends SpeakeasyBase {
   resourceArn: string;
 
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags: Map<string, string>;
+  tags: Record<string, string>;
 }

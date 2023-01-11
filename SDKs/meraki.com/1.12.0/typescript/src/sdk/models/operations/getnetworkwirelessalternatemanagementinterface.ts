@@ -22,5 +22,5 @@ export class GetNetworkWirelessAlternateManagementInterfaceResponse extends Spea
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessAlternateManagementInterface200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessAlternateManagementInterface200ApplicationJSONObject?: Record<string, any>;
 }

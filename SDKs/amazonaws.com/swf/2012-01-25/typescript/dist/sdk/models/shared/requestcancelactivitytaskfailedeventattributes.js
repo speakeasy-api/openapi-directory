@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RequestCancelActivityTaskFailedCauseEnum } from "./requestcancelactivitytaskfailedcauseenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RequestCancelActivityTaskFailedEventAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
+var requestcancelactivitytaskfailedcauseenum_1 = require("./requestcancelactivitytaskfailedcauseenum");
 // RequestCancelActivityTaskFailedEventAttributes
 /**
  * Provides the details of the <code>RequestCancelActivityTaskFailed</code> event.
@@ -34,17 +37,17 @@ var RequestCancelActivityTaskFailedEventAttributes = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activityId" }),
         __metadata("design:type", String)
     ], RequestCancelActivityTaskFailedEventAttributes.prototype, "activityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cause" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cause" }),
         __metadata("design:type", String)
     ], RequestCancelActivityTaskFailedEventAttributes.prototype, "cause", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=decisionTaskCompletedEventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=decisionTaskCompletedEventId" }),
         __metadata("design:type", Number)
     ], RequestCancelActivityTaskFailedEventAttributes.prototype, "decisionTaskCompletedEventId", void 0);
     return RequestCancelActivityTaskFailedEventAttributes;
-}(SpeakeasyBase));
-export { RequestCancelActivityTaskFailedEventAttributes };
+}(utils_1.SpeakeasyBase));
+exports.RequestCancelActivityTaskFailedEventAttributes = RequestCancelActivityTaskFailedEventAttributes;

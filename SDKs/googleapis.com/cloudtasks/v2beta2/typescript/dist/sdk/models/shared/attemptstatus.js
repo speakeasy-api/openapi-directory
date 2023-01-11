@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Status } from "./status";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttemptStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var status_1 = require("./status");
 // AttemptStatus
 /**
  * The status of a task attempt.
@@ -34,21 +37,21 @@ var AttemptStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dispatchTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dispatchTime" }),
         __metadata("design:type", String)
     ], AttemptStatus.prototype, "dispatchTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responseStatus" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responseStatus" }),
+        __metadata("design:type", status_1.Status)
     ], AttemptStatus.prototype, "responseStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responseTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responseTime" }),
         __metadata("design:type", String)
     ], AttemptStatus.prototype, "responseTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduleTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduleTime" }),
         __metadata("design:type", String)
     ], AttemptStatus.prototype, "scheduleTime", void 0);
     return AttemptStatus;
-}(SpeakeasyBase));
-export { AttemptStatus };
+}(utils_1.SpeakeasyBase));
+exports.AttemptStatus = AttemptStatus;

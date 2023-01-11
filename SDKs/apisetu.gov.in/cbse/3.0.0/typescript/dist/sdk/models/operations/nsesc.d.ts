@@ -107,11 +107,11 @@ export declare class NsescRequest extends SpeakeasyBase {
 export declare class NsescResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    nsesc400ApplicationJsonObject?: Nsesc400ApplicationJson;
-    nsesc401ApplicationJsonObject?: Nsesc401ApplicationJson;
-    nsesc404ApplicationJsonObject?: Nsesc404ApplicationJson;
-    nsesc500ApplicationJsonObject?: Nsesc500ApplicationJson;
-    nsesc502ApplicationJsonObject?: Nsesc502ApplicationJson;
-    nsesc503ApplicationJsonObject?: Nsesc503ApplicationJson;
-    nsesc504ApplicationJsonObject?: Nsesc504ApplicationJson;
+    nsesc400ApplicationJSONObject?: Nsesc400ApplicationJson;
+    nsesc401ApplicationJSONObject?: Nsesc401ApplicationJson;
+    nsesc404ApplicationJSONObject?: Nsesc404ApplicationJson;
+    nsesc500ApplicationJSONObject?: Nsesc500ApplicationJson;
+    nsesc502ApplicationJSONObject?: Nsesc502ApplicationJson;
+    nsesc503ApplicationJSONObject?: Nsesc503ApplicationJson;
+    nsesc504ApplicationJSONObject?: Nsesc504ApplicationJson;
 }

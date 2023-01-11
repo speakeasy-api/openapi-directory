@@ -25,11 +25,11 @@ export declare class UserApiPostAlbumStatusRequest extends SpeakeasyBase {
 export declare class UserApiPostAlbumStatusResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    userApiPostAlbumStatus200ApplicationJsonString?: string;
+    userApiPostAlbumStatus200ApplicationJSONString?: string;
     userApiPostAlbumStatus200ApplicationJavascriptString?: string;
     userApiPostAlbumStatus200ApplicationJsonpString?: string;
-    userApiPostAlbumStatus200ApplicationXmlString?: string;
-    userApiPostAlbumStatus200TextJsonString?: string;
+    userApiPostAlbumStatus200ApplicationXMLString?: string;
+    userApiPostAlbumStatus200TextJSONString?: string;
     userApiPostAlbumStatus200TextJavascriptString?: string;
-    userApiPostAlbumStatus200TextXmlString?: string;
+    userApiPostAlbumStatus200TextXMLString?: string;
 }

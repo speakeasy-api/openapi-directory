@@ -35,23 +35,23 @@ export class CreatePotResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createPot201ApplicationJsonAny?: any;
+  createPot201ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createPot400ApplicationJsonAny?: any;
+  createPot400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createPot401ApplicationJsonAny?: any;
+  createPot401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createPot403ApplicationJsonAny?: any;
+  createPot403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createPot409ApplicationJsonAny?: any;
+  createPot409ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createPot429ApplicationJsonAny?: any;
+  createPot429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createPot500ApplicationJsonAny?: any;
+  createPot500ApplicationJSONAny?: any;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CertificateSourceEnum } from "./certificatesourceenum";
-import { MinimumProtocolVersionEnum } from "./minimumprotocolversionenum";
-import { SslSupportMethodEnum } from "./sslsupportmethodenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ViewerCertificate = void 0;
+var utils_1 = require("../../../internal/utils");
+var minimumprotocolversionenum_1 = require("./minimumprotocolversionenum");
+var sslsupportmethodenum_1 = require("./sslsupportmethodenum");
 // ViewerCertificate
 /**
  * <p>A complex type that specifies the following:</p> <ul> <li> <p>Which SSL/TLS certificate to use when viewers request objects using HTTPS</p> </li> <li> <p>Whether you want CloudFront to use dedicated IP addresses or SNI when you're using alternate domain names in your object names</p> </li> <li> <p>The minimum protocol version that you want CloudFront to use when communicating with viewers</p> </li> </ul> <p>For more information, see <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/SecureConnections.html">Using an HTTPS Connection to Access Your Objects</a> in the <i>Amazon Amazon CloudFront Developer Guide</i>.</p>
@@ -36,33 +38,33 @@ var ViewerCertificate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ViewerCertificate.prototype, "acmCertificateArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ViewerCertificate.prototype, "certificate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ViewerCertificate.prototype, "certificateSource", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ViewerCertificate.prototype, "cloudFrontDefaultCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ViewerCertificate.prototype, "iamCertificateId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ViewerCertificate.prototype, "minimumProtocolVersion", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ViewerCertificate.prototype, "sslSupportMethod", void 0);
     return ViewerCertificate;
-}(SpeakeasyBase));
-export { ViewerCertificate };
+}(utils_1.SpeakeasyBase));
+exports.ViewerCertificate = ViewerCertificate;

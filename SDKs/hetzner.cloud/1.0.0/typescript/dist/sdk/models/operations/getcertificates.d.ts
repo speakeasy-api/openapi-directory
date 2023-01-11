@@ -60,7 +60,7 @@ export declare class GetCertificatesCertificatesResponseCertificate extends Spea
     domainNames: string[];
     fingerprint: string;
     id: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     notValidAfter: string;
     notValidBefore: string;

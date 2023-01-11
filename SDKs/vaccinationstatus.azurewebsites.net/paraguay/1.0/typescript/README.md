@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetVaccineStatusRequest, GetVaccineStatusResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,16 +28,16 @@ const sdk = new SDK();
     
 const req: GetVaccineStatusRequest = {
   headers: {
-    accept: "aut",
-    authorization: "sit",
-    contentType: "aut",
+    accept: "sit",
+    authorization: "voluptas",
+    contentType: "culpa",
   },
   request: {
-    documento: "exercitationem",
+    documento: "expedita",
   },
 };
 
-sdk.sdk.getVaccineStatus(req).then((res: GetVaccineStatusResponse | AxiosError) => {
+sdk.paraguayApi.getVaccineStatus(req).then((res: GetVaccineStatusResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -47,7 +46,7 @@ sdk.sdk.getVaccineStatus(req).then((res: GetVaccineStatusResponse | AxiosError) 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Paraguay-api
 
 * `getVaccineStatus` - return vaccine status from Paraguay
 

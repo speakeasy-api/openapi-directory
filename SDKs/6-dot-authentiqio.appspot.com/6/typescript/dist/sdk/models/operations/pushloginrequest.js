@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PushLoginRequestResponse = exports.PushLoginRequestRequest = exports.PushLoginRequest200ApplicationJson = exports.PushLoginRequestQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PushLoginRequestQueryParams = /** @class */ (function (_super) {
     __extends(PushLoginRequestQueryParams, _super);
     function PushLoginRequestQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], PushLoginRequestQueryParams.prototype, "callback", void 0);
     return PushLoginRequestQueryParams;
-}(SpeakeasyBase));
-export { PushLoginRequestQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PushLoginRequestQueryParams = PushLoginRequestQueryParams;
 var PushLoginRequest200ApplicationJson = /** @class */ (function (_super) {
     __extends(PushLoginRequest200ApplicationJson, _super);
     function PushLoginRequest200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PushLoginRequest200ApplicationJson.prototype, "status", void 0);
     return PushLoginRequest200ApplicationJson;
-}(SpeakeasyBase));
-export { PushLoginRequest200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PushLoginRequest200ApplicationJson = PushLoginRequest200ApplicationJson;
 var PushLoginRequestRequest = /** @class */ (function (_super) {
     __extends(PushLoginRequestRequest, _super);
     function PushLoginRequestRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PushLoginRequestQueryParams)
     ], PushLoginRequestRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/jwt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/jwt" }),
         __metadata("design:type", Uint8Array)
     ], PushLoginRequestRequest.prototype, "request", void 0);
     return PushLoginRequestRequest;
-}(SpeakeasyBase));
-export { PushLoginRequestRequest };
+}(utils_1.SpeakeasyBase));
+exports.PushLoginRequestRequest = PushLoginRequestRequest;
 var PushLoginRequestResponse = /** @class */ (function (_super) {
     __extends(PushLoginRequestResponse, _super);
     function PushLoginRequestResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PushLoginRequestResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PushLoginRequestResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PushLoginRequestResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PushLoginRequestResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PushLoginRequest200ApplicationJson)
-    ], PushLoginRequestResponse.prototype, "pushLoginRequest200ApplicationJsonObject", void 0);
+    ], PushLoginRequestResponse.prototype, "pushLoginRequest200ApplicationJSONObject", void 0);
     return PushLoginRequestResponse;
-}(SpeakeasyBase));
-export { PushLoginRequestResponse };
+}(utils_1.SpeakeasyBase));
+exports.PushLoginRequestResponse = PushLoginRequestResponse;

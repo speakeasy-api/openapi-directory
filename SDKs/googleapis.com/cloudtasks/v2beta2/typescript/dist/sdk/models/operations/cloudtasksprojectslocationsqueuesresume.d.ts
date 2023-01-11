@@ -23,7 +23,7 @@ export declare class CloudtasksProjectsLocationsQueuesResumeSecurity extends Spe
 export declare class CloudtasksProjectsLocationsQueuesResumeRequest extends SpeakeasyBase {
     pathParams: CloudtasksProjectsLocationsQueuesResumePathParams;
     queryParams: CloudtasksProjectsLocationsQueuesResumeQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: CloudtasksProjectsLocationsQueuesResumeSecurity;
 }
 export declare class CloudtasksProjectsLocationsQueuesResumeResponse extends SpeakeasyBase {

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var FileMigrationEntityOperationEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FileMigrationEntity = exports.FileMigrationEntityStatusEnum = exports.FileMigrationEntityOperationEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var FileMigrationEntityOperationEnum;
 (function (FileMigrationEntityOperationEnum) {
     FileMigrationEntityOperationEnum["Delete"] = "delete";
     FileMigrationEntityOperationEnum["Move"] = "move";
     FileMigrationEntityOperationEnum["Copy"] = "copy";
-})(FileMigrationEntityOperationEnum || (FileMigrationEntityOperationEnum = {}));
-export var FileMigrationEntityStatusEnum;
+})(FileMigrationEntityOperationEnum = exports.FileMigrationEntityOperationEnum || (exports.FileMigrationEntityOperationEnum = {}));
+var FileMigrationEntityStatusEnum;
 (function (FileMigrationEntityStatusEnum) {
     FileMigrationEntityStatusEnum["Pending"] = "pending";
     FileMigrationEntityStatusEnum["Counting"] = "counting";
@@ -47,7 +50,7 @@ export var FileMigrationEntityStatusEnum;
     FileMigrationEntityStatusEnum["ProcessingDeferredFolders"] = "processing_deferred_folders";
     FileMigrationEntityStatusEnum["ProcessingRecursively"] = "processing_recursively";
     FileMigrationEntityStatusEnum["RemovingDeferredFolders"] = "removing_deferred_folders";
-})(FileMigrationEntityStatusEnum || (FileMigrationEntityStatusEnum = {}));
+})(FileMigrationEntityStatusEnum = exports.FileMigrationEntityStatusEnum || (exports.FileMigrationEntityStatusEnum = {}));
 // FileMigrationEntity
 /**
  * Show File Migration
@@ -58,41 +61,41 @@ var FileMigrationEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dest_path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dest_path" }),
         __metadata("design:type", String)
     ], FileMigrationEntity.prototype, "destPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=files_moved" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=files_moved" }),
         __metadata("design:type", Number)
     ], FileMigrationEntity.prototype, "filesMoved", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=files_total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=files_total" }),
         __metadata("design:type", Number)
     ], FileMigrationEntity.prototype, "filesTotal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], FileMigrationEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=log_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=log_url" }),
         __metadata("design:type", String)
     ], FileMigrationEntity.prototype, "logUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operation" }),
         __metadata("design:type", String)
     ], FileMigrationEntity.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], FileMigrationEntity.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], FileMigrationEntity.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], FileMigrationEntity.prototype, "status", void 0);
     return FileMigrationEntity;
-}(SpeakeasyBase));
-export { FileMigrationEntity };
+}(utils_1.SpeakeasyBase));
+exports.FileMigrationEntity = FileMigrationEntity;

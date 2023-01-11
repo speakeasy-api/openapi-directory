@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CacheCluster } from "./cachecluster";
+import { CacheClusterList } from "./cacheclusterlist";
 
 
 
@@ -8,8 +8,8 @@ import { CacheCluster } from "./cachecluster";
  * Represents the output of a <code>DescribeCacheClusters</code> operation.
 **/
 export class CacheClusterMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: CacheCluster })
-  cacheClusters?: CacheCluster[];
+  @SpeakeasyMetadata({ elemType: CacheClusterList })
+  cacheClusters?: CacheClusterList[];
 
   @SpeakeasyMetadata()
   marker?: string;

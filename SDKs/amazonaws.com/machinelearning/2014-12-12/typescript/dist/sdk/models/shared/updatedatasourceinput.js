@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDataSourceInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateDataSourceInput = /** @class */ (function (_super) {
     __extends(UpdateDataSourceInput, _super);
     function UpdateDataSourceInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataSourceId" }),
         __metadata("design:type", String)
     ], UpdateDataSourceInput.prototype, "dataSourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataSourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataSourceName" }),
         __metadata("design:type", String)
     ], UpdateDataSourceInput.prototype, "dataSourceName", void 0);
     return UpdateDataSourceInput;
-}(SpeakeasyBase));
-export { UpdateDataSourceInput };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDataSourceInput = UpdateDataSourceInput;

@@ -8,21 +8,10 @@ export class OrgsListMembersPathParams extends SpeakeasyBase {
   org: string;
 }
 
-export enum OrgsListMembersFilterEnum {
-    TwofaDisabled = "2fa_disabled",
-    All = "all"
-}
-
-export enum OrgsListMembersRoleEnum {
-    All = "all",
-    Admin = "admin",
-    Member = "member"
-}
-
 
 export class OrgsListMembersQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" })
-  filter?: OrgsListMembersFilterEnum;
+  filter?: shared.OrgEnum2;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -31,7 +20,7 @@ export class OrgsListMembersQueryParams extends SpeakeasyBase {
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=role" })
-  role?: OrgsListMembersRoleEnum;
+  role?: shared.OrgEnum3;
 }
 
 
@@ -49,7 +38,7 @@ export class OrgsListMembersResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

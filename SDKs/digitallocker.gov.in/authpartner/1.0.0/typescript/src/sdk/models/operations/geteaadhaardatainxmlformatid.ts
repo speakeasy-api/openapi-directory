@@ -41,16 +41,16 @@ export class GetEAadhaarDataInXmlFormatIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getEAadhaarDataInXmlFormatId401ApplicationJsonObject?: GetEAadhaarDataInXmlFormatId401ApplicationJson;
+  getEAadhaarDataInXMLFormatId401ApplicationJSONObject?: GetEAadhaarDataInXmlFormatId401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getEAadhaarDataInXmlFormatId404ApplicationJsonObject?: GetEAadhaarDataInXmlFormatId404ApplicationJson;
+  getEAadhaarDataInXMLFormatId404ApplicationJSONObject?: GetEAadhaarDataInXmlFormatId404ApplicationJson;
 
   @SpeakeasyMetadata()
-  getEAadhaarDataInXmlFormatId500ApplicationJsonOneOf?: any;
+  getEAadhaarDataInXMLFormatId500ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
-  getEAadhaarDataInXmlFormatId503ApplicationJsonOneOf?: any;
+  getEAadhaarDataInXMLFormatId503ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

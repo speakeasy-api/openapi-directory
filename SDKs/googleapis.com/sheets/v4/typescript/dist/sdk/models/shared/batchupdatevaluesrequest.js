@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ValueRange } from "./valuerange";
-export var BatchUpdateValuesRequestResponseDateTimeRenderOptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchUpdateValuesRequest = exports.BatchUpdateValuesRequestValueInputOptionEnum = exports.BatchUpdateValuesRequestResponseValueRenderOptionEnum = exports.BatchUpdateValuesRequestResponseDateTimeRenderOptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var valuerange_1 = require("./valuerange");
+var BatchUpdateValuesRequestResponseDateTimeRenderOptionEnum;
 (function (BatchUpdateValuesRequestResponseDateTimeRenderOptionEnum) {
     BatchUpdateValuesRequestResponseDateTimeRenderOptionEnum["SerialNumber"] = "SERIAL_NUMBER";
     BatchUpdateValuesRequestResponseDateTimeRenderOptionEnum["FormattedString"] = "FORMATTED_STRING";
-})(BatchUpdateValuesRequestResponseDateTimeRenderOptionEnum || (BatchUpdateValuesRequestResponseDateTimeRenderOptionEnum = {}));
-export var BatchUpdateValuesRequestResponseValueRenderOptionEnum;
+})(BatchUpdateValuesRequestResponseDateTimeRenderOptionEnum = exports.BatchUpdateValuesRequestResponseDateTimeRenderOptionEnum || (exports.BatchUpdateValuesRequestResponseDateTimeRenderOptionEnum = {}));
+var BatchUpdateValuesRequestResponseValueRenderOptionEnum;
 (function (BatchUpdateValuesRequestResponseValueRenderOptionEnum) {
     BatchUpdateValuesRequestResponseValueRenderOptionEnum["FormattedValue"] = "FORMATTED_VALUE";
     BatchUpdateValuesRequestResponseValueRenderOptionEnum["UnformattedValue"] = "UNFORMATTED_VALUE";
     BatchUpdateValuesRequestResponseValueRenderOptionEnum["Formula"] = "FORMULA";
-})(BatchUpdateValuesRequestResponseValueRenderOptionEnum || (BatchUpdateValuesRequestResponseValueRenderOptionEnum = {}));
-export var BatchUpdateValuesRequestValueInputOptionEnum;
+})(BatchUpdateValuesRequestResponseValueRenderOptionEnum = exports.BatchUpdateValuesRequestResponseValueRenderOptionEnum || (exports.BatchUpdateValuesRequestResponseValueRenderOptionEnum = {}));
+var BatchUpdateValuesRequestValueInputOptionEnum;
 (function (BatchUpdateValuesRequestValueInputOptionEnum) {
     BatchUpdateValuesRequestValueInputOptionEnum["InputValueOptionUnspecified"] = "INPUT_VALUE_OPTION_UNSPECIFIED";
     BatchUpdateValuesRequestValueInputOptionEnum["Raw"] = "RAW";
     BatchUpdateValuesRequestValueInputOptionEnum["UserEntered"] = "USER_ENTERED";
-})(BatchUpdateValuesRequestValueInputOptionEnum || (BatchUpdateValuesRequestValueInputOptionEnum = {}));
+})(BatchUpdateValuesRequestValueInputOptionEnum = exports.BatchUpdateValuesRequestValueInputOptionEnum || (exports.BatchUpdateValuesRequestValueInputOptionEnum = {}));
 // BatchUpdateValuesRequest
 /**
  * The request for updating more than one range of values in a spreadsheet.
@@ -51,25 +54,25 @@ var BatchUpdateValuesRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: ValueRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: valuerange_1.ValueRange }),
         __metadata("design:type", Array)
     ], BatchUpdateValuesRequest.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeValuesInResponse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeValuesInResponse" }),
         __metadata("design:type", Boolean)
     ], BatchUpdateValuesRequest.prototype, "includeValuesInResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responseDateTimeRenderOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responseDateTimeRenderOption" }),
         __metadata("design:type", String)
     ], BatchUpdateValuesRequest.prototype, "responseDateTimeRenderOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responseValueRenderOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responseValueRenderOption" }),
         __metadata("design:type", String)
     ], BatchUpdateValuesRequest.prototype, "responseValueRenderOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueInputOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueInputOption" }),
         __metadata("design:type", String)
     ], BatchUpdateValuesRequest.prototype, "valueInputOption", void 0);
     return BatchUpdateValuesRequest;
-}(SpeakeasyBase));
-export { BatchUpdateValuesRequest };
+}(utils_1.SpeakeasyBase));
+exports.BatchUpdateValuesRequest = BatchUpdateValuesRequest;

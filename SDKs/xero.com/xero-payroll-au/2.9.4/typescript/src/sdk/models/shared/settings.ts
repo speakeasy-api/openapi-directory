@@ -9,7 +9,7 @@ import { Account } from "./account";
 **/
 export class SettingsTrackingCategoriesEmployeeGroups extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=TrackingCategoryID" })
-  trackingCategoryId?: string;
+  trackingCategoryID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=TrackingCategoryName" })
   trackingCategoryName?: string;
@@ -22,7 +22,7 @@ export class SettingsTrackingCategoriesEmployeeGroups extends SpeakeasyBase {
 **/
 export class SettingsTrackingCategoriesTimesheetCategories extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=TrackingCategoryID" })
-  trackingCategoryId?: string;
+  trackingCategoryID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=TrackingCategoryName" })
   trackingCategoryName?: string;

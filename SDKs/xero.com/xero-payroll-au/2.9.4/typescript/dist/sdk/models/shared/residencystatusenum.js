@@ -1,6 +1,9 @@
-export var ResidencyStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResidencyStatusEnum = void 0;
+var ResidencyStatusEnum;
 (function (ResidencyStatusEnum) {
     ResidencyStatusEnum["Australianresident"] = "AUSTRALIANRESIDENT";
     ResidencyStatusEnum["Foreignresident"] = "FOREIGNRESIDENT";
     ResidencyStatusEnum["Workingholidaymaker"] = "WORKINGHOLIDAYMAKER";
-})(ResidencyStatusEnum || (ResidencyStatusEnum = {}));
+})(ResidencyStatusEnum = exports.ResidencyStatusEnum || (exports.ResidencyStatusEnum = {}));

@@ -22,7 +22,7 @@ export declare class RegisterJobDefinitionRequestBodyContainerProperties extends
     jobRoleArn?: string;
     linuxParameters?: shared.LinuxParameters;
     logConfiguration?: shared.LogConfiguration;
-    memory?: number;
+    memory?: Record<string, any>;
     mountPoints?: shared.MountPoint[];
     networkConfiguration?: shared.NetworkConfiguration;
     privileged?: boolean;
@@ -31,7 +31,7 @@ export declare class RegisterJobDefinitionRequestBodyContainerProperties extends
     secrets?: shared.Secret[];
     ulimits?: shared.Ulimit[];
     user?: string;
-    vcpus?: number;
+    vcpus?: Record<string, any>;
     volumes?: shared.Volume[];
 }
 /**
@@ -63,11 +63,11 @@ export declare class RegisterJobDefinitionRequestBody extends SpeakeasyBase {
     containerProperties?: RegisterJobDefinitionRequestBodyContainerProperties;
     jobDefinitionName: string;
     nodeProperties?: RegisterJobDefinitionRequestBodyNodeProperties;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
     platformCapabilities?: shared.PlatformCapabilityEnum[];
     propagateTags?: boolean;
     retryStrategy?: RegisterJobDefinitionRequestBodyRetryStrategy;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     timeout?: RegisterJobDefinitionRequestBodyTimeout;
     type: RegisterJobDefinitionRequestBodyTypeEnum;
 }

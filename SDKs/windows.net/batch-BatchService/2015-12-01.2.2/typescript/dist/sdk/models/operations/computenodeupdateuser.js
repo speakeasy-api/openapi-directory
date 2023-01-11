@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComputeNodeUpdateUserResponse = exports.ComputeNodeUpdateUserRequest = exports.ComputeNodeUpdateUserHeaders = exports.ComputeNodeUpdateUserQueryParams = exports.ComputeNodeUpdateUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ComputeNodeUpdateUserPathParams = /** @class */ (function (_super) {
     __extends(ComputeNodeUpdateUserPathParams, _super);
     function ComputeNodeUpdateUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=nodeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=nodeId" }),
         __metadata("design:type", String)
     ], ComputeNodeUpdateUserPathParams.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=poolId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=poolId" }),
         __metadata("design:type", String)
     ], ComputeNodeUpdateUserPathParams.prototype, "poolId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userName" }),
         __metadata("design:type", String)
     ], ComputeNodeUpdateUserPathParams.prototype, "userName", void 0);
     return ComputeNodeUpdateUserPathParams;
-}(SpeakeasyBase));
-export { ComputeNodeUpdateUserPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeUpdateUserPathParams = ComputeNodeUpdateUserPathParams;
 var ComputeNodeUpdateUserQueryParams = /** @class */ (function (_super) {
     __extends(ComputeNodeUpdateUserQueryParams, _super);
     function ComputeNodeUpdateUserQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], ComputeNodeUpdateUserQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], ComputeNodeUpdateUserQueryParams.prototype, "timeout", void 0);
     return ComputeNodeUpdateUserQueryParams;
-}(SpeakeasyBase));
-export { ComputeNodeUpdateUserQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeUpdateUserQueryParams = ComputeNodeUpdateUserQueryParams;
 var ComputeNodeUpdateUserHeaders = /** @class */ (function (_super) {
     __extends(ComputeNodeUpdateUserHeaders, _super);
     function ComputeNodeUpdateUserHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], ComputeNodeUpdateUserHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], ComputeNodeUpdateUserHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], ComputeNodeUpdateUserHeaders.prototype, "returnClientRequestId", void 0);
     return ComputeNodeUpdateUserHeaders;
-}(SpeakeasyBase));
-export { ComputeNodeUpdateUserHeaders };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeUpdateUserHeaders = ComputeNodeUpdateUserHeaders;
 var ComputeNodeUpdateUserRequest = /** @class */ (function (_super) {
     __extends(ComputeNodeUpdateUserRequest, _super);
     function ComputeNodeUpdateUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ComputeNodeUpdateUserPathParams)
     ], ComputeNodeUpdateUserRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ComputeNodeUpdateUserQueryParams)
     ], ComputeNodeUpdateUserRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ComputeNodeUpdateUserHeaders)
     ], ComputeNodeUpdateUserRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], ComputeNodeUpdateUserRequest.prototype, "request", void 0);
     return ComputeNodeUpdateUserRequest;
-}(SpeakeasyBase));
-export { ComputeNodeUpdateUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeUpdateUserRequest = ComputeNodeUpdateUserRequest;
 var ComputeNodeUpdateUserResponse = /** @class */ (function (_super) {
     __extends(ComputeNodeUpdateUserResponse, _super);
     function ComputeNodeUpdateUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], ComputeNodeUpdateUserResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ComputeNodeUpdateUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ComputeNodeUpdateUserResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ComputeNodeUpdateUserResponse.prototype, "statusCode", void 0);
     return ComputeNodeUpdateUserResponse;
-}(SpeakeasyBase));
-export { ComputeNodeUpdateUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeUpdateUserResponse = ComputeNodeUpdateUserResponse;

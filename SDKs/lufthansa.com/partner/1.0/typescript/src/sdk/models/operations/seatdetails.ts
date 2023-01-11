@@ -50,7 +50,7 @@ export class SeatDetailsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  seatDetails200ApplicationJsonString?: string;
+  seatDetails200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

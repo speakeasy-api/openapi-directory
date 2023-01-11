@@ -14,7 +14,7 @@ export class V3StopDetails extends SpeakeasyBase {
   routeType?: number;
 
   @SpeakeasyMetadata({ data: "json, name=routes" })
-  routes?: Map<string, any>[];
+  routes?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=station_description" })
   stationDescription?: string;

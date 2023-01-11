@@ -27,5 +27,5 @@ export declare class GetSettingRequest extends SpeakeasyBase {
 export declare class GetSettingResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSetting200ApplicationJsonObject?: GetSetting200ApplicationJson;
+    getSetting200ApplicationJSONObject?: GetSetting200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContextObject } from "./contextobject";
-import { SimplifiedTrackObject } from "./simplifiedtrackobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayHistoryObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var contextobject_1 = require("./contextobject");
+var simplifiedtrackobject_1 = require("./simplifiedtrackobject");
 // PlayHistoryObject
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-playhistoryobject - Find more info on the official Spotify Web API Reference
@@ -35,17 +38,17 @@ var PlayHistoryObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=context" }),
-        __metadata("design:type", ContextObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=context" }),
+        __metadata("design:type", contextobject_1.ContextObject)
     ], PlayHistoryObject.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=played_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=played_at" }),
         __metadata("design:type", Date)
     ], PlayHistoryObject.prototype, "playedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=track" }),
-        __metadata("design:type", SimplifiedTrackObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=track" }),
+        __metadata("design:type", simplifiedtrackobject_1.SimplifiedTrackObject)
     ], PlayHistoryObject.prototype, "track", void 0);
     return PlayHistoryObject;
-}(SpeakeasyBase));
-export { PlayHistoryObject };
+}(utils_1.SpeakeasyBase));
+exports.PlayHistoryObject = PlayHistoryObject;

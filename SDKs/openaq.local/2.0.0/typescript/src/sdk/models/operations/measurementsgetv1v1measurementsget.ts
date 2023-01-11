@@ -53,7 +53,7 @@ export class MeasurementsGetV1V1MeasurementsGetQueryParams extends SpeakeasyBase
   offset?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order_by" })
-  orderBy?: shared.MeasOrderEnum;
+  orderBy?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -74,7 +74,7 @@ export class MeasurementsGetV1V1MeasurementsGetQueryParams extends SpeakeasyBase
   sensorType?: shared.SensorTypesEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: shared.SortEnum;
+  sort?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=unit" })
   unit?: string[];
@@ -104,5 +104,5 @@ export class MeasurementsGetV1V1MeasurementsGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  measurementsGetV1V1MeasurementsGet200ApplicationJsonAny?: any;
+  measurementsGetV1V1MeasurementsGet200ApplicationJSONAny?: any;
 }

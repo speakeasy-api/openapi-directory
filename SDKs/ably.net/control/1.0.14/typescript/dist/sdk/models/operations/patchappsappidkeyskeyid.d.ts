@@ -15,6 +15,6 @@ export declare class PatchAppsAppIdKeysKeyIdRequest extends SpeakeasyBase {
 export declare class PatchAppsAppIdKeysKeyIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     keyResponse?: shared.KeyResponse;
 }

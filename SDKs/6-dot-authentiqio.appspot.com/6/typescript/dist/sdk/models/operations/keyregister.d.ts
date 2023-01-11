@@ -11,5 +11,5 @@ export declare class KeyRegisterResponse extends SpeakeasyBase {
     contentType: string;
     error?: any;
     statusCode: number;
-    keyRegister201ApplicationJsonObject?: KeyRegister201ApplicationJson;
+    keyRegister201ApplicationJSONObject?: KeyRegister201ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GooglePlayDeveloperReportingV1alpha1ErrorIssueTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePlayDeveloperReportingV1alpha1ErrorIssue = exports.GooglePlayDeveloperReportingV1alpha1ErrorIssueTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GooglePlayDeveloperReportingV1alpha1ErrorIssueTypeEnum;
 (function (GooglePlayDeveloperReportingV1alpha1ErrorIssueTypeEnum) {
     GooglePlayDeveloperReportingV1alpha1ErrorIssueTypeEnum["ErrorTypeUnspecified"] = "ERROR_TYPE_UNSPECIFIED";
     GooglePlayDeveloperReportingV1alpha1ErrorIssueTypeEnum["ApplicationNotResponding"] = "APPLICATION_NOT_RESPONDING";
     GooglePlayDeveloperReportingV1alpha1ErrorIssueTypeEnum["Crash"] = "CRASH";
-})(GooglePlayDeveloperReportingV1alpha1ErrorIssueTypeEnum || (GooglePlayDeveloperReportingV1alpha1ErrorIssueTypeEnum = {}));
+})(GooglePlayDeveloperReportingV1alpha1ErrorIssueTypeEnum = exports.GooglePlayDeveloperReportingV1alpha1ErrorIssueTypeEnum || (exports.GooglePlayDeveloperReportingV1alpha1ErrorIssueTypeEnum = {}));
 // GooglePlayDeveloperReportingV1alpha1ErrorIssue
 /**
  * A group of related ErrorReports received for an app. Similar error reports are grouped together into issues with a likely identical root cause. **Please note:** this resource is currently in Alpha. There could be changes to the issue grouping that would result in similar but more recent error reports being assigned to different issues. This could also cause some issues disappearing entirely and being replaced by new ones. **Required permissions**: to access this resource, the calling user needs the _View app information (read-only)_ permission for the app.
@@ -39,21 +42,21 @@ var GooglePlayDeveloperReportingV1alpha1ErrorIssue = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cause" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cause" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1alpha1ErrorIssue.prototype, "cause", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1alpha1ErrorIssue.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1alpha1ErrorIssue.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1alpha1ErrorIssue.prototype, "type", void 0);
     return GooglePlayDeveloperReportingV1alpha1ErrorIssue;
-}(SpeakeasyBase));
-export { GooglePlayDeveloperReportingV1alpha1ErrorIssue };
+}(utils_1.SpeakeasyBase));
+exports.GooglePlayDeveloperReportingV1alpha1ErrorIssue = GooglePlayDeveloperReportingV1alpha1ErrorIssue;

@@ -35,10 +35,10 @@ export class CompanyDeepsearchLeiRequest extends SpeakeasyBase {
 
 export class CompanyDeepsearchLeiResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  companyDeepsearchLei200ApplicationJsonAny?: any;
+  companyDeepsearchLEI200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  companyDeepsearchLeiDefaultApplicationJsonAny?: any;
+  companyDeepsearchLEIDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   contentType: string;

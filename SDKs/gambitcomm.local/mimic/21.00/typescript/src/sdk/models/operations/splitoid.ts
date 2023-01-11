@@ -25,5 +25,5 @@ export class SplitOidResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  splitOid200ApplicationJsonStrings?: string[];
+  splitOid200ApplicationJSONStrings?: string[];
 }

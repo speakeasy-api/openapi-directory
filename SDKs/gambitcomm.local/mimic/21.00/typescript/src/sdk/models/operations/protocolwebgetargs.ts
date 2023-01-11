@@ -22,5 +22,5 @@ export class ProtocolWebGetArgsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolWebGetArgs200ApplicationJsonObject?: Map<string, any>;
+  protocolWebGetArgs200ApplicationJSONObject?: Record<string, any>;
 }

@@ -8,6 +8,6 @@ export declare class PostUsersUserEmailInviteEmailRequest extends SpeakeasyBase 
 }
 export declare class PostUsersUserEmailInviteEmailResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

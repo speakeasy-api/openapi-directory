@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeStopwordOptionsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeStopwordOptionsResponse = exports.GetDescribeStopwordOptionsRequest = exports.GetDescribeStopwordOptionsHeaders = exports.GetDescribeStopwordOptionsQueryParams = exports.GetDescribeStopwordOptionsVersionEnum = exports.GetDescribeStopwordOptionsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeStopwordOptionsActionEnum;
 (function (GetDescribeStopwordOptionsActionEnum) {
     GetDescribeStopwordOptionsActionEnum["DescribeStopwordOptions"] = "DescribeStopwordOptions";
-})(GetDescribeStopwordOptionsActionEnum || (GetDescribeStopwordOptionsActionEnum = {}));
-export var GetDescribeStopwordOptionsVersionEnum;
+})(GetDescribeStopwordOptionsActionEnum = exports.GetDescribeStopwordOptionsActionEnum || (exports.GetDescribeStopwordOptionsActionEnum = {}));
+var GetDescribeStopwordOptionsVersionEnum;
 (function (GetDescribeStopwordOptionsVersionEnum) {
     GetDescribeStopwordOptionsVersionEnum["TwoThousandAndEleven0201"] = "2011-02-01";
-})(GetDescribeStopwordOptionsVersionEnum || (GetDescribeStopwordOptionsVersionEnum = {}));
+})(GetDescribeStopwordOptionsVersionEnum = exports.GetDescribeStopwordOptionsVersionEnum || (exports.GetDescribeStopwordOptionsVersionEnum = {}));
 var GetDescribeStopwordOptionsQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeStopwordOptionsQueryParams, _super);
     function GetDescribeStopwordOptionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeStopwordOptionsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DomainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DomainName" }),
         __metadata("design:type", String)
     ], GetDescribeStopwordOptionsQueryParams.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeStopwordOptionsQueryParams.prototype, "version", void 0);
     return GetDescribeStopwordOptionsQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeStopwordOptionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeStopwordOptionsQueryParams = GetDescribeStopwordOptionsQueryParams;
 var GetDescribeStopwordOptionsHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeStopwordOptionsHeaders, _super);
     function GetDescribeStopwordOptionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeStopwordOptionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeStopwordOptionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeStopwordOptionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeStopwordOptionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeStopwordOptionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeStopwordOptionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeStopwordOptionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeStopwordOptionsHeaders;
-}(SpeakeasyBase));
-export { GetDescribeStopwordOptionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeStopwordOptionsHeaders = GetDescribeStopwordOptionsHeaders;
 var GetDescribeStopwordOptionsRequest = /** @class */ (function (_super) {
     __extends(GetDescribeStopwordOptionsRequest, _super);
     function GetDescribeStopwordOptionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeStopwordOptionsQueryParams)
     ], GetDescribeStopwordOptionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeStopwordOptionsHeaders)
     ], GetDescribeStopwordOptionsRequest.prototype, "headers", void 0);
     return GetDescribeStopwordOptionsRequest;
-}(SpeakeasyBase));
-export { GetDescribeStopwordOptionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeStopwordOptionsRequest = GetDescribeStopwordOptionsRequest;
 var GetDescribeStopwordOptionsResponse = /** @class */ (function (_super) {
     __extends(GetDescribeStopwordOptionsResponse, _super);
     function GetDescribeStopwordOptionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeStopwordOptionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeStopwordOptionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeStopwordOptionsResponse.prototype, "statusCode", void 0);
     return GetDescribeStopwordOptionsResponse;
-}(SpeakeasyBase));
-export { GetDescribeStopwordOptionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeStopwordOptionsResponse = GetDescribeStopwordOptionsResponse;

@@ -392,5 +392,5 @@ export class UpdateNetworkFirmwareUpgradesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkFirmwareUpgrades200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkFirmwareUpgrades200ApplicationJSONObject?: Record<string, any>;
 }

@@ -25,9 +25,8 @@ export declare class PutProxyRequest extends SpeakeasyBase {
 }
 export declare class PutProxyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
     statusCode: number;
-    putProxy200ApplicationJsonAny?: any;
-    putProxy401ApplicationJsonObject?: PutProxy401ApplicationJson;
-    putProxyDefaultApplicationJsonAny?: any;
+    putProxy200ApplicationJSONAny?: any;
+    putProxy401ApplicationJSONObject?: PutProxy401ApplicationJson;
+    putProxyDefaultApplicationJSONAny?: any;
 }

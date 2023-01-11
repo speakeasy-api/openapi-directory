@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PreSignInfo = exports.PreSignInfoFields = void 0;
+var utils_1 = require("../../../internal/utils");
 var PreSignInfoFields = /** @class */ (function (_super) {
     __extends(PreSignInfoFields, _super);
     function PreSignInfoFields() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PreSignInfoFields.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], PreSignInfoFields.prototype, "value", void 0);
     return PreSignInfoFields;
-}(SpeakeasyBase));
-export { PreSignInfoFields };
+}(utils_1.SpeakeasyBase));
+exports.PreSignInfoFields = PreSignInfoFields;
 var PreSignInfo = /** @class */ (function (_super) {
     __extends(PreSignInfo, _super);
     function PreSignInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fetchUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fetchUrl" }),
         __metadata("design:type", String)
     ], PreSignInfo.prototype, "fetchUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields", elemType: PreSignInfoFields }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields", elemType: PreSignInfoFields }),
         __metadata("design:type", Array)
     ], PreSignInfo.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=putUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=putUrl" }),
         __metadata("design:type", String)
     ], PreSignInfo.prototype, "putUrl", void 0);
     return PreSignInfo;
-}(SpeakeasyBase));
-export { PreSignInfo };
+}(utils_1.SpeakeasyBase));
+exports.PreSignInfo = PreSignInfo;

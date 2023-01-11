@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostModifyTrafficMirrorFilterNetworkServicesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostModifyTrafficMirrorFilterNetworkServicesResponse = exports.PostModifyTrafficMirrorFilterNetworkServicesRequest = exports.PostModifyTrafficMirrorFilterNetworkServicesHeaders = exports.PostModifyTrafficMirrorFilterNetworkServicesQueryParams = exports.PostModifyTrafficMirrorFilterNetworkServicesVersionEnum = exports.PostModifyTrafficMirrorFilterNetworkServicesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostModifyTrafficMirrorFilterNetworkServicesActionEnum;
 (function (PostModifyTrafficMirrorFilterNetworkServicesActionEnum) {
     PostModifyTrafficMirrorFilterNetworkServicesActionEnum["ModifyTrafficMirrorFilterNetworkServices"] = "ModifyTrafficMirrorFilterNetworkServices";
-})(PostModifyTrafficMirrorFilterNetworkServicesActionEnum || (PostModifyTrafficMirrorFilterNetworkServicesActionEnum = {}));
-export var PostModifyTrafficMirrorFilterNetworkServicesVersionEnum;
+})(PostModifyTrafficMirrorFilterNetworkServicesActionEnum = exports.PostModifyTrafficMirrorFilterNetworkServicesActionEnum || (exports.PostModifyTrafficMirrorFilterNetworkServicesActionEnum = {}));
+var PostModifyTrafficMirrorFilterNetworkServicesVersionEnum;
 (function (PostModifyTrafficMirrorFilterNetworkServicesVersionEnum) {
     PostModifyTrafficMirrorFilterNetworkServicesVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostModifyTrafficMirrorFilterNetworkServicesVersionEnum || (PostModifyTrafficMirrorFilterNetworkServicesVersionEnum = {}));
+})(PostModifyTrafficMirrorFilterNetworkServicesVersionEnum = exports.PostModifyTrafficMirrorFilterNetworkServicesVersionEnum || (exports.PostModifyTrafficMirrorFilterNetworkServicesVersionEnum = {}));
 var PostModifyTrafficMirrorFilterNetworkServicesQueryParams = /** @class */ (function (_super) {
     __extends(PostModifyTrafficMirrorFilterNetworkServicesQueryParams, _super);
     function PostModifyTrafficMirrorFilterNetworkServicesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostModifyTrafficMirrorFilterNetworkServicesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostModifyTrafficMirrorFilterNetworkServicesQueryParams.prototype, "version", void 0);
     return PostModifyTrafficMirrorFilterNetworkServicesQueryParams;
-}(SpeakeasyBase));
-export { PostModifyTrafficMirrorFilterNetworkServicesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyTrafficMirrorFilterNetworkServicesQueryParams = PostModifyTrafficMirrorFilterNetworkServicesQueryParams;
 var PostModifyTrafficMirrorFilterNetworkServicesHeaders = /** @class */ (function (_super) {
     __extends(PostModifyTrafficMirrorFilterNetworkServicesHeaders, _super);
     function PostModifyTrafficMirrorFilterNetworkServicesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostModifyTrafficMirrorFilterNetworkServicesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostModifyTrafficMirrorFilterNetworkServicesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostModifyTrafficMirrorFilterNetworkServicesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostModifyTrafficMirrorFilterNetworkServicesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostModifyTrafficMirrorFilterNetworkServicesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostModifyTrafficMirrorFilterNetworkServicesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostModifyTrafficMirrorFilterNetworkServicesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostModifyTrafficMirrorFilterNetworkServicesHeaders;
-}(SpeakeasyBase));
-export { PostModifyTrafficMirrorFilterNetworkServicesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyTrafficMirrorFilterNetworkServicesHeaders = PostModifyTrafficMirrorFilterNetworkServicesHeaders;
 var PostModifyTrafficMirrorFilterNetworkServicesRequest = /** @class */ (function (_super) {
     __extends(PostModifyTrafficMirrorFilterNetworkServicesRequest, _super);
     function PostModifyTrafficMirrorFilterNetworkServicesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyTrafficMirrorFilterNetworkServicesQueryParams)
     ], PostModifyTrafficMirrorFilterNetworkServicesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyTrafficMirrorFilterNetworkServicesHeaders)
     ], PostModifyTrafficMirrorFilterNetworkServicesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostModifyTrafficMirrorFilterNetworkServicesRequest.prototype, "request", void 0);
     return PostModifyTrafficMirrorFilterNetworkServicesRequest;
-}(SpeakeasyBase));
-export { PostModifyTrafficMirrorFilterNetworkServicesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyTrafficMirrorFilterNetworkServicesRequest = PostModifyTrafficMirrorFilterNetworkServicesRequest;
 var PostModifyTrafficMirrorFilterNetworkServicesResponse = /** @class */ (function (_super) {
     __extends(PostModifyTrafficMirrorFilterNetworkServicesResponse, _super);
     function PostModifyTrafficMirrorFilterNetworkServicesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostModifyTrafficMirrorFilterNetworkServicesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostModifyTrafficMirrorFilterNetworkServicesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostModifyTrafficMirrorFilterNetworkServicesResponse.prototype, "statusCode", void 0);
     return PostModifyTrafficMirrorFilterNetworkServicesResponse;
-}(SpeakeasyBase));
-export { PostModifyTrafficMirrorFilterNetworkServicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyTrafficMirrorFilterNetworkServicesResponse = PostModifyTrafficMirrorFilterNetworkServicesResponse;

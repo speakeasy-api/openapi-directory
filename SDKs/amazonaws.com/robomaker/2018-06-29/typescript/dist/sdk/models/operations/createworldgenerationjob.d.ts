@@ -18,10 +18,10 @@ export declare class CreateWorldGenerationJobRequestBodyWorldCount extends Speak
 }
 export declare class CreateWorldGenerationJobRequestBody extends SpeakeasyBase {
     clientRequestToken?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     template: string;
     worldCount: CreateWorldGenerationJobRequestBodyWorldCount;
-    worldTags?: Map<string, string>;
+    worldTags?: Record<string, string>;
 }
 export declare class CreateWorldGenerationJobRequest extends SpeakeasyBase {
     headers: CreateWorldGenerationJobHeaders;

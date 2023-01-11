@@ -26,7 +26,7 @@ export declare class GetSitesNearOutputFormatQueryParams extends SpeakeasyBase {
     maxDistance?: number;
     maxResults?: number;
     onlyCivic?: boolean;
-    outputSrs?: number;
+    outputSRS?: number;
     point: string;
     setBack?: number;
 }

@@ -37,7 +37,7 @@ export declare class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRe
     security: CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity;
 }
 export declare class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse extends SpeakeasyBase {
-    cargoGetRouteFromDateProductCodeByOriginAndDestinationGet200ApplicationJsonObject?: Map<string, any>;
+    cargoGetRouteFromDateProductCodeByOriginAndDestinationGet200ApplicationJSONObject?: Record<string, any>;
     contentType: string;
     statusCode: number;
 }

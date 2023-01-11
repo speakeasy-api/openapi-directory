@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,63 +14,88 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var GetHealthcheckResult200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetHealthcheckResultResponse = exports.GetHealthcheckResult200ApplicationJson = exports.GetHealthcheckResult200ApplicationJsonResultEnum = exports.GetHealthcheckResult200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var GetHealthcheckResult200ApplicationJsonActionEnum;
 (function (GetHealthcheckResult200ApplicationJsonActionEnum) {
     GetHealthcheckResult200ApplicationJsonActionEnum["GetHealthcheckResult"] = "getHealthcheckResult";
-})(GetHealthcheckResult200ApplicationJsonActionEnum || (GetHealthcheckResult200ApplicationJsonActionEnum = {}));
-export var GetHealthcheckResult200ApplicationJsonResultEnum;
+})(GetHealthcheckResult200ApplicationJsonActionEnum = exports.GetHealthcheckResult200ApplicationJsonActionEnum || (exports.GetHealthcheckResult200ApplicationJsonActionEnum = {}));
+var GetHealthcheckResult200ApplicationJsonResultEnum;
 (function (GetHealthcheckResult200ApplicationJsonResultEnum) {
     GetHealthcheckResult200ApplicationJsonResultEnum["Success"] = "success";
     GetHealthcheckResult200ApplicationJsonResultEnum["Error"] = "error";
-})(GetHealthcheckResult200ApplicationJsonResultEnum || (GetHealthcheckResult200ApplicationJsonResultEnum = {}));
+})(GetHealthcheckResult200ApplicationJsonResultEnum = exports.GetHealthcheckResult200ApplicationJsonResultEnum || (exports.GetHealthcheckResult200ApplicationJsonResultEnum = {}));
 var GetHealthcheckResult200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetHealthcheckResult200ApplicationJson, _super);
     function GetHealthcheckResult200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], GetHealthcheckResult200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: shared.Check }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: shared.Check }),
         __metadata("design:type", Array)
     ], GetHealthcheckResult200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], GetHealthcheckResult200ApplicationJson.prototype, "result", void 0);
     return GetHealthcheckResult200ApplicationJson;
-}(SpeakeasyBase));
-export { GetHealthcheckResult200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetHealthcheckResult200ApplicationJson = GetHealthcheckResult200ApplicationJson;
 var GetHealthcheckResultResponse = /** @class */ (function (_super) {
     __extends(GetHealthcheckResultResponse, _super);
     function GetHealthcheckResultResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetHealthcheckResultResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetHealthcheckResultResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetHealthcheckResult200ApplicationJson)
-    ], GetHealthcheckResultResponse.prototype, "getHealthcheckResult200ApplicationJsonObject", void 0);
+    ], GetHealthcheckResultResponse.prototype, "getHealthcheckResult200ApplicationJSONObject", void 0);
     return GetHealthcheckResultResponse;
-}(SpeakeasyBase));
-export { GetHealthcheckResultResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetHealthcheckResultResponse = GetHealthcheckResultResponse;

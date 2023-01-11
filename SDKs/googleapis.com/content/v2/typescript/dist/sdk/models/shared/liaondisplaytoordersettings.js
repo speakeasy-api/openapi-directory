@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiaOnDisplayToOrderSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 var LiaOnDisplayToOrderSettings = /** @class */ (function (_super) {
     __extends(LiaOnDisplayToOrderSettings, _super);
     function LiaOnDisplayToOrderSettings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingCostPolicyUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingCostPolicyUrl" }),
         __metadata("design:type", String)
     ], LiaOnDisplayToOrderSettings.prototype, "shippingCostPolicyUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], LiaOnDisplayToOrderSettings.prototype, "status", void 0);
     return LiaOnDisplayToOrderSettings;
-}(SpeakeasyBase));
-export { LiaOnDisplayToOrderSettings };
+}(utils_1.SpeakeasyBase));
+exports.LiaOnDisplayToOrderSettings = LiaOnDisplayToOrderSettings;

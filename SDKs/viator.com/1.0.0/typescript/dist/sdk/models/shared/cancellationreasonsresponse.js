@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CancellationReason } from "./cancellationreason";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CancellationReasonsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var cancellationreason_1 = require("./cancellationreason");
 var CancellationReasonsResponse = /** @class */ (function (_super) {
     __extends(CancellationReasonsResponse, _super);
     function CancellationReasonsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasons", elemType: CancellationReason }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasons", elemType: cancellationreason_1.CancellationReason }),
         __metadata("design:type", Array)
     ], CancellationReasonsResponse.prototype, "reasons", void 0);
     return CancellationReasonsResponse;
-}(SpeakeasyBase));
-export { CancellationReasonsResponse };
+}(utils_1.SpeakeasyBase));
+exports.CancellationReasonsResponse = CancellationReasonsResponse;

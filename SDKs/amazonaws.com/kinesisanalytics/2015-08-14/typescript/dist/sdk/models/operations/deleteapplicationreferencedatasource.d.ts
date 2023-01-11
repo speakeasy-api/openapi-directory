@@ -20,7 +20,7 @@ export declare class DeleteApplicationReferenceDataSourceRequest extends Speakea
 export declare class DeleteApplicationReferenceDataSourceResponse extends SpeakeasyBase {
     concurrentModificationException?: any;
     contentType: string;
-    deleteApplicationReferenceDataSourceResponse?: Map<string, any>;
+    deleteApplicationReferenceDataSourceResponse?: Record<string, any>;
     invalidArgumentException?: any;
     resourceInUseException?: any;
     resourceNotFoundException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StreamingImage } from "./streamingimage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListStreamingImagesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var streamingimage_1 = require("./streamingimage");
 var ListStreamingImagesResponse = /** @class */ (function (_super) {
     __extends(ListStreamingImagesResponse, _super);
     function ListStreamingImagesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListStreamingImagesResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streamingImages", elemType: StreamingImage }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streamingImages", elemType: streamingimage_1.StreamingImage }),
         __metadata("design:type", Array)
     ], ListStreamingImagesResponse.prototype, "streamingImages", void 0);
     return ListStreamingImagesResponse;
-}(SpeakeasyBase));
-export { ListStreamingImagesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListStreamingImagesResponse = ListStreamingImagesResponse;

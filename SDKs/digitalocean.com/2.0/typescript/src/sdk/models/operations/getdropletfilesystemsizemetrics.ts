@@ -1,30 +1,25 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class GetDropletFilesystemSizeMetricsQueryParams extends SpeakeasyBase {
-  @Metadata({ data: "queryParam, style=form;explode=true;name=end" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=end" })
   end: string;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=host_id" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=host_id" })
   hostId: string;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=start" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=start" })
   start: string;
 }
 
 
-export class GetDropletFilesystemSizeMetricsRequest extends SpeakeasyBase {
-  @Metadata()
-  queryParams: GetDropletFilesystemSizeMetricsQueryParams;
-}
-
-
 export class GetDropletFilesystemSizeMetrics200ApplicationJsonDataResult extends SpeakeasyBase {
-  @Metadata({ data: "json, name=metric" })
-  metric: Map<string, string>;
+  @SpeakeasyMetadata({ data: "json, name=metric" })
+  metric: Record<string, string>;
 
-  @Metadata({ data: "json, name=values" })
+  @SpeakeasyMetadata({ data: "json, name=values" })
   values: any[][];
 }
 
@@ -34,56 +29,62 @@ export enum GetDropletFilesystemSizeMetrics200ApplicationJsonDataResultTypeEnum 
 
 
 export class GetDropletFilesystemSizeMetrics200ApplicationJsonData extends SpeakeasyBase {
-  @Metadata({ data: "json, name=result", elemType: operations.GetDropletFilesystemSizeMetrics200ApplicationJsonDataResult })
+  @SpeakeasyMetadata({ data: "json, name=result", elemType: GetDropletFilesystemSizeMetrics200ApplicationJsonDataResult })
   result: GetDropletFilesystemSizeMetrics200ApplicationJsonDataResult[];
 
-  @Metadata({ data: "json, name=resultType" })
+  @SpeakeasyMetadata({ data: "json, name=resultType" })
   resultType: GetDropletFilesystemSizeMetrics200ApplicationJsonDataResultTypeEnum;
 }
 
 export enum GetDropletFilesystemSizeMetrics200ApplicationJsonStatusEnum {
-    Success = "success"
-,    Error = "error"
+    Success = "success",
+    Error = "error"
 }
 
 
 export class GetDropletFilesystemSizeMetrics200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=data" })
+  @SpeakeasyMetadata({ data: "json, name=data" })
   data: GetDropletFilesystemSizeMetrics200ApplicationJsonData;
 
-  @Metadata({ data: "json, name=status" })
+  @SpeakeasyMetadata({ data: "json, name=status" })
   status: GetDropletFilesystemSizeMetrics200ApplicationJsonStatusEnum;
 }
 
 
 export class GetDropletFilesystemSizeMetrics401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class GetDropletFilesystemSizeMetricsRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  queryParams: GetDropletFilesystemSizeMetricsQueryParams;
+}
+
+
 export class GetDropletFilesystemSizeMetricsResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  getDropletFilesystemSizeMetrics200ApplicationJsonObject?: GetDropletFilesystemSizeMetrics200ApplicationJson;
+  @SpeakeasyMetadata()
+  getDropletFilesystemSizeMetrics200ApplicationJSONObject?: GetDropletFilesystemSizeMetrics200ApplicationJson;
 
-  @Metadata()
-  getDropletFilesystemSizeMetrics401ApplicationJsonObject?: GetDropletFilesystemSizeMetrics401ApplicationJson;
+  @SpeakeasyMetadata()
+  getDropletFilesystemSizeMetrics401ApplicationJSONObject?: GetDropletFilesystemSizeMetrics401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

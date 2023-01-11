@@ -20,7 +20,7 @@ export declare class IssuesCreateMilestoneRequest extends SpeakeasyBase {
 }
 export declare class IssuesCreateMilestoneResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     milestone?: shared.Milestone;

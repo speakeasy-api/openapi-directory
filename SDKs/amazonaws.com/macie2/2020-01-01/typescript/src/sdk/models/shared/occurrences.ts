@@ -2,7 +2,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { Cell } from "./cell";
 import { Range } from "./range";
 import { Page } from "./page";
-import { Record } from "./record";
+import { RecordT } from "./record";
 
 
 
@@ -23,6 +23,6 @@ export class Occurrences extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=pages", elemType: Page })
   pages?: Page[];
 
-  @SpeakeasyMetadata({ data: "json, name=records", elemType: Record })
-  records?: Record[];
+  @SpeakeasyMetadata({ data: "json, name=records", elemType: RecordT })
+  records?: RecordT[];
 }

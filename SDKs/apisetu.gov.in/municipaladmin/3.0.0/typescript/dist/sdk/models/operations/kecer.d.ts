@@ -105,11 +105,11 @@ export declare class KecerRequest extends SpeakeasyBase {
 export declare class KecerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    kecer400ApplicationJsonObject?: Kecer400ApplicationJson;
-    kecer401ApplicationJsonObject?: Kecer401ApplicationJson;
-    kecer404ApplicationJsonObject?: Kecer404ApplicationJson;
-    kecer500ApplicationJsonObject?: Kecer500ApplicationJson;
-    kecer502ApplicationJsonObject?: Kecer502ApplicationJson;
-    kecer503ApplicationJsonObject?: Kecer503ApplicationJson;
-    kecer504ApplicationJsonObject?: Kecer504ApplicationJson;
+    kecer400ApplicationJSONObject?: Kecer400ApplicationJson;
+    kecer401ApplicationJSONObject?: Kecer401ApplicationJson;
+    kecer404ApplicationJSONObject?: Kecer404ApplicationJson;
+    kecer500ApplicationJSONObject?: Kecer500ApplicationJson;
+    kecer502ApplicationJSONObject?: Kecer502ApplicationJson;
+    kecer503ApplicationJSONObject?: Kecer503ApplicationJson;
+    kecer504ApplicationJSONObject?: Kecer504ApplicationJson;
 }

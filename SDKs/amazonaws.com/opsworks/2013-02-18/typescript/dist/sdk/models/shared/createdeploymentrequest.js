@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentCommand } from "./deploymentcommand";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDeploymentRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var deploymentcommand_1 = require("./deploymentcommand");
 var CreateDeploymentRequest = /** @class */ (function (_super) {
     __extends(CreateDeploymentRequest, _super);
     function CreateDeploymentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AppId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AppId" }),
         __metadata("design:type", String)
     ], CreateDeploymentRequest.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Command" }),
-        __metadata("design:type", DeploymentCommand)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Command" }),
+        __metadata("design:type", deploymentcommand_1.DeploymentCommand)
     ], CreateDeploymentRequest.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Comment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Comment" }),
         __metadata("design:type", String)
     ], CreateDeploymentRequest.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomJson" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomJson" }),
         __metadata("design:type", String)
     ], CreateDeploymentRequest.prototype, "customJson", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstanceIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstanceIds" }),
         __metadata("design:type", Array)
     ], CreateDeploymentRequest.prototype, "instanceIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LayerIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LayerIds" }),
         __metadata("design:type", Array)
     ], CreateDeploymentRequest.prototype, "layerIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StackId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StackId" }),
         __metadata("design:type", String)
     ], CreateDeploymentRequest.prototype, "stackId", void 0);
     return CreateDeploymentRequest;
-}(SpeakeasyBase));
-export { CreateDeploymentRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeploymentRequest = CreateDeploymentRequest;

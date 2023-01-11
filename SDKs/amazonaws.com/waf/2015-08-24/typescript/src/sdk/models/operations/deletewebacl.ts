@@ -48,7 +48,7 @@ export class DeleteWebAclResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteWebAclResponse?: shared.DeleteWebAclResponse;
+  deleteWebACLResponse?: shared.DeleteWebAclResponse;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -36,5 +36,5 @@ export declare class ExtrasGraphsListRequest extends SpeakeasyBase {
 export declare class ExtrasGraphsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    extrasGraphsList200ApplicationJsonObject?: ExtrasGraphsList200ApplicationJson;
+    extrasGraphsList200ApplicationJSONObject?: ExtrasGraphsList200ApplicationJson;
 }

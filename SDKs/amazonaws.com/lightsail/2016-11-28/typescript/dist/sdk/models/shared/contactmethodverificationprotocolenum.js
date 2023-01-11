@@ -1,4 +1,7 @@
-export var ContactMethodVerificationProtocolEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContactMethodVerificationProtocolEnum = void 0;
+var ContactMethodVerificationProtocolEnum;
 (function (ContactMethodVerificationProtocolEnum) {
     ContactMethodVerificationProtocolEnum["Email"] = "Email";
-})(ContactMethodVerificationProtocolEnum || (ContactMethodVerificationProtocolEnum = {}));
+})(ContactMethodVerificationProtocolEnum = exports.ContactMethodVerificationProtocolEnum || (exports.ContactMethodVerificationProtocolEnum = {}));

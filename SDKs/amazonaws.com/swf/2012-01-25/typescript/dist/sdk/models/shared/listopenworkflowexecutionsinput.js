@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkflowExecutionFilter } from "./workflowexecutionfilter";
-import { ExecutionTimeFilter } from "./executiontimefilter";
-import { TagFilter } from "./tagfilter";
-import { WorkflowTypeFilter } from "./workflowtypefilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListOpenWorkflowExecutionsInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var workflowexecutionfilter_1 = require("./workflowexecutionfilter");
+var executiontimefilter_1 = require("./executiontimefilter");
+var tagfilter_1 = require("./tagfilter");
+var workflowtypefilter_1 = require("./workflowtypefilter");
 var ListOpenWorkflowExecutionsInput = /** @class */ (function (_super) {
     __extends(ListOpenWorkflowExecutionsInput, _super);
     function ListOpenWorkflowExecutionsInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], ListOpenWorkflowExecutionsInput.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionFilter" }),
-        __metadata("design:type", WorkflowExecutionFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionFilter" }),
+        __metadata("design:type", workflowexecutionfilter_1.WorkflowExecutionFilter)
     ], ListOpenWorkflowExecutionsInput.prototype, "executionFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumPageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumPageSize" }),
         __metadata("design:type", Number)
     ], ListOpenWorkflowExecutionsInput.prototype, "maximumPageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListOpenWorkflowExecutionsInput.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reverseOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reverseOrder" }),
         __metadata("design:type", Boolean)
     ], ListOpenWorkflowExecutionsInput.prototype, "reverseOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTimeFilter" }),
-        __metadata("design:type", ExecutionTimeFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTimeFilter" }),
+        __metadata("design:type", executiontimefilter_1.ExecutionTimeFilter)
     ], ListOpenWorkflowExecutionsInput.prototype, "startTimeFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagFilter" }),
-        __metadata("design:type", TagFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagFilter" }),
+        __metadata("design:type", tagfilter_1.TagFilter)
     ], ListOpenWorkflowExecutionsInput.prototype, "tagFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=typeFilter" }),
-        __metadata("design:type", WorkflowTypeFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=typeFilter" }),
+        __metadata("design:type", workflowtypefilter_1.WorkflowTypeFilter)
     ], ListOpenWorkflowExecutionsInput.prototype, "typeFilter", void 0);
     return ListOpenWorkflowExecutionsInput;
-}(SpeakeasyBase));
-export { ListOpenWorkflowExecutionsInput };
+}(utils_1.SpeakeasyBase));
+exports.ListOpenWorkflowExecutionsInput = ListOpenWorkflowExecutionsInput;

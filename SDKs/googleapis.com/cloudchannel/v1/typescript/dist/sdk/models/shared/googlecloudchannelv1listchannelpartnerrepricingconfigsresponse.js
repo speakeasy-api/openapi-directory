@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1ChannelPartnerRepricingConfig } from "./googlecloudchannelv1channelpartnerrepricingconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1channelpartnerrepricingconfig_1 = require("./googlecloudchannelv1channelpartnerrepricingconfig");
 // GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse
 /**
  * Response message for CloudChannelService.ListChannelPartnerRepricingConfigs.
@@ -34,13 +37,13 @@ var GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse = /** @class 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelPartnerRepricingConfigs", elemType: GoogleCloudChannelV1ChannelPartnerRepricingConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelPartnerRepricingConfigs", elemType: googlecloudchannelv1channelpartnerrepricingconfig_1.GoogleCloudChannelV1ChannelPartnerRepricingConfig }),
         __metadata("design:type", Array)
     ], GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse.prototype, "channelPartnerRepricingConfigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse.prototype, "nextPageToken", void 0);
     return GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse = GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetListTagsForResourceActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetListTagsForResourceResponse = exports.GetListTagsForResourceRequest = exports.GetListTagsForResourceHeaders = exports.GetListTagsForResourceQueryParams = exports.GetListTagsForResourceVersionEnum = exports.GetListTagsForResourceActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetListTagsForResourceActionEnum;
 (function (GetListTagsForResourceActionEnum) {
     GetListTagsForResourceActionEnum["ListTagsForResource"] = "ListTagsForResource";
-})(GetListTagsForResourceActionEnum || (GetListTagsForResourceActionEnum = {}));
-export var GetListTagsForResourceVersionEnum;
+})(GetListTagsForResourceActionEnum = exports.GetListTagsForResourceActionEnum || (exports.GetListTagsForResourceActionEnum = {}));
+var GetListTagsForResourceVersionEnum;
 (function (GetListTagsForResourceVersionEnum) {
     GetListTagsForResourceVersionEnum["TwoThousandAndTen0801"] = "2010-08-01";
-})(GetListTagsForResourceVersionEnum || (GetListTagsForResourceVersionEnum = {}));
+})(GetListTagsForResourceVersionEnum = exports.GetListTagsForResourceVersionEnum || (exports.GetListTagsForResourceVersionEnum = {}));
 var GetListTagsForResourceQueryParams = /** @class */ (function (_super) {
     __extends(GetListTagsForResourceQueryParams, _super);
     function GetListTagsForResourceQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetListTagsForResourceQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ResourceARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ResourceARN" }),
         __metadata("design:type", String)
-    ], GetListTagsForResourceQueryParams.prototype, "resourceArn", void 0);
+    ], GetListTagsForResourceQueryParams.prototype, "resourceARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetListTagsForResourceQueryParams.prototype, "version", void 0);
     return GetListTagsForResourceQueryParams;
-}(SpeakeasyBase));
-export { GetListTagsForResourceQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetListTagsForResourceQueryParams = GetListTagsForResourceQueryParams;
 var GetListTagsForResourceHeaders = /** @class */ (function (_super) {
     __extends(GetListTagsForResourceHeaders, _super);
     function GetListTagsForResourceHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetListTagsForResourceHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetListTagsForResourceHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetListTagsForResourceHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetListTagsForResourceHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetListTagsForResourceHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetListTagsForResourceHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetListTagsForResourceHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetListTagsForResourceHeaders;
-}(SpeakeasyBase));
-export { GetListTagsForResourceHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetListTagsForResourceHeaders = GetListTagsForResourceHeaders;
 var GetListTagsForResourceRequest = /** @class */ (function (_super) {
     __extends(GetListTagsForResourceRequest, _super);
     function GetListTagsForResourceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListTagsForResourceQueryParams)
     ], GetListTagsForResourceRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListTagsForResourceHeaders)
     ], GetListTagsForResourceRequest.prototype, "headers", void 0);
     return GetListTagsForResourceRequest;
-}(SpeakeasyBase));
-export { GetListTagsForResourceRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetListTagsForResourceRequest = GetListTagsForResourceRequest;
 var GetListTagsForResourceResponse = /** @class */ (function (_super) {
     __extends(GetListTagsForResourceResponse, _super);
     function GetListTagsForResourceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetListTagsForResourceResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetListTagsForResourceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetListTagsForResourceResponse.prototype, "statusCode", void 0);
     return GetListTagsForResourceResponse;
-}(SpeakeasyBase));
-export { GetListTagsForResourceResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetListTagsForResourceResponse = GetListTagsForResourceResponse;

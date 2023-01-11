@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1DialogflowSourceInput } from "./googlecloudcontactcenterinsightsv1dialogflowsource";
-import { GoogleCloudContactcenterinsightsV1GcsSource } from "./googlecloudcontactcenterinsightsv1gcssource";
-import { GoogleCloudContactcenterinsightsV1DialogflowSource } from "./googlecloudcontactcenterinsightsv1dialogflowsource";
-// GoogleCloudContactcenterinsightsV1ConversationDataSourceInput
-/**
- * The conversation source, which is a combination of transcript and audio.
-**/
-var GoogleCloudContactcenterinsightsV1ConversationDataSourceInput = /** @class */ (function (_super) {
-    __extends(GoogleCloudContactcenterinsightsV1ConversationDataSourceInput, _super);
-    function GoogleCloudContactcenterinsightsV1ConversationDataSourceInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=dialogflowSource" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1DialogflowSourceInput)
-    ], GoogleCloudContactcenterinsightsV1ConversationDataSourceInput.prototype, "dialogflowSource", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcsSource" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1GcsSource)
-    ], GoogleCloudContactcenterinsightsV1ConversationDataSourceInput.prototype, "gcsSource", void 0);
-    return GoogleCloudContactcenterinsightsV1ConversationDataSourceInput;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1ConversationDataSourceInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1ConversationDataSourceInput = exports.GoogleCloudContactcenterinsightsV1ConversationDataSource = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1dialogflowsource_1 = require("./googlecloudcontactcenterinsightsv1dialogflowsource");
+var googlecloudcontactcenterinsightsv1gcssource_1 = require("./googlecloudcontactcenterinsightsv1gcssource");
+var googlecloudcontactcenterinsightsv1dialogflowsource_2 = require("./googlecloudcontactcenterinsightsv1dialogflowsource");
 // GoogleCloudContactcenterinsightsV1ConversationDataSource
 /**
  * The conversation source, which is a combination of transcript and audio.
@@ -56,13 +39,33 @@ var GoogleCloudContactcenterinsightsV1ConversationDataSource = /** @class */ (fu
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dialogflowSource" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1DialogflowSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dialogflowSource" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1dialogflowsource_1.GoogleCloudContactcenterinsightsV1DialogflowSource)
     ], GoogleCloudContactcenterinsightsV1ConversationDataSource.prototype, "dialogflowSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcsSource" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1GcsSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcsSource" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1gcssource_1.GoogleCloudContactcenterinsightsV1GcsSource)
     ], GoogleCloudContactcenterinsightsV1ConversationDataSource.prototype, "gcsSource", void 0);
     return GoogleCloudContactcenterinsightsV1ConversationDataSource;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1ConversationDataSource };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1ConversationDataSource = GoogleCloudContactcenterinsightsV1ConversationDataSource;
+// GoogleCloudContactcenterinsightsV1ConversationDataSourceInput
+/**
+ * The conversation source, which is a combination of transcript and audio.
+**/
+var GoogleCloudContactcenterinsightsV1ConversationDataSourceInput = /** @class */ (function (_super) {
+    __extends(GoogleCloudContactcenterinsightsV1ConversationDataSourceInput, _super);
+    function GoogleCloudContactcenterinsightsV1ConversationDataSourceInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dialogflowSource" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1dialogflowsource_2.GoogleCloudContactcenterinsightsV1DialogflowSourceInput)
+    ], GoogleCloudContactcenterinsightsV1ConversationDataSourceInput.prototype, "dialogflowSource", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcsSource" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1gcssource_1.GoogleCloudContactcenterinsightsV1GcsSource)
+    ], GoogleCloudContactcenterinsightsV1ConversationDataSourceInput.prototype, "gcsSource", void 0);
+    return GoogleCloudContactcenterinsightsV1ConversationDataSourceInput;
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1ConversationDataSourceInput = GoogleCloudContactcenterinsightsV1ConversationDataSourceInput;

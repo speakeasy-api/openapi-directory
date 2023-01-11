@@ -22,6 +22,6 @@ export declare class StopApplicationResponse extends SpeakeasyBase {
     resourceInUseException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    stopApplicationResponse?: Map<string, any>;
+    stopApplicationResponse?: Record<string, any>;
     unsupportedOperationException?: any;
 }

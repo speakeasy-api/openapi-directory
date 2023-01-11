@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents } from "./googlefirebasefcmdatav1beta1deliveryperformancepercents";
-import { GoogleFirebaseFcmDataV1beta1MessageInsightPercents } from "./googlefirebasefcmdatav1beta1messageinsightpercents";
-import { GoogleFirebaseFcmDataV1beta1MessageOutcomePercents } from "./googlefirebasefcmdatav1beta1messageoutcomepercents";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleFirebaseFcmDataV1beta1Data = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlefirebasefcmdatav1beta1deliveryperformancepercents_1 = require("./googlefirebasefcmdatav1beta1deliveryperformancepercents");
+var googlefirebasefcmdatav1beta1messageinsightpercents_1 = require("./googlefirebasefcmdatav1beta1messageinsightpercents");
+var googlefirebasefcmdatav1beta1messageoutcomepercents_1 = require("./googlefirebasefcmdatav1beta1messageoutcomepercents");
 // GoogleFirebaseFcmDataV1beta1Data
 /**
  * Data detailing messaging delivery
@@ -36,21 +39,21 @@ var GoogleFirebaseFcmDataV1beta1Data = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countMessagesAccepted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countMessagesAccepted" }),
         __metadata("design:type", String)
     ], GoogleFirebaseFcmDataV1beta1Data.prototype, "countMessagesAccepted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryPerformancePercents" }),
-        __metadata("design:type", GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryPerformancePercents" }),
+        __metadata("design:type", googlefirebasefcmdatav1beta1deliveryperformancepercents_1.GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents)
     ], GoogleFirebaseFcmDataV1beta1Data.prototype, "deliveryPerformancePercents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageInsightPercents" }),
-        __metadata("design:type", GoogleFirebaseFcmDataV1beta1MessageInsightPercents)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageInsightPercents" }),
+        __metadata("design:type", googlefirebasefcmdatav1beta1messageinsightpercents_1.GoogleFirebaseFcmDataV1beta1MessageInsightPercents)
     ], GoogleFirebaseFcmDataV1beta1Data.prototype, "messageInsightPercents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageOutcomePercents" }),
-        __metadata("design:type", GoogleFirebaseFcmDataV1beta1MessageOutcomePercents)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageOutcomePercents" }),
+        __metadata("design:type", googlefirebasefcmdatav1beta1messageoutcomepercents_1.GoogleFirebaseFcmDataV1beta1MessageOutcomePercents)
     ], GoogleFirebaseFcmDataV1beta1Data.prototype, "messageOutcomePercents", void 0);
     return GoogleFirebaseFcmDataV1beta1Data;
-}(SpeakeasyBase));
-export { GoogleFirebaseFcmDataV1beta1Data };
+}(utils_1.SpeakeasyBase));
+exports.GoogleFirebaseFcmDataV1beta1Data = GoogleFirebaseFcmDataV1beta1Data;

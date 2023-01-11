@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AlarmModelSummary = void 0;
+var utils_1 = require("../../../internal/utils");
 // AlarmModelSummary
 /**
  * Contains a summary of an alarm model.
@@ -33,17 +36,17 @@ var AlarmModelSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmModelDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmModelDescription" }),
         __metadata("design:type", String)
     ], AlarmModelSummary.prototype, "alarmModelDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmModelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmModelName" }),
         __metadata("design:type", String)
     ], AlarmModelSummary.prototype, "alarmModelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTime" }),
         __metadata("design:type", Date)
     ], AlarmModelSummary.prototype, "creationTime", void 0);
     return AlarmModelSummary;
-}(SpeakeasyBase));
-export { AlarmModelSummary };
+}(utils_1.SpeakeasyBase));
+exports.AlarmModelSummary = AlarmModelSummary;

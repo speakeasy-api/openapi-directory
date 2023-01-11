@@ -166,7 +166,7 @@ export declare class PowerOutletType extends SpeakeasyBase {
 }
 export declare class PowerOutlet extends SpeakeasyBase {
     cable?: NestedCable;
-    connectedEndpoint?: Map<string, string>;
+    connectedEndpoint?: Record<string, string>;
     connectedEndpointType?: string;
     connectionStatus?: PowerOutletConnectionStatus;
     description?: string;

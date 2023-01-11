@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchDevicesResponse = exports.SearchDevicesRequest = exports.SearchDevicesQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SearchDevicesQueryParams = /** @class */ (function (_super) {
     __extends(SearchDevicesQueryParams, _super);
     function SearchDevicesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=applicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=applicationId" }),
         __metadata("design:type", String)
     ], SearchDevicesQueryParams.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=groupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=groupId" }),
         __metadata("design:type", String)
     ], SearchDevicesQueryParams.prototype, "groupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], SearchDevicesQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", String)
     ], SearchDevicesQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=searchTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=searchTerms" }),
         __metadata("design:type", String)
     ], SearchDevicesQueryParams.prototype, "searchTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=serviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=serviceId" }),
         __metadata("design:type", String)
     ], SearchDevicesQueryParams.prototype, "serviceId", void 0);
     return SearchDevicesQueryParams;
-}(SpeakeasyBase));
-export { SearchDevicesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SearchDevicesQueryParams = SearchDevicesQueryParams;
 var SearchDevicesRequest = /** @class */ (function (_super) {
     __extends(SearchDevicesRequest, _super);
     function SearchDevicesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchDevicesQueryParams)
     ], SearchDevicesRequest.prototype, "queryParams", void 0);
     return SearchDevicesRequest;
-}(SpeakeasyBase));
-export { SearchDevicesRequest };
+}(utils_1.SpeakeasyBase));
+exports.SearchDevicesRequest = SearchDevicesRequest;
 var SearchDevicesResponse = /** @class */ (function (_super) {
     __extends(SearchDevicesResponse, _super);
     function SearchDevicesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], SearchDevicesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SearchDevicesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SearchDevicesResponse.prototype, "statusCode", void 0);
     return SearchDevicesResponse;
-}(SpeakeasyBase));
-export { SearchDevicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchDevicesResponse = SearchDevicesResponse;

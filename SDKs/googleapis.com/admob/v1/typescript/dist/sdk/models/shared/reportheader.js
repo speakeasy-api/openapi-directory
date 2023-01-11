@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DateRange } from "./daterange";
-import { LocalizationSettings } from "./localizationsettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportHeader = void 0;
+var utils_1 = require("../../../internal/utils");
+var daterange_1 = require("./daterange");
+var localizationsettings_1 = require("./localizationsettings");
 // ReportHeader
 /**
  * Groups data helps to treat the generated report. Always sent as a first message in the stream response.
@@ -35,17 +38,17 @@ var ReportHeader = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateRange" }),
-        __metadata("design:type", DateRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateRange" }),
+        __metadata("design:type", daterange_1.DateRange)
     ], ReportHeader.prototype, "dateRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localizationSettings" }),
-        __metadata("design:type", LocalizationSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localizationSettings" }),
+        __metadata("design:type", localizationsettings_1.LocalizationSettings)
     ], ReportHeader.prototype, "localizationSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportingTimeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportingTimeZone" }),
         __metadata("design:type", String)
     ], ReportHeader.prototype, "reportingTimeZone", void 0);
     return ReportHeader;
-}(SpeakeasyBase));
-export { ReportHeader };
+}(utils_1.SpeakeasyBase));
+exports.ReportHeader = ReportHeader;

@@ -1,47 +1,48 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class ListDatabaseFirewallsPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=database_cluster_uuid" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=database_cluster_uuid" })
   databaseClusterUuid: string;
 }
 
 
-export class ListDatabaseFirewallsRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: ListDatabaseFirewallsPathParams;
-}
-
-
 export class ListDatabaseFirewalls401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class ListDatabaseFirewallsRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: ListDatabaseFirewallsPathParams;
+}
+
+
 export class ListDatabaseFirewallsResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  listDatabaseFirewalls200ApplicationJsonAny?: any;
+  @SpeakeasyMetadata()
+  listDatabaseFirewalls200ApplicationJSONAny?: any;
 
-  @Metadata()
-  listDatabaseFirewalls401ApplicationJsonObject?: ListDatabaseFirewalls401ApplicationJson;
+  @SpeakeasyMetadata()
+  listDatabaseFirewalls401ApplicationJSONObject?: ListDatabaseFirewalls401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

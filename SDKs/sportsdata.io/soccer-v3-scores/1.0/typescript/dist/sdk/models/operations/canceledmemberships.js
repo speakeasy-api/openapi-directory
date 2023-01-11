@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CanceledMembershipsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CanceledMembershipsResponse = exports.CanceledMembershipsRequest = exports.CanceledMembershipsPathParams = exports.CanceledMembershipsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CanceledMembershipsFormatEnum;
 (function (CanceledMembershipsFormatEnum) {
     CanceledMembershipsFormatEnum["Xml"] = "xml";
     CanceledMembershipsFormatEnum["Json"] = "json";
-})(CanceledMembershipsFormatEnum || (CanceledMembershipsFormatEnum = {}));
+})(CanceledMembershipsFormatEnum = exports.CanceledMembershipsFormatEnum || (exports.CanceledMembershipsFormatEnum = {}));
 var CanceledMembershipsPathParams = /** @class */ (function (_super) {
     __extends(CanceledMembershipsPathParams, _super);
     function CanceledMembershipsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], CanceledMembershipsPathParams.prototype, "format", void 0);
     return CanceledMembershipsPathParams;
-}(SpeakeasyBase));
-export { CanceledMembershipsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CanceledMembershipsPathParams = CanceledMembershipsPathParams;
 var CanceledMembershipsRequest = /** @class */ (function (_super) {
     __extends(CanceledMembershipsRequest, _super);
     function CanceledMembershipsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CanceledMembershipsPathParams)
     ], CanceledMembershipsRequest.prototype, "pathParams", void 0);
     return CanceledMembershipsRequest;
-}(SpeakeasyBase));
-export { CanceledMembershipsRequest };
+}(utils_1.SpeakeasyBase));
+exports.CanceledMembershipsRequest = CanceledMembershipsRequest;
 var CanceledMembershipsResponse = /** @class */ (function (_super) {
     __extends(CanceledMembershipsResponse, _super);
     function CanceledMembershipsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CanceledMembershipsResponse.prototype, "canceledMembership", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CanceledMembershipsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CanceledMembershipsResponse.prototype, "statusCode", void 0);
     return CanceledMembershipsResponse;
-}(SpeakeasyBase));
-export { CanceledMembershipsResponse };
+}(utils_1.SpeakeasyBase));
+exports.CanceledMembershipsResponse = CanceledMembershipsResponse;

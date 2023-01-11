@@ -17,7 +17,7 @@ export declare class GetTeamsByYearRequest extends SpeakeasyBase {
 }
 export declare class GetTeamsByYearResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     teams?: shared.Team[];
 }

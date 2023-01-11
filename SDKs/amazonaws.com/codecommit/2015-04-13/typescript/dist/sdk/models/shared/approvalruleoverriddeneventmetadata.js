@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OverrideStatusEnum } from "./overridestatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApprovalRuleOverriddenEventMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var overridestatusenum_1 = require("./overridestatusenum");
 // ApprovalRuleOverriddenEventMetadata
 /**
  * Returns information about an override event for approval rules for a pull request.
@@ -34,13 +37,13 @@ var ApprovalRuleOverriddenEventMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overrideStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overrideStatus" }),
         __metadata("design:type", String)
     ], ApprovalRuleOverriddenEventMetadata.prototype, "overrideStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionId" }),
         __metadata("design:type", String)
     ], ApprovalRuleOverriddenEventMetadata.prototype, "revisionId", void 0);
     return ApprovalRuleOverriddenEventMetadata;
-}(SpeakeasyBase));
-export { ApprovalRuleOverriddenEventMetadata };
+}(utils_1.SpeakeasyBase));
+exports.ApprovalRuleOverriddenEventMetadata = ApprovalRuleOverriddenEventMetadata;

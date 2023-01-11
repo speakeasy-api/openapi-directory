@@ -1,6 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DhcpOptions } from "./dhcpoptions";
 export declare class DescribeDhcpOptionsResult extends SpeakeasyBase {
-    dhcpOptions?: DhcpOptions[];
-    nextToken?: string;
+    dhcpOptions?: Record<string, any>;
+    nextToken?: Record<string, any>;
 }

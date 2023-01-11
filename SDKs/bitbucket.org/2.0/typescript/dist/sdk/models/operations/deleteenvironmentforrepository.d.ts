@@ -10,5 +10,5 @@ export declare class DeleteEnvironmentForRepositoryRequest extends SpeakeasyBase
 export declare class DeleteEnvironmentForRepositoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

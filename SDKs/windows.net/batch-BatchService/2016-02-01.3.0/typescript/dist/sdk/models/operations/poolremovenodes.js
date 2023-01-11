@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PoolRemoveNodesResponse = exports.PoolRemoveNodesRequest = exports.PoolRemoveNodesHeaders = exports.PoolRemoveNodesQueryParams = exports.PoolRemoveNodesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PoolRemoveNodesPathParams = /** @class */ (function (_super) {
     __extends(PoolRemoveNodesPathParams, _super);
     function PoolRemoveNodesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=poolId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=poolId" }),
         __metadata("design:type", String)
     ], PoolRemoveNodesPathParams.prototype, "poolId", void 0);
     return PoolRemoveNodesPathParams;
-}(SpeakeasyBase));
-export { PoolRemoveNodesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PoolRemoveNodesPathParams = PoolRemoveNodesPathParams;
 var PoolRemoveNodesQueryParams = /** @class */ (function (_super) {
     __extends(PoolRemoveNodesQueryParams, _super);
     function PoolRemoveNodesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], PoolRemoveNodesQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], PoolRemoveNodesQueryParams.prototype, "timeout", void 0);
     return PoolRemoveNodesQueryParams;
-}(SpeakeasyBase));
-export { PoolRemoveNodesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PoolRemoveNodesQueryParams = PoolRemoveNodesQueryParams;
 var PoolRemoveNodesHeaders = /** @class */ (function (_super) {
     __extends(PoolRemoveNodesHeaders, _super);
     function PoolRemoveNodesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Match" }),
         __metadata("design:type", String)
     ], PoolRemoveNodesHeaders.prototype, "ifMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
         __metadata("design:type", String)
     ], PoolRemoveNodesHeaders.prototype, "ifModifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-None-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-None-Match" }),
         __metadata("design:type", String)
     ], PoolRemoveNodesHeaders.prototype, "ifNoneMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
         __metadata("design:type", String)
     ], PoolRemoveNodesHeaders.prototype, "ifUnmodifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], PoolRemoveNodesHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], PoolRemoveNodesHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], PoolRemoveNodesHeaders.prototype, "returnClientRequestId", void 0);
     return PoolRemoveNodesHeaders;
-}(SpeakeasyBase));
-export { PoolRemoveNodesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PoolRemoveNodesHeaders = PoolRemoveNodesHeaders;
 var PoolRemoveNodesRequest = /** @class */ (function (_super) {
     __extends(PoolRemoveNodesRequest, _super);
     function PoolRemoveNodesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PoolRemoveNodesPathParams)
     ], PoolRemoveNodesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PoolRemoveNodesQueryParams)
     ], PoolRemoveNodesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PoolRemoveNodesHeaders)
     ], PoolRemoveNodesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], PoolRemoveNodesRequest.prototype, "request", void 0);
     return PoolRemoveNodesRequest;
-}(SpeakeasyBase));
-export { PoolRemoveNodesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PoolRemoveNodesRequest = PoolRemoveNodesRequest;
 var PoolRemoveNodesResponse = /** @class */ (function (_super) {
     __extends(PoolRemoveNodesResponse, _super);
     function PoolRemoveNodesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PoolRemoveNodesResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PoolRemoveNodesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PoolRemoveNodesResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PoolRemoveNodesResponse.prototype, "statusCode", void 0);
     return PoolRemoveNodesResponse;
-}(SpeakeasyBase));
-export { PoolRemoveNodesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PoolRemoveNodesResponse = PoolRemoveNodesResponse;

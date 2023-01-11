@@ -8,7 +8,7 @@ export declare class FunctionConfiguration extends SpeakeasyBase {
     codeSize?: number;
     configurationId?: string;
     description?: string;
-    functionArn?: string;
+    functionARN?: string;
     functionName?: string;
     handler?: string;
     lastModified?: Date;

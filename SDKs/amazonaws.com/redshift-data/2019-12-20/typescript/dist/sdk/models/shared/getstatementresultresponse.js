@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ColumnMetadata } from "./columnmetadata";
-import { Field } from "./field";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetStatementResultResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var columnmetadata_1 = require("./columnmetadata");
+var field_1 = require("./field");
 var GetStatementResultResponse = /** @class */ (function (_super) {
     __extends(GetStatementResultResponse, _super);
     function GetStatementResultResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ColumnMetadata", elemType: ColumnMetadata }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ColumnMetadata", elemType: columnmetadata_1.ColumnMetadata }),
         __metadata("design:type", Array)
     ], GetStatementResultResponse.prototype, "columnMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetStatementResultResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Records", elemType: Field, elemDepth: 2 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Records", elemType: field_1.Field, elemDepth: 2 }),
         __metadata("design:type", Array)
     ], GetStatementResultResponse.prototype, "records", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalNumRows" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalNumRows" }),
         __metadata("design:type", Number)
     ], GetStatementResultResponse.prototype, "totalNumRows", void 0);
     return GetStatementResultResponse;
-}(SpeakeasyBase));
-export { GetStatementResultResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetStatementResultResponse = GetStatementResultResponse;

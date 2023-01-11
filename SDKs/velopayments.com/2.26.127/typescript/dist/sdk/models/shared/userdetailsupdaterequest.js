@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MfaTypeEnum } from "./mfatypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserDetailsUpdateRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var mfatypeenum_1 = require("./mfatypeenum");
 // UserDetailsUpdateRequest
 /**
  * <p>All properties are optional</p>
@@ -37,37 +40,37 @@ var UserDetailsUpdateRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], UserDetailsUpdateRequest.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstName" }),
         __metadata("design:type", String)
     ], UserDetailsUpdateRequest.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastName" }),
         __metadata("design:type", String)
     ], UserDetailsUpdateRequest.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mfaType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mfaType" }),
         __metadata("design:type", String)
     ], UserDetailsUpdateRequest.prototype, "mfaType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryContactNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryContactNumber" }),
         __metadata("design:type", String)
     ], UserDetailsUpdateRequest.prototype, "primaryContactNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondaryContactNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondaryContactNumber" }),
         __metadata("design:type", String)
     ], UserDetailsUpdateRequest.prototype, "secondaryContactNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smsNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smsNumber" }),
         __metadata("design:type", String)
     ], UserDetailsUpdateRequest.prototype, "smsNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verificationCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verificationCode" }),
         __metadata("design:type", String)
     ], UserDetailsUpdateRequest.prototype, "verificationCode", void 0);
     return UserDetailsUpdateRequest;
-}(SpeakeasyBase));
-export { UserDetailsUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.UserDetailsUpdateRequest = UserDetailsUpdateRequest;

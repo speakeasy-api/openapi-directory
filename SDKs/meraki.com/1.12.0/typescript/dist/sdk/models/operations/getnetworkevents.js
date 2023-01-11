@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkEventsResponse = exports.GetNetworkEventsRequest = exports.GetNetworkEventsQueryParams = exports.GetNetworkEventsProductTypeEnum = exports.GetNetworkEventsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkEventsPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkEventsPathParams, _super);
     function GetNetworkEventsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkEventsPathParams.prototype, "networkId", void 0);
     return GetNetworkEventsPathParams;
-}(SpeakeasyBase));
-export { GetNetworkEventsPathParams };
-export var GetNetworkEventsProductTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkEventsPathParams = GetNetworkEventsPathParams;
+var GetNetworkEventsProductTypeEnum;
 (function (GetNetworkEventsProductTypeEnum) {
     GetNetworkEventsProductTypeEnum["Wireless"] = "wireless";
     GetNetworkEventsProductTypeEnum["Appliance"] = "appliance";
@@ -43,108 +46,108 @@ export var GetNetworkEventsProductTypeEnum;
     GetNetworkEventsProductTypeEnum["SystemsManager"] = "systemsManager";
     GetNetworkEventsProductTypeEnum["Camera"] = "camera";
     GetNetworkEventsProductTypeEnum["CellularGateway"] = "cellularGateway";
-})(GetNetworkEventsProductTypeEnum || (GetNetworkEventsProductTypeEnum = {}));
+})(GetNetworkEventsProductTypeEnum = exports.GetNetworkEventsProductTypeEnum || (exports.GetNetworkEventsProductTypeEnum = {}));
 var GetNetworkEventsQueryParams = /** @class */ (function (_super) {
     __extends(GetNetworkEventsQueryParams, _super);
     function GetNetworkEventsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=clientIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=clientIp" }),
         __metadata("design:type", String)
     ], GetNetworkEventsQueryParams.prototype, "clientIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=clientMac" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=clientMac" }),
         __metadata("design:type", String)
     ], GetNetworkEventsQueryParams.prototype, "clientMac", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=clientName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=clientName" }),
         __metadata("design:type", String)
     ], GetNetworkEventsQueryParams.prototype, "clientName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=deviceMac" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=deviceMac" }),
         __metadata("design:type", String)
     ], GetNetworkEventsQueryParams.prototype, "deviceMac", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=deviceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=deviceName" }),
         __metadata("design:type", String)
     ], GetNetworkEventsQueryParams.prototype, "deviceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=deviceSerial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=deviceSerial" }),
         __metadata("design:type", String)
     ], GetNetworkEventsQueryParams.prototype, "deviceSerial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
         __metadata("design:type", String)
     ], GetNetworkEventsQueryParams.prototype, "endingBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=excludedEventTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=excludedEventTypes" }),
         __metadata("design:type", Array)
     ], GetNetworkEventsQueryParams.prototype, "excludedEventTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=includedEventTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=includedEventTypes" }),
         __metadata("design:type", Array)
     ], GetNetworkEventsQueryParams.prototype, "includedEventTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=perPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=perPage" }),
         __metadata("design:type", Number)
     ], GetNetworkEventsQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=productType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=productType" }),
         __metadata("design:type", String)
     ], GetNetworkEventsQueryParams.prototype, "productType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=smDeviceMac" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=smDeviceMac" }),
         __metadata("design:type", String)
     ], GetNetworkEventsQueryParams.prototype, "smDeviceMac", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=smDeviceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=smDeviceName" }),
         __metadata("design:type", String)
     ], GetNetworkEventsQueryParams.prototype, "smDeviceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
         __metadata("design:type", String)
     ], GetNetworkEventsQueryParams.prototype, "startingAfter", void 0);
     return GetNetworkEventsQueryParams;
-}(SpeakeasyBase));
-export { GetNetworkEventsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkEventsQueryParams = GetNetworkEventsQueryParams;
 var GetNetworkEventsRequest = /** @class */ (function (_super) {
     __extends(GetNetworkEventsRequest, _super);
     function GetNetworkEventsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkEventsPathParams)
     ], GetNetworkEventsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkEventsQueryParams)
     ], GetNetworkEventsRequest.prototype, "queryParams", void 0);
     return GetNetworkEventsRequest;
-}(SpeakeasyBase));
-export { GetNetworkEventsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkEventsRequest = GetNetworkEventsRequest;
 var GetNetworkEventsResponse = /** @class */ (function (_super) {
     __extends(GetNetworkEventsResponse, _super);
     function GetNetworkEventsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkEventsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetNetworkEventsResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkEventsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkEventsResponse.prototype, "getNetworkEvents200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkEventsResponse.prototype, "getNetworkEvents200ApplicationJSONObject", void 0);
     return GetNetworkEventsResponse;
-}(SpeakeasyBase));
-export { GetNetworkEventsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkEventsResponse = GetNetworkEventsResponse;

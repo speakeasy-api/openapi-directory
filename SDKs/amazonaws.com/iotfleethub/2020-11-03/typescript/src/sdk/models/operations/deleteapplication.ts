@@ -55,7 +55,7 @@ export class DeleteApplicationResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteApplicationResponse?: Map<string, any>;
+  deleteApplicationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalFailureException?: any;

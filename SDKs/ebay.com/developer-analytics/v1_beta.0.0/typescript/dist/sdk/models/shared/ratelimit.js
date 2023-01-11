@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Resource } from "./resource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RateLimit = void 0;
+var utils_1 = require("../../../internal/utils");
+var resource_1 = require("./resource");
 // RateLimit
 /**
  * This complex types defines the resource (such as an API method) for which the rate-limit data is returned. A method is included in an API, and an API is part of an API context for the API version specified.
@@ -34,21 +37,21 @@ var RateLimit = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiContext" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiContext" }),
         __metadata("design:type", String)
     ], RateLimit.prototype, "apiContext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiName" }),
         __metadata("design:type", String)
     ], RateLimit.prototype, "apiName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiVersion" }),
         __metadata("design:type", String)
     ], RateLimit.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: Resource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: resource_1.Resource }),
         __metadata("design:type", Array)
     ], RateLimit.prototype, "resources", void 0);
     return RateLimit;
-}(SpeakeasyBase));
-export { RateLimit };
+}(utils_1.SpeakeasyBase));
+exports.RateLimit = RateLimit;

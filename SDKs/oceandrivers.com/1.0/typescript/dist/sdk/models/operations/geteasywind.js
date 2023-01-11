@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEasywindResponse = exports.GetEasywindRequest = exports.GetEasywindQueryParams = exports.GetEasywindPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetEasywindPathParams = /** @class */ (function (_super) {
     __extends(GetEasywindPathParams, _super);
     function GetEasywindPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=easywindId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=easywindId" }),
         __metadata("design:type", String)
     ], GetEasywindPathParams.prototype, "easywindId", void 0);
     return GetEasywindPathParams;
-}(SpeakeasyBase));
-export { GetEasywindPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetEasywindPathParams = GetEasywindPathParams;
 var GetEasywindQueryParams = /** @class */ (function (_super) {
     __extends(GetEasywindQueryParams, _super);
     function GetEasywindQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=period" }),
         __metadata("design:type", String)
     ], GetEasywindQueryParams.prototype, "period", void 0);
     return GetEasywindQueryParams;
-}(SpeakeasyBase));
-export { GetEasywindQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetEasywindQueryParams = GetEasywindQueryParams;
 var GetEasywindRequest = /** @class */ (function (_super) {
     __extends(GetEasywindRequest, _super);
     function GetEasywindRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEasywindPathParams)
     ], GetEasywindRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEasywindQueryParams)
     ], GetEasywindRequest.prototype, "queryParams", void 0);
     return GetEasywindRequest;
-}(SpeakeasyBase));
-export { GetEasywindRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetEasywindRequest = GetEasywindRequest;
 var GetEasywindResponse = /** @class */ (function (_super) {
     __extends(GetEasywindResponse, _super);
     function GetEasywindResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetEasywindResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetEasywindResponse.prototype, "statusCode", void 0);
     return GetEasywindResponse;
-}(SpeakeasyBase));
-export { GetEasywindResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetEasywindResponse = GetEasywindResponse;

@@ -194,23 +194,23 @@ export class ObcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  obcer400ApplicationJsonObject?: Obcer400ApplicationJson;
+  obcer400ApplicationJSONObject?: Obcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  obcer401ApplicationJsonObject?: Obcer401ApplicationJson;
+  obcer401ApplicationJSONObject?: Obcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  obcer404ApplicationJsonObject?: Obcer404ApplicationJson;
+  obcer404ApplicationJSONObject?: Obcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  obcer500ApplicationJsonObject?: Obcer500ApplicationJson;
+  obcer500ApplicationJSONObject?: Obcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  obcer502ApplicationJsonObject?: Obcer502ApplicationJson;
+  obcer502ApplicationJSONObject?: Obcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  obcer503ApplicationJsonObject?: Obcer503ApplicationJson;
+  obcer503ApplicationJSONObject?: Obcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  obcer504ApplicationJsonObject?: Obcer504ApplicationJson;
+  obcer504ApplicationJSONObject?: Obcer504ApplicationJson;
 }

@@ -16,7 +16,7 @@ export class UpdatePipelineVariableForWorkspaceRequest extends SpeakeasyBase {
   pathParams: UpdatePipelineVariableForWorkspacePathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -28,8 +28,8 @@ export class UpdatePipelineVariableForWorkspaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  pipelineVariable?: Map<string, any>;
+  pipelineVariable?: Record<string, any>;
 }

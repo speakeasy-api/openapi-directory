@@ -77,7 +77,7 @@ export class GkehubProjectsLocationsOperationsDeleteResponse extends SpeakeasyBa
   contentType: string;
 
   @SpeakeasyMetadata()
-  empty?: Map<string, any>;
+  empty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

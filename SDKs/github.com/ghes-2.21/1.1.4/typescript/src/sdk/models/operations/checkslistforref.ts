@@ -14,11 +14,6 @@ export class ChecksListForRefPathParams extends SpeakeasyBase {
   repo: string;
 }
 
-export enum ChecksListForRefFilterEnum {
-    Latest = "latest",
-    All = "all"
-}
-
 
 export class ChecksListForRefQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=app_id" })
@@ -28,7 +23,7 @@ export class ChecksListForRefQueryParams extends SpeakeasyBase {
   checkName?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" })
-  filter?: ChecksListForRefFilterEnum;
+  filter?: shared.StatusEnum1;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -64,11 +59,11 @@ export class ChecksListForRefResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  checksListForRef200ApplicationJsonObject?: ChecksListForRef200ApplicationJson;
+  checksListForRef200ApplicationJSONObject?: ChecksListForRef200ApplicationJson;
 }

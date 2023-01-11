@@ -18,5 +18,5 @@ export declare class GetJobResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getJob200ApplicationJsonObject?: GetJob200ApplicationJson;
+    getJob200ApplicationJSONObject?: GetJob200ApplicationJson;
 }

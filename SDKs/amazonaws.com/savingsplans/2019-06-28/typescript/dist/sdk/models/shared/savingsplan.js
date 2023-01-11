@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CurrencyCodeEnum } from "./currencycodeenum";
-import { SavingsPlanPaymentOptionEnum } from "./savingsplanpaymentoptionenum";
-import { SavingsPlanTypeEnum } from "./savingsplantypeenum";
-import { SavingsPlanStateEnum } from "./savingsplanstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SavingsPlan = void 0;
+var utils_1 = require("../../../internal/utils");
+var currencycodeenum_1 = require("./currencycodeenum");
+var savingsplanpaymentoptionenum_1 = require("./savingsplanpaymentoptionenum");
+var savingsplantypeenum_1 = require("./savingsplantypeenum");
+var savingsplanstateenum_1 = require("./savingsplanstateenum");
 // SavingsPlan
 /**
  * Information about a Savings Plan.
@@ -37,77 +40,77 @@ var SavingsPlan = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commitment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commitment" }),
         __metadata("design:type", String)
     ], SavingsPlan.prototype, "commitment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], SavingsPlan.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], SavingsPlan.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ec2InstanceFamily" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ec2InstanceFamily" }),
         __metadata("design:type", String)
     ], SavingsPlan.prototype, "ec2InstanceFamily", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end" }),
         __metadata("design:type", String)
     ], SavingsPlan.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offeringId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offeringId" }),
         __metadata("design:type", String)
     ], SavingsPlan.prototype, "offeringId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentOption" }),
         __metadata("design:type", String)
     ], SavingsPlan.prototype, "paymentOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productTypes" }),
         __metadata("design:type", Array)
     ], SavingsPlan.prototype, "productTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recurringPaymentAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recurringPaymentAmount" }),
         __metadata("design:type", String)
     ], SavingsPlan.prototype, "recurringPaymentAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], SavingsPlan.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=savingsPlanArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=savingsPlanArn" }),
         __metadata("design:type", String)
     ], SavingsPlan.prototype, "savingsPlanArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=savingsPlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=savingsPlanId" }),
         __metadata("design:type", String)
     ], SavingsPlan.prototype, "savingsPlanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=savingsPlanType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=savingsPlanType" }),
         __metadata("design:type", String)
     ], SavingsPlan.prototype, "savingsPlanType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
         __metadata("design:type", String)
     ], SavingsPlan.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], SavingsPlan.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], SavingsPlan.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=termDurationInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=termDurationInSeconds" }),
         __metadata("design:type", Number)
     ], SavingsPlan.prototype, "termDurationInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upfrontPaymentAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upfrontPaymentAmount" }),
         __metadata("design:type", String)
     ], SavingsPlan.prototype, "upfrontPaymentAmount", void 0);
     return SavingsPlan;
-}(SpeakeasyBase));
-export { SavingsPlan };
+}(utils_1.SpeakeasyBase));
+exports.SavingsPlan = SavingsPlan;

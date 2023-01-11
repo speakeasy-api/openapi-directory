@@ -40,7 +40,7 @@ export class Network extends SpeakeasyBase {
   jumboFramesEnabled?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=macAddress" })
   macAddress?: string[];

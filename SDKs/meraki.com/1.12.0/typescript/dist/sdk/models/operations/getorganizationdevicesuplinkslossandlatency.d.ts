@@ -21,5 +21,5 @@ export declare class GetOrganizationDevicesUplinksLossAndLatencyRequest extends 
 export declare class GetOrganizationDevicesUplinksLossAndLatencyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationDevicesUplinksLossAndLatency200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationDevicesUplinksLossAndLatency200ApplicationJSONObject?: Record<string, any>;
 }

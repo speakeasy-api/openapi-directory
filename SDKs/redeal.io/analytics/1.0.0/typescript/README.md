@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetEventsRequest, GetEventsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: GetEventsRequest = {
   queryParams: {
-    company: "mollitia",
-    deal: "aut",
-    nexttoken: "est",
-    queryexecutionid: "libero",
-    site: "quo",
-    type: "all",
+    company: "sit",
+    deal: "voluptas",
+    nexttoken: "culpa",
+    queryexecutionid: "expedita",
+    site: "consequuntur",
+    type: "clicks",
   },
 };
 

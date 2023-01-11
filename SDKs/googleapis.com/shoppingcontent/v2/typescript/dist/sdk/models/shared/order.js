@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrderCustomer } from "./ordercustomer";
-import { OrderDeliveryDetails } from "./orderdeliverydetails";
-import { OrderLineItem } from "./orderlineitem";
-import { Price } from "./price";
-import { OrderPaymentMethod } from "./orderpaymentmethod";
-import { OrderPickupDetails } from "./orderpickupdetails";
-import { OrderLegacyPromotion } from "./orderlegacypromotion";
-import { OrderRefund } from "./orderrefund";
-import { OrderShipment } from "./ordershipment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Order = void 0;
+var utils_1 = require("../../../internal/utils");
+var ordercustomer_1 = require("./ordercustomer");
+var orderdeliverydetails_1 = require("./orderdeliverydetails");
+var orderlineitem_1 = require("./orderlineitem");
+var price_1 = require("./price");
+var orderpaymentmethod_1 = require("./orderpaymentmethod");
+var orderpickupdetails_1 = require("./orderpickupdetails");
+var orderlegacypromotion_1 = require("./orderlegacypromotion");
+var orderrefund_1 = require("./orderrefund");
+var ordershipment_1 = require("./ordershipment");
 // Order
 /**
  * Order. Production access (all methods) requires the order manager role. Sandbox access does not.
@@ -42,93 +45,93 @@ var Order = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acknowledged" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acknowledged" }),
         __metadata("design:type", Boolean)
     ], Order.prototype, "acknowledged", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelType" }),
         __metadata("design:type", String)
     ], Order.prototype, "channelType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customer" }),
-        __metadata("design:type", OrderCustomer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customer" }),
+        __metadata("design:type", ordercustomer_1.OrderCustomer)
     ], Order.prototype, "customer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryDetails" }),
-        __metadata("design:type", OrderDeliveryDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryDetails" }),
+        __metadata("design:type", orderdeliverydetails_1.OrderDeliveryDetails)
     ], Order.prototype, "deliveryDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Order.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Order.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineItems", elemType: OrderLineItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineItems", elemType: orderlineitem_1.OrderLineItem }),
         __metadata("design:type", Array)
     ], Order.prototype, "lineItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantId" }),
         __metadata("design:type", String)
     ], Order.prototype, "merchantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantOrderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantOrderId" }),
         __metadata("design:type", String)
     ], Order.prototype, "merchantOrderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=netAmount" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=netAmount" }),
+        __metadata("design:type", price_1.Price)
     ], Order.prototype, "netAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentMethod" }),
-        __metadata("design:type", OrderPaymentMethod)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentMethod" }),
+        __metadata("design:type", orderpaymentmethod_1.OrderPaymentMethod)
     ], Order.prototype, "paymentMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentStatus" }),
         __metadata("design:type", String)
     ], Order.prototype, "paymentStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pickupDetails" }),
-        __metadata("design:type", OrderPickupDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pickupDetails" }),
+        __metadata("design:type", orderpickupdetails_1.OrderPickupDetails)
     ], Order.prototype, "pickupDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placedDate" }),
         __metadata("design:type", String)
     ], Order.prototype, "placedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotions", elemType: OrderLegacyPromotion }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotions", elemType: orderlegacypromotion_1.OrderLegacyPromotion }),
         __metadata("design:type", Array)
     ], Order.prototype, "promotions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refunds", elemType: OrderRefund }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refunds", elemType: orderrefund_1.OrderRefund }),
         __metadata("design:type", Array)
     ], Order.prototype, "refunds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipments", elemType: OrderShipment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipments", elemType: ordershipment_1.OrderShipment }),
         __metadata("design:type", Array)
     ], Order.prototype, "shipments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingCost" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingCost" }),
+        __metadata("design:type", price_1.Price)
     ], Order.prototype, "shippingCost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingCostTax" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingCostTax" }),
+        __metadata("design:type", price_1.Price)
     ], Order.prototype, "shippingCostTax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingOption" }),
         __metadata("design:type", String)
     ], Order.prototype, "shippingOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Order.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxCollector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxCollector" }),
         __metadata("design:type", String)
     ], Order.prototype, "taxCollector", void 0);
     return Order;
-}(SpeakeasyBase));
-export { Order };
+}(utils_1.SpeakeasyBase));
+exports.Order = Order;

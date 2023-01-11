@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomVerificationEmailTemplateMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
 // CustomVerificationEmailTemplateMetadata
 /**
  * Contains information about a custom verification email template.
@@ -33,25 +36,25 @@ var CustomVerificationEmailTemplateMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FailureRedirectionURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FailureRedirectionURL" }),
         __metadata("design:type", String)
-    ], CustomVerificationEmailTemplateMetadata.prototype, "failureRedirectionUrl", void 0);
+    ], CustomVerificationEmailTemplateMetadata.prototype, "failureRedirectionURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FromEmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FromEmailAddress" }),
         __metadata("design:type", String)
     ], CustomVerificationEmailTemplateMetadata.prototype, "fromEmailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SuccessRedirectionURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SuccessRedirectionURL" }),
         __metadata("design:type", String)
-    ], CustomVerificationEmailTemplateMetadata.prototype, "successRedirectionUrl", void 0);
+    ], CustomVerificationEmailTemplateMetadata.prototype, "successRedirectionURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateName" }),
         __metadata("design:type", String)
     ], CustomVerificationEmailTemplateMetadata.prototype, "templateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateSubject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateSubject" }),
         __metadata("design:type", String)
     ], CustomVerificationEmailTemplateMetadata.prototype, "templateSubject", void 0);
     return CustomVerificationEmailTemplateMetadata;
-}(SpeakeasyBase));
-export { CustomVerificationEmailTemplateMetadata };
+}(utils_1.SpeakeasyBase));
+exports.CustomVerificationEmailTemplateMetadata = CustomVerificationEmailTemplateMetadata;

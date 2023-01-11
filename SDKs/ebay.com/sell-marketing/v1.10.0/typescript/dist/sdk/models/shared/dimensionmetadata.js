@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DimensionKeyAnnotation } from "./dimensionkeyannotation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DimensionMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimensionkeyannotation_1 = require("./dimensionkeyannotation");
 // DimensionMetadata
 /**
  * This type defines the dimension used to create the report and the annotation keys associated with that dimension.
@@ -34,17 +37,17 @@ var DimensionMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataType" }),
         __metadata("design:type", String)
     ], DimensionMetadata.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensionKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensionKey" }),
         __metadata("design:type", String)
     ], DimensionMetadata.prototype, "dimensionKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensionKeyAnnotations", elemType: DimensionKeyAnnotation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensionKeyAnnotations", elemType: dimensionkeyannotation_1.DimensionKeyAnnotation }),
         __metadata("design:type", Array)
     ], DimensionMetadata.prototype, "dimensionKeyAnnotations", void 0);
     return DimensionMetadata;
-}(SpeakeasyBase));
-export { DimensionMetadata };
+}(utils_1.SpeakeasyBase));
+exports.DimensionMetadata = DimensionMetadata;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetCurationTagsByNameFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetCurationTagsByNameResponse = exports.GetGetCurationTagsByNameRequest = exports.GetGetCurationTagsByNameQueryParams = exports.GetGetCurationTagsByNameFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetCurationTagsByNameFormatEnum;
 (function (GetGetCurationTagsByNameFormatEnum) {
     GetGetCurationTagsByNameFormatEnum["Json"] = "json";
     GetGetCurationTagsByNameFormatEnum["Xml"] = "xml";
@@ -31,48 +34,48 @@ export var GetGetCurationTagsByNameFormatEnum;
     GetGetCurationTagsByNameFormatEnum["Dump"] = "dump";
     GetGetCurationTagsByNameFormatEnum["Jpg"] = "jpg";
     GetGetCurationTagsByNameFormatEnum["Pdf"] = "pdf";
-})(GetGetCurationTagsByNameFormatEnum || (GetGetCurationTagsByNameFormatEnum = {}));
+})(GetGetCurationTagsByNameFormatEnum = exports.GetGetCurationTagsByNameFormatEnum || (exports.GetGetCurationTagsByNameFormatEnum = {}));
 var GetGetCurationTagsByNameQueryParams = /** @class */ (function (_super) {
     __extends(GetGetCurationTagsByNameQueryParams, _super);
     function GetGetCurationTagsByNameQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetGetCurationTagsByNameQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tagName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tagName" }),
         __metadata("design:type", String)
     ], GetGetCurationTagsByNameQueryParams.prototype, "tagName", void 0);
     return GetGetCurationTagsByNameQueryParams;
-}(SpeakeasyBase));
-export { GetGetCurationTagsByNameQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetCurationTagsByNameQueryParams = GetGetCurationTagsByNameQueryParams;
 var GetGetCurationTagsByNameRequest = /** @class */ (function (_super) {
     __extends(GetGetCurationTagsByNameRequest, _super);
     function GetGetCurationTagsByNameRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetCurationTagsByNameQueryParams)
     ], GetGetCurationTagsByNameRequest.prototype, "queryParams", void 0);
     return GetGetCurationTagsByNameRequest;
-}(SpeakeasyBase));
-export { GetGetCurationTagsByNameRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetCurationTagsByNameRequest = GetGetCurationTagsByNameRequest;
 var GetGetCurationTagsByNameResponse = /** @class */ (function (_super) {
     __extends(GetGetCurationTagsByNameResponse, _super);
     function GetGetCurationTagsByNameResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetCurationTagsByNameResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetCurationTagsByNameResponse.prototype, "statusCode", void 0);
     return GetGetCurationTagsByNameResponse;
-}(SpeakeasyBase));
-export { GetGetCurationTagsByNameResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetCurationTagsByNameResponse = GetGetCurationTagsByNameResponse;

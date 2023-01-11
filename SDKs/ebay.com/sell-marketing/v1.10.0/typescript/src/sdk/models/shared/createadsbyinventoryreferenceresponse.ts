@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { AdReference } from "./adreference";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 
 
 
@@ -12,8 +12,8 @@ export class CreateAdsByInventoryReferenceResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ads", elemType: AdReference })
   ads?: AdReference[];
 
-  @SpeakeasyMetadata({ data: "json, name=errors", elemType: Error })
-  errors?: Error[];
+  @SpeakeasyMetadata({ data: "json, name=errors", elemType: ErrorT })
+  errors?: ErrorT[];
 
   @SpeakeasyMetadata({ data: "json, name=inventoryReferenceId" })
   inventoryReferenceId?: string;

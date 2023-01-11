@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CampaignListResponse = exports.CampaignListRequest = exports.CampaignListQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CampaignListQueryParams = /** @class */ (function (_super) {
     __extends(CampaignListQueryParams, _super);
     function CampaignListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_archived" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_archived" }),
         __metadata("design:type", String)
     ], CampaignListQueryParams.prototype, "includeArchived", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=last_edit.time[gt]" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=last_edit.time[gt]" }),
         __metadata("design:type", String)
     ], CampaignListQueryParams.prototype, "lastEditTimeGt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", String)
     ], CampaignListQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort_direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort_direction" }),
         __metadata("design:type", String)
     ], CampaignListQueryParams.prototype, "sortDirection", void 0);
     return CampaignListQueryParams;
-}(SpeakeasyBase));
-export { CampaignListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CampaignListQueryParams = CampaignListQueryParams;
 var CampaignListRequest = /** @class */ (function (_super) {
     __extends(CampaignListRequest, _super);
     function CampaignListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CampaignListQueryParams)
     ], CampaignListRequest.prototype, "queryParams", void 0);
     return CampaignListRequest;
-}(SpeakeasyBase));
-export { CampaignListRequest };
+}(utils_1.SpeakeasyBase));
+exports.CampaignListRequest = CampaignListRequest;
 var CampaignListResponse = /** @class */ (function (_super) {
     __extends(CampaignListResponse, _super);
     function CampaignListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CampaignListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CampaignListResponse.prototype, "statusCode", void 0);
     return CampaignListResponse;
-}(SpeakeasyBase));
-export { CampaignListResponse };
+}(utils_1.SpeakeasyBase));
+exports.CampaignListResponse = CampaignListResponse;

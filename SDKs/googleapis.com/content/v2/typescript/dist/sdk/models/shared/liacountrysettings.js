@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LiaAboutPageSettings } from "./liaaboutpagesettings";
-import { LiaInventorySettings } from "./liainventorysettings";
-import { LiaOnDisplayToOrderSettings } from "./liaondisplaytoordersettings";
-import { LiaPosDataProvider } from "./liaposdataprovider";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiaCountrySettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var liaaboutpagesettings_1 = require("./liaaboutpagesettings");
+var liainventorysettings_1 = require("./liainventorysettings");
+var liaondisplaytoordersettings_1 = require("./liaondisplaytoordersettings");
+var liaposdataprovider_1 = require("./liaposdataprovider");
 var LiaCountrySettings = /** @class */ (function (_super) {
     __extends(LiaCountrySettings, _super);
     function LiaCountrySettings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=about" }),
-        __metadata("design:type", LiaAboutPageSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=about" }),
+        __metadata("design:type", liaaboutpagesettings_1.LiaAboutPageSettings)
     ], LiaCountrySettings.prototype, "about", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], LiaCountrySettings.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostedLocalStorefrontActive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostedLocalStorefrontActive" }),
         __metadata("design:type", Boolean)
     ], LiaCountrySettings.prototype, "hostedLocalStorefrontActive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventory" }),
-        __metadata("design:type", LiaInventorySettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventory" }),
+        __metadata("design:type", liainventorysettings_1.LiaInventorySettings)
     ], LiaCountrySettings.prototype, "inventory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onDisplayToOrder" }),
-        __metadata("design:type", LiaOnDisplayToOrderSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onDisplayToOrder" }),
+        __metadata("design:type", liaondisplaytoordersettings_1.LiaOnDisplayToOrderSettings)
     ], LiaCountrySettings.prototype, "onDisplayToOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=posDataProvider" }),
-        __metadata("design:type", LiaPosDataProvider)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=posDataProvider" }),
+        __metadata("design:type", liaposdataprovider_1.LiaPosDataProvider)
     ], LiaCountrySettings.prototype, "posDataProvider", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storePickupActive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storePickupActive" }),
         __metadata("design:type", Boolean)
     ], LiaCountrySettings.prototype, "storePickupActive", void 0);
     return LiaCountrySettings;
-}(SpeakeasyBase));
-export { LiaCountrySettings };
+}(utils_1.SpeakeasyBase));
+exports.LiaCountrySettings = LiaCountrySettings;

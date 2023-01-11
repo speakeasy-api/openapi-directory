@@ -1,0 +1,117 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAnalyticsAdminV1betaDataStreamInput = exports.GoogleAnalyticsAdminV1betaDataStream = exports.GoogleAnalyticsAdminV1betaDataStreamTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleanalyticsadminv1betadatastreamandroidappstreamdata_1 = require("./googleanalyticsadminv1betadatastreamandroidappstreamdata");
+var googleanalyticsadminv1betadatastreamiosappstreamdata_1 = require("./googleanalyticsadminv1betadatastreamiosappstreamdata");
+var googleanalyticsadminv1betadatastreamwebstreamdata_1 = require("./googleanalyticsadminv1betadatastreamwebstreamdata");
+var googleanalyticsadminv1betadatastreamandroidappstreamdata_2 = require("./googleanalyticsadminv1betadatastreamandroidappstreamdata");
+var googleanalyticsadminv1betadatastreamiosappstreamdata_2 = require("./googleanalyticsadminv1betadatastreamiosappstreamdata");
+var googleanalyticsadminv1betadatastreamwebstreamdata_2 = require("./googleanalyticsadminv1betadatastreamwebstreamdata");
+var GoogleAnalyticsAdminV1betaDataStreamTypeEnum;
+(function (GoogleAnalyticsAdminV1betaDataStreamTypeEnum) {
+    GoogleAnalyticsAdminV1betaDataStreamTypeEnum["DataStreamTypeUnspecified"] = "DATA_STREAM_TYPE_UNSPECIFIED";
+    GoogleAnalyticsAdminV1betaDataStreamTypeEnum["WebDataStream"] = "WEB_DATA_STREAM";
+    GoogleAnalyticsAdminV1betaDataStreamTypeEnum["AndroidAppDataStream"] = "ANDROID_APP_DATA_STREAM";
+    GoogleAnalyticsAdminV1betaDataStreamTypeEnum["IosAppDataStream"] = "IOS_APP_DATA_STREAM";
+})(GoogleAnalyticsAdminV1betaDataStreamTypeEnum = exports.GoogleAnalyticsAdminV1betaDataStreamTypeEnum || (exports.GoogleAnalyticsAdminV1betaDataStreamTypeEnum = {}));
+// GoogleAnalyticsAdminV1betaDataStream
+/**
+ * A resource message representing a data stream.
+**/
+var GoogleAnalyticsAdminV1betaDataStream = /** @class */ (function (_super) {
+    __extends(GoogleAnalyticsAdminV1betaDataStream, _super);
+    function GoogleAnalyticsAdminV1betaDataStream() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidAppStreamData" }),
+        __metadata("design:type", googleanalyticsadminv1betadatastreamandroidappstreamdata_1.GoogleAnalyticsAdminV1betaDataStreamAndroidAppStreamData)
+    ], GoogleAnalyticsAdminV1betaDataStream.prototype, "androidAppStreamData", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaDataStream.prototype, "createTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaDataStream.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosAppStreamData" }),
+        __metadata("design:type", googleanalyticsadminv1betadatastreamiosappstreamdata_1.GoogleAnalyticsAdminV1betaDataStreamIosAppStreamData)
+    ], GoogleAnalyticsAdminV1betaDataStream.prototype, "iosAppStreamData", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaDataStream.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaDataStream.prototype, "type", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaDataStream.prototype, "updateTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webStreamData" }),
+        __metadata("design:type", googleanalyticsadminv1betadatastreamwebstreamdata_1.GoogleAnalyticsAdminV1betaDataStreamWebStreamData)
+    ], GoogleAnalyticsAdminV1betaDataStream.prototype, "webStreamData", void 0);
+    return GoogleAnalyticsAdminV1betaDataStream;
+}(utils_1.SpeakeasyBase));
+exports.GoogleAnalyticsAdminV1betaDataStream = GoogleAnalyticsAdminV1betaDataStream;
+// GoogleAnalyticsAdminV1betaDataStreamInput
+/**
+ * A resource message representing a data stream.
+**/
+var GoogleAnalyticsAdminV1betaDataStreamInput = /** @class */ (function (_super) {
+    __extends(GoogleAnalyticsAdminV1betaDataStreamInput, _super);
+    function GoogleAnalyticsAdminV1betaDataStreamInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidAppStreamData" }),
+        __metadata("design:type", googleanalyticsadminv1betadatastreamandroidappstreamdata_2.GoogleAnalyticsAdminV1betaDataStreamAndroidAppStreamDataInput)
+    ], GoogleAnalyticsAdminV1betaDataStreamInput.prototype, "androidAppStreamData", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaDataStreamInput.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosAppStreamData" }),
+        __metadata("design:type", googleanalyticsadminv1betadatastreamiosappstreamdata_2.GoogleAnalyticsAdminV1betaDataStreamIosAppStreamDataInput)
+    ], GoogleAnalyticsAdminV1betaDataStreamInput.prototype, "iosAppStreamData", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], GoogleAnalyticsAdminV1betaDataStreamInput.prototype, "type", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webStreamData" }),
+        __metadata("design:type", googleanalyticsadminv1betadatastreamwebstreamdata_2.GoogleAnalyticsAdminV1betaDataStreamWebStreamDataInput)
+    ], GoogleAnalyticsAdminV1betaDataStreamInput.prototype, "webStreamData", void 0);
+    return GoogleAnalyticsAdminV1betaDataStreamInput;
+}(utils_1.SpeakeasyBase));
+exports.GoogleAnalyticsAdminV1betaDataStreamInput = GoogleAnalyticsAdminV1betaDataStreamInput;

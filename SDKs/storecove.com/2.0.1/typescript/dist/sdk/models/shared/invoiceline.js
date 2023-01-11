@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdditionalItemProperty } from "./additionalitemproperty";
-import { Delivery } from "./delivery";
-import { Tax } from "./tax";
-export var InvoiceLineQuantityUnitCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InvoiceLine = exports.InvoiceLineQuantityUnitCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var additionalitemproperty_1 = require("./additionalitemproperty");
+var delivery_1 = require("./delivery");
+var tax_1 = require("./tax");
+var InvoiceLineQuantityUnitCodeEnum;
 (function (InvoiceLineQuantityUnitCodeEnum) {
     InvoiceLineQuantityUnitCodeEnum["Ten"] = "10";
     InvoiceLineQuantityUnitCodeEnum["Eleven"] = "11";
@@ -2505,92 +2508,92 @@ export var InvoiceLineQuantityUnitCodeEnum;
     InvoiceLineQuantityUnitCodeEnum["Z5"] = "Z5";
     InvoiceLineQuantityUnitCodeEnum["Z6"] = "Z6";
     InvoiceLineQuantityUnitCodeEnum["Z8"] = "Z8";
-})(InvoiceLineQuantityUnitCodeEnum || (InvoiceLineQuantityUnitCodeEnum = {}));
+})(InvoiceLineQuantityUnitCodeEnum = exports.InvoiceLineQuantityUnitCodeEnum || (exports.InvoiceLineQuantityUnitCodeEnum = {}));
 var InvoiceLine = /** @class */ (function (_super) {
     __extends(InvoiceLine, _super);
     function InvoiceLine() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountingCost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountingCost" }),
         __metadata("design:type", String)
     ], InvoiceLine.prototype, "accountingCost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalItemProperties", elemType: AdditionalItemProperty }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalItemProperties", elemType: additionalitemproperty_1.AdditionalItemProperty }),
         __metadata("design:type", Array)
     ], InvoiceLine.prototype, "additionalItemProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowanceCharge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowanceCharge" }),
         __metadata("design:type", Number)
     ], InvoiceLine.prototype, "allowanceCharge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountExcludingVat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountExcludingVat" }),
         __metadata("design:type", Number)
     ], InvoiceLine.prototype, "amountExcludingVat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buyersItemIdentification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buyersItemIdentification" }),
         __metadata("design:type", String)
     ], InvoiceLine.prototype, "buyersItemIdentification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delivery" }),
-        __metadata("design:type", Delivery)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delivery" }),
+        __metadata("design:type", delivery_1.Delivery)
     ], InvoiceLine.prototype, "delivery", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], InvoiceLine.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invoicePeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoicePeriod" }),
         __metadata("design:type", String)
     ], InvoiceLine.prototype, "invoicePeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemPrice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemPrice" }),
         __metadata("design:type", Number)
     ], InvoiceLine.prototype, "itemPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineId" }),
         __metadata("design:type", String)
     ], InvoiceLine.prototype, "lineId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], InvoiceLine.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderLineReferenceLineId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderLineReferenceLineId" }),
         __metadata("design:type", String)
     ], InvoiceLine.prototype, "orderLineReferenceLineId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantity" }),
         __metadata("design:type", Number)
     ], InvoiceLine.prototype, "quantity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantityUnitCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantityUnitCode" }),
         __metadata("design:type", String)
     ], InvoiceLine.prototype, "quantityUnitCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sellersItemIdentification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sellersItemIdentification" }),
         __metadata("design:type", String)
     ], InvoiceLine.prototype, "sellersItemIdentification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=standardItemIdentification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=standardItemIdentification" }),
         __metadata("design:type", String)
     ], InvoiceLine.prototype, "standardItemIdentification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=standardItemIdentificationSchemeAgencyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=standardItemIdentificationSchemeAgencyId" }),
         __metadata("design:type", String)
     ], InvoiceLine.prototype, "standardItemIdentificationSchemeAgencyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=standardItemIdentificationSchemeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=standardItemIdentificationSchemeId" }),
         __metadata("design:type", String)
     ], InvoiceLine.prototype, "standardItemIdentificationSchemeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tax" }),
-        __metadata("design:type", Tax)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tax" }),
+        __metadata("design:type", tax_1.Tax)
     ], InvoiceLine.prototype, "tax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxes_duties_fees", elemType: Tax }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxes_duties_fees", elemType: tax_1.Tax }),
         __metadata("design:type", Array)
     ], InvoiceLine.prototype, "taxesDutiesFees", void 0);
     return InvoiceLine;
-}(SpeakeasyBase));
-export { InvoiceLine };
+}(utils_1.SpeakeasyBase));
+exports.InvoiceLine = InvoiceLine;

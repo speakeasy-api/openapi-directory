@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,98 +23,100 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkSwitchQosRuleResponse = exports.UpdateNetworkSwitchQosRuleRequest = exports.UpdateNetworkSwitchQosRuleRequestBody = exports.UpdateNetworkSwitchQosRuleRequestBodyProtocolEnum = exports.UpdateNetworkSwitchQosRulePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkSwitchQosRulePathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchQosRulePathParams, _super);
     function UpdateNetworkSwitchQosRulePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchQosRulePathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=qosRuleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=qosRuleId" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchQosRulePathParams.prototype, "qosRuleId", void 0);
     return UpdateNetworkSwitchQosRulePathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchQosRulePathParams };
-export var UpdateNetworkSwitchQosRuleRequestBodyProtocolEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchQosRulePathParams = UpdateNetworkSwitchQosRulePathParams;
+var UpdateNetworkSwitchQosRuleRequestBodyProtocolEnum;
 (function (UpdateNetworkSwitchQosRuleRequestBodyProtocolEnum) {
     UpdateNetworkSwitchQosRuleRequestBodyProtocolEnum["Any"] = "ANY";
     UpdateNetworkSwitchQosRuleRequestBodyProtocolEnum["Tcp"] = "TCP";
     UpdateNetworkSwitchQosRuleRequestBodyProtocolEnum["Udp"] = "UDP";
-})(UpdateNetworkSwitchQosRuleRequestBodyProtocolEnum || (UpdateNetworkSwitchQosRuleRequestBodyProtocolEnum = {}));
+})(UpdateNetworkSwitchQosRuleRequestBodyProtocolEnum = exports.UpdateNetworkSwitchQosRuleRequestBodyProtocolEnum || (exports.UpdateNetworkSwitchQosRuleRequestBodyProtocolEnum = {}));
 var UpdateNetworkSwitchQosRuleRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchQosRuleRequestBody, _super);
     function UpdateNetworkSwitchQosRuleRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dscp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dscp" }),
         __metadata("design:type", Number)
     ], UpdateNetworkSwitchQosRuleRequestBody.prototype, "dscp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dstPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dstPort" }),
         __metadata("design:type", Number)
     ], UpdateNetworkSwitchQosRuleRequestBody.prototype, "dstPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dstPortRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dstPortRange" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchQosRuleRequestBody.prototype, "dstPortRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchQosRuleRequestBody.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=srcPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=srcPort" }),
         __metadata("design:type", Number)
     ], UpdateNetworkSwitchQosRuleRequestBody.prototype, "srcPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=srcPortRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=srcPortRange" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchQosRuleRequestBody.prototype, "srcPortRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlan" }),
         __metadata("design:type", Number)
     ], UpdateNetworkSwitchQosRuleRequestBody.prototype, "vlan", void 0);
     return UpdateNetworkSwitchQosRuleRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchQosRuleRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchQosRuleRequestBody = UpdateNetworkSwitchQosRuleRequestBody;
 var UpdateNetworkSwitchQosRuleRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchQosRuleRequest, _super);
     function UpdateNetworkSwitchQosRuleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkSwitchQosRulePathParams)
     ], UpdateNetworkSwitchQosRuleRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkSwitchQosRuleRequestBody)
     ], UpdateNetworkSwitchQosRuleRequest.prototype, "request", void 0);
     return UpdateNetworkSwitchQosRuleRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchQosRuleRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchQosRuleRequest = UpdateNetworkSwitchQosRuleRequest;
 var UpdateNetworkSwitchQosRuleResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchQosRuleResponse, _super);
     function UpdateNetworkSwitchQosRuleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchQosRuleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkSwitchQosRuleResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkSwitchQosRuleResponse.prototype, "updateNetworkSwitchQosRule200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkSwitchQosRuleResponse.prototype, "updateNetworkSwitchQosRule200ApplicationJSONObject", void 0);
     return UpdateNetworkSwitchQosRuleResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchQosRuleResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchQosRuleResponse = UpdateNetworkSwitchQosRuleResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetConsumerV1AppointmentsResponse = exports.GetConsumerV1AppointmentsRequest = exports.GetConsumerV1AppointmentsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetConsumerV1AppointmentsQueryParams = /** @class */ (function (_super) {
     __extends(GetConsumerV1AppointmentsQueryParams, _super);
     function GetConsumerV1AppointmentsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=bookedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=bookedBy" }),
         __metadata("design:type", String)
     ], GetConsumerV1AppointmentsQueryParams.prototype, "bookedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=calendarId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=calendarId" }),
         __metadata("design:type", String)
     ], GetConsumerV1AppointmentsQueryParams.prototype, "calendarId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=customerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=customerId" }),
         __metadata("design:type", String)
     ], GetConsumerV1AppointmentsQueryParams.prototype, "customerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=email" }),
         __metadata("design:type", String)
     ], GetConsumerV1AppointmentsQueryParams.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endDate" }),
         __metadata("design:type", Date)
     ], GetConsumerV1AppointmentsQueryParams.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=lastname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=lastname" }),
         __metadata("design:type", String)
     ], GetConsumerV1AppointmentsQueryParams.prototype, "lastname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetConsumerV1AppointmentsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=locationId" }),
         __metadata("design:type", String)
     ], GetConsumerV1AppointmentsQueryParams.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], GetConsumerV1AppointmentsQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=phone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=phone" }),
         __metadata("design:type", String)
     ], GetConsumerV1AppointmentsQueryParams.prototype, "phone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=resourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=resourceId" }),
         __metadata("design:type", String)
     ], GetConsumerV1AppointmentsQueryParams.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=serviceAllocationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=serviceAllocationId" }),
         __metadata("design:type", String)
     ], GetConsumerV1AppointmentsQueryParams.prototype, "serviceAllocationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=serviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=serviceId" }),
         __metadata("design:type", String)
     ], GetConsumerV1AppointmentsQueryParams.prototype, "serviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startDate" }),
         __metadata("design:type", Date)
     ], GetConsumerV1AppointmentsQueryParams.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=status" }),
         __metadata("design:type", String)
     ], GetConsumerV1AppointmentsQueryParams.prototype, "status", void 0);
     return GetConsumerV1AppointmentsQueryParams;
-}(SpeakeasyBase));
-export { GetConsumerV1AppointmentsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetConsumerV1AppointmentsQueryParams = GetConsumerV1AppointmentsQueryParams;
 var GetConsumerV1AppointmentsRequest = /** @class */ (function (_super) {
     __extends(GetConsumerV1AppointmentsRequest, _super);
     function GetConsumerV1AppointmentsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetConsumerV1AppointmentsQueryParams)
     ], GetConsumerV1AppointmentsRequest.prototype, "queryParams", void 0);
     return GetConsumerV1AppointmentsRequest;
-}(SpeakeasyBase));
-export { GetConsumerV1AppointmentsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetConsumerV1AppointmentsRequest = GetConsumerV1AppointmentsRequest;
 var GetConsumerV1AppointmentsResponse = /** @class */ (function (_super) {
     __extends(GetConsumerV1AppointmentsResponse, _super);
     function GetConsumerV1AppointmentsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetConsumerV1AppointmentsResponse.prototype, "appointmentListViewModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetConsumerV1AppointmentsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetConsumerV1AppointmentsResponse.prototype, "statusCode", void 0);
     return GetConsumerV1AppointmentsResponse;
-}(SpeakeasyBase));
-export { GetConsumerV1AppointmentsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetConsumerV1AppointmentsResponse = GetConsumerV1AppointmentsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetOccupantsWithinOutputFormatOutputFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOccupantsWithinOutputFormatResponse = exports.GetOccupantsWithinOutputFormatRequest = exports.GetOccupantsWithinOutputFormatQueryParams = exports.GetOccupantsWithinOutputFormatLocationDescriptorEnum = exports.GetOccupantsWithinOutputFormatPathParams = exports.GetOccupantsWithinOutputFormatOutputFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetOccupantsWithinOutputFormatOutputFormatEnum;
 (function (GetOccupantsWithinOutputFormatOutputFormatEnum) {
     GetOccupantsWithinOutputFormatOutputFormatEnum["Json"] = "json";
     GetOccupantsWithinOutputFormatOutputFormatEnum["Geojson"] = "geojson";
@@ -32,20 +35,20 @@ export var GetOccupantsWithinOutputFormatOutputFormatEnum;
     GetOccupantsWithinOutputFormatOutputFormatEnum["Gml"] = "gml";
     GetOccupantsWithinOutputFormatOutputFormatEnum["Csv"] = "csv";
     GetOccupantsWithinOutputFormatOutputFormatEnum["Shpz"] = "shpz";
-})(GetOccupantsWithinOutputFormatOutputFormatEnum || (GetOccupantsWithinOutputFormatOutputFormatEnum = {}));
+})(GetOccupantsWithinOutputFormatOutputFormatEnum = exports.GetOccupantsWithinOutputFormatOutputFormatEnum || (exports.GetOccupantsWithinOutputFormatOutputFormatEnum = {}));
 var GetOccupantsWithinOutputFormatPathParams = /** @class */ (function (_super) {
     __extends(GetOccupantsWithinOutputFormatPathParams, _super);
     function GetOccupantsWithinOutputFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
         __metadata("design:type", String)
     ], GetOccupantsWithinOutputFormatPathParams.prototype, "outputFormat", void 0);
     return GetOccupantsWithinOutputFormatPathParams;
-}(SpeakeasyBase));
-export { GetOccupantsWithinOutputFormatPathParams };
-export var GetOccupantsWithinOutputFormatLocationDescriptorEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetOccupantsWithinOutputFormatPathParams = GetOccupantsWithinOutputFormatPathParams;
+var GetOccupantsWithinOutputFormatLocationDescriptorEnum;
 (function (GetOccupantsWithinOutputFormatLocationDescriptorEnum) {
     GetOccupantsWithinOutputFormatLocationDescriptorEnum["Any"] = "any";
     GetOccupantsWithinOutputFormatLocationDescriptorEnum["AccessPoint"] = "accessPoint";
@@ -53,72 +56,72 @@ export var GetOccupantsWithinOutputFormatLocationDescriptorEnum;
     GetOccupantsWithinOutputFormatLocationDescriptorEnum["ParcelPoint"] = "parcelPoint";
     GetOccupantsWithinOutputFormatLocationDescriptorEnum["RooftopPoint"] = "rooftopPoint";
     GetOccupantsWithinOutputFormatLocationDescriptorEnum["RoutingPoint"] = "routingPoint";
-})(GetOccupantsWithinOutputFormatLocationDescriptorEnum || (GetOccupantsWithinOutputFormatLocationDescriptorEnum = {}));
+})(GetOccupantsWithinOutputFormatLocationDescriptorEnum = exports.GetOccupantsWithinOutputFormatLocationDescriptorEnum || (exports.GetOccupantsWithinOutputFormatLocationDescriptorEnum = {}));
 var GetOccupantsWithinOutputFormatQueryParams = /** @class */ (function (_super) {
     __extends(GetOccupantsWithinOutputFormatQueryParams, _super);
     function GetOccupantsWithinOutputFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=bbox" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=bbox" }),
         __metadata("design:type", String)
     ], GetOccupantsWithinOutputFormatQueryParams.prototype, "bbox", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=brief" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=brief" }),
         __metadata("design:type", Boolean)
     ], GetOccupantsWithinOutputFormatQueryParams.prototype, "brief", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=locationDescriptor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=locationDescriptor" }),
         __metadata("design:type", String)
     ], GetOccupantsWithinOutputFormatQueryParams.prototype, "locationDescriptor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxResults" }),
         __metadata("design:type", Number)
     ], GetOccupantsWithinOutputFormatQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
         __metadata("design:type", Number)
-    ], GetOccupantsWithinOutputFormatQueryParams.prototype, "outputSrs", void 0);
+    ], GetOccupantsWithinOutputFormatQueryParams.prototype, "outputSRS", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=setBack" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=setBack" }),
         __metadata("design:type", Number)
     ], GetOccupantsWithinOutputFormatQueryParams.prototype, "setBack", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tags" }),
         __metadata("design:type", String)
     ], GetOccupantsWithinOutputFormatQueryParams.prototype, "tags", void 0);
     return GetOccupantsWithinOutputFormatQueryParams;
-}(SpeakeasyBase));
-export { GetOccupantsWithinOutputFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOccupantsWithinOutputFormatQueryParams = GetOccupantsWithinOutputFormatQueryParams;
 var GetOccupantsWithinOutputFormatRequest = /** @class */ (function (_super) {
     __extends(GetOccupantsWithinOutputFormatRequest, _super);
     function GetOccupantsWithinOutputFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOccupantsWithinOutputFormatPathParams)
     ], GetOccupantsWithinOutputFormatRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOccupantsWithinOutputFormatQueryParams)
     ], GetOccupantsWithinOutputFormatRequest.prototype, "queryParams", void 0);
     return GetOccupantsWithinOutputFormatRequest;
-}(SpeakeasyBase));
-export { GetOccupantsWithinOutputFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOccupantsWithinOutputFormatRequest = GetOccupantsWithinOutputFormatRequest;
 var GetOccupantsWithinOutputFormatResponse = /** @class */ (function (_super) {
     __extends(GetOccupantsWithinOutputFormatResponse, _super);
     function GetOccupantsWithinOutputFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOccupantsWithinOutputFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOccupantsWithinOutputFormatResponse.prototype, "statusCode", void 0);
     return GetOccupantsWithinOutputFormatResponse;
-}(SpeakeasyBase));
-export { GetOccupantsWithinOutputFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOccupantsWithinOutputFormatResponse = GetOccupantsWithinOutputFormatResponse;

@@ -17,5 +17,5 @@ export declare class DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequ
 export declare class DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

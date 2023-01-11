@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SupportedConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
 // SupportedConfiguration
 /**
  * An array that defines the configuration supported by this template. This includes specified properties and usage (whether the property is REQUIRED or OPTIONAL), and an optional default value.
@@ -33,17 +36,17 @@ var SupportedConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultValue" }),
         __metadata("design:type", String)
     ], SupportedConfiguration.prototype, "defaultValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=property" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=property" }),
         __metadata("design:type", String)
     ], SupportedConfiguration.prototype, "property", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usage" }),
         __metadata("design:type", String)
     ], SupportedConfiguration.prototype, "usage", void 0);
     return SupportedConfiguration;
-}(SpeakeasyBase));
-export { SupportedConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.SupportedConfiguration = SupportedConfiguration;

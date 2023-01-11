@@ -8,5 +8,5 @@ export declare class GetInformTimeoutRequest extends SpeakeasyBase {
 export declare class GetInformTimeoutResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getInformTimeout200ApplicationJsonInt32Integer?: number;
+    getInformTimeout200ApplicationJSONInt32Integer?: number;
 }

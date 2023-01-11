@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BackupContext } from "./backupcontext";
-import { OperationErrors } from "./operationerrors";
-import { ExportContext } from "./exportcontext";
-import { ImportContext } from "./importcontext";
-export var OperationOperationTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Operation = exports.OperationStatusEnum = exports.OperationOperationTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var backupcontext_1 = require("./backupcontext");
+var operationerrors_1 = require("./operationerrors");
+var exportcontext_1 = require("./exportcontext");
+var importcontext_1 = require("./importcontext");
+var OperationOperationTypeEnum;
 (function (OperationOperationTypeEnum) {
     OperationOperationTypeEnum["SqlOperationTypeUnspecified"] = "SQL_OPERATION_TYPE_UNSPECIFIED";
     OperationOperationTypeEnum["Import"] = "IMPORT";
@@ -66,14 +69,14 @@ export var OperationOperationTypeEnum;
     OperationOperationTypeEnum["StartExternalSync"] = "START_EXTERNAL_SYNC";
     OperationOperationTypeEnum["LogCleanup"] = "LOG_CLEANUP";
     OperationOperationTypeEnum["AutoRestart"] = "AUTO_RESTART";
-})(OperationOperationTypeEnum || (OperationOperationTypeEnum = {}));
-export var OperationStatusEnum;
+})(OperationOperationTypeEnum = exports.OperationOperationTypeEnum || (exports.OperationOperationTypeEnum = {}));
+var OperationStatusEnum;
 (function (OperationStatusEnum) {
     OperationStatusEnum["SqlOperationStatusUnspecified"] = "SQL_OPERATION_STATUS_UNSPECIFIED";
     OperationStatusEnum["Pending"] = "PENDING";
     OperationStatusEnum["Running"] = "RUNNING";
     OperationStatusEnum["Done"] = "DONE";
-})(OperationStatusEnum || (OperationStatusEnum = {}));
+})(OperationStatusEnum = exports.OperationStatusEnum || (exports.OperationStatusEnum = {}));
 // Operation
 /**
  * An Operation resource. For successful operations that return an Operation resource, only the fields relevant to the operation are populated in the resource.
@@ -84,69 +87,69 @@ var Operation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backupContext" }),
-        __metadata("design:type", BackupContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backupContext" }),
+        __metadata("design:type", backupcontext_1.BackupContext)
     ], Operation.prototype, "backupContext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], Operation.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", OperationErrors)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", operationerrors_1.OperationErrors)
     ], Operation.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exportContext" }),
-        __metadata("design:type", ExportContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exportContext" }),
+        __metadata("design:type", exportcontext_1.ExportContext)
     ], Operation.prototype, "exportContext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importContext" }),
-        __metadata("design:type", ImportContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importContext" }),
+        __metadata("design:type", importcontext_1.ImportContext)
     ], Operation.prototype, "importContext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insertTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insertTime" }),
         __metadata("design:type", String)
     ], Operation.prototype, "insertTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Operation.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Operation.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operationType" }),
         __metadata("design:type", String)
     ], Operation.prototype, "operationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Operation.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], Operation.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Operation.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetId" }),
         __metadata("design:type", String)
     ], Operation.prototype, "targetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetLink" }),
         __metadata("design:type", String)
     ], Operation.prototype, "targetLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetProject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetProject" }),
         __metadata("design:type", String)
     ], Operation.prototype, "targetProject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
         __metadata("design:type", String)
     ], Operation.prototype, "user", void 0);
     return Operation;
-}(SpeakeasyBase));
-export { Operation };
+}(utils_1.SpeakeasyBase));
+exports.Operation = Operation;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContainerServiceHealthCheckConfig } from "./containerservicehealthcheckconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var containerservicehealthcheckconfig_1 = require("./containerservicehealthcheckconfig");
 // EndpointRequest
 /**
  * Describes the settings of a public endpoint for an Amazon Lightsail container service.
@@ -34,17 +37,17 @@ var EndpointRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerName" }),
         __metadata("design:type", String)
     ], EndpointRequest.prototype, "containerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerPort" }),
         __metadata("design:type", Number)
     ], EndpointRequest.prototype, "containerPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthCheck" }),
-        __metadata("design:type", ContainerServiceHealthCheckConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthCheck" }),
+        __metadata("design:type", containerservicehealthcheckconfig_1.ContainerServiceHealthCheckConfig)
     ], EndpointRequest.prototype, "healthCheck", void 0);
     return EndpointRequest;
-}(SpeakeasyBase));
-export { EndpointRequest };
+}(utils_1.SpeakeasyBase));
+exports.EndpointRequest = EndpointRequest;

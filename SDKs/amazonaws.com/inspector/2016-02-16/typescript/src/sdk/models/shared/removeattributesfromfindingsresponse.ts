@@ -5,5 +5,5 @@ import { FailedItemDetails } from "./faileditemdetails";
 
 export class RemoveAttributesFromFindingsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=failedItems", elemType: FailedItemDetails })
-  failedItems: Map<string, FailedItemDetails>;
+  failedItems: Record<string, FailedItemDetails>;
 }

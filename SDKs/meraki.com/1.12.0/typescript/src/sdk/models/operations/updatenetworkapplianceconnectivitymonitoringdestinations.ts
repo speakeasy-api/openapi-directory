@@ -43,5 +43,5 @@ export class UpdateNetworkApplianceConnectivityMonitoringDestinationsResponse ex
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkApplianceConnectivityMonitoringDestinations200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkApplianceConnectivityMonitoringDestinations200ApplicationJSONObject?: Record<string, any>;
 }

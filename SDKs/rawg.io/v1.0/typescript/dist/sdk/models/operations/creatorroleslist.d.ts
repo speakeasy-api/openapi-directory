@@ -16,5 +16,5 @@ export declare class CreatorRolesListRequest extends SpeakeasyBase {
 export declare class CreatorRolesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    creatorRolesList200ApplicationJsonObject?: CreatorRolesList200ApplicationJson;
+    creatorRolesList200ApplicationJSONObject?: CreatorRolesList200ApplicationJson;
 }

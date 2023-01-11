@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPrincipalTagAttributeMapResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPrincipalTagAttributeMapResponse = /** @class */ (function (_super) {
     __extends(GetPrincipalTagAttributeMapResponse, _super);
     function GetPrincipalTagAttributeMapResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentityPoolId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentityPoolId" }),
         __metadata("design:type", String)
     ], GetPrincipalTagAttributeMapResponse.prototype, "identityPoolId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentityProviderName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentityProviderName" }),
         __metadata("design:type", String)
     ], GetPrincipalTagAttributeMapResponse.prototype, "identityProviderName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PrincipalTags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PrincipalTags" }),
+        __metadata("design:type", Object)
     ], GetPrincipalTagAttributeMapResponse.prototype, "principalTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UseDefaults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UseDefaults" }),
         __metadata("design:type", Boolean)
     ], GetPrincipalTagAttributeMapResponse.prototype, "useDefaults", void 0);
     return GetPrincipalTagAttributeMapResponse;
-}(SpeakeasyBase));
-export { GetPrincipalTagAttributeMapResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPrincipalTagAttributeMapResponse = GetPrincipalTagAttributeMapResponse;

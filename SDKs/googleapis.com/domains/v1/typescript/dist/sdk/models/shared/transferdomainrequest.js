@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthorizationCode } from "./authorizationcode";
-import { RegistrationInput } from "./registration";
-import { Money } from "./money";
-export var TransferDomainRequestContactNoticesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransferDomainRequestInput = exports.TransferDomainRequestContactNoticesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var authorizationcode_1 = require("./authorizationcode");
+var registration_1 = require("./registration");
+var money_1 = require("./money");
+var TransferDomainRequestContactNoticesEnum;
 (function (TransferDomainRequestContactNoticesEnum) {
     TransferDomainRequestContactNoticesEnum["ContactNoticeUnspecified"] = "CONTACT_NOTICE_UNSPECIFIED";
     TransferDomainRequestContactNoticesEnum["PublicContactDataAcknowledgement"] = "PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT";
-})(TransferDomainRequestContactNoticesEnum || (TransferDomainRequestContactNoticesEnum = {}));
+})(TransferDomainRequestContactNoticesEnum = exports.TransferDomainRequestContactNoticesEnum || (exports.TransferDomainRequestContactNoticesEnum = {}));
 // TransferDomainRequestInput
 /**
  * Request for the `TransferDomain` method.
@@ -41,25 +44,25 @@ var TransferDomainRequestInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorizationCode" }),
-        __metadata("design:type", AuthorizationCode)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorizationCode" }),
+        __metadata("design:type", authorizationcode_1.AuthorizationCode)
     ], TransferDomainRequestInput.prototype, "authorizationCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contactNotices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contactNotices" }),
         __metadata("design:type", Array)
     ], TransferDomainRequestInput.prototype, "contactNotices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registration" }),
-        __metadata("design:type", RegistrationInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registration" }),
+        __metadata("design:type", registration_1.RegistrationInput)
     ], TransferDomainRequestInput.prototype, "registration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validateOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validateOnly" }),
         __metadata("design:type", Boolean)
     ], TransferDomainRequestInput.prototype, "validateOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=yearlyPrice" }),
-        __metadata("design:type", Money)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=yearlyPrice" }),
+        __metadata("design:type", money_1.Money)
     ], TransferDomainRequestInput.prototype, "yearlyPrice", void 0);
     return TransferDomainRequestInput;
-}(SpeakeasyBase));
-export { TransferDomainRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.TransferDomainRequestInput = TransferDomainRequestInput;

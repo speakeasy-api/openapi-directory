@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteNetworkApplianceStaticRouteResponse = exports.DeleteNetworkApplianceStaticRouteRequest = exports.DeleteNetworkApplianceStaticRoutePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteNetworkApplianceStaticRoutePathParams = /** @class */ (function (_super) {
     __extends(DeleteNetworkApplianceStaticRoutePathParams, _super);
     function DeleteNetworkApplianceStaticRoutePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], DeleteNetworkApplianceStaticRoutePathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=staticRouteId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=staticRouteId" }),
         __metadata("design:type", String)
     ], DeleteNetworkApplianceStaticRoutePathParams.prototype, "staticRouteId", void 0);
     return DeleteNetworkApplianceStaticRoutePathParams;
-}(SpeakeasyBase));
-export { DeleteNetworkApplianceStaticRoutePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkApplianceStaticRoutePathParams = DeleteNetworkApplianceStaticRoutePathParams;
 var DeleteNetworkApplianceStaticRouteRequest = /** @class */ (function (_super) {
     __extends(DeleteNetworkApplianceStaticRouteRequest, _super);
     function DeleteNetworkApplianceStaticRouteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteNetworkApplianceStaticRoutePathParams)
     ], DeleteNetworkApplianceStaticRouteRequest.prototype, "pathParams", void 0);
     return DeleteNetworkApplianceStaticRouteRequest;
-}(SpeakeasyBase));
-export { DeleteNetworkApplianceStaticRouteRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkApplianceStaticRouteRequest = DeleteNetworkApplianceStaticRouteRequest;
 var DeleteNetworkApplianceStaticRouteResponse = /** @class */ (function (_super) {
     __extends(DeleteNetworkApplianceStaticRouteResponse, _super);
     function DeleteNetworkApplianceStaticRouteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteNetworkApplianceStaticRouteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteNetworkApplianceStaticRouteResponse.prototype, "statusCode", void 0);
     return DeleteNetworkApplianceStaticRouteResponse;
-}(SpeakeasyBase));
-export { DeleteNetworkApplianceStaticRouteResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkApplianceStaticRouteResponse = DeleteNetworkApplianceStaticRouteResponse;

@@ -24,5 +24,5 @@ export declare class DeleteDataSourceRequest extends SpeakeasyBase {
 export declare class DeleteDataSourceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteDataSource200ApplicationJsonObject?: DeleteDataSource200ApplicationJson;
+    deleteDataSource200ApplicationJSONObject?: DeleteDataSource200ApplicationJson;
 }

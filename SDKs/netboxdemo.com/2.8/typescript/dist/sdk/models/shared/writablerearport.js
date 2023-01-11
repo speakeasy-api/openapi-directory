@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedCableInput } from "./nestedcable";
-export var WritableRearPortTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritableRearPortInput = exports.WritableRearPortTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedcable_1 = require("./nestedcable");
+var WritableRearPortTypeEnum;
 (function (WritableRearPortTypeEnum) {
     WritableRearPortTypeEnum["Eightp8c"] = "8p8c";
     WritableRearPortTypeEnum["OneHundredAndTenPunch"] = "110-punch";
@@ -40,40 +43,40 @@ export var WritableRearPortTypeEnum;
     WritableRearPortTypeEnum["Sc"] = "sc";
     WritableRearPortTypeEnum["ScApc"] = "sc-apc";
     WritableRearPortTypeEnum["St"] = "st";
-})(WritableRearPortTypeEnum || (WritableRearPortTypeEnum = {}));
+})(WritableRearPortTypeEnum = exports.WritableRearPortTypeEnum || (exports.WritableRearPortTypeEnum = {}));
 var WritableRearPortInput = /** @class */ (function (_super) {
     __extends(WritableRearPortInput, _super);
     function WritableRearPortInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cable" }),
-        __metadata("design:type", NestedCableInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cable" }),
+        __metadata("design:type", nestedcable_1.NestedCableInput)
     ], WritableRearPortInput.prototype, "cable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], WritableRearPortInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device" }),
         __metadata("design:type", Number)
     ], WritableRearPortInput.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WritableRearPortInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=positions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=positions" }),
         __metadata("design:type", Number)
     ], WritableRearPortInput.prototype, "positions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], WritableRearPortInput.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], WritableRearPortInput.prototype, "type", void 0);
     return WritableRearPortInput;
-}(SpeakeasyBase));
-export { WritableRearPortInput };
+}(utils_1.SpeakeasyBase));
+exports.WritableRearPortInput = WritableRearPortInput;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolTelnetServerGetStateResponse = exports.ProtocolTelnetServerGetStateRequest = exports.ProtocolTelnetServerGetStatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolTelnetServerGetStatePathParams = /** @class */ (function (_super) {
     __extends(ProtocolTelnetServerGetStatePathParams, _super);
     function ProtocolTelnetServerGetStatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolTelnetServerGetStatePathParams.prototype, "agentNum", void 0);
     return ProtocolTelnetServerGetStatePathParams;
-}(SpeakeasyBase));
-export { ProtocolTelnetServerGetStatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetServerGetStatePathParams = ProtocolTelnetServerGetStatePathParams;
 var ProtocolTelnetServerGetStateRequest = /** @class */ (function (_super) {
     __extends(ProtocolTelnetServerGetStateRequest, _super);
     function ProtocolTelnetServerGetStateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolTelnetServerGetStatePathParams)
     ], ProtocolTelnetServerGetStateRequest.prototype, "pathParams", void 0);
     return ProtocolTelnetServerGetStateRequest;
-}(SpeakeasyBase));
-export { ProtocolTelnetServerGetStateRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetServerGetStateRequest = ProtocolTelnetServerGetStateRequest;
 var ProtocolTelnetServerGetStateResponse = /** @class */ (function (_super) {
     __extends(ProtocolTelnetServerGetStateResponse, _super);
     function ProtocolTelnetServerGetStateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolTelnetServerGetStateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolTelnetServerGetStateResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolTelnetServerGetStateResponse.prototype, "protocolTelnetServerGetState200ApplicationJsonInt32Integers", void 0);
+    ], ProtocolTelnetServerGetStateResponse.prototype, "protocolTelnetServerGetState200ApplicationJSONInt32Integers", void 0);
     return ProtocolTelnetServerGetStateResponse;
-}(SpeakeasyBase));
-export { ProtocolTelnetServerGetStateResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetServerGetStateResponse = ProtocolTelnetServerGetStateResponse;

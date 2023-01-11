@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PreviewsReadRequest, PreviewsReadResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     token: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,11 +33,11 @@ const sdk = new SDK(WithSecurity(
     
 const req: PreviewsReadRequest = {
   pathParams: {
-    fileId: "quidem",
+    fileId: "sit",
   },
 };
 
-sdk.sdk.previewsRead(req).then((res: PreviewsReadResponse | AxiosError) => {
+sdk.previews.previewsRead(req).then((res: PreviewsReadResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -47,17 +46,32 @@ sdk.sdk.previewsRead(req).then((res: PreviewsReadResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### previews
 
 * `previewsRead` - Get preview image of uploaded file
+
+### processes
+
 * `processesList` - Get process list.
+
+### projects
+
 * `projectsCreate` - Create a new project.
 * `projectsList` - Get user project list.
 * `projectsRead` - Get project details.
+
+### reports
+
 * `reportsCreate` - Create a new report.
 * `reportsList` - Get user report list.
 * `reportsRead` - Get report details.
+
+### results
+
 * `resultsRead` - Get the result from image processing
+
+### uploads
+
 * `uploadsCreate` - Upload a new image
 
 <!-- End SDK Available Operations -->

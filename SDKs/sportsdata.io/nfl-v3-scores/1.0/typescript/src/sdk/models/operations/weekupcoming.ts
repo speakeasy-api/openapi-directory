@@ -27,5 +27,5 @@ export class WeekUpcomingResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  weekUpcoming200ApplicationJsonInteger?: number;
+  weekUpcoming200ApplicationJSONInteger?: number;
 }

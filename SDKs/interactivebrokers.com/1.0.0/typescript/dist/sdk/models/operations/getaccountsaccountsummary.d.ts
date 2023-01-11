@@ -18,23 +18,23 @@ export declare class GetAccountsAccountSummary200ApplicationJsonInfo extends Spe
     segmentTitleC?: string;
     segmentTitleS?: string;
     tradingTypeS?: string;
-    whatIfPmEnabled?: string;
+    whatIfPMEnabled?: string;
 }
 export declare class GetAccountsAccountSummary200ApplicationJsonLedger extends SpeakeasyBase {
     cashBalance?: number;
-    cashBalanceFxSegment?: number;
+    cashBalanceFXSegment?: number;
     cashCumQty?: number;
     exchangeRate?: number;
     futureOptionMarketValue?: number;
-    futurePnl?: number;
+    futurePNL?: number;
     netDividend?: number;
     netInterest?: number;
     netLiquidation?: number;
     optionMarketValue?: number;
-    realizedPnl?: number;
+    realizedPNL?: number;
     stockMarketValue?: number;
     totalCashBalance?: number;
-    unrealizedPnl?: number;
+    unrealizedPNL?: number;
 }
 export declare class GetAccountsAccountSummary200ApplicationJsonSummary extends SpeakeasyBase {
     accruedCash?: number;
@@ -128,6 +128,6 @@ export declare class GetAccountsAccountSummaryRequest extends SpeakeasyBase {
 }
 export declare class GetAccountsAccountSummaryResponse extends SpeakeasyBase {
     contentType: string;
-    getAccountsAccountSummary200ApplicationJsonObject?: GetAccountsAccountSummary200ApplicationJson;
     statusCode: number;
+    getAccountsAccountSummary200ApplicationJSONObject?: GetAccountsAccountSummary200ApplicationJson;
 }

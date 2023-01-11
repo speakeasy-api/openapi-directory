@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObReadDataStatement2 } from "./obreaddatastatement2";
-import { Links } from "./links";
-import { Meta } from "./meta";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObReadStatement2 = void 0;
+var utils_1 = require("../../../internal/utils");
+var obreaddatastatement2_1 = require("./obreaddatastatement2");
+var links_1 = require("./links");
+var meta_1 = require("./meta");
 var ObReadStatement2 = /** @class */ (function (_super) {
     __extends(ObReadStatement2, _super);
     function ObReadStatement2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Data" }),
-        __metadata("design:type", ObReadDataStatement2)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Data" }),
+        __metadata("design:type", obreaddatastatement2_1.ObReadDataStatement2)
     ], ObReadStatement2.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Links" }),
-        __metadata("design:type", Links)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Links" }),
+        __metadata("design:type", links_1.Links)
     ], ObReadStatement2.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Meta" }),
-        __metadata("design:type", Meta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Meta" }),
+        __metadata("design:type", meta_1.Meta)
     ], ObReadStatement2.prototype, "meta", void 0);
     return ObReadStatement2;
-}(SpeakeasyBase));
-export { ObReadStatement2 };
+}(utils_1.SpeakeasyBase));
+exports.ObReadStatement2 = ObReadStatement2;

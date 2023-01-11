@@ -10,7 +10,7 @@ export class CreateOrganizationActionBatchPathParams extends SpeakeasyBase {
 
 export class CreateOrganizationActionBatchRequestBodyActions extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=body" })
-  body?: Map<string, any>;
+  body?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=operation" })
   operation: string;
@@ -49,5 +49,5 @@ export class CreateOrganizationActionBatchResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createOrganizationActionBatch201ApplicationJsonObject?: Map<string, any>;
+  createOrganizationActionBatch201ApplicationJSONObject?: Record<string, any>;
 }

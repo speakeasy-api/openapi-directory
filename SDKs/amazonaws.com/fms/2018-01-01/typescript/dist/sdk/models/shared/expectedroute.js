@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExpectedRoute = void 0;
+var utils_1 = require("../../../internal/utils");
 // ExpectedRoute
 /**
  * Information about the expected route in the route table.
@@ -33,29 +36,29 @@ var ExpectedRoute = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AllowedTargets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllowedTargets" }),
         __metadata("design:type", Array)
     ], ExpectedRoute.prototype, "allowedTargets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContributingSubnets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContributingSubnets" }),
         __metadata("design:type", Array)
     ], ExpectedRoute.prototype, "contributingSubnets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IpV4Cidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IpV4Cidr" }),
         __metadata("design:type", String)
     ], ExpectedRoute.prototype, "ipV4Cidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IpV6Cidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IpV6Cidr" }),
         __metadata("design:type", String)
     ], ExpectedRoute.prototype, "ipV6Cidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PrefixListId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PrefixListId" }),
         __metadata("design:type", String)
     ], ExpectedRoute.prototype, "prefixListId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RouteTableId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RouteTableId" }),
         __metadata("design:type", String)
     ], ExpectedRoute.prototype, "routeTableId", void 0);
     return ExpectedRoute;
-}(SpeakeasyBase));
-export { ExpectedRoute };
+}(utils_1.SpeakeasyBase));
+exports.ExpectedRoute = ExpectedRoute;

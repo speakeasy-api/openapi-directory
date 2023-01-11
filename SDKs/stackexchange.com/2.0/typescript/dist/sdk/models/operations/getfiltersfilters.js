@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetFiltersFiltersResponse = exports.GetFiltersFiltersRequest = exports.GetFiltersFiltersPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetFiltersFiltersPathParams = /** @class */ (function (_super) {
     __extends(GetFiltersFiltersPathParams, _super);
     function GetFiltersFiltersPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=filters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=filters" }),
         __metadata("design:type", String)
     ], GetFiltersFiltersPathParams.prototype, "filters", void 0);
     return GetFiltersFiltersPathParams;
-}(SpeakeasyBase));
-export { GetFiltersFiltersPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetFiltersFiltersPathParams = GetFiltersFiltersPathParams;
 var GetFiltersFiltersRequest = /** @class */ (function (_super) {
     __extends(GetFiltersFiltersRequest, _super);
     function GetFiltersFiltersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetFiltersFiltersPathParams)
     ], GetFiltersFiltersRequest.prototype, "pathParams", void 0);
     return GetFiltersFiltersRequest;
-}(SpeakeasyBase));
-export { GetFiltersFiltersRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetFiltersFiltersRequest = GetFiltersFiltersRequest;
 var GetFiltersFiltersResponse = /** @class */ (function (_super) {
     __extends(GetFiltersFiltersResponse, _super);
     function GetFiltersFiltersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetFiltersFiltersResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetFiltersFiltersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetFiltersFiltersResponse.prototype, "statusCode", void 0);
     return GetFiltersFiltersResponse;
-}(SpeakeasyBase));
-export { GetFiltersFiltersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetFiltersFiltersResponse = GetFiltersFiltersResponse;

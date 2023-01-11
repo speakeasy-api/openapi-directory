@@ -13,12 +13,12 @@ export declare class PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCo
 }
 export declare class PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdRequest extends SpeakeasyBase {
     pathParams: PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
     security: PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdSecurity;
 }
 export declare class PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pullrequestComment?: Map<string, any>;
+    error?: Record<string, any>;
+    pullrequestComment?: Record<string, any>;
 }

@@ -38,5 +38,5 @@ export declare class GetLocationRulesRequest extends SpeakeasyBase {
 export declare class GetLocationRulesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getLocationRules200ApplicationJsonObject?: GetLocationRules200ApplicationJson;
+    getLocationRules200ApplicationJSONObject?: GetLocationRules200ApplicationJson;
 }

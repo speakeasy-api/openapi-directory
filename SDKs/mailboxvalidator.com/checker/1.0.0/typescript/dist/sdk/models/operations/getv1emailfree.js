@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetV1EmailFreeFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetV1EmailFreeResponse = exports.GetV1EmailFreeRequest = exports.GetV1EmailFreeQueryParams = exports.GetV1EmailFreeFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetV1EmailFreeFormatEnum;
 (function (GetV1EmailFreeFormatEnum) {
     GetV1EmailFreeFormatEnum["Json"] = "json";
     GetV1EmailFreeFormatEnum["Xml"] = "xml";
-})(GetV1EmailFreeFormatEnum || (GetV1EmailFreeFormatEnum = {}));
+})(GetV1EmailFreeFormatEnum = exports.GetV1EmailFreeFormatEnum || (exports.GetV1EmailFreeFormatEnum = {}));
 var GetV1EmailFreeQueryParams = /** @class */ (function (_super) {
     __extends(GetV1EmailFreeQueryParams, _super);
     function GetV1EmailFreeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=email" }),
         __metadata("design:type", String)
     ], GetV1EmailFreeQueryParams.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetV1EmailFreeQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], GetV1EmailFreeQueryParams.prototype, "key", void 0);
     return GetV1EmailFreeQueryParams;
-}(SpeakeasyBase));
-export { GetV1EmailFreeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetV1EmailFreeQueryParams = GetV1EmailFreeQueryParams;
 var GetV1EmailFreeRequest = /** @class */ (function (_super) {
     __extends(GetV1EmailFreeRequest, _super);
     function GetV1EmailFreeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetV1EmailFreeQueryParams)
     ], GetV1EmailFreeRequest.prototype, "queryParams", void 0);
     return GetV1EmailFreeRequest;
-}(SpeakeasyBase));
-export { GetV1EmailFreeRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetV1EmailFreeRequest = GetV1EmailFreeRequest;
 var GetV1EmailFreeResponse = /** @class */ (function (_super) {
     __extends(GetV1EmailFreeResponse, _super);
     function GetV1EmailFreeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetV1EmailFreeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
-    ], GetV1EmailFreeResponse.prototype, "getV1EmailFree200ApplicationJsonString", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetV1EmailFreeResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], GetV1EmailFreeResponse.prototype, "getV1EmailFree200ApplicationJSONString", void 0);
     return GetV1EmailFreeResponse;
-}(SpeakeasyBase));
-export { GetV1EmailFreeResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetV1EmailFreeResponse = GetV1EmailFreeResponse;

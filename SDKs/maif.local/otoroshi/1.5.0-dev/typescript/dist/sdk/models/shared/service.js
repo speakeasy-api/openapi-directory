@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Canary } from "./canary";
-import { ExposedApi } from "./exposedapi";
-import { ChaosConfig } from "./chaosconfig";
-import { ClientConfig } from "./clientconfig";
-import { CorsSettings } from "./corssettings";
-import { Gzip } from "./gzip";
-import { HealthCheck } from "./healthcheck";
-import { IpFiltering } from "./ipfiltering";
-import { RedirectionSettings } from "./redirectionsettings";
-import { StatsdConfig } from "./statsdconfig";
-import { Target } from "./target";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Service = void 0;
+var utils_1 = require("../../../internal/utils");
+var canary_1 = require("./canary");
+var exposedapi_1 = require("./exposedapi");
+var chaosconfig_1 = require("./chaosconfig");
+var clientconfig_1 = require("./clientconfig");
+var corssettings_1 = require("./corssettings");
+var gzip_1 = require("./gzip");
+var healthcheck_1 = require("./healthcheck");
+var ipfiltering_1 = require("./ipfiltering");
+var redirectionsettings_1 = require("./redirectionsettings");
+var statsdconfig_1 = require("./statsdconfig");
+var target_1 = require("./target");
 // Service
 /**
  * An otoroshi service descriptor. Represent a forward HTTP call on a domain to another location with some optional api management mecanism
@@ -44,181 +47,181 @@ var Service = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Canary" }),
-        __metadata("design:type", Canary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Canary" }),
+        __metadata("design:type", canary_1.Canary)
     ], Service.prototype, "canary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalHeaders" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalHeaders" }),
+        __metadata("design:type", Object)
     ], Service.prototype, "additionalHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=api" }),
-        __metadata("design:type", ExposedApi)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=api" }),
+        __metadata("design:type", exposedapi_1.ExposedApi)
     ], Service.prototype, "api", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authConfigRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authConfigRef" }),
         __metadata("design:type", String)
     ], Service.prototype, "authConfigRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildMode" }),
         __metadata("design:type", Boolean)
     ], Service.prototype, "buildMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chaosConfig" }),
-        __metadata("design:type", ChaosConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chaosConfig" }),
+        __metadata("design:type", chaosconfig_1.ChaosConfig)
     ], Service.prototype, "chaosConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientConfig" }),
-        __metadata("design:type", ClientConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientConfig" }),
+        __metadata("design:type", clientconfig_1.ClientConfig)
     ], Service.prototype, "clientConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientValidatorRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientValidatorRef" }),
         __metadata("design:type", String)
     ], Service.prototype, "clientValidatorRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cors" }),
-        __metadata("design:type", CorsSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cors" }),
+        __metadata("design:type", corssettings_1.CorsSettings)
     ], Service.prototype, "cors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], Service.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], Service.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforceSecureCommunication" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforceSecureCommunication" }),
         __metadata("design:type", Boolean)
     ], Service.prototype, "enforceSecureCommunication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=env" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=env" }),
         __metadata("design:type", String)
     ], Service.prototype, "env", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=forceHttps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=forceHttps" }),
         __metadata("design:type", Boolean)
     ], Service.prototype, "forceHttps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groups" }),
         __metadata("design:type", Array)
     ], Service.prototype, "groups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gzip" }),
-        __metadata("design:type", Gzip)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gzip" }),
+        __metadata("design:type", gzip_1.Gzip)
     ], Service.prototype, "gzip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headersVerification" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headersVerification" }),
+        __metadata("design:type", Object)
     ], Service.prototype, "headersVerification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthCheck" }),
-        __metadata("design:type", HealthCheck)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthCheck" }),
+        __metadata("design:type", healthcheck_1.HealthCheck)
     ], Service.prototype, "healthCheck", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Service.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipFiltering" }),
-        __metadata("design:type", IpFiltering)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipFiltering" }),
+        __metadata("design:type", ipfiltering_1.IpFiltering)
     ], Service.prototype, "ipFiltering", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jwtVerifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jwtVerifier" }),
         __metadata("design:type", Object)
     ], Service.prototype, "jwtVerifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localHost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localHost" }),
         __metadata("design:type", String)
     ], Service.prototype, "localHost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localScheme" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localScheme" }),
         __metadata("design:type", String)
     ], Service.prototype, "localScheme", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maintenanceMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maintenanceMode" }),
         __metadata("design:type", Boolean)
     ], Service.prototype, "maintenanceMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchingHeaders" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchingHeaders" }),
+        __metadata("design:type", Object)
     ], Service.prototype, "matchingHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchingRoot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchingRoot" }),
         __metadata("design:type", String)
     ], Service.prototype, "matchingRoot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], Service.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Service.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overrideHost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overrideHost" }),
         __metadata("design:type", Boolean)
     ], Service.prototype, "overrideHost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateApp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateApp" }),
         __metadata("design:type", Boolean)
     ], Service.prototype, "privateApp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privatePatterns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privatePatterns" }),
         __metadata("design:type", Array)
     ], Service.prototype, "privatePatterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicPatterns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicPatterns" }),
         __metadata("design:type", Array)
     ], Service.prototype, "publicPatterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=redirectToLocal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=redirectToLocal" }),
         __metadata("design:type", Boolean)
     ], Service.prototype, "redirectToLocal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=redirection" }),
-        __metadata("design:type", RedirectionSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=redirection" }),
+        __metadata("design:type", redirectionsettings_1.RedirectionSettings)
     ], Service.prototype, "redirection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=root" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=root" }),
         __metadata("design:type", String)
     ], Service.prototype, "root", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secComExcludedPatterns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secComExcludedPatterns" }),
         __metadata("design:type", Array)
     ], Service.prototype, "secComExcludedPatterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secComSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secComSettings" }),
         __metadata("design:type", Object)
     ], Service.prototype, "secComSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sendOtoroshiHeadersBack" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sendOtoroshiHeadersBack" }),
         __metadata("design:type", Boolean)
     ], Service.prototype, "sendOtoroshiHeadersBack", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statsdConfig" }),
-        __metadata("design:type", StatsdConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statsdConfig" }),
+        __metadata("design:type", statsdconfig_1.StatsdConfig)
     ], Service.prototype, "statsdConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subdomain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subdomain" }),
         __metadata("design:type", String)
     ], Service.prototype, "subdomain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targets", elemType: Target }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targets", elemType: target_1.Target }),
         __metadata("design:type", Array)
     ], Service.prototype, "targets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transformerRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transformerRef" }),
         __metadata("design:type", String)
     ], Service.prototype, "transformerRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userFacing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userFacing" }),
         __metadata("design:type", Boolean)
     ], Service.prototype, "userFacing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=xForwardedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=xForwardedHeaders" }),
         __metadata("design:type", Boolean)
     ], Service.prototype, "xForwardedHeaders", void 0);
     return Service;
-}(SpeakeasyBase));
-export { Service };
+}(utils_1.SpeakeasyBase));
+exports.Service = Service;

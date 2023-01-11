@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsCreateWorkflowDispatchResponse = exports.ActionsCreateWorkflowDispatchRequest = exports.ActionsCreateWorkflowDispatchRequestBody = exports.ActionsCreateWorkflowDispatchPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsCreateWorkflowDispatchPathParams = /** @class */ (function (_super) {
     __extends(ActionsCreateWorkflowDispatchPathParams, _super);
     function ActionsCreateWorkflowDispatchPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ActionsCreateWorkflowDispatchPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ActionsCreateWorkflowDispatchPathParams.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workflow_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workflow_id" }),
         __metadata("design:type", Object)
     ], ActionsCreateWorkflowDispatchPathParams.prototype, "workflowId", void 0);
     return ActionsCreateWorkflowDispatchPathParams;
-}(SpeakeasyBase));
-export { ActionsCreateWorkflowDispatchPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsCreateWorkflowDispatchPathParams = ActionsCreateWorkflowDispatchPathParams;
 var ActionsCreateWorkflowDispatchRequestBody = /** @class */ (function (_super) {
     __extends(ActionsCreateWorkflowDispatchRequestBody, _super);
     function ActionsCreateWorkflowDispatchRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputs" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputs" }),
+        __metadata("design:type", Object)
     ], ActionsCreateWorkflowDispatchRequestBody.prototype, "inputs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ref" }),
         __metadata("design:type", String)
     ], ActionsCreateWorkflowDispatchRequestBody.prototype, "ref", void 0);
     return ActionsCreateWorkflowDispatchRequestBody;
-}(SpeakeasyBase));
-export { ActionsCreateWorkflowDispatchRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ActionsCreateWorkflowDispatchRequestBody = ActionsCreateWorkflowDispatchRequestBody;
 var ActionsCreateWorkflowDispatchRequest = /** @class */ (function (_super) {
     __extends(ActionsCreateWorkflowDispatchRequest, _super);
     function ActionsCreateWorkflowDispatchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsCreateWorkflowDispatchPathParams)
     ], ActionsCreateWorkflowDispatchRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ActionsCreateWorkflowDispatchRequestBody)
     ], ActionsCreateWorkflowDispatchRequest.prototype, "request", void 0);
     return ActionsCreateWorkflowDispatchRequest;
-}(SpeakeasyBase));
-export { ActionsCreateWorkflowDispatchRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsCreateWorkflowDispatchRequest = ActionsCreateWorkflowDispatchRequest;
 var ActionsCreateWorkflowDispatchResponse = /** @class */ (function (_super) {
     __extends(ActionsCreateWorkflowDispatchResponse, _super);
     function ActionsCreateWorkflowDispatchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsCreateWorkflowDispatchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsCreateWorkflowDispatchResponse.prototype, "statusCode", void 0);
     return ActionsCreateWorkflowDispatchResponse;
-}(SpeakeasyBase));
-export { ActionsCreateWorkflowDispatchResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsCreateWorkflowDispatchResponse = ActionsCreateWorkflowDispatchResponse;

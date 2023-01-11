@@ -15,7 +15,7 @@ export declare class UpdateSignalingChannelRequestBodySingleMasterConfiguration 
     messageTtlSeconds?: number;
 }
 export declare class UpdateSignalingChannelRequestBody extends SpeakeasyBase {
-    channelArn: string;
+    channelARN: string;
     currentVersion: string;
     singleMasterConfiguration?: UpdateSignalingChannelRequestBodySingleMasterConfiguration;
 }
@@ -31,6 +31,6 @@ export declare class UpdateSignalingChannelResponse extends SpeakeasyBase {
     resourceInUseException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    updateSignalingChannelOutput?: Map<string, any>;
+    updateSignalingChannelOutput?: Record<string, any>;
     versionMismatchException?: any;
 }

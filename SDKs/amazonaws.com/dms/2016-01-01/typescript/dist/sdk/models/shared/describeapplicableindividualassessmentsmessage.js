@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MigrationTypeValueEnum } from "./migrationtypevalueenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeApplicableIndividualAssessmentsMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var migrationtypevalueenum_1 = require("./migrationtypevalueenum");
 // DescribeApplicableIndividualAssessmentsMessage
 /**
  * <p/>
@@ -34,33 +37,33 @@ var DescribeApplicableIndividualAssessmentsMessage = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Marker" }),
         __metadata("design:type", String)
     ], DescribeApplicableIndividualAssessmentsMessage.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxRecords" }),
         __metadata("design:type", Number)
     ], DescribeApplicableIndividualAssessmentsMessage.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MigrationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MigrationType" }),
         __metadata("design:type", String)
     ], DescribeApplicableIndividualAssessmentsMessage.prototype, "migrationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationInstanceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationInstanceArn" }),
         __metadata("design:type", String)
     ], DescribeApplicableIndividualAssessmentsMessage.prototype, "replicationInstanceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationTaskArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationTaskArn" }),
         __metadata("design:type", String)
     ], DescribeApplicableIndividualAssessmentsMessage.prototype, "replicationTaskArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceEngineName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceEngineName" }),
         __metadata("design:type", String)
     ], DescribeApplicableIndividualAssessmentsMessage.prototype, "sourceEngineName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetEngineName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetEngineName" }),
         __metadata("design:type", String)
     ], DescribeApplicableIndividualAssessmentsMessage.prototype, "targetEngineName", void 0);
     return DescribeApplicableIndividualAssessmentsMessage;
-}(SpeakeasyBase));
-export { DescribeApplicableIndividualAssessmentsMessage };
+}(utils_1.SpeakeasyBase));
+exports.DescribeApplicableIndividualAssessmentsMessage = DescribeApplicableIndividualAssessmentsMessage;

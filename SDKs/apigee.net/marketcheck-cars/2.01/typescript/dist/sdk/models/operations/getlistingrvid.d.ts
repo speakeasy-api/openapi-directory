@@ -12,7 +12,7 @@ export declare class GetListingRvIdRequest extends SpeakeasyBase {
 }
 export declare class GetListingRvIdResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     rvListing?: shared.RvListing;
     statusCode: number;
 }

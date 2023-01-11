@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostUntagSamlProviderActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostUntagSamlProviderResponse = exports.PostUntagSamlProviderRequest = exports.PostUntagSamlProviderHeaders = exports.PostUntagSamlProviderQueryParams = exports.PostUntagSamlProviderVersionEnum = exports.PostUntagSamlProviderActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostUntagSamlProviderActionEnum;
 (function (PostUntagSamlProviderActionEnum) {
     PostUntagSamlProviderActionEnum["UntagSamlProvider"] = "UntagSAMLProvider";
-})(PostUntagSamlProviderActionEnum || (PostUntagSamlProviderActionEnum = {}));
-export var PostUntagSamlProviderVersionEnum;
+})(PostUntagSamlProviderActionEnum = exports.PostUntagSamlProviderActionEnum || (exports.PostUntagSamlProviderActionEnum = {}));
+var PostUntagSamlProviderVersionEnum;
 (function (PostUntagSamlProviderVersionEnum) {
     PostUntagSamlProviderVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostUntagSamlProviderVersionEnum || (PostUntagSamlProviderVersionEnum = {}));
+})(PostUntagSamlProviderVersionEnum = exports.PostUntagSamlProviderVersionEnum || (exports.PostUntagSamlProviderVersionEnum = {}));
 var PostUntagSamlProviderQueryParams = /** @class */ (function (_super) {
     __extends(PostUntagSamlProviderQueryParams, _super);
     function PostUntagSamlProviderQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostUntagSamlProviderQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostUntagSamlProviderQueryParams.prototype, "version", void 0);
     return PostUntagSamlProviderQueryParams;
-}(SpeakeasyBase));
-export { PostUntagSamlProviderQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostUntagSamlProviderQueryParams = PostUntagSamlProviderQueryParams;
 var PostUntagSamlProviderHeaders = /** @class */ (function (_super) {
     __extends(PostUntagSamlProviderHeaders, _super);
     function PostUntagSamlProviderHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostUntagSamlProviderHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostUntagSamlProviderHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostUntagSamlProviderHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostUntagSamlProviderHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostUntagSamlProviderHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostUntagSamlProviderHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostUntagSamlProviderHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostUntagSamlProviderHeaders;
-}(SpeakeasyBase));
-export { PostUntagSamlProviderHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostUntagSamlProviderHeaders = PostUntagSamlProviderHeaders;
 var PostUntagSamlProviderRequest = /** @class */ (function (_super) {
     __extends(PostUntagSamlProviderRequest, _super);
     function PostUntagSamlProviderRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostUntagSamlProviderQueryParams)
     ], PostUntagSamlProviderRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostUntagSamlProviderHeaders)
     ], PostUntagSamlProviderRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostUntagSamlProviderRequest.prototype, "request", void 0);
     return PostUntagSamlProviderRequest;
-}(SpeakeasyBase));
-export { PostUntagSamlProviderRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostUntagSamlProviderRequest = PostUntagSamlProviderRequest;
 var PostUntagSamlProviderResponse = /** @class */ (function (_super) {
     __extends(PostUntagSamlProviderResponse, _super);
     function PostUntagSamlProviderResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostUntagSamlProviderResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostUntagSamlProviderResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostUntagSamlProviderResponse.prototype, "statusCode", void 0);
     return PostUntagSamlProviderResponse;
-}(SpeakeasyBase));
-export { PostUntagSamlProviderResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostUntagSamlProviderResponse = PostUntagSamlProviderResponse;

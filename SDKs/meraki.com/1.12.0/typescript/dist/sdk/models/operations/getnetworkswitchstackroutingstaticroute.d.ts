@@ -10,5 +10,5 @@ export declare class GetNetworkSwitchStackRoutingStaticRouteRequest extends Spea
 export declare class GetNetworkSwitchStackRoutingStaticRouteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSwitchStackRoutingStaticRoute200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSwitchStackRoutingStaticRoute200ApplicationJSONObject?: Record<string, any>;
 }

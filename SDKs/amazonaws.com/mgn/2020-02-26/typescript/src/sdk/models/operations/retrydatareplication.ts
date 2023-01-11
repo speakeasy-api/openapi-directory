@@ -29,7 +29,7 @@ export class RetryDataReplicationHeaders extends SpeakeasyBase {
 
 export class RetryDataReplicationRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=sourceServerID" })
-  sourceServerId: string;
+  sourceServerID: string;
 }
 
 

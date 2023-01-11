@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KpIsForDailyAppUninstallsByDateResponse = exports.KpIsForDailyAppUninstallsByDateRequest = exports.KpIsForDailyAppUninstallsByDateQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var KpIsForDailyAppUninstallsByDateQueryParams = /** @class */ (function (_super) {
     __extends(KpIsForDailyAppUninstallsByDateQueryParams, _super);
     function KpIsForDailyAppUninstallsByDateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=app_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=app_id" }),
         __metadata("design:type", String)
     ], KpIsForDailyAppUninstallsByDateQueryParams.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ending_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ending_at" }),
         __metadata("design:type", String)
     ], KpIsForDailyAppUninstallsByDateQueryParams.prototype, "endingAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=length" }),
         __metadata("design:type", String)
     ], KpIsForDailyAppUninstallsByDateQueryParams.prototype, "length", void 0);
     return KpIsForDailyAppUninstallsByDateQueryParams;
-}(SpeakeasyBase));
-export { KpIsForDailyAppUninstallsByDateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.KpIsForDailyAppUninstallsByDateQueryParams = KpIsForDailyAppUninstallsByDateQueryParams;
 var KpIsForDailyAppUninstallsByDateRequest = /** @class */ (function (_super) {
     __extends(KpIsForDailyAppUninstallsByDateRequest, _super);
     function KpIsForDailyAppUninstallsByDateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", KpIsForDailyAppUninstallsByDateQueryParams)
     ], KpIsForDailyAppUninstallsByDateRequest.prototype, "queryParams", void 0);
     return KpIsForDailyAppUninstallsByDateRequest;
-}(SpeakeasyBase));
-export { KpIsForDailyAppUninstallsByDateRequest };
+}(utils_1.SpeakeasyBase));
+exports.KpIsForDailyAppUninstallsByDateRequest = KpIsForDailyAppUninstallsByDateRequest;
 var KpIsForDailyAppUninstallsByDateResponse = /** @class */ (function (_super) {
     __extends(KpIsForDailyAppUninstallsByDateResponse, _super);
     function KpIsForDailyAppUninstallsByDateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], KpIsForDailyAppUninstallsByDateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], KpIsForDailyAppUninstallsByDateResponse.prototype, "statusCode", void 0);
     return KpIsForDailyAppUninstallsByDateResponse;
-}(SpeakeasyBase));
-export { KpIsForDailyAppUninstallsByDateResponse };
+}(utils_1.SpeakeasyBase));
+exports.KpIsForDailyAppUninstallsByDateResponse = KpIsForDailyAppUninstallsByDateResponse;

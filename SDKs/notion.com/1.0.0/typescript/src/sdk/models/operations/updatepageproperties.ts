@@ -397,11 +397,11 @@ export class UpdatePagePropertiesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updatePageProperties200ApplicationJsonObject?: UpdatePageProperties200ApplicationJson;
+  updatePageProperties200ApplicationJSONObject?: UpdatePageProperties200ApplicationJson;
 }

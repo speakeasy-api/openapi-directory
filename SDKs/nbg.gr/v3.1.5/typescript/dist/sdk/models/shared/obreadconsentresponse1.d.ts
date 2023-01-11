@@ -6,5 +6,5 @@ export declare class ObReadConsentResponse1 extends SpeakeasyBase {
     data: ObReadDataConsentResponse1;
     links: Links;
     meta: Meta;
-    risk: Map<string, any>;
+    risk: Record<string, any>;
 }

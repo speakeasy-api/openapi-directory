@@ -16,5 +16,5 @@ export declare class CreateConversationRequest extends SpeakeasyBase {
 export declare class CreateConversationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createConversation200ApplicationJsonObject?: CreateConversation200ApplicationJson;
+    createConversation200ApplicationJSONObject?: CreateConversation200ApplicationJson;
 }

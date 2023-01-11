@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DestinationBackup } from "./destinationbackup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CopyBackupToRegionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var destinationbackup_1 = require("./destinationbackup");
 var CopyBackupToRegionResponse = /** @class */ (function (_super) {
     __extends(CopyBackupToRegionResponse, _super);
     function CopyBackupToRegionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationBackup" }),
-        __metadata("design:type", DestinationBackup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationBackup" }),
+        __metadata("design:type", destinationbackup_1.DestinationBackup)
     ], CopyBackupToRegionResponse.prototype, "destinationBackup", void 0);
     return CopyBackupToRegionResponse;
-}(SpeakeasyBase));
-export { CopyBackupToRegionResponse };
+}(utils_1.SpeakeasyBase));
+exports.CopyBackupToRegionResponse = CopyBackupToRegionResponse;

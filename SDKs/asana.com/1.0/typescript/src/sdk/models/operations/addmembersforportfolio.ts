@@ -26,7 +26,7 @@ export class AddMembersForPortfolioRequestBody extends SpeakeasyBase {
 
 export class AddMembersForPortfolio200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -53,5 +53,5 @@ export class AddMembersForPortfolioResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  addMembersForPortfolio200ApplicationJsonObject?: AddMembersForPortfolio200ApplicationJson;
+  addMembersForPortfolio200ApplicationJSONObject?: AddMembersForPortfolio200ApplicationJson;
 }

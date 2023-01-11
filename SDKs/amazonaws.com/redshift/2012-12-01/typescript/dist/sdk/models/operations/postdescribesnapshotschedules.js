@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeSnapshotSchedulesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeSnapshotSchedulesResponse = exports.PostDescribeSnapshotSchedulesRequest = exports.PostDescribeSnapshotSchedulesHeaders = exports.PostDescribeSnapshotSchedulesQueryParams = exports.PostDescribeSnapshotSchedulesVersionEnum = exports.PostDescribeSnapshotSchedulesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeSnapshotSchedulesActionEnum;
 (function (PostDescribeSnapshotSchedulesActionEnum) {
     PostDescribeSnapshotSchedulesActionEnum["DescribeSnapshotSchedules"] = "DescribeSnapshotSchedules";
-})(PostDescribeSnapshotSchedulesActionEnum || (PostDescribeSnapshotSchedulesActionEnum = {}));
-export var PostDescribeSnapshotSchedulesVersionEnum;
+})(PostDescribeSnapshotSchedulesActionEnum = exports.PostDescribeSnapshotSchedulesActionEnum || (exports.PostDescribeSnapshotSchedulesActionEnum = {}));
+var PostDescribeSnapshotSchedulesVersionEnum;
 (function (PostDescribeSnapshotSchedulesVersionEnum) {
     PostDescribeSnapshotSchedulesVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(PostDescribeSnapshotSchedulesVersionEnum || (PostDescribeSnapshotSchedulesVersionEnum = {}));
+})(PostDescribeSnapshotSchedulesVersionEnum = exports.PostDescribeSnapshotSchedulesVersionEnum || (exports.PostDescribeSnapshotSchedulesVersionEnum = {}));
 var PostDescribeSnapshotSchedulesQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeSnapshotSchedulesQueryParams, _super);
     function PostDescribeSnapshotSchedulesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeSnapshotSchedulesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], PostDescribeSnapshotSchedulesQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", String)
     ], PostDescribeSnapshotSchedulesQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeSnapshotSchedulesQueryParams.prototype, "version", void 0);
     return PostDescribeSnapshotSchedulesQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeSnapshotSchedulesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeSnapshotSchedulesQueryParams = PostDescribeSnapshotSchedulesQueryParams;
 var PostDescribeSnapshotSchedulesHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeSnapshotSchedulesHeaders, _super);
     function PostDescribeSnapshotSchedulesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeSnapshotSchedulesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeSnapshotSchedulesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeSnapshotSchedulesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeSnapshotSchedulesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeSnapshotSchedulesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeSnapshotSchedulesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeSnapshotSchedulesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeSnapshotSchedulesHeaders;
-}(SpeakeasyBase));
-export { PostDescribeSnapshotSchedulesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeSnapshotSchedulesHeaders = PostDescribeSnapshotSchedulesHeaders;
 var PostDescribeSnapshotSchedulesRequest = /** @class */ (function (_super) {
     __extends(PostDescribeSnapshotSchedulesRequest, _super);
     function PostDescribeSnapshotSchedulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeSnapshotSchedulesQueryParams)
     ], PostDescribeSnapshotSchedulesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeSnapshotSchedulesHeaders)
     ], PostDescribeSnapshotSchedulesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeSnapshotSchedulesRequest.prototype, "request", void 0);
     return PostDescribeSnapshotSchedulesRequest;
-}(SpeakeasyBase));
-export { PostDescribeSnapshotSchedulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeSnapshotSchedulesRequest = PostDescribeSnapshotSchedulesRequest;
 var PostDescribeSnapshotSchedulesResponse = /** @class */ (function (_super) {
     __extends(PostDescribeSnapshotSchedulesResponse, _super);
     function PostDescribeSnapshotSchedulesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeSnapshotSchedulesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeSnapshotSchedulesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeSnapshotSchedulesResponse.prototype, "statusCode", void 0);
     return PostDescribeSnapshotSchedulesResponse;
-}(SpeakeasyBase));
-export { PostDescribeSnapshotSchedulesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeSnapshotSchedulesResponse = PostDescribeSnapshotSchedulesResponse;

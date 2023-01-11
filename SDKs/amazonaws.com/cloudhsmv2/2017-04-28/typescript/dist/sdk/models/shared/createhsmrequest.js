@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateHsmRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateHsmRequest = /** @class */ (function (_super) {
     __extends(CreateHsmRequest, _super);
     function CreateHsmRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AvailabilityZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AvailabilityZone" }),
         __metadata("design:type", String)
     ], CreateHsmRequest.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClusterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClusterId" }),
         __metadata("design:type", String)
     ], CreateHsmRequest.prototype, "clusterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IpAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IpAddress" }),
         __metadata("design:type", String)
     ], CreateHsmRequest.prototype, "ipAddress", void 0);
     return CreateHsmRequest;
-}(SpeakeasyBase));
-export { CreateHsmRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateHsmRequest = CreateHsmRequest;

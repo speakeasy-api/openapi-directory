@@ -5,7 +5,8 @@ export enum CategoryGoalTypeEnum {
     Tb = "TB",
     Tbd = "TBD",
     Mf = "MF",
-    Need = "NEED"
+    Need = "NEED",
+    Null = "null"
 }
 
 

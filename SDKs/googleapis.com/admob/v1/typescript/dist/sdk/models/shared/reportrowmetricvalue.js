@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// ReportRowMetricValue
-/**
- * Representation of a metric value.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportRowMetricValue = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReportRowMetricValue = /** @class */ (function (_super) {
     __extends(ReportRowMetricValue, _super);
     function ReportRowMetricValue() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=doubleValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=doubleValue" }),
         __metadata("design:type", Number)
     ], ReportRowMetricValue.prototype, "doubleValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=integerValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=integerValue" }),
         __metadata("design:type", String)
     ], ReportRowMetricValue.prototype, "integerValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=microsValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=microsValue" }),
         __metadata("design:type", String)
     ], ReportRowMetricValue.prototype, "microsValue", void 0);
     return ReportRowMetricValue;
-}(SpeakeasyBase));
-export { ReportRowMetricValue };
+}(utils_1.SpeakeasyBase));
+exports.ReportRowMetricValue = ReportRowMetricValue;

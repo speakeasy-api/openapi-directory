@@ -22,7 +22,7 @@ export class PivotTable extends SpeakeasyBase {
   columns?: PivotGroup[];
 
   @SpeakeasyMetadata({ data: "json, name=criteria", elemType: PivotFilterCriteria })
-  criteria?: Map<string, PivotFilterCriteria>;
+  criteria?: Record<string, PivotFilterCriteria>;
 
   @SpeakeasyMetadata({ data: "json, name=dataExecutionStatus" })
   dataExecutionStatus?: DataExecutionStatus;

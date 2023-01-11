@@ -8,5 +8,5 @@ export declare class PauseNowRequest extends SpeakeasyBase {
 export declare class PauseNowResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    pauseNow200ApplicationJsonString?: string;
+    pauseNow200ApplicationJSONString?: string;
 }

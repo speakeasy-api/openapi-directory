@@ -6,7 +6,7 @@ export declare class ServiceOffering extends SpeakeasyBase {
     displayName?: string;
     distributor?: string;
     documentationUrl?: string;
-    extra?: Map<string, any>;
+    extra?: Record<string, any>;
     id?: string;
     lastSeenAt?: Date;
     longDescription?: string;

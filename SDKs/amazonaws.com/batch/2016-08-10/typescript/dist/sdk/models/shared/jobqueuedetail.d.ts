@@ -13,5 +13,5 @@ export declare class JobQueueDetail extends SpeakeasyBase {
     state: JqStateEnum;
     status?: JqStatusEnum;
     statusReason?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

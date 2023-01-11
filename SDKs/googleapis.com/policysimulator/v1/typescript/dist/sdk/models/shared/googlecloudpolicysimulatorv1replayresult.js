@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudPolicysimulatorV1AccessTuple } from "./googlecloudpolicysimulatorv1accesstuple";
-import { GoogleCloudPolicysimulatorV1ReplayDiff } from "./googlecloudpolicysimulatorv1replaydiff";
-import { GoogleRpcStatus } from "./googlerpcstatus";
-import { GoogleTypeDate } from "./googletypedate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPolicysimulatorV1ReplayResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudpolicysimulatorv1accesstuple_1 = require("./googlecloudpolicysimulatorv1accesstuple");
+var googlecloudpolicysimulatorv1replaydiff_1 = require("./googlecloudpolicysimulatorv1replaydiff");
+var googlerpcstatus_1 = require("./googlerpcstatus");
+var googletypedate_1 = require("./googletypedate");
 // GoogleCloudPolicysimulatorV1ReplayResult
 /**
  * The result of replaying a single access tuple against a simulated state.
@@ -37,29 +40,29 @@ var GoogleCloudPolicysimulatorV1ReplayResult = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessTuple" }),
-        __metadata("design:type", GoogleCloudPolicysimulatorV1AccessTuple)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessTuple" }),
+        __metadata("design:type", googlecloudpolicysimulatorv1accesstuple_1.GoogleCloudPolicysimulatorV1AccessTuple)
     ], GoogleCloudPolicysimulatorV1ReplayResult.prototype, "accessTuple", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diff" }),
-        __metadata("design:type", GoogleCloudPolicysimulatorV1ReplayDiff)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diff" }),
+        __metadata("design:type", googlecloudpolicysimulatorv1replaydiff_1.GoogleCloudPolicysimulatorV1ReplayDiff)
     ], GoogleCloudPolicysimulatorV1ReplayResult.prototype, "diff", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", GoogleRpcStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", googlerpcstatus_1.GoogleRpcStatus)
     ], GoogleCloudPolicysimulatorV1ReplayResult.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastSeenDate" }),
-        __metadata("design:type", GoogleTypeDate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastSeenDate" }),
+        __metadata("design:type", googletypedate_1.GoogleTypeDate)
     ], GoogleCloudPolicysimulatorV1ReplayResult.prototype, "lastSeenDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudPolicysimulatorV1ReplayResult.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent" }),
         __metadata("design:type", String)
     ], GoogleCloudPolicysimulatorV1ReplayResult.prototype, "parent", void 0);
     return GoogleCloudPolicysimulatorV1ReplayResult;
-}(SpeakeasyBase));
-export { GoogleCloudPolicysimulatorV1ReplayResult };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPolicysimulatorV1ReplayResult = GoogleCloudPolicysimulatorV1ReplayResult;

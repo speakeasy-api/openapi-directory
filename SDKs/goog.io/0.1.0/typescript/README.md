@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CrawlRequest, CrawlResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apikey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,11 +33,11 @@ const sdk = new SDK(WithSecurity(
     
 const req: CrawlRequest = {
   pathParams: {
-    query: "deleniti",
+    query: "sit",
   },
 };
 
-sdk.sdk.crawl(req).then((res: CrawlResponse | AxiosError) => {
+sdk.crawl(req).then((res: CrawlResponse | AxiosError) => {
    // handle response
 });
 ```

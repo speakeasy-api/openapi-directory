@@ -2,16 +2,22 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-// LinkedForeignAccountInput
+// LinkedForeignAccount
 /** 
  * JSON template for an Analytics Remarketing Audience Foreign Link.
 **/
-export class LinkedForeignAccountInput extends SpeakeasyBase {
+export class LinkedForeignAccount extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=accountId" })
   accountId?: string;
 
+  @SpeakeasyMetadata({ data: "json, name=eligibleForSearch" })
+  eligibleForSearch?: boolean;
+
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=internalWebPropertyId" })
+  internalWebPropertyId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=kind" })
   kind?: string;
@@ -33,22 +39,16 @@ export class LinkedForeignAccountInput extends SpeakeasyBase {
 }
 
 
-// LinkedForeignAccount
+// LinkedForeignAccountInput
 /** 
  * JSON template for an Analytics Remarketing Audience Foreign Link.
 **/
-export class LinkedForeignAccount extends SpeakeasyBase {
+export class LinkedForeignAccountInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=accountId" })
   accountId?: string;
 
-  @SpeakeasyMetadata({ data: "json, name=eligibleForSearch" })
-  eligibleForSearch?: boolean;
-
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=internalWebPropertyId" })
-  internalWebPropertyId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=kind" })
   kind?: string;

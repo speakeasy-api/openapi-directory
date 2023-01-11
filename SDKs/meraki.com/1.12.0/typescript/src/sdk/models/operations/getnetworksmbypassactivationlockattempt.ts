@@ -25,5 +25,5 @@ export class GetNetworkSmBypassActivationLockAttemptResponse extends SpeakeasyBa
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSmBypassActivationLockAttempt200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSmBypassActivationLockAttempt200ApplicationJSONObject?: Record<string, any>;
 }

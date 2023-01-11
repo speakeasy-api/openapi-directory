@@ -31,7 +31,7 @@ export class PostConnectors200ApplicationJson extends SpeakeasyBase {
   ok?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=result" })
-  result?: Map<string, any>;
+  result?: Record<string, any>;
 }
 
 
@@ -49,5 +49,5 @@ export class PostConnectorsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  postConnectors200ApplicationJsonObject?: PostConnectors200ApplicationJson;
+  postConnectors200ApplicationJSONObject?: PostConnectors200ApplicationJson;
 }

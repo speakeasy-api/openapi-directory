@@ -18,6 +18,6 @@ export declare class VatLookupRequest extends SpeakeasyBase {
 export declare class VatLookupResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    vatLookup200ApplicationJsonAny?: any;
-    vatLookupDefaultApplicationJsonAny?: any;
+    vatLookup200ApplicationJSONAny?: any;
+    vatLookupDefaultApplicationJSONAny?: any;
 }

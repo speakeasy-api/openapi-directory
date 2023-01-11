@@ -10,5 +10,5 @@ export declare class AccessAddRequest extends SpeakeasyBase {
 export declare class AccessAddResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    accessAdd200ApplicationJsonString?: string;
+    accessAdd200ApplicationJSONString?: string;
 }

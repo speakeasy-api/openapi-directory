@@ -35,26 +35,26 @@ export class CreateBankAccountResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createBankAccount201ApplicationJsonAny?: any;
+  createBankAccount201ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createBankAccount400ApplicationJsonAny?: any;
+  createBankAccount400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createBankAccount401ApplicationJsonAny?: any;
+  createBankAccount401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createBankAccount403ApplicationJsonAny?: any;
+  createBankAccount403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createBankAccount404ApplicationJsonAny?: any;
+  createBankAccount404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createBankAccount409ApplicationJsonAny?: any;
+  createBankAccount409ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createBankAccount429ApplicationJsonAny?: any;
+  createBankAccount429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  createBankAccount500ApplicationJsonAny?: any;
+  createBankAccount500ApplicationJSONAny?: any;
 }

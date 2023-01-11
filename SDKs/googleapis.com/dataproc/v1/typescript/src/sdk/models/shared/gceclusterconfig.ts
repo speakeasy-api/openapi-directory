@@ -25,7 +25,7 @@ export class GceClusterConfig extends SpeakeasyBase {
   internalIpOnly?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, string>;
+  metadata?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=networkUri" })
   networkUri?: string;

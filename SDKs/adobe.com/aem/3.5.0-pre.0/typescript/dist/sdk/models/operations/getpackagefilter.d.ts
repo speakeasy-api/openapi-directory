@@ -10,5 +10,5 @@ export declare class GetPackageFilterRequest extends SpeakeasyBase {
 export declare class GetPackageFilterResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getPackageFilterDefaultApplicationJsonString?: string;
+    getPackageFilterDefaultApplicationJSONString?: string;
 }

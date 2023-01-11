@@ -3,6 +3,10 @@ import { Repository } from "./repository";
 
 
 
+// MigrationSimpleUser
+/** 
+ * Simple User
+**/
 export class MigrationSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

@@ -119,5 +119,5 @@ export class GetEventsForSubscriptionByIdResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getEventsForSubscriptionById200ApplicationJsonObject?: GetEventsForSubscriptionById200ApplicationJson;
+  getEventsForSubscriptionById200ApplicationJSONObject?: GetEventsForSubscriptionById200ApplicationJson;
 }

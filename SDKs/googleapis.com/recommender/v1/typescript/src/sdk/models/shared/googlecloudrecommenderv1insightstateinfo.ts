@@ -18,5 +18,5 @@ export class GoogleCloudRecommenderV1InsightStateInfo extends SpeakeasyBase {
   state?: GoogleCloudRecommenderV1InsightStateInfoStateEnum;
 
   @SpeakeasyMetadata({ data: "json, name=stateMetadata" })
-  stateMetadata?: Map<string, string>;
+  stateMetadata?: Record<string, string>;
 }

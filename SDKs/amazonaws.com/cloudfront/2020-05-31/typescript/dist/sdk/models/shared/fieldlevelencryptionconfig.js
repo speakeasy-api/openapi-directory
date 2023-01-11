@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContentTypeProfileConfig } from "./contenttypeprofileconfig";
-import { QueryArgProfileConfig } from "./queryargprofileconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FieldLevelEncryptionConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var contenttypeprofileconfig_1 = require("./contenttypeprofileconfig");
+var queryargprofileconfig_1 = require("./queryargprofileconfig");
 // FieldLevelEncryptionConfig
 /**
  * A complex data type that includes the profile configurations specified for field-level encryption.
@@ -35,21 +38,21 @@ var FieldLevelEncryptionConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FieldLevelEncryptionConfig.prototype, "callerReference", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FieldLevelEncryptionConfig.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ContentTypeProfileConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", contenttypeprofileconfig_1.ContentTypeProfileConfig)
     ], FieldLevelEncryptionConfig.prototype, "contentTypeProfileConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", QueryArgProfileConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", queryargprofileconfig_1.QueryArgProfileConfig)
     ], FieldLevelEncryptionConfig.prototype, "queryArgProfileConfig", void 0);
     return FieldLevelEncryptionConfig;
-}(SpeakeasyBase));
-export { FieldLevelEncryptionConfig };
+}(utils_1.SpeakeasyBase));
+exports.FieldLevelEncryptionConfig = FieldLevelEncryptionConfig;

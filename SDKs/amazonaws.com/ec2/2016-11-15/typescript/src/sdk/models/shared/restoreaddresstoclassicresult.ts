@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StatusEnum } from "./statusenum";
 
 
 
 export class RestoreAddressToClassicResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  publicIp?: string;
+  publicIp?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  status?: StatusEnum;
+  status?: Record<string, any>;
 }

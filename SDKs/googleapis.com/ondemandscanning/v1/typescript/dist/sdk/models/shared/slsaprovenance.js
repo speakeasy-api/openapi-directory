@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SlsaBuilder } from "./slsabuilder";
-import { Material } from "./material";
-import { SlsaMetadata } from "./slsametadata";
-import { SlsaRecipe } from "./slsarecipe";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SlsaProvenance = void 0;
+var utils_1 = require("../../../internal/utils");
+var slsabuilder_1 = require("./slsabuilder");
+var material_1 = require("./material");
+var slsametadata_1 = require("./slsametadata");
+var slsarecipe_1 = require("./slsarecipe");
 var SlsaProvenance = /** @class */ (function (_super) {
     __extends(SlsaProvenance, _super);
     function SlsaProvenance() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=builder" }),
-        __metadata("design:type", SlsaBuilder)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=builder" }),
+        __metadata("design:type", slsabuilder_1.SlsaBuilder)
     ], SlsaProvenance.prototype, "builder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=materials", elemType: Material }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=materials", elemType: material_1.Material }),
         __metadata("design:type", Array)
     ], SlsaProvenance.prototype, "materials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", SlsaMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", slsametadata_1.SlsaMetadata)
     ], SlsaProvenance.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recipe" }),
-        __metadata("design:type", SlsaRecipe)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recipe" }),
+        __metadata("design:type", slsarecipe_1.SlsaRecipe)
     ], SlsaProvenance.prototype, "recipe", void 0);
     return SlsaProvenance;
-}(SpeakeasyBase));
-export { SlsaProvenance };
+}(utils_1.SpeakeasyBase));
+exports.SlsaProvenance = SlsaProvenance;

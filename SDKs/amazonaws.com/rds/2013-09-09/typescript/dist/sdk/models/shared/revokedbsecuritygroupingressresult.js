@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbSecurityGroup } from "./dbsecuritygroup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RevokeDbSecurityGroupIngressResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var dbsecuritygroup_1 = require("./dbsecuritygroup");
 var RevokeDbSecurityGroupIngressResult = /** @class */ (function (_super) {
     __extends(RevokeDbSecurityGroupIngressResult, _super);
     function RevokeDbSecurityGroupIngressResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DbSecurityGroup)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", dbsecuritygroup_1.DbSecurityGroup)
     ], RevokeDbSecurityGroupIngressResult.prototype, "dbSecurityGroup", void 0);
     return RevokeDbSecurityGroupIngressResult;
-}(SpeakeasyBase));
-export { RevokeDbSecurityGroupIngressResult };
+}(utils_1.SpeakeasyBase));
+exports.RevokeDbSecurityGroupIngressResult = RevokeDbSecurityGroupIngressResult;

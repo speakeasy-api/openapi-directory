@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTransactionsResponse = exports.GetTransactionsRequest = exports.GetTransactionsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTransactionsQueryParams = /** @class */ (function (_super) {
     __extends(GetTransactionsQueryParams, _super);
     function GetTransactionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetTransactionsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageNumber" }),
         __metadata("design:type", Number)
     ], GetTransactionsQueryParams.prototype, "pageNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], GetTransactionsQueryParams.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetTransactionsQueryParams.prototype, "sort", void 0);
     return GetTransactionsQueryParams;
-}(SpeakeasyBase));
-export { GetTransactionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsQueryParams = GetTransactionsQueryParams;
 var GetTransactionsRequest = /** @class */ (function (_super) {
     __extends(GetTransactionsRequest, _super);
     function GetTransactionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTransactionsQueryParams)
     ], GetTransactionsRequest.prototype, "queryParams", void 0);
     return GetTransactionsRequest;
-}(SpeakeasyBase));
-export { GetTransactionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsRequest = GetTransactionsRequest;
 var GetTransactionsResponse = /** @class */ (function (_super) {
     __extends(GetTransactionsResponse, _super);
     function GetTransactionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetTransactionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTransactionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTransactionsResponse.prototype, "statusCode", void 0);
     return GetTransactionsResponse;
-}(SpeakeasyBase));
-export { GetTransactionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionsResponse = GetTransactionsResponse;

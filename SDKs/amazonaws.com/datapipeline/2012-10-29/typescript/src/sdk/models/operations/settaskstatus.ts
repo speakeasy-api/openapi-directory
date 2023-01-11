@@ -60,7 +60,7 @@ export class SetTaskStatusResponse extends SpeakeasyBase {
   pipelineNotFoundException?: any;
 
   @SpeakeasyMetadata()
-  setTaskStatusOutput?: Map<string, any>;
+  setTaskStatusOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

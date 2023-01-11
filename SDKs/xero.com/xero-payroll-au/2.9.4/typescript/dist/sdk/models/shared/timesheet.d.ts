@@ -1,26 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { TimesheetStatusEnum } from "./timesheetstatusenum";
-import { TimesheetLineInput } from "./timesheetline";
-import { ValidationError } from "./validationerror";
 import { TimesheetLine } from "./timesheetline";
-export declare class TimesheetInput extends SpeakeasyBase {
-    employeeId: string;
+import { ValidationError } from "./validationerror";
+import { TimesheetLineInput } from "./timesheetline";
+export declare class Timesheet extends SpeakeasyBase {
+    employeeID: string;
     endDate: string;
     hours?: number;
     startDate: string;
     status?: TimesheetStatusEnum;
-    timesheetId?: string;
-    timesheetLines?: TimesheetLineInput[];
+    timesheetID?: string;
+    timesheetLines?: TimesheetLine[];
+    updatedDateUTC?: string;
     validationErrors?: ValidationError[];
 }
-export declare class Timesheet extends SpeakeasyBase {
-    employeeId: string;
+export declare class TimesheetInput extends SpeakeasyBase {
+    employeeID: string;
     endDate: string;
     hours?: number;
     startDate: string;
     status?: TimesheetStatusEnum;
-    timesheetId?: string;
-    timesheetLines?: TimesheetLine[];
-    updatedDateUtc?: string;
+    timesheetID?: string;
+    timesheetLines?: TimesheetLineInput[];
     validationErrors?: ValidationError[];
 }

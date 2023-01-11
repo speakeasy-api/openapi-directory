@@ -41,7 +41,7 @@ export declare class AwsVmDetails extends SpeakeasyBase {
     securityGroups?: AwsSecurityGroup[];
     sourceDescription?: string;
     sourceId?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     virtualizationType?: AwsVmDetailsVirtualizationTypeEnum;
     vmId?: string;
     vpcId?: string;

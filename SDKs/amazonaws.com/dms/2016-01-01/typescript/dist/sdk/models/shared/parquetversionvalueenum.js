@@ -1,5 +1,8 @@
-export var ParquetVersionValueEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ParquetVersionValueEnum = void 0;
+var ParquetVersionValueEnum;
 (function (ParquetVersionValueEnum) {
     ParquetVersionValueEnum["Parquet10"] = "parquet-1-0";
     ParquetVersionValueEnum["Parquet20"] = "parquet-2-0";
-})(ParquetVersionValueEnum || (ParquetVersionValueEnum = {}));
+})(ParquetVersionValueEnum = exports.ParquetVersionValueEnum || (exports.ParquetVersionValueEnum = {}));

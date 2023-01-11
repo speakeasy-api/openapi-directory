@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SensitiveDataItemCategoryEnum } from "./sensitivedataitemcategoryenum";
-import { DefaultDetection } from "./defaultdetection";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SensitiveDataItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var sensitivedataitemcategoryenum_1 = require("./sensitivedataitemcategoryenum");
+var defaultdetection_1 = require("./defaultdetection");
 // SensitiveDataItem
 /**
  * Provides information about the category, types, and occurrences of sensitive data that produced a sensitive data finding.
@@ -35,17 +38,17 @@ var SensitiveDataItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], SensitiveDataItem.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detections", elemType: DefaultDetection }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detections", elemType: defaultdetection_1.DefaultDetection }),
         __metadata("design:type", Array)
     ], SensitiveDataItem.prototype, "detections", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCount" }),
         __metadata("design:type", Number)
     ], SensitiveDataItem.prototype, "totalCount", void 0);
     return SensitiveDataItem;
-}(SpeakeasyBase));
-export { SensitiveDataItem };
+}(utils_1.SpeakeasyBase));
+exports.SensitiveDataItem = SensitiveDataItem;

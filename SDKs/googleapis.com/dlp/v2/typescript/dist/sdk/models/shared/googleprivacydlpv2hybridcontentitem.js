@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2HybridFindingDetails } from "./googleprivacydlpv2hybridfindingdetails";
-import { GooglePrivacyDlpV2ContentItem } from "./googleprivacydlpv2contentitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2HybridContentItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2hybridfindingdetails_1 = require("./googleprivacydlpv2hybridfindingdetails");
+var googleprivacydlpv2contentitem_1 = require("./googleprivacydlpv2contentitem");
 // GooglePrivacyDlpV2HybridContentItem
 /**
  * An individual hybrid item to inspect. Will be stored temporarily during processing.
@@ -35,13 +38,13 @@ var GooglePrivacyDlpV2HybridContentItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=findingDetails" }),
-        __metadata("design:type", GooglePrivacyDlpV2HybridFindingDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=findingDetails" }),
+        __metadata("design:type", googleprivacydlpv2hybridfindingdetails_1.GooglePrivacyDlpV2HybridFindingDetails)
     ], GooglePrivacyDlpV2HybridContentItem.prototype, "findingDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=item" }),
-        __metadata("design:type", GooglePrivacyDlpV2ContentItem)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=item" }),
+        __metadata("design:type", googleprivacydlpv2contentitem_1.GooglePrivacyDlpV2ContentItem)
     ], GooglePrivacyDlpV2HybridContentItem.prototype, "item", void 0);
     return GooglePrivacyDlpV2HybridContentItem;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2HybridContentItem };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2HybridContentItem = GooglePrivacyDlpV2HybridContentItem;

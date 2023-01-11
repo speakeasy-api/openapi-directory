@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CollectionsLinkedPreprintsListResponse = exports.CollectionsLinkedPreprintsListRequest = exports.CollectionsLinkedPreprintsListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CollectionsLinkedPreprintsListPathParams = /** @class */ (function (_super) {
     __extends(CollectionsLinkedPreprintsListPathParams, _super);
     function CollectionsLinkedPreprintsListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=collection_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=collection_id" }),
         __metadata("design:type", String)
     ], CollectionsLinkedPreprintsListPathParams.prototype, "collectionId", void 0);
     return CollectionsLinkedPreprintsListPathParams;
-}(SpeakeasyBase));
-export { CollectionsLinkedPreprintsListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsLinkedPreprintsListPathParams = CollectionsLinkedPreprintsListPathParams;
 var CollectionsLinkedPreprintsListRequest = /** @class */ (function (_super) {
     __extends(CollectionsLinkedPreprintsListRequest, _super);
     function CollectionsLinkedPreprintsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CollectionsLinkedPreprintsListPathParams)
     ], CollectionsLinkedPreprintsListRequest.prototype, "pathParams", void 0);
     return CollectionsLinkedPreprintsListRequest;
-}(SpeakeasyBase));
-export { CollectionsLinkedPreprintsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsLinkedPreprintsListRequest = CollectionsLinkedPreprintsListRequest;
 var CollectionsLinkedPreprintsListResponse = /** @class */ (function (_super) {
     __extends(CollectionsLinkedPreprintsListResponse, _super);
     function CollectionsLinkedPreprintsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CollectionsLinkedPreprintsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CollectionsLinkedPreprintsListResponse.prototype, "statusCode", void 0);
     return CollectionsLinkedPreprintsListResponse;
-}(SpeakeasyBase));
-export { CollectionsLinkedPreprintsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsLinkedPreprintsListResponse = CollectionsLinkedPreprintsListResponse;

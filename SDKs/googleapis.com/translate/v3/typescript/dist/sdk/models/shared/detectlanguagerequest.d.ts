@@ -4,7 +4,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class DetectLanguageRequest extends SpeakeasyBase {
     content?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     mimeType?: string;
     model?: string;
 }

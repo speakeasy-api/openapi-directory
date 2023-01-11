@@ -37,7 +37,7 @@ export class PatchBundlesIdRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "multipart_form, name=password" })
   password?: string;
 
-  @SpeakeasyMetadata({ data: "multipart_form, name=paths" })
+  @SpeakeasyMetadata({ data: "multipart_form, name=paths;json=true" })
   paths?: string[];
 
   @SpeakeasyMetadata({ data: "multipart_form, name=preview_only" })

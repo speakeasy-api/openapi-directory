@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var InsuranceNetworkStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InsuranceNetwork = exports.InsuranceNetworkStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var InsuranceNetworkStateEnum;
 (function (InsuranceNetworkStateEnum) {
     InsuranceNetworkStateEnum["NetworkStateUnspecified"] = "NETWORK_STATE_UNSPECIFIED";
     InsuranceNetworkStateEnum["Accepted"] = "ACCEPTED";
     InsuranceNetworkStateEnum["PendingAdd"] = "PENDING_ADD";
     InsuranceNetworkStateEnum["PendingDelete"] = "PENDING_DELETE";
     InsuranceNetworkStateEnum["NotAccepted"] = "NOT_ACCEPTED";
-})(InsuranceNetworkStateEnum || (InsuranceNetworkStateEnum = {}));
+})(InsuranceNetworkStateEnum = exports.InsuranceNetworkStateEnum || (exports.InsuranceNetworkStateEnum = {}));
 // InsuranceNetwork
 /**
  * A single insurance network. Next id: 5
@@ -41,21 +44,21 @@ var InsuranceNetwork = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkId" }),
         __metadata("design:type", String)
     ], InsuranceNetwork.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkNames" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkNames" }),
+        __metadata("design:type", Object)
     ], InsuranceNetwork.prototype, "networkNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payerNames" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payerNames" }),
+        __metadata("design:type", Object)
     ], InsuranceNetwork.prototype, "payerNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], InsuranceNetwork.prototype, "state", void 0);
     return InsuranceNetwork;
-}(SpeakeasyBase));
-export { InsuranceNetwork };
+}(utils_1.SpeakeasyBase));
+exports.InsuranceNetwork = InsuranceNetwork;

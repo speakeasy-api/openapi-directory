@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLifecyclePolicyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetLifecyclePolicyResponse = /** @class */ (function (_super) {
     __extends(GetLifecyclePolicyResponse, _super);
     function GetLifecyclePolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastEvaluatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastEvaluatedAt" }),
         __metadata("design:type", Date)
     ], GetLifecyclePolicyResponse.prototype, "lastEvaluatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifecyclePolicyText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifecyclePolicyText" }),
         __metadata("design:type", String)
     ], GetLifecyclePolicyResponse.prototype, "lifecyclePolicyText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registryId" }),
         __metadata("design:type", String)
     ], GetLifecyclePolicyResponse.prototype, "registryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositoryName" }),
         __metadata("design:type", String)
     ], GetLifecyclePolicyResponse.prototype, "repositoryName", void 0);
     return GetLifecyclePolicyResponse;
-}(SpeakeasyBase));
-export { GetLifecyclePolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetLifecyclePolicyResponse = GetLifecyclePolicyResponse;

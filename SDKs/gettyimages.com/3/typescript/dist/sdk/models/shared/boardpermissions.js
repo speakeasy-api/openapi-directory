@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BoardPermissions = void 0;
+var utils_1 = require("../../../internal/utils");
 var BoardPermissions = /** @class */ (function (_super) {
     __extends(BoardPermissions, _super);
     function BoardPermissions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=can_add_assets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=can_add_assets" }),
         __metadata("design:type", Boolean)
     ], BoardPermissions.prototype, "canAddAssets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=can_delete_board" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=can_delete_board" }),
         __metadata("design:type", Boolean)
     ], BoardPermissions.prototype, "canDeleteBoard", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=can_invite_to_board" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=can_invite_to_board" }),
         __metadata("design:type", Boolean)
     ], BoardPermissions.prototype, "canInviteToBoard", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=can_remove_assets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=can_remove_assets" }),
         __metadata("design:type", Boolean)
     ], BoardPermissions.prototype, "canRemoveAssets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=can_update_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=can_update_description" }),
         __metadata("design:type", Boolean)
     ], BoardPermissions.prototype, "canUpdateDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=can_update_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=can_update_name" }),
         __metadata("design:type", Boolean)
     ], BoardPermissions.prototype, "canUpdateName", void 0);
     return BoardPermissions;
-}(SpeakeasyBase));
-export { BoardPermissions };
+}(utils_1.SpeakeasyBase));
+exports.BoardPermissions = BoardPermissions;

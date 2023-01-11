@@ -25,7 +25,7 @@ export declare class GetMostsharedSectionTimePeriodJsonRequest extends Speakeasy
 }
 export declare class GetMostsharedSectionTimePeriodJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getMostsharedSectionTimePeriodJson200ApplicationJsonObject?: GetMostsharedSectionTimePeriodJson200ApplicationJson;
-    getMostsharedSectionTimePeriodJson400ApplicationJsonObject?: GetMostsharedSectionTimePeriodJson400ApplicationJson;
+    getMostsharedSectionTimePeriodJSON200ApplicationJSONObject?: GetMostsharedSectionTimePeriodJson200ApplicationJson;
+    getMostsharedSectionTimePeriodJSON400ApplicationJSONObject?: GetMostsharedSectionTimePeriodJson400ApplicationJson;
     statusCode: number;
 }

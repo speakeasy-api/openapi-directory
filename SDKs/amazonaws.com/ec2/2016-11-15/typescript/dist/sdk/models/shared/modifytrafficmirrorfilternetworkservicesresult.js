@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TrafficMirrorFilter } from "./trafficmirrorfilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyTrafficMirrorFilterNetworkServicesResult = exports.ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter = void 0;
+var utils_1 = require("../../../internal/utils");
+// ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter
+/**
+ * The Traffic Mirror filter that the network service is associated with.
+**/
+var ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter = /** @class */ (function (_super) {
+    __extends(ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter, _super);
+    function ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter.prototype, "egressFilterRules", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter.prototype, "ingressFilterRules", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter.prototype, "networkServices", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter.prototype, "trafficMirrorFilterId", void 0);
+    return ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter;
+}(utils_1.SpeakeasyBase));
+exports.ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter = ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter;
 var ModifyTrafficMirrorFilterNetworkServicesResult = /** @class */ (function (_super) {
     __extends(ModifyTrafficMirrorFilterNetworkServicesResult, _super);
     function ModifyTrafficMirrorFilterNetworkServicesResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TrafficMirrorFilter)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilter)
     ], ModifyTrafficMirrorFilterNetworkServicesResult.prototype, "trafficMirrorFilter", void 0);
     return ModifyTrafficMirrorFilterNetworkServicesResult;
-}(SpeakeasyBase));
-export { ModifyTrafficMirrorFilterNetworkServicesResult };
+}(utils_1.SpeakeasyBase));
+exports.ModifyTrafficMirrorFilterNetworkServicesResult = ModifyTrafficMirrorFilterNetworkServicesResult;

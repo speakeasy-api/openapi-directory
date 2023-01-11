@@ -1,22 +1,38 @@
-export * from "./cancelrotatesecret";
-export * from "./createsecret";
-export * from "./deleteresourcepolicy";
-export * from "./deletesecret";
-export * from "./describesecret";
-export * from "./getrandompassword";
-export * from "./getresourcepolicy";
-export * from "./getsecretvalue";
-export * from "./listsecrets";
-export * from "./listsecretversionids";
-export * from "./putresourcepolicy";
-export * from "./putsecretvalue";
-export * from "./removeregionsfromreplication";
-export * from "./replicatesecrettoregions";
-export * from "./restoresecret";
-export * from "./rotatesecret";
-export * from "./stopreplicationtoreplica";
-export * from "./tagresource";
-export * from "./untagresource";
-export * from "./updatesecret";
-export * from "./updatesecretversionstage";
-export * from "./validateresourcepolicy";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./cancelrotatesecret"), exports);
+__exportStar(require("./createsecret"), exports);
+__exportStar(require("./deleteresourcepolicy"), exports);
+__exportStar(require("./deletesecret"), exports);
+__exportStar(require("./describesecret"), exports);
+__exportStar(require("./getrandompassword"), exports);
+__exportStar(require("./getresourcepolicy"), exports);
+__exportStar(require("./getsecretvalue"), exports);
+__exportStar(require("./listsecrets"), exports);
+__exportStar(require("./listsecretversionids"), exports);
+__exportStar(require("./putresourcepolicy"), exports);
+__exportStar(require("./putsecretvalue"), exports);
+__exportStar(require("./removeregionsfromreplication"), exports);
+__exportStar(require("./replicatesecrettoregions"), exports);
+__exportStar(require("./restoresecret"), exports);
+__exportStar(require("./rotatesecret"), exports);
+__exportStar(require("./stopreplicationtoreplica"), exports);
+__exportStar(require("./tagresource"), exports);
+__exportStar(require("./untagresource"), exports);
+__exportStar(require("./updatesecret"), exports);
+__exportStar(require("./updatesecretversionstage"), exports);
+__exportStar(require("./validateresourcepolicy"), exports);

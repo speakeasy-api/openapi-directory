@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateTokenRequest, CreateTokenResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,29 +33,29 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateTokenRequest = {
   headers: {
-    xAmzAlgorithm: "voluptates",
-    xAmzContentSha256: "non",
-    xAmzCredential: "nam",
-    xAmzDate: "enim",
-    xAmzSecurityToken: "enim",
-    xAmzSignature: "assumenda",
-    xAmzSignedHeaders: "quo",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
-    clientId: "sint",
-    clientSecret: "quis",
-    code: "esse",
-    deviceCode: "voluptate",
-    grantType: "quibusdam",
-    redirectUri: "vero",
-    refreshToken: "ea",
+    clientId: "voluptas",
+    clientSecret: "fugit",
+    code: "et",
+    deviceCode: "nihil",
+    grantType: "rerum",
+    redirectUri: "dicta",
+    refreshToken: "debitis",
     scope: [
-      "maxime",
+      "et",
     ],
   },
 };
 
-sdk.sdk.createToken(req).then((res: CreateTokenResponse | AxiosError) => {
+sdk.createToken(req).then((res: CreateTokenResponse | AxiosError) => {
    // handle response
 });
 ```

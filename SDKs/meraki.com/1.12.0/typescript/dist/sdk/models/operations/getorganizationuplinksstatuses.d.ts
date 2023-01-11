@@ -16,7 +16,7 @@ export declare class GetOrganizationUplinksStatusesRequest extends SpeakeasyBase
 }
 export declare class GetOrganizationUplinksStatusesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getOrganizationUplinksStatuses200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationUplinksStatuses200ApplicationJSONObject?: Record<string, any>;
 }

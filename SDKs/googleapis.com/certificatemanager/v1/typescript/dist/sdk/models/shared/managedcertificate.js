@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthorizationAttemptInfo } from "./authorizationattemptinfo";
-import { ProvisioningIssue } from "./provisioningissue";
-export var ManagedCertificateStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ManagedCertificateInput = exports.ManagedCertificate = exports.ManagedCertificateStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var authorizationattemptinfo_1 = require("./authorizationattemptinfo");
+var provisioningissue_1 = require("./provisioningissue");
+var ManagedCertificateStateEnum;
 (function (ManagedCertificateStateEnum) {
     ManagedCertificateStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     ManagedCertificateStateEnum["Provisioning"] = "PROVISIONING";
     ManagedCertificateStateEnum["Failed"] = "FAILED";
     ManagedCertificateStateEnum["Active"] = "ACTIVE";
-})(ManagedCertificateStateEnum || (ManagedCertificateStateEnum = {}));
+})(ManagedCertificateStateEnum = exports.ManagedCertificateStateEnum || (exports.ManagedCertificateStateEnum = {}));
 // ManagedCertificate
 /**
  * Configuration and state of a Managed Certificate. Certificate Manager provisions and renews Managed Certificates automatically, for as long as it's authorized to do so.
@@ -42,32 +45,32 @@ var ManagedCertificate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorizationAttemptInfo", elemType: AuthorizationAttemptInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorizationAttemptInfo", elemType: authorizationattemptinfo_1.AuthorizationAttemptInfo }),
         __metadata("design:type", Array)
     ], ManagedCertificate.prototype, "authorizationAttemptInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dnsAuthorizations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dnsAuthorizations" }),
         __metadata("design:type", Array)
     ], ManagedCertificate.prototype, "dnsAuthorizations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domains" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domains" }),
         __metadata("design:type", Array)
     ], ManagedCertificate.prototype, "domains", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuanceConfig" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuanceConfig" }),
         __metadata("design:type", String)
     ], ManagedCertificate.prototype, "issuanceConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provisioningIssue" }),
-        __metadata("design:type", ProvisioningIssue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provisioningIssue" }),
+        __metadata("design:type", provisioningissue_1.ProvisioningIssue)
     ], ManagedCertificate.prototype, "provisioningIssue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ManagedCertificate.prototype, "state", void 0);
     return ManagedCertificate;
-}(SpeakeasyBase));
-export { ManagedCertificate };
+}(utils_1.SpeakeasyBase));
+exports.ManagedCertificate = ManagedCertificate;
 // ManagedCertificateInput
 /**
  * Configuration and state of a Managed Certificate. Certificate Manager provisions and renews Managed Certificates automatically, for as long as it's authorized to do so.
@@ -78,17 +81,17 @@ var ManagedCertificateInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dnsAuthorizations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dnsAuthorizations" }),
         __metadata("design:type", Array)
     ], ManagedCertificateInput.prototype, "dnsAuthorizations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domains" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domains" }),
         __metadata("design:type", Array)
     ], ManagedCertificateInput.prototype, "domains", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuanceConfig" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuanceConfig" }),
         __metadata("design:type", String)
     ], ManagedCertificateInput.prototype, "issuanceConfig", void 0);
     return ManagedCertificateInput;
-}(SpeakeasyBase));
-export { ManagedCertificateInput };
+}(utils_1.SpeakeasyBase));
+exports.ManagedCertificateInput = ManagedCertificateInput;

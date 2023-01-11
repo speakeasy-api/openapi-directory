@@ -9,5 +9,5 @@ export declare class ListHypernymsRequest extends SpeakeasyBase {
 export declare class ListHypernymsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listHypernyms200ApplicationJsonArrays?: number[][];
+    listHypernyms200ApplicationJSONArrays?: number[][];
 }

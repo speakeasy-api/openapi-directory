@@ -65,7 +65,7 @@ export class GenerateBackendApiModelsResponse extends SpeakeasyBase {
   gatewayTimeoutException?: any;
 
   @SpeakeasyMetadata()
-  generateBackendApiModelsResponse?: shared.GenerateBackendApiModelsResponse;
+  generateBackendAPIModelsResponse?: shared.GenerateBackendApiModelsResponse;
 
   @SpeakeasyMetadata()
   notFoundException?: any;

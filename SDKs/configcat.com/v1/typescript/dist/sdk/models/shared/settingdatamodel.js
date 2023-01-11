@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SettingTypeEnum } from "./settingtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SettingDataModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var settingtypeenum_1 = require("./settingtypeenum");
 var SettingDataModel = /** @class */ (function (_super) {
     __extends(SettingDataModel, _super);
     function SettingDataModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], SettingDataModel.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creatorEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creatorEmail" }),
         __metadata("design:type", String)
     ], SettingDataModel.prototype, "creatorEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creatorFullName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creatorFullName" }),
         __metadata("design:type", String)
     ], SettingDataModel.prototype, "creatorFullName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expirationWarningAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expirationWarningAt" }),
         __metadata("design:type", Date)
     ], SettingDataModel.prototype, "expirationWarningAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hint" }),
         __metadata("design:type", String)
     ], SettingDataModel.prototype, "hint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isWatching" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isWatching" }),
         __metadata("design:type", Boolean)
     ], SettingDataModel.prototype, "isWatching", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], SettingDataModel.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SettingDataModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerEmail" }),
         __metadata("design:type", String)
     ], SettingDataModel.prototype, "ownerEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerFullName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerFullName" }),
         __metadata("design:type", String)
     ], SettingDataModel.prototype, "ownerFullName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settingId" }),
         __metadata("design:type", Number)
     ], SettingDataModel.prototype, "settingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settingType" }),
         __metadata("design:type", String)
     ], SettingDataModel.prototype, "settingType", void 0);
     return SettingDataModel;
-}(SpeakeasyBase));
-export { SettingDataModel };
+}(utils_1.SpeakeasyBase));
+exports.SettingDataModel = SettingDataModel;

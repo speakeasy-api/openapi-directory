@@ -51,7 +51,7 @@ export class CreateClassifierResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createClassifierResponse?: Map<string, any>;
+  createClassifierResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidInputException?: any;

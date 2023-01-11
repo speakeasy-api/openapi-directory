@@ -11,5 +11,5 @@ export declare class AgentStoreSetRequest extends SpeakeasyBase {
 export declare class AgentStoreSetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    agentStoreSet200ApplicationJsonString?: string;
+    agentStoreSet200ApplicationJSONString?: string;
 }

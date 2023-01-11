@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Example13 = void 0;
+var utils_1 = require("../../../internal/utils");
 var Example13 = /** @class */ (function (_super) {
     __extends(Example13, _super);
     function Example13() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=can_enroll" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=can_enroll" }),
         __metadata("design:type", Boolean)
     ], Example13.prototype, "canEnroll", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enrollment_state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enrollment_state" }),
         __metadata("design:type", Number)
     ], Example13.prototype, "enrollmentState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error_code" }),
         __metadata("design:type", Number)
     ], Example13.prototype, "errorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ready" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ready" }),
         __metadata("design:type", Boolean)
     ], Example13.prototype, "ready", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retryable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retryable" }),
         __metadata("design:type", Boolean)
     ], Example13.prototype, "retryable", void 0);
     return Example13;
-}(SpeakeasyBase));
-export { Example13 };
+}(utils_1.SpeakeasyBase));
+exports.Example13 = Example13;

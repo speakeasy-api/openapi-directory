@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,74 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var LunMultiprotocolTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LunInput = exports.Lun = exports.LunStorageTypeEnum = exports.LunStateEnum = exports.LunMultiprotocolTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var LunMultiprotocolTypeEnum;
 (function (LunMultiprotocolTypeEnum) {
     LunMultiprotocolTypeEnum["MultiprotocolTypeUnspecified"] = "MULTIPROTOCOL_TYPE_UNSPECIFIED";
     LunMultiprotocolTypeEnum["Linux"] = "LINUX";
-})(LunMultiprotocolTypeEnum || (LunMultiprotocolTypeEnum = {}));
-export var LunStateEnum;
+})(LunMultiprotocolTypeEnum = exports.LunMultiprotocolTypeEnum || (exports.LunMultiprotocolTypeEnum = {}));
+var LunStateEnum;
 (function (LunStateEnum) {
     LunStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     LunStateEnum["Creating"] = "CREATING";
     LunStateEnum["Updating"] = "UPDATING";
     LunStateEnum["Ready"] = "READY";
     LunStateEnum["Deleting"] = "DELETING";
-})(LunStateEnum || (LunStateEnum = {}));
-export var LunStorageTypeEnum;
+})(LunStateEnum = exports.LunStateEnum || (exports.LunStateEnum = {}));
+var LunStorageTypeEnum;
 (function (LunStorageTypeEnum) {
     LunStorageTypeEnum["StorageTypeUnspecified"] = "STORAGE_TYPE_UNSPECIFIED";
     LunStorageTypeEnum["Ssd"] = "SSD";
     LunStorageTypeEnum["Hdd"] = "HDD";
-})(LunStorageTypeEnum || (LunStorageTypeEnum = {}));
-// LunInput
-/**
- * A storage volume logical unit number (LUN).
-**/
-var LunInput = /** @class */ (function (_super) {
-    __extends(LunInput, _super);
-    function LunInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootLun" }),
-        __metadata("design:type", Boolean)
-    ], LunInput.prototype, "bootLun", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
-        __metadata("design:type", String)
-    ], LunInput.prototype, "id", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=multiprotocolType" }),
-        __metadata("design:type", String)
-    ], LunInput.prototype, "multiprotocolType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=shareable" }),
-        __metadata("design:type", Boolean)
-    ], LunInput.prototype, "shareable", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeGb" }),
-        __metadata("design:type", String)
-    ], LunInput.prototype, "sizeGb", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
-        __metadata("design:type", String)
-    ], LunInput.prototype, "state", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageType" }),
-        __metadata("design:type", String)
-    ], LunInput.prototype, "storageType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageVolume" }),
-        __metadata("design:type", String)
-    ], LunInput.prototype, "storageVolume", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=wwid" }),
-        __metadata("design:type", String)
-    ], LunInput.prototype, "wwid", void 0);
-    return LunInput;
-}(SpeakeasyBase));
-export { LunInput };
+})(LunStorageTypeEnum = exports.LunStorageTypeEnum || (exports.LunStorageTypeEnum = {}));
 // Lun
 /**
  * A storage volume logical unit number (LUN).
@@ -100,45 +55,93 @@ var Lun = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootLun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootLun" }),
         __metadata("design:type", Boolean)
     ], Lun.prototype, "bootLun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Lun.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=multiprotocolType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=multiprotocolType" }),
         __metadata("design:type", String)
     ], Lun.prototype, "multiprotocolType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Lun.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shareable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shareable" }),
         __metadata("design:type", Boolean)
     ], Lun.prototype, "shareable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeGb" }),
         __metadata("design:type", String)
     ], Lun.prototype, "sizeGb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Lun.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageType" }),
         __metadata("design:type", String)
     ], Lun.prototype, "storageType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageVolume" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageVolume" }),
         __metadata("design:type", String)
     ], Lun.prototype, "storageVolume", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wwid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wwid" }),
         __metadata("design:type", String)
     ], Lun.prototype, "wwid", void 0);
     return Lun;
-}(SpeakeasyBase));
-export { Lun };
+}(utils_1.SpeakeasyBase));
+exports.Lun = Lun;
+// LunInput
+/**
+ * A storage volume logical unit number (LUN).
+**/
+var LunInput = /** @class */ (function (_super) {
+    __extends(LunInput, _super);
+    function LunInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootLun" }),
+        __metadata("design:type", Boolean)
+    ], LunInput.prototype, "bootLun", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], LunInput.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=multiprotocolType" }),
+        __metadata("design:type", String)
+    ], LunInput.prototype, "multiprotocolType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shareable" }),
+        __metadata("design:type", Boolean)
+    ], LunInput.prototype, "shareable", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeGb" }),
+        __metadata("design:type", String)
+    ], LunInput.prototype, "sizeGb", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", String)
+    ], LunInput.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageType" }),
+        __metadata("design:type", String)
+    ], LunInput.prototype, "storageType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageVolume" }),
+        __metadata("design:type", String)
+    ], LunInput.prototype, "storageVolume", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wwid" }),
+        __metadata("design:type", String)
+    ], LunInput.prototype, "wwid", void 0);
+    return LunInput;
+}(utils_1.SpeakeasyBase));
+exports.LunInput = LunInput;

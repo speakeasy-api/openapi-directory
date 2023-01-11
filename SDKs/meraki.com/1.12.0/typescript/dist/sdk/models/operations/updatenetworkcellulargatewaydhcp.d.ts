@@ -14,5 +14,5 @@ export declare class UpdateNetworkCellularGatewayDhcpRequest extends SpeakeasyBa
 export declare class UpdateNetworkCellularGatewayDhcpResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkCellularGatewayDhcp200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkCellularGatewayDhcp200ApplicationJSONObject?: Record<string, any>;
 }

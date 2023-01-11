@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KeyGroupSummary } from "./keygroupsummary";
+import { KeyGroupSummaryList } from "./keygroupsummarylist";
 
 
 
@@ -8,8 +8,8 @@ import { KeyGroupSummary } from "./keygroupsummary";
  * A list of key groups.
 **/
 export class KeyGroupList extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: KeyGroupSummary })
-  items?: KeyGroupSummary[];
+  @SpeakeasyMetadata({ elemType: KeyGroupSummaryList })
+  items?: KeyGroupSummaryList[];
 
   @SpeakeasyMetadata()
   maxItems: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListingExtraAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListingExtraAttributes = /** @class */ (function (_super) {
     __extends(ListingExtraAttributes, _super);
     function ListingExtraAttributes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dealer_added_f" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dealer_added_f" }),
         __metadata("design:type", Array)
     ], ListingExtraAttributes.prototype, "dealerAddedF", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=electronics_f" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=electronics_f" }),
         __metadata("design:type", Array)
     ], ListingExtraAttributes.prototype, "electronicsF", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exterior_f" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exterior_f" }),
         __metadata("design:type", Array)
     ], ListingExtraAttributes.prototype, "exteriorF", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=features" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=features" }),
         __metadata("design:type", Array)
     ], ListingExtraAttributes.prototype, "features", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ListingExtraAttributes.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interior_f" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interior_f" }),
         __metadata("design:type", Array)
     ], ListingExtraAttributes.prototype, "interiorF", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], ListingExtraAttributes.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=safety_f" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=safety_f" }),
         __metadata("design:type", Array)
     ], ListingExtraAttributes.prototype, "safetyF", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seller_cmts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seller_cmts" }),
         __metadata("design:type", String)
     ], ListingExtraAttributes.prototype, "sellerCmts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=standard_f" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=standard_f" }),
         __metadata("design:type", Array)
     ], ListingExtraAttributes.prototype, "standardF", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=technical_f" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=technical_f" }),
         __metadata("design:type", Array)
     ], ListingExtraAttributes.prototype, "technicalF", void 0);
     return ListingExtraAttributes;
-}(SpeakeasyBase));
-export { ListingExtraAttributes };
+}(utils_1.SpeakeasyBase));
+exports.ListingExtraAttributes = ListingExtraAttributes;

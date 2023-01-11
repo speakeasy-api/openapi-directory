@@ -22,7 +22,7 @@ export declare class ListTagsRequest extends SpeakeasyBase {
     request: shared.ListTagsRequest;
 }
 export declare class ListTagsResponse extends SpeakeasyBase {
-    cloudTrailArnInvalidException?: any;
+    cloudTrailARNInvalidException?: any;
     contentType: string;
     invalidTokenException?: any;
     invalidTrailNameException?: any;

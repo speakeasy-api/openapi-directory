@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { FailoverState } from "./failoverstate";
-import { GlobalClusterMember } from "./globalclustermember";
+import { GlobalClusterMemberList } from "./globalclustermemberlist";
 /**
  * A data type representing an Aurora global database.
 **/
@@ -12,7 +12,7 @@ export declare class GlobalCluster extends SpeakeasyBase {
     failoverState?: FailoverState;
     globalClusterArn?: string;
     globalClusterIdentifier?: string;
-    globalClusterMembers?: GlobalClusterMember[];
+    globalClusterMembers?: GlobalClusterMemberList[];
     globalClusterResourceId?: string;
     status?: string;
     storageEncrypted?: boolean;

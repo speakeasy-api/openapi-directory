@@ -15,11 +15,14 @@ export enum VmwareVmDetailsPowerStateEnum {
 }
 
 
-// VmwareVmDetailsInput
+// VmwareVmDetails
 /** 
  * VmwareVmDetails describes a VM in vCenter.
 **/
-export class VmwareVmDetailsInput extends SpeakeasyBase {
+export class VmwareVmDetails extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=bootOption" })
+  bootOption?: VmwareVmDetailsBootOptionEnum;
+
   @SpeakeasyMetadata({ data: "json, name=committedStorageMb" })
   committedStorageMb?: string;
 
@@ -55,14 +58,11 @@ export class VmwareVmDetailsInput extends SpeakeasyBase {
 }
 
 
-// VmwareVmDetails
+// VmwareVmDetailsInput
 /** 
  * VmwareVmDetails describes a VM in vCenter.
 **/
-export class VmwareVmDetails extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=bootOption" })
-  bootOption?: VmwareVmDetailsBootOptionEnum;
-
+export class VmwareVmDetailsInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=committedStorageMb" })
   committedStorageMb?: string;
 

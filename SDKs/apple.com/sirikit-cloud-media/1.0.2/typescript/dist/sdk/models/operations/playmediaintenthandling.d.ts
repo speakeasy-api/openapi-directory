@@ -13,7 +13,6 @@ export declare class PlayMediaIntentHandlingRequest extends SpeakeasyBase {
 }
 export declare class PlayMediaIntentHandlingResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
     playMediaIntentHandlingInvocationResponses?: any[];
     statusCode: number;
 }

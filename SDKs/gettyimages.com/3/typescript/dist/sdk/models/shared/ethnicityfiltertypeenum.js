@@ -1,4 +1,7 @@
-export var EthnicityFilterTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EthnicityFilterTypeEnum = void 0;
+var EthnicityFilterTypeEnum;
 (function (EthnicityFilterTypeEnum) {
     EthnicityFilterTypeEnum["Black"] = "black";
     EthnicityFilterTypeEnum["Caucasian"] = "caucasian";
@@ -12,4 +15,4 @@ export var EthnicityFilterTypeEnum;
     EthnicityFilterTypeEnum["PacificIslander"] = "pacific_islander";
     EthnicityFilterTypeEnum["SouthAsian"] = "south_asian";
     EthnicityFilterTypeEnum["SoutheastAsian"] = "southeast_asian";
-})(EthnicityFilterTypeEnum || (EthnicityFilterTypeEnum = {}));
+})(EthnicityFilterTypeEnum = exports.EthnicityFilterTypeEnum || (exports.EthnicityFilterTypeEnum = {}));

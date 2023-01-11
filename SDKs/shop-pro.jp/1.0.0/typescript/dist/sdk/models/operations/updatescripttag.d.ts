@@ -43,5 +43,5 @@ export declare class UpdateScriptTagRequest extends SpeakeasyBase {
 export declare class UpdateScriptTagResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateScriptTag200ApplicationJsonObject?: UpdateScriptTag200ApplicationJson;
+    updateScriptTag200ApplicationJSONObject?: UpdateScriptTag200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetRemoveCurationTagFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRemoveCurationTagResponse = exports.GetRemoveCurationTagRequest = exports.GetRemoveCurationTagQueryParams = exports.GetRemoveCurationTagFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetRemoveCurationTagFormatEnum;
 (function (GetRemoveCurationTagFormatEnum) {
     GetRemoveCurationTagFormatEnum["Json"] = "json";
     GetRemoveCurationTagFormatEnum["Xml"] = "xml";
@@ -31,60 +34,60 @@ export var GetRemoveCurationTagFormatEnum;
     GetRemoveCurationTagFormatEnum["Dump"] = "dump";
     GetRemoveCurationTagFormatEnum["Jpg"] = "jpg";
     GetRemoveCurationTagFormatEnum["Pdf"] = "pdf";
-})(GetRemoveCurationTagFormatEnum || (GetRemoveCurationTagFormatEnum = {}));
+})(GetRemoveCurationTagFormatEnum = exports.GetRemoveCurationTagFormatEnum || (exports.GetRemoveCurationTagFormatEnum = {}));
 var GetRemoveCurationTagQueryParams = /** @class */ (function (_super) {
     __extends(GetRemoveCurationTagQueryParams, _super);
     function GetRemoveCurationTagQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=auth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=auth" }),
         __metadata("design:type", String)
     ], GetRemoveCurationTagQueryParams.prototype, "auth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetRemoveCurationTagQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pwId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pwId" }),
         __metadata("design:type", String)
     ], GetRemoveCurationTagQueryParams.prototype, "pwId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tagName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tagName" }),
         __metadata("design:type", String)
     ], GetRemoveCurationTagQueryParams.prototype, "tagName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=username" }),
         __metadata("design:type", String)
     ], GetRemoveCurationTagQueryParams.prototype, "username", void 0);
     return GetRemoveCurationTagQueryParams;
-}(SpeakeasyBase));
-export { GetRemoveCurationTagQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveCurationTagQueryParams = GetRemoveCurationTagQueryParams;
 var GetRemoveCurationTagRequest = /** @class */ (function (_super) {
     __extends(GetRemoveCurationTagRequest, _super);
     function GetRemoveCurationTagRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRemoveCurationTagQueryParams)
     ], GetRemoveCurationTagRequest.prototype, "queryParams", void 0);
     return GetRemoveCurationTagRequest;
-}(SpeakeasyBase));
-export { GetRemoveCurationTagRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveCurationTagRequest = GetRemoveCurationTagRequest;
 var GetRemoveCurationTagResponse = /** @class */ (function (_super) {
     __extends(GetRemoveCurationTagResponse, _super);
     function GetRemoveCurationTagResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRemoveCurationTagResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRemoveCurationTagResponse.prototype, "statusCode", void 0);
     return GetRemoveCurationTagResponse;
-}(SpeakeasyBase));
-export { GetRemoveCurationTagResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveCurationTagResponse = GetRemoveCurationTagResponse;

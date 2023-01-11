@@ -16,25 +16,17 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { UsersAddonAccountsListRequest, UsersAddonAccountsListResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { AddonsListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
-    
-const req: UsersAddonAccountsListRequest = {
-  pathParams: {
-    provider: "ut",
-    userId: "quas",
-  },
-};
 
-sdk.sdk.usersAddonAccountsList(req).then((res: UsersAddonAccountsListResponse | AxiosError) => {
+sdk.addons.addonsList().then((res: AddonsListResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -43,14 +35,21 @@ sdk.sdk.usersAddonAccountsList(req).then((res: UsersAddonAccountsListResponse | 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Addons
 
-* `usersAddonAccountsList` - List all addon accounts
-* `usersAddonAccountsRead` - Retrieve an addon account
 * `addonsList` - List all addons
+
+### Base
+
 * `baseRead` - Root
+
+### Citations
+
 * `citationsStylesList` - List all citation styles
 * `citationsStylesRead` - Retrieve a citation style
+
+### Collections
+
 * `collectionsAddMetadata` - Add Metadata or Subjects to a Entitiy in a Collection
 * `collectionsCollectedMetadata` - Retrieve subject data for a specific piece of metadata info for a collection
 * `collectionsCreate` - Create a Collection
@@ -72,24 +71,45 @@ sdk.sdk.usersAddonAccountsList(req).then((res: UsersAddonAccountsListResponse | 
 * `collectionsMetadataRegistrationsList` - Retrieve a list of collected metadata for a collection
 * `collectionsMetadataSubjectsRelationships` - Retrieve subject metadata for a specific piece of metadata in a collection
 * `collectionsMetadataSubjectsRelationshipsUpdate` - Update subjects for a specific piece of metadata in a collection
+
+### Comments
+
 * `commentsDelete` - Delete a comment
 * `commentsPut` - Update a comment
 * `commentsRead` - Retrieve a comment
+
+### Files
+
 * `filesDetail` - Retrieve a file
 * `filesPatch` - Update a file
 * `filesVersionDetail` - Retrieve a file version
 * `filesVersions` - List all file versions
+
+### Institutions
+
 * `institutionsDetail` - Retrieve an institution
 * `institutionsList` - List all institutions
 * `institutionsNodeList` - List all affiliated nodes
 * `institutionsRegistrationList` - List all affiliated registrations
 * `institutionsUsersList` - List all affiliated users
+
+### Licenses
+
 * `licenseList` - List all licenses
 * `licensesRead` - Retrieve a license
+
+### Logs
+
 * `logsActions` - Actions
 * `logsRead` - Retrieve a log
+
+### Metaschemas
+
 * `metaschemasList` - List all metaschemas
 * `metaschemasRead` - Retrieve a metaschema
+
+### Nodes
+
 * `nodesAddonRead` - Retrieve an addon
 * `nodesAddonsFoldersList` - List all addon folders
 * `nodesAddonsList` - List all addons
@@ -130,17 +150,26 @@ sdk.sdk.usersAddonAccountsList(req).then((res: UsersAddonAccountsListResponse | 
 * `nodesViewOnlyLinksList` - List all view only links
 * `nodesViewOnlyLinksRead` - Retrieve a view only link
 * `nodesWikisList` - List all wikis
+
+### Preprint Providers
+
 * `preprintProviderDetail` - Retrieve a preprint provider
 * `preprintProviderLicensesList` - List all licenses
 * `preprintProviderList` - List all preprint providers
 * `preprintProviderTaxonomiesList` - List all taxonomies
 * `preprintProvidersPreprintsList` - List all preprints
+
+### Preprints
+
 * `preprintsCitationList` - Retrieve citation details
 * `preprintsCitationRead` - Retrieve a styled citation
 * `preprintsCreate` - Create a preprint
 * `preprintsList` - List all preprints
 * `preprintsPartialUpdate` - Update a preprint
 * `preprintsRead` - Retrieve a preprint
+
+### Registrations
+
 * `registrationsChildrenList` - List all child registrations
 * `registrationsCitationRead` - Retrieve a citation
 * `registrationsCitationsList` - List all citation styles
@@ -162,8 +191,16 @@ sdk.sdk.usersAddonAccountsList(req).then((res: UsersAddonAccountsListResponse | 
 * `registrationsViewOnlyLinksList` - List all view only links
 * `registrationsViewOnlyLinksRead` - Retrieve a view only link
 * `registrationsWikisList` - List all wikis
+
+### Taxonomies
+
 * `taxonomiesList` - List all taxonomies
 * `taxonomiesRead` - Retrieve a taxonomy
+
+### Users
+
+* `usersAddonAccountsList` - List all addon accounts
+* `usersAddonAccountsRead` - Retrieve an addon account
 * `usersAddonsList` - List all user addons
 * `usersAddonsRead` - Retrieve a user addon
 * `usersInstitutionsList` - List all institutions
@@ -173,8 +210,14 @@ sdk.sdk.usersAddonAccountsList(req).then((res: UsersAddonAccountsListResponse | 
 * `usersPreprintsList` - List all preprints
 * `usersRead` - Retrieve a user
 * `usersRegistrationsList` - List all registrations
+
+### View Only Links
+
 * `viewOnlyLinksNodeList` - List all nodes
 * `viewOnlyLinksRead` - Retrieve a view only link
+
+### Wikis
+
 * `wikiContent` - Retrieve the Content of a Wiki
 * `wikiRead` - Retrieve a Wiki
 

@@ -1,4 +1,7 @@
-export var FacetAttributeTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FacetAttributeTypeEnum = void 0;
+var FacetAttributeTypeEnum;
 (function (FacetAttributeTypeEnum) {
     FacetAttributeTypeEnum["String"] = "STRING";
     FacetAttributeTypeEnum["Binary"] = "BINARY";
@@ -6,4 +9,4 @@ export var FacetAttributeTypeEnum;
     FacetAttributeTypeEnum["Number"] = "NUMBER";
     FacetAttributeTypeEnum["Datetime"] = "DATETIME";
     FacetAttributeTypeEnum["Variant"] = "VARIANT";
-})(FacetAttributeTypeEnum || (FacetAttributeTypeEnum = {}));
+})(FacetAttributeTypeEnum = exports.FacetAttributeTypeEnum || (exports.FacetAttributeTypeEnum = {}));

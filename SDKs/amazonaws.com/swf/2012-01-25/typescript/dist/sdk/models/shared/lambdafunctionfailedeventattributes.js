@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LambdaFunctionFailedEventAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
 // LambdaFunctionFailedEventAttributes
 /**
  * Provides the details of the <code>LambdaFunctionFailed</code> event. It isn't set for other event types.
@@ -33,21 +36,21 @@ var LambdaFunctionFailedEventAttributes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details" }),
         __metadata("design:type", String)
     ], LambdaFunctionFailedEventAttributes.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], LambdaFunctionFailedEventAttributes.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduledEventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduledEventId" }),
         __metadata("design:type", Number)
     ], LambdaFunctionFailedEventAttributes.prototype, "scheduledEventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startedEventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startedEventId" }),
         __metadata("design:type", Number)
     ], LambdaFunctionFailedEventAttributes.prototype, "startedEventId", void 0);
     return LambdaFunctionFailedEventAttributes;
-}(SpeakeasyBase));
-export { LambdaFunctionFailedEventAttributes };
+}(utils_1.SpeakeasyBase));
+exports.LambdaFunctionFailedEventAttributes = LambdaFunctionFailedEventAttributes;

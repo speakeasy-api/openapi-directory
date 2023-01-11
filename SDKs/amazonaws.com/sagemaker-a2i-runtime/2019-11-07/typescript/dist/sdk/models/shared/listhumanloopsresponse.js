@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HumanLoopSummary } from "./humanloopsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListHumanLoopsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var humanloopsummary_1 = require("./humanloopsummary");
 var ListHumanLoopsResponse = /** @class */ (function (_super) {
     __extends(ListHumanLoopsResponse, _super);
     function ListHumanLoopsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HumanLoopSummaries", elemType: HumanLoopSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HumanLoopSummaries", elemType: humanloopsummary_1.HumanLoopSummary }),
         __metadata("design:type", Array)
     ], ListHumanLoopsResponse.prototype, "humanLoopSummaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListHumanLoopsResponse.prototype, "nextToken", void 0);
     return ListHumanLoopsResponse;
-}(SpeakeasyBase));
-export { ListHumanLoopsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListHumanLoopsResponse = ListHumanLoopsResponse;

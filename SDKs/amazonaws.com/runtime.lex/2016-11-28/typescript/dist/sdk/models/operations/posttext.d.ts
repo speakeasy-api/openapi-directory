@@ -17,8 +17,8 @@ export declare class PostTextHeaders extends SpeakeasyBase {
 export declare class PostTextRequestBody extends SpeakeasyBase {
     activeContexts?: shared.ActiveContext[];
     inputText: string;
-    requestAttributes?: Map<string, string>;
-    sessionAttributes?: Map<string, string>;
+    requestAttributes?: Record<string, string>;
+    sessionAttributes?: Record<string, string>;
 }
 export declare class PostTextRequest extends SpeakeasyBase {
     pathParams: PostTextPathParams;

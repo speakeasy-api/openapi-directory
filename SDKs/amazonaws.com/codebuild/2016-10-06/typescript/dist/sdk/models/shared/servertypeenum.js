@@ -1,6 +1,9 @@
-export var ServerTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServerTypeEnum = void 0;
+var ServerTypeEnum;
 (function (ServerTypeEnum) {
     ServerTypeEnum["Github"] = "GITHUB";
     ServerTypeEnum["Bitbucket"] = "BITBUCKET";
     ServerTypeEnum["GithubEnterprise"] = "GITHUB_ENTERPRISE";
-})(ServerTypeEnum || (ServerTypeEnum = {}));
+})(ServerTypeEnum = exports.ServerTypeEnum || (exports.ServerTypeEnum = {}));

@@ -13,7 +13,7 @@ export declare class CreateAdByListingIdRequest extends SpeakeasyBase {
 }
 export declare class CreateAdByListingIdResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    createAdByListingId201ApplicationJsonObject?: Map<string, any>;
+    createAdByListingId201ApplicationJSONObject?: Record<string, any>;
 }

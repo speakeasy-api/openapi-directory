@@ -4,17 +4,6 @@ export declare enum ActivityAttendeeStatusEnum {
     Tentative = "tentative",
     Declined = "declined"
 }
-export declare class ActivityAttendeeInput extends SpeakeasyBase {
-    emailAddress?: string;
-    firstName?: string;
-    isOrganizer?: boolean;
-    lastName?: string;
-    middleName?: string;
-    name?: string;
-    prefix?: string;
-    status?: ActivityAttendeeStatusEnum;
-    suffix?: string;
-}
 export declare class ActivityAttendee extends SpeakeasyBase {
     contactId?: string;
     createdAt?: Date;
@@ -30,4 +19,15 @@ export declare class ActivityAttendee extends SpeakeasyBase {
     suffix?: string;
     updatedAt?: Date;
     userId?: string;
+}
+export declare class ActivityAttendeeInput extends SpeakeasyBase {
+    emailAddress?: string;
+    firstName?: string;
+    isOrganizer?: boolean;
+    lastName?: string;
+    middleName?: string;
+    name?: string;
+    prefix?: string;
+    status?: ActivityAttendeeStatusEnum;
+    suffix?: string;
 }

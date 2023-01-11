@@ -1,9 +1,25 @@
-export * from "./deletewebhooksv3appidsettingsclear";
-export * from "./deletewebhooksv3appidsubscriptionssubscriptionidarchive";
-export * from "./getwebhooksv3appidsettingsgetall";
-export * from "./getwebhooksv3appidsubscriptionsgetall";
-export * from "./getwebhooksv3appidsubscriptionssubscriptionidgetbyid";
-export * from "./patchwebhooksv3appidsubscriptionssubscriptionidupdate";
-export * from "./postwebhooksv3appidsubscriptionsbatchupdateupdatebatch";
-export * from "./postwebhooksv3appidsubscriptionscreate";
-export * from "./putwebhooksv3appidsettingsconfigure";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./deletewebhooksv3appidsettingsclear"), exports);
+__exportStar(require("./deletewebhooksv3appidsubscriptionssubscriptionidarchive"), exports);
+__exportStar(require("./getwebhooksv3appidsettingsgetall"), exports);
+__exportStar(require("./getwebhooksv3appidsubscriptionsgetall"), exports);
+__exportStar(require("./getwebhooksv3appidsubscriptionssubscriptionidgetbyid"), exports);
+__exportStar(require("./patchwebhooksv3appidsubscriptionssubscriptionidupdate"), exports);
+__exportStar(require("./postwebhooksv3appidsubscriptionsbatchupdateupdatebatch"), exports);
+__exportStar(require("./postwebhooksv3appidsubscriptionscreate"), exports);
+__exportStar(require("./putwebhooksv3appidsettingsconfigure"), exports);

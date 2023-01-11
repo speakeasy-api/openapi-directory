@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Address } from "./address";
-import { Area } from "./area";
-import { City } from "./city";
-import { Country } from "./country";
-import { Location } from "./location";
-import { State } from "./state";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Place = void 0;
+var utils_1 = require("../../../internal/utils");
+var address_1 = require("./address");
+var area_1 = require("./area");
+var city_1 = require("./city");
+var country_1 = require("./country");
+var location_1 = require("./location");
+var state_1 = require("./state");
 // Place
 /**
  * Place
@@ -39,37 +42,37 @@ var Place = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
-        __metadata("design:type", Address)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", address_1.Address)
     ], Place.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=area" }),
-        __metadata("design:type", Area)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=area" }),
+        __metadata("design:type", area_1.Area)
     ], Place.prototype, "area", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
-        __metadata("design:type", City)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
+        __metadata("design:type", city_1.City)
     ], Place.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
-        __metadata("design:type", Country)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
+        __metadata("design:type", country_1.Country)
     ], Place.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", Location)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", location_1.Location)
     ], Place.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=names" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=names" }),
+        __metadata("design:type", Object)
     ], Place.prototype, "names", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postalCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postalCode" }),
         __metadata("design:type", String)
     ], Place.prototype, "postalCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
-        __metadata("design:type", State)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", state_1.State)
     ], Place.prototype, "state", void 0);
     return Place;
-}(SpeakeasyBase));
-export { Place };
+}(utils_1.SpeakeasyBase));
+exports.Place = Place;

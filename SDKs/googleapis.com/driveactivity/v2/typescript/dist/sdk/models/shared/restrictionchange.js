@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RestrictionChangeFeatureEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RestrictionChange = exports.RestrictionChangeNewRestrictionEnum = exports.RestrictionChangeFeatureEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RestrictionChangeFeatureEnum;
 (function (RestrictionChangeFeatureEnum) {
     RestrictionChangeFeatureEnum["FeatureUnspecified"] = "FEATURE_UNSPECIFIED";
     RestrictionChangeFeatureEnum["SharingOutsideDomain"] = "SHARING_OUTSIDE_DOMAIN";
     RestrictionChangeFeatureEnum["DirectSharing"] = "DIRECT_SHARING";
     RestrictionChangeFeatureEnum["ItemDuplication"] = "ITEM_DUPLICATION";
     RestrictionChangeFeatureEnum["DriveFileStream"] = "DRIVE_FILE_STREAM";
-})(RestrictionChangeFeatureEnum || (RestrictionChangeFeatureEnum = {}));
-export var RestrictionChangeNewRestrictionEnum;
+})(RestrictionChangeFeatureEnum = exports.RestrictionChangeFeatureEnum || (exports.RestrictionChangeFeatureEnum = {}));
+var RestrictionChangeNewRestrictionEnum;
 (function (RestrictionChangeNewRestrictionEnum) {
     RestrictionChangeNewRestrictionEnum["RestrictionUnspecified"] = "RESTRICTION_UNSPECIFIED";
     RestrictionChangeNewRestrictionEnum["Unrestricted"] = "UNRESTRICTED";
     RestrictionChangeNewRestrictionEnum["FullyRestricted"] = "FULLY_RESTRICTED";
-})(RestrictionChangeNewRestrictionEnum || (RestrictionChangeNewRestrictionEnum = {}));
+})(RestrictionChangeNewRestrictionEnum = exports.RestrictionChangeNewRestrictionEnum || (exports.RestrictionChangeNewRestrictionEnum = {}));
 // RestrictionChange
 /**
  * Information about restriction policy changes to a feature.
@@ -47,13 +50,13 @@ var RestrictionChange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feature" }),
         __metadata("design:type", String)
     ], RestrictionChange.prototype, "feature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newRestriction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newRestriction" }),
         __metadata("design:type", String)
     ], RestrictionChange.prototype, "newRestriction", void 0);
     return RestrictionChange;
-}(SpeakeasyBase));
-export { RestrictionChange };
+}(utils_1.SpeakeasyBase));
+exports.RestrictionChange = RestrictionChange;

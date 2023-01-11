@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,39 +23,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActivationStatusEnum } from "./activationstatusenum";
-import { ContactChannelAddress } from "./contactchanneladdress";
-import { ChannelTypeEnum } from "./channeltypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetContactChannelResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var activationstatusenum_1 = require("./activationstatusenum");
+var contactchanneladdress_1 = require("./contactchanneladdress");
+var channeltypeenum_1 = require("./channeltypeenum");
 var GetContactChannelResult = /** @class */ (function (_super) {
     __extends(GetContactChannelResult, _super);
     function GetContactChannelResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ActivationStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ActivationStatus" }),
         __metadata("design:type", String)
     ], GetContactChannelResult.prototype, "activationStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContactArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContactArn" }),
         __metadata("design:type", String)
     ], GetContactChannelResult.prototype, "contactArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContactChannelArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContactChannelArn" }),
         __metadata("design:type", String)
     ], GetContactChannelResult.prototype, "contactChannelArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeliveryAddress" }),
-        __metadata("design:type", ContactChannelAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeliveryAddress" }),
+        __metadata("design:type", contactchanneladdress_1.ContactChannelAddress)
     ], GetContactChannelResult.prototype, "deliveryAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GetContactChannelResult.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], GetContactChannelResult.prototype, "type", void 0);
     return GetContactChannelResult;
-}(SpeakeasyBase));
-export { GetContactChannelResult };
+}(utils_1.SpeakeasyBase));
+exports.GetContactChannelResult = GetContactChannelResult;

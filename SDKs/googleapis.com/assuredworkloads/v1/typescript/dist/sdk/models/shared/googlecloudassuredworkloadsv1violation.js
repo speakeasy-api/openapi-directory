@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudAssuredworkloadsV1ViolationRemediation } from "./googlecloudassuredworkloadsv1violationremediation";
-export var GoogleCloudAssuredworkloadsV1ViolationStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudAssuredworkloadsV1Violation = exports.GoogleCloudAssuredworkloadsV1ViolationStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudassuredworkloadsv1violationremediation_1 = require("./googlecloudassuredworkloadsv1violationremediation");
+var GoogleCloudAssuredworkloadsV1ViolationStateEnum;
 (function (GoogleCloudAssuredworkloadsV1ViolationStateEnum) {
     GoogleCloudAssuredworkloadsV1ViolationStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     GoogleCloudAssuredworkloadsV1ViolationStateEnum["Resolved"] = "RESOLVED";
     GoogleCloudAssuredworkloadsV1ViolationStateEnum["Unresolved"] = "UNRESOLVED";
     GoogleCloudAssuredworkloadsV1ViolationStateEnum["Exception"] = "EXCEPTION";
-})(GoogleCloudAssuredworkloadsV1ViolationStateEnum || (GoogleCloudAssuredworkloadsV1ViolationStateEnum = {}));
+})(GoogleCloudAssuredworkloadsV1ViolationStateEnum = exports.GoogleCloudAssuredworkloadsV1ViolationStateEnum || (exports.GoogleCloudAssuredworkloadsV1ViolationStateEnum = {}));
 // GoogleCloudAssuredworkloadsV1Violation
 /**
  * Workload monitoring Violation.
@@ -41,61 +44,61 @@ var GoogleCloudAssuredworkloadsV1Violation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acknowledged" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acknowledged" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudAssuredworkloadsV1Violation.prototype, "acknowledged", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acknowledgementTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acknowledgementTime" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1Violation.prototype, "acknowledgementTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auditLogLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auditLogLink" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1Violation.prototype, "auditLogLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=beginTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=beginTime" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1Violation.prototype, "beginTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1Violation.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1Violation.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exceptionAuditLogLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exceptionAuditLogLink" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1Violation.prototype, "exceptionAuditLogLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1Violation.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nonCompliantOrgPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nonCompliantOrgPolicy" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1Violation.prototype, "nonCompliantOrgPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orgPolicyConstraint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orgPolicyConstraint" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1Violation.prototype, "orgPolicyConstraint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remediation" }),
-        __metadata("design:type", GoogleCloudAssuredworkloadsV1ViolationRemediation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remediation" }),
+        __metadata("design:type", googlecloudassuredworkloadsv1violationremediation_1.GoogleCloudAssuredworkloadsV1ViolationRemediation)
     ], GoogleCloudAssuredworkloadsV1Violation.prototype, "remediation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolveTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolveTime" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1Violation.prototype, "resolveTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1Violation.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1Violation.prototype, "updateTime", void 0);
     return GoogleCloudAssuredworkloadsV1Violation;
-}(SpeakeasyBase));
-export { GoogleCloudAssuredworkloadsV1Violation };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudAssuredworkloadsV1Violation = GoogleCloudAssuredworkloadsV1Violation;

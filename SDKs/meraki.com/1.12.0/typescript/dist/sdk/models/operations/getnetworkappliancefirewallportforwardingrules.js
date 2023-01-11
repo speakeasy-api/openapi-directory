@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkApplianceFirewallPortForwardingRulesResponse = exports.GetNetworkApplianceFirewallPortForwardingRulesRequest = exports.GetNetworkApplianceFirewallPortForwardingRulesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkApplianceFirewallPortForwardingRulesPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceFirewallPortForwardingRulesPathParams, _super);
     function GetNetworkApplianceFirewallPortForwardingRulesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceFirewallPortForwardingRulesPathParams.prototype, "networkId", void 0);
     return GetNetworkApplianceFirewallPortForwardingRulesPathParams;
-}(SpeakeasyBase));
-export { GetNetworkApplianceFirewallPortForwardingRulesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceFirewallPortForwardingRulesPathParams = GetNetworkApplianceFirewallPortForwardingRulesPathParams;
 var GetNetworkApplianceFirewallPortForwardingRulesRequest = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceFirewallPortForwardingRulesRequest, _super);
     function GetNetworkApplianceFirewallPortForwardingRulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkApplianceFirewallPortForwardingRulesPathParams)
     ], GetNetworkApplianceFirewallPortForwardingRulesRequest.prototype, "pathParams", void 0);
     return GetNetworkApplianceFirewallPortForwardingRulesRequest;
-}(SpeakeasyBase));
-export { GetNetworkApplianceFirewallPortForwardingRulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceFirewallPortForwardingRulesRequest = GetNetworkApplianceFirewallPortForwardingRulesRequest;
 var GetNetworkApplianceFirewallPortForwardingRulesResponse = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceFirewallPortForwardingRulesResponse, _super);
     function GetNetworkApplianceFirewallPortForwardingRulesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkApplianceFirewallPortForwardingRulesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkApplianceFirewallPortForwardingRulesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkApplianceFirewallPortForwardingRulesResponse.prototype, "getNetworkApplianceFirewallPortForwardingRules200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkApplianceFirewallPortForwardingRulesResponse.prototype, "getNetworkApplianceFirewallPortForwardingRules200ApplicationJSONObject", void 0);
     return GetNetworkApplianceFirewallPortForwardingRulesResponse;
-}(SpeakeasyBase));
-export { GetNetworkApplianceFirewallPortForwardingRulesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceFirewallPortForwardingRulesResponse = GetNetworkApplianceFirewallPortForwardingRulesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkWirelessAirMarshalResponse = exports.GetNetworkWirelessAirMarshalRequest = exports.GetNetworkWirelessAirMarshalQueryParams = exports.GetNetworkWirelessAirMarshalPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkWirelessAirMarshalPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessAirMarshalPathParams, _super);
     function GetNetworkWirelessAirMarshalPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessAirMarshalPathParams.prototype, "networkId", void 0);
     return GetNetworkWirelessAirMarshalPathParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessAirMarshalPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessAirMarshalPathParams = GetNetworkWirelessAirMarshalPathParams;
 var GetNetworkWirelessAirMarshalQueryParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessAirMarshalQueryParams, _super);
     function GetNetworkWirelessAirMarshalQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t0" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessAirMarshalQueryParams.prototype, "t0", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timespan" }),
         __metadata("design:type", Number)
     ], GetNetworkWirelessAirMarshalQueryParams.prototype, "timespan", void 0);
     return GetNetworkWirelessAirMarshalQueryParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessAirMarshalQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessAirMarshalQueryParams = GetNetworkWirelessAirMarshalQueryParams;
 var GetNetworkWirelessAirMarshalRequest = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessAirMarshalRequest, _super);
     function GetNetworkWirelessAirMarshalRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessAirMarshalPathParams)
     ], GetNetworkWirelessAirMarshalRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessAirMarshalQueryParams)
     ], GetNetworkWirelessAirMarshalRequest.prototype, "queryParams", void 0);
     return GetNetworkWirelessAirMarshalRequest;
-}(SpeakeasyBase));
-export { GetNetworkWirelessAirMarshalRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessAirMarshalRequest = GetNetworkWirelessAirMarshalRequest;
 var GetNetworkWirelessAirMarshalResponse = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessAirMarshalResponse, _super);
     function GetNetworkWirelessAirMarshalResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkWirelessAirMarshalResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkWirelessAirMarshalResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkWirelessAirMarshalResponse.prototype, "getNetworkWirelessAirMarshal200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkWirelessAirMarshalResponse.prototype, "getNetworkWirelessAirMarshal200ApplicationJSONObject", void 0);
     return GetNetworkWirelessAirMarshalResponse;
-}(SpeakeasyBase));
-export { GetNetworkWirelessAirMarshalResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessAirMarshalResponse = GetNetworkWirelessAirMarshalResponse;

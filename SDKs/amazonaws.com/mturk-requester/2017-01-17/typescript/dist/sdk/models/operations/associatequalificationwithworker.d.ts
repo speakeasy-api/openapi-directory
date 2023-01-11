@@ -18,7 +18,7 @@ export declare class AssociateQualificationWithWorkerRequest extends SpeakeasyBa
     request: shared.AssociateQualificationWithWorkerRequest;
 }
 export declare class AssociateQualificationWithWorkerResponse extends SpeakeasyBase {
-    associateQualificationWithWorkerResponse?: Map<string, any>;
+    associateQualificationWithWorkerResponse?: Record<string, any>;
     contentType: string;
     requestError?: any;
     serviceFault?: any;

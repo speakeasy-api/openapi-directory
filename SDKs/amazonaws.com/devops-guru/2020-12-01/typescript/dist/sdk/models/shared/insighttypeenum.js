@@ -1,5 +1,8 @@
-export var InsightTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InsightTypeEnum = void 0;
+var InsightTypeEnum;
 (function (InsightTypeEnum) {
     InsightTypeEnum["Reactive"] = "REACTIVE";
     InsightTypeEnum["Proactive"] = "PROACTIVE";
-})(InsightTypeEnum || (InsightTypeEnum = {}));
+})(InsightTypeEnum = exports.InsightTypeEnum || (exports.InsightTypeEnum = {}));

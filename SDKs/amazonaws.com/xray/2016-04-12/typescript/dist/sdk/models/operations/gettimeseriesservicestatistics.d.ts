@@ -16,7 +16,7 @@ export declare class GetTimeSeriesServiceStatisticsRequestBody extends Speakeasy
     endTime: Date;
     entitySelectorExpression?: string;
     forecastStatistics?: boolean;
-    groupArn?: string;
+    groupARN?: string;
     groupName?: string;
     nextToken?: string;
     period?: number;

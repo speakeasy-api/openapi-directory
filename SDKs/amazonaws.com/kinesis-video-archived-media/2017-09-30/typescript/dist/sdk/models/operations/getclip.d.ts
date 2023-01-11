@@ -18,7 +18,7 @@ export declare class GetClipRequestBodyClipFragmentSelector extends SpeakeasyBas
 }
 export declare class GetClipRequestBody extends SpeakeasyBase {
     clipFragmentSelector: GetClipRequestBodyClipFragmentSelector;
-    streamArn?: string;
+    streamARN?: string;
     streamName?: string;
 }
 export declare class GetClipRequest extends SpeakeasyBase {

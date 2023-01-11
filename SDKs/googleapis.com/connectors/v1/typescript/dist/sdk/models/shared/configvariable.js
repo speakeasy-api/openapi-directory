@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Secret } from "./secret";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigVariable = void 0;
+var utils_1 = require("../../../internal/utils");
+var secret_1 = require("./secret");
 // ConfigVariable
 /**
  * ConfigVariable represents a configuration variable present in a Connection. or AuthConfig.
@@ -34,25 +37,25 @@ var ConfigVariable = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=boolValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=boolValue" }),
         __metadata("design:type", Boolean)
     ], ConfigVariable.prototype, "boolValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intValue" }),
         __metadata("design:type", String)
     ], ConfigVariable.prototype, "intValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], ConfigVariable.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secretValue" }),
-        __metadata("design:type", Secret)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secretValue" }),
+        __metadata("design:type", secret_1.Secret)
     ], ConfigVariable.prototype, "secretValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stringValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stringValue" }),
         __metadata("design:type", String)
     ], ConfigVariable.prototype, "stringValue", void 0);
     return ConfigVariable;
-}(SpeakeasyBase));
-export { ConfigVariable };
+}(utils_1.SpeakeasyBase));
+exports.ConfigVariable = ConfigVariable;

@@ -35,7 +35,7 @@ export class PutTelemetryRecordsRequestBody extends SpeakeasyBase {
   hostname?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ResourceARN" })
-  resourceArn?: string;
+  resourceARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=TelemetryRecords", elemType: shared.TelemetryRecord })
   telemetryRecords: shared.TelemetryRecord[];
@@ -59,7 +59,7 @@ export class PutTelemetryRecordsResponse extends SpeakeasyBase {
   invalidRequestException?: any;
 
   @SpeakeasyMetadata()
-  putTelemetryRecordsResult?: Map<string, any>;
+  putTelemetryRecordsResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

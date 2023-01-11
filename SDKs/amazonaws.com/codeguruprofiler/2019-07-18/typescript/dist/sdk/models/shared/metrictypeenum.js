@@ -1,4 +1,7 @@
-export var MetricTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricTypeEnum = void 0;
+var MetricTypeEnum;
 (function (MetricTypeEnum) {
     MetricTypeEnum["AggregatedRelativeTotalTime"] = "AggregatedRelativeTotalTime";
-})(MetricTypeEnum || (MetricTypeEnum = {}));
+})(MetricTypeEnum = exports.MetricTypeEnum || (exports.MetricTypeEnum = {}));

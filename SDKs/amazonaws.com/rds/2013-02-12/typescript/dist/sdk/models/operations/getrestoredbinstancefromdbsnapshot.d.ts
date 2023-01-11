@@ -17,7 +17,7 @@ export declare class GetRestoreDbInstanceFromDbSnapshotQueryParams extends Speak
     engine?: string;
     iops?: number;
     licenseModel?: string;
-    multiAz?: boolean;
+    multiAZ?: boolean;
     optionGroupName?: string;
     port?: number;
     publiclyAccessible?: boolean;

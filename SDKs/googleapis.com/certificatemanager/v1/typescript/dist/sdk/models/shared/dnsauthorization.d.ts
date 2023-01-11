@@ -6,7 +6,7 @@ import { DnsResourceRecord } from "./dnsresourcerecord";
 export declare class DnsAuthorizationInput extends SpeakeasyBase {
     description?: string;
     domain?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
 }
 /**
@@ -17,7 +17,7 @@ export declare class DnsAuthorization extends SpeakeasyBase {
     description?: string;
     dnsResourceRecord?: DnsResourceRecord;
     domain?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     updateTime?: string;
 }

@@ -26,6 +26,6 @@ export declare class GetDealersHeavyEquipmentRequest extends SpeakeasyBase {
 export declare class GetDealersHeavyEquipmentResponse extends SpeakeasyBase {
     contentType: string;
     dealersResponse?: shared.DealersResponse;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

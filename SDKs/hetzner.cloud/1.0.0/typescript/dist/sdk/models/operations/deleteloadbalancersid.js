@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteLoadBalancersIdResponse = exports.DeleteLoadBalancersIdRequest = exports.DeleteLoadBalancersIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteLoadBalancersIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteLoadBalancersIdPathParams, _super);
     function DeleteLoadBalancersIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], DeleteLoadBalancersIdPathParams.prototype, "id", void 0);
     return DeleteLoadBalancersIdPathParams;
-}(SpeakeasyBase));
-export { DeleteLoadBalancersIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteLoadBalancersIdPathParams = DeleteLoadBalancersIdPathParams;
 var DeleteLoadBalancersIdRequest = /** @class */ (function (_super) {
     __extends(DeleteLoadBalancersIdRequest, _super);
     function DeleteLoadBalancersIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteLoadBalancersIdPathParams)
     ], DeleteLoadBalancersIdRequest.prototype, "pathParams", void 0);
     return DeleteLoadBalancersIdRequest;
-}(SpeakeasyBase));
-export { DeleteLoadBalancersIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteLoadBalancersIdRequest = DeleteLoadBalancersIdRequest;
 var DeleteLoadBalancersIdResponse = /** @class */ (function (_super) {
     __extends(DeleteLoadBalancersIdResponse, _super);
     function DeleteLoadBalancersIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteLoadBalancersIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteLoadBalancersIdResponse.prototype, "statusCode", void 0);
     return DeleteLoadBalancersIdResponse;
-}(SpeakeasyBase));
-export { DeleteLoadBalancersIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteLoadBalancersIdResponse = DeleteLoadBalancersIdResponse;

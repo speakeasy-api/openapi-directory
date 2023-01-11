@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RedshiftDataSpec } from "./redshiftdataspec";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDataSourceFromRedshiftInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var redshiftdataspec_1 = require("./redshiftdataspec");
 var CreateDataSourceFromRedshiftInput = /** @class */ (function (_super) {
     __extends(CreateDataSourceFromRedshiftInput, _super);
     function CreateDataSourceFromRedshiftInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComputeStatistics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComputeStatistics" }),
         __metadata("design:type", Boolean)
     ], CreateDataSourceFromRedshiftInput.prototype, "computeStatistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataSourceId" }),
         __metadata("design:type", String)
     ], CreateDataSourceFromRedshiftInput.prototype, "dataSourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataSourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataSourceName" }),
         __metadata("design:type", String)
     ], CreateDataSourceFromRedshiftInput.prototype, "dataSourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataSpec" }),
-        __metadata("design:type", RedshiftDataSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataSpec" }),
+        __metadata("design:type", redshiftdataspec_1.RedshiftDataSpec)
     ], CreateDataSourceFromRedshiftInput.prototype, "dataSpec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RoleARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RoleARN" }),
         __metadata("design:type", String)
-    ], CreateDataSourceFromRedshiftInput.prototype, "roleArn", void 0);
+    ], CreateDataSourceFromRedshiftInput.prototype, "roleARN", void 0);
     return CreateDataSourceFromRedshiftInput;
-}(SpeakeasyBase));
-export { CreateDataSourceFromRedshiftInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateDataSourceFromRedshiftInput = CreateDataSourceFromRedshiftInput;

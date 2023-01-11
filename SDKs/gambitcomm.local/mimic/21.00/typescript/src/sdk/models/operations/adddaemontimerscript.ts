@@ -28,5 +28,5 @@ export class AddDaemonTimerScriptResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  addDaemonTimerScript200ApplicationJsonString?: string;
+  addDaemonTimerScript200ApplicationJSONString?: string;
 }

@@ -14,5 +14,5 @@ export class HttpBody extends SpeakeasyBase {
   data?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extensions" })
-  extensions?: Map<string, any>[];
+  extensions?: Record<string, any>[];
 }

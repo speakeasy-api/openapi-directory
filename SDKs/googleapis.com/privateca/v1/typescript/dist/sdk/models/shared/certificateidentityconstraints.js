@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Expr } from "./expr";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CertificateIdentityConstraints = void 0;
+var utils_1 = require("../../../internal/utils");
+var expr_1 = require("./expr");
 // CertificateIdentityConstraints
 /**
  * Describes constraints on a Certificate's Subject and SubjectAltNames.
@@ -34,17 +37,17 @@ var CertificateIdentityConstraints = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowSubjectAltNamesPassthrough" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowSubjectAltNamesPassthrough" }),
         __metadata("design:type", Boolean)
     ], CertificateIdentityConstraints.prototype, "allowSubjectAltNamesPassthrough", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowSubjectPassthrough" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowSubjectPassthrough" }),
         __metadata("design:type", Boolean)
     ], CertificateIdentityConstraints.prototype, "allowSubjectPassthrough", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=celExpression" }),
-        __metadata("design:type", Expr)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=celExpression" }),
+        __metadata("design:type", expr_1.Expr)
     ], CertificateIdentityConstraints.prototype, "celExpression", void 0);
     return CertificateIdentityConstraints;
-}(SpeakeasyBase));
-export { CertificateIdentityConstraints };
+}(utils_1.SpeakeasyBase));
+exports.CertificateIdentityConstraints = CertificateIdentityConstraints;

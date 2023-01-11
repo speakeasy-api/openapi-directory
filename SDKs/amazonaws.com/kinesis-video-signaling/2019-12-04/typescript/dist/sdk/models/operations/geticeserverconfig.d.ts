@@ -13,7 +13,7 @@ export declare enum GetIceServerConfigRequestBodyServiceEnum {
     Turn = "TURN"
 }
 export declare class GetIceServerConfigRequestBody extends SpeakeasyBase {
-    channelArn: string;
+    channelARN: string;
     clientId?: string;
     service?: GetIceServerConfigRequestBodyServiceEnum;
     username?: string;

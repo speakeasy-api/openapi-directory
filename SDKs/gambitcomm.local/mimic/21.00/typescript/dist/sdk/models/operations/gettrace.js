@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTraceResponse = exports.GetTraceRequest = exports.GetTracePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTracePathParams = /** @class */ (function (_super) {
     __extends(GetTracePathParams, _super);
     function GetTracePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], GetTracePathParams.prototype, "agentNum", void 0);
     return GetTracePathParams;
-}(SpeakeasyBase));
-export { GetTracePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTracePathParams = GetTracePathParams;
 var GetTraceRequest = /** @class */ (function (_super) {
     __extends(GetTraceRequest, _super);
     function GetTraceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTracePathParams)
     ], GetTraceRequest.prototype, "pathParams", void 0);
     return GetTraceRequest;
-}(SpeakeasyBase));
-export { GetTraceRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTraceRequest = GetTraceRequest;
 var GetTraceResponse = /** @class */ (function (_super) {
     __extends(GetTraceResponse, _super);
     function GetTraceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTraceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTraceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], GetTraceResponse.prototype, "getTrace200ApplicationJsonInt32Integer", void 0);
+    ], GetTraceResponse.prototype, "getTrace200ApplicationJSONInt32Integer", void 0);
     return GetTraceResponse;
-}(SpeakeasyBase));
-export { GetTraceResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTraceResponse = GetTraceResponse;

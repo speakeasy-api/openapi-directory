@@ -86,7 +86,7 @@ export class UpdateNetworkApplianceVlanRequestBody extends SpeakeasyBase {
   dnsNameservers?: string;
 
   @SpeakeasyMetadata({ data: "json, name=fixedIpAssignments" })
-  fixedIpAssignments?: Map<string, any>;
+  fixedIpAssignments?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=groupPolicyId" })
   groupPolicyId?: string;
@@ -122,5 +122,5 @@ export class UpdateNetworkApplianceVlanResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkApplianceVlan200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkApplianceVlan200ApplicationJSONObject?: Record<string, any>;
 }

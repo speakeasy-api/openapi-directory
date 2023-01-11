@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkFirmwareUpgradesResponse = exports.GetNetworkFirmwareUpgradesRequest = exports.GetNetworkFirmwareUpgradesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkFirmwareUpgradesPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkFirmwareUpgradesPathParams, _super);
     function GetNetworkFirmwareUpgradesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkFirmwareUpgradesPathParams.prototype, "networkId", void 0);
     return GetNetworkFirmwareUpgradesPathParams;
-}(SpeakeasyBase));
-export { GetNetworkFirmwareUpgradesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkFirmwareUpgradesPathParams = GetNetworkFirmwareUpgradesPathParams;
 var GetNetworkFirmwareUpgradesRequest = /** @class */ (function (_super) {
     __extends(GetNetworkFirmwareUpgradesRequest, _super);
     function GetNetworkFirmwareUpgradesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkFirmwareUpgradesPathParams)
     ], GetNetworkFirmwareUpgradesRequest.prototype, "pathParams", void 0);
     return GetNetworkFirmwareUpgradesRequest;
-}(SpeakeasyBase));
-export { GetNetworkFirmwareUpgradesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkFirmwareUpgradesRequest = GetNetworkFirmwareUpgradesRequest;
 var GetNetworkFirmwareUpgradesResponse = /** @class */ (function (_super) {
     __extends(GetNetworkFirmwareUpgradesResponse, _super);
     function GetNetworkFirmwareUpgradesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkFirmwareUpgradesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkFirmwareUpgradesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkFirmwareUpgradesResponse.prototype, "getNetworkFirmwareUpgrades200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkFirmwareUpgradesResponse.prototype, "getNetworkFirmwareUpgrades200ApplicationJSONObject", void 0);
     return GetNetworkFirmwareUpgradesResponse;
-}(SpeakeasyBase));
-export { GetNetworkFirmwareUpgradesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkFirmwareUpgradesResponse = GetNetworkFirmwareUpgradesResponse;

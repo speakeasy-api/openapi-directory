@@ -8,7 +8,7 @@ export declare class GetTransactionInfoRequest extends SpeakeasyBase {
 }
 export declare class GetTransactionInfoResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     getTransactionInfoResponse?: shared.GetTransactionInfoResponse;
 }

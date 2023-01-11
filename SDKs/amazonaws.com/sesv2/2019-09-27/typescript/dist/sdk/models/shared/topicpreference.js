@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SubscriptionStatusEnum } from "./subscriptionstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TopicPreference = void 0;
+var utils_1 = require("../../../internal/utils");
+var subscriptionstatusenum_1 = require("./subscriptionstatusenum");
 // TopicPreference
 /**
  * The contact's preference for being opted-in to or opted-out of a topic.
@@ -34,13 +37,13 @@ var TopicPreference = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubscriptionStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubscriptionStatus" }),
         __metadata("design:type", String)
     ], TopicPreference.prototype, "subscriptionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TopicName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TopicName" }),
         __metadata("design:type", String)
     ], TopicPreference.prototype, "topicName", void 0);
     return TopicPreference;
-}(SpeakeasyBase));
-export { TopicPreference };
+}(utils_1.SpeakeasyBase));
+exports.TopicPreference = TopicPreference;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1Price } from "./googlecloudchannelv1price";
-import { GoogleCloudChannelV1PriceTier } from "./googlecloudchannelv1pricetier";
-export var GoogleCloudChannelV1PricePhasePeriodTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1PricePhase = exports.GoogleCloudChannelV1PricePhasePeriodTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1price_1 = require("./googlecloudchannelv1price");
+var googlecloudchannelv1pricetier_1 = require("./googlecloudchannelv1pricetier");
+var GoogleCloudChannelV1PricePhasePeriodTypeEnum;
 (function (GoogleCloudChannelV1PricePhasePeriodTypeEnum) {
     GoogleCloudChannelV1PricePhasePeriodTypeEnum["PeriodTypeUnspecified"] = "PERIOD_TYPE_UNSPECIFIED";
     GoogleCloudChannelV1PricePhasePeriodTypeEnum["Day"] = "DAY";
     GoogleCloudChannelV1PricePhasePeriodTypeEnum["Month"] = "MONTH";
     GoogleCloudChannelV1PricePhasePeriodTypeEnum["Year"] = "YEAR";
-})(GoogleCloudChannelV1PricePhasePeriodTypeEnum || (GoogleCloudChannelV1PricePhasePeriodTypeEnum = {}));
+})(GoogleCloudChannelV1PricePhasePeriodTypeEnum = exports.GoogleCloudChannelV1PricePhasePeriodTypeEnum || (exports.GoogleCloudChannelV1PricePhasePeriodTypeEnum = {}));
 // GoogleCloudChannelV1PricePhase
 /**
  * Specifies the price by the duration of months. For example, a 20% discount for the first six months, then a 10% discount starting on the seventh month.
@@ -42,25 +45,25 @@ var GoogleCloudChannelV1PricePhase = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstPeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstPeriod" }),
         __metadata("design:type", Number)
     ], GoogleCloudChannelV1PricePhase.prototype, "firstPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastPeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastPeriod" }),
         __metadata("design:type", Number)
     ], GoogleCloudChannelV1PricePhase.prototype, "lastPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=periodType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=periodType" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1PricePhase.prototype, "periodType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
-        __metadata("design:type", GoogleCloudChannelV1Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
+        __metadata("design:type", googlecloudchannelv1price_1.GoogleCloudChannelV1Price)
     ], GoogleCloudChannelV1PricePhase.prototype, "price", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceTiers", elemType: GoogleCloudChannelV1PriceTier }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceTiers", elemType: googlecloudchannelv1pricetier_1.GoogleCloudChannelV1PriceTier }),
         __metadata("design:type", Array)
     ], GoogleCloudChannelV1PricePhase.prototype, "priceTiers", void 0);
     return GoogleCloudChannelV1PricePhase;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1PricePhase };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1PricePhase = GoogleCloudChannelV1PricePhase;

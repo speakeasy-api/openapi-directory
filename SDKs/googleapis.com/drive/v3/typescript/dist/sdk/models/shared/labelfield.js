@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { User } from "./user";
-// LabelField
-/**
- * Representation of a label field.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LabelField = void 0;
+var utils_1 = require("../../../internal/utils");
+var user_1 = require("./user");
 var LabelField = /** @class */ (function (_super) {
     __extends(LabelField, _super);
     function LabelField() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateString" }),
         __metadata("design:type", Array)
     ], LabelField.prototype, "dateString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], LabelField.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=integer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=integer" }),
         __metadata("design:type", Array)
     ], LabelField.prototype, "integer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], LabelField.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selection" }),
         __metadata("design:type", Array)
     ], LabelField.prototype, "selection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", Array)
     ], LabelField.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user", elemType: User }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user", elemType: user_1.User }),
         __metadata("design:type", Array)
     ], LabelField.prototype, "user", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueType" }),
         __metadata("design:type", String)
     ], LabelField.prototype, "valueType", void 0);
     return LabelField;
-}(SpeakeasyBase));
-export { LabelField };
+}(utils_1.SpeakeasyBase));
+exports.LabelField = LabelField;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Vp9CodecSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 // Vp9CodecSettings
 /**
  * VP9 codec settings.
@@ -33,45 +36,45 @@ var Vp9CodecSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bitrateBps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bitrateBps" }),
         __metadata("design:type", Number)
     ], Vp9CodecSettings.prototype, "bitrateBps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crfLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crfLevel" }),
         __metadata("design:type", Number)
     ], Vp9CodecSettings.prototype, "crfLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frameRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frameRate" }),
         __metadata("design:type", Number)
     ], Vp9CodecSettings.prototype, "frameRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gopDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gopDuration" }),
         __metadata("design:type", String)
     ], Vp9CodecSettings.prototype, "gopDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gopFrameCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gopFrameCount" }),
         __metadata("design:type", Number)
     ], Vp9CodecSettings.prototype, "gopFrameCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=heightPixels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=heightPixels" }),
         __metadata("design:type", Number)
     ], Vp9CodecSettings.prototype, "heightPixels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pixelFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pixelFormat" }),
         __metadata("design:type", String)
     ], Vp9CodecSettings.prototype, "pixelFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile" }),
         __metadata("design:type", String)
     ], Vp9CodecSettings.prototype, "profile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rateControlMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rateControlMode" }),
         __metadata("design:type", String)
     ], Vp9CodecSettings.prototype, "rateControlMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=widthPixels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=widthPixels" }),
         __metadata("design:type", Number)
     ], Vp9CodecSettings.prototype, "widthPixels", void 0);
     return Vp9CodecSettings;
-}(SpeakeasyBase));
-export { Vp9CodecSettings };
+}(utils_1.SpeakeasyBase));
+exports.Vp9CodecSettings = Vp9CodecSettings;

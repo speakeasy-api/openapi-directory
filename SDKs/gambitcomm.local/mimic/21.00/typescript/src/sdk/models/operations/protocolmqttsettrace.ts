@@ -25,5 +25,5 @@ export class ProtocolMqttSetTraceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolMqttSetTrace200ApplicationJsonString?: string;
+  protocolMqttSetTrace200ApplicationJSONString?: string;
 }

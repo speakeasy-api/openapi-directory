@@ -29,6 +29,6 @@ export declare class Adexchangebuyer2AccountsCreativesDealAssociationsAddRequest
 }
 export declare class Adexchangebuyer2AccountsCreativesDealAssociationsAddResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

@@ -18,5 +18,5 @@ export declare class GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailab
 export declare class GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    unavailableTimeListViewModel?: Map<string, any>;
+    unavailableTimeListViewModel?: Record<string, any>;
 }

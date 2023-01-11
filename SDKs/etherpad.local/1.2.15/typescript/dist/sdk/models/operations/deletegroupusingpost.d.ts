@@ -1,25 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class DeleteGroupUsingPostQueryParams extends SpeakeasyBase {
-    groupId?: string;
+    groupID?: string;
 }
 export declare class DeleteGroupUsingPost200ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class DeleteGroupUsingPost400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class DeleteGroupUsingPost401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class DeleteGroupUsingPost500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class DeleteGroupUsingPostRequest extends SpeakeasyBase {
@@ -28,8 +28,8 @@ export declare class DeleteGroupUsingPostRequest extends SpeakeasyBase {
 export declare class DeleteGroupUsingPostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteGroupUsingPost200ApplicationJsonObject?: DeleteGroupUsingPost200ApplicationJson;
-    deleteGroupUsingPost400ApplicationJsonObject?: DeleteGroupUsingPost400ApplicationJson;
-    deleteGroupUsingPost401ApplicationJsonObject?: DeleteGroupUsingPost401ApplicationJson;
-    deleteGroupUsingPost500ApplicationJsonObject?: DeleteGroupUsingPost500ApplicationJson;
+    deleteGroupUsingPOST200ApplicationJSONObject?: DeleteGroupUsingPost200ApplicationJson;
+    deleteGroupUsingPOST400ApplicationJSONObject?: DeleteGroupUsingPost400ApplicationJson;
+    deleteGroupUsingPOST401ApplicationJSONObject?: DeleteGroupUsingPost401ApplicationJson;
+    deleteGroupUsingPOST500ApplicationJSONObject?: DeleteGroupUsingPost500ApplicationJson;
 }

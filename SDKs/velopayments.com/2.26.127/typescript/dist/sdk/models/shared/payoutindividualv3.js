@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PayoutNameV3 } from "./payoutnamev3";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayoutIndividualV3 = void 0;
+var utils_1 = require("../../../internal/utils");
+var payoutnamev3_1 = require("./payoutnamev3");
 var PayoutIndividualV3 = /** @class */ (function (_super) {
     __extends(PayoutIndividualV3, _super);
     function PayoutIndividualV3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", PayoutNameV3)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", payoutnamev3_1.PayoutNameV3)
     ], PayoutIndividualV3.prototype, "name", void 0);
     return PayoutIndividualV3;
-}(SpeakeasyBase));
-export { PayoutIndividualV3 };
+}(utils_1.SpeakeasyBase));
+exports.PayoutIndividualV3 = PayoutIndividualV3;

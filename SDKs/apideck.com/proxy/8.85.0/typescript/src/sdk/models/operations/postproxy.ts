@@ -65,17 +65,14 @@ export class PostProxyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
-
-  @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  postProxy200ApplicationJsonAny?: any;
+  postProxy200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  postProxy401ApplicationJsonObject?: PostProxy401ApplicationJson;
+  postProxy401ApplicationJSONObject?: PostProxy401ApplicationJson;
 
   @SpeakeasyMetadata()
-  postProxyDefaultApplicationJsonAny?: any;
+  postProxyDefaultApplicationJSONAny?: any;
 }

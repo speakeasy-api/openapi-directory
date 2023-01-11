@@ -11,7 +11,7 @@ export declare class RoadDistanceRequestBody extends SpeakeasyBase {
     vehicleYear?: number;
 }
 export declare class RoadDistanceRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     request?: RoadDistanceRequestBody;
 }
 export declare class RoadDistanceResponse extends SpeakeasyBase {

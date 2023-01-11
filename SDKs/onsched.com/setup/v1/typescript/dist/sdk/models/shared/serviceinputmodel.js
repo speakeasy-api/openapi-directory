@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AvailabilityInputModel } from "./availabilityinputmodel";
-import { ServiceFeesInputModel } from "./servicefeesinputmodel";
-import { ServiceOptionsInputModel } from "./serviceoptionsinputmodel";
-import { ServiceSettingsInputModel } from "./servicesettingsinputmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceInputModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var availabilityinputmodel_1 = require("./availabilityinputmodel");
+var servicefeesinputmodel_1 = require("./servicefeesinputmodel");
+var serviceoptionsinputmodel_1 = require("./serviceoptionsinputmodel");
+var servicesettingsinputmodel_1 = require("./servicesettingsinputmodel");
 var ServiceInputModel = /** @class */ (function (_super) {
     __extends(ServiceInputModel, _super);
     function ServiceInputModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availability" }),
-        __metadata("design:type", AvailabilityInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availability" }),
+        __metadata("design:type", availabilityinputmodel_1.AvailabilityInputModel)
     ], ServiceInputModel.prototype, "availability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingInterval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingInterval" }),
         __metadata("design:type", Number)
     ], ServiceInputModel.prototype, "bookingInterval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingLimit" }),
         __metadata("design:type", Number)
     ], ServiceInputModel.prototype, "bookingLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ServiceInputModel.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", Number)
     ], ServiceInputModel.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fees" }),
-        __metadata("design:type", ServiceFeesInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fees" }),
+        __metadata("design:type", servicefeesinputmodel_1.ServiceFeesInputModel)
     ], ServiceInputModel.prototype, "fees", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationId" }),
         __metadata("design:type", String)
     ], ServiceInputModel.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxCapacity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxCapacity" }),
         __metadata("design:type", Number)
     ], ServiceInputModel.prototype, "maxCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxGroupSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxGroupSize" }),
         __metadata("design:type", Number)
     ], ServiceInputModel.prototype, "maxGroupSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mediaPageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mediaPageUrl" }),
         __metadata("design:type", String)
     ], ServiceInputModel.prototype, "mediaPageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ServiceInputModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
-        __metadata("design:type", ServiceOptionsInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
+        __metadata("design:type", serviceoptionsinputmodel_1.ServiceOptionsInputModel)
     ], ServiceInputModel.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public" }),
         __metadata("design:type", Boolean)
     ], ServiceInputModel.prototype, "public", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceGroupId" }),
         __metadata("design:type", String)
     ], ServiceInputModel.prototype, "serviceGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", ServiceSettingsInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", servicesettingsinputmodel_1.ServiceSettingsInputModel)
     ], ServiceInputModel.prototype, "settings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ServiceInputModel.prototype, "type", void 0);
     return ServiceInputModel;
-}(SpeakeasyBase));
-export { ServiceInputModel };
+}(utils_1.SpeakeasyBase));
+exports.ServiceInputModel = ServiceInputModel;

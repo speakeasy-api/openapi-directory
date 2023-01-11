@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1CloudIdentityInfoInput } from "./googlecloudchannelv1cloudidentityinfo";
 import { GoogleCloudChannelV1CloudIdentityInfo } from "./googlecloudchannelv1cloudidentityinfo";
+import { GoogleCloudChannelV1CloudIdentityInfoInput } from "./googlecloudchannelv1cloudidentityinfo";
 
 
 export enum GoogleCloudChannelV1ChannelPartnerLinkLinkStateEnum {
@@ -9,22 +9,6 @@ export enum GoogleCloudChannelV1ChannelPartnerLinkLinkStateEnum {
     Active = "ACTIVE",
     Revoked = "REVOKED",
     Suspended = "SUSPENDED"
-}
-
-
-// GoogleCloudChannelV1ChannelPartnerLinkInput
-/** 
- * Entity representing a link between distributors and their indirect resellers in an n-tier resale channel.
-**/
-export class GoogleCloudChannelV1ChannelPartnerLinkInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=channelPartnerCloudIdentityInfo" })
-  channelPartnerCloudIdentityInfo?: GoogleCloudChannelV1CloudIdentityInfoInput;
-
-  @SpeakeasyMetadata({ data: "json, name=linkState" })
-  linkState?: GoogleCloudChannelV1ChannelPartnerLinkLinkStateEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=resellerCloudIdentityId" })
-  resellerCloudIdentityId?: string;
 }
 
 
@@ -56,4 +40,20 @@ export class GoogleCloudChannelV1ChannelPartnerLink extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+}
+
+
+// GoogleCloudChannelV1ChannelPartnerLinkInput
+/** 
+ * Entity representing a link between distributors and their indirect resellers in an n-tier resale channel.
+**/
+export class GoogleCloudChannelV1ChannelPartnerLinkInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=channelPartnerCloudIdentityInfo" })
+  channelPartnerCloudIdentityInfo?: GoogleCloudChannelV1CloudIdentityInfoInput;
+
+  @SpeakeasyMetadata({ data: "json, name=linkState" })
+  linkState?: GoogleCloudChannelV1ChannelPartnerLinkLinkStateEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=resellerCloudIdentityId" })
+  resellerCloudIdentityId?: string;
 }

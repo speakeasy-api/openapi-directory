@@ -24,7 +24,7 @@ export declare class StartLoggingResponse extends SpeakeasyBase {
     invalidTrailNameException?: any;
     notOrganizationMasterAccountException?: any;
     operationNotPermittedException?: any;
-    startLoggingResponse?: Map<string, any>;
+    startLoggingResponse?: Record<string, any>;
     statusCode: number;
     trailNotFoundException?: any;
     unsupportedOperationException?: any;

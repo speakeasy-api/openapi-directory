@@ -63,5 +63,5 @@ export class UpdateWorkspaceBundleResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateWorkspaceBundleResult?: Map<string, any>;
+  updateWorkspaceBundleResult?: Record<string, any>;
 }

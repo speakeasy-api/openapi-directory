@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,582 +14,607 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FitnessUsersDataSourcesDatasetsGetResponse = exports.FitnessUsersDataSourcesDatasetsGetRequest = exports.FitnessUsersDataSourcesDatasetsGetSecurity = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption22 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption21 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption20 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption19 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption18 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption17 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption16 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption15 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption14 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption13 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption12 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption11 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption10 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption9 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption8 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption7 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption6 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption5 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption4 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption3 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption2 = exports.FitnessUsersDataSourcesDatasetsGetSecurityOption1 = exports.FitnessUsersDataSourcesDatasetsGetQueryParams = exports.FitnessUsersDataSourcesDatasetsGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var FitnessUsersDataSourcesDatasetsGetPathParams = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetPathParams, _super);
     function FitnessUsersDataSourcesDatasetsGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dataSourceId" }),
         __metadata("design:type", String)
     ], FitnessUsersDataSourcesDatasetsGetPathParams.prototype, "dataSourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=datasetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=datasetId" }),
         __metadata("design:type", String)
     ], FitnessUsersDataSourcesDatasetsGetPathParams.prototype, "datasetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userId" }),
         __metadata("design:type", String)
     ], FitnessUsersDataSourcesDatasetsGetPathParams.prototype, "userId", void 0);
     return FitnessUsersDataSourcesDatasetsGetPathParams;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetPathParams = FitnessUsersDataSourcesDatasetsGetPathParams;
 var FitnessUsersDataSourcesDatasetsGetQueryParams = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetQueryParams, _super);
     function FitnessUsersDataSourcesDatasetsGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], FitnessUsersDataSourcesDatasetsGetQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], FitnessUsersDataSourcesDatasetsGetQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], FitnessUsersDataSourcesDatasetsGetQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], FitnessUsersDataSourcesDatasetsGetQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], FitnessUsersDataSourcesDatasetsGetQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], FitnessUsersDataSourcesDatasetsGetQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], FitnessUsersDataSourcesDatasetsGetQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], FitnessUsersDataSourcesDatasetsGetQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], FitnessUsersDataSourcesDatasetsGetQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], FitnessUsersDataSourcesDatasetsGetQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], FitnessUsersDataSourcesDatasetsGetQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], FitnessUsersDataSourcesDatasetsGetQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], FitnessUsersDataSourcesDatasetsGetQueryParams.prototype, "uploadProtocol", void 0);
     return FitnessUsersDataSourcesDatasetsGetQueryParams;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetQueryParams = FitnessUsersDataSourcesDatasetsGetQueryParams;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption1 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption1, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption1.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption1;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption1 = FitnessUsersDataSourcesDatasetsGetSecurityOption1;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption2 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption2, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption2.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption2;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption2 = FitnessUsersDataSourcesDatasetsGetSecurityOption2;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption3 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption3, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption3.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption3;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption3 = FitnessUsersDataSourcesDatasetsGetSecurityOption3;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption4 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption4, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption4() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption4.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption4.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption4;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption4 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption4 = FitnessUsersDataSourcesDatasetsGetSecurityOption4;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption5 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption5, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption5() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption5.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption5.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption5;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption5 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption5 = FitnessUsersDataSourcesDatasetsGetSecurityOption5;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption6 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption6, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption6() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption6.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption6.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption6;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption6 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption6 = FitnessUsersDataSourcesDatasetsGetSecurityOption6;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption7 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption7, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption7() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption7.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption7.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption7;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption7 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption7 = FitnessUsersDataSourcesDatasetsGetSecurityOption7;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption8 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption8, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption8() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption8.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption8.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption8;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption8 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption8 = FitnessUsersDataSourcesDatasetsGetSecurityOption8;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption9 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption9, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption9() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption9.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption9.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption9;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption9 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption9 = FitnessUsersDataSourcesDatasetsGetSecurityOption9;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption10 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption10, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption10() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption10.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption10.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption10;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption10 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption10 = FitnessUsersDataSourcesDatasetsGetSecurityOption10;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption11 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption11, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption11() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption11.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption11.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption11;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption11 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption11 = FitnessUsersDataSourcesDatasetsGetSecurityOption11;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption12 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption12, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption12() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption12.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption12.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption12;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption12 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption12 = FitnessUsersDataSourcesDatasetsGetSecurityOption12;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption13 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption13, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption13() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption13.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption13.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption13;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption13 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption13 = FitnessUsersDataSourcesDatasetsGetSecurityOption13;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption14 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption14, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption14() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption14.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption14.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption14;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption14 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption14 = FitnessUsersDataSourcesDatasetsGetSecurityOption14;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption15 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption15, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption15() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption15.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption15.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption15;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption15 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption15 = FitnessUsersDataSourcesDatasetsGetSecurityOption15;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption16 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption16, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption16() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption16.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption16.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption16;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption16 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption16 = FitnessUsersDataSourcesDatasetsGetSecurityOption16;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption17 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption17, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption17() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption17.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption17.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption17;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption17 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption17 = FitnessUsersDataSourcesDatasetsGetSecurityOption17;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption18 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption18, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption18() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption18.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption18.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption18;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption18 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption18 = FitnessUsersDataSourcesDatasetsGetSecurityOption18;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption19 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption19, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption19() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption19.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption19.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption19;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption19 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption19 = FitnessUsersDataSourcesDatasetsGetSecurityOption19;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption20 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption20, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption20() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption20.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption20.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption20;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption20 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption20 = FitnessUsersDataSourcesDatasetsGetSecurityOption20;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption21 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption21, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption21() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption21.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption21.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption21;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption21 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption21 = FitnessUsersDataSourcesDatasetsGetSecurityOption21;
 var FitnessUsersDataSourcesDatasetsGetSecurityOption22 = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurityOption22, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurityOption22() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption22.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FitnessUsersDataSourcesDatasetsGetSecurityOption22.prototype, "oauth2c", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurityOption22;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurityOption22 };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurityOption22 = FitnessUsersDataSourcesDatasetsGetSecurityOption22;
 var FitnessUsersDataSourcesDatasetsGetSecurity = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetSecurity, _super);
     function FitnessUsersDataSourcesDatasetsGetSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption1)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption2)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption3)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption4)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption5)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option5", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption6)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option6", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption7)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option7", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption8)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option8", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption9)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option9", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption10)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option10", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption11)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option11", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption12)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option12", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption13)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option13", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption14)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option14", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption15)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option15", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption16)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option16", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption17)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option17", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption18)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option18", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption19)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option19", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption20)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option20", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption21)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option21", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurityOption22)
     ], FitnessUsersDataSourcesDatasetsGetSecurity.prototype, "option22", void 0);
     return FitnessUsersDataSourcesDatasetsGetSecurity;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetSecurity };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetSecurity = FitnessUsersDataSourcesDatasetsGetSecurity;
 var FitnessUsersDataSourcesDatasetsGetRequest = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetRequest, _super);
     function FitnessUsersDataSourcesDatasetsGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetPathParams)
     ], FitnessUsersDataSourcesDatasetsGetRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetQueryParams)
     ], FitnessUsersDataSourcesDatasetsGetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FitnessUsersDataSourcesDatasetsGetSecurity)
     ], FitnessUsersDataSourcesDatasetsGetRequest.prototype, "security", void 0);
     return FitnessUsersDataSourcesDatasetsGetRequest;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetRequest = FitnessUsersDataSourcesDatasetsGetRequest;
 var FitnessUsersDataSourcesDatasetsGetResponse = /** @class */ (function (_super) {
     __extends(FitnessUsersDataSourcesDatasetsGetResponse, _super);
     function FitnessUsersDataSourcesDatasetsGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FitnessUsersDataSourcesDatasetsGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Dataset)
     ], FitnessUsersDataSourcesDatasetsGetResponse.prototype, "dataset", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FitnessUsersDataSourcesDatasetsGetResponse.prototype, "statusCode", void 0);
     return FitnessUsersDataSourcesDatasetsGetResponse;
-}(SpeakeasyBase));
-export { FitnessUsersDataSourcesDatasetsGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.FitnessUsersDataSourcesDatasetsGetResponse = FitnessUsersDataSourcesDatasetsGetResponse;

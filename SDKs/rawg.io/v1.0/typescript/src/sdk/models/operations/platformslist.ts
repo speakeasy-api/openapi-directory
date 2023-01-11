@@ -44,5 +44,5 @@ export class PlatformsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  platformsList200ApplicationJsonObject?: PlatformsList200ApplicationJson;
+  platformsList200ApplicationJSONObject?: PlatformsList200ApplicationJson;
 }

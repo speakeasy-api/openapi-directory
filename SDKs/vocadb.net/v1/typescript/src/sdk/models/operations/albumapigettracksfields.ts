@@ -38,13 +38,13 @@ export class AlbumApiGetTracksFieldsRequest extends SpeakeasyBase {
 
 export class AlbumApiGetTracksFieldsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  albumApiGetTracksFields200ApplicationJsonObjects?: Map<string, string>[];
+  albumApiGetTracksFields200ApplicationJSONObjects?: Record<string, string>[];
 
   @SpeakeasyMetadata()
-  albumApiGetTracksFields200ApplicationJsonpObjects?: Map<string, string>[];
+  albumApiGetTracksFields200ApplicationJsonpObjects?: Record<string, string>[];
 
   @SpeakeasyMetadata()
-  albumApiGetTracksFields200TextJsonObjects?: Map<string, string>[];
+  albumApiGetTracksFields200TextJSONObjects?: Record<string, string>[];
 
   @SpeakeasyMetadata()
   body?: Uint8Array;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeploymentLaunchConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // DeploymentLaunchConfig
 /**
  * Configuration information for a deployment launch.
@@ -33,25 +36,25 @@ var DeploymentLaunchConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environmentVariables" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environmentVariables" }),
+        __metadata("design:type", Object)
     ], DeploymentLaunchConfig.prototype, "environmentVariables", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=launchFile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launchFile" }),
         __metadata("design:type", String)
     ], DeploymentLaunchConfig.prototype, "launchFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packageName" }),
         __metadata("design:type", String)
     ], DeploymentLaunchConfig.prototype, "packageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postLaunchFile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postLaunchFile" }),
         __metadata("design:type", String)
     ], DeploymentLaunchConfig.prototype, "postLaunchFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preLaunchFile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preLaunchFile" }),
         __metadata("design:type", String)
     ], DeploymentLaunchConfig.prototype, "preLaunchFile", void 0);
     return DeploymentLaunchConfig;
-}(SpeakeasyBase));
-export { DeploymentLaunchConfig };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentLaunchConfig = DeploymentLaunchConfig;

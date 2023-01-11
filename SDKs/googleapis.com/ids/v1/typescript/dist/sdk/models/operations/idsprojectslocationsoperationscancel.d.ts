@@ -23,11 +23,11 @@ export declare class IdsProjectsLocationsOperationsCancelSecurity extends Speake
 export declare class IdsProjectsLocationsOperationsCancelRequest extends SpeakeasyBase {
     pathParams: IdsProjectsLocationsOperationsCancelPathParams;
     queryParams: IdsProjectsLocationsOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: IdsProjectsLocationsOperationsCancelSecurity;
 }
 export declare class IdsProjectsLocationsOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

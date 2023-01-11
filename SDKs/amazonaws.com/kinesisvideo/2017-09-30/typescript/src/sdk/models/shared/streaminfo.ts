@@ -27,7 +27,7 @@ export class StreamInfo extends SpeakeasyBase {
   status?: StatusEnum;
 
   @SpeakeasyMetadata({ data: "json, name=StreamARN" })
-  streamArn?: string;
+  streamARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamName" })
   streamName?: string;

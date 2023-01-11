@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommercialDetectionResponse = exports.CommercialDetectionRequest = exports.CommercialDetectionRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var CommercialDetectionRequestBody = /** @class */ (function (_super) {
     __extends(CommercialDetectionRequestBody, _super);
     function CommercialDetectionRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=api_key;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=api_key;" }),
         __metadata("design:type", String)
     ], CommercialDetectionRequestBody.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=text;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=text;" }),
         __metadata("design:type", String)
     ], CommercialDetectionRequestBody.prototype, "text", void 0);
     return CommercialDetectionRequestBody;
-}(SpeakeasyBase));
-export { CommercialDetectionRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CommercialDetectionRequestBody = CommercialDetectionRequestBody;
 var CommercialDetectionRequest = /** @class */ (function (_super) {
     __extends(CommercialDetectionRequest, _super);
     function CommercialDetectionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", CommercialDetectionRequestBody)
     ], CommercialDetectionRequest.prototype, "request", void 0);
     return CommercialDetectionRequest;
-}(SpeakeasyBase));
-export { CommercialDetectionRequest };
+}(utils_1.SpeakeasyBase));
+exports.CommercialDetectionRequest = CommercialDetectionRequest;
 var CommercialDetectionResponse = /** @class */ (function (_super) {
     __extends(CommercialDetectionResponse, _super);
     function CommercialDetectionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CommercialDetectionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CommercialDetectionResponse.prototype, "statusCode", void 0);
     return CommercialDetectionResponse;
-}(SpeakeasyBase));
-export { CommercialDetectionResponse };
+}(utils_1.SpeakeasyBase));
+exports.CommercialDetectionResponse = CommercialDetectionResponse;

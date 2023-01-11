@@ -41,7 +41,7 @@ export class GetPensionLiabilityReportOutputResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getPensionLiabilityReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+  getPensionLiabilityReportOutput200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

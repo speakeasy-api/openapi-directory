@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssociatedGateway } from "./associatedgateway";
-import { RouteFilterPrefix } from "./routefilterprefix";
-import { DirectConnectGatewayAssociationProposalStateEnum } from "./directconnectgatewayassociationproposalstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DirectConnectGatewayAssociationProposal = void 0;
+var utils_1 = require("../../../internal/utils");
+var associatedgateway_1 = require("./associatedgateway");
+var routefilterprefix_1 = require("./routefilterprefix");
+var directconnectgatewayassociationproposalstateenum_1 = require("./directconnectgatewayassociationproposalstateenum");
 // DirectConnectGatewayAssociationProposal
 /**
  * Information about the proposal request to attach a virtual private gateway to a Direct Connect gateway.
@@ -36,33 +39,33 @@ var DirectConnectGatewayAssociationProposal = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=associatedGateway" }),
-        __metadata("design:type", AssociatedGateway)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=associatedGateway" }),
+        __metadata("design:type", associatedgateway_1.AssociatedGateway)
     ], DirectConnectGatewayAssociationProposal.prototype, "associatedGateway", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directConnectGatewayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directConnectGatewayId" }),
         __metadata("design:type", String)
     ], DirectConnectGatewayAssociationProposal.prototype, "directConnectGatewayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directConnectGatewayOwnerAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directConnectGatewayOwnerAccount" }),
         __metadata("design:type", String)
     ], DirectConnectGatewayAssociationProposal.prototype, "directConnectGatewayOwnerAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=existingAllowedPrefixesToDirectConnectGateway", elemType: RouteFilterPrefix }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=existingAllowedPrefixesToDirectConnectGateway", elemType: routefilterprefix_1.RouteFilterPrefix }),
         __metadata("design:type", Array)
     ], DirectConnectGatewayAssociationProposal.prototype, "existingAllowedPrefixesToDirectConnectGateway", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proposalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proposalId" }),
         __metadata("design:type", String)
     ], DirectConnectGatewayAssociationProposal.prototype, "proposalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proposalState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proposalState" }),
         __metadata("design:type", String)
     ], DirectConnectGatewayAssociationProposal.prototype, "proposalState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedAllowedPrefixesToDirectConnectGateway", elemType: RouteFilterPrefix }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedAllowedPrefixesToDirectConnectGateway", elemType: routefilterprefix_1.RouteFilterPrefix }),
         __metadata("design:type", Array)
     ], DirectConnectGatewayAssociationProposal.prototype, "requestedAllowedPrefixesToDirectConnectGateway", void 0);
     return DirectConnectGatewayAssociationProposal;
-}(SpeakeasyBase));
-export { DirectConnectGatewayAssociationProposal };
+}(utils_1.SpeakeasyBase));
+exports.DirectConnectGatewayAssociationProposal = DirectConnectGatewayAssociationProposal;

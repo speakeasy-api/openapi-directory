@@ -16,7 +16,7 @@ export declare class License extends SpeakeasyBase {
     name?: string;
     partner?: string;
     phone?: string;
-    settings?: Map<string, any>;
+    settings?: Record<string, any>;
     ssoDefaultRole?: string;
     ssoDomain?: string;
     ssoLoginIssuerUrl?: string;

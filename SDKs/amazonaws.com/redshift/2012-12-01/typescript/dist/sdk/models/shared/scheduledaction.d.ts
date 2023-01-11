@@ -7,7 +7,7 @@ import { ScheduledActionType } from "./scheduledactiontype";
 export declare class ScheduledAction extends SpeakeasyBase {
     endTime?: Date;
     iamRole?: string;
-    nextInvocations?: Date[];
+    nextInvocations?: Record<string, any>[];
     schedule?: string;
     scheduledActionDescription?: string;
     scheduledActionName?: string;

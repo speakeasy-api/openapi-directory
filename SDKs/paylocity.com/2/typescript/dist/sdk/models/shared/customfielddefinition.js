@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomFieldDefinition = exports.CustomFieldDefinitionValues = void 0;
+var utils_1 = require("../../../internal/utils");
 var CustomFieldDefinitionValues = /** @class */ (function (_super) {
     __extends(CustomFieldDefinitionValues, _super);
     function CustomFieldDefinitionValues() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], CustomFieldDefinitionValues.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CustomFieldDefinitionValues.prototype, "description", void 0);
     return CustomFieldDefinitionValues;
-}(SpeakeasyBase));
-export { CustomFieldDefinitionValues };
+}(utils_1.SpeakeasyBase));
+exports.CustomFieldDefinitionValues = CustomFieldDefinitionValues;
 var CustomFieldDefinition = /** @class */ (function (_super) {
     __extends(CustomFieldDefinition, _super);
     function CustomFieldDefinition() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], CustomFieldDefinition.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultValue" }),
         __metadata("design:type", String)
     ], CustomFieldDefinition.prototype, "defaultValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isRequired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isRequired" }),
         __metadata("design:type", Boolean)
     ], CustomFieldDefinition.prototype, "isRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], CustomFieldDefinition.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CustomFieldDefinition.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values", elemType: CustomFieldDefinitionValues }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values", elemType: CustomFieldDefinitionValues }),
         __metadata("design:type", Array)
     ], CustomFieldDefinition.prototype, "values", void 0);
     return CustomFieldDefinition;
-}(SpeakeasyBase));
-export { CustomFieldDefinition };
+}(utils_1.SpeakeasyBase));
+exports.CustomFieldDefinition = CustomFieldDefinition;

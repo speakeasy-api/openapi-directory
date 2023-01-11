@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class OAuth2PermissionGrantListPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" })
-  tenantId: string;
+  tenantID: string;
 }
 
 

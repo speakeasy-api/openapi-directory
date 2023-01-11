@@ -9,7 +9,7 @@ export declare class UsersListEmailsForAuthenticatedRequest extends SpeakeasyBas
 }
 export declare class UsersListEmailsForAuthenticatedResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     emails?: shared.Email[];

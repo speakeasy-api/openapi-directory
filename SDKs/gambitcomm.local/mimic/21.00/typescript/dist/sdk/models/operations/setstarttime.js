@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetStarttimeResponse = exports.SetStarttimeRequest = exports.SetStarttimePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SetStarttimePathParams = /** @class */ (function (_super) {
     __extends(SetStarttimePathParams, _super);
     function SetStarttimePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], SetStarttimePathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=start" }),
         __metadata("design:type", Number)
     ], SetStarttimePathParams.prototype, "start", void 0);
     return SetStarttimePathParams;
-}(SpeakeasyBase));
-export { SetStarttimePathParams };
+}(utils_1.SpeakeasyBase));
+exports.SetStarttimePathParams = SetStarttimePathParams;
 var SetStarttimeRequest = /** @class */ (function (_super) {
     __extends(SetStarttimeRequest, _super);
     function SetStarttimeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetStarttimePathParams)
     ], SetStarttimeRequest.prototype, "pathParams", void 0);
     return SetStarttimeRequest;
-}(SpeakeasyBase));
-export { SetStarttimeRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetStarttimeRequest = SetStarttimeRequest;
 var SetStarttimeResponse = /** @class */ (function (_super) {
     __extends(SetStarttimeResponse, _super);
     function SetStarttimeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SetStarttimeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SetStarttimeResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], SetStarttimeResponse.prototype, "setStarttime200ApplicationJsonString", void 0);
+    ], SetStarttimeResponse.prototype, "setStarttime200ApplicationJSONString", void 0);
     return SetStarttimeResponse;
-}(SpeakeasyBase));
-export { SetStarttimeResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetStarttimeResponse = SetStarttimeResponse;

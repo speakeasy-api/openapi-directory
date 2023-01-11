@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,81 +23,83 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserApiGetSongRatingForCurrentResponse = exports.UserApiGetSongRatingForCurrentRequest = exports.UserApiGetSongRatingForCurrent200TextJsonEnum = exports.UserApiGetSongRatingForCurrent200ApplicationJsonpEnum = exports.UserApiGetSongRatingForCurrent200ApplicationJsonEnum = exports.UserApiGetSongRatingForCurrentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UserApiGetSongRatingForCurrentPathParams = /** @class */ (function (_super) {
     __extends(UserApiGetSongRatingForCurrentPathParams, _super);
     function UserApiGetSongRatingForCurrentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=songId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=songId" }),
         __metadata("design:type", Number)
     ], UserApiGetSongRatingForCurrentPathParams.prototype, "songId", void 0);
     return UserApiGetSongRatingForCurrentPathParams;
-}(SpeakeasyBase));
-export { UserApiGetSongRatingForCurrentPathParams };
-export var UserApiGetSongRatingForCurrent200ApplicationJsonEnum;
+}(utils_1.SpeakeasyBase));
+exports.UserApiGetSongRatingForCurrentPathParams = UserApiGetSongRatingForCurrentPathParams;
+var UserApiGetSongRatingForCurrent200ApplicationJsonEnum;
 (function (UserApiGetSongRatingForCurrent200ApplicationJsonEnum) {
     UserApiGetSongRatingForCurrent200ApplicationJsonEnum["Nothing"] = "Nothing";
     UserApiGetSongRatingForCurrent200ApplicationJsonEnum["Dislike"] = "Dislike";
     UserApiGetSongRatingForCurrent200ApplicationJsonEnum["Like"] = "Like";
     UserApiGetSongRatingForCurrent200ApplicationJsonEnum["Favorite"] = "Favorite";
-})(UserApiGetSongRatingForCurrent200ApplicationJsonEnum || (UserApiGetSongRatingForCurrent200ApplicationJsonEnum = {}));
-export var UserApiGetSongRatingForCurrent200ApplicationJsonpEnum;
+})(UserApiGetSongRatingForCurrent200ApplicationJsonEnum = exports.UserApiGetSongRatingForCurrent200ApplicationJsonEnum || (exports.UserApiGetSongRatingForCurrent200ApplicationJsonEnum = {}));
+var UserApiGetSongRatingForCurrent200ApplicationJsonpEnum;
 (function (UserApiGetSongRatingForCurrent200ApplicationJsonpEnum) {
     UserApiGetSongRatingForCurrent200ApplicationJsonpEnum["Nothing"] = "Nothing";
     UserApiGetSongRatingForCurrent200ApplicationJsonpEnum["Dislike"] = "Dislike";
     UserApiGetSongRatingForCurrent200ApplicationJsonpEnum["Like"] = "Like";
     UserApiGetSongRatingForCurrent200ApplicationJsonpEnum["Favorite"] = "Favorite";
-})(UserApiGetSongRatingForCurrent200ApplicationJsonpEnum || (UserApiGetSongRatingForCurrent200ApplicationJsonpEnum = {}));
-export var UserApiGetSongRatingForCurrent200TextJsonEnum;
+})(UserApiGetSongRatingForCurrent200ApplicationJsonpEnum = exports.UserApiGetSongRatingForCurrent200ApplicationJsonpEnum || (exports.UserApiGetSongRatingForCurrent200ApplicationJsonpEnum = {}));
+var UserApiGetSongRatingForCurrent200TextJsonEnum;
 (function (UserApiGetSongRatingForCurrent200TextJsonEnum) {
     UserApiGetSongRatingForCurrent200TextJsonEnum["Nothing"] = "Nothing";
     UserApiGetSongRatingForCurrent200TextJsonEnum["Dislike"] = "Dislike";
     UserApiGetSongRatingForCurrent200TextJsonEnum["Like"] = "Like";
     UserApiGetSongRatingForCurrent200TextJsonEnum["Favorite"] = "Favorite";
-})(UserApiGetSongRatingForCurrent200TextJsonEnum || (UserApiGetSongRatingForCurrent200TextJsonEnum = {}));
+})(UserApiGetSongRatingForCurrent200TextJsonEnum = exports.UserApiGetSongRatingForCurrent200TextJsonEnum || (exports.UserApiGetSongRatingForCurrent200TextJsonEnum = {}));
 var UserApiGetSongRatingForCurrentRequest = /** @class */ (function (_super) {
     __extends(UserApiGetSongRatingForCurrentRequest, _super);
     function UserApiGetSongRatingForCurrentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UserApiGetSongRatingForCurrentPathParams)
     ], UserApiGetSongRatingForCurrentRequest.prototype, "pathParams", void 0);
     return UserApiGetSongRatingForCurrentRequest;
-}(SpeakeasyBase));
-export { UserApiGetSongRatingForCurrentRequest };
+}(utils_1.SpeakeasyBase));
+exports.UserApiGetSongRatingForCurrentRequest = UserApiGetSongRatingForCurrentRequest;
 var UserApiGetSongRatingForCurrentResponse = /** @class */ (function (_super) {
     __extends(UserApiGetSongRatingForCurrentResponse, _super);
     function UserApiGetSongRatingForCurrentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], UserApiGetSongRatingForCurrentResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UserApiGetSongRatingForCurrentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UserApiGetSongRatingForCurrentResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], UserApiGetSongRatingForCurrentResponse.prototype, "userApiGetSongRatingForCurrent200ApplicationJsonStringEnum", void 0);
+    ], UserApiGetSongRatingForCurrentResponse.prototype, "userApiGetSongRatingForCurrent200ApplicationJSONStringEnum", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UserApiGetSongRatingForCurrentResponse.prototype, "userApiGetSongRatingForCurrent200ApplicationJsonpStringEnum", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], UserApiGetSongRatingForCurrentResponse.prototype, "userApiGetSongRatingForCurrent200TextJsonStringEnum", void 0);
+    ], UserApiGetSongRatingForCurrentResponse.prototype, "userApiGetSongRatingForCurrent200TextJSONStringEnum", void 0);
     return UserApiGetSongRatingForCurrentResponse;
-}(SpeakeasyBase));
-export { UserApiGetSongRatingForCurrentResponse };
+}(utils_1.SpeakeasyBase));
+exports.UserApiGetSongRatingForCurrentResponse = UserApiGetSongRatingForCurrentResponse;

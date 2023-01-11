@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceTypeEnum } from "./resourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceIdentifier = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcetypeenum_1 = require("./resourcetypeenum");
 // ResourceIdentifier
 /**
  * The details that identify a resource that is discovered by Config, including the resource type, ID, and (if available) the custom resource name.
@@ -34,21 +37,21 @@ var ResourceIdentifier = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceDeletionTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceDeletionTime" }),
         __metadata("design:type", Date)
     ], ResourceIdentifier.prototype, "resourceDeletionTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceId" }),
         __metadata("design:type", String)
     ], ResourceIdentifier.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceName" }),
         __metadata("design:type", String)
     ], ResourceIdentifier.prototype, "resourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], ResourceIdentifier.prototype, "resourceType", void 0);
     return ResourceIdentifier;
-}(SpeakeasyBase));
-export { ResourceIdentifier };
+}(utils_1.SpeakeasyBase));
+exports.ResourceIdentifier = ResourceIdentifier;

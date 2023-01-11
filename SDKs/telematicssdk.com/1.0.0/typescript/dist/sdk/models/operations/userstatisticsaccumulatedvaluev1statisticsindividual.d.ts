@@ -44,7 +44,7 @@ export declare class UserStatisticsAccumulatedValueV1StatisticsIndividualRequest
 }
 export declare class UserStatisticsAccumulatedValueV1StatisticsIndividualResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    userStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJsonObject?: UserStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJson;
+    userStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJSONObject?: UserStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJson;
 }

@@ -59,5 +59,5 @@ export class VirtualizationInterfacesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  virtualizationInterfacesList200ApplicationJsonObject?: VirtualizationInterfacesList200ApplicationJson;
+  virtualizationInterfacesList200ApplicationJSONObject?: VirtualizationInterfacesList200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CursorObject } from "./cursorobject";
-import { ArtistObject } from "./artistobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FollowingArtistsObject = exports.FollowingArtistsObjectArtists = void 0;
+var utils_1 = require("../../../internal/utils");
+var cursorobject_1 = require("./cursorobject");
+var artistobject_1 = require("./artistobject");
 // FollowingArtistsObjectArtists
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-cursorpagingobject - Find more info on the official Spotify Web API Reference
@@ -35,41 +38,41 @@ var FollowingArtistsObjectArtists = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cursors" }),
-        __metadata("design:type", CursorObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cursors" }),
+        __metadata("design:type", cursorobject_1.CursorObject)
     ], FollowingArtistsObjectArtists.prototype, "cursors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], FollowingArtistsObjectArtists.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: ArtistObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: artistobject_1.ArtistObject }),
         __metadata("design:type", Array)
     ], FollowingArtistsObjectArtists.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], FollowingArtistsObjectArtists.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], FollowingArtistsObjectArtists.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], FollowingArtistsObjectArtists.prototype, "total", void 0);
     return FollowingArtistsObjectArtists;
-}(SpeakeasyBase));
-export { FollowingArtistsObjectArtists };
+}(utils_1.SpeakeasyBase));
+exports.FollowingArtistsObjectArtists = FollowingArtistsObjectArtists;
 var FollowingArtistsObject = /** @class */ (function (_super) {
     __extends(FollowingArtistsObject, _super);
     function FollowingArtistsObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artists" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artists" }),
         __metadata("design:type", FollowingArtistsObjectArtists)
     ], FollowingArtistsObject.prototype, "artists", void 0);
     return FollowingArtistsObject;
-}(SpeakeasyBase));
-export { FollowingArtistsObject };
+}(utils_1.SpeakeasyBase));
+exports.FollowingArtistsObject = FollowingArtistsObject;

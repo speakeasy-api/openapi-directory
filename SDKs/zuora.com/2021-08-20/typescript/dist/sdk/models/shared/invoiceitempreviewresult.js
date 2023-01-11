@@ -1,0 +1,110 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InvoiceItemPreviewResult = exports.InvoiceItemPreviewResultProcessingTypeEnum = exports.InvoiceItemPreviewResultAdditionalInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var InvoiceItemPreviewResultAdditionalInfo = /** @class */ (function (_super) {
+    __extends(InvoiceItemPreviewResultAdditionalInfo, _super);
+    function InvoiceItemPreviewResultAdditionalInfo() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantity" }),
+        __metadata("design:type", Number)
+    ], InvoiceItemPreviewResultAdditionalInfo.prototype, "quantity", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unitOfMeasure" }),
+        __metadata("design:type", String)
+    ], InvoiceItemPreviewResultAdditionalInfo.prototype, "unitOfMeasure", void 0);
+    return InvoiceItemPreviewResultAdditionalInfo;
+}(utils_1.SpeakeasyBase));
+exports.InvoiceItemPreviewResultAdditionalInfo = InvoiceItemPreviewResultAdditionalInfo;
+var InvoiceItemPreviewResultProcessingTypeEnum;
+(function (InvoiceItemPreviewResultProcessingTypeEnum) {
+    InvoiceItemPreviewResultProcessingTypeEnum["Charge"] = "Charge";
+    InvoiceItemPreviewResultProcessingTypeEnum["Discount"] = "Discount";
+    InvoiceItemPreviewResultProcessingTypeEnum["Tax"] = "Tax";
+})(InvoiceItemPreviewResultProcessingTypeEnum = exports.InvoiceItemPreviewResultProcessingTypeEnum || (exports.InvoiceItemPreviewResultProcessingTypeEnum = {}));
+var InvoiceItemPreviewResult = /** @class */ (function (_super) {
+    __extends(InvoiceItemPreviewResult, _super);
+    function InvoiceItemPreviewResult() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalInfo" }),
+        __metadata("design:type", InvoiceItemPreviewResultAdditionalInfo)
+    ], InvoiceItemPreviewResult.prototype, "additionalInfo", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountWithoutTax" }),
+        __metadata("design:type", Number)
+    ], InvoiceItemPreviewResult.prototype, "amountWithoutTax", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appliedToChargeNumber" }),
+        __metadata("design:type", String)
+    ], InvoiceItemPreviewResult.prototype, "appliedToChargeNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chargeDescription" }),
+        __metadata("design:type", String)
+    ], InvoiceItemPreviewResult.prototype, "chargeDescription", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chargeName" }),
+        __metadata("design:type", String)
+    ], InvoiceItemPreviewResult.prototype, "chargeName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chargeNumber" }),
+        __metadata("design:type", String)
+    ], InvoiceItemPreviewResult.prototype, "chargeNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processingType" }),
+        __metadata("design:type", String)
+    ], InvoiceItemPreviewResult.prototype, "processingType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productName" }),
+        __metadata("design:type", String)
+    ], InvoiceItemPreviewResult.prototype, "productName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productRatePlanChargeId" }),
+        __metadata("design:type", String)
+    ], InvoiceItemPreviewResult.prototype, "productRatePlanChargeId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceEndDate" }),
+        __metadata("design:type", Date)
+    ], InvoiceItemPreviewResult.prototype, "serviceEndDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceStartDate" }),
+        __metadata("design:type", Date)
+    ], InvoiceItemPreviewResult.prototype, "serviceStartDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptionNumber" }),
+        __metadata("design:type", String)
+    ], InvoiceItemPreviewResult.prototype, "subscriptionNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxAmount" }),
+        __metadata("design:type", Number)
+    ], InvoiceItemPreviewResult.prototype, "taxAmount", void 0);
+    return InvoiceItemPreviewResult;
+}(utils_1.SpeakeasyBase));
+exports.InvoiceItemPreviewResult = InvoiceItemPreviewResult;

@@ -18,13 +18,13 @@ export declare class RemoveTagsRequest extends SpeakeasyBase {
     request: shared.RemoveTagsRequest;
 }
 export declare class RemoveTagsResponse extends SpeakeasyBase {
-    cloudTrailArnInvalidException?: any;
+    cloudTrailARNInvalidException?: any;
     contentType: string;
     invalidTagParameterException?: any;
     invalidTrailNameException?: any;
     notOrganizationMasterAccountException?: any;
     operationNotPermittedException?: any;
-    removeTagsResponse?: Map<string, any>;
+    removeTagsResponse?: Record<string, any>;
     resourceNotFoundException?: any;
     resourceTypeNotSupportedException?: any;
     statusCode: number;

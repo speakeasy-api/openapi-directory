@@ -8,7 +8,7 @@ export declare class GetCourseMappingsExternalcourseExternalCourseIdRequest exte
 }
 export declare class GetCourseMappingsExternalcourseExternalCourseIdResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
-    getCourseMappingsExternalcourseExternalCourseId200ApplicationJsonStrings?: string[];
+    error?: shared.ErrorT;
     statusCode: number;
+    getCourseMappingsExternalcourseExternalCourseId200ApplicationJSONStrings?: string[];
 }

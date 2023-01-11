@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ThirdPartySourceRepository = void 0;
+var utils_1 = require("../../../internal/utils");
 // ThirdPartySourceRepository
 /**
  *  Information about a third-party source repository connected to CodeGuru Reviewer.
@@ -33,17 +36,17 @@ var ThirdPartySourceRepository = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConnectionArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConnectionArn" }),
         __metadata("design:type", String)
     ], ThirdPartySourceRepository.prototype, "connectionArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], ThirdPartySourceRepository.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Owner" }),
         __metadata("design:type", String)
     ], ThirdPartySourceRepository.prototype, "owner", void 0);
     return ThirdPartySourceRepository;
-}(SpeakeasyBase));
-export { ThirdPartySourceRepository };
+}(utils_1.SpeakeasyBase));
+exports.ThirdPartySourceRepository = ThirdPartySourceRepository;

@@ -4,6 +4,6 @@ export declare class ProductsApiCountRequest extends SpeakeasyBase {
 }
 export declare class ProductsApiCountResponse extends SpeakeasyBase {
     contentType: string;
-    productsApiCount200ApplicationJsonOneOf?: any;
+    productsApiCount200ApplicationJSONOneOf?: any;
     statusCode: number;
 }

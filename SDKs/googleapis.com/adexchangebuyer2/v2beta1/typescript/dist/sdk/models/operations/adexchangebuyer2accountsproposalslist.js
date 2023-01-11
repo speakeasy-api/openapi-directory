@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,156 +14,181 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Adexchangebuyer2AccountsProposalsListResponse = exports.Adexchangebuyer2AccountsProposalsListRequest = exports.Adexchangebuyer2AccountsProposalsListSecurity = exports.Adexchangebuyer2AccountsProposalsListQueryParams = exports.Adexchangebuyer2AccountsProposalsListFilterSyntaxEnum = exports.Adexchangebuyer2AccountsProposalsListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var Adexchangebuyer2AccountsProposalsListPathParams = /** @class */ (function (_super) {
     __extends(Adexchangebuyer2AccountsProposalsListPathParams, _super);
     function Adexchangebuyer2AccountsProposalsListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=accountId" }),
         __metadata("design:type", String)
     ], Adexchangebuyer2AccountsProposalsListPathParams.prototype, "accountId", void 0);
     return Adexchangebuyer2AccountsProposalsListPathParams;
-}(SpeakeasyBase));
-export { Adexchangebuyer2AccountsProposalsListPathParams };
-export var Adexchangebuyer2AccountsProposalsListFilterSyntaxEnum;
+}(utils_1.SpeakeasyBase));
+exports.Adexchangebuyer2AccountsProposalsListPathParams = Adexchangebuyer2AccountsProposalsListPathParams;
+var Adexchangebuyer2AccountsProposalsListFilterSyntaxEnum;
 (function (Adexchangebuyer2AccountsProposalsListFilterSyntaxEnum) {
     Adexchangebuyer2AccountsProposalsListFilterSyntaxEnum["FilterSyntaxUnspecified"] = "FILTER_SYNTAX_UNSPECIFIED";
     Adexchangebuyer2AccountsProposalsListFilterSyntaxEnum["Pql"] = "PQL";
     Adexchangebuyer2AccountsProposalsListFilterSyntaxEnum["ListFilter"] = "LIST_FILTER";
-})(Adexchangebuyer2AccountsProposalsListFilterSyntaxEnum || (Adexchangebuyer2AccountsProposalsListFilterSyntaxEnum = {}));
+})(Adexchangebuyer2AccountsProposalsListFilterSyntaxEnum = exports.Adexchangebuyer2AccountsProposalsListFilterSyntaxEnum || (exports.Adexchangebuyer2AccountsProposalsListFilterSyntaxEnum = {}));
 var Adexchangebuyer2AccountsProposalsListQueryParams = /** @class */ (function (_super) {
     __extends(Adexchangebuyer2AccountsProposalsListQueryParams, _super);
     function Adexchangebuyer2AccountsProposalsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], Adexchangebuyer2AccountsProposalsListQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], Adexchangebuyer2AccountsProposalsListQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], Adexchangebuyer2AccountsProposalsListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], Adexchangebuyer2AccountsProposalsListQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], Adexchangebuyer2AccountsProposalsListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], Adexchangebuyer2AccountsProposalsListQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filterSyntax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filterSyntax" }),
         __metadata("design:type", String)
     ], Adexchangebuyer2AccountsProposalsListQueryParams.prototype, "filterSyntax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], Adexchangebuyer2AccountsProposalsListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], Adexchangebuyer2AccountsProposalsListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageSize" }),
         __metadata("design:type", Number)
     ], Adexchangebuyer2AccountsProposalsListQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], Adexchangebuyer2AccountsProposalsListQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], Adexchangebuyer2AccountsProposalsListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], Adexchangebuyer2AccountsProposalsListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], Adexchangebuyer2AccountsProposalsListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], Adexchangebuyer2AccountsProposalsListQueryParams.prototype, "uploadProtocol", void 0);
     return Adexchangebuyer2AccountsProposalsListQueryParams;
-}(SpeakeasyBase));
-export { Adexchangebuyer2AccountsProposalsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.Adexchangebuyer2AccountsProposalsListQueryParams = Adexchangebuyer2AccountsProposalsListQueryParams;
 var Adexchangebuyer2AccountsProposalsListSecurity = /** @class */ (function (_super) {
     __extends(Adexchangebuyer2AccountsProposalsListSecurity, _super);
     function Adexchangebuyer2AccountsProposalsListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], Adexchangebuyer2AccountsProposalsListSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], Adexchangebuyer2AccountsProposalsListSecurity.prototype, "oauth2c", void 0);
     return Adexchangebuyer2AccountsProposalsListSecurity;
-}(SpeakeasyBase));
-export { Adexchangebuyer2AccountsProposalsListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.Adexchangebuyer2AccountsProposalsListSecurity = Adexchangebuyer2AccountsProposalsListSecurity;
 var Adexchangebuyer2AccountsProposalsListRequest = /** @class */ (function (_super) {
     __extends(Adexchangebuyer2AccountsProposalsListRequest, _super);
     function Adexchangebuyer2AccountsProposalsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Adexchangebuyer2AccountsProposalsListPathParams)
     ], Adexchangebuyer2AccountsProposalsListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Adexchangebuyer2AccountsProposalsListQueryParams)
     ], Adexchangebuyer2AccountsProposalsListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Adexchangebuyer2AccountsProposalsListSecurity)
     ], Adexchangebuyer2AccountsProposalsListRequest.prototype, "security", void 0);
     return Adexchangebuyer2AccountsProposalsListRequest;
-}(SpeakeasyBase));
-export { Adexchangebuyer2AccountsProposalsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.Adexchangebuyer2AccountsProposalsListRequest = Adexchangebuyer2AccountsProposalsListRequest;
 var Adexchangebuyer2AccountsProposalsListResponse = /** @class */ (function (_super) {
     __extends(Adexchangebuyer2AccountsProposalsListResponse, _super);
     function Adexchangebuyer2AccountsProposalsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Adexchangebuyer2AccountsProposalsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ListProposalsResponse)
     ], Adexchangebuyer2AccountsProposalsListResponse.prototype, "listProposalsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Adexchangebuyer2AccountsProposalsListResponse.prototype, "statusCode", void 0);
     return Adexchangebuyer2AccountsProposalsListResponse;
-}(SpeakeasyBase));
-export { Adexchangebuyer2AccountsProposalsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.Adexchangebuyer2AccountsProposalsListResponse = Adexchangebuyer2AccountsProposalsListResponse;

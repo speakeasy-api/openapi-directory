@@ -11,7 +11,7 @@ export class MacSecKey extends SpeakeasyBase {
   ckn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=secretARN" })
-  secretArn?: string;
+  secretARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=startOn" })
   startOn?: string;

@@ -7,7 +7,7 @@ export declare enum GetStopDbInstanceAutomatedBackupsReplicationVersionEnum {
 }
 export declare class GetStopDbInstanceAutomatedBackupsReplicationQueryParams extends SpeakeasyBase {
     action: GetStopDbInstanceAutomatedBackupsReplicationActionEnum;
-    sourceDbInstanceArn: string;
+    sourceDBInstanceArn: string;
     version: GetStopDbInstanceAutomatedBackupsReplicationVersionEnum;
 }
 export declare class GetStopDbInstanceAutomatedBackupsReplicationHeaders extends SpeakeasyBase {

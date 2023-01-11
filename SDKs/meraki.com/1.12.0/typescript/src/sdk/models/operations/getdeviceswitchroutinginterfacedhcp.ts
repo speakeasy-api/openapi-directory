@@ -25,5 +25,5 @@ export class GetDeviceSwitchRoutingInterfaceDhcpResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceSwitchRoutingInterfaceDhcp200ApplicationJsonObject?: Map<string, any>;
+  getDeviceSwitchRoutingInterfaceDhcp200ApplicationJSONObject?: Record<string, any>;
 }

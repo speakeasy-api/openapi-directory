@@ -10,6 +10,6 @@ export declare class DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailRequ
 }
 export declare class DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

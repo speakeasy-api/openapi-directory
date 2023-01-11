@@ -1,2 +1,2 @@
 import { AxiosInstance } from "axios";
-export declare function CreateSecurityClient(client: AxiosInstance, security: any): AxiosInstance;
+export declare function createSecurityClient(client: AxiosInstance, security: any): AxiosInstance;

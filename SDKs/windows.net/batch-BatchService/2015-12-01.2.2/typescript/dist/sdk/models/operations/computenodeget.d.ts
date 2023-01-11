@@ -22,6 +22,6 @@ export declare class ComputeNodeGetResponse extends SpeakeasyBase {
     batchError?: any;
     computeNode?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeDataSharesForProducerActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeDataSharesForProducerResponse = exports.PostDescribeDataSharesForProducerRequest = exports.PostDescribeDataSharesForProducerHeaders = exports.PostDescribeDataSharesForProducerQueryParams = exports.PostDescribeDataSharesForProducerVersionEnum = exports.PostDescribeDataSharesForProducerActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeDataSharesForProducerActionEnum;
 (function (PostDescribeDataSharesForProducerActionEnum) {
     PostDescribeDataSharesForProducerActionEnum["DescribeDataSharesForProducer"] = "DescribeDataSharesForProducer";
-})(PostDescribeDataSharesForProducerActionEnum || (PostDescribeDataSharesForProducerActionEnum = {}));
-export var PostDescribeDataSharesForProducerVersionEnum;
+})(PostDescribeDataSharesForProducerActionEnum = exports.PostDescribeDataSharesForProducerActionEnum || (exports.PostDescribeDataSharesForProducerActionEnum = {}));
+var PostDescribeDataSharesForProducerVersionEnum;
 (function (PostDescribeDataSharesForProducerVersionEnum) {
     PostDescribeDataSharesForProducerVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(PostDescribeDataSharesForProducerVersionEnum || (PostDescribeDataSharesForProducerVersionEnum = {}));
+})(PostDescribeDataSharesForProducerVersionEnum = exports.PostDescribeDataSharesForProducerVersionEnum || (exports.PostDescribeDataSharesForProducerVersionEnum = {}));
 var PostDescribeDataSharesForProducerQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeDataSharesForProducerQueryParams, _super);
     function PostDescribeDataSharesForProducerQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeDataSharesForProducerQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeDataSharesForProducerQueryParams.prototype, "version", void 0);
     return PostDescribeDataSharesForProducerQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeDataSharesForProducerQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeDataSharesForProducerQueryParams = PostDescribeDataSharesForProducerQueryParams;
 var PostDescribeDataSharesForProducerHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeDataSharesForProducerHeaders, _super);
     function PostDescribeDataSharesForProducerHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeDataSharesForProducerHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeDataSharesForProducerHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeDataSharesForProducerHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeDataSharesForProducerHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeDataSharesForProducerHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeDataSharesForProducerHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeDataSharesForProducerHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeDataSharesForProducerHeaders;
-}(SpeakeasyBase));
-export { PostDescribeDataSharesForProducerHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeDataSharesForProducerHeaders = PostDescribeDataSharesForProducerHeaders;
 var PostDescribeDataSharesForProducerRequest = /** @class */ (function (_super) {
     __extends(PostDescribeDataSharesForProducerRequest, _super);
     function PostDescribeDataSharesForProducerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeDataSharesForProducerQueryParams)
     ], PostDescribeDataSharesForProducerRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeDataSharesForProducerHeaders)
     ], PostDescribeDataSharesForProducerRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeDataSharesForProducerRequest.prototype, "request", void 0);
     return PostDescribeDataSharesForProducerRequest;
-}(SpeakeasyBase));
-export { PostDescribeDataSharesForProducerRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeDataSharesForProducerRequest = PostDescribeDataSharesForProducerRequest;
 var PostDescribeDataSharesForProducerResponse = /** @class */ (function (_super) {
     __extends(PostDescribeDataSharesForProducerResponse, _super);
     function PostDescribeDataSharesForProducerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeDataSharesForProducerResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeDataSharesForProducerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeDataSharesForProducerResponse.prototype, "statusCode", void 0);
     return PostDescribeDataSharesForProducerResponse;
-}(SpeakeasyBase));
-export { PostDescribeDataSharesForProducerResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeDataSharesForProducerResponse = PostDescribeDataSharesForProducerResponse;

@@ -9,7 +9,7 @@ export declare class OrgsListRequest extends SpeakeasyBase {
 }
 export declare class OrgsListResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     organizationSimples?: shared.OrganizationSimple[];
 }

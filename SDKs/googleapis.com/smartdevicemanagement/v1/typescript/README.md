@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest, SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,31 +30,31 @@ const req: SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "quisquam",
+    name: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "ea",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "veniam",
-    fields: "perspiciatis",
-    key: "et",
-    oauthToken: "qui",
-    prettyPrint: false,
-    quotaUser: "officia",
-    uploadType: "iure",
-    uploadProtocol: "quis",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    command: "tempora",
+    command: "dicta",
     params: {
-      "et": "quia",
+      "voluptatum": "et",
     },
   },
 };

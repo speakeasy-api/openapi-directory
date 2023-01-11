@@ -48,7 +48,7 @@ export class DeleteUserDefinedFunctionResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteUserDefinedFunctionResponse?: Map<string, any>;
+  deleteUserDefinedFunctionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   entityNotFoundException?: any;

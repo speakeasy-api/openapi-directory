@@ -26,6 +26,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugPullrequestsRequest extends
 export declare class GetRepositoriesWorkspaceRepoSlugPullrequestsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedPullrequests?: shared.PaginatedPullrequests;
 }

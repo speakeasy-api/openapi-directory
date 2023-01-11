@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetModifyLaunchTemplateActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetModifyLaunchTemplateResponse = exports.GetModifyLaunchTemplateRequest = exports.GetModifyLaunchTemplateHeaders = exports.GetModifyLaunchTemplateQueryParams = exports.GetModifyLaunchTemplateVersionEnum = exports.GetModifyLaunchTemplateActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetModifyLaunchTemplateActionEnum;
 (function (GetModifyLaunchTemplateActionEnum) {
     GetModifyLaunchTemplateActionEnum["ModifyLaunchTemplate"] = "ModifyLaunchTemplate";
-})(GetModifyLaunchTemplateActionEnum || (GetModifyLaunchTemplateActionEnum = {}));
-export var GetModifyLaunchTemplateVersionEnum;
+})(GetModifyLaunchTemplateActionEnum = exports.GetModifyLaunchTemplateActionEnum || (exports.GetModifyLaunchTemplateActionEnum = {}));
+var GetModifyLaunchTemplateVersionEnum;
 (function (GetModifyLaunchTemplateVersionEnum) {
     GetModifyLaunchTemplateVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetModifyLaunchTemplateVersionEnum || (GetModifyLaunchTemplateVersionEnum = {}));
+})(GetModifyLaunchTemplateVersionEnum = exports.GetModifyLaunchTemplateVersionEnum || (exports.GetModifyLaunchTemplateVersionEnum = {}));
 var GetModifyLaunchTemplateQueryParams = /** @class */ (function (_super) {
     __extends(GetModifyLaunchTemplateQueryParams, _super);
     function GetModifyLaunchTemplateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetModifyLaunchTemplateQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ClientToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ClientToken" }),
         __metadata("design:type", String)
     ], GetModifyLaunchTemplateQueryParams.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetModifyLaunchTemplateQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=LaunchTemplateId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=LaunchTemplateId" }),
         __metadata("design:type", String)
     ], GetModifyLaunchTemplateQueryParams.prototype, "launchTemplateId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=LaunchTemplateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=LaunchTemplateName" }),
         __metadata("design:type", String)
     ], GetModifyLaunchTemplateQueryParams.prototype, "launchTemplateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SetDefaultVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SetDefaultVersion" }),
         __metadata("design:type", String)
     ], GetModifyLaunchTemplateQueryParams.prototype, "setDefaultVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetModifyLaunchTemplateQueryParams.prototype, "version", void 0);
     return GetModifyLaunchTemplateQueryParams;
-}(SpeakeasyBase));
-export { GetModifyLaunchTemplateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyLaunchTemplateQueryParams = GetModifyLaunchTemplateQueryParams;
 var GetModifyLaunchTemplateHeaders = /** @class */ (function (_super) {
     __extends(GetModifyLaunchTemplateHeaders, _super);
     function GetModifyLaunchTemplateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetModifyLaunchTemplateHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetModifyLaunchTemplateHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetModifyLaunchTemplateHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetModifyLaunchTemplateHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetModifyLaunchTemplateHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetModifyLaunchTemplateHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetModifyLaunchTemplateHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetModifyLaunchTemplateHeaders;
-}(SpeakeasyBase));
-export { GetModifyLaunchTemplateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyLaunchTemplateHeaders = GetModifyLaunchTemplateHeaders;
 var GetModifyLaunchTemplateRequest = /** @class */ (function (_super) {
     __extends(GetModifyLaunchTemplateRequest, _super);
     function GetModifyLaunchTemplateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyLaunchTemplateQueryParams)
     ], GetModifyLaunchTemplateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyLaunchTemplateHeaders)
     ], GetModifyLaunchTemplateRequest.prototype, "headers", void 0);
     return GetModifyLaunchTemplateRequest;
-}(SpeakeasyBase));
-export { GetModifyLaunchTemplateRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyLaunchTemplateRequest = GetModifyLaunchTemplateRequest;
 var GetModifyLaunchTemplateResponse = /** @class */ (function (_super) {
     __extends(GetModifyLaunchTemplateResponse, _super);
     function GetModifyLaunchTemplateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetModifyLaunchTemplateResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetModifyLaunchTemplateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetModifyLaunchTemplateResponse.prototype, "statusCode", void 0);
     return GetModifyLaunchTemplateResponse;
-}(SpeakeasyBase));
-export { GetModifyLaunchTemplateResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyLaunchTemplateResponse = GetModifyLaunchTemplateResponse;

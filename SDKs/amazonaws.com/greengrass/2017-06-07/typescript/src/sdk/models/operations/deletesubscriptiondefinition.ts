@@ -49,7 +49,7 @@ export class DeleteSubscriptionDefinitionResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteSubscriptionDefinitionResponse?: Map<string, any>;
+  deleteSubscriptionDefinitionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

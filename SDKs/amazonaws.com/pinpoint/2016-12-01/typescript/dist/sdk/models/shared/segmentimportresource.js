@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FormatEnum } from "./formatenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SegmentImportResource = void 0;
+var utils_1 = require("../../../internal/utils");
+var formatenum_1 = require("./formatenum");
 // SegmentImportResource
 /**
  * Provides information about the import job that created a segment. An import job is a job that creates a user segment by importing endpoint definitions.
@@ -34,29 +37,29 @@ var SegmentImportResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChannelCounts" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChannelCounts" }),
+        __metadata("design:type", Object)
     ], SegmentImportResource.prototype, "channelCounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExternalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExternalId" }),
         __metadata("design:type", String)
     ], SegmentImportResource.prototype, "externalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Format" }),
         __metadata("design:type", String)
     ], SegmentImportResource.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RoleArn" }),
         __metadata("design:type", String)
     ], SegmentImportResource.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3Url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3Url" }),
         __metadata("design:type", String)
     ], SegmentImportResource.prototype, "s3Url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Size" }),
         __metadata("design:type", Number)
     ], SegmentImportResource.prototype, "size", void 0);
     return SegmentImportResource;
-}(SpeakeasyBase));
-export { SegmentImportResource };
+}(utils_1.SpeakeasyBase));
+exports.SegmentImportResource = SegmentImportResource;

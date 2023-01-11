@@ -18,6 +18,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKe
 export declare class GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    commitstatus?: Map<string, any>;
-    error?: Map<string, any>;
+    commitstatus?: Record<string, any>;
+    error?: Record<string, any>;
 }

@@ -14,7 +14,7 @@ export class IncomeVerificationSummaryGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  incomeVerificationSummaryGetResponse?: Map<string, any>;
+  incomeVerificationSummaryGetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

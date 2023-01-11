@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContainerServicePower = void 0;
+var utils_1 = require("../../../internal/utils");
 // ContainerServicePower
 /**
  * <p>Describes the powers that can be specified for an Amazon Lightsail container service.</p> <p>The power specifies the amount of RAM, the number of vCPUs, and the base price of the container service.</p>
@@ -33,29 +36,29 @@ var ContainerServicePower = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuCount" }),
         __metadata("design:type", Number)
     ], ContainerServicePower.prototype, "cpuCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isActive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isActive" }),
         __metadata("design:type", Boolean)
     ], ContainerServicePower.prototype, "isActive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ContainerServicePower.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=powerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=powerId" }),
         __metadata("design:type", String)
     ], ContainerServicePower.prototype, "powerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
         __metadata("design:type", Number)
     ], ContainerServicePower.prototype, "price", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ramSizeInGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ramSizeInGb" }),
         __metadata("design:type", Number)
     ], ContainerServicePower.prototype, "ramSizeInGb", void 0);
     return ContainerServicePower;
-}(SpeakeasyBase));
-export { ContainerServicePower };
+}(utils_1.SpeakeasyBase));
+exports.ContainerServicePower = ContainerServicePower;

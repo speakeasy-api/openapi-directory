@@ -11,5 +11,5 @@ export class ImportDomainRequest extends SpeakeasyBase {
   domainName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 }

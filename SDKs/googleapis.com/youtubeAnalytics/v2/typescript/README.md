@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { YoutubeAnalyticsGroupItemsDeleteRequest, YoutubeAnalyticsGroupItemsDeleteResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,26 +31,26 @@ const req: YoutubeAnalyticsGroupItemsDeleteRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "sequi",
-    alt: "proto",
-    callback: "officia",
-    fields: "ad",
-    id: "eum",
-    key: "autem",
-    oauthToken: "sint",
-    onBehalfOfContentOwner: "rem",
-    prettyPrint: true,
-    quotaUser: "a",
-    uploadType: "alias",
-    uploadProtocol: "quisquam",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    id: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    onBehalfOfContentOwner: "fugit",
+    prettyPrint: false,
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
 };
 

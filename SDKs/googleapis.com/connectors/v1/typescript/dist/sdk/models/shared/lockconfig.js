@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LockConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // LockConfig
 /**
  * Determines whether or no a connection is locked. If locked, a reason must be specified.
@@ -33,13 +36,13 @@ var LockConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locked" }),
         __metadata("design:type", Boolean)
     ], LockConfig.prototype, "locked", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], LockConfig.prototype, "reason", void 0);
     return LockConfig;
-}(SpeakeasyBase));
-export { LockConfig };
+}(utils_1.SpeakeasyBase));
+exports.LockConfig = LockConfig;

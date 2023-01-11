@@ -105,11 +105,11 @@ export declare class SecerRequest extends SpeakeasyBase {
 export declare class SecerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    secer400ApplicationJsonObject?: Secer400ApplicationJson;
-    secer401ApplicationJsonObject?: Secer401ApplicationJson;
-    secer404ApplicationJsonObject?: Secer404ApplicationJson;
-    secer500ApplicationJsonObject?: Secer500ApplicationJson;
-    secer502ApplicationJsonObject?: Secer502ApplicationJson;
-    secer503ApplicationJsonObject?: Secer503ApplicationJson;
-    secer504ApplicationJsonObject?: Secer504ApplicationJson;
+    secer400ApplicationJSONObject?: Secer400ApplicationJson;
+    secer401ApplicationJSONObject?: Secer401ApplicationJson;
+    secer404ApplicationJSONObject?: Secer404ApplicationJson;
+    secer500ApplicationJSONObject?: Secer500ApplicationJson;
+    secer502ApplicationJSONObject?: Secer502ApplicationJson;
+    secer503ApplicationJSONObject?: Secer503ApplicationJson;
+    secer504ApplicationJSONObject?: Secer504ApplicationJson;
 }

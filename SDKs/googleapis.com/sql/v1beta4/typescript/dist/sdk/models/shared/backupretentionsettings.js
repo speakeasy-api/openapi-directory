@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var BackupRetentionSettingsRetentionUnitEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BackupRetentionSettings = exports.BackupRetentionSettingsRetentionUnitEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var BackupRetentionSettingsRetentionUnitEnum;
 (function (BackupRetentionSettingsRetentionUnitEnum) {
     BackupRetentionSettingsRetentionUnitEnum["RetentionUnitUnspecified"] = "RETENTION_UNIT_UNSPECIFIED";
     BackupRetentionSettingsRetentionUnitEnum["Count"] = "COUNT";
-})(BackupRetentionSettingsRetentionUnitEnum || (BackupRetentionSettingsRetentionUnitEnum = {}));
+})(BackupRetentionSettingsRetentionUnitEnum = exports.BackupRetentionSettingsRetentionUnitEnum || (exports.BackupRetentionSettingsRetentionUnitEnum = {}));
 // BackupRetentionSettings
 /**
  * We currently only support backup retention by specifying the number of backups we will retain.
@@ -38,13 +41,13 @@ var BackupRetentionSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retainedBackups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retainedBackups" }),
         __metadata("design:type", Number)
     ], BackupRetentionSettings.prototype, "retainedBackups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retentionUnit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retentionUnit" }),
         __metadata("design:type", String)
     ], BackupRetentionSettings.prototype, "retentionUnit", void 0);
     return BackupRetentionSettings;
-}(SpeakeasyBase));
-export { BackupRetentionSettings };
+}(utils_1.SpeakeasyBase));
+exports.BackupRetentionSettings = BackupRetentionSettings;

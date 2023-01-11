@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleChromeManagementV1DeviceHardwareCountReport } from "./googlechromemanagementv1devicehardwarecountreport";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlechromemanagementv1devicehardwarecountreport_1 = require("./googlechromemanagementv1devicehardwarecountreport");
 // GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse
 /**
  * Response containing a list of devices with a specific type of hardware specification from the requested hardware type.
@@ -34,21 +37,21 @@ var GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse = /** @class
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuReports", elemType: GoogleChromeManagementV1DeviceHardwareCountReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuReports", elemType: googlechromemanagementv1devicehardwarecountreport_1.GoogleChromeManagementV1DeviceHardwareCountReport }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse.prototype, "cpuReports", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memoryReports", elemType: GoogleChromeManagementV1DeviceHardwareCountReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memoryReports", elemType: googlechromemanagementv1devicehardwarecountreport_1.GoogleChromeManagementV1DeviceHardwareCountReport }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse.prototype, "memoryReports", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modelReports", elemType: GoogleChromeManagementV1DeviceHardwareCountReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modelReports", elemType: googlechromemanagementv1devicehardwarecountreport_1.GoogleChromeManagementV1DeviceHardwareCountReport }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse.prototype, "modelReports", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageReports", elemType: GoogleChromeManagementV1DeviceHardwareCountReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageReports", elemType: googlechromemanagementv1devicehardwarecountreport_1.GoogleChromeManagementV1DeviceHardwareCountReport }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse.prototype, "storageReports", void 0);
     return GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse = GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SongApiGetNamesNameMatchModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SongApiGetNamesResponse = exports.SongApiGetNamesRequest = exports.SongApiGetNamesQueryParams = exports.SongApiGetNamesNameMatchModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SongApiGetNamesNameMatchModeEnum;
 (function (SongApiGetNamesNameMatchModeEnum) {
     SongApiGetNamesNameMatchModeEnum["Auto"] = "Auto";
     SongApiGetNamesNameMatchModeEnum["Partial"] = "Partial";
     SongApiGetNamesNameMatchModeEnum["StartsWith"] = "StartsWith";
     SongApiGetNamesNameMatchModeEnum["Exact"] = "Exact";
     SongApiGetNamesNameMatchModeEnum["Words"] = "Words";
-})(SongApiGetNamesNameMatchModeEnum || (SongApiGetNamesNameMatchModeEnum = {}));
+})(SongApiGetNamesNameMatchModeEnum = exports.SongApiGetNamesNameMatchModeEnum || (exports.SongApiGetNamesNameMatchModeEnum = {}));
 var SongApiGetNamesQueryParams = /** @class */ (function (_super) {
     __extends(SongApiGetNamesQueryParams, _super);
     function SongApiGetNamesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxResults" }),
         __metadata("design:type", Number)
     ], SongApiGetNamesQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=nameMatchMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=nameMatchMode" }),
         __metadata("design:type", String)
     ], SongApiGetNamesQueryParams.prototype, "nameMatchMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], SongApiGetNamesQueryParams.prototype, "query", void 0);
     return SongApiGetNamesQueryParams;
-}(SpeakeasyBase));
-export { SongApiGetNamesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SongApiGetNamesQueryParams = SongApiGetNamesQueryParams;
 var SongApiGetNamesRequest = /** @class */ (function (_super) {
     __extends(SongApiGetNamesRequest, _super);
     function SongApiGetNamesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SongApiGetNamesQueryParams)
     ], SongApiGetNamesRequest.prototype, "queryParams", void 0);
     return SongApiGetNamesRequest;
-}(SpeakeasyBase));
-export { SongApiGetNamesRequest };
+}(utils_1.SpeakeasyBase));
+exports.SongApiGetNamesRequest = SongApiGetNamesRequest;
 var SongApiGetNamesResponse = /** @class */ (function (_super) {
     __extends(SongApiGetNamesResponse, _super);
     function SongApiGetNamesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], SongApiGetNamesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SongApiGetNamesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], SongApiGetNamesResponse.prototype, "songApiGetNames200ApplicationJsonStrings", void 0);
+    ], SongApiGetNamesResponse.prototype, "songApiGetNames200ApplicationJSONStrings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], SongApiGetNamesResponse.prototype, "songApiGetNames200ApplicationJsonpStrings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], SongApiGetNamesResponse.prototype, "songApiGetNames200TextJsonStrings", void 0);
+    ], SongApiGetNamesResponse.prototype, "songApiGetNames200TextJSONStrings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SongApiGetNamesResponse.prototype, "statusCode", void 0);
     return SongApiGetNamesResponse;
-}(SpeakeasyBase));
-export { SongApiGetNamesResponse };
+}(utils_1.SpeakeasyBase));
+exports.SongApiGetNamesResponse = SongApiGetNamesResponse;

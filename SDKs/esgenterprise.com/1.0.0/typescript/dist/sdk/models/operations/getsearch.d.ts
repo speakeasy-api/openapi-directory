@@ -12,7 +12,6 @@ export declare class GetSearchRequest extends SpeakeasyBase {
 }
 export declare class GetSearchResponse extends SpeakeasyBase {
     contentType: string;
-    getSearch200ApplicationJsonAny?: any;
-    headers: Map<string, string[]>;
     statusCode: number;
+    getSearch200ApplicationJSONAny?: any;
 }

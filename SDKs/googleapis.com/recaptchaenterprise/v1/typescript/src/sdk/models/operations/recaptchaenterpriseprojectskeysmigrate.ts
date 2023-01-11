@@ -62,7 +62,7 @@ export class RecaptchaenterpriseProjectsKeysMigrateRequest extends SpeakeasyBase
   queryParams: RecaptchaenterpriseProjectsKeysMigrateQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: shared.GoogleCloudRecaptchaenterpriseV1MigrateKeyRequest;
 
   @SpeakeasyMetadata()
   security: RecaptchaenterpriseProjectsKeysMigrateSecurity;

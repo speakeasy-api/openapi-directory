@@ -2,28 +2,28 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-export class TimesheetLineInput extends SpeakeasyBase {
+export class TimesheetLine extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=EarningsRateID" })
-  earningsRateId?: string;
+  earningsRateID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=NumberOfUnits" })
   numberOfUnits?: number[];
 
   @SpeakeasyMetadata({ data: "json, name=TrackingItemID" })
-  trackingItemId?: string;
+  trackingItemID?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" })
+  updatedDateUTC?: string;
 }
 
 
-export class TimesheetLine extends SpeakeasyBase {
+export class TimesheetLineInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=EarningsRateID" })
-  earningsRateId?: string;
+  earningsRateID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=NumberOfUnits" })
   numberOfUnits?: number[];
 
   @SpeakeasyMetadata({ data: "json, name=TrackingItemID" })
-  trackingItemId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" })
-  updatedDateUtc?: string;
+  trackingItemID?: string;
 }

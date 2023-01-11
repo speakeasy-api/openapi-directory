@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateSoftwareUpdateJobResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateSoftwareUpdateJobResponse = /** @class */ (function (_super) {
     __extends(CreateSoftwareUpdateJobResponse, _super);
     function CreateSoftwareUpdateJobResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IotJobArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IotJobArn" }),
         __metadata("design:type", String)
     ], CreateSoftwareUpdateJobResponse.prototype, "iotJobArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IotJobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IotJobId" }),
         __metadata("design:type", String)
     ], CreateSoftwareUpdateJobResponse.prototype, "iotJobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PlatformSoftwareVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PlatformSoftwareVersion" }),
         __metadata("design:type", String)
     ], CreateSoftwareUpdateJobResponse.prototype, "platformSoftwareVersion", void 0);
     return CreateSoftwareUpdateJobResponse;
-}(SpeakeasyBase));
-export { CreateSoftwareUpdateJobResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateSoftwareUpdateJobResponse = CreateSoftwareUpdateJobResponse;

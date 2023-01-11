@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AlbumApiGetNamesNameMatchModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AlbumApiGetNamesResponse = exports.AlbumApiGetNamesRequest = exports.AlbumApiGetNamesQueryParams = exports.AlbumApiGetNamesNameMatchModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AlbumApiGetNamesNameMatchModeEnum;
 (function (AlbumApiGetNamesNameMatchModeEnum) {
     AlbumApiGetNamesNameMatchModeEnum["Auto"] = "Auto";
     AlbumApiGetNamesNameMatchModeEnum["Partial"] = "Partial";
     AlbumApiGetNamesNameMatchModeEnum["StartsWith"] = "StartsWith";
     AlbumApiGetNamesNameMatchModeEnum["Exact"] = "Exact";
     AlbumApiGetNamesNameMatchModeEnum["Words"] = "Words";
-})(AlbumApiGetNamesNameMatchModeEnum || (AlbumApiGetNamesNameMatchModeEnum = {}));
+})(AlbumApiGetNamesNameMatchModeEnum = exports.AlbumApiGetNamesNameMatchModeEnum || (exports.AlbumApiGetNamesNameMatchModeEnum = {}));
 var AlbumApiGetNamesQueryParams = /** @class */ (function (_super) {
     __extends(AlbumApiGetNamesQueryParams, _super);
     function AlbumApiGetNamesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxResults" }),
         __metadata("design:type", Number)
     ], AlbumApiGetNamesQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=nameMatchMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=nameMatchMode" }),
         __metadata("design:type", String)
     ], AlbumApiGetNamesQueryParams.prototype, "nameMatchMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], AlbumApiGetNamesQueryParams.prototype, "query", void 0);
     return AlbumApiGetNamesQueryParams;
-}(SpeakeasyBase));
-export { AlbumApiGetNamesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AlbumApiGetNamesQueryParams = AlbumApiGetNamesQueryParams;
 var AlbumApiGetNamesRequest = /** @class */ (function (_super) {
     __extends(AlbumApiGetNamesRequest, _super);
     function AlbumApiGetNamesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AlbumApiGetNamesQueryParams)
     ], AlbumApiGetNamesRequest.prototype, "queryParams", void 0);
     return AlbumApiGetNamesRequest;
-}(SpeakeasyBase));
-export { AlbumApiGetNamesRequest };
+}(utils_1.SpeakeasyBase));
+exports.AlbumApiGetNamesRequest = AlbumApiGetNamesRequest;
 var AlbumApiGetNamesResponse = /** @class */ (function (_super) {
     __extends(AlbumApiGetNamesResponse, _super);
     function AlbumApiGetNamesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], AlbumApiGetNamesResponse.prototype, "albumApiGetNames200ApplicationJsonStrings", void 0);
+    ], AlbumApiGetNamesResponse.prototype, "albumApiGetNames200ApplicationJSONStrings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], AlbumApiGetNamesResponse.prototype, "albumApiGetNames200ApplicationJsonpStrings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], AlbumApiGetNamesResponse.prototype, "albumApiGetNames200TextJsonStrings", void 0);
+    ], AlbumApiGetNamesResponse.prototype, "albumApiGetNames200TextJSONStrings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], AlbumApiGetNamesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AlbumApiGetNamesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AlbumApiGetNamesResponse.prototype, "statusCode", void 0);
     return AlbumApiGetNamesResponse;
-}(SpeakeasyBase));
-export { AlbumApiGetNamesResponse };
+}(utils_1.SpeakeasyBase));
+exports.AlbumApiGetNamesResponse = AlbumApiGetNamesResponse;

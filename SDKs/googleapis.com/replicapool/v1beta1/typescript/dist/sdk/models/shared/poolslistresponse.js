@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Pool } from "./pool";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PoolsListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var pool_1 = require("./pool");
 var PoolsListResponse = /** @class */ (function (_super) {
     __extends(PoolsListResponse, _super);
     function PoolsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PoolsListResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Pool }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: pool_1.Pool }),
         __metadata("design:type", Array)
     ], PoolsListResponse.prototype, "resources", void 0);
     return PoolsListResponse;
-}(SpeakeasyBase));
-export { PoolsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.PoolsListResponse = PoolsListResponse;

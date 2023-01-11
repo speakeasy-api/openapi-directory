@@ -54,7 +54,7 @@ export class UpdateBotRequestBody extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=idleSessionTTLInSeconds" })
-  idleSessionTtlInSeconds: number;
+  idleSessionTTLInSeconds: number;
 
   @SpeakeasyMetadata({ data: "json, name=roleArn" })
   roleArn: string;

@@ -28,7 +28,7 @@ export declare class CreateFacetRequest extends SpeakeasyBase {
 export declare class CreateFacetResponse extends SpeakeasyBase {
     accessDeniedException?: shared.AccessDeniedException;
     contentType: string;
-    createFacetResponse?: Map<string, any>;
+    createFacetResponse?: Record<string, any>;
     facetAlreadyExistsException?: shared.FacetAlreadyExistsException;
     facetValidationException?: shared.FacetValidationException;
     internalServiceException?: shared.InternalServiceException;

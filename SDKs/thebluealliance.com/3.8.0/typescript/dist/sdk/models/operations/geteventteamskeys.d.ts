@@ -16,7 +16,7 @@ export declare class GetEventTeamsKeysRequest extends SpeakeasyBase {
 }
 export declare class GetEventTeamsKeysResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getEventTeamsKeys200ApplicationJsonStrings?: string[];
+    getEventTeamsKeys200ApplicationJSONStrings?: string[];
 }

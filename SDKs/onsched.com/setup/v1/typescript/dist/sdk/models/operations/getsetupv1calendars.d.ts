@@ -10,6 +10,6 @@ export declare class GetSetupV1CalendarsRequest extends SpeakeasyBase {
 }
 export declare class GetSetupV1CalendarsResponse extends SpeakeasyBase {
     contentType: string;
-    scheduleListViewModel?: Map<string, any>;
+    scheduleListViewModel?: Record<string, any>;
     statusCode: number;
 }

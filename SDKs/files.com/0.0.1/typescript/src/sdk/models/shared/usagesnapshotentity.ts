@@ -47,5 +47,5 @@ export class UsageSnapshotEntity extends SpeakeasyBase {
   updatedAt?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=usage_by_top_level_dir" })
-  usageByTopLevelDir?: Map<string, any>;
+  usageByTopLevelDir?: Record<string, any>;
 }

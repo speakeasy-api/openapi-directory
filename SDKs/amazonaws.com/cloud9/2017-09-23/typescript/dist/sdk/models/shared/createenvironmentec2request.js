@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,58 +23,60 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConnectionTypeEnum } from "./connectiontypeenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateEnvironmentEc2Request = void 0;
+var utils_1 = require("../../../internal/utils");
+var connectiontypeenum_1 = require("./connectiontypeenum");
+var tag_1 = require("./tag");
 var CreateEnvironmentEc2Request = /** @class */ (function (_super) {
     __extends(CreateEnvironmentEc2Request, _super);
     function CreateEnvironmentEc2Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=automaticStopTimeMinutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=automaticStopTimeMinutes" }),
         __metadata("design:type", Number)
     ], CreateEnvironmentEc2Request.prototype, "automaticStopTimeMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientRequestToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientRequestToken" }),
         __metadata("design:type", String)
     ], CreateEnvironmentEc2Request.prototype, "clientRequestToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionType" }),
         __metadata("design:type", String)
     ], CreateEnvironmentEc2Request.prototype, "connectionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CreateEnvironmentEc2Request.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dryRun" }),
         __metadata("design:type", Boolean)
     ], CreateEnvironmentEc2Request.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageId" }),
         __metadata("design:type", String)
     ], CreateEnvironmentEc2Request.prototype, "imageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceType" }),
         __metadata("design:type", String)
     ], CreateEnvironmentEc2Request.prototype, "instanceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateEnvironmentEc2Request.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerArn" }),
         __metadata("design:type", String)
     ], CreateEnvironmentEc2Request.prototype, "ownerArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subnetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subnetId" }),
         __metadata("design:type", String)
     ], CreateEnvironmentEc2Request.prototype, "subnetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateEnvironmentEc2Request.prototype, "tags", void 0);
     return CreateEnvironmentEc2Request;
-}(SpeakeasyBase));
-export { CreateEnvironmentEc2Request };
+}(utils_1.SpeakeasyBase));
+exports.CreateEnvironmentEc2Request = CreateEnvironmentEc2Request;

@@ -24,5 +24,5 @@ export declare class GetLatestAllCountriesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    getLatestAllCountries200ApplicationJsonObjects?: GetLatestAllCountries200ApplicationJson[];
+    getLatestAllCountries200ApplicationJSONObjects?: GetLatestAllCountries200ApplicationJson[];
 }

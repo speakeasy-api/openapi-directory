@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,30 +14,55 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReleaseEventSeriesApiGetOneResponse = exports.ReleaseEventSeriesApiGetOneRequest = exports.ReleaseEventSeriesApiGetOneQueryParams = exports.ReleaseEventSeriesApiGetOneLangEnum = exports.ReleaseEventSeriesApiGetOneFieldsEnum = exports.ReleaseEventSeriesApiGetOnePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ReleaseEventSeriesApiGetOnePathParams = /** @class */ (function (_super) {
     __extends(ReleaseEventSeriesApiGetOnePathParams, _super);
     function ReleaseEventSeriesApiGetOnePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], ReleaseEventSeriesApiGetOnePathParams.prototype, "id", void 0);
     return ReleaseEventSeriesApiGetOnePathParams;
-}(SpeakeasyBase));
-export { ReleaseEventSeriesApiGetOnePathParams };
-export var ReleaseEventSeriesApiGetOneFieldsEnum;
+}(utils_1.SpeakeasyBase));
+exports.ReleaseEventSeriesApiGetOnePathParams = ReleaseEventSeriesApiGetOnePathParams;
+var ReleaseEventSeriesApiGetOneFieldsEnum;
 (function (ReleaseEventSeriesApiGetOneFieldsEnum) {
     ReleaseEventSeriesApiGetOneFieldsEnum["None"] = "None";
     ReleaseEventSeriesApiGetOneFieldsEnum["AdditionalNames"] = "AdditionalNames";
@@ -45,67 +71,67 @@ export var ReleaseEventSeriesApiGetOneFieldsEnum;
     ReleaseEventSeriesApiGetOneFieldsEnum["MainPicture"] = "MainPicture";
     ReleaseEventSeriesApiGetOneFieldsEnum["Names"] = "Names";
     ReleaseEventSeriesApiGetOneFieldsEnum["WebLinks"] = "WebLinks";
-})(ReleaseEventSeriesApiGetOneFieldsEnum || (ReleaseEventSeriesApiGetOneFieldsEnum = {}));
-export var ReleaseEventSeriesApiGetOneLangEnum;
+})(ReleaseEventSeriesApiGetOneFieldsEnum = exports.ReleaseEventSeriesApiGetOneFieldsEnum || (exports.ReleaseEventSeriesApiGetOneFieldsEnum = {}));
+var ReleaseEventSeriesApiGetOneLangEnum;
 (function (ReleaseEventSeriesApiGetOneLangEnum) {
     ReleaseEventSeriesApiGetOneLangEnum["Default"] = "Default";
     ReleaseEventSeriesApiGetOneLangEnum["Japanese"] = "Japanese";
     ReleaseEventSeriesApiGetOneLangEnum["Romaji"] = "Romaji";
     ReleaseEventSeriesApiGetOneLangEnum["English"] = "English";
-})(ReleaseEventSeriesApiGetOneLangEnum || (ReleaseEventSeriesApiGetOneLangEnum = {}));
+})(ReleaseEventSeriesApiGetOneLangEnum = exports.ReleaseEventSeriesApiGetOneLangEnum || (exports.ReleaseEventSeriesApiGetOneLangEnum = {}));
 var ReleaseEventSeriesApiGetOneQueryParams = /** @class */ (function (_super) {
     __extends(ReleaseEventSeriesApiGetOneQueryParams, _super);
     function ReleaseEventSeriesApiGetOneQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], ReleaseEventSeriesApiGetOneQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=lang" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=lang" }),
         __metadata("design:type", String)
     ], ReleaseEventSeriesApiGetOneQueryParams.prototype, "lang", void 0);
     return ReleaseEventSeriesApiGetOneQueryParams;
-}(SpeakeasyBase));
-export { ReleaseEventSeriesApiGetOneQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ReleaseEventSeriesApiGetOneQueryParams = ReleaseEventSeriesApiGetOneQueryParams;
 var ReleaseEventSeriesApiGetOneRequest = /** @class */ (function (_super) {
     __extends(ReleaseEventSeriesApiGetOneRequest, _super);
     function ReleaseEventSeriesApiGetOneRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReleaseEventSeriesApiGetOnePathParams)
     ], ReleaseEventSeriesApiGetOneRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReleaseEventSeriesApiGetOneQueryParams)
     ], ReleaseEventSeriesApiGetOneRequest.prototype, "queryParams", void 0);
     return ReleaseEventSeriesApiGetOneRequest;
-}(SpeakeasyBase));
-export { ReleaseEventSeriesApiGetOneRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReleaseEventSeriesApiGetOneRequest = ReleaseEventSeriesApiGetOneRequest;
 var ReleaseEventSeriesApiGetOneResponse = /** @class */ (function (_super) {
     __extends(ReleaseEventSeriesApiGetOneResponse, _super);
     function ReleaseEventSeriesApiGetOneResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], ReleaseEventSeriesApiGetOneResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReleaseEventSeriesApiGetOneResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ReleaseEventSeriesForApiContract)
     ], ReleaseEventSeriesApiGetOneResponse.prototype, "releaseEventSeriesForApiContract", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReleaseEventSeriesApiGetOneResponse.prototype, "statusCode", void 0);
     return ReleaseEventSeriesApiGetOneResponse;
-}(SpeakeasyBase));
-export { ReleaseEventSeriesApiGetOneResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReleaseEventSeriesApiGetOneResponse = ReleaseEventSeriesApiGetOneResponse;

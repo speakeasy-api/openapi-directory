@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCreateDomainActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCreateDomainResponse = exports.PostCreateDomainRequest = exports.PostCreateDomainHeaders = exports.PostCreateDomainQueryParams = exports.PostCreateDomainVersionEnum = exports.PostCreateDomainActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCreateDomainActionEnum;
 (function (PostCreateDomainActionEnum) {
     PostCreateDomainActionEnum["CreateDomain"] = "CreateDomain";
-})(PostCreateDomainActionEnum || (PostCreateDomainActionEnum = {}));
-export var PostCreateDomainVersionEnum;
+})(PostCreateDomainActionEnum = exports.PostCreateDomainActionEnum || (exports.PostCreateDomainActionEnum = {}));
+var PostCreateDomainVersionEnum;
 (function (PostCreateDomainVersionEnum) {
     PostCreateDomainVersionEnum["TwoThousandAndEleven0201"] = "2011-02-01";
-})(PostCreateDomainVersionEnum || (PostCreateDomainVersionEnum = {}));
+})(PostCreateDomainVersionEnum = exports.PostCreateDomainVersionEnum || (exports.PostCreateDomainVersionEnum = {}));
 var PostCreateDomainQueryParams = /** @class */ (function (_super) {
     __extends(PostCreateDomainQueryParams, _super);
     function PostCreateDomainQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCreateDomainQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCreateDomainQueryParams.prototype, "version", void 0);
     return PostCreateDomainQueryParams;
-}(SpeakeasyBase));
-export { PostCreateDomainQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateDomainQueryParams = PostCreateDomainQueryParams;
 var PostCreateDomainHeaders = /** @class */ (function (_super) {
     __extends(PostCreateDomainHeaders, _super);
     function PostCreateDomainHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCreateDomainHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCreateDomainHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCreateDomainHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCreateDomainHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCreateDomainHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCreateDomainHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCreateDomainHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCreateDomainHeaders;
-}(SpeakeasyBase));
-export { PostCreateDomainHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateDomainHeaders = PostCreateDomainHeaders;
 var PostCreateDomainRequest = /** @class */ (function (_super) {
     __extends(PostCreateDomainRequest, _super);
     function PostCreateDomainRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateDomainQueryParams)
     ], PostCreateDomainRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateDomainHeaders)
     ], PostCreateDomainRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCreateDomainRequest.prototype, "request", void 0);
     return PostCreateDomainRequest;
-}(SpeakeasyBase));
-export { PostCreateDomainRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateDomainRequest = PostCreateDomainRequest;
 var PostCreateDomainResponse = /** @class */ (function (_super) {
     __extends(PostCreateDomainResponse, _super);
     function PostCreateDomainResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCreateDomainResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCreateDomainResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCreateDomainResponse.prototype, "statusCode", void 0);
     return PostCreateDomainResponse;
-}(SpeakeasyBase));
-export { PostCreateDomainResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateDomainResponse = PostCreateDomainResponse;

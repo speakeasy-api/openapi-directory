@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ForwardPaging } from "./forwardpaging";
-import { ActionRevision } from "./actionrevision";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CollectionResponseActionRevisionForwardPaging = void 0;
+var utils_1 = require("../../../internal/utils");
+var forwardpaging_1 = require("./forwardpaging");
+var actionrevision_1 = require("./actionrevision");
 var CollectionResponseActionRevisionForwardPaging = /** @class */ (function (_super) {
     __extends(CollectionResponseActionRevisionForwardPaging, _super);
     function CollectionResponseActionRevisionForwardPaging() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paging" }),
-        __metadata("design:type", ForwardPaging)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paging" }),
+        __metadata("design:type", forwardpaging_1.ForwardPaging)
     ], CollectionResponseActionRevisionForwardPaging.prototype, "paging", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: ActionRevision }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: actionrevision_1.ActionRevision }),
         __metadata("design:type", Array)
     ], CollectionResponseActionRevisionForwardPaging.prototype, "results", void 0);
     return CollectionResponseActionRevisionForwardPaging;
-}(SpeakeasyBase));
-export { CollectionResponseActionRevisionForwardPaging };
+}(utils_1.SpeakeasyBase));
+exports.CollectionResponseActionRevisionForwardPaging = CollectionResponseActionRevisionForwardPaging;

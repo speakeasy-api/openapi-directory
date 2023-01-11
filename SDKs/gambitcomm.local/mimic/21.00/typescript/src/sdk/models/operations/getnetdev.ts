@@ -10,5 +10,5 @@ export class GetNetdevResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetdev200ApplicationJsonObject?: Map<string, number>;
+  getNetdev200ApplicationJSONObject?: Record<string, number>;
 }

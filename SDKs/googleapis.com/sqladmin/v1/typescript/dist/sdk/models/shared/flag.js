@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var FlagAppliesToEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Flag = exports.FlagTypeEnum = exports.FlagAppliesToEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var FlagAppliesToEnum;
 (function (FlagAppliesToEnum) {
     FlagAppliesToEnum["SqlDatabaseVersionUnspecified"] = "SQL_DATABASE_VERSION_UNSPECIFIED";
     FlagAppliesToEnum["Mysql51"] = "MYSQL_5_1";
@@ -51,8 +54,8 @@ export var FlagAppliesToEnum;
     FlagAppliesToEnum["Sqlserver2019Enterprise"] = "SQLSERVER_2019_ENTERPRISE";
     FlagAppliesToEnum["Sqlserver2019Express"] = "SQLSERVER_2019_EXPRESS";
     FlagAppliesToEnum["Sqlserver2019Web"] = "SQLSERVER_2019_WEB";
-})(FlagAppliesToEnum || (FlagAppliesToEnum = {}));
-export var FlagTypeEnum;
+})(FlagAppliesToEnum = exports.FlagAppliesToEnum || (exports.FlagAppliesToEnum = {}));
+var FlagTypeEnum;
 (function (FlagTypeEnum) {
     FlagTypeEnum["SqlFlagTypeUnspecified"] = "SQL_FLAG_TYPE_UNSPECIFIED";
     FlagTypeEnum["Boolean"] = "BOOLEAN";
@@ -62,7 +65,7 @@ export var FlagTypeEnum;
     FlagTypeEnum["MysqlTimezoneOffset"] = "MYSQL_TIMEZONE_OFFSET";
     FlagTypeEnum["Float"] = "FLOAT";
     FlagTypeEnum["RepeatedString"] = "REPEATED_STRING";
-})(FlagTypeEnum || (FlagTypeEnum = {}));
+})(FlagTypeEnum = exports.FlagTypeEnum || (exports.FlagTypeEnum = {}));
 // Flag
 /**
  * A flag resource.
@@ -73,45 +76,45 @@ var Flag = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedIntValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedIntValues" }),
         __metadata("design:type", Array)
     ], Flag.prototype, "allowedIntValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedStringValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedStringValues" }),
         __metadata("design:type", Array)
     ], Flag.prototype, "allowedStringValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appliesTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appliesTo" }),
         __metadata("design:type", Array)
     ], Flag.prototype, "appliesTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inBeta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inBeta" }),
         __metadata("design:type", Boolean)
     ], Flag.prototype, "inBeta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Flag.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxValue" }),
         __metadata("design:type", String)
     ], Flag.prototype, "maxValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minValue" }),
         __metadata("design:type", String)
     ], Flag.prototype, "minValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Flag.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requiresRestart" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requiresRestart" }),
         __metadata("design:type", Boolean)
     ], Flag.prototype, "requiresRestart", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Flag.prototype, "type", void 0);
     return Flag;
-}(SpeakeasyBase));
-export { Flag };
+}(utils_1.SpeakeasyBase));
+exports.Flag = Flag;

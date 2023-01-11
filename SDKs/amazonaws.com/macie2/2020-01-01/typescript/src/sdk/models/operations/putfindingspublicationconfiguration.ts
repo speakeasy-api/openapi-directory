@@ -71,7 +71,7 @@ export class PutFindingsPublicationConfigurationResponse extends SpeakeasyBase {
   internalServerException?: any;
 
   @SpeakeasyMetadata()
-  putFindingsPublicationConfigurationResponse?: Map<string, any>;
+  putFindingsPublicationConfigurationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

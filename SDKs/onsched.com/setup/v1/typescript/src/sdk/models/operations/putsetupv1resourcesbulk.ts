@@ -14,16 +14,16 @@ export class PutSetupV1ResourcesBulkQueryParams extends SpeakeasyBase {
 
 export class PutSetupV1ResourcesBulkRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/*+json" })
-  resourcesUpdateModel?: Map<string, any>;
+  resourcesUpdateModel?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  resourcesUpdateModel1?: Map<string, any>;
+  resourcesUpdateModel1?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json-patch+json" })
-  resourcesUpdateModel2?: Map<string, any>;
+  resourcesUpdateModel2?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "request, media_type=text/json" })
-  resourcesUpdateModel3?: Map<string, any>;
+  resourcesUpdateModel3?: Record<string, any>;
 }
 
 

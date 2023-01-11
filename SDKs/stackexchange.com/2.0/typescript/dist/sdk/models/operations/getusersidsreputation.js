@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUsersIdsReputationResponse = exports.GetUsersIdsReputationRequest = exports.GetUsersIdsReputationQueryParams = exports.GetUsersIdsReputationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetUsersIdsReputationPathParams = /** @class */ (function (_super) {
     __extends(GetUsersIdsReputationPathParams, _super);
     function GetUsersIdsReputationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ids" }),
         __metadata("design:type", String)
     ], GetUsersIdsReputationPathParams.prototype, "ids", void 0);
     return GetUsersIdsReputationPathParams;
-}(SpeakeasyBase));
-export { GetUsersIdsReputationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdsReputationPathParams = GetUsersIdsReputationPathParams;
 var GetUsersIdsReputationQueryParams = /** @class */ (function (_super) {
     __extends(GetUsersIdsReputationQueryParams, _super);
     function GetUsersIdsReputationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetUsersIdsReputationQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetUsersIdsReputationQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Number)
     ], GetUsersIdsReputationQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetUsersIdsReputationQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetUsersIdsReputationQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetUsersIdsReputationQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Number)
     ], GetUsersIdsReputationQueryParams.prototype, "todate", void 0);
     return GetUsersIdsReputationQueryParams;
-}(SpeakeasyBase));
-export { GetUsersIdsReputationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdsReputationQueryParams = GetUsersIdsReputationQueryParams;
 var GetUsersIdsReputationRequest = /** @class */ (function (_super) {
     __extends(GetUsersIdsReputationRequest, _super);
     function GetUsersIdsReputationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUsersIdsReputationPathParams)
     ], GetUsersIdsReputationRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUsersIdsReputationQueryParams)
     ], GetUsersIdsReputationRequest.prototype, "queryParams", void 0);
     return GetUsersIdsReputationRequest;
-}(SpeakeasyBase));
-export { GetUsersIdsReputationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdsReputationRequest = GetUsersIdsReputationRequest;
 var GetUsersIdsReputationResponse = /** @class */ (function (_super) {
     __extends(GetUsersIdsReputationResponse, _super);
     function GetUsersIdsReputationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetUsersIdsReputationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUsersIdsReputationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUsersIdsReputationResponse.prototype, "statusCode", void 0);
     return GetUsersIdsReputationResponse;
-}(SpeakeasyBase));
-export { GetUsersIdsReputationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdsReputationResponse = GetUsersIdsReputationResponse;

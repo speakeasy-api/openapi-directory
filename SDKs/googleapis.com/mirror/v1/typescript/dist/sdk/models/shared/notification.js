@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserAction } from "./useraction";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Notification = void 0;
+var utils_1 = require("../../../internal/utils");
+var useraction_1 = require("./useraction");
 // Notification
 /**
  * A notification delivered by the API.
@@ -34,29 +37,29 @@ var Notification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collection" }),
         __metadata("design:type", String)
     ], Notification.prototype, "collection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemId" }),
         __metadata("design:type", String)
     ], Notification.prototype, "itemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operation" }),
         __metadata("design:type", String)
     ], Notification.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userActions", elemType: UserAction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userActions", elemType: useraction_1.UserAction }),
         __metadata("design:type", Array)
     ], Notification.prototype, "userActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userToken" }),
         __metadata("design:type", String)
     ], Notification.prototype, "userToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verifyToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verifyToken" }),
         __metadata("design:type", String)
     ], Notification.prototype, "verifyToken", void 0);
     return Notification;
-}(SpeakeasyBase));
-export { Notification };
+}(utils_1.SpeakeasyBase));
+exports.Notification = Notification;

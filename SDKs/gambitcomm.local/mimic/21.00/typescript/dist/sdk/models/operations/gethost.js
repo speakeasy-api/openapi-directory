@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetHostResponse = exports.GetHostRequest = exports.GetHostPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetHostPathParams = /** @class */ (function (_super) {
     __extends(GetHostPathParams, _super);
     function GetHostPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], GetHostPathParams.prototype, "agentNum", void 0);
     return GetHostPathParams;
-}(SpeakeasyBase));
-export { GetHostPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetHostPathParams = GetHostPathParams;
 var GetHostRequest = /** @class */ (function (_super) {
     __extends(GetHostRequest, _super);
     function GetHostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetHostPathParams)
     ], GetHostRequest.prototype, "pathParams", void 0);
     return GetHostRequest;
-}(SpeakeasyBase));
-export { GetHostRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetHostRequest = GetHostRequest;
 var GetHostResponse = /** @class */ (function (_super) {
     __extends(GetHostResponse, _super);
     function GetHostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetHostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetHostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], GetHostResponse.prototype, "getHost200ApplicationJsonString", void 0);
+    ], GetHostResponse.prototype, "getHost200ApplicationJSONString", void 0);
     return GetHostResponse;
-}(SpeakeasyBase));
-export { GetHostResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetHostResponse = GetHostResponse;

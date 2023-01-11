@@ -1,4 +1,7 @@
-export var UpdateTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateTypeEnum = void 0;
+var UpdateTypeEnum;
 (function (UpdateTypeEnum) {
     UpdateTypeEnum["VersionUpdate"] = "VersionUpdate";
     UpdateTypeEnum["EndpointAccessUpdate"] = "EndpointAccessUpdate";
@@ -8,4 +11,4 @@ export var UpdateTypeEnum;
     UpdateTypeEnum["DisassociateIdentityProviderConfig"] = "DisassociateIdentityProviderConfig";
     UpdateTypeEnum["AssociateEncryptionConfig"] = "AssociateEncryptionConfig";
     UpdateTypeEnum["AddonUpdate"] = "AddonUpdate";
-})(UpdateTypeEnum || (UpdateTypeEnum = {}));
+})(UpdateTypeEnum = exports.UpdateTypeEnum || (exports.UpdateTypeEnum = {}));

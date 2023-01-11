@@ -29,10 +29,10 @@ export class IbanBasicResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  ibanBasic200ApplicationJsonAny?: any;
+  ibanBasic200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  ibanBasicDefaultApplicationJsonAny?: any;
+  ibanBasicDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DimensionFilterOperatorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DimensionFilter = exports.DimensionFilterOperatorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DimensionFilterOperatorEnum;
 (function (DimensionFilterOperatorEnum) {
     DimensionFilterOperatorEnum["OperatorUnspecified"] = "OPERATOR_UNSPECIFIED";
     DimensionFilterOperatorEnum["Regexp"] = "REGEXP";
@@ -35,7 +38,7 @@ export var DimensionFilterOperatorEnum;
     DimensionFilterOperatorEnum["NumericGreaterThan"] = "NUMERIC_GREATER_THAN";
     DimensionFilterOperatorEnum["NumericLessThan"] = "NUMERIC_LESS_THAN";
     DimensionFilterOperatorEnum["InList"] = "IN_LIST";
-})(DimensionFilterOperatorEnum || (DimensionFilterOperatorEnum = {}));
+})(DimensionFilterOperatorEnum = exports.DimensionFilterOperatorEnum || (exports.DimensionFilterOperatorEnum = {}));
 // DimensionFilter
 /**
  * Dimension filter specifies the filtering options on a dimension.
@@ -46,25 +49,25 @@ var DimensionFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caseSensitive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caseSensitive" }),
         __metadata("design:type", Boolean)
     ], DimensionFilter.prototype, "caseSensitive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensionName" }),
         __metadata("design:type", String)
     ], DimensionFilter.prototype, "dimensionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expressions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expressions" }),
         __metadata("design:type", Array)
     ], DimensionFilter.prototype, "expressions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=not" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=not" }),
         __metadata("design:type", Boolean)
     ], DimensionFilter.prototype, "not", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operator" }),
         __metadata("design:type", String)
     ], DimensionFilter.prototype, "operator", void 0);
     return DimensionFilter;
-}(SpeakeasyBase));
-export { DimensionFilter };
+}(utils_1.SpeakeasyBase));
+exports.DimensionFilter = DimensionFilter;

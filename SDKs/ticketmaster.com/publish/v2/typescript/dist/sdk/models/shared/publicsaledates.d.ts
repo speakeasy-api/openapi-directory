@@ -5,5 +5,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class PublicSaleDates extends SpeakeasyBase {
     endDateTime?: Date;
     startDateTime?: Date;
-    startTbd?: boolean;
+    startTBD?: boolean;
 }

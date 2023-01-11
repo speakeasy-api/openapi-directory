@@ -47,7 +47,7 @@ export class PriceOffersResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  priceOffers200ApplicationJsonString?: string;
+  priceOffers200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

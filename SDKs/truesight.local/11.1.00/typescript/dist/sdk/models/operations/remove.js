@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemoveResponse = exports.RemoveRequest = exports.RemoveQueryParams = exports.RemovePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RemovePathParams = /** @class */ (function (_super) {
     __extends(RemovePathParams, _super);
     function RemovePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
         __metadata("design:type", Number)
     ], RemovePathParams.prototype, "deviceId", void 0);
     return RemovePathParams;
-}(SpeakeasyBase));
-export { RemovePathParams };
+}(utils_1.SpeakeasyBase));
+exports.RemovePathParams = RemovePathParams;
 var RemoveQueryParams = /** @class */ (function (_super) {
     __extends(RemoveQueryParams, _super);
     function RemoveQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=monitorClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=monitorClass" }),
         __metadata("design:type", String)
     ], RemoveQueryParams.prototype, "monitorClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=monitorSid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=monitorSid" }),
         __metadata("design:type", String)
     ], RemoveQueryParams.prototype, "monitorSid", void 0);
     return RemoveQueryParams;
-}(SpeakeasyBase));
-export { RemoveQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.RemoveQueryParams = RemoveQueryParams;
 var RemoveRequest = /** @class */ (function (_super) {
     __extends(RemoveRequest, _super);
     function RemoveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RemovePathParams)
     ], RemoveRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RemoveQueryParams)
     ], RemoveRequest.prototype, "queryParams", void 0);
     return RemoveRequest;
-}(SpeakeasyBase));
-export { RemoveRequest };
+}(utils_1.SpeakeasyBase));
+exports.RemoveRequest = RemoveRequest;
 var RemoveResponse = /** @class */ (function (_super) {
     __extends(RemoveResponse, _super);
     function RemoveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], RemoveResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RemoveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RemoveResponse.prototype, "statusCode", void 0);
     return RemoveResponse;
-}(SpeakeasyBase));
-export { RemoveResponse };
+}(utils_1.SpeakeasyBase));
+exports.RemoveResponse = RemoveResponse;

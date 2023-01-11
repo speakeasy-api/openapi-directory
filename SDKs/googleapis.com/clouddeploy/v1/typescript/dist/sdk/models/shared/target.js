@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,63 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AnthosCluster } from "./anthoscluster";
-import { ExecutionConfig } from "./executionconfig";
-import { GkeCluster } from "./gkecluster";
-import { CloudRunLocation } from "./cloudrunlocation";
-// TargetInput
-/**
- * A `Target` resource in the Google Cloud Deploy API. A `Target` defines a location to which a Skaffold configuration can be deployed.
-**/
-var TargetInput = /** @class */ (function (_super) {
-    __extends(TargetInput, _super);
-    function TargetInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations" }),
-        __metadata("design:type", Map)
-    ], TargetInput.prototype, "annotations", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=anthosCluster" }),
-        __metadata("design:type", AnthosCluster)
-    ], TargetInput.prototype, "anthosCluster", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], TargetInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
-        __metadata("design:type", String)
-    ], TargetInput.prototype, "etag", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionConfigs", elemType: ExecutionConfig }),
-        __metadata("design:type", Array)
-    ], TargetInput.prototype, "executionConfigs", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=gke" }),
-        __metadata("design:type", GkeCluster)
-    ], TargetInput.prototype, "gke", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], TargetInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], TargetInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=requireApproval" }),
-        __metadata("design:type", Boolean)
-    ], TargetInput.prototype, "requireApproval", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=run" }),
-        __metadata("design:type", CloudRunLocation)
-    ], TargetInput.prototype, "run", void 0);
-    return TargetInput;
-}(SpeakeasyBase));
-export { TargetInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetInput = exports.Target = void 0;
+var utils_1 = require("../../../internal/utils");
+var anthoscluster_1 = require("./anthoscluster");
+var executionconfig_1 = require("./executionconfig");
+var gkecluster_1 = require("./gkecluster");
+var cloudrunlocation_1 = require("./cloudrunlocation");
 // Target
 /**
  * A `Target` resource in the Google Cloud Deploy API. A `Target` defines a location to which a Skaffold configuration can be deployed.
@@ -89,61 +40,113 @@ var Target = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations" }),
+        __metadata("design:type", Object)
     ], Target.prototype, "annotations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=anthosCluster" }),
-        __metadata("design:type", AnthosCluster)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=anthosCluster" }),
+        __metadata("design:type", anthoscluster_1.AnthosCluster)
     ], Target.prototype, "anthosCluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Target.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Target.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Target.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionConfigs", elemType: ExecutionConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionConfigs", elemType: executionconfig_1.ExecutionConfig }),
         __metadata("design:type", Array)
     ], Target.prototype, "executionConfigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gke" }),
-        __metadata("design:type", GkeCluster)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gke" }),
+        __metadata("design:type", gkecluster_1.GkeCluster)
     ], Target.prototype, "gke", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Target.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Target.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requireApproval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requireApproval" }),
         __metadata("design:type", Boolean)
     ], Target.prototype, "requireApproval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=run" }),
-        __metadata("design:type", CloudRunLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=run" }),
+        __metadata("design:type", cloudrunlocation_1.CloudRunLocation)
     ], Target.prototype, "run", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetId" }),
         __metadata("design:type", String)
     ], Target.prototype, "targetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], Target.prototype, "uid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Target.prototype, "updateTime", void 0);
     return Target;
-}(SpeakeasyBase));
-export { Target };
+}(utils_1.SpeakeasyBase));
+exports.Target = Target;
+// TargetInput
+/**
+ * A `Target` resource in the Google Cloud Deploy API. A `Target` defines a location to which a Skaffold configuration can be deployed.
+**/
+var TargetInput = /** @class */ (function (_super) {
+    __extends(TargetInput, _super);
+    function TargetInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations" }),
+        __metadata("design:type", Object)
+    ], TargetInput.prototype, "annotations", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=anthosCluster" }),
+        __metadata("design:type", anthoscluster_1.AnthosCluster)
+    ], TargetInput.prototype, "anthosCluster", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], TargetInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
+        __metadata("design:type", String)
+    ], TargetInput.prototype, "etag", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionConfigs", elemType: executionconfig_1.ExecutionConfig }),
+        __metadata("design:type", Array)
+    ], TargetInput.prototype, "executionConfigs", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gke" }),
+        __metadata("design:type", gkecluster_1.GkeCluster)
+    ], TargetInput.prototype, "gke", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], TargetInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], TargetInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requireApproval" }),
+        __metadata("design:type", Boolean)
+    ], TargetInput.prototype, "requireApproval", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=run" }),
+        __metadata("design:type", cloudrunlocation_1.CloudRunLocation)
+    ], TargetInput.prototype, "run", void 0);
+    return TargetInput;
+}(utils_1.SpeakeasyBase));
+exports.TargetInput = TargetInput;

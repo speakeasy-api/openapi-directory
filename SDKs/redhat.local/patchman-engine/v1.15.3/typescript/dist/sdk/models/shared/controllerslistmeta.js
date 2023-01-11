@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ControllersFilterData } from "./controllersfilterdata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ControllersListMeta = void 0;
+var utils_1 = require("../../../internal/utils");
+var controllersfilterdata_1 = require("./controllersfilterdata");
 var ControllersListMeta = /** @class */ (function (_super) {
     __extends(ControllersListMeta, _super);
     function ControllersListMeta() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter", elemType: ControllersFilterData }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter", elemType: controllersfilterdata_1.ControllersFilterData }),
+        __metadata("design:type", Object)
     ], ControllersListMeta.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], ControllersListMeta.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], ControllersListMeta.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=search" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=search" }),
         __metadata("design:type", String)
     ], ControllersListMeta.prototype, "search", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sort" }),
         __metadata("design:type", Array)
     ], ControllersListMeta.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subtotals" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subtotals" }),
+        __metadata("design:type", Object)
     ], ControllersListMeta.prototype, "subtotals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_items" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_items" }),
         __metadata("design:type", Number)
     ], ControllersListMeta.prototype, "totalItems", void 0);
     return ControllersListMeta;
-}(SpeakeasyBase));
-export { ControllersListMeta };
+}(utils_1.SpeakeasyBase));
+exports.ControllersListMeta = ControllersListMeta;

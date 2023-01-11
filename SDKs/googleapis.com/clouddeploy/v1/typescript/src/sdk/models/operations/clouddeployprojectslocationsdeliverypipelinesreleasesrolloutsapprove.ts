@@ -71,7 +71,7 @@ export class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApprov
 
 export class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  approveRolloutResponse?: Map<string, any>;
+  approveRolloutResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

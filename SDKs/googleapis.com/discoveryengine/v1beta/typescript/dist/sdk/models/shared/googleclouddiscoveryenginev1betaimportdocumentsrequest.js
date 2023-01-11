@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDiscoveryengineV1betaBigQuerySource } from "./googleclouddiscoveryenginev1betabigquerysource";
-import { GoogleCloudDiscoveryengineV1betaImportErrorConfig } from "./googleclouddiscoveryenginev1betaimporterrorconfig";
-import { GoogleCloudDiscoveryengineV1betaGcsSource } from "./googleclouddiscoveryenginev1betagcssource";
-import { GoogleCloudDiscoveryengineV1betaImportDocumentsRequestInlineSource } from "./googleclouddiscoveryenginev1betaimportdocumentsrequestinlinesource";
-export var GoogleCloudDiscoveryengineV1betaImportDocumentsRequestReconciliationModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDiscoveryengineV1betaImportDocumentsRequest = exports.GoogleCloudDiscoveryengineV1betaImportDocumentsRequestReconciliationModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddiscoveryenginev1betabigquerysource_1 = require("./googleclouddiscoveryenginev1betabigquerysource");
+var googleclouddiscoveryenginev1betaimporterrorconfig_1 = require("./googleclouddiscoveryenginev1betaimporterrorconfig");
+var googleclouddiscoveryenginev1betagcssource_1 = require("./googleclouddiscoveryenginev1betagcssource");
+var googleclouddiscoveryenginev1betaimportdocumentsrequestinlinesource_1 = require("./googleclouddiscoveryenginev1betaimportdocumentsrequestinlinesource");
+var GoogleCloudDiscoveryengineV1betaImportDocumentsRequestReconciliationModeEnum;
 (function (GoogleCloudDiscoveryengineV1betaImportDocumentsRequestReconciliationModeEnum) {
     GoogleCloudDiscoveryengineV1betaImportDocumentsRequestReconciliationModeEnum["ReconciliationModeUnspecified"] = "RECONCILIATION_MODE_UNSPECIFIED";
     GoogleCloudDiscoveryengineV1betaImportDocumentsRequestReconciliationModeEnum["Incremental"] = "INCREMENTAL";
     GoogleCloudDiscoveryengineV1betaImportDocumentsRequestReconciliationModeEnum["Full"] = "FULL";
-})(GoogleCloudDiscoveryengineV1betaImportDocumentsRequestReconciliationModeEnum || (GoogleCloudDiscoveryengineV1betaImportDocumentsRequestReconciliationModeEnum = {}));
+})(GoogleCloudDiscoveryengineV1betaImportDocumentsRequestReconciliationModeEnum = exports.GoogleCloudDiscoveryengineV1betaImportDocumentsRequestReconciliationModeEnum || (exports.GoogleCloudDiscoveryengineV1betaImportDocumentsRequestReconciliationModeEnum = {}));
 // GoogleCloudDiscoveryengineV1betaImportDocumentsRequest
 /**
  * Request message for Import methods.
@@ -43,25 +46,25 @@ var GoogleCloudDiscoveryengineV1betaImportDocumentsRequest = /** @class */ (func
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bigquerySource" }),
-        __metadata("design:type", GoogleCloudDiscoveryengineV1betaBigQuerySource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bigquerySource" }),
+        __metadata("design:type", googleclouddiscoveryenginev1betabigquerysource_1.GoogleCloudDiscoveryengineV1betaBigQuerySource)
     ], GoogleCloudDiscoveryengineV1betaImportDocumentsRequest.prototype, "bigquerySource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorConfig" }),
-        __metadata("design:type", GoogleCloudDiscoveryengineV1betaImportErrorConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorConfig" }),
+        __metadata("design:type", googleclouddiscoveryenginev1betaimporterrorconfig_1.GoogleCloudDiscoveryengineV1betaImportErrorConfig)
     ], GoogleCloudDiscoveryengineV1betaImportDocumentsRequest.prototype, "errorConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcsSource" }),
-        __metadata("design:type", GoogleCloudDiscoveryengineV1betaGcsSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcsSource" }),
+        __metadata("design:type", googleclouddiscoveryenginev1betagcssource_1.GoogleCloudDiscoveryengineV1betaGcsSource)
     ], GoogleCloudDiscoveryengineV1betaImportDocumentsRequest.prototype, "gcsSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inlineSource" }),
-        __metadata("design:type", GoogleCloudDiscoveryengineV1betaImportDocumentsRequestInlineSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inlineSource" }),
+        __metadata("design:type", googleclouddiscoveryenginev1betaimportdocumentsrequestinlinesource_1.GoogleCloudDiscoveryengineV1betaImportDocumentsRequestInlineSource)
     ], GoogleCloudDiscoveryengineV1betaImportDocumentsRequest.prototype, "inlineSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reconciliationMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reconciliationMode" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1betaImportDocumentsRequest.prototype, "reconciliationMode", void 0);
     return GoogleCloudDiscoveryengineV1betaImportDocumentsRequest;
-}(SpeakeasyBase));
-export { GoogleCloudDiscoveryengineV1betaImportDocumentsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDiscoveryengineV1betaImportDocumentsRequest = GoogleCloudDiscoveryengineV1betaImportDocumentsRequest;

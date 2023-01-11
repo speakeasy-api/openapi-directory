@@ -9,5 +9,5 @@ export declare class GetNetworkWirelessSsidSchedulesRequest extends SpeakeasyBas
 export declare class GetNetworkWirelessSsidSchedulesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkWirelessSsidSchedules200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessSsidSchedules200ApplicationJSONObject?: Record<string, any>;
 }

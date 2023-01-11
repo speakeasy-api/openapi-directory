@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServiceUpdate } from "./serviceupdate";
+import { ServiceUpdateList } from "./serviceupdatelist";
 
 
 
@@ -7,6 +7,6 @@ export class ServiceUpdatesMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: ServiceUpdate })
-  serviceUpdates?: ServiceUpdate[];
+  @SpeakeasyMetadata({ elemType: ServiceUpdateList })
+  serviceUpdates?: ServiceUpdateList[];
 }

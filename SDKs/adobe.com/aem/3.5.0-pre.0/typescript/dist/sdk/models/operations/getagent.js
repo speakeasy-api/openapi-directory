@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAgentResponse = exports.GetAgentRequest = exports.GetAgentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAgentPathParams = /** @class */ (function (_super) {
     __extends(GetAgentPathParams, _super);
     function GetAgentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], GetAgentPathParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=runmode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=runmode" }),
         __metadata("design:type", String)
     ], GetAgentPathParams.prototype, "runmode", void 0);
     return GetAgentPathParams;
-}(SpeakeasyBase));
-export { GetAgentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAgentPathParams = GetAgentPathParams;
 var GetAgentRequest = /** @class */ (function (_super) {
     __extends(GetAgentRequest, _super);
     function GetAgentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAgentPathParams)
     ], GetAgentRequest.prototype, "pathParams", void 0);
     return GetAgentRequest;
-}(SpeakeasyBase));
-export { GetAgentRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAgentRequest = GetAgentRequest;
 var GetAgentResponse = /** @class */ (function (_super) {
     __extends(GetAgentResponse, _super);
     function GetAgentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAgentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAgentResponse.prototype, "statusCode", void 0);
     return GetAgentResponse;
-}(SpeakeasyBase));
-export { GetAgentResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAgentResponse = GetAgentResponse;

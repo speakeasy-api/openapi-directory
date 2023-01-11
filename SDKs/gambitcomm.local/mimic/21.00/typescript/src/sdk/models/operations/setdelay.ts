@@ -25,5 +25,5 @@ export class SetDelayResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setDelay200ApplicationJsonInt32Integer?: number;
+  setDelay200ApplicationJSONInt32Integer?: number;
 }

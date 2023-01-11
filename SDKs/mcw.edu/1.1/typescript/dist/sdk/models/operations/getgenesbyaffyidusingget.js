@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGenesByAffyIdUsingGetResponse = exports.GetGenesByAffyIdUsingGetRequest = exports.GetGenesByAffyIdUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetGenesByAffyIdUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetGenesByAffyIdUsingGetPathParams, _super);
     function GetGenesByAffyIdUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=affyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=affyId" }),
         __metadata("design:type", String)
     ], GetGenesByAffyIdUsingGetPathParams.prototype, "affyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
         __metadata("design:type", Number)
     ], GetGenesByAffyIdUsingGetPathParams.prototype, "speciesTypeKey", void 0);
     return GetGenesByAffyIdUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetGenesByAffyIdUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGenesByAffyIdUsingGetPathParams = GetGenesByAffyIdUsingGetPathParams;
 var GetGenesByAffyIdUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetGenesByAffyIdUsingGetRequest, _super);
     function GetGenesByAffyIdUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGenesByAffyIdUsingGetPathParams)
     ], GetGenesByAffyIdUsingGetRequest.prototype, "pathParams", void 0);
     return GetGenesByAffyIdUsingGetRequest;
-}(SpeakeasyBase));
-export { GetGenesByAffyIdUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGenesByAffyIdUsingGetRequest = GetGenesByAffyIdUsingGetRequest;
 var GetGenesByAffyIdUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetGenesByAffyIdUsingGetResponse, _super);
     function GetGenesByAffyIdUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGenesByAffyIdUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGenesByAffyIdUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGenesByAffyIdUsingGetResponse.prototype, "statusCode", void 0);
     return GetGenesByAffyIdUsingGetResponse;
-}(SpeakeasyBase));
-export { GetGenesByAffyIdUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGenesByAffyIdUsingGetResponse = GetGenesByAffyIdUsingGetResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TimeOffRequestInput = exports.TimeOffRequest = exports.TimeOffRequestUnitsEnum = exports.TimeOffRequestStatusEnum = exports.TimeOffRequestRequestTypeEnum = exports.TimeOffRequestNotes = void 0;
+var utils_1 = require("../../../internal/utils");
 var TimeOffRequestNotes = /** @class */ (function (_super) {
     __extends(TimeOffRequestNotes, _super);
     function TimeOffRequestNotes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employee" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employee" }),
         __metadata("design:type", String)
     ], TimeOffRequestNotes.prototype, "employee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manager" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manager" }),
         __metadata("design:type", String)
     ], TimeOffRequestNotes.prototype, "manager", void 0);
     return TimeOffRequestNotes;
-}(SpeakeasyBase));
-export { TimeOffRequestNotes };
-export var TimeOffRequestRequestTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.TimeOffRequestNotes = TimeOffRequestNotes;
+var TimeOffRequestRequestTypeEnum;
 (function (TimeOffRequestRequestTypeEnum) {
     TimeOffRequestRequestTypeEnum["Vacation"] = "vacation";
     TimeOffRequestRequestTypeEnum["Sick"] = "sick";
@@ -48,8 +51,8 @@ export var TimeOffRequestRequestTypeEnum;
     TimeOffRequestRequestTypeEnum["Volunteer"] = "volunteer";
     TimeOffRequestRequestTypeEnum["Bereavement"] = "bereavement";
     TimeOffRequestRequestTypeEnum["Other"] = "other";
-})(TimeOffRequestRequestTypeEnum || (TimeOffRequestRequestTypeEnum = {}));
-export var TimeOffRequestStatusEnum;
+})(TimeOffRequestRequestTypeEnum = exports.TimeOffRequestRequestTypeEnum || (exports.TimeOffRequestRequestTypeEnum = {}));
+var TimeOffRequestStatusEnum;
 (function (TimeOffRequestStatusEnum) {
     TimeOffRequestStatusEnum["Requested"] = "requested";
     TimeOffRequestStatusEnum["Approved"] = "approved";
@@ -57,142 +60,142 @@ export var TimeOffRequestStatusEnum;
     TimeOffRequestStatusEnum["Cancelled"] = "cancelled";
     TimeOffRequestStatusEnum["Deleted"] = "deleted";
     TimeOffRequestStatusEnum["Other"] = "other";
-})(TimeOffRequestStatusEnum || (TimeOffRequestStatusEnum = {}));
-export var TimeOffRequestUnitsEnum;
+})(TimeOffRequestStatusEnum = exports.TimeOffRequestStatusEnum || (exports.TimeOffRequestStatusEnum = {}));
+var TimeOffRequestUnitsEnum;
 (function (TimeOffRequestUnitsEnum) {
     TimeOffRequestUnitsEnum["Days"] = "days";
     TimeOffRequestUnitsEnum["Hours"] = "hours";
     TimeOffRequestUnitsEnum["Other"] = "other";
-})(TimeOffRequestUnitsEnum || (TimeOffRequestUnitsEnum = {}));
-var TimeOffRequestInput = /** @class */ (function (_super) {
-    __extends(TimeOffRequestInput, _super);
-    function TimeOffRequestInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
-        __metadata("design:type", Number)
-    ], TimeOffRequestInput.prototype, "amount", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=approval_date" }),
-        __metadata("design:type", String)
-    ], TimeOffRequestInput.prototype, "approvalDate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], TimeOffRequestInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=employee_id" }),
-        __metadata("design:type", String)
-    ], TimeOffRequestInput.prototype, "employeeId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_date" }),
-        __metadata("design:type", String)
-    ], TimeOffRequestInput.prototype, "endDate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=notes" }),
-        __metadata("design:type", TimeOffRequestNotes)
-    ], TimeOffRequestInput.prototype, "notes", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=policy_id" }),
-        __metadata("design:type", String)
-    ], TimeOffRequestInput.prototype, "policyId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=request_date" }),
-        __metadata("design:type", String)
-    ], TimeOffRequestInput.prototype, "requestDate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=request_type" }),
-        __metadata("design:type", String)
-    ], TimeOffRequestInput.prototype, "requestType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_date" }),
-        __metadata("design:type", String)
-    ], TimeOffRequestInput.prototype, "startDate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", String)
-    ], TimeOffRequestInput.prototype, "status", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=units" }),
-        __metadata("design:type", String)
-    ], TimeOffRequestInput.prototype, "units", void 0);
-    return TimeOffRequestInput;
-}(SpeakeasyBase));
-export { TimeOffRequestInput };
+})(TimeOffRequestUnitsEnum = exports.TimeOffRequestUnitsEnum || (exports.TimeOffRequestUnitsEnum = {}));
 var TimeOffRequest = /** @class */ (function (_super) {
     __extends(TimeOffRequest, _super);
     function TimeOffRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], TimeOffRequest.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approval_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approval_date" }),
         __metadata("design:type", String)
     ], TimeOffRequest.prototype, "approvalDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], TimeOffRequest.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
         __metadata("design:type", String)
     ], TimeOffRequest.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], TimeOffRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employee_id" }),
         __metadata("design:type", String)
     ], TimeOffRequest.prototype, "employeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_date" }),
         __metadata("design:type", String)
     ], TimeOffRequest.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], TimeOffRequest.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notes" }),
         __metadata("design:type", TimeOffRequestNotes)
     ], TimeOffRequest.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policy_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policy_id" }),
         __metadata("design:type", String)
     ], TimeOffRequest.prototype, "policyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=request_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=request_date" }),
         __metadata("design:type", String)
     ], TimeOffRequest.prototype, "requestDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=request_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=request_type" }),
         __metadata("design:type", String)
     ], TimeOffRequest.prototype, "requestType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_date" }),
         __metadata("design:type", String)
     ], TimeOffRequest.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], TimeOffRequest.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=units" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=units" }),
         __metadata("design:type", String)
     ], TimeOffRequest.prototype, "units", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], TimeOffRequest.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_by" }),
         __metadata("design:type", String)
     ], TimeOffRequest.prototype, "updatedBy", void 0);
     return TimeOffRequest;
-}(SpeakeasyBase));
-export { TimeOffRequest };
+}(utils_1.SpeakeasyBase));
+exports.TimeOffRequest = TimeOffRequest;
+var TimeOffRequestInput = /** @class */ (function (_super) {
+    __extends(TimeOffRequestInput, _super);
+    function TimeOffRequestInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", Number)
+    ], TimeOffRequestInput.prototype, "amount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approval_date" }),
+        __metadata("design:type", String)
+    ], TimeOffRequestInput.prototype, "approvalDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], TimeOffRequestInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employee_id" }),
+        __metadata("design:type", String)
+    ], TimeOffRequestInput.prototype, "employeeId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_date" }),
+        __metadata("design:type", String)
+    ], TimeOffRequestInput.prototype, "endDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notes" }),
+        __metadata("design:type", TimeOffRequestNotes)
+    ], TimeOffRequestInput.prototype, "notes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policy_id" }),
+        __metadata("design:type", String)
+    ], TimeOffRequestInput.prototype, "policyId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=request_date" }),
+        __metadata("design:type", String)
+    ], TimeOffRequestInput.prototype, "requestDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=request_type" }),
+        __metadata("design:type", String)
+    ], TimeOffRequestInput.prototype, "requestType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_date" }),
+        __metadata("design:type", String)
+    ], TimeOffRequestInput.prototype, "startDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", String)
+    ], TimeOffRequestInput.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=units" }),
+        __metadata("design:type", String)
+    ], TimeOffRequestInput.prototype, "units", void 0);
+    return TimeOffRequestInput;
+}(utils_1.SpeakeasyBase));
+exports.TimeOffRequestInput = TimeOffRequestInput;

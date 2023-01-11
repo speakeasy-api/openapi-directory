@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Polygon } from "./polygon";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IsochroneResponsePolygon = exports.IsochroneResponsePolygonProperties = void 0;
+var utils_1 = require("../../../internal/utils");
+var polygon_1 = require("./polygon");
 var IsochroneResponsePolygonProperties = /** @class */ (function (_super) {
     __extends(IsochroneResponsePolygonProperties, _super);
     function IsochroneResponsePolygonProperties() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucket" }),
         __metadata("design:type", Number)
     ], IsochroneResponsePolygonProperties.prototype, "bucket", void 0);
     return IsochroneResponsePolygonProperties;
-}(SpeakeasyBase));
-export { IsochroneResponsePolygonProperties };
+}(utils_1.SpeakeasyBase));
+exports.IsochroneResponsePolygonProperties = IsochroneResponsePolygonProperties;
 // IsochroneResponsePolygon
 /**
  * A found path
@@ -46,17 +49,17 @@ var IsochroneResponsePolygon = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=geometry" }),
-        __metadata("design:type", Polygon)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=geometry" }),
+        __metadata("design:type", polygon_1.Polygon)
     ], IsochroneResponsePolygon.prototype, "geometry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
         __metadata("design:type", IsochroneResponsePolygonProperties)
     ], IsochroneResponsePolygon.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], IsochroneResponsePolygon.prototype, "type", void 0);
     return IsochroneResponsePolygon;
-}(SpeakeasyBase));
-export { IsochroneResponsePolygon };
+}(utils_1.SpeakeasyBase));
+exports.IsochroneResponsePolygon = IsochroneResponsePolygon;

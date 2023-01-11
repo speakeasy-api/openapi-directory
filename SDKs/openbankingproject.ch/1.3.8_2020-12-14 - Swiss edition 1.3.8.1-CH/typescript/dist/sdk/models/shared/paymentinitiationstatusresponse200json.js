@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransactionStatusEnum } from "./transactionstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentInitiationStatusResponse200Json = void 0;
+var utils_1 = require("../../../internal/utils");
+var transactionstatusenum_1 = require("./transactionstatusenum");
 // PaymentInitiationStatusResponse200Json
 /**
  * Body of the response for a successful payment initiation status request in case of an JSON based endpoint.
@@ -34,17 +37,17 @@ var PaymentInitiationStatusResponse200Json = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fundsAvailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fundsAvailable" }),
         __metadata("design:type", Boolean)
     ], PaymentInitiationStatusResponse200Json.prototype, "fundsAvailable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=psuMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=psuMessage" }),
         __metadata("design:type", String)
     ], PaymentInitiationStatusResponse200Json.prototype, "psuMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionStatus" }),
         __metadata("design:type", String)
     ], PaymentInitiationStatusResponse200Json.prototype, "transactionStatus", void 0);
     return PaymentInitiationStatusResponse200Json;
-}(SpeakeasyBase));
-export { PaymentInitiationStatusResponse200Json };
+}(utils_1.SpeakeasyBase));
+exports.PaymentInitiationStatusResponse200Json = PaymentInitiationStatusResponse200Json;

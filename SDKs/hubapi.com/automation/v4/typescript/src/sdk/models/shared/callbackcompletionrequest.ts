@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class CallbackCompletionRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=outputFields" })
-  outputFields: Map<string, string>;
+  outputFields: Record<string, string>;
 }

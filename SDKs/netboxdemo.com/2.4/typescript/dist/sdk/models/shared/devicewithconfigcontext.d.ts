@@ -22,7 +22,7 @@ export declare class DeviceWithConfigContext extends SpeakeasyBase {
     comments?: string;
     configContext?: string;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     deviceRole: NestedDeviceRole;
     deviceType: NestedDeviceType;
     displayName?: string;

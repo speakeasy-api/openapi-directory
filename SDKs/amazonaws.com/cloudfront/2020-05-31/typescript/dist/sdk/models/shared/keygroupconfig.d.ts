@@ -4,6 +4,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class KeyGroupConfig extends SpeakeasyBase {
     comment?: string;
-    items: string[];
+    items: Record<string, any>[];
     name: string;
 }

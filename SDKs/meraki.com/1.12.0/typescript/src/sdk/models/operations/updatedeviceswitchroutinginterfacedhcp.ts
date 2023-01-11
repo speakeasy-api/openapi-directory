@@ -128,5 +128,5 @@ export class UpdateDeviceSwitchRoutingInterfaceDhcpResponse extends SpeakeasyBas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateDeviceSwitchRoutingInterfaceDhcp200ApplicationJsonObject?: Map<string, any>;
+  updateDeviceSwitchRoutingInterfaceDhcp200ApplicationJSONObject?: Record<string, any>;
 }

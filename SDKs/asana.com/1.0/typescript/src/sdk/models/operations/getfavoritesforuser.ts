@@ -8,14 +8,6 @@ export class GetFavoritesForUserPathParams extends SpeakeasyBase {
   userGid: string;
 }
 
-export enum GetFavoritesForUserResourceTypeEnum {
-    Portfolio = "portfolio",
-    Project = "project",
-    Tag = "tag",
-    Task = "task",
-    User = "user"
-}
-
 
 export class GetFavoritesForUserQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=opt_fields" })
@@ -25,7 +17,7 @@ export class GetFavoritesForUserQueryParams extends SpeakeasyBase {
   optPretty?: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=resource_type" })
-  resourceType: GetFavoritesForUserResourceTypeEnum;
+  resourceType: shared.FieldsEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=workspace" })
   workspace: string;
@@ -58,5 +50,5 @@ export class GetFavoritesForUserResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getFavoritesForUser200ApplicationJsonObject?: GetFavoritesForUser200ApplicationJson;
+  getFavoritesForUser200ApplicationJSONObject?: GetFavoritesForUser200ApplicationJson;
 }

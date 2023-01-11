@@ -17,5 +17,5 @@ export declare class ModifyNetworkSmDevicesTagsRequest extends SpeakeasyBase {
 export declare class ModifyNetworkSmDevicesTagsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    modifyNetworkSmDevicesTags200ApplicationJsonObject?: Map<string, any>;
+    modifyNetworkSmDevicesTags200ApplicationJSONObject?: Record<string, any>;
 }

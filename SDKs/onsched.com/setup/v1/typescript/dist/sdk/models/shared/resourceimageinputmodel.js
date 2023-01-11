@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceImageInputModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var ResourceImageInputModel = /** @class */ (function (_super) {
     __extends(ResourceImageInputModel, _super);
     function ResourceImageInputModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageFileData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageFileData" }),
         __metadata("design:type", String)
     ], ResourceImageInputModel.prototype, "imageFileData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageFileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageFileName" }),
         __metadata("design:type", String)
     ], ResourceImageInputModel.prototype, "imageFileName", void 0);
     return ResourceImageInputModel;
-}(SpeakeasyBase));
-export { ResourceImageInputModel };
+}(utils_1.SpeakeasyBase));
+exports.ResourceImageInputModel = ResourceImageInputModel;

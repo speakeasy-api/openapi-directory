@@ -24,6 +24,6 @@ export declare class UpdateCrawlerResponse extends SpeakeasyBase {
     invalidInputException?: any;
     operationTimeoutException?: any;
     statusCode: number;
-    updateCrawlerResponse?: Map<string, any>;
+    updateCrawlerResponse?: Record<string, any>;
     versionMismatchException?: any;
 }

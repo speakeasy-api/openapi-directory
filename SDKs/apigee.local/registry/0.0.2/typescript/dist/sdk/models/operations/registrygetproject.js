@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistryGetProjectResponse = exports.RegistryGetProjectRequest = exports.RegistryGetProjectPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RegistryGetProjectPathParams = /** @class */ (function (_super) {
     __extends(RegistryGetProjectPathParams, _super);
     function RegistryGetProjectPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], RegistryGetProjectPathParams.prototype, "project", void 0);
     return RegistryGetProjectPathParams;
-}(SpeakeasyBase));
-export { RegistryGetProjectPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistryGetProjectPathParams = RegistryGetProjectPathParams;
 var RegistryGetProjectRequest = /** @class */ (function (_super) {
     __extends(RegistryGetProjectRequest, _super);
     function RegistryGetProjectRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistryGetProjectPathParams)
     ], RegistryGetProjectRequest.prototype, "pathParams", void 0);
     return RegistryGetProjectRequest;
-}(SpeakeasyBase));
-export { RegistryGetProjectRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegistryGetProjectRequest = RegistryGetProjectRequest;
 var RegistryGetProjectResponse = /** @class */ (function (_super) {
     __extends(RegistryGetProjectResponse, _super);
     function RegistryGetProjectResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RegistryGetProjectResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], RegistryGetProjectResponse.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RegistryGetProjectResponse.prototype, "statusCode", void 0);
     return RegistryGetProjectResponse;
-}(SpeakeasyBase));
-export { RegistryGetProjectResponse };
+}(utils_1.SpeakeasyBase));
+exports.RegistryGetProjectResponse = RegistryGetProjectResponse;

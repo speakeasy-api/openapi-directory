@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { HrefType } from "./hreftype";
 import { MessageCode429AisEnum } from "./messagecode429aisenum";
+import { HrefType } from "./hreftype";
 /**
  * This is a data element to support the declaration of additional errors in the context of [RFC7807]
  * in case of a HTTP error code 429 for.
@@ -17,7 +17,7 @@ export declare class Error429AisAdditionalErrors extends SpeakeasyBase {
  *
 **/
 export declare class Error429Ais extends SpeakeasyBase {
-    links?: Map<string, HrefType>;
+    links?: Record<string, HrefType>;
     additionalErrors?: Error429AisAdditionalErrors[];
     code: MessageCode429AisEnum;
     detail?: string;

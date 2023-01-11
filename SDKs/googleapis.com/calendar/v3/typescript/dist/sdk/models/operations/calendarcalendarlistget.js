@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,150 +14,175 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CalendarCalendarListGetResponse = exports.CalendarCalendarListGetRequest = exports.CalendarCalendarListGetSecurity = exports.CalendarCalendarListGetSecurityOption2 = exports.CalendarCalendarListGetSecurityOption1 = exports.CalendarCalendarListGetQueryParams = exports.CalendarCalendarListGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CalendarCalendarListGetPathParams = /** @class */ (function (_super) {
     __extends(CalendarCalendarListGetPathParams, _super);
     function CalendarCalendarListGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=calendarId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=calendarId" }),
         __metadata("design:type", String)
     ], CalendarCalendarListGetPathParams.prototype, "calendarId", void 0);
     return CalendarCalendarListGetPathParams;
-}(SpeakeasyBase));
-export { CalendarCalendarListGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CalendarCalendarListGetPathParams = CalendarCalendarListGetPathParams;
 var CalendarCalendarListGetQueryParams = /** @class */ (function (_super) {
     __extends(CalendarCalendarListGetQueryParams, _super);
     function CalendarCalendarListGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], CalendarCalendarListGetQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], CalendarCalendarListGetQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], CalendarCalendarListGetQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], CalendarCalendarListGetQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], CalendarCalendarListGetQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], CalendarCalendarListGetQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], CalendarCalendarListGetQueryParams.prototype, "userIp", void 0);
     return CalendarCalendarListGetQueryParams;
-}(SpeakeasyBase));
-export { CalendarCalendarListGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CalendarCalendarListGetQueryParams = CalendarCalendarListGetQueryParams;
 var CalendarCalendarListGetSecurityOption1 = /** @class */ (function (_super) {
     __extends(CalendarCalendarListGetSecurityOption1, _super);
     function CalendarCalendarListGetSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CalendarCalendarListGetSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CalendarCalendarListGetSecurityOption1.prototype, "oauth2c", void 0);
     return CalendarCalendarListGetSecurityOption1;
-}(SpeakeasyBase));
-export { CalendarCalendarListGetSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.CalendarCalendarListGetSecurityOption1 = CalendarCalendarListGetSecurityOption1;
 var CalendarCalendarListGetSecurityOption2 = /** @class */ (function (_super) {
     __extends(CalendarCalendarListGetSecurityOption2, _super);
     function CalendarCalendarListGetSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CalendarCalendarListGetSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CalendarCalendarListGetSecurityOption2.prototype, "oauth2c", void 0);
     return CalendarCalendarListGetSecurityOption2;
-}(SpeakeasyBase));
-export { CalendarCalendarListGetSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.CalendarCalendarListGetSecurityOption2 = CalendarCalendarListGetSecurityOption2;
 var CalendarCalendarListGetSecurity = /** @class */ (function (_super) {
     __extends(CalendarCalendarListGetSecurity, _super);
     function CalendarCalendarListGetSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CalendarCalendarListGetSecurityOption1)
     ], CalendarCalendarListGetSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CalendarCalendarListGetSecurityOption2)
     ], CalendarCalendarListGetSecurity.prototype, "option2", void 0);
     return CalendarCalendarListGetSecurity;
-}(SpeakeasyBase));
-export { CalendarCalendarListGetSecurity };
+}(utils_1.SpeakeasyBase));
+exports.CalendarCalendarListGetSecurity = CalendarCalendarListGetSecurity;
 var CalendarCalendarListGetRequest = /** @class */ (function (_super) {
     __extends(CalendarCalendarListGetRequest, _super);
     function CalendarCalendarListGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CalendarCalendarListGetPathParams)
     ], CalendarCalendarListGetRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CalendarCalendarListGetQueryParams)
     ], CalendarCalendarListGetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CalendarCalendarListGetSecurity)
     ], CalendarCalendarListGetRequest.prototype, "security", void 0);
     return CalendarCalendarListGetRequest;
-}(SpeakeasyBase));
-export { CalendarCalendarListGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.CalendarCalendarListGetRequest = CalendarCalendarListGetRequest;
 var CalendarCalendarListGetResponse = /** @class */ (function (_super) {
     __extends(CalendarCalendarListGetResponse, _super);
     function CalendarCalendarListGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.CalendarListEntry)
     ], CalendarCalendarListGetResponse.prototype, "calendarListEntry", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CalendarCalendarListGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CalendarCalendarListGetResponse.prototype, "statusCode", void 0);
     return CalendarCalendarListGetResponse;
-}(SpeakeasyBase));
-export { CalendarCalendarListGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.CalendarCalendarListGetResponse = CalendarCalendarListGetResponse;

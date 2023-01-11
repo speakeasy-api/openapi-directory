@@ -4,10 +4,10 @@ export declare class PostSetupV1ServicesIdAllocationsBulkPathParams extends Spea
     id: string;
 }
 export declare class PostSetupV1ServicesIdAllocationsBulkRequests extends SpeakeasyBase {
-    serviceAllocationsInputModel?: Map<string, any>;
-    serviceAllocationsInputModel1?: Map<string, any>;
-    serviceAllocationsInputModel2?: Map<string, any>;
-    serviceAllocationsInputModel3?: Map<string, any>;
+    serviceAllocationsInputModel?: Record<string, any>;
+    serviceAllocationsInputModel1?: Record<string, any>;
+    serviceAllocationsInputModel2?: Record<string, any>;
+    serviceAllocationsInputModel3?: Record<string, any>;
 }
 export declare class PostSetupV1ServicesIdAllocationsBulkRequest extends SpeakeasyBase {
     pathParams: PostSetupV1ServicesIdAllocationsBulkPathParams;

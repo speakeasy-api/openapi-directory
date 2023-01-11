@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TaskSpec } from "./taskspec";
-import { TaskStatus } from "./taskstatus";
-export var AgentTaskIntendedStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgentTask = exports.AgentTaskIntendedStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var taskspec_1 = require("./taskspec");
+var taskstatus_1 = require("./taskstatus");
+var AgentTaskIntendedStateEnum;
 (function (AgentTaskIntendedStateEnum) {
     AgentTaskIntendedStateEnum["IntendedStateUnspecified"] = "INTENDED_STATE_UNSPECIFIED";
     AgentTaskIntendedStateEnum["Assigned"] = "ASSIGNED";
     AgentTaskIntendedStateEnum["Cancelled"] = "CANCELLED";
     AgentTaskIntendedStateEnum["Deleted"] = "DELETED";
-})(AgentTaskIntendedStateEnum || (AgentTaskIntendedStateEnum = {}));
+})(AgentTaskIntendedStateEnum = exports.AgentTaskIntendedStateEnum || (exports.AgentTaskIntendedStateEnum = {}));
 // AgentTask
 /**
  * TODO(b/182501497) The message needs to be redefined when the Agent API server updates data in storage per the backend design.
@@ -42,25 +45,25 @@ var AgentTask = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intendedState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intendedState" }),
         __metadata("design:type", String)
     ], AgentTask.prototype, "intendedState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reachedBarrier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reachedBarrier" }),
         __metadata("design:type", String)
     ], AgentTask.prototype, "reachedBarrier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
-        __metadata("design:type", TaskSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
+        __metadata("design:type", taskspec_1.TaskSpec)
     ], AgentTask.prototype, "spec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", TaskStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", taskstatus_1.TaskStatus)
     ], AgentTask.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=task" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=task" }),
         __metadata("design:type", String)
     ], AgentTask.prototype, "task", void 0);
     return AgentTask;
-}(SpeakeasyBase));
-export { AgentTask };
+}(utils_1.SpeakeasyBase));
+exports.AgentTask = AgentTask;

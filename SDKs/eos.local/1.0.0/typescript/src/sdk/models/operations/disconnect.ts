@@ -22,5 +22,5 @@ export class DisconnectResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  disconnect200ApplicationJsonString?: string;
+  disconnect200ApplicationJSONString?: string;
 }

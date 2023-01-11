@@ -1,0 +1,99 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Store = void 0;
+var utils_1 = require("../../../internal/utils");
+var storelinks_1 = require("./storelinks");
+var storestatusenum_1 = require("./storestatusenum");
+var storeuserroleenum_1 = require("./storeuserroleenum");
+var Store = /** @class */ (function (_super) {
+    __extends(Store, _super);
+    function Store() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countryIsoCodeAlpha3" }),
+        __metadata("design:type", String)
+    ], Store.prototype, "countryIsoCodeAlpha3", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationUtcDate" }),
+        __metadata("design:type", Date)
+    ], Store.prototype, "creationUtcDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
+        __metadata("design:type", String)
+    ], Store.prototype, "currencyCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=goVersion" }),
+        __metadata("design:type", Number)
+    ], Store.prototype, "goVersion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
+        __metadata("design:type", storelinks_1.StoreLinks)
+    ], Store.prototype, "links", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], Store.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offerId" }),
+        __metadata("design:type", Number)
+    ], Store.prototype, "offerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offerName" }),
+        __metadata("design:type", String)
+    ], Store.prototype, "offerName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerUserId" }),
+        __metadata("design:type", String)
+    ], Store.prototype, "ownerUserId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sectors" }),
+        __metadata("design:type", Array)
+    ], Store.prototype, "sectors", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shareCount" }),
+        __metadata("design:type", Number)
+    ], Store.prototype, "shareCount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", String)
+    ], Store.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storeId" }),
+        __metadata("design:type", String)
+    ], Store.prototype, "storeId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
+        __metadata("design:type", String)
+    ], Store.prototype, "url", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userRole" }),
+        __metadata("design:type", String)
+    ], Store.prototype, "userRole", void 0);
+    return Store;
+}(utils_1.SpeakeasyBase));
+exports.Store = Store;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,18 +14,43 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var UpdateEvidenceServerList = [
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateEvidenceResponse = exports.UpdateEvidenceRequest = exports.UpdateEvidenceSecurity = exports.UpdateEvidencePathParams = exports.UpdateEvidenceServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+exports.UpdateEvidenceServerList = [
     "https://apiz.ebay.com{basePath}",
 ];
 var UpdateEvidencePathParams = /** @class */ (function (_super) {
@@ -33,61 +59,61 @@ var UpdateEvidencePathParams = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=payment_dispute_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=payment_dispute_id" }),
         __metadata("design:type", String)
     ], UpdateEvidencePathParams.prototype, "paymentDisputeId", void 0);
     return UpdateEvidencePathParams;
-}(SpeakeasyBase));
-export { UpdateEvidencePathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateEvidencePathParams = UpdateEvidencePathParams;
 var UpdateEvidenceSecurity = /** @class */ (function (_super) {
     __extends(UpdateEvidenceSecurity, _super);
     function UpdateEvidenceSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeApiAuth)
     ], UpdateEvidenceSecurity.prototype, "apiAuth", void 0);
     return UpdateEvidenceSecurity;
-}(SpeakeasyBase));
-export { UpdateEvidenceSecurity };
+}(utils_1.SpeakeasyBase));
+exports.UpdateEvidenceSecurity = UpdateEvidenceSecurity;
 var UpdateEvidenceRequest = /** @class */ (function (_super) {
     __extends(UpdateEvidenceRequest, _super);
     function UpdateEvidenceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], UpdateEvidenceRequest.prototype, "serverUrl", void 0);
+    ], UpdateEvidenceRequest.prototype, "serverURL", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateEvidencePathParams)
     ], UpdateEvidenceRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.UpdateEvidencePaymentDisputeRequest)
     ], UpdateEvidenceRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateEvidenceSecurity)
     ], UpdateEvidenceRequest.prototype, "security", void 0);
     return UpdateEvidenceRequest;
-}(SpeakeasyBase));
-export { UpdateEvidenceRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateEvidenceRequest = UpdateEvidenceRequest;
 var UpdateEvidenceResponse = /** @class */ (function (_super) {
     __extends(UpdateEvidenceResponse, _super);
     function UpdateEvidenceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateEvidenceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateEvidenceResponse.prototype, "statusCode", void 0);
     return UpdateEvidenceResponse;
-}(SpeakeasyBase));
-export { UpdateEvidenceResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateEvidenceResponse = UpdateEvidenceResponse;

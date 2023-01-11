@@ -3,7 +3,7 @@ export declare class CreateGroupIfNotExistsForUsingGetQueryParams extends Speake
     groupMapper?: string;
 }
 export declare class CreateGroupIfNotExistsForUsingGet200ApplicationJsonData extends SpeakeasyBase {
-    groupId?: string;
+    groupID?: string;
 }
 export declare class CreateGroupIfNotExistsForUsingGet200ApplicationJson extends SpeakeasyBase {
     code?: number;
@@ -12,17 +12,17 @@ export declare class CreateGroupIfNotExistsForUsingGet200ApplicationJson extends
 }
 export declare class CreateGroupIfNotExistsForUsingGet400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateGroupIfNotExistsForUsingGet401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateGroupIfNotExistsForUsingGet500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateGroupIfNotExistsForUsingGetRequest extends SpeakeasyBase {
@@ -31,8 +31,8 @@ export declare class CreateGroupIfNotExistsForUsingGetRequest extends SpeakeasyB
 export declare class CreateGroupIfNotExistsForUsingGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createGroupIfNotExistsForUsingGet200ApplicationJsonObject?: CreateGroupIfNotExistsForUsingGet200ApplicationJson;
-    createGroupIfNotExistsForUsingGet400ApplicationJsonObject?: CreateGroupIfNotExistsForUsingGet400ApplicationJson;
-    createGroupIfNotExistsForUsingGet401ApplicationJsonObject?: CreateGroupIfNotExistsForUsingGet401ApplicationJson;
-    createGroupIfNotExistsForUsingGet500ApplicationJsonObject?: CreateGroupIfNotExistsForUsingGet500ApplicationJson;
+    createGroupIfNotExistsForUsingGET200ApplicationJSONObject?: CreateGroupIfNotExistsForUsingGet200ApplicationJson;
+    createGroupIfNotExistsForUsingGET400ApplicationJSONObject?: CreateGroupIfNotExistsForUsingGet400ApplicationJson;
+    createGroupIfNotExistsForUsingGET401ApplicationJSONObject?: CreateGroupIfNotExistsForUsingGet401ApplicationJson;
+    createGroupIfNotExistsForUsingGET500ApplicationJSONObject?: CreateGroupIfNotExistsForUsingGet500ApplicationJson;
 }

@@ -1,0 +1,147 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgentLocationEditRequest = exports.AgentLocationEditRequestAddress = exports.AgentLocationEditRequestAddressStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AgentLocationEditRequestAddressStateEnum;
+(function (AgentLocationEditRequestAddressStateEnum) {
+    AgentLocationEditRequestAddressStateEnum["Ak"] = "AK";
+    AgentLocationEditRequestAddressStateEnum["Al"] = "AL";
+    AgentLocationEditRequestAddressStateEnum["Ar"] = "AR";
+    AgentLocationEditRequestAddressStateEnum["As"] = "AS";
+    AgentLocationEditRequestAddressStateEnum["Az"] = "AZ";
+    AgentLocationEditRequestAddressStateEnum["Ca"] = "CA";
+    AgentLocationEditRequestAddressStateEnum["Co"] = "CO";
+    AgentLocationEditRequestAddressStateEnum["Ct"] = "CT";
+    AgentLocationEditRequestAddressStateEnum["Dc"] = "DC";
+    AgentLocationEditRequestAddressStateEnum["De"] = "DE";
+    AgentLocationEditRequestAddressStateEnum["Fl"] = "FL";
+    AgentLocationEditRequestAddressStateEnum["Fm"] = "FM";
+    AgentLocationEditRequestAddressStateEnum["Ga"] = "GA";
+    AgentLocationEditRequestAddressStateEnum["Gu"] = "GU";
+    AgentLocationEditRequestAddressStateEnum["Hi"] = "HI";
+    AgentLocationEditRequestAddressStateEnum["Ia"] = "IA";
+    AgentLocationEditRequestAddressStateEnum["Id"] = "ID";
+    AgentLocationEditRequestAddressStateEnum["Il"] = "IL";
+    AgentLocationEditRequestAddressStateEnum["In"] = "IN";
+    AgentLocationEditRequestAddressStateEnum["Ks"] = "KS";
+    AgentLocationEditRequestAddressStateEnum["Ky"] = "KY";
+    AgentLocationEditRequestAddressStateEnum["La"] = "LA";
+    AgentLocationEditRequestAddressStateEnum["Ma"] = "MA";
+    AgentLocationEditRequestAddressStateEnum["Md"] = "MD";
+    AgentLocationEditRequestAddressStateEnum["Me"] = "ME";
+    AgentLocationEditRequestAddressStateEnum["Mh"] = "MH";
+    AgentLocationEditRequestAddressStateEnum["Mi"] = "MI";
+    AgentLocationEditRequestAddressStateEnum["Mn"] = "MN";
+    AgentLocationEditRequestAddressStateEnum["Mo"] = "MO";
+    AgentLocationEditRequestAddressStateEnum["Mp"] = "MP";
+    AgentLocationEditRequestAddressStateEnum["Ms"] = "MS";
+    AgentLocationEditRequestAddressStateEnum["Mt"] = "MT";
+    AgentLocationEditRequestAddressStateEnum["Nc"] = "NC";
+    AgentLocationEditRequestAddressStateEnum["Nd"] = "ND";
+    AgentLocationEditRequestAddressStateEnum["Ne"] = "NE";
+    AgentLocationEditRequestAddressStateEnum["Nh"] = "NH";
+    AgentLocationEditRequestAddressStateEnum["Nj"] = "NJ";
+    AgentLocationEditRequestAddressStateEnum["Nm"] = "NM";
+    AgentLocationEditRequestAddressStateEnum["Nv"] = "NV";
+    AgentLocationEditRequestAddressStateEnum["Ny"] = "NY";
+    AgentLocationEditRequestAddressStateEnum["Oh"] = "OH";
+    AgentLocationEditRequestAddressStateEnum["Ok"] = "OK";
+    AgentLocationEditRequestAddressStateEnum["Or"] = "OR";
+    AgentLocationEditRequestAddressStateEnum["Pa"] = "PA";
+    AgentLocationEditRequestAddressStateEnum["Pr"] = "PR";
+    AgentLocationEditRequestAddressStateEnum["Pw"] = "PW";
+    AgentLocationEditRequestAddressStateEnum["Ri"] = "RI";
+    AgentLocationEditRequestAddressStateEnum["Sc"] = "SC";
+    AgentLocationEditRequestAddressStateEnum["Sd"] = "SD";
+    AgentLocationEditRequestAddressStateEnum["Tn"] = "TN";
+    AgentLocationEditRequestAddressStateEnum["Tx"] = "TX";
+    AgentLocationEditRequestAddressStateEnum["Um"] = "UM";
+    AgentLocationEditRequestAddressStateEnum["Ut"] = "UT";
+    AgentLocationEditRequestAddressStateEnum["Va"] = "VA";
+    AgentLocationEditRequestAddressStateEnum["Vi"] = "VI";
+    AgentLocationEditRequestAddressStateEnum["Vt"] = "VT";
+    AgentLocationEditRequestAddressStateEnum["Wa"] = "WA";
+    AgentLocationEditRequestAddressStateEnum["Wi"] = "WI";
+    AgentLocationEditRequestAddressStateEnum["Wv"] = "WV";
+    AgentLocationEditRequestAddressStateEnum["Wy"] = "WY";
+})(AgentLocationEditRequestAddressStateEnum = exports.AgentLocationEditRequestAddressStateEnum || (exports.AgentLocationEditRequestAddressStateEnum = {}));
+// AgentLocationEditRequestAddress
+/**
+ * Address of the agent location
+**/
+var AgentLocationEditRequestAddress = /** @class */ (function (_super) {
+    __extends(AgentLocationEditRequestAddress, _super);
+    function AgentLocationEditRequestAddress() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
+        __metadata("design:type", String)
+    ], AgentLocationEditRequestAddress.prototype, "city", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=county" }),
+        __metadata("design:type", String)
+    ], AgentLocationEditRequestAddress.prototype, "county", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", String)
+    ], AgentLocationEditRequestAddress.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=street_one" }),
+        __metadata("design:type", String)
+    ], AgentLocationEditRequestAddress.prototype, "streetOne", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=street_two" }),
+        __metadata("design:type", String)
+    ], AgentLocationEditRequestAddress.prototype, "streetTwo", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zip_code" }),
+        __metadata("design:type", String)
+    ], AgentLocationEditRequestAddress.prototype, "zipCode", void 0);
+    return AgentLocationEditRequestAddress;
+}(utils_1.SpeakeasyBase));
+exports.AgentLocationEditRequestAddress = AgentLocationEditRequestAddress;
+var AgentLocationEditRequest = /** @class */ (function (_super) {
+    __extends(AgentLocationEditRequest, _super);
+    function AgentLocationEditRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", AgentLocationEditRequestAddress)
+    ], AgentLocationEditRequest.prototype, "address", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_name" }),
+        __metadata("design:type", String)
+    ], AgentLocationEditRequest.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_location" }),
+        __metadata("design:type", Boolean)
+    ], AgentLocationEditRequest.prototype, "primaryLocation", void 0);
+    return AgentLocationEditRequest;
+}(utils_1.SpeakeasyBase));
+exports.AgentLocationEditRequest = AgentLocationEditRequest;

@@ -11,7 +11,7 @@ export class AccountsBalanceGetRequest extends SpeakeasyBase {
 
 export class AccountsBalanceGetResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  accountsGetResponse?: Map<string, any>;
+  accountsGetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

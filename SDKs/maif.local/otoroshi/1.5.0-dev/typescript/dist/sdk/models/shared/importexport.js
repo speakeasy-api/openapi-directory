@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GlobalConfig } from "./globalconfig";
-import { Canary } from "./canary";
-import { ExposedApi } from "./exposedapi";
-import { ChaosConfig } from "./chaosconfig";
-import { ClientConfig } from "./clientconfig";
-import { CorsSettings } from "./corssettings";
-import { Gzip } from "./gzip";
-import { HealthCheck } from "./healthcheck";
-import { IpFiltering } from "./ipfiltering";
-import { RedirectionSettings } from "./redirectionsettings";
-import { StatsdConfig } from "./statsdconfig";
-import { Target } from "./target";
-import { ImportExportStats } from "./importexportstats";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportExport = exports.ImportExportSimpleAdmins = exports.ImportExportServiceGroups = exports.ImportExportServiceDescriptors = exports.ImportExportErrorTemplates = exports.ImportExportApiKeys = exports.ImportExportAdmins = void 0;
+var utils_1 = require("../../../internal/utils");
+var canary_1 = require("./canary");
+var exposedapi_1 = require("./exposedapi");
+var chaosconfig_1 = require("./chaosconfig");
+var clientconfig_1 = require("./clientconfig");
+var corssettings_1 = require("./corssettings");
+var gzip_1 = require("./gzip");
+var healthcheck_1 = require("./healthcheck");
+var ipfiltering_1 = require("./ipfiltering");
+var redirectionsettings_1 = require("./redirectionsettings");
+var statsdconfig_1 = require("./statsdconfig");
+var target_1 = require("./target");
+var globalconfig_1 = require("./globalconfig");
+var importexportstats_1 = require("./importexportstats");
 // ImportExportAdmins
 /**
  * Administrator using FIDO U2F device to access Otoroshi
@@ -46,28 +49,28 @@ var ImportExportAdmins = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Number)
     ], ImportExportAdmins.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], ImportExportAdmins.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], ImportExportAdmins.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registration" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registration" }),
+        __metadata("design:type", Object)
     ], ImportExportAdmins.prototype, "registration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], ImportExportAdmins.prototype, "username", void 0);
     return ImportExportAdmins;
-}(SpeakeasyBase));
-export { ImportExportAdmins };
+}(utils_1.SpeakeasyBase));
+exports.ImportExportAdmins = ImportExportAdmins;
 // ImportExportApiKeys
 /**
  * An Otoroshi Api Key. An Api Key is defined for a group of services to allow usage of the same Api Key for multiple services.
@@ -78,44 +81,44 @@ var ImportExportApiKeys = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorizedEntities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorizedEntities" }),
         __metadata("design:type", Array)
     ], ImportExportApiKeys.prototype, "authorizedEntities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientId" }),
         __metadata("design:type", String)
     ], ImportExportApiKeys.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientName" }),
         __metadata("design:type", String)
     ], ImportExportApiKeys.prototype, "clientName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientSecret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientSecret" }),
         __metadata("design:type", String)
     ], ImportExportApiKeys.prototype, "clientSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dailyQuota" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dailyQuota" }),
         __metadata("design:type", Number)
     ], ImportExportApiKeys.prototype, "dailyQuota", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], ImportExportApiKeys.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], ImportExportApiKeys.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monthlyQuota" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monthlyQuota" }),
         __metadata("design:type", Number)
     ], ImportExportApiKeys.prototype, "monthlyQuota", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=throttlingQuota" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=throttlingQuota" }),
         __metadata("design:type", Number)
     ], ImportExportApiKeys.prototype, "throttlingQuota", void 0);
     return ImportExportApiKeys;
-}(SpeakeasyBase));
-export { ImportExportApiKeys };
+}(utils_1.SpeakeasyBase));
+exports.ImportExportApiKeys = ImportExportApiKeys;
 // ImportExportErrorTemplates
 /**
  * Error templates for a service descriptor
@@ -126,32 +129,32 @@ var ImportExportErrorTemplates = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messages" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messages" }),
+        __metadata("design:type", Object)
     ], ImportExportErrorTemplates.prototype, "messages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceId" }),
         __metadata("design:type", String)
     ], ImportExportErrorTemplates.prototype, "serviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=template40x" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=template40x" }),
         __metadata("design:type", String)
     ], ImportExportErrorTemplates.prototype, "template40x", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=template50x" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=template50x" }),
         __metadata("design:type", String)
     ], ImportExportErrorTemplates.prototype, "template50x", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=templateBuild" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=templateBuild" }),
         __metadata("design:type", String)
     ], ImportExportErrorTemplates.prototype, "templateBuild", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=templateMaintenance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=templateMaintenance" }),
         __metadata("design:type", String)
     ], ImportExportErrorTemplates.prototype, "templateMaintenance", void 0);
     return ImportExportErrorTemplates;
-}(SpeakeasyBase));
-export { ImportExportErrorTemplates };
+}(utils_1.SpeakeasyBase));
+exports.ImportExportErrorTemplates = ImportExportErrorTemplates;
 // ImportExportServiceDescriptors
 /**
  * An otoroshi service descriptor. Represent a forward HTTP call on a domain to another location with some optional api management mecanism
@@ -162,184 +165,184 @@ var ImportExportServiceDescriptors = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Canary" }),
-        __metadata("design:type", Canary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Canary" }),
+        __metadata("design:type", canary_1.Canary)
     ], ImportExportServiceDescriptors.prototype, "canary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalHeaders" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalHeaders" }),
+        __metadata("design:type", Object)
     ], ImportExportServiceDescriptors.prototype, "additionalHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=api" }),
-        __metadata("design:type", ExposedApi)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=api" }),
+        __metadata("design:type", exposedapi_1.ExposedApi)
     ], ImportExportServiceDescriptors.prototype, "api", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authConfigRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authConfigRef" }),
         __metadata("design:type", String)
     ], ImportExportServiceDescriptors.prototype, "authConfigRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildMode" }),
         __metadata("design:type", Boolean)
     ], ImportExportServiceDescriptors.prototype, "buildMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chaosConfig" }),
-        __metadata("design:type", ChaosConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chaosConfig" }),
+        __metadata("design:type", chaosconfig_1.ChaosConfig)
     ], ImportExportServiceDescriptors.prototype, "chaosConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientConfig" }),
-        __metadata("design:type", ClientConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientConfig" }),
+        __metadata("design:type", clientconfig_1.ClientConfig)
     ], ImportExportServiceDescriptors.prototype, "clientConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientValidatorRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientValidatorRef" }),
         __metadata("design:type", String)
     ], ImportExportServiceDescriptors.prototype, "clientValidatorRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cors" }),
-        __metadata("design:type", CorsSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cors" }),
+        __metadata("design:type", corssettings_1.CorsSettings)
     ], ImportExportServiceDescriptors.prototype, "cors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], ImportExportServiceDescriptors.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], ImportExportServiceDescriptors.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforceSecureCommunication" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforceSecureCommunication" }),
         __metadata("design:type", Boolean)
     ], ImportExportServiceDescriptors.prototype, "enforceSecureCommunication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=env" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=env" }),
         __metadata("design:type", String)
     ], ImportExportServiceDescriptors.prototype, "env", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=forceHttps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=forceHttps" }),
         __metadata("design:type", Boolean)
     ], ImportExportServiceDescriptors.prototype, "forceHttps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groups" }),
         __metadata("design:type", Array)
     ], ImportExportServiceDescriptors.prototype, "groups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gzip" }),
-        __metadata("design:type", Gzip)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gzip" }),
+        __metadata("design:type", gzip_1.Gzip)
     ], ImportExportServiceDescriptors.prototype, "gzip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headersVerification" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headersVerification" }),
+        __metadata("design:type", Object)
     ], ImportExportServiceDescriptors.prototype, "headersVerification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthCheck" }),
-        __metadata("design:type", HealthCheck)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthCheck" }),
+        __metadata("design:type", healthcheck_1.HealthCheck)
     ], ImportExportServiceDescriptors.prototype, "healthCheck", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ImportExportServiceDescriptors.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipFiltering" }),
-        __metadata("design:type", IpFiltering)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipFiltering" }),
+        __metadata("design:type", ipfiltering_1.IpFiltering)
     ], ImportExportServiceDescriptors.prototype, "ipFiltering", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jwtVerifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jwtVerifier" }),
         __metadata("design:type", Object)
     ], ImportExportServiceDescriptors.prototype, "jwtVerifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localHost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localHost" }),
         __metadata("design:type", String)
     ], ImportExportServiceDescriptors.prototype, "localHost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localScheme" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localScheme" }),
         __metadata("design:type", String)
     ], ImportExportServiceDescriptors.prototype, "localScheme", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maintenanceMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maintenanceMode" }),
         __metadata("design:type", Boolean)
     ], ImportExportServiceDescriptors.prototype, "maintenanceMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchingHeaders" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchingHeaders" }),
+        __metadata("design:type", Object)
     ], ImportExportServiceDescriptors.prototype, "matchingHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchingRoot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchingRoot" }),
         __metadata("design:type", String)
     ], ImportExportServiceDescriptors.prototype, "matchingRoot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], ImportExportServiceDescriptors.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ImportExportServiceDescriptors.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overrideHost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overrideHost" }),
         __metadata("design:type", Boolean)
     ], ImportExportServiceDescriptors.prototype, "overrideHost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateApp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateApp" }),
         __metadata("design:type", Boolean)
     ], ImportExportServiceDescriptors.prototype, "privateApp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privatePatterns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privatePatterns" }),
         __metadata("design:type", Array)
     ], ImportExportServiceDescriptors.prototype, "privatePatterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicPatterns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicPatterns" }),
         __metadata("design:type", Array)
     ], ImportExportServiceDescriptors.prototype, "publicPatterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=redirectToLocal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=redirectToLocal" }),
         __metadata("design:type", Boolean)
     ], ImportExportServiceDescriptors.prototype, "redirectToLocal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=redirection" }),
-        __metadata("design:type", RedirectionSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=redirection" }),
+        __metadata("design:type", redirectionsettings_1.RedirectionSettings)
     ], ImportExportServiceDescriptors.prototype, "redirection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=root" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=root" }),
         __metadata("design:type", String)
     ], ImportExportServiceDescriptors.prototype, "root", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secComExcludedPatterns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secComExcludedPatterns" }),
         __metadata("design:type", Array)
     ], ImportExportServiceDescriptors.prototype, "secComExcludedPatterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secComSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secComSettings" }),
         __metadata("design:type", Object)
     ], ImportExportServiceDescriptors.prototype, "secComSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sendOtoroshiHeadersBack" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sendOtoroshiHeadersBack" }),
         __metadata("design:type", Boolean)
     ], ImportExportServiceDescriptors.prototype, "sendOtoroshiHeadersBack", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statsdConfig" }),
-        __metadata("design:type", StatsdConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statsdConfig" }),
+        __metadata("design:type", statsdconfig_1.StatsdConfig)
     ], ImportExportServiceDescriptors.prototype, "statsdConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subdomain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subdomain" }),
         __metadata("design:type", String)
     ], ImportExportServiceDescriptors.prototype, "subdomain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targets", elemType: Target }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targets", elemType: target_1.Target }),
         __metadata("design:type", Array)
     ], ImportExportServiceDescriptors.prototype, "targets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transformerRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transformerRef" }),
         __metadata("design:type", String)
     ], ImportExportServiceDescriptors.prototype, "transformerRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userFacing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userFacing" }),
         __metadata("design:type", Boolean)
     ], ImportExportServiceDescriptors.prototype, "userFacing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=xForwardedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=xForwardedHeaders" }),
         __metadata("design:type", Boolean)
     ], ImportExportServiceDescriptors.prototype, "xForwardedHeaders", void 0);
     return ImportExportServiceDescriptors;
-}(SpeakeasyBase));
-export { ImportExportServiceDescriptors };
+}(utils_1.SpeakeasyBase));
+exports.ImportExportServiceDescriptors = ImportExportServiceDescriptors;
 // ImportExportServiceGroups
 /**
  * An Otoroshi service group is just a group of service descriptor. It is useful to be able to define Api Keys for the whole group
@@ -350,20 +353,20 @@ var ImportExportServiceGroups = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ImportExportServiceGroups.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ImportExportServiceGroups.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ImportExportServiceGroups.prototype, "name", void 0);
     return ImportExportServiceGroups;
-}(SpeakeasyBase));
-export { ImportExportServiceGroups };
+}(utils_1.SpeakeasyBase));
+exports.ImportExportServiceGroups = ImportExportServiceGroups;
 // ImportExportSimpleAdmins
 /**
  * Administrator using just login/password tuple to access Otoroshi
@@ -374,24 +377,24 @@ var ImportExportSimpleAdmins = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Number)
     ], ImportExportSimpleAdmins.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], ImportExportSimpleAdmins.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], ImportExportSimpleAdmins.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], ImportExportSimpleAdmins.prototype, "username", void 0);
     return ImportExportSimpleAdmins;
-}(SpeakeasyBase));
-export { ImportExportSimpleAdmins };
+}(utils_1.SpeakeasyBase));
+exports.ImportExportSimpleAdmins = ImportExportSimpleAdmins;
 // ImportExport
 /**
  * The structure that can be imported to or exported from Otoroshi. It represent the memory state of Otoroshi
@@ -402,53 +405,53 @@ var ImportExport = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=admins", elemType: ImportExportAdmins }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=admins", elemType: ImportExportAdmins }),
         __metadata("design:type", Array)
     ], ImportExport.prototype, "admins", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiKeys", elemType: ImportExportApiKeys }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiKeys", elemType: ImportExportApiKeys }),
         __metadata("design:type", Array)
     ], ImportExport.prototype, "apiKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appConfig" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appConfig" }),
+        __metadata("design:type", Object)
     ], ImportExport.prototype, "appConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
-        __metadata("design:type", GlobalConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
+        __metadata("design:type", globalconfig_1.GlobalConfig)
     ], ImportExport.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", Date)
     ], ImportExport.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateRaw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateRaw" }),
         __metadata("design:type", Number)
     ], ImportExport.prototype, "dateRaw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorTemplates", elemType: ImportExportErrorTemplates }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorTemplates", elemType: ImportExportErrorTemplates }),
         __metadata("design:type", Array)
     ], ImportExport.prototype, "errorTemplates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], ImportExport.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceDescriptors", elemType: ImportExportServiceDescriptors }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceDescriptors", elemType: ImportExportServiceDescriptors }),
         __metadata("design:type", Array)
     ], ImportExport.prototype, "serviceDescriptors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceGroups", elemType: ImportExportServiceGroups }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceGroups", elemType: ImportExportServiceGroups }),
         __metadata("design:type", Array)
     ], ImportExport.prototype, "serviceGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=simpleAdmins", elemType: ImportExportSimpleAdmins }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=simpleAdmins", elemType: ImportExportSimpleAdmins }),
         __metadata("design:type", Array)
     ], ImportExport.prototype, "simpleAdmins", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stats" }),
-        __metadata("design:type", ImportExportStats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stats" }),
+        __metadata("design:type", importexportstats_1.ImportExportStats)
     ], ImportExport.prototype, "stats", void 0);
     return ImportExport;
-}(SpeakeasyBase));
-export { ImportExport };
+}(utils_1.SpeakeasyBase));
+exports.ImportExport = ImportExport;

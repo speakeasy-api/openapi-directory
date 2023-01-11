@@ -32,11 +32,11 @@ export class AppsGetBySlugResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  appsGetBySlug415ApplicationJsonObject?: AppsGetBySlug415ApplicationJson;
+  appsGetBySlug415ApplicationJSONObject?: AppsGetBySlug415ApplicationJson;
 
   @SpeakeasyMetadata()
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  integration?: Map<string, any>;
+  integration?: Record<string, any>;
 }

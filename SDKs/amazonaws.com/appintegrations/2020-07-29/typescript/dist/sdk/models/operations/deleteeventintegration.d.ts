@@ -18,7 +18,7 @@ export declare class DeleteEventIntegrationRequest extends SpeakeasyBase {
 export declare class DeleteEventIntegrationResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    deleteEventIntegrationResponse?: Map<string, any>;
+    deleteEventIntegrationResponse?: Record<string, any>;
     internalServiceError?: any;
     invalidRequestException?: any;
     resourceNotFoundException?: any;

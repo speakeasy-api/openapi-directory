@@ -20,7 +20,7 @@ export declare class DeleteApplicationsRequest extends SpeakeasyBase {
 export declare class DeleteApplicationsResponse extends SpeakeasyBase {
     authorizationErrorException?: any;
     contentType: string;
-    deleteApplicationsResponse?: Map<string, any>;
+    deleteApplicationsResponse?: Record<string, any>;
     homeRegionNotSetException?: any;
     invalidParameterException?: any;
     invalidParameterValueException?: any;

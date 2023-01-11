@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class DescribeStreamConsumerInput extends SpeakeasyBase {
-    consumerArn?: string;
+    consumerARN?: string;
     consumerName?: string;
-    streamArn?: string;
+    streamARN?: string;
 }

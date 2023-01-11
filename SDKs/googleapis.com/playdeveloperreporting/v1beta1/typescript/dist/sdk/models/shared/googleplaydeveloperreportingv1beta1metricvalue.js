@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleTypeDecimal } from "./googletypedecimal";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePlayDeveloperReportingV1beta1MetricValue = void 0;
+var utils_1 = require("../../../internal/utils");
+var googletypedecimal_1 = require("./googletypedecimal");
 // GooglePlayDeveloperReportingV1beta1MetricValue
 /**
  * Represents the value of a metric.
@@ -34,13 +37,13 @@ var GooglePlayDeveloperReportingV1beta1MetricValue = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=decimalValue" }),
-        __metadata("design:type", GoogleTypeDecimal)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=decimalValue" }),
+        __metadata("design:type", googletypedecimal_1.GoogleTypeDecimal)
     ], GooglePlayDeveloperReportingV1beta1MetricValue.prototype, "decimalValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metric" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metric" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1beta1MetricValue.prototype, "metric", void 0);
     return GooglePlayDeveloperReportingV1beta1MetricValue;
-}(SpeakeasyBase));
-export { GooglePlayDeveloperReportingV1beta1MetricValue };
+}(utils_1.SpeakeasyBase));
+exports.GooglePlayDeveloperReportingV1beta1MetricValue = GooglePlayDeveloperReportingV1beta1MetricValue;

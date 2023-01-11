@@ -1,8 +1,11 @@
-export var TimesheetStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TimesheetStatusEnum = void 0;
+var TimesheetStatusEnum;
 (function (TimesheetStatusEnum) {
     TimesheetStatusEnum["Draft"] = "DRAFT";
     TimesheetStatusEnum["Processed"] = "PROCESSED";
     TimesheetStatusEnum["Approved"] = "APPROVED";
     TimesheetStatusEnum["Rejected"] = "REJECTED";
     TimesheetStatusEnum["Requested"] = "REQUESTED";
-})(TimesheetStatusEnum || (TimesheetStatusEnum = {}));
+})(TimesheetStatusEnum = exports.TimesheetStatusEnum || (exports.TimesheetStatusEnum = {}));

@@ -23,6 +23,6 @@ export declare class RevokeIpRulesResponse extends SpeakeasyBase {
     invalidParameterValuesException?: any;
     invalidResourceStateException?: any;
     resourceNotFoundException?: any;
-    revokeIpRulesResult?: Map<string, any>;
+    revokeIpRulesResult?: Record<string, any>;
     statusCode: number;
 }

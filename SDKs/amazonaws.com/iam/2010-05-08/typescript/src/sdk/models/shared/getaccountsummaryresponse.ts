@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class GetAccountSummaryResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  summaryMap?: Map<string, number>;
+  summaryMap?: Record<string, number>;
 }

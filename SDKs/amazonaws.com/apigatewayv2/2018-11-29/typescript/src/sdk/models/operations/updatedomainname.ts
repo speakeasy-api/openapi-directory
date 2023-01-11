@@ -39,10 +39,10 @@ export class UpdateDomainNameHeaders extends SpeakeasyBase {
 **/
 export class UpdateDomainNameRequestBodyMutualTlsAuthentication extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=TruststoreUri" })
-  truststoreUri?: string;
+  truststoreUri?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=TruststoreVersion" })
-  truststoreVersion?: string;
+  truststoreVersion?: Record<string, any>;
 }
 
 

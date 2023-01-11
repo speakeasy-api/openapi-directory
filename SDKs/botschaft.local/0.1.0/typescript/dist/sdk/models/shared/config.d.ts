@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class Config extends SpeakeasyBase {
-    providers: Map<string, any>;
+    providers: Record<string, any>;
     topics: any[];
 }

@@ -14,7 +14,7 @@ export declare class IssuesCreateCommentRequest extends SpeakeasyBase {
 }
 export declare class IssuesCreateCommentResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     issueComment?: shared.IssueComment;

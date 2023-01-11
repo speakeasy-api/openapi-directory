@@ -27,5 +27,5 @@ export declare class GetCveListRequest extends SpeakeasyBase {
 export declare class GetCveListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getCveList200ApplicationJsonObject?: GetCveList200ApplicationJson;
+    getCVEList200ApplicationJSONObject?: GetCveList200ApplicationJson;
 }

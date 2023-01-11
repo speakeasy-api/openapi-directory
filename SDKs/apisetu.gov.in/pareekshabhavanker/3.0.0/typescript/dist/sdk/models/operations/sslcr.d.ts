@@ -109,11 +109,11 @@ export declare class SslcrRequest extends SpeakeasyBase {
 export declare class SslcrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    sslcr400ApplicationJsonObject?: Sslcr400ApplicationJson;
-    sslcr401ApplicationJsonObject?: Sslcr401ApplicationJson;
-    sslcr404ApplicationJsonObject?: Sslcr404ApplicationJson;
-    sslcr500ApplicationJsonObject?: Sslcr500ApplicationJson;
-    sslcr502ApplicationJsonObject?: Sslcr502ApplicationJson;
-    sslcr503ApplicationJsonObject?: Sslcr503ApplicationJson;
-    sslcr504ApplicationJsonObject?: Sslcr504ApplicationJson;
+    sslcr400ApplicationJSONObject?: Sslcr400ApplicationJson;
+    sslcr401ApplicationJSONObject?: Sslcr401ApplicationJson;
+    sslcr404ApplicationJSONObject?: Sslcr404ApplicationJson;
+    sslcr500ApplicationJSONObject?: Sslcr500ApplicationJson;
+    sslcr502ApplicationJSONObject?: Sslcr502ApplicationJson;
+    sslcr503ApplicationJSONObject?: Sslcr503ApplicationJson;
+    sslcr504ApplicationJSONObject?: Sslcr504ApplicationJson;
 }

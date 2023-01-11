@@ -123,5 +123,5 @@ export declare class DcimSitesListRequest extends SpeakeasyBase {
 export declare class DcimSitesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimSitesList200ApplicationJsonObject?: DcimSitesList200ApplicationJson;
+    dcimSitesList200ApplicationJSONObject?: DcimSitesList200ApplicationJson;
 }

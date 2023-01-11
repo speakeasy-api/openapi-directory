@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { V3StopAccessibilityWheelchair } from "./v3stopaccessibilitywheelchair";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3StopAccessibility = void 0;
+var utils_1 = require("../../../internal/utils");
+var v3stopaccessibilitywheelchair_1 = require("./v3stopaccessibilitywheelchair");
 var V3StopAccessibility = /** @class */ (function (_super) {
     __extends(V3StopAccessibility, _super);
     function V3StopAccessibility() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audio_customer_information" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audio_customer_information" }),
         __metadata("design:type", Boolean)
     ], V3StopAccessibility.prototype, "audioCustomerInformation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=escalator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=escalator" }),
         __metadata("design:type", Boolean)
     ], V3StopAccessibility.prototype, "escalator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hearing_loop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hearing_loop" }),
         __metadata("design:type", Boolean)
     ], V3StopAccessibility.prototype, "hearingLoop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lift" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lift" }),
         __metadata("design:type", Boolean)
     ], V3StopAccessibility.prototype, "lift", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lighting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lighting" }),
         __metadata("design:type", Boolean)
     ], V3StopAccessibility.prototype, "lighting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform_number" }),
         __metadata("design:type", Number)
     ], V3StopAccessibility.prototype, "platformNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stairs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stairs" }),
         __metadata("design:type", Boolean)
     ], V3StopAccessibility.prototype, "stairs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stop_accessible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stop_accessible" }),
         __metadata("design:type", Boolean)
     ], V3StopAccessibility.prototype, "stopAccessible", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tactile_ground_surface_indicator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tactile_ground_surface_indicator" }),
         __metadata("design:type", Boolean)
     ], V3StopAccessibility.prototype, "tactileGroundSurfaceIndicator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=waiting_room" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=waiting_room" }),
         __metadata("design:type", Boolean)
     ], V3StopAccessibility.prototype, "waitingRoom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wheelchair" }),
-        __metadata("design:type", V3StopAccessibilityWheelchair)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wheelchair" }),
+        __metadata("design:type", v3stopaccessibilitywheelchair_1.V3StopAccessibilityWheelchair)
     ], V3StopAccessibility.prototype, "wheelchair", void 0);
     return V3StopAccessibility;
-}(SpeakeasyBase));
-export { V3StopAccessibility };
+}(utils_1.SpeakeasyBase));
+exports.V3StopAccessibility = V3StopAccessibility;

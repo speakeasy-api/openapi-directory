@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BatchGetAggregateResourceConfigRequest, BatchGetAggregateResourceConfigResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,30 +33,30 @@ const sdk = new SDK(WithSecurity(
     
 const req: BatchGetAggregateResourceConfigRequest = {
   headers: {
-    xAmzAlgorithm: "consequatur",
-    xAmzContentSha256: "sed",
-    xAmzCredential: "quo",
-    xAmzDate: "animi",
-    xAmzSecurityToken: "et",
-    xAmzSignature: "labore",
-    xAmzSignedHeaders: "est",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "StarlingDoveService.BatchGetAggregateResourceConfig",
   },
   request: {
-    configurationAggregatorName: "et",
+    configurationAggregatorName: "fugit",
     resourceIdentifiers: [
       {
-        resourceId: "quo",
-        resourceName: "omnis",
-        resourceType: "AWS::RDS::DBSubnetGroup",
-        sourceAccountId: "quod",
-        sourceRegion: "et",
+        resourceId: "nihil",
+        resourceName: "rerum",
+        resourceType: "AWS::ApiGateway::Stage",
+        sourceAccountId: "debitis",
+        sourceRegion: "voluptatum",
       },
     ],
   },
 };
 
-sdk.sdk.batchGetAggregateResourceConfig(req).then((res: BatchGetAggregateResourceConfigResponse | AxiosError) => {
+sdk.batchGetAggregateResourceConfig(req).then((res: BatchGetAggregateResourceConfigResponse | AxiosError) => {
    // handle response
 });
 ```

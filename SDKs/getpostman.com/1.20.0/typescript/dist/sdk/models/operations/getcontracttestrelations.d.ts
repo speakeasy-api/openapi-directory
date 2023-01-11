@@ -18,5 +18,5 @@ export declare class GetContractTestRelationsRequest extends SpeakeasyBase {
 export declare class GetContractTestRelationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getContractTestRelations200ApplicationJsonObject?: GetContractTestRelations200ApplicationJson;
+    getContractTestRelations200ApplicationJSONObject?: GetContractTestRelations200ApplicationJson;
 }

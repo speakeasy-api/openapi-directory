@@ -39,7 +39,7 @@ export class CreateJourneyHeaders extends SpeakeasyBase {
 **/
 export class CreateJourneyRequestBodyWriteJourneyRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Activities", elemType: shared.Activity })
-  activities?: Map<string, shared.Activity>;
+  activities?: Record<string, shared.Activity>;
 
   @SpeakeasyMetadata({ data: "json, name=CreationDate" })
   creationDate?: string;

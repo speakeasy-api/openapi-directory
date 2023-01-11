@@ -108,11 +108,11 @@ export declare class CfmstRequest extends SpeakeasyBase {
 export declare class CfmstResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    cfmst400ApplicationJsonObject?: Cfmst400ApplicationJson;
-    cfmst401ApplicationJsonObject?: Cfmst401ApplicationJson;
-    cfmst404ApplicationJsonObject?: Cfmst404ApplicationJson;
-    cfmst500ApplicationJsonObject?: Cfmst500ApplicationJson;
-    cfmst502ApplicationJsonObject?: Cfmst502ApplicationJson;
-    cfmst503ApplicationJsonObject?: Cfmst503ApplicationJson;
-    cfmst504ApplicationJsonObject?: Cfmst504ApplicationJson;
+    cfmst400ApplicationJSONObject?: Cfmst400ApplicationJson;
+    cfmst401ApplicationJSONObject?: Cfmst401ApplicationJson;
+    cfmst404ApplicationJSONObject?: Cfmst404ApplicationJson;
+    cfmst500ApplicationJSONObject?: Cfmst500ApplicationJson;
+    cfmst502ApplicationJSONObject?: Cfmst502ApplicationJson;
+    cfmst503ApplicationJSONObject?: Cfmst503ApplicationJson;
+    cfmst504ApplicationJSONObject?: Cfmst504ApplicationJson;
 }

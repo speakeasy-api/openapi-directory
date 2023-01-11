@@ -9,6 +9,6 @@ export declare class GetArtifactMetaDataByGlobalIdRequest extends SpeakeasyBase 
 export declare class GetArtifactMetaDataByGlobalIdResponse extends SpeakeasyBase {
     artifactMetaData?: shared.ArtifactMetaData;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

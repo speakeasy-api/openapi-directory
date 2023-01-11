@@ -23,34 +23,34 @@ export class GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetAllPr
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=properties" })
-  properties?: Map<string, any>[];
+  properties?: Record<string, any>[];
 }
 
 
 export class GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetPropertiesAutomoderationOn extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=groupID" })
-  groupId?: number;
+  groupID?: number;
 
   @SpeakeasyMetadata({ data: "json, name=taxonomyID" })
-  taxonomyId?: number;
+  taxonomyID?: number;
 }
 
 
 export class GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetPropertiesCommentListSortEditors extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=groupID" })
-  groupId?: number;
+  groupID?: number;
 
   @SpeakeasyMetadata({ data: "json, name=taxonomyID" })
-  taxonomyId?: number;
+  taxonomyID?: number;
 }
 
 
 export class GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetPropertiesReachedMaxComOff extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=groupID" })
-  groupId?: number;
+  groupID?: number;
 
   @SpeakeasyMetadata({ data: "json, name=taxonomyID" })
-  taxonomyId?: number;
+  taxonomyID?: number;
 }
 
 
@@ -71,19 +71,19 @@ export class GetUserContentRecentJson200ApplicationJsonResultsCommentsAsset exte
   allProperties?: GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetAllProperties[];
 
   @SpeakeasyMetadata({ data: "json, name=assetID" })
-  assetId?: number;
+  assetID?: number;
 
   @SpeakeasyMetadata({ data: "json, name=assetTitle" })
   assetTitle?: string;
 
   @SpeakeasyMetadata({ data: "json, name=assetURL" })
-  assetUrl?: string;
+  assetURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=createDate" })
   createDate?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, any>[];
+  labels?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=properties" })
   properties?: GetUserContentRecentJson200ApplicationJsonResultsCommentsAssetProperties;
@@ -95,13 +95,13 @@ export class GetUserContentRecentJson200ApplicationJsonResultsCommentsAsset exte
   taxonomy?: string;
 
   @SpeakeasyMetadata({ data: "json, name=text" })
-  text?: Map<string, any>[];
+  text?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=updateDate" })
   updateDate?: string;
 
   @SpeakeasyMetadata({ data: "json, name=vendorID" })
-  vendorId?: string;
+  vendorID?: string;
 }
 
 
@@ -113,13 +113,13 @@ export class GetUserContentRecentJson200ApplicationJsonResultsComments extends S
   asset?: GetUserContentRecentJson200ApplicationJsonResultsCommentsAsset;
 
   @SpeakeasyMetadata({ data: "json, name=assetID" })
-  assetId?: number;
+  assetID?: number;
 
   @SpeakeasyMetadata({ data: "json, name=commentBody" })
   commentBody?: string;
 
   @SpeakeasyMetadata({ data: "json, name=commentID" })
-  commentId?: number;
+  commentID?: number;
 
   @SpeakeasyMetadata({ data: "json, name=commentSequence" })
   commentSequence?: number;
@@ -143,19 +143,19 @@ export class GetUserContentRecentJson200ApplicationJsonResultsComments extends S
   location?: string;
 
   @SpeakeasyMetadata({ data: "json, name=parentID" })
-  parentId?: any;
+  parentID?: any;
 
   @SpeakeasyMetadata({ data: "json, name=recommendationCount" })
   recommendationCount?: number;
 
   @SpeakeasyMetadata({ data: "json, name=replies" })
-  replies?: Map<string, any>[];
+  replies?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: string;
 
   @SpeakeasyMetadata({ data: "json, name=statusID" })
-  statusId?: number;
+  statusID?: number;
 
   @SpeakeasyMetadata({ data: "json, name=updateDate" })
   updateDate?: string;
@@ -164,7 +164,7 @@ export class GetUserContentRecentJson200ApplicationJsonResultsComments extends S
   userDisplayName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=userID" })
-  userId?: number;
+  userID?: number;
 
   @SpeakeasyMetadata({ data: "json, name=userLocation" })
   userLocation?: string;
@@ -173,7 +173,7 @@ export class GetUserContentRecentJson200ApplicationJsonResultsComments extends S
   userTitle?: string;
 
   @SpeakeasyMetadata({ data: "json, name=userURL" })
-  userUrl?: string;
+  userURL?: string;
 }
 
 
@@ -215,7 +215,7 @@ export class GetUserContentRecentJsonResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getUserContentRecentJson200ApplicationJsonObject?: GetUserContentRecentJson200ApplicationJson;
+  getUserContentRecentJSON200ApplicationJSONObject?: GetUserContentRecentJson200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

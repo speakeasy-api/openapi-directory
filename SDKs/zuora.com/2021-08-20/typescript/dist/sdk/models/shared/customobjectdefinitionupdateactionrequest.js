@@ -1,0 +1,136 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomObjectDefinitionUpdateActionRequest = exports.CustomObjectDefinitionUpdateActionRequestTypeEnum = exports.CustomObjectDefinitionUpdateActionRequestRelationship = exports.CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraints = exports.CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraintsCreate = exports.CustomObjectDefinitionUpdateActionRequestRelationshipCardinalityEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var updatecustomobjectcusotmfield_1 = require("./updatecustomobjectcusotmfield");
+var CustomObjectDefinitionUpdateActionRequestRelationshipCardinalityEnum;
+(function (CustomObjectDefinitionUpdateActionRequestRelationshipCardinalityEnum) {
+    CustomObjectDefinitionUpdateActionRequestRelationshipCardinalityEnum["ManyToOne"] = "manyToOne";
+})(CustomObjectDefinitionUpdateActionRequestRelationshipCardinalityEnum = exports.CustomObjectDefinitionUpdateActionRequestRelationshipCardinalityEnum || (exports.CustomObjectDefinitionUpdateActionRequestRelationshipCardinalityEnum = {}));
+var CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraintsCreate = /** @class */ (function (_super) {
+    __extends(CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraintsCreate, _super);
+    function CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraintsCreate() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforceValidMapping" }),
+        __metadata("design:type", Boolean)
+    ], CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraintsCreate.prototype, "enforceValidMapping", void 0);
+    return CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraintsCreate;
+}(utils_1.SpeakeasyBase));
+exports.CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraintsCreate = CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraintsCreate;
+// CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraints
+/**
+ * Specifies contraints to apply to custom object records.
+ *
+**/
+var CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraints = /** @class */ (function (_super) {
+    __extends(CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraints, _super);
+    function CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraints() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=create" }),
+        __metadata("design:type", CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraintsCreate)
+    ], CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraints.prototype, "create", void 0);
+    return CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraints;
+}(utils_1.SpeakeasyBase));
+exports.CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraints = CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraints;
+var CustomObjectDefinitionUpdateActionRequestRelationship = /** @class */ (function (_super) {
+    __extends(CustomObjectDefinitionUpdateActionRequestRelationship, _super);
+    function CustomObjectDefinitionUpdateActionRequestRelationship() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cardinality" }),
+        __metadata("design:type", String)
+    ], CustomObjectDefinitionUpdateActionRequestRelationship.prototype, "cardinality", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields" }),
+        __metadata("design:type", Object)
+    ], CustomObjectDefinitionUpdateActionRequestRelationship.prototype, "fields", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=namespace" }),
+        __metadata("design:type", String)
+    ], CustomObjectDefinitionUpdateActionRequestRelationship.prototype, "namespace", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object" }),
+        __metadata("design:type", String)
+    ], CustomObjectDefinitionUpdateActionRequestRelationship.prototype, "object", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recordConstraints" }),
+        __metadata("design:type", CustomObjectDefinitionUpdateActionRequestRelationshipRecordConstraints)
+    ], CustomObjectDefinitionUpdateActionRequestRelationship.prototype, "recordConstraints", void 0);
+    return CustomObjectDefinitionUpdateActionRequestRelationship;
+}(utils_1.SpeakeasyBase));
+exports.CustomObjectDefinitionUpdateActionRequestRelationship = CustomObjectDefinitionUpdateActionRequestRelationship;
+var CustomObjectDefinitionUpdateActionRequestTypeEnum;
+(function (CustomObjectDefinitionUpdateActionRequestTypeEnum) {
+    CustomObjectDefinitionUpdateActionRequestTypeEnum["AddField"] = "addField";
+    CustomObjectDefinitionUpdateActionRequestTypeEnum["DeleteField"] = "deleteField";
+    CustomObjectDefinitionUpdateActionRequestTypeEnum["UpdateField"] = "updateField";
+    CustomObjectDefinitionUpdateActionRequestTypeEnum["UpdateObject"] = "updateObject";
+    CustomObjectDefinitionUpdateActionRequestTypeEnum["RenameField"] = "renameField";
+    CustomObjectDefinitionUpdateActionRequestTypeEnum["AddRelationship"] = "addRelationship";
+    CustomObjectDefinitionUpdateActionRequestTypeEnum["DeleteRelationship"] = "deleteRelationship";
+})(CustomObjectDefinitionUpdateActionRequestTypeEnum = exports.CustomObjectDefinitionUpdateActionRequestTypeEnum || (exports.CustomObjectDefinitionUpdateActionRequestTypeEnum = {}));
+var CustomObjectDefinitionUpdateActionRequest = /** @class */ (function (_super) {
+    __extends(CustomObjectDefinitionUpdateActionRequest, _super);
+    function CustomObjectDefinitionUpdateActionRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], CustomObjectDefinitionUpdateActionRequest.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field" }),
+        __metadata("design:type", updatecustomobjectcusotmfield_1.UpdateCustomObjectCusotmField)
+    ], CustomObjectDefinitionUpdateActionRequest.prototype, "field", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
+        __metadata("design:type", String)
+    ], CustomObjectDefinitionUpdateActionRequest.prototype, "label", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=namespace" }),
+        __metadata("design:type", String)
+    ], CustomObjectDefinitionUpdateActionRequest.prototype, "namespace", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object" }),
+        __metadata("design:type", String)
+    ], CustomObjectDefinitionUpdateActionRequest.prototype, "object", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationship" }),
+        __metadata("design:type", CustomObjectDefinitionUpdateActionRequestRelationship)
+    ], CustomObjectDefinitionUpdateActionRequest.prototype, "relationship", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], CustomObjectDefinitionUpdateActionRequest.prototype, "type", void 0);
+    return CustomObjectDefinitionUpdateActionRequest;
+}(utils_1.SpeakeasyBase));
+exports.CustomObjectDefinitionUpdateActionRequest = CustomObjectDefinitionUpdateActionRequest;

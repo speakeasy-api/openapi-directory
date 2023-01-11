@@ -53,8 +53,8 @@ export class GetPersonasResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getPersonas200ApplicationJsonObject?: GetPersonas200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getPersonas200ApplicationJSONObject?: GetPersonas200ApplicationJson;
 }

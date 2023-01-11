@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BlobInput = exports.Blob = void 0;
+var utils_1 = require("../../../internal/utils");
 var Blob = /** @class */ (function (_super) {
     __extends(Blob, _super);
     function Blob() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blob_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blob_key" }),
         __metadata("design:type", String)
     ], Blob.prototype, "blobKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content_type" }),
         __metadata("design:type", String)
     ], Blob.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download_url" }),
         __metadata("design:type", String)
     ], Blob.prototype, "downloadUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filename" }),
         __metadata("design:type", String)
     ], Blob.prototype, "filename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hash" }),
         __metadata("design:type", String)
     ], Blob.prototype, "hash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Blob.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_created" }),
         __metadata("design:type", String)
     ], Blob.prototype, "timeCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_last_accessed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_last_accessed" }),
         __metadata("design:type", String)
     ], Blob.prototype, "timeLastAccessed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_updated" }),
         __metadata("design:type", String)
     ], Blob.prototype, "timeUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upload_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upload_url" }),
         __metadata("design:type", String)
     ], Blob.prototype, "uploadUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Blob.prototype, "url", void 0);
     return Blob;
-}(SpeakeasyBase));
-export { Blob };
+}(utils_1.SpeakeasyBase));
+exports.Blob = Blob;
 var BlobInput = /** @class */ (function (_super) {
     __extends(BlobInput, _super);
     function BlobInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blob_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blob_key" }),
         __metadata("design:type", String)
     ], BlobInput.prototype, "blobKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content_type" }),
         __metadata("design:type", String)
     ], BlobInput.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filename" }),
         __metadata("design:type", String)
     ], BlobInput.prototype, "filename", void 0);
     return BlobInput;
-}(SpeakeasyBase));
-export { BlobInput };
+}(utils_1.SpeakeasyBase));
+exports.BlobInput = BlobInput;

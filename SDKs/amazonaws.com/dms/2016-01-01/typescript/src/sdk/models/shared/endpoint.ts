@@ -81,13 +81,13 @@ export class Endpoint extends SpeakeasyBase {
   kmsKeyId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=MicrosoftSQLServerSettings" })
-  microsoftSqlServerSettings?: MicrosoftSqlServerSettings;
+  microsoftSQLServerSettings?: MicrosoftSqlServerSettings;
 
   @SpeakeasyMetadata({ data: "json, name=MongoDbSettings" })
   mongoDbSettings?: MongoDbSettings;
 
   @SpeakeasyMetadata({ data: "json, name=MySQLSettings" })
-  mySqlSettings?: MySqlSettings;
+  mySQLSettings?: MySqlSettings;
 
   @SpeakeasyMetadata({ data: "json, name=NeptuneSettings" })
   neptuneSettings?: NeptuneSettings;
@@ -99,7 +99,7 @@ export class Endpoint extends SpeakeasyBase {
   port?: number;
 
   @SpeakeasyMetadata({ data: "json, name=PostgreSQLSettings" })
-  postgreSqlSettings?: PostgreSqlSettings;
+  postgreSQLSettings?: PostgreSqlSettings;
 
   @SpeakeasyMetadata({ data: "json, name=RedisSettings" })
   redisSettings?: RedisSettings;

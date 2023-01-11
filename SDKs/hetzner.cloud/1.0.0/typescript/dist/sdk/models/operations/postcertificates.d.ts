@@ -6,7 +6,7 @@ export declare enum PostCertificatesCreateCertificateRequestTypeEnum {
 export declare class PostCertificatesCreateCertificateRequest extends SpeakeasyBase {
     certificate?: string;
     domainNames?: string[];
-    labels?: Map<string, any>;
+    labels?: Record<string, any>;
     name: string;
     privateKey?: string;
     type?: PostCertificatesCreateCertificateRequestTypeEnum;
@@ -77,7 +77,7 @@ export declare class PostCertificatesCreateCertificateResponseCertificate extend
     domainNames: string[];
     fingerprint: string;
     id: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     notValidAfter: string;
     notValidBefore: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UniqueProblem } from "./uniqueproblem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListUniqueProblemsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var uniqueproblem_1 = require("./uniqueproblem");
 // ListUniqueProblemsResult
 /**
  * Represents the result of a list unique problems request.
@@ -34,13 +37,13 @@ var ListUniqueProblemsResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListUniqueProblemsResult.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uniqueProblems", elemType: UniqueProblem, elemDepth: 2 }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uniqueProblems", elemType: uniqueproblem_1.UniqueProblem, elemDepth: 2 }),
+        __metadata("design:type", Object)
     ], ListUniqueProblemsResult.prototype, "uniqueProblems", void 0);
     return ListUniqueProblemsResult;
-}(SpeakeasyBase));
-export { ListUniqueProblemsResult };
+}(utils_1.SpeakeasyBase));
+exports.ListUniqueProblemsResult = ListUniqueProblemsResult;

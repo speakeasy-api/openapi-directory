@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EulaAcceptance } from "./eulaacceptance";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AcceptEulasResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var eulaacceptance_1 = require("./eulaacceptance");
 var AcceptEulasResponse = /** @class */ (function (_super) {
     __extends(AcceptEulasResponse, _super);
     function AcceptEulasResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eulaAcceptances", elemType: EulaAcceptance }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eulaAcceptances", elemType: eulaacceptance_1.EulaAcceptance }),
         __metadata("design:type", Array)
     ], AcceptEulasResponse.prototype, "eulaAcceptances", void 0);
     return AcceptEulasResponse;
-}(SpeakeasyBase));
-export { AcceptEulasResponse };
+}(utils_1.SpeakeasyBase));
+exports.AcceptEulasResponse = AcceptEulasResponse;

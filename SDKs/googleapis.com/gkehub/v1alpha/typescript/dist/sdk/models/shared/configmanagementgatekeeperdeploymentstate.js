@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigManagementGatekeeperDeploymentState = exports.ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum = exports.ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum = exports.ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum;
 (function (ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum) {
     ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum["DeploymentStateUnspecified"] = "DEPLOYMENT_STATE_UNSPECIFIED";
     ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum["NotInstalled"] = "NOT_INSTALLED";
     ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum["Installed"] = "INSTALLED";
     ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum["Error"] = "ERROR";
-})(ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum || (ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum = {}));
-export var ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum;
+})(ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum = exports.ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum || (exports.ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum = {}));
+var ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum;
 (function (ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum) {
     ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum["DeploymentStateUnspecified"] = "DEPLOYMENT_STATE_UNSPECIFIED";
     ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum["NotInstalled"] = "NOT_INSTALLED";
     ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum["Installed"] = "INSTALLED";
     ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum["Error"] = "ERROR";
-})(ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum || (ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum = {}));
-export var ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum;
+})(ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum = exports.ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum || (exports.ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum = {}));
+var ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum;
 (function (ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum) {
     ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum["DeploymentStateUnspecified"] = "DEPLOYMENT_STATE_UNSPECIFIED";
     ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum["NotInstalled"] = "NOT_INSTALLED";
     ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum["Installed"] = "INSTALLED";
     ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum["Error"] = "ERROR";
-})(ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum || (ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum = {}));
+})(ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum = exports.ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum || (exports.ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum = {}));
 // ConfigManagementGatekeeperDeploymentState
 /**
  * State of Policy Controller installation.
@@ -54,17 +57,17 @@ var ConfigManagementGatekeeperDeploymentState = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gatekeeperAudit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gatekeeperAudit" }),
         __metadata("design:type", String)
     ], ConfigManagementGatekeeperDeploymentState.prototype, "gatekeeperAudit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gatekeeperControllerManagerState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gatekeeperControllerManagerState" }),
         __metadata("design:type", String)
     ], ConfigManagementGatekeeperDeploymentState.prototype, "gatekeeperControllerManagerState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gatekeeperMutation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gatekeeperMutation" }),
         __metadata("design:type", String)
     ], ConfigManagementGatekeeperDeploymentState.prototype, "gatekeeperMutation", void 0);
     return ConfigManagementGatekeeperDeploymentState;
-}(SpeakeasyBase));
-export { ConfigManagementGatekeeperDeploymentState };
+}(utils_1.SpeakeasyBase));
+exports.ConfigManagementGatekeeperDeploymentState = ConfigManagementGatekeeperDeploymentState;

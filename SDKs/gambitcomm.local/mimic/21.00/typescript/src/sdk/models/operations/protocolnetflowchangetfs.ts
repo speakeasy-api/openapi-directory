@@ -25,5 +25,5 @@ export class ProtocolNetflowChangeTfsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolNetflowChangeTfs200ApplicationJsonString?: string;
+  protocolNetflowChangeTfs200ApplicationJSONString?: string;
 }

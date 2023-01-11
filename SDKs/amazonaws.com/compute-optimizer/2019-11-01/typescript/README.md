@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DescribeRecommendationExportJobsRequest, DescribeRecommendationExportJobsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,43 +33,35 @@ const sdk = new SDK(WithSecurity(
     
 const req: DescribeRecommendationExportJobsRequest = {
   headers: {
-    xAmzAlgorithm: "ut",
-    xAmzContentSha256: "ut",
-    xAmzCredential: "sed",
-    xAmzDate: "quibusdam",
-    xAmzSecurityToken: "harum",
-    xAmzSignature: "repudiandae",
-    xAmzSignedHeaders: "similique",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "ComputeOptimizerService.DescribeRecommendationExportJobs",
   },
   request: {
     filters: [
       {
-        name: "JobStatus",
+        name: "ResourceType",
         values: [
           "rerum",
         ],
       },
-      {
-        name: "JobStatus",
-        values: [
-          "cumque",
-          "accusamus",
-          "voluptates",
-        ],
-      },
     ],
     jobIds: [
-      "inventore",
-      "quibusdam",
-      "minima",
+      "debitis",
+      "voluptatum",
+      "et",
     ],
-    maxResults: 8170362699033353861,
-    nextToken: "adipisci",
+    maxResults: 7144924247938981575,
+    nextToken: "dolorem",
   },
 };
 
-sdk.sdk.describeRecommendationExportJobs(req).then((res: DescribeRecommendationExportJobsResponse | AxiosError) => {
+sdk.describeRecommendationExportJobs(req).then((res: DescribeRecommendationExportJobsResponse | AxiosError) => {
    // handle response
 });
 ```

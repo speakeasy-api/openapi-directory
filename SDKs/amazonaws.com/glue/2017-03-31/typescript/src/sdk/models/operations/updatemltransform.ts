@@ -66,5 +66,5 @@ export class UpdateMlTransformResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateMlTransformResponse?: shared.UpdateMlTransformResponse;
+  updateMLTransformResponse?: shared.UpdateMlTransformResponse;
 }

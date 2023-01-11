@@ -1,4 +1,7 @@
-export var CountryEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CountryEnum = void 0;
+var CountryEnum;
 (function (CountryEnum) {
     CountryEnum["Ad"] = "AD";
     CountryEnum["Ae"] = "AE";
@@ -249,4 +252,4 @@ export var CountryEnum;
     CountryEnum["Za"] = "ZA";
     CountryEnum["Zm"] = "ZM";
     CountryEnum["Zw"] = "ZW";
-})(CountryEnum || (CountryEnum = {}));
+})(CountryEnum = exports.CountryEnum || (exports.CountryEnum = {}));

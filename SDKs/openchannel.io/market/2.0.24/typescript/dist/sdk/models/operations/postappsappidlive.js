@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAppsAppIdLiveResponse = exports.PostAppsAppIdLiveRequest = exports.PostAppsAppIdLiveQueryParams = exports.PostAppsAppIdLivePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAppsAppIdLivePathParams = /** @class */ (function (_super) {
     __extends(PostAppsAppIdLivePathParams, _super);
     function PostAppsAppIdLivePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=appId" }),
         __metadata("design:type", String)
     ], PostAppsAppIdLivePathParams.prototype, "appId", void 0);
     return PostAppsAppIdLivePathParams;
-}(SpeakeasyBase));
-export { PostAppsAppIdLivePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAppsAppIdLivePathParams = PostAppsAppIdLivePathParams;
 var PostAppsAppIdLiveQueryParams = /** @class */ (function (_super) {
     __extends(PostAppsAppIdLiveQueryParams, _super);
     function PostAppsAppIdLiveQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=developerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=developerId" }),
         __metadata("design:type", String)
     ], PostAppsAppIdLiveQueryParams.prototype, "developerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=version" }),
         __metadata("design:type", String)
     ], PostAppsAppIdLiveQueryParams.prototype, "version", void 0);
     return PostAppsAppIdLiveQueryParams;
-}(SpeakeasyBase));
-export { PostAppsAppIdLiveQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAppsAppIdLiveQueryParams = PostAppsAppIdLiveQueryParams;
 var PostAppsAppIdLiveRequest = /** @class */ (function (_super) {
     __extends(PostAppsAppIdLiveRequest, _super);
     function PostAppsAppIdLiveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAppsAppIdLivePathParams)
     ], PostAppsAppIdLiveRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAppsAppIdLiveQueryParams)
     ], PostAppsAppIdLiveRequest.prototype, "queryParams", void 0);
     return PostAppsAppIdLiveRequest;
-}(SpeakeasyBase));
-export { PostAppsAppIdLiveRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAppsAppIdLiveRequest = PostAppsAppIdLiveRequest;
 var PostAppsAppIdLiveResponse = /** @class */ (function (_super) {
     __extends(PostAppsAppIdLiveResponse, _super);
     function PostAppsAppIdLiveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAppsAppIdLiveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAppsAppIdLiveResponse.prototype, "statusCode", void 0);
     return PostAppsAppIdLiveResponse;
-}(SpeakeasyBase));
-export { PostAppsAppIdLiveResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAppsAppIdLiveResponse = PostAppsAppIdLiveResponse;

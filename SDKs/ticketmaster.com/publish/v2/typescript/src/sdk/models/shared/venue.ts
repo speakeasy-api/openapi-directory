@@ -26,13 +26,13 @@ export enum VenueTypeEnum {
 **/
 export class Venue extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=accessibleSeatingDetails" })
-  accessibleSeatingDetails?: Map<string, string>;
+  accessibleSeatingDetails?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=active" })
   active?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=additionalInfos" })
-  additionalInfos?: Map<string, string>;
+  additionalInfos?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=address" })
   address?: Address;
@@ -50,7 +50,7 @@ export class Venue extends SpeakeasyBase {
   currency?: string;
 
   @SpeakeasyMetadata({ data: "json, name=descriptions" })
-  descriptions?: Map<string, string>;
+  descriptions?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=discoverable" })
   discoverable?: boolean;
@@ -74,19 +74,19 @@ export class Venue extends SpeakeasyBase {
   markets?: Market[];
 
   @SpeakeasyMetadata({ data: "json, name=names" })
-  names?: Map<string, string>;
+  names?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=parkingDetails" })
-  parkingDetails?: Map<string, string>;
+  parkingDetails?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=postalCode" })
   postalCode?: string;
 
   @SpeakeasyMetadata({ data: "json, name=references" })
-  references?: Map<string, string>;
+  references?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=relationships" })
-  relationships?: Map<string, any>[];
+  relationships?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=social" })
   social?: Social;

@@ -17,6 +17,6 @@ export declare class GetDistrictsByYearRequest extends SpeakeasyBase {
 export declare class GetDistrictsByYearResponse extends SpeakeasyBase {
     contentType: string;
     districtLists?: shared.DistrictList[];
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

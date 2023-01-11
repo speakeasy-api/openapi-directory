@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class SendOfferToInterestedBuyersHeaders extends SpeakeasyBase {
-    xEbayCMarketplaceId: string;
+    xEBAYCMARKETPLACEID: string;
 }
 export declare class SendOfferToInterestedBuyersSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;

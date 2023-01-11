@@ -23,7 +23,7 @@ export declare class StartApplicationResponse extends SpeakeasyBase {
     invalidArgumentException?: any;
     resourceInUseException?: any;
     resourceNotFoundException?: any;
-    startApplicationResponse?: Map<string, any>;
+    startApplicationResponse?: Record<string, any>;
     statusCode: number;
     unsupportedOperationException?: any;
 }

@@ -1,4 +1,7 @@
-export var MetricsNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricsNameEnum = void 0;
+var MetricsNameEnum;
 (function (MetricsNameEnum) {
     MetricsNameEnum["IncomingBytes"] = "IncomingBytes";
     MetricsNameEnum["IncomingRecords"] = "IncomingRecords";
@@ -8,4 +11,4 @@ export var MetricsNameEnum;
     MetricsNameEnum["ReadProvisionedThroughputExceeded"] = "ReadProvisionedThroughputExceeded";
     MetricsNameEnum["IteratorAgeMilliseconds"] = "IteratorAgeMilliseconds";
     MetricsNameEnum["All"] = "ALL";
-})(MetricsNameEnum || (MetricsNameEnum = {}));
+})(MetricsNameEnum = exports.MetricsNameEnum || (exports.MetricsNameEnum = {}));

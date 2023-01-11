@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdatePipelineVariableForWorkspaceResponse = exports.UpdatePipelineVariableForWorkspaceRequest = exports.UpdatePipelineVariableForWorkspacePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdatePipelineVariableForWorkspacePathParams = /** @class */ (function (_super) {
     __extends(UpdatePipelineVariableForWorkspacePathParams, _super);
     function UpdatePipelineVariableForWorkspacePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=variable_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=variable_uuid" }),
         __metadata("design:type", String)
     ], UpdatePipelineVariableForWorkspacePathParams.prototype, "variableUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], UpdatePipelineVariableForWorkspacePathParams.prototype, "workspace", void 0);
     return UpdatePipelineVariableForWorkspacePathParams;
-}(SpeakeasyBase));
-export { UpdatePipelineVariableForWorkspacePathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdatePipelineVariableForWorkspacePathParams = UpdatePipelineVariableForWorkspacePathParams;
 var UpdatePipelineVariableForWorkspaceRequest = /** @class */ (function (_super) {
     __extends(UpdatePipelineVariableForWorkspaceRequest, _super);
     function UpdatePipelineVariableForWorkspaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdatePipelineVariableForWorkspacePathParams)
     ], UpdatePipelineVariableForWorkspaceRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], UpdatePipelineVariableForWorkspaceRequest.prototype, "request", void 0);
     return UpdatePipelineVariableForWorkspaceRequest;
-}(SpeakeasyBase));
-export { UpdatePipelineVariableForWorkspaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdatePipelineVariableForWorkspaceRequest = UpdatePipelineVariableForWorkspaceRequest;
 var UpdatePipelineVariableForWorkspaceResponse = /** @class */ (function (_super) {
     __extends(UpdatePipelineVariableForWorkspaceResponse, _super);
     function UpdatePipelineVariableForWorkspaceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdatePipelineVariableForWorkspaceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdatePipelineVariableForWorkspaceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdatePipelineVariableForWorkspaceResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdatePipelineVariableForWorkspaceResponse.prototype, "pipelineVariable", void 0);
     return UpdatePipelineVariableForWorkspaceResponse;
-}(SpeakeasyBase));
-export { UpdatePipelineVariableForWorkspaceResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdatePipelineVariableForWorkspaceResponse = UpdatePipelineVariableForWorkspaceResponse;

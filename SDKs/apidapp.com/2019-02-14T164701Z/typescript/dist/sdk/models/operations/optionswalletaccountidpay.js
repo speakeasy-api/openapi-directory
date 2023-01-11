@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OptionsWalletAccountIdPayResponse = exports.OptionsWalletAccountIdPayRequest = exports.OptionsWalletAccountIdPayPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var OptionsWalletAccountIdPayPathParams = /** @class */ (function (_super) {
     __extends(OptionsWalletAccountIdPayPathParams, _super);
     function OptionsWalletAccountIdPayPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], OptionsWalletAccountIdPayPathParams.prototype, "id", void 0);
     return OptionsWalletAccountIdPayPathParams;
-}(SpeakeasyBase));
-export { OptionsWalletAccountIdPayPathParams };
+}(utils_1.SpeakeasyBase));
+exports.OptionsWalletAccountIdPayPathParams = OptionsWalletAccountIdPayPathParams;
 var OptionsWalletAccountIdPayRequest = /** @class */ (function (_super) {
     __extends(OptionsWalletAccountIdPayRequest, _super);
     function OptionsWalletAccountIdPayRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OptionsWalletAccountIdPayPathParams)
     ], OptionsWalletAccountIdPayRequest.prototype, "pathParams", void 0);
     return OptionsWalletAccountIdPayRequest;
-}(SpeakeasyBase));
-export { OptionsWalletAccountIdPayRequest };
+}(utils_1.SpeakeasyBase));
+exports.OptionsWalletAccountIdPayRequest = OptionsWalletAccountIdPayRequest;
 var OptionsWalletAccountIdPayResponse = /** @class */ (function (_super) {
     __extends(OptionsWalletAccountIdPayResponse, _super);
     function OptionsWalletAccountIdPayResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OptionsWalletAccountIdPayResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], OptionsWalletAccountIdPayResponse.prototype, "empty", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], OptionsWalletAccountIdPayResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OptionsWalletAccountIdPayResponse.prototype, "statusCode", void 0);
     return OptionsWalletAccountIdPayResponse;
-}(SpeakeasyBase));
-export { OptionsWalletAccountIdPayResponse };
+}(utils_1.SpeakeasyBase));
+exports.OptionsWalletAccountIdPayResponse = OptionsWalletAccountIdPayResponse;

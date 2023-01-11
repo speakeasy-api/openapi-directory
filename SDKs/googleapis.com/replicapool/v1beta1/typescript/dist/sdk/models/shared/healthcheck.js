@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HealthCheck = void 0;
+var utils_1 = require("../../../internal/utils");
 var HealthCheck = /** @class */ (function (_super) {
     __extends(HealthCheck, _super);
     function HealthCheck() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=checkIntervalSec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=checkIntervalSec" }),
         __metadata("design:type", Number)
     ], HealthCheck.prototype, "checkIntervalSec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], HealthCheck.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthyThreshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthyThreshold" }),
         __metadata("design:type", Number)
     ], HealthCheck.prototype, "healthyThreshold", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", String)
     ], HealthCheck.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], HealthCheck.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], HealthCheck.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], HealthCheck.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeoutSec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeoutSec" }),
         __metadata("design:type", Number)
     ], HealthCheck.prototype, "timeoutSec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unhealthyThreshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unhealthyThreshold" }),
         __metadata("design:type", Number)
     ], HealthCheck.prototype, "unhealthyThreshold", void 0);
     return HealthCheck;
-}(SpeakeasyBase));
-export { HealthCheck };
+}(utils_1.SpeakeasyBase));
+exports.HealthCheck = HealthCheck;

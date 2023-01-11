@@ -22,7 +22,7 @@ export declare class GetNamesChangesQueryParams extends SpeakeasyBase {
     fromDate: number;
     itemsPerPage?: number;
     outputFormat: GetNamesChangesOutputFormatEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     outputStyle?: GetNamesChangesOutputStyleEnum;
     sortBy?: GetNamesChangesSortByEnum;
     startIndex?: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteVpcEndpointServiceConfigurationsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteVpcEndpointServiceConfigurationsResponse = exports.PostDeleteVpcEndpointServiceConfigurationsRequest = exports.PostDeleteVpcEndpointServiceConfigurationsHeaders = exports.PostDeleteVpcEndpointServiceConfigurationsQueryParams = exports.PostDeleteVpcEndpointServiceConfigurationsVersionEnum = exports.PostDeleteVpcEndpointServiceConfigurationsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteVpcEndpointServiceConfigurationsActionEnum;
 (function (PostDeleteVpcEndpointServiceConfigurationsActionEnum) {
     PostDeleteVpcEndpointServiceConfigurationsActionEnum["DeleteVpcEndpointServiceConfigurations"] = "DeleteVpcEndpointServiceConfigurations";
-})(PostDeleteVpcEndpointServiceConfigurationsActionEnum || (PostDeleteVpcEndpointServiceConfigurationsActionEnum = {}));
-export var PostDeleteVpcEndpointServiceConfigurationsVersionEnum;
+})(PostDeleteVpcEndpointServiceConfigurationsActionEnum = exports.PostDeleteVpcEndpointServiceConfigurationsActionEnum || (exports.PostDeleteVpcEndpointServiceConfigurationsActionEnum = {}));
+var PostDeleteVpcEndpointServiceConfigurationsVersionEnum;
 (function (PostDeleteVpcEndpointServiceConfigurationsVersionEnum) {
     PostDeleteVpcEndpointServiceConfigurationsVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostDeleteVpcEndpointServiceConfigurationsVersionEnum || (PostDeleteVpcEndpointServiceConfigurationsVersionEnum = {}));
+})(PostDeleteVpcEndpointServiceConfigurationsVersionEnum = exports.PostDeleteVpcEndpointServiceConfigurationsVersionEnum || (exports.PostDeleteVpcEndpointServiceConfigurationsVersionEnum = {}));
 var PostDeleteVpcEndpointServiceConfigurationsQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteVpcEndpointServiceConfigurationsQueryParams, _super);
     function PostDeleteVpcEndpointServiceConfigurationsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteVpcEndpointServiceConfigurationsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteVpcEndpointServiceConfigurationsQueryParams.prototype, "version", void 0);
     return PostDeleteVpcEndpointServiceConfigurationsQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteVpcEndpointServiceConfigurationsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteVpcEndpointServiceConfigurationsQueryParams = PostDeleteVpcEndpointServiceConfigurationsQueryParams;
 var PostDeleteVpcEndpointServiceConfigurationsHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteVpcEndpointServiceConfigurationsHeaders, _super);
     function PostDeleteVpcEndpointServiceConfigurationsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteVpcEndpointServiceConfigurationsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteVpcEndpointServiceConfigurationsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteVpcEndpointServiceConfigurationsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteVpcEndpointServiceConfigurationsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteVpcEndpointServiceConfigurationsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteVpcEndpointServiceConfigurationsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteVpcEndpointServiceConfigurationsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteVpcEndpointServiceConfigurationsHeaders;
-}(SpeakeasyBase));
-export { PostDeleteVpcEndpointServiceConfigurationsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteVpcEndpointServiceConfigurationsHeaders = PostDeleteVpcEndpointServiceConfigurationsHeaders;
 var PostDeleteVpcEndpointServiceConfigurationsRequest = /** @class */ (function (_super) {
     __extends(PostDeleteVpcEndpointServiceConfigurationsRequest, _super);
     function PostDeleteVpcEndpointServiceConfigurationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteVpcEndpointServiceConfigurationsQueryParams)
     ], PostDeleteVpcEndpointServiceConfigurationsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteVpcEndpointServiceConfigurationsHeaders)
     ], PostDeleteVpcEndpointServiceConfigurationsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteVpcEndpointServiceConfigurationsRequest.prototype, "request", void 0);
     return PostDeleteVpcEndpointServiceConfigurationsRequest;
-}(SpeakeasyBase));
-export { PostDeleteVpcEndpointServiceConfigurationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteVpcEndpointServiceConfigurationsRequest = PostDeleteVpcEndpointServiceConfigurationsRequest;
 var PostDeleteVpcEndpointServiceConfigurationsResponse = /** @class */ (function (_super) {
     __extends(PostDeleteVpcEndpointServiceConfigurationsResponse, _super);
     function PostDeleteVpcEndpointServiceConfigurationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteVpcEndpointServiceConfigurationsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteVpcEndpointServiceConfigurationsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteVpcEndpointServiceConfigurationsResponse.prototype, "statusCode", void 0);
     return PostDeleteVpcEndpointServiceConfigurationsResponse;
-}(SpeakeasyBase));
-export { PostDeleteVpcEndpointServiceConfigurationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteVpcEndpointServiceConfigurationsResponse = PostDeleteVpcEndpointServiceConfigurationsResponse;

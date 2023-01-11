@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VideoLocalization } from "./videolocalization";
-import { ThumbnailDetails } from "./thumbnaildetails";
-export var VideoSnippetLiveBroadcastContentEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoSnippet = exports.VideoSnippetLiveBroadcastContentEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var videolocalization_1 = require("./videolocalization");
+var thumbnaildetails_1 = require("./thumbnaildetails");
+var VideoSnippetLiveBroadcastContentEnum;
 (function (VideoSnippetLiveBroadcastContentEnum) {
     VideoSnippetLiveBroadcastContentEnum["None"] = "none";
     VideoSnippetLiveBroadcastContentEnum["Upcoming"] = "upcoming";
     VideoSnippetLiveBroadcastContentEnum["Live"] = "live";
     VideoSnippetLiveBroadcastContentEnum["Completed"] = "completed";
-})(VideoSnippetLiveBroadcastContentEnum || (VideoSnippetLiveBroadcastContentEnum = {}));
+})(VideoSnippetLiveBroadcastContentEnum = exports.VideoSnippetLiveBroadcastContentEnum || (exports.VideoSnippetLiveBroadcastContentEnum = {}));
 // VideoSnippet
 /**
  * Basic details about a video, including title, description, uploader, thumbnails and category.
@@ -42,53 +45,53 @@ var VideoSnippet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryId" }),
         __metadata("design:type", String)
     ], VideoSnippet.prototype, "categoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelId" }),
         __metadata("design:type", String)
     ], VideoSnippet.prototype, "channelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelTitle" }),
         __metadata("design:type", String)
     ], VideoSnippet.prototype, "channelTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultAudioLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultAudioLanguage" }),
         __metadata("design:type", String)
     ], VideoSnippet.prototype, "defaultAudioLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultLanguage" }),
         __metadata("design:type", String)
     ], VideoSnippet.prototype, "defaultLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], VideoSnippet.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=liveBroadcastContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=liveBroadcastContent" }),
         __metadata("design:type", String)
     ], VideoSnippet.prototype, "liveBroadcastContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localized" }),
-        __metadata("design:type", VideoLocalization)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localized" }),
+        __metadata("design:type", videolocalization_1.VideoLocalization)
     ], VideoSnippet.prototype, "localized", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishedAt" }),
         __metadata("design:type", Date)
     ], VideoSnippet.prototype, "publishedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], VideoSnippet.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnails" }),
-        __metadata("design:type", ThumbnailDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnails" }),
+        __metadata("design:type", thumbnaildetails_1.ThumbnailDetails)
     ], VideoSnippet.prototype, "thumbnails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], VideoSnippet.prototype, "title", void 0);
     return VideoSnippet;
-}(SpeakeasyBase));
-export { VideoSnippet };
+}(utils_1.SpeakeasyBase));
+exports.VideoSnippet = VideoSnippet;

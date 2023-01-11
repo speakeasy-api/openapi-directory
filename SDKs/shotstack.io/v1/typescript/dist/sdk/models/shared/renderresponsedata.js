@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Edit } from "./edit";
-export var RenderResponseDataStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RenderResponseData = exports.RenderResponseDataStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var edit_1 = require("./edit");
+var RenderResponseDataStatusEnum;
 (function (RenderResponseDataStatusEnum) {
     RenderResponseDataStatusEnum["Queued"] = "queued";
     RenderResponseDataStatusEnum["Fetching"] = "fetching";
@@ -32,7 +35,7 @@ export var RenderResponseDataStatusEnum;
     RenderResponseDataStatusEnum["Saving"] = "saving";
     RenderResponseDataStatusEnum["Done"] = "done";
     RenderResponseDataStatusEnum["Failed"] = "failed";
-})(RenderResponseDataStatusEnum || (RenderResponseDataStatusEnum = {}));
+})(RenderResponseDataStatusEnum = exports.RenderResponseDataStatusEnum || (exports.RenderResponseDataStatusEnum = {}));
 // RenderResponseData
 /**
  * The response data returned with the [RenderResponse](#tocs_renderresponse) including status and URL.
@@ -43,57 +46,57 @@ var RenderResponseData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], RenderResponseData.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Edit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", edit_1.Edit)
     ], RenderResponseData.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", Number)
     ], RenderResponseData.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], RenderResponseData.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], RenderResponseData.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
         __metadata("design:type", String)
     ], RenderResponseData.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plan" }),
         __metadata("design:type", String)
     ], RenderResponseData.prototype, "plan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=poster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=poster" }),
         __metadata("design:type", String)
     ], RenderResponseData.prototype, "poster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=renderTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=renderTime" }),
         __metadata("design:type", Number)
     ], RenderResponseData.prototype, "renderTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], RenderResponseData.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnail" }),
         __metadata("design:type", String)
     ], RenderResponseData.prototype, "thumbnail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", String)
     ], RenderResponseData.prototype, "updated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], RenderResponseData.prototype, "url", void 0);
     return RenderResponseData;
-}(SpeakeasyBase));
-export { RenderResponseData };
+}(utils_1.SpeakeasyBase));
+exports.RenderResponseData = RenderResponseData;

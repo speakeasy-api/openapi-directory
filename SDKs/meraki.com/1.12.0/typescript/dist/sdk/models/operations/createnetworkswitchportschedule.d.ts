@@ -84,5 +84,5 @@ export declare class CreateNetworkSwitchPortScheduleRequest extends SpeakeasyBas
 export declare class CreateNetworkSwitchPortScheduleResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createNetworkSwitchPortSchedule201ApplicationJsonObject?: Map<string, any>;
+    createNetworkSwitchPortSchedule201ApplicationJSONObject?: Record<string, any>;
 }

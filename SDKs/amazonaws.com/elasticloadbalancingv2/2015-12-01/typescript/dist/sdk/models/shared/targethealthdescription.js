@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TargetDescription } from "./targetdescription";
-import { TargetHealth } from "./targethealth";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetHealthDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var targetdescription_1 = require("./targetdescription");
+var targethealth_1 = require("./targethealth");
 // TargetHealthDescription
 /**
  * Information about the health of a target.
@@ -35,17 +38,17 @@ var TargetHealthDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TargetHealthDescription.prototype, "healthCheckPort", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TargetDescription)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", targetdescription_1.TargetDescription)
     ], TargetHealthDescription.prototype, "target", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TargetHealth)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", targethealth_1.TargetHealth)
     ], TargetHealthDescription.prototype, "targetHealth", void 0);
     return TargetHealthDescription;
-}(SpeakeasyBase));
-export { TargetHealthDescription };
+}(utils_1.SpeakeasyBase));
+exports.TargetHealthDescription = TargetHealthDescription;

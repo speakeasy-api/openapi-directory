@@ -10,5 +10,5 @@ export class GitignoreGetAllTemplatesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  gitignoreGetAllTemplates200ApplicationJsonStrings?: string[];
+  gitignoreGetAllTemplates200ApplicationJSONStrings?: string[];
 }

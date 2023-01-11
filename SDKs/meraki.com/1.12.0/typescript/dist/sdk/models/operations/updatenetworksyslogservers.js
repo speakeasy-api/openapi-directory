@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkSyslogServersResponse = exports.UpdateNetworkSyslogServersRequest = exports.UpdateNetworkSyslogServersRequestBody = exports.UpdateNetworkSyslogServersRequestBodyServers = exports.UpdateNetworkSyslogServersPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkSyslogServersPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkSyslogServersPathParams, _super);
     function UpdateNetworkSyslogServersPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkSyslogServersPathParams.prototype, "networkId", void 0);
     return UpdateNetworkSyslogServersPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkSyslogServersPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSyslogServersPathParams = UpdateNetworkSyslogServersPathParams;
 var UpdateNetworkSyslogServersRequestBodyServers = /** @class */ (function (_super) {
     __extends(UpdateNetworkSyslogServersRequestBodyServers, _super);
     function UpdateNetworkSyslogServersRequestBodyServers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", String)
     ], UpdateNetworkSyslogServersRequestBodyServers.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], UpdateNetworkSyslogServersRequestBodyServers.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roles" }),
         __metadata("design:type", Array)
     ], UpdateNetworkSyslogServersRequestBodyServers.prototype, "roles", void 0);
     return UpdateNetworkSyslogServersRequestBodyServers;
-}(SpeakeasyBase));
-export { UpdateNetworkSyslogServersRequestBodyServers };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSyslogServersRequestBodyServers = UpdateNetworkSyslogServersRequestBodyServers;
 var UpdateNetworkSyslogServersRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkSyslogServersRequestBody, _super);
     function UpdateNetworkSyslogServersRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servers", elemType: UpdateNetworkSyslogServersRequestBodyServers }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servers", elemType: UpdateNetworkSyslogServersRequestBodyServers }),
         __metadata("design:type", Array)
     ], UpdateNetworkSyslogServersRequestBody.prototype, "servers", void 0);
     return UpdateNetworkSyslogServersRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkSyslogServersRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSyslogServersRequestBody = UpdateNetworkSyslogServersRequestBody;
 var UpdateNetworkSyslogServersRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkSyslogServersRequest, _super);
     function UpdateNetworkSyslogServersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkSyslogServersPathParams)
     ], UpdateNetworkSyslogServersRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkSyslogServersRequestBody)
     ], UpdateNetworkSyslogServersRequest.prototype, "request", void 0);
     return UpdateNetworkSyslogServersRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkSyslogServersRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSyslogServersRequest = UpdateNetworkSyslogServersRequest;
 var UpdateNetworkSyslogServersResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkSyslogServersResponse, _super);
     function UpdateNetworkSyslogServersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkSyslogServersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkSyslogServersResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkSyslogServersResponse.prototype, "updateNetworkSyslogServers200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkSyslogServersResponse.prototype, "updateNetworkSyslogServers200ApplicationJSONObject", void 0);
     return UpdateNetworkSyslogServersResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkSyslogServersResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSyslogServersResponse = UpdateNetworkSyslogServersResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PagespeedApiImageV2 = exports.PagespeedApiImageV2PageRect = void 0;
+var utils_1 = require("../../../internal/utils");
 // PagespeedApiImageV2PageRect
 /**
  * The region of the page that is captured by this image, with dimensions measured in CSS pixels.
@@ -33,53 +36,53 @@ var PagespeedApiImageV2PageRect = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiImageV2PageRect.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiImageV2PageRect.prototype, "left", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiImageV2PageRect.prototype, "top", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiImageV2PageRect.prototype, "width", void 0);
     return PagespeedApiImageV2PageRect;
-}(SpeakeasyBase));
-export { PagespeedApiImageV2PageRect };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiImageV2PageRect = PagespeedApiImageV2PageRect;
 var PagespeedApiImageV2 = /** @class */ (function (_super) {
     __extends(PagespeedApiImageV2, _super);
     function PagespeedApiImageV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiImageV2.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiImageV2.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiImageV2.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiImageV2.prototype, "mimeType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PagespeedApiImageV2PageRect)
     ], PagespeedApiImageV2.prototype, "pageRect", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiImageV2.prototype, "width", void 0);
     return PagespeedApiImageV2;
-}(SpeakeasyBase));
-export { PagespeedApiImageV2 };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiImageV2 = PagespeedApiImageV2;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstancesCount = void 0;
+var utils_1 = require("../../../internal/utils");
 // InstancesCount
 /**
  * Describes how many instances a stack has for each status.
@@ -33,85 +36,85 @@ var InstancesCount = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Assigning" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Assigning" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "assigning", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Booting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Booting" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "booting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConnectionLost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConnectionLost" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "connectionLost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Deregistering" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Deregistering" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "deregistering", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Online" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Online" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "online", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Pending" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Pending" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "pending", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Rebooting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Rebooting" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "rebooting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Registered" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Registered" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "registered", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Registering" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Registering" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "registering", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Requested" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Requested" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "requested", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RunningSetup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RunningSetup" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "runningSetup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SetupFailed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SetupFailed" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "setupFailed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ShuttingDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ShuttingDown" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "shuttingDown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartFailed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartFailed" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "startFailed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StopFailed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StopFailed" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "stopFailed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Stopped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Stopped" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "stopped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Stopping" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Stopping" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "stopping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Terminated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Terminated" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "terminated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Terminating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Terminating" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "terminating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Unassigning" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Unassigning" }),
         __metadata("design:type", Number)
     ], InstancesCount.prototype, "unassigning", void 0);
     return InstancesCount;
-}(SpeakeasyBase));
-export { InstancesCount };
+}(utils_1.SpeakeasyBase));
+exports.InstancesCount = InstancesCount;

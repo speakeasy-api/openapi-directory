@@ -8,6 +8,6 @@ import { FacetAttributeTypeEnum } from "./facetattributetypeenum";
 export declare class FacetAttributeDefinition extends SpeakeasyBase {
     defaultValue?: TypedAttributeValue;
     isImmutable?: boolean;
-    rules?: Map<string, Rule>;
+    rules?: Record<string, Rule>;
     type: FacetAttributeTypeEnum;
 }

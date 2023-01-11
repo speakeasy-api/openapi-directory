@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Distance } from "./distance";
-import { Pagination } from "./pagination";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FacilitiesMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var distance_1 = require("./distance");
+var pagination_1 = require("./pagination");
 var FacilitiesMetadata = /** @class */ (function (_super) {
     __extends(FacilitiesMetadata, _super);
     function FacilitiesMetadata() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distances", elemType: Distance }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distances", elemType: distance_1.Distance }),
         __metadata("design:type", Array)
     ], FacilitiesMetadata.prototype, "distances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
-        __metadata("design:type", Pagination)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
+        __metadata("design:type", pagination_1.Pagination)
     ], FacilitiesMetadata.prototype, "pagination", void 0);
     return FacilitiesMetadata;
-}(SpeakeasyBase));
-export { FacilitiesMetadata };
+}(utils_1.SpeakeasyBase));
+exports.FacilitiesMetadata = FacilitiesMetadata;

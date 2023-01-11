@@ -23,7 +23,7 @@ export declare class PublishMetricsRequest extends SpeakeasyBase {
 export declare class PublishMetricsResponse extends SpeakeasyBase {
     contentType: string;
     internalServerException?: any;
-    publishMetricsOutput?: Map<string, any>;
+    publishMetricsOutput?: Record<string, any>;
     statusCode: number;
     validationException?: any;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AllowedClientMountPermissionsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllowedClientInput = exports.AllowedClient = exports.AllowedClientMountPermissionsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AllowedClientMountPermissionsEnum;
 (function (AllowedClientMountPermissionsEnum) {
     AllowedClientMountPermissionsEnum["MountPermissionsUnspecified"] = "MOUNT_PERMISSIONS_UNSPECIFIED";
     AllowedClientMountPermissionsEnum["Read"] = "READ";
     AllowedClientMountPermissionsEnum["ReadWrite"] = "READ_WRITE";
-})(AllowedClientMountPermissionsEnum || (AllowedClientMountPermissionsEnum = {}));
+})(AllowedClientMountPermissionsEnum = exports.AllowedClientMountPermissionsEnum || (exports.AllowedClientMountPermissionsEnum = {}));
 // AllowedClient
 /**
  * Represents an 'access point' for the share.
@@ -39,40 +42,40 @@ var AllowedClient = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowDev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowDev" }),
         __metadata("design:type", Boolean)
     ], AllowedClient.prototype, "allowDev", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowSuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowSuid" }),
         __metadata("design:type", Boolean)
     ], AllowedClient.prototype, "allowSuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedClientsCidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedClientsCidr" }),
         __metadata("design:type", String)
     ], AllowedClient.prototype, "allowedClientsCidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mountPermissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mountPermissions" }),
         __metadata("design:type", String)
     ], AllowedClient.prototype, "mountPermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
         __metadata("design:type", String)
     ], AllowedClient.prototype, "network", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nfsPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nfsPath" }),
         __metadata("design:type", String)
     ], AllowedClient.prototype, "nfsPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noRootSquash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noRootSquash" }),
         __metadata("design:type", Boolean)
     ], AllowedClient.prototype, "noRootSquash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shareIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shareIp" }),
         __metadata("design:type", String)
     ], AllowedClient.prototype, "shareIp", void 0);
     return AllowedClient;
-}(SpeakeasyBase));
-export { AllowedClient };
+}(utils_1.SpeakeasyBase));
+exports.AllowedClient = AllowedClient;
 // AllowedClientInput
 /**
  * Represents an 'access point' for the share.
@@ -83,29 +86,29 @@ var AllowedClientInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowDev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowDev" }),
         __metadata("design:type", Boolean)
     ], AllowedClientInput.prototype, "allowDev", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowSuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowSuid" }),
         __metadata("design:type", Boolean)
     ], AllowedClientInput.prototype, "allowSuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedClientsCidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedClientsCidr" }),
         __metadata("design:type", String)
     ], AllowedClientInput.prototype, "allowedClientsCidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mountPermissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mountPermissions" }),
         __metadata("design:type", String)
     ], AllowedClientInput.prototype, "mountPermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
         __metadata("design:type", String)
     ], AllowedClientInput.prototype, "network", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noRootSquash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noRootSquash" }),
         __metadata("design:type", Boolean)
     ], AllowedClientInput.prototype, "noRootSquash", void 0);
     return AllowedClientInput;
-}(SpeakeasyBase));
-export { AllowedClientInput };
+}(utils_1.SpeakeasyBase));
+exports.AllowedClientInput = AllowedClientInput;

@@ -14,5 +14,5 @@ export class GetTruststoreInfoResponse extends SpeakeasyBase {
   truststoreInfo?: shared.TruststoreInfo;
 
   @SpeakeasyMetadata()
-  getTruststoreInfoDefaultApplicationJsonString?: string;
+  getTruststoreInfoDefaultApplicationJSONString?: string;
 }

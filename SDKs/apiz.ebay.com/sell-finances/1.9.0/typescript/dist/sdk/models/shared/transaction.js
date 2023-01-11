@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
-import { Buyer } from "./buyer";
-import { OrderLineItem } from "./orderlineitem";
-import { Reference } from "./reference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Transaction = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
+var buyer_1 = require("./buyer");
+var orderlineitem_1 = require("./orderlineitem");
+var reference_1 = require("./reference");
 // Transaction
 /**
  * This type is used to express the details of one of the following monetary transactions: a buyer's payment for an order, a refund to the buyer for a returned item or cancelled order, or a credit issued by eBay to the seller's account.
@@ -37,73 +40,73 @@ var Transaction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", amount_1.Amount)
     ], Transaction.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingEntry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingEntry" }),
         __metadata("design:type", String)
     ], Transaction.prototype, "bookingEntry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buyer" }),
-        __metadata("design:type", Buyer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buyer" }),
+        __metadata("design:type", buyer_1.Buyer)
     ], Transaction.prototype, "buyer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feeType" }),
         __metadata("design:type", String)
     ], Transaction.prototype, "feeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderId" }),
         __metadata("design:type", String)
     ], Transaction.prototype, "orderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderLineItems", elemType: OrderLineItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderLineItems", elemType: orderlineitem_1.OrderLineItem }),
         __metadata("design:type", Array)
     ], Transaction.prototype, "orderLineItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentsEntity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentsEntity" }),
         __metadata("design:type", String)
     ], Transaction.prototype, "paymentsEntity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payoutId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payoutId" }),
         __metadata("design:type", String)
     ], Transaction.prototype, "payoutId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=references", elemType: Reference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=references", elemType: reference_1.Reference }),
         __metadata("design:type", Array)
     ], Transaction.prototype, "references", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=salesRecordReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=salesRecordReference" }),
         __metadata("design:type", String)
     ], Transaction.prototype, "salesRecordReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalFeeAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalFeeAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], Transaction.prototype, "totalFeeAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalFeeBasisAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalFeeBasisAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], Transaction.prototype, "totalFeeBasisAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionDate" }),
         __metadata("design:type", String)
     ], Transaction.prototype, "transactionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionId" }),
         __metadata("design:type", String)
     ], Transaction.prototype, "transactionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionMemo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionMemo" }),
         __metadata("design:type", String)
     ], Transaction.prototype, "transactionMemo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionStatus" }),
         __metadata("design:type", String)
     ], Transaction.prototype, "transactionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionType" }),
         __metadata("design:type", String)
     ], Transaction.prototype, "transactionType", void 0);
     return Transaction;
-}(SpeakeasyBase));
-export { Transaction };
+}(utils_1.SpeakeasyBase));
+exports.Transaction = Transaction;

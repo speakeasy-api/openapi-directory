@@ -1,7 +1,10 @@
-export var EnvironmentHealthEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentHealthEnum = void 0;
+var EnvironmentHealthEnum;
 (function (EnvironmentHealthEnum) {
     EnvironmentHealthEnum["Green"] = "Green";
     EnvironmentHealthEnum["Yellow"] = "Yellow";
     EnvironmentHealthEnum["Red"] = "Red";
     EnvironmentHealthEnum["Grey"] = "Grey";
-})(EnvironmentHealthEnum || (EnvironmentHealthEnum = {}));
+})(EnvironmentHealthEnum = exports.EnvironmentHealthEnum || (exports.EnvironmentHealthEnum = {}));

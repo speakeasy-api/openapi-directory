@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { NncerRequest, NncerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,22 +30,22 @@ const req: NncerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      refNo: "consequatur",
+      refNo: "sit",
     },
-    consentArtifact: "praesentium",
+    consentArtifact: "voluptas",
     format: "pdf",
-    txnId: "aut",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.nncer(req).then((res: NncerResponse | AxiosError) => {
+sdk.apIs.nncer(req).then((res: NncerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -55,7 +54,7 @@ sdk.sdk.nncer(req).then((res: NncerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `nncer` - Non-Encumbrance Certificate
 

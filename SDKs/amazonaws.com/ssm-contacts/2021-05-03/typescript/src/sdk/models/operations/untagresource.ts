@@ -63,7 +63,7 @@ export class UntagResourceResponse extends SpeakeasyBase {
   throttlingException?: any;
 
   @SpeakeasyMetadata()
-  untagResourceResult?: Map<string, any>;
+  untagResourceResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

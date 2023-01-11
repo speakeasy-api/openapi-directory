@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttributeValue } from "./attributevalue";
-// BatchResponse
-/**
- * The item attributes from a response in a specific table, along with the read resources consumed on the table during the request.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var attributevalue_1 = require("./attributevalue");
 var BatchResponse = /** @class */ (function (_super) {
     __extends(BatchResponse, _super);
     function BatchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConsumedCapacityUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConsumedCapacityUnits" }),
         __metadata("design:type", Number)
     ], BatchResponse.prototype, "consumedCapacityUnits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Items", elemType: AttributeValue, elemDepth: 2 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Items", elemType: attributevalue_1.AttributeValue, elemDepth: 2 }),
         __metadata("design:type", Array)
     ], BatchResponse.prototype, "items", void 0);
     return BatchResponse;
-}(SpeakeasyBase));
-export { BatchResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchResponse = BatchResponse;

@@ -9,7 +9,7 @@ export declare class UsersListPublicSshKeysForAuthenticatedRequest extends Speak
 }
 export declare class UsersListPublicSshKeysForAuthenticatedResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     keys?: shared.Key[];

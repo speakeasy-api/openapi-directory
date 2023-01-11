@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HighShelf = void 0;
+var utils_1 = require("../../../internal/utils");
 var HighShelf = /** @class */ (function (_super) {
     __extends(HighShelf, _super);
     function HighShelf() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequency" }),
         __metadata("design:type", Number)
     ], HighShelf.prototype, "frequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gain_db" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gain_db" }),
         __metadata("design:type", Number)
     ], HighShelf.prototype, "gainDb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quality" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quality" }),
         __metadata("design:type", Number)
     ], HighShelf.prototype, "quality", void 0);
     return HighShelf;
-}(SpeakeasyBase));
-export { HighShelf };
+}(utils_1.SpeakeasyBase));
+exports.HighShelf = HighShelf;

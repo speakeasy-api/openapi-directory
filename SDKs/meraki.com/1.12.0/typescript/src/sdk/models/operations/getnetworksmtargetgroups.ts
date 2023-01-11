@@ -31,5 +31,5 @@ export class GetNetworkSmTargetGroupsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSmTargetGroups200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSmTargetGroups200ApplicationJSONObject?: Record<string, any>;
 }

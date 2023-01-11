@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CardSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 var CardSettings = /** @class */ (function (_super) {
     __extends(CardSettings, _super);
     function CardSettings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=background_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=background_color" }),
         __metadata("design:type", String)
     ], CardSettings.prototype, "backgroundColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=border_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=border_color" }),
         __metadata("design:type", String)
     ], CardSettings.prototype, "borderColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=border_radius" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=border_radius" }),
         __metadata("design:type", String)
     ], CardSettings.prototype, "borderRadius", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=border_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=border_size" }),
         __metadata("design:type", String)
     ], CardSettings.prototype, "borderSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
         __metadata("design:type", String)
     ], CardSettings.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columns" }),
         __metadata("design:type", Number)
     ], CardSettings.prototype, "columns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description_lines" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description_lines" }),
         __metadata("design:type", Number)
     ], CardSettings.prototype, "descriptionLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icon_border_radius" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icon_border_radius" }),
         __metadata("design:type", String)
     ], CardSettings.prototype, "iconBorderRadius", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icon_shadow_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icon_shadow_enabled" }),
         __metadata("design:type", Boolean)
     ], CardSettings.prototype, "iconShadowEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icon_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icon_size" }),
         __metadata("design:type", Number)
     ], CardSettings.prototype, "iconSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shadow_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shadow_enabled" }),
         __metadata("design:type", Boolean)
     ], CardSettings.prototype, "shadowEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=show_action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=show_action" }),
         __metadata("design:type", Boolean)
     ], CardSettings.prototype, "showAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=show_badges" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=show_badges" }),
         __metadata("design:type", Boolean)
     ], CardSettings.prototype, "showBadges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=show_category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=show_category" }),
         __metadata("design:type", Boolean)
     ], CardSettings.prototype, "showCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=show_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=show_description" }),
         __metadata("design:type", Boolean)
     ], CardSettings.prototype, "showDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=style" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=style" }),
         __metadata("design:type", String)
     ], CardSettings.prototype, "style", void 0);
     return CardSettings;
-}(SpeakeasyBase));
-export { CardSettings };
+}(utils_1.SpeakeasyBase));
+exports.CardSettings = CardSettings;

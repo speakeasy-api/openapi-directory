@@ -38,7 +38,7 @@ export class GetPaymentDisputeSummariesSecurity extends SpeakeasyBase {
 
 export class GetPaymentDisputeSummariesRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   queryParams: GetPaymentDisputeSummariesQueryParams;

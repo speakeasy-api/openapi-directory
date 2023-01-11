@@ -6,13 +6,13 @@ import { ExperimentTemplateTarget } from "./experimenttemplatetarget";
  * Describes an experiment template.
 **/
 export declare class ExperimentTemplate extends SpeakeasyBase {
-    actions?: Map<string, ExperimentTemplateAction>;
+    actions?: Record<string, ExperimentTemplateAction>;
     creationTime?: Date;
     description?: string;
     id?: string;
     lastUpdateTime?: Date;
     roleArn?: string;
     stopConditions?: ExperimentTemplateStopCondition[];
-    tags?: Map<string, string>;
-    targets?: Map<string, ExperimentTemplateTarget>;
+    tags?: Record<string, string>;
+    targets?: Record<string, ExperimentTemplateTarget>;
 }

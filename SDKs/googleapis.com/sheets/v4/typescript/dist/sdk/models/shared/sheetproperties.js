@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSourceSheetProperties } from "./datasourcesheetproperties";
-import { GridProperties } from "./gridproperties";
-import { Color } from "./color";
-import { ColorStyle } from "./colorstyle";
-export var SheetPropertiesSheetTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SheetProperties = exports.SheetPropertiesSheetTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasourcesheetproperties_1 = require("./datasourcesheetproperties");
+var gridproperties_1 = require("./gridproperties");
+var color_1 = require("./color");
+var colorstyle_1 = require("./colorstyle");
+var SheetPropertiesSheetTypeEnum;
 (function (SheetPropertiesSheetTypeEnum) {
     SheetPropertiesSheetTypeEnum["SheetTypeUnspecified"] = "SHEET_TYPE_UNSPECIFIED";
     SheetPropertiesSheetTypeEnum["Grid"] = "GRID";
     SheetPropertiesSheetTypeEnum["Object"] = "OBJECT";
     SheetPropertiesSheetTypeEnum["DataSource"] = "DATA_SOURCE";
-})(SheetPropertiesSheetTypeEnum || (SheetPropertiesSheetTypeEnum = {}));
+})(SheetPropertiesSheetTypeEnum = exports.SheetPropertiesSheetTypeEnum || (exports.SheetPropertiesSheetTypeEnum = {}));
 // SheetProperties
 /**
  * Properties of a sheet.
@@ -44,45 +47,45 @@ var SheetProperties = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceSheetProperties" }),
-        __metadata("design:type", DataSourceSheetProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceSheetProperties" }),
+        __metadata("design:type", datasourcesheetproperties_1.DataSourceSheetProperties)
     ], SheetProperties.prototype, "dataSourceSheetProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gridProperties" }),
-        __metadata("design:type", GridProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gridProperties" }),
+        __metadata("design:type", gridproperties_1.GridProperties)
     ], SheetProperties.prototype, "gridProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hidden" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hidden" }),
         __metadata("design:type", Boolean)
     ], SheetProperties.prototype, "hidden", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=index" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=index" }),
         __metadata("design:type", Number)
     ], SheetProperties.prototype, "index", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rightToLeft" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rightToLeft" }),
         __metadata("design:type", Boolean)
     ], SheetProperties.prototype, "rightToLeft", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sheetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sheetId" }),
         __metadata("design:type", Number)
     ], SheetProperties.prototype, "sheetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sheetType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sheetType" }),
         __metadata("design:type", String)
     ], SheetProperties.prototype, "sheetType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tabColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tabColor" }),
+        __metadata("design:type", color_1.Color)
     ], SheetProperties.prototype, "tabColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tabColorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tabColorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], SheetProperties.prototype, "tabColorStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], SheetProperties.prototype, "title", void 0);
     return SheetProperties;
-}(SpeakeasyBase));
-export { SheetProperties };
+}(utils_1.SpeakeasyBase));
+exports.SheetProperties = SheetProperties;

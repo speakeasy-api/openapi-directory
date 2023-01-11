@@ -4,7 +4,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData extends SpeakeasyBase {
     confidenceScore?: number;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     queryRecord?: string;
     suggestion?: string;
 }

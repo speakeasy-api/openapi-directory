@@ -3,8 +3,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
  * Message containing Stack Pack information.
 **/
 export declare class StackPack extends SpeakeasyBase {
-    descriptions?: Map<string, string>;
-    iconDataUrl?: string;
+    descriptions?: Record<string, string>;
+    iconDataURL?: string;
     id?: string;
     title?: string;
 }

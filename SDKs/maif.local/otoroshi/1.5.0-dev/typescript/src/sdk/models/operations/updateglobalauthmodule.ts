@@ -35,5 +35,5 @@ export class UpdateGlobalAuthModuleResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateGlobalAuthModule200ApplicationJsonOneOf?: any;
+  updateGlobalAuthModule200ApplicationJSONOneOf?: any;
 }

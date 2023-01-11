@@ -11,7 +11,7 @@ export class GoogleCloudContactcenterinsightsV1SmartReplyData extends SpeakeasyB
   confidenceScore?: number;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, string>;
+  metadata?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=queryRecord" })
   queryRecord?: string;

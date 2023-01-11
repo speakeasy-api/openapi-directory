@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContactInformation } from "./contactinformation";
-import { Seller } from "./seller";
-import { TargetingCriteria } from "./targetingcriteria";
-import { DealTerms } from "./dealterms";
-export var ProductSyndicationProductEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Product = exports.ProductSyndicationProductEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var contactinformation_1 = require("./contactinformation");
+var seller_1 = require("./seller");
+var targetingcriteria_1 = require("./targetingcriteria");
+var dealterms_1 = require("./dealterms");
+var ProductSyndicationProductEnum;
 (function (ProductSyndicationProductEnum) {
     ProductSyndicationProductEnum["SyndicationProductUnspecified"] = "SYNDICATION_PRODUCT_UNSPECIFIED";
     ProductSyndicationProductEnum["Content"] = "CONTENT";
     ProductSyndicationProductEnum["Mobile"] = "MOBILE";
     ProductSyndicationProductEnum["Video"] = "VIDEO";
     ProductSyndicationProductEnum["Games"] = "GAMES";
-})(ProductSyndicationProductEnum || (ProductSyndicationProductEnum = {}));
+})(ProductSyndicationProductEnum = exports.ProductSyndicationProductEnum || (exports.ProductSyndicationProductEnum = {}));
 // Product
 /**
  * A product is a segment of inventory that a seller wants to sell. It is associated with certain terms and targeting information which helps the buyer know more about the inventory.
@@ -45,65 +48,65 @@ var Product = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availableEndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availableEndTime" }),
         __metadata("design:type", String)
     ], Product.prototype, "availableEndTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availableStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availableStartTime" }),
         __metadata("design:type", String)
     ], Product.prototype, "availableStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Product.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creatorContacts", elemType: ContactInformation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creatorContacts", elemType: contactinformation_1.ContactInformation }),
         __metadata("design:type", Array)
     ], Product.prototype, "creatorContacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Product.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasCreatorSignedOff" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasCreatorSignedOff" }),
         __metadata("design:type", Boolean)
     ], Product.prototype, "hasCreatorSignedOff", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productId" }),
         __metadata("design:type", String)
     ], Product.prototype, "productId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productRevision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productRevision" }),
         __metadata("design:type", String)
     ], Product.prototype, "productRevision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisherProfileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisherProfileId" }),
         __metadata("design:type", String)
     ], Product.prototype, "publisherProfileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seller" }),
-        __metadata("design:type", Seller)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seller" }),
+        __metadata("design:type", seller_1.Seller)
     ], Product.prototype, "seller", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=syndicationProduct" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=syndicationProduct" }),
         __metadata("design:type", String)
     ], Product.prototype, "syndicationProduct", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetingCriterion", elemType: TargetingCriteria }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetingCriterion", elemType: targetingcriteria_1.TargetingCriteria }),
         __metadata("design:type", Array)
     ], Product.prototype, "targetingCriterion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=terms" }),
-        __metadata("design:type", DealTerms)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=terms" }),
+        __metadata("design:type", dealterms_1.DealTerms)
     ], Product.prototype, "terms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Product.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webPropertyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webPropertyCode" }),
         __metadata("design:type", String)
     ], Product.prototype, "webPropertyCode", void 0);
     return Product;
-}(SpeakeasyBase));
-export { Product };
+}(utils_1.SpeakeasyBase));
+exports.Product = Product;

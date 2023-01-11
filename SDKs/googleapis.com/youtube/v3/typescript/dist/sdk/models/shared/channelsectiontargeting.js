@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChannelSectionTargeting = void 0;
+var utils_1 = require("../../../internal/utils");
 // ChannelSectionTargeting
 /**
  * ChannelSection targeting setting.
@@ -33,17 +36,17 @@ var ChannelSectionTargeting = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countries" }),
         __metadata("design:type", Array)
     ], ChannelSectionTargeting.prototype, "countries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languages" }),
         __metadata("design:type", Array)
     ], ChannelSectionTargeting.prototype, "languages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regions" }),
         __metadata("design:type", Array)
     ], ChannelSectionTargeting.prototype, "regions", void 0);
     return ChannelSectionTargeting;
-}(SpeakeasyBase));
-export { ChannelSectionTargeting };
+}(utils_1.SpeakeasyBase));
+exports.ChannelSectionTargeting = ChannelSectionTargeting;

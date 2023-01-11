@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatchBinIdResponse = exports.PatchBinIdRequest = exports.PatchBinIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PatchBinIdPathParams = /** @class */ (function (_super) {
     __extends(PatchBinIdPathParams, _super);
     function PatchBinIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], PatchBinIdPathParams.prototype, "id", void 0);
     return PatchBinIdPathParams;
-}(SpeakeasyBase));
-export { PatchBinIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PatchBinIdPathParams = PatchBinIdPathParams;
 var PatchBinIdRequest = /** @class */ (function (_super) {
     __extends(PatchBinIdRequest, _super);
     function PatchBinIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PatchBinIdPathParams)
     ], PatchBinIdRequest.prototype, "pathParams", void 0);
     return PatchBinIdRequest;
-}(SpeakeasyBase));
-export { PatchBinIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.PatchBinIdRequest = PatchBinIdRequest;
 var PatchBinIdResponse = /** @class */ (function (_super) {
     __extends(PatchBinIdResponse, _super);
     function PatchBinIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PatchBinIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PatchBinIdResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PatchBinIdResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PatchBinIdResponse.prototype, "updateStatus", void 0);
     return PatchBinIdResponse;
-}(SpeakeasyBase));
-export { PatchBinIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.PatchBinIdResponse = PatchBinIdResponse;

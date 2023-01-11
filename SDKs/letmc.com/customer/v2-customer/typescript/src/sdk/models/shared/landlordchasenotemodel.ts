@@ -17,5 +17,5 @@ export class LandlordChaseNoteModel extends SpeakeasyBase {
   noteType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=TenantID" })
-  tenantId?: string;
+  tenantID?: string;
 }

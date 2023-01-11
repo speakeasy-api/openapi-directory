@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkMqttBrokerResponse = exports.UpdateNetworkMqttBrokerRequest = exports.UpdateNetworkMqttBrokerRequestBody = exports.UpdateNetworkMqttBrokerPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkMqttBrokerPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkMqttBrokerPathParams, _super);
     function UpdateNetworkMqttBrokerPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=mqttBrokerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=mqttBrokerId" }),
         __metadata("design:type", String)
     ], UpdateNetworkMqttBrokerPathParams.prototype, "mqttBrokerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkMqttBrokerPathParams.prototype, "networkId", void 0);
     return UpdateNetworkMqttBrokerPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkMqttBrokerPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkMqttBrokerPathParams = UpdateNetworkMqttBrokerPathParams;
 var UpdateNetworkMqttBrokerRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkMqttBrokerRequestBody, _super);
     function UpdateNetworkMqttBrokerRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", String)
     ], UpdateNetworkMqttBrokerRequestBody.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateNetworkMqttBrokerRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], UpdateNetworkMqttBrokerRequestBody.prototype, "port", void 0);
     return UpdateNetworkMqttBrokerRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkMqttBrokerRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkMqttBrokerRequestBody = UpdateNetworkMqttBrokerRequestBody;
 var UpdateNetworkMqttBrokerRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkMqttBrokerRequest, _super);
     function UpdateNetworkMqttBrokerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkMqttBrokerPathParams)
     ], UpdateNetworkMqttBrokerRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkMqttBrokerRequestBody)
     ], UpdateNetworkMqttBrokerRequest.prototype, "request", void 0);
     return UpdateNetworkMqttBrokerRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkMqttBrokerRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkMqttBrokerRequest = UpdateNetworkMqttBrokerRequest;
 var UpdateNetworkMqttBrokerResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkMqttBrokerResponse, _super);
     function UpdateNetworkMqttBrokerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkMqttBrokerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkMqttBrokerResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkMqttBrokerResponse.prototype, "updateNetworkMqttBroker200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkMqttBrokerResponse.prototype, "updateNetworkMqttBroker200ApplicationJSONObject", void 0);
     return UpdateNetworkMqttBrokerResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkMqttBrokerResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkMqttBrokerResponse = UpdateNetworkMqttBrokerResponse;

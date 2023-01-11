@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,126 +14,151 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConnectionsAddResponse = exports.ConnectionsAddRequest = exports.ConnectionsAddSecurity = exports.ConnectionsAddHeaders = exports.ConnectionsAddPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ConnectionsAddPathParams = /** @class */ (function (_super) {
     __extends(ConnectionsAddPathParams, _super);
     function ConnectionsAddPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=service_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=service_id" }),
         __metadata("design:type", String)
     ], ConnectionsAddPathParams.prototype, "serviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=unified_api" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=unified_api" }),
         __metadata("design:type", String)
     ], ConnectionsAddPathParams.prototype, "unifiedApi", void 0);
     return ConnectionsAddPathParams;
-}(SpeakeasyBase));
-export { ConnectionsAddPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ConnectionsAddPathParams = ConnectionsAddPathParams;
 var ConnectionsAddHeaders = /** @class */ (function (_super) {
     __extends(ConnectionsAddHeaders, _super);
     function ConnectionsAddHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-apideck-app-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-app-id" }),
         __metadata("design:type", String)
     ], ConnectionsAddHeaders.prototype, "xApideckAppId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-apideck-consumer-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-consumer-id" }),
         __metadata("design:type", String)
     ], ConnectionsAddHeaders.prototype, "xApideckConsumerId", void 0);
     return ConnectionsAddHeaders;
-}(SpeakeasyBase));
-export { ConnectionsAddHeaders };
+}(utils_1.SpeakeasyBase));
+exports.ConnectionsAddHeaders = ConnectionsAddHeaders;
 var ConnectionsAddSecurity = /** @class */ (function (_super) {
     __extends(ConnectionsAddSecurity, _super);
     function ConnectionsAddSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], ConnectionsAddSecurity.prototype, "apiKey", void 0);
     return ConnectionsAddSecurity;
-}(SpeakeasyBase));
-export { ConnectionsAddSecurity };
+}(utils_1.SpeakeasyBase));
+exports.ConnectionsAddSecurity = ConnectionsAddSecurity;
 var ConnectionsAddRequest = /** @class */ (function (_super) {
     __extends(ConnectionsAddRequest, _super);
     function ConnectionsAddRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ConnectionsAddPathParams)
     ], ConnectionsAddRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ConnectionsAddHeaders)
     ], ConnectionsAddRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.ConnectionInput)
     ], ConnectionsAddRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ConnectionsAddSecurity)
     ], ConnectionsAddRequest.prototype, "security", void 0);
     return ConnectionsAddRequest;
-}(SpeakeasyBase));
-export { ConnectionsAddRequest };
+}(utils_1.SpeakeasyBase));
+exports.ConnectionsAddRequest = ConnectionsAddRequest;
 var ConnectionsAddResponse = /** @class */ (function (_super) {
     __extends(ConnectionsAddResponse, _super);
     function ConnectionsAddResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BadRequestResponse)
     ], ConnectionsAddResponse.prototype, "badRequestResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConnectionsAddResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.CreateConnectionResponse)
     ], ConnectionsAddResponse.prototype, "createConnectionResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.NotFoundResponse)
     ], ConnectionsAddResponse.prototype, "notFoundResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.PaymentRequiredResponse)
     ], ConnectionsAddResponse.prototype, "paymentRequiredResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ConnectionsAddResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UnauthorizedResponse)
     ], ConnectionsAddResponse.prototype, "unauthorizedResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UnexpectedErrorResponse)
     ], ConnectionsAddResponse.prototype, "unexpectedErrorResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UnprocessableResponse)
     ], ConnectionsAddResponse.prototype, "unprocessableResponse", void 0);
     return ConnectionsAddResponse;
-}(SpeakeasyBase));
-export { ConnectionsAddResponse };
+}(utils_1.SpeakeasyBase));
+exports.ConnectionsAddResponse = ConnectionsAddResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2InfoType } from "./googleprivacydlpv2infotype";
-import { GooglePrivacyDlpV2Location } from "./googleprivacydlpv2location";
-import { GooglePrivacyDlpV2QuoteInfo } from "./googleprivacydlpv2quoteinfo";
-export var GooglePrivacyDlpV2FindingLikelihoodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2Finding = exports.GooglePrivacyDlpV2FindingLikelihoodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2infotype_1 = require("./googleprivacydlpv2infotype");
+var googleprivacydlpv2location_1 = require("./googleprivacydlpv2location");
+var googleprivacydlpv2quoteinfo_1 = require("./googleprivacydlpv2quoteinfo");
+var GooglePrivacyDlpV2FindingLikelihoodEnum;
 (function (GooglePrivacyDlpV2FindingLikelihoodEnum) {
     GooglePrivacyDlpV2FindingLikelihoodEnum["LikelihoodUnspecified"] = "LIKELIHOOD_UNSPECIFIED";
     GooglePrivacyDlpV2FindingLikelihoodEnum["VeryUnlikely"] = "VERY_UNLIKELY";
@@ -34,7 +37,7 @@ export var GooglePrivacyDlpV2FindingLikelihoodEnum;
     GooglePrivacyDlpV2FindingLikelihoodEnum["Possible"] = "POSSIBLE";
     GooglePrivacyDlpV2FindingLikelihoodEnum["Likely"] = "LIKELY";
     GooglePrivacyDlpV2FindingLikelihoodEnum["VeryLikely"] = "VERY_LIKELY";
-})(GooglePrivacyDlpV2FindingLikelihoodEnum || (GooglePrivacyDlpV2FindingLikelihoodEnum = {}));
+})(GooglePrivacyDlpV2FindingLikelihoodEnum = exports.GooglePrivacyDlpV2FindingLikelihoodEnum || (exports.GooglePrivacyDlpV2FindingLikelihoodEnum = {}));
 // GooglePrivacyDlpV2Finding
 /**
  * Represents a piece of potentially sensitive content.
@@ -45,57 +48,57 @@ var GooglePrivacyDlpV2Finding = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Finding.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=findingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=findingId" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Finding.prototype, "findingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=infoType" }),
-        __metadata("design:type", GooglePrivacyDlpV2InfoType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=infoType" }),
+        __metadata("design:type", googleprivacydlpv2infotype_1.GooglePrivacyDlpV2InfoType)
     ], GooglePrivacyDlpV2Finding.prototype, "infoType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobCreateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobCreateTime" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Finding.prototype, "jobCreateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobName" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Finding.prototype, "jobName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], GooglePrivacyDlpV2Finding.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=likelihood" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=likelihood" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Finding.prototype, "likelihood", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", GooglePrivacyDlpV2Location)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", googleprivacydlpv2location_1.GooglePrivacyDlpV2Location)
     ], GooglePrivacyDlpV2Finding.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Finding.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quote" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quote" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Finding.prototype, "quote", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quoteInfo" }),
-        __metadata("design:type", GooglePrivacyDlpV2QuoteInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quoteInfo" }),
+        __metadata("design:type", googleprivacydlpv2quoteinfo_1.GooglePrivacyDlpV2QuoteInfo)
     ], GooglePrivacyDlpV2Finding.prototype, "quoteInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceName" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Finding.prototype, "resourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=triggerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=triggerName" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Finding.prototype, "triggerName", void 0);
     return GooglePrivacyDlpV2Finding;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2Finding };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2Finding = GooglePrivacyDlpV2Finding;

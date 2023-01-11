@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DcimDeviceBaysDeleteResponse = exports.DcimDeviceBaysDeleteRequest = exports.DcimDeviceBaysDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DcimDeviceBaysDeletePathParams = /** @class */ (function (_super) {
     __extends(DcimDeviceBaysDeletePathParams, _super);
     function DcimDeviceBaysDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], DcimDeviceBaysDeletePathParams.prototype, "id", void 0);
     return DcimDeviceBaysDeletePathParams;
-}(SpeakeasyBase));
-export { DcimDeviceBaysDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DcimDeviceBaysDeletePathParams = DcimDeviceBaysDeletePathParams;
 var DcimDeviceBaysDeleteRequest = /** @class */ (function (_super) {
     __extends(DcimDeviceBaysDeleteRequest, _super);
     function DcimDeviceBaysDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DcimDeviceBaysDeletePathParams)
     ], DcimDeviceBaysDeleteRequest.prototype, "pathParams", void 0);
     return DcimDeviceBaysDeleteRequest;
-}(SpeakeasyBase));
-export { DcimDeviceBaysDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.DcimDeviceBaysDeleteRequest = DcimDeviceBaysDeleteRequest;
 var DcimDeviceBaysDeleteResponse = /** @class */ (function (_super) {
     __extends(DcimDeviceBaysDeleteResponse, _super);
     function DcimDeviceBaysDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DcimDeviceBaysDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DcimDeviceBaysDeleteResponse.prototype, "statusCode", void 0);
     return DcimDeviceBaysDeleteResponse;
-}(SpeakeasyBase));
-export { DcimDeviceBaysDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.DcimDeviceBaysDeleteResponse = DcimDeviceBaysDeleteResponse;

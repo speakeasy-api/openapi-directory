@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateCveResponse = exports.UpdateCveRequest = exports.UpdateCve200ApplicationJson = exports.UpdateCve200ApplicationJsonResultEnum = exports.UpdateCve200ApplicationJsonData = exports.UpdateCve200ApplicationJsonActionEnum = exports.UpdateCveRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 // UpdateCveRequestBody
 /**
  * CVE update config
@@ -33,86 +36,86 @@ var UpdateCveRequestBody = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], UpdateCveRequestBody.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=years" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=years" }),
         __metadata("design:type", Array)
     ], UpdateCveRequestBody.prototype, "years", void 0);
     return UpdateCveRequestBody;
-}(SpeakeasyBase));
-export { UpdateCveRequestBody };
-export var UpdateCve200ApplicationJsonActionEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateCveRequestBody = UpdateCveRequestBody;
+var UpdateCve200ApplicationJsonActionEnum;
 (function (UpdateCve200ApplicationJsonActionEnum) {
     UpdateCve200ApplicationJsonActionEnum["UpdateCve"] = "updateCVE";
-})(UpdateCve200ApplicationJsonActionEnum || (UpdateCve200ApplicationJsonActionEnum = {}));
+})(UpdateCve200ApplicationJsonActionEnum = exports.UpdateCve200ApplicationJsonActionEnum || (exports.UpdateCve200ApplicationJsonActionEnum = {}));
 var UpdateCve200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(UpdateCve200ApplicationJsonData, _super);
     function UpdateCve200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CVEs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CVEs" }),
         __metadata("design:type", Number)
     ], UpdateCve200ApplicationJsonData.prototype, "cvEs", void 0);
     return UpdateCve200ApplicationJsonData;
-}(SpeakeasyBase));
-export { UpdateCve200ApplicationJsonData };
-export var UpdateCve200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateCve200ApplicationJsonData = UpdateCve200ApplicationJsonData;
+var UpdateCve200ApplicationJsonResultEnum;
 (function (UpdateCve200ApplicationJsonResultEnum) {
     UpdateCve200ApplicationJsonResultEnum["Success"] = "success";
     UpdateCve200ApplicationJsonResultEnum["Error"] = "error";
-})(UpdateCve200ApplicationJsonResultEnum || (UpdateCve200ApplicationJsonResultEnum = {}));
+})(UpdateCve200ApplicationJsonResultEnum = exports.UpdateCve200ApplicationJsonResultEnum || (exports.UpdateCve200ApplicationJsonResultEnum = {}));
 var UpdateCve200ApplicationJson = /** @class */ (function (_super) {
     __extends(UpdateCve200ApplicationJson, _super);
     function UpdateCve200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], UpdateCve200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", UpdateCve200ApplicationJsonData)
     ], UpdateCve200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], UpdateCve200ApplicationJson.prototype, "result", void 0);
     return UpdateCve200ApplicationJson;
-}(SpeakeasyBase));
-export { UpdateCve200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.UpdateCve200ApplicationJson = UpdateCve200ApplicationJson;
 var UpdateCveRequest = /** @class */ (function (_super) {
     __extends(UpdateCveRequest, _super);
     function UpdateCveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateCveRequestBody)
     ], UpdateCveRequest.prototype, "request", void 0);
     return UpdateCveRequest;
-}(SpeakeasyBase));
-export { UpdateCveRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateCveRequest = UpdateCveRequest;
 var UpdateCveResponse = /** @class */ (function (_super) {
     __extends(UpdateCveResponse, _super);
     function UpdateCveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateCveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateCveResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateCve200ApplicationJson)
-    ], UpdateCveResponse.prototype, "updateCve200ApplicationJsonObject", void 0);
+    ], UpdateCveResponse.prototype, "updateCVE200ApplicationJSONObject", void 0);
     return UpdateCveResponse;
-}(SpeakeasyBase));
-export { UpdateCveResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateCveResponse = UpdateCveResponse;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateUsageChargeRequest, CreateUsageChargeResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,15 +33,15 @@ const req: CreateUsageChargeRequest = {
     },
   },
   pathParams: {
-    recurringApplicationChargeId: "omnis",
+    recurringApplicationChargeId: "sit",
   },
   headers: {
-    xAppstoreUsageChargeToken: "ducimus",
+    xAppstoreUsageChargeToken: "voluptas",
   },
   request: {
     usageCharge: {
-      description: "qui",
-      point: 7166513718788633348,
+      description: "culpa",
+      point: 501233450539197794,
     },
   },
 };
@@ -79,8 +78,8 @@ sdk.applicationCharge.createUsageCharge(req).then((res: CreateUsageChargeRespons
 
 ### script(deprecated)
 
-* `deleteV1ScriptTagsScriptTagIdJson` - スクリプトタグの削除
 * `createScriptTag` - スクリプトタグの作成
+* `deleteV1ScriptTagsScriptTagIdJson` - スクリプトタグの削除
 * `getScriptTag` - スクリプトタグの取得
 * `getScriptTags` - スクリプトタグの取得
 * `updateScriptTag` - スクリプトタグの更新

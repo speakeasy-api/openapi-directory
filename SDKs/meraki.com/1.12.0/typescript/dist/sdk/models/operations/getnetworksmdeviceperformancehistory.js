@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkSmDevicePerformanceHistoryResponse = exports.GetNetworkSmDevicePerformanceHistoryRequest = exports.GetNetworkSmDevicePerformanceHistoryQueryParams = exports.GetNetworkSmDevicePerformanceHistoryPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkSmDevicePerformanceHistoryPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkSmDevicePerformanceHistoryPathParams, _super);
     function GetNetworkSmDevicePerformanceHistoryPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
         __metadata("design:type", String)
     ], GetNetworkSmDevicePerformanceHistoryPathParams.prototype, "deviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkSmDevicePerformanceHistoryPathParams.prototype, "networkId", void 0);
     return GetNetworkSmDevicePerformanceHistoryPathParams;
-}(SpeakeasyBase));
-export { GetNetworkSmDevicePerformanceHistoryPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmDevicePerformanceHistoryPathParams = GetNetworkSmDevicePerformanceHistoryPathParams;
 var GetNetworkSmDevicePerformanceHistoryQueryParams = /** @class */ (function (_super) {
     __extends(GetNetworkSmDevicePerformanceHistoryQueryParams, _super);
     function GetNetworkSmDevicePerformanceHistoryQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
         __metadata("design:type", String)
     ], GetNetworkSmDevicePerformanceHistoryQueryParams.prototype, "endingBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=perPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=perPage" }),
         __metadata("design:type", Number)
     ], GetNetworkSmDevicePerformanceHistoryQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
         __metadata("design:type", String)
     ], GetNetworkSmDevicePerformanceHistoryQueryParams.prototype, "startingAfter", void 0);
     return GetNetworkSmDevicePerformanceHistoryQueryParams;
-}(SpeakeasyBase));
-export { GetNetworkSmDevicePerformanceHistoryQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmDevicePerformanceHistoryQueryParams = GetNetworkSmDevicePerformanceHistoryQueryParams;
 var GetNetworkSmDevicePerformanceHistoryRequest = /** @class */ (function (_super) {
     __extends(GetNetworkSmDevicePerformanceHistoryRequest, _super);
     function GetNetworkSmDevicePerformanceHistoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkSmDevicePerformanceHistoryPathParams)
     ], GetNetworkSmDevicePerformanceHistoryRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkSmDevicePerformanceHistoryQueryParams)
     ], GetNetworkSmDevicePerformanceHistoryRequest.prototype, "queryParams", void 0);
     return GetNetworkSmDevicePerformanceHistoryRequest;
-}(SpeakeasyBase));
-export { GetNetworkSmDevicePerformanceHistoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmDevicePerformanceHistoryRequest = GetNetworkSmDevicePerformanceHistoryRequest;
 var GetNetworkSmDevicePerformanceHistoryResponse = /** @class */ (function (_super) {
     __extends(GetNetworkSmDevicePerformanceHistoryResponse, _super);
     function GetNetworkSmDevicePerformanceHistoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkSmDevicePerformanceHistoryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetNetworkSmDevicePerformanceHistoryResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkSmDevicePerformanceHistoryResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkSmDevicePerformanceHistoryResponse.prototype, "getNetworkSmDevicePerformanceHistory200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkSmDevicePerformanceHistoryResponse.prototype, "getNetworkSmDevicePerformanceHistory200ApplicationJSONObject", void 0);
     return GetNetworkSmDevicePerformanceHistoryResponse;
-}(SpeakeasyBase));
-export { GetNetworkSmDevicePerformanceHistoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSmDevicePerformanceHistoryResponse = GetNetworkSmDevicePerformanceHistoryResponse;

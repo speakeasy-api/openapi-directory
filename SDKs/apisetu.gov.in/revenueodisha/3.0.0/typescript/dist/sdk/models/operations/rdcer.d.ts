@@ -108,11 +108,11 @@ export declare class RdcerRequest extends SpeakeasyBase {
 export declare class RdcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    rdcer400ApplicationJsonObject?: Rdcer400ApplicationJson;
-    rdcer401ApplicationJsonObject?: Rdcer401ApplicationJson;
-    rdcer404ApplicationJsonObject?: Rdcer404ApplicationJson;
-    rdcer500ApplicationJsonObject?: Rdcer500ApplicationJson;
-    rdcer502ApplicationJsonObject?: Rdcer502ApplicationJson;
-    rdcer503ApplicationJsonObject?: Rdcer503ApplicationJson;
-    rdcer504ApplicationJsonObject?: Rdcer504ApplicationJson;
+    rdcer400ApplicationJSONObject?: Rdcer400ApplicationJson;
+    rdcer401ApplicationJSONObject?: Rdcer401ApplicationJson;
+    rdcer404ApplicationJSONObject?: Rdcer404ApplicationJson;
+    rdcer500ApplicationJSONObject?: Rdcer500ApplicationJson;
+    rdcer502ApplicationJSONObject?: Rdcer502ApplicationJson;
+    rdcer503ApplicationJSONObject?: Rdcer503ApplicationJson;
+    rdcer504ApplicationJSONObject?: Rdcer504ApplicationJson;
 }

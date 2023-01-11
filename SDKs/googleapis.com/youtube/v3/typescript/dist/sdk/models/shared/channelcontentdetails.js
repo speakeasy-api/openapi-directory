@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChannelContentDetails = exports.ChannelContentDetailsRelatedPlaylists = void 0;
+var utils_1 = require("../../../internal/utils");
 var ChannelContentDetailsRelatedPlaylists = /** @class */ (function (_super) {
     __extends(ChannelContentDetailsRelatedPlaylists, _super);
     function ChannelContentDetailsRelatedPlaylists() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=favorites" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=favorites" }),
         __metadata("design:type", String)
     ], ChannelContentDetailsRelatedPlaylists.prototype, "favorites", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=likes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=likes" }),
         __metadata("design:type", String)
     ], ChannelContentDetailsRelatedPlaylists.prototype, "likes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uploads" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uploads" }),
         __metadata("design:type", String)
     ], ChannelContentDetailsRelatedPlaylists.prototype, "uploads", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=watchHistory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=watchHistory" }),
         __metadata("design:type", String)
     ], ChannelContentDetailsRelatedPlaylists.prototype, "watchHistory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=watchLater" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=watchLater" }),
         __metadata("design:type", String)
     ], ChannelContentDetailsRelatedPlaylists.prototype, "watchLater", void 0);
     return ChannelContentDetailsRelatedPlaylists;
-}(SpeakeasyBase));
-export { ChannelContentDetailsRelatedPlaylists };
+}(utils_1.SpeakeasyBase));
+exports.ChannelContentDetailsRelatedPlaylists = ChannelContentDetailsRelatedPlaylists;
 // ChannelContentDetails
 /**
  * Details about the content of a channel.
@@ -61,9 +64,9 @@ var ChannelContentDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relatedPlaylists" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relatedPlaylists" }),
         __metadata("design:type", ChannelContentDetailsRelatedPlaylists)
     ], ChannelContentDetails.prototype, "relatedPlaylists", void 0);
     return ChannelContentDetails;
-}(SpeakeasyBase));
-export { ChannelContentDetails };
+}(utils_1.SpeakeasyBase));
+exports.ChannelContentDetails = ChannelContentDetails;

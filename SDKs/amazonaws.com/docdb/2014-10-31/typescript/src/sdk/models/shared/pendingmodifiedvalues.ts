@@ -39,7 +39,7 @@ export class PendingModifiedValues extends SpeakeasyBase {
   masterUserPassword?: string;
 
   @SpeakeasyMetadata()
-  multiAz?: boolean;
+  multiAZ?: boolean;
 
   @SpeakeasyMetadata()
   pendingCloudwatchLogsExports?: PendingCloudwatchLogsExports;

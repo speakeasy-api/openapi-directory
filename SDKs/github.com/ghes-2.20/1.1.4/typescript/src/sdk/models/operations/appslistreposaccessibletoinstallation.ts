@@ -44,13 +44,13 @@ export class AppsListReposAccessibleToInstallationResponse extends SpeakeasyBase
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  appsListReposAccessibleToInstallation200ApplicationJsonObject?: AppsListReposAccessibleToInstallation200ApplicationJson;
+  appsListReposAccessibleToInstallation200ApplicationJSONObject?: AppsListReposAccessibleToInstallation200ApplicationJson;
 
   @SpeakeasyMetadata()
   basicError?: shared.BasicError;

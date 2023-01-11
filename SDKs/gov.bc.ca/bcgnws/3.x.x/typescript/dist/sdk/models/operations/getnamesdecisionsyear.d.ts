@@ -21,7 +21,7 @@ export declare class GetNamesDecisionsYearQueryParams extends SpeakeasyBase {
     featureType?: string;
     itemsPerPage?: number;
     outputFormat: GetNamesDecisionsYearOutputFormatEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     outputStyle?: GetNamesDecisionsYearOutputStyleEnum;
     sortBy?: GetNamesDecisionsYearSortByEnum;
     startIndex?: number;

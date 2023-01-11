@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CreateTimeOffPeriodResponseDataTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateTimeOffPeriodResponse = exports.CreateTimeOffPeriodResponseData = exports.CreateTimeOffPeriodResponseDataTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CreateTimeOffPeriodResponseDataTypeEnum;
 (function (CreateTimeOffPeriodResponseDataTypeEnum) {
     CreateTimeOffPeriodResponseDataTypeEnum["TimeOffPeriod"] = "TimeOffPeriod";
-})(CreateTimeOffPeriodResponseDataTypeEnum || (CreateTimeOffPeriodResponseDataTypeEnum = {}));
+})(CreateTimeOffPeriodResponseDataTypeEnum = exports.CreateTimeOffPeriodResponseDataTypeEnum || (exports.CreateTimeOffPeriodResponseDataTypeEnum = {}));
 var CreateTimeOffPeriodResponseData = /** @class */ (function (_super) {
     __extends(CreateTimeOffPeriodResponseData, _super);
     function CreateTimeOffPeriodResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
         __metadata("design:type", Object)
     ], CreateTimeOffPeriodResponseData.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CreateTimeOffPeriodResponseData.prototype, "type", void 0);
     return CreateTimeOffPeriodResponseData;
-}(SpeakeasyBase));
-export { CreateTimeOffPeriodResponseData };
+}(utils_1.SpeakeasyBase));
+exports.CreateTimeOffPeriodResponseData = CreateTimeOffPeriodResponseData;
 var CreateTimeOffPeriodResponse = /** @class */ (function (_super) {
     __extends(CreateTimeOffPeriodResponse, _super);
     function CreateTimeOffPeriodResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", CreateTimeOffPeriodResponseData)
     ], CreateTimeOffPeriodResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], CreateTimeOffPeriodResponse.prototype, "success", void 0);
     return CreateTimeOffPeriodResponse;
-}(SpeakeasyBase));
-export { CreateTimeOffPeriodResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateTimeOffPeriodResponse = CreateTimeOffPeriodResponse;

@@ -17,7 +17,7 @@ export declare class CreateCustomDataIdentifierRequestBody extends SpeakeasyBase
     maximumMatchDistance?: number;
     name?: string;
     regex?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateCustomDataIdentifierRequest extends SpeakeasyBase {
     headers: CreateCustomDataIdentifierHeaders;

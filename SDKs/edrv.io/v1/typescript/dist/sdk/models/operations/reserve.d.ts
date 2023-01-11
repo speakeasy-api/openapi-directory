@@ -7,7 +7,7 @@ export declare class ReserveRequestBody extends SpeakeasyBase {
     token?: string;
 }
 export declare class Reserve201ApplicationJson extends SpeakeasyBase {
-    command?: Map<string, any>;
+    command?: Record<string, any>;
     message?: string;
     ok?: boolean;
 }
@@ -17,5 +17,5 @@ export declare class ReserveRequest extends SpeakeasyBase {
 export declare class ReserveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    reserve201ApplicationJsonObject?: Reserve201ApplicationJson;
+    reserve201ApplicationJSONObject?: Reserve201ApplicationJson;
 }

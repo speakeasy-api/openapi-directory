@@ -86,11 +86,11 @@ export class UploadFileToLockerIdResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  uploadFileToLockerId400ApplicationJsonObject?: UploadFileToLockerId400ApplicationJson;
+  uploadFileToLockerId400ApplicationJSONObject?: UploadFileToLockerId400ApplicationJson;
 
   @SpeakeasyMetadata()
-  uploadFileToLockerId401ApplicationJsonObject?: UploadFileToLockerId401ApplicationJson;
+  uploadFileToLockerId401ApplicationJSONObject?: UploadFileToLockerId401ApplicationJson;
 
   @SpeakeasyMetadata()
-  uploadFileToLockerId500ApplicationJsonObject?: UploadFileToLockerId500ApplicationJson;
+  uploadFileToLockerId500ApplicationJSONObject?: UploadFileToLockerId500ApplicationJson;
 }

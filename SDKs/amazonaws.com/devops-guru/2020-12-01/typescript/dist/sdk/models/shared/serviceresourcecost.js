@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CostEstimationServiceResourceStateEnum } from "./costestimationserviceresourcestateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceResourceCost = void 0;
+var utils_1 = require("../../../internal/utils");
+var costestimationserviceresourcestateenum_1 = require("./costestimationserviceresourcestateenum");
 // ServiceResourceCost
 /**
  * An object that contains information about the estimated monthly cost to analyze an AWS resource. For more information, see <a href="https://docs.aws.amazon.com/devops-guru/latest/userguide/cost-estimate.html">Estimate your Amazon DevOps Guru costs</a> and <a href="http://aws.amazon.com/devops-guru/pricing/">Amazon DevOps Guru pricing</a>.
@@ -34,25 +37,25 @@ var ServiceResourceCost = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Cost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Cost" }),
         __metadata("design:type", Number)
     ], ServiceResourceCost.prototype, "cost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Count" }),
         __metadata("design:type", Number)
     ], ServiceResourceCost.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], ServiceResourceCost.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], ServiceResourceCost.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UnitCost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UnitCost" }),
         __metadata("design:type", Number)
     ], ServiceResourceCost.prototype, "unitCost", void 0);
     return ServiceResourceCost;
-}(SpeakeasyBase));
-export { ServiceResourceCost };
+}(utils_1.SpeakeasyBase));
+exports.ServiceResourceCost = ServiceResourceCost;

@@ -63,7 +63,7 @@ export declare class StorageObjectsRewriteSecurity extends SpeakeasyBase {
 export declare class StorageObjectsRewriteRequest extends SpeakeasyBase {
     pathParams: StorageObjectsRewritePathParams;
     queryParams: StorageObjectsRewriteQueryParams;
-    request?: shared.Object;
+    request?: shared.ObjectT;
     security: StorageObjectsRewriteSecurity;
 }
 export declare class StorageObjectsRewriteResponse extends SpeakeasyBase {

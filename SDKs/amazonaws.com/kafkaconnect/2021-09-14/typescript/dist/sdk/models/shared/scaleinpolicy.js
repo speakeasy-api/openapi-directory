@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScaleInPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
 // ScaleInPolicy
 /**
  * The scale-in policy for the connector.
@@ -33,9 +36,9 @@ var ScaleInPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuUtilizationPercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuUtilizationPercentage" }),
         __metadata("design:type", Number)
     ], ScaleInPolicy.prototype, "cpuUtilizationPercentage", void 0);
     return ScaleInPolicy;
-}(SpeakeasyBase));
-export { ScaleInPolicy };
+}(utils_1.SpeakeasyBase));
+exports.ScaleInPolicy = ScaleInPolicy;

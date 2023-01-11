@@ -7,7 +7,7 @@ export declare class Channel extends SpeakeasyBase {
     expiration?: string;
     id?: string;
     kind?: string;
-    params?: Map<string, string>;
+    params?: Record<string, string>;
     payload?: boolean;
     resourceId?: string;
     resourceUri?: string;

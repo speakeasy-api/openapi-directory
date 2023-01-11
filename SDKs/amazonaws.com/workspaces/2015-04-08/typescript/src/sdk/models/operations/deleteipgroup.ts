@@ -51,7 +51,7 @@ export class DeleteIpGroupResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteIpGroupResult?: Map<string, any>;
+  deleteIpGroupResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidParameterValuesException?: any;

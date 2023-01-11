@@ -8,5 +8,5 @@ export declare class GetNetworkPiiRequestsRequest extends SpeakeasyBase {
 export declare class GetNetworkPiiRequestsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkPiiRequests200ApplicationJsonObject?: Map<string, any>;
+    getNetworkPiiRequests200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { S3ResourceClassification } from "./s3resourceclassification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListS3ResourcesResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var s3resourceclassification_1 = require("./s3resourceclassification");
 var ListS3ResourcesResult = /** @class */ (function (_super) {
     __extends(ListS3ResourcesResult, _super);
     function ListS3ResourcesResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListS3ResourcesResult.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3Resources", elemType: S3ResourceClassification }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3Resources", elemType: s3resourceclassification_1.S3ResourceClassification }),
         __metadata("design:type", Array)
     ], ListS3ResourcesResult.prototype, "s3Resources", void 0);
     return ListS3ResourcesResult;
-}(SpeakeasyBase));
-export { ListS3ResourcesResult };
+}(utils_1.SpeakeasyBase));
+exports.ListS3ResourcesResult = ListS3ResourcesResult;

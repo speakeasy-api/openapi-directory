@@ -185,23 +185,23 @@ export class EtcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  etcer400ApplicationJsonObject?: Etcer400ApplicationJson;
+  etcer400ApplicationJSONObject?: Etcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  etcer401ApplicationJsonObject?: Etcer401ApplicationJson;
+  etcer401ApplicationJSONObject?: Etcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  etcer404ApplicationJsonObject?: Etcer404ApplicationJson;
+  etcer404ApplicationJSONObject?: Etcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  etcer500ApplicationJsonObject?: Etcer500ApplicationJson;
+  etcer500ApplicationJSONObject?: Etcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  etcer502ApplicationJsonObject?: Etcer502ApplicationJson;
+  etcer502ApplicationJSONObject?: Etcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  etcer503ApplicationJsonObject?: Etcer503ApplicationJson;
+  etcer503ApplicationJSONObject?: Etcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  etcer504ApplicationJsonObject?: Etcer504ApplicationJson;
+  etcer504ApplicationJSONObject?: Etcer504ApplicationJson;
 }

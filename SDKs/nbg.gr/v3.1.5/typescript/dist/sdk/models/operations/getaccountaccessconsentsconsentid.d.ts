@@ -21,7 +21,6 @@ export declare class GetAccountAccessConsentsConsentIdRequest extends SpeakeasyB
 }
 export declare class GetAccountAccessConsentsConsentIdResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
     obErrorResponse1?: shared.ObErrorResponse1;
     obReadConsentResponse1?: shared.ObReadConsentResponse1;
     statusCode: number;

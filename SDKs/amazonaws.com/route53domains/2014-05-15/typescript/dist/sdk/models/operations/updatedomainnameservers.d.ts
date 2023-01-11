@@ -24,6 +24,6 @@ export declare class UpdateDomainNameserversResponse extends SpeakeasyBase {
     operationLimitExceeded?: any;
     statusCode: number;
     tldRulesViolation?: any;
-    unsupportedTld?: any;
+    unsupportedTLD?: any;
     updateDomainNameserversResponse?: shared.UpdateDomainNameserversResponse;
 }

@@ -13,7 +13,7 @@ export declare class ActivityListReposWatchedByUserRequest extends SpeakeasyBase
 }
 export declare class ActivityListReposWatchedByUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     minimalRepositories?: shared.MinimalRepository[];
 }

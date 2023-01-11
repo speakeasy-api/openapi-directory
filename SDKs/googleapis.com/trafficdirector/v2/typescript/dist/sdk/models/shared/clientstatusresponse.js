@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientConfig } from "./clientconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClientStatusResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var clientconfig_1 = require("./clientconfig");
 var ClientStatusResponse = /** @class */ (function (_super) {
     __extends(ClientStatusResponse, _super);
     function ClientStatusResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config", elemType: ClientConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config", elemType: clientconfig_1.ClientConfig }),
         __metadata("design:type", Array)
     ], ClientStatusResponse.prototype, "config", void 0);
     return ClientStatusResponse;
-}(SpeakeasyBase));
-export { ClientStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.ClientStatusResponse = ClientStatusResponse;

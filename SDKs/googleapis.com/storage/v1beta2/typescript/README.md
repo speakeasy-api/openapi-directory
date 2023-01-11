@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { StorageBucketAccessControlsDeleteRequest, StorageBucketAccessControlsDeleteResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,23 +30,23 @@ const req: StorageBucketAccessControlsDeleteRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    bucket: "omnis",
-    entity: "et",
+    bucket: "sit",
+    entity: "voluptas",
   },
   queryParams: {
     alt: "json",
-    fields: "delectus",
-    key: "reprehenderit",
+    fields: "expedita",
+    key: "consequuntur",
     oauthToken: "dolor",
     prettyPrint: true,
-    quotaUser: "hic",
-    userIp: "voluptatibus",
+    quotaUser: "voluptas",
+    userIp: "fugit",
   },
 };
 

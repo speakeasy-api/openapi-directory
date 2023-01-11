@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkApplianceTrafficShapingRulesResponse = exports.GetNetworkApplianceTrafficShapingRulesRequest = exports.GetNetworkApplianceTrafficShapingRulesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkApplianceTrafficShapingRulesPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceTrafficShapingRulesPathParams, _super);
     function GetNetworkApplianceTrafficShapingRulesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceTrafficShapingRulesPathParams.prototype, "networkId", void 0);
     return GetNetworkApplianceTrafficShapingRulesPathParams;
-}(SpeakeasyBase));
-export { GetNetworkApplianceTrafficShapingRulesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceTrafficShapingRulesPathParams = GetNetworkApplianceTrafficShapingRulesPathParams;
 var GetNetworkApplianceTrafficShapingRulesRequest = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceTrafficShapingRulesRequest, _super);
     function GetNetworkApplianceTrafficShapingRulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkApplianceTrafficShapingRulesPathParams)
     ], GetNetworkApplianceTrafficShapingRulesRequest.prototype, "pathParams", void 0);
     return GetNetworkApplianceTrafficShapingRulesRequest;
-}(SpeakeasyBase));
-export { GetNetworkApplianceTrafficShapingRulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceTrafficShapingRulesRequest = GetNetworkApplianceTrafficShapingRulesRequest;
 var GetNetworkApplianceTrafficShapingRulesResponse = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceTrafficShapingRulesResponse, _super);
     function GetNetworkApplianceTrafficShapingRulesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkApplianceTrafficShapingRulesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkApplianceTrafficShapingRulesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkApplianceTrafficShapingRulesResponse.prototype, "getNetworkApplianceTrafficShapingRules200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkApplianceTrafficShapingRulesResponse.prototype, "getNetworkApplianceTrafficShapingRules200ApplicationJSONObject", void 0);
     return GetNetworkApplianceTrafficShapingRulesResponse;
-}(SpeakeasyBase));
-export { GetNetworkApplianceTrafficShapingRulesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceTrafficShapingRulesResponse = GetNetworkApplianceTrafficShapingRulesResponse;

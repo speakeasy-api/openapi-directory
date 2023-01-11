@@ -10,5 +10,5 @@ export declare class UpdateEnvironmentForRepositoryRequest extends SpeakeasyBase
 export declare class UpdateEnvironmentForRepositoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

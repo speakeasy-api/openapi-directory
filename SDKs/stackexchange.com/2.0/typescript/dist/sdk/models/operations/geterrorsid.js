@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetErrorsIdResponse = exports.GetErrorsIdRequest = exports.GetErrorsIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetErrorsIdPathParams = /** @class */ (function (_super) {
     __extends(GetErrorsIdPathParams, _super);
     function GetErrorsIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetErrorsIdPathParams.prototype, "id", void 0);
     return GetErrorsIdPathParams;
-}(SpeakeasyBase));
-export { GetErrorsIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetErrorsIdPathParams = GetErrorsIdPathParams;
 var GetErrorsIdRequest = /** @class */ (function (_super) {
     __extends(GetErrorsIdRequest, _super);
     function GetErrorsIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetErrorsIdPathParams)
     ], GetErrorsIdRequest.prototype, "pathParams", void 0);
     return GetErrorsIdRequest;
-}(SpeakeasyBase));
-export { GetErrorsIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetErrorsIdRequest = GetErrorsIdRequest;
 var GetErrorsIdResponse = /** @class */ (function (_super) {
     __extends(GetErrorsIdResponse, _super);
     function GetErrorsIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetErrorsIdResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetErrorsIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetErrorsIdResponse.prototype, "statusCode", void 0);
     return GetErrorsIdResponse;
-}(SpeakeasyBase));
-export { GetErrorsIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetErrorsIdResponse = GetErrorsIdResponse;

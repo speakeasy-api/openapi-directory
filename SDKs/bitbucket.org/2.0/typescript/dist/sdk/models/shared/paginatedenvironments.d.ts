@@ -8,5 +8,5 @@ export declare class PaginatedEnvironments extends SpeakeasyBase {
     pagelen?: number;
     previous?: string;
     size?: number;
-    values?: Map<string, any>[];
+    values?: Record<string, any>[];
 }

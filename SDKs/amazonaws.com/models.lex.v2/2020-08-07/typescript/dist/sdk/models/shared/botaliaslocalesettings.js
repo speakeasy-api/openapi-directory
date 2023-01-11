@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CodeHookSpecification } from "./codehookspecification";
-// BotAliasLocaleSettings
-/**
- * Specifies settings that are unique to a locale. For example, you can use different Lambda function depending on the bot's locale.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BotAliasLocaleSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var codehookspecification_1 = require("./codehookspecification");
 var BotAliasLocaleSettings = /** @class */ (function (_super) {
     __extends(BotAliasLocaleSettings, _super);
     function BotAliasLocaleSettings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=codeHookSpecification" }),
-        __metadata("design:type", CodeHookSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=codeHookSpecification" }),
+        __metadata("design:type", codehookspecification_1.CodeHookSpecification)
     ], BotAliasLocaleSettings.prototype, "codeHookSpecification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], BotAliasLocaleSettings.prototype, "enabled", void 0);
     return BotAliasLocaleSettings;
-}(SpeakeasyBase));
-export { BotAliasLocaleSettings };
+}(utils_1.SpeakeasyBase));
+exports.BotAliasLocaleSettings = BotAliasLocaleSettings;

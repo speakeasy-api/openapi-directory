@@ -48,7 +48,7 @@ export class ImportCatalogToGlueResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  importCatalogToGlueResponse?: Map<string, any>;
+  importCatalogToGlueResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServiceException?: any;

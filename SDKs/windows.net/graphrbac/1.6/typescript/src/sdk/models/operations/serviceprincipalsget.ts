@@ -8,7 +8,7 @@ export class ServicePrincipalsGetPathParams extends SpeakeasyBase {
   objectId: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" })
-  tenantId: string;
+  tenantID: string;
 }
 
 
@@ -35,7 +35,7 @@ export class ServicePrincipalsGetResponse extends SpeakeasyBase {
   graphError?: shared.GraphError;
 
   @SpeakeasyMetadata()
-  servicePrincipal?: Map<string, Map<string, any>>;
+  servicePrincipal?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata()
   statusCode: number;

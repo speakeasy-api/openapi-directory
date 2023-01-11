@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Alarm } from "./alarm";
-import { Timer } from "./timer";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Example18 = void 0;
+var utils_1 = require("../../../internal/utils");
+var alarm_1 = require("./alarm");
+var timer_1 = require("./timer");
 var Example18 = /** @class */ (function (_super) {
     __extends(Example18, _super);
     function Example18() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarm", elemType: Alarm }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarm", elemType: alarm_1.Alarm }),
         __metadata("design:type", Array)
     ], Example18.prototype, "alarm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer", elemType: Timer }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer", elemType: timer_1.Timer }),
         __metadata("design:type", Array)
     ], Example18.prototype, "timer", void 0);
     return Example18;
-}(SpeakeasyBase));
-export { Example18 };
+}(utils_1.SpeakeasyBase));
+exports.Example18 = Example18;

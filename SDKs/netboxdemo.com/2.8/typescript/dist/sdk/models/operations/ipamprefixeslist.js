@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,290 +14,315 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IpamPrefixesListResponse = exports.IpamPrefixesListRequest = exports.IpamPrefixesList200ApplicationJson = exports.IpamPrefixesListQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var IpamPrefixesListQueryParams = /** @class */ (function (_super) {
     __extends(IpamPrefixesListQueryParams, _super);
     function IpamPrefixesListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=contains" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=contains" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "contains", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=created" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=created__gte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=created__gte" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "createdGte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=created__lte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=created__lte" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "createdLte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=family" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=family" }),
         __metadata("design:type", Number)
     ], IpamPrefixesListQueryParams.prototype, "family", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__gt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__gt" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "idGt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__gte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__gte" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "idGte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__lt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__lt" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "idLt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__lte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__lte" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "idLte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__n" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "idN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=is_pool" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=is_pool" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "isPool", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=last_updated" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=last_updated__gte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=last_updated__gte" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "lastUpdatedGte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=last_updated__lte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=last_updated__lte" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "lastUpdatedLte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], IpamPrefixesListQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=mask_length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=mask_length" }),
         __metadata("design:type", Number)
     ], IpamPrefixesListQueryParams.prototype, "maskLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], IpamPrefixesListQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prefix" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "prefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=q" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=q" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "q", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=region" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=region__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=region__n" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "regionN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=region_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=region_id" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "regionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=region_id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=region_id__n" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "regionIdN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=role" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=role__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=role__n" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "roleN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=role_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=role_id" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "roleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=role_id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=role_id__n" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "roleIdN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site__n" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "siteN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site_id" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "siteId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site_id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site_id__n" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "siteIdN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=status" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=status__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=status__n" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "statusN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tag" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "tag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tag__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tag__n" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "tagN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenant" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenant" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "tenant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenant__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenant__n" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "tenantN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenant_group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenant_group" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "tenantGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenant_group__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenant_group__n" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "tenantGroupN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenant_group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenant_group_id" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "tenantGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenant_group_id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenant_group_id__n" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "tenantGroupIdN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenant_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenant_id" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "tenantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenant_id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenant_id__n" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "tenantIdN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=vlan_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=vlan_id" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "vlanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=vlan_id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=vlan_id__n" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "vlanIdN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=vlan_vid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=vlan_vid" }),
         __metadata("design:type", Number)
     ], IpamPrefixesListQueryParams.prototype, "vlanVid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=vrf" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=vrf" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "vrf", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=vrf__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=vrf__n" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "vrfN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=vrf_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=vrf_id" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "vrfId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=vrf_id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=vrf_id__n" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "vrfIdN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=within" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=within" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "within", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=within_include" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=within_include" }),
         __metadata("design:type", String)
     ], IpamPrefixesListQueryParams.prototype, "withinInclude", void 0);
     return IpamPrefixesListQueryParams;
-}(SpeakeasyBase));
-export { IpamPrefixesListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.IpamPrefixesListQueryParams = IpamPrefixesListQueryParams;
 var IpamPrefixesList200ApplicationJson = /** @class */ (function (_super) {
     __extends(IpamPrefixesList200ApplicationJson, _super);
     function IpamPrefixesList200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], IpamPrefixesList200ApplicationJson.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], IpamPrefixesList200ApplicationJson.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], IpamPrefixesList200ApplicationJson.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: shared.Prefix }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: shared.Prefix }),
         __metadata("design:type", Array)
     ], IpamPrefixesList200ApplicationJson.prototype, "results", void 0);
     return IpamPrefixesList200ApplicationJson;
-}(SpeakeasyBase));
-export { IpamPrefixesList200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.IpamPrefixesList200ApplicationJson = IpamPrefixesList200ApplicationJson;
 var IpamPrefixesListRequest = /** @class */ (function (_super) {
     __extends(IpamPrefixesListRequest, _super);
     function IpamPrefixesListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", IpamPrefixesListQueryParams)
     ], IpamPrefixesListRequest.prototype, "queryParams", void 0);
     return IpamPrefixesListRequest;
-}(SpeakeasyBase));
-export { IpamPrefixesListRequest };
+}(utils_1.SpeakeasyBase));
+exports.IpamPrefixesListRequest = IpamPrefixesListRequest;
 var IpamPrefixesListResponse = /** @class */ (function (_super) {
     __extends(IpamPrefixesListResponse, _super);
     function IpamPrefixesListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], IpamPrefixesListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], IpamPrefixesListResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", IpamPrefixesList200ApplicationJson)
-    ], IpamPrefixesListResponse.prototype, "ipamPrefixesList200ApplicationJsonObject", void 0);
+    ], IpamPrefixesListResponse.prototype, "ipamPrefixesList200ApplicationJSONObject", void 0);
     return IpamPrefixesListResponse;
-}(SpeakeasyBase));
-export { IpamPrefixesListResponse };
+}(utils_1.SpeakeasyBase));
+exports.IpamPrefixesListResponse = IpamPrefixesListResponse;

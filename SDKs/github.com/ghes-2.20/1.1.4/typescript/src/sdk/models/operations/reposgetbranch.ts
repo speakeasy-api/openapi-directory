@@ -44,5 +44,5 @@ export class ReposGetBranchResponse extends SpeakeasyBase {
   branchWithProtection?: shared.BranchWithProtection;
 
   @SpeakeasyMetadata()
-  reposGetBranch415ApplicationJsonObject?: ReposGetBranch415ApplicationJson;
+  reposGetBranch415ApplicationJSONObject?: ReposGetBranch415ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,252 +23,254 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppointmentAuditViewModel } from "./appointmentauditviewmodel";
-import { CustomFieldViewModel } from "./customfieldviewmodel";
-import { AppointmentCustomerViewModel } from "./appointmentcustomerviewmodel";
-import { AppointmentResourceViewModel } from "./appointmentresourceviewmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppointmentInitialViewModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var appointmentauditviewmodel_1 = require("./appointmentauditviewmodel");
+var customfieldviewmodel_1 = require("./customfieldviewmodel");
+var appointmentcustomerviewmodel_1 = require("./appointmentcustomerviewmodel");
+var appointmentresourceviewmodel_1 = require("./appointmentresourceviewmodel");
 var AppointmentInitialViewModel = /** @class */ (function (_super) {
     __extends(AppointmentInitialViewModel, _super);
     function AppointmentInitialViewModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auditTrail", elemType: AppointmentAuditViewModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auditTrail", elemType: appointmentauditviewmodel_1.AppointmentAuditViewModel }),
         __metadata("design:type", Array)
     ], AppointmentInitialViewModel.prototype, "auditTrail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookedBy" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "bookedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessName" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "businessName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=calendarId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=calendarId" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "calendarId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confirmationNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confirmationNumber" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "confirmationNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confirmed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confirmed" }),
         __metadata("design:type", Boolean)
     ], AppointmentInitialViewModel.prototype, "confirmed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createDate" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "createDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customFields", elemType: CustomFieldViewModel }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customFields", elemType: customfieldviewmodel_1.CustomFieldViewModel }),
+        __metadata("design:type", Object)
     ], AppointmentInitialViewModel.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerId" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "customerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerMessage" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "customerMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customers", elemType: AppointmentCustomerViewModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customers", elemType: appointmentcustomerviewmodel_1.AppointmentCustomerViewModel }),
         __metadata("design:type", Array)
     ], AppointmentInitialViewModel.prototype, "customers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateInternational" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateInternational" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "dateInternational", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downloadIcsUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downloadIcsUrl" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "downloadIcsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", Number)
     ], AppointmentInitialViewModel.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emailConfirmationSent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emailConfirmationSent" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "emailConfirmationSent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emailReminderSent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emailReminderSent" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "emailReminderSent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDateTime" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "endDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstname" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "firstname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupSize" }),
         __metadata("design:type", Number)
     ], AppointmentInitialViewModel.prototype, "groupSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddress" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "ipAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastModifiedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastModifiedBy" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "lastModifiedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastModifiedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastModifiedOn" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "lastModifiedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastname" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "lastname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationId" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notes" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectName" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "objectName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onlineBooking" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onlineBooking" }),
         __metadata("design:type", Boolean)
     ], AppointmentInitialViewModel.prototype, "onlineBooking", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentStatus" }),
         __metadata("design:type", Number)
     ], AppointmentInitialViewModel.prototype, "paymentStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phone" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "phone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneExt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneExt" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "phoneExt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneType" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "phoneType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rescheduledId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rescheduledId" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "rescheduledId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceGroupId" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "resourceGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceGroupName" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "resourceGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceId" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceImageUrl" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "resourceImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceName" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "resourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: AppointmentResourceViewModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: appointmentresourceviewmodel_1.AppointmentResourceViewModel }),
         __metadata("design:type", Array)
     ], AppointmentInitialViewModel.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAllocationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAllocationId" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "serviceAllocationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceId" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "serviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceImageUrl" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "serviceImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceName" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "serviceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smsConfirmationSent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smsConfirmationSent" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "smsConfirmationSent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smsReminderSent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smsReminderSent" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "smsReminderSent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDateTime" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "startDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stripeChargeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stripeChargeId" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "stripeChargeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stripeRefundId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stripeRefundId" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "stripeRefundId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time" }),
         __metadata("design:type", Number)
     ], AppointmentInitialViewModel.prototype, "time", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezone" }),
         __metadata("design:type", Number)
     ], AppointmentInitialViewModel.prototype, "timezone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezoneIana" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezoneIana" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "timezoneIana", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezoneId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezoneId" }),
         __metadata("design:type", String)
     ], AppointmentInitialViewModel.prototype, "timezoneId", void 0);
     return AppointmentInitialViewModel;
-}(SpeakeasyBase));
-export { AppointmentInitialViewModel };
+}(utils_1.SpeakeasyBase));
+exports.AppointmentInitialViewModel = AppointmentInitialViewModel;

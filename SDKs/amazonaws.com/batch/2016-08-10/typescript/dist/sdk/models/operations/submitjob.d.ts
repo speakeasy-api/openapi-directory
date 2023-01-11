@@ -22,9 +22,9 @@ export declare class SubmitJobRequestBodyContainerOverrides extends SpeakeasyBas
     command?: string[];
     environment?: shared.KeyValuePair[];
     instanceType?: string;
-    memory?: number;
+    memory?: Record<string, any>;
     resourceRequirements?: shared.ResourceRequirement[];
-    vcpus?: number;
+    vcpus?: Record<string, any>;
 }
 /**
  * <p>Object representing any node overrides to a job definition that's used in a <a>SubmitJob</a> API operation.</p> <note> <p>This isn't applicable to jobs that are running on Fargate resources and shouldn't be provided; use <code>containerOverrides</code> instead.</p> </note>
@@ -54,10 +54,10 @@ export declare class SubmitJobRequestBody extends SpeakeasyBase {
     jobName: string;
     jobQueue: string;
     nodeOverrides?: SubmitJobRequestBodyNodeOverrides;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
     propagateTags?: boolean;
     retryStrategy?: SubmitJobRequestBodyRetryStrategy;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     timeout?: SubmitJobRequestBodyTimeout;
 }
 export declare class SubmitJobRequest extends SpeakeasyBase {

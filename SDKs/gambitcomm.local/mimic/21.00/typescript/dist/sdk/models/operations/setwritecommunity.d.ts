@@ -9,5 +9,5 @@ export declare class SetWriteCommunityRequest extends SpeakeasyBase {
 export declare class SetWriteCommunityResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setWriteCommunity200ApplicationJsonString?: string;
+    setWriteCommunity200ApplicationJSONString?: string;
 }

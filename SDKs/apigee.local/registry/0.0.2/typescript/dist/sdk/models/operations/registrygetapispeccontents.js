@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistryGetApiSpecContentsResponse = exports.RegistryGetApiSpecContentsRequest = exports.RegistryGetApiSpecContentsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RegistryGetApiSpecContentsPathParams = /** @class */ (function (_super) {
     __extends(RegistryGetApiSpecContentsPathParams, _super);
     function RegistryGetApiSpecContentsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=api" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=api" }),
         __metadata("design:type", String)
     ], RegistryGetApiSpecContentsPathParams.prototype, "api", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], RegistryGetApiSpecContentsPathParams.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=spec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=spec" }),
         __metadata("design:type", String)
     ], RegistryGetApiSpecContentsPathParams.prototype, "spec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=version" }),
         __metadata("design:type", String)
     ], RegistryGetApiSpecContentsPathParams.prototype, "version", void 0);
     return RegistryGetApiSpecContentsPathParams;
-}(SpeakeasyBase));
-export { RegistryGetApiSpecContentsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistryGetApiSpecContentsPathParams = RegistryGetApiSpecContentsPathParams;
 var RegistryGetApiSpecContentsRequest = /** @class */ (function (_super) {
     __extends(RegistryGetApiSpecContentsRequest, _super);
     function RegistryGetApiSpecContentsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistryGetApiSpecContentsPathParams)
     ], RegistryGetApiSpecContentsRequest.prototype, "pathParams", void 0);
     return RegistryGetApiSpecContentsRequest;
-}(SpeakeasyBase));
-export { RegistryGetApiSpecContentsRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegistryGetApiSpecContentsRequest = RegistryGetApiSpecContentsRequest;
 var RegistryGetApiSpecContentsResponse = /** @class */ (function (_super) {
     __extends(RegistryGetApiSpecContentsResponse, _super);
     function RegistryGetApiSpecContentsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RegistryGetApiSpecContentsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RegistryGetApiSpecContentsResponse.prototype, "statusCode", void 0);
     return RegistryGetApiSpecContentsResponse;
-}(SpeakeasyBase));
-export { RegistryGetApiSpecContentsResponse };
+}(utils_1.SpeakeasyBase));
+exports.RegistryGetApiSpecContentsResponse = RegistryGetApiSpecContentsResponse;

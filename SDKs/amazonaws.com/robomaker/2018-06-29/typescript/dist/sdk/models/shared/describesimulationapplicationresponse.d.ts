@@ -15,6 +15,6 @@ export declare class DescribeSimulationApplicationResponse extends SpeakeasyBase
     robotSoftwareSuite?: RobotSoftwareSuite;
     simulationSoftwareSuite?: SimulationSoftwareSuite;
     sources?: Source[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     version?: string;
 }

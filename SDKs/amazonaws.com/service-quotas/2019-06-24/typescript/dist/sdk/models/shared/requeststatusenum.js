@@ -1,8 +1,11 @@
-export var RequestStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RequestStatusEnum = void 0;
+var RequestStatusEnum;
 (function (RequestStatusEnum) {
     RequestStatusEnum["Pending"] = "PENDING";
     RequestStatusEnum["CaseOpened"] = "CASE_OPENED";
     RequestStatusEnum["Approved"] = "APPROVED";
     RequestStatusEnum["Denied"] = "DENIED";
     RequestStatusEnum["CaseClosed"] = "CASE_CLOSED";
-})(RequestStatusEnum || (RequestStatusEnum = {}));
+})(RequestStatusEnum = exports.RequestStatusEnum || (exports.RequestStatusEnum = {}));

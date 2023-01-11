@@ -5,13 +5,13 @@ export declare class JsonRpcSecurity extends SpeakeasyBase {
     rpcAuth: shared.SchemeRpcAuth;
 }
 export declare class JsonRpcRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     request: shared.RpcRequest;
     security: JsonRpcSecurity;
 }
 export declare class JsonRpcResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     rpcResponse?: shared.RpcResponse;
 }

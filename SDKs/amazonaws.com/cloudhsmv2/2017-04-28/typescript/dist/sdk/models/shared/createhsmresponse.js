@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Hsm } from "./hsm";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateHsmResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var hsm_1 = require("./hsm");
 var CreateHsmResponse = /** @class */ (function (_super) {
     __extends(CreateHsmResponse, _super);
     function CreateHsmResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Hsm" }),
-        __metadata("design:type", Hsm)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Hsm" }),
+        __metadata("design:type", hsm_1.Hsm)
     ], CreateHsmResponse.prototype, "hsm", void 0);
     return CreateHsmResponse;
-}(SpeakeasyBase));
-export { CreateHsmResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateHsmResponse = CreateHsmResponse;

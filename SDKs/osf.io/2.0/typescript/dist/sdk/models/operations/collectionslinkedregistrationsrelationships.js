@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CollectionsLinkedRegistrationsRelationshipsResponse = exports.CollectionsLinkedRegistrationsRelationshipsRequest = exports.CollectionsLinkedRegistrationsRelationshipsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CollectionsLinkedRegistrationsRelationshipsPathParams = /** @class */ (function (_super) {
     __extends(CollectionsLinkedRegistrationsRelationshipsPathParams, _super);
     function CollectionsLinkedRegistrationsRelationshipsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=collection_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=collection_id" }),
         __metadata("design:type", String)
     ], CollectionsLinkedRegistrationsRelationshipsPathParams.prototype, "collectionId", void 0);
     return CollectionsLinkedRegistrationsRelationshipsPathParams;
-}(SpeakeasyBase));
-export { CollectionsLinkedRegistrationsRelationshipsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsLinkedRegistrationsRelationshipsPathParams = CollectionsLinkedRegistrationsRelationshipsPathParams;
 var CollectionsLinkedRegistrationsRelationshipsRequest = /** @class */ (function (_super) {
     __extends(CollectionsLinkedRegistrationsRelationshipsRequest, _super);
     function CollectionsLinkedRegistrationsRelationshipsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CollectionsLinkedRegistrationsRelationshipsPathParams)
     ], CollectionsLinkedRegistrationsRelationshipsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], CollectionsLinkedRegistrationsRelationshipsRequest.prototype, "request", void 0);
     return CollectionsLinkedRegistrationsRelationshipsRequest;
-}(SpeakeasyBase));
-export { CollectionsLinkedRegistrationsRelationshipsRequest };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsLinkedRegistrationsRelationshipsRequest = CollectionsLinkedRegistrationsRelationshipsRequest;
 var CollectionsLinkedRegistrationsRelationshipsResponse = /** @class */ (function (_super) {
     __extends(CollectionsLinkedRegistrationsRelationshipsResponse, _super);
     function CollectionsLinkedRegistrationsRelationshipsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CollectionsLinkedRegistrationsRelationshipsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CollectionsLinkedRegistrationsRelationshipsResponse.prototype, "statusCode", void 0);
     return CollectionsLinkedRegistrationsRelationshipsResponse;
-}(SpeakeasyBase));
-export { CollectionsLinkedRegistrationsRelationshipsResponse };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsLinkedRegistrationsRelationshipsResponse = CollectionsLinkedRegistrationsRelationshipsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HeadPersonalCurrentAccountsResponse = exports.HeadPersonalCurrentAccountsRequest = exports.HeadPersonalCurrentAccountsHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var HeadPersonalCurrentAccountsHeaders = /** @class */ (function (_super) {
     __extends(HeadPersonalCurrentAccountsHeaders, _super);
     function HeadPersonalCurrentAccountsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
         __metadata("design:type", String)
     ], HeadPersonalCurrentAccountsHeaders.prototype, "ifModifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-None-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-None-Match" }),
         __metadata("design:type", String)
     ], HeadPersonalCurrentAccountsHeaders.prototype, "ifNoneMatch", void 0);
     return HeadPersonalCurrentAccountsHeaders;
-}(SpeakeasyBase));
-export { HeadPersonalCurrentAccountsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.HeadPersonalCurrentAccountsHeaders = HeadPersonalCurrentAccountsHeaders;
 var HeadPersonalCurrentAccountsRequest = /** @class */ (function (_super) {
     __extends(HeadPersonalCurrentAccountsRequest, _super);
     function HeadPersonalCurrentAccountsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", HeadPersonalCurrentAccountsHeaders)
     ], HeadPersonalCurrentAccountsRequest.prototype, "headers", void 0);
     return HeadPersonalCurrentAccountsRequest;
-}(SpeakeasyBase));
-export { HeadPersonalCurrentAccountsRequest };
+}(utils_1.SpeakeasyBase));
+exports.HeadPersonalCurrentAccountsRequest = HeadPersonalCurrentAccountsRequest;
 var HeadPersonalCurrentAccountsResponse = /** @class */ (function (_super) {
     __extends(HeadPersonalCurrentAccountsResponse, _super);
     function HeadPersonalCurrentAccountsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], HeadPersonalCurrentAccountsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], HeadPersonalCurrentAccountsResponse.prototype, "noResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], HeadPersonalCurrentAccountsResponse.prototype, "statusCode", void 0);
     return HeadPersonalCurrentAccountsResponse;
-}(SpeakeasyBase));
-export { HeadPersonalCurrentAccountsResponse };
+}(utils_1.SpeakeasyBase));
+exports.HeadPersonalCurrentAccountsResponse = HeadPersonalCurrentAccountsResponse;

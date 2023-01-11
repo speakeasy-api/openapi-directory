@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAllelesForTaxonUsingGetResponse = exports.GetAllelesForTaxonUsingGetRequest = exports.GetAllelesForTaxonUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAllelesForTaxonUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetAllelesForTaxonUsingGetPathParams, _super);
     function GetAllelesForTaxonUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=taxonId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=taxonId" }),
         __metadata("design:type", String)
     ], GetAllelesForTaxonUsingGetPathParams.prototype, "taxonId", void 0);
     return GetAllelesForTaxonUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetAllelesForTaxonUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAllelesForTaxonUsingGetPathParams = GetAllelesForTaxonUsingGetPathParams;
 var GetAllelesForTaxonUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetAllelesForTaxonUsingGetRequest, _super);
     function GetAllelesForTaxonUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAllelesForTaxonUsingGetPathParams)
     ], GetAllelesForTaxonUsingGetRequest.prototype, "pathParams", void 0);
     return GetAllelesForTaxonUsingGetRequest;
-}(SpeakeasyBase));
-export { GetAllelesForTaxonUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAllelesForTaxonUsingGetRequest = GetAllelesForTaxonUsingGetRequest;
 var GetAllelesForTaxonUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetAllelesForTaxonUsingGetResponse, _super);
     function GetAllelesForTaxonUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetAllelesForTaxonUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAllelesForTaxonUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAllelesForTaxonUsingGetResponse.prototype, "statusCode", void 0);
     return GetAllelesForTaxonUsingGetResponse;
-}(SpeakeasyBase));
-export { GetAllelesForTaxonUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAllelesForTaxonUsingGetResponse = GetAllelesForTaxonUsingGetResponse;

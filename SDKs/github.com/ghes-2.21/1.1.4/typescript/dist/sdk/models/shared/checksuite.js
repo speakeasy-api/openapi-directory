@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimpleCommit } from "./simplecommit";
-import { PullRequestMinimal } from "./pullrequestminimal";
-import { MinimalRepository } from "./minimalrepository";
-export var CheckSuiteConclusionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CheckSuite = exports.CheckSuiteStatusEnum = exports.CheckSuiteConclusionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var simplecommit_1 = require("./simplecommit");
+var pullrequestminimal_1 = require("./pullrequestminimal");
+var minimalrepository_1 = require("./minimalrepository");
+var CheckSuiteConclusionEnum;
 (function (CheckSuiteConclusionEnum) {
     CheckSuiteConclusionEnum["Success"] = "success";
     CheckSuiteConclusionEnum["Failure"] = "failure";
@@ -35,13 +38,13 @@ export var CheckSuiteConclusionEnum;
     CheckSuiteConclusionEnum["Skipped"] = "skipped";
     CheckSuiteConclusionEnum["TimedOut"] = "timed_out";
     CheckSuiteConclusionEnum["ActionRequired"] = "action_required";
-})(CheckSuiteConclusionEnum || (CheckSuiteConclusionEnum = {}));
-export var CheckSuiteStatusEnum;
+})(CheckSuiteConclusionEnum = exports.CheckSuiteConclusionEnum || (exports.CheckSuiteConclusionEnum = {}));
+var CheckSuiteStatusEnum;
 (function (CheckSuiteStatusEnum) {
     CheckSuiteStatusEnum["Queued"] = "queued";
     CheckSuiteStatusEnum["InProgress"] = "in_progress";
     CheckSuiteStatusEnum["Completed"] = "completed";
-})(CheckSuiteStatusEnum || (CheckSuiteStatusEnum = {}));
+})(CheckSuiteStatusEnum = exports.CheckSuiteStatusEnum || (exports.CheckSuiteStatusEnum = {}));
 // CheckSuite
 /**
  * A suite of checks performed on the code of a given code change
@@ -52,73 +55,73 @@ var CheckSuite = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=after" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=after" }),
         __metadata("design:type", String)
     ], CheckSuite.prototype, "after", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=app" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=app" }),
+        __metadata("design:type", Object)
     ], CheckSuite.prototype, "app", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=before" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=before" }),
         __metadata("design:type", String)
     ], CheckSuite.prototype, "before", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=check_runs_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=check_runs_url" }),
         __metadata("design:type", String)
     ], CheckSuite.prototype, "checkRunsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conclusion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conclusion" }),
         __metadata("design:type", String)
     ], CheckSuite.prototype, "conclusion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], CheckSuite.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=head_branch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=head_branch" }),
         __metadata("design:type", String)
     ], CheckSuite.prototype, "headBranch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=head_commit" }),
-        __metadata("design:type", SimpleCommit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=head_commit" }),
+        __metadata("design:type", simplecommit_1.SimpleCommit)
     ], CheckSuite.prototype, "headCommit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=head_sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=head_sha" }),
         __metadata("design:type", String)
     ], CheckSuite.prototype, "headSha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], CheckSuite.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latest_check_runs_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latest_check_runs_count" }),
         __metadata("design:type", Number)
     ], CheckSuite.prototype, "latestCheckRunsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], CheckSuite.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pull_requests", elemType: PullRequestMinimal }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pull_requests", elemType: pullrequestminimal_1.PullRequestMinimal }),
         __metadata("design:type", Array)
     ], CheckSuite.prototype, "pullRequests", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repository" }),
-        __metadata("design:type", MinimalRepository)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repository" }),
+        __metadata("design:type", minimalrepository_1.MinimalRepository)
     ], CheckSuite.prototype, "repository", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], CheckSuite.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], CheckSuite.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], CheckSuite.prototype, "url", void 0);
     return CheckSuite;
-}(SpeakeasyBase));
-export { CheckSuite };
+}(utils_1.SpeakeasyBase));
+exports.CheckSuite = CheckSuite;

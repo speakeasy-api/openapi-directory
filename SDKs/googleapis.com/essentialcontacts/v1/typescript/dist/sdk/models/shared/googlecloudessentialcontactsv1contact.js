@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudEssentialcontactsV1ContactInput = exports.GoogleCloudEssentialcontactsV1Contact = exports.GoogleCloudEssentialcontactsV1ContactValidationStateEnum = exports.GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum;
 (function (GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum) {
     GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum["NotificationCategoryUnspecified"] = "NOTIFICATION_CATEGORY_UNSPECIFIED";
     GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum["All"] = "ALL";
@@ -34,13 +37,13 @@ export var GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscription
     GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum["Legal"] = "LEGAL";
     GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum["ProductUpdates"] = "PRODUCT_UPDATES";
     GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum["TechnicalIncidents"] = "TECHNICAL_INCIDENTS";
-})(GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum || (GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum = {}));
-export var GoogleCloudEssentialcontactsV1ContactValidationStateEnum;
+})(GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum = exports.GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum || (exports.GoogleCloudEssentialcontactsV1ContactNotificationCategorySubscriptionsEnum = {}));
+var GoogleCloudEssentialcontactsV1ContactValidationStateEnum;
 (function (GoogleCloudEssentialcontactsV1ContactValidationStateEnum) {
     GoogleCloudEssentialcontactsV1ContactValidationStateEnum["ValidationStateUnspecified"] = "VALIDATION_STATE_UNSPECIFIED";
     GoogleCloudEssentialcontactsV1ContactValidationStateEnum["Valid"] = "VALID";
     GoogleCloudEssentialcontactsV1ContactValidationStateEnum["Invalid"] = "INVALID";
-})(GoogleCloudEssentialcontactsV1ContactValidationStateEnum || (GoogleCloudEssentialcontactsV1ContactValidationStateEnum = {}));
+})(GoogleCloudEssentialcontactsV1ContactValidationStateEnum = exports.GoogleCloudEssentialcontactsV1ContactValidationStateEnum || (exports.GoogleCloudEssentialcontactsV1ContactValidationStateEnum = {}));
 // GoogleCloudEssentialcontactsV1Contact
 /**
  * A contact that will receive notifications from Google Cloud.
@@ -51,32 +54,32 @@ var GoogleCloudEssentialcontactsV1Contact = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], GoogleCloudEssentialcontactsV1Contact.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageTag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageTag" }),
         __metadata("design:type", String)
     ], GoogleCloudEssentialcontactsV1Contact.prototype, "languageTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudEssentialcontactsV1Contact.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationCategorySubscriptions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationCategorySubscriptions" }),
         __metadata("design:type", Array)
     ], GoogleCloudEssentialcontactsV1Contact.prototype, "notificationCategorySubscriptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validateTime" }),
         __metadata("design:type", String)
     ], GoogleCloudEssentialcontactsV1Contact.prototype, "validateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validationState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validationState" }),
         __metadata("design:type", String)
     ], GoogleCloudEssentialcontactsV1Contact.prototype, "validationState", void 0);
     return GoogleCloudEssentialcontactsV1Contact;
-}(SpeakeasyBase));
-export { GoogleCloudEssentialcontactsV1Contact };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudEssentialcontactsV1Contact = GoogleCloudEssentialcontactsV1Contact;
 // GoogleCloudEssentialcontactsV1ContactInput
 /**
  * A contact that will receive notifications from Google Cloud.
@@ -87,25 +90,25 @@ var GoogleCloudEssentialcontactsV1ContactInput = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], GoogleCloudEssentialcontactsV1ContactInput.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageTag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageTag" }),
         __metadata("design:type", String)
     ], GoogleCloudEssentialcontactsV1ContactInput.prototype, "languageTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationCategorySubscriptions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationCategorySubscriptions" }),
         __metadata("design:type", Array)
     ], GoogleCloudEssentialcontactsV1ContactInput.prototype, "notificationCategorySubscriptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validateTime" }),
         __metadata("design:type", String)
     ], GoogleCloudEssentialcontactsV1ContactInput.prototype, "validateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validationState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validationState" }),
         __metadata("design:type", String)
     ], GoogleCloudEssentialcontactsV1ContactInput.prototype, "validationState", void 0);
     return GoogleCloudEssentialcontactsV1ContactInput;
-}(SpeakeasyBase));
-export { GoogleCloudEssentialcontactsV1ContactInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudEssentialcontactsV1ContactInput = GoogleCloudEssentialcontactsV1ContactInput;

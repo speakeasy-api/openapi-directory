@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BillDetailBillsJurisdictionSessionBillIdGetRequest, BillDetailBillsJurisdictionSessionBillIdGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,23 +28,24 @@ const sdk = new SDK();
     
 const req: BillDetailBillsJurisdictionSessionBillIdGetRequest = {
   pathParams: {
-    billId: "et",
-    jurisdiction: "consectetur",
-    session: "laborum",
+    billId: "sit",
+    jurisdiction: "voluptas",
+    session: "culpa",
   },
   queryParams: {
-    apikey: "laudantium",
+    apikey: "expedita",
     include: [
-      "actions",
-      "sponsorships",
+      "versions",
+      "versions",
+      "votes",
     ],
   },
   headers: {
-    xApiKey: "ullam",
+    xApiKey: "fugit",
   },
 };
 
-sdk.sdk.billDetailBillsJurisdictionSessionBillIdGet(req).then((res: BillDetailBillsJurisdictionSessionBillIdGetResponse | AxiosError) => {
+sdk.bills.billDetailBillsJurisdictionSessionBillIdGet(req).then((res: BillDetailBillsJurisdictionSessionBillIdGetResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -54,15 +54,24 @@ sdk.sdk.billDetailBillsJurisdictionSessionBillIdGet(req).then((res: BillDetailBi
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### bills
 
 * `billDetailBillsJurisdictionSessionBillIdGet` - Bill Detail
 * `billDetailByIdBillsOcdBillOpenstatesBillIdGet` - Bill Detail By Id
 * `billsSearchBillsGet` - Bills Search
+
+### committees
+
 * `committeeDetailCommitteesCommitteeIdGet` - Committee Detail
 * `committeeListCommitteesGet` - Committee List
+
+### jurisdictions
+
 * `jurisdictionDetailJurisdictionsJurisdictionIdGet` - Jurisdiction Detail
 * `jurisdictionListJurisdictionsGet` - Jurisdiction List
+
+### people
+
 * `peopleGeoPeopleGeoGet` - People Geo
 * `peopleSearchPeopleGet` - People Search
 

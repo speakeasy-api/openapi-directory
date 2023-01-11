@@ -37,5 +37,5 @@ export class ProtocolTodGettimeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTodGettime200ApplicationJsonStrings?: string[];
+  protocolTodGettime200ApplicationJSONStrings?: string[];
 }

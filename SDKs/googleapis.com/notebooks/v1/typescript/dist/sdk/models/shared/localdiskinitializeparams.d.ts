@@ -14,5 +14,5 @@ export declare class LocalDiskInitializeParams extends SpeakeasyBase {
     diskName?: string;
     diskSizeGb?: string;
     diskType?: LocalDiskInitializeParamsDiskTypeEnum;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Date } from "./date";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageVersion = void 0;
+var utils_1 = require("../../../internal/utils");
+var date_1 = require("./date");
 // ImageVersion
 /**
  * ImageVersion information
@@ -34,29 +37,29 @@ var ImageVersion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDisabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDisabled" }),
         __metadata("design:type", Boolean)
     ], ImageVersion.prototype, "creationDisabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageVersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageVersionId" }),
         __metadata("design:type", String)
     ], ImageVersion.prototype, "imageVersionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDefault" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDefault" }),
         __metadata("design:type", Boolean)
     ], ImageVersion.prototype, "isDefault", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=releaseDate" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=releaseDate" }),
+        __metadata("design:type", date_1.Date)
     ], ImageVersion.prototype, "releaseDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportedPythonVersions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportedPythonVersions" }),
         __metadata("design:type", Array)
     ], ImageVersion.prototype, "supportedPythonVersions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upgradeDisabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upgradeDisabled" }),
         __metadata("design:type", Boolean)
     ], ImageVersion.prototype, "upgradeDisabled", void 0);
     return ImageVersion;
-}(SpeakeasyBase));
-export { ImageVersion };
+}(utils_1.SpeakeasyBase));
+exports.ImageVersion = ImageVersion;

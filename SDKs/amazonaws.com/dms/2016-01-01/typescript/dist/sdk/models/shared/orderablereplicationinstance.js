@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReleaseStatusValuesEnum } from "./releasestatusvaluesenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderableReplicationInstance = void 0;
+var utils_1 = require("../../../internal/utils");
+var releasestatusvaluesenum_1 = require("./releasestatusvaluesenum");
 // OrderableReplicationInstance
 /**
  * In response to the <code>DescribeOrderableReplicationInstances</code> operation, this object describes an available replication instance. This description includes the replication instance's type, engine version, and allocated storage.
@@ -34,41 +37,41 @@ var OrderableReplicationInstance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AvailabilityZones" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AvailabilityZones" }),
         __metadata("design:type", Array)
     ], OrderableReplicationInstance.prototype, "availabilityZones", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DefaultAllocatedStorage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DefaultAllocatedStorage" }),
         __metadata("design:type", Number)
     ], OrderableReplicationInstance.prototype, "defaultAllocatedStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EngineVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EngineVersion" }),
         __metadata("design:type", String)
     ], OrderableReplicationInstance.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncludedAllocatedStorage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludedAllocatedStorage" }),
         __metadata("design:type", Number)
     ], OrderableReplicationInstance.prototype, "includedAllocatedStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxAllocatedStorage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxAllocatedStorage" }),
         __metadata("design:type", Number)
     ], OrderableReplicationInstance.prototype, "maxAllocatedStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinAllocatedStorage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinAllocatedStorage" }),
         __metadata("design:type", Number)
     ], OrderableReplicationInstance.prototype, "minAllocatedStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReleaseStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReleaseStatus" }),
         __metadata("design:type", String)
     ], OrderableReplicationInstance.prototype, "releaseStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationInstanceClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationInstanceClass" }),
         __metadata("design:type", String)
     ], OrderableReplicationInstance.prototype, "replicationInstanceClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StorageType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StorageType" }),
         __metadata("design:type", String)
     ], OrderableReplicationInstance.prototype, "storageType", void 0);
     return OrderableReplicationInstance;
-}(SpeakeasyBase));
-export { OrderableReplicationInstance };
+}(utils_1.SpeakeasyBase));
+exports.OrderableReplicationInstance = OrderableReplicationInstance;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EnvironmentTemplateVersion } from "./environmenttemplateversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateEnvironmentTemplateVersionOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var environmenttemplateversion_1 = require("./environmenttemplateversion");
 var UpdateEnvironmentTemplateVersionOutput = /** @class */ (function (_super) {
     __extends(UpdateEnvironmentTemplateVersionOutput, _super);
     function UpdateEnvironmentTemplateVersionOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environmentTemplateVersion" }),
-        __metadata("design:type", EnvironmentTemplateVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environmentTemplateVersion" }),
+        __metadata("design:type", environmenttemplateversion_1.EnvironmentTemplateVersion)
     ], UpdateEnvironmentTemplateVersionOutput.prototype, "environmentTemplateVersion", void 0);
     return UpdateEnvironmentTemplateVersionOutput;
-}(SpeakeasyBase));
-export { UpdateEnvironmentTemplateVersionOutput };
+}(utils_1.SpeakeasyBase));
+exports.UpdateEnvironmentTemplateVersionOutput = UpdateEnvironmentTemplateVersionOutput;

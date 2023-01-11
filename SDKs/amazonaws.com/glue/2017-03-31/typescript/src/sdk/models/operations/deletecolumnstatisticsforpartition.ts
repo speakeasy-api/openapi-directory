@@ -48,7 +48,7 @@ export class DeleteColumnStatisticsForPartitionResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteColumnStatisticsForPartitionResponse?: Map<string, any>;
+  deleteColumnStatisticsForPartitionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   entityNotFoundException?: any;

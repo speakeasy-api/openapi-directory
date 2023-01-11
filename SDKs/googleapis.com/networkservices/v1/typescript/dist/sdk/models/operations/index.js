@@ -1,25 +1,41 @@
-export * from "./networkservicesprojectslocationsendpointpoliciescreate";
-export * from "./networkservicesprojectslocationsendpointpolicieslist";
-export * from "./networkservicesprojectslocationsgatewayscreate";
-export * from "./networkservicesprojectslocationsgatewayslist";
-export * from "./networkservicesprojectslocationsgrpcroutescreate";
-export * from "./networkservicesprojectslocationsgrpcrouteslist";
-export * from "./networkservicesprojectslocationshttproutescreate";
-export * from "./networkservicesprojectslocationshttprouteslist";
-export * from "./networkservicesprojectslocationslist";
-export * from "./networkservicesprojectslocationsmeshescreate";
-export * from "./networkservicesprojectslocationsmesheslist";
-export * from "./networkservicesprojectslocationsoperationscancel";
-export * from "./networkservicesprojectslocationsoperationslist";
-export * from "./networkservicesprojectslocationsservicebindingscreate";
-export * from "./networkservicesprojectslocationsservicebindingsgetiampolicy";
-export * from "./networkservicesprojectslocationsservicebindingslist";
-export * from "./networkservicesprojectslocationsservicebindingssetiampolicy";
-export * from "./networkservicesprojectslocationsservicebindingstestiampermissions";
-export * from "./networkservicesprojectslocationstcproutescreate";
-export * from "./networkservicesprojectslocationstcprouteslist";
-export * from "./networkservicesprojectslocationstlsroutescreate";
-export * from "./networkservicesprojectslocationstlsroutesdelete";
-export * from "./networkservicesprojectslocationstlsroutesget";
-export * from "./networkservicesprojectslocationstlsrouteslist";
-export * from "./networkservicesprojectslocationstlsroutespatch";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./networkservicesprojectslocationsendpointpoliciescreate"), exports);
+__exportStar(require("./networkservicesprojectslocationsendpointpolicieslist"), exports);
+__exportStar(require("./networkservicesprojectslocationsgatewayscreate"), exports);
+__exportStar(require("./networkservicesprojectslocationsgatewayslist"), exports);
+__exportStar(require("./networkservicesprojectslocationsgrpcroutescreate"), exports);
+__exportStar(require("./networkservicesprojectslocationsgrpcrouteslist"), exports);
+__exportStar(require("./networkservicesprojectslocationshttproutescreate"), exports);
+__exportStar(require("./networkservicesprojectslocationshttprouteslist"), exports);
+__exportStar(require("./networkservicesprojectslocationslist"), exports);
+__exportStar(require("./networkservicesprojectslocationsmeshescreate"), exports);
+__exportStar(require("./networkservicesprojectslocationsmesheslist"), exports);
+__exportStar(require("./networkservicesprojectslocationsoperationscancel"), exports);
+__exportStar(require("./networkservicesprojectslocationsoperationslist"), exports);
+__exportStar(require("./networkservicesprojectslocationsservicebindingscreate"), exports);
+__exportStar(require("./networkservicesprojectslocationsservicebindingsgetiampolicy"), exports);
+__exportStar(require("./networkservicesprojectslocationsservicebindingslist"), exports);
+__exportStar(require("./networkservicesprojectslocationsservicebindingssetiampolicy"), exports);
+__exportStar(require("./networkservicesprojectslocationsservicebindingstestiampermissions"), exports);
+__exportStar(require("./networkservicesprojectslocationstcproutescreate"), exports);
+__exportStar(require("./networkservicesprojectslocationstcprouteslist"), exports);
+__exportStar(require("./networkservicesprojectslocationstlsroutescreate"), exports);
+__exportStar(require("./networkservicesprojectslocationstlsroutesdelete"), exports);
+__exportStar(require("./networkservicesprojectslocationstlsroutesget"), exports);
+__exportStar(require("./networkservicesprojectslocationstlsrouteslist"), exports);
+__exportStar(require("./networkservicesprojectslocationstlsroutespatch"), exports);

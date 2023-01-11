@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3ReferenceDataSource = void 0;
+var utils_1 = require("../../../internal/utils");
 // S3ReferenceDataSource
 /**
  * <p>Identifies the S3 bucket and object that contains the reference data. Also identifies the IAM role Amazon Kinesis Analytics can assume to read this object on your behalf.</p> <p>An Amazon Kinesis Analytics application loads reference data only once. If the data changes, you call the <a href="https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_UpdateApplication.html">UpdateApplication</a> operation to trigger reloading of data into your application.</p>
@@ -33,17 +36,17 @@ var S3ReferenceDataSource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BucketARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BucketARN" }),
         __metadata("design:type", String)
-    ], S3ReferenceDataSource.prototype, "bucketArn", void 0);
+    ], S3ReferenceDataSource.prototype, "bucketARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FileKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FileKey" }),
         __metadata("design:type", String)
     ], S3ReferenceDataSource.prototype, "fileKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReferenceRoleARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReferenceRoleARN" }),
         __metadata("design:type", String)
-    ], S3ReferenceDataSource.prototype, "referenceRoleArn", void 0);
+    ], S3ReferenceDataSource.prototype, "referenceRoleARN", void 0);
     return S3ReferenceDataSource;
-}(SpeakeasyBase));
-export { S3ReferenceDataSource };
+}(utils_1.SpeakeasyBase));
+exports.S3ReferenceDataSource = S3ReferenceDataSource;

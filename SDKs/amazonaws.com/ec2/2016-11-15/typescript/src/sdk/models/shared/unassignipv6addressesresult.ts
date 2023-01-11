@@ -4,11 +4,11 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class UnassignIpv6AddressesResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  networkInterfaceId?: string;
+  networkInterfaceId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  unassignedIpv6Addresses?: string[];
+  unassignedIpv6Addresses?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  unassignedIpv6Prefixes?: string[];
+  unassignedIpv6Prefixes?: Record<string, any>;
 }

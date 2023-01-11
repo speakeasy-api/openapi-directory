@@ -22,7 +22,7 @@ export declare class UpdateBotRequestBody extends SpeakeasyBase {
     botName: string;
     dataPrivacy: UpdateBotRequestBodyDataPrivacy;
     description?: string;
-    idleSessionTtlInSeconds: number;
+    idleSessionTTLInSeconds: number;
     roleArn: string;
 }
 export declare class UpdateBotRequest extends SpeakeasyBase {

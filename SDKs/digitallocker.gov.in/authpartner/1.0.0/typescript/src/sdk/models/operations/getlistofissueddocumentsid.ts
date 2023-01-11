@@ -25,13 +25,13 @@ export class GetListOfIssuedDocumentsIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getListOfIssuedDocumentsId200ApplicationJsonObject?: GetListOfIssuedDocumentsId200ApplicationJson;
+  getListOfIssuedDocumentsId200ApplicationJSONObject?: GetListOfIssuedDocumentsId200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getListOfIssuedDocumentsId401ApplicationJsonObject?: GetListOfIssuedDocumentsId401ApplicationJson;
+  getListOfIssuedDocumentsId401ApplicationJSONObject?: GetListOfIssuedDocumentsId401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getListOfIssuedDocumentsId500ApplicationJsonOneOf?: any;
+  getListOfIssuedDocumentsId500ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

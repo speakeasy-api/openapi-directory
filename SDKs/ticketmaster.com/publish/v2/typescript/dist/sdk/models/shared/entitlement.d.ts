@@ -12,7 +12,7 @@ export declare enum EntitlementSourceEnum {
  * This class defines an entitlement data on the Publish API
 **/
 export declare class Entitlement extends SpeakeasyBase {
-    data: Map<string, any>;
+    data: Record<string, any>;
     relatedEntityId?: string;
     relatedEntitySource?: Source;
     relatedEntityType: EntitlementRelatedEntityTypeEnum;

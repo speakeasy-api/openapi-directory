@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var WeekCurrentFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WeekCurrentResponse = exports.WeekCurrentRequest = exports.WeekCurrentPathParams = exports.WeekCurrentFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var WeekCurrentFormatEnum;
 (function (WeekCurrentFormatEnum) {
     WeekCurrentFormatEnum["Xml"] = "XML";
     WeekCurrentFormatEnum["Json"] = "JSON";
-})(WeekCurrentFormatEnum || (WeekCurrentFormatEnum = {}));
+})(WeekCurrentFormatEnum = exports.WeekCurrentFormatEnum || (exports.WeekCurrentFormatEnum = {}));
 var WeekCurrentPathParams = /** @class */ (function (_super) {
     __extends(WeekCurrentPathParams, _super);
     function WeekCurrentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], WeekCurrentPathParams.prototype, "format", void 0);
     return WeekCurrentPathParams;
-}(SpeakeasyBase));
-export { WeekCurrentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.WeekCurrentPathParams = WeekCurrentPathParams;
 var WeekCurrentRequest = /** @class */ (function (_super) {
     __extends(WeekCurrentRequest, _super);
     function WeekCurrentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", WeekCurrentPathParams)
     ], WeekCurrentRequest.prototype, "pathParams", void 0);
     return WeekCurrentRequest;
-}(SpeakeasyBase));
-export { WeekCurrentRequest };
+}(utils_1.SpeakeasyBase));
+exports.WeekCurrentRequest = WeekCurrentRequest;
 var WeekCurrentResponse = /** @class */ (function (_super) {
     __extends(WeekCurrentResponse, _super);
     function WeekCurrentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], WeekCurrentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], WeekCurrentResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], WeekCurrentResponse.prototype, "weekCurrent200ApplicationJsonInteger", void 0);
+    ], WeekCurrentResponse.prototype, "weekCurrent200ApplicationJSONInteger", void 0);
     return WeekCurrentResponse;
-}(SpeakeasyBase));
-export { WeekCurrentResponse };
+}(utils_1.SpeakeasyBase));
+exports.WeekCurrentResponse = WeekCurrentResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TypeEnum } from "./typeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Grantee = void 0;
+var utils_1 = require("../../../internal/utils");
+var typeenum_1 = require("./typeenum");
 // Grantee
 /**
  * Contains information about the grantee.
@@ -34,25 +37,25 @@ var Grantee = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DisplayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DisplayName" }),
         __metadata("design:type", String)
     ], Grantee.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmailAddress" }),
         __metadata("design:type", String)
     ], Grantee.prototype, "emailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ID" }),
         __metadata("design:type", String)
     ], Grantee.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], Grantee.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=URI" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=URI" }),
         __metadata("design:type", String)
     ], Grantee.prototype, "uri", void 0);
     return Grantee;
-}(SpeakeasyBase));
-export { Grantee };
+}(utils_1.SpeakeasyBase));
+exports.Grantee = Grantee;

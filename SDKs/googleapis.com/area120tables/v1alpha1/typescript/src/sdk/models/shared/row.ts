@@ -17,5 +17,5 @@ export class Row extends SpeakeasyBase {
   updateTime?: string;
 
   @SpeakeasyMetadata({ data: "json, name=values" })
-  values?: Map<string, any>;
+  values?: Record<string, any>;
 }

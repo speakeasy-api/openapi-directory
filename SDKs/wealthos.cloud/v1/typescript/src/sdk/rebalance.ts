@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -47,18 +46,18 @@ export class Rebalance {
     }
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -66,49 +65,48 @@ export class Rebalance {
         switch (true) {
           case httpRes?.status == 201:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createRebalance201ApplicationJsonAny = httpRes?.data;
+                res.createRebalance201ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createRebalance400ApplicationJsonAny = httpRes?.data;
+                res.createRebalance400ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createRebalance401ApplicationJsonAny = httpRes?.data;
+                res.createRebalance401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createRebalance403ApplicationJsonAny = httpRes?.data;
+                res.createRebalance403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createRebalance404ApplicationJsonAny = httpRes?.data;
+                res.createRebalance404ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 409:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createRebalance409ApplicationJsonAny = httpRes?.data;
+                res.createRebalance409ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createRebalance429ApplicationJsonAny = httpRes?.data;
+                res.createRebalance429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.createRebalance500ApplicationJsonAny = httpRes?.data;
+                res.createRebalance500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -139,18 +137,18 @@ export class Rebalance {
     }
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -163,44 +161,43 @@ export class Rebalance {
             break;
           case httpRes?.status == 400:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.evaluateRebalance400ApplicationJsonAny = httpRes?.data;
+                res.evaluateRebalance400ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.evaluateRebalance401ApplicationJsonAny = httpRes?.data;
+                res.evaluateRebalance401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.evaluateRebalance403ApplicationJsonAny = httpRes?.data;
+                res.evaluateRebalance403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.evaluateRebalance404ApplicationJsonAny = httpRes?.data;
+                res.evaluateRebalance404ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 409:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.evaluateRebalance409ApplicationJsonAny = httpRes?.data;
+                res.evaluateRebalance409ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.evaluateRebalance429ApplicationJsonAny = httpRes?.data;
+                res.evaluateRebalance429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.evaluateRebalance500ApplicationJsonAny = httpRes?.data;
+                res.evaluateRebalance500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -221,14 +218,17 @@ export class Rebalance {
     const url: string = utils.generateURL(baseURL, "/tenant/transactions/v1/rebalance/{rebalance_request_id}", req.pathParams);
     
     const client: AxiosInstance = utils.createSecurityClient(this._defaultClient!, req.security)!;
+    
     const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -236,49 +236,48 @@ export class Rebalance {
         switch (true) {
           case httpRes?.status == 200:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getRebalanceDetails200ApplicationJsonAny = httpRes?.data;
+                res.getRebalanceDetails200ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getRebalanceDetails400ApplicationJsonAny = httpRes?.data;
+                res.getRebalanceDetails400ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getRebalanceDetails401ApplicationJsonAny = httpRes?.data;
+                res.getRebalanceDetails401ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getRebalanceDetails403ApplicationJsonAny = httpRes?.data;
+                res.getRebalanceDetails403ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getRebalanceDetails404ApplicationJsonAny = httpRes?.data;
+                res.getRebalanceDetails404ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 409:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getRebalanceDetails409ApplicationJsonAny = httpRes?.data;
+                res.getRebalanceDetails409ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getRebalanceDetails429ApplicationJsonAny = httpRes?.data;
+                res.getRebalanceDetails429ApplicationJSONAny = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
             if (utils.matchContentType(contentType, `application/json`)) {
-                res.getRebalanceDetails500ApplicationJsonAny = httpRes?.data;
+                res.getRebalanceDetails500ApplicationJSONAny = httpRes?.data;
             }
             break;
         }
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

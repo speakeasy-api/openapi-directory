@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,94 +14,119 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeletePortfolioResponse = exports.DeletePortfolioRequest = exports.DeletePortfolio200ApplicationJson = exports.DeletePortfolioQueryParams = exports.DeletePortfolioPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DeletePortfolioPathParams = /** @class */ (function (_super) {
     __extends(DeletePortfolioPathParams, _super);
     function DeletePortfolioPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=portfolio_gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=portfolio_gid" }),
         __metadata("design:type", String)
     ], DeletePortfolioPathParams.prototype, "portfolioGid", void 0);
     return DeletePortfolioPathParams;
-}(SpeakeasyBase));
-export { DeletePortfolioPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeletePortfolioPathParams = DeletePortfolioPathParams;
 var DeletePortfolioQueryParams = /** @class */ (function (_super) {
     __extends(DeletePortfolioQueryParams, _super);
     function DeletePortfolioQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=opt_fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=opt_fields" }),
         __metadata("design:type", Array)
     ], DeletePortfolioQueryParams.prototype, "optFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=opt_pretty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=opt_pretty" }),
         __metadata("design:type", Boolean)
     ], DeletePortfolioQueryParams.prototype, "optPretty", void 0);
     return DeletePortfolioQueryParams;
-}(SpeakeasyBase));
-export { DeletePortfolioQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DeletePortfolioQueryParams = DeletePortfolioQueryParams;
 var DeletePortfolio200ApplicationJson = /** @class */ (function (_super) {
     __extends(DeletePortfolio200ApplicationJson, _super);
     function DeletePortfolio200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], DeletePortfolio200ApplicationJson.prototype, "data", void 0);
     return DeletePortfolio200ApplicationJson;
-}(SpeakeasyBase));
-export { DeletePortfolio200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeletePortfolio200ApplicationJson = DeletePortfolio200ApplicationJson;
 var DeletePortfolioRequest = /** @class */ (function (_super) {
     __extends(DeletePortfolioRequest, _super);
     function DeletePortfolioRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePortfolioPathParams)
     ], DeletePortfolioRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePortfolioQueryParams)
     ], DeletePortfolioRequest.prototype, "queryParams", void 0);
     return DeletePortfolioRequest;
-}(SpeakeasyBase));
-export { DeletePortfolioRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeletePortfolioRequest = DeletePortfolioRequest;
 var DeletePortfolioResponse = /** @class */ (function (_super) {
     __extends(DeletePortfolioResponse, _super);
     function DeletePortfolioResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeletePortfolioResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorResponse)
     ], DeletePortfolioResponse.prototype, "errorResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeletePortfolioResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePortfolio200ApplicationJson)
-    ], DeletePortfolioResponse.prototype, "deletePortfolio200ApplicationJsonObject", void 0);
+    ], DeletePortfolioResponse.prototype, "deletePortfolio200ApplicationJSONObject", void 0);
     return DeletePortfolioResponse;
-}(SpeakeasyBase));
-export { DeletePortfolioResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeletePortfolioResponse = DeletePortfolioResponse;

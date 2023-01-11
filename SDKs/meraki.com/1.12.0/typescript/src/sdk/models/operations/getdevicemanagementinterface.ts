@@ -22,5 +22,5 @@ export class GetDeviceManagementInterfaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceManagementInterface200ApplicationJsonObject?: Map<string, any>;
+  getDeviceManagementInterface200ApplicationJSONObject?: Record<string, any>;
 }

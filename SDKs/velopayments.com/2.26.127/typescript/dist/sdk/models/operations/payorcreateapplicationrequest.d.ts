@@ -9,7 +9,7 @@ export declare class PayorCreateApplicationRequestRequest extends SpeakeasyBase 
 }
 export declare class PayorCreateApplicationRequestResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     inlineResponse400?: any;
     inlineResponse403?: any;

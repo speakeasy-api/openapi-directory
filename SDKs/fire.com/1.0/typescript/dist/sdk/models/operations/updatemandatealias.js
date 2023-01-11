@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateMandateAliasResponse = exports.UpdateMandateAliasRequest = exports.UpdateMandateAliasPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateMandateAliasPathParams = /** @class */ (function (_super) {
     __extends(UpdateMandateAliasPathParams, _super);
     function UpdateMandateAliasPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=mandateUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=mandateUuid" }),
         __metadata("design:type", String)
     ], UpdateMandateAliasPathParams.prototype, "mandateUuid", void 0);
     return UpdateMandateAliasPathParams;
-}(SpeakeasyBase));
-export { UpdateMandateAliasPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMandateAliasPathParams = UpdateMandateAliasPathParams;
 var UpdateMandateAliasRequest = /** @class */ (function (_super) {
     __extends(UpdateMandateAliasRequest, _super);
     function UpdateMandateAliasRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateMandateAliasPathParams)
     ], UpdateMandateAliasRequest.prototype, "pathParams", void 0);
     return UpdateMandateAliasRequest;
-}(SpeakeasyBase));
-export { UpdateMandateAliasRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMandateAliasRequest = UpdateMandateAliasRequest;
 var UpdateMandateAliasResponse = /** @class */ (function (_super) {
     __extends(UpdateMandateAliasResponse, _super);
     function UpdateMandateAliasResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateMandateAliasResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateMandateAliasResponse.prototype, "statusCode", void 0);
     return UpdateMandateAliasResponse;
-}(SpeakeasyBase));
-export { UpdateMandateAliasResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMandateAliasResponse = UpdateMandateAliasResponse;

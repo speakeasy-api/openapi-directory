@@ -33,6 +33,6 @@ export declare class GetIsosRequest extends SpeakeasyBase {
 }
 export declare class GetIsosResponse extends SpeakeasyBase {
     contentType: string;
-    getIsos200ApplicationJsonObject?: GetIsos200ApplicationJson;
     statusCode: number;
+    getIsos200ApplicationJSONObject?: GetIsos200ApplicationJson;
 }

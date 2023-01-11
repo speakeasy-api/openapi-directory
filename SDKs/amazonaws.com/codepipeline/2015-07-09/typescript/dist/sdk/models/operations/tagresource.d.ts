@@ -24,7 +24,7 @@ export declare class TagResourceResponse extends SpeakeasyBase {
     invalidTagsException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    tagResourceOutput?: Map<string, any>;
+    tagResourceOutput?: Record<string, any>;
     tooManyTagsException?: any;
     validationException?: any;
 }

@@ -14,14 +14,14 @@ export declare class DisassociateServiceQuotaTemplateHeaders extends SpeakeasyBa
 }
 export declare class DisassociateServiceQuotaTemplateRequest extends SpeakeasyBase {
     headers: DisassociateServiceQuotaTemplateHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class DisassociateServiceQuotaTemplateResponse extends SpeakeasyBase {
     awsServiceAccessNotEnabledException?: any;
     accessDeniedException?: any;
     contentType: string;
     dependencyAccessDeniedException?: any;
-    disassociateServiceQuotaTemplateResponse?: Map<string, any>;
+    disassociateServiceQuotaTemplateResponse?: Record<string, any>;
     noAvailableOrganizationException?: any;
     serviceException?: any;
     serviceQuotaTemplateNotInUseException?: any;

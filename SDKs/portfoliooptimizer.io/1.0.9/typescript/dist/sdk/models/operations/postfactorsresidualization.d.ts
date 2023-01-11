@@ -14,6 +14,6 @@ export declare class PostFactorsResidualizationRequest extends SpeakeasyBase {
 }
 export declare class PostFactorsResidualizationResponse extends SpeakeasyBase {
     contentType: string;
-    postFactorsResidualization200ApplicationJsonObject?: PostFactorsResidualization200ApplicationJson;
     statusCode: number;
+    postFactorsResidualization200ApplicationJSONObject?: PostFactorsResidualization200ApplicationJson;
 }

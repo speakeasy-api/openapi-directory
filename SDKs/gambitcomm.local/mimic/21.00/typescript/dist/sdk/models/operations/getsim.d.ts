@@ -8,5 +8,5 @@ export declare class GetSimRequest extends SpeakeasyBase {
 export declare class GetSimResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSim200ApplicationJsonString?: string;
+    getSim200ApplicationJSONString?: string;
 }

@@ -1,12 +1,43 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PeeringConnectionOptions } from "./peeringconnectionoptions";
 
+
+
+// ModifyVpcPeeringConnectionOptionsResultAccepterPeeringConnectionOptions
+/** 
+ * Information about the VPC peering connection options for the accepter VPC.
+**/
+export class ModifyVpcPeeringConnectionOptionsResultAccepterPeeringConnectionOptions extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  allowDnsResolutionFromRemoteVpc?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  allowEgressFromLocalClassicLinkToRemoteVpc?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  allowEgressFromLocalVpcToRemoteClassicLink?: Record<string, any>;
+}
+
+
+// ModifyVpcPeeringConnectionOptionsResultRequesterPeeringConnectionOptions
+/** 
+ * Information about the VPC peering connection options for the requester VPC.
+**/
+export class ModifyVpcPeeringConnectionOptionsResultRequesterPeeringConnectionOptions extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  allowDnsResolutionFromRemoteVpc?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  allowEgressFromLocalClassicLinkToRemoteVpc?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  allowEgressFromLocalVpcToRemoteClassicLink?: Record<string, any>;
+}
 
 
 export class ModifyVpcPeeringConnectionOptionsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  accepterPeeringConnectionOptions?: PeeringConnectionOptions;
+  accepterPeeringConnectionOptions?: ModifyVpcPeeringConnectionOptionsResultAccepterPeeringConnectionOptions;
 
   @SpeakeasyMetadata()
-  requesterPeeringConnectionOptions?: PeeringConnectionOptions;
+  requesterPeeringConnectionOptions?: ModifyVpcPeeringConnectionOptionsResultRequesterPeeringConnectionOptions;
 }

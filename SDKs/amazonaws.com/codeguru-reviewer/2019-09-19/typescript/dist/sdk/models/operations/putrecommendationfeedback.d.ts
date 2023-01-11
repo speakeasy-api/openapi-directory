@@ -22,7 +22,7 @@ export declare class PutRecommendationFeedbackResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
     internalServerException?: any;
-    putRecommendationFeedbackResponse?: Map<string, any>;
+    putRecommendationFeedbackResponse?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
     throttlingException?: any;

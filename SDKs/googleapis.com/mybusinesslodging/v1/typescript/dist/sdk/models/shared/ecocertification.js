@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var EcoCertificationAwardedExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EcoCertification = exports.EcoCertificationEcoCertificateEnum = exports.EcoCertificationAwardedExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var EcoCertificationAwardedExceptionEnum;
 (function (EcoCertificationAwardedExceptionEnum) {
     EcoCertificationAwardedExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     EcoCertificationAwardedExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     EcoCertificationAwardedExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     EcoCertificationAwardedExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(EcoCertificationAwardedExceptionEnum || (EcoCertificationAwardedExceptionEnum = {}));
-export var EcoCertificationEcoCertificateEnum;
+})(EcoCertificationAwardedExceptionEnum = exports.EcoCertificationAwardedExceptionEnum || (exports.EcoCertificationAwardedExceptionEnum = {}));
+var EcoCertificationEcoCertificateEnum;
 (function (EcoCertificationEcoCertificateEnum) {
     EcoCertificationEcoCertificateEnum["EcoCertificateUnspecified"] = "ECO_CERTIFICATE_UNSPECIFIED";
     EcoCertificationEcoCertificateEnum["Iso14001"] = "ISO14001";
@@ -60,7 +63,7 @@ export var EcoCertificationEcoCertificateEnum;
     EcoCertificationEcoCertificateEnum["Travelife"] = "TRAVELIFE";
     EcoCertificationEcoCertificateEnum["UnitedCertificationSystemsLimited"] = "UNITED_CERTIFICATION_SYSTEMS_LIMITED";
     EcoCertificationEcoCertificateEnum["VireoSrl"] = "VIREO_SRL";
-})(EcoCertificationEcoCertificateEnum || (EcoCertificationEcoCertificateEnum = {}));
+})(EcoCertificationEcoCertificateEnum = exports.EcoCertificationEcoCertificateEnum || (exports.EcoCertificationEcoCertificateEnum = {}));
 // EcoCertification
 /**
  * An eco certificate awarded to the hotel.
@@ -71,17 +74,17 @@ var EcoCertification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awarded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awarded" }),
         __metadata("design:type", Boolean)
     ], EcoCertification.prototype, "awarded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awardedException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awardedException" }),
         __metadata("design:type", String)
     ], EcoCertification.prototype, "awardedException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ecoCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ecoCertificate" }),
         __metadata("design:type", String)
     ], EcoCertification.prototype, "ecoCertificate", void 0);
     return EcoCertification;
-}(SpeakeasyBase));
-export { EcoCertification };
+}(utils_1.SpeakeasyBase));
+exports.EcoCertification = EcoCertification;

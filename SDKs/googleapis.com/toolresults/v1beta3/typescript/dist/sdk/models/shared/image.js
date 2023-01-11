@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Status } from "./status";
-import { ToolOutputReference } from "./tooloutputreference";
-import { Thumbnail } from "./thumbnail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Image = void 0;
+var utils_1 = require("../../../internal/utils");
+var status_1 = require("./status");
+var tooloutputreference_1 = require("./tooloutputreference");
+var thumbnail_1 = require("./thumbnail");
 // Image
 /**
  * An image, with a link to the main image and a thumbnail.
@@ -36,21 +39,21 @@ var Image = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
     ], Image.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceImage" }),
-        __metadata("design:type", ToolOutputReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceImage" }),
+        __metadata("design:type", tooloutputreference_1.ToolOutputReference)
     ], Image.prototype, "sourceImage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stepId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stepId" }),
         __metadata("design:type", String)
     ], Image.prototype, "stepId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnail" }),
-        __metadata("design:type", Thumbnail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnail" }),
+        __metadata("design:type", thumbnail_1.Thumbnail)
     ], Image.prototype, "thumbnail", void 0);
     return Image;
-}(SpeakeasyBase));
-export { Image };
+}(utils_1.SpeakeasyBase));
+exports.Image = Image;

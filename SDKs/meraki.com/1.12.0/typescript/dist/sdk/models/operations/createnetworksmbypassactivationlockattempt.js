@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateNetworkSmBypassActivationLockAttemptResponse = exports.CreateNetworkSmBypassActivationLockAttemptRequest = exports.CreateNetworkSmBypassActivationLockAttemptRequestBody = exports.CreateNetworkSmBypassActivationLockAttemptPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateNetworkSmBypassActivationLockAttemptPathParams = /** @class */ (function (_super) {
     __extends(CreateNetworkSmBypassActivationLockAttemptPathParams, _super);
     function CreateNetworkSmBypassActivationLockAttemptPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], CreateNetworkSmBypassActivationLockAttemptPathParams.prototype, "networkId", void 0);
     return CreateNetworkSmBypassActivationLockAttemptPathParams;
-}(SpeakeasyBase));
-export { CreateNetworkSmBypassActivationLockAttemptPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkSmBypassActivationLockAttemptPathParams = CreateNetworkSmBypassActivationLockAttemptPathParams;
 var CreateNetworkSmBypassActivationLockAttemptRequestBody = /** @class */ (function (_super) {
     __extends(CreateNetworkSmBypassActivationLockAttemptRequestBody, _super);
     function CreateNetworkSmBypassActivationLockAttemptRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ids" }),
         __metadata("design:type", Array)
     ], CreateNetworkSmBypassActivationLockAttemptRequestBody.prototype, "ids", void 0);
     return CreateNetworkSmBypassActivationLockAttemptRequestBody;
-}(SpeakeasyBase));
-export { CreateNetworkSmBypassActivationLockAttemptRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkSmBypassActivationLockAttemptRequestBody = CreateNetworkSmBypassActivationLockAttemptRequestBody;
 var CreateNetworkSmBypassActivationLockAttemptRequest = /** @class */ (function (_super) {
     __extends(CreateNetworkSmBypassActivationLockAttemptRequest, _super);
     function CreateNetworkSmBypassActivationLockAttemptRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateNetworkSmBypassActivationLockAttemptPathParams)
     ], CreateNetworkSmBypassActivationLockAttemptRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateNetworkSmBypassActivationLockAttemptRequestBody)
     ], CreateNetworkSmBypassActivationLockAttemptRequest.prototype, "request", void 0);
     return CreateNetworkSmBypassActivationLockAttemptRequest;
-}(SpeakeasyBase));
-export { CreateNetworkSmBypassActivationLockAttemptRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkSmBypassActivationLockAttemptRequest = CreateNetworkSmBypassActivationLockAttemptRequest;
 var CreateNetworkSmBypassActivationLockAttemptResponse = /** @class */ (function (_super) {
     __extends(CreateNetworkSmBypassActivationLockAttemptResponse, _super);
     function CreateNetworkSmBypassActivationLockAttemptResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateNetworkSmBypassActivationLockAttemptResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateNetworkSmBypassActivationLockAttemptResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], CreateNetworkSmBypassActivationLockAttemptResponse.prototype, "createNetworkSmBypassActivationLockAttempt201ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkSmBypassActivationLockAttemptResponse.prototype, "createNetworkSmBypassActivationLockAttempt201ApplicationJSONObject", void 0);
     return CreateNetworkSmBypassActivationLockAttemptResponse;
-}(SpeakeasyBase));
-export { CreateNetworkSmBypassActivationLockAttemptResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkSmBypassActivationLockAttemptResponse = CreateNetworkSmBypassActivationLockAttemptResponse;

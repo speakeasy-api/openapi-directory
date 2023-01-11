@@ -25,5 +25,5 @@ export class AgentStoreUnsetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  agentStoreUnset200ApplicationJsonString?: string;
+  agentStoreUnset200ApplicationJSONString?: string;
 }

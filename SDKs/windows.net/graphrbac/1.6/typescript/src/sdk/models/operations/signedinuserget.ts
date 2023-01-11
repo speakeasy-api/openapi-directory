@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class SignedInUserGetPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" })
-  tenantId: string;
+  tenantID: string;
 }
 
 
@@ -35,5 +35,5 @@ export class SignedInUserGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  user?: Map<string, Map<string, any>>;
+  user?: Record<string, Record<string, any>>;
 }

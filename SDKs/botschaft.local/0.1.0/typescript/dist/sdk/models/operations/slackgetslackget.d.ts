@@ -16,5 +16,5 @@ export declare class SlackGetSlackGetResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
     statusCode: number;
-    slackGetSlackGet200ApplicationJsonAny?: any;
+    slackGetSlackGet200ApplicationJSONAny?: any;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrganizationSimple } from "./organizationsimple";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrgMembership = exports.OrgMembershipSimpleUser = exports.OrgMembershipPermissions = void 0;
+var utils_1 = require("../../../internal/utils");
+var organizationsimple_1 = require("./organizationsimple");
 var OrgMembershipPermissions = /** @class */ (function (_super) {
     __extends(OrgMembershipPermissions, _super);
     function OrgMembershipPermissions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=can_create_repository" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=can_create_repository" }),
         __metadata("design:type", Boolean)
     ], OrgMembershipPermissions.prototype, "canCreateRepository", void 0);
     return OrgMembershipPermissions;
-}(SpeakeasyBase));
-export { OrgMembershipPermissions };
+}(utils_1.SpeakeasyBase));
+exports.OrgMembershipPermissions = OrgMembershipPermissions;
+// OrgMembershipSimpleUser
+/**
+ * Simple User
+**/
 var OrgMembershipSimpleUser = /** @class */ (function (_super) {
     __extends(OrgMembershipSimpleUser, _super);
     function OrgMembershipSimpleUser() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=avatar_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=avatar_url" }),
         __metadata("design:type", String)
     ], OrgMembershipSimpleUser.prototype, "avatarUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=events_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=events_url" }),
         __metadata("design:type", String)
     ], OrgMembershipSimpleUser.prototype, "eventsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=followers_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=followers_url" }),
         __metadata("design:type", String)
     ], OrgMembershipSimpleUser.prototype, "followersUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=following_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=following_url" }),
         __metadata("design:type", String)
     ], OrgMembershipSimpleUser.prototype, "followingUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gists_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gists_url" }),
         __metadata("design:type", String)
     ], OrgMembershipSimpleUser.prototype, "gistsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gravatar_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gravatar_id" }),
         __metadata("design:type", String)
     ], OrgMembershipSimpleUser.prototype, "gravatarId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], OrgMembershipSimpleUser.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], OrgMembershipSimpleUser.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=login" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=login" }),
         __metadata("design:type", String)
     ], OrgMembershipSimpleUser.prototype, "login", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], OrgMembershipSimpleUser.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organizations_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organizations_url" }),
         __metadata("design:type", String)
     ], OrgMembershipSimpleUser.prototype, "organizationsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=received_events_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=received_events_url" }),
         __metadata("design:type", String)
     ], OrgMembershipSimpleUser.prototype, "receivedEventsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repos_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repos_url" }),
         __metadata("design:type", String)
     ], OrgMembershipSimpleUser.prototype, "reposUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=site_admin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=site_admin" }),
         __metadata("design:type", Boolean)
     ], OrgMembershipSimpleUser.prototype, "siteAdmin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=starred_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=starred_at" }),
         __metadata("design:type", String)
     ], OrgMembershipSimpleUser.prototype, "starredAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=starred_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=starred_url" }),
         __metadata("design:type", String)
     ], OrgMembershipSimpleUser.prototype, "starredUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptions_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptions_url" }),
         __metadata("design:type", String)
     ], OrgMembershipSimpleUser.prototype, "subscriptionsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], OrgMembershipSimpleUser.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], OrgMembershipSimpleUser.prototype, "url", void 0);
     return OrgMembershipSimpleUser;
-}(SpeakeasyBase));
-export { OrgMembershipSimpleUser };
+}(utils_1.SpeakeasyBase));
+exports.OrgMembershipSimpleUser = OrgMembershipSimpleUser;
 // OrgMembership
 /**
  * Org Membership
@@ -130,33 +137,33 @@ var OrgMembership = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization" }),
-        __metadata("design:type", OrganizationSimple)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization" }),
+        __metadata("design:type", organizationsimple_1.OrganizationSimple)
     ], OrgMembership.prototype, "organization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization_url" }),
         __metadata("design:type", String)
     ], OrgMembership.prototype, "organizationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions" }),
         __metadata("design:type", OrgMembershipPermissions)
     ], OrgMembership.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], OrgMembership.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], OrgMembership.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], OrgMembership.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
         __metadata("design:type", OrgMembershipSimpleUser)
     ], OrgMembership.prototype, "user", void 0);
     return OrgMembership;
-}(SpeakeasyBase));
-export { OrgMembership };
+}(utils_1.SpeakeasyBase));
+exports.OrgMembership = OrgMembership;

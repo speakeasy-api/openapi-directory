@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,134 +14,159 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse = exports.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest = exports.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteSecurity = exports.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams = exports.RemotebuildexecutionProjectsInstancesWorkerpoolsDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var RemotebuildexecutionProjectsInstancesWorkerpoolsDeletePathParams = /** @class */ (function (_super) {
     __extends(RemotebuildexecutionProjectsInstancesWorkerpoolsDeletePathParams, _super);
     function RemotebuildexecutionProjectsInstancesWorkerpoolsDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeletePathParams.prototype, "name", void 0);
     return RemotebuildexecutionProjectsInstancesWorkerpoolsDeletePathParams;
-}(SpeakeasyBase));
-export { RemotebuildexecutionProjectsInstancesWorkerpoolsDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.RemotebuildexecutionProjectsInstancesWorkerpoolsDeletePathParams = RemotebuildexecutionProjectsInstancesWorkerpoolsDeletePathParams;
 var RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams = /** @class */ (function (_super) {
     __extends(RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams, _super);
     function RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams.prototype, "uploadProtocol", void 0);
     return RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams;
-}(SpeakeasyBase));
-export { RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams = RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams;
 var RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteSecurity = /** @class */ (function (_super) {
     __extends(RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteSecurity, _super);
     function RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteSecurity.prototype, "oauth2c", void 0);
     return RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteSecurity;
-}(SpeakeasyBase));
-export { RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteSecurity };
+}(utils_1.SpeakeasyBase));
+exports.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteSecurity = RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteSecurity;
 var RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest = /** @class */ (function (_super) {
     __extends(RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest, _super);
     function RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RemotebuildexecutionProjectsInstancesWorkerpoolsDeletePathParams)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteSecurity)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest.prototype, "security", void 0);
     return RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest;
-}(SpeakeasyBase));
-export { RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest = RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest;
 var RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse = /** @class */ (function (_super) {
     __extends(RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse, _super);
     function RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.GoogleLongrunningOperation)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse.prototype, "googleLongrunningOperation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse.prototype, "statusCode", void 0);
     return RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse;
-}(SpeakeasyBase));
-export { RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse = RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse;

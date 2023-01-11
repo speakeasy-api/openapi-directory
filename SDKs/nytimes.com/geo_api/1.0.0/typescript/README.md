@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetQueryJsonRequest, GetQueryJsonResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apikey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,22 +33,22 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetQueryJsonRequest = {
   queryParams: {
-    dateRange: "aut",
-    elevation: 4088759659408494563,
-    facets: 2233668648628867046,
-    filter: "et",
-    latitude: "est",
-    limit: 1376335282631291362,
-    longitude: "dolore",
-    name: "rerum",
-    offset: 4281730421960989148,
-    query: "eaque",
-    sort: "nisi",
-    sw: "ut",
+    dateRange: "sit",
+    elevation: 2259404117704393152,
+    facets: 6050128673802995827,
+    filter: "expedita",
+    latitude: "consequuntur",
+    limit: 2669985732393126063,
+    longitude: "expedita",
+    name: "voluptas",
+    offset: 8274930044578894929,
+    query: "et",
+    sort: "nihil",
+    sw: "rerum",
   },
 };
 
-sdk.sdk.getQueryJson(req).then((res: GetQueryJsonResponse | AxiosError) => {
+sdk.events.getQueryJson(req).then((res: GetQueryJsonResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -58,7 +57,7 @@ sdk.sdk.getQueryJson(req).then((res: GetQueryJsonResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Events
 
 * `getQueryJson` - Geographic API
 

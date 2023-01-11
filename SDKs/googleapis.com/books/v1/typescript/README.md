@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BooksBookshelvesGetRequest, BooksBookshelvesGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,28 +30,28 @@ const req: BooksBookshelvesGetRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    shelf: "distinctio",
-    userId: "numquam",
+    shelf: "sit",
+    userId: "voluptas",
   },
   queryParams: {
-    dollarXgafv: "1",
-    accessToken: "dolor",
-    alt: "json",
-    callback: "sint",
-    fields: "eum",
-    key: "est",
-    oauthToken: "unde",
-    prettyPrint: true,
-    quotaUser: "minima",
-    source: "et",
-    uploadType: "est",
-    uploadProtocol: "illum",
+    dollarXgafv: "2",
+    accessToken: "expedita",
+    alt: "proto",
+    callback: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    prettyPrint: false,
+    quotaUser: "nihil",
+    source: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
 };
 

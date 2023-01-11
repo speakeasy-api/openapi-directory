@@ -26,8 +26,8 @@ export declare class GetMostemailedSectionTimePeriodJsonRequest extends Speakeas
 export declare class GetMostemailedSectionTimePeriodJsonResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    getMostemailedSectionTimePeriodJson200ApplicationJsonObject?: GetMostemailedSectionTimePeriodJson200ApplicationJson;
-    getMostemailedSectionTimePeriodJson400ApplicationJsonObject?: GetMostemailedSectionTimePeriodJson400ApplicationJson;
-    getMostemailedSectionTimePeriodJson403ApplicationJsonObject?: Map<string, any>;
+    getMostemailedSectionTimePeriodJSON200ApplicationJSONObject?: GetMostemailedSectionTimePeriodJson200ApplicationJson;
+    getMostemailedSectionTimePeriodJSON400ApplicationJSONObject?: GetMostemailedSectionTimePeriodJson400ApplicationJson;
+    getMostemailedSectionTimePeriodJSON403ApplicationJSONObject?: Record<string, any>;
     statusCode: number;
 }

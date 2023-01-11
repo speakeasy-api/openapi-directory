@@ -24,7 +24,7 @@ export declare enum ErrorTypeEnum {
 /**
  * On error, the API consumer will receive an HTTP response with a HTTP Status Code of 4xx or 5xx and a Content-Type of application/problem+json.
 **/
-export declare class Error extends SpeakeasyBase {
+export declare class ErrorT extends SpeakeasyBase {
     detail?: string;
     status?: number;
     title?: string;

@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum = void 0;
+var Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum;
+(function (Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum) {
+    Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum["Tesla"] = "TESLA";
+    Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum["Bmw"] = "BMW";
+    Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum["Audi"] = "AUDI";
+    Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum["Volkswagen"] = "VOLKSWAGEN";
+    Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum["Hyundai"] = "HYUNDAI";
+    Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum["Peugeot"] = "PEUGEOT";
+    Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum["Nissan"] = "NISSAN";
+})(Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum = exports.Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum || (exports.Oneme1vendors1Percent7BvendorPercent7DDeleteParameters0SchemaEnum = {}));

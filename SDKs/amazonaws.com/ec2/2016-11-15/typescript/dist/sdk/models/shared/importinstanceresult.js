@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,166 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConversionTask } from "./conversiontask";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportInstanceResult = exports.ImportInstanceResultConversionTask = exports.ImportInstanceResultConversionTaskImportVolume = exports.ImportInstanceResultConversionTaskImportVolumeVolume = exports.ImportInstanceResultConversionTaskImportVolumeImage = exports.ImportInstanceResultConversionTaskImportInstance = void 0;
+var utils_1 = require("../../../internal/utils");
+// ImportInstanceResultConversionTaskImportInstance
+/**
+ * If the task is for importing an instance, this contains information about the import instance task.
+**/
+var ImportInstanceResultConversionTaskImportInstance = /** @class */ (function (_super) {
+    __extends(ImportInstanceResultConversionTaskImportInstance, _super);
+    function ImportInstanceResultConversionTaskImportInstance() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTaskImportInstance.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTaskImportInstance.prototype, "instanceId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTaskImportInstance.prototype, "platform", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTaskImportInstance.prototype, "volumes", void 0);
+    return ImportInstanceResultConversionTaskImportInstance;
+}(utils_1.SpeakeasyBase));
+exports.ImportInstanceResultConversionTaskImportInstance = ImportInstanceResultConversionTaskImportInstance;
+// ImportInstanceResultConversionTaskImportVolumeImage
+/**
+ * The image.
+**/
+var ImportInstanceResultConversionTaskImportVolumeImage = /** @class */ (function (_super) {
+    __extends(ImportInstanceResultConversionTaskImportVolumeImage, _super);
+    function ImportInstanceResultConversionTaskImportVolumeImage() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTaskImportVolumeImage.prototype, "checksum", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTaskImportVolumeImage.prototype, "format", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTaskImportVolumeImage.prototype, "importManifestUrl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTaskImportVolumeImage.prototype, "size", void 0);
+    return ImportInstanceResultConversionTaskImportVolumeImage;
+}(utils_1.SpeakeasyBase));
+exports.ImportInstanceResultConversionTaskImportVolumeImage = ImportInstanceResultConversionTaskImportVolumeImage;
+// ImportInstanceResultConversionTaskImportVolumeVolume
+/**
+ * The volume.
+**/
+var ImportInstanceResultConversionTaskImportVolumeVolume = /** @class */ (function (_super) {
+    __extends(ImportInstanceResultConversionTaskImportVolumeVolume, _super);
+    function ImportInstanceResultConversionTaskImportVolumeVolume() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTaskImportVolumeVolume.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTaskImportVolumeVolume.prototype, "size", void 0);
+    return ImportInstanceResultConversionTaskImportVolumeVolume;
+}(utils_1.SpeakeasyBase));
+exports.ImportInstanceResultConversionTaskImportVolumeVolume = ImportInstanceResultConversionTaskImportVolumeVolume;
+// ImportInstanceResultConversionTaskImportVolume
+/**
+ * If the task is for importing a volume, this contains information about the import volume task.
+**/
+var ImportInstanceResultConversionTaskImportVolume = /** @class */ (function (_super) {
+    __extends(ImportInstanceResultConversionTaskImportVolume, _super);
+    function ImportInstanceResultConversionTaskImportVolume() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTaskImportVolume.prototype, "availabilityZone", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTaskImportVolume.prototype, "bytesConverted", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTaskImportVolume.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ImportInstanceResultConversionTaskImportVolumeImage)
+    ], ImportInstanceResultConversionTaskImportVolume.prototype, "image", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ImportInstanceResultConversionTaskImportVolumeVolume)
+    ], ImportInstanceResultConversionTaskImportVolume.prototype, "volume", void 0);
+    return ImportInstanceResultConversionTaskImportVolume;
+}(utils_1.SpeakeasyBase));
+exports.ImportInstanceResultConversionTaskImportVolume = ImportInstanceResultConversionTaskImportVolume;
+// ImportInstanceResultConversionTask
+/**
+ * Information about the conversion task.
+**/
+var ImportInstanceResultConversionTask = /** @class */ (function (_super) {
+    __extends(ImportInstanceResultConversionTask, _super);
+    function ImportInstanceResultConversionTask() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTask.prototype, "conversionTaskId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTask.prototype, "expirationTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ImportInstanceResultConversionTaskImportInstance)
+    ], ImportInstanceResultConversionTask.prototype, "importInstance", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ImportInstanceResultConversionTaskImportVolume)
+    ], ImportInstanceResultConversionTask.prototype, "importVolume", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTask.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTask.prototype, "statusMessage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ImportInstanceResultConversionTask.prototype, "tags", void 0);
+    return ImportInstanceResultConversionTask;
+}(utils_1.SpeakeasyBase));
+exports.ImportInstanceResultConversionTask = ImportInstanceResultConversionTask;
 var ImportInstanceResult = /** @class */ (function (_super) {
     __extends(ImportInstanceResult, _super);
     function ImportInstanceResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ConversionTask)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ImportInstanceResultConversionTask)
     ], ImportInstanceResult.prototype, "conversionTask", void 0);
     return ImportInstanceResult;
-}(SpeakeasyBase));
-export { ImportInstanceResult };
+}(utils_1.SpeakeasyBase));
+exports.ImportInstanceResult = ImportInstanceResult;

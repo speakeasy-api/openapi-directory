@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { TranslateRequest, TranslateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,17 +33,16 @@ const req: TranslateRequest = {
     },
   },
   request: {
-    from: "doloribus",
+    from: "sit",
     text: [
-      "architecto",
-      "alias",
+      "culpa",
     ],
-    to: "velit",
-    translationContext: "sit",
+    to: "expedita",
+    translationContext: "consequuntur",
   },
 };
 
-sdk.sdk.translate(req).then((res: TranslateResponse | AxiosError) => {
+sdk.language.translate(req).then((res: TranslateResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -53,7 +51,7 @@ sdk.sdk.translate(req).then((res: TranslateResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### language
 
 * `translate` - Translates input text inot a given language.
 

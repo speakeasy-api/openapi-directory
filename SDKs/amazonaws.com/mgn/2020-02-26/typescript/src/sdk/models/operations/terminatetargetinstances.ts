@@ -32,7 +32,7 @@ export class TerminateTargetInstancesRequestBody extends SpeakeasyBase {
   sourceServerIDs: string[];
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

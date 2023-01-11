@@ -8,7 +8,7 @@ export declare class GetOfferingsOfferingIdAnalyticsSocialNotesRequest extends S
 }
 export declare class GetOfferingsOfferingIdAnalyticsSocialNotesResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     socialNotesResponses?: shared.SocialNotesResponse[];
     statusCode: number;
 }

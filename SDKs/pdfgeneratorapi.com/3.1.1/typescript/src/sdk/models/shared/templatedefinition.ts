@@ -9,10 +9,10 @@ import { Component } from "./component";
 **/
 export class TemplateDefinitionDataSettings extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=filterBy" })
-  filterBy?: Map<string, any>[];
+  filterBy?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=sortBy" })
-  sortBy?: Map<string, any>[];
+  sortBy?: Record<string, any>[];
 }
 
 

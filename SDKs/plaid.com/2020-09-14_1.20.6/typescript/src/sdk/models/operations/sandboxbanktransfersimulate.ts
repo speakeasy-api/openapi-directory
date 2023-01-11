@@ -14,10 +14,10 @@ export class SandboxBankTransferSimulateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  sandboxBankTransferSimulateResponse?: Map<string, any>;
+  sandboxBankTransferSimulateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

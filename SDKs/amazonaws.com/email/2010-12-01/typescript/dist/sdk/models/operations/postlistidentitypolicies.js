@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostListIdentityPoliciesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostListIdentityPoliciesResponse = exports.PostListIdentityPoliciesRequest = exports.PostListIdentityPoliciesHeaders = exports.PostListIdentityPoliciesQueryParams = exports.PostListIdentityPoliciesVersionEnum = exports.PostListIdentityPoliciesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostListIdentityPoliciesActionEnum;
 (function (PostListIdentityPoliciesActionEnum) {
     PostListIdentityPoliciesActionEnum["ListIdentityPolicies"] = "ListIdentityPolicies";
-})(PostListIdentityPoliciesActionEnum || (PostListIdentityPoliciesActionEnum = {}));
-export var PostListIdentityPoliciesVersionEnum;
+})(PostListIdentityPoliciesActionEnum = exports.PostListIdentityPoliciesActionEnum || (exports.PostListIdentityPoliciesActionEnum = {}));
+var PostListIdentityPoliciesVersionEnum;
 (function (PostListIdentityPoliciesVersionEnum) {
     PostListIdentityPoliciesVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(PostListIdentityPoliciesVersionEnum || (PostListIdentityPoliciesVersionEnum = {}));
+})(PostListIdentityPoliciesVersionEnum = exports.PostListIdentityPoliciesVersionEnum || (exports.PostListIdentityPoliciesVersionEnum = {}));
 var PostListIdentityPoliciesQueryParams = /** @class */ (function (_super) {
     __extends(PostListIdentityPoliciesQueryParams, _super);
     function PostListIdentityPoliciesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostListIdentityPoliciesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostListIdentityPoliciesQueryParams.prototype, "version", void 0);
     return PostListIdentityPoliciesQueryParams;
-}(SpeakeasyBase));
-export { PostListIdentityPoliciesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostListIdentityPoliciesQueryParams = PostListIdentityPoliciesQueryParams;
 var PostListIdentityPoliciesHeaders = /** @class */ (function (_super) {
     __extends(PostListIdentityPoliciesHeaders, _super);
     function PostListIdentityPoliciesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostListIdentityPoliciesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostListIdentityPoliciesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostListIdentityPoliciesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostListIdentityPoliciesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostListIdentityPoliciesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostListIdentityPoliciesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostListIdentityPoliciesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostListIdentityPoliciesHeaders;
-}(SpeakeasyBase));
-export { PostListIdentityPoliciesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostListIdentityPoliciesHeaders = PostListIdentityPoliciesHeaders;
 var PostListIdentityPoliciesRequest = /** @class */ (function (_super) {
     __extends(PostListIdentityPoliciesRequest, _super);
     function PostListIdentityPoliciesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostListIdentityPoliciesQueryParams)
     ], PostListIdentityPoliciesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostListIdentityPoliciesHeaders)
     ], PostListIdentityPoliciesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostListIdentityPoliciesRequest.prototype, "request", void 0);
     return PostListIdentityPoliciesRequest;
-}(SpeakeasyBase));
-export { PostListIdentityPoliciesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostListIdentityPoliciesRequest = PostListIdentityPoliciesRequest;
 var PostListIdentityPoliciesResponse = /** @class */ (function (_super) {
     __extends(PostListIdentityPoliciesResponse, _super);
     function PostListIdentityPoliciesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostListIdentityPoliciesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostListIdentityPoliciesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostListIdentityPoliciesResponse.prototype, "statusCode", void 0);
     return PostListIdentityPoliciesResponse;
-}(SpeakeasyBase));
-export { PostListIdentityPoliciesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostListIdentityPoliciesResponse = PostListIdentityPoliciesResponse;

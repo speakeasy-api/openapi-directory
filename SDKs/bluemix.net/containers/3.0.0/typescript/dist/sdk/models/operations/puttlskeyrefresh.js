@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutTlskeyRefreshResponse = exports.PutTlskeyRefreshRequest = exports.PutTlskeyRefreshHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var PutTlskeyRefreshHeaders = /** @class */ (function (_super) {
     __extends(PutTlskeyRefreshHeaders, _super);
     function PutTlskeyRefreshHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
         __metadata("design:type", String)
     ], PutTlskeyRefreshHeaders.prototype, "xAuthProjectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
         __metadata("design:type", String)
     ], PutTlskeyRefreshHeaders.prototype, "xAuthToken", void 0);
     return PutTlskeyRefreshHeaders;
-}(SpeakeasyBase));
-export { PutTlskeyRefreshHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PutTlskeyRefreshHeaders = PutTlskeyRefreshHeaders;
 var PutTlskeyRefreshRequest = /** @class */ (function (_super) {
     __extends(PutTlskeyRefreshRequest, _super);
     function PutTlskeyRefreshRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutTlskeyRefreshHeaders)
     ], PutTlskeyRefreshRequest.prototype, "headers", void 0);
     return PutTlskeyRefreshRequest;
-}(SpeakeasyBase));
-export { PutTlskeyRefreshRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutTlskeyRefreshRequest = PutTlskeyRefreshRequest;
 var PutTlskeyRefreshResponse = /** @class */ (function (_super) {
     __extends(PutTlskeyRefreshResponse, _super);
     function PutTlskeyRefreshResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutTlskeyRefreshResponse.prototype, "certificateRefresh", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PutTlskeyRefreshResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PutTlskeyRefreshResponse.prototype, "statusCode", void 0);
     return PutTlskeyRefreshResponse;
-}(SpeakeasyBase));
-export { PutTlskeyRefreshResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutTlskeyRefreshResponse = PutTlskeyRefreshResponse;

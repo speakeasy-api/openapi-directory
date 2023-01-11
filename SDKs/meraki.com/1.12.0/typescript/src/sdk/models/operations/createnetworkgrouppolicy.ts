@@ -502,5 +502,5 @@ export class CreateNetworkGroupPolicyResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createNetworkGroupPolicy201ApplicationJsonObject?: Map<string, any>;
+  createNetworkGroupPolicy201ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RadAnalyst = void 0;
+var utils_1 = require("../../../internal/utils");
 var RadAnalyst = /** @class */ (function (_super) {
     __extends(RadAnalyst, _super);
     function RadAnalyst() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analyst_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analyst_id" }),
         __metadata("design:type", Number)
     ], RadAnalyst.prototype, "analystId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analyst_short_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analyst_short_id" }),
         __metadata("design:type", Number)
     ], RadAnalyst.prototype, "analystShortId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assignment_update_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assignment_update_date" }),
         __metadata("design:type", Date)
     ], RadAnalyst.prototype, "assignmentUpdateDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committee_id" }),
         __metadata("design:type", String)
     ], RadAnalyst.prototype, "committeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committee_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committee_name" }),
         __metadata("design:type", String)
     ], RadAnalyst.prototype, "committeeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], RadAnalyst.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=first_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_name" }),
         __metadata("design:type", String)
     ], RadAnalyst.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_name" }),
         __metadata("design:type", String)
     ], RadAnalyst.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rad_branch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rad_branch" }),
         __metadata("design:type", String)
     ], RadAnalyst.prototype, "radBranch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=telephone_ext" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=telephone_ext" }),
         __metadata("design:type", Number)
     ], RadAnalyst.prototype, "telephoneExt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], RadAnalyst.prototype, "title", void 0);
     return RadAnalyst;
-}(SpeakeasyBase));
-export { RadAnalyst };
+}(utils_1.SpeakeasyBase));
+exports.RadAnalyst = RadAnalyst;

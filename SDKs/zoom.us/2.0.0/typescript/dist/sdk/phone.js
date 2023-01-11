@@ -1,0 +1,1824 @@
+"use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Phone = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
+var Phone = /** @class */ (function () {
+    function Phone(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
+        this._defaultClient = defaultClient;
+        this._securityClient = securityClient;
+        this._serverURL = serverURL;
+        this._language = language;
+        this._sdkVersion = sdkVersion;
+        this._genVersion = genVersion;
+    }
+    /**
+     * unassignPhoneNumber - Unassign phone number
+     *
+     * Unassign [phone number](https://support.zoom.us/hc/en-us/articles/360020808292-Managing-Phone-Numbers#h_38ba8b01-26e3-4b1b-a9b5-0717c00a7ca6) of a Zoom phone user. <br>
+     *
+     * After assigning a phone number, you can remove it if you don't want it to be assigned to anyone.
+     *
+     * **Scopes**: `phone:write` `phone:write:admin`<br>
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     * **Prerequisite:**
+     * 1. Business or Enterprise account
+     * 2. A Zoom Phone license
+     * 3. User must have been previously assigned a Zoom Phone number.
+    **/
+    Phone.prototype.unassignPhoneNumber = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.UnassignPhoneNumberRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/users/{userId}/phone_numbers/{phoneNumberId}", req.pathParams);
+        var client = this._securityClient;
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.unassignPhoneNumber204ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 300:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * accountCallLogs - Get account's call logs
+     *
+     * Retrieve [call logs](https://support.zoom.us/hc/en-us/articles/360021114452-Viewing-Call-Logs) for an account.
+     *
+     * **Scopes**: `phone:read:admin`<br>
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+     * **Prerequisite:**<br>
+     * 1. Business or Enterprise account<br>
+     * 2. A Zoom Phone license<br>
+     * 3. Account Owner and a [role](https://support.zoom.us/hc/en-us/articles/115001078646-Role-Based-Access-Control) with Zoom Phone Management<br>
+    **/
+    Phone.prototype.accountCallLogs = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.AccountCallLogsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/phone/call_logs";
+        var client = this._securityClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.accountCallLogs200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * addByocNumber - Add BYOC phone numbers
+     *
+     * Use this API to add BYOC phone numbers(provided to you by your carrier) to Zoom.
+     *
+     * **Scope:** `phone:write:admin` or `phone:write` or `phone:master`
+     *
+     * **Prerequisites:**<br>
+     * * The account must hold a business or enterprise plan and Zoom Phone license.
+     *
+     * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+     *
+    **/
+    Phone.prototype.addByocNumber = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.AddByocNumberRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/phone/byoc_numbers";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 201:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.addBYOCNumber201ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 300:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 429:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * addSettingTemplate - Add a setting template
+     *
+     * This API lets you create a Zoom Phone setting template for an account. Template type includes **User**, **Auto Receptionist**, or **Call Queue**. Settings include profile, policy and user settings. After creating a phone template, the settings defined via this request will become the default settings for an account.
+     * <br><br>
+     * **Scope**:
+     * * `phone:write:admin` `phone:write`
+     *
+     *
+     * **Prerequisites**:
+     * 1. Business or enterprise Zoom account
+     * 2. A Zoom Phone license
+     *
+     * <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+     * <br>
+    **/
+    Phone.prototype.addSettingTemplate = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.AddSettingTemplateRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/phone/setting_templates";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 201:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.addSettingTemplate201ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * addUserSetting - Set up shared access
+     *
+     * Phone users can access [shared voicemail inboxes](https://support.zoom.us/hc/en-us/articles/360033863991-Sharing-and-controlling-access-to-a-voicemail-inbox) in the Zoom desktop client, web portal, or provisioned desk phone. Use this API to define the voicemail access permissions of a user.
+     *
+     * To view these settings in the Zoom web portal, navigate to **Admin >Phone System Management> Users & Rooms**. Click the **Users** tab and select **User Settings**. Scroll down to **Voicemail & Call Recordings**.<br>
+     *
+     * **Scope**:`phone:write:admin`<br>
+     * <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+     *
+     * **Prerequisites**: <br>
+     * Business or Enterprise Account
+    **/
+    Phone.prototype.addUserSetting = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.AddUserSettingRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/users/{userId}/settings/{settingType}", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 201:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.addUserSetting201ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.addUserSetting400ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * assignCallingPlan - Assign calling plan to a user
+     *
+     * Assign [calling plan](https://marketplace.zoom.us/docs/api-reference/other-references/plans#zoom-phone-calling-plans) to a [Zoom Phone](https://support.zoom.us/hc/en-us/categories/360001370051-Zoom-Phone) user.
+     *
+     * **Scopes**: `phone:write` `phone:write:admin`<br>
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     * **Prerequisite:**
+     * 1. Business or Enterprise account
+     * 2. A Zoom Phone license
+     *
+     *
+    **/
+    Phone.prototype.assignCallingPlan = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.AssignCallingPlanRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/users/{userId}/calling_plans", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.assignCallingPlan200ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 300:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * assignPhoneNumber - Assign phone number to user
+     *
+     * Assign a [phone number](https://support.zoom.us/hc/en-us/articles/360020808292-Managing-Phone-Numbers) to a user who has already enabled Zoom Phone.
+     *
+     * **Scopes**: `phone:write` `phone:write:admin`<br>
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     * **Prerequisite:**
+     * 1. Business or Enterprise account
+     * 2. A Zoom Phone license
+    **/
+    Phone.prototype.assignPhoneNumber = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.AssignPhoneNumberRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/users/{userId}/phone_numbers", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.assignPhoneNumber200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 300:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * changeMainCompanyNumber - Change main company number
+     *
+     * The [main company number](https://support.zoom.us/hc/en-us/articles/360028553691) can be used by external callers to reach your phone users (by dialing the main company number and the user's extension). It can also be used by phone users in your account as their caller ID while making calls.<br><br> Use this API to [change the main company number](https://support.zoom.us/hc/en-us/articles/360028553691#h_82414c34-9df2-428a-85a4-efcf7f9e0d72) of an account.<br><br>
+     * **Prerequisites:**<br>
+     * * Pro or higher account plan.
+     * * Account owner or admin permissions<br>
+     * **Scopes:** `phone:write:admin`<br>
+     *
+     *
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+    **/
+    Phone.prototype.changeMainCompanyNumber = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.ChangeMainCompanyNumberRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/phone/company_number";
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.changeMainCompanyNumber204ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * deleteCallLog - Delete a user's call log
+     *
+     * Delete a user's [call log](https://support.zoom.us/hc/en-us/articles/360021114452-Viewing-and-identifying-logs).
+     *
+     * **Scopes:** `phone:write`, `phone:write:admin`<br>
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     * **Prerequisites:**
+     * 1. User must belong to a Business or an Enterprise account.
+     * 2. User must hold a Zoom Phone license.
+    **/
+    Phone.prototype.deleteCallLog = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.DeleteCallLogRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/users/{userId}/call_logs/{callLogId}", req.pathParams);
+        var client = this._securityClient;
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.deleteCallLog204ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * deleteUserSetting - Remove shared access
+     *
+     * Remove the shared voicemail access settings that were previously assigned to a user.
+     *
+     * To view these settings in your Zoom web portal, navigate to **Admin >Phone System Management> Users & Rooms**. Click the **Users** tab and select **User Settings**. Scroll down to **Voicemail & Call Recordings**.<br>
+     *
+     * **Scope**: `phone:write:admin`<br><br>
+     * **Prerequisites**:<br>
+     * * Business or enterprise Account<br>
+     * <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+    **/
+    Phone.prototype.deleteUserSetting = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.DeleteUserSettingRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/users/{userId}/settings/{settingType}", req.pathParams);
+        var client = this._securityClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "delete" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.deleteUserSetting204ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * deleteVoicemail - Delete a voicemail
+     *
+     * Delete a [voicemail message](https://support.zoom.us/hc/en-us/articles/360021400211-Managing-voicemail-messages) from a Zoom account.
+     *
+     * **Scope:** `phone:write:admin` or `phone:write`
+     *
+     *
+     * **Prerequisite**:
+     * * The account must have activted Zoom Phone license.
+     *
+     * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+     *
+    **/
+    Phone.prototype.deleteVoicemail = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.DeleteVoicemailRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/voice_mails/{voicemailId}", req.pathParams);
+        var client = this._securityClient;
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.deleteVoicemail204ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getPhoneNumberDetails - Get phone number details
+     *
+     * A Zoom account owner or admin can purchase phone numbers and assign them to Zoom phone users. Use this API to get details on a specific Phone number in a Zoom account.<br><br>
+     * **Prerequisites:**<br>
+     * * Pro or higher plan with Zoom phone license<br>
+     * **Scope:** `phone:read:admin`<br>
+     *
+     *
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+    **/
+    Phone.prototype.getPhoneNumberDetails = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetPhoneNumberDetailsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/numbers/{numberId}", req.pathParams);
+        var client = this._securityClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getPhoneNumberDetails200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getPhoneRecordings - Get call recordings
+     *
+     * List [call recordings](https://support.zoom.us/hc/en-us/articles/360038521091-Accessing-and-sharing-call-recordings) of an account.<br>
+     *
+     * **Scopes:**<br>
+     * * `phone:read:admin` `phone:write:admin`
+     *
+     * **Prerequisties:** <br>
+     * * Pro or higher account with Zoom Phone license.
+     * * Account owner or admin privileges.
+     *
+     *
+    **/
+    Phone.prototype.getPhoneRecordings = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetPhoneRecordingsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/phone/recordings";
+        var client = this._securityClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getPhoneRecordings200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getPhoneRecordings400ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * getSettingTemplate - Get setting template details
+     *
+     * This API lets you retrieve a specific account phone template previously created. <br>
+     *
+     * **Scope**: <br>
+     * * `phone:write:admin` or `phone:write`
+     *
+     * **Prerequisites**: <br>
+     * 1. Business or Enterprise Account
+     * 2. A Zoom Phone license
+     * <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+    **/
+    Phone.prototype.getSettingTemplate = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.GetSettingTemplateRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/setting_templates/{templateId}", req.pathParams);
+        var client = this._securityClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getSettingTemplate200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getSettingTemplate404ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * listAccountPhoneNumbers - List phone numbers
+     *
+     * A Zoom account owner or admin can purchase phone numbers and assign them to Zoom phone users. Use this API to list all Zoom Phone numbers in a Zoom account. You can filter the response based on your needs by using query parameters.
+     *
+     * **Prerequisites:**<br>
+     * * Pro or higher plan with Zoom phone license<br>
+     * **Scope:** `phone:read:admin`<br>
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+    **/
+    Phone.prototype.listAccountPhoneNumbers = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.ListAccountPhoneNumbersRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/phone/numbers";
+        var client = this._securityClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.listAccountPhoneNumbers200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * listByocsipTrunk - List BYOC SIP trunks
+     *
+     * List [BYOC SIP trunks](https://zoom.us/docs/doc/Zoom-Bring%20Your%20Own%20Carrier.pdf) that are assigned to an account.
+     *
+     * **Scopes**:<br>
+     * * `phone:write:admin` or `phone:master`<br>
+     *
+     * **Prerequisites**:<br>
+     * * Business or Enterprise Account
+     * <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+    **/
+    Phone.prototype.listByocsipTrunk = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.ListByocsipTrunkRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/phone/sip_trunk/trunks";
+        var client = this._securityClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.listBYOCSIPTrunk200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * listCallingPlans - List calling plans
+     *
+     * List all Zoom Phone [calling plans](https://marketplace.zoom.us/docs/api-reference/other-references/plans#zoom-phone-calling-plans) that are enabled for a Zoom account.<br><br>
+     * **Prerequisites:**<br>
+     * * Pro or a higher account with Zoom phone license. <br>
+     * **Scope:** `phone:read:admin`<br>
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+    **/
+    Phone.prototype.listCallingPlans = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.ListCallingPlansRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/phone/calling_plans";
+        var client = this._securityClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.listCallingPlans200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * listPhoneUsers - List phone users
+     *
+     * List all the users on an account who have been assigned Zoom Phone licenses.<br><br>
+     * **Prerequisites:**<br>
+     * * Pro or higher plan with Zoom phone license<br>
+     * **Scope:** `phone:read:admin`<br>
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+    **/
+    Phone.prototype.listPhoneUsers = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.ListPhoneUsersRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/phone/users";
+        var client = this._securityClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.listPhoneUsers200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * listSettingTemplates - List setting templates
+     *
+     * This API lets you retrieve a list of all the phone template settings previously created.
+     * <br>
+     * **Scope**:<br>
+     * * `phone:read:admin` or `phone:read`
+     * <br>**Prerequisites**: <br>
+     * 1. Business or enterprise Account
+     * 2. A Zoom Phone license
+     *
+     * <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+    **/
+    Phone.prototype.listSettingTemplates = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.ListSettingTemplatesRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = baseURL.replace(/\/$/, "") + "/phone/setting_templates";
+        var client = this._securityClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.listSettingTemplates200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * phoneUser - Get user's profile
+     *
+     * Retrieve a user's [zoom phone](https://support.zoom.us/hc/en-us/articles/360001297663-Quickstart-Guide-for-Zoom-Phone-Administrators) profile.
+     *
+     * **Scopes:** `phone:read`, `phone:read:admin`<br>
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+     *
+     *
+     * **Prerequisites** :
+     * 1. Business or Enterprise account
+     * 2. A Zoom Phone license
+    **/
+    Phone.prototype.phoneUser = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PhoneUserRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/users/{userId}", req.pathParams);
+        var client = this._securityClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.phoneUser200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 300:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * phoneUserCallLogs - Get user's call logs
+     *
+     * Retrieve a [zoom phone](https://support.zoom.us/hc/en-us/articles/360001297663-Quickstart-Guide-for-Zoom-Phone-Administrators) user's call logs.
+     *
+     * **Scopes:** `phone:read`, `phone:read:admin`<br>
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
+     * **Prerequisite:**
+     * 1. Business or Enterprise account
+     * 2. A Zoom Phone license
+    **/
+    Phone.prototype.phoneUserCallLogs = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PhoneUserCallLogsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/users/{userId}/call_logs", req.pathParams);
+        var client = this._securityClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.phoneUserCallLogs200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 300:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * phoneUserRecordings - Get user's recordings
+     *
+     * Retrieve a user's zoom [phone recordings](https://support.zoom.us/hc/en-us/articles/360021336671-Viewing-Call-History-and-Recordings).
+     * **Scopes:** `phone:read`, `phone:read:admin`<br>
+     *
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
+     * **Prerequisite:**
+     * 1. Business or Enterprise account
+     * 2. A Zoom Phone license
+    **/
+    Phone.prototype.phoneUserRecordings = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PhoneUserRecordingsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/users/{userId}/recordings", req.pathParams);
+        var client = this._securityClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.phoneUserRecordings200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 300:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * phoneUserSettings - Get user's settings
+     *
+     * Retrieve a user's zoom phone profile [settings](https://support.zoom.us/hc/en-us/articles/360021325712-Configuring-Settings).
+     *
+     * **Scopes:** `phone:read`, `phone:read:admin`<br>
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     * **Prerequisite:**
+     * 1. Business or Enterprise account
+     * 2. A Zoom Phone license
+    **/
+    Phone.prototype.phoneUserSettings = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PhoneUserSettingsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/users/{userId}/settings", req.pathParams);
+        var client = this._securityClient;
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.phoneUserSettings200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 300:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * phoneUserVoiceMails - Get user's voicemails
+     *
+     * Retrieve a user's Zoom Phone voicemails.
+     *
+     * **Scopes:** `phone:read`, `phone:read:admin`<br>
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
+     * **Prerequisite:**
+     * 1. Business or Enterprise account
+     * 2. A Zoom Phone license
+    **/
+    Phone.prototype.phoneUserVoiceMails = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PhoneUserVoiceMailsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/users/{userId}/voice_mails", req.pathParams);
+        var client = this._securityClient;
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
+        var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
+        var r = client.request(__assign({ url: url, method: "get" }, requestConfig));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.phoneUserVoiceMails200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 300:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * postPhoneSipTrunk - Assign SIP trunks
+     *
+     * Using this API, a [master account](https://marketplace.zoom.us/docs/api-reference/master-account-apis) owner can assign SIP trunk(s) to a sub account.<br>
+     *
+     * **Scope**:<br>
+     * * `phone:master` <br>
+     *
+     * **Prerequisites**:<br>
+     * * Business or enterprise Account.<br>
+     * <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+    **/
+    Phone.prototype.postPhoneSipTrunk = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.PostPhoneSipTrunkRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/accounts/{accountId}/phone/sip_trunk/trunks", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 201:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.postPhoneSIPTrunk201ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * setUpAccount - Set up a Zoom Phone account
+     *
+     * After assigning a Zoom phone license to an account, an admin or account owner can proceed with the [initial Zoom phone set up](https://support.zoom.us/hc/en-us/articles/360001297663-Getting-started-with-Zoom-Phone-admin-#h_5ae26a3a-290c-4a8d-b3b0-6384ed267b13) using this API.
+     *
+     * **Scope**:<br>
+     * * `phone:write:admin` `phone:write`
+     *
+     * **Prerequisites**: <br>
+     * * Pro or a higher paid account with master account option enabled.
+     *
+     * <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+    **/
+    Phone.prototype.setUpAccount = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.SetUpAccountRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/accounts/{accountId}/phone/setup", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 201:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * unassignCallingPlan - Unassign user's calling plan
+     *
+     * Unassign a [calling plan](https://marketplace.zoom.us/docs/api-reference/other-references/plans#zoom-phone-calling-plans) that was previously assigned to a [Zoom Phone](https://support.zoom.us/hc/en-us/categories/360001370051) user.
+     *
+     * **Scopes**: `phone:write` `phone:write:admin`<br>
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     * **Prerequisite:**
+     * 1. Business or Enterprise account
+     * 2. A Zoom Phone license
+    **/
+    Phone.prototype.unassignCallingPlan = function (req, config) {
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.UnassignCallingPlanRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/users/{userId}/calling_plans/{type}", req.pathParams);
+        var client = this._securityClient;
+        var r = client.request(__assign({ url: url, method: "delete" }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.unassignCallingPlan204ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 300:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * updatePhoneNumberDetails - Update phone number details
+     *
+     * Update phone number details.
+     *
+     * **Scopes:**
+     * * `phone:write` `phone:write:admin`
+     * * `phone:master`
+     *
+     * **Prerequisite:**
+     * * Paid account
+     *
+     * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+    **/
+    Phone.prototype.updatePhoneNumberDetails = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.UpdatePhoneNumberDetailsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/numbers/{numberId}", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "patch", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updatePhoneNumberDetails204ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * updatePhoneSipTrunk - Update SIP trunk details
+     *
+     * Update details of a SIP trunk that is assigned to a sub account.<br>
+     *
+     * **Scope**:<br>
+     * * `phone:master` <br>
+     *
+     * **Prerequisites**:<br>
+     * Business or Enterprise Account.<br>
+     * <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+    **/
+    Phone.prototype.updatePhoneSipTrunk = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.UpdatePhoneSipTrunkRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/accounts/{accountId}/phone/sip_trunk/trunks/{sipTrunkId}", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "patch", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updatePhoneSIPTrunk204ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * updatePhoneSettings - Update BYOC settings
+     *
+     * Only [master account owners](https://marketplace.zoom.us/docs/api-reference/master-account-apis) can use this API to enable BYOC(Bring your own carrier) option for a sub account.<br>
+     *
+     * **Scope**:<br>
+     * * `phone:master` <br>
+     *
+     * **Prerequisites**: <br>
+     * * Business or enterprise Account.<br>
+    **/
+    Phone.prototype.updatePhoneSettings = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.UpdatePhoneSettingsRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/accounts/{accountId}/phone/settings", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "patch", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updatePhoneSettings204ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * updateSettingTemplate - Update a setting template
+     *
+     * Use this API to update or modify profile settings for the phone template. Template type includes **User**, **Auto Receptionist**, or **Call Queue**. After you've modified a template, click **User Settings** to set up settings for Call Handling, Desk Phone, and Others. <br>
+     *
+     * **Scope**:<br>
+     * * `phone:write:admin` or `phone:write`
+     *
+     * **Prerequisites**: <br>
+     * 1. Business or Enterprise Account
+     * 2. A Zoom Phone license
+     * <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+    **/
+    Phone.prototype.updateSettingTemplate = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.UpdateSettingTemplateRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/setting_templates/{templateId}", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "patch", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updateSettingTemplate204ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * updateUserProfile - Update user's profile
+     *
+     * Update a [Zoom Phone](https://support.zoom.us/hc/en-us/categories/360001370051-Zoom-Phone) user's profile.
+     *
+     * **Scopes:** `phone:write` `phone:write:admin`  <br>
+     *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     * **Prerequisite:**
+     * 1. Business or Enterprise account
+     * 2. A Zoom Phone license
+    **/
+    Phone.prototype.updateUserProfile = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.UpdateUserProfileRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/users/{userId}", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "patch", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updateUserProfile204ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 300:
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    break;
+            }
+            return res;
+        });
+    };
+    /**
+     * updateUserSetting - Update shared access
+     *
+     * Phone users can access [shared voicemail inboxes](https://support.zoom.us/hc/en-us/articles/360033863991-Sharing-and-controlling-access-to-a-voicemail-inbox) in the Zoom desktop client, web portal, or provisioned desk phone. Use this API to update the voicemail access permissions of a user.
+     *
+     * To view these settings in the Zoom web portal, navigate to **Admin >Phone System Management> Users & Rooms**. Click the **Users** tab and select **User Settings**. Scroll down to **Voicemail & Call Recordings**.<br>
+     *
+     * **Scope**: <br>`phone:write:admin`<br>
+     * <br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
+     *
+     *
+     *
+     * **Prerequisites**:<br>
+     * Business or Enterprise Account
+    **/
+    Phone.prototype.updateUserSetting = function (req, config) {
+        var _a;
+        if (!(req instanceof utils.SpeakeasyBase)) {
+            req = new operations.UpdateUserSettingRequest(req);
+        }
+        var baseURL = this._serverURL;
+        var url = utils.generateURL(baseURL, "/phone/users/{userId}/settings/{settingType}", req.pathParams);
+        var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
+        try {
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+        }
+        catch (e) {
+            if (e instanceof Error) {
+                throw new Error("Error serializing request body, cause: ".concat(e.message));
+            }
+        }
+        var client = this._securityClient;
+        var headers = __assign(__assign({}, reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "patch", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
+            var _a, _b;
+            var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
+            if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
+                throw new Error("status code not found in response: ".concat(httpRes));
+            var res = { statusCode: httpRes.status, contentType: contentType };
+            switch (true) {
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updateUserSetting204ApplicationJSONAny = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
+                    if (utils.matchContentType(contentType, "application/xml")) {
+                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
+                        var out = new Uint8Array(resBody.length);
+                        for (var i = 0; i < resBody.length; i++)
+                            out[i] = resBody.charCodeAt(i);
+                        res.body = out;
+                    }
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updateUserSetting400ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    }
+                    break;
+                case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
+                    break;
+            }
+            return res;
+        });
+    };
+    return Phone;
+}());
+exports.Phone = Phone;

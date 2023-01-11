@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EntityKey } from "./entitykey";
-import { TransitiveMembershipRole } from "./transitivemembershiprole";
-export var MemberRelationRelationTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MemberRelation = exports.MemberRelationRelationTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var entitykey_1 = require("./entitykey");
+var transitivemembershiprole_1 = require("./transitivemembershiprole");
+var MemberRelationRelationTypeEnum;
 (function (MemberRelationRelationTypeEnum) {
     MemberRelationRelationTypeEnum["RelationTypeUnspecified"] = "RELATION_TYPE_UNSPECIFIED";
     MemberRelationRelationTypeEnum["Direct"] = "DIRECT";
     MemberRelationRelationTypeEnum["Indirect"] = "INDIRECT";
     MemberRelationRelationTypeEnum["DirectAndIndirect"] = "DIRECT_AND_INDIRECT";
-})(MemberRelationRelationTypeEnum || (MemberRelationRelationTypeEnum = {}));
+})(MemberRelationRelationTypeEnum = exports.MemberRelationRelationTypeEnum || (exports.MemberRelationRelationTypeEnum = {}));
 // MemberRelation
 /**
  * Message representing a transitive membership of a group.
@@ -42,21 +45,21 @@ var MemberRelation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=member" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=member" }),
         __metadata("design:type", String)
     ], MemberRelation.prototype, "member", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferredMemberKey", elemType: EntityKey }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferredMemberKey", elemType: entitykey_1.EntityKey }),
         __metadata("design:type", Array)
     ], MemberRelation.prototype, "preferredMemberKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationType" }),
         __metadata("design:type", String)
     ], MemberRelation.prototype, "relationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roles", elemType: TransitiveMembershipRole }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roles", elemType: transitivemembershiprole_1.TransitiveMembershipRole }),
         __metadata("design:type", Array)
     ], MemberRelation.prototype, "roles", void 0);
     return MemberRelation;
-}(SpeakeasyBase));
-export { MemberRelation };
+}(utils_1.SpeakeasyBase));
+exports.MemberRelation = MemberRelation;

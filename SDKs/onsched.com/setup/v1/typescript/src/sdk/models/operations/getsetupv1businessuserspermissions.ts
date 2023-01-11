@@ -22,7 +22,7 @@ export class GetSetupV1BusinessusersPermissionsRequest extends SpeakeasyBase {
 
 export class GetSetupV1BusinessusersPermissionsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  businessPermissionListViewModel?: Map<string, any>;
+  businessPermissionListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

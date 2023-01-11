@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Exclusion } from "./exclusion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductAdoptionPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var exclusion_1 = require("./exclusion");
 // ProductAdoptionPolicy
 /**
  * This complex type returns a category ID and a flag that indicates whether or not items listed in that category require the declaration of an ePID value, which links the item to the eBay Catalog. The type also lists any items that are excepted from the requirement to included an ePID value.
@@ -34,21 +37,21 @@ var ProductAdoptionPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryId" }),
         __metadata("design:type", String)
     ], ProductAdoptionPolicy.prototype, "categoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryTreeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryTreeId" }),
         __metadata("design:type", String)
     ], ProductAdoptionPolicy.prototype, "categoryTreeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exclusion" }),
-        __metadata("design:type", Exclusion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exclusion" }),
+        __metadata("design:type", exclusion_1.Exclusion)
     ], ProductAdoptionPolicy.prototype, "exclusion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productRequired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productRequired" }),
         __metadata("design:type", Boolean)
     ], ProductAdoptionPolicy.prototype, "productRequired", void 0);
     return ProductAdoptionPolicy;
-}(SpeakeasyBase));
-export { ProductAdoptionPolicy };
+}(utils_1.SpeakeasyBase));
+exports.ProductAdoptionPolicy = ProductAdoptionPolicy;

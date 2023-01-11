@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,86 +23,88 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSource } from "./rulesource";
-export var IftttRuleResponseRequestModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IftttRuleResponse = exports.IftttRuleResponseTarget = exports.IftttRuleResponseStatusEnum = exports.IftttRuleResponseRuleTypeEnum = exports.IftttRuleResponseRequestModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulesource_1 = require("./rulesource");
+var IftttRuleResponseRequestModeEnum;
 (function (IftttRuleResponseRequestModeEnum) {
     IftttRuleResponseRequestModeEnum["Single"] = "single";
-})(IftttRuleResponseRequestModeEnum || (IftttRuleResponseRequestModeEnum = {}));
-export var IftttRuleResponseRuleTypeEnum;
+})(IftttRuleResponseRequestModeEnum = exports.IftttRuleResponseRequestModeEnum || (exports.IftttRuleResponseRequestModeEnum = {}));
+var IftttRuleResponseRuleTypeEnum;
 (function (IftttRuleResponseRuleTypeEnum) {
     IftttRuleResponseRuleTypeEnum["HttpIfttt"] = "http/ifttt";
-})(IftttRuleResponseRuleTypeEnum || (IftttRuleResponseRuleTypeEnum = {}));
-export var IftttRuleResponseStatusEnum;
+})(IftttRuleResponseRuleTypeEnum = exports.IftttRuleResponseRuleTypeEnum || (exports.IftttRuleResponseRuleTypeEnum = {}));
+var IftttRuleResponseStatusEnum;
 (function (IftttRuleResponseStatusEnum) {
     IftttRuleResponseStatusEnum["Enabled"] = "enabled";
     IftttRuleResponseStatusEnum["Disabled"] = "disabled";
-})(IftttRuleResponseStatusEnum || (IftttRuleResponseStatusEnum = {}));
+})(IftttRuleResponseStatusEnum = exports.IftttRuleResponseStatusEnum || (exports.IftttRuleResponseStatusEnum = {}));
 var IftttRuleResponseTarget = /** @class */ (function (_super) {
     __extends(IftttRuleResponseTarget, _super);
     function IftttRuleResponseTarget() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventName" }),
         __metadata("design:type", String)
     ], IftttRuleResponseTarget.prototype, "eventName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webhookKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webhookKey" }),
         __metadata("design:type", String)
     ], IftttRuleResponseTarget.prototype, "webhookKey", void 0);
     return IftttRuleResponseTarget;
-}(SpeakeasyBase));
-export { IftttRuleResponseTarget };
+}(utils_1.SpeakeasyBase));
+exports.IftttRuleResponseTarget = IftttRuleResponseTarget;
 var IftttRuleResponse = /** @class */ (function (_super) {
     __extends(IftttRuleResponse, _super);
     function IftttRuleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
+        __metadata("design:type", Object)
     ], IftttRuleResponse.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appId" }),
         __metadata("design:type", String)
     ], IftttRuleResponse.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Number)
     ], IftttRuleResponse.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], IftttRuleResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modified" }),
         __metadata("design:type", Number)
     ], IftttRuleResponse.prototype, "modified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMode" }),
         __metadata("design:type", String)
     ], IftttRuleResponse.prototype, "requestMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleType" }),
         __metadata("design:type", String)
     ], IftttRuleResponse.prototype, "ruleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", RuleSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", rulesource_1.RuleSource)
     ], IftttRuleResponse.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], IftttRuleResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", IftttRuleResponseTarget)
     ], IftttRuleResponse.prototype, "target", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], IftttRuleResponse.prototype, "version", void 0);
     return IftttRuleResponse;
-}(SpeakeasyBase));
-export { IftttRuleResponse };
+}(utils_1.SpeakeasyBase));
+exports.IftttRuleResponse = IftttRuleResponse;

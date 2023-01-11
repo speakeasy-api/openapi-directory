@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,59 +23,65 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LicenseContent = exports.LicenseContentLicenseSimple = exports.LicenseContentLinks = void 0;
+var utils_1 = require("../../../internal/utils");
 var LicenseContentLinks = /** @class */ (function (_super) {
     __extends(LicenseContentLinks, _super);
     function LicenseContentLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=git" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=git" }),
         __metadata("design:type", String)
     ], LicenseContentLinks.prototype, "git", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html" }),
         __metadata("design:type", String)
     ], LicenseContentLinks.prototype, "html", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=self" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=self" }),
         __metadata("design:type", String)
     ], LicenseContentLinks.prototype, "self", void 0);
     return LicenseContentLinks;
-}(SpeakeasyBase));
-export { LicenseContentLinks };
+}(utils_1.SpeakeasyBase));
+exports.LicenseContentLinks = LicenseContentLinks;
+// LicenseContentLicenseSimple
+/**
+ * License Simple
+**/
 var LicenseContentLicenseSimple = /** @class */ (function (_super) {
     __extends(LicenseContentLicenseSimple, _super);
     function LicenseContentLicenseSimple() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], LicenseContentLicenseSimple.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], LicenseContentLicenseSimple.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], LicenseContentLicenseSimple.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], LicenseContentLicenseSimple.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spdx_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spdx_id" }),
         __metadata("design:type", String)
     ], LicenseContentLicenseSimple.prototype, "spdxId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], LicenseContentLicenseSimple.prototype, "url", void 0);
     return LicenseContentLicenseSimple;
-}(SpeakeasyBase));
-export { LicenseContentLicenseSimple };
+}(utils_1.SpeakeasyBase));
+exports.LicenseContentLicenseSimple = LicenseContentLicenseSimple;
 // LicenseContent
 /**
  * License Content
@@ -85,57 +92,57 @@ var LicenseContent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
         __metadata("design:type", LicenseContentLinks)
     ], LicenseContent.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], LicenseContent.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download_url" }),
         __metadata("design:type", String)
     ], LicenseContent.prototype, "downloadUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encoding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encoding" }),
         __metadata("design:type", String)
     ], LicenseContent.prototype, "encoding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=git_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=git_url" }),
         __metadata("design:type", String)
     ], LicenseContent.prototype, "gitUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], LicenseContent.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=license" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=license" }),
         __metadata("design:type", LicenseContentLicenseSimple)
     ], LicenseContent.prototype, "license", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], LicenseContent.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], LicenseContent.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha" }),
         __metadata("design:type", String)
     ], LicenseContent.prototype, "sha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], LicenseContent.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], LicenseContent.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], LicenseContent.prototype, "url", void 0);
     return LicenseContent;
-}(SpeakeasyBase));
-export { LicenseContent };
+}(utils_1.SpeakeasyBase));
+exports.LicenseContent = LicenseContent;

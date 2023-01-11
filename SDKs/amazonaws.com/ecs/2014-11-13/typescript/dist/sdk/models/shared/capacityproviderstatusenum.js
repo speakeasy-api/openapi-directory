@@ -1,5 +1,8 @@
-export var CapacityProviderStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CapacityProviderStatusEnum = void 0;
+var CapacityProviderStatusEnum;
 (function (CapacityProviderStatusEnum) {
     CapacityProviderStatusEnum["Active"] = "ACTIVE";
     CapacityProviderStatusEnum["Inactive"] = "INACTIVE";
-})(CapacityProviderStatusEnum || (CapacityProviderStatusEnum = {}));
+})(CapacityProviderStatusEnum = exports.CapacityProviderStatusEnum || (exports.CapacityProviderStatusEnum = {}));

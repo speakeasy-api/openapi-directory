@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { WebmastersSearchanalyticsQueryRequest, WebmastersSearchanalyticsQueryResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,38 +31,38 @@ const req: WebmastersSearchanalyticsQueryRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   pathParams: {
-    siteUrl: "dolore",
+    siteUrl: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "odit",
-    alt: "json",
-    callback: "omnis",
-    fields: "hic",
-    key: "eum",
-    oauthToken: "quae",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "quis",
-    uploadType: "eius",
-    uploadProtocol: "et",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    aggregationType: "BY_PROPERTY",
-    dataState: "FINAL",
+    aggregationType: "BY_PAGE",
+    dataState: "DATA_STATE_UNSPECIFIED",
     dimensionFilterGroups: [
       {
         filters: [
           {
             dimension: "PAGE",
-            expression: "libero",
-            operator: "NOT_CONTAINS",
+            expression: "dolorem",
+            operator: "INCLUDING_REGEX",
           },
         ],
         groupType: "AND",
@@ -71,15 +70,15 @@ const req: WebmastersSearchanalyticsQueryRequest = {
     ],
     dimensions: [
       "DATE",
-      "COUNTRY",
       "PAGE",
+      "DATE",
     ],
-    endDate: "ducimus",
-    rowLimit: 6882839132048010878,
-    searchType: "IMAGE",
-    startDate: "praesentium",
-    startRow: 8542795201567454831,
-    type: "IMAGE",
+    endDate: "illum",
+    rowLimit: 6392442863481646880,
+    searchType: "DISCOVER",
+    startDate: "odio",
+    startRow: 6303220950515014660,
+    type: "DISCOVER",
   },
 };
 

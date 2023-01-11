@@ -10,7 +10,7 @@ export class LandlordControllerGetInvoicePathParams extends SpeakeasyBase {
 
 export class LandlordControllerGetInvoiceQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=invoiceID" })
-  invoiceId: string;
+  invoiceID: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=token" })
   token: string;
@@ -34,7 +34,7 @@ export class LandlordControllerGetInvoiceResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  object?: Map<string, any>;
+  object?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

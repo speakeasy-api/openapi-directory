@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BulkResponse = exports.BulkResponseData = exports.BulkResponseDataBulk = void 0;
+var utils_1 = require("../../../internal/utils");
 var BulkResponseDataBulk = /** @class */ (function (_super) {
     __extends(BulkResponseDataBulk, _super);
     function BulkResponseDataBulk() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duplicate_import_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duplicate_import_ids" }),
         __metadata("design:type", Array)
     ], BulkResponseDataBulk.prototype, "duplicateImportIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transaction_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transaction_ids" }),
         __metadata("design:type", Array)
     ], BulkResponseDataBulk.prototype, "transactionIds", void 0);
     return BulkResponseDataBulk;
-}(SpeakeasyBase));
-export { BulkResponseDataBulk };
+}(utils_1.SpeakeasyBase));
+exports.BulkResponseDataBulk = BulkResponseDataBulk;
 var BulkResponseData = /** @class */ (function (_super) {
     __extends(BulkResponseData, _super);
     function BulkResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bulk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bulk" }),
         __metadata("design:type", BulkResponseDataBulk)
     ], BulkResponseData.prototype, "bulk", void 0);
     return BulkResponseData;
-}(SpeakeasyBase));
-export { BulkResponseData };
+}(utils_1.SpeakeasyBase));
+exports.BulkResponseData = BulkResponseData;
 var BulkResponse = /** @class */ (function (_super) {
     __extends(BulkResponse, _super);
     function BulkResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", BulkResponseData)
     ], BulkResponse.prototype, "data", void 0);
     return BulkResponse;
-}(SpeakeasyBase));
-export { BulkResponse };
+}(utils_1.SpeakeasyBase));
+exports.BulkResponse = BulkResponse;

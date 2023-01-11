@@ -45,7 +45,7 @@ export class CancelJobRequest extends SpeakeasyBase {
 
 export class CancelJobResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  cancelJobResult?: Map<string, any>;
+  cancelJobResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleChromeManagementV1BrowserVersionChannelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1BrowserVersion = exports.GoogleChromeManagementV1BrowserVersionSystemEnum = exports.GoogleChromeManagementV1BrowserVersionChannelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleChromeManagementV1BrowserVersionChannelEnum;
 (function (GoogleChromeManagementV1BrowserVersionChannelEnum) {
     GoogleChromeManagementV1BrowserVersionChannelEnum["ReleaseChannelUnspecified"] = "RELEASE_CHANNEL_UNSPECIFIED";
     GoogleChromeManagementV1BrowserVersionChannelEnum["Canary"] = "CANARY";
     GoogleChromeManagementV1BrowserVersionChannelEnum["Dev"] = "DEV";
     GoogleChromeManagementV1BrowserVersionChannelEnum["Beta"] = "BETA";
     GoogleChromeManagementV1BrowserVersionChannelEnum["Stable"] = "STABLE";
-})(GoogleChromeManagementV1BrowserVersionChannelEnum || (GoogleChromeManagementV1BrowserVersionChannelEnum = {}));
-export var GoogleChromeManagementV1BrowserVersionSystemEnum;
+})(GoogleChromeManagementV1BrowserVersionChannelEnum = exports.GoogleChromeManagementV1BrowserVersionChannelEnum || (exports.GoogleChromeManagementV1BrowserVersionChannelEnum = {}));
+var GoogleChromeManagementV1BrowserVersionSystemEnum;
 (function (GoogleChromeManagementV1BrowserVersionSystemEnum) {
     GoogleChromeManagementV1BrowserVersionSystemEnum["DeviceSystemUnspecified"] = "DEVICE_SYSTEM_UNSPECIFIED";
     GoogleChromeManagementV1BrowserVersionSystemEnum["SystemOther"] = "SYSTEM_OTHER";
@@ -41,7 +44,7 @@ export var GoogleChromeManagementV1BrowserVersionSystemEnum;
     GoogleChromeManagementV1BrowserVersionSystemEnum["SystemWindows"] = "SYSTEM_WINDOWS";
     GoogleChromeManagementV1BrowserVersionSystemEnum["SystemMac"] = "SYSTEM_MAC";
     GoogleChromeManagementV1BrowserVersionSystemEnum["SystemLinux"] = "SYSTEM_LINUX";
-})(GoogleChromeManagementV1BrowserVersionSystemEnum || (GoogleChromeManagementV1BrowserVersionSystemEnum = {}));
+})(GoogleChromeManagementV1BrowserVersionSystemEnum = exports.GoogleChromeManagementV1BrowserVersionSystemEnum || (exports.GoogleChromeManagementV1BrowserVersionSystemEnum = {}));
 // GoogleChromeManagementV1BrowserVersion
 /**
  * Describes a browser version and its install count.
@@ -52,25 +55,25 @@ var GoogleChromeManagementV1BrowserVersion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channel" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BrowserVersion.prototype, "channel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BrowserVersion.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceOsVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceOsVersion" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BrowserVersion.prototype, "deviceOsVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=system" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=system" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BrowserVersion.prototype, "system", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BrowserVersion.prototype, "version", void 0);
     return GoogleChromeManagementV1BrowserVersion;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1BrowserVersion };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1BrowserVersion = GoogleChromeManagementV1BrowserVersion;

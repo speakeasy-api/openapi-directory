@@ -5,7 +5,7 @@ export declare class Wireless extends SpeakeasyBase {
     bssid?: string;
     channels?: string;
     createdAt?: number;
-    data?: Map<string, string>;
+    data?: Record<string, string>;
     encryption?: string;
     essid?: string;
     family?: string;

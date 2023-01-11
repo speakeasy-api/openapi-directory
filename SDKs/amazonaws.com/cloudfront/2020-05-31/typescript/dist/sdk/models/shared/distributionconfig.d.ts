@@ -30,5 +30,5 @@ export declare class DistributionConfig extends SpeakeasyBase {
     priceClass?: PriceClassEnum;
     restrictions?: Restrictions;
     viewerCertificate?: ViewerCertificate;
-    webAclId?: string;
+    webACLId?: string;
 }

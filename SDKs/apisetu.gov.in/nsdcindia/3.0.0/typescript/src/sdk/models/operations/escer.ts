@@ -191,23 +191,23 @@ export class EscerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  escer400ApplicationJsonObject?: Escer400ApplicationJson;
+  escer400ApplicationJSONObject?: Escer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  escer401ApplicationJsonObject?: Escer401ApplicationJson;
+  escer401ApplicationJSONObject?: Escer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  escer404ApplicationJsonObject?: Escer404ApplicationJson;
+  escer404ApplicationJSONObject?: Escer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  escer500ApplicationJsonObject?: Escer500ApplicationJson;
+  escer500ApplicationJSONObject?: Escer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  escer502ApplicationJsonObject?: Escer502ApplicationJson;
+  escer502ApplicationJSONObject?: Escer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  escer503ApplicationJsonObject?: Escer503ApplicationJson;
+  escer503ApplicationJSONObject?: Escer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  escer504ApplicationJsonObject?: Escer504ApplicationJson;
+  escer504ApplicationJSONObject?: Escer504ApplicationJson;
 }

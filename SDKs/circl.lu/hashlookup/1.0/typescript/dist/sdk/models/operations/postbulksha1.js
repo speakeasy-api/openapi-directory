@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostBulksha1Response = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostBulksha1Response = /** @class */ (function (_super) {
     __extends(PostBulksha1Response, _super);
     function PostBulksha1Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostBulksha1Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostBulksha1Response.prototype, "statusCode", void 0);
     return PostBulksha1Response;
-}(SpeakeasyBase));
-export { PostBulksha1Response };
+}(utils_1.SpeakeasyBase));
+exports.PostBulksha1Response = PostBulksha1Response;

@@ -10,10 +10,10 @@ export class UpdateApplicationRequest extends SpeakeasyBase {
   opsCenterEnabled?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=OpsItemSNSTopicArn" })
-  opsItemSnsTopicArn?: string;
+  opsItemSNSTopicArn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=RemoveSNSTopic" })
-  removeSnsTopic?: boolean;
+  removeSNSTopic?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=ResourceGroupName" })
   resourceGroupName: string;

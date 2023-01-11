@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CardActions } from "./cardactions";
-import { CardDisplayBody } from "./carddisplaybody";
-import { CardFetchBodyPatch } from "./cardfetchbodypatch";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CardPatchRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var cardactions_1 = require("./cardactions");
+var carddisplaybody_1 = require("./carddisplaybody");
+var cardfetchbodypatch_1 = require("./cardfetchbodypatch");
 // CardPatchRequest
 /**
  * Body for a patch with optional fields
@@ -36,21 +39,21 @@ var CardPatchRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actions" }),
-        __metadata("design:type", CardActions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actions" }),
+        __metadata("design:type", cardactions_1.CardActions)
     ], CardPatchRequest.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display" }),
-        __metadata("design:type", CardDisplayBody)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display" }),
+        __metadata("design:type", carddisplaybody_1.CardDisplayBody)
     ], CardPatchRequest.prototype, "display", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fetch" }),
-        __metadata("design:type", CardFetchBodyPatch)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fetch" }),
+        __metadata("design:type", cardfetchbodypatch_1.CardFetchBodyPatch)
     ], CardPatchRequest.prototype, "fetch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], CardPatchRequest.prototype, "title", void 0);
     return CardPatchRequest;
-}(SpeakeasyBase));
-export { CardPatchRequest };
+}(utils_1.SpeakeasyBase));
+exports.CardPatchRequest = CardPatchRequest;

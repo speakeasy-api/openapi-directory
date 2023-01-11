@@ -29,6 +29,6 @@ export declare class TaxRatesByCountryCodeRequest extends SpeakeasyBase {
 export declare class TaxRatesByCountryCodeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    taxRatesByCountryCode200ApplicationJsonObject?: TaxRatesByCountryCode200ApplicationJson;
-    taxRatesByCountryCode500ApplicationJsonObject?: TaxRatesByCountryCode500ApplicationJson;
+    taxRatesByCountryCode200ApplicationJSONObject?: TaxRatesByCountryCode200ApplicationJson;
+    taxRatesByCountryCode500ApplicationJSONObject?: TaxRatesByCountryCode500ApplicationJson;
 }

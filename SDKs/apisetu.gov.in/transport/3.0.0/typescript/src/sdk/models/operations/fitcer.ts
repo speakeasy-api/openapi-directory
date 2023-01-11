@@ -201,23 +201,23 @@ export class FitcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  fitcer400ApplicationJsonObject?: Fitcer400ApplicationJson;
+  fitcer400ApplicationJSONObject?: Fitcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  fitcer401ApplicationJsonObject?: Fitcer401ApplicationJson;
+  fitcer401ApplicationJSONObject?: Fitcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  fitcer404ApplicationJsonObject?: Fitcer404ApplicationJson;
+  fitcer404ApplicationJSONObject?: Fitcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  fitcer500ApplicationJsonObject?: Fitcer500ApplicationJson;
+  fitcer500ApplicationJSONObject?: Fitcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  fitcer502ApplicationJsonObject?: Fitcer502ApplicationJson;
+  fitcer502ApplicationJSONObject?: Fitcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  fitcer503ApplicationJsonObject?: Fitcer503ApplicationJson;
+  fitcer503ApplicationJSONObject?: Fitcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  fitcer504ApplicationJsonObject?: Fitcer504ApplicationJson;
+  fitcer504ApplicationJSONObject?: Fitcer504ApplicationJson;
 }

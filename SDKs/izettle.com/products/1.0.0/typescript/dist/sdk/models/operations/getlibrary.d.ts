@@ -20,7 +20,7 @@ export declare class GetLibraryRequest extends SpeakeasyBase {
 }
 export declare class GetLibraryResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     libraryResponse?: shared.LibraryResponse;
     statusCode: number;
 }

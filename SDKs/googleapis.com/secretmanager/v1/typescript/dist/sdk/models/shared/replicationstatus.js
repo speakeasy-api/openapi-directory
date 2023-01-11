@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutomaticStatus } from "./automaticstatus";
-import { UserManagedStatus } from "./usermanagedstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicationStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var automaticstatus_1 = require("./automaticstatus");
+var usermanagedstatus_1 = require("./usermanagedstatus");
 // ReplicationStatus
 /**
  * The replication status of a SecretVersion.
@@ -35,13 +38,13 @@ var ReplicationStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=automatic" }),
-        __metadata("design:type", AutomaticStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=automatic" }),
+        __metadata("design:type", automaticstatus_1.AutomaticStatus)
     ], ReplicationStatus.prototype, "automatic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userManaged" }),
-        __metadata("design:type", UserManagedStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userManaged" }),
+        __metadata("design:type", usermanagedstatus_1.UserManagedStatus)
     ], ReplicationStatus.prototype, "userManaged", void 0);
     return ReplicationStatus;
-}(SpeakeasyBase));
-export { ReplicationStatus };
+}(utils_1.SpeakeasyBase));
+exports.ReplicationStatus = ReplicationStatus;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,103 +23,105 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetTagsModeratorOnlyOrderEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTagsModeratorOnlyResponse = exports.GetTagsModeratorOnlyRequest = exports.GetTagsModeratorOnlyQueryParams = exports.GetTagsModeratorOnlySortEnum = exports.GetTagsModeratorOnlyOrderEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetTagsModeratorOnlyOrderEnum;
 (function (GetTagsModeratorOnlyOrderEnum) {
     GetTagsModeratorOnlyOrderEnum["Desc"] = "desc";
     GetTagsModeratorOnlyOrderEnum["Asc"] = "asc";
-})(GetTagsModeratorOnlyOrderEnum || (GetTagsModeratorOnlyOrderEnum = {}));
-export var GetTagsModeratorOnlySortEnum;
+})(GetTagsModeratorOnlyOrderEnum = exports.GetTagsModeratorOnlyOrderEnum || (exports.GetTagsModeratorOnlyOrderEnum = {}));
+var GetTagsModeratorOnlySortEnum;
 (function (GetTagsModeratorOnlySortEnum) {
     GetTagsModeratorOnlySortEnum["Popular"] = "popular";
     GetTagsModeratorOnlySortEnum["Activity"] = "activity";
     GetTagsModeratorOnlySortEnum["Name"] = "name";
-})(GetTagsModeratorOnlySortEnum || (GetTagsModeratorOnlySortEnum = {}));
+})(GetTagsModeratorOnlySortEnum = exports.GetTagsModeratorOnlySortEnum || (exports.GetTagsModeratorOnlySortEnum = {}));
 var GetTagsModeratorOnlyQueryParams = /** @class */ (function (_super) {
     __extends(GetTagsModeratorOnlyQueryParams, _super);
     function GetTagsModeratorOnlyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetTagsModeratorOnlyQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetTagsModeratorOnlyQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Number)
     ], GetTagsModeratorOnlyQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=inname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=inname" }),
         __metadata("design:type", String)
     ], GetTagsModeratorOnlyQueryParams.prototype, "inname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", String)
     ], GetTagsModeratorOnlyQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=min" }),
         __metadata("design:type", String)
     ], GetTagsModeratorOnlyQueryParams.prototype, "min", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=order" }),
         __metadata("design:type", String)
     ], GetTagsModeratorOnlyQueryParams.prototype, "order", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetTagsModeratorOnlyQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetTagsModeratorOnlyQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetTagsModeratorOnlyQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetTagsModeratorOnlyQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Number)
     ], GetTagsModeratorOnlyQueryParams.prototype, "todate", void 0);
     return GetTagsModeratorOnlyQueryParams;
-}(SpeakeasyBase));
-export { GetTagsModeratorOnlyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsModeratorOnlyQueryParams = GetTagsModeratorOnlyQueryParams;
 var GetTagsModeratorOnlyRequest = /** @class */ (function (_super) {
     __extends(GetTagsModeratorOnlyRequest, _super);
     function GetTagsModeratorOnlyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTagsModeratorOnlyQueryParams)
     ], GetTagsModeratorOnlyRequest.prototype, "queryParams", void 0);
     return GetTagsModeratorOnlyRequest;
-}(SpeakeasyBase));
-export { GetTagsModeratorOnlyRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsModeratorOnlyRequest = GetTagsModeratorOnlyRequest;
 var GetTagsModeratorOnlyResponse = /** @class */ (function (_super) {
     __extends(GetTagsModeratorOnlyResponse, _super);
     function GetTagsModeratorOnlyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetTagsModeratorOnlyResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTagsModeratorOnlyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTagsModeratorOnlyResponse.prototype, "statusCode", void 0);
     return GetTagsModeratorOnlyResponse;
-}(SpeakeasyBase));
-export { GetTagsModeratorOnlyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTagsModeratorOnlyResponse = GetTagsModeratorOnlyResponse;

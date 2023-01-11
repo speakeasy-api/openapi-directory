@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Comment = exports.CommentPlusoners = exports.CommentObject = exports.CommentInReplyTo = exports.CommentActor = exports.CommentActorVerification = exports.CommentActorImage = exports.CommentActorClientSpecificActorInfo = exports.CommentActorClientSpecificActorInfoYoutubeActorInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // CommentActorClientSpecificActorInfoYoutubeActorInfo
 /**
  * Actor info specific to YouTube clients.
@@ -33,12 +36,12 @@ var CommentActorClientSpecificActorInfoYoutubeActorInfo = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelId" }),
         __metadata("design:type", String)
     ], CommentActorClientSpecificActorInfoYoutubeActorInfo.prototype, "channelId", void 0);
     return CommentActorClientSpecificActorInfoYoutubeActorInfo;
-}(SpeakeasyBase));
-export { CommentActorClientSpecificActorInfoYoutubeActorInfo };
+}(utils_1.SpeakeasyBase));
+exports.CommentActorClientSpecificActorInfoYoutubeActorInfo = CommentActorClientSpecificActorInfoYoutubeActorInfo;
 // CommentActorClientSpecificActorInfo
 /**
  * Actor info specific to particular clients.
@@ -49,12 +52,12 @@ var CommentActorClientSpecificActorInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=youtubeActorInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=youtubeActorInfo" }),
         __metadata("design:type", CommentActorClientSpecificActorInfoYoutubeActorInfo)
     ], CommentActorClientSpecificActorInfo.prototype, "youtubeActorInfo", void 0);
     return CommentActorClientSpecificActorInfo;
-}(SpeakeasyBase));
-export { CommentActorClientSpecificActorInfo };
+}(utils_1.SpeakeasyBase));
+exports.CommentActorClientSpecificActorInfo = CommentActorClientSpecificActorInfo;
 // CommentActorImage
 /**
  * The image representation of this actor.
@@ -65,12 +68,12 @@ var CommentActorImage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], CommentActorImage.prototype, "url", void 0);
     return CommentActorImage;
-}(SpeakeasyBase));
-export { CommentActorImage };
+}(utils_1.SpeakeasyBase));
+exports.CommentActorImage = CommentActorImage;
 // CommentActorVerification
 /**
  * Verification status of actor.
@@ -81,12 +84,12 @@ var CommentActorVerification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adHocVerified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adHocVerified" }),
         __metadata("design:type", String)
     ], CommentActorVerification.prototype, "adHocVerified", void 0);
     return CommentActorVerification;
-}(SpeakeasyBase));
-export { CommentActorVerification };
+}(utils_1.SpeakeasyBase));
+exports.CommentActorVerification = CommentActorVerification;
 // CommentActor
 /**
  * The person who posted this comment.
@@ -97,48 +100,48 @@ var CommentActor = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientSpecificActorInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientSpecificActorInfo" }),
         __metadata("design:type", CommentActorClientSpecificActorInfo)
     ], CommentActor.prototype, "clientSpecificActorInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], CommentActor.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CommentActor.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", CommentActorImage)
     ], CommentActor.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], CommentActor.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verification" }),
         __metadata("design:type", CommentActorVerification)
     ], CommentActor.prototype, "verification", void 0);
     return CommentActor;
-}(SpeakeasyBase));
-export { CommentActor };
+}(utils_1.SpeakeasyBase));
+exports.CommentActor = CommentActor;
 var CommentInReplyTo = /** @class */ (function (_super) {
     __extends(CommentInReplyTo, _super);
     function CommentInReplyTo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CommentInReplyTo.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], CommentInReplyTo.prototype, "url", void 0);
     return CommentInReplyTo;
-}(SpeakeasyBase));
-export { CommentInReplyTo };
+}(utils_1.SpeakeasyBase));
+exports.CommentInReplyTo = CommentInReplyTo;
 // CommentObject
 /**
  * The object of this comment.
@@ -149,20 +152,20 @@ var CommentObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], CommentObject.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectType" }),
         __metadata("design:type", String)
     ], CommentObject.prototype, "objectType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originalContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originalContent" }),
         __metadata("design:type", String)
     ], CommentObject.prototype, "originalContent", void 0);
     return CommentObject;
-}(SpeakeasyBase));
-export { CommentObject };
+}(utils_1.SpeakeasyBase));
+exports.CommentObject = CommentObject;
 // CommentPlusoners
 /**
  * People who +1'd this comment.
@@ -173,61 +176,61 @@ var CommentPlusoners = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalItems" }),
         __metadata("design:type", Number)
     ], CommentPlusoners.prototype, "totalItems", void 0);
     return CommentPlusoners;
-}(SpeakeasyBase));
-export { CommentPlusoners };
+}(utils_1.SpeakeasyBase));
+exports.CommentPlusoners = CommentPlusoners;
 var Comment = /** @class */ (function (_super) {
     __extends(Comment, _super);
     function Comment() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actor" }),
         __metadata("design:type", CommentActor)
     ], Comment.prototype, "actor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Comment.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Comment.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inReplyTo", elemType: CommentInReplyTo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inReplyTo", elemType: CommentInReplyTo }),
         __metadata("design:type", Array)
     ], Comment.prototype, "inReplyTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Comment.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object" }),
         __metadata("design:type", CommentObject)
     ], Comment.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plusoners" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plusoners" }),
         __metadata("design:type", CommentPlusoners)
     ], Comment.prototype, "plusoners", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=published" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=published" }),
         __metadata("design:type", Date)
     ], Comment.prototype, "published", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Comment.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", Date)
     ], Comment.prototype, "updated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verb" }),
         __metadata("design:type", String)
     ], Comment.prototype, "verb", void 0);
     return Comment;
-}(SpeakeasyBase));
-export { Comment };
+}(utils_1.SpeakeasyBase));
+exports.Comment = Comment;

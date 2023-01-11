@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RegionV2 } from "./regionv2";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SupportedCountryV2 = void 0;
+var utils_1 = require("../../../internal/utils");
+var regionv2_1 = require("./regionv2");
 var SupportedCountryV2 = /** @class */ (function (_super) {
     __extends(SupportedCountryV2, _super);
     function SupportedCountryV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencies" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencies" }),
         __metadata("design:type", Array)
     ], SupportedCountryV2.prototype, "currencies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isoCountryCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isoCountryCode" }),
         __metadata("design:type", String)
     ], SupportedCountryV2.prototype, "isoCountryCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regions", elemType: RegionV2 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regions", elemType: regionv2_1.RegionV2 }),
         __metadata("design:type", Array)
     ], SupportedCountryV2.prototype, "regions", void 0);
     return SupportedCountryV2;
-}(SpeakeasyBase));
-export { SupportedCountryV2 };
+}(utils_1.SpeakeasyBase));
+exports.SupportedCountryV2 = SupportedCountryV2;

@@ -56,7 +56,7 @@ export class OndRouteResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  ondRoute200ApplicationJsonString?: string;
+  ondRoute200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

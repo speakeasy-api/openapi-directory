@@ -9,7 +9,7 @@ import { AccountReport } from "./accountreport";
  *
 **/
 export declare class TransactionsResponse200Json extends SpeakeasyBase {
-    links?: Map<string, HrefType>;
+    links?: Record<string, HrefType>;
     account?: AccountReference16Ch;
     balances?: Balance[];
     transactions?: AccountReport;

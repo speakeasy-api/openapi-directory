@@ -75,5 +75,5 @@ export class UntagResourceResponse extends SpeakeasyBase {
   tagRequiredException?: any;
 
   @SpeakeasyMetadata()
-  untagResourceOutput?: Map<string, any>;
+  untagResourceOutput?: Record<string, any>;
 }

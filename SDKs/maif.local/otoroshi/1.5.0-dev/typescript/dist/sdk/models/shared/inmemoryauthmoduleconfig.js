@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InMemoryUser } from "./inmemoryuser";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InMemoryAuthModuleConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var inmemoryuser_1 = require("./inmemoryuser");
 // InMemoryAuthModuleConfig
 /**
  * Settings to authenticate users using the in memory user store
@@ -34,29 +37,29 @@ var InMemoryAuthModuleConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=desc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=desc" }),
         __metadata("design:type", String)
     ], InMemoryAuthModuleConfig.prototype, "desc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], InMemoryAuthModuleConfig.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], InMemoryAuthModuleConfig.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessionMaxAge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessionMaxAge" }),
         __metadata("design:type", String)
     ], InMemoryAuthModuleConfig.prototype, "sessionMaxAge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], InMemoryAuthModuleConfig.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=users", elemType: InMemoryUser }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=users", elemType: inmemoryuser_1.InMemoryUser }),
         __metadata("design:type", Array)
     ], InMemoryAuthModuleConfig.prototype, "users", void 0);
     return InMemoryAuthModuleConfig;
-}(SpeakeasyBase));
-export { InMemoryAuthModuleConfig };
+}(utils_1.SpeakeasyBase));
+exports.InMemoryAuthModuleConfig = InMemoryAuthModuleConfig;

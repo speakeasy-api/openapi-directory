@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,34 +14,59 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReactionsCreateForTeamDiscussionLegacyResponse = exports.ReactionsCreateForTeamDiscussionLegacyRequest = exports.ReactionsCreateForTeamDiscussionLegacyRequestBody = exports.ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum = exports.ReactionsCreateForTeamDiscussionLegacyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ReactionsCreateForTeamDiscussionLegacyPathParams = /** @class */ (function (_super) {
     __extends(ReactionsCreateForTeamDiscussionLegacyPathParams, _super);
     function ReactionsCreateForTeamDiscussionLegacyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=discussion_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=discussion_number" }),
         __metadata("design:type", Number)
     ], ReactionsCreateForTeamDiscussionLegacyPathParams.prototype, "discussionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_id" }),
         __metadata("design:type", Number)
     ], ReactionsCreateForTeamDiscussionLegacyPathParams.prototype, "teamId", void 0);
     return ReactionsCreateForTeamDiscussionLegacyPathParams;
-}(SpeakeasyBase));
-export { ReactionsCreateForTeamDiscussionLegacyPathParams };
-export var ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum;
+}(utils_1.SpeakeasyBase));
+exports.ReactionsCreateForTeamDiscussionLegacyPathParams = ReactionsCreateForTeamDiscussionLegacyPathParams;
+var ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum;
 (function (ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum) {
     ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum["Plus1"] = "+1";
     ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum["Minus1"] = "-1";
@@ -50,52 +76,52 @@ export var ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum;
     ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum["Hooray"] = "hooray";
     ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum["Rocket"] = "rocket";
     ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum["Eyes"] = "eyes";
-})(ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum || (ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum = {}));
+})(ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum = exports.ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum || (exports.ReactionsCreateForTeamDiscussionLegacyRequestBodyContentEnum = {}));
 var ReactionsCreateForTeamDiscussionLegacyRequestBody = /** @class */ (function (_super) {
     __extends(ReactionsCreateForTeamDiscussionLegacyRequestBody, _super);
     function ReactionsCreateForTeamDiscussionLegacyRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], ReactionsCreateForTeamDiscussionLegacyRequestBody.prototype, "content", void 0);
     return ReactionsCreateForTeamDiscussionLegacyRequestBody;
-}(SpeakeasyBase));
-export { ReactionsCreateForTeamDiscussionLegacyRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsCreateForTeamDiscussionLegacyRequestBody = ReactionsCreateForTeamDiscussionLegacyRequestBody;
 var ReactionsCreateForTeamDiscussionLegacyRequest = /** @class */ (function (_super) {
     __extends(ReactionsCreateForTeamDiscussionLegacyRequest, _super);
     function ReactionsCreateForTeamDiscussionLegacyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReactionsCreateForTeamDiscussionLegacyPathParams)
     ], ReactionsCreateForTeamDiscussionLegacyRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ReactionsCreateForTeamDiscussionLegacyRequestBody)
     ], ReactionsCreateForTeamDiscussionLegacyRequest.prototype, "request", void 0);
     return ReactionsCreateForTeamDiscussionLegacyRequest;
-}(SpeakeasyBase));
-export { ReactionsCreateForTeamDiscussionLegacyRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsCreateForTeamDiscussionLegacyRequest = ReactionsCreateForTeamDiscussionLegacyRequest;
 var ReactionsCreateForTeamDiscussionLegacyResponse = /** @class */ (function (_super) {
     __extends(ReactionsCreateForTeamDiscussionLegacyResponse, _super);
     function ReactionsCreateForTeamDiscussionLegacyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReactionsCreateForTeamDiscussionLegacyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReactionsCreateForTeamDiscussionLegacyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Reaction)
     ], ReactionsCreateForTeamDiscussionLegacyResponse.prototype, "reaction", void 0);
     return ReactionsCreateForTeamDiscussionLegacyResponse;
-}(SpeakeasyBase));
-export { ReactionsCreateForTeamDiscussionLegacyResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsCreateForTeamDiscussionLegacyResponse = ReactionsCreateForTeamDiscussionLegacyResponse;

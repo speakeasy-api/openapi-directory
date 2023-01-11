@@ -41,11 +41,11 @@ export class GetTeamEventsByYearKeysResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getTeamEventsByYearKeys200ApplicationJsonStrings?: string[];
+  getTeamEventsByYearKeys200ApplicationJSONStrings?: string[];
 }

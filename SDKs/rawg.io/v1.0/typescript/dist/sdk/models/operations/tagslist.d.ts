@@ -16,5 +16,5 @@ export declare class TagsListRequest extends SpeakeasyBase {
 export declare class TagsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    tagsList200ApplicationJsonObject?: TagsList200ApplicationJson;
+    tagsList200ApplicationJSONObject?: TagsList200ApplicationJson;
 }

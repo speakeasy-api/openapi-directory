@@ -18,6 +18,6 @@ export declare class DeleteDeviceDefinitionRequest extends SpeakeasyBase {
 export declare class DeleteDeviceDefinitionResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
-    deleteDeviceDefinitionResponse?: Map<string, any>;
+    deleteDeviceDefinitionResponse?: Record<string, any>;
     statusCode: number;
 }

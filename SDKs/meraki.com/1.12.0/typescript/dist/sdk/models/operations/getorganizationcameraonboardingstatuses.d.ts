@@ -13,5 +13,5 @@ export declare class GetOrganizationCameraOnboardingStatusesRequest extends Spea
 export declare class GetOrganizationCameraOnboardingStatusesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationCameraOnboardingStatuses200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationCameraOnboardingStatuses200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TimeDimension } from "./timedimension";
-export var DimensionalMetricValueMetricOptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DimensionalMetricValue = exports.DimensionalMetricValueMetricOptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var timedimension_1 = require("./timedimension");
+var DimensionalMetricValueMetricOptionEnum;
 (function (DimensionalMetricValueMetricOptionEnum) {
     DimensionalMetricValueMetricOptionEnum["MetricOptionUnspecified"] = "METRIC_OPTION_UNSPECIFIED";
     DimensionalMetricValueMetricOptionEnum["AggregatedTotal"] = "AGGREGATED_TOTAL";
     DimensionalMetricValueMetricOptionEnum["AggregatedDaily"] = "AGGREGATED_DAILY";
     DimensionalMetricValueMetricOptionEnum["BreakdownDayOfWeek"] = "BREAKDOWN_DAY_OF_WEEK";
     DimensionalMetricValueMetricOptionEnum["BreakdownHourOfDay"] = "BREAKDOWN_HOUR_OF_DAY";
-})(DimensionalMetricValueMetricOptionEnum || (DimensionalMetricValueMetricOptionEnum = {}));
+})(DimensionalMetricValueMetricOptionEnum = exports.DimensionalMetricValueMetricOptionEnum || (exports.DimensionalMetricValueMetricOptionEnum = {}));
 // DimensionalMetricValue
 /**
  * A value for a single metric with a given time dimension.
@@ -42,17 +45,17 @@ var DimensionalMetricValue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricOption" }),
         __metadata("design:type", String)
     ], DimensionalMetricValue.prototype, "metricOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeDimension" }),
-        __metadata("design:type", TimeDimension)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeDimension" }),
+        __metadata("design:type", timedimension_1.TimeDimension)
     ], DimensionalMetricValue.prototype, "timeDimension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], DimensionalMetricValue.prototype, "value", void 0);
     return DimensionalMetricValue;
-}(SpeakeasyBase));
-export { DimensionalMetricValue };
+}(utils_1.SpeakeasyBase));
+exports.DimensionalMetricValue = DimensionalMetricValue;

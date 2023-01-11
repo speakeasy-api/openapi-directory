@@ -200,23 +200,23 @@ export class LpgsvResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  lpgsv400ApplicationJsonObject?: Lpgsv400ApplicationJson;
+  lpgsv400ApplicationJSONObject?: Lpgsv400ApplicationJson;
 
   @SpeakeasyMetadata()
-  lpgsv401ApplicationJsonObject?: Lpgsv401ApplicationJson;
+  lpgsv401ApplicationJSONObject?: Lpgsv401ApplicationJson;
 
   @SpeakeasyMetadata()
-  lpgsv404ApplicationJsonObject?: Lpgsv404ApplicationJson;
+  lpgsv404ApplicationJSONObject?: Lpgsv404ApplicationJson;
 
   @SpeakeasyMetadata()
-  lpgsv500ApplicationJsonObject?: Lpgsv500ApplicationJson;
+  lpgsv500ApplicationJSONObject?: Lpgsv500ApplicationJson;
 
   @SpeakeasyMetadata()
-  lpgsv502ApplicationJsonObject?: Lpgsv502ApplicationJson;
+  lpgsv502ApplicationJSONObject?: Lpgsv502ApplicationJson;
 
   @SpeakeasyMetadata()
-  lpgsv503ApplicationJsonObject?: Lpgsv503ApplicationJson;
+  lpgsv503ApplicationJSONObject?: Lpgsv503ApplicationJson;
 
   @SpeakeasyMetadata()
-  lpgsv504ApplicationJsonObject?: Lpgsv504ApplicationJson;
+  lpgsv504ApplicationJSONObject?: Lpgsv504ApplicationJson;
 }

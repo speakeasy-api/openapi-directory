@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationDevicesResponse = exports.GetOrganizationDevicesRequest = exports.GetOrganizationDevicesQueryParams = exports.GetOrganizationDevicesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationDevicesPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationDevicesPathParams, _super);
     function GetOrganizationDevicesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationDevicesPathParams.prototype, "organizationId", void 0);
     return GetOrganizationDevicesPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationDevicesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationDevicesPathParams = GetOrganizationDevicesPathParams;
 var GetOrganizationDevicesQueryParams = /** @class */ (function (_super) {
     __extends(GetOrganizationDevicesQueryParams, _super);
     function GetOrganizationDevicesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=configurationUpdatedAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=configurationUpdatedAfter" }),
         __metadata("design:type", String)
     ], GetOrganizationDevicesQueryParams.prototype, "configurationUpdatedAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
         __metadata("design:type", String)
     ], GetOrganizationDevicesQueryParams.prototype, "endingBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=perPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=perPage" }),
         __metadata("design:type", Number)
     ], GetOrganizationDevicesQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
         __metadata("design:type", String)
     ], GetOrganizationDevicesQueryParams.prototype, "startingAfter", void 0);
     return GetOrganizationDevicesQueryParams;
-}(SpeakeasyBase));
-export { GetOrganizationDevicesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationDevicesQueryParams = GetOrganizationDevicesQueryParams;
 var GetOrganizationDevicesRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationDevicesRequest, _super);
     function GetOrganizationDevicesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationDevicesPathParams)
     ], GetOrganizationDevicesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationDevicesQueryParams)
     ], GetOrganizationDevicesRequest.prototype, "queryParams", void 0);
     return GetOrganizationDevicesRequest;
-}(SpeakeasyBase));
-export { GetOrganizationDevicesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationDevicesRequest = GetOrganizationDevicesRequest;
 var GetOrganizationDevicesResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationDevicesResponse, _super);
     function GetOrganizationDevicesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationDevicesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetOrganizationDevicesResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationDevicesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationDevicesResponse.prototype, "getOrganizationDevices200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationDevicesResponse.prototype, "getOrganizationDevices200ApplicationJSONObject", void 0);
     return GetOrganizationDevicesResponse;
-}(SpeakeasyBase));
-export { GetOrganizationDevicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationDevicesResponse = GetOrganizationDevicesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CollectionPeriod } from "./collectionperiod";
-import { Key } from "./key";
-import { Metric } from "./metric";
-// Record
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecordT = void 0;
+var utils_1 = require("../../../internal/utils");
+var collectionperiod_1 = require("./collectionperiod");
+var key_1 = require("./key");
+var metric_1 = require("./metric");
+// RecordT
 /**
  * Record is a single Chrome UX report data record. It contains use experience statistics for a single url pattern and set of dimensions.
 **/
-var Record = /** @class */ (function (_super) {
-    __extends(Record, _super);
-    function Record() {
+var RecordT = /** @class */ (function (_super) {
+    __extends(RecordT, _super);
+    function RecordT() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collectionPeriod" }),
-        __metadata("design:type", CollectionPeriod)
-    ], Record.prototype, "collectionPeriod", void 0);
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collectionPeriod" }),
+        __metadata("design:type", collectionperiod_1.CollectionPeriod)
+    ], RecordT.prototype, "collectionPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
-        __metadata("design:type", Key)
-    ], Record.prototype, "key", void 0);
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
+        __metadata("design:type", key_1.Key)
+    ], RecordT.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics", elemType: Metric }),
-        __metadata("design:type", Map)
-    ], Record.prototype, "metrics", void 0);
-    return Record;
-}(SpeakeasyBase));
-export { Record };
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics", elemType: metric_1.Metric }),
+        __metadata("design:type", Object)
+    ], RecordT.prototype, "metrics", void 0);
+    return RecordT;
+}(utils_1.SpeakeasyBase));
+exports.RecordT = RecordT;

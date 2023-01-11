@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPayoutStatistics = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPayoutStatistics = /** @class */ (function (_super) {
     __extends(GetPayoutStatistics, _super);
     function GetPayoutStatistics() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thisMonthFailedPaymentsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thisMonthFailedPaymentsCount" }),
         __metadata("design:type", Number)
     ], GetPayoutStatistics.prototype, "thisMonthFailedPaymentsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thisMonthPayoutsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thisMonthPayoutsCount" }),
         __metadata("design:type", Number)
     ], GetPayoutStatistics.prototype, "thisMonthPayoutsCount", void 0);
     return GetPayoutStatistics;
-}(SpeakeasyBase));
-export { GetPayoutStatistics };
+}(utils_1.SpeakeasyBase));
+exports.GetPayoutStatistics = GetPayoutStatistics;

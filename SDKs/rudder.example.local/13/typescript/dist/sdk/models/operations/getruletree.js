@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetRuleTree200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRuleTreeResponse = exports.GetRuleTree200ApplicationJson = exports.GetRuleTree200ApplicationJsonResultEnum = exports.GetRuleTree200ApplicationJsonData = exports.GetRuleTree200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetRuleTree200ApplicationJsonActionEnum;
 (function (GetRuleTree200ApplicationJsonActionEnum) {
     GetRuleTree200ApplicationJsonActionEnum["GetRuleTree"] = "GetRuleTree";
-})(GetRuleTree200ApplicationJsonActionEnum || (GetRuleTree200ApplicationJsonActionEnum = {}));
+})(GetRuleTree200ApplicationJsonActionEnum = exports.GetRuleTree200ApplicationJsonActionEnum || (exports.GetRuleTree200ApplicationJsonActionEnum = {}));
 var GetRuleTree200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(GetRuleTree200ApplicationJsonData, _super);
     function GetRuleTree200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleCategories" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleCategories" }),
+        __metadata("design:type", Object)
     ], GetRuleTree200ApplicationJsonData.prototype, "ruleCategories", void 0);
     return GetRuleTree200ApplicationJsonData;
-}(SpeakeasyBase));
-export { GetRuleTree200ApplicationJsonData };
-export var GetRuleTree200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetRuleTree200ApplicationJsonData = GetRuleTree200ApplicationJsonData;
+var GetRuleTree200ApplicationJsonResultEnum;
 (function (GetRuleTree200ApplicationJsonResultEnum) {
     GetRuleTree200ApplicationJsonResultEnum["Success"] = "success";
     GetRuleTree200ApplicationJsonResultEnum["Error"] = "error";
-})(GetRuleTree200ApplicationJsonResultEnum || (GetRuleTree200ApplicationJsonResultEnum = {}));
+})(GetRuleTree200ApplicationJsonResultEnum = exports.GetRuleTree200ApplicationJsonResultEnum || (exports.GetRuleTree200ApplicationJsonResultEnum = {}));
 var GetRuleTree200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetRuleTree200ApplicationJson, _super);
     function GetRuleTree200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], GetRuleTree200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", GetRuleTree200ApplicationJsonData)
     ], GetRuleTree200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], GetRuleTree200ApplicationJson.prototype, "result", void 0);
     return GetRuleTree200ApplicationJson;
-}(SpeakeasyBase));
-export { GetRuleTree200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetRuleTree200ApplicationJson = GetRuleTree200ApplicationJson;
 var GetRuleTreeResponse = /** @class */ (function (_super) {
     __extends(GetRuleTreeResponse, _super);
     function GetRuleTreeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRuleTreeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRuleTree200ApplicationJson)
-    ], GetRuleTreeResponse.prototype, "getRuleTree200ApplicationJsonObject", void 0);
+    ], GetRuleTreeResponse.prototype, "getRuleTree200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRuleTreeResponse.prototype, "statusCode", void 0);
     return GetRuleTreeResponse;
-}(SpeakeasyBase));
-export { GetRuleTreeResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRuleTreeResponse = GetRuleTreeResponse;

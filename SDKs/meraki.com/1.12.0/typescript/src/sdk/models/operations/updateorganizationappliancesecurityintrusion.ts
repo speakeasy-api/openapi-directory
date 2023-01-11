@@ -40,5 +40,5 @@ export class UpdateOrganizationApplianceSecurityIntrusionResponse extends Speake
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateOrganizationApplianceSecurityIntrusion200ApplicationJsonObject?: Map<string, any>;
+  updateOrganizationApplianceSecurityIntrusion200ApplicationJSONObject?: Record<string, any>;
 }

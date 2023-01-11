@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttemptStatus } from "./attemptstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var attemptstatus_1 = require("./attemptstatus");
 // TaskStatus
 /**
  * Status of the task.
@@ -34,21 +37,21 @@ var TaskStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attemptDispatchCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attemptDispatchCount" }),
         __metadata("design:type", Number)
     ], TaskStatus.prototype, "attemptDispatchCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attemptResponseCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attemptResponseCount" }),
         __metadata("design:type", Number)
     ], TaskStatus.prototype, "attemptResponseCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstAttemptStatus" }),
-        __metadata("design:type", AttemptStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstAttemptStatus" }),
+        __metadata("design:type", attemptstatus_1.AttemptStatus)
     ], TaskStatus.prototype, "firstAttemptStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastAttemptStatus" }),
-        __metadata("design:type", AttemptStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastAttemptStatus" }),
+        __metadata("design:type", attemptstatus_1.AttemptStatus)
     ], TaskStatus.prototype, "lastAttemptStatus", void 0);
     return TaskStatus;
-}(SpeakeasyBase));
-export { TaskStatus };
+}(utils_1.SpeakeasyBase));
+exports.TaskStatus = TaskStatus;

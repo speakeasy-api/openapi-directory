@@ -45,7 +45,7 @@ export class ContainerProperties extends SpeakeasyBase {
   logConfiguration?: LogConfiguration;
 
   @SpeakeasyMetadata({ data: "json, name=memory" })
-  memory?: number;
+  memory?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=mountPoints", elemType: MountPoint })
   mountPoints?: MountPoint[];
@@ -72,7 +72,7 @@ export class ContainerProperties extends SpeakeasyBase {
   user?: string;
 
   @SpeakeasyMetadata({ data: "json, name=vcpus" })
-  vcpus?: number;
+  vcpus?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=volumes", elemType: Volume })
   volumes?: Volume[];

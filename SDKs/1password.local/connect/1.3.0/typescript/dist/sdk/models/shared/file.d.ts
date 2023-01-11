@@ -5,16 +5,16 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class FileSection extends SpeakeasyBase {
     id?: string;
 }
-export declare class File extends SpeakeasyBase {
+export declare class FileInput extends SpeakeasyBase {
     content?: string;
-    contentPath?: string;
     id?: string;
     name?: string;
     section?: FileSection;
     size?: number;
 }
-export declare class FileInput extends SpeakeasyBase {
+export declare class File extends SpeakeasyBase {
     content?: string;
+    contentPath?: string;
     id?: string;
     name?: string;
     section?: FileSection;

@@ -22,5 +22,5 @@ export class GetNetworkSwitchAccessControlListsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSwitchAccessControlLists200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSwitchAccessControlLists200ApplicationJSONObject?: Record<string, any>;
 }

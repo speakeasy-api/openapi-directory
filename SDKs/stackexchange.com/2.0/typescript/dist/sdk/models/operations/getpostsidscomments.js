@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,114 +23,116 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPostsIdsCommentsResponse = exports.GetPostsIdsCommentsRequest = exports.GetPostsIdsCommentsQueryParams = exports.GetPostsIdsCommentsSortEnum = exports.GetPostsIdsCommentsOrderEnum = exports.GetPostsIdsCommentsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPostsIdsCommentsPathParams = /** @class */ (function (_super) {
     __extends(GetPostsIdsCommentsPathParams, _super);
     function GetPostsIdsCommentsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ids" }),
         __metadata("design:type", String)
     ], GetPostsIdsCommentsPathParams.prototype, "ids", void 0);
     return GetPostsIdsCommentsPathParams;
-}(SpeakeasyBase));
-export { GetPostsIdsCommentsPathParams };
-export var GetPostsIdsCommentsOrderEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPostsIdsCommentsPathParams = GetPostsIdsCommentsPathParams;
+var GetPostsIdsCommentsOrderEnum;
 (function (GetPostsIdsCommentsOrderEnum) {
     GetPostsIdsCommentsOrderEnum["Desc"] = "desc";
     GetPostsIdsCommentsOrderEnum["Asc"] = "asc";
-})(GetPostsIdsCommentsOrderEnum || (GetPostsIdsCommentsOrderEnum = {}));
-export var GetPostsIdsCommentsSortEnum;
+})(GetPostsIdsCommentsOrderEnum = exports.GetPostsIdsCommentsOrderEnum || (exports.GetPostsIdsCommentsOrderEnum = {}));
+var GetPostsIdsCommentsSortEnum;
 (function (GetPostsIdsCommentsSortEnum) {
     GetPostsIdsCommentsSortEnum["Creation"] = "creation";
     GetPostsIdsCommentsSortEnum["Votes"] = "votes";
-})(GetPostsIdsCommentsSortEnum || (GetPostsIdsCommentsSortEnum = {}));
+})(GetPostsIdsCommentsSortEnum = exports.GetPostsIdsCommentsSortEnum || (exports.GetPostsIdsCommentsSortEnum = {}));
 var GetPostsIdsCommentsQueryParams = /** @class */ (function (_super) {
     __extends(GetPostsIdsCommentsQueryParams, _super);
     function GetPostsIdsCommentsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetPostsIdsCommentsQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetPostsIdsCommentsQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Number)
     ], GetPostsIdsCommentsQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", String)
     ], GetPostsIdsCommentsQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=min" }),
         __metadata("design:type", String)
     ], GetPostsIdsCommentsQueryParams.prototype, "min", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=order" }),
         __metadata("design:type", String)
     ], GetPostsIdsCommentsQueryParams.prototype, "order", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetPostsIdsCommentsQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetPostsIdsCommentsQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetPostsIdsCommentsQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetPostsIdsCommentsQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Number)
     ], GetPostsIdsCommentsQueryParams.prototype, "todate", void 0);
     return GetPostsIdsCommentsQueryParams;
-}(SpeakeasyBase));
-export { GetPostsIdsCommentsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPostsIdsCommentsQueryParams = GetPostsIdsCommentsQueryParams;
 var GetPostsIdsCommentsRequest = /** @class */ (function (_super) {
     __extends(GetPostsIdsCommentsRequest, _super);
     function GetPostsIdsCommentsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPostsIdsCommentsPathParams)
     ], GetPostsIdsCommentsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPostsIdsCommentsQueryParams)
     ], GetPostsIdsCommentsRequest.prototype, "queryParams", void 0);
     return GetPostsIdsCommentsRequest;
-}(SpeakeasyBase));
-export { GetPostsIdsCommentsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPostsIdsCommentsRequest = GetPostsIdsCommentsRequest;
 var GetPostsIdsCommentsResponse = /** @class */ (function (_super) {
     __extends(GetPostsIdsCommentsResponse, _super);
     function GetPostsIdsCommentsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetPostsIdsCommentsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPostsIdsCommentsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPostsIdsCommentsResponse.prototype, "statusCode", void 0);
     return GetPostsIdsCommentsResponse;
-}(SpeakeasyBase));
-export { GetPostsIdsCommentsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPostsIdsCommentsResponse = GetPostsIdsCommentsResponse;

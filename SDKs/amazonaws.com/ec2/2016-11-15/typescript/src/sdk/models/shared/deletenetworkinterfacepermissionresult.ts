@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class DeleteNetworkInterfacePermissionResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  return?: boolean;
+  return?: Record<string, any>;
 }

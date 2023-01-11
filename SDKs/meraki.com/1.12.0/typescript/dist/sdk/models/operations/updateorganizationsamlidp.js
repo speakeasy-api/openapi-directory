@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateOrganizationSamlIdpResponse = exports.UpdateOrganizationSamlIdpRequest = exports.UpdateOrganizationSamlIdpRequestBody = exports.UpdateOrganizationSamlIdpPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateOrganizationSamlIdpPathParams = /** @class */ (function (_super) {
     __extends(UpdateOrganizationSamlIdpPathParams, _super);
     function UpdateOrganizationSamlIdpPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=idpId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=idpId" }),
         __metadata("design:type", String)
     ], UpdateOrganizationSamlIdpPathParams.prototype, "idpId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], UpdateOrganizationSamlIdpPathParams.prototype, "organizationId", void 0);
     return UpdateOrganizationSamlIdpPathParams;
-}(SpeakeasyBase));
-export { UpdateOrganizationSamlIdpPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationSamlIdpPathParams = UpdateOrganizationSamlIdpPathParams;
 var UpdateOrganizationSamlIdpRequestBody = /** @class */ (function (_super) {
     __extends(UpdateOrganizationSamlIdpRequestBody, _super);
     function UpdateOrganizationSamlIdpRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sloLogoutUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sloLogoutUrl" }),
         __metadata("design:type", String)
     ], UpdateOrganizationSamlIdpRequestBody.prototype, "sloLogoutUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=x509certSha1Fingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=x509certSha1Fingerprint" }),
         __metadata("design:type", String)
     ], UpdateOrganizationSamlIdpRequestBody.prototype, "x509certSha1Fingerprint", void 0);
     return UpdateOrganizationSamlIdpRequestBody;
-}(SpeakeasyBase));
-export { UpdateOrganizationSamlIdpRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationSamlIdpRequestBody = UpdateOrganizationSamlIdpRequestBody;
 var UpdateOrganizationSamlIdpRequest = /** @class */ (function (_super) {
     __extends(UpdateOrganizationSamlIdpRequest, _super);
     function UpdateOrganizationSamlIdpRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateOrganizationSamlIdpPathParams)
     ], UpdateOrganizationSamlIdpRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateOrganizationSamlIdpRequestBody)
     ], UpdateOrganizationSamlIdpRequest.prototype, "request", void 0);
     return UpdateOrganizationSamlIdpRequest;
-}(SpeakeasyBase));
-export { UpdateOrganizationSamlIdpRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationSamlIdpRequest = UpdateOrganizationSamlIdpRequest;
 var UpdateOrganizationSamlIdpResponse = /** @class */ (function (_super) {
     __extends(UpdateOrganizationSamlIdpResponse, _super);
     function UpdateOrganizationSamlIdpResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateOrganizationSamlIdpResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateOrganizationSamlIdpResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateOrganizationSamlIdpResponse.prototype, "updateOrganizationSamlIdp200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateOrganizationSamlIdpResponse.prototype, "updateOrganizationSamlIdp200ApplicationJSONObject", void 0);
     return UpdateOrganizationSamlIdpResponse;
-}(SpeakeasyBase));
-export { UpdateOrganizationSamlIdpResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationSamlIdpResponse = UpdateOrganizationSamlIdpResponse;

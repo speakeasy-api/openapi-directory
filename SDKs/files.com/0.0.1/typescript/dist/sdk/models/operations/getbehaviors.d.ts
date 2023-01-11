@@ -3,14 +3,14 @@ import * as shared from "../shared";
 export declare class GetBehaviorsQueryParams extends SpeakeasyBase {
     behavior?: string;
     cursor?: string;
-    filter?: Map<string, any>;
-    filterGt?: Map<string, any>;
-    filterGteq?: Map<string, any>;
-    filterLike?: Map<string, any>;
-    filterLt?: Map<string, any>;
-    filterLteq?: Map<string, any>;
+    filter?: Record<string, any>;
+    filterGt?: Record<string, any>;
+    filterGteq?: Record<string, any>;
+    filterLike?: Record<string, any>;
+    filterLt?: Record<string, any>;
+    filterLteq?: Record<string, any>;
     perPage?: number;
-    sortBy?: Map<string, any>;
+    sortBy?: Record<string, any>;
 }
 export declare class GetBehaviorsRequest extends SpeakeasyBase {
     queryParams: GetBehaviorsQueryParams;

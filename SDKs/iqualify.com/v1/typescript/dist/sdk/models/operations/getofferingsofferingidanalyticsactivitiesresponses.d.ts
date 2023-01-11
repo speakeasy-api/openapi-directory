@@ -9,6 +9,6 @@ export declare class GetOfferingsOfferingIdAnalyticsActivitiesResponsesRequest e
 export declare class GetOfferingsOfferingIdAnalyticsActivitiesResponsesResponse extends SpeakeasyBase {
     activityAttemptOpenResponses?: shared.ActivityAttemptOpenResponse[];
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

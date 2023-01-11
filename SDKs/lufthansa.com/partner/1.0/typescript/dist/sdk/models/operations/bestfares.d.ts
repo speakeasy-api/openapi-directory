@@ -24,7 +24,7 @@ export declare class BestFaresRequest extends SpeakeasyBase {
     security: BestFaresSecurity;
 }
 export declare class BestFaresResponse extends SpeakeasyBase {
-    bestFares200ApplicationJsonString?: string;
+    bestFares200ApplicationJSONString?: string;
     contentType: string;
     statusCode: number;
 }

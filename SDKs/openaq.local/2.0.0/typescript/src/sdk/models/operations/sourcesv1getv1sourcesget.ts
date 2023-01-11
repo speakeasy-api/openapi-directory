@@ -14,13 +14,13 @@ export class SourcesV1GetV1SourcesGetQueryParams extends SpeakeasyBase {
   offset?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order_by" })
-  orderBy?: shared.SourcesV1OrderEnum;
+  orderBy?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: shared.SortEnum;
+  sort?: Record<string, any>;
 }
 
 
@@ -38,7 +38,7 @@ export class SourcesV1GetV1SourcesGetResponse extends SpeakeasyBase {
   httpValidationError?: shared.HttpValidationError;
 
   @SpeakeasyMetadata()
-  openAqResult?: shared.OpenAqResult;
+  openAQResult?: shared.OpenAqResult;
 
   @SpeakeasyMetadata()
   statusCode: number;

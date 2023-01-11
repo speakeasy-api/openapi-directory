@@ -51,7 +51,7 @@ export class SendBonusResponse extends SpeakeasyBase {
   requestError?: any;
 
   @SpeakeasyMetadata()
-  sendBonusResponse?: Map<string, any>;
+  sendBonusResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   serviceFault?: any;

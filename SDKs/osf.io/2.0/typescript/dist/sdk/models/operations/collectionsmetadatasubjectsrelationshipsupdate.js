@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CollectionsMetadataSubjectsRelationshipsUpdateResponse = exports.CollectionsMetadataSubjectsRelationshipsUpdateRequest = exports.CollectionsMetadataSubjectsRelationshipsUpdatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CollectionsMetadataSubjectsRelationshipsUpdatePathParams = /** @class */ (function (_super) {
     __extends(CollectionsMetadataSubjectsRelationshipsUpdatePathParams, _super);
     function CollectionsMetadataSubjectsRelationshipsUpdatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=cgm_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=cgm_id" }),
         __metadata("design:type", String)
     ], CollectionsMetadataSubjectsRelationshipsUpdatePathParams.prototype, "cgmId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=collection_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=collection_id" }),
         __metadata("design:type", String)
     ], CollectionsMetadataSubjectsRelationshipsUpdatePathParams.prototype, "collectionId", void 0);
     return CollectionsMetadataSubjectsRelationshipsUpdatePathParams;
-}(SpeakeasyBase));
-export { CollectionsMetadataSubjectsRelationshipsUpdatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsMetadataSubjectsRelationshipsUpdatePathParams = CollectionsMetadataSubjectsRelationshipsUpdatePathParams;
 var CollectionsMetadataSubjectsRelationshipsUpdateRequest = /** @class */ (function (_super) {
     __extends(CollectionsMetadataSubjectsRelationshipsUpdateRequest, _super);
     function CollectionsMetadataSubjectsRelationshipsUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CollectionsMetadataSubjectsRelationshipsUpdatePathParams)
     ], CollectionsMetadataSubjectsRelationshipsUpdateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], CollectionsMetadataSubjectsRelationshipsUpdateRequest.prototype, "request", void 0);
     return CollectionsMetadataSubjectsRelationshipsUpdateRequest;
-}(SpeakeasyBase));
-export { CollectionsMetadataSubjectsRelationshipsUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsMetadataSubjectsRelationshipsUpdateRequest = CollectionsMetadataSubjectsRelationshipsUpdateRequest;
 var CollectionsMetadataSubjectsRelationshipsUpdateResponse = /** @class */ (function (_super) {
     __extends(CollectionsMetadataSubjectsRelationshipsUpdateResponse, _super);
     function CollectionsMetadataSubjectsRelationshipsUpdateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CollectionsMetadataSubjectsRelationshipsUpdateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CollectionsMetadataSubjectsRelationshipsUpdateResponse.prototype, "statusCode", void 0);
     return CollectionsMetadataSubjectsRelationshipsUpdateResponse;
-}(SpeakeasyBase));
-export { CollectionsMetadataSubjectsRelationshipsUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsMetadataSubjectsRelationshipsUpdateResponse = CollectionsMetadataSubjectsRelationshipsUpdateResponse;

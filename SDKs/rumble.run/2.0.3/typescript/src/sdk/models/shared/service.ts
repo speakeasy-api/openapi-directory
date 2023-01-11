@@ -16,7 +16,7 @@ export class Service extends SpeakeasyBase {
   alive?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=attributes" })
-  attributes?: Map<string, string>;
+  attributes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=comments" })
   comments?: string;
@@ -25,7 +25,7 @@ export class Service extends SpeakeasyBase {
   createdAt?: number;
 
   @SpeakeasyMetadata({ data: "json, name=credentials" })
-  credentials?: Map<string, string>;
+  credentials?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=detected_by" })
   detectedBy?: string;
@@ -88,7 +88,7 @@ export class Service extends SpeakeasyBase {
   osVersion?: string;
 
   @SpeakeasyMetadata({ data: "json, name=rtts" })
-  rtts?: Map<string, any>;
+  rtts?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=service_address" })
   serviceAddress?: string;
@@ -115,7 +115,7 @@ export class Service extends SpeakeasyBase {
   serviceCreatedAt?: number;
 
   @SpeakeasyMetadata({ data: "json, name=service_data" })
-  serviceData?: Map<string, string>;
+  serviceData?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=service_id" })
   serviceId: string;
@@ -157,7 +157,7 @@ export class Service extends SpeakeasyBase {
   serviceVhost?: string;
 
   @SpeakeasyMetadata({ data: "json, name=services" })
-  services?: Map<string, Map<string, string>>;
+  services?: Record<string, Record<string, string>>;
 
   @SpeakeasyMetadata({ data: "json, name=site_id" })
   siteId?: string;
@@ -166,7 +166,7 @@ export class Service extends SpeakeasyBase {
   siteName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: string;

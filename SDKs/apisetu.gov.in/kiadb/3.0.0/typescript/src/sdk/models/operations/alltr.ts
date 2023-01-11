@@ -194,23 +194,23 @@ export class AlltrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  alltr400ApplicationJsonObject?: Alltr400ApplicationJson;
+  alltr400ApplicationJSONObject?: Alltr400ApplicationJson;
 
   @SpeakeasyMetadata()
-  alltr401ApplicationJsonObject?: Alltr401ApplicationJson;
+  alltr401ApplicationJSONObject?: Alltr401ApplicationJson;
 
   @SpeakeasyMetadata()
-  alltr404ApplicationJsonObject?: Alltr404ApplicationJson;
+  alltr404ApplicationJSONObject?: Alltr404ApplicationJson;
 
   @SpeakeasyMetadata()
-  alltr500ApplicationJsonObject?: Alltr500ApplicationJson;
+  alltr500ApplicationJSONObject?: Alltr500ApplicationJson;
 
   @SpeakeasyMetadata()
-  alltr502ApplicationJsonObject?: Alltr502ApplicationJson;
+  alltr502ApplicationJSONObject?: Alltr502ApplicationJson;
 
   @SpeakeasyMetadata()
-  alltr503ApplicationJsonObject?: Alltr503ApplicationJson;
+  alltr503ApplicationJSONObject?: Alltr503ApplicationJson;
 
   @SpeakeasyMetadata()
-  alltr504ApplicationJsonObject?: Alltr504ApplicationJson;
+  alltr504ApplicationJSONObject?: Alltr504ApplicationJson;
 }

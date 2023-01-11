@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CreatePaymentChannel2CountryCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePaymentChannel2 = exports.CreatePaymentChannel2CurrencyEnum = exports.CreatePaymentChannel2CountryCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CreatePaymentChannel2CountryCodeEnum;
 (function (CreatePaymentChannel2CountryCodeEnum) {
     CreatePaymentChannel2CountryCodeEnum["Af"] = "AF";
     CreatePaymentChannel2CountryCodeEnum["Ax"] = "AX";
@@ -274,46 +277,46 @@ export var CreatePaymentChannel2CountryCodeEnum;
     CreatePaymentChannel2CountryCodeEnum["Ye"] = "YE";
     CreatePaymentChannel2CountryCodeEnum["Zm"] = "ZM";
     CreatePaymentChannel2CountryCodeEnum["Zw"] = "ZW";
-})(CreatePaymentChannel2CountryCodeEnum || (CreatePaymentChannel2CountryCodeEnum = {}));
-export var CreatePaymentChannel2CurrencyEnum;
+})(CreatePaymentChannel2CountryCodeEnum = exports.CreatePaymentChannel2CountryCodeEnum || (exports.CreatePaymentChannel2CountryCodeEnum = {}));
+var CreatePaymentChannel2CurrencyEnum;
 (function (CreatePaymentChannel2CurrencyEnum) {
     CreatePaymentChannel2CurrencyEnum["Usd"] = "USD";
     CreatePaymentChannel2CurrencyEnum["Gbp"] = "GBP";
     CreatePaymentChannel2CurrencyEnum["Eur"] = "EUR";
-})(CreatePaymentChannel2CurrencyEnum || (CreatePaymentChannel2CurrencyEnum = {}));
+})(CreatePaymentChannel2CurrencyEnum = exports.CreatePaymentChannel2CurrencyEnum || (exports.CreatePaymentChannel2CurrencyEnum = {}));
 var CreatePaymentChannel2 = /** @class */ (function (_super) {
     __extends(CreatePaymentChannel2, _super);
     function CreatePaymentChannel2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountName" }),
         __metadata("design:type", String)
     ], CreatePaymentChannel2.prototype, "accountName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountNumber" }),
         __metadata("design:type", String)
     ], CreatePaymentChannel2.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countryCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countryCode" }),
         __metadata("design:type", String)
     ], CreatePaymentChannel2.prototype, "countryCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], CreatePaymentChannel2.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iban" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iban" }),
         __metadata("design:type", String)
     ], CreatePaymentChannel2.prototype, "iban", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentChannelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentChannelName" }),
         __metadata("design:type", String)
     ], CreatePaymentChannel2.prototype, "paymentChannelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routingNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routingNumber" }),
         __metadata("design:type", String)
     ], CreatePaymentChannel2.prototype, "routingNumber", void 0);
     return CreatePaymentChannel2;
-}(SpeakeasyBase));
-export { CreatePaymentChannel2 };
+}(utils_1.SpeakeasyBase));
+exports.CreatePaymentChannel2 = CreatePaymentChannel2;

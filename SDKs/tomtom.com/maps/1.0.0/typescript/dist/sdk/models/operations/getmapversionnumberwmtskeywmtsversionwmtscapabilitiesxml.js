@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlWmtsVersionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlResponse = exports.GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlRequest = exports.GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlPathParams = exports.GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlWmtsVersionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlWmtsVersionEnum;
 (function (GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlWmtsVersionEnum) {
     GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlWmtsVersionEnum["One00"] = "1.0.0";
-})(GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlWmtsVersionEnum || (GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlWmtsVersionEnum = {}));
+})(GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlWmtsVersionEnum = exports.GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlWmtsVersionEnum || (exports.GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlWmtsVersionEnum = {}));
 var GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlPathParams = /** @class */ (function (_super) {
     __extends(GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlPathParams, _super);
     function GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=key" }),
         __metadata("design:type", String)
     ], GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlPathParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
         __metadata("design:type", Number)
     ], GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlPathParams.prototype, "versionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=wmtsVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=wmtsVersion" }),
         __metadata("design:type", String)
     ], GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlPathParams.prototype, "wmtsVersion", void 0);
     return GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlPathParams;
-}(SpeakeasyBase));
-export { GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlPathParams = GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlPathParams;
 var GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlRequest = /** @class */ (function (_super) {
     __extends(GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlRequest, _super);
     function GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlPathParams)
     ], GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlRequest.prototype, "pathParams", void 0);
     return GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlRequest;
-}(SpeakeasyBase));
-export { GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlRequest = GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlRequest;
 var GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlResponse = /** @class */ (function (_super) {
     __extends(GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlResponse, _super);
     function GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlResponse.prototype, "statusCode", void 0);
     return GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlResponse;
-}(SpeakeasyBase));
-export { GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlResponse = GetMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXmlResponse;

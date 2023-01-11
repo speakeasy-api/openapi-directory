@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
 
 
 
 export class CopySnapshotResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  snapshotId?: string;
+  snapshotId?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: Tag })
-  tags?: Tag[];
+  @SpeakeasyMetadata()
+  tags?: Record<string, any>;
 }

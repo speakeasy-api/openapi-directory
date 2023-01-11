@@ -16,7 +16,7 @@ export declare class GetEventPredictionsRequest extends SpeakeasyBase {
 }
 export declare class GetEventPredictionsResponse extends SpeakeasyBase {
     contentType: string;
-    eventPredictions?: Map<string, any>;
-    headers: Map<string, string[]>;
+    eventPredictions?: Record<string, any>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

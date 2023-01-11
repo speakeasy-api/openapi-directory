@@ -191,23 +191,23 @@ export class NrcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  nrcer400ApplicationJsonObject?: Nrcer400ApplicationJson;
+  nrcer400ApplicationJSONObject?: Nrcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  nrcer401ApplicationJsonObject?: Nrcer401ApplicationJson;
+  nrcer401ApplicationJSONObject?: Nrcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  nrcer404ApplicationJsonObject?: Nrcer404ApplicationJson;
+  nrcer404ApplicationJSONObject?: Nrcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  nrcer500ApplicationJsonObject?: Nrcer500ApplicationJson;
+  nrcer500ApplicationJSONObject?: Nrcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  nrcer502ApplicationJsonObject?: Nrcer502ApplicationJson;
+  nrcer502ApplicationJSONObject?: Nrcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  nrcer503ApplicationJsonObject?: Nrcer503ApplicationJson;
+  nrcer503ApplicationJSONObject?: Nrcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  nrcer504ApplicationJsonObject?: Nrcer504ApplicationJson;
+  nrcer504ApplicationJSONObject?: Nrcer504ApplicationJson;
 }

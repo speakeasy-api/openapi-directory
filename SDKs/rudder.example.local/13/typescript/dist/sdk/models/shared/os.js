@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var OsNameEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Os = exports.OsTypeEnum = exports.OsNameEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var OsNameEnum;
 (function (OsNameEnum) {
     OsNameEnum["Debian"] = "debian";
     OsNameEnum["Kali"] = "kali";
@@ -45,8 +48,8 @@ export var OsNameEnum;
     OsNameEnum["TwoThousandAndTwelve"] = "2012";
     OsNameEnum["TwoThousandAndTwelveR2"] = "2012 r2";
     OsNameEnum["TwoThousandAndSixteen"] = "2016";
-})(OsNameEnum || (OsNameEnum = {}));
-export var OsTypeEnum;
+})(OsNameEnum = exports.OsNameEnum || (exports.OsNameEnum = {}));
+var OsTypeEnum;
 (function (OsTypeEnum) {
     OsTypeEnum["Linux"] = "linux";
     OsTypeEnum["Windows"] = "windows";
@@ -54,32 +57,32 @@ export var OsTypeEnum;
     OsTypeEnum["Aix"] = "aix";
     OsTypeEnum["Freebsd"] = "freebsd";
     OsTypeEnum["Unknown"] = "unknown";
-})(OsTypeEnum || (OsTypeEnum = {}));
+})(OsTypeEnum = exports.OsTypeEnum || (exports.OsTypeEnum = {}));
 var Os = /** @class */ (function (_super) {
     __extends(Os, _super);
     function Os() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fullName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fullName" }),
         __metadata("design:type", String)
     ], Os.prototype, "fullName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Os.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servicePack" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servicePack" }),
         __metadata("design:type", String)
     ], Os.prototype, "servicePack", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Os.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], Os.prototype, "version", void 0);
     return Os;
-}(SpeakeasyBase));
-export { Os };
+}(utils_1.SpeakeasyBase));
+exports.Os = Os;

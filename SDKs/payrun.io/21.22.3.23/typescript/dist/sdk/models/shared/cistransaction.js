@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CisTransactionCisTransactionCisMessageTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CisTransaction = exports.CisTransactionCisTransaction = exports.CisTransactionCisTransactionTransactionStatusEnum = exports.CisTransactionCisTransactionEmployerCore = exports.CisTransactionCisTransactionCisMessageTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CisTransactionCisTransactionCisMessageTypeEnum;
 (function (CisTransactionCisTransactionCisMessageTypeEnum) {
     CisTransactionCisTransactionCisMessageTypeEnum["Verification"] = "Verification";
     CisTransactionCisTransactionCisMessageTypeEnum["Return"] = "Return";
-})(CisTransactionCisTransactionCisMessageTypeEnum || (CisTransactionCisTransactionCisMessageTypeEnum = {}));
+})(CisTransactionCisTransactionCisMessageTypeEnum = exports.CisTransactionCisTransactionCisMessageTypeEnum || (exports.CisTransactionCisTransactionCisMessageTypeEnum = {}));
 // CisTransactionCisTransactionEmployerCore
 /**
  * The cis transactions' employer core
@@ -38,77 +41,77 @@ var CisTransactionCisTransactionEmployerCore = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@href" }),
         __metadata("design:type", String)
     ], CisTransactionCisTransactionEmployerCore.prototype, "atHref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@rel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@rel" }),
         __metadata("design:type", String)
     ], CisTransactionCisTransactionEmployerCore.prototype, "atRel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@title" }),
         __metadata("design:type", String)
     ], CisTransactionCisTransactionEmployerCore.prototype, "atTitle", void 0);
     return CisTransactionCisTransactionEmployerCore;
-}(SpeakeasyBase));
-export { CisTransactionCisTransactionEmployerCore };
-export var CisTransactionCisTransactionTransactionStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.CisTransactionCisTransactionEmployerCore = CisTransactionCisTransactionEmployerCore;
+var CisTransactionCisTransactionTransactionStatusEnum;
 (function (CisTransactionCisTransactionTransactionStatusEnum) {
     CisTransactionCisTransactionTransactionStatusEnum["New"] = "New";
     CisTransactionCisTransactionTransactionStatusEnum["RequestGenerated"] = "RequestGenerated";
     CisTransactionCisTransactionTransactionStatusEnum["CompletedWithError"] = "CompletedWithError";
     CisTransactionCisTransactionTransactionStatusEnum["CompletedWithSuccess"] = "CompletedWithSuccess";
     CisTransactionCisTransactionTransactionStatusEnum["TimeOut"] = "TimeOut";
-})(CisTransactionCisTransactionTransactionStatusEnum || (CisTransactionCisTransactionTransactionStatusEnum = {}));
+})(CisTransactionCisTransactionTransactionStatusEnum = exports.CisTransactionCisTransactionTransactionStatusEnum || (exports.CisTransactionCisTransactionTransactionStatusEnum = {}));
 var CisTransactionCisTransaction = /** @class */ (function (_super) {
     __extends(CisTransactionCisTransaction, _super);
     function CisTransactionCisTransaction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CisMessageType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CisMessageType" }),
         __metadata("design:type", String)
     ], CisTransactionCisTransaction.prototype, "cisMessageType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmployerCore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmployerCore" }),
         __metadata("design:type", CisTransactionCisTransactionEmployerCore)
     ], CisTransactionCisTransaction.prototype, "employerCore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequestData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequestData" }),
         __metadata("design:type", String)
     ], CisTransactionCisTransaction.prototype, "requestData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResponseData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResponseData" }),
         __metadata("design:type", String)
     ], CisTransactionCisTransaction.prototype, "responseData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxYear" }),
         __metadata("design:type", Number)
     ], CisTransactionCisTransaction.prototype, "taxYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Timestamp" }),
         __metadata("design:type", Date)
     ], CisTransactionCisTransaction.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransactionStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransactionStatus" }),
         __metadata("design:type", String)
     ], CisTransactionCisTransaction.prototype, "transactionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransmissionDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransmissionDate" }),
         __metadata("design:type", Date)
     ], CisTransactionCisTransaction.prototype, "transmissionDate", void 0);
     return CisTransactionCisTransaction;
-}(SpeakeasyBase));
-export { CisTransactionCisTransaction };
+}(utils_1.SpeakeasyBase));
+exports.CisTransactionCisTransaction = CisTransactionCisTransaction;
 var CisTransaction = /** @class */ (function (_super) {
     __extends(CisTransaction, _super);
     function CisTransaction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CisTransaction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CisTransaction" }),
         __metadata("design:type", CisTransactionCisTransaction)
     ], CisTransaction.prototype, "cisTransaction", void 0);
     return CisTransaction;
-}(SpeakeasyBase));
-export { CisTransaction };
+}(utils_1.SpeakeasyBase));
+exports.CisTransaction = CisTransaction;

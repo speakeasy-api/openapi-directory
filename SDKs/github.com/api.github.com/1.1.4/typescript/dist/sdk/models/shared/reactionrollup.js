@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReactionRollup = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReactionRollup = /** @class */ (function (_super) {
     __extends(ReactionRollup, _super);
     function ReactionRollup() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=+1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=+1" }),
         __metadata("design:type", Number)
     ], ReactionRollup.prototype, "plus1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=-1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=-1" }),
         __metadata("design:type", Number)
     ], ReactionRollup.prototype, "minus1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confused" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confused" }),
         __metadata("design:type", Number)
     ], ReactionRollup.prototype, "confused", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eyes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eyes" }),
         __metadata("design:type", Number)
     ], ReactionRollup.prototype, "eyes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=heart" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=heart" }),
         __metadata("design:type", Number)
     ], ReactionRollup.prototype, "heart", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hooray" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hooray" }),
         __metadata("design:type", Number)
     ], ReactionRollup.prototype, "hooray", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=laugh" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=laugh" }),
         __metadata("design:type", Number)
     ], ReactionRollup.prototype, "laugh", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rocket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rocket" }),
         __metadata("design:type", Number)
     ], ReactionRollup.prototype, "rocket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_count" }),
         __metadata("design:type", Number)
     ], ReactionRollup.prototype, "totalCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ReactionRollup.prototype, "url", void 0);
     return ReactionRollup;
-}(SpeakeasyBase));
-export { ReactionRollup };
+}(utils_1.SpeakeasyBase));
+exports.ReactionRollup = ReactionRollup;

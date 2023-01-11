@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostContainersFloatingIpsIpReleaseResponse = exports.PostContainersFloatingIpsIpReleaseRequest = exports.PostContainersFloatingIpsIpReleaseHeaders = exports.PostContainersFloatingIpsIpReleasePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostContainersFloatingIpsIpReleasePathParams = /** @class */ (function (_super) {
     __extends(PostContainersFloatingIpsIpReleasePathParams, _super);
     function PostContainersFloatingIpsIpReleasePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ip" }),
         __metadata("design:type", String)
     ], PostContainersFloatingIpsIpReleasePathParams.prototype, "ip", void 0);
     return PostContainersFloatingIpsIpReleasePathParams;
-}(SpeakeasyBase));
-export { PostContainersFloatingIpsIpReleasePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersFloatingIpsIpReleasePathParams = PostContainersFloatingIpsIpReleasePathParams;
 var PostContainersFloatingIpsIpReleaseHeaders = /** @class */ (function (_super) {
     __extends(PostContainersFloatingIpsIpReleaseHeaders, _super);
     function PostContainersFloatingIpsIpReleaseHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
         __metadata("design:type", String)
     ], PostContainersFloatingIpsIpReleaseHeaders.prototype, "xAuthProjectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
         __metadata("design:type", String)
     ], PostContainersFloatingIpsIpReleaseHeaders.prototype, "xAuthToken", void 0);
     return PostContainersFloatingIpsIpReleaseHeaders;
-}(SpeakeasyBase));
-export { PostContainersFloatingIpsIpReleaseHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersFloatingIpsIpReleaseHeaders = PostContainersFloatingIpsIpReleaseHeaders;
 var PostContainersFloatingIpsIpReleaseRequest = /** @class */ (function (_super) {
     __extends(PostContainersFloatingIpsIpReleaseRequest, _super);
     function PostContainersFloatingIpsIpReleaseRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostContainersFloatingIpsIpReleasePathParams)
     ], PostContainersFloatingIpsIpReleaseRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostContainersFloatingIpsIpReleaseHeaders)
     ], PostContainersFloatingIpsIpReleaseRequest.prototype, "headers", void 0);
     return PostContainersFloatingIpsIpReleaseRequest;
-}(SpeakeasyBase));
-export { PostContainersFloatingIpsIpReleaseRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersFloatingIpsIpReleaseRequest = PostContainersFloatingIpsIpReleaseRequest;
 var PostContainersFloatingIpsIpReleaseResponse = /** @class */ (function (_super) {
     __extends(PostContainersFloatingIpsIpReleaseResponse, _super);
     function PostContainersFloatingIpsIpReleaseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostContainersFloatingIpsIpReleaseResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostContainersFloatingIpsIpReleaseResponse.prototype, "statusCode", void 0);
     return PostContainersFloatingIpsIpReleaseResponse;
-}(SpeakeasyBase));
-export { PostContainersFloatingIpsIpReleaseResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersFloatingIpsIpReleaseResponse = PostContainersFloatingIpsIpReleaseResponse;

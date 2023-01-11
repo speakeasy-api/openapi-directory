@@ -21,6 +21,6 @@ export declare class PostPortfolioConstructionRandomRequest extends SpeakeasyBas
 }
 export declare class PostPortfolioConstructionRandomResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioConstructionRandom200ApplicationJsonObject?: PostPortfolioConstructionRandom200ApplicationJson;
     statusCode: number;
+    postPortfolioConstructionRandom200ApplicationJSONObject?: PostPortfolioConstructionRandom200ApplicationJson;
 }

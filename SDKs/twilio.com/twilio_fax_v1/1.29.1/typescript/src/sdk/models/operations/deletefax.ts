@@ -20,7 +20,7 @@ export class DeleteFaxSecurity extends SpeakeasyBase {
 
 export class DeleteFaxRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   pathParams: DeleteFaxPathParams;

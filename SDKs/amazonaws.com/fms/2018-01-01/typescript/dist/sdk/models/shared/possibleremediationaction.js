@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RemediationActionWithOrder } from "./remediationactionwithorder";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PossibleRemediationAction = void 0;
+var utils_1 = require("../../../internal/utils");
+var remediationactionwithorder_1 = require("./remediationactionwithorder");
 // PossibleRemediationAction
 /**
  * A list of remediation actions.
@@ -34,17 +37,17 @@ var PossibleRemediationAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], PossibleRemediationAction.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsDefaultAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsDefaultAction" }),
         __metadata("design:type", Boolean)
     ], PossibleRemediationAction.prototype, "isDefaultAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OrderedRemediationActions", elemType: RemediationActionWithOrder }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OrderedRemediationActions", elemType: remediationactionwithorder_1.RemediationActionWithOrder }),
         __metadata("design:type", Array)
     ], PossibleRemediationAction.prototype, "orderedRemediationActions", void 0);
     return PossibleRemediationAction;
-}(SpeakeasyBase));
-export { PossibleRemediationAction };
+}(utils_1.SpeakeasyBase));
+exports.PossibleRemediationAction = PossibleRemediationAction;

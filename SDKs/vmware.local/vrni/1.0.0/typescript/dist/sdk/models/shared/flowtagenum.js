@@ -1,4 +1,7 @@
-export var FlowTagEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FlowTagEnum = void 0;
+var FlowTagEnum;
 (function (FlowTagEnum) {
     FlowTagEnum["TagTrafficTypeUnknown"] = "TAG_TRAFFIC_TYPE_UNKNOWN";
     FlowTagEnum["TagInternetTraffic"] = "TAG_INTERNET_TRAFFIC";
@@ -45,4 +48,4 @@ export var FlowTagEnum;
     FlowTagEnum["TagDiffDc"] = "TAG_DIFF_DC";
     FlowTagEnum["TagWithinVpc"] = "TAG_WITHIN_VPC";
     FlowTagEnum["TagDiffVpc"] = "TAG_DIFF_VPC";
-})(FlowTagEnum || (FlowTagEnum = {}));
+})(FlowTagEnum = exports.FlowTagEnum || (exports.FlowTagEnum = {}));

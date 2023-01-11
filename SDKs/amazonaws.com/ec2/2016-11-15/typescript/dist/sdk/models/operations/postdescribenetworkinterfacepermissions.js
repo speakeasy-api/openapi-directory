@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeNetworkInterfacePermissionsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeNetworkInterfacePermissionsResponse = exports.PostDescribeNetworkInterfacePermissionsRequest = exports.PostDescribeNetworkInterfacePermissionsHeaders = exports.PostDescribeNetworkInterfacePermissionsQueryParams = exports.PostDescribeNetworkInterfacePermissionsVersionEnum = exports.PostDescribeNetworkInterfacePermissionsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeNetworkInterfacePermissionsActionEnum;
 (function (PostDescribeNetworkInterfacePermissionsActionEnum) {
     PostDescribeNetworkInterfacePermissionsActionEnum["DescribeNetworkInterfacePermissions"] = "DescribeNetworkInterfacePermissions";
-})(PostDescribeNetworkInterfacePermissionsActionEnum || (PostDescribeNetworkInterfacePermissionsActionEnum = {}));
-export var PostDescribeNetworkInterfacePermissionsVersionEnum;
+})(PostDescribeNetworkInterfacePermissionsActionEnum = exports.PostDescribeNetworkInterfacePermissionsActionEnum || (exports.PostDescribeNetworkInterfacePermissionsActionEnum = {}));
+var PostDescribeNetworkInterfacePermissionsVersionEnum;
 (function (PostDescribeNetworkInterfacePermissionsVersionEnum) {
     PostDescribeNetworkInterfacePermissionsVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostDescribeNetworkInterfacePermissionsVersionEnum || (PostDescribeNetworkInterfacePermissionsVersionEnum = {}));
+})(PostDescribeNetworkInterfacePermissionsVersionEnum = exports.PostDescribeNetworkInterfacePermissionsVersionEnum || (exports.PostDescribeNetworkInterfacePermissionsVersionEnum = {}));
 var PostDescribeNetworkInterfacePermissionsQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeNetworkInterfacePermissionsQueryParams, _super);
     function PostDescribeNetworkInterfacePermissionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeNetworkInterfacePermissionsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
         __metadata("design:type", String)
     ], PostDescribeNetworkInterfacePermissionsQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], PostDescribeNetworkInterfacePermissionsQueryParams.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeNetworkInterfacePermissionsQueryParams.prototype, "version", void 0);
     return PostDescribeNetworkInterfacePermissionsQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeNetworkInterfacePermissionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeNetworkInterfacePermissionsQueryParams = PostDescribeNetworkInterfacePermissionsQueryParams;
 var PostDescribeNetworkInterfacePermissionsHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeNetworkInterfacePermissionsHeaders, _super);
     function PostDescribeNetworkInterfacePermissionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeNetworkInterfacePermissionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeNetworkInterfacePermissionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeNetworkInterfacePermissionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeNetworkInterfacePermissionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeNetworkInterfacePermissionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeNetworkInterfacePermissionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeNetworkInterfacePermissionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeNetworkInterfacePermissionsHeaders;
-}(SpeakeasyBase));
-export { PostDescribeNetworkInterfacePermissionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeNetworkInterfacePermissionsHeaders = PostDescribeNetworkInterfacePermissionsHeaders;
 var PostDescribeNetworkInterfacePermissionsRequest = /** @class */ (function (_super) {
     __extends(PostDescribeNetworkInterfacePermissionsRequest, _super);
     function PostDescribeNetworkInterfacePermissionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeNetworkInterfacePermissionsQueryParams)
     ], PostDescribeNetworkInterfacePermissionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeNetworkInterfacePermissionsHeaders)
     ], PostDescribeNetworkInterfacePermissionsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeNetworkInterfacePermissionsRequest.prototype, "request", void 0);
     return PostDescribeNetworkInterfacePermissionsRequest;
-}(SpeakeasyBase));
-export { PostDescribeNetworkInterfacePermissionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeNetworkInterfacePermissionsRequest = PostDescribeNetworkInterfacePermissionsRequest;
 var PostDescribeNetworkInterfacePermissionsResponse = /** @class */ (function (_super) {
     __extends(PostDescribeNetworkInterfacePermissionsResponse, _super);
     function PostDescribeNetworkInterfacePermissionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeNetworkInterfacePermissionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeNetworkInterfacePermissionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeNetworkInterfacePermissionsResponse.prototype, "statusCode", void 0);
     return PostDescribeNetworkInterfacePermissionsResponse;
-}(SpeakeasyBase));
-export { PostDescribeNetworkInterfacePermissionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeNetworkInterfacePermissionsResponse = PostDescribeNetworkInterfacePermissionsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GrantAppLevelPermissionsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Grant = exports.GrantAppLevelPermissionsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GrantAppLevelPermissionsEnum;
 (function (GrantAppLevelPermissionsEnum) {
     GrantAppLevelPermissionsEnum["AppLevelPermissionUnspecified"] = "APP_LEVEL_PERMISSION_UNSPECIFIED";
     GrantAppLevelPermissionsEnum["CanAccessApp"] = "CAN_ACCESS_APP";
@@ -36,7 +39,7 @@ export var GrantAppLevelPermissionsEnum;
     GrantAppLevelPermissionsEnum["CanManagePublicListing"] = "CAN_MANAGE_PUBLIC_LISTING";
     GrantAppLevelPermissionsEnum["CanManageDraftApps"] = "CAN_MANAGE_DRAFT_APPS";
     GrantAppLevelPermissionsEnum["CanManageOrders"] = "CAN_MANAGE_ORDERS";
-})(GrantAppLevelPermissionsEnum || (GrantAppLevelPermissionsEnum = {}));
+})(GrantAppLevelPermissionsEnum = exports.GrantAppLevelPermissionsEnum || (exports.GrantAppLevelPermissionsEnum = {}));
 // Grant
 /**
  * An access grant resource.
@@ -47,17 +50,17 @@ var Grant = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appLevelPermissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appLevelPermissions" }),
         __metadata("design:type", Array)
     ], Grant.prototype, "appLevelPermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Grant.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packageName" }),
         __metadata("design:type", String)
     ], Grant.prototype, "packageName", void 0);
     return Grant;
-}(SpeakeasyBase));
-export { Grant };
+}(utils_1.SpeakeasyBase));
+exports.Grant = Grant;

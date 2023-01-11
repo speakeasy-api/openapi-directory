@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MappingParameters } from "./mappingparameters";
-import { RecordFormatTypeEnum } from "./recordformattypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecordFormat = void 0;
+var utils_1 = require("../../../internal/utils");
+var mappingparameters_1 = require("./mappingparameters");
+var recordformattypeenum_1 = require("./recordformattypeenum");
 // RecordFormat
 /**
  *  Describes the record format and relevant mapping information that should be applied to schematize the records on the stream.
@@ -35,13 +38,13 @@ var RecordFormat = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MappingParameters" }),
-        __metadata("design:type", MappingParameters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MappingParameters" }),
+        __metadata("design:type", mappingparameters_1.MappingParameters)
     ], RecordFormat.prototype, "mappingParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecordFormatType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecordFormatType" }),
         __metadata("design:type", String)
     ], RecordFormat.prototype, "recordFormatType", void 0);
     return RecordFormat;
-}(SpeakeasyBase));
-export { RecordFormat };
+}(utils_1.SpeakeasyBase));
+exports.RecordFormat = RecordFormat;

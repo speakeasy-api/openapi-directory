@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountEnumTypeEnum = void 0;
+var AccountEnumTypeEnum;
+(function (AccountEnumTypeEnum) {
+    AccountEnumTypeEnum["Trial"] = "Trial";
+    AccountEnumTypeEnum["Full"] = "Full";
+})(AccountEnumTypeEnum = exports.AccountEnumTypeEnum || (exports.AccountEnumTypeEnum = {}));

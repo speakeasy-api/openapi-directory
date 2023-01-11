@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReceiptTypeEnum } from "./receipttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Receipt = void 0;
+var utils_1 = require("../../../internal/utils");
+var receipttypeenum_1 = require("./receipttypeenum");
 // Receipt
 /**
  * Records events during an engagement.
@@ -34,21 +37,21 @@ var Receipt = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContactChannelArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContactChannelArn" }),
         __metadata("design:type", String)
     ], Receipt.prototype, "contactChannelArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReceiptInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReceiptInfo" }),
         __metadata("design:type", String)
     ], Receipt.prototype, "receiptInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReceiptTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReceiptTime" }),
         __metadata("design:type", Date)
     ], Receipt.prototype, "receiptTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReceiptType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReceiptType" }),
         __metadata("design:type", String)
     ], Receipt.prototype, "receiptType", void 0);
     return Receipt;
-}(SpeakeasyBase));
-export { Receipt };
+}(utils_1.SpeakeasyBase));
+exports.Receipt = Receipt;

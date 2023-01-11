@@ -17,7 +17,7 @@ export declare class GetImagePerformanceCountRequest extends SpeakeasyBase {
 export declare class GetImagePerformanceCountResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    getImagePerformanceCount200ApplicationJsonInt32Integer?: number;
-    getImagePerformanceCount200TextJsonInt32Integer?: number;
+    getImagePerformanceCount200ApplicationJSONInt32Integer?: number;
+    getImagePerformanceCount200TextJSONInt32Integer?: number;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Posten } from "./posten";
-import { Rabatt } from "./rabatt";
-import { Zahlung } from "./zahlung";
-export var SignierteBelegdatenUnternehmenIdTypEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SignierteBelegdaten = exports.SignierteBelegdatenUnternehmenIdTypEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var posten_1 = require("./posten");
+var rabatt_1 = require("./rabatt");
+var zahlung_1 = require("./zahlung");
+var SignierteBelegdatenUnternehmenIdTypEnum;
 (function (SignierteBelegdatenUnternehmenIdTypEnum) {
     SignierteBelegdatenUnternehmenIdTypEnum["Steuernummer"] = "steuernummer";
     SignierteBelegdatenUnternehmenIdTypEnum["Uid"] = "uid";
     SignierteBelegdatenUnternehmenIdTypEnum["Gln"] = "gln";
-})(SignierteBelegdatenUnternehmenIdTypEnum || (SignierteBelegdatenUnternehmenIdTypEnum = {}));
+})(SignierteBelegdatenUnternehmenIdTypEnum = exports.SignierteBelegdatenUnternehmenIdTypEnum || (exports.SignierteBelegdatenUnternehmenIdTypEnum = {}));
 // SignierteBelegdaten
 /**
  * The complete `Beleg` that has been signed by the "Signaturerstellungseinheit" and stored in the "Datenerfassungsprotokoll".
@@ -42,153 +45,153 @@ var SignierteBelegdaten = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Beleg-Datum-Uhrzeit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Beleg-Datum-Uhrzeit" }),
         __metadata("design:type", String)
     ], SignierteBelegdaten.prototype, "belegDatumUhrzeit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Belegnummer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Belegnummer" }),
         __metadata("design:type", String)
     ], SignierteBelegdaten.prototype, "belegnummer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Betrag-Brutto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Betrag-Brutto" }),
         __metadata("design:type", Number)
     ], SignierteBelegdaten.prototype, "betragBrutto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Betrag-Netto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Betrag-Netto" }),
         __metadata("design:type", Number)
     ], SignierteBelegdaten.prototype, "betragNetto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Betrag-Satz-Besonders-Brutto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Betrag-Satz-Besonders-Brutto" }),
         __metadata("design:type", Number)
     ], SignierteBelegdaten.prototype, "betragSatzBesondersBrutto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Betrag-Satz-Besonders-Netto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Betrag-Satz-Besonders-Netto" }),
         __metadata("design:type", Number)
     ], SignierteBelegdaten.prototype, "betragSatzBesondersNetto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Betrag-Satz-Ermaessigt-1-Brutto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Betrag-Satz-Ermaessigt-1-Brutto" }),
         __metadata("design:type", Number)
     ], SignierteBelegdaten.prototype, "betragSatzErmaessigt1Brutto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Betrag-Satz-Ermaessigt-1-Netto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Betrag-Satz-Ermaessigt-1-Netto" }),
         __metadata("design:type", Number)
     ], SignierteBelegdaten.prototype, "betragSatzErmaessigt1Netto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Betrag-Satz-Ermaessigt-2-Brutto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Betrag-Satz-Ermaessigt-2-Brutto" }),
         __metadata("design:type", Number)
     ], SignierteBelegdaten.prototype, "betragSatzErmaessigt2Brutto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Betrag-Satz-Ermaessigt-2-Netto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Betrag-Satz-Ermaessigt-2-Netto" }),
         __metadata("design:type", Number)
     ], SignierteBelegdaten.prototype, "betragSatzErmaessigt2Netto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Betrag-Satz-Normal-Brutto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Betrag-Satz-Normal-Brutto" }),
         __metadata("design:type", Number)
     ], SignierteBelegdaten.prototype, "betragSatzNormalBrutto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Betrag-Satz-Normal-Netto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Betrag-Satz-Normal-Netto" }),
         __metadata("design:type", Number)
     ], SignierteBelegdaten.prototype, "betragSatzNormalNetto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Betrag-Satz-Null-Brutto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Betrag-Satz-Null-Brutto" }),
         __metadata("design:type", Number)
     ], SignierteBelegdaten.prototype, "betragSatzNullBrutto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Betrag-Satz-Null-Netto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Betrag-Satz-Null-Netto" }),
         __metadata("design:type", Number)
     ], SignierteBelegdaten.prototype, "betragSatzNullNetto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Externer-Beleg-Belegkreis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Externer-Beleg-Belegkreis" }),
         __metadata("design:type", String)
     ], SignierteBelegdaten.prototype, "externerBelegBelegkreis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Externer-Beleg-Bezeichnung" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Externer-Beleg-Bezeichnung" }),
         __metadata("design:type", String)
     ], SignierteBelegdaten.prototype, "externerBelegBezeichnung", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Externer-Beleg-Referenz" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Externer-Beleg-Referenz" }),
         __metadata("design:type", String)
     ], SignierteBelegdaten.prototype, "externerBelegReferenz", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Kassen-ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Kassen-ID" }),
         __metadata("design:type", String)
-    ], SignierteBelegdaten.prototype, "kassenId", void 0);
+    ], SignierteBelegdaten.prototype, "kassenID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Kunde" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Kunde" }),
         __metadata("design:type", String)
     ], SignierteBelegdaten.prototype, "kunde", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Notizen" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Notizen" }),
         __metadata("design:type", Array)
     ], SignierteBelegdaten.prototype, "notizen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Posten", elemType: Posten }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Posten", elemType: posten_1.Posten }),
         __metadata("design:type", Array)
     ], SignierteBelegdaten.prototype, "posten", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Rabatte", elemType: Rabatt }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Rabatte", elemType: rabatt_1.Rabatt }),
         __metadata("design:type", Array)
     ], SignierteBelegdaten.prototype, "rabatte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Storno" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Storno" }),
         __metadata("design:type", Boolean)
     ], SignierteBelegdaten.prototype, "storno", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Storno-Beleg-UUID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Storno-Beleg-UUID" }),
         __metadata("design:type", String)
-    ], SignierteBelegdaten.prototype, "stornoBelegUuid", void 0);
+    ], SignierteBelegdaten.prototype, "stornoBelegUUID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Storno-Text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Storno-Text" }),
         __metadata("design:type", String)
     ], SignierteBelegdaten.prototype, "stornoText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Training" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Training" }),
         __metadata("design:type", Boolean)
     ], SignierteBelegdaten.prototype, "training", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Unternehmen-Adresse1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Unternehmen-Adresse1" }),
         __metadata("design:type", String)
     ], SignierteBelegdaten.prototype, "unternehmenAdresse1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Unternehmen-Adresse2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Unternehmen-Adresse2" }),
         __metadata("design:type", String)
     ], SignierteBelegdaten.prototype, "unternehmenAdresse2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Unternehmen-Fusszeile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Unternehmen-Fusszeile" }),
         __metadata("design:type", String)
     ], SignierteBelegdaten.prototype, "unternehmenFusszeile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Unternehmen-ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Unternehmen-ID" }),
         __metadata("design:type", String)
-    ], SignierteBelegdaten.prototype, "unternehmenId", void 0);
+    ], SignierteBelegdaten.prototype, "unternehmenID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Unternehmen-ID-Typ" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Unternehmen-ID-Typ" }),
         __metadata("design:type", String)
-    ], SignierteBelegdaten.prototype, "unternehmenIdTyp", void 0);
+    ], SignierteBelegdaten.prototype, "unternehmenIDTyp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Unternehmen-Kopfzeile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Unternehmen-Kopfzeile" }),
         __metadata("design:type", String)
     ], SignierteBelegdaten.prototype, "unternehmenKopfzeile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Unternehmen-Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Unternehmen-Name" }),
         __metadata("design:type", String)
     ], SignierteBelegdaten.prototype, "unternehmenName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Unternehmen-Ort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Unternehmen-Ort" }),
         __metadata("design:type", String)
     ], SignierteBelegdaten.prototype, "unternehmenOrt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Unternehmen-PLZ" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Unternehmen-PLZ" }),
         __metadata("design:type", String)
-    ], SignierteBelegdaten.prototype, "unternehmenPlz", void 0);
+    ], SignierteBelegdaten.prototype, "unternehmenPLZ", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Zahlungen", elemType: Zahlung }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Zahlungen", elemType: zahlung_1.Zahlung }),
         __metadata("design:type", Array)
     ], SignierteBelegdaten.prototype, "zahlungen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Zertifikat-Seriennummer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Zertifikat-Seriennummer" }),
         __metadata("design:type", String)
     ], SignierteBelegdaten.prototype, "zertifikatSeriennummer", void 0);
     return SignierteBelegdaten;
-}(SpeakeasyBase));
-export { SignierteBelegdaten };
+}(utils_1.SpeakeasyBase));
+exports.SignierteBelegdaten = SignierteBelegdaten;

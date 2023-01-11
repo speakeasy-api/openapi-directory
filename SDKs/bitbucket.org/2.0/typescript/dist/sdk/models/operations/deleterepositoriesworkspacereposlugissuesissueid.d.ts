@@ -17,6 +17,6 @@ export declare class DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdRequest ext
 export declare class DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    issue?: Map<string, any>;
+    error?: Record<string, any>;
+    issue?: Record<string, any>;
 }

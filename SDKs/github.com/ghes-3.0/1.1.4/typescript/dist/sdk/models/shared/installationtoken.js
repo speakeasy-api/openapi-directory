@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Repository } from "./repository";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstallationToken = exports.InstallationTokenRepositorySelectionEnum = exports.InstallationTokenPermissions = void 0;
+var utils_1 = require("../../../internal/utils");
+var repository_1 = require("./repository");
 var InstallationTokenPermissions = /** @class */ (function (_super) {
     __extends(InstallationTokenPermissions, _super);
     function InstallationTokenPermissions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contents" }),
         __metadata("design:type", String)
     ], InstallationTokenPermissions.prototype, "contents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issues" }),
         __metadata("design:type", String)
     ], InstallationTokenPermissions.prototype, "issues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
         __metadata("design:type", String)
     ], InstallationTokenPermissions.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=single_file" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=single_file" }),
         __metadata("design:type", String)
     ], InstallationTokenPermissions.prototype, "singleFile", void 0);
     return InstallationTokenPermissions;
-}(SpeakeasyBase));
-export { InstallationTokenPermissions };
-export var InstallationTokenRepositorySelectionEnum;
+}(utils_1.SpeakeasyBase));
+exports.InstallationTokenPermissions = InstallationTokenPermissions;
+var InstallationTokenRepositorySelectionEnum;
 (function (InstallationTokenRepositorySelectionEnum) {
     InstallationTokenRepositorySelectionEnum["All"] = "all";
     InstallationTokenRepositorySelectionEnum["Selected"] = "selected";
-})(InstallationTokenRepositorySelectionEnum || (InstallationTokenRepositorySelectionEnum = {}));
+})(InstallationTokenRepositorySelectionEnum = exports.InstallationTokenRepositorySelectionEnum || (exports.InstallationTokenRepositorySelectionEnum = {}));
 // InstallationToken
 /**
  * Authentication token for a GitHub App installed on a user or org.
@@ -63,37 +66,37 @@ var InstallationToken = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires_at" }),
         __metadata("design:type", String)
     ], InstallationToken.prototype, "expiresAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=has_multiple_single_files" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=has_multiple_single_files" }),
         __metadata("design:type", Boolean)
     ], InstallationToken.prototype, "hasMultipleSingleFiles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions" }),
         __metadata("design:type", InstallationTokenPermissions)
     ], InstallationToken.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositories", elemType: Repository }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositories", elemType: repository_1.Repository }),
         __metadata("design:type", Array)
     ], InstallationToken.prototype, "repositories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repository_selection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repository_selection" }),
         __metadata("design:type", String)
     ], InstallationToken.prototype, "repositorySelection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=single_file" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=single_file" }),
         __metadata("design:type", String)
     ], InstallationToken.prototype, "singleFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=single_file_paths" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=single_file_paths" }),
         __metadata("design:type", Array)
     ], InstallationToken.prototype, "singleFilePaths", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], InstallationToken.prototype, "token", void 0);
     return InstallationToken;
-}(SpeakeasyBase));
-export { InstallationToken };
+}(utils_1.SpeakeasyBase));
+exports.InstallationToken = InstallationToken;

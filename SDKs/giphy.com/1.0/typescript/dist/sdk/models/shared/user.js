@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.User = void 0;
+var utils_1 = require("../../../internal/utils");
 // User
 /**
  * The User Object contains information about the user associated with a GIF and URLs to assets such as that user's avatar image, profile, and more.
@@ -33,29 +36,29 @@ var User = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=avatar_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=avatar_url" }),
         __metadata("design:type", String)
     ], User.prototype, "avatarUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=banner_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=banner_url" }),
         __metadata("design:type", String)
     ], User.prototype, "bannerUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_name" }),
         __metadata("design:type", String)
     ], User.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profile_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile_url" }),
         __metadata("design:type", String)
     ], User.prototype, "profileUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=twitter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=twitter" }),
         __metadata("design:type", String)
     ], User.prototype, "twitter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], User.prototype, "username", void 0);
     return User;
-}(SpeakeasyBase));
-export { User };
+}(utils_1.SpeakeasyBase));
+exports.User = User;

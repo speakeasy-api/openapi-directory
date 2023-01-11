@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdjustmentType } from "./adjustmenttype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeAdjustmentTypesAnswer = void 0;
+var utils_1 = require("../../../internal/utils");
+var adjustmenttype_1 = require("./adjustmenttype");
 var DescribeAdjustmentTypesAnswer = /** @class */ (function (_super) {
     __extends(DescribeAdjustmentTypesAnswer, _super);
     function DescribeAdjustmentTypesAnswer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: AdjustmentType }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: adjustmenttype_1.AdjustmentType }),
         __metadata("design:type", Array)
     ], DescribeAdjustmentTypesAnswer.prototype, "adjustmentTypes", void 0);
     return DescribeAdjustmentTypesAnswer;
-}(SpeakeasyBase));
-export { DescribeAdjustmentTypesAnswer };
+}(utils_1.SpeakeasyBase));
+exports.DescribeAdjustmentTypesAnswer = DescribeAdjustmentTypesAnswer;

@@ -35,8 +35,8 @@ export class DeleteProjectUsernameProjectEnvvarNameResponse extends SpeakeasyBas
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteProjectUsernameProjectEnvvarName200ApplicationJsonObject?: DeleteProjectUsernameProjectEnvvarName200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  deleteProjectUsernameProjectEnvvarName200ApplicationJSONObject?: DeleteProjectUsernameProjectEnvvarName200ApplicationJson;
 }

@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { QueryMetadata } from "./querymetadata";
-import { Parameters } from "./parameters";
+import { ParametersT } from "./parameters";
 import { QuerySchedule } from "./queryschedule";
 
 
@@ -17,7 +17,7 @@ export class Query extends SpeakeasyBase {
   metadata?: QueryMetadata;
 
   @SpeakeasyMetadata({ data: "json, name=params" })
-  params?: Parameters;
+  params?: ParametersT;
 
   @SpeakeasyMetadata({ data: "json, name=queryId" })
   queryId?: string;

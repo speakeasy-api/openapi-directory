@@ -22,5 +22,5 @@ export class DeleteLegResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteLeg200ApplicationJsonObject?: Map<string, any>;
+  deleteLeg200ApplicationJSONObject?: Record<string, any>;
 }

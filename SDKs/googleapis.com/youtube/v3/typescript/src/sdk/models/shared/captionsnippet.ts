@@ -42,7 +42,7 @@ export class CaptionSnippet extends SpeakeasyBase {
   isAutoSynced?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=isCC" })
-  isCc?: boolean;
+  isCC?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=isDraft" })
   isDraft?: boolean;

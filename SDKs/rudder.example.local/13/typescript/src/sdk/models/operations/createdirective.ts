@@ -44,5 +44,5 @@ export class CreateDirectiveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createDirective200ApplicationJsonObject?: CreateDirective200ApplicationJson;
+  createDirective200ApplicationJSONObject?: CreateDirective200ApplicationJson;
 }

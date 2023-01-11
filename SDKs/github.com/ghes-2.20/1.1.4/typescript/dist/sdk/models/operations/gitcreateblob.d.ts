@@ -14,7 +14,7 @@ export declare class GitCreateBlobRequest extends SpeakeasyBase {
 }
 export declare class GitCreateBlobResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     shortBlob?: shared.ShortBlob;

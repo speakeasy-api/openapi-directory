@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class GroupListResult extends SpeakeasyBase {
     odataNextLink?: string;
-    value?: Map<string, Map<string, any>>[];
+    value?: Record<string, Record<string, any>>[];
 }

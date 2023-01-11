@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LabelSummary } from "./labelsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Dataset = void 0;
+var utils_1 = require("../../../internal/utils");
+var labelsummary_1 = require("./labelsummary");
 var Dataset = /** @class */ (function (_super) {
     __extends(Dataset, _super);
     function Dataset() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=available" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=available" }),
         __metadata("design:type", Boolean)
     ], Dataset.prototype, "available", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], Dataset.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Dataset.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelSummary" }),
-        __metadata("design:type", LabelSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelSummary" }),
+        __metadata("design:type", labelsummary_1.LabelSummary)
     ], Dataset.prototype, "labelSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], Dataset.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Dataset.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numOfDuplicates" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numOfDuplicates" }),
         __metadata("design:type", Number)
     ], Dataset.prototype, "numOfDuplicates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object" }),
         __metadata("design:type", String)
     ], Dataset.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusMsg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusMsg" }),
         __metadata("design:type", String)
     ], Dataset.prototype, "statusMsg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalExamples" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalExamples" }),
         __metadata("design:type", Number)
     ], Dataset.prototype, "totalExamples", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalLabels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalLabels" }),
         __metadata("design:type", Number)
     ], Dataset.prototype, "totalLabels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Dataset.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], Dataset.prototype, "updatedAt", void 0);
     return Dataset;
-}(SpeakeasyBase));
-export { Dataset };
+}(utils_1.SpeakeasyBase));
+exports.Dataset = Dataset;

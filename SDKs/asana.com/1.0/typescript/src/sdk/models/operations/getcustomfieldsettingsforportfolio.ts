@@ -50,5 +50,5 @@ export class GetCustomFieldSettingsForPortfolioResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getCustomFieldSettingsForPortfolio200ApplicationJsonObject?: GetCustomFieldSettingsForPortfolio200ApplicationJson;
+  getCustomFieldSettingsForPortfolio200ApplicationJSONObject?: GetCustomFieldSettingsForPortfolio200ApplicationJson;
 }

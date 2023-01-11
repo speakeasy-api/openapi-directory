@@ -51,7 +51,7 @@ export declare class GetFirewallsIdFirewallResponseFirewall extends SpeakeasyBas
     appliedTo: GetFirewallsIdFirewallResponseFirewallAppliedTo[];
     created: string;
     id: number;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name: string;
     rules: GetFirewallsIdFirewallResponseFirewallRule[];
 }

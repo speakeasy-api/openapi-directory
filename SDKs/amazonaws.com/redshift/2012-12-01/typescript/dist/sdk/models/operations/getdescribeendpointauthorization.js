@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeEndpointAuthorizationActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeEndpointAuthorizationResponse = exports.GetDescribeEndpointAuthorizationRequest = exports.GetDescribeEndpointAuthorizationHeaders = exports.GetDescribeEndpointAuthorizationQueryParams = exports.GetDescribeEndpointAuthorizationVersionEnum = exports.GetDescribeEndpointAuthorizationActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeEndpointAuthorizationActionEnum;
 (function (GetDescribeEndpointAuthorizationActionEnum) {
     GetDescribeEndpointAuthorizationActionEnum["DescribeEndpointAuthorization"] = "DescribeEndpointAuthorization";
-})(GetDescribeEndpointAuthorizationActionEnum || (GetDescribeEndpointAuthorizationActionEnum = {}));
-export var GetDescribeEndpointAuthorizationVersionEnum;
+})(GetDescribeEndpointAuthorizationActionEnum = exports.GetDescribeEndpointAuthorizationActionEnum || (exports.GetDescribeEndpointAuthorizationActionEnum = {}));
+var GetDescribeEndpointAuthorizationVersionEnum;
 (function (GetDescribeEndpointAuthorizationVersionEnum) {
     GetDescribeEndpointAuthorizationVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(GetDescribeEndpointAuthorizationVersionEnum || (GetDescribeEndpointAuthorizationVersionEnum = {}));
+})(GetDescribeEndpointAuthorizationVersionEnum = exports.GetDescribeEndpointAuthorizationVersionEnum || (exports.GetDescribeEndpointAuthorizationVersionEnum = {}));
 var GetDescribeEndpointAuthorizationQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeEndpointAuthorizationQueryParams, _super);
     function GetDescribeEndpointAuthorizationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Account" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Account" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAuthorizationQueryParams.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAuthorizationQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ClusterIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ClusterIdentifier" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAuthorizationQueryParams.prototype, "clusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Grantee" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Grantee" }),
         __metadata("design:type", Boolean)
     ], GetDescribeEndpointAuthorizationQueryParams.prototype, "grantee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAuthorizationQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", Number)
     ], GetDescribeEndpointAuthorizationQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAuthorizationQueryParams.prototype, "version", void 0);
     return GetDescribeEndpointAuthorizationQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeEndpointAuthorizationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeEndpointAuthorizationQueryParams = GetDescribeEndpointAuthorizationQueryParams;
 var GetDescribeEndpointAuthorizationHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeEndpointAuthorizationHeaders, _super);
     function GetDescribeEndpointAuthorizationHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAuthorizationHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAuthorizationHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAuthorizationHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAuthorizationHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAuthorizationHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAuthorizationHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAuthorizationHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeEndpointAuthorizationHeaders;
-}(SpeakeasyBase));
-export { GetDescribeEndpointAuthorizationHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeEndpointAuthorizationHeaders = GetDescribeEndpointAuthorizationHeaders;
 var GetDescribeEndpointAuthorizationRequest = /** @class */ (function (_super) {
     __extends(GetDescribeEndpointAuthorizationRequest, _super);
     function GetDescribeEndpointAuthorizationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeEndpointAuthorizationQueryParams)
     ], GetDescribeEndpointAuthorizationRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeEndpointAuthorizationHeaders)
     ], GetDescribeEndpointAuthorizationRequest.prototype, "headers", void 0);
     return GetDescribeEndpointAuthorizationRequest;
-}(SpeakeasyBase));
-export { GetDescribeEndpointAuthorizationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeEndpointAuthorizationRequest = GetDescribeEndpointAuthorizationRequest;
 var GetDescribeEndpointAuthorizationResponse = /** @class */ (function (_super) {
     __extends(GetDescribeEndpointAuthorizationResponse, _super);
     function GetDescribeEndpointAuthorizationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeEndpointAuthorizationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeEndpointAuthorizationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeEndpointAuthorizationResponse.prototype, "statusCode", void 0);
     return GetDescribeEndpointAuthorizationResponse;
-}(SpeakeasyBase));
-export { GetDescribeEndpointAuthorizationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeEndpointAuthorizationResponse = GetDescribeEndpointAuthorizationResponse;

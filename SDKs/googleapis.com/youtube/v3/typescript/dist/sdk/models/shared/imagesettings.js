@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LocalizedProperty } from "./localizedproperty";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var localizedproperty_1 = require("./localizedproperty");
 // ImageSettings
 /**
  * Branding properties for images associated with the channel.
@@ -34,93 +37,93 @@ var ImageSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backgroundImageUrl" }),
-        __metadata("design:type", LocalizedProperty)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backgroundImageUrl" }),
+        __metadata("design:type", localizedproperty_1.LocalizedProperty)
     ], ImageSettings.prototype, "backgroundImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bannerExternalUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bannerExternalUrl" }),
         __metadata("design:type", String)
     ], ImageSettings.prototype, "bannerExternalUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bannerImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bannerImageUrl" }),
         __metadata("design:type", String)
     ], ImageSettings.prototype, "bannerImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bannerMobileExtraHdImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bannerMobileExtraHdImageUrl" }),
         __metadata("design:type", String)
     ], ImageSettings.prototype, "bannerMobileExtraHdImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bannerMobileHdImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bannerMobileHdImageUrl" }),
         __metadata("design:type", String)
     ], ImageSettings.prototype, "bannerMobileHdImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bannerMobileImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bannerMobileImageUrl" }),
         __metadata("design:type", String)
     ], ImageSettings.prototype, "bannerMobileImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bannerMobileLowImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bannerMobileLowImageUrl" }),
         __metadata("design:type", String)
     ], ImageSettings.prototype, "bannerMobileLowImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bannerMobileMediumHdImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bannerMobileMediumHdImageUrl" }),
         __metadata("design:type", String)
     ], ImageSettings.prototype, "bannerMobileMediumHdImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bannerTabletExtraHdImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bannerTabletExtraHdImageUrl" }),
         __metadata("design:type", String)
     ], ImageSettings.prototype, "bannerTabletExtraHdImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bannerTabletHdImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bannerTabletHdImageUrl" }),
         __metadata("design:type", String)
     ], ImageSettings.prototype, "bannerTabletHdImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bannerTabletImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bannerTabletImageUrl" }),
         __metadata("design:type", String)
     ], ImageSettings.prototype, "bannerTabletImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bannerTabletLowImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bannerTabletLowImageUrl" }),
         __metadata("design:type", String)
     ], ImageSettings.prototype, "bannerTabletLowImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bannerTvHighImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bannerTvHighImageUrl" }),
         __metadata("design:type", String)
     ], ImageSettings.prototype, "bannerTvHighImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bannerTvImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bannerTvImageUrl" }),
         __metadata("design:type", String)
     ], ImageSettings.prototype, "bannerTvImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bannerTvLowImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bannerTvLowImageUrl" }),
         __metadata("design:type", String)
     ], ImageSettings.prototype, "bannerTvLowImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bannerTvMediumImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bannerTvMediumImageUrl" }),
         __metadata("design:type", String)
     ], ImageSettings.prototype, "bannerTvMediumImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=largeBrandedBannerImageImapScript" }),
-        __metadata("design:type", LocalizedProperty)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=largeBrandedBannerImageImapScript" }),
+        __metadata("design:type", localizedproperty_1.LocalizedProperty)
     ], ImageSettings.prototype, "largeBrandedBannerImageImapScript", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=largeBrandedBannerImageUrl" }),
-        __metadata("design:type", LocalizedProperty)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=largeBrandedBannerImageUrl" }),
+        __metadata("design:type", localizedproperty_1.LocalizedProperty)
     ], ImageSettings.prototype, "largeBrandedBannerImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smallBrandedBannerImageImapScript" }),
-        __metadata("design:type", LocalizedProperty)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smallBrandedBannerImageImapScript" }),
+        __metadata("design:type", localizedproperty_1.LocalizedProperty)
     ], ImageSettings.prototype, "smallBrandedBannerImageImapScript", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smallBrandedBannerImageUrl" }),
-        __metadata("design:type", LocalizedProperty)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smallBrandedBannerImageUrl" }),
+        __metadata("design:type", localizedproperty_1.LocalizedProperty)
     ], ImageSettings.prototype, "smallBrandedBannerImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trackingImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trackingImageUrl" }),
         __metadata("design:type", String)
     ], ImageSettings.prototype, "trackingImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=watchIconImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=watchIconImageUrl" }),
         __metadata("design:type", String)
     ], ImageSettings.prototype, "watchIconImageUrl", void 0);
     return ImageSettings;
-}(SpeakeasyBase));
-export { ImageSettings };
+}(utils_1.SpeakeasyBase));
+exports.ImageSettings = ImageSettings;

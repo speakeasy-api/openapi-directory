@@ -7,7 +7,7 @@ export declare enum GetUntagOpenIdConnectProviderVersionEnum {
 }
 export declare class GetUntagOpenIdConnectProviderQueryParams extends SpeakeasyBase {
     action: GetUntagOpenIdConnectProviderActionEnum;
-    openIdConnectProviderArn: string;
+    openIDConnectProviderArn: string;
     tagKeys: string[];
     version: GetUntagOpenIdConnectProviderVersionEnum;
 }

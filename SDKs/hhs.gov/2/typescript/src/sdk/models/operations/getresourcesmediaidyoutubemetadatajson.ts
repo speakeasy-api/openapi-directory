@@ -17,7 +17,7 @@ export class GetResourcesMediaIdYoutubeMetaDataJson200ApplicationJson extends Sp
   meta?: shared.Meta;
 
   @SpeakeasyMetadata({ data: "json, name=results" })
-  results?: Map<string, any>[];
+  results?: Record<string, any>[];
 }
 
 
@@ -32,8 +32,8 @@ export class GetResourcesMediaIdYoutubeMetaDataJsonResponse extends SpeakeasyBas
   contentType: string;
 
   @SpeakeasyMetadata()
-  getResourcesMediaIdYoutubeMetaDataJson200ApplicationJsonObject?: GetResourcesMediaIdYoutubeMetaDataJson200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSONObject?: GetResourcesMediaIdYoutubeMetaDataJson200ApplicationJson;
 }

@@ -3,7 +3,7 @@ import { ErrorParameter } from "./errorparameter";
 /**
  * This type contains a error or warning related to a call request.
 **/
-export declare class Error extends SpeakeasyBase {
+export declare class ErrorT extends SpeakeasyBase {
     category?: string;
     domain?: string;
     errorId?: number;

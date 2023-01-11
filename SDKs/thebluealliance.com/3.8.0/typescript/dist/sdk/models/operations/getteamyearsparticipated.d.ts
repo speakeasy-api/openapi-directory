@@ -16,7 +16,7 @@ export declare class GetTeamYearsParticipatedRequest extends SpeakeasyBase {
 }
 export declare class GetTeamYearsParticipatedResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getTeamYearsParticipated200ApplicationJsonIntegers?: number[];
+    getTeamYearsParticipated200ApplicationJSONIntegers?: number[];
 }

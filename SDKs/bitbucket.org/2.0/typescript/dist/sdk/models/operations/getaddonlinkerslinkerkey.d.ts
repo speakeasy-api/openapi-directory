@@ -15,5 +15,5 @@ export declare class GetAddonLinkersLinkerKeyRequest extends SpeakeasyBase {
 export declare class GetAddonLinkersLinkerKeyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

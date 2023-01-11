@@ -197,23 +197,23 @@ export class VochseResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  vochse400ApplicationJsonObject?: Vochse400ApplicationJson;
+  vochse400ApplicationJSONObject?: Vochse400ApplicationJson;
 
   @SpeakeasyMetadata()
-  vochse401ApplicationJsonObject?: Vochse401ApplicationJson;
+  vochse401ApplicationJSONObject?: Vochse401ApplicationJson;
 
   @SpeakeasyMetadata()
-  vochse404ApplicationJsonObject?: Vochse404ApplicationJson;
+  vochse404ApplicationJSONObject?: Vochse404ApplicationJson;
 
   @SpeakeasyMetadata()
-  vochse500ApplicationJsonObject?: Vochse500ApplicationJson;
+  vochse500ApplicationJSONObject?: Vochse500ApplicationJson;
 
   @SpeakeasyMetadata()
-  vochse502ApplicationJsonObject?: Vochse502ApplicationJson;
+  vochse502ApplicationJSONObject?: Vochse502ApplicationJson;
 
   @SpeakeasyMetadata()
-  vochse503ApplicationJsonObject?: Vochse503ApplicationJson;
+  vochse503ApplicationJSONObject?: Vochse503ApplicationJson;
 
   @SpeakeasyMetadata()
-  vochse504ApplicationJsonObject?: Vochse504ApplicationJson;
+  vochse504ApplicationJSONObject?: Vochse504ApplicationJson;
 }

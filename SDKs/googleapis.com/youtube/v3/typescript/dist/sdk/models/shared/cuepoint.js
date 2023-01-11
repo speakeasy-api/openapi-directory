@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CuepointCueTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Cuepoint = exports.CuepointCueTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CuepointCueTypeEnum;
 (function (CuepointCueTypeEnum) {
     CuepointCueTypeEnum["CueTypeUnspecified"] = "cueTypeUnspecified";
     CuepointCueTypeEnum["CueTypeAd"] = "cueTypeAd";
-})(CuepointCueTypeEnum || (CuepointCueTypeEnum = {}));
+})(CuepointCueTypeEnum = exports.CuepointCueTypeEnum || (exports.CuepointCueTypeEnum = {}));
 // Cuepoint
 /**
  * Note that there may be a 5-second end-point resolution issue. For instance, if a cuepoint comes in for 22:03:27, we may stuff the cuepoint into 22:03:25 or 22:03:30, depending. This is an artifact of HLS.
@@ -38,29 +41,29 @@ var Cuepoint = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cueType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cueType" }),
         __metadata("design:type", String)
     ], Cuepoint.prototype, "cueType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=durationSecs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=durationSecs" }),
         __metadata("design:type", Number)
     ], Cuepoint.prototype, "durationSecs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Cuepoint.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Cuepoint.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insertionOffsetTimeMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insertionOffsetTimeMs" }),
         __metadata("design:type", String)
     ], Cuepoint.prototype, "insertionOffsetTimeMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=walltimeMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=walltimeMs" }),
         __metadata("design:type", String)
     ], Cuepoint.prototype, "walltimeMs", void 0);
     return Cuepoint;
-}(SpeakeasyBase));
-export { Cuepoint };
+}(utils_1.SpeakeasyBase));
+exports.Cuepoint = Cuepoint;

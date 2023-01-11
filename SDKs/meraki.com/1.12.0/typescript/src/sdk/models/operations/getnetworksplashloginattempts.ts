@@ -37,5 +37,5 @@ export class GetNetworkSplashLoginAttemptsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSplashLoginAttempts200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSplashLoginAttempts200ApplicationJSONObject?: Record<string, any>;
 }

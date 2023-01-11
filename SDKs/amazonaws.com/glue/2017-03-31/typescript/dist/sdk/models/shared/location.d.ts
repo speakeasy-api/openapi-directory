@@ -4,7 +4,7 @@ import { CodeGenNodeArg } from "./codegennodearg";
  * The location of resources.
 **/
 export declare class Location extends SpeakeasyBase {
-    dynamoDb?: CodeGenNodeArg[];
+    dynamoDB?: CodeGenNodeArg[];
     jdbc?: CodeGenNodeArg[];
     s3?: CodeGenNodeArg[];
 }

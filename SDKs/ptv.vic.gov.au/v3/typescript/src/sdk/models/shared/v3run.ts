@@ -18,7 +18,7 @@ export class V3Run extends SpeakeasyBase {
   finalStopId?: number;
 
   @SpeakeasyMetadata({ data: "json, name=geopath" })
-  geopath?: Map<string, any>[];
+  geopath?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=route_id" })
   routeId?: number;

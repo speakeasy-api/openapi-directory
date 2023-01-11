@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeliverabilityTestReport } from "./deliverabilitytestreport";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListDeliverabilityTestReportsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var deliverabilitytestreport_1 = require("./deliverabilitytestreport");
 // ListDeliverabilityTestReportsResponse
 /**
  * A list of the predictive inbox placement test reports that are available for your account, regardless of whether or not those tests are complete.
@@ -34,13 +37,13 @@ var ListDeliverabilityTestReportsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeliverabilityTestReports", elemType: DeliverabilityTestReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeliverabilityTestReports", elemType: deliverabilitytestreport_1.DeliverabilityTestReport }),
         __metadata("design:type", Array)
     ], ListDeliverabilityTestReportsResponse.prototype, "deliverabilityTestReports", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListDeliverabilityTestReportsResponse.prototype, "nextToken", void 0);
     return ListDeliverabilityTestReportsResponse;
-}(SpeakeasyBase));
-export { ListDeliverabilityTestReportsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListDeliverabilityTestReportsResponse = ListDeliverabilityTestReportsResponse;

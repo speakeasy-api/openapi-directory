@@ -15,10 +15,10 @@ export class GetAddClientIdToOpenIdConnectProviderQueryParams extends SpeakeasyB
   action: GetAddClientIdToOpenIdConnectProviderActionEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ClientID" })
-  clientId: string;
+  clientID: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=OpenIDConnectProviderArn" })
-  openIdConnectProviderArn: string;
+  openIDConnectProviderArn: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetAddClientIdToOpenIdConnectProviderVersionEnum;

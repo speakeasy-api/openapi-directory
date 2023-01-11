@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolDhcpSetConfigResponse = exports.ProtocolDhcpSetConfigRequest = exports.ProtocolDhcpSetConfigPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolDhcpSetConfigPathParams = /** @class */ (function (_super) {
     __extends(ProtocolDhcpSetConfigPathParams, _super);
     function ProtocolDhcpSetConfigPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolDhcpSetConfigPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=argument" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=argument" }),
         __metadata("design:type", String)
     ], ProtocolDhcpSetConfigPathParams.prototype, "argument", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=value" }),
         __metadata("design:type", String)
     ], ProtocolDhcpSetConfigPathParams.prototype, "value", void 0);
     return ProtocolDhcpSetConfigPathParams;
-}(SpeakeasyBase));
-export { ProtocolDhcpSetConfigPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolDhcpSetConfigPathParams = ProtocolDhcpSetConfigPathParams;
 var ProtocolDhcpSetConfigRequest = /** @class */ (function (_super) {
     __extends(ProtocolDhcpSetConfigRequest, _super);
     function ProtocolDhcpSetConfigRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolDhcpSetConfigPathParams)
     ], ProtocolDhcpSetConfigRequest.prototype, "pathParams", void 0);
     return ProtocolDhcpSetConfigRequest;
-}(SpeakeasyBase));
-export { ProtocolDhcpSetConfigRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolDhcpSetConfigRequest = ProtocolDhcpSetConfigRequest;
 var ProtocolDhcpSetConfigResponse = /** @class */ (function (_super) {
     __extends(ProtocolDhcpSetConfigResponse, _super);
     function ProtocolDhcpSetConfigResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolDhcpSetConfigResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolDhcpSetConfigResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolDhcpSetConfigResponse.prototype, "protocolDhcpSetConfig200ApplicationJsonString", void 0);
+    ], ProtocolDhcpSetConfigResponse.prototype, "protocolDhcpSetConfig200ApplicationJSONString", void 0);
     return ProtocolDhcpSetConfigResponse;
-}(SpeakeasyBase));
-export { ProtocolDhcpSetConfigResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolDhcpSetConfigResponse = ProtocolDhcpSetConfigResponse;

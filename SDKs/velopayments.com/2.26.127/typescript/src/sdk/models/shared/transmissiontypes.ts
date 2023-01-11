@@ -7,7 +7,7 @@ export class TransmissionTypes extends SpeakeasyBase {
   ach: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=SAME_DAY_ACH" })
-  sameDayAch: boolean;
+  sameDAYACH: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=WIRE" })
   wire: boolean;

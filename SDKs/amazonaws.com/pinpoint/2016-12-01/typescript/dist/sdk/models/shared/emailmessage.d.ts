@@ -11,5 +11,5 @@ export declare class EmailMessage extends SpeakeasyBase {
     rawEmail?: RawEmail;
     replyToAddresses?: string[];
     simpleEmail?: SimpleEmail;
-    substitutions?: Map<string, string[]>;
+    substitutions?: Record<string, string[]>;
 }

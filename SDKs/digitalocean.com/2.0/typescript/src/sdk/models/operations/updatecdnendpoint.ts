@@ -1,62 +1,63 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class UpdateCdnEndpointPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=cdn_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=cdn_id" })
   cdnId: string;
 }
 
 
 export class UpdateCdnEndpointRequestBody extends SpeakeasyBase {
-  @Metadata({ data: "json, name=certificate_id" })
+  @SpeakeasyMetadata({ data: "json, name=certificate_id" })
   certificateId?: string;
 
-  @Metadata({ data: "json, name=custom_domain" })
+  @SpeakeasyMetadata({ data: "json, name=custom_domain" })
   customDomain?: string;
 
-  @Metadata({ data: "json, name=ttl" })
+  @SpeakeasyMetadata({ data: "json, name=ttl" })
   ttl?: number;
 }
 
 
-export class UpdateCdnEndpointRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: UpdateCdnEndpointPathParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request: UpdateCdnEndpointRequestBody;
-}
-
-
 export class UpdateCdnEndpoint401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class UpdateCdnEndpointRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: UpdateCdnEndpointPathParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: UpdateCdnEndpointRequestBody;
+}
+
+
 export class UpdateCdnEndpointResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  updateCdnEndpoint202ApplicationJsonAny?: any;
+  @SpeakeasyMetadata()
+  updateCdnEndpoint202ApplicationJSONAny?: any;
 
-  @Metadata()
-  updateCdnEndpoint401ApplicationJsonObject?: UpdateCdnEndpoint401ApplicationJson;
+  @SpeakeasyMetadata()
+  updateCdnEndpoint401ApplicationJSONObject?: UpdateCdnEndpoint401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

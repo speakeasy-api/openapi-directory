@@ -113,10 +113,10 @@ export class BookingAvailability200ApplicationJson extends SpeakeasyBase {
   errorType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraInfo" })
-  extraInfo?: Map<string, any>;
+  extraInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=extraObject" })
-  extraObject?: Map<string, any>;
+  extraObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=success" })
   success?: boolean;
@@ -146,5 +146,5 @@ export class BookingAvailabilityResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  bookingAvailability200ApplicationJsonObject?: BookingAvailability200ApplicationJson;
+  bookingAvailability200ApplicationJSONObject?: BookingAvailability200ApplicationJson;
 }

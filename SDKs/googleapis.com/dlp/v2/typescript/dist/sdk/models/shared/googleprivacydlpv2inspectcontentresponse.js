@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2InspectResult } from "./googleprivacydlpv2inspectresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2InspectContentResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2inspectresult_1 = require("./googleprivacydlpv2inspectresult");
 // GooglePrivacyDlpV2InspectContentResponse
 /**
  * Results of inspecting an item.
@@ -34,9 +37,9 @@ var GooglePrivacyDlpV2InspectContentResponse = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
-        __metadata("design:type", GooglePrivacyDlpV2InspectResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
+        __metadata("design:type", googleprivacydlpv2inspectresult_1.GooglePrivacyDlpV2InspectResult)
     ], GooglePrivacyDlpV2InspectContentResponse.prototype, "result", void 0);
     return GooglePrivacyDlpV2InspectContentResponse;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2InspectContentResponse };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2InspectContentResponse = GooglePrivacyDlpV2InspectContentResponse;

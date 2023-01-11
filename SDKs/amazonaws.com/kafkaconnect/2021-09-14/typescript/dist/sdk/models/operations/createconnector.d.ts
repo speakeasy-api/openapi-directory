@@ -49,7 +49,7 @@ export declare class CreateConnectorRequestBodyWorkerConfiguration extends Speak
 }
 export declare class CreateConnectorRequestBody extends SpeakeasyBase {
     capacity: CreateConnectorRequestBodyCapacity;
-    connectorConfiguration: Map<string, string>;
+    connectorConfiguration: Record<string, string>;
     connectorDescription?: string;
     connectorName: string;
     kafkaCluster: CreateConnectorRequestBodyKafkaCluster;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MembershipRoleRestrictionEvaluationStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MembershipRoleRestrictionEvaluation = exports.MembershipRoleRestrictionEvaluationStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MembershipRoleRestrictionEvaluationStateEnum;
 (function (MembershipRoleRestrictionEvaluationStateEnum) {
     MembershipRoleRestrictionEvaluationStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     MembershipRoleRestrictionEvaluationStateEnum["Compliant"] = "COMPLIANT";
     MembershipRoleRestrictionEvaluationStateEnum["ForwardCompliant"] = "FORWARD_COMPLIANT";
     MembershipRoleRestrictionEvaluationStateEnum["NonCompliant"] = "NON_COMPLIANT";
     MembershipRoleRestrictionEvaluationStateEnum["Evaluating"] = "EVALUATING";
-})(MembershipRoleRestrictionEvaluationStateEnum || (MembershipRoleRestrictionEvaluationStateEnum = {}));
+})(MembershipRoleRestrictionEvaluationStateEnum = exports.MembershipRoleRestrictionEvaluationStateEnum || (exports.MembershipRoleRestrictionEvaluationStateEnum = {}));
 // MembershipRoleRestrictionEvaluation
 /**
  * The evaluated state of this restriction.
@@ -41,9 +44,9 @@ var MembershipRoleRestrictionEvaluation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], MembershipRoleRestrictionEvaluation.prototype, "state", void 0);
     return MembershipRoleRestrictionEvaluation;
-}(SpeakeasyBase));
-export { MembershipRoleRestrictionEvaluation };
+}(utils_1.SpeakeasyBase));
+exports.MembershipRoleRestrictionEvaluation = MembershipRoleRestrictionEvaluation;

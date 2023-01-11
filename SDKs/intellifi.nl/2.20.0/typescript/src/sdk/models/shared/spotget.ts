@@ -24,10 +24,10 @@ export class SpotGet extends SpeakeasyBase {
   antennaReportLocations?: SpotGetAntennaReportLocations[];
 
   @SpeakeasyMetadata({ data: "json, name=config" })
-  config?: Map<string, any>;
+  config?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=config_request" })
-  configRequest?: Map<string, any>;
+  configRequest?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=geo_coords" })
   geoCoords?: GeoCoords;
@@ -42,10 +42,10 @@ export class SpotGet extends SpeakeasyBase {
   requestCounter?: number;
 
   @SpeakeasyMetadata({ data: "json, name=senses" })
-  senses?: Map<string, any>;
+  senses?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=senses_request" })
-  sensesRequest?: Map<string, any>;
+  sensesRequest?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=serial_number" })
   serialNumber?: number;

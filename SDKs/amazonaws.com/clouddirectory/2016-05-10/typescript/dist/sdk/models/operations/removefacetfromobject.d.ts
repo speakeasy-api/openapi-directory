@@ -39,7 +39,7 @@ export declare class RemoveFacetFromObjectResponse extends SpeakeasyBase {
     internalServiceException?: shared.InternalServiceException;
     invalidArnException?: shared.InvalidArnException;
     limitExceededException?: shared.LimitExceededException;
-    removeFacetFromObjectResponse?: Map<string, any>;
+    removeFacetFromObjectResponse?: Record<string, any>;
     resourceNotFoundException?: shared.ResourceNotFoundException;
     retryableConflictException?: shared.RetryableConflictException;
     statusCode: number;

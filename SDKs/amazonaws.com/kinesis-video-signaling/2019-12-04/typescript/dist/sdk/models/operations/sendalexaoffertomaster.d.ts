@@ -10,7 +10,7 @@ export declare class SendAlexaOfferToMasterHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class SendAlexaOfferToMasterRequestBody extends SpeakeasyBase {
-    channelArn: string;
+    channelARN: string;
     messagePayload: string;
     senderClientId: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePlayDeveloperReportingV1alpha1ErrorReport } from "./googleplaydeveloperreportingv1alpha1errorreport";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePlayDeveloperReportingV1alpha1SearchErrorReportsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleplaydeveloperreportingv1alpha1errorreport_1 = require("./googleplaydeveloperreportingv1alpha1errorreport");
 // GooglePlayDeveloperReportingV1alpha1SearchErrorReportsResponse
 /**
  * Response with a paginated list of error reports matching the search query.
@@ -34,13 +37,13 @@ var GooglePlayDeveloperReportingV1alpha1SearchErrorReportsResponse = /** @class 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorReports", elemType: GooglePlayDeveloperReportingV1alpha1ErrorReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorReports", elemType: googleplaydeveloperreportingv1alpha1errorreport_1.GooglePlayDeveloperReportingV1alpha1ErrorReport }),
         __metadata("design:type", Array)
     ], GooglePlayDeveloperReportingV1alpha1SearchErrorReportsResponse.prototype, "errorReports", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1alpha1SearchErrorReportsResponse.prototype, "nextPageToken", void 0);
     return GooglePlayDeveloperReportingV1alpha1SearchErrorReportsResponse;
-}(SpeakeasyBase));
-export { GooglePlayDeveloperReportingV1alpha1SearchErrorReportsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GooglePlayDeveloperReportingV1alpha1SearchErrorReportsResponse = GooglePlayDeveloperReportingV1alpha1SearchErrorReportsResponse;

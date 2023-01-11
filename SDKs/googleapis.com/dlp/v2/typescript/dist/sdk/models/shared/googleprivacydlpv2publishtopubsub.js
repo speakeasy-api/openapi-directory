@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2PublishToPubSub = void 0;
+var utils_1 = require("../../../internal/utils");
 // GooglePrivacyDlpV2PublishToPubSub
 /**
  * Publish a message into a given Pub/Sub topic when DlpJob has completed. The message contains a single field, `DlpJobName`, which is equal to the finished job's [`DlpJob.name`](https://cloud.google.com/dlp/docs/reference/rest/v2/projects.dlpJobs#DlpJob). Compatible with: Inspect, Risk
@@ -33,9 +36,9 @@ var GooglePrivacyDlpV2PublishToPubSub = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topic" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2PublishToPubSub.prototype, "topic", void 0);
     return GooglePrivacyDlpV2PublishToPubSub;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2PublishToPubSub };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2PublishToPubSub = GooglePrivacyDlpV2PublishToPubSub;

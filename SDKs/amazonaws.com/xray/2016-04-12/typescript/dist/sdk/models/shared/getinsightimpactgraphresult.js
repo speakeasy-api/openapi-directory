@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InsightImpactGraphService } from "./insightimpactgraphservice";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetInsightImpactGraphResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var insightimpactgraphservice_1 = require("./insightimpactgraphservice");
 var GetInsightImpactGraphResult = /** @class */ (function (_super) {
     __extends(GetInsightImpactGraphResult, _super);
     function GetInsightImpactGraphResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndTime" }),
         __metadata("design:type", Date)
     ], GetInsightImpactGraphResult.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InsightId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InsightId" }),
         __metadata("design:type", String)
     ], GetInsightImpactGraphResult.prototype, "insightId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetInsightImpactGraphResult.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceGraphEndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceGraphEndTime" }),
         __metadata("design:type", Date)
     ], GetInsightImpactGraphResult.prototype, "serviceGraphEndTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceGraphStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceGraphStartTime" }),
         __metadata("design:type", Date)
     ], GetInsightImpactGraphResult.prototype, "serviceGraphStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Services", elemType: InsightImpactGraphService }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Services", elemType: insightimpactgraphservice_1.InsightImpactGraphService }),
         __metadata("design:type", Array)
     ], GetInsightImpactGraphResult.prototype, "services", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartTime" }),
         __metadata("design:type", Date)
     ], GetInsightImpactGraphResult.prototype, "startTime", void 0);
     return GetInsightImpactGraphResult;
-}(SpeakeasyBase));
-export { GetInsightImpactGraphResult };
+}(utils_1.SpeakeasyBase));
+exports.GetInsightImpactGraphResult = GetInsightImpactGraphResult;

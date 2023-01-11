@@ -61,7 +61,7 @@ export class ReactionsCreateForCommitCommentResponse extends SpeakeasyBase {
   reaction?: shared.Reaction;
 
   @SpeakeasyMetadata()
-  reactionsCreateForCommitComment415ApplicationJsonObject?: ReactionsCreateForCommitComment415ApplicationJson;
+  reactionsCreateForCommitComment415ApplicationJSONObject?: ReactionsCreateForCommitComment415ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

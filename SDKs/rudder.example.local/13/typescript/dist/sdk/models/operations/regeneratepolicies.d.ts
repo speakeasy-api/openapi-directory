@@ -20,5 +20,5 @@ export declare class RegeneratePolicies200ApplicationJson extends SpeakeasyBase 
 export declare class RegeneratePoliciesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    regeneratePolicies200ApplicationJsonObject?: RegeneratePolicies200ApplicationJson;
+    regeneratePolicies200ApplicationJSONObject?: RegeneratePolicies200ApplicationJson;
 }

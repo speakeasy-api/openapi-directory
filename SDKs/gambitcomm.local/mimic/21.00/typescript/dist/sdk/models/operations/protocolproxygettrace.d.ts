@@ -7,7 +7,7 @@ export declare class ProtocolProxyGetTraceRequest extends SpeakeasyBase {
     pathParams: ProtocolProxyGetTracePathParams;
 }
 export declare class ProtocolProxyGetTraceResponse extends SpeakeasyBase {
-    configProxy?: shared.ConfigProxy;
+    configPROXY?: shared.ConfigProxy;
     contentType: string;
     statusCode: number;
 }

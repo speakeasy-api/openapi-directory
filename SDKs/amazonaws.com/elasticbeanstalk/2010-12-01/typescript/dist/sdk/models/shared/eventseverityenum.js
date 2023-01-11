@@ -1,4 +1,7 @@
-export var EventSeverityEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventSeverityEnum = void 0;
+var EventSeverityEnum;
 (function (EventSeverityEnum) {
     EventSeverityEnum["Trace"] = "TRACE";
     EventSeverityEnum["Debug"] = "DEBUG";
@@ -6,4 +9,4 @@ export var EventSeverityEnum;
     EventSeverityEnum["Warn"] = "WARN";
     EventSeverityEnum["Error"] = "ERROR";
     EventSeverityEnum["Fatal"] = "FATAL";
-})(EventSeverityEnum || (EventSeverityEnum = {}));
+})(EventSeverityEnum = exports.EventSeverityEnum || (exports.EventSeverityEnum = {}));

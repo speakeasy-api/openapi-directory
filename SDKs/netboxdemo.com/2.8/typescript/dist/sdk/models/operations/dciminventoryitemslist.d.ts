@@ -75,5 +75,5 @@ export declare class DcimInventoryItemsListRequest extends SpeakeasyBase {
 export declare class DcimInventoryItemsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimInventoryItemsList200ApplicationJsonObject?: DcimInventoryItemsList200ApplicationJson;
+    dcimInventoryItemsList200ApplicationJSONObject?: DcimInventoryItemsList200ApplicationJson;
 }

@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetWithdrawnObjectCountUsingGetPathParams extends SpeakeasyBase {
-    dateYyyymmdd: string;
+    dateYYYYMMDD: string;
     speciesTypeKey: number;
 }
 export declare class GetWithdrawnObjectCountUsingGetRequest extends SpeakeasyBase {

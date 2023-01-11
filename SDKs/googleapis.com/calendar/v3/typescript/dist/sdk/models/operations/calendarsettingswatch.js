@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,170 +14,195 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CalendarSettingsWatchResponse = exports.CalendarSettingsWatchRequest = exports.CalendarSettingsWatchSecurity = exports.CalendarSettingsWatchSecurityOption3 = exports.CalendarSettingsWatchSecurityOption2 = exports.CalendarSettingsWatchSecurityOption1 = exports.CalendarSettingsWatchQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CalendarSettingsWatchQueryParams = /** @class */ (function (_super) {
     __extends(CalendarSettingsWatchQueryParams, _super);
     function CalendarSettingsWatchQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], CalendarSettingsWatchQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], CalendarSettingsWatchQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], CalendarSettingsWatchQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxResults" }),
         __metadata("design:type", Number)
     ], CalendarSettingsWatchQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], CalendarSettingsWatchQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], CalendarSettingsWatchQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], CalendarSettingsWatchQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], CalendarSettingsWatchQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=syncToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=syncToken" }),
         __metadata("design:type", String)
     ], CalendarSettingsWatchQueryParams.prototype, "syncToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], CalendarSettingsWatchQueryParams.prototype, "userIp", void 0);
     return CalendarSettingsWatchQueryParams;
-}(SpeakeasyBase));
-export { CalendarSettingsWatchQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CalendarSettingsWatchQueryParams = CalendarSettingsWatchQueryParams;
 var CalendarSettingsWatchSecurityOption1 = /** @class */ (function (_super) {
     __extends(CalendarSettingsWatchSecurityOption1, _super);
     function CalendarSettingsWatchSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CalendarSettingsWatchSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CalendarSettingsWatchSecurityOption1.prototype, "oauth2c", void 0);
     return CalendarSettingsWatchSecurityOption1;
-}(SpeakeasyBase));
-export { CalendarSettingsWatchSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.CalendarSettingsWatchSecurityOption1 = CalendarSettingsWatchSecurityOption1;
 var CalendarSettingsWatchSecurityOption2 = /** @class */ (function (_super) {
     __extends(CalendarSettingsWatchSecurityOption2, _super);
     function CalendarSettingsWatchSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CalendarSettingsWatchSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CalendarSettingsWatchSecurityOption2.prototype, "oauth2c", void 0);
     return CalendarSettingsWatchSecurityOption2;
-}(SpeakeasyBase));
-export { CalendarSettingsWatchSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.CalendarSettingsWatchSecurityOption2 = CalendarSettingsWatchSecurityOption2;
 var CalendarSettingsWatchSecurityOption3 = /** @class */ (function (_super) {
     __extends(CalendarSettingsWatchSecurityOption3, _super);
     function CalendarSettingsWatchSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CalendarSettingsWatchSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CalendarSettingsWatchSecurityOption3.prototype, "oauth2c", void 0);
     return CalendarSettingsWatchSecurityOption3;
-}(SpeakeasyBase));
-export { CalendarSettingsWatchSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.CalendarSettingsWatchSecurityOption3 = CalendarSettingsWatchSecurityOption3;
 var CalendarSettingsWatchSecurity = /** @class */ (function (_super) {
     __extends(CalendarSettingsWatchSecurity, _super);
     function CalendarSettingsWatchSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CalendarSettingsWatchSecurityOption1)
     ], CalendarSettingsWatchSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CalendarSettingsWatchSecurityOption2)
     ], CalendarSettingsWatchSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CalendarSettingsWatchSecurityOption3)
     ], CalendarSettingsWatchSecurity.prototype, "option3", void 0);
     return CalendarSettingsWatchSecurity;
-}(SpeakeasyBase));
-export { CalendarSettingsWatchSecurity };
+}(utils_1.SpeakeasyBase));
+exports.CalendarSettingsWatchSecurity = CalendarSettingsWatchSecurity;
 var CalendarSettingsWatchRequest = /** @class */ (function (_super) {
     __extends(CalendarSettingsWatchRequest, _super);
     function CalendarSettingsWatchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CalendarSettingsWatchQueryParams)
     ], CalendarSettingsWatchRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.Channel)
     ], CalendarSettingsWatchRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CalendarSettingsWatchSecurity)
     ], CalendarSettingsWatchRequest.prototype, "security", void 0);
     return CalendarSettingsWatchRequest;
-}(SpeakeasyBase));
-export { CalendarSettingsWatchRequest };
+}(utils_1.SpeakeasyBase));
+exports.CalendarSettingsWatchRequest = CalendarSettingsWatchRequest;
 var CalendarSettingsWatchResponse = /** @class */ (function (_super) {
     __extends(CalendarSettingsWatchResponse, _super);
     function CalendarSettingsWatchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Channel)
     ], CalendarSettingsWatchResponse.prototype, "channel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CalendarSettingsWatchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CalendarSettingsWatchResponse.prototype, "statusCode", void 0);
     return CalendarSettingsWatchResponse;
-}(SpeakeasyBase));
-export { CalendarSettingsWatchResponse };
+}(utils_1.SpeakeasyBase));
+exports.CalendarSettingsWatchResponse = CalendarSettingsWatchResponse;

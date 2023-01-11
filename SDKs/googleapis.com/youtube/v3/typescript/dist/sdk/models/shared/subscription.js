@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SubscriptionContentDetails } from "./subscriptioncontentdetails";
-import { SubscriptionSnippet } from "./subscriptionsnippet";
-import { SubscriptionSubscriberSnippet } from "./subscriptionsubscribersnippet";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Subscription = void 0;
+var utils_1 = require("../../../internal/utils");
+var subscriptioncontentdetails_1 = require("./subscriptioncontentdetails");
+var subscriptionsnippet_1 = require("./subscriptionsnippet");
+var subscriptionsubscribersnippet_1 = require("./subscriptionsubscribersnippet");
 // Subscription
 /**
  * A *subscription* resource contains information about a YouTube user subscription. A subscription notifies a user when new videos are added to a channel or when another user takes one of several actions on YouTube, such as uploading a video, rating a video, or commenting on a video.
@@ -36,29 +39,29 @@ var Subscription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentDetails" }),
-        __metadata("design:type", SubscriptionContentDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentDetails" }),
+        __metadata("design:type", subscriptioncontentdetails_1.SubscriptionContentDetails)
     ], Subscription.prototype, "contentDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Subscription.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Subscription.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Subscription.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snippet" }),
-        __metadata("design:type", SubscriptionSnippet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snippet" }),
+        __metadata("design:type", subscriptionsnippet_1.SubscriptionSnippet)
     ], Subscription.prototype, "snippet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriberSnippet" }),
-        __metadata("design:type", SubscriptionSubscriberSnippet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriberSnippet" }),
+        __metadata("design:type", subscriptionsubscribersnippet_1.SubscriptionSubscriberSnippet)
     ], Subscription.prototype, "subscriberSnippet", void 0);
     return Subscription;
-}(SpeakeasyBase));
-export { Subscription };
+}(utils_1.SpeakeasyBase));
+exports.Subscription = Subscription;

@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class ListPadsUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=groupID" })
-  groupId?: string;
+  groupID?: string;
 }
 
 
@@ -31,7 +31,7 @@ export class ListPadsUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class ListPadsUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class ListPadsUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class ListPadsUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listPadsUsingGet200ApplicationJsonObject?: ListPadsUsingGet200ApplicationJson;
+  listPadsUsingGET200ApplicationJSONObject?: ListPadsUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  listPadsUsingGet400ApplicationJsonObject?: ListPadsUsingGet400ApplicationJson;
+  listPadsUsingGET400ApplicationJSONObject?: ListPadsUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  listPadsUsingGet401ApplicationJsonObject?: ListPadsUsingGet401ApplicationJson;
+  listPadsUsingGET401ApplicationJSONObject?: ListPadsUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  listPadsUsingGet500ApplicationJsonObject?: ListPadsUsingGet500ApplicationJson;
+  listPadsUsingGET500ApplicationJSONObject?: ListPadsUsingGet500ApplicationJson;
 }

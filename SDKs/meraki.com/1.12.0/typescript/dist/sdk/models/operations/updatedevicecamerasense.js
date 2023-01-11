@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDeviceCameraSenseResponse = exports.UpdateDeviceCameraSenseRequest = exports.UpdateDeviceCameraSenseRequestBody = exports.UpdateDeviceCameraSenseRequestBodyAudioDetection = exports.UpdateDeviceCameraSensePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateDeviceCameraSensePathParams = /** @class */ (function (_super) {
     __extends(UpdateDeviceCameraSensePathParams, _super);
     function UpdateDeviceCameraSensePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], UpdateDeviceCameraSensePathParams.prototype, "serial", void 0);
     return UpdateDeviceCameraSensePathParams;
-}(SpeakeasyBase));
-export { UpdateDeviceCameraSensePathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceCameraSensePathParams = UpdateDeviceCameraSensePathParams;
 // UpdateDeviceCameraSenseRequestBodyAudioDetection
 /**
  * The details of the audio detection config.
@@ -45,69 +48,69 @@ var UpdateDeviceCameraSenseRequestBodyAudioDetection = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateDeviceCameraSenseRequestBodyAudioDetection.prototype, "enabled", void 0);
     return UpdateDeviceCameraSenseRequestBodyAudioDetection;
-}(SpeakeasyBase));
-export { UpdateDeviceCameraSenseRequestBodyAudioDetection };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceCameraSenseRequestBodyAudioDetection = UpdateDeviceCameraSenseRequestBodyAudioDetection;
 var UpdateDeviceCameraSenseRequestBody = /** @class */ (function (_super) {
     __extends(UpdateDeviceCameraSenseRequestBody, _super);
     function UpdateDeviceCameraSenseRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audioDetection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audioDetection" }),
         __metadata("design:type", UpdateDeviceCameraSenseRequestBodyAudioDetection)
     ], UpdateDeviceCameraSenseRequestBody.prototype, "audioDetection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detectionModelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detectionModelId" }),
         __metadata("design:type", String)
     ], UpdateDeviceCameraSenseRequestBody.prototype, "detectionModelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mqttBrokerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mqttBrokerId" }),
         __metadata("design:type", String)
     ], UpdateDeviceCameraSenseRequestBody.prototype, "mqttBrokerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=senseEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=senseEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateDeviceCameraSenseRequestBody.prototype, "senseEnabled", void 0);
     return UpdateDeviceCameraSenseRequestBody;
-}(SpeakeasyBase));
-export { UpdateDeviceCameraSenseRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceCameraSenseRequestBody = UpdateDeviceCameraSenseRequestBody;
 var UpdateDeviceCameraSenseRequest = /** @class */ (function (_super) {
     __extends(UpdateDeviceCameraSenseRequest, _super);
     function UpdateDeviceCameraSenseRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateDeviceCameraSensePathParams)
     ], UpdateDeviceCameraSenseRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateDeviceCameraSenseRequestBody)
     ], UpdateDeviceCameraSenseRequest.prototype, "request", void 0);
     return UpdateDeviceCameraSenseRequest;
-}(SpeakeasyBase));
-export { UpdateDeviceCameraSenseRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceCameraSenseRequest = UpdateDeviceCameraSenseRequest;
 var UpdateDeviceCameraSenseResponse = /** @class */ (function (_super) {
     __extends(UpdateDeviceCameraSenseResponse, _super);
     function UpdateDeviceCameraSenseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateDeviceCameraSenseResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateDeviceCameraSenseResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateDeviceCameraSenseResponse.prototype, "updateDeviceCameraSense200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateDeviceCameraSenseResponse.prototype, "updateDeviceCameraSense200ApplicationJSONObject", void 0);
     return UpdateDeviceCameraSenseResponse;
-}(SpeakeasyBase));
-export { UpdateDeviceCameraSenseResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceCameraSenseResponse = UpdateDeviceCameraSenseResponse;

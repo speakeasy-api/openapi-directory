@@ -40,8 +40,8 @@ export class PostPortfolioSimulationRebalancingRandomWeightResponse extends Spea
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioSimulationRebalancingRandomWeight200ApplicationJsonObject?: PostPortfolioSimulationRebalancingRandomWeight200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioSimulationRebalancingRandomWeight200ApplicationJSONObject?: PostPortfolioSimulationRebalancingRandomWeight200ApplicationJson;
 }

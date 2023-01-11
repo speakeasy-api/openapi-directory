@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DynamicListener } from "./dynamiclistener";
-import { StaticListener } from "./staticlistener";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListenersConfigDump = void 0;
+var utils_1 = require("../../../internal/utils");
+var dynamiclistener_1 = require("./dynamiclistener");
+var staticlistener_1 = require("./staticlistener");
 // ListenersConfigDump
 /**
  * Envoy's listener manager fills this message with all currently known listeners. Listener configuration information can be used to recreate an Envoy configuration by populating all listeners as static listeners or by returning them in a LDS response.
@@ -35,17 +38,17 @@ var ListenersConfigDump = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dynamicListeners", elemType: DynamicListener }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dynamicListeners", elemType: dynamiclistener_1.DynamicListener }),
         __metadata("design:type", Array)
     ], ListenersConfigDump.prototype, "dynamicListeners", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=staticListeners", elemType: StaticListener }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=staticListeners", elemType: staticlistener_1.StaticListener }),
         __metadata("design:type", Array)
     ], ListenersConfigDump.prototype, "staticListeners", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versionInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versionInfo" }),
         __metadata("design:type", String)
     ], ListenersConfigDump.prototype, "versionInfo", void 0);
     return ListenersConfigDump;
-}(SpeakeasyBase));
-export { ListenersConfigDump };
+}(utils_1.SpeakeasyBase));
+exports.ListenersConfigDump = ListenersConfigDump;

@@ -10,5 +10,5 @@ export class InlineScopedRouteConfigs extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=scopedRouteConfigs" })
-  scopedRouteConfigs?: Map<string, any>[];
+  scopedRouteConfigs?: Record<string, any>[];
 }

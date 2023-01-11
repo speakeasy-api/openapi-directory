@@ -8,5 +8,5 @@ export declare class MgetInfoRequest extends SpeakeasyBase {
 export declare class MgetInfoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    mgetInfo200ApplicationJsonObjects?: Map<string, any>[];
+    mgetInfo200ApplicationJSONObjects?: Record<string, any>[];
 }

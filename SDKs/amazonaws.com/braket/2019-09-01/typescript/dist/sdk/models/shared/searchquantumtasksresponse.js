@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QuantumTaskSummary } from "./quantumtasksummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchQuantumTasksResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var quantumtasksummary_1 = require("./quantumtasksummary");
 var SearchQuantumTasksResponse = /** @class */ (function (_super) {
     __extends(SearchQuantumTasksResponse, _super);
     function SearchQuantumTasksResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], SearchQuantumTasksResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantumTasks", elemType: QuantumTaskSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantumTasks", elemType: quantumtasksummary_1.QuantumTaskSummary }),
         __metadata("design:type", Array)
     ], SearchQuantumTasksResponse.prototype, "quantumTasks", void 0);
     return SearchQuantumTasksResponse;
-}(SpeakeasyBase));
-export { SearchQuantumTasksResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchQuantumTasksResponse = SearchQuantumTasksResponse;

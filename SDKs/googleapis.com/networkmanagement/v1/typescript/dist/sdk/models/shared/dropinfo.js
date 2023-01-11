@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DropInfoCauseEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DropInfo = exports.DropInfoCauseEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DropInfoCauseEnum;
 (function (DropInfoCauseEnum) {
     DropInfoCauseEnum["CauseUnspecified"] = "CAUSE_UNSPECIFIED";
     DropInfoCauseEnum["UnknownExternalAddress"] = "UNKNOWN_EXTERNAL_ADDRESS";
@@ -60,7 +63,8 @@ export var DropInfoCauseEnum;
     DropInfoCauseEnum["VpcConnectorNotSet"] = "VPC_CONNECTOR_NOT_SET";
     DropInfoCauseEnum["VpcConnectorNotRunning"] = "VPC_CONNECTOR_NOT_RUNNING";
     DropInfoCauseEnum["PscConnectionNotAccepted"] = "PSC_CONNECTION_NOT_ACCEPTED";
-})(DropInfoCauseEnum || (DropInfoCauseEnum = {}));
+    DropInfoCauseEnum["CloudRunRevisionNotReady"] = "CLOUD_RUN_REVISION_NOT_READY";
+})(DropInfoCauseEnum = exports.DropInfoCauseEnum || (exports.DropInfoCauseEnum = {}));
 // DropInfo
 /**
  * Details of the final state "drop" and associated resource.
@@ -71,13 +75,13 @@ var DropInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cause" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cause" }),
         __metadata("design:type", String)
     ], DropInfo.prototype, "cause", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceUri" }),
         __metadata("design:type", String)
     ], DropInfo.prototype, "resourceUri", void 0);
     return DropInfo;
-}(SpeakeasyBase));
-export { DropInfo };
+}(utils_1.SpeakeasyBase));
+exports.DropInfo = DropInfo;

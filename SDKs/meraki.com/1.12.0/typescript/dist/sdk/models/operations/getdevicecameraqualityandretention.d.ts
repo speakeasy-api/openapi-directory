@@ -8,5 +8,5 @@ export declare class GetDeviceCameraQualityAndRetentionRequest extends Speakeasy
 export declare class GetDeviceCameraQualityAndRetentionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceCameraQualityAndRetention200ApplicationJsonObject?: Map<string, any>;
+    getDeviceCameraQualityAndRetention200ApplicationJSONObject?: Record<string, any>;
 }

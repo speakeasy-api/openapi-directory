@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostRejectTransitGatewayMulticastDomainAssociationsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostRejectTransitGatewayMulticastDomainAssociationsResponse = exports.PostRejectTransitGatewayMulticastDomainAssociationsRequest = exports.PostRejectTransitGatewayMulticastDomainAssociationsHeaders = exports.PostRejectTransitGatewayMulticastDomainAssociationsQueryParams = exports.PostRejectTransitGatewayMulticastDomainAssociationsVersionEnum = exports.PostRejectTransitGatewayMulticastDomainAssociationsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostRejectTransitGatewayMulticastDomainAssociationsActionEnum;
 (function (PostRejectTransitGatewayMulticastDomainAssociationsActionEnum) {
     PostRejectTransitGatewayMulticastDomainAssociationsActionEnum["RejectTransitGatewayMulticastDomainAssociations"] = "RejectTransitGatewayMulticastDomainAssociations";
-})(PostRejectTransitGatewayMulticastDomainAssociationsActionEnum || (PostRejectTransitGatewayMulticastDomainAssociationsActionEnum = {}));
-export var PostRejectTransitGatewayMulticastDomainAssociationsVersionEnum;
+})(PostRejectTransitGatewayMulticastDomainAssociationsActionEnum = exports.PostRejectTransitGatewayMulticastDomainAssociationsActionEnum || (exports.PostRejectTransitGatewayMulticastDomainAssociationsActionEnum = {}));
+var PostRejectTransitGatewayMulticastDomainAssociationsVersionEnum;
 (function (PostRejectTransitGatewayMulticastDomainAssociationsVersionEnum) {
     PostRejectTransitGatewayMulticastDomainAssociationsVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostRejectTransitGatewayMulticastDomainAssociationsVersionEnum || (PostRejectTransitGatewayMulticastDomainAssociationsVersionEnum = {}));
+})(PostRejectTransitGatewayMulticastDomainAssociationsVersionEnum = exports.PostRejectTransitGatewayMulticastDomainAssociationsVersionEnum || (exports.PostRejectTransitGatewayMulticastDomainAssociationsVersionEnum = {}));
 var PostRejectTransitGatewayMulticastDomainAssociationsQueryParams = /** @class */ (function (_super) {
     __extends(PostRejectTransitGatewayMulticastDomainAssociationsQueryParams, _super);
     function PostRejectTransitGatewayMulticastDomainAssociationsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostRejectTransitGatewayMulticastDomainAssociationsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostRejectTransitGatewayMulticastDomainAssociationsQueryParams.prototype, "version", void 0);
     return PostRejectTransitGatewayMulticastDomainAssociationsQueryParams;
-}(SpeakeasyBase));
-export { PostRejectTransitGatewayMulticastDomainAssociationsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostRejectTransitGatewayMulticastDomainAssociationsQueryParams = PostRejectTransitGatewayMulticastDomainAssociationsQueryParams;
 var PostRejectTransitGatewayMulticastDomainAssociationsHeaders = /** @class */ (function (_super) {
     __extends(PostRejectTransitGatewayMulticastDomainAssociationsHeaders, _super);
     function PostRejectTransitGatewayMulticastDomainAssociationsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostRejectTransitGatewayMulticastDomainAssociationsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostRejectTransitGatewayMulticastDomainAssociationsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostRejectTransitGatewayMulticastDomainAssociationsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostRejectTransitGatewayMulticastDomainAssociationsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostRejectTransitGatewayMulticastDomainAssociationsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostRejectTransitGatewayMulticastDomainAssociationsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostRejectTransitGatewayMulticastDomainAssociationsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostRejectTransitGatewayMulticastDomainAssociationsHeaders;
-}(SpeakeasyBase));
-export { PostRejectTransitGatewayMulticastDomainAssociationsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostRejectTransitGatewayMulticastDomainAssociationsHeaders = PostRejectTransitGatewayMulticastDomainAssociationsHeaders;
 var PostRejectTransitGatewayMulticastDomainAssociationsRequest = /** @class */ (function (_super) {
     __extends(PostRejectTransitGatewayMulticastDomainAssociationsRequest, _super);
     function PostRejectTransitGatewayMulticastDomainAssociationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRejectTransitGatewayMulticastDomainAssociationsQueryParams)
     ], PostRejectTransitGatewayMulticastDomainAssociationsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRejectTransitGatewayMulticastDomainAssociationsHeaders)
     ], PostRejectTransitGatewayMulticastDomainAssociationsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostRejectTransitGatewayMulticastDomainAssociationsRequest.prototype, "request", void 0);
     return PostRejectTransitGatewayMulticastDomainAssociationsRequest;
-}(SpeakeasyBase));
-export { PostRejectTransitGatewayMulticastDomainAssociationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostRejectTransitGatewayMulticastDomainAssociationsRequest = PostRejectTransitGatewayMulticastDomainAssociationsRequest;
 var PostRejectTransitGatewayMulticastDomainAssociationsResponse = /** @class */ (function (_super) {
     __extends(PostRejectTransitGatewayMulticastDomainAssociationsResponse, _super);
     function PostRejectTransitGatewayMulticastDomainAssociationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostRejectTransitGatewayMulticastDomainAssociationsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostRejectTransitGatewayMulticastDomainAssociationsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostRejectTransitGatewayMulticastDomainAssociationsResponse.prototype, "statusCode", void 0);
     return PostRejectTransitGatewayMulticastDomainAssociationsResponse;
-}(SpeakeasyBase));
-export { PostRejectTransitGatewayMulticastDomainAssociationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostRejectTransitGatewayMulticastDomainAssociationsResponse = PostRejectTransitGatewayMulticastDomainAssociationsResponse;

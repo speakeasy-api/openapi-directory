@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OnEnterLifecycle } from "./onenterlifecycle";
-import { OnExitLifecycle } from "./onexitlifecycle";
-import { OnInputLifecycle } from "./oninputlifecycle";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.State = void 0;
+var utils_1 = require("../../../internal/utils");
+var onenterlifecycle_1 = require("./onenterlifecycle");
+var onexitlifecycle_1 = require("./onexitlifecycle");
+var oninputlifecycle_1 = require("./oninputlifecycle");
 // State
 /**
  * Information that defines a state of a detector.
@@ -36,21 +39,21 @@ var State = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onEnter" }),
-        __metadata("design:type", OnEnterLifecycle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onEnter" }),
+        __metadata("design:type", onenterlifecycle_1.OnEnterLifecycle)
     ], State.prototype, "onEnter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onExit" }),
-        __metadata("design:type", OnExitLifecycle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onExit" }),
+        __metadata("design:type", onexitlifecycle_1.OnExitLifecycle)
     ], State.prototype, "onExit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onInput" }),
-        __metadata("design:type", OnInputLifecycle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onInput" }),
+        __metadata("design:type", oninputlifecycle_1.OnInputLifecycle)
     ], State.prototype, "onInput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateName" }),
         __metadata("design:type", String)
     ], State.prototype, "stateName", void 0);
     return State;
-}(SpeakeasyBase));
-export { State };
+}(utils_1.SpeakeasyBase));
+exports.State = State;

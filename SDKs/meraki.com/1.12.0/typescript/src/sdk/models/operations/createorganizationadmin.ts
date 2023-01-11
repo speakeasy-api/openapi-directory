@@ -90,5 +90,5 @@ export class CreateOrganizationAdminResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createOrganizationAdmin201ApplicationJsonObject?: Map<string, any>;
+  createOrganizationAdmin201ApplicationJSONObject?: Record<string, any>;
 }

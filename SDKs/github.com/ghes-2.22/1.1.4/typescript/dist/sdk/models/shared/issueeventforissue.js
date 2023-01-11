@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimpleUser } from "./simpleuser";
-import { AuthorAssociationEnum } from "./authorassociationenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IssueEventForIssue = void 0;
+var utils_1 = require("../../../internal/utils");
+var simpleuser_1 = require("./simpleuser");
+var authorassociationenum_1 = require("./authorassociationenum");
 // IssueEventForIssue
 /**
  * Issue Event for Issue
@@ -35,89 +38,89 @@ var IssueEventForIssue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actor" }),
-        __metadata("design:type", SimpleUser)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actor" }),
+        __metadata("design:type", simpleuser_1.SimpleUser)
     ], IssueEventForIssue.prototype, "actor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author_association" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author_association" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "authorAssociation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body_html" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body_html" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "bodyHtml", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body_text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body_text" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "bodyText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commit_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commit_id" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "commitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commit_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commit_url" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "commitUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "event", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], IssueEventForIssue.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issue_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issue_url" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "issueUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lock_reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lock_reason" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "lockReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pull_request_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pull_request_url" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "pullRequestUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "sha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=submitted_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=submitted_at" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "submittedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], IssueEventForIssue.prototype, "url", void 0);
     return IssueEventForIssue;
-}(SpeakeasyBase));
-export { IssueEventForIssue };
+}(utils_1.SpeakeasyBase));
+exports.IssueEventForIssue = IssueEventForIssue;

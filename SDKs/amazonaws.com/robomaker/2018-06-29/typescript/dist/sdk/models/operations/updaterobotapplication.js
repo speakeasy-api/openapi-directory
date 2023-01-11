@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,53 +14,78 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateRobotApplicationResponse = exports.UpdateRobotApplicationRequest = exports.UpdateRobotApplicationRequestBody = exports.UpdateRobotApplicationRequestBodyRobotSoftwareSuite = exports.UpdateRobotApplicationRequestBodyEnvironment = exports.UpdateRobotApplicationHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var UpdateRobotApplicationHeaders = /** @class */ (function (_super) {
     __extends(UpdateRobotApplicationHeaders, _super);
     function UpdateRobotApplicationHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], UpdateRobotApplicationHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], UpdateRobotApplicationHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], UpdateRobotApplicationHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], UpdateRobotApplicationHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], UpdateRobotApplicationHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], UpdateRobotApplicationHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], UpdateRobotApplicationHeaders.prototype, "xAmzSignedHeaders", void 0);
     return UpdateRobotApplicationHeaders;
-}(SpeakeasyBase));
-export { UpdateRobotApplicationHeaders };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRobotApplicationHeaders = UpdateRobotApplicationHeaders;
 // UpdateRobotApplicationRequestBodyEnvironment
 /**
  * The object that contains the Docker image URI for either your robot or simulation applications.
@@ -70,12 +96,12 @@ var UpdateRobotApplicationRequestBodyEnvironment = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], UpdateRobotApplicationRequestBodyEnvironment.prototype, "uri", void 0);
     return UpdateRobotApplicationRequestBodyEnvironment;
-}(SpeakeasyBase));
-export { UpdateRobotApplicationRequestBodyEnvironment };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRobotApplicationRequestBodyEnvironment = UpdateRobotApplicationRequestBodyEnvironment;
 // UpdateRobotApplicationRequestBodyRobotSoftwareSuite
 /**
  * Information about a robot software suite (ROS distribution).
@@ -86,97 +112,97 @@ var UpdateRobotApplicationRequestBodyRobotSoftwareSuite = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateRobotApplicationRequestBodyRobotSoftwareSuite.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], UpdateRobotApplicationRequestBodyRobotSoftwareSuite.prototype, "version", void 0);
     return UpdateRobotApplicationRequestBodyRobotSoftwareSuite;
-}(SpeakeasyBase));
-export { UpdateRobotApplicationRequestBodyRobotSoftwareSuite };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRobotApplicationRequestBodyRobotSoftwareSuite = UpdateRobotApplicationRequestBodyRobotSoftwareSuite;
 var UpdateRobotApplicationRequestBody = /** @class */ (function (_super) {
     __extends(UpdateRobotApplicationRequestBody, _super);
     function UpdateRobotApplicationRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=application" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=application" }),
         __metadata("design:type", String)
     ], UpdateRobotApplicationRequestBody.prototype, "application", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentRevisionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentRevisionId" }),
         __metadata("design:type", String)
     ], UpdateRobotApplicationRequestBody.prototype, "currentRevisionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
         __metadata("design:type", UpdateRobotApplicationRequestBodyEnvironment)
     ], UpdateRobotApplicationRequestBody.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=robotSoftwareSuite" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=robotSoftwareSuite" }),
         __metadata("design:type", UpdateRobotApplicationRequestBodyRobotSoftwareSuite)
     ], UpdateRobotApplicationRequestBody.prototype, "robotSoftwareSuite", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sources", elemType: shared.SourceConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sources", elemType: shared.SourceConfig }),
         __metadata("design:type", Array)
     ], UpdateRobotApplicationRequestBody.prototype, "sources", void 0);
     return UpdateRobotApplicationRequestBody;
-}(SpeakeasyBase));
-export { UpdateRobotApplicationRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRobotApplicationRequestBody = UpdateRobotApplicationRequestBody;
 var UpdateRobotApplicationRequest = /** @class */ (function (_super) {
     __extends(UpdateRobotApplicationRequest, _super);
     function UpdateRobotApplicationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateRobotApplicationHeaders)
     ], UpdateRobotApplicationRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateRobotApplicationRequestBody)
     ], UpdateRobotApplicationRequest.prototype, "request", void 0);
     return UpdateRobotApplicationRequest;
-}(SpeakeasyBase));
-export { UpdateRobotApplicationRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRobotApplicationRequest = UpdateRobotApplicationRequest;
 var UpdateRobotApplicationResponse = /** @class */ (function (_super) {
     __extends(UpdateRobotApplicationResponse, _super);
     function UpdateRobotApplicationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateRobotApplicationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateRobotApplicationResponse.prototype, "internalServerException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateRobotApplicationResponse.prototype, "invalidParameterException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateRobotApplicationResponse.prototype, "limitExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateRobotApplicationResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateRobotApplicationResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateRobotApplicationResponse.prototype, "throttlingException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UpdateRobotApplicationResponse)
     ], UpdateRobotApplicationResponse.prototype, "updateRobotApplicationResponse", void 0);
     return UpdateRobotApplicationResponse;
-}(SpeakeasyBase));
-export { UpdateRobotApplicationResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRobotApplicationResponse = UpdateRobotApplicationResponse;

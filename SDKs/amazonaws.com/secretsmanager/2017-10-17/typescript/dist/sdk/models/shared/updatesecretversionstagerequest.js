@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateSecretVersionStageRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateSecretVersionStageRequest = /** @class */ (function (_super) {
     __extends(UpdateSecretVersionStageRequest, _super);
     function UpdateSecretVersionStageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MoveToVersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MoveToVersionId" }),
         __metadata("design:type", String)
     ], UpdateSecretVersionStageRequest.prototype, "moveToVersionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RemoveFromVersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RemoveFromVersionId" }),
         __metadata("design:type", String)
     ], UpdateSecretVersionStageRequest.prototype, "removeFromVersionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretId" }),
         __metadata("design:type", String)
     ], UpdateSecretVersionStageRequest.prototype, "secretId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VersionStage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VersionStage" }),
         __metadata("design:type", String)
     ], UpdateSecretVersionStageRequest.prototype, "versionStage", void 0);
     return UpdateSecretVersionStageRequest;
-}(SpeakeasyBase));
-export { UpdateSecretVersionStageRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateSecretVersionStageRequest = UpdateSecretVersionStageRequest;

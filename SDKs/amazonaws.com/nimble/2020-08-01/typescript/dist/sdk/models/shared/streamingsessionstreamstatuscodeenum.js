@@ -1,4 +1,7 @@
-export var StreamingSessionStreamStatusCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreamingSessionStreamStatusCodeEnum = void 0;
+var StreamingSessionStreamStatusCodeEnum;
 (function (StreamingSessionStreamStatusCodeEnum) {
     StreamingSessionStreamStatusCodeEnum["StreamCreateInProgress"] = "STREAM_CREATE_IN_PROGRESS";
     StreamingSessionStreamStatusCodeEnum["StreamReady"] = "STREAM_READY";
@@ -6,4 +9,4 @@ export var StreamingSessionStreamStatusCodeEnum;
     StreamingSessionStreamStatusCodeEnum["StreamDeleted"] = "STREAM_DELETED";
     StreamingSessionStreamStatusCodeEnum["InternalError"] = "INTERNAL_ERROR";
     StreamingSessionStreamStatusCodeEnum["NetworkConnectionError"] = "NETWORK_CONNECTION_ERROR";
-})(StreamingSessionStreamStatusCodeEnum || (StreamingSessionStreamStatusCodeEnum = {}));
+})(StreamingSessionStreamStatusCodeEnum = exports.StreamingSessionStreamStatusCodeEnum || (exports.StreamingSessionStreamStatusCodeEnum = {}));

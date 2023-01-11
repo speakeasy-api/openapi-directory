@@ -50,7 +50,7 @@ export class CreateQuantumTaskRequestBody extends SpeakeasyBase {
   shots: number;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LinkConfirmationRequest = exports.LinkConfirmationRequestConfirmation = void 0;
+var utils_1 = require("../../../internal/utils");
 var LinkConfirmationRequestConfirmation = /** @class */ (function (_super) {
     __extends(LinkConfirmationRequestConfirmation, _super);
     function LinkConfirmationRequestConfirmation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkRefNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkRefNumber" }),
         __metadata("design:type", String)
     ], LinkConfirmationRequestConfirmation.prototype, "linkRefNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], LinkConfirmationRequestConfirmation.prototype, "token", void 0);
     return LinkConfirmationRequestConfirmation;
-}(SpeakeasyBase));
-export { LinkConfirmationRequestConfirmation };
+}(utils_1.SpeakeasyBase));
+exports.LinkConfirmationRequestConfirmation = LinkConfirmationRequestConfirmation;
 var LinkConfirmationRequest = /** @class */ (function (_super) {
     __extends(LinkConfirmationRequest, _super);
     function LinkConfirmationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confirmation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confirmation" }),
         __metadata("design:type", LinkConfirmationRequestConfirmation)
     ], LinkConfirmationRequest.prototype, "confirmation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], LinkConfirmationRequest.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], LinkConfirmationRequest.prototype, "timestamp", void 0);
     return LinkConfirmationRequest;
-}(SpeakeasyBase));
-export { LinkConfirmationRequest };
+}(utils_1.SpeakeasyBase));
+exports.LinkConfirmationRequest = LinkConfirmationRequest;

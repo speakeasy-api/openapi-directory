@@ -26,5 +26,5 @@ export declare class GetUserInfo200ApplicationJson extends SpeakeasyBase {
 export declare class GetUserInfoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getUserInfo200ApplicationJsonObject?: GetUserInfo200ApplicationJson;
+    getUserInfo200ApplicationJSONObject?: GetUserInfo200ApplicationJson;
 }

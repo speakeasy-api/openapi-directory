@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Assessment = void 0;
+var utils_1 = require("../../../internal/utils");
 var Assessment = /** @class */ (function (_super) {
     __extends(Assessment, _super);
     function Assessment() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], Assessment.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dueDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dueDate" }),
         __metadata("design:type", Date)
     ], Assessment.prototype, "dueDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=markNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=markNumber" }),
         __metadata("design:type", String)
     ], Assessment.prototype, "markNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=markType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=markType" }),
         __metadata("design:type", String)
     ], Assessment.prototype, "markType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=openDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openDate" }),
         __metadata("design:type", Date)
     ], Assessment.prototype, "openDate", void 0);
     return Assessment;
-}(SpeakeasyBase));
-export { Assessment };
+}(utils_1.SpeakeasyBase));
+exports.Assessment = Assessment;

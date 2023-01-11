@@ -5,7 +5,7 @@ export declare class SandboxBankTransferSimulateRequest extends SpeakeasyBase {
 }
 export declare class SandboxBankTransferSimulateResponse extends SpeakeasyBase {
     contentType: string;
-    error?: Map<string, any>;
-    sandboxBankTransferSimulateResponse?: Map<string, any>;
+    error?: Record<string, any>;
+    sandboxBankTransferSimulateResponse?: Record<string, any>;
     statusCode: number;
 }

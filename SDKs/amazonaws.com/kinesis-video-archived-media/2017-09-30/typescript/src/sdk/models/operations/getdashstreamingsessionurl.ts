@@ -76,7 +76,7 @@ export class GetDashStreamingSessionUrlRequestBody extends SpeakeasyBase {
   playbackMode?: GetDashStreamingSessionUrlRequestBodyPlaybackModeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=StreamARN" })
-  streamArn?: string;
+  streamARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamName" })
   streamName?: string;
@@ -100,7 +100,7 @@ export class GetDashStreamingSessionUrlResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getDashStreamingSessionUrlOutput?: shared.GetDashStreamingSessionUrlOutput;
+  getDASHStreamingSessionURLOutput?: shared.GetDashStreamingSessionUrlOutput;
 
   @SpeakeasyMetadata()
   invalidArgumentException?: any;

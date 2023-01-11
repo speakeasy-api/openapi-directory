@@ -1,16 +1,21 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AuthorizerTypeEnum } from "./authorizertypeenum";
-import { JwtConfiguration } from "./jwtconfiguration";
+/**
+ * Represents the configuration of a JWT authorizer. Required for the JWT authorizer type. Supported only for HTTP APIs.
+**/
+export declare class GetAuthorizerResponseJwtConfiguration extends SpeakeasyBase {
+    audience?: Record<string, any>;
+    issuer?: Record<string, any>;
+}
 export declare class GetAuthorizerResponse extends SpeakeasyBase {
-    authorizerCredentialsArn?: string;
-    authorizerId?: string;
-    authorizerPayloadFormatVersion?: string;
-    authorizerResultTtlInSeconds?: number;
-    authorizerType?: AuthorizerTypeEnum;
-    authorizerUri?: string;
-    enableSimpleResponses?: boolean;
-    identitySource?: string[];
-    identityValidationExpression?: string;
-    jwtConfiguration?: JwtConfiguration;
-    name?: string;
+    authorizerCredentialsArn?: Record<string, any>;
+    authorizerId?: Record<string, any>;
+    authorizerPayloadFormatVersion?: Record<string, any>;
+    authorizerResultTtlInSeconds?: Record<string, any>;
+    authorizerType?: Record<string, any>;
+    authorizerUri?: Record<string, any>;
+    enableSimpleResponses?: Record<string, any>;
+    identitySource?: Record<string, any>;
+    identityValidationExpression?: Record<string, any>;
+    jwtConfiguration?: GetAuthorizerResponseJwtConfiguration;
+    name?: Record<string, any>;
 }

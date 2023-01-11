@@ -44,7 +44,7 @@ export class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse ex
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   paginatedIssueAttachments?: shared.PaginatedIssueAttachments;

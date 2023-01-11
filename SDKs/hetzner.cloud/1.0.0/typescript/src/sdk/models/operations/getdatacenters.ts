@@ -89,8 +89,8 @@ export class GetDatacentersResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getDatacenters200ApplicationJsonObject?: GetDatacenters200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getDatacenters200ApplicationJSONObject?: GetDatacenters200ApplicationJson;
 }

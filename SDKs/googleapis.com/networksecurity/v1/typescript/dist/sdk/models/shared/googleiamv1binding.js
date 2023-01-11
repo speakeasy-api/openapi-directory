@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Expr } from "./expr";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleIamV1Binding = void 0;
+var utils_1 = require("../../../internal/utils");
+var expr_1 = require("./expr");
 // GoogleIamV1Binding
 /**
  * Associates `members`, or principals, with a `role`.
@@ -34,17 +37,17 @@ var GoogleIamV1Binding = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=condition" }),
-        __metadata("design:type", Expr)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=condition" }),
+        __metadata("design:type", expr_1.Expr)
     ], GoogleIamV1Binding.prototype, "condition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members" }),
         __metadata("design:type", Array)
     ], GoogleIamV1Binding.prototype, "members", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], GoogleIamV1Binding.prototype, "role", void 0);
     return GoogleIamV1Binding;
-}(SpeakeasyBase));
-export { GoogleIamV1Binding };
+}(utils_1.SpeakeasyBase));
+exports.GoogleIamV1Binding = GoogleIamV1Binding;

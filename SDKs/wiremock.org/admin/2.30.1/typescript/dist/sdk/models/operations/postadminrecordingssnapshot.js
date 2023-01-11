@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAdminRecordingsSnapshotResponse = exports.PostAdminRecordingsSnapshotRequest = exports.PostAdminRecordingsSnapshot200ApplicationJson = exports.PostAdminRecordingsSnapshot200ApplicationJsonMeta = exports.PostAdminRecordingsSnapshot200ApplicationJsonMappings = exports.PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse = exports.PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponseFaultEnum = exports.PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest = exports.PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequestBasicAuthCredentials = exports.PostAdminRecordingsSnapshotRequestBody = exports.PostAdminRecordingsSnapshotRequestBodyFilters = exports.PostAdminRecordingsSnapshotRequestBodyFiltersBasicAuthCredentials = exports.PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria = exports.PostAdminRecordingsSnapshotRequestBodyCaptureHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAdminRecordingsSnapshotRequestBodyCaptureHeaders = /** @class */ (function (_super) {
     __extends(PostAdminRecordingsSnapshotRequestBodyCaptureHeaders, _super);
     function PostAdminRecordingsSnapshotRequestBodyCaptureHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caseInsensitive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caseInsensitive" }),
         __metadata("design:type", Boolean)
     ], PostAdminRecordingsSnapshotRequestBodyCaptureHeaders.prototype, "caseInsensitive", void 0);
     return PostAdminRecordingsSnapshotRequestBodyCaptureHeaders;
-}(SpeakeasyBase));
-export { PostAdminRecordingsSnapshotRequestBodyCaptureHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsSnapshotRequestBodyCaptureHeaders = PostAdminRecordingsSnapshotRequestBodyCaptureHeaders;
 // PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria
 /**
  * Criteria for extracting response bodies to a separate file instead of including it in the stub mapping
@@ -45,16 +48,16 @@ var PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria = /** @class */ (f
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=binarySizeThreshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=binarySizeThreshold" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria.prototype, "binarySizeThreshold", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textSizeThreshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textSizeThreshold" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria.prototype, "textSizeThreshold", void 0);
     return PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria;
-}(SpeakeasyBase));
-export { PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria = PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria;
 // PostAdminRecordingsSnapshotRequestBodyFiltersBasicAuthCredentials
 /**
  * Pre-emptive basic auth credentials to match against
@@ -65,108 +68,112 @@ var PostAdminRecordingsSnapshotRequestBodyFiltersBasicAuthCredentials = /** @cla
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshotRequestBodyFiltersBasicAuthCredentials.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshotRequestBodyFiltersBasicAuthCredentials.prototype, "username", void 0);
     return PostAdminRecordingsSnapshotRequestBodyFiltersBasicAuthCredentials;
-}(SpeakeasyBase));
-export { PostAdminRecordingsSnapshotRequestBodyFiltersBasicAuthCredentials };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsSnapshotRequestBodyFiltersBasicAuthCredentials = PostAdminRecordingsSnapshotRequestBodyFiltersBasicAuthCredentials;
+// PostAdminRecordingsSnapshotRequestBodyFilters
+/**
+ * Filter requests for which to create stub mapping
+**/
 var PostAdminRecordingsSnapshotRequestBodyFilters = /** @class */ (function (_super) {
     __extends(PostAdminRecordingsSnapshotRequestBodyFilters, _super);
     function PostAdminRecordingsSnapshotRequestBodyFilters() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=basicAuthCredentials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=basicAuthCredentials" }),
         __metadata("design:type", PostAdminRecordingsSnapshotRequestBodyFiltersBasicAuthCredentials)
     ], PostAdminRecordingsSnapshotRequestBodyFilters.prototype, "basicAuthCredentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bodyPatterns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bodyPatterns" }),
         __metadata("design:type", Array)
     ], PostAdminRecordingsSnapshotRequestBodyFilters.prototype, "bodyPatterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cookies" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cookies" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsSnapshotRequestBodyFilters.prototype, "cookies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsSnapshotRequestBodyFilters.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ids" }),
         __metadata("design:type", Array)
     ], PostAdminRecordingsSnapshotRequestBodyFilters.prototype, "ids", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshotRequestBodyFilters.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryParameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryParameters" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsSnapshotRequestBodyFilters.prototype, "queryParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshotRequestBodyFilters.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlPath" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshotRequestBodyFilters.prototype, "urlPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlPathPattern" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlPathPattern" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshotRequestBodyFilters.prototype, "urlPathPattern", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlPattern" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlPattern" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshotRequestBodyFilters.prototype, "urlPattern", void 0);
     return PostAdminRecordingsSnapshotRequestBodyFilters;
-}(SpeakeasyBase));
-export { PostAdminRecordingsSnapshotRequestBodyFilters };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsSnapshotRequestBodyFilters = PostAdminRecordingsSnapshotRequestBodyFilters;
 var PostAdminRecordingsSnapshotRequestBody = /** @class */ (function (_super) {
     __extends(PostAdminRecordingsSnapshotRequestBody, _super);
     function PostAdminRecordingsSnapshotRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=captureHeaders", elemType: PostAdminRecordingsSnapshotRequestBodyCaptureHeaders }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=captureHeaders", elemType: PostAdminRecordingsSnapshotRequestBodyCaptureHeaders }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsSnapshotRequestBody.prototype, "captureHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extractBodyCriteria" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extractBodyCriteria" }),
         __metadata("design:type", PostAdminRecordingsSnapshotRequestBodyExtractBodyCriteria)
     ], PostAdminRecordingsSnapshotRequestBody.prototype, "extractBodyCriteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filters" }),
         __metadata("design:type", PostAdminRecordingsSnapshotRequestBodyFilters)
     ], PostAdminRecordingsSnapshotRequestBody.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=persist" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=persist" }),
         __metadata("design:type", Boolean)
     ], PostAdminRecordingsSnapshotRequestBody.prototype, "persist", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repeatsAsScenarios" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repeatsAsScenarios" }),
         __metadata("design:type", Boolean)
     ], PostAdminRecordingsSnapshotRequestBody.prototype, "repeatsAsScenarios", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestBodyPattern" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestBodyPattern" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsSnapshotRequestBody.prototype, "requestBodyPattern", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transformerParameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transformerParameters" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsSnapshotRequestBody.prototype, "transformerParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transformers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transformers" }),
         __metadata("design:type", Array)
     ], PostAdminRecordingsSnapshotRequestBody.prototype, "transformers", void 0);
     return PostAdminRecordingsSnapshotRequestBody;
-}(SpeakeasyBase));
-export { PostAdminRecordingsSnapshotRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsSnapshotRequestBody = PostAdminRecordingsSnapshotRequestBody;
 // PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequestBasicAuthCredentials
 /**
  * Pre-emptive basic auth credentials to match against
@@ -177,248 +184,248 @@ var PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequestBasicAuthCredent
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequestBasicAuthCredentials.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequestBasicAuthCredentials.prototype, "username", void 0);
     return PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequestBasicAuthCredentials;
-}(SpeakeasyBase));
-export { PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequestBasicAuthCredentials };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequestBasicAuthCredentials = PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequestBasicAuthCredentials;
 var PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest = /** @class */ (function (_super) {
     __extends(PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest, _super);
     function PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=basicAuthCredentials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=basicAuthCredentials" }),
         __metadata("design:type", PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequestBasicAuthCredentials)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest.prototype, "basicAuthCredentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bodyPatterns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bodyPatterns" }),
         __metadata("design:type", Array)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest.prototype, "bodyPatterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cookies" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cookies" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest.prototype, "cookies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryParameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryParameters" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest.prototype, "queryParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlPath" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest.prototype, "urlPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlPathPattern" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlPathPattern" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest.prototype, "urlPathPattern", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlPattern" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlPattern" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest.prototype, "urlPattern", void 0);
     return PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest;
-}(SpeakeasyBase));
-export { PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest };
-export var PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponseFaultEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest = PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest;
+var PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponseFaultEnum;
 (function (PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponseFaultEnum) {
     PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponseFaultEnum["ConnectionResetByPeer"] = "CONNECTION_RESET_BY_PEER";
     PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponseFaultEnum["EmptyResponse"] = "EMPTY_RESPONSE";
     PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponseFaultEnum["MalformedResponseChunk"] = "MALFORMED_RESPONSE_CHUNK";
     PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponseFaultEnum["RandomDataThenClose"] = "RANDOM_DATA_THEN_CLOSE";
-})(PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponseFaultEnum || (PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponseFaultEnum = {}));
+})(PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponseFaultEnum = exports.PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponseFaultEnum || (exports.PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponseFaultEnum = {}));
 var PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse = /** @class */ (function (_super) {
     __extends(PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse, _super);
     function PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalProxyRequestHeaders" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalProxyRequestHeaders" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse.prototype, "additionalProxyRequestHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=base64Body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=base64Body" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse.prototype, "base64Body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bodyFileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bodyFileName" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse.prototype, "bodyFileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fault" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fault" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse.prototype, "fault", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fixedDelayMilliseconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fixedDelayMilliseconds" }),
         __metadata("design:type", Number)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse.prototype, "fixedDelayMilliseconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromConfiguredStub" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromConfiguredStub" }),
         __metadata("design:type", Boolean)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse.prototype, "fromConfiguredStub", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jsonBody" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jsonBody" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse.prototype, "jsonBody", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proxyBaseUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proxyBaseUrl" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse.prototype, "proxyBaseUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Number)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusMessage" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse.prototype, "statusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transformerParameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transformerParameters" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse.prototype, "transformerParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transformers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transformers" }),
         __metadata("design:type", Array)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse.prototype, "transformers", void 0);
     return PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse;
-}(SpeakeasyBase));
-export { PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse = PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse;
 var PostAdminRecordingsSnapshot200ApplicationJsonMappings = /** @class */ (function (_super) {
     __extends(PostAdminRecordingsSnapshot200ApplicationJsonMappings, _super);
     function PostAdminRecordingsSnapshot200ApplicationJsonMappings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappings.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappings.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappings.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newScenarioState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newScenarioState" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappings.prototype, "newScenarioState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=persistent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=persistent" }),
         __metadata("design:type", Boolean)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappings.prototype, "persistent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postServeActions" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postServeActions" }),
+        __metadata("design:type", Object)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappings.prototype, "postServeActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", Number)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappings.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=request" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=request" }),
         __metadata("design:type", PostAdminRecordingsSnapshot200ApplicationJsonMappingsRequest)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappings.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requiredScenarioState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requiredScenarioState" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappings.prototype, "requiredScenarioState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=response" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=response" }),
         __metadata("design:type", PostAdminRecordingsSnapshot200ApplicationJsonMappingsResponse)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappings.prototype, "response", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scenarioName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scenarioName" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappings.prototype, "scenarioName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uuid" }),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMappings.prototype, "uuid", void 0);
     return PostAdminRecordingsSnapshot200ApplicationJsonMappings;
-}(SpeakeasyBase));
-export { PostAdminRecordingsSnapshot200ApplicationJsonMappings };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsSnapshot200ApplicationJsonMappings = PostAdminRecordingsSnapshot200ApplicationJsonMappings;
 var PostAdminRecordingsSnapshot200ApplicationJsonMeta = /** @class */ (function (_super) {
     __extends(PostAdminRecordingsSnapshot200ApplicationJsonMeta, _super);
     function PostAdminRecordingsSnapshot200ApplicationJsonMeta() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], PostAdminRecordingsSnapshot200ApplicationJsonMeta.prototype, "total", void 0);
     return PostAdminRecordingsSnapshot200ApplicationJsonMeta;
-}(SpeakeasyBase));
-export { PostAdminRecordingsSnapshot200ApplicationJsonMeta };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsSnapshot200ApplicationJsonMeta = PostAdminRecordingsSnapshot200ApplicationJsonMeta;
 var PostAdminRecordingsSnapshot200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostAdminRecordingsSnapshot200ApplicationJson, _super);
     function PostAdminRecordingsSnapshot200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mappings", elemType: PostAdminRecordingsSnapshot200ApplicationJsonMappings }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mappings", elemType: PostAdminRecordingsSnapshot200ApplicationJsonMappings }),
         __metadata("design:type", Array)
     ], PostAdminRecordingsSnapshot200ApplicationJson.prototype, "mappings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", PostAdminRecordingsSnapshot200ApplicationJsonMeta)
     ], PostAdminRecordingsSnapshot200ApplicationJson.prototype, "meta", void 0);
     return PostAdminRecordingsSnapshot200ApplicationJson;
-}(SpeakeasyBase));
-export { PostAdminRecordingsSnapshot200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsSnapshot200ApplicationJson = PostAdminRecordingsSnapshot200ApplicationJson;
 var PostAdminRecordingsSnapshotRequest = /** @class */ (function (_super) {
     __extends(PostAdminRecordingsSnapshotRequest, _super);
     function PostAdminRecordingsSnapshotRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostAdminRecordingsSnapshotRequestBody)
     ], PostAdminRecordingsSnapshotRequest.prototype, "request", void 0);
     return PostAdminRecordingsSnapshotRequest;
-}(SpeakeasyBase));
-export { PostAdminRecordingsSnapshotRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsSnapshotRequest = PostAdminRecordingsSnapshotRequest;
 var PostAdminRecordingsSnapshotResponse = /** @class */ (function (_super) {
     __extends(PostAdminRecordingsSnapshotResponse, _super);
     function PostAdminRecordingsSnapshotResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAdminRecordingsSnapshotResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostAdminRecordingsSnapshot200ApplicationJson)
-    ], PostAdminRecordingsSnapshotResponse.prototype, "postAdminRecordingsSnapshot200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAdminRecordingsSnapshotResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostAdminRecordingsSnapshot200ApplicationJson)
+    ], PostAdminRecordingsSnapshotResponse.prototype, "postAdminRecordingsSnapshot200ApplicationJSONObject", void 0);
     return PostAdminRecordingsSnapshotResponse;
-}(SpeakeasyBase));
-export { PostAdminRecordingsSnapshotResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAdminRecordingsSnapshotResponse = PostAdminRecordingsSnapshotResponse;

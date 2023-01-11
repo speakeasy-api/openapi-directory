@@ -1,4 +1,7 @@
-export var SavingsPlanStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SavingsPlanStateEnum = void 0;
+var SavingsPlanStateEnum;
 (function (SavingsPlanStateEnum) {
     SavingsPlanStateEnum["PaymentPending"] = "payment-pending";
     SavingsPlanStateEnum["PaymentFailed"] = "payment-failed";
@@ -6,4 +9,4 @@ export var SavingsPlanStateEnum;
     SavingsPlanStateEnum["Retired"] = "retired";
     SavingsPlanStateEnum["Queued"] = "queued";
     SavingsPlanStateEnum["QueuedDeleted"] = "queued-deleted";
-})(SavingsPlanStateEnum || (SavingsPlanStateEnum = {}));
+})(SavingsPlanStateEnum = exports.SavingsPlanStateEnum || (exports.SavingsPlanStateEnum = {}));

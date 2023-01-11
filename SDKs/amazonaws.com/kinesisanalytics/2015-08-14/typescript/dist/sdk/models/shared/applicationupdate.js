@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudWatchLoggingOptionUpdate } from "./cloudwatchloggingoptionupdate";
-import { InputUpdate } from "./inputupdate";
-import { OutputUpdate } from "./outputupdate";
-import { ReferenceDataSourceUpdate } from "./referencedatasourceupdate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudwatchloggingoptionupdate_1 = require("./cloudwatchloggingoptionupdate");
+var inputupdate_1 = require("./inputupdate");
+var outputupdate_1 = require("./outputupdate");
+var referencedatasourceupdate_1 = require("./referencedatasourceupdate");
 // ApplicationUpdate
 /**
  * Describes updates to apply to an existing Amazon Kinesis Analytics application.
@@ -37,25 +40,25 @@ var ApplicationUpdate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationCodeUpdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationCodeUpdate" }),
         __metadata("design:type", String)
     ], ApplicationUpdate.prototype, "applicationCodeUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CloudWatchLoggingOptionUpdates", elemType: CloudWatchLoggingOptionUpdate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CloudWatchLoggingOptionUpdates", elemType: cloudwatchloggingoptionupdate_1.CloudWatchLoggingOptionUpdate }),
         __metadata("design:type", Array)
     ], ApplicationUpdate.prototype, "cloudWatchLoggingOptionUpdates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InputUpdates", elemType: InputUpdate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InputUpdates", elemType: inputupdate_1.InputUpdate }),
         __metadata("design:type", Array)
     ], ApplicationUpdate.prototype, "inputUpdates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OutputUpdates", elemType: OutputUpdate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OutputUpdates", elemType: outputupdate_1.OutputUpdate }),
         __metadata("design:type", Array)
     ], ApplicationUpdate.prototype, "outputUpdates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReferenceDataSourceUpdates", elemType: ReferenceDataSourceUpdate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReferenceDataSourceUpdates", elemType: referencedatasourceupdate_1.ReferenceDataSourceUpdate }),
         __metadata("design:type", Array)
     ], ApplicationUpdate.prototype, "referenceDataSourceUpdates", void 0);
     return ApplicationUpdate;
-}(SpeakeasyBase));
-export { ApplicationUpdate };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationUpdate = ApplicationUpdate;

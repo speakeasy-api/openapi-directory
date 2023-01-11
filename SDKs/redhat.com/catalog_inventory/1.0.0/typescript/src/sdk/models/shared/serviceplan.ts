@@ -7,7 +7,7 @@ export class ServicePlan extends SpeakeasyBase {
   archivedAt?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=create_json_schema" })
-  createJsonSchema?: Map<string, any>;
+  createJsonSchema?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=created_at" })
   createdAt?: Date;
@@ -16,7 +16,7 @@ export class ServicePlan extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extra" })
-  extra?: Map<string, any>;
+  extra?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;

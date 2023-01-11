@@ -41,7 +41,7 @@ export class CreateGroupCategoryResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createGroupCategory200ApplicationJsonObject?: CreateGroupCategory200ApplicationJson;
+  createGroupCategory200ApplicationJSONObject?: CreateGroupCategory200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

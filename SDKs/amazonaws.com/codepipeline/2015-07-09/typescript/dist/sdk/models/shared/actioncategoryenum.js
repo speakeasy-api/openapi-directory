@@ -1,4 +1,7 @@
-export var ActionCategoryEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionCategoryEnum = void 0;
+var ActionCategoryEnum;
 (function (ActionCategoryEnum) {
     ActionCategoryEnum["Source"] = "Source";
     ActionCategoryEnum["Build"] = "Build";
@@ -6,4 +9,4 @@ export var ActionCategoryEnum;
     ActionCategoryEnum["Test"] = "Test";
     ActionCategoryEnum["Invoke"] = "Invoke";
     ActionCategoryEnum["Approval"] = "Approval";
-})(ActionCategoryEnum || (ActionCategoryEnum = {}));
+})(ActionCategoryEnum = exports.ActionCategoryEnum || (exports.ActionCategoryEnum = {}));

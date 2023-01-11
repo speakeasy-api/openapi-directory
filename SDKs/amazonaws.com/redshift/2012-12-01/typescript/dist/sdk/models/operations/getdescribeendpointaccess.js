@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,124 +23,126 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeEndpointAccessActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeEndpointAccessResponse = exports.GetDescribeEndpointAccessRequest = exports.GetDescribeEndpointAccessHeaders = exports.GetDescribeEndpointAccessQueryParams = exports.GetDescribeEndpointAccessVersionEnum = exports.GetDescribeEndpointAccessActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeEndpointAccessActionEnum;
 (function (GetDescribeEndpointAccessActionEnum) {
     GetDescribeEndpointAccessActionEnum["DescribeEndpointAccess"] = "DescribeEndpointAccess";
-})(GetDescribeEndpointAccessActionEnum || (GetDescribeEndpointAccessActionEnum = {}));
-export var GetDescribeEndpointAccessVersionEnum;
+})(GetDescribeEndpointAccessActionEnum = exports.GetDescribeEndpointAccessActionEnum || (exports.GetDescribeEndpointAccessActionEnum = {}));
+var GetDescribeEndpointAccessVersionEnum;
 (function (GetDescribeEndpointAccessVersionEnum) {
     GetDescribeEndpointAccessVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(GetDescribeEndpointAccessVersionEnum || (GetDescribeEndpointAccessVersionEnum = {}));
+})(GetDescribeEndpointAccessVersionEnum = exports.GetDescribeEndpointAccessVersionEnum || (exports.GetDescribeEndpointAccessVersionEnum = {}));
 var GetDescribeEndpointAccessQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeEndpointAccessQueryParams, _super);
     function GetDescribeEndpointAccessQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAccessQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ClusterIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ClusterIdentifier" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAccessQueryParams.prototype, "clusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EndpointName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EndpointName" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAccessQueryParams.prototype, "endpointName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAccessQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", Number)
     ], GetDescribeEndpointAccessQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ResourceOwner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ResourceOwner" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAccessQueryParams.prototype, "resourceOwner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAccessQueryParams.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=VpcId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=VpcId" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAccessQueryParams.prototype, "vpcId", void 0);
     return GetDescribeEndpointAccessQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeEndpointAccessQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeEndpointAccessQueryParams = GetDescribeEndpointAccessQueryParams;
 var GetDescribeEndpointAccessHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeEndpointAccessHeaders, _super);
     function GetDescribeEndpointAccessHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAccessHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAccessHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAccessHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAccessHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAccessHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAccessHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeEndpointAccessHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeEndpointAccessHeaders;
-}(SpeakeasyBase));
-export { GetDescribeEndpointAccessHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeEndpointAccessHeaders = GetDescribeEndpointAccessHeaders;
 var GetDescribeEndpointAccessRequest = /** @class */ (function (_super) {
     __extends(GetDescribeEndpointAccessRequest, _super);
     function GetDescribeEndpointAccessRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeEndpointAccessQueryParams)
     ], GetDescribeEndpointAccessRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeEndpointAccessHeaders)
     ], GetDescribeEndpointAccessRequest.prototype, "headers", void 0);
     return GetDescribeEndpointAccessRequest;
-}(SpeakeasyBase));
-export { GetDescribeEndpointAccessRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeEndpointAccessRequest = GetDescribeEndpointAccessRequest;
 var GetDescribeEndpointAccessResponse = /** @class */ (function (_super) {
     __extends(GetDescribeEndpointAccessResponse, _super);
     function GetDescribeEndpointAccessResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeEndpointAccessResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeEndpointAccessResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeEndpointAccessResponse.prototype, "statusCode", void 0);
     return GetDescribeEndpointAccessResponse;
-}(SpeakeasyBase));
-export { GetDescribeEndpointAccessResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeEndpointAccessResponse = GetDescribeEndpointAccessResponse;

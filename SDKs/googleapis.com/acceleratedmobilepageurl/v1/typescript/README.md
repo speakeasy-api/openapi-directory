@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AcceleratedmobilepageurlAmpUrlsBatchGetRequest, AcceleratedmobilepageurlAmpUrlsBatchGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,22 +28,24 @@ const sdk = new SDK();
     
 const req: AcceleratedmobilepageurlAmpUrlsBatchGetRequest = {
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "et",
-    alt: "proto",
-    callback: "delectus",
-    fields: "omnis",
-    key: "molestiae",
-    oauthToken: "repudiandae",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
     prettyPrint: true,
-    quotaUser: "odio",
-    uploadType: "doloremque",
-    uploadProtocol: "provident",
+    quotaUser: "fugit",
+    uploadType: "et",
+    uploadProtocol: "nihil",
   },
   request: {
-    lookupStrategy: "FETCH_LIVE_DOC",
+    lookupStrategy: "IN_INDEX_DOC",
     urls: [
-      "rem",
+      "debitis",
+      "voluptatum",
+      "et",
     ],
   },
 };

@@ -8,7 +8,7 @@ export class AddMediaIntentHandlingInvocation extends SpeakeasyBase {
   method: string;
 
   @SpeakeasyMetadata({ data: "json, name=params" })
-  params: Map<string, any>;
+  params: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=session" })
   session?: Session;

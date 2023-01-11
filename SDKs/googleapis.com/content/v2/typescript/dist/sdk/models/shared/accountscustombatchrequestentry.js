@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Account } from "./account";
-import { AccountsCustomBatchRequestEntryLinkRequest } from "./accountscustombatchrequestentrylinkrequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountsCustomBatchRequestEntry = void 0;
+var utils_1 = require("../../../internal/utils");
+var account_1 = require("./account");
+var accountscustombatchrequestentrylinkrequest_1 = require("./accountscustombatchrequestentrylinkrequest");
 // AccountsCustomBatchRequestEntry
 /**
  * A batch entry encoding a single non-batch accounts request.
@@ -35,41 +38,41 @@ var AccountsCustomBatchRequestEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
-        __metadata("design:type", Account)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
+        __metadata("design:type", account_1.Account)
     ], AccountsCustomBatchRequestEntry.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], AccountsCustomBatchRequestEntry.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchId" }),
         __metadata("design:type", Number)
     ], AccountsCustomBatchRequestEntry.prototype, "batchId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=force" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=force" }),
         __metadata("design:type", Boolean)
     ], AccountsCustomBatchRequestEntry.prototype, "force", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelIds" }),
         __metadata("design:type", Array)
     ], AccountsCustomBatchRequestEntry.prototype, "labelIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkRequest" }),
-        __metadata("design:type", AccountsCustomBatchRequestEntryLinkRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkRequest" }),
+        __metadata("design:type", accountscustombatchrequestentrylinkrequest_1.AccountsCustomBatchRequestEntryLinkRequest)
     ], AccountsCustomBatchRequestEntry.prototype, "linkRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantId" }),
         __metadata("design:type", String)
     ], AccountsCustomBatchRequestEntry.prototype, "merchantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], AccountsCustomBatchRequestEntry.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overwrite" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overwrite" }),
         __metadata("design:type", Boolean)
     ], AccountsCustomBatchRequestEntry.prototype, "overwrite", void 0);
     return AccountsCustomBatchRequestEntry;
-}(SpeakeasyBase));
-export { AccountsCustomBatchRequestEntry };
+}(utils_1.SpeakeasyBase));
+exports.AccountsCustomBatchRequestEntry = AccountsCustomBatchRequestEntry;

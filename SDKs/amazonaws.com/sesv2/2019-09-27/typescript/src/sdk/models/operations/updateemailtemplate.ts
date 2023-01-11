@@ -83,5 +83,5 @@ export class UpdateEmailTemplateResponse extends SpeakeasyBase {
   tooManyRequestsException?: any;
 
   @SpeakeasyMetadata()
-  updateEmailTemplateResponse?: Map<string, any>;
+  updateEmailTemplateResponse?: Record<string, any>;
 }

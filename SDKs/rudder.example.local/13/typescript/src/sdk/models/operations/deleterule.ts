@@ -50,5 +50,5 @@ export class DeleteRuleResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteRule200ApplicationJsonObject?: DeleteRule200ApplicationJson;
+  deleteRule200ApplicationJSONObject?: DeleteRule200ApplicationJson;
 }

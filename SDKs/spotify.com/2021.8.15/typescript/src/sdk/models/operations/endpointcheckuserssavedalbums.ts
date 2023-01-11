@@ -44,5 +44,5 @@ export class EndpointCheckUsersSavedAlbumsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  endpointCheckUsersSavedAlbums200ApplicationJsonBooleans?: boolean[];
+  endpointCheckUsersSavedAlbums200ApplicationJSONBooleans?: boolean[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EncryptionKey } from "./encryptionkey";
-import { ArtifactStoreTypeEnum } from "./artifactstoretypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtifactStore = void 0;
+var utils_1 = require("../../../internal/utils");
+var encryptionkey_1 = require("./encryptionkey");
+var artifactstoretypeenum_1 = require("./artifactstoretypeenum");
 // ArtifactStore
 /**
  * <p>The S3 bucket where artifacts for the pipeline are stored.</p> <note> <p>You must include either <code>artifactStore</code> or <code>artifactStores</code> in your pipeline, but you cannot use both. If you create a cross-region action in your pipeline, you must use <code>artifactStores</code>.</p> </note>
@@ -35,17 +38,17 @@ var ArtifactStore = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionKey" }),
-        __metadata("design:type", EncryptionKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionKey" }),
+        __metadata("design:type", encryptionkey_1.EncryptionKey)
     ], ArtifactStore.prototype, "encryptionKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], ArtifactStore.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ArtifactStore.prototype, "type", void 0);
     return ArtifactStore;
-}(SpeakeasyBase));
-export { ArtifactStore };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactStore = ArtifactStore;

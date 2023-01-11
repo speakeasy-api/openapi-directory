@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ScheduledAction } from "./scheduledaction";
+import { ScheduledActionList } from "./scheduledactionlist";
 export declare class ScheduledActionsMessage extends SpeakeasyBase {
     marker?: string;
-    scheduledActions?: ScheduledAction[];
+    scheduledActions?: ScheduledActionList[];
 }

@@ -4,6 +4,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class InfoResponse extends SpeakeasyBase {
     bbox?: string;
-    features?: Map<string, any>;
+    features?: Record<string, any>;
     version?: string;
 }

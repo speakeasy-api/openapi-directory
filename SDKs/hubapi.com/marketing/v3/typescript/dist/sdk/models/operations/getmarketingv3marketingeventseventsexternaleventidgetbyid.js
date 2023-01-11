@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,102 +14,123 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse = exports.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest = exports.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity = exports.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdQueryParams = exports.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdPathParams = /** @class */ (function (_super) {
     __extends(GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdPathParams, _super);
     function GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=externalEventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=externalEventId" }),
         __metadata("design:type", String)
     ], GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdPathParams.prototype, "externalEventId", void 0);
     return GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdPathParams;
-}(SpeakeasyBase));
-export { GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdPathParams = GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdPathParams;
 var GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdQueryParams = /** @class */ (function (_super) {
     __extends(GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdQueryParams, _super);
     function GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=externalAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=externalAccountId" }),
         __metadata("design:type", String)
     ], GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdQueryParams.prototype, "externalAccountId", void 0);
     return GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdQueryParams;
-}(SpeakeasyBase));
-export { GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdQueryParams = GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdQueryParams;
 var GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity = /** @class */ (function (_super) {
     __extends(GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity, _super);
     function GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=query" }),
-        __metadata("design:type", shared.SchemeHapikey)
-    ], GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity.prototype, "hapikey", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2Legacy)
     ], GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity.prototype, "oauth2Legacy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemePrivateAppsLegacy)
     ], GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity.prototype, "privateAppsLegacy", void 0);
     return GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity;
-}(SpeakeasyBase));
-export { GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity };
+}(utils_1.SpeakeasyBase));
+exports.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity = GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity;
 var GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest = /** @class */ (function (_super) {
     __extends(GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest, _super);
     function GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdPathParams)
     ], GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdQueryParams)
     ], GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity)
     ], GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest.prototype, "security", void 0);
     return GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest;
-}(SpeakeasyBase));
-export { GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest = GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest;
 var GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse = /** @class */ (function (_super) {
     __extends(GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse, _super);
     function GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.MarketingEventPublicReadResponse)
     ], GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse.prototype, "marketingEventPublicReadResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse.prototype, "statusCode", void 0);
     return GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse;
-}(SpeakeasyBase));
-export { GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse = GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse;

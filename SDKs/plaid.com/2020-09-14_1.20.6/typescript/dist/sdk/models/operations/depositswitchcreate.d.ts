@@ -5,6 +5,6 @@ export declare class DepositSwitchCreateRequest extends SpeakeasyBase {
 }
 export declare class DepositSwitchCreateResponse extends SpeakeasyBase {
     contentType: string;
-    depositSwitchCreateResponse?: Map<string, any>;
+    depositSwitchCreateResponse?: Record<string, any>;
     statusCode: number;
 }

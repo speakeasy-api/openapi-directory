@@ -6,7 +6,7 @@ export declare class PatchChargeStationPathParams extends SpeakeasyBase {
 export declare class PatchChargeStation200ApplicationJson extends SpeakeasyBase {
     message?: string;
     ok?: boolean;
-    result?: Map<string, any>;
+    result?: Record<string, any>;
 }
 export declare class PatchChargeStationRequest extends SpeakeasyBase {
     pathParams: PatchChargeStationPathParams;
@@ -15,5 +15,5 @@ export declare class PatchChargeStationRequest extends SpeakeasyBase {
 export declare class PatchChargeStationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    patchChargeStation200ApplicationJsonObject?: PatchChargeStation200ApplicationJson;
+    patchChargeStation200ApplicationJSONObject?: PatchChargeStation200ApplicationJson;
 }

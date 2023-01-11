@@ -16,5 +16,5 @@ export declare class LockNetworkSmDevicesRequest extends SpeakeasyBase {
 export declare class LockNetworkSmDevicesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    lockNetworkSmDevices200ApplicationJsonObject?: Map<string, any>;
+    lockNetworkSmDevices200ApplicationJSONObject?: Record<string, any>;
 }

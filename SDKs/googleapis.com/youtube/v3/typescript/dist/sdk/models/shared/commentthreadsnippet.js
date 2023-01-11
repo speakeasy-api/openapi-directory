@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Comment } from "./comment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommentThreadSnippet = void 0;
+var utils_1 = require("../../../internal/utils");
+var comment_1 = require("./comment");
 // CommentThreadSnippet
 /**
  * Basic details about a comment thread.
@@ -34,29 +37,29 @@ var CommentThreadSnippet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canReply" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canReply" }),
         __metadata("design:type", Boolean)
     ], CommentThreadSnippet.prototype, "canReply", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelId" }),
         __metadata("design:type", String)
     ], CommentThreadSnippet.prototype, "channelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isPublic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isPublic" }),
         __metadata("design:type", Boolean)
     ], CommentThreadSnippet.prototype, "isPublic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topLevelComment" }),
-        __metadata("design:type", Comment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topLevelComment" }),
+        __metadata("design:type", comment_1.Comment)
     ], CommentThreadSnippet.prototype, "topLevelComment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalReplyCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalReplyCount" }),
         __metadata("design:type", Number)
     ], CommentThreadSnippet.prototype, "totalReplyCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoId" }),
         __metadata("design:type", String)
     ], CommentThreadSnippet.prototype, "videoId", void 0);
     return CommentThreadSnippet;
-}(SpeakeasyBase));
-export { CommentThreadSnippet };
+}(utils_1.SpeakeasyBase));
+exports.CommentThreadSnippet = CommentThreadSnippet;

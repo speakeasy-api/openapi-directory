@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TeamSimple } from "./teamsimple";
-import { SimpleUser } from "./simpleuser";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PullRequestReviewRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var teamsimple_1 = require("./teamsimple");
+var simpleuser_1 = require("./simpleuser");
 // PullRequestReviewRequest
 /**
  * Pull Request Review Request
@@ -35,13 +38,13 @@ var PullRequestReviewRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teams", elemType: TeamSimple }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teams", elemType: teamsimple_1.TeamSimple }),
         __metadata("design:type", Array)
     ], PullRequestReviewRequest.prototype, "teams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=users", elemType: SimpleUser }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=users", elemType: simpleuser_1.SimpleUser }),
         __metadata("design:type", Array)
     ], PullRequestReviewRequest.prototype, "users", void 0);
     return PullRequestReviewRequest;
-}(SpeakeasyBase));
-export { PullRequestReviewRequest };
+}(utils_1.SpeakeasyBase));
+exports.PullRequestReviewRequest = PullRequestReviewRequest;

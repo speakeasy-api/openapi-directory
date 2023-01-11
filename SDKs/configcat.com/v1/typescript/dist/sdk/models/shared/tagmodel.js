@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProductModel } from "./productmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var productmodel_1 = require("./productmodel");
 var TagModel = /** @class */ (function (_super) {
     __extends(TagModel, _super);
     function TagModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
         __metadata("design:type", String)
     ], TagModel.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TagModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=product" }),
-        __metadata("design:type", ProductModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=product" }),
+        __metadata("design:type", productmodel_1.ProductModel)
     ], TagModel.prototype, "product", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagId" }),
         __metadata("design:type", Number)
     ], TagModel.prototype, "tagId", void 0);
     return TagModel;
-}(SpeakeasyBase));
-export { TagModel };
+}(utils_1.SpeakeasyBase));
+exports.TagModel = TagModel;

@@ -1,0 +1,38 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var domainsapi_1 = require("./domainsapi");
+var imageapi_1 = require("./imageapi");
+var imageregionproposalapi_1 = require("./imageregionproposalapi");
+var predictionsapi_1 = require("./predictionsapi");
+var projectapi_1 = require("./projectapi");
+var suggesttagsandregionsapi_1 = require("./suggesttagsandregionsapi");
+var tagsapi_1 = require("./tagsapi");
+exports.ServerList = [
+    "https://southcentralus.api.cognitive.microsoft.com/customvision/v3.1/training",
+    "https://{Endpoint}/customvision/v3.1/training",
+];
+var SDK = /** @class */ (function () {
+    function SDK(props) {
+        var _a, _b;
+        this._language = "typescript";
+        this._sdkVersion = "0.0.1";
+        this._genVersion = "internal";
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        this._securityClient = this._defaultClient;
+        this.domainsApi = new domainsapi_1.DomainsApi(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.imageApi = new imageapi_1.ImageApi(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.imageRegionProposalApi = new imageregionproposalapi_1.ImageRegionProposalApi(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.predictionsApi = new predictionsapi_1.PredictionsApi(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.projectApi = new projectapi_1.ProjectApi(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.suggestTagsAndRegionsApi = new suggesttagsandregionsapi_1.SuggestTagsAndRegionsApi(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.tagsApi = new tagsapi_1.TagsApi(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+    }
+    return SDK;
+}());
+exports.SDK = SDK;

@@ -16,6 +16,9 @@ export declare class GistSimpleGistFiles extends SpeakeasyBase {
     size?: number;
     type?: string;
 }
+/**
+ * Simple User
+**/
 export declare class GistSimpleGistSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -46,7 +49,7 @@ export declare class GistSimpleGist extends SpeakeasyBase {
     commitsUrl: string;
     createdAt: Date;
     description: string;
-    files: Map<string, GistSimpleGistFiles>;
+    files: Record<string, GistSimpleGistFiles>;
     forks?: any[];
     forksUrl: string;
     gitPullUrl: string;
@@ -71,13 +74,13 @@ export declare class GistSimple extends SpeakeasyBase {
     commitsUrl?: string;
     createdAt?: string;
     description?: string;
-    files?: Map<string, GistSimpleFiles>;
+    files?: Record<string, GistSimpleFiles>;
     forkOf?: GistSimpleGist;
-    forks?: Map<string, any>[];
+    forks?: Record<string, any>[];
     forksUrl?: string;
     gitPullUrl?: string;
     gitPushUrl?: string;
-    history?: Map<string, any>[];
+    history?: Record<string, any>[];
     htmlUrl?: string;
     id?: string;
     nodeId?: string;

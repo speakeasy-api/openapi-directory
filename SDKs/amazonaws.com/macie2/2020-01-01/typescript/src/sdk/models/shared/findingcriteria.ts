@@ -9,5 +9,5 @@ import { CriterionAdditionalProperties } from "./criterionadditionalproperties";
 **/
 export class FindingCriteria extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=criterion", elemType: CriterionAdditionalProperties })
-  criterion?: Map<string, CriterionAdditionalProperties>;
+  criterion?: Record<string, CriterionAdditionalProperties>;
 }

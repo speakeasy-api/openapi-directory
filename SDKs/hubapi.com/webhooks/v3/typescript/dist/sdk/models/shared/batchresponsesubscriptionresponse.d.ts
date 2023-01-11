@@ -8,7 +8,7 @@ export declare enum BatchResponseSubscriptionResponseStatusEnum {
 }
 export declare class BatchResponseSubscriptionResponse extends SpeakeasyBase {
     completedAt: Date;
-    links?: Map<string, string>;
+    links?: Record<string, string>;
     requestedAt?: Date;
     results: SubscriptionResponse[];
     startedAt: Date;

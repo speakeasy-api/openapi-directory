@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var WorkflowStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkflowInput = exports.Workflow = exports.WorkflowStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var WorkflowStateEnum;
 (function (WorkflowStateEnum) {
     WorkflowStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     WorkflowStateEnum["Active"] = "ACTIVE";
-})(WorkflowStateEnum || (WorkflowStateEnum = {}));
+})(WorkflowStateEnum = exports.WorkflowStateEnum || (exports.WorkflowStateEnum = {}));
 // Workflow
 /**
  * Workflow program to be executed by Workflows.
@@ -38,48 +41,48 @@ var Workflow = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Workflow.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Workflow.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Workflow.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Workflow.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionCreateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionCreateTime" }),
         __metadata("design:type", String)
     ], Workflow.prototype, "revisionCreateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionId" }),
         __metadata("design:type", String)
     ], Workflow.prototype, "revisionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccount" }),
         __metadata("design:type", String)
     ], Workflow.prototype, "serviceAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceContents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceContents" }),
         __metadata("design:type", String)
     ], Workflow.prototype, "sourceContents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Workflow.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Workflow.prototype, "updateTime", void 0);
     return Workflow;
-}(SpeakeasyBase));
-export { Workflow };
+}(utils_1.SpeakeasyBase));
+exports.Workflow = Workflow;
 // WorkflowInput
 /**
  * Workflow program to be executed by Workflows.
@@ -90,25 +93,25 @@ var WorkflowInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], WorkflowInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], WorkflowInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WorkflowInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccount" }),
         __metadata("design:type", String)
     ], WorkflowInput.prototype, "serviceAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceContents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceContents" }),
         __metadata("design:type", String)
     ], WorkflowInput.prototype, "sourceContents", void 0);
     return WorkflowInput;
-}(SpeakeasyBase));
-export { WorkflowInput };
+}(utils_1.SpeakeasyBase));
+exports.WorkflowInput = WorkflowInput;

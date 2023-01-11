@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AmbiguousRoleResolutionTypeEnum } from "./ambiguousroleresolutiontypeenum";
-import { RulesConfigurationType } from "./rulesconfigurationtype";
-import { RoleMappingTypeEnum } from "./rolemappingtypeenum";
-// RoleMapping
-/**
- * A role mapping.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RoleMapping = void 0;
+var utils_1 = require("../../../internal/utils");
+var ambiguousroleresolutiontypeenum_1 = require("./ambiguousroleresolutiontypeenum");
+var rulesconfigurationtype_1 = require("./rulesconfigurationtype");
+var rolemappingtypeenum_1 = require("./rolemappingtypeenum");
 var RoleMapping = /** @class */ (function (_super) {
     __extends(RoleMapping, _super);
     function RoleMapping() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AmbiguousRoleResolution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AmbiguousRoleResolution" }),
         __metadata("design:type", String)
     ], RoleMapping.prototype, "ambiguousRoleResolution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RulesConfiguration" }),
-        __metadata("design:type", RulesConfigurationType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RulesConfiguration" }),
+        __metadata("design:type", rulesconfigurationtype_1.RulesConfigurationType)
     ], RoleMapping.prototype, "rulesConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], RoleMapping.prototype, "type", void 0);
     return RoleMapping;
-}(SpeakeasyBase));
-export { RoleMapping };
+}(utils_1.SpeakeasyBase));
+exports.RoleMapping = RoleMapping;

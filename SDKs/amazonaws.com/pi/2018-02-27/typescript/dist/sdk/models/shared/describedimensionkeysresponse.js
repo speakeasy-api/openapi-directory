@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DimensionKeyDescription } from "./dimensionkeydescription";
-import { ResponsePartitionKey } from "./responsepartitionkey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeDimensionKeysResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimensionkeydescription_1 = require("./dimensionkeydescription");
+var responsepartitionkey_1 = require("./responsepartitionkey");
 var DescribeDimensionKeysResponse = /** @class */ (function (_super) {
     __extends(DescribeDimensionKeysResponse, _super);
     function DescribeDimensionKeysResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AlignedEndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AlignedEndTime" }),
         __metadata("design:type", Date)
     ], DescribeDimensionKeysResponse.prototype, "alignedEndTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AlignedStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AlignedStartTime" }),
         __metadata("design:type", Date)
     ], DescribeDimensionKeysResponse.prototype, "alignedStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Keys", elemType: DimensionKeyDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Keys", elemType: dimensionkeydescription_1.DimensionKeyDescription }),
         __metadata("design:type", Array)
     ], DescribeDimensionKeysResponse.prototype, "keys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeDimensionKeysResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PartitionKeys", elemType: ResponsePartitionKey }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PartitionKeys", elemType: responsepartitionkey_1.ResponsePartitionKey }),
         __metadata("design:type", Array)
     ], DescribeDimensionKeysResponse.prototype, "partitionKeys", void 0);
     return DescribeDimensionKeysResponse;
-}(SpeakeasyBase));
-export { DescribeDimensionKeysResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeDimensionKeysResponse = DescribeDimensionKeysResponse;

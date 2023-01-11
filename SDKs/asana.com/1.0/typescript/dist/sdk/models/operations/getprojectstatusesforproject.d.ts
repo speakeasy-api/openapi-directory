@@ -20,5 +20,5 @@ export declare class GetProjectStatusesForProjectResponse extends SpeakeasyBase 
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getProjectStatusesForProject200ApplicationJsonObject?: GetProjectStatusesForProject200ApplicationJson;
+    getProjectStatusesForProject200ApplicationJSONObject?: GetProjectStatusesForProject200ApplicationJson;
 }

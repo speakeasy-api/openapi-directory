@@ -11,9 +11,9 @@ export declare class GetRecommendationsHeaders extends SpeakeasyBase {
 }
 export declare class GetRecommendationsRequestBody extends SpeakeasyBase {
     campaignArn: string;
-    context?: Map<string, string>;
+    context?: Record<string, string>;
     filterArn?: string;
-    filterValues?: Map<string, string>;
+    filterValues?: Record<string, string>;
     itemId?: string;
     numResults?: number;
     userId?: string;

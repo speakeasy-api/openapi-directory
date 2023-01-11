@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Environment } from "./environment";
-import { RenderingEngine } from "./renderingengine";
-import { RobotSoftwareSuite } from "./robotsoftwaresuite";
-import { SimulationSoftwareSuite } from "./simulationsoftwaresuite";
-import { Source } from "./source";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateSimulationApplicationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var environment_1 = require("./environment");
+var renderingengine_1 = require("./renderingengine");
+var robotsoftwaresuite_1 = require("./robotsoftwaresuite");
+var simulationsoftwaresuite_1 = require("./simulationsoftwaresuite");
+var source_1 = require("./source");
 var CreateSimulationApplicationResponse = /** @class */ (function (_super) {
     __extends(CreateSimulationApplicationResponse, _super);
     function CreateSimulationApplicationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], CreateSimulationApplicationResponse.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
-        __metadata("design:type", Environment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
+        __metadata("design:type", environment_1.Environment)
     ], CreateSimulationApplicationResponse.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedAt" }),
         __metadata("design:type", Date)
     ], CreateSimulationApplicationResponse.prototype, "lastUpdatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateSimulationApplicationResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=renderingEngine" }),
-        __metadata("design:type", RenderingEngine)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=renderingEngine" }),
+        __metadata("design:type", renderingengine_1.RenderingEngine)
     ], CreateSimulationApplicationResponse.prototype, "renderingEngine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionId" }),
         __metadata("design:type", String)
     ], CreateSimulationApplicationResponse.prototype, "revisionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=robotSoftwareSuite" }),
-        __metadata("design:type", RobotSoftwareSuite)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=robotSoftwareSuite" }),
+        __metadata("design:type", robotsoftwaresuite_1.RobotSoftwareSuite)
     ], CreateSimulationApplicationResponse.prototype, "robotSoftwareSuite", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=simulationSoftwareSuite" }),
-        __metadata("design:type", SimulationSoftwareSuite)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=simulationSoftwareSuite" }),
+        __metadata("design:type", simulationsoftwaresuite_1.SimulationSoftwareSuite)
     ], CreateSimulationApplicationResponse.prototype, "simulationSoftwareSuite", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sources", elemType: Source }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sources", elemType: source_1.Source }),
         __metadata("design:type", Array)
     ], CreateSimulationApplicationResponse.prototype, "sources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], CreateSimulationApplicationResponse.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], CreateSimulationApplicationResponse.prototype, "version", void 0);
     return CreateSimulationApplicationResponse;
-}(SpeakeasyBase));
-export { CreateSimulationApplicationResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateSimulationApplicationResponse = CreateSimulationApplicationResponse;

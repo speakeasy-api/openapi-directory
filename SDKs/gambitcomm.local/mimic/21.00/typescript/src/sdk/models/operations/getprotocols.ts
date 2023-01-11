@@ -22,5 +22,5 @@ export class GetProtocolsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getProtocols200ApplicationJsonStrings?: string[];
+  getProtocols200ApplicationJSONStrings?: string[];
 }

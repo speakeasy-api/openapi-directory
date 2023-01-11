@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,42 +14,67 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EditUserResponse = exports.EditUserRequest = exports.EditUserRequestBody = exports.EditUserRequestBodyVideos = exports.EditUserRequestBodyVideosPrivacy = exports.EditUserRequestBodyVideosPrivacyViewEnum = exports.EditUserRequestBodyVideosPrivacyEmbedEnum = exports.EditUserRequestBodyVideosPrivacyCommentsEnum = exports.EditUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var EditUserPathParams = /** @class */ (function (_super) {
     __extends(EditUserPathParams, _super);
     function EditUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=user_id" }),
         __metadata("design:type", Number)
     ], EditUserPathParams.prototype, "userId", void 0);
     return EditUserPathParams;
-}(SpeakeasyBase));
-export { EditUserPathParams };
-export var EditUserRequestBodyVideosPrivacyCommentsEnum;
+}(utils_1.SpeakeasyBase));
+exports.EditUserPathParams = EditUserPathParams;
+var EditUserRequestBodyVideosPrivacyCommentsEnum;
 (function (EditUserRequestBodyVideosPrivacyCommentsEnum) {
     EditUserRequestBodyVideosPrivacyCommentsEnum["Anybody"] = "anybody";
     EditUserRequestBodyVideosPrivacyCommentsEnum["Contacts"] = "contacts";
     EditUserRequestBodyVideosPrivacyCommentsEnum["Nobody"] = "nobody";
-})(EditUserRequestBodyVideosPrivacyCommentsEnum || (EditUserRequestBodyVideosPrivacyCommentsEnum = {}));
-export var EditUserRequestBodyVideosPrivacyEmbedEnum;
+})(EditUserRequestBodyVideosPrivacyCommentsEnum = exports.EditUserRequestBodyVideosPrivacyCommentsEnum || (exports.EditUserRequestBodyVideosPrivacyCommentsEnum = {}));
+var EditUserRequestBodyVideosPrivacyEmbedEnum;
 (function (EditUserRequestBodyVideosPrivacyEmbedEnum) {
     EditUserRequestBodyVideosPrivacyEmbedEnum["Private"] = "private";
     EditUserRequestBodyVideosPrivacyEmbedEnum["Public"] = "public";
     EditUserRequestBodyVideosPrivacyEmbedEnum["Whitelist"] = "whitelist";
-})(EditUserRequestBodyVideosPrivacyEmbedEnum || (EditUserRequestBodyVideosPrivacyEmbedEnum = {}));
-export var EditUserRequestBodyVideosPrivacyViewEnum;
+})(EditUserRequestBodyVideosPrivacyEmbedEnum = exports.EditUserRequestBodyVideosPrivacyEmbedEnum || (exports.EditUserRequestBodyVideosPrivacyEmbedEnum = {}));
+var EditUserRequestBodyVideosPrivacyViewEnum;
 (function (EditUserRequestBodyVideosPrivacyViewEnum) {
     EditUserRequestBodyVideosPrivacyViewEnum["Anybody"] = "anybody";
     EditUserRequestBodyVideosPrivacyViewEnum["Contacts"] = "contacts";
@@ -57,116 +83,116 @@ export var EditUserRequestBodyVideosPrivacyViewEnum;
     EditUserRequestBodyVideosPrivacyViewEnum["Password"] = "password";
     EditUserRequestBodyVideosPrivacyViewEnum["Unlisted"] = "unlisted";
     EditUserRequestBodyVideosPrivacyViewEnum["Users"] = "users";
-})(EditUserRequestBodyVideosPrivacyViewEnum || (EditUserRequestBodyVideosPrivacyViewEnum = {}));
+})(EditUserRequestBodyVideosPrivacyViewEnum = exports.EditUserRequestBodyVideosPrivacyViewEnum || (exports.EditUserRequestBodyVideosPrivacyViewEnum = {}));
 var EditUserRequestBodyVideosPrivacy = /** @class */ (function (_super) {
     __extends(EditUserRequestBodyVideosPrivacy, _super);
     function EditUserRequestBodyVideosPrivacy() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=add" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=add" }),
         __metadata("design:type", Boolean)
     ], EditUserRequestBodyVideosPrivacy.prototype, "add", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", String)
     ], EditUserRequestBodyVideosPrivacy.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download" }),
         __metadata("design:type", Boolean)
     ], EditUserRequestBodyVideosPrivacy.prototype, "download", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=embed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=embed" }),
         __metadata("design:type", String)
     ], EditUserRequestBodyVideosPrivacy.prototype, "embed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=view" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=view" }),
         __metadata("design:type", String)
     ], EditUserRequestBodyVideosPrivacy.prototype, "view", void 0);
     return EditUserRequestBodyVideosPrivacy;
-}(SpeakeasyBase));
-export { EditUserRequestBodyVideosPrivacy };
+}(utils_1.SpeakeasyBase));
+exports.EditUserRequestBodyVideosPrivacy = EditUserRequestBodyVideosPrivacy;
 var EditUserRequestBodyVideos = /** @class */ (function (_super) {
     __extends(EditUserRequestBodyVideos, _super);
     function EditUserRequestBodyVideos() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privacy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privacy" }),
         __metadata("design:type", EditUserRequestBodyVideosPrivacy)
     ], EditUserRequestBodyVideos.prototype, "privacy", void 0);
     return EditUserRequestBodyVideos;
-}(SpeakeasyBase));
-export { EditUserRequestBodyVideos };
+}(utils_1.SpeakeasyBase));
+exports.EditUserRequestBodyVideos = EditUserRequestBodyVideos;
 var EditUserRequestBody = /** @class */ (function (_super) {
     __extends(EditUserRequestBody, _super);
     function EditUserRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bio" }),
         __metadata("design:type", String)
     ], EditUserRequestBody.prototype, "bio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content_filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content_filter" }),
         __metadata("design:type", Array)
     ], EditUserRequestBody.prototype, "contentFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], EditUserRequestBody.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], EditUserRequestBody.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], EditUserRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], EditUserRequestBody.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videos" }),
         __metadata("design:type", EditUserRequestBodyVideos)
     ], EditUserRequestBody.prototype, "videos", void 0);
     return EditUserRequestBody;
-}(SpeakeasyBase));
-export { EditUserRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.EditUserRequestBody = EditUserRequestBody;
 var EditUserRequest = /** @class */ (function (_super) {
     __extends(EditUserRequest, _super);
     function EditUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EditUserPathParams)
     ], EditUserRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/vnd.vimeo.user+json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/vnd.vimeo.user+json" }),
         __metadata("design:type", EditUserRequestBody)
     ], EditUserRequest.prototype, "request", void 0);
     return EditUserRequest;
-}(SpeakeasyBase));
-export { EditUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.EditUserRequest = EditUserRequest;
 var EditUserResponse = /** @class */ (function (_super) {
     __extends(EditUserResponse, _super);
     function EditUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EditUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EditUserResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.User)
     ], EditUserResponse.prototype, "user", void 0);
     return EditUserResponse;
-}(SpeakeasyBase));
-export { EditUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.EditUserResponse = EditUserResponse;

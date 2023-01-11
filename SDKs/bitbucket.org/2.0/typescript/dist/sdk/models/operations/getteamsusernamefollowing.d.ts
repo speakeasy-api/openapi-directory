@@ -15,6 +15,6 @@ export declare class GetTeamsUsernameFollowingRequest extends SpeakeasyBase {
 export declare class GetTeamsUsernameFollowingResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedUsers?: shared.PaginatedUsers;
 }

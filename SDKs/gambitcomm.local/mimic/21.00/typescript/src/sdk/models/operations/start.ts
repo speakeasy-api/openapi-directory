@@ -22,5 +22,5 @@ export class StartResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  start200ApplicationJsonString?: string;
+  start200ApplicationJSONString?: string;
 }

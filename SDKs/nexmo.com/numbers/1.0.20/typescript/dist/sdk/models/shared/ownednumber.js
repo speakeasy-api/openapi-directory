@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Ownednumber = void 0;
+var utils_1 = require("../../../internal/utils");
 var Ownednumber = /** @class */ (function (_super) {
     __extends(Ownednumber, _super);
     function Ownednumber() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], Ownednumber.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=features" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=features" }),
         __metadata("design:type", Array)
     ], Ownednumber.prototype, "features", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messagesCallbackType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messagesCallbackType" }),
         __metadata("design:type", String)
     ], Ownednumber.prototype, "messagesCallbackType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messagesCallbackValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messagesCallbackValue" }),
         __metadata("design:type", String)
     ], Ownednumber.prototype, "messagesCallbackValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=moHttpUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=moHttpUrl" }),
         __metadata("design:type", String)
     ], Ownednumber.prototype, "moHttpUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=msisdn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=msisdn" }),
         __metadata("design:type", String)
     ], Ownednumber.prototype, "msisdn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Ownednumber.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voiceCallbackType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voiceCallbackType" }),
         __metadata("design:type", String)
     ], Ownednumber.prototype, "voiceCallbackType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voiceCallbackValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voiceCallbackValue" }),
         __metadata("design:type", String)
     ], Ownednumber.prototype, "voiceCallbackValue", void 0);
     return Ownednumber;
-}(SpeakeasyBase));
-export { Ownednumber };
+}(utils_1.SpeakeasyBase));
+exports.Ownednumber = Ownednumber;

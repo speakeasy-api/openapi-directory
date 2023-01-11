@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { BackfillAllStrategy } from "./backfillallstrategy";
 import { DestinationConfig } from "./destinationconfig";
 import { SourceConfig } from "./sourceconfig";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 export declare enum StreamStateEnum {
     StateUnspecified = "STATE_UNSPECIFIED",
     Created = "CREATED",
@@ -16,23 +16,23 @@ export declare enum StreamStateEnum {
 }
 export declare class StreamInput extends SpeakeasyBase {
     backfillAll?: BackfillAllStrategy;
-    backfillNone?: Map<string, any>;
+    backfillNone?: Record<string, any>;
     customerManagedEncryptionKey?: string;
     destinationConfig?: DestinationConfig;
     displayName?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     sourceConfig?: SourceConfig;
     state?: StreamStateEnum;
 }
 export declare class Stream extends SpeakeasyBase {
     backfillAll?: BackfillAllStrategy;
-    backfillNone?: Map<string, any>;
+    backfillNone?: Record<string, any>;
     createTime?: string;
     customerManagedEncryptionKey?: string;
     destinationConfig?: DestinationConfig;
     displayName?: string;
-    errors?: Error[];
-    labels?: Map<string, string>;
+    errors?: ErrorT[];
+    labels?: Record<string, string>;
     name?: string;
     sourceConfig?: SourceConfig;
     state?: StreamStateEnum;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteCarrierGatewayActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteCarrierGatewayResponse = exports.PostDeleteCarrierGatewayRequest = exports.PostDeleteCarrierGatewayHeaders = exports.PostDeleteCarrierGatewayQueryParams = exports.PostDeleteCarrierGatewayVersionEnum = exports.PostDeleteCarrierGatewayActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteCarrierGatewayActionEnum;
 (function (PostDeleteCarrierGatewayActionEnum) {
     PostDeleteCarrierGatewayActionEnum["DeleteCarrierGateway"] = "DeleteCarrierGateway";
-})(PostDeleteCarrierGatewayActionEnum || (PostDeleteCarrierGatewayActionEnum = {}));
-export var PostDeleteCarrierGatewayVersionEnum;
+})(PostDeleteCarrierGatewayActionEnum = exports.PostDeleteCarrierGatewayActionEnum || (exports.PostDeleteCarrierGatewayActionEnum = {}));
+var PostDeleteCarrierGatewayVersionEnum;
 (function (PostDeleteCarrierGatewayVersionEnum) {
     PostDeleteCarrierGatewayVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostDeleteCarrierGatewayVersionEnum || (PostDeleteCarrierGatewayVersionEnum = {}));
+})(PostDeleteCarrierGatewayVersionEnum = exports.PostDeleteCarrierGatewayVersionEnum || (exports.PostDeleteCarrierGatewayVersionEnum = {}));
 var PostDeleteCarrierGatewayQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteCarrierGatewayQueryParams, _super);
     function PostDeleteCarrierGatewayQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteCarrierGatewayQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteCarrierGatewayQueryParams.prototype, "version", void 0);
     return PostDeleteCarrierGatewayQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteCarrierGatewayQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteCarrierGatewayQueryParams = PostDeleteCarrierGatewayQueryParams;
 var PostDeleteCarrierGatewayHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteCarrierGatewayHeaders, _super);
     function PostDeleteCarrierGatewayHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteCarrierGatewayHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteCarrierGatewayHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteCarrierGatewayHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteCarrierGatewayHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteCarrierGatewayHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteCarrierGatewayHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteCarrierGatewayHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteCarrierGatewayHeaders;
-}(SpeakeasyBase));
-export { PostDeleteCarrierGatewayHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteCarrierGatewayHeaders = PostDeleteCarrierGatewayHeaders;
 var PostDeleteCarrierGatewayRequest = /** @class */ (function (_super) {
     __extends(PostDeleteCarrierGatewayRequest, _super);
     function PostDeleteCarrierGatewayRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteCarrierGatewayQueryParams)
     ], PostDeleteCarrierGatewayRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteCarrierGatewayHeaders)
     ], PostDeleteCarrierGatewayRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteCarrierGatewayRequest.prototype, "request", void 0);
     return PostDeleteCarrierGatewayRequest;
-}(SpeakeasyBase));
-export { PostDeleteCarrierGatewayRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteCarrierGatewayRequest = PostDeleteCarrierGatewayRequest;
 var PostDeleteCarrierGatewayResponse = /** @class */ (function (_super) {
     __extends(PostDeleteCarrierGatewayResponse, _super);
     function PostDeleteCarrierGatewayResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteCarrierGatewayResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteCarrierGatewayResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteCarrierGatewayResponse.prototype, "statusCode", void 0);
     return PostDeleteCarrierGatewayResponse;
-}(SpeakeasyBase));
-export { PostDeleteCarrierGatewayResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteCarrierGatewayResponse = PostDeleteCarrierGatewayResponse;

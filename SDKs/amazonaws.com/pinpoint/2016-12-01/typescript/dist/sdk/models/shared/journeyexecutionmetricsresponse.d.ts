@@ -6,5 +6,5 @@ export declare class JourneyExecutionMetricsResponse extends SpeakeasyBase {
     applicationId: string;
     journeyId: string;
     lastEvaluatedTime: string;
-    metrics: Map<string, string>;
+    metrics: Record<string, string>;
 }

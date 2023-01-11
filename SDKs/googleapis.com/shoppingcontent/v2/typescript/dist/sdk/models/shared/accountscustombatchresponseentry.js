@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Account } from "./account";
-import { Errors } from "./errors";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountsCustomBatchResponseEntry = void 0;
+var utils_1 = require("../../../internal/utils");
+var account_1 = require("./account");
+var errors_1 = require("./errors");
 // AccountsCustomBatchResponseEntry
 /**
  * A batch entry encoding a single non-batch accounts response.
@@ -35,25 +38,25 @@ var AccountsCustomBatchResponseEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
-        __metadata("design:type", Account)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
+        __metadata("design:type", account_1.Account)
     ], AccountsCustomBatchResponseEntry.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchId" }),
         __metadata("design:type", Number)
     ], AccountsCustomBatchResponseEntry.prototype, "batchId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors" }),
-        __metadata("design:type", Errors)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors" }),
+        __metadata("design:type", errors_1.Errors)
     ], AccountsCustomBatchResponseEntry.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], AccountsCustomBatchResponseEntry.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkStatus" }),
         __metadata("design:type", String)
     ], AccountsCustomBatchResponseEntry.prototype, "linkStatus", void 0);
     return AccountsCustomBatchResponseEntry;
-}(SpeakeasyBase));
-export { AccountsCustomBatchResponseEntry };
+}(utils_1.SpeakeasyBase));
+exports.AccountsCustomBatchResponseEntry = AccountsCustomBatchResponseEntry;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssetHierarchyInfo } from "./assethierarchyinfo";
-import { AssetRelationshipTypeEnum } from "./assetrelationshiptypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssetRelationshipSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var assethierarchyinfo_1 = require("./assethierarchyinfo");
+var assetrelationshiptypeenum_1 = require("./assetrelationshiptypeenum");
 // AssetRelationshipSummary
 /**
  * Contains information about assets that are related to one another.
@@ -35,13 +38,13 @@ var AssetRelationshipSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hierarchyInfo" }),
-        __metadata("design:type", AssetHierarchyInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hierarchyInfo" }),
+        __metadata("design:type", assethierarchyinfo_1.AssetHierarchyInfo)
     ], AssetRelationshipSummary.prototype, "hierarchyInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationshipType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationshipType" }),
         __metadata("design:type", String)
     ], AssetRelationshipSummary.prototype, "relationshipType", void 0);
     return AssetRelationshipSummary;
-}(SpeakeasyBase));
-export { AssetRelationshipSummary };
+}(utils_1.SpeakeasyBase));
+exports.AssetRelationshipSummary = AssetRelationshipSummary;

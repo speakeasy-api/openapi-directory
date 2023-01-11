@@ -15,6 +15,6 @@ export declare class ReposAddAppAccessRestrictionsRequest extends SpeakeasyBase 
 export declare class ReposAddAppAccessRestrictionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    integrations?: Map<string, any>[];
+    integrations?: Record<string, any>[];
     validationError?: shared.ValidationError;
 }

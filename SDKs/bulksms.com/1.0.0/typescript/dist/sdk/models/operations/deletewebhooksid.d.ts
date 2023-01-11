@@ -8,6 +8,6 @@ export declare class DeleteWebhooksIdRequest extends SpeakeasyBase {
 }
 export declare class DeleteWebhooksIdResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

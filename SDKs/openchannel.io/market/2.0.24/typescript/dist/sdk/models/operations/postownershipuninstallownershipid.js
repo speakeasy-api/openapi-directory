@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostOwnershipUninstallOwnershipIdResponse = exports.PostOwnershipUninstallOwnershipIdRequest = exports.PostOwnershipUninstallOwnershipIdQueryParams = exports.PostOwnershipUninstallOwnershipIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostOwnershipUninstallOwnershipIdPathParams = /** @class */ (function (_super) {
     __extends(PostOwnershipUninstallOwnershipIdPathParams, _super);
     function PostOwnershipUninstallOwnershipIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ownershipId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ownershipId" }),
         __metadata("design:type", String)
     ], PostOwnershipUninstallOwnershipIdPathParams.prototype, "ownershipId", void 0);
     return PostOwnershipUninstallOwnershipIdPathParams;
-}(SpeakeasyBase));
-export { PostOwnershipUninstallOwnershipIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostOwnershipUninstallOwnershipIdPathParams = PostOwnershipUninstallOwnershipIdPathParams;
 var PostOwnershipUninstallOwnershipIdQueryParams = /** @class */ (function (_super) {
     __extends(PostOwnershipUninstallOwnershipIdQueryParams, _super);
     function PostOwnershipUninstallOwnershipIdQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=cancelOwnership" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=cancelOwnership" }),
         __metadata("design:type", Boolean)
     ], PostOwnershipUninstallOwnershipIdQueryParams.prototype, "cancelOwnership", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=customData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=customData" }),
         __metadata("design:type", String)
     ], PostOwnershipUninstallOwnershipIdQueryParams.prototype, "customData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userId" }),
         __metadata("design:type", String)
     ], PostOwnershipUninstallOwnershipIdQueryParams.prototype, "userId", void 0);
     return PostOwnershipUninstallOwnershipIdQueryParams;
-}(SpeakeasyBase));
-export { PostOwnershipUninstallOwnershipIdQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostOwnershipUninstallOwnershipIdQueryParams = PostOwnershipUninstallOwnershipIdQueryParams;
 var PostOwnershipUninstallOwnershipIdRequest = /** @class */ (function (_super) {
     __extends(PostOwnershipUninstallOwnershipIdRequest, _super);
     function PostOwnershipUninstallOwnershipIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostOwnershipUninstallOwnershipIdPathParams)
     ], PostOwnershipUninstallOwnershipIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostOwnershipUninstallOwnershipIdQueryParams)
     ], PostOwnershipUninstallOwnershipIdRequest.prototype, "queryParams", void 0);
     return PostOwnershipUninstallOwnershipIdRequest;
-}(SpeakeasyBase));
-export { PostOwnershipUninstallOwnershipIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostOwnershipUninstallOwnershipIdRequest = PostOwnershipUninstallOwnershipIdRequest;
 var PostOwnershipUninstallOwnershipIdResponse = /** @class */ (function (_super) {
     __extends(PostOwnershipUninstallOwnershipIdResponse, _super);
     function PostOwnershipUninstallOwnershipIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostOwnershipUninstallOwnershipIdResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostOwnershipUninstallOwnershipIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostOwnershipUninstallOwnershipIdResponse.prototype, "statusCode", void 0);
     return PostOwnershipUninstallOwnershipIdResponse;
-}(SpeakeasyBase));
-export { PostOwnershipUninstallOwnershipIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostOwnershipUninstallOwnershipIdResponse = PostOwnershipUninstallOwnershipIdResponse;

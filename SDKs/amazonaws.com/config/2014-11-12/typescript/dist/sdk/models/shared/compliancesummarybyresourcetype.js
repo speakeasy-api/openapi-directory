@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComplianceSummary } from "./compliancesummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComplianceSummaryByResourceType = void 0;
+var utils_1 = require("../../../internal/utils");
+var compliancesummary_1 = require("./compliancesummary");
 // ComplianceSummaryByResourceType
 /**
  * The number of Amazon Web Services resources of a specific type that are compliant or noncompliant, up to a maximum of 100 for each.
@@ -34,13 +37,13 @@ var ComplianceSummaryByResourceType = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComplianceSummary" }),
-        __metadata("design:type", ComplianceSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComplianceSummary" }),
+        __metadata("design:type", compliancesummary_1.ComplianceSummary)
     ], ComplianceSummaryByResourceType.prototype, "complianceSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceType" }),
         __metadata("design:type", String)
     ], ComplianceSummaryByResourceType.prototype, "resourceType", void 0);
     return ComplianceSummaryByResourceType;
-}(SpeakeasyBase));
-export { ComplianceSummaryByResourceType };
+}(utils_1.SpeakeasyBase));
+exports.ComplianceSummaryByResourceType = ComplianceSummaryByResourceType;

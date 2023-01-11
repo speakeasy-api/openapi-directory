@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,39 +23,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataLakePrincipal } from "./datalakeprincipal";
-import { Resource } from "./resource";
-import { DataLakeResourceTypeEnum } from "./datalakeresourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListPermissionsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var datalakeprincipal_1 = require("./datalakeprincipal");
+var resource_1 = require("./resource");
+var datalakeresourcetypeenum_1 = require("./datalakeresourcetypeenum");
 var ListPermissionsRequest = /** @class */ (function (_super) {
     __extends(ListPermissionsRequest, _super);
     function ListPermissionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CatalogId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CatalogId" }),
         __metadata("design:type", String)
     ], ListPermissionsRequest.prototype, "catalogId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], ListPermissionsRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListPermissionsRequest.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Principal" }),
-        __metadata("design:type", DataLakePrincipal)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Principal" }),
+        __metadata("design:type", datalakeprincipal_1.DataLakePrincipal)
     ], ListPermissionsRequest.prototype, "principal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Resource" }),
-        __metadata("design:type", Resource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Resource" }),
+        __metadata("design:type", resource_1.Resource)
     ], ListPermissionsRequest.prototype, "resource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceType" }),
         __metadata("design:type", String)
     ], ListPermissionsRequest.prototype, "resourceType", void 0);
     return ListPermissionsRequest;
-}(SpeakeasyBase));
-export { ListPermissionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListPermissionsRequest = ListPermissionsRequest;

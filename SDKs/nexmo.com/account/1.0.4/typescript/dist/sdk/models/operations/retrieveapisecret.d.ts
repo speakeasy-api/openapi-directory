@@ -14,7 +14,7 @@ export declare class RetrieveApiSecretRequest extends SpeakeasyBase {
 export declare class RetrieveApiSecretResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    retrieveApiSecret401ApplicationJsonAny?: any;
-    retrieveApiSecret404ApplicationJsonOneOf?: any;
+    retrieveAPISecret401ApplicationJSONAny?: any;
+    retrieveAPISecret404ApplicationJSONOneOf?: any;
     secretInfo?: shared.SecretInfo;
 }

@@ -9,6 +9,6 @@ export declare class LogStream extends SpeakeasyBase {
     lastEventTimestamp?: number;
     lastIngestionTime?: number;
     logStreamName?: string;
-    storedBytes?: number;
+    storedBytes?: Record<string, any>;
     uploadSequenceToken?: string;
 }

@@ -10,6 +10,6 @@ export declare class GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesRequ
 export declare class GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse extends SpeakeasyBase {
     comments?: shared.Comment[];
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

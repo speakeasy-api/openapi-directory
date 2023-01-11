@@ -9,8 +9,7 @@ export declare class UserDeletionRequestId extends SpeakeasyBase {
 /**
  * JSON template for a user deletion request resource.
 **/
-export declare class UserDeletionRequest extends SpeakeasyBase {
-    deletionRequestTime?: Date;
+export declare class UserDeletionRequestInput extends SpeakeasyBase {
     firebaseProjectId?: string;
     id?: UserDeletionRequestId;
     kind?: string;
@@ -20,7 +19,8 @@ export declare class UserDeletionRequest extends SpeakeasyBase {
 /**
  * JSON template for a user deletion request resource.
 **/
-export declare class UserDeletionRequestInput extends SpeakeasyBase {
+export declare class UserDeletionRequest extends SpeakeasyBase {
+    deletionRequestTime?: Date;
     firebaseProjectId?: string;
     id?: UserDeletionRequestId;
     kind?: string;

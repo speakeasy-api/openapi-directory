@@ -5,6 +5,6 @@ export declare class ItemWebhookUpdateRequest extends SpeakeasyBase {
 }
 export declare class ItemWebhookUpdateResponse extends SpeakeasyBase {
     contentType: string;
-    itemWebhookUpdateResponse?: Map<string, any>;
+    itemWebhookUpdateResponse?: Record<string, any>;
     statusCode: number;
 }

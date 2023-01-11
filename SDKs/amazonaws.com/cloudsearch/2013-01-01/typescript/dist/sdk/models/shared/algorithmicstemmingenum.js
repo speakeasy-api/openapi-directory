@@ -1,7 +1,10 @@
-export var AlgorithmicStemmingEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AlgorithmicStemmingEnum = void 0;
+var AlgorithmicStemmingEnum;
 (function (AlgorithmicStemmingEnum) {
     AlgorithmicStemmingEnum["None"] = "none";
     AlgorithmicStemmingEnum["Minimal"] = "minimal";
     AlgorithmicStemmingEnum["Light"] = "light";
     AlgorithmicStemmingEnum["Full"] = "full";
-})(AlgorithmicStemmingEnum || (AlgorithmicStemmingEnum = {}));
+})(AlgorithmicStemmingEnum = exports.AlgorithmicStemmingEnum || (exports.AlgorithmicStemmingEnum = {}));

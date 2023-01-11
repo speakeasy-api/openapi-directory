@@ -19,5 +19,5 @@ export class Source extends SpeakeasyBase {
   context?: SourceContext;
 
   @SpeakeasyMetadata({ data: "json, name=fileHashes", elemType: FileHashes })
-  fileHashes?: Map<string, FileHashes>;
+  fileHashes?: Record<string, FileHashes>;
 }

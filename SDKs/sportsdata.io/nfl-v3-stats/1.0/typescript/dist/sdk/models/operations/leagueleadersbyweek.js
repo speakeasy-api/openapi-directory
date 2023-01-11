@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var LeagueLeadersByWeekColumnEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LeagueLeadersByWeekResponse = exports.LeagueLeadersByWeekRequest = exports.LeagueLeadersByWeekPathParams = exports.LeagueLeadersByWeekPositionEnum = exports.LeagueLeadersByWeekFormatEnum = exports.LeagueLeadersByWeekColumnEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var LeagueLeadersByWeekColumnEnum;
 (function (LeagueLeadersByWeekColumnEnum) {
     LeagueLeadersByWeekColumnEnum["FantasyPoints"] = "FantasyPoints";
     LeagueLeadersByWeekColumnEnum["PassingYards"] = "PassingYards";
@@ -32,13 +35,13 @@ export var LeagueLeadersByWeekColumnEnum;
     LeagueLeadersByWeekColumnEnum["Sacks"] = "Sacks";
     LeagueLeadersByWeekColumnEnum["Interceptions"] = "Interceptions";
     LeagueLeadersByWeekColumnEnum["Touchdowns"] = "Touchdowns";
-})(LeagueLeadersByWeekColumnEnum || (LeagueLeadersByWeekColumnEnum = {}));
-export var LeagueLeadersByWeekFormatEnum;
+})(LeagueLeadersByWeekColumnEnum = exports.LeagueLeadersByWeekColumnEnum || (exports.LeagueLeadersByWeekColumnEnum = {}));
+var LeagueLeadersByWeekFormatEnum;
 (function (LeagueLeadersByWeekFormatEnum) {
     LeagueLeadersByWeekFormatEnum["Xml"] = "XML";
     LeagueLeadersByWeekFormatEnum["Json"] = "JSON";
-})(LeagueLeadersByWeekFormatEnum || (LeagueLeadersByWeekFormatEnum = {}));
-export var LeagueLeadersByWeekPositionEnum;
+})(LeagueLeadersByWeekFormatEnum = exports.LeagueLeadersByWeekFormatEnum || (exports.LeagueLeadersByWeekFormatEnum = {}));
+var LeagueLeadersByWeekPositionEnum;
 (function (LeagueLeadersByWeekPositionEnum) {
     LeagueLeadersByWeekPositionEnum["All"] = "ALL";
     LeagueLeadersByWeekPositionEnum["Offense"] = "OFFENSE";
@@ -51,64 +54,64 @@ export var LeagueLeadersByWeekPositionEnum;
     LeagueLeadersByWeekPositionEnum["Lb"] = "LB";
     LeagueLeadersByWeekPositionEnum["Db"] = "DB";
     LeagueLeadersByWeekPositionEnum["K"] = "K";
-})(LeagueLeadersByWeekPositionEnum || (LeagueLeadersByWeekPositionEnum = {}));
+})(LeagueLeadersByWeekPositionEnum = exports.LeagueLeadersByWeekPositionEnum || (exports.LeagueLeadersByWeekPositionEnum = {}));
 var LeagueLeadersByWeekPathParams = /** @class */ (function (_super) {
     __extends(LeagueLeadersByWeekPathParams, _super);
     function LeagueLeadersByWeekPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=column" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=column" }),
         __metadata("design:type", String)
     ], LeagueLeadersByWeekPathParams.prototype, "column", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], LeagueLeadersByWeekPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=position" }),
         __metadata("design:type", String)
     ], LeagueLeadersByWeekPathParams.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], LeagueLeadersByWeekPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=week" }),
         __metadata("design:type", String)
     ], LeagueLeadersByWeekPathParams.prototype, "week", void 0);
     return LeagueLeadersByWeekPathParams;
-}(SpeakeasyBase));
-export { LeagueLeadersByWeekPathParams };
+}(utils_1.SpeakeasyBase));
+exports.LeagueLeadersByWeekPathParams = LeagueLeadersByWeekPathParams;
 var LeagueLeadersByWeekRequest = /** @class */ (function (_super) {
     __extends(LeagueLeadersByWeekRequest, _super);
     function LeagueLeadersByWeekRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LeagueLeadersByWeekPathParams)
     ], LeagueLeadersByWeekRequest.prototype, "pathParams", void 0);
     return LeagueLeadersByWeekRequest;
-}(SpeakeasyBase));
-export { LeagueLeadersByWeekRequest };
+}(utils_1.SpeakeasyBase));
+exports.LeagueLeadersByWeekRequest = LeagueLeadersByWeekRequest;
 var LeagueLeadersByWeekResponse = /** @class */ (function (_super) {
     __extends(LeagueLeadersByWeekResponse, _super);
     function LeagueLeadersByWeekResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LeagueLeadersByWeekResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], LeagueLeadersByWeekResponse.prototype, "playerGames", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LeagueLeadersByWeekResponse.prototype, "statusCode", void 0);
     return LeagueLeadersByWeekResponse;
-}(SpeakeasyBase));
-export { LeagueLeadersByWeekResponse };
+}(utils_1.SpeakeasyBase));
+exports.LeagueLeadersByWeekResponse = LeagueLeadersByWeekResponse;

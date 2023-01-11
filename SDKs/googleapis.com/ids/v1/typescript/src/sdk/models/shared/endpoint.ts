@@ -19,28 +19,6 @@ export enum EndpointStateEnum {
 }
 
 
-// EndpointInput
-/** 
- * Endpoint describes a single IDS endpoint. It defines a forwarding rule to which packets can be sent for IDS inspection.
-**/
-export class EndpointInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=description" })
-  description?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=network" })
-  network?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=severity" })
-  severity?: EndpointSeverityEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=trafficLogs" })
-  trafficLogs?: boolean;
-}
-
-
 // Endpoint
 /** 
  * Endpoint describes a single IDS endpoint. It defines a forwarding rule to which packets can be sent for IDS inspection.
@@ -59,7 +37,7 @@ export class Endpoint extends SpeakeasyBase {
   endpointIp?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -78,4 +56,26 @@ export class Endpoint extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+}
+
+
+// EndpointInput
+/** 
+ * Endpoint describes a single IDS endpoint. It defines a forwarding rule to which packets can be sent for IDS inspection.
+**/
+export class EndpointInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=description" })
+  description?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=network" })
+  network?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=severity" })
+  severity?: EndpointSeverityEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=trafficLogs" })
+  trafficLogs?: boolean;
 }

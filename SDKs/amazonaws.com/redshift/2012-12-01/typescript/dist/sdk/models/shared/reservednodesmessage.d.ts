@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ReservedNode } from "./reservednode";
+import { ReservedNodeList } from "./reservednodelist";
 /**
  * <p/>
 **/
 export declare class ReservedNodesMessage extends SpeakeasyBase {
     marker?: string;
-    reservedNodes?: ReservedNode[];
+    reservedNodes?: ReservedNodeList[];
 }

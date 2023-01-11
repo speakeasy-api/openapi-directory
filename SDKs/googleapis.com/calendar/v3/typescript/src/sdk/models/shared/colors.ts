@@ -5,10 +5,10 @@ import { ColorDefinition } from "./colordefinition";
 
 export class Colors extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=calendar", elemType: ColorDefinition })
-  calendar?: Map<string, ColorDefinition>;
+  calendar?: Record<string, ColorDefinition>;
 
   @SpeakeasyMetadata({ data: "json, name=event", elemType: ColorDefinition })
-  event?: Map<string, ColorDefinition>;
+  event?: Record<string, ColorDefinition>;
 
   @SpeakeasyMetadata({ data: "json, name=kind" })
   kind?: string;

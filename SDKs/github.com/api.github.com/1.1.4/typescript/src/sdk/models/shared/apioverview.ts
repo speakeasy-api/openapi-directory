@@ -4,10 +4,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class ApiOverviewSshKeyFingerprints extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=SHA256_DSA" })
-  sha256Dsa?: string;
+  sha256DSA?: string;
 
   @SpeakeasyMetadata({ data: "json, name=SHA256_RSA" })
-  sha256Rsa?: string;
+  sha256RSA?: string;
 }
 
 

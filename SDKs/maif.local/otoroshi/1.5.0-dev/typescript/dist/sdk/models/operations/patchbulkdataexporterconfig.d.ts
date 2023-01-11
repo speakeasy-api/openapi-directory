@@ -21,5 +21,5 @@ export declare class PatchBulkDataExporterConfigRequest extends SpeakeasyBase {
 export declare class PatchBulkDataExporterConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    patchBulkDataExporterConfig200ApplicationJsonObjects?: PatchBulkDataExporterConfig200ApplicationJson[];
+    patchBulkDataExporterConfig200ApplicationJSONObjects?: PatchBulkDataExporterConfig200ApplicationJson[];
 }

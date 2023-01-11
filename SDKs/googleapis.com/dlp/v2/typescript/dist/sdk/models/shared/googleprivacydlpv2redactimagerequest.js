@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2ByteContentItem } from "./googleprivacydlpv2bytecontentitem";
-import { GooglePrivacyDlpV2ImageRedactionConfig } from "./googleprivacydlpv2imageredactionconfig";
-import { GooglePrivacyDlpV2InspectConfig } from "./googleprivacydlpv2inspectconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2RedactImageRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2bytecontentitem_1 = require("./googleprivacydlpv2bytecontentitem");
+var googleprivacydlpv2imageredactionconfig_1 = require("./googleprivacydlpv2imageredactionconfig");
+var googleprivacydlpv2inspectconfig_1 = require("./googleprivacydlpv2inspectconfig");
 // GooglePrivacyDlpV2RedactImageRequest
 /**
  * Request to search for potentially sensitive info in an image and redact it by covering it with a colored rectangle.
@@ -36,25 +39,25 @@ var GooglePrivacyDlpV2RedactImageRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=byteItem" }),
-        __metadata("design:type", GooglePrivacyDlpV2ByteContentItem)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=byteItem" }),
+        __metadata("design:type", googleprivacydlpv2bytecontentitem_1.GooglePrivacyDlpV2ByteContentItem)
     ], GooglePrivacyDlpV2RedactImageRequest.prototype, "byteItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageRedactionConfigs", elemType: GooglePrivacyDlpV2ImageRedactionConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageRedactionConfigs", elemType: googleprivacydlpv2imageredactionconfig_1.GooglePrivacyDlpV2ImageRedactionConfig }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2RedactImageRequest.prototype, "imageRedactionConfigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeFindings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeFindings" }),
         __metadata("design:type", Boolean)
     ], GooglePrivacyDlpV2RedactImageRequest.prototype, "includeFindings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inspectConfig" }),
-        __metadata("design:type", GooglePrivacyDlpV2InspectConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inspectConfig" }),
+        __metadata("design:type", googleprivacydlpv2inspectconfig_1.GooglePrivacyDlpV2InspectConfig)
     ], GooglePrivacyDlpV2RedactImageRequest.prototype, "inspectConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationId" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2RedactImageRequest.prototype, "locationId", void 0);
     return GooglePrivacyDlpV2RedactImageRequest;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2RedactImageRequest };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2RedactImageRequest = GooglePrivacyDlpV2RedactImageRequest;

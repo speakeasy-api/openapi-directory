@@ -31,7 +31,7 @@ export declare class FirebasedatabaseProjectsLocationsInstancesUndeleteSecurity 
 export declare class FirebasedatabaseProjectsLocationsInstancesUndeleteRequest extends SpeakeasyBase {
     pathParams: FirebasedatabaseProjectsLocationsInstancesUndeletePathParams;
     queryParams: FirebasedatabaseProjectsLocationsInstancesUndeleteQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: FirebasedatabaseProjectsLocationsInstancesUndeleteSecurity;
 }
 export declare class FirebasedatabaseProjectsLocationsInstancesUndeleteResponse extends SpeakeasyBase {

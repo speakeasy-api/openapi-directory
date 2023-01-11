@@ -24,7 +24,7 @@ export declare class ListHiTsForQualificationTypeRequest extends SpeakeasyBase {
 }
 export declare class ListHiTsForQualificationTypeResponse extends SpeakeasyBase {
     contentType: string;
-    listHiTsForQualificationTypeResponse?: shared.ListHiTsForQualificationTypeResponse;
+    listHITsForQualificationTypeResponse?: shared.ListHiTsForQualificationTypeResponse;
     requestError?: any;
     serviceFault?: any;
     statusCode: number;

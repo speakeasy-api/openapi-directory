@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClusterDbRevision } from "./clusterdbrevision";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClusterDbRevisionsMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var clusterdbrevisionslist_1 = require("./clusterdbrevisionslist");
 var ClusterDbRevisionsMessage = /** @class */ (function (_super) {
     __extends(ClusterDbRevisionsMessage, _super);
     function ClusterDbRevisionsMessage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: ClusterDbRevision }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: clusterdbrevisionslist_1.ClusterDbRevisionsList }),
         __metadata("design:type", Array)
     ], ClusterDbRevisionsMessage.prototype, "clusterDbRevisions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ClusterDbRevisionsMessage.prototype, "marker", void 0);
     return ClusterDbRevisionsMessage;
-}(SpeakeasyBase));
-export { ClusterDbRevisionsMessage };
+}(utils_1.SpeakeasyBase));
+exports.ClusterDbRevisionsMessage = ClusterDbRevisionsMessage;

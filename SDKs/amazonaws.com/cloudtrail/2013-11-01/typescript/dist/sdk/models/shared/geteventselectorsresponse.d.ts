@@ -4,5 +4,5 @@ import { EventSelector } from "./eventselector";
 export declare class GetEventSelectorsResponse extends SpeakeasyBase {
     advancedEventSelectors?: AdvancedEventSelector[];
     eventSelectors?: EventSelector[];
-    trailArn?: string;
+    trailARN?: string;
 }

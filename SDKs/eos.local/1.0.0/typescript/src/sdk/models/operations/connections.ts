@@ -71,7 +71,7 @@ export class Connections200ApplicationJson extends SpeakeasyBase {
 
 export class ConnectionsRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 }
 
 
@@ -83,5 +83,5 @@ export class ConnectionsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: Connections200ApplicationJson })
-  connections200ApplicationJsonObjects?: Connections200ApplicationJson[];
+  connections200ApplicationJSONObjects?: Connections200ApplicationJson[];
 }

@@ -4,6 +4,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class ClusterNode extends SpeakeasyBase {
     nodeRole?: string;
-    privateIpAddress?: string;
-    publicIpAddress?: string;
+    privateIPAddress?: string;
+    publicIPAddress?: string;
 }

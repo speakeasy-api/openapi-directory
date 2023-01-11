@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WebhookBuildTypeEnum } from "./webhookbuildtypeenum";
-import { WebhookFilter } from "./webhookfilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Webhook = void 0;
+var utils_1 = require("../../../internal/utils");
+var webhookbuildtypeenum_1 = require("./webhookbuildtypeenum");
+var webhookfilter_1 = require("./webhookfilter");
 // Webhook
 /**
  * Information about a webhook that connects repository events to a build project in CodeBuild.
@@ -35,33 +38,33 @@ var Webhook = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=branchFilter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=branchFilter" }),
         __metadata("design:type", String)
     ], Webhook.prototype, "branchFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildType" }),
         __metadata("design:type", String)
     ], Webhook.prototype, "buildType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filterGroups", elemType: WebhookFilter, elemDepth: 2 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filterGroups", elemType: webhookfilter_1.WebhookFilter, elemDepth: 2 }),
         __metadata("design:type", Array)
     ], Webhook.prototype, "filterGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastModifiedSecret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastModifiedSecret" }),
         __metadata("design:type", Date)
     ], Webhook.prototype, "lastModifiedSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payloadUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payloadUrl" }),
         __metadata("design:type", String)
     ], Webhook.prototype, "payloadUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], Webhook.prototype, "secret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Webhook.prototype, "url", void 0);
     return Webhook;
-}(SpeakeasyBase));
-export { Webhook };
+}(utils_1.SpeakeasyBase));
+exports.Webhook = Webhook;

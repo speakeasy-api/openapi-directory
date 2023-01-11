@@ -1,6 +1,9 @@
-export var EnvironmentAccountConnectionStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentAccountConnectionStatusEnum = void 0;
+var EnvironmentAccountConnectionStatusEnum;
 (function (EnvironmentAccountConnectionStatusEnum) {
     EnvironmentAccountConnectionStatusEnum["Pending"] = "PENDING";
     EnvironmentAccountConnectionStatusEnum["Connected"] = "CONNECTED";
     EnvironmentAccountConnectionStatusEnum["Rejected"] = "REJECTED";
-})(EnvironmentAccountConnectionStatusEnum || (EnvironmentAccountConnectionStatusEnum = {}));
+})(EnvironmentAccountConnectionStatusEnum = exports.EnvironmentAccountConnectionStatusEnum || (exports.EnvironmentAccountConnectionStatusEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Attributes } from "./attributes";
-export var LinkTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Link = exports.LinkTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var attributes_1 = require("./attributes");
+var LinkTypeEnum;
 (function (LinkTypeEnum) {
     LinkTypeEnum["TypeUnspecified"] = "TYPE_UNSPECIFIED";
     LinkTypeEnum["ChildLinkedSpan"] = "CHILD_LINKED_SPAN";
     LinkTypeEnum["ParentLinkedSpan"] = "PARENT_LINKED_SPAN";
-})(LinkTypeEnum || (LinkTypeEnum = {}));
+})(LinkTypeEnum = exports.LinkTypeEnum || (exports.LinkTypeEnum = {}));
 // Link
 /**
  * A pointer from the current span to another span in the same trace or in a different trace. For example, this can be used in batching operations, where a single batch handler processes multiple requests from different traces or when the handler receives a request from a different project.
@@ -40,21 +43,21 @@ var Link = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
-        __metadata("design:type", Attributes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
+        __metadata("design:type", attributes_1.Attributes)
     ], Link.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spanId" }),
         __metadata("design:type", String)
     ], Link.prototype, "spanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=traceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=traceId" }),
         __metadata("design:type", String)
     ], Link.prototype, "traceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Link.prototype, "type", void 0);
     return Link;
-}(SpeakeasyBase));
-export { Link };
+}(utils_1.SpeakeasyBase));
+exports.Link = Link;

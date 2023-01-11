@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FailureCodeEnum } from "./failurecodeenum";
-import { ChangeStatusEnum } from "./changestatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChangeSetSummaryListItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var failurecodeenum_1 = require("./failurecodeenum");
+var changestatusenum_1 = require("./changestatusenum");
 // ChangeSetSummaryListItem
 /**
  * A summary of a change set returned in a list of change sets when the <code>ListChangeSets</code> action is called.
@@ -35,37 +38,37 @@ var ChangeSetSummaryListItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChangeSetArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChangeSetArn" }),
         __metadata("design:type", String)
     ], ChangeSetSummaryListItem.prototype, "changeSetArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChangeSetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChangeSetId" }),
         __metadata("design:type", String)
     ], ChangeSetSummaryListItem.prototype, "changeSetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChangeSetName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChangeSetName" }),
         __metadata("design:type", String)
     ], ChangeSetSummaryListItem.prototype, "changeSetName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndTime" }),
         __metadata("design:type", String)
     ], ChangeSetSummaryListItem.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EntityIdList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EntityIdList" }),
         __metadata("design:type", Array)
     ], ChangeSetSummaryListItem.prototype, "entityIdList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FailureCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FailureCode" }),
         __metadata("design:type", String)
     ], ChangeSetSummaryListItem.prototype, "failureCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartTime" }),
         __metadata("design:type", String)
     ], ChangeSetSummaryListItem.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], ChangeSetSummaryListItem.prototype, "status", void 0);
     return ChangeSetSummaryListItem;
-}(SpeakeasyBase));
-export { ChangeSetSummaryListItem };
+}(utils_1.SpeakeasyBase));
+exports.ChangeSetSummaryListItem = ChangeSetSummaryListItem;

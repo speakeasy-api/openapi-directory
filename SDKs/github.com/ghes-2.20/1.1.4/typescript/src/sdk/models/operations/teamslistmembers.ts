@@ -8,12 +8,6 @@ export class TeamsListMembersPathParams extends SpeakeasyBase {
   teamId: number;
 }
 
-export enum TeamsListMembersRoleEnum {
-    Member = "member",
-    Maintainer = "maintainer",
-    All = "all"
-}
-
 
 export class TeamsListMembersQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
@@ -23,7 +17,7 @@ export class TeamsListMembersQueryParams extends SpeakeasyBase {
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=role" })
-  role?: TeamsListMembersRoleEnum;
+  role?: shared.TeamIdEnum1;
 }
 
 
@@ -41,7 +35,7 @@ export class TeamsListMembersResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

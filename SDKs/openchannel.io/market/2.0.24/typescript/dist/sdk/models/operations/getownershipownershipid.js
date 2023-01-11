@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOwnershipOwnershipIdResponse = exports.GetOwnershipOwnershipIdRequest = exports.GetOwnershipOwnershipIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOwnershipOwnershipIdPathParams = /** @class */ (function (_super) {
     __extends(GetOwnershipOwnershipIdPathParams, _super);
     function GetOwnershipOwnershipIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ownershipId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ownershipId" }),
         __metadata("design:type", String)
     ], GetOwnershipOwnershipIdPathParams.prototype, "ownershipId", void 0);
     return GetOwnershipOwnershipIdPathParams;
-}(SpeakeasyBase));
-export { GetOwnershipOwnershipIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOwnershipOwnershipIdPathParams = GetOwnershipOwnershipIdPathParams;
 var GetOwnershipOwnershipIdRequest = /** @class */ (function (_super) {
     __extends(GetOwnershipOwnershipIdRequest, _super);
     function GetOwnershipOwnershipIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOwnershipOwnershipIdPathParams)
     ], GetOwnershipOwnershipIdRequest.prototype, "pathParams", void 0);
     return GetOwnershipOwnershipIdRequest;
-}(SpeakeasyBase));
-export { GetOwnershipOwnershipIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOwnershipOwnershipIdRequest = GetOwnershipOwnershipIdRequest;
 var GetOwnershipOwnershipIdResponse = /** @class */ (function (_super) {
     __extends(GetOwnershipOwnershipIdResponse, _super);
     function GetOwnershipOwnershipIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetOwnershipOwnershipIdResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOwnershipOwnershipIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOwnershipOwnershipIdResponse.prototype, "statusCode", void 0);
     return GetOwnershipOwnershipIdResponse;
-}(SpeakeasyBase));
-export { GetOwnershipOwnershipIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOwnershipOwnershipIdResponse = GetOwnershipOwnershipIdResponse;

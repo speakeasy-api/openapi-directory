@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthTokenUpdateStatusEnum } from "./authtokenupdatestatusenum";
-import { PendingLogDeliveryConfiguration } from "./pendinglogdeliveryconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PendingModifiedValues = void 0;
+var utils_1 = require("../../../internal/utils");
+var authtokenupdatestatusenum_1 = require("./authtokenupdatestatusenum");
+var pendinglogdeliveryconfiguration_1 = require("./pendinglogdeliveryconfiguration");
 // PendingModifiedValues
 /**
  * A group of settings that are applied to the cluster in the future, or that are currently being applied.
@@ -35,29 +38,29 @@ var PendingModifiedValues = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PendingModifiedValues.prototype, "authTokenStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PendingModifiedValues.prototype, "cacheNodeIdsToRemove", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PendingModifiedValues.prototype, "cacheNodeType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PendingModifiedValues.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: PendingLogDeliveryConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: pendinglogdeliveryconfiguration_1.PendingLogDeliveryConfiguration }),
         __metadata("design:type", Array)
     ], PendingModifiedValues.prototype, "logDeliveryConfigurations", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PendingModifiedValues.prototype, "numCacheNodes", void 0);
     return PendingModifiedValues;
-}(SpeakeasyBase));
-export { PendingModifiedValues };
+}(utils_1.SpeakeasyBase));
+exports.PendingModifiedValues = PendingModifiedValues;

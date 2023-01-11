@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CurrencyFormat = void 0;
+var utils_1 = require("../../../internal/utils");
 // CurrencyFormat
 /**
  * The currency format setting for the budget.  In some cases the format will not be available and will be specified as null.
@@ -33,37 +36,37 @@ var CurrencyFormat = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency_symbol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency_symbol" }),
         __metadata("design:type", String)
     ], CurrencyFormat.prototype, "currencySymbol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=decimal_digits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=decimal_digits" }),
         __metadata("design:type", Number)
     ], CurrencyFormat.prototype, "decimalDigits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=decimal_separator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=decimal_separator" }),
         __metadata("design:type", String)
     ], CurrencyFormat.prototype, "decimalSeparator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_symbol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_symbol" }),
         __metadata("design:type", Boolean)
     ], CurrencyFormat.prototype, "displaySymbol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=example_format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=example_format" }),
         __metadata("design:type", String)
     ], CurrencyFormat.prototype, "exampleFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group_separator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group_separator" }),
         __metadata("design:type", String)
     ], CurrencyFormat.prototype, "groupSeparator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iso_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iso_code" }),
         __metadata("design:type", String)
     ], CurrencyFormat.prototype, "isoCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=symbol_first" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=symbol_first" }),
         __metadata("design:type", Boolean)
     ], CurrencyFormat.prototype, "symbolFirst", void 0);
     return CurrencyFormat;
-}(SpeakeasyBase));
-export { CurrencyFormat };
+}(utils_1.SpeakeasyBase));
+exports.CurrencyFormat = CurrencyFormat;

@@ -3,7 +3,7 @@ export declare class WritableCircuitInput extends SpeakeasyBase {
     cid: string;
     comments?: string;
     commitRate?: number;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     installDate?: Date;
     provider: number;

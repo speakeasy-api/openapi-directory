@@ -13,5 +13,5 @@ export declare class ConfigSettingValueModel extends SpeakeasyBase {
     setting?: SettingDataModel;
     settingTags?: SettingTagModel[];
     updatedAt?: Date;
-    value?: Map<string, any>;
+    value?: Record<string, any>;
 }

@@ -48,7 +48,7 @@ export class CompileRequest extends SpeakeasyBase {
   headers: CompileHeaders;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 }
 
 
@@ -60,5 +60,5 @@ export class CompileResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  compile200ApplicationJsonObject?: Map<string, any>;
+  compile200ApplicationJSONObject?: Record<string, any>;
 }

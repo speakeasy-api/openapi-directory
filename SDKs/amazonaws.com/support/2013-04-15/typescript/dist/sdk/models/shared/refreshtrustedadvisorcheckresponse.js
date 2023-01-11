@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TrustedAdvisorCheckRefreshStatus } from "./trustedadvisorcheckrefreshstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RefreshTrustedAdvisorCheckResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var trustedadvisorcheckrefreshstatus_1 = require("./trustedadvisorcheckrefreshstatus");
 // RefreshTrustedAdvisorCheckResponse
 /**
  * The current refresh status of a Trusted Advisor check.
@@ -34,9 +37,9 @@ var RefreshTrustedAdvisorCheckResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", TrustedAdvisorCheckRefreshStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", trustedadvisorcheckrefreshstatus_1.TrustedAdvisorCheckRefreshStatus)
     ], RefreshTrustedAdvisorCheckResponse.prototype, "status", void 0);
     return RefreshTrustedAdvisorCheckResponse;
-}(SpeakeasyBase));
-export { RefreshTrustedAdvisorCheckResponse };
+}(utils_1.SpeakeasyBase));
+exports.RefreshTrustedAdvisorCheckResponse = RefreshTrustedAdvisorCheckResponse;

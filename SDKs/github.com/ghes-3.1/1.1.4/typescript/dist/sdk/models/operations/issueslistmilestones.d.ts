@@ -4,25 +4,12 @@ export declare class IssuesListMilestonesPathParams extends SpeakeasyBase {
     owner: string;
     repo: string;
 }
-export declare enum IssuesListMilestonesDirectionEnum {
-    Asc = "asc",
-    Desc = "desc"
-}
-export declare enum IssuesListMilestonesSortEnum {
-    DueOn = "due_on",
-    Completeness = "completeness"
-}
-export declare enum IssuesListMilestonesStateEnum {
-    Open = "open",
-    Closed = "closed",
-    All = "all"
-}
 export declare class IssuesListMilestonesQueryParams extends SpeakeasyBase {
-    direction?: IssuesListMilestonesDirectionEnum;
+    direction?: shared.RepoEnum4;
     page?: number;
     perPage?: number;
-    sort?: IssuesListMilestonesSortEnum;
-    state?: IssuesListMilestonesStateEnum;
+    sort?: shared.RepoEnum3;
+    state?: shared.RepoEnum2;
 }
 export declare class IssuesListMilestonesRequest extends SpeakeasyBase {
     pathParams: IssuesListMilestonesPathParams;
@@ -30,7 +17,7 @@ export declare class IssuesListMilestonesRequest extends SpeakeasyBase {
 }
 export declare class IssuesListMilestonesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     milestones?: shared.Milestone[];

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NeighborhoodInAStreetResponse = exports.NeighborhoodInAStreetRequest = exports.NeighborhoodInAStreetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var NeighborhoodInAStreetPathParams = /** @class */ (function (_super) {
     __extends(NeighborhoodInAStreetPathParams, _super);
     function NeighborhoodInAStreetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=country" }),
         __metadata("design:type", String)
     ], NeighborhoodInAStreetPathParams.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=district" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=district" }),
         __metadata("design:type", String)
     ], NeighborhoodInAStreetPathParams.prototype, "district", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=region" }),
         __metadata("design:type", String)
     ], NeighborhoodInAStreetPathParams.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=street" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=street" }),
         __metadata("design:type", String)
     ], NeighborhoodInAStreetPathParams.prototype, "street", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ward" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ward" }),
         __metadata("design:type", String)
     ], NeighborhoodInAStreetPathParams.prototype, "ward", void 0);
     return NeighborhoodInAStreetPathParams;
-}(SpeakeasyBase));
-export { NeighborhoodInAStreetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.NeighborhoodInAStreetPathParams = NeighborhoodInAStreetPathParams;
 var NeighborhoodInAStreetRequest = /** @class */ (function (_super) {
     __extends(NeighborhoodInAStreetRequest, _super);
     function NeighborhoodInAStreetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NeighborhoodInAStreetPathParams)
     ], NeighborhoodInAStreetRequest.prototype, "pathParams", void 0);
     return NeighborhoodInAStreetRequest;
-}(SpeakeasyBase));
-export { NeighborhoodInAStreetRequest };
+}(utils_1.SpeakeasyBase));
+exports.NeighborhoodInAStreetRequest = NeighborhoodInAStreetRequest;
 var NeighborhoodInAStreetResponse = /** @class */ (function (_super) {
     __extends(NeighborhoodInAStreetResponse, _super);
     function NeighborhoodInAStreetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NeighborhoodInAStreetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], NeighborhoodInAStreetResponse.prototype, "statusCode", void 0);
     return NeighborhoodInAStreetResponse;
-}(SpeakeasyBase));
-export { NeighborhoodInAStreetResponse };
+}(utils_1.SpeakeasyBase));
+exports.NeighborhoodInAStreetResponse = NeighborhoodInAStreetResponse;

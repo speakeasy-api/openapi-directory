@@ -152,7 +152,7 @@ export declare class PowerPortType extends SpeakeasyBase {
 export declare class PowerPort extends SpeakeasyBase {
     allocatedDraw?: number;
     cable?: NestedCable;
-    connectedEndpoint?: Map<string, string>;
+    connectedEndpoint?: Record<string, string>;
     connectedEndpointType?: string;
     connectionStatus?: PowerPortConnectionStatus;
     description?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostOauthRequestTokenResponse = exports.PostOauthRequestTokenRequest = exports.PostOauthRequestToken200ApplicationJson = exports.PostOauthRequestTokenRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostOauthRequestTokenRequestBody = /** @class */ (function (_super) {
     __extends(PostOauthRequestTokenRequestBody, _super);
     function PostOauthRequestTokenRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth_callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth_callback" }),
         __metadata("design:type", String)
     ], PostOauthRequestTokenRequestBody.prototype, "oauthCallback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth_consumer_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth_consumer_key" }),
         __metadata("design:type", String)
     ], PostOauthRequestTokenRequestBody.prototype, "oauthConsumerKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth_nonce" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth_nonce" }),
         __metadata("design:type", String)
     ], PostOauthRequestTokenRequestBody.prototype, "oauthNonce", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth_signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth_signature" }),
         __metadata("design:type", String)
     ], PostOauthRequestTokenRequestBody.prototype, "oauthSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth_signature_method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth_signature_method" }),
         __metadata("design:type", String)
     ], PostOauthRequestTokenRequestBody.prototype, "oauthSignatureMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth_timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth_timestamp" }),
         __metadata("design:type", String)
     ], PostOauthRequestTokenRequestBody.prototype, "oauthTimestamp", void 0);
     return PostOauthRequestTokenRequestBody;
-}(SpeakeasyBase));
-export { PostOauthRequestTokenRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostOauthRequestTokenRequestBody = PostOauthRequestTokenRequestBody;
 var PostOauthRequestToken200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostOauthRequestToken200ApplicationJson, _super);
     function PostOauthRequestToken200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth_token" }),
         __metadata("design:type", String)
     ], PostOauthRequestToken200ApplicationJson.prototype, "oauthToken", void 0);
     return PostOauthRequestToken200ApplicationJson;
-}(SpeakeasyBase));
-export { PostOauthRequestToken200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostOauthRequestToken200ApplicationJson = PostOauthRequestToken200ApplicationJson;
 var PostOauthRequestTokenRequest = /** @class */ (function (_super) {
     __extends(PostOauthRequestTokenRequest, _super);
     function PostOauthRequestTokenRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostOauthRequestTokenRequestBody)
     ], PostOauthRequestTokenRequest.prototype, "request", void 0);
     return PostOauthRequestTokenRequest;
-}(SpeakeasyBase));
-export { PostOauthRequestTokenRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostOauthRequestTokenRequest = PostOauthRequestTokenRequest;
 var PostOauthRequestTokenResponse = /** @class */ (function (_super) {
     __extends(PostOauthRequestTokenResponse, _super);
     function PostOauthRequestTokenResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostOauthRequestTokenResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostOauthRequestToken200ApplicationJson)
-    ], PostOauthRequestTokenResponse.prototype, "postOauthRequestToken200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostOauthRequestTokenResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostOauthRequestToken200ApplicationJson)
+    ], PostOauthRequestTokenResponse.prototype, "postOauthRequestToken200ApplicationJSONObject", void 0);
     return PostOauthRequestTokenResponse;
-}(SpeakeasyBase));
-export { PostOauthRequestTokenResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostOauthRequestTokenResponse = PostOauthRequestTokenResponse;

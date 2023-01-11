@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImageObject } from "./imageobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CategoryObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var imageobject_1 = require("./imageobject");
 // CategoryObject
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-categoryobject - Find more info on the official Spotify Web API Reference
@@ -34,21 +37,21 @@ var CategoryObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], CategoryObject.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icons", elemType: ImageObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icons", elemType: imageobject_1.ImageObject }),
         __metadata("design:type", Array)
     ], CategoryObject.prototype, "icons", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CategoryObject.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CategoryObject.prototype, "name", void 0);
     return CategoryObject;
-}(SpeakeasyBase));
-export { CategoryObject };
+}(utils_1.SpeakeasyBase));
+exports.CategoryObject = CategoryObject;

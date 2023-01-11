@@ -41,5 +41,5 @@ export class PublishersListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  publishersList200ApplicationJsonObject?: PublishersList200ApplicationJson;
+  publishersList200ApplicationJSONObject?: PublishersList200ApplicationJson;
 }

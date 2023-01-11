@@ -18,7 +18,7 @@ export declare class DeleteSuppressedDestinationRequest extends SpeakeasyBase {
 export declare class DeleteSuppressedDestinationResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
-    deleteSuppressedDestinationResponse?: Map<string, any>;
+    deleteSuppressedDestinationResponse?: Record<string, any>;
     notFoundException?: any;
     statusCode: number;
     tooManyRequestsException?: any;

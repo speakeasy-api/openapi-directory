@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CtaSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 var CtaSettings = /** @class */ (function (_super) {
     __extends(CtaSettings, _super);
     function CtaSettings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=background_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=background_color" }),
         __metadata("design:type", String)
     ], CtaSettings.prototype, "backgroundColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=button_background_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=button_background_color" }),
         __metadata("design:type", String)
     ], CtaSettings.prototype, "buttonBackgroundColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=button_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=button_color" }),
         __metadata("design:type", String)
     ], CtaSettings.prototype, "buttonColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=button_label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=button_label" }),
         __metadata("design:type", String)
     ], CtaSettings.prototype, "buttonLabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=button_link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=button_link" }),
         __metadata("design:type", String)
     ], CtaSettings.prototype, "buttonLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
         __metadata("design:type", String)
     ], CtaSettings.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CtaSettings.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], CtaSettings.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], CtaSettings.prototype, "title", void 0);
     return CtaSettings;
-}(SpeakeasyBase));
-export { CtaSettings };
+}(utils_1.SpeakeasyBase));
+exports.CtaSettings = CtaSettings;

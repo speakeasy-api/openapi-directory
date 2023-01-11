@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PipelineDescription } from "./pipelinedescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribePipelinesOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var pipelinedescription_1 = require("./pipelinedescription");
 // DescribePipelinesOutput
 /**
  * Contains the output of DescribePipelines.
@@ -34,9 +37,9 @@ var DescribePipelinesOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipelineDescriptionList", elemType: PipelineDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipelineDescriptionList", elemType: pipelinedescription_1.PipelineDescription }),
         __metadata("design:type", Array)
     ], DescribePipelinesOutput.prototype, "pipelineDescriptionList", void 0);
     return DescribePipelinesOutput;
-}(SpeakeasyBase));
-export { DescribePipelinesOutput };
+}(utils_1.SpeakeasyBase));
+exports.DescribePipelinesOutput = DescribePipelinesOutput;

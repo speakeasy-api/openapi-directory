@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2Action } from "./googleprivacydlpv2action";
-import { GooglePrivacyDlpV2InspectConfig } from "./googleprivacydlpv2inspectconfig";
-import { GooglePrivacyDlpV2StorageConfig } from "./googleprivacydlpv2storageconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2InspectJobConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2action_1 = require("./googleprivacydlpv2action");
+var googleprivacydlpv2inspectconfig_1 = require("./googleprivacydlpv2inspectconfig");
+var googleprivacydlpv2storageconfig_1 = require("./googleprivacydlpv2storageconfig");
 // GooglePrivacyDlpV2InspectJobConfig
 /**
  * Controls what and how to inspect for findings.
@@ -36,21 +39,21 @@ var GooglePrivacyDlpV2InspectJobConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actions", elemType: GooglePrivacyDlpV2Action }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actions", elemType: googleprivacydlpv2action_1.GooglePrivacyDlpV2Action }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2InspectJobConfig.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inspectConfig" }),
-        __metadata("design:type", GooglePrivacyDlpV2InspectConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inspectConfig" }),
+        __metadata("design:type", googleprivacydlpv2inspectconfig_1.GooglePrivacyDlpV2InspectConfig)
     ], GooglePrivacyDlpV2InspectJobConfig.prototype, "inspectConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inspectTemplateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inspectTemplateName" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2InspectJobConfig.prototype, "inspectTemplateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageConfig" }),
-        __metadata("design:type", GooglePrivacyDlpV2StorageConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageConfig" }),
+        __metadata("design:type", googleprivacydlpv2storageconfig_1.GooglePrivacyDlpV2StorageConfig)
     ], GooglePrivacyDlpV2InspectJobConfig.prototype, "storageConfig", void 0);
     return GooglePrivacyDlpV2InspectJobConfig;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2InspectJobConfig };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2InspectJobConfig = GooglePrivacyDlpV2InspectJobConfig;

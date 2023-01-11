@@ -1,0 +1,512 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Appointment = exports.AppointmentSystemVitals = exports.AppointmentSystemVitalsSmokingStatusEnum = exports.AppointmentAppointmentStatusTransition = exports.AppointmentStatusEnum = exports.AppointmentSimpleReminder = exports.AppointmentSimpleReminderTypeEnum = exports.AppointmentIns2StatusEnum = exports.AppointmentIns1StatusEnum = exports.AppointmentCustomVitalValue = exports.AppointmentCustomAppointmentFieldValue = exports.AppointmentClinicalNote = exports.AppointmentClaimBillingNotes = void 0;
+var utils_1 = require("../../../internal/utils");
+// AppointmentClaimBillingNotes
+/**
+ * Structure of a billing note
+**/
+var AppointmentClaimBillingNotes = /** @class */ (function (_super) {
+    __extends(AppointmentClaimBillingNotes, _super);
+    function AppointmentClaimBillingNotes() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appointment" }),
+        __metadata("design:type", Number)
+    ], AppointmentClaimBillingNotes.prototype, "appointment", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
+        __metadata("design:type", String)
+    ], AppointmentClaimBillingNotes.prototype, "createdAt", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
+        __metadata("design:type", String)
+    ], AppointmentClaimBillingNotes.prototype, "createdBy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", Number)
+    ], AppointmentClaimBillingNotes.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
+        __metadata("design:type", String)
+    ], AppointmentClaimBillingNotes.prototype, "text", void 0);
+    return AppointmentClaimBillingNotes;
+}(utils_1.SpeakeasyBase));
+exports.AppointmentClaimBillingNotes = AppointmentClaimBillingNotes;
+// AppointmentClinicalNote
+/**
+ * Associated clinical note object
+**/
+var AppointmentClinicalNote = /** @class */ (function (_super) {
+    __extends(AppointmentClinicalNote, _super);
+    function AppointmentClinicalNote() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locked" }),
+        __metadata("design:type", Boolean)
+    ], AppointmentClinicalNote.prototype, "locked", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pdf" }),
+        __metadata("design:type", String)
+    ], AppointmentClinicalNote.prototype, "pdf", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
+        __metadata("design:type", String)
+    ], AppointmentClinicalNote.prototype, "updatedAt", void 0);
+    return AppointmentClinicalNote;
+}(utils_1.SpeakeasyBase));
+exports.AppointmentClinicalNote = AppointmentClinicalNote;
+var AppointmentCustomAppointmentFieldValue = /** @class */ (function (_super) {
+    __extends(AppointmentCustomAppointmentFieldValue, _super);
+    function AppointmentCustomAppointmentFieldValue() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
+        __metadata("design:type", String)
+    ], AppointmentCustomAppointmentFieldValue.prototype, "createdAt", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field_type" }),
+        __metadata("design:type", Number)
+    ], AppointmentCustomAppointmentFieldValue.prototype, "fieldType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field_value" }),
+        __metadata("design:type", String)
+    ], AppointmentCustomAppointmentFieldValue.prototype, "fieldValue", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
+        __metadata("design:type", String)
+    ], AppointmentCustomAppointmentFieldValue.prototype, "updatedAt", void 0);
+    return AppointmentCustomAppointmentFieldValue;
+}(utils_1.SpeakeasyBase));
+exports.AppointmentCustomAppointmentFieldValue = AppointmentCustomAppointmentFieldValue;
+var AppointmentCustomVitalValue = /** @class */ (function (_super) {
+    __extends(AppointmentCustomVitalValue, _super);
+    function AppointmentCustomVitalValue() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", String)
+    ], AppointmentCustomVitalValue.prototype, "value", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vital_type" }),
+        __metadata("design:type", Number)
+    ], AppointmentCustomVitalValue.prototype, "vitalType", void 0);
+    return AppointmentCustomVitalValue;
+}(utils_1.SpeakeasyBase));
+exports.AppointmentCustomVitalValue = AppointmentCustomVitalValue;
+var AppointmentIns1StatusEnum;
+(function (AppointmentIns1StatusEnum) {
+    AppointmentIns1StatusEnum["Unknown"] = "";
+    AppointmentIns1StatusEnum["IncompleteInformation"] = "Incomplete Information";
+    AppointmentIns1StatusEnum["InProcessEmdeon"] = "In Process Emdeon";
+    AppointmentIns1StatusEnum["RejectedEmdeon"] = "Rejected Emdeon";
+    AppointmentIns1StatusEnum["RejectedJopari"] = "Rejected Jopari";
+    AppointmentIns1StatusEnum["InProcessPayor"] = "In Process Payor";
+    AppointmentIns1StatusEnum["RejectedWaystarProfessional"] = "Rejected Waystar Professional";
+    AppointmentIns1StatusEnum["RejectedWaystarInstitutional"] = "Rejected Waystar Institutional";
+    AppointmentIns1StatusEnum["InProcessPayer"] = "In Process Payer";
+    AppointmentIns1StatusEnum["PayerAcknowledged"] = "Payer Acknowledged";
+    AppointmentIns1StatusEnum["RejectedPayor"] = "Rejected Payor";
+    AppointmentIns1StatusEnum["RejectedPayer"] = "Rejected Payer";
+    AppointmentIns1StatusEnum["PaidInFull"] = "Paid in Full";
+    AppointmentIns1StatusEnum["PartiallyPaid"] = "Partially Paid";
+    AppointmentIns1StatusEnum["CoordinationOfBenefits"] = "Coordination of Benefits";
+    AppointmentIns1StatusEnum["EraReceived"] = "ERA Received";
+    AppointmentIns1StatusEnum["EraDenied"] = "ERA Denied";
+    AppointmentIns1StatusEnum["HcfaFormFaxed"] = "HCFA Form Faxed";
+})(AppointmentIns1StatusEnum = exports.AppointmentIns1StatusEnum || (exports.AppointmentIns1StatusEnum = {}));
+var AppointmentIns2StatusEnum;
+(function (AppointmentIns2StatusEnum) {
+    AppointmentIns2StatusEnum["Unknown"] = "";
+    AppointmentIns2StatusEnum["IncompleteInformation"] = "Incomplete Information";
+    AppointmentIns2StatusEnum["InProcessEmdeon"] = "In Process Emdeon";
+    AppointmentIns2StatusEnum["RejectedEmdeon"] = "Rejected Emdeon";
+    AppointmentIns2StatusEnum["RejectedJopari"] = "Rejected Jopari";
+    AppointmentIns2StatusEnum["InProcessPayor"] = "In Process Payor";
+    AppointmentIns2StatusEnum["RejectedWaystarProfessional"] = "Rejected Waystar Professional";
+    AppointmentIns2StatusEnum["RejectedWaystarInstitutional"] = "Rejected Waystar Institutional";
+    AppointmentIns2StatusEnum["InProcessPayer"] = "In Process Payer";
+    AppointmentIns2StatusEnum["PayerAcknowledged"] = "Payer Acknowledged";
+    AppointmentIns2StatusEnum["RejectedPayor"] = "Rejected Payor";
+    AppointmentIns2StatusEnum["RejectedPayer"] = "Rejected Payer";
+    AppointmentIns2StatusEnum["PaidInFull"] = "Paid in Full";
+    AppointmentIns2StatusEnum["PartiallyPaid"] = "Partially Paid";
+    AppointmentIns2StatusEnum["CoordinationOfBenefits"] = "Coordination of Benefits";
+    AppointmentIns2StatusEnum["EraReceived"] = "ERA Received";
+    AppointmentIns2StatusEnum["EraDenied"] = "ERA Denied";
+    AppointmentIns2StatusEnum["HcfaFormFaxed"] = "HCFA Form Faxed";
+})(AppointmentIns2StatusEnum = exports.AppointmentIns2StatusEnum || (exports.AppointmentIns2StatusEnum = {}));
+var AppointmentSimpleReminderTypeEnum;
+(function (AppointmentSimpleReminderTypeEnum) {
+    AppointmentSimpleReminderTypeEnum["Email"] = "email";
+    AppointmentSimpleReminderTypeEnum["Sms"] = "sms";
+    AppointmentSimpleReminderTypeEnum["Phone"] = "phone";
+    AppointmentSimpleReminderTypeEnum["AutoCall"] = "auto_call";
+})(AppointmentSimpleReminderTypeEnum = exports.AppointmentSimpleReminderTypeEnum || (exports.AppointmentSimpleReminderTypeEnum = {}));
+var AppointmentSimpleReminder = /** @class */ (function (_super) {
+    __extends(AppointmentSimpleReminder, _super);
+    function AppointmentSimpleReminder() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", Number)
+    ], AppointmentSimpleReminder.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduled_time" }),
+        __metadata("design:type", String)
+    ], AppointmentSimpleReminder.prototype, "scheduledTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], AppointmentSimpleReminder.prototype, "type", void 0);
+    return AppointmentSimpleReminder;
+}(utils_1.SpeakeasyBase));
+exports.AppointmentSimpleReminder = AppointmentSimpleReminder;
+var AppointmentStatusEnum;
+(function (AppointmentStatusEnum) {
+    AppointmentStatusEnum["Unknown"] = "";
+    AppointmentStatusEnum["Arrived"] = "Arrived";
+    AppointmentStatusEnum["CheckedIn"] = "Checked In";
+    AppointmentStatusEnum["CheckedInOnline"] = "Checked In Online";
+    AppointmentStatusEnum["InRoom"] = "In Room";
+    AppointmentStatusEnum["InSession"] = "In Session";
+    AppointmentStatusEnum["Complete"] = "Complete";
+    AppointmentStatusEnum["Confirmed"] = "Confirmed";
+    AppointmentStatusEnum["NotConfirmed"] = "Not Confirmed";
+    AppointmentStatusEnum["Rescheduled"] = "Rescheduled";
+    AppointmentStatusEnum["Cancelled"] = "Cancelled";
+    AppointmentStatusEnum["NoShow"] = "No Show";
+})(AppointmentStatusEnum = exports.AppointmentStatusEnum || (exports.AppointmentStatusEnum = {}));
+var AppointmentAppointmentStatusTransition = /** @class */ (function (_super) {
+    __extends(AppointmentAppointmentStatusTransition, _super);
+    function AppointmentAppointmentStatusTransition() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appointment" }),
+        __metadata("design:type", String)
+    ], AppointmentAppointmentStatusTransition.prototype, "appointment", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datetime" }),
+        __metadata("design:type", String)
+    ], AppointmentAppointmentStatusTransition.prototype, "datetime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from_status" }),
+        __metadata("design:type", String)
+    ], AppointmentAppointmentStatusTransition.prototype, "fromStatus", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to_status" }),
+        __metadata("design:type", String)
+    ], AppointmentAppointmentStatusTransition.prototype, "toStatus", void 0);
+    return AppointmentAppointmentStatusTransition;
+}(utils_1.SpeakeasyBase));
+exports.AppointmentAppointmentStatusTransition = AppointmentAppointmentStatusTransition;
+var AppointmentSystemVitalsSmokingStatusEnum;
+(function (AppointmentSystemVitalsSmokingStatusEnum) {
+    AppointmentSystemVitalsSmokingStatusEnum["Blank"] = "blank";
+    AppointmentSystemVitalsSmokingStatusEnum["FourHundredAndFortyNineMillionEightHundredAndSixtyEightThousandAndTwo"] = "449868002";
+    AppointmentSystemVitalsSmokingStatusEnum["FourHundredAndTwentyEightTrillionFortyOneBillionOneHundredAndTwentyFourThousandOneHundredAndSix"] = "428041000124106";
+    AppointmentSystemVitalsSmokingStatusEnum["EightMillionFiveHundredAndSeventeenThousandAndSix"] = "8517006";
+    AppointmentSystemVitalsSmokingStatusEnum["TwoHundredAndSixtySixMillionNineHundredAndNineteenThousandAndFive"] = "266919005";
+    AppointmentSystemVitalsSmokingStatusEnum["SeventySevenMillionOneHundredAndSeventySixThousandAndTwo"] = "77176002";
+    AppointmentSystemVitalsSmokingStatusEnum["TwoHundredAndSixtySixMillionNineHundredAndTwentySevenThousandAndOne"] = "266927001";
+    AppointmentSystemVitalsSmokingStatusEnum["FourHundredAndTwentyEightTrillionSeventyOneBillionOneHundredAndTwentyFourThousandOneHundredAndThree"] = "428071000124103";
+    AppointmentSystemVitalsSmokingStatusEnum["FourHundredAndTwentyEightTrillionSixtyOneBillionOneHundredAndTwentyFourThousandOneHundredAndFive"] = "428061000124105";
+})(AppointmentSystemVitalsSmokingStatusEnum = exports.AppointmentSystemVitalsSmokingStatusEnum || (exports.AppointmentSystemVitalsSmokingStatusEnum = {}));
+// AppointmentSystemVitals
+/**
+ * Clinical vitals associated with the appointment
+**/
+var AppointmentSystemVitals = /** @class */ (function (_super) {
+    __extends(AppointmentSystemVitals, _super);
+    function AppointmentSystemVitals() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blood_pressure_1" }),
+        __metadata("design:type", Number)
+    ], AppointmentSystemVitals.prototype, "bloodPressure1", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blood_pressure_2" }),
+        __metadata("design:type", Number)
+    ], AppointmentSystemVitals.prototype, "bloodPressure2", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bmi" }),
+        __metadata("design:type", String)
+    ], AppointmentSystemVitals.prototype, "bmi", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=head_circumference" }),
+        __metadata("design:type", Number)
+    ], AppointmentSystemVitals.prototype, "headCircumference", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=head_circumference_units" }),
+        __metadata("design:type", String)
+    ], AppointmentSystemVitals.prototype, "headCircumferenceUnits", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
+        __metadata("design:type", Number)
+    ], AppointmentSystemVitals.prototype, "height", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height_units" }),
+        __metadata("design:type", String)
+    ], AppointmentSystemVitals.prototype, "heightUnits", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oxygen_saturation" }),
+        __metadata("design:type", Number)
+    ], AppointmentSystemVitals.prototype, "oxygenSaturation", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pain" }),
+        __metadata("design:type", String)
+    ], AppointmentSystemVitals.prototype, "pain", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pulse" }),
+        __metadata("design:type", Number)
+    ], AppointmentSystemVitals.prototype, "pulse", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=respiratory_rate" }),
+        __metadata("design:type", Number)
+    ], AppointmentSystemVitals.prototype, "respiratoryRate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smoking_status" }),
+        __metadata("design:type", String)
+    ], AppointmentSystemVitals.prototype, "smokingStatus", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=temperature" }),
+        __metadata("design:type", Number)
+    ], AppointmentSystemVitals.prototype, "temperature", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=temperature_units" }),
+        __metadata("design:type", String)
+    ], AppointmentSystemVitals.prototype, "temperatureUnits", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weight" }),
+        __metadata("design:type", Number)
+    ], AppointmentSystemVitals.prototype, "weight", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weight_units" }),
+        __metadata("design:type", String)
+    ], AppointmentSystemVitals.prototype, "weightUnits", void 0);
+    return AppointmentSystemVitals;
+}(utils_1.SpeakeasyBase));
+exports.AppointmentSystemVitals = AppointmentSystemVitals;
+var Appointment = /** @class */ (function (_super) {
+    __extends(Appointment, _super);
+    function Appointment() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allow_overlapping" }),
+        __metadata("design:type", Boolean)
+    ], Appointment.prototype, "allowOverlapping", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appt_is_break" }),
+        __metadata("design:type", Boolean)
+    ], Appointment.prototype, "apptIsBreak", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=base_recurring_appointment" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "baseRecurringAppointment", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billing_notes", elemType: AppointmentClaimBillingNotes }),
+        __metadata("design:type", Array)
+    ], Appointment.prototype, "billingNotes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billing_provider" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "billingProvider", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billing_status" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "billingStatus", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clinical_note" }),
+        __metadata("design:type", AppointmentClinicalNote)
+    ], Appointment.prototype, "clinicalNote", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloned_from" }),
+        __metadata("design:type", Number)
+    ], Appointment.prototype, "clonedFrom", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "color", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "createdAt", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields", elemType: AppointmentCustomAppointmentFieldValue }),
+        __metadata("design:type", Array)
+    ], Appointment.prototype, "customFields", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_vitals", elemType: AppointmentCustomVitalValue }),
+        __metadata("design:type", Array)
+    ], Appointment.prototype, "customVitals", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted_flag" }),
+        __metadata("design:type", Boolean)
+    ], Appointment.prototype, "deletedFlag", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=doctor" }),
+        __metadata("design:type", Number)
+    ], Appointment.prototype, "doctor", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
+        __metadata("design:type", Number)
+    ], Appointment.prototype, "duration", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exam_room" }),
+        __metadata("design:type", Number)
+    ], Appointment.prototype, "examRoom", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extended_updated_at" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "extendedUpdatedAt", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_billed_date" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "firstBilledDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icd10_codes" }),
+        __metadata("design:type", Array)
+    ], Appointment.prototype, "icd10Codes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icd9_codes" }),
+        __metadata("design:type", Array)
+    ], Appointment.prototype, "icd9Codes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ins1_status" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "ins1Status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ins2_status" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "ins2Status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_virtual_base" }),
+        __metadata("design:type", Boolean)
+    ], Appointment.prototype, "isVirtualBase", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_walk_in" }),
+        __metadata("design:type", Boolean)
+    ], Appointment.prototype, "isWalkIn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_billed_date" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "lastBilledDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notes" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "notes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=office" }),
+        __metadata("design:type", Number)
+    ], Appointment.prototype, "office", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patient" }),
+        __metadata("design:type", Number)
+    ], Appointment.prototype, "patient", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_insurance_id_number" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "primaryInsuranceIdNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_insurer_name" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "primaryInsurerName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_insurer_payer_id" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "primaryInsurerPayerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile" }),
+        __metadata("design:type", Number)
+    ], Appointment.prototype, "profile", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "reason", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recurring_appointment" }),
+        __metadata("design:type", Boolean)
+    ], Appointment.prototype, "recurringAppointment", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reminder_profile" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "reminderProfile", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reminders", elemType: AppointmentSimpleReminder }),
+        __metadata("design:type", Array)
+    ], Appointment.prototype, "reminders", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduled_time" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "scheduledTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondary_insurance_id_number" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "secondaryInsuranceIdNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondary_insurer_name" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "secondaryInsurerName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondary_insurer_payer_id" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "secondaryInsurerPayerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status_transitions", elemType: AppointmentAppointmentStatusTransition }),
+        __metadata("design:type", Array)
+    ], Appointment.prototype, "statusTransitions", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supervising_provider" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "supervisingProvider", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
+        __metadata("design:type", String)
+    ], Appointment.prototype, "updatedAt", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vitals" }),
+        __metadata("design:type", AppointmentSystemVitals)
+    ], Appointment.prototype, "vitals", void 0);
+    return Appointment;
+}(utils_1.SpeakeasyBase));
+exports.Appointment = Appointment;

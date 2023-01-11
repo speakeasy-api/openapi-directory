@@ -1,18 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AuthorizationTypeEnum } from "./authorizationtypeenum";
 import { ParameterConstraints } from "./parameterconstraints";
 export declare class CreateRouteResult extends SpeakeasyBase {
-    apiGatewayManaged?: boolean;
-    apiKeyRequired?: boolean;
-    authorizationScopes?: string[];
-    authorizationType?: AuthorizationTypeEnum;
-    authorizerId?: string;
-    modelSelectionExpression?: string;
-    operationName?: string;
-    requestModels?: Map<string, string>;
-    requestParameters?: Map<string, ParameterConstraints>;
-    routeId?: string;
-    routeKey?: string;
-    routeResponseSelectionExpression?: string;
-    target?: string;
+    apiGatewayManaged?: Record<string, any>;
+    apiKeyRequired?: Record<string, any>;
+    authorizationScopes?: Record<string, any>;
+    authorizationType?: Record<string, any>;
+    authorizerId?: Record<string, any>;
+    modelSelectionExpression?: Record<string, any>;
+    operationName?: Record<string, any>;
+    requestModels?: Record<string, string>;
+    requestParameters?: Record<string, ParameterConstraints>;
+    routeId?: Record<string, any>;
+    routeKey?: Record<string, any>;
+    routeResponseSelectionExpression?: Record<string, any>;
+    target?: Record<string, any>;
 }

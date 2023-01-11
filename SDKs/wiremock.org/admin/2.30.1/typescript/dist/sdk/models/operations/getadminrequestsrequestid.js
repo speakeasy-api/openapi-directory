@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAdminRequestsRequestIdResponse = exports.GetAdminRequestsRequestIdRequest = exports.GetAdminRequestsRequestIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAdminRequestsRequestIdPathParams = /** @class */ (function (_super) {
     __extends(GetAdminRequestsRequestIdPathParams, _super);
     function GetAdminRequestsRequestIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=requestId" }),
         __metadata("design:type", String)
     ], GetAdminRequestsRequestIdPathParams.prototype, "requestId", void 0);
     return GetAdminRequestsRequestIdPathParams;
-}(SpeakeasyBase));
-export { GetAdminRequestsRequestIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAdminRequestsRequestIdPathParams = GetAdminRequestsRequestIdPathParams;
 var GetAdminRequestsRequestIdRequest = /** @class */ (function (_super) {
     __extends(GetAdminRequestsRequestIdRequest, _super);
     function GetAdminRequestsRequestIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAdminRequestsRequestIdPathParams)
     ], GetAdminRequestsRequestIdRequest.prototype, "pathParams", void 0);
     return GetAdminRequestsRequestIdRequest;
-}(SpeakeasyBase));
-export { GetAdminRequestsRequestIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAdminRequestsRequestIdRequest = GetAdminRequestsRequestIdRequest;
 var GetAdminRequestsRequestIdResponse = /** @class */ (function (_super) {
     __extends(GetAdminRequestsRequestIdResponse, _super);
     function GetAdminRequestsRequestIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAdminRequestsRequestIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAdminRequestsRequestIdResponse.prototype, "statusCode", void 0);
     return GetAdminRequestsRequestIdResponse;
-}(SpeakeasyBase));
-export { GetAdminRequestsRequestIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAdminRequestsRequestIdResponse = GetAdminRequestsRequestIdResponse;

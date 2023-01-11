@@ -6,7 +6,7 @@ export declare class AsyncVrpRequest extends SpeakeasyBase {
 export declare class AsyncVrpResponse extends SpeakeasyBase {
     badRequest?: shared.BadRequest;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     internalErrorMessage?: shared.InternalErrorMessage;
     jobId?: shared.JobId;
     statusCode: number;

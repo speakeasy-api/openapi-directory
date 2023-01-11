@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SshPublicKey } from "./sshpublickey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSshPublicKeyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var sshpublickey_1 = require("./sshpublickey");
 // GetSshPublicKeyResponse
 /**
  * Contains the response to a successful <a>GetSSHPublicKey</a> request.
@@ -34,9 +37,9 @@ var GetSshPublicKeyResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", SshPublicKey)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", sshpublickey_1.SshPublicKey)
     ], GetSshPublicKeyResponse.prototype, "sshPublicKey", void 0);
     return GetSshPublicKeyResponse;
-}(SpeakeasyBase));
-export { GetSshPublicKeyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSshPublicKeyResponse = GetSshPublicKeyResponse;

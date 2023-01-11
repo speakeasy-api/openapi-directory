@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdStyle } from "./adstyle";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdUnit = exports.AdUnitMobileContentAdsSettings = exports.AdUnitContentAdsSettings = exports.AdUnitContentAdsSettingsBackupOption = void 0;
+var utils_1 = require("../../../internal/utils");
+var adstyle_1 = require("./adstyle");
 // AdUnitContentAdsSettingsBackupOption
 /**
  * The backup option to be used in instances where no ad is available.
@@ -34,20 +37,20 @@ var AdUnitContentAdsSettingsBackupOption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
         __metadata("design:type", String)
     ], AdUnitContentAdsSettingsBackupOption.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], AdUnitContentAdsSettingsBackupOption.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], AdUnitContentAdsSettingsBackupOption.prototype, "url", void 0);
     return AdUnitContentAdsSettingsBackupOption;
-}(SpeakeasyBase));
-export { AdUnitContentAdsSettingsBackupOption };
+}(utils_1.SpeakeasyBase));
+exports.AdUnitContentAdsSettingsBackupOption = AdUnitContentAdsSettingsBackupOption;
 // AdUnitContentAdsSettings
 /**
  * Settings specific to content ads (AFC) and highend mobile content ads (AFMC - deprecated).
@@ -58,20 +61,20 @@ var AdUnitContentAdsSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backupOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backupOption" }),
         __metadata("design:type", AdUnitContentAdsSettingsBackupOption)
     ], AdUnitContentAdsSettings.prototype, "backupOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", String)
     ], AdUnitContentAdsSettings.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], AdUnitContentAdsSettings.prototype, "type", void 0);
     return AdUnitContentAdsSettings;
-}(SpeakeasyBase));
-export { AdUnitContentAdsSettings };
+}(utils_1.SpeakeasyBase));
+exports.AdUnitContentAdsSettings = AdUnitContentAdsSettings;
 // AdUnitMobileContentAdsSettings
 /**
  * Settings specific to WAP mobile content ads (AFMC - deprecated).
@@ -82,61 +85,61 @@ var AdUnitMobileContentAdsSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=markupLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=markupLanguage" }),
         __metadata("design:type", String)
     ], AdUnitMobileContentAdsSettings.prototype, "markupLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scriptingLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scriptingLanguage" }),
         __metadata("design:type", String)
     ], AdUnitMobileContentAdsSettings.prototype, "scriptingLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", String)
     ], AdUnitMobileContentAdsSettings.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], AdUnitMobileContentAdsSettings.prototype, "type", void 0);
     return AdUnitMobileContentAdsSettings;
-}(SpeakeasyBase));
-export { AdUnitMobileContentAdsSettings };
+}(utils_1.SpeakeasyBase));
+exports.AdUnitMobileContentAdsSettings = AdUnitMobileContentAdsSettings;
 var AdUnit = /** @class */ (function (_super) {
     __extends(AdUnit, _super);
     function AdUnit() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], AdUnit.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentAdsSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentAdsSettings" }),
         __metadata("design:type", AdUnitContentAdsSettings)
     ], AdUnit.prototype, "contentAdsSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customStyle" }),
-        __metadata("design:type", AdStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customStyle" }),
+        __metadata("design:type", adstyle_1.AdStyle)
     ], AdUnit.prototype, "customStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AdUnit.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], AdUnit.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobileContentAdsSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobileContentAdsSettings" }),
         __metadata("design:type", AdUnitMobileContentAdsSettings)
     ], AdUnit.prototype, "mobileContentAdsSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AdUnit.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AdUnit.prototype, "status", void 0);
     return AdUnit;
-}(SpeakeasyBase));
-export { AdUnit };
+}(utils_1.SpeakeasyBase));
+exports.AdUnit = AdUnit;

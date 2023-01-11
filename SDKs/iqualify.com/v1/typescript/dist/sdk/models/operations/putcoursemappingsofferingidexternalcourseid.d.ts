@@ -9,7 +9,7 @@ export declare class PutCourseMappingsOfferingIdExternalCourseIdRequest extends 
 }
 export declare class PutCourseMappingsOfferingIdExternalCourseIdResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
-    putCourseMappingsOfferingIdExternalCourseId200ApplicationJsonStrings?: string[];
+    error?: shared.ErrorT;
     statusCode: number;
+    putCourseMappingsOfferingIdExternalCourseId200ApplicationJSONStrings?: string[];
 }

@@ -13,16 +13,6 @@ export declare enum ScheduleStateEnum {
 /**
  * The definition of a schedule.
 **/
-export declare class ScheduleInput extends SpeakeasyBase {
-    cronSchedule?: string;
-    description?: string;
-    executionTemplate?: ExecutionTemplate;
-    state?: ScheduleStateEnum;
-    timeZone?: string;
-}
-/**
- * The definition of a schedule.
-**/
 export declare class Schedule extends SpeakeasyBase {
     createTime?: string;
     cronSchedule?: string;
@@ -34,4 +24,14 @@ export declare class Schedule extends SpeakeasyBase {
     state?: ScheduleStateEnum;
     timeZone?: string;
     updateTime?: string;
+}
+/**
+ * The definition of a schedule.
+**/
+export declare class ScheduleInput extends SpeakeasyBase {
+    cronSchedule?: string;
+    description?: string;
+    executionTemplate?: ExecutionTemplate;
+    state?: ScheduleStateEnum;
+    timeZone?: string;
 }

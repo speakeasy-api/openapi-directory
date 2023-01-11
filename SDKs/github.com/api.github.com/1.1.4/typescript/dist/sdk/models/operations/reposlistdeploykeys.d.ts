@@ -14,7 +14,7 @@ export declare class ReposListDeployKeysRequest extends SpeakeasyBase {
 }
 export declare class ReposListDeployKeysResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     deployKeys?: shared.DeployKey[];
 }

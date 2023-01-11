@@ -11,7 +11,7 @@ export declare class ActivityListReposStarredByAuthenticatedUserRequest extends 
 }
 export declare class ActivityListReposStarredByAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     repositories?: shared.Repository[];

@@ -39,6 +39,10 @@ export enum TaskRequestResourceSubtypeEnum {
 }
 
 
+// TaskRequestInput
+/** 
+ * The *task* is the basic object around which many operations in Asana are centered.
+**/
 export class TaskRequestInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=approval_status" })
   approvalStatus?: TaskRequestApprovalStatusEnum;
@@ -59,7 +63,7 @@ export class TaskRequestInput extends SpeakeasyBase {
   completedBy?: UserCompactInput;
 
   @SpeakeasyMetadata({ data: "json, name=custom_fields" })
-  customFields?: Map<string, string>;
+  customFields?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=due_at" })
   dueAt?: Date;

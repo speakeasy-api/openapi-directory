@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class LeaveEarningsLine extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=EarningsRateID" })
-  earningsRateId?: string;
+  earningsRateID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=NumberOfUnits" })
   numberOfUnits?: number;

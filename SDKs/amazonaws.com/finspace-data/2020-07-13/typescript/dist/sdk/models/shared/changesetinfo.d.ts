@@ -10,14 +10,14 @@ import { ChangesetStatusEnum } from "./changesetstatusenum";
 export declare class ChangesetInfo extends SpeakeasyBase {
     changeType?: ChangeTypeEnum;
     changesetArn?: string;
-    changesetLabels?: Map<string, string>;
+    changesetLabels?: Record<string, string>;
     createTimestamp?: Date;
     datasetId?: string;
     errorInfo?: ErrorInfo;
-    formatParams?: Map<string, string>;
+    formatParams?: Record<string, string>;
     formatType?: FormatTypeEnum;
     id?: string;
-    sourceParams?: Map<string, string>;
+    sourceParams?: Record<string, string>;
     sourceType?: SourceTypeEnum;
     status?: ChangesetStatusEnum;
     updatedByChangesetId?: string;

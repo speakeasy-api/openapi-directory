@@ -239,5 +239,5 @@ export declare class UpdateNetworkWirelessSsidRequest extends SpeakeasyBase {
 export declare class UpdateNetworkWirelessSsidResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkWirelessSsid200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkWirelessSsid200ApplicationJSONObject?: Record<string, any>;
 }

@@ -8,13 +8,13 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class Prediction extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=details" })
-  details?: Map<string, string>;
+  details?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=predictedLabel" })
   predictedLabel?: string;
 
   @SpeakeasyMetadata({ data: "json, name=predictedScores" })
-  predictedScores?: Map<string, number>;
+  predictedScores?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=predictedValue" })
   predictedValue?: number;

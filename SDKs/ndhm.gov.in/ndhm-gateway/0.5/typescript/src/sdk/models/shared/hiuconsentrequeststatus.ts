@@ -1,7 +1,7 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { ConsentArtefactReference } from "./consentartefactreference";
 import { ConsentStatusEnum } from "./consentstatusenum";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 import { RequestReference } from "./requestreference";
 
 
@@ -23,7 +23,7 @@ export class HiuConsentRequestStatus extends SpeakeasyBase {
   consentRequest?: HiuConsentRequestStatusConsentRequest;
 
   @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Error;
+  error?: ErrorT;
 
   @SpeakeasyMetadata({ data: "json, name=requestId" })
   requestId: string;

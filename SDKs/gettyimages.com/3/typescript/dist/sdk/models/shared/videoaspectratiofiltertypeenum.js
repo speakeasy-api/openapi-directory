@@ -1,4 +1,7 @@
-export var VideoAspectRatioFilterTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoAspectRatioFilterTypeEnum = void 0;
+var VideoAspectRatioFilterTypeEnum;
 (function (VideoAspectRatioFilterTypeEnum) {
     VideoAspectRatioFilterTypeEnum["Sixteen9"] = "16:9";
     VideoAspectRatioFilterTypeEnum["Nine16"] = "9:16";
@@ -8,4 +11,4 @@ export var VideoAspectRatioFilterTypeEnum;
     VideoAspectRatioFilterTypeEnum["Two1"] = "2:1";
     VideoAspectRatioFilterTypeEnum["Seventeen9"] = "17:9";
     VideoAspectRatioFilterTypeEnum["Nine17"] = "9:17";
-})(VideoAspectRatioFilterTypeEnum || (VideoAspectRatioFilterTypeEnum = {}));
+})(VideoAspectRatioFilterTypeEnum = exports.VideoAspectRatioFilterTypeEnum || (exports.VideoAspectRatioFilterTypeEnum = {}));

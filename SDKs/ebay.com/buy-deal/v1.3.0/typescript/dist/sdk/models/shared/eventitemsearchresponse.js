@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventItem } from "./eventitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventItemSearchResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var eventitem_1 = require("./eventitem");
 // EventItemSearchResponse
 /**
  * The result set for the event item search.
@@ -34,33 +37,33 @@ var EventItemSearchResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventItems", elemType: EventItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventItems", elemType: eventitem_1.EventItem }),
         __metadata("design:type", Array)
     ], EventItemSearchResponse.prototype, "eventItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], EventItemSearchResponse.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], EventItemSearchResponse.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], EventItemSearchResponse.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], EventItemSearchResponse.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prev" }),
         __metadata("design:type", String)
     ], EventItemSearchResponse.prototype, "prev", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], EventItemSearchResponse.prototype, "total", void 0);
     return EventItemSearchResponse;
-}(SpeakeasyBase));
-export { EventItemSearchResponse };
+}(utils_1.SpeakeasyBase));
+exports.EventItemSearchResponse = EventItemSearchResponse;

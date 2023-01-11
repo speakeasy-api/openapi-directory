@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { WebmastersSearchanalyticsQueryRequest, WebmastersSearchanalyticsQueryResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,64 +31,59 @@ const req: WebmastersSearchanalyticsQueryRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   pathParams: {
-    siteUrl: "aut",
+    siteUrl: "sit",
   },
   queryParams: {
     alt: "json",
-    fields: "et",
-    key: "exercitationem",
-    oauthToken: "omnis",
-    prettyPrint: true,
-    quotaUser: "magnam",
-    userIp: "necessitatibus",
+    fields: "culpa",
+    key: "expedita",
+    oauthToken: "consequuntur",
+    prettyPrint: false,
+    quotaUser: "expedita",
+    userIp: "voluptas",
   },
   request: {
-    aggregationType: "sunt",
-    dataState: "quia",
+    aggregationType: "fugit",
+    dataState: "et",
     dimensionFilterGroups: [
       {
         filters: [
           {
-            dimension: "quia",
-            expression: "consectetur",
-            operator: "doloremque",
-          },
-        ],
-        groupType: "sit",
-      },
-      {
-        filters: [
-          {
-            dimension: "voluptatum",
-            expression: "modi",
-            operator: "id",
+            dimension: "dicta",
+            expression: "debitis",
+            operator: "voluptatum",
           },
           {
-            dimension: "laboriosam",
-            expression: "qui",
-            operator: "voluptas",
+            dimension: "et",
+            expression: "ut",
+            operator: "dolorem",
+          },
+          {
+            dimension: "et",
+            expression: "voluptate",
+            operator: "iste",
           },
         ],
-        groupType: "exercitationem",
+        groupType: "vitae",
       },
     ],
     dimensions: [
-      "quaerat",
-      "aspernatur",
-      "animi",
+      "dolores",
+      "illum",
+      "debitis",
     ],
-    endDate: "voluptatem",
-    rowLimit: 2546119660664386404,
-    searchType: "maiores",
-    startDate: "aliquid",
-    startRow: 8414654423399060815,
+    endDate: "vel",
+    rowLimit: 2627038740284806767,
+    searchType: "dolore",
+    startDate: "id",
+    startRow: 959367522974354090,
   },
 };
 

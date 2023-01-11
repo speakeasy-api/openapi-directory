@@ -7,7 +7,6 @@ export declare class PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateQ
     externalAccountId: string;
 }
 export declare class PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateSecurity extends SpeakeasyBase {
-    hapikey?: shared.SchemeHapikey;
     privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
     oauth2Legacy?: shared.SchemeOauth2Legacy;
 }

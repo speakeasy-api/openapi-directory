@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AirportResource } from "./airportresource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AirportResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var airportresource_1 = require("./airportresource");
 var AirportResponse = /** @class */ (function (_super) {
     __extends(AirportResponse, _super);
     function AirportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AirportResource" }),
-        __metadata("design:type", AirportResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AirportResource" }),
+        __metadata("design:type", airportresource_1.AirportResource)
     ], AirportResponse.prototype, "airportResource", void 0);
     return AirportResponse;
-}(SpeakeasyBase));
-export { AirportResponse };
+}(utils_1.SpeakeasyBase));
+exports.AirportResponse = AirportResponse;

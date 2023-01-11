@@ -15,7 +15,7 @@ export declare class CreateDashboardRequestBody extends SpeakeasyBase {
     dashboardDescription?: string;
     dashboardName: string;
     projectId: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateDashboardRequest extends SpeakeasyBase {
     headers: CreateDashboardHeaders;

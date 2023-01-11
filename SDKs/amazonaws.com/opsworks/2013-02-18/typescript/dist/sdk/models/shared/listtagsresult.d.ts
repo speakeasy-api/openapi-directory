@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class ListTagsResult extends SpeakeasyBase {
     nextToken?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

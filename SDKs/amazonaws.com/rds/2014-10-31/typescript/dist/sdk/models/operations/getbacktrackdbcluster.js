@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetBacktrackDbClusterActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetBacktrackDbClusterResponse = exports.GetBacktrackDbClusterRequest = exports.GetBacktrackDbClusterHeaders = exports.GetBacktrackDbClusterQueryParams = exports.GetBacktrackDbClusterVersionEnum = exports.GetBacktrackDbClusterActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetBacktrackDbClusterActionEnum;
 (function (GetBacktrackDbClusterActionEnum) {
     GetBacktrackDbClusterActionEnum["BacktrackDbCluster"] = "BacktrackDBCluster";
-})(GetBacktrackDbClusterActionEnum || (GetBacktrackDbClusterActionEnum = {}));
-export var GetBacktrackDbClusterVersionEnum;
+})(GetBacktrackDbClusterActionEnum = exports.GetBacktrackDbClusterActionEnum || (exports.GetBacktrackDbClusterActionEnum = {}));
+var GetBacktrackDbClusterVersionEnum;
 (function (GetBacktrackDbClusterVersionEnum) {
     GetBacktrackDbClusterVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(GetBacktrackDbClusterVersionEnum || (GetBacktrackDbClusterVersionEnum = {}));
+})(GetBacktrackDbClusterVersionEnum = exports.GetBacktrackDbClusterVersionEnum || (exports.GetBacktrackDbClusterVersionEnum = {}));
 var GetBacktrackDbClusterQueryParams = /** @class */ (function (_super) {
     __extends(GetBacktrackDbClusterQueryParams, _super);
     function GetBacktrackDbClusterQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetBacktrackDbClusterQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=BacktrackTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=BacktrackTo" }),
         __metadata("design:type", Date)
     ], GetBacktrackDbClusterQueryParams.prototype, "backtrackTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DBClusterIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DBClusterIdentifier" }),
         __metadata("design:type", String)
     ], GetBacktrackDbClusterQueryParams.prototype, "dbClusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Force" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Force" }),
         __metadata("design:type", Boolean)
     ], GetBacktrackDbClusterQueryParams.prototype, "force", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=UseEarliestTimeOnPointInTimeUnavailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=UseEarliestTimeOnPointInTimeUnavailable" }),
         __metadata("design:type", Boolean)
     ], GetBacktrackDbClusterQueryParams.prototype, "useEarliestTimeOnPointInTimeUnavailable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetBacktrackDbClusterQueryParams.prototype, "version", void 0);
     return GetBacktrackDbClusterQueryParams;
-}(SpeakeasyBase));
-export { GetBacktrackDbClusterQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetBacktrackDbClusterQueryParams = GetBacktrackDbClusterQueryParams;
 var GetBacktrackDbClusterHeaders = /** @class */ (function (_super) {
     __extends(GetBacktrackDbClusterHeaders, _super);
     function GetBacktrackDbClusterHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetBacktrackDbClusterHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetBacktrackDbClusterHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetBacktrackDbClusterHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetBacktrackDbClusterHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetBacktrackDbClusterHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetBacktrackDbClusterHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetBacktrackDbClusterHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetBacktrackDbClusterHeaders;
-}(SpeakeasyBase));
-export { GetBacktrackDbClusterHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetBacktrackDbClusterHeaders = GetBacktrackDbClusterHeaders;
 var GetBacktrackDbClusterRequest = /** @class */ (function (_super) {
     __extends(GetBacktrackDbClusterRequest, _super);
     function GetBacktrackDbClusterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetBacktrackDbClusterQueryParams)
     ], GetBacktrackDbClusterRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetBacktrackDbClusterHeaders)
     ], GetBacktrackDbClusterRequest.prototype, "headers", void 0);
     return GetBacktrackDbClusterRequest;
-}(SpeakeasyBase));
-export { GetBacktrackDbClusterRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetBacktrackDbClusterRequest = GetBacktrackDbClusterRequest;
 var GetBacktrackDbClusterResponse = /** @class */ (function (_super) {
     __extends(GetBacktrackDbClusterResponse, _super);
     function GetBacktrackDbClusterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetBacktrackDbClusterResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetBacktrackDbClusterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetBacktrackDbClusterResponse.prototype, "statusCode", void 0);
     return GetBacktrackDbClusterResponse;
-}(SpeakeasyBase));
-export { GetBacktrackDbClusterResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetBacktrackDbClusterResponse = GetBacktrackDbClusterResponse;

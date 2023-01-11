@@ -30,5 +30,5 @@ export declare class TeamsAddOrUpdateMembershipForUserLegacyResponse extends Spe
     statusCode: number;
     basicError?: shared.BasicError;
     teamMembership?: shared.TeamMembership;
-    teamsAddOrUpdateMembershipForUserLegacy422ApplicationJsonObject?: TeamsAddOrUpdateMembershipForUserLegacy422ApplicationJson;
+    teamsAddOrUpdateMembershipForUserLegacy422ApplicationJSONObject?: TeamsAddOrUpdateMembershipForUserLegacy422ApplicationJson;
 }

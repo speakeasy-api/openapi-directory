@@ -15,5 +15,5 @@ export declare class TeamsCheckPermissionsForProjectLegacyResponse extends Speak
     contentType: string;
     statusCode: number;
     teamProject?: shared.TeamProject;
-    teamsCheckPermissionsForProjectLegacy415ApplicationJsonObject?: TeamsCheckPermissionsForProjectLegacy415ApplicationJson;
+    teamsCheckPermissionsForProjectLegacy415ApplicationJSONObject?: TeamsCheckPermissionsForProjectLegacy415ApplicationJson;
 }

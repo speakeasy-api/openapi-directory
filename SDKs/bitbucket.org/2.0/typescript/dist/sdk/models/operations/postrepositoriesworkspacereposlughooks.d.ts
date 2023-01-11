@@ -15,8 +15,8 @@ export declare class PostRepositoriesWorkspaceRepoSlugHooksRequest extends Speak
 }
 export declare class PostRepositoriesWorkspaceRepoSlugHooksResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    error?: Map<string, any>;
-    webhookSubscription?: Map<string, any>;
+    error?: Record<string, any>;
+    webhookSubscription?: Record<string, any>;
 }

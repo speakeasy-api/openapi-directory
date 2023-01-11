@@ -25,5 +25,5 @@ export class GetNetworkSmDeviceWlanListsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSmDeviceWlanLists200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSmDeviceWlanLists200ApplicationJSONObject?: Record<string, any>;
 }

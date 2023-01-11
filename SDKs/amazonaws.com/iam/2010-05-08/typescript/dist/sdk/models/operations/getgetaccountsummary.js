@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetAccountSummaryActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetAccountSummaryResponse = exports.GetGetAccountSummaryRequest = exports.GetGetAccountSummaryHeaders = exports.GetGetAccountSummaryQueryParams = exports.GetGetAccountSummaryVersionEnum = exports.GetGetAccountSummaryActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetAccountSummaryActionEnum;
 (function (GetGetAccountSummaryActionEnum) {
     GetGetAccountSummaryActionEnum["GetAccountSummary"] = "GetAccountSummary";
-})(GetGetAccountSummaryActionEnum || (GetGetAccountSummaryActionEnum = {}));
-export var GetGetAccountSummaryVersionEnum;
+})(GetGetAccountSummaryActionEnum = exports.GetGetAccountSummaryActionEnum || (exports.GetGetAccountSummaryActionEnum = {}));
+var GetGetAccountSummaryVersionEnum;
 (function (GetGetAccountSummaryVersionEnum) {
     GetGetAccountSummaryVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetGetAccountSummaryVersionEnum || (GetGetAccountSummaryVersionEnum = {}));
+})(GetGetAccountSummaryVersionEnum = exports.GetGetAccountSummaryVersionEnum || (exports.GetGetAccountSummaryVersionEnum = {}));
 var GetGetAccountSummaryQueryParams = /** @class */ (function (_super) {
     __extends(GetGetAccountSummaryQueryParams, _super);
     function GetGetAccountSummaryQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetGetAccountSummaryQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetGetAccountSummaryQueryParams.prototype, "version", void 0);
     return GetGetAccountSummaryQueryParams;
-}(SpeakeasyBase));
-export { GetGetAccountSummaryQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetAccountSummaryQueryParams = GetGetAccountSummaryQueryParams;
 var GetGetAccountSummaryHeaders = /** @class */ (function (_super) {
     __extends(GetGetAccountSummaryHeaders, _super);
     function GetGetAccountSummaryHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetGetAccountSummaryHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetGetAccountSummaryHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetGetAccountSummaryHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetGetAccountSummaryHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetGetAccountSummaryHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetGetAccountSummaryHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetGetAccountSummaryHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetGetAccountSummaryHeaders;
-}(SpeakeasyBase));
-export { GetGetAccountSummaryHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetGetAccountSummaryHeaders = GetGetAccountSummaryHeaders;
 var GetGetAccountSummaryRequest = /** @class */ (function (_super) {
     __extends(GetGetAccountSummaryRequest, _super);
     function GetGetAccountSummaryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetAccountSummaryQueryParams)
     ], GetGetAccountSummaryRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetAccountSummaryHeaders)
     ], GetGetAccountSummaryRequest.prototype, "headers", void 0);
     return GetGetAccountSummaryRequest;
-}(SpeakeasyBase));
-export { GetGetAccountSummaryRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetAccountSummaryRequest = GetGetAccountSummaryRequest;
 var GetGetAccountSummaryResponse = /** @class */ (function (_super) {
     __extends(GetGetAccountSummaryResponse, _super);
     function GetGetAccountSummaryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGetAccountSummaryResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetAccountSummaryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetAccountSummaryResponse.prototype, "statusCode", void 0);
     return GetGetAccountSummaryResponse;
-}(SpeakeasyBase));
-export { GetGetAccountSummaryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetAccountSummaryResponse = GetGetAccountSummaryResponse;

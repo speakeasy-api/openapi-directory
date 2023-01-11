@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetActionOrganizationActivityListHtmlResponse = exports.GetActionOrganizationActivityListHtmlRequest = exports.GetActionOrganizationActivityListHtmlQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetActionOrganizationActivityListHtmlQueryParams = /** @class */ (function (_super) {
     __extends(GetActionOrganizationActivityListHtmlQueryParams, _super);
     function GetActionOrganizationActivityListHtmlQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id" }),
         __metadata("design:type", String)
     ], GetActionOrganizationActivityListHtmlQueryParams.prototype, "id", void 0);
     return GetActionOrganizationActivityListHtmlQueryParams;
-}(SpeakeasyBase));
-export { GetActionOrganizationActivityListHtmlQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetActionOrganizationActivityListHtmlQueryParams = GetActionOrganizationActivityListHtmlQueryParams;
 var GetActionOrganizationActivityListHtmlRequest = /** @class */ (function (_super) {
     __extends(GetActionOrganizationActivityListHtmlRequest, _super);
     function GetActionOrganizationActivityListHtmlRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetActionOrganizationActivityListHtmlQueryParams)
     ], GetActionOrganizationActivityListHtmlRequest.prototype, "queryParams", void 0);
     return GetActionOrganizationActivityListHtmlRequest;
-}(SpeakeasyBase));
-export { GetActionOrganizationActivityListHtmlRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetActionOrganizationActivityListHtmlRequest = GetActionOrganizationActivityListHtmlRequest;
 var GetActionOrganizationActivityListHtmlResponse = /** @class */ (function (_super) {
     __extends(GetActionOrganizationActivityListHtmlResponse, _super);
     function GetActionOrganizationActivityListHtmlResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetActionOrganizationActivityListHtmlResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetActionOrganizationActivityListHtmlResponse.prototype, "statusCode", void 0);
     return GetActionOrganizationActivityListHtmlResponse;
-}(SpeakeasyBase));
-export { GetActionOrganizationActivityListHtmlResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetActionOrganizationActivityListHtmlResponse = GetActionOrganizationActivityListHtmlResponse;

@@ -23,7 +23,7 @@ export declare class VaultMattersUndeleteSecurity extends SpeakeasyBase {
 export declare class VaultMattersUndeleteRequest extends SpeakeasyBase {
     pathParams: VaultMattersUndeletePathParams;
     queryParams: VaultMattersUndeleteQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: VaultMattersUndeleteSecurity;
 }
 export declare class VaultMattersUndeleteResponse extends SpeakeasyBase {

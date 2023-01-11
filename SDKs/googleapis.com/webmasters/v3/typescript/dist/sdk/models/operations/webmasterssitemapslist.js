@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,154 +14,179 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebmastersSitemapsListResponse = exports.WebmastersSitemapsListRequest = exports.WebmastersSitemapsListSecurity = exports.WebmastersSitemapsListSecurityOption2 = exports.WebmastersSitemapsListSecurityOption1 = exports.WebmastersSitemapsListQueryParams = exports.WebmastersSitemapsListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var WebmastersSitemapsListPathParams = /** @class */ (function (_super) {
     __extends(WebmastersSitemapsListPathParams, _super);
     function WebmastersSitemapsListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=siteUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=siteUrl" }),
         __metadata("design:type", String)
     ], WebmastersSitemapsListPathParams.prototype, "siteUrl", void 0);
     return WebmastersSitemapsListPathParams;
-}(SpeakeasyBase));
-export { WebmastersSitemapsListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.WebmastersSitemapsListPathParams = WebmastersSitemapsListPathParams;
 var WebmastersSitemapsListQueryParams = /** @class */ (function (_super) {
     __extends(WebmastersSitemapsListQueryParams, _super);
     function WebmastersSitemapsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], WebmastersSitemapsListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], WebmastersSitemapsListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], WebmastersSitemapsListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], WebmastersSitemapsListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], WebmastersSitemapsListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], WebmastersSitemapsListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sitemapIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sitemapIndex" }),
         __metadata("design:type", String)
     ], WebmastersSitemapsListQueryParams.prototype, "sitemapIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], WebmastersSitemapsListQueryParams.prototype, "userIp", void 0);
     return WebmastersSitemapsListQueryParams;
-}(SpeakeasyBase));
-export { WebmastersSitemapsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.WebmastersSitemapsListQueryParams = WebmastersSitemapsListQueryParams;
 var WebmastersSitemapsListSecurityOption1 = /** @class */ (function (_super) {
     __extends(WebmastersSitemapsListSecurityOption1, _super);
     function WebmastersSitemapsListSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], WebmastersSitemapsListSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], WebmastersSitemapsListSecurityOption1.prototype, "oauth2c", void 0);
     return WebmastersSitemapsListSecurityOption1;
-}(SpeakeasyBase));
-export { WebmastersSitemapsListSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.WebmastersSitemapsListSecurityOption1 = WebmastersSitemapsListSecurityOption1;
 var WebmastersSitemapsListSecurityOption2 = /** @class */ (function (_super) {
     __extends(WebmastersSitemapsListSecurityOption2, _super);
     function WebmastersSitemapsListSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], WebmastersSitemapsListSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], WebmastersSitemapsListSecurityOption2.prototype, "oauth2c", void 0);
     return WebmastersSitemapsListSecurityOption2;
-}(SpeakeasyBase));
-export { WebmastersSitemapsListSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.WebmastersSitemapsListSecurityOption2 = WebmastersSitemapsListSecurityOption2;
 var WebmastersSitemapsListSecurity = /** @class */ (function (_super) {
     __extends(WebmastersSitemapsListSecurity, _super);
     function WebmastersSitemapsListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", WebmastersSitemapsListSecurityOption1)
     ], WebmastersSitemapsListSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", WebmastersSitemapsListSecurityOption2)
     ], WebmastersSitemapsListSecurity.prototype, "option2", void 0);
     return WebmastersSitemapsListSecurity;
-}(SpeakeasyBase));
-export { WebmastersSitemapsListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.WebmastersSitemapsListSecurity = WebmastersSitemapsListSecurity;
 var WebmastersSitemapsListRequest = /** @class */ (function (_super) {
     __extends(WebmastersSitemapsListRequest, _super);
     function WebmastersSitemapsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", WebmastersSitemapsListPathParams)
     ], WebmastersSitemapsListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", WebmastersSitemapsListQueryParams)
     ], WebmastersSitemapsListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", WebmastersSitemapsListSecurity)
     ], WebmastersSitemapsListRequest.prototype, "security", void 0);
     return WebmastersSitemapsListRequest;
-}(SpeakeasyBase));
-export { WebmastersSitemapsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.WebmastersSitemapsListRequest = WebmastersSitemapsListRequest;
 var WebmastersSitemapsListResponse = /** @class */ (function (_super) {
     __extends(WebmastersSitemapsListResponse, _super);
     function WebmastersSitemapsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], WebmastersSitemapsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.SitemapsListResponse)
     ], WebmastersSitemapsListResponse.prototype, "sitemapsListResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], WebmastersSitemapsListResponse.prototype, "statusCode", void 0);
     return WebmastersSitemapsListResponse;
-}(SpeakeasyBase));
-export { WebmastersSitemapsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.WebmastersSitemapsListResponse = WebmastersSitemapsListResponse;

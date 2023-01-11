@@ -107,11 +107,11 @@ export declare class EpfscRequest extends SpeakeasyBase {
 export declare class EpfscResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    epfsc400ApplicationJsonObject?: Epfsc400ApplicationJson;
-    epfsc401ApplicationJsonObject?: Epfsc401ApplicationJson;
-    epfsc404ApplicationJsonObject?: Epfsc404ApplicationJson;
-    epfsc500ApplicationJsonObject?: Epfsc500ApplicationJson;
-    epfsc502ApplicationJsonObject?: Epfsc502ApplicationJson;
-    epfsc503ApplicationJsonObject?: Epfsc503ApplicationJson;
-    epfsc504ApplicationJsonObject?: Epfsc504ApplicationJson;
+    epfsc400ApplicationJSONObject?: Epfsc400ApplicationJson;
+    epfsc401ApplicationJSONObject?: Epfsc401ApplicationJson;
+    epfsc404ApplicationJSONObject?: Epfsc404ApplicationJson;
+    epfsc500ApplicationJSONObject?: Epfsc500ApplicationJson;
+    epfsc502ApplicationJSONObject?: Epfsc502ApplicationJson;
+    epfsc503ApplicationJSONObject?: Epfsc503ApplicationJson;
+    epfsc504ApplicationJSONObject?: Epfsc504ApplicationJson;
 }

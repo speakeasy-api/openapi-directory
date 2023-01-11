@@ -23,11 +23,11 @@ export declare class DatalabelingProjectsEvaluationJobsResumeSecurity extends Sp
 export declare class DatalabelingProjectsEvaluationJobsResumeRequest extends SpeakeasyBase {
     pathParams: DatalabelingProjectsEvaluationJobsResumePathParams;
     queryParams: DatalabelingProjectsEvaluationJobsResumeQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: DatalabelingProjectsEvaluationJobsResumeSecurity;
 }
 export declare class DatalabelingProjectsEvaluationJobsResumeResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

@@ -3,10 +3,6 @@ import { User } from "./user";
 
 
 
-// LabelField
-/** 
- * Representation of a label field.
-**/
 export class LabelField extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=dateString" })
   dateString?: Date[];

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus
 /**
  * Represents the Compliance Status of this workload
@@ -33,13 +36,13 @@ var GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus = /** @class */ (funct
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acknowledgedViolationCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acknowledgedViolationCount" }),
         __metadata("design:type", Number)
     ], GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus.prototype, "acknowledgedViolationCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activeViolationCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activeViolationCount" }),
         __metadata("design:type", Number)
     ], GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus.prototype, "activeViolationCount", void 0);
     return GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus;
-}(SpeakeasyBase));
-export { GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus = GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus;

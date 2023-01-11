@@ -14,7 +14,7 @@ export declare class GetClusterSolutionResponse extends SpeakeasyBase {
     badRequest?: shared.BadRequest;
     clusterResponse?: shared.ClusterResponse;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getClusterSolution404ApplicationJsonObject?: GetClusterSolution404ApplicationJson;
+    getClusterSolution404ApplicationJSONObject?: GetClusterSolution404ApplicationJson;
 }

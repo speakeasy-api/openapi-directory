@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VirtualNodeGrpcConnectionPool } from "./virtualnodegrpcconnectionpool";
-import { VirtualNodeHttpConnectionPool } from "./virtualnodehttpconnectionpool";
-import { VirtualNodeHttp2ConnectionPool } from "./virtualnodehttp2connectionpool";
-import { VirtualNodeTcpConnectionPool } from "./virtualnodetcpconnectionpool";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualNodeConnectionPool = void 0;
+var utils_1 = require("../../../internal/utils");
+var virtualnodegrpcconnectionpool_1 = require("./virtualnodegrpcconnectionpool");
+var virtualnodehttpconnectionpool_1 = require("./virtualnodehttpconnectionpool");
+var virtualnodehttp2connectionpool_1 = require("./virtualnodehttp2connectionpool");
+var virtualnodetcpconnectionpool_1 = require("./virtualnodetcpconnectionpool");
 // VirtualNodeConnectionPool
 /**
  * <p>An object that represents the type of virtual node connection pool.</p> <p>Only one protocol is used at a time and should be the same protocol as the one chosen under port mapping.</p> <p>If not present the default value for <code>maxPendingRequests</code> is <code>2147483647</code>.</p> <p/>
@@ -37,21 +40,21 @@ var VirtualNodeConnectionPool = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grpc" }),
-        __metadata("design:type", VirtualNodeGrpcConnectionPool)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grpc" }),
+        __metadata("design:type", virtualnodegrpcconnectionpool_1.VirtualNodeGrpcConnectionPool)
     ], VirtualNodeConnectionPool.prototype, "grpc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=http" }),
-        __metadata("design:type", VirtualNodeHttpConnectionPool)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=http" }),
+        __metadata("design:type", virtualnodehttpconnectionpool_1.VirtualNodeHttpConnectionPool)
     ], VirtualNodeConnectionPool.prototype, "http", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=http2" }),
-        __metadata("design:type", VirtualNodeHttp2ConnectionPool)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=http2" }),
+        __metadata("design:type", virtualnodehttp2connectionpool_1.VirtualNodeHttp2ConnectionPool)
     ], VirtualNodeConnectionPool.prototype, "http2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tcp" }),
-        __metadata("design:type", VirtualNodeTcpConnectionPool)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tcp" }),
+        __metadata("design:type", virtualnodetcpconnectionpool_1.VirtualNodeTcpConnectionPool)
     ], VirtualNodeConnectionPool.prototype, "tcp", void 0);
     return VirtualNodeConnectionPool;
-}(SpeakeasyBase));
-export { VirtualNodeConnectionPool };
+}(utils_1.SpeakeasyBase));
+exports.VirtualNodeConnectionPool = VirtualNodeConnectionPool;

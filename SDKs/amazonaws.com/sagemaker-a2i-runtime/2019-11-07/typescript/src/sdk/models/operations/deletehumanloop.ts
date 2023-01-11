@@ -46,7 +46,7 @@ export class DeleteHumanLoopResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteHumanLoopResponse?: Map<string, any>;
+  deleteHumanLoopResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

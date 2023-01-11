@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { User } from "./user";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Reply = void 0;
+var utils_1 = require("../../../internal/utils");
+var user_1 = require("./user");
 // Reply
 /**
  * A reply to a comment on a file.
@@ -34,41 +37,41 @@ var Reply = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], Reply.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
-        __metadata("design:type", User)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
+        __metadata("design:type", user_1.User)
     ], Reply.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], Reply.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdTime" }),
         __metadata("design:type", Date)
     ], Reply.prototype, "createdTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], Reply.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=htmlContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=htmlContent" }),
         __metadata("design:type", String)
     ], Reply.prototype, "htmlContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Reply.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Reply.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modifiedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modifiedTime" }),
         __metadata("design:type", Date)
     ], Reply.prototype, "modifiedTime", void 0);
     return Reply;
-}(SpeakeasyBase));
-export { Reply };
+}(utils_1.SpeakeasyBase));
+exports.Reply = Reply;

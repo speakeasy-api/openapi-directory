@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FeatureValue } from "./featurevalue";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetRecordResultDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var featurevalue_1 = require("./featurevalue");
 // BatchGetRecordResultDetail
 /**
  * The output of Records that have been retrieved in a batch.
@@ -34,17 +37,17 @@ var BatchGetRecordResultDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeatureGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeatureGroupName" }),
         __metadata("design:type", String)
     ], BatchGetRecordResultDetail.prototype, "featureGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Record", elemType: FeatureValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Record", elemType: featurevalue_1.FeatureValue }),
         __metadata("design:type", Array)
     ], BatchGetRecordResultDetail.prototype, "record", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecordIdentifierValueAsString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecordIdentifierValueAsString" }),
         __metadata("design:type", String)
     ], BatchGetRecordResultDetail.prototype, "recordIdentifierValueAsString", void 0);
     return BatchGetRecordResultDetail;
-}(SpeakeasyBase));
-export { BatchGetRecordResultDetail };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetRecordResultDetail = BatchGetRecordResultDetail;

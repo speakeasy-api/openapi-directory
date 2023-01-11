@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetInventoryRequest, GetInventoryResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     basicScheme: {
       password: "YOUR_PASSWORD_HERE",
@@ -35,19 +34,19 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetInventoryRequest = {
   queryParams: {
-    shipNode: "excepturi",
-    sku: "repellat",
+    shipNode: "sit",
+    sku: "voluptas",
   },
   headers: {
-    authorization: "placeat",
-    wmConsumerChannelType: "neque",
-    wmQosCorrelationId: "autem",
-    wmSecAccessToken: "voluptas",
-    wmSvcName: "aut",
+    authorization: "culpa",
+    wmCONSUMERCHANNELTYPE: "expedita",
+    wmQOSCORRELATIONID: "consequuntur",
+    wmSECACCESSTOKEN: "dolor",
+    wmSVCNAME: "expedita",
   },
 };
 
-sdk.sdk.getInventory(req).then((res: GetInventoryResponse | AxiosError) => {
+sdk.inventory.getInventory(req).then((res: GetInventoryResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -56,7 +55,7 @@ sdk.sdk.getInventory(req).then((res: GetInventoryResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Inventory
 
 * `getInventory` - Inventory
 * `getMultiNodeInventoryForAllSkuAndAllShipNodes` - Multiple Item Inventory for All Ship Nodes

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,94 +14,119 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointGetAnArtistResponse = exports.EndpointGetAnArtistRequest = exports.EndpointGetAnArtistSecurity = exports.EndpointGetAnArtistHeaders = exports.EndpointGetAnArtistPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var EndpointGetAnArtistPathParams = /** @class */ (function (_super) {
     __extends(EndpointGetAnArtistPathParams, _super);
     function EndpointGetAnArtistPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], EndpointGetAnArtistPathParams.prototype, "id", void 0);
     return EndpointGetAnArtistPathParams;
-}(SpeakeasyBase));
-export { EndpointGetAnArtistPathParams };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetAnArtistPathParams = EndpointGetAnArtistPathParams;
 var EndpointGetAnArtistHeaders = /** @class */ (function (_super) {
     __extends(EndpointGetAnArtistHeaders, _super);
     function EndpointGetAnArtistHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Authorization" }),
         __metadata("design:type", String)
     ], EndpointGetAnArtistHeaders.prototype, "authorization", void 0);
     return EndpointGetAnArtistHeaders;
-}(SpeakeasyBase));
-export { EndpointGetAnArtistHeaders };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetAnArtistHeaders = EndpointGetAnArtistHeaders;
 var EndpointGetAnArtistSecurity = /** @class */ (function (_super) {
     __extends(EndpointGetAnArtistSecurity, _super);
     function EndpointGetAnArtistSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeSpotifyAuth)
     ], EndpointGetAnArtistSecurity.prototype, "spotifyAuth", void 0);
     return EndpointGetAnArtistSecurity;
-}(SpeakeasyBase));
-export { EndpointGetAnArtistSecurity };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetAnArtistSecurity = EndpointGetAnArtistSecurity;
 var EndpointGetAnArtistRequest = /** @class */ (function (_super) {
     __extends(EndpointGetAnArtistRequest, _super);
     function EndpointGetAnArtistRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointGetAnArtistPathParams)
     ], EndpointGetAnArtistRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointGetAnArtistHeaders)
     ], EndpointGetAnArtistRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointGetAnArtistSecurity)
     ], EndpointGetAnArtistRequest.prototype, "security", void 0);
     return EndpointGetAnArtistRequest;
-}(SpeakeasyBase));
-export { EndpointGetAnArtistRequest };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetAnArtistRequest = EndpointGetAnArtistRequest;
 var EndpointGetAnArtistResponse = /** @class */ (function (_super) {
     __extends(EndpointGetAnArtistResponse, _super);
     function EndpointGetAnArtistResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ArtistObject)
     ], EndpointGetAnArtistResponse.prototype, "artistObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndpointGetAnArtistResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorResponseObject)
     ], EndpointGetAnArtistResponse.prototype, "errorResponseObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EndpointGetAnArtistResponse.prototype, "statusCode", void 0);
     return EndpointGetAnArtistResponse;
-}(SpeakeasyBase));
-export { EndpointGetAnArtistResponse };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetAnArtistResponse = EndpointGetAnArtistResponse;

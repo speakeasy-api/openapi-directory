@@ -23,7 +23,7 @@ export declare class RealtimebiddingBuyersUserListsCloseSecurity extends Speakea
 export declare class RealtimebiddingBuyersUserListsCloseRequest extends SpeakeasyBase {
     pathParams: RealtimebiddingBuyersUserListsClosePathParams;
     queryParams: RealtimebiddingBuyersUserListsCloseQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: RealtimebiddingBuyersUserListsCloseSecurity;
 }
 export declare class RealtimebiddingBuyersUserListsCloseResponse extends SpeakeasyBase {

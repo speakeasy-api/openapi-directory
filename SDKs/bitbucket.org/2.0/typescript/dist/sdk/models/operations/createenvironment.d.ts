@@ -5,12 +5,12 @@ export declare class CreateEnvironmentPathParams extends SpeakeasyBase {
 }
 export declare class CreateEnvironmentRequest extends SpeakeasyBase {
     pathParams: CreateEnvironmentPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class CreateEnvironmentResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    deploymentEnvironment?: Map<string, any>;
-    error?: Map<string, any>;
+    deploymentEnvironment?: Record<string, any>;
+    error?: Record<string, any>;
 }

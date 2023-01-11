@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateOrUpdateAnnotationResponse = exports.CreateOrUpdateAnnotationRequest = exports.CreateOrUpdateAnnotationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateOrUpdateAnnotationPathParams = /** @class */ (function (_super) {
     __extends(CreateOrUpdateAnnotationPathParams, _super);
     function CreateOrUpdateAnnotationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=annotationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=annotationId" }),
         __metadata("design:type", String)
     ], CreateOrUpdateAnnotationPathParams.prototype, "annotationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=commit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=commit" }),
         __metadata("design:type", String)
     ], CreateOrUpdateAnnotationPathParams.prototype, "commit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], CreateOrUpdateAnnotationPathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=reportId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=reportId" }),
         __metadata("design:type", String)
     ], CreateOrUpdateAnnotationPathParams.prototype, "reportId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], CreateOrUpdateAnnotationPathParams.prototype, "workspace", void 0);
     return CreateOrUpdateAnnotationPathParams;
-}(SpeakeasyBase));
-export { CreateOrUpdateAnnotationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrUpdateAnnotationPathParams = CreateOrUpdateAnnotationPathParams;
 var CreateOrUpdateAnnotationRequest = /** @class */ (function (_super) {
     __extends(CreateOrUpdateAnnotationRequest, _super);
     function CreateOrUpdateAnnotationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateOrUpdateAnnotationPathParams)
     ], CreateOrUpdateAnnotationRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], CreateOrUpdateAnnotationRequest.prototype, "request", void 0);
     return CreateOrUpdateAnnotationRequest;
-}(SpeakeasyBase));
-export { CreateOrUpdateAnnotationRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrUpdateAnnotationRequest = CreateOrUpdateAnnotationRequest;
 var CreateOrUpdateAnnotationResponse = /** @class */ (function (_super) {
     __extends(CreateOrUpdateAnnotationResponse, _super);
     function CreateOrUpdateAnnotationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateOrUpdateAnnotationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateOrUpdateAnnotationResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateOrUpdateAnnotationResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateOrUpdateAnnotationResponse.prototype, "reportAnnotation", void 0);
     return CreateOrUpdateAnnotationResponse;
-}(SpeakeasyBase));
-export { CreateOrUpdateAnnotationResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrUpdateAnnotationResponse = CreateOrUpdateAnnotationResponse;

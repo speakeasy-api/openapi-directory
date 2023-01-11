@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IssueDetected } from "./issuedetected";
-import { SentimentValueEnum } from "./sentimentvalueenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Transcript = void 0;
+var utils_1 = require("../../../internal/utils");
+var issuedetected_1 = require("./issuedetected");
+var sentimentvalueenum_1 = require("./sentimentvalueenum");
 // Transcript
 /**
  * A list of messages in the session.
@@ -35,37 +38,37 @@ var Transcript = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BeginOffsetMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BeginOffsetMillis" }),
         __metadata("design:type", Number)
     ], Transcript.prototype, "beginOffsetMillis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Content" }),
         __metadata("design:type", String)
     ], Transcript.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndOffsetMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndOffsetMillis" }),
         __metadata("design:type", Number)
     ], Transcript.prototype, "endOffsetMillis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], Transcript.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IssuesDetected", elemType: IssueDetected }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IssuesDetected", elemType: issuedetected_1.IssueDetected }),
         __metadata("design:type", Array)
     ], Transcript.prototype, "issuesDetected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParticipantId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParticipantId" }),
         __metadata("design:type", String)
     ], Transcript.prototype, "participantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParticipantRole" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParticipantRole" }),
         __metadata("design:type", String)
     ], Transcript.prototype, "participantRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Sentiment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Sentiment" }),
         __metadata("design:type", String)
     ], Transcript.prototype, "sentiment", void 0);
     return Transcript;
-}(SpeakeasyBase));
-export { Transcript };
+}(utils_1.SpeakeasyBase));
+exports.Transcript = Transcript;

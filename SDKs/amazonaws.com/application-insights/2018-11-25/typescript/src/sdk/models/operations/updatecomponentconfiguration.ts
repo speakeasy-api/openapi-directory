@@ -57,7 +57,7 @@ export class UpdateComponentConfigurationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateComponentConfigurationResponse?: Map<string, any>;
+  updateComponentConfigurationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

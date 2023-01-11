@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StackFrame } from "./stackframe";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StackFrames = void 0;
+var utils_1 = require("../../../internal/utils");
+var stackframe_1 = require("./stackframe");
 // StackFrames
 /**
  * A collection of stack frames, which can be truncated.
@@ -34,13 +37,13 @@ var StackFrames = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=droppedFramesCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=droppedFramesCount" }),
         __metadata("design:type", Number)
     ], StackFrames.prototype, "droppedFramesCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frame", elemType: StackFrame }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frame", elemType: stackframe_1.StackFrame }),
         __metadata("design:type", Array)
     ], StackFrames.prototype, "frame", void 0);
     return StackFrames;
-}(SpeakeasyBase));
-export { StackFrames };
+}(utils_1.SpeakeasyBase));
+exports.StackFrames = StackFrames;

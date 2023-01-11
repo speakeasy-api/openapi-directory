@@ -41,7 +41,7 @@ export class GetTeamDistrictsResponse extends SpeakeasyBase {
   districtLists?: shared.DistrictList[];
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

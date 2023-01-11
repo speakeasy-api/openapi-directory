@@ -7,7 +7,7 @@ export class LeaveBalance extends SpeakeasyBase {
   leaveName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=LeaveTypeID" })
-  leaveTypeId?: string;
+  leaveTypeID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=NumberOfUnits" })
   numberOfUnits?: number;

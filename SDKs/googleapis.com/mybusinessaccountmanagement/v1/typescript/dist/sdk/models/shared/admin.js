@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,47 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AdminRoleEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Admin = exports.AdminInput = exports.AdminRoleEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AdminRoleEnum;
 (function (AdminRoleEnum) {
     AdminRoleEnum["AdminRoleUnspecified"] = "ADMIN_ROLE_UNSPECIFIED";
     AdminRoleEnum["PrimaryOwner"] = "PRIMARY_OWNER";
     AdminRoleEnum["Owner"] = "OWNER";
     AdminRoleEnum["Manager"] = "MANAGER";
     AdminRoleEnum["SiteManager"] = "SITE_MANAGER";
-})(AdminRoleEnum || (AdminRoleEnum = {}));
-// Admin
-/**
- * An administrator of an Account or a location.
-**/
-var Admin = /** @class */ (function (_super) {
-    __extends(Admin, _super);
-    function Admin() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
-        __metadata("design:type", String)
-    ], Admin.prototype, "account", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=admin" }),
-        __metadata("design:type", String)
-    ], Admin.prototype, "admin", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], Admin.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=pendingInvitation" }),
-        __metadata("design:type", Boolean)
-    ], Admin.prototype, "pendingInvitation", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
-        __metadata("design:type", String)
-    ], Admin.prototype, "role", void 0);
-    return Admin;
-}(SpeakeasyBase));
-export { Admin };
+})(AdminRoleEnum = exports.AdminRoleEnum || (exports.AdminRoleEnum = {}));
 // AdminInput
 /**
  * An administrator of an Account or a location.
@@ -73,21 +44,53 @@ var AdminInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
         __metadata("design:type", String)
     ], AdminInput.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=admin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=admin" }),
         __metadata("design:type", String)
     ], AdminInput.prototype, "admin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AdminInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], AdminInput.prototype, "role", void 0);
     return AdminInput;
-}(SpeakeasyBase));
-export { AdminInput };
+}(utils_1.SpeakeasyBase));
+exports.AdminInput = AdminInput;
+// Admin
+/**
+ * An administrator of an Account or a location.
+**/
+var Admin = /** @class */ (function (_super) {
+    __extends(Admin, _super);
+    function Admin() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
+        __metadata("design:type", String)
+    ], Admin.prototype, "account", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=admin" }),
+        __metadata("design:type", String)
+    ], Admin.prototype, "admin", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], Admin.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pendingInvitation" }),
+        __metadata("design:type", Boolean)
+    ], Admin.prototype, "pendingInvitation", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
+        __metadata("design:type", String)
+    ], Admin.prototype, "role", void 0);
+    return Admin;
+}(utils_1.SpeakeasyBase));
+exports.Admin = Admin;

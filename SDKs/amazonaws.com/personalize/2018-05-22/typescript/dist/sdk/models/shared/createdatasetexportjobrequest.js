@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IngestionModeEnum } from "./ingestionmodeenum";
-import { DatasetExportJobOutput } from "./datasetexportjoboutput";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDatasetExportJobRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var ingestionmodeenum_1 = require("./ingestionmodeenum");
+var datasetexportjoboutput_1 = require("./datasetexportjoboutput");
 var CreateDatasetExportJobRequest = /** @class */ (function (_super) {
     __extends(CreateDatasetExportJobRequest, _super);
     function CreateDatasetExportJobRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasetArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasetArn" }),
         __metadata("design:type", String)
     ], CreateDatasetExportJobRequest.prototype, "datasetArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ingestionMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ingestionMode" }),
         __metadata("design:type", String)
     ], CreateDatasetExportJobRequest.prototype, "ingestionMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobName" }),
         __metadata("design:type", String)
     ], CreateDatasetExportJobRequest.prototype, "jobName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobOutput" }),
-        __metadata("design:type", DatasetExportJobOutput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobOutput" }),
+        __metadata("design:type", datasetexportjoboutput_1.DatasetExportJobOutput)
     ], CreateDatasetExportJobRequest.prototype, "jobOutput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleArn" }),
         __metadata("design:type", String)
     ], CreateDatasetExportJobRequest.prototype, "roleArn", void 0);
     return CreateDatasetExportJobRequest;
-}(SpeakeasyBase));
-export { CreateDatasetExportJobRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateDatasetExportJobRequest = CreateDatasetExportJobRequest;

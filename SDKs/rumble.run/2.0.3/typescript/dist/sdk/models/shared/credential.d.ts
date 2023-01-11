@@ -4,7 +4,7 @@ export declare enum CredentialTypeEnum {
     AwsAccessSecret = "aws_access_secret"
 }
 export declare class Credential extends SpeakeasyBase {
-    acl?: Map<string, any>;
+    acl?: Record<string, any>;
     cidrs?: string[];
     clientId?: string;
     createdAt?: number;

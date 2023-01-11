@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteNetworkSwitchAccessPolicyResponse = exports.DeleteNetworkSwitchAccessPolicyRequest = exports.DeleteNetworkSwitchAccessPolicyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteNetworkSwitchAccessPolicyPathParams = /** @class */ (function (_super) {
     __extends(DeleteNetworkSwitchAccessPolicyPathParams, _super);
     function DeleteNetworkSwitchAccessPolicyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=accessPolicyNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=accessPolicyNumber" }),
         __metadata("design:type", String)
     ], DeleteNetworkSwitchAccessPolicyPathParams.prototype, "accessPolicyNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], DeleteNetworkSwitchAccessPolicyPathParams.prototype, "networkId", void 0);
     return DeleteNetworkSwitchAccessPolicyPathParams;
-}(SpeakeasyBase));
-export { DeleteNetworkSwitchAccessPolicyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkSwitchAccessPolicyPathParams = DeleteNetworkSwitchAccessPolicyPathParams;
 var DeleteNetworkSwitchAccessPolicyRequest = /** @class */ (function (_super) {
     __extends(DeleteNetworkSwitchAccessPolicyRequest, _super);
     function DeleteNetworkSwitchAccessPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteNetworkSwitchAccessPolicyPathParams)
     ], DeleteNetworkSwitchAccessPolicyRequest.prototype, "pathParams", void 0);
     return DeleteNetworkSwitchAccessPolicyRequest;
-}(SpeakeasyBase));
-export { DeleteNetworkSwitchAccessPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkSwitchAccessPolicyRequest = DeleteNetworkSwitchAccessPolicyRequest;
 var DeleteNetworkSwitchAccessPolicyResponse = /** @class */ (function (_super) {
     __extends(DeleteNetworkSwitchAccessPolicyResponse, _super);
     function DeleteNetworkSwitchAccessPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteNetworkSwitchAccessPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteNetworkSwitchAccessPolicyResponse.prototype, "statusCode", void 0);
     return DeleteNetworkSwitchAccessPolicyResponse;
-}(SpeakeasyBase));
-export { DeleteNetworkSwitchAccessPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkSwitchAccessPolicyResponse = DeleteNetworkSwitchAccessPolicyResponse;

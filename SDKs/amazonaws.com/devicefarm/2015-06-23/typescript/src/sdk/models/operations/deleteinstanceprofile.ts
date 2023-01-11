@@ -51,7 +51,7 @@ export class DeleteInstanceProfileResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteInstanceProfileResult?: Map<string, any>;
+  deleteInstanceProfileResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   limitExceededException?: any;

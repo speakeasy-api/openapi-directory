@@ -46,7 +46,7 @@ export class DeleteQueuedSavingsPlanResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteQueuedSavingsPlanResponse?: Map<string, any>;
+  deleteQueuedSavingsPlanResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

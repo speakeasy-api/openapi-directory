@@ -16,8 +16,8 @@ export declare class Beleg extends SpeakeasyBase {
     jws?: string;
     qr?: string;
     qrLink?: string;
-    registrierkasseUuid?: string;
-    signaturerstellungseinheitUuid?: string;
+    registrierkasseUUID?: string;
+    signaturerstellungseinheitUUID?: string;
     href?: string;
     uuid?: string;
 }

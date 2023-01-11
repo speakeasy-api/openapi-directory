@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCustomVerificationEmailTemplateResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 // GetCustomVerificationEmailTemplateResponse
 /**
  * The content of the custom verification email template.
@@ -33,29 +36,29 @@ var GetCustomVerificationEmailTemplateResponse = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], GetCustomVerificationEmailTemplateResponse.prototype, "failureRedirectionUrl", void 0);
+    ], GetCustomVerificationEmailTemplateResponse.prototype, "failureRedirectionURL", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCustomVerificationEmailTemplateResponse.prototype, "fromEmailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], GetCustomVerificationEmailTemplateResponse.prototype, "successRedirectionUrl", void 0);
+    ], GetCustomVerificationEmailTemplateResponse.prototype, "successRedirectionURL", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCustomVerificationEmailTemplateResponse.prototype, "templateContent", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCustomVerificationEmailTemplateResponse.prototype, "templateName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCustomVerificationEmailTemplateResponse.prototype, "templateSubject", void 0);
     return GetCustomVerificationEmailTemplateResponse;
-}(SpeakeasyBase));
-export { GetCustomVerificationEmailTemplateResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCustomVerificationEmailTemplateResponse = GetCustomVerificationEmailTemplateResponse;

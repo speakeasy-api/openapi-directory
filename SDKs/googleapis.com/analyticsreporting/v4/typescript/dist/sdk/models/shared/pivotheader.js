@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PivotHeaderEntry } from "./pivotheaderentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PivotHeader = void 0;
+var utils_1 = require("../../../internal/utils");
+var pivotheaderentry_1 = require("./pivotheaderentry");
 // PivotHeader
 /**
  * The headers for each of the pivot sections defined in the request.
@@ -34,13 +37,13 @@ var PivotHeader = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pivotHeaderEntries", elemType: PivotHeaderEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pivotHeaderEntries", elemType: pivotheaderentry_1.PivotHeaderEntry }),
         __metadata("design:type", Array)
     ], PivotHeader.prototype, "pivotHeaderEntries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPivotGroupsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPivotGroupsCount" }),
         __metadata("design:type", Number)
     ], PivotHeader.prototype, "totalPivotGroupsCount", void 0);
     return PivotHeader;
-}(SpeakeasyBase));
-export { PivotHeader };
+}(utils_1.SpeakeasyBase));
+exports.PivotHeader = PivotHeader;

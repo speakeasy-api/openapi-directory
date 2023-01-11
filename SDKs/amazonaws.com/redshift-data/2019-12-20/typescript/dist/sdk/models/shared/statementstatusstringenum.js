@@ -1,4 +1,7 @@
-export var StatementStatusStringEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StatementStatusStringEnum = void 0;
+var StatementStatusStringEnum;
 (function (StatementStatusStringEnum) {
     StatementStatusStringEnum["Submitted"] = "SUBMITTED";
     StatementStatusStringEnum["Picked"] = "PICKED";
@@ -6,4 +9,4 @@ export var StatementStatusStringEnum;
     StatementStatusStringEnum["Finished"] = "FINISHED";
     StatementStatusStringEnum["Aborted"] = "ABORTED";
     StatementStatusStringEnum["Failed"] = "FAILED";
-})(StatementStatusStringEnum || (StatementStatusStringEnum = {}));
+})(StatementStatusStringEnum = exports.StatementStatusStringEnum || (exports.StatementStatusStringEnum = {}));

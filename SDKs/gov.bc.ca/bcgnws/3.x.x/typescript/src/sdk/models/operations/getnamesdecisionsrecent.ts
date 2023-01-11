@@ -43,7 +43,7 @@ export class GetNamesDecisionsRecentQueryParams extends SpeakeasyBase {
   outputFormat: GetNamesDecisionsRecentOutputFormatEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" })
-  outputSrs?: number;
+  outputSRS?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputStyle" })
   outputStyle?: GetNamesDecisionsRecentOutputStyleEnum;

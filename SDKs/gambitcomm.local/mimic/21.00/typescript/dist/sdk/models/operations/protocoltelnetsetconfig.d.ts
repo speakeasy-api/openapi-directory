@@ -10,5 +10,5 @@ export declare class ProtocolTelnetSetConfigRequest extends SpeakeasyBase {
 export declare class ProtocolTelnetSetConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolTelnetSetConfig200ApplicationJsonString?: string;
+    protocolTelnetSetConfig200ApplicationJSONString?: string;
 }

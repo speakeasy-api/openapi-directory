@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AndroidInstrumentationTest = void 0;
+var utils_1 = require("../../../internal/utils");
 // AndroidInstrumentationTest
 /**
  * A test of an Android application that can control an Android component independently of its normal lifecycle. See for more information on types of Android tests.
@@ -33,21 +36,21 @@ var AndroidInstrumentationTest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testPackageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testPackageId" }),
         __metadata("design:type", String)
     ], AndroidInstrumentationTest.prototype, "testPackageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testRunnerClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testRunnerClass" }),
         __metadata("design:type", String)
     ], AndroidInstrumentationTest.prototype, "testRunnerClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testTargets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testTargets" }),
         __metadata("design:type", Array)
     ], AndroidInstrumentationTest.prototype, "testTargets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useOrchestrator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useOrchestrator" }),
         __metadata("design:type", Boolean)
     ], AndroidInstrumentationTest.prototype, "useOrchestrator", void 0);
     return AndroidInstrumentationTest;
-}(SpeakeasyBase));
-export { AndroidInstrumentationTest };
+}(utils_1.SpeakeasyBase));
+exports.AndroidInstrumentationTest = AndroidInstrumentationTest;

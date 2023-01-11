@@ -4,9 +4,9 @@ import { RvBaseListing } from "./rvbaselisting";
  * RV search query response
 **/
 export declare class RvSearchResponse extends SpeakeasyBase {
-    facets?: Map<string, any>;
+    facets?: Record<string, any>;
     listings?: RvBaseListing[];
     numFound?: number;
-    rangeFacets?: Map<string, any>;
-    stats?: Map<string, any>;
+    rangeFacets?: Record<string, any>;
+    stats?: Record<string, any>;
 }

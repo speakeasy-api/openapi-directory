@@ -40,5 +40,5 @@ export class CheckinNetworkSmDevicesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  checkinNetworkSmDevices200ApplicationJsonObject?: Map<string, any>;
+  checkinNetworkSmDevices200ApplicationJSONObject?: Record<string, any>;
 }

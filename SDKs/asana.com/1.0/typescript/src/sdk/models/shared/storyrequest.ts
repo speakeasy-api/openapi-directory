@@ -17,6 +17,10 @@ export enum StoryRequestStickerNameEnum {
 }
 
 
+// StoryRequestInput
+/** 
+ * A story represents an activity associated with an object in the Asana system.
+**/
 export class StoryRequestInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=html_text" })
   htmlText?: string;

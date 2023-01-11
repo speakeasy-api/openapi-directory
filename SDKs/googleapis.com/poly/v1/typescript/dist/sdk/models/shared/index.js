@@ -1,13 +1,29 @@
-export * from "./altenum";
-export * from "./asset";
-export * from "./file";
-export * from "./format";
-export * from "./formatcomplexity";
-export * from "./listassetsresponse";
-export * from "./listlikedassetsresponse";
-export * from "./listuserassetsresponse";
-export * from "./presentationparams";
-export * from "./quaternion";
-export * from "./remixinfo";
-export * from "./userasset";
-export * from "./xgafvenum";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./altenum"), exports);
+__exportStar(require("./asset"), exports);
+__exportStar(require("./file"), exports);
+__exportStar(require("./format"), exports);
+__exportStar(require("./formatcomplexity"), exports);
+__exportStar(require("./listassetsresponse"), exports);
+__exportStar(require("./listlikedassetsresponse"), exports);
+__exportStar(require("./listuserassetsresponse"), exports);
+__exportStar(require("./presentationparams"), exports);
+__exportStar(require("./quaternion"), exports);
+__exportStar(require("./remixinfo"), exports);
+__exportStar(require("./userasset"), exports);
+__exportStar(require("./xgafvenum"), exports);

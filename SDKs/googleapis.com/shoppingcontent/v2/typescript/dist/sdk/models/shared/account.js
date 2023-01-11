@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountAdwordsLink } from "./accountadwordslink";
-import { AccountBusinessInformation } from "./accountbusinessinformation";
-import { AccountGoogleMyBusinessLink } from "./accountgooglemybusinesslink";
-import { AccountUser } from "./accountuser";
-import { AccountYouTubeChannelLink } from "./accountyoutubechannellink";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Account = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountadwordslink_1 = require("./accountadwordslink");
+var accountbusinessinformation_1 = require("./accountbusinessinformation");
+var accountgooglemybusinesslink_1 = require("./accountgooglemybusinesslink");
+var accountuser_1 = require("./accountuser");
+var accountyoutubechannellink_1 = require("./accountyoutubechannellink");
 // Account
 /**
  * Account data. After the creation of a new account it may take a few minutes before it is fully operational. The methods delete, insert, and update require the admin role.
@@ -38,53 +41,53 @@ var Account = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adultContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adultContent" }),
         __metadata("design:type", Boolean)
     ], Account.prototype, "adultContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adwordsLinks", elemType: AccountAdwordsLink }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adwordsLinks", elemType: accountadwordslink_1.AccountAdwordsLink }),
         __metadata("design:type", Array)
     ], Account.prototype, "adwordsLinks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessInformation" }),
-        __metadata("design:type", AccountBusinessInformation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessInformation" }),
+        __metadata("design:type", accountbusinessinformation_1.AccountBusinessInformation)
     ], Account.prototype, "businessInformation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleMyBusinessLink" }),
-        __metadata("design:type", AccountGoogleMyBusinessLink)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleMyBusinessLink" }),
+        __metadata("design:type", accountgooglemybusinesslink_1.AccountGoogleMyBusinessLink)
     ], Account.prototype, "googleMyBusinessLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Account.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Account.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Account.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reviewsUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reviewsUrl" }),
         __metadata("design:type", String)
     ], Account.prototype, "reviewsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sellerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sellerId" }),
         __metadata("design:type", String)
     ], Account.prototype, "sellerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=users", elemType: AccountUser }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=users", elemType: accountuser_1.AccountUser }),
         __metadata("design:type", Array)
     ], Account.prototype, "users", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=websiteUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=websiteUrl" }),
         __metadata("design:type", String)
     ], Account.prototype, "websiteUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=youtubeChannelLinks", elemType: AccountYouTubeChannelLink }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=youtubeChannelLinks", elemType: accountyoutubechannellink_1.AccountYouTubeChannelLink }),
         __metadata("design:type", Array)
     ], Account.prototype, "youtubeChannelLinks", void 0);
     return Account;
-}(SpeakeasyBase));
-export { Account };
+}(utils_1.SpeakeasyBase));
+exports.Account = Account;

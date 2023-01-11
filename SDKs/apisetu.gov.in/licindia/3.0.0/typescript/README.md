@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PodocRequest, PodocResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,25 +30,25 @@ const req: PodocRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      dob: "unde",
-      fullName: "saepe",
-      polDob: "beatae",
-      policyNo: "modi",
+      dob: "sit",
+      fullName: "voluptas",
+      polDOB: "culpa",
+      policyNo: "expedita",
     },
-    consentArtifact: "similique",
+    consentArtifact: "consequuntur",
     format: "pdf",
-    txnId: "id",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.podoc(req).then((res: PodocResponse | AxiosError) => {
+sdk.apIs.podoc(req).then((res: PodocResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -58,7 +57,7 @@ sdk.sdk.podoc(req).then((res: PodocResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `podoc` - Policy Document
 

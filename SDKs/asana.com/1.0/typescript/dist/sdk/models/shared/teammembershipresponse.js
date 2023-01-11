@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TeamCompact } from "./teamcompact";
-import { UserCompact } from "./usercompact";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamMembershipResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var teamcompact_1 = require("./teamcompact");
+var usercompact_1 = require("./usercompact");
+// TeamMembershipResponse
+/**
+ * This object represents a user's connection to a team.
+**/
 var TeamMembershipResponse = /** @class */ (function (_super) {
     __extends(TeamMembershipResponse, _super);
     function TeamMembershipResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], TeamMembershipResponse.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_guest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_guest" }),
         __metadata("design:type", Boolean)
     ], TeamMembershipResponse.prototype, "isGuest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], TeamMembershipResponse.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team" }),
-        __metadata("design:type", TeamCompact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team" }),
+        __metadata("design:type", teamcompact_1.TeamCompact)
     ], TeamMembershipResponse.prototype, "team", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", UserCompact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", usercompact_1.UserCompact)
     ], TeamMembershipResponse.prototype, "user", void 0);
     return TeamMembershipResponse;
-}(SpeakeasyBase));
-export { TeamMembershipResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamMembershipResponse = TeamMembershipResponse;

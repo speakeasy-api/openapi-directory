@@ -22,5 +22,5 @@ export class GetOrganizationLoginSecurityResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationLoginSecurity200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationLoginSecurity200ApplicationJSONObject?: Record<string, any>;
 }

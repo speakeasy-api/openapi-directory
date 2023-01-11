@@ -5,5 +5,5 @@ export declare class UpdateWebAclRequest extends SpeakeasyBase {
     changeToken: string;
     defaultAction?: WafAction;
     updates?: WebAclUpdate[];
-    webAclId: string;
+    webACLId: string;
 }

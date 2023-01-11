@@ -14,5 +14,5 @@ export declare class UpdateItemPriceMarkdownPromotionRequest extends SpeakeasyBa
 export declare class UpdateItemPriceMarkdownPromotionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateItemPriceMarkdownPromotion200ApplicationJsonObject?: Map<string, any>;
+    updateItemPriceMarkdownPromotion200ApplicationJSONObject?: Record<string, any>;
 }

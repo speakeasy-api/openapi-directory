@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GlossaryInputConfig } from "./glossaryinputconfig";
-import { LanguageCodesSet } from "./languagecodesset";
-import { LanguageCodePair } from "./languagecodepair";
-// GlossaryInput
-/**
- * Represents a glossary built from user provided data.
-**/
-var GlossaryInput = /** @class */ (function (_super) {
-    __extends(GlossaryInput, _super);
-    function GlossaryInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
-        __metadata("design:type", String)
-    ], GlossaryInput.prototype, "displayName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputConfig" }),
-        __metadata("design:type", GlossaryInputConfig)
-    ], GlossaryInput.prototype, "inputConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCodesSet" }),
-        __metadata("design:type", LanguageCodesSet)
-    ], GlossaryInput.prototype, "languageCodesSet", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=languagePair" }),
-        __metadata("design:type", LanguageCodePair)
-    ], GlossaryInput.prototype, "languagePair", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], GlossaryInput.prototype, "name", void 0);
-    return GlossaryInput;
-}(SpeakeasyBase));
-export { GlossaryInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GlossaryInput = exports.Glossary = void 0;
+var utils_1 = require("../../../internal/utils");
+var glossaryinputconfig_1 = require("./glossaryinputconfig");
+var languagecodesset_1 = require("./languagecodesset");
+var languagecodepair_1 = require("./languagecodepair");
 // Glossary
 /**
  * Represents a glossary built from user provided data.
@@ -68,37 +39,69 @@ var Glossary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Glossary.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], Glossary.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entryCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entryCount" }),
         __metadata("design:type", Number)
     ], Glossary.prototype, "entryCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputConfig" }),
-        __metadata("design:type", GlossaryInputConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputConfig" }),
+        __metadata("design:type", glossaryinputconfig_1.GlossaryInputConfig)
     ], Glossary.prototype, "inputConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCodesSet" }),
-        __metadata("design:type", LanguageCodesSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCodesSet" }),
+        __metadata("design:type", languagecodesset_1.LanguageCodesSet)
     ], Glossary.prototype, "languageCodesSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languagePair" }),
-        __metadata("design:type", LanguageCodePair)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languagePair" }),
+        __metadata("design:type", languagecodepair_1.LanguageCodePair)
     ], Glossary.prototype, "languagePair", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Glossary.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=submitTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=submitTime" }),
         __metadata("design:type", String)
     ], Glossary.prototype, "submitTime", void 0);
     return Glossary;
-}(SpeakeasyBase));
-export { Glossary };
+}(utils_1.SpeakeasyBase));
+exports.Glossary = Glossary;
+// GlossaryInput
+/**
+ * Represents a glossary built from user provided data.
+**/
+var GlossaryInput = /** @class */ (function (_super) {
+    __extends(GlossaryInput, _super);
+    function GlossaryInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], GlossaryInput.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputConfig" }),
+        __metadata("design:type", glossaryinputconfig_1.GlossaryInputConfig)
+    ], GlossaryInput.prototype, "inputConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCodesSet" }),
+        __metadata("design:type", languagecodesset_1.LanguageCodesSet)
+    ], GlossaryInput.prototype, "languageCodesSet", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languagePair" }),
+        __metadata("design:type", languagecodepair_1.LanguageCodePair)
+    ], GlossaryInput.prototype, "languagePair", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], GlossaryInput.prototype, "name", void 0);
+    return GlossaryInput;
+}(utils_1.SpeakeasyBase));
+exports.GlossaryInput = GlossaryInput;

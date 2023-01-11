@@ -1,16 +1,11 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class ListDropletAssociatedResourcesPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=droplet_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=droplet_id" })
   dropletId: number;
-}
-
-
-export class ListDropletAssociatedResourcesRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: ListDropletAssociatedResourcesPathParams;
 }
 
 
@@ -19,57 +14,63 @@ export class ListDropletAssociatedResourcesRequest extends SpeakeasyBase {
  * An objects containing information about a resource associated with a Droplet.
 **/
 export class ListDropletAssociatedResources200ApplicationJsonSnapshots extends SpeakeasyBase {
-  @Metadata({ data: "json, name=cost" })
+  @SpeakeasyMetadata({ data: "json, name=cost" })
   cost?: string;
 
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
 
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 }
 
 
 export class ListDropletAssociatedResources200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=snapshots", elemType: operations.ListDropletAssociatedResources200ApplicationJsonSnapshots })
+  @SpeakeasyMetadata({ data: "json, name=snapshots", elemType: ListDropletAssociatedResources200ApplicationJsonSnapshots })
   snapshots?: ListDropletAssociatedResources200ApplicationJsonSnapshots[];
 
-  @Metadata({ data: "json, name=volume_snapshots", elemType: shared.Onev21droplets1Percent7BdropletIdPercent7D1destroyWithAssociatedResourcesGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesSnapshotsItems })
+  @SpeakeasyMetadata({ data: "json, name=volume_snapshots", elemType: shared.Onev21droplets1Percent7BdropletIdPercent7D1destroyWithAssociatedResourcesGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesSnapshotsItems })
   volumeSnapshots?: shared.Onev21droplets1Percent7BdropletIdPercent7D1destroyWithAssociatedResourcesGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesSnapshotsItems[];
 
-  @Metadata({ data: "json, name=volumes", elemType: shared.Onev21droplets1Percent7BdropletIdPercent7D1destroyWithAssociatedResourcesGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesSnapshotsItems })
+  @SpeakeasyMetadata({ data: "json, name=volumes", elemType: shared.Onev21droplets1Percent7BdropletIdPercent7D1destroyWithAssociatedResourcesGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesSnapshotsItems })
   volumes?: shared.Onev21droplets1Percent7BdropletIdPercent7D1destroyWithAssociatedResourcesGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesSnapshotsItems[];
 }
 
 
 export class ListDropletAssociatedResources401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class ListDropletAssociatedResourcesRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: ListDropletAssociatedResourcesPathParams;
+}
+
+
 export class ListDropletAssociatedResourcesResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  listDropletAssociatedResources200ApplicationJsonObject?: ListDropletAssociatedResources200ApplicationJson;
+  @SpeakeasyMetadata()
+  listDropletAssociatedResources200ApplicationJSONObject?: ListDropletAssociatedResources200ApplicationJson;
 
-  @Metadata()
-  listDropletAssociatedResources401ApplicationJsonObject?: ListDropletAssociatedResources401ApplicationJson;
+  @SpeakeasyMetadata()
+  listDropletAssociatedResources401ApplicationJSONObject?: ListDropletAssociatedResources401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

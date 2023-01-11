@@ -3,8 +3,8 @@ import * as shared from "../shared";
 export declare class IlpmtRequestBodyCertificateParameters extends SpeakeasyBase {
     fullName: string;
     uid: string;
-    eIlpAppId: string;
-    eIlpContactNumber: string;
+    eILPAppId: string;
+    eILPContactNumber: string;
 }
 export declare enum IlpmtRequestBodyFormatEnum {
     Pdf = "pdf"
@@ -108,11 +108,11 @@ export declare class IlpmtRequest extends SpeakeasyBase {
 export declare class IlpmtResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ilpmt400ApplicationJsonObject?: Ilpmt400ApplicationJson;
-    ilpmt401ApplicationJsonObject?: Ilpmt401ApplicationJson;
-    ilpmt404ApplicationJsonObject?: Ilpmt404ApplicationJson;
-    ilpmt500ApplicationJsonObject?: Ilpmt500ApplicationJson;
-    ilpmt502ApplicationJsonObject?: Ilpmt502ApplicationJson;
-    ilpmt503ApplicationJsonObject?: Ilpmt503ApplicationJson;
-    ilpmt504ApplicationJsonObject?: Ilpmt504ApplicationJson;
+    ilpmt400ApplicationJSONObject?: Ilpmt400ApplicationJson;
+    ilpmt401ApplicationJSONObject?: Ilpmt401ApplicationJson;
+    ilpmt404ApplicationJSONObject?: Ilpmt404ApplicationJson;
+    ilpmt500ApplicationJSONObject?: Ilpmt500ApplicationJson;
+    ilpmt502ApplicationJSONObject?: Ilpmt502ApplicationJson;
+    ilpmt503ApplicationJSONObject?: Ilpmt503ApplicationJson;
+    ilpmt504ApplicationJSONObject?: Ilpmt504ApplicationJson;
 }

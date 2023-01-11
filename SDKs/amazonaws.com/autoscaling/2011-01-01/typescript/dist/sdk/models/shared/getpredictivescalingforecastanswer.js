@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CapacityForecast } from "./capacityforecast";
-import { LoadForecast } from "./loadforecast";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPredictiveScalingForecastAnswer = void 0;
+var utils_1 = require("../../../internal/utils");
+var capacityforecast_1 = require("./capacityforecast");
+var loadforecast_1 = require("./loadforecast");
 var GetPredictiveScalingForecastAnswer = /** @class */ (function (_super) {
     __extends(GetPredictiveScalingForecastAnswer, _super);
     function GetPredictiveScalingForecastAnswer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", CapacityForecast)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", capacityforecast_1.CapacityForecast)
     ], GetPredictiveScalingForecastAnswer.prototype, "capacityForecast", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: LoadForecast }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: loadforecast_1.LoadForecast }),
         __metadata("design:type", Array)
     ], GetPredictiveScalingForecastAnswer.prototype, "loadForecast", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], GetPredictiveScalingForecastAnswer.prototype, "updateTime", void 0);
     return GetPredictiveScalingForecastAnswer;
-}(SpeakeasyBase));
-export { GetPredictiveScalingForecastAnswer };
+}(utils_1.SpeakeasyBase));
+exports.GetPredictiveScalingForecastAnswer = GetPredictiveScalingForecastAnswer;

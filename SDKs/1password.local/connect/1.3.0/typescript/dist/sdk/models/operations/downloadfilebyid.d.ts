@@ -14,8 +14,8 @@ export declare class DownloadFileByIdRequest extends SpeakeasyBase {
 }
 export declare class DownloadFileByIdResponse extends SpeakeasyBase {
     contentType: string;
-    downloadFileById200ApplicationOctetStreamBinaryString?: Uint8Array;
+    downloadFileByID200ApplicationOctetStreamBinaryString?: Uint8Array;
     errorResponse?: shared.ErrorResponse;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

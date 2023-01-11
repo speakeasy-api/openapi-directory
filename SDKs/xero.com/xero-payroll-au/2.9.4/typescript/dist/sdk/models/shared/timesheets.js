@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Timesheet } from "./timesheet";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Timesheets = void 0;
+var utils_1 = require("../../../internal/utils");
+var timesheet_1 = require("./timesheet");
 var Timesheets = /** @class */ (function (_super) {
     __extends(Timesheets, _super);
     function Timesheets() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Timesheets", elemType: Timesheet }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Timesheets", elemType: timesheet_1.Timesheet }),
         __metadata("design:type", Array)
     ], Timesheets.prototype, "timesheets", void 0);
     return Timesheets;
-}(SpeakeasyBase));
-export { Timesheets };
+}(utils_1.SpeakeasyBase));
+exports.Timesheets = Timesheets;

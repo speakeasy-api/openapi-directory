@@ -7,7 +7,7 @@ export declare class DirectiveNew extends SpeakeasyBase {
     enabled?: boolean;
     id?: string;
     longDescription?: string;
-    parameters?: Map<string, any>;
+    parameters?: Record<string, any>;
     priority?: number;
     shortDescription?: string;
     source?: string;

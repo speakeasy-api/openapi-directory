@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCreateEnvironmentActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCreateEnvironmentResponse = exports.PostCreateEnvironmentRequest = exports.PostCreateEnvironmentHeaders = exports.PostCreateEnvironmentQueryParams = exports.PostCreateEnvironmentVersionEnum = exports.PostCreateEnvironmentActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCreateEnvironmentActionEnum;
 (function (PostCreateEnvironmentActionEnum) {
     PostCreateEnvironmentActionEnum["CreateEnvironment"] = "CreateEnvironment";
-})(PostCreateEnvironmentActionEnum || (PostCreateEnvironmentActionEnum = {}));
-export var PostCreateEnvironmentVersionEnum;
+})(PostCreateEnvironmentActionEnum = exports.PostCreateEnvironmentActionEnum || (exports.PostCreateEnvironmentActionEnum = {}));
+var PostCreateEnvironmentVersionEnum;
 (function (PostCreateEnvironmentVersionEnum) {
     PostCreateEnvironmentVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(PostCreateEnvironmentVersionEnum || (PostCreateEnvironmentVersionEnum = {}));
+})(PostCreateEnvironmentVersionEnum = exports.PostCreateEnvironmentVersionEnum || (exports.PostCreateEnvironmentVersionEnum = {}));
 var PostCreateEnvironmentQueryParams = /** @class */ (function (_super) {
     __extends(PostCreateEnvironmentQueryParams, _super);
     function PostCreateEnvironmentQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCreateEnvironmentQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCreateEnvironmentQueryParams.prototype, "version", void 0);
     return PostCreateEnvironmentQueryParams;
-}(SpeakeasyBase));
-export { PostCreateEnvironmentQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateEnvironmentQueryParams = PostCreateEnvironmentQueryParams;
 var PostCreateEnvironmentHeaders = /** @class */ (function (_super) {
     __extends(PostCreateEnvironmentHeaders, _super);
     function PostCreateEnvironmentHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCreateEnvironmentHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCreateEnvironmentHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCreateEnvironmentHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCreateEnvironmentHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCreateEnvironmentHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCreateEnvironmentHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCreateEnvironmentHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCreateEnvironmentHeaders;
-}(SpeakeasyBase));
-export { PostCreateEnvironmentHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateEnvironmentHeaders = PostCreateEnvironmentHeaders;
 var PostCreateEnvironmentRequest = /** @class */ (function (_super) {
     __extends(PostCreateEnvironmentRequest, _super);
     function PostCreateEnvironmentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateEnvironmentQueryParams)
     ], PostCreateEnvironmentRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateEnvironmentHeaders)
     ], PostCreateEnvironmentRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCreateEnvironmentRequest.prototype, "request", void 0);
     return PostCreateEnvironmentRequest;
-}(SpeakeasyBase));
-export { PostCreateEnvironmentRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateEnvironmentRequest = PostCreateEnvironmentRequest;
 var PostCreateEnvironmentResponse = /** @class */ (function (_super) {
     __extends(PostCreateEnvironmentResponse, _super);
     function PostCreateEnvironmentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCreateEnvironmentResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCreateEnvironmentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCreateEnvironmentResponse.prototype, "statusCode", void 0);
     return PostCreateEnvironmentResponse;
-}(SpeakeasyBase));
-export { PostCreateEnvironmentResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateEnvironmentResponse = PostCreateEnvironmentResponse;

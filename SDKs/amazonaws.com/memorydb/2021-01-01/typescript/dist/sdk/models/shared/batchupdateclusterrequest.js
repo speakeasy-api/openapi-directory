@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServiceUpdateRequest } from "./serviceupdaterequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchUpdateClusterRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var serviceupdaterequest_1 = require("./serviceupdaterequest");
 var BatchUpdateClusterRequest = /** @class */ (function (_super) {
     __extends(BatchUpdateClusterRequest, _super);
     function BatchUpdateClusterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClusterNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClusterNames" }),
         __metadata("design:type", Array)
     ], BatchUpdateClusterRequest.prototype, "clusterNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceUpdate" }),
-        __metadata("design:type", ServiceUpdateRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceUpdate" }),
+        __metadata("design:type", serviceupdaterequest_1.ServiceUpdateRequest)
     ], BatchUpdateClusterRequest.prototype, "serviceUpdate", void 0);
     return BatchUpdateClusterRequest;
-}(SpeakeasyBase));
-export { BatchUpdateClusterRequest };
+}(utils_1.SpeakeasyBase));
+exports.BatchUpdateClusterRequest = BatchUpdateClusterRequest;

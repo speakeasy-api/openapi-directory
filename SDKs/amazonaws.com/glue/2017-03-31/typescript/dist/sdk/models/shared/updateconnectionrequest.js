@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConnectionInput } from "./connectioninput";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateConnectionRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var connectioninput_1 = require("./connectioninput");
 var UpdateConnectionRequest = /** @class */ (function (_super) {
     __extends(UpdateConnectionRequest, _super);
     function UpdateConnectionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CatalogId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CatalogId" }),
         __metadata("design:type", String)
     ], UpdateConnectionRequest.prototype, "catalogId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConnectionInput" }),
-        __metadata("design:type", ConnectionInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConnectionInput" }),
+        __metadata("design:type", connectioninput_1.ConnectionInput)
     ], UpdateConnectionRequest.prototype, "connectionInput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], UpdateConnectionRequest.prototype, "name", void 0);
     return UpdateConnectionRequest;
-}(SpeakeasyBase));
-export { UpdateConnectionRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateConnectionRequest = UpdateConnectionRequest;

@@ -36,5 +36,5 @@ export class GetDeviceCameraAnalyticsRecentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceCameraAnalyticsRecent200ApplicationJsonObject?: Map<string, any>;
+  getDeviceCameraAnalyticsRecent200ApplicationJSONObject?: Record<string, any>;
 }

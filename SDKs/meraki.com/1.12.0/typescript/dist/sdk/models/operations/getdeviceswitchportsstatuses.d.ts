@@ -13,5 +13,5 @@ export declare class GetDeviceSwitchPortsStatusesRequest extends SpeakeasyBase {
 export declare class GetDeviceSwitchPortsStatusesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceSwitchPortsStatuses200ApplicationJsonObject?: Map<string, any>;
+    getDeviceSwitchPortsStatuses200ApplicationJSONObject?: Record<string, any>;
 }

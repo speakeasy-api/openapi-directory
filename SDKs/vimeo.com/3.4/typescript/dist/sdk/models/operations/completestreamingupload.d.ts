@@ -19,5 +19,5 @@ export declare class CompleteStreamingUploadRequest extends SpeakeasyBase {
 export declare class CompleteStreamingUploadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
 }

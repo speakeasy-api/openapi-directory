@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { FirebasedynamiclinksManagedShortLinksCreateRequest, FirebasedynamiclinksManagedShortLinksCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,78 +30,78 @@ const req: FirebasedynamiclinksManagedShortLinksCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "ex",
-    alt: "proto",
-    callback: "ad",
-    fields: "atque",
-    key: "aut",
-    oauthToken: "laborum",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
     prettyPrint: true,
-    quotaUser: "ullam",
-    uploadType: "sit",
-    uploadProtocol: "dolores",
+    quotaUser: "fugit",
+    uploadType: "et",
+    uploadProtocol: "nihil",
   },
   request: {
     dynamicLinkInfo: {
       analyticsInfo: {
         googlePlayAnalytics: {
-          gclid: "amet",
-          utmCampaign: "cupiditate",
-          utmContent: "sit",
-          utmMedium: "est",
-          utmSource: "quasi",
-          utmTerm: "molestiae",
+          gclid: "rerum",
+          utmCampaign: "dicta",
+          utmContent: "debitis",
+          utmMedium: "voluptatum",
+          utmSource: "et",
+          utmTerm: "ut",
         },
         itunesConnectAnalytics: {
-          at: "recusandae",
-          ct: "rem",
-          mt: "eos",
-          pt: "ut",
+          at: "dolorem",
+          ct: "et",
+          mt: "voluptate",
+          pt: "iste",
         },
       },
       androidInfo: {
-        androidFallbackLink: "est",
-        androidLink: "aut",
-        androidMinPackageVersionCode: "voluptatem",
-        androidPackageName: "nulla",
+        androidFallbackLink: "vitae",
+        androidLink: "totam",
+        androidMinPackageVersionCode: "dolores",
+        androidPackageName: "illum",
       },
       desktopInfo: {
-        desktopFallbackLink: "voluptatibus",
+        desktopFallbackLink: "debitis",
       },
-      domainUriPrefix: "quibusdam",
-      dynamicLinkDomain: "quod",
+      domainUriPrefix: "vel",
+      dynamicLinkDomain: "odio",
       iosInfo: {
-        iosAppStoreId: "nihil",
-        iosBundleId: "maxime",
-        iosCustomScheme: "nobis",
-        iosFallbackLink: "incidunt",
-        iosIpadBundleId: "tenetur",
-        iosIpadFallbackLink: "possimus",
-        iosMinimumVersion: "occaecati",
+        iosAppStoreId: "dolore",
+        iosBundleId: "id",
+        iosCustomScheme: "aspernatur",
+        iosFallbackLink: "accusantium",
+        iosIpadBundleId: "totam",
+        iosIpadFallbackLink: "commodi",
+        iosMinimumVersion: "quis",
       },
-      link: "sequi",
+      link: "est",
       navigationInfo: {
         enableForcedRedirect: true,
       },
       socialMetaTagInfo: {
-        socialDescription: "necessitatibus",
-        socialImageLink: "voluptatem",
-        socialTitle: "accusantium",
+        socialDescription: "odit",
+        socialImageLink: "non",
+        socialTitle: "voluptas",
       },
     },
-    longDynamicLink: "qui",
-    name: "voluptas",
-    sdkVersion: "mollitia",
+    longDynamicLink: "omnis",
+    name: "aut",
+    sdkVersion: "illo",
     suffix: {
-      customSuffix: "aut",
-      option: "SHORT",
+      customSuffix: "sed",
+      option: "CUSTOM",
     },
   },
 };

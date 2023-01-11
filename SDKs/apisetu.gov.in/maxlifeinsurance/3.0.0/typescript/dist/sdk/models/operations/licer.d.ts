@@ -108,11 +108,11 @@ export declare class LicerRequest extends SpeakeasyBase {
 export declare class LicerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    licer400ApplicationJsonObject?: Licer400ApplicationJson;
-    licer401ApplicationJsonObject?: Licer401ApplicationJson;
-    licer404ApplicationJsonObject?: Licer404ApplicationJson;
-    licer500ApplicationJsonObject?: Licer500ApplicationJson;
-    licer502ApplicationJsonObject?: Licer502ApplicationJson;
-    licer503ApplicationJsonObject?: Licer503ApplicationJson;
-    licer504ApplicationJsonObject?: Licer504ApplicationJson;
+    licer400ApplicationJSONObject?: Licer400ApplicationJson;
+    licer401ApplicationJSONObject?: Licer401ApplicationJson;
+    licer404ApplicationJSONObject?: Licer404ApplicationJson;
+    licer500ApplicationJSONObject?: Licer500ApplicationJson;
+    licer502ApplicationJSONObject?: Licer502ApplicationJson;
+    licer503ApplicationJSONObject?: Licer503ApplicationJson;
+    licer504ApplicationJSONObject?: Licer504ApplicationJson;
 }

@@ -38,7 +38,7 @@ export class DeleteServerCatalogRequest extends SpeakeasyBase {
   headers: DeleteServerCatalogHeaders;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -47,7 +47,7 @@ export class DeleteServerCatalogResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteServerCatalogResponse?: Map<string, any>;
+  deleteServerCatalogResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidParameterException?: any;

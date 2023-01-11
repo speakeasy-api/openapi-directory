@@ -194,23 +194,23 @@ export class LicerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  licer400ApplicationJsonObject?: Licer400ApplicationJson;
+  licer400ApplicationJSONObject?: Licer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  licer401ApplicationJsonObject?: Licer401ApplicationJson;
+  licer401ApplicationJSONObject?: Licer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  licer404ApplicationJsonObject?: Licer404ApplicationJson;
+  licer404ApplicationJSONObject?: Licer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  licer500ApplicationJsonObject?: Licer500ApplicationJson;
+  licer500ApplicationJSONObject?: Licer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  licer502ApplicationJsonObject?: Licer502ApplicationJson;
+  licer502ApplicationJSONObject?: Licer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  licer503ApplicationJsonObject?: Licer503ApplicationJson;
+  licer503ApplicationJSONObject?: Licer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  licer504ApplicationJsonObject?: Licer504ApplicationJson;
+  licer504ApplicationJSONObject?: Licer504ApplicationJson;
 }

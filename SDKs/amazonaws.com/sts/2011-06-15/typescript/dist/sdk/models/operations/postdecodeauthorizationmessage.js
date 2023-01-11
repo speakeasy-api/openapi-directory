@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDecodeAuthorizationMessageActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDecodeAuthorizationMessageResponse = exports.PostDecodeAuthorizationMessageRequest = exports.PostDecodeAuthorizationMessageHeaders = exports.PostDecodeAuthorizationMessageQueryParams = exports.PostDecodeAuthorizationMessageVersionEnum = exports.PostDecodeAuthorizationMessageActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDecodeAuthorizationMessageActionEnum;
 (function (PostDecodeAuthorizationMessageActionEnum) {
     PostDecodeAuthorizationMessageActionEnum["DecodeAuthorizationMessage"] = "DecodeAuthorizationMessage";
-})(PostDecodeAuthorizationMessageActionEnum || (PostDecodeAuthorizationMessageActionEnum = {}));
-export var PostDecodeAuthorizationMessageVersionEnum;
+})(PostDecodeAuthorizationMessageActionEnum = exports.PostDecodeAuthorizationMessageActionEnum || (exports.PostDecodeAuthorizationMessageActionEnum = {}));
+var PostDecodeAuthorizationMessageVersionEnum;
 (function (PostDecodeAuthorizationMessageVersionEnum) {
     PostDecodeAuthorizationMessageVersionEnum["TwoThousandAndEleven0615"] = "2011-06-15";
-})(PostDecodeAuthorizationMessageVersionEnum || (PostDecodeAuthorizationMessageVersionEnum = {}));
+})(PostDecodeAuthorizationMessageVersionEnum = exports.PostDecodeAuthorizationMessageVersionEnum || (exports.PostDecodeAuthorizationMessageVersionEnum = {}));
 var PostDecodeAuthorizationMessageQueryParams = /** @class */ (function (_super) {
     __extends(PostDecodeAuthorizationMessageQueryParams, _super);
     function PostDecodeAuthorizationMessageQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDecodeAuthorizationMessageQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDecodeAuthorizationMessageQueryParams.prototype, "version", void 0);
     return PostDecodeAuthorizationMessageQueryParams;
-}(SpeakeasyBase));
-export { PostDecodeAuthorizationMessageQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDecodeAuthorizationMessageQueryParams = PostDecodeAuthorizationMessageQueryParams;
 var PostDecodeAuthorizationMessageHeaders = /** @class */ (function (_super) {
     __extends(PostDecodeAuthorizationMessageHeaders, _super);
     function PostDecodeAuthorizationMessageHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDecodeAuthorizationMessageHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDecodeAuthorizationMessageHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDecodeAuthorizationMessageHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDecodeAuthorizationMessageHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDecodeAuthorizationMessageHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDecodeAuthorizationMessageHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDecodeAuthorizationMessageHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDecodeAuthorizationMessageHeaders;
-}(SpeakeasyBase));
-export { PostDecodeAuthorizationMessageHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDecodeAuthorizationMessageHeaders = PostDecodeAuthorizationMessageHeaders;
 var PostDecodeAuthorizationMessageRequest = /** @class */ (function (_super) {
     __extends(PostDecodeAuthorizationMessageRequest, _super);
     function PostDecodeAuthorizationMessageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDecodeAuthorizationMessageQueryParams)
     ], PostDecodeAuthorizationMessageRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDecodeAuthorizationMessageHeaders)
     ], PostDecodeAuthorizationMessageRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDecodeAuthorizationMessageRequest.prototype, "request", void 0);
     return PostDecodeAuthorizationMessageRequest;
-}(SpeakeasyBase));
-export { PostDecodeAuthorizationMessageRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDecodeAuthorizationMessageRequest = PostDecodeAuthorizationMessageRequest;
 var PostDecodeAuthorizationMessageResponse = /** @class */ (function (_super) {
     __extends(PostDecodeAuthorizationMessageResponse, _super);
     function PostDecodeAuthorizationMessageResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDecodeAuthorizationMessageResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDecodeAuthorizationMessageResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDecodeAuthorizationMessageResponse.prototype, "statusCode", void 0);
     return PostDecodeAuthorizationMessageResponse;
-}(SpeakeasyBase));
-export { PostDecodeAuthorizationMessageResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDecodeAuthorizationMessageResponse = PostDecodeAuthorizationMessageResponse;

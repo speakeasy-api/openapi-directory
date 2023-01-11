@@ -12,7 +12,7 @@ export declare class Playlist extends SpeakeasyBase {
     etag?: string;
     id?: string;
     kind?: string;
-    localizations?: Map<string, PlaylistLocalization>;
+    localizations?: Record<string, PlaylistLocalization>;
     player?: PlaylistPlayer;
     snippet?: PlaylistSnippet;
     status?: PlaylistStatus;

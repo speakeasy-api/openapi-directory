@@ -35,7 +35,7 @@ export class UpdateExperimentTemplateHeaders extends SpeakeasyBase {
 
 export class UpdateExperimentTemplateRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=actions", elemType: shared.UpdateExperimentTemplateActionInputItem })
-  actions?: Map<string, shared.UpdateExperimentTemplateActionInputItem>;
+  actions?: Record<string, shared.UpdateExperimentTemplateActionInputItem>;
 
   @SpeakeasyMetadata({ data: "json, name=description" })
   description?: string;
@@ -47,7 +47,7 @@ export class UpdateExperimentTemplateRequestBody extends SpeakeasyBase {
   stopConditions?: shared.UpdateExperimentTemplateStopConditionInput[];
 
   @SpeakeasyMetadata({ data: "json, name=targets", elemType: shared.UpdateExperimentTemplateTargetInput })
-  targets?: Map<string, shared.UpdateExperimentTemplateTargetInput>;
+  targets?: Record<string, shared.UpdateExperimentTemplateTargetInput>;
 }
 
 

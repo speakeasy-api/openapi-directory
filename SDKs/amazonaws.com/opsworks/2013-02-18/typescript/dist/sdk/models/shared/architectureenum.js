@@ -1,5 +1,8 @@
-export var ArchitectureEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArchitectureEnum = void 0;
+var ArchitectureEnum;
 (function (ArchitectureEnum) {
     ArchitectureEnum["X8664"] = "x86_64";
     ArchitectureEnum["I386"] = "i386";
-})(ArchitectureEnum || (ArchitectureEnum = {}));
+})(ArchitectureEnum = exports.ArchitectureEnum || (exports.ArchitectureEnum = {}));

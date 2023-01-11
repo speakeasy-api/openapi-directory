@@ -1,4 +1,7 @@
-export var ViewpointsFilterTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ViewpointsFilterTypeEnum = void 0;
+var ViewpointsFilterTypeEnum;
 (function (ViewpointsFilterTypeEnum) {
     ViewpointsFilterTypeEnum["Lockdown"] = "lockdown";
     ViewpointsFilterTypeEnum["Panning"] = "panning";
@@ -8,4 +11,4 @@ export var ViewpointsFilterTypeEnum;
     ViewpointsFilterTypeEnum["LowAngleView"] = "low_angle_view";
     ViewpointsFilterTypeEnum["Tilt"] = "tilt";
     ViewpointsFilterTypeEnum["PointOfView"] = "point_of_view";
-})(ViewpointsFilterTypeEnum || (ViewpointsFilterTypeEnum = {}));
+})(ViewpointsFilterTypeEnum = exports.ViewpointsFilterTypeEnum || (exports.ViewpointsFilterTypeEnum = {}));

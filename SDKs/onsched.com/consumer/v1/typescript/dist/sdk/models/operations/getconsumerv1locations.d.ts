@@ -15,6 +15,6 @@ export declare class GetConsumerV1LocationsRequest extends SpeakeasyBase {
 }
 export declare class GetConsumerV1LocationsResponse extends SpeakeasyBase {
     contentType: string;
-    locationListViewModel?: Map<string, any>;
+    locationListViewModel?: Record<string, any>;
     statusCode: number;
 }

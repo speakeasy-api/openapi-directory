@@ -13,6 +13,6 @@ export declare class PostOfferingsOfferingIdChannelsChannelIdLearnersRequest ext
 }
 export declare class PostOfferingsOfferingIdChannelsChannelIdLearnersResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

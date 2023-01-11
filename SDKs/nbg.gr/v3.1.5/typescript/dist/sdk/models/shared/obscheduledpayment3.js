@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,47 +23,49 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObCashAccount5 } from "./obcashaccount5";
-import { ObActiveOrHistoricCurrencyAndAmount } from "./obactiveorhistoriccurrencyandamount";
-import { ObExternalScheduleType1CodeEnum } from "./obexternalscheduletype1codeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObScheduledPayment3 = void 0;
+var utils_1 = require("../../../internal/utils");
+var obcashaccount5_1 = require("./obcashaccount5");
+var obactiveorhistoriccurrencyandamount_1 = require("./obactiveorhistoriccurrencyandamount");
+var obexternalscheduletype1codeenum_1 = require("./obexternalscheduletype1codeenum");
 var ObScheduledPayment3 = /** @class */ (function (_super) {
     __extends(ObScheduledPayment3, _super);
     function ObScheduledPayment3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountId" }),
         __metadata("design:type", String)
     ], ObScheduledPayment3.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreditorAccount" }),
-        __metadata("design:type", ObCashAccount5)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreditorAccount" }),
+        __metadata("design:type", obcashaccount5_1.ObCashAccount5)
     ], ObScheduledPayment3.prototype, "creditorAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DebtorReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DebtorReference" }),
         __metadata("design:type", String)
     ], ObScheduledPayment3.prototype, "debtorReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstructedAmount" }),
-        __metadata("design:type", ObActiveOrHistoricCurrencyAndAmount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstructedAmount" }),
+        __metadata("design:type", obactiveorhistoriccurrencyandamount_1.ObActiveOrHistoricCurrencyAndAmount)
     ], ObScheduledPayment3.prototype, "instructedAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Reference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Reference" }),
         __metadata("design:type", String)
     ], ObScheduledPayment3.prototype, "reference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ScheduledPaymentDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ScheduledPaymentDateTime" }),
         __metadata("design:type", Date)
     ], ObScheduledPayment3.prototype, "scheduledPaymentDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ScheduledPaymentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ScheduledPaymentId" }),
         __metadata("design:type", String)
     ], ObScheduledPayment3.prototype, "scheduledPaymentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ScheduledType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ScheduledType" }),
         __metadata("design:type", String)
     ], ObScheduledPayment3.prototype, "scheduledType", void 0);
     return ObScheduledPayment3;
-}(SpeakeasyBase));
-export { ObScheduledPayment3 };
+}(utils_1.SpeakeasyBase));
+exports.ObScheduledPayment3 = ObScheduledPayment3;

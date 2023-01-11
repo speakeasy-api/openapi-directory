@@ -10,7 +10,7 @@ export declare class TagResourceHeaders extends SpeakeasyBase {
 }
 export declare class TagResourceRequestBody extends SpeakeasyBase {
     resourceArn: string;
-    tags: Map<string, string>;
+    tags: Record<string, string>;
 }
 export declare class TagResourceRequest extends SpeakeasyBase {
     headers: TagResourceHeaders;
@@ -22,6 +22,6 @@ export declare class TagResourceResponse extends SpeakeasyBase {
     resourceNotFoundException?: any;
     serviceQuotaExceededException?: any;
     statusCode: number;
-    tagResourceResponse?: Map<string, any>;
+    tagResourceResponse?: Record<string, any>;
     validationException?: any;
 }

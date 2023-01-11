@@ -41,7 +41,7 @@ export class GetDistrictEventsSimpleResponse extends SpeakeasyBase {
   eventSimples?: shared.EventSimple[];
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

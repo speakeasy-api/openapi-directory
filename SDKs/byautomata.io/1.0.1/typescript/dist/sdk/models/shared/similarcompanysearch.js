@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Snippet } from "./snippet";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SimilarCompanySearch = void 0;
+var utils_1 = require("../../../internal/utils");
+var snippet_1 = require("./snippet");
 var SimilarCompanySearch = /** @class */ (function (_super) {
     __extends(SimilarCompanySearch, _super);
     function SimilarCompanySearch() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=companyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=companyName" }),
         __metadata("design:type", String)
     ], SimilarCompanySearch.prototype, "companyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], SimilarCompanySearch.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employee" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employee" }),
         __metadata("design:type", String)
     ], SimilarCompanySearch.prototype, "employee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=industry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=industry" }),
         __metadata("design:type", String)
     ], SimilarCompanySearch.prototype, "industry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkedin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkedin" }),
         __metadata("design:type", String)
     ], SimilarCompanySearch.prototype, "linkedin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snippets", elemType: Snippet }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snippets", elemType: snippet_1.Snippet }),
         __metadata("design:type", Array)
     ], SimilarCompanySearch.prototype, "snippets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], SimilarCompanySearch.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=twitter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=twitter" }),
         __metadata("design:type", String)
     ], SimilarCompanySearch.prototype, "twitter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=website" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website" }),
         __metadata("design:type", String)
     ], SimilarCompanySearch.prototype, "website", void 0);
     return SimilarCompanySearch;
-}(SpeakeasyBase));
-export { SimilarCompanySearch };
+}(utils_1.SpeakeasyBase));
+exports.SimilarCompanySearch = SimilarCompanySearch;

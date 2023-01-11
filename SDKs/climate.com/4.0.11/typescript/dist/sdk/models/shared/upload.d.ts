@@ -15,5 +15,5 @@ export declare class Upload extends SpeakeasyBase {
     contentType: UploadContentTypeEnum;
     length: number;
     md5: string;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
 }

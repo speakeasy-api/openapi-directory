@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var IosModelFormFactorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IosModel = exports.IosModelFormFactorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var IosModelFormFactorEnum;
 (function (IosModelFormFactorEnum) {
     IosModelFormFactorEnum["DeviceFormFactorUnspecified"] = "DEVICE_FORM_FACTOR_UNSPECIFIED";
     IosModelFormFactorEnum["Phone"] = "PHONE";
     IosModelFormFactorEnum["Tablet"] = "TABLET";
     IosModelFormFactorEnum["Wearable"] = "WEARABLE";
-})(IosModelFormFactorEnum || (IosModelFormFactorEnum = {}));
+})(IosModelFormFactorEnum = exports.IosModelFormFactorEnum || (exports.IosModelFormFactorEnum = {}));
 // IosModel
 /**
  * A description of an iOS device tests may be run on.
@@ -40,41 +43,41 @@ var IosModel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceCapabilities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceCapabilities" }),
         __metadata("design:type", Array)
     ], IosModel.prototype, "deviceCapabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formFactor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formFactor" }),
         __metadata("design:type", String)
     ], IosModel.prototype, "formFactor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], IosModel.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], IosModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenDensity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenDensity" }),
         __metadata("design:type", Number)
     ], IosModel.prototype, "screenDensity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenX" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenX" }),
         __metadata("design:type", Number)
     ], IosModel.prototype, "screenX", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenY" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenY" }),
         __metadata("design:type", Number)
     ], IosModel.prototype, "screenY", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportedVersionIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportedVersionIds" }),
         __metadata("design:type", Array)
     ], IosModel.prototype, "supportedVersionIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], IosModel.prototype, "tags", void 0);
     return IosModel;
-}(SpeakeasyBase));
-export { IosModel };
+}(utils_1.SpeakeasyBase));
+exports.IosModel = IosModel;

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PostAssetsCorrelationMatrixRequest, PostAssetsCorrelationMatrixResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKeyAuth: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -33,10 +32,10 @@ const sdk = new SDK(WithSecurity(
 ));
     
 const req: PostAssetsCorrelationMatrixRequest = {
-  request: "accusamus",
+  request: "sit",
 };
 
-sdk.sdk.postAssetsCorrelationMatrix(req).then((res: PostAssetsCorrelationMatrixResponse | AxiosError) => {
+sdk.assetsCorrelationMatrix.postAssetsCorrelationMatrix(req).then((res: PostAssetsCorrelationMatrixResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -45,22 +44,40 @@ sdk.sdk.postAssetsCorrelationMatrix(req).then((res: PostAssetsCorrelationMatrixR
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Assets Correlation Matrix
 
 * `postAssetsCorrelationMatrix` - Correlation Matrix
 * `postAssetsCorrelationMatrixNearest` - Nearest Correlation Matrix
 * `postAssetsCorrelationMatrixShrinkage` - Correlation Matrix Shrinkage
 * `postAssetsCorrelationMatrixValidation` - Correlation Matrix Validation
+
+### Assets Covariance Matrix
+
 * `postAssetsCovarianceMatrix` - Covariance Matrix
 * `postAssetsCovarianceMatrixSample` - Sample Covariance Matrix
 * `postAssetsCovarianceMatrixValidation` - Covariance Matrix Validation
+
+### Assets Returns
+
 * `postAssetsReturns` - Arithmetic Returns
 * `postAssetsReturnsAverage` - Arithmetic Average Return
+
+### Assets Variance
+
 * `postAssetsVariance` - Variance
 * `postAssetsVarianceSample` - Sample variance
+
+### Assets Volatility
+
 * `postAssetsVolatility` - Volatility
 * `postAssetsVolatilitySample` - Sample volatility
+
+### Factors
+
 * `postFactorsResidualization` - Residualization
+
+### Portfolio Analysis
+
 * `postPortfolioAnalysisAlpha` - Alpha
 * `postPortfolioAnalysisBeta` - Beta
 * `postPortfolioAnalysisContributionsReturn` - Return Contributions
@@ -75,9 +92,15 @@ sdk.sdk.postAssetsCorrelationMatrix(req).then((res: PostAssetsCorrelationMatrixR
 * `postPortfolioAnalysisSharpeRatio` - Sharpe Ratio
 * `postPortfolioAnalysisTrackingError` - Tracking Error
 * `postPortfolioAnalysisVolatility` - Volatility
+
+### Portfolio Construction
+
 * `postPortfolioConstructionInvestable` - Investable Portfolio
 * `postPortfolioConstructionMimicking` - Mimicking Portfolio
 * `postPortfolioConstructionRandom` - Random Portfolio
+
+### Portfolio Optimization
+
 * `postPortfolioOptimizationEqualRiskContributions` - Equal Risk Contributions Portfolio
 * `postPortfolioOptimizationEqualSharpeRatioContributions` - Equal Sharpe Ratio Contributions Portfolio
 * `postPortfolioOptimizationEqualWeighted` - Equal Weighted Portfolio
@@ -91,6 +114,9 @@ sdk.sdk.postAssetsCorrelationMatrix(req).then((res: PostAssetsCorrelationMatrixR
 * `postPortfolioOptimizationMinimumCorrelation` - Minimum Correlation Portfolio
 * `postPortfolioOptimizationMinimumVariance` - Minimum Variance Portfolio
 * `postPortfolioOptimizationMostDiversified` - Most Diversified Portfolio
+
+### Portfolio Simulation
+
 * `postPortfolioSimulationRebalancingDriftWeight` - Drift-weight Portfolio Rebalancing
 * `postPortfolioSimulationRebalancingFixedWeight` - Fixed-weight Portfolio Rebalancing
 * `postPortfolioSimulationRebalancingRandomWeight` - Random-weight Portfolio Rebalancing

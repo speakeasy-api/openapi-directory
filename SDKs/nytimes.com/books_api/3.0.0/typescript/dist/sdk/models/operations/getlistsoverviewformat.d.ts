@@ -55,6 +55,6 @@ export declare class GetListsOverviewFormatRequest extends SpeakeasyBase {
 }
 export declare class GetListsOverviewFormatResponse extends SpeakeasyBase {
     contentType: string;
-    getListsOverviewFormat200ApplicationJsonObject?: GetListsOverviewFormat200ApplicationJson;
+    getListsOverviewFormat200ApplicationJSONObject?: GetListsOverviewFormat200ApplicationJson;
     statusCode: number;
 }

@@ -16,7 +16,7 @@ export class PlayerGamePpaAveragePpa extends SpeakeasyBase {
 
 export class PlayerGamePpa extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=averagePPA" })
-  averagePpa?: PlayerGamePpaAveragePpa;
+  averagePPA?: PlayerGamePpaAveragePpa;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

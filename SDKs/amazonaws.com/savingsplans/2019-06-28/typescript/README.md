@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateSavingsPlanRequest, CreateSavingsPlanResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,29 +33,29 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateSavingsPlanRequest = {
   headers: {
-    xAmzAlgorithm: "sunt",
-    xAmzContentSha256: "et",
-    xAmzCredential: "ea",
-    xAmzDate: "deserunt",
-    xAmzSecurityToken: "voluptas",
-    xAmzSignature: "eos",
-    xAmzSignedHeaders: "minus",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
-    clientToken: "consectetur",
-    commitment: "rerum",
-    purchaseTime: "2009-12-05T02:36:07Z",
-    savingsPlanOfferingId: "omnis",
+    clientToken: "voluptas",
+    commitment: "fugit",
+    purchaseTime: "2011-08-12T10:11:12Z",
+    savingsPlanOfferingId: "nihil",
     tags: {
-      "architecto": "omnis",
-      "porro": "ut",
-      "eius": "perferendis",
+      "dicta": "debitis",
+      "voluptatum": "et",
+      "ut": "dolorem",
     },
-    upfrontPaymentAmount: "beatae",
+    upfrontPaymentAmount: "et",
   },
 };
 
-sdk.sdk.createSavingsPlan(req).then((res: CreateSavingsPlanResponse | AxiosError) => {
+sdk.createSavingsPlan(req).then((res: CreateSavingsPlanResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DoubleMatcher } from "./doublematcher";
-import { ListMatcher } from "./listmatcher";
-import { StringMatcher } from "./stringmatcher";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ValueMatcher = void 0;
+var utils_1 = require("../../../internal/utils");
+var doublematcher_1 = require("./doublematcher");
+var listmatcher_1 = require("./listmatcher");
+var stringmatcher_1 = require("./stringmatcher");
 // ValueMatcher
 /**
  * Specifies the way to match a ProtobufWkt::Value. Primitive values and ListValue are supported. StructValue is not supported and is always not matched. [#next-free-field: 7]
@@ -36,29 +39,29 @@ var ValueMatcher = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=boolMatch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=boolMatch" }),
         __metadata("design:type", Boolean)
     ], ValueMatcher.prototype, "boolMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=doubleMatch" }),
-        __metadata("design:type", DoubleMatcher)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=doubleMatch" }),
+        __metadata("design:type", doublematcher_1.DoubleMatcher)
     ], ValueMatcher.prototype, "doubleMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listMatch" }),
-        __metadata("design:type", ListMatcher)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listMatch" }),
+        __metadata("design:type", listmatcher_1.ListMatcher)
     ], ValueMatcher.prototype, "listMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nullMatch" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nullMatch" }),
+        __metadata("design:type", Object)
     ], ValueMatcher.prototype, "nullMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=presentMatch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=presentMatch" }),
         __metadata("design:type", Boolean)
     ], ValueMatcher.prototype, "presentMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stringMatch" }),
-        __metadata("design:type", StringMatcher)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stringMatch" }),
+        __metadata("design:type", stringmatcher_1.StringMatcher)
     ], ValueMatcher.prototype, "stringMatch", void 0);
     return ValueMatcher;
-}(SpeakeasyBase));
-export { ValueMatcher };
+}(utils_1.SpeakeasyBase));
+exports.ValueMatcher = ValueMatcher;

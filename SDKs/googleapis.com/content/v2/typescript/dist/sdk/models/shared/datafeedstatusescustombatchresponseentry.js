@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DatafeedStatus } from "./datafeedstatus";
-import { Errors } from "./errors";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DatafeedstatusesCustomBatchResponseEntry = void 0;
+var utils_1 = require("../../../internal/utils");
+var datafeedstatus_1 = require("./datafeedstatus");
+var errors_1 = require("./errors");
 // DatafeedstatusesCustomBatchResponseEntry
 /**
  * A batch entry encoding a single non-batch datafeedstatuses response.
@@ -35,17 +38,17 @@ var DatafeedstatusesCustomBatchResponseEntry = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchId" }),
         __metadata("design:type", Number)
     ], DatafeedstatusesCustomBatchResponseEntry.prototype, "batchId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datafeedStatus" }),
-        __metadata("design:type", DatafeedStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datafeedStatus" }),
+        __metadata("design:type", datafeedstatus_1.DatafeedStatus)
     ], DatafeedstatusesCustomBatchResponseEntry.prototype, "datafeedStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors" }),
-        __metadata("design:type", Errors)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors" }),
+        __metadata("design:type", errors_1.Errors)
     ], DatafeedstatusesCustomBatchResponseEntry.prototype, "errors", void 0);
     return DatafeedstatusesCustomBatchResponseEntry;
-}(SpeakeasyBase));
-export { DatafeedstatusesCustomBatchResponseEntry };
+}(utils_1.SpeakeasyBase));
+exports.DatafeedstatusesCustomBatchResponseEntry = DatafeedstatusesCustomBatchResponseEntry;

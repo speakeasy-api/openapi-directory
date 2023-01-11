@@ -13,7 +13,7 @@ export declare class OrgsListFailedInvitationsRequest extends SpeakeasyBase {
 }
 export declare class OrgsListFailedInvitationsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     organizationInvitations?: shared.OrganizationInvitation[];

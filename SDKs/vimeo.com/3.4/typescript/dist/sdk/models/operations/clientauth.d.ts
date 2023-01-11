@@ -14,5 +14,5 @@ export declare class ClientAuthResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     auth?: shared.Auth;
-    error?: shared.Error;
+    error?: shared.ErrorT;
 }

@@ -34,5 +34,5 @@ export declare class UpdateNetworkSwitchRoutingOspfRequest extends SpeakeasyBase
 export declare class UpdateNetworkSwitchRoutingOspfResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkSwitchRoutingOspf200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkSwitchRoutingOspf200ApplicationJSONObject?: Record<string, any>;
 }

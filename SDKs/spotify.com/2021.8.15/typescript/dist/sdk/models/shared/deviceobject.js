@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceObject = void 0;
+var utils_1 = require("../../../internal/utils");
 // DeviceObject
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-deviceobject - Find more info on the official Spotify Web API Reference
@@ -33,33 +36,33 @@ var DeviceObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], DeviceObject.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_active" }),
         __metadata("design:type", Boolean)
     ], DeviceObject.prototype, "isActive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_private_session" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_private_session" }),
         __metadata("design:type", Boolean)
     ], DeviceObject.prototype, "isPrivateSession", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_restricted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_restricted" }),
         __metadata("design:type", Boolean)
     ], DeviceObject.prototype, "isRestricted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DeviceObject.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], DeviceObject.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volume_percent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volume_percent" }),
         __metadata("design:type", Number)
     ], DeviceObject.prototype, "volumePercent", void 0);
     return DeviceObject;
-}(SpeakeasyBase));
-export { DeviceObject };
+}(utils_1.SpeakeasyBase));
+exports.DeviceObject = DeviceObject;

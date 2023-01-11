@@ -1,4 +1,7 @@
-export var AppTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppTypeEnum = void 0;
+var AppTypeEnum;
 (function (AppTypeEnum) {
     AppTypeEnum["AwsFlowRuby"] = "aws-flow-ruby";
     AppTypeEnum["Java"] = "java";
@@ -7,4 +10,4 @@ export var AppTypeEnum;
     AppTypeEnum["Nodejs"] = "nodejs";
     AppTypeEnum["Static"] = "static";
     AppTypeEnum["Other"] = "other";
-})(AppTypeEnum || (AppTypeEnum = {}));
+})(AppTypeEnum = exports.AppTypeEnum || (exports.AppTypeEnum = {}));

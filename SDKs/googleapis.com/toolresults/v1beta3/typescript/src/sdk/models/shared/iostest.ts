@@ -15,7 +15,7 @@ export class IosTest extends SpeakeasyBase {
   iosAppInfo?: IosAppInfo;
 
   @SpeakeasyMetadata({ data: "json, name=iosRoboTest" })
-  iosRoboTest?: Map<string, any>;
+  iosRoboTest?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=iosTestLoop" })
   iosTestLoop?: IosTestLoop;

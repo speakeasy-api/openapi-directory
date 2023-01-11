@@ -185,23 +185,23 @@ export class NdcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ndcer400ApplicationJsonObject?: Ndcer400ApplicationJson;
+  ndcer400ApplicationJSONObject?: Ndcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  ndcer401ApplicationJsonObject?: Ndcer401ApplicationJson;
+  ndcer401ApplicationJSONObject?: Ndcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  ndcer404ApplicationJsonObject?: Ndcer404ApplicationJson;
+  ndcer404ApplicationJSONObject?: Ndcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  ndcer500ApplicationJsonObject?: Ndcer500ApplicationJson;
+  ndcer500ApplicationJSONObject?: Ndcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  ndcer502ApplicationJsonObject?: Ndcer502ApplicationJson;
+  ndcer502ApplicationJSONObject?: Ndcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  ndcer503ApplicationJsonObject?: Ndcer503ApplicationJson;
+  ndcer503ApplicationJSONObject?: Ndcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  ndcer504ApplicationJsonObject?: Ndcer504ApplicationJson;
+  ndcer504ApplicationJSONObject?: Ndcer504ApplicationJson;
 }

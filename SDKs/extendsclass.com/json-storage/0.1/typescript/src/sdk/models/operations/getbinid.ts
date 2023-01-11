@@ -22,8 +22,8 @@ export class GetBinIdResponse extends SpeakeasyBase {
   error?: any;
 
   @SpeakeasyMetadata()
-  getBinId200ApplicationJsonObject?: Map<string, any>;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getBinId200ApplicationJSONObject?: Record<string, any>;
 }

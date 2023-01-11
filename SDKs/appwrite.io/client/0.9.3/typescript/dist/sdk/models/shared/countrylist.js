@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Country } from "./country";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CountryList = void 0;
+var utils_1 = require("../../../internal/utils");
+var country_1 = require("./country");
 // CountryList
 /**
  * Countries List
@@ -34,13 +37,13 @@ var CountryList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countries", elemType: Country }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countries", elemType: country_1.Country }),
         __metadata("design:type", Array)
     ], CountryList.prototype, "countries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sum" }),
         __metadata("design:type", Number)
     ], CountryList.prototype, "sum", void 0);
     return CountryList;
-}(SpeakeasyBase));
-export { CountryList };
+}(utils_1.SpeakeasyBase));
+exports.CountryList = CountryList;

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetQtlInheritanceTypeDiffUsingGetPathParams extends SpeakeasyBase {
-    dateFromYyyymmdd: string;
-    dateToYyyymmdd: string;
+    dateFromYYYYMMDD: string;
+    dateToYYYYMMDD: string;
     speciesTypeKey: number;
 }
 export declare class GetQtlInheritanceTypeDiffUsingGetRequest extends SpeakeasyBase {

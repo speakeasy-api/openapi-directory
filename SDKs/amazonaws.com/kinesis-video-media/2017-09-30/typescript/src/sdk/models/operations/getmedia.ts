@@ -51,7 +51,7 @@ export class GetMediaRequestBody extends SpeakeasyBase {
   startSelector: GetMediaRequestBodyStartSelector;
 
   @SpeakeasyMetadata({ data: "json, name=StreamARN" })
-  streamArn?: string;
+  streamARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamName" })
   streamName?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StreamDescription } from "./streamdescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeStreamOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var streamdescription_1 = require("./streamdescription");
 // DescribeStreamOutput
 /**
  * Represents the output for <code>DescribeStream</code>.
@@ -34,9 +37,9 @@ var DescribeStreamOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StreamDescription" }),
-        __metadata("design:type", StreamDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StreamDescription" }),
+        __metadata("design:type", streamdescription_1.StreamDescription)
     ], DescribeStreamOutput.prototype, "streamDescription", void 0);
     return DescribeStreamOutput;
-}(SpeakeasyBase));
-export { DescribeStreamOutput };
+}(utils_1.SpeakeasyBase));
+exports.DescribeStreamOutput = DescribeStreamOutput;

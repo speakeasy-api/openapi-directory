@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RejectedPaymentV3 = void 0;
+var utils_1 = require("../../../internal/utils");
 var RejectedPaymentV3 = /** @class */ (function (_super) {
     __extends(RejectedPaymentV3, _super);
     function RejectedPaymentV3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], RejectedPaymentV3.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyType" }),
         __metadata("design:type", String)
     ], RejectedPaymentV3.prototype, "currencyType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineNumber" }),
         __metadata("design:type", Number)
     ], RejectedPaymentV3.prototype, "lineNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], RejectedPaymentV3.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentMetadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentMetadata" }),
         __metadata("design:type", String)
     ], RejectedPaymentV3.prototype, "paymentMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payorPaymentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payorPaymentId" }),
         __metadata("design:type", String)
     ], RejectedPaymentV3.prototype, "payorPaymentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], RejectedPaymentV3.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasonCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasonCode" }),
         __metadata("design:type", String)
     ], RejectedPaymentV3.prototype, "reasonCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remoteId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remoteId" }),
         __metadata("design:type", String)
     ], RejectedPaymentV3.prototype, "remoteId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remoteSystemId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remoteSystemId" }),
         __metadata("design:type", String)
     ], RejectedPaymentV3.prototype, "remoteSystemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceAccountName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceAccountName" }),
         __metadata("design:type", String)
     ], RejectedPaymentV3.prototype, "sourceAccountName", void 0);
     return RejectedPaymentV3;
-}(SpeakeasyBase));
-export { RejectedPaymentV3 };
+}(utils_1.SpeakeasyBase));
+exports.RejectedPaymentV3 = RejectedPaymentV3;

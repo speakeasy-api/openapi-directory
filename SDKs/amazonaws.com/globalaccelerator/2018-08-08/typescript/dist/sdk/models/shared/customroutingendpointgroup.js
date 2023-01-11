@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomRoutingDestinationDescription } from "./customroutingdestinationdescription";
-import { CustomRoutingEndpointDescription } from "./customroutingendpointdescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomRoutingEndpointGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var customroutingdestinationdescription_1 = require("./customroutingdestinationdescription");
+var customroutingendpointdescription_1 = require("./customroutingendpointdescription");
 // CustomRoutingEndpointGroup
 /**
  * A complex type for the endpoint group for a custom routing accelerator. An AWS Region can have only one endpoint group for a specific listener.
@@ -35,21 +38,21 @@ var CustomRoutingEndpointGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationDescriptions", elemType: CustomRoutingDestinationDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationDescriptions", elemType: customroutingdestinationdescription_1.CustomRoutingDestinationDescription }),
         __metadata("design:type", Array)
     ], CustomRoutingEndpointGroup.prototype, "destinationDescriptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointDescriptions", elemType: CustomRoutingEndpointDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointDescriptions", elemType: customroutingendpointdescription_1.CustomRoutingEndpointDescription }),
         __metadata("design:type", Array)
     ], CustomRoutingEndpointGroup.prototype, "endpointDescriptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointGroupArn" }),
         __metadata("design:type", String)
     ], CustomRoutingEndpointGroup.prototype, "endpointGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointGroupRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointGroupRegion" }),
         __metadata("design:type", String)
     ], CustomRoutingEndpointGroup.prototype, "endpointGroupRegion", void 0);
     return CustomRoutingEndpointGroup;
-}(SpeakeasyBase));
-export { CustomRoutingEndpointGroup };
+}(utils_1.SpeakeasyBase));
+exports.CustomRoutingEndpointGroup = CustomRoutingEndpointGroup;

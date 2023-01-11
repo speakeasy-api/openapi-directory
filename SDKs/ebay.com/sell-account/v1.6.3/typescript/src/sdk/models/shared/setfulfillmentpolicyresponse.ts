@@ -3,7 +3,7 @@ import { CategoryType } from "./categorytype";
 import { TimeDuration } from "./timeduration";
 import { RegionSet } from "./regionset";
 import { ShippingOption } from "./shippingoption";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 
 
 
@@ -48,6 +48,6 @@ export class SetFulfillmentPolicyResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=shippingOptions", elemType: ShippingOption })
   shippingOptions?: ShippingOption[];
 
-  @SpeakeasyMetadata({ data: "json, name=warnings", elemType: Error })
-  warnings?: Error[];
+  @SpeakeasyMetadata({ data: "json, name=warnings", elemType: ErrorT })
+  warnings?: ErrorT[];
 }

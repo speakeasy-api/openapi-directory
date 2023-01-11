@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SaveSubTransaction = void 0;
+var utils_1 = require("../../../internal/utils");
 var SaveSubTransaction = /** @class */ (function (_super) {
     __extends(SaveSubTransaction, _super);
     function SaveSubTransaction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], SaveSubTransaction.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category_id" }),
         __metadata("design:type", String)
     ], SaveSubTransaction.prototype, "categoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memo" }),
         __metadata("design:type", String)
     ], SaveSubTransaction.prototype, "memo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payee_id" }),
         __metadata("design:type", String)
     ], SaveSubTransaction.prototype, "payeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payee_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payee_name" }),
         __metadata("design:type", String)
     ], SaveSubTransaction.prototype, "payeeName", void 0);
     return SaveSubTransaction;
-}(SpeakeasyBase));
-export { SaveSubTransaction };
+}(utils_1.SpeakeasyBase));
+exports.SaveSubTransaction = SaveSubTransaction;

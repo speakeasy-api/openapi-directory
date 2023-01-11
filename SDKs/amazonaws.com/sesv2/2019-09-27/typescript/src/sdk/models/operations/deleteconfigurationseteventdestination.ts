@@ -52,7 +52,7 @@ export class DeleteConfigurationSetEventDestinationResponse extends SpeakeasyBas
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteConfigurationSetEventDestinationResponse?: Map<string, any>;
+  deleteConfigurationSetEventDestinationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   notFoundException?: any;

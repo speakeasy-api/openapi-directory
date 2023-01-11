@@ -16,7 +16,7 @@ export enum GetInstanceHealthResponseHealthStateEnum {
 **/
 export class GetInstanceHealthResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=healthInfo" })
-  healthInfo?: Map<string, string>;
+  healthInfo?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=healthState" })
   healthState?: GetInstanceHealthResponseHealthStateEnum;

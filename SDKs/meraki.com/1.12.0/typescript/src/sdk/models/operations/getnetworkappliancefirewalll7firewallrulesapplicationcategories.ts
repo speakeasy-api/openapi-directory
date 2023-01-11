@@ -22,5 +22,5 @@ export class GetNetworkApplianceFirewallL7FirewallRulesApplicationCategoriesResp
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceFirewallL7FirewallRulesApplicationCategories200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceFirewallL7FirewallRulesApplicationCategories200ApplicationJSONObject?: Record<string, any>;
 }

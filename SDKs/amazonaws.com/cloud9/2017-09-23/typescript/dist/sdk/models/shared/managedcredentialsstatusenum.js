@@ -1,4 +1,7 @@
-export var ManagedCredentialsStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ManagedCredentialsStatusEnum = void 0;
+var ManagedCredentialsStatusEnum;
 (function (ManagedCredentialsStatusEnum) {
     ManagedCredentialsStatusEnum["EnabledOnCreate"] = "ENABLED_ON_CREATE";
     ManagedCredentialsStatusEnum["EnabledByOwner"] = "ENABLED_BY_OWNER";
@@ -11,4 +14,4 @@ export var ManagedCredentialsStatusEnum;
     ManagedCredentialsStatusEnum["PendingStartRemovalByOwner"] = "PENDING_START_REMOVAL_BY_OWNER";
     ManagedCredentialsStatusEnum["FailedRemovalByCollaborator"] = "FAILED_REMOVAL_BY_COLLABORATOR";
     ManagedCredentialsStatusEnum["FailedRemovalByOwner"] = "FAILED_REMOVAL_BY_OWNER";
-})(ManagedCredentialsStatusEnum || (ManagedCredentialsStatusEnum = {}));
+})(ManagedCredentialsStatusEnum = exports.ManagedCredentialsStatusEnum || (exports.ManagedCredentialsStatusEnum = {}));

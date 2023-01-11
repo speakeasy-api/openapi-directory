@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PointStyleShapeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PointStyle = exports.PointStyleShapeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PointStyleShapeEnum;
 (function (PointStyleShapeEnum) {
     PointStyleShapeEnum["PointShapeUnspecified"] = "POINT_SHAPE_UNSPECIFIED";
     PointStyleShapeEnum["Circle"] = "CIRCLE";
@@ -34,7 +37,7 @@ export var PointStyleShapeEnum;
     PointStyleShapeEnum["Star"] = "STAR";
     PointStyleShapeEnum["Triangle"] = "TRIANGLE";
     PointStyleShapeEnum["XMark"] = "X_MARK";
-})(PointStyleShapeEnum || (PointStyleShapeEnum = {}));
+})(PointStyleShapeEnum = exports.PointStyleShapeEnum || (exports.PointStyleShapeEnum = {}));
 // PointStyle
 /**
  * The style of a point on the chart.
@@ -45,13 +48,13 @@ var PointStyle = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shape" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shape" }),
         __metadata("design:type", String)
     ], PointStyle.prototype, "shape", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], PointStyle.prototype, "size", void 0);
     return PointStyle;
-}(SpeakeasyBase));
-export { PointStyle };
+}(utils_1.SpeakeasyBase));
+exports.PointStyle = PointStyle;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VideoAgeGating } from "./videoagegating";
-import { VideoContentDetails } from "./videocontentdetails";
-import { VideoFileDetails } from "./videofiledetails";
-import { VideoLiveStreamingDetails } from "./videolivestreamingdetails";
-import { VideoLocalization } from "./videolocalization";
-import { VideoMonetizationDetails } from "./videomonetizationdetails";
-import { VideoPlayer } from "./videoplayer";
-import { VideoProcessingDetails } from "./videoprocessingdetails";
-import { VideoRecordingDetails } from "./videorecordingdetails";
-import { VideoSnippet } from "./videosnippet";
-import { VideoStatistics } from "./videostatistics";
-import { VideoStatus } from "./videostatus";
-import { VideoSuggestions } from "./videosuggestions";
-import { VideoTopicDetails } from "./videotopicdetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Video = void 0;
+var utils_1 = require("../../../internal/utils");
+var videoagegating_1 = require("./videoagegating");
+var videocontentdetails_1 = require("./videocontentdetails");
+var videofiledetails_1 = require("./videofiledetails");
+var videolivestreamingdetails_1 = require("./videolivestreamingdetails");
+var videolocalization_1 = require("./videolocalization");
+var videomonetizationdetails_1 = require("./videomonetizationdetails");
+var videoplayer_1 = require("./videoplayer");
+var videoprocessingdetails_1 = require("./videoprocessingdetails");
+var videorecordingdetails_1 = require("./videorecordingdetails");
+var videosnippet_1 = require("./videosnippet");
+var videostatistics_1 = require("./videostatistics");
+var videostatus_1 = require("./videostatus");
+var videosuggestions_1 = require("./videosuggestions");
+var videotopicdetails_1 = require("./videotopicdetails");
 // Video
 /**
  * A *video* resource represents a YouTube video.
@@ -47,77 +50,77 @@ var Video = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ageGating" }),
-        __metadata("design:type", VideoAgeGating)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ageGating" }),
+        __metadata("design:type", videoagegating_1.VideoAgeGating)
     ], Video.prototype, "ageGating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentDetails" }),
-        __metadata("design:type", VideoContentDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentDetails" }),
+        __metadata("design:type", videocontentdetails_1.VideoContentDetails)
     ], Video.prototype, "contentDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Video.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileDetails" }),
-        __metadata("design:type", VideoFileDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileDetails" }),
+        __metadata("design:type", videofiledetails_1.VideoFileDetails)
     ], Video.prototype, "fileDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Video.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Video.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=liveStreamingDetails" }),
-        __metadata("design:type", VideoLiveStreamingDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=liveStreamingDetails" }),
+        __metadata("design:type", videolivestreamingdetails_1.VideoLiveStreamingDetails)
     ], Video.prototype, "liveStreamingDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localizations", elemType: VideoLocalization }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localizations", elemType: videolocalization_1.VideoLocalization }),
+        __metadata("design:type", Object)
     ], Video.prototype, "localizations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monetizationDetails" }),
-        __metadata("design:type", VideoMonetizationDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monetizationDetails" }),
+        __metadata("design:type", videomonetizationdetails_1.VideoMonetizationDetails)
     ], Video.prototype, "monetizationDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=player" }),
-        __metadata("design:type", VideoPlayer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=player" }),
+        __metadata("design:type", videoplayer_1.VideoPlayer)
     ], Video.prototype, "player", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processingDetails" }),
-        __metadata("design:type", VideoProcessingDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processingDetails" }),
+        __metadata("design:type", videoprocessingdetails_1.VideoProcessingDetails)
     ], Video.prototype, "processingDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectDetails" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectDetails" }),
+        __metadata("design:type", Object)
     ], Video.prototype, "projectDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recordingDetails" }),
-        __metadata("design:type", VideoRecordingDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recordingDetails" }),
+        __metadata("design:type", videorecordingdetails_1.VideoRecordingDetails)
     ], Video.prototype, "recordingDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snippet" }),
-        __metadata("design:type", VideoSnippet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snippet" }),
+        __metadata("design:type", videosnippet_1.VideoSnippet)
     ], Video.prototype, "snippet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statistics" }),
-        __metadata("design:type", VideoStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statistics" }),
+        __metadata("design:type", videostatistics_1.VideoStatistics)
     ], Video.prototype, "statistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", VideoStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", videostatus_1.VideoStatus)
     ], Video.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suggestions" }),
-        __metadata("design:type", VideoSuggestions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suggestions" }),
+        __metadata("design:type", videosuggestions_1.VideoSuggestions)
     ], Video.prototype, "suggestions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topicDetails" }),
-        __metadata("design:type", VideoTopicDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topicDetails" }),
+        __metadata("design:type", videotopicdetails_1.VideoTopicDetails)
     ], Video.prototype, "topicDetails", void 0);
     return Video;
-}(SpeakeasyBase));
-export { Video };
+}(utils_1.SpeakeasyBase));
+exports.Video = Video;

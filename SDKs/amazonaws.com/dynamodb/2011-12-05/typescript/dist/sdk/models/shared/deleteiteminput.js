@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExpectedAttributeValue } from "./expectedattributevalue";
-import { Key } from "./key";
-import { ReturnValueEnum } from "./returnvalueenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteItemInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var expectedattributevalue_1 = require("./expectedattributevalue");
+var key_1 = require("./key");
+var returnvalueenum_1 = require("./returnvalueenum");
 var DeleteItemInput = /** @class */ (function (_super) {
     __extends(DeleteItemInput, _super);
     function DeleteItemInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Expected", elemType: ExpectedAttributeValue }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Expected", elemType: expectedattributevalue_1.ExpectedAttributeValue }),
+        __metadata("design:type", Object)
     ], DeleteItemInput.prototype, "expected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Key" }),
-        __metadata("design:type", Key)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Key" }),
+        __metadata("design:type", key_1.Key)
     ], DeleteItemInput.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReturnValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReturnValues" }),
         __metadata("design:type", String)
     ], DeleteItemInput.prototype, "returnValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableName" }),
         __metadata("design:type", String)
     ], DeleteItemInput.prototype, "tableName", void 0);
     return DeleteItemInput;
-}(SpeakeasyBase));
-export { DeleteItemInput };
+}(utils_1.SpeakeasyBase));
+exports.DeleteItemInput = DeleteItemInput;

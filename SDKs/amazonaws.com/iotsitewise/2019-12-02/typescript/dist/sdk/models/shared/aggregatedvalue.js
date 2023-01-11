@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QualityEnum } from "./qualityenum";
-import { Aggregates } from "./aggregates";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AggregatedValue = void 0;
+var utils_1 = require("../../../internal/utils");
+var qualityenum_1 = require("./qualityenum");
+var aggregates_1 = require("./aggregates");
 // AggregatedValue
 /**
  * Contains aggregated asset property values (for example, average, minimum, and maximum).
@@ -35,17 +38,17 @@ var AggregatedValue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quality" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quality" }),
         __metadata("design:type", String)
     ], AggregatedValue.prototype, "quality", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], AggregatedValue.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", Aggregates)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", aggregates_1.Aggregates)
     ], AggregatedValue.prototype, "value", void 0);
     return AggregatedValue;
-}(SpeakeasyBase));
-export { AggregatedValue };
+}(utils_1.SpeakeasyBase));
+exports.AggregatedValue = AggregatedValue;

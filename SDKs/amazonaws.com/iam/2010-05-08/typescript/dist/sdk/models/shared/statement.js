@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Position } from "./position";
-import { PolicySourceTypeEnum } from "./policysourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Statement = void 0;
+var utils_1 = require("../../../internal/utils");
+var position_1 = require("./position");
+var policysourcetypeenum_1 = require("./policysourcetypeenum");
 // Statement
 /**
  * <p>Contains a reference to a <code>Statement</code> element in a policy document that determines the result of the simulation.</p> <p>This data type is used by the <code>MatchedStatements</code> member of the <code> <a>EvaluationResult</a> </code> type.</p>
@@ -35,21 +38,21 @@ var Statement = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Position)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", position_1.Position)
     ], Statement.prototype, "endPosition", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Statement.prototype, "sourcePolicyId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Statement.prototype, "sourcePolicyType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Position)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", position_1.Position)
     ], Statement.prototype, "startPosition", void 0);
     return Statement;
-}(SpeakeasyBase));
-export { Statement };
+}(utils_1.SpeakeasyBase));
+exports.Statement = Statement;

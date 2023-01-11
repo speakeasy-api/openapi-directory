@@ -48,7 +48,7 @@ export class GetFileUploadUrlResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getFileUploadUrlResponse?: shared.GetFileUploadUrlResponse;
+  getFileUploadURLResponse?: shared.GetFileUploadUrlResponse;
 
   @SpeakeasyMetadata()
   requestError?: any;

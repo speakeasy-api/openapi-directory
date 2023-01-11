@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetGlobalwinescoresLatestRequest, GetGlobalwinescoresLatestResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     tokenAuthentication: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,24 +33,24 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetGlobalwinescoresLatestRequest = {
   queryParams: {
-    color: "pink",
-    isPrimeurs: true,
-    limit: 8694339800263980817,
-    lwin: "maxime",
-    lwin11: "perspiciatis",
-    offset: 2259968901493884117,
+    color: "red",
+    isPrimeurs: false,
+    limit: 6050128673802995827,
+    lwin: "expedita",
+    lwin11: "consequuntur",
+    offset: 2669985732393126063,
     ordering: "-score",
-    vintage: "sed",
+    vintage: "voluptas",
     wineId: [
-      5220847749626346733,
+      1543572285742637646,
     ],
   },
   headers: {
-    authorization: "praesentium",
+    authorization: "nihil",
   },
 };
 
-sdk.sdk.getGlobalwinescoresLatest(req).then((res: GetGlobalwinescoresLatestResponse | AxiosError) => {
+sdk.globalWineScore.getGlobalwinescoresLatest(req).then((res: GetGlobalwinescoresLatestResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -60,7 +59,7 @@ sdk.sdk.getGlobalwinescoresLatest(req).then((res: GetGlobalwinescoresLatestRespo
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### GlobalWineScore
 
 * `getGlobalwinescoresLatest` - List all latest GWS
 * `listHistoricalGws` - List all historical GWS

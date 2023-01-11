@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetSuggestedFollowsAllResponse = exports.GetGetSuggestedFollowsAllRequest = exports.GetGetSuggestedFollowsAllQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetGetSuggestedFollowsAllQueryParams = /** @class */ (function (_super) {
     __extends(GetGetSuggestedFollowsAllQueryParams, _super);
     function GetGetSuggestedFollowsAllQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=in_onboarding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=in_onboarding" }),
         __metadata("design:type", Boolean)
     ], GetGetSuggestedFollowsAllQueryParams.prototype, "inOnboarding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetGetSuggestedFollowsAllQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page_size" }),
         __metadata("design:type", Number)
     ], GetGetSuggestedFollowsAllQueryParams.prototype, "pageSize", void 0);
     return GetGetSuggestedFollowsAllQueryParams;
-}(SpeakeasyBase));
-export { GetGetSuggestedFollowsAllQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetSuggestedFollowsAllQueryParams = GetGetSuggestedFollowsAllQueryParams;
 var GetGetSuggestedFollowsAllRequest = /** @class */ (function (_super) {
     __extends(GetGetSuggestedFollowsAllRequest, _super);
     function GetGetSuggestedFollowsAllRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetSuggestedFollowsAllQueryParams)
     ], GetGetSuggestedFollowsAllRequest.prototype, "queryParams", void 0);
     return GetGetSuggestedFollowsAllRequest;
-}(SpeakeasyBase));
-export { GetGetSuggestedFollowsAllRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetSuggestedFollowsAllRequest = GetGetSuggestedFollowsAllRequest;
 var GetGetSuggestedFollowsAllResponse = /** @class */ (function (_super) {
     __extends(GetGetSuggestedFollowsAllResponse, _super);
     function GetGetSuggestedFollowsAllResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetSuggestedFollowsAllResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetSuggestedFollowsAllResponse.prototype, "statusCode", void 0);
     return GetGetSuggestedFollowsAllResponse;
-}(SpeakeasyBase));
-export { GetGetSuggestedFollowsAllResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetSuggestedFollowsAllResponse = GetGetSuggestedFollowsAllResponse;

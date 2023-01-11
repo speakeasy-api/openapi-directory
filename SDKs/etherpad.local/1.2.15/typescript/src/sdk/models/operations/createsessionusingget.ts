@@ -4,10 +4,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class CreateSessionUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=authorID" })
-  authorId?: string;
+  authorID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=groupID" })
-  groupId?: string;
+  groupID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=validUntil" })
   validUntil?: string;
@@ -16,7 +16,7 @@ export class CreateSessionUsingGetQueryParams extends SpeakeasyBase {
 
 export class CreateSessionUsingGet200ApplicationJsonData extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=sessionID" })
-  sessionId?: string;
+  sessionID?: string;
 }
 
 
@@ -37,7 +37,7 @@ export class CreateSessionUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -49,7 +49,7 @@ export class CreateSessionUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -61,7 +61,7 @@ export class CreateSessionUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -82,14 +82,14 @@ export class CreateSessionUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createSessionUsingGet200ApplicationJsonObject?: CreateSessionUsingGet200ApplicationJson;
+  createSessionUsingGET200ApplicationJSONObject?: CreateSessionUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  createSessionUsingGet400ApplicationJsonObject?: CreateSessionUsingGet400ApplicationJson;
+  createSessionUsingGET400ApplicationJSONObject?: CreateSessionUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  createSessionUsingGet401ApplicationJsonObject?: CreateSessionUsingGet401ApplicationJson;
+  createSessionUsingGET401ApplicationJSONObject?: CreateSessionUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  createSessionUsingGet500ApplicationJsonObject?: CreateSessionUsingGet500ApplicationJson;
+  createSessionUsingGET500ApplicationJSONObject?: CreateSessionUsingGet500ApplicationJson;
 }

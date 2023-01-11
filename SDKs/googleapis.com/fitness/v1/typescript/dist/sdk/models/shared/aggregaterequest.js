@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AggregateBy } from "./aggregateby";
-import { BucketByActivity } from "./bucketbyactivity";
-import { BucketBySession } from "./bucketbysession";
-import { BucketByTime } from "./bucketbytime";
-export var AggregateRequestFilteredDataQualityStandardEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AggregateRequest = exports.AggregateRequestFilteredDataQualityStandardEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var aggregateby_1 = require("./aggregateby");
+var bucketbyactivity_1 = require("./bucketbyactivity");
+var bucketbysession_1 = require("./bucketbysession");
+var bucketbytime_1 = require("./bucketbytime");
+var AggregateRequestFilteredDataQualityStandardEnum;
 (function (AggregateRequestFilteredDataQualityStandardEnum) {
     AggregateRequestFilteredDataQualityStandardEnum["DataQualityUnknown"] = "dataQualityUnknown";
     AggregateRequestFilteredDataQualityStandardEnum["DataQualityBloodPressureEsh2002"] = "dataQualityBloodPressureEsh2002";
@@ -39,7 +42,7 @@ export var AggregateRequestFilteredDataQualityStandardEnum;
     AggregateRequestFilteredDataQualityStandardEnum["DataQualityBloodPressureBhsBb"] = "dataQualityBloodPressureBhsBB";
     AggregateRequestFilteredDataQualityStandardEnum["DataQualityBloodGlucoseIso151972003"] = "dataQualityBloodGlucoseIso151972003";
     AggregateRequestFilteredDataQualityStandardEnum["DataQualityBloodGlucoseIso151972013"] = "dataQualityBloodGlucoseIso151972013";
-})(AggregateRequestFilteredDataQualityStandardEnum || (AggregateRequestFilteredDataQualityStandardEnum = {}));
+})(AggregateRequestFilteredDataQualityStandardEnum = exports.AggregateRequestFilteredDataQualityStandardEnum || (exports.AggregateRequestFilteredDataQualityStandardEnum = {}));
 // AggregateRequest
 /**
  * Next id: 10
@@ -50,37 +53,37 @@ var AggregateRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aggregateBy", elemType: AggregateBy }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aggregateBy", elemType: aggregateby_1.AggregateBy }),
         __metadata("design:type", Array)
     ], AggregateRequest.prototype, "aggregateBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketByActivitySegment" }),
-        __metadata("design:type", BucketByActivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketByActivitySegment" }),
+        __metadata("design:type", bucketbyactivity_1.BucketByActivity)
     ], AggregateRequest.prototype, "bucketByActivitySegment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketByActivityType" }),
-        __metadata("design:type", BucketByActivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketByActivityType" }),
+        __metadata("design:type", bucketbyactivity_1.BucketByActivity)
     ], AggregateRequest.prototype, "bucketByActivityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketBySession" }),
-        __metadata("design:type", BucketBySession)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketBySession" }),
+        __metadata("design:type", bucketbysession_1.BucketBySession)
     ], AggregateRequest.prototype, "bucketBySession", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketByTime" }),
-        __metadata("design:type", BucketByTime)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketByTime" }),
+        __metadata("design:type", bucketbytime_1.BucketByTime)
     ], AggregateRequest.prototype, "bucketByTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTimeMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTimeMillis" }),
         __metadata("design:type", String)
     ], AggregateRequest.prototype, "endTimeMillis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filteredDataQualityStandard" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filteredDataQualityStandard" }),
         __metadata("design:type", Array)
     ], AggregateRequest.prototype, "filteredDataQualityStandard", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTimeMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTimeMillis" }),
         __metadata("design:type", String)
     ], AggregateRequest.prototype, "startTimeMillis", void 0);
     return AggregateRequest;
-}(SpeakeasyBase));
-export { AggregateRequest };
+}(utils_1.SpeakeasyBase));
+exports.AggregateRequest = AggregateRequest;

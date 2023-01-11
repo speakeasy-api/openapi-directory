@@ -1,6 +1,9 @@
-export var JobTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobTypeEnum = void 0;
+var JobTypeEnum;
 (function (JobTypeEnum) {
     JobTypeEnum["Import"] = "IMPORT";
     JobTypeEnum["Export"] = "EXPORT";
     JobTypeEnum["LocalUse"] = "LOCAL_USE";
-})(JobTypeEnum || (JobTypeEnum = {}));
+})(JobTypeEnum = exports.JobTypeEnum || (exports.JobTypeEnum = {}));

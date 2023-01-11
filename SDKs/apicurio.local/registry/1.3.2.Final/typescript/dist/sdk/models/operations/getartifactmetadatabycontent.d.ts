@@ -10,6 +10,6 @@ export declare class GetArtifactMetaDataByContentRequest extends SpeakeasyBase {
 export declare class GetArtifactMetaDataByContentResponse extends SpeakeasyBase {
     artifactMetaData?: shared.ArtifactMetaData;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MetadataInfo } from "./metadatainfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuerySchemaVersionMetadataResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var metadatainfo_1 = require("./metadatainfo");
 var QuerySchemaVersionMetadataResponse = /** @class */ (function (_super) {
     __extends(QuerySchemaVersionMetadataResponse, _super);
     function QuerySchemaVersionMetadataResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MetadataInfoMap", elemType: MetadataInfo }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MetadataInfoMap", elemType: metadatainfo_1.MetadataInfo }),
+        __metadata("design:type", Object)
     ], QuerySchemaVersionMetadataResponse.prototype, "metadataInfoMap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], QuerySchemaVersionMetadataResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaVersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaVersionId" }),
         __metadata("design:type", String)
     ], QuerySchemaVersionMetadataResponse.prototype, "schemaVersionId", void 0);
     return QuerySchemaVersionMetadataResponse;
-}(SpeakeasyBase));
-export { QuerySchemaVersionMetadataResponse };
+}(utils_1.SpeakeasyBase));
+exports.QuerySchemaVersionMetadataResponse = QuerySchemaVersionMetadataResponse;

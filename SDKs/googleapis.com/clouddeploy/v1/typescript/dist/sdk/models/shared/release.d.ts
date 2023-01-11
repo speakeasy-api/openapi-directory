@@ -16,13 +16,13 @@ export declare enum ReleaseRenderStateEnum {
 **/
 export declare class Release extends SpeakeasyBase {
     abandoned?: boolean;
-    annotations?: Map<string, string>;
+    annotations?: Record<string, string>;
     buildArtifacts?: BuildArtifact[];
     createTime?: string;
     deliveryPipelineSnapshot?: DeliveryPipeline;
     description?: string;
     etag?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     renderEndTime?: string;
     renderStartTime?: string;
@@ -30,8 +30,8 @@ export declare class Release extends SpeakeasyBase {
     skaffoldConfigPath?: string;
     skaffoldConfigUri?: string;
     skaffoldVersion?: string;
-    targetArtifacts?: Map<string, TargetArtifact>;
-    targetRenders?: Map<string, TargetRender>;
+    targetArtifacts?: Record<string, TargetArtifact>;
+    targetRenders?: Record<string, TargetRender>;
     targetSnapshots?: Target[];
     uid?: string;
 }
@@ -39,12 +39,12 @@ export declare class Release extends SpeakeasyBase {
  * A `Release` resource in the Google Cloud Deploy API. A `Release` defines a specific Skaffold configuration instance that can be deployed.
 **/
 export declare class ReleaseInput extends SpeakeasyBase {
-    annotations?: Map<string, string>;
+    annotations?: Record<string, string>;
     buildArtifacts?: BuildArtifact[];
     deliveryPipelineSnapshot?: DeliveryPipelineInput;
     description?: string;
     etag?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     skaffoldConfigPath?: string;
     skaffoldConfigUri?: string;

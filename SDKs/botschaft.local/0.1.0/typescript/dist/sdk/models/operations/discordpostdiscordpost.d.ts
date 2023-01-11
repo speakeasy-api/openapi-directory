@@ -11,5 +11,5 @@ export declare class DiscordPostDiscordPostResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
     statusCode: number;
-    discordPostDiscordPost200ApplicationJsonAny?: any;
+    discordPostDiscordPost200ApplicationJSONAny?: any;
 }

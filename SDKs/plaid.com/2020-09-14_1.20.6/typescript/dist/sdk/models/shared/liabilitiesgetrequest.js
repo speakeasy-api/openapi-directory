@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LiabilitiesGetRequestOptions } from "./liabilitiesgetrequestoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiabilitiesGetRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var liabilitiesgetrequestoptions_1 = require("./liabilitiesgetrequestoptions");
 // LiabilitiesGetRequest
 /**
  * LiabilitiesGetRequest defines the request schema for `/liabilities/get`
@@ -34,21 +37,21 @@ var LiabilitiesGetRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access_token" }),
         __metadata("design:type", String)
     ], LiabilitiesGetRequest.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], LiabilitiesGetRequest.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
-        __metadata("design:type", LiabilitiesGetRequestOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
+        __metadata("design:type", liabilitiesgetrequestoptions_1.LiabilitiesGetRequestOptions)
     ], LiabilitiesGetRequest.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], LiabilitiesGetRequest.prototype, "secret", void 0);
     return LiabilitiesGetRequest;
-}(SpeakeasyBase));
-export { LiabilitiesGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.LiabilitiesGetRequest = LiabilitiesGetRequest;

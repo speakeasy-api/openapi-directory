@@ -51,14 +51,14 @@ export declare class GetApiV2PerformanceStats200ApplicationJson extends Speakeas
     data?: GetApiV2PerformanceStats200ApplicationJsonData;
 }
 export declare class GetApiV2PerformanceStats404ApplicationJson extends SpeakeasyBase {
-    errors?: Map<string, any>;
+    errors?: Record<string, any>;
 }
 export declare class GetApiV2PerformanceStatsRequest extends SpeakeasyBase {
     headers: GetApiV2PerformanceStatsHeaders;
 }
 export declare class GetApiV2PerformanceStatsResponse extends SpeakeasyBase {
     contentType: string;
-    getApiV2PerformanceStats200ApplicationJsonObject?: GetApiV2PerformanceStats200ApplicationJson;
-    getApiV2PerformanceStats404ApplicationJsonObject?: GetApiV2PerformanceStats404ApplicationJson;
     statusCode: number;
+    getApiV2PerformanceStats200ApplicationJSONObject?: GetApiV2PerformanceStats200ApplicationJson;
+    getApiV2PerformanceStats404ApplicationJSONObject?: GetApiV2PerformanceStats404ApplicationJson;
 }

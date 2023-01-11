@@ -8,7 +8,7 @@ export declare class GrpcRoute extends SpeakeasyBase {
     description?: string;
     gateways?: string[];
     hostnames?: string[];
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     meshes?: string[];
     name?: string;
     rules?: GrpcRouteRouteRule[];
@@ -22,7 +22,7 @@ export declare class GrpcRouteInput extends SpeakeasyBase {
     description?: string;
     gateways?: string[];
     hostnames?: string[];
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     meshes?: string[];
     name?: string;
     rules?: GrpcRouteRouteRule[];

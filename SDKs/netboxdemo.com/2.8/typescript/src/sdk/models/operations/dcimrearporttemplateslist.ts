@@ -122,5 +122,5 @@ export class DcimRearPortTemplatesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimRearPortTemplatesList200ApplicationJsonObject?: DcimRearPortTemplatesList200ApplicationJson;
+  dcimRearPortTemplatesList200ApplicationJSONObject?: DcimRearPortTemplatesList200ApplicationJson;
 }

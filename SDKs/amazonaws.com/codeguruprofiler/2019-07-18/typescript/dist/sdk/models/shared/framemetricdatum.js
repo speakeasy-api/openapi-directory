@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FrameMetric } from "./framemetric";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FrameMetricDatum = void 0;
+var utils_1 = require("../../../internal/utils");
+var framemetric_1 = require("./framemetric");
 // FrameMetricDatum
 /**
  *  Information about a frame metric and its values.
@@ -34,13 +37,13 @@ var FrameMetricDatum = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frameMetric" }),
-        __metadata("design:type", FrameMetric)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frameMetric" }),
+        __metadata("design:type", framemetric_1.FrameMetric)
     ], FrameMetricDatum.prototype, "frameMetric", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
         __metadata("design:type", Array)
     ], FrameMetricDatum.prototype, "values", void 0);
     return FrameMetricDatum;
-}(SpeakeasyBase));
-export { FrameMetricDatum };
+}(utils_1.SpeakeasyBase));
+exports.FrameMetricDatum = FrameMetricDatum;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PerProjectQuota } from "./perprojectquota";
-import { Quota } from "./quota";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountQuota = void 0;
+var utils_1 = require("../../../internal/utils");
+var perprojectquota_1 = require("./perprojectquota");
+var quota_1 = require("./quota");
 // AccountQuota
 /**
  * Represents a set of quotas associated with an account
@@ -35,21 +38,21 @@ var AccountQuota = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PerProject", elemType: PerProjectQuota }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PerProject", elemType: perprojectquota_1.PerProjectQuota }),
         __metadata("design:type", Array)
     ], AccountQuota.prototype, "perProject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Predictions" }),
-        __metadata("design:type", Quota)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Predictions" }),
+        __metadata("design:type", quota_1.Quota)
     ], AccountQuota.prototype, "predictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Projects" }),
-        __metadata("design:type", Quota)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Projects" }),
+        __metadata("design:type", quota_1.Quota)
     ], AccountQuota.prototype, "projects", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tier" }),
         __metadata("design:type", String)
     ], AccountQuota.prototype, "tier", void 0);
     return AccountQuota;
-}(SpeakeasyBase));
-export { AccountQuota };
+}(utils_1.SpeakeasyBase));
+exports.AccountQuota = AccountQuota;

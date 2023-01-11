@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArtistContract } from "./artistcontract";
-export var ArtistForSongContractCategoriesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtistForSongContract = exports.ArtistForSongContractRolesEnum = exports.ArtistForSongContractEffectiveRolesEnum = exports.ArtistForSongContractCategoriesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var artistcontract_1 = require("./artistcontract");
+var ArtistForSongContractCategoriesEnum;
 (function (ArtistForSongContractCategoriesEnum) {
     ArtistForSongContractCategoriesEnum["Nothing"] = "Nothing";
     ArtistForSongContractCategoriesEnum["Vocalist"] = "Vocalist";
@@ -36,8 +39,8 @@ export var ArtistForSongContractCategoriesEnum;
     ArtistForSongContractCategoriesEnum["Band"] = "Band";
     ArtistForSongContractCategoriesEnum["Illustrator"] = "Illustrator";
     ArtistForSongContractCategoriesEnum["Subject"] = "Subject";
-})(ArtistForSongContractCategoriesEnum || (ArtistForSongContractCategoriesEnum = {}));
-export var ArtistForSongContractEffectiveRolesEnum;
+})(ArtistForSongContractCategoriesEnum = exports.ArtistForSongContractCategoriesEnum || (exports.ArtistForSongContractCategoriesEnum = {}));
+var ArtistForSongContractEffectiveRolesEnum;
 (function (ArtistForSongContractEffectiveRolesEnum) {
     ArtistForSongContractEffectiveRolesEnum["Default"] = "Default";
     ArtistForSongContractEffectiveRolesEnum["Animator"] = "Animator";
@@ -56,8 +59,8 @@ export var ArtistForSongContractEffectiveRolesEnum;
     ArtistForSongContractEffectiveRolesEnum["Chorus"] = "Chorus";
     ArtistForSongContractEffectiveRolesEnum["Encoder"] = "Encoder";
     ArtistForSongContractEffectiveRolesEnum["VocalDataProvider"] = "VocalDataProvider";
-})(ArtistForSongContractEffectiveRolesEnum || (ArtistForSongContractEffectiveRolesEnum = {}));
-export var ArtistForSongContractRolesEnum;
+})(ArtistForSongContractEffectiveRolesEnum = exports.ArtistForSongContractEffectiveRolesEnum || (exports.ArtistForSongContractEffectiveRolesEnum = {}));
+var ArtistForSongContractRolesEnum;
 (function (ArtistForSongContractRolesEnum) {
     ArtistForSongContractRolesEnum["Default"] = "Default";
     ArtistForSongContractRolesEnum["Animator"] = "Animator";
@@ -76,44 +79,44 @@ export var ArtistForSongContractRolesEnum;
     ArtistForSongContractRolesEnum["Chorus"] = "Chorus";
     ArtistForSongContractRolesEnum["Encoder"] = "Encoder";
     ArtistForSongContractRolesEnum["VocalDataProvider"] = "VocalDataProvider";
-})(ArtistForSongContractRolesEnum || (ArtistForSongContractRolesEnum = {}));
+})(ArtistForSongContractRolesEnum = exports.ArtistForSongContractRolesEnum || (exports.ArtistForSongContractRolesEnum = {}));
 var ArtistForSongContract = /** @class */ (function (_super) {
     __extends(ArtistForSongContract, _super);
     function ArtistForSongContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artist" }),
-        __metadata("design:type", ArtistContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artist" }),
+        __metadata("design:type", artistcontract_1.ArtistContract)
     ], ArtistForSongContract.prototype, "artist", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categories" }),
         __metadata("design:type", String)
     ], ArtistForSongContract.prototype, "categories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effectiveRoles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effectiveRoles" }),
         __metadata("design:type", String)
     ], ArtistForSongContract.prototype, "effectiveRoles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ArtistForSongContract.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isCustomName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isCustomName" }),
         __metadata("design:type", Boolean)
     ], ArtistForSongContract.prototype, "isCustomName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isSupport" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isSupport" }),
         __metadata("design:type", Boolean)
     ], ArtistForSongContract.prototype, "isSupport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ArtistForSongContract.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roles" }),
         __metadata("design:type", String)
     ], ArtistForSongContract.prototype, "roles", void 0);
     return ArtistForSongContract;
-}(SpeakeasyBase));
-export { ArtistForSongContract };
+}(utils_1.SpeakeasyBase));
+exports.ArtistForSongContract = ArtistForSongContract;

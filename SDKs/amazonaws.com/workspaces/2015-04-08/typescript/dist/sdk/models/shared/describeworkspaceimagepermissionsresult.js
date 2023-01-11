@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImagePermission } from "./imagepermission";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeWorkspaceImagePermissionsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var imagepermission_1 = require("./imagepermission");
 var DescribeWorkspaceImagePermissionsResult = /** @class */ (function (_super) {
     __extends(DescribeWorkspaceImagePermissionsResult, _super);
     function DescribeWorkspaceImagePermissionsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ImageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ImageId" }),
         __metadata("design:type", String)
     ], DescribeWorkspaceImagePermissionsResult.prototype, "imageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ImagePermissions", elemType: ImagePermission }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ImagePermissions", elemType: imagepermission_1.ImagePermission }),
         __metadata("design:type", Array)
     ], DescribeWorkspaceImagePermissionsResult.prototype, "imagePermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeWorkspaceImagePermissionsResult.prototype, "nextToken", void 0);
     return DescribeWorkspaceImagePermissionsResult;
-}(SpeakeasyBase));
-export { DescribeWorkspaceImagePermissionsResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeWorkspaceImagePermissionsResult = DescribeWorkspaceImagePermissionsResult;

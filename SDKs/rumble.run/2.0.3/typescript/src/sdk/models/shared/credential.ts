@@ -9,7 +9,7 @@ export enum CredentialTypeEnum {
 
 export class Credential extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=acl" })
-  acl?: Map<string, any>;
+  acl?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=cidrs" })
   cidrs?: string[];

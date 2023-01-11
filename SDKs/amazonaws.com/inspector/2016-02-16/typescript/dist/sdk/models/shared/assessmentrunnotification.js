@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InspectorEventEnum } from "./inspectoreventenum";
-import { AssessmentRunNotificationSnsStatusCodeEnum } from "./assessmentrunnotificationsnsstatuscodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssessmentRunNotification = void 0;
+var utils_1 = require("../../../internal/utils");
+var inspectoreventenum_1 = require("./inspectoreventenum");
+var assessmentrunnotificationsnsstatuscodeenum_1 = require("./assessmentrunnotificationsnsstatuscodeenum");
 // AssessmentRunNotification
 /**
  * Used as one of the elements of the <a>AssessmentRun</a> data type.
@@ -35,29 +38,29 @@ var AssessmentRunNotification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", Date)
     ], AssessmentRunNotification.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", Boolean)
     ], AssessmentRunNotification.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event" }),
         __metadata("design:type", String)
     ], AssessmentRunNotification.prototype, "event", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], AssessmentRunNotification.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snsPublishStatusCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snsPublishStatusCode" }),
         __metadata("design:type", String)
     ], AssessmentRunNotification.prototype, "snsPublishStatusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snsTopicArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snsTopicArn" }),
         __metadata("design:type", String)
     ], AssessmentRunNotification.prototype, "snsTopicArn", void 0);
     return AssessmentRunNotification;
-}(SpeakeasyBase));
-export { AssessmentRunNotification };
+}(utils_1.SpeakeasyBase));
+exports.AssessmentRunNotification = AssessmentRunNotification;

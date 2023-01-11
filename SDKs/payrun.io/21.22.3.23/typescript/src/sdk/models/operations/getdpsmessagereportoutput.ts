@@ -53,7 +53,7 @@ export class GetDpsMessageReportOutputResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getDpsMessageReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+  getDpsMessageReportOutput200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

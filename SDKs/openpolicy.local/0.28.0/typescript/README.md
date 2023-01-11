@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PostCompileRequest, PostCompileResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,19 +28,19 @@ const sdk = new SDK();
     
 const req: PostCompileRequest = {
   queryParams: {
-    explain: "non",
-    instrument: true,
-    metrics: false,
+    explain: "sit",
+    instrument: false,
+    metrics: true,
     pretty: false,
   },
   request: {
-    "et": "dolores",
-    "est": "quis",
-    "voluptas": "ut",
+    "dolor": "expedita",
+    "voluptas": "fugit",
+    "et": "nihil",
   },
 };
 
-sdk.compileApi.postCompile(req).then((res: PostCompileResponse | AxiosError) => {
+sdk.compileAPI.postCompile(req).then((res: PostCompileResponse | AxiosError) => {
    // handle response
 });
 ```

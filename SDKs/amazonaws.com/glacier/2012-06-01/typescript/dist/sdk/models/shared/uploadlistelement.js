@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UploadListElement = void 0;
+var utils_1 = require("../../../internal/utils");
 // UploadListElement
 /**
  * A list of in-progress multipart uploads for a vault.
@@ -33,25 +36,25 @@ var UploadListElement = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ArchiveDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ArchiveDescription" }),
         __metadata("design:type", String)
     ], UploadListElement.prototype, "archiveDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDate" }),
         __metadata("design:type", String)
     ], UploadListElement.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MultipartUploadId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MultipartUploadId" }),
         __metadata("design:type", String)
     ], UploadListElement.prototype, "multipartUploadId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PartSizeInBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PartSizeInBytes" }),
         __metadata("design:type", Number)
     ], UploadListElement.prototype, "partSizeInBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VaultARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VaultARN" }),
         __metadata("design:type", String)
-    ], UploadListElement.prototype, "vaultArn", void 0);
+    ], UploadListElement.prototype, "vaultARN", void 0);
     return UploadListElement;
-}(SpeakeasyBase));
-export { UploadListElement };
+}(utils_1.SpeakeasyBase));
+exports.UploadListElement = UploadListElement;

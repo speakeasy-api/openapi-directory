@@ -48,7 +48,7 @@ export class DeleteWorkGroupResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteWorkGroupOutput?: Map<string, any>;
+  deleteWorkGroupOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

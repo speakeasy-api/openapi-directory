@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -34,16 +33,18 @@ export class ChannelsPrivateChannelMembers {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/channels/{channel_id}/privacy/users/{user_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/channels/{channel_id}/privacy/users/{user_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -52,17 +53,17 @@ export class ChannelsPrivateChannelMembers {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.error = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.error = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.error = httpRes?.data;
             }
             break;
@@ -70,7 +71,6 @@ export class ChannelsPrivateChannelMembers {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -88,11 +88,11 @@ export class ChannelsPrivateChannelMembers {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/channels/{channel_id}/privacy/users", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/channels/{channel_id}/privacy/users", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -100,34 +100,36 @@ export class ChannelsPrivateChannelMembers {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetChannelPrivacyUsersResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.user+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.user+json`)) {
                 res.users = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.user+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.user+json`)) {
                 res.error = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.user+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.user+json`)) {
                 res.error = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.user+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.user+json`)) {
                 res.error = httpRes?.data;
             }
             break;
@@ -135,7 +137,6 @@ export class ChannelsPrivateChannelMembers {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -153,16 +154,18 @@ export class ChannelsPrivateChannelMembers {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/channels/{channel_id}/privacy/users/{user_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/channels/{channel_id}/privacy/users/{user_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "put",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -171,17 +174,17 @@ export class ChannelsPrivateChannelMembers {
           case httpRes?.status == 200:
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.error = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.error = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.error = httpRes?.data;
             }
             break;
@@ -189,7 +192,6 @@ export class ChannelsPrivateChannelMembers {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -207,12 +209,12 @@ export class ChannelsPrivateChannelMembers {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/channels/{channel_id}/privacy/users", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/channels/{channel_id}/privacy/users", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -220,46 +222,46 @@ export class ChannelsPrivateChannelMembers {
     }
     
     const client: AxiosInstance = this._securityClient!;
+    
     const headers = {...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    if (body == null || Object.keys(body).length === 0) throw new Error("request body is required");
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.SetChannelPrivacyUsersResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.user+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.user+json`)) {
                 res.users = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.user+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.user+json`)) {
                 res.error = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.user+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.user+json`)) {
                 res.error = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.user+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.user+json`)) {
                 res.error = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.user+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.user+json`)) {
                 res.error = httpRes?.data;
             }
             break;
@@ -267,7 +269,6 @@ export class ChannelsPrivateChannelMembers {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

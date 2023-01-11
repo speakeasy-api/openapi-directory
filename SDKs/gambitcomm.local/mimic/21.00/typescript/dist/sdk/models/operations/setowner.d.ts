@@ -9,5 +9,5 @@ export declare class SetOwnerRequest extends SpeakeasyBase {
 export declare class SetOwnerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setOwner200ApplicationJsonString?: string;
+    setOwner200ApplicationJSONString?: string;
 }

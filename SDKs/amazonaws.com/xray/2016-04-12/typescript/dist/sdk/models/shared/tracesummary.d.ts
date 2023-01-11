@@ -13,7 +13,7 @@ import { TraceUser } from "./traceuser";
  * Metadata generated from the segment documents in a trace.
 **/
 export declare class TraceSummary extends SpeakeasyBase {
-    annotations?: Map<string, ValueWithServiceIds[]>;
+    annotations?: Record<string, ValueWithServiceIds[]>;
     availabilityZones?: AvailabilityZoneDetail[];
     duration?: number;
     entryPoint?: ServiceId;
@@ -27,7 +27,7 @@ export declare class TraceSummary extends SpeakeasyBase {
     instanceIds?: InstanceIdDetail[];
     isPartial?: boolean;
     matchedEventTime?: Date;
-    resourceArNs?: ResourceArnDetail[];
+    resourceARNs?: ResourceArnDetail[];
     responseTime?: number;
     responseTimeRootCauses?: ResponseTimeRootCause[];
     revision?: number;

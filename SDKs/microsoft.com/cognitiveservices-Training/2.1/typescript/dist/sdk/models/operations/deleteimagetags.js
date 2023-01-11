@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteImageTagsResponse = exports.DeleteImageTagsRequest = exports.DeleteImageTagsHeaders = exports.DeleteImageTagsQueryParams = exports.DeleteImageTagsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteImageTagsPathParams = /** @class */ (function (_super) {
     __extends(DeleteImageTagsPathParams, _super);
     function DeleteImageTagsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=projectId" }),
         __metadata("design:type", String)
     ], DeleteImageTagsPathParams.prototype, "projectId", void 0);
     return DeleteImageTagsPathParams;
-}(SpeakeasyBase));
-export { DeleteImageTagsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteImageTagsPathParams = DeleteImageTagsPathParams;
 var DeleteImageTagsQueryParams = /** @class */ (function (_super) {
     __extends(DeleteImageTagsQueryParams, _super);
     function DeleteImageTagsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=imageIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=imageIds" }),
         __metadata("design:type", Array)
     ], DeleteImageTagsQueryParams.prototype, "imageIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=tagIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=tagIds" }),
         __metadata("design:type", Array)
     ], DeleteImageTagsQueryParams.prototype, "tagIds", void 0);
     return DeleteImageTagsQueryParams;
-}(SpeakeasyBase));
-export { DeleteImageTagsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteImageTagsQueryParams = DeleteImageTagsQueryParams;
 var DeleteImageTagsHeaders = /** @class */ (function (_super) {
     __extends(DeleteImageTagsHeaders, _super);
     function DeleteImageTagsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Training-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Training-Key" }),
         __metadata("design:type", String)
     ], DeleteImageTagsHeaders.prototype, "trainingKey", void 0);
     return DeleteImageTagsHeaders;
-}(SpeakeasyBase));
-export { DeleteImageTagsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteImageTagsHeaders = DeleteImageTagsHeaders;
 var DeleteImageTagsRequest = /** @class */ (function (_super) {
     __extends(DeleteImageTagsRequest, _super);
     function DeleteImageTagsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteImageTagsPathParams)
     ], DeleteImageTagsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteImageTagsQueryParams)
     ], DeleteImageTagsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteImageTagsHeaders)
     ], DeleteImageTagsRequest.prototype, "headers", void 0);
     return DeleteImageTagsRequest;
-}(SpeakeasyBase));
-export { DeleteImageTagsRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteImageTagsRequest = DeleteImageTagsRequest;
 var DeleteImageTagsResponse = /** @class */ (function (_super) {
     __extends(DeleteImageTagsResponse, _super);
     function DeleteImageTagsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteImageTagsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteImageTagsResponse.prototype, "statusCode", void 0);
     return DeleteImageTagsResponse;
-}(SpeakeasyBase));
-export { DeleteImageTagsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteImageTagsResponse = DeleteImageTagsResponse;

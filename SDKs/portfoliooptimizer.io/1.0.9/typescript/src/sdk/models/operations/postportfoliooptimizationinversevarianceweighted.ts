@@ -28,8 +28,8 @@ export class PostPortfolioOptimizationInverseVarianceWeightedResponse extends Sp
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioOptimizationInverseVarianceWeighted200ApplicationJsonObject?: PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioOptimizationInverseVarianceWeighted200ApplicationJSONObject?: PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJson;
 }

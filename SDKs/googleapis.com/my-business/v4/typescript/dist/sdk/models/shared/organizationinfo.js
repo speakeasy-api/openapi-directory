@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PostalAddress } from "./postaladdress";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrganizationInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var postaladdress_1 = require("./postaladdress");
 // OrganizationInfo
 /**
  * Additional Info stored for an organization.
@@ -34,17 +37,17 @@ var OrganizationInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneNumber" }),
         __metadata("design:type", String)
     ], OrganizationInfo.prototype, "phoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postalAddress" }),
-        __metadata("design:type", PostalAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postalAddress" }),
+        __metadata("design:type", postaladdress_1.PostalAddress)
     ], OrganizationInfo.prototype, "postalAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registeredDomain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registeredDomain" }),
         __metadata("design:type", String)
     ], OrganizationInfo.prototype, "registeredDomain", void 0);
     return OrganizationInfo;
-}(SpeakeasyBase));
-export { OrganizationInfo };
+}(utils_1.SpeakeasyBase));
+exports.OrganizationInfo = OrganizationInfo;

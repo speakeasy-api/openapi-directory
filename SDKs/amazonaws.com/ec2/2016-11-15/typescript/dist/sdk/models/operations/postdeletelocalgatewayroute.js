@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteLocalGatewayRouteActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteLocalGatewayRouteResponse = exports.PostDeleteLocalGatewayRouteRequest = exports.PostDeleteLocalGatewayRouteHeaders = exports.PostDeleteLocalGatewayRouteQueryParams = exports.PostDeleteLocalGatewayRouteVersionEnum = exports.PostDeleteLocalGatewayRouteActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteLocalGatewayRouteActionEnum;
 (function (PostDeleteLocalGatewayRouteActionEnum) {
     PostDeleteLocalGatewayRouteActionEnum["DeleteLocalGatewayRoute"] = "DeleteLocalGatewayRoute";
-})(PostDeleteLocalGatewayRouteActionEnum || (PostDeleteLocalGatewayRouteActionEnum = {}));
-export var PostDeleteLocalGatewayRouteVersionEnum;
+})(PostDeleteLocalGatewayRouteActionEnum = exports.PostDeleteLocalGatewayRouteActionEnum || (exports.PostDeleteLocalGatewayRouteActionEnum = {}));
+var PostDeleteLocalGatewayRouteVersionEnum;
 (function (PostDeleteLocalGatewayRouteVersionEnum) {
     PostDeleteLocalGatewayRouteVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostDeleteLocalGatewayRouteVersionEnum || (PostDeleteLocalGatewayRouteVersionEnum = {}));
+})(PostDeleteLocalGatewayRouteVersionEnum = exports.PostDeleteLocalGatewayRouteVersionEnum || (exports.PostDeleteLocalGatewayRouteVersionEnum = {}));
 var PostDeleteLocalGatewayRouteQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteLocalGatewayRouteQueryParams, _super);
     function PostDeleteLocalGatewayRouteQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteLocalGatewayRouteQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteLocalGatewayRouteQueryParams.prototype, "version", void 0);
     return PostDeleteLocalGatewayRouteQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteLocalGatewayRouteQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteLocalGatewayRouteQueryParams = PostDeleteLocalGatewayRouteQueryParams;
 var PostDeleteLocalGatewayRouteHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteLocalGatewayRouteHeaders, _super);
     function PostDeleteLocalGatewayRouteHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteLocalGatewayRouteHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteLocalGatewayRouteHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteLocalGatewayRouteHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteLocalGatewayRouteHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteLocalGatewayRouteHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteLocalGatewayRouteHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteLocalGatewayRouteHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteLocalGatewayRouteHeaders;
-}(SpeakeasyBase));
-export { PostDeleteLocalGatewayRouteHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteLocalGatewayRouteHeaders = PostDeleteLocalGatewayRouteHeaders;
 var PostDeleteLocalGatewayRouteRequest = /** @class */ (function (_super) {
     __extends(PostDeleteLocalGatewayRouteRequest, _super);
     function PostDeleteLocalGatewayRouteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteLocalGatewayRouteQueryParams)
     ], PostDeleteLocalGatewayRouteRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteLocalGatewayRouteHeaders)
     ], PostDeleteLocalGatewayRouteRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteLocalGatewayRouteRequest.prototype, "request", void 0);
     return PostDeleteLocalGatewayRouteRequest;
-}(SpeakeasyBase));
-export { PostDeleteLocalGatewayRouteRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteLocalGatewayRouteRequest = PostDeleteLocalGatewayRouteRequest;
 var PostDeleteLocalGatewayRouteResponse = /** @class */ (function (_super) {
     __extends(PostDeleteLocalGatewayRouteResponse, _super);
     function PostDeleteLocalGatewayRouteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteLocalGatewayRouteResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteLocalGatewayRouteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteLocalGatewayRouteResponse.prototype, "statusCode", void 0);
     return PostDeleteLocalGatewayRouteResponse;
-}(SpeakeasyBase));
-export { PostDeleteLocalGatewayRouteResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteLocalGatewayRouteResponse = PostDeleteLocalGatewayRouteResponse;

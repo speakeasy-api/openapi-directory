@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Attribute } from "./attribute";
-import { Scope } from "./scope";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExclusionPreview = void 0;
+var utils_1 = require("../../../internal/utils");
+var attribute_1 = require("./attribute");
+var scope_1 = require("./scope");
 // ExclusionPreview
 /**
  * Contains information about what is excluded from an assessment run given the current state of the assessment template.
@@ -35,25 +38,25 @@ var ExclusionPreview = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes", elemType: Attribute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes", elemType: attribute_1.Attribute }),
         __metadata("design:type", Array)
     ], ExclusionPreview.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ExclusionPreview.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommendation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommendation" }),
         __metadata("design:type", String)
     ], ExclusionPreview.prototype, "recommendation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scopes", elemType: Scope }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scopes", elemType: scope_1.Scope }),
         __metadata("design:type", Array)
     ], ExclusionPreview.prototype, "scopes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], ExclusionPreview.prototype, "title", void 0);
     return ExclusionPreview;
-}(SpeakeasyBase));
-export { ExclusionPreview };
+}(utils_1.SpeakeasyBase));
+exports.ExclusionPreview = ExclusionPreview;

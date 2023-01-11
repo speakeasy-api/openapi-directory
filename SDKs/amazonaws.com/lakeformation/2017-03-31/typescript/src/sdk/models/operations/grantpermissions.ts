@@ -54,7 +54,7 @@ export class GrantPermissionsResponse extends SpeakeasyBase {
   entityNotFoundException?: any;
 
   @SpeakeasyMetadata()
-  grantPermissionsResponse?: Map<string, any>;
+  grantPermissionsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidInputException?: any;

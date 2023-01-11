@@ -38,5 +38,5 @@ export declare class GetEventsRequest extends SpeakeasyBase {
 export declare class GetEventsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getEvents200ApplicationJsonObject?: GetEvents200ApplicationJson;
+    getEvents200ApplicationJSONObject?: GetEvents200ApplicationJson;
 }

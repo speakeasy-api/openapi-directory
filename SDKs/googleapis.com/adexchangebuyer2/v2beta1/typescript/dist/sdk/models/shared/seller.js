@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// SellerInput
-/**
- * Represents a seller of inventory. Each seller is identified by a unique Ad Manager account ID.
-**/
-var SellerInput = /** @class */ (function (_super) {
-    __extends(SellerInput, _super);
-    function SellerInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
-        __metadata("design:type", String)
-    ], SellerInput.prototype, "accountId", void 0);
-    return SellerInput;
-}(SpeakeasyBase));
-export { SellerInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SellerInput = exports.Seller = void 0;
+var utils_1 = require("../../../internal/utils");
 // Seller
 /**
  * Represents a seller of inventory. Each seller is identified by a unique Ad Manager account ID.
@@ -49,13 +36,29 @@ var Seller = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], Seller.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subAccountId" }),
         __metadata("design:type", String)
     ], Seller.prototype, "subAccountId", void 0);
     return Seller;
-}(SpeakeasyBase));
-export { Seller };
+}(utils_1.SpeakeasyBase));
+exports.Seller = Seller;
+// SellerInput
+/**
+ * Represents a seller of inventory. Each seller is identified by a unique Ad Manager account ID.
+**/
+var SellerInput = /** @class */ (function (_super) {
+    __extends(SellerInput, _super);
+    function SellerInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
+        __metadata("design:type", String)
+    ], SellerInput.prototype, "accountId", void 0);
+    return SellerInput;
+}(utils_1.SpeakeasyBase));
+exports.SellerInput = SellerInput;

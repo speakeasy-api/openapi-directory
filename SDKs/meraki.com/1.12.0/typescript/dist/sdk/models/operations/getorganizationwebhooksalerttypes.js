@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationWebhooksAlertTypesResponse = exports.GetOrganizationWebhooksAlertTypesRequest = exports.GetOrganizationWebhooksAlertTypesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationWebhooksAlertTypesPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationWebhooksAlertTypesPathParams, _super);
     function GetOrganizationWebhooksAlertTypesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationWebhooksAlertTypesPathParams.prototype, "organizationId", void 0);
     return GetOrganizationWebhooksAlertTypesPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationWebhooksAlertTypesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationWebhooksAlertTypesPathParams = GetOrganizationWebhooksAlertTypesPathParams;
 var GetOrganizationWebhooksAlertTypesRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationWebhooksAlertTypesRequest, _super);
     function GetOrganizationWebhooksAlertTypesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationWebhooksAlertTypesPathParams)
     ], GetOrganizationWebhooksAlertTypesRequest.prototype, "pathParams", void 0);
     return GetOrganizationWebhooksAlertTypesRequest;
-}(SpeakeasyBase));
-export { GetOrganizationWebhooksAlertTypesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationWebhooksAlertTypesRequest = GetOrganizationWebhooksAlertTypesRequest;
 var GetOrganizationWebhooksAlertTypesResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationWebhooksAlertTypesResponse, _super);
     function GetOrganizationWebhooksAlertTypesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationWebhooksAlertTypesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationWebhooksAlertTypesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationWebhooksAlertTypesResponse.prototype, "getOrganizationWebhooksAlertTypes200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationWebhooksAlertTypesResponse.prototype, "getOrganizationWebhooksAlertTypes200ApplicationJSONObject", void 0);
     return GetOrganizationWebhooksAlertTypesResponse;
-}(SpeakeasyBase));
-export { GetOrganizationWebhooksAlertTypesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationWebhooksAlertTypesResponse = GetOrganizationWebhooksAlertTypesResponse;

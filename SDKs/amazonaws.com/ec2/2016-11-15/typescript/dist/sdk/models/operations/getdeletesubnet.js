@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteSubnetActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteSubnetResponse = exports.GetDeleteSubnetRequest = exports.GetDeleteSubnetHeaders = exports.GetDeleteSubnetQueryParams = exports.GetDeleteSubnetVersionEnum = exports.GetDeleteSubnetActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteSubnetActionEnum;
 (function (GetDeleteSubnetActionEnum) {
     GetDeleteSubnetActionEnum["DeleteSubnet"] = "DeleteSubnet";
-})(GetDeleteSubnetActionEnum || (GetDeleteSubnetActionEnum = {}));
-export var GetDeleteSubnetVersionEnum;
+})(GetDeleteSubnetActionEnum = exports.GetDeleteSubnetActionEnum || (exports.GetDeleteSubnetActionEnum = {}));
+var GetDeleteSubnetVersionEnum;
 (function (GetDeleteSubnetVersionEnum) {
     GetDeleteSubnetVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDeleteSubnetVersionEnum || (GetDeleteSubnetVersionEnum = {}));
+})(GetDeleteSubnetVersionEnum = exports.GetDeleteSubnetVersionEnum || (exports.GetDeleteSubnetVersionEnum = {}));
 var GetDeleteSubnetQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteSubnetQueryParams, _super);
     function GetDeleteSubnetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteSubnetQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDeleteSubnetQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SubnetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SubnetId" }),
         __metadata("design:type", String)
     ], GetDeleteSubnetQueryParams.prototype, "subnetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteSubnetQueryParams.prototype, "version", void 0);
     return GetDeleteSubnetQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteSubnetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteSubnetQueryParams = GetDeleteSubnetQueryParams;
 var GetDeleteSubnetHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteSubnetHeaders, _super);
     function GetDeleteSubnetHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteSubnetHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteSubnetHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteSubnetHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteSubnetHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteSubnetHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteSubnetHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteSubnetHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteSubnetHeaders;
-}(SpeakeasyBase));
-export { GetDeleteSubnetHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteSubnetHeaders = GetDeleteSubnetHeaders;
 var GetDeleteSubnetRequest = /** @class */ (function (_super) {
     __extends(GetDeleteSubnetRequest, _super);
     function GetDeleteSubnetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteSubnetQueryParams)
     ], GetDeleteSubnetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteSubnetHeaders)
     ], GetDeleteSubnetRequest.prototype, "headers", void 0);
     return GetDeleteSubnetRequest;
-}(SpeakeasyBase));
-export { GetDeleteSubnetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteSubnetRequest = GetDeleteSubnetRequest;
 var GetDeleteSubnetResponse = /** @class */ (function (_super) {
     __extends(GetDeleteSubnetResponse, _super);
     function GetDeleteSubnetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteSubnetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteSubnetResponse.prototype, "statusCode", void 0);
     return GetDeleteSubnetResponse;
-}(SpeakeasyBase));
-export { GetDeleteSubnetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteSubnetResponse = GetDeleteSubnetResponse;

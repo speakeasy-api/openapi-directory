@@ -54,7 +54,7 @@ export class DeleteTestGridProjectResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteTestGridProjectResult?: Map<string, any>;
+  deleteTestGridProjectResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServiceException?: any;

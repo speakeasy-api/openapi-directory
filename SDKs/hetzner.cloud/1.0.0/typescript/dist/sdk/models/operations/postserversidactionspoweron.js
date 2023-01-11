@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostServersIdActionsPoweronResponse = exports.PostServersIdActionsPoweronRequest = exports.PostServersIdActionsPoweronActionResponse = exports.PostServersIdActionsPoweronActionResponseAction = exports.PostServersIdActionsPoweronActionResponseActionStatusEnum = exports.PostServersIdActionsPoweronActionResponseActionResources = exports.PostServersIdActionsPoweronActionResponseActionError = exports.PostServersIdActionsPoweronPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostServersIdActionsPoweronPathParams = /** @class */ (function (_super) {
     __extends(PostServersIdActionsPoweronPathParams, _super);
     function PostServersIdActionsPoweronPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PostServersIdActionsPoweronPathParams.prototype, "id", void 0);
     return PostServersIdActionsPoweronPathParams;
-}(SpeakeasyBase));
-export { PostServersIdActionsPoweronPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsPoweronPathParams = PostServersIdActionsPoweronPathParams;
 // PostServersIdActionsPoweronActionResponseActionError
 /**
  * Error message for the Action if error occurred, otherwise null
@@ -45,119 +48,119 @@ var PostServersIdActionsPoweronActionResponseActionError = /** @class */ (functi
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PostServersIdActionsPoweronActionResponseActionError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostServersIdActionsPoweronActionResponseActionError.prototype, "message", void 0);
     return PostServersIdActionsPoweronActionResponseActionError;
-}(SpeakeasyBase));
-export { PostServersIdActionsPoweronActionResponseActionError };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsPoweronActionResponseActionError = PostServersIdActionsPoweronActionResponseActionError;
 var PostServersIdActionsPoweronActionResponseActionResources = /** @class */ (function (_super) {
     __extends(PostServersIdActionsPoweronActionResponseActionResources, _super);
     function PostServersIdActionsPoweronActionResponseActionResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostServersIdActionsPoweronActionResponseActionResources.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostServersIdActionsPoweronActionResponseActionResources.prototype, "type", void 0);
     return PostServersIdActionsPoweronActionResponseActionResources;
-}(SpeakeasyBase));
-export { PostServersIdActionsPoweronActionResponseActionResources };
-export var PostServersIdActionsPoweronActionResponseActionStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsPoweronActionResponseActionResources = PostServersIdActionsPoweronActionResponseActionResources;
+var PostServersIdActionsPoweronActionResponseActionStatusEnum;
 (function (PostServersIdActionsPoweronActionResponseActionStatusEnum) {
     PostServersIdActionsPoweronActionResponseActionStatusEnum["Success"] = "success";
     PostServersIdActionsPoweronActionResponseActionStatusEnum["Running"] = "running";
     PostServersIdActionsPoweronActionResponseActionStatusEnum["Error"] = "error";
-})(PostServersIdActionsPoweronActionResponseActionStatusEnum || (PostServersIdActionsPoweronActionResponseActionStatusEnum = {}));
+})(PostServersIdActionsPoweronActionResponseActionStatusEnum = exports.PostServersIdActionsPoweronActionResponseActionStatusEnum || (exports.PostServersIdActionsPoweronActionResponseActionStatusEnum = {}));
 var PostServersIdActionsPoweronActionResponseAction = /** @class */ (function (_super) {
     __extends(PostServersIdActionsPoweronActionResponseAction, _super);
     function PostServersIdActionsPoweronActionResponseAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], PostServersIdActionsPoweronActionResponseAction.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", PostServersIdActionsPoweronActionResponseActionError)
     ], PostServersIdActionsPoweronActionResponseAction.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", String)
     ], PostServersIdActionsPoweronActionResponseAction.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostServersIdActionsPoweronActionResponseAction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], PostServersIdActionsPoweronActionResponseAction.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: PostServersIdActionsPoweronActionResponseActionResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: PostServersIdActionsPoweronActionResponseActionResources }),
         __metadata("design:type", Array)
     ], PostServersIdActionsPoweronActionResponseAction.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", String)
     ], PostServersIdActionsPoweronActionResponseAction.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PostServersIdActionsPoweronActionResponseAction.prototype, "status", void 0);
     return PostServersIdActionsPoweronActionResponseAction;
-}(SpeakeasyBase));
-export { PostServersIdActionsPoweronActionResponseAction };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsPoweronActionResponseAction = PostServersIdActionsPoweronActionResponseAction;
 var PostServersIdActionsPoweronActionResponse = /** @class */ (function (_super) {
     __extends(PostServersIdActionsPoweronActionResponse, _super);
     function PostServersIdActionsPoweronActionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", PostServersIdActionsPoweronActionResponseAction)
     ], PostServersIdActionsPoweronActionResponse.prototype, "action", void 0);
     return PostServersIdActionsPoweronActionResponse;
-}(SpeakeasyBase));
-export { PostServersIdActionsPoweronActionResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsPoweronActionResponse = PostServersIdActionsPoweronActionResponse;
 var PostServersIdActionsPoweronRequest = /** @class */ (function (_super) {
     __extends(PostServersIdActionsPoweronRequest, _super);
     function PostServersIdActionsPoweronRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostServersIdActionsPoweronPathParams)
     ], PostServersIdActionsPoweronRequest.prototype, "pathParams", void 0);
     return PostServersIdActionsPoweronRequest;
-}(SpeakeasyBase));
-export { PostServersIdActionsPoweronRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsPoweronRequest = PostServersIdActionsPoweronRequest;
 var PostServersIdActionsPoweronResponse = /** @class */ (function (_super) {
     __extends(PostServersIdActionsPoweronResponse, _super);
     function PostServersIdActionsPoweronResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostServersIdActionsPoweronActionResponse)
     ], PostServersIdActionsPoweronResponse.prototype, "actionResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostServersIdActionsPoweronResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostServersIdActionsPoweronResponse.prototype, "statusCode", void 0);
     return PostServersIdActionsPoweronResponse;
-}(SpeakeasyBase));
-export { PostServersIdActionsPoweronResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostServersIdActionsPoweronResponse = PostServersIdActionsPoweronResponse;

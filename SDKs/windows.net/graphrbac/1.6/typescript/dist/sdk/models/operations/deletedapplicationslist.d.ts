@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class DeletedApplicationsListPathParams extends SpeakeasyBase {
-    tenantId: string;
+    tenantID: string;
 }
 export declare class DeletedApplicationsListQueryParams extends SpeakeasyBase {
     dollarFilter?: string;

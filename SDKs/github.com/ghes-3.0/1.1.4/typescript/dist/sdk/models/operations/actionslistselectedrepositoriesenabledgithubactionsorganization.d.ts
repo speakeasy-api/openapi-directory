@@ -18,5 +18,5 @@ export declare class ActionsListSelectedRepositoriesEnabledGithubActionsOrganiza
 export declare class ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    actionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJsonObject?: ActionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJson;
+    actionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJSONObject?: ActionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJson;
 }

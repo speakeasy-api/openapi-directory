@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Lexicon } from "./lexicon";
-import { LexiconAttributes } from "./lexiconattributes";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLexiconOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var lexicon_1 = require("./lexicon");
+var lexiconattributes_1 = require("./lexiconattributes");
 var GetLexiconOutput = /** @class */ (function (_super) {
     __extends(GetLexiconOutput, _super);
     function GetLexiconOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Lexicon" }),
-        __metadata("design:type", Lexicon)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Lexicon" }),
+        __metadata("design:type", lexicon_1.Lexicon)
     ], GetLexiconOutput.prototype, "lexicon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LexiconAttributes" }),
-        __metadata("design:type", LexiconAttributes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LexiconAttributes" }),
+        __metadata("design:type", lexiconattributes_1.LexiconAttributes)
     ], GetLexiconOutput.prototype, "lexiconAttributes", void 0);
     return GetLexiconOutput;
-}(SpeakeasyBase));
-export { GetLexiconOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetLexiconOutput = GetLexiconOutput;

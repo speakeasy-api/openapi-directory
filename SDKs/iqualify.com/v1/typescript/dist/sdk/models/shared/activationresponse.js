@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActivationResponse = exports.ActivationResponseMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActivationResponseMetadata = /** @class */ (function (_super) {
     __extends(ActivationResponseMetadata, _super);
     function ActivationResponseMetadata() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rootContentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rootContentId" }),
         __metadata("design:type", String)
     ], ActivationResponseMetadata.prototype, "rootContentId", void 0);
     return ActivationResponseMetadata;
-}(SpeakeasyBase));
-export { ActivationResponseMetadata };
+}(utils_1.SpeakeasyBase));
+exports.ActivationResponseMetadata = ActivationResponseMetadata;
 var ActivationResponse = /** @class */ (function (_super) {
     __extends(ActivationResponse, _super);
     function ActivationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end" }),
         __metadata("design:type", String)
     ], ActivationResponse.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ActivationResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=info" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=info" }),
         __metadata("design:type", String)
     ], ActivationResponse.prototype, "info", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=learnersCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=learnersCount" }),
         __metadata("design:type", String)
     ], ActivationResponse.prototype, "learnersCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
         __metadata("design:type", ActivationResponseMetadata)
     ], ActivationResponse.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ActivationResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
         __metadata("design:type", String)
     ], ActivationResponse.prototype, "start", void 0);
     return ActivationResponse;
-}(SpeakeasyBase));
-export { ActivationResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActivationResponse = ActivationResponse;

@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SyncListItemEnumQueryResultOrderEnum = void 0;
+var SyncListItemEnumQueryResultOrderEnum;
+(function (SyncListItemEnumQueryResultOrderEnum) {
+    SyncListItemEnumQueryResultOrderEnum["Asc"] = "asc";
+    SyncListItemEnumQueryResultOrderEnum["Desc"] = "desc";
+})(SyncListItemEnumQueryResultOrderEnum = exports.SyncListItemEnumQueryResultOrderEnum || (exports.SyncListItemEnumQueryResultOrderEnum = {}));

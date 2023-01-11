@@ -10,6 +10,6 @@ export declare class SearchListResponse extends SpeakeasyBase {
     pageInfo?: PageInfo;
     prevPageToken?: string;
     regionCode?: string;
-    tokenPagination?: Map<string, any>;
+    tokenPagination?: Record<string, any>;
     visitorId?: string;
 }

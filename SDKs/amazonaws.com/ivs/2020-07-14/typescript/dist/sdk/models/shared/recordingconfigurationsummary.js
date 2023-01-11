@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DestinationConfiguration } from "./destinationconfiguration";
-import { RecordingConfigurationStateEnum } from "./recordingconfigurationstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecordingConfigurationSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var destinationconfiguration_1 = require("./destinationconfiguration");
+var recordingconfigurationstateenum_1 = require("./recordingconfigurationstateenum");
 // RecordingConfigurationSummary
 /**
  * Summary information about a RecordingConfiguration.
@@ -35,25 +38,25 @@ var RecordingConfigurationSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], RecordingConfigurationSummary.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationConfiguration" }),
-        __metadata("design:type", DestinationConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationConfiguration" }),
+        __metadata("design:type", destinationconfiguration_1.DestinationConfiguration)
     ], RecordingConfigurationSummary.prototype, "destinationConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RecordingConfigurationSummary.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], RecordingConfigurationSummary.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], RecordingConfigurationSummary.prototype, "tags", void 0);
     return RecordingConfigurationSummary;
-}(SpeakeasyBase));
-export { RecordingConfigurationSummary };
+}(utils_1.SpeakeasyBase));
+exports.RecordingConfigurationSummary = RecordingConfigurationSummary;

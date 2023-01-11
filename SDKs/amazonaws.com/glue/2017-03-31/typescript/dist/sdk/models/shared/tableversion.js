@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Table } from "./table";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TableVersion = void 0;
+var utils_1 = require("../../../internal/utils");
+var table_1 = require("./table");
 // TableVersion
 /**
  * Specifies a version of a table.
@@ -34,13 +37,13 @@ var TableVersion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Table" }),
-        __metadata("design:type", Table)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Table" }),
+        __metadata("design:type", table_1.Table)
     ], TableVersion.prototype, "table", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VersionId" }),
         __metadata("design:type", String)
     ], TableVersion.prototype, "versionId", void 0);
     return TableVersion;
-}(SpeakeasyBase));
-export { TableVersion };
+}(utils_1.SpeakeasyBase));
+exports.TableVersion = TableVersion;

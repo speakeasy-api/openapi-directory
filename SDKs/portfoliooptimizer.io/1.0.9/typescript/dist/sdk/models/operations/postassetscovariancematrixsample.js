@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAssetsCovarianceMatrixSampleResponse = exports.PostAssetsCovarianceMatrixSampleRequest = exports.PostAssetsCovarianceMatrixSample200ApplicationJson = exports.PostAssetsCovarianceMatrixSampleRequestBody = exports.PostAssetsCovarianceMatrixSampleRequestBodyAssets = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAssetsCovarianceMatrixSampleRequestBodyAssets = /** @class */ (function (_super) {
     __extends(PostAssetsCovarianceMatrixSampleRequestBodyAssets, _super);
     function PostAssetsCovarianceMatrixSampleRequestBodyAssets() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetReturns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetReturns" }),
         __metadata("design:type", Array)
     ], PostAssetsCovarianceMatrixSampleRequestBodyAssets.prototype, "assetReturns", void 0);
     return PostAssetsCovarianceMatrixSampleRequestBodyAssets;
-}(SpeakeasyBase));
-export { PostAssetsCovarianceMatrixSampleRequestBodyAssets };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCovarianceMatrixSampleRequestBodyAssets = PostAssetsCovarianceMatrixSampleRequestBodyAssets;
 var PostAssetsCovarianceMatrixSampleRequestBody = /** @class */ (function (_super) {
     __extends(PostAssetsCovarianceMatrixSampleRequestBody, _super);
     function PostAssetsCovarianceMatrixSampleRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets", elemType: PostAssetsCovarianceMatrixSampleRequestBodyAssets }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets", elemType: PostAssetsCovarianceMatrixSampleRequestBodyAssets }),
         __metadata("design:type", Array)
     ], PostAssetsCovarianceMatrixSampleRequestBody.prototype, "assets", void 0);
     return PostAssetsCovarianceMatrixSampleRequestBody;
-}(SpeakeasyBase));
-export { PostAssetsCovarianceMatrixSampleRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCovarianceMatrixSampleRequestBody = PostAssetsCovarianceMatrixSampleRequestBody;
 var PostAssetsCovarianceMatrixSample200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostAssetsCovarianceMatrixSample200ApplicationJson, _super);
     function PostAssetsCovarianceMatrixSample200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsCovarianceMatrix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsCovarianceMatrix" }),
         __metadata("design:type", Array)
     ], PostAssetsCovarianceMatrixSample200ApplicationJson.prototype, "assetsCovarianceMatrix", void 0);
     return PostAssetsCovarianceMatrixSample200ApplicationJson;
-}(SpeakeasyBase));
-export { PostAssetsCovarianceMatrixSample200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCovarianceMatrixSample200ApplicationJson = PostAssetsCovarianceMatrixSample200ApplicationJson;
 var PostAssetsCovarianceMatrixSampleRequest = /** @class */ (function (_super) {
     __extends(PostAssetsCovarianceMatrixSampleRequest, _super);
     function PostAssetsCovarianceMatrixSampleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostAssetsCovarianceMatrixSampleRequestBody)
     ], PostAssetsCovarianceMatrixSampleRequest.prototype, "request", void 0);
     return PostAssetsCovarianceMatrixSampleRequest;
-}(SpeakeasyBase));
-export { PostAssetsCovarianceMatrixSampleRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCovarianceMatrixSampleRequest = PostAssetsCovarianceMatrixSampleRequest;
 var PostAssetsCovarianceMatrixSampleResponse = /** @class */ (function (_super) {
     __extends(PostAssetsCovarianceMatrixSampleResponse, _super);
     function PostAssetsCovarianceMatrixSampleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAssetsCovarianceMatrixSampleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostAssetsCovarianceMatrixSample200ApplicationJson)
-    ], PostAssetsCovarianceMatrixSampleResponse.prototype, "postAssetsCovarianceMatrixSample200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAssetsCovarianceMatrixSampleResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostAssetsCovarianceMatrixSample200ApplicationJson)
+    ], PostAssetsCovarianceMatrixSampleResponse.prototype, "postAssetsCovarianceMatrixSample200ApplicationJSONObject", void 0);
     return PostAssetsCovarianceMatrixSampleResponse;
-}(SpeakeasyBase));
-export { PostAssetsCovarianceMatrixSampleResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsCovarianceMatrixSampleResponse = PostAssetsCovarianceMatrixSampleResponse;

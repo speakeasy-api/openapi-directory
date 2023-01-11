@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestOrderPaymentMethod = void 0;
+var utils_1 = require("../../../internal/utils");
 var TestOrderPaymentMethod = /** @class */ (function (_super) {
     __extends(TestOrderPaymentMethod, _super);
     function TestOrderPaymentMethod() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expirationMonth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expirationMonth" }),
         __metadata("design:type", Number)
     ], TestOrderPaymentMethod.prototype, "expirationMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expirationYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expirationYear" }),
         __metadata("design:type", Number)
     ], TestOrderPaymentMethod.prototype, "expirationYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastFourDigits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastFourDigits" }),
         __metadata("design:type", String)
     ], TestOrderPaymentMethod.prototype, "lastFourDigits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=predefinedBillingAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=predefinedBillingAddress" }),
         __metadata("design:type", String)
     ], TestOrderPaymentMethod.prototype, "predefinedBillingAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], TestOrderPaymentMethod.prototype, "type", void 0);
     return TestOrderPaymentMethod;
-}(SpeakeasyBase));
-export { TestOrderPaymentMethod };
+}(utils_1.SpeakeasyBase));
+exports.TestOrderPaymentMethod = TestOrderPaymentMethod;

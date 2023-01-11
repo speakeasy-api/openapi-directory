@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileReference } from "./filereference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppBundle = void 0;
+var utils_1 = require("../../../internal/utils");
+var filereference_1 = require("./filereference");
 // AppBundle
 /**
  * An Android App Bundle file format, containing a BundleConfig.pb file, a base module directory, zero or more dynamic feature module directories. See https://developer.android.com/guide/app-bundle/build for guidance on building App Bundles.
@@ -34,9 +37,9 @@ var AppBundle = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundleLocation" }),
-        __metadata("design:type", FileReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundleLocation" }),
+        __metadata("design:type", filereference_1.FileReference)
     ], AppBundle.prototype, "bundleLocation", void 0);
     return AppBundle;
-}(SpeakeasyBase));
-export { AppBundle };
+}(utils_1.SpeakeasyBase));
+exports.AppBundle = AppBundle;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Subnet } from "./subnet";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClusterSubnetGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var subnetlist_1 = require("./subnetlist");
+var taglist_1 = require("./taglist");
 // ClusterSubnetGroup
 /**
  * Describes a subnet group.
@@ -35,29 +38,29 @@ var ClusterSubnetGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ClusterSubnetGroup.prototype, "clusterSubnetGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ClusterSubnetGroup.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ClusterSubnetGroup.prototype, "subnetGroupStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Subnet }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: subnetlist_1.SubnetList }),
         __metadata("design:type", Array)
     ], ClusterSubnetGroup.prototype, "subnets", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: taglist_1.TagList }),
         __metadata("design:type", Array)
     ], ClusterSubnetGroup.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ClusterSubnetGroup.prototype, "vpcId", void 0);
     return ClusterSubnetGroup;
-}(SpeakeasyBase));
-export { ClusterSubnetGroup };
+}(utils_1.SpeakeasyBase));
+exports.ClusterSubnetGroup = ClusterSubnetGroup;

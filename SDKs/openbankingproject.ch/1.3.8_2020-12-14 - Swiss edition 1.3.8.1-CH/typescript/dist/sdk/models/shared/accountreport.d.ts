@@ -13,7 +13,7 @@ import { Transactions } from "./transactions";
  *
 **/
 export declare class AccountReport extends SpeakeasyBase {
-    links: Map<string, HrefType>;
+    links: Record<string, HrefType>;
     booked?: Transactions[];
     information?: Transactions[];
     pending?: Transactions[];

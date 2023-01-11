@@ -1,4 +1,7 @@
-export var BatchWriteExceptionTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchWriteExceptionTypeEnum = void 0;
+var BatchWriteExceptionTypeEnum;
 (function (BatchWriteExceptionTypeEnum) {
     BatchWriteExceptionTypeEnum["InternalServiceException"] = "InternalServiceException";
     BatchWriteExceptionTypeEnum["ValidationException"] = "ValidationException";
@@ -18,4 +21,4 @@ export var BatchWriteExceptionTypeEnum;
     BatchWriteExceptionTypeEnum["DirectoryNotEnabledException"] = "DirectoryNotEnabledException";
     BatchWriteExceptionTypeEnum["LimitExceededException"] = "LimitExceededException";
     BatchWriteExceptionTypeEnum["UnsupportedIndexTypeException"] = "UnsupportedIndexTypeException";
-})(BatchWriteExceptionTypeEnum || (BatchWriteExceptionTypeEnum = {}));
+})(BatchWriteExceptionTypeEnum = exports.BatchWriteExceptionTypeEnum || (exports.BatchWriteExceptionTypeEnum = {}));

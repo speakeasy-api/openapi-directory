@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Price } from "./price";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DealTermsGuaranteedFixedPriceTermsBillingInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var price_1 = require("./price");
 var DealTermsGuaranteedFixedPriceTermsBillingInfo = /** @class */ (function (_super) {
     __extends(DealTermsGuaranteedFixedPriceTermsBillingInfo, _super);
     function DealTermsGuaranteedFixedPriceTermsBillingInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyConversionTimeMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyConversionTimeMs" }),
         __metadata("design:type", String)
     ], DealTermsGuaranteedFixedPriceTermsBillingInfo.prototype, "currencyConversionTimeMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dfpLineItemId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dfpLineItemId" }),
         __metadata("design:type", String)
     ], DealTermsGuaranteedFixedPriceTermsBillingInfo.prototype, "dfpLineItemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originalContractedQuantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originalContractedQuantity" }),
         __metadata("design:type", String)
     ], DealTermsGuaranteedFixedPriceTermsBillingInfo.prototype, "originalContractedQuantity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
+        __metadata("design:type", price_1.Price)
     ], DealTermsGuaranteedFixedPriceTermsBillingInfo.prototype, "price", void 0);
     return DealTermsGuaranteedFixedPriceTermsBillingInfo;
-}(SpeakeasyBase));
-export { DealTermsGuaranteedFixedPriceTermsBillingInfo };
+}(utils_1.SpeakeasyBase));
+exports.DealTermsGuaranteedFixedPriceTermsBillingInfo = DealTermsGuaranteedFixedPriceTermsBillingInfo;

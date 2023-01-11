@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class LandlordCrmEntry extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=BranchID" })
-  branchId?: string;
+  branchID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=GlobalReference" })
   globalReference?: string;

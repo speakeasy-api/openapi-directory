@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeLocalGatewayRouteTableVpcAssociationsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeLocalGatewayRouteTableVpcAssociationsResponse = exports.PostDescribeLocalGatewayRouteTableVpcAssociationsRequest = exports.PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders = exports.PostDescribeLocalGatewayRouteTableVpcAssociationsQueryParams = exports.PostDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum = exports.PostDescribeLocalGatewayRouteTableVpcAssociationsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeLocalGatewayRouteTableVpcAssociationsActionEnum;
 (function (PostDescribeLocalGatewayRouteTableVpcAssociationsActionEnum) {
     PostDescribeLocalGatewayRouteTableVpcAssociationsActionEnum["DescribeLocalGatewayRouteTableVpcAssociations"] = "DescribeLocalGatewayRouteTableVpcAssociations";
-})(PostDescribeLocalGatewayRouteTableVpcAssociationsActionEnum || (PostDescribeLocalGatewayRouteTableVpcAssociationsActionEnum = {}));
-export var PostDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum;
+})(PostDescribeLocalGatewayRouteTableVpcAssociationsActionEnum = exports.PostDescribeLocalGatewayRouteTableVpcAssociationsActionEnum || (exports.PostDescribeLocalGatewayRouteTableVpcAssociationsActionEnum = {}));
+var PostDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum;
 (function (PostDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum) {
     PostDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum || (PostDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum = {}));
+})(PostDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum = exports.PostDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum || (exports.PostDescribeLocalGatewayRouteTableVpcAssociationsVersionEnum = {}));
 var PostDescribeLocalGatewayRouteTableVpcAssociationsQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeLocalGatewayRouteTableVpcAssociationsQueryParams, _super);
     function PostDescribeLocalGatewayRouteTableVpcAssociationsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeLocalGatewayRouteTableVpcAssociationsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
         __metadata("design:type", String)
     ], PostDescribeLocalGatewayRouteTableVpcAssociationsQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], PostDescribeLocalGatewayRouteTableVpcAssociationsQueryParams.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeLocalGatewayRouteTableVpcAssociationsQueryParams.prototype, "version", void 0);
     return PostDescribeLocalGatewayRouteTableVpcAssociationsQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeLocalGatewayRouteTableVpcAssociationsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeLocalGatewayRouteTableVpcAssociationsQueryParams = PostDescribeLocalGatewayRouteTableVpcAssociationsQueryParams;
 var PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders, _super);
     function PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders;
-}(SpeakeasyBase));
-export { PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders = PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders;
 var PostDescribeLocalGatewayRouteTableVpcAssociationsRequest = /** @class */ (function (_super) {
     __extends(PostDescribeLocalGatewayRouteTableVpcAssociationsRequest, _super);
     function PostDescribeLocalGatewayRouteTableVpcAssociationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeLocalGatewayRouteTableVpcAssociationsQueryParams)
     ], PostDescribeLocalGatewayRouteTableVpcAssociationsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeLocalGatewayRouteTableVpcAssociationsHeaders)
     ], PostDescribeLocalGatewayRouteTableVpcAssociationsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeLocalGatewayRouteTableVpcAssociationsRequest.prototype, "request", void 0);
     return PostDescribeLocalGatewayRouteTableVpcAssociationsRequest;
-}(SpeakeasyBase));
-export { PostDescribeLocalGatewayRouteTableVpcAssociationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeLocalGatewayRouteTableVpcAssociationsRequest = PostDescribeLocalGatewayRouteTableVpcAssociationsRequest;
 var PostDescribeLocalGatewayRouteTableVpcAssociationsResponse = /** @class */ (function (_super) {
     __extends(PostDescribeLocalGatewayRouteTableVpcAssociationsResponse, _super);
     function PostDescribeLocalGatewayRouteTableVpcAssociationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeLocalGatewayRouteTableVpcAssociationsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeLocalGatewayRouteTableVpcAssociationsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeLocalGatewayRouteTableVpcAssociationsResponse.prototype, "statusCode", void 0);
     return PostDescribeLocalGatewayRouteTableVpcAssociationsResponse;
-}(SpeakeasyBase));
-export { PostDescribeLocalGatewayRouteTableVpcAssociationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeLocalGatewayRouteTableVpcAssociationsResponse = PostDescribeLocalGatewayRouteTableVpcAssociationsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLookupSha1Sha1Response = exports.GetLookupSha1Sha1Request = exports.GetLookupSha1Sha1PathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetLookupSha1Sha1PathParams = /** @class */ (function (_super) {
     __extends(GetLookupSha1Sha1PathParams, _super);
     function GetLookupSha1Sha1PathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=sha1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=sha1" }),
         __metadata("design:type", String)
     ], GetLookupSha1Sha1PathParams.prototype, "sha1", void 0);
     return GetLookupSha1Sha1PathParams;
-}(SpeakeasyBase));
-export { GetLookupSha1Sha1PathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetLookupSha1Sha1PathParams = GetLookupSha1Sha1PathParams;
 var GetLookupSha1Sha1Request = /** @class */ (function (_super) {
     __extends(GetLookupSha1Sha1Request, _super);
     function GetLookupSha1Sha1Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLookupSha1Sha1PathParams)
     ], GetLookupSha1Sha1Request.prototype, "pathParams", void 0);
     return GetLookupSha1Sha1Request;
-}(SpeakeasyBase));
-export { GetLookupSha1Sha1Request };
+}(utils_1.SpeakeasyBase));
+exports.GetLookupSha1Sha1Request = GetLookupSha1Sha1Request;
 var GetLookupSha1Sha1Response = /** @class */ (function (_super) {
     __extends(GetLookupSha1Sha1Response, _super);
     function GetLookupSha1Sha1Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetLookupSha1Sha1Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetLookupSha1Sha1Response.prototype, "statusCode", void 0);
     return GetLookupSha1Sha1Response;
-}(SpeakeasyBase));
-export { GetLookupSha1Sha1Response };
+}(utils_1.SpeakeasyBase));
+exports.GetLookupSha1Sha1Response = GetLookupSha1Sha1Response;

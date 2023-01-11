@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrganizationRepresentation } from "./organizationrepresentation";
-import { SubscriptionPeriod } from "./subscriptionperiod";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HiuSubscriptionContext = void 0;
+var utils_1 = require("../../../internal/utils");
+var organizationrepresentation_1 = require("./organizationrepresentation");
+var subscriptionperiod_1 = require("./subscriptionperiod");
 var HiuSubscriptionContext = /** @class */ (function (_super) {
     __extends(HiuSubscriptionContext, _super);
     function HiuSubscriptionContext() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categories" }),
         __metadata("design:type", Array)
     ], HiuSubscriptionContext.prototype, "categories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hip" }),
-        __metadata("design:type", OrganizationRepresentation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hip" }),
+        __metadata("design:type", organizationrepresentation_1.OrganizationRepresentation)
     ], HiuSubscriptionContext.prototype, "hip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=period" }),
-        __metadata("design:type", SubscriptionPeriod)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=period" }),
+        __metadata("design:type", subscriptionperiod_1.SubscriptionPeriod)
     ], HiuSubscriptionContext.prototype, "period", void 0);
     return HiuSubscriptionContext;
-}(SpeakeasyBase));
-export { HiuSubscriptionContext };
+}(utils_1.SpeakeasyBase));
+exports.HiuSubscriptionContext = HiuSubscriptionContext;

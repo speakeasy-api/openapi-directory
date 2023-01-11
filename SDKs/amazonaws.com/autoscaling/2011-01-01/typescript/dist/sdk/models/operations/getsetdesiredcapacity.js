@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetSetDesiredCapacityActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSetDesiredCapacityResponse = exports.GetSetDesiredCapacityRequest = exports.GetSetDesiredCapacityHeaders = exports.GetSetDesiredCapacityQueryParams = exports.GetSetDesiredCapacityVersionEnum = exports.GetSetDesiredCapacityActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetSetDesiredCapacityActionEnum;
 (function (GetSetDesiredCapacityActionEnum) {
     GetSetDesiredCapacityActionEnum["SetDesiredCapacity"] = "SetDesiredCapacity";
-})(GetSetDesiredCapacityActionEnum || (GetSetDesiredCapacityActionEnum = {}));
-export var GetSetDesiredCapacityVersionEnum;
+})(GetSetDesiredCapacityActionEnum = exports.GetSetDesiredCapacityActionEnum || (exports.GetSetDesiredCapacityActionEnum = {}));
+var GetSetDesiredCapacityVersionEnum;
 (function (GetSetDesiredCapacityVersionEnum) {
     GetSetDesiredCapacityVersionEnum["TwoThousandAndEleven0101"] = "2011-01-01";
-})(GetSetDesiredCapacityVersionEnum || (GetSetDesiredCapacityVersionEnum = {}));
+})(GetSetDesiredCapacityVersionEnum = exports.GetSetDesiredCapacityVersionEnum || (exports.GetSetDesiredCapacityVersionEnum = {}));
 var GetSetDesiredCapacityQueryParams = /** @class */ (function (_super) {
     __extends(GetSetDesiredCapacityQueryParams, _super);
     function GetSetDesiredCapacityQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetSetDesiredCapacityQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AutoScalingGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AutoScalingGroupName" }),
         __metadata("design:type", String)
     ], GetSetDesiredCapacityQueryParams.prototype, "autoScalingGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DesiredCapacity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DesiredCapacity" }),
         __metadata("design:type", Number)
     ], GetSetDesiredCapacityQueryParams.prototype, "desiredCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=HonorCooldown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=HonorCooldown" }),
         __metadata("design:type", Boolean)
     ], GetSetDesiredCapacityQueryParams.prototype, "honorCooldown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetSetDesiredCapacityQueryParams.prototype, "version", void 0);
     return GetSetDesiredCapacityQueryParams;
-}(SpeakeasyBase));
-export { GetSetDesiredCapacityQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSetDesiredCapacityQueryParams = GetSetDesiredCapacityQueryParams;
 var GetSetDesiredCapacityHeaders = /** @class */ (function (_super) {
     __extends(GetSetDesiredCapacityHeaders, _super);
     function GetSetDesiredCapacityHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetSetDesiredCapacityHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetSetDesiredCapacityHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetSetDesiredCapacityHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetSetDesiredCapacityHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetSetDesiredCapacityHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetSetDesiredCapacityHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetSetDesiredCapacityHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetSetDesiredCapacityHeaders;
-}(SpeakeasyBase));
-export { GetSetDesiredCapacityHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetSetDesiredCapacityHeaders = GetSetDesiredCapacityHeaders;
 var GetSetDesiredCapacityRequest = /** @class */ (function (_super) {
     __extends(GetSetDesiredCapacityRequest, _super);
     function GetSetDesiredCapacityRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetDesiredCapacityQueryParams)
     ], GetSetDesiredCapacityRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetDesiredCapacityHeaders)
     ], GetSetDesiredCapacityRequest.prototype, "headers", void 0);
     return GetSetDesiredCapacityRequest;
-}(SpeakeasyBase));
-export { GetSetDesiredCapacityRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSetDesiredCapacityRequest = GetSetDesiredCapacityRequest;
 var GetSetDesiredCapacityResponse = /** @class */ (function (_super) {
     __extends(GetSetDesiredCapacityResponse, _super);
     function GetSetDesiredCapacityResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetSetDesiredCapacityResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSetDesiredCapacityResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSetDesiredCapacityResponse.prototype, "statusCode", void 0);
     return GetSetDesiredCapacityResponse;
-}(SpeakeasyBase));
-export { GetSetDesiredCapacityResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSetDesiredCapacityResponse = GetSetDesiredCapacityResponse;

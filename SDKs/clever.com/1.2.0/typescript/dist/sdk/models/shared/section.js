@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Term } from "./term";
-export var SectionGradeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Section = exports.SectionSubjectEnum = exports.SectionGradeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var term_1 = require("./term");
+var SectionGradeEnum;
 (function (SectionGradeEnum) {
     SectionGradeEnum["One"] = "1";
     SectionGradeEnum["Two"] = "2";
@@ -42,8 +45,8 @@ export var SectionGradeEnum;
     SectionGradeEnum["Kindergarten"] = "Kindergarten";
     SectionGradeEnum["PostGraduate"] = "PostGraduate";
     SectionGradeEnum["Other"] = "Other";
-})(SectionGradeEnum || (SectionGradeEnum = {}));
-export var SectionSubjectEnum;
+})(SectionGradeEnum = exports.SectionGradeEnum || (exports.SectionGradeEnum = {}));
+var SectionSubjectEnum;
 (function (SectionSubjectEnum) {
     SectionSubjectEnum["EnglishLanguageArts"] = "english/language arts";
     SectionSubjectEnum["Math"] = "math";
@@ -56,84 +59,84 @@ export var SectionSubjectEnum;
     SectionSubjectEnum["PeAndHealth"] = "PE and health";
     SectionSubjectEnum["ArtsAndMusic"] = "arts and music";
     SectionSubjectEnum["Other"] = "other";
-})(SectionSubjectEnum || (SectionSubjectEnum = {}));
+})(SectionSubjectEnum = exports.SectionSubjectEnum || (exports.SectionSubjectEnum = {}));
 var Section = /** @class */ (function (_super) {
     __extends(Section, _super);
     function Section() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=course_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=course_description" }),
         __metadata("design:type", String)
     ], Section.prototype, "courseDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=course_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=course_name" }),
         __metadata("design:type", String)
     ], Section.prototype, "courseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=course_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=course_number" }),
         __metadata("design:type", String)
     ], Section.prototype, "courseNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], Section.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=district" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=district" }),
         __metadata("design:type", String)
     ], Section.prototype, "district", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grade" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grade" }),
         __metadata("design:type", String)
     ], Section.prototype, "grade", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Section.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_modified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_modified" }),
         __metadata("design:type", String)
     ], Section.prototype, "lastModified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Section.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=period" }),
         __metadata("design:type", String)
     ], Section.prototype, "period", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=school" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=school" }),
         __metadata("design:type", String)
     ], Section.prototype, "school", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=section_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=section_number" }),
         __metadata("design:type", String)
     ], Section.prototype, "sectionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sis_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sis_id" }),
         __metadata("design:type", String)
     ], Section.prototype, "sisId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=students" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=students" }),
         __metadata("design:type", Array)
     ], Section.prototype, "students", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subject" }),
         __metadata("design:type", String)
     ], Section.prototype, "subject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teacher" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teacher" }),
         __metadata("design:type", String)
     ], Section.prototype, "teacher", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teachers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teachers" }),
         __metadata("design:type", Array)
     ], Section.prototype, "teachers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=term" }),
-        __metadata("design:type", Term)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=term" }),
+        __metadata("design:type", term_1.Term)
     ], Section.prototype, "term", void 0);
     return Section;
-}(SpeakeasyBase));
-export { Section };
+}(utils_1.SpeakeasyBase));
+exports.Section = Section;

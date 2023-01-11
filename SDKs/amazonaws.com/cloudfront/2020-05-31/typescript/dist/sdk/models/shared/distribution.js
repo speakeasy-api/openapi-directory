@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActiveTrustedKeyGroups } from "./activetrustedkeygroups";
-import { ActiveTrustedSigners } from "./activetrustedsigners";
-import { AliasIcpRecordal } from "./aliasicprecordal";
-import { DistributionConfig } from "./distributionconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Distribution = void 0;
+var utils_1 = require("../../../internal/utils");
+var activetrustedkeygroups_1 = require("./activetrustedkeygroups");
+var activetrustedsigners_1 = require("./activetrustedsigners");
+var aliasicprecordals_1 = require("./aliasicprecordals");
+var distributionconfig_1 = require("./distributionconfig");
 // Distribution
 /**
  * A distribution tells CloudFront where you want content to be delivered from, and the details about how to track and manage content delivery.
@@ -37,45 +40,45 @@ var Distribution = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Distribution.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ActiveTrustedKeyGroups)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", activetrustedkeygroups_1.ActiveTrustedKeyGroups)
     ], Distribution.prototype, "activeTrustedKeyGroups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ActiveTrustedSigners)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", activetrustedsigners_1.ActiveTrustedSigners)
     ], Distribution.prototype, "activeTrustedSigners", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: AliasIcpRecordal }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: aliasicprecordals_1.AliasIcpRecordals }),
         __metadata("design:type", Array)
-    ], Distribution.prototype, "aliasIcpRecordals", void 0);
+    ], Distribution.prototype, "aliasICPRecordals", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DistributionConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", distributionconfig_1.DistributionConfig)
     ], Distribution.prototype, "distributionConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Distribution.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Distribution.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Distribution.prototype, "inProgressInvalidationBatches", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], Distribution.prototype, "lastModifiedTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Distribution.prototype, "status", void 0);
     return Distribution;
-}(SpeakeasyBase));
-export { Distribution };
+}(utils_1.SpeakeasyBase));
+exports.Distribution = Distribution;

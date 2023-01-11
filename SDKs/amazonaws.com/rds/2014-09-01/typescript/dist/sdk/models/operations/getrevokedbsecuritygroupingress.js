@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetRevokeDbSecurityGroupIngressActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRevokeDbSecurityGroupIngressResponse = exports.GetRevokeDbSecurityGroupIngressRequest = exports.GetRevokeDbSecurityGroupIngressHeaders = exports.GetRevokeDbSecurityGroupIngressQueryParams = exports.GetRevokeDbSecurityGroupIngressVersionEnum = exports.GetRevokeDbSecurityGroupIngressActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetRevokeDbSecurityGroupIngressActionEnum;
 (function (GetRevokeDbSecurityGroupIngressActionEnum) {
     GetRevokeDbSecurityGroupIngressActionEnum["RevokeDbSecurityGroupIngress"] = "RevokeDBSecurityGroupIngress";
-})(GetRevokeDbSecurityGroupIngressActionEnum || (GetRevokeDbSecurityGroupIngressActionEnum = {}));
-export var GetRevokeDbSecurityGroupIngressVersionEnum;
+})(GetRevokeDbSecurityGroupIngressActionEnum = exports.GetRevokeDbSecurityGroupIngressActionEnum || (exports.GetRevokeDbSecurityGroupIngressActionEnum = {}));
+var GetRevokeDbSecurityGroupIngressVersionEnum;
 (function (GetRevokeDbSecurityGroupIngressVersionEnum) {
     GetRevokeDbSecurityGroupIngressVersionEnum["TwoThousandAndFourteen0901"] = "2014-09-01";
-})(GetRevokeDbSecurityGroupIngressVersionEnum || (GetRevokeDbSecurityGroupIngressVersionEnum = {}));
+})(GetRevokeDbSecurityGroupIngressVersionEnum = exports.GetRevokeDbSecurityGroupIngressVersionEnum || (exports.GetRevokeDbSecurityGroupIngressVersionEnum = {}));
 var GetRevokeDbSecurityGroupIngressQueryParams = /** @class */ (function (_super) {
     __extends(GetRevokeDbSecurityGroupIngressQueryParams, _super);
     function GetRevokeDbSecurityGroupIngressQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetRevokeDbSecurityGroupIngressQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=CIDRIP" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=CIDRIP" }),
         __metadata("design:type", String)
     ], GetRevokeDbSecurityGroupIngressQueryParams.prototype, "cidrip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DBSecurityGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DBSecurityGroupName" }),
         __metadata("design:type", String)
     ], GetRevokeDbSecurityGroupIngressQueryParams.prototype, "dbSecurityGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EC2SecurityGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EC2SecurityGroupId" }),
         __metadata("design:type", String)
     ], GetRevokeDbSecurityGroupIngressQueryParams.prototype, "ec2SecurityGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EC2SecurityGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EC2SecurityGroupName" }),
         __metadata("design:type", String)
     ], GetRevokeDbSecurityGroupIngressQueryParams.prototype, "ec2SecurityGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EC2SecurityGroupOwnerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EC2SecurityGroupOwnerId" }),
         __metadata("design:type", String)
     ], GetRevokeDbSecurityGroupIngressQueryParams.prototype, "ec2SecurityGroupOwnerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetRevokeDbSecurityGroupIngressQueryParams.prototype, "version", void 0);
     return GetRevokeDbSecurityGroupIngressQueryParams;
-}(SpeakeasyBase));
-export { GetRevokeDbSecurityGroupIngressQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRevokeDbSecurityGroupIngressQueryParams = GetRevokeDbSecurityGroupIngressQueryParams;
 var GetRevokeDbSecurityGroupIngressHeaders = /** @class */ (function (_super) {
     __extends(GetRevokeDbSecurityGroupIngressHeaders, _super);
     function GetRevokeDbSecurityGroupIngressHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetRevokeDbSecurityGroupIngressHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetRevokeDbSecurityGroupIngressHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetRevokeDbSecurityGroupIngressHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetRevokeDbSecurityGroupIngressHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetRevokeDbSecurityGroupIngressHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetRevokeDbSecurityGroupIngressHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetRevokeDbSecurityGroupIngressHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetRevokeDbSecurityGroupIngressHeaders;
-}(SpeakeasyBase));
-export { GetRevokeDbSecurityGroupIngressHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetRevokeDbSecurityGroupIngressHeaders = GetRevokeDbSecurityGroupIngressHeaders;
 var GetRevokeDbSecurityGroupIngressRequest = /** @class */ (function (_super) {
     __extends(GetRevokeDbSecurityGroupIngressRequest, _super);
     function GetRevokeDbSecurityGroupIngressRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRevokeDbSecurityGroupIngressQueryParams)
     ], GetRevokeDbSecurityGroupIngressRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRevokeDbSecurityGroupIngressHeaders)
     ], GetRevokeDbSecurityGroupIngressRequest.prototype, "headers", void 0);
     return GetRevokeDbSecurityGroupIngressRequest;
-}(SpeakeasyBase));
-export { GetRevokeDbSecurityGroupIngressRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRevokeDbSecurityGroupIngressRequest = GetRevokeDbSecurityGroupIngressRequest;
 var GetRevokeDbSecurityGroupIngressResponse = /** @class */ (function (_super) {
     __extends(GetRevokeDbSecurityGroupIngressResponse, _super);
     function GetRevokeDbSecurityGroupIngressResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetRevokeDbSecurityGroupIngressResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRevokeDbSecurityGroupIngressResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRevokeDbSecurityGroupIngressResponse.prototype, "statusCode", void 0);
     return GetRevokeDbSecurityGroupIngressResponse;
-}(SpeakeasyBase));
-export { GetRevokeDbSecurityGroupIngressResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRevokeDbSecurityGroupIngressResponse = GetRevokeDbSecurityGroupIngressResponse;

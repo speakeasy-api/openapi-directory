@@ -11,7 +11,7 @@ export class CreateApplicationRequest extends SpeakeasyBase {
   opsCenterEnabled?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=OpsItemSNSTopicArn" })
-  opsItemSnsTopicArn?: string;
+  opsItemSNSTopicArn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ResourceGroupName" })
   resourceGroupName: string;

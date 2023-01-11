@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DifferenceStatusEnum } from "./differencestatusenum";
-import { QuestionDifference } from "./questiondifference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PillarDifference = void 0;
+var utils_1 = require("../../../internal/utils");
+var differencestatusenum_1 = require("./differencestatusenum");
+var questiondifference_1 = require("./questiondifference");
 // PillarDifference
 /**
  * A pillar difference return object.
@@ -35,17 +38,17 @@ var PillarDifference = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DifferenceStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DifferenceStatus" }),
         __metadata("design:type", String)
     ], PillarDifference.prototype, "differenceStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PillarId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PillarId" }),
         __metadata("design:type", String)
     ], PillarDifference.prototype, "pillarId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QuestionDifferences", elemType: QuestionDifference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QuestionDifferences", elemType: questiondifference_1.QuestionDifference }),
         __metadata("design:type", Array)
     ], PillarDifference.prototype, "questionDifferences", void 0);
     return PillarDifference;
-}(SpeakeasyBase));
-export { PillarDifference };
+}(utils_1.SpeakeasyBase));
+exports.PillarDifference = PillarDifference;

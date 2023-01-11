@@ -102,11 +102,11 @@ export class TransferBalanceResponse extends SpeakeasyBase {
   unprovisionedErrorResponse?: shared.UnprovisionedErrorResponse;
 
   @SpeakeasyMetadata()
-  transferBalance401ApplicationJsonObject?: TransferBalance401ApplicationJson;
+  transferBalance401ApplicationJSONObject?: TransferBalance401ApplicationJson;
 
   @SpeakeasyMetadata()
-  transferBalance404ApplicationJsonObject?: TransferBalance404ApplicationJson;
+  transferBalance404ApplicationJSONObject?: TransferBalance404ApplicationJson;
 
   @SpeakeasyMetadata()
-  transferBalance422ApplicationJsonObject?: TransferBalance422ApplicationJson;
+  transferBalance422ApplicationJSONObject?: TransferBalance422ApplicationJson;
 }

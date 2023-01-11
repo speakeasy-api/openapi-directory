@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,198 +14,223 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse = exports.CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest = exports.CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurity = exports.CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption3 = exports.CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption2 = exports.CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption1 = exports.CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams = exports.CloudidentityGroupsMembershipsSearchTransitiveGroupsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CloudidentityGroupsMembershipsSearchTransitiveGroupsPathParams = /** @class */ (function (_super) {
     __extends(CloudidentityGroupsMembershipsSearchTransitiveGroupsPathParams, _super);
     function CloudidentityGroupsMembershipsSearchTransitiveGroupsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=parent" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsPathParams.prototype, "parent", void 0);
     return CloudidentityGroupsMembershipsSearchTransitiveGroupsPathParams;
-}(SpeakeasyBase));
-export { CloudidentityGroupsMembershipsSearchTransitiveGroupsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudidentityGroupsMembershipsSearchTransitiveGroupsPathParams = CloudidentityGroupsMembershipsSearchTransitiveGroupsPathParams;
 var CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams = /** @class */ (function (_super) {
     __extends(CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams, _super);
     function CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageSize" }),
         __metadata("design:type", Number)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams.prototype, "uploadProtocol", void 0);
     return CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams;
-}(SpeakeasyBase));
-export { CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams = CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams;
 var CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption1 = /** @class */ (function (_super) {
     __extends(CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption1, _super);
     function CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption1.prototype, "oauth2c", void 0);
     return CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption1;
-}(SpeakeasyBase));
-export { CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption1 = CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption1;
 var CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption2 = /** @class */ (function (_super) {
     __extends(CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption2, _super);
     function CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption2.prototype, "oauth2c", void 0);
     return CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption2;
-}(SpeakeasyBase));
-export { CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption2 = CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption2;
 var CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption3 = /** @class */ (function (_super) {
     __extends(CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption3, _super);
     function CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption3.prototype, "oauth2c", void 0);
     return CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption3;
-}(SpeakeasyBase));
-export { CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption3 = CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption3;
 var CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurity = /** @class */ (function (_super) {
     __extends(CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurity, _super);
     function CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption1)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption2)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurityOption3)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurity.prototype, "option3", void 0);
     return CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurity;
-}(SpeakeasyBase));
-export { CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurity };
+}(utils_1.SpeakeasyBase));
+exports.CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurity = CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurity;
 var CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest = /** @class */ (function (_super) {
     __extends(CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest, _super);
     function CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudidentityGroupsMembershipsSearchTransitiveGroupsPathParams)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurity)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest.prototype, "security", void 0);
     return CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest;
-}(SpeakeasyBase));
-export { CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest };
+}(utils_1.SpeakeasyBase));
+exports.CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest = CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest;
 var CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse = /** @class */ (function (_super) {
     __extends(CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse, _super);
     function CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.SearchTransitiveGroupsResponse)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse.prototype, "searchTransitiveGroupsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse.prototype, "statusCode", void 0);
     return CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse;
-}(SpeakeasyBase));
-export { CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse };
+}(utils_1.SpeakeasyBase));
+exports.CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse = CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse;

@@ -13,6 +13,6 @@ export declare class TinVerificationNameLookupRequest extends SpeakeasyBase {
 export declare class TinVerificationNameLookupResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    tinVerificationNameLookup200ApplicationJsonAny?: any;
-    tinVerificationNameLookupDefaultApplicationJsonAny?: any;
+    tinVerificationNameLookup200ApplicationJSONAny?: any;
+    tinVerificationNameLookupDefaultApplicationJSONAny?: any;
 }

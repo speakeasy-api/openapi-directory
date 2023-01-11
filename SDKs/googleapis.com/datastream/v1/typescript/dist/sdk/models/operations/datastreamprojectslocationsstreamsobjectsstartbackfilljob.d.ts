@@ -23,7 +23,7 @@ export declare class DatastreamProjectsLocationsStreamsObjectsStartBackfillJobSe
 export declare class DatastreamProjectsLocationsStreamsObjectsStartBackfillJobRequest extends SpeakeasyBase {
     pathParams: DatastreamProjectsLocationsStreamsObjectsStartBackfillJobPathParams;
     queryParams: DatastreamProjectsLocationsStreamsObjectsStartBackfillJobQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: DatastreamProjectsLocationsStreamsObjectsStartBackfillJobSecurity;
 }
 export declare class DatastreamProjectsLocationsStreamsObjectsStartBackfillJobResponse extends SpeakeasyBase {

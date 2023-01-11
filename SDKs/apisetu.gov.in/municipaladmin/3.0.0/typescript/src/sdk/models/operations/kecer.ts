@@ -185,23 +185,23 @@ export class KecerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  kecer400ApplicationJsonObject?: Kecer400ApplicationJson;
+  kecer400ApplicationJSONObject?: Kecer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  kecer401ApplicationJsonObject?: Kecer401ApplicationJson;
+  kecer401ApplicationJSONObject?: Kecer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  kecer404ApplicationJsonObject?: Kecer404ApplicationJson;
+  kecer404ApplicationJSONObject?: Kecer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  kecer500ApplicationJsonObject?: Kecer500ApplicationJson;
+  kecer500ApplicationJSONObject?: Kecer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  kecer502ApplicationJsonObject?: Kecer502ApplicationJson;
+  kecer502ApplicationJSONObject?: Kecer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  kecer503ApplicationJsonObject?: Kecer503ApplicationJson;
+  kecer503ApplicationJSONObject?: Kecer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  kecer504ApplicationJsonObject?: Kecer504ApplicationJson;
+  kecer504ApplicationJSONObject?: Kecer504ApplicationJson;
 }

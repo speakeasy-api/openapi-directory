@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PutEventsRequest, PutEventsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,82 +33,40 @@ const sdk = new SDK(WithSecurity(
     
 const req: PutEventsRequest = {
   headers: {
-    xAmzAlgorithm: "maiores",
-    xAmzContentSha256: "nobis",
-    xAmzCredential: "quos",
-    xAmzDate: "facilis",
-    xAmzSecurityToken: "qui",
-    xAmzSignature: "quis",
-    xAmzSignedHeaders: "aut",
-    xAmzClientContext: "est",
-    xAmzClientContextEncoding: "ipsa",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
+    xAmzClientContext: "voluptas",
+    xAmzClientContextEncoding: "fugit",
   },
   request: {
     events: [
       {
         attributes: {
-          "sequi": "vitae",
-          "quos": "possimus",
+          "rerum": "dicta",
         },
-        eventType: "ullam",
+        eventType: "debitis",
         metrics: {
-          "alias": 86.199997,
-          "porro": 40.200001,
+          "et": 11.100000,
         },
         session: {
-          duration: 1221100993313834821,
-          id: "repellat",
-          startTimestamp: "quaerat",
-          stopTimestamp: "velit",
+          duration: 7259475919510918339,
+          id: "voluptate",
+          startTimestamp: "iste",
+          stopTimestamp: "vitae",
         },
-        timestamp: "magni",
-        version: "delectus",
-      },
-      {
-        attributes: {
-          "quisquam": "ea",
-          "nihil": "laudantium",
-        },
-        eventType: "magni",
-        metrics: {
-          "eaque": 39.099998,
-          "magnam": 4.100000,
-        },
-        session: {
-          duration: 1486108174757703253,
-          id: "cumque",
-          startTimestamp: "ut",
-          stopTimestamp: "consequatur",
-        },
-        timestamp: "sequi",
-        version: "omnis",
-      },
-      {
-        attributes: {
-          "labore": "sapiente",
-          "accusamus": "velit",
-          "amet": "deserunt",
-        },
-        eventType: "sunt",
-        metrics: {
-          "quis": 32.200001,
-          "rerum": 78.199997,
-          "deserunt": 80.099998,
-        },
-        session: {
-          duration: 6067427611927340037,
-          id: "ad",
-          startTimestamp: "ut",
-          stopTimestamp: "alias",
-        },
-        timestamp: "qui",
-        version: "in",
+        timestamp: "totam",
+        version: "dolores",
       },
     ],
   },
 };
 
-sdk.sdk.putEvents(req).then((res: PutEventsResponse | AxiosError) => {
+sdk.putEvents(req).then((res: PutEventsResponse | AxiosError) => {
    // handle response
 });
 ```

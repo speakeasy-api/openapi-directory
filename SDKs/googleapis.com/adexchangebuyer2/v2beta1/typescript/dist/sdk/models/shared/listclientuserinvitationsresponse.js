@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientUserInvitation } from "./clientuserinvitation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListClientUserInvitationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var clientuserinvitation_1 = require("./clientuserinvitation");
 var ListClientUserInvitationsResponse = /** @class */ (function (_super) {
     __extends(ListClientUserInvitationsResponse, _super);
     function ListClientUserInvitationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invitations", elemType: ClientUserInvitation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invitations", elemType: clientuserinvitation_1.ClientUserInvitation }),
         __metadata("design:type", Array)
     ], ListClientUserInvitationsResponse.prototype, "invitations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListClientUserInvitationsResponse.prototype, "nextPageToken", void 0);
     return ListClientUserInvitationsResponse;
-}(SpeakeasyBase));
-export { ListClientUserInvitationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListClientUserInvitationsResponse = ListClientUserInvitationsResponse;

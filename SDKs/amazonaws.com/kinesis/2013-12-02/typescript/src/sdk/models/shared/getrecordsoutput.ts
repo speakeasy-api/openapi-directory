@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { ChildShard } from "./childshard";
-import { Record } from "./record";
+import { RecordT } from "./record";
 
 
 
@@ -18,6 +18,6 @@ export class GetRecordsOutput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=NextShardIterator" })
   nextShardIterator?: string;
 
-  @SpeakeasyMetadata({ data: "json, name=Records", elemType: Record })
-  records: Record[];
+  @SpeakeasyMetadata({ data: "json, name=Records", elemType: RecordT })
+  records: RecordT[];
 }

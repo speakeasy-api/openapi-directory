@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RepeatViewModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var RepeatViewModel = /** @class */ (function (_super) {
     __extends(RepeatViewModel, _super);
     function RepeatViewModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequency" }),
         __metadata("design:type", String)
     ], RepeatViewModel.prototype, "frequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interval" }),
         __metadata("design:type", Number)
     ], RepeatViewModel.prototype, "interval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monthDay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monthDay" }),
         __metadata("design:type", String)
     ], RepeatViewModel.prototype, "monthDay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monthType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monthType" }),
         __metadata("design:type", String)
     ], RepeatViewModel.prototype, "monthType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weekdays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weekdays" }),
         __metadata("design:type", String)
     ], RepeatViewModel.prototype, "weekdays", void 0);
     return RepeatViewModel;
-}(SpeakeasyBase));
-export { RepeatViewModel };
+}(utils_1.SpeakeasyBase));
+exports.RepeatViewModel = RepeatViewModel;

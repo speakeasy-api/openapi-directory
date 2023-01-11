@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ItemSelectionEnum } from "./itemselectionenum";
-import { CookieNames } from "./cookienames";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CookiePreference = void 0;
+var utils_1 = require("../../../internal/utils");
+var itemselectionenum_1 = require("./itemselectionenum");
+var cookienames_1 = require("./cookienames");
 // CookiePreference
 /**
  * A complex type that specifies whether you want CloudFront to forward cookies to the origin and, if so, which ones. For more information about forwarding cookies to the origin, see <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Cookies.html">Caching Content Based on Cookies</a> in the <i>Amazon CloudFront Developer Guide</i>.
@@ -35,13 +38,13 @@ var CookiePreference = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CookiePreference.prototype, "forward", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", CookieNames)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", cookienames_1.CookieNames)
     ], CookiePreference.prototype, "whitelistedNames", void 0);
     return CookiePreference;
-}(SpeakeasyBase));
-export { CookiePreference };
+}(utils_1.SpeakeasyBase));
+exports.CookiePreference = CookiePreference;

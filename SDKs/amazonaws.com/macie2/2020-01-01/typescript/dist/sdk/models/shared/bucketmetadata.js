@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AllowsUnencryptedObjectUploadsEnum } from "./allowsunencryptedobjectuploadsenum";
-import { JobDetails } from "./jobdetails";
-import { ObjectCountByEncryptionType } from "./objectcountbyencryptiontype";
-import { BucketPublicAccess } from "./bucketpublicaccess";
-import { ReplicationDetails } from "./replicationdetails";
-import { BucketServerSideEncryption } from "./bucketserversideencryption";
-import { SharedAccessEnum } from "./sharedaccessenum";
-import { KeyValuePair } from "./keyvaluepair";
-import { ObjectLevelStatistics } from "./objectlevelstatistics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BucketMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var allowsunencryptedobjectuploadsenum_1 = require("./allowsunencryptedobjectuploadsenum");
+var jobdetails_1 = require("./jobdetails");
+var objectcountbyencryptiontype_1 = require("./objectcountbyencryptiontype");
+var bucketpublicaccess_1 = require("./bucketpublicaccess");
+var replicationdetails_1 = require("./replicationdetails");
+var bucketserversideencryption_1 = require("./bucketserversideencryption");
+var sharedaccessenum_1 = require("./sharedaccessenum");
+var keyvaluepair_1 = require("./keyvaluepair");
+var objectlevelstatistics_1 = require("./objectlevelstatistics");
 // BucketMetadata
 /**
  * Provides information about an S3 bucket that Amazon Macie monitors and analyzes.
@@ -42,93 +45,93 @@ var BucketMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], BucketMetadata.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowsUnencryptedObjectUploads" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowsUnencryptedObjectUploads" }),
         __metadata("design:type", String)
     ], BucketMetadata.prototype, "allowsUnencryptedObjectUploads", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketArn" }),
         __metadata("design:type", String)
     ], BucketMetadata.prototype, "bucketArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketCreatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketCreatedAt" }),
         __metadata("design:type", Date)
     ], BucketMetadata.prototype, "bucketCreatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketName" }),
         __metadata("design:type", String)
     ], BucketMetadata.prototype, "bucketName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=classifiableObjectCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=classifiableObjectCount" }),
         __metadata("design:type", Number)
     ], BucketMetadata.prototype, "classifiableObjectCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=classifiableSizeInBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=classifiableSizeInBytes" }),
         __metadata("design:type", Number)
     ], BucketMetadata.prototype, "classifiableSizeInBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobDetails" }),
-        __metadata("design:type", JobDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobDetails" }),
+        __metadata("design:type", jobdetails_1.JobDetails)
     ], BucketMetadata.prototype, "jobDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdated" }),
         __metadata("design:type", Date)
     ], BucketMetadata.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectCount" }),
         __metadata("design:type", Number)
     ], BucketMetadata.prototype, "objectCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectCountByEncryptionType" }),
-        __metadata("design:type", ObjectCountByEncryptionType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectCountByEncryptionType" }),
+        __metadata("design:type", objectcountbyencryptiontype_1.ObjectCountByEncryptionType)
     ], BucketMetadata.prototype, "objectCountByEncryptionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicAccess" }),
-        __metadata("design:type", BucketPublicAccess)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicAccess" }),
+        __metadata("design:type", bucketpublicaccess_1.BucketPublicAccess)
     ], BucketMetadata.prototype, "publicAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], BucketMetadata.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicationDetails" }),
-        __metadata("design:type", ReplicationDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicationDetails" }),
+        __metadata("design:type", replicationdetails_1.ReplicationDetails)
     ], BucketMetadata.prototype, "replicationDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverSideEncryption" }),
-        __metadata("design:type", BucketServerSideEncryption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverSideEncryption" }),
+        __metadata("design:type", bucketserversideencryption_1.BucketServerSideEncryption)
     ], BucketMetadata.prototype, "serverSideEncryption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sharedAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sharedAccess" }),
         __metadata("design:type", String)
     ], BucketMetadata.prototype, "sharedAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeInBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeInBytes" }),
         __metadata("design:type", Number)
     ], BucketMetadata.prototype, "sizeInBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeInBytesCompressed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeInBytesCompressed" }),
         __metadata("design:type", Number)
     ], BucketMetadata.prototype, "sizeInBytesCompressed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: KeyValuePair }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: keyvaluepair_1.KeyValuePair }),
         __metadata("design:type", Array)
     ], BucketMetadata.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unclassifiableObjectCount" }),
-        __metadata("design:type", ObjectLevelStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unclassifiableObjectCount" }),
+        __metadata("design:type", objectlevelstatistics_1.ObjectLevelStatistics)
     ], BucketMetadata.prototype, "unclassifiableObjectCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unclassifiableObjectSizeInBytes" }),
-        __metadata("design:type", ObjectLevelStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unclassifiableObjectSizeInBytes" }),
+        __metadata("design:type", objectlevelstatistics_1.ObjectLevelStatistics)
     ], BucketMetadata.prototype, "unclassifiableObjectSizeInBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versioning" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versioning" }),
         __metadata("design:type", Boolean)
     ], BucketMetadata.prototype, "versioning", void 0);
     return BucketMetadata;
-}(SpeakeasyBase));
-export { BucketMetadata };
+}(utils_1.SpeakeasyBase));
+exports.BucketMetadata = BucketMetadata;

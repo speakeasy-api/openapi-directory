@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DealTermsGuaranteedFixedPriceTermsBillingInfo } from "./dealtermsguaranteedfixedpricetermsbillinginfo";
-import { PricePerBuyer } from "./priceperbuyer";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DealTermsGuaranteedFixedPriceTerms = void 0;
+var utils_1 = require("../../../internal/utils");
+var dealtermsguaranteedfixedpricetermsbillinginfo_1 = require("./dealtermsguaranteedfixedpricetermsbillinginfo");
+var priceperbuyer_1 = require("./priceperbuyer");
 var DealTermsGuaranteedFixedPriceTerms = /** @class */ (function (_super) {
     __extends(DealTermsGuaranteedFixedPriceTerms, _super);
     function DealTermsGuaranteedFixedPriceTerms() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billingInfo" }),
-        __metadata("design:type", DealTermsGuaranteedFixedPriceTermsBillingInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billingInfo" }),
+        __metadata("design:type", dealtermsguaranteedfixedpricetermsbillinginfo_1.DealTermsGuaranteedFixedPriceTermsBillingInfo)
     ], DealTermsGuaranteedFixedPriceTerms.prototype, "billingInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fixedPrices", elemType: PricePerBuyer }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fixedPrices", elemType: priceperbuyer_1.PricePerBuyer }),
         __metadata("design:type", Array)
     ], DealTermsGuaranteedFixedPriceTerms.prototype, "fixedPrices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=guaranteedImpressions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=guaranteedImpressions" }),
         __metadata("design:type", String)
     ], DealTermsGuaranteedFixedPriceTerms.prototype, "guaranteedImpressions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=guaranteedLooks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=guaranteedLooks" }),
         __metadata("design:type", String)
     ], DealTermsGuaranteedFixedPriceTerms.prototype, "guaranteedLooks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimumDailyLooks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimumDailyLooks" }),
         __metadata("design:type", String)
     ], DealTermsGuaranteedFixedPriceTerms.prototype, "minimumDailyLooks", void 0);
     return DealTermsGuaranteedFixedPriceTerms;
-}(SpeakeasyBase));
-export { DealTermsGuaranteedFixedPriceTerms };
+}(utils_1.SpeakeasyBase));
+exports.DealTermsGuaranteedFixedPriceTerms = DealTermsGuaranteedFixedPriceTerms;

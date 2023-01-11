@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DestinationInfo } from "./destinationinfo";
-import { ResourceLocation } from "./resourcelocation";
-import { ResourceTypeEnum } from "./resourcetypeenum";
-import { ExportSnapshotRecordSourceInfo } from "./exportsnapshotrecordsourceinfo";
-import { RecordStateEnum } from "./recordstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExportSnapshotRecord = void 0;
+var utils_1 = require("../../../internal/utils");
+var destinationinfo_1 = require("./destinationinfo");
+var resourcelocation_1 = require("./resourcelocation");
+var resourcetypeenum_1 = require("./resourcetypeenum");
+var exportsnapshotrecordsourceinfo_1 = require("./exportsnapshotrecordsourceinfo");
+var recordstateenum_1 = require("./recordstateenum");
 // ExportSnapshotRecord
 /**
  * Describes an export snapshot record.
@@ -38,37 +41,37 @@ var ExportSnapshotRecord = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], ExportSnapshotRecord.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], ExportSnapshotRecord.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationInfo" }),
-        __metadata("design:type", DestinationInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationInfo" }),
+        __metadata("design:type", destinationinfo_1.DestinationInfo)
     ], ExportSnapshotRecord.prototype, "destinationInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", ResourceLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", resourcelocation_1.ResourceLocation)
     ], ExportSnapshotRecord.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ExportSnapshotRecord.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], ExportSnapshotRecord.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceInfo" }),
-        __metadata("design:type", ExportSnapshotRecordSourceInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceInfo" }),
+        __metadata("design:type", exportsnapshotrecordsourceinfo_1.ExportSnapshotRecordSourceInfo)
     ], ExportSnapshotRecord.prototype, "sourceInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ExportSnapshotRecord.prototype, "state", void 0);
     return ExportSnapshotRecord;
-}(SpeakeasyBase));
-export { ExportSnapshotRecord };
+}(utils_1.SpeakeasyBase));
+exports.ExportSnapshotRecord = ExportSnapshotRecord;

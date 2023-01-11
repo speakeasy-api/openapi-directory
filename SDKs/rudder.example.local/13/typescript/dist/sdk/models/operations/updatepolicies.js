@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,69 +23,71 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var UpdatePolicies200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdatePoliciesResponse = exports.UpdatePolicies200ApplicationJson = exports.UpdatePolicies200ApplicationJsonResultEnum = exports.UpdatePolicies200ApplicationJsonData = exports.UpdatePolicies200ApplicationJsonDataPoliciesEnum = exports.UpdatePolicies200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var UpdatePolicies200ApplicationJsonActionEnum;
 (function (UpdatePolicies200ApplicationJsonActionEnum) {
     UpdatePolicies200ApplicationJsonActionEnum["UpdatePolicies"] = "updatePolicies";
-})(UpdatePolicies200ApplicationJsonActionEnum || (UpdatePolicies200ApplicationJsonActionEnum = {}));
-export var UpdatePolicies200ApplicationJsonDataPoliciesEnum;
+})(UpdatePolicies200ApplicationJsonActionEnum = exports.UpdatePolicies200ApplicationJsonActionEnum || (exports.UpdatePolicies200ApplicationJsonActionEnum = {}));
+var UpdatePolicies200ApplicationJsonDataPoliciesEnum;
 (function (UpdatePolicies200ApplicationJsonDataPoliciesEnum) {
     UpdatePolicies200ApplicationJsonDataPoliciesEnum["Started"] = "Started";
-})(UpdatePolicies200ApplicationJsonDataPoliciesEnum || (UpdatePolicies200ApplicationJsonDataPoliciesEnum = {}));
+})(UpdatePolicies200ApplicationJsonDataPoliciesEnum = exports.UpdatePolicies200ApplicationJsonDataPoliciesEnum || (exports.UpdatePolicies200ApplicationJsonDataPoliciesEnum = {}));
 var UpdatePolicies200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(UpdatePolicies200ApplicationJsonData, _super);
     function UpdatePolicies200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policies" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policies" }),
         __metadata("design:type", String)
     ], UpdatePolicies200ApplicationJsonData.prototype, "policies", void 0);
     return UpdatePolicies200ApplicationJsonData;
-}(SpeakeasyBase));
-export { UpdatePolicies200ApplicationJsonData };
-export var UpdatePolicies200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdatePolicies200ApplicationJsonData = UpdatePolicies200ApplicationJsonData;
+var UpdatePolicies200ApplicationJsonResultEnum;
 (function (UpdatePolicies200ApplicationJsonResultEnum) {
     UpdatePolicies200ApplicationJsonResultEnum["Success"] = "success";
     UpdatePolicies200ApplicationJsonResultEnum["Error"] = "error";
-})(UpdatePolicies200ApplicationJsonResultEnum || (UpdatePolicies200ApplicationJsonResultEnum = {}));
+})(UpdatePolicies200ApplicationJsonResultEnum = exports.UpdatePolicies200ApplicationJsonResultEnum || (exports.UpdatePolicies200ApplicationJsonResultEnum = {}));
 var UpdatePolicies200ApplicationJson = /** @class */ (function (_super) {
     __extends(UpdatePolicies200ApplicationJson, _super);
     function UpdatePolicies200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], UpdatePolicies200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", UpdatePolicies200ApplicationJsonData)
     ], UpdatePolicies200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], UpdatePolicies200ApplicationJson.prototype, "result", void 0);
     return UpdatePolicies200ApplicationJson;
-}(SpeakeasyBase));
-export { UpdatePolicies200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.UpdatePolicies200ApplicationJson = UpdatePolicies200ApplicationJson;
 var UpdatePoliciesResponse = /** @class */ (function (_super) {
     __extends(UpdatePoliciesResponse, _super);
     function UpdatePoliciesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdatePoliciesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdatePoliciesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdatePolicies200ApplicationJson)
-    ], UpdatePoliciesResponse.prototype, "updatePolicies200ApplicationJsonObject", void 0);
+    ], UpdatePoliciesResponse.prototype, "updatePolicies200ApplicationJSONObject", void 0);
     return UpdatePoliciesResponse;
-}(SpeakeasyBase));
-export { UpdatePoliciesResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdatePoliciesResponse = UpdatePoliciesResponse;

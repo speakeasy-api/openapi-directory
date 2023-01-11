@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AnalysisOptions } from "./analysisoptions";
-import { AnalysisSchemeLanguageEnum } from "./analysisschemelanguageenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnalysisScheme = void 0;
+var utils_1 = require("../../../internal/utils");
+var analysisoptions_1 = require("./analysisoptions");
+var analysisschemelanguageenum_1 = require("./analysisschemelanguageenum");
 // AnalysisScheme
 /**
  * Configuration information for an analysis scheme. Each analysis scheme has a unique name and specifies the language of the text to be processed. The following options can be configured for an analysis scheme: <code>Synonyms</code>, <code>Stopwords</code>, <code>StemmingDictionary</code>, <code>JapaneseTokenizationDictionary</code> and <code>AlgorithmicStemming</code>.
@@ -35,17 +38,17 @@ var AnalysisScheme = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AnalysisOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", analysisoptions_1.AnalysisOptions)
     ], AnalysisScheme.prototype, "analysisOptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AnalysisScheme.prototype, "analysisSchemeLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AnalysisScheme.prototype, "analysisSchemeName", void 0);
     return AnalysisScheme;
-}(SpeakeasyBase));
-export { AnalysisScheme };
+}(utils_1.SpeakeasyBase));
+exports.AnalysisScheme = AnalysisScheme;

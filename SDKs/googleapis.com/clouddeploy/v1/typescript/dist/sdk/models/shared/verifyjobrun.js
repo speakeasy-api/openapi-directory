@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var VerifyJobRunFailureCauseEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VerifyJobRun = exports.VerifyJobRunFailureCauseEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var VerifyJobRunFailureCauseEnum;
 (function (VerifyJobRunFailureCauseEnum) {
     VerifyJobRunFailureCauseEnum["FailureCauseUnspecified"] = "FAILURE_CAUSE_UNSPECIFIED";
     VerifyJobRunFailureCauseEnum["CloudBuildUnavailable"] = "CLOUD_BUILD_UNAVAILABLE";
     VerifyJobRunFailureCauseEnum["ExecutionFailed"] = "EXECUTION_FAILED";
     VerifyJobRunFailureCauseEnum["DeadlineExceeded"] = "DEADLINE_EXCEEDED";
     VerifyJobRunFailureCauseEnum["VerificationConfigNotFound"] = "VERIFICATION_CONFIG_NOT_FOUND";
-})(VerifyJobRunFailureCauseEnum || (VerifyJobRunFailureCauseEnum = {}));
+})(VerifyJobRunFailureCauseEnum = exports.VerifyJobRunFailureCauseEnum || (exports.VerifyJobRunFailureCauseEnum = {}));
 // VerifyJobRun
 /**
  * VerifyJobRun contains information specific to a verify `JobRun`.
@@ -41,25 +44,25 @@ var VerifyJobRun = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artifactUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artifactUri" }),
         __metadata("design:type", String)
     ], VerifyJobRun.prototype, "artifactUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=build" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=build" }),
         __metadata("design:type", String)
     ], VerifyJobRun.prototype, "build", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventLogPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventLogPath" }),
         __metadata("design:type", String)
     ], VerifyJobRun.prototype, "eventLogPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureCause" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureCause" }),
         __metadata("design:type", String)
     ], VerifyJobRun.prototype, "failureCause", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureMessage" }),
         __metadata("design:type", String)
     ], VerifyJobRun.prototype, "failureMessage", void 0);
     return VerifyJobRun;
-}(SpeakeasyBase));
-export { VerifyJobRun };
+}(utils_1.SpeakeasyBase));
+exports.VerifyJobRun = VerifyJobRun;

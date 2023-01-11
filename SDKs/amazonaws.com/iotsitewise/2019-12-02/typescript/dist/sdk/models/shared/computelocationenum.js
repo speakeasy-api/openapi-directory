@@ -1,5 +1,8 @@
-export var ComputeLocationEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComputeLocationEnum = void 0;
+var ComputeLocationEnum;
 (function (ComputeLocationEnum) {
     ComputeLocationEnum["Edge"] = "EDGE";
     ComputeLocationEnum["Cloud"] = "CLOUD";
-})(ComputeLocationEnum || (ComputeLocationEnum = {}));
+})(ComputeLocationEnum = exports.ComputeLocationEnum || (exports.ComputeLocationEnum = {}));

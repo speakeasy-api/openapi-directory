@@ -39,16 +39,16 @@ export class UpdateBackendConfigHeaders extends SpeakeasyBase {
 **/
 export class UpdateBackendConfigRequestBodyLoginAuthConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AwsCognitoIdentityPoolId" })
-  awsCognitoIdentityPoolId?: string;
+  awsCognitoIdentityPoolId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=AwsCognitoRegion" })
-  awsCognitoRegion?: string;
+  awsCognitoRegion?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=AwsUserPoolsId" })
-  awsUserPoolsId?: string;
+  awsUserPoolsId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=AwsUserPoolsWebClientId" })
-  awsUserPoolsWebClientId?: string;
+  awsUserPoolsWebClientId?: Record<string, any>;
 }
 
 

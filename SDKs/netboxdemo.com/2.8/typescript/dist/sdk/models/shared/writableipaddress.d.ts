@@ -17,7 +17,7 @@ export declare enum WritableIpAddressStatusEnum {
 }
 export declare class WritableIpAddressInput extends SpeakeasyBase {
     address: string;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     dnsName?: string;
     interface?: number;

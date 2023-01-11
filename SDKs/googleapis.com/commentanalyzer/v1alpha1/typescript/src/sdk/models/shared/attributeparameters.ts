@@ -10,10 +10,6 @@ export enum AttributeParametersScoreTypeEnum {
 }
 
 
-// AttributeParameters
-/** 
- * Configurable parameters for attribute scoring.
-**/
 export class AttributeParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=scoreThreshold" })
   scoreThreshold?: number;

@@ -4,6 +4,6 @@ import { Key } from "./key";
 export declare class QueryOutput extends SpeakeasyBase {
     consumedCapacityUnits?: number;
     count?: number;
-    items?: Map<string, AttributeValue>[];
+    items?: Record<string, AttributeValue>[];
     lastEvaluatedKey?: Key;
 }

@@ -21,5 +21,5 @@ export declare class UpdateLongTermPricingResponse extends SpeakeasyBase {
     contentType: string;
     invalidResourceException?: any;
     statusCode: number;
-    updateLongTermPricingResult?: Map<string, any>;
+    updateLongTermPricingResult?: Record<string, any>;
 }

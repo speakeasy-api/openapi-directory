@@ -64,8 +64,8 @@ export class DeleteCollectionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteCollection200ApplicationJsonObject?: DeleteCollection200ApplicationJson;
+  deleteCollection200ApplicationJSONObject?: DeleteCollection200ApplicationJson;
 
   @SpeakeasyMetadata()
-  deleteCollection404ApplicationJsonObject?: DeleteCollection404ApplicationJson;
+  deleteCollection404ApplicationJSONObject?: DeleteCollection404ApplicationJson;
 }

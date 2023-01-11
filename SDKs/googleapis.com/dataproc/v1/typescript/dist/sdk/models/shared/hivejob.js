@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QueryList } from "./querylist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HiveJob = void 0;
+var utils_1 = require("../../../internal/utils");
+var querylist_1 = require("./querylist");
 // HiveJob
 /**
  * A Dataproc job for running Apache Hive (https://hive.apache.org/) queries on YARN.
@@ -34,29 +37,29 @@ var HiveJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=continueOnFailure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=continueOnFailure" }),
         __metadata("design:type", Boolean)
     ], HiveJob.prototype, "continueOnFailure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jarFileUris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jarFileUris" }),
         __metadata("design:type", Array)
     ], HiveJob.prototype, "jarFileUris", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", Object)
     ], HiveJob.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryFileUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryFileUri" }),
         __metadata("design:type", String)
     ], HiveJob.prototype, "queryFileUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryList" }),
-        __metadata("design:type", QueryList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryList" }),
+        __metadata("design:type", querylist_1.QueryList)
     ], HiveJob.prototype, "queryList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scriptVariables" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scriptVariables" }),
+        __metadata("design:type", Object)
     ], HiveJob.prototype, "scriptVariables", void 0);
     return HiveJob;
-}(SpeakeasyBase));
-export { HiveJob };
+}(utils_1.SpeakeasyBase));
+exports.HiveJob = HiveJob;

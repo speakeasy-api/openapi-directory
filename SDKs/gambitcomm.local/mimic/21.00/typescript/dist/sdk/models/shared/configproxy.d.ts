@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ConfigProxy extends SpeakeasyBase {
-    tcpNodelay?: number;
+    tcpNODELAY?: number;
     clientToServer?: string;
     disconnectDelay?: number;
     maxConnects?: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StatusScanPageResponse = exports.StatusScanPageRequest = exports.StatusScanPagePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var StatusScanPagePathParams = /** @class */ (function (_super) {
     __extends(StatusScanPagePathParams, _super);
     function StatusScanPagePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=scanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=scanId" }),
         __metadata("design:type", Number)
     ], StatusScanPagePathParams.prototype, "scanId", void 0);
     return StatusScanPagePathParams;
-}(SpeakeasyBase));
-export { StatusScanPagePathParams };
+}(utils_1.SpeakeasyBase));
+exports.StatusScanPagePathParams = StatusScanPagePathParams;
 var StatusScanPageRequest = /** @class */ (function (_super) {
     __extends(StatusScanPageRequest, _super);
     function StatusScanPageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StatusScanPagePathParams)
     ], StatusScanPageRequest.prototype, "pathParams", void 0);
     return StatusScanPageRequest;
-}(SpeakeasyBase));
-export { StatusScanPageRequest };
+}(utils_1.SpeakeasyBase));
+exports.StatusScanPageRequest = StatusScanPageRequest;
 var StatusScanPageResponse = /** @class */ (function (_super) {
     __extends(StatusScanPageResponse, _super);
     function StatusScanPageResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StatusScanPageResponse.prototype, "apiResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StatusScanPageResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StatusScanPageResponse.prototype, "statusCode", void 0);
     return StatusScanPageResponse;
-}(SpeakeasyBase));
-export { StatusScanPageResponse };
+}(utils_1.SpeakeasyBase));
+exports.StatusScanPageResponse = StatusScanPageResponse;

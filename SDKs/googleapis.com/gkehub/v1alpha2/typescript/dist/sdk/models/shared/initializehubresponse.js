@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InitializeHubResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 // InitializeHubResponse
 /**
  * Response message for the InitializeHub method.
@@ -33,13 +36,13 @@ var InitializeHubResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceIdentity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceIdentity" }),
         __metadata("design:type", String)
     ], InitializeHubResponse.prototype, "serviceIdentity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workloadIdentityPool" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workloadIdentityPool" }),
         __metadata("design:type", String)
     ], InitializeHubResponse.prototype, "workloadIdentityPool", void 0);
     return InitializeHubResponse;
-}(SpeakeasyBase));
-export { InitializeHubResponse };
+}(utils_1.SpeakeasyBase));
+exports.InitializeHubResponse = InitializeHubResponse;

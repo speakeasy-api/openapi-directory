@@ -24,7 +24,7 @@ export class HttpRequest extends SpeakeasyBase {
   body?: string;
 
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, string>;
+  headers?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=httpMethod" })
   httpMethod?: HttpRequestHttpMethodEnum;

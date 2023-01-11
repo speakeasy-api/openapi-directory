@@ -16,7 +16,7 @@ export declare class PutEventsHeaders extends SpeakeasyBase {
  * Specifies a batch of events to process.
 **/
 export declare class PutEventsRequestBodyEventsRequest extends SpeakeasyBase {
-    batchItem?: Map<string, shared.EventsBatch>;
+    batchItem?: Record<string, shared.EventsBatch>;
 }
 export declare class PutEventsRequestBody extends SpeakeasyBase {
     eventsRequest: PutEventsRequestBodyEventsRequest;

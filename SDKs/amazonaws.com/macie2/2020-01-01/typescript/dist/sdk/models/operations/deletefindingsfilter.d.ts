@@ -19,7 +19,7 @@ export declare class DeleteFindingsFilterResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     conflictException?: any;
     contentType: string;
-    deleteFindingsFilterResponse?: Map<string, any>;
+    deleteFindingsFilterResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     serviceQuotaExceededException?: any;

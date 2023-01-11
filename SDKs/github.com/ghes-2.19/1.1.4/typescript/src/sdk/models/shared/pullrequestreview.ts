@@ -24,6 +24,10 @@ export class PullRequestReviewLinks extends SpeakeasyBase {
 }
 
 
+// PullRequestReviewSimpleUser
+/** 
+ * Simple User
+**/
 export class PullRequestReviewSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

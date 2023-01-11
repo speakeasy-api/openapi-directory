@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ConfirmPayment1ServerList = [
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfirmPayment1Response = exports.ConfirmPayment1Request = exports.ConfirmPayment1RequestBody = exports.ConfirmPayment1ServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+exports.ConfirmPayment1ServerList = [
     "http://api.climatekuul.com:8000/footprint",
 ];
 var ConfirmPayment1RequestBody = /** @class */ (function (_super) {
@@ -32,57 +35,57 @@ var ConfirmPayment1RequestBody = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=apiKey_l1;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=apiKey_l1;" }),
         __metadata("design:type", String)
     ], ConfirmPayment1RequestBody.prototype, "apiKeyL1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=apiKey_l2;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=apiKey_l2;" }),
         __metadata("design:type", String)
     ], ConfirmPayment1RequestBody.prototype, "apiKeyL2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=confirmPayment;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=confirmPayment;" }),
         __metadata("design:type", String)
     ], ConfirmPayment1RequestBody.prototype, "confirmPayment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=paymentID;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=paymentID;" }),
         __metadata("design:type", Number)
-    ], ConfirmPayment1RequestBody.prototype, "paymentId", void 0);
+    ], ConfirmPayment1RequestBody.prototype, "paymentID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=transaction_id;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=transaction_id;" }),
         __metadata("design:type", String)
     ], ConfirmPayment1RequestBody.prototype, "transactionId", void 0);
     return ConfirmPayment1RequestBody;
-}(SpeakeasyBase));
-export { ConfirmPayment1RequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ConfirmPayment1RequestBody = ConfirmPayment1RequestBody;
 var ConfirmPayment1Request = /** @class */ (function (_super) {
     __extends(ConfirmPayment1Request, _super);
     function ConfirmPayment1Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ConfirmPayment1Request.prototype, "serverUrl", void 0);
+    ], ConfirmPayment1Request.prototype, "serverURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", ConfirmPayment1RequestBody)
     ], ConfirmPayment1Request.prototype, "request", void 0);
     return ConfirmPayment1Request;
-}(SpeakeasyBase));
-export { ConfirmPayment1Request };
+}(utils_1.SpeakeasyBase));
+exports.ConfirmPayment1Request = ConfirmPayment1Request;
 var ConfirmPayment1Response = /** @class */ (function (_super) {
     __extends(ConfirmPayment1Response, _super);
     function ConfirmPayment1Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConfirmPayment1Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ConfirmPayment1Response.prototype, "statusCode", void 0);
     return ConfirmPayment1Response;
-}(SpeakeasyBase));
-export { ConfirmPayment1Response };
+}(utils_1.SpeakeasyBase));
+exports.ConfirmPayment1Response = ConfirmPayment1Response;

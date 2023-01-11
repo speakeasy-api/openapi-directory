@@ -15,5 +15,5 @@ export declare class ActionsCreateOrUpdateRepoSecretRequest extends SpeakeasyBas
 export declare class ActionsCreateOrUpdateRepoSecretResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    actionsCreateOrUpdateRepoSecret201ApplicationJsonObject?: Map<string, any>;
+    actionsCreateOrUpdateRepoSecret201ApplicationJSONObject?: Record<string, any>;
 }

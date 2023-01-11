@@ -44,11 +44,11 @@ export class ActionsListSelfHostedRunnersInGroupForOrgResponse extends Speakeasy
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  actionsListSelfHostedRunnersInGroupForOrg200ApplicationJsonObject?: ActionsListSelfHostedRunnersInGroupForOrg200ApplicationJson;
+  actionsListSelfHostedRunnersInGroupForOrg200ApplicationJSONObject?: ActionsListSelfHostedRunnersInGroupForOrg200ApplicationJson;
 }

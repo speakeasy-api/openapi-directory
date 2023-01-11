@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TimeOffTypeResource = exports.TimeOffTypeResourceTypeEnum = exports.TimeOffTypeResourceAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
 var TimeOffTypeResourceAttributes = /** @class */ (function (_super) {
     __extends(TimeOffTypeResourceAttributes, _super);
     function TimeOffTypeResourceAttributes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TimeOffTypeResourceAttributes.prototype, "name", void 0);
     return TimeOffTypeResourceAttributes;
-}(SpeakeasyBase));
-export { TimeOffTypeResourceAttributes };
-export var TimeOffTypeResourceTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.TimeOffTypeResourceAttributes = TimeOffTypeResourceAttributes;
+var TimeOffTypeResourceTypeEnum;
 (function (TimeOffTypeResourceTypeEnum) {
     TimeOffTypeResourceTypeEnum["TimeOffType"] = "TimeOffType";
-})(TimeOffTypeResourceTypeEnum || (TimeOffTypeResourceTypeEnum = {}));
+})(TimeOffTypeResourceTypeEnum = exports.TimeOffTypeResourceTypeEnum || (exports.TimeOffTypeResourceTypeEnum = {}));
 var TimeOffTypeResource = /** @class */ (function (_super) {
     __extends(TimeOffTypeResource, _super);
     function TimeOffTypeResource() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
         __metadata("design:type", TimeOffTypeResourceAttributes)
     ], TimeOffTypeResource.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], TimeOffTypeResource.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], TimeOffTypeResource.prototype, "type", void 0);
     return TimeOffTypeResource;
-}(SpeakeasyBase));
-export { TimeOffTypeResource };
+}(utils_1.SpeakeasyBase));
+exports.TimeOffTypeResource = TimeOffTypeResource;

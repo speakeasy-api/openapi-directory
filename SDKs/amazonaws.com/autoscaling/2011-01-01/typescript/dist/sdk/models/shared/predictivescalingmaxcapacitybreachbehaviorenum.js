@@ -1,5 +1,8 @@
-export var PredictiveScalingMaxCapacityBreachBehaviorEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PredictiveScalingMaxCapacityBreachBehaviorEnum = void 0;
+var PredictiveScalingMaxCapacityBreachBehaviorEnum;
 (function (PredictiveScalingMaxCapacityBreachBehaviorEnum) {
     PredictiveScalingMaxCapacityBreachBehaviorEnum["HonorMaxCapacity"] = "HonorMaxCapacity";
     PredictiveScalingMaxCapacityBreachBehaviorEnum["IncreaseMaxCapacity"] = "IncreaseMaxCapacity";
-})(PredictiveScalingMaxCapacityBreachBehaviorEnum || (PredictiveScalingMaxCapacityBreachBehaviorEnum = {}));
+})(PredictiveScalingMaxCapacityBreachBehaviorEnum = exports.PredictiveScalingMaxCapacityBreachBehaviorEnum || (exports.PredictiveScalingMaxCapacityBreachBehaviorEnum = {}));

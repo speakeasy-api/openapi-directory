@@ -24,9 +24,9 @@ export declare class DataExporterConfig extends SpeakeasyBase {
     id?: string;
     jsonWorkers?: number;
     location?: Location;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     name?: string;
-    projection?: Map<string, string>;
+    projection?: Record<string, string>;
     sendWorkers?: number;
     typ?: DataExporterConfigTypEnum;
 }

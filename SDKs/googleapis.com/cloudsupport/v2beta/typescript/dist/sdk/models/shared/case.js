@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CaseClassification } from "./caseclassification";
-import { Actor } from "./actor";
-import { ActorInput } from "./actor";
-export var CasePriorityEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CaseInput = exports.Case = exports.CaseStateEnum = exports.CaseSeverityEnum = exports.CasePriorityEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var caseclassification_1 = require("./caseclassification");
+var actor_1 = require("./actor");
+var actor_2 = require("./actor");
+var CasePriorityEnum;
 (function (CasePriorityEnum) {
     CasePriorityEnum["PriorityUnspecified"] = "PRIORITY_UNSPECIFIED";
     CasePriorityEnum["P0"] = "P0";
@@ -34,8 +37,8 @@ export var CasePriorityEnum;
     CasePriorityEnum["P2"] = "P2";
     CasePriorityEnum["P3"] = "P3";
     CasePriorityEnum["P4"] = "P4";
-})(CasePriorityEnum || (CasePriorityEnum = {}));
-export var CaseSeverityEnum;
+})(CasePriorityEnum = exports.CasePriorityEnum || (exports.CasePriorityEnum = {}));
+var CaseSeverityEnum;
 (function (CaseSeverityEnum) {
     CaseSeverityEnum["SeverityUnspecified"] = "SEVERITY_UNSPECIFIED";
     CaseSeverityEnum["S0"] = "S0";
@@ -43,8 +46,8 @@ export var CaseSeverityEnum;
     CaseSeverityEnum["S2"] = "S2";
     CaseSeverityEnum["S3"] = "S3";
     CaseSeverityEnum["S4"] = "S4";
-})(CaseSeverityEnum || (CaseSeverityEnum = {}));
-export var CaseStateEnum;
+})(CaseSeverityEnum = exports.CaseSeverityEnum || (exports.CaseSeverityEnum = {}));
+var CaseStateEnum;
 (function (CaseStateEnum) {
     CaseStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     CaseStateEnum["New"] = "NEW";
@@ -52,7 +55,7 @@ export var CaseStateEnum;
     CaseStateEnum["ActionRequired"] = "ACTION_REQUIRED";
     CaseStateEnum["SolutionProvided"] = "SOLUTION_PROVIDED";
     CaseStateEnum["Closed"] = "CLOSED";
-})(CaseStateEnum || (CaseStateEnum = {}));
+})(CaseStateEnum = exports.CaseStateEnum || (exports.CaseStateEnum = {}));
 // Case
 /**
  * A support case.
@@ -63,64 +66,68 @@ var Case = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=classification" }),
-        __metadata("design:type", CaseClassification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=classification" }),
+        __metadata("design:type", caseclassification_1.CaseClassification)
     ], Case.prototype, "classification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Case.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creator" }),
-        __metadata("design:type", Actor)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creator" }),
+        __metadata("design:type", actor_1.Actor)
     ], Case.prototype, "creator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Case.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Case.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=escalated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=escalated" }),
         __metadata("design:type", Boolean)
     ], Case.prototype, "escalated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
+        __metadata("design:type", String)
+    ], Case.prototype, "languageCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Case.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", String)
     ], Case.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=severity" }),
         __metadata("design:type", String)
     ], Case.prototype, "severity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Case.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriberEmailAddresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriberEmailAddresses" }),
         __metadata("design:type", Array)
     ], Case.prototype, "subscriberEmailAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testCase" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testCase" }),
         __metadata("design:type", Boolean)
     ], Case.prototype, "testCase", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
         __metadata("design:type", String)
     ], Case.prototype, "timeZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Case.prototype, "updateTime", void 0);
     return Case;
-}(SpeakeasyBase));
-export { Case };
+}(utils_1.SpeakeasyBase));
+exports.Case = Case;
 // CaseInput
 /**
  * A support case.
@@ -131,49 +138,53 @@ var CaseInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=classification" }),
-        __metadata("design:type", CaseClassification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=classification" }),
+        __metadata("design:type", caseclassification_1.CaseClassification)
     ], CaseInput.prototype, "classification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creator" }),
-        __metadata("design:type", ActorInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creator" }),
+        __metadata("design:type", actor_2.ActorInput)
     ], CaseInput.prototype, "creator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CaseInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], CaseInput.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=escalated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=escalated" }),
         __metadata("design:type", Boolean)
     ], CaseInput.prototype, "escalated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
+        __metadata("design:type", String)
+    ], CaseInput.prototype, "languageCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CaseInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", String)
     ], CaseInput.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=severity" }),
         __metadata("design:type", String)
     ], CaseInput.prototype, "severity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriberEmailAddresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriberEmailAddresses" }),
         __metadata("design:type", Array)
     ], CaseInput.prototype, "subscriberEmailAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testCase" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testCase" }),
         __metadata("design:type", Boolean)
     ], CaseInput.prototype, "testCase", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
         __metadata("design:type", String)
     ], CaseInput.prototype, "timeZone", void 0);
     return CaseInput;
-}(SpeakeasyBase));
-export { CaseInput };
+}(utils_1.SpeakeasyBase));
+exports.CaseInput = CaseInput;

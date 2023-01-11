@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ListWebhookItem } from "./listwebhookitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutWebhookOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var listwebhookitem_1 = require("./listwebhookitem");
 var PutWebhookOutput = /** @class */ (function (_super) {
     __extends(PutWebhookOutput, _super);
     function PutWebhookOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webhook" }),
-        __metadata("design:type", ListWebhookItem)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webhook" }),
+        __metadata("design:type", listwebhookitem_1.ListWebhookItem)
     ], PutWebhookOutput.prototype, "webhook", void 0);
     return PutWebhookOutput;
-}(SpeakeasyBase));
-export { PutWebhookOutput };
+}(utils_1.SpeakeasyBase));
+exports.PutWebhookOutput = PutWebhookOutput;

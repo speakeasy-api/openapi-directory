@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualInterfaceTestHistory = void 0;
+var utils_1 = require("../../../internal/utils");
 // VirtualInterfaceTestHistory
 /**
  * Information about the virtual interface failover test.
@@ -33,37 +36,37 @@ var VirtualInterfaceTestHistory = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bgpPeers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bgpPeers" }),
         __metadata("design:type", Array)
     ], VirtualInterfaceTestHistory.prototype, "bgpPeers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Date)
     ], VirtualInterfaceTestHistory.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerAccount" }),
         __metadata("design:type", String)
     ], VirtualInterfaceTestHistory.prototype, "ownerAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], VirtualInterfaceTestHistory.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], VirtualInterfaceTestHistory.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testDurationInMinutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testDurationInMinutes" }),
         __metadata("design:type", Number)
     ], VirtualInterfaceTestHistory.prototype, "testDurationInMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testId" }),
         __metadata("design:type", String)
     ], VirtualInterfaceTestHistory.prototype, "testId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualInterfaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualInterfaceId" }),
         __metadata("design:type", String)
     ], VirtualInterfaceTestHistory.prototype, "virtualInterfaceId", void 0);
     return VirtualInterfaceTestHistory;
-}(SpeakeasyBase));
-export { VirtualInterfaceTestHistory };
+}(utils_1.SpeakeasyBase));
+exports.VirtualInterfaceTestHistory = VirtualInterfaceTestHistory;

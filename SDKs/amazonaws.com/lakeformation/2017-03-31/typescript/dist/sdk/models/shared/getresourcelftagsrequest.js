@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Resource } from "./resource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetResourceLfTagsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var resource_1 = require("./resource");
 var GetResourceLfTagsRequest = /** @class */ (function (_super) {
     __extends(GetResourceLfTagsRequest, _super);
     function GetResourceLfTagsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CatalogId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CatalogId" }),
         __metadata("design:type", String)
     ], GetResourceLfTagsRequest.prototype, "catalogId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Resource" }),
-        __metadata("design:type", Resource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Resource" }),
+        __metadata("design:type", resource_1.Resource)
     ], GetResourceLfTagsRequest.prototype, "resource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ShowAssignedLFTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ShowAssignedLFTags" }),
         __metadata("design:type", Boolean)
-    ], GetResourceLfTagsRequest.prototype, "showAssignedLfTags", void 0);
+    ], GetResourceLfTagsRequest.prototype, "showAssignedLFTags", void 0);
     return GetResourceLfTagsRequest;
-}(SpeakeasyBase));
-export { GetResourceLfTagsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetResourceLfTagsRequest = GetResourceLfTagsRequest;

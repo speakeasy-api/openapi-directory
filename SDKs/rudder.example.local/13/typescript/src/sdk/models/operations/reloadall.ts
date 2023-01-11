@@ -48,5 +48,5 @@ export class ReloadAllResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  reloadAll200ApplicationJsonObject?: ReloadAll200ApplicationJson;
+  reloadAll200ApplicationJSONObject?: ReloadAll200ApplicationJson;
 }

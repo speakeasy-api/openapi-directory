@@ -11,11 +11,11 @@ export declare class PutAdminMappingsStubMappingIdRequestBodyRequestBasicAuthCre
 }
 export declare class PutAdminMappingsStubMappingIdRequestBodyRequest extends SpeakeasyBase {
     basicAuthCredentials?: PutAdminMappingsStubMappingIdRequestBodyRequestBasicAuthCredentials;
-    bodyPatterns?: Map<string, any>[];
-    cookies?: Map<string, any>;
-    headers?: Map<string, any>;
+    bodyPatterns?: Record<string, any>[];
+    cookies?: Record<string, any>;
+    headers?: Record<string, any>;
     method?: string;
-    queryParameters?: Map<string, any>;
+    queryParameters?: Record<string, any>;
     url?: string;
     urlPath?: string;
     urlPathPattern?: string;
@@ -28,28 +28,28 @@ export declare enum PutAdminMappingsStubMappingIdRequestBodyResponseFaultEnum {
     RandomDataThenClose = "RANDOM_DATA_THEN_CLOSE"
 }
 export declare class PutAdminMappingsStubMappingIdRequestBodyResponse extends SpeakeasyBase {
-    additionalProxyRequestHeaders?: Map<string, any>;
+    additionalProxyRequestHeaders?: Record<string, any>;
     base64Body?: string;
     body?: string;
     bodyFileName?: string;
     fault?: PutAdminMappingsStubMappingIdRequestBodyResponseFaultEnum;
     fixedDelayMilliseconds?: number;
     fromConfiguredStub?: boolean;
-    headers?: Map<string, any>;
-    jsonBody?: Map<string, any>;
+    headers?: Record<string, any>;
+    jsonBody?: Record<string, any>;
     proxyBaseUrl?: string;
     status?: number;
     statusMessage?: string;
-    transformerParameters?: Map<string, any>;
+    transformerParameters?: Record<string, any>;
     transformers?: string[];
 }
 export declare class PutAdminMappingsStubMappingIdRequestBody extends SpeakeasyBase {
     id?: string;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     name?: string;
     newScenarioState?: string;
     persistent?: boolean;
-    postServeActions?: Map<string, any>;
+    postServeActions?: Record<string, any>;
     priority?: number;
     request?: PutAdminMappingsStubMappingIdRequestBodyRequest;
     requiredScenarioState?: string;
@@ -66,11 +66,11 @@ export declare class PutAdminMappingsStubMappingId200ApplicationJsonRequestBasic
 }
 export declare class PutAdminMappingsStubMappingId200ApplicationJsonRequest extends SpeakeasyBase {
     basicAuthCredentials?: PutAdminMappingsStubMappingId200ApplicationJsonRequestBasicAuthCredentials;
-    bodyPatterns?: Map<string, any>[];
-    cookies?: Map<string, any>;
-    headers?: Map<string, any>;
+    bodyPatterns?: Record<string, any>[];
+    cookies?: Record<string, any>;
+    headers?: Record<string, any>;
     method?: string;
-    queryParameters?: Map<string, any>;
+    queryParameters?: Record<string, any>;
     url?: string;
     urlPath?: string;
     urlPathPattern?: string;
@@ -83,28 +83,28 @@ export declare enum PutAdminMappingsStubMappingId200ApplicationJsonResponseFault
     RandomDataThenClose = "RANDOM_DATA_THEN_CLOSE"
 }
 export declare class PutAdminMappingsStubMappingId200ApplicationJsonResponse extends SpeakeasyBase {
-    additionalProxyRequestHeaders?: Map<string, any>;
+    additionalProxyRequestHeaders?: Record<string, any>;
     base64Body?: string;
     body?: string;
     bodyFileName?: string;
     fault?: PutAdminMappingsStubMappingId200ApplicationJsonResponseFaultEnum;
     fixedDelayMilliseconds?: number;
     fromConfiguredStub?: boolean;
-    headers?: Map<string, any>;
-    jsonBody?: Map<string, any>;
+    headers?: Record<string, any>;
+    jsonBody?: Record<string, any>;
     proxyBaseUrl?: string;
     status?: number;
     statusMessage?: string;
-    transformerParameters?: Map<string, any>;
+    transformerParameters?: Record<string, any>;
     transformers?: string[];
 }
 export declare class PutAdminMappingsStubMappingId200ApplicationJson extends SpeakeasyBase {
     id?: string;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     name?: string;
     newScenarioState?: string;
     persistent?: boolean;
-    postServeActions?: Map<string, any>;
+    postServeActions?: Record<string, any>;
     priority?: number;
     request?: PutAdminMappingsStubMappingId200ApplicationJsonRequest;
     requiredScenarioState?: string;
@@ -118,6 +118,6 @@ export declare class PutAdminMappingsStubMappingIdRequest extends SpeakeasyBase 
 }
 export declare class PutAdminMappingsStubMappingIdResponse extends SpeakeasyBase {
     contentType: string;
-    putAdminMappingsStubMappingId200ApplicationJsonObject?: PutAdminMappingsStubMappingId200ApplicationJson;
     statusCode: number;
+    putAdminMappingsStubMappingId200ApplicationJSONObject?: PutAdminMappingsStubMappingId200ApplicationJson;
 }

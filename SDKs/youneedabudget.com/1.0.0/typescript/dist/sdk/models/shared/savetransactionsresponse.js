@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransactionDetail } from "./transactiondetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SaveTransactionsResponse = exports.SaveTransactionsResponseData = void 0;
+var utils_1 = require("../../../internal/utils");
+var transactiondetail_1 = require("./transactiondetail");
 var SaveTransactionsResponseData = /** @class */ (function (_super) {
     __extends(SaveTransactionsResponseData, _super);
     function SaveTransactionsResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duplicate_import_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duplicate_import_ids" }),
         __metadata("design:type", Array)
     ], SaveTransactionsResponseData.prototype, "duplicateImportIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server_knowledge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server_knowledge" }),
         __metadata("design:type", Number)
     ], SaveTransactionsResponseData.prototype, "serverKnowledge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transaction" }),
-        __metadata("design:type", TransactionDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transaction" }),
+        __metadata("design:type", transactiondetail_1.TransactionDetail)
     ], SaveTransactionsResponseData.prototype, "transaction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transaction_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transaction_ids" }),
         __metadata("design:type", Array)
     ], SaveTransactionsResponseData.prototype, "transactionIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactions", elemType: TransactionDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactions", elemType: transactiondetail_1.TransactionDetail }),
         __metadata("design:type", Array)
     ], SaveTransactionsResponseData.prototype, "transactions", void 0);
     return SaveTransactionsResponseData;
-}(SpeakeasyBase));
-export { SaveTransactionsResponseData };
+}(utils_1.SpeakeasyBase));
+exports.SaveTransactionsResponseData = SaveTransactionsResponseData;
 var SaveTransactionsResponse = /** @class */ (function (_super) {
     __extends(SaveTransactionsResponse, _super);
     function SaveTransactionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", SaveTransactionsResponseData)
     ], SaveTransactionsResponse.prototype, "data", void 0);
     return SaveTransactionsResponse;
-}(SpeakeasyBase));
-export { SaveTransactionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.SaveTransactionsResponse = SaveTransactionsResponse;

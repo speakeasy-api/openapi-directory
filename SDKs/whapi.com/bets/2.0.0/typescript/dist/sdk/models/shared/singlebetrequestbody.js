@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SingleBetRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var SingleBetRequestBody = /** @class */ (function (_super) {
     __extends(SingleBetRequestBody, _super);
     function SingleBetRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delayedBetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delayedBetId" }),
         __metadata("design:type", String)
     ], SingleBetRequestBody.prototype, "delayedBetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeBetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeBetId" }),
         __metadata("design:type", String)
     ], SingleBetRequestBody.prototype, "freeBetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceDen" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceDen" }),
         __metadata("design:type", Number)
     ], SingleBetRequestBody.prototype, "priceDen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceNum" }),
         __metadata("design:type", Number)
     ], SingleBetRequestBody.prototype, "priceNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceType" }),
         __metadata("design:type", String)
     ], SingleBetRequestBody.prototype, "priceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectionId" }),
         __metadata("design:type", String)
     ], SingleBetRequestBody.prototype, "selectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stake" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stake" }),
         __metadata("design:type", Number)
     ], SingleBetRequestBody.prototype, "stake", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], SingleBetRequestBody.prototype, "type", void 0);
     return SingleBetRequestBody;
-}(SpeakeasyBase));
-export { SingleBetRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.SingleBetRequestBody = SingleBetRequestBody;

@@ -22,5 +22,5 @@ export class GetChangedResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getChanged200ApplicationJsonInt32Integer?: number;
+  getChanged200ApplicationJSONInt32Integer?: number;
 }

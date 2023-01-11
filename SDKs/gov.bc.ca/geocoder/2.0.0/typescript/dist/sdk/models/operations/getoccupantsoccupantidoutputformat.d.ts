@@ -9,7 +9,7 @@ export declare enum GetOccupantsOccupantIdOutputFormatOutputFormatEnum {
     Shpz = "shpz"
 }
 export declare class GetOccupantsOccupantIdOutputFormatPathParams extends SpeakeasyBase {
-    occupantId: string;
+    occupantID: string;
     outputFormat: GetOccupantsOccupantIdOutputFormatOutputFormatEnum;
 }
 export declare enum GetOccupantsOccupantIdOutputFormatLocationDescriptorEnum {
@@ -23,7 +23,7 @@ export declare enum GetOccupantsOccupantIdOutputFormatLocationDescriptorEnum {
 export declare class GetOccupantsOccupantIdOutputFormatQueryParams extends SpeakeasyBase {
     brief?: boolean;
     locationDescriptor?: GetOccupantsOccupantIdOutputFormatLocationDescriptorEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     setBack?: number;
 }
 export declare class GetOccupantsOccupantIdOutputFormatRequest extends SpeakeasyBase {

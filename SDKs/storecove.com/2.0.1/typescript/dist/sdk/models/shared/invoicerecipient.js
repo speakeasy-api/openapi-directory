@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PublicIdentifier } from "./publicidentifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InvoiceRecipient = void 0;
+var utils_1 = require("../../../internal/utils");
+var publicidentifier_1 = require("./publicidentifier");
 // InvoiceRecipient
 /**
  * The different ways to send the invoice to the recipient. The publicIdentifiers are used to send via the Peppol network, if the recipient is not registered on the Peppol network, the invoice will be sent to the email addresses in the emails property. This property is only mandatory when sending the invoice data using the <<_openapi_invoice>> property, not when sending using the <<_openapi_invoicedata>> property, in which case this information will be extracted from the <<_openapi_invoicedata>> object. If you do specify an <<_openapi_invoicerecipient>> object and an <<_openapi_invoicedata>> object, the data from the two will be merged.
@@ -34,13 +37,13 @@ var InvoiceRecipient = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emails" }),
         __metadata("design:type", Array)
     ], InvoiceRecipient.prototype, "emails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicIdentifiers", elemType: PublicIdentifier }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicIdentifiers", elemType: publicidentifier_1.PublicIdentifier }),
         __metadata("design:type", Array)
     ], InvoiceRecipient.prototype, "publicIdentifiers", void 0);
     return InvoiceRecipient;
-}(SpeakeasyBase));
-export { InvoiceRecipient };
+}(utils_1.SpeakeasyBase));
+exports.InvoiceRecipient = InvoiceRecipient;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetIdentityPoliciesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetIdentityPoliciesResponse = exports.GetGetIdentityPoliciesRequest = exports.GetGetIdentityPoliciesHeaders = exports.GetGetIdentityPoliciesQueryParams = exports.GetGetIdentityPoliciesVersionEnum = exports.GetGetIdentityPoliciesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetIdentityPoliciesActionEnum;
 (function (GetGetIdentityPoliciesActionEnum) {
     GetGetIdentityPoliciesActionEnum["GetIdentityPolicies"] = "GetIdentityPolicies";
-})(GetGetIdentityPoliciesActionEnum || (GetGetIdentityPoliciesActionEnum = {}));
-export var GetGetIdentityPoliciesVersionEnum;
+})(GetGetIdentityPoliciesActionEnum = exports.GetGetIdentityPoliciesActionEnum || (exports.GetGetIdentityPoliciesActionEnum = {}));
+var GetGetIdentityPoliciesVersionEnum;
 (function (GetGetIdentityPoliciesVersionEnum) {
     GetGetIdentityPoliciesVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetGetIdentityPoliciesVersionEnum || (GetGetIdentityPoliciesVersionEnum = {}));
+})(GetGetIdentityPoliciesVersionEnum = exports.GetGetIdentityPoliciesVersionEnum || (exports.GetGetIdentityPoliciesVersionEnum = {}));
 var GetGetIdentityPoliciesQueryParams = /** @class */ (function (_super) {
     __extends(GetGetIdentityPoliciesQueryParams, _super);
     function GetGetIdentityPoliciesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetGetIdentityPoliciesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Identity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Identity" }),
         __metadata("design:type", String)
     ], GetGetIdentityPoliciesQueryParams.prototype, "identity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PolicyNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PolicyNames" }),
         __metadata("design:type", Array)
     ], GetGetIdentityPoliciesQueryParams.prototype, "policyNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetGetIdentityPoliciesQueryParams.prototype, "version", void 0);
     return GetGetIdentityPoliciesQueryParams;
-}(SpeakeasyBase));
-export { GetGetIdentityPoliciesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetIdentityPoliciesQueryParams = GetGetIdentityPoliciesQueryParams;
 var GetGetIdentityPoliciesHeaders = /** @class */ (function (_super) {
     __extends(GetGetIdentityPoliciesHeaders, _super);
     function GetGetIdentityPoliciesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetGetIdentityPoliciesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetGetIdentityPoliciesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetGetIdentityPoliciesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetGetIdentityPoliciesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetGetIdentityPoliciesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetGetIdentityPoliciesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetGetIdentityPoliciesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetGetIdentityPoliciesHeaders;
-}(SpeakeasyBase));
-export { GetGetIdentityPoliciesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetGetIdentityPoliciesHeaders = GetGetIdentityPoliciesHeaders;
 var GetGetIdentityPoliciesRequest = /** @class */ (function (_super) {
     __extends(GetGetIdentityPoliciesRequest, _super);
     function GetGetIdentityPoliciesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetIdentityPoliciesQueryParams)
     ], GetGetIdentityPoliciesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetIdentityPoliciesHeaders)
     ], GetGetIdentityPoliciesRequest.prototype, "headers", void 0);
     return GetGetIdentityPoliciesRequest;
-}(SpeakeasyBase));
-export { GetGetIdentityPoliciesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetIdentityPoliciesRequest = GetGetIdentityPoliciesRequest;
 var GetGetIdentityPoliciesResponse = /** @class */ (function (_super) {
     __extends(GetGetIdentityPoliciesResponse, _super);
     function GetGetIdentityPoliciesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGetIdentityPoliciesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetIdentityPoliciesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetIdentityPoliciesResponse.prototype, "statusCode", void 0);
     return GetGetIdentityPoliciesResponse;
-}(SpeakeasyBase));
-export { GetGetIdentityPoliciesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetIdentityPoliciesResponse = GetGetIdentityPoliciesResponse;

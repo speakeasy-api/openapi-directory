@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CallToAction } from "./calltoaction";
-import { LocalPostEvent } from "./localpostevent";
-import { MediaItem } from "./mediaitem";
-import { LocalPostOffer } from "./localpostoffer";
-export var LocalPostAlertTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocalPost = exports.LocalPostTopicTypeEnum = exports.LocalPostStateEnum = exports.LocalPostAlertTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var calltoaction_1 = require("./calltoaction");
+var localpostevent_1 = require("./localpostevent");
+var mediaitem_1 = require("./mediaitem");
+var localpostoffer_1 = require("./localpostoffer");
+var LocalPostAlertTypeEnum;
 (function (LocalPostAlertTypeEnum) {
     LocalPostAlertTypeEnum["AlertTypeUnspecified"] = "ALERT_TYPE_UNSPECIFIED";
     LocalPostAlertTypeEnum["Covid19"] = "COVID_19";
-})(LocalPostAlertTypeEnum || (LocalPostAlertTypeEnum = {}));
-export var LocalPostStateEnum;
+})(LocalPostAlertTypeEnum = exports.LocalPostAlertTypeEnum || (exports.LocalPostAlertTypeEnum = {}));
+var LocalPostStateEnum;
 (function (LocalPostStateEnum) {
     LocalPostStateEnum["LocalPostStateUnspecified"] = "LOCAL_POST_STATE_UNSPECIFIED";
     LocalPostStateEnum["Rejected"] = "REJECTED";
     LocalPostStateEnum["Live"] = "LIVE";
     LocalPostStateEnum["Processing"] = "PROCESSING";
-})(LocalPostStateEnum || (LocalPostStateEnum = {}));
-export var LocalPostTopicTypeEnum;
+})(LocalPostStateEnum = exports.LocalPostStateEnum || (exports.LocalPostStateEnum = {}));
+var LocalPostTopicTypeEnum;
 (function (LocalPostTopicTypeEnum) {
     LocalPostTopicTypeEnum["LocalPostTopicTypeUnspecified"] = "LOCAL_POST_TOPIC_TYPE_UNSPECIFIED";
     LocalPostTopicTypeEnum["Standard"] = "STANDARD";
     LocalPostTopicTypeEnum["Event"] = "EVENT";
     LocalPostTopicTypeEnum["Offer"] = "OFFER";
     LocalPostTopicTypeEnum["Alert"] = "ALERT";
-})(LocalPostTopicTypeEnum || (LocalPostTopicTypeEnum = {}));
+})(LocalPostTopicTypeEnum = exports.LocalPostTopicTypeEnum || (exports.LocalPostTopicTypeEnum = {}));
 // LocalPost
 /**
  * Represents a [local post](https://support.google.com/business/answer/7662907) for a location.
@@ -57,57 +60,57 @@ var LocalPost = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alertType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alertType" }),
         __metadata("design:type", String)
     ], LocalPost.prototype, "alertType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callToAction" }),
-        __metadata("design:type", CallToAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callToAction" }),
+        __metadata("design:type", calltoaction_1.CallToAction)
     ], LocalPost.prototype, "callToAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], LocalPost.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event" }),
-        __metadata("design:type", LocalPostEvent)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event" }),
+        __metadata("design:type", localpostevent_1.LocalPostEvent)
     ], LocalPost.prototype, "event", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], LocalPost.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=media", elemType: MediaItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=media", elemType: mediaitem_1.MediaItem }),
         __metadata("design:type", Array)
     ], LocalPost.prototype, "media", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], LocalPost.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offer" }),
-        __metadata("design:type", LocalPostOffer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offer" }),
+        __metadata("design:type", localpostoffer_1.LocalPostOffer)
     ], LocalPost.prototype, "offer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=searchUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=searchUrl" }),
         __metadata("design:type", String)
     ], LocalPost.prototype, "searchUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], LocalPost.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=summary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=summary" }),
         __metadata("design:type", String)
     ], LocalPost.prototype, "summary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topicType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topicType" }),
         __metadata("design:type", String)
     ], LocalPost.prototype, "topicType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], LocalPost.prototype, "updateTime", void 0);
     return LocalPost;
-}(SpeakeasyBase));
-export { LocalPost };
+}(utils_1.SpeakeasyBase));
+exports.LocalPost = LocalPost;

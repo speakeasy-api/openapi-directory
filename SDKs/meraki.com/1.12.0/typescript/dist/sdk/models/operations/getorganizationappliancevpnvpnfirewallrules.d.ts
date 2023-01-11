@@ -8,5 +8,5 @@ export declare class GetOrganizationApplianceVpnVpnFirewallRulesRequest extends 
 export declare class GetOrganizationApplianceVpnVpnFirewallRulesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationApplianceVpnVpnFirewallRules200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationApplianceVpnVpnFirewallRules200ApplicationJSONObject?: Record<string, any>;
 }

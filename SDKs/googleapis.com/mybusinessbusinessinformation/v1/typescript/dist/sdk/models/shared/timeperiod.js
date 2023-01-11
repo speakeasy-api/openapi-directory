@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TimeOfDay } from "./timeofday";
-export var TimePeriodCloseDayEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TimePeriod = exports.TimePeriodOpenDayEnum = exports.TimePeriodCloseDayEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var timeofday_1 = require("./timeofday");
+var TimePeriodCloseDayEnum;
 (function (TimePeriodCloseDayEnum) {
     TimePeriodCloseDayEnum["DayOfWeekUnspecified"] = "DAY_OF_WEEK_UNSPECIFIED";
     TimePeriodCloseDayEnum["Monday"] = "MONDAY";
@@ -34,8 +37,8 @@ export var TimePeriodCloseDayEnum;
     TimePeriodCloseDayEnum["Friday"] = "FRIDAY";
     TimePeriodCloseDayEnum["Saturday"] = "SATURDAY";
     TimePeriodCloseDayEnum["Sunday"] = "SUNDAY";
-})(TimePeriodCloseDayEnum || (TimePeriodCloseDayEnum = {}));
-export var TimePeriodOpenDayEnum;
+})(TimePeriodCloseDayEnum = exports.TimePeriodCloseDayEnum || (exports.TimePeriodCloseDayEnum = {}));
+var TimePeriodOpenDayEnum;
 (function (TimePeriodOpenDayEnum) {
     TimePeriodOpenDayEnum["DayOfWeekUnspecified"] = "DAY_OF_WEEK_UNSPECIFIED";
     TimePeriodOpenDayEnum["Monday"] = "MONDAY";
@@ -45,7 +48,7 @@ export var TimePeriodOpenDayEnum;
     TimePeriodOpenDayEnum["Friday"] = "FRIDAY";
     TimePeriodOpenDayEnum["Saturday"] = "SATURDAY";
     TimePeriodOpenDayEnum["Sunday"] = "SUNDAY";
-})(TimePeriodOpenDayEnum || (TimePeriodOpenDayEnum = {}));
+})(TimePeriodOpenDayEnum = exports.TimePeriodOpenDayEnum || (exports.TimePeriodOpenDayEnum = {}));
 // TimePeriod
 /**
  * Represents a span of time that the business is open, starting on the specified open day/time and closing on the specified close day/time. The closing time must occur after the opening time, for example later in the same day, or on a subsequent day.
@@ -56,21 +59,21 @@ var TimePeriod = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=closeDay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=closeDay" }),
         __metadata("design:type", String)
     ], TimePeriod.prototype, "closeDay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=closeTime" }),
-        __metadata("design:type", TimeOfDay)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=closeTime" }),
+        __metadata("design:type", timeofday_1.TimeOfDay)
     ], TimePeriod.prototype, "closeTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=openDay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openDay" }),
         __metadata("design:type", String)
     ], TimePeriod.prototype, "openDay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=openTime" }),
-        __metadata("design:type", TimeOfDay)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openTime" }),
+        __metadata("design:type", timeofday_1.TimeOfDay)
     ], TimePeriod.prototype, "openTime", void 0);
     return TimePeriod;
-}(SpeakeasyBase));
-export { TimePeriod };
+}(utils_1.SpeakeasyBase));
+exports.TimePeriod = TimePeriod;

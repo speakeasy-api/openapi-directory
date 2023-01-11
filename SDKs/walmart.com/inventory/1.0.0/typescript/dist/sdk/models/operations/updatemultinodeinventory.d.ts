@@ -4,10 +4,10 @@ export declare class UpdateMultiNodeInventoryPathParams extends SpeakeasyBase {
 }
 export declare class UpdateMultiNodeInventoryHeaders extends SpeakeasyBase {
     authorization: string;
-    wmConsumerChannelType: string;
-    wmQosCorrelationId: string;
-    wmSecAccessToken: string;
-    wmSvcName: string;
+    wmCONSUMERCHANNELTYPE: string;
+    wmQOSCORRELATIONID: string;
+    wmSECACCESSTOKEN: string;
+    wmSVCNAME: string;
 }
 export declare enum UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum {
     Each = "EACH"
@@ -51,7 +51,7 @@ export declare class UpdateMultiNodeInventory200ApplicationJsonNodesErrors exten
     causes?: UpdateMultiNodeInventory200ApplicationJsonNodesErrorsCauses[];
     code: string;
     description?: string;
-    errorIdentifiers?: Map<string, Map<string, any>>;
+    errorIdentifiers?: Record<string, Record<string, any>>;
     field?: string;
     info?: string;
     severity?: UpdateMultiNodeInventory200ApplicationJsonNodesErrorsSeverityEnum;
@@ -73,5 +73,5 @@ export declare class UpdateMultiNodeInventoryRequest extends SpeakeasyBase {
 export declare class UpdateMultiNodeInventoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateMultiNodeInventory200ApplicationJsonObject?: UpdateMultiNodeInventory200ApplicationJson;
+    updateMultiNodeInventory200ApplicationJSONObject?: UpdateMultiNodeInventory200ApplicationJson;
 }

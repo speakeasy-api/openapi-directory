@@ -25,7 +25,7 @@ export declare class StopLoggingResponse extends SpeakeasyBase {
     notOrganizationMasterAccountException?: any;
     operationNotPermittedException?: any;
     statusCode: number;
-    stopLoggingResponse?: Map<string, any>;
+    stopLoggingResponse?: Record<string, any>;
     trailNotFoundException?: any;
     unsupportedOperationException?: any;
 }

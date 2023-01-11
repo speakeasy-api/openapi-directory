@@ -5,5 +5,5 @@ export declare class SubscriptionsApiCountRequest extends SpeakeasyBase {
 export declare class SubscriptionsApiCountResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    subscriptionsApiCount200ApplicationJsonOneOf?: any;
+    subscriptionsApiCount200ApplicationJSONOneOf?: any;
 }

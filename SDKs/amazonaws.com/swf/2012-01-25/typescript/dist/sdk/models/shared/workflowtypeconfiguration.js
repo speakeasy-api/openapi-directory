@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChildPolicyEnum } from "./childpolicyenum";
-import { TaskList } from "./tasklist";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkflowTypeConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var childpolicyenum_1 = require("./childpolicyenum");
+var tasklist_1 = require("./tasklist");
 // WorkflowTypeConfiguration
 /**
  * The configuration settings of a workflow type.
@@ -35,29 +38,29 @@ var WorkflowTypeConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultChildPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultChildPolicy" }),
         __metadata("design:type", String)
     ], WorkflowTypeConfiguration.prototype, "defaultChildPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultExecutionStartToCloseTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultExecutionStartToCloseTimeout" }),
         __metadata("design:type", String)
     ], WorkflowTypeConfiguration.prototype, "defaultExecutionStartToCloseTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultLambdaRole" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultLambdaRole" }),
         __metadata("design:type", String)
     ], WorkflowTypeConfiguration.prototype, "defaultLambdaRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultTaskList" }),
-        __metadata("design:type", TaskList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultTaskList" }),
+        __metadata("design:type", tasklist_1.TaskList)
     ], WorkflowTypeConfiguration.prototype, "defaultTaskList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultTaskPriority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultTaskPriority" }),
         __metadata("design:type", String)
     ], WorkflowTypeConfiguration.prototype, "defaultTaskPriority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultTaskStartToCloseTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultTaskStartToCloseTimeout" }),
         __metadata("design:type", String)
     ], WorkflowTypeConfiguration.prototype, "defaultTaskStartToCloseTimeout", void 0);
     return WorkflowTypeConfiguration;
-}(SpeakeasyBase));
-export { WorkflowTypeConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.WorkflowTypeConfiguration = WorkflowTypeConfiguration;

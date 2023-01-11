@@ -45,7 +45,7 @@ export class AcceptQualificationRequestRequest extends SpeakeasyBase {
 
 export class AcceptQualificationRequestResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  acceptQualificationRequestResponse?: Map<string, any>;
+  acceptQualificationRequestResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

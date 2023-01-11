@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudAssuredworkloadsV1WorkloadResourceSettings = exports.GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceTypeEnum;
 (function (GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceTypeEnum) {
     GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceTypeEnum["ResourceTypeUnspecified"] = "RESOURCE_TYPE_UNSPECIFIED";
     GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceTypeEnum["ConsumerProject"] = "CONSUMER_PROJECT";
     GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceTypeEnum["ConsumerFolder"] = "CONSUMER_FOLDER";
     GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceTypeEnum["EncryptionKeysProject"] = "ENCRYPTION_KEYS_PROJECT";
     GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceTypeEnum["Keyring"] = "KEYRING";
-})(GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceTypeEnum || (GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceTypeEnum = {}));
+})(GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceTypeEnum = exports.GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceTypeEnum || (exports.GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceTypeEnum = {}));
 // GoogleCloudAssuredworkloadsV1WorkloadResourceSettings
 /**
  * Represent the custom settings for the resources to be created.
@@ -41,17 +44,17 @@ var GoogleCloudAssuredworkloadsV1WorkloadResourceSettings = /** @class */ (funct
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1WorkloadResourceSettings.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceId" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1WorkloadResourceSettings.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1WorkloadResourceSettings.prototype, "resourceType", void 0);
     return GoogleCloudAssuredworkloadsV1WorkloadResourceSettings;
-}(SpeakeasyBase));
-export { GoogleCloudAssuredworkloadsV1WorkloadResourceSettings };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudAssuredworkloadsV1WorkloadResourceSettings = GoogleCloudAssuredworkloadsV1WorkloadResourceSettings;

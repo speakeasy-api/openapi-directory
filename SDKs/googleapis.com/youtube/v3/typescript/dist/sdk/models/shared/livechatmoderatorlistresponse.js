@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,50 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LiveChatModerator } from "./livechatmoderator";
-import { PageInfo } from "./pageinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiveChatModeratorListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var livechatmoderator_1 = require("./livechatmoderator");
+var pageinfo_1 = require("./pageinfo");
 var LiveChatModeratorListResponse = /** @class */ (function (_super) {
     __extends(LiveChatModeratorListResponse, _super);
     function LiveChatModeratorListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], LiveChatModeratorListResponse.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventId" }),
         __metadata("design:type", String)
     ], LiveChatModeratorListResponse.prototype, "eventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: LiveChatModerator }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: livechatmoderator_1.LiveChatModerator }),
         __metadata("design:type", Array)
     ], LiveChatModeratorListResponse.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], LiveChatModeratorListResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], LiveChatModeratorListResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageInfo" }),
-        __metadata("design:type", PageInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageInfo" }),
+        __metadata("design:type", pageinfo_1.PageInfo)
     ], LiveChatModeratorListResponse.prototype, "pageInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prevPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prevPageToken" }),
         __metadata("design:type", String)
     ], LiveChatModeratorListResponse.prototype, "prevPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokenPagination" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokenPagination" }),
+        __metadata("design:type", Object)
     ], LiveChatModeratorListResponse.prototype, "tokenPagination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visitorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visitorId" }),
         __metadata("design:type", String)
     ], LiveChatModeratorListResponse.prototype, "visitorId", void 0);
     return LiveChatModeratorListResponse;
-}(SpeakeasyBase));
-export { LiveChatModeratorListResponse };
+}(utils_1.SpeakeasyBase));
+exports.LiveChatModeratorListResponse = LiveChatModeratorListResponse;

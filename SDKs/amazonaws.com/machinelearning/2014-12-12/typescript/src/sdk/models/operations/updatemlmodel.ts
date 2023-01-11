@@ -60,5 +60,5 @@ export class UpdateMlModelResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateMlModelOutput?: shared.UpdateMlModelOutput;
+  updateMLModelOutput?: shared.UpdateMlModelOutput;
 }

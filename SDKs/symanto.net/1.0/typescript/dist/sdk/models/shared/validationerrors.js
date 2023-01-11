@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ValidationError } from "./validationerror";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ValidationErrors = void 0;
+var utils_1 = require("../../../internal/utils");
+var validationerror_1 = require("./validationerror");
 var ValidationErrors = /** @class */ (function (_super) {
     __extends(ValidationErrors, _super);
     function ValidationErrors() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail", elemType: ValidationError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail", elemType: validationerror_1.ValidationError }),
         __metadata("design:type", Array)
     ], ValidationErrors.prototype, "detail", void 0);
     return ValidationErrors;
-}(SpeakeasyBase));
-export { ValidationErrors };
+}(utils_1.SpeakeasyBase));
+exports.ValidationErrors = ValidationErrors;

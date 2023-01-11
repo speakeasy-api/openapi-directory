@@ -52,8 +52,8 @@ export class SyncRelationsWithSchemaResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  syncRelationsWithSchema200ApplicationJsonObject?: SyncRelationsWithSchema200ApplicationJson;
+  syncRelationsWithSchema200ApplicationJSONObject?: SyncRelationsWithSchema200ApplicationJson;
 
   @SpeakeasyMetadata()
-  syncRelationsWithSchema400ApplicationJsonObject?: SyncRelationsWithSchema400ApplicationJson;
+  syncRelationsWithSchema400ApplicationJSONObject?: SyncRelationsWithSchema400ApplicationJson;
 }

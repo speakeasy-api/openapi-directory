@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MarketingEventExternalUniqueIdentifier } from "./marketingeventexternaluniqueidentifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchInputMarketingEventExternalUniqueIdentifier = void 0;
+var utils_1 = require("../../../internal/utils");
+var marketingeventexternaluniqueidentifier_1 = require("./marketingeventexternaluniqueidentifier");
 var BatchInputMarketingEventExternalUniqueIdentifier = /** @class */ (function (_super) {
     __extends(BatchInputMarketingEventExternalUniqueIdentifier, _super);
     function BatchInputMarketingEventExternalUniqueIdentifier() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputs", elemType: MarketingEventExternalUniqueIdentifier }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputs", elemType: marketingeventexternaluniqueidentifier_1.MarketingEventExternalUniqueIdentifier }),
         __metadata("design:type", Array)
     ], BatchInputMarketingEventExternalUniqueIdentifier.prototype, "inputs", void 0);
     return BatchInputMarketingEventExternalUniqueIdentifier;
-}(SpeakeasyBase));
-export { BatchInputMarketingEventExternalUniqueIdentifier };
+}(utils_1.SpeakeasyBase));
+exports.BatchInputMarketingEventExternalUniqueIdentifier = BatchInputMarketingEventExternalUniqueIdentifier;

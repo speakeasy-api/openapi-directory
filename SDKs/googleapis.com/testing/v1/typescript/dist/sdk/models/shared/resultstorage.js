@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudStorage } from "./googlecloudstorage";
-import { ToolResultsExecution } from "./toolresultsexecution";
-import { ToolResultsHistory } from "./toolresultshistory";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResultStorage = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudstorage_1 = require("./googlecloudstorage");
+var toolresultsexecution_1 = require("./toolresultsexecution");
+var toolresultshistory_1 = require("./toolresultshistory");
 // ResultStorage
 /**
  * Locations where the results of running the test are stored.
@@ -36,21 +39,21 @@ var ResultStorage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleCloudStorage" }),
-        __metadata("design:type", GoogleCloudStorage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleCloudStorage" }),
+        __metadata("design:type", googlecloudstorage_1.GoogleCloudStorage)
     ], ResultStorage.prototype, "googleCloudStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resultsUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resultsUrl" }),
         __metadata("design:type", String)
     ], ResultStorage.prototype, "resultsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=toolResultsExecution" }),
-        __metadata("design:type", ToolResultsExecution)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=toolResultsExecution" }),
+        __metadata("design:type", toolresultsexecution_1.ToolResultsExecution)
     ], ResultStorage.prototype, "toolResultsExecution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=toolResultsHistory" }),
-        __metadata("design:type", ToolResultsHistory)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=toolResultsHistory" }),
+        __metadata("design:type", toolresultshistory_1.ToolResultsHistory)
     ], ResultStorage.prototype, "toolResultsHistory", void 0);
     return ResultStorage;
-}(SpeakeasyBase));
-export { ResultStorage };
+}(utils_1.SpeakeasyBase));
+exports.ResultStorage = ResultStorage;

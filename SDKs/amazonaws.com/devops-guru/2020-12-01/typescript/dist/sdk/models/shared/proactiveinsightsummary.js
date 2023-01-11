@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InsightTimeRange } from "./insighttimerange";
-import { PredictionTimeRange } from "./predictiontimerange";
-import { ResourceCollection } from "./resourcecollection";
-import { ServiceCollection } from "./servicecollection";
-import { InsightSeverityEnum } from "./insightseverityenum";
-import { InsightStatusEnum } from "./insightstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProactiveInsightSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var insighttimerange_1 = require("./insighttimerange");
+var predictiontimerange_1 = require("./predictiontimerange");
+var resourcecollection_1 = require("./resourcecollection");
+var servicecollection_1 = require("./servicecollection");
+var insightseverityenum_1 = require("./insightseverityenum");
+var insightstatusenum_1 = require("./insightstatusenum");
 // ProactiveInsightSummary
 /**
  * Details about a proactive insight. This object is returned by <code>DescribeInsight.</code>
@@ -39,37 +42,37 @@ var ProactiveInsightSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], ProactiveInsightSummary.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InsightTimeRange" }),
-        __metadata("design:type", InsightTimeRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InsightTimeRange" }),
+        __metadata("design:type", insighttimerange_1.InsightTimeRange)
     ], ProactiveInsightSummary.prototype, "insightTimeRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], ProactiveInsightSummary.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PredictionTimeRange" }),
-        __metadata("design:type", PredictionTimeRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PredictionTimeRange" }),
+        __metadata("design:type", predictiontimerange_1.PredictionTimeRange)
     ], ProactiveInsightSummary.prototype, "predictionTimeRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceCollection" }),
-        __metadata("design:type", ResourceCollection)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceCollection" }),
+        __metadata("design:type", resourcecollection_1.ResourceCollection)
     ], ProactiveInsightSummary.prototype, "resourceCollection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceCollection" }),
-        __metadata("design:type", ServiceCollection)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceCollection" }),
+        __metadata("design:type", servicecollection_1.ServiceCollection)
     ], ProactiveInsightSummary.prototype, "serviceCollection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Severity" }),
         __metadata("design:type", String)
     ], ProactiveInsightSummary.prototype, "severity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], ProactiveInsightSummary.prototype, "status", void 0);
     return ProactiveInsightSummary;
-}(SpeakeasyBase));
-export { ProactiveInsightSummary };
+}(utils_1.SpeakeasyBase));
+exports.ProactiveInsightSummary = ProactiveInsightSummary;

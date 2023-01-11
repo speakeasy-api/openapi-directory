@@ -52,5 +52,5 @@ export class CreateNetworkSwitchLinkAggregationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createNetworkSwitchLinkAggregation201ApplicationJsonObject?: Map<string, any>;
+  createNetworkSwitchLinkAggregation201ApplicationJSONObject?: Record<string, any>;
 }

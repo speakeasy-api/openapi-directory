@@ -36,6 +36,6 @@ export declare class BigqueryconnectionProjectsLocationsConnectionsUpdateCredent
 }
 export declare class BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

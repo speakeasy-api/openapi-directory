@@ -46,5 +46,5 @@ export class CreateNetworkSwitchStackRoutingStaticRouteResponse extends Speakeas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createNetworkSwitchStackRoutingStaticRoute201ApplicationJsonObject?: Map<string, any>;
+  createNetworkSwitchStackRoutingStaticRoute201ApplicationJSONObject?: Record<string, any>;
 }

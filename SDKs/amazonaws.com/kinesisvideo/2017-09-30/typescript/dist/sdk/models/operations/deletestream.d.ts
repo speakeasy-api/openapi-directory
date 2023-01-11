@@ -10,7 +10,7 @@ export declare class DeleteStreamHeaders extends SpeakeasyBase {
 }
 export declare class DeleteStreamRequestBody extends SpeakeasyBase {
     currentVersion?: string;
-    streamArn: string;
+    streamARN: string;
 }
 export declare class DeleteStreamRequest extends SpeakeasyBase {
     headers: DeleteStreamHeaders;
@@ -19,7 +19,7 @@ export declare class DeleteStreamRequest extends SpeakeasyBase {
 export declare class DeleteStreamResponse extends SpeakeasyBase {
     clientLimitExceededException?: any;
     contentType: string;
-    deleteStreamOutput?: Map<string, any>;
+    deleteStreamOutput?: Record<string, any>;
     invalidArgumentException?: any;
     notAuthorizedException?: any;
     resourceInUseException?: any;

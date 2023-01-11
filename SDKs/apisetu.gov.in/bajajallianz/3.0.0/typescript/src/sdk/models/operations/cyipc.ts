@@ -188,23 +188,23 @@ export class CyipcResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cyipc400ApplicationJsonObject?: Cyipc400ApplicationJson;
+  cyipc400ApplicationJSONObject?: Cyipc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  cyipc401ApplicationJsonObject?: Cyipc401ApplicationJson;
+  cyipc401ApplicationJSONObject?: Cyipc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  cyipc404ApplicationJsonObject?: Cyipc404ApplicationJson;
+  cyipc404ApplicationJSONObject?: Cyipc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  cyipc500ApplicationJsonObject?: Cyipc500ApplicationJson;
+  cyipc500ApplicationJSONObject?: Cyipc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  cyipc502ApplicationJsonObject?: Cyipc502ApplicationJson;
+  cyipc502ApplicationJSONObject?: Cyipc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  cyipc503ApplicationJsonObject?: Cyipc503ApplicationJson;
+  cyipc503ApplicationJSONObject?: Cyipc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  cyipc504ApplicationJsonObject?: Cyipc504ApplicationJson;
+  cyipc504ApplicationJSONObject?: Cyipc504ApplicationJson;
 }

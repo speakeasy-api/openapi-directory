@@ -21,7 +21,7 @@ export declare class PostOptimalDirectionsOutputFormatQueryParams extends Speake
     departure?: Date;
     disable?: string;
     distanceUnit?: PostOptimalDirectionsOutputFormatDistanceUnitEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     points: string;
     roundTrip?: boolean;
     routeDescription?: string;

@@ -30,7 +30,7 @@ export declare class PrefixStatus extends SpeakeasyBase {
 }
 export declare class Prefix extends SpeakeasyBase {
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     family?: PrefixFamily;
     id?: number;

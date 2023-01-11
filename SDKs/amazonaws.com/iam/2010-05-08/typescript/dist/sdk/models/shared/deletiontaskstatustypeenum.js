@@ -1,7 +1,10 @@
-export var DeletionTaskStatusTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeletionTaskStatusTypeEnum = void 0;
+var DeletionTaskStatusTypeEnum;
 (function (DeletionTaskStatusTypeEnum) {
     DeletionTaskStatusTypeEnum["Succeeded"] = "SUCCEEDED";
     DeletionTaskStatusTypeEnum["InProgress"] = "IN_PROGRESS";
     DeletionTaskStatusTypeEnum["Failed"] = "FAILED";
     DeletionTaskStatusTypeEnum["NotStarted"] = "NOT_STARTED";
-})(DeletionTaskStatusTypeEnum || (DeletionTaskStatusTypeEnum = {}));
+})(DeletionTaskStatusTypeEnum = exports.DeletionTaskStatusTypeEnum || (exports.DeletionTaskStatusTypeEnum = {}));

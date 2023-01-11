@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AppResponseStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppResponse = exports.AppResponseStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AppResponseStatusEnum;
 (function (AppResponseStatusEnum) {
     AppResponseStatusEnum["Enabled"] = "enabled";
     AppResponseStatusEnum["Disabled"] = "disabled";
-})(AppResponseStatusEnum || (AppResponseStatusEnum = {}));
+})(AppResponseStatusEnum = exports.AppResponseStatusEnum || (exports.AppResponseStatusEnum = {}));
 var AppResponse = /** @class */ (function (_super) {
     __extends(AppResponse, _super);
     function AppResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
+        __metadata("design:type", Object)
     ], AppResponse.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], AppResponse.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apnsUseSandboxEndpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apnsUseSandboxEndpoint" }),
         __metadata("design:type", Boolean)
     ], AppResponse.prototype, "apnsUseSandboxEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AppResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AppResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AppResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tlsOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tlsOnly" }),
         __metadata("design:type", Boolean)
     ], AppResponse.prototype, "tlsOnly", void 0);
     return AppResponse;
-}(SpeakeasyBase));
-export { AppResponse };
+}(utils_1.SpeakeasyBase));
+exports.AppResponse = AppResponse;

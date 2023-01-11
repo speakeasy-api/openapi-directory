@@ -22,9 +22,9 @@ export declare class GetV4LayersAsHarvestedRequest extends SpeakeasyBase {
 }
 export declare class GetV4LayersAsHarvestedResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
-    error?: shared.Error;
+    empty?: Record<string, any>;
+    error?: shared.ErrorT;
     harvestActivities?: any;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

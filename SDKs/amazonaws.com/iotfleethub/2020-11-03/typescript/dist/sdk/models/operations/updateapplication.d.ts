@@ -29,5 +29,5 @@ export declare class UpdateApplicationResponse extends SpeakeasyBase {
     resourceNotFoundException?: any;
     statusCode: number;
     throttlingException?: any;
-    updateApplicationResponse?: Map<string, any>;
+    updateApplicationResponse?: Record<string, any>;
 }

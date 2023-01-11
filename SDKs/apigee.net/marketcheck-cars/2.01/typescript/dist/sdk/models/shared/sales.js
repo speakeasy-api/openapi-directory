@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SalesStats } from "./salesstats";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Sales = void 0;
+var utils_1 = require("../../../internal/utils");
+var salesstats_1 = require("./salesstats");
 // Sales
 /**
  * Sales count query response
@@ -34,61 +37,61 @@ var Sales = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], Sales.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=counts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=counts" }),
         __metadata("design:type", Number)
     ], Sales.prototype, "counts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpo" }),
         __metadata("design:type", Number)
     ], Sales.prototype, "cpo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dom_stats" }),
-        __metadata("design:type", SalesStats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dom_stats" }),
+        __metadata("design:type", salesstats_1.SalesStats)
     ], Sales.prototype, "domStats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventory_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventory_type" }),
         __metadata("design:type", String)
     ], Sales.prototype, "inventoryType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=make" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=make" }),
         __metadata("design:type", String)
     ], Sales.prototype, "make", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=miles_stats" }),
-        __metadata("design:type", SalesStats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=miles_stats" }),
+        __metadata("design:type", salesstats_1.SalesStats)
     ], Sales.prototype, "milesStats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=model" }),
         __metadata("design:type", String)
     ], Sales.prototype, "model", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=non-cpo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=non-cpo" }),
         __metadata("design:type", Number)
     ], Sales.prototype, "nonCpo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price_stats" }),
-        __metadata("design:type", SalesStats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price_stats" }),
+        __metadata("design:type", salesstats_1.SalesStats)
     ], Sales.prototype, "priceStats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Sales.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxonomy_vin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxonomy_vin" }),
         __metadata("design:type", String)
     ], Sales.prototype, "taxonomyVin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trim" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trim" }),
         __metadata("design:type", String)
     ], Sales.prototype, "trim", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=year" }),
         __metadata("design:type", String)
     ], Sales.prototype, "year", void 0);
     return Sales;
-}(SpeakeasyBase));
-export { Sales };
+}(utils_1.SpeakeasyBase));
+exports.Sales = Sales;

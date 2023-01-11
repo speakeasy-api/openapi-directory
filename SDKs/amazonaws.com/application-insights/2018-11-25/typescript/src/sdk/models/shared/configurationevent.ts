@@ -25,5 +25,5 @@ export class ConfigurationEvent extends SpeakeasyBase {
   eventTime?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=MonitoredResourceARN" })
-  monitoredResourceArn?: string;
+  monitoredResourceARN?: string;
 }

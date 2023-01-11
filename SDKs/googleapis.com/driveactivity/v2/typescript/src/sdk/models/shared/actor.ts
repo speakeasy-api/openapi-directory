@@ -11,10 +11,10 @@ import { User } from "./user";
 **/
 export class Actor extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=administrator" })
-  administrator?: Map<string, any>;
+  administrator?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=anonymous" })
-  anonymous?: Map<string, any>;
+  anonymous?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=impersonation" })
   impersonation?: Impersonation;

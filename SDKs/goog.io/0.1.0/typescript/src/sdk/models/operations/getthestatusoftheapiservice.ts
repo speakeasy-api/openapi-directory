@@ -13,7 +13,7 @@ export class GetTheStatusOfTheApiServiceResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getTheStatusOfTheApiService200ApplicationJsonObject?: GetTheStatusOfTheApiService200ApplicationJson;
+  getTheStatusOfTheAPIService200ApplicationJSONObject?: GetTheStatusOfTheApiService200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

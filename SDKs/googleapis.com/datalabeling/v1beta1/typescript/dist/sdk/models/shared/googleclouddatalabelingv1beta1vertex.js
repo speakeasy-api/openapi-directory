@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1Vertex = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudDatalabelingV1beta1Vertex
 /**
  * A vertex represents a 2D point in the image. NOTE: the vertex coordinates are in the same scale as the original image.
@@ -33,13 +36,13 @@ var GoogleCloudDatalabelingV1beta1Vertex = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=x" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=x" }),
         __metadata("design:type", Number)
     ], GoogleCloudDatalabelingV1beta1Vertex.prototype, "x", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=y" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=y" }),
         __metadata("design:type", Number)
     ], GoogleCloudDatalabelingV1beta1Vertex.prototype, "y", void 0);
     return GoogleCloudDatalabelingV1beta1Vertex;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1Vertex };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1Vertex = GoogleCloudDatalabelingV1beta1Vertex;

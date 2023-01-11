@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudPolicyanalyzerV1ObservationPeriod } from "./googlecloudpolicyanalyzerv1observationperiod";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPolicyanalyzerV1Activity = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudpolicyanalyzerv1observationperiod_1 = require("./googlecloudpolicyanalyzerv1observationperiod");
 var GoogleCloudPolicyanalyzerV1Activity = /** @class */ (function (_super) {
     __extends(GoogleCloudPolicyanalyzerV1Activity, _super);
     function GoogleCloudPolicyanalyzerV1Activity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activity" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activity" }),
+        __metadata("design:type", Object)
     ], GoogleCloudPolicyanalyzerV1Activity.prototype, "activity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activityType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activityType" }),
         __metadata("design:type", String)
     ], GoogleCloudPolicyanalyzerV1Activity.prototype, "activityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fullResourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fullResourceName" }),
         __metadata("design:type", String)
     ], GoogleCloudPolicyanalyzerV1Activity.prototype, "fullResourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=observationPeriod" }),
-        __metadata("design:type", GoogleCloudPolicyanalyzerV1ObservationPeriod)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=observationPeriod" }),
+        __metadata("design:type", googlecloudpolicyanalyzerv1observationperiod_1.GoogleCloudPolicyanalyzerV1ObservationPeriod)
     ], GoogleCloudPolicyanalyzerV1Activity.prototype, "observationPeriod", void 0);
     return GoogleCloudPolicyanalyzerV1Activity;
-}(SpeakeasyBase));
-export { GoogleCloudPolicyanalyzerV1Activity };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPolicyanalyzerV1Activity = GoogleCloudPolicyanalyzerV1Activity;

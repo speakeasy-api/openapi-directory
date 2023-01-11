@@ -188,23 +188,23 @@ export class PsprtResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  psprt400ApplicationJsonObject?: Psprt400ApplicationJson;
+  psprt400ApplicationJSONObject?: Psprt400ApplicationJson;
 
   @SpeakeasyMetadata()
-  psprt401ApplicationJsonObject?: Psprt401ApplicationJson;
+  psprt401ApplicationJSONObject?: Psprt401ApplicationJson;
 
   @SpeakeasyMetadata()
-  psprt404ApplicationJsonObject?: Psprt404ApplicationJson;
+  psprt404ApplicationJSONObject?: Psprt404ApplicationJson;
 
   @SpeakeasyMetadata()
-  psprt500ApplicationJsonObject?: Psprt500ApplicationJson;
+  psprt500ApplicationJSONObject?: Psprt500ApplicationJson;
 
   @SpeakeasyMetadata()
-  psprt502ApplicationJsonObject?: Psprt502ApplicationJson;
+  psprt502ApplicationJSONObject?: Psprt502ApplicationJson;
 
   @SpeakeasyMetadata()
-  psprt503ApplicationJsonObject?: Psprt503ApplicationJson;
+  psprt503ApplicationJSONObject?: Psprt503ApplicationJson;
 
   @SpeakeasyMetadata()
-  psprt504ApplicationJsonObject?: Psprt504ApplicationJson;
+  psprt504ApplicationJSONObject?: Psprt504ApplicationJson;
 }

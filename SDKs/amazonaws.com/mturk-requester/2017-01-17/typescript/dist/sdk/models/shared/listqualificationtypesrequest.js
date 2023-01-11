@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListQualificationTypesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListQualificationTypesRequest = /** @class */ (function (_super) {
     __extends(ListQualificationTypesRequest, _super);
     function ListQualificationTypesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], ListQualificationTypesRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MustBeOwnedByCaller" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MustBeOwnedByCaller" }),
         __metadata("design:type", Boolean)
     ], ListQualificationTypesRequest.prototype, "mustBeOwnedByCaller", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MustBeRequestable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MustBeRequestable" }),
         __metadata("design:type", Boolean)
     ], ListQualificationTypesRequest.prototype, "mustBeRequestable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListQualificationTypesRequest.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Query" }),
         __metadata("design:type", String)
     ], ListQualificationTypesRequest.prototype, "query", void 0);
     return ListQualificationTypesRequest;
-}(SpeakeasyBase));
-export { ListQualificationTypesRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListQualificationTypesRequest = ListQualificationTypesRequest;

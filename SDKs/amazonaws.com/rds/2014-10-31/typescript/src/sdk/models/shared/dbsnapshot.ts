@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProcessorFeature } from "./processorfeature";
-import { Tag } from "./tag";
+import { ProcessorFeatureList } from "./processorfeaturelist";
+import { TagList } from "./taglist";
 
 
 
@@ -66,8 +66,8 @@ export class DbSnapshot extends SpeakeasyBase {
   @SpeakeasyMetadata()
   port?: number;
 
-  @SpeakeasyMetadata({ elemType: ProcessorFeature })
-  processorFeatures?: ProcessorFeature[];
+  @SpeakeasyMetadata({ elemType: ProcessorFeatureList })
+  processorFeatures?: ProcessorFeatureList[];
 
   @SpeakeasyMetadata()
   snapshotCreateTime?: Date;
@@ -76,7 +76,7 @@ export class DbSnapshot extends SpeakeasyBase {
   snapshotType?: string;
 
   @SpeakeasyMetadata()
-  sourceDbSnapshotIdentifier?: string;
+  sourceDBSnapshotIdentifier?: string;
 
   @SpeakeasyMetadata()
   sourceRegion?: string;
@@ -87,8 +87,8 @@ export class DbSnapshot extends SpeakeasyBase {
   @SpeakeasyMetadata()
   storageType?: string;
 
-  @SpeakeasyMetadata({ elemType: Tag })
-  tagList?: Tag[];
+  @SpeakeasyMetadata({ elemType: TagList })
+  tagList?: TagList[];
 
   @SpeakeasyMetadata()
   tdeCredentialArn?: string;

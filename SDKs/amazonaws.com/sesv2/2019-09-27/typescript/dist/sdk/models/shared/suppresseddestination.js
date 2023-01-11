@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SuppressedDestinationAttributes } from "./suppresseddestinationattributes";
-import { SuppressionListReasonEnum } from "./suppressionlistreasonenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SuppressedDestination = void 0;
+var utils_1 = require("../../../internal/utils");
+var suppresseddestinationattributes_1 = require("./suppresseddestinationattributes");
+var suppressionlistreasonenum_1 = require("./suppressionlistreasonenum");
 // SuppressedDestination
 /**
  * An object that contains information about an email address that is on the suppression list for your account.
@@ -35,21 +38,21 @@ var SuppressedDestination = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Attributes" }),
-        __metadata("design:type", SuppressedDestinationAttributes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Attributes" }),
+        __metadata("design:type", suppresseddestinationattributes_1.SuppressedDestinationAttributes)
     ], SuppressedDestination.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmailAddress" }),
         __metadata("design:type", String)
     ], SuppressedDestination.prototype, "emailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdateTime" }),
         __metadata("design:type", Date)
     ], SuppressedDestination.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Reason" }),
         __metadata("design:type", String)
     ], SuppressedDestination.prototype, "reason", void 0);
     return SuppressedDestination;
-}(SpeakeasyBase));
-export { SuppressedDestination };
+}(utils_1.SpeakeasyBase));
+exports.SuppressedDestination = SuppressedDestination;

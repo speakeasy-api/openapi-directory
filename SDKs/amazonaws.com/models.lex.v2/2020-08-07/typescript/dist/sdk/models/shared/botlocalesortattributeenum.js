@@ -1,4 +1,7 @@
-export var BotLocaleSortAttributeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BotLocaleSortAttributeEnum = void 0;
+var BotLocaleSortAttributeEnum;
 (function (BotLocaleSortAttributeEnum) {
     BotLocaleSortAttributeEnum["BotLocaleName"] = "BotLocaleName";
-})(BotLocaleSortAttributeEnum || (BotLocaleSortAttributeEnum = {}));
+})(BotLocaleSortAttributeEnum = exports.BotLocaleSortAttributeEnum || (exports.BotLocaleSortAttributeEnum = {}));

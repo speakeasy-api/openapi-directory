@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReleaseEventApiGetNamesResponse = exports.ReleaseEventApiGetNamesRequest = exports.ReleaseEventApiGetNamesQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReleaseEventApiGetNamesQueryParams = /** @class */ (function (_super) {
     __extends(ReleaseEventApiGetNamesQueryParams, _super);
     function ReleaseEventApiGetNamesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxResults" }),
         __metadata("design:type", Number)
     ], ReleaseEventApiGetNamesQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], ReleaseEventApiGetNamesQueryParams.prototype, "query", void 0);
     return ReleaseEventApiGetNamesQueryParams;
-}(SpeakeasyBase));
-export { ReleaseEventApiGetNamesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ReleaseEventApiGetNamesQueryParams = ReleaseEventApiGetNamesQueryParams;
 var ReleaseEventApiGetNamesRequest = /** @class */ (function (_super) {
     __extends(ReleaseEventApiGetNamesRequest, _super);
     function ReleaseEventApiGetNamesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReleaseEventApiGetNamesQueryParams)
     ], ReleaseEventApiGetNamesRequest.prototype, "queryParams", void 0);
     return ReleaseEventApiGetNamesRequest;
-}(SpeakeasyBase));
-export { ReleaseEventApiGetNamesRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReleaseEventApiGetNamesRequest = ReleaseEventApiGetNamesRequest;
 var ReleaseEventApiGetNamesResponse = /** @class */ (function (_super) {
     __extends(ReleaseEventApiGetNamesResponse, _super);
     function ReleaseEventApiGetNamesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], ReleaseEventApiGetNamesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReleaseEventApiGetNamesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ReleaseEventApiGetNamesResponse.prototype, "releaseEventApiGetNames200ApplicationJsonStrings", void 0);
+    ], ReleaseEventApiGetNamesResponse.prototype, "releaseEventApiGetNames200ApplicationJSONStrings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ReleaseEventApiGetNamesResponse.prototype, "releaseEventApiGetNames200ApplicationJsonpStrings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ReleaseEventApiGetNamesResponse.prototype, "releaseEventApiGetNames200TextJsonStrings", void 0);
+    ], ReleaseEventApiGetNamesResponse.prototype, "releaseEventApiGetNames200TextJSONStrings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReleaseEventApiGetNamesResponse.prototype, "statusCode", void 0);
     return ReleaseEventApiGetNamesResponse;
-}(SpeakeasyBase));
-export { ReleaseEventApiGetNamesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReleaseEventApiGetNamesResponse = ReleaseEventApiGetNamesResponse;

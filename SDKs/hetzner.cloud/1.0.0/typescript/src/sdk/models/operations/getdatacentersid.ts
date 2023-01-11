@@ -86,8 +86,8 @@ export class GetDatacentersIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getDatacentersId200ApplicationJsonObject?: GetDatacentersId200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getDatacentersId200ApplicationJSONObject?: GetDatacentersId200ApplicationJson;
 }

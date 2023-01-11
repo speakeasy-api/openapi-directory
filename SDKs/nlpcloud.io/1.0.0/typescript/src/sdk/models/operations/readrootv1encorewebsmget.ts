@@ -10,5 +10,5 @@ export class ReadRootV1EnCoreWebSmGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  readRootV1EnCoreWebSmGet200ApplicationJsonAny?: any;
+  readRootV1EnCoreWebSmGet200ApplicationJSONAny?: any;
 }

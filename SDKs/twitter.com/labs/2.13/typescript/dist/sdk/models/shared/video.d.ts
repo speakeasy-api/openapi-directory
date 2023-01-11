@@ -40,6 +40,9 @@ export declare class VideoPublicMetrics extends SpeakeasyBase {
 export declare enum VideoTypeEnum {
     Video = "video"
 }
+/**
+ * This contains the list of the fields that are common to all media returned.
+**/
 export declare class Video extends SpeakeasyBase {
     durationMs?: number;
     height?: number;

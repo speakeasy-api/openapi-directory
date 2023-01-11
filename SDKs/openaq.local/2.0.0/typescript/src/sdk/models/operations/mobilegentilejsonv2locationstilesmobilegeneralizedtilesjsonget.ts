@@ -11,5 +11,5 @@ export class MobilegentilejsonV2LocationsTilesMobileGeneralizedTilesJsonGetRespo
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tileJson?: shared.TileJson;
+  tileJSON?: shared.TileJson;
 }

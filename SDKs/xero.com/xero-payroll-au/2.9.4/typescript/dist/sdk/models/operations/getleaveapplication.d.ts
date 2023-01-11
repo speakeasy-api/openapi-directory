@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class GetLeaveApplicationPathParams extends SpeakeasyBase {
-    leaveApplicationId: string;
+    leaveApplicationID: string;
 }
 export declare class GetLeaveApplicationHeaders extends SpeakeasyBase {
     xeroTenantId: string;

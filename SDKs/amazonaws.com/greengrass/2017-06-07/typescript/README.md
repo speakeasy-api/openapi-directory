@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AssociateRoleToGroupRequest, AssociateRoleToGroupResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,23 +33,23 @@ const sdk = new SDK(WithSecurity(
     
 const req: AssociateRoleToGroupRequest = {
   pathParams: {
-    groupId: "cupiditate",
+    groupId: "sit",
   },
   headers: {
-    xAmzAlgorithm: "impedit",
-    xAmzContentSha256: "voluptas",
-    xAmzCredential: "reprehenderit",
-    xAmzDate: "nesciunt",
-    xAmzSecurityToken: "aut",
-    xAmzSignature: "necessitatibus",
-    xAmzSignedHeaders: "corrupti",
+    xAmzAlgorithm: "voluptas",
+    xAmzContentSha256: "culpa",
+    xAmzCredential: "expedita",
+    xAmzDate: "consequuntur",
+    xAmzSecurityToken: "dolor",
+    xAmzSignature: "expedita",
+    xAmzSignedHeaders: "voluptas",
   },
   request: {
-    roleArn: "aspernatur",
+    roleArn: "fugit",
   },
 };
 
-sdk.sdk.associateRoleToGroup(req).then((res: AssociateRoleToGroupResponse | AxiosError) => {
+sdk.associateRoleToGroup(req).then((res: AssociateRoleToGroupResponse | AxiosError) => {
    // handle response
 });
 ```

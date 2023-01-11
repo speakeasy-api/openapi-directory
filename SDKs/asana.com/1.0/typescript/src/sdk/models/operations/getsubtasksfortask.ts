@@ -50,5 +50,5 @@ export class GetSubtasksForTaskResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getSubtasksForTask200ApplicationJsonObject?: GetSubtasksForTask200ApplicationJson;
+  getSubtasksForTask200ApplicationJSONObject?: GetSubtasksForTask200ApplicationJson;
 }

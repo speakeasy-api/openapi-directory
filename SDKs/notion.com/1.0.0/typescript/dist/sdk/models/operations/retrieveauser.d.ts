@@ -18,7 +18,7 @@ export declare class RetrieveAUserRequest extends SpeakeasyBase {
 }
 export declare class RetrieveAUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    retrieveAUser200ApplicationJsonObject?: RetrieveAUser200ApplicationJson;
+    retrieveAUser200ApplicationJSONObject?: RetrieveAUser200ApplicationJson;
 }

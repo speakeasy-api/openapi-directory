@@ -7,7 +7,7 @@ export class NearEarthObjectList extends SpeakeasyBase {
   elementCount?: number;
 
   @SpeakeasyMetadata({ data: "json, name=links" })
-  links?: Map<string, any>;
+  links?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=near_earth_objects" })
   nearEarthObjects?: any;

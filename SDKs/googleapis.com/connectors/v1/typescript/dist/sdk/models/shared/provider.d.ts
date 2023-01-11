@@ -14,7 +14,7 @@ export declare class Provider extends SpeakeasyBase {
     displayName?: string;
     documentationUri?: string;
     externalUri?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     launchStage?: ProviderLaunchStageEnum;
     name?: string;
     updateTime?: string;

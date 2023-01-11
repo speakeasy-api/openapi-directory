@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VideoMetadata } from "./videometadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoContent = void 0;
+var utils_1 = require("../../../internal/utils");
+var videometadata_1 = require("./videometadata");
 // VideoContent
 /**
  * Video content for a creative.
@@ -34,17 +37,17 @@ var VideoContent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoMetadata" }),
-        __metadata("design:type", VideoMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoMetadata" }),
+        __metadata("design:type", videometadata_1.VideoMetadata)
     ], VideoContent.prototype, "videoMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoUrl" }),
         __metadata("design:type", String)
     ], VideoContent.prototype, "videoUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoVastXml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoVastXml" }),
         __metadata("design:type", String)
     ], VideoContent.prototype, "videoVastXml", void 0);
     return VideoContent;
-}(SpeakeasyBase));
-export { VideoContent };
+}(utils_1.SpeakeasyBase));
+exports.VideoContent = VideoContent;

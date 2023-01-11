@@ -28,11 +28,11 @@ export declare class ComputeEngineTargetDefaults extends SpeakeasyBase {
     computeScheduling?: ComputeScheduling;
     diskType?: ComputeEngineTargetDefaultsDiskTypeEnum;
     hostname?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     licenseType?: ComputeEngineTargetDefaultsLicenseTypeEnum;
     machineType?: string;
     machineTypeSeries?: string;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     networkInterfaces?: NetworkInterface[];
     networkTags?: string[];
     secureBoot?: boolean;
@@ -50,11 +50,11 @@ export declare class ComputeEngineTargetDefaultsInput extends SpeakeasyBase {
     computeScheduling?: ComputeScheduling;
     diskType?: ComputeEngineTargetDefaultsDiskTypeEnum;
     hostname?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     licenseType?: ComputeEngineTargetDefaultsLicenseTypeEnum;
     machineType?: string;
     machineTypeSeries?: string;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     networkInterfaces?: NetworkInterface[];
     networkTags?: string[];
     secureBoot?: boolean;

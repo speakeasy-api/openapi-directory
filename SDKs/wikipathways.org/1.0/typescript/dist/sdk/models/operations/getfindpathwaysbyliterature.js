@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetFindPathwaysByLiteratureFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetFindPathwaysByLiteratureResponse = exports.GetFindPathwaysByLiteratureRequest = exports.GetFindPathwaysByLiteratureQueryParams = exports.GetFindPathwaysByLiteratureFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetFindPathwaysByLiteratureFormatEnum;
 (function (GetFindPathwaysByLiteratureFormatEnum) {
     GetFindPathwaysByLiteratureFormatEnum["Json"] = "json";
     GetFindPathwaysByLiteratureFormatEnum["Xml"] = "xml";
@@ -31,48 +34,48 @@ export var GetFindPathwaysByLiteratureFormatEnum;
     GetFindPathwaysByLiteratureFormatEnum["Dump"] = "dump";
     GetFindPathwaysByLiteratureFormatEnum["Jpg"] = "jpg";
     GetFindPathwaysByLiteratureFormatEnum["Pdf"] = "pdf";
-})(GetFindPathwaysByLiteratureFormatEnum || (GetFindPathwaysByLiteratureFormatEnum = {}));
+})(GetFindPathwaysByLiteratureFormatEnum = exports.GetFindPathwaysByLiteratureFormatEnum || (exports.GetFindPathwaysByLiteratureFormatEnum = {}));
 var GetFindPathwaysByLiteratureQueryParams = /** @class */ (function (_super) {
     __extends(GetFindPathwaysByLiteratureQueryParams, _super);
     function GetFindPathwaysByLiteratureQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetFindPathwaysByLiteratureQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], GetFindPathwaysByLiteratureQueryParams.prototype, "query", void 0);
     return GetFindPathwaysByLiteratureQueryParams;
-}(SpeakeasyBase));
-export { GetFindPathwaysByLiteratureQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetFindPathwaysByLiteratureQueryParams = GetFindPathwaysByLiteratureQueryParams;
 var GetFindPathwaysByLiteratureRequest = /** @class */ (function (_super) {
     __extends(GetFindPathwaysByLiteratureRequest, _super);
     function GetFindPathwaysByLiteratureRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetFindPathwaysByLiteratureQueryParams)
     ], GetFindPathwaysByLiteratureRequest.prototype, "queryParams", void 0);
     return GetFindPathwaysByLiteratureRequest;
-}(SpeakeasyBase));
-export { GetFindPathwaysByLiteratureRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetFindPathwaysByLiteratureRequest = GetFindPathwaysByLiteratureRequest;
 var GetFindPathwaysByLiteratureResponse = /** @class */ (function (_super) {
     __extends(GetFindPathwaysByLiteratureResponse, _super);
     function GetFindPathwaysByLiteratureResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetFindPathwaysByLiteratureResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetFindPathwaysByLiteratureResponse.prototype, "statusCode", void 0);
     return GetFindPathwaysByLiteratureResponse;
-}(SpeakeasyBase));
-export { GetFindPathwaysByLiteratureResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetFindPathwaysByLiteratureResponse = GetFindPathwaysByLiteratureResponse;

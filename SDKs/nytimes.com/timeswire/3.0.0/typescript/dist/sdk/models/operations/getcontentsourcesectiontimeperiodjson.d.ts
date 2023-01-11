@@ -26,6 +26,6 @@ export declare class GetContentSourceSectionTimePeriodJsonRequest extends Speake
 }
 export declare class GetContentSourceSectionTimePeriodJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getContentSourceSectionTimePeriodJson200ApplicationJsonObject?: GetContentSourceSectionTimePeriodJson200ApplicationJson;
     statusCode: number;
+    getContentSourceSectionTimePeriodJSON200ApplicationJSONObject?: GetContentSourceSectionTimePeriodJson200ApplicationJson;
 }

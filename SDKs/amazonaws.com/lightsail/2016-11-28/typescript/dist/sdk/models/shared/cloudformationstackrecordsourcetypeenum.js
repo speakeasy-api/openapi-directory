@@ -1,4 +1,7 @@
-export var CloudFormationStackRecordSourceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudFormationStackRecordSourceTypeEnum = void 0;
+var CloudFormationStackRecordSourceTypeEnum;
 (function (CloudFormationStackRecordSourceTypeEnum) {
     CloudFormationStackRecordSourceTypeEnum["ExportSnapshotRecord"] = "ExportSnapshotRecord";
-})(CloudFormationStackRecordSourceTypeEnum || (CloudFormationStackRecordSourceTypeEnum = {}));
+})(CloudFormationStackRecordSourceTypeEnum = exports.CloudFormationStackRecordSourceTypeEnum || (exports.CloudFormationStackRecordSourceTypeEnum = {}));

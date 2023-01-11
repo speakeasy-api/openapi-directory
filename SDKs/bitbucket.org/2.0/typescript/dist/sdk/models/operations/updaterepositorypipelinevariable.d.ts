@@ -6,11 +6,11 @@ export declare class UpdateRepositoryPipelineVariablePathParams extends Speakeas
 }
 export declare class UpdateRepositoryPipelineVariableRequest extends SpeakeasyBase {
     pathParams: UpdateRepositoryPipelineVariablePathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class UpdateRepositoryPipelineVariableResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pipelineVariable?: Map<string, any>;
+    error?: Record<string, any>;
+    pipelineVariable?: Record<string, any>;
 }

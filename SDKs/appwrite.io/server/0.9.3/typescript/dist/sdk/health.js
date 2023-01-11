@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,8 +10,33 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import * as operations from "./models/operations";
-import * as utils from "../internal/utils";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Health = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
 var Health = /** @class */ (function () {
     function Health(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
         this._defaultClient = defaultClient;
@@ -31,9 +57,9 @@ var Health = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/health";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -44,8 +70,7 @@ var Health = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * healthGetAntiVirus - Get Anti virus
@@ -58,9 +83,9 @@ var Health = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/health/anti-virus";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -71,8 +96,7 @@ var Health = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * healthGetCache - Get Cache
@@ -85,9 +109,9 @@ var Health = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/health/cache";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -98,8 +122,7 @@ var Health = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * healthGetDb - Get DB
@@ -112,9 +135,9 @@ var Health = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/health/db";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -125,8 +148,7 @@ var Health = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * healthGetQueueCertificates - Get Certificate Queue
@@ -139,9 +161,9 @@ var Health = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/health/queue/certificates";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -152,8 +174,7 @@ var Health = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * healthGetQueueFunctions - Get Functions Queue
@@ -164,9 +185,9 @@ var Health = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/health/queue/functions";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -177,8 +198,7 @@ var Health = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * healthGetQueueLogs - Get Logs Queue
@@ -191,9 +211,9 @@ var Health = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/health/queue/logs";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -204,8 +224,7 @@ var Health = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * healthGetQueueTasks - Get Tasks Queue
@@ -218,9 +237,9 @@ var Health = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/health/queue/tasks";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -231,8 +250,7 @@ var Health = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * healthGetQueueUsage - Get Usage Queue
@@ -245,9 +263,9 @@ var Health = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/health/queue/usage";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -258,8 +276,7 @@ var Health = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * healthGetQueueWebhooks - Get Webhooks Queue
@@ -272,9 +289,9 @@ var Health = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/health/queue/webhooks";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -285,8 +302,7 @@ var Health = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * healthGetStorageLocal - Get Local Storage
@@ -299,9 +315,9 @@ var Health = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/health/storage/local";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -312,8 +328,7 @@ var Health = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * healthGetTime - Get Time
@@ -326,9 +341,9 @@ var Health = /** @class */ (function () {
         }
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/health/time";
-        var client = utils.CreateSecurityClient(this._defaultClient, req.security);
-        return client
-            .request(__assign({ url: url, method: "get" }, config)).then(function (httpRes) {
+        var client = utils.createSecurityClient(this._defaultClient, req.security);
+        var r = client.request(__assign({ url: url, method: "get" }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
@@ -339,9 +354,8 @@ var Health = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     return Health;
 }());
-export { Health };
+exports.Health = Health;

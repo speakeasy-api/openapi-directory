@@ -44,23 +44,6 @@ export declare enum EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExcept
 /**
  * Energy efficiency practices implemented at the hotel.
 **/
-export declare class EnergyEfficiencyInput extends SpeakeasyBase {
-    carbonFreeEnergySources?: boolean;
-    carbonFreeEnergySourcesException?: EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum;
-    energyConservationProgram?: boolean;
-    energyConservationProgramException?: EnergyEfficiencyEnergyConservationProgramExceptionEnum;
-    energyEfficientHeatingAndCoolingSystems?: boolean;
-    energyEfficientHeatingAndCoolingSystemsException?: EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum;
-    energyEfficientLighting?: boolean;
-    energyEfficientLightingException?: EnergyEfficiencyEnergyEfficientLightingExceptionEnum;
-    energySavingThermostats?: boolean;
-    energySavingThermostatsException?: EnergyEfficiencyEnergySavingThermostatsExceptionEnum;
-    independentOrganizationAuditsEnergyUse?: boolean;
-    independentOrganizationAuditsEnergyUseException?: EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum;
-}
-/**
- * Energy efficiency practices implemented at the hotel.
-**/
 export declare class EnergyEfficiency extends SpeakeasyBase {
     carbonFreeEnergySources?: boolean;
     carbonFreeEnergySourcesException?: EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum;
@@ -74,6 +57,23 @@ export declare class EnergyEfficiency extends SpeakeasyBase {
     energySavingThermostatsException?: EnergyEfficiencyEnergySavingThermostatsExceptionEnum;
     greenBuildingDesign?: boolean;
     greenBuildingDesignException?: EnergyEfficiencyGreenBuildingDesignExceptionEnum;
+    independentOrganizationAuditsEnergyUse?: boolean;
+    independentOrganizationAuditsEnergyUseException?: EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum;
+}
+/**
+ * Energy efficiency practices implemented at the hotel.
+**/
+export declare class EnergyEfficiencyInput extends SpeakeasyBase {
+    carbonFreeEnergySources?: boolean;
+    carbonFreeEnergySourcesException?: EnergyEfficiencyCarbonFreeEnergySourcesExceptionEnum;
+    energyConservationProgram?: boolean;
+    energyConservationProgramException?: EnergyEfficiencyEnergyConservationProgramExceptionEnum;
+    energyEfficientHeatingAndCoolingSystems?: boolean;
+    energyEfficientHeatingAndCoolingSystemsException?: EnergyEfficiencyEnergyEfficientHeatingAndCoolingSystemsExceptionEnum;
+    energyEfficientLighting?: boolean;
+    energyEfficientLightingException?: EnergyEfficiencyEnergyEfficientLightingExceptionEnum;
+    energySavingThermostats?: boolean;
+    energySavingThermostatsException?: EnergyEfficiencyEnergySavingThermostatsExceptionEnum;
     independentOrganizationAuditsEnergyUse?: boolean;
     independentOrganizationAuditsEnergyUseException?: EnergyEfficiencyIndependentOrganizationAuditsEnergyUseExceptionEnum;
 }

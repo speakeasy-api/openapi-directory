@@ -25,5 +25,5 @@ export class GetNetworkWirelessSsidEapOverrideResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessSsidEapOverride200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessSsidEapOverride200ApplicationJSONObject?: Record<string, any>;
 }

@@ -2,7 +2,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { CategoryType } from "./categorytype";
 import { InternationalReturnOverrideType } from "./internationalreturnoverridetype";
 import { TimeDuration } from "./timeduration";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 
 
 
@@ -53,6 +53,6 @@ export class SetReturnPolicyResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=returnsAccepted" })
   returnsAccepted?: boolean;
 
-  @SpeakeasyMetadata({ data: "json, name=warnings", elemType: Error })
-  warnings?: Error[];
+  @SpeakeasyMetadata({ data: "json, name=warnings", elemType: ErrorT })
+  warnings?: ErrorT[];
 }

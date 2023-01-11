@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Domains } from "./domains";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchResults = void 0;
+var utils_1 = require("../../../internal/utils");
+var domains_1 = require("./domains");
 var SearchResults = /** @class */ (function (_super) {
     __extends(SearchResults, _super);
     function SearchResults() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domains", elemType: Domains }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domains", elemType: domains_1.Domains }),
         __metadata("design:type", Array)
     ], SearchResults.prototype, "domains", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_page" }),
         __metadata("design:type", String)
     ], SearchResults.prototype, "nextPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time" }),
         __metadata("design:type", String)
     ], SearchResults.prototype, "time", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], SearchResults.prototype, "total", void 0);
     return SearchResults;
-}(SpeakeasyBase));
-export { SearchResults };
+}(utils_1.SpeakeasyBase));
+exports.SearchResults = SearchResults;

@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { OriginGroup } from "./origingroup";
+import { OriginGroupList } from "./origingrouplist";
 /**
  * A complex data type for the origin groups specified for a distribution.
 **/
 export declare class OriginGroups extends SpeakeasyBase {
-    items?: OriginGroup[];
+    items?: OriginGroupList[];
     quantity: number;
 }

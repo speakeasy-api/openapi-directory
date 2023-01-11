@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostBatchApplyUpdateActionActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostBatchApplyUpdateActionResponse = exports.PostBatchApplyUpdateActionRequest = exports.PostBatchApplyUpdateActionHeaders = exports.PostBatchApplyUpdateActionQueryParams = exports.PostBatchApplyUpdateActionVersionEnum = exports.PostBatchApplyUpdateActionActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostBatchApplyUpdateActionActionEnum;
 (function (PostBatchApplyUpdateActionActionEnum) {
     PostBatchApplyUpdateActionActionEnum["BatchApplyUpdateAction"] = "BatchApplyUpdateAction";
-})(PostBatchApplyUpdateActionActionEnum || (PostBatchApplyUpdateActionActionEnum = {}));
-export var PostBatchApplyUpdateActionVersionEnum;
+})(PostBatchApplyUpdateActionActionEnum = exports.PostBatchApplyUpdateActionActionEnum || (exports.PostBatchApplyUpdateActionActionEnum = {}));
+var PostBatchApplyUpdateActionVersionEnum;
 (function (PostBatchApplyUpdateActionVersionEnum) {
     PostBatchApplyUpdateActionVersionEnum["TwoThousandAndFifteen0202"] = "2015-02-02";
-})(PostBatchApplyUpdateActionVersionEnum || (PostBatchApplyUpdateActionVersionEnum = {}));
+})(PostBatchApplyUpdateActionVersionEnum = exports.PostBatchApplyUpdateActionVersionEnum || (exports.PostBatchApplyUpdateActionVersionEnum = {}));
 var PostBatchApplyUpdateActionQueryParams = /** @class */ (function (_super) {
     __extends(PostBatchApplyUpdateActionQueryParams, _super);
     function PostBatchApplyUpdateActionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostBatchApplyUpdateActionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostBatchApplyUpdateActionQueryParams.prototype, "version", void 0);
     return PostBatchApplyUpdateActionQueryParams;
-}(SpeakeasyBase));
-export { PostBatchApplyUpdateActionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostBatchApplyUpdateActionQueryParams = PostBatchApplyUpdateActionQueryParams;
 var PostBatchApplyUpdateActionHeaders = /** @class */ (function (_super) {
     __extends(PostBatchApplyUpdateActionHeaders, _super);
     function PostBatchApplyUpdateActionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostBatchApplyUpdateActionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostBatchApplyUpdateActionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostBatchApplyUpdateActionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostBatchApplyUpdateActionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostBatchApplyUpdateActionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostBatchApplyUpdateActionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostBatchApplyUpdateActionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostBatchApplyUpdateActionHeaders;
-}(SpeakeasyBase));
-export { PostBatchApplyUpdateActionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostBatchApplyUpdateActionHeaders = PostBatchApplyUpdateActionHeaders;
 var PostBatchApplyUpdateActionRequest = /** @class */ (function (_super) {
     __extends(PostBatchApplyUpdateActionRequest, _super);
     function PostBatchApplyUpdateActionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostBatchApplyUpdateActionQueryParams)
     ], PostBatchApplyUpdateActionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostBatchApplyUpdateActionHeaders)
     ], PostBatchApplyUpdateActionRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostBatchApplyUpdateActionRequest.prototype, "request", void 0);
     return PostBatchApplyUpdateActionRequest;
-}(SpeakeasyBase));
-export { PostBatchApplyUpdateActionRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostBatchApplyUpdateActionRequest = PostBatchApplyUpdateActionRequest;
 var PostBatchApplyUpdateActionResponse = /** @class */ (function (_super) {
     __extends(PostBatchApplyUpdateActionResponse, _super);
     function PostBatchApplyUpdateActionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostBatchApplyUpdateActionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostBatchApplyUpdateActionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostBatchApplyUpdateActionResponse.prototype, "statusCode", void 0);
     return PostBatchApplyUpdateActionResponse;
-}(SpeakeasyBase));
-export { PostBatchApplyUpdateActionResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostBatchApplyUpdateActionResponse = PostBatchApplyUpdateActionResponse;

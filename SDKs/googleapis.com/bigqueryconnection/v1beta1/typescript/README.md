@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BigqueryconnectionProjectsLocationsConnectionsCreateRequest, BigqueryconnectionProjectsLocationsConnectionsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,42 +31,42 @@ const req: BigqueryconnectionProjectsLocationsConnectionsCreateRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   pathParams: {
-    parent: "ratione",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "deserunt",
-    alt: "json",
-    callback: "itaque",
-    connectionId: "nam",
-    fields: "possimus",
-    key: "aspernatur",
-    oauthToken: "est",
-    prettyPrint: true,
-    quotaUser: "cum",
-    uploadType: "dolorum",
-    uploadProtocol: "voluptas",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    connectionId: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    prettyPrint: false,
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
     cloudSql: {
       credential: {
-        password: "et",
-        username: "dolor",
+        password: "debitis",
+        username: "voluptatum",
       },
-      database: "sint",
-      instanceId: "et",
-      type: "DATABASE_TYPE_UNSPECIFIED",
+      database: "et",
+      instanceId: "ut",
+      type: "MYSQL",
     },
-    description: "est",
-    friendlyName: "aut",
-    name: "autem",
+    description: "et",
+    friendlyName: "voluptate",
+    name: "iste",
   },
 };
 

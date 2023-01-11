@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { NestedTenant } from "./nestedtenant";
 export declare class Vrf extends SpeakeasyBase {
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     displayName?: string;
     enforceUnique?: boolean;

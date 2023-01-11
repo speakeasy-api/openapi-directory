@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BotAliasHistoryEvent } from "./botaliashistoryevent";
-import { BotAliasLocaleSettings } from "./botaliaslocalesettings";
-import { BotAliasStatusEnum } from "./botaliasstatusenum";
-import { ConversationLogSettings } from "./conversationlogsettings";
-import { SentimentAnalysisSettings } from "./sentimentanalysissettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeBotAliasResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var botaliashistoryevent_1 = require("./botaliashistoryevent");
+var botaliaslocalesettings_1 = require("./botaliaslocalesettings");
+var botaliasstatusenum_1 = require("./botaliasstatusenum");
+var conversationlogsettings_1 = require("./conversationlogsettings");
+var sentimentanalysissettings_1 = require("./sentimentanalysissettings");
 var DescribeBotAliasResponse = /** @class */ (function (_super) {
     __extends(DescribeBotAliasResponse, _super);
     function DescribeBotAliasResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botAliasHistoryEvents", elemType: BotAliasHistoryEvent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botAliasHistoryEvents", elemType: botaliashistoryevent_1.BotAliasHistoryEvent }),
         __metadata("design:type", Array)
     ], DescribeBotAliasResponse.prototype, "botAliasHistoryEvents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botAliasId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botAliasId" }),
         __metadata("design:type", String)
     ], DescribeBotAliasResponse.prototype, "botAliasId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botAliasLocaleSettings", elemType: BotAliasLocaleSettings }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botAliasLocaleSettings", elemType: botaliaslocalesettings_1.BotAliasLocaleSettings }),
+        __metadata("design:type", Object)
     ], DescribeBotAliasResponse.prototype, "botAliasLocaleSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botAliasName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botAliasName" }),
         __metadata("design:type", String)
     ], DescribeBotAliasResponse.prototype, "botAliasName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botAliasStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botAliasStatus" }),
         __metadata("design:type", String)
     ], DescribeBotAliasResponse.prototype, "botAliasStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botId" }),
         __metadata("design:type", String)
     ], DescribeBotAliasResponse.prototype, "botId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botVersion" }),
         __metadata("design:type", String)
     ], DescribeBotAliasResponse.prototype, "botVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conversationLogSettings" }),
-        __metadata("design:type", ConversationLogSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conversationLogSettings" }),
+        __metadata("design:type", conversationlogsettings_1.ConversationLogSettings)
     ], DescribeBotAliasResponse.prototype, "conversationLogSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateTime" }),
         __metadata("design:type", Date)
     ], DescribeBotAliasResponse.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], DescribeBotAliasResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedDateTime" }),
         __metadata("design:type", Date)
     ], DescribeBotAliasResponse.prototype, "lastUpdatedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sentimentAnalysisSettings" }),
-        __metadata("design:type", SentimentAnalysisSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sentimentAnalysisSettings" }),
+        __metadata("design:type", sentimentanalysissettings_1.SentimentAnalysisSettings)
     ], DescribeBotAliasResponse.prototype, "sentimentAnalysisSettings", void 0);
     return DescribeBotAliasResponse;
-}(SpeakeasyBase));
-export { DescribeBotAliasResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeBotAliasResponse = DescribeBotAliasResponse;

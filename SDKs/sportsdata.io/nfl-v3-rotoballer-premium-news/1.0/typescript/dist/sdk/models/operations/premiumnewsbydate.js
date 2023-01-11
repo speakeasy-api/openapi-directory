@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PremiumNewsByDateFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PremiumNewsByDateResponse = exports.PremiumNewsByDateRequest = exports.PremiumNewsByDatePathParams = exports.PremiumNewsByDateFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PremiumNewsByDateFormatEnum;
 (function (PremiumNewsByDateFormatEnum) {
     PremiumNewsByDateFormatEnum["Xml"] = "xml";
     PremiumNewsByDateFormatEnum["Json"] = "json";
-})(PremiumNewsByDateFormatEnum || (PremiumNewsByDateFormatEnum = {}));
+})(PremiumNewsByDateFormatEnum = exports.PremiumNewsByDateFormatEnum || (exports.PremiumNewsByDateFormatEnum = {}));
 var PremiumNewsByDatePathParams = /** @class */ (function (_super) {
     __extends(PremiumNewsByDatePathParams, _super);
     function PremiumNewsByDatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=date" }),
         __metadata("design:type", String)
     ], PremiumNewsByDatePathParams.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PremiumNewsByDatePathParams.prototype, "format", void 0);
     return PremiumNewsByDatePathParams;
-}(SpeakeasyBase));
-export { PremiumNewsByDatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PremiumNewsByDatePathParams = PremiumNewsByDatePathParams;
 var PremiumNewsByDateRequest = /** @class */ (function (_super) {
     __extends(PremiumNewsByDateRequest, _super);
     function PremiumNewsByDateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PremiumNewsByDatePathParams)
     ], PremiumNewsByDateRequest.prototype, "pathParams", void 0);
     return PremiumNewsByDateRequest;
-}(SpeakeasyBase));
-export { PremiumNewsByDateRequest };
+}(utils_1.SpeakeasyBase));
+exports.PremiumNewsByDateRequest = PremiumNewsByDateRequest;
 var PremiumNewsByDateResponse = /** @class */ (function (_super) {
     __extends(PremiumNewsByDateResponse, _super);
     function PremiumNewsByDateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PremiumNewsByDateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PremiumNewsByDateResponse.prototype, "news", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PremiumNewsByDateResponse.prototype, "statusCode", void 0);
     return PremiumNewsByDateResponse;
-}(SpeakeasyBase));
-export { PremiumNewsByDateResponse };
+}(utils_1.SpeakeasyBase));
+exports.PremiumNewsByDateResponse = PremiumNewsByDateResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttemptContainerDetail } from "./attemptcontainerdetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttemptDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var attemptcontainerdetail_1 = require("./attemptcontainerdetail");
 // AttemptDetail
 /**
  * An object representing a job attempt.
@@ -34,21 +37,21 @@ var AttemptDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=container" }),
-        __metadata("design:type", AttemptContainerDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=container" }),
+        __metadata("design:type", attemptcontainerdetail_1.AttemptContainerDetail)
     ], AttemptDetail.prototype, "container", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startedAt" }),
         __metadata("design:type", Number)
     ], AttemptDetail.prototype, "startedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusReason" }),
         __metadata("design:type", String)
     ], AttemptDetail.prototype, "statusReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stoppedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stoppedAt" }),
         __metadata("design:type", Number)
     ], AttemptDetail.prototype, "stoppedAt", void 0);
     return AttemptDetail;
-}(SpeakeasyBase));
-export { AttemptDetail };
+}(utils_1.SpeakeasyBase));
+exports.AttemptDetail = AttemptDetail;

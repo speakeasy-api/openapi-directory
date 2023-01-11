@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddressInput } from "./addressinput";
-import { ServiceBusinessContext } from "./servicebusinesscontext";
-import { EmailInput } from "./emailinput";
-import { PhoneInput } from "./phoneinput";
-export var VerifyLocationRequestMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VerifyLocationRequest = exports.VerifyLocationRequestMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var addressinput_1 = require("./addressinput");
+var servicebusinesscontext_1 = require("./servicebusinesscontext");
+var emailinput_1 = require("./emailinput");
+var phoneinput_1 = require("./phoneinput");
+var VerifyLocationRequestMethodEnum;
 (function (VerifyLocationRequestMethodEnum) {
     VerifyLocationRequestMethodEnum["VerificationMethodUnspecified"] = "VERIFICATION_METHOD_UNSPECIFIED";
     VerifyLocationRequestMethodEnum["Address"] = "ADDRESS";
@@ -35,7 +38,7 @@ export var VerifyLocationRequestMethodEnum;
     VerifyLocationRequestMethodEnum["PhoneCall"] = "PHONE_CALL";
     VerifyLocationRequestMethodEnum["Sms"] = "SMS";
     VerifyLocationRequestMethodEnum["Auto"] = "AUTO";
-})(VerifyLocationRequestMethodEnum || (VerifyLocationRequestMethodEnum = {}));
+})(VerifyLocationRequestMethodEnum = exports.VerifyLocationRequestMethodEnum || (exports.VerifyLocationRequestMethodEnum = {}));
 // VerifyLocationRequest
 /**
  * Request message for Verifications.VerifyLocation.
@@ -46,29 +49,29 @@ var VerifyLocationRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressInput" }),
-        __metadata("design:type", AddressInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressInput" }),
+        __metadata("design:type", addressinput_1.AddressInput)
     ], VerifyLocationRequest.prototype, "addressInput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=context" }),
-        __metadata("design:type", ServiceBusinessContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=context" }),
+        __metadata("design:type", servicebusinesscontext_1.ServiceBusinessContext)
     ], VerifyLocationRequest.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emailInput" }),
-        __metadata("design:type", EmailInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emailInput" }),
+        __metadata("design:type", emailinput_1.EmailInput)
     ], VerifyLocationRequest.prototype, "emailInput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], VerifyLocationRequest.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], VerifyLocationRequest.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneInput" }),
-        __metadata("design:type", PhoneInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneInput" }),
+        __metadata("design:type", phoneinput_1.PhoneInput)
     ], VerifyLocationRequest.prototype, "phoneInput", void 0);
     return VerifyLocationRequest;
-}(SpeakeasyBase));
-export { VerifyLocationRequest };
+}(utils_1.SpeakeasyBase));
+exports.VerifyLocationRequest = VerifyLocationRequest;

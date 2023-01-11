@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,94 +14,119 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CodeScanningGetSarifResponse = exports.CodeScanningGetSarifRequest = exports.CodeScanningGetSarif503ApplicationJson = exports.CodeScanningGetSarifPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CodeScanningGetSarifPathParams = /** @class */ (function (_super) {
     __extends(CodeScanningGetSarifPathParams, _super);
     function CodeScanningGetSarifPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], CodeScanningGetSarifPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], CodeScanningGetSarifPathParams.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=sarif_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=sarif_id" }),
         __metadata("design:type", String)
     ], CodeScanningGetSarifPathParams.prototype, "sarifId", void 0);
     return CodeScanningGetSarifPathParams;
-}(SpeakeasyBase));
-export { CodeScanningGetSarifPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CodeScanningGetSarifPathParams = CodeScanningGetSarifPathParams;
 var CodeScanningGetSarif503ApplicationJson = /** @class */ (function (_super) {
     __extends(CodeScanningGetSarif503ApplicationJson, _super);
     function CodeScanningGetSarif503ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], CodeScanningGetSarif503ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentation_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentation_url" }),
         __metadata("design:type", String)
     ], CodeScanningGetSarif503ApplicationJson.prototype, "documentationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CodeScanningGetSarif503ApplicationJson.prototype, "message", void 0);
     return CodeScanningGetSarif503ApplicationJson;
-}(SpeakeasyBase));
-export { CodeScanningGetSarif503ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CodeScanningGetSarif503ApplicationJson = CodeScanningGetSarif503ApplicationJson;
 var CodeScanningGetSarifRequest = /** @class */ (function (_super) {
     __extends(CodeScanningGetSarifRequest, _super);
     function CodeScanningGetSarifRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CodeScanningGetSarifPathParams)
     ], CodeScanningGetSarifRequest.prototype, "pathParams", void 0);
     return CodeScanningGetSarifRequest;
-}(SpeakeasyBase));
-export { CodeScanningGetSarifRequest };
+}(utils_1.SpeakeasyBase));
+exports.CodeScanningGetSarifRequest = CodeScanningGetSarifRequest;
 var CodeScanningGetSarifResponse = /** @class */ (function (_super) {
     __extends(CodeScanningGetSarifResponse, _super);
     function CodeScanningGetSarifResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CodeScanningGetSarifResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CodeScanningGetSarifResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BasicError)
     ], CodeScanningGetSarifResponse.prototype, "basicError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.CodeScanningSarifsStatus)
     ], CodeScanningGetSarifResponse.prototype, "codeScanningSarifsStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CodeScanningGetSarif503ApplicationJson)
-    ], CodeScanningGetSarifResponse.prototype, "codeScanningGetSarif503ApplicationJsonObject", void 0);
+    ], CodeScanningGetSarifResponse.prototype, "codeScanningGetSarif503ApplicationJSONObject", void 0);
     return CodeScanningGetSarifResponse;
-}(SpeakeasyBase));
-export { CodeScanningGetSarifResponse };
+}(utils_1.SpeakeasyBase));
+exports.CodeScanningGetSarifResponse = CodeScanningGetSarifResponse;

@@ -10,5 +10,5 @@ export declare class SuperannuationLine extends SpeakeasyBase {
     minimumMonthlyEarnings?: number;
     paymentDateForThisPeriod?: string;
     percentage?: number;
-    superMembershipId?: string;
+    superMembershipID?: string;
 }

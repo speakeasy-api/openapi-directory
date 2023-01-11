@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RejectDirectDebitResponse = exports.RejectDirectDebitRequest = exports.RejectDirectDebitPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RejectDirectDebitPathParams = /** @class */ (function (_super) {
     __extends(RejectDirectDebitPathParams, _super);
     function RejectDirectDebitPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=directDebitUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=directDebitUuid" }),
         __metadata("design:type", String)
     ], RejectDirectDebitPathParams.prototype, "directDebitUuid", void 0);
     return RejectDirectDebitPathParams;
-}(SpeakeasyBase));
-export { RejectDirectDebitPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RejectDirectDebitPathParams = RejectDirectDebitPathParams;
 var RejectDirectDebitRequest = /** @class */ (function (_super) {
     __extends(RejectDirectDebitRequest, _super);
     function RejectDirectDebitRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RejectDirectDebitPathParams)
     ], RejectDirectDebitRequest.prototype, "pathParams", void 0);
     return RejectDirectDebitRequest;
-}(SpeakeasyBase));
-export { RejectDirectDebitRequest };
+}(utils_1.SpeakeasyBase));
+exports.RejectDirectDebitRequest = RejectDirectDebitRequest;
 var RejectDirectDebitResponse = /** @class */ (function (_super) {
     __extends(RejectDirectDebitResponse, _super);
     function RejectDirectDebitResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RejectDirectDebitResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RejectDirectDebitResponse.prototype, "statusCode", void 0);
     return RejectDirectDebitResponse;
-}(SpeakeasyBase));
-export { RejectDirectDebitResponse };
+}(utils_1.SpeakeasyBase));
+exports.RejectDirectDebitResponse = RejectDirectDebitResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostUpdateGroupActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostUpdateGroupResponse = exports.PostUpdateGroupRequest = exports.PostUpdateGroupHeaders = exports.PostUpdateGroupQueryParams = exports.PostUpdateGroupVersionEnum = exports.PostUpdateGroupActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostUpdateGroupActionEnum;
 (function (PostUpdateGroupActionEnum) {
     PostUpdateGroupActionEnum["UpdateGroup"] = "UpdateGroup";
-})(PostUpdateGroupActionEnum || (PostUpdateGroupActionEnum = {}));
-export var PostUpdateGroupVersionEnum;
+})(PostUpdateGroupActionEnum = exports.PostUpdateGroupActionEnum || (exports.PostUpdateGroupActionEnum = {}));
+var PostUpdateGroupVersionEnum;
 (function (PostUpdateGroupVersionEnum) {
     PostUpdateGroupVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostUpdateGroupVersionEnum || (PostUpdateGroupVersionEnum = {}));
+})(PostUpdateGroupVersionEnum = exports.PostUpdateGroupVersionEnum || (exports.PostUpdateGroupVersionEnum = {}));
 var PostUpdateGroupQueryParams = /** @class */ (function (_super) {
     __extends(PostUpdateGroupQueryParams, _super);
     function PostUpdateGroupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostUpdateGroupQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostUpdateGroupQueryParams.prototype, "version", void 0);
     return PostUpdateGroupQueryParams;
-}(SpeakeasyBase));
-export { PostUpdateGroupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateGroupQueryParams = PostUpdateGroupQueryParams;
 var PostUpdateGroupHeaders = /** @class */ (function (_super) {
     __extends(PostUpdateGroupHeaders, _super);
     function PostUpdateGroupHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostUpdateGroupHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostUpdateGroupHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostUpdateGroupHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostUpdateGroupHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostUpdateGroupHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostUpdateGroupHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostUpdateGroupHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostUpdateGroupHeaders;
-}(SpeakeasyBase));
-export { PostUpdateGroupHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateGroupHeaders = PostUpdateGroupHeaders;
 var PostUpdateGroupRequest = /** @class */ (function (_super) {
     __extends(PostUpdateGroupRequest, _super);
     function PostUpdateGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostUpdateGroupQueryParams)
     ], PostUpdateGroupRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostUpdateGroupHeaders)
     ], PostUpdateGroupRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostUpdateGroupRequest.prototype, "request", void 0);
     return PostUpdateGroupRequest;
-}(SpeakeasyBase));
-export { PostUpdateGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateGroupRequest = PostUpdateGroupRequest;
 var PostUpdateGroupResponse = /** @class */ (function (_super) {
     __extends(PostUpdateGroupResponse, _super);
     function PostUpdateGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostUpdateGroupResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostUpdateGroupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostUpdateGroupResponse.prototype, "statusCode", void 0);
     return PostUpdateGroupResponse;
-}(SpeakeasyBase));
-export { PostUpdateGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateGroupResponse = PostUpdateGroupResponse;

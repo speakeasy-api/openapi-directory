@@ -22,6 +22,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest
 export declare class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedLogEntries?: shared.PaginatedLogEntries;
 }

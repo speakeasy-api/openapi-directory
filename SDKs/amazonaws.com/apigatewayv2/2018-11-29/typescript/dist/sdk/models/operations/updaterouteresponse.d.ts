@@ -16,8 +16,8 @@ export declare class UpdateRouteResponseHeaders extends SpeakeasyBase {
 }
 export declare class UpdateRouteResponseRequestBody extends SpeakeasyBase {
     modelSelectionExpression?: string;
-    responseModels?: Map<string, string>;
-    responseParameters?: Map<string, shared.ParameterConstraints>;
+    responseModels?: Record<string, string>;
+    responseParameters?: Record<string, shared.ParameterConstraints>;
     routeResponseKey?: string;
 }
 export declare class UpdateRouteResponseRequest extends SpeakeasyBase {

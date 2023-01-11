@@ -41,5 +41,5 @@ export class ChromeFromUrlGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  chromeFromUrlGet200ApplicationPdfBinaryString?: Uint8Array;
+  chromeFromUrlGET200ApplicationPdfBinaryString?: Uint8Array;
 }

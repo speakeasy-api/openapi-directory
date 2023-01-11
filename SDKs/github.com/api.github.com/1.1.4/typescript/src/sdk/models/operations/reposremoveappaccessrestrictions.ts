@@ -38,7 +38,7 @@ export class ReposRemoveAppAccessRestrictionsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  integrations?: Map<string, any>[];
+  integrations?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

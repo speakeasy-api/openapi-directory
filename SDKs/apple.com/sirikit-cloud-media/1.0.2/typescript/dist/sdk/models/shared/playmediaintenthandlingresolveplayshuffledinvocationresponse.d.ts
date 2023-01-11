@@ -4,5 +4,5 @@ export declare class PlayMediaIntentHandlingResolvePlayShuffledInvocationRespons
     debug?: string;
     method: string;
     metrics?: ExecutionMetrics;
-    result: Map<string, any>;
+    result: Record<string, any>;
 }

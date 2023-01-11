@@ -16,7 +16,7 @@ export class BehavioralEventHttpCompletionRequest extends SpeakeasyBase {
   occurredAt?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=properties" })
-  properties: Map<string, string>;
+  properties: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=utk" })
   utk?: string;

@@ -10,9 +10,6 @@ export declare enum TargetRenderRenderingStateEnum {
     Failed = "FAILED",
     InProgress = "IN_PROGRESS"
 }
-/**
- * Details of rendering for a single target.
-**/
 export declare class TargetRender extends SpeakeasyBase {
     failureCause?: TargetRenderFailureCauseEnum;
     failureMessage?: string;

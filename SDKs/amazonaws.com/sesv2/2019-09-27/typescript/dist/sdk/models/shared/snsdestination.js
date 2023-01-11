@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SnsDestination = void 0;
+var utils_1 = require("../../../internal/utils");
 // SnsDestination
 /**
  * An object that defines an Amazon SNS destination for email events. You can use Amazon SNS to send notification when certain email events occur.
@@ -33,9 +36,9 @@ var SnsDestination = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TopicArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TopicArn" }),
         __metadata("design:type", String)
     ], SnsDestination.prototype, "topicArn", void 0);
     return SnsDestination;
-}(SpeakeasyBase));
-export { SnsDestination };
+}(utils_1.SpeakeasyBase));
+exports.SnsDestination = SnsDestination;

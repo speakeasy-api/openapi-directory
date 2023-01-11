@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeAdjustmentTypesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeAdjustmentTypesResponse = exports.PostDescribeAdjustmentTypesRequest = exports.PostDescribeAdjustmentTypesHeaders = exports.PostDescribeAdjustmentTypesQueryParams = exports.PostDescribeAdjustmentTypesVersionEnum = exports.PostDescribeAdjustmentTypesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeAdjustmentTypesActionEnum;
 (function (PostDescribeAdjustmentTypesActionEnum) {
     PostDescribeAdjustmentTypesActionEnum["DescribeAdjustmentTypes"] = "DescribeAdjustmentTypes";
-})(PostDescribeAdjustmentTypesActionEnum || (PostDescribeAdjustmentTypesActionEnum = {}));
-export var PostDescribeAdjustmentTypesVersionEnum;
+})(PostDescribeAdjustmentTypesActionEnum = exports.PostDescribeAdjustmentTypesActionEnum || (exports.PostDescribeAdjustmentTypesActionEnum = {}));
+var PostDescribeAdjustmentTypesVersionEnum;
 (function (PostDescribeAdjustmentTypesVersionEnum) {
     PostDescribeAdjustmentTypesVersionEnum["TwoThousandAndEleven0101"] = "2011-01-01";
-})(PostDescribeAdjustmentTypesVersionEnum || (PostDescribeAdjustmentTypesVersionEnum = {}));
+})(PostDescribeAdjustmentTypesVersionEnum = exports.PostDescribeAdjustmentTypesVersionEnum || (exports.PostDescribeAdjustmentTypesVersionEnum = {}));
 var PostDescribeAdjustmentTypesQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeAdjustmentTypesQueryParams, _super);
     function PostDescribeAdjustmentTypesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeAdjustmentTypesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeAdjustmentTypesQueryParams.prototype, "version", void 0);
     return PostDescribeAdjustmentTypesQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeAdjustmentTypesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeAdjustmentTypesQueryParams = PostDescribeAdjustmentTypesQueryParams;
 var PostDescribeAdjustmentTypesHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeAdjustmentTypesHeaders, _super);
     function PostDescribeAdjustmentTypesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeAdjustmentTypesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeAdjustmentTypesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeAdjustmentTypesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeAdjustmentTypesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeAdjustmentTypesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeAdjustmentTypesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeAdjustmentTypesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeAdjustmentTypesHeaders;
-}(SpeakeasyBase));
-export { PostDescribeAdjustmentTypesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeAdjustmentTypesHeaders = PostDescribeAdjustmentTypesHeaders;
 var PostDescribeAdjustmentTypesRequest = /** @class */ (function (_super) {
     __extends(PostDescribeAdjustmentTypesRequest, _super);
     function PostDescribeAdjustmentTypesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeAdjustmentTypesQueryParams)
     ], PostDescribeAdjustmentTypesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeAdjustmentTypesHeaders)
     ], PostDescribeAdjustmentTypesRequest.prototype, "headers", void 0);
     return PostDescribeAdjustmentTypesRequest;
-}(SpeakeasyBase));
-export { PostDescribeAdjustmentTypesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeAdjustmentTypesRequest = PostDescribeAdjustmentTypesRequest;
 var PostDescribeAdjustmentTypesResponse = /** @class */ (function (_super) {
     __extends(PostDescribeAdjustmentTypesResponse, _super);
     function PostDescribeAdjustmentTypesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeAdjustmentTypesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeAdjustmentTypesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeAdjustmentTypesResponse.prototype, "statusCode", void 0);
     return PostDescribeAdjustmentTypesResponse;
-}(SpeakeasyBase));
-export { PostDescribeAdjustmentTypesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeAdjustmentTypesResponse = PostDescribeAdjustmentTypesResponse;

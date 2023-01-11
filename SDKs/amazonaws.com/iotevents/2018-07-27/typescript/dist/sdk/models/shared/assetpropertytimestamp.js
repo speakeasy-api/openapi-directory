@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssetPropertyTimestamp = void 0;
+var utils_1 = require("../../../internal/utils");
 // AssetPropertyTimestamp
 /**
  * <p>A structure that contains timestamp information. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_TimeInNanos.html">TimeInNanos</a> in the <i>AWS IoT SiteWise API Reference</i>.</p> <p>You must use expressions for all parameters in <code>AssetPropertyTimestamp</code>. The expressions accept literals, operators, functions, references, and substitution templates.</p> <p class="title"> <b>Examples</b> </p> <ul> <li> <p>For literal values, the expressions must contain single quotes. For example, the value for the <code>timeInSeconds</code> parameter can be <code>'1586400675'</code>.</p> </li> <li> <p>For references, you must specify either variables or input values. For example, the value for the <code>offsetInNanos</code> parameter can be <code>$variable.time</code>.</p> </li> <li> <p>For a substitution template, you must use <code>${}</code>, and the template must be in single quotes. A substitution template can also contain a combination of literals, operators, functions, references, and substitution templates.</p> <p>In the following example, the value for the <code>timeInSeconds</code> parameter uses a substitution template.</p> <p> <code>'${$input.TemperatureInput.sensorData.timestamp / 1000}'</code> </p> </li> </ul> <p>For more information, see <a href="https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html">Expressions</a> in the <i>AWS IoT Events Developer Guide</i>.</p>
@@ -33,13 +36,13 @@ var AssetPropertyTimestamp = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offsetInNanos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offsetInNanos" }),
         __metadata("design:type", String)
     ], AssetPropertyTimestamp.prototype, "offsetInNanos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeInSeconds" }),
         __metadata("design:type", String)
     ], AssetPropertyTimestamp.prototype, "timeInSeconds", void 0);
     return AssetPropertyTimestamp;
-}(SpeakeasyBase));
-export { AssetPropertyTimestamp };
+}(utils_1.SpeakeasyBase));
+exports.AssetPropertyTimestamp = AssetPropertyTimestamp;

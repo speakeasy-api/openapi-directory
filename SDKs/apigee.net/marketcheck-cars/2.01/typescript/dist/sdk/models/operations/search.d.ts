@@ -93,7 +93,7 @@ export declare class SearchRequest extends SpeakeasyBase {
 }
 export declare class SearchResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     searchResponse?: shared.SearchResponse;
     statusCode: number;
 }

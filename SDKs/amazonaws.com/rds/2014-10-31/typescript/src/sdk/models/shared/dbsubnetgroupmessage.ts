@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbSubnetGroup } from "./dbsubnetgroup";
+import { DbSubnetGroups } from "./dbsubnetgroups";
 
 
 
@@ -8,8 +8,8 @@ import { DbSubnetGroup } from "./dbsubnetgroup";
  *  Contains the result of a successful invocation of the <code>DescribeDBSubnetGroups</code> action. 
 **/
 export class DbSubnetGroupMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: DbSubnetGroup })
-  dbSubnetGroups?: DbSubnetGroup[];
+  @SpeakeasyMetadata({ elemType: DbSubnetGroups })
+  dbSubnetGroups?: DbSubnetGroups[];
 
   @SpeakeasyMetadata()
   marker?: string;

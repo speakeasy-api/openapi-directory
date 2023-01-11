@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Qualification } from "./qualification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListWorkersWithQualificationTypeResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var qualification_1 = require("./qualification");
 var ListWorkersWithQualificationTypeResponse = /** @class */ (function (_super) {
     __extends(ListWorkersWithQualificationTypeResponse, _super);
     function ListWorkersWithQualificationTypeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListWorkersWithQualificationTypeResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumResults" }),
         __metadata("design:type", Number)
     ], ListWorkersWithQualificationTypeResponse.prototype, "numResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Qualifications", elemType: Qualification }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Qualifications", elemType: qualification_1.Qualification }),
         __metadata("design:type", Array)
     ], ListWorkersWithQualificationTypeResponse.prototype, "qualifications", void 0);
     return ListWorkersWithQualificationTypeResponse;
-}(SpeakeasyBase));
-export { ListWorkersWithQualificationTypeResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListWorkersWithQualificationTypeResponse = ListWorkersWithQualificationTypeResponse;

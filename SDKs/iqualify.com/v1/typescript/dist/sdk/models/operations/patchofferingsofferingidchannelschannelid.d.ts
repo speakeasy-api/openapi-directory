@@ -11,6 +11,6 @@ export declare class PatchOfferingsOfferingIdChannelsChannelIdRequest extends Sp
 export declare class PatchOfferingsOfferingIdChannelsChannelIdResponse extends SpeakeasyBase {
     channelResponse?: shared.ChannelResponse;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

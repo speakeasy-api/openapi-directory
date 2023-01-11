@@ -44,7 +44,7 @@ export class AutoCheckInRequest extends SpeakeasyBase {
 
 export class AutoCheckInResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  autoCheckIn200ApplicationJsonString?: string;
+  autoCheckIn200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   contentType: string;

@@ -149,5 +149,5 @@ export class GetItemsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getItems200ApplicationJsonObject?: GetItems200ApplicationJson;
+  getItems200ApplicationJSONObject?: GetItems200ApplicationJson;
 }

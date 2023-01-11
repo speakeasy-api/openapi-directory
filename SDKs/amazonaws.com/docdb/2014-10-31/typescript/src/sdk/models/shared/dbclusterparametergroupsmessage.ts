@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterParameterGroup } from "./dbclusterparametergroup";
+import { DbClusterParameterGroupList } from "./dbclusterparametergrouplist";
 
 
 
@@ -8,8 +8,8 @@ import { DbClusterParameterGroup } from "./dbclusterparametergroup";
  * Represents the output of <a>DBClusterParameterGroups</a>.
 **/
 export class DbClusterParameterGroupsMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: DbClusterParameterGroup })
-  dbClusterParameterGroups?: DbClusterParameterGroup[];
+  @SpeakeasyMetadata({ elemType: DbClusterParameterGroupList })
+  dbClusterParameterGroups?: DbClusterParameterGroupList[];
 
   @SpeakeasyMetadata()
   marker?: string;

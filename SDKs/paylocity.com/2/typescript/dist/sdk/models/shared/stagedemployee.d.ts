@@ -128,9 +128,9 @@ export declare class StagedEmployeeLocalTax extends SpeakeasyBase {
     exemptions?: number;
     exemptions2?: number;
     filingStatus?: string;
-    residentPsd?: string;
+    residentPSD?: string;
     taxCode?: string;
-    workPsd?: string;
+    workPSD?: string;
 }
 /**
  * The Main Direct Deposit model

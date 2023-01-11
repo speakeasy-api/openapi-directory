@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Dimension } from "./dimension";
-import { StatisticSet } from "./statisticset";
-import { UnitEnum } from "./unitenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricDatum = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimension_1 = require("./dimension");
+var statisticset_1 = require("./statisticset");
+var unitenum_1 = require("./unitenum");
 // MetricDatum
 /**
  * Internal only API.
@@ -36,29 +39,29 @@ var MetricDatum = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Dimensions", elemType: Dimension }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Dimensions", elemType: dimension_1.Dimension }),
         __metadata("design:type", Array)
     ], MetricDatum.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MetricName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MetricName" }),
         __metadata("design:type", String)
     ], MetricDatum.prototype, "metricName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatisticValues" }),
-        __metadata("design:type", StatisticSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatisticValues" }),
+        __metadata("design:type", statisticset_1.StatisticSet)
     ], MetricDatum.prototype, "statisticValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Timestamp" }),
         __metadata("design:type", Date)
     ], MetricDatum.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Unit" }),
         __metadata("design:type", String)
     ], MetricDatum.prototype, "unit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Value" }),
         __metadata("design:type", Number)
     ], MetricDatum.prototype, "value", void 0);
     return MetricDatum;
-}(SpeakeasyBase));
-export { MetricDatum };
+}(utils_1.SpeakeasyBase));
+exports.MetricDatum = MetricDatum;

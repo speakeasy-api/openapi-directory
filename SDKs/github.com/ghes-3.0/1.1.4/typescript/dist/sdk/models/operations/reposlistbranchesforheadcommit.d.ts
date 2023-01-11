@@ -16,6 +16,6 @@ export declare class ReposListBranchesForHeadCommitResponse extends SpeakeasyBas
     contentType: string;
     statusCode: number;
     branchShorts?: shared.BranchShort[];
-    reposListBranchesForHeadCommit415ApplicationJsonObject?: ReposListBranchesForHeadCommit415ApplicationJson;
+    reposListBranchesForHeadCommit415ApplicationJSONObject?: ReposListBranchesForHeadCommit415ApplicationJson;
     validationError?: shared.ValidationError;
 }

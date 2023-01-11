@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecaptchaenterpriseV1ScoreDistribution } from "./googlecloudrecaptchaenterprisev1scoredistribution";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecaptchaenterpriseV1ScoreMetrics = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecaptchaenterprisev1scoredistribution_1 = require("./googlecloudrecaptchaenterprisev1scoredistribution");
 // GoogleCloudRecaptchaenterpriseV1ScoreMetrics
 /**
  * Metrics related to scoring.
@@ -34,13 +37,13 @@ var GoogleCloudRecaptchaenterpriseV1ScoreMetrics = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionMetrics", elemType: GoogleCloudRecaptchaenterpriseV1ScoreDistribution }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionMetrics", elemType: googlecloudrecaptchaenterprisev1scoredistribution_1.GoogleCloudRecaptchaenterpriseV1ScoreDistribution }),
+        __metadata("design:type", Object)
     ], GoogleCloudRecaptchaenterpriseV1ScoreMetrics.prototype, "actionMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overallMetrics" }),
-        __metadata("design:type", GoogleCloudRecaptchaenterpriseV1ScoreDistribution)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overallMetrics" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1scoredistribution_1.GoogleCloudRecaptchaenterpriseV1ScoreDistribution)
     ], GoogleCloudRecaptchaenterpriseV1ScoreMetrics.prototype, "overallMetrics", void 0);
     return GoogleCloudRecaptchaenterpriseV1ScoreMetrics;
-}(SpeakeasyBase));
-export { GoogleCloudRecaptchaenterpriseV1ScoreMetrics };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecaptchaenterpriseV1ScoreMetrics = GoogleCloudRecaptchaenterpriseV1ScoreMetrics;

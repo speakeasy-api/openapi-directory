@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StreamingSessionStreamStateEnum } from "./streamingsessionstreamstateenum";
-import { StreamingSessionStreamStatusCodeEnum } from "./streamingsessionstreamstatuscodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreamingSessionStream = void 0;
+var utils_1 = require("../../../internal/utils");
+var streamingsessionstreamstateenum_1 = require("./streamingsessionstreamstateenum");
+var streamingsessionstreamstatuscodeenum_1 = require("./streamingsessionstreamstatuscodeenum");
 var StreamingSessionStream = /** @class */ (function (_super) {
     __extends(StreamingSessionStream, _super);
     function StreamingSessionStream() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], StreamingSessionStream.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdBy" }),
         __metadata("design:type", String)
     ], StreamingSessionStream.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiresAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiresAt" }),
         __metadata("design:type", Date)
     ], StreamingSessionStream.prototype, "expiresAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownedBy" }),
         __metadata("design:type", String)
     ], StreamingSessionStream.prototype, "ownedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], StreamingSessionStream.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusCode" }),
         __metadata("design:type", String)
     ], StreamingSessionStream.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streamId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streamId" }),
         __metadata("design:type", String)
     ], StreamingSessionStream.prototype, "streamId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], StreamingSessionStream.prototype, "url", void 0);
     return StreamingSessionStream;
-}(SpeakeasyBase));
-export { StreamingSessionStream };
+}(utils_1.SpeakeasyBase));
+exports.StreamingSessionStream = StreamingSessionStream;

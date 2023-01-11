@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SignRequestResponse = exports.SignRequestRequest = exports.SignRequest201ApplicationJson = exports.SignRequestQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SignRequestQueryParams = /** @class */ (function (_super) {
     __extends(SignRequestQueryParams, _super);
     function SignRequestQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=test" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=test" }),
         __metadata("design:type", Number)
     ], SignRequestQueryParams.prototype, "test", void 0);
     return SignRequestQueryParams;
-}(SpeakeasyBase));
-export { SignRequestQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SignRequestQueryParams = SignRequestQueryParams;
 var SignRequest201ApplicationJson = /** @class */ (function (_super) {
     __extends(SignRequest201ApplicationJson, _super);
     function SignRequest201ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=job" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=job" }),
         __metadata("design:type", String)
     ], SignRequest201ApplicationJson.prototype, "job", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], SignRequest201ApplicationJson.prototype, "status", void 0);
     return SignRequest201ApplicationJson;
-}(SpeakeasyBase));
-export { SignRequest201ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SignRequest201ApplicationJson = SignRequest201ApplicationJson;
 var SignRequestRequest = /** @class */ (function (_super) {
     __extends(SignRequestRequest, _super);
     function SignRequestRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SignRequestQueryParams)
     ], SignRequestRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/jwt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/jwt" }),
         __metadata("design:type", Uint8Array)
     ], SignRequestRequest.prototype, "request", void 0);
     return SignRequestRequest;
-}(SpeakeasyBase));
-export { SignRequestRequest };
+}(utils_1.SpeakeasyBase));
+exports.SignRequestRequest = SignRequestRequest;
 var SignRequestResponse = /** @class */ (function (_super) {
     __extends(SignRequestResponse, _super);
     function SignRequestResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], SignRequestResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SignRequestResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SignRequestResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SignRequestResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SignRequest201ApplicationJson)
-    ], SignRequestResponse.prototype, "signRequest201ApplicationJsonObject", void 0);
+    ], SignRequestResponse.prototype, "signRequest201ApplicationJSONObject", void 0);
     return SignRequestResponse;
-}(SpeakeasyBase));
-export { SignRequestResponse };
+}(utils_1.SpeakeasyBase));
+exports.SignRequestResponse = SignRequestResponse;

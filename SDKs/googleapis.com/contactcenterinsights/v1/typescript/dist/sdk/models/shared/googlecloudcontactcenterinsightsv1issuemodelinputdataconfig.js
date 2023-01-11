@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigInput = exports.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig = exports.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum;
 (function (GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum) {
     GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum["MediumUnspecified"] = "MEDIUM_UNSPECIFIED";
     GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum["PhoneCall"] = "PHONE_CALL";
     GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum["Chat"] = "CHAT";
-})(GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum || (GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum = {}));
+})(GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum = exports.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum || (exports.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMediumEnum = {}));
 // GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig
 /**
  * Configs for the input data used to create the issue model.
@@ -39,20 +42,20 @@ var GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig = /** @class */ 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=medium" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=medium" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig.prototype, "medium", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trainingConversationsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trainingConversationsCount" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig.prototype, "trainingConversationsCount", void 0);
     return GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig = GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig;
 // GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigInput
 /**
  * Configs for the input data used to create the issue model.
@@ -63,13 +66,13 @@ var GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigInput = /** @clas
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigInput.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=medium" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=medium" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigInput.prototype, "medium", void 0);
     return GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigInput;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigInput = GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigInput;

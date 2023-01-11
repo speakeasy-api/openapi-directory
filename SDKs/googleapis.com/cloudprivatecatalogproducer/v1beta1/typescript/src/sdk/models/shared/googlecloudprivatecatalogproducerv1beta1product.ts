@@ -15,7 +15,7 @@ export class GoogleCloudPrivatecatalogproducerV1beta1Product extends SpeakeasyBa
   createTime?: string;
 
   @SpeakeasyMetadata({ data: "json, name=displayMetadata" })
-  displayMetadata?: Map<string, any>;
+  displayMetadata?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=iconUri" })
   iconUri?: string;

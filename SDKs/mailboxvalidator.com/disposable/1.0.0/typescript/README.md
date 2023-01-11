@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetV1EmailDisposableRequest, GetV1EmailDisposableResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,13 +28,13 @@ const sdk = new SDK();
     
 const req: GetV1EmailDisposableRequest = {
   queryParams: {
-    email: "labore",
+    email: "sit",
     format: "json",
-    key: "velit",
+    key: "culpa",
   },
 };
 
-sdk.sdk.getV1EmailDisposable(req).then((res: GetV1EmailDisposableResponse | AxiosError) => {
+sdk.getV1EmailDisposable(req).then((res: GetV1EmailDisposableResponse | AxiosError) => {
    // handle response
 });
 ```

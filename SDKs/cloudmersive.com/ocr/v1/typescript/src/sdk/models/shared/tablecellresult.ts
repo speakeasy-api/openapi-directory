@@ -12,5 +12,5 @@ export class TableCellResult extends SpeakeasyBase {
   cellValues?: OcrPhotoTextElement[];
 
   @SpeakeasyMetadata({ data: "json, name=ColumnID" })
-  columnId?: string;
+  columnID?: string;
 }

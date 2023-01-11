@@ -1,6 +1,9 @@
-export var NotificationTransportEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NotificationTransportEnum = void 0;
+var NotificationTransportEnum;
 (function (NotificationTransportEnum) {
     NotificationTransportEnum["Email"] = "Email";
     NotificationTransportEnum["Sqs"] = "SQS";
     NotificationTransportEnum["Sns"] = "SNS";
-})(NotificationTransportEnum || (NotificationTransportEnum = {}));
+})(NotificationTransportEnum = exports.NotificationTransportEnum || (exports.NotificationTransportEnum = {}));

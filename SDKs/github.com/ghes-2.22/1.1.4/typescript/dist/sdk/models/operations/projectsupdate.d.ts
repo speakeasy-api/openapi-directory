@@ -30,6 +30,6 @@ export declare class ProjectsUpdateResponse extends SpeakeasyBase {
     statusCode: number;
     basicError?: shared.BasicError;
     project?: shared.Project;
-    projectsUpdate403ApplicationJsonObject?: ProjectsUpdate403ApplicationJson;
+    projectsUpdate403ApplicationJSONObject?: ProjectsUpdate403ApplicationJson;
     validationErrorSimple?: shared.ValidationErrorSimple;
 }

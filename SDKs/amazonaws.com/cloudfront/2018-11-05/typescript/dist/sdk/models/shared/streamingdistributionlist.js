@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StreamingDistributionSummary } from "./streamingdistributionsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreamingDistributionList = void 0;
+var utils_1 = require("../../../internal/utils");
+var streamingdistributionsummarylist_1 = require("./streamingdistributionsummarylist");
 // StreamingDistributionList
 /**
  * A streaming distribution list.
@@ -34,29 +37,29 @@ var StreamingDistributionList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], StreamingDistributionList.prototype, "isTruncated", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: StreamingDistributionSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: streamingdistributionsummarylist_1.StreamingDistributionSummaryList }),
         __metadata("design:type", Array)
     ], StreamingDistributionList.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StreamingDistributionList.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StreamingDistributionList.prototype, "maxItems", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StreamingDistributionList.prototype, "nextMarker", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StreamingDistributionList.prototype, "quantity", void 0);
     return StreamingDistributionList;
-}(SpeakeasyBase));
-export { StreamingDistributionList };
+}(utils_1.SpeakeasyBase));
+exports.StreamingDistributionList = StreamingDistributionList;

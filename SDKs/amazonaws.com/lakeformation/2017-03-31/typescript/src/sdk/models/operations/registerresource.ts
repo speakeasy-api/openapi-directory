@@ -60,7 +60,7 @@ export class RegisterResourceResponse extends SpeakeasyBase {
   operationTimeoutException?: any;
 
   @SpeakeasyMetadata()
-  registerResourceResponse?: Map<string, any>;
+  registerResourceResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

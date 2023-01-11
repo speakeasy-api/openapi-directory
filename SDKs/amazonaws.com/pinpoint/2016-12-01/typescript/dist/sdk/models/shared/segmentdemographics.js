@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SetDimension } from "./setdimension";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SegmentDemographics = void 0;
+var utils_1 = require("../../../internal/utils");
+var setdimension_1 = require("./setdimension");
 // SegmentDemographics
 /**
  * Specifies demographic-based dimension settings for including or excluding endpoints from a segment. These settings derive from characteristics of endpoint devices, such as platform, make, and model.
@@ -34,29 +37,29 @@ var SegmentDemographics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AppVersion" }),
-        __metadata("design:type", SetDimension)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AppVersion" }),
+        __metadata("design:type", setdimension_1.SetDimension)
     ], SegmentDemographics.prototype, "appVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Channel" }),
-        __metadata("design:type", SetDimension)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Channel" }),
+        __metadata("design:type", setdimension_1.SetDimension)
     ], SegmentDemographics.prototype, "channel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeviceType" }),
-        __metadata("design:type", SetDimension)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeviceType" }),
+        __metadata("design:type", setdimension_1.SetDimension)
     ], SegmentDemographics.prototype, "deviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Make" }),
-        __metadata("design:type", SetDimension)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Make" }),
+        __metadata("design:type", setdimension_1.SetDimension)
     ], SegmentDemographics.prototype, "make", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Model" }),
-        __metadata("design:type", SetDimension)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Model" }),
+        __metadata("design:type", setdimension_1.SetDimension)
     ], SegmentDemographics.prototype, "model", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Platform" }),
-        __metadata("design:type", SetDimension)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Platform" }),
+        __metadata("design:type", setdimension_1.SetDimension)
     ], SegmentDemographics.prototype, "platform", void 0);
     return SegmentDemographics;
-}(SpeakeasyBase));
-export { SegmentDemographics };
+}(utils_1.SpeakeasyBase));
+exports.SegmentDemographics = SegmentDemographics;

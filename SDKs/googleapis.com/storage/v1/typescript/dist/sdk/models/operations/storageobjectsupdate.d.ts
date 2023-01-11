@@ -49,11 +49,11 @@ export declare class StorageObjectsUpdateSecurity extends SpeakeasyBase {
 export declare class StorageObjectsUpdateRequest extends SpeakeasyBase {
     pathParams: StorageObjectsUpdatePathParams;
     queryParams: StorageObjectsUpdateQueryParams;
-    request?: shared.Object;
+    request?: shared.ObjectT;
     security: StorageObjectsUpdateSecurity;
 }
 export declare class StorageObjectsUpdateResponse extends SpeakeasyBase {
     contentType: string;
-    object?: shared.Object;
+    object?: shared.ObjectT;
     statusCode: number;
 }

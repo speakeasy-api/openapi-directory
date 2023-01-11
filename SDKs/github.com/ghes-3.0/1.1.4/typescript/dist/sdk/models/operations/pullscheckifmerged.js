@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PullsCheckIfMergedResponse = exports.PullsCheckIfMergedRequest = exports.PullsCheckIfMergedPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PullsCheckIfMergedPathParams = /** @class */ (function (_super) {
     __extends(PullsCheckIfMergedPathParams, _super);
     function PullsCheckIfMergedPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], PullsCheckIfMergedPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=pull_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=pull_number" }),
         __metadata("design:type", Number)
     ], PullsCheckIfMergedPathParams.prototype, "pullNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], PullsCheckIfMergedPathParams.prototype, "repo", void 0);
     return PullsCheckIfMergedPathParams;
-}(SpeakeasyBase));
-export { PullsCheckIfMergedPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PullsCheckIfMergedPathParams = PullsCheckIfMergedPathParams;
 var PullsCheckIfMergedRequest = /** @class */ (function (_super) {
     __extends(PullsCheckIfMergedRequest, _super);
     function PullsCheckIfMergedRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PullsCheckIfMergedPathParams)
     ], PullsCheckIfMergedRequest.prototype, "pathParams", void 0);
     return PullsCheckIfMergedRequest;
-}(SpeakeasyBase));
-export { PullsCheckIfMergedRequest };
+}(utils_1.SpeakeasyBase));
+exports.PullsCheckIfMergedRequest = PullsCheckIfMergedRequest;
 var PullsCheckIfMergedResponse = /** @class */ (function (_super) {
     __extends(PullsCheckIfMergedResponse, _super);
     function PullsCheckIfMergedResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PullsCheckIfMergedResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PullsCheckIfMergedResponse.prototype, "statusCode", void 0);
     return PullsCheckIfMergedResponse;
-}(SpeakeasyBase));
-export { PullsCheckIfMergedResponse };
+}(utils_1.SpeakeasyBase));
+exports.PullsCheckIfMergedResponse = PullsCheckIfMergedResponse;

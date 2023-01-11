@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EvaluateOnExit } from "./evaluateonexit";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RetryStrategy = void 0;
+var utils_1 = require("../../../internal/utils");
+var evaluateonexit_1 = require("./evaluateonexit");
 // RetryStrategy
 /**
  * The retry strategy associated with a job. For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/job_retries.html">Automated job retries</a> in the <i>Batch User Guide</i>.
@@ -34,13 +37,13 @@ var RetryStrategy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attempts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attempts" }),
         __metadata("design:type", Number)
     ], RetryStrategy.prototype, "attempts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evaluateOnExit", elemType: EvaluateOnExit }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evaluateOnExit", elemType: evaluateonexit_1.EvaluateOnExit }),
         __metadata("design:type", Array)
     ], RetryStrategy.prototype, "evaluateOnExit", void 0);
     return RetryStrategy;
-}(SpeakeasyBase));
-export { RetryStrategy };
+}(utils_1.SpeakeasyBase));
+exports.RetryStrategy = RetryStrategy;

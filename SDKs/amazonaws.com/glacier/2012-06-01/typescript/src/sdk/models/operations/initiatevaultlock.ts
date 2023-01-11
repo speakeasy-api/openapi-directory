@@ -68,7 +68,7 @@ export class InitiateVaultLockResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  initiateVaultLockOutput?: Map<string, any>;
+  initiateVaultLockOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidParameterValueException?: any;

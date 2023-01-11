@@ -19,5 +19,5 @@ export declare class EndpointCheckCurrentUserFollowsResponse extends SpeakeasyBa
     contentType: string;
     errorResponseObject?: shared.ErrorResponseObject;
     statusCode: number;
-    endpointCheckCurrentUserFollows200ApplicationJsonBooleans?: boolean[];
+    endpointCheckCurrentUserFollows200ApplicationJSONBooleans?: boolean[];
 }

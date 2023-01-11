@@ -22,5 +22,5 @@ export class SwapNetworkApplianceWarmSpareResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  swapNetworkApplianceWarmSpare200ApplicationJsonObject?: Map<string, any>;
+  swapNetworkApplianceWarmSpare200ApplicationJSONObject?: Record<string, any>;
 }

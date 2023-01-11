@@ -20,5 +20,5 @@ export declare class ApiKeyOwner200ApplicationJson extends SpeakeasyBase {
 export declare class ApiKeyOwnerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    apiKeyOwner200ApplicationJsonObject?: ApiKeyOwner200ApplicationJson;
+    apiKeyOwner200ApplicationJSONObject?: ApiKeyOwner200ApplicationJson;
 }

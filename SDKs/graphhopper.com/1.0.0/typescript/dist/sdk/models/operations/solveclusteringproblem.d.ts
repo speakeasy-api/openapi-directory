@@ -7,7 +7,7 @@ export declare class SolveClusteringProblemResponse extends SpeakeasyBase {
     badRequest?: shared.BadRequest;
     clusterResponse?: shared.ClusterResponse;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     internalErrorMessage?: shared.InternalErrorMessage;
     statusCode: number;
 }

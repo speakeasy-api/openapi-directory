@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SchemaId } from "./schemaid";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegisterSchemaVersionInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var schemaid_1 = require("./schemaid");
 var RegisterSchemaVersionInput = /** @class */ (function (_super) {
     __extends(RegisterSchemaVersionInput, _super);
     function RegisterSchemaVersionInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaDefinition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaDefinition" }),
         __metadata("design:type", String)
     ], RegisterSchemaVersionInput.prototype, "schemaDefinition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaId" }),
-        __metadata("design:type", SchemaId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaId" }),
+        __metadata("design:type", schemaid_1.SchemaId)
     ], RegisterSchemaVersionInput.prototype, "schemaId", void 0);
     return RegisterSchemaVersionInput;
-}(SpeakeasyBase));
-export { RegisterSchemaVersionInput };
+}(utils_1.SpeakeasyBase));
+exports.RegisterSchemaVersionInput = RegisterSchemaVersionInput;

@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class EndpointConfiguration extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ClientIPPreservationEnabled" })
-  clientIpPreservationEnabled?: boolean;
+  clientIPPreservationEnabled?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=EndpointId" })
   endpointId?: string;

@@ -21,5 +21,5 @@ export declare class GetLatestTotalsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    getLatestTotals200ApplicationJsonObjects?: GetLatestTotals200ApplicationJson[];
+    getLatestTotals200ApplicationJSONObjects?: GetLatestTotals200ApplicationJson[];
 }

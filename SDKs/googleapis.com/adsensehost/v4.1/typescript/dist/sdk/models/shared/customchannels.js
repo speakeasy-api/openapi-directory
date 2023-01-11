@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomChannel } from "./customchannel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomChannels = void 0;
+var utils_1 = require("../../../internal/utils");
+var customchannel_1 = require("./customchannel");
 var CustomChannels = /** @class */ (function (_super) {
     __extends(CustomChannels, _super);
     function CustomChannels() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], CustomChannels.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: CustomChannel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: customchannel_1.CustomChannel }),
         __metadata("design:type", Array)
     ], CustomChannels.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], CustomChannels.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], CustomChannels.prototype, "nextPageToken", void 0);
     return CustomChannels;
-}(SpeakeasyBase));
-export { CustomChannels };
+}(utils_1.SpeakeasyBase));
+exports.CustomChannels = CustomChannels;

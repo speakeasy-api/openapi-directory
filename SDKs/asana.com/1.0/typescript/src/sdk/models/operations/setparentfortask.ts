@@ -53,5 +53,5 @@ export class SetParentForTaskResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setParentForTask200ApplicationJsonObject?: SetParentForTask200ApplicationJson;
+  setParentForTask200ApplicationJSONObject?: SetParentForTask200ApplicationJson;
 }

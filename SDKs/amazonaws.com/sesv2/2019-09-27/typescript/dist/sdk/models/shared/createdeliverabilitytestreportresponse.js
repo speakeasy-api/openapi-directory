@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeliverabilityTestStatusEnum } from "./deliverabilityteststatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDeliverabilityTestReportResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var deliverabilityteststatusenum_1 = require("./deliverabilityteststatusenum");
 // CreateDeliverabilityTestReportResponse
 /**
  * Information about the predictive inbox placement test that you created.
@@ -34,13 +37,13 @@ var CreateDeliverabilityTestReportResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeliverabilityTestStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeliverabilityTestStatus" }),
         __metadata("design:type", String)
     ], CreateDeliverabilityTestReportResponse.prototype, "deliverabilityTestStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReportId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReportId" }),
         __metadata("design:type", String)
     ], CreateDeliverabilityTestReportResponse.prototype, "reportId", void 0);
     return CreateDeliverabilityTestReportResponse;
-}(SpeakeasyBase));
-export { CreateDeliverabilityTestReportResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeliverabilityTestReportResponse = CreateDeliverabilityTestReportResponse;

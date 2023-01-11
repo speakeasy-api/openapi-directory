@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Aliases } from "./aliases";
-import { StreamingLoggingConfig } from "./streamingloggingconfig";
-import { PriceClassEnum } from "./priceclassenum";
-import { S3Origin } from "./s3origin";
-import { TrustedSigners } from "./trustedsigners";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreamingDistributionConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var aliases_1 = require("./aliases");
+var streamingloggingconfig_1 = require("./streamingloggingconfig");
+var priceclassenum_1 = require("./priceclassenum");
+var s3origin_1 = require("./s3origin");
+var trustedsigners_1 = require("./trustedsigners");
 // StreamingDistributionConfig
 /**
  * The RTMP distribution's configuration information.
@@ -38,37 +41,37 @@ var StreamingDistributionConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Aliases)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", aliases_1.Aliases)
     ], StreamingDistributionConfig.prototype, "aliases", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StreamingDistributionConfig.prototype, "callerReference", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StreamingDistributionConfig.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], StreamingDistributionConfig.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", StreamingLoggingConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", streamingloggingconfig_1.StreamingLoggingConfig)
     ], StreamingDistributionConfig.prototype, "logging", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StreamingDistributionConfig.prototype, "priceClass", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", S3Origin)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", s3origin_1.S3Origin)
     ], StreamingDistributionConfig.prototype, "s3Origin", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TrustedSigners)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", trustedsigners_1.TrustedSigners)
     ], StreamingDistributionConfig.prototype, "trustedSigners", void 0);
     return StreamingDistributionConfig;
-}(SpeakeasyBase));
-export { StreamingDistributionConfig };
+}(utils_1.SpeakeasyBase));
+exports.StreamingDistributionConfig = StreamingDistributionConfig;

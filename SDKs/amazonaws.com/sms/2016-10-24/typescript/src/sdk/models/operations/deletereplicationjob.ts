@@ -48,7 +48,7 @@ export class DeleteReplicationJobResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteReplicationJobResponse?: Map<string, any>;
+  deleteReplicationJobResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidParameterException?: any;

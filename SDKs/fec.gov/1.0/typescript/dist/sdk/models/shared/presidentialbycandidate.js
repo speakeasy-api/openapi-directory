@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PresidentialByCandidate = void 0;
+var utils_1 = require("../../../internal/utils");
 var PresidentialByCandidate = /** @class */ (function (_super) {
     __extends(PresidentialByCandidate, _super);
     function PresidentialByCandidate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=candidate_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=candidate_id" }),
         __metadata("design:type", String)
     ], PresidentialByCandidate.prototype, "candidateId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=candidate_last_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=candidate_last_name" }),
         __metadata("design:type", String)
     ], PresidentialByCandidate.prototype, "candidateLastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=candidate_party_affiliation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=candidate_party_affiliation" }),
         __metadata("design:type", String)
     ], PresidentialByCandidate.prototype, "candidatePartyAffiliation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contributor_state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contributor_state" }),
         __metadata("design:type", String)
     ], PresidentialByCandidate.prototype, "contributorState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=election_year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=election_year" }),
         __metadata("design:type", Number)
     ], PresidentialByCandidate.prototype, "electionYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=net_receipts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=net_receipts" }),
         __metadata("design:type", Number)
     ], PresidentialByCandidate.prototype, "netReceipts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rounded_net_receipts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rounded_net_receipts" }),
         __metadata("design:type", Number)
     ], PresidentialByCandidate.prototype, "roundedNetReceipts", void 0);
     return PresidentialByCandidate;
-}(SpeakeasyBase));
-export { PresidentialByCandidate };
+}(utils_1.SpeakeasyBase));
+exports.PresidentialByCandidate = PresidentialByCandidate;

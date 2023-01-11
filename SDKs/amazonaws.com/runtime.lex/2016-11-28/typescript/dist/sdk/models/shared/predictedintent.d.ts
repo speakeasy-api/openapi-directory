@@ -6,5 +6,5 @@ import { IntentConfidence } from "./intentconfidence";
 export declare class PredictedIntent extends SpeakeasyBase {
     intentName?: string;
     nluIntentConfidence?: IntentConfidence;
-    slots?: Map<string, string>;
+    slots?: Record<string, string>;
 }

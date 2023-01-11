@@ -6,6 +6,10 @@ export enum AnimatedGifTypeEnum {
 }
 
 
+// AnimatedGif
+/** 
+ * This contains the list of the fields that are common to all media returned.
+**/
 export class AnimatedGif extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=height" })
   height?: number;

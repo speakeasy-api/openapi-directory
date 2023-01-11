@@ -19,10 +19,10 @@ export declare class VaultOperationsCancelQueryParams extends SpeakeasyBase {
 export declare class VaultOperationsCancelRequest extends SpeakeasyBase {
     pathParams: VaultOperationsCancelPathParams;
     queryParams: VaultOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class VaultOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

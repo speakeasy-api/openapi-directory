@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CaptionSnippet } from "./captionsnippet";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Caption = void 0;
+var utils_1 = require("../../../internal/utils");
+var captionsnippet_1 = require("./captionsnippet");
 // Caption
 /**
  * A *caption* resource represents a YouTube caption track. A caption track is associated with exactly one YouTube video.
@@ -34,21 +37,21 @@ var Caption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Caption.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Caption.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Caption.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snippet" }),
-        __metadata("design:type", CaptionSnippet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snippet" }),
+        __metadata("design:type", captionsnippet_1.CaptionSnippet)
     ], Caption.prototype, "snippet", void 0);
     return Caption;
-}(SpeakeasyBase));
-export { Caption };
+}(utils_1.SpeakeasyBase));
+exports.Caption = Caption;

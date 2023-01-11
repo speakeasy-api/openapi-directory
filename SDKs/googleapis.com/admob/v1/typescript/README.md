@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AdmobAccountsAdUnitsListRequest, AdmobAccountsAdUnitsListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,28 +30,28 @@ const req: AdmobAccountsAdUnitsListRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "quia",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "sed",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "dolorum",
-    fields: "aut",
-    key: "qui",
-    oauthToken: "at",
-    pageSize: 1613862810283166010,
-    pageToken: "laborum",
-    prettyPrint: false,
-    quotaUser: "non",
-    uploadType: "ut",
-    uploadProtocol: "non",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    pageSize: 8274930044578894929,
+    pageToken: "et",
+    prettyPrint: true,
+    quotaUser: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
 };
 

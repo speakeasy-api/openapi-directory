@@ -52,7 +52,7 @@ export class DeleteConfigurationSetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteConfigurationSetResponse?: Map<string, any>;
+  deleteConfigurationSetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   notFoundException?: any;

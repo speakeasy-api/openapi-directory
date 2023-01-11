@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ErrorProtoLocationTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorProto = exports.ErrorProtoLocationTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ErrorProtoLocationTypeEnum;
 (function (ErrorProtoLocationTypeEnum) {
     ErrorProtoLocationTypeEnum["Path"] = "PATH";
     ErrorProtoLocationTypeEnum["Other"] = "OTHER";
     ErrorProtoLocationTypeEnum["Parameter"] = "PARAMETER";
-})(ErrorProtoLocationTypeEnum || (ErrorProtoLocationTypeEnum = {}));
+})(ErrorProtoLocationTypeEnum = exports.ErrorProtoLocationTypeEnum || (exports.ErrorProtoLocationTypeEnum = {}));
 // ErrorProto
 /**
  * Describes one specific error.
@@ -39,33 +42,33 @@ var ErrorProto = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=argument" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=argument" }),
         __metadata("design:type", Array)
     ], ErrorProto.prototype, "argument", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], ErrorProto.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=debugInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=debugInfo" }),
         __metadata("design:type", String)
     ], ErrorProto.prototype, "debugInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], ErrorProto.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalErrorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalErrorMessage" }),
         __metadata("design:type", String)
     ], ErrorProto.prototype, "externalErrorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], ErrorProto.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationType" }),
         __metadata("design:type", String)
     ], ErrorProto.prototype, "locationType", void 0);
     return ErrorProto;
-}(SpeakeasyBase));
-export { ErrorProto };
+}(utils_1.SpeakeasyBase));
+exports.ErrorProto = ErrorProto;

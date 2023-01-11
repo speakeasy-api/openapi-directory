@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OptionsBlockchainIdResponse = exports.OptionsBlockchainIdRequest = exports.OptionsBlockchainIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var OptionsBlockchainIdPathParams = /** @class */ (function (_super) {
     __extends(OptionsBlockchainIdPathParams, _super);
     function OptionsBlockchainIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], OptionsBlockchainIdPathParams.prototype, "id", void 0);
     return OptionsBlockchainIdPathParams;
-}(SpeakeasyBase));
-export { OptionsBlockchainIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.OptionsBlockchainIdPathParams = OptionsBlockchainIdPathParams;
 var OptionsBlockchainIdRequest = /** @class */ (function (_super) {
     __extends(OptionsBlockchainIdRequest, _super);
     function OptionsBlockchainIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OptionsBlockchainIdPathParams)
     ], OptionsBlockchainIdRequest.prototype, "pathParams", void 0);
     return OptionsBlockchainIdRequest;
-}(SpeakeasyBase));
-export { OptionsBlockchainIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.OptionsBlockchainIdRequest = OptionsBlockchainIdRequest;
 var OptionsBlockchainIdResponse = /** @class */ (function (_super) {
     __extends(OptionsBlockchainIdResponse, _super);
     function OptionsBlockchainIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OptionsBlockchainIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], OptionsBlockchainIdResponse.prototype, "empty", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], OptionsBlockchainIdResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OptionsBlockchainIdResponse.prototype, "statusCode", void 0);
     return OptionsBlockchainIdResponse;
-}(SpeakeasyBase));
-export { OptionsBlockchainIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.OptionsBlockchainIdResponse = OptionsBlockchainIdResponse;

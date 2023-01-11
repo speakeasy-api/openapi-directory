@@ -1,26 +1,26 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class SetTextUsingGetQueryParams extends SpeakeasyBase {
-    padId?: string;
+    padID?: string;
     text?: string;
 }
 export declare class SetTextUsingGet200ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class SetTextUsingGet400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class SetTextUsingGet401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class SetTextUsingGet500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class SetTextUsingGetRequest extends SpeakeasyBase {
@@ -29,8 +29,8 @@ export declare class SetTextUsingGetRequest extends SpeakeasyBase {
 export declare class SetTextUsingGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setTextUsingGet200ApplicationJsonObject?: SetTextUsingGet200ApplicationJson;
-    setTextUsingGet400ApplicationJsonObject?: SetTextUsingGet400ApplicationJson;
-    setTextUsingGet401ApplicationJsonObject?: SetTextUsingGet401ApplicationJson;
-    setTextUsingGet500ApplicationJsonObject?: SetTextUsingGet500ApplicationJson;
+    setTextUsingGET200ApplicationJSONObject?: SetTextUsingGet200ApplicationJson;
+    setTextUsingGET400ApplicationJSONObject?: SetTextUsingGet400ApplicationJson;
+    setTextUsingGET401ApplicationJSONObject?: SetTextUsingGet401ApplicationJson;
+    setTextUsingGET500ApplicationJSONObject?: SetTextUsingGet500ApplicationJson;
 }

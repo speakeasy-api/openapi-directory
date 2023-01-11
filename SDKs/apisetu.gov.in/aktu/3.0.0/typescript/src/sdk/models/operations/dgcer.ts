@@ -197,23 +197,23 @@ export class DgcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dgcer400ApplicationJsonObject?: Dgcer400ApplicationJson;
+  dgcer400ApplicationJSONObject?: Dgcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  dgcer401ApplicationJsonObject?: Dgcer401ApplicationJson;
+  dgcer401ApplicationJSONObject?: Dgcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  dgcer404ApplicationJsonObject?: Dgcer404ApplicationJson;
+  dgcer404ApplicationJSONObject?: Dgcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  dgcer500ApplicationJsonObject?: Dgcer500ApplicationJson;
+  dgcer500ApplicationJSONObject?: Dgcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  dgcer502ApplicationJsonObject?: Dgcer502ApplicationJson;
+  dgcer502ApplicationJSONObject?: Dgcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  dgcer503ApplicationJsonObject?: Dgcer503ApplicationJson;
+  dgcer503ApplicationJSONObject?: Dgcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  dgcer504ApplicationJsonObject?: Dgcer504ApplicationJson;
+  dgcer504ApplicationJSONObject?: Dgcer504ApplicationJson;
 }

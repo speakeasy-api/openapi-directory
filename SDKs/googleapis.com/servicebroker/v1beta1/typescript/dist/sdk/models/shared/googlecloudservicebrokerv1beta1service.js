@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudServicebrokerV1beta1DashboardClient } from "./googlecloudservicebrokerv1beta1dashboardclient";
-import { GoogleCloudServicebrokerV1beta1Plan } from "./googlecloudservicebrokerv1beta1plan";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudServicebrokerV1beta1Service = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudservicebrokerv1beta1dashboardclient_1 = require("./googlecloudservicebrokerv1beta1dashboardclient");
+var googlecloudservicebrokerv1beta1plan_1 = require("./googlecloudservicebrokerv1beta1plan");
 // GoogleCloudServicebrokerV1beta1Service
 /**
  * The resource model mostly follows the Open Service Broker API, as
@@ -38,53 +41,53 @@ var GoogleCloudServicebrokerV1beta1Service = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], GoogleCloudServicebrokerV1beta1Service.prototype, "bindable", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], GoogleCloudServicebrokerV1beta1Service.prototype, "bindingRetrievable", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], GoogleCloudServicebrokerV1beta1Service.prototype, "bindingsRetrievable", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GoogleCloudServicebrokerV1beta1DashboardClient)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", googlecloudservicebrokerv1beta1dashboardclient_1.GoogleCloudServicebrokerV1beta1DashboardClient)
     ], GoogleCloudServicebrokerV1beta1Service.prototype, "dashboardClient", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GoogleCloudServicebrokerV1beta1Service.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GoogleCloudServicebrokerV1beta1Service.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], GoogleCloudServicebrokerV1beta1Service.prototype, "instancesRetrievable", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GoogleCloudServicebrokerV1beta1Service.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GoogleCloudServicebrokerV1beta1Service.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], GoogleCloudServicebrokerV1beta1Service.prototype, "planUpdateable", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: GoogleCloudServicebrokerV1beta1Plan }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: googlecloudservicebrokerv1beta1plan_1.GoogleCloudServicebrokerV1beta1Plan }),
         __metadata("design:type", Array)
     ], GoogleCloudServicebrokerV1beta1Service.prototype, "plans", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], GoogleCloudServicebrokerV1beta1Service.prototype, "tags", void 0);
     return GoogleCloudServicebrokerV1beta1Service;
-}(SpeakeasyBase));
-export { GoogleCloudServicebrokerV1beta1Service };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudServicebrokerV1beta1Service = GoogleCloudServicebrokerV1beta1Service;

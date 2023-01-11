@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Category } from "./category";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MonthDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var category_1 = require("./category");
 var MonthDetail = /** @class */ (function (_super) {
     __extends(MonthDetail, _super);
     function MonthDetail() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activity" }),
         __metadata("design:type", Number)
     ], MonthDetail.prototype, "activity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=age_of_money" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=age_of_money" }),
         __metadata("design:type", Number)
     ], MonthDetail.prototype, "ageOfMoney", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=budgeted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=budgeted" }),
         __metadata("design:type", Number)
     ], MonthDetail.prototype, "budgeted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categories", elemType: Category }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categories", elemType: category_1.Category }),
         __metadata("design:type", Array)
     ], MonthDetail.prototype, "categories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], MonthDetail.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=income" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=income" }),
         __metadata("design:type", Number)
     ], MonthDetail.prototype, "income", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=month" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=month" }),
         __metadata("design:type", Date)
     ], MonthDetail.prototype, "month", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=note" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=note" }),
         __metadata("design:type", String)
     ], MonthDetail.prototype, "note", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to_be_budgeted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to_be_budgeted" }),
         __metadata("design:type", Number)
     ], MonthDetail.prototype, "toBeBudgeted", void 0);
     return MonthDetail;
-}(SpeakeasyBase));
-export { MonthDetail };
+}(utils_1.SpeakeasyBase));
+exports.MonthDetail = MonthDetail;

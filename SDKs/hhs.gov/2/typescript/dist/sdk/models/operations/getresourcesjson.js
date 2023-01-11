@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetResourcesJsonResponse = exports.GetResourcesJsonRequest = exports.GetResourcesJsonQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetResourcesJsonQueryParams = /** @class */ (function (_super) {
     __extends(GetResourcesJsonQueryParams, _super);
     function GetResourcesJsonQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=q" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=q" }),
         __metadata("design:type", String)
     ], GetResourcesJsonQueryParams.prototype, "q", void 0);
     return GetResourcesJsonQueryParams;
-}(SpeakeasyBase));
-export { GetResourcesJsonQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesJsonQueryParams = GetResourcesJsonQueryParams;
 var GetResourcesJsonRequest = /** @class */ (function (_super) {
     __extends(GetResourcesJsonRequest, _super);
     function GetResourcesJsonRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetResourcesJsonQueryParams)
     ], GetResourcesJsonRequest.prototype, "queryParams", void 0);
     return GetResourcesJsonRequest;
-}(SpeakeasyBase));
-export { GetResourcesJsonRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesJsonRequest = GetResourcesJsonRequest;
 var GetResourcesJsonResponse = /** @class */ (function (_super) {
     __extends(GetResourcesJsonResponse, _super);
     function GetResourcesJsonResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetResourcesJsonResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], GetResourcesJsonResponse.prototype, "resourceWrappeds", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetResourcesJsonResponse.prototype, "statusCode", void 0);
     return GetResourcesJsonResponse;
-}(SpeakeasyBase));
-export { GetResourcesJsonResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesJsonResponse = GetResourcesJsonResponse;

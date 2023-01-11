@@ -11,8 +11,8 @@ export class CloudWatchLoggingOptionDescription extends SpeakeasyBase {
   cloudWatchLoggingOptionId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=LogStreamARN" })
-  logStreamArn: string;
+  logStreamARN: string;
 
   @SpeakeasyMetadata({ data: "json, name=RoleARN" })
-  roleArn: string;
+  roleARN: string;
 }

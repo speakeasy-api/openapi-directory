@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PatientDemographicResponse } from "./patientdemographicresponse";
-import { AccessTokenValidity } from "./accesstokenvalidity";
-import { Error } from "./error";
-import { RequestReference } from "./requestreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatientAuthConfirmResponse = exports.PatientAuthConfirmResponseAuth = void 0;
+var utils_1 = require("../../../internal/utils");
+var patientdemographicresponse_1 = require("./patientdemographicresponse");
+var accesstokenvalidity_1 = require("./accesstokenvalidity");
+var error_1 = require("./error");
+var requestreference_1 = require("./requestreference");
 // PatientAuthConfirmResponseAuth
 /**
  * depending on the purpose of auth, as specified in /auth/init, the response may include the following
@@ -41,45 +44,45 @@ var PatientAuthConfirmResponseAuth = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessToken" }),
         __metadata("design:type", String)
     ], PatientAuthConfirmResponseAuth.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=patient" }),
-        __metadata("design:type", PatientDemographicResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patient" }),
+        __metadata("design:type", patientdemographicresponse_1.PatientDemographicResponse)
     ], PatientAuthConfirmResponseAuth.prototype, "patient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validity" }),
-        __metadata("design:type", AccessTokenValidity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validity" }),
+        __metadata("design:type", accesstokenvalidity_1.AccessTokenValidity)
     ], PatientAuthConfirmResponseAuth.prototype, "validity", void 0);
     return PatientAuthConfirmResponseAuth;
-}(SpeakeasyBase));
-export { PatientAuthConfirmResponseAuth };
+}(utils_1.SpeakeasyBase));
+exports.PatientAuthConfirmResponseAuth = PatientAuthConfirmResponseAuth;
 var PatientAuthConfirmResponse = /** @class */ (function (_super) {
     __extends(PatientAuthConfirmResponse, _super);
     function PatientAuthConfirmResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auth" }),
         __metadata("design:type", PatientAuthConfirmResponseAuth)
     ], PatientAuthConfirmResponse.prototype, "auth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Error)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", error_1.ErrorT)
     ], PatientAuthConfirmResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], PatientAuthConfirmResponse.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resp" }),
-        __metadata("design:type", RequestReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resp" }),
+        __metadata("design:type", requestreference_1.RequestReference)
     ], PatientAuthConfirmResponse.prototype, "resp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], PatientAuthConfirmResponse.prototype, "timestamp", void 0);
     return PatientAuthConfirmResponse;
-}(SpeakeasyBase));
-export { PatientAuthConfirmResponse };
+}(utils_1.SpeakeasyBase));
+exports.PatientAuthConfirmResponse = PatientAuthConfirmResponse;

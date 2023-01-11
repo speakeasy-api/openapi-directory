@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeClustersActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeClustersResponse = exports.PostDescribeClustersRequest = exports.PostDescribeClustersHeaders = exports.PostDescribeClustersQueryParams = exports.PostDescribeClustersVersionEnum = exports.PostDescribeClustersActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeClustersActionEnum;
 (function (PostDescribeClustersActionEnum) {
     PostDescribeClustersActionEnum["DescribeClusters"] = "DescribeClusters";
-})(PostDescribeClustersActionEnum || (PostDescribeClustersActionEnum = {}));
-export var PostDescribeClustersVersionEnum;
+})(PostDescribeClustersActionEnum = exports.PostDescribeClustersActionEnum || (exports.PostDescribeClustersActionEnum = {}));
+var PostDescribeClustersVersionEnum;
 (function (PostDescribeClustersVersionEnum) {
     PostDescribeClustersVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(PostDescribeClustersVersionEnum || (PostDescribeClustersVersionEnum = {}));
+})(PostDescribeClustersVersionEnum = exports.PostDescribeClustersVersionEnum || (exports.PostDescribeClustersVersionEnum = {}));
 var PostDescribeClustersQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeClustersQueryParams, _super);
     function PostDescribeClustersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeClustersQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], PostDescribeClustersQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", String)
     ], PostDescribeClustersQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeClustersQueryParams.prototype, "version", void 0);
     return PostDescribeClustersQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeClustersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeClustersQueryParams = PostDescribeClustersQueryParams;
 var PostDescribeClustersHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeClustersHeaders, _super);
     function PostDescribeClustersHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeClustersHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeClustersHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeClustersHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeClustersHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeClustersHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeClustersHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeClustersHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeClustersHeaders;
-}(SpeakeasyBase));
-export { PostDescribeClustersHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeClustersHeaders = PostDescribeClustersHeaders;
 var PostDescribeClustersRequest = /** @class */ (function (_super) {
     __extends(PostDescribeClustersRequest, _super);
     function PostDescribeClustersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeClustersQueryParams)
     ], PostDescribeClustersRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeClustersHeaders)
     ], PostDescribeClustersRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeClustersRequest.prototype, "request", void 0);
     return PostDescribeClustersRequest;
-}(SpeakeasyBase));
-export { PostDescribeClustersRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeClustersRequest = PostDescribeClustersRequest;
 var PostDescribeClustersResponse = /** @class */ (function (_super) {
     __extends(PostDescribeClustersResponse, _super);
     function PostDescribeClustersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeClustersResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeClustersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeClustersResponse.prototype, "statusCode", void 0);
     return PostDescribeClustersResponse;
-}(SpeakeasyBase));
-export { PostDescribeClustersResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeClustersResponse = PostDescribeClustersResponse;

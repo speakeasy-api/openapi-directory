@@ -9,8 +9,8 @@ export declare class Algorithm extends SpeakeasyBase {
     algorithmImage?: AlgorithmImage;
     creationDateTime?: Date;
     defaultHyperParameterRanges?: DefaultHyperParameterRanges;
-    defaultHyperParameters?: Map<string, string>;
-    defaultResourceConfig?: Map<string, string>;
+    defaultHyperParameters?: Record<string, string>;
+    defaultResourceConfig?: Record<string, string>;
     lastUpdatedDateTime?: Date;
     name?: string;
     roleArn?: string;

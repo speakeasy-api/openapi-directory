@@ -10,5 +10,5 @@ export class DemoV2LocationsTilesViewerGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  demoV2LocationsTilesViewerGet200TextHtmlString?: string;
+  demoV2LocationsTilesViewerGet200TextHTMLString?: string;
 }

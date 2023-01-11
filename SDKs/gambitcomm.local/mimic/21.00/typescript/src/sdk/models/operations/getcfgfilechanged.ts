@@ -10,5 +10,5 @@ export class GetCfgFileChangedResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getCfgFileChanged200ApplicationJsonObject?: Map<string, number>;
+  getCfgFileChanged200ApplicationJSONObject?: Record<string, number>;
 }

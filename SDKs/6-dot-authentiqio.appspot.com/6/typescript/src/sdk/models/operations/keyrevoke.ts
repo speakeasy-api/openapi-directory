@@ -43,5 +43,5 @@ export class KeyRevokeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  keyRevoke200ApplicationJsonObject?: KeyRevoke200ApplicationJson;
+  keyRevoke200ApplicationJSONObject?: KeyRevoke200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.User = exports.UserLocale = exports.UserBlogs = void 0;
+var utils_1 = require("../../../internal/utils");
 // UserBlogs
 /**
  * The container of blogs for this user.
@@ -33,12 +36,12 @@ var UserBlogs = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], UserBlogs.prototype, "selfLink", void 0);
     return UserBlogs;
-}(SpeakeasyBase));
-export { UserBlogs };
+}(utils_1.SpeakeasyBase));
+exports.UserBlogs = UserBlogs;
 // UserLocale
 /**
  * This user's locale
@@ -49,61 +52,61 @@ var UserLocale = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], UserLocale.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], UserLocale.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=variant" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=variant" }),
         __metadata("design:type", String)
     ], UserLocale.prototype, "variant", void 0);
     return UserLocale;
-}(SpeakeasyBase));
-export { UserLocale };
+}(utils_1.SpeakeasyBase));
+exports.UserLocale = UserLocale;
 var User = /** @class */ (function (_super) {
     __extends(User, _super);
     function User() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=about" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=about" }),
         __metadata("design:type", String)
     ], User.prototype, "about", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blogs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blogs" }),
         __metadata("design:type", UserBlogs)
     ], User.prototype, "blogs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], User.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], User.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], User.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], User.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locale" }),
         __metadata("design:type", UserLocale)
     ], User.prototype, "locale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], User.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], User.prototype, "url", void 0);
     return User;
-}(SpeakeasyBase));
-export { User };
+}(utils_1.SpeakeasyBase));
+exports.User = User;

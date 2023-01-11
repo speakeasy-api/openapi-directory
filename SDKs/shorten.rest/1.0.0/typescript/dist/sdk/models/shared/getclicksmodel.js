@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClickModel } from "./clickmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetClicksModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var clickmodel_1 = require("./clickmodel");
 var GetClicksModel = /** @class */ (function (_super) {
     __extends(GetClicksModel, _super);
     function GetClicksModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clicks", elemType: ClickModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clicks", elemType: clickmodel_1.ClickModel }),
         __metadata("design:type", Array)
     ], GetClicksModel.prototype, "clicks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastId" }),
         __metadata("design:type", String)
     ], GetClicksModel.prototype, "lastId", void 0);
     return GetClicksModel;
-}(SpeakeasyBase));
-export { GetClicksModel };
+}(utils_1.SpeakeasyBase));
+exports.GetClicksModel = GetClicksModel;

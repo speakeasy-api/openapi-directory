@@ -1,16 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { MysqlSslConfigInput } from "./mysqlsslconfig";
 import { MysqlSslConfig } from "./mysqlsslconfig";
-/**
- * MySQL database profile.
-**/
-export declare class MysqlProfileInput extends SpeakeasyBase {
-    hostname?: string;
-    password?: string;
-    port?: number;
-    sslConfig?: MysqlSslConfigInput;
-    username?: string;
-}
+import { MysqlSslConfigInput } from "./mysqlsslconfig";
 /**
  * MySQL database profile.
 **/
@@ -19,5 +9,15 @@ export declare class MysqlProfile extends SpeakeasyBase {
     password?: string;
     port?: number;
     sslConfig?: MysqlSslConfig;
+    username?: string;
+}
+/**
+ * MySQL database profile.
+**/
+export declare class MysqlProfileInput extends SpeakeasyBase {
+    hostname?: string;
+    password?: string;
+    port?: number;
+    sslConfig?: MysqlSslConfigInput;
     username?: string;
 }

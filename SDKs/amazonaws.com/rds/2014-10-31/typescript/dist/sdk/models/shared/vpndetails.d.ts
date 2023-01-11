@@ -6,7 +6,7 @@ export declare class VpnDetails extends SpeakeasyBase {
     vpnGatewayIp?: string;
     vpnId?: string;
     vpnName?: string;
-    vpnPsk?: string;
+    vpnPSK?: string;
     vpnState?: string;
-    vpnTunnelOriginatorIp?: string;
+    vpnTunnelOriginatorIP?: string;
 }

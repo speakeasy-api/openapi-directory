@@ -13,7 +13,7 @@ export declare class GetFindingStatisticsHeaders extends SpeakeasyBase {
  * Specifies, as a map, one or more property-based conditions that filter the results of a query for findings.
 **/
 export declare class GetFindingStatisticsRequestBodyFindingCriteria extends SpeakeasyBase {
-    criterion?: Map<string, shared.CriterionAdditionalProperties>;
+    criterion?: Record<string, shared.CriterionAdditionalProperties>;
 }
 export declare enum GetFindingStatisticsRequestBodyGroupByEnum {
     ResourcesAffectedS3BucketName = "resourcesAffected.s3Bucket.name",

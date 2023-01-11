@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,50 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DurationField } from "./durationfield";
-import { DateTimeFieldType } from "./datetimefieldtype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DateTimeField = void 0;
+var utils_1 = require("../../../internal/utils");
+var durationfield_1 = require("./durationfield");
+var datetimefieldtype_1 = require("./datetimefieldtype");
 var DateTimeField = /** @class */ (function (_super) {
     __extends(DateTimeField, _super);
     function DateTimeField() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=durationField" }),
-        __metadata("design:type", DurationField)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=durationField" }),
+        __metadata("design:type", durationfield_1.DurationField)
     ], DateTimeField.prototype, "durationField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=leapDurationField" }),
-        __metadata("design:type", DurationField)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=leapDurationField" }),
+        __metadata("design:type", durationfield_1.DurationField)
     ], DateTimeField.prototype, "leapDurationField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lenient" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lenient" }),
         __metadata("design:type", Boolean)
     ], DateTimeField.prototype, "lenient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumValue" }),
         __metadata("design:type", Number)
     ], DateTimeField.prototype, "maximumValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimumValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimumValue" }),
         __metadata("design:type", Number)
     ], DateTimeField.prototype, "minimumValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DateTimeField.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rangeDurationField" }),
-        __metadata("design:type", DurationField)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rangeDurationField" }),
+        __metadata("design:type", durationfield_1.DurationField)
     ], DateTimeField.prototype, "rangeDurationField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supported" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supported" }),
         __metadata("design:type", Boolean)
     ], DateTimeField.prototype, "supported", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
-        __metadata("design:type", DateTimeFieldType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", datetimefieldtype_1.DateTimeFieldType)
     ], DateTimeField.prototype, "type", void 0);
     return DateTimeField;
-}(SpeakeasyBase));
-export { DateTimeField };
+}(utils_1.SpeakeasyBase));
+exports.DateTimeField = DateTimeField;

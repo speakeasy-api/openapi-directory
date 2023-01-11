@@ -9,5 +9,5 @@ export declare class ProtocolIpmiGetAttrRequest extends SpeakeasyBase {
 export declare class ProtocolIpmiGetAttrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolIpmiGetAttr200ApplicationJsonString?: string;
+    protocolIpmiGetAttr200ApplicationJSONString?: string;
 }

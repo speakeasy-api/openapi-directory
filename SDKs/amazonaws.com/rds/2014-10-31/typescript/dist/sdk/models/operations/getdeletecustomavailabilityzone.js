@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteCustomAvailabilityZoneActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteCustomAvailabilityZoneResponse = exports.GetDeleteCustomAvailabilityZoneRequest = exports.GetDeleteCustomAvailabilityZoneHeaders = exports.GetDeleteCustomAvailabilityZoneQueryParams = exports.GetDeleteCustomAvailabilityZoneVersionEnum = exports.GetDeleteCustomAvailabilityZoneActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteCustomAvailabilityZoneActionEnum;
 (function (GetDeleteCustomAvailabilityZoneActionEnum) {
     GetDeleteCustomAvailabilityZoneActionEnum["DeleteCustomAvailabilityZone"] = "DeleteCustomAvailabilityZone";
-})(GetDeleteCustomAvailabilityZoneActionEnum || (GetDeleteCustomAvailabilityZoneActionEnum = {}));
-export var GetDeleteCustomAvailabilityZoneVersionEnum;
+})(GetDeleteCustomAvailabilityZoneActionEnum = exports.GetDeleteCustomAvailabilityZoneActionEnum || (exports.GetDeleteCustomAvailabilityZoneActionEnum = {}));
+var GetDeleteCustomAvailabilityZoneVersionEnum;
 (function (GetDeleteCustomAvailabilityZoneVersionEnum) {
     GetDeleteCustomAvailabilityZoneVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(GetDeleteCustomAvailabilityZoneVersionEnum || (GetDeleteCustomAvailabilityZoneVersionEnum = {}));
+})(GetDeleteCustomAvailabilityZoneVersionEnum = exports.GetDeleteCustomAvailabilityZoneVersionEnum || (exports.GetDeleteCustomAvailabilityZoneVersionEnum = {}));
 var GetDeleteCustomAvailabilityZoneQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteCustomAvailabilityZoneQueryParams, _super);
     function GetDeleteCustomAvailabilityZoneQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteCustomAvailabilityZoneQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=CustomAvailabilityZoneId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=CustomAvailabilityZoneId" }),
         __metadata("design:type", String)
     ], GetDeleteCustomAvailabilityZoneQueryParams.prototype, "customAvailabilityZoneId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteCustomAvailabilityZoneQueryParams.prototype, "version", void 0);
     return GetDeleteCustomAvailabilityZoneQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteCustomAvailabilityZoneQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteCustomAvailabilityZoneQueryParams = GetDeleteCustomAvailabilityZoneQueryParams;
 var GetDeleteCustomAvailabilityZoneHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteCustomAvailabilityZoneHeaders, _super);
     function GetDeleteCustomAvailabilityZoneHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteCustomAvailabilityZoneHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteCustomAvailabilityZoneHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteCustomAvailabilityZoneHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteCustomAvailabilityZoneHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteCustomAvailabilityZoneHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteCustomAvailabilityZoneHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteCustomAvailabilityZoneHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteCustomAvailabilityZoneHeaders;
-}(SpeakeasyBase));
-export { GetDeleteCustomAvailabilityZoneHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteCustomAvailabilityZoneHeaders = GetDeleteCustomAvailabilityZoneHeaders;
 var GetDeleteCustomAvailabilityZoneRequest = /** @class */ (function (_super) {
     __extends(GetDeleteCustomAvailabilityZoneRequest, _super);
     function GetDeleteCustomAvailabilityZoneRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteCustomAvailabilityZoneQueryParams)
     ], GetDeleteCustomAvailabilityZoneRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteCustomAvailabilityZoneHeaders)
     ], GetDeleteCustomAvailabilityZoneRequest.prototype, "headers", void 0);
     return GetDeleteCustomAvailabilityZoneRequest;
-}(SpeakeasyBase));
-export { GetDeleteCustomAvailabilityZoneRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteCustomAvailabilityZoneRequest = GetDeleteCustomAvailabilityZoneRequest;
 var GetDeleteCustomAvailabilityZoneResponse = /** @class */ (function (_super) {
     __extends(GetDeleteCustomAvailabilityZoneResponse, _super);
     function GetDeleteCustomAvailabilityZoneResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteCustomAvailabilityZoneResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteCustomAvailabilityZoneResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteCustomAvailabilityZoneResponse.prototype, "statusCode", void 0);
     return GetDeleteCustomAvailabilityZoneResponse;
-}(SpeakeasyBase));
-export { GetDeleteCustomAvailabilityZoneResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteCustomAvailabilityZoneResponse = GetDeleteCustomAvailabilityZoneResponse;

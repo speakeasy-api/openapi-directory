@@ -20,7 +20,7 @@ export declare class CreateCrawlerRequest extends SpeakeasyBase {
 export declare class CreateCrawlerResponse extends SpeakeasyBase {
     alreadyExistsException?: any;
     contentType: string;
-    createCrawlerResponse?: Map<string, any>;
+    createCrawlerResponse?: Record<string, any>;
     invalidInputException?: any;
     operationTimeoutException?: any;
     resourceNumberLimitExceededException?: any;

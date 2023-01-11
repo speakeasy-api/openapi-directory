@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleLocation } from "./googlelocation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListRecommendedGoogleLocationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlelocation_1 = require("./googlelocation");
 // ListRecommendedGoogleLocationsResponse
 /**
  * Response message for GoogleLocations.ListRecommendedGoogleLocations. It also contains some locations that have been claimed by other Business Profile users since the last time they were recommended to this Business Profile account.
@@ -34,17 +37,17 @@ var ListRecommendedGoogleLocationsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleLocations", elemType: GoogleLocation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleLocations", elemType: googlelocation_1.GoogleLocation }),
         __metadata("design:type", Array)
     ], ListRecommendedGoogleLocationsResponse.prototype, "googleLocations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListRecommendedGoogleLocationsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalSize" }),
         __metadata("design:type", Number)
     ], ListRecommendedGoogleLocationsResponse.prototype, "totalSize", void 0);
     return ListRecommendedGoogleLocationsResponse;
-}(SpeakeasyBase));
-export { ListRecommendedGoogleLocationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListRecommendedGoogleLocationsResponse = ListRecommendedGoogleLocationsResponse;

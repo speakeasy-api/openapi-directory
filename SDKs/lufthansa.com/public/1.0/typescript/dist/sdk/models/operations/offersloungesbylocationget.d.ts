@@ -22,6 +22,6 @@ export declare class OffersLoungesByLocationGetRequest extends SpeakeasyBase {
 }
 export declare class OffersLoungesByLocationGetResponse extends SpeakeasyBase {
     contentType: string;
-    offersLoungesByLocationGet200ApplicationJsonObject?: Map<string, any>;
+    offersLoungesByLocationGet200ApplicationJSONObject?: Record<string, any>;
     statusCode: number;
 }

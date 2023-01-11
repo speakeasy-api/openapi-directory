@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObAccount6 } from "./obaccount6";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObReadDataAccount5 = void 0;
+var utils_1 = require("../../../internal/utils");
+var obaccount6_1 = require("./obaccount6");
 var ObReadDataAccount5 = /** @class */ (function (_super) {
     __extends(ObReadDataAccount5, _super);
     function ObReadDataAccount5() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Account", elemType: ObAccount6 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Account", elemType: obaccount6_1.ObAccount6 }),
         __metadata("design:type", Array)
     ], ObReadDataAccount5.prototype, "account", void 0);
     return ObReadDataAccount5;
-}(SpeakeasyBase));
-export { ObReadDataAccount5 };
+}(utils_1.SpeakeasyBase));
+exports.ObReadDataAccount5 = ObReadDataAccount5;

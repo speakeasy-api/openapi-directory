@@ -108,11 +108,11 @@ export declare class CemstRequest extends SpeakeasyBase {
 export declare class CemstResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    cemst400ApplicationJsonObject?: Cemst400ApplicationJson;
-    cemst401ApplicationJsonObject?: Cemst401ApplicationJson;
-    cemst404ApplicationJsonObject?: Cemst404ApplicationJson;
-    cemst500ApplicationJsonObject?: Cemst500ApplicationJson;
-    cemst502ApplicationJsonObject?: Cemst502ApplicationJson;
-    cemst503ApplicationJsonObject?: Cemst503ApplicationJson;
-    cemst504ApplicationJsonObject?: Cemst504ApplicationJson;
+    cemst400ApplicationJSONObject?: Cemst400ApplicationJson;
+    cemst401ApplicationJSONObject?: Cemst401ApplicationJson;
+    cemst404ApplicationJSONObject?: Cemst404ApplicationJson;
+    cemst500ApplicationJSONObject?: Cemst500ApplicationJson;
+    cemst502ApplicationJSONObject?: Cemst502ApplicationJson;
+    cemst503ApplicationJSONObject?: Cemst503ApplicationJson;
+    cemst504ApplicationJSONObject?: Cemst504ApplicationJson;
 }

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { IncerRequest, IncerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,23 +30,23 @@ const req: IncerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      appno: "possimus",
-      certno: "autem",
+      appno: "sit",
+      certno: "voluptas",
     },
-    consentArtifact: "ipsum",
+    consentArtifact: "culpa",
     format: "pdf",
-    txnId: "aut",
+    txnId: "consequuntur",
   },
 };
 
-sdk.sdk.incer(req).then((res: IncerResponse | AxiosError) => {
+sdk.apIs.incer(req).then((res: IncerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -56,7 +55,7 @@ sdk.sdk.incer(req).then((res: IncerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `incer` - Income Certificate
 * `rmcer` - Marriage Certificate

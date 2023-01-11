@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDatasetRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateDatasetRequest = /** @class */ (function (_super) {
     __extends(CreateDatasetRequest, _super);
     function CreateDatasetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasetGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasetGroupArn" }),
         __metadata("design:type", String)
     ], CreateDatasetRequest.prototype, "datasetGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasetType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasetType" }),
         __metadata("design:type", String)
     ], CreateDatasetRequest.prototype, "datasetType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateDatasetRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemaArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemaArn" }),
         __metadata("design:type", String)
     ], CreateDatasetRequest.prototype, "schemaArn", void 0);
     return CreateDatasetRequest;
-}(SpeakeasyBase));
-export { CreateDatasetRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateDatasetRequest = CreateDatasetRequest;

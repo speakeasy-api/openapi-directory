@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Attribution } from "./attribution";
-import { MediaItemDataRef } from "./mediaitemdataref";
-import { Dimensions } from "./dimensions";
-import { MediaInsights } from "./mediainsights";
-import { LocationAssociation } from "./locationassociation";
-export var MediaItemMediaFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MediaItem = exports.MediaItemMediaFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var attribution_1 = require("./attribution");
+var mediaitemdataref_1 = require("./mediaitemdataref");
+var dimensions_1 = require("./dimensions");
+var mediainsights_1 = require("./mediainsights");
+var locationassociation_1 = require("./locationassociation");
+var MediaItemMediaFormatEnum;
 (function (MediaItemMediaFormatEnum) {
     MediaItemMediaFormatEnum["MediaFormatUnspecified"] = "MEDIA_FORMAT_UNSPECIFIED";
     MediaItemMediaFormatEnum["Photo"] = "PHOTO";
     MediaItemMediaFormatEnum["Video"] = "VIDEO";
-})(MediaItemMediaFormatEnum || (MediaItemMediaFormatEnum = {}));
+})(MediaItemMediaFormatEnum = exports.MediaItemMediaFormatEnum || (exports.MediaItemMediaFormatEnum = {}));
 // MediaItem
 /**
  * A single media item.
@@ -44,53 +47,53 @@ var MediaItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attribution" }),
-        __metadata("design:type", Attribution)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attribution" }),
+        __metadata("design:type", attribution_1.Attribution)
     ], MediaItem.prototype, "attribution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataRef" }),
-        __metadata("design:type", MediaItemDataRef)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataRef" }),
+        __metadata("design:type", mediaitemdataref_1.MediaItemDataRef)
     ], MediaItem.prototype, "dataRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensions" }),
-        __metadata("design:type", Dimensions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensions" }),
+        __metadata("design:type", dimensions_1.Dimensions)
     ], MediaItem.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleUrl" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "googleUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insights" }),
-        __metadata("design:type", MediaInsights)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insights" }),
+        __metadata("design:type", mediainsights_1.MediaInsights)
     ], MediaItem.prototype, "insights", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationAssociation" }),
-        __metadata("design:type", LocationAssociation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationAssociation" }),
+        __metadata("design:type", locationassociation_1.LocationAssociation)
     ], MediaItem.prototype, "locationAssociation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mediaFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mediaFormat" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "mediaFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceUrl" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "sourceUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnailUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnailUrl" }),
         __metadata("design:type", String)
     ], MediaItem.prototype, "thumbnailUrl", void 0);
     return MediaItem;
-}(SpeakeasyBase));
-export { MediaItem };
+}(utils_1.SpeakeasyBase));
+exports.MediaItem = MediaItem;

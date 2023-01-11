@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AwsAccessKeysResponseAuthenticationModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AwsAccessKeysResponse = exports.AwsAccessKeysResponseAuthenticationModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AwsAccessKeysResponseAuthenticationModeEnum;
 (function (AwsAccessKeysResponseAuthenticationModeEnum) {
     AwsAccessKeysResponseAuthenticationModeEnum["Credentials"] = "credentials";
-})(AwsAccessKeysResponseAuthenticationModeEnum || (AwsAccessKeysResponseAuthenticationModeEnum = {}));
+})(AwsAccessKeysResponseAuthenticationModeEnum = exports.AwsAccessKeysResponseAuthenticationModeEnum || (exports.AwsAccessKeysResponseAuthenticationModeEnum = {}));
 var AwsAccessKeysResponse = /** @class */ (function (_super) {
     __extends(AwsAccessKeysResponse, _super);
     function AwsAccessKeysResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessKeyId" }),
         __metadata("design:type", String)
     ], AwsAccessKeysResponse.prototype, "accessKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authenticationMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authenticationMode" }),
         __metadata("design:type", String)
     ], AwsAccessKeysResponse.prototype, "authenticationMode", void 0);
     return AwsAccessKeysResponse;
-}(SpeakeasyBase));
-export { AwsAccessKeysResponse };
+}(utils_1.SpeakeasyBase));
+exports.AwsAccessKeysResponse = AwsAccessKeysResponse;

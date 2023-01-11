@@ -1,7 +1,10 @@
-export var TemplateVersionStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TemplateVersionStatusEnum = void 0;
+var TemplateVersionStatusEnum;
 (function (TemplateVersionStatusEnum) {
     TemplateVersionStatusEnum["RegistrationInProgress"] = "REGISTRATION_IN_PROGRESS";
     TemplateVersionStatusEnum["RegistrationFailed"] = "REGISTRATION_FAILED";
     TemplateVersionStatusEnum["Draft"] = "DRAFT";
     TemplateVersionStatusEnum["Published"] = "PUBLISHED";
-})(TemplateVersionStatusEnum || (TemplateVersionStatusEnum = {}));
+})(TemplateVersionStatusEnum = exports.TemplateVersionStatusEnum || (exports.TemplateVersionStatusEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PlayerLevel } from "./playerlevel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetagameConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var playerlevel_1 = require("./playerlevel");
 // MetagameConfig
 /**
  * The metagame config resource
@@ -34,17 +37,17 @@ var MetagameConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentVersion" }),
         __metadata("design:type", Number)
     ], MetagameConfig.prototype, "currentVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], MetagameConfig.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=playerLevels", elemType: PlayerLevel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=playerLevels", elemType: playerlevel_1.PlayerLevel }),
         __metadata("design:type", Array)
     ], MetagameConfig.prototype, "playerLevels", void 0);
     return MetagameConfig;
-}(SpeakeasyBase));
-export { MetagameConfig };
+}(utils_1.SpeakeasyBase));
+exports.MetagameConfig = MetagameConfig;

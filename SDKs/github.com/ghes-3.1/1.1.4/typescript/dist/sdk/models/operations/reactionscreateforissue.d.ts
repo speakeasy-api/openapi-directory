@@ -30,6 +30,6 @@ export declare class ReactionsCreateForIssueResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     reaction?: shared.Reaction;
-    reactionsCreateForIssue415ApplicationJsonObject?: ReactionsCreateForIssue415ApplicationJson;
+    reactionsCreateForIssue415ApplicationJSONObject?: ReactionsCreateForIssue415ApplicationJson;
     validationError?: shared.ValidationError;
 }

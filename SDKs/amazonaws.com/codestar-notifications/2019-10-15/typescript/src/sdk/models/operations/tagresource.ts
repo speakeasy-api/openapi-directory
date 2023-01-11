@@ -32,7 +32,7 @@ export class TagResourceRequestBody extends SpeakeasyBase {
   arn: string;
 
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags: Map<string, string>;
+  tags: Record<string, string>;
 }
 
 

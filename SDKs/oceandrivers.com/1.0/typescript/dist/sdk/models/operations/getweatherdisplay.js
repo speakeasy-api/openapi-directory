@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetWeatherDisplayResponse = exports.GetWeatherDisplayRequest = exports.GetWeatherDisplayQueryParams = exports.GetWeatherDisplayPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetWeatherDisplayPathParams = /** @class */ (function (_super) {
     __extends(GetWeatherDisplayPathParams, _super);
     function GetWeatherDisplayPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=stationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=stationName" }),
         __metadata("design:type", String)
     ], GetWeatherDisplayPathParams.prototype, "stationName", void 0);
     return GetWeatherDisplayPathParams;
-}(SpeakeasyBase));
-export { GetWeatherDisplayPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetWeatherDisplayPathParams = GetWeatherDisplayPathParams;
 var GetWeatherDisplayQueryParams = /** @class */ (function (_super) {
     __extends(GetWeatherDisplayQueryParams, _super);
     function GetWeatherDisplayQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=period" }),
         __metadata("design:type", String)
     ], GetWeatherDisplayQueryParams.prototype, "period", void 0);
     return GetWeatherDisplayQueryParams;
-}(SpeakeasyBase));
-export { GetWeatherDisplayQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetWeatherDisplayQueryParams = GetWeatherDisplayQueryParams;
 var GetWeatherDisplayRequest = /** @class */ (function (_super) {
     __extends(GetWeatherDisplayRequest, _super);
     function GetWeatherDisplayRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetWeatherDisplayPathParams)
     ], GetWeatherDisplayRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetWeatherDisplayQueryParams)
     ], GetWeatherDisplayRequest.prototype, "queryParams", void 0);
     return GetWeatherDisplayRequest;
-}(SpeakeasyBase));
-export { GetWeatherDisplayRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetWeatherDisplayRequest = GetWeatherDisplayRequest;
 var GetWeatherDisplayResponse = /** @class */ (function (_super) {
     __extends(GetWeatherDisplayResponse, _super);
     function GetWeatherDisplayResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetWeatherDisplayResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetWeatherDisplayResponse.prototype, "statusCode", void 0);
     return GetWeatherDisplayResponse;
-}(SpeakeasyBase));
-export { GetWeatherDisplayResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetWeatherDisplayResponse = GetWeatherDisplayResponse;

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class UpdatePayslipPathParams extends SpeakeasyBase {
-    payslipId: string;
+    payslipID: string;
 }
 export declare class UpdatePayslipHeaders extends SpeakeasyBase {
     xeroTenantId: string;

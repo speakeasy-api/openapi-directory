@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetAuthorNameUsingGetQueryParams extends SpeakeasyBase {
-    authorId?: string;
+    authorID?: string;
 }
 export declare class GetAuthorNameUsingGet200ApplicationJsonDataInfo extends SpeakeasyBase {
     colorId?: string;
@@ -18,17 +18,17 @@ export declare class GetAuthorNameUsingGet200ApplicationJson extends SpeakeasyBa
 }
 export declare class GetAuthorNameUsingGet400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetAuthorNameUsingGet401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetAuthorNameUsingGet500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetAuthorNameUsingGetRequest extends SpeakeasyBase {
@@ -37,8 +37,8 @@ export declare class GetAuthorNameUsingGetRequest extends SpeakeasyBase {
 export declare class GetAuthorNameUsingGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getAuthorNameUsingGet200ApplicationJsonObject?: GetAuthorNameUsingGet200ApplicationJson;
-    getAuthorNameUsingGet400ApplicationJsonObject?: GetAuthorNameUsingGet400ApplicationJson;
-    getAuthorNameUsingGet401ApplicationJsonObject?: GetAuthorNameUsingGet401ApplicationJson;
-    getAuthorNameUsingGet500ApplicationJsonObject?: GetAuthorNameUsingGet500ApplicationJson;
+    getAuthorNameUsingGET200ApplicationJSONObject?: GetAuthorNameUsingGet200ApplicationJson;
+    getAuthorNameUsingGET400ApplicationJSONObject?: GetAuthorNameUsingGet400ApplicationJson;
+    getAuthorNameUsingGET401ApplicationJSONObject?: GetAuthorNameUsingGet401ApplicationJson;
+    getAuthorNameUsingGET500ApplicationJSONObject?: GetAuthorNameUsingGet500ApplicationJson;
 }

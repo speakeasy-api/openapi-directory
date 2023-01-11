@@ -44,5 +44,5 @@ export class GetPortfolioResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getPortfolio200ApplicationJsonObject?: GetPortfolio200ApplicationJson;
+  getPortfolio200ApplicationJSONObject?: GetPortfolio200ApplicationJson;
 }

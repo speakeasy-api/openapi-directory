@@ -1,0 +1,71 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var association_1 = require("./association");
+var bioentity_1 = require("./bioentity");
+var bioentityset_1 = require("./bioentityset");
+var bioentitysethomologs_1 = require("./bioentitysethomologs");
+var bioentitysetslimmer_1 = require("./bioentitysetslimmer");
+var cam_1 = require("./cam");
+var evidencegraph_1 = require("./evidencegraph");
+var genomefeatures_1 = require("./genomefeatures");
+var graph_1 = require("./graph");
+var identifiermapper_1 = require("./identifiermapper");
+var identifierprefixes_1 = require("./identifierprefixes");
+var individual_1 = require("./individual");
+var mart_1 = require("./mart");
+var metadata_1 = require("./metadata");
+var nlpannotate_1 = require("./nlpannotate");
+var ontol_1 = require("./ontol");
+var ontollabeler_1 = require("./ontollabeler");
+var ontology_1 = require("./ontology");
+var owlontology_1 = require("./owlontology");
+var pairsim_1 = require("./pairsim");
+var relationusage_1 = require("./relationusage");
+var search_1 = require("./search");
+var sim_1 = require("./sim");
+var variationset_1 = require("./variationset");
+exports.ServerList = [
+    "https://monarchinitiative.org/api",
+];
+var SDK = /** @class */ (function () {
+    function SDK(props) {
+        var _a, _b;
+        this._language = "typescript";
+        this._sdkVersion = "0.0.1";
+        this._genVersion = "internal";
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        this._securityClient = this._defaultClient;
+        this.association = new association_1.Association(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.bioentity = new bioentity_1.Bioentity(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.bioentityset = new bioentityset_1.Bioentityset(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.bioentitysetHomologs = new bioentitysethomologs_1.BioentitysetHomologs(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.bioentitysetSlimmer = new bioentitysetslimmer_1.BioentitysetSlimmer(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.cam = new cam_1.Cam(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.evidenceGraph = new evidencegraph_1.EvidenceGraph(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.genomeFeatures = new genomefeatures_1.GenomeFeatures(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.graph = new graph_1.Graph(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.identifierMapper = new identifiermapper_1.IdentifierMapper(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.identifierPrefixes = new identifierprefixes_1.IdentifierPrefixes(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.individual = new individual_1.Individual(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.mart = new mart_1.Mart(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.metadata = new metadata_1.Metadata(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.nlpAnnotate = new nlpannotate_1.NlpAnnotate(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.ontol = new ontol_1.Ontol(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.ontolLabeler = new ontollabeler_1.OntolLabeler(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.ontology = new ontology_1.Ontology(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.owlOntology = new owlontology_1.OwlOntology(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.pairSim = new pairsim_1.PairSim(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.relationUsage = new relationusage_1.RelationUsage(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.search = new search_1.Search(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.sim = new sim_1.Sim(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.variationSet = new variationset_1.VariationSet(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+    }
+    return SDK;
+}());
+exports.SDK = SDK;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CandlestickData } from "./candlestickdata";
-import { CandlestickDomain } from "./candlestickdomain";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CandlestickChartSpec = void 0;
+var utils_1 = require("../../../internal/utils");
+var candlestickdata_1 = require("./candlestickdata");
+var candlestickdomain_1 = require("./candlestickdomain");
 // CandlestickChartSpec
 /**
  * A candlestick chart.
@@ -35,13 +38,13 @@ var CandlestickChartSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: CandlestickData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: candlestickdata_1.CandlestickData }),
         __metadata("design:type", Array)
     ], CandlestickChartSpec.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
-        __metadata("design:type", CandlestickDomain)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
+        __metadata("design:type", candlestickdomain_1.CandlestickDomain)
     ], CandlestickChartSpec.prototype, "domain", void 0);
     return CandlestickChartSpec;
-}(SpeakeasyBase));
-export { CandlestickChartSpec };
+}(utils_1.SpeakeasyBase));
+exports.CandlestickChartSpec = CandlestickChartSpec;

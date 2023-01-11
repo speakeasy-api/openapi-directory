@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TeamsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsResponse = exports.TeamsRequest = exports.TeamsPathParams = exports.TeamsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TeamsFormatEnum;
 (function (TeamsFormatEnum) {
     TeamsFormatEnum["Xml"] = "XML";
     TeamsFormatEnum["Json"] = "JSON";
-})(TeamsFormatEnum || (TeamsFormatEnum = {}));
+})(TeamsFormatEnum = exports.TeamsFormatEnum || (exports.TeamsFormatEnum = {}));
 var TeamsPathParams = /** @class */ (function (_super) {
     __extends(TeamsPathParams, _super);
     function TeamsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], TeamsPathParams.prototype, "format", void 0);
     return TeamsPathParams;
-}(SpeakeasyBase));
-export { TeamsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamsPathParams = TeamsPathParams;
 var TeamsRequest = /** @class */ (function (_super) {
     __extends(TeamsRequest, _super);
     function TeamsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsPathParams)
     ], TeamsRequest.prototype, "pathParams", void 0);
     return TeamsRequest;
-}(SpeakeasyBase));
-export { TeamsRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRequest = TeamsRequest;
 var TeamsResponse = /** @class */ (function (_super) {
     __extends(TeamsResponse, _super);
     function TeamsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], TeamsResponse.prototype, "teams", void 0);
     return TeamsResponse;
-}(SpeakeasyBase));
-export { TeamsResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsResponse = TeamsResponse;

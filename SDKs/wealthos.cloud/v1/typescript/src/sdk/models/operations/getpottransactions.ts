@@ -70,20 +70,20 @@ export class GetPotTransactionsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getPotTransactions200ApplicationJsonAny?: any;
+  getPotTransactions200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPotTransactions401ApplicationJsonAny?: any;
+  getPotTransactions401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPotTransactions403ApplicationJsonAny?: any;
+  getPotTransactions403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPotTransactions404ApplicationJsonAny?: any;
+  getPotTransactions404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPotTransactions429ApplicationJsonAny?: any;
+  getPotTransactions429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPotTransactions500ApplicationJsonAny?: any;
+  getPotTransactions500ApplicationJSONAny?: any;
 }

@@ -21,9 +21,9 @@ export declare class AppsListInstallationsForAuthenticatedUserRequest extends Sp
 }
 export declare class AppsListInstallationsForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    appsListInstallationsForAuthenticatedUser200ApplicationJsonObject?: AppsListInstallationsForAuthenticatedUser200ApplicationJson;
-    appsListInstallationsForAuthenticatedUser415ApplicationJsonObject?: AppsListInstallationsForAuthenticatedUser415ApplicationJson;
+    appsListInstallationsForAuthenticatedUser200ApplicationJSONObject?: AppsListInstallationsForAuthenticatedUser200ApplicationJson;
+    appsListInstallationsForAuthenticatedUser415ApplicationJSONObject?: AppsListInstallationsForAuthenticatedUser415ApplicationJson;
     basicError?: shared.BasicError;
 }

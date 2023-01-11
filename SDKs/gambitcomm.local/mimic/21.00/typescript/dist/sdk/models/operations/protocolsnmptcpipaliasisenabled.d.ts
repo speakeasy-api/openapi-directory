@@ -10,5 +10,5 @@ export declare class ProtocolSnmptcpIpaliasIsenabledRequest extends SpeakeasyBas
 export declare class ProtocolSnmptcpIpaliasIsenabledResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSnmptcpIpaliasIsenabled200ApplicationJsonString?: string;
+    protocolSnmptcpIpaliasIsenabled200ApplicationJSONString?: string;
 }

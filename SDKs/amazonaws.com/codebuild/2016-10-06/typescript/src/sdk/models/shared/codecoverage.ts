@@ -35,5 +35,5 @@ export class CodeCoverage extends SpeakeasyBase {
   linesMissed?: number;
 
   @SpeakeasyMetadata({ data: "json, name=reportARN" })
-  reportArn?: string;
+  reportARN?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Container } from "./container";
-import { ContainerServiceEndpoint } from "./containerserviceendpoint";
-import { ContainerServiceDeploymentStateEnum } from "./containerservicedeploymentstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContainerServiceDeployment = void 0;
+var utils_1 = require("../../../internal/utils");
+var container_1 = require("./container");
+var containerserviceendpoint_1 = require("./containerserviceendpoint");
+var containerservicedeploymentstateenum_1 = require("./containerservicedeploymentstateenum");
 // ContainerServiceDeployment
 /**
  * <p>Describes a container deployment configuration of an Amazon Lightsail container service.</p> <p>A deployment specifies the settings, such as the ports and launch command, of containers that are deployed to your container service.</p>
@@ -36,25 +39,25 @@ var ContainerServiceDeployment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containers", elemType: Container }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containers", elemType: container_1.Container }),
+        __metadata("design:type", Object)
     ], ContainerServiceDeployment.prototype, "containers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], ContainerServiceDeployment.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicEndpoint" }),
-        __metadata("design:type", ContainerServiceEndpoint)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicEndpoint" }),
+        __metadata("design:type", containerserviceendpoint_1.ContainerServiceEndpoint)
     ], ContainerServiceDeployment.prototype, "publicEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ContainerServiceDeployment.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], ContainerServiceDeployment.prototype, "version", void 0);
     return ContainerServiceDeployment;
-}(SpeakeasyBase));
-export { ContainerServiceDeployment };
+}(utils_1.SpeakeasyBase));
+exports.ContainerServiceDeployment = ContainerServiceDeployment;

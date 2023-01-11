@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SessionControllerGetSessionInfoResponse = exports.SessionControllerGetSessionInfoRequest = exports.SessionControllerGetSessionInfoQueryParams = exports.SessionControllerGetSessionInfoPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SessionControllerGetSessionInfoPathParams = /** @class */ (function (_super) {
     __extends(SessionControllerGetSessionInfoPathParams, _super);
     function SessionControllerGetSessionInfoPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=shortName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=shortName" }),
         __metadata("design:type", String)
     ], SessionControllerGetSessionInfoPathParams.prototype, "shortName", void 0);
     return SessionControllerGetSessionInfoPathParams;
-}(SpeakeasyBase));
-export { SessionControllerGetSessionInfoPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerGetSessionInfoPathParams = SessionControllerGetSessionInfoPathParams;
 var SessionControllerGetSessionInfoQueryParams = /** @class */ (function (_super) {
     __extends(SessionControllerGetSessionInfoQueryParams, _super);
     function SessionControllerGetSessionInfoQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=token" }),
         __metadata("design:type", String)
     ], SessionControllerGetSessionInfoQueryParams.prototype, "token", void 0);
     return SessionControllerGetSessionInfoQueryParams;
-}(SpeakeasyBase));
-export { SessionControllerGetSessionInfoQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerGetSessionInfoQueryParams = SessionControllerGetSessionInfoQueryParams;
 var SessionControllerGetSessionInfoRequest = /** @class */ (function (_super) {
     __extends(SessionControllerGetSessionInfoRequest, _super);
     function SessionControllerGetSessionInfoRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SessionControllerGetSessionInfoPathParams)
     ], SessionControllerGetSessionInfoRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SessionControllerGetSessionInfoQueryParams)
     ], SessionControllerGetSessionInfoRequest.prototype, "queryParams", void 0);
     return SessionControllerGetSessionInfoRequest;
-}(SpeakeasyBase));
-export { SessionControllerGetSessionInfoRequest };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerGetSessionInfoRequest = SessionControllerGetSessionInfoRequest;
 var SessionControllerGetSessionInfoResponse = /** @class */ (function (_super) {
     __extends(SessionControllerGetSessionInfoResponse, _super);
     function SessionControllerGetSessionInfoResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SessionControllerGetSessionInfoResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], SessionControllerGetSessionInfoResponse.prototype, "sessionControllerGetSessionInfo200ApplicationJsonString", void 0);
+    ], SessionControllerGetSessionInfoResponse.prototype, "sessionControllerGetSessionInfo200ApplicationJSONString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], SessionControllerGetSessionInfoResponse.prototype, "sessionControllerGetSessionInfo200ApplicationXmlString", void 0);
+    ], SessionControllerGetSessionInfoResponse.prototype, "sessionControllerGetSessionInfo200ApplicationXMLString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], SessionControllerGetSessionInfoResponse.prototype, "sessionControllerGetSessionInfo200TextJsonString", void 0);
+    ], SessionControllerGetSessionInfoResponse.prototype, "sessionControllerGetSessionInfo200TextJSONString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], SessionControllerGetSessionInfoResponse.prototype, "sessionControllerGetSessionInfo200TextXmlString", void 0);
+    ], SessionControllerGetSessionInfoResponse.prototype, "sessionControllerGetSessionInfo200TextXMLString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SessionControllerGetSessionInfoResponse.prototype, "statusCode", void 0);
     return SessionControllerGetSessionInfoResponse;
-}(SpeakeasyBase));
-export { SessionControllerGetSessionInfoResponse };
+}(utils_1.SpeakeasyBase));
+exports.SessionControllerGetSessionInfoResponse = SessionControllerGetSessionInfoResponse;

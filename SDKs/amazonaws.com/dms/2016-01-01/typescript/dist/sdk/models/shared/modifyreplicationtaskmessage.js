@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MigrationTypeValueEnum } from "./migrationtypevalueenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyReplicationTaskMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var migrationtypevalueenum_1 = require("./migrationtypevalueenum");
 // ModifyReplicationTaskMessage
 /**
  * <p/>
@@ -34,41 +37,41 @@ var ModifyReplicationTaskMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CdcStartPosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CdcStartPosition" }),
         __metadata("design:type", String)
     ], ModifyReplicationTaskMessage.prototype, "cdcStartPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CdcStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CdcStartTime" }),
         __metadata("design:type", Date)
     ], ModifyReplicationTaskMessage.prototype, "cdcStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CdcStopPosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CdcStopPosition" }),
         __metadata("design:type", String)
     ], ModifyReplicationTaskMessage.prototype, "cdcStopPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MigrationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MigrationType" }),
         __metadata("design:type", String)
     ], ModifyReplicationTaskMessage.prototype, "migrationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationTaskArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationTaskArn" }),
         __metadata("design:type", String)
     ], ModifyReplicationTaskMessage.prototype, "replicationTaskArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationTaskIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationTaskIdentifier" }),
         __metadata("design:type", String)
     ], ModifyReplicationTaskMessage.prototype, "replicationTaskIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationTaskSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationTaskSettings" }),
         __metadata("design:type", String)
     ], ModifyReplicationTaskMessage.prototype, "replicationTaskSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableMappings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableMappings" }),
         __metadata("design:type", String)
     ], ModifyReplicationTaskMessage.prototype, "tableMappings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaskData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaskData" }),
         __metadata("design:type", String)
     ], ModifyReplicationTaskMessage.prototype, "taskData", void 0);
     return ModifyReplicationTaskMessage;
-}(SpeakeasyBase));
-export { ModifyReplicationTaskMessage };
+}(utils_1.SpeakeasyBase));
+exports.ModifyReplicationTaskMessage = ModifyReplicationTaskMessage;

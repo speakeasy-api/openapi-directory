@@ -16,32 +16,31 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { SmsConversionRequest, SmsConversionResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     option1: {
       apiKey: {
         apiKey: "YOUR_API_KEY_HERE",
-      }
+      },
       apiSecret: {
         apiKey: "YOUR_API_KEY_HERE",
-      }
+      },
     },
   }
 ));
     
 const req: SmsConversionRequest = {
   queryParams: {
-    delivered: "animi",
-    messageId: "a",
-    timestamp: "voluptatem",
+    delivered: "sit",
+    messageId: "voluptas",
+    timestamp: "culpa",
   },
 };
 

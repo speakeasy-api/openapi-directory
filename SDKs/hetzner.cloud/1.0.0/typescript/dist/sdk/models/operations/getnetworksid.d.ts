@@ -27,7 +27,7 @@ export declare class GetNetworksId200ApplicationJsonNetwork extends SpeakeasyBas
     created: string;
     id: number;
     ipRange: string;
-    labels: Map<string, any>;
+    labels: Record<string, any>;
     loadBalancers?: number[];
     name: string;
     protection: GetNetworksId200ApplicationJsonNetworkProtection;
@@ -43,6 +43,6 @@ export declare class GetNetworksIdRequest extends SpeakeasyBase {
 }
 export declare class GetNetworksIdResponse extends SpeakeasyBase {
     contentType: string;
-    getNetworksId200ApplicationJsonObject?: GetNetworksId200ApplicationJson;
     statusCode: number;
+    getNetworksId200ApplicationJSONObject?: GetNetworksId200ApplicationJson;
 }

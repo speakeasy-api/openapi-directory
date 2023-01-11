@@ -18,6 +18,6 @@ export declare class OndStatusRequest extends SpeakeasyBase {
 }
 export declare class OndStatusResponse extends SpeakeasyBase {
     contentType: string;
-    ondStatus200ApplicationJsonString?: string;
+    ondStatus200ApplicationJSONString?: string;
     statusCode: number;
 }

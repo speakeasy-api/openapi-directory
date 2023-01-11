@@ -25,10 +25,10 @@ export class PatchOrganizationRequestBodyAddress extends SpeakeasyBase {
 
 export class PatchOrganizationRequestBodyChannels extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=slack" })
-  slack?: Map<string, any>;
+  slack?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=telegram" })
-  telegram?: Map<string, any>;
+  telegram?: Record<string, any>;
 }
 
 

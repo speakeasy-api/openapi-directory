@@ -1,0 +1,23 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FlatLocalesEnum = void 0;
+var FlatLocalesEnum;
+(function (FlatLocalesEnum) {
+    FlatLocalesEnum["En"] = "en";
+    FlatLocalesEnum["EnGb"] = "en-GB";
+    FlatLocalesEnum["Es"] = "es";
+    FlatLocalesEnum["Fr"] = "fr";
+    FlatLocalesEnum["De"] = "de";
+    FlatLocalesEnum["It"] = "it";
+    FlatLocalesEnum["Ja"] = "ja";
+    FlatLocalesEnum["Ko"] = "ko";
+    FlatLocalesEnum["Nl"] = "nl";
+    FlatLocalesEnum["Pl"] = "pl";
+    FlatLocalesEnum["Pt"] = "pt";
+    FlatLocalesEnum["PtBr"] = "pt-BR";
+    FlatLocalesEnum["Ro"] = "ro";
+    FlatLocalesEnum["Ru"] = "ru";
+    FlatLocalesEnum["Sv"] = "sv";
+    FlatLocalesEnum["Tr"] = "tr";
+    FlatLocalesEnum["ZhHans"] = "zh-Hans";
+})(FlatLocalesEnum = exports.FlatLocalesEnum || (exports.FlatLocalesEnum = {}));

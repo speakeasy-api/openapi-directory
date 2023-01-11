@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Deployment } from "./deployment";
-export var CreateProfileRequestProfileTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateProfileRequest = exports.CreateProfileRequestProfileTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var deployment_1 = require("./deployment");
+var CreateProfileRequestProfileTypeEnum;
 (function (CreateProfileRequestProfileTypeEnum) {
     CreateProfileRequestProfileTypeEnum["ProfileTypeUnspecified"] = "PROFILE_TYPE_UNSPECIFIED";
     CreateProfileRequestProfileTypeEnum["Cpu"] = "CPU";
@@ -34,7 +37,7 @@ export var CreateProfileRequestProfileTypeEnum;
     CreateProfileRequestProfileTypeEnum["Contention"] = "CONTENTION";
     CreateProfileRequestProfileTypeEnum["PeakHeap"] = "PEAK_HEAP";
     CreateProfileRequestProfileTypeEnum["HeapAlloc"] = "HEAP_ALLOC";
-})(CreateProfileRequestProfileTypeEnum || (CreateProfileRequestProfileTypeEnum = {}));
+})(CreateProfileRequestProfileTypeEnum = exports.CreateProfileRequestProfileTypeEnum || (exports.CreateProfileRequestProfileTypeEnum = {}));
 // CreateProfileRequest
 /**
  * CreateProfileRequest describes a profile resource online creation request. The deployment field must be populated. The profile_type specifies the list of profile types supported by the agent. The creation call will hang until a profile of one of these types needs to be collected.
@@ -45,13 +48,13 @@ var CreateProfileRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deployment" }),
-        __metadata("design:type", Deployment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deployment" }),
+        __metadata("design:type", deployment_1.Deployment)
     ], CreateProfileRequest.prototype, "deployment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileType" }),
         __metadata("design:type", Array)
     ], CreateProfileRequest.prototype, "profileType", void 0);
     return CreateProfileRequest;
-}(SpeakeasyBase));
-export { CreateProfileRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateProfileRequest = CreateProfileRequest;

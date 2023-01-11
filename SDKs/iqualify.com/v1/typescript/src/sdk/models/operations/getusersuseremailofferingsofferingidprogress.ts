@@ -41,11 +41,11 @@ export class GetUsersUserEmailOfferingsOfferingIdProgressResponse extends Speake
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
-
-  @SpeakeasyMetadata()
-  getUsersUserEmailOfferingsOfferingIdProgress200ApplicationJsonObject?: GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJson;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSONObject?: GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJson;
 }

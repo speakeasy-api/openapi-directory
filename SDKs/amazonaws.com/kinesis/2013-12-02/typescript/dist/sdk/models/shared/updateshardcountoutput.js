@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateShardCountOutput = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateShardCountOutput = /** @class */ (function (_super) {
     __extends(UpdateShardCountOutput, _super);
     function UpdateShardCountOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CurrentShardCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CurrentShardCount" }),
         __metadata("design:type", Number)
     ], UpdateShardCountOutput.prototype, "currentShardCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StreamName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StreamName" }),
         __metadata("design:type", String)
     ], UpdateShardCountOutput.prototype, "streamName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetShardCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetShardCount" }),
         __metadata("design:type", Number)
     ], UpdateShardCountOutput.prototype, "targetShardCount", void 0);
     return UpdateShardCountOutput;
-}(SpeakeasyBase));
-export { UpdateShardCountOutput };
+}(utils_1.SpeakeasyBase));
+exports.UpdateShardCountOutput = UpdateShardCountOutput;

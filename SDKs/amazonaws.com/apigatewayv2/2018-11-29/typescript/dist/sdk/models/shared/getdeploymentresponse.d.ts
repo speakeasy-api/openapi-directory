@@ -1,10 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentStatusEnum } from "./deploymentstatusenum";
 export declare class GetDeploymentResponse extends SpeakeasyBase {
-    autoDeployed?: boolean;
-    createdDate?: Date;
-    deploymentId?: string;
-    deploymentStatus?: DeploymentStatusEnum;
-    deploymentStatusMessage?: string;
-    description?: string;
+    autoDeployed?: Record<string, any>;
+    createdDate?: Record<string, any>;
+    deploymentId?: Record<string, any>;
+    deploymentStatus?: Record<string, any>;
+    deploymentStatusMessage?: Record<string, any>;
+    description?: Record<string, any>;
 }

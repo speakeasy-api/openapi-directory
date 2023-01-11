@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSourceColumnReference } from "./datasourcecolumnreference";
-import { DeveloperMetadata } from "./developermetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DimensionProperties = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasourcecolumnreference_1 = require("./datasourcecolumnreference");
+var developermetadata_1 = require("./developermetadata");
 // DimensionProperties
 /**
  * Properties about a dimension.
@@ -35,25 +38,25 @@ var DimensionProperties = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceColumnReference" }),
-        __metadata("design:type", DataSourceColumnReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceColumnReference" }),
+        __metadata("design:type", datasourcecolumnreference_1.DataSourceColumnReference)
     ], DimensionProperties.prototype, "dataSourceColumnReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=developerMetadata", elemType: DeveloperMetadata }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=developerMetadata", elemType: developermetadata_1.DeveloperMetadata }),
         __metadata("design:type", Array)
     ], DimensionProperties.prototype, "developerMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hiddenByFilter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hiddenByFilter" }),
         __metadata("design:type", Boolean)
     ], DimensionProperties.prototype, "hiddenByFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hiddenByUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hiddenByUser" }),
         __metadata("design:type", Boolean)
     ], DimensionProperties.prototype, "hiddenByUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pixelSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pixelSize" }),
         __metadata("design:type", Number)
     ], DimensionProperties.prototype, "pixelSize", void 0);
     return DimensionProperties;
-}(SpeakeasyBase));
-export { DimensionProperties };
+}(utils_1.SpeakeasyBase));
+exports.DimensionProperties = DimensionProperties;

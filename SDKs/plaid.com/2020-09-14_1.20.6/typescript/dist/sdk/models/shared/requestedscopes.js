@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountFilter } from "./accountfilter";
-import { AccountSelectionCardinalityEnum } from "./accountselectioncardinalityenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RequestedScopes = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountfilter_1 = require("./accountfilter");
+var accountselectioncardinalityenum_1 = require("./accountselectioncardinalityenum");
 // RequestedScopes
 /**
  * Scope of required and optional account features or content from a ConnectedApplication.
@@ -35,21 +38,21 @@ var RequestedScopes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_filters" }),
-        __metadata("design:type", AccountFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_filters" }),
+        __metadata("design:type", accountfilter_1.AccountFilter)
     ], RequestedScopes.prototype, "accountFilters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_selection_cardinality" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_selection_cardinality" }),
         __metadata("design:type", String)
     ], RequestedScopes.prototype, "accountSelectionCardinality", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=optional_product_access" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=optional_product_access" }),
+        __metadata("design:type", Object)
     ], RequestedScopes.prototype, "optionalProductAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required_product_access" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required_product_access" }),
+        __metadata("design:type", Object)
     ], RequestedScopes.prototype, "requiredProductAccess", void 0);
     return RequestedScopes;
-}(SpeakeasyBase));
-export { RequestedScopes };
+}(utils_1.SpeakeasyBase));
+exports.RequestedScopes = RequestedScopes;

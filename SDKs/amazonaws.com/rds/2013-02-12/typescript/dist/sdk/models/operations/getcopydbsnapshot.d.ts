@@ -7,8 +7,8 @@ export declare enum GetCopyDbSnapshotVersionEnum {
 }
 export declare class GetCopyDbSnapshotQueryParams extends SpeakeasyBase {
     action: GetCopyDbSnapshotActionEnum;
-    sourceDbSnapshotIdentifier: string;
-    targetDbSnapshotIdentifier: string;
+    sourceDBSnapshotIdentifier: string;
+    targetDBSnapshotIdentifier: string;
     version: GetCopyDbSnapshotVersionEnum;
 }
 export declare class GetCopyDbSnapshotHeaders extends SpeakeasyBase {

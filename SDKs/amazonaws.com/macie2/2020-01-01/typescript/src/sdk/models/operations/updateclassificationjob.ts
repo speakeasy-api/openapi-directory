@@ -85,7 +85,7 @@ export class UpdateClassificationJobResponse extends SpeakeasyBase {
   throttlingException?: any;
 
   @SpeakeasyMetadata()
-  updateClassificationJobResponse?: Map<string, any>;
+  updateClassificationJobResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

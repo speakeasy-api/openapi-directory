@@ -332,5 +332,5 @@ export class DcimRacksListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimRacksList200ApplicationJsonObject?: DcimRacksList200ApplicationJson;
+  dcimRacksList200ApplicationJSONObject?: DcimRacksList200ApplicationJson;
 }

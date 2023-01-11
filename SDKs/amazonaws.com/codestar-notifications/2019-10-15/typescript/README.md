@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateNotificationRuleRequest, CreateNotificationRuleResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,43 +33,44 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateNotificationRuleRequest = {
   headers: {
-    xAmzAlgorithm: "consectetur",
-    xAmzContentSha256: "ducimus",
-    xAmzCredential: "consequatur",
-    xAmzDate: "non",
-    xAmzSecurityToken: "vel",
-    xAmzSignature: "at",
-    xAmzSignedHeaders: "cumque",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
-    clientRequestToken: "occaecati",
-    detailType: "FULL",
+    clientRequestToken: "voluptas",
+    detailType: "BASIC",
     eventTypeIds: [
-      "deserunt",
-      "maiores",
-      "error",
+      "nihil",
     ],
-    name: "eius",
-    resource: "dolorem",
+    name: "rerum",
+    resource: "dicta",
     status: "ENABLED",
     tags: {
-      "excepturi": "voluptates",
-      "quo": "est",
+      "et": "ut",
     },
     targets: [
       {
-        targetAddress: "optio",
-        targetType: "at",
+        targetAddress: "et",
+        targetType: "voluptate",
       },
       {
-        targetAddress: "a",
-        targetType: "rerum",
+        targetAddress: "iste",
+        targetType: "vitae",
+      },
+      {
+        targetAddress: "totam",
+        targetType: "dolores",
       },
     ],
   },
 };
 
-sdk.sdk.createNotificationRule(req).then((res: CreateNotificationRuleResponse | AxiosError) => {
+sdk.createNotificationRule(req).then((res: CreateNotificationRuleResponse | AxiosError) => {
    // handle response
 });
 ```

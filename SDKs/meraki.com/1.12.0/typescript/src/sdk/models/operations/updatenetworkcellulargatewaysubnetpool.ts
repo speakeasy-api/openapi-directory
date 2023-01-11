@@ -34,5 +34,5 @@ export class UpdateNetworkCellularGatewaySubnetPoolResponse extends SpeakeasyBas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkCellularGatewaySubnetPool200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkCellularGatewaySubnetPool200ApplicationJSONObject?: Record<string, any>;
 }

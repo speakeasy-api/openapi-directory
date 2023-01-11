@@ -53,7 +53,7 @@ export class GetRepositoriesWorkspaceRepoSlugRefsTagsResponse extends SpeakeasyB
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   paginatedTags?: shared.PaginatedTags;

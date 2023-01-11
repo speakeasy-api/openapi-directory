@@ -38,7 +38,7 @@ export enum CreateFindingsFilterRequestBodyActionEnum {
 **/
 export class CreateFindingsFilterRequestBodyFindingCriteria extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=criterion", elemType: shared.CriterionAdditionalProperties })
-  criterion?: Map<string, shared.CriterionAdditionalProperties>;
+  criterion?: Record<string, shared.CriterionAdditionalProperties>;
 }
 
 
@@ -62,7 +62,7 @@ export class CreateFindingsFilterRequestBody extends SpeakeasyBase {
   position?: number;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Buyer } from "./buyer";
-import { Price } from "./price";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PricePerBuyer = void 0;
+var utils_1 = require("../../../internal/utils");
+var buyer_1 = require("./buyer");
+var price_1 = require("./price");
 // PricePerBuyer
 /**
  * Used to specify pricing rules for buyers/advertisers. Each PricePerBuyer in a product can become 0 or 1 deals. To check if there is a PricePerBuyer for a particular buyer or buyer/advertiser pair, we look for the most specific matching rule - we first look for a rule matching the buyer and advertiser, next a rule with the buyer but an empty advertiser list, and otherwise look for a matching rule where no buyer is set.
@@ -35,17 +38,17 @@ var PricePerBuyer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=advertiserIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=advertiserIds" }),
         __metadata("design:type", Array)
     ], PricePerBuyer.prototype, "advertiserIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buyer" }),
-        __metadata("design:type", Buyer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buyer" }),
+        __metadata("design:type", buyer_1.Buyer)
     ], PricePerBuyer.prototype, "buyer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
+        __metadata("design:type", price_1.Price)
     ], PricePerBuyer.prototype, "price", void 0);
     return PricePerBuyer;
-}(SpeakeasyBase));
-export { PricePerBuyer };
+}(utils_1.SpeakeasyBase));
+exports.PricePerBuyer = PricePerBuyer;

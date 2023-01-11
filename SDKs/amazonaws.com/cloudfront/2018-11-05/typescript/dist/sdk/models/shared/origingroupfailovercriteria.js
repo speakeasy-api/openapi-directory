@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StatusCodes } from "./statuscodes";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OriginGroupFailoverCriteria = void 0;
+var utils_1 = require("../../../internal/utils");
+var statuscodes_1 = require("./statuscodes");
 // OriginGroupFailoverCriteria
 /**
  * A complex data type that includes information about the failover criteria for an origin group, including the status codes for which CloudFront will failover from the primary origin to the second origin.
@@ -34,9 +37,9 @@ var OriginGroupFailoverCriteria = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", StatusCodes)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", statuscodes_1.StatusCodes)
     ], OriginGroupFailoverCriteria.prototype, "statusCodes", void 0);
     return OriginGroupFailoverCriteria;
-}(SpeakeasyBase));
-export { OriginGroupFailoverCriteria };
+}(utils_1.SpeakeasyBase));
+exports.OriginGroupFailoverCriteria = OriginGroupFailoverCriteria;

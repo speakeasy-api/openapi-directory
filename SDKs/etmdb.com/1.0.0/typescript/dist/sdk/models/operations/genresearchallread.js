@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GenreSearchallReadResponse = exports.GenreSearchallReadRequest = exports.GenreSearchallReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GenreSearchallReadPathParams = /** @class */ (function (_super) {
     __extends(GenreSearchallReadPathParams, _super);
     function GenreSearchallReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=movie_genre_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=movie_genre_type" }),
         __metadata("design:type", String)
     ], GenreSearchallReadPathParams.prototype, "movieGenreType", void 0);
     return GenreSearchallReadPathParams;
-}(SpeakeasyBase));
-export { GenreSearchallReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GenreSearchallReadPathParams = GenreSearchallReadPathParams;
 var GenreSearchallReadRequest = /** @class */ (function (_super) {
     __extends(GenreSearchallReadRequest, _super);
     function GenreSearchallReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GenreSearchallReadPathParams)
     ], GenreSearchallReadRequest.prototype, "pathParams", void 0);
     return GenreSearchallReadRequest;
-}(SpeakeasyBase));
-export { GenreSearchallReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.GenreSearchallReadRequest = GenreSearchallReadRequest;
 var GenreSearchallReadResponse = /** @class */ (function (_super) {
     __extends(GenreSearchallReadResponse, _super);
     function GenreSearchallReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GenreSearchallReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GenreSearchallReadResponse.prototype, "statusCode", void 0);
     return GenreSearchallReadResponse;
-}(SpeakeasyBase));
-export { GenreSearchallReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.GenreSearchallReadResponse = GenreSearchallReadResponse;

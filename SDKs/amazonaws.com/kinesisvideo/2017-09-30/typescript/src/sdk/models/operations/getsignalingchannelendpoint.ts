@@ -42,7 +42,7 @@ export class GetSignalingChannelEndpointRequestBodySingleMasterChannelEndpointCo
 
 export class GetSignalingChannelEndpointRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ChannelARN" })
-  channelArn: string;
+  channelARN: string;
 
   @SpeakeasyMetadata({ data: "json, name=SingleMasterChannelEndpointConfiguration" })
   singleMasterChannelEndpointConfiguration?: GetSignalingChannelEndpointRequestBodySingleMasterChannelEndpointConfiguration;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InboxPlacementTrackingOption = void 0;
+var utils_1 = require("../../../internal/utils");
 // InboxPlacementTrackingOption
 /**
  * An object that contains information about the inbox placement data settings for a verified domain that’s associated with your AWS account. This data is available only if you enabled the Deliverability dashboard for the domain (<code>PutDeliverabilityDashboardOption</code> operation).
@@ -33,13 +36,13 @@ var InboxPlacementTrackingOption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Global" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Global" }),
         __metadata("design:type", Boolean)
     ], InboxPlacementTrackingOption.prototype, "global", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrackedIsps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrackedIsps" }),
         __metadata("design:type", Array)
     ], InboxPlacementTrackingOption.prototype, "trackedIsps", void 0);
     return InboxPlacementTrackingOption;
-}(SpeakeasyBase));
-export { InboxPlacementTrackingOption };
+}(utils_1.SpeakeasyBase));
+exports.InboxPlacementTrackingOption = InboxPlacementTrackingOption;

@@ -3,9 +3,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
  * CloneStep holds information about the clone step progress.
 **/
 export declare class CloneStep extends SpeakeasyBase {
-    adaptingOs?: Map<string, any>;
+    adaptingOs?: Record<string, any>;
     endTime?: string;
-    instantiatingMigratedVm?: Map<string, any>;
-    preparingVmDisks?: Map<string, any>;
+    instantiatingMigratedVm?: Record<string, any>;
+    preparingVmDisks?: Record<string, any>;
     startTime?: string;
 }

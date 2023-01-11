@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AutomotivePartsCompatibilityPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
 var AutomotivePartsCompatibilityPolicy = /** @class */ (function (_super) {
     __extends(AutomotivePartsCompatibilityPolicy, _super);
     function AutomotivePartsCompatibilityPolicy() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryId" }),
         __metadata("design:type", String)
     ], AutomotivePartsCompatibilityPolicy.prototype, "categoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryTreeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryTreeId" }),
         __metadata("design:type", String)
     ], AutomotivePartsCompatibilityPolicy.prototype, "categoryTreeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compatibilityBasedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compatibilityBasedOn" }),
         __metadata("design:type", String)
     ], AutomotivePartsCompatibilityPolicy.prototype, "compatibilityBasedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compatibleVehicleTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compatibleVehicleTypes" }),
         __metadata("design:type", Array)
     ], AutomotivePartsCompatibilityPolicy.prototype, "compatibleVehicleTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxNumberOfCompatibleVehicles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxNumberOfCompatibleVehicles" }),
         __metadata("design:type", Number)
     ], AutomotivePartsCompatibilityPolicy.prototype, "maxNumberOfCompatibleVehicles", void 0);
     return AutomotivePartsCompatibilityPolicy;
-}(SpeakeasyBase));
-export { AutomotivePartsCompatibilityPolicy };
+}(utils_1.SpeakeasyBase));
+exports.AutomotivePartsCompatibilityPolicy = AutomotivePartsCompatibilityPolicy;

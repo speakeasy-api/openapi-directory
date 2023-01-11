@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class UploadMetadata extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=HeadersToInclude" })
-  headersToInclude?: Map<string, string>;
+  headersToInclude?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Url" })
   url?: string;

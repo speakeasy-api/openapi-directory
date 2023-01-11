@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PvExtendedMetadata } from "./pvextendedmetadata";
-export var PvContractPvTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PvContract = exports.PvContractServiceEnum = exports.PvContractPvTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var pvextendedmetadata_1 = require("./pvextendedmetadata");
+var PvContractPvTypeEnum;
 (function (PvContractPvTypeEnum) {
     PvContractPvTypeEnum["Original"] = "Original";
     PvContractPvTypeEnum["Reprint"] = "Reprint";
     PvContractPvTypeEnum["Other"] = "Other";
-})(PvContractPvTypeEnum || (PvContractPvTypeEnum = {}));
-export var PvContractServiceEnum;
+})(PvContractPvTypeEnum = exports.PvContractPvTypeEnum || (exports.PvContractPvTypeEnum = {}));
+var PvContractServiceEnum;
 (function (PvContractServiceEnum) {
     PvContractServiceEnum["NicoNicoDouga"] = "NicoNicoDouga";
     PvContractServiceEnum["Youtube"] = "Youtube";
@@ -42,64 +45,64 @@ export var PvContractServiceEnum;
     PvContractServiceEnum["LocalFile"] = "LocalFile";
     PvContractServiceEnum["Creofuga"] = "Creofuga";
     PvContractServiceEnum["Bandcamp"] = "Bandcamp";
-})(PvContractServiceEnum || (PvContractServiceEnum = {}));
+})(PvContractServiceEnum = exports.PvContractServiceEnum || (exports.PvContractServiceEnum = {}));
 var PvContract = /** @class */ (function (_super) {
     __extends(PvContract, _super);
     function PvContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
         __metadata("design:type", String)
     ], PvContract.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdBy" }),
         __metadata("design:type", Number)
     ], PvContract.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabled" }),
         __metadata("design:type", Boolean)
     ], PvContract.prototype, "disabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extendedMetadata" }),
-        __metadata("design:type", PvExtendedMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extendedMetadata" }),
+        __metadata("design:type", pvextendedmetadata_1.PvExtendedMetadata)
     ], PvContract.prototype, "extendedMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PvContract.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=length" }),
         __metadata("design:type", Number)
     ], PvContract.prototype, "length", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PvContract.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishDate" }),
         __metadata("design:type", Date)
     ], PvContract.prototype, "publishDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pvId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pvId" }),
         __metadata("design:type", String)
     ], PvContract.prototype, "pvId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pvType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pvType" }),
         __metadata("design:type", String)
     ], PvContract.prototype, "pvType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service" }),
         __metadata("design:type", String)
     ], PvContract.prototype, "service", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbUrl" }),
         __metadata("design:type", String)
     ], PvContract.prototype, "thumbUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PvContract.prototype, "url", void 0);
     return PvContract;
-}(SpeakeasyBase));
-export { PvContract };
+}(utils_1.SpeakeasyBase));
+exports.PvContract = PvContract;

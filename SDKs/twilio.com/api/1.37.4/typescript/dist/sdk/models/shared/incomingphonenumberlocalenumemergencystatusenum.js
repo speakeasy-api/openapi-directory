@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IncomingPhoneNumberLocalEnumEmergencyStatusEnum = void 0;
+var IncomingPhoneNumberLocalEnumEmergencyStatusEnum;
+(function (IncomingPhoneNumberLocalEnumEmergencyStatusEnum) {
+    IncomingPhoneNumberLocalEnumEmergencyStatusEnum["Active"] = "Active";
+    IncomingPhoneNumberLocalEnumEmergencyStatusEnum["Inactive"] = "Inactive";
+})(IncomingPhoneNumberLocalEnumEmergencyStatusEnum = exports.IncomingPhoneNumberLocalEnumEmergencyStatusEnum || (exports.IncomingPhoneNumberLocalEnumEmergencyStatusEnum = {}));

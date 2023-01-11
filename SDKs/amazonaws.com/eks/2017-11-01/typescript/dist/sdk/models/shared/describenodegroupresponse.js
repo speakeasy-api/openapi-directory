@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Nodegroup } from "./nodegroup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeNodegroupResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var nodegroup_1 = require("./nodegroup");
 var DescribeNodegroupResponse = /** @class */ (function (_super) {
     __extends(DescribeNodegroupResponse, _super);
     function DescribeNodegroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodegroup" }),
-        __metadata("design:type", Nodegroup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodegroup" }),
+        __metadata("design:type", nodegroup_1.Nodegroup)
     ], DescribeNodegroupResponse.prototype, "nodegroup", void 0);
     return DescribeNodegroupResponse;
-}(SpeakeasyBase));
-export { DescribeNodegroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeNodegroupResponse = DescribeNodegroupResponse;

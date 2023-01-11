@@ -8,5 +8,5 @@ export declare class GetNetworkSyslogServersRequest extends SpeakeasyBase {
 export declare class GetNetworkSyslogServersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSyslogServers200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSyslogServers200ApplicationJSONObject?: Record<string, any>;
 }

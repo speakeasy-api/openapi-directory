@@ -8,22 +8,6 @@ export enum SslConfigTypeEnum {
 }
 
 
-// SslConfigInput
-/** 
- * SSL configuration information.
-**/
-export class SslConfigInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=caCertificate" })
-  caCertificate?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=clientCertificate" })
-  clientCertificate?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=clientKey" })
-  clientKey?: string;
-}
-
-
 // SslConfig
 /** 
  * SSL configuration information.
@@ -40,4 +24,20 @@ export class SslConfig extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: SslConfigTypeEnum;
+}
+
+
+// SslConfigInput
+/** 
+ * SSL configuration information.
+**/
+export class SslConfigInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=caCertificate" })
+  caCertificate?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=clientCertificate" })
+  clientCertificate?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=clientKey" })
+  clientKey?: string;
 }

@@ -19,7 +19,7 @@ export declare class DeleteWorkerBlockRequest extends SpeakeasyBase {
 }
 export declare class DeleteWorkerBlockResponse extends SpeakeasyBase {
     contentType: string;
-    deleteWorkerBlockResponse?: Map<string, any>;
+    deleteWorkerBlockResponse?: Record<string, any>;
     requestError?: any;
     serviceFault?: any;
     statusCode: number;

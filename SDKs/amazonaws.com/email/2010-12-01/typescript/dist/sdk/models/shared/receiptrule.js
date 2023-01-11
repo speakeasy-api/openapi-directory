@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReceiptAction } from "./receiptaction";
-import { TlsPolicyEnum } from "./tlspolicyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReceiptRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var receiptaction_1 = require("./receiptaction");
+var tlspolicyenum_1 = require("./tlspolicyenum");
 // ReceiptRule
 /**
  * <p>Receipt rules enable you to specify which actions Amazon SES should take when it receives mail on behalf of one or more email addresses or domains that you own.</p> <p>Each receipt rule defines a set of email addresses or domains that it applies to. If the email addresses or domains match at least one recipient address of the message, Amazon SES executes all of the receipt rule's actions on the message.</p> <p>For information about setting up receipt rules, see the <a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rules.html">Amazon SES Developer Guide</a>.</p>
@@ -35,29 +38,29 @@ var ReceiptRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: ReceiptAction }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: receiptaction_1.ReceiptAction }),
         __metadata("design:type", Array)
     ], ReceiptRule.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ReceiptRule.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReceiptRule.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ReceiptRule.prototype, "recipients", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], ReceiptRule.prototype, "scanEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReceiptRule.prototype, "tlsPolicy", void 0);
     return ReceiptRule;
-}(SpeakeasyBase));
-export { ReceiptRule };
+}(utils_1.SpeakeasyBase));
+exports.ReceiptRule = ReceiptRule;

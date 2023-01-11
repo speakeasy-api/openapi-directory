@@ -10,5 +10,5 @@ export declare class FromDelRequest extends SpeakeasyBase {
 export declare class FromDelResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    fromDel200ApplicationJsonString?: string;
+    fromDel200ApplicationJSONString?: string;
 }

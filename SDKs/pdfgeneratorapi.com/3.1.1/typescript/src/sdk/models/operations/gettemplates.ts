@@ -92,20 +92,20 @@ export class GetTemplatesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getTemplates200ApplicationJsonObject?: GetTemplates200ApplicationJson;
+  getTemplates200ApplicationJSONObject?: GetTemplates200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getTemplates401ApplicationJsonObject?: GetTemplates401ApplicationJson;
+  getTemplates401ApplicationJSONObject?: GetTemplates401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getTemplates403ApplicationJsonObject?: GetTemplates403ApplicationJson;
+  getTemplates403ApplicationJSONObject?: GetTemplates403ApplicationJson;
 
   @SpeakeasyMetadata()
-  getTemplates404ApplicationJsonObject?: GetTemplates404ApplicationJson;
+  getTemplates404ApplicationJSONObject?: GetTemplates404ApplicationJson;
 
   @SpeakeasyMetadata()
-  getTemplates422ApplicationJsonObject?: GetTemplates422ApplicationJson;
+  getTemplates422ApplicationJSONObject?: GetTemplates422ApplicationJson;
 
   @SpeakeasyMetadata()
-  getTemplates500ApplicationJsonObject?: GetTemplates500ApplicationJson;
+  getTemplates500ApplicationJSONObject?: GetTemplates500ApplicationJson;
 }

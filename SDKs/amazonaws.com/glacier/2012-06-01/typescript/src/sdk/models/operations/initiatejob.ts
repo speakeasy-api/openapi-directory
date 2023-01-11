@@ -96,7 +96,7 @@ export class InitiateJobResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  initiateJobOutput?: Map<string, any>;
+  initiateJobOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   insufficientCapacityException?: any;

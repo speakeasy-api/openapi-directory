@@ -9,18 +9,6 @@ export declare enum HrisCompanyStatusEnum {
     Trial = "trial",
     Other = "other"
 }
-export declare class HrisCompanyInput extends SpeakeasyBase {
-    addresses?: Address[];
-    companyNumber?: string;
-    debtorId?: string;
-    displayName?: string;
-    emails?: Email[];
-    legalName: string;
-    phoneNumbers?: PhoneNumber[];
-    status?: HrisCompanyStatusEnum;
-    subdomain?: string;
-    websites?: Website[];
-}
 export declare class HrisCompany extends SpeakeasyBase {
     addresses?: Address[];
     companyNumber?: string;
@@ -37,5 +25,17 @@ export declare class HrisCompany extends SpeakeasyBase {
     subdomain?: string;
     updatedAt?: Date;
     updatedBy?: string;
+    websites?: Website[];
+}
+export declare class HrisCompanyInput extends SpeakeasyBase {
+    addresses?: Address[];
+    companyNumber?: string;
+    debtorId?: string;
+    displayName?: string;
+    emails?: Email[];
+    legalName: string;
+    phoneNumbers?: PhoneNumber[];
+    status?: HrisCompanyStatusEnum;
+    subdomain?: string;
     websites?: Website[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Artifact = void 0;
+var utils_1 = require("../../../internal/utils");
 // Artifact
 /**
  * An artifact
@@ -33,45 +36,45 @@ var Artifact = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=archive_download_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=archive_download_url" }),
         __metadata("design:type", String)
     ], Artifact.prototype, "archiveDownloadUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], Artifact.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expired" }),
         __metadata("design:type", Boolean)
     ], Artifact.prototype, "expired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires_at" }),
         __metadata("design:type", Date)
     ], Artifact.prototype, "expiresAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Artifact.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Artifact.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], Artifact.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size_in_bytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size_in_bytes" }),
         __metadata("design:type", Number)
     ], Artifact.prototype, "sizeInBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], Artifact.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Artifact.prototype, "url", void 0);
     return Artifact;
-}(SpeakeasyBase));
-export { Artifact };
+}(utils_1.SpeakeasyBase));
+exports.Artifact = Artifact;

@@ -31,5 +31,5 @@ export class FileWatcherRestartResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  fileWatcherRestart200ApplicationJsonObject?: FileWatcherRestart200ApplicationJson;
+  fileWatcherRestart200ApplicationJSONObject?: FileWatcherRestart200ApplicationJson;
 }

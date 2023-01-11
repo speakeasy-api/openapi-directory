@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,172 +23,174 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDeviceSwitchPortResponse = exports.UpdateDeviceSwitchPortRequest = exports.UpdateDeviceSwitchPortRequestBody = exports.UpdateDeviceSwitchPortRequestBodyUdldEnum = exports.UpdateDeviceSwitchPortRequestBodyTypeEnum = exports.UpdateDeviceSwitchPortRequestBodyStpGuardEnum = exports.UpdateDeviceSwitchPortRequestBodyAccessPolicyTypeEnum = exports.UpdateDeviceSwitchPortPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateDeviceSwitchPortPathParams = /** @class */ (function (_super) {
     __extends(UpdateDeviceSwitchPortPathParams, _super);
     function UpdateDeviceSwitchPortPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=portId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=portId" }),
         __metadata("design:type", String)
     ], UpdateDeviceSwitchPortPathParams.prototype, "portId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], UpdateDeviceSwitchPortPathParams.prototype, "serial", void 0);
     return UpdateDeviceSwitchPortPathParams;
-}(SpeakeasyBase));
-export { UpdateDeviceSwitchPortPathParams };
-export var UpdateDeviceSwitchPortRequestBodyAccessPolicyTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceSwitchPortPathParams = UpdateDeviceSwitchPortPathParams;
+var UpdateDeviceSwitchPortRequestBodyAccessPolicyTypeEnum;
 (function (UpdateDeviceSwitchPortRequestBodyAccessPolicyTypeEnum) {
     UpdateDeviceSwitchPortRequestBodyAccessPolicyTypeEnum["Open"] = "Open";
     UpdateDeviceSwitchPortRequestBodyAccessPolicyTypeEnum["CustomAccessPolicy"] = "Custom access policy";
     UpdateDeviceSwitchPortRequestBodyAccessPolicyTypeEnum["MacAllowList"] = "MAC allow list";
     UpdateDeviceSwitchPortRequestBodyAccessPolicyTypeEnum["StickyMacAllowList"] = "Sticky MAC allow list";
-})(UpdateDeviceSwitchPortRequestBodyAccessPolicyTypeEnum || (UpdateDeviceSwitchPortRequestBodyAccessPolicyTypeEnum = {}));
-export var UpdateDeviceSwitchPortRequestBodyStpGuardEnum;
+})(UpdateDeviceSwitchPortRequestBodyAccessPolicyTypeEnum = exports.UpdateDeviceSwitchPortRequestBodyAccessPolicyTypeEnum || (exports.UpdateDeviceSwitchPortRequestBodyAccessPolicyTypeEnum = {}));
+var UpdateDeviceSwitchPortRequestBodyStpGuardEnum;
 (function (UpdateDeviceSwitchPortRequestBodyStpGuardEnum) {
     UpdateDeviceSwitchPortRequestBodyStpGuardEnum["Disabled"] = "disabled";
     UpdateDeviceSwitchPortRequestBodyStpGuardEnum["RootGuard"] = "root guard";
     UpdateDeviceSwitchPortRequestBodyStpGuardEnum["BpduGuard"] = "bpdu guard";
     UpdateDeviceSwitchPortRequestBodyStpGuardEnum["LoopGuard"] = "loop guard";
-})(UpdateDeviceSwitchPortRequestBodyStpGuardEnum || (UpdateDeviceSwitchPortRequestBodyStpGuardEnum = {}));
-export var UpdateDeviceSwitchPortRequestBodyTypeEnum;
+})(UpdateDeviceSwitchPortRequestBodyStpGuardEnum = exports.UpdateDeviceSwitchPortRequestBodyStpGuardEnum || (exports.UpdateDeviceSwitchPortRequestBodyStpGuardEnum = {}));
+var UpdateDeviceSwitchPortRequestBodyTypeEnum;
 (function (UpdateDeviceSwitchPortRequestBodyTypeEnum) {
     UpdateDeviceSwitchPortRequestBodyTypeEnum["Trunk"] = "trunk";
     UpdateDeviceSwitchPortRequestBodyTypeEnum["Access"] = "access";
-})(UpdateDeviceSwitchPortRequestBodyTypeEnum || (UpdateDeviceSwitchPortRequestBodyTypeEnum = {}));
-export var UpdateDeviceSwitchPortRequestBodyUdldEnum;
+})(UpdateDeviceSwitchPortRequestBodyTypeEnum = exports.UpdateDeviceSwitchPortRequestBodyTypeEnum || (exports.UpdateDeviceSwitchPortRequestBodyTypeEnum = {}));
+var UpdateDeviceSwitchPortRequestBodyUdldEnum;
 (function (UpdateDeviceSwitchPortRequestBodyUdldEnum) {
     UpdateDeviceSwitchPortRequestBodyUdldEnum["AlertOnly"] = "Alert only";
     UpdateDeviceSwitchPortRequestBodyUdldEnum["Enforce"] = "Enforce";
-})(UpdateDeviceSwitchPortRequestBodyUdldEnum || (UpdateDeviceSwitchPortRequestBodyUdldEnum = {}));
+})(UpdateDeviceSwitchPortRequestBodyUdldEnum = exports.UpdateDeviceSwitchPortRequestBodyUdldEnum || (exports.UpdateDeviceSwitchPortRequestBodyUdldEnum = {}));
 var UpdateDeviceSwitchPortRequestBody = /** @class */ (function (_super) {
     __extends(UpdateDeviceSwitchPortRequestBody, _super);
     function UpdateDeviceSwitchPortRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessPolicyNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessPolicyNumber" }),
         __metadata("design:type", Number)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "accessPolicyNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessPolicyType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessPolicyType" }),
         __metadata("design:type", String)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "accessPolicyType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedVlans" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedVlans" }),
         __metadata("design:type", String)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "allowedVlans", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flexibleStackingEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flexibleStackingEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "flexibleStackingEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isolationEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isolationEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "isolationEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkNegotiation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkNegotiation" }),
         __metadata("design:type", String)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "linkNegotiation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=macAllowList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=macAllowList" }),
         __metadata("design:type", Array)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "macAllowList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=poeEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=poeEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "poeEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portScheduleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portScheduleId" }),
         __metadata("design:type", String)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "portScheduleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rstpEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rstpEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "rstpEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stickyMacAllowList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stickyMacAllowList" }),
         __metadata("design:type", Array)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "stickyMacAllowList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stickyMacAllowListLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stickyMacAllowListLimit" }),
         __metadata("design:type", Number)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "stickyMacAllowListLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stormControlEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stormControlEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "stormControlEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stpGuard" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stpGuard" }),
         __metadata("design:type", String)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "stpGuard", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=udld" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=udld" }),
         __metadata("design:type", String)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "udld", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlan" }),
         __metadata("design:type", Number)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "vlan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voiceVlan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voiceVlan" }),
         __metadata("design:type", Number)
     ], UpdateDeviceSwitchPortRequestBody.prototype, "voiceVlan", void 0);
     return UpdateDeviceSwitchPortRequestBody;
-}(SpeakeasyBase));
-export { UpdateDeviceSwitchPortRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceSwitchPortRequestBody = UpdateDeviceSwitchPortRequestBody;
 var UpdateDeviceSwitchPortRequest = /** @class */ (function (_super) {
     __extends(UpdateDeviceSwitchPortRequest, _super);
     function UpdateDeviceSwitchPortRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateDeviceSwitchPortPathParams)
     ], UpdateDeviceSwitchPortRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateDeviceSwitchPortRequestBody)
     ], UpdateDeviceSwitchPortRequest.prototype, "request", void 0);
     return UpdateDeviceSwitchPortRequest;
-}(SpeakeasyBase));
-export { UpdateDeviceSwitchPortRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceSwitchPortRequest = UpdateDeviceSwitchPortRequest;
 var UpdateDeviceSwitchPortResponse = /** @class */ (function (_super) {
     __extends(UpdateDeviceSwitchPortResponse, _super);
     function UpdateDeviceSwitchPortResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateDeviceSwitchPortResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateDeviceSwitchPortResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateDeviceSwitchPortResponse.prototype, "updateDeviceSwitchPort200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateDeviceSwitchPortResponse.prototype, "updateDeviceSwitchPort200ApplicationJSONObject", void 0);
     return UpdateDeviceSwitchPortResponse;
-}(SpeakeasyBase));
-export { UpdateDeviceSwitchPortResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceSwitchPortResponse = UpdateDeviceSwitchPortResponse;

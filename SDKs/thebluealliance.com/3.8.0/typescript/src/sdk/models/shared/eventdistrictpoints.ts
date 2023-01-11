@@ -31,8 +31,8 @@ export class EventDistrictPointsTiebreakers extends SpeakeasyBase {
 
 export class EventDistrictPoints extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=points", elemType: EventDistrictPointsPoints })
-  points: Map<string, EventDistrictPointsPoints>;
+  points: Record<string, EventDistrictPointsPoints>;
 
   @SpeakeasyMetadata({ data: "json, name=tiebreakers", elemType: EventDistrictPointsTiebreakers })
-  tiebreakers?: Map<string, EventDistrictPointsTiebreakers>;
+  tiebreakers?: Record<string, EventDistrictPointsTiebreakers>;
 }

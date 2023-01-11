@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentSimple } from "./deploymentsimple";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CheckRun = exports.CheckRunStatusEnum = exports.CheckRunOutput = exports.CheckRunConclusionEnum = exports.CheckRunCheckSuite = void 0;
+var utils_1 = require("../../../internal/utils");
+var deploymentsimple_1 = require("./deploymentsimple");
 var CheckRunCheckSuite = /** @class */ (function (_super) {
     __extends(CheckRunCheckSuite, _super);
     function CheckRunCheckSuite() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], CheckRunCheckSuite.prototype, "id", void 0);
     return CheckRunCheckSuite;
-}(SpeakeasyBase));
-export { CheckRunCheckSuite };
-export var CheckRunConclusionEnum;
+}(utils_1.SpeakeasyBase));
+exports.CheckRunCheckSuite = CheckRunCheckSuite;
+var CheckRunConclusionEnum;
 (function (CheckRunConclusionEnum) {
     CheckRunConclusionEnum["Success"] = "success";
     CheckRunConclusionEnum["Failure"] = "failure";
@@ -45,41 +48,41 @@ export var CheckRunConclusionEnum;
     CheckRunConclusionEnum["Skipped"] = "skipped";
     CheckRunConclusionEnum["TimedOut"] = "timed_out";
     CheckRunConclusionEnum["ActionRequired"] = "action_required";
-})(CheckRunConclusionEnum || (CheckRunConclusionEnum = {}));
+})(CheckRunConclusionEnum = exports.CheckRunConclusionEnum || (exports.CheckRunConclusionEnum = {}));
 var CheckRunOutput = /** @class */ (function (_super) {
     __extends(CheckRunOutput, _super);
     function CheckRunOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations_count" }),
         __metadata("design:type", Number)
     ], CheckRunOutput.prototype, "annotationsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations_url" }),
         __metadata("design:type", String)
     ], CheckRunOutput.prototype, "annotationsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=summary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=summary" }),
         __metadata("design:type", String)
     ], CheckRunOutput.prototype, "summary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], CheckRunOutput.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], CheckRunOutput.prototype, "title", void 0);
     return CheckRunOutput;
-}(SpeakeasyBase));
-export { CheckRunOutput };
-export var CheckRunStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.CheckRunOutput = CheckRunOutput;
+var CheckRunStatusEnum;
 (function (CheckRunStatusEnum) {
     CheckRunStatusEnum["Queued"] = "queued";
     CheckRunStatusEnum["InProgress"] = "in_progress";
     CheckRunStatusEnum["Completed"] = "completed";
-})(CheckRunStatusEnum || (CheckRunStatusEnum = {}));
+})(CheckRunStatusEnum = exports.CheckRunStatusEnum || (exports.CheckRunStatusEnum = {}));
 // CheckRun
 /**
  * A check performed on the code of a given code change
@@ -90,73 +93,73 @@ var CheckRun = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=app" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=app" }),
+        __metadata("design:type", Object)
     ], CheckRun.prototype, "app", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=check_suite" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=check_suite" }),
         __metadata("design:type", CheckRunCheckSuite)
     ], CheckRun.prototype, "checkSuite", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=completed_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=completed_at" }),
         __metadata("design:type", Date)
     ], CheckRun.prototype, "completedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conclusion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conclusion" }),
         __metadata("design:type", String)
     ], CheckRun.prototype, "conclusion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deployment" }),
-        __metadata("design:type", DeploymentSimple)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deployment" }),
+        __metadata("design:type", deploymentsimple_1.DeploymentSimple)
     ], CheckRun.prototype, "deployment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details_url" }),
         __metadata("design:type", String)
     ], CheckRun.prototype, "detailsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=external_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=external_id" }),
         __metadata("design:type", String)
     ], CheckRun.prototype, "externalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=head_sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=head_sha" }),
         __metadata("design:type", String)
     ], CheckRun.prototype, "headSha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], CheckRun.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], CheckRun.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CheckRun.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], CheckRun.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=output" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=output" }),
         __metadata("design:type", CheckRunOutput)
     ], CheckRun.prototype, "output", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pull_requests" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pull_requests" }),
         __metadata("design:type", Object)
     ], CheckRun.prototype, "pullRequests", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started_at" }),
         __metadata("design:type", Date)
     ], CheckRun.prototype, "startedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], CheckRun.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], CheckRun.prototype, "url", void 0);
     return CheckRun;
-}(SpeakeasyBase));
-export { CheckRun };
+}(utils_1.SpeakeasyBase));
+exports.CheckRun = CheckRun;

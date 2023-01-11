@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest, NetworkconnectivityProjectsLocationsGlobalHubsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,46 +30,38 @@ const req: NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "dolorem",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "sed",
+    accessToken: "culpa",
     alt: "media",
-    callback: "ea",
-    fields: "ex",
-    hubId: "consequatur",
-    key: "dolorum",
-    oauthToken: "debitis",
+    callback: "consequuntur",
+    fields: "dolor",
+    hubId: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
     prettyPrint: false,
-    quotaUser: "eligendi",
-    requestId: "laboriosam",
-    uploadType: "est",
-    uploadProtocol: "et",
+    quotaUser: "nihil",
+    requestId: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
   request: {
-    description: "molestias",
+    description: "voluptatum",
     labels: {
-      "ut": "omnis",
-      "similique": "totam",
-      "ullam": "et",
+      "ut": "dolorem",
     },
-    name: "dolorem",
+    name: "et",
     routingVpcs: [
       {
-        uri: "sint",
-      },
-      {
-        uri: "dolore",
-      },
-      {
-        uri: "maiores",
+        uri: "iste",
       },
     ],
   },

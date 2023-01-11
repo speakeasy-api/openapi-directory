@@ -48,5 +48,5 @@ export declare class UpdateNetworkWirelessSsidTrafficShapingRulesRequest extends
 export declare class UpdateNetworkWirelessSsidTrafficShapingRulesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkWirelessSsidTrafficShapingRules200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkWirelessSsidTrafficShapingRules200ApplicationJSONObject?: Record<string, any>;
 }

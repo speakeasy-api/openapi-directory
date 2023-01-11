@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StreamingDistributionSummary } from "./streamingdistributionsummary";
+import { StreamingDistributionSummaryList } from "./streamingdistributionsummarylist";
 
 
 
@@ -11,8 +11,8 @@ export class StreamingDistributionList extends SpeakeasyBase {
   @SpeakeasyMetadata()
   isTruncated: boolean;
 
-  @SpeakeasyMetadata({ elemType: StreamingDistributionSummary })
-  items?: StreamingDistributionSummary[];
+  @SpeakeasyMetadata({ elemType: StreamingDistributionSummaryList })
+  items?: StreamingDistributionSummaryList[];
 
   @SpeakeasyMetadata()
   marker: string;

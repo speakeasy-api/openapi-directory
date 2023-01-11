@@ -141,5 +141,5 @@ export declare class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest 
 export declare class UpdateNetworkApplianceTrafficShapingUplinkSelectionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkApplianceTrafficShapingUplinkSelection200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkApplianceTrafficShapingUplinkSelection200ApplicationJSONObject?: Record<string, any>;
 }

@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class CheckDnsAvailabilityResultMessage extends SpeakeasyBase {
     available?: boolean;
-    fullyQualifiedCname?: string;
+    fullyQualifiedCNAME?: string;
 }

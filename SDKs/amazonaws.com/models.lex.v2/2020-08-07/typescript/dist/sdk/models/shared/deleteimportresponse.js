@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImportStatusEnum } from "./importstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteImportResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var importstatusenum_1 = require("./importstatusenum");
 var DeleteImportResponse = /** @class */ (function (_super) {
     __extends(DeleteImportResponse, _super);
     function DeleteImportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importId" }),
         __metadata("design:type", String)
     ], DeleteImportResponse.prototype, "importId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importStatus" }),
         __metadata("design:type", String)
     ], DeleteImportResponse.prototype, "importStatus", void 0);
     return DeleteImportResponse;
-}(SpeakeasyBase));
-export { DeleteImportResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteImportResponse = DeleteImportResponse;

@@ -11,14 +11,10 @@ export class MigrationsGetStatusForOrgPathParams extends SpeakeasyBase {
   org: string;
 }
 
-export enum MigrationsGetStatusForOrgExcludeEnum {
-    Repositories = "repositories"
-}
-
 
 export class MigrationsGetStatusForOrgQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=exclude" })
-  exclude?: MigrationsGetStatusForOrgExcludeEnum[];
+  exclude?: shared.MigrationIdEnum[];
 }
 
 

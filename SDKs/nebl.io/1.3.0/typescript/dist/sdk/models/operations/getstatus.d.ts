@@ -8,5 +8,5 @@ export declare class GetStatusRequest extends SpeakeasyBase {
 export declare class GetStatusResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getStatusResponse?: Map<string, any>;
+    getStatusResponse?: Record<string, any>;
 }

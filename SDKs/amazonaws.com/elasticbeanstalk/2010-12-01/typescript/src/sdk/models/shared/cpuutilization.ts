@@ -23,7 +23,7 @@ export class CpuUtilization extends SpeakeasyBase {
   privileged?: number;
 
   @SpeakeasyMetadata()
-  softIrq?: number;
+  softIRQ?: number;
 
   @SpeakeasyMetadata()
   system?: number;

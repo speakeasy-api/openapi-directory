@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,148 +14,173 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var CreateTokenRequestBodyActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateTokenResponse = exports.CreateTokenRequest = exports.CreateTokenSecurity = exports.CreateTokenRequestBody = exports.CreateTokenRequestBodyTypeEnum = exports.CreateTokenRequestBodyTokenTypeEnum = exports.CreateTokenRequestBodyApiKeyRoleEnum = exports.CreateTokenRequestBodyActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var CreateTokenRequestBodyActionEnum;
 (function (CreateTokenRequestBodyActionEnum) {
     CreateTokenRequestBodyActionEnum["LicenseeLogin"] = "licenseeLogin";
-})(CreateTokenRequestBodyActionEnum || (CreateTokenRequestBodyActionEnum = {}));
-export var CreateTokenRequestBodyApiKeyRoleEnum;
+})(CreateTokenRequestBodyActionEnum = exports.CreateTokenRequestBodyActionEnum || (exports.CreateTokenRequestBodyActionEnum = {}));
+var CreateTokenRequestBodyApiKeyRoleEnum;
 (function (CreateTokenRequestBodyApiKeyRoleEnum) {
     CreateTokenRequestBodyApiKeyRoleEnum["RoleApikeyLicensee"] = "ROLE_APIKEY_LICENSEE";
     CreateTokenRequestBodyApiKeyRoleEnum["RoleApikeyAnalytics"] = "ROLE_APIKEY_ANALYTICS";
     CreateTokenRequestBodyApiKeyRoleEnum["RoleApikeyOperation"] = "ROLE_APIKEY_OPERATION";
     CreateTokenRequestBodyApiKeyRoleEnum["RoleApikeyMaintenance"] = "ROLE_APIKEY_MAINTENANCE";
     CreateTokenRequestBodyApiKeyRoleEnum["RoleApikeyAdmin"] = "ROLE_APIKEY_ADMIN";
-})(CreateTokenRequestBodyApiKeyRoleEnum || (CreateTokenRequestBodyApiKeyRoleEnum = {}));
-export var CreateTokenRequestBodyTokenTypeEnum;
+})(CreateTokenRequestBodyApiKeyRoleEnum = exports.CreateTokenRequestBodyApiKeyRoleEnum || (exports.CreateTokenRequestBodyApiKeyRoleEnum = {}));
+var CreateTokenRequestBodyTokenTypeEnum;
 (function (CreateTokenRequestBodyTokenTypeEnum) {
     CreateTokenRequestBodyTokenTypeEnum["Default"] = "DEFAULT";
     CreateTokenRequestBodyTokenTypeEnum["Shop"] = "SHOP";
     CreateTokenRequestBodyTokenTypeEnum["Apikey"] = "APIKEY";
-})(CreateTokenRequestBodyTokenTypeEnum || (CreateTokenRequestBodyTokenTypeEnum = {}));
-export var CreateTokenRequestBodyTypeEnum;
+})(CreateTokenRequestBodyTokenTypeEnum = exports.CreateTokenRequestBodyTokenTypeEnum || (exports.CreateTokenRequestBodyTokenTypeEnum = {}));
+var CreateTokenRequestBodyTypeEnum;
 (function (CreateTokenRequestBodyTypeEnum) {
     CreateTokenRequestBodyTypeEnum["Action"] = "ACTION";
-})(CreateTokenRequestBodyTypeEnum || (CreateTokenRequestBodyTypeEnum = {}));
+})(CreateTokenRequestBodyTypeEnum = exports.CreateTokenRequestBodyTypeEnum || (exports.CreateTokenRequestBodyTypeEnum = {}));
 var CreateTokenRequestBody = /** @class */ (function (_super) {
     __extends(CreateTokenRequestBody, _super);
     function CreateTokenRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=action;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=action;" }),
         __metadata("design:type", String)
     ], CreateTokenRequestBody.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=apiKeyRole;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=apiKeyRole;" }),
         __metadata("design:type", String)
     ], CreateTokenRequestBody.prototype, "apiKeyRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=cancelURL;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=cancelURL;" }),
         __metadata("design:type", String)
-    ], CreateTokenRequestBody.prototype, "cancelUrl", void 0);
+    ], CreateTokenRequestBody.prototype, "cancelURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=cancelURLTitle;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=cancelURLTitle;" }),
         __metadata("design:type", String)
-    ], CreateTokenRequestBody.prototype, "cancelUrlTitle", void 0);
+    ], CreateTokenRequestBody.prototype, "cancelURLTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=licenseTemplateNumber;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=licenseTemplateNumber;" }),
         __metadata("design:type", String)
     ], CreateTokenRequestBody.prototype, "licenseTemplateNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=licenseeNumber;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=licenseeNumber;" }),
         __metadata("design:type", String)
     ], CreateTokenRequestBody.prototype, "licenseeNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=predefinedShoppingItem;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=predefinedShoppingItem;" }),
         __metadata("design:type", String)
     ], CreateTokenRequestBody.prototype, "predefinedShoppingItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=privateKey;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=privateKey;" }),
         __metadata("design:type", String)
     ], CreateTokenRequestBody.prototype, "privateKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=productNumber;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=productNumber;" }),
         __metadata("design:type", String)
     ], CreateTokenRequestBody.prototype, "productNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=successURL;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=successURL;" }),
         __metadata("design:type", String)
-    ], CreateTokenRequestBody.prototype, "successUrl", void 0);
+    ], CreateTokenRequestBody.prototype, "successURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=successURLTitle;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=successURLTitle;" }),
         __metadata("design:type", String)
-    ], CreateTokenRequestBody.prototype, "successUrlTitle", void 0);
+    ], CreateTokenRequestBody.prototype, "successURLTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=tokenType;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=tokenType;" }),
         __metadata("design:type", String)
     ], CreateTokenRequestBody.prototype, "tokenType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=type;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=type;" }),
         __metadata("design:type", String)
     ], CreateTokenRequestBody.prototype, "type", void 0);
     return CreateTokenRequestBody;
-}(SpeakeasyBase));
-export { CreateTokenRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateTokenRequestBody = CreateTokenRequestBody;
 var CreateTokenSecurity = /** @class */ (function (_super) {
     __extends(CreateTokenSecurity, _super);
     function CreateTokenSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=http;subtype=basic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=basic" }),
         __metadata("design:type", shared.SchemeBasicAuth)
     ], CreateTokenSecurity.prototype, "basicAuth", void 0);
     return CreateTokenSecurity;
-}(SpeakeasyBase));
-export { CreateTokenSecurity };
+}(utils_1.SpeakeasyBase));
+exports.CreateTokenSecurity = CreateTokenSecurity;
 var CreateTokenRequest = /** @class */ (function (_super) {
     __extends(CreateTokenRequest, _super);
     function CreateTokenRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", CreateTokenRequestBody)
     ], CreateTokenRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateTokenSecurity)
     ], CreateTokenRequest.prototype, "security", void 0);
     return CreateTokenRequest;
-}(SpeakeasyBase));
-export { CreateTokenRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateTokenRequest = CreateTokenRequest;
 var CreateTokenResponse = /** @class */ (function (_super) {
     __extends(CreateTokenResponse, _super);
     function CreateTokenResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], CreateTokenResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateTokenResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateTokenResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateTokenResponse.prototype, "netlicensing", void 0);
     return CreateTokenResponse;
-}(SpeakeasyBase));
-export { CreateTokenResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateTokenResponse = CreateTokenResponse;

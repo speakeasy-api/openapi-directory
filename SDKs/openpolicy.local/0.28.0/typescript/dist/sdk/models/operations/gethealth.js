@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetHealthResponse = exports.GetHealthRequest = exports.GetHealthQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetHealthQueryParams = /** @class */ (function (_super) {
     __extends(GetHealthQueryParams, _super);
     function GetHealthQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=bundles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=bundles" }),
         __metadata("design:type", Boolean)
     ], GetHealthQueryParams.prototype, "bundles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=plugins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=plugins" }),
         __metadata("design:type", Boolean)
     ], GetHealthQueryParams.prototype, "plugins", void 0);
     return GetHealthQueryParams;
-}(SpeakeasyBase));
-export { GetHealthQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetHealthQueryParams = GetHealthQueryParams;
 var GetHealthRequest = /** @class */ (function (_super) {
     __extends(GetHealthRequest, _super);
     function GetHealthRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetHealthQueryParams)
     ], GetHealthRequest.prototype, "queryParams", void 0);
     return GetHealthRequest;
-}(SpeakeasyBase));
-export { GetHealthRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetHealthRequest = GetHealthRequest;
 var GetHealthResponse = /** @class */ (function (_super) {
     __extends(GetHealthResponse, _super);
     function GetHealthResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetHealthResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetHealthResponse.prototype, "statusCode", void 0);
     return GetHealthResponse;
-}(SpeakeasyBase));
-export { GetHealthResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetHealthResponse = GetHealthResponse;

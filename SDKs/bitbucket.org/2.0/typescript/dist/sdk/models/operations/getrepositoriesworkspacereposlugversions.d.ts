@@ -16,6 +16,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugVersionsRequest extends Spe
 export declare class GetRepositoriesWorkspaceRepoSlugVersionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedVersions?: shared.PaginatedVersions;
 }

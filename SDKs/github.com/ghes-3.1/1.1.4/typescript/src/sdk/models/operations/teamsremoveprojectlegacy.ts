@@ -38,7 +38,7 @@ export class TeamsRemoveProjectLegacyResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  teamsRemoveProjectLegacy415ApplicationJsonObject?: TeamsRemoveProjectLegacy415ApplicationJson;
+  teamsRemoveProjectLegacy415ApplicationJSONObject?: TeamsRemoveProjectLegacy415ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

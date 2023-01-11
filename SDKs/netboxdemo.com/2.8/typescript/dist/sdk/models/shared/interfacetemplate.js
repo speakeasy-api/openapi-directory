@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedDeviceType } from "./nesteddevicetype";
-export var InterfaceTemplateTypeLabelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InterfaceTemplate = exports.InterfaceTemplateType = exports.InterfaceTemplateTypeValueEnum = exports.InterfaceTemplateTypeLabelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var nesteddevicetype_1 = require("./nesteddevicetype");
+var InterfaceTemplateTypeLabelEnum;
 (function (InterfaceTemplateTypeLabelEnum) {
     InterfaceTemplateTypeLabelEnum["Virtual"] = "Virtual";
     InterfaceTemplateTypeLabelEnum["LinkAggregationGroupLag"] = "Link Aggregation Group (LAG)";
@@ -98,8 +101,8 @@ export var InterfaceTemplateTypeLabelEnum;
     InterfaceTemplateTypeLabelEnum["ExtremeSummitStack256"] = "Extreme SummitStack-256";
     InterfaceTemplateTypeLabelEnum["ExtremeSummitStack512"] = "Extreme SummitStack-512";
     InterfaceTemplateTypeLabelEnum["Other"] = "Other";
-})(InterfaceTemplateTypeLabelEnum || (InterfaceTemplateTypeLabelEnum = {}));
-export var InterfaceTemplateTypeValueEnum;
+})(InterfaceTemplateTypeLabelEnum = exports.InterfaceTemplateTypeLabelEnum || (exports.InterfaceTemplateTypeLabelEnum = {}));
+var InterfaceTemplateTypeValueEnum;
 (function (InterfaceTemplateTypeValueEnum) {
     InterfaceTemplateTypeValueEnum["Virtual"] = "virtual";
     InterfaceTemplateTypeValueEnum["Lag"] = "lag";
@@ -173,48 +176,48 @@ export var InterfaceTemplateTypeValueEnum;
     InterfaceTemplateTypeValueEnum["ExtremeSummitstack256"] = "extreme-summitstack-256";
     InterfaceTemplateTypeValueEnum["ExtremeSummitstack512"] = "extreme-summitstack-512";
     InterfaceTemplateTypeValueEnum["Other"] = "other";
-})(InterfaceTemplateTypeValueEnum || (InterfaceTemplateTypeValueEnum = {}));
+})(InterfaceTemplateTypeValueEnum = exports.InterfaceTemplateTypeValueEnum || (exports.InterfaceTemplateTypeValueEnum = {}));
 var InterfaceTemplateType = /** @class */ (function (_super) {
     __extends(InterfaceTemplateType, _super);
     function InterfaceTemplateType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], InterfaceTemplateType.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], InterfaceTemplateType.prototype, "value", void 0);
     return InterfaceTemplateType;
-}(SpeakeasyBase));
-export { InterfaceTemplateType };
+}(utils_1.SpeakeasyBase));
+exports.InterfaceTemplateType = InterfaceTemplateType;
 var InterfaceTemplate = /** @class */ (function (_super) {
     __extends(InterfaceTemplate, _super);
     function InterfaceTemplate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_type" }),
-        __metadata("design:type", NestedDeviceType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_type" }),
+        __metadata("design:type", nesteddevicetype_1.NestedDeviceType)
     ], InterfaceTemplate.prototype, "deviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], InterfaceTemplate.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mgmt_only" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mgmt_only" }),
         __metadata("design:type", Boolean)
     ], InterfaceTemplate.prototype, "mgmtOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], InterfaceTemplate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", InterfaceTemplateType)
     ], InterfaceTemplate.prototype, "type", void 0);
     return InterfaceTemplate;
-}(SpeakeasyBase));
-export { InterfaceTemplate };
+}(utils_1.SpeakeasyBase));
+exports.InterfaceTemplate = InterfaceTemplate;

@@ -8,10 +8,6 @@ export enum BackendMetastoreMetastoreTypeEnum {
 }
 
 
-// BackendMetastore
-/** 
- * Represents a backend metastore for the federation.
-**/
 export class BackendMetastore extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=metastoreType" })
   metastoreType?: BackendMetastoreMetastoreTypeEnum;

@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class GetSuperfundPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=SuperFundID" })
-  superFundId: string;
+  superFundID: string;
 }
 
 

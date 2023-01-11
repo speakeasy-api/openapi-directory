@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ModelYearDistEntry } from "./modelyeardistentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelYearDistResp = void 0;
+var utils_1 = require("../../../internal/utils");
+var modelyeardistentry_1 = require("./modelyeardistentry");
 var ModelYearDistResp = /** @class */ (function (_super) {
     __extends(ModelYearDistResp, _super);
     function ModelYearDistResp() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brandName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brandName" }),
         __metadata("design:type", String)
     ], ModelYearDistResp.prototype, "brandName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cacheTimeLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cacheTimeLimit" }),
         __metadata("design:type", Number)
     ], ModelYearDistResp.prototype, "cacheTimeLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=condition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=condition" }),
         __metadata("design:type", String)
     ], ModelYearDistResp.prototype, "condition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: ModelYearDistEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: modelyeardistentry_1.ModelYearDistEntry }),
         __metadata("design:type", Array)
     ], ModelYearDistResp.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modelName" }),
         __metadata("design:type", String)
     ], ModelYearDistResp.prototype, "modelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=msg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=msg" }),
         __metadata("design:type", String)
     ], ModelYearDistResp.prototype, "msg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionName" }),
         __metadata("design:type", String)
     ], ModelYearDistResp.prototype, "regionName", void 0);
     return ModelYearDistResp;
-}(SpeakeasyBase));
-export { ModelYearDistResp };
+}(utils_1.SpeakeasyBase));
+exports.ModelYearDistResp = ModelYearDistResp;

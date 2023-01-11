@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetSuggestionsTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSuggestionsResponse = exports.GetSuggestionsRequest = exports.GetSuggestionsHeaders = exports.GetSuggestionsQueryParams = exports.GetSuggestionsPathParams = exports.GetSuggestionsTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetSuggestionsTypeEnum;
 (function (GetSuggestionsTypeEnum) {
     GetSuggestionsTypeEnum["Entity"] = "entity";
     GetSuggestionsTypeEnum["Category"] = "category";
     GetSuggestionsTypeEnum["Publisher"] = "publisher";
     GetSuggestionsTypeEnum["Dataset"] = "dataset";
     GetSuggestionsTypeEnum["Question"] = "question";
-})(GetSuggestionsTypeEnum || (GetSuggestionsTypeEnum = {}));
+})(GetSuggestionsTypeEnum = exports.GetSuggestionsTypeEnum || (exports.GetSuggestionsTypeEnum = {}));
 var GetSuggestionsPathParams = /** @class */ (function (_super) {
     __extends(GetSuggestionsPathParams, _super);
     function GetSuggestionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=type" }),
         __metadata("design:type", String)
     ], GetSuggestionsPathParams.prototype, "type", void 0);
     return GetSuggestionsPathParams;
-}(SpeakeasyBase));
-export { GetSuggestionsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSuggestionsPathParams = GetSuggestionsPathParams;
 var GetSuggestionsQueryParams = /** @class */ (function (_super) {
     __extends(GetSuggestionsQueryParams, _super);
     function GetSuggestionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=app_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=app_token" }),
         __metadata("design:type", String)
     ], GetSuggestionsQueryParams.prototype, "appToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetSuggestionsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], GetSuggestionsQueryParams.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=variable_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=variable_id" }),
         __metadata("design:type", String)
     ], GetSuggestionsQueryParams.prototype, "variableId", void 0);
     return GetSuggestionsQueryParams;
-}(SpeakeasyBase));
-export { GetSuggestionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSuggestionsQueryParams = GetSuggestionsQueryParams;
 var GetSuggestionsHeaders = /** @class */ (function (_super) {
     __extends(GetSuggestionsHeaders, _super);
     function GetSuggestionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-App-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-App-Token" }),
         __metadata("design:type", String)
     ], GetSuggestionsHeaders.prototype, "xAppToken", void 0);
     return GetSuggestionsHeaders;
-}(SpeakeasyBase));
-export { GetSuggestionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetSuggestionsHeaders = GetSuggestionsHeaders;
 var GetSuggestionsRequest = /** @class */ (function (_super) {
     __extends(GetSuggestionsRequest, _super);
     function GetSuggestionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSuggestionsPathParams)
     ], GetSuggestionsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSuggestionsQueryParams)
     ], GetSuggestionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSuggestionsHeaders)
     ], GetSuggestionsRequest.prototype, "headers", void 0);
     return GetSuggestionsRequest;
-}(SpeakeasyBase));
-export { GetSuggestionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSuggestionsRequest = GetSuggestionsRequest;
 var GetSuggestionsResponse = /** @class */ (function (_super) {
     __extends(GetSuggestionsResponse, _super);
     function GetSuggestionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSuggestionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSuggestionsResponse.prototype, "statusCode", void 0);
     return GetSuggestionsResponse;
-}(SpeakeasyBase));
-export { GetSuggestionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSuggestionsResponse = GetSuggestionsResponse;

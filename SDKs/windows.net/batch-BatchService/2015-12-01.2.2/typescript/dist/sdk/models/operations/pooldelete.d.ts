@@ -23,6 +23,6 @@ export declare class PoolDeleteRequest extends SpeakeasyBase {
 export declare class PoolDeleteResponse extends SpeakeasyBase {
     batchError?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

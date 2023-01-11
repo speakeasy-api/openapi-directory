@@ -1,6 +1,9 @@
-export var OfferingTransactionTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OfferingTransactionTypeEnum = void 0;
+var OfferingTransactionTypeEnum;
 (function (OfferingTransactionTypeEnum) {
     OfferingTransactionTypeEnum["Purchase"] = "PURCHASE";
     OfferingTransactionTypeEnum["Renew"] = "RENEW";
     OfferingTransactionTypeEnum["System"] = "SYSTEM";
-})(OfferingTransactionTypeEnum || (OfferingTransactionTypeEnum = {}));
+})(OfferingTransactionTypeEnum = exports.OfferingTransactionTypeEnum || (exports.OfferingTransactionTypeEnum = {}));

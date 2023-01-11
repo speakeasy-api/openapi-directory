@@ -107,5 +107,5 @@ export class GetEventsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getEvents200ApplicationJsonObject?: GetEvents200ApplicationJson;
+  getEvents200ApplicationJSONObject?: GetEvents200ApplicationJson;
 }

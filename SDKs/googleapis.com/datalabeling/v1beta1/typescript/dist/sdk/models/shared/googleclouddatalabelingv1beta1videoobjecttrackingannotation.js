@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1AnnotationSpec } from "./googleclouddatalabelingv1beta1annotationspec";
-import { GoogleCloudDatalabelingV1beta1ObjectTrackingFrame } from "./googleclouddatalabelingv1beta1objecttrackingframe";
-import { GoogleCloudDatalabelingV1beta1TimeSegment } from "./googleclouddatalabelingv1beta1timesegment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1VideoObjectTrackingAnnotation = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1annotationspec_1 = require("./googleclouddatalabelingv1beta1annotationspec");
+var googleclouddatalabelingv1beta1objecttrackingframe_1 = require("./googleclouddatalabelingv1beta1objecttrackingframe");
+var googleclouddatalabelingv1beta1timesegment_1 = require("./googleclouddatalabelingv1beta1timesegment");
 // GoogleCloudDatalabelingV1beta1VideoObjectTrackingAnnotation
 /**
  * Video object tracking annotation.
@@ -36,17 +39,17 @@ var GoogleCloudDatalabelingV1beta1VideoObjectTrackingAnnotation = /** @class */ 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotationSpec" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1AnnotationSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotationSpec" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1annotationspec_1.GoogleCloudDatalabelingV1beta1AnnotationSpec)
     ], GoogleCloudDatalabelingV1beta1VideoObjectTrackingAnnotation.prototype, "annotationSpec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectTrackingFrames", elemType: GoogleCloudDatalabelingV1beta1ObjectTrackingFrame }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectTrackingFrames", elemType: googleclouddatalabelingv1beta1objecttrackingframe_1.GoogleCloudDatalabelingV1beta1ObjectTrackingFrame }),
         __metadata("design:type", Array)
     ], GoogleCloudDatalabelingV1beta1VideoObjectTrackingAnnotation.prototype, "objectTrackingFrames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeSegment" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1TimeSegment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeSegment" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1timesegment_1.GoogleCloudDatalabelingV1beta1TimeSegment)
     ], GoogleCloudDatalabelingV1beta1VideoObjectTrackingAnnotation.prototype, "timeSegment", void 0);
     return GoogleCloudDatalabelingV1beta1VideoObjectTrackingAnnotation;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1VideoObjectTrackingAnnotation };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1VideoObjectTrackingAnnotation = GoogleCloudDatalabelingV1beta1VideoObjectTrackingAnnotation;

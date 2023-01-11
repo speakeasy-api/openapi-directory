@@ -1,8 +1,11 @@
-export var DataReplicationInitiationStepStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataReplicationInitiationStepStatusEnum = void 0;
+var DataReplicationInitiationStepStatusEnum;
 (function (DataReplicationInitiationStepStatusEnum) {
     DataReplicationInitiationStepStatusEnum["NotStarted"] = "NOT_STARTED";
     DataReplicationInitiationStepStatusEnum["InProgress"] = "IN_PROGRESS";
     DataReplicationInitiationStepStatusEnum["Succeeded"] = "SUCCEEDED";
     DataReplicationInitiationStepStatusEnum["Failed"] = "FAILED";
     DataReplicationInitiationStepStatusEnum["Skipped"] = "SKIPPED";
-})(DataReplicationInitiationStepStatusEnum || (DataReplicationInitiationStepStatusEnum = {}));
+})(DataReplicationInitiationStepStatusEnum = exports.DataReplicationInitiationStepStatusEnum || (exports.DataReplicationInitiationStepStatusEnum = {}));

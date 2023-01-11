@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DynamicListenerState } from "./dynamiclistenerstate";
-import { UpdateFailureState } from "./updatefailurestate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DynamicListener = void 0;
+var utils_1 = require("../../../internal/utils");
+var dynamiclistenerstate_1 = require("./dynamiclistenerstate");
+var updatefailurestate_1 = require("./updatefailurestate");
 // DynamicListener
 /**
  * Describes a dynamically loaded listener via the LDS API. [#next-free-field: 6]
@@ -35,25 +38,25 @@ var DynamicListener = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activeState" }),
-        __metadata("design:type", DynamicListenerState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activeState" }),
+        __metadata("design:type", dynamiclistenerstate_1.DynamicListenerState)
     ], DynamicListener.prototype, "activeState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=drainingState" }),
-        __metadata("design:type", DynamicListenerState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=drainingState" }),
+        __metadata("design:type", dynamiclistenerstate_1.DynamicListenerState)
     ], DynamicListener.prototype, "drainingState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorState" }),
-        __metadata("design:type", UpdateFailureState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorState" }),
+        __metadata("design:type", updatefailurestate_1.UpdateFailureState)
     ], DynamicListener.prototype, "errorState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DynamicListener.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warmingState" }),
-        __metadata("design:type", DynamicListenerState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warmingState" }),
+        __metadata("design:type", dynamiclistenerstate_1.DynamicListenerState)
     ], DynamicListener.prototype, "warmingState", void 0);
     return DynamicListener;
-}(SpeakeasyBase));
-export { DynamicListener };
+}(utils_1.SpeakeasyBase));
+exports.DynamicListener = DynamicListener;

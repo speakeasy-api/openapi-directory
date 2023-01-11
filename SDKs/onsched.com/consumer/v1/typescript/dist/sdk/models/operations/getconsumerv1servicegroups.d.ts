@@ -9,6 +9,6 @@ export declare class GetConsumerV1ServicegroupsRequest extends SpeakeasyBase {
 }
 export declare class GetConsumerV1ServicegroupsResponse extends SpeakeasyBase {
     contentType: string;
-    serviceGroupListViewModel?: Map<string, any>;
+    serviceGroupListViewModel?: Record<string, any>;
     statusCode: number;
 }

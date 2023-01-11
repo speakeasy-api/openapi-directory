@@ -74,7 +74,7 @@ export class AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResou
   contentType: string;
 
   @SpeakeasyMetadata()
-  googleCloudAssuredworkloadsV1RestrictAllowedResourcesResponse?: Map<string, any>;
+  googleCloudAssuredworkloadsV1RestrictAllowedResourcesResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

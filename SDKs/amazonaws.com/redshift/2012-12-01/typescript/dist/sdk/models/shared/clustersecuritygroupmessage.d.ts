@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ClusterSecurityGroup } from "./clustersecuritygroup";
+import { ClusterSecurityGroups } from "./clustersecuritygroups";
 /**
  * <p/>
 **/
 export declare class ClusterSecurityGroupMessage extends SpeakeasyBase {
-    clusterSecurityGroups?: ClusterSecurityGroup[];
+    clusterSecurityGroups?: ClusterSecurityGroups[];
     marker?: string;
 }

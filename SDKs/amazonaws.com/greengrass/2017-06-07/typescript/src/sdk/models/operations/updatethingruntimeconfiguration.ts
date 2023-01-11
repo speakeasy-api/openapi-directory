@@ -75,5 +75,5 @@ export class UpdateThingRuntimeConfigurationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateThingRuntimeConfigurationResponse?: Map<string, any>;
+  updateThingRuntimeConfigurationResponse?: Record<string, any>;
 }

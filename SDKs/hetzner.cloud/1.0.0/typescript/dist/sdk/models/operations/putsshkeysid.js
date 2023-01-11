@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutSshKeysIdResponse = exports.PutSshKeysIdRequest = exports.PutSshKeysId200ApplicationJson = exports.PutSshKeysId200ApplicationJsonSshKey = exports.PutSshKeysIdRequestBody = exports.PutSshKeysIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PutSshKeysIdPathParams = /** @class */ (function (_super) {
     __extends(PutSshKeysIdPathParams, _super);
     function PutSshKeysIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], PutSshKeysIdPathParams.prototype, "id", void 0);
     return PutSshKeysIdPathParams;
-}(SpeakeasyBase));
-export { PutSshKeysIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PutSshKeysIdPathParams = PutSshKeysIdPathParams;
 var PutSshKeysIdRequestBody = /** @class */ (function (_super) {
     __extends(PutSshKeysIdRequestBody, _super);
     function PutSshKeysIdRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], PutSshKeysIdRequestBody.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PutSshKeysIdRequestBody.prototype, "name", void 0);
     return PutSshKeysIdRequestBody;
-}(SpeakeasyBase));
-export { PutSshKeysIdRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PutSshKeysIdRequestBody = PutSshKeysIdRequestBody;
 var PutSshKeysId200ApplicationJsonSshKey = /** @class */ (function (_super) {
     __extends(PutSshKeysId200ApplicationJsonSshKey, _super);
     function PutSshKeysId200ApplicationJsonSshKey() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], PutSshKeysId200ApplicationJsonSshKey.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fingerprint" }),
         __metadata("design:type", String)
     ], PutSshKeysId200ApplicationJsonSshKey.prototype, "fingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PutSshKeysId200ApplicationJsonSshKey.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], PutSshKeysId200ApplicationJsonSshKey.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PutSshKeysId200ApplicationJsonSshKey.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public_key" }),
         __metadata("design:type", String)
     ], PutSshKeysId200ApplicationJsonSshKey.prototype, "publicKey", void 0);
     return PutSshKeysId200ApplicationJsonSshKey;
-}(SpeakeasyBase));
-export { PutSshKeysId200ApplicationJsonSshKey };
+}(utils_1.SpeakeasyBase));
+exports.PutSshKeysId200ApplicationJsonSshKey = PutSshKeysId200ApplicationJsonSshKey;
 var PutSshKeysId200ApplicationJson = /** @class */ (function (_super) {
     __extends(PutSshKeysId200ApplicationJson, _super);
     function PutSshKeysId200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssh_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssh_key" }),
         __metadata("design:type", PutSshKeysId200ApplicationJsonSshKey)
     ], PutSshKeysId200ApplicationJson.prototype, "sshKey", void 0);
     return PutSshKeysId200ApplicationJson;
-}(SpeakeasyBase));
-export { PutSshKeysId200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PutSshKeysId200ApplicationJson = PutSshKeysId200ApplicationJson;
 var PutSshKeysIdRequest = /** @class */ (function (_super) {
     __extends(PutSshKeysIdRequest, _super);
     function PutSshKeysIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutSshKeysIdPathParams)
     ], PutSshKeysIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PutSshKeysIdRequestBody)
     ], PutSshKeysIdRequest.prototype, "request", void 0);
     return PutSshKeysIdRequest;
-}(SpeakeasyBase));
-export { PutSshKeysIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutSshKeysIdRequest = PutSshKeysIdRequest;
 var PutSshKeysIdResponse = /** @class */ (function (_super) {
     __extends(PutSshKeysIdResponse, _super);
     function PutSshKeysIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PutSshKeysIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PutSshKeysId200ApplicationJson)
-    ], PutSshKeysIdResponse.prototype, "putSshKeysId200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PutSshKeysIdResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PutSshKeysId200ApplicationJson)
+    ], PutSshKeysIdResponse.prototype, "putSshKeysId200ApplicationJSONObject", void 0);
     return PutSshKeysIdResponse;
-}(SpeakeasyBase));
-export { PutSshKeysIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutSshKeysIdResponse = PutSshKeysIdResponse;

@@ -37,6 +37,6 @@ export class GetAllEarningsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ elemType: shared.Earning })
   earnings?: shared.Earning[];
 
-  @SpeakeasyMetadata({ elemType: shared.Error })
-  errors?: shared.Error[];
+  @SpeakeasyMetadata({ elemType: shared.ErrorT })
+  errors?: shared.ErrorT[];
 }

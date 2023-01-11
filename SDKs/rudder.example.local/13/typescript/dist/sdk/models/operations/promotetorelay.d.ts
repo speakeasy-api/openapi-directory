@@ -20,5 +20,5 @@ export declare class PromoteToRelayRequest extends SpeakeasyBase {
 export declare class PromoteToRelayResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    promoteToRelay200ApplicationJsonObject?: PromoteToRelay200ApplicationJson;
+    promoteToRelay200ApplicationJSONObject?: PromoteToRelay200ApplicationJson;
 }

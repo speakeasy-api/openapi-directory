@@ -27,5 +27,5 @@ export declare class UpdateCveRequest extends SpeakeasyBase {
 export declare class UpdateCveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateCve200ApplicationJsonObject?: UpdateCve200ApplicationJson;
+    updateCVE200ApplicationJSONObject?: UpdateCve200ApplicationJson;
 }

@@ -41,5 +41,5 @@ export class CreatorsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  creatorsList200ApplicationJsonObject?: CreatorsList200ApplicationJson;
+  creatorsList200ApplicationJSONObject?: CreatorsList200ApplicationJson;
 }

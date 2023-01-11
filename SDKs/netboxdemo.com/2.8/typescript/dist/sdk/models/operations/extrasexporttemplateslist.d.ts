@@ -36,5 +36,5 @@ export declare class ExtrasExportTemplatesListRequest extends SpeakeasyBase {
 export declare class ExtrasExportTemplatesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    extrasExportTemplatesList200ApplicationJsonObject?: ExtrasExportTemplatesList200ApplicationJson;
+    extrasExportTemplatesList200ApplicationJSONObject?: ExtrasExportTemplatesList200ApplicationJson;
 }

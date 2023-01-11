@@ -21,5 +21,5 @@ export declare class ActionsCreateOrUpdateOrgSecretRequest extends SpeakeasyBase
 export declare class ActionsCreateOrUpdateOrgSecretResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    emptyObject?: Map<string, any>;
+    emptyObject?: Record<string, any>;
 }

@@ -43,31 +43,6 @@ export enum GoogleAppsCloudidentityDevicesV1DeviceOwnerTypeEnum {
 }
 
 
-// GoogleAppsCloudidentityDevicesV1DeviceInput
-/** 
- *  A Device within the Cloud Identity Devices API. Represents a Device known to Google Cloud, independent of the device ownership, type, and whether it is assigned or in use by a user.
-**/
-export class GoogleAppsCloudidentityDevicesV1DeviceInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=androidSpecificAttributes" })
-  androidSpecificAttributes?: GoogleAppsCloudidentityDevicesV1AndroidAttributes;
-
-  @SpeakeasyMetadata({ data: "json, name=assetTag" })
-  assetTag?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=deviceId" })
-  deviceId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=lastSyncTime" })
-  lastSyncTime?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=serialNumber" })
-  serialNumber?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=wifiMacAddresses" })
-  wifiMacAddresses?: string[];
-}
-
-
 // GoogleAppsCloudidentityDevicesV1Device
 /** 
  *  A Device within the Cloud Identity Devices API. Represents a Device known to Google Cloud, independent of the device ownership, type, and whether it is assigned or in use by a user.
@@ -153,6 +128,31 @@ export class GoogleAppsCloudidentityDevicesV1Device extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=securityPatchTime" })
   securityPatchTime?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=serialNumber" })
+  serialNumber?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=wifiMacAddresses" })
+  wifiMacAddresses?: string[];
+}
+
+
+// GoogleAppsCloudidentityDevicesV1DeviceInput
+/** 
+ *  A Device within the Cloud Identity Devices API. Represents a Device known to Google Cloud, independent of the device ownership, type, and whether it is assigned or in use by a user.
+**/
+export class GoogleAppsCloudidentityDevicesV1DeviceInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=androidSpecificAttributes" })
+  androidSpecificAttributes?: GoogleAppsCloudidentityDevicesV1AndroidAttributes;
+
+  @SpeakeasyMetadata({ data: "json, name=assetTag" })
+  assetTag?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=deviceId" })
+  deviceId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=lastSyncTime" })
+  lastSyncTime?: string;
 
   @SpeakeasyMetadata({ data: "json, name=serialNumber" })
   serialNumber?: string;

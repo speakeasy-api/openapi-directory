@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DpsMessageDpsMessageMessageStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DpsMessage = exports.DpsMessageDpsMessage = exports.DpsMessageDpsMessageMessageStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DpsMessageDpsMessageMessageStatusEnum;
 (function (DpsMessageDpsMessageMessageStatusEnum) {
     DpsMessageDpsMessageMessageStatusEnum["Retrieved"] = "Retrieved";
     DpsMessageDpsMessageMessageStatusEnum["Applied"] = "Applied";
     DpsMessageDpsMessageMessageStatusEnum["Unresolved"] = "Unresolved";
     DpsMessageDpsMessageMessageStatusEnum["Ignored"] = "Ignored";
     DpsMessageDpsMessageMessageStatusEnum["Information"] = "Information";
-})(DpsMessageDpsMessageMessageStatusEnum || (DpsMessageDpsMessageMessageStatusEnum = {}));
+})(DpsMessageDpsMessageMessageStatusEnum = exports.DpsMessageDpsMessageMessageStatusEnum || (exports.DpsMessageDpsMessageMessageStatusEnum = {}));
 var DpsMessageDpsMessage = /** @class */ (function (_super) {
     __extends(DpsMessageDpsMessage, _super);
     function DpsMessageDpsMessage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FormType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FormType" }),
         __metadata("design:type", String)
     ], DpsMessageDpsMessage.prototype, "formType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IssueDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IssueDate" }),
         __metadata("design:type", Date)
     ], DpsMessageDpsMessage.prototype, "issueDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdated" }),
         __metadata("design:type", Date)
     ], DpsMessageDpsMessage.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Message" }),
         __metadata("design:type", String)
     ], DpsMessageDpsMessage.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessageStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessageStatus" }),
         __metadata("design:type", String)
     ], DpsMessageDpsMessage.prototype, "messageStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessageType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessageType" }),
         __metadata("design:type", String)
     ], DpsMessageDpsMessage.prototype, "messageType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProcessingResult" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProcessingResult" }),
         __metadata("design:type", String)
     ], DpsMessageDpsMessage.prototype, "processingResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RetrieveDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RetrieveDate" }),
         __metadata("design:type", Date)
     ], DpsMessageDpsMessage.prototype, "retrieveDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SequenceNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SequenceNumber" }),
         __metadata("design:type", Number)
     ], DpsMessageDpsMessage.prototype, "sequenceNumber", void 0);
     return DpsMessageDpsMessage;
-}(SpeakeasyBase));
-export { DpsMessageDpsMessage };
+}(utils_1.SpeakeasyBase));
+exports.DpsMessageDpsMessage = DpsMessageDpsMessage;
 var DpsMessage = /** @class */ (function (_super) {
     __extends(DpsMessage, _super);
     function DpsMessage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DpsMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DpsMessage" }),
         __metadata("design:type", DpsMessageDpsMessage)
     ], DpsMessage.prototype, "dpsMessage", void 0);
     return DpsMessage;
-}(SpeakeasyBase));
-export { DpsMessage };
+}(utils_1.SpeakeasyBase));
+exports.DpsMessage = DpsMessage;

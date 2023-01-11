@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PlaydeveloperreportingAnomaliesListRequest, PlaydeveloperreportingAnomaliesListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,23 +28,23 @@ const sdk = new SDK();
     
 const req: PlaydeveloperreportingAnomaliesListRequest = {
   pathParams: {
-    parent: "tempore",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "quisquam",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "aliquam",
-    fields: "illo",
-    filter: "voluptatem",
-    key: "itaque",
-    oauthToken: "magnam",
-    pageSize: 8228784539784114503,
-    pageToken: "eum",
+    callback: "consequuntur",
+    fields: "dolor",
+    filter: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    pageSize: 1543572285742637646,
+    pageToken: "nihil",
     prettyPrint: true,
-    quotaUser: "et",
-    uploadType: "quos",
-    uploadProtocol: "eius",
+    quotaUser: "dicta",
+    uploadType: "debitis",
+    uploadProtocol: "voluptatum",
   },
 };
 

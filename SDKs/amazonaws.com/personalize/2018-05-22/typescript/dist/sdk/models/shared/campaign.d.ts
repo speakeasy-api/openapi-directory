@@ -11,7 +11,7 @@ export declare class Campaign extends SpeakeasyBase {
     failureReason?: string;
     lastUpdatedDateTime?: Date;
     latestCampaignUpdate?: CampaignUpdateSummary;
-    minProvisionedTps?: number;
+    minProvisionedTPS?: number;
     name?: string;
     solutionVersionArn?: string;
     status?: string;

@@ -19,7 +19,7 @@ export class CreateInstancesRequest extends SpeakeasyBase {
   bundleId: string;
 
   @SpeakeasyMetadata({ data: "json, name=customImageName" })
-  customImageName?: string;
+  customImageName?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=instanceNames" })
   instanceNames: string[];

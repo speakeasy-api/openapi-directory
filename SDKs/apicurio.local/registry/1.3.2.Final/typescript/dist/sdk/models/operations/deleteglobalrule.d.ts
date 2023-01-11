@@ -12,6 +12,6 @@ export declare class DeleteGlobalRuleRequest extends SpeakeasyBase {
 }
 export declare class DeleteGlobalRuleResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

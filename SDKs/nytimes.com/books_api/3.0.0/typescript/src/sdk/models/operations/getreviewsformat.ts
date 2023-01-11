@@ -91,7 +91,7 @@ export class GetReviewsFormatResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getReviewsFormat200ApplicationJsonObject?: GetReviewsFormat200ApplicationJson;
+  getReviewsFormat200ApplicationJSONObject?: GetReviewsFormat200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

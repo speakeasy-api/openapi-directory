@@ -74,13 +74,13 @@ export class PostCallsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
-
-  @SpeakeasyMetadata()
-  postCalls202ApplicationJsonObject?: PostCalls202ApplicationJson;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  postCalls202ApplicationJSONObject?: PostCalls202ApplicationJson;
 
   @SpeakeasyMetadata()
   oneannouncementsPostResponses400ContentApplication1jsonSchema?: shared.OneannouncementsPostResponses400ContentApplication1jsonSchema;

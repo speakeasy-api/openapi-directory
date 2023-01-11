@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SchedulingNodeAffinity } from "./schedulingnodeaffinity";
-export var ComputeSchedulingOnHostMaintenanceEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComputeScheduling = exports.ComputeSchedulingRestartTypeEnum = exports.ComputeSchedulingOnHostMaintenanceEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var schedulingnodeaffinity_1 = require("./schedulingnodeaffinity");
+var ComputeSchedulingOnHostMaintenanceEnum;
 (function (ComputeSchedulingOnHostMaintenanceEnum) {
     ComputeSchedulingOnHostMaintenanceEnum["OnHostMaintenanceUnspecified"] = "ON_HOST_MAINTENANCE_UNSPECIFIED";
     ComputeSchedulingOnHostMaintenanceEnum["Terminate"] = "TERMINATE";
     ComputeSchedulingOnHostMaintenanceEnum["Migrate"] = "MIGRATE";
-})(ComputeSchedulingOnHostMaintenanceEnum || (ComputeSchedulingOnHostMaintenanceEnum = {}));
-export var ComputeSchedulingRestartTypeEnum;
+})(ComputeSchedulingOnHostMaintenanceEnum = exports.ComputeSchedulingOnHostMaintenanceEnum || (exports.ComputeSchedulingOnHostMaintenanceEnum = {}));
+var ComputeSchedulingRestartTypeEnum;
 (function (ComputeSchedulingRestartTypeEnum) {
     ComputeSchedulingRestartTypeEnum["RestartTypeUnspecified"] = "RESTART_TYPE_UNSPECIFIED";
     ComputeSchedulingRestartTypeEnum["AutomaticRestart"] = "AUTOMATIC_RESTART";
     ComputeSchedulingRestartTypeEnum["NoAutomaticRestart"] = "NO_AUTOMATIC_RESTART";
-})(ComputeSchedulingRestartTypeEnum || (ComputeSchedulingRestartTypeEnum = {}));
+})(ComputeSchedulingRestartTypeEnum = exports.ComputeSchedulingRestartTypeEnum || (exports.ComputeSchedulingRestartTypeEnum = {}));
 // ComputeScheduling
 /**
  * Scheduling information for VM on maintenance/restart behaviour and node allocation in sole tenant nodes.
@@ -46,25 +49,25 @@ var ComputeScheduling = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=automaticRestart" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=automaticRestart" }),
         __metadata("design:type", Boolean)
     ], ComputeScheduling.prototype, "automaticRestart", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minNodeCpus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minNodeCpus" }),
         __metadata("design:type", Number)
     ], ComputeScheduling.prototype, "minNodeCpus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeAffinities", elemType: SchedulingNodeAffinity }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeAffinities", elemType: schedulingnodeaffinity_1.SchedulingNodeAffinity }),
         __metadata("design:type", Array)
     ], ComputeScheduling.prototype, "nodeAffinities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onHostMaintenance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onHostMaintenance" }),
         __metadata("design:type", String)
     ], ComputeScheduling.prototype, "onHostMaintenance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restartType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restartType" }),
         __metadata("design:type", String)
     ], ComputeScheduling.prototype, "restartType", void 0);
     return ComputeScheduling;
-}(SpeakeasyBase));
-export { ComputeScheduling };
+}(utils_1.SpeakeasyBase));
+exports.ComputeScheduling = ComputeScheduling;

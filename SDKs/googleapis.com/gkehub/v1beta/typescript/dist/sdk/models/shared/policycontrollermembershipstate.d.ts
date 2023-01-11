@@ -15,6 +15,6 @@ export declare enum PolicyControllerMembershipStateStateEnum {
  * **Policy Controller**: State for a single cluster.
 **/
 export declare class PolicyControllerMembershipState extends SpeakeasyBase {
-    componentStates?: Map<string, PolicyControllerOnClusterState>;
+    componentStates?: Record<string, PolicyControllerOnClusterState>;
     state?: PolicyControllerMembershipStateStateEnum;
 }

@@ -4,8 +4,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetConsoleScreenshotResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  imageData?: string;
+  imageData?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  instanceId?: string;
+  instanceId?: Record<string, any>;
 }

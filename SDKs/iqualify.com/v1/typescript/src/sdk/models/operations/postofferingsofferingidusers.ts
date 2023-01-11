@@ -23,14 +23,14 @@ export class PostOfferingsOfferingIdUsersResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.OfferingUserAddResponse })
   offeringUserAddResponses?: shared.OfferingUserAddResponse[];
 
   @SpeakeasyMetadata()
-  postOfferingsOfferingIdUsers207ApplicationJsonOneoves?: any[];
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postOfferingsOfferingIdUsers207ApplicationJSONOneoves?: any[];
 }

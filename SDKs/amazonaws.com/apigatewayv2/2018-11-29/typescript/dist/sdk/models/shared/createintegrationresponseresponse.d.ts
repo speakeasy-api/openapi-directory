@@ -1,10 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ContentHandlingStrategyEnum } from "./contenthandlingstrategyenum";
 export declare class CreateIntegrationResponseResponse extends SpeakeasyBase {
-    contentHandlingStrategy?: ContentHandlingStrategyEnum;
-    integrationResponseId?: string;
-    integrationResponseKey?: string;
-    responseParameters?: Map<string, string>;
-    responseTemplates?: Map<string, string>;
-    templateSelectionExpression?: string;
+    contentHandlingStrategy?: Record<string, any>;
+    integrationResponseId?: Record<string, any>;
+    integrationResponseKey?: Record<string, any>;
+    responseParameters?: Record<string, string>;
+    responseTemplates?: Record<string, string>;
+    templateSelectionExpression?: Record<string, any>;
 }

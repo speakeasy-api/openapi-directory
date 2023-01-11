@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostEmailEnrichResponse = exports.PostEmailEnrichRequest = exports.PostEmailEnrichRequestBody = exports.PostEmailEnrichHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostEmailEnrichHeaders = /** @class */ (function (_super) {
     __extends(PostEmailEnrichHeaders, _super);
     function PostEmailEnrichHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=galaxy-ap-name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=galaxy-ap-name" }),
         __metadata("design:type", String)
     ], PostEmailEnrichHeaders.prototype, "galaxyApName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=galaxy-ap-password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=galaxy-ap-password" }),
         __metadata("design:type", String)
     ], PostEmailEnrichHeaders.prototype, "galaxyApPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=galaxy-search-type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=galaxy-search-type" }),
         __metadata("design:type", String)
     ], PostEmailEnrichHeaders.prototype, "galaxySearchType", void 0);
     return PostEmailEnrichHeaders;
-}(SpeakeasyBase));
-export { PostEmailEnrichHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostEmailEnrichHeaders = PostEmailEnrichHeaders;
 var PostEmailEnrichRequestBody = /** @class */ (function (_super) {
     __extends(PostEmailEnrichRequestBody, _super);
     function PostEmailEnrichRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Email" }),
         __metadata("design:type", String)
     ], PostEmailEnrichRequestBody.prototype, "email", void 0);
     return PostEmailEnrichRequestBody;
-}(SpeakeasyBase));
-export { PostEmailEnrichRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostEmailEnrichRequestBody = PostEmailEnrichRequestBody;
 var PostEmailEnrichRequest = /** @class */ (function (_super) {
     __extends(PostEmailEnrichRequest, _super);
     function PostEmailEnrichRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostEmailEnrichHeaders)
     ], PostEmailEnrichRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostEmailEnrichRequestBody)
     ], PostEmailEnrichRequest.prototype, "request", void 0);
     return PostEmailEnrichRequest;
-}(SpeakeasyBase));
-export { PostEmailEnrichRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostEmailEnrichRequest = PostEmailEnrichRequest;
 var PostEmailEnrichResponse = /** @class */ (function (_super) {
     __extends(PostEmailEnrichResponse, _super);
     function PostEmailEnrichResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostEmailEnrichResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostEmailEnrichResponse.prototype, "statusCode", void 0);
     return PostEmailEnrichResponse;
-}(SpeakeasyBase));
-export { PostEmailEnrichResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostEmailEnrichResponse = PostEmailEnrichResponse;

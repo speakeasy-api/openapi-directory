@@ -25,7 +25,7 @@ export declare class GetMlTransformsRequest extends SpeakeasyBase {
 export declare class GetMlTransformsResponse extends SpeakeasyBase {
     contentType: string;
     entityNotFoundException?: any;
-    getMlTransformsResponse?: shared.GetMlTransformsResponse;
+    getMLTransformsResponse?: shared.GetMlTransformsResponse;
     internalServiceException?: any;
     invalidInputException?: any;
     operationTimeoutException?: any;

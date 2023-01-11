@@ -5,20 +5,20 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class PhotoObject extends SpeakeasyBase {
     caption?: string;
     editorsPick?: boolean;
-    ownerAvatarUrl?: string;
+    ownerAvatarURL?: string;
     ownerCountry?: string;
     ownerId?: number;
     ownerName?: string;
-    photoHiResUrl?: string;
+    photoHiResURL?: string;
     photoId?: number;
-    photoMediumResUrl?: string;
-    photoUrl?: string;
+    photoMediumResURL?: string;
+    photoURL?: string;
     productCode?: string;
     productTitle?: string;
     productUrlName?: string;
     sortOrder?: number;
     sslSupported?: boolean;
-    thumbnailUrl?: string;
+    thumbnailURL?: string;
     timeUploaded?: string;
     title?: string;
 }

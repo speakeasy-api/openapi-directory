@@ -13,5 +13,5 @@ export class ReimbursementLine extends SpeakeasyBase {
   expenseAccount?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ReimbursementTypeID" })
-  reimbursementTypeId?: string;
+  reimbursementTypeID?: string;
 }

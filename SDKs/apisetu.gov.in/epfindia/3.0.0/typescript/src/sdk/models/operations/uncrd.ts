@@ -188,23 +188,23 @@ export class UncrdResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  uncrd400ApplicationJsonObject?: Uncrd400ApplicationJson;
+  uncrd400ApplicationJSONObject?: Uncrd400ApplicationJson;
 
   @SpeakeasyMetadata()
-  uncrd401ApplicationJsonObject?: Uncrd401ApplicationJson;
+  uncrd401ApplicationJSONObject?: Uncrd401ApplicationJson;
 
   @SpeakeasyMetadata()
-  uncrd404ApplicationJsonObject?: Uncrd404ApplicationJson;
+  uncrd404ApplicationJSONObject?: Uncrd404ApplicationJson;
 
   @SpeakeasyMetadata()
-  uncrd500ApplicationJsonObject?: Uncrd500ApplicationJson;
+  uncrd500ApplicationJSONObject?: Uncrd500ApplicationJson;
 
   @SpeakeasyMetadata()
-  uncrd502ApplicationJsonObject?: Uncrd502ApplicationJson;
+  uncrd502ApplicationJSONObject?: Uncrd502ApplicationJson;
 
   @SpeakeasyMetadata()
-  uncrd503ApplicationJsonObject?: Uncrd503ApplicationJson;
+  uncrd503ApplicationJSONObject?: Uncrd503ApplicationJson;
 
   @SpeakeasyMetadata()
-  uncrd504ApplicationJsonObject?: Uncrd504ApplicationJson;
+  uncrd504ApplicationJSONObject?: Uncrd504ApplicationJson;
 }

@@ -9,7 +9,7 @@ export class StandardError extends SpeakeasyBase {
   category: ErrorCategory;
 
   @SpeakeasyMetadata({ data: "json, name=context" })
-  context: Map<string, string[]>;
+  context: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=errors", elemType: ErrorDetail })
   errors: ErrorDetail[];
@@ -18,7 +18,7 @@ export class StandardError extends SpeakeasyBase {
   id?: string;
 
   @SpeakeasyMetadata({ data: "json, name=links" })
-  links: Map<string, string>;
+  links: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
@@ -27,5 +27,5 @@ export class StandardError extends SpeakeasyBase {
   status: string;
 
   @SpeakeasyMetadata({ data: "json, name=subCategory" })
-  subCategory?: Map<string, any>;
+  subCategory?: Record<string, any>;
 }

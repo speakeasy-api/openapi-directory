@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudWebriskV1Submission } from "./googlecloudwebriskv1submission";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudWebriskV1SubmitUriRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudwebriskv1submission_1 = require("./googlecloudwebriskv1submission");
 // GoogleCloudWebriskV1SubmitUriRequest
 /**
  * Request to send a potentially malicious URI to WebRisk.
@@ -34,9 +37,9 @@ var GoogleCloudWebriskV1SubmitUriRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=submission" }),
-        __metadata("design:type", GoogleCloudWebriskV1Submission)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=submission" }),
+        __metadata("design:type", googlecloudwebriskv1submission_1.GoogleCloudWebriskV1Submission)
     ], GoogleCloudWebriskV1SubmitUriRequest.prototype, "submission", void 0);
     return GoogleCloudWebriskV1SubmitUriRequest;
-}(SpeakeasyBase));
-export { GoogleCloudWebriskV1SubmitUriRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudWebriskV1SubmitUriRequest = GoogleCloudWebriskV1SubmitUriRequest;

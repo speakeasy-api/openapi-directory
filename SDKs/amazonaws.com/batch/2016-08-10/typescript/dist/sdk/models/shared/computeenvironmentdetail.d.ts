@@ -15,6 +15,6 @@ export declare class ComputeEnvironmentDetail extends SpeakeasyBase {
     state?: CeStateEnum;
     status?: CeStatusEnum;
     statusReason?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     type?: CeTypeEnum;
 }

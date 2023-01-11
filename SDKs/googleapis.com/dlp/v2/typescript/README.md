@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DlpInfoTypesListRequest, DlpInfoTypesListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,27 +30,27 @@ const req: DlpInfoTypesListRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "laborum",
-    alt: "proto",
-    callback: "temporibus",
-    fields: "nemo",
-    filter: "odio",
-    key: "possimus",
-    languageCode: "aspernatur",
-    locationId: "eaque",
-    oauthToken: "nostrum",
-    parent: "qui",
-    prettyPrint: false,
-    quotaUser: "quas",
-    uploadType: "commodi",
-    uploadProtocol: "quas",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    filter: "dolor",
+    key: "expedita",
+    languageCode: "voluptas",
+    locationId: "fugit",
+    oauthToken: "et",
+    parent: "nihil",
+    prettyPrint: true,
+    quotaUser: "dicta",
+    uploadType: "debitis",
+    uploadProtocol: "voluptatum",
   },
 };
 

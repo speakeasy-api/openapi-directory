@@ -9,9 +9,9 @@ export declare class TagStreamHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class TagStreamRequestBody extends SpeakeasyBase {
-    streamArn?: string;
+    streamARN?: string;
     streamName?: string;
-    tags: Map<string, string>;
+    tags: Record<string, string>;
 }
 export declare class TagStreamRequest extends SpeakeasyBase {
     headers: TagStreamHeaders;
@@ -25,6 +25,6 @@ export declare class TagStreamResponse extends SpeakeasyBase {
     notAuthorizedException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    tagStreamOutput?: Map<string, any>;
+    tagStreamOutput?: Record<string, any>;
     tagsPerResourceExceededLimitException?: any;
 }

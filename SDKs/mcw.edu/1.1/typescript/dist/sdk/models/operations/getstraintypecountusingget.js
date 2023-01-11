@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetStrainTypeCountUsingGetResponse = exports.GetStrainTypeCountUsingGetRequest = exports.GetStrainTypeCountUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetStrainTypeCountUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetStrainTypeCountUsingGetPathParams, _super);
     function GetStrainTypeCountUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetStrainTypeCountUsingGetPathParams.prototype, "dateYyyymmdd", void 0);
+    ], GetStrainTypeCountUsingGetPathParams.prototype, "dateYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
         __metadata("design:type", Number)
     ], GetStrainTypeCountUsingGetPathParams.prototype, "speciesTypeKey", void 0);
     return GetStrainTypeCountUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetStrainTypeCountUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetStrainTypeCountUsingGetPathParams = GetStrainTypeCountUsingGetPathParams;
 var GetStrainTypeCountUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetStrainTypeCountUsingGetRequest, _super);
     function GetStrainTypeCountUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetStrainTypeCountUsingGetPathParams)
     ], GetStrainTypeCountUsingGetRequest.prototype, "pathParams", void 0);
     return GetStrainTypeCountUsingGetRequest;
-}(SpeakeasyBase));
-export { GetStrainTypeCountUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetStrainTypeCountUsingGetRequest = GetStrainTypeCountUsingGetRequest;
 var GetStrainTypeCountUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetStrainTypeCountUsingGetResponse, _super);
     function GetStrainTypeCountUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetStrainTypeCountUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetStrainTypeCountUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetStrainTypeCountUsingGetResponse.prototype, "statusCode", void 0);
     return GetStrainTypeCountUsingGetResponse;
-}(SpeakeasyBase));
-export { GetStrainTypeCountUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetStrainTypeCountUsingGetResponse = GetStrainTypeCountUsingGetResponse;

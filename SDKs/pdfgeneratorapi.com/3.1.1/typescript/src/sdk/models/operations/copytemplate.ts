@@ -107,20 +107,20 @@ export class CopyTemplateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  copyTemplate200ApplicationJsonObject?: CopyTemplate200ApplicationJson;
+  copyTemplate200ApplicationJSONObject?: CopyTemplate200ApplicationJson;
 
   @SpeakeasyMetadata()
-  copyTemplate401ApplicationJsonObject?: CopyTemplate401ApplicationJson;
+  copyTemplate401ApplicationJSONObject?: CopyTemplate401ApplicationJson;
 
   @SpeakeasyMetadata()
-  copyTemplate403ApplicationJsonObject?: CopyTemplate403ApplicationJson;
+  copyTemplate403ApplicationJSONObject?: CopyTemplate403ApplicationJson;
 
   @SpeakeasyMetadata()
-  copyTemplate404ApplicationJsonObject?: CopyTemplate404ApplicationJson;
+  copyTemplate404ApplicationJSONObject?: CopyTemplate404ApplicationJson;
 
   @SpeakeasyMetadata()
-  copyTemplate422ApplicationJsonObject?: CopyTemplate422ApplicationJson;
+  copyTemplate422ApplicationJSONObject?: CopyTemplate422ApplicationJson;
 
   @SpeakeasyMetadata()
-  copyTemplate500ApplicationJsonObject?: CopyTemplate500ApplicationJson;
+  copyTemplate500ApplicationJSONObject?: CopyTemplate500ApplicationJson;
 }

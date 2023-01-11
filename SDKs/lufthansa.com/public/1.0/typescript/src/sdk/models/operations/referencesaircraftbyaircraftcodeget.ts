@@ -50,7 +50,7 @@ export class ReferencesAircraftByAircraftCodeGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  referencesAircraftByAircraftCodeGet200ApplicationJsonObject?: Map<string, any>;
+  referencesAircraftByAircraftCodeGet200ApplicationJSONObject?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

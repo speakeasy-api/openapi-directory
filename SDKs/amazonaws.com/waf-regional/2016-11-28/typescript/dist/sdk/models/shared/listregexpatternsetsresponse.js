@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RegexPatternSetSummary } from "./regexpatternsetsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListRegexPatternSetsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var regexpatternsetsummary_1 = require("./regexpatternsetsummary");
 var ListRegexPatternSetsResponse = /** @class */ (function (_super) {
     __extends(ListRegexPatternSetsResponse, _super);
     function ListRegexPatternSetsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextMarker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextMarker" }),
         __metadata("design:type", String)
     ], ListRegexPatternSetsResponse.prototype, "nextMarker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RegexPatternSets", elemType: RegexPatternSetSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RegexPatternSets", elemType: regexpatternsetsummary_1.RegexPatternSetSummary }),
         __metadata("design:type", Array)
     ], ListRegexPatternSetsResponse.prototype, "regexPatternSets", void 0);
     return ListRegexPatternSetsResponse;
-}(SpeakeasyBase));
-export { ListRegexPatternSetsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListRegexPatternSetsResponse = ListRegexPatternSetsResponse;

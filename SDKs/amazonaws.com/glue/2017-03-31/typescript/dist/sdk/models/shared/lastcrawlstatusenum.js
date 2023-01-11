@@ -1,6 +1,9 @@
-export var LastCrawlStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LastCrawlStatusEnum = void 0;
+var LastCrawlStatusEnum;
 (function (LastCrawlStatusEnum) {
     LastCrawlStatusEnum["Succeeded"] = "SUCCEEDED";
     LastCrawlStatusEnum["Cancelled"] = "CANCELLED";
     LastCrawlStatusEnum["Failed"] = "FAILED";
-})(LastCrawlStatusEnum || (LastCrawlStatusEnum = {}));
+})(LastCrawlStatusEnum = exports.LastCrawlStatusEnum || (exports.LastCrawlStatusEnum = {}));

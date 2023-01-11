@@ -59,7 +59,7 @@ export class PublishMetricsResponse extends SpeakeasyBase {
   internalServerException?: any;
 
   @SpeakeasyMetadata()
-  publishMetricsOutput?: Map<string, any>;
+  publishMetricsOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

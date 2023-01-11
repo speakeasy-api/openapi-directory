@@ -4,17 +4,17 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class RemoveAllBackendsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AppId" })
-  appId?: string;
+  appId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Error" })
-  error?: string;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=JobId" })
-  jobId?: string;
+  jobId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Operation" })
-  operation?: string;
+  operation?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Status" })
-  status?: string;
+  status?: Record<string, any>;
 }

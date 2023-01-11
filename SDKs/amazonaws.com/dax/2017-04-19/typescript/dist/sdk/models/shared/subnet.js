@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Subnet = void 0;
+var utils_1 = require("../../../internal/utils");
 // Subnet
 /**
  * Represents the subnet associated with a DAX cluster. This parameter refers to subnets defined in Amazon Virtual Private Cloud (Amazon VPC) and used with DAX.
@@ -33,13 +36,13 @@ var Subnet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetAvailabilityZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetAvailabilityZone" }),
         __metadata("design:type", String)
     ], Subnet.prototype, "subnetAvailabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetIdentifier" }),
         __metadata("design:type", String)
     ], Subnet.prototype, "subnetIdentifier", void 0);
     return Subnet;
-}(SpeakeasyBase));
-export { Subnet };
+}(utils_1.SpeakeasyBase));
+exports.Subnet = Subnet;

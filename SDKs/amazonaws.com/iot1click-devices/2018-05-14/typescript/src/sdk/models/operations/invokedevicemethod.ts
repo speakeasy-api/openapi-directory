@@ -39,10 +39,10 @@ export class InvokeDeviceMethodHeaders extends SpeakeasyBase {
 **/
 export class InvokeDeviceMethodRequestBodyDeviceMethod extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=DeviceType" })
-  deviceType?: string;
+  deviceType?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=MethodName" })
-  methodName?: string;
+  methodName?: Record<string, any>;
 }
 
 

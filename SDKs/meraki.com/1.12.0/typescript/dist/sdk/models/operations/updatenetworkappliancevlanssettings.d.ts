@@ -12,5 +12,5 @@ export declare class UpdateNetworkApplianceVlansSettingsRequest extends Speakeas
 export declare class UpdateNetworkApplianceVlansSettingsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkApplianceVlansSettings200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkApplianceVlansSettings200ApplicationJSONObject?: Record<string, any>;
 }

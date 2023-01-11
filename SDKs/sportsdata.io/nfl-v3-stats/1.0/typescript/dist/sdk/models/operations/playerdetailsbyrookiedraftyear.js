@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerDetailsByRookieDraftYearResponse = exports.PlayerDetailsByRookieDraftYearRequest = exports.PlayerDetailsByRookieDraftYearPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PlayerDetailsByRookieDraftYearPathParams = /** @class */ (function (_super) {
     __extends(PlayerDetailsByRookieDraftYearPathParams, _super);
     function PlayerDetailsByRookieDraftYearPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayerDetailsByRookieDraftYearPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], PlayerDetailsByRookieDraftYearPathParams.prototype, "season", void 0);
     return PlayerDetailsByRookieDraftYearPathParams;
-}(SpeakeasyBase));
-export { PlayerDetailsByRookieDraftYearPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayerDetailsByRookieDraftYearPathParams = PlayerDetailsByRookieDraftYearPathParams;
 var PlayerDetailsByRookieDraftYearRequest = /** @class */ (function (_super) {
     __extends(PlayerDetailsByRookieDraftYearRequest, _super);
     function PlayerDetailsByRookieDraftYearRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayerDetailsByRookieDraftYearPathParams)
     ], PlayerDetailsByRookieDraftYearRequest.prototype, "pathParams", void 0);
     return PlayerDetailsByRookieDraftYearRequest;
-}(SpeakeasyBase));
-export { PlayerDetailsByRookieDraftYearRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayerDetailsByRookieDraftYearRequest = PlayerDetailsByRookieDraftYearRequest;
 var PlayerDetailsByRookieDraftYearResponse = /** @class */ (function (_super) {
     __extends(PlayerDetailsByRookieDraftYearResponse, _super);
     function PlayerDetailsByRookieDraftYearResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayerDetailsByRookieDraftYearResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayerDetailsByRookieDraftYearResponse.prototype, "players", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayerDetailsByRookieDraftYearResponse.prototype, "statusCode", void 0);
     return PlayerDetailsByRookieDraftYearResponse;
-}(SpeakeasyBase));
-export { PlayerDetailsByRookieDraftYearResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerDetailsByRookieDraftYearResponse = PlayerDetailsByRookieDraftYearResponse;

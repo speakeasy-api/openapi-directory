@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EnvironmentLifecycleStatusEnum } from "./environmentlifecyclestatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentLifecycle = void 0;
+var utils_1 = require("../../../internal/utils");
+var environmentlifecyclestatusenum_1 = require("./environmentlifecyclestatusenum");
 // EnvironmentLifecycle
 /**
  * Information about the current creation or deletion lifecycle state of an Cloud9 development environment.
@@ -34,17 +37,17 @@ var EnvironmentLifecycle = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureResource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureResource" }),
         __metadata("design:type", String)
     ], EnvironmentLifecycle.prototype, "failureResource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], EnvironmentLifecycle.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], EnvironmentLifecycle.prototype, "status", void 0);
     return EnvironmentLifecycle;
-}(SpeakeasyBase));
-export { EnvironmentLifecycle };
+}(utils_1.SpeakeasyBase));
+exports.EnvironmentLifecycle = EnvironmentLifecycle;

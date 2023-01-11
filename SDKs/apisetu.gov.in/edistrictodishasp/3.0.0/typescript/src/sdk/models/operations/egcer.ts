@@ -194,23 +194,23 @@ export class EgcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  egcer400ApplicationJsonObject?: Egcer400ApplicationJson;
+  egcer400ApplicationJSONObject?: Egcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  egcer401ApplicationJsonObject?: Egcer401ApplicationJson;
+  egcer401ApplicationJSONObject?: Egcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  egcer404ApplicationJsonObject?: Egcer404ApplicationJson;
+  egcer404ApplicationJSONObject?: Egcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  egcer500ApplicationJsonObject?: Egcer500ApplicationJson;
+  egcer500ApplicationJSONObject?: Egcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  egcer502ApplicationJsonObject?: Egcer502ApplicationJson;
+  egcer502ApplicationJSONObject?: Egcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  egcer503ApplicationJsonObject?: Egcer503ApplicationJson;
+  egcer503ApplicationJSONObject?: Egcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  egcer504ApplicationJsonObject?: Egcer504ApplicationJson;
+  egcer504ApplicationJSONObject?: Egcer504ApplicationJson;
 }

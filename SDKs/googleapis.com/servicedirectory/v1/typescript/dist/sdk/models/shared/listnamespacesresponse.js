@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Namespace } from "./namespace";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListNamespacesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var namespace_1 = require("./namespace");
 // ListNamespacesResponse
 /**
  * The response message for RegistrationService.ListNamespaces.
@@ -34,13 +37,13 @@ var ListNamespacesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=namespaces", elemType: Namespace }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=namespaces", elemType: namespace_1.Namespace }),
         __metadata("design:type", Array)
     ], ListNamespacesResponse.prototype, "namespaces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListNamespacesResponse.prototype, "nextPageToken", void 0);
     return ListNamespacesResponse;
-}(SpeakeasyBase));
-export { ListNamespacesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListNamespacesResponse = ListNamespacesResponse;

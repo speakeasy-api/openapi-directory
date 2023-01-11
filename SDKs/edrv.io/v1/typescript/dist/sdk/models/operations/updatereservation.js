@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdatereservationResponse = exports.UpdatereservationRequest = exports.Updatereservation201ApplicationJson = exports.UpdatereservationRequestBody = exports.UpdatereservationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdatereservationPathParams = /** @class */ (function (_super) {
     __extends(UpdatereservationPathParams, _super);
     function UpdatereservationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], UpdatereservationPathParams.prototype, "id", void 0);
     return UpdatereservationPathParams;
-}(SpeakeasyBase));
-export { UpdatereservationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdatereservationPathParams = UpdatereservationPathParams;
 var UpdatereservationRequestBody = /** @class */ (function (_super) {
     __extends(UpdatereservationRequestBody, _super);
     function UpdatereservationRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connector" }),
         __metadata("design:type", Number)
     ], UpdatereservationRequestBody.prototype, "connector", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driver" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driver" }),
         __metadata("design:type", String)
     ], UpdatereservationRequestBody.prototype, "driver", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", String)
     ], UpdatereservationRequestBody.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evse" }),
         __metadata("design:type", Number)
     ], UpdatereservationRequestBody.prototype, "evse", void 0);
     return UpdatereservationRequestBody;
-}(SpeakeasyBase));
-export { UpdatereservationRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdatereservationRequestBody = UpdatereservationRequestBody;
 var Updatereservation201ApplicationJson = /** @class */ (function (_super) {
     __extends(Updatereservation201ApplicationJson, _super);
     function Updatereservation201ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], Updatereservation201ApplicationJson.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ok" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ok" }),
         __metadata("design:type", Boolean)
     ], Updatereservation201ApplicationJson.prototype, "ok", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
+        __metadata("design:type", Object)
     ], Updatereservation201ApplicationJson.prototype, "result", void 0);
     return Updatereservation201ApplicationJson;
-}(SpeakeasyBase));
-export { Updatereservation201ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.Updatereservation201ApplicationJson = Updatereservation201ApplicationJson;
 var UpdatereservationRequest = /** @class */ (function (_super) {
     __extends(UpdatereservationRequest, _super);
     function UpdatereservationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdatereservationPathParams)
     ], UpdatereservationRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdatereservationRequestBody)
     ], UpdatereservationRequest.prototype, "request", void 0);
     return UpdatereservationRequest;
-}(SpeakeasyBase));
-export { UpdatereservationRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdatereservationRequest = UpdatereservationRequest;
 var UpdatereservationResponse = /** @class */ (function (_super) {
     __extends(UpdatereservationResponse, _super);
     function UpdatereservationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdatereservationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdatereservationResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Updatereservation201ApplicationJson)
-    ], UpdatereservationResponse.prototype, "updatereservation201ApplicationJsonObject", void 0);
+    ], UpdatereservationResponse.prototype, "updatereservation201ApplicationJSONObject", void 0);
     return UpdatereservationResponse;
-}(SpeakeasyBase));
-export { UpdatereservationResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdatereservationResponse = UpdatereservationResponse;

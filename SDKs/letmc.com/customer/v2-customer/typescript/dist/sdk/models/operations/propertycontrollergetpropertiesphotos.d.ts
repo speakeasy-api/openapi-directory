@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class PropertyControllerGetPropertiesPhotosPathParams extends SpeakeasyBase {
-    propertyId: string;
+    propertyID: string;
     shortName: string;
 }
 export declare class PropertyControllerGetPropertiesPhotosQueryParams extends SpeakeasyBase {

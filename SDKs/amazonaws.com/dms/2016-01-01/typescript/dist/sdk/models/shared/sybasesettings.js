@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SybaseSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 // SybaseSettings
 /**
  * Provides information that defines a SAP ASE endpoint.
@@ -33,33 +36,33 @@ var SybaseSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseName" }),
         __metadata("design:type", String)
     ], SybaseSettings.prototype, "databaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Password" }),
         __metadata("design:type", String)
     ], SybaseSettings.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Port" }),
         __metadata("design:type", Number)
     ], SybaseSettings.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretsManagerAccessRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretsManagerAccessRoleArn" }),
         __metadata("design:type", String)
     ], SybaseSettings.prototype, "secretsManagerAccessRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretsManagerSecretId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretsManagerSecretId" }),
         __metadata("design:type", String)
     ], SybaseSettings.prototype, "secretsManagerSecretId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServerName" }),
         __metadata("design:type", String)
     ], SybaseSettings.prototype, "serverName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Username" }),
         __metadata("design:type", String)
     ], SybaseSettings.prototype, "username", void 0);
     return SybaseSettings;
-}(SpeakeasyBase));
-export { SybaseSettings };
+}(utils_1.SpeakeasyBase));
+exports.SybaseSettings = SybaseSettings;

@@ -5,6 +5,10 @@ import { WorkspaceCompact } from "./workspacecompact";
 
 
 
+// WorkspaceMembershipResponse
+/** 
+ * This object determines if a user is a member of a workspace.
+**/
 export class WorkspaceMembershipResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=gid" })
   gid?: string;

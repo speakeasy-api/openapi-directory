@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportingInstruction = exports.ReportingInstructionReportingInstruction = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReportingInstructionReportingInstruction = /** @class */ (function (_super) {
     __extends(ReportingInstructionReportingInstruction, _super);
     function ReportingInstructionReportingInstruction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndDate" }),
         __metadata("design:type", Date)
     ], ReportingInstructionReportingInstruction.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartDate" }),
         __metadata("design:type", Date)
     ], ReportingInstructionReportingInstruction.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxMonth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxMonth" }),
         __metadata("design:type", Number)
     ], ReportingInstructionReportingInstruction.prototype, "taxMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxYear" }),
         __metadata("design:type", Number)
     ], ReportingInstructionReportingInstruction.prototype, "taxYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Value" }),
         __metadata("design:type", Number)
     ], ReportingInstructionReportingInstruction.prototype, "value", void 0);
     return ReportingInstructionReportingInstruction;
-}(SpeakeasyBase));
-export { ReportingInstructionReportingInstruction };
+}(utils_1.SpeakeasyBase));
+exports.ReportingInstructionReportingInstruction = ReportingInstructionReportingInstruction;
 var ReportingInstruction = /** @class */ (function (_super) {
     __extends(ReportingInstruction, _super);
     function ReportingInstruction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReportingInstruction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReportingInstruction" }),
         __metadata("design:type", ReportingInstructionReportingInstruction)
     ], ReportingInstruction.prototype, "reportingInstruction", void 0);
     return ReportingInstruction;
-}(SpeakeasyBase));
-export { ReportingInstruction };
+}(utils_1.SpeakeasyBase));
+exports.ReportingInstruction = ReportingInstruction;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Webhook } from "./webhook";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebhooksResponse = exports.WebhooksResponsePagination = exports.WebhooksResponseError = void 0;
+var utils_1 = require("../../../internal/utils");
+var webhook_1 = require("./webhook");
 var WebhooksResponseError = /** @class */ (function (_super) {
     __extends(WebhooksResponseError, _super);
     function WebhooksResponseError() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], WebhooksResponseError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], WebhooksResponseError.prototype, "message", void 0);
     return WebhooksResponseError;
-}(SpeakeasyBase));
-export { WebhooksResponseError };
+}(utils_1.SpeakeasyBase));
+exports.WebhooksResponseError = WebhooksResponseError;
 var WebhooksResponsePagination = /** @class */ (function (_super) {
     __extends(WebhooksResponsePagination, _super);
     function WebhooksResponsePagination() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], WebhooksResponsePagination.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], WebhooksResponsePagination.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCount" }),
         __metadata("design:type", Number)
     ], WebhooksResponsePagination.prototype, "totalCount", void 0);
     return WebhooksResponsePagination;
-}(SpeakeasyBase));
-export { WebhooksResponsePagination };
+}(utils_1.SpeakeasyBase));
+exports.WebhooksResponsePagination = WebhooksResponsePagination;
 var WebhooksResponse = /** @class */ (function (_super) {
     __extends(WebhooksResponse, _super);
     function WebhooksResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: Webhook }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: webhook_1.Webhook }),
         __metadata("design:type", Array)
     ], WebhooksResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", WebhooksResponseError)
     ], WebhooksResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
         __metadata("design:type", WebhooksResponsePagination)
     ], WebhooksResponse.prototype, "pagination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], WebhooksResponse.prototype, "success", void 0);
     return WebhooksResponse;
-}(SpeakeasyBase));
-export { WebhooksResponse };
+}(utils_1.SpeakeasyBase));
+exports.WebhooksResponse = WebhooksResponse;

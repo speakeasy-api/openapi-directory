@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MoreHoursType } from "./morehourstype";
-import { ServiceType } from "./servicetype";
-// CategoryInput
-/**
- * A category describing what this business is (not what it does). For a list of valid category IDs, and the mappings to their human-readable names, see `categories.list`.
-**/
-var CategoryInput = /** @class */ (function (_super) {
-    __extends(CategoryInput, _super);
-    function CategoryInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], CategoryInput.prototype, "name", void 0);
-    return CategoryInput;
-}(SpeakeasyBase));
-export { CategoryInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CategoryInput = exports.Category = void 0;
+var utils_1 = require("../../../internal/utils");
+var morehourstype_1 = require("./morehourstype");
+var servicetype_1 = require("./servicetype");
 // Category
 /**
  * A category describing what this business is (not what it does). For a list of valid category IDs, and the mappings to their human-readable names, see `categories.list`.
@@ -51,21 +38,37 @@ var Category = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Category.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=moreHoursTypes", elemType: MoreHoursType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=moreHoursTypes", elemType: morehourstype_1.MoreHoursType }),
         __metadata("design:type", Array)
     ], Category.prototype, "moreHoursTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Category.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceTypes", elemType: ServiceType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceTypes", elemType: servicetype_1.ServiceType }),
         __metadata("design:type", Array)
     ], Category.prototype, "serviceTypes", void 0);
     return Category;
-}(SpeakeasyBase));
-export { Category };
+}(utils_1.SpeakeasyBase));
+exports.Category = Category;
+// CategoryInput
+/**
+ * A category describing what this business is (not what it does). For a list of valid category IDs, and the mappings to their human-readable names, see `categories.list`.
+**/
+var CategoryInput = /** @class */ (function (_super) {
+    __extends(CategoryInput, _super);
+    function CategoryInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], CategoryInput.prototype, "name", void 0);
+    return CategoryInput;
+}(utils_1.SpeakeasyBase));
+exports.CategoryInput = CategoryInput;

@@ -47,10 +47,10 @@ export class PostTextRequestBody extends SpeakeasyBase {
   inputText: string;
 
   @SpeakeasyMetadata({ data: "json, name=requestAttributes" })
-  requestAttributes?: Map<string, string>;
+  requestAttributes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=sessionAttributes" })
-  sessionAttributes?: Map<string, string>;
+  sessionAttributes?: Record<string, string>;
 }
 
 

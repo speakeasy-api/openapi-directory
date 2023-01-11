@@ -9,5 +9,5 @@ export declare class GetNetworkApplianceStaticRouteRequest extends SpeakeasyBase
 export declare class GetNetworkApplianceStaticRouteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkApplianceStaticRoute200ApplicationJsonObject?: Map<string, any>;
+    getNetworkApplianceStaticRoute200ApplicationJSONObject?: Record<string, any>;
 }

@@ -79,5 +79,5 @@ export class CreateScriptTagResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createScriptTag200ApplicationJsonObject?: CreateScriptTag200ApplicationJson;
+  createScriptTag200ApplicationJSONObject?: CreateScriptTag200ApplicationJson;
 }

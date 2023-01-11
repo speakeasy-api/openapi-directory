@@ -22,5 +22,5 @@ export class GetOrganizationApplianceSecurityIntrusionResponse extends Speakeasy
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationApplianceSecurityIntrusion200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationApplianceSecurityIntrusion200ApplicationJSONObject?: Record<string, any>;
 }

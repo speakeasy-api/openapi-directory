@@ -36,6 +36,6 @@ export declare class CloudtraceProjectsTracesBatchWriteRequest extends Speakeasy
 }
 export declare class CloudtraceProjectsTracesBatchWriteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

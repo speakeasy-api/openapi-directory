@@ -21,9 +21,9 @@ export declare class GetSearchParametersForADocumentIdRequest extends SpeakeasyB
 }
 export declare class GetSearchParametersForADocumentIdResponse extends SpeakeasyBase {
     contentType: string;
-    getSearchParametersForADocumentId400ApplicationJsonObject?: GetSearchParametersForADocumentId400ApplicationJson;
-    getSearchParametersForADocumentId401ApplicationJsonObject?: GetSearchParametersForADocumentId401ApplicationJson;
-    getSearchParametersForADocumentId500ApplicationJsonObject?: GetSearchParametersForADocumentId500ApplicationJson;
+    getSearchParametersForADocumentId400ApplicationJSONObject?: GetSearchParametersForADocumentId400ApplicationJson;
+    getSearchParametersForADocumentId401ApplicationJSONObject?: GetSearchParametersForADocumentId401ApplicationJson;
+    getSearchParametersForADocumentId500ApplicationJSONObject?: GetSearchParametersForADocumentId500ApplicationJson;
     searchParametersResponse?: shared.SearchParametersResponse[];
     statusCode: number;
 }

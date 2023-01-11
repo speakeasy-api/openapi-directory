@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { SearchResultTextMatches } from "./searchresulttextmatches";
+/**
+ * License Simple
+**/
 export declare class RepoSearchResultItemLicenseSimple extends SpeakeasyBase {
     htmlUrl?: string;
     key: string;
@@ -8,6 +11,9 @@ export declare class RepoSearchResultItemLicenseSimple extends SpeakeasyBase {
     spdxId: string;
     url: string;
 }
+/**
+ * Simple User
+**/
 export declare class RepoSearchResultItemSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

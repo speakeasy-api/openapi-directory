@@ -1,11 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbParameterGroupStatus } from "./dbparametergroupstatus";
-import { DbSecurityGroupMembership } from "./dbsecuritygroupmembership";
+import { DbParameterGroupStatusList } from "./dbparametergroupstatuslist";
+import { DbSecurityGroupMembershipList } from "./dbsecuritygroupmembershiplist";
 import { DbSubnetGroup } from "./dbsubnetgroup";
 import { Endpoint } from "./endpoint";
 import { OptionGroupMembership } from "./optiongroupmembership";
 import { PendingModifiedValues } from "./pendingmodifiedvalues";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 
 
 
@@ -37,11 +37,11 @@ export class DbInstance extends SpeakeasyBase {
   @SpeakeasyMetadata()
   dbName?: string;
 
-  @SpeakeasyMetadata({ elemType: DbParameterGroupStatus })
-  dbParameterGroups?: DbParameterGroupStatus[];
+  @SpeakeasyMetadata({ elemType: DbParameterGroupStatusList })
+  dbParameterGroups?: DbParameterGroupStatusList[];
 
-  @SpeakeasyMetadata({ elemType: DbSecurityGroupMembership })
-  dbSecurityGroups?: DbSecurityGroupMembership[];
+  @SpeakeasyMetadata({ elemType: DbSecurityGroupMembershipList })
+  dbSecurityGroups?: DbSecurityGroupMembershipList[];
 
   @SpeakeasyMetadata()
   dbSubnetGroup?: DbSubnetGroup;
@@ -71,7 +71,7 @@ export class DbInstance extends SpeakeasyBase {
   masterUsername?: string;
 
   @SpeakeasyMetadata()
-  multiAz?: boolean;
+  multiAZ?: boolean;
 
   @SpeakeasyMetadata()
   optionGroupMembership?: OptionGroupMembership;
@@ -89,14 +89,14 @@ export class DbInstance extends SpeakeasyBase {
   publiclyAccessible?: boolean;
 
   @SpeakeasyMetadata()
-  readReplicaDbInstanceIdentifiers?: string[];
+  readReplicaDBInstanceIdentifiers?: Record<string, any>[];
 
   @SpeakeasyMetadata()
-  readReplicaSourceDbInstanceIdentifier?: string;
+  readReplicaSourceDBInstanceIdentifier?: string;
 
   @SpeakeasyMetadata()
   secondaryAvailabilityZone?: string;
 
-  @SpeakeasyMetadata({ elemType: VpcSecurityGroupMembership })
-  vpcSecurityGroups?: VpcSecurityGroupMembership[];
+  @SpeakeasyMetadata({ elemType: VpcSecurityGroupMembershipList })
+  vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

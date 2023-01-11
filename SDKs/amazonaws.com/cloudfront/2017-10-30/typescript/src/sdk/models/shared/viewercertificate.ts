@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CertificateSourceEnum } from "./certificatesourceenum";
 import { MinimumProtocolVersionEnum } from "./minimumprotocolversionenum";
 import { SslSupportMethodEnum } from "./sslsupportmethodenum";
 
@@ -14,10 +13,10 @@ export class ViewerCertificate extends SpeakeasyBase {
   acmCertificateArn?: string;
 
   @SpeakeasyMetadata()
-  certificate?: string;
+  certificate?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  certificateSource?: CertificateSourceEnum;
+  certificateSource?: Record<string, any>;
 
   @SpeakeasyMetadata()
   cloudFrontDefaultCertificate?: boolean;

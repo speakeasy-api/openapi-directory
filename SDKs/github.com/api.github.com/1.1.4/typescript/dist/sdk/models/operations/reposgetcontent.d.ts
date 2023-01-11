@@ -17,5 +17,5 @@ export declare class ReposGetContentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    reposGetContent200ApplicationJsonOneOf?: any;
+    reposGetContent200ApplicationJSONOneOf?: any;
 }

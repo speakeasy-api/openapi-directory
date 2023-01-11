@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PostEventsV3SendRequest, PostEventsV3SendResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,16 +33,16 @@ const req: PostEventsV3SendRequest = {
     },
   },
   request: {
-    email: "eius",
-    eventName: "sunt",
-    objectId: "architecto",
-    occurredAt: "1999-06-08T11:48:10Z",
+    email: "sit",
+    eventName: "voluptas",
+    objectId: "culpa",
+    occurredAt: "2019-04-21T07:38:14Z",
     properties: {
-      "aut": "provident",
-      "a": "unde",
-      "fugit": "voluptas",
+      "dolor": "expedita",
+      "voluptas": "fugit",
+      "et": "nihil",
     },
-    utk: "esse",
+    utk: "rerum",
   },
 };
 

@@ -9,5 +9,5 @@ export declare class ProtocolMqttClientUnsubscribeRequest extends SpeakeasyBase 
 export declare class ProtocolMqttClientUnsubscribeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolMqttClientUnsubscribe200ApplicationJsonString?: string;
+    protocolMqttClientUnsubscribe200ApplicationJSONString?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicationDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 // ReplicationDetails
 /**
  * Provides information about settings that define whether one or more objects in an S3 bucket are replicated to S3 buckets for other Amazon Web Services accounts and, if so, which accounts.
@@ -33,17 +36,17 @@ var ReplicationDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicated" }),
         __metadata("design:type", Boolean)
     ], ReplicationDetails.prototype, "replicated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicatedExternally" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicatedExternally" }),
         __metadata("design:type", Boolean)
     ], ReplicationDetails.prototype, "replicatedExternally", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicationAccounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicationAccounts" }),
         __metadata("design:type", Array)
     ], ReplicationDetails.prototype, "replicationAccounts", void 0);
     return ReplicationDetails;
-}(SpeakeasyBase));
-export { ReplicationDetails };
+}(utils_1.SpeakeasyBase));
+exports.ReplicationDetails = ReplicationDetails;

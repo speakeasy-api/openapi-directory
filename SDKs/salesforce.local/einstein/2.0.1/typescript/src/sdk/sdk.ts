@@ -14,34 +14,23 @@ import { VisionModels } from "./visionmodels";
 import { VisionPrediction } from "./visionprediction";
 import { VisionTraining } from "./visiontraining";
 
-type OptsFunc = (sdk: SDK) => void;
 
 export const ServerList = [
 	"http://salesforce.local",
 ] as const;
 
-export function WithServerURL(
-  serverURL: string,
-  params?: Map<string, string>
-): OptsFunc {
-  return (sdk: SDK) => {
-    if (params != null) {
-      serverURL = utils.ReplaceParameters(serverURL, params);
-    }
-    sdk._serverURL = serverURL;
-  };
-}
 
-export function WithClient(client: AxiosInstance): OptsFunc {
-  return (sdk: SDK) => {
-    sdk._defaultClient = client;
-  };
+
+export type SDKProps = {
+  defaultClient?: AxiosInstance;
+
+  serverUrl?: string;
 }
 
 /* SDK Documentation: https://metamind.readme.io - For more information, see the Einstein Platform Services Developer Guide*/
 export class SDK {
   public authorization: Authorization;
-  public checkApiUsage: CheckApiUsage;
+  public checkAPIUsage: CheckApiUsage;
   public languageDatasets: LanguageDatasets;
   public languageExamples: LanguageExamples;
   public languageModels: LanguageModels;
@@ -55,25 +44,16 @@ export class SDK {
 
   public _defaultClient: AxiosInstance;
   public _securityClient: AxiosInstance;
-  
   public _serverURL: string;
   private _language = "typescript";
   private _sdkVersion = "0.0.1";
   private _genVersion = "internal";
 
-  constructor(...opts: OptsFunc[]) {
-    opts.forEach((o) => o(this));
-    if (this._serverURL == "") {
-      this._serverURL = ServerList[0];
-    }
+  constructor(props: SDKProps) {
+    this._serverURL = props.serverUrl ?? ServerList[0];
 
-    if (!this._defaultClient) {
-      this._defaultClient = axios.create({ baseURL: this._serverURL });
-    }
-
-    if (!this._securityClient) {
-      this._securityClient = this._defaultClient;
-    }
+    this._defaultClient = props.defaultClient ?? axios.create({ baseURL: this._serverURL });
+    this._securityClient = this._defaultClient;
     
     this.authorization = new Authorization(
       this._defaultClient,
@@ -84,7 +64,7 @@ export class SDK {
       this._genVersion
     );
     
-    this.checkApiUsage = new CheckApiUsage(
+    this.checkAPIUsage = new CheckApiUsage(
       this._defaultClient,
       this._securityClient,
       this._serverURL,

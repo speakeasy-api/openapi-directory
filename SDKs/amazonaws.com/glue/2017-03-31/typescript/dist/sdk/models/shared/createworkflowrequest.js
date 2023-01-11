@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateWorkflowRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateWorkflowRequest = /** @class */ (function (_super) {
     __extends(CreateWorkflowRequest, _super);
     function CreateWorkflowRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DefaultRunProperties" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DefaultRunProperties" }),
+        __metadata("design:type", Object)
     ], CreateWorkflowRequest.prototype, "defaultRunProperties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], CreateWorkflowRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxConcurrentRuns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxConcurrentRuns" }),
         __metadata("design:type", Number)
     ], CreateWorkflowRequest.prototype, "maxConcurrentRuns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], CreateWorkflowRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags" }),
+        __metadata("design:type", Object)
     ], CreateWorkflowRequest.prototype, "tags", void 0);
     return CreateWorkflowRequest;
-}(SpeakeasyBase));
-export { CreateWorkflowRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateWorkflowRequest = CreateWorkflowRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSetupV1ResourcesIdAllocationsResponse = exports.GetSetupV1ResourcesIdAllocationsRequest = exports.GetSetupV1ResourcesIdAllocationsQueryParams = exports.GetSetupV1ResourcesIdAllocationsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSetupV1ResourcesIdAllocationsPathParams = /** @class */ (function (_super) {
     __extends(GetSetupV1ResourcesIdAllocationsPathParams, _super);
     function GetSetupV1ResourcesIdAllocationsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetSetupV1ResourcesIdAllocationsPathParams.prototype, "id", void 0);
     return GetSetupV1ResourcesIdAllocationsPathParams;
-}(SpeakeasyBase));
-export { GetSetupV1ResourcesIdAllocationsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1ResourcesIdAllocationsPathParams = GetSetupV1ResourcesIdAllocationsPathParams;
 var GetSetupV1ResourcesIdAllocationsQueryParams = /** @class */ (function (_super) {
     __extends(GetSetupV1ResourcesIdAllocationsQueryParams, _super);
     function GetSetupV1ResourcesIdAllocationsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endDate" }),
         __metadata("design:type", Date)
     ], GetSetupV1ResourcesIdAllocationsQueryParams.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetSetupV1ResourcesIdAllocationsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], GetSetupV1ResourcesIdAllocationsQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startDate" }),
         __metadata("design:type", Date)
     ], GetSetupV1ResourcesIdAllocationsQueryParams.prototype, "startDate", void 0);
     return GetSetupV1ResourcesIdAllocationsQueryParams;
-}(SpeakeasyBase));
-export { GetSetupV1ResourcesIdAllocationsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1ResourcesIdAllocationsQueryParams = GetSetupV1ResourcesIdAllocationsQueryParams;
 var GetSetupV1ResourcesIdAllocationsRequest = /** @class */ (function (_super) {
     __extends(GetSetupV1ResourcesIdAllocationsRequest, _super);
     function GetSetupV1ResourcesIdAllocationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetupV1ResourcesIdAllocationsPathParams)
     ], GetSetupV1ResourcesIdAllocationsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetupV1ResourcesIdAllocationsQueryParams)
     ], GetSetupV1ResourcesIdAllocationsRequest.prototype, "queryParams", void 0);
     return GetSetupV1ResourcesIdAllocationsRequest;
-}(SpeakeasyBase));
-export { GetSetupV1ResourcesIdAllocationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1ResourcesIdAllocationsRequest = GetSetupV1ResourcesIdAllocationsRequest;
 var GetSetupV1ResourcesIdAllocationsResponse = /** @class */ (function (_super) {
     __extends(GetSetupV1ResourcesIdAllocationsResponse, _super);
     function GetSetupV1ResourcesIdAllocationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSetupV1ResourcesIdAllocationsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetSetupV1ResourcesIdAllocationsResponse.prototype, "resourceAllocationListViewModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSetupV1ResourcesIdAllocationsResponse.prototype, "statusCode", void 0);
     return GetSetupV1ResourcesIdAllocationsResponse;
-}(SpeakeasyBase));
-export { GetSetupV1ResourcesIdAllocationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1ResourcesIdAllocationsResponse = GetSetupV1ResourcesIdAllocationsResponse;

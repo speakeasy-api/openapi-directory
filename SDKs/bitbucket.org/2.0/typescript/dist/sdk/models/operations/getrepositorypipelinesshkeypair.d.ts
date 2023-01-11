@@ -9,6 +9,6 @@ export declare class GetRepositoryPipelineSshKeyPairRequest extends SpeakeasyBas
 export declare class GetRepositoryPipelineSshKeyPairResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pipelineSshKeyPair?: Map<string, any>;
+    error?: Record<string, any>;
+    pipelineSshKeyPair?: Record<string, any>;
 }

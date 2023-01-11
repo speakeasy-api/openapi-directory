@@ -4,9 +4,9 @@ import { HeavyEquipmentsBaseListing } from "./heavyequipmentsbaselisting";
  * Heavy Equipments search query response
 **/
 export declare class HeavyEquipmentsSearchResponse extends SpeakeasyBase {
-    facets?: Map<string, any>;
+    facets?: Record<string, any>;
     listings?: HeavyEquipmentsBaseListing[];
     numFound?: number;
-    rangeFacets?: Map<string, any>;
-    stats?: Map<string, any>;
+    rangeFacets?: Record<string, any>;
+    stats?: Record<string, any>;
 }

@@ -11,7 +11,7 @@ export declare class CreateTriggerRequest extends SpeakeasyBase {
     predicate?: Predicate;
     schedule?: string;
     startOnCreation?: boolean;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     type: TriggerTypeEnum;
     workflowName?: string;
 }

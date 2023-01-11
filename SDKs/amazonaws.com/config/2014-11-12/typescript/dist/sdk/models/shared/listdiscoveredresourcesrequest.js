@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceTypeEnum } from "./resourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListDiscoveredResourcesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcetypeenum_1 = require("./resourcetypeenum");
 // ListDiscoveredResourcesRequest
 /**
  * <p/>
@@ -34,29 +37,29 @@ var ListDiscoveredResourcesRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeDeletedResources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeDeletedResources" }),
         __metadata("design:type", Boolean)
     ], ListDiscoveredResourcesRequest.prototype, "includeDeletedResources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], ListDiscoveredResourcesRequest.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListDiscoveredResourcesRequest.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceIds" }),
         __metadata("design:type", Array)
     ], ListDiscoveredResourcesRequest.prototype, "resourceIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceName" }),
         __metadata("design:type", String)
     ], ListDiscoveredResourcesRequest.prototype, "resourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], ListDiscoveredResourcesRequest.prototype, "resourceType", void 0);
     return ListDiscoveredResourcesRequest;
-}(SpeakeasyBase));
-export { ListDiscoveredResourcesRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListDiscoveredResourcesRequest = ListDiscoveredResourcesRequest;

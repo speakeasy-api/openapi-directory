@@ -5,10 +5,6 @@ import { ColorStyle } from "./colorstyle";
 
 
 
-// FilterCriteria
-/** 
- * Criteria for showing/hiding rows in a filter or filter view.
-**/
 export class FilterCriteria extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=condition" })
   condition?: BooleanCondition;

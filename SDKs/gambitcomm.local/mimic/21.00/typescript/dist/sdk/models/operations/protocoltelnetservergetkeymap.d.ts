@@ -8,5 +8,5 @@ export declare class ProtocolTelnetServerGetKeymapRequest extends SpeakeasyBase 
 export declare class ProtocolTelnetServerGetKeymapResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolTelnetServerGetKeymap200ApplicationJsonStrings?: string[];
+    protocolTelnetServerGetKeymap200ApplicationJSONStrings?: string[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1IngestConversationsRequestConversationConfig } from "./googlecloudcontactcenterinsightsv1ingestconversationsrequestconversationconfig";
-import { GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource } from "./googlecloudcontactcenterinsightsv1ingestconversationsrequestgcssource";
-import { GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfig } from "./googlecloudcontactcenterinsightsv1ingestconversationsrequesttranscriptobjectconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1IngestConversationsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1ingestconversationsrequestconversationconfig_1 = require("./googlecloudcontactcenterinsightsv1ingestconversationsrequestconversationconfig");
+var googlecloudcontactcenterinsightsv1ingestconversationsrequestgcssource_1 = require("./googlecloudcontactcenterinsightsv1ingestconversationsrequestgcssource");
+var googlecloudcontactcenterinsightsv1ingestconversationsrequesttranscriptobjectconfig_1 = require("./googlecloudcontactcenterinsightsv1ingestconversationsrequesttranscriptobjectconfig");
 // GoogleCloudContactcenterinsightsV1IngestConversationsRequest
 /**
  * The request to ingest conversations.
@@ -36,21 +39,21 @@ var GoogleCloudContactcenterinsightsV1IngestConversationsRequest = /** @class */
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conversationConfig" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1IngestConversationsRequestConversationConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conversationConfig" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1ingestconversationsrequestconversationconfig_1.GoogleCloudContactcenterinsightsV1IngestConversationsRequestConversationConfig)
     ], GoogleCloudContactcenterinsightsV1IngestConversationsRequest.prototype, "conversationConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcsSource" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcsSource" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1ingestconversationsrequestgcssource_1.GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource)
     ], GoogleCloudContactcenterinsightsV1IngestConversationsRequest.prototype, "gcsSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1IngestConversationsRequest.prototype, "parent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transcriptObjectConfig" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transcriptObjectConfig" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1ingestconversationsrequesttranscriptobjectconfig_1.GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfig)
     ], GoogleCloudContactcenterinsightsV1IngestConversationsRequest.prototype, "transcriptObjectConfig", void 0);
     return GoogleCloudContactcenterinsightsV1IngestConversationsRequest;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1IngestConversationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1IngestConversationsRequest = GoogleCloudContactcenterinsightsV1IngestConversationsRequest;

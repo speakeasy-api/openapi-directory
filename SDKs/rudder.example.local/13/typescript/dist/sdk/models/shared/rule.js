@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleTargets } from "./ruletargets";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Rule = exports.RuleTags = void 0;
+var utils_1 = require("../../../internal/utils");
+var ruletargets_1 = require("./ruletargets");
 var RuleTags = /** @class */ (function (_super) {
     __extends(RuleTags, _super);
     function RuleTags() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RuleTags.prototype, "name", void 0);
     return RuleTags;
-}(SpeakeasyBase));
-export { RuleTags };
+}(utils_1.SpeakeasyBase));
+exports.RuleTags = RuleTags;
 var Rule = /** @class */ (function (_super) {
     __extends(Rule, _super);
     function Rule() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directives" }),
         __metadata("design:type", Array)
     ], Rule.prototype, "directives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Rule.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], Rule.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Rule.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longDescription" }),
         __metadata("design:type", String)
     ], Rule.prototype, "longDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shortDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shortDescription" }),
         __metadata("design:type", String)
     ], Rule.prototype, "shortDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=system" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=system" }),
         __metadata("design:type", Boolean)
     ], Rule.prototype, "system", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: RuleTags }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: RuleTags }),
         __metadata("design:type", Array)
     ], Rule.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targets", elemType: RuleTargets }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targets", elemType: ruletargets_1.RuleTargets }),
         __metadata("design:type", Array)
     ], Rule.prototype, "targets", void 0);
     return Rule;
-}(SpeakeasyBase));
-export { Rule };
+}(utils_1.SpeakeasyBase));
+exports.Rule = Rule;

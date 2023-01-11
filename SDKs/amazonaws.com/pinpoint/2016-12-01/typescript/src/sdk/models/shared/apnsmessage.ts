@@ -27,7 +27,7 @@ export class ApnsMessage extends SpeakeasyBase {
   collapseId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Data" })
-  data?: Map<string, string>;
+  data?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=MediaUrl" })
   mediaUrl?: string;
@@ -48,7 +48,7 @@ export class ApnsMessage extends SpeakeasyBase {
   sound?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Substitutions" })
-  substitutions?: Map<string, string[]>;
+  substitutions?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=ThreadId" })
   threadId?: string;

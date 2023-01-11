@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IamInstanceProfileAssociation } from "./iaminstanceprofileassociation";
 
 
 
 export class DescribeIamInstanceProfileAssociationsResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: IamInstanceProfileAssociation })
-  iamInstanceProfileAssociations?: IamInstanceProfileAssociation[];
+  @SpeakeasyMetadata()
+  iamInstanceProfileAssociations?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 }

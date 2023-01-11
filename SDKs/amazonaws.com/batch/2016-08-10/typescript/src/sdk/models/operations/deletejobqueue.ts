@@ -49,7 +49,7 @@ export class DeleteJobQueueResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteJobQueueResponse?: Map<string, any>;
+  deleteJobQueueResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   serverException?: any;

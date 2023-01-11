@@ -3,7 +3,8 @@ export declare enum CategoryGoalTypeEnum {
     Tb = "TB",
     Tbd = "TBD",
     Mf = "MF",
-    Need = "NEED"
+    Need = "NEED",
+    Null = "null"
 }
 export declare class Category extends SpeakeasyBase {
     activity: number;

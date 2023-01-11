@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.User = void 0;
+var utils_1 = require("../../../internal/utils");
 var User = /** @class */ (function (_super) {
     __extends(User, _super);
     function User() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=admin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=admin" }),
         __metadata("design:type", Boolean)
     ], User.prototype, "admin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=all_emails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=all_emails" }),
         __metadata("design:type", Array)
     ], User.prototype, "allEmails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analytics_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analytics_id" }),
         __metadata("design:type", String)
     ], User.prototype, "analyticsId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=avatar_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=avatar_url" }),
         __metadata("design:type", String)
     ], User.prototype, "avatarUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=basic_email_prefs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=basic_email_prefs" }),
         __metadata("design:type", String)
     ], User.prototype, "basicEmailPrefs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bitbucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bitbucket" }),
         __metadata("design:type", Number)
     ], User.prototype, "bitbucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bitbucket_authorized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bitbucket_authorized" }),
         __metadata("design:type", Boolean)
     ], User.prototype, "bitbucketAuthorized", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containers" }),
         __metadata("design:type", Number)
     ], User.prototype, "containers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], User.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=days_left_in_trial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=days_left_in_trial" }),
         __metadata("design:type", Number)
     ], User.prototype, "daysLeftInTrial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dev_admin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dev_admin" }),
         __metadata("design:type", Boolean)
     ], User.prototype, "devAdmin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enrolled_betas" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enrolled_betas" }),
         __metadata("design:type", Array)
     ], User.prototype, "enrolledBetas", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=github_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=github_id" }),
         __metadata("design:type", Number)
     ], User.prototype, "githubId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=github_oauth_scopes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=github_oauth_scopes" }),
         __metadata("design:type", Array)
     ], User.prototype, "githubOauthScopes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gravatar_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gravatar_id" }),
         __metadata("design:type", Number)
     ], User.prototype, "gravatarId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=heroku_api_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=heroku_api_key" }),
         __metadata("design:type", String)
     ], User.prototype, "herokuApiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=in_beta_program" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=in_beta_program" }),
         __metadata("design:type", Boolean)
     ], User.prototype, "inBetaProgram", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=login" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=login" }),
         __metadata("design:type", String)
     ], User.prototype, "login", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], User.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization_prefs" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization_prefs" }),
+        __metadata("design:type", Object)
     ], User.prototype, "organizationPrefs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parallelism" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parallelism" }),
         __metadata("design:type", Number)
     ], User.prototype, "parallelism", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plan" }),
         __metadata("design:type", String)
     ], User.prototype, "plan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projects" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projects" }),
+        __metadata("design:type", Object)
     ], User.prototype, "projects", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pusher_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pusher_id" }),
         __metadata("design:type", String)
     ], User.prototype, "pusherId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selected_email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selected_email" }),
         __metadata("design:type", String)
     ], User.prototype, "selectedEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sign_in_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sign_in_count" }),
         __metadata("design:type", Number)
     ], User.prototype, "signInCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trial_end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trial_end" }),
         __metadata("design:type", Date)
     ], User.prototype, "trialEnd", void 0);
     return User;
-}(SpeakeasyBase));
-export { User };
+}(utils_1.SpeakeasyBase));
+exports.User = User;

@@ -25,5 +25,5 @@ export class GetOrganizationConfigTemplateSwitchProfilesResponse extends Speakea
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationConfigTemplateSwitchProfiles200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationConfigTemplateSwitchProfiles200ApplicationJSONObject?: Record<string, any>;
 }

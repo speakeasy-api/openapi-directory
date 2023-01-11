@@ -1,4 +1,7 @@
-export var RuleOperatorEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuleOperatorEnum = void 0;
+var RuleOperatorEnum;
 (function (RuleOperatorEnum) {
     RuleOperatorEnum["Equals"] = "EQUALS";
     RuleOperatorEnum["LessThan"] = "LESS_THAN";
@@ -8,4 +11,4 @@ export var RuleOperatorEnum;
     RuleOperatorEnum["In"] = "IN";
     RuleOperatorEnum["NotIn"] = "NOT_IN";
     RuleOperatorEnum["Contains"] = "CONTAINS";
-})(RuleOperatorEnum || (RuleOperatorEnum = {}));
+})(RuleOperatorEnum = exports.RuleOperatorEnum || (exports.RuleOperatorEnum = {}));

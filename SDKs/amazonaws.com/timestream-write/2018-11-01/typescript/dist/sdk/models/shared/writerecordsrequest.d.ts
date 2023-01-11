@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Record } from "./record";
+import { RecordT } from "./record";
 export declare class WriteRecordsRequest extends SpeakeasyBase {
-    commonAttributes?: Record;
+    commonAttributes?: RecordT;
     databaseName: string;
-    records: Record[];
+    records: RecordT[];
     tableName: string;
 }

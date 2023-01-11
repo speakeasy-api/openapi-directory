@@ -55,7 +55,7 @@ export class DeleteDashboardResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteDashboardResponse?: Map<string, any>;
+  deleteDashboardResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalFailureException?: any;

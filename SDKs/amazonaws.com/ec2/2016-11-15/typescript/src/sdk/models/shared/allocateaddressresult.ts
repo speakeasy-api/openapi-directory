@@ -1,30 +1,29 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DomainTypeEnum } from "./domaintypeenum";
 
 
 
 export class AllocateAddressResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  allocationId?: string;
+  allocationId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  carrierIp?: string;
+  carrierIp?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  customerOwnedIp?: string;
+  customerOwnedIp?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  customerOwnedIpv4Pool?: string;
+  customerOwnedIpv4Pool?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  domain?: DomainTypeEnum;
+  domain?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  networkBorderGroup?: string;
+  networkBorderGroup?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  publicIp?: string;
+  publicIp?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  publicIpv4Pool?: string;
+  publicIpv4Pool?: Record<string, any>;
 }

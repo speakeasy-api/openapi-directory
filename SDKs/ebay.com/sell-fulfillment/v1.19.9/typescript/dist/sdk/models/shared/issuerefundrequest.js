@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimpleAmount } from "./simpleamount";
-import { RefundItem } from "./refunditem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IssueRefundRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var simpleamount_1 = require("./simpleamount");
+var refunditem_1 = require("./refunditem");
 // IssueRefundRequest
 /**
  * The base type used by the request payload of the issueRefund method.
@@ -35,21 +38,21 @@ var IssueRefundRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment" }),
         __metadata("design:type", String)
     ], IssueRefundRequest.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderLevelRefundAmount" }),
-        __metadata("design:type", SimpleAmount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderLevelRefundAmount" }),
+        __metadata("design:type", simpleamount_1.SimpleAmount)
     ], IssueRefundRequest.prototype, "orderLevelRefundAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasonForRefund" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasonForRefund" }),
         __metadata("design:type", String)
     ], IssueRefundRequest.prototype, "reasonForRefund", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refundItems", elemType: RefundItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refundItems", elemType: refunditem_1.RefundItem }),
         __metadata("design:type", Array)
     ], IssueRefundRequest.prototype, "refundItems", void 0);
     return IssueRefundRequest;
-}(SpeakeasyBase));
-export { IssueRefundRequest };
+}(utils_1.SpeakeasyBase));
+exports.IssueRefundRequest = IssueRefundRequest;

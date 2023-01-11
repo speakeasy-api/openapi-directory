@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AdexchangebuyerAccountsGetRequest, AdexchangebuyerAccountsGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,22 +30,22 @@ const req: AdexchangebuyerAccountsGetRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    id: 7262558848052294337,
+    id: 8717895732742165505,
   },
   queryParams: {
     alt: "json",
-    fields: "illo",
-    key: "quisquam",
-    oauthToken: "assumenda",
+    fields: "culpa",
+    key: "expedita",
+    oauthToken: "consequuntur",
     prettyPrint: false,
-    quotaUser: "sed",
-    userIp: "harum",
+    quotaUser: "expedita",
+    userIp: "voluptas",
   },
 };
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AllowedDomainsSettings } from "./alloweddomainssettings";
-import { CorsSettings } from "./corssettings";
-import { GcipSettings } from "./gcipsettings";
-import { OAuthSettings } from "./oauthsettings";
-import { PolicyDelegationSettings } from "./policydelegationsettings";
-import { ReauthSettings } from "./reauthsettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccessSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var alloweddomainssettings_1 = require("./alloweddomainssettings");
+var corssettings_1 = require("./corssettings");
+var gcipsettings_1 = require("./gcipsettings");
+var oauthsettings_1 = require("./oauthsettings");
+var policydelegationsettings_1 = require("./policydelegationsettings");
+var reauthsettings_1 = require("./reauthsettings");
 // AccessSettings
 /**
  * Access related settings for IAP protected apps.
@@ -39,29 +42,29 @@ var AccessSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedDomainsSettings" }),
-        __metadata("design:type", AllowedDomainsSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedDomainsSettings" }),
+        __metadata("design:type", alloweddomainssettings_1.AllowedDomainsSettings)
     ], AccessSettings.prototype, "allowedDomainsSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=corsSettings" }),
-        __metadata("design:type", CorsSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=corsSettings" }),
+        __metadata("design:type", corssettings_1.CorsSettings)
     ], AccessSettings.prototype, "corsSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcipSettings" }),
-        __metadata("design:type", GcipSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcipSettings" }),
+        __metadata("design:type", gcipsettings_1.GcipSettings)
     ], AccessSettings.prototype, "gcipSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauthSettings" }),
-        __metadata("design:type", OAuthSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauthSettings" }),
+        __metadata("design:type", oauthsettings_1.OAuthSettings)
     ], AccessSettings.prototype, "oauthSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policyDelegationSettings" }),
-        __metadata("design:type", PolicyDelegationSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policyDelegationSettings" }),
+        __metadata("design:type", policydelegationsettings_1.PolicyDelegationSettings)
     ], AccessSettings.prototype, "policyDelegationSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reauthSettings" }),
-        __metadata("design:type", ReauthSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reauthSettings" }),
+        __metadata("design:type", reauthsettings_1.ReauthSettings)
     ], AccessSettings.prototype, "reauthSettings", void 0);
     return AccessSettings;
-}(SpeakeasyBase));
-export { AccessSettings };
+}(utils_1.SpeakeasyBase));
+exports.AccessSettings = AccessSettings;

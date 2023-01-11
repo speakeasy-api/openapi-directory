@@ -23,7 +23,7 @@ export declare class DlpProjectsLocationsJobTriggersActivateSecurity extends Spe
 export declare class DlpProjectsLocationsJobTriggersActivateRequest extends SpeakeasyBase {
     pathParams: DlpProjectsLocationsJobTriggersActivatePathParams;
     queryParams: DlpProjectsLocationsJobTriggersActivateQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: DlpProjectsLocationsJobTriggersActivateSecurity;
 }
 export declare class DlpProjectsLocationsJobTriggersActivateResponse extends SpeakeasyBase {

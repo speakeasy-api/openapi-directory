@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,69 +23,71 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTopExampleResponse = exports.GetTopExampleRequest = exports.GetTopExampleQueryParams = exports.GetTopExampleUseCanonicalEnum = exports.GetTopExamplePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTopExamplePathParams = /** @class */ (function (_super) {
     __extends(GetTopExamplePathParams, _super);
     function GetTopExamplePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=word" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=word" }),
         __metadata("design:type", String)
     ], GetTopExamplePathParams.prototype, "word", void 0);
     return GetTopExamplePathParams;
-}(SpeakeasyBase));
-export { GetTopExamplePathParams };
-export var GetTopExampleUseCanonicalEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetTopExamplePathParams = GetTopExamplePathParams;
+var GetTopExampleUseCanonicalEnum;
 (function (GetTopExampleUseCanonicalEnum) {
     GetTopExampleUseCanonicalEnum["False"] = "false";
     GetTopExampleUseCanonicalEnum["True"] = "true";
-})(GetTopExampleUseCanonicalEnum || (GetTopExampleUseCanonicalEnum = {}));
+})(GetTopExampleUseCanonicalEnum = exports.GetTopExampleUseCanonicalEnum || (exports.GetTopExampleUseCanonicalEnum = {}));
 var GetTopExampleQueryParams = /** @class */ (function (_super) {
     __extends(GetTopExampleQueryParams, _super);
     function GetTopExampleQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=useCanonical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=useCanonical" }),
         __metadata("design:type", String)
     ], GetTopExampleQueryParams.prototype, "useCanonical", void 0);
     return GetTopExampleQueryParams;
-}(SpeakeasyBase));
-export { GetTopExampleQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTopExampleQueryParams = GetTopExampleQueryParams;
 var GetTopExampleRequest = /** @class */ (function (_super) {
     __extends(GetTopExampleRequest, _super);
     function GetTopExampleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTopExamplePathParams)
     ], GetTopExampleRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTopExampleQueryParams)
     ], GetTopExampleRequest.prototype, "queryParams", void 0);
     return GetTopExampleRequest;
-}(SpeakeasyBase));
-export { GetTopExampleRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTopExampleRequest = GetTopExampleRequest;
 var GetTopExampleResponse = /** @class */ (function (_super) {
     __extends(GetTopExampleResponse, _super);
     function GetTopExampleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetTopExampleResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTopExampleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTopExampleResponse.prototype, "statusCode", void 0);
     return GetTopExampleResponse;
-}(SpeakeasyBase));
-export { GetTopExampleResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTopExampleResponse = GetTopExampleResponse;

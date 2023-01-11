@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobListFromJobScheduleResponse = exports.JobListFromJobScheduleRequest = exports.JobListFromJobScheduleHeaders = exports.JobListFromJobScheduleQueryParams = exports.JobListFromJobSchedulePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var JobListFromJobSchedulePathParams = /** @class */ (function (_super) {
     __extends(JobListFromJobSchedulePathParams, _super);
     function JobListFromJobSchedulePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=jobScheduleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=jobScheduleId" }),
         __metadata("design:type", String)
     ], JobListFromJobSchedulePathParams.prototype, "jobScheduleId", void 0);
     return JobListFromJobSchedulePathParams;
-}(SpeakeasyBase));
-export { JobListFromJobSchedulePathParams };
+}(utils_1.SpeakeasyBase));
+exports.JobListFromJobSchedulePathParams = JobListFromJobSchedulePathParams;
 var JobListFromJobScheduleQueryParams = /** @class */ (function (_super) {
     __extends(JobListFromJobScheduleQueryParams, _super);
     function JobListFromJobScheduleQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$expand" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$expand" }),
         __metadata("design:type", String)
     ], JobListFromJobScheduleQueryParams.prototype, "dollarExpand", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$filter" }),
         __metadata("design:type", String)
     ], JobListFromJobScheduleQueryParams.prototype, "dollarFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$select" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$select" }),
         __metadata("design:type", String)
     ], JobListFromJobScheduleQueryParams.prototype, "dollarSelect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], JobListFromJobScheduleQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxresults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxresults" }),
         __metadata("design:type", Number)
     ], JobListFromJobScheduleQueryParams.prototype, "maxresults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], JobListFromJobScheduleQueryParams.prototype, "timeout", void 0);
     return JobListFromJobScheduleQueryParams;
-}(SpeakeasyBase));
-export { JobListFromJobScheduleQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.JobListFromJobScheduleQueryParams = JobListFromJobScheduleQueryParams;
 var JobListFromJobScheduleHeaders = /** @class */ (function (_super) {
     __extends(JobListFromJobScheduleHeaders, _super);
     function JobListFromJobScheduleHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], JobListFromJobScheduleHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], JobListFromJobScheduleHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], JobListFromJobScheduleHeaders.prototype, "returnClientRequestId", void 0);
     return JobListFromJobScheduleHeaders;
-}(SpeakeasyBase));
-export { JobListFromJobScheduleHeaders };
+}(utils_1.SpeakeasyBase));
+exports.JobListFromJobScheduleHeaders = JobListFromJobScheduleHeaders;
 var JobListFromJobScheduleRequest = /** @class */ (function (_super) {
     __extends(JobListFromJobScheduleRequest, _super);
     function JobListFromJobScheduleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JobListFromJobSchedulePathParams)
     ], JobListFromJobScheduleRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JobListFromJobScheduleQueryParams)
     ], JobListFromJobScheduleRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JobListFromJobScheduleHeaders)
     ], JobListFromJobScheduleRequest.prototype, "headers", void 0);
     return JobListFromJobScheduleRequest;
-}(SpeakeasyBase));
-export { JobListFromJobScheduleRequest };
+}(utils_1.SpeakeasyBase));
+exports.JobListFromJobScheduleRequest = JobListFromJobScheduleRequest;
 var JobListFromJobScheduleResponse = /** @class */ (function (_super) {
     __extends(JobListFromJobScheduleResponse, _super);
     function JobListFromJobScheduleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], JobListFromJobScheduleResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], JobListFromJobScheduleResponse.prototype, "cloudJobListResult", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], JobListFromJobScheduleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], JobListFromJobScheduleResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], JobListFromJobScheduleResponse.prototype, "statusCode", void 0);
     return JobListFromJobScheduleResponse;
-}(SpeakeasyBase));
-export { JobListFromJobScheduleResponse };
+}(utils_1.SpeakeasyBase));
+exports.JobListFromJobScheduleResponse = JobListFromJobScheduleResponse;

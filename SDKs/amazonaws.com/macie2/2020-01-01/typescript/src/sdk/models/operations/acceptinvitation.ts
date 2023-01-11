@@ -49,7 +49,7 @@ export class AcceptInvitationRequest extends SpeakeasyBase {
 
 export class AcceptInvitationResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  acceptInvitationResponse?: Map<string, any>;
+  acceptInvitationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   accessDeniedException?: any;

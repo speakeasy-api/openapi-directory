@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Price } from "./price";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PosSale = void 0;
+var utils_1 = require("../../../internal/utils");
+var price_1 = require("./price");
 // PosSale
 /**
  * The change of the available quantity of an item at the given store.
@@ -34,45 +37,45 @@ var PosSale = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentLanguage" }),
         __metadata("design:type", String)
     ], PosSale.prototype, "contentLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gtin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gtin" }),
         __metadata("design:type", String)
     ], PosSale.prototype, "gtin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemId" }),
         __metadata("design:type", String)
     ], PosSale.prototype, "itemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], PosSale.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
+        __metadata("design:type", price_1.Price)
     ], PosSale.prototype, "price", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantity" }),
         __metadata("design:type", String)
     ], PosSale.prototype, "quantity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=saleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=saleId" }),
         __metadata("design:type", String)
     ], PosSale.prototype, "saleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storeCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storeCode" }),
         __metadata("design:type", String)
     ], PosSale.prototype, "storeCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetCountry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetCountry" }),
         __metadata("design:type", String)
     ], PosSale.prototype, "targetCountry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", String)
     ], PosSale.prototype, "timestamp", void 0);
     return PosSale;
-}(SpeakeasyBase));
-export { PosSale };
+}(utils_1.SpeakeasyBase));
+exports.PosSale = PosSale;

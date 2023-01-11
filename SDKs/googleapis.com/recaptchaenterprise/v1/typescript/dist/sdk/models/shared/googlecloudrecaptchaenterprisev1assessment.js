@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment } from "./googlecloudrecaptchaenterprisev1accountdefenderassessment";
-import { GoogleCloudRecaptchaenterpriseV1Event } from "./googlecloudrecaptchaenterprisev1event";
-import { GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput } from "./googlecloudrecaptchaenterprisev1privatepasswordleakverification";
-import { GoogleCloudRecaptchaenterpriseV1RiskAnalysis } from "./googlecloudrecaptchaenterprisev1riskanalysis";
-import { GoogleCloudRecaptchaenterpriseV1TokenProperties } from "./googlecloudrecaptchaenterprisev1tokenproperties";
-import { GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification } from "./googlecloudrecaptchaenterprisev1privatepasswordleakverification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecaptchaenterpriseV1Assessment = exports.GoogleCloudRecaptchaenterpriseV1AssessmentInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecaptchaenterprisev1accountdefenderassessment_1 = require("./googlecloudrecaptchaenterprisev1accountdefenderassessment");
+var googlecloudrecaptchaenterprisev1accountverificationinfo_1 = require("./googlecloudrecaptchaenterprisev1accountverificationinfo");
+var googlecloudrecaptchaenterprisev1event_1 = require("./googlecloudrecaptchaenterprisev1event");
+var googlecloudrecaptchaenterprisev1privatepasswordleakverification_1 = require("./googlecloudrecaptchaenterprisev1privatepasswordleakverification");
+var googlecloudrecaptchaenterprisev1riskanalysis_1 = require("./googlecloudrecaptchaenterprisev1riskanalysis");
+var googlecloudrecaptchaenterprisev1tokenproperties_1 = require("./googlecloudrecaptchaenterprisev1tokenproperties");
+var googlecloudrecaptchaenterprisev1accountverificationinfo_2 = require("./googlecloudrecaptchaenterprisev1accountverificationinfo");
+var googlecloudrecaptchaenterprisev1privatepasswordleakverification_2 = require("./googlecloudrecaptchaenterprisev1privatepasswordleakverification");
 // GoogleCloudRecaptchaenterpriseV1AssessmentInput
 /**
  * A recaptcha assessment resource.
@@ -39,28 +44,32 @@ var GoogleCloudRecaptchaenterpriseV1AssessmentInput = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountDefenderAssessment" }),
-        __metadata("design:type", GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountDefenderAssessment" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1accountdefenderassessment_1.GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment)
     ], GoogleCloudRecaptchaenterpriseV1AssessmentInput.prototype, "accountDefenderAssessment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event" }),
-        __metadata("design:type", GoogleCloudRecaptchaenterpriseV1Event)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountVerification" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1accountverificationinfo_1.GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoInput)
+    ], GoogleCloudRecaptchaenterpriseV1AssessmentInput.prototype, "accountVerification", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1event_1.GoogleCloudRecaptchaenterpriseV1Event)
     ], GoogleCloudRecaptchaenterpriseV1AssessmentInput.prototype, "event", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privatePasswordLeakVerification" }),
-        __metadata("design:type", GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privatePasswordLeakVerification" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1privatepasswordleakverification_1.GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput)
     ], GoogleCloudRecaptchaenterpriseV1AssessmentInput.prototype, "privatePasswordLeakVerification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=riskAnalysis" }),
-        __metadata("design:type", GoogleCloudRecaptchaenterpriseV1RiskAnalysis)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=riskAnalysis" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1riskanalysis_1.GoogleCloudRecaptchaenterpriseV1RiskAnalysis)
     ], GoogleCloudRecaptchaenterpriseV1AssessmentInput.prototype, "riskAnalysis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokenProperties" }),
-        __metadata("design:type", GoogleCloudRecaptchaenterpriseV1TokenProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokenProperties" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1tokenproperties_1.GoogleCloudRecaptchaenterpriseV1TokenProperties)
     ], GoogleCloudRecaptchaenterpriseV1AssessmentInput.prototype, "tokenProperties", void 0);
     return GoogleCloudRecaptchaenterpriseV1AssessmentInput;
-}(SpeakeasyBase));
-export { GoogleCloudRecaptchaenterpriseV1AssessmentInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecaptchaenterpriseV1AssessmentInput = GoogleCloudRecaptchaenterpriseV1AssessmentInput;
 // GoogleCloudRecaptchaenterpriseV1Assessment
 /**
  * A recaptcha assessment resource.
@@ -71,29 +80,33 @@ var GoogleCloudRecaptchaenterpriseV1Assessment = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountDefenderAssessment" }),
-        __metadata("design:type", GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountDefenderAssessment" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1accountdefenderassessment_1.GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment)
     ], GoogleCloudRecaptchaenterpriseV1Assessment.prototype, "accountDefenderAssessment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event" }),
-        __metadata("design:type", GoogleCloudRecaptchaenterpriseV1Event)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountVerification" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1accountverificationinfo_2.GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo)
+    ], GoogleCloudRecaptchaenterpriseV1Assessment.prototype, "accountVerification", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1event_1.GoogleCloudRecaptchaenterpriseV1Event)
     ], GoogleCloudRecaptchaenterpriseV1Assessment.prototype, "event", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1Assessment.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privatePasswordLeakVerification" }),
-        __metadata("design:type", GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privatePasswordLeakVerification" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1privatepasswordleakverification_2.GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification)
     ], GoogleCloudRecaptchaenterpriseV1Assessment.prototype, "privatePasswordLeakVerification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=riskAnalysis" }),
-        __metadata("design:type", GoogleCloudRecaptchaenterpriseV1RiskAnalysis)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=riskAnalysis" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1riskanalysis_1.GoogleCloudRecaptchaenterpriseV1RiskAnalysis)
     ], GoogleCloudRecaptchaenterpriseV1Assessment.prototype, "riskAnalysis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokenProperties" }),
-        __metadata("design:type", GoogleCloudRecaptchaenterpriseV1TokenProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokenProperties" }),
+        __metadata("design:type", googlecloudrecaptchaenterprisev1tokenproperties_1.GoogleCloudRecaptchaenterpriseV1TokenProperties)
     ], GoogleCloudRecaptchaenterpriseV1Assessment.prototype, "tokenProperties", void 0);
     return GoogleCloudRecaptchaenterpriseV1Assessment;
-}(SpeakeasyBase));
-export { GoogleCloudRecaptchaenterpriseV1Assessment };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecaptchaenterpriseV1Assessment = GoogleCloudRecaptchaenterpriseV1Assessment;

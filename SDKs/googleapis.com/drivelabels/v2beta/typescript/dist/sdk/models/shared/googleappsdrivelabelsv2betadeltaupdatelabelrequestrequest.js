@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateFieldRequestInput } from "./googleappsdrivelabelsv2betadeltaupdatelabelrequestcreatefieldrequest";
-import { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionChoiceRequestInput } from "./googleappsdrivelabelsv2betadeltaupdatelabelrequestcreateselectionchoicerequest";
-import { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDeleteFieldRequest } from "./googleappsdrivelabelsv2betadeltaupdatelabelrequestdeletefieldrequest";
-import { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDeleteSelectionChoiceRequest } from "./googleappsdrivelabelsv2betadeltaupdatelabelrequestdeleteselectionchoicerequest";
-import { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableFieldRequest } from "./googleappsdrivelabelsv2betadeltaupdatelabelrequestdisablefieldrequest";
-import { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableSelectionChoiceRequest } from "./googleappsdrivelabelsv2betadeltaupdatelabelrequestdisableselectionchoicerequest";
-import { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableFieldRequest } from "./googleappsdrivelabelsv2betadeltaupdatelabelrequestenablefieldrequest";
-import { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableSelectionChoiceRequest } from "./googleappsdrivelabelsv2betadeltaupdatelabelrequestenableselectionchoicerequest";
-import { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldPropertiesRequest } from "./googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatefieldpropertiesrequest";
-import { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldTypeRequestInput } from "./googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatefieldtyperequest";
-import { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateLabelPropertiesRequest } from "./googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatelabelpropertiesrequest";
-import { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest } from "./googleappsdrivelabelsv2betadeltaupdatelabelrequestupdateselectionchoicepropertiesrequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betadeltaupdatelabelrequestcreatefieldrequest_1 = require("./googleappsdrivelabelsv2betadeltaupdatelabelrequestcreatefieldrequest");
+var googleappsdrivelabelsv2betadeltaupdatelabelrequestcreateselectionchoicerequest_1 = require("./googleappsdrivelabelsv2betadeltaupdatelabelrequestcreateselectionchoicerequest");
+var googleappsdrivelabelsv2betadeltaupdatelabelrequestdeletefieldrequest_1 = require("./googleappsdrivelabelsv2betadeltaupdatelabelrequestdeletefieldrequest");
+var googleappsdrivelabelsv2betadeltaupdatelabelrequestdeleteselectionchoicerequest_1 = require("./googleappsdrivelabelsv2betadeltaupdatelabelrequestdeleteselectionchoicerequest");
+var googleappsdrivelabelsv2betadeltaupdatelabelrequestdisablefieldrequest_1 = require("./googleappsdrivelabelsv2betadeltaupdatelabelrequestdisablefieldrequest");
+var googleappsdrivelabelsv2betadeltaupdatelabelrequestdisableselectionchoicerequest_1 = require("./googleappsdrivelabelsv2betadeltaupdatelabelrequestdisableselectionchoicerequest");
+var googleappsdrivelabelsv2betadeltaupdatelabelrequestenablefieldrequest_1 = require("./googleappsdrivelabelsv2betadeltaupdatelabelrequestenablefieldrequest");
+var googleappsdrivelabelsv2betadeltaupdatelabelrequestenableselectionchoicerequest_1 = require("./googleappsdrivelabelsv2betadeltaupdatelabelrequestenableselectionchoicerequest");
+var googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatefieldpropertiesrequest_1 = require("./googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatefieldpropertiesrequest");
+var googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatefieldtyperequest_1 = require("./googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatefieldtyperequest");
+var googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatelabelpropertiesrequest_1 = require("./googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatelabelpropertiesrequest");
+var googleappsdrivelabelsv2betadeltaupdatelabelrequestupdateselectionchoicepropertiesrequest_1 = require("./googleappsdrivelabelsv2betadeltaupdatelabelrequestupdateselectionchoicepropertiesrequest");
 // GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput
 /**
  * A single kind of update to apply to a Label.
@@ -45,53 +48,53 @@ var GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput = /** @class 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createField" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateFieldRequestInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createField" }),
+        __metadata("design:type", googleappsdrivelabelsv2betadeltaupdatelabelrequestcreatefieldrequest_1.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateFieldRequestInput)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput.prototype, "createField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createSelectionChoice" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionChoiceRequestInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createSelectionChoice" }),
+        __metadata("design:type", googleappsdrivelabelsv2betadeltaupdatelabelrequestcreateselectionchoicerequest_1.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionChoiceRequestInput)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput.prototype, "createSelectionChoice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleteField" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDeleteFieldRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleteField" }),
+        __metadata("design:type", googleappsdrivelabelsv2betadeltaupdatelabelrequestdeletefieldrequest_1.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDeleteFieldRequest)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput.prototype, "deleteField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleteSelectionChoice" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDeleteSelectionChoiceRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleteSelectionChoice" }),
+        __metadata("design:type", googleappsdrivelabelsv2betadeltaupdatelabelrequestdeleteselectionchoicerequest_1.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDeleteSelectionChoiceRequest)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput.prototype, "deleteSelectionChoice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disableField" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableFieldRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disableField" }),
+        __metadata("design:type", googleappsdrivelabelsv2betadeltaupdatelabelrequestdisablefieldrequest_1.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableFieldRequest)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput.prototype, "disableField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disableSelectionChoice" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableSelectionChoiceRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disableSelectionChoice" }),
+        __metadata("design:type", googleappsdrivelabelsv2betadeltaupdatelabelrequestdisableselectionchoicerequest_1.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableSelectionChoiceRequest)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput.prototype, "disableSelectionChoice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableField" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableFieldRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableField" }),
+        __metadata("design:type", googleappsdrivelabelsv2betadeltaupdatelabelrequestenablefieldrequest_1.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableFieldRequest)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput.prototype, "enableField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableSelectionChoice" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableSelectionChoiceRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableSelectionChoice" }),
+        __metadata("design:type", googleappsdrivelabelsv2betadeltaupdatelabelrequestenableselectionchoicerequest_1.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestEnableSelectionChoiceRequest)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput.prototype, "enableSelectionChoice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateField" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldPropertiesRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateField" }),
+        __metadata("design:type", googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatefieldpropertiesrequest_1.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldPropertiesRequest)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput.prototype, "updateField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateFieldType" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldTypeRequestInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateFieldType" }),
+        __metadata("design:type", googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatefieldtyperequest_1.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateFieldTypeRequestInput)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput.prototype, "updateFieldType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateLabel" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateLabelPropertiesRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateLabel" }),
+        __metadata("design:type", googleappsdrivelabelsv2betadeltaupdatelabelrequestupdatelabelpropertiesrequest_1.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateLabelPropertiesRequest)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput.prototype, "updateLabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateSelectionChoiceProperties" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateSelectionChoiceProperties" }),
+        __metadata("design:type", googleappsdrivelabelsv2betadeltaupdatelabelrequestupdateselectionchoicepropertiesrequest_1.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput.prototype, "updateSelectionChoiceProperties", void 0);
     return GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput = GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestRequestInput;

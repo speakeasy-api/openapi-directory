@@ -35,7 +35,7 @@ export declare class UploadFileToLockerIdResponse extends SpeakeasyBase {
     contentType: string;
     fileUploadResponse?: any;
     statusCode: number;
-    uploadFileToLockerId400ApplicationJsonObject?: UploadFileToLockerId400ApplicationJson;
-    uploadFileToLockerId401ApplicationJsonObject?: UploadFileToLockerId401ApplicationJson;
-    uploadFileToLockerId500ApplicationJsonObject?: UploadFileToLockerId500ApplicationJson;
+    uploadFileToLockerId400ApplicationJSONObject?: UploadFileToLockerId400ApplicationJson;
+    uploadFileToLockerId401ApplicationJSONObject?: UploadFileToLockerId401ApplicationJson;
+    uploadFileToLockerId500ApplicationJSONObject?: UploadFileToLockerId500ApplicationJson;
 }

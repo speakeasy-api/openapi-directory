@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PodcastMinimum } from "./podcastminimum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CuratedListSearchResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var podcastminimum_1 = require("./podcastminimum");
 // CuratedListSearchResult
 /**
  * When **type** is *curated*.
@@ -34,49 +37,49 @@ var CuratedListSearchResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description_highlighted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description_highlighted" }),
         __metadata("design:type", String)
     ], CuratedListSearchResult.prototype, "descriptionHighlighted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description_original" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description_original" }),
         __metadata("design:type", String)
     ], CuratedListSearchResult.prototype, "descriptionOriginal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CuratedListSearchResult.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listennotes_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listennotes_url" }),
         __metadata("design:type", String)
     ], CuratedListSearchResult.prototype, "listennotesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=podcasts", elemType: PodcastMinimum }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=podcasts", elemType: podcastminimum_1.PodcastMinimum }),
         __metadata("design:type", Array)
     ], CuratedListSearchResult.prototype, "podcasts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pub_date_ms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pub_date_ms" }),
         __metadata("design:type", Number)
     ], CuratedListSearchResult.prototype, "pubDateMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source_domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_domain" }),
         __metadata("design:type", String)
     ], CuratedListSearchResult.prototype, "sourceDomain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_url" }),
         __metadata("design:type", String)
     ], CuratedListSearchResult.prototype, "sourceUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title_highlighted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title_highlighted" }),
         __metadata("design:type", String)
     ], CuratedListSearchResult.prototype, "titleHighlighted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title_original" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title_original" }),
         __metadata("design:type", String)
     ], CuratedListSearchResult.prototype, "titleOriginal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], CuratedListSearchResult.prototype, "total", void 0);
     return CuratedListSearchResult;
-}(SpeakeasyBase));
-export { CuratedListSearchResult };
+}(utils_1.SpeakeasyBase));
+exports.CuratedListSearchResult = CuratedListSearchResult;

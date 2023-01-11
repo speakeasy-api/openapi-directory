@@ -48,7 +48,7 @@ export class DisableDomainAutoRenewResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  disableDomainAutoRenewResponse?: Map<string, any>;
+  disableDomainAutoRenewResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidInput?: any;
@@ -57,5 +57,5 @@ export class DisableDomainAutoRenewResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  unsupportedTld?: any;
+  unsupportedTLD?: any;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApigatewayGatewayConfig } from "./apigatewaygatewayconfig";
-import { ApigatewayApiConfigGrpcServiceDefinition } from "./apigatewayapiconfiggrpcservicedefinition";
-import { ApigatewayApiConfigFile } from "./apigatewayapiconfigfile";
-import { ApigatewayApiConfigOpenApiDocument } from "./apigatewayapiconfigopenapidocument";
-export var ApigatewayApiConfigStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApigatewayApiConfigInput = exports.ApigatewayApiConfig = exports.ApigatewayApiConfigStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var apigatewaygatewayconfig_1 = require("./apigatewaygatewayconfig");
+var apigatewayapiconfiggrpcservicedefinition_1 = require("./apigatewayapiconfiggrpcservicedefinition");
+var apigatewayapiconfigfile_1 = require("./apigatewayapiconfigfile");
+var apigatewayapiconfigopenapidocument_1 = require("./apigatewayapiconfigopenapidocument");
+var ApigatewayApiConfigStateEnum;
 (function (ApigatewayApiConfigStateEnum) {
     ApigatewayApiConfigStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     ApigatewayApiConfigStateEnum["Creating"] = "CREATING";
@@ -36,47 +39,7 @@ export var ApigatewayApiConfigStateEnum;
     ApigatewayApiConfigStateEnum["Deleting"] = "DELETING";
     ApigatewayApiConfigStateEnum["Updating"] = "UPDATING";
     ApigatewayApiConfigStateEnum["Activating"] = "ACTIVATING";
-})(ApigatewayApiConfigStateEnum || (ApigatewayApiConfigStateEnum = {}));
-// ApigatewayApiConfigInput
-/**
- * An API Configuration is a combination of settings for both the Managed Service and Gateways serving this API Config.
-**/
-var ApigatewayApiConfigInput = /** @class */ (function (_super) {
-    __extends(ApigatewayApiConfigInput, _super);
-    function ApigatewayApiConfigInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
-        __metadata("design:type", String)
-    ], ApigatewayApiConfigInput.prototype, "displayName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=gatewayConfig" }),
-        __metadata("design:type", ApigatewayGatewayConfig)
-    ], ApigatewayApiConfigInput.prototype, "gatewayConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=gatewayServiceAccount" }),
-        __metadata("design:type", String)
-    ], ApigatewayApiConfigInput.prototype, "gatewayServiceAccount", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=grpcServices", elemType: ApigatewayApiConfigGrpcServiceDefinition }),
-        __metadata("design:type", Array)
-    ], ApigatewayApiConfigInput.prototype, "grpcServices", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], ApigatewayApiConfigInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=managedServiceConfigs", elemType: ApigatewayApiConfigFile }),
-        __metadata("design:type", Array)
-    ], ApigatewayApiConfigInput.prototype, "managedServiceConfigs", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=openapiDocuments", elemType: ApigatewayApiConfigOpenApiDocument }),
-        __metadata("design:type", Array)
-    ], ApigatewayApiConfigInput.prototype, "openapiDocuments", void 0);
-    return ApigatewayApiConfigInput;
-}(SpeakeasyBase));
-export { ApigatewayApiConfigInput };
+})(ApigatewayApiConfigStateEnum = exports.ApigatewayApiConfigStateEnum || (exports.ApigatewayApiConfigStateEnum = {}));
 // ApigatewayApiConfig
 /**
  * An API Configuration is a combination of settings for both the Managed Service and Gateways serving this API Config.
@@ -87,53 +50,93 @@ var ApigatewayApiConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], ApigatewayApiConfig.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], ApigatewayApiConfig.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gatewayConfig" }),
-        __metadata("design:type", ApigatewayGatewayConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gatewayConfig" }),
+        __metadata("design:type", apigatewaygatewayconfig_1.ApigatewayGatewayConfig)
     ], ApigatewayApiConfig.prototype, "gatewayConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gatewayServiceAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gatewayServiceAccount" }),
         __metadata("design:type", String)
     ], ApigatewayApiConfig.prototype, "gatewayServiceAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grpcServices", elemType: ApigatewayApiConfigGrpcServiceDefinition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grpcServices", elemType: apigatewayapiconfiggrpcservicedefinition_1.ApigatewayApiConfigGrpcServiceDefinition }),
         __metadata("design:type", Array)
     ], ApigatewayApiConfig.prototype, "grpcServices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], ApigatewayApiConfig.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managedServiceConfigs", elemType: ApigatewayApiConfigFile }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managedServiceConfigs", elemType: apigatewayapiconfigfile_1.ApigatewayApiConfigFile }),
         __metadata("design:type", Array)
     ], ApigatewayApiConfig.prototype, "managedServiceConfigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ApigatewayApiConfig.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=openapiDocuments", elemType: ApigatewayApiConfigOpenApiDocument }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openapiDocuments", elemType: apigatewayapiconfigopenapidocument_1.ApigatewayApiConfigOpenApiDocument }),
         __metadata("design:type", Array)
     ], ApigatewayApiConfig.prototype, "openapiDocuments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceConfigId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceConfigId" }),
         __metadata("design:type", String)
     ], ApigatewayApiConfig.prototype, "serviceConfigId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ApigatewayApiConfig.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], ApigatewayApiConfig.prototype, "updateTime", void 0);
     return ApigatewayApiConfig;
-}(SpeakeasyBase));
-export { ApigatewayApiConfig };
+}(utils_1.SpeakeasyBase));
+exports.ApigatewayApiConfig = ApigatewayApiConfig;
+// ApigatewayApiConfigInput
+/**
+ * An API Configuration is a combination of settings for both the Managed Service and Gateways serving this API Config.
+**/
+var ApigatewayApiConfigInput = /** @class */ (function (_super) {
+    __extends(ApigatewayApiConfigInput, _super);
+    function ApigatewayApiConfigInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], ApigatewayApiConfigInput.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gatewayConfig" }),
+        __metadata("design:type", apigatewaygatewayconfig_1.ApigatewayGatewayConfig)
+    ], ApigatewayApiConfigInput.prototype, "gatewayConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gatewayServiceAccount" }),
+        __metadata("design:type", String)
+    ], ApigatewayApiConfigInput.prototype, "gatewayServiceAccount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grpcServices", elemType: apigatewayapiconfiggrpcservicedefinition_1.ApigatewayApiConfigGrpcServiceDefinition }),
+        __metadata("design:type", Array)
+    ], ApigatewayApiConfigInput.prototype, "grpcServices", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], ApigatewayApiConfigInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managedServiceConfigs", elemType: apigatewayapiconfigfile_1.ApigatewayApiConfigFile }),
+        __metadata("design:type", Array)
+    ], ApigatewayApiConfigInput.prototype, "managedServiceConfigs", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openapiDocuments", elemType: apigatewayapiconfigopenapidocument_1.ApigatewayApiConfigOpenApiDocument }),
+        __metadata("design:type", Array)
+    ], ApigatewayApiConfigInput.prototype, "openapiDocuments", void 0);
+    return ApigatewayApiConfigInput;
+}(utils_1.SpeakeasyBase));
+exports.ApigatewayApiConfigInput = ApigatewayApiConfigInput;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UsageAllocation } from "./usageallocation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MeterUsageRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var usageallocation_1 = require("./usageallocation");
 var MeterUsageRequest = /** @class */ (function (_super) {
     __extends(MeterUsageRequest, _super);
     function MeterUsageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DryRun" }),
         __metadata("design:type", Boolean)
     ], MeterUsageRequest.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProductCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProductCode" }),
         __metadata("design:type", String)
     ], MeterUsageRequest.prototype, "productCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Timestamp" }),
         __metadata("design:type", Date)
     ], MeterUsageRequest.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UsageAllocations", elemType: UsageAllocation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UsageAllocations", elemType: usageallocation_1.UsageAllocation }),
         __metadata("design:type", Array)
     ], MeterUsageRequest.prototype, "usageAllocations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UsageDimension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UsageDimension" }),
         __metadata("design:type", String)
     ], MeterUsageRequest.prototype, "usageDimension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UsageQuantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UsageQuantity" }),
         __metadata("design:type", Number)
     ], MeterUsageRequest.prototype, "usageQuantity", void 0);
     return MeterUsageRequest;
-}(SpeakeasyBase));
-export { MeterUsageRequest };
+}(utils_1.SpeakeasyBase));
+exports.MeterUsageRequest = MeterUsageRequest;

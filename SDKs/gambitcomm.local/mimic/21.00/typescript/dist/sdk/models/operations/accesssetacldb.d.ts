@@ -8,5 +8,5 @@ export declare class AccessSetAcldbRequest extends SpeakeasyBase {
 export declare class AccessSetAcldbResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    accessSetAcldb200ApplicationJsonString?: string;
+    accessSetAcldb200ApplicationJSONString?: string;
 }

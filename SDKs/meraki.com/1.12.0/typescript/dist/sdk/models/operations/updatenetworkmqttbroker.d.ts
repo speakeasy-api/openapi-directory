@@ -15,5 +15,5 @@ export declare class UpdateNetworkMqttBrokerRequest extends SpeakeasyBase {
 export declare class UpdateNetworkMqttBrokerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkMqttBroker200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkMqttBroker200ApplicationJSONObject?: Record<string, any>;
 }

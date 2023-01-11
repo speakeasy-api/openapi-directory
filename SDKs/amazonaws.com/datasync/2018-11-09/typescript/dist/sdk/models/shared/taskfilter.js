@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TaskFilterNameEnum } from "./taskfilternameenum";
-import { OperatorEnum } from "./operatorenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskFilter = void 0;
+var utils_1 = require("../../../internal/utils");
+var taskfilternameenum_1 = require("./taskfilternameenum");
+var operatorenum_1 = require("./operatorenum");
 // TaskFilter
 /**
  * You can use API filters to narrow down the list of resources returned by <code>ListTasks</code>. For example, to retrieve all tasks on a source location, you can use <code>ListTasks</code> with filter name <code>LocationId</code> and <code>Operator Equals</code> with the ARN for the location.
@@ -35,17 +38,17 @@ var TaskFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], TaskFilter.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Operator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Operator" }),
         __metadata("design:type", String)
     ], TaskFilter.prototype, "operator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Values" }),
         __metadata("design:type", Array)
     ], TaskFilter.prototype, "values", void 0);
     return TaskFilter;
-}(SpeakeasyBase));
-export { TaskFilter };
+}(utils_1.SpeakeasyBase));
+exports.TaskFilter = TaskFilter;

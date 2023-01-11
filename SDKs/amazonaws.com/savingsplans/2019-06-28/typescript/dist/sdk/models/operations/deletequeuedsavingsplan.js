@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteQueuedSavingsPlanResponse = exports.DeleteQueuedSavingsPlanRequest = exports.DeleteQueuedSavingsPlanRequestBody = exports.DeleteQueuedSavingsPlanHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteQueuedSavingsPlanHeaders = /** @class */ (function (_super) {
     __extends(DeleteQueuedSavingsPlanHeaders, _super);
     function DeleteQueuedSavingsPlanHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DeleteQueuedSavingsPlanHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DeleteQueuedSavingsPlanHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DeleteQueuedSavingsPlanHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DeleteQueuedSavingsPlanHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DeleteQueuedSavingsPlanHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DeleteQueuedSavingsPlanHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DeleteQueuedSavingsPlanHeaders.prototype, "xAmzSignedHeaders", void 0);
     return DeleteQueuedSavingsPlanHeaders;
-}(SpeakeasyBase));
-export { DeleteQueuedSavingsPlanHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteQueuedSavingsPlanHeaders = DeleteQueuedSavingsPlanHeaders;
 var DeleteQueuedSavingsPlanRequestBody = /** @class */ (function (_super) {
     __extends(DeleteQueuedSavingsPlanRequestBody, _super);
     function DeleteQueuedSavingsPlanRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=savingsPlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=savingsPlanId" }),
         __metadata("design:type", String)
     ], DeleteQueuedSavingsPlanRequestBody.prototype, "savingsPlanId", void 0);
     return DeleteQueuedSavingsPlanRequestBody;
-}(SpeakeasyBase));
-export { DeleteQueuedSavingsPlanRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.DeleteQueuedSavingsPlanRequestBody = DeleteQueuedSavingsPlanRequestBody;
 var DeleteQueuedSavingsPlanRequest = /** @class */ (function (_super) {
     __extends(DeleteQueuedSavingsPlanRequest, _super);
     function DeleteQueuedSavingsPlanRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteQueuedSavingsPlanHeaders)
     ], DeleteQueuedSavingsPlanRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", DeleteQueuedSavingsPlanRequestBody)
     ], DeleteQueuedSavingsPlanRequest.prototype, "request", void 0);
     return DeleteQueuedSavingsPlanRequest;
-}(SpeakeasyBase));
-export { DeleteQueuedSavingsPlanRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteQueuedSavingsPlanRequest = DeleteQueuedSavingsPlanRequest;
 var DeleteQueuedSavingsPlanResponse = /** @class */ (function (_super) {
     __extends(DeleteQueuedSavingsPlanResponse, _super);
     function DeleteQueuedSavingsPlanResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteQueuedSavingsPlanResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeleteQueuedSavingsPlanResponse.prototype, "deleteQueuedSavingsPlanResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteQueuedSavingsPlanResponse.prototype, "internalServerException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteQueuedSavingsPlanResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteQueuedSavingsPlanResponse.prototype, "serviceQuotaExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteQueuedSavingsPlanResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteQueuedSavingsPlanResponse.prototype, "validationException", void 0);
     return DeleteQueuedSavingsPlanResponse;
-}(SpeakeasyBase));
-export { DeleteQueuedSavingsPlanResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteQueuedSavingsPlanResponse = DeleteQueuedSavingsPlanResponse;

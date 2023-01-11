@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConnectorDefinitionVersion } from "./connectordefinitionversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetConnectorDefinitionVersionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var connectordefinitionversion_1 = require("./connectordefinitionversion");
 var GetConnectorDefinitionVersionResponse = /** @class */ (function (_super) {
     __extends(GetConnectorDefinitionVersionResponse, _super);
     function GetConnectorDefinitionVersionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Arn" }),
         __metadata("design:type", String)
     ], GetConnectorDefinitionVersionResponse.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTimestamp" }),
         __metadata("design:type", String)
     ], GetConnectorDefinitionVersionResponse.prototype, "creationTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Definition" }),
-        __metadata("design:type", ConnectorDefinitionVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Definition" }),
+        __metadata("design:type", connectordefinitionversion_1.ConnectorDefinitionVersion)
     ], GetConnectorDefinitionVersionResponse.prototype, "definition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], GetConnectorDefinitionVersionResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetConnectorDefinitionVersionResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Version" }),
         __metadata("design:type", String)
     ], GetConnectorDefinitionVersionResponse.prototype, "version", void 0);
     return GetConnectorDefinitionVersionResponse;
-}(SpeakeasyBase));
-export { GetConnectorDefinitionVersionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetConnectorDefinitionVersionResponse = GetConnectorDefinitionVersionResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobBookmarkEntry = void 0;
+var utils_1 = require("../../../internal/utils");
 // JobBookmarkEntry
 /**
  * Defines a point that a job can resume processing.
@@ -33,33 +36,33 @@ var JobBookmarkEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Attempt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Attempt" }),
         __metadata("design:type", Number)
     ], JobBookmarkEntry.prototype, "attempt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobBookmark" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobBookmark" }),
         __metadata("design:type", String)
     ], JobBookmarkEntry.prototype, "jobBookmark", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobName" }),
         __metadata("design:type", String)
     ], JobBookmarkEntry.prototype, "jobName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PreviousRunId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PreviousRunId" }),
         __metadata("design:type", String)
     ], JobBookmarkEntry.prototype, "previousRunId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Run" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Run" }),
         __metadata("design:type", Number)
     ], JobBookmarkEntry.prototype, "run", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RunId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RunId" }),
         __metadata("design:type", String)
     ], JobBookmarkEntry.prototype, "runId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Version" }),
         __metadata("design:type", Number)
     ], JobBookmarkEntry.prototype, "version", void 0);
     return JobBookmarkEntry;
-}(SpeakeasyBase));
-export { JobBookmarkEntry };
+}(utils_1.SpeakeasyBase));
+exports.JobBookmarkEntry = JobBookmarkEntry;

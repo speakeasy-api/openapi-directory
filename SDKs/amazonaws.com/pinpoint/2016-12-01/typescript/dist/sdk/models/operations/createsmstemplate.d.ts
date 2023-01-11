@@ -20,7 +20,7 @@ export declare class CreateSmsTemplateRequestBodySmsTemplateRequest extends Spea
     defaultSubstitutions?: string;
     recommenderId?: string;
     templateDescription?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateSmsTemplateRequestBody extends SpeakeasyBase {
     smsTemplateRequest: CreateSmsTemplateRequestBodySmsTemplateRequest;

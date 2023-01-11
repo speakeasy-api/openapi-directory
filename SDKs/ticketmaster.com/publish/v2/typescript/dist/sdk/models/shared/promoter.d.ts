@@ -3,7 +3,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
  * Promoter
 **/
 export declare class Promoter extends SpeakeasyBase {
-    descriptions?: Map<string, string>;
+    descriptions?: Record<string, string>;
     id?: string;
-    names?: Map<string, string>;
+    names?: Record<string, string>;
 }

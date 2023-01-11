@@ -4,6 +4,10 @@ import { UserCompact } from "./usercompact";
 
 
 
+// TeamMembershipCompact
+/** 
+ * This object represents a user's connection to a team.
+**/
 export class TeamMembershipCompact extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=gid" })
   gid?: string;

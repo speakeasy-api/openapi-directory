@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsAddSelectedRepoToOrgSecretResponse = exports.ActionsAddSelectedRepoToOrgSecretRequest = exports.ActionsAddSelectedRepoToOrgSecretPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsAddSelectedRepoToOrgSecretPathParams = /** @class */ (function (_super) {
     __extends(ActionsAddSelectedRepoToOrgSecretPathParams, _super);
     function ActionsAddSelectedRepoToOrgSecretPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], ActionsAddSelectedRepoToOrgSecretPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repository_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repository_id" }),
         __metadata("design:type", Number)
     ], ActionsAddSelectedRepoToOrgSecretPathParams.prototype, "repositoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=secret_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=secret_name" }),
         __metadata("design:type", String)
     ], ActionsAddSelectedRepoToOrgSecretPathParams.prototype, "secretName", void 0);
     return ActionsAddSelectedRepoToOrgSecretPathParams;
-}(SpeakeasyBase));
-export { ActionsAddSelectedRepoToOrgSecretPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsAddSelectedRepoToOrgSecretPathParams = ActionsAddSelectedRepoToOrgSecretPathParams;
 var ActionsAddSelectedRepoToOrgSecretRequest = /** @class */ (function (_super) {
     __extends(ActionsAddSelectedRepoToOrgSecretRequest, _super);
     function ActionsAddSelectedRepoToOrgSecretRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsAddSelectedRepoToOrgSecretPathParams)
     ], ActionsAddSelectedRepoToOrgSecretRequest.prototype, "pathParams", void 0);
     return ActionsAddSelectedRepoToOrgSecretRequest;
-}(SpeakeasyBase));
-export { ActionsAddSelectedRepoToOrgSecretRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsAddSelectedRepoToOrgSecretRequest = ActionsAddSelectedRepoToOrgSecretRequest;
 var ActionsAddSelectedRepoToOrgSecretResponse = /** @class */ (function (_super) {
     __extends(ActionsAddSelectedRepoToOrgSecretResponse, _super);
     function ActionsAddSelectedRepoToOrgSecretResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsAddSelectedRepoToOrgSecretResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsAddSelectedRepoToOrgSecretResponse.prototype, "statusCode", void 0);
     return ActionsAddSelectedRepoToOrgSecretResponse;
-}(SpeakeasyBase));
-export { ActionsAddSelectedRepoToOrgSecretResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsAddSelectedRepoToOrgSecretResponse = ActionsAddSelectedRepoToOrgSecretResponse;

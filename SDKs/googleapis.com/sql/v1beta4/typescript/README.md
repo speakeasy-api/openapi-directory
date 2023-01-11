@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { SqlBackupRunsDeleteRequest, SqlBackupRunsDeleteResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,29 +31,29 @@ const req: SqlBackupRunsDeleteRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   pathParams: {
-    id: "aut",
-    instance: "tempora",
-    project: "incidunt",
+    id: "sit",
+    instance: "voluptas",
+    project: "culpa",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "minus",
-    alt: "json",
-    callback: "officia",
-    fields: "nesciunt",
-    key: "perferendis",
-    oauthToken: "in",
-    prettyPrint: false,
-    quotaUser: "iusto",
-    uploadType: "et",
-    uploadProtocol: "aperiam",
+    accessToken: "consequuntur",
+    alt: "media",
+    callback: "expedita",
+    fields: "voluptas",
+    key: "fugit",
+    oauthToken: "et",
+    prettyPrint: true,
+    quotaUser: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
 };
 

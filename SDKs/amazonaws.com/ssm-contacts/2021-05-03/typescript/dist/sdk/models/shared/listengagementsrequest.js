@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TimeRange } from "./timerange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListEngagementsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var timerange_1 = require("./timerange");
 var ListEngagementsRequest = /** @class */ (function (_super) {
     __extends(ListEngagementsRequest, _super);
     function ListEngagementsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncidentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncidentId" }),
         __metadata("design:type", String)
     ], ListEngagementsRequest.prototype, "incidentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], ListEngagementsRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListEngagementsRequest.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimeRangeValue" }),
-        __metadata("design:type", TimeRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimeRangeValue" }),
+        __metadata("design:type", timerange_1.TimeRange)
     ], ListEngagementsRequest.prototype, "timeRangeValue", void 0);
     return ListEngagementsRequest;
-}(SpeakeasyBase));
-export { ListEngagementsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListEngagementsRequest = ListEngagementsRequest;

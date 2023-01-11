@@ -37,9 +37,9 @@ export declare class PostAnnouncementsRequest extends SpeakeasyBase {
 }
 export declare class PostAnnouncementsResponse extends SpeakeasyBase {
     contentType: string;
-    postAnnouncements201ApplicationJsonObject?: PostAnnouncements201ApplicationJson;
-    postAnnouncements400ApplicationJsonObject?: PostAnnouncements400ApplicationJson;
-    postAnnouncements403ApplicationJsonObject?: PostAnnouncements403ApplicationJson;
     statusCode: number;
+    postAnnouncements201ApplicationJSONObject?: PostAnnouncements201ApplicationJson;
+    postAnnouncements400ApplicationJSONObject?: PostAnnouncements400ApplicationJson;
+    postAnnouncements403ApplicationJSONObject?: PostAnnouncements403ApplicationJson;
     oneannouncementsPostResponses403ContentApplication1jsonSchema?: shared.OneannouncementsPostResponses403ContentApplication1jsonSchema;
 }

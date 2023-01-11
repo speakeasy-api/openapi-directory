@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EncryptionConfiguration } from "./encryptionconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateSecurityConfigurationRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var encryptionconfiguration_1 = require("./encryptionconfiguration");
 var CreateSecurityConfigurationRequest = /** @class */ (function (_super) {
     __extends(CreateSecurityConfigurationRequest, _super);
     function CreateSecurityConfigurationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EncryptionConfiguration" }),
-        __metadata("design:type", EncryptionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EncryptionConfiguration" }),
+        __metadata("design:type", encryptionconfiguration_1.EncryptionConfiguration)
     ], CreateSecurityConfigurationRequest.prototype, "encryptionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], CreateSecurityConfigurationRequest.prototype, "name", void 0);
     return CreateSecurityConfigurationRequest;
-}(SpeakeasyBase));
-export { CreateSecurityConfigurationRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateSecurityConfigurationRequest = CreateSecurityConfigurationRequest;

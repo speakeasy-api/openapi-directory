@@ -67,5 +67,5 @@ export class TeamsAddOrUpdateMembershipForUserInOrgResponse extends SpeakeasyBas
   teamMembership?: shared.TeamMembership;
 
   @SpeakeasyMetadata()
-  teamsAddOrUpdateMembershipForUserInOrg422ApplicationJsonObject?: TeamsAddOrUpdateMembershipForUserInOrg422ApplicationJson;
+  teamsAddOrUpdateMembershipForUserInOrg422ApplicationJSONObject?: TeamsAddOrUpdateMembershipForUserInOrg422ApplicationJson;
 }

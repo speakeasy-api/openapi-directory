@@ -1,4 +1,7 @@
-export var RobotDeploymentStepEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RobotDeploymentStepEnum = void 0;
+var RobotDeploymentStepEnum;
 (function (RobotDeploymentStepEnum) {
     RobotDeploymentStepEnum["Validating"] = "Validating";
     RobotDeploymentStepEnum["DownloadingExtracting"] = "DownloadingExtracting";
@@ -7,4 +10,4 @@ export var RobotDeploymentStepEnum;
     RobotDeploymentStepEnum["Launching"] = "Launching";
     RobotDeploymentStepEnum["ExecutingPostLaunch"] = "ExecutingPostLaunch";
     RobotDeploymentStepEnum["Finished"] = "Finished";
-})(RobotDeploymentStepEnum || (RobotDeploymentStepEnum = {}));
+})(RobotDeploymentStepEnum = exports.RobotDeploymentStepEnum || (exports.RobotDeploymentStepEnum = {}));

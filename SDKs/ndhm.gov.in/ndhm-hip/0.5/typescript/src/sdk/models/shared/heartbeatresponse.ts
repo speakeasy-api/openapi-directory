@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 
 
 export enum HeartbeatResponseStatusEnum {
@@ -10,7 +10,7 @@ export enum HeartbeatResponseStatusEnum {
 
 export class HeartbeatResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Error;
+  error?: ErrorT;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status: HeartbeatResponseStatusEnum;

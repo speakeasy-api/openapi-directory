@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RelevantLocationRelationTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelevantLocation = exports.RelevantLocationRelationTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RelevantLocationRelationTypeEnum;
 (function (RelevantLocationRelationTypeEnum) {
     RelevantLocationRelationTypeEnum["RelationTypeUnspecified"] = "RELATION_TYPE_UNSPECIFIED";
     RelevantLocationRelationTypeEnum["DepartmentOf"] = "DEPARTMENT_OF";
     RelevantLocationRelationTypeEnum["IndependentEstablishmentIn"] = "INDEPENDENT_ESTABLISHMENT_IN";
-})(RelevantLocationRelationTypeEnum || (RelevantLocationRelationTypeEnum = {}));
+})(RelevantLocationRelationTypeEnum = exports.RelevantLocationRelationTypeEnum || (exports.RelevantLocationRelationTypeEnum = {}));
 // RelevantLocation
 /**
  * Information about another location that is related to current one. The relation can be any one of DEPARTMENT_OF or INDEPENDENT_ESTABLISHMENT_OF, and the location specified here can be on either side (parent/child) of the location.
@@ -39,13 +42,13 @@ var RelevantLocation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placeId" }),
         __metadata("design:type", String)
     ], RelevantLocation.prototype, "placeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationType" }),
         __metadata("design:type", String)
     ], RelevantLocation.prototype, "relationType", void 0);
     return RelevantLocation;
-}(SpeakeasyBase));
-export { RelevantLocation };
+}(utils_1.SpeakeasyBase));
+exports.RelevantLocation = RelevantLocation;

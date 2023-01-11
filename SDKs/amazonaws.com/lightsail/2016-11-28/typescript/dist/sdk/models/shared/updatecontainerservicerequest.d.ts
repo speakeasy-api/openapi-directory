@@ -3,7 +3,7 @@ import { ContainerServicePowerNameEnum } from "./containerservicepowernameenum";
 export declare class UpdateContainerServiceRequest extends SpeakeasyBase {
     isDisabled?: boolean;
     power?: ContainerServicePowerNameEnum;
-    publicDomainNames?: Map<string, string[]>;
+    publicDomainNames?: Record<string, string[]>;
     scale?: number;
     serviceName: string;
 }

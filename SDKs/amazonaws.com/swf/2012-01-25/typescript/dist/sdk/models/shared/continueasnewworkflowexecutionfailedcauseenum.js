@@ -1,4 +1,7 @@
-export var ContinueAsNewWorkflowExecutionFailedCauseEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContinueAsNewWorkflowExecutionFailedCauseEnum = void 0;
+var ContinueAsNewWorkflowExecutionFailedCauseEnum;
 (function (ContinueAsNewWorkflowExecutionFailedCauseEnum) {
     ContinueAsNewWorkflowExecutionFailedCauseEnum["UnhandledDecision"] = "UNHANDLED_DECISION";
     ContinueAsNewWorkflowExecutionFailedCauseEnum["WorkflowTypeDeprecated"] = "WORKFLOW_TYPE_DEPRECATED";
@@ -9,4 +12,4 @@ export var ContinueAsNewWorkflowExecutionFailedCauseEnum;
     ContinueAsNewWorkflowExecutionFailedCauseEnum["DefaultChildPolicyUndefined"] = "DEFAULT_CHILD_POLICY_UNDEFINED";
     ContinueAsNewWorkflowExecutionFailedCauseEnum["ContinueAsNewWorkflowExecutionRateExceeded"] = "CONTINUE_AS_NEW_WORKFLOW_EXECUTION_RATE_EXCEEDED";
     ContinueAsNewWorkflowExecutionFailedCauseEnum["OperationNotPermitted"] = "OPERATION_NOT_PERMITTED";
-})(ContinueAsNewWorkflowExecutionFailedCauseEnum || (ContinueAsNewWorkflowExecutionFailedCauseEnum = {}));
+})(ContinueAsNewWorkflowExecutionFailedCauseEnum = exports.ContinueAsNewWorkflowExecutionFailedCauseEnum || (exports.ContinueAsNewWorkflowExecutionFailedCauseEnum = {}));

@@ -107,11 +107,11 @@ export declare class IdcerRequest extends SpeakeasyBase {
 export declare class IdcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    idcer400ApplicationJsonObject?: Idcer400ApplicationJson;
-    idcer401ApplicationJsonObject?: Idcer401ApplicationJson;
-    idcer404ApplicationJsonObject?: Idcer404ApplicationJson;
-    idcer500ApplicationJsonObject?: Idcer500ApplicationJson;
-    idcer502ApplicationJsonObject?: Idcer502ApplicationJson;
-    idcer503ApplicationJsonObject?: Idcer503ApplicationJson;
-    idcer504ApplicationJsonObject?: Idcer504ApplicationJson;
+    idcer400ApplicationJSONObject?: Idcer400ApplicationJson;
+    idcer401ApplicationJSONObject?: Idcer401ApplicationJson;
+    idcer404ApplicationJSONObject?: Idcer404ApplicationJson;
+    idcer500ApplicationJSONObject?: Idcer500ApplicationJson;
+    idcer502ApplicationJSONObject?: Idcer502ApplicationJson;
+    idcer503ApplicationJSONObject?: Idcer503ApplicationJson;
+    idcer504ApplicationJSONObject?: Idcer504ApplicationJson;
 }

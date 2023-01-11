@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,83 +23,85 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSource } from "./rulesource";
-export var ZapierRulePostRequestModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ZapierRulePost = exports.ZapierRulePostTarget = exports.ZapierRulePostTargetHeaders = exports.ZapierRulePostStatusEnum = exports.ZapierRulePostRuleTypeEnum = exports.ZapierRulePostRequestModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulesource_1 = require("./rulesource");
+var ZapierRulePostRequestModeEnum;
 (function (ZapierRulePostRequestModeEnum) {
     ZapierRulePostRequestModeEnum["Single"] = "single";
     ZapierRulePostRequestModeEnum["Batch"] = "batch";
-})(ZapierRulePostRequestModeEnum || (ZapierRulePostRequestModeEnum = {}));
-export var ZapierRulePostRuleTypeEnum;
+})(ZapierRulePostRequestModeEnum = exports.ZapierRulePostRequestModeEnum || (exports.ZapierRulePostRequestModeEnum = {}));
+var ZapierRulePostRuleTypeEnum;
 (function (ZapierRulePostRuleTypeEnum) {
     ZapierRulePostRuleTypeEnum["HttpZapier"] = "http/zapier";
-})(ZapierRulePostRuleTypeEnum || (ZapierRulePostRuleTypeEnum = {}));
-export var ZapierRulePostStatusEnum;
+})(ZapierRulePostRuleTypeEnum = exports.ZapierRulePostRuleTypeEnum || (exports.ZapierRulePostRuleTypeEnum = {}));
+var ZapierRulePostStatusEnum;
 (function (ZapierRulePostStatusEnum) {
     ZapierRulePostStatusEnum["Enabled"] = "enabled";
     ZapierRulePostStatusEnum["Disabled"] = "disabled";
-})(ZapierRulePostStatusEnum || (ZapierRulePostStatusEnum = {}));
+})(ZapierRulePostStatusEnum = exports.ZapierRulePostStatusEnum || (exports.ZapierRulePostStatusEnum = {}));
 var ZapierRulePostTargetHeaders = /** @class */ (function (_super) {
     __extends(ZapierRulePostTargetHeaders, _super);
     function ZapierRulePostTargetHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ZapierRulePostTargetHeaders.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], ZapierRulePostTargetHeaders.prototype, "value", void 0);
     return ZapierRulePostTargetHeaders;
-}(SpeakeasyBase));
-export { ZapierRulePostTargetHeaders };
+}(utils_1.SpeakeasyBase));
+exports.ZapierRulePostTargetHeaders = ZapierRulePostTargetHeaders;
 var ZapierRulePostTarget = /** @class */ (function (_super) {
     __extends(ZapierRulePostTarget, _super);
     function ZapierRulePostTarget() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers", elemType: ZapierRulePostTargetHeaders }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers", elemType: ZapierRulePostTargetHeaders }),
         __metadata("design:type", Array)
     ], ZapierRulePostTarget.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signingKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signingKeyId" }),
         __metadata("design:type", String)
     ], ZapierRulePostTarget.prototype, "signingKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ZapierRulePostTarget.prototype, "url", void 0);
     return ZapierRulePostTarget;
-}(SpeakeasyBase));
-export { ZapierRulePostTarget };
+}(utils_1.SpeakeasyBase));
+exports.ZapierRulePostTarget = ZapierRulePostTarget;
 var ZapierRulePost = /** @class */ (function (_super) {
     __extends(ZapierRulePost, _super);
     function ZapierRulePost() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMode" }),
         __metadata("design:type", String)
     ], ZapierRulePost.prototype, "requestMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleType" }),
         __metadata("design:type", String)
     ], ZapierRulePost.prototype, "ruleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", RuleSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", rulesource_1.RuleSource)
     ], ZapierRulePost.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ZapierRulePost.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", ZapierRulePostTarget)
     ], ZapierRulePost.prototype, "target", void 0);
     return ZapierRulePost;
-}(SpeakeasyBase));
-export { ZapierRulePost };
+}(utils_1.SpeakeasyBase));
+exports.ZapierRulePost = ZapierRulePost;

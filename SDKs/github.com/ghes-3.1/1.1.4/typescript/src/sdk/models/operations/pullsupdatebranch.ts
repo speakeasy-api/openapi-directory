@@ -59,10 +59,10 @@ export class PullsUpdateBranchResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  pullsUpdateBranch202ApplicationJsonObject?: PullsUpdateBranch202ApplicationJson;
+  pullsUpdateBranch202ApplicationJSONObject?: PullsUpdateBranch202ApplicationJson;
 
   @SpeakeasyMetadata()
-  pullsUpdateBranch415ApplicationJsonObject?: PullsUpdateBranch415ApplicationJson;
+  pullsUpdateBranch415ApplicationJSONObject?: PullsUpdateBranch415ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

@@ -73,5 +73,5 @@ export class UpdateOrganizationApplianceVpnVpnFirewallRulesResponse extends Spea
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateOrganizationApplianceVpnVpnFirewallRules200ApplicationJsonObject?: Map<string, any>;
+  updateOrganizationApplianceVpnVpnFirewallRules200ApplicationJSONObject?: Record<string, any>;
 }

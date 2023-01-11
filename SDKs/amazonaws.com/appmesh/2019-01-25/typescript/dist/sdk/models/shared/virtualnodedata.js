@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceMetadata } from "./resourcemetadata";
-import { VirtualNodeSpec } from "./virtualnodespec";
-import { VirtualNodeStatus } from "./virtualnodestatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualNodeData = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcemetadata_1 = require("./resourcemetadata");
+var virtualnodespec_1 = require("./virtualnodespec");
+var virtualnodestatus_1 = require("./virtualnodestatus");
 // VirtualNodeData
 /**
  * An object that represents a virtual node returned by a describe operation.
@@ -36,25 +39,25 @@ var VirtualNodeData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meshName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meshName" }),
         __metadata("design:type", String)
     ], VirtualNodeData.prototype, "meshName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", ResourceMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", resourcemetadata_1.ResourceMetadata)
     ], VirtualNodeData.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
-        __metadata("design:type", VirtualNodeSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
+        __metadata("design:type", virtualnodespec_1.VirtualNodeSpec)
     ], VirtualNodeData.prototype, "spec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", VirtualNodeStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", virtualnodestatus_1.VirtualNodeStatus)
     ], VirtualNodeData.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualNodeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualNodeName" }),
         __metadata("design:type", String)
     ], VirtualNodeData.prototype, "virtualNodeName", void 0);
     return VirtualNodeData;
-}(SpeakeasyBase));
-export { VirtualNodeData };
+}(utils_1.SpeakeasyBase));
+exports.VirtualNodeData = VirtualNodeData;

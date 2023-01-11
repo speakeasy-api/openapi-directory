@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Cycle } from "./cycle";
-import { Metric } from "./metric";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StandardsProfile = void 0;
+var utils_1 = require("../../../internal/utils");
+var cycle_1 = require("./cycle");
+var metric_1 = require("./metric");
 // StandardsProfile
 /**
  * A complex type that defines a seller profile.
@@ -35,29 +38,29 @@ var StandardsProfile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cycle" }),
-        __metadata("design:type", Cycle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cycle" }),
+        __metadata("design:type", cycle_1.Cycle)
     ], StandardsProfile.prototype, "cycle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultProgram" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultProgram" }),
         __metadata("design:type", Boolean)
     ], StandardsProfile.prototype, "defaultProgram", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evaluationReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evaluationReason" }),
         __metadata("design:type", String)
     ], StandardsProfile.prototype, "evaluationReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics", elemType: Metric }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics", elemType: metric_1.Metric }),
         __metadata("design:type", Array)
     ], StandardsProfile.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=program" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=program" }),
         __metadata("design:type", String)
     ], StandardsProfile.prototype, "program", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=standardsLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=standardsLevel" }),
         __metadata("design:type", String)
     ], StandardsProfile.prototype, "standardsLevel", void 0);
     return StandardsProfile;
-}(SpeakeasyBase));
-export { StandardsProfile };
+}(utils_1.SpeakeasyBase));
+exports.StandardsProfile = StandardsProfile;

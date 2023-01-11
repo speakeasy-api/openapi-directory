@@ -56,7 +56,7 @@ export class DataSource extends SpeakeasyBase {
   redshiftMetadata?: RedshiftMetadata;
 
   @SpeakeasyMetadata({ data: "json, name=RoleARN" })
-  roleArn?: string;
+  roleARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StartedAt" })
   startedAt?: Date;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var UserKnownLanguageContractProficiencyEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserKnownLanguageContract = exports.UserKnownLanguageContractProficiencyEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var UserKnownLanguageContractProficiencyEnum;
 (function (UserKnownLanguageContractProficiencyEnum) {
     UserKnownLanguageContractProficiencyEnum["Nothing"] = "Nothing";
     UserKnownLanguageContractProficiencyEnum["Basics"] = "Basics";
     UserKnownLanguageContractProficiencyEnum["Intermediate"] = "Intermediate";
     UserKnownLanguageContractProficiencyEnum["Advanced"] = "Advanced";
     UserKnownLanguageContractProficiencyEnum["Native"] = "Native";
-})(UserKnownLanguageContractProficiencyEnum || (UserKnownLanguageContractProficiencyEnum = {}));
+})(UserKnownLanguageContractProficiencyEnum = exports.UserKnownLanguageContractProficiencyEnum || (exports.UserKnownLanguageContractProficiencyEnum = {}));
 var UserKnownLanguageContract = /** @class */ (function (_super) {
     __extends(UserKnownLanguageContract, _super);
     function UserKnownLanguageContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cultureCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cultureCode" }),
         __metadata("design:type", String)
     ], UserKnownLanguageContract.prototype, "cultureCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proficiency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proficiency" }),
         __metadata("design:type", String)
     ], UserKnownLanguageContract.prototype, "proficiency", void 0);
     return UserKnownLanguageContract;
-}(SpeakeasyBase));
-export { UserKnownLanguageContract };
+}(utils_1.SpeakeasyBase));
+exports.UserKnownLanguageContract = UserKnownLanguageContract;

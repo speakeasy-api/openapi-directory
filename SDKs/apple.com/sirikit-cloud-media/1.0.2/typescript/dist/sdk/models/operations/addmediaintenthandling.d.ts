@@ -14,6 +14,5 @@ export declare class AddMediaIntentHandlingRequest extends SpeakeasyBase {
 export declare class AddMediaIntentHandlingResponse extends SpeakeasyBase {
     addMediaIntentHandlingInvocationResponses?: any[];
     contentType: string;
-    headers: Map<string, string[]>;
     statusCode: number;
 }

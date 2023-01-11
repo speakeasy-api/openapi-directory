@@ -24,7 +24,7 @@ export class CreateMemberRequestBody extends SpeakeasyBase {
   knockingId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=media" })
-  media?: Map<string, any>;
+  media?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=member_id" })
   memberId?: string;
@@ -78,5 +78,5 @@ export class CreateMemberResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createMember201ApplicationJsonObject?: CreateMember201ApplicationJson;
+  createMember201ApplicationJSONObject?: CreateMember201ApplicationJson;
 }

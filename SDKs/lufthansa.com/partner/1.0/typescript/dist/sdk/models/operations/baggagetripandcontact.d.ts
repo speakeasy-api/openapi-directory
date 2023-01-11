@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class BaggageTripAndContactPathParams extends SpeakeasyBase {
-    searchId: string;
+    searchID: string;
 }
 export declare class BaggageTripAndContactHeaders extends SpeakeasyBase {
     accept: string;
@@ -15,7 +15,7 @@ export declare class BaggageTripAndContactRequest extends SpeakeasyBase {
     security: BaggageTripAndContactSecurity;
 }
 export declare class BaggageTripAndContactResponse extends SpeakeasyBase {
-    baggageTripAndContact200ApplicationJsonString?: string;
+    baggageTripAndContact200ApplicationJSONString?: string;
     contentType: string;
     statusCode: number;
 }

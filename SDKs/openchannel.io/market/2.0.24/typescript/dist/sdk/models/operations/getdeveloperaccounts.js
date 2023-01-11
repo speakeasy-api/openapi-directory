@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeveloperAccountsResponse = exports.GetDeveloperAccountsRequest = exports.GetDeveloperAccountsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeveloperAccountsQueryParams = /** @class */ (function (_super) {
     __extends(GetDeveloperAccountsQueryParams, _super);
     function GetDeveloperAccountsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetDeveloperAccountsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageNumber" }),
         __metadata("design:type", Number)
     ], GetDeveloperAccountsQueryParams.prototype, "pageNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], GetDeveloperAccountsQueryParams.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetDeveloperAccountsQueryParams.prototype, "sort", void 0);
     return GetDeveloperAccountsQueryParams;
-}(SpeakeasyBase));
-export { GetDeveloperAccountsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeveloperAccountsQueryParams = GetDeveloperAccountsQueryParams;
 var GetDeveloperAccountsRequest = /** @class */ (function (_super) {
     __extends(GetDeveloperAccountsRequest, _super);
     function GetDeveloperAccountsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeveloperAccountsQueryParams)
     ], GetDeveloperAccountsRequest.prototype, "queryParams", void 0);
     return GetDeveloperAccountsRequest;
-}(SpeakeasyBase));
-export { GetDeveloperAccountsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeveloperAccountsRequest = GetDeveloperAccountsRequest;
 var GetDeveloperAccountsResponse = /** @class */ (function (_super) {
     __extends(GetDeveloperAccountsResponse, _super);
     function GetDeveloperAccountsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeveloperAccountsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeveloperAccountsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeveloperAccountsResponse.prototype, "statusCode", void 0);
     return GetDeveloperAccountsResponse;
-}(SpeakeasyBase));
-export { GetDeveloperAccountsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeveloperAccountsResponse = GetDeveloperAccountsResponse;

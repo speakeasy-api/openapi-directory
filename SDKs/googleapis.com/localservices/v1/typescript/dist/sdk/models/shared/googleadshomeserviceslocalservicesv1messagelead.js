@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAdsHomeservicesLocalservicesV1MessageLead = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleAdsHomeservicesLocalservicesV1MessageLead
 /**
  * Container for message lead specific information.
@@ -33,21 +36,21 @@ var GoogleAdsHomeservicesLocalservicesV1MessageLead = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consumerPhoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consumerPhoneNumber" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1MessageLead.prototype, "consumerPhoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerName" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1MessageLead.prototype, "customerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobType" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1MessageLead.prototype, "jobType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postalCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postalCode" }),
         __metadata("design:type", String)
     ], GoogleAdsHomeservicesLocalservicesV1MessageLead.prototype, "postalCode", void 0);
     return GoogleAdsHomeservicesLocalservicesV1MessageLead;
-}(SpeakeasyBase));
-export { GoogleAdsHomeservicesLocalservicesV1MessageLead };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAdsHomeservicesLocalservicesV1MessageLead = GoogleAdsHomeservicesLocalservicesV1MessageLead;

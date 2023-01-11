@@ -67,7 +67,7 @@ export class UpdateOrganizationConfigurationResponse extends SpeakeasyBase {
   throttlingException?: any;
 
   @SpeakeasyMetadata()
-  updateOrganizationConfigurationResponse?: Map<string, any>;
+  updateOrganizationConfigurationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

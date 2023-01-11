@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TruncatableString } from "./truncatablestring";
-import { Module } from "./module";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StackFrame = void 0;
+var utils_1 = require("../../../internal/utils");
+var truncatablestring_1 = require("./truncatablestring");
+var module_1 = require("./module");
 // StackFrame
 /**
  * Represents a single stack frame in a stack trace.
@@ -35,33 +38,33 @@ var StackFrame = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnNumber" }),
         __metadata("design:type", String)
     ], StackFrame.prototype, "columnNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileName" }),
-        __metadata("design:type", TruncatableString)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileName" }),
+        __metadata("design:type", truncatablestring_1.TruncatableString)
     ], StackFrame.prototype, "fileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=functionName" }),
-        __metadata("design:type", TruncatableString)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=functionName" }),
+        __metadata("design:type", truncatablestring_1.TruncatableString)
     ], StackFrame.prototype, "functionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineNumber" }),
         __metadata("design:type", String)
     ], StackFrame.prototype, "lineNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loadModule" }),
-        __metadata("design:type", Module)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loadModule" }),
+        __metadata("design:type", module_1.Module)
     ], StackFrame.prototype, "loadModule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originalFunctionName" }),
-        __metadata("design:type", TruncatableString)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originalFunctionName" }),
+        __metadata("design:type", truncatablestring_1.TruncatableString)
     ], StackFrame.prototype, "originalFunctionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceVersion" }),
-        __metadata("design:type", TruncatableString)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceVersion" }),
+        __metadata("design:type", truncatablestring_1.TruncatableString)
     ], StackFrame.prototype, "sourceVersion", void 0);
     return StackFrame;
-}(SpeakeasyBase));
-export { StackFrame };
+}(utils_1.SpeakeasyBase));
+exports.StackFrame = StackFrame;

@@ -47,5 +47,5 @@ export class ReposGetDeploymentStatusResponse extends SpeakeasyBase {
   deploymentStatus?: shared.DeploymentStatus;
 
   @SpeakeasyMetadata()
-  reposGetDeploymentStatus415ApplicationJsonObject?: ReposGetDeploymentStatus415ApplicationJson;
+  reposGetDeploymentStatus415ApplicationJSONObject?: ReposGetDeploymentStatus415ApplicationJson;
 }

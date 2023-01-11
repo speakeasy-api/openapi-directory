@@ -194,23 +194,23 @@ export class HvcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  hvcer400ApplicationJsonObject?: Hvcer400ApplicationJson;
+  hvcer400ApplicationJSONObject?: Hvcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  hvcer401ApplicationJsonObject?: Hvcer401ApplicationJson;
+  hvcer401ApplicationJSONObject?: Hvcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  hvcer404ApplicationJsonObject?: Hvcer404ApplicationJson;
+  hvcer404ApplicationJSONObject?: Hvcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  hvcer500ApplicationJsonObject?: Hvcer500ApplicationJson;
+  hvcer500ApplicationJSONObject?: Hvcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  hvcer502ApplicationJsonObject?: Hvcer502ApplicationJson;
+  hvcer502ApplicationJSONObject?: Hvcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  hvcer503ApplicationJsonObject?: Hvcer503ApplicationJson;
+  hvcer503ApplicationJSONObject?: Hvcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  hvcer504ApplicationJsonObject?: Hvcer504ApplicationJson;
+  hvcer504ApplicationJSONObject?: Hvcer504ApplicationJson;
 }

@@ -1,4 +1,7 @@
-export var RobotStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RobotStatusEnum = void 0;
+var RobotStatusEnum;
 (function (RobotStatusEnum) {
     RobotStatusEnum["Available"] = "Available";
     RobotStatusEnum["Registered"] = "Registered";
@@ -7,4 +10,4 @@ export var RobotStatusEnum;
     RobotStatusEnum["Failed"] = "Failed";
     RobotStatusEnum["InSync"] = "InSync";
     RobotStatusEnum["NoResponse"] = "NoResponse";
-})(RobotStatusEnum || (RobotStatusEnum = {}));
+})(RobotStatusEnum = exports.RobotStatusEnum || (exports.RobotStatusEnum = {}));

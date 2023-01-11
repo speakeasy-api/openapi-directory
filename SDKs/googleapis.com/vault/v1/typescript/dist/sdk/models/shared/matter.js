@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MatterPermission } from "./matterpermission";
-export var MatterStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Matter = exports.MatterStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var matterpermission_1 = require("./matterpermission");
+var MatterStateEnum;
 (function (MatterStateEnum) {
     MatterStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     MatterStateEnum["Open"] = "OPEN";
     MatterStateEnum["Closed"] = "CLOSED";
     MatterStateEnum["Deleted"] = "DELETED";
-})(MatterStateEnum || (MatterStateEnum = {}));
+})(MatterStateEnum = exports.MatterStateEnum || (exports.MatterStateEnum = {}));
 // Matter
 /**
  * Represents a matter. To work with Vault resources, the account must have the [required Vault privileges] (https://support.google.com/vault/answer/2799699) and access to the matter. To access a matter, the account must have created the matter, have the matter shared with them, or have the **View All Matters** privilege.
@@ -41,25 +44,25 @@ var Matter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Matter.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matterId" }),
         __metadata("design:type", String)
     ], Matter.prototype, "matterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matterPermissions", elemType: MatterPermission }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matterPermissions", elemType: matterpermission_1.MatterPermission }),
         __metadata("design:type", Array)
     ], Matter.prototype, "matterPermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Matter.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Matter.prototype, "state", void 0);
     return Matter;
-}(SpeakeasyBase));
-export { Matter };
+}(utils_1.SpeakeasyBase));
+exports.Matter = Matter;

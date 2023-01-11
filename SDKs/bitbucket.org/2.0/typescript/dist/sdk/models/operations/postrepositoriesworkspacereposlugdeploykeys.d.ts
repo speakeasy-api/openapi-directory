@@ -16,6 +16,6 @@ export declare class PostRepositoriesWorkspaceRepoSlugDeployKeysRequest extends 
 export declare class PostRepositoriesWorkspaceRepoSlugDeployKeysResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deployKey?: Map<string, any>;
-    error?: Map<string, any>;
+    deployKey?: Record<string, any>;
+    error?: Record<string, any>;
 }

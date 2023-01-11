@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ActivatePipelineRequest, ActivatePipelineResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,28 +33,28 @@ const sdk = new SDK(WithSecurity(
     
 const req: ActivatePipelineRequest = {
   headers: {
-    xAmzAlgorithm: "eius",
-    xAmzContentSha256: "modi",
-    xAmzCredential: "adipisci",
-    xAmzDate: "suscipit",
-    xAmzSecurityToken: "tempora",
-    xAmzSignature: "illum",
-    xAmzSignedHeaders: "quae",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "DataPipeline.ActivatePipeline",
   },
   request: {
     parameterValues: [
       {
-        id: "voluptatibus",
-        stringValue: "doloremque",
+        id: "et",
+        stringValue: "nihil",
       },
     ],
-    pipelineId: "neque",
-    startTimestamp: "2019-02-07T21:16:32Z",
+    pipelineId: "rerum",
+    startTimestamp: "2004-06-02T10:14:12Z",
   },
 };
 
-sdk.sdk.activatePipeline(req).then((res: ActivatePipelineResponse | AxiosError) => {
+sdk.activatePipeline(req).then((res: ActivatePipelineResponse | AxiosError) => {
    // handle response
 });
 ```

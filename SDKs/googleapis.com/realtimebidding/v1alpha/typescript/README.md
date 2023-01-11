@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { RealtimebiddingBiddersBiddingFunctionsActivateRequest, RealtimebiddingBiddersBiddingFunctionsActivateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,29 +30,31 @@ const req: RealtimebiddingBiddersBiddingFunctionsActivateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "consectetur",
+    name: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "adipisci",
-    alt: "proto",
-    callback: "est",
-    fields: "eligendi",
-    key: "molestiae",
-    oauthToken: "autem",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "cumque",
-    uploadType: "perspiciatis",
-    uploadProtocol: "in",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    "repudiandae": "eos",
+    "debitis": "voluptatum",
+    "et": "ut",
+    "dolorem": "et",
   },
 };
 

@@ -1,18 +1,17 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
 
 
 
 export class ImportKeyPairResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  keyFingerprint?: string;
+  keyFingerprint?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  keyName?: string;
+  keyName?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  keyPairId?: string;
+  keyPairId?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: Tag })
-  tags?: Tag[];
+  @SpeakeasyMetadata()
+  tags?: Record<string, any>;
 }

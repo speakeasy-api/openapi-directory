@@ -16,5 +16,5 @@ export class SetLogResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setLog200ApplicationJsonString?: string;
+  setLog200ApplicationJSONString?: string;
 }

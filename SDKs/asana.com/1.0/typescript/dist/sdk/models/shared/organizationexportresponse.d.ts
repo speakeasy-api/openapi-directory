@@ -6,6 +6,9 @@ export declare enum OrganizationExportResponseStateEnum {
     Finished = "finished",
     Error = "error"
 }
+/**
+ * An *organization_export* object represents a request to export the complete data of an Organization in JSON format.
+**/
 export declare class OrganizationExportResponse extends SpeakeasyBase {
     createdAt?: Date;
     downloadUrl?: string;

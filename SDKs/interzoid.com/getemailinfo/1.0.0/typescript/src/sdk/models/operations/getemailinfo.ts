@@ -64,5 +64,5 @@ export class GetemailinfoResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getemailinfo200ApplicationJsonObject?: Getemailinfo200ApplicationJson;
+  getemailinfo200ApplicationJSONObject?: Getemailinfo200ApplicationJson;
 }

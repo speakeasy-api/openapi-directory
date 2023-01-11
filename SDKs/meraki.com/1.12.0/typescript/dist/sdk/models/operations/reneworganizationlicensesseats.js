@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RenewOrganizationLicensesSeatsResponse = exports.RenewOrganizationLicensesSeatsRequest = exports.RenewOrganizationLicensesSeatsRequestBody = exports.RenewOrganizationLicensesSeatsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RenewOrganizationLicensesSeatsPathParams = /** @class */ (function (_super) {
     __extends(RenewOrganizationLicensesSeatsPathParams, _super);
     function RenewOrganizationLicensesSeatsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], RenewOrganizationLicensesSeatsPathParams.prototype, "organizationId", void 0);
     return RenewOrganizationLicensesSeatsPathParams;
-}(SpeakeasyBase));
-export { RenewOrganizationLicensesSeatsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RenewOrganizationLicensesSeatsPathParams = RenewOrganizationLicensesSeatsPathParams;
 var RenewOrganizationLicensesSeatsRequestBody = /** @class */ (function (_super) {
     __extends(RenewOrganizationLicensesSeatsRequestBody, _super);
     function RenewOrganizationLicensesSeatsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=licenseIdToRenew" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=licenseIdToRenew" }),
         __metadata("design:type", String)
     ], RenewOrganizationLicensesSeatsRequestBody.prototype, "licenseIdToRenew", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unusedLicenseId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unusedLicenseId" }),
         __metadata("design:type", String)
     ], RenewOrganizationLicensesSeatsRequestBody.prototype, "unusedLicenseId", void 0);
     return RenewOrganizationLicensesSeatsRequestBody;
-}(SpeakeasyBase));
-export { RenewOrganizationLicensesSeatsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.RenewOrganizationLicensesSeatsRequestBody = RenewOrganizationLicensesSeatsRequestBody;
 var RenewOrganizationLicensesSeatsRequest = /** @class */ (function (_super) {
     __extends(RenewOrganizationLicensesSeatsRequest, _super);
     function RenewOrganizationLicensesSeatsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RenewOrganizationLicensesSeatsPathParams)
     ], RenewOrganizationLicensesSeatsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", RenewOrganizationLicensesSeatsRequestBody)
     ], RenewOrganizationLicensesSeatsRequest.prototype, "request", void 0);
     return RenewOrganizationLicensesSeatsRequest;
-}(SpeakeasyBase));
-export { RenewOrganizationLicensesSeatsRequest };
+}(utils_1.SpeakeasyBase));
+exports.RenewOrganizationLicensesSeatsRequest = RenewOrganizationLicensesSeatsRequest;
 var RenewOrganizationLicensesSeatsResponse = /** @class */ (function (_super) {
     __extends(RenewOrganizationLicensesSeatsResponse, _super);
     function RenewOrganizationLicensesSeatsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RenewOrganizationLicensesSeatsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RenewOrganizationLicensesSeatsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], RenewOrganizationLicensesSeatsResponse.prototype, "renewOrganizationLicensesSeats200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RenewOrganizationLicensesSeatsResponse.prototype, "renewOrganizationLicensesSeats200ApplicationJSONObject", void 0);
     return RenewOrganizationLicensesSeatsResponse;
-}(SpeakeasyBase));
-export { RenewOrganizationLicensesSeatsResponse };
+}(utils_1.SpeakeasyBase));
+exports.RenewOrganizationLicensesSeatsResponse = RenewOrganizationLicensesSeatsResponse;

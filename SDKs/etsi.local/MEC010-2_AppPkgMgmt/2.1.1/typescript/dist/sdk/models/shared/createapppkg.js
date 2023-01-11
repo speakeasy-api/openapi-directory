@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Checksum } from "./checksum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateAppPkg = void 0;
+var utils_1 = require("../../../internal/utils");
+var checksum_1 = require("./checksum");
 var CreateAppPkg = /** @class */ (function (_super) {
     __extends(CreateAppPkg, _super);
     function CreateAppPkg() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appPkgName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appPkgName" }),
         __metadata("design:type", String)
     ], CreateAppPkg.prototype, "appPkgName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appPkgPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appPkgPath" }),
         __metadata("design:type", String)
     ], CreateAppPkg.prototype, "appPkgPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appPkgVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appPkgVersion" }),
         __metadata("design:type", String)
     ], CreateAppPkg.prototype, "appPkgVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appProvider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appProvider" }),
         __metadata("design:type", String)
     ], CreateAppPkg.prototype, "appProvider", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=checksum" }),
-        __metadata("design:type", Checksum)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=checksum" }),
+        __metadata("design:type", checksum_1.Checksum)
     ], CreateAppPkg.prototype, "checksum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userDefinedData" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userDefinedData" }),
+        __metadata("design:type", Object)
     ], CreateAppPkg.prototype, "userDefinedData", void 0);
     return CreateAppPkg;
-}(SpeakeasyBase));
-export { CreateAppPkg };
+}(utils_1.SpeakeasyBase));
+exports.CreateAppPkg = CreateAppPkg;

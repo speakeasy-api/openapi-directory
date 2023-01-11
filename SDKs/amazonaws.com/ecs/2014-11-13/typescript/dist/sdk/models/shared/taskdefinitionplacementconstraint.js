@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TaskDefinitionPlacementConstraintTypeEnum } from "./taskdefinitionplacementconstrainttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskDefinitionPlacementConstraint = void 0;
+var utils_1 = require("../../../internal/utils");
+var taskdefinitionplacementconstrainttypeenum_1 = require("./taskdefinitionplacementconstrainttypeenum");
 // TaskDefinitionPlacementConstraint
 /**
  * <p>An object representing a constraint on task placement in the task definition. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html">Task placement constraints</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p> <note> <p>Task placement constraints are not supported for tasks run on Fargate.</p> </note>
@@ -34,13 +37,13 @@ var TaskDefinitionPlacementConstraint = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expression" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expression" }),
         __metadata("design:type", String)
     ], TaskDefinitionPlacementConstraint.prototype, "expression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], TaskDefinitionPlacementConstraint.prototype, "type", void 0);
     return TaskDefinitionPlacementConstraint;
-}(SpeakeasyBase));
-export { TaskDefinitionPlacementConstraint };
+}(utils_1.SpeakeasyBase));
+exports.TaskDefinitionPlacementConstraint = TaskDefinitionPlacementConstraint;

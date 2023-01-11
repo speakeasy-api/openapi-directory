@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteApplicationReferenceDataSourceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteApplicationReferenceDataSourceRequest = /** @class */ (function (_super) {
     __extends(DeleteApplicationReferenceDataSourceRequest, _super);
     function DeleteApplicationReferenceDataSourceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationName" }),
         __metadata("design:type", String)
     ], DeleteApplicationReferenceDataSourceRequest.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CurrentApplicationVersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CurrentApplicationVersionId" }),
         __metadata("design:type", Number)
     ], DeleteApplicationReferenceDataSourceRequest.prototype, "currentApplicationVersionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReferenceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReferenceId" }),
         __metadata("design:type", String)
     ], DeleteApplicationReferenceDataSourceRequest.prototype, "referenceId", void 0);
     return DeleteApplicationReferenceDataSourceRequest;
-}(SpeakeasyBase));
-export { DeleteApplicationReferenceDataSourceRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteApplicationReferenceDataSourceRequest = DeleteApplicationReferenceDataSourceRequest;

@@ -1,19 +1,16 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DomainNameStatusEnum } from "./domainnamestatusenum";
-import { EndpointTypeEnum } from "./endpointtypeenum";
-import { SecurityPolicyEnum } from "./securitypolicyenum";
 /**
  * The domain name configuration.
 **/
 export declare class DomainNameConfiguration extends SpeakeasyBase {
-    apiGatewayDomainName?: string;
-    certificateArn?: string;
-    certificateName?: string;
-    certificateUploadDate?: Date;
-    domainNameStatus?: DomainNameStatusEnum;
-    domainNameStatusMessage?: string;
-    endpointType?: EndpointTypeEnum;
-    hostedZoneId?: string;
-    ownershipVerificationCertificateArn?: string;
-    securityPolicy?: SecurityPolicyEnum;
+    apiGatewayDomainName?: Record<string, any>;
+    certificateArn?: Record<string, any>;
+    certificateName?: Record<string, any>;
+    certificateUploadDate?: Record<string, any>;
+    domainNameStatus?: Record<string, any>;
+    domainNameStatusMessage?: Record<string, any>;
+    endpointType?: Record<string, any>;
+    hostedZoneId?: Record<string, any>;
+    ownershipVerificationCertificateArn?: Record<string, any>;
+    securityPolicy?: Record<string, any>;
 }

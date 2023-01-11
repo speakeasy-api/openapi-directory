@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AdsensehostAccountsAdclientsGetRequest, AdsensehostAccountsAdclientsGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,23 +30,23 @@ const req: AdsensehostAccountsAdclientsGetRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    accountId: "et",
-    adClientId: "et",
+    accountId: "sit",
+    adClientId: "voluptas",
   },
   queryParams: {
     alt: "json",
-    fields: "vero",
-    key: "omnis",
-    oauthToken: "ut",
+    fields: "expedita",
+    key: "consequuntur",
+    oauthToken: "dolor",
     prettyPrint: true,
-    quotaUser: "sint",
-    userIp: "est",
+    quotaUser: "voluptas",
+    userIp: "fugit",
   },
 };
 

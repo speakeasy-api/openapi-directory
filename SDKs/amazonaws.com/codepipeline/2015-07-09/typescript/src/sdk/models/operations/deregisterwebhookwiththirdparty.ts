@@ -48,7 +48,7 @@ export class DeregisterWebhookWithThirdPartyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deregisterWebhookWithThirdPartyOutput?: Map<string, any>;
+  deregisterWebhookWithThirdPartyOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

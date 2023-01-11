@@ -7,15 +7,15 @@ export declare enum RuntimeAccessConfigAccessTypeEnum {
 /**
  * Specifies the login configuration for Runtime
 **/
-export declare class RuntimeAccessConfig extends SpeakeasyBase {
+export declare class RuntimeAccessConfigInput extends SpeakeasyBase {
     accessType?: RuntimeAccessConfigAccessTypeEnum;
-    proxyUri?: string;
     runtimeOwner?: string;
 }
 /**
  * Specifies the login configuration for Runtime
 **/
-export declare class RuntimeAccessConfigInput extends SpeakeasyBase {
+export declare class RuntimeAccessConfig extends SpeakeasyBase {
     accessType?: RuntimeAccessConfigAccessTypeEnum;
+    proxyUri?: string;
     runtimeOwner?: string;
 }

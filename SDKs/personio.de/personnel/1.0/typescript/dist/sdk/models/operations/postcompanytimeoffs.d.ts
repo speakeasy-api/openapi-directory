@@ -9,6 +9,6 @@ export declare class PostCompanyTimeOffsRequest extends SpeakeasyBase {
 export declare class PostCompanyTimeOffsResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
-    postCompanyTimeOffs201ApplicationJsonObject?: PostCompanyTimeOffs201ApplicationJson;
     statusCode: number;
+    postCompanyTimeOffs201ApplicationJSONObject?: PostCompanyTimeOffs201ApplicationJson;
 }

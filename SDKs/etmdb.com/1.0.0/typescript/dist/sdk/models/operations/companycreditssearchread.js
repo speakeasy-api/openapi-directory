@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompanyCreditsSearchReadResponse = exports.CompanyCreditsSearchReadRequest = exports.CompanyCreditsSearchReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CompanyCreditsSearchReadPathParams = /** @class */ (function (_super) {
     __extends(CompanyCreditsSearchReadPathParams, _super);
     function CompanyCreditsSearchReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=movie_title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=movie_title" }),
         __metadata("design:type", String)
     ], CompanyCreditsSearchReadPathParams.prototype, "movieTitle", void 0);
     return CompanyCreditsSearchReadPathParams;
-}(SpeakeasyBase));
-export { CompanyCreditsSearchReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CompanyCreditsSearchReadPathParams = CompanyCreditsSearchReadPathParams;
 var CompanyCreditsSearchReadRequest = /** @class */ (function (_super) {
     __extends(CompanyCreditsSearchReadRequest, _super);
     function CompanyCreditsSearchReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CompanyCreditsSearchReadPathParams)
     ], CompanyCreditsSearchReadRequest.prototype, "pathParams", void 0);
     return CompanyCreditsSearchReadRequest;
-}(SpeakeasyBase));
-export { CompanyCreditsSearchReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.CompanyCreditsSearchReadRequest = CompanyCreditsSearchReadRequest;
 var CompanyCreditsSearchReadResponse = /** @class */ (function (_super) {
     __extends(CompanyCreditsSearchReadResponse, _super);
     function CompanyCreditsSearchReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CompanyCreditsSearchReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CompanyCreditsSearchReadResponse.prototype, "statusCode", void 0);
     return CompanyCreditsSearchReadResponse;
-}(SpeakeasyBase));
-export { CompanyCreditsSearchReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.CompanyCreditsSearchReadResponse = CompanyCreditsSearchReadResponse;

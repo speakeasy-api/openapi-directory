@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExperimentTemplateAction } from "./experimenttemplateaction";
-import { ExperimentTemplateStopCondition } from "./experimenttemplatestopcondition";
-import { ExperimentTemplateTarget } from "./experimenttemplatetarget";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExperimentTemplate = void 0;
+var utils_1 = require("../../../internal/utils");
+var experimenttemplateaction_1 = require("./experimenttemplateaction");
+var experimenttemplatestopcondition_1 = require("./experimenttemplatestopcondition");
+var experimenttemplatetarget_1 = require("./experimenttemplatetarget");
 // ExperimentTemplate
 /**
  * Describes an experiment template.
@@ -36,41 +39,41 @@ var ExperimentTemplate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actions", elemType: ExperimentTemplateAction }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actions", elemType: experimenttemplateaction_1.ExperimentTemplateAction }),
+        __metadata("design:type", Object)
     ], ExperimentTemplate.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTime" }),
         __metadata("design:type", Date)
     ], ExperimentTemplate.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ExperimentTemplate.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ExperimentTemplate.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdateTime" }),
         __metadata("design:type", Date)
     ], ExperimentTemplate.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleArn" }),
         __metadata("design:type", String)
     ], ExperimentTemplate.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stopConditions", elemType: ExperimentTemplateStopCondition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stopConditions", elemType: experimenttemplatestopcondition_1.ExperimentTemplateStopCondition }),
         __metadata("design:type", Array)
     ], ExperimentTemplate.prototype, "stopConditions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], ExperimentTemplate.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targets", elemType: ExperimentTemplateTarget }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targets", elemType: experimenttemplatetarget_1.ExperimentTemplateTarget }),
+        __metadata("design:type", Object)
     ], ExperimentTemplate.prototype, "targets", void 0);
     return ExperimentTemplate;
-}(SpeakeasyBase));
-export { ExperimentTemplate };
+}(utils_1.SpeakeasyBase));
+exports.ExperimentTemplate = ExperimentTemplate;

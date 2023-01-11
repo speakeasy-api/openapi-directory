@@ -22,5 +22,5 @@ export class GetDeviceCellularGatewayPortForwardingRulesResponse extends Speakea
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceCellularGatewayPortForwardingRules200ApplicationJsonObject?: Map<string, any>;
+  getDeviceCellularGatewayPortForwardingRules200ApplicationJSONObject?: Record<string, any>;
 }

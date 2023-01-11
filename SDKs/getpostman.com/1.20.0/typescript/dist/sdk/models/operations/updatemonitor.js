@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,128 +23,130 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateMonitorResponse = exports.UpdateMonitorRequest = exports.UpdateMonitor200ApplicationJson = exports.UpdateMonitor200ApplicationJsonMonitor = exports.UpdateMonitorRequestBody = exports.UpdateMonitorRequestBodyMonitor = exports.UpdateMonitorRequestBodyMonitorSchedule = exports.UpdateMonitorPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateMonitorPathParams = /** @class */ (function (_super) {
     __extends(UpdateMonitorPathParams, _super);
     function UpdateMonitorPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=monitor_uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=monitor_uid" }),
         __metadata("design:type", String)
     ], UpdateMonitorPathParams.prototype, "monitorUid", void 0);
     return UpdateMonitorPathParams;
-}(SpeakeasyBase));
-export { UpdateMonitorPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMonitorPathParams = UpdateMonitorPathParams;
 var UpdateMonitorRequestBodyMonitorSchedule = /** @class */ (function (_super) {
     __extends(UpdateMonitorRequestBodyMonitorSchedule, _super);
     function UpdateMonitorRequestBodyMonitorSchedule() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cron" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cron" }),
         __metadata("design:type", String)
     ], UpdateMonitorRequestBodyMonitorSchedule.prototype, "cron", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezone" }),
         __metadata("design:type", String)
     ], UpdateMonitorRequestBodyMonitorSchedule.prototype, "timezone", void 0);
     return UpdateMonitorRequestBodyMonitorSchedule;
-}(SpeakeasyBase));
-export { UpdateMonitorRequestBodyMonitorSchedule };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMonitorRequestBodyMonitorSchedule = UpdateMonitorRequestBodyMonitorSchedule;
 var UpdateMonitorRequestBodyMonitor = /** @class */ (function (_super) {
     __extends(UpdateMonitorRequestBodyMonitor, _super);
     function UpdateMonitorRequestBodyMonitor() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateMonitorRequestBodyMonitor.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schedule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schedule" }),
         __metadata("design:type", UpdateMonitorRequestBodyMonitorSchedule)
     ], UpdateMonitorRequestBodyMonitor.prototype, "schedule", void 0);
     return UpdateMonitorRequestBodyMonitor;
-}(SpeakeasyBase));
-export { UpdateMonitorRequestBodyMonitor };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMonitorRequestBodyMonitor = UpdateMonitorRequestBodyMonitor;
 var UpdateMonitorRequestBody = /** @class */ (function (_super) {
     __extends(UpdateMonitorRequestBody, _super);
     function UpdateMonitorRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monitor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monitor" }),
         __metadata("design:type", UpdateMonitorRequestBodyMonitor)
     ], UpdateMonitorRequestBody.prototype, "monitor", void 0);
     return UpdateMonitorRequestBody;
-}(SpeakeasyBase));
-export { UpdateMonitorRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMonitorRequestBody = UpdateMonitorRequestBody;
 var UpdateMonitor200ApplicationJsonMonitor = /** @class */ (function (_super) {
     __extends(UpdateMonitor200ApplicationJsonMonitor, _super);
     function UpdateMonitor200ApplicationJsonMonitor() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], UpdateMonitor200ApplicationJsonMonitor.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateMonitor200ApplicationJsonMonitor.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], UpdateMonitor200ApplicationJsonMonitor.prototype, "uid", void 0);
     return UpdateMonitor200ApplicationJsonMonitor;
-}(SpeakeasyBase));
-export { UpdateMonitor200ApplicationJsonMonitor };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMonitor200ApplicationJsonMonitor = UpdateMonitor200ApplicationJsonMonitor;
 var UpdateMonitor200ApplicationJson = /** @class */ (function (_super) {
     __extends(UpdateMonitor200ApplicationJson, _super);
     function UpdateMonitor200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monitor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monitor" }),
         __metadata("design:type", UpdateMonitor200ApplicationJsonMonitor)
     ], UpdateMonitor200ApplicationJson.prototype, "monitor", void 0);
     return UpdateMonitor200ApplicationJson;
-}(SpeakeasyBase));
-export { UpdateMonitor200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMonitor200ApplicationJson = UpdateMonitor200ApplicationJson;
 var UpdateMonitorRequest = /** @class */ (function (_super) {
     __extends(UpdateMonitorRequest, _super);
     function UpdateMonitorRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateMonitorPathParams)
     ], UpdateMonitorRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateMonitorRequestBody)
     ], UpdateMonitorRequest.prototype, "request", void 0);
     return UpdateMonitorRequest;
-}(SpeakeasyBase));
-export { UpdateMonitorRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMonitorRequest = UpdateMonitorRequest;
 var UpdateMonitorResponse = /** @class */ (function (_super) {
     __extends(UpdateMonitorResponse, _super);
     function UpdateMonitorResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateMonitorResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateMonitorResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateMonitor200ApplicationJson)
-    ], UpdateMonitorResponse.prototype, "updateMonitor200ApplicationJsonObject", void 0);
+    ], UpdateMonitorResponse.prototype, "updateMonitor200ApplicationJSONObject", void 0);
     return UpdateMonitorResponse;
-}(SpeakeasyBase));
-export { UpdateMonitorResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateMonitorResponse = UpdateMonitorResponse;

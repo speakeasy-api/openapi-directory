@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfig } from "./googlecloudvideointelligencev1p2beta1explicitcontentdetectionconfig";
-import { GoogleCloudVideointelligenceV1p2beta1FaceDetectionConfig } from "./googlecloudvideointelligencev1p2beta1facedetectionconfig";
-import { GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig } from "./googlecloudvideointelligencev1p2beta1labeldetectionconfig";
-import { GoogleCloudVideointelligenceV1p2beta1ObjectTrackingConfig } from "./googlecloudvideointelligencev1p2beta1objecttrackingconfig";
-import { GoogleCloudVideointelligenceV1p2beta1PersonDetectionConfig } from "./googlecloudvideointelligencev1p2beta1persondetectionconfig";
-import { GoogleCloudVideointelligenceV1p2beta1VideoSegment } from "./googlecloudvideointelligencev1p2beta1videosegment";
-import { GoogleCloudVideointelligenceV1p2beta1ShotChangeDetectionConfig } from "./googlecloudvideointelligencev1p2beta1shotchangedetectionconfig";
-import { GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig } from "./googlecloudvideointelligencev1p2beta1speechtranscriptionconfig";
-import { GoogleCloudVideointelligenceV1p2beta1TextDetectionConfig } from "./googlecloudvideointelligencev1p2beta1textdetectionconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudVideointelligenceV1p2beta1VideoContext = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudvideointelligencev1p2beta1explicitcontentdetectionconfig_1 = require("./googlecloudvideointelligencev1p2beta1explicitcontentdetectionconfig");
+var googlecloudvideointelligencev1p2beta1facedetectionconfig_1 = require("./googlecloudvideointelligencev1p2beta1facedetectionconfig");
+var googlecloudvideointelligencev1p2beta1labeldetectionconfig_1 = require("./googlecloudvideointelligencev1p2beta1labeldetectionconfig");
+var googlecloudvideointelligencev1p2beta1objecttrackingconfig_1 = require("./googlecloudvideointelligencev1p2beta1objecttrackingconfig");
+var googlecloudvideointelligencev1p2beta1persondetectionconfig_1 = require("./googlecloudvideointelligencev1p2beta1persondetectionconfig");
+var googlecloudvideointelligencev1p2beta1videosegment_1 = require("./googlecloudvideointelligencev1p2beta1videosegment");
+var googlecloudvideointelligencev1p2beta1shotchangedetectionconfig_1 = require("./googlecloudvideointelligencev1p2beta1shotchangedetectionconfig");
+var googlecloudvideointelligencev1p2beta1speechtranscriptionconfig_1 = require("./googlecloudvideointelligencev1p2beta1speechtranscriptionconfig");
+var googlecloudvideointelligencev1p2beta1textdetectionconfig_1 = require("./googlecloudvideointelligencev1p2beta1textdetectionconfig");
 // GoogleCloudVideointelligenceV1p2beta1VideoContext
 /**
  * Video context and/or feature-specific parameters.
@@ -42,41 +45,41 @@ var GoogleCloudVideointelligenceV1p2beta1VideoContext = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explicitContentDetectionConfig" }),
-        __metadata("design:type", GoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explicitContentDetectionConfig" }),
+        __metadata("design:type", googlecloudvideointelligencev1p2beta1explicitcontentdetectionconfig_1.GoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfig)
     ], GoogleCloudVideointelligenceV1p2beta1VideoContext.prototype, "explicitContentDetectionConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=faceDetectionConfig" }),
-        __metadata("design:type", GoogleCloudVideointelligenceV1p2beta1FaceDetectionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=faceDetectionConfig" }),
+        __metadata("design:type", googlecloudvideointelligencev1p2beta1facedetectionconfig_1.GoogleCloudVideointelligenceV1p2beta1FaceDetectionConfig)
     ], GoogleCloudVideointelligenceV1p2beta1VideoContext.prototype, "faceDetectionConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelDetectionConfig" }),
-        __metadata("design:type", GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelDetectionConfig" }),
+        __metadata("design:type", googlecloudvideointelligencev1p2beta1labeldetectionconfig_1.GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig)
     ], GoogleCloudVideointelligenceV1p2beta1VideoContext.prototype, "labelDetectionConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectTrackingConfig" }),
-        __metadata("design:type", GoogleCloudVideointelligenceV1p2beta1ObjectTrackingConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectTrackingConfig" }),
+        __metadata("design:type", googlecloudvideointelligencev1p2beta1objecttrackingconfig_1.GoogleCloudVideointelligenceV1p2beta1ObjectTrackingConfig)
     ], GoogleCloudVideointelligenceV1p2beta1VideoContext.prototype, "objectTrackingConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=personDetectionConfig" }),
-        __metadata("design:type", GoogleCloudVideointelligenceV1p2beta1PersonDetectionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=personDetectionConfig" }),
+        __metadata("design:type", googlecloudvideointelligencev1p2beta1persondetectionconfig_1.GoogleCloudVideointelligenceV1p2beta1PersonDetectionConfig)
     ], GoogleCloudVideointelligenceV1p2beta1VideoContext.prototype, "personDetectionConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=segments", elemType: GoogleCloudVideointelligenceV1p2beta1VideoSegment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segments", elemType: googlecloudvideointelligencev1p2beta1videosegment_1.GoogleCloudVideointelligenceV1p2beta1VideoSegment }),
         __metadata("design:type", Array)
     ], GoogleCloudVideointelligenceV1p2beta1VideoContext.prototype, "segments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shotChangeDetectionConfig" }),
-        __metadata("design:type", GoogleCloudVideointelligenceV1p2beta1ShotChangeDetectionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shotChangeDetectionConfig" }),
+        __metadata("design:type", googlecloudvideointelligencev1p2beta1shotchangedetectionconfig_1.GoogleCloudVideointelligenceV1p2beta1ShotChangeDetectionConfig)
     ], GoogleCloudVideointelligenceV1p2beta1VideoContext.prototype, "shotChangeDetectionConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=speechTranscriptionConfig" }),
-        __metadata("design:type", GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=speechTranscriptionConfig" }),
+        __metadata("design:type", googlecloudvideointelligencev1p2beta1speechtranscriptionconfig_1.GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig)
     ], GoogleCloudVideointelligenceV1p2beta1VideoContext.prototype, "speechTranscriptionConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textDetectionConfig" }),
-        __metadata("design:type", GoogleCloudVideointelligenceV1p2beta1TextDetectionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textDetectionConfig" }),
+        __metadata("design:type", googlecloudvideointelligencev1p2beta1textdetectionconfig_1.GoogleCloudVideointelligenceV1p2beta1TextDetectionConfig)
     ], GoogleCloudVideointelligenceV1p2beta1VideoContext.prototype, "textDetectionConfig", void 0);
     return GoogleCloudVideointelligenceV1p2beta1VideoContext;
-}(SpeakeasyBase));
-export { GoogleCloudVideointelligenceV1p2beta1VideoContext };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudVideointelligenceV1p2beta1VideoContext = GoogleCloudVideointelligenceV1p2beta1VideoContext;

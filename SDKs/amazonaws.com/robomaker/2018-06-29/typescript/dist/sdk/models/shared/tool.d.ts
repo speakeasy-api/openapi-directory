@@ -8,5 +8,5 @@ export declare class Tool extends SpeakeasyBase {
     exitBehavior?: ExitBehaviorEnum;
     name: string;
     streamOutputToCloudWatch?: boolean;
-    streamUi?: boolean;
+    streamUI?: boolean;
 }

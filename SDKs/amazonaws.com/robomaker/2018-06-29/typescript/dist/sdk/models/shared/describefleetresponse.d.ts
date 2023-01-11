@@ -9,5 +9,5 @@ export declare class DescribeFleetResponse extends SpeakeasyBase {
     lastDeploymentTime?: Date;
     name?: string;
     robots?: Robot[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccessTypeEnum } from "./accesstypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccessRules = void 0;
+var utils_1 = require("../../../internal/utils");
+var accesstypeenum_1 = require("./accesstypeenum");
 // AccessRules
 /**
  * <p>Describes the anonymous access permissions for an Amazon Lightsail bucket and its objects.</p> <p>For more information about bucket access permissions, see <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-understanding-bucket-permissions">Understanding bucket permissions in Amazon Lightsail</a> in the </p> <p> <i>Amazon Lightsail Developer Guide</i>.</p>
@@ -34,13 +37,13 @@ var AccessRules = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowPublicOverrides" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowPublicOverrides" }),
         __metadata("design:type", Boolean)
     ], AccessRules.prototype, "allowPublicOverrides", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=getObject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=getObject" }),
         __metadata("design:type", String)
     ], AccessRules.prototype, "getObject", void 0);
     return AccessRules;
-}(SpeakeasyBase));
-export { AccessRules };
+}(utils_1.SpeakeasyBase));
+exports.AccessRules = AccessRules;

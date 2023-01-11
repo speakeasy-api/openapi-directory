@@ -11,7 +11,7 @@ export class ChangeDiscoverabilityRequest extends SpeakeasyBase {
 
 export class ChangeDiscoverabilityResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  body?: Uint8Array;
+  changeDiscoverability200TextPlainObject?: string;
 
   @SpeakeasyMetadata()
   contentType: string;

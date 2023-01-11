@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EndpointItemResponse } from "./endpointitemresponse";
-import { EventItemResponse } from "./eventitemresponse";
-// ItemResponse
-/**
- * Provides information about the results of a request to create or update an endpoint that's associated with an event.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ItemResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var endpointitemresponse_1 = require("./endpointitemresponse");
+var eventitemresponse_1 = require("./eventitemresponse");
 var ItemResponse = /** @class */ (function (_super) {
     __extends(ItemResponse, _super);
     function ItemResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointItemResponse" }),
-        __metadata("design:type", EndpointItemResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointItemResponse" }),
+        __metadata("design:type", endpointitemresponse_1.EndpointItemResponse)
     ], ItemResponse.prototype, "endpointItemResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventsItemResponse", elemType: EventItemResponse }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventsItemResponse", elemType: eventitemresponse_1.EventItemResponse }),
+        __metadata("design:type", Object)
     ], ItemResponse.prototype, "eventsItemResponse", void 0);
     return ItemResponse;
-}(SpeakeasyBase));
-export { ItemResponse };
+}(utils_1.SpeakeasyBase));
+exports.ItemResponse = ItemResponse;

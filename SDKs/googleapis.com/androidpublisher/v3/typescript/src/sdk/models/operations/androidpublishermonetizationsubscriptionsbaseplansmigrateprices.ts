@@ -80,7 +80,7 @@ export class AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResp
   contentType: string;
 
   @SpeakeasyMetadata()
-  migrateBasePlanPricesResponse?: Map<string, any>;
+  migrateBasePlanPricesResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

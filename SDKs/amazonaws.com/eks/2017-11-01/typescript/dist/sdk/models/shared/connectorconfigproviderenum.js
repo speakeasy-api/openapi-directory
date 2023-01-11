@@ -1,4 +1,7 @@
-export var ConnectorConfigProviderEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConnectorConfigProviderEnum = void 0;
+var ConnectorConfigProviderEnum;
 (function (ConnectorConfigProviderEnum) {
     ConnectorConfigProviderEnum["EksAnywhere"] = "EKS_ANYWHERE";
     ConnectorConfigProviderEnum["Anthos"] = "ANTHOS";
@@ -9,4 +12,4 @@ export var ConnectorConfigProviderEnum;
     ConnectorConfigProviderEnum["Rancher"] = "RANCHER";
     ConnectorConfigProviderEnum["Ec2"] = "EC2";
     ConnectorConfigProviderEnum["Other"] = "OTHER";
-})(ConnectorConfigProviderEnum || (ConnectorConfigProviderEnum = {}));
+})(ConnectorConfigProviderEnum = exports.ConnectorConfigProviderEnum || (exports.ConnectorConfigProviderEnum = {}));

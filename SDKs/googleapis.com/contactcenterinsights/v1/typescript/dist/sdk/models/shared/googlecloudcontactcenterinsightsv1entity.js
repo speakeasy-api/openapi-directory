@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1SentimentData } from "./googlecloudcontactcenterinsightsv1sentimentdata";
-export var GoogleCloudContactcenterinsightsV1EntityTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1Entity = exports.GoogleCloudContactcenterinsightsV1EntityTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1sentimentdata_1 = require("./googlecloudcontactcenterinsightsv1sentimentdata");
+var GoogleCloudContactcenterinsightsV1EntityTypeEnum;
 (function (GoogleCloudContactcenterinsightsV1EntityTypeEnum) {
     GoogleCloudContactcenterinsightsV1EntityTypeEnum["TypeUnspecified"] = "TYPE_UNSPECIFIED";
     GoogleCloudContactcenterinsightsV1EntityTypeEnum["Person"] = "PERSON";
@@ -39,36 +42,32 @@ export var GoogleCloudContactcenterinsightsV1EntityTypeEnum;
     GoogleCloudContactcenterinsightsV1EntityTypeEnum["Date"] = "DATE";
     GoogleCloudContactcenterinsightsV1EntityTypeEnum["Number"] = "NUMBER";
     GoogleCloudContactcenterinsightsV1EntityTypeEnum["Price"] = "PRICE";
-})(GoogleCloudContactcenterinsightsV1EntityTypeEnum || (GoogleCloudContactcenterinsightsV1EntityTypeEnum = {}));
-// GoogleCloudContactcenterinsightsV1Entity
-/**
- * The data for an entity annotation. Represents a phrase in the conversation that is a known entity, such as a person, an organization, or location.
-**/
+})(GoogleCloudContactcenterinsightsV1EntityTypeEnum = exports.GoogleCloudContactcenterinsightsV1EntityTypeEnum || (exports.GoogleCloudContactcenterinsightsV1EntityTypeEnum = {}));
 var GoogleCloudContactcenterinsightsV1Entity = /** @class */ (function (_super) {
     __extends(GoogleCloudContactcenterinsightsV1Entity, _super);
     function GoogleCloudContactcenterinsightsV1Entity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1Entity.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], GoogleCloudContactcenterinsightsV1Entity.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=salience" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=salience" }),
         __metadata("design:type", Number)
     ], GoogleCloudContactcenterinsightsV1Entity.prototype, "salience", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sentiment" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1SentimentData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sentiment" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1sentimentdata_1.GoogleCloudContactcenterinsightsV1SentimentData)
     ], GoogleCloudContactcenterinsightsV1Entity.prototype, "sentiment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1Entity.prototype, "type", void 0);
     return GoogleCloudContactcenterinsightsV1Entity;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1Entity };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1Entity = GoogleCloudContactcenterinsightsV1Entity;

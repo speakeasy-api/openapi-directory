@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetListRoleTagsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetListRoleTagsResponse = exports.GetListRoleTagsRequest = exports.GetListRoleTagsHeaders = exports.GetListRoleTagsQueryParams = exports.GetListRoleTagsVersionEnum = exports.GetListRoleTagsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetListRoleTagsActionEnum;
 (function (GetListRoleTagsActionEnum) {
     GetListRoleTagsActionEnum["ListRoleTags"] = "ListRoleTags";
-})(GetListRoleTagsActionEnum || (GetListRoleTagsActionEnum = {}));
-export var GetListRoleTagsVersionEnum;
+})(GetListRoleTagsActionEnum = exports.GetListRoleTagsActionEnum || (exports.GetListRoleTagsActionEnum = {}));
+var GetListRoleTagsVersionEnum;
 (function (GetListRoleTagsVersionEnum) {
     GetListRoleTagsVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetListRoleTagsVersionEnum || (GetListRoleTagsVersionEnum = {}));
+})(GetListRoleTagsVersionEnum = exports.GetListRoleTagsVersionEnum || (exports.GetListRoleTagsVersionEnum = {}));
 var GetListRoleTagsQueryParams = /** @class */ (function (_super) {
     __extends(GetListRoleTagsQueryParams, _super);
     function GetListRoleTagsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetListRoleTagsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetListRoleTagsQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
         __metadata("design:type", Number)
     ], GetListRoleTagsQueryParams.prototype, "maxItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RoleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=RoleName" }),
         __metadata("design:type", String)
     ], GetListRoleTagsQueryParams.prototype, "roleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetListRoleTagsQueryParams.prototype, "version", void 0);
     return GetListRoleTagsQueryParams;
-}(SpeakeasyBase));
-export { GetListRoleTagsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetListRoleTagsQueryParams = GetListRoleTagsQueryParams;
 var GetListRoleTagsHeaders = /** @class */ (function (_super) {
     __extends(GetListRoleTagsHeaders, _super);
     function GetListRoleTagsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetListRoleTagsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetListRoleTagsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetListRoleTagsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetListRoleTagsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetListRoleTagsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetListRoleTagsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetListRoleTagsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetListRoleTagsHeaders;
-}(SpeakeasyBase));
-export { GetListRoleTagsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetListRoleTagsHeaders = GetListRoleTagsHeaders;
 var GetListRoleTagsRequest = /** @class */ (function (_super) {
     __extends(GetListRoleTagsRequest, _super);
     function GetListRoleTagsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListRoleTagsQueryParams)
     ], GetListRoleTagsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListRoleTagsHeaders)
     ], GetListRoleTagsRequest.prototype, "headers", void 0);
     return GetListRoleTagsRequest;
-}(SpeakeasyBase));
-export { GetListRoleTagsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetListRoleTagsRequest = GetListRoleTagsRequest;
 var GetListRoleTagsResponse = /** @class */ (function (_super) {
     __extends(GetListRoleTagsResponse, _super);
     function GetListRoleTagsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetListRoleTagsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetListRoleTagsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetListRoleTagsResponse.prototype, "statusCode", void 0);
     return GetListRoleTagsResponse;
-}(SpeakeasyBase));
-export { GetListRoleTagsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetListRoleTagsResponse = GetListRoleTagsResponse;

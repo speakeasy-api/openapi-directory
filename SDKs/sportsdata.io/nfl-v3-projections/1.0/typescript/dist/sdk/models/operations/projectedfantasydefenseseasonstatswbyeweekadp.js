@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ProjectedFantasyDefenseSeasonStatsWByeWeekAdpFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectedFantasyDefenseSeasonStatsWByeWeekAdpResponse = exports.ProjectedFantasyDefenseSeasonStatsWByeWeekAdpRequest = exports.ProjectedFantasyDefenseSeasonStatsWByeWeekAdpPathParams = exports.ProjectedFantasyDefenseSeasonStatsWByeWeekAdpFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ProjectedFantasyDefenseSeasonStatsWByeWeekAdpFormatEnum;
 (function (ProjectedFantasyDefenseSeasonStatsWByeWeekAdpFormatEnum) {
     ProjectedFantasyDefenseSeasonStatsWByeWeekAdpFormatEnum["Xml"] = "XML";
     ProjectedFantasyDefenseSeasonStatsWByeWeekAdpFormatEnum["Json"] = "JSON";
-})(ProjectedFantasyDefenseSeasonStatsWByeWeekAdpFormatEnum || (ProjectedFantasyDefenseSeasonStatsWByeWeekAdpFormatEnum = {}));
+})(ProjectedFantasyDefenseSeasonStatsWByeWeekAdpFormatEnum = exports.ProjectedFantasyDefenseSeasonStatsWByeWeekAdpFormatEnum || (exports.ProjectedFantasyDefenseSeasonStatsWByeWeekAdpFormatEnum = {}));
 var ProjectedFantasyDefenseSeasonStatsWByeWeekAdpPathParams = /** @class */ (function (_super) {
     __extends(ProjectedFantasyDefenseSeasonStatsWByeWeekAdpPathParams, _super);
     function ProjectedFantasyDefenseSeasonStatsWByeWeekAdpPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], ProjectedFantasyDefenseSeasonStatsWByeWeekAdpPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], ProjectedFantasyDefenseSeasonStatsWByeWeekAdpPathParams.prototype, "season", void 0);
     return ProjectedFantasyDefenseSeasonStatsWByeWeekAdpPathParams;
-}(SpeakeasyBase));
-export { ProjectedFantasyDefenseSeasonStatsWByeWeekAdpPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedFantasyDefenseSeasonStatsWByeWeekAdpPathParams = ProjectedFantasyDefenseSeasonStatsWByeWeekAdpPathParams;
 var ProjectedFantasyDefenseSeasonStatsWByeWeekAdpRequest = /** @class */ (function (_super) {
     __extends(ProjectedFantasyDefenseSeasonStatsWByeWeekAdpRequest, _super);
     function ProjectedFantasyDefenseSeasonStatsWByeWeekAdpRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProjectedFantasyDefenseSeasonStatsWByeWeekAdpPathParams)
     ], ProjectedFantasyDefenseSeasonStatsWByeWeekAdpRequest.prototype, "pathParams", void 0);
     return ProjectedFantasyDefenseSeasonStatsWByeWeekAdpRequest;
-}(SpeakeasyBase));
-export { ProjectedFantasyDefenseSeasonStatsWByeWeekAdpRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedFantasyDefenseSeasonStatsWByeWeekAdpRequest = ProjectedFantasyDefenseSeasonStatsWByeWeekAdpRequest;
 var ProjectedFantasyDefenseSeasonStatsWByeWeekAdpResponse = /** @class */ (function (_super) {
     __extends(ProjectedFantasyDefenseSeasonStatsWByeWeekAdpResponse, _super);
     function ProjectedFantasyDefenseSeasonStatsWByeWeekAdpResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProjectedFantasyDefenseSeasonStatsWByeWeekAdpResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ProjectedFantasyDefenseSeasonStatsWByeWeekAdpResponse.prototype, "fantasyDefenseSeasonProjections", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProjectedFantasyDefenseSeasonStatsWByeWeekAdpResponse.prototype, "statusCode", void 0);
     return ProjectedFantasyDefenseSeasonStatsWByeWeekAdpResponse;
-}(SpeakeasyBase));
-export { ProjectedFantasyDefenseSeasonStatsWByeWeekAdpResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedFantasyDefenseSeasonStatsWByeWeekAdpResponse = ProjectedFantasyDefenseSeasonStatsWByeWeekAdpResponse;

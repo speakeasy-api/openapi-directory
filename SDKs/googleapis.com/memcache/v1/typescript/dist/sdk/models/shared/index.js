@@ -1,21 +1,37 @@
-export * from "./altenum";
-export * from "./applyparametersrequest";
-export * from "./googlecloudmemcachev1maintenancepolicy";
-export * from "./instance";
-export * from "./instancemessage";
-export * from "./listinstancesresponse";
-export * from "./listlocationsresponse";
-export * from "./listoperationsresponse";
-export * from "./location";
-export * from "./maintenanceschedule";
-export * from "./memcacheparameters";
-export * from "./node";
-export * from "./nodeconfig";
-export * from "./operation";
-export * from "./reschedulemaintenancerequest";
-export * from "./security";
-export * from "./status";
-export * from "./timeofday";
-export * from "./updateparametersrequest";
-export * from "./weeklymaintenancewindow";
-export * from "./xgafvenum";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./altenum"), exports);
+__exportStar(require("./applyparametersrequest"), exports);
+__exportStar(require("./googlecloudmemcachev1maintenancepolicy"), exports);
+__exportStar(require("./instance"), exports);
+__exportStar(require("./instancemessage"), exports);
+__exportStar(require("./listinstancesresponse"), exports);
+__exportStar(require("./listlocationsresponse"), exports);
+__exportStar(require("./listoperationsresponse"), exports);
+__exportStar(require("./location"), exports);
+__exportStar(require("./maintenanceschedule"), exports);
+__exportStar(require("./memcacheparameters"), exports);
+__exportStar(require("./node"), exports);
+__exportStar(require("./nodeconfig"), exports);
+__exportStar(require("./operation"), exports);
+__exportStar(require("./reschedulemaintenancerequest"), exports);
+__exportStar(require("./security"), exports);
+__exportStar(require("./status"), exports);
+__exportStar(require("./timeofday"), exports);
+__exportStar(require("./updateparametersrequest"), exports);
+__exportStar(require("./weeklymaintenancewindow"), exports);
+__exportStar(require("./xgafvenum"), exports);

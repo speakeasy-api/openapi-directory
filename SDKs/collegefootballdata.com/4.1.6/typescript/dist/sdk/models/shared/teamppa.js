@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,144 +23,146 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamPpa = exports.TeamPpaOffense = exports.TeamPpaOffenseCumulative = exports.TeamPpaDefense = exports.TeamPpaDefenseCumulative = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamPpaDefenseCumulative = /** @class */ (function (_super) {
     __extends(TeamPpaDefenseCumulative, _super);
     function TeamPpaDefenseCumulative() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passing" }),
         __metadata("design:type", Number)
     ], TeamPpaDefenseCumulative.prototype, "passing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rushing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rushing" }),
         __metadata("design:type", Number)
     ], TeamPpaDefenseCumulative.prototype, "rushing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], TeamPpaDefenseCumulative.prototype, "total", void 0);
     return TeamPpaDefenseCumulative;
-}(SpeakeasyBase));
-export { TeamPpaDefenseCumulative };
+}(utils_1.SpeakeasyBase));
+exports.TeamPpaDefenseCumulative = TeamPpaDefenseCumulative;
 var TeamPpaDefense = /** @class */ (function (_super) {
     __extends(TeamPpaDefense, _super);
     function TeamPpaDefense() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cumulative" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cumulative" }),
         __metadata("design:type", TeamPpaDefenseCumulative)
     ], TeamPpaDefense.prototype, "cumulative", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstDown" }),
         __metadata("design:type", Number)
     ], TeamPpaDefense.prototype, "firstDown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overall" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overall" }),
         __metadata("design:type", Number)
     ], TeamPpaDefense.prototype, "overall", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passing" }),
         __metadata("design:type", Number)
     ], TeamPpaDefense.prototype, "passing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rushing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rushing" }),
         __metadata("design:type", Number)
     ], TeamPpaDefense.prototype, "rushing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondDown" }),
         __metadata("design:type", Number)
     ], TeamPpaDefense.prototype, "secondDown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thirdDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thirdDown" }),
         __metadata("design:type", Number)
     ], TeamPpaDefense.prototype, "thirdDown", void 0);
     return TeamPpaDefense;
-}(SpeakeasyBase));
-export { TeamPpaDefense };
+}(utils_1.SpeakeasyBase));
+exports.TeamPpaDefense = TeamPpaDefense;
 var TeamPpaOffenseCumulative = /** @class */ (function (_super) {
     __extends(TeamPpaOffenseCumulative, _super);
     function TeamPpaOffenseCumulative() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passing" }),
         __metadata("design:type", Number)
     ], TeamPpaOffenseCumulative.prototype, "passing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rushing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rushing" }),
         __metadata("design:type", Number)
     ], TeamPpaOffenseCumulative.prototype, "rushing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], TeamPpaOffenseCumulative.prototype, "total", void 0);
     return TeamPpaOffenseCumulative;
-}(SpeakeasyBase));
-export { TeamPpaOffenseCumulative };
+}(utils_1.SpeakeasyBase));
+exports.TeamPpaOffenseCumulative = TeamPpaOffenseCumulative;
 var TeamPpaOffense = /** @class */ (function (_super) {
     __extends(TeamPpaOffense, _super);
     function TeamPpaOffense() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cumulative" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cumulative" }),
         __metadata("design:type", TeamPpaOffenseCumulative)
     ], TeamPpaOffense.prototype, "cumulative", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstDown" }),
         __metadata("design:type", Number)
     ], TeamPpaOffense.prototype, "firstDown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overall" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overall" }),
         __metadata("design:type", Number)
     ], TeamPpaOffense.prototype, "overall", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passing" }),
         __metadata("design:type", Number)
     ], TeamPpaOffense.prototype, "passing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rushing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rushing" }),
         __metadata("design:type", Number)
     ], TeamPpaOffense.prototype, "rushing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondDown" }),
         __metadata("design:type", Number)
     ], TeamPpaOffense.prototype, "secondDown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thirdDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thirdDown" }),
         __metadata("design:type", Number)
     ], TeamPpaOffense.prototype, "thirdDown", void 0);
     return TeamPpaOffense;
-}(SpeakeasyBase));
-export { TeamPpaOffense };
+}(utils_1.SpeakeasyBase));
+exports.TeamPpaOffense = TeamPpaOffense;
 var TeamPpa = /** @class */ (function (_super) {
     __extends(TeamPpa, _super);
     function TeamPpa() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conference" }),
         __metadata("design:type", String)
     ], TeamPpa.prototype, "conference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defense" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defense" }),
         __metadata("design:type", TeamPpaDefense)
     ], TeamPpa.prototype, "defense", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offense" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offense" }),
         __metadata("design:type", TeamPpaOffense)
     ], TeamPpa.prototype, "offense", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=season" }),
         __metadata("design:type", Number)
     ], TeamPpa.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team" }),
         __metadata("design:type", String)
     ], TeamPpa.prototype, "team", void 0);
     return TeamPpa;
-}(SpeakeasyBase));
-export { TeamPpa };
+}(utils_1.SpeakeasyBase));
+exports.TeamPpa = TeamPpa;

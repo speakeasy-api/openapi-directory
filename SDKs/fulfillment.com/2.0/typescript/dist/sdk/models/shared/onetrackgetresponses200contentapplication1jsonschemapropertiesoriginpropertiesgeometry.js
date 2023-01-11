@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry = exports.OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum;
 (function (OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum) {
     OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum["Point"] = "Point";
     OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum["LineString"] = "LineString";
@@ -31,7 +34,7 @@ export var OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginP
     OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum["MultiPoint"] = "MultiPoint";
     OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum["MultiLineString"] = "MultiLineString";
     OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum["MultiPolygon"] = "MultiPolygon";
-})(OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum || (OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum = {}));
+})(OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum = exports.OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum || (exports.OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometryTypeEnum = {}));
 // OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry
 /**
  * GeoJSon geometry
@@ -43,13 +46,13 @@ var OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginProperti
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coordinates" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coordinates" }),
         __metadata("design:type", Object)
     ], OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry.prototype, "coordinates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry.prototype, "type", void 0);
     return OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry;
-}(SpeakeasyBase));
-export { OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry };
+}(utils_1.SpeakeasyBase));
+exports.OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry = OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry;

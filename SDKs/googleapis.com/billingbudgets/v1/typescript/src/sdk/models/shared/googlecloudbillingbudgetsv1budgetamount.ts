@@ -9,7 +9,7 @@ import { GoogleTypeMoney } from "./googletypemoney";
 **/
 export class GoogleCloudBillingBudgetsV1BudgetAmount extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=lastPeriodAmount" })
-  lastPeriodAmount?: Map<string, any>;
+  lastPeriodAmount?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=specifiedAmount" })
   specifiedAmount?: GoogleTypeMoney;

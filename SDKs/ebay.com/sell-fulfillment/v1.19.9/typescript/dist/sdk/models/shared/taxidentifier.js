@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaxIdentifier = void 0;
+var utils_1 = require("../../../internal/utils");
 // TaxIdentifier
 /**
  * This type is used by the taxIdentifier container that is returned in getOrder. The taxIdentifier container consists of taxpayer identification information for buyers from Italy, Spain, or Guatemala. It is currently only returned for orders occurring on the eBay Italy or eBay Spain marketplaces. Note: Currently, the taxIdentifier container is only returned in getOrder and not in getOrders. So, if a seller wanted to view a buyer's tax information for a particular order returned in getOrders, that seller would need to use the orderId value for that particular order, and then run a getOrder call against that order ID.
@@ -33,17 +36,17 @@ var TaxIdentifier = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuingCountry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuingCountry" }),
         __metadata("design:type", String)
     ], TaxIdentifier.prototype, "issuingCountry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxIdentifierType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxIdentifierType" }),
         __metadata("design:type", String)
     ], TaxIdentifier.prototype, "taxIdentifierType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxpayerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxpayerId" }),
         __metadata("design:type", String)
     ], TaxIdentifier.prototype, "taxpayerId", void 0);
     return TaxIdentifier;
-}(SpeakeasyBase));
-export { TaxIdentifier };
+}(utils_1.SpeakeasyBase));
+exports.TaxIdentifier = TaxIdentifier;

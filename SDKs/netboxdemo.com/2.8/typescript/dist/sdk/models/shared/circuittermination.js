@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,93 +23,95 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedCable } from "./nestedcable";
-import { NestedCircuit } from "./nestedcircuit";
-import { NestedSite } from "./nestedsite";
-export var CircuitTerminationConnectionStatusLabelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CircuitTermination = exports.CircuitTerminationTerminationEnum = exports.CircuitTerminationConnectionStatus = exports.CircuitTerminationConnectionStatusLabelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedcable_1 = require("./nestedcable");
+var nestedcircuit_1 = require("./nestedcircuit");
+var nestedsite_1 = require("./nestedsite");
+var CircuitTerminationConnectionStatusLabelEnum;
 (function (CircuitTerminationConnectionStatusLabelEnum) {
     CircuitTerminationConnectionStatusLabelEnum["NotConnected"] = "Not Connected";
     CircuitTerminationConnectionStatusLabelEnum["Connected"] = "Connected";
-})(CircuitTerminationConnectionStatusLabelEnum || (CircuitTerminationConnectionStatusLabelEnum = {}));
+})(CircuitTerminationConnectionStatusLabelEnum = exports.CircuitTerminationConnectionStatusLabelEnum || (exports.CircuitTerminationConnectionStatusLabelEnum = {}));
 var CircuitTerminationConnectionStatus = /** @class */ (function (_super) {
     __extends(CircuitTerminationConnectionStatus, _super);
     function CircuitTerminationConnectionStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], CircuitTerminationConnectionStatus.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Boolean)
     ], CircuitTerminationConnectionStatus.prototype, "value", void 0);
     return CircuitTerminationConnectionStatus;
-}(SpeakeasyBase));
-export { CircuitTerminationConnectionStatus };
-export var CircuitTerminationTerminationEnum;
+}(utils_1.SpeakeasyBase));
+exports.CircuitTerminationConnectionStatus = CircuitTerminationConnectionStatus;
+var CircuitTerminationTerminationEnum;
 (function (CircuitTerminationTerminationEnum) {
     CircuitTerminationTerminationEnum["A"] = "A";
     CircuitTerminationTerminationEnum["Z"] = "Z";
-})(CircuitTerminationTerminationEnum || (CircuitTerminationTerminationEnum = {}));
+})(CircuitTerminationTerminationEnum = exports.CircuitTerminationTerminationEnum || (exports.CircuitTerminationTerminationEnum = {}));
 var CircuitTermination = /** @class */ (function (_super) {
     __extends(CircuitTermination, _super);
     function CircuitTermination() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cable" }),
-        __metadata("design:type", NestedCable)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cable" }),
+        __metadata("design:type", nestedcable_1.NestedCable)
     ], CircuitTermination.prototype, "cable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=circuit" }),
-        __metadata("design:type", NestedCircuit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=circuit" }),
+        __metadata("design:type", nestedcircuit_1.NestedCircuit)
     ], CircuitTermination.prototype, "circuit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connected_endpoint" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connected_endpoint" }),
+        __metadata("design:type", Object)
     ], CircuitTermination.prototype, "connectedEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connected_endpoint_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connected_endpoint_type" }),
         __metadata("design:type", String)
     ], CircuitTermination.prototype, "connectedEndpointType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connection_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connection_status" }),
         __metadata("design:type", CircuitTerminationConnectionStatus)
     ], CircuitTermination.prototype, "connectionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CircuitTermination.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], CircuitTermination.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port_speed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port_speed" }),
         __metadata("design:type", Number)
     ], CircuitTermination.prototype, "portSpeed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pp_info" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pp_info" }),
         __metadata("design:type", String)
     ], CircuitTermination.prototype, "ppInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=site" }),
-        __metadata("design:type", NestedSite)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=site" }),
+        __metadata("design:type", nestedsite_1.NestedSite)
     ], CircuitTermination.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=term_side" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=term_side" }),
         __metadata("design:type", String)
     ], CircuitTermination.prototype, "termSide", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upstream_speed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upstream_speed" }),
         __metadata("design:type", Number)
     ], CircuitTermination.prototype, "upstreamSpeed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=xconnect_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=xconnect_id" }),
         __metadata("design:type", String)
     ], CircuitTermination.prototype, "xconnectId", void 0);
     return CircuitTermination;
-}(SpeakeasyBase));
-export { CircuitTermination };
+}(utils_1.SpeakeasyBase));
+exports.CircuitTermination = CircuitTermination;

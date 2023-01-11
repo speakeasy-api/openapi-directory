@@ -29,7 +29,7 @@ export class StreamDescriptionSummary extends SpeakeasyBase {
   retentionPeriodHours: number;
 
   @SpeakeasyMetadata({ data: "json, name=StreamARN" })
-  streamArn: string;
+  streamARN: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamCreationTimestamp" })
   streamCreationTimestamp: Date;

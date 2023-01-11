@@ -4,13 +4,13 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class MovePadUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=destinationID" })
-  destinationId?: string;
+  destinationID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=force" })
   force?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sourceID" })
-  sourceId?: string;
+  sourceID?: string;
 }
 
 
@@ -19,7 +19,7 @@ export class MovePadUsingPost200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -31,7 +31,7 @@ export class MovePadUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class MovePadUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class MovePadUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class MovePadUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  movePadUsingPost200ApplicationJsonObject?: MovePadUsingPost200ApplicationJson;
+  movePadUsingPOST200ApplicationJSONObject?: MovePadUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  movePadUsingPost400ApplicationJsonObject?: MovePadUsingPost400ApplicationJson;
+  movePadUsingPOST400ApplicationJSONObject?: MovePadUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  movePadUsingPost401ApplicationJsonObject?: MovePadUsingPost401ApplicationJson;
+  movePadUsingPOST401ApplicationJSONObject?: MovePadUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  movePadUsingPost500ApplicationJsonObject?: MovePadUsingPost500ApplicationJson;
+  movePadUsingPOST500ApplicationJSONObject?: MovePadUsingPost500ApplicationJson;
 }

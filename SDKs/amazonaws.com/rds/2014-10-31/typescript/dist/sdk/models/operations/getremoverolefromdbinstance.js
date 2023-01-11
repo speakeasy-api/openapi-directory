@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetRemoveRoleFromDbInstanceActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRemoveRoleFromDbInstanceResponse = exports.GetRemoveRoleFromDbInstanceRequest = exports.GetRemoveRoleFromDbInstanceHeaders = exports.GetRemoveRoleFromDbInstanceQueryParams = exports.GetRemoveRoleFromDbInstanceVersionEnum = exports.GetRemoveRoleFromDbInstanceActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetRemoveRoleFromDbInstanceActionEnum;
 (function (GetRemoveRoleFromDbInstanceActionEnum) {
     GetRemoveRoleFromDbInstanceActionEnum["RemoveRoleFromDbInstance"] = "RemoveRoleFromDBInstance";
-})(GetRemoveRoleFromDbInstanceActionEnum || (GetRemoveRoleFromDbInstanceActionEnum = {}));
-export var GetRemoveRoleFromDbInstanceVersionEnum;
+})(GetRemoveRoleFromDbInstanceActionEnum = exports.GetRemoveRoleFromDbInstanceActionEnum || (exports.GetRemoveRoleFromDbInstanceActionEnum = {}));
+var GetRemoveRoleFromDbInstanceVersionEnum;
 (function (GetRemoveRoleFromDbInstanceVersionEnum) {
     GetRemoveRoleFromDbInstanceVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(GetRemoveRoleFromDbInstanceVersionEnum || (GetRemoveRoleFromDbInstanceVersionEnum = {}));
+})(GetRemoveRoleFromDbInstanceVersionEnum = exports.GetRemoveRoleFromDbInstanceVersionEnum || (exports.GetRemoveRoleFromDbInstanceVersionEnum = {}));
 var GetRemoveRoleFromDbInstanceQueryParams = /** @class */ (function (_super) {
     __extends(GetRemoveRoleFromDbInstanceQueryParams, _super);
     function GetRemoveRoleFromDbInstanceQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbInstanceQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DBInstanceIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DBInstanceIdentifier" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbInstanceQueryParams.prototype, "dbInstanceIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=FeatureName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=FeatureName" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbInstanceQueryParams.prototype, "featureName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=RoleArn" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbInstanceQueryParams.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbInstanceQueryParams.prototype, "version", void 0);
     return GetRemoveRoleFromDbInstanceQueryParams;
-}(SpeakeasyBase));
-export { GetRemoveRoleFromDbInstanceQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveRoleFromDbInstanceQueryParams = GetRemoveRoleFromDbInstanceQueryParams;
 var GetRemoveRoleFromDbInstanceHeaders = /** @class */ (function (_super) {
     __extends(GetRemoveRoleFromDbInstanceHeaders, _super);
     function GetRemoveRoleFromDbInstanceHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbInstanceHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbInstanceHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbInstanceHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbInstanceHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbInstanceHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbInstanceHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbInstanceHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetRemoveRoleFromDbInstanceHeaders;
-}(SpeakeasyBase));
-export { GetRemoveRoleFromDbInstanceHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveRoleFromDbInstanceHeaders = GetRemoveRoleFromDbInstanceHeaders;
 var GetRemoveRoleFromDbInstanceRequest = /** @class */ (function (_super) {
     __extends(GetRemoveRoleFromDbInstanceRequest, _super);
     function GetRemoveRoleFromDbInstanceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRemoveRoleFromDbInstanceQueryParams)
     ], GetRemoveRoleFromDbInstanceRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRemoveRoleFromDbInstanceHeaders)
     ], GetRemoveRoleFromDbInstanceRequest.prototype, "headers", void 0);
     return GetRemoveRoleFromDbInstanceRequest;
-}(SpeakeasyBase));
-export { GetRemoveRoleFromDbInstanceRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveRoleFromDbInstanceRequest = GetRemoveRoleFromDbInstanceRequest;
 var GetRemoveRoleFromDbInstanceResponse = /** @class */ (function (_super) {
     __extends(GetRemoveRoleFromDbInstanceResponse, _super);
     function GetRemoveRoleFromDbInstanceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetRemoveRoleFromDbInstanceResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRemoveRoleFromDbInstanceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRemoveRoleFromDbInstanceResponse.prototype, "statusCode", void 0);
     return GetRemoveRoleFromDbInstanceResponse;
-}(SpeakeasyBase));
-export { GetRemoveRoleFromDbInstanceResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveRoleFromDbInstanceResponse = GetRemoveRoleFromDbInstanceResponse;

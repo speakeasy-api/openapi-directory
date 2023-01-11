@@ -74,7 +74,7 @@ export class GameSingle extends SpeakeasyBase {
   added?: number;
 
   @SpeakeasyMetadata({ data: "json, name=added_by_status" })
-  addedByStatus?: Map<string, any>;
+  addedByStatus?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=additions_count" })
   additionsCount?: number;
@@ -140,13 +140,13 @@ export class GameSingle extends SpeakeasyBase {
   ratingTop?: number;
 
   @SpeakeasyMetadata({ data: "json, name=ratings" })
-  ratings?: Map<string, any>;
+  ratings?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ratings_count" })
   ratingsCount?: number;
 
   @SpeakeasyMetadata({ data: "json, name=reactions" })
-  reactions?: Map<string, any>;
+  reactions?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=reddit_count" })
   redditCount?: number;

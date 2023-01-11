@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,235 +14,260 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var DriveFilesInsertVisibilityEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DriveFilesInsertResponse = exports.DriveFilesInsertRequest = exports.DriveFilesInsertSecurity = exports.DriveFilesInsertSecurityOption4 = exports.DriveFilesInsertSecurityOption3 = exports.DriveFilesInsertSecurityOption2 = exports.DriveFilesInsertSecurityOption1 = exports.DriveFilesInsertQueryParams = exports.DriveFilesInsertVisibilityEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var DriveFilesInsertVisibilityEnum;
 (function (DriveFilesInsertVisibilityEnum) {
     DriveFilesInsertVisibilityEnum["Default"] = "DEFAULT";
     DriveFilesInsertVisibilityEnum["Private"] = "PRIVATE";
-})(DriveFilesInsertVisibilityEnum || (DriveFilesInsertVisibilityEnum = {}));
+})(DriveFilesInsertVisibilityEnum = exports.DriveFilesInsertVisibilityEnum || (exports.DriveFilesInsertVisibilityEnum = {}));
 var DriveFilesInsertQueryParams = /** @class */ (function (_super) {
     __extends(DriveFilesInsertQueryParams, _super);
     function DriveFilesInsertQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], DriveFilesInsertQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=convert" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=convert" }),
         __metadata("design:type", Boolean)
     ], DriveFilesInsertQueryParams.prototype, "convert", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=enforceSingleParent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=enforceSingleParent" }),
         __metadata("design:type", Boolean)
     ], DriveFilesInsertQueryParams.prototype, "enforceSingleParent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], DriveFilesInsertQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includeLabels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includeLabels" }),
         __metadata("design:type", String)
     ], DriveFilesInsertQueryParams.prototype, "includeLabels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includePermissionsForView" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includePermissionsForView" }),
         __metadata("design:type", String)
     ], DriveFilesInsertQueryParams.prototype, "includePermissionsForView", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], DriveFilesInsertQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], DriveFilesInsertQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ocr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ocr" }),
         __metadata("design:type", Boolean)
     ], DriveFilesInsertQueryParams.prototype, "ocr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ocrLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ocrLanguage" }),
         __metadata("design:type", String)
     ], DriveFilesInsertQueryParams.prototype, "ocrLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pinned" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pinned" }),
         __metadata("design:type", Boolean)
     ], DriveFilesInsertQueryParams.prototype, "pinned", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], DriveFilesInsertQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], DriveFilesInsertQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=supportsAllDrives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=supportsAllDrives" }),
         __metadata("design:type", Boolean)
     ], DriveFilesInsertQueryParams.prototype, "supportsAllDrives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=supportsTeamDrives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=supportsTeamDrives" }),
         __metadata("design:type", Boolean)
     ], DriveFilesInsertQueryParams.prototype, "supportsTeamDrives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timedTextLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timedTextLanguage" }),
         __metadata("design:type", String)
     ], DriveFilesInsertQueryParams.prototype, "timedTextLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timedTextTrackName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timedTextTrackName" }),
         __metadata("design:type", String)
     ], DriveFilesInsertQueryParams.prototype, "timedTextTrackName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=useContentAsIndexableText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=useContentAsIndexableText" }),
         __metadata("design:type", Boolean)
     ], DriveFilesInsertQueryParams.prototype, "useContentAsIndexableText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], DriveFilesInsertQueryParams.prototype, "userIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=visibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=visibility" }),
         __metadata("design:type", String)
     ], DriveFilesInsertQueryParams.prototype, "visibility", void 0);
     return DriveFilesInsertQueryParams;
-}(SpeakeasyBase));
-export { DriveFilesInsertQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesInsertQueryParams = DriveFilesInsertQueryParams;
 var DriveFilesInsertSecurityOption1 = /** @class */ (function (_super) {
     __extends(DriveFilesInsertSecurityOption1, _super);
     function DriveFilesInsertSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveFilesInsertSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveFilesInsertSecurityOption1.prototype, "oauth2c", void 0);
     return DriveFilesInsertSecurityOption1;
-}(SpeakeasyBase));
-export { DriveFilesInsertSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesInsertSecurityOption1 = DriveFilesInsertSecurityOption1;
 var DriveFilesInsertSecurityOption2 = /** @class */ (function (_super) {
     __extends(DriveFilesInsertSecurityOption2, _super);
     function DriveFilesInsertSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveFilesInsertSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveFilesInsertSecurityOption2.prototype, "oauth2c", void 0);
     return DriveFilesInsertSecurityOption2;
-}(SpeakeasyBase));
-export { DriveFilesInsertSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesInsertSecurityOption2 = DriveFilesInsertSecurityOption2;
 var DriveFilesInsertSecurityOption3 = /** @class */ (function (_super) {
     __extends(DriveFilesInsertSecurityOption3, _super);
     function DriveFilesInsertSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveFilesInsertSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveFilesInsertSecurityOption3.prototype, "oauth2c", void 0);
     return DriveFilesInsertSecurityOption3;
-}(SpeakeasyBase));
-export { DriveFilesInsertSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesInsertSecurityOption3 = DriveFilesInsertSecurityOption3;
 var DriveFilesInsertSecurityOption4 = /** @class */ (function (_super) {
     __extends(DriveFilesInsertSecurityOption4, _super);
     function DriveFilesInsertSecurityOption4() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DriveFilesInsertSecurityOption4.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DriveFilesInsertSecurityOption4.prototype, "oauth2c", void 0);
     return DriveFilesInsertSecurityOption4;
-}(SpeakeasyBase));
-export { DriveFilesInsertSecurityOption4 };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesInsertSecurityOption4 = DriveFilesInsertSecurityOption4;
 var DriveFilesInsertSecurity = /** @class */ (function (_super) {
     __extends(DriveFilesInsertSecurity, _super);
     function DriveFilesInsertSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveFilesInsertSecurityOption1)
     ], DriveFilesInsertSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveFilesInsertSecurityOption2)
     ], DriveFilesInsertSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveFilesInsertSecurityOption3)
     ], DriveFilesInsertSecurity.prototype, "option3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DriveFilesInsertSecurityOption4)
     ], DriveFilesInsertSecurity.prototype, "option4", void 0);
     return DriveFilesInsertSecurity;
-}(SpeakeasyBase));
-export { DriveFilesInsertSecurity };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesInsertSecurity = DriveFilesInsertSecurity;
 var DriveFilesInsertRequest = /** @class */ (function (_super) {
     __extends(DriveFilesInsertRequest, _super);
     function DriveFilesInsertRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DriveFilesInsertQueryParams)
     ], DriveFilesInsertRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/octet-stream" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/octet-stream" }),
         __metadata("design:type", Uint8Array)
     ], DriveFilesInsertRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DriveFilesInsertSecurity)
     ], DriveFilesInsertRequest.prototype, "security", void 0);
     return DriveFilesInsertRequest;
-}(SpeakeasyBase));
-export { DriveFilesInsertRequest };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesInsertRequest = DriveFilesInsertRequest;
 var DriveFilesInsertResponse = /** @class */ (function (_super) {
     __extends(DriveFilesInsertResponse, _super);
     function DriveFilesInsertResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DriveFilesInsertResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.File)
     ], DriveFilesInsertResponse.prototype, "file", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DriveFilesInsertResponse.prototype, "statusCode", void 0);
     return DriveFilesInsertResponse;
-}(SpeakeasyBase));
-export { DriveFilesInsertResponse };
+}(utils_1.SpeakeasyBase));
+exports.DriveFilesInsertResponse = DriveFilesInsertResponse;

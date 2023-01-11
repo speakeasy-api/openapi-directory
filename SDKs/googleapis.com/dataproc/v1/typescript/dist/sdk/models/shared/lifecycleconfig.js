@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LifecycleConfigInput = exports.LifecycleConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // LifecycleConfig
 /**
  * Specifies the cluster auto-delete schedule configuration.
@@ -33,24 +36,24 @@ var LifecycleConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoDeleteTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoDeleteTime" }),
         __metadata("design:type", String)
     ], LifecycleConfig.prototype, "autoDeleteTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoDeleteTtl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoDeleteTtl" }),
         __metadata("design:type", String)
     ], LifecycleConfig.prototype, "autoDeleteTtl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=idleDeleteTtl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=idleDeleteTtl" }),
         __metadata("design:type", String)
     ], LifecycleConfig.prototype, "idleDeleteTtl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=idleStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=idleStartTime" }),
         __metadata("design:type", String)
     ], LifecycleConfig.prototype, "idleStartTime", void 0);
     return LifecycleConfig;
-}(SpeakeasyBase));
-export { LifecycleConfig };
+}(utils_1.SpeakeasyBase));
+exports.LifecycleConfig = LifecycleConfig;
 // LifecycleConfigInput
 /**
  * Specifies the cluster auto-delete schedule configuration.
@@ -61,17 +64,17 @@ var LifecycleConfigInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoDeleteTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoDeleteTime" }),
         __metadata("design:type", String)
     ], LifecycleConfigInput.prototype, "autoDeleteTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoDeleteTtl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoDeleteTtl" }),
         __metadata("design:type", String)
     ], LifecycleConfigInput.prototype, "autoDeleteTtl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=idleDeleteTtl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=idleDeleteTtl" }),
         __metadata("design:type", String)
     ], LifecycleConfigInput.prototype, "idleDeleteTtl", void 0);
     return LifecycleConfigInput;
-}(SpeakeasyBase));
-export { LifecycleConfigInput };
+}(utils_1.SpeakeasyBase));
+exports.LifecycleConfigInput = LifecycleConfigInput;

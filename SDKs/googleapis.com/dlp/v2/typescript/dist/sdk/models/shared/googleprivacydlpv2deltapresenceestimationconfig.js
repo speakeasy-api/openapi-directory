@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2StatisticalTable } from "./googleprivacydlpv2statisticaltable";
-import { GooglePrivacyDlpV2QuasiId } from "./googleprivacydlpv2quasiid";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2DeltaPresenceEstimationConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2statisticaltable_1 = require("./googleprivacydlpv2statisticaltable");
+var googleprivacydlpv2quasiid_1 = require("./googleprivacydlpv2quasiid");
 // GooglePrivacyDlpV2DeltaPresenceEstimationConfig
 /**
  * δ-presence metric, used to estimate how likely it is for an attacker to figure out that one given individual appears in a de-identified dataset. Similarly to the k-map metric, we cannot compute δ-presence exactly without knowing the attack dataset, so we use a statistical model instead.
@@ -35,17 +38,17 @@ var GooglePrivacyDlpV2DeltaPresenceEstimationConfig = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auxiliaryTables", elemType: GooglePrivacyDlpV2StatisticalTable }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auxiliaryTables", elemType: googleprivacydlpv2statisticaltable_1.GooglePrivacyDlpV2StatisticalTable }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2DeltaPresenceEstimationConfig.prototype, "auxiliaryTables", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quasiIds", elemType: GooglePrivacyDlpV2QuasiId }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quasiIds", elemType: googleprivacydlpv2quasiid_1.GooglePrivacyDlpV2QuasiId }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2DeltaPresenceEstimationConfig.prototype, "quasiIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionCode" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DeltaPresenceEstimationConfig.prototype, "regionCode", void 0);
     return GooglePrivacyDlpV2DeltaPresenceEstimationConfig;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2DeltaPresenceEstimationConfig };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2DeltaPresenceEstimationConfig = GooglePrivacyDlpV2DeltaPresenceEstimationConfig;

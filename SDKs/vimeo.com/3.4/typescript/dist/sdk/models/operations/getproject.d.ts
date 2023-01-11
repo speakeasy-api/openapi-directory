@@ -14,6 +14,6 @@ export declare class GetProjectRequest extends SpeakeasyBase {
 export declare class GetProjectResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     project?: shared.Project;
 }

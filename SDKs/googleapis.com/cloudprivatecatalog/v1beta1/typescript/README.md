@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CloudprivatecatalogOrganizationsCatalogsSearchRequest, CloudprivatecatalogOrganizationsCatalogsSearchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,29 +30,29 @@ const req: CloudprivatecatalogOrganizationsCatalogsSearchRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    resource: "exercitationem",
+    resource: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "dicta",
+    accessToken: "culpa",
     alt: "media",
-    callback: "aperiam",
-    fields: "et",
-    key: "eveniet",
-    oauthToken: "totam",
-    pageSize: 4490375488917455613,
-    pageToken: "ex",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    pageSize: 8274930044578894929,
+    pageToken: "et",
     prettyPrint: true,
-    query: "deserunt",
-    quotaUser: "excepturi",
-    uploadType: "non",
-    uploadProtocol: "tempora",
+    query: "rerum",
+    quotaUser: "dicta",
+    uploadType: "debitis",
+    uploadProtocol: "voluptatum",
   },
 };
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OffsetInfo } from "./offsetinfo";
-import { ScheduleAByEmployer } from "./scheduleabyemployer";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduleAByEmployerPage = void 0;
+var utils_1 = require("../../../internal/utils");
+var offsetinfo_1 = require("./offsetinfo");
+var scheduleabyemployer_1 = require("./scheduleabyemployer");
 var ScheduleAByEmployerPage = /** @class */ (function (_super) {
     __extends(ScheduleAByEmployerPage, _super);
     function ScheduleAByEmployerPage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
-        __metadata("design:type", OffsetInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
+        __metadata("design:type", offsetinfo_1.OffsetInfo)
     ], ScheduleAByEmployerPage.prototype, "pagination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: ScheduleAByEmployer }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: scheduleabyemployer_1.ScheduleAByEmployer }),
         __metadata("design:type", Array)
     ], ScheduleAByEmployerPage.prototype, "results", void 0);
     return ScheduleAByEmployerPage;
-}(SpeakeasyBase));
-export { ScheduleAByEmployerPage };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleAByEmployerPage = ScheduleAByEmployerPage;

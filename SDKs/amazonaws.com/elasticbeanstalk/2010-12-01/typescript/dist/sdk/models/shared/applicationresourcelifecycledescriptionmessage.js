@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApplicationResourceLifecycleConfig } from "./applicationresourcelifecycleconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationResourceLifecycleDescriptionMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var applicationresourcelifecycleconfig_1 = require("./applicationresourcelifecycleconfig");
 var ApplicationResourceLifecycleDescriptionMessage = /** @class */ (function (_super) {
     __extends(ApplicationResourceLifecycleDescriptionMessage, _super);
     function ApplicationResourceLifecycleDescriptionMessage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ApplicationResourceLifecycleDescriptionMessage.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ApplicationResourceLifecycleConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", applicationresourcelifecycleconfig_1.ApplicationResourceLifecycleConfig)
     ], ApplicationResourceLifecycleDescriptionMessage.prototype, "resourceLifecycleConfig", void 0);
     return ApplicationResourceLifecycleDescriptionMessage;
-}(SpeakeasyBase));
-export { ApplicationResourceLifecycleDescriptionMessage };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationResourceLifecycleDescriptionMessage = ApplicationResourceLifecycleDescriptionMessage;

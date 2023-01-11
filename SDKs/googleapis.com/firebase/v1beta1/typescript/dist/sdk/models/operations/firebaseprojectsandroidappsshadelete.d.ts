@@ -35,6 +35,6 @@ export declare class FirebaseProjectsAndroidAppsShaDeleteRequest extends Speakea
 }
 export declare class FirebaseProjectsAndroidAppsShaDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsDeleteInOrgResponse = exports.TeamsDeleteInOrgRequest = exports.TeamsDeleteInOrgPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamsDeleteInOrgPathParams = /** @class */ (function (_super) {
     __extends(TeamsDeleteInOrgPathParams, _super);
     function TeamsDeleteInOrgPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], TeamsDeleteInOrgPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_slug" }),
         __metadata("design:type", String)
     ], TeamsDeleteInOrgPathParams.prototype, "teamSlug", void 0);
     return TeamsDeleteInOrgPathParams;
-}(SpeakeasyBase));
-export { TeamsDeleteInOrgPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamsDeleteInOrgPathParams = TeamsDeleteInOrgPathParams;
 var TeamsDeleteInOrgRequest = /** @class */ (function (_super) {
     __extends(TeamsDeleteInOrgRequest, _super);
     function TeamsDeleteInOrgRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsDeleteInOrgPathParams)
     ], TeamsDeleteInOrgRequest.prototype, "pathParams", void 0);
     return TeamsDeleteInOrgRequest;
-}(SpeakeasyBase));
-export { TeamsDeleteInOrgRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsDeleteInOrgRequest = TeamsDeleteInOrgRequest;
 var TeamsDeleteInOrgResponse = /** @class */ (function (_super) {
     __extends(TeamsDeleteInOrgResponse, _super);
     function TeamsDeleteInOrgResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsDeleteInOrgResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsDeleteInOrgResponse.prototype, "statusCode", void 0);
     return TeamsDeleteInOrgResponse;
-}(SpeakeasyBase));
-export { TeamsDeleteInOrgResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsDeleteInOrgResponse = TeamsDeleteInOrgResponse;

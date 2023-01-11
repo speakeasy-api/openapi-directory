@@ -8,5 +8,5 @@ export declare class GetBulkDeploymentStatusResponse extends SpeakeasyBase {
     createdAt?: string;
     errorDetails?: ErrorDetail[];
     errorMessage?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

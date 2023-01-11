@@ -70,7 +70,7 @@ export class PostAgentProfileResponse extends SpeakeasyBase {
   internalServerException?: any;
 
   @SpeakeasyMetadata()
-  postAgentProfileResponse?: Map<string, any>;
+  postAgentProfileResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteNetworkFloorPlanResponse = exports.DeleteNetworkFloorPlanRequest = exports.DeleteNetworkFloorPlanPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteNetworkFloorPlanPathParams = /** @class */ (function (_super) {
     __extends(DeleteNetworkFloorPlanPathParams, _super);
     function DeleteNetworkFloorPlanPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=floorPlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=floorPlanId" }),
         __metadata("design:type", String)
     ], DeleteNetworkFloorPlanPathParams.prototype, "floorPlanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], DeleteNetworkFloorPlanPathParams.prototype, "networkId", void 0);
     return DeleteNetworkFloorPlanPathParams;
-}(SpeakeasyBase));
-export { DeleteNetworkFloorPlanPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkFloorPlanPathParams = DeleteNetworkFloorPlanPathParams;
 var DeleteNetworkFloorPlanRequest = /** @class */ (function (_super) {
     __extends(DeleteNetworkFloorPlanRequest, _super);
     function DeleteNetworkFloorPlanRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteNetworkFloorPlanPathParams)
     ], DeleteNetworkFloorPlanRequest.prototype, "pathParams", void 0);
     return DeleteNetworkFloorPlanRequest;
-}(SpeakeasyBase));
-export { DeleteNetworkFloorPlanRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkFloorPlanRequest = DeleteNetworkFloorPlanRequest;
 var DeleteNetworkFloorPlanResponse = /** @class */ (function (_super) {
     __extends(DeleteNetworkFloorPlanResponse, _super);
     function DeleteNetworkFloorPlanResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteNetworkFloorPlanResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteNetworkFloorPlanResponse.prototype, "statusCode", void 0);
     return DeleteNetworkFloorPlanResponse;
-}(SpeakeasyBase));
-export { DeleteNetworkFloorPlanResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkFloorPlanResponse = DeleteNetworkFloorPlanResponse;

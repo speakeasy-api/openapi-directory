@@ -26,6 +26,6 @@ export declare class ReposCreateDeploymentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     deployment?: shared.Deployment;
-    reposCreateDeployment202ApplicationJsonObject?: ReposCreateDeployment202ApplicationJson;
+    reposCreateDeployment202ApplicationJSONObject?: ReposCreateDeployment202ApplicationJson;
     validationError?: shared.ValidationError;
 }

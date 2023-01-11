@@ -38,11 +38,11 @@ export class GetTeamYearsParticipatedResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getTeamYearsParticipated200ApplicationJsonIntegers?: number[];
+  getTeamYearsParticipated200ApplicationJSONIntegers?: number[];
 }

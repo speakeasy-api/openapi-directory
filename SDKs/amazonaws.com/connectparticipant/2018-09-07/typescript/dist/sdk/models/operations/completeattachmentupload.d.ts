@@ -19,7 +19,7 @@ export declare class CompleteAttachmentUploadRequest extends SpeakeasyBase {
 }
 export declare class CompleteAttachmentUploadResponse extends SpeakeasyBase {
     accessDeniedException?: any;
-    completeAttachmentUploadResponse?: Map<string, any>;
+    completeAttachmentUploadResponse?: Record<string, any>;
     conflictException?: any;
     contentType: string;
     internalServerException?: any;

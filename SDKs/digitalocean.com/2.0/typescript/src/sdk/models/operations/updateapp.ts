@@ -1,56 +1,57 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class UpdateAppPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
   id: string;
 }
 
 
 export class UpdateAppRequestBody extends SpeakeasyBase {
-  @Metadata({ data: "json, name=spec" })
+  @SpeakeasyMetadata({ data: "json, name=spec" })
   spec: shared.Onev21apps1Percent7BappIdPercent7D1deploymentsGetResponses200ContentApplication1jsonSchemaPropertiesDeploymentsItemsPropertiesSpec;
 }
 
 
-export class UpdateAppRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: UpdateAppPathParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request: UpdateAppRequestBody;
-}
-
-
 export class UpdateApp401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class UpdateAppRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: UpdateAppPathParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: UpdateAppRequestBody;
+}
+
+
 export class UpdateAppResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  updateApp401ApplicationJsonObject?: UpdateApp401ApplicationJson;
+  @SpeakeasyMetadata()
+  updateApp401ApplicationJSONObject?: UpdateApp401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev21appsPostResponses200ContentApplication1jsonSchema?: shared.Onev21appsPostResponses200ContentApplication1jsonSchema;
 }

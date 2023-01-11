@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ConfigManagementPolicyControllerMonitoringBackendsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigManagementPolicyControllerMonitoring = exports.ConfigManagementPolicyControllerMonitoringBackendsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ConfigManagementPolicyControllerMonitoringBackendsEnum;
 (function (ConfigManagementPolicyControllerMonitoringBackendsEnum) {
     ConfigManagementPolicyControllerMonitoringBackendsEnum["MonitoringBackendUnspecified"] = "MONITORING_BACKEND_UNSPECIFIED";
     ConfigManagementPolicyControllerMonitoringBackendsEnum["Prometheus"] = "PROMETHEUS";
     ConfigManagementPolicyControllerMonitoringBackendsEnum["CloudMonitoring"] = "CLOUD_MONITORING";
-})(ConfigManagementPolicyControllerMonitoringBackendsEnum || (ConfigManagementPolicyControllerMonitoringBackendsEnum = {}));
+})(ConfigManagementPolicyControllerMonitoringBackendsEnum = exports.ConfigManagementPolicyControllerMonitoringBackendsEnum || (exports.ConfigManagementPolicyControllerMonitoringBackendsEnum = {}));
 // ConfigManagementPolicyControllerMonitoring
 /**
  * PolicyControllerMonitoring specifies the backends Policy Controller should export metrics to. For example, to specify metrics should be exported to Cloud Monitoring and Prometheus, specify backends: ["cloudmonitoring", "prometheus"]
@@ -39,9 +42,9 @@ var ConfigManagementPolicyControllerMonitoring = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backends" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backends" }),
         __metadata("design:type", Array)
     ], ConfigManagementPolicyControllerMonitoring.prototype, "backends", void 0);
     return ConfigManagementPolicyControllerMonitoring;
-}(SpeakeasyBase));
-export { ConfigManagementPolicyControllerMonitoring };
+}(utils_1.SpeakeasyBase));
+exports.ConfigManagementPolicyControllerMonitoring = ConfigManagementPolicyControllerMonitoring;

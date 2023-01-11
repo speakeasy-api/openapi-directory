@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EncryptionEntity } from "./encryptionentity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EncryptionEntities = void 0;
+var utils_1 = require("../../../internal/utils");
+var encryptionentitylist_1 = require("./encryptionentitylist");
 // EncryptionEntities
 /**
  * Complex data type for field-level encryption profiles that includes all of the encryption entities.
@@ -34,13 +37,13 @@ var EncryptionEntities = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: EncryptionEntity }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: encryptionentitylist_1.EncryptionEntityList }),
         __metadata("design:type", Array)
     ], EncryptionEntities.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EncryptionEntities.prototype, "quantity", void 0);
     return EncryptionEntities;
-}(SpeakeasyBase));
-export { EncryptionEntities };
+}(utils_1.SpeakeasyBase));
+exports.EncryptionEntities = EncryptionEntities;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileReference } from "./filereference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IosXcTest = void 0;
+var utils_1 = require("../../../internal/utils");
+var filereference_1 = require("./filereference");
 // IosXcTest
 /**
  * A test of an iOS application that uses the XCTest framework. Xcode supports the option to "build for testing", which generates an .xctestrun file that contains a test specification (arguments, test methods, etc). This test type accepts a zip file containing the .xctestrun file and the corresponding contents of the Build/Products directory that contains all the binaries needed to run the tests.
@@ -34,25 +37,25 @@ var IosXcTest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appBundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appBundleId" }),
         __metadata("design:type", String)
     ], IosXcTest.prototype, "appBundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testSpecialEntitlements" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testSpecialEntitlements" }),
         __metadata("design:type", Boolean)
     ], IosXcTest.prototype, "testSpecialEntitlements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testsZip" }),
-        __metadata("design:type", FileReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testsZip" }),
+        __metadata("design:type", filereference_1.FileReference)
     ], IosXcTest.prototype, "testsZip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=xcodeVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=xcodeVersion" }),
         __metadata("design:type", String)
     ], IosXcTest.prototype, "xcodeVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=xctestrun" }),
-        __metadata("design:type", FileReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=xctestrun" }),
+        __metadata("design:type", filereference_1.FileReference)
     ], IosXcTest.prototype, "xctestrun", void 0);
     return IosXcTest;
-}(SpeakeasyBase));
-export { IosXcTest };
+}(utils_1.SpeakeasyBase));
+exports.IosXcTest = IosXcTest;

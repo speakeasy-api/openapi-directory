@@ -9,10 +9,6 @@ import { FeatureState } from "./featurestate";
 
 
 
-// MembershipFeatureState
-/** 
- * MembershipFeatureState contains Feature status information for a single Membership.
-**/
 export class MembershipFeatureState extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=appdevexperience" })
   appdevexperience?: AppDevExperienceFeatureState;
@@ -21,7 +17,7 @@ export class MembershipFeatureState extends SpeakeasyBase {
   configmanagement?: ConfigManagementMembershipState;
 
   @SpeakeasyMetadata({ data: "json, name=fleetobservability" })
-  fleetobservability?: Map<string, any>;
+  fleetobservability?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=identityservice" })
   identityservice?: IdentityServiceMembershipState;

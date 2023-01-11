@@ -20,5 +20,5 @@ export declare class DrillersFilesListRequest extends SpeakeasyBase {
 export declare class DrillersFilesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    drillersFilesList200ApplicationJsonObject?: DrillersFilesList200ApplicationJson;
+    drillersFilesList200ApplicationJSONObject?: DrillersFilesList200ApplicationJson;
 }

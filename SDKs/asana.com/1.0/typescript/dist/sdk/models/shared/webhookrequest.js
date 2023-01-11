@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebhookRequest = exports.WebhookRequestFilters = void 0;
+var utils_1 = require("../../../internal/utils");
+// WebhookRequestFilters
+/**
+ * A set of filters to specify a whitelist for what types of events will be delivered.
+**/
 var WebhookRequestFilters = /** @class */ (function (_super) {
     __extends(WebhookRequestFilters, _super);
     function WebhookRequestFilters() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], WebhookRequestFilters.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields" }),
         __metadata("design:type", Array)
     ], WebhookRequestFilters.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_subtype" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_subtype" }),
         __metadata("design:type", String)
     ], WebhookRequestFilters.prototype, "resourceSubtype", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], WebhookRequestFilters.prototype, "resourceType", void 0);
     return WebhookRequestFilters;
-}(SpeakeasyBase));
-export { WebhookRequestFilters };
+}(utils_1.SpeakeasyBase));
+exports.WebhookRequestFilters = WebhookRequestFilters;
 var WebhookRequest = /** @class */ (function (_super) {
     __extends(WebhookRequest, _super);
     function WebhookRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filters", elemType: WebhookRequestFilters }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filters", elemType: WebhookRequestFilters }),
         __metadata("design:type", Array)
     ], WebhookRequest.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
         __metadata("design:type", String)
     ], WebhookRequest.prototype, "resource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", String)
     ], WebhookRequest.prototype, "target", void 0);
     return WebhookRequest;
-}(SpeakeasyBase));
-export { WebhookRequest };
+}(utils_1.SpeakeasyBase));
+exports.WebhookRequest = WebhookRequest;

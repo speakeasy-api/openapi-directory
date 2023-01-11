@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Parameter } from "./parameter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DefaultClusterParameters = void 0;
+var utils_1 = require("../../../internal/utils");
+var parameterslist_1 = require("./parameterslist");
 // DefaultClusterParameters
 /**
  * Describes the default cluster parameters for a parameter group family.
@@ -34,17 +37,17 @@ var DefaultClusterParameters = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DefaultClusterParameters.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DefaultClusterParameters.prototype, "parameterGroupFamily", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Parameter }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: parameterslist_1.ParametersList }),
         __metadata("design:type", Array)
     ], DefaultClusterParameters.prototype, "parameters", void 0);
     return DefaultClusterParameters;
-}(SpeakeasyBase));
-export { DefaultClusterParameters };
+}(utils_1.SpeakeasyBase));
+exports.DefaultClusterParameters = DefaultClusterParameters;

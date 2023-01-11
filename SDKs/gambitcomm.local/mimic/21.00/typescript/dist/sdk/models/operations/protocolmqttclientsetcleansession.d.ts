@@ -9,5 +9,5 @@ export declare class ProtocolMqttClientSetCleansessionRequest extends SpeakeasyB
 export declare class ProtocolMqttClientSetCleansessionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolMqttClientSetCleansession200ApplicationJsonInt32Integers?: number[];
+    protocolMqttClientSetCleansession200ApplicationJSONInt32Integers?: number[];
 }

@@ -15,14 +15,6 @@ export declare enum ExecutionStateEnum {
 /**
  * The definition of a single executed notebook.
 **/
-export declare class ExecutionInput extends SpeakeasyBase {
-    description?: string;
-    executionTemplate?: ExecutionTemplate;
-    outputNotebookFile?: string;
-}
-/**
- * The definition of a single executed notebook.
-**/
 export declare class Execution extends SpeakeasyBase {
     createTime?: string;
     description?: string;
@@ -33,4 +25,12 @@ export declare class Execution extends SpeakeasyBase {
     outputNotebookFile?: string;
     state?: ExecutionStateEnum;
     updateTime?: string;
+}
+/**
+ * The definition of a single executed notebook.
+**/
+export declare class ExecutionInput extends SpeakeasyBase {
+    description?: string;
+    executionTemplate?: ExecutionTemplate;
+    outputNotebookFile?: string;
 }

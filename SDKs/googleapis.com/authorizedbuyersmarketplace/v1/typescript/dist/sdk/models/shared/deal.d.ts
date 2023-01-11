@@ -1,33 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { CreativeRequirements } from "./creativerequirements";
+import { DeliveryControl } from "./deliverycontrol";
 import { Money } from "./money";
 import { PreferredDealTerms } from "./preferreddealterms";
-import { PrivateAuctionTermsInput } from "./privateauctionterms";
+import { PrivateAuctionTerms } from "./privateauctionterms";
 import { ProgrammaticGuaranteedTerms } from "./programmaticguaranteedterms";
 import { TimeZone } from "./timezone";
 import { MarketplaceTargeting } from "./marketplacetargeting";
-import { CreativeRequirements } from "./creativerequirements";
-import { DeliveryControl } from "./deliverycontrol";
-import { PrivateAuctionTerms } from "./privateauctionterms";
+import { PrivateAuctionTermsInput } from "./privateauctionterms";
 export declare enum DealDealTypeEnum {
     DealTypeUnspecified = "DEAL_TYPE_UNSPECIFIED",
     PreferredDeal = "PREFERRED_DEAL",
     PrivateAuction = "PRIVATE_AUCTION",
     ProgrammaticGuaranteed = "PROGRAMMATIC_GUARANTEED"
-}
-/**
- * A deal represents a segment of inventory for displaying ads that contains the terms and targeting information that is used for serving as well as the deal stats and status. Note: A proposal may contain multiple deals.
-**/
-export declare class DealInput extends SpeakeasyBase {
-    estimatedGrossSpend?: Money;
-    flightEndTime?: string;
-    flightStartTime?: string;
-    name?: string;
-    preferredDealTerms?: PreferredDealTerms;
-    privateAuctionTerms?: PrivateAuctionTermsInput;
-    programmaticGuaranteedTerms?: ProgrammaticGuaranteedTerms;
-    publisherProfile?: string;
-    sellerTimeZone?: TimeZone;
-    targeting?: MarketplaceTargeting;
 }
 /**
  * A deal represents a segment of inventory for displaying ads that contains the terms and targeting information that is used for serving as well as the deal stats and status. Note: A proposal may contain multiple deals.
@@ -54,4 +39,19 @@ export declare class Deal extends SpeakeasyBase {
     sellerTimeZone?: TimeZone;
     targeting?: MarketplaceTargeting;
     updateTime?: string;
+}
+/**
+ * A deal represents a segment of inventory for displaying ads that contains the terms and targeting information that is used for serving as well as the deal stats and status. Note: A proposal may contain multiple deals.
+**/
+export declare class DealInput extends SpeakeasyBase {
+    estimatedGrossSpend?: Money;
+    flightEndTime?: string;
+    flightStartTime?: string;
+    name?: string;
+    preferredDealTerms?: PreferredDealTerms;
+    privateAuctionTerms?: PrivateAuctionTermsInput;
+    programmaticGuaranteedTerms?: ProgrammaticGuaranteedTerms;
+    publisherProfile?: string;
+    sellerTimeZone?: TimeZone;
+    targeting?: MarketplaceTargeting;
 }

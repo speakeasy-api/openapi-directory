@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolSnmpv3SetConfigResponse = exports.ProtocolSnmpv3SetConfigRequest = exports.ProtocolSnmpv3SetConfigPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolSnmpv3SetConfigPathParams = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3SetConfigPathParams, _super);
     function ProtocolSnmpv3SetConfigPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolSnmpv3SetConfigPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=parameter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=parameter" }),
         __metadata("design:type", String)
     ], ProtocolSnmpv3SetConfigPathParams.prototype, "parameter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=value" }),
         __metadata("design:type", String)
     ], ProtocolSnmpv3SetConfigPathParams.prototype, "value", void 0);
     return ProtocolSnmpv3SetConfigPathParams;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3SetConfigPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3SetConfigPathParams = ProtocolSnmpv3SetConfigPathParams;
 var ProtocolSnmpv3SetConfigRequest = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3SetConfigRequest, _super);
     function ProtocolSnmpv3SetConfigRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolSnmpv3SetConfigPathParams)
     ], ProtocolSnmpv3SetConfigRequest.prototype, "pathParams", void 0);
     return ProtocolSnmpv3SetConfigRequest;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3SetConfigRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3SetConfigRequest = ProtocolSnmpv3SetConfigRequest;
 var ProtocolSnmpv3SetConfigResponse = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3SetConfigResponse, _super);
     function ProtocolSnmpv3SetConfigResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolSnmpv3SetConfigResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolSnmpv3SetConfigResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolSnmpv3SetConfigResponse.prototype, "protocolSnmpv3SetConfig200ApplicationJsonString", void 0);
+    ], ProtocolSnmpv3SetConfigResponse.prototype, "protocolSnmpv3SetConfig200ApplicationJSONString", void 0);
     return ProtocolSnmpv3SetConfigResponse;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3SetConfigResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3SetConfigResponse = ProtocolSnmpv3SetConfigResponse;

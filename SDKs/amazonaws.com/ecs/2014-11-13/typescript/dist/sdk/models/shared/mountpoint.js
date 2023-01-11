@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MountPoint = void 0;
+var utils_1 = require("../../../internal/utils");
 // MountPoint
 /**
  * Details on a volume mount point that is used in a container definition.
@@ -33,17 +36,17 @@ var MountPoint = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerPath" }),
         __metadata("design:type", String)
     ], MountPoint.prototype, "containerPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readOnly" }),
         __metadata("design:type", Boolean)
     ], MountPoint.prototype, "readOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceVolume" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceVolume" }),
         __metadata("design:type", String)
     ], MountPoint.prototype, "sourceVolume", void 0);
     return MountPoint;
-}(SpeakeasyBase));
-export { MountPoint };
+}(utils_1.SpeakeasyBase));
+exports.MountPoint = MountPoint;

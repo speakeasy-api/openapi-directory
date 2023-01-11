@@ -36,6 +36,6 @@ export declare class SingleWorkspaceRequest extends SpeakeasyBase {
 export declare class SingleWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    singleWorkspace200ApplicationJsonObject?: SingleWorkspace200ApplicationJson;
-    singleWorkspace404ApplicationJsonObject?: SingleWorkspace404ApplicationJson;
+    singleWorkspace200ApplicationJSONObject?: SingleWorkspace200ApplicationJson;
+    singleWorkspace404ApplicationJSONObject?: SingleWorkspace404ApplicationJson;
 }

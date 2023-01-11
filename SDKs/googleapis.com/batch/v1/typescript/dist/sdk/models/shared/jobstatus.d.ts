@@ -17,5 +17,5 @@ export declare class JobStatus extends SpeakeasyBase {
     runDuration?: string;
     state?: JobStatusStateEnum;
     statusEvents?: StatusEvent[];
-    taskGroups?: Map<string, TaskGroupStatus>;
+    taskGroups?: Record<string, TaskGroupStatus>;
 }

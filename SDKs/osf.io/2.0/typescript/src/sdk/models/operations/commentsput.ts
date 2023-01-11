@@ -13,7 +13,7 @@ export class CommentsPutRequest extends SpeakeasyBase {
   pathParams: CommentsPutPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 

@@ -1,25 +1,41 @@
-export * from "./privatecaprojectslocationscapoolscertificateauthoritiesactivate";
-export * from "./privatecaprojectslocationscapoolscertificateauthoritiescertificaterevocationlistslist";
-export * from "./privatecaprojectslocationscapoolscertificateauthoritiescreate";
-export * from "./privatecaprojectslocationscapoolscertificateauthoritiesdisable";
-export * from "./privatecaprojectslocationscapoolscertificateauthoritiesenable";
-export * from "./privatecaprojectslocationscapoolscertificateauthoritiesfetch";
-export * from "./privatecaprojectslocationscapoolscertificateauthoritieslist";
-export * from "./privatecaprojectslocationscapoolscertificateauthoritiesundelete";
-export * from "./privatecaprojectslocationscapoolscertificatescreate";
-export * from "./privatecaprojectslocationscapoolscertificateslist";
-export * from "./privatecaprojectslocationscapoolscertificatesrevoke";
-export * from "./privatecaprojectslocationscapoolscreate";
-export * from "./privatecaprojectslocationscapoolsfetchcacerts";
-export * from "./privatecaprojectslocationscapoolslist";
-export * from "./privatecaprojectslocationscertificatetemplatescreate";
-export * from "./privatecaprojectslocationscertificatetemplatesgetiampolicy";
-export * from "./privatecaprojectslocationscertificatetemplateslist";
-export * from "./privatecaprojectslocationscertificatetemplatespatch";
-export * from "./privatecaprojectslocationscertificatetemplatessetiampolicy";
-export * from "./privatecaprojectslocationscertificatetemplatestestiampermissions";
-export * from "./privatecaprojectslocationslist";
-export * from "./privatecaprojectslocationsoperationscancel";
-export * from "./privatecaprojectslocationsoperationsdelete";
-export * from "./privatecaprojectslocationsoperationsget";
-export * from "./privatecaprojectslocationsoperationslist";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./privatecaprojectslocationscapoolscertificateauthoritiesactivate"), exports);
+__exportStar(require("./privatecaprojectslocationscapoolscertificateauthoritiescertificaterevocationlistslist"), exports);
+__exportStar(require("./privatecaprojectslocationscapoolscertificateauthoritiescreate"), exports);
+__exportStar(require("./privatecaprojectslocationscapoolscertificateauthoritiesdisable"), exports);
+__exportStar(require("./privatecaprojectslocationscapoolscertificateauthoritiesenable"), exports);
+__exportStar(require("./privatecaprojectslocationscapoolscertificateauthoritiesfetch"), exports);
+__exportStar(require("./privatecaprojectslocationscapoolscertificateauthoritieslist"), exports);
+__exportStar(require("./privatecaprojectslocationscapoolscertificateauthoritiesundelete"), exports);
+__exportStar(require("./privatecaprojectslocationscapoolscertificatescreate"), exports);
+__exportStar(require("./privatecaprojectslocationscapoolscertificateslist"), exports);
+__exportStar(require("./privatecaprojectslocationscapoolscertificatesrevoke"), exports);
+__exportStar(require("./privatecaprojectslocationscapoolscreate"), exports);
+__exportStar(require("./privatecaprojectslocationscapoolsfetchcacerts"), exports);
+__exportStar(require("./privatecaprojectslocationscapoolslist"), exports);
+__exportStar(require("./privatecaprojectslocationscertificatetemplatescreate"), exports);
+__exportStar(require("./privatecaprojectslocationscertificatetemplatesgetiampolicy"), exports);
+__exportStar(require("./privatecaprojectslocationscertificatetemplateslist"), exports);
+__exportStar(require("./privatecaprojectslocationscertificatetemplatespatch"), exports);
+__exportStar(require("./privatecaprojectslocationscertificatetemplatessetiampolicy"), exports);
+__exportStar(require("./privatecaprojectslocationscertificatetemplatestestiampermissions"), exports);
+__exportStar(require("./privatecaprojectslocationslist"), exports);
+__exportStar(require("./privatecaprojectslocationsoperationscancel"), exports);
+__exportStar(require("./privatecaprojectslocationsoperationsdelete"), exports);
+__exportStar(require("./privatecaprojectslocationsoperationsget"), exports);
+__exportStar(require("./privatecaprojectslocationsoperationslist"), exports);

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,75 +23,77 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VenueApiPostReportResponse = exports.VenueApiPostReportRequest = exports.VenueApiPostReportQueryParams = exports.VenueApiPostReportReportTypeEnum = exports.VenueApiPostReportPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var VenueApiPostReportPathParams = /** @class */ (function (_super) {
     __extends(VenueApiPostReportPathParams, _super);
     function VenueApiPostReportPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], VenueApiPostReportPathParams.prototype, "id", void 0);
     return VenueApiPostReportPathParams;
-}(SpeakeasyBase));
-export { VenueApiPostReportPathParams };
-export var VenueApiPostReportReportTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.VenueApiPostReportPathParams = VenueApiPostReportPathParams;
+var VenueApiPostReportReportTypeEnum;
 (function (VenueApiPostReportReportTypeEnum) {
     VenueApiPostReportReportTypeEnum["InvalidInfo"] = "InvalidInfo";
     VenueApiPostReportReportTypeEnum["Duplicate"] = "Duplicate";
     VenueApiPostReportReportTypeEnum["Inappropriate"] = "Inappropriate";
     VenueApiPostReportReportTypeEnum["Other"] = "Other";
-})(VenueApiPostReportReportTypeEnum || (VenueApiPostReportReportTypeEnum = {}));
+})(VenueApiPostReportReportTypeEnum = exports.VenueApiPostReportReportTypeEnum || (exports.VenueApiPostReportReportTypeEnum = {}));
 var VenueApiPostReportQueryParams = /** @class */ (function (_super) {
     __extends(VenueApiPostReportQueryParams, _super);
     function VenueApiPostReportQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=notes" }),
         __metadata("design:type", String)
     ], VenueApiPostReportQueryParams.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=reportType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=reportType" }),
         __metadata("design:type", String)
     ], VenueApiPostReportQueryParams.prototype, "reportType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=versionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=versionNumber" }),
         __metadata("design:type", Number)
     ], VenueApiPostReportQueryParams.prototype, "versionNumber", void 0);
     return VenueApiPostReportQueryParams;
-}(SpeakeasyBase));
-export { VenueApiPostReportQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.VenueApiPostReportQueryParams = VenueApiPostReportQueryParams;
 var VenueApiPostReportRequest = /** @class */ (function (_super) {
     __extends(VenueApiPostReportRequest, _super);
     function VenueApiPostReportRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", VenueApiPostReportPathParams)
     ], VenueApiPostReportRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", VenueApiPostReportQueryParams)
     ], VenueApiPostReportRequest.prototype, "queryParams", void 0);
     return VenueApiPostReportRequest;
-}(SpeakeasyBase));
-export { VenueApiPostReportRequest };
+}(utils_1.SpeakeasyBase));
+exports.VenueApiPostReportRequest = VenueApiPostReportRequest;
 var VenueApiPostReportResponse = /** @class */ (function (_super) {
     __extends(VenueApiPostReportResponse, _super);
     function VenueApiPostReportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], VenueApiPostReportResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], VenueApiPostReportResponse.prototype, "statusCode", void 0);
     return VenueApiPostReportResponse;
-}(SpeakeasyBase));
-export { VenueApiPostReportResponse };
+}(utils_1.SpeakeasyBase));
+exports.VenueApiPostReportResponse = VenueApiPostReportResponse;

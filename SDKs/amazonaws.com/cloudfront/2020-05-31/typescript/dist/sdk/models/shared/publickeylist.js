@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PublicKeySummary } from "./publickeysummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PublicKeyList = void 0;
+var utils_1 = require("../../../internal/utils");
+var publickeysummarylist_1 = require("./publickeysummarylist");
 // PublicKeyList
 /**
  * A list of public keys that you can use with <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html">signed URLs and signed cookies</a>, or with <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html">field-level encryption</a>.
@@ -34,21 +37,21 @@ var PublicKeyList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: PublicKeySummary }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: publickeysummarylist_1.PublicKeySummaryList }),
         __metadata("design:type", Array)
     ], PublicKeyList.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PublicKeyList.prototype, "maxItems", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PublicKeyList.prototype, "nextMarker", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PublicKeyList.prototype, "quantity", void 0);
     return PublicKeyList;
-}(SpeakeasyBase));
-export { PublicKeyList };
+}(utils_1.SpeakeasyBase));
+exports.PublicKeyList = PublicKeyList;

@@ -10,7 +10,7 @@ export declare class VehicleType extends SpeakeasyBase {
     costPerMeter?: number;
     costPerSecond?: number;
     networkDataProvider?: VehicleTypeNetworkDataProviderEnum;
-    profile?: Map<string, any>;
+    profile?: Record<string, any>;
     serviceTimeFactor?: number;
     speedFactor?: number;
     typeId: string;

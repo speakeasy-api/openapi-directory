@@ -53,7 +53,7 @@ export class MybusinessAccountsInvitationsDeclineRequest extends SpeakeasyBase {
   queryParams: MybusinessAccountsInvitationsDeclineQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 }
 
 
@@ -62,7 +62,7 @@ export class MybusinessAccountsInvitationsDeclineResponse extends SpeakeasyBase 
   contentType: string;
 
   @SpeakeasyMetadata()
-  empty?: Map<string, any>;
+  empty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

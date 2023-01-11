@@ -18,5 +18,5 @@ export declare class GetAllDataSources200ApplicationJson extends SpeakeasyBase {
 export declare class GetAllDataSourcesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getAllDataSources200ApplicationJsonObject?: GetAllDataSources200ApplicationJson;
+    getAllDataSources200ApplicationJSONObject?: GetAllDataSources200ApplicationJson;
 }

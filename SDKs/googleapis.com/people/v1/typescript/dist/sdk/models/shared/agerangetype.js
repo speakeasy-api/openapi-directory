@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FieldMetadata } from "./fieldmetadata";
-export var AgeRangeTypeAgeRangeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgeRangeType = exports.AgeRangeTypeAgeRangeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var fieldmetadata_1 = require("./fieldmetadata");
+var AgeRangeTypeAgeRangeEnum;
 (function (AgeRangeTypeAgeRangeEnum) {
     AgeRangeTypeAgeRangeEnum["AgeRangeUnspecified"] = "AGE_RANGE_UNSPECIFIED";
     AgeRangeTypeAgeRangeEnum["LessThanEighteen"] = "LESS_THAN_EIGHTEEN";
     AgeRangeTypeAgeRangeEnum["EighteenToTwenty"] = "EIGHTEEN_TO_TWENTY";
     AgeRangeTypeAgeRangeEnum["TwentyOneOrOlder"] = "TWENTY_ONE_OR_OLDER";
-})(AgeRangeTypeAgeRangeEnum || (AgeRangeTypeAgeRangeEnum = {}));
+})(AgeRangeTypeAgeRangeEnum = exports.AgeRangeTypeAgeRangeEnum || (exports.AgeRangeTypeAgeRangeEnum = {}));
 // AgeRangeType
 /**
  * A person's age range.
@@ -41,13 +44,13 @@ var AgeRangeType = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ageRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ageRange" }),
         __metadata("design:type", String)
     ], AgeRangeType.prototype, "ageRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_1.FieldMetadata)
     ], AgeRangeType.prototype, "metadata", void 0);
     return AgeRangeType;
-}(SpeakeasyBase));
-export { AgeRangeType };
+}(utils_1.SpeakeasyBase));
+exports.AgeRangeType = AgeRangeType;

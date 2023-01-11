@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedTenant } from "./nestedtenant";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Vrf = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedtenant_1 = require("./nestedtenant");
 var Vrf = /** @class */ (function (_super) {
     __extends(Vrf, _super);
     function Vrf() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Vrf.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], Vrf.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Vrf.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_name" }),
         __metadata("design:type", String)
     ], Vrf.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforce_unique" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforce_unique" }),
         __metadata("design:type", Boolean)
     ], Vrf.prototype, "enforceUnique", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Vrf.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_updated" }),
         __metadata("design:type", Date)
     ], Vrf.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Vrf.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rd" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rd" }),
         __metadata("design:type", String)
     ], Vrf.prototype, "rd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], Vrf.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant" }),
-        __metadata("design:type", NestedTenant)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant" }),
+        __metadata("design:type", nestedtenant_1.NestedTenant)
     ], Vrf.prototype, "tenant", void 0);
     return Vrf;
-}(SpeakeasyBase));
-export { Vrf };
+}(utils_1.SpeakeasyBase));
+exports.Vrf = Vrf;

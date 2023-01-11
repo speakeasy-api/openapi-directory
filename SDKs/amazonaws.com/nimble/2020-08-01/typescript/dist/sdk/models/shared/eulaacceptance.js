@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EulaAcceptance = void 0;
+var utils_1 = require("../../../internal/utils");
 var EulaAcceptance = /** @class */ (function (_super) {
     __extends(EulaAcceptance, _super);
     function EulaAcceptance() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acceptedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acceptedAt" }),
         __metadata("design:type", Date)
     ], EulaAcceptance.prototype, "acceptedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acceptedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acceptedBy" }),
         __metadata("design:type", String)
     ], EulaAcceptance.prototype, "acceptedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accepteeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accepteeId" }),
         __metadata("design:type", String)
     ], EulaAcceptance.prototype, "accepteeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eulaAcceptanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eulaAcceptanceId" }),
         __metadata("design:type", String)
     ], EulaAcceptance.prototype, "eulaAcceptanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eulaId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eulaId" }),
         __metadata("design:type", String)
     ], EulaAcceptance.prototype, "eulaId", void 0);
     return EulaAcceptance;
-}(SpeakeasyBase));
-export { EulaAcceptance };
+}(utils_1.SpeakeasyBase));
+exports.EulaAcceptance = EulaAcceptance;

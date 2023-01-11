@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteAdminRequestsRequestIdResponse = exports.DeleteAdminRequestsRequestIdRequest = exports.DeleteAdminRequestsRequestIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteAdminRequestsRequestIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteAdminRequestsRequestIdPathParams, _super);
     function DeleteAdminRequestsRequestIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=requestId" }),
         __metadata("design:type", String)
     ], DeleteAdminRequestsRequestIdPathParams.prototype, "requestId", void 0);
     return DeleteAdminRequestsRequestIdPathParams;
-}(SpeakeasyBase));
-export { DeleteAdminRequestsRequestIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAdminRequestsRequestIdPathParams = DeleteAdminRequestsRequestIdPathParams;
 var DeleteAdminRequestsRequestIdRequest = /** @class */ (function (_super) {
     __extends(DeleteAdminRequestsRequestIdRequest, _super);
     function DeleteAdminRequestsRequestIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteAdminRequestsRequestIdPathParams)
     ], DeleteAdminRequestsRequestIdRequest.prototype, "pathParams", void 0);
     return DeleteAdminRequestsRequestIdRequest;
-}(SpeakeasyBase));
-export { DeleteAdminRequestsRequestIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAdminRequestsRequestIdRequest = DeleteAdminRequestsRequestIdRequest;
 var DeleteAdminRequestsRequestIdResponse = /** @class */ (function (_super) {
     __extends(DeleteAdminRequestsRequestIdResponse, _super);
     function DeleteAdminRequestsRequestIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteAdminRequestsRequestIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteAdminRequestsRequestIdResponse.prototype, "statusCode", void 0);
     return DeleteAdminRequestsRequestIdResponse;
-}(SpeakeasyBase));
-export { DeleteAdminRequestsRequestIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAdminRequestsRequestIdResponse = DeleteAdminRequestsRequestIdResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,94 +14,119 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCustomFieldResponse = exports.GetCustomFieldRequest = exports.GetCustomField200ApplicationJson = exports.GetCustomFieldQueryParams = exports.GetCustomFieldPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetCustomFieldPathParams = /** @class */ (function (_super) {
     __extends(GetCustomFieldPathParams, _super);
     function GetCustomFieldPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=custom_field_gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=custom_field_gid" }),
         __metadata("design:type", String)
     ], GetCustomFieldPathParams.prototype, "customFieldGid", void 0);
     return GetCustomFieldPathParams;
-}(SpeakeasyBase));
-export { GetCustomFieldPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCustomFieldPathParams = GetCustomFieldPathParams;
 var GetCustomFieldQueryParams = /** @class */ (function (_super) {
     __extends(GetCustomFieldQueryParams, _super);
     function GetCustomFieldQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=opt_fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=opt_fields" }),
         __metadata("design:type", Array)
     ], GetCustomFieldQueryParams.prototype, "optFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=opt_pretty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=opt_pretty" }),
         __metadata("design:type", Boolean)
     ], GetCustomFieldQueryParams.prototype, "optPretty", void 0);
     return GetCustomFieldQueryParams;
-}(SpeakeasyBase));
-export { GetCustomFieldQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCustomFieldQueryParams = GetCustomFieldQueryParams;
 var GetCustomField200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetCustomField200ApplicationJson, _super);
     function GetCustomField200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", shared.CustomFieldResponse)
     ], GetCustomField200ApplicationJson.prototype, "data", void 0);
     return GetCustomField200ApplicationJson;
-}(SpeakeasyBase));
-export { GetCustomField200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetCustomField200ApplicationJson = GetCustomField200ApplicationJson;
 var GetCustomFieldRequest = /** @class */ (function (_super) {
     __extends(GetCustomFieldRequest, _super);
     function GetCustomFieldRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCustomFieldPathParams)
     ], GetCustomFieldRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCustomFieldQueryParams)
     ], GetCustomFieldRequest.prototype, "queryParams", void 0);
     return GetCustomFieldRequest;
-}(SpeakeasyBase));
-export { GetCustomFieldRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCustomFieldRequest = GetCustomFieldRequest;
 var GetCustomFieldResponse = /** @class */ (function (_super) {
     __extends(GetCustomFieldResponse, _super);
     function GetCustomFieldResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCustomFieldResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorResponse)
     ], GetCustomFieldResponse.prototype, "errorResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCustomFieldResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCustomField200ApplicationJson)
-    ], GetCustomFieldResponse.prototype, "getCustomField200ApplicationJsonObject", void 0);
+    ], GetCustomFieldResponse.prototype, "getCustomField200ApplicationJSONObject", void 0);
     return GetCustomFieldResponse;
-}(SpeakeasyBase));
-export { GetCustomFieldResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCustomFieldResponse = GetCustomFieldResponse;

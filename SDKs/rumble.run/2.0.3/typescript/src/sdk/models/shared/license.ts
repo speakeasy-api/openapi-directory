@@ -52,7 +52,7 @@ export class License extends SpeakeasyBase {
   phone?: string;
 
   @SpeakeasyMetadata()
-  settings?: Map<string, any>;
+  settings?: Record<string, any>;
 
   @SpeakeasyMetadata()
   ssoDefaultRole?: string;

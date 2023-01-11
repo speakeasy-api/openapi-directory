@@ -7,7 +7,7 @@ import { FeatureState } from "./featurestate";
 **/
 export declare class CommonFeatureState extends SpeakeasyBase {
     appdevexperience?: AppDevExperienceFeatureState;
-    fleetobservability?: Map<string, any>;
+    fleetobservability?: Record<string, any>;
     servicemesh?: ServiceMeshFeatureState;
     state?: FeatureState;
 }

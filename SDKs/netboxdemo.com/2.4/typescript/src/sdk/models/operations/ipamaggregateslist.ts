@@ -62,5 +62,5 @@ export class IpamAggregatesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ipamAggregatesList200ApplicationJsonObject?: IpamAggregatesList200ApplicationJson;
+  ipamAggregatesList200ApplicationJSONObject?: IpamAggregatesList200ApplicationJson;
 }

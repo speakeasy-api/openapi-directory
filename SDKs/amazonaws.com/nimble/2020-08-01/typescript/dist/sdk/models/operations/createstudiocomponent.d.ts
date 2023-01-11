@@ -43,7 +43,7 @@ export declare class CreateStudioComponentRequestBody extends SpeakeasyBase {
     name: string;
     scriptParameters?: shared.ScriptParameterKeyValue[];
     subtype?: CreateStudioComponentRequestBodySubtypeEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     type: CreateStudioComponentRequestBodyTypeEnum;
 }
 export declare class CreateStudioComponentRequest extends SpeakeasyBase {

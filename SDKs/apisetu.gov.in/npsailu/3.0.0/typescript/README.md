@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { NdcerRequest, NdcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,22 +30,22 @@ const req: NdcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      appid: "reprehenderit",
+      appid: "sit",
     },
-    consentArtifact: "debitis",
+    consentArtifact: "voluptas",
     format: "pdf",
-    txnId: "dolores",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.ndcer(req).then((res: NdcerResponse | AxiosError) => {
+sdk.apIs.ndcer(req).then((res: NdcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -55,7 +54,7 @@ sdk.sdk.ndcer(req).then((res: NdcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `ndcer` - No Dues/ Objection Certificate
 

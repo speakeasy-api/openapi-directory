@@ -8,5 +8,5 @@ export declare class GetOrganizationSnmpRequest extends SpeakeasyBase {
 export declare class GetOrganizationSnmpResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationSnmp200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationSnmp200ApplicationJSONObject?: Record<string, any>;
 }

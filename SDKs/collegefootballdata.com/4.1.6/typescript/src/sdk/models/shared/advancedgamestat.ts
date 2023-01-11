@@ -25,7 +25,7 @@ export class AdvancedGameStatDefensePassingPlays extends SpeakeasyBase {
   successRate?: number;
 
   @SpeakeasyMetadata({ data: "json, name=totalPPA" })
-  totalPpa?: number;
+  totalPPA?: number;
 }
 
 
@@ -40,7 +40,7 @@ export class AdvancedGameStatDefenseRushingPlays extends SpeakeasyBase {
   successRate?: number;
 
   @SpeakeasyMetadata({ data: "json, name=totalPPA" })
-  totalPpa?: number;
+  totalPPA?: number;
 }
 
 
@@ -109,7 +109,7 @@ export class AdvancedGameStatDefense extends SpeakeasyBase {
   successRate?: number;
 
   @SpeakeasyMetadata({ data: "json, name=totalPPA" })
-  totalPpa?: number;
+  totalPPA?: number;
 }
 
 
@@ -136,7 +136,7 @@ export class AdvancedGameStatOffensePassingPlays extends SpeakeasyBase {
   successRate?: number;
 
   @SpeakeasyMetadata({ data: "json, name=totalPPA" })
-  totalPpa?: number;
+  totalPPA?: number;
 }
 
 
@@ -151,7 +151,7 @@ export class AdvancedGameStatOffenseRushingPlays extends SpeakeasyBase {
   successRate?: number;
 
   @SpeakeasyMetadata({ data: "json, name=totalPPA" })
-  totalPpa?: number;
+  totalPPA?: number;
 }
 
 
@@ -220,7 +220,7 @@ export class AdvancedGameStatOffense extends SpeakeasyBase {
   successRate?: number;
 
   @SpeakeasyMetadata({ data: "json, name=totalPPA" })
-  totalPpa?: number;
+  totalPPA?: number;
 }
 
 

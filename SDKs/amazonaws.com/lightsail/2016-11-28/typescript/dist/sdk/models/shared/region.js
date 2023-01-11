@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AvailabilityZone } from "./availabilityzone";
-import { RegionNameEnum } from "./regionnameenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Region = void 0;
+var utils_1 = require("../../../internal/utils");
+var availabilityzone_1 = require("./availabilityzone");
+var regionnameenum_1 = require("./regionnameenum");
 // Region
 /**
  * Describes the AWS Region.
@@ -35,29 +38,29 @@ var Region = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availabilityZones", elemType: AvailabilityZone }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availabilityZones", elemType: availabilityzone_1.AvailabilityZone }),
         __metadata("design:type", Array)
     ], Region.prototype, "availabilityZones", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=continentCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=continentCode" }),
         __metadata("design:type", String)
     ], Region.prototype, "continentCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Region.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Region.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Region.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationalDatabaseAvailabilityZones", elemType: AvailabilityZone }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationalDatabaseAvailabilityZones", elemType: availabilityzone_1.AvailabilityZone }),
         __metadata("design:type", Array)
     ], Region.prototype, "relationalDatabaseAvailabilityZones", void 0);
     return Region;
-}(SpeakeasyBase));
-export { Region };
+}(utils_1.SpeakeasyBase));
+exports.Region = Region;

@@ -11,7 +11,7 @@ export declare class Person extends SpeakeasyBase {
     currentRole?: CurrentRole;
     deathDate: string;
     email: string;
-    extras: Map<string, any>;
+    extras: Record<string, any>;
     familyName: string;
     gender: string;
     givenName: string;

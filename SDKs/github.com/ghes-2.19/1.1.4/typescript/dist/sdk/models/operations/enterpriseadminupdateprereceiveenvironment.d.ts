@@ -23,6 +23,6 @@ export declare class EnterpriseAdminUpdatePreReceiveEnvironmentRequest extends S
 export declare class EnterpriseAdminUpdatePreReceiveEnvironmentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    enterpriseAdminUpdatePreReceiveEnvironment422ApplicationJsonObject?: EnterpriseAdminUpdatePreReceiveEnvironment422ApplicationJson;
+    enterpriseAdminUpdatePreReceiveEnvironment422ApplicationJSONObject?: EnterpriseAdminUpdatePreReceiveEnvironment422ApplicationJson;
     preReceiveEnvironment?: shared.PreReceiveEnvironment;
 }

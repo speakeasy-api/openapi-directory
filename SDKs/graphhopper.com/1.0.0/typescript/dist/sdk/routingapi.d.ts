@@ -9,13 +9,6 @@ export declare class RoutingApi {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * getRouteInfo - Coverage information
-     *
-     * Use this to find out details about the supported vehicle profiles and features, or if you just need to ping the server.
-     *
-    **/
-    getRouteInfo(config?: AxiosRequestConfig): Promise<operations.GetRouteInfoResponse>;
-    /**
      * getRoute - GET Route Endpoint
      *
      * The GET request is the most simple one: just specify the parameter in the URL and you are done.
@@ -23,6 +16,13 @@ export declare class RoutingApi {
      *
     **/
     getRoute(req: operations.GetRouteRequest, config?: AxiosRequestConfig): Promise<operations.GetRouteResponse>;
+    /**
+     * getRouteInfo - Coverage information
+     *
+     * Use this to find out details about the supported vehicle profiles and features, or if you just need to ping the server.
+     *
+    **/
+    getRouteInfo(config?: AxiosRequestConfig): Promise<operations.GetRouteInfoResponse>;
     /**
      * postRoute - POST Route Endpoint
      *

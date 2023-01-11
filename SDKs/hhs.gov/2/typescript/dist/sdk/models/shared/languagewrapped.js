@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Meta } from "./meta";
-import { Language } from "./language";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LanguageWrapped = void 0;
+var utils_1 = require("../../../internal/utils");
+var meta_1 = require("./meta");
+var language_1 = require("./language");
 var LanguageWrapped = /** @class */ (function (_super) {
     __extends(LanguageWrapped, _super);
     function LanguageWrapped() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callback" }),
         __metadata("design:type", String)
     ], LanguageWrapped.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", Meta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", meta_1.Meta)
     ], LanguageWrapped.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: Language }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: language_1.Language }),
         __metadata("design:type", Array)
     ], LanguageWrapped.prototype, "results", void 0);
     return LanguageWrapped;
-}(SpeakeasyBase));
-export { LanguageWrapped };
+}(utils_1.SpeakeasyBase));
+exports.LanguageWrapped = LanguageWrapped;

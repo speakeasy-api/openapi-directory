@@ -38,5 +38,5 @@ export class ReposDeleteResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  reposDelete403ApplicationJsonObject?: ReposDelete403ApplicationJson;
+  reposDelete403ApplicationJSONObject?: ReposDelete403ApplicationJson;
 }

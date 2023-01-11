@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DriveFile } from "./drivefile";
-import { Form } from "./form";
-import { Link } from "./link";
-import { YouTubeVideo } from "./youtubevideo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Attachment = void 0;
+var utils_1 = require("../../../internal/utils");
+var drivefile_1 = require("./drivefile");
+var form_1 = require("./form");
+var link_1 = require("./link");
+var youtubevideo_1 = require("./youtubevideo");
 // Attachment
 /**
  * Attachment added to student assignment work. When creating attachments, setting the `form` field is not supported.
@@ -37,21 +40,21 @@ var Attachment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driveFile" }),
-        __metadata("design:type", DriveFile)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driveFile" }),
+        __metadata("design:type", drivefile_1.DriveFile)
     ], Attachment.prototype, "driveFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=form" }),
-        __metadata("design:type", Form)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=form" }),
+        __metadata("design:type", form_1.Form)
     ], Attachment.prototype, "form", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
-        __metadata("design:type", Link)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
+        __metadata("design:type", link_1.Link)
     ], Attachment.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=youTubeVideo" }),
-        __metadata("design:type", YouTubeVideo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=youTubeVideo" }),
+        __metadata("design:type", youtubevideo_1.YouTubeVideo)
     ], Attachment.prototype, "youTubeVideo", void 0);
     return Attachment;
-}(SpeakeasyBase));
-export { Attachment };
+}(utils_1.SpeakeasyBase));
+exports.Attachment = Attachment;

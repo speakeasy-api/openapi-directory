@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartDeviceAuthorizationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var StartDeviceAuthorizationResponse = /** @class */ (function (_super) {
     __extends(StartDeviceAuthorizationResponse, _super);
     function StartDeviceAuthorizationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceCode" }),
         __metadata("design:type", String)
     ], StartDeviceAuthorizationResponse.prototype, "deviceCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiresIn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiresIn" }),
         __metadata("design:type", Number)
     ], StartDeviceAuthorizationResponse.prototype, "expiresIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interval" }),
         __metadata("design:type", Number)
     ], StartDeviceAuthorizationResponse.prototype, "interval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userCode" }),
         __metadata("design:type", String)
     ], StartDeviceAuthorizationResponse.prototype, "userCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verificationUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verificationUri" }),
         __metadata("design:type", String)
     ], StartDeviceAuthorizationResponse.prototype, "verificationUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verificationUriComplete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verificationUriComplete" }),
         __metadata("design:type", String)
     ], StartDeviceAuthorizationResponse.prototype, "verificationUriComplete", void 0);
     return StartDeviceAuthorizationResponse;
-}(SpeakeasyBase));
-export { StartDeviceAuthorizationResponse };
+}(utils_1.SpeakeasyBase));
+exports.StartDeviceAuthorizationResponse = StartDeviceAuthorizationResponse;

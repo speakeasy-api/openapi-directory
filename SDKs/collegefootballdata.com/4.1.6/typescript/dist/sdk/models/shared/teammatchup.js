@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamMatchup = exports.TeamMatchupGames = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamMatchupGames = /** @class */ (function (_super) {
     __extends(TeamMatchupGames, _super);
     function TeamMatchupGames() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awayScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awayScore" }),
         __metadata("design:type", Number)
     ], TeamMatchupGames.prototype, "awayScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awayTeam" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awayTeam" }),
         __metadata("design:type", String)
     ], TeamMatchupGames.prototype, "awayTeam", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", String)
     ], TeamMatchupGames.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=homeScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=homeScore" }),
         __metadata("design:type", Number)
     ], TeamMatchupGames.prototype, "homeScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=homeTeam" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=homeTeam" }),
         __metadata("design:type", String)
     ], TeamMatchupGames.prototype, "homeTeam", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=neutralSite" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=neutralSite" }),
         __metadata("design:type", Boolean)
     ], TeamMatchupGames.prototype, "neutralSite", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=season" }),
         __metadata("design:type", Number)
     ], TeamMatchupGames.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=season_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=season_type" }),
         __metadata("design:type", String)
     ], TeamMatchupGames.prototype, "seasonType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=venue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=venue" }),
         __metadata("design:type", String)
     ], TeamMatchupGames.prototype, "venue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=week" }),
         __metadata("design:type", Number)
     ], TeamMatchupGames.prototype, "week", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=winner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=winner" }),
         __metadata("design:type", String)
     ], TeamMatchupGames.prototype, "winner", void 0);
     return TeamMatchupGames;
-}(SpeakeasyBase));
-export { TeamMatchupGames };
+}(utils_1.SpeakeasyBase));
+exports.TeamMatchupGames = TeamMatchupGames;
 var TeamMatchup = /** @class */ (function (_super) {
     __extends(TeamMatchup, _super);
     function TeamMatchup() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endYear" }),
         __metadata("design:type", Number)
     ], TeamMatchup.prototype, "endYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=games", elemType: TeamMatchupGames }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=games", elemType: TeamMatchupGames }),
         __metadata("design:type", Array)
     ], TeamMatchup.prototype, "games", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startYear" }),
         __metadata("design:type", Number)
     ], TeamMatchup.prototype, "startYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team1" }),
         __metadata("design:type", String)
     ], TeamMatchup.prototype, "team1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team1Wins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team1Wins" }),
         __metadata("design:type", Number)
     ], TeamMatchup.prototype, "team1Wins", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team2" }),
         __metadata("design:type", String)
     ], TeamMatchup.prototype, "team2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team2Wins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team2Wins" }),
         __metadata("design:type", Number)
     ], TeamMatchup.prototype, "team2Wins", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ties" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ties" }),
         __metadata("design:type", Number)
     ], TeamMatchup.prototype, "ties", void 0);
     return TeamMatchup;
-}(SpeakeasyBase));
-export { TeamMatchup };
+}(utils_1.SpeakeasyBase));
+exports.TeamMatchup = TeamMatchup;

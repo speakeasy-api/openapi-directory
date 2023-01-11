@@ -14,7 +14,7 @@ export declare class IssuesListEventsForRepoRequest extends SpeakeasyBase {
 }
 export declare class IssuesListEventsForRepoResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     issueEvents?: shared.IssueEvent[];
     validationError?: shared.ValidationError;

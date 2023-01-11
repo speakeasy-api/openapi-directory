@@ -61,5 +61,5 @@ export class UpdateDeviceDefinitionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateDeviceDefinitionResponse?: Map<string, any>;
+  updateDeviceDefinitionResponse?: Record<string, any>;
 }

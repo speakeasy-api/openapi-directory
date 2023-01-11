@@ -1,6 +1,9 @@
-export var TestGridSessionArtifactTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestGridSessionArtifactTypeEnum = void 0;
+var TestGridSessionArtifactTypeEnum;
 (function (TestGridSessionArtifactTypeEnum) {
     TestGridSessionArtifactTypeEnum["Unknown"] = "UNKNOWN";
     TestGridSessionArtifactTypeEnum["Video"] = "VIDEO";
     TestGridSessionArtifactTypeEnum["SeleniumLog"] = "SELENIUM_LOG";
-})(TestGridSessionArtifactTypeEnum || (TestGridSessionArtifactTypeEnum = {}));
+})(TestGridSessionArtifactTypeEnum = exports.TestGridSessionArtifactTypeEnum || (exports.TestGridSessionArtifactTypeEnum = {}));

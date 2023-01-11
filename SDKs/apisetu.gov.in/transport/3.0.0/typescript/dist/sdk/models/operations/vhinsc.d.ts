@@ -109,11 +109,11 @@ export declare class VhinscRequest extends SpeakeasyBase {
 export declare class VhinscResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    vhinsc400ApplicationJsonObject?: Vhinsc400ApplicationJson;
-    vhinsc401ApplicationJsonObject?: Vhinsc401ApplicationJson;
-    vhinsc404ApplicationJsonObject?: Vhinsc404ApplicationJson;
-    vhinsc500ApplicationJsonObject?: Vhinsc500ApplicationJson;
-    vhinsc502ApplicationJsonObject?: Vhinsc502ApplicationJson;
-    vhinsc503ApplicationJsonObject?: Vhinsc503ApplicationJson;
-    vhinsc504ApplicationJsonObject?: Vhinsc504ApplicationJson;
+    vhinsc400ApplicationJSONObject?: Vhinsc400ApplicationJson;
+    vhinsc401ApplicationJSONObject?: Vhinsc401ApplicationJson;
+    vhinsc404ApplicationJSONObject?: Vhinsc404ApplicationJson;
+    vhinsc500ApplicationJSONObject?: Vhinsc500ApplicationJson;
+    vhinsc502ApplicationJSONObject?: Vhinsc502ApplicationJson;
+    vhinsc503ApplicationJSONObject?: Vhinsc503ApplicationJson;
+    vhinsc504ApplicationJSONObject?: Vhinsc504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Color } from "./color";
-import { ColorStyle } from "./colorstyle";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TreemapChartColorScale = void 0;
+var utils_1 = require("../../../internal/utils");
+var color_1 = require("./color");
+var colorstyle_1 = require("./colorstyle");
 // TreemapChartColorScale
 /**
  * A color scale for a treemap chart.
@@ -35,37 +38,37 @@ var TreemapChartColorScale = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxValueColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxValueColor" }),
+        __metadata("design:type", color_1.Color)
     ], TreemapChartColorScale.prototype, "maxValueColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxValueColorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxValueColorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], TreemapChartColorScale.prototype, "maxValueColorStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=midValueColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=midValueColor" }),
+        __metadata("design:type", color_1.Color)
     ], TreemapChartColorScale.prototype, "midValueColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=midValueColorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=midValueColorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], TreemapChartColorScale.prototype, "midValueColorStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minValueColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minValueColor" }),
+        __metadata("design:type", color_1.Color)
     ], TreemapChartColorScale.prototype, "minValueColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minValueColorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minValueColorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], TreemapChartColorScale.prototype, "minValueColorStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noDataColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noDataColor" }),
+        __metadata("design:type", color_1.Color)
     ], TreemapChartColorScale.prototype, "noDataColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noDataColorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noDataColorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], TreemapChartColorScale.prototype, "noDataColorStyle", void 0);
     return TreemapChartColorScale;
-}(SpeakeasyBase));
-export { TreemapChartColorScale };
+}(utils_1.SpeakeasyBase));
+exports.TreemapChartColorScale = TreemapChartColorScale;

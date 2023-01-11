@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PatientSatisfaction } from "./patientsatisfaction";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Satisfaction = void 0;
+var utils_1 = require("../../../internal/utils");
+var patientsatisfaction_1 = require("./patientsatisfaction");
 var Satisfaction = /** @class */ (function (_super) {
     __extends(Satisfaction, _super);
     function Satisfaction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effective_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effective_date" }),
         __metadata("design:type", Date)
     ], Satisfaction.prototype, "effectiveDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=health" }),
-        __metadata("design:type", PatientSatisfaction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=health" }),
+        __metadata("design:type", patientsatisfaction_1.PatientSatisfaction)
     ], Satisfaction.prototype, "health", void 0);
     return Satisfaction;
-}(SpeakeasyBase));
-export { Satisfaction };
+}(utils_1.SpeakeasyBase));
+exports.Satisfaction = Satisfaction;

@@ -24,6 +24,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathReques
 export declare class GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedFiles?: shared.PaginatedFiles;
 }

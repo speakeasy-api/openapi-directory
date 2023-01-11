@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CorrectAnswers } from "./correctanswers";
-import { Feedback } from "./feedback";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Grading = void 0;
+var utils_1 = require("../../../internal/utils");
+var correctanswers_1 = require("./correctanswers");
+var feedback_1 = require("./feedback");
 // Grading
 /**
  * Grading for a single question
@@ -35,25 +38,25 @@ var Grading = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=correctAnswers" }),
-        __metadata("design:type", CorrectAnswers)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=correctAnswers" }),
+        __metadata("design:type", correctanswers_1.CorrectAnswers)
     ], Grading.prototype, "correctAnswers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=generalFeedback" }),
-        __metadata("design:type", Feedback)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=generalFeedback" }),
+        __metadata("design:type", feedback_1.Feedback)
     ], Grading.prototype, "generalFeedback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pointValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pointValue" }),
         __metadata("design:type", Number)
     ], Grading.prototype, "pointValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whenRight" }),
-        __metadata("design:type", Feedback)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whenRight" }),
+        __metadata("design:type", feedback_1.Feedback)
     ], Grading.prototype, "whenRight", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=whenWrong" }),
-        __metadata("design:type", Feedback)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=whenWrong" }),
+        __metadata("design:type", feedback_1.Feedback)
     ], Grading.prototype, "whenWrong", void 0);
     return Grading;
-}(SpeakeasyBase));
-export { Grading };
+}(utils_1.SpeakeasyBase));
+exports.Grading = Grading;

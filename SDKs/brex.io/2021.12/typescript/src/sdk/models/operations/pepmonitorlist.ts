@@ -20,10 +20,10 @@ export class PepMonitorListResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  pepMonitorList200ApplicationJsonAnies?: any[];
+  pepMonitorList200ApplicationJSONAnies?: any[];
 
   @SpeakeasyMetadata()
-  pepMonitorListDefaultApplicationJsonAny?: any;
+  pepMonitorListDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DrivelabelsLabelsGetRequest, DrivelabelsLabelsGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,22 +28,22 @@ const sdk = new SDK();
     
 const req: DrivelabelsLabelsGetRequest = {
   pathParams: {
-    name: "cum",
+    name: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "provident",
-    alt: "json",
-    callback: "sit",
-    fields: "esse",
-    key: "ea",
-    languageCode: "et",
-    oauthToken: "est",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    languageCode: "voluptas",
+    oauthToken: "fugit",
     prettyPrint: false,
-    quotaUser: "culpa",
-    uploadType: "omnis",
-    uploadProtocol: "rerum",
-    useAdminAccess: false,
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
+    useAdminAccess: true,
     view: "LABEL_VIEW_BASIC",
   },
 };

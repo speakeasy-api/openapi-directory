@@ -26,10 +26,10 @@ export class SolutionVersion extends SpeakeasyBase {
   lastUpdatedDateTime?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=performAutoML" })
-  performAutoMl?: boolean;
+  performAutoML?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=performHPO" })
-  performHpo?: boolean;
+  performHPO?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=recipeArn" })
   recipeArn?: string;
@@ -53,5 +53,5 @@ export class SolutionVersion extends SpeakeasyBase {
   trainingMode?: TrainingModeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=tunedHPOParams" })
-  tunedHpoParams?: TunedHpoParams;
+  tunedHPOParams?: TunedHpoParams;
 }

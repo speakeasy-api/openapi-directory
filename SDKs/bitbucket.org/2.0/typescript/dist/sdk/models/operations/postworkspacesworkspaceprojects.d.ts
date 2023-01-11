@@ -10,13 +10,13 @@ export declare class PostWorkspacesWorkspaceProjectsSecurity extends SpeakeasyBa
 }
 export declare class PostWorkspacesWorkspaceProjectsRequest extends SpeakeasyBase {
     pathParams: PostWorkspacesWorkspaceProjectsPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
     security: PostWorkspacesWorkspaceProjectsSecurity;
 }
 export declare class PostWorkspacesWorkspaceProjectsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    error?: Map<string, any>;
-    project?: Map<string, any>;
+    error?: Record<string, any>;
+    project?: Record<string, any>;
 }

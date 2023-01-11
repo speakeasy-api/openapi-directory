@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StopHumanLoopResponse = exports.StopHumanLoopRequest = exports.StopHumanLoopRequestBody = exports.StopHumanLoopHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var StopHumanLoopHeaders = /** @class */ (function (_super) {
     __extends(StopHumanLoopHeaders, _super);
     function StopHumanLoopHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], StopHumanLoopHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], StopHumanLoopHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], StopHumanLoopHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], StopHumanLoopHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], StopHumanLoopHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], StopHumanLoopHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], StopHumanLoopHeaders.prototype, "xAmzSignedHeaders", void 0);
     return StopHumanLoopHeaders;
-}(SpeakeasyBase));
-export { StopHumanLoopHeaders };
+}(utils_1.SpeakeasyBase));
+exports.StopHumanLoopHeaders = StopHumanLoopHeaders;
 var StopHumanLoopRequestBody = /** @class */ (function (_super) {
     __extends(StopHumanLoopRequestBody, _super);
     function StopHumanLoopRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HumanLoopName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HumanLoopName" }),
         __metadata("design:type", String)
     ], StopHumanLoopRequestBody.prototype, "humanLoopName", void 0);
     return StopHumanLoopRequestBody;
-}(SpeakeasyBase));
-export { StopHumanLoopRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.StopHumanLoopRequestBody = StopHumanLoopRequestBody;
 var StopHumanLoopRequest = /** @class */ (function (_super) {
     __extends(StopHumanLoopRequest, _super);
     function StopHumanLoopRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StopHumanLoopHeaders)
     ], StopHumanLoopRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", StopHumanLoopRequestBody)
     ], StopHumanLoopRequest.prototype, "request", void 0);
     return StopHumanLoopRequest;
-}(SpeakeasyBase));
-export { StopHumanLoopRequest };
+}(utils_1.SpeakeasyBase));
+exports.StopHumanLoopRequest = StopHumanLoopRequest;
 var StopHumanLoopResponse = /** @class */ (function (_super) {
     __extends(StopHumanLoopResponse, _super);
     function StopHumanLoopResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StopHumanLoopResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StopHumanLoopResponse.prototype, "internalServerException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StopHumanLoopResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StopHumanLoopResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], StopHumanLoopResponse.prototype, "stopHumanLoopResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StopHumanLoopResponse.prototype, "throttlingException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StopHumanLoopResponse.prototype, "validationException", void 0);
     return StopHumanLoopResponse;
-}(SpeakeasyBase));
-export { StopHumanLoopResponse };
+}(utils_1.SpeakeasyBase));
+exports.StopHumanLoopResponse = StopHumanLoopResponse;

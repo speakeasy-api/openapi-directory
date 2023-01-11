@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScanResponse = exports.ScanRequest = exports.ScanPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ScanPathParams = /** @class */ (function (_super) {
     __extends(ScanPathParams, _super);
     function ScanPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=baudrate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=baudrate" }),
         __metadata("design:type", Number)
     ], ScanPathParams.prototype, "baudrate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=device" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=device" }),
         __metadata("design:type", String)
     ], ScanPathParams.prototype, "device", void 0);
     return ScanPathParams;
-}(SpeakeasyBase));
-export { ScanPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ScanPathParams = ScanPathParams;
 var ScanRequest = /** @class */ (function (_super) {
     __extends(ScanRequest, _super);
     function ScanRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ScanPathParams)
     ], ScanRequest.prototype, "pathParams", void 0);
     return ScanRequest;
-}(SpeakeasyBase));
-export { ScanRequest };
+}(utils_1.SpeakeasyBase));
+exports.ScanRequest = ScanRequest;
 var ScanResponse = /** @class */ (function (_super) {
     __extends(ScanResponse, _super);
     function ScanResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScanResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ScanResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScanResponse.prototype, "slaves", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScanResponse.prototype, "textError", void 0);
     return ScanResponse;
-}(SpeakeasyBase));
-export { ScanResponse };
+}(utils_1.SpeakeasyBase));
+exports.ScanResponse = ScanResponse;

@@ -21,7 +21,7 @@ export declare class CloudflareWorkerRuleResponseTarget extends SpeakeasyBase {
     url: string;
 }
 export declare class CloudflareWorkerRuleResponse extends SpeakeasyBase {
-    links?: Map<string, any>;
+    links?: Record<string, any>;
     appId?: string;
     created?: number;
     id?: string;

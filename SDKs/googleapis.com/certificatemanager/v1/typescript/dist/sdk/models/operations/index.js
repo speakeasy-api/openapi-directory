@@ -1,16 +1,32 @@
-export * from "./certificatemanagerprojectslocationscertificateissuanceconfigscreate";
-export * from "./certificatemanagerprojectslocationscertificateissuanceconfigslist";
-export * from "./certificatemanagerprojectslocationscertificatemapscertificatemapentriescreate";
-export * from "./certificatemanagerprojectslocationscertificatemapscertificatemapentrieslist";
-export * from "./certificatemanagerprojectslocationscertificatemapscreate";
-export * from "./certificatemanagerprojectslocationscertificatemapslist";
-export * from "./certificatemanagerprojectslocationscertificatescreate";
-export * from "./certificatemanagerprojectslocationscertificateslist";
-export * from "./certificatemanagerprojectslocationsdnsauthorizationscreate";
-export * from "./certificatemanagerprojectslocationsdnsauthorizationslist";
-export * from "./certificatemanagerprojectslocationsdnsauthorizationspatch";
-export * from "./certificatemanagerprojectslocationslist";
-export * from "./certificatemanagerprojectslocationsoperationscancel";
-export * from "./certificatemanagerprojectslocationsoperationsdelete";
-export * from "./certificatemanagerprojectslocationsoperationsget";
-export * from "./certificatemanagerprojectslocationsoperationslist";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./certificatemanagerprojectslocationscertificateissuanceconfigscreate"), exports);
+__exportStar(require("./certificatemanagerprojectslocationscertificateissuanceconfigslist"), exports);
+__exportStar(require("./certificatemanagerprojectslocationscertificatemapscertificatemapentriescreate"), exports);
+__exportStar(require("./certificatemanagerprojectslocationscertificatemapscertificatemapentrieslist"), exports);
+__exportStar(require("./certificatemanagerprojectslocationscertificatemapscreate"), exports);
+__exportStar(require("./certificatemanagerprojectslocationscertificatemapslist"), exports);
+__exportStar(require("./certificatemanagerprojectslocationscertificatescreate"), exports);
+__exportStar(require("./certificatemanagerprojectslocationscertificateslist"), exports);
+__exportStar(require("./certificatemanagerprojectslocationsdnsauthorizationscreate"), exports);
+__exportStar(require("./certificatemanagerprojectslocationsdnsauthorizationslist"), exports);
+__exportStar(require("./certificatemanagerprojectslocationsdnsauthorizationspatch"), exports);
+__exportStar(require("./certificatemanagerprojectslocationslist"), exports);
+__exportStar(require("./certificatemanagerprojectslocationsoperationscancel"), exports);
+__exportStar(require("./certificatemanagerprojectslocationsoperationsdelete"), exports);
+__exportStar(require("./certificatemanagerprojectslocationsoperationsget"), exports);
+__exportStar(require("./certificatemanagerprojectslocationsoperationslist"), exports);

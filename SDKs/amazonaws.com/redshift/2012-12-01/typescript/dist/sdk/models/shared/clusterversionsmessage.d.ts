@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ClusterVersion } from "./clusterversion";
+import { ClusterVersionList } from "./clusterversionlist";
 /**
  * Contains the output from the <a>DescribeClusterVersions</a> action.
 **/
 export declare class ClusterVersionsMessage extends SpeakeasyBase {
-    clusterVersions?: ClusterVersion[];
+    clusterVersions?: ClusterVersionList[];
     marker?: string;
 }

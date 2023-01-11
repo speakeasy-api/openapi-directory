@@ -7,7 +7,7 @@ import { StoryOutlineHistory } from "./storyoutlinehistory";
 
 // Story
 /** 
- * Model for story objects
+ * Base model for all types
 **/
 export class Story extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=collaborators", elemType: StoryCollaborator })

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PrivateIp = void 0;
+var utils_1 = require("../../../internal/utils");
 // PrivateIp
 /**
  * Contains information about a private IP address associated with a network interface. This data type is used as a response element in the <a>DescribeFindings</a> action.
@@ -33,13 +36,13 @@ var PrivateIp = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateDnsName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateDnsName" }),
         __metadata("design:type", String)
     ], PrivateIp.prototype, "privateDnsName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateIpAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateIpAddress" }),
         __metadata("design:type", String)
     ], PrivateIp.prototype, "privateIpAddress", void 0);
     return PrivateIp;
-}(SpeakeasyBase));
-export { PrivateIp };
+}(utils_1.SpeakeasyBase));
+exports.PrivateIp = PrivateIp;

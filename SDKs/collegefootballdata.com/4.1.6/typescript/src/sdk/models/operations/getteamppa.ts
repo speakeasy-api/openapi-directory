@@ -32,5 +32,5 @@ export class GetTeamPpaResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: shared.TeamPpa })
-  teamPpas?: shared.TeamPpa[];
+  teamPPAS?: shared.TeamPpa[];
 }

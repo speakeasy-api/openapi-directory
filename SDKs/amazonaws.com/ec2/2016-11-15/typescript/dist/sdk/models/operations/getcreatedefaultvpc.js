@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCreateDefaultVpcActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCreateDefaultVpcResponse = exports.GetCreateDefaultVpcRequest = exports.GetCreateDefaultVpcHeaders = exports.GetCreateDefaultVpcQueryParams = exports.GetCreateDefaultVpcVersionEnum = exports.GetCreateDefaultVpcActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCreateDefaultVpcActionEnum;
 (function (GetCreateDefaultVpcActionEnum) {
     GetCreateDefaultVpcActionEnum["CreateDefaultVpc"] = "CreateDefaultVpc";
-})(GetCreateDefaultVpcActionEnum || (GetCreateDefaultVpcActionEnum = {}));
-export var GetCreateDefaultVpcVersionEnum;
+})(GetCreateDefaultVpcActionEnum = exports.GetCreateDefaultVpcActionEnum || (exports.GetCreateDefaultVpcActionEnum = {}));
+var GetCreateDefaultVpcVersionEnum;
 (function (GetCreateDefaultVpcVersionEnum) {
     GetCreateDefaultVpcVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetCreateDefaultVpcVersionEnum || (GetCreateDefaultVpcVersionEnum = {}));
+})(GetCreateDefaultVpcVersionEnum = exports.GetCreateDefaultVpcVersionEnum || (exports.GetCreateDefaultVpcVersionEnum = {}));
 var GetCreateDefaultVpcQueryParams = /** @class */ (function (_super) {
     __extends(GetCreateDefaultVpcQueryParams, _super);
     function GetCreateDefaultVpcQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetCreateDefaultVpcQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetCreateDefaultVpcQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetCreateDefaultVpcQueryParams.prototype, "version", void 0);
     return GetCreateDefaultVpcQueryParams;
-}(SpeakeasyBase));
-export { GetCreateDefaultVpcQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateDefaultVpcQueryParams = GetCreateDefaultVpcQueryParams;
 var GetCreateDefaultVpcHeaders = /** @class */ (function (_super) {
     __extends(GetCreateDefaultVpcHeaders, _super);
     function GetCreateDefaultVpcHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetCreateDefaultVpcHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetCreateDefaultVpcHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetCreateDefaultVpcHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetCreateDefaultVpcHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetCreateDefaultVpcHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetCreateDefaultVpcHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetCreateDefaultVpcHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetCreateDefaultVpcHeaders;
-}(SpeakeasyBase));
-export { GetCreateDefaultVpcHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateDefaultVpcHeaders = GetCreateDefaultVpcHeaders;
 var GetCreateDefaultVpcRequest = /** @class */ (function (_super) {
     __extends(GetCreateDefaultVpcRequest, _super);
     function GetCreateDefaultVpcRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateDefaultVpcQueryParams)
     ], GetCreateDefaultVpcRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateDefaultVpcHeaders)
     ], GetCreateDefaultVpcRequest.prototype, "headers", void 0);
     return GetCreateDefaultVpcRequest;
-}(SpeakeasyBase));
-export { GetCreateDefaultVpcRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateDefaultVpcRequest = GetCreateDefaultVpcRequest;
 var GetCreateDefaultVpcResponse = /** @class */ (function (_super) {
     __extends(GetCreateDefaultVpcResponse, _super);
     function GetCreateDefaultVpcResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetCreateDefaultVpcResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCreateDefaultVpcResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCreateDefaultVpcResponse.prototype, "statusCode", void 0);
     return GetCreateDefaultVpcResponse;
-}(SpeakeasyBase));
-export { GetCreateDefaultVpcResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateDefaultVpcResponse = GetCreateDefaultVpcResponse;

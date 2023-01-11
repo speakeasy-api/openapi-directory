@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QueryExecutionContext } from "./queryexecutioncontext";
-import { ResultConfiguration } from "./resultconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartQueryExecutionInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var queryexecutioncontext_1 = require("./queryexecutioncontext");
+var resultconfiguration_1 = require("./resultconfiguration");
 var StartQueryExecutionInput = /** @class */ (function (_super) {
     __extends(StartQueryExecutionInput, _super);
     function StartQueryExecutionInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClientRequestToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClientRequestToken" }),
         __metadata("design:type", String)
     ], StartQueryExecutionInput.prototype, "clientRequestToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QueryExecutionContext" }),
-        __metadata("design:type", QueryExecutionContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QueryExecutionContext" }),
+        __metadata("design:type", queryexecutioncontext_1.QueryExecutionContext)
     ], StartQueryExecutionInput.prototype, "queryExecutionContext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QueryString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QueryString" }),
         __metadata("design:type", String)
     ], StartQueryExecutionInput.prototype, "queryString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResultConfiguration" }),
-        __metadata("design:type", ResultConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResultConfiguration" }),
+        __metadata("design:type", resultconfiguration_1.ResultConfiguration)
     ], StartQueryExecutionInput.prototype, "resultConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkGroup" }),
         __metadata("design:type", String)
     ], StartQueryExecutionInput.prototype, "workGroup", void 0);
     return StartQueryExecutionInput;
-}(SpeakeasyBase));
-export { StartQueryExecutionInput };
+}(utils_1.SpeakeasyBase));
+exports.StartQueryExecutionInput = StartQueryExecutionInput;

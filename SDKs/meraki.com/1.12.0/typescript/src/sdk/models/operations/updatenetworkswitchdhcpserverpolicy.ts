@@ -42,5 +42,5 @@ export class UpdateNetworkSwitchDhcpServerPolicyResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkSwitchDhcpServerPolicy200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkSwitchDhcpServerPolicy200ApplicationJSONObject?: Record<string, any>;
 }

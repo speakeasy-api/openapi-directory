@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountAddress = void 0;
+var utils_1 = require("../../../internal/utils");
 var AccountAddress = /** @class */ (function (_super) {
     __extends(AccountAddress, _super);
     function AccountAddress() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], AccountAddress.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locality" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locality" }),
         __metadata("design:type", String)
     ], AccountAddress.prototype, "locality", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postalCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postalCode" }),
         __metadata("design:type", String)
     ], AccountAddress.prototype, "postalCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], AccountAddress.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streetAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streetAddress" }),
         __metadata("design:type", String)
     ], AccountAddress.prototype, "streetAddress", void 0);
     return AccountAddress;
-}(SpeakeasyBase));
-export { AccountAddress };
+}(utils_1.SpeakeasyBase));
+exports.AccountAddress = AccountAddress;

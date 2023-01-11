@@ -15,6 +15,18 @@ export declare class Tags {
     **/
     getResourcesTagsFormat(req: operations.GetResourcesTagsFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesTagsFormatResponse>;
     /**
+     * getResourcesTagsTagLanguagesFormat - Get TagLanguages
+     *
+     * List of Tag Languages
+    **/
+    getResourcesTagsTagLanguagesFormat(req: operations.GetResourcesTagsTagLanguagesFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesTagsTagLanguagesFormatResponse>;
+    /**
+     * getResourcesTagsTagTypesFormat - Get MediaItems for Tag
+     *
+     * List of Types
+    **/
+    getResourcesTagsTagTypesFormat(req: operations.GetResourcesTagsTagTypesFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesTagsTagTypesFormatResponse>;
+    /**
      * getResourcesTagsIdFormat - Get Tag by ID
      *
      * Information about a specific tag
@@ -38,16 +50,4 @@ export declare class Tags {
      * MediaItem
     **/
     getResourcesTagsIdSyndicateFormat(req: operations.GetResourcesTagsIdSyndicateFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesTagsIdSyndicateFormatResponse>;
-    /**
-     * getResourcesTagsTagLanguagesFormat - Get TagLanguages
-     *
-     * List of Tag Languages
-    **/
-    getResourcesTagsTagLanguagesFormat(req: operations.GetResourcesTagsTagLanguagesFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesTagsTagLanguagesFormatResponse>;
-    /**
-     * getResourcesTagsTagTypesFormat - Get MediaItems for Tag
-     *
-     * List of Types
-    **/
-    getResourcesTagsTagTypesFormat(req: operations.GetResourcesTagsTagTypesFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetResourcesTagsTagTypesFormatResponse>;
 }

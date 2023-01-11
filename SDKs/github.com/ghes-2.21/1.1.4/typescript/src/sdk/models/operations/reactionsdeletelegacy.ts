@@ -35,5 +35,5 @@ export class ReactionsDeleteLegacyResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  reactionsDeleteLegacy415ApplicationJsonObject?: ReactionsDeleteLegacy415ApplicationJson;
+  reactionsDeleteLegacy415ApplicationJSONObject?: ReactionsDeleteLegacy415ApplicationJson;
 }

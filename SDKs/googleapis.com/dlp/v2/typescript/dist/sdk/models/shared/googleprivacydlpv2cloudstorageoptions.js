@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2FileSet } from "./googleprivacydlpv2fileset";
-export var GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2CloudStorageOptions = exports.GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum = exports.GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2fileset_1 = require("./googleprivacydlpv2fileset");
+var GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum;
 (function (GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum) {
     GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum["FileTypeUnspecified"] = "FILE_TYPE_UNSPECIFIED";
     GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum["BinaryFile"] = "BINARY_FILE";
@@ -37,13 +40,13 @@ export var GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum;
     GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum["Tsv"] = "TSV";
     GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum["Powerpoint"] = "POWERPOINT";
     GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum["Excel"] = "EXCEL";
-})(GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum || (GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum = {}));
-export var GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum;
+})(GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum = exports.GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum || (exports.GooglePrivacyDlpV2CloudStorageOptionsFileTypesEnum = {}));
+var GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum;
 (function (GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum) {
     GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum["SampleMethodUnspecified"] = "SAMPLE_METHOD_UNSPECIFIED";
     GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum["Top"] = "TOP";
     GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum["RandomStart"] = "RANDOM_START";
-})(GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum || (GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum = {}));
+})(GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum = exports.GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum || (exports.GooglePrivacyDlpV2CloudStorageOptionsSampleMethodEnum = {}));
 // GooglePrivacyDlpV2CloudStorageOptions
 /**
  * Options defining a file or a set of files within a Cloud Storage bucket.
@@ -54,29 +57,29 @@ var GooglePrivacyDlpV2CloudStorageOptions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bytesLimitPerFile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bytesLimitPerFile" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2CloudStorageOptions.prototype, "bytesLimitPerFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bytesLimitPerFilePercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bytesLimitPerFilePercent" }),
         __metadata("design:type", Number)
     ], GooglePrivacyDlpV2CloudStorageOptions.prototype, "bytesLimitPerFilePercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileSet" }),
-        __metadata("design:type", GooglePrivacyDlpV2FileSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileSet" }),
+        __metadata("design:type", googleprivacydlpv2fileset_1.GooglePrivacyDlpV2FileSet)
     ], GooglePrivacyDlpV2CloudStorageOptions.prototype, "fileSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileTypes" }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2CloudStorageOptions.prototype, "fileTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filesLimitPercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filesLimitPercent" }),
         __metadata("design:type", Number)
     ], GooglePrivacyDlpV2CloudStorageOptions.prototype, "filesLimitPercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleMethod" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2CloudStorageOptions.prototype, "sampleMethod", void 0);
     return GooglePrivacyDlpV2CloudStorageOptions;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2CloudStorageOptions };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2CloudStorageOptions = GooglePrivacyDlpV2CloudStorageOptions;

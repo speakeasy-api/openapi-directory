@@ -22,5 +22,5 @@ export declare class UpdateLocationSmbResponse extends SpeakeasyBase {
     internalException?: any;
     invalidRequestException?: any;
     statusCode: number;
-    updateLocationSmbResponse?: Map<string, any>;
+    updateLocationSmbResponse?: Record<string, any>;
 }

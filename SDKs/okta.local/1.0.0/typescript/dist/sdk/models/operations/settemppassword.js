@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetTempPasswordResponse = exports.SetTempPasswordRequest = exports.SetTempPasswordQueryParams = exports.SetTempPasswordPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SetTempPasswordPathParams = /** @class */ (function (_super) {
     __extends(SetTempPasswordPathParams, _super);
     function SetTempPasswordPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userId" }),
         __metadata("design:type", String)
     ], SetTempPasswordPathParams.prototype, "userId", void 0);
     return SetTempPasswordPathParams;
-}(SpeakeasyBase));
-export { SetTempPasswordPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SetTempPasswordPathParams = SetTempPasswordPathParams;
 var SetTempPasswordQueryParams = /** @class */ (function (_super) {
     __extends(SetTempPasswordQueryParams, _super);
     function SetTempPasswordQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tempPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tempPassword" }),
         __metadata("design:type", String)
     ], SetTempPasswordQueryParams.prototype, "tempPassword", void 0);
     return SetTempPasswordQueryParams;
-}(SpeakeasyBase));
-export { SetTempPasswordQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SetTempPasswordQueryParams = SetTempPasswordQueryParams;
 var SetTempPasswordRequest = /** @class */ (function (_super) {
     __extends(SetTempPasswordRequest, _super);
     function SetTempPasswordRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetTempPasswordPathParams)
     ], SetTempPasswordRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetTempPasswordQueryParams)
     ], SetTempPasswordRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/plain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/plain" }),
         __metadata("design:type", Uint8Array)
     ], SetTempPasswordRequest.prototype, "request", void 0);
     return SetTempPasswordRequest;
-}(SpeakeasyBase));
-export { SetTempPasswordRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetTempPasswordRequest = SetTempPasswordRequest;
 var SetTempPasswordResponse = /** @class */ (function (_super) {
     __extends(SetTempPasswordResponse, _super);
     function SetTempPasswordResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SetTempPasswordResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SetTempPasswordResponse.prototype, "statusCode", void 0);
     return SetTempPasswordResponse;
-}(SpeakeasyBase));
-export { SetTempPasswordResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetTempPasswordResponse = SetTempPasswordResponse;

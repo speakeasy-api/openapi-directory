@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,166 +14,191 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClassroomInvitationsGetResponse = exports.ClassroomInvitationsGetRequest = exports.ClassroomInvitationsGetSecurity = exports.ClassroomInvitationsGetSecurityOption2 = exports.ClassroomInvitationsGetSecurityOption1 = exports.ClassroomInvitationsGetQueryParams = exports.ClassroomInvitationsGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ClassroomInvitationsGetPathParams = /** @class */ (function (_super) {
     __extends(ClassroomInvitationsGetPathParams, _super);
     function ClassroomInvitationsGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], ClassroomInvitationsGetPathParams.prototype, "id", void 0);
     return ClassroomInvitationsGetPathParams;
-}(SpeakeasyBase));
-export { ClassroomInvitationsGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ClassroomInvitationsGetPathParams = ClassroomInvitationsGetPathParams;
 var ClassroomInvitationsGetQueryParams = /** @class */ (function (_super) {
     __extends(ClassroomInvitationsGetQueryParams, _super);
     function ClassroomInvitationsGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], ClassroomInvitationsGetQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], ClassroomInvitationsGetQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], ClassroomInvitationsGetQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], ClassroomInvitationsGetQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], ClassroomInvitationsGetQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], ClassroomInvitationsGetQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], ClassroomInvitationsGetQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], ClassroomInvitationsGetQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], ClassroomInvitationsGetQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], ClassroomInvitationsGetQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], ClassroomInvitationsGetQueryParams.prototype, "uploadProtocol", void 0);
     return ClassroomInvitationsGetQueryParams;
-}(SpeakeasyBase));
-export { ClassroomInvitationsGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ClassroomInvitationsGetQueryParams = ClassroomInvitationsGetQueryParams;
 var ClassroomInvitationsGetSecurityOption1 = /** @class */ (function (_super) {
     __extends(ClassroomInvitationsGetSecurityOption1, _super);
     function ClassroomInvitationsGetSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], ClassroomInvitationsGetSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], ClassroomInvitationsGetSecurityOption1.prototype, "oauth2c", void 0);
     return ClassroomInvitationsGetSecurityOption1;
-}(SpeakeasyBase));
-export { ClassroomInvitationsGetSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.ClassroomInvitationsGetSecurityOption1 = ClassroomInvitationsGetSecurityOption1;
 var ClassroomInvitationsGetSecurityOption2 = /** @class */ (function (_super) {
     __extends(ClassroomInvitationsGetSecurityOption2, _super);
     function ClassroomInvitationsGetSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], ClassroomInvitationsGetSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], ClassroomInvitationsGetSecurityOption2.prototype, "oauth2c", void 0);
     return ClassroomInvitationsGetSecurityOption2;
-}(SpeakeasyBase));
-export { ClassroomInvitationsGetSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.ClassroomInvitationsGetSecurityOption2 = ClassroomInvitationsGetSecurityOption2;
 var ClassroomInvitationsGetSecurity = /** @class */ (function (_super) {
     __extends(ClassroomInvitationsGetSecurity, _super);
     function ClassroomInvitationsGetSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", ClassroomInvitationsGetSecurityOption1)
     ], ClassroomInvitationsGetSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", ClassroomInvitationsGetSecurityOption2)
     ], ClassroomInvitationsGetSecurity.prototype, "option2", void 0);
     return ClassroomInvitationsGetSecurity;
-}(SpeakeasyBase));
-export { ClassroomInvitationsGetSecurity };
+}(utils_1.SpeakeasyBase));
+exports.ClassroomInvitationsGetSecurity = ClassroomInvitationsGetSecurity;
 var ClassroomInvitationsGetRequest = /** @class */ (function (_super) {
     __extends(ClassroomInvitationsGetRequest, _super);
     function ClassroomInvitationsGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ClassroomInvitationsGetPathParams)
     ], ClassroomInvitationsGetRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ClassroomInvitationsGetQueryParams)
     ], ClassroomInvitationsGetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ClassroomInvitationsGetSecurity)
     ], ClassroomInvitationsGetRequest.prototype, "security", void 0);
     return ClassroomInvitationsGetRequest;
-}(SpeakeasyBase));
-export { ClassroomInvitationsGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.ClassroomInvitationsGetRequest = ClassroomInvitationsGetRequest;
 var ClassroomInvitationsGetResponse = /** @class */ (function (_super) {
     __extends(ClassroomInvitationsGetResponse, _super);
     function ClassroomInvitationsGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ClassroomInvitationsGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Invitation)
     ], ClassroomInvitationsGetResponse.prototype, "invitation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ClassroomInvitationsGetResponse.prototype, "statusCode", void 0);
     return ClassroomInvitationsGetResponse;
-}(SpeakeasyBase));
-export { ClassroomInvitationsGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.ClassroomInvitationsGetResponse = ClassroomInvitationsGetResponse;

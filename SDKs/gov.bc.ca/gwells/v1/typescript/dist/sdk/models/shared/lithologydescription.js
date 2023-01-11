@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LithologyDescription = void 0;
+var utils_1 = require("../../../internal/utils");
 var LithologyDescription = /** @class */ (function (_super) {
     __extends(LithologyDescription, _super);
     function LithologyDescription() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lithology_colour" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lithology_colour" }),
         __metadata("design:type", String)
     ], LithologyDescription.prototype, "lithologyColour", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lithology_from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lithology_from" }),
         __metadata("design:type", String)
     ], LithologyDescription.prototype, "lithologyFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lithology_hardness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lithology_hardness" }),
         __metadata("design:type", String)
     ], LithologyDescription.prototype, "lithologyHardness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lithology_moisture" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lithology_moisture" }),
         __metadata("design:type", String)
     ], LithologyDescription.prototype, "lithologyMoisture", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lithology_raw_data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lithology_raw_data" }),
         __metadata("design:type", String)
     ], LithologyDescription.prototype, "lithologyRawData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lithology_to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lithology_to" }),
         __metadata("design:type", String)
     ], LithologyDescription.prototype, "lithologyTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=water_bearing_estimated_flow" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=water_bearing_estimated_flow" }),
         __metadata("design:type", String)
     ], LithologyDescription.prototype, "waterBearingEstimatedFlow", void 0);
     return LithologyDescription;
-}(SpeakeasyBase));
-export { LithologyDescription };
+}(utils_1.SpeakeasyBase));
+exports.LithologyDescription = LithologyDescription;

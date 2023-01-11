@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var BiddingFunctionStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BiddingFunctionInput = exports.BiddingFunction = exports.BiddingFunctionTypeEnum = exports.BiddingFunctionStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var BiddingFunctionStateEnum;
 (function (BiddingFunctionStateEnum) {
     BiddingFunctionStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     BiddingFunctionStateEnum["Active"] = "ACTIVE";
     BiddingFunctionStateEnum["Archived"] = "ARCHIVED";
-})(BiddingFunctionStateEnum || (BiddingFunctionStateEnum = {}));
-export var BiddingFunctionTypeEnum;
+})(BiddingFunctionStateEnum = exports.BiddingFunctionStateEnum || (exports.BiddingFunctionStateEnum = {}));
+var BiddingFunctionTypeEnum;
 (function (BiddingFunctionTypeEnum) {
     BiddingFunctionTypeEnum["FunctionTypeUnspecified"] = "FUNCTION_TYPE_UNSPECIFIED";
     BiddingFunctionTypeEnum["TurtledoveSimulationBiddingFunction"] = "TURTLEDOVE_SIMULATION_BIDDING_FUNCTION";
     BiddingFunctionTypeEnum["FledgeBiddingFunction"] = "FLEDGE_BIDDING_FUNCTION";
-})(BiddingFunctionTypeEnum || (BiddingFunctionTypeEnum = {}));
+})(BiddingFunctionTypeEnum = exports.BiddingFunctionTypeEnum || (exports.BiddingFunctionTypeEnum = {}));
 // BiddingFunction
 /**
  * The bidding function to be executed as part of the TURTLEDOVE simulation experiment bidding flow.
@@ -45,24 +48,24 @@ var BiddingFunction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=biddingFunction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=biddingFunction" }),
         __metadata("design:type", String)
     ], BiddingFunction.prototype, "biddingFunction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BiddingFunction.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], BiddingFunction.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], BiddingFunction.prototype, "type", void 0);
     return BiddingFunction;
-}(SpeakeasyBase));
-export { BiddingFunction };
+}(utils_1.SpeakeasyBase));
+exports.BiddingFunction = BiddingFunction;
 // BiddingFunctionInput
 /**
  * The bidding function to be executed as part of the TURTLEDOVE simulation experiment bidding flow.
@@ -73,17 +76,17 @@ var BiddingFunctionInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=biddingFunction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=biddingFunction" }),
         __metadata("design:type", String)
     ], BiddingFunctionInput.prototype, "biddingFunction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BiddingFunctionInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], BiddingFunctionInput.prototype, "type", void 0);
     return BiddingFunctionInput;
-}(SpeakeasyBase));
-export { BiddingFunctionInput };
+}(utils_1.SpeakeasyBase));
+exports.BiddingFunctionInput = BiddingFunctionInput;

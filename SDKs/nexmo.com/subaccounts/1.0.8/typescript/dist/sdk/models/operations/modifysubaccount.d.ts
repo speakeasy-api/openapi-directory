@@ -43,7 +43,7 @@ export declare class ModifySubaccountResponse extends SpeakeasyBase {
     statusCode: number;
     subaccountResponse?: any;
     unprovisionedErrorResponse?: shared.UnprovisionedErrorResponse;
-    modifySubaccount401ApplicationJsonObject?: ModifySubaccount401ApplicationJson;
-    modifySubaccount404ApplicationJsonObject?: ModifySubaccount404ApplicationJson;
-    modifySubaccount422ApplicationJsonObject?: ModifySubaccount422ApplicationJson;
+    modifySubaccount401ApplicationJSONObject?: ModifySubaccount401ApplicationJson;
+    modifySubaccount404ApplicationJSONObject?: ModifySubaccount404ApplicationJson;
+    modifySubaccount422ApplicationJSONObject?: ModifySubaccount422ApplicationJson;
 }

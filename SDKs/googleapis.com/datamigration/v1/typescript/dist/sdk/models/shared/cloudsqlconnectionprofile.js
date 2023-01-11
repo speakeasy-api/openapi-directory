@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudSqlSettings } from "./cloudsqlsettings";
-import { CloudSqlSettingsInput } from "./cloudsqlsettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudSqlConnectionProfileInput = exports.CloudSqlConnectionProfile = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudsqlsettings_1 = require("./cloudsqlsettings");
+var cloudsqlsettings_2 = require("./cloudsqlsettings");
 // CloudSqlConnectionProfile
 /**
  * Specifies required connection parameters, and, optionally, the parameters required to create a Cloud SQL destination database instance.
@@ -35,28 +38,28 @@ var CloudSqlConnectionProfile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalPublicIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalPublicIp" }),
         __metadata("design:type", String)
     ], CloudSqlConnectionProfile.prototype, "additionalPublicIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudSqlId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudSqlId" }),
         __metadata("design:type", String)
     ], CloudSqlConnectionProfile.prototype, "cloudSqlId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateIp" }),
         __metadata("design:type", String)
     ], CloudSqlConnectionProfile.prototype, "privateIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicIp" }),
         __metadata("design:type", String)
     ], CloudSqlConnectionProfile.prototype, "publicIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", CloudSqlSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", cloudsqlsettings_1.CloudSqlSettings)
     ], CloudSqlConnectionProfile.prototype, "settings", void 0);
     return CloudSqlConnectionProfile;
-}(SpeakeasyBase));
-export { CloudSqlConnectionProfile };
+}(utils_1.SpeakeasyBase));
+exports.CloudSqlConnectionProfile = CloudSqlConnectionProfile;
 // CloudSqlConnectionProfileInput
 /**
  * Specifies required connection parameters, and, optionally, the parameters required to create a Cloud SQL destination database instance.
@@ -67,9 +70,9 @@ var CloudSqlConnectionProfileInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", CloudSqlSettingsInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", cloudsqlsettings_2.CloudSqlSettingsInput)
     ], CloudSqlConnectionProfileInput.prototype, "settings", void 0);
     return CloudSqlConnectionProfileInput;
-}(SpeakeasyBase));
-export { CloudSqlConnectionProfileInput };
+}(utils_1.SpeakeasyBase));
+exports.CloudSqlConnectionProfileInput = CloudSqlConnectionProfileInput;

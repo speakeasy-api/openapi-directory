@@ -60,5 +60,5 @@ export declare class McfData extends SpeakeasyBase {
     sampleSpace?: string;
     selfLink?: string;
     totalResults?: number;
-    totalsForAllResults?: Map<string, string>;
+    totalsForAllResults?: Record<string, string>;
 }

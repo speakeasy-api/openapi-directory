@@ -35,5 +35,5 @@ export declare class CampaignResponse extends SpeakeasyBase {
     treatmentDescription?: string;
     treatmentName?: string;
     version?: number;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

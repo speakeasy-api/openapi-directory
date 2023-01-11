@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BinaryColumnStatisticsData } from "./binarycolumnstatisticsdata";
-import { BooleanColumnStatisticsData } from "./booleancolumnstatisticsdata";
-import { DateColumnStatisticsData } from "./datecolumnstatisticsdata";
-import { DecimalColumnStatisticsData } from "./decimalcolumnstatisticsdata";
-import { DoubleColumnStatisticsData } from "./doublecolumnstatisticsdata";
-import { LongColumnStatisticsData } from "./longcolumnstatisticsdata";
-import { StringColumnStatisticsData } from "./stringcolumnstatisticsdata";
-import { ColumnStatisticsTypeEnum } from "./columnstatisticstypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ColumnStatisticsData = void 0;
+var utils_1 = require("../../../internal/utils");
+var binarycolumnstatisticsdata_1 = require("./binarycolumnstatisticsdata");
+var booleancolumnstatisticsdata_1 = require("./booleancolumnstatisticsdata");
+var datecolumnstatisticsdata_1 = require("./datecolumnstatisticsdata");
+var decimalcolumnstatisticsdata_1 = require("./decimalcolumnstatisticsdata");
+var doublecolumnstatisticsdata_1 = require("./doublecolumnstatisticsdata");
+var longcolumnstatisticsdata_1 = require("./longcolumnstatisticsdata");
+var stringcolumnstatisticsdata_1 = require("./stringcolumnstatisticsdata");
+var columnstatisticstypeenum_1 = require("./columnstatisticstypeenum");
 // ColumnStatisticsData
 /**
  * Contains the individual types of column statistics data. Only one data object should be set and indicated by the <code>Type</code> attribute.
@@ -41,37 +44,37 @@ var ColumnStatisticsData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BinaryColumnStatisticsData" }),
-        __metadata("design:type", BinaryColumnStatisticsData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BinaryColumnStatisticsData" }),
+        __metadata("design:type", binarycolumnstatisticsdata_1.BinaryColumnStatisticsData)
     ], ColumnStatisticsData.prototype, "binaryColumnStatisticsData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BooleanColumnStatisticsData" }),
-        __metadata("design:type", BooleanColumnStatisticsData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BooleanColumnStatisticsData" }),
+        __metadata("design:type", booleancolumnstatisticsdata_1.BooleanColumnStatisticsData)
     ], ColumnStatisticsData.prototype, "booleanColumnStatisticsData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DateColumnStatisticsData" }),
-        __metadata("design:type", DateColumnStatisticsData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DateColumnStatisticsData" }),
+        __metadata("design:type", datecolumnstatisticsdata_1.DateColumnStatisticsData)
     ], ColumnStatisticsData.prototype, "dateColumnStatisticsData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DecimalColumnStatisticsData" }),
-        __metadata("design:type", DecimalColumnStatisticsData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DecimalColumnStatisticsData" }),
+        __metadata("design:type", decimalcolumnstatisticsdata_1.DecimalColumnStatisticsData)
     ], ColumnStatisticsData.prototype, "decimalColumnStatisticsData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DoubleColumnStatisticsData" }),
-        __metadata("design:type", DoubleColumnStatisticsData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DoubleColumnStatisticsData" }),
+        __metadata("design:type", doublecolumnstatisticsdata_1.DoubleColumnStatisticsData)
     ], ColumnStatisticsData.prototype, "doubleColumnStatisticsData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LongColumnStatisticsData" }),
-        __metadata("design:type", LongColumnStatisticsData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LongColumnStatisticsData" }),
+        __metadata("design:type", longcolumnstatisticsdata_1.LongColumnStatisticsData)
     ], ColumnStatisticsData.prototype, "longColumnStatisticsData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StringColumnStatisticsData" }),
-        __metadata("design:type", StringColumnStatisticsData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StringColumnStatisticsData" }),
+        __metadata("design:type", stringcolumnstatisticsdata_1.StringColumnStatisticsData)
     ], ColumnStatisticsData.prototype, "stringColumnStatisticsData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], ColumnStatisticsData.prototype, "type", void 0);
     return ColumnStatisticsData;
-}(SpeakeasyBase));
-export { ColumnStatisticsData };
+}(utils_1.SpeakeasyBase));
+exports.ColumnStatisticsData = ColumnStatisticsData;

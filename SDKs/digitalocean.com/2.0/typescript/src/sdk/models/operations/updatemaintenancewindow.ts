@@ -1,47 +1,48 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class UpdateMaintenanceWindowPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=database_cluster_uuid" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=database_cluster_uuid" })
   databaseClusterUuid: string;
 }
 
 
-export class UpdateMaintenanceWindowRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: UpdateMaintenanceWindowPathParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request: shared.Onev21databasesGetResponses200ContentApplication1jsonSchemaPropertiesDatabasesItemsPropertiesMaintenanceWindowAllOf0;
-}
-
-
 export class UpdateMaintenanceWindow401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class UpdateMaintenanceWindowRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: UpdateMaintenanceWindowPathParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: shared.Onev21databasesGetResponses200ContentApplication1jsonSchemaPropertiesDatabasesItemsPropertiesMaintenanceWindowAllOf0Input;
+}
+
+
 export class UpdateMaintenanceWindowResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  updateMaintenanceWindow401ApplicationJsonObject?: UpdateMaintenanceWindow401ApplicationJson;
+  @SpeakeasyMetadata()
+  updateMaintenanceWindow401ApplicationJSONObject?: UpdateMaintenanceWindow401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

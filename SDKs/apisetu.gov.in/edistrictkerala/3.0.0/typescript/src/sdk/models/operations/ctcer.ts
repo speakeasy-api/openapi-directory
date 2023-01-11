@@ -191,23 +191,23 @@ export class CtcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ctcer400ApplicationJsonObject?: Ctcer400ApplicationJson;
+  ctcer400ApplicationJSONObject?: Ctcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  ctcer401ApplicationJsonObject?: Ctcer401ApplicationJson;
+  ctcer401ApplicationJSONObject?: Ctcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  ctcer404ApplicationJsonObject?: Ctcer404ApplicationJson;
+  ctcer404ApplicationJSONObject?: Ctcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  ctcer500ApplicationJsonObject?: Ctcer500ApplicationJson;
+  ctcer500ApplicationJSONObject?: Ctcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  ctcer502ApplicationJsonObject?: Ctcer502ApplicationJson;
+  ctcer502ApplicationJSONObject?: Ctcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  ctcer503ApplicationJsonObject?: Ctcer503ApplicationJson;
+  ctcer503ApplicationJSONObject?: Ctcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  ctcer504ApplicationJsonObject?: Ctcer504ApplicationJson;
+  ctcer504ApplicationJSONObject?: Ctcer504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudFormationCollectionFilter } from "./cloudformationcollectionfilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceCollectionFilter = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudformationcollectionfilter_1 = require("./cloudformationcollectionfilter");
 // ResourceCollectionFilter
 /**
  *  Information about a filter used to specify which AWS resources are analyzed for anomalous behavior by DevOps Guru.
@@ -34,9 +37,9 @@ var ResourceCollectionFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CloudFormation" }),
-        __metadata("design:type", CloudFormationCollectionFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CloudFormation" }),
+        __metadata("design:type", cloudformationcollectionfilter_1.CloudFormationCollectionFilter)
     ], ResourceCollectionFilter.prototype, "cloudFormation", void 0);
     return ResourceCollectionFilter;
-}(SpeakeasyBase));
-export { ResourceCollectionFilter };
+}(utils_1.SpeakeasyBase));
+exports.ResourceCollectionFilter = ResourceCollectionFilter;

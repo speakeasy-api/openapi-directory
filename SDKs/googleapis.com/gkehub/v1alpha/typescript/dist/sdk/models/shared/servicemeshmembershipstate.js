@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServiceMeshAnalysisMessage } from "./servicemeshanalysismessage";
-import { ServiceMeshControlPlaneManagement } from "./servicemeshcontrolplanemanagement";
-import { ServiceMeshDataPlaneManagement } from "./servicemeshdataplanemanagement";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceMeshMembershipState = void 0;
+var utils_1 = require("../../../internal/utils");
+var servicemeshanalysismessage_1 = require("./servicemeshanalysismessage");
+var servicemeshcontrolplanemanagement_1 = require("./servicemeshcontrolplanemanagement");
+var servicemeshdataplanemanagement_1 = require("./servicemeshdataplanemanagement");
 // ServiceMeshMembershipState
 /**
  * **Service Mesh**: State for a single Membership, as analyzed by the Service Mesh Hub Controller.
@@ -36,21 +39,21 @@ var ServiceMeshMembershipState = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analysisMessages", elemType: ServiceMeshAnalysisMessage }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analysisMessages", elemType: servicemeshanalysismessage_1.ServiceMeshAnalysisMessage }),
         __metadata("design:type", Array)
     ], ServiceMeshMembershipState.prototype, "analysisMessages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configApiVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configApiVersion" }),
         __metadata("design:type", String)
     ], ServiceMeshMembershipState.prototype, "configApiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=controlPlaneManagement" }),
-        __metadata("design:type", ServiceMeshControlPlaneManagement)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=controlPlaneManagement" }),
+        __metadata("design:type", servicemeshcontrolplanemanagement_1.ServiceMeshControlPlaneManagement)
     ], ServiceMeshMembershipState.prototype, "controlPlaneManagement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataPlaneManagement" }),
-        __metadata("design:type", ServiceMeshDataPlaneManagement)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataPlaneManagement" }),
+        __metadata("design:type", servicemeshdataplanemanagement_1.ServiceMeshDataPlaneManagement)
     ], ServiceMeshMembershipState.prototype, "dataPlaneManagement", void 0);
     return ServiceMeshMembershipState;
-}(SpeakeasyBase));
-export { ServiceMeshMembershipState };
+}(utils_1.SpeakeasyBase));
+exports.ServiceMeshMembershipState = ServiceMeshMembershipState;

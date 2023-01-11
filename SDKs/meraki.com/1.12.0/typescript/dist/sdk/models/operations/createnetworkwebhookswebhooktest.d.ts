@@ -13,5 +13,5 @@ export declare class CreateNetworkWebhooksWebhookTestRequest extends SpeakeasyBa
 export declare class CreateNetworkWebhooksWebhookTestResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createNetworkWebhooksWebhookTest201ApplicationJsonObject?: Map<string, any>;
+    createNetworkWebhooksWebhookTest201ApplicationJSONObject?: Record<string, any>;
 }

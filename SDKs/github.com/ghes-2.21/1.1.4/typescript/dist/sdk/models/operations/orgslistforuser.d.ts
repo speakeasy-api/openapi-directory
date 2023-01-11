@@ -13,7 +13,7 @@ export declare class OrgsListForUserRequest extends SpeakeasyBase {
 }
 export declare class OrgsListForUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     organizationSimples?: shared.OrganizationSimple[];
 }

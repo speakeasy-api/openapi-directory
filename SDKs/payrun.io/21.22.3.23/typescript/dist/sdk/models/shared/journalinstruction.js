@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var JournalInstructionJournalInstructionAccountingTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JournalInstruction = exports.JournalInstructionJournalInstruction = exports.JournalInstructionJournalInstructionAccountingTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var JournalInstructionJournalInstructionAccountingTypeEnum;
 (function (JournalInstructionJournalInstructionAccountingTypeEnum) {
     JournalInstructionJournalInstructionAccountingTypeEnum["Credit"] = "Credit";
     JournalInstructionJournalInstructionAccountingTypeEnum["Debit"] = "Debit";
-})(JournalInstructionJournalInstructionAccountingTypeEnum || (JournalInstructionJournalInstructionAccountingTypeEnum = {}));
+})(JournalInstructionJournalInstructionAccountingTypeEnum = exports.JournalInstructionJournalInstructionAccountingTypeEnum || (exports.JournalInstructionJournalInstructionAccountingTypeEnum = {}));
 var JournalInstructionJournalInstruction = /** @class */ (function (_super) {
     __extends(JournalInstructionJournalInstruction, _super);
     function JournalInstructionJournalInstruction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountingType" }),
         __metadata("design:type", String)
     ], JournalInstructionJournalInstruction.prototype, "accountingType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], JournalInstructionJournalInstruction.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndDate" }),
         __metadata("design:type", Date)
     ], JournalInstructionJournalInstruction.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Expression" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Expression" }),
         __metadata("design:type", String)
     ], JournalInstructionJournalInstruction.prototype, "expression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JournalLineTag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JournalLineTag" }),
         __metadata("design:type", String)
     ], JournalInstructionJournalInstruction.prototype, "journalLineTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LedgerTarget" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LedgerTarget" }),
         __metadata("design:type", String)
     ], JournalInstructionJournalInstruction.prototype, "ledgerTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NomCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NomCode" }),
         __metadata("design:type", String)
     ], JournalInstructionJournalInstruction.prototype, "nomCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartDate" }),
         __metadata("design:type", Date)
     ], JournalInstructionJournalInstruction.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubNomCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubNomCode" }),
         __metadata("design:type", String)
     ], JournalInstructionJournalInstruction.prototype, "subNomCode", void 0);
     return JournalInstructionJournalInstruction;
-}(SpeakeasyBase));
-export { JournalInstructionJournalInstruction };
+}(utils_1.SpeakeasyBase));
+exports.JournalInstructionJournalInstruction = JournalInstructionJournalInstruction;
 var JournalInstruction = /** @class */ (function (_super) {
     __extends(JournalInstruction, _super);
     function JournalInstruction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JournalInstruction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JournalInstruction" }),
         __metadata("design:type", JournalInstructionJournalInstruction)
     ], JournalInstruction.prototype, "journalInstruction", void 0);
     return JournalInstruction;
-}(SpeakeasyBase));
-export { JournalInstruction };
+}(utils_1.SpeakeasyBase));
+exports.JournalInstruction = JournalInstruction;

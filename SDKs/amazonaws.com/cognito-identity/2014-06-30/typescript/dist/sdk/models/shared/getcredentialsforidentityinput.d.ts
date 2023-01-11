@@ -5,5 +5,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetCredentialsForIdentityInput extends SpeakeasyBase {
     customRoleArn?: string;
     identityId: string;
-    logins?: Map<string, string>;
+    logins?: Record<string, string>;
 }

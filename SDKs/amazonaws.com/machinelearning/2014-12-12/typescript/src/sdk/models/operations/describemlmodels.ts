@@ -60,7 +60,7 @@ export class DescribeMlModelsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  describeMlModelsOutput?: shared.DescribeMlModelsOutput;
+  describeMLModelsOutput?: shared.DescribeMlModelsOutput;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

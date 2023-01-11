@@ -13,9 +13,9 @@ export class PostBundlesIdShareRequestBody extends SpeakeasyBase {
   note?: string;
 
   @SpeakeasyMetadata({ data: "multipart_form, name=recipients;json=true" })
-  recipients?: Map<string, any>[];
+  recipients?: Record<string, any>[];
 
-  @SpeakeasyMetadata({ data: "multipart_form, name=to" })
+  @SpeakeasyMetadata({ data: "multipart_form, name=to;json=true" })
   to?: string[];
 }
 

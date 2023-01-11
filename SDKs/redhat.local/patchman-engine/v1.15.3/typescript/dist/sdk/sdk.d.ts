@@ -1,9 +1,10 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://redhat.local", "https://redhat.local/"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -11,7 +12,7 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * latestPackage - Show me metadata of selected package
      *
@@ -139,4 +140,3 @@ export declare class SDK {
     **/
     viewSystemsAdvisories(req: operations.ViewSystemsAdvisoriesRequest, config?: AxiosRequestConfig): Promise<operations.ViewSystemsAdvisoriesResponse>;
 }
-export {};

@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class SocerRequestBodyCertificateParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=APPL_NO" })
-  applNo: string;
+  applNO: string;
 
   @SpeakeasyMetadata({ data: "json, name=DOB" })
   dob: string;
@@ -194,23 +194,23 @@ export class SocerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  socer400ApplicationJsonObject?: Socer400ApplicationJson;
+  socer400ApplicationJSONObject?: Socer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  socer401ApplicationJsonObject?: Socer401ApplicationJson;
+  socer401ApplicationJSONObject?: Socer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  socer404ApplicationJsonObject?: Socer404ApplicationJson;
+  socer404ApplicationJSONObject?: Socer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  socer500ApplicationJsonObject?: Socer500ApplicationJson;
+  socer500ApplicationJSONObject?: Socer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  socer502ApplicationJsonObject?: Socer502ApplicationJson;
+  socer502ApplicationJSONObject?: Socer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  socer503ApplicationJsonObject?: Socer503ApplicationJson;
+  socer503ApplicationJSONObject?: Socer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  socer504ApplicationJsonObject?: Socer504ApplicationJson;
+  socer504ApplicationJSONObject?: Socer504ApplicationJson;
 }

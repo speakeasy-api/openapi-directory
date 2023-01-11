@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MergeAForkResponse = exports.MergeAForkRequest = exports.MergeAForkRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var MergeAForkRequestBody = /** @class */ (function (_super) {
     __extends(MergeAForkRequestBody, _super);
     function MergeAForkRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], MergeAForkRequestBody.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], MergeAForkRequestBody.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=strategy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=strategy" }),
         __metadata("design:type", String)
     ], MergeAForkRequestBody.prototype, "strategy", void 0);
     return MergeAForkRequestBody;
-}(SpeakeasyBase));
-export { MergeAForkRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.MergeAForkRequestBody = MergeAForkRequestBody;
 var MergeAForkRequest = /** @class */ (function (_super) {
     __extends(MergeAForkRequest, _super);
     function MergeAForkRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", MergeAForkRequestBody)
     ], MergeAForkRequest.prototype, "request", void 0);
     return MergeAForkRequest;
-}(SpeakeasyBase));
-export { MergeAForkRequest };
+}(utils_1.SpeakeasyBase));
+exports.MergeAForkRequest = MergeAForkRequest;
 var MergeAForkResponse = /** @class */ (function (_super) {
     __extends(MergeAForkResponse, _super);
     function MergeAForkResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MergeAForkResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MergeAForkResponse.prototype, "statusCode", void 0);
     return MergeAForkResponse;
-}(SpeakeasyBase));
-export { MergeAForkResponse };
+}(utils_1.SpeakeasyBase));
+exports.MergeAForkResponse = MergeAForkResponse;

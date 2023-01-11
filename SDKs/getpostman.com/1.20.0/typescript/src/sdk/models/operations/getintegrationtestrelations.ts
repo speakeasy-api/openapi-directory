@@ -46,5 +46,5 @@ export class GetIntegrationTestRelationsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getIntegrationTestRelations200ApplicationJsonObject?: GetIntegrationTestRelations200ApplicationJson;
+  getIntegrationTestRelations200ApplicationJSONObject?: GetIntegrationTestRelations200ApplicationJson;
 }

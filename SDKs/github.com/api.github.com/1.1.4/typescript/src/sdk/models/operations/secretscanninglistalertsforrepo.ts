@@ -11,11 +11,6 @@ export class SecretScanningListAlertsForRepoPathParams extends SpeakeasyBase {
   repo: string;
 }
 
-export enum SecretScanningListAlertsForRepoStateEnum {
-    Open = "open",
-    Resolved = "resolved"
-}
-
 
 export class SecretScanningListAlertsForRepoQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
@@ -25,7 +20,7 @@ export class SecretScanningListAlertsForRepoQueryParams extends SpeakeasyBase {
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" })
-  state?: SecretScanningListAlertsForRepoStateEnum;
+  state?: shared.RepoEnum7;
 }
 
 
@@ -61,5 +56,5 @@ export class SecretScanningListAlertsForRepoResponse extends SpeakeasyBase {
   secretScanningAlerts?: shared.SecretScanningAlert[];
 
   @SpeakeasyMetadata()
-  secretScanningListAlertsForRepo503ApplicationJsonObject?: SecretScanningListAlertsForRepo503ApplicationJson;
+  secretScanningListAlertsForRepo503ApplicationJSONObject?: SecretScanningListAlertsForRepo503ApplicationJson;
 }

@@ -25,16 +25,16 @@ export class GetWfsInventoryHeaders extends SpeakeasyBase {
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_CONSUMER.CHANNEL.TYPE" })
-  wmConsumerChannelType: string;
+  wmCONSUMERCHANNELTYPE: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_QOS.CORRELATION_ID" })
-  wmQosCorrelationId: string;
+  wmQOSCORRELATIONID: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SEC.ACCESS_TOKEN" })
-  wmSecAccessToken: string;
+  wmSECACCESSTOKEN: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SVC.NAME" })
-  wmSvcName: string;
+  wmSVCNAME: string;
 }
 
 
@@ -106,5 +106,5 @@ export class GetWfsInventoryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getWfsInventory200ApplicationJsonObject?: GetWfsInventory200ApplicationJson;
+  getWFSInventory200ApplicationJSONObject?: GetWfsInventory200ApplicationJson;
 }

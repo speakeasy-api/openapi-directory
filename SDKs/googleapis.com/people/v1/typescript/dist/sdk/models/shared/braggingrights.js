@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FieldMetadata } from "./fieldmetadata";
-import { FieldMetadataInput } from "./fieldmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BraggingRightsInput = exports.BraggingRights = void 0;
+var utils_1 = require("../../../internal/utils");
+var fieldmetadata_1 = require("./fieldmetadata");
+var fieldmetadata_2 = require("./fieldmetadata");
 // BraggingRights
 /**
  * **DEPRECATED**: No data will be returned A person's bragging rights.
@@ -35,16 +38,16 @@ var BraggingRights = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_1.FieldMetadata)
     ], BraggingRights.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], BraggingRights.prototype, "value", void 0);
     return BraggingRights;
-}(SpeakeasyBase));
-export { BraggingRights };
+}(utils_1.SpeakeasyBase));
+exports.BraggingRights = BraggingRights;
 // BraggingRightsInput
 /**
  * **DEPRECATED**: No data will be returned A person's bragging rights.
@@ -55,13 +58,13 @@ var BraggingRightsInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadataInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_2.FieldMetadataInput)
     ], BraggingRightsInput.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], BraggingRightsInput.prototype, "value", void 0);
     return BraggingRightsInput;
-}(SpeakeasyBase));
-export { BraggingRightsInput };
+}(utils_1.SpeakeasyBase));
+exports.BraggingRightsInput = BraggingRightsInput;

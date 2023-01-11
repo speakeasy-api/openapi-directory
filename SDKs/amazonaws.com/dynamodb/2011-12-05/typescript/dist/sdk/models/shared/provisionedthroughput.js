@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProvisionedThroughput = void 0;
+var utils_1 = require("../../../internal/utils");
 // ProvisionedThroughput
 /**
  * Provisioned throughput reserves the required read and write resources for your table in terms of <code>ReadCapacityUnits</code> and <code>WriteCapacityUnits</code>. Values for provisioned throughput depend upon your expected read/write rates, item size, and consistency. Provide the expected number of read and write operations, assuming an item size of 1k and strictly consistent reads. For 2k item size, double the value. For 3k, triple the value, etc. Eventually-consistent reads consume half the resources of strictly consistent reads.
@@ -33,13 +36,13 @@ var ProvisionedThroughput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReadCapacityUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReadCapacityUnits" }),
         __metadata("design:type", Number)
     ], ProvisionedThroughput.prototype, "readCapacityUnits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WriteCapacityUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WriteCapacityUnits" }),
         __metadata("design:type", Number)
     ], ProvisionedThroughput.prototype, "writeCapacityUnits", void 0);
     return ProvisionedThroughput;
-}(SpeakeasyBase));
-export { ProvisionedThroughput };
+}(utils_1.SpeakeasyBase));
+exports.ProvisionedThroughput = ProvisionedThroughput;

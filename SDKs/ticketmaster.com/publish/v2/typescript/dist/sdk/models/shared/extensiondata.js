@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Source } from "./source";
-export var ExtensionDataRelatedEntityTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExtensionData = exports.ExtensionDataRelatedEntityTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var source_1 = require("./source");
+var ExtensionDataRelatedEntityTypeEnum;
 (function (ExtensionDataRelatedEntityTypeEnum) {
     ExtensionDataRelatedEntityTypeEnum["Event"] = "event";
     ExtensionDataRelatedEntityTypeEnum["Venue"] = "venue";
     ExtensionDataRelatedEntityTypeEnum["Attraction"] = "attraction";
-})(ExtensionDataRelatedEntityTypeEnum || (ExtensionDataRelatedEntityTypeEnum = {}));
+})(ExtensionDataRelatedEntityTypeEnum = exports.ExtensionDataRelatedEntityTypeEnum || (exports.ExtensionDataRelatedEntityTypeEnum = {}));
 // ExtensionData
 /**
  * This class defines an extenstion data on the Publish API
@@ -40,33 +43,33 @@ var ExtensionData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], ExtensionData.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relatedEntityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relatedEntityId" }),
         __metadata("design:type", String)
     ], ExtensionData.prototype, "relatedEntityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relatedEntitySource" }),
-        __metadata("design:type", Source)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relatedEntitySource" }),
+        __metadata("design:type", source_1.Source)
     ], ExtensionData.prototype, "relatedEntitySource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relatedEntityType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relatedEntityType" }),
         __metadata("design:type", String)
     ], ExtensionData.prototype, "relatedEntityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], ExtensionData.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ExtensionData.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versionNumber" }),
         __metadata("design:type", Number)
     ], ExtensionData.prototype, "versionNumber", void 0);
     return ExtensionData;
-}(SpeakeasyBase));
-export { ExtensionData };
+}(utils_1.SpeakeasyBase));
+exports.ExtensionData = ExtensionData;

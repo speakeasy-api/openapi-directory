@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Server } from "./server";
-import { ServerReplicationParameters } from "./serverreplicationparameters";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServerReplicationConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var server_1 = require("./server");
+var serverreplicationparameters_1 = require("./serverreplicationparameters");
 // ServerReplicationConfiguration
 /**
  * Replication configuration of a server.
@@ -35,13 +38,13 @@ var ServerReplicationConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server" }),
-        __metadata("design:type", Server)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server" }),
+        __metadata("design:type", server_1.Server)
     ], ServerReplicationConfiguration.prototype, "server", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverReplicationParameters" }),
-        __metadata("design:type", ServerReplicationParameters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverReplicationParameters" }),
+        __metadata("design:type", serverreplicationparameters_1.ServerReplicationParameters)
     ], ServerReplicationConfiguration.prototype, "serverReplicationParameters", void 0);
     return ServerReplicationConfiguration;
-}(SpeakeasyBase));
-export { ServerReplicationConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.ServerReplicationConfiguration = ServerReplicationConfiguration;

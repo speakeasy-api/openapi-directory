@@ -3,5 +3,5 @@ import { AssessmentTemplate } from "./assessmenttemplate";
 import { FailedItemDetails } from "./faileditemdetails";
 export declare class DescribeAssessmentTemplatesResponse extends SpeakeasyBase {
     assessmentTemplates: AssessmentTemplate[];
-    failedItems: Map<string, FailedItemDetails>;
+    failedItems: Record<string, FailedItemDetails>;
 }

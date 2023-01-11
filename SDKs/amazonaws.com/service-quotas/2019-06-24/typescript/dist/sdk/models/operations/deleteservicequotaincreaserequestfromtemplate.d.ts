@@ -21,7 +21,7 @@ export declare class DeleteServiceQuotaIncreaseRequestFromTemplateResponse exten
     awsServiceAccessNotEnabledException?: any;
     accessDeniedException?: any;
     contentType: string;
-    deleteServiceQuotaIncreaseRequestFromTemplateResponse?: Map<string, any>;
+    deleteServiceQuotaIncreaseRequestFromTemplateResponse?: Record<string, any>;
     dependencyAccessDeniedException?: any;
     illegalArgumentException?: any;
     noAvailableOrganizationException?: any;

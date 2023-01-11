@@ -24,6 +24,6 @@ export declare class UpdateDevEndpointResponse extends SpeakeasyBase {
     invalidInputException?: any;
     operationTimeoutException?: any;
     statusCode: number;
-    updateDevEndpointResponse?: Map<string, any>;
+    updateDevEndpointResponse?: Record<string, any>;
     validationException?: any;
 }

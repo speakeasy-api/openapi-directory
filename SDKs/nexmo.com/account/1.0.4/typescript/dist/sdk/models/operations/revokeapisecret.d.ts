@@ -14,7 +14,7 @@ export declare class RevokeApiSecretRequest extends SpeakeasyBase {
 export declare class RevokeApiSecretResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    revokeApiSecret401ApplicationJsonAny?: any;
-    revokeApiSecret403ApplicationJsonAny?: any;
-    revokeApiSecret404ApplicationJsonOneOf?: any;
+    revokeAPISecret401ApplicationJSONAny?: any;
+    revokeAPISecret403ApplicationJSONAny?: any;
+    revokeAPISecret404ApplicationJSONOneOf?: any;
 }

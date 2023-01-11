@@ -4,7 +4,7 @@ export declare class UnlockconnectorRequestBody extends SpeakeasyBase {
     connector?: string;
 }
 export declare class Unlockconnector201ApplicationJson extends SpeakeasyBase {
-    command?: Map<string, any>;
+    command?: Record<string, any>;
     message?: string;
     ok?: boolean;
 }
@@ -14,5 +14,5 @@ export declare class UnlockconnectorRequest extends SpeakeasyBase {
 export declare class UnlockconnectorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    unlockconnector201ApplicationJsonObject?: Unlockconnector201ApplicationJson;
+    unlockconnector201ApplicationJSONObject?: Unlockconnector201ApplicationJson;
 }

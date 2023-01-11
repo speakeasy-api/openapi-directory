@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AvailabilityInputModel } from "./availabilityinputmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduleUpdateModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var availabilityinputmodel_1 = require("./availabilityinputmodel");
 var ScheduleUpdateModel = /** @class */ (function (_super) {
     __extends(ScheduleUpdateModel, _super);
     function ScheduleUpdateModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availability" }),
-        __metadata("design:type", AvailabilityInputModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availability" }),
+        __metadata("design:type", availabilityinputmodel_1.AvailabilityInputModel)
     ], ScheduleUpdateModel.prototype, "availability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingsPerSlot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingsPerSlot" }),
         __metadata("design:type", Number)
     ], ScheduleUpdateModel.prototype, "bookingsPerSlot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interval" }),
         __metadata("design:type", Number)
     ], ScheduleUpdateModel.prototype, "interval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationId" }),
         __metadata("design:type", String)
     ], ScheduleUpdateModel.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ScheduleUpdateModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceGroupId" }),
         __metadata("design:type", String)
     ], ScheduleUpdateModel.prototype, "resourceGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ScheduleUpdateModel.prototype, "type", void 0);
     return ScheduleUpdateModel;
-}(SpeakeasyBase));
-export { ScheduleUpdateModel };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleUpdateModel = ScheduleUpdateModel;

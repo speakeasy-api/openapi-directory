@@ -10,8 +10,8 @@ export declare class IdentityPool extends SpeakeasyBase {
     developerProviderName?: string;
     identityPoolId: string;
     identityPoolName: string;
-    identityPoolTags?: Map<string, string>;
-    openIdConnectProviderArNs?: string[];
-    samlProviderArNs?: string[];
-    supportedLoginProviders?: Map<string, string>;
+    identityPoolTags?: Record<string, string>;
+    openIdConnectProviderARNs?: string[];
+    samlProviderARNs?: string[];
+    supportedLoginProviders?: Record<string, string>;
 }

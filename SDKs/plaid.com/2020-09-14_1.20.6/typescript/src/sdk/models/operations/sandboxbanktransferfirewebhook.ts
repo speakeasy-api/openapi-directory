@@ -14,7 +14,7 @@ export class SandboxBankTransferFireWebhookResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   sandboxBankTransferFireWebhookResponse?: shared.SandboxBankTransferFireWebhookResponse;

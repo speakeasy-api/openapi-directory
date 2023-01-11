@@ -31,5 +31,5 @@ export class ProtocolWebPortSetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolWebPortSet200ApplicationJsonString?: string;
+  protocolWebPortSet200ApplicationJSONString?: string;
 }

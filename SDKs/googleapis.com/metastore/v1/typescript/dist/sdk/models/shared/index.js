@@ -1,0 +1,55 @@
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./altenum"), exports);
+__exportStar(require("./auditconfig"), exports);
+__exportStar(require("./auditlogconfig"), exports);
+__exportStar(require("./backendmetastore"), exports);
+__exportStar(require("./backup"), exports);
+__exportStar(require("./binding"), exports);
+__exportStar(require("./consumer"), exports);
+__exportStar(require("./databasedump"), exports);
+__exportStar(require("./encryptionconfig"), exports);
+__exportStar(require("./exportmetadatarequest"), exports);
+__exportStar(require("./expr"), exports);
+__exportStar(require("./federation"), exports);
+__exportStar(require("./hivemetastoreconfig"), exports);
+__exportStar(require("./kerberosconfig"), exports);
+__exportStar(require("./listbackupsresponse"), exports);
+__exportStar(require("./listfederationsresponse"), exports);
+__exportStar(require("./listlocationsresponse"), exports);
+__exportStar(require("./listmetadataimportsresponse"), exports);
+__exportStar(require("./listoperationsresponse"), exports);
+__exportStar(require("./listservicesresponse"), exports);
+__exportStar(require("./location"), exports);
+__exportStar(require("./maintenancewindow"), exports);
+__exportStar(require("./metadataexport"), exports);
+__exportStar(require("./metadataimport"), exports);
+__exportStar(require("./metadatamanagementactivity"), exports);
+__exportStar(require("./networkconfig"), exports);
+__exportStar(require("./operation"), exports);
+__exportStar(require("./policy"), exports);
+__exportStar(require("./restore"), exports);
+__exportStar(require("./restoreservicerequest"), exports);
+__exportStar(require("./secret"), exports);
+__exportStar(require("./security"), exports);
+__exportStar(require("./service"), exports);
+__exportStar(require("./setiampolicyrequest"), exports);
+__exportStar(require("./status"), exports);
+__exportStar(require("./telemetryconfig"), exports);
+__exportStar(require("./testiampermissionsrequest"), exports);
+__exportStar(require("./testiampermissionsresponse"), exports);
+__exportStar(require("./xgafvenum"), exports);

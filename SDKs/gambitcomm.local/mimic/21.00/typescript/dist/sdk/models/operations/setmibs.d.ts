@@ -10,5 +10,5 @@ export declare class SetMibsRequest extends SpeakeasyBase {
 export declare class SetMibsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setMibs200ApplicationJsonString?: string;
+    setMibs200ApplicationJSONString?: string;
 }

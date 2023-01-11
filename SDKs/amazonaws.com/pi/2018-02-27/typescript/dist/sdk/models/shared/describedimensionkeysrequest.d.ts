@@ -3,7 +3,7 @@ import { DimensionGroup } from "./dimensiongroup";
 import { ServiceTypeEnum } from "./servicetypeenum";
 export declare class DescribeDimensionKeysRequest extends SpeakeasyBase {
     endTime: Date;
-    filter?: Map<string, string>;
+    filter?: Record<string, string>;
     groupBy: DimensionGroup;
     identifier: string;
     maxResults?: number;

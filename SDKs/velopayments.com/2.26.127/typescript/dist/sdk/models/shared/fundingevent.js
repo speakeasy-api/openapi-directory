@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FundingEventTypeEnum } from "./fundingeventtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FundingEvent = void 0;
+var utils_1 = require("../../../internal/utils");
+var fundingeventtypeenum_1 = require("./fundingeventtypeenum");
 var FundingEvent = /** @class */ (function (_super) {
     __extends(FundingEvent, _super);
     function FundingEvent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventDateTime" }),
         __metadata("design:type", Date)
     ], FundingEvent.prototype, "eventDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventId" }),
         __metadata("design:type", String)
     ], FundingEvent.prototype, "eventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fundingEventType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fundingEventType" }),
         __metadata("design:type", String)
     ], FundingEvent.prototype, "fundingEventType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=principal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=principal" }),
         __metadata("design:type", String)
     ], FundingEvent.prototype, "principal", void 0);
     return FundingEvent;
-}(SpeakeasyBase));
-export { FundingEvent };
+}(utils_1.SpeakeasyBase));
+exports.FundingEvent = FundingEvent;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EnvironmentAccessTypeEnum } from "./environmentaccesstypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentAccessModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var environmentaccesstypeenum_1 = require("./environmentaccesstypeenum");
 var EnvironmentAccessModel = /** @class */ (function (_super) {
     __extends(EnvironmentAccessModel, _super);
     function EnvironmentAccessModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environmentAccessType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environmentAccessType" }),
         __metadata("design:type", String)
     ], EnvironmentAccessModel.prototype, "environmentAccessType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environmentId" }),
         __metadata("design:type", String)
     ], EnvironmentAccessModel.prototype, "environmentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], EnvironmentAccessModel.prototype, "name", void 0);
     return EnvironmentAccessModel;
-}(SpeakeasyBase));
-export { EnvironmentAccessModel };
+}(utils_1.SpeakeasyBase));
+exports.EnvironmentAccessModel = EnvironmentAccessModel;

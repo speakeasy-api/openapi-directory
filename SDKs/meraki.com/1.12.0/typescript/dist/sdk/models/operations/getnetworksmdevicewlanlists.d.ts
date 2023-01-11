@@ -9,5 +9,5 @@ export declare class GetNetworkSmDeviceWlanListsRequest extends SpeakeasyBase {
 export declare class GetNetworkSmDeviceWlanListsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSmDeviceWlanLists200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSmDeviceWlanLists200ApplicationJSONObject?: Record<string, any>;
 }

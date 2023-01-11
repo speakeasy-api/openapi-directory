@@ -1,4 +1,7 @@
-export var PlaceFieldsParameterEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlaceFieldsParameterEnum = void 0;
+var PlaceFieldsParameterEnum;
 (function (PlaceFieldsParameterEnum) {
     PlaceFieldsParameterEnum["Id"] = "id";
     PlaceFieldsParameterEnum["Name"] = "name";
@@ -8,4 +11,4 @@ export var PlaceFieldsParameterEnum;
     PlaceFieldsParameterEnum["Country"] = "country";
     PlaceFieldsParameterEnum["ContainedWithin"] = "contained_within";
     PlaceFieldsParameterEnum["Geo"] = "geo";
-})(PlaceFieldsParameterEnum || (PlaceFieldsParameterEnum = {}));
+})(PlaceFieldsParameterEnum = exports.PlaceFieldsParameterEnum || (exports.PlaceFieldsParameterEnum = {}));

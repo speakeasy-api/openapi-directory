@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObjectReference } from "./objectreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchDetachFromIndex = void 0;
+var utils_1 = require("../../../internal/utils");
+var objectreference_1 = require("./objectreference");
 // BatchDetachFromIndex
 /**
  * Detaches the specified object from the specified index inside a <a>BatchRead</a> operation. For more information, see <a>DetachFromIndex</a> and <a>BatchReadRequest$Operations</a>.
@@ -34,13 +37,13 @@ var BatchDetachFromIndex = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IndexReference" }),
-        __metadata("design:type", ObjectReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IndexReference" }),
+        __metadata("design:type", objectreference_1.ObjectReference)
     ], BatchDetachFromIndex.prototype, "indexReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetReference" }),
-        __metadata("design:type", ObjectReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetReference" }),
+        __metadata("design:type", objectreference_1.ObjectReference)
     ], BatchDetachFromIndex.prototype, "targetReference", void 0);
     return BatchDetachFromIndex;
-}(SpeakeasyBase));
-export { BatchDetachFromIndex };
+}(utils_1.SpeakeasyBase));
+exports.BatchDetachFromIndex = BatchDetachFromIndex;

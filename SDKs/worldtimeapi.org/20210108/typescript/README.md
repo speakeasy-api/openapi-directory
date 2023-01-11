@@ -16,18 +16,17 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetIpResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
 
-sdk.sdk.getIp().then((res: GetIpResponse | AxiosError) => {
+sdk.getIp().then((res: GetIpResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -39,17 +38,17 @@ sdk.sdk.getIp().then((res: GetIpResponse | AxiosError) => {
 ### SDK SDK
 
 * `getIp` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
+* `getIpTxt` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
 * `getIpIpv4` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
 * `getIpIpv4Txt` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
-* `getIpTxt` - request the current time based on the ip of the request. note: this is a "best guess" obtained from open-source data.
 * `getTimezone` - a listing of all timezones.
+* `getTimezoneTxt` - a listing of all timezones.
 * `getTimezoneArea` - a listing of all timezones available for that area.
+* `getTimezoneAreaTxt` - a listing of all timezones available for that area.
 * `getTimezoneAreaLocation` - request the current time for a timezone.
+* `getTimezoneAreaLocationTxt` - request the current time for a timezone.
 * `getTimezoneAreaLocationRegion` - request the current time for a timezone.
 * `getTimezoneAreaLocationRegionTxt` - request the current time for a timezone.
-* `getTimezoneAreaLocationTxt` - request the current time for a timezone.
-* `getTimezoneAreaTxt` - a listing of all timezones available for that area.
-* `getTimezoneTxt` - a listing of all timezones.
 
 <!-- End SDK Available Operations -->
 

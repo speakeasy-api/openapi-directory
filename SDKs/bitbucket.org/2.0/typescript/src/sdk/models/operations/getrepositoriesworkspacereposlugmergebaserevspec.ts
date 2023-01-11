@@ -44,8 +44,8 @@ export class GetRepositoriesWorkspaceRepoSlugMergeBaseRevspecResponse extends Sp
   statusCode: number;
 
   @SpeakeasyMetadata()
-  commit?: Map<string, any>;
+  commit?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

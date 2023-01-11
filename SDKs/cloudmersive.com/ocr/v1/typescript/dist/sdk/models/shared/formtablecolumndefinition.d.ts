@@ -5,7 +5,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class FormTableColumnDefinition extends SpeakeasyBase {
     allowNumericDigits?: boolean;
     anchorMode?: string;
-    columnId?: string;
+    columnID?: string;
     dataType?: string;
     minimumCharacterCount?: number;
     topAnchor?: string;

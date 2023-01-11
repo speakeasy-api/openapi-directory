@@ -17,10 +17,10 @@ export declare class CreateInAppTemplateHeaders extends SpeakeasyBase {
 **/
 export declare class CreateInAppTemplateRequestBodyInAppTemplateRequest extends SpeakeasyBase {
     content?: shared.InAppMessageContent[];
-    customConfig?: Map<string, string>;
+    customConfig?: Record<string, string>;
     layout?: shared.LayoutEnum;
     templateDescription?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateInAppTemplateRequestBody extends SpeakeasyBase {
     inAppTemplateRequest: CreateInAppTemplateRequestBodyInAppTemplateRequest;

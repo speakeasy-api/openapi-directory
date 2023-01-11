@@ -5,7 +5,7 @@ export declare class SandboxBankTransferFireWebhookRequest extends SpeakeasyBase
 }
 export declare class SandboxBankTransferFireWebhookResponse extends SpeakeasyBase {
     contentType: string;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     sandboxBankTransferFireWebhookResponse?: shared.SandboxBankTransferFireWebhookResponse;
     statusCode: number;
 }

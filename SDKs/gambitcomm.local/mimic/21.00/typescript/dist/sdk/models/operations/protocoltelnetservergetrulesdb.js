@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolTelnetServerGetRulesdbResponse = exports.ProtocolTelnetServerGetRulesdbRequest = exports.ProtocolTelnetServerGetRulesdbPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolTelnetServerGetRulesdbPathParams = /** @class */ (function (_super) {
     __extends(ProtocolTelnetServerGetRulesdbPathParams, _super);
     function ProtocolTelnetServerGetRulesdbPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolTelnetServerGetRulesdbPathParams.prototype, "agentNum", void 0);
     return ProtocolTelnetServerGetRulesdbPathParams;
-}(SpeakeasyBase));
-export { ProtocolTelnetServerGetRulesdbPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetServerGetRulesdbPathParams = ProtocolTelnetServerGetRulesdbPathParams;
 var ProtocolTelnetServerGetRulesdbRequest = /** @class */ (function (_super) {
     __extends(ProtocolTelnetServerGetRulesdbRequest, _super);
     function ProtocolTelnetServerGetRulesdbRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolTelnetServerGetRulesdbPathParams)
     ], ProtocolTelnetServerGetRulesdbRequest.prototype, "pathParams", void 0);
     return ProtocolTelnetServerGetRulesdbRequest;
-}(SpeakeasyBase));
-export { ProtocolTelnetServerGetRulesdbRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetServerGetRulesdbRequest = ProtocolTelnetServerGetRulesdbRequest;
 var ProtocolTelnetServerGetRulesdbResponse = /** @class */ (function (_super) {
     __extends(ProtocolTelnetServerGetRulesdbResponse, _super);
     function ProtocolTelnetServerGetRulesdbResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolTelnetServerGetRulesdbResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolTelnetServerGetRulesdbResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolTelnetServerGetRulesdbResponse.prototype, "protocolTelnetServerGetRulesdb200ApplicationJsonStrings", void 0);
+    ], ProtocolTelnetServerGetRulesdbResponse.prototype, "protocolTelnetServerGetRulesdb200ApplicationJSONStrings", void 0);
     return ProtocolTelnetServerGetRulesdbResponse;
-}(SpeakeasyBase));
-export { ProtocolTelnetServerGetRulesdbResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTelnetServerGetRulesdbResponse = ProtocolTelnetServerGetRulesdbResponse;

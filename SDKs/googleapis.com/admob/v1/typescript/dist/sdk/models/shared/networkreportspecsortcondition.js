@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var NetworkReportSpecSortConditionDimensionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NetworkReportSpecSortCondition = exports.NetworkReportSpecSortConditionOrderEnum = exports.NetworkReportSpecSortConditionMetricEnum = exports.NetworkReportSpecSortConditionDimensionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var NetworkReportSpecSortConditionDimensionEnum;
 (function (NetworkReportSpecSortConditionDimensionEnum) {
     NetworkReportSpecSortConditionDimensionEnum["DimensionUnspecified"] = "DIMENSION_UNSPECIFIED";
     NetworkReportSpecSortConditionDimensionEnum["Date"] = "DATE";
@@ -39,8 +42,8 @@ export var NetworkReportSpecSortConditionDimensionEnum;
     NetworkReportSpecSortConditionDimensionEnum["GmaSdkVersion"] = "GMA_SDK_VERSION";
     NetworkReportSpecSortConditionDimensionEnum["AppVersionName"] = "APP_VERSION_NAME";
     NetworkReportSpecSortConditionDimensionEnum["ServingRestriction"] = "SERVING_RESTRICTION";
-})(NetworkReportSpecSortConditionDimensionEnum || (NetworkReportSpecSortConditionDimensionEnum = {}));
-export var NetworkReportSpecSortConditionMetricEnum;
+})(NetworkReportSpecSortConditionDimensionEnum = exports.NetworkReportSpecSortConditionDimensionEnum || (exports.NetworkReportSpecSortConditionDimensionEnum = {}));
+var NetworkReportSpecSortConditionMetricEnum;
 (function (NetworkReportSpecSortConditionMetricEnum) {
     NetworkReportSpecSortConditionMetricEnum["MetricUnspecified"] = "METRIC_UNSPECIFIED";
     NetworkReportSpecSortConditionMetricEnum["AdRequests"] = "AD_REQUESTS";
@@ -52,13 +55,13 @@ export var NetworkReportSpecSortConditionMetricEnum;
     NetworkReportSpecSortConditionMetricEnum["MatchedRequests"] = "MATCHED_REQUESTS";
     NetworkReportSpecSortConditionMetricEnum["MatchRate"] = "MATCH_RATE";
     NetworkReportSpecSortConditionMetricEnum["ShowRate"] = "SHOW_RATE";
-})(NetworkReportSpecSortConditionMetricEnum || (NetworkReportSpecSortConditionMetricEnum = {}));
-export var NetworkReportSpecSortConditionOrderEnum;
+})(NetworkReportSpecSortConditionMetricEnum = exports.NetworkReportSpecSortConditionMetricEnum || (exports.NetworkReportSpecSortConditionMetricEnum = {}));
+var NetworkReportSpecSortConditionOrderEnum;
 (function (NetworkReportSpecSortConditionOrderEnum) {
     NetworkReportSpecSortConditionOrderEnum["SortOrderUnspecified"] = "SORT_ORDER_UNSPECIFIED";
     NetworkReportSpecSortConditionOrderEnum["Ascending"] = "ASCENDING";
     NetworkReportSpecSortConditionOrderEnum["Descending"] = "DESCENDING";
-})(NetworkReportSpecSortConditionOrderEnum || (NetworkReportSpecSortConditionOrderEnum = {}));
+})(NetworkReportSpecSortConditionOrderEnum = exports.NetworkReportSpecSortConditionOrderEnum || (exports.NetworkReportSpecSortConditionOrderEnum = {}));
 // NetworkReportSpecSortCondition
 /**
  * Sorting direction to be applied on a dimension or a metric.
@@ -69,17 +72,17 @@ var NetworkReportSpecSortCondition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimension" }),
         __metadata("design:type", String)
     ], NetworkReportSpecSortCondition.prototype, "dimension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metric" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metric" }),
         __metadata("design:type", String)
     ], NetworkReportSpecSortCondition.prototype, "metric", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=order" }),
         __metadata("design:type", String)
     ], NetworkReportSpecSortCondition.prototype, "order", void 0);
     return NetworkReportSpecSortCondition;
-}(SpeakeasyBase));
-export { NetworkReportSpecSortCondition };
+}(utils_1.SpeakeasyBase));
+exports.NetworkReportSpecSortCondition = NetworkReportSpecSortCondition;

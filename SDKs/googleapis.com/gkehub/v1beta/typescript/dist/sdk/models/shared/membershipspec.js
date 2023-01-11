@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MembershipSpecSecurityPolicyEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MembershipSpec = exports.MembershipSpecSecurityPolicyEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MembershipSpecSecurityPolicyEnum;
 (function (MembershipSpecSecurityPolicyEnum) {
     MembershipSpecSecurityPolicyEnum["SecurityPolicyUnspecified"] = "SECURITY_POLICY_UNSPECIFIED";
     MembershipSpecSecurityPolicyEnum["NonPrivileged"] = "NON_PRIVILEGED";
     MembershipSpecSecurityPolicyEnum["Privileged"] = "PRIVILEGED";
-})(MembershipSpecSecurityPolicyEnum || (MembershipSpecSecurityPolicyEnum = {}));
+})(MembershipSpecSecurityPolicyEnum = exports.MembershipSpecSecurityPolicyEnum || (exports.MembershipSpecSecurityPolicyEnum = {}));
 // MembershipSpec
 /**
  * **Cloud Build**: Configurations for each Cloud Build enabled cluster.
@@ -39,13 +42,13 @@ var MembershipSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=securityPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=securityPolicy" }),
         __metadata("design:type", String)
     ], MembershipSpec.prototype, "securityPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], MembershipSpec.prototype, "version", void 0);
     return MembershipSpec;
-}(SpeakeasyBase));
-export { MembershipSpec };
+}(utils_1.SpeakeasyBase));
+exports.MembershipSpec = MembershipSpec;

@@ -1,4 +1,7 @@
-export var VirtualInterfaceStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualInterfaceStateEnum = void 0;
+var VirtualInterfaceStateEnum;
 (function (VirtualInterfaceStateEnum) {
     VirtualInterfaceStateEnum["Confirming"] = "confirming";
     VirtualInterfaceStateEnum["Verifying"] = "verifying";
@@ -9,4 +12,4 @@ export var VirtualInterfaceStateEnum;
     VirtualInterfaceStateEnum["Deleted"] = "deleted";
     VirtualInterfaceStateEnum["Rejected"] = "rejected";
     VirtualInterfaceStateEnum["Unknown"] = "unknown";
-})(VirtualInterfaceStateEnum || (VirtualInterfaceStateEnum = {}));
+})(VirtualInterfaceStateEnum = exports.VirtualInterfaceStateEnum || (exports.VirtualInterfaceStateEnum = {}));

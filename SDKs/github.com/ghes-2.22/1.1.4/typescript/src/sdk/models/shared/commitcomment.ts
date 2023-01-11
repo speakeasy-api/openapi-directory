@@ -4,6 +4,10 @@ import { ReactionRollup } from "./reactionrollup";
 
 
 
+// CommitCommentSimpleUser
+/** 
+ * Simple User
+**/
 export class CommitCommentSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

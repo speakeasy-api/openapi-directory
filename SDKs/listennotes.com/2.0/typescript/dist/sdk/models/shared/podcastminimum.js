@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PodcastMinimum = void 0;
+var utils_1 = require("../../../internal/utils");
 var PodcastMinimum = /** @class */ (function (_super) {
     __extends(PodcastMinimum, _super);
     function PodcastMinimum() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PodcastMinimum.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", String)
     ], PodcastMinimum.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listen_score" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listen_score" }),
         __metadata("design:type", Number)
     ], PodcastMinimum.prototype, "listenScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listen_score_global_rank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listen_score_global_rank" }),
         __metadata("design:type", String)
     ], PodcastMinimum.prototype, "listenScoreGlobalRank", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listennotes_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listennotes_url" }),
         __metadata("design:type", String)
     ], PodcastMinimum.prototype, "listennotesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisher" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisher" }),
         __metadata("design:type", String)
     ], PodcastMinimum.prototype, "publisher", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnail" }),
         __metadata("design:type", String)
     ], PodcastMinimum.prototype, "thumbnail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], PodcastMinimum.prototype, "title", void 0);
     return PodcastMinimum;
-}(SpeakeasyBase));
-export { PodcastMinimum };
+}(utils_1.SpeakeasyBase));
+exports.PodcastMinimum = PodcastMinimum;

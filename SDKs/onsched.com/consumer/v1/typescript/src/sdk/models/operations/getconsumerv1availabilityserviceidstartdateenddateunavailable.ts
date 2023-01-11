@@ -49,5 +49,5 @@ export class GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRespon
   statusCode: number;
 
   @SpeakeasyMetadata()
-  unavailableTimeListViewModel?: Map<string, any>;
+  unavailableTimeListViewModel?: Record<string, any>;
 }

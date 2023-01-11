@@ -32,6 +32,6 @@ export declare class UpdateTypedLinkFacetResponse extends SpeakeasyBase {
     resourceNotFoundException?: shared.ResourceNotFoundException;
     retryableConflictException?: shared.RetryableConflictException;
     statusCode: number;
-    updateTypedLinkFacetResponse?: Map<string, any>;
+    updateTypedLinkFacetResponse?: Record<string, any>;
     validationException?: shared.ValidationException;
 }

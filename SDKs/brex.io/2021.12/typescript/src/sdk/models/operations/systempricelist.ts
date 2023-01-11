@@ -23,8 +23,8 @@ export class SystemPricelistResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  systemPricelist200ApplicationJsonAnies?: any[];
+  systemPricelist200ApplicationJSONAnies?: any[];
 
   @SpeakeasyMetadata()
-  systemPricelistDefaultApplicationJsonAny?: any;
+  systemPricelistDefaultApplicationJSONAny?: any;
 }

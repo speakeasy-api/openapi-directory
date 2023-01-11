@@ -10,6 +10,6 @@ export declare class LiveChatMessageListResponse extends SpeakeasyBase {
     offlineAt?: Date;
     pageInfo?: PageInfo;
     pollingIntervalMillis?: number;
-    tokenPagination?: Map<string, any>;
+    tokenPagination?: Record<string, any>;
     visitorId?: string;
 }

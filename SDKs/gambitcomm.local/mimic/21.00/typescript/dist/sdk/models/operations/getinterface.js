@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetInterfaceResponse = exports.GetInterfaceRequest = exports.GetInterfacePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetInterfacePathParams = /** @class */ (function (_super) {
     __extends(GetInterfacePathParams, _super);
     function GetInterfacePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], GetInterfacePathParams.prototype, "agentNum", void 0);
     return GetInterfacePathParams;
-}(SpeakeasyBase));
-export { GetInterfacePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetInterfacePathParams = GetInterfacePathParams;
 var GetInterfaceRequest = /** @class */ (function (_super) {
     __extends(GetInterfaceRequest, _super);
     function GetInterfaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetInterfacePathParams)
     ], GetInterfaceRequest.prototype, "pathParams", void 0);
     return GetInterfaceRequest;
-}(SpeakeasyBase));
-export { GetInterfaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetInterfaceRequest = GetInterfaceRequest;
 var GetInterfaceResponse = /** @class */ (function (_super) {
     __extends(GetInterfaceResponse, _super);
     function GetInterfaceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetInterfaceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetInterfaceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], GetInterfaceResponse.prototype, "getInterface200ApplicationJsonString", void 0);
+    ], GetInterfaceResponse.prototype, "getInterface200ApplicationJSONString", void 0);
     return GetInterfaceResponse;
-}(SpeakeasyBase));
-export { GetInterfaceResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetInterfaceResponse = GetInterfaceResponse;

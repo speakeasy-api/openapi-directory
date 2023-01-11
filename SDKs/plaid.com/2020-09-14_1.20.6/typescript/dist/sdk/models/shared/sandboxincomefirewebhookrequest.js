@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SandboxIncomeFireWebhookRequestVerificationStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SandboxIncomeFireWebhookRequest = exports.SandboxIncomeFireWebhookRequestVerificationStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SandboxIncomeFireWebhookRequestVerificationStatusEnum;
 (function (SandboxIncomeFireWebhookRequestVerificationStatusEnum) {
     SandboxIncomeFireWebhookRequestVerificationStatusEnum["VerificationStatusProcessingComplete"] = "VERIFICATION_STATUS_PROCESSING_COMPLETE";
     SandboxIncomeFireWebhookRequestVerificationStatusEnum["VerificationStatusDocumentRejected"] = "VERIFICATION_STATUS_DOCUMENT_REJECTED";
     SandboxIncomeFireWebhookRequestVerificationStatusEnum["VerificationStatusProcessingFailed"] = "VERIFICATION_STATUS_PROCESSING_FAILED";
-})(SandboxIncomeFireWebhookRequestVerificationStatusEnum || (SandboxIncomeFireWebhookRequestVerificationStatusEnum = {}));
+})(SandboxIncomeFireWebhookRequestVerificationStatusEnum = exports.SandboxIncomeFireWebhookRequestVerificationStatusEnum || (exports.SandboxIncomeFireWebhookRequestVerificationStatusEnum = {}));
 // SandboxIncomeFireWebhookRequest
 /**
  * SandboxIncomeFireWebhookRequest defines the request schema for `/sandbox/income/fire_webhook`
@@ -39,25 +42,25 @@ var SandboxIncomeFireWebhookRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], SandboxIncomeFireWebhookRequest.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=income_verification_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=income_verification_id" }),
         __metadata("design:type", String)
     ], SandboxIncomeFireWebhookRequest.prototype, "incomeVerificationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], SandboxIncomeFireWebhookRequest.prototype, "secret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verification_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verification_status" }),
         __metadata("design:type", String)
     ], SandboxIncomeFireWebhookRequest.prototype, "verificationStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webhook" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webhook" }),
         __metadata("design:type", String)
     ], SandboxIncomeFireWebhookRequest.prototype, "webhook", void 0);
     return SandboxIncomeFireWebhookRequest;
-}(SpeakeasyBase));
-export { SandboxIncomeFireWebhookRequest };
+}(utils_1.SpeakeasyBase));
+exports.SandboxIncomeFireWebhookRequest = SandboxIncomeFireWebhookRequest;

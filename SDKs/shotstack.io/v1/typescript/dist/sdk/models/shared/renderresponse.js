@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RenderResponseData } from "./renderresponsedata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RenderResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var renderresponsedata_1 = require("./renderresponsedata");
 // RenderResponse
 /**
  * The response received after a [render status request](#get-render-status) is submitted. The response includes  details about status of a render and the output URL.
@@ -34,17 +37,17 @@ var RenderResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], RenderResponse.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=response" }),
-        __metadata("design:type", RenderResponseData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=response" }),
+        __metadata("design:type", renderresponsedata_1.RenderResponseData)
     ], RenderResponse.prototype, "response", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], RenderResponse.prototype, "success", void 0);
     return RenderResponse;
-}(SpeakeasyBase));
-export { RenderResponse };
+}(utils_1.SpeakeasyBase));
+exports.RenderResponse = RenderResponse;

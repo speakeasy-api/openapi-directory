@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Operator } from "./operator";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Selector = void 0;
+var utils_1 = require("../../../internal/utils");
+var operator_1 = require("./operator");
 // Selector
 /**
  * A comparision that is used to determine whether a query should return this object.
@@ -34,13 +37,13 @@ var Selector = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldName" }),
         __metadata("design:type", String)
     ], Selector.prototype, "fieldName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operator" }),
-        __metadata("design:type", Operator)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operator" }),
+        __metadata("design:type", operator_1.Operator)
     ], Selector.prototype, "operator", void 0);
     return Selector;
-}(SpeakeasyBase));
-export { Selector };
+}(utils_1.SpeakeasyBase));
+exports.Selector = Selector;

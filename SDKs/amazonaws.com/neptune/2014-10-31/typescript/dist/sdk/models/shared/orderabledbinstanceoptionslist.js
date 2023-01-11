@@ -1,0 +1,121 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderableDbInstanceOptionsList = void 0;
+var utils_1 = require("../../../internal/utils");
+var availabilityzonelist_1 = require("./availabilityzonelist");
+// OrderableDbInstanceOptionsList
+/**
+ * <p>Contains a list of available options for a DB instance.</p> <p> This data type is used as a response element in the <a>DescribeOrderableDBInstanceOptions</a> action.</p>
+**/
+var OrderableDbInstanceOptionsList = /** @class */ (function (_super) {
+    __extends(OrderableDbInstanceOptionsList, _super);
+    function OrderableDbInstanceOptionsList() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ elemType: availabilityzonelist_1.AvailabilityZoneList }),
+        __metadata("design:type", Array)
+    ], OrderableDbInstanceOptionsList.prototype, "availabilityZones", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], OrderableDbInstanceOptionsList.prototype, "dbInstanceClass", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], OrderableDbInstanceOptionsList.prototype, "engine", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], OrderableDbInstanceOptionsList.prototype, "engineVersion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], OrderableDbInstanceOptionsList.prototype, "licenseModel", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], OrderableDbInstanceOptionsList.prototype, "maxIopsPerDbInstance", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], OrderableDbInstanceOptionsList.prototype, "maxIopsPerGib", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], OrderableDbInstanceOptionsList.prototype, "maxStorageSize", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], OrderableDbInstanceOptionsList.prototype, "minIopsPerDbInstance", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], OrderableDbInstanceOptionsList.prototype, "minIopsPerGib", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], OrderableDbInstanceOptionsList.prototype, "minStorageSize", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Boolean)
+    ], OrderableDbInstanceOptionsList.prototype, "multiAZCapable", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Boolean)
+    ], OrderableDbInstanceOptionsList.prototype, "readReplicaCapable", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], OrderableDbInstanceOptionsList.prototype, "storageType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Boolean)
+    ], OrderableDbInstanceOptionsList.prototype, "supportsEnhancedMonitoring", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Boolean)
+    ], OrderableDbInstanceOptionsList.prototype, "supportsIAMDatabaseAuthentication", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Boolean)
+    ], OrderableDbInstanceOptionsList.prototype, "supportsIops", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Boolean)
+    ], OrderableDbInstanceOptionsList.prototype, "supportsPerformanceInsights", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Boolean)
+    ], OrderableDbInstanceOptionsList.prototype, "supportsStorageEncryption", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Boolean)
+    ], OrderableDbInstanceOptionsList.prototype, "vpc", void 0);
+    return OrderableDbInstanceOptionsList;
+}(utils_1.SpeakeasyBase));
+exports.OrderableDbInstanceOptionsList = OrderableDbInstanceOptionsList;

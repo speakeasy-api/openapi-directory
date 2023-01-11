@@ -167,7 +167,7 @@ export class PostServersIdActionsCreateImage201ApplicationJsonImage extends Spea
   imageSize: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
@@ -215,8 +215,8 @@ export class PostServersIdActionsCreateImageResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postServersIdActionsCreateImage201ApplicationJsonObject?: PostServersIdActionsCreateImage201ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postServersIdActionsCreateImage201ApplicationJSONObject?: PostServersIdActionsCreateImage201ApplicationJson;
 }

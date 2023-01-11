@@ -38,7 +38,7 @@ export class GetWorkspacesWorkspaceSearchCodeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   searchResultPage?: shared.SearchResultPage;

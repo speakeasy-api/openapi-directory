@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BurnTokenRequest = exports.BurnTokenRequestTransfer = exports.BurnTokenRequestBurn = void 0;
+var utils_1 = require("../../../internal/utils");
 var BurnTokenRequestBurn = /** @class */ (function (_super) {
     __extends(BurnTokenRequestBurn, _super);
     function BurnTokenRequestBurn() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], BurnTokenRequestBurn.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokenId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokenId" }),
         __metadata("design:type", String)
     ], BurnTokenRequestBurn.prototype, "tokenId", void 0);
     return BurnTokenRequestBurn;
-}(SpeakeasyBase));
-export { BurnTokenRequestBurn };
+}(utils_1.SpeakeasyBase));
+exports.BurnTokenRequestBurn = BurnTokenRequestBurn;
 var BurnTokenRequestTransfer = /** @class */ (function (_super) {
     __extends(BurnTokenRequestTransfer, _super);
     function BurnTokenRequestTransfer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], BurnTokenRequestTransfer.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], BurnTokenRequestTransfer.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokenId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokenId" }),
         __metadata("design:type", String)
     ], BurnTokenRequestTransfer.prototype, "tokenId", void 0);
     return BurnTokenRequestTransfer;
-}(SpeakeasyBase));
-export { BurnTokenRequestTransfer };
+}(utils_1.SpeakeasyBase));
+exports.BurnTokenRequestTransfer = BurnTokenRequestTransfer;
 var BurnTokenRequest = /** @class */ (function (_super) {
     __extends(BurnTokenRequest, _super);
     function BurnTokenRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=burn", elemType: BurnTokenRequestBurn }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=burn", elemType: BurnTokenRequestBurn }),
         __metadata("design:type", Array)
     ], BurnTokenRequest.prototype, "burn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fee" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fee" }),
         __metadata("design:type", Number)
     ], BurnTokenRequest.prototype, "fee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", Array)
     ], BurnTokenRequest.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transfer", elemType: BurnTokenRequestTransfer }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transfer", elemType: BurnTokenRequestTransfer }),
         __metadata("design:type", Array)
     ], BurnTokenRequest.prototype, "transfer", void 0);
     return BurnTokenRequest;
-}(SpeakeasyBase));
-export { BurnTokenRequest };
+}(utils_1.SpeakeasyBase));
+exports.BurnTokenRequest = BurnTokenRequest;

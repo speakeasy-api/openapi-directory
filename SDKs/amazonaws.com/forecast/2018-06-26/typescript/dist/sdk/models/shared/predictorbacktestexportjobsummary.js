@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataDestination } from "./datadestination";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PredictorBacktestExportJobSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var datadestination_1 = require("./datadestination");
 // PredictorBacktestExportJobSummary
 /**
  * Provides a summary of the predictor backtest export job properties used in the <a>ListPredictorBacktestExportJobs</a> operation. To get a complete set of properties, call the <a>DescribePredictorBacktestExportJob</a> operation, and provide the listed <code>PredictorBacktestExportJobArn</code>.
@@ -34,33 +37,33 @@ var PredictorBacktestExportJobSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], PredictorBacktestExportJobSummary.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Destination" }),
-        __metadata("design:type", DataDestination)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Destination" }),
+        __metadata("design:type", datadestination_1.DataDestination)
     ], PredictorBacktestExportJobSummary.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModificationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModificationTime" }),
         __metadata("design:type", Date)
     ], PredictorBacktestExportJobSummary.prototype, "lastModificationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Message" }),
         __metadata("design:type", String)
     ], PredictorBacktestExportJobSummary.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PredictorBacktestExportJobArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PredictorBacktestExportJobArn" }),
         __metadata("design:type", String)
     ], PredictorBacktestExportJobSummary.prototype, "predictorBacktestExportJobArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PredictorBacktestExportJobName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PredictorBacktestExportJobName" }),
         __metadata("design:type", String)
     ], PredictorBacktestExportJobSummary.prototype, "predictorBacktestExportJobName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], PredictorBacktestExportJobSummary.prototype, "status", void 0);
     return PredictorBacktestExportJobSummary;
-}(SpeakeasyBase));
-export { PredictorBacktestExportJobSummary };
+}(utils_1.SpeakeasyBase));
+exports.PredictorBacktestExportJobSummary = PredictorBacktestExportJobSummary;

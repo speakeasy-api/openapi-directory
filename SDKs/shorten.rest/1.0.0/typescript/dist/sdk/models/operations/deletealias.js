@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,74 +14,99 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteAliasResponse = exports.DeleteAliasRequest = exports.DeleteAliasSecurity = exports.DeleteAliasQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DeleteAliasQueryParams = /** @class */ (function (_super) {
     __extends(DeleteAliasQueryParams, _super);
     function DeleteAliasQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=aliasName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=aliasName" }),
         __metadata("design:type", String)
     ], DeleteAliasQueryParams.prototype, "aliasName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=domainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=domainName" }),
         __metadata("design:type", String)
     ], DeleteAliasQueryParams.prototype, "domainName", void 0);
     return DeleteAliasQueryParams;
-}(SpeakeasyBase));
-export { DeleteAliasQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAliasQueryParams = DeleteAliasQueryParams;
 var DeleteAliasSecurity = /** @class */ (function (_super) {
     __extends(DeleteAliasSecurity, _super);
     function DeleteAliasSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKeyAuth)
     ], DeleteAliasSecurity.prototype, "apiKeyAuth", void 0);
     return DeleteAliasSecurity;
-}(SpeakeasyBase));
-export { DeleteAliasSecurity };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAliasSecurity = DeleteAliasSecurity;
 var DeleteAliasRequest = /** @class */ (function (_super) {
     __extends(DeleteAliasRequest, _super);
     function DeleteAliasRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteAliasQueryParams)
     ], DeleteAliasRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteAliasSecurity)
     ], DeleteAliasRequest.prototype, "security", void 0);
     return DeleteAliasRequest;
-}(SpeakeasyBase));
-export { DeleteAliasRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAliasRequest = DeleteAliasRequest;
 var DeleteAliasResponse = /** @class */ (function (_super) {
     __extends(DeleteAliasResponse, _super);
     function DeleteAliasResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteAliasResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteAliasResponse.prototype, "statusCode", void 0);
     return DeleteAliasResponse;
-}(SpeakeasyBase));
-export { DeleteAliasResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAliasResponse = DeleteAliasResponse;

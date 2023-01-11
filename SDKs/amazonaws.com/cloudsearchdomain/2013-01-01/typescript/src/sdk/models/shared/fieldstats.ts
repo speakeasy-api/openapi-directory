@@ -2,10 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-// FieldStats
-/** 
- * The statistics for a field calculated in the request.
-**/
 export class FieldStats extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=count" })
   count?: number;

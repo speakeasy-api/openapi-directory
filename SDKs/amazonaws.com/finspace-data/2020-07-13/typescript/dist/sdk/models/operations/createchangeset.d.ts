@@ -28,11 +28,11 @@ export declare enum CreateChangesetRequestBodySourceTypeEnum {
 }
 export declare class CreateChangesetRequestBody extends SpeakeasyBase {
     changeType: CreateChangesetRequestBodyChangeTypeEnum;
-    formatParams?: Map<string, string>;
+    formatParams?: Record<string, string>;
     formatType?: CreateChangesetRequestBodyFormatTypeEnum;
-    sourceParams: Map<string, string>;
+    sourceParams: Record<string, string>;
     sourceType: CreateChangesetRequestBodySourceTypeEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateChangesetRequest extends SpeakeasyBase {
     pathParams: CreateChangesetPathParams;

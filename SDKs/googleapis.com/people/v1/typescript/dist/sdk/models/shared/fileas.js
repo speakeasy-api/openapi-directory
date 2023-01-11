@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FieldMetadata } from "./fieldmetadata";
-import { FieldMetadataInput } from "./fieldmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FileAsInput = exports.FileAs = void 0;
+var utils_1 = require("../../../internal/utils");
+var fieldmetadata_1 = require("./fieldmetadata");
+var fieldmetadata_2 = require("./fieldmetadata");
 // FileAs
 /**
  * The name that should be used to sort the person in a list.
@@ -35,16 +38,16 @@ var FileAs = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_1.FieldMetadata)
     ], FileAs.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], FileAs.prototype, "value", void 0);
     return FileAs;
-}(SpeakeasyBase));
-export { FileAs };
+}(utils_1.SpeakeasyBase));
+exports.FileAs = FileAs;
 // FileAsInput
 /**
  * The name that should be used to sort the person in a list.
@@ -55,13 +58,13 @@ var FileAsInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadataInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_2.FieldMetadataInput)
     ], FileAsInput.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], FileAsInput.prototype, "value", void 0);
     return FileAsInput;
-}(SpeakeasyBase));
-export { FileAsInput };
+}(utils_1.SpeakeasyBase));
+exports.FileAsInput = FileAsInput;

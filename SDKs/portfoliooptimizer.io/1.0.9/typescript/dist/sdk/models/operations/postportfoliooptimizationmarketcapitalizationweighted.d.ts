@@ -11,6 +11,6 @@ export declare class PostPortfolioOptimizationMarketCapitalizationWeightedReques
 }
 export declare class PostPortfolioOptimizationMarketCapitalizationWeightedResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJsonObject?: PostPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJson;
     statusCode: number;
+    postPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJSONObject?: PostPortfolioOptimizationMarketCapitalizationWeighted200ApplicationJson;
 }

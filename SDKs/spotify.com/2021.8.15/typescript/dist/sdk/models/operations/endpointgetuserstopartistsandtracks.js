@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,73 +14,98 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointGetUsersTopArtistsAndTracksResponse = exports.EndpointGetUsersTopArtistsAndTracksRequest = exports.EndpointGetUsersTopArtistsAndTracks200ApplicationJson = exports.EndpointGetUsersTopArtistsAndTracksSecurity = exports.EndpointGetUsersTopArtistsAndTracksHeaders = exports.EndpointGetUsersTopArtistsAndTracksQueryParams = exports.EndpointGetUsersTopArtistsAndTracksPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var EndpointGetUsersTopArtistsAndTracksPathParams = /** @class */ (function (_super) {
     __extends(EndpointGetUsersTopArtistsAndTracksPathParams, _super);
     function EndpointGetUsersTopArtistsAndTracksPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=type" }),
         __metadata("design:type", String)
     ], EndpointGetUsersTopArtistsAndTracksPathParams.prototype, "type", void 0);
     return EndpointGetUsersTopArtistsAndTracksPathParams;
-}(SpeakeasyBase));
-export { EndpointGetUsersTopArtistsAndTracksPathParams };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetUsersTopArtistsAndTracksPathParams = EndpointGetUsersTopArtistsAndTracksPathParams;
 var EndpointGetUsersTopArtistsAndTracksQueryParams = /** @class */ (function (_super) {
     __extends(EndpointGetUsersTopArtistsAndTracksQueryParams, _super);
     function EndpointGetUsersTopArtistsAndTracksQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], EndpointGetUsersTopArtistsAndTracksQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], EndpointGetUsersTopArtistsAndTracksQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=time_range" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=time_range" }),
         __metadata("design:type", String)
     ], EndpointGetUsersTopArtistsAndTracksQueryParams.prototype, "timeRange", void 0);
     return EndpointGetUsersTopArtistsAndTracksQueryParams;
-}(SpeakeasyBase));
-export { EndpointGetUsersTopArtistsAndTracksQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetUsersTopArtistsAndTracksQueryParams = EndpointGetUsersTopArtistsAndTracksQueryParams;
 var EndpointGetUsersTopArtistsAndTracksHeaders = /** @class */ (function (_super) {
     __extends(EndpointGetUsersTopArtistsAndTracksHeaders, _super);
     function EndpointGetUsersTopArtistsAndTracksHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Authorization" }),
         __metadata("design:type", String)
     ], EndpointGetUsersTopArtistsAndTracksHeaders.prototype, "authorization", void 0);
     return EndpointGetUsersTopArtistsAndTracksHeaders;
-}(SpeakeasyBase));
-export { EndpointGetUsersTopArtistsAndTracksHeaders };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetUsersTopArtistsAndTracksHeaders = EndpointGetUsersTopArtistsAndTracksHeaders;
 var EndpointGetUsersTopArtistsAndTracksSecurity = /** @class */ (function (_super) {
     __extends(EndpointGetUsersTopArtistsAndTracksSecurity, _super);
     function EndpointGetUsersTopArtistsAndTracksSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeSpotifyAuth)
     ], EndpointGetUsersTopArtistsAndTracksSecurity.prototype, "spotifyAuth", void 0);
     return EndpointGetUsersTopArtistsAndTracksSecurity;
-}(SpeakeasyBase));
-export { EndpointGetUsersTopArtistsAndTracksSecurity };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetUsersTopArtistsAndTracksSecurity = EndpointGetUsersTopArtistsAndTracksSecurity;
 // EndpointGetUsersTopArtistsAndTracks200ApplicationJson
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-pagingobject - Find more info on the official Spotify Web API Reference
@@ -90,81 +116,81 @@ var EndpointGetUsersTopArtistsAndTracks200ApplicationJson = /** @class */ (funct
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], EndpointGetUsersTopArtistsAndTracks200ApplicationJson.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items" }),
         __metadata("design:type", Array)
     ], EndpointGetUsersTopArtistsAndTracks200ApplicationJson.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], EndpointGetUsersTopArtistsAndTracks200ApplicationJson.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], EndpointGetUsersTopArtistsAndTracks200ApplicationJson.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], EndpointGetUsersTopArtistsAndTracks200ApplicationJson.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], EndpointGetUsersTopArtistsAndTracks200ApplicationJson.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], EndpointGetUsersTopArtistsAndTracks200ApplicationJson.prototype, "total", void 0);
     return EndpointGetUsersTopArtistsAndTracks200ApplicationJson;
-}(SpeakeasyBase));
-export { EndpointGetUsersTopArtistsAndTracks200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetUsersTopArtistsAndTracks200ApplicationJson = EndpointGetUsersTopArtistsAndTracks200ApplicationJson;
 var EndpointGetUsersTopArtistsAndTracksRequest = /** @class */ (function (_super) {
     __extends(EndpointGetUsersTopArtistsAndTracksRequest, _super);
     function EndpointGetUsersTopArtistsAndTracksRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointGetUsersTopArtistsAndTracksPathParams)
     ], EndpointGetUsersTopArtistsAndTracksRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointGetUsersTopArtistsAndTracksQueryParams)
     ], EndpointGetUsersTopArtistsAndTracksRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointGetUsersTopArtistsAndTracksHeaders)
     ], EndpointGetUsersTopArtistsAndTracksRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointGetUsersTopArtistsAndTracksSecurity)
     ], EndpointGetUsersTopArtistsAndTracksRequest.prototype, "security", void 0);
     return EndpointGetUsersTopArtistsAndTracksRequest;
-}(SpeakeasyBase));
-export { EndpointGetUsersTopArtistsAndTracksRequest };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetUsersTopArtistsAndTracksRequest = EndpointGetUsersTopArtistsAndTracksRequest;
 var EndpointGetUsersTopArtistsAndTracksResponse = /** @class */ (function (_super) {
     __extends(EndpointGetUsersTopArtistsAndTracksResponse, _super);
     function EndpointGetUsersTopArtistsAndTracksResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EndpointGetUsersTopArtistsAndTracksResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorResponseObject)
     ], EndpointGetUsersTopArtistsAndTracksResponse.prototype, "errorResponseObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EndpointGetUsersTopArtistsAndTracksResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EndpointGetUsersTopArtistsAndTracks200ApplicationJson)
-    ], EndpointGetUsersTopArtistsAndTracksResponse.prototype, "endpointGetUsersTopArtistsAndTracks200ApplicationJsonObject", void 0);
+    ], EndpointGetUsersTopArtistsAndTracksResponse.prototype, "endpointGetUsersTopArtistsAndTracks200ApplicationJSONObject", void 0);
     return EndpointGetUsersTopArtistsAndTracksResponse;
-}(SpeakeasyBase));
-export { EndpointGetUsersTopArtistsAndTracksResponse };
+}(utils_1.SpeakeasyBase));
+exports.EndpointGetUsersTopArtistsAndTracksResponse = EndpointGetUsersTopArtistsAndTracksResponse;

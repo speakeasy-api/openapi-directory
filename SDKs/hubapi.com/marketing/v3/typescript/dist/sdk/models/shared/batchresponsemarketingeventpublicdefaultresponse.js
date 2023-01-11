@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StandardError } from "./standarderror";
-import { MarketingEventPublicDefaultResponse } from "./marketingeventpublicdefaultresponse";
-export var BatchResponseMarketingEventPublicDefaultResponseStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchResponseMarketingEventPublicDefaultResponse = exports.BatchResponseMarketingEventPublicDefaultResponseStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var standarderror_1 = require("./standarderror");
+var marketingeventpublicdefaultresponse_1 = require("./marketingeventpublicdefaultresponse");
+var BatchResponseMarketingEventPublicDefaultResponseStatusEnum;
 (function (BatchResponseMarketingEventPublicDefaultResponseStatusEnum) {
     BatchResponseMarketingEventPublicDefaultResponseStatusEnum["Pending"] = "PENDING";
     BatchResponseMarketingEventPublicDefaultResponseStatusEnum["Processing"] = "PROCESSING";
     BatchResponseMarketingEventPublicDefaultResponseStatusEnum["Canceled"] = "CANCELED";
     BatchResponseMarketingEventPublicDefaultResponseStatusEnum["Complete"] = "COMPLETE";
-})(BatchResponseMarketingEventPublicDefaultResponseStatusEnum || (BatchResponseMarketingEventPublicDefaultResponseStatusEnum = {}));
+})(BatchResponseMarketingEventPublicDefaultResponseStatusEnum = exports.BatchResponseMarketingEventPublicDefaultResponseStatusEnum || (exports.BatchResponseMarketingEventPublicDefaultResponseStatusEnum = {}));
 var BatchResponseMarketingEventPublicDefaultResponse = /** @class */ (function (_super) {
     __extends(BatchResponseMarketingEventPublicDefaultResponse, _super);
     function BatchResponseMarketingEventPublicDefaultResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=completedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=completedAt" }),
         __metadata("design:type", Date)
     ], BatchResponseMarketingEventPublicDefaultResponse.prototype, "completedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: StandardError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: standarderror_1.StandardError }),
         __metadata("design:type", Array)
     ], BatchResponseMarketingEventPublicDefaultResponse.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
+        __metadata("design:type", Object)
     ], BatchResponseMarketingEventPublicDefaultResponse.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numErrors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numErrors" }),
         __metadata("design:type", Number)
     ], BatchResponseMarketingEventPublicDefaultResponse.prototype, "numErrors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedAt" }),
         __metadata("design:type", Date)
     ], BatchResponseMarketingEventPublicDefaultResponse.prototype, "requestedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: MarketingEventPublicDefaultResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: marketingeventpublicdefaultresponse_1.MarketingEventPublicDefaultResponse }),
         __metadata("design:type", Array)
     ], BatchResponseMarketingEventPublicDefaultResponse.prototype, "results", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startedAt" }),
         __metadata("design:type", Date)
     ], BatchResponseMarketingEventPublicDefaultResponse.prototype, "startedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], BatchResponseMarketingEventPublicDefaultResponse.prototype, "status", void 0);
     return BatchResponseMarketingEventPublicDefaultResponse;
-}(SpeakeasyBase));
-export { BatchResponseMarketingEventPublicDefaultResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchResponseMarketingEventPublicDefaultResponse = BatchResponseMarketingEventPublicDefaultResponse;

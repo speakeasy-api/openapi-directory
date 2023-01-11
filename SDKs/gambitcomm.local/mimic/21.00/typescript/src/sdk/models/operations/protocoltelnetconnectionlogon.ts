@@ -7,7 +7,7 @@ export class ProtocolTelnetConnectionLogonPathParams extends SpeakeasyBase {
   agentNum: number;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=connectionID" })
-  connectionId: number;
+  connectionID: number;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=password" })
   password: string;
@@ -31,5 +31,5 @@ export class ProtocolTelnetConnectionLogonResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTelnetConnectionLogon200ApplicationJsonStrings?: string[];
+  protocolTelnetConnectionLogon200ApplicationJSONStrings?: string[];
 }

@@ -18,7 +18,7 @@ export declare class CreateVaultRequest extends SpeakeasyBase {
 }
 export declare class CreateVaultResponse extends SpeakeasyBase {
     contentType: string;
-    createVaultOutput?: Map<string, any>;
+    createVaultOutput?: Record<string, any>;
     invalidParameterValueException?: any;
     limitExceededException?: any;
     missingParameterValueException?: any;

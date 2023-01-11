@@ -66,7 +66,7 @@ export class SearchDatabasesByLfTagsResponse extends SpeakeasyBase {
   operationTimeoutException?: any;
 
   @SpeakeasyMetadata()
-  searchDatabasesByLfTagsResponse?: shared.SearchDatabasesByLfTagsResponse;
+  searchDatabasesByLFTagsResponse?: shared.SearchDatabasesByLfTagsResponse;
 
   @SpeakeasyMetadata()
   statusCode: number;

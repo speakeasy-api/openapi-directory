@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttributeKey } from "./attributekey";
-import { TypedAttributeValue } from "./typedattributevalue";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttributeKeyAndValue = void 0;
+var utils_1 = require("../../../internal/utils");
+var attributekey_1 = require("./attributekey");
+var typedattributevalue_1 = require("./typedattributevalue");
 // AttributeKeyAndValue
 /**
  * The combination of an attribute key and an attribute value.
@@ -35,13 +38,13 @@ var AttributeKeyAndValue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Key" }),
-        __metadata("design:type", AttributeKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Key" }),
+        __metadata("design:type", attributekey_1.AttributeKey)
     ], AttributeKeyAndValue.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Value" }),
-        __metadata("design:type", TypedAttributeValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Value" }),
+        __metadata("design:type", typedattributevalue_1.TypedAttributeValue)
     ], AttributeKeyAndValue.prototype, "value", void 0);
     return AttributeKeyAndValue;
-}(SpeakeasyBase));
-export { AttributeKeyAndValue };
+}(utils_1.SpeakeasyBase));
+exports.AttributeKeyAndValue = AttributeKeyAndValue;

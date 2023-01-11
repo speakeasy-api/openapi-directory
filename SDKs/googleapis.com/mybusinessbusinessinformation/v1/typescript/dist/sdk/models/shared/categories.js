@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Category } from "./category";
-import { CategoryInput } from "./category";
-// Categories
-/**
- * A collection of categories that describes the business. During updates, both fields must be set. Clients are prohibited from individually updating the primary or additional categories using the update mask.
-**/
-var Categories = /** @class */ (function (_super) {
-    __extends(Categories, _super);
-    function Categories() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalCategories", elemType: Category }),
-        __metadata("design:type", Array)
-    ], Categories.prototype, "additionalCategories", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryCategory" }),
-        __metadata("design:type", Category)
-    ], Categories.prototype, "primaryCategory", void 0);
-    return Categories;
-}(SpeakeasyBase));
-export { Categories };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Categories = exports.CategoriesInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var category_1 = require("./category");
+var category_2 = require("./category");
 // CategoriesInput
 /**
  * A collection of categories that describes the business. During updates, both fields must be set. Clients are prohibited from individually updating the primary or additional categories using the update mask.
@@ -55,13 +38,33 @@ var CategoriesInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalCategories", elemType: CategoryInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalCategories", elemType: category_1.CategoryInput }),
         __metadata("design:type", Array)
     ], CategoriesInput.prototype, "additionalCategories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryCategory" }),
-        __metadata("design:type", CategoryInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryCategory" }),
+        __metadata("design:type", category_1.CategoryInput)
     ], CategoriesInput.prototype, "primaryCategory", void 0);
     return CategoriesInput;
-}(SpeakeasyBase));
-export { CategoriesInput };
+}(utils_1.SpeakeasyBase));
+exports.CategoriesInput = CategoriesInput;
+// Categories
+/**
+ * A collection of categories that describes the business. During updates, both fields must be set. Clients are prohibited from individually updating the primary or additional categories using the update mask.
+**/
+var Categories = /** @class */ (function (_super) {
+    __extends(Categories, _super);
+    function Categories() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalCategories", elemType: category_2.Category }),
+        __metadata("design:type", Array)
+    ], Categories.prototype, "additionalCategories", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryCategory" }),
+        __metadata("design:type", category_2.Category)
+    ], Categories.prototype, "primaryCategory", void 0);
+    return Categories;
+}(utils_1.SpeakeasyBase));
+exports.Categories = Categories;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleIdentityStsV1IntrospectTokenRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleIdentityStsV1IntrospectTokenRequest
 /**
  * Request message for IntrospectToken.
@@ -33,13 +36,13 @@ var GoogleIdentityStsV1IntrospectTokenRequest = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], GoogleIdentityStsV1IntrospectTokenRequest.prototype, "token", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokenTypeHint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokenTypeHint" }),
         __metadata("design:type", String)
     ], GoogleIdentityStsV1IntrospectTokenRequest.prototype, "tokenTypeHint", void 0);
     return GoogleIdentityStsV1IntrospectTokenRequest;
-}(SpeakeasyBase));
-export { GoogleIdentityStsV1IntrospectTokenRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleIdentityStsV1IntrospectTokenRequest = GoogleIdentityStsV1IntrospectTokenRequest;

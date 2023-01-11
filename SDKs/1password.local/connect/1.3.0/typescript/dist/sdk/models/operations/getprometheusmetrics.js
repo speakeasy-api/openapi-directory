@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetPrometheusMetricsServerList = [
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPrometheusMetricsResponse = exports.GetPrometheusMetricsRequest = exports.GetPrometheusMetricsServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+exports.GetPrometheusMetricsServerList = [
     "http://localhost:8080",
 ];
 var GetPrometheusMetricsRequest = /** @class */ (function (_super) {
@@ -32,29 +35,29 @@ var GetPrometheusMetricsRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], GetPrometheusMetricsRequest.prototype, "serverUrl", void 0);
+    ], GetPrometheusMetricsRequest.prototype, "serverURL", void 0);
     return GetPrometheusMetricsRequest;
-}(SpeakeasyBase));
-export { GetPrometheusMetricsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPrometheusMetricsRequest = GetPrometheusMetricsRequest;
 var GetPrometheusMetricsResponse = /** @class */ (function (_super) {
     __extends(GetPrometheusMetricsResponse, _super);
     function GetPrometheusMetricsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPrometheusMetricsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPrometheusMetricsResponse.prototype, "getPrometheusMetrics200TextPlainString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPrometheusMetricsResponse.prototype, "statusCode", void 0);
     return GetPrometheusMetricsResponse;
-}(SpeakeasyBase));
-export { GetPrometheusMetricsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPrometheusMetricsResponse = GetPrometheusMetricsResponse;

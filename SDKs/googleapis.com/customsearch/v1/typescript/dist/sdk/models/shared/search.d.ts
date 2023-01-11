@@ -159,7 +159,7 @@ export declare class SearchUrl extends SpeakeasyBase {
  * Response to a custom search request.
 **/
 export declare class Search extends SpeakeasyBase {
-    context?: Map<string, any>;
+    context?: Record<string, any>;
     items?: Result[];
     kind?: string;
     promotions?: Promotion[];

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Comment } from "./comment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Review = void 0;
+var utils_1 = require("../../../internal/utils");
+var comment_1 = require("./comment");
 var Review = /** @class */ (function (_super) {
     __extends(Review, _super);
     function Review() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Review.prototype, "authorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Comment }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: comment_1.Comment }),
         __metadata("design:type", Array)
     ], Review.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Review.prototype, "reviewId", void 0);
     return Review;
-}(SpeakeasyBase));
-export { Review };
+}(utils_1.SpeakeasyBase));
+exports.Review = Review;

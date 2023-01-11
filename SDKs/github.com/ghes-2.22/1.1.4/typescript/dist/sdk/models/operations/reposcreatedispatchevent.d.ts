@@ -5,7 +5,7 @@ export declare class ReposCreateDispatchEventPathParams extends SpeakeasyBase {
     repo: string;
 }
 export declare class ReposCreateDispatchEventRequestBody extends SpeakeasyBase {
-    clientPayload?: Map<string, any>;
+    clientPayload?: Record<string, any>;
     eventType: string;
 }
 export declare class ReposCreateDispatchEventRequest extends SpeakeasyBase {

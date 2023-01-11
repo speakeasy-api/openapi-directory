@@ -23,7 +23,7 @@ export declare enum GoogleCloudRecommenderV1InsightSeverityEnum {
 export declare class GoogleCloudRecommenderV1Insight extends SpeakeasyBase {
     associatedRecommendations?: GoogleCloudRecommenderV1InsightRecommendationReference[];
     category?: GoogleCloudRecommenderV1InsightCategoryEnum;
-    content?: Map<string, any>;
+    content?: Record<string, any>;
     description?: string;
     etag?: string;
     insightSubtype?: string;

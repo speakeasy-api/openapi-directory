@@ -11,10 +11,10 @@ export class PairwithSpeakerRequest extends SpeakeasyBase {
 
 export class PairwithSpeakerResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  body?: Uint8Array;
+  contentType: string;
 
   @SpeakeasyMetadata()
-  contentType: string;
+  pairwithSpeaker200TextPlainObject?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

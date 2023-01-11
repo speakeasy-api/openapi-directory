@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostPortfolioAnalysisTrackingErrorResponse = exports.PostPortfolioAnalysisTrackingErrorRequest = exports.PostPortfolioAnalysisTrackingError200ApplicationJson = exports.PostPortfolioAnalysisTrackingError200ApplicationJsonPortfolios = exports.PostPortfolioAnalysisTrackingErrorRequestBody = exports.PostPortfolioAnalysisTrackingErrorRequestBodyPortfolios = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostPortfolioAnalysisTrackingErrorRequestBodyPortfolios = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisTrackingErrorRequestBodyPortfolios, _super);
     function PostPortfolioAnalysisTrackingErrorRequestBodyPortfolios() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolioReturns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolioReturns" }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisTrackingErrorRequestBodyPortfolios.prototype, "portfolioReturns", void 0);
     return PostPortfolioAnalysisTrackingErrorRequestBodyPortfolios;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisTrackingErrorRequestBodyPortfolios };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisTrackingErrorRequestBodyPortfolios = PostPortfolioAnalysisTrackingErrorRequestBodyPortfolios;
 var PostPortfolioAnalysisTrackingErrorRequestBody = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisTrackingErrorRequestBody, _super);
     function PostPortfolioAnalysisTrackingErrorRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=benchmarkReturns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=benchmarkReturns" }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisTrackingErrorRequestBody.prototype, "benchmarkReturns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolios", elemType: PostPortfolioAnalysisTrackingErrorRequestBodyPortfolios }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolios", elemType: PostPortfolioAnalysisTrackingErrorRequestBodyPortfolios }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisTrackingErrorRequestBody.prototype, "portfolios", void 0);
     return PostPortfolioAnalysisTrackingErrorRequestBody;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisTrackingErrorRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisTrackingErrorRequestBody = PostPortfolioAnalysisTrackingErrorRequestBody;
 var PostPortfolioAnalysisTrackingError200ApplicationJsonPortfolios = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisTrackingError200ApplicationJsonPortfolios, _super);
     function PostPortfolioAnalysisTrackingError200ApplicationJsonPortfolios() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolioTrackingError" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolioTrackingError" }),
         __metadata("design:type", Number)
     ], PostPortfolioAnalysisTrackingError200ApplicationJsonPortfolios.prototype, "portfolioTrackingError", void 0);
     return PostPortfolioAnalysisTrackingError200ApplicationJsonPortfolios;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisTrackingError200ApplicationJsonPortfolios };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisTrackingError200ApplicationJsonPortfolios = PostPortfolioAnalysisTrackingError200ApplicationJsonPortfolios;
 var PostPortfolioAnalysisTrackingError200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisTrackingError200ApplicationJson, _super);
     function PostPortfolioAnalysisTrackingError200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolios", elemType: PostPortfolioAnalysisTrackingError200ApplicationJsonPortfolios }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolios", elemType: PostPortfolioAnalysisTrackingError200ApplicationJsonPortfolios }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisTrackingError200ApplicationJson.prototype, "portfolios", void 0);
     return PostPortfolioAnalysisTrackingError200ApplicationJson;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisTrackingError200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisTrackingError200ApplicationJson = PostPortfolioAnalysisTrackingError200ApplicationJson;
 var PostPortfolioAnalysisTrackingErrorRequest = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisTrackingErrorRequest, _super);
     function PostPortfolioAnalysisTrackingErrorRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostPortfolioAnalysisTrackingErrorRequestBody)
     ], PostPortfolioAnalysisTrackingErrorRequest.prototype, "request", void 0);
     return PostPortfolioAnalysisTrackingErrorRequest;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisTrackingErrorRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisTrackingErrorRequest = PostPortfolioAnalysisTrackingErrorRequest;
 var PostPortfolioAnalysisTrackingErrorResponse = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisTrackingErrorResponse, _super);
     function PostPortfolioAnalysisTrackingErrorResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostPortfolioAnalysisTrackingErrorResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostPortfolioAnalysisTrackingError200ApplicationJson)
-    ], PostPortfolioAnalysisTrackingErrorResponse.prototype, "postPortfolioAnalysisTrackingError200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostPortfolioAnalysisTrackingErrorResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostPortfolioAnalysisTrackingError200ApplicationJson)
+    ], PostPortfolioAnalysisTrackingErrorResponse.prototype, "postPortfolioAnalysisTrackingError200ApplicationJSONObject", void 0);
     return PostPortfolioAnalysisTrackingErrorResponse;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisTrackingErrorResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisTrackingErrorResponse = PostPortfolioAnalysisTrackingErrorResponse;

@@ -188,23 +188,23 @@ export class MpkbyResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  mpkby400ApplicationJsonObject?: Mpkby400ApplicationJson;
+  mpkby400ApplicationJSONObject?: Mpkby400ApplicationJson;
 
   @SpeakeasyMetadata()
-  mpkby401ApplicationJsonObject?: Mpkby401ApplicationJson;
+  mpkby401ApplicationJSONObject?: Mpkby401ApplicationJson;
 
   @SpeakeasyMetadata()
-  mpkby404ApplicationJsonObject?: Mpkby404ApplicationJson;
+  mpkby404ApplicationJSONObject?: Mpkby404ApplicationJson;
 
   @SpeakeasyMetadata()
-  mpkby500ApplicationJsonObject?: Mpkby500ApplicationJson;
+  mpkby500ApplicationJSONObject?: Mpkby500ApplicationJson;
 
   @SpeakeasyMetadata()
-  mpkby502ApplicationJsonObject?: Mpkby502ApplicationJson;
+  mpkby502ApplicationJSONObject?: Mpkby502ApplicationJson;
 
   @SpeakeasyMetadata()
-  mpkby503ApplicationJsonObject?: Mpkby503ApplicationJson;
+  mpkby503ApplicationJSONObject?: Mpkby503ApplicationJson;
 
   @SpeakeasyMetadata()
-  mpkby504ApplicationJsonObject?: Mpkby504ApplicationJson;
+  mpkby504ApplicationJSONObject?: Mpkby504ApplicationJson;
 }

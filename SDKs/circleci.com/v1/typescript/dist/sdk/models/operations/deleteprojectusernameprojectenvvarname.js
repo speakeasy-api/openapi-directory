@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteProjectUsernameProjectEnvvarNameResponse = exports.DeleteProjectUsernameProjectEnvvarNameRequest = exports.DeleteProjectUsernameProjectEnvvarName200ApplicationJson = exports.DeleteProjectUsernameProjectEnvvarName200ApplicationJsonMessageEnum = exports.DeleteProjectUsernameProjectEnvvarNamePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteProjectUsernameProjectEnvvarNamePathParams = /** @class */ (function (_super) {
     __extends(DeleteProjectUsernameProjectEnvvarNamePathParams, _super);
     function DeleteProjectUsernameProjectEnvvarNamePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], DeleteProjectUsernameProjectEnvvarNamePathParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], DeleteProjectUsernameProjectEnvvarNamePathParams.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], DeleteProjectUsernameProjectEnvvarNamePathParams.prototype, "username", void 0);
     return DeleteProjectUsernameProjectEnvvarNamePathParams;
-}(SpeakeasyBase));
-export { DeleteProjectUsernameProjectEnvvarNamePathParams };
-export var DeleteProjectUsernameProjectEnvvarName200ApplicationJsonMessageEnum;
+}(utils_1.SpeakeasyBase));
+exports.DeleteProjectUsernameProjectEnvvarNamePathParams = DeleteProjectUsernameProjectEnvvarNamePathParams;
+var DeleteProjectUsernameProjectEnvvarName200ApplicationJsonMessageEnum;
 (function (DeleteProjectUsernameProjectEnvvarName200ApplicationJsonMessageEnum) {
     DeleteProjectUsernameProjectEnvvarName200ApplicationJsonMessageEnum["Ok"] = "OK";
-})(DeleteProjectUsernameProjectEnvvarName200ApplicationJsonMessageEnum || (DeleteProjectUsernameProjectEnvvarName200ApplicationJsonMessageEnum = {}));
+})(DeleteProjectUsernameProjectEnvvarName200ApplicationJsonMessageEnum = exports.DeleteProjectUsernameProjectEnvvarName200ApplicationJsonMessageEnum || (exports.DeleteProjectUsernameProjectEnvvarName200ApplicationJsonMessageEnum = {}));
 var DeleteProjectUsernameProjectEnvvarName200ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteProjectUsernameProjectEnvvarName200ApplicationJson, _super);
     function DeleteProjectUsernameProjectEnvvarName200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DeleteProjectUsernameProjectEnvvarName200ApplicationJson.prototype, "message", void 0);
     return DeleteProjectUsernameProjectEnvvarName200ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteProjectUsernameProjectEnvvarName200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeleteProjectUsernameProjectEnvvarName200ApplicationJson = DeleteProjectUsernameProjectEnvvarName200ApplicationJson;
 var DeleteProjectUsernameProjectEnvvarNameRequest = /** @class */ (function (_super) {
     __extends(DeleteProjectUsernameProjectEnvvarNameRequest, _super);
     function DeleteProjectUsernameProjectEnvvarNameRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteProjectUsernameProjectEnvvarNamePathParams)
     ], DeleteProjectUsernameProjectEnvvarNameRequest.prototype, "pathParams", void 0);
     return DeleteProjectUsernameProjectEnvvarNameRequest;
-}(SpeakeasyBase));
-export { DeleteProjectUsernameProjectEnvvarNameRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteProjectUsernameProjectEnvvarNameRequest = DeleteProjectUsernameProjectEnvvarNameRequest;
 var DeleteProjectUsernameProjectEnvvarNameResponse = /** @class */ (function (_super) {
     __extends(DeleteProjectUsernameProjectEnvvarNameResponse, _super);
     function DeleteProjectUsernameProjectEnvvarNameResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteProjectUsernameProjectEnvvarNameResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DeleteProjectUsernameProjectEnvvarName200ApplicationJson)
-    ], DeleteProjectUsernameProjectEnvvarNameResponse.prototype, "deleteProjectUsernameProjectEnvvarName200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteProjectUsernameProjectEnvvarNameResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DeleteProjectUsernameProjectEnvvarName200ApplicationJson)
+    ], DeleteProjectUsernameProjectEnvvarNameResponse.prototype, "deleteProjectUsernameProjectEnvvarName200ApplicationJSONObject", void 0);
     return DeleteProjectUsernameProjectEnvvarNameResponse;
-}(SpeakeasyBase));
-export { DeleteProjectUsernameProjectEnvvarNameResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteProjectUsernameProjectEnvvarNameResponse = DeleteProjectUsernameProjectEnvvarNameResponse;

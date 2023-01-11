@@ -18,7 +18,7 @@ export declare class CreateFargateProfileRequestBody extends SpeakeasyBase {
     podExecutionRoleArn: string;
     selectors?: shared.FargateProfileSelector[];
     subnets?: string[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateFargateProfileRequest extends SpeakeasyBase {
     pathParams: CreateFargateProfilePathParams;

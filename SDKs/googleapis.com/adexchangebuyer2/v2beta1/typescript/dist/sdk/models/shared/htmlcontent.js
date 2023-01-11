@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HtmlContent = void 0;
+var utils_1 = require("../../../internal/utils");
 // HtmlContent
 /**
  * HTML content for a creative.
@@ -33,17 +36,17 @@ var HtmlContent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], HtmlContent.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snippet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snippet" }),
         __metadata("design:type", String)
     ], HtmlContent.prototype, "snippet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], HtmlContent.prototype, "width", void 0);
     return HtmlContent;
-}(SpeakeasyBase));
-export { HtmlContent };
+}(utils_1.SpeakeasyBase));
+exports.HtmlContent = HtmlContent;

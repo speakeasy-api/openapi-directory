@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceLocation } from "./resourcelocation";
-import { OperationTypeEnum } from "./operationtypeenum";
-import { ResourceTypeEnum } from "./resourcetypeenum";
-import { OperationStatusEnum } from "./operationstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Operation = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcelocation_1 = require("./resourcelocation");
+var operationtypeenum_1 = require("./operationtypeenum");
+var resourcetypeenum_1 = require("./resourcetypeenum");
+var operationstatusenum_1 = require("./operationstatusenum");
 // Operation
 /**
  * Describes the API operation.
@@ -37,53 +40,53 @@ var Operation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], Operation.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorCode" }),
         __metadata("design:type", String)
     ], Operation.prototype, "errorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDetails" }),
         __metadata("design:type", String)
     ], Operation.prototype, "errorDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Operation.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isTerminal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isTerminal" }),
         __metadata("design:type", Boolean)
     ], Operation.prototype, "isTerminal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", ResourceLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", resourcelocation_1.ResourceLocation)
     ], Operation.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operationDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operationDetails" }),
         __metadata("design:type", String)
     ], Operation.prototype, "operationDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operationType" }),
         __metadata("design:type", String)
     ], Operation.prototype, "operationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceName" }),
         __metadata("design:type", String)
     ], Operation.prototype, "resourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], Operation.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Operation.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusChangedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusChangedAt" }),
         __metadata("design:type", Date)
     ], Operation.prototype, "statusChangedAt", void 0);
     return Operation;
-}(SpeakeasyBase));
-export { Operation };
+}(utils_1.SpeakeasyBase));
+exports.Operation = Operation;

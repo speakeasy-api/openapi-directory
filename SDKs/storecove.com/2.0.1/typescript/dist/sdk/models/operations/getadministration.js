@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAdministrationResponse = exports.GetAdministrationRequest = exports.GetAdministrationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAdministrationPathParams = /** @class */ (function (_super) {
     __extends(GetAdministrationPathParams, _super);
     function GetAdministrationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetAdministrationPathParams.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=legal_entity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=legal_entity_id" }),
         __metadata("design:type", Number)
     ], GetAdministrationPathParams.prototype, "legalEntityId", void 0);
     return GetAdministrationPathParams;
-}(SpeakeasyBase));
-export { GetAdministrationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAdministrationPathParams = GetAdministrationPathParams;
 var GetAdministrationRequest = /** @class */ (function (_super) {
     __extends(GetAdministrationRequest, _super);
     function GetAdministrationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAdministrationPathParams)
     ], GetAdministrationRequest.prototype, "pathParams", void 0);
     return GetAdministrationRequest;
-}(SpeakeasyBase));
-export { GetAdministrationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAdministrationRequest = GetAdministrationRequest;
 var GetAdministrationResponse = /** @class */ (function (_super) {
     __extends(GetAdministrationResponse, _super);
     function GetAdministrationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetAdministrationResponse.prototype, "administration", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAdministrationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAdministrationResponse.prototype, "statusCode", void 0);
     return GetAdministrationResponse;
-}(SpeakeasyBase));
-export { GetAdministrationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAdministrationResponse = GetAdministrationResponse;

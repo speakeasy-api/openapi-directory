@@ -15,5 +15,5 @@ export declare class GetfullnameparsedmatchRequest extends SpeakeasyBase {
 export declare class GetfullnameparsedmatchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getfullnameparsedmatch200ApplicationJsonObject?: Getfullnameparsedmatch200ApplicationJson;
+    getfullnameparsedmatch200ApplicationJSONObject?: Getfullnameparsedmatch200ApplicationJson;
 }

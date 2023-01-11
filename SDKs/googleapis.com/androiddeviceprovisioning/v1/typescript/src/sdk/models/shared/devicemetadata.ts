@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class DeviceMetadata extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=entries" })
-  entries?: Map<string, string>;
+  entries?: Record<string, string>;
 }

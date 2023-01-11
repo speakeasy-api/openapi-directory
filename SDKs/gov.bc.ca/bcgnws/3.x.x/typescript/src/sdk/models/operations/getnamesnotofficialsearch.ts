@@ -47,7 +47,7 @@ export class GetNamesNotOfficialSearchQueryParams extends SpeakeasyBase {
   outputFormat: GetNamesNotOfficialSearchOutputFormatEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" })
-  outputSrs?: number;
+  outputSRS?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputStyle" })
   outputStyle?: GetNamesNotOfficialSearchOutputStyleEnum;

@@ -1,0 +1,34 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import { MinimumEngineVersionPerAllowedValueList } from "./minimumengineversionperallowedvaluelist";
+
+
+
+// OptionGroupOptionSettingsList
+/** 
+ * Option group option settings are used to display settings available for each option with their default values and other information. These values are used with the DescribeOptionGroupOptions action.
+**/
+export class OptionGroupOptionSettingsList extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  allowedValues?: string;
+
+  @SpeakeasyMetadata()
+  applyType?: string;
+
+  @SpeakeasyMetadata()
+  defaultValue?: string;
+
+  @SpeakeasyMetadata()
+  isModifiable?: boolean;
+
+  @SpeakeasyMetadata()
+  isRequired?: boolean;
+
+  @SpeakeasyMetadata({ elemType: MinimumEngineVersionPerAllowedValueList })
+  minimumEngineVersionPerAllowedValue?: MinimumEngineVersionPerAllowedValueList[];
+
+  @SpeakeasyMetadata()
+  settingDescription?: string;
+
+  @SpeakeasyMetadata()
+  settingName?: string;
+}

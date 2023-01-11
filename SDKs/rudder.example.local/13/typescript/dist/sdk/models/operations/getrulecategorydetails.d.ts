@@ -23,6 +23,6 @@ export declare class GetRuleCategoryDetailsRequest extends SpeakeasyBase {
 }
 export declare class GetRuleCategoryDetailsResponse extends SpeakeasyBase {
     contentType: string;
-    getRuleCategoryDetails200ApplicationJsonObject?: GetRuleCategoryDetails200ApplicationJson;
+    getRuleCategoryDetails200ApplicationJSONObject?: GetRuleCategoryDetails200ApplicationJson;
     statusCode: number;
 }

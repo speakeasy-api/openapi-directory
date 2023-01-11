@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PartialMatch } from "./partialmatch";
-import { SecurityGroupRemediationAction } from "./securitygroupremediationaction";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AwsVpcSecurityGroupViolation = void 0;
+var utils_1 = require("../../../internal/utils");
+var partialmatch_1 = require("./partialmatch");
+var securitygroupremediationaction_1 = require("./securitygroupremediationaction");
 // AwsVpcSecurityGroupViolation
 /**
  * Violation detail for the rule violation in a security group when compared to the primary security group of the Firewall Manager policy.
@@ -35,21 +38,21 @@ var AwsVpcSecurityGroupViolation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PartialMatches", elemType: PartialMatch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PartialMatches", elemType: partialmatch_1.PartialMatch }),
         __metadata("design:type", Array)
     ], AwsVpcSecurityGroupViolation.prototype, "partialMatches", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PossibleSecurityGroupRemediationActions", elemType: SecurityGroupRemediationAction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PossibleSecurityGroupRemediationActions", elemType: securitygroupremediationaction_1.SecurityGroupRemediationAction }),
         __metadata("design:type", Array)
     ], AwsVpcSecurityGroupViolation.prototype, "possibleSecurityGroupRemediationActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ViolationTarget" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ViolationTarget" }),
         __metadata("design:type", String)
     ], AwsVpcSecurityGroupViolation.prototype, "violationTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ViolationTargetDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ViolationTargetDescription" }),
         __metadata("design:type", String)
     ], AwsVpcSecurityGroupViolation.prototype, "violationTargetDescription", void 0);
     return AwsVpcSecurityGroupViolation;
-}(SpeakeasyBase));
-export { AwsVpcSecurityGroupViolation };
+}(utils_1.SpeakeasyBase));
+exports.AwsVpcSecurityGroupViolation = AwsVpcSecurityGroupViolation;

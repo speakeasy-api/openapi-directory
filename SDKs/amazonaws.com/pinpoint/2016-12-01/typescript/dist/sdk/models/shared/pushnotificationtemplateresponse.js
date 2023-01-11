@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AndroidPushNotificationTemplate } from "./androidpushnotificationtemplate";
-import { ApnsPushNotificationTemplate } from "./apnspushnotificationtemplate";
-import { DefaultPushNotificationTemplate } from "./defaultpushnotificationtemplate";
-import { TemplateTypeEnum } from "./templatetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PushNotificationTemplateResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var androidpushnotificationtemplate_1 = require("./androidpushnotificationtemplate");
+var apnspushnotificationtemplate_1 = require("./apnspushnotificationtemplate");
+var defaultpushnotificationtemplate_1 = require("./defaultpushnotificationtemplate");
+var templatetypeenum_1 = require("./templatetypeenum");
 // PushNotificationTemplateResponse
 /**
  * Provides information about the content and settings for a message template that can be used in messages that are sent through a push notification channel.
@@ -37,65 +40,65 @@ var PushNotificationTemplateResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ADM" }),
-        __metadata("design:type", AndroidPushNotificationTemplate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ADM" }),
+        __metadata("design:type", androidpushnotificationtemplate_1.AndroidPushNotificationTemplate)
     ], PushNotificationTemplateResponse.prototype, "adm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=APNS" }),
-        __metadata("design:type", ApnsPushNotificationTemplate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=APNS" }),
+        __metadata("design:type", apnspushnotificationtemplate_1.ApnsPushNotificationTemplate)
     ], PushNotificationTemplateResponse.prototype, "apns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Arn" }),
         __metadata("design:type", String)
     ], PushNotificationTemplateResponse.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Baidu" }),
-        __metadata("design:type", AndroidPushNotificationTemplate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Baidu" }),
+        __metadata("design:type", androidpushnotificationtemplate_1.AndroidPushNotificationTemplate)
     ], PushNotificationTemplateResponse.prototype, "baidu", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDate" }),
         __metadata("design:type", String)
     ], PushNotificationTemplateResponse.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Default" }),
-        __metadata("design:type", DefaultPushNotificationTemplate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Default" }),
+        __metadata("design:type", defaultpushnotificationtemplate_1.DefaultPushNotificationTemplate)
     ], PushNotificationTemplateResponse.prototype, "default", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DefaultSubstitutions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DefaultSubstitutions" }),
         __metadata("design:type", String)
     ], PushNotificationTemplateResponse.prototype, "defaultSubstitutions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GCM" }),
-        __metadata("design:type", AndroidPushNotificationTemplate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GCM" }),
+        __metadata("design:type", androidpushnotificationtemplate_1.AndroidPushNotificationTemplate)
     ], PushNotificationTemplateResponse.prototype, "gcm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedDate" }),
         __metadata("design:type", String)
     ], PushNotificationTemplateResponse.prototype, "lastModifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecommenderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecommenderId" }),
         __metadata("design:type", String)
     ], PushNotificationTemplateResponse.prototype, "recommenderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateDescription" }),
         __metadata("design:type", String)
     ], PushNotificationTemplateResponse.prototype, "templateDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateName" }),
         __metadata("design:type", String)
     ], PushNotificationTemplateResponse.prototype, "templateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateType" }),
         __metadata("design:type", String)
     ], PushNotificationTemplateResponse.prototype, "templateType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Version" }),
         __metadata("design:type", String)
     ], PushNotificationTemplateResponse.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], PushNotificationTemplateResponse.prototype, "tags", void 0);
     return PushNotificationTemplateResponse;
-}(SpeakeasyBase));
-export { PushNotificationTemplateResponse };
+}(utils_1.SpeakeasyBase));
+exports.PushNotificationTemplateResponse = PushNotificationTemplateResponse;

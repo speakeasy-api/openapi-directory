@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkEventsEventTypesResponse = exports.GetNetworkEventsEventTypesRequest = exports.GetNetworkEventsEventTypesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkEventsEventTypesPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkEventsEventTypesPathParams, _super);
     function GetNetworkEventsEventTypesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkEventsEventTypesPathParams.prototype, "networkId", void 0);
     return GetNetworkEventsEventTypesPathParams;
-}(SpeakeasyBase));
-export { GetNetworkEventsEventTypesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkEventsEventTypesPathParams = GetNetworkEventsEventTypesPathParams;
 var GetNetworkEventsEventTypesRequest = /** @class */ (function (_super) {
     __extends(GetNetworkEventsEventTypesRequest, _super);
     function GetNetworkEventsEventTypesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkEventsEventTypesPathParams)
     ], GetNetworkEventsEventTypesRequest.prototype, "pathParams", void 0);
     return GetNetworkEventsEventTypesRequest;
-}(SpeakeasyBase));
-export { GetNetworkEventsEventTypesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkEventsEventTypesRequest = GetNetworkEventsEventTypesRequest;
 var GetNetworkEventsEventTypesResponse = /** @class */ (function (_super) {
     __extends(GetNetworkEventsEventTypesResponse, _super);
     function GetNetworkEventsEventTypesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkEventsEventTypesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkEventsEventTypesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkEventsEventTypesResponse.prototype, "getNetworkEventsEventTypes200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkEventsEventTypesResponse.prototype, "getNetworkEventsEventTypes200ApplicationJSONObject", void 0);
     return GetNetworkEventsEventTypesResponse;
-}(SpeakeasyBase));
-export { GetNetworkEventsEventTypesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkEventsEventTypesResponse = GetNetworkEventsEventTypesResponse;

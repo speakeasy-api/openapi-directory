@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateLogPatternRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateLogPatternRequest = /** @class */ (function (_super) {
     __extends(UpdateLogPatternRequest, _super);
     function UpdateLogPatternRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Pattern" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Pattern" }),
         __metadata("design:type", String)
     ], UpdateLogPatternRequest.prototype, "pattern", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PatternName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PatternName" }),
         __metadata("design:type", String)
     ], UpdateLogPatternRequest.prototype, "patternName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PatternSetName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PatternSetName" }),
         __metadata("design:type", String)
     ], UpdateLogPatternRequest.prototype, "patternSetName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Rank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Rank" }),
         __metadata("design:type", Number)
     ], UpdateLogPatternRequest.prototype, "rank", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceGroupName" }),
         __metadata("design:type", String)
     ], UpdateLogPatternRequest.prototype, "resourceGroupName", void 0);
     return UpdateLogPatternRequest;
-}(SpeakeasyBase));
-export { UpdateLogPatternRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateLogPatternRequest = UpdateLogPatternRequest;

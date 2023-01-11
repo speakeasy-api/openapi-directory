@@ -7,10 +7,6 @@ import { SqsQueueConfiguration } from "./sqsqueueconfiguration";
 
 
 
-// Configuration
-/** 
- * Access control configuration structures for your resource. You specify the configuration as a type-value pair. You can specify only one type of access control configuration.
-**/
 export class Configuration extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=iamRole" })
   iamRole?: IamRoleConfiguration;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceSharePermissionDetail } from "./resourcesharepermissiondetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPermissionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcesharepermissiondetail_1 = require("./resourcesharepermissiondetail");
 var GetPermissionResponse = /** @class */ (function (_super) {
     __extends(GetPermissionResponse, _super);
     function GetPermissionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission" }),
-        __metadata("design:type", ResourceSharePermissionDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission" }),
+        __metadata("design:type", resourcesharepermissiondetail_1.ResourceSharePermissionDetail)
     ], GetPermissionResponse.prototype, "permission", void 0);
     return GetPermissionResponse;
-}(SpeakeasyBase));
-export { GetPermissionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPermissionResponse = GetPermissionResponse;

@@ -194,23 +194,23 @@ export class PsnocResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  psnoc400ApplicationJsonObject?: Psnoc400ApplicationJson;
+  psnoc400ApplicationJSONObject?: Psnoc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  psnoc401ApplicationJsonObject?: Psnoc401ApplicationJson;
+  psnoc401ApplicationJSONObject?: Psnoc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  psnoc404ApplicationJsonObject?: Psnoc404ApplicationJson;
+  psnoc404ApplicationJSONObject?: Psnoc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  psnoc500ApplicationJsonObject?: Psnoc500ApplicationJson;
+  psnoc500ApplicationJSONObject?: Psnoc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  psnoc502ApplicationJsonObject?: Psnoc502ApplicationJson;
+  psnoc502ApplicationJSONObject?: Psnoc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  psnoc503ApplicationJsonObject?: Psnoc503ApplicationJson;
+  psnoc503ApplicationJSONObject?: Psnoc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  psnoc504ApplicationJsonObject?: Psnoc504ApplicationJson;
+  psnoc504ApplicationJSONObject?: Psnoc504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Prediction = void 0;
+var utils_1 = require("../../../internal/utils");
 // Prediction
 /**
  * <p>The output from a <code>Predict</code> operation: </p> <ul> <li> <p> <code>Details</code> - Contains the following attributes: <code>DetailsAttributes.PREDICTIVE_MODEL_TYPE - REGRESSION | BINARY | MULTICLASS</code> <code>DetailsAttributes.ALGORITHM - SGD</code> </p> </li> <li> <p> <code>PredictedLabel</code> - Present for either a <code>BINARY</code> or <code>MULTICLASS</code> <code>MLModel</code> request. </p> </li> <li> <p> <code>PredictedScores</code> - Contains the raw classification score corresponding to each label. </p> </li> <li> <p> <code>PredictedValue</code> - Present for a <code>REGRESSION</code> <code>MLModel</code> request. </p> </li> </ul>
@@ -33,21 +36,21 @@ var Prediction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details" }),
+        __metadata("design:type", Object)
     ], Prediction.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=predictedLabel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=predictedLabel" }),
         __metadata("design:type", String)
     ], Prediction.prototype, "predictedLabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=predictedScores" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=predictedScores" }),
+        __metadata("design:type", Object)
     ], Prediction.prototype, "predictedScores", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=predictedValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=predictedValue" }),
         __metadata("design:type", Number)
     ], Prediction.prototype, "predictedValue", void 0);
     return Prediction;
-}(SpeakeasyBase));
-export { Prediction };
+}(utils_1.SpeakeasyBase));
+exports.Prediction = Prediction;

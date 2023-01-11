@@ -11,7 +11,7 @@ export class PhcerRequestBodyCertificateParameters extends SpeakeasyBase {
   fullName: string;
 
   @SpeakeasyMetadata({ data: "json, name=REGN_NO" })
-  regnNo: string;
+  regnNO: string;
 
   @SpeakeasyMetadata({ data: "json, name=UID" })
   uid: string;
@@ -194,23 +194,23 @@ export class PhcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  phcer400ApplicationJsonObject?: Phcer400ApplicationJson;
+  phcer400ApplicationJSONObject?: Phcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  phcer401ApplicationJsonObject?: Phcer401ApplicationJson;
+  phcer401ApplicationJSONObject?: Phcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  phcer404ApplicationJsonObject?: Phcer404ApplicationJson;
+  phcer404ApplicationJSONObject?: Phcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  phcer500ApplicationJsonObject?: Phcer500ApplicationJson;
+  phcer500ApplicationJSONObject?: Phcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  phcer502ApplicationJsonObject?: Phcer502ApplicationJson;
+  phcer502ApplicationJSONObject?: Phcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  phcer503ApplicationJsonObject?: Phcer503ApplicationJson;
+  phcer503ApplicationJSONObject?: Phcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  phcer504ApplicationJsonObject?: Phcer504ApplicationJson;
+  phcer504ApplicationJSONObject?: Phcer504ApplicationJson;
 }

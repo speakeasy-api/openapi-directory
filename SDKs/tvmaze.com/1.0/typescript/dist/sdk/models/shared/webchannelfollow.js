@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebchannelFollow = exports.WebchannelFollowEmbedded = void 0;
+var utils_1 = require("../../../internal/utils");
 var WebchannelFollowEmbedded = /** @class */ (function (_super) {
     __extends(WebchannelFollowEmbedded, _super);
     function WebchannelFollowEmbedded() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webchannel" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webchannel" }),
+        __metadata("design:type", Object)
     ], WebchannelFollowEmbedded.prototype, "webchannel", void 0);
     return WebchannelFollowEmbedded;
-}(SpeakeasyBase));
-export { WebchannelFollowEmbedded };
+}(utils_1.SpeakeasyBase));
+exports.WebchannelFollowEmbedded = WebchannelFollowEmbedded;
 var WebchannelFollow = /** @class */ (function (_super) {
     __extends(WebchannelFollow, _super);
     function WebchannelFollow() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_embedded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_embedded" }),
         __metadata("design:type", WebchannelFollowEmbedded)
     ], WebchannelFollow.prototype, "embedded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webchannel_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webchannel_id" }),
         __metadata("design:type", Number)
     ], WebchannelFollow.prototype, "webchannelId", void 0);
     return WebchannelFollow;
-}(SpeakeasyBase));
-export { WebchannelFollow };
+}(utils_1.SpeakeasyBase));
+exports.WebchannelFollow = WebchannelFollow;

@@ -52,8 +52,8 @@ export class PostPortfolioConstructionRandomResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioConstructionRandom200ApplicationJsonObject?: PostPortfolioConstructionRandom200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioConstructionRandom200ApplicationJSONObject?: PostPortfolioConstructionRandom200ApplicationJson;
 }

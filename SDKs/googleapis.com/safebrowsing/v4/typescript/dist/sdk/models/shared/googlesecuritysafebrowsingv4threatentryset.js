@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleSecuritySafebrowsingV4RawHashes } from "./googlesecuritysafebrowsingv4rawhashes";
-import { GoogleSecuritySafebrowsingV4RawIndices } from "./googlesecuritysafebrowsingv4rawindices";
-import { GoogleSecuritySafebrowsingV4RiceDeltaEncoding } from "./googlesecuritysafebrowsingv4ricedeltaencoding";
-export var GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleSecuritySafebrowsingV4ThreatEntrySet = exports.GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlesecuritysafebrowsingv4rawhashes_1 = require("./googlesecuritysafebrowsingv4rawhashes");
+var googlesecuritysafebrowsingv4rawindices_1 = require("./googlesecuritysafebrowsingv4rawindices");
+var googlesecuritysafebrowsingv4ricedeltaencoding_1 = require("./googlesecuritysafebrowsingv4ricedeltaencoding");
+var GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum;
 (function (GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum) {
     GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum["CompressionTypeUnspecified"] = "COMPRESSION_TYPE_UNSPECIFIED";
     GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum["Raw"] = "RAW";
     GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum["Rice"] = "RICE";
-})(GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum || (GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum = {}));
+})(GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum = exports.GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum || (exports.GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum = {}));
 // GoogleSecuritySafebrowsingV4ThreatEntrySet
 /**
  * A set of threats that should be added or removed from a client's local database.
@@ -42,25 +45,25 @@ var GoogleSecuritySafebrowsingV4ThreatEntrySet = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compressionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compressionType" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4ThreatEntrySet.prototype, "compressionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rawHashes" }),
-        __metadata("design:type", GoogleSecuritySafebrowsingV4RawHashes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rawHashes" }),
+        __metadata("design:type", googlesecuritysafebrowsingv4rawhashes_1.GoogleSecuritySafebrowsingV4RawHashes)
     ], GoogleSecuritySafebrowsingV4ThreatEntrySet.prototype, "rawHashes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rawIndices" }),
-        __metadata("design:type", GoogleSecuritySafebrowsingV4RawIndices)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rawIndices" }),
+        __metadata("design:type", googlesecuritysafebrowsingv4rawindices_1.GoogleSecuritySafebrowsingV4RawIndices)
     ], GoogleSecuritySafebrowsingV4ThreatEntrySet.prototype, "rawIndices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=riceHashes" }),
-        __metadata("design:type", GoogleSecuritySafebrowsingV4RiceDeltaEncoding)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=riceHashes" }),
+        __metadata("design:type", googlesecuritysafebrowsingv4ricedeltaencoding_1.GoogleSecuritySafebrowsingV4RiceDeltaEncoding)
     ], GoogleSecuritySafebrowsingV4ThreatEntrySet.prototype, "riceHashes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=riceIndices" }),
-        __metadata("design:type", GoogleSecuritySafebrowsingV4RiceDeltaEncoding)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=riceIndices" }),
+        __metadata("design:type", googlesecuritysafebrowsingv4ricedeltaencoding_1.GoogleSecuritySafebrowsingV4RiceDeltaEncoding)
     ], GoogleSecuritySafebrowsingV4ThreatEntrySet.prototype, "riceIndices", void 0);
     return GoogleSecuritySafebrowsingV4ThreatEntrySet;
-}(SpeakeasyBase));
-export { GoogleSecuritySafebrowsingV4ThreatEntrySet };
+}(utils_1.SpeakeasyBase));
+exports.GoogleSecuritySafebrowsingV4ThreatEntrySet = GoogleSecuritySafebrowsingV4ThreatEntrySet;

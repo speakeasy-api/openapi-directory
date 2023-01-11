@@ -37,5 +37,5 @@ export class UpdateOrganizationConfigTemplateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateOrganizationConfigTemplate200ApplicationJsonObject?: Map<string, any>;
+  updateOrganizationConfigTemplate200ApplicationJSONObject?: Record<string, any>;
 }

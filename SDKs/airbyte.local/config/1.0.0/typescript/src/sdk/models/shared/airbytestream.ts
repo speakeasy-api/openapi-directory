@@ -12,7 +12,7 @@ export class AirbyteStream extends SpeakeasyBase {
   defaultCursorField?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=jsonSchema" })
-  jsonSchema?: Map<string, any>;
+  jsonSchema?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;

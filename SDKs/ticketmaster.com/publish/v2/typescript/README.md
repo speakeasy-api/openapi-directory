@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PatchAttractionRequest, PatchAttractionResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,42 +28,40 @@ const sdk = new SDK();
     
 const req: PatchAttractionRequest = {
   pathParams: {
-    id: "molestiae",
+    id: "sit",
   },
   headers: {
-    tmpsCorrelationId: "autem",
+    tmpsCorrelationId: "voluptas",
   },
   request: {
     changes: [
       {
-        from: "sed",
-        op: "add",
-        path: "et",
+        from: "expedita",
+        op: "test",
+        path: "dolor",
         value: {
-          "maiores": "praesentium",
-          "molestiae": "praesentium",
+          "voluptas": "fugit",
+          "et": "nihil",
         },
       },
       {
-        from: "facere",
-        op: "replace",
-        path: "voluptate",
+        from: "rerum",
+        op: "test",
+        path: "debitis",
         value: {
-          "ut": "deserunt",
-          "est": "esse",
-          "at": "atque",
+          "et": "ut",
         },
       },
     ],
-    relatedEntityId: "alias",
-    relatedEntityType: "event",
-    score: 64.099998,
-    source: "itaque",
-    versionNumber: 8426159091266627890,
+    relatedEntityId: "dolorem",
+    relatedEntityType: "attraction",
+    score: 94.199997,
+    source: "vitae",
+    versionNumber: 4706154865122290029,
   },
 };
 
-sdk.sdk.patchAttraction(req).then((res: PatchAttractionResponse | AxiosError) => {
+sdk.patchAttraction(req).then((res: PatchAttractionResponse | AxiosError) => {
    // handle response
 });
 ```

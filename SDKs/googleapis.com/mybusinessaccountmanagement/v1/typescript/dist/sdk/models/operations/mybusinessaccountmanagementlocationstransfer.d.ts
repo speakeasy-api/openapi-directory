@@ -23,6 +23,6 @@ export declare class MybusinessaccountmanagementLocationsTransferRequest extends
 }
 export declare class MybusinessaccountmanagementLocationsTransferResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

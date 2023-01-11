@@ -12,5 +12,5 @@ export declare class Comment extends SpeakeasyBase {
     deleted?: boolean;
     inReplyTo?: string;
     lastModifiedDate?: Date;
-    reactionCounts?: Map<string, number>;
+    reactionCounts?: Record<string, number>;
 }

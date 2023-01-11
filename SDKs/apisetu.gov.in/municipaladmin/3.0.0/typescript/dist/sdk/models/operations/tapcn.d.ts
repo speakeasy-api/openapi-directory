@@ -105,11 +105,11 @@ export declare class TapcnRequest extends SpeakeasyBase {
 export declare class TapcnResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    tapcn400ApplicationJsonObject?: Tapcn400ApplicationJson;
-    tapcn401ApplicationJsonObject?: Tapcn401ApplicationJson;
-    tapcn404ApplicationJsonObject?: Tapcn404ApplicationJson;
-    tapcn500ApplicationJsonObject?: Tapcn500ApplicationJson;
-    tapcn502ApplicationJsonObject?: Tapcn502ApplicationJson;
-    tapcn503ApplicationJsonObject?: Tapcn503ApplicationJson;
-    tapcn504ApplicationJsonObject?: Tapcn504ApplicationJson;
+    tapcn400ApplicationJSONObject?: Tapcn400ApplicationJson;
+    tapcn401ApplicationJSONObject?: Tapcn401ApplicationJson;
+    tapcn404ApplicationJSONObject?: Tapcn404ApplicationJson;
+    tapcn500ApplicationJSONObject?: Tapcn500ApplicationJson;
+    tapcn502ApplicationJSONObject?: Tapcn502ApplicationJson;
+    tapcn503ApplicationJSONObject?: Tapcn503ApplicationJson;
+    tapcn504ApplicationJSONObject?: Tapcn504ApplicationJson;
 }

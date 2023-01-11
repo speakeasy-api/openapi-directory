@@ -22,7 +22,7 @@ export class GetSetupV1CompaniesRegionsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  regionListViewModel?: Map<string, any>;
+  regionListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

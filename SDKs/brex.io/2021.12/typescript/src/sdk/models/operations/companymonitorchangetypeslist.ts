@@ -17,10 +17,10 @@ export class CompanyMonitorChangeTypesListRequest extends SpeakeasyBase {
 
 export class CompanyMonitorChangeTypesListResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  companyMonitorChangeTypesList200ApplicationJsonStrings?: string[];
+  companyMonitorChangeTypesList200ApplicationJSONStrings?: string[];
 
   @SpeakeasyMetadata()
-  companyMonitorChangeTypesListDefaultApplicationJsonAny?: any;
+  companyMonitorChangeTypesListDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   contentType: string;

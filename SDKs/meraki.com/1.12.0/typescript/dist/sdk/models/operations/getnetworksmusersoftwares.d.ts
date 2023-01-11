@@ -9,5 +9,5 @@ export declare class GetNetworkSmUserSoftwaresRequest extends SpeakeasyBase {
 export declare class GetNetworkSmUserSoftwaresResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSmUserSoftwares200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSmUserSoftwares200ApplicationJSONObject?: Record<string, any>;
 }

@@ -26,7 +26,7 @@ export class GetBestPodcastsQueryParams extends SpeakeasyBase {
 
 export class GetBestPodcastsHeaders extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-ListenAPI-Key" })
-  xListenApiKey: string;
+  xListenAPIKey: string;
 }
 
 
@@ -47,7 +47,7 @@ export class GetBestPodcastsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

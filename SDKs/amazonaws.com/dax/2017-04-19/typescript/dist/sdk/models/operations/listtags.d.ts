@@ -20,7 +20,7 @@ export declare class ListTagsRequest extends SpeakeasyBase {
 export declare class ListTagsResponse extends SpeakeasyBase {
     clusterNotFoundFault?: any;
     contentType: string;
-    invalidArnFault?: any;
+    invalidARNFault?: any;
     invalidClusterStateFault?: any;
     invalidParameterCombinationException?: any;
     invalidParameterValueException?: any;

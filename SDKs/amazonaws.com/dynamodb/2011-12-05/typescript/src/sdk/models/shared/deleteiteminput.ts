@@ -7,7 +7,7 @@ import { ReturnValueEnum } from "./returnvalueenum";
 
 export class DeleteItemInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Expected", elemType: ExpectedAttributeValue })
-  expected?: Map<string, ExpectedAttributeValue>;
+  expected?: Record<string, ExpectedAttributeValue>;
 
   @SpeakeasyMetadata({ data: "json, name=Key" })
   key: Key;

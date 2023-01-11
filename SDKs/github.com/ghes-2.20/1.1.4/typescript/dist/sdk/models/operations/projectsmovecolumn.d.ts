@@ -14,6 +14,6 @@ export declare class ProjectsMoveColumnResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    projectsMoveColumn201ApplicationJsonObject?: Map<string, any>;
+    projectsMoveColumn201ApplicationJSONObject?: Record<string, any>;
     validationErrorSimple?: shared.ValidationErrorSimple;
 }

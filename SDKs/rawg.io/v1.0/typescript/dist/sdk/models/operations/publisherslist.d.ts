@@ -16,5 +16,5 @@ export declare class PublishersListRequest extends SpeakeasyBase {
 export declare class PublishersListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    publishersList200ApplicationJsonObject?: PublishersList200ApplicationJson;
+    publishersList200ApplicationJSONObject?: PublishersList200ApplicationJson;
 }

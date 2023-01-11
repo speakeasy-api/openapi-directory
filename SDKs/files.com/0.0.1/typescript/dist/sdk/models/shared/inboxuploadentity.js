@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InboxRegistrationEntity } from "./inboxregistrationentity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InboxUploadEntity = void 0;
+var utils_1 = require("../../../internal/utils");
+var inboxregistrationentity_1 = require("./inboxregistrationentity");
 // InboxUploadEntity
 /**
  * List Inbox Uploads
@@ -34,17 +37,17 @@ var InboxUploadEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], InboxUploadEntity.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inbox_registration" }),
-        __metadata("design:type", InboxRegistrationEntity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inbox_registration" }),
+        __metadata("design:type", inboxregistrationentity_1.InboxRegistrationEntity)
     ], InboxUploadEntity.prototype, "inboxRegistration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], InboxUploadEntity.prototype, "path", void 0);
     return InboxUploadEntity;
-}(SpeakeasyBase));
-export { InboxUploadEntity };
+}(utils_1.SpeakeasyBase));
+exports.InboxUploadEntity = InboxUploadEntity;

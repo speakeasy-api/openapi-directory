@@ -63,5 +63,5 @@ export class GetNetworkWirelessDataRateHistoryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessDataRateHistory200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessDataRateHistory200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ColumnStatistics } from "./columnstatistics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateColumnStatisticsForTableRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var columnstatistics_1 = require("./columnstatistics");
 var UpdateColumnStatisticsForTableRequest = /** @class */ (function (_super) {
     __extends(UpdateColumnStatisticsForTableRequest, _super);
     function UpdateColumnStatisticsForTableRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CatalogId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CatalogId" }),
         __metadata("design:type", String)
     ], UpdateColumnStatisticsForTableRequest.prototype, "catalogId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ColumnStatisticsList", elemType: ColumnStatistics }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ColumnStatisticsList", elemType: columnstatistics_1.ColumnStatistics }),
         __metadata("design:type", Array)
     ], UpdateColumnStatisticsForTableRequest.prototype, "columnStatisticsList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseName" }),
         __metadata("design:type", String)
     ], UpdateColumnStatisticsForTableRequest.prototype, "databaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableName" }),
         __metadata("design:type", String)
     ], UpdateColumnStatisticsForTableRequest.prototype, "tableName", void 0);
     return UpdateColumnStatisticsForTableRequest;
-}(SpeakeasyBase));
-export { UpdateColumnStatisticsForTableRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateColumnStatisticsForTableRequest = UpdateColumnStatisticsForTableRequest;

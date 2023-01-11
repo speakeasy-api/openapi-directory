@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2DlpJob } from "./googleprivacydlpv2dlpjob";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2ListDlpJobsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2dlpjob_1 = require("./googleprivacydlpv2dlpjob");
 // GooglePrivacyDlpV2ListDlpJobsResponse
 /**
  * The response message for listing DLP jobs.
@@ -34,13 +37,13 @@ var GooglePrivacyDlpV2ListDlpJobsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobs", elemType: GooglePrivacyDlpV2DlpJob }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobs", elemType: googleprivacydlpv2dlpjob_1.GooglePrivacyDlpV2DlpJob }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2ListDlpJobsResponse.prototype, "jobs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2ListDlpJobsResponse.prototype, "nextPageToken", void 0);
     return GooglePrivacyDlpV2ListDlpJobsResponse;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2ListDlpJobsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2ListDlpJobsResponse = GooglePrivacyDlpV2ListDlpJobsResponse;

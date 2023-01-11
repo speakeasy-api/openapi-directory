@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetfullnamematchRequest, GetfullnamematchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: GetfullnamematchRequest = {
   queryParams: {
-    fullname: "ratione",
-    license: "omnis",
+    fullname: "sit",
+    license: "voluptas",
   },
 };
 
-sdk.sdk.getfullnamematch(req).then((res: GetfullnamematchResponse | AxiosError) => {
+sdk.fullNameMatchSimilarityKey.getfullnamematch(req).then((res: GetfullnamematchResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -43,7 +42,7 @@ sdk.sdk.getfullnamematch(req).then((res: GetfullnamematchResponse | AxiosError) 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Full Name Match Similarity Key
 
 * `getfullnamematch` - Gets a similarity key for matching purposes for full name data
 

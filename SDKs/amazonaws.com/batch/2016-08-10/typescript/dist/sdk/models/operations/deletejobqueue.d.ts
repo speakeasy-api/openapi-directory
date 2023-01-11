@@ -18,7 +18,7 @@ export declare class DeleteJobQueueRequest extends SpeakeasyBase {
 export declare class DeleteJobQueueResponse extends SpeakeasyBase {
     clientException?: any;
     contentType: string;
-    deleteJobQueueResponse?: Map<string, any>;
+    deleteJobQueueResponse?: Record<string, any>;
     serverException?: any;
     statusCode: number;
 }

@@ -9,6 +9,10 @@ export enum CustomFieldSettingResponseCustomFieldCustomLabelPositionEnum {
 }
 
 
+// CustomFieldSettingResponseCustomFieldEnumValue
+/** 
+ * *Conditional*. Only relevant for custom fields of type `enum`. This object is the chosen value of an enum custom field.
+**/
 export class CustomFieldSettingResponseCustomFieldEnumValue extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=color" })
   color?: string;
@@ -49,6 +53,10 @@ export enum CustomFieldSettingResponseCustomFieldTypeEnum {
 }
 
 
+// CustomFieldSettingResponseCustomField
+/** 
+ * The custom field that is applied to the `parent`.
+**/
 export class CustomFieldSettingResponseCustomField extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=created_by" })
   createdBy?: UserCompact;
@@ -115,6 +123,10 @@ export class CustomFieldSettingResponseCustomField extends SpeakeasyBase {
 }
 
 
+// CustomFieldSettingResponseParent
+/** 
+ * The parent to which the custom field is applied. This can be a project or portfolio and indicates that the tasks or projects that the parent contains may be given custom field values for this custom field.
+**/
 export class CustomFieldSettingResponseParent extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=gid" })
   gid?: string;
@@ -127,6 +139,10 @@ export class CustomFieldSettingResponseParent extends SpeakeasyBase {
 }
 
 
+// CustomFieldSettingResponseProject
+/** 
+ * *Deprecated: new integrations should prefer the `parent` field.* The id of the project that this custom field settings refers to.
+**/
 export class CustomFieldSettingResponseProject extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=gid" })
   gid?: string;
@@ -139,6 +155,10 @@ export class CustomFieldSettingResponseProject extends SpeakeasyBase {
 }
 
 
+// CustomFieldSettingResponse
+/** 
+ * Custom Fields Settings objects represent the many-to-many join of the Custom Field and Project as well as stores information that is relevant to that particular pairing.
+**/
 export class CustomFieldSettingResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=custom_field" })
   customField?: CustomFieldSettingResponseCustomField;

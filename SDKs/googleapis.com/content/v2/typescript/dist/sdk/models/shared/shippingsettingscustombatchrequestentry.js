@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ShippingSettings } from "./shippingsettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShippingsettingsCustomBatchRequestEntry = void 0;
+var utils_1 = require("../../../internal/utils");
+var shippingsettings_1 = require("./shippingsettings");
 // ShippingsettingsCustomBatchRequestEntry
 /**
  * A batch entry encoding a single non-batch shippingsettings request.
@@ -34,25 +37,25 @@ var ShippingsettingsCustomBatchRequestEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], ShippingsettingsCustomBatchRequestEntry.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchId" }),
         __metadata("design:type", Number)
     ], ShippingsettingsCustomBatchRequestEntry.prototype, "batchId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantId" }),
         __metadata("design:type", String)
     ], ShippingsettingsCustomBatchRequestEntry.prototype, "merchantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], ShippingsettingsCustomBatchRequestEntry.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingSettings" }),
-        __metadata("design:type", ShippingSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingSettings" }),
+        __metadata("design:type", shippingsettings_1.ShippingSettings)
     ], ShippingsettingsCustomBatchRequestEntry.prototype, "shippingSettings", void 0);
     return ShippingsettingsCustomBatchRequestEntry;
-}(SpeakeasyBase));
-export { ShippingsettingsCustomBatchRequestEntry };
+}(utils_1.SpeakeasyBase));
+exports.ShippingsettingsCustomBatchRequestEntry = ShippingsettingsCustomBatchRequestEntry;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContainerServiceHealthCheckConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // ContainerServiceHealthCheckConfig
 /**
  * Describes the health check configuration of an Amazon Lightsail container service.
@@ -33,29 +36,29 @@ var ContainerServiceHealthCheckConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthyThreshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthyThreshold" }),
         __metadata("design:type", Number)
     ], ContainerServiceHealthCheckConfig.prototype, "healthyThreshold", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intervalSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intervalSeconds" }),
         __metadata("design:type", Number)
     ], ContainerServiceHealthCheckConfig.prototype, "intervalSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], ContainerServiceHealthCheckConfig.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=successCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=successCodes" }),
         __metadata("design:type", String)
     ], ContainerServiceHealthCheckConfig.prototype, "successCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeoutSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeoutSeconds" }),
         __metadata("design:type", Number)
     ], ContainerServiceHealthCheckConfig.prototype, "timeoutSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unhealthyThreshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unhealthyThreshold" }),
         __metadata("design:type", Number)
     ], ContainerServiceHealthCheckConfig.prototype, "unhealthyThreshold", void 0);
     return ContainerServiceHealthCheckConfig;
-}(SpeakeasyBase));
-export { ContainerServiceHealthCheckConfig };
+}(utils_1.SpeakeasyBase));
+exports.ContainerServiceHealthCheckConfig = ContainerServiceHealthCheckConfig;

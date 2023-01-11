@@ -88,8 +88,8 @@ export class CreateMonitorResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createMonitor200ApplicationJsonObject?: CreateMonitor200ApplicationJson;
+  createMonitor200ApplicationJSONObject?: CreateMonitor200ApplicationJson;
 
   @SpeakeasyMetadata()
-  createMonitor400ApplicationJsonObject?: CreateMonitor400ApplicationJson;
+  createMonitor400ApplicationJSONObject?: CreateMonitor400ApplicationJson;
 }

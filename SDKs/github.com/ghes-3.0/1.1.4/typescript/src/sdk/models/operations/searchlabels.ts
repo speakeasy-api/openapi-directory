@@ -52,7 +52,7 @@ export class SearchLabelsResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  searchLabels200ApplicationJsonObject?: SearchLabels200ApplicationJson;
+  searchLabels200ApplicationJSONObject?: SearchLabels200ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

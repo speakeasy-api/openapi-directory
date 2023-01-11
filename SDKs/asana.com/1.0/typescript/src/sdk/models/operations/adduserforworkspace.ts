@@ -53,5 +53,5 @@ export class AddUserForWorkspaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  addUserForWorkspace200ApplicationJsonObject?: AddUserForWorkspace200ApplicationJson;
+  addUserForWorkspace200ApplicationJSONObject?: AddUserForWorkspace200ApplicationJson;
 }

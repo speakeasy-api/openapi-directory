@@ -107,11 +107,11 @@ export declare class SkmstRequest extends SpeakeasyBase {
 export declare class SkmstResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    skmst400ApplicationJsonObject?: Skmst400ApplicationJson;
-    skmst401ApplicationJsonObject?: Skmst401ApplicationJson;
-    skmst404ApplicationJsonObject?: Skmst404ApplicationJson;
-    skmst500ApplicationJsonObject?: Skmst500ApplicationJson;
-    skmst502ApplicationJsonObject?: Skmst502ApplicationJson;
-    skmst503ApplicationJsonObject?: Skmst503ApplicationJson;
-    skmst504ApplicationJsonObject?: Skmst504ApplicationJson;
+    skmst400ApplicationJSONObject?: Skmst400ApplicationJson;
+    skmst401ApplicationJSONObject?: Skmst401ApplicationJson;
+    skmst404ApplicationJSONObject?: Skmst404ApplicationJson;
+    skmst500ApplicationJSONObject?: Skmst500ApplicationJson;
+    skmst502ApplicationJSONObject?: Skmst502ApplicationJson;
+    skmst503ApplicationJSONObject?: Skmst503ApplicationJson;
+    skmst504ApplicationJSONObject?: Skmst504ApplicationJson;
 }

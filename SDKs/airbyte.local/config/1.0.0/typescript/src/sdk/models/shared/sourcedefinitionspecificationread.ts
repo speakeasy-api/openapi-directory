@@ -5,7 +5,7 @@ import { SynchronousJobRead } from "./synchronousjobread";
 
 export class SourceDefinitionSpecificationRead extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=connectionSpecification" })
-  connectionSpecification?: Map<string, any>;
+  connectionSpecification?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=documentationUrl" })
   documentationUrl?: string;

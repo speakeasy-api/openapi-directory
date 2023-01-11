@@ -1,4 +1,7 @@
-export var VehicleProfileIdEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VehicleProfileIdEnum = void 0;
+var VehicleProfileIdEnum;
 (function (VehicleProfileIdEnum) {
     VehicleProfileIdEnum["Car"] = "car";
     VehicleProfileIdEnum["Bike"] = "bike";
@@ -9,4 +12,4 @@ export var VehicleProfileIdEnum;
     VehicleProfileIdEnum["Scooter"] = "scooter";
     VehicleProfileIdEnum["Truck"] = "truck";
     VehicleProfileIdEnum["SmallTruck"] = "small_truck";
-})(VehicleProfileIdEnum || (VehicleProfileIdEnum = {}));
+})(VehicleProfileIdEnum = exports.VehicleProfileIdEnum || (exports.VehicleProfileIdEnum = {}));

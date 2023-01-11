@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2BoundingBox } from "./googleprivacydlpv2boundingbox";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2ImageLocation = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2boundingbox_1 = require("./googleprivacydlpv2boundingbox");
 // GooglePrivacyDlpV2ImageLocation
 /**
  * Location of the finding within an image.
@@ -34,9 +37,9 @@ var GooglePrivacyDlpV2ImageLocation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=boundingBoxes", elemType: GooglePrivacyDlpV2BoundingBox }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=boundingBoxes", elemType: googleprivacydlpv2boundingbox_1.GooglePrivacyDlpV2BoundingBox }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2ImageLocation.prototype, "boundingBoxes", void 0);
     return GooglePrivacyDlpV2ImageLocation;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2ImageLocation };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2ImageLocation = GooglePrivacyDlpV2ImageLocation;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1DeviceAueCountReport = exports.GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum;
 (function (GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum) {
     GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum["MonthUnspecified"] = "MONTH_UNSPECIFIED";
     GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum["January"] = "JANUARY";
@@ -38,7 +41,7 @@ export var GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum;
     GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum["October"] = "OCTOBER";
     GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum["November"] = "NOVEMBER";
     GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum["December"] = "DECEMBER";
-})(GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum || (GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum = {}));
+})(GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum = exports.GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum || (exports.GoogleChromeManagementV1DeviceAueCountReportAueMonthEnum = {}));
 // GoogleChromeManagementV1DeviceAueCountReport
 /**
  * Report for CountChromeDevicesPerAueDateResponse, contains the count of devices of a specific model and auto update expiration range.
@@ -49,25 +52,25 @@ var GoogleChromeManagementV1DeviceAueCountReport = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aueMonth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aueMonth" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1DeviceAueCountReport.prototype, "aueMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aueYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aueYear" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1DeviceAueCountReport.prototype, "aueYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1DeviceAueCountReport.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expired" }),
         __metadata("design:type", Boolean)
     ], GoogleChromeManagementV1DeviceAueCountReport.prototype, "expired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=model" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1DeviceAueCountReport.prototype, "model", void 0);
     return GoogleChromeManagementV1DeviceAueCountReport;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1DeviceAueCountReport };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1DeviceAueCountReport = GoogleChromeManagementV1DeviceAueCountReport;

@@ -6,5 +6,5 @@ export declare class CreateAppPkg extends SpeakeasyBase {
     appPkgVersion: string;
     appProvider?: string;
     checksum: Checksum;
-    userDefinedData?: Map<string, any>;
+    userDefinedData?: Record<string, any>;
 }

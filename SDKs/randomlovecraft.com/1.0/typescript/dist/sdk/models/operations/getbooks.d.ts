@@ -6,5 +6,5 @@ export declare class GetBooks200ApplicationJson extends SpeakeasyBase {
 export declare class GetBooksResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getBooks200ApplicationJsonObject?: GetBooks200ApplicationJson;
+    getBooks200ApplicationJSONObject?: GetBooks200ApplicationJson;
 }

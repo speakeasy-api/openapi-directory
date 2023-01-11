@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class DimensionKeyDescription extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Dimensions" })
-  dimensions?: Map<string, string>;
+  dimensions?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Partitions" })
   partitions?: number[];

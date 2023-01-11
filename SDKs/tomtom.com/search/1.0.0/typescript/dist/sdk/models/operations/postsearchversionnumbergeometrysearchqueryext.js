@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,130 +14,155 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostSearchVersionNumberGeometrySearchQueryExtResponse = exports.PostSearchVersionNumberGeometrySearchQueryExtRequest = exports.PostSearchVersionNumberGeometrySearchQueryExtRequestBody = exports.PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList = exports.PostSearchVersionNumberGeometrySearchQueryExtQueryParams = exports.PostSearchVersionNumberGeometrySearchQueryExtPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var PostSearchVersionNumberGeometrySearchQueryExtPathParams = /** @class */ (function (_super) {
     __extends(PostSearchVersionNumberGeometrySearchQueryExtPathParams, _super);
     function PostSearchVersionNumberGeometrySearchQueryExtPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ext" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ext" }),
         __metadata("design:type", String)
     ], PostSearchVersionNumberGeometrySearchQueryExtPathParams.prototype, "ext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=query" }),
         __metadata("design:type", String)
     ], PostSearchVersionNumberGeometrySearchQueryExtPathParams.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
         __metadata("design:type", Number)
     ], PostSearchVersionNumberGeometrySearchQueryExtPathParams.prototype, "versionNumber", void 0);
     return PostSearchVersionNumberGeometrySearchQueryExtPathParams;
-}(SpeakeasyBase));
-export { PostSearchVersionNumberGeometrySearchQueryExtPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostSearchVersionNumberGeometrySearchQueryExtPathParams = PostSearchVersionNumberGeometrySearchQueryExtPathParams;
 var PostSearchVersionNumberGeometrySearchQueryExtQueryParams = /** @class */ (function (_super) {
     __extends(PostSearchVersionNumberGeometrySearchQueryExtQueryParams, _super);
     function PostSearchVersionNumberGeometrySearchQueryExtQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=extendedPostalCodesFor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=extendedPostalCodesFor" }),
         __metadata("design:type", String)
     ], PostSearchVersionNumberGeometrySearchQueryExtQueryParams.prototype, "extendedPostalCodesFor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=idxSet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=idxSet" }),
         __metadata("design:type", String)
     ], PostSearchVersionNumberGeometrySearchQueryExtQueryParams.prototype, "idxSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=language" }),
         __metadata("design:type", String)
     ], PostSearchVersionNumberGeometrySearchQueryExtQueryParams.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], PostSearchVersionNumberGeometrySearchQueryExtQueryParams.prototype, "limit", void 0);
     return PostSearchVersionNumberGeometrySearchQueryExtQueryParams;
-}(SpeakeasyBase));
-export { PostSearchVersionNumberGeometrySearchQueryExtQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostSearchVersionNumberGeometrySearchQueryExtQueryParams = PostSearchVersionNumberGeometrySearchQueryExtQueryParams;
 var PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList = /** @class */ (function (_super) {
     __extends(PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList, _super);
     function PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=position" }),
         __metadata("design:type", String)
     ], PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=radius" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=radius" }),
         __metadata("design:type", Number)
     ], PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList.prototype, "radius", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vertices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vertices" }),
         __metadata("design:type", Array)
     ], PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList.prototype, "vertices", void 0);
     return PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList;
-}(SpeakeasyBase));
-export { PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList };
+}(utils_1.SpeakeasyBase));
+exports.PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList = PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList;
 var PostSearchVersionNumberGeometrySearchQueryExtRequestBody = /** @class */ (function (_super) {
     __extends(PostSearchVersionNumberGeometrySearchQueryExtRequestBody, _super);
     function PostSearchVersionNumberGeometrySearchQueryExtRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=geometryList", elemType: PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=geometryList", elemType: PostSearchVersionNumberGeometrySearchQueryExtRequestBodyGeometryList }),
         __metadata("design:type", Array)
     ], PostSearchVersionNumberGeometrySearchQueryExtRequestBody.prototype, "geometryList", void 0);
     return PostSearchVersionNumberGeometrySearchQueryExtRequestBody;
-}(SpeakeasyBase));
-export { PostSearchVersionNumberGeometrySearchQueryExtRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostSearchVersionNumberGeometrySearchQueryExtRequestBody = PostSearchVersionNumberGeometrySearchQueryExtRequestBody;
 var PostSearchVersionNumberGeometrySearchQueryExtRequest = /** @class */ (function (_super) {
     __extends(PostSearchVersionNumberGeometrySearchQueryExtRequest, _super);
     function PostSearchVersionNumberGeometrySearchQueryExtRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostSearchVersionNumberGeometrySearchQueryExtPathParams)
     ], PostSearchVersionNumberGeometrySearchQueryExtRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostSearchVersionNumberGeometrySearchQueryExtQueryParams)
     ], PostSearchVersionNumberGeometrySearchQueryExtRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostSearchVersionNumberGeometrySearchQueryExtRequestBody)
     ], PostSearchVersionNumberGeometrySearchQueryExtRequest.prototype, "request", void 0);
     return PostSearchVersionNumberGeometrySearchQueryExtRequest;
-}(SpeakeasyBase));
-export { PostSearchVersionNumberGeometrySearchQueryExtRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostSearchVersionNumberGeometrySearchQueryExtRequest = PostSearchVersionNumberGeometrySearchQueryExtRequest;
 var PostSearchVersionNumberGeometrySearchQueryExtResponse = /** @class */ (function (_super) {
     __extends(PostSearchVersionNumberGeometrySearchQueryExtResponse, _super);
     function PostSearchVersionNumberGeometrySearchQueryExtResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostSearchVersionNumberGeometrySearchQueryExtResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostSearchVersionNumberGeometrySearchQueryExtResponse.prototype, "statusCode", void 0);
     return PostSearchVersionNumberGeometrySearchQueryExtResponse;
-}(SpeakeasyBase));
-export { PostSearchVersionNumberGeometrySearchQueryExtResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostSearchVersionNumberGeometrySearchQueryExtResponse = PostSearchVersionNumberGeometrySearchQueryExtResponse;

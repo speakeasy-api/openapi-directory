@@ -1,94 +1,75 @@
-import axios from "axios";
-import * as utils from "../internal/utils";
-import { Actions } from "./actions";
-import { Activity } from "./activity";
-import { Apps } from "./apps";
-import { Checks } from "./checks";
-import { CodeScanning } from "./codescanning";
-import { CodesOfConduct } from "./codesofconduct";
-import { Emojis } from "./emojis";
-import { EnterpriseAdmin } from "./enterpriseadmin";
-import { Gists } from "./gists";
-import { Git } from "./git";
-import { Gitignore } from "./gitignore";
-import { Issues } from "./issues";
-import { Licenses } from "./licenses";
-import { Markdown } from "./markdown";
-import { Meta } from "./meta";
-import { OauthAuthorizations } from "./oauthauthorizations";
-import { Orgs } from "./orgs";
-import { Projects } from "./projects";
-import { Pulls } from "./pulls";
-import { RateLimit } from "./ratelimit";
-import { Reactions } from "./reactions";
-import { Repos } from "./repos";
-import { Search } from "./search";
-import { Teams } from "./teams";
-import { Users } from "./users";
-export var ServerList = [
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SDK = exports.ServerList = void 0;
+var axios_1 = __importDefault(require("axios"));
+var actions_1 = require("./actions");
+var activity_1 = require("./activity");
+var apps_1 = require("./apps");
+var checks_1 = require("./checks");
+var codescanning_1 = require("./codescanning");
+var codesofconduct_1 = require("./codesofconduct");
+var emojis_1 = require("./emojis");
+var enterpriseadmin_1 = require("./enterpriseadmin");
+var gists_1 = require("./gists");
+var git_1 = require("./git");
+var gitignore_1 = require("./gitignore");
+var issues_1 = require("./issues");
+var licenses_1 = require("./licenses");
+var markdown_1 = require("./markdown");
+var meta_1 = require("./meta");
+var oauthauthorizations_1 = require("./oauthauthorizations");
+var orgs_1 = require("./orgs");
+var projects_1 = require("./projects");
+var pulls_1 = require("./pulls");
+var ratelimit_1 = require("./ratelimit");
+var reactions_1 = require("./reactions");
+var repos_1 = require("./repos");
+var search_1 = require("./search");
+var teams_1 = require("./teams");
+var users_1 = require("./users");
+exports.ServerList = [
     "https://github.com/",
     "https://{protocol}://{hostname}/api/v3",
 ];
-export function WithServerURL(serverURL, params) {
-    return function (sdk) {
-        if (params != null) {
-            serverURL = utils.ReplaceParameters(serverURL, params);
-        }
-        sdk._serverURL = serverURL;
-    };
-}
-export function WithClient(client) {
-    return function (sdk) {
-        sdk._defaultClient = client;
-    };
-}
 /* SDK Documentation: https://docs.github.com/enterprise-server@3.0/rest/ - GitHub Enterprise Developer Docs*/
 var SDK = /** @class */ (function () {
-    function SDK() {
-        var opts = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            opts[_i] = arguments[_i];
-        }
-        var _this = this;
+    function SDK(props) {
+        var _a, _b;
         this._language = "typescript";
         this._sdkVersion = "0.0.1";
         this._genVersion = "internal";
-        opts.forEach(function (o) { return o(_this); });
-        if (this._serverURL == "") {
-            this._serverURL = ServerList[0];
-        }
-        if (!this._defaultClient) {
-            this._defaultClient = axios.create({ baseURL: this._serverURL });
-        }
-        if (!this._securityClient) {
-            this._securityClient = this._defaultClient;
-        }
-        this.actions = new Actions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.activity = new Activity(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.apps = new Apps(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.checks = new Checks(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.codeScanning = new CodeScanning(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.codesOfConduct = new CodesOfConduct(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.emojis = new Emojis(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.enterpriseAdmin = new EnterpriseAdmin(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.gists = new Gists(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.git = new Git(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.gitignore = new Gitignore(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.issues = new Issues(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.licenses = new Licenses(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.markdown = new Markdown(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.meta = new Meta(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.oauthAuthorizations = new OauthAuthorizations(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.orgs = new Orgs(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.projects = new Projects(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.pulls = new Pulls(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.rateLimit = new RateLimit(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.reactions = new Reactions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.repos = new Repos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.search = new Search(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.teams = new Teams(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
-        this.users = new Users(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this._serverURL = (_a = props.serverUrl) !== null && _a !== void 0 ? _a : exports.ServerList[0];
+        this._defaultClient = (_b = props.defaultClient) !== null && _b !== void 0 ? _b : axios_1.default.create({ baseURL: this._serverURL });
+        this._securityClient = this._defaultClient;
+        this.actions = new actions_1.Actions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.activity = new activity_1.Activity(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.apps = new apps_1.Apps(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.checks = new checks_1.Checks(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.codeScanning = new codescanning_1.CodeScanning(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.codesOfConduct = new codesofconduct_1.CodesOfConduct(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.emojis = new emojis_1.Emojis(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.enterpriseAdmin = new enterpriseadmin_1.EnterpriseAdmin(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.gists = new gists_1.Gists(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.git = new git_1.Git(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.gitignore = new gitignore_1.Gitignore(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.issues = new issues_1.Issues(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.licenses = new licenses_1.Licenses(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.markdown = new markdown_1.Markdown(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.meta = new meta_1.Meta(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.oauthAuthorizations = new oauthauthorizations_1.OauthAuthorizations(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.orgs = new orgs_1.Orgs(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.projects = new projects_1.Projects(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.pulls = new pulls_1.Pulls(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.rateLimit = new ratelimit_1.RateLimit(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.reactions = new reactions_1.Reactions(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.repos = new repos_1.Repos(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.search = new search_1.Search(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.teams = new teams_1.Teams(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
+        this.users = new users_1.Users(this._defaultClient, this._securityClient, this._serverURL, this._language, this._sdkVersion, this._genVersion);
     }
     return SDK;
 }());
-export { SDK };
+exports.SDK = SDK;

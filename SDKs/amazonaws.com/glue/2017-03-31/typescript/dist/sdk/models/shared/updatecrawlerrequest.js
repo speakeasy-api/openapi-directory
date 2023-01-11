@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LineageConfiguration } from "./lineageconfiguration";
-import { RecrawlPolicy } from "./recrawlpolicy";
-import { SchemaChangePolicy } from "./schemachangepolicy";
-import { CrawlerTargets } from "./crawlertargets";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateCrawlerRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var lineageconfiguration_1 = require("./lineageconfiguration");
+var recrawlpolicy_1 = require("./recrawlpolicy");
+var schemachangepolicy_1 = require("./schemachangepolicy");
+var crawlertargets_1 = require("./crawlertargets");
 var UpdateCrawlerRequest = /** @class */ (function (_super) {
     __extends(UpdateCrawlerRequest, _super);
     function UpdateCrawlerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Classifiers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Classifiers" }),
         __metadata("design:type", Array)
     ], UpdateCrawlerRequest.prototype, "classifiers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Configuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Configuration" }),
         __metadata("design:type", String)
     ], UpdateCrawlerRequest.prototype, "configuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CrawlerSecurityConfiguration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CrawlerSecurityConfiguration" }),
         __metadata("design:type", String)
     ], UpdateCrawlerRequest.prototype, "crawlerSecurityConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseName" }),
         __metadata("design:type", String)
     ], UpdateCrawlerRequest.prototype, "databaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], UpdateCrawlerRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LineageConfiguration" }),
-        __metadata("design:type", LineageConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LineageConfiguration" }),
+        __metadata("design:type", lineageconfiguration_1.LineageConfiguration)
     ], UpdateCrawlerRequest.prototype, "lineageConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], UpdateCrawlerRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecrawlPolicy" }),
-        __metadata("design:type", RecrawlPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecrawlPolicy" }),
+        __metadata("design:type", recrawlpolicy_1.RecrawlPolicy)
     ], UpdateCrawlerRequest.prototype, "recrawlPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Role" }),
         __metadata("design:type", String)
     ], UpdateCrawlerRequest.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Schedule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Schedule" }),
         __metadata("design:type", String)
     ], UpdateCrawlerRequest.prototype, "schedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaChangePolicy" }),
-        __metadata("design:type", SchemaChangePolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaChangePolicy" }),
+        __metadata("design:type", schemachangepolicy_1.SchemaChangePolicy)
     ], UpdateCrawlerRequest.prototype, "schemaChangePolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TablePrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TablePrefix" }),
         __metadata("design:type", String)
     ], UpdateCrawlerRequest.prototype, "tablePrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Targets" }),
-        __metadata("design:type", CrawlerTargets)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Targets" }),
+        __metadata("design:type", crawlertargets_1.CrawlerTargets)
     ], UpdateCrawlerRequest.prototype, "targets", void 0);
     return UpdateCrawlerRequest;
-}(SpeakeasyBase));
-export { UpdateCrawlerRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateCrawlerRequest = UpdateCrawlerRequest;

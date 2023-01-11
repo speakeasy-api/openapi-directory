@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetAttributePoolUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -13,7 +13,7 @@ export class GetAttributePoolUsingGet200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -25,7 +25,7 @@ export class GetAttributePoolUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -37,7 +37,7 @@ export class GetAttributePoolUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -49,7 +49,7 @@ export class GetAttributePoolUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,14 +70,14 @@ export class GetAttributePoolUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getAttributePoolUsingGet200ApplicationJsonObject?: GetAttributePoolUsingGet200ApplicationJson;
+  getAttributePoolUsingGET200ApplicationJSONObject?: GetAttributePoolUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getAttributePoolUsingGet400ApplicationJsonObject?: GetAttributePoolUsingGet400ApplicationJson;
+  getAttributePoolUsingGET400ApplicationJSONObject?: GetAttributePoolUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getAttributePoolUsingGet401ApplicationJsonObject?: GetAttributePoolUsingGet401ApplicationJson;
+  getAttributePoolUsingGET401ApplicationJSONObject?: GetAttributePoolUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getAttributePoolUsingGet500ApplicationJsonObject?: GetAttributePoolUsingGet500ApplicationJson;
+  getAttributePoolUsingGET500ApplicationJSONObject?: GetAttributePoolUsingGet500ApplicationJson;
 }

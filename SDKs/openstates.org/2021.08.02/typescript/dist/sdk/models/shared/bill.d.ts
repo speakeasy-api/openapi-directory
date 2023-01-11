@@ -15,7 +15,7 @@ export declare class Bill extends SpeakeasyBase {
     classification?: string[];
     createdAt: Date;
     documents?: BillDocumentOrVersion[];
-    extras?: Map<string, any>;
+    extras?: Record<string, any>;
     firstActionDate?: string;
     fromOrganization: Organization;
     id: string;

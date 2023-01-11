@@ -13,5 +13,5 @@ export declare class ProtocolTodGettimeRequest extends SpeakeasyBase {
 export declare class ProtocolTodGettimeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolTodGettime200ApplicationJsonStrings?: string[];
+    protocolTodGettime200ApplicationJSONStrings?: string[];
 }

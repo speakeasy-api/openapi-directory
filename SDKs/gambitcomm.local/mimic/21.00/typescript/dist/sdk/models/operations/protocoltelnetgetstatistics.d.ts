@@ -8,5 +8,5 @@ export declare class ProtocolTelnetGetStatisticsRequest extends SpeakeasyBase {
 export declare class ProtocolTelnetGetStatisticsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolTelnetGetStatistics200ApplicationJsonInt32Integers?: number[];
+    protocolTelnetGetStatistics200ApplicationJSONInt32Integers?: number[];
 }

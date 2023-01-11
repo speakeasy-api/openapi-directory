@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MembershipsByTeamHistoricalFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MembershipsByTeamHistoricalResponse = exports.MembershipsByTeamHistoricalRequest = exports.MembershipsByTeamHistoricalPathParams = exports.MembershipsByTeamHistoricalFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MembershipsByTeamHistoricalFormatEnum;
 (function (MembershipsByTeamHistoricalFormatEnum) {
     MembershipsByTeamHistoricalFormatEnum["Xml"] = "xml";
     MembershipsByTeamHistoricalFormatEnum["Json"] = "json";
-})(MembershipsByTeamHistoricalFormatEnum || (MembershipsByTeamHistoricalFormatEnum = {}));
+})(MembershipsByTeamHistoricalFormatEnum = exports.MembershipsByTeamHistoricalFormatEnum || (exports.MembershipsByTeamHistoricalFormatEnum = {}));
 var MembershipsByTeamHistoricalPathParams = /** @class */ (function (_super) {
     __extends(MembershipsByTeamHistoricalPathParams, _super);
     function MembershipsByTeamHistoricalPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], MembershipsByTeamHistoricalPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=teamid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=teamid" }),
         __metadata("design:type", String)
     ], MembershipsByTeamHistoricalPathParams.prototype, "teamid", void 0);
     return MembershipsByTeamHistoricalPathParams;
-}(SpeakeasyBase));
-export { MembershipsByTeamHistoricalPathParams };
+}(utils_1.SpeakeasyBase));
+exports.MembershipsByTeamHistoricalPathParams = MembershipsByTeamHistoricalPathParams;
 var MembershipsByTeamHistoricalRequest = /** @class */ (function (_super) {
     __extends(MembershipsByTeamHistoricalRequest, _super);
     function MembershipsByTeamHistoricalRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MembershipsByTeamHistoricalPathParams)
     ], MembershipsByTeamHistoricalRequest.prototype, "pathParams", void 0);
     return MembershipsByTeamHistoricalRequest;
-}(SpeakeasyBase));
-export { MembershipsByTeamHistoricalRequest };
+}(utils_1.SpeakeasyBase));
+exports.MembershipsByTeamHistoricalRequest = MembershipsByTeamHistoricalRequest;
 var MembershipsByTeamHistoricalResponse = /** @class */ (function (_super) {
     __extends(MembershipsByTeamHistoricalResponse, _super);
     function MembershipsByTeamHistoricalResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MembershipsByTeamHistoricalResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], MembershipsByTeamHistoricalResponse.prototype, "memberships", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MembershipsByTeamHistoricalResponse.prototype, "statusCode", void 0);
     return MembershipsByTeamHistoricalResponse;
-}(SpeakeasyBase));
-export { MembershipsByTeamHistoricalResponse };
+}(utils_1.SpeakeasyBase));
+exports.MembershipsByTeamHistoricalResponse = MembershipsByTeamHistoricalResponse;

@@ -2,6 +2,9 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { UserCompact } from "./usercompact";
 import { UserTaskListResponse } from "./usertasklistresponse";
 import { WorkspaceCompact } from "./workspacecompact";
+/**
+ * This object determines if a user is a member of a workspace.
+**/
 export declare class WorkspaceMembershipResponse extends SpeakeasyBase {
     gid?: string;
     isActive?: boolean;

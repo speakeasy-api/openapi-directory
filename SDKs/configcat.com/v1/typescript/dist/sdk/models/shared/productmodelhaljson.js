@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductModelHaljson = exports.ProductModelHaljsonLinks = exports.ProductModelHaljsonEmbedded = exports.ProductModelHaljsonEmbeddedOrganization = exports.ProductModelHaljsonEmbeddedOrganizationLinks = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProductModelHaljsonEmbeddedOrganizationLinks = /** @class */ (function (_super) {
     __extends(ProductModelHaljsonEmbeddedOrganizationLinks, _super);
     function ProductModelHaljsonEmbeddedOrganizationLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members" }),
         __metadata("design:type", String)
     ], ProductModelHaljsonEmbeddedOrganizationLinks.prototype, "members", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=products" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=products" }),
         __metadata("design:type", String)
     ], ProductModelHaljsonEmbeddedOrganizationLinks.prototype, "products", void 0);
     return ProductModelHaljsonEmbeddedOrganizationLinks;
-}(SpeakeasyBase));
-export { ProductModelHaljsonEmbeddedOrganizationLinks };
+}(utils_1.SpeakeasyBase));
+exports.ProductModelHaljsonEmbeddedOrganizationLinks = ProductModelHaljsonEmbeddedOrganizationLinks;
 var ProductModelHaljsonEmbeddedOrganization = /** @class */ (function (_super) {
     __extends(ProductModelHaljsonEmbeddedOrganization, _super);
     function ProductModelHaljsonEmbeddedOrganization() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
         __metadata("design:type", ProductModelHaljsonEmbeddedOrganizationLinks)
     ], ProductModelHaljsonEmbeddedOrganization.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ProductModelHaljsonEmbeddedOrganization.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organizationId" }),
         __metadata("design:type", String)
     ], ProductModelHaljsonEmbeddedOrganization.prototype, "organizationId", void 0);
     return ProductModelHaljsonEmbeddedOrganization;
-}(SpeakeasyBase));
-export { ProductModelHaljsonEmbeddedOrganization };
+}(utils_1.SpeakeasyBase));
+exports.ProductModelHaljsonEmbeddedOrganization = ProductModelHaljsonEmbeddedOrganization;
 var ProductModelHaljsonEmbedded = /** @class */ (function (_super) {
     __extends(ProductModelHaljsonEmbedded, _super);
     function ProductModelHaljsonEmbedded() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization" }),
         __metadata("design:type", ProductModelHaljsonEmbeddedOrganization)
     ], ProductModelHaljsonEmbedded.prototype, "organization", void 0);
     return ProductModelHaljsonEmbedded;
-}(SpeakeasyBase));
-export { ProductModelHaljsonEmbedded };
+}(utils_1.SpeakeasyBase));
+exports.ProductModelHaljsonEmbedded = ProductModelHaljsonEmbedded;
 var ProductModelHaljsonLinks = /** @class */ (function (_super) {
     __extends(ProductModelHaljsonLinks, _super);
     function ProductModelHaljsonLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configs" }),
         __metadata("design:type", String)
     ], ProductModelHaljsonLinks.prototype, "configs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environments" }),
         __metadata("design:type", String)
     ], ProductModelHaljsonLinks.prototype, "environments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members" }),
         __metadata("design:type", String)
     ], ProductModelHaljsonLinks.prototype, "members", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission-groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission-groups" }),
         __metadata("design:type", String)
     ], ProductModelHaljsonLinks.prototype, "permissionGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=self" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=self" }),
         __metadata("design:type", String)
     ], ProductModelHaljsonLinks.prototype, "self", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", String)
     ], ProductModelHaljsonLinks.prototype, "tags", void 0);
     return ProductModelHaljsonLinks;
-}(SpeakeasyBase));
-export { ProductModelHaljsonLinks };
+}(utils_1.SpeakeasyBase));
+exports.ProductModelHaljsonLinks = ProductModelHaljsonLinks;
 var ProductModelHaljson = /** @class */ (function (_super) {
     __extends(ProductModelHaljson, _super);
     function ProductModelHaljson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_embedded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_embedded" }),
         __metadata("design:type", ProductModelHaljsonEmbedded)
     ], ProductModelHaljson.prototype, "embedded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
         __metadata("design:type", ProductModelHaljsonLinks)
     ], ProductModelHaljson.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ProductModelHaljson.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productId" }),
         __metadata("design:type", String)
     ], ProductModelHaljson.prototype, "productId", void 0);
     return ProductModelHaljson;
-}(SpeakeasyBase));
-export { ProductModelHaljson };
+}(utils_1.SpeakeasyBase));
+exports.ProductModelHaljson = ProductModelHaljson;

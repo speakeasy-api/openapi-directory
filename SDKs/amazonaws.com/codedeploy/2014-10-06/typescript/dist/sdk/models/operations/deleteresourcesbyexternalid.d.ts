@@ -19,6 +19,6 @@ export declare class DeleteResourcesByExternalIdRequest extends SpeakeasyBase {
 }
 export declare class DeleteResourcesByExternalIdResponse extends SpeakeasyBase {
     contentType: string;
-    deleteResourcesByExternalIdOutput?: Map<string, any>;
+    deleteResourcesByExternalIdOutput?: Record<string, any>;
     statusCode: number;
 }

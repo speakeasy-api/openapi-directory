@@ -19,5 +19,5 @@ export declare class StopBulkDeploymentResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
     statusCode: number;
-    stopBulkDeploymentResponse?: Map<string, any>;
+    stopBulkDeploymentResponse?: Record<string, any>;
 }

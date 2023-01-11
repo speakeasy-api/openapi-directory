@@ -12,7 +12,7 @@ export class ScanOutput extends SpeakeasyBase {
   count?: number;
 
   @SpeakeasyMetadata({ data: "json, name=Items", elemType: AttributeValue, elemDepth: 2 })
-  items?: Map<string, AttributeValue>[];
+  items?: Record<string, AttributeValue>[];
 
   @SpeakeasyMetadata({ data: "json, name=LastEvaluatedKey" })
   lastEvaluatedKey?: Key;

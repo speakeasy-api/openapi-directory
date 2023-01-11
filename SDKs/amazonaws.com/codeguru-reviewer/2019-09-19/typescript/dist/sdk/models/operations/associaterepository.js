@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,53 +14,78 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssociateRepositoryResponse = exports.AssociateRepositoryRequest = exports.AssociateRepositoryRequestBody = exports.AssociateRepositoryRequestBodyRepository = exports.AssociateRepositoryRequestBodyKmsKeyDetails = exports.AssociateRepositoryHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var AssociateRepositoryHeaders = /** @class */ (function (_super) {
     __extends(AssociateRepositoryHeaders, _super);
     function AssociateRepositoryHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], AssociateRepositoryHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], AssociateRepositoryHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], AssociateRepositoryHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], AssociateRepositoryHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], AssociateRepositoryHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], AssociateRepositoryHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], AssociateRepositoryHeaders.prototype, "xAmzSignedHeaders", void 0);
     return AssociateRepositoryHeaders;
-}(SpeakeasyBase));
-export { AssociateRepositoryHeaders };
+}(utils_1.SpeakeasyBase));
+exports.AssociateRepositoryHeaders = AssociateRepositoryHeaders;
 // AssociateRepositoryRequestBodyKmsKeyDetails
 /**
  * <p>An object that contains:</p> <ul> <li> <p>The encryption option for a repository association. It is either owned by Amazon Web Services Key Management Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).</p> </li> <li> <p>The ID of the Amazon Web Services KMS key that is associated with a respository association.</p> </li> </ul>
@@ -70,16 +96,16 @@ var AssociateRepositoryRequestBodyKmsKeyDetails = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EncryptionOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EncryptionOption" }),
         __metadata("design:type", String)
     ], AssociateRepositoryRequestBodyKmsKeyDetails.prototype, "encryptionOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KMSKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KMSKeyId" }),
         __metadata("design:type", String)
     ], AssociateRepositoryRequestBodyKmsKeyDetails.prototype, "kmsKeyId", void 0);
     return AssociateRepositoryRequestBodyKmsKeyDetails;
-}(SpeakeasyBase));
-export { AssociateRepositoryRequestBodyKmsKeyDetails };
+}(utils_1.SpeakeasyBase));
+exports.AssociateRepositoryRequestBodyKmsKeyDetails = AssociateRepositoryRequestBodyKmsKeyDetails;
 // AssociateRepositoryRequestBodyRepository
 /**
  *  Information about an associated Amazon Web Services CodeCommit repository or an associated repository that is managed by Amazon Web Services CodeStar Connections (for example, Bitbucket). This <code>Repository</code> object is not used if your source code is in an associated GitHub repository.
@@ -90,101 +116,101 @@ var AssociateRepositoryRequestBodyRepository = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Bitbucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Bitbucket" }),
         __metadata("design:type", shared.ThirdPartySourceRepository)
     ], AssociateRepositoryRequestBodyRepository.prototype, "bitbucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CodeCommit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CodeCommit" }),
         __metadata("design:type", shared.CodeCommitRepository)
     ], AssociateRepositoryRequestBodyRepository.prototype, "codeCommit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GitHubEnterpriseServer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GitHubEnterpriseServer" }),
         __metadata("design:type", shared.ThirdPartySourceRepository)
     ], AssociateRepositoryRequestBodyRepository.prototype, "gitHubEnterpriseServer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3Bucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3Bucket" }),
         __metadata("design:type", shared.S3Repository)
     ], AssociateRepositoryRequestBodyRepository.prototype, "s3Bucket", void 0);
     return AssociateRepositoryRequestBodyRepository;
-}(SpeakeasyBase));
-export { AssociateRepositoryRequestBodyRepository };
+}(utils_1.SpeakeasyBase));
+exports.AssociateRepositoryRequestBodyRepository = AssociateRepositoryRequestBodyRepository;
 var AssociateRepositoryRequestBody = /** @class */ (function (_super) {
     __extends(AssociateRepositoryRequestBody, _super);
     function AssociateRepositoryRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClientRequestToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClientRequestToken" }),
         __metadata("design:type", String)
     ], AssociateRepositoryRequestBody.prototype, "clientRequestToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KMSKeyDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KMSKeyDetails" }),
         __metadata("design:type", AssociateRepositoryRequestBodyKmsKeyDetails)
     ], AssociateRepositoryRequestBody.prototype, "kmsKeyDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Repository" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Repository" }),
         __metadata("design:type", AssociateRepositoryRequestBodyRepository)
     ], AssociateRepositoryRequestBody.prototype, "repository", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags" }),
+        __metadata("design:type", Object)
     ], AssociateRepositoryRequestBody.prototype, "tags", void 0);
     return AssociateRepositoryRequestBody;
-}(SpeakeasyBase));
-export { AssociateRepositoryRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.AssociateRepositoryRequestBody = AssociateRepositoryRequestBody;
 var AssociateRepositoryRequest = /** @class */ (function (_super) {
     __extends(AssociateRepositoryRequest, _super);
     function AssociateRepositoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AssociateRepositoryHeaders)
     ], AssociateRepositoryRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", AssociateRepositoryRequestBody)
     ], AssociateRepositoryRequest.prototype, "request", void 0);
     return AssociateRepositoryRequest;
-}(SpeakeasyBase));
-export { AssociateRepositoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.AssociateRepositoryRequest = AssociateRepositoryRequest;
 var AssociateRepositoryResponse = /** @class */ (function (_super) {
     __extends(AssociateRepositoryResponse, _super);
     function AssociateRepositoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AssociateRepositoryResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.AssociateRepositoryResponse)
     ], AssociateRepositoryResponse.prototype, "associateRepositoryResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AssociateRepositoryResponse.prototype, "conflictException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AssociateRepositoryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AssociateRepositoryResponse.prototype, "internalServerException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AssociateRepositoryResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AssociateRepositoryResponse.prototype, "throttlingException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], AssociateRepositoryResponse.prototype, "validationException", void 0);
     return AssociateRepositoryResponse;
-}(SpeakeasyBase));
-export { AssociateRepositoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.AssociateRepositoryResponse = AssociateRepositoryResponse;

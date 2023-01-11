@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class TrafficFilter extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  dScp?: number;
+  dSCP?: number;
 
   @SpeakeasyMetadata()
   dstAddress?: string[];
@@ -19,7 +19,7 @@ export class TrafficFilter extends SpeakeasyBase {
   protocol?: string[];
 
   @SpeakeasyMetadata()
-  qCi?: number;
+  qCI?: number;
 
   @SpeakeasyMetadata()
   srcAddress?: string[];

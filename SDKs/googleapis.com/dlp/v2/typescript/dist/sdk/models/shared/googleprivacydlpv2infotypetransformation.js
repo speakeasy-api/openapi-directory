@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2InfoType } from "./googleprivacydlpv2infotype";
-import { GooglePrivacyDlpV2PrimitiveTransformation } from "./googleprivacydlpv2primitivetransformation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2InfoTypeTransformation = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2infotype_1 = require("./googleprivacydlpv2infotype");
+var googleprivacydlpv2primitivetransformation_1 = require("./googleprivacydlpv2primitivetransformation");
 // GooglePrivacyDlpV2InfoTypeTransformation
 /**
  * A transformation to apply to text that is identified as a specific info_type.
@@ -35,13 +38,13 @@ var GooglePrivacyDlpV2InfoTypeTransformation = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=infoTypes", elemType: GooglePrivacyDlpV2InfoType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=infoTypes", elemType: googleprivacydlpv2infotype_1.GooglePrivacyDlpV2InfoType }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2InfoTypeTransformation.prototype, "infoTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primitiveTransformation" }),
-        __metadata("design:type", GooglePrivacyDlpV2PrimitiveTransformation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primitiveTransformation" }),
+        __metadata("design:type", googleprivacydlpv2primitivetransformation_1.GooglePrivacyDlpV2PrimitiveTransformation)
     ], GooglePrivacyDlpV2InfoTypeTransformation.prototype, "primitiveTransformation", void 0);
     return GooglePrivacyDlpV2InfoTypeTransformation;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2InfoTypeTransformation };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2InfoTypeTransformation = GooglePrivacyDlpV2InfoTypeTransformation;

@@ -8,7 +8,7 @@ export declare class GetConferenceSpRatingsRequest extends SpeakeasyBase {
     queryParams: GetConferenceSpRatingsQueryParams;
 }
 export declare class GetConferenceSpRatingsResponse extends SpeakeasyBase {
-    conferenceSpRatings?: shared.ConferenceSpRating[];
+    conferenceSPRatings?: shared.ConferenceSpRating[];
     contentType: string;
     statusCode: number;
 }

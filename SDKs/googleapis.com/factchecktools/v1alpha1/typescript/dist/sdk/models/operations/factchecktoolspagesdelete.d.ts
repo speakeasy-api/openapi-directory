@@ -27,6 +27,6 @@ export declare class FactchecktoolsPagesDeleteRequest extends SpeakeasyBase {
 }
 export declare class FactchecktoolsPagesDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

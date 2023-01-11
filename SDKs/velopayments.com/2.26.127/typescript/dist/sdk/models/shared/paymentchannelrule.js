@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentChannelRule = void 0;
+var utils_1 = require("../../../internal/utils");
 // PaymentChannelRule
 /**
  * Rules that will get applied when creating or updating a payment channel for the given country
@@ -33,33 +36,33 @@ var PaymentChannelRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], PaymentChannelRule.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayOrder" }),
         __metadata("design:type", Number)
     ], PaymentChannelRule.prototype, "displayOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=element" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=element" }),
         __metadata("design:type", String)
     ], PaymentChannelRule.prototype, "element", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxLength" }),
         __metadata("design:type", Number)
     ], PaymentChannelRule.prototype, "maxLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minLength" }),
         __metadata("design:type", Number)
     ], PaymentChannelRule.prototype, "minLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required" }),
         __metadata("design:type", Boolean)
     ], PaymentChannelRule.prototype, "required", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validation" }),
         __metadata("design:type", String)
     ], PaymentChannelRule.prototype, "validation", void 0);
     return PaymentChannelRule;
-}(SpeakeasyBase));
-export { PaymentChannelRule };
+}(utils_1.SpeakeasyBase));
+exports.PaymentChannelRule = PaymentChannelRule;

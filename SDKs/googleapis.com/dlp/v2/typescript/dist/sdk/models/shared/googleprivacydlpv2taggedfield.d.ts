@@ -7,6 +7,6 @@ import { GooglePrivacyDlpV2InfoType } from "./googleprivacydlpv2infotype";
 export declare class GooglePrivacyDlpV2TaggedField extends SpeakeasyBase {
     customTag?: string;
     field?: GooglePrivacyDlpV2FieldId;
-    inferred?: Map<string, any>;
+    inferred?: Record<string, any>;
     infoType?: GooglePrivacyDlpV2InfoType;
 }

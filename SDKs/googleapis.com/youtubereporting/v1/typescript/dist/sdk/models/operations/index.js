@@ -1,8 +1,24 @@
-export * from "./youtubereportingjobscreate";
-export * from "./youtubereportingjobsdelete";
-export * from "./youtubereportingjobsget";
-export * from "./youtubereportingjobslist";
-export * from "./youtubereportingjobsreportsget";
-export * from "./youtubereportingjobsreportslist";
-export * from "./youtubereportingmediadownload";
-export * from "./youtubereportingreporttypeslist";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./youtubereportingjobscreate"), exports);
+__exportStar(require("./youtubereportingjobsdelete"), exports);
+__exportStar(require("./youtubereportingjobsget"), exports);
+__exportStar(require("./youtubereportingjobslist"), exports);
+__exportStar(require("./youtubereportingjobsreportsget"), exports);
+__exportStar(require("./youtubereportingjobsreportslist"), exports);
+__exportStar(require("./youtubereportingmediadownload"), exports);
+__exportStar(require("./youtubereportingreporttypeslist"), exports);

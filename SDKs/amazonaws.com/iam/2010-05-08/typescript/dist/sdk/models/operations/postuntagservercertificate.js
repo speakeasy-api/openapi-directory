@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostUntagServerCertificateActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostUntagServerCertificateResponse = exports.PostUntagServerCertificateRequest = exports.PostUntagServerCertificateHeaders = exports.PostUntagServerCertificateQueryParams = exports.PostUntagServerCertificateVersionEnum = exports.PostUntagServerCertificateActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostUntagServerCertificateActionEnum;
 (function (PostUntagServerCertificateActionEnum) {
     PostUntagServerCertificateActionEnum["UntagServerCertificate"] = "UntagServerCertificate";
-})(PostUntagServerCertificateActionEnum || (PostUntagServerCertificateActionEnum = {}));
-export var PostUntagServerCertificateVersionEnum;
+})(PostUntagServerCertificateActionEnum = exports.PostUntagServerCertificateActionEnum || (exports.PostUntagServerCertificateActionEnum = {}));
+var PostUntagServerCertificateVersionEnum;
 (function (PostUntagServerCertificateVersionEnum) {
     PostUntagServerCertificateVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostUntagServerCertificateVersionEnum || (PostUntagServerCertificateVersionEnum = {}));
+})(PostUntagServerCertificateVersionEnum = exports.PostUntagServerCertificateVersionEnum || (exports.PostUntagServerCertificateVersionEnum = {}));
 var PostUntagServerCertificateQueryParams = /** @class */ (function (_super) {
     __extends(PostUntagServerCertificateQueryParams, _super);
     function PostUntagServerCertificateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostUntagServerCertificateQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostUntagServerCertificateQueryParams.prototype, "version", void 0);
     return PostUntagServerCertificateQueryParams;
-}(SpeakeasyBase));
-export { PostUntagServerCertificateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostUntagServerCertificateQueryParams = PostUntagServerCertificateQueryParams;
 var PostUntagServerCertificateHeaders = /** @class */ (function (_super) {
     __extends(PostUntagServerCertificateHeaders, _super);
     function PostUntagServerCertificateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostUntagServerCertificateHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostUntagServerCertificateHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostUntagServerCertificateHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostUntagServerCertificateHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostUntagServerCertificateHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostUntagServerCertificateHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostUntagServerCertificateHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostUntagServerCertificateHeaders;
-}(SpeakeasyBase));
-export { PostUntagServerCertificateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostUntagServerCertificateHeaders = PostUntagServerCertificateHeaders;
 var PostUntagServerCertificateRequest = /** @class */ (function (_super) {
     __extends(PostUntagServerCertificateRequest, _super);
     function PostUntagServerCertificateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostUntagServerCertificateQueryParams)
     ], PostUntagServerCertificateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostUntagServerCertificateHeaders)
     ], PostUntagServerCertificateRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostUntagServerCertificateRequest.prototype, "request", void 0);
     return PostUntagServerCertificateRequest;
-}(SpeakeasyBase));
-export { PostUntagServerCertificateRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostUntagServerCertificateRequest = PostUntagServerCertificateRequest;
 var PostUntagServerCertificateResponse = /** @class */ (function (_super) {
     __extends(PostUntagServerCertificateResponse, _super);
     function PostUntagServerCertificateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostUntagServerCertificateResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostUntagServerCertificateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostUntagServerCertificateResponse.prototype, "statusCode", void 0);
     return PostUntagServerCertificateResponse;
-}(SpeakeasyBase));
-export { PostUntagServerCertificateResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostUntagServerCertificateResponse = PostUntagServerCertificateResponse;

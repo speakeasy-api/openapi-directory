@@ -26,7 +26,7 @@ export declare class AnalyticsRequest extends SpeakeasyBase {
     queryParams: AnalyticsQueryParams;
 }
 export declare class AnalyticsResponse extends SpeakeasyBase {
-    analytics200ApplicationJsonObject?: Analytics200ApplicationJson;
+    analytics200ApplicationJSONObject?: Analytics200ApplicationJson;
     contentType: string;
     statusCode: number;
 }

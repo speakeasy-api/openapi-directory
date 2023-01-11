@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DhcpOptions } from "./dhcpoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDhcpOptionsResult = exports.CreateDhcpOptionsResultDhcpOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateDhcpOptionsResultDhcpOptions
+/**
+ * A set of DHCP options.
+**/
+var CreateDhcpOptionsResultDhcpOptions = /** @class */ (function (_super) {
+    __extends(CreateDhcpOptionsResultDhcpOptions, _super);
+    function CreateDhcpOptionsResultDhcpOptions() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateDhcpOptionsResultDhcpOptions.prototype, "dhcpConfigurations", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateDhcpOptionsResultDhcpOptions.prototype, "dhcpOptionsId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateDhcpOptionsResultDhcpOptions.prototype, "ownerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateDhcpOptionsResultDhcpOptions.prototype, "tags", void 0);
+    return CreateDhcpOptionsResultDhcpOptions;
+}(utils_1.SpeakeasyBase));
+exports.CreateDhcpOptionsResultDhcpOptions = CreateDhcpOptionsResultDhcpOptions;
 var CreateDhcpOptionsResult = /** @class */ (function (_super) {
     __extends(CreateDhcpOptionsResult, _super);
     function CreateDhcpOptionsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DhcpOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateDhcpOptionsResultDhcpOptions)
     ], CreateDhcpOptionsResult.prototype, "dhcpOptions", void 0);
     return CreateDhcpOptionsResult;
-}(SpeakeasyBase));
-export { CreateDhcpOptionsResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateDhcpOptionsResult = CreateDhcpOptionsResult;

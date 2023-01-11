@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateANewQuestionResponse = exports.CreateANewQuestionRequest = exports.CreateANewQuestionRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateANewQuestionRequestBody = /** @class */ (function (_super) {
     __extends(CreateANewQuestionRequestBody, _super);
     function CreateANewQuestionRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=choices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=choices" }),
         __metadata("design:type", Array)
     ], CreateANewQuestionRequestBody.prototype, "choices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=question" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=question" }),
         __metadata("design:type", String)
     ], CreateANewQuestionRequestBody.prototype, "question", void 0);
     return CreateANewQuestionRequestBody;
-}(SpeakeasyBase));
-export { CreateANewQuestionRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateANewQuestionRequestBody = CreateANewQuestionRequestBody;
 var CreateANewQuestionRequest = /** @class */ (function (_super) {
     __extends(CreateANewQuestionRequest, _super);
     function CreateANewQuestionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateANewQuestionRequestBody)
     ], CreateANewQuestionRequest.prototype, "request", void 0);
     return CreateANewQuestionRequest;
-}(SpeakeasyBase));
-export { CreateANewQuestionRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateANewQuestionRequest = CreateANewQuestionRequest;
 var CreateANewQuestionResponse = /** @class */ (function (_super) {
     __extends(CreateANewQuestionResponse, _super);
     function CreateANewQuestionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateANewQuestionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateANewQuestionResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateANewQuestionResponse.prototype, "statusCode", void 0);
     return CreateANewQuestionResponse;
-}(SpeakeasyBase));
-export { CreateANewQuestionResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateANewQuestionResponse = CreateANewQuestionResponse;

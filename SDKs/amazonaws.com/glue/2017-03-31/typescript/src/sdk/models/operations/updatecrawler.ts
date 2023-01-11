@@ -63,7 +63,7 @@ export class UpdateCrawlerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateCrawlerResponse?: Map<string, any>;
+  updateCrawlerResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   versionMismatchException?: any;

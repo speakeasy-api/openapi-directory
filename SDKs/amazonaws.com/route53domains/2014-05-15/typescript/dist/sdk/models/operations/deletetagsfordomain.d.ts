@@ -19,9 +19,9 @@ export declare class DeleteTagsForDomainRequest extends SpeakeasyBase {
 }
 export declare class DeleteTagsForDomainResponse extends SpeakeasyBase {
     contentType: string;
-    deleteTagsForDomainResponse?: Map<string, any>;
+    deleteTagsForDomainResponse?: Record<string, any>;
     invalidInput?: any;
     operationLimitExceeded?: any;
     statusCode: number;
-    unsupportedTld?: any;
+    unsupportedTLD?: any;
 }

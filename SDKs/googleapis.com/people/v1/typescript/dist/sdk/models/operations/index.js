@@ -1,23 +1,39 @@
-export * from "./peoplecontactgroupsbatchget";
-export * from "./peoplecontactgroupscreate";
-export * from "./peoplecontactgroupsdelete";
-export * from "./peoplecontactgroupslist";
-export * from "./peoplecontactgroupsmembersmodify";
-export * from "./peoplecontactgroupsupdate";
-export * from "./peopleothercontactscopyothercontacttomycontactsgroup";
-export * from "./peopleothercontactslist";
-export * from "./peopleothercontactssearch";
-export * from "./peoplepeoplebatchcreatecontacts";
-export * from "./peoplepeoplebatchdeletecontacts";
-export * from "./peoplepeoplebatchupdatecontacts";
-export * from "./peoplepeopleconnectionslist";
-export * from "./peoplepeoplecreatecontact";
-export * from "./peoplepeopledeletecontact";
-export * from "./peoplepeopledeletecontactphoto";
-export * from "./peoplepeopleget";
-export * from "./peoplepeoplegetbatchget";
-export * from "./peoplepeoplelistdirectorypeople";
-export * from "./peoplepeoplesearchcontacts";
-export * from "./peoplepeoplesearchdirectorypeople";
-export * from "./peoplepeopleupdatecontact";
-export * from "./peoplepeopleupdatecontactphoto";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./peoplecontactgroupsbatchget"), exports);
+__exportStar(require("./peoplecontactgroupscreate"), exports);
+__exportStar(require("./peoplecontactgroupsdelete"), exports);
+__exportStar(require("./peoplecontactgroupslist"), exports);
+__exportStar(require("./peoplecontactgroupsmembersmodify"), exports);
+__exportStar(require("./peoplecontactgroupsupdate"), exports);
+__exportStar(require("./peopleothercontactscopyothercontacttomycontactsgroup"), exports);
+__exportStar(require("./peopleothercontactslist"), exports);
+__exportStar(require("./peopleothercontactssearch"), exports);
+__exportStar(require("./peoplepeoplebatchcreatecontacts"), exports);
+__exportStar(require("./peoplepeoplebatchdeletecontacts"), exports);
+__exportStar(require("./peoplepeoplebatchupdatecontacts"), exports);
+__exportStar(require("./peoplepeopleconnectionslist"), exports);
+__exportStar(require("./peoplepeoplecreatecontact"), exports);
+__exportStar(require("./peoplepeopledeletecontact"), exports);
+__exportStar(require("./peoplepeopledeletecontactphoto"), exports);
+__exportStar(require("./peoplepeopleget"), exports);
+__exportStar(require("./peoplepeoplegetbatchget"), exports);
+__exportStar(require("./peoplepeoplelistdirectorypeople"), exports);
+__exportStar(require("./peoplepeoplesearchcontacts"), exports);
+__exportStar(require("./peoplepeoplesearchdirectorypeople"), exports);
+__exportStar(require("./peoplepeopleupdatecontact"), exports);
+__exportStar(require("./peoplepeopleupdatecontactphoto"), exports);

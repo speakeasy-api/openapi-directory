@@ -14,5 +14,5 @@ export class SparkSqlBatch extends SpeakeasyBase {
   queryFileUri?: string;
 
   @SpeakeasyMetadata({ data: "json, name=queryVariables" })
-  queryVariables?: Map<string, string>;
+  queryVariables?: Record<string, string>;
 }

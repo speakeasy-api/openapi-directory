@@ -16,7 +16,7 @@ export class GooglePrivacyDlpV2TaggedField extends SpeakeasyBase {
   field?: GooglePrivacyDlpV2FieldId;
 
   @SpeakeasyMetadata({ data: "json, name=inferred" })
-  inferred?: Map<string, any>;
+  inferred?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=infoType" })
   infoType?: GooglePrivacyDlpV2InfoType;

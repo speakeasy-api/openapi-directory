@@ -37,5 +37,5 @@ export declare class MetaRoot200ApplicationJson extends SpeakeasyBase {
 export declare class MetaRootResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    metaRoot200ApplicationJsonObject?: MetaRoot200ApplicationJson;
+    metaRoot200ApplicationJSONObject?: MetaRoot200ApplicationJson;
 }

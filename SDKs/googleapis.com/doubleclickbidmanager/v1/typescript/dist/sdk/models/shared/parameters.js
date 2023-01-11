@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FilterPair } from "./filterpair";
-import { Options } from "./options";
-export var ParametersGroupBysEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ParametersT = exports.ParametersTypeEnum = exports.ParametersMetricsEnum = exports.ParametersGroupBysEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var filterpair_1 = require("./filterpair");
+var options_1 = require("./options");
+var ParametersGroupBysEnum;
 (function (ParametersGroupBysEnum) {
     ParametersGroupBysEnum["FilterUnknown"] = "FILTER_UNKNOWN";
     ParametersGroupBysEnum["FilterDate"] = "FILTER_DATE";
@@ -317,8 +320,8 @@ export var ParametersGroupBysEnum;
     ParametersGroupBysEnum["FilterVerificationVideoResized"] = "FILTER_VERIFICATION_VIDEO_RESIZED";
     ParametersGroupBysEnum["FilterVerificationAudibilityStart"] = "FILTER_VERIFICATION_AUDIBILITY_START";
     ParametersGroupBysEnum["FilterVerificationAudibilityComplete"] = "FILTER_VERIFICATION_AUDIBILITY_COMPLETE";
-})(ParametersGroupBysEnum || (ParametersGroupBysEnum = {}));
-export var ParametersMetricsEnum;
+})(ParametersGroupBysEnum = exports.ParametersGroupBysEnum || (exports.ParametersGroupBysEnum = {}));
+var ParametersMetricsEnum;
 (function (ParametersMetricsEnum) {
     ParametersMetricsEnum["MetricUnknown"] = "METRIC_UNKNOWN";
     ParametersMetricsEnum["MetricImpressions"] = "METRIC_IMPRESSIONS";
@@ -788,8 +791,8 @@ export var ParametersMetricsEnum;
     ParametersMetricsEnum["MetricWinLossDealTargetedImpressions"] = "METRIC_WIN_LOSS_DEAL_TARGETED_IMPRESSIONS";
     ParametersMetricsEnum["MetricWinLossLineitemTargetedImpressions"] = "METRIC_WIN_LOSS_LINEITEM_TARGETED_IMPRESSIONS";
     ParametersMetricsEnum["MetricVerificationVideoPlayerSizeMeasurableImpressions"] = "METRIC_VERIFICATION_VIDEO_PLAYER_SIZE_MEASURABLE_IMPRESSIONS";
-})(ParametersMetricsEnum || (ParametersMetricsEnum = {}));
-export var ParametersTypeEnum;
+})(ParametersMetricsEnum = exports.ParametersMetricsEnum || (exports.ParametersMetricsEnum = {}));
+var ParametersTypeEnum;
 (function (ParametersTypeEnum) {
     ParametersTypeEnum["TypeGeneral"] = "TYPE_GENERAL";
     ParametersTypeEnum["TypeAudiencePerformance"] = "TYPE_AUDIENCE_PERFORMANCE";
@@ -825,40 +828,40 @@ export var ParametersTypeEnum;
     ParametersTypeEnum["TypeLinearTvSearchLift"] = "TYPE_LINEAR_TV_SEARCH_LIFT";
     ParametersTypeEnum["TypePath"] = "TYPE_PATH";
     ParametersTypeEnum["TypePathAttribution"] = "TYPE_PATH_ATTRIBUTION";
-})(ParametersTypeEnum || (ParametersTypeEnum = {}));
-// Parameters
+})(ParametersTypeEnum = exports.ParametersTypeEnum || (exports.ParametersTypeEnum = {}));
+// ParametersT
 /**
  * Parameters of a query or report.
 **/
-var Parameters = /** @class */ (function (_super) {
-    __extends(Parameters, _super);
-    function Parameters() {
+var ParametersT = /** @class */ (function (_super) {
+    __extends(ParametersT, _super);
+    function ParametersT() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filters", elemType: FilterPair }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filters", elemType: filterpair_1.FilterPair }),
         __metadata("design:type", Array)
-    ], Parameters.prototype, "filters", void 0);
+    ], ParametersT.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupBys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupBys" }),
         __metadata("design:type", Array)
-    ], Parameters.prototype, "groupBys", void 0);
+    ], ParametersT.prototype, "groupBys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeInviteData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeInviteData" }),
         __metadata("design:type", Boolean)
-    ], Parameters.prototype, "includeInviteData", void 0);
+    ], ParametersT.prototype, "includeInviteData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics" }),
         __metadata("design:type", Array)
-    ], Parameters.prototype, "metrics", void 0);
+    ], ParametersT.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
-        __metadata("design:type", Options)
-    ], Parameters.prototype, "options", void 0);
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
+        __metadata("design:type", options_1.Options)
+    ], ParametersT.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
-    ], Parameters.prototype, "type", void 0);
-    return Parameters;
-}(SpeakeasyBase));
-export { Parameters };
+    ], ParametersT.prototype, "type", void 0);
+    return ParametersT;
+}(utils_1.SpeakeasyBase));
+exports.ParametersT = ParametersT;

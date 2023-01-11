@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServiceOffering } from "./serviceoffering";
-import { CollectionLinks } from "./collectionlinks";
-import { CollectionMetadata } from "./collectionmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceOfferingsCollection = void 0;
+var utils_1 = require("../../../internal/utils");
+var serviceoffering_1 = require("./serviceoffering");
+var collectionlinks_1 = require("./collectionlinks");
+var collectionmetadata_1 = require("./collectionmetadata");
 var ServiceOfferingsCollection = /** @class */ (function (_super) {
     __extends(ServiceOfferingsCollection, _super);
     function ServiceOfferingsCollection() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: ServiceOffering }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: serviceoffering_1.ServiceOffering }),
         __metadata("design:type", Array)
     ], ServiceOfferingsCollection.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
-        __metadata("design:type", CollectionLinks)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
+        __metadata("design:type", collectionlinks_1.CollectionLinks)
     ], ServiceOfferingsCollection.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", CollectionMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", collectionmetadata_1.CollectionMetadata)
     ], ServiceOfferingsCollection.prototype, "meta", void 0);
     return ServiceOfferingsCollection;
-}(SpeakeasyBase));
-export { ServiceOfferingsCollection };
+}(utils_1.SpeakeasyBase));
+exports.ServiceOfferingsCollection = ServiceOfferingsCollection;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReactionValueFormats } from "./reactionvalueformats";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReactionForComment = void 0;
+var utils_1 = require("../../../internal/utils");
+var reactionvalueformats_1 = require("./reactionvalueformats");
 // ReactionForComment
 /**
  * Information about the reaction values provided by users on a comment.
@@ -34,17 +37,17 @@ var ReactionForComment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reaction" }),
-        __metadata("design:type", ReactionValueFormats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reaction" }),
+        __metadata("design:type", reactionvalueformats_1.ReactionValueFormats)
     ], ReactionForComment.prototype, "reaction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reactionUsers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reactionUsers" }),
         __metadata("design:type", Array)
     ], ReactionForComment.prototype, "reactionUsers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reactionsFromDeletedUsersCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reactionsFromDeletedUsersCount" }),
         __metadata("design:type", Number)
     ], ReactionForComment.prototype, "reactionsFromDeletedUsersCount", void 0);
     return ReactionForComment;
-}(SpeakeasyBase));
-export { ReactionForComment };
+}(utils_1.SpeakeasyBase));
+exports.ReactionForComment = ReactionForComment;

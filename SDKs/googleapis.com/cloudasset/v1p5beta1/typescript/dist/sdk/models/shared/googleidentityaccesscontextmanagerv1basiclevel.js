@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleIdentityAccesscontextmanagerV1Condition } from "./googleidentityaccesscontextmanagerv1condition";
-export var GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleIdentityAccesscontextmanagerV1BasicLevel = exports.GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleidentityaccesscontextmanagerv1condition_1 = require("./googleidentityaccesscontextmanagerv1condition");
+var GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum;
 (function (GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum) {
     GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum["And"] = "AND";
     GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum["Or"] = "OR";
-})(GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum || (GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum = {}));
+})(GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum = exports.GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum || (exports.GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum = {}));
 // GoogleIdentityAccesscontextmanagerV1BasicLevel
 /**
  * `BasicLevel` is an `AccessLevel` using a set of recommended features.
@@ -39,13 +42,13 @@ var GoogleIdentityAccesscontextmanagerV1BasicLevel = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=combiningFunction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=combiningFunction" }),
         __metadata("design:type", String)
     ], GoogleIdentityAccesscontextmanagerV1BasicLevel.prototype, "combiningFunction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conditions", elemType: GoogleIdentityAccesscontextmanagerV1Condition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conditions", elemType: googleidentityaccesscontextmanagerv1condition_1.GoogleIdentityAccesscontextmanagerV1Condition }),
         __metadata("design:type", Array)
     ], GoogleIdentityAccesscontextmanagerV1BasicLevel.prototype, "conditions", void 0);
     return GoogleIdentityAccesscontextmanagerV1BasicLevel;
-}(SpeakeasyBase));
-export { GoogleIdentityAccesscontextmanagerV1BasicLevel };
+}(utils_1.SpeakeasyBase));
+exports.GoogleIdentityAccesscontextmanagerV1BasicLevel = GoogleIdentityAccesscontextmanagerV1BasicLevel;

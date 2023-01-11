@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { QuoteFxSummaryV3 } from "./quotefxsummaryv3";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuoteResponseV3 = void 0;
+var utils_1 = require("../../../internal/utils");
+var quotefxsummaryv3_1 = require("./quotefxsummaryv3");
 var QuoteResponseV3 = /** @class */ (function (_super) {
     __extends(QuoteResponseV3, _super);
     function QuoteResponseV3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fxSummaries", elemType: QuoteFxSummaryV3 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fxSummaries", elemType: quotefxsummaryv3_1.QuoteFxSummaryV3 }),
         __metadata("design:type", Array)
     ], QuoteResponseV3.prototype, "fxSummaries", void 0);
     return QuoteResponseV3;
-}(SpeakeasyBase));
-export { QuoteResponseV3 };
+}(utils_1.SpeakeasyBase));
+exports.QuoteResponseV3 = QuoteResponseV3;

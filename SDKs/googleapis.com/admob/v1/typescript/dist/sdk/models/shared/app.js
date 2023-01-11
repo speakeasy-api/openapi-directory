@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppLinkedAppInfo } from "./applinkedappinfo";
-import { AppManualAppInfo } from "./appmanualappinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.App = void 0;
+var utils_1 = require("../../../internal/utils");
+var applinkedappinfo_1 = require("./applinkedappinfo");
+var appmanualappinfo_1 = require("./appmanualappinfo");
 // App
 /**
  * Describes an AdMob app for a specific platform (For example: Android or iOS).
@@ -35,25 +38,25 @@ var App = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appId" }),
         __metadata("design:type", String)
     ], App.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkedAppInfo" }),
-        __metadata("design:type", AppLinkedAppInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkedAppInfo" }),
+        __metadata("design:type", applinkedappinfo_1.AppLinkedAppInfo)
     ], App.prototype, "linkedAppInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manualAppInfo" }),
-        __metadata("design:type", AppManualAppInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manualAppInfo" }),
+        __metadata("design:type", appmanualappinfo_1.AppManualAppInfo)
     ], App.prototype, "manualAppInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], App.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
         __metadata("design:type", String)
     ], App.prototype, "platform", void 0);
     return App;
-}(SpeakeasyBase));
-export { App };
+}(utils_1.SpeakeasyBase));
+exports.App = App;

@@ -46,5 +46,5 @@ export class GetcurrencyrateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getcurrencyrate200ApplicationJsonObject?: Getcurrencyrate200ApplicationJson;
+  getcurrencyrate200ApplicationJSONObject?: Getcurrencyrate200ApplicationJson;
 }

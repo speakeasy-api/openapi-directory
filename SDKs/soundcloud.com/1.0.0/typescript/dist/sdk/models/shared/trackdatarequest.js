@@ -1,0 +1,162 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TrackDataRequest = exports.TrackDataRequestTrackSharingEnum = exports.TrackDataRequestTrackLicenseEnum = exports.TrackDataRequestTrackEmbeddableByEnum = exports.TrackDataRequestOnlyForUploading = exports.TrackDataRequestOnlyForUploadingForProUsers = void 0;
+var utils_1 = require("../../../internal/utils");
+var TrackDataRequestOnlyForUploadingForProUsers = /** @class */ (function (_super) {
+    __extends(TrackDataRequestOnlyForUploadingForProUsers, _super);
+    function TrackDataRequestOnlyForUploadingForProUsers() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=Only for uploading, for PRO users" }),
+        __metadata("design:type", String)
+    ], TrackDataRequestOnlyForUploadingForProUsers.prototype, "onlyForUploadingForPROUsers", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
+        __metadata("design:type", Uint8Array)
+    ], TrackDataRequestOnlyForUploadingForProUsers.prototype, "content", void 0);
+    return TrackDataRequestOnlyForUploadingForProUsers;
+}(utils_1.SpeakeasyBase));
+exports.TrackDataRequestOnlyForUploadingForProUsers = TrackDataRequestOnlyForUploadingForProUsers;
+var TrackDataRequestOnlyForUploading = /** @class */ (function (_super) {
+    __extends(TrackDataRequestOnlyForUploading, _super);
+    function TrackDataRequestOnlyForUploading() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=Only for uploading" }),
+        __metadata("design:type", String)
+    ], TrackDataRequestOnlyForUploading.prototype, "onlyForUploading", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
+        __metadata("design:type", Uint8Array)
+    ], TrackDataRequestOnlyForUploading.prototype, "content", void 0);
+    return TrackDataRequestOnlyForUploading;
+}(utils_1.SpeakeasyBase));
+exports.TrackDataRequestOnlyForUploading = TrackDataRequestOnlyForUploading;
+var TrackDataRequestTrackEmbeddableByEnum;
+(function (TrackDataRequestTrackEmbeddableByEnum) {
+    TrackDataRequestTrackEmbeddableByEnum["All"] = "all";
+    TrackDataRequestTrackEmbeddableByEnum["Me"] = "me";
+    TrackDataRequestTrackEmbeddableByEnum["None"] = "none";
+})(TrackDataRequestTrackEmbeddableByEnum = exports.TrackDataRequestTrackEmbeddableByEnum || (exports.TrackDataRequestTrackEmbeddableByEnum = {}));
+var TrackDataRequestTrackLicenseEnum;
+(function (TrackDataRequestTrackLicenseEnum) {
+    TrackDataRequestTrackLicenseEnum["NoRightsReserved"] = "no-rights-reserved";
+    TrackDataRequestTrackLicenseEnum["AllRightsReserved"] = "all-rights-reserved";
+    TrackDataRequestTrackLicenseEnum["CcBy"] = "cc-by";
+    TrackDataRequestTrackLicenseEnum["CcByNc"] = "cc-by-nc";
+    TrackDataRequestTrackLicenseEnum["CcByNd"] = "cc-by-nd";
+    TrackDataRequestTrackLicenseEnum["CcBySa"] = "cc-by-sa";
+    TrackDataRequestTrackLicenseEnum["CcByNcNd"] = "cc-by-nc-nd";
+    TrackDataRequestTrackLicenseEnum["CcByNcSa"] = "cc-by-nc-sa";
+})(TrackDataRequestTrackLicenseEnum = exports.TrackDataRequestTrackLicenseEnum || (exports.TrackDataRequestTrackLicenseEnum = {}));
+var TrackDataRequestTrackSharingEnum;
+(function (TrackDataRequestTrackSharingEnum) {
+    TrackDataRequestTrackSharingEnum["Public"] = "public";
+    TrackDataRequestTrackSharingEnum["Private"] = "private";
+})(TrackDataRequestTrackSharingEnum = exports.TrackDataRequestTrackSharingEnum || (exports.TrackDataRequestTrackSharingEnum = {}));
+var TrackDataRequest = /** @class */ (function (_super) {
+    __extends(TrackDataRequest, _super);
+    function TrackDataRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
+        __metadata("design:type", TrackDataRequestOnlyForUploadingForProUsers)
+    ], TrackDataRequest.prototype, "trackArtworkData", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
+        __metadata("design:type", TrackDataRequestOnlyForUploading)
+    ], TrackDataRequest.prototype, "trackAssetData", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=track[commentable]" }),
+        __metadata("design:type", Boolean)
+    ], TrackDataRequest.prototype, "trackCommentable", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=track[description]" }),
+        __metadata("design:type", String)
+    ], TrackDataRequest.prototype, "trackDescription", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=track[downloadable]" }),
+        __metadata("design:type", Boolean)
+    ], TrackDataRequest.prototype, "trackDownloadable", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=track[embeddable_by]" }),
+        __metadata("design:type", String)
+    ], TrackDataRequest.prototype, "trackEmbeddableBy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=track[genre]" }),
+        __metadata("design:type", String)
+    ], TrackDataRequest.prototype, "trackGenre", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=track[isrc]" }),
+        __metadata("design:type", String)
+    ], TrackDataRequest.prototype, "trackIsrc", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=track[label_name]" }),
+        __metadata("design:type", String)
+    ], TrackDataRequest.prototype, "trackLabelName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=track[license]" }),
+        __metadata("design:type", String)
+    ], TrackDataRequest.prototype, "trackLicense", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=track[permalink]" }),
+        __metadata("design:type", String)
+    ], TrackDataRequest.prototype, "trackPermalink", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=track[purchase_url]" }),
+        __metadata("design:type", String)
+    ], TrackDataRequest.prototype, "trackPurchaseUrl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=track[release]" }),
+        __metadata("design:type", String)
+    ], TrackDataRequest.prototype, "trackRelease", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=track[release_date]" }),
+        __metadata("design:type", String)
+    ], TrackDataRequest.prototype, "trackReleaseDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=track[sharing]" }),
+        __metadata("design:type", String)
+    ], TrackDataRequest.prototype, "trackSharing", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=track[streamable]" }),
+        __metadata("design:type", Boolean)
+    ], TrackDataRequest.prototype, "trackStreamable", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=track[tag_list]" }),
+        __metadata("design:type", String)
+    ], TrackDataRequest.prototype, "trackTagList", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=track[title]" }),
+        __metadata("design:type", String)
+    ], TrackDataRequest.prototype, "trackTitle", void 0);
+    return TrackDataRequest;
+}(utils_1.SpeakeasyBase));
+exports.TrackDataRequest = TrackDataRequest;

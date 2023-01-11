@@ -25,11 +25,11 @@ export declare class ClassroomCoursesCourseWorkStudentSubmissionsReturnSecurity 
 export declare class ClassroomCoursesCourseWorkStudentSubmissionsReturnRequest extends SpeakeasyBase {
     pathParams: ClassroomCoursesCourseWorkStudentSubmissionsReturnPathParams;
     queryParams: ClassroomCoursesCourseWorkStudentSubmissionsReturnQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: ClassroomCoursesCourseWorkStudentSubmissionsReturnSecurity;
 }
 export declare class ClassroomCoursesCourseWorkStudentSubmissionsReturnResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

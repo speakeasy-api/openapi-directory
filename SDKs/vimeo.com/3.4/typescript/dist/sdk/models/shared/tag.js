@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Tag = exports.TagMetadata = exports.TagMetadataConnections = exports.TagMetadataConnectionsVideos = void 0;
+var utils_1 = require("../../../internal/utils");
 // TagMetadataConnectionsVideos
 /**
  * Information about the videos related to this tag.
@@ -33,20 +36,20 @@ var TagMetadataConnectionsVideos = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], TagMetadataConnectionsVideos.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], TagMetadataConnectionsVideos.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], TagMetadataConnectionsVideos.prototype, "uri", void 0);
     return TagMetadataConnectionsVideos;
-}(SpeakeasyBase));
-export { TagMetadataConnectionsVideos };
+}(utils_1.SpeakeasyBase));
+exports.TagMetadataConnectionsVideos = TagMetadataConnectionsVideos;
 // TagMetadataConnections
 /**
  * A collection of information that is connected to this resource.
@@ -57,12 +60,12 @@ var TagMetadataConnections = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videos" }),
         __metadata("design:type", TagMetadataConnectionsVideos)
     ], TagMetadataConnections.prototype, "videos", void 0);
     return TagMetadataConnections;
-}(SpeakeasyBase));
-export { TagMetadataConnections };
+}(utils_1.SpeakeasyBase));
+exports.TagMetadataConnections = TagMetadataConnections;
 // TagMetadata
 /**
  * Metadata about the group.
@@ -73,37 +76,37 @@ var TagMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connections" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connections" }),
         __metadata("design:type", TagMetadataConnections)
     ], TagMetadata.prototype, "connections", void 0);
     return TagMetadata;
-}(SpeakeasyBase));
-export { TagMetadata };
+}(utils_1.SpeakeasyBase));
+exports.TagMetadata = TagMetadata;
 var Tag = /** @class */ (function (_super) {
     __extends(Tag, _super);
     function Tag() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canonical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canonical" }),
         __metadata("design:type", String)
     ], Tag.prototype, "canonical", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
         __metadata("design:type", TagMetadata)
     ], Tag.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Tag.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_key" }),
         __metadata("design:type", String)
     ], Tag.prototype, "resourceKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], Tag.prototype, "uri", void 0);
     return Tag;
-}(SpeakeasyBase));
-export { Tag };
+}(utils_1.SpeakeasyBase));
+exports.Tag = Tag;

@@ -7,7 +7,7 @@ export class ProtocolTelnetConnectionSignalPathParams extends SpeakeasyBase {
   agentNum: number;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=connectionID" })
-  connectionId: number;
+  connectionID: number;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=signalName" })
   signalName: string;
@@ -28,5 +28,5 @@ export class ProtocolTelnetConnectionSignalResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTelnetConnectionSignal200ApplicationJsonStrings?: string[];
+  protocolTelnetConnectionSignal200ApplicationJSONStrings?: string[];
 }

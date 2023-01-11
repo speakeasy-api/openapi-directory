@@ -79,7 +79,7 @@ export class AddFacetToObjectResponse extends SpeakeasyBase {
   accessDeniedException?: any;
 
   @SpeakeasyMetadata()
-  addFacetToObjectResponse?: Map<string, any>;
+  addFacetToObjectResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

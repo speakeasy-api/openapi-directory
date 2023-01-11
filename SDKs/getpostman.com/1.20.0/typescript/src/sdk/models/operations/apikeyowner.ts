@@ -55,5 +55,5 @@ export class ApiKeyOwnerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  apiKeyOwner200ApplicationJsonObject?: ApiKeyOwner200ApplicationJson;
+  apiKeyOwner200ApplicationJSONObject?: ApiKeyOwner200ApplicationJson;
 }

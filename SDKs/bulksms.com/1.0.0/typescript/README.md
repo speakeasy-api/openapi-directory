@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { DeleteWebhooksIdRequest, DeleteWebhooksIdResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { PostRmmPreSignAttachmentRequest, PostRmmPreSignAttachmentResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     basicAuth: {
       password: "YOUR_PASSWORD_HERE",
@@ -33,13 +32,20 @@ const sdk = new SDK(WithSecurity(
   }
 ));
     
-const req: DeleteWebhooksIdRequest = {
-  pathParams: {
-    id: "dolor",
+const req: PostRmmPreSignAttachmentRequest = {
+  security: {
+    basicAuth: {
+      password: "YOUR_PASSWORD_HERE",
+      username: "YOUR_USERNAME_HERE",
+    },
+  },
+  request: {
+    fileExtension: "sit",
+    mediaType: "voluptas",
   },
 };
 
-sdk.sdk.deleteWebhooksId(req).then((res: DeleteWebhooksIdResponse | AxiosError) => {
+sdk.attachments.postRmmPreSignAttachment(req).then((res: PostRmmPreSignAttachmentResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -48,20 +54,32 @@ sdk.sdk.deleteWebhooksId(req).then((res: DeleteWebhooksIdResponse | AxiosError) 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Attachments
 
-* `deleteWebhooksId` - Delete a webhook
+* `postRmmPreSignAttachment` - Upload an attachment via a signed URL
+
+### Blocked Numbers
+
 * `getBlockedNumbers` - List blocked numbers
+* `postBlockedNumbers` - Create a blocked number
+
+### Message
+
 * `getMessages` - Retrieve Messages
+* `getMessagesSend` - Send message by simple GET or POST
 * `getMessagesId` - Show Message
 * `getMessagesIdRelatedReceivedMessages` - List Related Messages
-* `getMessagesSend` - Send message by simple GET or POST
+* `postMessages` - Send Messages
+
+### Profile
+
 * `getProfile` - Get profile
+
+### Webhooks
+
+* `deleteWebhooksId` - Delete a webhook
 * `getWebhooks` - List webhooks
 * `getWebhooksId` - Read a webhook
-* `postBlockedNumbers` - Create a blocked number
-* `postMessages` - Send Messages
-* `postRmmPreSignAttachment` - Upload an attachment via a signed URL
 * `postWebhooks` - Create a webhook
 * `postWebhooksId` - Update a webhook
 

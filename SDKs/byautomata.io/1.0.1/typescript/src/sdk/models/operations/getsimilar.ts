@@ -41,8 +41,8 @@ export class GetSimilarResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getSimilar200ApplicationJsonObject?: GetSimilar200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getSimilar200ApplicationJSONObject?: GetSimilar200ApplicationJson;
 }

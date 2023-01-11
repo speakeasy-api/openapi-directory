@@ -14,27 +14,27 @@ export declare enum ApigatewayApiConfigStateEnum {
 /**
  * An API Configuration is a combination of settings for both the Managed Service and Gateways serving this API Config.
 **/
-export declare class ApigatewayApiConfigInput extends SpeakeasyBase {
-    displayName?: string;
-    gatewayServiceAccount?: string;
-    grpcServices?: ApigatewayApiConfigGrpcServiceDefinition[];
-    labels?: Map<string, string>;
-    managedServiceConfigs?: ApigatewayApiConfigFile[];
-    openapiDocuments?: ApigatewayApiConfigOpenApiDocument[];
-}
-/**
- * An API Configuration is a combination of settings for both the Managed Service and Gateways serving this API Config.
-**/
 export declare class ApigatewayApiConfig extends SpeakeasyBase {
     createTime?: string;
     displayName?: string;
     gatewayServiceAccount?: string;
     grpcServices?: ApigatewayApiConfigGrpcServiceDefinition[];
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     managedServiceConfigs?: ApigatewayApiConfigFile[];
     name?: string;
     openapiDocuments?: ApigatewayApiConfigOpenApiDocument[];
     serviceConfigId?: string;
     state?: ApigatewayApiConfigStateEnum;
     updateTime?: string;
+}
+/**
+ * An API Configuration is a combination of settings for both the Managed Service and Gateways serving this API Config.
+**/
+export declare class ApigatewayApiConfigInput extends SpeakeasyBase {
+    displayName?: string;
+    gatewayServiceAccount?: string;
+    grpcServices?: ApigatewayApiConfigGrpcServiceDefinition[];
+    labels?: Record<string, string>;
+    managedServiceConfigs?: ApigatewayApiConfigFile[];
+    openapiDocuments?: ApigatewayApiConfigOpenApiDocument[];
 }

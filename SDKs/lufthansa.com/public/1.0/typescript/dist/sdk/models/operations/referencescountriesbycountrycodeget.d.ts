@@ -22,6 +22,6 @@ export declare class ReferencesCountriesByCountryCodeGetRequest extends Speakeas
 }
 export declare class ReferencesCountriesByCountryCodeGetResponse extends SpeakeasyBase {
     contentType: string;
-    referencesCountriesByCountryCodeGet200ApplicationJsonObject?: Map<string, any>;
+    referencesCountriesByCountryCodeGet200ApplicationJSONObject?: Record<string, any>;
     statusCode: number;
 }

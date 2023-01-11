@@ -62,7 +62,7 @@ export class AnalyticsRequest extends SpeakeasyBase {
 
 export class AnalyticsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  analytics200ApplicationJsonObject?: Analytics200ApplicationJson;
+  analytics200ApplicationJSONObject?: Analytics200ApplicationJson;
 
   @SpeakeasyMetadata()
   contentType: string;

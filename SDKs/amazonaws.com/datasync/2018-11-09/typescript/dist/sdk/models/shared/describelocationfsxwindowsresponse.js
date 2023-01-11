@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeLocationFsxWindowsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var DescribeLocationFsxWindowsResponse = /** @class */ (function (_super) {
     __extends(DescribeLocationFsxWindowsResponse, _super);
     function DescribeLocationFsxWindowsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], DescribeLocationFsxWindowsResponse.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Domain" }),
         __metadata("design:type", String)
     ], DescribeLocationFsxWindowsResponse.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LocationArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LocationArn" }),
         __metadata("design:type", String)
     ], DescribeLocationFsxWindowsResponse.prototype, "locationArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LocationUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LocationUri" }),
         __metadata("design:type", String)
     ], DescribeLocationFsxWindowsResponse.prototype, "locationUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityGroupArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityGroupArns" }),
         __metadata("design:type", Array)
     ], DescribeLocationFsxWindowsResponse.prototype, "securityGroupArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=User" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=User" }),
         __metadata("design:type", String)
     ], DescribeLocationFsxWindowsResponse.prototype, "user", void 0);
     return DescribeLocationFsxWindowsResponse;
-}(SpeakeasyBase));
-export { DescribeLocationFsxWindowsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeLocationFsxWindowsResponse = DescribeLocationFsxWindowsResponse;

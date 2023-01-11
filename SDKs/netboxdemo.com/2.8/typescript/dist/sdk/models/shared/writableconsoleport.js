@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedCableInput } from "./nestedcable";
-export var WritableConsolePortTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritableConsolePortInput = exports.WritableConsolePortTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedcable_1 = require("./nestedcable");
+var WritableConsolePortTypeEnum;
 (function (WritableConsolePortTypeEnum) {
     WritableConsolePortTypeEnum["De9"] = "de-9";
     WritableConsolePortTypeEnum["Db25"] = "db-25";
@@ -39,40 +42,40 @@ export var WritableConsolePortTypeEnum;
     WritableConsolePortTypeEnum["UsbMicroA"] = "usb-micro-a";
     WritableConsolePortTypeEnum["UsbMicroB"] = "usb-micro-b";
     WritableConsolePortTypeEnum["Other"] = "other";
-})(WritableConsolePortTypeEnum || (WritableConsolePortTypeEnum = {}));
+})(WritableConsolePortTypeEnum = exports.WritableConsolePortTypeEnum || (exports.WritableConsolePortTypeEnum = {}));
 var WritableConsolePortInput = /** @class */ (function (_super) {
     __extends(WritableConsolePortInput, _super);
     function WritableConsolePortInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cable" }),
-        __metadata("design:type", NestedCableInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cable" }),
+        __metadata("design:type", nestedcable_1.NestedCableInput)
     ], WritableConsolePortInput.prototype, "cable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connection_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connection_status" }),
         __metadata("design:type", Boolean)
     ], WritableConsolePortInput.prototype, "connectionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], WritableConsolePortInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device" }),
         __metadata("design:type", Number)
     ], WritableConsolePortInput.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WritableConsolePortInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], WritableConsolePortInput.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], WritableConsolePortInput.prototype, "type", void 0);
     return WritableConsolePortInput;
-}(SpeakeasyBase));
-export { WritableConsolePortInput };
+}(utils_1.SpeakeasyBase));
+exports.WritableConsolePortInput = WritableConsolePortInput;

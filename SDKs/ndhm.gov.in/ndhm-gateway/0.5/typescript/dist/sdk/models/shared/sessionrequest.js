@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SessionRequestGrantTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SessionRequest = exports.SessionRequestGrantTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SessionRequestGrantTypeEnum;
 (function (SessionRequestGrantTypeEnum) {
     SessionRequestGrantTypeEnum["ClientCredentials"] = "client_credentials";
     SessionRequestGrantTypeEnum["RefreshToken"] = "refresh_token";
-})(SessionRequestGrantTypeEnum || (SessionRequestGrantTypeEnum = {}));
+})(SessionRequestGrantTypeEnum = exports.SessionRequestGrantTypeEnum || (exports.SessionRequestGrantTypeEnum = {}));
 var SessionRequest = /** @class */ (function (_super) {
     __extends(SessionRequest, _super);
     function SessionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientId" }),
         __metadata("design:type", String)
     ], SessionRequest.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientSecret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientSecret" }),
         __metadata("design:type", String)
     ], SessionRequest.prototype, "clientSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grantType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grantType" }),
         __metadata("design:type", String)
     ], SessionRequest.prototype, "grantType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refreshToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refreshToken" }),
         __metadata("design:type", String)
     ], SessionRequest.prototype, "refreshToken", void 0);
     return SessionRequest;
-}(SpeakeasyBase));
-export { SessionRequest };
+}(utils_1.SpeakeasyBase));
+exports.SessionRequest = SessionRequest;

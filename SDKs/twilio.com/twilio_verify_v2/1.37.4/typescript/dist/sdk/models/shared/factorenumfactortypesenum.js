@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FactorEnumFactorTypesEnum = void 0;
+var FactorEnumFactorTypesEnum;
+(function (FactorEnumFactorTypesEnum) {
+    FactorEnumFactorTypesEnum["Push"] = "push";
+    FactorEnumFactorTypesEnum["Totp"] = "totp";
+})(FactorEnumFactorTypesEnum = exports.FactorEnumFactorTypesEnum || (exports.FactorEnumFactorTypesEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobScheduleTerminateResponse = exports.JobScheduleTerminateRequest = exports.JobScheduleTerminateHeaders = exports.JobScheduleTerminateQueryParams = exports.JobScheduleTerminatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var JobScheduleTerminatePathParams = /** @class */ (function (_super) {
     __extends(JobScheduleTerminatePathParams, _super);
     function JobScheduleTerminatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=jobScheduleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=jobScheduleId" }),
         __metadata("design:type", String)
     ], JobScheduleTerminatePathParams.prototype, "jobScheduleId", void 0);
     return JobScheduleTerminatePathParams;
-}(SpeakeasyBase));
-export { JobScheduleTerminatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.JobScheduleTerminatePathParams = JobScheduleTerminatePathParams;
 var JobScheduleTerminateQueryParams = /** @class */ (function (_super) {
     __extends(JobScheduleTerminateQueryParams, _super);
     function JobScheduleTerminateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], JobScheduleTerminateQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], JobScheduleTerminateQueryParams.prototype, "timeout", void 0);
     return JobScheduleTerminateQueryParams;
-}(SpeakeasyBase));
-export { JobScheduleTerminateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.JobScheduleTerminateQueryParams = JobScheduleTerminateQueryParams;
 var JobScheduleTerminateHeaders = /** @class */ (function (_super) {
     __extends(JobScheduleTerminateHeaders, _super);
     function JobScheduleTerminateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Match" }),
         __metadata("design:type", String)
     ], JobScheduleTerminateHeaders.prototype, "ifMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
         __metadata("design:type", String)
     ], JobScheduleTerminateHeaders.prototype, "ifModifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-None-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-None-Match" }),
         __metadata("design:type", String)
     ], JobScheduleTerminateHeaders.prototype, "ifNoneMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
         __metadata("design:type", String)
     ], JobScheduleTerminateHeaders.prototype, "ifUnmodifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], JobScheduleTerminateHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], JobScheduleTerminateHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], JobScheduleTerminateHeaders.prototype, "returnClientRequestId", void 0);
     return JobScheduleTerminateHeaders;
-}(SpeakeasyBase));
-export { JobScheduleTerminateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.JobScheduleTerminateHeaders = JobScheduleTerminateHeaders;
 var JobScheduleTerminateRequest = /** @class */ (function (_super) {
     __extends(JobScheduleTerminateRequest, _super);
     function JobScheduleTerminateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JobScheduleTerminatePathParams)
     ], JobScheduleTerminateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JobScheduleTerminateQueryParams)
     ], JobScheduleTerminateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JobScheduleTerminateHeaders)
     ], JobScheduleTerminateRequest.prototype, "headers", void 0);
     return JobScheduleTerminateRequest;
-}(SpeakeasyBase));
-export { JobScheduleTerminateRequest };
+}(utils_1.SpeakeasyBase));
+exports.JobScheduleTerminateRequest = JobScheduleTerminateRequest;
 var JobScheduleTerminateResponse = /** @class */ (function (_super) {
     __extends(JobScheduleTerminateResponse, _super);
     function JobScheduleTerminateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], JobScheduleTerminateResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], JobScheduleTerminateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], JobScheduleTerminateResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], JobScheduleTerminateResponse.prototype, "statusCode", void 0);
     return JobScheduleTerminateResponse;
-}(SpeakeasyBase));
-export { JobScheduleTerminateResponse };
+}(utils_1.SpeakeasyBase));
+exports.JobScheduleTerminateResponse = JobScheduleTerminateResponse;

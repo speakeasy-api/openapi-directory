@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PlacedBetPart } from "./placedbetpart";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlacedBetLeg = void 0;
+var utils_1 = require("../../../internal/utils");
+var placedbetpart_1 = require("./placedbetpart");
 var PlacedBetLeg = /** @class */ (function (_super) {
     __extends(PlacedBetLeg, _super);
     function PlacedBetLeg() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number" }),
         __metadata("design:type", Number)
     ], PlacedBetLeg.prototype, "number", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parts", elemType: PlacedBetPart }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parts", elemType: placedbetpart_1.PlacedBetPart }),
         __metadata("design:type", Array)
     ], PlacedBetLeg.prototype, "parts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sort" }),
         __metadata("design:type", String)
     ], PlacedBetLeg.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PlacedBetLeg.prototype, "type", void 0);
     return PlacedBetLeg;
-}(SpeakeasyBase));
-export { PlacedBetLeg };
+}(utils_1.SpeakeasyBase));
+exports.PlacedBetLeg = PlacedBetLeg;

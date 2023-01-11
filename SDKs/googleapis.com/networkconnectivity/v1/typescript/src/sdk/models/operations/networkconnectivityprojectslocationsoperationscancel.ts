@@ -62,7 +62,7 @@ export class NetworkconnectivityProjectsLocationsOperationsCancelRequest extends
   queryParams: NetworkconnectivityProjectsLocationsOperationsCancelQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: NetworkconnectivityProjectsLocationsOperationsCancelSecurity;
@@ -74,7 +74,7 @@ export class NetworkconnectivityProjectsLocationsOperationsCancelResponse extend
   contentType: string;
 
   @SpeakeasyMetadata()
-  empty?: Map<string, any>;
+  empty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

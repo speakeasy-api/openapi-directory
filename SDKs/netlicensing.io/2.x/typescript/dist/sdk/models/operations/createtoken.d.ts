@@ -21,15 +21,15 @@ export declare enum CreateTokenRequestBodyTypeEnum {
 export declare class CreateTokenRequestBody extends SpeakeasyBase {
     action?: CreateTokenRequestBodyActionEnum;
     apiKeyRole?: CreateTokenRequestBodyApiKeyRoleEnum;
-    cancelUrl?: string;
-    cancelUrlTitle?: string;
+    cancelURL?: string;
+    cancelURLTitle?: string;
     licenseTemplateNumber?: string;
     licenseeNumber?: string;
     predefinedShoppingItem?: string;
     privateKey?: string;
     productNumber?: string;
-    successUrl?: string;
-    successUrlTitle?: string;
+    successURL?: string;
+    successURLTitle?: string;
     tokenType: CreateTokenRequestBodyTokenTypeEnum;
     type?: CreateTokenRequestBodyTypeEnum;
 }

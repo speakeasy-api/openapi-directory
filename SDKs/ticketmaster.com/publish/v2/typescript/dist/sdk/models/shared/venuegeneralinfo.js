@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VenueGeneralInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // VenueGeneralInfo
 /**
  * Venue general information
@@ -33,13 +36,13 @@ var VenueGeneralInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=childRules" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=childRules" }),
+        __metadata("design:type", Object)
     ], VenueGeneralInfo.prototype, "childRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=generalRules" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=generalRules" }),
+        __metadata("design:type", Object)
     ], VenueGeneralInfo.prototype, "generalRules", void 0);
     return VenueGeneralInfo;
-}(SpeakeasyBase));
-export { VenueGeneralInfo };
+}(utils_1.SpeakeasyBase));
+exports.VenueGeneralInfo = VenueGeneralInfo;

@@ -9,7 +9,7 @@ import { MotorcycleBaseListing } from "./motorcyclebaselisting";
 **/
 export class MotorcycleSearchResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=facets" })
-  facets?: Map<string, any>;
+  facets?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=listings", elemType: MotorcycleBaseListing })
   listings?: MotorcycleBaseListing[];
@@ -18,8 +18,8 @@ export class MotorcycleSearchResponse extends SpeakeasyBase {
   numFound?: number;
 
   @SpeakeasyMetadata({ data: "json, name=range_facets" })
-  rangeFacets?: Map<string, any>;
+  rangeFacets?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=stats" })
-  stats?: Map<string, any>;
+  stats?: Record<string, any>;
 }

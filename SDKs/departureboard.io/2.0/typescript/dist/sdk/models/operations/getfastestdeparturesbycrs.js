@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetFastestDeparturesByCrsResponse = exports.GetFastestDeparturesByCrsRequest = exports.GetFastestDeparturesByCrsQueryParams = exports.GetFastestDeparturesByCrsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetFastestDeparturesByCrsPathParams = /** @class */ (function (_super) {
     __extends(GetFastestDeparturesByCrsPathParams, _super);
     function GetFastestDeparturesByCrsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=CRS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=CRS" }),
         __metadata("design:type", String)
     ], GetFastestDeparturesByCrsPathParams.prototype, "crs", void 0);
     return GetFastestDeparturesByCrsPathParams;
-}(SpeakeasyBase));
-export { GetFastestDeparturesByCrsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetFastestDeparturesByCrsPathParams = GetFastestDeparturesByCrsPathParams;
 var GetFastestDeparturesByCrsQueryParams = /** @class */ (function (_super) {
     __extends(GetFastestDeparturesByCrsQueryParams, _super);
     function GetFastestDeparturesByCrsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=apiKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=apiKey" }),
         __metadata("design:type", String)
     ], GetFastestDeparturesByCrsQueryParams.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filterList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filterList" }),
         __metadata("design:type", String)
     ], GetFastestDeparturesByCrsQueryParams.prototype, "filterList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=serviceDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=serviceDetails" }),
         __metadata("design:type", Boolean)
     ], GetFastestDeparturesByCrsQueryParams.prototype, "serviceDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeOffset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeOffset" }),
         __metadata("design:type", Number)
     ], GetFastestDeparturesByCrsQueryParams.prototype, "timeOffset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeWindow" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeWindow" }),
         __metadata("design:type", Number)
     ], GetFastestDeparturesByCrsQueryParams.prototype, "timeWindow", void 0);
     return GetFastestDeparturesByCrsQueryParams;
-}(SpeakeasyBase));
-export { GetFastestDeparturesByCrsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetFastestDeparturesByCrsQueryParams = GetFastestDeparturesByCrsQueryParams;
 var GetFastestDeparturesByCrsRequest = /** @class */ (function (_super) {
     __extends(GetFastestDeparturesByCrsRequest, _super);
     function GetFastestDeparturesByCrsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetFastestDeparturesByCrsPathParams)
     ], GetFastestDeparturesByCrsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetFastestDeparturesByCrsQueryParams)
     ], GetFastestDeparturesByCrsRequest.prototype, "queryParams", void 0);
     return GetFastestDeparturesByCrsRequest;
-}(SpeakeasyBase));
-export { GetFastestDeparturesByCrsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetFastestDeparturesByCrsRequest = GetFastestDeparturesByCrsRequest;
 var GetFastestDeparturesByCrsResponse = /** @class */ (function (_super) {
     __extends(GetFastestDeparturesByCrsResponse, _super);
     function GetFastestDeparturesByCrsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetFastestDeparturesByCrsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetFastestDeparturesByCrsResponse.prototype, "statusCode", void 0);
     return GetFastestDeparturesByCrsResponse;
-}(SpeakeasyBase));
-export { GetFastestDeparturesByCrsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetFastestDeparturesByCrsResponse = GetFastestDeparturesByCrsResponse;

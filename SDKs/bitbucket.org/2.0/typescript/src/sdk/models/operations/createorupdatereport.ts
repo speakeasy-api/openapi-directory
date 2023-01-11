@@ -22,7 +22,7 @@ export class CreateOrUpdateReportRequest extends SpeakeasyBase {
   pathParams: CreateOrUpdateReportPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -34,8 +34,8 @@ export class CreateOrUpdateReportResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  report?: Map<string, any>;
+  report?: Record<string, any>;
 }

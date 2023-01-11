@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DefaultContinuousHyperParameterRange = void 0;
+var utils_1 = require("../../../internal/utils");
 // DefaultContinuousHyperParameterRange
 /**
  * Provides the name and default range of a continuous hyperparameter and whether the hyperparameter is tunable. A tunable hyperparameter can have its value determined during hyperparameter optimization (HPO).
@@ -33,21 +36,21 @@ var DefaultContinuousHyperParameterRange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isTunable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isTunable" }),
         __metadata("design:type", Boolean)
     ], DefaultContinuousHyperParameterRange.prototype, "isTunable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxValue" }),
         __metadata("design:type", Number)
     ], DefaultContinuousHyperParameterRange.prototype, "maxValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minValue" }),
         __metadata("design:type", Number)
     ], DefaultContinuousHyperParameterRange.prototype, "minValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DefaultContinuousHyperParameterRange.prototype, "name", void 0);
     return DefaultContinuousHyperParameterRange;
-}(SpeakeasyBase));
-export { DefaultContinuousHyperParameterRange };
+}(utils_1.SpeakeasyBase));
+exports.DefaultContinuousHyperParameterRange = DefaultContinuousHyperParameterRange;

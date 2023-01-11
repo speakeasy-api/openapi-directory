@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var VmwareVmDetailsBootOptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VmwareVmDetailsInput = exports.VmwareVmDetails = exports.VmwareVmDetailsPowerStateEnum = exports.VmwareVmDetailsBootOptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var VmwareVmDetailsBootOptionEnum;
 (function (VmwareVmDetailsBootOptionEnum) {
     VmwareVmDetailsBootOptionEnum["BootOptionUnspecified"] = "BOOT_OPTION_UNSPECIFIED";
     VmwareVmDetailsBootOptionEnum["Efi"] = "EFI";
     VmwareVmDetailsBootOptionEnum["Bios"] = "BIOS";
-})(VmwareVmDetailsBootOptionEnum || (VmwareVmDetailsBootOptionEnum = {}));
-export var VmwareVmDetailsPowerStateEnum;
+})(VmwareVmDetailsBootOptionEnum = exports.VmwareVmDetailsBootOptionEnum || (exports.VmwareVmDetailsBootOptionEnum = {}));
+var VmwareVmDetailsPowerStateEnum;
 (function (VmwareVmDetailsPowerStateEnum) {
     VmwareVmDetailsPowerStateEnum["PowerStateUnspecified"] = "POWER_STATE_UNSPECIFIED";
     VmwareVmDetailsPowerStateEnum["On"] = "ON";
     VmwareVmDetailsPowerStateEnum["Off"] = "OFF";
     VmwareVmDetailsPowerStateEnum["Suspended"] = "SUSPENDED";
-})(VmwareVmDetailsPowerStateEnum || (VmwareVmDetailsPowerStateEnum = {}));
+})(VmwareVmDetailsPowerStateEnum = exports.VmwareVmDetailsPowerStateEnum || (exports.VmwareVmDetailsPowerStateEnum = {}));
 // VmwareVmDetails
 /**
  * VmwareVmDetails describes a VM in vCenter.
@@ -46,60 +49,60 @@ var VmwareVmDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootOption" }),
         __metadata("design:type", String)
     ], VmwareVmDetails.prototype, "bootOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committedStorage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committedStorage" }),
         __metadata("design:type", String)
     ], VmwareVmDetails.prototype, "committedStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committedStorageMb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committedStorageMb" }),
         __metadata("design:type", String)
     ], VmwareVmDetails.prototype, "committedStorageMb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuCount" }),
         __metadata("design:type", Number)
     ], VmwareVmDetails.prototype, "cpuCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datacenterDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datacenterDescription" }),
         __metadata("design:type", String)
     ], VmwareVmDetails.prototype, "datacenterDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datacenterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datacenterId" }),
         __metadata("design:type", String)
     ], VmwareVmDetails.prototype, "datacenterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskCount" }),
         __metadata("design:type", Number)
     ], VmwareVmDetails.prototype, "diskCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], VmwareVmDetails.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=guestDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=guestDescription" }),
         __metadata("design:type", String)
     ], VmwareVmDetails.prototype, "guestDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memoryMb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memoryMb" }),
         __metadata("design:type", Number)
     ], VmwareVmDetails.prototype, "memoryMb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=powerState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=powerState" }),
         __metadata("design:type", String)
     ], VmwareVmDetails.prototype, "powerState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uuid" }),
         __metadata("design:type", String)
     ], VmwareVmDetails.prototype, "uuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmId" }),
         __metadata("design:type", String)
     ], VmwareVmDetails.prototype, "vmId", void 0);
     return VmwareVmDetails;
-}(SpeakeasyBase));
-export { VmwareVmDetails };
+}(utils_1.SpeakeasyBase));
+exports.VmwareVmDetails = VmwareVmDetails;
 // VmwareVmDetailsInput
 /**
  * VmwareVmDetails describes a VM in vCenter.
@@ -110,53 +113,53 @@ var VmwareVmDetailsInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committedStorage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committedStorage" }),
         __metadata("design:type", String)
     ], VmwareVmDetailsInput.prototype, "committedStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committedStorageMb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committedStorageMb" }),
         __metadata("design:type", String)
     ], VmwareVmDetailsInput.prototype, "committedStorageMb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuCount" }),
         __metadata("design:type", Number)
     ], VmwareVmDetailsInput.prototype, "cpuCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datacenterDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datacenterDescription" }),
         __metadata("design:type", String)
     ], VmwareVmDetailsInput.prototype, "datacenterDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datacenterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datacenterId" }),
         __metadata("design:type", String)
     ], VmwareVmDetailsInput.prototype, "datacenterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskCount" }),
         __metadata("design:type", Number)
     ], VmwareVmDetailsInput.prototype, "diskCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], VmwareVmDetailsInput.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=guestDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=guestDescription" }),
         __metadata("design:type", String)
     ], VmwareVmDetailsInput.prototype, "guestDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memoryMb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memoryMb" }),
         __metadata("design:type", Number)
     ], VmwareVmDetailsInput.prototype, "memoryMb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=powerState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=powerState" }),
         __metadata("design:type", String)
     ], VmwareVmDetailsInput.prototype, "powerState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uuid" }),
         __metadata("design:type", String)
     ], VmwareVmDetailsInput.prototype, "uuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmId" }),
         __metadata("design:type", String)
     ], VmwareVmDetailsInput.prototype, "vmId", void 0);
     return VmwareVmDetailsInput;
-}(SpeakeasyBase));
-export { VmwareVmDetailsInput };
+}(utils_1.SpeakeasyBase));
+exports.VmwareVmDetailsInput = VmwareVmDetailsInput;

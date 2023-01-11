@@ -16,29 +16,38 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { PostAddressAutocompleteRequest, PostAddressAutocompleteResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { SearchRequest, SearchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: PostAddressAutocompleteRequest = {
+const req: SearchRequest = {
   headers: {
-    galaxyApName: "rem",
-    galaxyApPassword: "facilis",
-    galaxySearchType: "consequatur",
+    galaxyApName: "sit",
+    galaxyApPassword: "voluptas",
+    galaxySearchType: "culpa",
   },
   request: {
-    input: "illum",
+    address: {
+      addressLine1: "expedita",
+      addressLine2: "consequuntur",
+    },
+    age: 96.199997,
+    dob: "voluptas",
+    email: "fugit",
+    firstName: "et",
+    lastName: "nihil",
+    middleName: "rerum",
+    phoneNumber: "dicta",
   },
 };
 
-sdk.sdk.postAddressAutocomplete(req).then((res: PostAddressAutocompleteResponse | AxiosError) => {
+sdk.search(req).then((res: SearchResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -49,11 +58,11 @@ sdk.sdk.postAddressAutocomplete(req).then((res: PostAddressAutocompleteResponse 
 
 ### SDK SDK
 
+* `search` - Search
 * `postAddressAutocomplete` - Search
 * `postContactEnrich` - Search
 * `postEmailEnrich` - Search
 * `postPhoneEnrich` - Search
-* `search` - Search
 
 <!-- End SDK Available Operations -->
 

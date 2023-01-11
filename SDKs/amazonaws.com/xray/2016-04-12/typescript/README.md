@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BatchGetTracesRequest, BatchGetTracesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,26 +33,26 @@ const sdk = new SDK(WithSecurity(
     
 const req: BatchGetTracesRequest = {
   queryParams: {
-    nextToken: "autem",
+    nextToken: "sit",
   },
   headers: {
-    xAmzAlgorithm: "aliquam",
-    xAmzContentSha256: "beatae",
-    xAmzCredential: "atque",
-    xAmzDate: "enim",
-    xAmzSecurityToken: "facere",
-    xAmzSignature: "est",
-    xAmzSignedHeaders: "quod",
+    xAmzAlgorithm: "voluptas",
+    xAmzContentSha256: "culpa",
+    xAmzCredential: "expedita",
+    xAmzDate: "consequuntur",
+    xAmzSecurityToken: "dolor",
+    xAmzSignature: "expedita",
+    xAmzSignedHeaders: "voluptas",
   },
   request: {
-    nextToken: "tempore",
+    nextToken: "fugit",
     traceIds: [
-      "ullam",
+      "nihil",
     ],
   },
 };
 
-sdk.sdk.batchGetTraces(req).then((res: BatchGetTracesResponse | AxiosError) => {
+sdk.batchGetTraces(req).then((res: BatchGetTracesResponse | AxiosError) => {
    // handle response
 });
 ```

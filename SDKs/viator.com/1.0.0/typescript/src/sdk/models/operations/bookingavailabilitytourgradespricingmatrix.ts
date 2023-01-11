@@ -148,10 +148,10 @@ export class BookingAvailabilityTourgradesPricingmatrix200ApplicationJson extend
   errorType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraInfo" })
-  extraInfo?: Map<string, any>;
+  extraInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=extraObject" })
-  extraObject?: Map<string, any>;
+  extraObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=success" })
   success?: boolean;
@@ -181,5 +181,5 @@ export class BookingAvailabilityTourgradesPricingmatrixResponse extends Speakeas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  bookingAvailabilityTourgradesPricingmatrix200ApplicationJsonObject?: BookingAvailabilityTourgradesPricingmatrix200ApplicationJson;
+  bookingAvailabilityTourgradesPricingmatrix200ApplicationJSONObject?: BookingAvailabilityTourgradesPricingmatrix200ApplicationJson;
 }

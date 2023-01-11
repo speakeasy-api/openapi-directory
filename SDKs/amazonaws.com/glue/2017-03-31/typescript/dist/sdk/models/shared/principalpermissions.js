@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataLakePrincipal } from "./datalakeprincipal";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PrincipalPermissions = void 0;
+var utils_1 = require("../../../internal/utils");
+var datalakeprincipal_1 = require("./datalakeprincipal");
 // PrincipalPermissions
 /**
  * Permissions granted to a principal.
@@ -34,13 +37,13 @@ var PrincipalPermissions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Permissions" }),
         __metadata("design:type", Array)
     ], PrincipalPermissions.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Principal" }),
-        __metadata("design:type", DataLakePrincipal)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Principal" }),
+        __metadata("design:type", datalakeprincipal_1.DataLakePrincipal)
     ], PrincipalPermissions.prototype, "principal", void 0);
     return PrincipalPermissions;
-}(SpeakeasyBase));
-export { PrincipalPermissions };
+}(utils_1.SpeakeasyBase));
+exports.PrincipalPermissions = PrincipalPermissions;

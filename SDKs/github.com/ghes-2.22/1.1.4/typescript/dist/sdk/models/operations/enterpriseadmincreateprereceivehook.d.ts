@@ -3,10 +3,10 @@ import * as shared from "../shared";
 export declare class EnterpriseAdminCreatePreReceiveHookRequestBody extends SpeakeasyBase {
     allowDownstreamConfiguration?: boolean;
     enforcement?: string;
-    environment: Map<string, any>;
+    environment: Record<string, any>;
     name: string;
     script: string;
-    scriptRepository: Map<string, any>;
+    scriptRepository: Record<string, any>;
 }
 export declare class EnterpriseAdminCreatePreReceiveHookRequest extends SpeakeasyBase {
     request?: EnterpriseAdminCreatePreReceiveHookRequestBody;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ImportCryptoKeyVersionRequestAlgorithmEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportCryptoKeyVersionRequest = exports.ImportCryptoKeyVersionRequestAlgorithmEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ImportCryptoKeyVersionRequestAlgorithmEnum;
 (function (ImportCryptoKeyVersionRequestAlgorithmEnum) {
     ImportCryptoKeyVersionRequestAlgorithmEnum["CryptoKeyVersionAlgorithmUnspecified"] = "CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED";
     ImportCryptoKeyVersionRequestAlgorithmEnum["GoogleSymmetricEncryption"] = "GOOGLE_SYMMETRIC_ENCRYPTION";
@@ -54,7 +57,7 @@ export var ImportCryptoKeyVersionRequestAlgorithmEnum;
     ImportCryptoKeyVersionRequestAlgorithmEnum["HmacSha512"] = "HMAC_SHA512";
     ImportCryptoKeyVersionRequestAlgorithmEnum["HmacSha224"] = "HMAC_SHA224";
     ImportCryptoKeyVersionRequestAlgorithmEnum["ExternalSymmetricEncryption"] = "EXTERNAL_SYMMETRIC_ENCRYPTION";
-})(ImportCryptoKeyVersionRequestAlgorithmEnum || (ImportCryptoKeyVersionRequestAlgorithmEnum = {}));
+})(ImportCryptoKeyVersionRequestAlgorithmEnum = exports.ImportCryptoKeyVersionRequestAlgorithmEnum || (exports.ImportCryptoKeyVersionRequestAlgorithmEnum = {}));
 // ImportCryptoKeyVersionRequest
 /**
  * Request message for KeyManagementService.ImportCryptoKeyVersion.
@@ -65,25 +68,25 @@ var ImportCryptoKeyVersionRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=algorithm" }),
         __metadata("design:type", String)
     ], ImportCryptoKeyVersionRequest.prototype, "algorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cryptoKeyVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cryptoKeyVersion" }),
         __metadata("design:type", String)
     ], ImportCryptoKeyVersionRequest.prototype, "cryptoKeyVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importJob" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importJob" }),
         __metadata("design:type", String)
     ], ImportCryptoKeyVersionRequest.prototype, "importJob", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rsaAesWrappedKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rsaAesWrappedKey" }),
         __metadata("design:type", String)
     ], ImportCryptoKeyVersionRequest.prototype, "rsaAesWrappedKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wrappedKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wrappedKey" }),
         __metadata("design:type", String)
     ], ImportCryptoKeyVersionRequest.prototype, "wrappedKey", void 0);
     return ImportCryptoKeyVersionRequest;
-}(SpeakeasyBase));
-export { ImportCryptoKeyVersionRequest };
+}(utils_1.SpeakeasyBase));
+exports.ImportCryptoKeyVersionRequest = ImportCryptoKeyVersionRequest;

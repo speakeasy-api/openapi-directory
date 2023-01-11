@@ -27,5 +27,5 @@ export class SuperLine extends SpeakeasyBase {
   percentage?: number;
 
   @SpeakeasyMetadata({ data: "json, name=SuperMembershipID" })
-  superMembershipId?: string;
+  superMembershipID?: string;
 }

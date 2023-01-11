@@ -1,62 +1,63 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class GetAvailableUpgradesPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=cluster_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=cluster_id" })
   clusterId: string;
 }
 
 
-export class GetAvailableUpgradesRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: GetAvailableUpgradesPathParams;
-}
-
-
 export class GetAvailableUpgrades200ApplicationJsonAvailableUpgradeVersions extends SpeakeasyBase {
-  @Metadata({ data: "json, name=kubernetes_version" })
+  @SpeakeasyMetadata({ data: "json, name=kubernetes_version" })
   kubernetesVersion?: string;
 
-  @Metadata({ data: "json, name=slug" })
+  @SpeakeasyMetadata({ data: "json, name=slug" })
   slug?: string;
 }
 
 
 export class GetAvailableUpgrades200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=available_upgrade_versions", elemType: operations.GetAvailableUpgrades200ApplicationJsonAvailableUpgradeVersions })
+  @SpeakeasyMetadata({ data: "json, name=available_upgrade_versions", elemType: GetAvailableUpgrades200ApplicationJsonAvailableUpgradeVersions })
   availableUpgradeVersions?: GetAvailableUpgrades200ApplicationJsonAvailableUpgradeVersions[];
 }
 
 
 export class GetAvailableUpgrades401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class GetAvailableUpgradesRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: GetAvailableUpgradesPathParams;
+}
+
+
 export class GetAvailableUpgradesResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  getAvailableUpgrades200ApplicationJsonObject?: GetAvailableUpgrades200ApplicationJson;
+  @SpeakeasyMetadata()
+  getAvailableUpgrades200ApplicationJSONObject?: GetAvailableUpgrades200ApplicationJson;
 
-  @Metadata()
-  getAvailableUpgrades401ApplicationJsonObject?: GetAvailableUpgrades401ApplicationJson;
+  @SpeakeasyMetadata()
+  getAvailableUpgrades401ApplicationJSONObject?: GetAvailableUpgrades401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

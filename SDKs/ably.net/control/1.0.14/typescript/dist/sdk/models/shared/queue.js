@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Queue = void 0;
+var utils_1 = require("../../../internal/utils");
 var Queue = /** @class */ (function (_super) {
     __extends(Queue, _super);
     function Queue() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxLength" }),
         __metadata("design:type", Number)
     ], Queue.prototype, "maxLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Queue.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], Queue.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ttl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ttl" }),
         __metadata("design:type", Number)
     ], Queue.prototype, "ttl", void 0);
     return Queue;
-}(SpeakeasyBase));
-export { Queue };
+}(utils_1.SpeakeasyBase));
+exports.Queue = Queue;

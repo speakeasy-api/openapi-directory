@@ -12,7 +12,7 @@ import { LoadBalancerTlsCertificateSummary } from "./loadbalancertlscertificates
 **/
 export declare class LoadBalancer extends SpeakeasyBase {
     arn?: string;
-    configurationOptions?: Map<string, string>;
+    configurationOptions?: Record<string, string>;
     createdAt?: Date;
     dnsName?: string;
     healthCheckPath?: string;

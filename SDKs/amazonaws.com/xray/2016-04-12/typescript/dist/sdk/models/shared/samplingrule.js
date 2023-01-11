@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SamplingRule = void 0;
+var utils_1 = require("../../../internal/utils");
 // SamplingRule
 /**
  * A sampling rule that services use to decide whether to instrument a request. Rule fields can match properties of the service, or properties of a request. The service can ignore rules that don't match its properties.
@@ -33,57 +36,57 @@ var SamplingRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Attributes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Attributes" }),
+        __metadata("design:type", Object)
     ], SamplingRule.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FixedRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FixedRate" }),
         __metadata("design:type", Number)
     ], SamplingRule.prototype, "fixedRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HTTPMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HTTPMethod" }),
         __metadata("design:type", String)
     ], SamplingRule.prototype, "httpMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Host" }),
         __metadata("design:type", String)
     ], SamplingRule.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Priority" }),
         __metadata("design:type", Number)
     ], SamplingRule.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReservoirSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReservoirSize" }),
         __metadata("design:type", Number)
     ], SamplingRule.prototype, "reservoirSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceARN" }),
         __metadata("design:type", String)
-    ], SamplingRule.prototype, "resourceArn", void 0);
+    ], SamplingRule.prototype, "resourceARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleARN" }),
         __metadata("design:type", String)
-    ], SamplingRule.prototype, "ruleArn", void 0);
+    ], SamplingRule.prototype, "ruleARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleName" }),
         __metadata("design:type", String)
     ], SamplingRule.prototype, "ruleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceName" }),
         __metadata("design:type", String)
     ], SamplingRule.prototype, "serviceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceType" }),
         __metadata("design:type", String)
     ], SamplingRule.prototype, "serviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=URLPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=URLPath" }),
         __metadata("design:type", String)
     ], SamplingRule.prototype, "urlPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Version" }),
         __metadata("design:type", Number)
     ], SamplingRule.prototype, "version", void 0);
     return SamplingRule;
-}(SpeakeasyBase));
-export { SamplingRule };
+}(utils_1.SpeakeasyBase));
+exports.SamplingRule = SamplingRule;

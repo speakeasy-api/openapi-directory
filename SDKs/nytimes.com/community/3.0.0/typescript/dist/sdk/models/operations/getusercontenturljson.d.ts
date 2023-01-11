@@ -12,17 +12,17 @@ export declare class GetUserContentUrlJson200ApplicationJsonDebug extends Speake
 export declare class GetUserContentUrlJson200ApplicationJsonResultsComments extends SpeakeasyBase {
     approveDate?: string;
     commentBody?: string;
-    commentId?: number;
+    commentID?: number;
     commentSequence?: number;
     commentTitle?: string;
     commentType?: string;
     createDate?: string;
     depth?: number;
     editorsSelection?: boolean;
-    parentId?: any;
+    parentID?: any;
     parentUserDisplayName?: any;
-    permId?: string;
-    picUrl?: string;
+    permID?: string;
+    picURL?: string;
     recommendations?: number;
     recommendedFlag?: any;
     replies?: any[];
@@ -34,14 +34,14 @@ export declare class GetUserContentUrlJson200ApplicationJsonResultsComments exte
     trusted?: number;
     updateDate?: string;
     userDisplayName?: string;
-    userId?: number;
+    userID?: number;
     userLocation?: string;
     userTitle?: any;
-    userUrl?: any;
+    userURL?: any;
 }
 export declare class GetUserContentUrlJson200ApplicationJsonResults extends SpeakeasyBase {
     apiTimestamp?: string;
-    callerId?: any;
+    callerID?: any;
     comments?: GetUserContentUrlJson200ApplicationJsonResultsComments[];
     depthLimit?: number;
     filter?: string;
@@ -73,6 +73,6 @@ export declare class GetUserContentUrlJsonRequest extends SpeakeasyBase {
 }
 export declare class GetUserContentUrlJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getUserContentUrlJson200ApplicationJsonObject?: GetUserContentUrlJson200ApplicationJson;
+    getUserContentUrlJSON200ApplicationJSONObject?: GetUserContentUrlJson200ApplicationJson;
     statusCode: number;
 }

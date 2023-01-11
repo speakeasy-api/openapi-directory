@@ -1,4 +1,7 @@
-export var FailureTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FailureTypeEnum = void 0;
+var FailureTypeEnum;
 (function (FailureTypeEnum) {
     FailureTypeEnum["JobFailed"] = "JobFailed";
     FailureTypeEnum["ConfigurationError"] = "ConfigurationError";
@@ -6,4 +9,4 @@ export var FailureTypeEnum;
     FailureTypeEnum["RevisionOutOfSync"] = "RevisionOutOfSync";
     FailureTypeEnum["RevisionUnavailable"] = "RevisionUnavailable";
     FailureTypeEnum["SystemUnavailable"] = "SystemUnavailable";
-})(FailureTypeEnum || (FailureTypeEnum = {}));
+})(FailureTypeEnum = exports.FailureTypeEnum || (exports.FailureTypeEnum = {}));

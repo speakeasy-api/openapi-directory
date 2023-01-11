@@ -38,7 +38,7 @@ export class BillsSearchBillsGetQueryParams extends SpeakeasyBase {
   session?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: shared.BillSortOptionEnum;
+  sort?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sponsor" })
   sponsor?: string;

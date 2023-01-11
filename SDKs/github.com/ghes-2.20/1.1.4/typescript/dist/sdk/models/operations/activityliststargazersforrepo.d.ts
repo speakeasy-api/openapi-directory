@@ -14,8 +14,8 @@ export declare class ActivityListStargazersForRepoRequest extends SpeakeasyBase 
 }
 export declare class ActivityListStargazersForRepoResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    activityListStargazersForRepo200ApplicationJsonAnyOf?: any;
+    activityListStargazersForRepo200ApplicationJSONAnyOf?: any;
     validationError?: shared.ValidationError;
 }

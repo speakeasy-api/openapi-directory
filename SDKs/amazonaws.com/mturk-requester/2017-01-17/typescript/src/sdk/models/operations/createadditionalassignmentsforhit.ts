@@ -48,7 +48,7 @@ export class CreateAdditionalAssignmentsForHitResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createAdditionalAssignmentsForHitResponse?: Map<string, any>;
+  createAdditionalAssignmentsForHITResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   requestError?: any;

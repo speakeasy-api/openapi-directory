@@ -41,8 +41,8 @@ export class GetTeamsUsernameProjectsProjectKeyResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  project?: Map<string, any>;
+  project?: Record<string, any>;
 }

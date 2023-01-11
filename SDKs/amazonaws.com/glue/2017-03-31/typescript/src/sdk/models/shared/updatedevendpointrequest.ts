@@ -5,7 +5,7 @@ import { DevEndpointCustomLibraries } from "./devendpointcustomlibraries";
 
 export class UpdateDevEndpointRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AddArguments" })
-  addArguments?: Map<string, string>;
+  addArguments?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=AddPublicKeys" })
   addPublicKeys?: string[];

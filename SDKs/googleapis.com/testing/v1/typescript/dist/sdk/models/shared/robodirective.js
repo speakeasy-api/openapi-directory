@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RoboDirectiveActionTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RoboDirective = exports.RoboDirectiveActionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RoboDirectiveActionTypeEnum;
 (function (RoboDirectiveActionTypeEnum) {
     RoboDirectiveActionTypeEnum["ActionTypeUnspecified"] = "ACTION_TYPE_UNSPECIFIED";
     RoboDirectiveActionTypeEnum["SingleClick"] = "SINGLE_CLICK";
     RoboDirectiveActionTypeEnum["EnterText"] = "ENTER_TEXT";
     RoboDirectiveActionTypeEnum["Ignore"] = "IGNORE";
-})(RoboDirectiveActionTypeEnum || (RoboDirectiveActionTypeEnum = {}));
+})(RoboDirectiveActionTypeEnum = exports.RoboDirectiveActionTypeEnum || (exports.RoboDirectiveActionTypeEnum = {}));
 // RoboDirective
 /**
  * Directs Robo to interact with a specific UI element if it is encountered during the crawl. Currently, Robo can perform text entry or element click.
@@ -40,17 +43,17 @@ var RoboDirective = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionType" }),
         __metadata("design:type", String)
     ], RoboDirective.prototype, "actionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputText" }),
         __metadata("design:type", String)
     ], RoboDirective.prototype, "inputText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceName" }),
         __metadata("design:type", String)
     ], RoboDirective.prototype, "resourceName", void 0);
     return RoboDirective;
-}(SpeakeasyBase));
-export { RoboDirective };
+}(utils_1.SpeakeasyBase));
+exports.RoboDirective = RoboDirective;

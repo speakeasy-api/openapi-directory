@@ -8,13 +8,13 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class PaymentInitiationPaymentCreateRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=amount" })
-  amount: Map<string, any>;
+  amount: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=client_id" })
   clientId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=options" })
-  options?: Map<string, any>;
+  options?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=recipient_id" })
   recipientId: string;
@@ -23,7 +23,7 @@ export class PaymentInitiationPaymentCreateRequest extends SpeakeasyBase {
   reference: string;
 
   @SpeakeasyMetadata({ data: "json, name=schedule" })
-  schedule?: Map<string, any>;
+  schedule?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=secret" })
   secret?: string;

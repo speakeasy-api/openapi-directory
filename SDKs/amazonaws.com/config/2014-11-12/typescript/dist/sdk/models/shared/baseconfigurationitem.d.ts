@@ -17,6 +17,6 @@ export declare class BaseConfigurationItem extends SpeakeasyBase {
     resourceId?: string;
     resourceName?: string;
     resourceType?: ResourceTypeEnum;
-    supplementaryConfiguration?: Map<string, string>;
+    supplementaryConfiguration?: Record<string, string>;
     version?: string;
 }

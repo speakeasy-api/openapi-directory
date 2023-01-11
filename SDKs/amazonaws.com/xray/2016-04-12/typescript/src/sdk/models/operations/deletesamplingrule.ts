@@ -29,7 +29,7 @@ export class DeleteSamplingRuleHeaders extends SpeakeasyBase {
 
 export class DeleteSamplingRuleRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=RuleARN" })
-  ruleArn?: string;
+  ruleARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=RuleName" })
   ruleName?: string;

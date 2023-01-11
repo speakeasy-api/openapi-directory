@@ -7,6 +7,9 @@ import { IssueEventMilestone } from "./issueeventmilestone";
 import { IssueEventProjectCard } from "./issueeventprojectcard";
 import { IssueEventRename } from "./issueeventrename";
 import { Team } from "./team";
+/**
+ * Simple User
+**/
 export declare class IssueEventSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

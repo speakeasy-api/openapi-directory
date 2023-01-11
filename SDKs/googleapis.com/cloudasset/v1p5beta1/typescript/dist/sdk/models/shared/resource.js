@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Resource = void 0;
+var utils_1 = require("../../../internal/utils");
 // Resource
 /**
  * A representation of a Google Cloud resource.
@@ -33,29 +36,29 @@ var Resource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], Resource.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discoveryDocumentUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discoveryDocumentUri" }),
         __metadata("design:type", String)
     ], Resource.prototype, "discoveryDocumentUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discoveryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discoveryName" }),
         __metadata("design:type", String)
     ], Resource.prototype, "discoveryName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent" }),
         __metadata("design:type", String)
     ], Resource.prototype, "parent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceUrl" }),
         __metadata("design:type", String)
     ], Resource.prototype, "resourceUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], Resource.prototype, "version", void 0);
     return Resource;
-}(SpeakeasyBase));
-export { Resource };
+}(utils_1.SpeakeasyBase));
+exports.Resource = Resource;

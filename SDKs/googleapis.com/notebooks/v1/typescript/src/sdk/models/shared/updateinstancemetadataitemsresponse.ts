@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class UpdateInstanceMetadataItemsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=items" })
-  items?: Map<string, string>;
+  items?: Record<string, string>;
 }

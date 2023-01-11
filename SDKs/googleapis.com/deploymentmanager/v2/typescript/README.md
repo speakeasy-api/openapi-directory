@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeploymentmanagerDeploymentsCancelPreviewRequest, DeploymentmanagerDeploymentsCancelPreviewResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,31 +31,31 @@ const req: DeploymentmanagerDeploymentsCancelPreviewRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   pathParams: {
-    deployment: "velit",
-    project: "voluptatem",
+    deployment: "sit",
+    project: "voluptas",
   },
   queryParams: {
-    dollarXgafv: "1",
-    accessToken: "aut",
-    alt: "json",
-    callback: "facilis",
-    fields: "alias",
-    key: "voluptatibus",
-    oauthToken: "sunt",
-    prettyPrint: true,
-    quotaUser: "provident",
-    uploadType: "dicta",
-    uploadProtocol: "saepe",
+    dollarXgafv: "2",
+    accessToken: "expedita",
+    alt: "proto",
+    callback: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    prettyPrint: false,
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
-    fingerprint: "in",
+    fingerprint: "debitis",
   },
 };
 

@@ -10,6 +10,6 @@ export declare class AndroidTest extends SpeakeasyBase {
     androidAppInfo?: AndroidAppInfo;
     androidInstrumentationTest?: AndroidInstrumentationTest;
     androidRoboTest?: AndroidRoboTest;
-    androidTestLoop?: Map<string, any>;
+    androidTestLoop?: Record<string, any>;
     testTimeout?: Duration;
 }

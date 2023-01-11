@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,95 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CategoryGoalTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Category = exports.CategoryGoalTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CategoryGoalTypeEnum;
 (function (CategoryGoalTypeEnum) {
     CategoryGoalTypeEnum["Tb"] = "TB";
     CategoryGoalTypeEnum["Tbd"] = "TBD";
     CategoryGoalTypeEnum["Mf"] = "MF";
     CategoryGoalTypeEnum["Need"] = "NEED";
-})(CategoryGoalTypeEnum || (CategoryGoalTypeEnum = {}));
+    CategoryGoalTypeEnum["Null"] = "null";
+})(CategoryGoalTypeEnum = exports.CategoryGoalTypeEnum || (exports.CategoryGoalTypeEnum = {}));
 var Category = /** @class */ (function (_super) {
     __extends(Category, _super);
     function Category() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activity" }),
         __metadata("design:type", Number)
     ], Category.prototype, "activity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balance" }),
         __metadata("design:type", Number)
     ], Category.prototype, "balance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=budgeted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=budgeted" }),
         __metadata("design:type", Number)
     ], Category.prototype, "budgeted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category_group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category_group_id" }),
         __metadata("design:type", String)
     ], Category.prototype, "categoryGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], Category.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=goal_creation_month" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=goal_creation_month" }),
         __metadata("design:type", Date)
     ], Category.prototype, "goalCreationMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=goal_months_to_budget" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=goal_months_to_budget" }),
         __metadata("design:type", Number)
     ], Category.prototype, "goalMonthsToBudget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=goal_overall_funded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=goal_overall_funded" }),
         __metadata("design:type", Number)
     ], Category.prototype, "goalOverallFunded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=goal_overall_left" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=goal_overall_left" }),
         __metadata("design:type", Number)
     ], Category.prototype, "goalOverallLeft", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=goal_percentage_complete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=goal_percentage_complete" }),
         __metadata("design:type", Number)
     ], Category.prototype, "goalPercentageComplete", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=goal_target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=goal_target" }),
         __metadata("design:type", Number)
     ], Category.prototype, "goalTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=goal_target_month" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=goal_target_month" }),
         __metadata("design:type", Date)
     ], Category.prototype, "goalTargetMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=goal_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=goal_type" }),
         __metadata("design:type", String)
     ], Category.prototype, "goalType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=goal_under_funded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=goal_under_funded" }),
         __metadata("design:type", Number)
     ], Category.prototype, "goalUnderFunded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hidden" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hidden" }),
         __metadata("design:type", Boolean)
     ], Category.prototype, "hidden", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Category.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Category.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=note" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=note" }),
         __metadata("design:type", String)
     ], Category.prototype, "note", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=original_category_group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=original_category_group_id" }),
         __metadata("design:type", String)
     ], Category.prototype, "originalCategoryGroupId", void 0);
     return Category;
-}(SpeakeasyBase));
-export { Category };
+}(utils_1.SpeakeasyBase));
+exports.Category = Category;

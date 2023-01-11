@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SummaryEnumCallStateEnum = void 0;
+var SummaryEnumCallStateEnum;
+(function (SummaryEnumCallStateEnum) {
+    SummaryEnumCallStateEnum["Ringing"] = "ringing";
+    SummaryEnumCallStateEnum["Completed"] = "completed";
+    SummaryEnumCallStateEnum["Busy"] = "busy";
+    SummaryEnumCallStateEnum["Fail"] = "fail";
+    SummaryEnumCallStateEnum["Noanswer"] = "noanswer";
+    SummaryEnumCallStateEnum["Canceled"] = "canceled";
+    SummaryEnumCallStateEnum["Answered"] = "answered";
+    SummaryEnumCallStateEnum["Undialed"] = "undialed";
+})(SummaryEnumCallStateEnum = exports.SummaryEnumCallStateEnum || (exports.SummaryEnumCallStateEnum = {}));

@@ -27,7 +27,7 @@ export declare class CreateRobotApplicationRequestBody extends SpeakeasyBase {
     name: string;
     robotSoftwareSuite: CreateRobotApplicationRequestBodyRobotSoftwareSuite;
     sources?: shared.SourceConfig[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateRobotApplicationRequest extends SpeakeasyBase {
     headers: CreateRobotApplicationHeaders;

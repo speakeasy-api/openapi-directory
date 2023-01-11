@@ -17,7 +17,7 @@ export class ProtocolSnmpv3GetConfigRequest extends SpeakeasyBase {
 
 export class ProtocolSnmpv3GetConfigResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configSnmPv3?: shared.ConfigSnmPv3;
+  configSNMPv3?: shared.ConfigSnmPv3;
 
   @SpeakeasyMetadata()
   contentType: string;

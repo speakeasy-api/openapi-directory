@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetProtocolsResponse = exports.SetProtocolsRequest = exports.SetProtocolsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SetProtocolsPathParams = /** @class */ (function (_super) {
     __extends(SetProtocolsPathParams, _super);
     function SetProtocolsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], SetProtocolsPathParams.prototype, "agentNum", void 0);
     return SetProtocolsPathParams;
-}(SpeakeasyBase));
-export { SetProtocolsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SetProtocolsPathParams = SetProtocolsPathParams;
 var SetProtocolsRequest = /** @class */ (function (_super) {
     __extends(SetProtocolsRequest, _super);
     function SetProtocolsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SetProtocolsPathParams)
     ], SetProtocolsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Array)
     ], SetProtocolsRequest.prototype, "request", void 0);
     return SetProtocolsRequest;
-}(SpeakeasyBase));
-export { SetProtocolsRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetProtocolsRequest = SetProtocolsRequest;
 var SetProtocolsResponse = /** @class */ (function (_super) {
     __extends(SetProtocolsResponse, _super);
     function SetProtocolsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SetProtocolsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SetProtocolsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], SetProtocolsResponse.prototype, "setProtocols200ApplicationJsonStringIntegers", void 0);
+    ], SetProtocolsResponse.prototype, "setProtocols200ApplicationJSONStringIntegers", void 0);
     return SetProtocolsResponse;
-}(SpeakeasyBase));
-export { SetProtocolsResponse };
+}(utils_1.SpeakeasyBase));
+exports.SetProtocolsResponse = SetProtocolsResponse;

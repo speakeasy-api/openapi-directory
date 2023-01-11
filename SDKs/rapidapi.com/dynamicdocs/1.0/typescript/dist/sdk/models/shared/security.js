@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Security = exports.SchemeXRapidApiKey = exports.SchemeAdvSecurityToken = void 0;
+var utils_1 = require("../../../internal/utils");
 var SchemeAdvSecurityToken = /** @class */ (function (_super) {
     __extends(SchemeAdvSecurityToken, _super);
     function SchemeAdvSecurityToken() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, name=ADVICEment API Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, name=ADVICEment API Key" }),
         __metadata("design:type", String)
     ], SchemeAdvSecurityToken.prototype, "apiKey", void 0);
     return SchemeAdvSecurityToken;
-}(SpeakeasyBase));
-export { SchemeAdvSecurityToken };
+}(utils_1.SpeakeasyBase));
+exports.SchemeAdvSecurityToken = SchemeAdvSecurityToken;
 var SchemeXRapidApiKey = /** @class */ (function (_super) {
     __extends(SchemeXRapidApiKey, _super);
     function SchemeXRapidApiKey() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, name=RapidAPI.com API Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, name=RapidAPI.com API Key" }),
         __metadata("design:type", String)
     ], SchemeXRapidApiKey.prototype, "apiKey", void 0);
     return SchemeXRapidApiKey;
-}(SpeakeasyBase));
-export { SchemeXRapidApiKey };
+}(utils_1.SpeakeasyBase));
+exports.SchemeXRapidApiKey = SchemeXRapidApiKey;
 var Security = /** @class */ (function (_super) {
     __extends(Security, _super);
     function Security() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", SchemeAdvSecurityToken)
     ], Security.prototype, "advSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", SchemeXRapidApiKey)
-    ], Security.prototype, "xRapidApiKey", void 0);
+    ], Security.prototype, "xRapidAPIKey", void 0);
     return Security;
-}(SpeakeasyBase));
-export { Security };
+}(utils_1.SpeakeasyBase));
+exports.Security = Security;

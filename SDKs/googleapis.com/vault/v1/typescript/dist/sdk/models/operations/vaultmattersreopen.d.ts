@@ -23,7 +23,7 @@ export declare class VaultMattersReopenSecurity extends SpeakeasyBase {
 export declare class VaultMattersReopenRequest extends SpeakeasyBase {
     pathParams: VaultMattersReopenPathParams;
     queryParams: VaultMattersReopenQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: VaultMattersReopenSecurity;
 }
 export declare class VaultMattersReopenResponse extends SpeakeasyBase {

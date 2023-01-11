@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { SvgconvertRequest, SvgconvertResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -30,13 +29,13 @@ const sdk = new SDK();
 const req: SvgconvertRequest = {
   request: {
     file: {
-      content: "porro".encode(),
-      file: "sit",
+      content: "sit".encode(),
+      file: "voluptas",
     },
   },
 };
 
-sdk.sdk.svgconvert(req).then((res: SvgconvertResponse | AxiosError) => {
+sdk.svgconvert(req).then((res: SvgconvertResponse | AxiosError) => {
    // handle response
 });
 ```

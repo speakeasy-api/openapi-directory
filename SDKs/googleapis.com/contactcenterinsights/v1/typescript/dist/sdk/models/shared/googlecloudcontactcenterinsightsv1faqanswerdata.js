@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1FaqAnswerData = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudContactcenterinsightsV1FaqAnswerData
 /**
  * Agent Assist frequently-asked-question answer data.
@@ -33,29 +36,29 @@ var GoogleCloudContactcenterinsightsV1FaqAnswerData = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=answer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=answer" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1FaqAnswerData.prototype, "answer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confidenceScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confidenceScore" }),
         __metadata("design:type", Number)
     ], GoogleCloudContactcenterinsightsV1FaqAnswerData.prototype, "confidenceScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], GoogleCloudContactcenterinsightsV1FaqAnswerData.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryRecord" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryRecord" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1FaqAnswerData.prototype, "queryRecord", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=question" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=question" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1FaqAnswerData.prototype, "question", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1FaqAnswerData.prototype, "source", void 0);
     return GoogleCloudContactcenterinsightsV1FaqAnswerData;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1FaqAnswerData };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1FaqAnswerData = GoogleCloudContactcenterinsightsV1FaqAnswerData;

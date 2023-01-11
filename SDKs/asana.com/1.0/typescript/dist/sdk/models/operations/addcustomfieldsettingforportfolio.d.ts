@@ -10,7 +10,7 @@ export declare class AddCustomFieldSettingForPortfolioRequestBody extends Speake
     data?: shared.AddCustomFieldSettingRequest;
 }
 export declare class AddCustomFieldSettingForPortfolio200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class AddCustomFieldSettingForPortfolioRequest extends SpeakeasyBase {
     pathParams: AddCustomFieldSettingForPortfolioPathParams;
@@ -21,5 +21,5 @@ export declare class AddCustomFieldSettingForPortfolioResponse extends Speakeasy
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    addCustomFieldSettingForPortfolio200ApplicationJsonObject?: AddCustomFieldSettingForPortfolio200ApplicationJson;
+    addCustomFieldSettingForPortfolio200ApplicationJSONObject?: AddCustomFieldSettingForPortfolio200ApplicationJson;
 }

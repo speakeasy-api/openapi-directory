@@ -22,7 +22,7 @@ export class HeadAtmsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  noResponse?: Map<string, any>;
+  noResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

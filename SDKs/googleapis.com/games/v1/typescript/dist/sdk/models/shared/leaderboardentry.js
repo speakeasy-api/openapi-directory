@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Player } from "./player";
-export var LeaderboardEntryTimeSpanEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LeaderboardEntry = exports.LeaderboardEntryTimeSpanEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var player_1 = require("./player");
+var LeaderboardEntryTimeSpanEnum;
 (function (LeaderboardEntryTimeSpanEnum) {
     LeaderboardEntryTimeSpanEnum["ScoreTimeSpanUnspecified"] = "SCORE_TIME_SPAN_UNSPECIFIED";
     LeaderboardEntryTimeSpanEnum["AllTime"] = "ALL_TIME";
     LeaderboardEntryTimeSpanEnum["Weekly"] = "WEEKLY";
     LeaderboardEntryTimeSpanEnum["Daily"] = "DAILY";
-})(LeaderboardEntryTimeSpanEnum || (LeaderboardEntryTimeSpanEnum = {}));
+})(LeaderboardEntryTimeSpanEnum = exports.LeaderboardEntryTimeSpanEnum || (exports.LeaderboardEntryTimeSpanEnum = {}));
 // LeaderboardEntry
 /**
  * The Leaderboard Entry resource.
@@ -41,41 +44,41 @@ var LeaderboardEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formattedScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formattedScore" }),
         __metadata("design:type", String)
     ], LeaderboardEntry.prototype, "formattedScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formattedScoreRank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formattedScoreRank" }),
         __metadata("design:type", String)
     ], LeaderboardEntry.prototype, "formattedScoreRank", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], LeaderboardEntry.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=player" }),
-        __metadata("design:type", Player)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=player" }),
+        __metadata("design:type", player_1.Player)
     ], LeaderboardEntry.prototype, "player", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scoreRank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scoreRank" }),
         __metadata("design:type", String)
     ], LeaderboardEntry.prototype, "scoreRank", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scoreTag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scoreTag" }),
         __metadata("design:type", String)
     ], LeaderboardEntry.prototype, "scoreTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scoreValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scoreValue" }),
         __metadata("design:type", String)
     ], LeaderboardEntry.prototype, "scoreValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeSpan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeSpan" }),
         __metadata("design:type", String)
     ], LeaderboardEntry.prototype, "timeSpan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=writeTimestampMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=writeTimestampMillis" }),
         __metadata("design:type", String)
     ], LeaderboardEntry.prototype, "writeTimestampMillis", void 0);
     return LeaderboardEntry;
-}(SpeakeasyBase));
-export { LeaderboardEntry };
+}(utils_1.SpeakeasyBase));
+exports.LeaderboardEntry = LeaderboardEntry;

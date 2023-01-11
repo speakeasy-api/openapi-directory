@@ -9,7 +9,7 @@ export declare class AppsListSubscriptionsForAuthenticatedUserRequest extends Sp
 }
 export declare class AppsListSubscriptionsForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     userMarketplacePurchases?: shared.UserMarketplacePurchase[];

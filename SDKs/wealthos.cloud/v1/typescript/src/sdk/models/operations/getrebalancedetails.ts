@@ -41,26 +41,26 @@ export class GetRebalanceDetailsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getRebalanceDetails200ApplicationJsonAny?: any;
+  getRebalanceDetails200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getRebalanceDetails400ApplicationJsonAny?: any;
+  getRebalanceDetails400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getRebalanceDetails401ApplicationJsonAny?: any;
+  getRebalanceDetails401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getRebalanceDetails403ApplicationJsonAny?: any;
+  getRebalanceDetails403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getRebalanceDetails404ApplicationJsonAny?: any;
+  getRebalanceDetails404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getRebalanceDetails409ApplicationJsonAny?: any;
+  getRebalanceDetails409ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getRebalanceDetails429ApplicationJsonAny?: any;
+  getRebalanceDetails429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getRebalanceDetails500ApplicationJsonAny?: any;
+  getRebalanceDetails500ApplicationJSONAny?: any;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2DeidentifyConfig } from "./googleprivacydlpv2deidentifyconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2DeidentifyTemplateInput = exports.GooglePrivacyDlpV2DeidentifyTemplate = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2deidentifyconfig_1 = require("./googleprivacydlpv2deidentifyconfig");
 // GooglePrivacyDlpV2DeidentifyTemplate
 /**
  * DeidentifyTemplates contains instructions on how to de-identify content. See https://cloud.google.com/dlp/docs/concepts-templates to learn more.
@@ -34,32 +37,32 @@ var GooglePrivacyDlpV2DeidentifyTemplate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DeidentifyTemplate.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deidentifyConfig" }),
-        __metadata("design:type", GooglePrivacyDlpV2DeidentifyConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deidentifyConfig" }),
+        __metadata("design:type", googleprivacydlpv2deidentifyconfig_1.GooglePrivacyDlpV2DeidentifyConfig)
     ], GooglePrivacyDlpV2DeidentifyTemplate.prototype, "deidentifyConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DeidentifyTemplate.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DeidentifyTemplate.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DeidentifyTemplate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DeidentifyTemplate.prototype, "updateTime", void 0);
     return GooglePrivacyDlpV2DeidentifyTemplate;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2DeidentifyTemplate };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2DeidentifyTemplate = GooglePrivacyDlpV2DeidentifyTemplate;
 // GooglePrivacyDlpV2DeidentifyTemplateInput
 /**
  * DeidentifyTemplates contains instructions on how to de-identify content. See https://cloud.google.com/dlp/docs/concepts-templates to learn more.
@@ -70,17 +73,17 @@ var GooglePrivacyDlpV2DeidentifyTemplateInput = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deidentifyConfig" }),
-        __metadata("design:type", GooglePrivacyDlpV2DeidentifyConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deidentifyConfig" }),
+        __metadata("design:type", googleprivacydlpv2deidentifyconfig_1.GooglePrivacyDlpV2DeidentifyConfig)
     ], GooglePrivacyDlpV2DeidentifyTemplateInput.prototype, "deidentifyConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DeidentifyTemplateInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2DeidentifyTemplateInput.prototype, "displayName", void 0);
     return GooglePrivacyDlpV2DeidentifyTemplateInput;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2DeidentifyTemplateInput };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2DeidentifyTemplateInput = GooglePrivacyDlpV2DeidentifyTemplateInput;

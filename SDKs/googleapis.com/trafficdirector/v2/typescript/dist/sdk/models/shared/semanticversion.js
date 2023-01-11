@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SemanticVersion = void 0;
+var utils_1 = require("../../../internal/utils");
 // SemanticVersion
 /**
  * Envoy uses SemVer (https://semver.org/). Major/minor versions indicate expected behaviors and APIs, the patch version field is used only for security fixes and can be generally ignored.
@@ -33,17 +36,17 @@ var SemanticVersion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=majorNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=majorNumber" }),
         __metadata("design:type", Number)
     ], SemanticVersion.prototype, "majorNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minorNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minorNumber" }),
         __metadata("design:type", Number)
     ], SemanticVersion.prototype, "minorNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=patch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patch" }),
         __metadata("design:type", Number)
     ], SemanticVersion.prototype, "patch", void 0);
     return SemanticVersion;
-}(SpeakeasyBase));
-export { SemanticVersion };
+}(utils_1.SpeakeasyBase));
+exports.SemanticVersion = SemanticVersion;

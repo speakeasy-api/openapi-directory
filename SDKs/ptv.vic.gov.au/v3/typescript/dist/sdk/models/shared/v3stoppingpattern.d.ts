@@ -7,10 +7,10 @@ import { V3Status } from "./v3status";
 import { V3StoppingPatternStop } from "./v3stoppingpatternstop";
 export declare class V3StoppingPattern extends SpeakeasyBase {
     departures?: V3PatternDeparture[];
-    directions?: Map<string, V3Direction>;
+    directions?: Record<string, V3Direction>;
     disruptions?: V3Disruption[];
-    routes?: Map<string, Map<string, any>>;
-    runs?: Map<string, V3Run>;
+    routes?: Record<string, Record<string, any>>;
+    runs?: Record<string, V3Run>;
     status?: V3Status;
-    stops?: Map<string, V3StoppingPatternStop>;
+    stops?: Record<string, V3StoppingPatternStop>;
 }

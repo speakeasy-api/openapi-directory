@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,62 +23,64 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArchitectureEnum } from "./architectureenum";
-import { AutoScalingTypeEnum } from "./autoscalingtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateInstanceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var architectureenum_1 = require("./architectureenum");
+var autoscalingtypeenum_1 = require("./autoscalingtypeenum");
 var UpdateInstanceRequest = /** @class */ (function (_super) {
     __extends(UpdateInstanceRequest, _super);
     function UpdateInstanceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AgentVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AgentVersion" }),
         __metadata("design:type", String)
     ], UpdateInstanceRequest.prototype, "agentVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AmiId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AmiId" }),
         __metadata("design:type", String)
     ], UpdateInstanceRequest.prototype, "amiId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Architecture" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Architecture" }),
         __metadata("design:type", String)
     ], UpdateInstanceRequest.prototype, "architecture", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoScalingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoScalingType" }),
         __metadata("design:type", String)
     ], UpdateInstanceRequest.prototype, "autoScalingType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EbsOptimized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EbsOptimized" }),
         __metadata("design:type", Boolean)
     ], UpdateInstanceRequest.prototype, "ebsOptimized", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Hostname" }),
         __metadata("design:type", String)
     ], UpdateInstanceRequest.prototype, "hostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstallUpdatesOnBoot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstallUpdatesOnBoot" }),
         __metadata("design:type", Boolean)
     ], UpdateInstanceRequest.prototype, "installUpdatesOnBoot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstanceId" }),
         __metadata("design:type", String)
     ], UpdateInstanceRequest.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstanceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstanceType" }),
         __metadata("design:type", String)
     ], UpdateInstanceRequest.prototype, "instanceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LayerIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LayerIds" }),
         __metadata("design:type", Array)
     ], UpdateInstanceRequest.prototype, "layerIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Os" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Os" }),
         __metadata("design:type", String)
     ], UpdateInstanceRequest.prototype, "os", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SshKeyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SshKeyName" }),
         __metadata("design:type", String)
     ], UpdateInstanceRequest.prototype, "sshKeyName", void 0);
     return UpdateInstanceRequest;
-}(SpeakeasyBase));
-export { UpdateInstanceRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateInstanceRequest = UpdateInstanceRequest;

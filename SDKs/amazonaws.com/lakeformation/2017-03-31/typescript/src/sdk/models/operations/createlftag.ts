@@ -51,7 +51,7 @@ export class CreateLfTagResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createLfTagResponse?: Map<string, any>;
+  createLFTagResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   entityNotFoundException?: any;

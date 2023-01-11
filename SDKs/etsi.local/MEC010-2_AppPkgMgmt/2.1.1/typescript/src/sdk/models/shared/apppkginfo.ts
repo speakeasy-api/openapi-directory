@@ -52,5 +52,5 @@ export class AppPkgInfo extends SpeakeasyBase {
   usageState: UsageStateEnum;
 
   @SpeakeasyMetadata({ data: "json, name=userDefinedData" })
-  userDefinedData?: Map<string, any>;
+  userDefinedData?: Record<string, any>;
 }

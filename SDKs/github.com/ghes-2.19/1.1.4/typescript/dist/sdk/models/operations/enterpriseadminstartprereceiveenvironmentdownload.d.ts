@@ -18,6 +18,6 @@ export declare class EnterpriseAdminStartPreReceiveEnvironmentDownloadRequest ex
 export declare class EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    enterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJsonObject?: EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJson;
+    enterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSONObject?: EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJson;
     preReceiveEnvironmentDownloadStatus?: shared.PreReceiveEnvironmentDownloadStatus;
 }

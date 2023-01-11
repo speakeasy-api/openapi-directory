@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SupportedCountry } from "./supportedcountry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SupportedCountriesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var supportedcountry_1 = require("./supportedcountry");
 var SupportedCountriesResponse = /** @class */ (function (_super) {
     __extends(SupportedCountriesResponse, _super);
     function SupportedCountriesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countries", elemType: SupportedCountry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countries", elemType: supportedcountry_1.SupportedCountry }),
         __metadata("design:type", Array)
     ], SupportedCountriesResponse.prototype, "countries", void 0);
     return SupportedCountriesResponse;
-}(SpeakeasyBase));
-export { SupportedCountriesResponse };
+}(utils_1.SpeakeasyBase));
+exports.SupportedCountriesResponse = SupportedCountriesResponse;

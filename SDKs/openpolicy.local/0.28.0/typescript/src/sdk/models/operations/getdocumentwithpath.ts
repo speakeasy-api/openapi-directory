@@ -189,7 +189,7 @@ export class GetDocumentWithPath200ApplicationJsonProvenance extends SpeakeasyBa
   buildTimestamp?: string;
 
   @SpeakeasyMetadata({ data: "json, name=bundles" })
-  bundles?: Map<string, any>;
+  bundles?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=version" })
   version?: string;
@@ -234,5 +234,5 @@ export class GetDocumentWithPathResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDocumentWithPath200ApplicationJsonObject?: GetDocumentWithPath200ApplicationJson;
+  getDocumentWithPath200ApplicationJSONObject?: GetDocumentWithPath200ApplicationJson;
 }

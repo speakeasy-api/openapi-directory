@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1CloudIdentityInfoInput } from "./googlecloudchannelv1cloudidentityinfo";
-import { GoogleTypePostalAddress } from "./googletypepostaladdress";
-import { GoogleCloudChannelV1ContactInfoInput } from "./googlecloudchannelv1contactinfo";
-import { GoogleCloudChannelV1CloudIdentityInfo } from "./googlecloudchannelv1cloudidentityinfo";
-import { GoogleCloudChannelV1ContactInfo } from "./googlecloudchannelv1contactinfo";
-// GoogleCloudChannelV1CustomerInput
-/**
- * Entity representing a customer of a reseller or distributor.
-**/
-var GoogleCloudChannelV1CustomerInput = /** @class */ (function (_super) {
-    __extends(GoogleCloudChannelV1CustomerInput, _super);
-    function GoogleCloudChannelV1CustomerInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=alternateEmail" }),
-        __metadata("design:type", String)
-    ], GoogleCloudChannelV1CustomerInput.prototype, "alternateEmail", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelPartnerId" }),
-        __metadata("design:type", String)
-    ], GoogleCloudChannelV1CustomerInput.prototype, "channelPartnerId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudIdentityInfo" }),
-        __metadata("design:type", GoogleCloudChannelV1CloudIdentityInfoInput)
-    ], GoogleCloudChannelV1CustomerInput.prototype, "cloudIdentityInfo", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
-        __metadata("design:type", String)
-    ], GoogleCloudChannelV1CustomerInput.prototype, "domain", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
-        __metadata("design:type", String)
-    ], GoogleCloudChannelV1CustomerInput.prototype, "languageCode", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=orgDisplayName" }),
-        __metadata("design:type", String)
-    ], GoogleCloudChannelV1CustomerInput.prototype, "orgDisplayName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=orgPostalAddress" }),
-        __metadata("design:type", GoogleTypePostalAddress)
-    ], GoogleCloudChannelV1CustomerInput.prototype, "orgPostalAddress", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryContactInfo" }),
-        __metadata("design:type", GoogleCloudChannelV1ContactInfoInput)
-    ], GoogleCloudChannelV1CustomerInput.prototype, "primaryContactInfo", void 0);
-    return GoogleCloudChannelV1CustomerInput;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1CustomerInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1CustomerInput = exports.GoogleCloudChannelV1Customer = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1cloudidentityinfo_1 = require("./googlecloudchannelv1cloudidentityinfo");
+var googletypepostaladdress_1 = require("./googletypepostaladdress");
+var googlecloudchannelv1contactinfo_1 = require("./googlecloudchannelv1contactinfo");
+var googlecloudchannelv1cloudidentityinfo_2 = require("./googlecloudchannelv1cloudidentityinfo");
+var googlecloudchannelv1contactinfo_2 = require("./googlecloudchannelv1contactinfo");
 // GoogleCloudChannelV1Customer
 /**
  * Entity representing a customer of a reseller or distributor.
@@ -82,53 +41,97 @@ var GoogleCloudChannelV1Customer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alternateEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alternateEmail" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Customer.prototype, "alternateEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelPartnerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelPartnerId" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Customer.prototype, "channelPartnerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudIdentityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudIdentityId" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Customer.prototype, "cloudIdentityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudIdentityInfo" }),
-        __metadata("design:type", GoogleCloudChannelV1CloudIdentityInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudIdentityInfo" }),
+        __metadata("design:type", googlecloudchannelv1cloudidentityinfo_1.GoogleCloudChannelV1CloudIdentityInfo)
     ], GoogleCloudChannelV1Customer.prototype, "cloudIdentityInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Customer.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Customer.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Customer.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Customer.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orgDisplayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orgDisplayName" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Customer.prototype, "orgDisplayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orgPostalAddress" }),
-        __metadata("design:type", GoogleTypePostalAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orgPostalAddress" }),
+        __metadata("design:type", googletypepostaladdress_1.GoogleTypePostalAddress)
     ], GoogleCloudChannelV1Customer.prototype, "orgPostalAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryContactInfo" }),
-        __metadata("design:type", GoogleCloudChannelV1ContactInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryContactInfo" }),
+        __metadata("design:type", googlecloudchannelv1contactinfo_1.GoogleCloudChannelV1ContactInfo)
     ], GoogleCloudChannelV1Customer.prototype, "primaryContactInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Customer.prototype, "updateTime", void 0);
     return GoogleCloudChannelV1Customer;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1Customer };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1Customer = GoogleCloudChannelV1Customer;
+// GoogleCloudChannelV1CustomerInput
+/**
+ * Entity representing a customer of a reseller or distributor.
+**/
+var GoogleCloudChannelV1CustomerInput = /** @class */ (function (_super) {
+    __extends(GoogleCloudChannelV1CustomerInput, _super);
+    function GoogleCloudChannelV1CustomerInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alternateEmail" }),
+        __metadata("design:type", String)
+    ], GoogleCloudChannelV1CustomerInput.prototype, "alternateEmail", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelPartnerId" }),
+        __metadata("design:type", String)
+    ], GoogleCloudChannelV1CustomerInput.prototype, "channelPartnerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudIdentityInfo" }),
+        __metadata("design:type", googlecloudchannelv1cloudidentityinfo_2.GoogleCloudChannelV1CloudIdentityInfoInput)
+    ], GoogleCloudChannelV1CustomerInput.prototype, "cloudIdentityInfo", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
+        __metadata("design:type", String)
+    ], GoogleCloudChannelV1CustomerInput.prototype, "domain", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
+        __metadata("design:type", String)
+    ], GoogleCloudChannelV1CustomerInput.prototype, "languageCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orgDisplayName" }),
+        __metadata("design:type", String)
+    ], GoogleCloudChannelV1CustomerInput.prototype, "orgDisplayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orgPostalAddress" }),
+        __metadata("design:type", googletypepostaladdress_1.GoogleTypePostalAddress)
+    ], GoogleCloudChannelV1CustomerInput.prototype, "orgPostalAddress", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryContactInfo" }),
+        __metadata("design:type", googlecloudchannelv1contactinfo_2.GoogleCloudChannelV1ContactInfoInput)
+    ], GoogleCloudChannelV1CustomerInput.prototype, "primaryContactInfo", void 0);
+    return GoogleCloudChannelV1CustomerInput;
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1CustomerInput = GoogleCloudChannelV1CustomerInput;

@@ -107,11 +107,11 @@ export declare class CncerResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    cncer400ApplicationJsonObject?: Cncer400ApplicationJson;
-    cncer401ApplicationJsonObject?: Cncer401ApplicationJson;
-    cncer404ApplicationJsonObject?: Cncer404ApplicationJson;
-    cncer500ApplicationJsonObject?: Cncer500ApplicationJson;
-    cncer502ApplicationJsonObject?: Cncer502ApplicationJson;
-    cncer503ApplicationJsonObject?: Cncer503ApplicationJson;
-    cncer504ApplicationJsonObject?: Cncer504ApplicationJson;
+    cncer400ApplicationJSONObject?: Cncer400ApplicationJson;
+    cncer401ApplicationJSONObject?: Cncer401ApplicationJson;
+    cncer404ApplicationJSONObject?: Cncer404ApplicationJson;
+    cncer500ApplicationJSONObject?: Cncer500ApplicationJson;
+    cncer502ApplicationJSONObject?: Cncer502ApplicationJson;
+    cncer503ApplicationJSONObject?: Cncer503ApplicationJson;
+    cncer504ApplicationJSONObject?: Cncer504ApplicationJson;
 }

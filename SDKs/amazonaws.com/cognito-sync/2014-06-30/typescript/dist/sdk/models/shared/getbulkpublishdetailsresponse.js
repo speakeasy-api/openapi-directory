@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BulkPublishStatusEnum } from "./bulkpublishstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetBulkPublishDetailsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var bulkpublishstatusenum_1 = require("./bulkpublishstatusenum");
 // GetBulkPublishDetailsResponse
 /**
  * The output for the GetBulkPublishDetails operation.
@@ -34,25 +37,25 @@ var GetBulkPublishDetailsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BulkPublishCompleteTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BulkPublishCompleteTime" }),
         __metadata("design:type", Date)
     ], GetBulkPublishDetailsResponse.prototype, "bulkPublishCompleteTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BulkPublishStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BulkPublishStartTime" }),
         __metadata("design:type", Date)
     ], GetBulkPublishDetailsResponse.prototype, "bulkPublishStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BulkPublishStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BulkPublishStatus" }),
         __metadata("design:type", String)
     ], GetBulkPublishDetailsResponse.prototype, "bulkPublishStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FailureMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FailureMessage" }),
         __metadata("design:type", String)
     ], GetBulkPublishDetailsResponse.prototype, "failureMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdentityPoolId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdentityPoolId" }),
         __metadata("design:type", String)
     ], GetBulkPublishDetailsResponse.prototype, "identityPoolId", void 0);
     return GetBulkPublishDetailsResponse;
-}(SpeakeasyBase));
-export { GetBulkPublishDetailsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetBulkPublishDetailsResponse = GetBulkPublishDetailsResponse;

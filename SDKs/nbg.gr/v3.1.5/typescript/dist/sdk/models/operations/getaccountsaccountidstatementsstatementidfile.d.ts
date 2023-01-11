@@ -23,7 +23,6 @@ export declare class GetAccountsAccountIdStatementsStatementIdFileRequest extend
 export declare class GetAccountsAccountIdStatementsStatementIdFileResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    getAccountsAccountIdStatementsStatementIdFile200ApplicationPdfBinaryString?: Uint8Array;
-    headers: Map<string, string[]>;
     statusCode: number;
+    getAccountsAccountIdStatementsStatementIdFile200ApplicationPdfBinaryString?: Uint8Array;
 }

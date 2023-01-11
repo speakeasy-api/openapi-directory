@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LifeCycleLastCutover } from "./lifecyclelastcutover";
-import { LifeCycleLastTest } from "./lifecyclelasttest";
-import { LifeCycleStateEnum } from "./lifecyclestateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LifeCycle = void 0;
+var utils_1 = require("../../../internal/utils");
+var lifecyclelastcutover_1 = require("./lifecyclelastcutover");
+var lifecyclelasttest_1 = require("./lifecyclelasttest");
+var lifecyclestateenum_1 = require("./lifecyclestateenum");
 // LifeCycle
 /**
  * Lifecycle.
@@ -36,33 +39,33 @@ var LifeCycle = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addedToServiceDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addedToServiceDateTime" }),
         __metadata("design:type", String)
     ], LifeCycle.prototype, "addedToServiceDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=elapsedReplicationDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=elapsedReplicationDuration" }),
         __metadata("design:type", String)
     ], LifeCycle.prototype, "elapsedReplicationDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstByteDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstByteDateTime" }),
         __metadata("design:type", String)
     ], LifeCycle.prototype, "firstByteDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastCutover" }),
-        __metadata("design:type", LifeCycleLastCutover)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastCutover" }),
+        __metadata("design:type", lifecyclelastcutover_1.LifeCycleLastCutover)
     ], LifeCycle.prototype, "lastCutover", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastSeenByServiceDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastSeenByServiceDateTime" }),
         __metadata("design:type", String)
     ], LifeCycle.prototype, "lastSeenByServiceDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastTest" }),
-        __metadata("design:type", LifeCycleLastTest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastTest" }),
+        __metadata("design:type", lifecyclelasttest_1.LifeCycleLastTest)
     ], LifeCycle.prototype, "lastTest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], LifeCycle.prototype, "state", void 0);
     return LifeCycle;
-}(SpeakeasyBase));
-export { LifeCycle };
+}(utils_1.SpeakeasyBase));
+exports.LifeCycle = LifeCycle;

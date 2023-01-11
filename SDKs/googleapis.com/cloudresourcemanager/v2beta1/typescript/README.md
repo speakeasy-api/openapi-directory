@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CloudresourcemanagerFoldersCreateRequest, CloudresourcemanagerFoldersCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,28 +30,28 @@ const req: CloudresourcemanagerFoldersCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "qui",
-    alt: "proto",
-    callback: "maiores",
-    fields: "rerum",
-    key: "ut",
-    oauthToken: "laborum",
-    parent: "deleniti",
-    prettyPrint: false,
-    quotaUser: "dignissimos",
-    uploadType: "magnam",
-    uploadProtocol: "error",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
+    parent: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    displayName: "id",
-    parent: "esse",
+    displayName: "dicta",
+    parent: "debitis",
   },
 };
 

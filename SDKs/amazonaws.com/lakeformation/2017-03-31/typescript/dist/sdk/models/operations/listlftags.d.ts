@@ -22,7 +22,7 @@ export declare class ListLfTagsResponse extends SpeakeasyBase {
     entityNotFoundException?: any;
     internalServiceException?: any;
     invalidInputException?: any;
-    listLfTagsResponse?: shared.ListLfTagsResponse;
+    listLFTagsResponse?: shared.ListLfTagsResponse;
     operationTimeoutException?: any;
     statusCode: number;
 }

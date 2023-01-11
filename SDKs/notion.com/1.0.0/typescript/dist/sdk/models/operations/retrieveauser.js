@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RetrieveAUserResponse = exports.RetrieveAUserRequest = exports.RetrieveAUser200ApplicationJson = exports.RetrieveAUser200ApplicationJsonPerson = exports.RetrieveAUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RetrieveAUserPathParams = /** @class */ (function (_super) {
     __extends(RetrieveAUserPathParams, _super);
     function RetrieveAUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], RetrieveAUserPathParams.prototype, "id", void 0);
     return RetrieveAUserPathParams;
-}(SpeakeasyBase));
-export { RetrieveAUserPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RetrieveAUserPathParams = RetrieveAUserPathParams;
 var RetrieveAUser200ApplicationJsonPerson = /** @class */ (function (_super) {
     __extends(RetrieveAUser200ApplicationJsonPerson, _super);
     function RetrieveAUser200ApplicationJsonPerson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], RetrieveAUser200ApplicationJsonPerson.prototype, "email", void 0);
     return RetrieveAUser200ApplicationJsonPerson;
-}(SpeakeasyBase));
-export { RetrieveAUser200ApplicationJsonPerson };
+}(utils_1.SpeakeasyBase));
+exports.RetrieveAUser200ApplicationJsonPerson = RetrieveAUser200ApplicationJsonPerson;
 var RetrieveAUser200ApplicationJson = /** @class */ (function (_super) {
     __extends(RetrieveAUser200ApplicationJson, _super);
     function RetrieveAUser200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=avatar_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=avatar_url" }),
         __metadata("design:type", Object)
     ], RetrieveAUser200ApplicationJson.prototype, "avatarUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], RetrieveAUser200ApplicationJson.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RetrieveAUser200ApplicationJson.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object" }),
         __metadata("design:type", String)
     ], RetrieveAUser200ApplicationJson.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=person" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=person" }),
         __metadata("design:type", RetrieveAUser200ApplicationJsonPerson)
     ], RetrieveAUser200ApplicationJson.prototype, "person", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], RetrieveAUser200ApplicationJson.prototype, "type", void 0);
     return RetrieveAUser200ApplicationJson;
-}(SpeakeasyBase));
-export { RetrieveAUser200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.RetrieveAUser200ApplicationJson = RetrieveAUser200ApplicationJson;
 var RetrieveAUserRequest = /** @class */ (function (_super) {
     __extends(RetrieveAUserRequest, _super);
     function RetrieveAUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RetrieveAUserPathParams)
     ], RetrieveAUserRequest.prototype, "pathParams", void 0);
     return RetrieveAUserRequest;
-}(SpeakeasyBase));
-export { RetrieveAUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.RetrieveAUserRequest = RetrieveAUserRequest;
 var RetrieveAUserResponse = /** @class */ (function (_super) {
     __extends(RetrieveAUserResponse, _super);
     function RetrieveAUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RetrieveAUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], RetrieveAUserResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RetrieveAUserResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RetrieveAUser200ApplicationJson)
-    ], RetrieveAUserResponse.prototype, "retrieveAUser200ApplicationJsonObject", void 0);
+    ], RetrieveAUserResponse.prototype, "retrieveAUser200ApplicationJSONObject", void 0);
     return RetrieveAUserResponse;
-}(SpeakeasyBase));
-export { RetrieveAUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.RetrieveAUserResponse = RetrieveAUserResponse;

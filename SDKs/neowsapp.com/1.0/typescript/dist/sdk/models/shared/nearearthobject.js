@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,63 +23,65 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloseApproachData } from "./closeapproachdata";
-import { EstimatedDiameterContainer } from "./estimateddiametercontainer";
-import { OrbitalData } from "./orbitaldata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NearEarthObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var closeapproachdata_1 = require("./closeapproachdata");
+var estimateddiametercontainer_1 = require("./estimateddiametercontainer");
+var orbitaldata_1 = require("./orbitaldata");
 var NearEarthObject = /** @class */ (function (_super) {
     __extends(NearEarthObject, _super);
     function NearEarthObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=absolute_magnitude_h" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=absolute_magnitude_h" }),
         __metadata("design:type", Number)
     ], NearEarthObject.prototype, "absoluteMagnitudeH", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=close_approach_data", elemType: CloseApproachData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=close_approach_data", elemType: closeapproachdata_1.CloseApproachData }),
         __metadata("design:type", Array)
     ], NearEarthObject.prototype, "closeApproachData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=designation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=designation" }),
         __metadata("design:type", String)
     ], NearEarthObject.prototype, "designation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=estimated_diameter" }),
-        __metadata("design:type", EstimatedDiameterContainer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=estimated_diameter" }),
+        __metadata("design:type", estimateddiametercontainer_1.EstimatedDiameterContainer)
     ], NearEarthObject.prototype, "estimatedDiameter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_potentially_hazardous_asteroid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_potentially_hazardous_asteroid" }),
         __metadata("design:type", Boolean)
     ], NearEarthObject.prototype, "isPotentiallyHazardousAsteroid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_sentry_object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_sentry_object" }),
         __metadata("design:type", Boolean)
     ], NearEarthObject.prototype, "isSentryObject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], NearEarthObject.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name_limited" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name_limited" }),
         __metadata("design:type", String)
     ], NearEarthObject.prototype, "nameLimited", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nasa_jpl_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nasa_jpl_url" }),
         __metadata("design:type", String)
     ], NearEarthObject.prototype, "nasaJplUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=neo_reference_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=neo_reference_id" }),
         __metadata("design:type", String)
     ], NearEarthObject.prototype, "neoReferenceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orbital_data" }),
-        __metadata("design:type", OrbitalData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orbital_data" }),
+        __metadata("design:type", orbitaldata_1.OrbitalData)
     ], NearEarthObject.prototype, "orbitalData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sentry_data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sentry_data" }),
         __metadata("design:type", String)
     ], NearEarthObject.prototype, "sentryData", void 0);
     return NearEarthObject;
-}(SpeakeasyBase));
-export { NearEarthObject };
+}(utils_1.SpeakeasyBase));
+exports.NearEarthObject = NearEarthObject;

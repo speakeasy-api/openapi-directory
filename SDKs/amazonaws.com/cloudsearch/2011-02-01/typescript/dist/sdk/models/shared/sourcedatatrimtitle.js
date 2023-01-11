@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SourceDataTrimTitle = void 0;
+var utils_1 = require("../../../internal/utils");
 // SourceDataTrimTitle
 /**
  * Specifies how to trim common words from the beginning of a field to enable title sorting by that field.
@@ -33,21 +36,21 @@ var SourceDataTrimTitle = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SourceDataTrimTitle.prototype, "defaultValue", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SourceDataTrimTitle.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SourceDataTrimTitle.prototype, "separator", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SourceDataTrimTitle.prototype, "sourceName", void 0);
     return SourceDataTrimTitle;
-}(SpeakeasyBase));
-export { SourceDataTrimTitle };
+}(utils_1.SpeakeasyBase));
+exports.SourceDataTrimTitle = SourceDataTrimTitle;

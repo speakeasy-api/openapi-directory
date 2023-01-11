@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BackupStateEnum } from "./backupstateenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Backup = void 0;
+var utils_1 = require("../../../internal/utils");
+var backupstateenum_1 = require("./backupstateenum");
+var tag_1 = require("./tag");
 // Backup
 /**
  * Contains information about a backup of an AWS CloudHSM cluster. All backup objects contain the <code>BackupId</code>, <code>BackupState</code>, <code>ClusterId</code>, and <code>CreateTimestamp</code> parameters. Backups that were copied into a destination region additionally contain the <code>CopyTimestamp</code>, <code>SourceBackup</code>, <code>SourceCluster</code>, and <code>SourceRegion</code> parameters. A backup that is pending deletion will include the <code>DeleteTimestamp</code> parameter.
@@ -35,49 +38,49 @@ var Backup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BackupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BackupId" }),
         __metadata("design:type", String)
     ], Backup.prototype, "backupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BackupState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BackupState" }),
         __metadata("design:type", String)
     ], Backup.prototype, "backupState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClusterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClusterId" }),
         __metadata("design:type", String)
     ], Backup.prototype, "clusterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CopyTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CopyTimestamp" }),
         __metadata("design:type", Date)
     ], Backup.prototype, "copyTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreateTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreateTimestamp" }),
         __metadata("design:type", Date)
     ], Backup.prototype, "createTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeleteTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeleteTimestamp" }),
         __metadata("design:type", Date)
     ], Backup.prototype, "deleteTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NeverExpires" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NeverExpires" }),
         __metadata("design:type", Boolean)
     ], Backup.prototype, "neverExpires", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceBackup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceBackup" }),
         __metadata("design:type", String)
     ], Backup.prototype, "sourceBackup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceCluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceCluster" }),
         __metadata("design:type", String)
     ], Backup.prototype, "sourceCluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceRegion" }),
         __metadata("design:type", String)
     ], Backup.prototype, "sourceRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TagList", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TagList", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], Backup.prototype, "tagList", void 0);
     return Backup;
-}(SpeakeasyBase));
-export { Backup };
+}(utils_1.SpeakeasyBase));
+exports.Backup = Backup;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Latency } from "./latency";
-import { StatusCodes } from "./statuscodes";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationMetrics = void 0;
+var utils_1 = require("../../../internal/utils");
+var latency_1 = require("./latency");
+var statuscodes_1 = require("./statuscodes");
 // ApplicationMetrics
 /**
  * Application request metrics for an AWS Elastic Beanstalk environment.
@@ -35,21 +38,21 @@ var ApplicationMetrics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ApplicationMetrics.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Latency)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", latency_1.Latency)
     ], ApplicationMetrics.prototype, "latency", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ApplicationMetrics.prototype, "requestCount", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", StatusCodes)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", statuscodes_1.StatusCodes)
     ], ApplicationMetrics.prototype, "statusCodes", void 0);
     return ApplicationMetrics;
-}(SpeakeasyBase));
-export { ApplicationMetrics };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationMetrics = ApplicationMetrics;

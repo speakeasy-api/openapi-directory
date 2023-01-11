@@ -22,5 +22,5 @@ export class ProtocolNetflowHaltResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolNetflowHalt200ApplicationJsonString?: string;
+  protocolNetflowHalt200ApplicationJSONString?: string;
 }

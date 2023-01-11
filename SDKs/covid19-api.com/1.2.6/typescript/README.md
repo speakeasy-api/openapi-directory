@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetDailyReportAllCountriesRequest, GetDailyReportAllCountriesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,13 +28,13 @@ const sdk = new SDK();
     
 const req: GetDailyReportAllCountriesRequest = {
   queryParams: {
-    date: "quia",
-    dateFormat: "MM-DD-YYYY",
+    date: "sit",
+    dateFormat: "DD-MM-YYYY",
     format: "xml",
   },
 };
 
-sdk.sdk.getDailyReportAllCountries(req).then((res: GetDailyReportAllCountriesResponse | AxiosError) => {
+sdk.country.getDailyReportAllCountries(req).then((res: GetDailyReportAllCountriesResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -44,17 +43,23 @@ sdk.sdk.getDailyReportAllCountries(req).then((res: GetDailyReportAllCountriesRes
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Country
 
 * `getDailyReportAllCountries` - getDailyReportAllCountries
 * `getDailyReportByCountryCode` - getDailyReportByCountryCode
 * `getDailyReportByCountryName` - getDailyReportByCountryName
-* `getDailyReportTotals` - getDailyReportTotals
 * `getLatestAllCountries` - getLatestAllCountries
 * `getLatestCountryDataByCode` - getLatestCountryDataByCode
 * `getLatestCountryDataByName` - getLatestCountryDataByName
-* `getLatestTotals` - getLatestTotals
+
+### Help
+
 * `getListOfCountries` - getListOfCountries
+
+### Totals
+
+* `getDailyReportTotals` - getDailyReportTotals
+* `getLatestTotals` - getLatestTotals
 
 <!-- End SDK Available Operations -->
 

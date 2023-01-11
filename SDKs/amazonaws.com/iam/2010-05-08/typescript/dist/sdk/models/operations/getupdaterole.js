@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetUpdateRoleActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUpdateRoleResponse = exports.GetUpdateRoleRequest = exports.GetUpdateRoleHeaders = exports.GetUpdateRoleQueryParams = exports.GetUpdateRoleVersionEnum = exports.GetUpdateRoleActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetUpdateRoleActionEnum;
 (function (GetUpdateRoleActionEnum) {
     GetUpdateRoleActionEnum["UpdateRole"] = "UpdateRole";
-})(GetUpdateRoleActionEnum || (GetUpdateRoleActionEnum = {}));
-export var GetUpdateRoleVersionEnum;
+})(GetUpdateRoleActionEnum = exports.GetUpdateRoleActionEnum || (exports.GetUpdateRoleActionEnum = {}));
+var GetUpdateRoleVersionEnum;
 (function (GetUpdateRoleVersionEnum) {
     GetUpdateRoleVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetUpdateRoleVersionEnum || (GetUpdateRoleVersionEnum = {}));
+})(GetUpdateRoleVersionEnum = exports.GetUpdateRoleVersionEnum || (exports.GetUpdateRoleVersionEnum = {}));
 var GetUpdateRoleQueryParams = /** @class */ (function (_super) {
     __extends(GetUpdateRoleQueryParams, _super);
     function GetUpdateRoleQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetUpdateRoleQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Description" }),
         __metadata("design:type", String)
     ], GetUpdateRoleQueryParams.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxSessionDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxSessionDuration" }),
         __metadata("design:type", Number)
     ], GetUpdateRoleQueryParams.prototype, "maxSessionDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RoleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=RoleName" }),
         __metadata("design:type", String)
     ], GetUpdateRoleQueryParams.prototype, "roleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetUpdateRoleQueryParams.prototype, "version", void 0);
     return GetUpdateRoleQueryParams;
-}(SpeakeasyBase));
-export { GetUpdateRoleQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateRoleQueryParams = GetUpdateRoleQueryParams;
 var GetUpdateRoleHeaders = /** @class */ (function (_super) {
     __extends(GetUpdateRoleHeaders, _super);
     function GetUpdateRoleHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetUpdateRoleHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetUpdateRoleHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetUpdateRoleHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetUpdateRoleHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetUpdateRoleHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetUpdateRoleHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetUpdateRoleHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetUpdateRoleHeaders;
-}(SpeakeasyBase));
-export { GetUpdateRoleHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateRoleHeaders = GetUpdateRoleHeaders;
 var GetUpdateRoleRequest = /** @class */ (function (_super) {
     __extends(GetUpdateRoleRequest, _super);
     function GetUpdateRoleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUpdateRoleQueryParams)
     ], GetUpdateRoleRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUpdateRoleHeaders)
     ], GetUpdateRoleRequest.prototype, "headers", void 0);
     return GetUpdateRoleRequest;
-}(SpeakeasyBase));
-export { GetUpdateRoleRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateRoleRequest = GetUpdateRoleRequest;
 var GetUpdateRoleResponse = /** @class */ (function (_super) {
     __extends(GetUpdateRoleResponse, _super);
     function GetUpdateRoleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetUpdateRoleResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUpdateRoleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUpdateRoleResponse.prototype, "statusCode", void 0);
     return GetUpdateRoleResponse;
-}(SpeakeasyBase));
-export { GetUpdateRoleResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUpdateRoleResponse = GetUpdateRoleResponse;

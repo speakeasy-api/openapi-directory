@@ -182,7 +182,7 @@ export class GetLegalSearchDefaultApplicationJsonAdminFines extends SpeakeasyBas
   docId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=document_highlights" })
-  documentHighlights?: Map<string, any>;
+  documentHighlights?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=documents", elemType: GetLegalSearchDefaultApplicationJsonAdminFinesDocuments })
   documents?: GetLegalSearchDefaultApplicationJsonAdminFinesDocuments[];
@@ -293,7 +293,7 @@ export class GetLegalSearchDefaultApplicationJsonAdrsDocuments extends Speakeasy
 
 export class GetLegalSearchDefaultApplicationJsonAdrsParticipants extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=citations" })
-  citations?: Map<string, any>;
+  citations?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -317,7 +317,7 @@ export class GetLegalSearchDefaultApplicationJsonAdrs extends SpeakeasyBase {
   docId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=document_highlights" })
-  documentHighlights?: Map<string, any>;
+  documentHighlights?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=documents", elemType: GetLegalSearchDefaultApplicationJsonAdrsDocuments })
   documents?: GetLegalSearchDefaultApplicationJsonAdrsDocuments[];
@@ -431,7 +431,7 @@ export class GetLegalSearchDefaultApplicationJsonAdvisoryOpinions extends Speake
   commenterNames?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=document_highlights" })
-  documentHighlights?: Map<string, any>;
+  documentHighlights?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=documents", elemType: GetLegalSearchDefaultApplicationJsonAdvisoryOpinionsDocuments })
   documents?: GetLegalSearchDefaultApplicationJsonAdvisoryOpinionsDocuments[];
@@ -547,7 +547,7 @@ export enum GetLegalSearchDefaultApplicationJsonMursMurTypeEnum {
 
 export class GetLegalSearchDefaultApplicationJsonMursParticipants extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=citations" })
-  citations?: Map<string, any>;
+  citations?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -571,7 +571,7 @@ export class GetLegalSearchDefaultApplicationJsonMurs extends SpeakeasyBase {
   docId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=document_highlights" })
-  documentHighlights?: Map<string, any>;
+  documentHighlights?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=documents", elemType: GetLegalSearchDefaultApplicationJsonMursDocuments })
   documents?: GetLegalSearchDefaultApplicationJsonMursDocuments[];
@@ -613,7 +613,7 @@ export class GetLegalSearchDefaultApplicationJsonRegulations extends SpeakeasyBa
   docId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=document_highlights" })
-  documentHighlights?: Map<string, any>;
+  documentHighlights?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=highlights" })
   highlights?: string[];
@@ -637,7 +637,7 @@ export class GetLegalSearchDefaultApplicationJsonStatutes extends SpeakeasyBase 
   docId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=document_highlights" })
-  documentHighlights?: Map<string, any>;
+  documentHighlights?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=highlights" })
   highlights?: string[];
@@ -709,8 +709,8 @@ export class GetLegalSearchResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getLegalSearchDefaultApplicationJsonObject?: GetLegalSearchDefaultApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getLegalSearchDefaultApplicationJSONObject?: GetLegalSearchDefaultApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatchOwnershipOwnershipIdResponse = exports.PatchOwnershipOwnershipIdRequest = exports.PatchOwnershipOwnershipIdQueryParams = exports.PatchOwnershipOwnershipIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PatchOwnershipOwnershipIdPathParams = /** @class */ (function (_super) {
     __extends(PatchOwnershipOwnershipIdPathParams, _super);
     function PatchOwnershipOwnershipIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ownershipId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ownershipId" }),
         __metadata("design:type", String)
     ], PatchOwnershipOwnershipIdPathParams.prototype, "ownershipId", void 0);
     return PatchOwnershipOwnershipIdPathParams;
-}(SpeakeasyBase));
-export { PatchOwnershipOwnershipIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PatchOwnershipOwnershipIdPathParams = PatchOwnershipOwnershipIdPathParams;
 var PatchOwnershipOwnershipIdQueryParams = /** @class */ (function (_super) {
     __extends(PatchOwnershipOwnershipIdQueryParams, _super);
     function PatchOwnershipOwnershipIdQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=customData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=customData" }),
         __metadata("design:type", String)
     ], PatchOwnershipOwnershipIdQueryParams.prototype, "customData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=expires" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=expires" }),
         __metadata("design:type", Number)
     ], PatchOwnershipOwnershipIdQueryParams.prototype, "expires", void 0);
     return PatchOwnershipOwnershipIdQueryParams;
-}(SpeakeasyBase));
-export { PatchOwnershipOwnershipIdQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PatchOwnershipOwnershipIdQueryParams = PatchOwnershipOwnershipIdQueryParams;
 var PatchOwnershipOwnershipIdRequest = /** @class */ (function (_super) {
     __extends(PatchOwnershipOwnershipIdRequest, _super);
     function PatchOwnershipOwnershipIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PatchOwnershipOwnershipIdPathParams)
     ], PatchOwnershipOwnershipIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PatchOwnershipOwnershipIdQueryParams)
     ], PatchOwnershipOwnershipIdRequest.prototype, "queryParams", void 0);
     return PatchOwnershipOwnershipIdRequest;
-}(SpeakeasyBase));
-export { PatchOwnershipOwnershipIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.PatchOwnershipOwnershipIdRequest = PatchOwnershipOwnershipIdRequest;
 var PatchOwnershipOwnershipIdResponse = /** @class */ (function (_super) {
     __extends(PatchOwnershipOwnershipIdResponse, _super);
     function PatchOwnershipOwnershipIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PatchOwnershipOwnershipIdResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PatchOwnershipOwnershipIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PatchOwnershipOwnershipIdResponse.prototype, "statusCode", void 0);
     return PatchOwnershipOwnershipIdResponse;
-}(SpeakeasyBase));
-export { PatchOwnershipOwnershipIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.PatchOwnershipOwnershipIdResponse = PatchOwnershipOwnershipIdResponse;

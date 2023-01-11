@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConversationScopedWebhookEnumTargetEnum = void 0;
+var ConversationScopedWebhookEnumTargetEnum;
+(function (ConversationScopedWebhookEnumTargetEnum) {
+    ConversationScopedWebhookEnumTargetEnum["Webhook"] = "webhook";
+    ConversationScopedWebhookEnumTargetEnum["Trigger"] = "trigger";
+    ConversationScopedWebhookEnumTargetEnum["Studio"] = "studio";
+})(ConversationScopedWebhookEnumTargetEnum = exports.ConversationScopedWebhookEnumTargetEnum || (exports.ConversationScopedWebhookEnumTargetEnum = {}));

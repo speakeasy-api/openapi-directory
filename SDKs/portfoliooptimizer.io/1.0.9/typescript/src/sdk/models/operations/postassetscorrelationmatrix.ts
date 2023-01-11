@@ -40,8 +40,8 @@ export class PostAssetsCorrelationMatrixResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postAssetsCorrelationMatrix200ApplicationJsonObject?: PostAssetsCorrelationMatrix200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postAssetsCorrelationMatrix200ApplicationJSONObject?: PostAssetsCorrelationMatrix200ApplicationJson;
 }

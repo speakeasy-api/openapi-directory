@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostGetFollowingResponse = exports.PostGetFollowingRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostGetFollowingRequest = /** @class */ (function (_super) {
     __extends(PostGetFollowingRequest, _super);
     function PostGetFollowingRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], PostGetFollowingRequest.prototype, "request", void 0);
     return PostGetFollowingRequest;
-}(SpeakeasyBase));
-export { PostGetFollowingRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostGetFollowingRequest = PostGetFollowingRequest;
 var PostGetFollowingResponse = /** @class */ (function (_super) {
     __extends(PostGetFollowingResponse, _super);
     function PostGetFollowingResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostGetFollowingResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostGetFollowingResponse.prototype, "statusCode", void 0);
     return PostGetFollowingResponse;
-}(SpeakeasyBase));
-export { PostGetFollowingResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostGetFollowingResponse = PostGetFollowingResponse;

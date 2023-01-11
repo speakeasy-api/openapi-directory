@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,62 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImageItem } from "./imageitem";
-import { QuestionGroupItem } from "./questiongroupitem";
-import { QuestionItem } from "./questionitem";
-import { VideoItem } from "./videoitem";
-import { ImageItemInput } from "./imageitem";
-import { QuestionGroupItemInput } from "./questiongroupitem";
-import { QuestionItemInput } from "./questionitem";
-// Item
-/**
- * A single item of the form. `kind` defines which kind of item it is.
-**/
-var Item = /** @class */ (function (_super) {
-    __extends(Item, _super);
-    function Item() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], Item.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageItem" }),
-        __metadata("design:type", ImageItem)
-    ], Item.prototype, "imageItem", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemId" }),
-        __metadata("design:type", String)
-    ], Item.prototype, "itemId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageBreakItem" }),
-        __metadata("design:type", Map)
-    ], Item.prototype, "pageBreakItem", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=questionGroupItem" }),
-        __metadata("design:type", QuestionGroupItem)
-    ], Item.prototype, "questionGroupItem", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=questionItem" }),
-        __metadata("design:type", QuestionItem)
-    ], Item.prototype, "questionItem", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=textItem" }),
-        __metadata("design:type", Map)
-    ], Item.prototype, "textItem", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
-        __metadata("design:type", String)
-    ], Item.prototype, "title", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoItem" }),
-        __metadata("design:type", VideoItem)
-    ], Item.prototype, "videoItem", void 0);
-    return Item;
-}(SpeakeasyBase));
-export { Item };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Item = exports.ItemInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var imageitem_1 = require("./imageitem");
+var questiongroupitem_1 = require("./questiongroupitem");
+var questionitem_1 = require("./questionitem");
+var videoitem_1 = require("./videoitem");
+var imageitem_2 = require("./imageitem");
+var questiongroupitem_2 = require("./questiongroupitem");
+var questionitem_2 = require("./questionitem");
 // ItemInput
 /**
  * A single item of the form. `kind` defines which kind of item it is.
@@ -88,41 +43,89 @@ var ItemInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ItemInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageItem" }),
-        __metadata("design:type", ImageItemInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageItem" }),
+        __metadata("design:type", imageitem_1.ImageItemInput)
     ], ItemInput.prototype, "imageItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemId" }),
         __metadata("design:type", String)
     ], ItemInput.prototype, "itemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageBreakItem" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageBreakItem" }),
+        __metadata("design:type", Object)
     ], ItemInput.prototype, "pageBreakItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=questionGroupItem" }),
-        __metadata("design:type", QuestionGroupItemInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=questionGroupItem" }),
+        __metadata("design:type", questiongroupitem_1.QuestionGroupItemInput)
     ], ItemInput.prototype, "questionGroupItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=questionItem" }),
-        __metadata("design:type", QuestionItemInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=questionItem" }),
+        __metadata("design:type", questionitem_1.QuestionItemInput)
     ], ItemInput.prototype, "questionItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textItem" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textItem" }),
+        __metadata("design:type", Object)
     ], ItemInput.prototype, "textItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], ItemInput.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoItem" }),
-        __metadata("design:type", VideoItem)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoItem" }),
+        __metadata("design:type", videoitem_1.VideoItem)
     ], ItemInput.prototype, "videoItem", void 0);
     return ItemInput;
-}(SpeakeasyBase));
-export { ItemInput };
+}(utils_1.SpeakeasyBase));
+exports.ItemInput = ItemInput;
+// Item
+/**
+ * A single item of the form. `kind` defines which kind of item it is.
+**/
+var Item = /** @class */ (function (_super) {
+    __extends(Item, _super);
+    function Item() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], Item.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageItem" }),
+        __metadata("design:type", imageitem_2.ImageItem)
+    ], Item.prototype, "imageItem", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemId" }),
+        __metadata("design:type", String)
+    ], Item.prototype, "itemId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageBreakItem" }),
+        __metadata("design:type", Object)
+    ], Item.prototype, "pageBreakItem", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=questionGroupItem" }),
+        __metadata("design:type", questiongroupitem_2.QuestionGroupItem)
+    ], Item.prototype, "questionGroupItem", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=questionItem" }),
+        __metadata("design:type", questionitem_2.QuestionItem)
+    ], Item.prototype, "questionItem", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textItem" }),
+        __metadata("design:type", Object)
+    ], Item.prototype, "textItem", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
+        __metadata("design:type", String)
+    ], Item.prototype, "title", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoItem" }),
+        __metadata("design:type", videoitem_1.VideoItem)
+    ], Item.prototype, "videoItem", void 0);
+    return Item;
+}(utils_1.SpeakeasyBase));
+exports.Item = Item;

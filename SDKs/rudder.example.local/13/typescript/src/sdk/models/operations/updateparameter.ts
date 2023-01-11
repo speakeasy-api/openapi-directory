@@ -57,5 +57,5 @@ export class UpdateParameterResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateParameter200ApplicationJsonObject?: UpdateParameter200ApplicationJson;
+  updateParameter200ApplicationJSONObject?: UpdateParameter200ApplicationJson;
 }

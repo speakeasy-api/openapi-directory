@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice } from "./googlecloudrecommendationenginev1beta1productcatalogitemexactprice";
-import { GoogleCloudRecommendationengineV1beta1Image } from "./googlecloudrecommendationenginev1beta1image";
-import { GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange } from "./googlecloudrecommendationenginev1beta1productcatalogitempricerange";
-export var GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommendationengineV1beta1ProductCatalogItem = exports.GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecommendationenginev1beta1productcatalogitemexactprice_1 = require("./googlecloudrecommendationenginev1beta1productcatalogitemexactprice");
+var googlecloudrecommendationenginev1beta1image_1 = require("./googlecloudrecommendationenginev1beta1image");
+var googlecloudrecommendationenginev1beta1productcatalogitempricerange_1 = require("./googlecloudrecommendationenginev1beta1productcatalogitempricerange");
+var GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnum;
 (function (GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnum) {
     GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnum["StockStateUnspecified"] = "STOCK_STATE_UNSPECIFIED";
     GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnum["InStock"] = "IN_STOCK";
     GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnum["OutOfStock"] = "OUT_OF_STOCK";
     GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnum["Preorder"] = "PREORDER";
     GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnum["Backorder"] = "BACKORDER";
-})(GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnum || (GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnum = {}));
+})(GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnum = exports.GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnum || (exports.GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnum = {}));
 // GoogleCloudRecommendationengineV1beta1ProductCatalogItem
 /**
  * ProductCatalogItem captures item metadata specific to retail products.
@@ -44,37 +47,37 @@ var GoogleCloudRecommendationengineV1beta1ProductCatalogItem = /** @class */ (fu
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availableQuantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availableQuantity" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1ProductCatalogItem.prototype, "availableQuantity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canonicalProductUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canonicalProductUri" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1ProductCatalogItem.prototype, "canonicalProductUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=costs" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=costs" }),
+        __metadata("design:type", Object)
     ], GoogleCloudRecommendationengineV1beta1ProductCatalogItem.prototype, "costs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1ProductCatalogItem.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exactPrice" }),
-        __metadata("design:type", GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exactPrice" }),
+        __metadata("design:type", googlecloudrecommendationenginev1beta1productcatalogitemexactprice_1.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice)
     ], GoogleCloudRecommendationengineV1beta1ProductCatalogItem.prototype, "exactPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=images", elemType: GoogleCloudRecommendationengineV1beta1Image }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=images", elemType: googlecloudrecommendationenginev1beta1image_1.GoogleCloudRecommendationengineV1beta1Image }),
         __metadata("design:type", Array)
     ], GoogleCloudRecommendationengineV1beta1ProductCatalogItem.prototype, "images", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceRange" }),
-        __metadata("design:type", GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceRange" }),
+        __metadata("design:type", googlecloudrecommendationenginev1beta1productcatalogitempricerange_1.GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange)
     ], GoogleCloudRecommendationengineV1beta1ProductCatalogItem.prototype, "priceRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stockState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stockState" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1ProductCatalogItem.prototype, "stockState", void 0);
     return GoogleCloudRecommendationengineV1beta1ProductCatalogItem;
-}(SpeakeasyBase));
-export { GoogleCloudRecommendationengineV1beta1ProductCatalogItem };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommendationengineV1beta1ProductCatalogItem = GoogleCloudRecommendationengineV1beta1ProductCatalogItem;

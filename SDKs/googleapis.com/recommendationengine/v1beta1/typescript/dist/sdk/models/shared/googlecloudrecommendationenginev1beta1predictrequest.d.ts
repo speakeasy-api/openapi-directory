@@ -6,9 +6,9 @@ import { GoogleCloudRecommendationengineV1beta1UserEvent } from "./googlecloudre
 export declare class GoogleCloudRecommendationengineV1beta1PredictRequest extends SpeakeasyBase {
     dryRun?: boolean;
     filter?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     pageSize?: number;
     pageToken?: string;
-    params?: Map<string, any>;
+    params?: Record<string, any>;
     userEvent?: GoogleCloudRecommendationengineV1beta1UserEvent;
 }

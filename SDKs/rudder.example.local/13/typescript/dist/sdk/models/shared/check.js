@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CheckStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Check = exports.CheckStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CheckStatusEnum;
 (function (CheckStatusEnum) {
     CheckStatusEnum["Critical"] = "Critical";
     CheckStatusEnum["Warning"] = "Warning";
     CheckStatusEnum["Ok"] = "Ok";
-})(CheckStatusEnum || (CheckStatusEnum = {}));
+})(CheckStatusEnum = exports.CheckStatusEnum || (exports.CheckStatusEnum = {}));
 var Check = /** @class */ (function (_super) {
     __extends(Check, _super);
     function Check() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=msg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=msg" }),
         __metadata("design:type", String)
     ], Check.prototype, "msg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Check.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Check.prototype, "status", void 0);
     return Check;
-}(SpeakeasyBase));
-export { Check };
+}(utils_1.SpeakeasyBase));
+exports.Check = Check;

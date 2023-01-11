@@ -8,5 +8,5 @@ export declare class TrapListRequest extends SpeakeasyBase {
 export declare class TrapListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    trapList200ApplicationJsonStrings?: string[];
+    trapList200ApplicationJSONStrings?: string[];
 }

@@ -17,7 +17,7 @@ export declare class GetTeamMatchesByYearKeysRequest extends SpeakeasyBase {
 }
 export declare class GetTeamMatchesByYearKeysResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getTeamMatchesByYearKeys200ApplicationJsonStrings?: string[];
+    getTeamMatchesByYearKeys200ApplicationJSONStrings?: string[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ApiRequestActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiRequest = exports.ApiRequestResultEnum = exports.ApiRequestResource = exports.ApiRequestResourceVault = exports.ApiRequestResourceTypeEnum = exports.ApiRequestResourceItem = exports.ApiRequestActor = exports.ApiRequestActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ApiRequestActionEnum;
 (function (ApiRequestActionEnum) {
     ApiRequestActionEnum["Read"] = "READ";
     ApiRequestActionEnum["Create"] = "CREATE";
     ApiRequestActionEnum["Update"] = "UPDATE";
     ApiRequestActionEnum["Delete"] = "DELETE";
-})(ApiRequestActionEnum || (ApiRequestActionEnum = {}));
+})(ApiRequestActionEnum = exports.ApiRequestActionEnum || (exports.ApiRequestActionEnum = {}));
 var ApiRequestActor = /** @class */ (function (_super) {
     __extends(ApiRequestActor, _super);
     function ApiRequestActor() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
         __metadata("design:type", String)
     ], ApiRequestActor.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ApiRequestActor.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jti" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jti" }),
         __metadata("design:type", String)
     ], ApiRequestActor.prototype, "jti", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestIp" }),
         __metadata("design:type", String)
     ], ApiRequestActor.prototype, "requestIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userAgent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userAgent" }),
         __metadata("design:type", String)
     ], ApiRequestActor.prototype, "userAgent", void 0);
     return ApiRequestActor;
-}(SpeakeasyBase));
-export { ApiRequestActor };
+}(utils_1.SpeakeasyBase));
+exports.ApiRequestActor = ApiRequestActor;
 var ApiRequestResourceItem = /** @class */ (function (_super) {
     __extends(ApiRequestResourceItem, _super);
     function ApiRequestResourceItem() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ApiRequestResourceItem.prototype, "id", void 0);
     return ApiRequestResourceItem;
-}(SpeakeasyBase));
-export { ApiRequestResourceItem };
-export var ApiRequestResourceTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.ApiRequestResourceItem = ApiRequestResourceItem;
+var ApiRequestResourceTypeEnum;
 (function (ApiRequestResourceTypeEnum) {
     ApiRequestResourceTypeEnum["Item"] = "ITEM";
     ApiRequestResourceTypeEnum["Vault"] = "VAULT";
-})(ApiRequestResourceTypeEnum || (ApiRequestResourceTypeEnum = {}));
+})(ApiRequestResourceTypeEnum = exports.ApiRequestResourceTypeEnum || (exports.ApiRequestResourceTypeEnum = {}));
 var ApiRequestResourceVault = /** @class */ (function (_super) {
     __extends(ApiRequestResourceVault, _super);
     function ApiRequestResourceVault() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ApiRequestResourceVault.prototype, "id", void 0);
     return ApiRequestResourceVault;
-}(SpeakeasyBase));
-export { ApiRequestResourceVault };
+}(utils_1.SpeakeasyBase));
+exports.ApiRequestResourceVault = ApiRequestResourceVault;
 var ApiRequestResource = /** @class */ (function (_super) {
     __extends(ApiRequestResource, _super);
     function ApiRequestResource() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=item" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=item" }),
         __metadata("design:type", ApiRequestResourceItem)
     ], ApiRequestResource.prototype, "item", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemVersion" }),
         __metadata("design:type", Number)
     ], ApiRequestResource.prototype, "itemVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ApiRequestResource.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vault" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vault" }),
         __metadata("design:type", ApiRequestResourceVault)
     ], ApiRequestResource.prototype, "vault", void 0);
     return ApiRequestResource;
-}(SpeakeasyBase));
-export { ApiRequestResource };
-export var ApiRequestResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.ApiRequestResource = ApiRequestResource;
+var ApiRequestResultEnum;
 (function (ApiRequestResultEnum) {
     ApiRequestResultEnum["Success"] = "SUCCESS";
     ApiRequestResultEnum["Deny"] = "DENY";
-})(ApiRequestResultEnum || (ApiRequestResultEnum = {}));
+})(ApiRequestResultEnum = exports.ApiRequestResultEnum || (exports.ApiRequestResultEnum = {}));
 // ApiRequest
 /**
  * Represents a request that was made to the API. Including what Token was used and what resource was accessed.
@@ -126,29 +129,29 @@ var ApiRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], ApiRequest.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actor" }),
         __metadata("design:type", ApiRequestActor)
     ], ApiRequest.prototype, "actor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], ApiRequest.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
         __metadata("design:type", ApiRequestResource)
     ], ApiRequest.prototype, "resource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], ApiRequest.prototype, "result", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], ApiRequest.prototype, "timestamp", void 0);
     return ApiRequest;
-}(SpeakeasyBase));
-export { ApiRequest };
+}(utils_1.SpeakeasyBase));
+exports.ApiRequest = ApiRequest;

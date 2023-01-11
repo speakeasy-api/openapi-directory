@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateEventIntegrationRequest, CreateEventIntegrationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,29 +33,31 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateEventIntegrationRequest = {
   headers: {
-    xAmzAlgorithm: "ullam",
-    xAmzContentSha256: "architecto",
-    xAmzCredential: "architecto",
-    xAmzDate: "beatae",
-    xAmzSecurityToken: "consequatur",
-    xAmzSignature: "veniam",
-    xAmzSignedHeaders: "hic",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
-    clientToken: "beatae",
-    description: "veritatis",
-    eventBridgeBus: "architecto",
+    clientToken: "voluptas",
+    description: "fugit",
+    eventBridgeBus: "et",
     eventFilter: {
-      source: "voluptas",
+      source: "nihil",
     },
-    name: "voluptatibus",
+    name: "rerum",
     tags: {
-      "consectetur": "modi",
+      "debitis": "voluptatum",
+      "et": "ut",
+      "dolorem": "et",
     },
   },
 };
 
-sdk.sdk.createEventIntegration(req).then((res: CreateEventIntegrationResponse | AxiosError) => {
+sdk.createEventIntegration(req).then((res: CreateEventIntegrationResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,117 +23,119 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetListofCardsCardsCardProviderEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetListofCardsResponse = exports.GetListofCardsCards = exports.GetListofCardsCardsCard = exports.GetListofCardsCardsCardStatusReasonEnum = exports.GetListofCardsCardsCardStatusEnum = exports.GetListofCardsCardsCardProviderEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetListofCardsCardsCardProviderEnum;
 (function (GetListofCardsCardsCardProviderEnum) {
     GetListofCardsCardsCardProviderEnum["Mastercard"] = "MASTERCARD";
-})(GetListofCardsCardsCardProviderEnum || (GetListofCardsCardsCardProviderEnum = {}));
-export var GetListofCardsCardsCardStatusEnum;
+})(GetListofCardsCardsCardProviderEnum = exports.GetListofCardsCardsCardProviderEnum || (exports.GetListofCardsCardsCardProviderEnum = {}));
+var GetListofCardsCardsCardStatusEnum;
 (function (GetListofCardsCardsCardStatusEnum) {
     GetListofCardsCardsCardStatusEnum["Live"] = "LIVE";
     GetListofCardsCardsCardStatusEnum["CreatedActive"] = "CREATED_ACTIVE";
     GetListofCardsCardsCardStatusEnum["CreatedInactive"] = "CREATED_INACTIVE";
     GetListofCardsCardsCardStatusEnum["Deactivated"] = "DEACTIVATED";
-})(GetListofCardsCardsCardStatusEnum || (GetListofCardsCardsCardStatusEnum = {}));
-export var GetListofCardsCardsCardStatusReasonEnum;
+})(GetListofCardsCardsCardStatusEnum = exports.GetListofCardsCardsCardStatusEnum || (exports.GetListofCardsCardsCardStatusEnum = {}));
+var GetListofCardsCardsCardStatusReasonEnum;
 (function (GetListofCardsCardsCardStatusReasonEnum) {
     GetListofCardsCardsCardStatusReasonEnum["LostCard"] = "LOST_CARD";
     GetListofCardsCardsCardStatusReasonEnum["StolenCard"] = "STOLEN_CARD";
     GetListofCardsCardsCardStatusReasonEnum["CardDestroyed"] = "CARD_DESTROYED";
-})(GetListofCardsCardsCardStatusReasonEnum || (GetListofCardsCardsCardStatusReasonEnum = {}));
+})(GetListofCardsCardsCardStatusReasonEnum = exports.GetListofCardsCardsCardStatusReasonEnum || (exports.GetListofCardsCardsCardStatusReasonEnum = {}));
 var GetListofCardsCardsCard = /** @class */ (function (_super) {
     __extends(GetListofCardsCardsCard, _super);
     function GetListofCardsCardsCard() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blocked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blocked" }),
         __metadata("design:type", Boolean)
     ], GetListofCardsCardsCard.prototype, "blocked", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cardId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cardId" }),
         __metadata("design:type", Number)
     ], GetListofCardsCardsCard.prototype, "cardId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateCreated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateCreated" }),
         __metadata("design:type", Date)
     ], GetListofCardsCardsCard.prototype, "dateCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emailAddress" }),
         __metadata("design:type", String)
     ], GetListofCardsCardsCard.prototype, "emailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eurIcan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eurIcan" }),
         __metadata("design:type", Number)
     ], GetListofCardsCardsCard.prototype, "eurIcan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiryDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiryDate" }),
         __metadata("design:type", Date)
     ], GetListofCardsCardsCard.prototype, "expiryDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstName" }),
         __metadata("design:type", String)
     ], GetListofCardsCardsCard.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gbpIcan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gbpIcan" }),
         __metadata("design:type", Number)
     ], GetListofCardsCardsCard.prototype, "gbpIcan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastName" }),
         __metadata("design:type", String)
     ], GetListofCardsCardsCard.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maskedPan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maskedPan" }),
         __metadata("design:type", String)
     ], GetListofCardsCardsCard.prototype, "maskedPan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provider" }),
         __metadata("design:type", String)
     ], GetListofCardsCardsCard.prototype, "provider", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetListofCardsCardsCard.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusReason" }),
         __metadata("design:type", String)
     ], GetListofCardsCardsCard.prototype, "statusReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userId" }),
         __metadata("design:type", Number)
     ], GetListofCardsCardsCard.prototype, "userId", void 0);
     return GetListofCardsCardsCard;
-}(SpeakeasyBase));
-export { GetListofCardsCardsCard };
+}(utils_1.SpeakeasyBase));
+exports.GetListofCardsCardsCard = GetListofCardsCardsCard;
 var GetListofCardsCards = /** @class */ (function (_super) {
     __extends(GetListofCardsCards, _super);
     function GetListofCardsCards() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cards", elemType: GetListofCardsCardsCard }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cards", elemType: GetListofCardsCardsCard }),
         __metadata("design:type", Array)
     ], GetListofCardsCards.prototype, "cards", void 0);
     return GetListofCardsCards;
-}(SpeakeasyBase));
-export { GetListofCardsCards };
+}(utils_1.SpeakeasyBase));
+exports.GetListofCardsCards = GetListofCardsCards;
 var GetListofCardsResponse = /** @class */ (function (_super) {
     __extends(GetListofCardsResponse, _super);
     function GetListofCardsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListofCardsCards)
     ], GetListofCardsResponse.prototype, "cards", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetListofCardsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetListofCardsResponse.prototype, "statusCode", void 0);
     return GetListofCardsResponse;
-}(SpeakeasyBase));
-export { GetListofCardsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetListofCardsResponse = GetListofCardsResponse;

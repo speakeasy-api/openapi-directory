@@ -15,5 +15,5 @@ export class ConfigurationRecorder extends SpeakeasyBase {
   recordingGroup?: RecordingGroup;
 
   @SpeakeasyMetadata({ data: "json, name=roleARN" })
-  roleArn?: string;
+  roleARN?: string;
 }

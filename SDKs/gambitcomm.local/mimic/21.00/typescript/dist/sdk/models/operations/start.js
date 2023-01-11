@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartResponse = exports.StartRequest = exports.StartPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var StartPathParams = /** @class */ (function (_super) {
     __extends(StartPathParams, _super);
     function StartPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], StartPathParams.prototype, "agentNum", void 0);
     return StartPathParams;
-}(SpeakeasyBase));
-export { StartPathParams };
+}(utils_1.SpeakeasyBase));
+exports.StartPathParams = StartPathParams;
 var StartRequest = /** @class */ (function (_super) {
     __extends(StartRequest, _super);
     function StartRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StartPathParams)
     ], StartRequest.prototype, "pathParams", void 0);
     return StartRequest;
-}(SpeakeasyBase));
-export { StartRequest };
+}(utils_1.SpeakeasyBase));
+exports.StartRequest = StartRequest;
 var StartResponse = /** @class */ (function (_super) {
     __extends(StartResponse, _super);
     function StartResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StartResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StartResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], StartResponse.prototype, "start200ApplicationJsonString", void 0);
+    ], StartResponse.prototype, "start200ApplicationJSONString", void 0);
     return StartResponse;
-}(SpeakeasyBase));
-export { StartResponse };
+}(utils_1.SpeakeasyBase));
+exports.StartResponse = StartResponse;

@@ -10,27 +10,6 @@ export enum LocationStatusEnum {
 }
 
 
-export class LocationInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=address" })
-  address?: Address;
-
-  @SpeakeasyMetadata({ data: "json, name=business_name" })
-  businessName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=currency" })
-  currency?: CurrencyEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=merchant_id" })
-  merchantId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=status" })
-  status?: LocationStatusEnum;
-}
-
-
 export class Location extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=address" })
   address?: Address;
@@ -64,4 +43,25 @@ export class Location extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updated_by" })
   updatedBy?: string;
+}
+
+
+export class LocationInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=address" })
+  address?: Address;
+
+  @SpeakeasyMetadata({ data: "json, name=business_name" })
+  businessName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=currency" })
+  currency?: CurrencyEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=merchant_id" })
+  merchantId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=status" })
+  status?: LocationStatusEnum;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StoryIdCollaboratorsUseridDeleteResponse = exports.StoryIdCollaboratorsUseridDeleteRequest = exports.StoryIdCollaboratorsUseridDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var StoryIdCollaboratorsUseridDeletePathParams = /** @class */ (function (_super) {
     __extends(StoryIdCollaboratorsUseridDeletePathParams, _super);
     function StoryIdCollaboratorsUseridDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], StoryIdCollaboratorsUseridDeletePathParams.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=story_collaborator_userid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=story_collaborator_userid" }),
         __metadata("design:type", String)
     ], StoryIdCollaboratorsUseridDeletePathParams.prototype, "storyCollaboratorUserid", void 0);
     return StoryIdCollaboratorsUseridDeletePathParams;
-}(SpeakeasyBase));
-export { StoryIdCollaboratorsUseridDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdCollaboratorsUseridDeletePathParams = StoryIdCollaboratorsUseridDeletePathParams;
 var StoryIdCollaboratorsUseridDeleteRequest = /** @class */ (function (_super) {
     __extends(StoryIdCollaboratorsUseridDeleteRequest, _super);
     function StoryIdCollaboratorsUseridDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StoryIdCollaboratorsUseridDeletePathParams)
     ], StoryIdCollaboratorsUseridDeleteRequest.prototype, "pathParams", void 0);
     return StoryIdCollaboratorsUseridDeleteRequest;
-}(SpeakeasyBase));
-export { StoryIdCollaboratorsUseridDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdCollaboratorsUseridDeleteRequest = StoryIdCollaboratorsUseridDeleteRequest;
 var StoryIdCollaboratorsUseridDeleteResponse = /** @class */ (function (_super) {
     __extends(StoryIdCollaboratorsUseridDeleteResponse, _super);
     function StoryIdCollaboratorsUseridDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StoryIdCollaboratorsUseridDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StoryIdCollaboratorsUseridDeleteResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StoryIdCollaboratorsUseridDeleteResponse.prototype, "problemDetail", void 0);
     return StoryIdCollaboratorsUseridDeleteResponse;
-}(SpeakeasyBase));
-export { StoryIdCollaboratorsUseridDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdCollaboratorsUseridDeleteResponse = StoryIdCollaboratorsUseridDeleteResponse;

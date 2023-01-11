@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CreatePaymentChannelCountryCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePaymentChannel = exports.CreatePaymentChannelCurrencyEnum = exports.CreatePaymentChannelCountryCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CreatePaymentChannelCountryCodeEnum;
 (function (CreatePaymentChannelCountryCodeEnum) {
     CreatePaymentChannelCountryCodeEnum["Af"] = "AF";
     CreatePaymentChannelCountryCodeEnum["Ax"] = "AX";
@@ -274,46 +277,46 @@ export var CreatePaymentChannelCountryCodeEnum;
     CreatePaymentChannelCountryCodeEnum["Ye"] = "YE";
     CreatePaymentChannelCountryCodeEnum["Zm"] = "ZM";
     CreatePaymentChannelCountryCodeEnum["Zw"] = "ZW";
-})(CreatePaymentChannelCountryCodeEnum || (CreatePaymentChannelCountryCodeEnum = {}));
-export var CreatePaymentChannelCurrencyEnum;
+})(CreatePaymentChannelCountryCodeEnum = exports.CreatePaymentChannelCountryCodeEnum || (exports.CreatePaymentChannelCountryCodeEnum = {}));
+var CreatePaymentChannelCurrencyEnum;
 (function (CreatePaymentChannelCurrencyEnum) {
     CreatePaymentChannelCurrencyEnum["Usd"] = "USD";
     CreatePaymentChannelCurrencyEnum["Gbp"] = "GBP";
     CreatePaymentChannelCurrencyEnum["Eur"] = "EUR";
-})(CreatePaymentChannelCurrencyEnum || (CreatePaymentChannelCurrencyEnum = {}));
+})(CreatePaymentChannelCurrencyEnum = exports.CreatePaymentChannelCurrencyEnum || (exports.CreatePaymentChannelCurrencyEnum = {}));
 var CreatePaymentChannel = /** @class */ (function (_super) {
     __extends(CreatePaymentChannel, _super);
     function CreatePaymentChannel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountName" }),
         __metadata("design:type", String)
     ], CreatePaymentChannel.prototype, "accountName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountNumber" }),
         __metadata("design:type", String)
     ], CreatePaymentChannel.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countryCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countryCode" }),
         __metadata("design:type", String)
     ], CreatePaymentChannel.prototype, "countryCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], CreatePaymentChannel.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iban" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iban" }),
         __metadata("design:type", String)
     ], CreatePaymentChannel.prototype, "iban", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentChannelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentChannelName" }),
         __metadata("design:type", String)
     ], CreatePaymentChannel.prototype, "paymentChannelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routingNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routingNumber" }),
         __metadata("design:type", String)
     ], CreatePaymentChannel.prototype, "routingNumber", void 0);
     return CreatePaymentChannel;
-}(SpeakeasyBase));
-export { CreatePaymentChannel };
+}(utils_1.SpeakeasyBase));
+exports.CreatePaymentChannel = CreatePaymentChannel;

@@ -22,5 +22,5 @@ export class ProtocolMqttClientGetProtstateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolMqttClientGetProtstate200ApplicationJsonInt32Integers?: number[];
+  protocolMqttClientGetProtstate200ApplicationJSONInt32Integers?: number[];
 }

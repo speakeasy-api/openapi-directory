@@ -29,7 +29,7 @@ export declare class SearchReposRequest extends SpeakeasyBase {
 export declare class SearchReposResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    searchRepos200ApplicationJsonObject?: SearchRepos200ApplicationJson;
-    searchRepos503ApplicationJsonObject?: SearchRepos503ApplicationJson;
+    searchRepos200ApplicationJSONObject?: SearchRepos200ApplicationJson;
+    searchRepos503ApplicationJSONObject?: SearchRepos503ApplicationJson;
     validationError?: shared.ValidationError;
 }

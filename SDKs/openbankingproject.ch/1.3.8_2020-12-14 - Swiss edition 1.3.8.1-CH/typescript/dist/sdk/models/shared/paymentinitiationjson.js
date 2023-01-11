@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChargeBearerEnum } from "./chargebearerenum";
-import { AccountReference16Ch } from "./accountreference16ch";
-import { Address } from "./address";
-import { CreditorAgent7Ch } from "./creditoragent7ch";
-import { DebtorAgent7Ch } from "./debtoragent7ch";
-import { Amount } from "./amount";
-import { ExchangeRateInformation1 } from "./exchangerateinformation1";
-import { PurposeCodeEnum } from "./purposecodeenum";
-import { RemittanceInformationStructured } from "./remittanceinformationstructured";
-import { ExternalServiceLevel1CodeEnum } from "./externalservicelevel1codeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentInitiationJson = void 0;
+var utils_1 = require("../../../internal/utils");
+var chargebearerenum_1 = require("./chargebearerenum");
+var accountreference16ch_1 = require("./accountreference16ch");
+var address_1 = require("./address");
+var creditoragent7ch_1 = require("./creditoragent7ch");
+var debtoragent7ch_1 = require("./debtoragent7ch");
+var amount_1 = require("./amount");
+var exchangerateinformation1_1 = require("./exchangerateinformation1");
+var purposecodeenum_1 = require("./purposecodeenum");
+var remittanceinformationstructured_1 = require("./remittanceinformationstructured");
+var externalservicelevel1codeenum_1 = require("./externalservicelevel1codeenum");
 // PaymentInitiationJson
 /**
  * Generic Body for a payment initation via JSON.
@@ -121,105 +124,105 @@ var PaymentInitiationJson = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chargeBearer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chargeBearer" }),
         __metadata("design:type", String)
     ], PaymentInitiationJson.prototype, "chargeBearer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creditorAccount" }),
-        __metadata("design:type", AccountReference16Ch)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditorAccount" }),
+        __metadata("design:type", accountreference16ch_1.AccountReference16Ch)
     ], PaymentInitiationJson.prototype, "creditorAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creditorAddress" }),
-        __metadata("design:type", Address)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditorAddress" }),
+        __metadata("design:type", address_1.Address)
     ], PaymentInitiationJson.prototype, "creditorAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creditorAgent" }),
-        __metadata("design:type", CreditorAgent7Ch)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditorAgent" }),
+        __metadata("design:type", creditoragent7ch_1.CreditorAgent7Ch)
     ], PaymentInitiationJson.prototype, "creditorAgent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creditorAgentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditorAgentName" }),
         __metadata("design:type", String)
     ], PaymentInitiationJson.prototype, "creditorAgentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creditorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditorId" }),
         __metadata("design:type", String)
     ], PaymentInitiationJson.prototype, "creditorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creditorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditorName" }),
         __metadata("design:type", String)
     ], PaymentInitiationJson.prototype, "creditorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creditorNameAndAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditorNameAndAddress" }),
         __metadata("design:type", String)
     ], PaymentInitiationJson.prototype, "creditorNameAndAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=debtorAccount" }),
-        __metadata("design:type", AccountReference16Ch)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=debtorAccount" }),
+        __metadata("design:type", accountreference16ch_1.AccountReference16Ch)
     ], PaymentInitiationJson.prototype, "debtorAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=debtorAgent" }),
-        __metadata("design:type", DebtorAgent7Ch)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=debtorAgent" }),
+        __metadata("design:type", debtoragent7ch_1.DebtorAgent7Ch)
     ], PaymentInitiationJson.prototype, "debtorAgent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=debtorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=debtorId" }),
         __metadata("design:type", String)
     ], PaymentInitiationJson.prototype, "debtorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=debtorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=debtorName" }),
         __metadata("design:type", String)
     ], PaymentInitiationJson.prototype, "debtorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endToEndIdentification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endToEndIdentification" }),
         __metadata("design:type", String)
     ], PaymentInitiationJson.prototype, "endToEndIdentification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=equivalentAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=equivalentAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], PaymentInitiationJson.prototype, "equivalentAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exchangeRateInformation" }),
-        __metadata("design:type", ExchangeRateInformation1)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exchangeRateInformation" }),
+        __metadata("design:type", exchangerateinformation1_1.ExchangeRateInformation1)
     ], PaymentInitiationJson.prototype, "exchangeRateInformation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instructedAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instructedAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], PaymentInitiationJson.prototype, "instructedAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intermediaryAgent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intermediaryAgent" }),
         __metadata("design:type", String)
     ], PaymentInitiationJson.prototype, "intermediaryAgent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purposeCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purposeCode" }),
         __metadata("design:type", String)
     ], PaymentInitiationJson.prototype, "purposeCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remittanceInformationStructured" }),
-        __metadata("design:type", RemittanceInformationStructured)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remittanceInformationStructured" }),
+        __metadata("design:type", remittanceinformationstructured_1.RemittanceInformationStructured)
     ], PaymentInitiationJson.prototype, "remittanceInformationStructured", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remittanceInformationUnstructured" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remittanceInformationUnstructured" }),
         __metadata("design:type", String)
     ], PaymentInitiationJson.prototype, "remittanceInformationUnstructured", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedExecutionDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedExecutionDate" }),
         __metadata("design:type", Date)
     ], PaymentInitiationJson.prototype, "requestedExecutionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceLevel" }),
         __metadata("design:type", String)
     ], PaymentInitiationJson.prototype, "serviceLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionCurrency" }),
         __metadata("design:type", String)
     ], PaymentInitiationJson.prototype, "transactionCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ultimateCreditor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ultimateCreditor" }),
         __metadata("design:type", String)
     ], PaymentInitiationJson.prototype, "ultimateCreditor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ultimateDebtor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ultimateDebtor" }),
         __metadata("design:type", String)
     ], PaymentInitiationJson.prototype, "ultimateDebtor", void 0);
     return PaymentInitiationJson;
-}(SpeakeasyBase));
-export { PaymentInitiationJson };
+}(utils_1.SpeakeasyBase));
+exports.PaymentInitiationJson = PaymentInitiationJson;

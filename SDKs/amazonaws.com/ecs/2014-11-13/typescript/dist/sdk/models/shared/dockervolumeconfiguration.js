@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ScopeEnum } from "./scopeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DockerVolumeConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var scopeenum_1 = require("./scopeenum");
 // DockerVolumeConfiguration
 /**
  * This parameter is specified when you are using Docker volumes. Docker volumes are only supported when you are using the EC2 launch type. Windows containers only support the use of the <code>local</code> driver. To use bind mounts, specify a <code>host</code> instead.
@@ -34,25 +37,25 @@ var DockerVolumeConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoprovision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoprovision" }),
         __metadata("design:type", Boolean)
     ], DockerVolumeConfiguration.prototype, "autoprovision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driver" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driver" }),
         __metadata("design:type", String)
     ], DockerVolumeConfiguration.prototype, "driver", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driverOpts" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driverOpts" }),
+        __metadata("design:type", Object)
     ], DockerVolumeConfiguration.prototype, "driverOpts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], DockerVolumeConfiguration.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", String)
     ], DockerVolumeConfiguration.prototype, "scope", void 0);
     return DockerVolumeConfiguration;
-}(SpeakeasyBase));
-export { DockerVolumeConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.DockerVolumeConfiguration = DockerVolumeConfiguration;

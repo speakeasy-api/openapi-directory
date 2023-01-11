@@ -19,7 +19,7 @@ export class Policy extends SpeakeasyBase {
   admissionWhitelistPatterns?: AdmissionWhitelistPattern[];
 
   @SpeakeasyMetadata({ data: "json, name=clusterAdmissionRules", elemType: AdmissionRule })
-  clusterAdmissionRules?: Map<string, AdmissionRule>;
+  clusterAdmissionRules?: Record<string, AdmissionRule>;
 
   @SpeakeasyMetadata({ data: "json, name=defaultAdmissionRule" })
   defaultAdmissionRule?: AdmissionRule;
@@ -34,13 +34,13 @@ export class Policy extends SpeakeasyBase {
   globalPolicyEvaluationMode?: PolicyGlobalPolicyEvaluationModeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=istioServiceIdentityAdmissionRules", elemType: AdmissionRule })
-  istioServiceIdentityAdmissionRules?: Map<string, AdmissionRule>;
+  istioServiceIdentityAdmissionRules?: Record<string, AdmissionRule>;
 
   @SpeakeasyMetadata({ data: "json, name=kubernetesNamespaceAdmissionRules", elemType: AdmissionRule })
-  kubernetesNamespaceAdmissionRules?: Map<string, AdmissionRule>;
+  kubernetesNamespaceAdmissionRules?: Record<string, AdmissionRule>;
 
   @SpeakeasyMetadata({ data: "json, name=kubernetesServiceAccountAdmissionRules", elemType: AdmissionRule })
-  kubernetesServiceAccountAdmissionRules?: Map<string, AdmissionRule>;
+  kubernetesServiceAccountAdmissionRules?: Record<string, AdmissionRule>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

@@ -11,7 +11,7 @@ export declare class Directive extends SpeakeasyBase {
     enabled?: boolean;
     id?: string;
     longDescription?: string;
-    parameters?: Map<string, any>;
+    parameters?: Record<string, any>;
     policyMode?: DirectivePolicyModeEnum;
     priority?: number;
     shortDescription?: string;

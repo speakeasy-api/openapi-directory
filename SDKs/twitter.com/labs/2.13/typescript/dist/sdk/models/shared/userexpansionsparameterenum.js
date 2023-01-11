@@ -1,4 +1,7 @@
-export var UserExpansionsParameterEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserExpansionsParameterEnum = void 0;
+var UserExpansionsParameterEnum;
 (function (UserExpansionsParameterEnum) {
     UserExpansionsParameterEnum["PinnedTweetId"] = "pinned_tweet_id";
-})(UserExpansionsParameterEnum || (UserExpansionsParameterEnum = {}));
+})(UserExpansionsParameterEnum = exports.UserExpansionsParameterEnum || (exports.UserExpansionsParameterEnum = {}));

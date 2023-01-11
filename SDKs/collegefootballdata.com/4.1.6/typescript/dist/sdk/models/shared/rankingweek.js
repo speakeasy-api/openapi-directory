@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RankingWeek = exports.RankingWeekPolls = exports.RankingWeekPollsRanks = void 0;
+var utils_1 = require("../../../internal/utils");
 var RankingWeekPollsRanks = /** @class */ (function (_super) {
     __extends(RankingWeekPollsRanks, _super);
     function RankingWeekPollsRanks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conference" }),
         __metadata("design:type", String)
     ], RankingWeekPollsRanks.prototype, "conference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstPlaceVotes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstPlaceVotes" }),
         __metadata("design:type", Number)
     ], RankingWeekPollsRanks.prototype, "firstPlaceVotes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=points" }),
         __metadata("design:type", Number)
     ], RankingWeekPollsRanks.prototype, "points", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rank" }),
         __metadata("design:type", Number)
     ], RankingWeekPollsRanks.prototype, "rank", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=school" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=school" }),
         __metadata("design:type", String)
     ], RankingWeekPollsRanks.prototype, "school", void 0);
     return RankingWeekPollsRanks;
-}(SpeakeasyBase));
-export { RankingWeekPollsRanks };
+}(utils_1.SpeakeasyBase));
+exports.RankingWeekPollsRanks = RankingWeekPollsRanks;
 var RankingWeekPolls = /** @class */ (function (_super) {
     __extends(RankingWeekPolls, _super);
     function RankingWeekPolls() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=poll" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=poll" }),
         __metadata("design:type", String)
     ], RankingWeekPolls.prototype, "poll", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ranks", elemType: RankingWeekPollsRanks }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ranks", elemType: RankingWeekPollsRanks }),
         __metadata("design:type", Array)
     ], RankingWeekPolls.prototype, "ranks", void 0);
     return RankingWeekPolls;
-}(SpeakeasyBase));
-export { RankingWeekPolls };
+}(utils_1.SpeakeasyBase));
+exports.RankingWeekPolls = RankingWeekPolls;
 var RankingWeek = /** @class */ (function (_super) {
     __extends(RankingWeek, _super);
     function RankingWeek() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=polls", elemType: RankingWeekPolls }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=polls", elemType: RankingWeekPolls }),
         __metadata("design:type", Array)
     ], RankingWeek.prototype, "polls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=season" }),
         __metadata("design:type", Number)
     ], RankingWeek.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seasonType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seasonType" }),
         __metadata("design:type", String)
     ], RankingWeek.prototype, "seasonType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=week" }),
         __metadata("design:type", Number)
     ], RankingWeek.prototype, "week", void 0);
     return RankingWeek;
-}(SpeakeasyBase));
-export { RankingWeek };
+}(utils_1.SpeakeasyBase));
+exports.RankingWeek = RankingWeek;

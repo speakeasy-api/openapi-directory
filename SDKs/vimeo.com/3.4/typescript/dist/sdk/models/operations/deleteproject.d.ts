@@ -18,5 +18,5 @@ export declare class DeleteProjectRequest extends SpeakeasyBase {
 export declare class DeleteProjectResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
 }

@@ -19,7 +19,7 @@ export declare class GooglePrivacyDlpV2Finding extends SpeakeasyBase {
     infoType?: GooglePrivacyDlpV2InfoType;
     jobCreateTime?: string;
     jobName?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     likelihood?: GooglePrivacyDlpV2FindingLikelihoodEnum;
     location?: GooglePrivacyDlpV2Location;
     name?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse
 /**
  * Response containing resource names of the DeviceUsers associated with the caller's credentials.
@@ -33,17 +36,17 @@ var GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customer" }),
         __metadata("design:type", String)
     ], GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse.prototype, "customer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=names" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=names" }),
         __metadata("design:type", Array)
     ], GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse.prototype, "names", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse.prototype, "nextPageToken", void 0);
     return GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse;
-}(SpeakeasyBase));
-export { GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse = GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse;

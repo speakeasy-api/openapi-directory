@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RelationshipStatusEnum } from "./relationshipstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Invitation = void 0;
+var utils_1 = require("../../../internal/utils");
+var relationshipstatusenum_1 = require("./relationshipstatusenum");
 // Invitation
 /**
  * Provides information about an Amazon Macie membership invitation that was received by an account.
@@ -34,21 +37,21 @@ var Invitation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], Invitation.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invitationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invitationId" }),
         __metadata("design:type", String)
     ], Invitation.prototype, "invitationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invitedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invitedAt" }),
         __metadata("design:type", Date)
     ], Invitation.prototype, "invitedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationshipStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationshipStatus" }),
         __metadata("design:type", String)
     ], Invitation.prototype, "relationshipStatus", void 0);
     return Invitation;
-}(SpeakeasyBase));
-export { Invitation };
+}(utils_1.SpeakeasyBase));
+exports.Invitation = Invitation;

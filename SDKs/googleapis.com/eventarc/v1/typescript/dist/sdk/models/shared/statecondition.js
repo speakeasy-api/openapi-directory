@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var StateConditionCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StateCondition = exports.StateConditionCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var StateConditionCodeEnum;
 (function (StateConditionCodeEnum) {
     StateConditionCodeEnum["Ok"] = "OK";
     StateConditionCodeEnum["Cancelled"] = "CANCELLED";
@@ -42,24 +45,20 @@ export var StateConditionCodeEnum;
     StateConditionCodeEnum["Internal"] = "INTERNAL";
     StateConditionCodeEnum["Unavailable"] = "UNAVAILABLE";
     StateConditionCodeEnum["DataLoss"] = "DATA_LOSS";
-})(StateConditionCodeEnum || (StateConditionCodeEnum = {}));
-// StateCondition
-/**
- * A condition that is part of the trigger state computation.
-**/
+})(StateConditionCodeEnum = exports.StateConditionCodeEnum || (exports.StateConditionCodeEnum = {}));
 var StateCondition = /** @class */ (function (_super) {
     __extends(StateCondition, _super);
     function StateCondition() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], StateCondition.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], StateCondition.prototype, "message", void 0);
     return StateCondition;
-}(SpeakeasyBase));
-export { StateCondition };
+}(utils_1.SpeakeasyBase));
+exports.StateCondition = StateCondition;

@@ -8,23 +8,23 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class WeeklyAutoScalingSchedule extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Friday" })
-  friday?: Map<string, string>;
+  friday?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Monday" })
-  monday?: Map<string, string>;
+  monday?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Saturday" })
-  saturday?: Map<string, string>;
+  saturday?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Sunday" })
-  sunday?: Map<string, string>;
+  sunday?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Thursday" })
-  thursday?: Map<string, string>;
+  thursday?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Tuesday" })
-  tuesday?: Map<string, string>;
+  tuesday?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Wednesday" })
-  wednesday?: Map<string, string>;
+  wednesday?: Record<string, string>;
 }

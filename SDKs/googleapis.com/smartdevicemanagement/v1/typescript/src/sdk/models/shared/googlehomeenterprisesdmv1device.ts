@@ -15,7 +15,7 @@ export class GoogleHomeEnterpriseSdmV1Device extends SpeakeasyBase {
   parentRelations?: GoogleHomeEnterpriseSdmV1ParentRelation[];
 
   @SpeakeasyMetadata({ data: "json, name=traits" })
-  traits?: Map<string, any>;
+  traits?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: string;

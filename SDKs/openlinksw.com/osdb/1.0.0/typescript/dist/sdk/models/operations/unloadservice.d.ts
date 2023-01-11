@@ -19,5 +19,5 @@ export declare class UnloadServiceResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
     statusCode: number;
-    unloadService200ApplicationJsonObject?: UnloadService200ApplicationJson;
+    unloadService200ApplicationJSONObject?: UnloadService200ApplicationJson;
 }

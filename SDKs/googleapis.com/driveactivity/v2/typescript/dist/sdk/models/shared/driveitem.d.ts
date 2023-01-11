@@ -6,9 +6,9 @@ import { Owner } from "./owner";
  * A Drive item, such as a file or folder.
 **/
 export declare class DriveItem extends SpeakeasyBase {
-    driveFile?: Map<string, any>;
+    driveFile?: Record<string, any>;
     driveFolder?: DriveFolder;
-    file?: Map<string, any>;
+    file?: Record<string, any>;
     folder?: Folder;
     mimeType?: string;
     name?: string;

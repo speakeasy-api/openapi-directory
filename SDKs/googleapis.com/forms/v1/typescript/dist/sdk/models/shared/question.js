@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChoiceQuestion } from "./choicequestion";
-import { DateQuestion } from "./datequestion";
-import { FileUploadQuestion } from "./fileuploadquestion";
-import { Grading } from "./grading";
-import { RowQuestion } from "./rowquestion";
-import { ScaleQuestion } from "./scalequestion";
-import { TextQuestion } from "./textquestion";
-import { TimeQuestion } from "./timequestion";
-import { ChoiceQuestionInput } from "./choicequestion";
-// Question
-/**
- * Any question. The specific type of question is known by its `kind`.
-**/
-var Question = /** @class */ (function (_super) {
-    __extends(Question, _super);
-    function Question() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=choiceQuestion" }),
-        __metadata("design:type", ChoiceQuestion)
-    ], Question.prototype, "choiceQuestion", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateQuestion" }),
-        __metadata("design:type", DateQuestion)
-    ], Question.prototype, "dateQuestion", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileUploadQuestion" }),
-        __metadata("design:type", FileUploadQuestion)
-    ], Question.prototype, "fileUploadQuestion", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=grading" }),
-        __metadata("design:type", Grading)
-    ], Question.prototype, "grading", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=questionId" }),
-        __metadata("design:type", String)
-    ], Question.prototype, "questionId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=required" }),
-        __metadata("design:type", Boolean)
-    ], Question.prototype, "required", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=rowQuestion" }),
-        __metadata("design:type", RowQuestion)
-    ], Question.prototype, "rowQuestion", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=scaleQuestion" }),
-        __metadata("design:type", ScaleQuestion)
-    ], Question.prototype, "scaleQuestion", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=textQuestion" }),
-        __metadata("design:type", TextQuestion)
-    ], Question.prototype, "textQuestion", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeQuestion" }),
-        __metadata("design:type", TimeQuestion)
-    ], Question.prototype, "timeQuestion", void 0);
-    return Question;
-}(SpeakeasyBase));
-export { Question };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Question = exports.QuestionInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var choicequestion_1 = require("./choicequestion");
+var datequestion_1 = require("./datequestion");
+var fileuploadquestion_1 = require("./fileuploadquestion");
+var grading_1 = require("./grading");
+var rowquestion_1 = require("./rowquestion");
+var scalequestion_1 = require("./scalequestion");
+var textquestion_1 = require("./textquestion");
+var timequestion_1 = require("./timequestion");
+var choicequestion_2 = require("./choicequestion");
 // QuestionInput
 /**
  * Any question. The specific type of question is known by its `kind`.
@@ -94,45 +45,97 @@ var QuestionInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=choiceQuestion" }),
-        __metadata("design:type", ChoiceQuestionInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=choiceQuestion" }),
+        __metadata("design:type", choicequestion_1.ChoiceQuestionInput)
     ], QuestionInput.prototype, "choiceQuestion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateQuestion" }),
-        __metadata("design:type", DateQuestion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateQuestion" }),
+        __metadata("design:type", datequestion_1.DateQuestion)
     ], QuestionInput.prototype, "dateQuestion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileUploadQuestion" }),
-        __metadata("design:type", FileUploadQuestion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileUploadQuestion" }),
+        __metadata("design:type", fileuploadquestion_1.FileUploadQuestion)
     ], QuestionInput.prototype, "fileUploadQuestion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grading" }),
-        __metadata("design:type", Grading)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grading" }),
+        __metadata("design:type", grading_1.Grading)
     ], QuestionInput.prototype, "grading", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=questionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=questionId" }),
         __metadata("design:type", String)
     ], QuestionInput.prototype, "questionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required" }),
         __metadata("design:type", Boolean)
     ], QuestionInput.prototype, "required", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rowQuestion" }),
-        __metadata("design:type", RowQuestion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rowQuestion" }),
+        __metadata("design:type", rowquestion_1.RowQuestion)
     ], QuestionInput.prototype, "rowQuestion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scaleQuestion" }),
-        __metadata("design:type", ScaleQuestion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scaleQuestion" }),
+        __metadata("design:type", scalequestion_1.ScaleQuestion)
     ], QuestionInput.prototype, "scaleQuestion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textQuestion" }),
-        __metadata("design:type", TextQuestion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textQuestion" }),
+        __metadata("design:type", textquestion_1.TextQuestion)
     ], QuestionInput.prototype, "textQuestion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeQuestion" }),
-        __metadata("design:type", TimeQuestion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeQuestion" }),
+        __metadata("design:type", timequestion_1.TimeQuestion)
     ], QuestionInput.prototype, "timeQuestion", void 0);
     return QuestionInput;
-}(SpeakeasyBase));
-export { QuestionInput };
+}(utils_1.SpeakeasyBase));
+exports.QuestionInput = QuestionInput;
+// Question
+/**
+ * Any question. The specific type of question is known by its `kind`.
+**/
+var Question = /** @class */ (function (_super) {
+    __extends(Question, _super);
+    function Question() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=choiceQuestion" }),
+        __metadata("design:type", choicequestion_2.ChoiceQuestion)
+    ], Question.prototype, "choiceQuestion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateQuestion" }),
+        __metadata("design:type", datequestion_1.DateQuestion)
+    ], Question.prototype, "dateQuestion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileUploadQuestion" }),
+        __metadata("design:type", fileuploadquestion_1.FileUploadQuestion)
+    ], Question.prototype, "fileUploadQuestion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grading" }),
+        __metadata("design:type", grading_1.Grading)
+    ], Question.prototype, "grading", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=questionId" }),
+        __metadata("design:type", String)
+    ], Question.prototype, "questionId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required" }),
+        __metadata("design:type", Boolean)
+    ], Question.prototype, "required", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rowQuestion" }),
+        __metadata("design:type", rowquestion_1.RowQuestion)
+    ], Question.prototype, "rowQuestion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scaleQuestion" }),
+        __metadata("design:type", scalequestion_1.ScaleQuestion)
+    ], Question.prototype, "scaleQuestion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textQuestion" }),
+        __metadata("design:type", textquestion_1.TextQuestion)
+    ], Question.prototype, "textQuestion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeQuestion" }),
+        __metadata("design:type", timequestion_1.TimeQuestion)
+    ], Question.prototype, "timeQuestion", void 0);
+    return Question;
+}(utils_1.SpeakeasyBase));
+exports.Question = Question;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PreprintProviderDetailResponse = exports.PreprintProviderDetailRequest = exports.PreprintProviderDetailPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PreprintProviderDetailPathParams = /** @class */ (function (_super) {
     __extends(PreprintProviderDetailPathParams, _super);
     function PreprintProviderDetailPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=preprint_provider_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=preprint_provider_id" }),
         __metadata("design:type", String)
     ], PreprintProviderDetailPathParams.prototype, "preprintProviderId", void 0);
     return PreprintProviderDetailPathParams;
-}(SpeakeasyBase));
-export { PreprintProviderDetailPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PreprintProviderDetailPathParams = PreprintProviderDetailPathParams;
 var PreprintProviderDetailRequest = /** @class */ (function (_super) {
     __extends(PreprintProviderDetailRequest, _super);
     function PreprintProviderDetailRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PreprintProviderDetailPathParams)
     ], PreprintProviderDetailRequest.prototype, "pathParams", void 0);
     return PreprintProviderDetailRequest;
-}(SpeakeasyBase));
-export { PreprintProviderDetailRequest };
+}(utils_1.SpeakeasyBase));
+exports.PreprintProviderDetailRequest = PreprintProviderDetailRequest;
 var PreprintProviderDetailResponse = /** @class */ (function (_super) {
     __extends(PreprintProviderDetailResponse, _super);
     function PreprintProviderDetailResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PreprintProviderDetailResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PreprintProviderDetailResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PreprintProviderDetailResponse.prototype, "statusCode", void 0);
     return PreprintProviderDetailResponse;
-}(SpeakeasyBase));
-export { PreprintProviderDetailResponse };
+}(utils_1.SpeakeasyBase));
+exports.PreprintProviderDetailResponse = PreprintProviderDetailResponse;

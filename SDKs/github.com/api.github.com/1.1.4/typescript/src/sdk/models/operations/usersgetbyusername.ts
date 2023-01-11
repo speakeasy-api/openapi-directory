@@ -26,5 +26,5 @@ export class UsersGetByUsernameResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  usersGetByUsername200ApplicationJsonOneOf?: any;
+  usersGetByUsername200ApplicationJSONOneOf?: any;
 }

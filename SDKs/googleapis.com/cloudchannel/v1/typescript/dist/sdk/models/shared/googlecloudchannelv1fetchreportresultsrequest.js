@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1FetchReportResultsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudChannelV1FetchReportResultsRequest
 /**
  * Request message for CloudChannelReportsService.FetchReportResults.
@@ -33,13 +36,13 @@ var GoogleCloudChannelV1FetchReportResultsRequest = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageSize" }),
         __metadata("design:type", Number)
     ], GoogleCloudChannelV1FetchReportResultsRequest.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageToken" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1FetchReportResultsRequest.prototype, "pageToken", void 0);
     return GoogleCloudChannelV1FetchReportResultsRequest;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1FetchReportResultsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1FetchReportResultsRequest = GoogleCloudChannelV1FetchReportResultsRequest;

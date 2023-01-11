@@ -65,7 +65,7 @@ export declare class Rack extends SpeakeasyBase {
     assetTag?: string;
     comments?: string;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     descUnits?: boolean;
     deviceCount?: number;
     displayName?: string;

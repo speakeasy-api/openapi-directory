@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-var TimesheetLineInput = /** @class */ (function (_super) {
-    __extends(TimesheetLineInput, _super);
-    function TimesheetLineInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=EarningsRateID" }),
-        __metadata("design:type", String)
-    ], TimesheetLineInput.prototype, "earningsRateId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfUnits" }),
-        __metadata("design:type", Array)
-    ], TimesheetLineInput.prototype, "numberOfUnits", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrackingItemID" }),
-        __metadata("design:type", String)
-    ], TimesheetLineInput.prototype, "trackingItemId", void 0);
-    return TimesheetLineInput;
-}(SpeakeasyBase));
-export { TimesheetLineInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TimesheetLineInput = exports.TimesheetLine = void 0;
+var utils_1 = require("../../../internal/utils");
 var TimesheetLine = /** @class */ (function (_super) {
     __extends(TimesheetLine, _super);
     function TimesheetLine() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EarningsRateID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EarningsRateID" }),
         __metadata("design:type", String)
-    ], TimesheetLine.prototype, "earningsRateId", void 0);
+    ], TimesheetLine.prototype, "earningsRateID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfUnits" }),
         __metadata("design:type", Array)
     ], TimesheetLine.prototype, "numberOfUnits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrackingItemID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrackingItemID" }),
         __metadata("design:type", String)
-    ], TimesheetLine.prototype, "trackingItemId", void 0);
+    ], TimesheetLine.prototype, "trackingItemID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdatedDateUTC" }),
         __metadata("design:type", String)
-    ], TimesheetLine.prototype, "updatedDateUtc", void 0);
+    ], TimesheetLine.prototype, "updatedDateUTC", void 0);
     return TimesheetLine;
-}(SpeakeasyBase));
-export { TimesheetLine };
+}(utils_1.SpeakeasyBase));
+exports.TimesheetLine = TimesheetLine;
+var TimesheetLineInput = /** @class */ (function (_super) {
+    __extends(TimesheetLineInput, _super);
+    function TimesheetLineInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EarningsRateID" }),
+        __metadata("design:type", String)
+    ], TimesheetLineInput.prototype, "earningsRateID", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfUnits" }),
+        __metadata("design:type", Array)
+    ], TimesheetLineInput.prototype, "numberOfUnits", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrackingItemID" }),
+        __metadata("design:type", String)
+    ], TimesheetLineInput.prototype, "trackingItemID", void 0);
+    return TimesheetLineInput;
+}(utils_1.SpeakeasyBase));
+exports.TimesheetLineInput = TimesheetLineInput;

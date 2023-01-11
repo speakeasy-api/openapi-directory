@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiscountBenefit = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
 // DiscountBenefit
 /**
  * This container defines the promotional discount as either a monetary amount or a percentage of the sales price. Important!: You must populate one and only one of the fields in this container: amountOffItem amountOffOrder percentageOffItem percentageOffOrder Tip: Refer to Configuring discounts for threshold promotions for information and examples on how to combine discountBenefit and discountSpecification values to create different types of promotions.
@@ -34,21 +37,21 @@ var DiscountBenefit = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountOffItem" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountOffItem" }),
+        __metadata("design:type", amount_1.Amount)
     ], DiscountBenefit.prototype, "amountOffItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountOffOrder" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountOffOrder" }),
+        __metadata("design:type", amount_1.Amount)
     ], DiscountBenefit.prototype, "amountOffOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentageOffItem" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentageOffItem" }),
         __metadata("design:type", String)
     ], DiscountBenefit.prototype, "percentageOffItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentageOffOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentageOffOrder" }),
         __metadata("design:type", String)
     ], DiscountBenefit.prototype, "percentageOffOrder", void 0);
     return DiscountBenefit;
-}(SpeakeasyBase));
-export { DiscountBenefit };
+}(utils_1.SpeakeasyBase));
+exports.DiscountBenefit = DiscountBenefit;

@@ -81,7 +81,7 @@ export declare class GetDocumentWithPath200ApplicationJsonProvenance extends Spe
     buildCommit?: string;
     buildHostname?: string;
     buildTimestamp?: string;
-    bundles?: Map<string, any>;
+    bundles?: Record<string, any>;
     version?: string;
 }
 export declare class GetDocumentWithPath200ApplicationJson extends SpeakeasyBase {
@@ -99,5 +99,5 @@ export declare class GetDocumentWithPathResponse extends SpeakeasyBase {
     fourHundred?: shared.FourHundred;
     contentType: string;
     statusCode: number;
-    getDocumentWithPath200ApplicationJsonObject?: GetDocumentWithPath200ApplicationJson;
+    getDocumentWithPath200ApplicationJSONObject?: GetDocumentWithPath200ApplicationJson;
 }

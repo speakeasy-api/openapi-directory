@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SubnetMapping } from "./subnetmapping";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DisassociateSubnetsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var subnetmapping_1 = require("./subnetmapping");
 var DisassociateSubnetsResponse = /** @class */ (function (_super) {
     __extends(DisassociateSubnetsResponse, _super);
     function DisassociateSubnetsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirewallArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirewallArn" }),
         __metadata("design:type", String)
     ], DisassociateSubnetsResponse.prototype, "firewallArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirewallName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirewallName" }),
         __metadata("design:type", String)
     ], DisassociateSubnetsResponse.prototype, "firewallName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetMappings", elemType: SubnetMapping }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetMappings", elemType: subnetmapping_1.SubnetMapping }),
         __metadata("design:type", Array)
     ], DisassociateSubnetsResponse.prototype, "subnetMappings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdateToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdateToken" }),
         __metadata("design:type", String)
     ], DisassociateSubnetsResponse.prototype, "updateToken", void 0);
     return DisassociateSubnetsResponse;
-}(SpeakeasyBase));
-export { DisassociateSubnetsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DisassociateSubnetsResponse = DisassociateSubnetsResponse;

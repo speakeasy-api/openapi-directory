@@ -41,8 +41,8 @@ export class GetUsersSelectedUserSshKeysKeyIdResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  sshAccountKey?: Map<string, any>;
+  sshAccountKey?: Record<string, any>;
 }

@@ -1,9 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CurrencyCodeValuesEnum } from "./currencycodevaluesenum";
-import { Purchase } from "./purchase";
 export declare class GetHostReservationPurchasePreviewResult extends SpeakeasyBase {
-    currencyCode?: CurrencyCodeValuesEnum;
-    purchase?: Purchase[];
-    totalHourlyPrice?: string;
-    totalUpfrontPrice?: string;
+    currencyCode?: Record<string, any>;
+    purchase?: Record<string, any>;
+    totalHourlyPrice?: Record<string, any>;
+    totalUpfrontPrice?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteStripeGatewayUserUserIdCardsCardIdResponse = exports.DeleteStripeGatewayUserUserIdCardsCardIdRequest = exports.DeleteStripeGatewayUserUserIdCardsCardIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteStripeGatewayUserUserIdCardsCardIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteStripeGatewayUserUserIdCardsCardIdPathParams, _super);
     function DeleteStripeGatewayUserUserIdCardsCardIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=cardId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=cardId" }),
         __metadata("design:type", String)
     ], DeleteStripeGatewayUserUserIdCardsCardIdPathParams.prototype, "cardId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userId" }),
         __metadata("design:type", String)
     ], DeleteStripeGatewayUserUserIdCardsCardIdPathParams.prototype, "userId", void 0);
     return DeleteStripeGatewayUserUserIdCardsCardIdPathParams;
-}(SpeakeasyBase));
-export { DeleteStripeGatewayUserUserIdCardsCardIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteStripeGatewayUserUserIdCardsCardIdPathParams = DeleteStripeGatewayUserUserIdCardsCardIdPathParams;
 var DeleteStripeGatewayUserUserIdCardsCardIdRequest = /** @class */ (function (_super) {
     __extends(DeleteStripeGatewayUserUserIdCardsCardIdRequest, _super);
     function DeleteStripeGatewayUserUserIdCardsCardIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteStripeGatewayUserUserIdCardsCardIdPathParams)
     ], DeleteStripeGatewayUserUserIdCardsCardIdRequest.prototype, "pathParams", void 0);
     return DeleteStripeGatewayUserUserIdCardsCardIdRequest;
-}(SpeakeasyBase));
-export { DeleteStripeGatewayUserUserIdCardsCardIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteStripeGatewayUserUserIdCardsCardIdRequest = DeleteStripeGatewayUserUserIdCardsCardIdRequest;
 var DeleteStripeGatewayUserUserIdCardsCardIdResponse = /** @class */ (function (_super) {
     __extends(DeleteStripeGatewayUserUserIdCardsCardIdResponse, _super);
     function DeleteStripeGatewayUserUserIdCardsCardIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], DeleteStripeGatewayUserUserIdCardsCardIdResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteStripeGatewayUserUserIdCardsCardIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteStripeGatewayUserUserIdCardsCardIdResponse.prototype, "statusCode", void 0);
     return DeleteStripeGatewayUserUserIdCardsCardIdResponse;
-}(SpeakeasyBase));
-export { DeleteStripeGatewayUserUserIdCardsCardIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteStripeGatewayUserUserIdCardsCardIdResponse = DeleteStripeGatewayUserUserIdCardsCardIdResponse;

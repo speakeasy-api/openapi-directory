@@ -7,5 +7,5 @@ export declare class UploadListElement extends SpeakeasyBase {
     creationDate?: string;
     multipartUploadId?: string;
     partSizeInBytes?: number;
-    vaultArn?: string;
+    vaultARN?: string;
 }

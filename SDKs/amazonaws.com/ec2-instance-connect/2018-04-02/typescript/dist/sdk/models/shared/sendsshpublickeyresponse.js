@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SendSshPublicKeyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var SendSshPublicKeyResponse = /** @class */ (function (_super) {
     __extends(SendSshPublicKeyResponse, _super);
     function SendSshPublicKeyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequestId" }),
         __metadata("design:type", String)
     ], SendSshPublicKeyResponse.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Success" }),
         __metadata("design:type", Boolean)
     ], SendSshPublicKeyResponse.prototype, "success", void 0);
     return SendSshPublicKeyResponse;
-}(SpeakeasyBase));
-export { SendSshPublicKeyResponse };
+}(utils_1.SpeakeasyBase));
+exports.SendSshPublicKeyResponse = SendSshPublicKeyResponse;

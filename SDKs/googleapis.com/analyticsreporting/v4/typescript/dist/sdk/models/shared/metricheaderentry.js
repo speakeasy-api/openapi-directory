@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MetricHeaderEntryTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricHeaderEntry = exports.MetricHeaderEntryTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MetricHeaderEntryTypeEnum;
 (function (MetricHeaderEntryTypeEnum) {
     MetricHeaderEntryTypeEnum["MetricTypeUnspecified"] = "METRIC_TYPE_UNSPECIFIED";
     MetricHeaderEntryTypeEnum["Integer"] = "INTEGER";
@@ -31,7 +34,7 @@ export var MetricHeaderEntryTypeEnum;
     MetricHeaderEntryTypeEnum["Currency"] = "CURRENCY";
     MetricHeaderEntryTypeEnum["Percent"] = "PERCENT";
     MetricHeaderEntryTypeEnum["Time"] = "TIME";
-})(MetricHeaderEntryTypeEnum || (MetricHeaderEntryTypeEnum = {}));
+})(MetricHeaderEntryTypeEnum = exports.MetricHeaderEntryTypeEnum || (exports.MetricHeaderEntryTypeEnum = {}));
 // MetricHeaderEntry
 /**
  * Header for the metrics.
@@ -42,13 +45,13 @@ var MetricHeaderEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], MetricHeaderEntry.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], MetricHeaderEntry.prototype, "type", void 0);
     return MetricHeaderEntry;
-}(SpeakeasyBase));
-export { MetricHeaderEntry };
+}(utils_1.SpeakeasyBase));
+exports.MetricHeaderEntry = MetricHeaderEntry;

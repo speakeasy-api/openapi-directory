@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolNetflowGetStatisticsResponse = exports.ProtocolNetflowGetStatisticsRequest = exports.ProtocolNetflowGetStatisticsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolNetflowGetStatisticsPathParams = /** @class */ (function (_super) {
     __extends(ProtocolNetflowGetStatisticsPathParams, _super);
     function ProtocolNetflowGetStatisticsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolNetflowGetStatisticsPathParams.prototype, "agentNum", void 0);
     return ProtocolNetflowGetStatisticsPathParams;
-}(SpeakeasyBase));
-export { ProtocolNetflowGetStatisticsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowGetStatisticsPathParams = ProtocolNetflowGetStatisticsPathParams;
 var ProtocolNetflowGetStatisticsRequest = /** @class */ (function (_super) {
     __extends(ProtocolNetflowGetStatisticsRequest, _super);
     function ProtocolNetflowGetStatisticsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolNetflowGetStatisticsPathParams)
     ], ProtocolNetflowGetStatisticsRequest.prototype, "pathParams", void 0);
     return ProtocolNetflowGetStatisticsRequest;
-}(SpeakeasyBase));
-export { ProtocolNetflowGetStatisticsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowGetStatisticsRequest = ProtocolNetflowGetStatisticsRequest;
 var ProtocolNetflowGetStatisticsResponse = /** @class */ (function (_super) {
     __extends(ProtocolNetflowGetStatisticsResponse, _super);
     function ProtocolNetflowGetStatisticsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolNetflowGetStatisticsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolNetflowGetStatisticsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolNetflowGetStatisticsResponse.prototype, "protocolNetflowGetStatistics200ApplicationJsonInt32Integers", void 0);
+    ], ProtocolNetflowGetStatisticsResponse.prototype, "protocolNetflowGetStatistics200ApplicationJSONInt32Integers", void 0);
     return ProtocolNetflowGetStatisticsResponse;
-}(SpeakeasyBase));
-export { ProtocolNetflowGetStatisticsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowGetStatisticsResponse = ProtocolNetflowGetStatisticsResponse;

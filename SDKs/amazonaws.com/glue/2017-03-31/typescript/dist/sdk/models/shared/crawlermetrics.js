@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CrawlerMetrics = void 0;
+var utils_1 = require("../../../internal/utils");
 // CrawlerMetrics
 /**
  * Metrics for a specified crawler.
@@ -33,37 +36,37 @@ var CrawlerMetrics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CrawlerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CrawlerName" }),
         __metadata("design:type", String)
     ], CrawlerMetrics.prototype, "crawlerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastRuntimeSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastRuntimeSeconds" }),
         __metadata("design:type", Number)
     ], CrawlerMetrics.prototype, "lastRuntimeSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MedianRuntimeSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MedianRuntimeSeconds" }),
         __metadata("design:type", Number)
     ], CrawlerMetrics.prototype, "medianRuntimeSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StillEstimating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StillEstimating" }),
         __metadata("design:type", Boolean)
     ], CrawlerMetrics.prototype, "stillEstimating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TablesCreated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TablesCreated" }),
         __metadata("design:type", Number)
     ], CrawlerMetrics.prototype, "tablesCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TablesDeleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TablesDeleted" }),
         __metadata("design:type", Number)
     ], CrawlerMetrics.prototype, "tablesDeleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TablesUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TablesUpdated" }),
         __metadata("design:type", Number)
     ], CrawlerMetrics.prototype, "tablesUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimeLeftSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimeLeftSeconds" }),
         __metadata("design:type", Number)
     ], CrawlerMetrics.prototype, "timeLeftSeconds", void 0);
     return CrawlerMetrics;
-}(SpeakeasyBase));
-export { CrawlerMetrics };
+}(utils_1.SpeakeasyBase));
+exports.CrawlerMetrics = CrawlerMetrics;

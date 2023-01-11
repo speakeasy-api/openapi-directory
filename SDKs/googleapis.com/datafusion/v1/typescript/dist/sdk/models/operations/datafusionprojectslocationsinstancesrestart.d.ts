@@ -23,7 +23,7 @@ export declare class DatafusionProjectsLocationsInstancesRestartSecurity extends
 export declare class DatafusionProjectsLocationsInstancesRestartRequest extends SpeakeasyBase {
     pathParams: DatafusionProjectsLocationsInstancesRestartPathParams;
     queryParams: DatafusionProjectsLocationsInstancesRestartQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: DatafusionProjectsLocationsInstancesRestartSecurity;
 }
 export declare class DatafusionProjectsLocationsInstancesRestartResponse extends SpeakeasyBase {

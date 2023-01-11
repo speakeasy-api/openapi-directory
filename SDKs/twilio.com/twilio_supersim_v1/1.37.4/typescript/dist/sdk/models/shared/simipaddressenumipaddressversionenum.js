@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SimIpAddressEnumIpAddressVersionEnum = void 0;
+var SimIpAddressEnumIpAddressVersionEnum;
+(function (SimIpAddressEnumIpAddressVersionEnum) {
+    SimIpAddressEnumIpAddressVersionEnum["IPv4"] = "IPv4";
+    SimIpAddressEnumIpAddressVersionEnum["IPv6"] = "IPv6";
+})(SimIpAddressEnumIpAddressVersionEnum = exports.SimIpAddressEnumIpAddressVersionEnum || (exports.SimIpAddressEnumIpAddressVersionEnum = {}));

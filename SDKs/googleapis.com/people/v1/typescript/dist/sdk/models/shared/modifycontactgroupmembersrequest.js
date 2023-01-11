@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyContactGroupMembersRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // ModifyContactGroupMembersRequest
 /**
  * A request to modify an existing contact group's members. Contacts can be removed from any group but they can only be added to a user group or "myContacts" or "starred" system groups.
@@ -33,13 +36,13 @@ var ModifyContactGroupMembersRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceNamesToAdd" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceNamesToAdd" }),
         __metadata("design:type", Array)
     ], ModifyContactGroupMembersRequest.prototype, "resourceNamesToAdd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceNamesToRemove" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceNamesToRemove" }),
         __metadata("design:type", Array)
     ], ModifyContactGroupMembersRequest.prototype, "resourceNamesToRemove", void 0);
     return ModifyContactGroupMembersRequest;
-}(SpeakeasyBase));
-export { ModifyContactGroupMembersRequest };
+}(utils_1.SpeakeasyBase));
+exports.ModifyContactGroupMembersRequest = ModifyContactGroupMembersRequest;

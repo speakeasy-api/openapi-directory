@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeSourceRegionsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeSourceRegionsResponse = exports.PostDescribeSourceRegionsRequest = exports.PostDescribeSourceRegionsHeaders = exports.PostDescribeSourceRegionsQueryParams = exports.PostDescribeSourceRegionsVersionEnum = exports.PostDescribeSourceRegionsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeSourceRegionsActionEnum;
 (function (PostDescribeSourceRegionsActionEnum) {
     PostDescribeSourceRegionsActionEnum["DescribeSourceRegions"] = "DescribeSourceRegions";
-})(PostDescribeSourceRegionsActionEnum || (PostDescribeSourceRegionsActionEnum = {}));
-export var PostDescribeSourceRegionsVersionEnum;
+})(PostDescribeSourceRegionsActionEnum = exports.PostDescribeSourceRegionsActionEnum || (exports.PostDescribeSourceRegionsActionEnum = {}));
+var PostDescribeSourceRegionsVersionEnum;
 (function (PostDescribeSourceRegionsVersionEnum) {
     PostDescribeSourceRegionsVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostDescribeSourceRegionsVersionEnum || (PostDescribeSourceRegionsVersionEnum = {}));
+})(PostDescribeSourceRegionsVersionEnum = exports.PostDescribeSourceRegionsVersionEnum || (exports.PostDescribeSourceRegionsVersionEnum = {}));
 var PostDescribeSourceRegionsQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeSourceRegionsQueryParams, _super);
     function PostDescribeSourceRegionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeSourceRegionsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], PostDescribeSourceRegionsQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", String)
     ], PostDescribeSourceRegionsQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeSourceRegionsQueryParams.prototype, "version", void 0);
     return PostDescribeSourceRegionsQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeSourceRegionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeSourceRegionsQueryParams = PostDescribeSourceRegionsQueryParams;
 var PostDescribeSourceRegionsHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeSourceRegionsHeaders, _super);
     function PostDescribeSourceRegionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeSourceRegionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeSourceRegionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeSourceRegionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeSourceRegionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeSourceRegionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeSourceRegionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeSourceRegionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeSourceRegionsHeaders;
-}(SpeakeasyBase));
-export { PostDescribeSourceRegionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeSourceRegionsHeaders = PostDescribeSourceRegionsHeaders;
 var PostDescribeSourceRegionsRequest = /** @class */ (function (_super) {
     __extends(PostDescribeSourceRegionsRequest, _super);
     function PostDescribeSourceRegionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeSourceRegionsQueryParams)
     ], PostDescribeSourceRegionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeSourceRegionsHeaders)
     ], PostDescribeSourceRegionsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeSourceRegionsRequest.prototype, "request", void 0);
     return PostDescribeSourceRegionsRequest;
-}(SpeakeasyBase));
-export { PostDescribeSourceRegionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeSourceRegionsRequest = PostDescribeSourceRegionsRequest;
 var PostDescribeSourceRegionsResponse = /** @class */ (function (_super) {
     __extends(PostDescribeSourceRegionsResponse, _super);
     function PostDescribeSourceRegionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeSourceRegionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeSourceRegionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeSourceRegionsResponse.prototype, "statusCode", void 0);
     return PostDescribeSourceRegionsResponse;
-}(SpeakeasyBase));
-export { PostDescribeSourceRegionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeSourceRegionsResponse = PostDescribeSourceRegionsResponse;

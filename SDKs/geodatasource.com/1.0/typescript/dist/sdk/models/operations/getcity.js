@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCityFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCityResponse = exports.GetCityRequest = exports.GetCityQueryParams = exports.GetCityFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCityFormatEnum;
 (function (GetCityFormatEnum) {
     GetCityFormatEnum["Json"] = "json";
     GetCityFormatEnum["Xml"] = "xml";
-})(GetCityFormatEnum || (GetCityFormatEnum = {}));
+})(GetCityFormatEnum = exports.GetCityFormatEnum || (exports.GetCityFormatEnum = {}));
 var GetCityQueryParams = /** @class */ (function (_super) {
     __extends(GetCityQueryParams, _super);
     function GetCityQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetCityQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], GetCityQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=lat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=lat" }),
         __metadata("design:type", Number)
     ], GetCityQueryParams.prototype, "lat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=lng" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=lng" }),
         __metadata("design:type", Number)
     ], GetCityQueryParams.prototype, "lng", void 0);
     return GetCityQueryParams;
-}(SpeakeasyBase));
-export { GetCityQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCityQueryParams = GetCityQueryParams;
 var GetCityRequest = /** @class */ (function (_super) {
     __extends(GetCityRequest, _super);
     function GetCityRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCityQueryParams)
     ], GetCityRequest.prototype, "queryParams", void 0);
     return GetCityRequest;
-}(SpeakeasyBase));
-export { GetCityRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCityRequest = GetCityRequest;
 var GetCityResponse = /** @class */ (function (_super) {
     __extends(GetCityResponse, _super);
     function GetCityResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCityResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
-    ], GetCityResponse.prototype, "getCity200ApplicationJsonString", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCityResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], GetCityResponse.prototype, "getCity200ApplicationJSONString", void 0);
     return GetCityResponse;
-}(SpeakeasyBase));
-export { GetCityResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCityResponse = GetCityResponse;

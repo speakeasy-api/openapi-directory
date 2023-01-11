@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AnalyticsDataGaGetRequest, AnalyticsDataGaGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,33 +31,33 @@ const req: AnalyticsDataGaGetRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   queryParams: {
     alt: "json",
-    dimensions: "molestiae",
-    endDate: "mollitia",
-    fields: "non",
-    filters: "similique",
-    ids: "id",
+    dimensions: "voluptas",
+    endDate: "culpa",
+    fields: "expedita",
+    filters: "consequuntur",
+    ids: "dolor",
     includeEmptyRows: true,
-    key: "quia",
-    maxResults: 8874339057685439512,
-    metrics: "tenetur",
-    oauthToken: "non",
+    key: "voluptas",
+    maxResults: 8274930044578894929,
+    metrics: "et",
+    oauthToken: "nihil",
     output: "json",
-    prettyPrint: true,
-    quotaUser: "perspiciatis",
-    samplingLevel: "HIGHER_PRECISION",
-    segment: "aut",
+    prettyPrint: false,
+    quotaUser: "debitis",
+    samplingLevel: "DEFAULT",
+    segment: "et",
     sort: "ut",
-    startDate: "voluptas",
-    startIndex: 2569169535412766127,
-    userIp: "molestias",
+    startDate: "dolorem",
+    startIndex: 7259475919510918339,
+    userIp: "voluptate",
   },
 };
 

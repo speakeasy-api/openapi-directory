@@ -23,7 +23,7 @@ export declare class StartOnDemandAppReplicationResponse extends SpeakeasyBase {
     invalidParameterException?: any;
     missingRequiredParameterException?: any;
     operationNotPermittedException?: any;
-    startOnDemandAppReplicationResponse?: Map<string, any>;
+    startOnDemandAppReplicationResponse?: Record<string, any>;
     statusCode: number;
     unauthorizedOperationException?: any;
 }

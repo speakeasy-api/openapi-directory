@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostConfigurationsResponse = exports.PostConfigurationsRequest = exports.PostConfigurations201ApplicationJson = exports.PostConfigurationsRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostConfigurationsRequestBody = /** @class */ (function (_super) {
     __extends(PostConfigurationsRequestBody, _super);
     function PostConfigurationsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], PostConfigurationsRequestBody.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], PostConfigurationsRequestBody.prototype, "value", void 0);
     return PostConfigurationsRequestBody;
-}(SpeakeasyBase));
-export { PostConfigurationsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostConfigurationsRequestBody = PostConfigurationsRequestBody;
 var PostConfigurations201ApplicationJson = /** @class */ (function (_super) {
     __extends(PostConfigurations201ApplicationJson, _super);
     function PostConfigurations201ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostConfigurations201ApplicationJson.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ok" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ok" }),
         __metadata("design:type", Boolean)
     ], PostConfigurations201ApplicationJson.prototype, "ok", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
+        __metadata("design:type", Object)
     ], PostConfigurations201ApplicationJson.prototype, "result", void 0);
     return PostConfigurations201ApplicationJson;
-}(SpeakeasyBase));
-export { PostConfigurations201ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostConfigurations201ApplicationJson = PostConfigurations201ApplicationJson;
 var PostConfigurationsRequest = /** @class */ (function (_super) {
     __extends(PostConfigurationsRequest, _super);
     function PostConfigurationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostConfigurationsRequestBody)
     ], PostConfigurationsRequest.prototype, "request", void 0);
     return PostConfigurationsRequest;
-}(SpeakeasyBase));
-export { PostConfigurationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostConfigurationsRequest = PostConfigurationsRequest;
 var PostConfigurationsResponse = /** @class */ (function (_super) {
     __extends(PostConfigurationsResponse, _super);
     function PostConfigurationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostConfigurationsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostConfigurationsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostConfigurations201ApplicationJson)
-    ], PostConfigurationsResponse.prototype, "postConfigurations201ApplicationJsonObject", void 0);
+    ], PostConfigurationsResponse.prototype, "postConfigurations201ApplicationJSONObject", void 0);
     return PostConfigurationsResponse;
-}(SpeakeasyBase));
-export { PostConfigurationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostConfigurationsResponse = PostConfigurationsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetAccountSendingEnabledActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetAccountSendingEnabledResponse = exports.GetGetAccountSendingEnabledRequest = exports.GetGetAccountSendingEnabledHeaders = exports.GetGetAccountSendingEnabledQueryParams = exports.GetGetAccountSendingEnabledVersionEnum = exports.GetGetAccountSendingEnabledActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetAccountSendingEnabledActionEnum;
 (function (GetGetAccountSendingEnabledActionEnum) {
     GetGetAccountSendingEnabledActionEnum["GetAccountSendingEnabled"] = "GetAccountSendingEnabled";
-})(GetGetAccountSendingEnabledActionEnum || (GetGetAccountSendingEnabledActionEnum = {}));
-export var GetGetAccountSendingEnabledVersionEnum;
+})(GetGetAccountSendingEnabledActionEnum = exports.GetGetAccountSendingEnabledActionEnum || (exports.GetGetAccountSendingEnabledActionEnum = {}));
+var GetGetAccountSendingEnabledVersionEnum;
 (function (GetGetAccountSendingEnabledVersionEnum) {
     GetGetAccountSendingEnabledVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetGetAccountSendingEnabledVersionEnum || (GetGetAccountSendingEnabledVersionEnum = {}));
+})(GetGetAccountSendingEnabledVersionEnum = exports.GetGetAccountSendingEnabledVersionEnum || (exports.GetGetAccountSendingEnabledVersionEnum = {}));
 var GetGetAccountSendingEnabledQueryParams = /** @class */ (function (_super) {
     __extends(GetGetAccountSendingEnabledQueryParams, _super);
     function GetGetAccountSendingEnabledQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetGetAccountSendingEnabledQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetGetAccountSendingEnabledQueryParams.prototype, "version", void 0);
     return GetGetAccountSendingEnabledQueryParams;
-}(SpeakeasyBase));
-export { GetGetAccountSendingEnabledQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetAccountSendingEnabledQueryParams = GetGetAccountSendingEnabledQueryParams;
 var GetGetAccountSendingEnabledHeaders = /** @class */ (function (_super) {
     __extends(GetGetAccountSendingEnabledHeaders, _super);
     function GetGetAccountSendingEnabledHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetGetAccountSendingEnabledHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetGetAccountSendingEnabledHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetGetAccountSendingEnabledHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetGetAccountSendingEnabledHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetGetAccountSendingEnabledHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetGetAccountSendingEnabledHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetGetAccountSendingEnabledHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetGetAccountSendingEnabledHeaders;
-}(SpeakeasyBase));
-export { GetGetAccountSendingEnabledHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetGetAccountSendingEnabledHeaders = GetGetAccountSendingEnabledHeaders;
 var GetGetAccountSendingEnabledRequest = /** @class */ (function (_super) {
     __extends(GetGetAccountSendingEnabledRequest, _super);
     function GetGetAccountSendingEnabledRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetAccountSendingEnabledQueryParams)
     ], GetGetAccountSendingEnabledRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetAccountSendingEnabledHeaders)
     ], GetGetAccountSendingEnabledRequest.prototype, "headers", void 0);
     return GetGetAccountSendingEnabledRequest;
-}(SpeakeasyBase));
-export { GetGetAccountSendingEnabledRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetAccountSendingEnabledRequest = GetGetAccountSendingEnabledRequest;
 var GetGetAccountSendingEnabledResponse = /** @class */ (function (_super) {
     __extends(GetGetAccountSendingEnabledResponse, _super);
     function GetGetAccountSendingEnabledResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGetAccountSendingEnabledResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetAccountSendingEnabledResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetAccountSendingEnabledResponse.prototype, "statusCode", void 0);
     return GetGetAccountSendingEnabledResponse;
-}(SpeakeasyBase));
-export { GetGetAccountSendingEnabledResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetAccountSendingEnabledResponse = GetGetAccountSendingEnabledResponse;

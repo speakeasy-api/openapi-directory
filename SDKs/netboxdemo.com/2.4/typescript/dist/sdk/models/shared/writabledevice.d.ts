@@ -3,7 +3,7 @@ export declare class WritableDeviceInput extends SpeakeasyBase {
     assetTag?: string;
     cluster?: number;
     comments?: string;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     deviceRole: number;
     deviceType: number;
     face?: number;

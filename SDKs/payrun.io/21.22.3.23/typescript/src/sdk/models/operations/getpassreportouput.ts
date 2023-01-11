@@ -56,7 +56,7 @@ export class GetPassReportOuputResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getPassReportOuput200ApplicationJsonBinaryString?: Uint8Array;
+  getPassReportOuput200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

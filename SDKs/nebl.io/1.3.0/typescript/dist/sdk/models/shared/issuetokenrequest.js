@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IssueTokenRequest = exports.IssueTokenRequestTransfer = exports.IssueTokenRequestMetadata = exports.IssueTokenRequestMetadataUserData = exports.IssueTokenRequestMetadataUserDataMeta = exports.IssueTokenRequestMetadataUrls = exports.IssueTokenRequestMetadataRules = exports.IssueTokenRequestMetadataRulesHolders = exports.IssueTokenRequestMetadataRulesFees = exports.IssueTokenRequestMetadataRulesFeesItems = exports.IssueTokenRequestMetadataRulesExpiration = exports.IssueTokenRequestMetadataEncryptions = exports.IssueTokenRequestFlags = void 0;
+var utils_1 = require("../../../internal/utils");
 // IssueTokenRequestFlags
 /**
  * Object representing flags that potentialy modify this transaction
@@ -33,36 +36,36 @@ var IssueTokenRequestFlags = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=splitChange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=splitChange" }),
         __metadata("design:type", Boolean)
     ], IssueTokenRequestFlags.prototype, "splitChange", void 0);
     return IssueTokenRequestFlags;
-}(SpeakeasyBase));
-export { IssueTokenRequestFlags };
+}(utils_1.SpeakeasyBase));
+exports.IssueTokenRequestFlags = IssueTokenRequestFlags;
 var IssueTokenRequestMetadataEncryptions = /** @class */ (function (_super) {
     __extends(IssueTokenRequestMetadataEncryptions, _super);
     function IssueTokenRequestMetadataEncryptions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], IssueTokenRequestMetadataEncryptions.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], IssueTokenRequestMetadataEncryptions.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pubkey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pubkey" }),
         __metadata("design:type", String)
     ], IssueTokenRequestMetadataEncryptions.prototype, "pubkey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], IssueTokenRequestMetadataEncryptions.prototype, "type", void 0);
     return IssueTokenRequestMetadataEncryptions;
-}(SpeakeasyBase));
-export { IssueTokenRequestMetadataEncryptions };
+}(utils_1.SpeakeasyBase));
+exports.IssueTokenRequestMetadataEncryptions = IssueTokenRequestMetadataEncryptions;
 // IssueTokenRequestMetadataRulesExpiration
 /**
  * Object describing expiration rules of the token
@@ -73,68 +76,68 @@ var IssueTokenRequestMetadataRulesExpiration = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locked" }),
         __metadata("design:type", Boolean)
     ], IssueTokenRequestMetadataRulesExpiration.prototype, "locked", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validUntil" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validUntil" }),
         __metadata("design:type", Number)
     ], IssueTokenRequestMetadataRulesExpiration.prototype, "validUntil", void 0);
     return IssueTokenRequestMetadataRulesExpiration;
-}(SpeakeasyBase));
-export { IssueTokenRequestMetadataRulesExpiration };
+}(utils_1.SpeakeasyBase));
+exports.IssueTokenRequestMetadataRulesExpiration = IssueTokenRequestMetadataRulesExpiration;
 var IssueTokenRequestMetadataRulesFeesItems = /** @class */ (function (_super) {
     __extends(IssueTokenRequestMetadataRulesFeesItems, _super);
     function IssueTokenRequestMetadataRulesFeesItems() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], IssueTokenRequestMetadataRulesFeesItems.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokenId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokenId" }),
         __metadata("design:type", String)
     ], IssueTokenRequestMetadataRulesFeesItems.prototype, "tokenId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], IssueTokenRequestMetadataRulesFeesItems.prototype, "value", void 0);
     return IssueTokenRequestMetadataRulesFeesItems;
-}(SpeakeasyBase));
-export { IssueTokenRequestMetadataRulesFeesItems };
+}(utils_1.SpeakeasyBase));
+exports.IssueTokenRequestMetadataRulesFeesItems = IssueTokenRequestMetadataRulesFeesItems;
 var IssueTokenRequestMetadataRulesFees = /** @class */ (function (_super) {
     __extends(IssueTokenRequestMetadataRulesFees, _super);
     function IssueTokenRequestMetadataRulesFees() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: IssueTokenRequestMetadataRulesFeesItems }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: IssueTokenRequestMetadataRulesFeesItems }),
         __metadata("design:type", Array)
     ], IssueTokenRequestMetadataRulesFees.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locked" }),
         __metadata("design:type", Boolean)
     ], IssueTokenRequestMetadataRulesFees.prototype, "locked", void 0);
     return IssueTokenRequestMetadataRulesFees;
-}(SpeakeasyBase));
-export { IssueTokenRequestMetadataRulesFees };
+}(utils_1.SpeakeasyBase));
+exports.IssueTokenRequestMetadataRulesFees = IssueTokenRequestMetadataRulesFees;
 var IssueTokenRequestMetadataRulesHolders = /** @class */ (function (_super) {
     __extends(IssueTokenRequestMetadataRulesHolders, _super);
     function IssueTokenRequestMetadataRulesHolders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], IssueTokenRequestMetadataRulesHolders.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locked" }),
         __metadata("design:type", Boolean)
     ], IssueTokenRequestMetadataRulesHolders.prototype, "locked", void 0);
     return IssueTokenRequestMetadataRulesHolders;
-}(SpeakeasyBase));
-export { IssueTokenRequestMetadataRulesHolders };
+}(utils_1.SpeakeasyBase));
+exports.IssueTokenRequestMetadataRulesHolders = IssueTokenRequestMetadataRulesHolders;
 // IssueTokenRequestMetadataRules
 /**
  * Object describing token rules
@@ -145,60 +148,60 @@ var IssueTokenRequestMetadataRules = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiration" }),
         __metadata("design:type", IssueTokenRequestMetadataRulesExpiration)
     ], IssueTokenRequestMetadataRules.prototype, "expiration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fees" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fees" }),
         __metadata("design:type", IssueTokenRequestMetadataRulesFees)
     ], IssueTokenRequestMetadataRules.prototype, "fees", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=holders", elemType: IssueTokenRequestMetadataRulesHolders }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=holders", elemType: IssueTokenRequestMetadataRulesHolders }),
         __metadata("design:type", Array)
     ], IssueTokenRequestMetadataRules.prototype, "holders", void 0);
     return IssueTokenRequestMetadataRules;
-}(SpeakeasyBase));
-export { IssueTokenRequestMetadataRules };
+}(utils_1.SpeakeasyBase));
+exports.IssueTokenRequestMetadataRules = IssueTokenRequestMetadataRules;
 var IssueTokenRequestMetadataUrls = /** @class */ (function (_super) {
     __extends(IssueTokenRequestMetadataUrls, _super);
     function IssueTokenRequestMetadataUrls() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataHash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataHash" }),
         __metadata("design:type", String)
     ], IssueTokenRequestMetadataUrls.prototype, "dataHash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mimeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mimeType" }),
         __metadata("design:type", String)
     ], IssueTokenRequestMetadataUrls.prototype, "mimeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], IssueTokenRequestMetadataUrls.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], IssueTokenRequestMetadataUrls.prototype, "url", void 0);
     return IssueTokenRequestMetadataUrls;
-}(SpeakeasyBase));
-export { IssueTokenRequestMetadataUrls };
+}(utils_1.SpeakeasyBase));
+exports.IssueTokenRequestMetadataUrls = IssueTokenRequestMetadataUrls;
 var IssueTokenRequestMetadataUserDataMeta = /** @class */ (function (_super) {
     __extends(IssueTokenRequestMetadataUserDataMeta, _super);
     function IssueTokenRequestMetadataUserDataMeta() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], IssueTokenRequestMetadataUserDataMeta.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], IssueTokenRequestMetadataUserDataMeta.prototype, "value", void 0);
     return IssueTokenRequestMetadataUserDataMeta;
-}(SpeakeasyBase));
-export { IssueTokenRequestMetadataUserDataMeta };
+}(utils_1.SpeakeasyBase));
+exports.IssueTokenRequestMetadataUserDataMeta = IssueTokenRequestMetadataUserDataMeta;
 // IssueTokenRequestMetadataUserData
 /**
  * Metadata set by user on token
@@ -209,12 +212,12 @@ var IssueTokenRequestMetadataUserData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta", elemType: IssueTokenRequestMetadataUserDataMeta }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta", elemType: IssueTokenRequestMetadataUserDataMeta }),
         __metadata("design:type", Array)
     ], IssueTokenRequestMetadataUserData.prototype, "meta", void 0);
     return IssueTokenRequestMetadataUserData;
-}(SpeakeasyBase));
-export { IssueTokenRequestMetadataUserData };
+}(utils_1.SpeakeasyBase));
+exports.IssueTokenRequestMetadataUserData = IssueTokenRequestMetadataUserData;
 // IssueTokenRequestMetadata
 /**
  * Object representing all metadata at token issuance
@@ -225,89 +228,89 @@ var IssueTokenRequestMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], IssueTokenRequestMetadata.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptions", elemType: IssueTokenRequestMetadataEncryptions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptions", elemType: IssueTokenRequestMetadataEncryptions }),
         __metadata("design:type", Array)
     ], IssueTokenRequestMetadata.prototype, "encryptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuer" }),
         __metadata("design:type", String)
     ], IssueTokenRequestMetadata.prototype, "issuer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules" }),
         __metadata("design:type", IssueTokenRequestMetadataRules)
     ], IssueTokenRequestMetadata.prototype, "rules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokenName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokenName" }),
         __metadata("design:type", String)
     ], IssueTokenRequestMetadata.prototype, "tokenName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urls", elemType: IssueTokenRequestMetadataUrls }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urls", elemType: IssueTokenRequestMetadataUrls }),
         __metadata("design:type", Array)
     ], IssueTokenRequestMetadata.prototype, "urls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userData" }),
         __metadata("design:type", IssueTokenRequestMetadataUserData)
     ], IssueTokenRequestMetadata.prototype, "userData", void 0);
     return IssueTokenRequestMetadata;
-}(SpeakeasyBase));
-export { IssueTokenRequestMetadata };
+}(utils_1.SpeakeasyBase));
+exports.IssueTokenRequestMetadata = IssueTokenRequestMetadata;
 var IssueTokenRequestTransfer = /** @class */ (function (_super) {
     __extends(IssueTokenRequestTransfer, _super);
     function IssueTokenRequestTransfer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], IssueTokenRequestTransfer.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], IssueTokenRequestTransfer.prototype, "amount", void 0);
     return IssueTokenRequestTransfer;
-}(SpeakeasyBase));
-export { IssueTokenRequestTransfer };
+}(utils_1.SpeakeasyBase));
+exports.IssueTokenRequestTransfer = IssueTokenRequestTransfer;
 var IssueTokenRequest = /** @class */ (function (_super) {
     __extends(IssueTokenRequest, _super);
     function IssueTokenRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], IssueTokenRequest.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=divisibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=divisibility" }),
         __metadata("design:type", Number)
     ], IssueTokenRequest.prototype, "divisibility", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fee" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fee" }),
         __metadata("design:type", Number)
     ], IssueTokenRequest.prototype, "fee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flags" }),
         __metadata("design:type", IssueTokenRequestFlags)
     ], IssueTokenRequest.prototype, "flags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issueAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issueAddress" }),
         __metadata("design:type", String)
     ], IssueTokenRequest.prototype, "issueAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
         __metadata("design:type", IssueTokenRequestMetadata)
     ], IssueTokenRequest.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reissuable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reissuable" }),
         __metadata("design:type", Boolean)
     ], IssueTokenRequest.prototype, "reissuable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transfer", elemType: IssueTokenRequestTransfer }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transfer", elemType: IssueTokenRequestTransfer }),
         __metadata("design:type", Array)
     ], IssueTokenRequest.prototype, "transfer", void 0);
     return IssueTokenRequest;
-}(SpeakeasyBase));
-export { IssueTokenRequest };
+}(utils_1.SpeakeasyBase));
+exports.IssueTokenRequest = IssueTokenRequest;

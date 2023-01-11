@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,30 +14,55 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatchAutomationsIdResponse = exports.PatchAutomationsIdRequest = exports.PatchAutomationsIdRequestBody = exports.PatchAutomationsIdRequestBodyTriggerEnum = exports.PatchAutomationsIdRequestBodyAutomationEnum = exports.PatchAutomationsIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var PatchAutomationsIdPathParams = /** @class */ (function (_super) {
     __extends(PatchAutomationsIdPathParams, _super);
     function PatchAutomationsIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PatchAutomationsIdPathParams.prototype, "id", void 0);
     return PatchAutomationsIdPathParams;
-}(SpeakeasyBase));
-export { PatchAutomationsIdPathParams };
-export var PatchAutomationsIdRequestBodyAutomationEnum;
+}(utils_1.SpeakeasyBase));
+exports.PatchAutomationsIdPathParams = PatchAutomationsIdPathParams;
+var PatchAutomationsIdRequestBodyAutomationEnum;
 (function (PatchAutomationsIdRequestBodyAutomationEnum) {
     PatchAutomationsIdRequestBodyAutomationEnum["CreateFolder"] = "create_folder";
     PatchAutomationsIdRequestBodyAutomationEnum["RequestFile"] = "request_file";
@@ -45,8 +71,8 @@ export var PatchAutomationsIdRequestBodyAutomationEnum;
     PatchAutomationsIdRequestBodyAutomationEnum["DeleteFile"] = "delete_file";
     PatchAutomationsIdRequestBodyAutomationEnum["CopyFile"] = "copy_file";
     PatchAutomationsIdRequestBodyAutomationEnum["MoveFile"] = "move_file";
-})(PatchAutomationsIdRequestBodyAutomationEnum || (PatchAutomationsIdRequestBodyAutomationEnum = {}));
-export var PatchAutomationsIdRequestBodyTriggerEnum;
+})(PatchAutomationsIdRequestBodyAutomationEnum = exports.PatchAutomationsIdRequestBodyAutomationEnum || (exports.PatchAutomationsIdRequestBodyAutomationEnum = {}));
+var PatchAutomationsIdRequestBodyTriggerEnum;
 (function (PatchAutomationsIdRequestBodyTriggerEnum) {
     PatchAutomationsIdRequestBodyTriggerEnum["Realtime"] = "realtime";
     PatchAutomationsIdRequestBodyTriggerEnum["Daily"] = "daily";
@@ -54,108 +80,108 @@ export var PatchAutomationsIdRequestBodyTriggerEnum;
     PatchAutomationsIdRequestBodyTriggerEnum["Webhook"] = "webhook";
     PatchAutomationsIdRequestBodyTriggerEnum["Email"] = "email";
     PatchAutomationsIdRequestBodyTriggerEnum["Action"] = "action";
-})(PatchAutomationsIdRequestBodyTriggerEnum || (PatchAutomationsIdRequestBodyTriggerEnum = {}));
+})(PatchAutomationsIdRequestBodyTriggerEnum = exports.PatchAutomationsIdRequestBodyTriggerEnum || (exports.PatchAutomationsIdRequestBodyTriggerEnum = {}));
 var PatchAutomationsIdRequestBody = /** @class */ (function (_super) {
     __extends(PatchAutomationsIdRequestBody, _super);
     function PatchAutomationsIdRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=automation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=automation" }),
         __metadata("design:type", String)
     ], PatchAutomationsIdRequestBody.prototype, "automation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=destination" }),
         __metadata("design:type", String)
     ], PatchAutomationsIdRequestBody.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=destination_replace_from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=destination_replace_from" }),
         __metadata("design:type", String)
     ], PatchAutomationsIdRequestBody.prototype, "destinationReplaceFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=destination_replace_to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=destination_replace_to" }),
         __metadata("design:type", String)
     ], PatchAutomationsIdRequestBody.prototype, "destinationReplaceTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=destinations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=destinations;json=true" }),
         __metadata("design:type", Array)
     ], PatchAutomationsIdRequestBody.prototype, "destinations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=group_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=group_ids" }),
         __metadata("design:type", String)
     ], PatchAutomationsIdRequestBody.prototype, "groupIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=interval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=interval" }),
         __metadata("design:type", String)
     ], PatchAutomationsIdRequestBody.prototype, "interval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=path" }),
         __metadata("design:type", String)
     ], PatchAutomationsIdRequestBody.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=schedule;json=true" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=schedule;json=true" }),
+        __metadata("design:type", Object)
     ], PatchAutomationsIdRequestBody.prototype, "schedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=source" }),
         __metadata("design:type", String)
     ], PatchAutomationsIdRequestBody.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=trigger" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=trigger" }),
         __metadata("design:type", String)
     ], PatchAutomationsIdRequestBody.prototype, "trigger", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=trigger_action_path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=trigger_action_path" }),
         __metadata("design:type", String)
     ], PatchAutomationsIdRequestBody.prototype, "triggerActionPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=trigger_actions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=trigger_actions;json=true" }),
         __metadata("design:type", Array)
     ], PatchAutomationsIdRequestBody.prototype, "triggerActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=user_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=user_ids" }),
         __metadata("design:type", String)
     ], PatchAutomationsIdRequestBody.prototype, "userIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=value;json=true" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=value;json=true" }),
+        __metadata("design:type", Object)
     ], PatchAutomationsIdRequestBody.prototype, "value", void 0);
     return PatchAutomationsIdRequestBody;
-}(SpeakeasyBase));
-export { PatchAutomationsIdRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PatchAutomationsIdRequestBody = PatchAutomationsIdRequestBody;
 var PatchAutomationsIdRequest = /** @class */ (function (_super) {
     __extends(PatchAutomationsIdRequest, _super);
     function PatchAutomationsIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PatchAutomationsIdPathParams)
     ], PatchAutomationsIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", PatchAutomationsIdRequestBody)
     ], PatchAutomationsIdRequest.prototype, "request", void 0);
     return PatchAutomationsIdRequest;
-}(SpeakeasyBase));
-export { PatchAutomationsIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.PatchAutomationsIdRequest = PatchAutomationsIdRequest;
 var PatchAutomationsIdResponse = /** @class */ (function (_super) {
     __extends(PatchAutomationsIdResponse, _super);
     function PatchAutomationsIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.AutomationEntity)
     ], PatchAutomationsIdResponse.prototype, "automationEntity", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PatchAutomationsIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PatchAutomationsIdResponse.prototype, "statusCode", void 0);
     return PatchAutomationsIdResponse;
-}(SpeakeasyBase));
-export { PatchAutomationsIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.PatchAutomationsIdResponse = PatchAutomationsIdResponse;

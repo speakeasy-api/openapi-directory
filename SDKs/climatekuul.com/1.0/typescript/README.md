@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AirtravelCoordinatesRequest, AirtravelCoordinatesResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,22 +28,22 @@ const sdk = new SDK();
     
 const req: AirtravelCoordinatesRequest = {
   headers: {
-    contentType: "repellat",
+    contentType: "sit",
   },
   request: {
-    apiKeyL1: "alias",
-    apiKeyL2: "rem",
-    destinationAirportLatitude: 60.200001,
-    destinationAirportLongitude: 75.199997,
-    numberOfPassengers: 2666378789136499828,
-    originAirportLatitude: 14.200000,
-    originAirportLongitude: 76.199997,
-    travelClass: "cumque",
-    travelMode: "sunt",
+    apiKeyL1: "voluptas",
+    apiKeyL2: "culpa",
+    destinationAirportLatitude: 6.200000,
+    destinationAirportLongitude: 96.199997,
+    numberOfPassengers: 6044372234677422456,
+    originAirportLatitude: 88.099998,
+    originAirportLongitude: 68.199997,
+    travelClass: "dicta",
+    travelMode: "debitis",
   },
 };
 
-sdk.sdk.airtravelCoordinates(req).then((res: AirtravelCoordinatesResponse | AxiosError) => {
+sdk.airtravelCoordinates.airtravelCoordinates(req).then((res: AirtravelCoordinatesResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -53,34 +52,49 @@ sdk.sdk.airtravelCoordinates(req).then((res: AirtravelCoordinatesResponse | Axio
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### AirtravelCoordinates
 
 * `airtravelCoordinates` - airtravelCoordinates
-* `airtravelMultileg` - airtravelMultileg
-* `confirmCarbonOffset` - confirmCarbonOffset
-* `confirmCarbonOffset1` - confirmCarbonOffset
-* `confirmCarbonOffset3` - confirmCarbonOffset
 * `confirmCarbonOffset4` - confirmCarbonOffset
-* `confirmCarbonOffset5` - confirmCarbonOffset
-* `confirmPayment` - confirmPayment
-* `confirmPayment1` - confirmPayment
-* `confirmPayment3` - confirmPayment
 * `confirmPayment4` - confirmPayment
-* `confirmPayment5` - confirmPayment
-* `confirmPaymentOfTransaction` - confirmTransaction
-* `confirmPaymentOfTransaction1` - confirmTransaction
-* `confirmPaymentOfTransaction3` - confirmTransaction
 * `confirmPaymentOfTransaction4` - confirmTransaction
-* `confirmPaymentOfTransaction5` - confirmTransaction
-* `confirmsPlanting` - confirmPlanting
-* `confirmsPlanting2` - confirmPlanting
-* `confirmsPlanting3` - confirmPlanting
 * `confirmsPlanting4` - confirmPlanting
-* `confirmsPlanting5` - confirmPlanting
+
+### EcommerceDelivery
+
+* `confirmCarbonOffset1` - confirmCarbonOffset
+* `confirmPayment1` - confirmPayment
+* `confirmPaymentOfTransaction1` - confirmTransaction
+* `confirmsPlanting2` - confirmPlanting
 * `ecommerceDelivery` - ecommerceDelivery
+
+### Request Api Key
+
 * `requestApiKey` - requestApiKey
+
+### RoadDistance
+
+* `confirmCarbonOffset5` - confirmCarbonOffset
+* `confirmPayment5` - confirmPayment
+* `confirmPaymentOfTransaction5` - confirmTransaction
+* `confirmsPlanting5` - confirmPlanting
 * `roadDistance` - RoadDistance
+
+### UrbanDelivery
+
+* `confirmCarbonOffset` - confirmCarbonOffset
+* `confirmPayment` - confirmPayment
+* `confirmPaymentOfTransaction` - confirmTransaction
+* `confirmsPlanting` - confirmPlanting
 * `urbanDelivery` - urbanDelivery
+
+### airtravelMultileg
+
+* `airtravelMultileg` - airtravelMultileg
+* `confirmCarbonOffset3` - confirmCarbonOffset
+* `confirmPayment3` - confirmPayment
+* `confirmPaymentOfTransaction3` - confirmTransaction
+* `confirmsPlanting3` - confirmPlanting
 
 <!-- End SDK Available Operations -->
 

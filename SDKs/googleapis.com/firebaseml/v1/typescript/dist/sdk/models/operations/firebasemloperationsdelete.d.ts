@@ -27,6 +27,6 @@ export declare class FirebasemlOperationsDeleteRequest extends SpeakeasyBase {
 }
 export declare class FirebasemlOperationsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

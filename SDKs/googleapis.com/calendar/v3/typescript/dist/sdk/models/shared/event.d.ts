@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+import { EventReminder } from "./eventreminder";
 import { EventAttachment } from "./eventattachment";
 import { EventAttendee } from "./eventattendee";
 import { ConferenceData } from "./conferencedata";
 import { EventDateTime } from "./eventdatetime";
-import { EventReminder } from "./eventreminder";
 /**
  * The creator of the event. Read-only.
 **/
@@ -17,8 +17,8 @@ export declare class EventCreator extends SpeakeasyBase {
  * Extended properties of the event.
 **/
 export declare class EventExtendedProperties extends SpeakeasyBase {
-    private?: Map<string, string>;
-    shared?: Map<string, string>;
+    private?: Record<string, string>;
+    shared?: Record<string, string>;
 }
 /**
  * A gadget that extends this event. Gadgets are deprecated; this structure is instead only used for returning birthday calendar metadata.
@@ -28,7 +28,7 @@ export declare class EventGadget extends SpeakeasyBase {
     height?: number;
     iconLink?: string;
     link?: string;
-    preferences?: Map<string, string>;
+    preferences?: Record<string, string>;
     title?: string;
     type?: string;
     width?: number;
@@ -77,7 +77,7 @@ export declare class Event extends SpeakeasyBase {
     guestsCanSeeOtherGuests?: boolean;
     hangoutLink?: string;
     htmlLink?: string;
-    iCalUid?: string;
+    iCalUID?: string;
     id?: string;
     kind?: string;
     location?: string;

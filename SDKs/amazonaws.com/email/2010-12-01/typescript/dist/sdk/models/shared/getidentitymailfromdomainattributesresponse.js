@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IdentityMailFromDomainAttributes } from "./identitymailfromdomainattributes";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetIdentityMailFromDomainAttributesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var identitymailfromdomainattributes_1 = require("./identitymailfromdomainattributes");
 // GetIdentityMailFromDomainAttributesResponse
 /**
  * Represents the custom MAIL FROM attributes for a list of identities.
@@ -34,9 +37,9 @@ var GetIdentityMailFromDomainAttributesResponse = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: IdentityMailFromDomainAttributes }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ elemType: identitymailfromdomainattributes_1.IdentityMailFromDomainAttributes }),
+        __metadata("design:type", Object)
     ], GetIdentityMailFromDomainAttributesResponse.prototype, "mailFromDomainAttributes", void 0);
     return GetIdentityMailFromDomainAttributesResponse;
-}(SpeakeasyBase));
-export { GetIdentityMailFromDomainAttributesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetIdentityMailFromDomainAttributesResponse = GetIdentityMailFromDomainAttributesResponse;

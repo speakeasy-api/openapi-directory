@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Window } from "./window";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NightModesettingsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var window_1 = require("./window");
 var NightModesettingsRequest = /** @class */ (function (_super) {
     __extends(NightModesettingsRequest, _super);
     function NightModesettingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=demo_to_user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=demo_to_user" }),
         __metadata("design:type", Boolean)
     ], NightModesettingsRequest.prototype, "demoToUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=do_not_disturb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=do_not_disturb" }),
         __metadata("design:type", Boolean)
     ], NightModesettingsRequest.prototype, "doNotDisturb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], NightModesettingsRequest.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=led_brightness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=led_brightness" }),
         __metadata("design:type", Number)
     ], NightModesettingsRequest.prototype, "ledBrightness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volume" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volume" }),
         __metadata("design:type", Number)
     ], NightModesettingsRequest.prototype, "volume", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=windows", elemType: Window }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=windows", elemType: window_1.Window }),
         __metadata("design:type", Array)
     ], NightModesettingsRequest.prototype, "windows", void 0);
     return NightModesettingsRequest;
-}(SpeakeasyBase));
-export { NightModesettingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.NightModesettingsRequest = NightModesettingsRequest;

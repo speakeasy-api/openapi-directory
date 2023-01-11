@@ -8,5 +8,5 @@ export class PutInsightSelectorsResponse extends SpeakeasyBase {
   insightSelectors?: InsightSelector[];
 
   @SpeakeasyMetadata({ data: "json, name=TrailARN" })
-  trailArn?: string;
+  trailARN?: string;
 }

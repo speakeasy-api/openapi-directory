@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PrincipalPermissions } from "./principalpermissions";
-import { DatabaseIdentifier } from "./databaseidentifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DatabaseInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var principalpermissions_1 = require("./principalpermissions");
+var databaseidentifier_1 = require("./databaseidentifier");
 // DatabaseInput
 /**
  * The structure used to create or update a database.
@@ -35,29 +38,29 @@ var DatabaseInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreateTableDefaultPermissions", elemType: PrincipalPermissions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreateTableDefaultPermissions", elemType: principalpermissions_1.PrincipalPermissions }),
         __metadata("design:type", Array)
     ], DatabaseInput.prototype, "createTableDefaultPermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], DatabaseInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LocationUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LocationUri" }),
         __metadata("design:type", String)
     ], DatabaseInput.prototype, "locationUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], DatabaseInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Parameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Parameters" }),
+        __metadata("design:type", Object)
     ], DatabaseInput.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetDatabase" }),
-        __metadata("design:type", DatabaseIdentifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetDatabase" }),
+        __metadata("design:type", databaseidentifier_1.DatabaseIdentifier)
     ], DatabaseInput.prototype, "targetDatabase", void 0);
     return DatabaseInput;
-}(SpeakeasyBase));
-export { DatabaseInput };
+}(utils_1.SpeakeasyBase));
+exports.DatabaseInput = DatabaseInput;

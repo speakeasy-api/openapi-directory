@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,86 +23,88 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetExamplesResponse = exports.GetExamplesRequest = exports.GetExamplesQueryParams = exports.GetExamplesUseCanonicalEnum = exports.GetExamplesIncludeDuplicatesEnum = exports.GetExamplesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetExamplesPathParams = /** @class */ (function (_super) {
     __extends(GetExamplesPathParams, _super);
     function GetExamplesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=word" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=word" }),
         __metadata("design:type", String)
     ], GetExamplesPathParams.prototype, "word", void 0);
     return GetExamplesPathParams;
-}(SpeakeasyBase));
-export { GetExamplesPathParams };
-export var GetExamplesIncludeDuplicatesEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetExamplesPathParams = GetExamplesPathParams;
+var GetExamplesIncludeDuplicatesEnum;
 (function (GetExamplesIncludeDuplicatesEnum) {
     GetExamplesIncludeDuplicatesEnum["False"] = "false";
     GetExamplesIncludeDuplicatesEnum["True"] = "true";
-})(GetExamplesIncludeDuplicatesEnum || (GetExamplesIncludeDuplicatesEnum = {}));
-export var GetExamplesUseCanonicalEnum;
+})(GetExamplesIncludeDuplicatesEnum = exports.GetExamplesIncludeDuplicatesEnum || (exports.GetExamplesIncludeDuplicatesEnum = {}));
+var GetExamplesUseCanonicalEnum;
 (function (GetExamplesUseCanonicalEnum) {
     GetExamplesUseCanonicalEnum["False"] = "false";
     GetExamplesUseCanonicalEnum["True"] = "true";
-})(GetExamplesUseCanonicalEnum || (GetExamplesUseCanonicalEnum = {}));
+})(GetExamplesUseCanonicalEnum = exports.GetExamplesUseCanonicalEnum || (exports.GetExamplesUseCanonicalEnum = {}));
 var GetExamplesQueryParams = /** @class */ (function (_super) {
     __extends(GetExamplesQueryParams, _super);
     function GetExamplesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includeDuplicates" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includeDuplicates" }),
         __metadata("design:type", String)
     ], GetExamplesQueryParams.prototype, "includeDuplicates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetExamplesQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=skip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=skip" }),
         __metadata("design:type", Number)
     ], GetExamplesQueryParams.prototype, "skip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=useCanonical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=useCanonical" }),
         __metadata("design:type", String)
     ], GetExamplesQueryParams.prototype, "useCanonical", void 0);
     return GetExamplesQueryParams;
-}(SpeakeasyBase));
-export { GetExamplesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetExamplesQueryParams = GetExamplesQueryParams;
 var GetExamplesRequest = /** @class */ (function (_super) {
     __extends(GetExamplesRequest, _super);
     function GetExamplesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetExamplesPathParams)
     ], GetExamplesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetExamplesQueryParams)
     ], GetExamplesRequest.prototype, "queryParams", void 0);
     return GetExamplesRequest;
-}(SpeakeasyBase));
-export { GetExamplesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetExamplesRequest = GetExamplesRequest;
 var GetExamplesResponse = /** @class */ (function (_super) {
     __extends(GetExamplesResponse, _super);
     function GetExamplesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetExamplesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetExamplesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetExamplesResponse.prototype, "statusCode", void 0);
     return GetExamplesResponse;
-}(SpeakeasyBase));
-export { GetExamplesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetExamplesResponse = GetExamplesResponse;

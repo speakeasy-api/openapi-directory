@@ -1,42 +1,37 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class ListAllLoadBalancersQueryParams extends SpeakeasyBase {
-  @Metadata({ data: "queryParam, style=form;explode=true;name=page" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=per_page" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" })
   perPage?: number;
 }
 
 
-export class ListAllLoadBalancersRequest extends SpeakeasyBase {
-  @Metadata()
-  queryParams: ListAllLoadBalancersQueryParams;
-}
-
-
 export class ListAllLoadBalancers200ApplicationJsonLinksPages1 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=last" })
+  @SpeakeasyMetadata({ data: "json, name=last" })
   last?: string;
 
-  @Metadata({ data: "json, name=next" })
+  @SpeakeasyMetadata({ data: "json, name=next" })
   next?: string;
 }
 
 
 export class ListAllLoadBalancers200ApplicationJsonLinksPages2 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=first" })
+  @SpeakeasyMetadata({ data: "json, name=first" })
   first?: string;
 
-  @Metadata({ data: "json, name=prev" })
+  @SpeakeasyMetadata({ data: "json, name=prev" })
   prev?: string;
 }
 
 
 export class ListAllLoadBalancers200ApplicationJsonLinks extends SpeakeasyBase {
-  @Metadata({ data: "json, name=pages" })
+  @SpeakeasyMetadata({ data: "json, name=pages" })
   pages?: any;
 }
 
@@ -46,51 +41,57 @@ export class ListAllLoadBalancers200ApplicationJsonLinks extends SpeakeasyBase {
  * Information about the response itself.
 **/
 export class ListAllLoadBalancers200ApplicationJsonMeta extends SpeakeasyBase {
-  @Metadata({ data: "json, name=total" })
+  @SpeakeasyMetadata({ data: "json, name=total" })
   total: number;
 }
 
 
 export class ListAllLoadBalancers200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=links" })
+  @SpeakeasyMetadata({ data: "json, name=links" })
   links?: ListAllLoadBalancers200ApplicationJsonLinks;
 
-  @Metadata({ data: "json, name=load_balancers", elemType: shared.Onev21loadBalancersPostResponses202ContentApplication1jsonSchemaPropertiesLoadBalancer })
+  @SpeakeasyMetadata({ data: "json, name=load_balancers", elemType: shared.Onev21loadBalancersPostResponses202ContentApplication1jsonSchemaPropertiesLoadBalancer })
   loadBalancers?: shared.Onev21loadBalancersPostResponses202ContentApplication1jsonSchemaPropertiesLoadBalancer[];
 
-  @Metadata({ data: "json, name=meta" })
+  @SpeakeasyMetadata({ data: "json, name=meta" })
   meta: ListAllLoadBalancers200ApplicationJsonMeta;
 }
 
 
 export class ListAllLoadBalancers401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class ListAllLoadBalancersRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  queryParams: ListAllLoadBalancersQueryParams;
+}
+
+
 export class ListAllLoadBalancersResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  listAllLoadBalancers200ApplicationJsonObject?: ListAllLoadBalancers200ApplicationJson;
+  @SpeakeasyMetadata()
+  listAllLoadBalancers200ApplicationJSONObject?: ListAllLoadBalancers200ApplicationJson;
 
-  @Metadata()
-  listAllLoadBalancers401ApplicationJsonObject?: ListAllLoadBalancers401ApplicationJson;
+  @SpeakeasyMetadata()
+  listAllLoadBalancers401ApplicationJSONObject?: ListAllLoadBalancers401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

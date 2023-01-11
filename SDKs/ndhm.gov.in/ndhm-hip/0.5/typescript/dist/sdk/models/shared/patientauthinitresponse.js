@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthMeta } from "./authmeta";
-import { AuthenticationModeEnum } from "./authenticationmodeenum";
-import { Error } from "./error";
-import { RequestReference } from "./requestreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatientAuthInitResponse = exports.PatientAuthInitResponseAuth = void 0;
+var utils_1 = require("../../../internal/utils");
+var authmeta_1 = require("./authmeta");
+var authenticationmodeenum_1 = require("./authenticationmodeenum");
+var error_1 = require("./error");
+var requestreference_1 = require("./requestreference");
 var PatientAuthInitResponseAuth = /** @class */ (function (_super) {
     __extends(PatientAuthInitResponseAuth, _super);
     function PatientAuthInitResponseAuth() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", AuthMeta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", authmeta_1.AuthMeta)
     ], PatientAuthInitResponseAuth.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mode" }),
         __metadata("design:type", String)
     ], PatientAuthInitResponseAuth.prototype, "mode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionId" }),
         __metadata("design:type", String)
     ], PatientAuthInitResponseAuth.prototype, "transactionId", void 0);
     return PatientAuthInitResponseAuth;
-}(SpeakeasyBase));
-export { PatientAuthInitResponseAuth };
+}(utils_1.SpeakeasyBase));
+exports.PatientAuthInitResponseAuth = PatientAuthInitResponseAuth;
 var PatientAuthInitResponse = /** @class */ (function (_super) {
     __extends(PatientAuthInitResponse, _super);
     function PatientAuthInitResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auth" }),
         __metadata("design:type", PatientAuthInitResponseAuth)
     ], PatientAuthInitResponse.prototype, "auth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Error)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", error_1.ErrorT)
     ], PatientAuthInitResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], PatientAuthInitResponse.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resp" }),
-        __metadata("design:type", RequestReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resp" }),
+        __metadata("design:type", requestreference_1.RequestReference)
     ], PatientAuthInitResponse.prototype, "resp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], PatientAuthInitResponse.prototype, "timestamp", void 0);
     return PatientAuthInitResponse;
-}(SpeakeasyBase));
-export { PatientAuthInitResponse };
+}(utils_1.SpeakeasyBase));
+exports.PatientAuthInitResponse = PatientAuthInitResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LicenseTypeEnum } from "./licensetypeenum";
-import { ReplicationRun } from "./replicationrun";
-import { ServerTypeEnum } from "./servertypeenum";
-import { ReplicationJobStateEnum } from "./replicationjobstateenum";
-import { VmServer } from "./vmserver";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicationJob = void 0;
+var utils_1 = require("../../../internal/utils");
+var licensetypeenum_1 = require("./licensetypeenum");
+var replicationrun_1 = require("./replicationrun");
+var servertypeenum_1 = require("./servertypeenum");
+var replicationjobstateenum_1 = require("./replicationjobstateenum");
+var vmserver_1 = require("./vmserver");
 // ReplicationJob
 /**
  * Represents a replication job.
@@ -38,77 +41,77 @@ var ReplicationJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ReplicationJob.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encrypted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encrypted" }),
         __metadata("design:type", Boolean)
     ], ReplicationJob.prototype, "encrypted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequency" }),
         __metadata("design:type", Number)
     ], ReplicationJob.prototype, "frequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsKeyId" }),
         __metadata("design:type", String)
     ], ReplicationJob.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestAmiId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestAmiId" }),
         __metadata("design:type", String)
     ], ReplicationJob.prototype, "latestAmiId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=licenseType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=licenseType" }),
         __metadata("design:type", String)
     ], ReplicationJob.prototype, "licenseType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextReplicationRunStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextReplicationRunStartTime" }),
         __metadata("design:type", Date)
     ], ReplicationJob.prototype, "nextReplicationRunStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberOfRecentAmisToKeep" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberOfRecentAmisToKeep" }),
         __metadata("design:type", Number)
     ], ReplicationJob.prototype, "numberOfRecentAmisToKeep", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicationJobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicationJobId" }),
         __metadata("design:type", String)
     ], ReplicationJob.prototype, "replicationJobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replicationRunList", elemType: ReplicationRun }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replicationRunList", elemType: replicationrun_1.ReplicationRun }),
         __metadata("design:type", Array)
     ], ReplicationJob.prototype, "replicationRunList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleName" }),
         __metadata("design:type", String)
     ], ReplicationJob.prototype, "roleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runOnce" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runOnce" }),
         __metadata("design:type", Boolean)
     ], ReplicationJob.prototype, "runOnce", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seedReplicationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seedReplicationTime" }),
         __metadata("design:type", Date)
     ], ReplicationJob.prototype, "seedReplicationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverId" }),
         __metadata("design:type", String)
     ], ReplicationJob.prototype, "serverId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverType" }),
         __metadata("design:type", String)
     ], ReplicationJob.prototype, "serverType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ReplicationJob.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusMessage" }),
         __metadata("design:type", String)
     ], ReplicationJob.prototype, "statusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmServer" }),
-        __metadata("design:type", VmServer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmServer" }),
+        __metadata("design:type", vmserver_1.VmServer)
     ], ReplicationJob.prototype, "vmServer", void 0);
     return ReplicationJob;
-}(SpeakeasyBase));
-export { ReplicationJob };
+}(utils_1.SpeakeasyBase));
+exports.ReplicationJob = ReplicationJob;

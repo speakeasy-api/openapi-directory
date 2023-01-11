@@ -15,10 +15,11 @@ import { Snowmonkey } from "./snowmonkey";
 import { Stats } from "./stats";
 import { Templates } from "./templates";
 import { ValidationAuthorities } from "./validationauthorities";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://otoroshi-api.oto.tools/", "http://maif.local"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     apikeys: Apikeys;
     authConfig: AuthConfig;
@@ -42,6 +43,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

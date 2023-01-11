@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecordingGroup } from "./recordinggroup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigurationRecorder = void 0;
+var utils_1 = require("../../../internal/utils");
+var recordinggroup_1 = require("./recordinggroup");
 // ConfigurationRecorder
 /**
  * An object that represents the recording of configuration changes of an Amazon Web Services resource.
@@ -34,17 +37,17 @@ var ConfigurationRecorder = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ConfigurationRecorder.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recordingGroup" }),
-        __metadata("design:type", RecordingGroup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recordingGroup" }),
+        __metadata("design:type", recordinggroup_1.RecordingGroup)
     ], ConfigurationRecorder.prototype, "recordingGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleARN" }),
         __metadata("design:type", String)
-    ], ConfigurationRecorder.prototype, "roleArn", void 0);
+    ], ConfigurationRecorder.prototype, "roleARN", void 0);
     return ConfigurationRecorder;
-}(SpeakeasyBase));
-export { ConfigurationRecorder };
+}(utils_1.SpeakeasyBase));
+exports.ConfigurationRecorder = ConfigurationRecorder;

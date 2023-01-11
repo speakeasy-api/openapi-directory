@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnhancedCleaning = exports.EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum = exports.EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum = exports.EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum = exports.EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum = exports.EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum = exports.EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum;
 (function (EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum) {
     EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum || (EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum = {}));
-export var EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum;
+})(EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum = exports.EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum || (exports.EnhancedCleaningCommercialGradeDisinfectantCleaningExceptionEnum = {}));
+var EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum;
 (function (EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum) {
     EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum || (EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum = {}));
-export var EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum;
+})(EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum = exports.EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum || (exports.EnhancedCleaningCommonAreasEnhancedCleaningExceptionEnum = {}));
+var EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum;
 (function (EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum) {
     EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum || (EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum = {}));
-export var EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum;
+})(EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum = exports.EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum || (exports.EnhancedCleaningEmployeesTrainedCleaningProceduresExceptionEnum = {}));
+var EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum;
 (function (EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum) {
     EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum || (EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum = {}));
-export var EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum;
+})(EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum = exports.EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum || (exports.EnhancedCleaningEmployeesTrainedThoroughHandWashingExceptionEnum = {}));
+var EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum;
 (function (EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum) {
     EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum || (EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum = {}));
-export var EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum;
+})(EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum = exports.EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum || (exports.EnhancedCleaningEmployeesWearProtectiveEquipmentExceptionEnum = {}));
+var EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum;
 (function (EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum) {
     EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum || (EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum = {}));
+})(EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum = exports.EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum || (exports.EnhancedCleaningGuestRoomsEnhancedCleaningExceptionEnum = {}));
 // EnhancedCleaning
 /**
  * Enhanced cleaning measures implemented by the hotel during COVID-19.
@@ -75,53 +78,53 @@ var EnhancedCleaning = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commercialGradeDisinfectantCleaning" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commercialGradeDisinfectantCleaning" }),
         __metadata("design:type", Boolean)
     ], EnhancedCleaning.prototype, "commercialGradeDisinfectantCleaning", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commercialGradeDisinfectantCleaningException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commercialGradeDisinfectantCleaningException" }),
         __metadata("design:type", String)
     ], EnhancedCleaning.prototype, "commercialGradeDisinfectantCleaningException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commonAreasEnhancedCleaning" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commonAreasEnhancedCleaning" }),
         __metadata("design:type", Boolean)
     ], EnhancedCleaning.prototype, "commonAreasEnhancedCleaning", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commonAreasEnhancedCleaningException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commonAreasEnhancedCleaningException" }),
         __metadata("design:type", String)
     ], EnhancedCleaning.prototype, "commonAreasEnhancedCleaningException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employeesTrainedCleaningProcedures" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employeesTrainedCleaningProcedures" }),
         __metadata("design:type", Boolean)
     ], EnhancedCleaning.prototype, "employeesTrainedCleaningProcedures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employeesTrainedCleaningProceduresException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employeesTrainedCleaningProceduresException" }),
         __metadata("design:type", String)
     ], EnhancedCleaning.prototype, "employeesTrainedCleaningProceduresException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employeesTrainedThoroughHandWashing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employeesTrainedThoroughHandWashing" }),
         __metadata("design:type", Boolean)
     ], EnhancedCleaning.prototype, "employeesTrainedThoroughHandWashing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employeesTrainedThoroughHandWashingException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employeesTrainedThoroughHandWashingException" }),
         __metadata("design:type", String)
     ], EnhancedCleaning.prototype, "employeesTrainedThoroughHandWashingException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employeesWearProtectiveEquipment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employeesWearProtectiveEquipment" }),
         __metadata("design:type", Boolean)
     ], EnhancedCleaning.prototype, "employeesWearProtectiveEquipment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employeesWearProtectiveEquipmentException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employeesWearProtectiveEquipmentException" }),
         __metadata("design:type", String)
     ], EnhancedCleaning.prototype, "employeesWearProtectiveEquipmentException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=guestRoomsEnhancedCleaning" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=guestRoomsEnhancedCleaning" }),
         __metadata("design:type", Boolean)
     ], EnhancedCleaning.prototype, "guestRoomsEnhancedCleaning", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=guestRoomsEnhancedCleaningException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=guestRoomsEnhancedCleaningException" }),
         __metadata("design:type", String)
     ], EnhancedCleaning.prototype, "guestRoomsEnhancedCleaningException", void 0);
     return EnhancedCleaning;
-}(SpeakeasyBase));
-export { EnhancedCleaning };
+}(utils_1.SpeakeasyBase));
+exports.EnhancedCleaning = EnhancedCleaning;

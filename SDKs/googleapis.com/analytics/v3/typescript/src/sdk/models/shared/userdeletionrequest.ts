@@ -15,14 +15,11 @@ export class UserDeletionRequestId extends SpeakeasyBase {
 }
 
 
-// UserDeletionRequest
+// UserDeletionRequestInput
 /** 
  * JSON template for a user deletion request resource.
 **/
-export class UserDeletionRequest extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=deletionRequestTime" })
-  deletionRequestTime?: Date;
-
+export class UserDeletionRequestInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=firebaseProjectId" })
   firebaseProjectId?: string;
 
@@ -40,11 +37,14 @@ export class UserDeletionRequest extends SpeakeasyBase {
 }
 
 
-// UserDeletionRequestInput
+// UserDeletionRequest
 /** 
  * JSON template for a user deletion request resource.
 **/
-export class UserDeletionRequestInput extends SpeakeasyBase {
+export class UserDeletionRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=deletionRequestTime" })
+  deletionRequestTime?: Date;
+
   @SpeakeasyMetadata({ data: "json, name=firebaseProjectId" })
   firebaseProjectId?: string;
 

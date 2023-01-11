@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,126 +14,151 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRepositoriesWorkspaceRepoSlugDiffSpecResponse = exports.GetRepositoriesWorkspaceRepoSlugDiffSpecRequest = exports.GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity = exports.GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams = exports.GetRepositoriesWorkspaceRepoSlugDiffSpecPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetRepositoriesWorkspaceRepoSlugDiffSpecPathParams = /** @class */ (function (_super) {
     __extends(GetRepositoriesWorkspaceRepoSlugDiffSpecPathParams, _super);
     function GetRepositoriesWorkspaceRepoSlugDiffSpecPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecPathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=spec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=spec" }),
         __metadata("design:type", String)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecPathParams.prototype, "spec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecPathParams.prototype, "workspace", void 0);
     return GetRepositoriesWorkspaceRepoSlugDiffSpecPathParams;
-}(SpeakeasyBase));
-export { GetRepositoriesWorkspaceRepoSlugDiffSpecPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRepositoriesWorkspaceRepoSlugDiffSpecPathParams = GetRepositoriesWorkspaceRepoSlugDiffSpecPathParams;
 var GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams = /** @class */ (function (_super) {
     __extends(GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams, _super);
     function GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=binary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=binary" }),
         __metadata("design:type", Boolean)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams.prototype, "binary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=context" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=context" }),
         __metadata("design:type", Number)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ignore_whitespace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ignore_whitespace" }),
         __metadata("design:type", Boolean)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams.prototype, "ignoreWhitespace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=merge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=merge" }),
         __metadata("design:type", Boolean)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams.prototype, "merge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=path" }),
         __metadata("design:type", String)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=renames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=renames" }),
         __metadata("design:type", Boolean)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams.prototype, "renames", void 0);
     return GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams;
-}(SpeakeasyBase));
-export { GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams = GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams;
 var GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity = /** @class */ (function (_super) {
     __extends(GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity, _super);
     function GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=http;subtype=basic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=basic" }),
         __metadata("design:type", shared.SchemeBasic)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity.prototype, "basic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity.prototype, "apiKey", void 0);
     return GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity;
-}(SpeakeasyBase));
-export { GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity };
+}(utils_1.SpeakeasyBase));
+exports.GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity = GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity;
 var GetRepositoriesWorkspaceRepoSlugDiffSpecRequest = /** @class */ (function (_super) {
     __extends(GetRepositoriesWorkspaceRepoSlugDiffSpecRequest, _super);
     function GetRepositoriesWorkspaceRepoSlugDiffSpecRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRepositoriesWorkspaceRepoSlugDiffSpecPathParams)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecRequest.prototype, "security", void 0);
     return GetRepositoriesWorkspaceRepoSlugDiffSpecRequest;
-}(SpeakeasyBase));
-export { GetRepositoriesWorkspaceRepoSlugDiffSpecRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRepositoriesWorkspaceRepoSlugDiffSpecRequest = GetRepositoriesWorkspaceRepoSlugDiffSpecRequest;
 var GetRepositoriesWorkspaceRepoSlugDiffSpecResponse = /** @class */ (function (_super) {
     __extends(GetRepositoriesWorkspaceRepoSlugDiffSpecResponse, _super);
     function GetRepositoriesWorkspaceRepoSlugDiffSpecResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetRepositoriesWorkspaceRepoSlugDiffSpecResponse.prototype, "error", void 0);
     return GetRepositoriesWorkspaceRepoSlugDiffSpecResponse;
-}(SpeakeasyBase));
-export { GetRepositoriesWorkspaceRepoSlugDiffSpecResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRepositoriesWorkspaceRepoSlugDiffSpecResponse = GetRepositoriesWorkspaceRepoSlugDiffSpecResponse;

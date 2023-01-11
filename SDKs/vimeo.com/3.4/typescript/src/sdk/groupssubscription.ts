@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -31,16 +31,18 @@ export class GroupsSubscription {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/users/{user_id}/groups/{group_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/users/{user_id}/groups/{group_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "put",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -49,7 +51,7 @@ export class GroupsSubscription {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -57,7 +59,6 @@ export class GroupsSubscription {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -73,16 +74,18 @@ export class GroupsSubscription {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/me/groups/{group_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/me/groups/{group_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "put",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -91,7 +94,7 @@ export class GroupsSubscription {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -99,7 +102,6 @@ export class GroupsSubscription {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -115,16 +117,18 @@ export class GroupsSubscription {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/users/{user_id}/groups/{group_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/users/{user_id}/groups/{group_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -133,7 +137,7 @@ export class GroupsSubscription {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -141,7 +145,6 @@ export class GroupsSubscription {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -157,16 +160,18 @@ export class GroupsSubscription {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/me/groups/{group_id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/me/groups/{group_id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -175,7 +180,7 @@ export class GroupsSubscription {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -183,7 +188,6 @@ export class GroupsSubscription {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

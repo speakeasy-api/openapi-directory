@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimulationJobBatchStatusEnum } from "./simulationjobbatchstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SimulationJobBatchSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var simulationjobbatchstatusenum_1 = require("./simulationjobbatchstatusenum");
 // SimulationJobBatchSummary
 /**
  * Information about a simulation job batch.
@@ -34,33 +37,33 @@ var SimulationJobBatchSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], SimulationJobBatchSummary.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], SimulationJobBatchSummary.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdRequestCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdRequestCount" }),
         __metadata("design:type", Number)
     ], SimulationJobBatchSummary.prototype, "createdRequestCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failedRequestCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failedRequestCount" }),
         __metadata("design:type", Number)
     ], SimulationJobBatchSummary.prototype, "failedRequestCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedAt" }),
         __metadata("design:type", Date)
     ], SimulationJobBatchSummary.prototype, "lastUpdatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pendingRequestCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pendingRequestCount" }),
         __metadata("design:type", Number)
     ], SimulationJobBatchSummary.prototype, "pendingRequestCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], SimulationJobBatchSummary.prototype, "status", void 0);
     return SimulationJobBatchSummary;
-}(SpeakeasyBase));
-export { SimulationJobBatchSummary };
+}(utils_1.SpeakeasyBase));
+exports.SimulationJobBatchSummary = SimulationJobBatchSummary;

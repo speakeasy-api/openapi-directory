@@ -5,12 +5,12 @@ export declare class CreatePipelineForRepositoryPathParams extends SpeakeasyBase
 }
 export declare class CreatePipelineForRepositoryRequest extends SpeakeasyBase {
     pathParams: CreatePipelineForRepositoryPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class CreatePipelineForRepositoryResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    error?: Map<string, any>;
-    pipeline?: Map<string, any>;
+    error?: Record<string, any>;
+    pipeline?: Record<string, any>;
 }

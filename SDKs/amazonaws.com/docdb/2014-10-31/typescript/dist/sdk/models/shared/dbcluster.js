@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterRole } from "./dbclusterrole";
-import { DbClusterMember } from "./dbclustermember";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DbCluster = void 0;
+var utils_1 = require("../../../internal/utils");
+var dbclusterroles_1 = require("./dbclusterroles");
+var dbclustermemberlist_1 = require("./dbclustermemberlist");
+var vpcsecuritygroupmembershiplist_1 = require("./vpcsecuritygroupmembershiplist");
 // DbCluster
 /**
  * Detailed information about a cluster.
@@ -36,129 +39,129 @@ var DbCluster = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: DbClusterRole }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: dbclusterroles_1.DbClusterRoles }),
         __metadata("design:type", Array)
     ], DbCluster.prototype, "associatedRoles", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], DbCluster.prototype, "availabilityZones", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DbCluster.prototype, "backupRetentionPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], DbCluster.prototype, "clusterCreateTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbCluster.prototype, "dbClusterArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbCluster.prototype, "dbClusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: DbClusterMember }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: dbclustermemberlist_1.DbClusterMemberList }),
         __metadata("design:type", Array)
     ], DbCluster.prototype, "dbClusterMembers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbCluster.prototype, "dbClusterParameterGroup", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbCluster.prototype, "dbSubnetGroup", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbCluster.prototype, "dbClusterResourceId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DbCluster.prototype, "deletionProtection", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], DbCluster.prototype, "earliestRestorableTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], DbCluster.prototype, "enabledCloudwatchLogsExports", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbCluster.prototype, "endpoint", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbCluster.prototype, "engine", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbCluster.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbCluster.prototype, "hostedZoneId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbCluster.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], DbCluster.prototype, "latestRestorableTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbCluster.prototype, "masterUsername", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
-    ], DbCluster.prototype, "multiAz", void 0);
+    ], DbCluster.prototype, "multiAZ", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbCluster.prototype, "percentProgress", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DbCluster.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbCluster.prototype, "preferredBackupWindow", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbCluster.prototype, "preferredMaintenanceWindow", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], DbCluster.prototype, "readReplicaIdentifiers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbCluster.prototype, "readerEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbCluster.prototype, "replicationSourceIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbCluster.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DbCluster.prototype, "storageEncrypted", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: VpcSecurityGroupMembership }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: vpcsecuritygroupmembershiplist_1.VpcSecurityGroupMembershipList }),
         __metadata("design:type", Array)
     ], DbCluster.prototype, "vpcSecurityGroups", void 0);
     return DbCluster;
-}(SpeakeasyBase));
-export { DbCluster };
+}(utils_1.SpeakeasyBase));
+exports.DbCluster = DbCluster;

@@ -7,7 +7,7 @@ export declare class GetRequestsFoldersPathQueryParams extends SpeakeasyBase {
     cursor?: string;
     mine?: boolean;
     perPage?: number;
-    sortBy?: Map<string, any>;
+    sortBy?: Record<string, any>;
 }
 export declare class GetRequestsFoldersPathRequest extends SpeakeasyBase {
     pathParams: GetRequestsFoldersPathPathParams;

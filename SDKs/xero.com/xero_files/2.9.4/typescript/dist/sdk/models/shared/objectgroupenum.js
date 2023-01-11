@@ -1,4 +1,7 @@
-export var ObjectGroupEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObjectGroupEnum = void 0;
+var ObjectGroupEnum;
 (function (ObjectGroupEnum) {
     ObjectGroupEnum["Account"] = "Account";
     ObjectGroupEnum["BankTransaction"] = "BankTransaction";
@@ -11,4 +14,4 @@ export var ObjectGroupEnum;
     ObjectGroupEnum["Payment"] = "Payment";
     ObjectGroupEnum["Prepayment"] = "Prepayment";
     ObjectGroupEnum["Receipt"] = "Receipt";
-})(ObjectGroupEnum || (ObjectGroupEnum = {}));
+})(ObjectGroupEnum = exports.ObjectGroupEnum || (exports.ObjectGroupEnum = {}));

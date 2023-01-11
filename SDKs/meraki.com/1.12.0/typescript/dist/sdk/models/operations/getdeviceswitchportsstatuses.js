@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceSwitchPortsStatusesResponse = exports.GetDeviceSwitchPortsStatusesRequest = exports.GetDeviceSwitchPortsStatusesQueryParams = exports.GetDeviceSwitchPortsStatusesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceSwitchPortsStatusesPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceSwitchPortsStatusesPathParams, _super);
     function GetDeviceSwitchPortsStatusesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceSwitchPortsStatusesPathParams.prototype, "serial", void 0);
     return GetDeviceSwitchPortsStatusesPathParams;
-}(SpeakeasyBase));
-export { GetDeviceSwitchPortsStatusesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceSwitchPortsStatusesPathParams = GetDeviceSwitchPortsStatusesPathParams;
 var GetDeviceSwitchPortsStatusesQueryParams = /** @class */ (function (_super) {
     __extends(GetDeviceSwitchPortsStatusesQueryParams, _super);
     function GetDeviceSwitchPortsStatusesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t0" }),
         __metadata("design:type", String)
     ], GetDeviceSwitchPortsStatusesQueryParams.prototype, "t0", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timespan" }),
         __metadata("design:type", Number)
     ], GetDeviceSwitchPortsStatusesQueryParams.prototype, "timespan", void 0);
     return GetDeviceSwitchPortsStatusesQueryParams;
-}(SpeakeasyBase));
-export { GetDeviceSwitchPortsStatusesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceSwitchPortsStatusesQueryParams = GetDeviceSwitchPortsStatusesQueryParams;
 var GetDeviceSwitchPortsStatusesRequest = /** @class */ (function (_super) {
     __extends(GetDeviceSwitchPortsStatusesRequest, _super);
     function GetDeviceSwitchPortsStatusesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceSwitchPortsStatusesPathParams)
     ], GetDeviceSwitchPortsStatusesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceSwitchPortsStatusesQueryParams)
     ], GetDeviceSwitchPortsStatusesRequest.prototype, "queryParams", void 0);
     return GetDeviceSwitchPortsStatusesRequest;
-}(SpeakeasyBase));
-export { GetDeviceSwitchPortsStatusesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceSwitchPortsStatusesRequest = GetDeviceSwitchPortsStatusesRequest;
 var GetDeviceSwitchPortsStatusesResponse = /** @class */ (function (_super) {
     __extends(GetDeviceSwitchPortsStatusesResponse, _super);
     function GetDeviceSwitchPortsStatusesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceSwitchPortsStatusesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceSwitchPortsStatusesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceSwitchPortsStatusesResponse.prototype, "getDeviceSwitchPortsStatuses200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceSwitchPortsStatusesResponse.prototype, "getDeviceSwitchPortsStatuses200ApplicationJSONObject", void 0);
     return GetDeviceSwitchPortsStatusesResponse;
-}(SpeakeasyBase));
-export { GetDeviceSwitchPortsStatusesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceSwitchPortsStatusesResponse = GetDeviceSwitchPortsStatusesResponse;

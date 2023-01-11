@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostWalletAccountIdErc20Response = exports.PostWalletAccountIdErc20Request = exports.PostWalletAccountIdErc20PathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostWalletAccountIdErc20PathParams = /** @class */ (function (_super) {
     __extends(PostWalletAccountIdErc20PathParams, _super);
     function PostWalletAccountIdErc20PathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], PostWalletAccountIdErc20PathParams.prototype, "id", void 0);
     return PostWalletAccountIdErc20PathParams;
-}(SpeakeasyBase));
-export { PostWalletAccountIdErc20PathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostWalletAccountIdErc20PathParams = PostWalletAccountIdErc20PathParams;
 var PostWalletAccountIdErc20Request = /** @class */ (function (_super) {
     __extends(PostWalletAccountIdErc20Request, _super);
     function PostWalletAccountIdErc20Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostWalletAccountIdErc20PathParams)
     ], PostWalletAccountIdErc20Request.prototype, "pathParams", void 0);
     return PostWalletAccountIdErc20Request;
-}(SpeakeasyBase));
-export { PostWalletAccountIdErc20Request };
+}(utils_1.SpeakeasyBase));
+exports.PostWalletAccountIdErc20Request = PostWalletAccountIdErc20Request;
 var PostWalletAccountIdErc20Response = /** @class */ (function (_super) {
     __extends(PostWalletAccountIdErc20Response, _super);
     function PostWalletAccountIdErc20Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostWalletAccountIdErc20Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PostWalletAccountIdErc20Response.prototype, "empty", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostWalletAccountIdErc20Response.prototype, "statusCode", void 0);
     return PostWalletAccountIdErc20Response;
-}(SpeakeasyBase));
-export { PostWalletAccountIdErc20Response };
+}(utils_1.SpeakeasyBase));
+exports.PostWalletAccountIdErc20Response = PostWalletAccountIdErc20Response;

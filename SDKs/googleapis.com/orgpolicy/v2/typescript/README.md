@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { OrgpolicyOrganizationsCustomConstraintsCreateRequest, OrgpolicyOrganizationsCustomConstraintsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,41 +30,40 @@ const req: OrgpolicyOrganizationsCustomConstraintsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "et",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "ducimus",
+    accessToken: "culpa",
     alt: "media",
-    callback: "officia",
-    fields: "corporis",
-    key: "nobis",
-    oauthToken: "nam",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "maxime",
-    uploadType: "nisi",
-    uploadProtocol: "maiores",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    actionType: "ACTION_TYPE_UNSPECIFIED",
-    condition: "temporibus",
-    description: "ea",
-    displayName: "excepturi",
+    actionType: "DENY",
+    condition: "debitis",
+    description: "voluptatum",
+    displayName: "et",
     methodTypes: [
-      "CREATE",
-      "DELETE",
-      "DELETE",
+      "UPDATE",
+      "UPDATE",
+      "UPDATE",
     ],
-    name: "quisquam",
+    name: "iste",
     resourceTypes: [
-      "et",
-      "id",
+      "totam",
     ],
   },
 };

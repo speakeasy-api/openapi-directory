@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddOnRequest } from "./addonrequest";
-import { IpAddressTypeEnum } from "./ipaddresstypeenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateInstancesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var addonrequest_1 = require("./addonrequest");
+var ipaddresstypeenum_1 = require("./ipaddresstypeenum");
+var tag_1 = require("./tag");
 var CreateInstancesRequest = /** @class */ (function (_super) {
     __extends(CreateInstancesRequest, _super);
     function CreateInstancesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addOns", elemType: AddOnRequest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addOns", elemType: addonrequest_1.AddOnRequest }),
         __metadata("design:type", Array)
     ], CreateInstancesRequest.prototype, "addOns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availabilityZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availabilityZone" }),
         __metadata("design:type", String)
     ], CreateInstancesRequest.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blueprintId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blueprintId" }),
         __metadata("design:type", String)
     ], CreateInstancesRequest.prototype, "blueprintId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundleId" }),
         __metadata("design:type", String)
     ], CreateInstancesRequest.prototype, "bundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customImageName" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customImageName" }),
+        __metadata("design:type", Object)
     ], CreateInstancesRequest.prototype, "customImageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceNames" }),
         __metadata("design:type", Array)
     ], CreateInstancesRequest.prototype, "instanceNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddressType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddressType" }),
         __metadata("design:type", String)
     ], CreateInstancesRequest.prototype, "ipAddressType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyPairName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyPairName" }),
         __metadata("design:type", String)
     ], CreateInstancesRequest.prototype, "keyPairName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateInstancesRequest.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userData" }),
         __metadata("design:type", String)
     ], CreateInstancesRequest.prototype, "userData", void 0);
     return CreateInstancesRequest;
-}(SpeakeasyBase));
-export { CreateInstancesRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateInstancesRequest = CreateInstancesRequest;

@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetSolutionMetricsResponse extends SpeakeasyBase {
-    metrics?: Map<string, number>;
+    metrics?: Record<string, number>;
     solutionVersionArn?: string;
 }

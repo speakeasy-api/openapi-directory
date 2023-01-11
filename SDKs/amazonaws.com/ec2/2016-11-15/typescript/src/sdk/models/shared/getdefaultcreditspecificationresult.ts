@@ -1,9 +1,21 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceFamilyCreditSpecification } from "./instancefamilycreditspecification";
 
+
+
+// GetDefaultCreditSpecificationResultInstanceFamilyCreditSpecification
+/** 
+ * The default credit option for CPU usage of the instance family.
+**/
+export class GetDefaultCreditSpecificationResultInstanceFamilyCreditSpecification extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  cpuCredits?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  instanceFamily?: Record<string, any>;
+}
 
 
 export class GetDefaultCreditSpecificationResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  instanceFamilyCreditSpecification?: InstanceFamilyCreditSpecification;
+  instanceFamilyCreditSpecification?: GetDefaultCreditSpecificationResultInstanceFamilyCreditSpecification;
 }

@@ -17,5 +17,5 @@ export declare class ReposGetBranchResponse extends SpeakeasyBase {
     statusCode: number;
     basicError?: shared.BasicError;
     branchWithProtection?: shared.BranchWithProtection;
-    reposGetBranch415ApplicationJsonObject?: ReposGetBranch415ApplicationJson;
+    reposGetBranch415ApplicationJSONObject?: ReposGetBranch415ApplicationJson;
 }

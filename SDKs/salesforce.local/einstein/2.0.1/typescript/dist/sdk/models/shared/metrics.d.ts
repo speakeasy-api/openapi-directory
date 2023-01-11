@@ -4,6 +4,6 @@ export declare class Metrics extends SpeakeasyBase {
     createdAt?: Date;
     id?: string;
     language?: string;
-    metricsData?: Map<string, any>;
+    metricsData?: Record<string, any>;
     object?: string;
 }

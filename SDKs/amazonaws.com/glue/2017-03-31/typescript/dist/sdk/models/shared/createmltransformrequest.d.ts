@@ -13,7 +13,7 @@ export declare class CreateMlTransformRequest extends SpeakeasyBase {
     numberOfWorkers?: number;
     parameters: TransformParameters;
     role: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     timeout?: number;
     transformEncryption?: TransformEncryption;
     workerType?: WorkerTypeEnum;

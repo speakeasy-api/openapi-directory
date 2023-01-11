@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LicenseTypeEnum } from "./licensetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServerReplicationParameters = void 0;
+var utils_1 = require("../../../internal/utils");
+var licensetypeenum_1 = require("./licensetypeenum");
 // ServerReplicationParameters
 /**
  * The replication parameters for replicating a server.
@@ -34,33 +37,33 @@ var ServerReplicationParameters = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encrypted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encrypted" }),
         __metadata("design:type", Boolean)
     ], ServerReplicationParameters.prototype, "encrypted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequency" }),
         __metadata("design:type", Number)
     ], ServerReplicationParameters.prototype, "frequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsKeyId" }),
         __metadata("design:type", String)
     ], ServerReplicationParameters.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=licenseType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=licenseType" }),
         __metadata("design:type", String)
     ], ServerReplicationParameters.prototype, "licenseType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberOfRecentAmisToKeep" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberOfRecentAmisToKeep" }),
         __metadata("design:type", Number)
     ], ServerReplicationParameters.prototype, "numberOfRecentAmisToKeep", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runOnce" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runOnce" }),
         __metadata("design:type", Boolean)
     ], ServerReplicationParameters.prototype, "runOnce", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seedTime" }),
         __metadata("design:type", Date)
     ], ServerReplicationParameters.prototype, "seedTime", void 0);
     return ServerReplicationParameters;
-}(SpeakeasyBase));
-export { ServerReplicationParameters };
+}(utils_1.SpeakeasyBase));
+exports.ServerReplicationParameters = ServerReplicationParameters;

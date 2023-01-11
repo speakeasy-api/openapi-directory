@@ -19,8 +19,8 @@ export declare class ComputeNodeGetRemoteDesktopRequest extends SpeakeasyBase {
 }
 export declare class ComputeNodeGetRemoteDesktopResponse extends SpeakeasyBase {
     batchError?: any;
-    computeNodeGetRemoteDesktop200ApplicationJsonBinaryString?: Uint8Array;
+    computeNodeGetRemoteDesktop200ApplicationJSONBinaryString?: Uint8Array;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

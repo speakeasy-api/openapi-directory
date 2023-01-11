@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1OsUpdateStatus = exports.GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum;
 (function (GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum) {
     GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum["UpdateStateUnspecified"] = "UPDATE_STATE_UNSPECIFIED";
     GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum["OsImageDownloadNotStarted"] = "OS_IMAGE_DOWNLOAD_NOT_STARTED";
     GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum["OsImageDownloadInProgress"] = "OS_IMAGE_DOWNLOAD_IN_PROGRESS";
     GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum["OsUpdateNeedReboot"] = "OS_UPDATE_NEED_REBOOT";
-})(GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum || (GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum = {}));
+})(GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum = exports.GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum || (exports.GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum = {}));
 // GoogleChromeManagementV1OsUpdateStatus
 /**
  * Contains information regarding the current OS update status. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceOsUpdateStatus](https://chromeenterprise.google/policies/#ReportDeviceOsUpdateStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
@@ -40,29 +43,29 @@ var GoogleChromeManagementV1OsUpdateStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastRebootTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastRebootTime" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1OsUpdateStatus.prototype, "lastRebootTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdateCheckTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdateCheckTime" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1OsUpdateStatus.prototype, "lastUpdateCheckTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdateTime" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1OsUpdateStatus.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newPlatformVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newPlatformVersion" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1OsUpdateStatus.prototype, "newPlatformVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newRequestedPlatformVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newRequestedPlatformVersion" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1OsUpdateStatus.prototype, "newRequestedPlatformVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateState" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1OsUpdateStatus.prototype, "updateState", void 0);
     return GoogleChromeManagementV1OsUpdateStatus;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1OsUpdateStatus };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1OsUpdateStatus = GoogleChromeManagementV1OsUpdateStatus;

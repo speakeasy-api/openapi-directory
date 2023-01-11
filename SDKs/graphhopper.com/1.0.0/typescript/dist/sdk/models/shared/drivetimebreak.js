@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DriveTimeBreak = void 0;
+var utils_1 = require("../../../internal/utils");
 var DriveTimeBreak = /** @class */ (function (_super) {
     __extends(DriveTimeBreak, _super);
     function DriveTimeBreak() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", Number)
     ], DriveTimeBreak.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initial_driving_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initial_driving_time" }),
         __metadata("design:type", Number)
     ], DriveTimeBreak.prototype, "initialDrivingTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max_driving_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max_driving_time" }),
         __metadata("design:type", Number)
     ], DriveTimeBreak.prototype, "maxDrivingTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=possible_split" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=possible_split" }),
         __metadata("design:type", Array)
     ], DriveTimeBreak.prototype, "possibleSplit", void 0);
     return DriveTimeBreak;
-}(SpeakeasyBase));
-export { DriveTimeBreak };
+}(utils_1.SpeakeasyBase));
+exports.DriveTimeBreak = DriveTimeBreak;

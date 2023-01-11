@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAddressUtxosResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAddressUtxosResponse = /** @class */ (function (_super) {
     __extends(GetAddressUtxosResponse, _super);
     function GetAddressUtxosResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], GetAddressUtxosResponse.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], GetAddressUtxosResponse.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confirmations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confirmations" }),
         __metadata("design:type", Number)
     ], GetAddressUtxosResponse.prototype, "confirmations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scriptPubKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scriptPubKey" }),
         __metadata("design:type", String)
     ], GetAddressUtxosResponse.prototype, "scriptPubKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ts" }),
         __metadata("design:type", Number)
     ], GetAddressUtxosResponse.prototype, "ts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txid" }),
         __metadata("design:type", String)
     ], GetAddressUtxosResponse.prototype, "txid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vout" }),
         __metadata("design:type", Number)
     ], GetAddressUtxosResponse.prototype, "vout", void 0);
     return GetAddressUtxosResponse;
-}(SpeakeasyBase));
-export { GetAddressUtxosResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAddressUtxosResponse = GetAddressUtxosResponse;

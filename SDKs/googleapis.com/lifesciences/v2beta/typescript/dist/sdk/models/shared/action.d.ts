@@ -15,13 +15,13 @@ export declare class Action extends SpeakeasyBase {
     enableFuse?: boolean;
     encryptedEnvironment?: Secret;
     entrypoint?: string;
-    environment?: Map<string, string>;
+    environment?: Record<string, string>;
     ignoreExitStatus?: boolean;
     imageUri?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     mounts?: Mount[];
     pidNamespace?: string;
-    portMappings?: Map<string, number>;
+    portMappings?: Record<string, number>;
     publishExposedPorts?: boolean;
     runInBackground?: boolean;
     timeout?: string;

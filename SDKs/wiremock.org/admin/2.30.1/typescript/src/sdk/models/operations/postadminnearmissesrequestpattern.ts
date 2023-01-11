@@ -20,19 +20,19 @@ export class PostAdminNearMissesRequestPatternRequestBody extends SpeakeasyBase 
   basicAuthCredentials?: PostAdminNearMissesRequestPatternRequestBodyBasicAuthCredentials;
 
   @SpeakeasyMetadata({ data: "json, name=bodyPatterns" })
-  bodyPatterns?: Map<string, any>[];
+  bodyPatterns?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=cookies" })
-  cookies?: Map<string, any>;
+  cookies?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, any>;
+  headers?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=method" })
   method?: string;
 
   @SpeakeasyMetadata({ data: "json, name=queryParameters" })
-  queryParameters?: Map<string, any>;
+  queryParameters?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=url" })
   url?: string;
@@ -56,10 +56,10 @@ export class PostAdminNearMissesRequestPattern200ApplicationJsonNearMisses exten
   body?: string;
 
   @SpeakeasyMetadata({ data: "json, name=cookies" })
-  cookies?: Map<string, any>;
+  cookies?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, any>;
+  headers?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=method" })
   method?: string;
@@ -86,8 +86,8 @@ export class PostAdminNearMissesRequestPatternResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postAdminNearMissesRequestPattern200ApplicationJsonObject?: PostAdminNearMissesRequestPattern200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postAdminNearMissesRequestPattern200ApplicationJSONObject?: PostAdminNearMissesRequestPattern200ApplicationJson;
 }

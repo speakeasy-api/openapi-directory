@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { FirebasestorageProjectsBucketsAddFirebaseRequest, FirebasestorageProjectsBucketsAddFirebaseResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,31 +31,32 @@ const req: FirebasestorageProjectsBucketsAddFirebaseRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   pathParams: {
-    bucket: "et",
+    bucket: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "aut",
-    alt: "proto",
-    callback: "porro",
-    fields: "est",
-    key: "porro",
-    oauthToken: "aut",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "iure",
-    uploadType: "explicabo",
-    uploadProtocol: "blanditiis",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    "nisi": "ut",
-    "saepe": "vero",
+    "debitis": "voluptatum",
+    "et": "ut",
+    "dolorem": "et",
   },
 };
 

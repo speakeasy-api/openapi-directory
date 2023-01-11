@@ -19,7 +19,7 @@ export declare class DisassociateConnectorRequest extends SpeakeasyBase {
 }
 export declare class DisassociateConnectorResponse extends SpeakeasyBase {
     contentType: string;
-    disassociateConnectorResponse?: Map<string, any>;
+    disassociateConnectorResponse?: Record<string, any>;
     invalidParameterException?: any;
     missingRequiredParameterException?: any;
     operationNotPermittedException?: any;

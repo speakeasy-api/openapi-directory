@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CtcerRequest, CtcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,23 +30,23 @@ const req: CtcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      uid: "numquam",
-      refno: "est",
+      uid: "sit",
+      refno: "voluptas",
     },
-    consentArtifact: "molestias",
+    consentArtifact: "culpa",
     format: "pdf",
-    txnId: "consequatur",
+    txnId: "consequuntur",
   },
 };
 
-sdk.sdk.ctcer(req).then((res: CtcerResponse | AxiosError) => {
+sdk.apIs.ctcer(req).then((res: CtcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -56,7 +55,7 @@ sdk.sdk.ctcer(req).then((res: CtcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `ctcer` - Caste Certificate
 * `ewcer` - Economically Weaker Section Certificate

@@ -63,7 +63,7 @@ export enum CreateIntegrationRequestBodyPassthroughBehaviorEnum {
 **/
 export class CreateIntegrationRequestBodyTlsConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ServerNameToVerify" })
-  serverNameToVerify?: string;
+  serverNameToVerify?: Record<string, any>;
 }
 
 
@@ -102,13 +102,13 @@ export class CreateIntegrationRequestBody extends SpeakeasyBase {
   payloadFormatVersion?: string;
 
   @SpeakeasyMetadata({ data: "json, name=requestParameters" })
-  requestParameters?: Map<string, string>;
+  requestParameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=requestTemplates" })
-  requestTemplates?: Map<string, string>;
+  requestTemplates?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=responseParameters" })
-  responseParameters?: Map<string, Map<string, string>>;
+  responseParameters?: Record<string, Record<string, string>>;
 
   @SpeakeasyMetadata({ data: "json, name=templateSelectionExpression" })
   templateSelectionExpression?: string;

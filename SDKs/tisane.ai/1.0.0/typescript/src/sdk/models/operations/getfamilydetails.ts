@@ -46,5 +46,5 @@ export class GetFamilyDetailsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getFamilyDetails200ApplicationJsonObject?: GetFamilyDetails200ApplicationJson;
+  getFamilyDetails200ApplicationJSONObject?: GetFamilyDetails200ApplicationJson;
 }

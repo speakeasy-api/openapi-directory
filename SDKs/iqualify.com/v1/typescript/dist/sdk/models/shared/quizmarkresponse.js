@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuizMarkResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var QuizMarkResponse = /** @class */ (function (_super) {
     __extends(QuizMarkResponse, _super);
     function QuizMarkResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attempts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attempts" }),
         __metadata("design:type", Number)
     ], QuizMarkResponse.prototype, "attempts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastAttemptAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastAttemptAt" }),
         __metadata("design:type", Date)
     ], QuizMarkResponse.prototype, "lastAttemptAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=learnerEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=learnerEmail" }),
         __metadata("design:type", String)
     ], QuizMarkResponse.prototype, "learnerEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=learnerFullname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=learnerFullname" }),
         __metadata("design:type", String)
     ], QuizMarkResponse.prototype, "learnerFullname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=learnerPersonId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=learnerPersonId" }),
         __metadata("design:type", String)
     ], QuizMarkResponse.prototype, "learnerPersonId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mark" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mark" }),
         __metadata("design:type", String)
     ], QuizMarkResponse.prototype, "mark", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quizId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quizId" }),
         __metadata("design:type", String)
     ], QuizMarkResponse.prototype, "quizId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quizTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quizTitle" }),
         __metadata("design:type", String)
     ], QuizMarkResponse.prototype, "quizTitle", void 0);
     return QuizMarkResponse;
-}(SpeakeasyBase));
-export { QuizMarkResponse };
+}(utils_1.SpeakeasyBase));
+exports.QuizMarkResponse = QuizMarkResponse;

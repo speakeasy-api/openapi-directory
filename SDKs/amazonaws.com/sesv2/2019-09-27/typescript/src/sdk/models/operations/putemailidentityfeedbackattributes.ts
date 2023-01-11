@@ -61,7 +61,7 @@ export class PutEmailIdentityFeedbackAttributesResponse extends SpeakeasyBase {
   notFoundException?: any;
 
   @SpeakeasyMetadata()
-  putEmailIdentityFeedbackAttributesResponse?: Map<string, any>;
+  putEmailIdentityFeedbackAttributesResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

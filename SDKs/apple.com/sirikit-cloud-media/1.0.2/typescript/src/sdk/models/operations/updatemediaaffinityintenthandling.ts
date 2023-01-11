@@ -35,9 +35,6 @@ export class UpdateMediaAffinityIntentHandlingResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
-
-  @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()

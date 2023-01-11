@@ -19,8 +19,8 @@ export declare class ReposListPullRequestsAssociatedWithCommitRequest extends Sp
 }
 export declare class ReposListPullRequestsAssociatedWithCommitResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     pullRequestSimples?: shared.PullRequestSimple[];
-    reposListPullRequestsAssociatedWithCommit415ApplicationJsonObject?: ReposListPullRequestsAssociatedWithCommit415ApplicationJson;
+    reposListPullRequestsAssociatedWithCommit415ApplicationJSONObject?: ReposListPullRequestsAssociatedWithCommit415ApplicationJson;
 }

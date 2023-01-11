@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Session } from "./session";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SessionList = void 0;
+var utils_1 = require("../../../internal/utils");
+var session_1 = require("./session");
 // SessionList
 /**
  * Sessions List
@@ -34,13 +37,13 @@ var SessionList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessions", elemType: Session }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessions", elemType: session_1.Session }),
         __metadata("design:type", Array)
     ], SessionList.prototype, "sessions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sum" }),
         __metadata("design:type", Number)
     ], SessionList.prototype, "sum", void 0);
     return SessionList;
-}(SpeakeasyBase));
-export { SessionList };
+}(utils_1.SpeakeasyBase));
+exports.SessionList = SessionList;

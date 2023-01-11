@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1AnnotationSpec } from "./googleclouddatalabelingv1beta1annotationspec";
-import { GoogleCloudDatalabelingV1beta1NormalizedPolyline } from "./googleclouddatalabelingv1beta1normalizedpolyline";
-import { GoogleCloudDatalabelingV1beta1Polyline } from "./googleclouddatalabelingv1beta1polyline";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1annotationspec_1 = require("./googleclouddatalabelingv1beta1annotationspec");
+var googleclouddatalabelingv1beta1normalizedpolyline_1 = require("./googleclouddatalabelingv1beta1normalizedpolyline");
+var googleclouddatalabelingv1beta1polyline_1 = require("./googleclouddatalabelingv1beta1polyline");
 // GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation
 /**
  * A polyline for the image annotation.
@@ -36,17 +39,17 @@ var GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation = /** @class */ (funct
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotationSpec" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1AnnotationSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotationSpec" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1annotationspec_1.GoogleCloudDatalabelingV1beta1AnnotationSpec)
     ], GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation.prototype, "annotationSpec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=normalizedPolyline" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1NormalizedPolyline)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=normalizedPolyline" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1normalizedpolyline_1.GoogleCloudDatalabelingV1beta1NormalizedPolyline)
     ], GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation.prototype, "normalizedPolyline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=polyline" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1Polyline)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=polyline" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1polyline_1.GoogleCloudDatalabelingV1beta1Polyline)
     ], GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation.prototype, "polyline", void 0);
     return GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation = GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation;

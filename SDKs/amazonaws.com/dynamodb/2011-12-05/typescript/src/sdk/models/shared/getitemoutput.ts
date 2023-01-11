@@ -8,5 +8,5 @@ export class GetItemOutput extends SpeakeasyBase {
   consumedCapacityUnits?: number;
 
   @SpeakeasyMetadata({ data: "json, name=Item", elemType: AttributeValue })
-  item?: Map<string, AttributeValue>;
+  item?: Record<string, AttributeValue>;
 }

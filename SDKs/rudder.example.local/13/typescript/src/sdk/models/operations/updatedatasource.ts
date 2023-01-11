@@ -53,5 +53,5 @@ export class UpdateDataSourceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateDataSource200ApplicationJsonObject?: UpdateDataSource200ApplicationJson;
+  updateDataSource200ApplicationJSONObject?: UpdateDataSource200ApplicationJson;
 }

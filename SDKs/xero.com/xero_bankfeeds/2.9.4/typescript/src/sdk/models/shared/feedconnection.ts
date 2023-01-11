@@ -1,7 +1,7 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { CountryCodeEnum } from "./countrycodeenum";
 import { CurrencyCodeEnum } from "./currencycodeenum";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 
 
 export enum FeedConnectionStatusEnum {
@@ -37,7 +37,7 @@ export class FeedConnection extends SpeakeasyBase {
   currency?: CurrencyCodeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Error;
+  error?: ErrorT;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;

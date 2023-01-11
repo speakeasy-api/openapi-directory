@@ -14,7 +14,8 @@ export enum SaveTransactionFlagColorEnum {
     Yellow = "yellow",
     Green = "green",
     Blue = "blue",
-    Purple = "purple"
+    Purple = "purple",
+    Null = "null"
 }
 
 

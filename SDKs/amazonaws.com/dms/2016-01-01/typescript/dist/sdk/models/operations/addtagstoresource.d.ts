@@ -18,7 +18,7 @@ export declare class AddTagsToResourceRequest extends SpeakeasyBase {
     request: shared.AddTagsToResourceMessage;
 }
 export declare class AddTagsToResourceResponse extends SpeakeasyBase {
-    addTagsToResourceResponse?: Map<string, any>;
+    addTagsToResourceResponse?: Record<string, any>;
     contentType: string;
     resourceNotFoundFault?: any;
     statusCode: number;

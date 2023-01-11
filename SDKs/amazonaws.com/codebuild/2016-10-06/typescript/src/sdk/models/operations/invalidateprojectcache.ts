@@ -51,7 +51,7 @@ export class InvalidateProjectCacheResponse extends SpeakeasyBase {
   invalidInputException?: any;
 
   @SpeakeasyMetadata()
-  invalidateProjectCacheOutput?: Map<string, any>;
+  invalidateProjectCacheOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

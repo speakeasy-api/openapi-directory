@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ExecBodyOsdbOutputTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExecBody = exports.ExecBodyOsdbOutputTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ExecBodyOsdbOutputTypeEnum;
 (function (ExecBodyOsdbOutputTypeEnum) {
     ExecBodyOsdbOutputTypeEnum["UrlOnly"] = "url_only";
     ExecBodyOsdbOutputTypeEnum["GenerateRdf"] = "generate_rdf";
     ExecBodyOsdbOutputTypeEnum["DisplayRdf"] = "display_rdf";
-})(ExecBodyOsdbOutputTypeEnum || (ExecBodyOsdbOutputTypeEnum = {}));
+})(ExecBodyOsdbOutputTypeEnum = exports.ExecBodyOsdbOutputTypeEnum || (exports.ExecBodyOsdbOutputTypeEnum = {}));
 var ExecBody = /** @class */ (function (_super) {
     __extends(ExecBody, _super);
     function ExecBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action_specific_property1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action_specific_property1" }),
         __metadata("design:type", String)
     ], ExecBody.prototype, "actionSpecificProperty1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action_specific_property2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action_specific_property2" }),
         __metadata("design:type", String)
     ], ExecBody.prototype, "actionSpecificProperty2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=osdb:body_data_encoding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=osdb:body_data_encoding" }),
         __metadata("design:type", String)
     ], ExecBody.prototype, "osdbBodyDataEncoding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=osdb:body_data_raw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=osdb:body_data_raw" }),
         __metadata("design:type", String)
     ], ExecBody.prototype, "osdbBodyDataRaw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=osdb:body_data_src_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=osdb:body_data_src_url" }),
         __metadata("design:type", String)
     ], ExecBody.prototype, "osdbBodyDataSrcUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=osdb:output_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=osdb:output_type" }),
         __metadata("design:type", String)
     ], ExecBody.prototype, "osdbOutputType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=osdb:response_format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=osdb:response_format" }),
         __metadata("design:type", String)
     ], ExecBody.prototype, "osdbResponseFormat", void 0);
     return ExecBody;
-}(SpeakeasyBase));
-export { ExecBody };
+}(utils_1.SpeakeasyBase));
+exports.ExecBody = ExecBody;

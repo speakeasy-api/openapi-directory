@@ -15,7 +15,7 @@ export declare class GetCarHistoryRequest extends SpeakeasyBase {
 }
 export declare class GetCarHistoryResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     historicalListings?: shared.HistoricalListing[];
     statusCode: number;
 }

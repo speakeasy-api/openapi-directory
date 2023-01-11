@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { DeleteUserEpisodesEpisodeIdRequest, DeleteUserEpisodesEpisodeIdResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetAuthValidateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     usertoken: {
       password: "YOUR_PASSWORD_HERE",
@@ -32,14 +31,8 @@ const sdk = new SDK(WithSecurity(
     },
   }
 ));
-    
-const req: DeleteUserEpisodesEpisodeIdRequest = {
-  pathParams: {
-    episodeId: 3781520367367907548,
-  },
-};
 
-sdk.sdk.deleteUserEpisodesEpisodeId(req).then((res: DeleteUserEpisodesEpisodeIdResponse | AxiosError) => {
+sdk.auth.getAuthValidate().then((res: GetAuthValidateResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -48,49 +41,76 @@ sdk.sdk.deleteUserEpisodesEpisodeId(req).then((res: DeleteUserEpisodesEpisodeIdR
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### auth
 
-* `deleteUserEpisodesEpisodeId` - Unmark an episode
-* `deleteUserFollowsNetworksNetworkId` - Unfollow a network
-* `deleteUserFollowsPeoplePersonId` - Unfollow a person
-* `deleteUserFollowsShowsShowId` - Unfollow a show
-* `deleteUserFollowsWebchannelsWebchannelId` - Unfollow a webchannel
-* `deleteUserTagsTagId` - Delete a specific tag
-* `deleteUserTagsTagIdShowsShowId` - Untag a show
-* `deleteUserVotesEpisodesEpisodeId` - Remove an episode vote
-* `deleteUserVotesShowsShowId` - Remove a show vote
 * `getAuthValidate` - Validate your authentication credentials
-* `getScrobbleShowsShowId` - List watched and acquired episodes for a show
-* `getUserEpisodes` - List the marked episodes
-* `getUserEpisodesEpisodeId` - Check if an episode is marked
-* `getUserFollowsNetworks` - List the followed networks
-* `getUserFollowsNetworksNetworkId` - Check if a network is followed
-* `getUserFollowsPeople` - List the followed people
-* `getUserFollowsPeoplePersonId` - Check if a person is followed
-* `getUserFollowsShows` - List the followed shows
-* `getUserFollowsShowsShowId` - Check if a show is followed
-* `getUserFollowsWebchannels` - List the followed webchannels
-* `getUserFollowsWebchannelsWebchannelId` - Check if a webchannel is followed
-* `getUserTags` - List all tags
-* `getUserTagsTagIdShows` - List all shows under this tag
-* `getUserVotesEpisodes` - List the episodes voted for
-* `getUserVotesEpisodesEpisodeId` - Check if an episode is voted for
-* `getUserVotesShows` - List the shows voted for
-* `getUserVotesShowsShowId` - Check if a show is voted for
-* `patchUserTagsTagId` - Update a specific tag
 * `postAuthPoll` - Poll whether an authentication request was confirmed
 * `postAuthStart` - Start an authentication request
+
+### followed networks
+
+* `deleteUserFollowsNetworksNetworkId` - Unfollow a network
+* `getUserFollowsNetworks` - List the followed networks
+* `getUserFollowsNetworksNetworkId` - Check if a network is followed
+* `putUserFollowsNetworksNetworkId` - Follow a network
+
+### followed people
+
+* `deleteUserFollowsPeoplePersonId` - Unfollow a person
+* `getUserFollowsPeople` - List the followed people
+* `getUserFollowsPeoplePersonId` - Check if a person is followed
+* `putUserFollowsPeoplePersonId` - Follow a person
+
+### followed shows
+
+* `deleteUserFollowsShowsShowId` - Unfollow a show
+* `getUserFollowsShows` - List the followed shows
+* `getUserFollowsShowsShowId` - Check if a show is followed
+* `putUserFollowsShowsShowId` - Follow a show
+
+### followed webchannels
+
+* `deleteUserFollowsWebchannelsWebchannelId` - Unfollow a webchannel
+* `getUserFollowsWebchannels` - List the followed webchannels
+* `getUserFollowsWebchannelsWebchannelId` - Check if a webchannel is followed
+* `putUserFollowsWebchannelsWebchannelId` - Follow a webchannel
+
+### marked episodes
+
+* `deleteUserEpisodesEpisodeId` - Unmark an episode
+* `getUserEpisodes` - List the marked episodes
+* `getUserEpisodesEpisodeId` - Check if an episode is marked
+* `putUserEpisodesEpisodeId` - Mark an episode
+
+### scrobbling
+
+* `getScrobbleShowsShowId` - List watched and acquired episodes for a show
 * `postScrobbleEpisodes` - Mark episodes as acquired or watched based on their IDs
 * `postScrobbleShows` - Mark episodes within a show as acquired or watched based on their attributes
-* `postUserTags` - Create a new tag
 * `putScrobbleEpisodesEpisodeId` - Mark an episode as acquired or watched based on its ID
-* `putUserEpisodesEpisodeId` - Mark an episode
-* `putUserFollowsNetworksNetworkId` - Follow a network
-* `putUserFollowsPeoplePersonId` - Follow a person
-* `putUserFollowsShowsShowId` - Follow a show
-* `putUserFollowsWebchannelsWebchannelId` - Follow a webchannel
+
+### tagged shows
+
+* `deleteUserTagsTagId` - Delete a specific tag
+* `deleteUserTagsTagIdShowsShowId` - Untag a show
+* `getUserTags` - List all tags
+* `getUserTagsTagIdShows` - List all shows under this tag
+* `patchUserTagsTagId` - Update a specific tag
+* `postUserTags` - Create a new tag
 * `putUserTagsTagIdShowsShowId` - Tag a show
+
+### voted episodes
+
+* `deleteUserVotesEpisodesEpisodeId` - Remove an episode vote
+* `getUserVotesEpisodes` - List the episodes voted for
+* `getUserVotesEpisodesEpisodeId` - Check if an episode is voted for
 * `putUserVotesEpisodesEpisodeId` - Vote for an episode
+
+### voted shows
+
+* `deleteUserVotesShowsShowId` - Remove a show vote
+* `getUserVotesShows` - List the shows voted for
+* `getUserVotesShowsShowId` - Check if a show is voted for
 * `putUserVotesShowsShowId` - Vote for a show
 
 <!-- End SDK Available Operations -->

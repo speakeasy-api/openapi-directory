@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ListSessionsOfGroupUsingPostQueryParams extends SpeakeasyBase {
-    groupId?: string;
+    groupID?: string;
 }
 export declare class ListSessionsOfGroupUsingPost200ApplicationJsonDataSessions extends SpeakeasyBase {
-    authorId?: string;
-    groupId?: string;
+    authorID?: string;
+    groupID?: string;
     id?: string;
     validUntil?: number;
 }
@@ -18,17 +18,17 @@ export declare class ListSessionsOfGroupUsingPost200ApplicationJson extends Spea
 }
 export declare class ListSessionsOfGroupUsingPost400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class ListSessionsOfGroupUsingPost401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class ListSessionsOfGroupUsingPost500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class ListSessionsOfGroupUsingPostRequest extends SpeakeasyBase {
@@ -37,8 +37,8 @@ export declare class ListSessionsOfGroupUsingPostRequest extends SpeakeasyBase {
 export declare class ListSessionsOfGroupUsingPostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listSessionsOfGroupUsingPost200ApplicationJsonObject?: ListSessionsOfGroupUsingPost200ApplicationJson;
-    listSessionsOfGroupUsingPost400ApplicationJsonObject?: ListSessionsOfGroupUsingPost400ApplicationJson;
-    listSessionsOfGroupUsingPost401ApplicationJsonObject?: ListSessionsOfGroupUsingPost401ApplicationJson;
-    listSessionsOfGroupUsingPost500ApplicationJsonObject?: ListSessionsOfGroupUsingPost500ApplicationJson;
+    listSessionsOfGroupUsingPOST200ApplicationJSONObject?: ListSessionsOfGroupUsingPost200ApplicationJson;
+    listSessionsOfGroupUsingPOST400ApplicationJSONObject?: ListSessionsOfGroupUsingPost400ApplicationJson;
+    listSessionsOfGroupUsingPOST401ApplicationJSONObject?: ListSessionsOfGroupUsingPost401ApplicationJson;
+    listSessionsOfGroupUsingPOST500ApplicationJSONObject?: ListSessionsOfGroupUsingPost500ApplicationJson;
 }

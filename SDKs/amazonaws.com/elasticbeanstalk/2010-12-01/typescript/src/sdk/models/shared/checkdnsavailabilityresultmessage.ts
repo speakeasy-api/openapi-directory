@@ -11,5 +11,5 @@ export class CheckDnsAvailabilityResultMessage extends SpeakeasyBase {
   available?: boolean;
 
   @SpeakeasyMetadata()
-  fullyQualifiedCname?: string;
+  fullyQualifiedCNAME?: string;
 }

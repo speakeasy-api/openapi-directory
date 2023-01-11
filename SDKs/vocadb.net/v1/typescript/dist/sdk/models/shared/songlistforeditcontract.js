@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,82 +23,84 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserForApiContract } from "./userforapicontract";
-import { SongInListEditContractInput } from "./songinlisteditcontract";
-import { EntryThumbContract } from "./entrythumbcontract";
-export var SongListForEditContractFeaturedCategoryEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SongListForEditContractInput = exports.SongListForEditContractStatusEnum = exports.SongListForEditContractFeaturedCategoryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var userforapicontract_1 = require("./userforapicontract");
+var songinlisteditcontract_1 = require("./songinlisteditcontract");
+var entrythumbcontract_1 = require("./entrythumbcontract");
+var SongListForEditContractFeaturedCategoryEnum;
 (function (SongListForEditContractFeaturedCategoryEnum) {
     SongListForEditContractFeaturedCategoryEnum["Nothing"] = "Nothing";
     SongListForEditContractFeaturedCategoryEnum["Concerts"] = "Concerts";
     SongListForEditContractFeaturedCategoryEnum["VocaloidRanking"] = "VocaloidRanking";
     SongListForEditContractFeaturedCategoryEnum["Pools"] = "Pools";
     SongListForEditContractFeaturedCategoryEnum["Other"] = "Other";
-})(SongListForEditContractFeaturedCategoryEnum || (SongListForEditContractFeaturedCategoryEnum = {}));
-export var SongListForEditContractStatusEnum;
+})(SongListForEditContractFeaturedCategoryEnum = exports.SongListForEditContractFeaturedCategoryEnum || (exports.SongListForEditContractFeaturedCategoryEnum = {}));
+var SongListForEditContractStatusEnum;
 (function (SongListForEditContractStatusEnum) {
     SongListForEditContractStatusEnum["Draft"] = "Draft";
     SongListForEditContractStatusEnum["Finished"] = "Finished";
     SongListForEditContractStatusEnum["Approved"] = "Approved";
     SongListForEditContractStatusEnum["Locked"] = "Locked";
-})(SongListForEditContractStatusEnum || (SongListForEditContractStatusEnum = {}));
+})(SongListForEditContractStatusEnum = exports.SongListForEditContractStatusEnum || (exports.SongListForEditContractStatusEnum = {}));
 var SongListForEditContractInput = /** @class */ (function (_super) {
     __extends(SongListForEditContractInput, _super);
     function SongListForEditContractInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
-        __metadata("design:type", UserForApiContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
+        __metadata("design:type", userforapicontract_1.UserForApiContract)
     ], SongListForEditContractInput.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canEdit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canEdit" }),
         __metadata("design:type", Boolean)
     ], SongListForEditContractInput.prototype, "canEdit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], SongListForEditContractInput.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], SongListForEditContractInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventDate" }),
         __metadata("design:type", Date)
     ], SongListForEditContractInput.prototype, "eventDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=featuredCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=featuredCategory" }),
         __metadata("design:type", String)
     ], SongListForEditContractInput.prototype, "featuredCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], SongListForEditContractInput.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SongListForEditContractInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=songLinks", elemType: SongInListEditContractInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=songLinks", elemType: songinlisteditcontract_1.SongInListEditContractInput }),
         __metadata("design:type", Array)
     ], SongListForEditContractInput.prototype, "songLinks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], SongListForEditContractInput.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumb" }),
-        __metadata("design:type", EntryThumbContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumb" }),
+        __metadata("design:type", entrythumbcontract_1.EntryThumbContract)
     ], SongListForEditContractInput.prototype, "thumb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateNotes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateNotes" }),
         __metadata("design:type", String)
     ], SongListForEditContractInput.prototype, "updateNotes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], SongListForEditContractInput.prototype, "version", void 0);
     return SongListForEditContractInput;
-}(SpeakeasyBase));
-export { SongListForEditContractInput };
+}(utils_1.SpeakeasyBase));
+exports.SongListForEditContractInput = SongListForEditContractInput;

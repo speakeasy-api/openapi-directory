@@ -28,5 +28,5 @@ export declare class UpdateAnApiVersionRequest extends SpeakeasyBase {
 export declare class UpdateAnApiVersionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateAnApiVersion200ApplicationJsonObject?: UpdateAnApiVersion200ApplicationJson;
+    updateAnApiVersion200ApplicationJSONObject?: UpdateAnApiVersion200ApplicationJson;
 }

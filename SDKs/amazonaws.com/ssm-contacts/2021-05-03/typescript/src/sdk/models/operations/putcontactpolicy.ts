@@ -57,7 +57,7 @@ export class PutContactPolicyResponse extends SpeakeasyBase {
   internalServerException?: any;
 
   @SpeakeasyMetadata()
-  putContactPolicyResult?: Map<string, any>;
+  putContactPolicyResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

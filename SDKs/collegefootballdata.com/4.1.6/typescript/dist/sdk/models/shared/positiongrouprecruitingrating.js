@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PositionGroupRecruitingRating = void 0;
+var utils_1 = require("../../../internal/utils");
 var PositionGroupRecruitingRating = /** @class */ (function (_super) {
     __extends(PositionGroupRecruitingRating, _super);
     function PositionGroupRecruitingRating() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=averageRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=averageRating" }),
         __metadata("design:type", Number)
     ], PositionGroupRecruitingRating.prototype, "averageRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=averageStars" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=averageStars" }),
         __metadata("design:type", Number)
     ], PositionGroupRecruitingRating.prototype, "averageStars", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commits" }),
         __metadata("design:type", Number)
     ], PositionGroupRecruitingRating.prototype, "commits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conference" }),
         __metadata("design:type", String)
     ], PositionGroupRecruitingRating.prototype, "conference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=positionGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=positionGroup" }),
         __metadata("design:type", String)
     ], PositionGroupRecruitingRating.prototype, "positionGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team" }),
         __metadata("design:type", String)
     ], PositionGroupRecruitingRating.prototype, "team", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalRating" }),
         __metadata("design:type", Number)
     ], PositionGroupRecruitingRating.prototype, "totalRating", void 0);
     return PositionGroupRecruitingRating;
-}(SpeakeasyBase));
-export { PositionGroupRecruitingRating };
+}(utils_1.SpeakeasyBase));
+exports.PositionGroupRecruitingRating = PositionGroupRecruitingRating;

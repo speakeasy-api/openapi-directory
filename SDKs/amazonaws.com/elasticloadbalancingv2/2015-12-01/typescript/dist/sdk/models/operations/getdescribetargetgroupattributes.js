@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeTargetGroupAttributesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeTargetGroupAttributesResponse = exports.GetDescribeTargetGroupAttributesRequest = exports.GetDescribeTargetGroupAttributesHeaders = exports.GetDescribeTargetGroupAttributesQueryParams = exports.GetDescribeTargetGroupAttributesVersionEnum = exports.GetDescribeTargetGroupAttributesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeTargetGroupAttributesActionEnum;
 (function (GetDescribeTargetGroupAttributesActionEnum) {
     GetDescribeTargetGroupAttributesActionEnum["DescribeTargetGroupAttributes"] = "DescribeTargetGroupAttributes";
-})(GetDescribeTargetGroupAttributesActionEnum || (GetDescribeTargetGroupAttributesActionEnum = {}));
-export var GetDescribeTargetGroupAttributesVersionEnum;
+})(GetDescribeTargetGroupAttributesActionEnum = exports.GetDescribeTargetGroupAttributesActionEnum || (exports.GetDescribeTargetGroupAttributesActionEnum = {}));
+var GetDescribeTargetGroupAttributesVersionEnum;
 (function (GetDescribeTargetGroupAttributesVersionEnum) {
     GetDescribeTargetGroupAttributesVersionEnum["TwoThousandAndFifteen1201"] = "2015-12-01";
-})(GetDescribeTargetGroupAttributesVersionEnum || (GetDescribeTargetGroupAttributesVersionEnum = {}));
+})(GetDescribeTargetGroupAttributesVersionEnum = exports.GetDescribeTargetGroupAttributesVersionEnum || (exports.GetDescribeTargetGroupAttributesVersionEnum = {}));
 var GetDescribeTargetGroupAttributesQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeTargetGroupAttributesQueryParams, _super);
     function GetDescribeTargetGroupAttributesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeTargetGroupAttributesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TargetGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TargetGroupArn" }),
         __metadata("design:type", String)
     ], GetDescribeTargetGroupAttributesQueryParams.prototype, "targetGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeTargetGroupAttributesQueryParams.prototype, "version", void 0);
     return GetDescribeTargetGroupAttributesQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeTargetGroupAttributesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeTargetGroupAttributesQueryParams = GetDescribeTargetGroupAttributesQueryParams;
 var GetDescribeTargetGroupAttributesHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeTargetGroupAttributesHeaders, _super);
     function GetDescribeTargetGroupAttributesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeTargetGroupAttributesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeTargetGroupAttributesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeTargetGroupAttributesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeTargetGroupAttributesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeTargetGroupAttributesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeTargetGroupAttributesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeTargetGroupAttributesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeTargetGroupAttributesHeaders;
-}(SpeakeasyBase));
-export { GetDescribeTargetGroupAttributesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeTargetGroupAttributesHeaders = GetDescribeTargetGroupAttributesHeaders;
 var GetDescribeTargetGroupAttributesRequest = /** @class */ (function (_super) {
     __extends(GetDescribeTargetGroupAttributesRequest, _super);
     function GetDescribeTargetGroupAttributesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeTargetGroupAttributesQueryParams)
     ], GetDescribeTargetGroupAttributesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeTargetGroupAttributesHeaders)
     ], GetDescribeTargetGroupAttributesRequest.prototype, "headers", void 0);
     return GetDescribeTargetGroupAttributesRequest;
-}(SpeakeasyBase));
-export { GetDescribeTargetGroupAttributesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeTargetGroupAttributesRequest = GetDescribeTargetGroupAttributesRequest;
 var GetDescribeTargetGroupAttributesResponse = /** @class */ (function (_super) {
     __extends(GetDescribeTargetGroupAttributesResponse, _super);
     function GetDescribeTargetGroupAttributesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeTargetGroupAttributesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeTargetGroupAttributesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeTargetGroupAttributesResponse.prototype, "statusCode", void 0);
     return GetDescribeTargetGroupAttributesResponse;
-}(SpeakeasyBase));
-export { GetDescribeTargetGroupAttributesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeTargetGroupAttributesResponse = GetDescribeTargetGroupAttributesResponse;

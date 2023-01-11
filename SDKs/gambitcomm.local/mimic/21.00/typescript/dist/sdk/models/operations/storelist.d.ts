@@ -2,5 +2,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class StoreListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    storeList200ApplicationJsonStrings?: string[];
+    storeList200ApplicationJSONStrings?: string[];
 }

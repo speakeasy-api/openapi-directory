@@ -42,5 +42,5 @@ export declare class UpdateOrganizationAdminRequest extends SpeakeasyBase {
 export declare class UpdateOrganizationAdminResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateOrganizationAdmin200ApplicationJsonObject?: Map<string, any>;
+    updateOrganizationAdmin200ApplicationJSONObject?: Record<string, any>;
 }

@@ -22,5 +22,5 @@ export class GetDeviceApplianceDhcpSubnetsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceApplianceDhcpSubnets200ApplicationJsonObject?: Map<string, any>;
+  getDeviceApplianceDhcpSubnets200ApplicationJSONObject?: Record<string, any>;
 }

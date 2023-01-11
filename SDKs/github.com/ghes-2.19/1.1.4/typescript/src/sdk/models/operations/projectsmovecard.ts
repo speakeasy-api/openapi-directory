@@ -89,13 +89,13 @@ export class ProjectsMoveCardResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  projectsMoveCard201ApplicationJsonObject?: Map<string, any>;
+  projectsMoveCard201ApplicationJSONObject?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  projectsMoveCard403ApplicationJsonObject?: ProjectsMoveCard403ApplicationJson;
+  projectsMoveCard403ApplicationJSONObject?: ProjectsMoveCard403ApplicationJson;
 
   @SpeakeasyMetadata()
-  projectsMoveCard503ApplicationJsonObject?: ProjectsMoveCard503ApplicationJson;
+  projectsMoveCard503ApplicationJSONObject?: ProjectsMoveCard503ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

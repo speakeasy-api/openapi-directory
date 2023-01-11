@@ -1,0 +1,47 @@
+import { AxiosInstance } from "axios";
+import { BankAccounts } from "./bankaccounts";
+import { Fees } from "./fees";
+import { FinancialProducts } from "./financialproducts";
+import { InvestmentProductTransactions } from "./investmentproducttransactions";
+import { InvestmentProducts } from "./investmentproducts";
+import { InvestorAccounts } from "./investoraccounts";
+import { Investors } from "./investors";
+import { Payments } from "./payments";
+import { PortfolioTemplates } from "./portfoliotemplates";
+import { PotsHoldingsAndTransactions } from "./potsholdingsandtransactions";
+import { Rates } from "./rates";
+import { Rebalance } from "./rebalance";
+import { SwitchInstruction } from "./switchinstruction";
+import { TestMethods } from "./testmethods";
+import { Utility } from "./utility";
+import { Withdrawal } from "./withdrawal";
+export declare const ServerList: readonly ["https://wos-gb.demo.wealthos.cloud"];
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
+export declare class SDK {
+    bankAccounts: BankAccounts;
+    fees: Fees;
+    financialProducts: FinancialProducts;
+    investmentProductTransactions: InvestmentProductTransactions;
+    investmentProducts: InvestmentProducts;
+    investorAccounts: InvestorAccounts;
+    investors: Investors;
+    payments: Payments;
+    portfolioTemplates: PortfolioTemplates;
+    potsHoldingsAndTransactions: PotsHoldingsAndTransactions;
+    rates: Rates;
+    rebalance: Rebalance;
+    switchInstruction: SwitchInstruction;
+    testMethods: TestMethods;
+    utility: Utility;
+    withdrawal: Withdrawal;
+    _defaultClient: AxiosInstance;
+    _securityClient: AxiosInstance;
+    _serverURL: string;
+    private _language;
+    private _sdkVersion;
+    private _genVersion;
+    constructor(props: SDKProps);
+}

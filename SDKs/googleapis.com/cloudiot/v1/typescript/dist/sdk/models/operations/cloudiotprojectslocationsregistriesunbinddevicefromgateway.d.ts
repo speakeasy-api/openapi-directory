@@ -37,5 +37,5 @@ export declare class CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayR
 export declare class CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    unbindDeviceFromGatewayResponse?: Map<string, any>;
+    unbindDeviceFromGatewayResponse?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProfileRef = void 0;
+var utils_1 = require("../../../internal/utils");
 // ProfileRef
 /**
  * JSON template for a linked view (profile).
@@ -33,33 +36,33 @@ var ProfileRef = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], ProfileRef.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], ProfileRef.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ProfileRef.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=internalWebPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=internalWebPropertyId" }),
         __metadata("design:type", String)
     ], ProfileRef.prototype, "internalWebPropertyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ProfileRef.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ProfileRef.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webPropertyId" }),
         __metadata("design:type", String)
     ], ProfileRef.prototype, "webPropertyId", void 0);
     return ProfileRef;
-}(SpeakeasyBase));
-export { ProfileRef };
+}(utils_1.SpeakeasyBase));
+exports.ProfileRef = ProfileRef;

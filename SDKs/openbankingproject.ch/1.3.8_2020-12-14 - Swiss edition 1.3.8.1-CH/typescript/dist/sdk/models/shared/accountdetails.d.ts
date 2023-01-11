@@ -17,7 +17,7 @@ export declare enum AccountDetailsUsageEnum {
  *
 **/
 export declare class AccountDetails extends SpeakeasyBase {
-    links?: Map<string, HrefType>;
+    links?: Record<string, HrefType>;
     balances?: Balance[];
     bban?: string;
     bic?: string;

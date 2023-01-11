@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCustomGatewayPaymentOwnershipIdResponse = exports.PostCustomGatewayPaymentOwnershipIdRequest = exports.PostCustomGatewayPaymentOwnershipIdQueryParams = exports.PostCustomGatewayPaymentOwnershipIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostCustomGatewayPaymentOwnershipIdPathParams = /** @class */ (function (_super) {
     __extends(PostCustomGatewayPaymentOwnershipIdPathParams, _super);
     function PostCustomGatewayPaymentOwnershipIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ownershipId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ownershipId" }),
         __metadata("design:type", String)
     ], PostCustomGatewayPaymentOwnershipIdPathParams.prototype, "ownershipId", void 0);
     return PostCustomGatewayPaymentOwnershipIdPathParams;
-}(SpeakeasyBase));
-export { PostCustomGatewayPaymentOwnershipIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCustomGatewayPaymentOwnershipIdPathParams = PostCustomGatewayPaymentOwnershipIdPathParams;
 var PostCustomGatewayPaymentOwnershipIdQueryParams = /** @class */ (function (_super) {
     __extends(PostCustomGatewayPaymentOwnershipIdQueryParams, _super);
     function PostCustomGatewayPaymentOwnershipIdQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=amount" }),
         __metadata("design:type", Number)
     ], PostCustomGatewayPaymentOwnershipIdQueryParams.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=customData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=customData" }),
         __metadata("design:type", String)
     ], PostCustomGatewayPaymentOwnershipIdQueryParams.prototype, "customData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=date" }),
         __metadata("design:type", Number)
     ], PostCustomGatewayPaymentOwnershipIdQueryParams.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=developerAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=developerAmount" }),
         __metadata("design:type", Number)
     ], PostCustomGatewayPaymentOwnershipIdQueryParams.prototype, "developerAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=feeAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=feeAmount" }),
         __metadata("design:type", Number)
     ], PostCustomGatewayPaymentOwnershipIdQueryParams.prototype, "feeAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=marketplaceAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=marketplaceAmount" }),
         __metadata("design:type", Number)
     ], PostCustomGatewayPaymentOwnershipIdQueryParams.prototype, "marketplaceAmount", void 0);
     return PostCustomGatewayPaymentOwnershipIdQueryParams;
-}(SpeakeasyBase));
-export { PostCustomGatewayPaymentOwnershipIdQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCustomGatewayPaymentOwnershipIdQueryParams = PostCustomGatewayPaymentOwnershipIdQueryParams;
 var PostCustomGatewayPaymentOwnershipIdRequest = /** @class */ (function (_super) {
     __extends(PostCustomGatewayPaymentOwnershipIdRequest, _super);
     function PostCustomGatewayPaymentOwnershipIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCustomGatewayPaymentOwnershipIdPathParams)
     ], PostCustomGatewayPaymentOwnershipIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCustomGatewayPaymentOwnershipIdQueryParams)
     ], PostCustomGatewayPaymentOwnershipIdRequest.prototype, "queryParams", void 0);
     return PostCustomGatewayPaymentOwnershipIdRequest;
-}(SpeakeasyBase));
-export { PostCustomGatewayPaymentOwnershipIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCustomGatewayPaymentOwnershipIdRequest = PostCustomGatewayPaymentOwnershipIdRequest;
 var PostCustomGatewayPaymentOwnershipIdResponse = /** @class */ (function (_super) {
     __extends(PostCustomGatewayPaymentOwnershipIdResponse, _super);
     function PostCustomGatewayPaymentOwnershipIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCustomGatewayPaymentOwnershipIdResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCustomGatewayPaymentOwnershipIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCustomGatewayPaymentOwnershipIdResponse.prototype, "statusCode", void 0);
     return PostCustomGatewayPaymentOwnershipIdResponse;
-}(SpeakeasyBase));
-export { PostCustomGatewayPaymentOwnershipIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCustomGatewayPaymentOwnershipIdResponse = PostCustomGatewayPaymentOwnershipIdResponse;

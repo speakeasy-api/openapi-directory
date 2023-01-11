@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { RatcrRequest, RatcrResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,22 +30,22 @@ const req: RatcrRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      uid: "minus",
+      uid: "sit",
     },
-    consentArtifact: "minus",
+    consentArtifact: "voluptas",
     format: "pdf",
-    txnId: "labore",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.ratcr(req).then((res: RatcrResponse | AxiosError) => {
+sdk.apIs.ratcr(req).then((res: RatcrResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -55,7 +54,7 @@ sdk.sdk.ratcr(req).then((res: RatcrResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `ratcr` - Ration Card
 

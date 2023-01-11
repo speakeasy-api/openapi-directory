@@ -106,11 +106,11 @@ export declare class SicerRequest extends SpeakeasyBase {
 export declare class SicerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    sicer400ApplicationJsonObject?: Sicer400ApplicationJson;
-    sicer401ApplicationJsonObject?: Sicer401ApplicationJson;
-    sicer404ApplicationJsonObject?: Sicer404ApplicationJson;
-    sicer500ApplicationJsonObject?: Sicer500ApplicationJson;
-    sicer502ApplicationJsonObject?: Sicer502ApplicationJson;
-    sicer503ApplicationJsonObject?: Sicer503ApplicationJson;
-    sicer504ApplicationJsonObject?: Sicer504ApplicationJson;
+    sicer400ApplicationJSONObject?: Sicer400ApplicationJson;
+    sicer401ApplicationJSONObject?: Sicer401ApplicationJson;
+    sicer404ApplicationJSONObject?: Sicer404ApplicationJson;
+    sicer500ApplicationJSONObject?: Sicer500ApplicationJson;
+    sicer502ApplicationJSONObject?: Sicer502ApplicationJson;
+    sicer503ApplicationJSONObject?: Sicer503ApplicationJson;
+    sicer504ApplicationJSONObject?: Sicer504ApplicationJson;
 }

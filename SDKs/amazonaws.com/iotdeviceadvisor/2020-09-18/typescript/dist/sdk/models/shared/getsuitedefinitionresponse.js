@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SuiteDefinitionConfiguration } from "./suitedefinitionconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSuiteDefinitionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var suitedefinitionconfiguration_1 = require("./suitedefinitionconfiguration");
 var GetSuiteDefinitionResponse = /** @class */ (function (_super) {
     __extends(GetSuiteDefinitionResponse, _super);
     function GetSuiteDefinitionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], GetSuiteDefinitionResponse.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastModifiedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastModifiedAt" }),
         __metadata("design:type", Date)
     ], GetSuiteDefinitionResponse.prototype, "lastModifiedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestVersion" }),
         __metadata("design:type", String)
     ], GetSuiteDefinitionResponse.prototype, "latestVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suiteDefinitionArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suiteDefinitionArn" }),
         __metadata("design:type", String)
     ], GetSuiteDefinitionResponse.prototype, "suiteDefinitionArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suiteDefinitionConfiguration" }),
-        __metadata("design:type", SuiteDefinitionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suiteDefinitionConfiguration" }),
+        __metadata("design:type", suitedefinitionconfiguration_1.SuiteDefinitionConfiguration)
     ], GetSuiteDefinitionResponse.prototype, "suiteDefinitionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suiteDefinitionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suiteDefinitionId" }),
         __metadata("design:type", String)
     ], GetSuiteDefinitionResponse.prototype, "suiteDefinitionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suiteDefinitionVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suiteDefinitionVersion" }),
         __metadata("design:type", String)
     ], GetSuiteDefinitionResponse.prototype, "suiteDefinitionVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], GetSuiteDefinitionResponse.prototype, "tags", void 0);
     return GetSuiteDefinitionResponse;
-}(SpeakeasyBase));
-export { GetSuiteDefinitionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSuiteDefinitionResponse = GetSuiteDefinitionResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttributeKeyAndValue } from "./attributekeyandvalue";
-import { ObjectReference } from "./objectreference";
-import { SchemaFacet } from "./schemafacet";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchAddFacetToObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var attributekeyandvalue_1 = require("./attributekeyandvalue");
+var objectreference_1 = require("./objectreference");
+var schemafacet_1 = require("./schemafacet");
 // BatchAddFacetToObject
 /**
  * Represents the output of a batch add facet to object operation.
@@ -36,17 +39,17 @@ var BatchAddFacetToObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ObjectAttributeList", elemType: AttributeKeyAndValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ObjectAttributeList", elemType: attributekeyandvalue_1.AttributeKeyAndValue }),
         __metadata("design:type", Array)
     ], BatchAddFacetToObject.prototype, "objectAttributeList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ObjectReference" }),
-        __metadata("design:type", ObjectReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ObjectReference" }),
+        __metadata("design:type", objectreference_1.ObjectReference)
     ], BatchAddFacetToObject.prototype, "objectReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemaFacet" }),
-        __metadata("design:type", SchemaFacet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemaFacet" }),
+        __metadata("design:type", schemafacet_1.SchemaFacet)
     ], BatchAddFacetToObject.prototype, "schemaFacet", void 0);
     return BatchAddFacetToObject;
-}(SpeakeasyBase));
-export { BatchAddFacetToObject };
+}(utils_1.SpeakeasyBase));
+exports.BatchAddFacetToObject = BatchAddFacetToObject;

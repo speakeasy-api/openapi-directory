@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InsightRuleContributorDatapoint } from "./insightrulecontributordatapoint";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InsightRuleContributor = void 0;
+var utils_1 = require("../../../internal/utils");
+var insightrulecontributordatapoint_1 = require("./insightrulecontributordatapoint");
 // InsightRuleContributor
 /**
  * <p>One of the unique contributors found by a Contributor Insights rule. If the rule contains multiple keys, then a unique contributor is a unique combination of values from all the keys in the rule.</p> <p>If the rule contains a single key, then each unique contributor is each unique value for this key.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetInsightRuleReport.html">GetInsightRuleReport</a>.</p>
@@ -34,17 +37,17 @@ var InsightRuleContributor = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], InsightRuleContributor.prototype, "approximateAggregateValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: InsightRuleContributorDatapoint }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: insightrulecontributordatapoint_1.InsightRuleContributorDatapoint }),
         __metadata("design:type", Array)
     ], InsightRuleContributor.prototype, "datapoints", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], InsightRuleContributor.prototype, "keys", void 0);
     return InsightRuleContributor;
-}(SpeakeasyBase));
-export { InsightRuleContributor };
+}(utils_1.SpeakeasyBase));
+exports.InsightRuleContributor = InsightRuleContributor;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DynamicLinkWarningWarningCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DynamicLinkWarning = exports.DynamicLinkWarningWarningCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DynamicLinkWarningWarningCodeEnum;
 (function (DynamicLinkWarningWarningCodeEnum) {
     DynamicLinkWarningWarningCodeEnum["CodeUnspecified"] = "CODE_UNSPECIFIED";
     DynamicLinkWarningWarningCodeEnum["NotInProjectAndroidPackageName"] = "NOT_IN_PROJECT_ANDROID_PACKAGE_NAME";
@@ -54,7 +57,7 @@ export var DynamicLinkWarningWarningCodeEnum;
     DynamicLinkWarningWarningCodeEnum["LinkLengthTooLong"] = "LINK_LENGTH_TOO_LONG";
     DynamicLinkWarningWarningCodeEnum["LinkWithFragments"] = "LINK_WITH_FRAGMENTS";
     DynamicLinkWarningWarningCodeEnum["NotMatchingIosBundleIdAndStoreId"] = "NOT_MATCHING_IOS_BUNDLE_ID_AND_STORE_ID";
-})(DynamicLinkWarningWarningCodeEnum || (DynamicLinkWarningWarningCodeEnum = {}));
+})(DynamicLinkWarningWarningCodeEnum = exports.DynamicLinkWarningWarningCodeEnum || (exports.DynamicLinkWarningWarningCodeEnum = {}));
 // DynamicLinkWarning
 /**
  * Dynamic Links warning messages.
@@ -65,17 +68,17 @@ var DynamicLinkWarning = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warningCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warningCode" }),
         __metadata("design:type", String)
     ], DynamicLinkWarning.prototype, "warningCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warningDocumentLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warningDocumentLink" }),
         __metadata("design:type", String)
     ], DynamicLinkWarning.prototype, "warningDocumentLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warningMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warningMessage" }),
         __metadata("design:type", String)
     ], DynamicLinkWarning.prototype, "warningMessage", void 0);
     return DynamicLinkWarning;
-}(SpeakeasyBase));
-export { DynamicLinkWarning };
+}(utils_1.SpeakeasyBase));
+exports.DynamicLinkWarning = DynamicLinkWarning;

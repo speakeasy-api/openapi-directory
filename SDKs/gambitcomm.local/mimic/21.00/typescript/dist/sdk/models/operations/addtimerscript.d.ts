@@ -11,5 +11,5 @@ export declare class AddTimerScriptRequest extends SpeakeasyBase {
 export declare class AddTimerScriptResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    addTimerScript200ApplicationJsonString?: string;
+    addTimerScript200ApplicationJSONString?: string;
 }

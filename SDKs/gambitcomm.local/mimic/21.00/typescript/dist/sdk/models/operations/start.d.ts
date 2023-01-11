@@ -8,5 +8,5 @@ export declare class StartRequest extends SpeakeasyBase {
 export declare class StartResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    start200ApplicationJsonString?: string;
+    start200ApplicationJSONString?: string;
 }

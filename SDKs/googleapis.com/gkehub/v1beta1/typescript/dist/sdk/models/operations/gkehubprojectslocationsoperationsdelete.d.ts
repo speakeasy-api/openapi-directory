@@ -28,6 +28,6 @@ export declare class GkehubProjectsLocationsOperationsDeleteRequest extends Spea
 }
 export declare class GkehubProjectsLocationsOperationsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

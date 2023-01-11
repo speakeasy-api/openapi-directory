@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Price } from "./price";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrdersReturnRefundLineItemRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var price_1 = require("./price");
 var OrdersReturnRefundLineItemRequest = /** @class */ (function (_super) {
     __extends(OrdersReturnRefundLineItemRequest, _super);
     function OrdersReturnRefundLineItemRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountPretax" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountPretax" }),
+        __metadata("design:type", price_1.Price)
     ], OrdersReturnRefundLineItemRequest.prototype, "amountPretax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountTax" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountTax" }),
+        __metadata("design:type", price_1.Price)
     ], OrdersReturnRefundLineItemRequest.prototype, "amountTax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineItemId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineItemId" }),
         __metadata("design:type", String)
     ], OrdersReturnRefundLineItemRequest.prototype, "lineItemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operationId" }),
         __metadata("design:type", String)
     ], OrdersReturnRefundLineItemRequest.prototype, "operationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productId" }),
         __metadata("design:type", String)
     ], OrdersReturnRefundLineItemRequest.prototype, "productId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantity" }),
         __metadata("design:type", Number)
     ], OrdersReturnRefundLineItemRequest.prototype, "quantity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], OrdersReturnRefundLineItemRequest.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasonText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasonText" }),
         __metadata("design:type", String)
     ], OrdersReturnRefundLineItemRequest.prototype, "reasonText", void 0);
     return OrdersReturnRefundLineItemRequest;
-}(SpeakeasyBase));
-export { OrdersReturnRefundLineItemRequest };
+}(utils_1.SpeakeasyBase));
+exports.OrdersReturnRefundLineItemRequest = OrdersReturnRefundLineItemRequest;

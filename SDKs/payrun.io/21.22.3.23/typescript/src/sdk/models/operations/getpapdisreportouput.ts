@@ -53,7 +53,7 @@ export class GetPapdisReportOuputResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getPapdisReportOuput200ApplicationJsonBinaryString?: Uint8Array;
+  getPapdisReportOuput200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

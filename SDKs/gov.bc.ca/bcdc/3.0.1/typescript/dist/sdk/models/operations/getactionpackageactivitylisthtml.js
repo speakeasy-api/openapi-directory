@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetActionPackageActivityListHtmlResponse = exports.GetActionPackageActivityListHtmlRequest = exports.GetActionPackageActivityListHtmlQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetActionPackageActivityListHtmlQueryParams = /** @class */ (function (_super) {
     __extends(GetActionPackageActivityListHtmlQueryParams, _super);
     function GetActionPackageActivityListHtmlQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id" }),
         __metadata("design:type", String)
     ], GetActionPackageActivityListHtmlQueryParams.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetActionPackageActivityListHtmlQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], GetActionPackageActivityListHtmlQueryParams.prototype, "offset", void 0);
     return GetActionPackageActivityListHtmlQueryParams;
-}(SpeakeasyBase));
-export { GetActionPackageActivityListHtmlQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetActionPackageActivityListHtmlQueryParams = GetActionPackageActivityListHtmlQueryParams;
 var GetActionPackageActivityListHtmlRequest = /** @class */ (function (_super) {
     __extends(GetActionPackageActivityListHtmlRequest, _super);
     function GetActionPackageActivityListHtmlRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetActionPackageActivityListHtmlQueryParams)
     ], GetActionPackageActivityListHtmlRequest.prototype, "queryParams", void 0);
     return GetActionPackageActivityListHtmlRequest;
-}(SpeakeasyBase));
-export { GetActionPackageActivityListHtmlRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetActionPackageActivityListHtmlRequest = GetActionPackageActivityListHtmlRequest;
 var GetActionPackageActivityListHtmlResponse = /** @class */ (function (_super) {
     __extends(GetActionPackageActivityListHtmlResponse, _super);
     function GetActionPackageActivityListHtmlResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetActionPackageActivityListHtmlResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetActionPackageActivityListHtmlResponse.prototype, "statusCode", void 0);
     return GetActionPackageActivityListHtmlResponse;
-}(SpeakeasyBase));
-export { GetActionPackageActivityListHtmlResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetActionPackageActivityListHtmlResponse = GetActionPackageActivityListHtmlResponse;

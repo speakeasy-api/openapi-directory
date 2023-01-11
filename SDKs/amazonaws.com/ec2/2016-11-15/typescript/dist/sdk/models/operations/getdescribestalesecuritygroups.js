@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeStaleSecurityGroupsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeStaleSecurityGroupsResponse = exports.GetDescribeStaleSecurityGroupsRequest = exports.GetDescribeStaleSecurityGroupsHeaders = exports.GetDescribeStaleSecurityGroupsQueryParams = exports.GetDescribeStaleSecurityGroupsVersionEnum = exports.GetDescribeStaleSecurityGroupsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeStaleSecurityGroupsActionEnum;
 (function (GetDescribeStaleSecurityGroupsActionEnum) {
     GetDescribeStaleSecurityGroupsActionEnum["DescribeStaleSecurityGroups"] = "DescribeStaleSecurityGroups";
-})(GetDescribeStaleSecurityGroupsActionEnum || (GetDescribeStaleSecurityGroupsActionEnum = {}));
-export var GetDescribeStaleSecurityGroupsVersionEnum;
+})(GetDescribeStaleSecurityGroupsActionEnum = exports.GetDescribeStaleSecurityGroupsActionEnum || (exports.GetDescribeStaleSecurityGroupsActionEnum = {}));
+var GetDescribeStaleSecurityGroupsVersionEnum;
 (function (GetDescribeStaleSecurityGroupsVersionEnum) {
     GetDescribeStaleSecurityGroupsVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDescribeStaleSecurityGroupsVersionEnum || (GetDescribeStaleSecurityGroupsVersionEnum = {}));
+})(GetDescribeStaleSecurityGroupsVersionEnum = exports.GetDescribeStaleSecurityGroupsVersionEnum || (exports.GetDescribeStaleSecurityGroupsVersionEnum = {}));
 var GetDescribeStaleSecurityGroupsQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeStaleSecurityGroupsQueryParams, _super);
     function GetDescribeStaleSecurityGroupsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeStaleSecurityGroupsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDescribeStaleSecurityGroupsQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
         __metadata("design:type", Number)
     ], GetDescribeStaleSecurityGroupsQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], GetDescribeStaleSecurityGroupsQueryParams.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeStaleSecurityGroupsQueryParams.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=VpcId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=VpcId" }),
         __metadata("design:type", String)
     ], GetDescribeStaleSecurityGroupsQueryParams.prototype, "vpcId", void 0);
     return GetDescribeStaleSecurityGroupsQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeStaleSecurityGroupsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeStaleSecurityGroupsQueryParams = GetDescribeStaleSecurityGroupsQueryParams;
 var GetDescribeStaleSecurityGroupsHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeStaleSecurityGroupsHeaders, _super);
     function GetDescribeStaleSecurityGroupsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeStaleSecurityGroupsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeStaleSecurityGroupsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeStaleSecurityGroupsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeStaleSecurityGroupsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeStaleSecurityGroupsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeStaleSecurityGroupsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeStaleSecurityGroupsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeStaleSecurityGroupsHeaders;
-}(SpeakeasyBase));
-export { GetDescribeStaleSecurityGroupsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeStaleSecurityGroupsHeaders = GetDescribeStaleSecurityGroupsHeaders;
 var GetDescribeStaleSecurityGroupsRequest = /** @class */ (function (_super) {
     __extends(GetDescribeStaleSecurityGroupsRequest, _super);
     function GetDescribeStaleSecurityGroupsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeStaleSecurityGroupsQueryParams)
     ], GetDescribeStaleSecurityGroupsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeStaleSecurityGroupsHeaders)
     ], GetDescribeStaleSecurityGroupsRequest.prototype, "headers", void 0);
     return GetDescribeStaleSecurityGroupsRequest;
-}(SpeakeasyBase));
-export { GetDescribeStaleSecurityGroupsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeStaleSecurityGroupsRequest = GetDescribeStaleSecurityGroupsRequest;
 var GetDescribeStaleSecurityGroupsResponse = /** @class */ (function (_super) {
     __extends(GetDescribeStaleSecurityGroupsResponse, _super);
     function GetDescribeStaleSecurityGroupsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeStaleSecurityGroupsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeStaleSecurityGroupsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeStaleSecurityGroupsResponse.prototype, "statusCode", void 0);
     return GetDescribeStaleSecurityGroupsResponse;
-}(SpeakeasyBase));
-export { GetDescribeStaleSecurityGroupsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeStaleSecurityGroupsResponse = GetDescribeStaleSecurityGroupsResponse;

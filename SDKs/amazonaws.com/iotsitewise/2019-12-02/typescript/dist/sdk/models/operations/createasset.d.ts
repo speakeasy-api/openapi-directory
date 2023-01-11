@@ -13,7 +13,7 @@ export declare class CreateAssetRequestBody extends SpeakeasyBase {
     assetModelId: string;
     assetName: string;
     clientToken?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateAssetRequest extends SpeakeasyBase {
     headers: CreateAssetHeaders;

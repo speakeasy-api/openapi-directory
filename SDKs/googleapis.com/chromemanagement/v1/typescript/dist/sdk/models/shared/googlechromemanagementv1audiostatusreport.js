@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1AudioStatusReport = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleChromeManagementV1AudioStatusReport
 /**
  * Status data for storage. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceAudioStatus](https://chromeenterprise.google/policies/#ReportDeviceAudioStatus) * Data Collection Frequency: 10 minutes * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
@@ -33,33 +36,33 @@ var GoogleChromeManagementV1AudioStatusReport = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputDevice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputDevice" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1AudioStatusReport.prototype, "inputDevice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputGain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputGain" }),
         __metadata("design:type", Number)
     ], GoogleChromeManagementV1AudioStatusReport.prototype, "inputGain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputMute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputMute" }),
         __metadata("design:type", Boolean)
     ], GoogleChromeManagementV1AudioStatusReport.prototype, "inputMute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputDevice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputDevice" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1AudioStatusReport.prototype, "outputDevice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputMute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputMute" }),
         __metadata("design:type", Boolean)
     ], GoogleChromeManagementV1AudioStatusReport.prototype, "outputMute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputVolume" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputVolume" }),
         __metadata("design:type", Number)
     ], GoogleChromeManagementV1AudioStatusReport.prototype, "outputVolume", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportTime" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1AudioStatusReport.prototype, "reportTime", void 0);
     return GoogleChromeManagementV1AudioStatusReport;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1AudioStatusReport };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1AudioStatusReport = GoogleChromeManagementV1AudioStatusReport;

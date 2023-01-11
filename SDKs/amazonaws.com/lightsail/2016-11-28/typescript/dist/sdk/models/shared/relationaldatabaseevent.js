@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelationalDatabaseEvent = void 0;
+var utils_1 = require("../../../internal/utils");
 // RelationalDatabaseEvent
 /**
  * Describes an event for a database.
@@ -33,21 +36,21 @@ var RelationalDatabaseEvent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], RelationalDatabaseEvent.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventCategories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventCategories" }),
         __metadata("design:type", Array)
     ], RelationalDatabaseEvent.prototype, "eventCategories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], RelationalDatabaseEvent.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
         __metadata("design:type", String)
     ], RelationalDatabaseEvent.prototype, "resource", void 0);
     return RelationalDatabaseEvent;
-}(SpeakeasyBase));
-export { RelationalDatabaseEvent };
+}(utils_1.SpeakeasyBase));
+exports.RelationalDatabaseEvent = RelationalDatabaseEvent;

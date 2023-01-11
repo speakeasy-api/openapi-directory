@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,142 +14,167 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SmartdevicemanagementEnterprisesStructuresRoomsListResponse = exports.SmartdevicemanagementEnterprisesStructuresRoomsListRequest = exports.SmartdevicemanagementEnterprisesStructuresRoomsListSecurity = exports.SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams = exports.SmartdevicemanagementEnterprisesStructuresRoomsListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var SmartdevicemanagementEnterprisesStructuresRoomsListPathParams = /** @class */ (function (_super) {
     __extends(SmartdevicemanagementEnterprisesStructuresRoomsListPathParams, _super);
     function SmartdevicemanagementEnterprisesStructuresRoomsListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=parent" }),
         __metadata("design:type", String)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListPathParams.prototype, "parent", void 0);
     return SmartdevicemanagementEnterprisesStructuresRoomsListPathParams;
-}(SpeakeasyBase));
-export { SmartdevicemanagementEnterprisesStructuresRoomsListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SmartdevicemanagementEnterprisesStructuresRoomsListPathParams = SmartdevicemanagementEnterprisesStructuresRoomsListPathParams;
 var SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams = /** @class */ (function (_super) {
     __extends(SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams, _super);
     function SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageSize" }),
         __metadata("design:type", Number)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams.prototype, "uploadProtocol", void 0);
     return SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams;
-}(SpeakeasyBase));
-export { SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams = SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams;
 var SmartdevicemanagementEnterprisesStructuresRoomsListSecurity = /** @class */ (function (_super) {
     __extends(SmartdevicemanagementEnterprisesStructuresRoomsListSecurity, _super);
     function SmartdevicemanagementEnterprisesStructuresRoomsListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListSecurity.prototype, "oauth2c", void 0);
     return SmartdevicemanagementEnterprisesStructuresRoomsListSecurity;
-}(SpeakeasyBase));
-export { SmartdevicemanagementEnterprisesStructuresRoomsListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.SmartdevicemanagementEnterprisesStructuresRoomsListSecurity = SmartdevicemanagementEnterprisesStructuresRoomsListSecurity;
 var SmartdevicemanagementEnterprisesStructuresRoomsListRequest = /** @class */ (function (_super) {
     __extends(SmartdevicemanagementEnterprisesStructuresRoomsListRequest, _super);
     function SmartdevicemanagementEnterprisesStructuresRoomsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SmartdevicemanagementEnterprisesStructuresRoomsListPathParams)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SmartdevicemanagementEnterprisesStructuresRoomsListSecurity)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListRequest.prototype, "security", void 0);
     return SmartdevicemanagementEnterprisesStructuresRoomsListRequest;
-}(SpeakeasyBase));
-export { SmartdevicemanagementEnterprisesStructuresRoomsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.SmartdevicemanagementEnterprisesStructuresRoomsListRequest = SmartdevicemanagementEnterprisesStructuresRoomsListRequest;
 var SmartdevicemanagementEnterprisesStructuresRoomsListResponse = /** @class */ (function (_super) {
     __extends(SmartdevicemanagementEnterprisesStructuresRoomsListResponse, _super);
     function SmartdevicemanagementEnterprisesStructuresRoomsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.GoogleHomeEnterpriseSdmV1ListRoomsResponse)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListResponse.prototype, "googleHomeEnterpriseSdmV1ListRoomsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SmartdevicemanagementEnterprisesStructuresRoomsListResponse.prototype, "statusCode", void 0);
     return SmartdevicemanagementEnterprisesStructuresRoomsListResponse;
-}(SpeakeasyBase));
-export { SmartdevicemanagementEnterprisesStructuresRoomsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.SmartdevicemanagementEnterprisesStructuresRoomsListResponse = SmartdevicemanagementEnterprisesStructuresRoomsListResponse;

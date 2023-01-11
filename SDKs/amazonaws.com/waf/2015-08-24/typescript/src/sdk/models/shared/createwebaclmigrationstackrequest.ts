@@ -10,5 +10,5 @@ export class CreateWebAclMigrationStackRequest extends SpeakeasyBase {
   s3BucketName: string;
 
   @SpeakeasyMetadata({ data: "json, name=WebACLId" })
-  webAclId: string;
+  webACLId: string;
 }

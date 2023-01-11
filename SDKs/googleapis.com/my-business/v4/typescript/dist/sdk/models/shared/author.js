@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AuthorTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Author = exports.AuthorTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AuthorTypeEnum;
 (function (AuthorTypeEnum) {
     AuthorTypeEnum["AuthorTypeUnspecified"] = "AUTHOR_TYPE_UNSPECIFIED";
     AuthorTypeEnum["RegularUser"] = "REGULAR_USER";
     AuthorTypeEnum["LocalGuide"] = "LOCAL_GUIDE";
     AuthorTypeEnum["Merchant"] = "MERCHANT";
-})(AuthorTypeEnum || (AuthorTypeEnum = {}));
+})(AuthorTypeEnum = exports.AuthorTypeEnum || (exports.AuthorTypeEnum = {}));
 // Author
 /**
  * Represents the author of a question or answer
@@ -40,17 +43,17 @@ var Author = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Author.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profilePhotoUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profilePhotoUrl" }),
         __metadata("design:type", String)
     ], Author.prototype, "profilePhotoUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Author.prototype, "type", void 0);
     return Author;
-}(SpeakeasyBase));
-export { Author };
+}(utils_1.SpeakeasyBase));
+exports.Author = Author;

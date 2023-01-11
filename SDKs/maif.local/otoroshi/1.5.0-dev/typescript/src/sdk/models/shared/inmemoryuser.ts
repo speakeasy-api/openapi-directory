@@ -11,7 +11,7 @@ export class InMemoryUser extends SpeakeasyBase {
   email: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata: Map<string, string>;
+  metadata: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;

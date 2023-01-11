@@ -16,7 +16,7 @@ export declare class GetNetworkBluetoothClientsRequest extends SpeakeasyBase {
 }
 export declare class GetNetworkBluetoothClientsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getNetworkBluetoothClients200ApplicationJsonObject?: Map<string, any>;
+    getNetworkBluetoothClients200ApplicationJSONObject?: Record<string, any>;
 }

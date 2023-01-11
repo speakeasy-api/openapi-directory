@@ -16,6 +16,6 @@ export declare class GetConsumerV1ServicesIdAllocationsRequest extends Speakeasy
 }
 export declare class GetConsumerV1ServicesIdAllocationsResponse extends SpeakeasyBase {
     contentType: string;
-    serviceAllocationListViewModel?: Map<string, any>;
+    serviceAllocationListViewModel?: Record<string, any>;
     statusCode: number;
 }

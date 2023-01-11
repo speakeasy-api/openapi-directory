@@ -7,10 +7,10 @@ export declare class GetMultiNodeInventoryForSkuAndAllShipnodesQueryParams exten
 }
 export declare class GetMultiNodeInventoryForSkuAndAllShipnodesHeaders extends SpeakeasyBase {
     authorization: string;
-    wmConsumerChannelType: string;
-    wmQosCorrelationId: string;
-    wmSecAccessToken: string;
-    wmSvcName: string;
+    wmCONSUMERCHANNELTYPE: string;
+    wmQOSCORRELATIONID: string;
+    wmSECACCESSTOKEN: string;
+    wmSVCNAME: string;
 }
 export declare enum GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJsonNodesAvailToSellQtyUnitEnum {
     Each = "EACH"
@@ -44,7 +44,7 @@ export declare class GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJso
     causes?: GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJsonNodesErrorsCauses[];
     code: string;
     description?: string;
-    errorIdentifiers?: Map<string, Map<string, any>>;
+    errorIdentifiers?: Record<string, Record<string, any>>;
     field?: string;
     info?: string;
     severity?: GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJsonNodesErrorsSeverityEnum;
@@ -74,5 +74,5 @@ export declare class GetMultiNodeInventoryForSkuAndAllShipnodesRequest extends S
 export declare class GetMultiNodeInventoryForSkuAndAllShipnodesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJsonObject?: GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJson;
+    getMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONObject?: GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJson;
 }

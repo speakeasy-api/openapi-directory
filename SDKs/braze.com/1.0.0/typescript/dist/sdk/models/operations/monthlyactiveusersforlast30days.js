@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MonthlyActiveUsersForLast30DaysResponse = exports.MonthlyActiveUsersForLast30DaysRequest = exports.MonthlyActiveUsersForLast30DaysQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var MonthlyActiveUsersForLast30DaysQueryParams = /** @class */ (function (_super) {
     __extends(MonthlyActiveUsersForLast30DaysQueryParams, _super);
     function MonthlyActiveUsersForLast30DaysQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=app_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=app_id" }),
         __metadata("design:type", String)
     ], MonthlyActiveUsersForLast30DaysQueryParams.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ending_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ending_at" }),
         __metadata("design:type", String)
     ], MonthlyActiveUsersForLast30DaysQueryParams.prototype, "endingAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=length" }),
         __metadata("design:type", String)
     ], MonthlyActiveUsersForLast30DaysQueryParams.prototype, "length", void 0);
     return MonthlyActiveUsersForLast30DaysQueryParams;
-}(SpeakeasyBase));
-export { MonthlyActiveUsersForLast30DaysQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.MonthlyActiveUsersForLast30DaysQueryParams = MonthlyActiveUsersForLast30DaysQueryParams;
 var MonthlyActiveUsersForLast30DaysRequest = /** @class */ (function (_super) {
     __extends(MonthlyActiveUsersForLast30DaysRequest, _super);
     function MonthlyActiveUsersForLast30DaysRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MonthlyActiveUsersForLast30DaysQueryParams)
     ], MonthlyActiveUsersForLast30DaysRequest.prototype, "queryParams", void 0);
     return MonthlyActiveUsersForLast30DaysRequest;
-}(SpeakeasyBase));
-export { MonthlyActiveUsersForLast30DaysRequest };
+}(utils_1.SpeakeasyBase));
+exports.MonthlyActiveUsersForLast30DaysRequest = MonthlyActiveUsersForLast30DaysRequest;
 var MonthlyActiveUsersForLast30DaysResponse = /** @class */ (function (_super) {
     __extends(MonthlyActiveUsersForLast30DaysResponse, _super);
     function MonthlyActiveUsersForLast30DaysResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MonthlyActiveUsersForLast30DaysResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MonthlyActiveUsersForLast30DaysResponse.prototype, "statusCode", void 0);
     return MonthlyActiveUsersForLast30DaysResponse;
-}(SpeakeasyBase));
-export { MonthlyActiveUsersForLast30DaysResponse };
+}(utils_1.SpeakeasyBase));
+exports.MonthlyActiveUsersForLast30DaysResponse = MonthlyActiveUsersForLast30DaysResponse;

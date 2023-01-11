@@ -18,7 +18,7 @@ export class GetDeleteDbInstanceQueryParams extends SpeakeasyBase {
   dbInstanceIdentifier: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=FinalDBSnapshotIdentifier" })
-  finalDbSnapshotIdentifier?: string;
+  finalDBSnapshotIdentifier?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SkipFinalSnapshot" })
   skipFinalSnapshot?: boolean;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Date } from "./date";
-import { FieldMetadataInput } from "./fieldmetadata";
-import { FieldMetadata } from "./fieldmetadata";
-// BirthdayInput
-/**
- * A person's birthday. At least one of the `date` and `text` fields are specified. The `date` and `text` fields typically represent the same date, but are not guaranteed to. Clients should always set the `date` field when mutating birthdays.
-**/
-var BirthdayInput = /** @class */ (function (_super) {
-    __extends(BirthdayInput, _super);
-    function BirthdayInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
-        __metadata("design:type", Date)
-    ], BirthdayInput.prototype, "date", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadataInput)
-    ], BirthdayInput.prototype, "metadata", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
-        __metadata("design:type", String)
-    ], BirthdayInput.prototype, "text", void 0);
-    return BirthdayInput;
-}(SpeakeasyBase));
-export { BirthdayInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BirthdayInput = exports.Birthday = void 0;
+var utils_1 = require("../../../internal/utils");
+var date_1 = require("./date");
+var fieldmetadata_1 = require("./fieldmetadata");
+var fieldmetadata_2 = require("./fieldmetadata");
 // Birthday
 /**
  * A person's birthday. At least one of the `date` and `text` fields are specified. The `date` and `text` fields typically represent the same date, but are not guaranteed to. Clients should always set the `date` field when mutating birthdays.
@@ -60,17 +39,41 @@ var Birthday = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
-        __metadata("design:type", Date)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
+        __metadata("design:type", date_1.Date)
     ], Birthday.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_1.FieldMetadata)
     ], Birthday.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], Birthday.prototype, "text", void 0);
     return Birthday;
-}(SpeakeasyBase));
-export { Birthday };
+}(utils_1.SpeakeasyBase));
+exports.Birthday = Birthday;
+// BirthdayInput
+/**
+ * A person's birthday. At least one of the `date` and `text` fields are specified. The `date` and `text` fields typically represent the same date, but are not guaranteed to. Clients should always set the `date` field when mutating birthdays.
+**/
+var BirthdayInput = /** @class */ (function (_super) {
+    __extends(BirthdayInput, _super);
+    function BirthdayInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
+        __metadata("design:type", date_1.Date)
+    ], BirthdayInput.prototype, "date", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_2.FieldMetadataInput)
+    ], BirthdayInput.prototype, "metadata", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
+        __metadata("design:type", String)
+    ], BirthdayInput.prototype, "text", void 0);
+    return BirthdayInput;
+}(utils_1.SpeakeasyBase));
+exports.BirthdayInput = BirthdayInput;

@@ -8,5 +8,5 @@ export declare class ProtocolSnmpv3UserClearRequest extends SpeakeasyBase {
 export declare class ProtocolSnmpv3UserClearResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSnmpv3UserClear200ApplicationJsonString?: string;
+    protocolSnmpv3UserClear200ApplicationJSONString?: string;
 }

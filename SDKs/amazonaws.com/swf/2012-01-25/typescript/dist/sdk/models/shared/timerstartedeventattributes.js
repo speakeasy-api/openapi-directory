@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TimerStartedEventAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
 // TimerStartedEventAttributes
 /**
  * Provides the details of the <code>TimerStarted</code> event.
@@ -33,21 +36,21 @@ var TimerStartedEventAttributes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=control" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=control" }),
         __metadata("design:type", String)
     ], TimerStartedEventAttributes.prototype, "control", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=decisionTaskCompletedEventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=decisionTaskCompletedEventId" }),
         __metadata("design:type", Number)
     ], TimerStartedEventAttributes.prototype, "decisionTaskCompletedEventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startToFireTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startToFireTimeout" }),
         __metadata("design:type", String)
     ], TimerStartedEventAttributes.prototype, "startToFireTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timerId" }),
         __metadata("design:type", String)
     ], TimerStartedEventAttributes.prototype, "timerId", void 0);
     return TimerStartedEventAttributes;
-}(SpeakeasyBase));
-export { TimerStartedEventAttributes };
+}(utils_1.SpeakeasyBase));
+exports.TimerStartedEventAttributes = TimerStartedEventAttributes;

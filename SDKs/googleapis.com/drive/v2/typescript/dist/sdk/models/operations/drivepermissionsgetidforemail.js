@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,270 +14,295 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DrivePermissionsGetIdForEmailResponse = exports.DrivePermissionsGetIdForEmailRequest = exports.DrivePermissionsGetIdForEmailSecurity = exports.DrivePermissionsGetIdForEmailSecurityOption8 = exports.DrivePermissionsGetIdForEmailSecurityOption7 = exports.DrivePermissionsGetIdForEmailSecurityOption6 = exports.DrivePermissionsGetIdForEmailSecurityOption5 = exports.DrivePermissionsGetIdForEmailSecurityOption4 = exports.DrivePermissionsGetIdForEmailSecurityOption3 = exports.DrivePermissionsGetIdForEmailSecurityOption2 = exports.DrivePermissionsGetIdForEmailSecurityOption1 = exports.DrivePermissionsGetIdForEmailQueryParams = exports.DrivePermissionsGetIdForEmailPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DrivePermissionsGetIdForEmailPathParams = /** @class */ (function (_super) {
     __extends(DrivePermissionsGetIdForEmailPathParams, _super);
     function DrivePermissionsGetIdForEmailPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=email" }),
         __metadata("design:type", String)
     ], DrivePermissionsGetIdForEmailPathParams.prototype, "email", void 0);
     return DrivePermissionsGetIdForEmailPathParams;
-}(SpeakeasyBase));
-export { DrivePermissionsGetIdForEmailPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsGetIdForEmailPathParams = DrivePermissionsGetIdForEmailPathParams;
 var DrivePermissionsGetIdForEmailQueryParams = /** @class */ (function (_super) {
     __extends(DrivePermissionsGetIdForEmailQueryParams, _super);
     function DrivePermissionsGetIdForEmailQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], DrivePermissionsGetIdForEmailQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], DrivePermissionsGetIdForEmailQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], DrivePermissionsGetIdForEmailQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], DrivePermissionsGetIdForEmailQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], DrivePermissionsGetIdForEmailQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], DrivePermissionsGetIdForEmailQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], DrivePermissionsGetIdForEmailQueryParams.prototype, "userIp", void 0);
     return DrivePermissionsGetIdForEmailQueryParams;
-}(SpeakeasyBase));
-export { DrivePermissionsGetIdForEmailQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsGetIdForEmailQueryParams = DrivePermissionsGetIdForEmailQueryParams;
 var DrivePermissionsGetIdForEmailSecurityOption1 = /** @class */ (function (_super) {
     __extends(DrivePermissionsGetIdForEmailSecurityOption1, _super);
     function DrivePermissionsGetIdForEmailSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DrivePermissionsGetIdForEmailSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DrivePermissionsGetIdForEmailSecurityOption1.prototype, "oauth2c", void 0);
     return DrivePermissionsGetIdForEmailSecurityOption1;
-}(SpeakeasyBase));
-export { DrivePermissionsGetIdForEmailSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsGetIdForEmailSecurityOption1 = DrivePermissionsGetIdForEmailSecurityOption1;
 var DrivePermissionsGetIdForEmailSecurityOption2 = /** @class */ (function (_super) {
     __extends(DrivePermissionsGetIdForEmailSecurityOption2, _super);
     function DrivePermissionsGetIdForEmailSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DrivePermissionsGetIdForEmailSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DrivePermissionsGetIdForEmailSecurityOption2.prototype, "oauth2c", void 0);
     return DrivePermissionsGetIdForEmailSecurityOption2;
-}(SpeakeasyBase));
-export { DrivePermissionsGetIdForEmailSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsGetIdForEmailSecurityOption2 = DrivePermissionsGetIdForEmailSecurityOption2;
 var DrivePermissionsGetIdForEmailSecurityOption3 = /** @class */ (function (_super) {
     __extends(DrivePermissionsGetIdForEmailSecurityOption3, _super);
     function DrivePermissionsGetIdForEmailSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DrivePermissionsGetIdForEmailSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DrivePermissionsGetIdForEmailSecurityOption3.prototype, "oauth2c", void 0);
     return DrivePermissionsGetIdForEmailSecurityOption3;
-}(SpeakeasyBase));
-export { DrivePermissionsGetIdForEmailSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsGetIdForEmailSecurityOption3 = DrivePermissionsGetIdForEmailSecurityOption3;
 var DrivePermissionsGetIdForEmailSecurityOption4 = /** @class */ (function (_super) {
     __extends(DrivePermissionsGetIdForEmailSecurityOption4, _super);
     function DrivePermissionsGetIdForEmailSecurityOption4() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DrivePermissionsGetIdForEmailSecurityOption4.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DrivePermissionsGetIdForEmailSecurityOption4.prototype, "oauth2c", void 0);
     return DrivePermissionsGetIdForEmailSecurityOption4;
-}(SpeakeasyBase));
-export { DrivePermissionsGetIdForEmailSecurityOption4 };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsGetIdForEmailSecurityOption4 = DrivePermissionsGetIdForEmailSecurityOption4;
 var DrivePermissionsGetIdForEmailSecurityOption5 = /** @class */ (function (_super) {
     __extends(DrivePermissionsGetIdForEmailSecurityOption5, _super);
     function DrivePermissionsGetIdForEmailSecurityOption5() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DrivePermissionsGetIdForEmailSecurityOption5.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DrivePermissionsGetIdForEmailSecurityOption5.prototype, "oauth2c", void 0);
     return DrivePermissionsGetIdForEmailSecurityOption5;
-}(SpeakeasyBase));
-export { DrivePermissionsGetIdForEmailSecurityOption5 };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsGetIdForEmailSecurityOption5 = DrivePermissionsGetIdForEmailSecurityOption5;
 var DrivePermissionsGetIdForEmailSecurityOption6 = /** @class */ (function (_super) {
     __extends(DrivePermissionsGetIdForEmailSecurityOption6, _super);
     function DrivePermissionsGetIdForEmailSecurityOption6() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DrivePermissionsGetIdForEmailSecurityOption6.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DrivePermissionsGetIdForEmailSecurityOption6.prototype, "oauth2c", void 0);
     return DrivePermissionsGetIdForEmailSecurityOption6;
-}(SpeakeasyBase));
-export { DrivePermissionsGetIdForEmailSecurityOption6 };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsGetIdForEmailSecurityOption6 = DrivePermissionsGetIdForEmailSecurityOption6;
 var DrivePermissionsGetIdForEmailSecurityOption7 = /** @class */ (function (_super) {
     __extends(DrivePermissionsGetIdForEmailSecurityOption7, _super);
     function DrivePermissionsGetIdForEmailSecurityOption7() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DrivePermissionsGetIdForEmailSecurityOption7.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DrivePermissionsGetIdForEmailSecurityOption7.prototype, "oauth2c", void 0);
     return DrivePermissionsGetIdForEmailSecurityOption7;
-}(SpeakeasyBase));
-export { DrivePermissionsGetIdForEmailSecurityOption7 };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsGetIdForEmailSecurityOption7 = DrivePermissionsGetIdForEmailSecurityOption7;
 var DrivePermissionsGetIdForEmailSecurityOption8 = /** @class */ (function (_super) {
     __extends(DrivePermissionsGetIdForEmailSecurityOption8, _super);
     function DrivePermissionsGetIdForEmailSecurityOption8() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DrivePermissionsGetIdForEmailSecurityOption8.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DrivePermissionsGetIdForEmailSecurityOption8.prototype, "oauth2c", void 0);
     return DrivePermissionsGetIdForEmailSecurityOption8;
-}(SpeakeasyBase));
-export { DrivePermissionsGetIdForEmailSecurityOption8 };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsGetIdForEmailSecurityOption8 = DrivePermissionsGetIdForEmailSecurityOption8;
 var DrivePermissionsGetIdForEmailSecurity = /** @class */ (function (_super) {
     __extends(DrivePermissionsGetIdForEmailSecurity, _super);
     function DrivePermissionsGetIdForEmailSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DrivePermissionsGetIdForEmailSecurityOption1)
     ], DrivePermissionsGetIdForEmailSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DrivePermissionsGetIdForEmailSecurityOption2)
     ], DrivePermissionsGetIdForEmailSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DrivePermissionsGetIdForEmailSecurityOption3)
     ], DrivePermissionsGetIdForEmailSecurity.prototype, "option3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DrivePermissionsGetIdForEmailSecurityOption4)
     ], DrivePermissionsGetIdForEmailSecurity.prototype, "option4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DrivePermissionsGetIdForEmailSecurityOption5)
     ], DrivePermissionsGetIdForEmailSecurity.prototype, "option5", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DrivePermissionsGetIdForEmailSecurityOption6)
     ], DrivePermissionsGetIdForEmailSecurity.prototype, "option6", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DrivePermissionsGetIdForEmailSecurityOption7)
     ], DrivePermissionsGetIdForEmailSecurity.prototype, "option7", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DrivePermissionsGetIdForEmailSecurityOption8)
     ], DrivePermissionsGetIdForEmailSecurity.prototype, "option8", void 0);
     return DrivePermissionsGetIdForEmailSecurity;
-}(SpeakeasyBase));
-export { DrivePermissionsGetIdForEmailSecurity };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsGetIdForEmailSecurity = DrivePermissionsGetIdForEmailSecurity;
 var DrivePermissionsGetIdForEmailRequest = /** @class */ (function (_super) {
     __extends(DrivePermissionsGetIdForEmailRequest, _super);
     function DrivePermissionsGetIdForEmailRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DrivePermissionsGetIdForEmailPathParams)
     ], DrivePermissionsGetIdForEmailRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DrivePermissionsGetIdForEmailQueryParams)
     ], DrivePermissionsGetIdForEmailRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DrivePermissionsGetIdForEmailSecurity)
     ], DrivePermissionsGetIdForEmailRequest.prototype, "security", void 0);
     return DrivePermissionsGetIdForEmailRequest;
-}(SpeakeasyBase));
-export { DrivePermissionsGetIdForEmailRequest };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsGetIdForEmailRequest = DrivePermissionsGetIdForEmailRequest;
 var DrivePermissionsGetIdForEmailResponse = /** @class */ (function (_super) {
     __extends(DrivePermissionsGetIdForEmailResponse, _super);
     function DrivePermissionsGetIdForEmailResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivePermissionsGetIdForEmailResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.PermissionId)
     ], DrivePermissionsGetIdForEmailResponse.prototype, "permissionId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DrivePermissionsGetIdForEmailResponse.prototype, "statusCode", void 0);
     return DrivePermissionsGetIdForEmailResponse;
-}(SpeakeasyBase));
-export { DrivePermissionsGetIdForEmailResponse };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsGetIdForEmailResponse = DrivePermissionsGetIdForEmailResponse;

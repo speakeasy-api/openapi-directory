@@ -1,6 +1,9 @@
-export var PerEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PerEnum = void 0;
+var PerEnum;
 (function (PerEnum) {
     PerEnum["Unknown"] = "";
     PerEnum["Day"] = "day";
     PerEnum["Week"] = "week";
-})(PerEnum || (PerEnum = {}));
+})(PerEnum = exports.PerEnum || (exports.PerEnum = {}));

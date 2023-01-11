@@ -58,10 +58,10 @@ export declare class GetTemplateRequest extends SpeakeasyBase {
 export declare class GetTemplateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getTemplate200ApplicationJsonObject?: GetTemplate200ApplicationJson;
-    getTemplate401ApplicationJsonObject?: GetTemplate401ApplicationJson;
-    getTemplate403ApplicationJsonObject?: GetTemplate403ApplicationJson;
-    getTemplate404ApplicationJsonObject?: GetTemplate404ApplicationJson;
-    getTemplate422ApplicationJsonObject?: GetTemplate422ApplicationJson;
-    getTemplate500ApplicationJsonObject?: GetTemplate500ApplicationJson;
+    getTemplate200ApplicationJSONObject?: GetTemplate200ApplicationJson;
+    getTemplate401ApplicationJSONObject?: GetTemplate401ApplicationJson;
+    getTemplate403ApplicationJSONObject?: GetTemplate403ApplicationJson;
+    getTemplate404ApplicationJSONObject?: GetTemplate404ApplicationJson;
+    getTemplate422ApplicationJSONObject?: GetTemplate422ApplicationJson;
+    getTemplate500ApplicationJSONObject?: GetTemplate500ApplicationJson;
 }

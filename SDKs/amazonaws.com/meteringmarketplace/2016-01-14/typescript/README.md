@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BatchMeterUsageRequest, BatchMeterUsageResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,90 +33,38 @@ const sdk = new SDK(WithSecurity(
     
 const req: BatchMeterUsageRequest = {
   headers: {
-    xAmzAlgorithm: "aut",
-    xAmzContentSha256: "dolor",
-    xAmzCredential: "veritatis",
-    xAmzDate: "dicta",
-    xAmzSecurityToken: "consequatur",
-    xAmzSignature: "mollitia",
-    xAmzSignedHeaders: "distinctio",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AWSMPMeteringService.BatchMeterUsage",
   },
   request: {
-    productCode: "dolor",
+    productCode: "fugit",
     usageRecords: [
       {
-        customerIdentifier: "veniam",
-        dimension: "ullam",
-        quantity: 7143517679490005021,
-        timestamp: "1986-11-05T11:19:37Z",
+        customerIdentifier: "nihil",
+        dimension: "rerum",
+        quantity: 7837839688282259259,
+        timestamp: "2004-06-02T10:14:12Z",
         usageAllocations: [
           {
-            allocatedUsageQuantity: 5086685836834963172,
+            allocatedUsageQuantity: 2339563716805116249,
             tags: [
               {
-                key: "nisi",
-                value: "consequatur",
+                key: "dolorem",
+                value: "et",
               },
               {
-                key: "fugiat",
-                value: "tenetur",
-              },
-            ],
-          },
-          {
-            allocatedUsageQuantity: 8093916486147727286,
-            tags: [
-              {
-                key: "aspernatur",
-                value: "dignissimos",
-              },
-            ],
-          },
-          {
-            allocatedUsageQuantity: 7014153113816809001,
-            tags: [
-              {
-                key: "saepe",
-                value: "voluptas",
+                key: "voluptate",
+                value: "iste",
               },
               {
-                key: "sunt",
-                value: "optio",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        customerIdentifier: "omnis",
-        dimension: "ut",
-        quantity: 8667532264838713382,
-        timestamp: "2022-10-20T08:06:54Z",
-        usageAllocations: [
-          {
-            allocatedUsageQuantity: 1128063950629246547,
-            tags: [
-              {
-                key: "voluptatum",
-                value: "alias",
-              },
-              {
-                key: "consequatur",
-                value: "eum",
-              },
-              {
-                key: "nemo",
-                value: "omnis",
-              },
-            ],
-          },
-          {
-            allocatedUsageQuantity: 730903235187604438,
-            tags: [
-              {
-                key: "omnis",
-                value: "velit",
+                key: "vitae",
+                value: "totam",
               },
             ],
           },
@@ -127,7 +74,7 @@ const req: BatchMeterUsageRequest = {
   },
 };
 
-sdk.sdk.batchMeterUsage(req).then((res: BatchMeterUsageResponse | AxiosError) => {
+sdk.batchMeterUsage(req).then((res: BatchMeterUsageResponse | AxiosError) => {
    // handle response
 });
 ```

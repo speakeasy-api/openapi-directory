@@ -20,5 +20,5 @@ export declare class DcimPlatformsListRequest extends SpeakeasyBase {
 export declare class DcimPlatformsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimPlatformsList200ApplicationJsonObject?: DcimPlatformsList200ApplicationJson;
+    dcimPlatformsList200ApplicationJSONObject?: DcimPlatformsList200ApplicationJson;
 }

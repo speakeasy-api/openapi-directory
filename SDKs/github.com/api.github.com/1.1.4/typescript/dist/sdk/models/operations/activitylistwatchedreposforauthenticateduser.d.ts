@@ -9,7 +9,7 @@ export declare class ActivityListWatchedReposForAuthenticatedUserRequest extends
 }
 export declare class ActivityListWatchedReposForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     minimalRepositories?: shared.MinimalRepository[];

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest, IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,37 +30,38 @@ const req: IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "culpa",
+    name: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "itaque",
-    alt: "proto",
-    callback: "eum",
-    fields: "earum",
-    key: "praesentium",
-    oauthToken: "id",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "incidunt",
-    uploadType: "temporibus",
-    uploadProtocol: "cupiditate",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     delegates: [
-      "possimus",
-      "alias",
-      "est",
-    ],
-    lifetime: "voluptates",
-    scope: [
-      "error",
+      "debitis",
+      "voluptatum",
       "et",
+    ],
+    lifetime: "ut",
+    scope: [
+      "et",
+      "voluptate",
+      "iste",
     ],
   },
 };

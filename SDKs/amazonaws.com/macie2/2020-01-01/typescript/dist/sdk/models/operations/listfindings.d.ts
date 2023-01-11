@@ -17,7 +17,7 @@ export declare class ListFindingsHeaders extends SpeakeasyBase {
  * Specifies, as a map, one or more property-based conditions that filter the results of a query for findings.
 **/
 export declare class ListFindingsRequestBodyFindingCriteria extends SpeakeasyBase {
-    criterion?: Map<string, shared.CriterionAdditionalProperties>;
+    criterion?: Record<string, shared.CriterionAdditionalProperties>;
 }
 /**
  * Specifies criteria for sorting the results of a request for findings.

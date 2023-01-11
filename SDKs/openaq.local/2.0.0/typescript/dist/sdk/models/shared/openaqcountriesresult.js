@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Meta } from "./meta";
-import { CountriesRow } from "./countriesrow";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OpenAqCountriesResult = exports.OpenAqCountriesResultMeta = void 0;
+var utils_1 = require("../../../internal/utils");
+var countriesrow_1 = require("./countriesrow");
+var OpenAqCountriesResultMeta = /** @class */ (function (_super) {
+    __extends(OpenAqCountriesResultMeta, _super);
+    function OpenAqCountriesResultMeta() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=found" }),
+        __metadata("design:type", Number)
+    ], OpenAqCountriesResultMeta.prototype, "found", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=license" }),
+        __metadata("design:type", String)
+    ], OpenAqCountriesResultMeta.prototype, "license", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
+        __metadata("design:type", Number)
+    ], OpenAqCountriesResultMeta.prototype, "limit", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], OpenAqCountriesResultMeta.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
+        __metadata("design:type", Number)
+    ], OpenAqCountriesResultMeta.prototype, "page", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website" }),
+        __metadata("design:type", String)
+    ], OpenAqCountriesResultMeta.prototype, "website", void 0);
+    return OpenAqCountriesResultMeta;
+}(utils_1.SpeakeasyBase));
+exports.OpenAqCountriesResultMeta = OpenAqCountriesResultMeta;
 var OpenAqCountriesResult = /** @class */ (function (_super) {
     __extends(OpenAqCountriesResult, _super);
     function OpenAqCountriesResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", Meta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", OpenAqCountriesResultMeta)
     ], OpenAqCountriesResult.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: CountriesRow }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: countriesrow_1.CountriesRow }),
         __metadata("design:type", Array)
     ], OpenAqCountriesResult.prototype, "results", void 0);
     return OpenAqCountriesResult;
-}(SpeakeasyBase));
-export { OpenAqCountriesResult };
+}(utils_1.SpeakeasyBase));
+exports.OpenAqCountriesResult = OpenAqCountriesResult;

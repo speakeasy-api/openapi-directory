@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TemplateRequestTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TemplateRequest = exports.TemplateRequestTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TemplateRequestTypeEnum;
 (function (TemplateRequestTypeEnum) {
     TemplateRequestTypeEnum["Sms"] = "SMS";
     TemplateRequestTypeEnum["Web"] = "Web";
-})(TemplateRequestTypeEnum || (TemplateRequestTypeEnum = {}));
+})(TemplateRequestTypeEnum = exports.TemplateRequestTypeEnum || (exports.TemplateRequestTypeEnum = {}));
 var TemplateRequest = /** @class */ (function (_super) {
     __extends(TemplateRequest, _super);
     function TemplateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TemplateRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=template" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=template" }),
         __metadata("design:type", String)
     ], TemplateRequest.prototype, "template", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], TemplateRequest.prototype, "type", void 0);
     return TemplateRequest;
-}(SpeakeasyBase));
-export { TemplateRequest };
+}(utils_1.SpeakeasyBase));
+exports.TemplateRequest = TemplateRequest;

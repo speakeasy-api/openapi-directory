@@ -46,5 +46,5 @@ export class GetMonitorRelationsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getMonitorRelations200ApplicationJsonObject?: GetMonitorRelations200ApplicationJson;
+  getMonitorRelations200ApplicationJSONObject?: GetMonitorRelations200ApplicationJson;
 }

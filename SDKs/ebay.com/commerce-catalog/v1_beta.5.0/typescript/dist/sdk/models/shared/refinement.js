@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AspectDistribution } from "./aspectdistribution";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Refinement = void 0;
+var utils_1 = require("../../../internal/utils");
+var aspectdistribution_1 = require("./aspectdistribution");
 // Refinement
 /**
  * This type identifies a product category and the aspects associated with that category. Each aspect distribution container returns the distribution of values that have been used for the aspect.
@@ -34,13 +37,13 @@ var Refinement = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aspectDistributions", elemType: AspectDistribution }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aspectDistributions", elemType: aspectdistribution_1.AspectDistribution }),
         __metadata("design:type", Array)
     ], Refinement.prototype, "aspectDistributions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dominantCategoryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dominantCategoryId" }),
         __metadata("design:type", String)
     ], Refinement.prototype, "dominantCategoryId", void 0);
     return Refinement;
-}(SpeakeasyBase));
-export { Refinement };
+}(utils_1.SpeakeasyBase));
+exports.Refinement = Refinement;

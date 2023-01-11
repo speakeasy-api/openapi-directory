@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LastCrawlStatusEnum } from "./lastcrawlstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LastCrawlInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var lastcrawlstatusenum_1 = require("./lastcrawlstatusenum");
 // LastCrawlInfo
 /**
  * Status and error information about the most recent crawl.
@@ -34,29 +37,29 @@ var LastCrawlInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorMessage" }),
         __metadata("design:type", String)
     ], LastCrawlInfo.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogGroup" }),
         __metadata("design:type", String)
     ], LastCrawlInfo.prototype, "logGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogStream" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogStream" }),
         __metadata("design:type", String)
     ], LastCrawlInfo.prototype, "logStream", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessagePrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessagePrefix" }),
         __metadata("design:type", String)
     ], LastCrawlInfo.prototype, "messagePrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartTime" }),
         __metadata("design:type", Date)
     ], LastCrawlInfo.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], LastCrawlInfo.prototype, "status", void 0);
     return LastCrawlInfo;
-}(SpeakeasyBase));
-export { LastCrawlInfo };
+}(utils_1.SpeakeasyBase));
+exports.LastCrawlInfo = LastCrawlInfo;

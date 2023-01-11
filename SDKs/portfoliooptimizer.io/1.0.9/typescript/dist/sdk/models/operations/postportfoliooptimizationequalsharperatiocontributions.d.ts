@@ -13,6 +13,6 @@ export declare class PostPortfolioOptimizationEqualSharpeRatioContributionsReque
 }
 export declare class PostPortfolioOptimizationEqualSharpeRatioContributionsResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJsonObject?: PostPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJson;
     statusCode: number;
+    postPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSONObject?: PostPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJson;
 }

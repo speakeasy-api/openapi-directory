@@ -14,7 +14,7 @@ export declare class GetListingCarFsboIdRequest extends SpeakeasyBase {
 }
 export declare class GetListingCarFsboIdResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     listing?: shared.Listing;
     statusCode: number;
 }

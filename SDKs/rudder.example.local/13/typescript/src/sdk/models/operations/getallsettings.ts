@@ -41,5 +41,5 @@ export class GetAllSettingsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getAllSettings200ApplicationJsonObject?: GetAllSettings200ApplicationJson;
+  getAllSettings200ApplicationJSONObject?: GetAllSettings200ApplicationJson;
 }

@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class GoogleHomeEnterpriseSdmV1Structure extends SpeakeasyBase {
     name?: string;
-    traits?: Map<string, any>;
+    traits?: Record<string, any>;
 }

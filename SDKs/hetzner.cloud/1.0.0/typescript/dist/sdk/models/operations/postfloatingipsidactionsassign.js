@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostFloatingIpsIdActionsAssignResponse = exports.PostFloatingIpsIdActionsAssignRequest = exports.PostFloatingIpsIdActionsAssignActionResponse = exports.PostFloatingIpsIdActionsAssignActionResponseAction = exports.PostFloatingIpsIdActionsAssignActionResponseActionStatusEnum = exports.PostFloatingIpsIdActionsAssignActionResponseActionResources = exports.PostFloatingIpsIdActionsAssignActionResponseActionError = exports.PostFloatingIpsIdActionsAssignAssignFloatingIpRequest = exports.PostFloatingIpsIdActionsAssignPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostFloatingIpsIdActionsAssignPathParams = /** @class */ (function (_super) {
     __extends(PostFloatingIpsIdActionsAssignPathParams, _super);
     function PostFloatingIpsIdActionsAssignPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PostFloatingIpsIdActionsAssignPathParams.prototype, "id", void 0);
     return PostFloatingIpsIdActionsAssignPathParams;
-}(SpeakeasyBase));
-export { PostFloatingIpsIdActionsAssignPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostFloatingIpsIdActionsAssignPathParams = PostFloatingIpsIdActionsAssignPathParams;
 var PostFloatingIpsIdActionsAssignAssignFloatingIpRequest = /** @class */ (function (_super) {
     __extends(PostFloatingIpsIdActionsAssignAssignFloatingIpRequest, _super);
     function PostFloatingIpsIdActionsAssignAssignFloatingIpRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server" }),
         __metadata("design:type", Number)
     ], PostFloatingIpsIdActionsAssignAssignFloatingIpRequest.prototype, "server", void 0);
     return PostFloatingIpsIdActionsAssignAssignFloatingIpRequest;
-}(SpeakeasyBase));
-export { PostFloatingIpsIdActionsAssignAssignFloatingIpRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostFloatingIpsIdActionsAssignAssignFloatingIpRequest = PostFloatingIpsIdActionsAssignAssignFloatingIpRequest;
 // PostFloatingIpsIdActionsAssignActionResponseActionError
 /**
  * Error message for the Action if error occurred, otherwise null
@@ -57,123 +60,123 @@ var PostFloatingIpsIdActionsAssignActionResponseActionError = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PostFloatingIpsIdActionsAssignActionResponseActionError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostFloatingIpsIdActionsAssignActionResponseActionError.prototype, "message", void 0);
     return PostFloatingIpsIdActionsAssignActionResponseActionError;
-}(SpeakeasyBase));
-export { PostFloatingIpsIdActionsAssignActionResponseActionError };
+}(utils_1.SpeakeasyBase));
+exports.PostFloatingIpsIdActionsAssignActionResponseActionError = PostFloatingIpsIdActionsAssignActionResponseActionError;
 var PostFloatingIpsIdActionsAssignActionResponseActionResources = /** @class */ (function (_super) {
     __extends(PostFloatingIpsIdActionsAssignActionResponseActionResources, _super);
     function PostFloatingIpsIdActionsAssignActionResponseActionResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostFloatingIpsIdActionsAssignActionResponseActionResources.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostFloatingIpsIdActionsAssignActionResponseActionResources.prototype, "type", void 0);
     return PostFloatingIpsIdActionsAssignActionResponseActionResources;
-}(SpeakeasyBase));
-export { PostFloatingIpsIdActionsAssignActionResponseActionResources };
-export var PostFloatingIpsIdActionsAssignActionResponseActionStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostFloatingIpsIdActionsAssignActionResponseActionResources = PostFloatingIpsIdActionsAssignActionResponseActionResources;
+var PostFloatingIpsIdActionsAssignActionResponseActionStatusEnum;
 (function (PostFloatingIpsIdActionsAssignActionResponseActionStatusEnum) {
     PostFloatingIpsIdActionsAssignActionResponseActionStatusEnum["Success"] = "success";
     PostFloatingIpsIdActionsAssignActionResponseActionStatusEnum["Running"] = "running";
     PostFloatingIpsIdActionsAssignActionResponseActionStatusEnum["Error"] = "error";
-})(PostFloatingIpsIdActionsAssignActionResponseActionStatusEnum || (PostFloatingIpsIdActionsAssignActionResponseActionStatusEnum = {}));
+})(PostFloatingIpsIdActionsAssignActionResponseActionStatusEnum = exports.PostFloatingIpsIdActionsAssignActionResponseActionStatusEnum || (exports.PostFloatingIpsIdActionsAssignActionResponseActionStatusEnum = {}));
 var PostFloatingIpsIdActionsAssignActionResponseAction = /** @class */ (function (_super) {
     __extends(PostFloatingIpsIdActionsAssignActionResponseAction, _super);
     function PostFloatingIpsIdActionsAssignActionResponseAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], PostFloatingIpsIdActionsAssignActionResponseAction.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", PostFloatingIpsIdActionsAssignActionResponseActionError)
     ], PostFloatingIpsIdActionsAssignActionResponseAction.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", String)
     ], PostFloatingIpsIdActionsAssignActionResponseAction.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostFloatingIpsIdActionsAssignActionResponseAction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], PostFloatingIpsIdActionsAssignActionResponseAction.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: PostFloatingIpsIdActionsAssignActionResponseActionResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: PostFloatingIpsIdActionsAssignActionResponseActionResources }),
         __metadata("design:type", Array)
     ], PostFloatingIpsIdActionsAssignActionResponseAction.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", String)
     ], PostFloatingIpsIdActionsAssignActionResponseAction.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PostFloatingIpsIdActionsAssignActionResponseAction.prototype, "status", void 0);
     return PostFloatingIpsIdActionsAssignActionResponseAction;
-}(SpeakeasyBase));
-export { PostFloatingIpsIdActionsAssignActionResponseAction };
+}(utils_1.SpeakeasyBase));
+exports.PostFloatingIpsIdActionsAssignActionResponseAction = PostFloatingIpsIdActionsAssignActionResponseAction;
 var PostFloatingIpsIdActionsAssignActionResponse = /** @class */ (function (_super) {
     __extends(PostFloatingIpsIdActionsAssignActionResponse, _super);
     function PostFloatingIpsIdActionsAssignActionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", PostFloatingIpsIdActionsAssignActionResponseAction)
     ], PostFloatingIpsIdActionsAssignActionResponse.prototype, "action", void 0);
     return PostFloatingIpsIdActionsAssignActionResponse;
-}(SpeakeasyBase));
-export { PostFloatingIpsIdActionsAssignActionResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostFloatingIpsIdActionsAssignActionResponse = PostFloatingIpsIdActionsAssignActionResponse;
 var PostFloatingIpsIdActionsAssignRequest = /** @class */ (function (_super) {
     __extends(PostFloatingIpsIdActionsAssignRequest, _super);
     function PostFloatingIpsIdActionsAssignRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostFloatingIpsIdActionsAssignPathParams)
     ], PostFloatingIpsIdActionsAssignRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostFloatingIpsIdActionsAssignAssignFloatingIpRequest)
     ], PostFloatingIpsIdActionsAssignRequest.prototype, "request", void 0);
     return PostFloatingIpsIdActionsAssignRequest;
-}(SpeakeasyBase));
-export { PostFloatingIpsIdActionsAssignRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostFloatingIpsIdActionsAssignRequest = PostFloatingIpsIdActionsAssignRequest;
 var PostFloatingIpsIdActionsAssignResponse = /** @class */ (function (_super) {
     __extends(PostFloatingIpsIdActionsAssignResponse, _super);
     function PostFloatingIpsIdActionsAssignResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostFloatingIpsIdActionsAssignActionResponse)
     ], PostFloatingIpsIdActionsAssignResponse.prototype, "actionResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostFloatingIpsIdActionsAssignResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostFloatingIpsIdActionsAssignResponse.prototype, "statusCode", void 0);
     return PostFloatingIpsIdActionsAssignResponse;
-}(SpeakeasyBase));
-export { PostFloatingIpsIdActionsAssignResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostFloatingIpsIdActionsAssignResponse = PostFloatingIpsIdActionsAssignResponse;

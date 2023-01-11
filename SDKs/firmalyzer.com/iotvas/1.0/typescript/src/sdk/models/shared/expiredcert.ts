@@ -1,6 +1,14 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PublicKey } from "./publickey";
 
+
+
+export class ExpiredCertPublicKey extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=algorithm" })
+  algorithm?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=bits" })
+  bits?: number;
+}
 
 
 export class ExpiredCert extends SpeakeasyBase {
@@ -11,7 +19,7 @@ export class ExpiredCert extends SpeakeasyBase {
   fileName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=public_key" })
-  publicKey?: PublicKey;
+  publicKey?: ExpiredCertPublicKey;
 
   @SpeakeasyMetadata({ data: "json, name=subject_name" })
   subjectName?: string;

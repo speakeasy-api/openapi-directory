@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetBatchDeleteScheduledActionActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetBatchDeleteScheduledActionResponse = exports.GetBatchDeleteScheduledActionRequest = exports.GetBatchDeleteScheduledActionHeaders = exports.GetBatchDeleteScheduledActionQueryParams = exports.GetBatchDeleteScheduledActionVersionEnum = exports.GetBatchDeleteScheduledActionActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetBatchDeleteScheduledActionActionEnum;
 (function (GetBatchDeleteScheduledActionActionEnum) {
     GetBatchDeleteScheduledActionActionEnum["BatchDeleteScheduledAction"] = "BatchDeleteScheduledAction";
-})(GetBatchDeleteScheduledActionActionEnum || (GetBatchDeleteScheduledActionActionEnum = {}));
-export var GetBatchDeleteScheduledActionVersionEnum;
+})(GetBatchDeleteScheduledActionActionEnum = exports.GetBatchDeleteScheduledActionActionEnum || (exports.GetBatchDeleteScheduledActionActionEnum = {}));
+var GetBatchDeleteScheduledActionVersionEnum;
 (function (GetBatchDeleteScheduledActionVersionEnum) {
     GetBatchDeleteScheduledActionVersionEnum["TwoThousandAndEleven0101"] = "2011-01-01";
-})(GetBatchDeleteScheduledActionVersionEnum || (GetBatchDeleteScheduledActionVersionEnum = {}));
+})(GetBatchDeleteScheduledActionVersionEnum = exports.GetBatchDeleteScheduledActionVersionEnum || (exports.GetBatchDeleteScheduledActionVersionEnum = {}));
 var GetBatchDeleteScheduledActionQueryParams = /** @class */ (function (_super) {
     __extends(GetBatchDeleteScheduledActionQueryParams, _super);
     function GetBatchDeleteScheduledActionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetBatchDeleteScheduledActionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AutoScalingGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AutoScalingGroupName" }),
         __metadata("design:type", String)
     ], GetBatchDeleteScheduledActionQueryParams.prototype, "autoScalingGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ScheduledActionNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ScheduledActionNames" }),
         __metadata("design:type", Array)
     ], GetBatchDeleteScheduledActionQueryParams.prototype, "scheduledActionNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetBatchDeleteScheduledActionQueryParams.prototype, "version", void 0);
     return GetBatchDeleteScheduledActionQueryParams;
-}(SpeakeasyBase));
-export { GetBatchDeleteScheduledActionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetBatchDeleteScheduledActionQueryParams = GetBatchDeleteScheduledActionQueryParams;
 var GetBatchDeleteScheduledActionHeaders = /** @class */ (function (_super) {
     __extends(GetBatchDeleteScheduledActionHeaders, _super);
     function GetBatchDeleteScheduledActionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetBatchDeleteScheduledActionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetBatchDeleteScheduledActionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetBatchDeleteScheduledActionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetBatchDeleteScheduledActionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetBatchDeleteScheduledActionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetBatchDeleteScheduledActionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetBatchDeleteScheduledActionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetBatchDeleteScheduledActionHeaders;
-}(SpeakeasyBase));
-export { GetBatchDeleteScheduledActionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetBatchDeleteScheduledActionHeaders = GetBatchDeleteScheduledActionHeaders;
 var GetBatchDeleteScheduledActionRequest = /** @class */ (function (_super) {
     __extends(GetBatchDeleteScheduledActionRequest, _super);
     function GetBatchDeleteScheduledActionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetBatchDeleteScheduledActionQueryParams)
     ], GetBatchDeleteScheduledActionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetBatchDeleteScheduledActionHeaders)
     ], GetBatchDeleteScheduledActionRequest.prototype, "headers", void 0);
     return GetBatchDeleteScheduledActionRequest;
-}(SpeakeasyBase));
-export { GetBatchDeleteScheduledActionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetBatchDeleteScheduledActionRequest = GetBatchDeleteScheduledActionRequest;
 var GetBatchDeleteScheduledActionResponse = /** @class */ (function (_super) {
     __extends(GetBatchDeleteScheduledActionResponse, _super);
     function GetBatchDeleteScheduledActionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetBatchDeleteScheduledActionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetBatchDeleteScheduledActionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetBatchDeleteScheduledActionResponse.prototype, "statusCode", void 0);
     return GetBatchDeleteScheduledActionResponse;
-}(SpeakeasyBase));
-export { GetBatchDeleteScheduledActionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetBatchDeleteScheduledActionResponse = GetBatchDeleteScheduledActionResponse;

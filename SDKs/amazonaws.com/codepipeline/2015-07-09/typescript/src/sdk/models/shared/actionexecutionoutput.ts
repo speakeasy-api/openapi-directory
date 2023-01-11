@@ -16,5 +16,5 @@ export class ActionExecutionOutput extends SpeakeasyBase {
   outputArtifacts?: ArtifactDetail[];
 
   @SpeakeasyMetadata({ data: "json, name=outputVariables" })
-  outputVariables?: Map<string, string>;
+  outputVariables?: Record<string, string>;
 }

@@ -11,7 +11,7 @@ import { TppMessage405PisCanc } from "./tppmessage405piscanc";
 **/
 export class Error405NgPisCanc extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=_links", elemType: HrefType })
-  links?: Map<string, HrefType>;
+  links?: Record<string, HrefType>;
 
   @SpeakeasyMetadata({ data: "json, name=tppMessages", elemType: TppMessage405PisCanc })
   tppMessages?: TppMessage405PisCanc[];

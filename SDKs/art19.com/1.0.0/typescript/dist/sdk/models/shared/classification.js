@@ -1,0 +1,108 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Classification = exports.ClassificationAttributes = exports.ClassificationAttributesTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ClassificationAttributesTypeEnum;
+(function (ClassificationAttributesTypeEnum) {
+    ClassificationAttributesTypeEnum["AlternateFeedType"] = "AlternateFeedType";
+    ClassificationAttributesTypeEnum["Genre"] = "Genre";
+    ClassificationAttributesTypeEnum["Industry"] = "Industry";
+    ClassificationAttributesTypeEnum["Language"] = "Language";
+    ClassificationAttributesTypeEnum["MediaRating"] = "MediaRating";
+})(ClassificationAttributesTypeEnum = exports.ClassificationAttributesTypeEnum || (exports.ClassificationAttributesTypeEnum = {}));
+var ClassificationAttributes = /** @class */ (function (_super) {
+    __extends(ClassificationAttributes, _super);
+    function ClassificationAttributes() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
+        __metadata("design:type", Date)
+    ], ClassificationAttributes.prototype, "createdAt", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_name" }),
+        __metadata("design:type", String)
+    ], ClassificationAttributes.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
+    ], ClassificationAttributes.prototype, "metadata", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent_id" }),
+        __metadata("design:type", String)
+    ], ClassificationAttributes.prototype, "parentId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tree_path" }),
+        __metadata("design:type", Array)
+    ], ClassificationAttributes.prototype, "treePath", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], ClassificationAttributes.prototype, "type", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
+        __metadata("design:type", Date)
+    ], ClassificationAttributes.prototype, "updatedAt", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", String)
+    ], ClassificationAttributes.prototype, "value", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value_path" }),
+        __metadata("design:type", String)
+    ], ClassificationAttributes.prototype, "valuePath", void 0);
+    return ClassificationAttributes;
+}(utils_1.SpeakeasyBase));
+exports.ClassificationAttributes = ClassificationAttributes;
+// Classification
+/**
+ * A classification, in general, is something that can describe other resources, such as countries, genres or
+ * languages. How they're described (included or excluded, and whether they're the primary classification
+ * of this type) is handled using other resources. Different functions of ART19 rely on classifications differently,
+ * and could have an effect only on directory information, or may have an effect on ad decisioning.
+ *
+**/
+var Classification = /** @class */ (function (_super) {
+    __extends(Classification, _super);
+    function Classification() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
+        __metadata("design:type", ClassificationAttributes)
+    ], Classification.prototype, "attributes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], Classification.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], Classification.prototype, "type", void 0);
+    return Classification;
+}(utils_1.SpeakeasyBase));
+exports.Classification = Classification;

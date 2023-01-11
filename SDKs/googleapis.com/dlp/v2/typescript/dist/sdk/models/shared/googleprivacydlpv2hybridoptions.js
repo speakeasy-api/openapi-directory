@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2TableOptions } from "./googleprivacydlpv2tableoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2HybridOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2tableoptions_1 = require("./googleprivacydlpv2tableoptions");
 // GooglePrivacyDlpV2HybridOptions
 /**
  * Configuration to control jobs where the content being inspected is outside of Google Cloud Platform.
@@ -34,21 +37,21 @@ var GooglePrivacyDlpV2HybridOptions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2HybridOptions.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], GooglePrivacyDlpV2HybridOptions.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requiredFindingLabelKeys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requiredFindingLabelKeys" }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2HybridOptions.prototype, "requiredFindingLabelKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tableOptions" }),
-        __metadata("design:type", GooglePrivacyDlpV2TableOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tableOptions" }),
+        __metadata("design:type", googleprivacydlpv2tableoptions_1.GooglePrivacyDlpV2TableOptions)
     ], GooglePrivacyDlpV2HybridOptions.prototype, "tableOptions", void 0);
     return GooglePrivacyDlpV2HybridOptions;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2HybridOptions };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2HybridOptions = GooglePrivacyDlpV2HybridOptions;

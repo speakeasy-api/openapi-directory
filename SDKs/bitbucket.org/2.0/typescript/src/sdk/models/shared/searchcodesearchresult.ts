@@ -12,7 +12,7 @@ export class SearchCodeSearchResult extends SpeakeasyBase {
   contentMatches?: SearchContentMatch[];
 
   @SpeakeasyMetadata({ data: "json, name=file" })
-  file?: Map<string, any>;
+  file?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=path_matches", elemType: SearchSegment })
   pathMatches?: SearchSegment[];

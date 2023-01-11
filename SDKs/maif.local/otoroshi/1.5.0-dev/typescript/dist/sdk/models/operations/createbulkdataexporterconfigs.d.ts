@@ -21,5 +21,5 @@ export declare class CreateBulkDataExporterConfigsRequest extends SpeakeasyBase 
 export declare class CreateBulkDataExporterConfigsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createBulkDataExporterConfigs200ApplicationJsonObjects?: CreateBulkDataExporterConfigs200ApplicationJson[];
+    createBulkDataExporterConfigs200ApplicationJSONObjects?: CreateBulkDataExporterConfigs200ApplicationJson[];
 }

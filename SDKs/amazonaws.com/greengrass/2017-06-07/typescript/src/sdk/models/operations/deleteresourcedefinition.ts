@@ -49,7 +49,7 @@ export class DeleteResourceDefinitionResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteResourceDefinitionResponse?: Map<string, any>;
+  deleteResourceDefinitionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

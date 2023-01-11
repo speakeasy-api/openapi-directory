@@ -17,7 +17,7 @@ export declare class GetApiVVersionMetalsBenchmarkSummaryRequest extends Speakea
 export declare class GetApiVVersionMetalsBenchmarkSummaryResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    problemDetails?: Map<string, any>;
+    problemDetails?: Record<string, any>;
     statusCode: number;
     summaryResponses?: shared.SummaryResponse[];
 }

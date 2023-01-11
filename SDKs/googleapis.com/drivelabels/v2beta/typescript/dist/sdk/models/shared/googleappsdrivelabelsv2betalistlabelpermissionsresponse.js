@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaLabelPermission } from "./googleappsdrivelabelsv2betalabelpermission";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaListLabelPermissionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betalabelpermission_1 = require("./googleappsdrivelabelsv2betalabelpermission");
 // GoogleAppsDriveLabelsV2betaListLabelPermissionsResponse
 /**
  * Response for listing the permissions on a Label.
@@ -34,13 +37,13 @@ var GoogleAppsDriveLabelsV2betaListLabelPermissionsResponse = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelPermissions", elemType: GoogleAppsDriveLabelsV2betaLabelPermission }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelPermissions", elemType: googleappsdrivelabelsv2betalabelpermission_1.GoogleAppsDriveLabelsV2betaLabelPermission }),
         __metadata("design:type", Array)
     ], GoogleAppsDriveLabelsV2betaListLabelPermissionsResponse.prototype, "labelPermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaListLabelPermissionsResponse.prototype, "nextPageToken", void 0);
     return GoogleAppsDriveLabelsV2betaListLabelPermissionsResponse;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaListLabelPermissionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaListLabelPermissionsResponse = GoogleAppsDriveLabelsV2betaListLabelPermissionsResponse;

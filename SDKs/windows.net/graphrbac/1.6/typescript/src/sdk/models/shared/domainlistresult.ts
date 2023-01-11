@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class DomainListResult extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=value" })
-  value?: Map<string, Map<string, any>>[];
+  value?: Record<string, Record<string, any>>[];
 }

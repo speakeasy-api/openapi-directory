@@ -11,7 +11,7 @@ export declare class RemoveFollowerForTaskRequestBody extends SpeakeasyBase {
     data?: shared.TaskRemoveFollowersRequest;
 }
 export declare class RemoveFollowerForTask200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class RemoveFollowerForTaskRequest extends SpeakeasyBase {
     pathParams: RemoveFollowerForTaskPathParams;
@@ -22,5 +22,5 @@ export declare class RemoveFollowerForTaskResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    removeFollowerForTask200ApplicationJsonObject?: RemoveFollowerForTask200ApplicationJson;
+    removeFollowerForTask200ApplicationJSONObject?: RemoveFollowerForTask200ApplicationJson;
 }

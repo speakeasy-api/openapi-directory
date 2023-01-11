@@ -14,7 +14,7 @@ export class AccessPreview extends SpeakeasyBase {
   analyzerArn: string;
 
   @SpeakeasyMetadata({ data: "json, name=configurations", elemType: Configuration })
-  configurations: Map<string, Configuration>;
+  configurations: Record<string, Configuration>;
 
   @SpeakeasyMetadata({ data: "json, name=createdAt" })
   createdAt: Date;

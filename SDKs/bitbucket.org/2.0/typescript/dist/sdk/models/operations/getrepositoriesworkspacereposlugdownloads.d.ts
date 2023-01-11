@@ -16,5 +16,5 @@ export declare class GetRepositoriesWorkspaceRepoSlugDownloadsRequest extends Sp
 export declare class GetRepositoriesWorkspaceRepoSlugDownloadsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

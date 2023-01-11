@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,95 +23,97 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EvaluationMetrics } from "./evaluationmetrics";
-import { GlueTable } from "./gluetable";
-import { TransformParameters } from "./transformparameters";
-import { SchemaColumn } from "./schemacolumn";
-import { TransformStatusTypeEnum } from "./transformstatustypeenum";
-import { TransformEncryption } from "./transformencryption";
-import { WorkerTypeEnum } from "./workertypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMlTransformResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var evaluationmetrics_1 = require("./evaluationmetrics");
+var gluetable_1 = require("./gluetable");
+var transformparameters_1 = require("./transformparameters");
+var schemacolumn_1 = require("./schemacolumn");
+var transformstatustypeenum_1 = require("./transformstatustypeenum");
+var transformencryption_1 = require("./transformencryption");
+var workertypeenum_1 = require("./workertypeenum");
 var GetMlTransformResponse = /** @class */ (function (_super) {
     __extends(GetMlTransformResponse, _super);
     function GetMlTransformResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedOn" }),
         __metadata("design:type", Date)
     ], GetMlTransformResponse.prototype, "createdOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], GetMlTransformResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EvaluationMetrics" }),
-        __metadata("design:type", EvaluationMetrics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EvaluationMetrics" }),
+        __metadata("design:type", evaluationmetrics_1.EvaluationMetrics)
     ], GetMlTransformResponse.prototype, "evaluationMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GlueVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GlueVersion" }),
         __metadata("design:type", String)
     ], GetMlTransformResponse.prototype, "glueVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InputRecordTables", elemType: GlueTable }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InputRecordTables", elemType: gluetable_1.GlueTable }),
         __metadata("design:type", Array)
     ], GetMlTransformResponse.prototype, "inputRecordTables", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LabelCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LabelCount" }),
         __metadata("design:type", Number)
     ], GetMlTransformResponse.prototype, "labelCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedOn" }),
         __metadata("design:type", Date)
     ], GetMlTransformResponse.prototype, "lastModifiedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxCapacity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxCapacity" }),
         __metadata("design:type", Number)
     ], GetMlTransformResponse.prototype, "maxCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxRetries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxRetries" }),
         __metadata("design:type", Number)
     ], GetMlTransformResponse.prototype, "maxRetries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GetMlTransformResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfWorkers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfWorkers" }),
         __metadata("design:type", Number)
     ], GetMlTransformResponse.prototype, "numberOfWorkers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Parameters" }),
-        __metadata("design:type", TransformParameters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Parameters" }),
+        __metadata("design:type", transformparameters_1.TransformParameters)
     ], GetMlTransformResponse.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Role" }),
         __metadata("design:type", String)
     ], GetMlTransformResponse.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Schema", elemType: SchemaColumn }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Schema", elemType: schemacolumn_1.SchemaColumn }),
         __metadata("design:type", Array)
     ], GetMlTransformResponse.prototype, "schema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], GetMlTransformResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Timeout" }),
         __metadata("design:type", Number)
     ], GetMlTransformResponse.prototype, "timeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransformEncryption" }),
-        __metadata("design:type", TransformEncryption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransformEncryption" }),
+        __metadata("design:type", transformencryption_1.TransformEncryption)
     ], GetMlTransformResponse.prototype, "transformEncryption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransformId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransformId" }),
         __metadata("design:type", String)
     ], GetMlTransformResponse.prototype, "transformId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkerType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkerType" }),
         __metadata("design:type", String)
     ], GetMlTransformResponse.prototype, "workerType", void 0);
     return GetMlTransformResponse;
-}(SpeakeasyBase));
-export { GetMlTransformResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMlTransformResponse = GetMlTransformResponse;

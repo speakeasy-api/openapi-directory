@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PolicyControllerMonitoringConfigBackendsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PolicyControllerMonitoringConfig = exports.PolicyControllerMonitoringConfigBackendsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PolicyControllerMonitoringConfigBackendsEnum;
 (function (PolicyControllerMonitoringConfigBackendsEnum) {
     PolicyControllerMonitoringConfigBackendsEnum["MonitoringBackendUnspecified"] = "MONITORING_BACKEND_UNSPECIFIED";
     PolicyControllerMonitoringConfigBackendsEnum["Prometheus"] = "PROMETHEUS";
     PolicyControllerMonitoringConfigBackendsEnum["CloudMonitoring"] = "CLOUD_MONITORING";
-})(PolicyControllerMonitoringConfigBackendsEnum || (PolicyControllerMonitoringConfigBackendsEnum = {}));
+})(PolicyControllerMonitoringConfigBackendsEnum = exports.PolicyControllerMonitoringConfigBackendsEnum || (exports.PolicyControllerMonitoringConfigBackendsEnum = {}));
 // PolicyControllerMonitoringConfig
 /**
  * MonitoringConfig specifies the backends Policy Controller should export metrics to. For example, to specify metrics should be exported to Cloud Monitoring and Prometheus, specify backends: ["cloudmonitoring", "prometheus"]
@@ -39,9 +42,9 @@ var PolicyControllerMonitoringConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backends" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backends" }),
         __metadata("design:type", Array)
     ], PolicyControllerMonitoringConfig.prototype, "backends", void 0);
     return PolicyControllerMonitoringConfig;
-}(SpeakeasyBase));
-export { PolicyControllerMonitoringConfig };
+}(utils_1.SpeakeasyBase));
+exports.PolicyControllerMonitoringConfig = PolicyControllerMonitoringConfig;

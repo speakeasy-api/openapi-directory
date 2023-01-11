@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CachePolicySummary } from "./cachepolicysummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CachePolicyList = void 0;
+var utils_1 = require("../../../internal/utils");
+var cachepolicysummarylist_1 = require("./cachepolicysummarylist");
 // CachePolicyList
 /**
  * A list of cache policies.
@@ -34,21 +37,21 @@ var CachePolicyList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: CachePolicySummary }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: cachepolicysummarylist_1.CachePolicySummaryList }),
         __metadata("design:type", Array)
     ], CachePolicyList.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CachePolicyList.prototype, "maxItems", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CachePolicyList.prototype, "nextMarker", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CachePolicyList.prototype, "quantity", void 0);
     return CachePolicyList;
-}(SpeakeasyBase));
-export { CachePolicyList };
+}(utils_1.SpeakeasyBase));
+exports.CachePolicyList = CachePolicyList;

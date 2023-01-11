@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RandomSplitEntry } from "./randomsplitentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RandomSplitActivity = void 0;
+var utils_1 = require("../../../internal/utils");
+var randomsplitentry_1 = require("./randomsplitentry");
 // RandomSplitActivity
 /**
  * Specifies the settings for a random split activity in a journey. This type of activity randomly sends specified percentages of participants down one of as many as five paths in a journey, based on conditions that you specify.
@@ -34,9 +37,9 @@ var RandomSplitActivity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Branches", elemType: RandomSplitEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Branches", elemType: randomsplitentry_1.RandomSplitEntry }),
         __metadata("design:type", Array)
     ], RandomSplitActivity.prototype, "branches", void 0);
     return RandomSplitActivity;
-}(SpeakeasyBase));
-export { RandomSplitActivity };
+}(utils_1.SpeakeasyBase));
+exports.RandomSplitActivity = RandomSplitActivity;

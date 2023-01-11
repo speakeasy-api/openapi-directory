@@ -45,7 +45,7 @@ export class AddApplicationInputProcessingConfigurationRequest extends Speakeasy
 
 export class AddApplicationInputProcessingConfigurationResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  addApplicationInputProcessingConfigurationResponse?: Map<string, any>;
+  addApplicationInputProcessingConfigurationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   concurrentModificationException?: any;

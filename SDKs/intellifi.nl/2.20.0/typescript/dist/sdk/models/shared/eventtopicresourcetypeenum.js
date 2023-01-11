@@ -1,4 +1,7 @@
-export var EventTopicResourceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventTopicResourceTypeEnum = void 0;
+var EventTopicResourceTypeEnum;
 (function (EventTopicResourceTypeEnum) {
     EventTopicResourceTypeEnum["Blobs"] = "blobs";
     EventTopicResourceTypeEnum["Items"] = "items";
@@ -10,4 +13,4 @@ export var EventTopicResourceTypeEnum;
     EventTopicResourceTypeEnum["Spots"] = "spots";
     EventTopicResourceTypeEnum["Subscriptions"] = "subscriptions";
     EventTopicResourceTypeEnum["Users"] = "users";
-})(EventTopicResourceTypeEnum || (EventTopicResourceTypeEnum = {}));
+})(EventTopicResourceTypeEnum = exports.EventTopicResourceTypeEnum || (exports.EventTopicResourceTypeEnum = {}));

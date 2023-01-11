@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IntegratorObjectResult } from "./integratorobjectresult";
-import { TopLevelActions } from "./toplevelactions";
-export var IntegratorCardPayloadResponseResponseVersionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IntegratorCardPayloadResponse = exports.IntegratorCardPayloadResponseResponseVersionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var integratorobjectresult_1 = require("./integratorobjectresult");
+var toplevelactions_1 = require("./toplevelactions");
+var IntegratorCardPayloadResponseResponseVersionEnum;
 (function (IntegratorCardPayloadResponseResponseVersionEnum) {
     IntegratorCardPayloadResponseResponseVersionEnum["V1"] = "v1";
     IntegratorCardPayloadResponseResponseVersionEnum["V3"] = "v3";
-})(IntegratorCardPayloadResponseResponseVersionEnum || (IntegratorCardPayloadResponseResponseVersionEnum = {}));
+})(IntegratorCardPayloadResponseResponseVersionEnum = exports.IntegratorCardPayloadResponseResponseVersionEnum || (exports.IntegratorCardPayloadResponseResponseVersionEnum = {}));
 // IntegratorCardPayloadResponse
 /**
  * The card details payload, sent to HubSpot by an app in response to a data fetch request when a user visits a CRM record page.
@@ -40,29 +43,29 @@ var IntegratorCardPayloadResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allItemsLinkUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allItemsLinkUrl" }),
         __metadata("design:type", String)
     ], IntegratorCardPayloadResponse.prototype, "allItemsLinkUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cardLabel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cardLabel" }),
         __metadata("design:type", String)
     ], IntegratorCardPayloadResponse.prototype, "cardLabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responseVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responseVersion" }),
         __metadata("design:type", String)
     ], IntegratorCardPayloadResponse.prototype, "responseVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sections", elemType: IntegratorObjectResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sections", elemType: integratorobjectresult_1.IntegratorObjectResult }),
         __metadata("design:type", Array)
     ], IntegratorCardPayloadResponse.prototype, "sections", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topLevelActions" }),
-        __metadata("design:type", TopLevelActions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topLevelActions" }),
+        __metadata("design:type", toplevelactions_1.TopLevelActions)
     ], IntegratorCardPayloadResponse.prototype, "topLevelActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCount" }),
         __metadata("design:type", Number)
     ], IntegratorCardPayloadResponse.prototype, "totalCount", void 0);
     return IntegratorCardPayloadResponse;
-}(SpeakeasyBase));
-export { IntegratorCardPayloadResponse };
+}(utils_1.SpeakeasyBase));
+exports.IntegratorCardPayloadResponse = IntegratorCardPayloadResponse;

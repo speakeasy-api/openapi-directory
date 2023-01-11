@@ -45,6 +45,6 @@ export declare class GetUserUsernameRequest extends SpeakeasyBase {
 }
 export declare class GetUserUsernameResponse extends SpeakeasyBase {
     contentType: string;
-    getUserUsername200ApplicationJsonObject?: GetUserUsername200ApplicationJson;
     statusCode: number;
+    getUserUsername200ApplicationJSONObject?: GetUserUsername200ApplicationJson;
 }

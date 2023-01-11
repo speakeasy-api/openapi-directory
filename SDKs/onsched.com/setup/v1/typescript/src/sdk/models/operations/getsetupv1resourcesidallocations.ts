@@ -37,7 +37,7 @@ export class GetSetupV1ResourcesIdAllocationsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  resourceAllocationListViewModel?: Map<string, any>;
+  resourceAllocationListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GeneralStats = void 0;
+var utils_1 = require("../../../internal/utils");
 var GeneralStats = /** @class */ (function (_super) {
     __extends(GeneralStats, _super);
     function GeneralStats() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cases_with_outcome" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cases_with_outcome" }),
         __metadata("design:type", Number)
     ], GeneralStats.prototype, "casesWithOutcome", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], GeneralStats.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=critical_condition_active_cases" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=critical_condition_active_cases" }),
         __metadata("design:type", Number)
     ], GeneralStats.prototype, "criticalConditionActiveCases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currently_infected" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currently_infected" }),
         __metadata("design:type", Number)
     ], GeneralStats.prototype, "currentlyInfected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=death_cases" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=death_cases" }),
         __metadata("design:type", Number)
     ], GeneralStats.prototype, "deathCases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=death_closed_cases" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=death_closed_cases" }),
         __metadata("design:type", Number)
     ], GeneralStats.prototype, "deathClosedCases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], GeneralStats.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GeneralStats.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_update" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_update" }),
         __metadata("design:type", Date)
     ], GeneralStats.prototype, "lastUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mild_condition_active_cases" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mild_condition_active_cases" }),
         __metadata("design:type", Number)
     ], GeneralStats.prototype, "mildConditionActiveCases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recovered_closed_cases" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recovered_closed_cases" }),
         __metadata("design:type", Number)
     ], GeneralStats.prototype, "recoveredClosedCases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recovery_cases" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recovery_cases" }),
         __metadata("design:type", Number)
     ], GeneralStats.prototype, "recoveryCases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_cases" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_cases" }),
         __metadata("design:type", Number)
     ], GeneralStats.prototype, "totalCases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], GeneralStats.prototype, "updatedAt", void 0);
     return GeneralStats;
-}(SpeakeasyBase));
-export { GeneralStats };
+}(utils_1.SpeakeasyBase));
+exports.GeneralStats = GeneralStats;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostAssociateIamInstanceProfileActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAssociateIamInstanceProfileResponse = exports.PostAssociateIamInstanceProfileRequest = exports.PostAssociateIamInstanceProfileHeaders = exports.PostAssociateIamInstanceProfileQueryParams = exports.PostAssociateIamInstanceProfileVersionEnum = exports.PostAssociateIamInstanceProfileActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostAssociateIamInstanceProfileActionEnum;
 (function (PostAssociateIamInstanceProfileActionEnum) {
     PostAssociateIamInstanceProfileActionEnum["AssociateIamInstanceProfile"] = "AssociateIamInstanceProfile";
-})(PostAssociateIamInstanceProfileActionEnum || (PostAssociateIamInstanceProfileActionEnum = {}));
-export var PostAssociateIamInstanceProfileVersionEnum;
+})(PostAssociateIamInstanceProfileActionEnum = exports.PostAssociateIamInstanceProfileActionEnum || (exports.PostAssociateIamInstanceProfileActionEnum = {}));
+var PostAssociateIamInstanceProfileVersionEnum;
 (function (PostAssociateIamInstanceProfileVersionEnum) {
     PostAssociateIamInstanceProfileVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostAssociateIamInstanceProfileVersionEnum || (PostAssociateIamInstanceProfileVersionEnum = {}));
+})(PostAssociateIamInstanceProfileVersionEnum = exports.PostAssociateIamInstanceProfileVersionEnum || (exports.PostAssociateIamInstanceProfileVersionEnum = {}));
 var PostAssociateIamInstanceProfileQueryParams = /** @class */ (function (_super) {
     __extends(PostAssociateIamInstanceProfileQueryParams, _super);
     function PostAssociateIamInstanceProfileQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostAssociateIamInstanceProfileQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostAssociateIamInstanceProfileQueryParams.prototype, "version", void 0);
     return PostAssociateIamInstanceProfileQueryParams;
-}(SpeakeasyBase));
-export { PostAssociateIamInstanceProfileQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociateIamInstanceProfileQueryParams = PostAssociateIamInstanceProfileQueryParams;
 var PostAssociateIamInstanceProfileHeaders = /** @class */ (function (_super) {
     __extends(PostAssociateIamInstanceProfileHeaders, _super);
     function PostAssociateIamInstanceProfileHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostAssociateIamInstanceProfileHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostAssociateIamInstanceProfileHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostAssociateIamInstanceProfileHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostAssociateIamInstanceProfileHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostAssociateIamInstanceProfileHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostAssociateIamInstanceProfileHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostAssociateIamInstanceProfileHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostAssociateIamInstanceProfileHeaders;
-}(SpeakeasyBase));
-export { PostAssociateIamInstanceProfileHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociateIamInstanceProfileHeaders = PostAssociateIamInstanceProfileHeaders;
 var PostAssociateIamInstanceProfileRequest = /** @class */ (function (_super) {
     __extends(PostAssociateIamInstanceProfileRequest, _super);
     function PostAssociateIamInstanceProfileRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAssociateIamInstanceProfileQueryParams)
     ], PostAssociateIamInstanceProfileRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAssociateIamInstanceProfileHeaders)
     ], PostAssociateIamInstanceProfileRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostAssociateIamInstanceProfileRequest.prototype, "request", void 0);
     return PostAssociateIamInstanceProfileRequest;
-}(SpeakeasyBase));
-export { PostAssociateIamInstanceProfileRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociateIamInstanceProfileRequest = PostAssociateIamInstanceProfileRequest;
 var PostAssociateIamInstanceProfileResponse = /** @class */ (function (_super) {
     __extends(PostAssociateIamInstanceProfileResponse, _super);
     function PostAssociateIamInstanceProfileResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostAssociateIamInstanceProfileResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAssociateIamInstanceProfileResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAssociateIamInstanceProfileResponse.prototype, "statusCode", void 0);
     return PostAssociateIamInstanceProfileResponse;
-}(SpeakeasyBase));
-export { PostAssociateIamInstanceProfileResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAssociateIamInstanceProfileResponse = PostAssociateIamInstanceProfileResponse;

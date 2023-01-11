@@ -28,6 +28,6 @@ export declare class AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAc
 }
 export declare class AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgeResponse extends SpeakeasyBase {
     contentType: string;
-    googleCloudAssuredworkloadsV1AcknowledgeViolationResponse?: Map<string, any>;
+    googleCloudAssuredworkloadsV1AcknowledgeViolationResponse?: Record<string, any>;
     statusCode: number;
 }

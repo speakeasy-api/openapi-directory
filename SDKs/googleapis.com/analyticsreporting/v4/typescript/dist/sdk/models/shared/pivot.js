@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DimensionFilterClause } from "./dimensionfilterclause";
-import { Dimension } from "./dimension";
-import { Metric } from "./metric";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Pivot = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimensionfilterclause_1 = require("./dimensionfilterclause");
+var dimension_1 = require("./dimension");
+var metric_1 = require("./metric");
 // Pivot
 /**
  * The Pivot describes the pivot section in the request. The Pivot helps rearrange the information in the table for certain reports by pivoting your data on a second dimension.
@@ -36,25 +39,25 @@ var Pivot = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensionFilterClauses", elemType: DimensionFilterClause }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensionFilterClauses", elemType: dimensionfilterclause_1.DimensionFilterClause }),
         __metadata("design:type", Array)
     ], Pivot.prototype, "dimensionFilterClauses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensions", elemType: Dimension }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensions", elemType: dimension_1.Dimension }),
         __metadata("design:type", Array)
     ], Pivot.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxGroupCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxGroupCount" }),
         __metadata("design:type", Number)
     ], Pivot.prototype, "maxGroupCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics", elemType: Metric }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics", elemType: metric_1.Metric }),
         __metadata("design:type", Array)
     ], Pivot.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startGroup" }),
         __metadata("design:type", Number)
     ], Pivot.prototype, "startGroup", void 0);
     return Pivot;
-}(SpeakeasyBase));
-export { Pivot };
+}(utils_1.SpeakeasyBase));
+exports.Pivot = Pivot;

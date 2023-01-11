@@ -16,7 +16,7 @@ export declare class GetEventMatchesSimpleRequest extends SpeakeasyBase {
 }
 export declare class GetEventMatchesSimpleResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     matchSimples?: shared.MatchSimple[];
     statusCode: number;
 }

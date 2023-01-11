@@ -107,20 +107,20 @@ export class UpdateTemplateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateTemplate200ApplicationJsonObject?: UpdateTemplate200ApplicationJson;
+  updateTemplate200ApplicationJSONObject?: UpdateTemplate200ApplicationJson;
 
   @SpeakeasyMetadata()
-  updateTemplate401ApplicationJsonObject?: UpdateTemplate401ApplicationJson;
+  updateTemplate401ApplicationJSONObject?: UpdateTemplate401ApplicationJson;
 
   @SpeakeasyMetadata()
-  updateTemplate403ApplicationJsonObject?: UpdateTemplate403ApplicationJson;
+  updateTemplate403ApplicationJSONObject?: UpdateTemplate403ApplicationJson;
 
   @SpeakeasyMetadata()
-  updateTemplate404ApplicationJsonObject?: UpdateTemplate404ApplicationJson;
+  updateTemplate404ApplicationJSONObject?: UpdateTemplate404ApplicationJson;
 
   @SpeakeasyMetadata()
-  updateTemplate422ApplicationJsonObject?: UpdateTemplate422ApplicationJson;
+  updateTemplate422ApplicationJSONObject?: UpdateTemplate422ApplicationJson;
 
   @SpeakeasyMetadata()
-  updateTemplate500ApplicationJsonObject?: UpdateTemplate500ApplicationJson;
+  updateTemplate500ApplicationJSONObject?: UpdateTemplate500ApplicationJson;
 }

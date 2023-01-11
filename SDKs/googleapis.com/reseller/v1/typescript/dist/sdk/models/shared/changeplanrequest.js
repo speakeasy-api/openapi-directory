@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Seats } from "./seats";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChangePlanRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var seats_1 = require("./seats");
 // ChangePlanRequest
 /**
  * JSON template for the ChangePlan rpc request.
@@ -34,25 +37,25 @@ var ChangePlanRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dealCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dealCode" }),
         __metadata("design:type", String)
     ], ChangePlanRequest.prototype, "dealCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ChangePlanRequest.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=planName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=planName" }),
         __metadata("design:type", String)
     ], ChangePlanRequest.prototype, "planName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purchaseOrderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purchaseOrderId" }),
         __metadata("design:type", String)
     ], ChangePlanRequest.prototype, "purchaseOrderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seats" }),
-        __metadata("design:type", Seats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seats" }),
+        __metadata("design:type", seats_1.Seats)
     ], ChangePlanRequest.prototype, "seats", void 0);
     return ChangePlanRequest;
-}(SpeakeasyBase));
-export { ChangePlanRequest };
+}(utils_1.SpeakeasyBase));
+exports.ChangePlanRequest = ChangePlanRequest;

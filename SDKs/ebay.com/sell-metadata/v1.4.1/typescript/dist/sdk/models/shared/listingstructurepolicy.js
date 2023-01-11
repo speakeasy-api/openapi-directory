@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListingStructurePolicy = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListingStructurePolicy = /** @class */ (function (_super) {
     __extends(ListingStructurePolicy, _super);
     function ListingStructurePolicy() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryId" }),
         __metadata("design:type", String)
     ], ListingStructurePolicy.prototype, "categoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryTreeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryTreeId" }),
         __metadata("design:type", String)
     ], ListingStructurePolicy.prototype, "categoryTreeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=variationsSupported" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=variationsSupported" }),
         __metadata("design:type", Boolean)
     ], ListingStructurePolicy.prototype, "variationsSupported", void 0);
     return ListingStructurePolicy;
-}(SpeakeasyBase));
-export { ListingStructurePolicy };
+}(utils_1.SpeakeasyBase));
+exports.ListingStructurePolicy = ListingStructurePolicy;

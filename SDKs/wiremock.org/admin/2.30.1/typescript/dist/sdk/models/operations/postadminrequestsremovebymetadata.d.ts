@@ -25,8 +25,8 @@ export declare class PostAdminRequestsRemoveByMetadataRequestBodyXmlEquality ext
 }
 export declare class PostAdminRequestsRemoveByMetadataRequestBodyXPathMatch extends SpeakeasyBase {
     matchesXpath: string;
-    namespaces?: Map<string, any>;
-    valuePattern?: Map<string, any>;
+    namespaces?: Record<string, any>;
+    valuePattern?: Record<string, any>;
 }
 export declare class PostAdminRequestsRemoveByMetadataRequest extends SpeakeasyBase {
     request?: any;

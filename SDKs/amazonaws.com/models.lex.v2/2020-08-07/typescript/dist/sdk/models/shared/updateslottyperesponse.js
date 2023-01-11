@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,58 +23,60 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SlotTypeValue } from "./slottypevalue";
-import { SlotValueSelectionSetting } from "./slotvalueselectionsetting";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateSlotTypeResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var slottypevalue_1 = require("./slottypevalue");
+var slotvalueselectionsetting_1 = require("./slotvalueselectionsetting");
 var UpdateSlotTypeResponse = /** @class */ (function (_super) {
     __extends(UpdateSlotTypeResponse, _super);
     function UpdateSlotTypeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botId" }),
         __metadata("design:type", String)
     ], UpdateSlotTypeResponse.prototype, "botId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botVersion" }),
         __metadata("design:type", String)
     ], UpdateSlotTypeResponse.prototype, "botVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateTime" }),
         __metadata("design:type", Date)
     ], UpdateSlotTypeResponse.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], UpdateSlotTypeResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedDateTime" }),
         __metadata("design:type", Date)
     ], UpdateSlotTypeResponse.prototype, "lastUpdatedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localeId" }),
         __metadata("design:type", String)
     ], UpdateSlotTypeResponse.prototype, "localeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentSlotTypeSignature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentSlotTypeSignature" }),
         __metadata("design:type", String)
     ], UpdateSlotTypeResponse.prototype, "parentSlotTypeSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slotTypeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slotTypeId" }),
         __metadata("design:type", String)
     ], UpdateSlotTypeResponse.prototype, "slotTypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slotTypeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slotTypeName" }),
         __metadata("design:type", String)
     ], UpdateSlotTypeResponse.prototype, "slotTypeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slotTypeValues", elemType: SlotTypeValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slotTypeValues", elemType: slottypevalue_1.SlotTypeValue }),
         __metadata("design:type", Array)
     ], UpdateSlotTypeResponse.prototype, "slotTypeValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueSelectionSetting" }),
-        __metadata("design:type", SlotValueSelectionSetting)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueSelectionSetting" }),
+        __metadata("design:type", slotvalueselectionsetting_1.SlotValueSelectionSetting)
     ], UpdateSlotTypeResponse.prototype, "valueSelectionSetting", void 0);
     return UpdateSlotTypeResponse;
-}(SpeakeasyBase));
-export { UpdateSlotTypeResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateSlotTypeResponse = UpdateSlotTypeResponse;

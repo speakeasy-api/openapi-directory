@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InventoryItem } from "./inventoryitem";
-import { SelectionRule } from "./selectionrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuleCriteria = void 0;
+var utils_1 = require("../../../internal/utils");
+var inventoryitem_1 = require("./inventoryitem");
+var selectionrule_1 = require("./selectionrule");
 // RuleCriteria
 /**
  * This type defines the fields for a set of inventory selection rules. Required: When inventoryCriterionType is set to INVENTORY_BY_RULE or INVENTORY_ANY.
@@ -35,25 +38,25 @@ var RuleCriteria = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludeInventoryItems", elemType: InventoryItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludeInventoryItems", elemType: inventoryitem_1.InventoryItem }),
         __metadata("design:type", Array)
     ], RuleCriteria.prototype, "excludeInventoryItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludeListingIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludeListingIds" }),
         __metadata("design:type", Array)
     ], RuleCriteria.prototype, "excludeListingIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=markupInventoryItems", elemType: InventoryItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=markupInventoryItems", elemType: inventoryitem_1.InventoryItem }),
         __metadata("design:type", Array)
     ], RuleCriteria.prototype, "markupInventoryItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=markupListingIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=markupListingIds" }),
         __metadata("design:type", Array)
     ], RuleCriteria.prototype, "markupListingIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectionRules", elemType: SelectionRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectionRules", elemType: selectionrule_1.SelectionRule }),
         __metadata("design:type", Array)
     ], RuleCriteria.prototype, "selectionRules", void 0);
     return RuleCriteria;
-}(SpeakeasyBase));
-export { RuleCriteria };
+}(utils_1.SpeakeasyBase));
+exports.RuleCriteria = RuleCriteria;

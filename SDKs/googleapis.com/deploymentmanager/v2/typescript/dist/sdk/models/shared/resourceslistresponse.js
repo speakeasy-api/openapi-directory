@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Resource } from "./resource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourcesListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var resource_1 = require("./resource");
 // ResourcesListResponse
 /**
  * A response containing a partial list of resources and a page token used to build the next request if the request has been truncated.
@@ -34,13 +37,13 @@ var ResourcesListResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ResourcesListResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: Resource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: resource_1.Resource }),
         __metadata("design:type", Array)
     ], ResourcesListResponse.prototype, "resources", void 0);
     return ResourcesListResponse;
-}(SpeakeasyBase));
-export { ResourcesListResponse };
+}(utils_1.SpeakeasyBase));
+exports.ResourcesListResponse = ResourcesListResponse;

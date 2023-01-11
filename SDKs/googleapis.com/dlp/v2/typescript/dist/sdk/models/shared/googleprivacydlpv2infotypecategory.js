@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2InfoTypeCategory = exports.GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum = exports.GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = exports.GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum;
 (function (GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum) {
     GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum["IndustryUnspecified"] = "INDUSTRY_UNSPECIFIED";
     GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum["Finance"] = "FINANCE";
     GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum["Health"] = "HEALTH";
     GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum["Telecommunications"] = "TELECOMMUNICATIONS";
-})(GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum || (GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum = {}));
-export var GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum;
+})(GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum = exports.GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum || (exports.GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum = {}));
+var GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum;
 (function (GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum) {
     GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum["LocationUnspecified"] = "LOCATION_UNSPECIFIED";
     GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum["Global"] = "GLOBAL";
@@ -74,8 +77,8 @@ export var GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum;
     GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum["Venezuela"] = "VENEZUELA";
     GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum["Internal"] = "INTERNAL";
     GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum["NewZealand"] = "NEW_ZEALAND";
-})(GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum || (GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = {}));
-export var GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum;
+})(GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = exports.GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum || (exports.GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = {}));
+var GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum;
 (function (GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum) {
     GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum["TypeUnspecified"] = "TYPE_UNSPECIFIED";
     GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum["Pii"] = "PII";
@@ -85,7 +88,7 @@ export var GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum;
     GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum["GovernmentId"] = "GOVERNMENT_ID";
     GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum["Document"] = "DOCUMENT";
     GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum["ContextualInformation"] = "CONTEXTUAL_INFORMATION";
-})(GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum || (GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum = {}));
+})(GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum = exports.GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum || (exports.GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum = {}));
 // GooglePrivacyDlpV2InfoTypeCategory
 /**
  * Classification of infoTypes to organize them according to geographic location, industry, and data type.
@@ -96,17 +99,17 @@ var GooglePrivacyDlpV2InfoTypeCategory = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=industryCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=industryCategory" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2InfoTypeCategory.prototype, "industryCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationCategory" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2InfoTypeCategory.prototype, "locationCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=typeCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=typeCategory" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2InfoTypeCategory.prototype, "typeCategory", void 0);
     return GooglePrivacyDlpV2InfoTypeCategory;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2InfoTypeCategory };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2InfoTypeCategory = GooglePrivacyDlpV2InfoTypeCategory;

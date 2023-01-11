@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,188 +23,190 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchTmdbmoviesResponse = exports.SearchTmdbmoviesRequest = exports.SearchTmdbmoviesQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SearchTmdbmoviesQueryParams = /** @class */ (function (_super) {
     __extends(SearchTmdbmoviesQueryParams, _super);
     function SearchTmdbmoviesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
         __metadata("design:type", Date)
     ], SearchTmdbmoviesQueryParams.prototype, "changedateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
         __metadata("design:type", Date)
     ], SearchTmdbmoviesQueryParams.prototype, "changedateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
         __metadata("design:type", Date)
     ], SearchTmdbmoviesQueryParams.prototype, "createdateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
         __metadata("design:type", Date)
     ], SearchTmdbmoviesQueryParams.prototype, "createdateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "filesuffix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Date)
     ], SearchTmdbmoviesQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=group" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", Number)
     ], SearchTmdbmoviesQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
         __metadata("design:type", Number)
     ], SearchTmdbmoviesQueryParams.prototype, "maxlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
         __metadata("design:type", Number)
     ], SearchTmdbmoviesQueryParams.prototype, "maxlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
         __metadata("design:type", Number)
     ], SearchTmdbmoviesQueryParams.prototype, "minlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
         __metadata("design:type", Number)
     ], SearchTmdbmoviesQueryParams.prototype, "minlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.budget" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.budget" }),
         __metadata("design:type", Number)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesBudget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.genres" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.genres" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesGenres", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.homepage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.homepage" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesHomepage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.keywords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.keywords" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesKeywords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.movie_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.movie_id" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesMovieId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.original_language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.original_language" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesOriginalLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.original_title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.original_title" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesOriginalTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.overview" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.overview" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesOverview", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.popularity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.popularity" }),
         __metadata("design:type", Number)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesPopularity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.production_companies" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.production_companies" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesProductionCompanies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.production_countries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.production_countries" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesProductionCountries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.release_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.release_date" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesReleaseDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.revenue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.revenue" }),
         __metadata("design:type", Number)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesRevenue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.runtime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.runtime" }),
         __metadata("design:type", Number)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesRuntime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.spoken_languages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.spoken_languages" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesSpokenLanguages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.status" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.tagline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.tagline" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesTagline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.title" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.vote_average" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.vote_average" }),
         __metadata("design:type", Number)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesVoteAverage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.vote_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_tmdbmovies.vote_count" }),
         __metadata("design:type", Number)
     ], SearchTmdbmoviesQueryParams.prototype, "searchDbTmdbmoviesVoteCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=skip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=skip" }),
         __metadata("design:type", Number)
     ], SearchTmdbmoviesQueryParams.prototype, "skip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], SearchTmdbmoviesQueryParams.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Date)
     ], SearchTmdbmoviesQueryParams.prototype, "todate", void 0);
     return SearchTmdbmoviesQueryParams;
-}(SpeakeasyBase));
-export { SearchTmdbmoviesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SearchTmdbmoviesQueryParams = SearchTmdbmoviesQueryParams;
 var SearchTmdbmoviesRequest = /** @class */ (function (_super) {
     __extends(SearchTmdbmoviesRequest, _super);
     function SearchTmdbmoviesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchTmdbmoviesQueryParams)
     ], SearchTmdbmoviesRequest.prototype, "queryParams", void 0);
     return SearchTmdbmoviesRequest;
-}(SpeakeasyBase));
-export { SearchTmdbmoviesRequest };
+}(utils_1.SpeakeasyBase));
+exports.SearchTmdbmoviesRequest = SearchTmdbmoviesRequest;
 var SearchTmdbmoviesResponse = /** @class */ (function (_super) {
     __extends(SearchTmdbmoviesResponse, _super);
     function SearchTmdbmoviesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SearchTmdbmoviesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SearchTmdbmoviesResponse.prototype, "statusCode", void 0);
     return SearchTmdbmoviesResponse;
-}(SpeakeasyBase));
-export { SearchTmdbmoviesResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchTmdbmoviesResponse = SearchTmdbmoviesResponse;

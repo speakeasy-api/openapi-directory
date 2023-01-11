@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FactorEnumTotpAlgorithmsEnum = void 0;
+var FactorEnumTotpAlgorithmsEnum;
+(function (FactorEnumTotpAlgorithmsEnum) {
+    FactorEnumTotpAlgorithmsEnum["Sha1"] = "sha1";
+    FactorEnumTotpAlgorithmsEnum["Sha256"] = "sha256";
+    FactorEnumTotpAlgorithmsEnum["Sha512"] = "sha512";
+})(FactorEnumTotpAlgorithmsEnum = exports.FactorEnumTotpAlgorithmsEnum || (exports.FactorEnumTotpAlgorithmsEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Policy } from "./policy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePolicyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var policy_1 = require("./policy");
 // CreatePolicyResponse
 /**
  * Contains the response to a successful <a>CreatePolicy</a> request.
@@ -34,9 +37,9 @@ var CreatePolicyResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Policy)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", policy_1.Policy)
     ], CreatePolicyResponse.prototype, "policy", void 0);
     return CreatePolicyResponse;
-}(SpeakeasyBase));
-export { CreatePolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreatePolicyResponse = CreatePolicyResponse;

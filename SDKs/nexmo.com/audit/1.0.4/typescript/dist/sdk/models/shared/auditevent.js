@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventLink } from "./eventlink";
-import { EventTypesEnum } from "./eventtypesenum";
-export var AuditEventSourceEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuditEvent = exports.AuditEventSourceDescriptionEnum = exports.AuditEventSourceEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var eventlink_1 = require("./eventlink");
+var eventtypesenum_1 = require("./eventtypesenum");
+var AuditEventSourceEnum;
 (function (AuditEventSourceEnum) {
     AuditEventSourceEnum["Cd"] = "CD";
     AuditEventSourceEnum["Devapi"] = "DEVAPI";
-})(AuditEventSourceEnum || (AuditEventSourceEnum = {}));
-export var AuditEventSourceDescriptionEnum;
+})(AuditEventSourceEnum = exports.AuditEventSourceEnum || (exports.AuditEventSourceEnum = {}));
+var AuditEventSourceDescriptionEnum;
 (function (AuditEventSourceDescriptionEnum) {
     AuditEventSourceDescriptionEnum["CustomerDashboard"] = "Customer Dashboard";
     AuditEventSourceDescriptionEnum["DeveloperApi"] = "Developer API";
-})(AuditEventSourceDescriptionEnum || (AuditEventSourceDescriptionEnum = {}));
+})(AuditEventSourceDescriptionEnum = exports.AuditEventSourceDescriptionEnum || (exports.AuditEventSourceDescriptionEnum = {}));
 var AuditEvent = /** @class */ (function (_super) {
     __extends(AuditEvent, _super);
     function AuditEvent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
-        __metadata("design:type", EventLink)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
+        __metadata("design:type", eventlink_1.EventLink)
     ], AuditEvent.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_id" }),
         __metadata("design:type", String)
     ], AuditEvent.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=context" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=context" }),
+        __metadata("design:type", Object)
     ], AuditEvent.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], AuditEvent.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event_type" }),
         __metadata("design:type", String)
     ], AuditEvent.prototype, "eventType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event_type_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event_type_description" }),
         __metadata("design:type", String)
     ], AuditEvent.prototype, "eventTypeDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AuditEvent.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], AuditEvent.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source_country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_country" }),
         __metadata("design:type", String)
     ], AuditEvent.prototype, "sourceCountry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_description" }),
         __metadata("design:type", String)
     ], AuditEvent.prototype, "sourceDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source_ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_ip" }),
         __metadata("design:type", String)
     ], AuditEvent.prototype, "sourceIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_email" }),
         __metadata("design:type", String)
     ], AuditEvent.prototype, "userEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_id" }),
         __metadata("design:type", Number)
     ], AuditEvent.prototype, "userId", void 0);
     return AuditEvent;
-}(SpeakeasyBase));
-export { AuditEvent };
+}(utils_1.SpeakeasyBase));
+exports.AuditEvent = AuditEvent;

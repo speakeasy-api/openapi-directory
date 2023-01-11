@@ -12,5 +12,5 @@ export declare class UpdateOrganizationBrandingPoliciesPrioritiesRequest extends
 export declare class UpdateOrganizationBrandingPoliciesPrioritiesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateOrganizationBrandingPoliciesPriorities200ApplicationJsonObject?: Map<string, any>;
+    updateOrganizationBrandingPoliciesPriorities200ApplicationJSONObject?: Record<string, any>;
 }

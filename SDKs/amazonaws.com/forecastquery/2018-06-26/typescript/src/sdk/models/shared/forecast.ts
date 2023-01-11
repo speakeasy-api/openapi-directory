@@ -9,5 +9,5 @@ import { DataPoint } from "./datapoint";
 **/
 export class Forecast extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Predictions", elemType: DataPoint, elemDepth: 2 })
-  predictions?: Map<string, DataPoint[]>;
+  predictions?: Record<string, DataPoint[]>;
 }

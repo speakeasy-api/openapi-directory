@@ -11,7 +11,7 @@ export declare class UrbanDeliveryRequestBody extends SpeakeasyBase {
     vehicleType: string;
 }
 export declare class UrbanDeliveryRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     request?: UrbanDeliveryRequestBody;
 }
 export declare class UrbanDeliveryResponse extends SpeakeasyBase {

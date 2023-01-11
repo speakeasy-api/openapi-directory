@@ -27,5 +27,5 @@ export declare class GetglobaltimeRequest extends SpeakeasyBase {
 export declare class GetglobaltimeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getglobaltime200ApplicationJsonObject?: Getglobaltime200ApplicationJson;
+    getglobaltime200ApplicationJSONObject?: Getglobaltime200ApplicationJson;
 }

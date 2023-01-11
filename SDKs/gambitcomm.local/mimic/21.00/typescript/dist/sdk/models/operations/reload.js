@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReloadResponse = exports.ReloadRequest = exports.ReloadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReloadPathParams = /** @class */ (function (_super) {
     __extends(ReloadPathParams, _super);
     function ReloadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ReloadPathParams.prototype, "agentNum", void 0);
     return ReloadPathParams;
-}(SpeakeasyBase));
-export { ReloadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReloadPathParams = ReloadPathParams;
 var ReloadRequest = /** @class */ (function (_super) {
     __extends(ReloadRequest, _super);
     function ReloadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReloadPathParams)
     ], ReloadRequest.prototype, "pathParams", void 0);
     return ReloadRequest;
-}(SpeakeasyBase));
-export { ReloadRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReloadRequest = ReloadRequest;
 var ReloadResponse = /** @class */ (function (_super) {
     __extends(ReloadResponse, _super);
     function ReloadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReloadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReloadResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ReloadResponse.prototype, "reload200ApplicationJsonString", void 0);
+    ], ReloadResponse.prototype, "reload200ApplicationJSONString", void 0);
     return ReloadResponse;
-}(SpeakeasyBase));
-export { ReloadResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReloadResponse = ReloadResponse;

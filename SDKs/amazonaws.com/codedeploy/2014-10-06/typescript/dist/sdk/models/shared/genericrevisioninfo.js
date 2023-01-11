@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GenericRevisionInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // GenericRevisionInfo
 /**
  * Information about an application revision.
@@ -33,25 +36,25 @@ var GenericRevisionInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentGroups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentGroups" }),
         __metadata("design:type", Array)
     ], GenericRevisionInfo.prototype, "deploymentGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GenericRevisionInfo.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstUsedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstUsedTime" }),
         __metadata("design:type", Date)
     ], GenericRevisionInfo.prototype, "firstUsedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUsedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUsedTime" }),
         __metadata("design:type", Date)
     ], GenericRevisionInfo.prototype, "lastUsedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registerTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registerTime" }),
         __metadata("design:type", Date)
     ], GenericRevisionInfo.prototype, "registerTime", void 0);
     return GenericRevisionInfo;
-}(SpeakeasyBase));
-export { GenericRevisionInfo };
+}(utils_1.SpeakeasyBase));
+exports.GenericRevisionInfo = GenericRevisionInfo;

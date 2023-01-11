@@ -20,7 +20,7 @@ export class UpdateTagHeaders extends SpeakeasyBase {
 
 export class UpdateTagRequestsInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   tag?: shared.TagInput;
@@ -32,7 +32,7 @@ export class UpdateTagRequestsInput extends SpeakeasyBase {
   tag2?: shared.TagInput;
 
   @SpeakeasyMetadata({ data: "request, media_type=text/xml" })
-  textXml: Uint8Array;
+  textXML: Uint8Array;
 }
 
 

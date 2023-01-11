@@ -185,23 +185,23 @@ export class RucerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  rucer400ApplicationJsonObject?: Rucer400ApplicationJson;
+  rucer400ApplicationJSONObject?: Rucer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  rucer401ApplicationJsonObject?: Rucer401ApplicationJson;
+  rucer401ApplicationJSONObject?: Rucer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  rucer404ApplicationJsonObject?: Rucer404ApplicationJson;
+  rucer404ApplicationJSONObject?: Rucer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  rucer500ApplicationJsonObject?: Rucer500ApplicationJson;
+  rucer500ApplicationJSONObject?: Rucer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  rucer502ApplicationJsonObject?: Rucer502ApplicationJson;
+  rucer502ApplicationJSONObject?: Rucer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  rucer503ApplicationJsonObject?: Rucer503ApplicationJson;
+  rucer503ApplicationJSONObject?: Rucer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  rucer504ApplicationJsonObject?: Rucer504ApplicationJson;
+  rucer504ApplicationJSONObject?: Rucer504ApplicationJson;
 }

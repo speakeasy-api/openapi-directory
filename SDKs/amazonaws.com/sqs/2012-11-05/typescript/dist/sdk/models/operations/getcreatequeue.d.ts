@@ -7,9 +7,9 @@ export declare enum GetCreateQueueVersionEnum {
 }
 export declare class GetCreateQueueQueryParams extends SpeakeasyBase {
     action: GetCreateQueueActionEnum;
-    attribute?: Map<string, string>;
+    attribute?: Record<string, string>;
     queueName: string;
-    tag?: Map<string, string>;
+    tag?: Record<string, string>;
     version: GetCreateQueueVersionEnum;
 }
 export declare class GetCreateQueueHeaders extends SpeakeasyBase {

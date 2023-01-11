@@ -188,23 +188,23 @@ export class VrwmiResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  vrwmi400ApplicationJsonObject?: Vrwmi400ApplicationJson;
+  vrwmi400ApplicationJSONObject?: Vrwmi400ApplicationJson;
 
   @SpeakeasyMetadata()
-  vrwmi401ApplicationJsonObject?: Vrwmi401ApplicationJson;
+  vrwmi401ApplicationJSONObject?: Vrwmi401ApplicationJson;
 
   @SpeakeasyMetadata()
-  vrwmi404ApplicationJsonObject?: Vrwmi404ApplicationJson;
+  vrwmi404ApplicationJSONObject?: Vrwmi404ApplicationJson;
 
   @SpeakeasyMetadata()
-  vrwmi500ApplicationJsonObject?: Vrwmi500ApplicationJson;
+  vrwmi500ApplicationJSONObject?: Vrwmi500ApplicationJson;
 
   @SpeakeasyMetadata()
-  vrwmi502ApplicationJsonObject?: Vrwmi502ApplicationJson;
+  vrwmi502ApplicationJSONObject?: Vrwmi502ApplicationJson;
 
   @SpeakeasyMetadata()
-  vrwmi503ApplicationJsonObject?: Vrwmi503ApplicationJson;
+  vrwmi503ApplicationJSONObject?: Vrwmi503ApplicationJson;
 
   @SpeakeasyMetadata()
-  vrwmi504ApplicationJsonObject?: Vrwmi504ApplicationJson;
+  vrwmi504ApplicationJSONObject?: Vrwmi504ApplicationJson;
 }

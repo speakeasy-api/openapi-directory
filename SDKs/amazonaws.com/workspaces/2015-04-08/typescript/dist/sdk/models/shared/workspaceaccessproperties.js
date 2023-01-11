@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccessPropertyValueEnum } from "./accesspropertyvalueenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkspaceAccessProperties = void 0;
+var utils_1 = require("../../../internal/utils");
+var accesspropertyvalueenum_1 = require("./accesspropertyvalueenum");
 // WorkspaceAccessProperties
 /**
  * The device types and operating systems that can be used to access a WorkSpace. For more information, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/workspaces-network-requirements.html">Amazon WorkSpaces Client Network Requirements</a>.
@@ -34,37 +37,37 @@ var WorkspaceAccessProperties = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeviceTypeAndroid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeviceTypeAndroid" }),
         __metadata("design:type", String)
     ], WorkspaceAccessProperties.prototype, "deviceTypeAndroid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeviceTypeChromeOs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeviceTypeChromeOs" }),
         __metadata("design:type", String)
     ], WorkspaceAccessProperties.prototype, "deviceTypeChromeOs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeviceTypeIos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeviceTypeIos" }),
         __metadata("design:type", String)
     ], WorkspaceAccessProperties.prototype, "deviceTypeIos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeviceTypeLinux" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeviceTypeLinux" }),
         __metadata("design:type", String)
     ], WorkspaceAccessProperties.prototype, "deviceTypeLinux", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeviceTypeOsx" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeviceTypeOsx" }),
         __metadata("design:type", String)
     ], WorkspaceAccessProperties.prototype, "deviceTypeOsx", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeviceTypeWeb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeviceTypeWeb" }),
         __metadata("design:type", String)
     ], WorkspaceAccessProperties.prototype, "deviceTypeWeb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeviceTypeWindows" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeviceTypeWindows" }),
         __metadata("design:type", String)
     ], WorkspaceAccessProperties.prototype, "deviceTypeWindows", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeviceTypeZeroClient" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeviceTypeZeroClient" }),
         __metadata("design:type", String)
     ], WorkspaceAccessProperties.prototype, "deviceTypeZeroClient", void 0);
     return WorkspaceAccessProperties;
-}(SpeakeasyBase));
-export { WorkspaceAccessProperties };
+}(utils_1.SpeakeasyBase));
+exports.WorkspaceAccessProperties = WorkspaceAccessProperties;

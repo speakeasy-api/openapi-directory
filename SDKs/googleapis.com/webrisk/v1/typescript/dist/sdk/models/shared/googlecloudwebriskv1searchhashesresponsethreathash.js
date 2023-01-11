@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudWebriskV1SearchHashesResponseThreatHashThreatTypesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudWebriskV1SearchHashesResponseThreatHash = exports.GoogleCloudWebriskV1SearchHashesResponseThreatHashThreatTypesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudWebriskV1SearchHashesResponseThreatHashThreatTypesEnum;
 (function (GoogleCloudWebriskV1SearchHashesResponseThreatHashThreatTypesEnum) {
     GoogleCloudWebriskV1SearchHashesResponseThreatHashThreatTypesEnum["ThreatTypeUnspecified"] = "THREAT_TYPE_UNSPECIFIED";
     GoogleCloudWebriskV1SearchHashesResponseThreatHashThreatTypesEnum["Malware"] = "MALWARE";
     GoogleCloudWebriskV1SearchHashesResponseThreatHashThreatTypesEnum["SocialEngineering"] = "SOCIAL_ENGINEERING";
     GoogleCloudWebriskV1SearchHashesResponseThreatHashThreatTypesEnum["UnwantedSoftware"] = "UNWANTED_SOFTWARE";
     GoogleCloudWebriskV1SearchHashesResponseThreatHashThreatTypesEnum["SocialEngineeringExtendedCoverage"] = "SOCIAL_ENGINEERING_EXTENDED_COVERAGE";
-})(GoogleCloudWebriskV1SearchHashesResponseThreatHashThreatTypesEnum || (GoogleCloudWebriskV1SearchHashesResponseThreatHashThreatTypesEnum = {}));
+})(GoogleCloudWebriskV1SearchHashesResponseThreatHashThreatTypesEnum = exports.GoogleCloudWebriskV1SearchHashesResponseThreatHashThreatTypesEnum || (exports.GoogleCloudWebriskV1SearchHashesResponseThreatHashThreatTypesEnum = {}));
 // GoogleCloudWebriskV1SearchHashesResponseThreatHash
 /**
  * Contains threat information on a matching hash.
@@ -41,17 +44,17 @@ var GoogleCloudWebriskV1SearchHashesResponseThreatHash = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expireTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expireTime" }),
         __metadata("design:type", String)
     ], GoogleCloudWebriskV1SearchHashesResponseThreatHash.prototype, "expireTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hash" }),
         __metadata("design:type", String)
     ], GoogleCloudWebriskV1SearchHashesResponseThreatHash.prototype, "hash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=threatTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=threatTypes" }),
         __metadata("design:type", Array)
     ], GoogleCloudWebriskV1SearchHashesResponseThreatHash.prototype, "threatTypes", void 0);
     return GoogleCloudWebriskV1SearchHashesResponseThreatHash;
-}(SpeakeasyBase));
-export { GoogleCloudWebriskV1SearchHashesResponseThreatHash };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudWebriskV1SearchHashesResponseThreatHash = GoogleCloudWebriskV1SearchHashesResponseThreatHash;

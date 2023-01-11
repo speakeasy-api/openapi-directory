@@ -1,6 +1,9 @@
-export var TargetStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetStateEnum = void 0;
+var TargetStateEnum;
 (function (TargetStateEnum) {
     TargetStateEnum["Registering"] = "REGISTERING";
     TargetStateEnum["Available"] = "AVAILABLE";
     TargetStateEnum["Unavailable"] = "UNAVAILABLE";
-})(TargetStateEnum || (TargetStateEnum = {}));
+})(TargetStateEnum = exports.TargetStateEnum || (exports.TargetStateEnum = {}));

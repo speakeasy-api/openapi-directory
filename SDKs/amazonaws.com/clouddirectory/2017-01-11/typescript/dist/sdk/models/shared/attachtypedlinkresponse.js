@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TypedLinkSpecifier } from "./typedlinkspecifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttachTypedLinkResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var typedlinkspecifier_1 = require("./typedlinkspecifier");
 var AttachTypedLinkResponse = /** @class */ (function (_super) {
     __extends(AttachTypedLinkResponse, _super);
     function AttachTypedLinkResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TypedLinkSpecifier" }),
-        __metadata("design:type", TypedLinkSpecifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TypedLinkSpecifier" }),
+        __metadata("design:type", typedlinkspecifier_1.TypedLinkSpecifier)
     ], AttachTypedLinkResponse.prototype, "typedLinkSpecifier", void 0);
     return AttachTypedLinkResponse;
-}(SpeakeasyBase));
-export { AttachTypedLinkResponse };
+}(utils_1.SpeakeasyBase));
+exports.AttachTypedLinkResponse = AttachTypedLinkResponse;

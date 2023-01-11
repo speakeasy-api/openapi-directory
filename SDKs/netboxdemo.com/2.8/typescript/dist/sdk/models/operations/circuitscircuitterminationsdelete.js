@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CircuitsCircuitTerminationsDeleteResponse = exports.CircuitsCircuitTerminationsDeleteRequest = exports.CircuitsCircuitTerminationsDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CircuitsCircuitTerminationsDeletePathParams = /** @class */ (function (_super) {
     __extends(CircuitsCircuitTerminationsDeletePathParams, _super);
     function CircuitsCircuitTerminationsDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], CircuitsCircuitTerminationsDeletePathParams.prototype, "id", void 0);
     return CircuitsCircuitTerminationsDeletePathParams;
-}(SpeakeasyBase));
-export { CircuitsCircuitTerminationsDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.CircuitsCircuitTerminationsDeletePathParams = CircuitsCircuitTerminationsDeletePathParams;
 var CircuitsCircuitTerminationsDeleteRequest = /** @class */ (function (_super) {
     __extends(CircuitsCircuitTerminationsDeleteRequest, _super);
     function CircuitsCircuitTerminationsDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CircuitsCircuitTerminationsDeletePathParams)
     ], CircuitsCircuitTerminationsDeleteRequest.prototype, "pathParams", void 0);
     return CircuitsCircuitTerminationsDeleteRequest;
-}(SpeakeasyBase));
-export { CircuitsCircuitTerminationsDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.CircuitsCircuitTerminationsDeleteRequest = CircuitsCircuitTerminationsDeleteRequest;
 var CircuitsCircuitTerminationsDeleteResponse = /** @class */ (function (_super) {
     __extends(CircuitsCircuitTerminationsDeleteResponse, _super);
     function CircuitsCircuitTerminationsDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CircuitsCircuitTerminationsDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CircuitsCircuitTerminationsDeleteResponse.prototype, "statusCode", void 0);
     return CircuitsCircuitTerminationsDeleteResponse;
-}(SpeakeasyBase));
-export { CircuitsCircuitTerminationsDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.CircuitsCircuitTerminationsDeleteResponse = CircuitsCircuitTerminationsDeleteResponse;

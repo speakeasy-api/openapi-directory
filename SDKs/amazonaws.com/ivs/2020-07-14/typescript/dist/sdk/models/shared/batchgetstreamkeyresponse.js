@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BatchError } from "./batcherror";
-import { StreamKey } from "./streamkey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetStreamKeyResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var batcherror_1 = require("./batcherror");
+var streamkey_1 = require("./streamkey");
 var BatchGetStreamKeyResponse = /** @class */ (function (_super) {
     __extends(BatchGetStreamKeyResponse, _super);
     function BatchGetStreamKeyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: BatchError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: batcherror_1.BatchError }),
         __metadata("design:type", Array)
     ], BatchGetStreamKeyResponse.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streamKeys", elemType: StreamKey }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streamKeys", elemType: streamkey_1.StreamKey }),
         __metadata("design:type", Array)
     ], BatchGetStreamKeyResponse.prototype, "streamKeys", void 0);
     return BatchGetStreamKeyResponse;
-}(SpeakeasyBase));
-export { BatchGetStreamKeyResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetStreamKeyResponse = BatchGetStreamKeyResponse;

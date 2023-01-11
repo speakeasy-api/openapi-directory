@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostSetIdentityHeadersInNotificationsEnabledActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostSetIdentityHeadersInNotificationsEnabledResponse = exports.PostSetIdentityHeadersInNotificationsEnabledRequest = exports.PostSetIdentityHeadersInNotificationsEnabledHeaders = exports.PostSetIdentityHeadersInNotificationsEnabledQueryParams = exports.PostSetIdentityHeadersInNotificationsEnabledVersionEnum = exports.PostSetIdentityHeadersInNotificationsEnabledActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostSetIdentityHeadersInNotificationsEnabledActionEnum;
 (function (PostSetIdentityHeadersInNotificationsEnabledActionEnum) {
     PostSetIdentityHeadersInNotificationsEnabledActionEnum["SetIdentityHeadersInNotificationsEnabled"] = "SetIdentityHeadersInNotificationsEnabled";
-})(PostSetIdentityHeadersInNotificationsEnabledActionEnum || (PostSetIdentityHeadersInNotificationsEnabledActionEnum = {}));
-export var PostSetIdentityHeadersInNotificationsEnabledVersionEnum;
+})(PostSetIdentityHeadersInNotificationsEnabledActionEnum = exports.PostSetIdentityHeadersInNotificationsEnabledActionEnum || (exports.PostSetIdentityHeadersInNotificationsEnabledActionEnum = {}));
+var PostSetIdentityHeadersInNotificationsEnabledVersionEnum;
 (function (PostSetIdentityHeadersInNotificationsEnabledVersionEnum) {
     PostSetIdentityHeadersInNotificationsEnabledVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(PostSetIdentityHeadersInNotificationsEnabledVersionEnum || (PostSetIdentityHeadersInNotificationsEnabledVersionEnum = {}));
+})(PostSetIdentityHeadersInNotificationsEnabledVersionEnum = exports.PostSetIdentityHeadersInNotificationsEnabledVersionEnum || (exports.PostSetIdentityHeadersInNotificationsEnabledVersionEnum = {}));
 var PostSetIdentityHeadersInNotificationsEnabledQueryParams = /** @class */ (function (_super) {
     __extends(PostSetIdentityHeadersInNotificationsEnabledQueryParams, _super);
     function PostSetIdentityHeadersInNotificationsEnabledQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostSetIdentityHeadersInNotificationsEnabledQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostSetIdentityHeadersInNotificationsEnabledQueryParams.prototype, "version", void 0);
     return PostSetIdentityHeadersInNotificationsEnabledQueryParams;
-}(SpeakeasyBase));
-export { PostSetIdentityHeadersInNotificationsEnabledQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostSetIdentityHeadersInNotificationsEnabledQueryParams = PostSetIdentityHeadersInNotificationsEnabledQueryParams;
 var PostSetIdentityHeadersInNotificationsEnabledHeaders = /** @class */ (function (_super) {
     __extends(PostSetIdentityHeadersInNotificationsEnabledHeaders, _super);
     function PostSetIdentityHeadersInNotificationsEnabledHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostSetIdentityHeadersInNotificationsEnabledHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostSetIdentityHeadersInNotificationsEnabledHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostSetIdentityHeadersInNotificationsEnabledHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostSetIdentityHeadersInNotificationsEnabledHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostSetIdentityHeadersInNotificationsEnabledHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostSetIdentityHeadersInNotificationsEnabledHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostSetIdentityHeadersInNotificationsEnabledHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostSetIdentityHeadersInNotificationsEnabledHeaders;
-}(SpeakeasyBase));
-export { PostSetIdentityHeadersInNotificationsEnabledHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostSetIdentityHeadersInNotificationsEnabledHeaders = PostSetIdentityHeadersInNotificationsEnabledHeaders;
 var PostSetIdentityHeadersInNotificationsEnabledRequest = /** @class */ (function (_super) {
     __extends(PostSetIdentityHeadersInNotificationsEnabledRequest, _super);
     function PostSetIdentityHeadersInNotificationsEnabledRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostSetIdentityHeadersInNotificationsEnabledQueryParams)
     ], PostSetIdentityHeadersInNotificationsEnabledRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostSetIdentityHeadersInNotificationsEnabledHeaders)
     ], PostSetIdentityHeadersInNotificationsEnabledRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostSetIdentityHeadersInNotificationsEnabledRequest.prototype, "request", void 0);
     return PostSetIdentityHeadersInNotificationsEnabledRequest;
-}(SpeakeasyBase));
-export { PostSetIdentityHeadersInNotificationsEnabledRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostSetIdentityHeadersInNotificationsEnabledRequest = PostSetIdentityHeadersInNotificationsEnabledRequest;
 var PostSetIdentityHeadersInNotificationsEnabledResponse = /** @class */ (function (_super) {
     __extends(PostSetIdentityHeadersInNotificationsEnabledResponse, _super);
     function PostSetIdentityHeadersInNotificationsEnabledResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostSetIdentityHeadersInNotificationsEnabledResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostSetIdentityHeadersInNotificationsEnabledResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostSetIdentityHeadersInNotificationsEnabledResponse.prototype, "statusCode", void 0);
     return PostSetIdentityHeadersInNotificationsEnabledResponse;
-}(SpeakeasyBase));
-export { PostSetIdentityHeadersInNotificationsEnabledResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostSetIdentityHeadersInNotificationsEnabledResponse = PostSetIdentityHeadersInNotificationsEnabledResponse;

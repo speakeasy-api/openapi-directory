@@ -1,10 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetSearchCarIncentiveOemOfferTypeEnum {
-    Lease = "lease",
-    Finance = "finance",
-    Cash = "cash"
-}
 export declare class GetSearchCarIncentiveOemQueryParams extends SpeakeasyBase {
     acquisitionFee?: string;
     apiKey?: string;
@@ -34,7 +29,7 @@ export declare class GetSearchCarIncentiveOemQueryParams extends SpeakeasyBase {
     monthlyPerThousand?: string;
     msrp?: string;
     netCapitalisedCost?: string;
-    offerType?: GetSearchCarIncentiveOemOfferTypeEnum;
+    offerType?: shared.ApiKeyEnum3;
     radius?: number;
     rangeFacets?: string;
     rows?: number;
@@ -55,7 +50,7 @@ export declare class GetSearchCarIncentiveOemRequest extends SpeakeasyBase {
 }
 export declare class GetSearchCarIncentiveOemResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     searchResponse?: shared.SearchResponse;
     statusCode: number;
 }

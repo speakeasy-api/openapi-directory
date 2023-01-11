@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ChannelChannelTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Channel = exports.ChannelChannelTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ChannelChannelTypeEnum;
 (function (ChannelChannelTypeEnum) {
     ChannelChannelTypeEnum["ChannelTypeUnspecified"] = "CHANNEL_TYPE_UNSPECIFIED";
     ChannelChannelTypeEnum["Stable"] = "STABLE";
@@ -33,7 +36,7 @@ export var ChannelChannelTypeEnum;
     ChannelChannelTypeEnum["CanaryAsan"] = "CANARY_ASAN";
     ChannelChannelTypeEnum["All"] = "ALL";
     ChannelChannelTypeEnum["Extended"] = "EXTENDED";
-})(ChannelChannelTypeEnum || (ChannelChannelTypeEnum = {}));
+})(ChannelChannelTypeEnum = exports.ChannelChannelTypeEnum || (exports.ChannelChannelTypeEnum = {}));
 // Channel
 /**
  * Each Channel is owned by a Platform and owns a collection of versions. Possible Channels are listed in the Channel enum below. Not all Channels are available for every Platform (e.g. CANARY does not exist for LINUX).
@@ -44,13 +47,13 @@ var Channel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelType" }),
         __metadata("design:type", String)
     ], Channel.prototype, "channelType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Channel.prototype, "name", void 0);
     return Channel;
-}(SpeakeasyBase));
-export { Channel };
+}(utils_1.SpeakeasyBase));
+exports.Channel = Channel;

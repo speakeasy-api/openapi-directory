@@ -9,5 +9,5 @@ export declare class LoginProfile extends SpeakeasyBase {
     name?: string;
     posixAccounts?: PosixAccount[];
     securityKeys?: SecurityKey[];
-    sshPublicKeys?: Map<string, SshPublicKey>;
+    sshPublicKeys?: Record<string, SshPublicKey>;
 }

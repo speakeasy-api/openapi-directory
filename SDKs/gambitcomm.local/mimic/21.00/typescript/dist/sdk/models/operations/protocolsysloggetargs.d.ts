@@ -8,5 +8,5 @@ export declare class ProtocolSyslogGetArgsRequest extends SpeakeasyBase {
 export declare class ProtocolSyslogGetArgsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSyslogGetArgs200ApplicationJsonObject?: Map<string, any>;
+    protocolSyslogGetArgs200ApplicationJSONObject?: Record<string, any>;
 }

@@ -22,5 +22,5 @@ export class StopResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  stop200ApplicationJsonString?: string;
+  stop200ApplicationJSONString?: string;
 }

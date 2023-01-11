@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedDevice } from "./nesteddevice";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NestedVirtualChassis = void 0;
+var utils_1 = require("../../../internal/utils");
+var nesteddevice_1 = require("./nesteddevice");
 var NestedVirtualChassis = /** @class */ (function (_super) {
     __extends(NestedVirtualChassis, _super);
     function NestedVirtualChassis() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], NestedVirtualChassis.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=master" }),
-        __metadata("design:type", NestedDevice)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=master" }),
+        __metadata("design:type", nesteddevice_1.NestedDevice)
     ], NestedVirtualChassis.prototype, "master", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=member_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=member_count" }),
         __metadata("design:type", Number)
     ], NestedVirtualChassis.prototype, "memberCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], NestedVirtualChassis.prototype, "url", void 0);
     return NestedVirtualChassis;
-}(SpeakeasyBase));
-export { NestedVirtualChassis };
+}(utils_1.SpeakeasyBase));
+exports.NestedVirtualChassis = NestedVirtualChassis;

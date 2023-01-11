@@ -15,7 +15,7 @@ export class CreateBotVersionResponse extends SpeakeasyBase {
   botVersion?: string;
 
   @SpeakeasyMetadata({ data: "json, name=botVersionLocaleSpecification", elemType: BotVersionLocaleDetails })
-  botVersionLocaleSpecification?: Map<string, BotVersionLocaleDetails>;
+  botVersionLocaleSpecification?: Record<string, BotVersionLocaleDetails>;
 
   @SpeakeasyMetadata({ data: "json, name=creationDateTime" })
   creationDateTime?: Date;

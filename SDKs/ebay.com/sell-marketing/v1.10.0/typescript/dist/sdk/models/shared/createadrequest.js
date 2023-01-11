@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateAdRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // CreateAdRequest
 /**
  * This type defines the fields for the create ad request.
@@ -33,13 +36,13 @@ var CreateAdRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bidPercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bidPercentage" }),
         __metadata("design:type", String)
     ], CreateAdRequest.prototype, "bidPercentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listingId" }),
         __metadata("design:type", String)
     ], CreateAdRequest.prototype, "listingId", void 0);
     return CreateAdRequest;
-}(SpeakeasyBase));
-export { CreateAdRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateAdRequest = CreateAdRequest;

@@ -57,5 +57,5 @@ export class UpdateLocationSmbResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateLocationSmbResponse?: Map<string, any>;
+  updateLocationSmbResponse?: Record<string, any>;
 }

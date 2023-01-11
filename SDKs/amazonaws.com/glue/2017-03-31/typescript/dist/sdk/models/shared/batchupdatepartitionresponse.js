@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BatchUpdatePartitionFailureEntry } from "./batchupdatepartitionfailureentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchUpdatePartitionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var batchupdatepartitionfailureentry_1 = require("./batchupdatepartitionfailureentry");
 var BatchUpdatePartitionResponse = /** @class */ (function (_super) {
     __extends(BatchUpdatePartitionResponse, _super);
     function BatchUpdatePartitionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Errors", elemType: BatchUpdatePartitionFailureEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Errors", elemType: batchupdatepartitionfailureentry_1.BatchUpdatePartitionFailureEntry }),
         __metadata("design:type", Array)
     ], BatchUpdatePartitionResponse.prototype, "errors", void 0);
     return BatchUpdatePartitionResponse;
-}(SpeakeasyBase));
-export { BatchUpdatePartitionResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchUpdatePartitionResponse = BatchUpdatePartitionResponse;

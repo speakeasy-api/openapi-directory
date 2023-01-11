@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoScalingGroup } from "./autoscalinggroup";
-import { Instance } from "./instance";
-import { LaunchConfiguration } from "./launchconfiguration";
-import { LaunchTemplate } from "./launchtemplate";
-import { LoadBalancer } from "./loadbalancer";
-import { Queue } from "./queue";
-import { Trigger } from "./trigger";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentResourceDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var autoscalinggroup_1 = require("./autoscalinggroup");
+var instance_1 = require("./instance");
+var launchconfiguration_1 = require("./launchconfiguration");
+var launchtemplate_1 = require("./launchtemplate");
+var loadbalancer_1 = require("./loadbalancer");
+var queue_1 = require("./queue");
+var trigger_1 = require("./trigger");
 // EnvironmentResourceDescription
 /**
  * Describes the AWS resources in use by this environment. This data is live.
@@ -40,37 +43,37 @@ var EnvironmentResourceDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: AutoScalingGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: autoscalinggroup_1.AutoScalingGroup }),
         __metadata("design:type", Array)
     ], EnvironmentResourceDescription.prototype, "autoScalingGroups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnvironmentResourceDescription.prototype, "environmentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Instance }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: instance_1.Instance }),
         __metadata("design:type", Array)
     ], EnvironmentResourceDescription.prototype, "instances", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: LaunchConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: launchconfiguration_1.LaunchConfiguration }),
         __metadata("design:type", Array)
     ], EnvironmentResourceDescription.prototype, "launchConfigurations", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: LaunchTemplate }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: launchtemplate_1.LaunchTemplate }),
         __metadata("design:type", Array)
     ], EnvironmentResourceDescription.prototype, "launchTemplates", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: LoadBalancer }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: loadbalancer_1.LoadBalancer }),
         __metadata("design:type", Array)
     ], EnvironmentResourceDescription.prototype, "loadBalancers", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Queue }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: queue_1.Queue }),
         __metadata("design:type", Array)
     ], EnvironmentResourceDescription.prototype, "queues", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Trigger }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: trigger_1.Trigger }),
         __metadata("design:type", Array)
     ], EnvironmentResourceDescription.prototype, "triggers", void 0);
     return EnvironmentResourceDescription;
-}(SpeakeasyBase));
-export { EnvironmentResourceDescription };
+}(utils_1.SpeakeasyBase));
+exports.EnvironmentResourceDescription = EnvironmentResourceDescription;

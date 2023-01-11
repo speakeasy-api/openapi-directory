@@ -13,7 +13,7 @@ export declare class GetTokenMetadataOfUtxoRequest extends SpeakeasyBase {
 }
 export declare class GetTokenMetadataOfUtxoResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     getTokenMetadataResponse?: shared.GetTokenMetadataResponse;
 }

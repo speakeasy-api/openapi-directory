@@ -15,5 +15,5 @@ export declare class GetAllDirectDepositResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     directDeposits?: shared.DirectDeposit[];
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }

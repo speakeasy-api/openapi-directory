@@ -24,7 +24,7 @@ export declare class ListFaxMediaListFaxMediaResponse extends SpeakeasyBase {
     meta?: ListFaxMediaListFaxMediaResponseMeta;
 }
 export declare class ListFaxMediaRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     pathParams: ListFaxMediaPathParams;
     queryParams: ListFaxMediaQueryParams;
     security: ListFaxMediaSecurity;

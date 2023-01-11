@@ -11,10 +11,10 @@ export class SetEurekaInfoRequest extends SpeakeasyBase {
 
 export class SetEurekaInfoResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  body?: Uint8Array;
+  contentType: string;
 
   @SpeakeasyMetadata()
-  contentType: string;
+  setEurekaInfo200TextPlainObject?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

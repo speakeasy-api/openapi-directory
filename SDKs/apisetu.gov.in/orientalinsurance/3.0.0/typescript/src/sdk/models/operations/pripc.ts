@@ -191,23 +191,23 @@ export class PripcResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  pripc400ApplicationJsonObject?: Pripc400ApplicationJson;
+  pripc400ApplicationJSONObject?: Pripc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  pripc401ApplicationJsonObject?: Pripc401ApplicationJson;
+  pripc401ApplicationJSONObject?: Pripc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  pripc404ApplicationJsonObject?: Pripc404ApplicationJson;
+  pripc404ApplicationJSONObject?: Pripc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  pripc500ApplicationJsonObject?: Pripc500ApplicationJson;
+  pripc500ApplicationJSONObject?: Pripc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  pripc502ApplicationJsonObject?: Pripc502ApplicationJson;
+  pripc502ApplicationJSONObject?: Pripc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  pripc503ApplicationJsonObject?: Pripc503ApplicationJson;
+  pripc503ApplicationJSONObject?: Pripc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  pripc504ApplicationJsonObject?: Pripc504ApplicationJson;
+  pripc504ApplicationJSONObject?: Pripc504ApplicationJson;
 }

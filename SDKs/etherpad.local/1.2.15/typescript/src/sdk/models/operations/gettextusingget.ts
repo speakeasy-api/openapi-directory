@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetTextUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=rev" })
   rev?: string;
@@ -34,7 +34,7 @@ export class GetTextUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -46,7 +46,7 @@ export class GetTextUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -58,7 +58,7 @@ export class GetTextUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -79,14 +79,14 @@ export class GetTextUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getTextUsingGet200ApplicationJsonObject?: GetTextUsingGet200ApplicationJson;
+  getTextUsingGET200ApplicationJSONObject?: GetTextUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getTextUsingGet400ApplicationJsonObject?: GetTextUsingGet400ApplicationJson;
+  getTextUsingGET400ApplicationJSONObject?: GetTextUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getTextUsingGet401ApplicationJsonObject?: GetTextUsingGet401ApplicationJson;
+  getTextUsingGET401ApplicationJSONObject?: GetTextUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getTextUsingGet500ApplicationJsonObject?: GetTextUsingGet500ApplicationJson;
+  getTextUsingGET500ApplicationJSONObject?: GetTextUsingGet500ApplicationJson;
 }

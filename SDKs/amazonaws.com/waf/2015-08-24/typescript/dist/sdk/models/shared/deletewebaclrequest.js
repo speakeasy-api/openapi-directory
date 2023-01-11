@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteWebAclRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteWebAclRequest = /** @class */ (function (_super) {
     __extends(DeleteWebAclRequest, _super);
     function DeleteWebAclRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChangeToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChangeToken" }),
         __metadata("design:type", String)
     ], DeleteWebAclRequest.prototype, "changeToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WebACLId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WebACLId" }),
         __metadata("design:type", String)
-    ], DeleteWebAclRequest.prototype, "webAclId", void 0);
+    ], DeleteWebAclRequest.prototype, "webACLId", void 0);
     return DeleteWebAclRequest;
-}(SpeakeasyBase));
-export { DeleteWebAclRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteWebAclRequest = DeleteWebAclRequest;

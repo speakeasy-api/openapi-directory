@@ -1,4 +1,7 @@
-export var CapacityProviderFieldEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CapacityProviderFieldEnum = void 0;
+var CapacityProviderFieldEnum;
 (function (CapacityProviderFieldEnum) {
     CapacityProviderFieldEnum["Tags"] = "TAGS";
-})(CapacityProviderFieldEnum || (CapacityProviderFieldEnum = {}));
+})(CapacityProviderFieldEnum = exports.CapacityProviderFieldEnum || (exports.CapacityProviderFieldEnum = {}));

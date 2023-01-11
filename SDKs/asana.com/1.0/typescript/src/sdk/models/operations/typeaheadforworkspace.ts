@@ -8,24 +8,6 @@ export class TypeaheadForWorkspacePathParams extends SpeakeasyBase {
   workspaceGid: string;
 }
 
-export enum TypeaheadForWorkspaceResourceTypeEnum {
-    CustomField = "custom_field",
-    Portfolio = "portfolio",
-    Project = "project",
-    Tag = "tag",
-    Task = "task",
-    User = "user"
-}
-
-export enum TypeaheadForWorkspaceTypeEnum {
-    CustomField = "custom_field",
-    Portfolio = "portfolio",
-    Project = "project",
-    Tag = "tag",
-    Task = "task",
-    User = "user"
-}
-
 
 export class TypeaheadForWorkspaceQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=count" })
@@ -41,10 +23,10 @@ export class TypeaheadForWorkspaceQueryParams extends SpeakeasyBase {
   query?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=resource_type" })
-  resourceType: TypeaheadForWorkspaceResourceTypeEnum;
+  resourceType: shared.WorkspacePathGidEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type" })
-  type?: TypeaheadForWorkspaceTypeEnum;
+  type?: shared.WorkspacePathGidEnum;
 }
 
 
@@ -78,5 +60,5 @@ export class TypeaheadForWorkspaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  typeaheadForWorkspace200ApplicationJsonObject?: TypeaheadForWorkspace200ApplicationJson;
+  typeaheadForWorkspace200ApplicationJSONObject?: TypeaheadForWorkspace200ApplicationJson;
 }

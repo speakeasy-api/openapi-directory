@@ -5,6 +5,6 @@ export declare class PaymentInitiationPaymentListRequest extends SpeakeasyBase {
 }
 export declare class PaymentInitiationPaymentListResponse extends SpeakeasyBase {
     contentType: string;
-    paymentInitiationPaymentListResponse?: Map<string, any>;
+    paymentInitiationPaymentListResponse?: Record<string, any>;
     statusCode: number;
 }

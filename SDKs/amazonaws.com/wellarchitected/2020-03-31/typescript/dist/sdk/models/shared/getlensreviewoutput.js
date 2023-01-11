@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LensReview } from "./lensreview";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLensReviewOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var lensreview_1 = require("./lensreview");
 // GetLensReviewOutput
 /**
  * Output of a get lens review call.
@@ -34,17 +37,17 @@ var GetLensReviewOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LensReview" }),
-        __metadata("design:type", LensReview)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LensReview" }),
+        __metadata("design:type", lensreview_1.LensReview)
     ], GetLensReviewOutput.prototype, "lensReview", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MilestoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MilestoneNumber" }),
         __metadata("design:type", Number)
     ], GetLensReviewOutput.prototype, "milestoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkloadId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkloadId" }),
         __metadata("design:type", String)
     ], GetLensReviewOutput.prototype, "workloadId", void 0);
     return GetLensReviewOutput;
-}(SpeakeasyBase));
-export { GetLensReviewOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetLensReviewOutput = GetLensReviewOutput;

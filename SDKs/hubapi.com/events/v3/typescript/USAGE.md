@@ -1,0 +1,35 @@
+<!-- Start SDK Example Usage -->
+```typescript
+import { SDK, withSecurity} from "openapi";
+import { GetEventsV3EventsGetPageRequest, GetEventsV3EventsGetPageResponse } from "openapi/src/sdk/models/operations";
+import { AxiosError } from "axios";
+
+
+const sdk = new SDK();
+    
+const req: GetEventsV3EventsGetPageRequest = {
+  security: {
+    hapikey: {
+      apiKey: "YOUR_API_KEY_HERE",
+    },
+  },
+  queryParams: {
+    after: "sit",
+    before: "voluptas",
+    eventType: "culpa",
+    limit: 501233450539197794,
+    objectId: 3390393562759376202,
+    objectType: "dolor",
+    occurredAfter: "2009-11-26T21:53:53Z",
+    occurredBefore: "1978-05-28T16:08:43Z",
+    sort: [
+      "et",
+    ],
+  },
+};
+
+sdk.events.getEventsV3EventsGetPage(req).then((res: GetEventsV3EventsGetPageResponse | AxiosError) => {
+   // handle response
+});
+```
+<!-- End SDK Example Usage -->

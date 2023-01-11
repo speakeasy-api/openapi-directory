@@ -20,7 +20,7 @@ export class DeleteCustomFieldQueryParams extends SpeakeasyBase {
 
 export class DeleteCustomField200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -44,5 +44,5 @@ export class DeleteCustomFieldResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteCustomField200ApplicationJsonObject?: DeleteCustomField200ApplicationJson;
+  deleteCustomField200ApplicationJSONObject?: DeleteCustomField200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GlacierJobDescription } from "./glacierjobdescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListJobsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var glacierjobdescription_1 = require("./glacierjobdescription");
 // ListJobsOutput
 /**
  * Contains the Amazon S3 Glacier response to your request.
@@ -34,13 +37,13 @@ var ListJobsOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobList", elemType: GlacierJobDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobList", elemType: glacierjobdescription_1.GlacierJobDescription }),
         __metadata("design:type", Array)
     ], ListJobsOutput.prototype, "jobList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Marker" }),
         __metadata("design:type", String)
     ], ListJobsOutput.prototype, "marker", void 0);
     return ListJobsOutput;
-}(SpeakeasyBase));
-export { ListJobsOutput };
+}(utils_1.SpeakeasyBase));
+exports.ListJobsOutput = ListJobsOutput;

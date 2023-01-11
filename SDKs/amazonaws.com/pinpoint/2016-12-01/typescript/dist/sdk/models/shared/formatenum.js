@@ -1,5 +1,8 @@
-export var FormatEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FormatEnum = void 0;
+var FormatEnum;
 (function (FormatEnum) {
     FormatEnum["Csv"] = "CSV";
     FormatEnum["Json"] = "JSON";
-})(FormatEnum || (FormatEnum = {}));
+})(FormatEnum = exports.FormatEnum || (exports.FormatEnum = {}));

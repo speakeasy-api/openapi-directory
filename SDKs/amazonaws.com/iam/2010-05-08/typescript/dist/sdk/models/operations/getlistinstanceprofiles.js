@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetListInstanceProfilesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetListInstanceProfilesResponse = exports.GetListInstanceProfilesRequest = exports.GetListInstanceProfilesHeaders = exports.GetListInstanceProfilesQueryParams = exports.GetListInstanceProfilesVersionEnum = exports.GetListInstanceProfilesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetListInstanceProfilesActionEnum;
 (function (GetListInstanceProfilesActionEnum) {
     GetListInstanceProfilesActionEnum["ListInstanceProfiles"] = "ListInstanceProfiles";
-})(GetListInstanceProfilesActionEnum || (GetListInstanceProfilesActionEnum = {}));
-export var GetListInstanceProfilesVersionEnum;
+})(GetListInstanceProfilesActionEnum = exports.GetListInstanceProfilesActionEnum || (exports.GetListInstanceProfilesActionEnum = {}));
+var GetListInstanceProfilesVersionEnum;
 (function (GetListInstanceProfilesVersionEnum) {
     GetListInstanceProfilesVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetListInstanceProfilesVersionEnum || (GetListInstanceProfilesVersionEnum = {}));
+})(GetListInstanceProfilesVersionEnum = exports.GetListInstanceProfilesVersionEnum || (exports.GetListInstanceProfilesVersionEnum = {}));
 var GetListInstanceProfilesQueryParams = /** @class */ (function (_super) {
     __extends(GetListInstanceProfilesQueryParams, _super);
     function GetListInstanceProfilesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetListInstanceProfilesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetListInstanceProfilesQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
         __metadata("design:type", Number)
     ], GetListInstanceProfilesQueryParams.prototype, "maxItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PathPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PathPrefix" }),
         __metadata("design:type", String)
     ], GetListInstanceProfilesQueryParams.prototype, "pathPrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetListInstanceProfilesQueryParams.prototype, "version", void 0);
     return GetListInstanceProfilesQueryParams;
-}(SpeakeasyBase));
-export { GetListInstanceProfilesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetListInstanceProfilesQueryParams = GetListInstanceProfilesQueryParams;
 var GetListInstanceProfilesHeaders = /** @class */ (function (_super) {
     __extends(GetListInstanceProfilesHeaders, _super);
     function GetListInstanceProfilesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetListInstanceProfilesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetListInstanceProfilesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetListInstanceProfilesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetListInstanceProfilesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetListInstanceProfilesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetListInstanceProfilesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetListInstanceProfilesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetListInstanceProfilesHeaders;
-}(SpeakeasyBase));
-export { GetListInstanceProfilesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetListInstanceProfilesHeaders = GetListInstanceProfilesHeaders;
 var GetListInstanceProfilesRequest = /** @class */ (function (_super) {
     __extends(GetListInstanceProfilesRequest, _super);
     function GetListInstanceProfilesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListInstanceProfilesQueryParams)
     ], GetListInstanceProfilesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListInstanceProfilesHeaders)
     ], GetListInstanceProfilesRequest.prototype, "headers", void 0);
     return GetListInstanceProfilesRequest;
-}(SpeakeasyBase));
-export { GetListInstanceProfilesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetListInstanceProfilesRequest = GetListInstanceProfilesRequest;
 var GetListInstanceProfilesResponse = /** @class */ (function (_super) {
     __extends(GetListInstanceProfilesResponse, _super);
     function GetListInstanceProfilesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetListInstanceProfilesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetListInstanceProfilesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetListInstanceProfilesResponse.prototype, "statusCode", void 0);
     return GetListInstanceProfilesResponse;
-}(SpeakeasyBase));
-export { GetListInstanceProfilesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetListInstanceProfilesResponse = GetListInstanceProfilesResponse;

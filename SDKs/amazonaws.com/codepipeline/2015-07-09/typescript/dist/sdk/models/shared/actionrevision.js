@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionRevision = void 0;
+var utils_1 = require("../../../internal/utils");
 // ActionRevision
 /**
  * Represents information about the version (or revision) of an action.
@@ -33,17 +36,17 @@ var ActionRevision = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], ActionRevision.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionChangeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionChangeId" }),
         __metadata("design:type", String)
     ], ActionRevision.prototype, "revisionChangeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionId" }),
         __metadata("design:type", String)
     ], ActionRevision.prototype, "revisionId", void 0);
     return ActionRevision;
-}(SpeakeasyBase));
-export { ActionRevision };
+}(utils_1.SpeakeasyBase));
+exports.ActionRevision = ActionRevision;

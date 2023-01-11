@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PulsarDataExporterConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // PulsarDataExporterConfig
 /**
  * The configuration for kafka access
@@ -33,21 +36,21 @@ var PulsarDataExporterConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=namespace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=namespace" }),
         __metadata("design:type", String)
     ], PulsarDataExporterConfig.prototype, "namespace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant" }),
         __metadata("design:type", String)
     ], PulsarDataExporterConfig.prototype, "tenant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topic" }),
         __metadata("design:type", String)
     ], PulsarDataExporterConfig.prototype, "topic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", Array)
     ], PulsarDataExporterConfig.prototype, "uri", void 0);
     return PulsarDataExporterConfig;
-}(SpeakeasyBase));
-export { PulsarDataExporterConfig };
+}(utils_1.SpeakeasyBase));
+exports.PulsarDataExporterConfig = PulsarDataExporterConfig;

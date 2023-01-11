@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PagespeedApiFormatStringV4 } from "./pagespeedapiformatstringv4";
-import { PagespeedApiImageV4 } from "./pagespeedapiimagev4";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PagespeedApiPagespeedResponseV4 = exports.PagespeedApiPagespeedResponseV4Version = exports.PagespeedApiPagespeedResponseV4RuleGroups = exports.PagespeedApiPagespeedResponseV4PageStats = exports.PagespeedApiPagespeedResponseV4LoadingExperience = exports.PagespeedApiPagespeedResponseV4LoadingExperienceMetrics = exports.PagespeedApiPagespeedResponseV4LoadingExperienceMetricsDistributions = exports.PagespeedApiPagespeedResponseV4FormattedResults = exports.PagespeedApiPagespeedResponseV4FormattedResultsRuleResults = exports.PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocks = exports.PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocksUrls = void 0;
+var utils_1 = require("../../../internal/utils");
+var pagespeedapiformatstringv4_1 = require("./pagespeedapiformatstringv4");
+var pagespeedapiimagev4_1 = require("./pagespeedapiimagev4");
 var PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocksUrls = /** @class */ (function (_super) {
     __extends(PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocksUrls, _super);
     function PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocksUrls() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: PagespeedApiFormatStringV4 }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: pagespeedapiformatstringv4_1.PagespeedApiFormatStringV4 }),
         __metadata("design:type", Array)
     ], PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocksUrls.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PagespeedApiFormatStringV4)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", pagespeedapiformatstringv4_1.PagespeedApiFormatStringV4)
     ], PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocksUrls.prototype, "result", void 0);
     return PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocksUrls;
-}(SpeakeasyBase));
-export { PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocksUrls };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocksUrls = PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocksUrls;
 var PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocks = /** @class */ (function (_super) {
     __extends(PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocks, _super);
     function PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PagespeedApiFormatStringV4)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", pagespeedapiformatstringv4_1.PagespeedApiFormatStringV4)
     ], PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocks.prototype, "header", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocksUrls }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocksUrls }),
         __metadata("design:type", Array)
     ], PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocks.prototype, "urls", void 0);
     return PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocks;
-}(SpeakeasyBase));
-export { PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocks };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocks = PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocks;
 // PagespeedApiPagespeedResponseV4FormattedResultsRuleResults
 /**
  * The enum-like identifier for this rule. For instance "EnableKeepAlive" or "AvoidCssImport". Not localized.
@@ -67,32 +70,32 @@ var PagespeedApiPagespeedResponseV4FormattedResultsRuleResults = /** @class */ (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], PagespeedApiPagespeedResponseV4FormattedResultsRuleResults.prototype, "beta", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PagespeedApiPagespeedResponseV4FormattedResultsRuleResults.prototype, "groups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4FormattedResultsRuleResults.prototype, "localizedRuleName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4FormattedResultsRuleResults.prototype, "ruleImpact", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PagespeedApiFormatStringV4)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", pagespeedapiformatstringv4_1.PagespeedApiFormatStringV4)
     ], PagespeedApiPagespeedResponseV4FormattedResultsRuleResults.prototype, "summary", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocks }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: PagespeedApiPagespeedResponseV4FormattedResultsRuleResultsUrlBlocks }),
         __metadata("design:type", Array)
     ], PagespeedApiPagespeedResponseV4FormattedResultsRuleResults.prototype, "urlBlocks", void 0);
     return PagespeedApiPagespeedResponseV4FormattedResultsRuleResults;
-}(SpeakeasyBase));
-export { PagespeedApiPagespeedResponseV4FormattedResultsRuleResults };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiPagespeedResponseV4FormattedResultsRuleResults = PagespeedApiPagespeedResponseV4FormattedResultsRuleResults;
 // PagespeedApiPagespeedResponseV4FormattedResults
 /**
  * Localized PageSpeed results. Contains a ruleResults entry for each PageSpeed rule instantiated and run by the server.
@@ -103,36 +106,36 @@ var PagespeedApiPagespeedResponseV4FormattedResults = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4FormattedResults.prototype, "locale", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: PagespeedApiPagespeedResponseV4FormattedResultsRuleResults }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ elemType: PagespeedApiPagespeedResponseV4FormattedResultsRuleResults }),
+        __metadata("design:type", Object)
     ], PagespeedApiPagespeedResponseV4FormattedResults.prototype, "ruleResults", void 0);
     return PagespeedApiPagespeedResponseV4FormattedResults;
-}(SpeakeasyBase));
-export { PagespeedApiPagespeedResponseV4FormattedResults };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiPagespeedResponseV4FormattedResults = PagespeedApiPagespeedResponseV4FormattedResults;
 var PagespeedApiPagespeedResponseV4LoadingExperienceMetricsDistributions = /** @class */ (function (_super) {
     __extends(PagespeedApiPagespeedResponseV4LoadingExperienceMetricsDistributions, _super);
     function PagespeedApiPagespeedResponseV4LoadingExperienceMetricsDistributions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4LoadingExperienceMetricsDistributions.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4LoadingExperienceMetricsDistributions.prototype, "min", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4LoadingExperienceMetricsDistributions.prototype, "proportion", void 0);
     return PagespeedApiPagespeedResponseV4LoadingExperienceMetricsDistributions;
-}(SpeakeasyBase));
-export { PagespeedApiPagespeedResponseV4LoadingExperienceMetricsDistributions };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiPagespeedResponseV4LoadingExperienceMetricsDistributions = PagespeedApiPagespeedResponseV4LoadingExperienceMetricsDistributions;
 // PagespeedApiPagespeedResponseV4LoadingExperienceMetrics
 /**
  * The type of the metric.
@@ -143,20 +146,20 @@ var PagespeedApiPagespeedResponseV4LoadingExperienceMetrics = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4LoadingExperienceMetrics.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: PagespeedApiPagespeedResponseV4LoadingExperienceMetricsDistributions }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: PagespeedApiPagespeedResponseV4LoadingExperienceMetricsDistributions }),
         __metadata("design:type", Array)
     ], PagespeedApiPagespeedResponseV4LoadingExperienceMetrics.prototype, "distributions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4LoadingExperienceMetrics.prototype, "median", void 0);
     return PagespeedApiPagespeedResponseV4LoadingExperienceMetrics;
-}(SpeakeasyBase));
-export { PagespeedApiPagespeedResponseV4LoadingExperienceMetrics };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiPagespeedResponseV4LoadingExperienceMetrics = PagespeedApiPagespeedResponseV4LoadingExperienceMetrics;
 // PagespeedApiPagespeedResponseV4LoadingExperience
 /**
  * Metrics of end users' page loading experience.
@@ -167,24 +170,24 @@ var PagespeedApiPagespeedResponseV4LoadingExperience = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4LoadingExperience.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4LoadingExperience.prototype, "initialUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: PagespeedApiPagespeedResponseV4LoadingExperienceMetrics }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ elemType: PagespeedApiPagespeedResponseV4LoadingExperienceMetrics }),
+        __metadata("design:type", Object)
     ], PagespeedApiPagespeedResponseV4LoadingExperience.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4LoadingExperience.prototype, "overallCategory", void 0);
     return PagespeedApiPagespeedResponseV4LoadingExperience;
-}(SpeakeasyBase));
-export { PagespeedApiPagespeedResponseV4LoadingExperience };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiPagespeedResponseV4LoadingExperience = PagespeedApiPagespeedResponseV4LoadingExperience;
 // PagespeedApiPagespeedResponseV4PageStats
 /**
  * Summary statistics for the page, such as number of JavaScript bytes, number of HTML bytes, etc.
@@ -195,92 +198,92 @@ var PagespeedApiPagespeedResponseV4PageStats = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "cms", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "cssResponseBytes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "flashResponseBytes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "htmlResponseBytes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "imageResponseBytes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "javascriptResponseBytes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "numRenderBlockingRoundTrips", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "numTotalRoundTrips", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "numberCssResources", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "numberHosts", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "numberJsResources", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "numberResources", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "numberRobotedResources", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "numberStaticResources", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "numberTransientFetchFailureResources", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "otherResponseBytes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "overTheWireResponseBytes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "robotedUrls", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "textResponseBytes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "totalRequestBytes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PagespeedApiPagespeedResponseV4PageStats.prototype, "transientFetchFailureUrls", void 0);
     return PagespeedApiPagespeedResponseV4PageStats;
-}(SpeakeasyBase));
-export { PagespeedApiPagespeedResponseV4PageStats };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiPagespeedResponseV4PageStats = PagespeedApiPagespeedResponseV4PageStats;
 // PagespeedApiPagespeedResponseV4RuleGroups
 /**
  * The name of this rule group: one of "SPEED", "USABILITY", or "SECURITY".
@@ -291,16 +294,16 @@ var PagespeedApiPagespeedResponseV4RuleGroups = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], PagespeedApiPagespeedResponseV4RuleGroups.prototype, "pass", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4RuleGroups.prototype, "score", void 0);
     return PagespeedApiPagespeedResponseV4RuleGroups;
-}(SpeakeasyBase));
-export { PagespeedApiPagespeedResponseV4RuleGroups };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiPagespeedResponseV4RuleGroups = PagespeedApiPagespeedResponseV4RuleGroups;
 // PagespeedApiPagespeedResponseV4Version
 /**
  * The version of PageSpeed used to generate these results.
@@ -311,73 +314,73 @@ var PagespeedApiPagespeedResponseV4Version = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4Version.prototype, "major", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4Version.prototype, "minor", void 0);
     return PagespeedApiPagespeedResponseV4Version;
-}(SpeakeasyBase));
-export { PagespeedApiPagespeedResponseV4Version };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiPagespeedResponseV4Version = PagespeedApiPagespeedResponseV4Version;
 var PagespeedApiPagespeedResponseV4 = /** @class */ (function (_super) {
     __extends(PagespeedApiPagespeedResponseV4, _super);
     function PagespeedApiPagespeedResponseV4() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4.prototype, "captchaResult", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PagespeedApiPagespeedResponseV4FormattedResults)
     ], PagespeedApiPagespeedResponseV4.prototype, "formattedResults", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PagespeedApiPagespeedResponseV4.prototype, "invalidRules", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PagespeedApiPagespeedResponseV4LoadingExperience)
     ], PagespeedApiPagespeedResponseV4.prototype, "loadingExperience", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PagespeedApiPagespeedResponseV4PageStats)
     ], PagespeedApiPagespeedResponseV4.prototype, "pageStats", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PagespeedApiPagespeedResponseV4.prototype, "responseCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: PagespeedApiPagespeedResponseV4RuleGroups }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ elemType: PagespeedApiPagespeedResponseV4RuleGroups }),
+        __metadata("design:type", Object)
     ], PagespeedApiPagespeedResponseV4.prototype, "ruleGroups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PagespeedApiImageV4)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", pagespeedapiimagev4_1.PagespeedApiImageV4)
     ], PagespeedApiPagespeedResponseV4.prototype, "screenshot", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: PagespeedApiImageV4 }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: pagespeedapiimagev4_1.PagespeedApiImageV4 }),
         __metadata("design:type", Array)
     ], PagespeedApiPagespeedResponseV4.prototype, "snapshots", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV4.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PagespeedApiPagespeedResponseV4Version)
     ], PagespeedApiPagespeedResponseV4.prototype, "version", void 0);
     return PagespeedApiPagespeedResponseV4;
-}(SpeakeasyBase));
-export { PagespeedApiPagespeedResponseV4 };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiPagespeedResponseV4 = PagespeedApiPagespeedResponseV4;

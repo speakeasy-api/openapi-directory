@@ -38,5 +38,5 @@ export class ListDirectivesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listDirectives200ApplicationJsonObject?: ListDirectives200ApplicationJson;
+  listDirectives200ApplicationJSONObject?: ListDirectives200ApplicationJson;
 }

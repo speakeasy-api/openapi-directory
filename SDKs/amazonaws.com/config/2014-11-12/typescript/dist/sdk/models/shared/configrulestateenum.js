@@ -1,7 +1,10 @@
-export var ConfigRuleStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigRuleStateEnum = void 0;
+var ConfigRuleStateEnum;
 (function (ConfigRuleStateEnum) {
     ConfigRuleStateEnum["Active"] = "ACTIVE";
     ConfigRuleStateEnum["Deleting"] = "DELETING";
     ConfigRuleStateEnum["DeletingResults"] = "DELETING_RESULTS";
     ConfigRuleStateEnum["Evaluating"] = "EVALUATING";
-})(ConfigRuleStateEnum || (ConfigRuleStateEnum = {}));
+})(ConfigRuleStateEnum = exports.ConfigRuleStateEnum || (exports.ConfigRuleStateEnum = {}));

@@ -9,7 +9,7 @@ import { HttpHeader } from "./httpheader";
 **/
 export class HttpRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ClientIP" })
-  clientIp?: string;
+  clientIP?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Country" })
   country?: string;

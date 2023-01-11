@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,135 +23,137 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Address } from "./address";
-import { Email } from "./email";
-import { PhoneNumber } from "./phonenumber";
-import { Website } from "./website";
-export var HrisCompanyStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HrisCompanyInput = exports.HrisCompany = exports.HrisCompanyStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var address_1 = require("./address");
+var email_1 = require("./email");
+var phonenumber_1 = require("./phonenumber");
+var website_1 = require("./website");
+var HrisCompanyStatusEnum;
 (function (HrisCompanyStatusEnum) {
     HrisCompanyStatusEnum["Active"] = "active";
     HrisCompanyStatusEnum["Inactive"] = "inactive";
     HrisCompanyStatusEnum["Trial"] = "trial";
     HrisCompanyStatusEnum["Other"] = "other";
-})(HrisCompanyStatusEnum || (HrisCompanyStatusEnum = {}));
-var HrisCompanyInput = /** @class */ (function (_super) {
-    __extends(HrisCompanyInput, _super);
-    function HrisCompanyInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=addresses", elemType: Address }),
-        __metadata("design:type", Array)
-    ], HrisCompanyInput.prototype, "addresses", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=company_number" }),
-        __metadata("design:type", String)
-    ], HrisCompanyInput.prototype, "companyNumber", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=debtor_id" }),
-        __metadata("design:type", String)
-    ], HrisCompanyInput.prototype, "debtorId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_name" }),
-        __metadata("design:type", String)
-    ], HrisCompanyInput.prototype, "displayName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=emails", elemType: Email }),
-        __metadata("design:type", Array)
-    ], HrisCompanyInput.prototype, "emails", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=legal_name" }),
-        __metadata("design:type", String)
-    ], HrisCompanyInput.prototype, "legalName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=phone_numbers", elemType: PhoneNumber }),
-        __metadata("design:type", Array)
-    ], HrisCompanyInput.prototype, "phoneNumbers", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", String)
-    ], HrisCompanyInput.prototype, "status", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=subdomain" }),
-        __metadata("design:type", String)
-    ], HrisCompanyInput.prototype, "subdomain", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=websites", elemType: Website }),
-        __metadata("design:type", Array)
-    ], HrisCompanyInput.prototype, "websites", void 0);
-    return HrisCompanyInput;
-}(SpeakeasyBase));
-export { HrisCompanyInput };
+})(HrisCompanyStatusEnum = exports.HrisCompanyStatusEnum || (exports.HrisCompanyStatusEnum = {}));
 var HrisCompany = /** @class */ (function (_super) {
     __extends(HrisCompany, _super);
     function HrisCompany() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addresses", elemType: Address }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addresses", elemType: address_1.Address }),
         __metadata("design:type", Array)
     ], HrisCompany.prototype, "addresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=company_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company_number" }),
         __metadata("design:type", String)
     ], HrisCompany.prototype, "companyNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], HrisCompany.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
         __metadata("design:type", String)
     ], HrisCompany.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=debtor_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=debtor_id" }),
         __metadata("design:type", String)
     ], HrisCompany.prototype, "debtorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], HrisCompany.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_name" }),
         __metadata("design:type", String)
     ], HrisCompany.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emails", elemType: Email }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emails", elemType: email_1.Email }),
         __metadata("design:type", Array)
     ], HrisCompany.prototype, "emails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], HrisCompany.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legal_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legal_name" }),
         __metadata("design:type", String)
     ], HrisCompany.prototype, "legalName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phone_numbers", elemType: PhoneNumber }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phone_numbers", elemType: phonenumber_1.PhoneNumber }),
         __metadata("design:type", Array)
     ], HrisCompany.prototype, "phoneNumbers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], HrisCompany.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subdomain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subdomain" }),
         __metadata("design:type", String)
     ], HrisCompany.prototype, "subdomain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], HrisCompany.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_by" }),
         __metadata("design:type", String)
     ], HrisCompany.prototype, "updatedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=websites", elemType: Website }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=websites", elemType: website_1.Website }),
         __metadata("design:type", Array)
     ], HrisCompany.prototype, "websites", void 0);
     return HrisCompany;
-}(SpeakeasyBase));
-export { HrisCompany };
+}(utils_1.SpeakeasyBase));
+exports.HrisCompany = HrisCompany;
+var HrisCompanyInput = /** @class */ (function (_super) {
+    __extends(HrisCompanyInput, _super);
+    function HrisCompanyInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addresses", elemType: address_1.Address }),
+        __metadata("design:type", Array)
+    ], HrisCompanyInput.prototype, "addresses", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company_number" }),
+        __metadata("design:type", String)
+    ], HrisCompanyInput.prototype, "companyNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=debtor_id" }),
+        __metadata("design:type", String)
+    ], HrisCompanyInput.prototype, "debtorId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_name" }),
+        __metadata("design:type", String)
+    ], HrisCompanyInput.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emails", elemType: email_1.Email }),
+        __metadata("design:type", Array)
+    ], HrisCompanyInput.prototype, "emails", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legal_name" }),
+        __metadata("design:type", String)
+    ], HrisCompanyInput.prototype, "legalName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phone_numbers", elemType: phonenumber_1.PhoneNumber }),
+        __metadata("design:type", Array)
+    ], HrisCompanyInput.prototype, "phoneNumbers", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", String)
+    ], HrisCompanyInput.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subdomain" }),
+        __metadata("design:type", String)
+    ], HrisCompanyInput.prototype, "subdomain", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=websites", elemType: website_1.Website }),
+        __metadata("design:type", Array)
+    ], HrisCompanyInput.prototype, "websites", void 0);
+    return HrisCompanyInput;
+}(utils_1.SpeakeasyBase));
+exports.HrisCompanyInput = HrisCompanyInput;

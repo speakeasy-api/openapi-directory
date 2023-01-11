@@ -18,5 +18,5 @@ export declare class DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestI
 export declare class DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdCommentsCommentIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

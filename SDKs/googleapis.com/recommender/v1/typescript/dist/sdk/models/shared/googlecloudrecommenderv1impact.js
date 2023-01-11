@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecommenderV1CostProjection } from "./googlecloudrecommenderv1costprojection";
-import { GoogleCloudRecommenderV1ReliabilityProjection } from "./googlecloudrecommenderv1reliabilityprojection";
-import { GoogleCloudRecommenderV1SecurityProjection } from "./googlecloudrecommenderv1securityprojection";
-import { GoogleCloudRecommenderV1SustainabilityProjection } from "./googlecloudrecommenderv1sustainabilityprojection";
-export var GoogleCloudRecommenderV1ImpactCategoryEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommenderV1Impact = exports.GoogleCloudRecommenderV1ImpactCategoryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecommenderv1costprojection_1 = require("./googlecloudrecommenderv1costprojection");
+var googlecloudrecommenderv1reliabilityprojection_1 = require("./googlecloudrecommenderv1reliabilityprojection");
+var googlecloudrecommenderv1securityprojection_1 = require("./googlecloudrecommenderv1securityprojection");
+var googlecloudrecommenderv1sustainabilityprojection_1 = require("./googlecloudrecommenderv1sustainabilityprojection");
+var GoogleCloudRecommenderV1ImpactCategoryEnum;
 (function (GoogleCloudRecommenderV1ImpactCategoryEnum) {
     GoogleCloudRecommenderV1ImpactCategoryEnum["CategoryUnspecified"] = "CATEGORY_UNSPECIFIED";
     GoogleCloudRecommenderV1ImpactCategoryEnum["Cost"] = "COST";
@@ -36,7 +39,7 @@ export var GoogleCloudRecommenderV1ImpactCategoryEnum;
     GoogleCloudRecommenderV1ImpactCategoryEnum["Manageability"] = "MANAGEABILITY";
     GoogleCloudRecommenderV1ImpactCategoryEnum["Sustainability"] = "SUSTAINABILITY";
     GoogleCloudRecommenderV1ImpactCategoryEnum["Reliability"] = "RELIABILITY";
-})(GoogleCloudRecommenderV1ImpactCategoryEnum || (GoogleCloudRecommenderV1ImpactCategoryEnum = {}));
+})(GoogleCloudRecommenderV1ImpactCategoryEnum = exports.GoogleCloudRecommenderV1ImpactCategoryEnum || (exports.GoogleCloudRecommenderV1ImpactCategoryEnum = {}));
 // GoogleCloudRecommenderV1Impact
 /**
  * Contains the impact a recommendation can have for a given category.
@@ -47,25 +50,25 @@ var GoogleCloudRecommenderV1Impact = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1Impact.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=costProjection" }),
-        __metadata("design:type", GoogleCloudRecommenderV1CostProjection)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=costProjection" }),
+        __metadata("design:type", googlecloudrecommenderv1costprojection_1.GoogleCloudRecommenderV1CostProjection)
     ], GoogleCloudRecommenderV1Impact.prototype, "costProjection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reliabilityProjection" }),
-        __metadata("design:type", GoogleCloudRecommenderV1ReliabilityProjection)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reliabilityProjection" }),
+        __metadata("design:type", googlecloudrecommenderv1reliabilityprojection_1.GoogleCloudRecommenderV1ReliabilityProjection)
     ], GoogleCloudRecommenderV1Impact.prototype, "reliabilityProjection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=securityProjection" }),
-        __metadata("design:type", GoogleCloudRecommenderV1SecurityProjection)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=securityProjection" }),
+        __metadata("design:type", googlecloudrecommenderv1securityprojection_1.GoogleCloudRecommenderV1SecurityProjection)
     ], GoogleCloudRecommenderV1Impact.prototype, "securityProjection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sustainabilityProjection" }),
-        __metadata("design:type", GoogleCloudRecommenderV1SustainabilityProjection)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sustainabilityProjection" }),
+        __metadata("design:type", googlecloudrecommenderv1sustainabilityprojection_1.GoogleCloudRecommenderV1SustainabilityProjection)
     ], GoogleCloudRecommenderV1Impact.prototype, "sustainabilityProjection", void 0);
     return GoogleCloudRecommenderV1Impact;
-}(SpeakeasyBase));
-export { GoogleCloudRecommenderV1Impact };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommenderV1Impact = GoogleCloudRecommenderV1Impact;

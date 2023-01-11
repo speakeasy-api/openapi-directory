@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecaptchaenterpriseV1RiskAnalysis = exports.GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum;
 (function (GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum) {
     GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum["ClassificationReasonUnspecified"] = "CLASSIFICATION_REASON_UNSPECIFIED";
     GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum["Automation"] = "AUTOMATION";
@@ -31,7 +34,7 @@ export var GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum;
     GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum["TooMuchTraffic"] = "TOO_MUCH_TRAFFIC";
     GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum["UnexpectedUsagePatterns"] = "UNEXPECTED_USAGE_PATTERNS";
     GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum["LowConfidenceScore"] = "LOW_CONFIDENCE_SCORE";
-})(GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum || (GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum = {}));
+})(GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum = exports.GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum || (exports.GoogleCloudRecaptchaenterpriseV1RiskAnalysisReasonsEnum = {}));
 // GoogleCloudRecaptchaenterpriseV1RiskAnalysis
 /**
  * Risk analysis result for an event.
@@ -42,13 +45,13 @@ var GoogleCloudRecaptchaenterpriseV1RiskAnalysis = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasons" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasons" }),
         __metadata("design:type", Array)
     ], GoogleCloudRecaptchaenterpriseV1RiskAnalysis.prototype, "reasons", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=score" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=score" }),
         __metadata("design:type", Number)
     ], GoogleCloudRecaptchaenterpriseV1RiskAnalysis.prototype, "score", void 0);
     return GoogleCloudRecaptchaenterpriseV1RiskAnalysis;
-}(SpeakeasyBase));
-export { GoogleCloudRecaptchaenterpriseV1RiskAnalysis };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecaptchaenterpriseV1RiskAnalysis = GoogleCloudRecaptchaenterpriseV1RiskAnalysis;

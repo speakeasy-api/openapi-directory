@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DomainEnum } from "./domainenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDatasetGroupRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var domainenum_1 = require("./domainenum");
+var tag_1 = require("./tag");
 var CreateDatasetGroupRequest = /** @class */ (function (_super) {
     __extends(CreateDatasetGroupRequest, _super);
     function CreateDatasetGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetArns" }),
         __metadata("design:type", Array)
     ], CreateDatasetGroupRequest.prototype, "datasetArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetGroupName" }),
         __metadata("design:type", String)
     ], CreateDatasetGroupRequest.prototype, "datasetGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Domain" }),
         __metadata("design:type", String)
     ], CreateDatasetGroupRequest.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateDatasetGroupRequest.prototype, "tags", void 0);
     return CreateDatasetGroupRequest;
-}(SpeakeasyBase));
-export { CreateDatasetGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateDatasetGroupRequest = CreateDatasetGroupRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContentHandlingStrategyEnum } from "./contenthandlingstrategyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateIntegrationResponseResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateIntegrationResponseResponse = /** @class */ (function (_super) {
     __extends(UpdateIntegrationResponseResponse, _super);
     function UpdateIntegrationResponseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContentHandlingStrategy" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContentHandlingStrategy" }),
+        __metadata("design:type", Object)
     ], UpdateIntegrationResponseResponse.prototype, "contentHandlingStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IntegrationResponseId" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IntegrationResponseId" }),
+        __metadata("design:type", Object)
     ], UpdateIntegrationResponseResponse.prototype, "integrationResponseId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IntegrationResponseKey" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IntegrationResponseKey" }),
+        __metadata("design:type", Object)
     ], UpdateIntegrationResponseResponse.prototype, "integrationResponseKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResponseParameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResponseParameters" }),
+        __metadata("design:type", Object)
     ], UpdateIntegrationResponseResponse.prototype, "responseParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResponseTemplates" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResponseTemplates" }),
+        __metadata("design:type", Object)
     ], UpdateIntegrationResponseResponse.prototype, "responseTemplates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateSelectionExpression" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateSelectionExpression" }),
+        __metadata("design:type", Object)
     ], UpdateIntegrationResponseResponse.prototype, "templateSelectionExpression", void 0);
     return UpdateIntegrationResponseResponse;
-}(SpeakeasyBase));
-export { UpdateIntegrationResponseResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateIntegrationResponseResponse = UpdateIntegrationResponseResponse;

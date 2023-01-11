@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -46,67 +45,70 @@ export class PaymentInitiationServicePis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.CancelPaymentResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.CancelPaymentResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 202:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.paymentInitiationCancelResponse202 = httpRes?.data;
             }
             break;
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgPisCanc = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGPISCANC = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405PisCanc = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405PISCANC = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
@@ -114,11 +116,11 @@ export class PaymentInitiationServicePis {
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
@@ -133,7 +135,6 @@ export class PaymentInitiationServicePis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -152,65 +153,68 @@ export class PaymentInitiationServicePis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetPaymentCancellationScaStatusResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetPaymentCancellationScaStatusResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.scaStatusResponse = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
@@ -218,11 +222,11 @@ export class PaymentInitiationServicePis {
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
@@ -237,7 +241,6 @@ export class PaymentInitiationServicePis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -255,33 +258,36 @@ export class PaymentInitiationServicePis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetPaymentInformationResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetPaymentInformationResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getPaymentInformation200ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getPaymentInformation200ApplicationJSONOneOf = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/xml`)) {
+            if (utils.matchContentType(contentType, `application/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
                 res.body = out;
             }
-            if (utils.MatchContentType(contentType, `multipart/form-data`)) {
+            if (utils.matchContentType(contentType, `multipart/form-data`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
@@ -289,43 +295,43 @@ export class PaymentInitiationServicePis {
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
@@ -333,11 +339,11 @@ export class PaymentInitiationServicePis {
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
@@ -352,7 +358,6 @@ export class PaymentInitiationServicePis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -373,65 +378,68 @@ export class PaymentInitiationServicePis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetPaymentInitiationAuthorisationResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetPaymentInitiationAuthorisationResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.authorisations = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
@@ -439,11 +447,11 @@ export class PaymentInitiationServicePis {
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
@@ -458,7 +466,6 @@ export class PaymentInitiationServicePis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -477,65 +484,68 @@ export class PaymentInitiationServicePis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetPaymentInitiationCancellationAuthorisationInformationResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetPaymentInitiationCancellationAuthorisationInformationResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.authorisations = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
@@ -543,11 +553,11 @@ export class PaymentInitiationServicePis {
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
@@ -562,7 +572,6 @@ export class PaymentInitiationServicePis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -581,65 +590,68 @@ export class PaymentInitiationServicePis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetPaymentInitiationScaStatusResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetPaymentInitiationScaStatusResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.scaStatusResponse = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
@@ -647,11 +659,11 @@ export class PaymentInitiationServicePis {
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
@@ -666,7 +678,6 @@ export class PaymentInitiationServicePis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -684,68 +695,71 @@ export class PaymentInitiationServicePis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/status", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/status", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetPaymentInitiationStatusResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetPaymentInitiationStatusResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.paymentInitiationStatusResponse200Json = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/xml`)) {
+            if (utils.matchContentType(contentType, `application/xml`)) {
                 res.paymentInitiationStatusResponse200Xml = JSON.stringify(httpRes?.data);
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
@@ -753,11 +767,11 @@ export class PaymentInitiationServicePis {
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
@@ -772,7 +786,6 @@ export class PaymentInitiationServicePis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -836,12 +849,12 @@ export class PaymentInitiationServicePis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/{payment-service}/{payment-product}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/{payment-service}/{payment-product}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -849,67 +862,67 @@ export class PaymentInitiationServicePis {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    if (body == null || Object.keys(body).length === 0) throw new Error("request body is required");
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.InitiatePaymentResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.InitiatePaymentResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.paymentInitationRequestResponse201 = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
@@ -917,11 +930,11 @@ export class PaymentInitiationServicePis {
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
@@ -936,7 +949,6 @@ export class PaymentInitiationServicePis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -987,12 +999,12 @@ export class PaymentInitiationServicePis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -1000,66 +1012,66 @@ export class PaymentInitiationServicePis {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.StartPaymentAuthorisationResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.StartPaymentAuthorisationResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.startScaprocessResponse = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
@@ -1067,11 +1079,11 @@ export class PaymentInitiationServicePis {
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
@@ -1086,7 +1098,6 @@ export class PaymentInitiationServicePis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1136,12 +1147,12 @@ export class PaymentInitiationServicePis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -1149,66 +1160,66 @@ export class PaymentInitiationServicePis {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.StartPaymentInitiationCancellationAuthorisationResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.StartPaymentInitiationCancellationAuthorisationResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.startScaprocessResponse = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
@@ -1216,11 +1227,11 @@ export class PaymentInitiationServicePis {
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
@@ -1235,7 +1246,6 @@ export class PaymentInitiationServicePis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1291,12 +1301,12 @@ export class PaymentInitiationServicePis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -1304,66 +1314,66 @@ export class PaymentInitiationServicePis {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.UpdatePaymentCancellationPsuDataResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.UpdatePaymentCancellationPsuDataResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.updatePaymentCancellationPsuData200ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.updatePaymentCancellationPsuData200ApplicationJSONOneOf = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
@@ -1371,11 +1381,11 @@ export class PaymentInitiationServicePis {
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
@@ -1390,7 +1400,6 @@ export class PaymentInitiationServicePis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1446,12 +1455,12 @@ export class PaymentInitiationServicePis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -1459,66 +1468,66 @@ export class PaymentInitiationServicePis {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.UpdatePaymentPsuDataResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.UpdatePaymentPsuDataResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.updatePaymentPsuData200ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.updatePaymentPsuData200ApplicationJSONOneOf = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
@@ -1526,11 +1535,11 @@ export class PaymentInitiationServicePis {
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgPis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGPIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Pis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409PIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
@@ -1545,7 +1554,6 @@ export class PaymentInitiationServicePis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

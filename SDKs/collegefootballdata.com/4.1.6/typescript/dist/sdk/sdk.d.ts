@@ -15,11 +15,12 @@ import { Recruiting } from "./recruiting";
 import { Stats } from "./stats";
 import { Teams } from "./teams";
 import { Venues } from "./venues";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://api.collegefootballdata.com"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     betting: Betting;
     coaches: Coaches;
@@ -38,11 +39,9 @@ export declare class SDK {
     venues: Venues;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

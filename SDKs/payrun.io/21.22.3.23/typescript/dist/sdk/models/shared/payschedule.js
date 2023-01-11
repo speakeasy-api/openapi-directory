@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PaySchedulePaySchedulePayFrequencyEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaySchedule = exports.PaySchedulePaySchedule = exports.PaySchedulePaySchedulePayFrequencyEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PaySchedulePaySchedulePayFrequencyEnum;
 (function (PaySchedulePaySchedulePayFrequencyEnum) {
     PaySchedulePaySchedulePayFrequencyEnum["Weekly"] = "Weekly";
     PaySchedulePaySchedulePayFrequencyEnum["Monthly"] = "Monthly";
     PaySchedulePaySchedulePayFrequencyEnum["TwoWeekly"] = "TwoWeekly";
     PaySchedulePaySchedulePayFrequencyEnum["FourWeekly"] = "FourWeekly";
     PaySchedulePaySchedulePayFrequencyEnum["Yearly"] = "Yearly";
-})(PaySchedulePaySchedulePayFrequencyEnum || (PaySchedulePaySchedulePayFrequencyEnum = {}));
+})(PaySchedulePaySchedulePayFrequencyEnum = exports.PaySchedulePaySchedulePayFrequencyEnum || (exports.PaySchedulePaySchedulePayFrequencyEnum = {}));
 var PaySchedulePaySchedule = /** @class */ (function (_super) {
     __extends(PaySchedulePaySchedule, _super);
     function PaySchedulePaySchedule() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MetaData" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MetaData" }),
+        __metadata("design:type", Object)
     ], PaySchedulePaySchedule.prototype, "metaData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], PaySchedulePaySchedule.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PayFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PayFrequency" }),
         __metadata("design:type", String)
     ], PaySchedulePaySchedule.prototype, "payFrequency", void 0);
     return PaySchedulePaySchedule;
-}(SpeakeasyBase));
-export { PaySchedulePaySchedule };
+}(utils_1.SpeakeasyBase));
+exports.PaySchedulePaySchedule = PaySchedulePaySchedule;
 var PaySchedule = /** @class */ (function (_super) {
     __extends(PaySchedule, _super);
     function PaySchedule() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PaySchedule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PaySchedule" }),
         __metadata("design:type", PaySchedulePaySchedule)
     ], PaySchedule.prototype, "paySchedule", void 0);
     return PaySchedule;
-}(SpeakeasyBase));
-export { PaySchedule };
+}(utils_1.SpeakeasyBase));
+exports.PaySchedule = PaySchedule;

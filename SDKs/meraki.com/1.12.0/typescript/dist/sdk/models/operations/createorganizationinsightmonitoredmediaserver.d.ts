@@ -14,5 +14,5 @@ export declare class CreateOrganizationInsightMonitoredMediaServerRequest extend
 export declare class CreateOrganizationInsightMonitoredMediaServerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createOrganizationInsightMonitoredMediaServer201ApplicationJsonObject?: Map<string, any>;
+    createOrganizationInsightMonitoredMediaServer201ApplicationJSONObject?: Record<string, any>;
 }

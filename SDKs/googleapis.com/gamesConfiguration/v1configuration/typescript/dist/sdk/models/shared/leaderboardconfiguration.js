@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LeaderboardConfigurationDetail } from "./leaderboardconfigurationdetail";
-export var LeaderboardConfigurationScoreOrderEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LeaderboardConfiguration = exports.LeaderboardConfigurationScoreOrderEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var leaderboardconfigurationdetail_1 = require("./leaderboardconfigurationdetail");
+var LeaderboardConfigurationScoreOrderEnum;
 (function (LeaderboardConfigurationScoreOrderEnum) {
     LeaderboardConfigurationScoreOrderEnum["ScoreOrderUnspecified"] = "SCORE_ORDER_UNSPECIFIED";
     LeaderboardConfigurationScoreOrderEnum["LargerIsBetter"] = "LARGER_IS_BETTER";
     LeaderboardConfigurationScoreOrderEnum["SmallerIsBetter"] = "SMALLER_IS_BETTER";
-})(LeaderboardConfigurationScoreOrderEnum || (LeaderboardConfigurationScoreOrderEnum = {}));
+})(LeaderboardConfigurationScoreOrderEnum = exports.LeaderboardConfigurationScoreOrderEnum || (exports.LeaderboardConfigurationScoreOrderEnum = {}));
 // LeaderboardConfiguration
 /**
  * An leaderboard configuration resource.
@@ -40,37 +43,37 @@ var LeaderboardConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=draft" }),
-        __metadata("design:type", LeaderboardConfigurationDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=draft" }),
+        __metadata("design:type", leaderboardconfigurationdetail_1.LeaderboardConfigurationDetail)
     ], LeaderboardConfiguration.prototype, "draft", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], LeaderboardConfiguration.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], LeaderboardConfiguration.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=published" }),
-        __metadata("design:type", LeaderboardConfigurationDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=published" }),
+        __metadata("design:type", leaderboardconfigurationdetail_1.LeaderboardConfigurationDetail)
     ], LeaderboardConfiguration.prototype, "published", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scoreMax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scoreMax" }),
         __metadata("design:type", String)
     ], LeaderboardConfiguration.prototype, "scoreMax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scoreMin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scoreMin" }),
         __metadata("design:type", String)
     ], LeaderboardConfiguration.prototype, "scoreMin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scoreOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scoreOrder" }),
         __metadata("design:type", String)
     ], LeaderboardConfiguration.prototype, "scoreOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], LeaderboardConfiguration.prototype, "token", void 0);
     return LeaderboardConfiguration;
-}(SpeakeasyBase));
-export { LeaderboardConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.LeaderboardConfiguration = LeaderboardConfiguration;

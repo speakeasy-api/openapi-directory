@@ -13,6 +13,6 @@ export declare class GetV1EmailDisposableRequest extends SpeakeasyBase {
 }
 export declare class GetV1EmailDisposableResponse extends SpeakeasyBase {
     contentType: string;
-    getV1EmailDisposable200ApplicationJsonString?: string;
     statusCode: number;
+    getV1EmailDisposable200ApplicationJSONString?: string;
 }

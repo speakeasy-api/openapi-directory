@@ -1,7 +1,7 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { PatientDemographicResponse } from "./patientdemographicresponse";
 import { AccessTokenValidity } from "./accesstokenvalidity";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 import { RequestReference } from "./requestreference";
 
 
@@ -31,7 +31,7 @@ export class PatientAuthConfirmResponse extends SpeakeasyBase {
   auth?: PatientAuthConfirmResponseAuth;
 
   @SpeakeasyMetadata({ data: "json, name=error" })
-  error?: Error;
+  error?: ErrorT;
 
   @SpeakeasyMetadata({ data: "json, name=requestId" })
   requestId: string;

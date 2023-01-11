@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,70 +23,72 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationActionBatchesResponse = exports.GetOrganizationActionBatchesRequest = exports.GetOrganizationActionBatchesQueryParams = exports.GetOrganizationActionBatchesStatusEnum = exports.GetOrganizationActionBatchesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationActionBatchesPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationActionBatchesPathParams, _super);
     function GetOrganizationActionBatchesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationActionBatchesPathParams.prototype, "organizationId", void 0);
     return GetOrganizationActionBatchesPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationActionBatchesPathParams };
-export var GetOrganizationActionBatchesStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationActionBatchesPathParams = GetOrganizationActionBatchesPathParams;
+var GetOrganizationActionBatchesStatusEnum;
 (function (GetOrganizationActionBatchesStatusEnum) {
     GetOrganizationActionBatchesStatusEnum["Pending"] = "pending";
     GetOrganizationActionBatchesStatusEnum["Completed"] = "completed";
     GetOrganizationActionBatchesStatusEnum["Failed"] = "failed";
-})(GetOrganizationActionBatchesStatusEnum || (GetOrganizationActionBatchesStatusEnum = {}));
+})(GetOrganizationActionBatchesStatusEnum = exports.GetOrganizationActionBatchesStatusEnum || (exports.GetOrganizationActionBatchesStatusEnum = {}));
 var GetOrganizationActionBatchesQueryParams = /** @class */ (function (_super) {
     __extends(GetOrganizationActionBatchesQueryParams, _super);
     function GetOrganizationActionBatchesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=status" }),
         __metadata("design:type", String)
     ], GetOrganizationActionBatchesQueryParams.prototype, "status", void 0);
     return GetOrganizationActionBatchesQueryParams;
-}(SpeakeasyBase));
-export { GetOrganizationActionBatchesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationActionBatchesQueryParams = GetOrganizationActionBatchesQueryParams;
 var GetOrganizationActionBatchesRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationActionBatchesRequest, _super);
     function GetOrganizationActionBatchesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationActionBatchesPathParams)
     ], GetOrganizationActionBatchesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationActionBatchesQueryParams)
     ], GetOrganizationActionBatchesRequest.prototype, "queryParams", void 0);
     return GetOrganizationActionBatchesRequest;
-}(SpeakeasyBase));
-export { GetOrganizationActionBatchesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationActionBatchesRequest = GetOrganizationActionBatchesRequest;
 var GetOrganizationActionBatchesResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationActionBatchesResponse, _super);
     function GetOrganizationActionBatchesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationActionBatchesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationActionBatchesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationActionBatchesResponse.prototype, "getOrganizationActionBatches200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationActionBatchesResponse.prototype, "getOrganizationActionBatches200ApplicationJSONObject", void 0);
     return GetOrganizationActionBatchesResponse;
-}(SpeakeasyBase));
-export { GetOrganizationActionBatchesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationActionBatchesResponse = GetOrganizationActionBatchesResponse;

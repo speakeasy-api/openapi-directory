@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AlltrRequest, AlltrResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,25 +30,25 @@ const req: AlltrRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      dob: "excepturi",
-      fullName: "qui",
-      regNum: "aut",
-      uid: "quas",
+      dob: "sit",
+      fullName: "voluptas",
+      regNum: "culpa",
+      uid: "expedita",
     },
-    consentArtifact: "odit",
+    consentArtifact: "consequuntur",
     format: "pdf",
-    txnId: "qui",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.alltr(req).then((res: AlltrResponse | AxiosError) => {
+sdk.apIs.alltr(req).then((res: AlltrResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -58,7 +57,7 @@ sdk.sdk.alltr(req).then((res: AlltrResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `alltr` - Allotment Letter
 * `bknoc` - NOC For Banks

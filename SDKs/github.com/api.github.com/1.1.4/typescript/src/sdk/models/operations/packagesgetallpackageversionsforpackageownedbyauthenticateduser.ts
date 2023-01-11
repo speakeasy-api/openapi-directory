@@ -11,11 +11,6 @@ export class PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserPath
   packageType: shared.PackageTypeEnum;
 }
 
-export enum PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserStateEnum {
-    Active = "active",
-    Deleted = "deleted"
-}
-
 
 export class PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
@@ -25,7 +20,7 @@ export class PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserQuer
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" })
-  state?: PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserStateEnum;
+  state?: shared.PerPageEnum;
 }
 
 

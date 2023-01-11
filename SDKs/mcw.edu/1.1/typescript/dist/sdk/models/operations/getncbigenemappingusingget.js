@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNcbiGeneMappingUsingGetResponse = exports.GetNcbiGeneMappingUsingGetRequest = exports.GetNcbiGeneMappingUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNcbiGeneMappingUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetNcbiGeneMappingUsingGetPathParams, _super);
     function GetNcbiGeneMappingUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
         __metadata("design:type", Number)
     ], GetNcbiGeneMappingUsingGetPathParams.prototype, "rgdId", void 0);
     return GetNcbiGeneMappingUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetNcbiGeneMappingUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNcbiGeneMappingUsingGetPathParams = GetNcbiGeneMappingUsingGetPathParams;
 var GetNcbiGeneMappingUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetNcbiGeneMappingUsingGetRequest, _super);
     function GetNcbiGeneMappingUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNcbiGeneMappingUsingGetPathParams)
     ], GetNcbiGeneMappingUsingGetRequest.prototype, "pathParams", void 0);
     return GetNcbiGeneMappingUsingGetRequest;
-}(SpeakeasyBase));
-export { GetNcbiGeneMappingUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNcbiGeneMappingUsingGetRequest = GetNcbiGeneMappingUsingGetRequest;
 var GetNcbiGeneMappingUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetNcbiGeneMappingUsingGetResponse, _super);
     function GetNcbiGeneMappingUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetNcbiGeneMappingUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNcbiGeneMappingUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNcbiGeneMappingUsingGetResponse.prototype, "statusCode", void 0);
     return GetNcbiGeneMappingUsingGetResponse;
-}(SpeakeasyBase));
-export { GetNcbiGeneMappingUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNcbiGeneMappingUsingGetResponse = GetNcbiGeneMappingUsingGetResponse;

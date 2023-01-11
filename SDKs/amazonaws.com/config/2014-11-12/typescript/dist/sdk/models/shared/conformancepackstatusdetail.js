@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConformancePackStateEnum } from "./conformancepackstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConformancePackStatusDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var conformancepackstateenum_1 = require("./conformancepackstateenum");
 // ConformancePackStatusDetail
 /**
  * Status details of a conformance pack.
@@ -34,37 +37,37 @@ var ConformancePackStatusDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConformancePackArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConformancePackArn" }),
         __metadata("design:type", String)
     ], ConformancePackStatusDetail.prototype, "conformancePackArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConformancePackId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConformancePackId" }),
         __metadata("design:type", String)
     ], ConformancePackStatusDetail.prototype, "conformancePackId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConformancePackName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConformancePackName" }),
         __metadata("design:type", String)
     ], ConformancePackStatusDetail.prototype, "conformancePackName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConformancePackState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConformancePackState" }),
         __metadata("design:type", String)
     ], ConformancePackStatusDetail.prototype, "conformancePackState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConformancePackStatusReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConformancePackStatusReason" }),
         __metadata("design:type", String)
     ], ConformancePackStatusDetail.prototype, "conformancePackStatusReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdateCompletedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdateCompletedTime" }),
         __metadata("design:type", Date)
     ], ConformancePackStatusDetail.prototype, "lastUpdateCompletedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdateRequestedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdateRequestedTime" }),
         __metadata("design:type", Date)
     ], ConformancePackStatusDetail.prototype, "lastUpdateRequestedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StackArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StackArn" }),
         __metadata("design:type", String)
     ], ConformancePackStatusDetail.prototype, "stackArn", void 0);
     return ConformancePackStatusDetail;
-}(SpeakeasyBase));
-export { ConformancePackStatusDetail };
+}(utils_1.SpeakeasyBase));
+exports.ConformancePackStatusDetail = ConformancePackStatusDetail;

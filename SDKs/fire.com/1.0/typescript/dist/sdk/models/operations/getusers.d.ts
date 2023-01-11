@@ -18,9 +18,9 @@ export declare enum GetUsersUserMobileApplicationStatusEnum {
 export declare class GetUsersUserMobileApplication extends SpeakeasyBase {
     os?: GetUsersUserMobileApplicationOsEnum;
     businessUserId?: number;
-    clientId?: string;
+    clientID?: string;
     deviceName?: GetUsersUserMobileApplicationDeviceNameEnum;
-    deviceOsVersion?: string;
+    deviceOSVersion?: string;
     mobileApplicationId?: number;
     status?: GetUsersUserMobileApplicationStatusEnum;
 }

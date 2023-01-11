@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualizationChoicesReadResponse = exports.VirtualizationChoicesReadRequest = exports.VirtualizationChoicesReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var VirtualizationChoicesReadPathParams = /** @class */ (function (_super) {
     __extends(VirtualizationChoicesReadPathParams, _super);
     function VirtualizationChoicesReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], VirtualizationChoicesReadPathParams.prototype, "id", void 0);
     return VirtualizationChoicesReadPathParams;
-}(SpeakeasyBase));
-export { VirtualizationChoicesReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.VirtualizationChoicesReadPathParams = VirtualizationChoicesReadPathParams;
 var VirtualizationChoicesReadRequest = /** @class */ (function (_super) {
     __extends(VirtualizationChoicesReadRequest, _super);
     function VirtualizationChoicesReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", VirtualizationChoicesReadPathParams)
     ], VirtualizationChoicesReadRequest.prototype, "pathParams", void 0);
     return VirtualizationChoicesReadRequest;
-}(SpeakeasyBase));
-export { VirtualizationChoicesReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.VirtualizationChoicesReadRequest = VirtualizationChoicesReadRequest;
 var VirtualizationChoicesReadResponse = /** @class */ (function (_super) {
     __extends(VirtualizationChoicesReadResponse, _super);
     function VirtualizationChoicesReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], VirtualizationChoicesReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], VirtualizationChoicesReadResponse.prototype, "statusCode", void 0);
     return VirtualizationChoicesReadResponse;
-}(SpeakeasyBase));
-export { VirtualizationChoicesReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.VirtualizationChoicesReadResponse = VirtualizationChoicesReadResponse;

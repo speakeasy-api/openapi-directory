@@ -3,6 +3,10 @@ import { Verification } from "./verification";
 
 
 
+// CommitSimpleUser
+/** 
+ * Simple User
+**/
 export class CommitSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -63,6 +67,10 @@ export class CommitSimpleUser extends SpeakeasyBase {
 }
 
 
+// CommitCommitGitUser
+/** 
+ * Metaproperties for Git author/committer information.
+**/
 export class CommitCommitGitUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=date" })
   date?: string;

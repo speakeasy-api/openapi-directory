@@ -21,5 +21,5 @@ export declare class UpdateBulkDataExporterConfigRequest extends SpeakeasyBase {
 export declare class UpdateBulkDataExporterConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateBulkDataExporterConfig200ApplicationJsonObjects?: UpdateBulkDataExporterConfig200ApplicationJson[];
+    updateBulkDataExporterConfig200ApplicationJSONObjects?: UpdateBulkDataExporterConfig200ApplicationJson[];
 }

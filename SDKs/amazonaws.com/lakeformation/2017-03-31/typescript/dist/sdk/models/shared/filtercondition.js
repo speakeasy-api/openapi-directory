@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComparisonOperatorEnum } from "./comparisonoperatorenum";
-import { FieldNameStringEnum } from "./fieldnamestringenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FilterCondition = void 0;
+var utils_1 = require("../../../internal/utils");
+var comparisonoperatorenum_1 = require("./comparisonoperatorenum");
+var fieldnamestringenum_1 = require("./fieldnamestringenum");
 // FilterCondition
 /**
  * This structure describes the filtering of columns in a table based on a filter condition.
@@ -35,17 +38,17 @@ var FilterCondition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComparisonOperator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComparisonOperator" }),
         __metadata("design:type", String)
     ], FilterCondition.prototype, "comparisonOperator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Field" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Field" }),
         __metadata("design:type", String)
     ], FilterCondition.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StringValueList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StringValueList" }),
         __metadata("design:type", Array)
     ], FilterCondition.prototype, "stringValueList", void 0);
     return FilterCondition;
-}(SpeakeasyBase));
-export { FilterCondition };
+}(utils_1.SpeakeasyBase));
+exports.FilterCondition = FilterCondition;

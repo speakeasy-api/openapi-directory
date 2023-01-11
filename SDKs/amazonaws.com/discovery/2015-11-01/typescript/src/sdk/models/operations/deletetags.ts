@@ -51,7 +51,7 @@ export class DeleteTagsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteTagsResponse?: Map<string, any>;
+  deleteTagsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   homeRegionNotSetException?: any;

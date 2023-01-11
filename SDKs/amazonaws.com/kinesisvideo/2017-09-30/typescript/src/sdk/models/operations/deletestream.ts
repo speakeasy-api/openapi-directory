@@ -31,7 +31,7 @@ export class DeleteStreamRequestBody extends SpeakeasyBase {
   currentVersion?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamARN" })
-  streamArn: string;
+  streamARN: string;
 }
 
 
@@ -52,7 +52,7 @@ export class DeleteStreamResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteStreamOutput?: Map<string, any>;
+  deleteStreamOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidArgumentException?: any;

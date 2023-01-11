@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WellsFilesListResponse = exports.WellsFilesListRequest = exports.WellsFilesList200ApplicationJson = exports.WellsFilesList200ApplicationJsonPublic = exports.WellsFilesList200ApplicationJsonPrivate = exports.WellsFilesListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var WellsFilesListPathParams = /** @class */ (function (_super) {
     __extends(WellsFilesListPathParams, _super);
     function WellsFilesListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=tag" }),
         __metadata("design:type", String)
     ], WellsFilesListPathParams.prototype, "tag", void 0);
     return WellsFilesListPathParams;
-}(SpeakeasyBase));
-export { WellsFilesListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.WellsFilesListPathParams = WellsFilesListPathParams;
 var WellsFilesList200ApplicationJsonPrivate = /** @class */ (function (_super) {
     __extends(WellsFilesList200ApplicationJsonPrivate, _super);
     function WellsFilesList200ApplicationJsonPrivate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WellsFilesList200ApplicationJsonPrivate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], WellsFilesList200ApplicationJsonPrivate.prototype, "url", void 0);
     return WellsFilesList200ApplicationJsonPrivate;
-}(SpeakeasyBase));
-export { WellsFilesList200ApplicationJsonPrivate };
+}(utils_1.SpeakeasyBase));
+exports.WellsFilesList200ApplicationJsonPrivate = WellsFilesList200ApplicationJsonPrivate;
 var WellsFilesList200ApplicationJsonPublic = /** @class */ (function (_super) {
     __extends(WellsFilesList200ApplicationJsonPublic, _super);
     function WellsFilesList200ApplicationJsonPublic() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WellsFilesList200ApplicationJsonPublic.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], WellsFilesList200ApplicationJsonPublic.prototype, "url", void 0);
     return WellsFilesList200ApplicationJsonPublic;
-}(SpeakeasyBase));
-export { WellsFilesList200ApplicationJsonPublic };
+}(utils_1.SpeakeasyBase));
+exports.WellsFilesList200ApplicationJsonPublic = WellsFilesList200ApplicationJsonPublic;
 var WellsFilesList200ApplicationJson = /** @class */ (function (_super) {
     __extends(WellsFilesList200ApplicationJson, _super);
     function WellsFilesList200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=private", elemType: WellsFilesList200ApplicationJsonPrivate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=private", elemType: WellsFilesList200ApplicationJsonPrivate }),
         __metadata("design:type", Array)
     ], WellsFilesList200ApplicationJson.prototype, "private", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public", elemType: WellsFilesList200ApplicationJsonPublic }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public", elemType: WellsFilesList200ApplicationJsonPublic }),
         __metadata("design:type", Array)
     ], WellsFilesList200ApplicationJson.prototype, "public", void 0);
     return WellsFilesList200ApplicationJson;
-}(SpeakeasyBase));
-export { WellsFilesList200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.WellsFilesList200ApplicationJson = WellsFilesList200ApplicationJson;
 var WellsFilesListRequest = /** @class */ (function (_super) {
     __extends(WellsFilesListRequest, _super);
     function WellsFilesListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", WellsFilesListPathParams)
     ], WellsFilesListRequest.prototype, "pathParams", void 0);
     return WellsFilesListRequest;
-}(SpeakeasyBase));
-export { WellsFilesListRequest };
+}(utils_1.SpeakeasyBase));
+exports.WellsFilesListRequest = WellsFilesListRequest;
 var WellsFilesListResponse = /** @class */ (function (_super) {
     __extends(WellsFilesListResponse, _super);
     function WellsFilesListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], WellsFilesListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], WellsFilesListResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", WellsFilesList200ApplicationJson)
-    ], WellsFilesListResponse.prototype, "wellsFilesList200ApplicationJsonObject", void 0);
+    ], WellsFilesListResponse.prototype, "wellsFilesList200ApplicationJSONObject", void 0);
     return WellsFilesListResponse;
-}(SpeakeasyBase));
-export { WellsFilesListResponse };
+}(utils_1.SpeakeasyBase));
+exports.WellsFilesListResponse = WellsFilesListResponse;

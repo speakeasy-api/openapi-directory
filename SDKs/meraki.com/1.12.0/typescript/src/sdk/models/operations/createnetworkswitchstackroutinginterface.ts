@@ -74,5 +74,5 @@ export class CreateNetworkSwitchStackRoutingInterfaceResponse extends SpeakeasyB
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createNetworkSwitchStackRoutingInterface201ApplicationJsonObject?: Map<string, any>;
+  createNetworkSwitchStackRoutingInterface201ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare const GetPrometheusMetricsServerList: readonly ["http://localhost:8080"];
 export declare class GetPrometheusMetricsRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
 }
 export declare class GetPrometheusMetricsResponse extends SpeakeasyBase {
     contentType: string;

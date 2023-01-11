@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HostReservation } from "./hostreservation";
 
 
 
 export class DescribeHostReservationsResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: HostReservation })
-  hostReservationSet?: HostReservation[];
+  @SpeakeasyMetadata()
+  hostReservationSet?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 }

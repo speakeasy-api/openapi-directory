@@ -90,7 +90,7 @@ export class CreateConfigurationSetEventDestinationResponse extends SpeakeasyBas
   contentType: string;
 
   @SpeakeasyMetadata()
-  createConfigurationSetEventDestinationResponse?: Map<string, any>;
+  createConfigurationSetEventDestinationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   limitExceededException?: any;

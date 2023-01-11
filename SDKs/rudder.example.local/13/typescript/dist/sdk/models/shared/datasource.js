@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DatasourceRunParametersScheduleTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Datasource = exports.DatasourceType = exports.DatasourceTypeParameters = exports.DatasourceTypeParametersRequestMode = exports.DatasourceTypeParametersRequestModeNameEnum = exports.DatasourceTypeParametersRequestMethodEnum = exports.DatasourceTypeParametersHeaders = exports.DatasourceTypeNameEnum = exports.DatasourceRunParameters = exports.DatasourceRunParametersSchedule = exports.DatasourceRunParametersScheduleTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DatasourceRunParametersScheduleTypeEnum;
 (function (DatasourceRunParametersScheduleTypeEnum) {
     DatasourceRunParametersScheduleTypeEnum["Scheduled"] = "scheduled";
     DatasourceRunParametersScheduleTypeEnum["Notscheduled"] = "notscheduled";
-})(DatasourceRunParametersScheduleTypeEnum || (DatasourceRunParametersScheduleTypeEnum = {}));
+})(DatasourceRunParametersScheduleTypeEnum = exports.DatasourceRunParametersScheduleTypeEnum || (exports.DatasourceRunParametersScheduleTypeEnum = {}));
 // DatasourceRunParametersSchedule
 /**
  * Configure if data source should be fetch periodically
@@ -38,12 +41,12 @@ var DatasourceRunParametersSchedule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], DatasourceRunParametersSchedule.prototype, "type", void 0);
     return DatasourceRunParametersSchedule;
-}(SpeakeasyBase));
-export { DatasourceRunParametersSchedule };
+}(utils_1.SpeakeasyBase));
+exports.DatasourceRunParametersSchedule = DatasourceRunParametersSchedule;
 // DatasourceRunParameters
 /**
  * Parameters to configure when the data source is fetched to update node properties.
@@ -54,49 +57,49 @@ var DatasourceRunParameters = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onGeneration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onGeneration" }),
         __metadata("design:type", Boolean)
     ], DatasourceRunParameters.prototype, "onGeneration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=onNewNode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=onNewNode" }),
         __metadata("design:type", Boolean)
     ], DatasourceRunParameters.prototype, "onNewNode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schedule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schedule" }),
         __metadata("design:type", DatasourceRunParametersSchedule)
     ], DatasourceRunParameters.prototype, "schedule", void 0);
     return DatasourceRunParameters;
-}(SpeakeasyBase));
-export { DatasourceRunParameters };
-export var DatasourceTypeNameEnum;
+}(utils_1.SpeakeasyBase));
+exports.DatasourceRunParameters = DatasourceRunParameters;
+var DatasourceTypeNameEnum;
 (function (DatasourceTypeNameEnum) {
     DatasourceTypeNameEnum["Http"] = "HTTP";
-})(DatasourceTypeNameEnum || (DatasourceTypeNameEnum = {}));
+})(DatasourceTypeNameEnum = exports.DatasourceTypeNameEnum || (exports.DatasourceTypeNameEnum = {}));
 var DatasourceTypeParametersHeaders = /** @class */ (function (_super) {
     __extends(DatasourceTypeParametersHeaders, _super);
     function DatasourceTypeParametersHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DatasourceTypeParametersHeaders.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], DatasourceTypeParametersHeaders.prototype, "value", void 0);
     return DatasourceTypeParametersHeaders;
-}(SpeakeasyBase));
-export { DatasourceTypeParametersHeaders };
-export var DatasourceTypeParametersRequestMethodEnum;
+}(utils_1.SpeakeasyBase));
+exports.DatasourceTypeParametersHeaders = DatasourceTypeParametersHeaders;
+var DatasourceTypeParametersRequestMethodEnum;
 (function (DatasourceTypeParametersRequestMethodEnum) {
     DatasourceTypeParametersRequestMethodEnum["Get"] = "GET";
     DatasourceTypeParametersRequestMethodEnum["Post"] = "POST";
-})(DatasourceTypeParametersRequestMethodEnum || (DatasourceTypeParametersRequestMethodEnum = {}));
-export var DatasourceTypeParametersRequestModeNameEnum;
+})(DatasourceTypeParametersRequestMethodEnum = exports.DatasourceTypeParametersRequestMethodEnum || (exports.DatasourceTypeParametersRequestMethodEnum = {}));
+var DatasourceTypeParametersRequestModeNameEnum;
 (function (DatasourceTypeParametersRequestModeNameEnum) {
     DatasourceTypeParametersRequestModeNameEnum["ByNode"] = "byNode";
-})(DatasourceTypeParametersRequestModeNameEnum || (DatasourceTypeParametersRequestModeNameEnum = {}));
+})(DatasourceTypeParametersRequestModeNameEnum = exports.DatasourceTypeParametersRequestModeNameEnum || (exports.DatasourceTypeParametersRequestModeNameEnum = {}));
 // DatasourceTypeParametersRequestMode
 /**
  * Configure the strategy used to query the HTTP data source.
@@ -107,12 +110,12 @@ var DatasourceTypeParametersRequestMode = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DatasourceTypeParametersRequestMode.prototype, "name", void 0);
     return DatasourceTypeParametersRequestMode;
-}(SpeakeasyBase));
-export { DatasourceTypeParametersRequestMode };
+}(utils_1.SpeakeasyBase));
+exports.DatasourceTypeParametersRequestMode = DatasourceTypeParametersRequestMode;
 // DatasourceTypeParameters
 /**
  * You can use Rudder variable expansion (`${rudder.node`, `${node.properties...}`)
@@ -123,36 +126,36 @@ var DatasourceTypeParameters = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=checkSsl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=checkSsl" }),
         __metadata("design:type", Boolean)
     ], DatasourceTypeParameters.prototype, "checkSsl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers", elemType: DatasourceTypeParametersHeaders }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers", elemType: DatasourceTypeParametersHeaders }),
         __metadata("design:type", Array)
     ], DatasourceTypeParameters.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], DatasourceTypeParameters.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMethod" }),
         __metadata("design:type", String)
     ], DatasourceTypeParameters.prototype, "requestMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMode" }),
         __metadata("design:type", DatasourceTypeParametersRequestMode)
     ], DatasourceTypeParameters.prototype, "requestMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestTimeout" }),
         __metadata("design:type", Number)
     ], DatasourceTypeParameters.prototype, "requestTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], DatasourceTypeParameters.prototype, "url", void 0);
     return DatasourceTypeParameters;
-}(SpeakeasyBase));
-export { DatasourceTypeParameters };
+}(utils_1.SpeakeasyBase));
+exports.DatasourceTypeParameters = DatasourceTypeParameters;
 // DatasourceType
 /**
  * Define and configure data source type.
@@ -163,49 +166,49 @@ var DatasourceType = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DatasourceType.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters" }),
         __metadata("design:type", DatasourceTypeParameters)
     ], DatasourceType.prototype, "parameters", void 0);
     return DatasourceType;
-}(SpeakeasyBase));
-export { DatasourceType };
+}(utils_1.SpeakeasyBase));
+exports.DatasourceType = DatasourceType;
 var Datasource = /** @class */ (function (_super) {
     __extends(Datasource, _super);
     function Datasource() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Datasource.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], Datasource.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Datasource.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Datasource.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runParameters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runParameters" }),
         __metadata("design:type", DatasourceRunParameters)
     ], Datasource.prototype, "runParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", DatasourceType)
     ], Datasource.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTimeout" }),
         __metadata("design:type", Number)
     ], Datasource.prototype, "updateTimeout", void 0);
     return Datasource;
-}(SpeakeasyBase));
-export { Datasource };
+}(utils_1.SpeakeasyBase));
+exports.Datasource = Datasource;

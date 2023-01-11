@@ -22,6 +22,6 @@ export declare class UpdateTagsForDomainResponse extends SpeakeasyBase {
     invalidInput?: any;
     operationLimitExceeded?: any;
     statusCode: number;
-    unsupportedTld?: any;
-    updateTagsForDomainResponse?: Map<string, any>;
+    unsupportedTLD?: any;
+    updateTagsForDomainResponse?: Record<string, any>;
 }

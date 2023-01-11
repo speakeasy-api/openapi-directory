@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleTypeDate } from "./googletypedate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudBillingBudgetsV1CustomPeriod = void 0;
+var utils_1 = require("../../../internal/utils");
+var googletypedate_1 = require("./googletypedate");
 // GoogleCloudBillingBudgetsV1CustomPeriod
 /**
  * All date times begin at 12 AM US and Canadian Pacific Time (UTC-8).
@@ -34,13 +37,13 @@ var GoogleCloudBillingBudgetsV1CustomPeriod = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
-        __metadata("design:type", GoogleTypeDate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
+        __metadata("design:type", googletypedate_1.GoogleTypeDate)
     ], GoogleCloudBillingBudgetsV1CustomPeriod.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
-        __metadata("design:type", GoogleTypeDate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
+        __metadata("design:type", googletypedate_1.GoogleTypeDate)
     ], GoogleCloudBillingBudgetsV1CustomPeriod.prototype, "startDate", void 0);
     return GoogleCloudBillingBudgetsV1CustomPeriod;
-}(SpeakeasyBase));
-export { GoogleCloudBillingBudgetsV1CustomPeriod };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudBillingBudgetsV1CustomPeriod = GoogleCloudBillingBudgetsV1CustomPeriod;

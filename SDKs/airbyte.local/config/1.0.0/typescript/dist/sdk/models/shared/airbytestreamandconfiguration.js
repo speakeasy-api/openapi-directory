@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AirbyteStreamConfiguration } from "./airbytestreamconfiguration";
-import { AirbyteStream } from "./airbytestream";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AirbyteStreamAndConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var airbytestreamconfiguration_1 = require("./airbytestreamconfiguration");
+var airbytestream_1 = require("./airbytestream");
 // AirbyteStreamAndConfiguration
 /**
  * each stream is split in two parts; the immutable schema from source and mutable configuration for destination
@@ -35,13 +38,13 @@ var AirbyteStreamAndConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
-        __metadata("design:type", AirbyteStreamConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
+        __metadata("design:type", airbytestreamconfiguration_1.AirbyteStreamConfiguration)
     ], AirbyteStreamAndConfiguration.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stream" }),
-        __metadata("design:type", AirbyteStream)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stream" }),
+        __metadata("design:type", airbytestream_1.AirbyteStream)
     ], AirbyteStreamAndConfiguration.prototype, "stream", void 0);
     return AirbyteStreamAndConfiguration;
-}(SpeakeasyBase));
-export { AirbyteStreamAndConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.AirbyteStreamAndConfiguration = AirbyteStreamAndConfiguration;

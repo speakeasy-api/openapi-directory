@@ -5,7 +5,7 @@ import { GooglePrivacyDlpV2TableOptions } from "./googleprivacydlpv2tableoptions
 **/
 export declare class GooglePrivacyDlpV2HybridOptions extends SpeakeasyBase {
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     requiredFindingLabelKeys?: string[];
     tableOptions?: GooglePrivacyDlpV2TableOptions;
 }

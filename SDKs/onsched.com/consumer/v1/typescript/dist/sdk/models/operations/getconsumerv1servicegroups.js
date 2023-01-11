@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetConsumerV1ServicegroupsResponse = exports.GetConsumerV1ServicegroupsRequest = exports.GetConsumerV1ServicegroupsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetConsumerV1ServicegroupsQueryParams = /** @class */ (function (_super) {
     __extends(GetConsumerV1ServicegroupsQueryParams, _super);
     function GetConsumerV1ServicegroupsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetConsumerV1ServicegroupsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=locationId" }),
         __metadata("design:type", String)
     ], GetConsumerV1ServicegroupsQueryParams.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], GetConsumerV1ServicegroupsQueryParams.prototype, "offset", void 0);
     return GetConsumerV1ServicegroupsQueryParams;
-}(SpeakeasyBase));
-export { GetConsumerV1ServicegroupsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetConsumerV1ServicegroupsQueryParams = GetConsumerV1ServicegroupsQueryParams;
 var GetConsumerV1ServicegroupsRequest = /** @class */ (function (_super) {
     __extends(GetConsumerV1ServicegroupsRequest, _super);
     function GetConsumerV1ServicegroupsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetConsumerV1ServicegroupsQueryParams)
     ], GetConsumerV1ServicegroupsRequest.prototype, "queryParams", void 0);
     return GetConsumerV1ServicegroupsRequest;
-}(SpeakeasyBase));
-export { GetConsumerV1ServicegroupsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetConsumerV1ServicegroupsRequest = GetConsumerV1ServicegroupsRequest;
 var GetConsumerV1ServicegroupsResponse = /** @class */ (function (_super) {
     __extends(GetConsumerV1ServicegroupsResponse, _super);
     function GetConsumerV1ServicegroupsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetConsumerV1ServicegroupsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetConsumerV1ServicegroupsResponse.prototype, "serviceGroupListViewModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetConsumerV1ServicegroupsResponse.prototype, "statusCode", void 0);
     return GetConsumerV1ServicegroupsResponse;
-}(SpeakeasyBase));
-export { GetConsumerV1ServicegroupsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetConsumerV1ServicegroupsResponse = GetConsumerV1ServicegroupsResponse;

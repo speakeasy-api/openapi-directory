@@ -1,4 +1,7 @@
-export var AllEntityTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllEntityTypeEnum = void 0;
+var AllEntityTypeEnum;
 (function (AllEntityTypeEnum) {
     AllEntityTypeEnum["Group"] = "Group";
     AllEntityTypeEnum["BaseSecurityGroup"] = "BaseSecurityGroup";
@@ -47,4 +50,4 @@ export var AllEntityTypeEnum;
     AllEntityTypeEnum["VcDatacenter"] = "VCDatacenter";
     AllEntityTypeEnum["Datastore"] = "Datastore";
     AllEntityTypeEnum["Folder"] = "Folder";
-})(AllEntityTypeEnum || (AllEntityTypeEnum = {}));
+})(AllEntityTypeEnum = exports.AllEntityTypeEnum || (exports.AllEntityTypeEnum = {}));

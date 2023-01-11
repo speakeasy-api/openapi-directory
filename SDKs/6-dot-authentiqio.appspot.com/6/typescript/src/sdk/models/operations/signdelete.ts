@@ -34,5 +34,5 @@ export class SignDeleteResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  signDelete200ApplicationJsonObject?: SignDelete200ApplicationJson;
+  signDelete200ApplicationJSONObject?: SignDelete200ApplicationJson;
 }

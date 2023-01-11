@@ -48,7 +48,7 @@ export class RejectAssignmentResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  rejectAssignmentResponse?: Map<string, any>;
+  rejectAssignmentResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   requestError?: any;

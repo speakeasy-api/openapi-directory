@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,86 +14,111 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsRemoveProjectLegacyResponse = exports.TeamsRemoveProjectLegacyRequest = exports.TeamsRemoveProjectLegacy415ApplicationJson = exports.TeamsRemoveProjectLegacyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var TeamsRemoveProjectLegacyPathParams = /** @class */ (function (_super) {
     __extends(TeamsRemoveProjectLegacyPathParams, _super);
     function TeamsRemoveProjectLegacyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project_id" }),
         __metadata("design:type", Number)
     ], TeamsRemoveProjectLegacyPathParams.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_id" }),
         __metadata("design:type", Number)
     ], TeamsRemoveProjectLegacyPathParams.prototype, "teamId", void 0);
     return TeamsRemoveProjectLegacyPathParams;
-}(SpeakeasyBase));
-export { TeamsRemoveProjectLegacyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveProjectLegacyPathParams = TeamsRemoveProjectLegacyPathParams;
 var TeamsRemoveProjectLegacy415ApplicationJson = /** @class */ (function (_super) {
     __extends(TeamsRemoveProjectLegacy415ApplicationJson, _super);
     function TeamsRemoveProjectLegacy415ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentation_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentation_url" }),
         __metadata("design:type", String)
     ], TeamsRemoveProjectLegacy415ApplicationJson.prototype, "documentationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], TeamsRemoveProjectLegacy415ApplicationJson.prototype, "message", void 0);
     return TeamsRemoveProjectLegacy415ApplicationJson;
-}(SpeakeasyBase));
-export { TeamsRemoveProjectLegacy415ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveProjectLegacy415ApplicationJson = TeamsRemoveProjectLegacy415ApplicationJson;
 var TeamsRemoveProjectLegacyRequest = /** @class */ (function (_super) {
     __extends(TeamsRemoveProjectLegacyRequest, _super);
     function TeamsRemoveProjectLegacyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsRemoveProjectLegacyPathParams)
     ], TeamsRemoveProjectLegacyRequest.prototype, "pathParams", void 0);
     return TeamsRemoveProjectLegacyRequest;
-}(SpeakeasyBase));
-export { TeamsRemoveProjectLegacyRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveProjectLegacyRequest = TeamsRemoveProjectLegacyRequest;
 var TeamsRemoveProjectLegacyResponse = /** @class */ (function (_super) {
     __extends(TeamsRemoveProjectLegacyResponse, _super);
     function TeamsRemoveProjectLegacyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsRemoveProjectLegacyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsRemoveProjectLegacyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BasicError)
     ], TeamsRemoveProjectLegacyResponse.prototype, "basicError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsRemoveProjectLegacy415ApplicationJson)
-    ], TeamsRemoveProjectLegacyResponse.prototype, "teamsRemoveProjectLegacy415ApplicationJsonObject", void 0);
+    ], TeamsRemoveProjectLegacyResponse.prototype, "teamsRemoveProjectLegacy415ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ValidationError)
     ], TeamsRemoveProjectLegacyResponse.prototype, "validationError", void 0);
     return TeamsRemoveProjectLegacyResponse;
-}(SpeakeasyBase));
-export { TeamsRemoveProjectLegacyResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveProjectLegacyResponse = TeamsRemoveProjectLegacyResponse;

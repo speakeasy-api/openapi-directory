@@ -50,7 +50,7 @@ export class PostAccountsAccountOrdersRequestBody extends SpeakeasyBase {
   orderRestrictions?: number;
 
   @SpeakeasyMetadata({ data: "json, name=Outside RTH" })
-  outsideRth?: number;
+  outsideRTH?: number;
 
   @SpeakeasyMetadata({ data: "json, name=Price" })
   price?: number;

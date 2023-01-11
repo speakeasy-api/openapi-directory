@@ -25,7 +25,7 @@ export class GetApiV2ListMarkets200ApplicationJson extends SpeakeasyBase {
 
 export class GetApiV2ListMarkets404ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
-  errors?: Map<string, any>;
+  errors?: Record<string, any>;
 }
 
 
@@ -40,11 +40,11 @@ export class GetApiV2ListMarketsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getApiV2ListMarkets200ApplicationJsonObject?: GetApiV2ListMarkets200ApplicationJson;
-
-  @SpeakeasyMetadata()
-  getApiV2ListMarkets404ApplicationJsonObject?: GetApiV2ListMarkets404ApplicationJson;
-
-  @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getApiV2ListMarkets200ApplicationJSONObject?: GetApiV2ListMarkets200ApplicationJson;
+
+  @SpeakeasyMetadata()
+  getApiV2ListMarkets404ApplicationJSONObject?: GetApiV2ListMarkets404ApplicationJson;
 }

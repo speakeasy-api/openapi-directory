@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePullRequestApprovalRuleInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreatePullRequestApprovalRuleInput = /** @class */ (function (_super) {
     __extends(CreatePullRequestApprovalRuleInput, _super);
     function CreatePullRequestApprovalRuleInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvalRuleContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvalRuleContent" }),
         __metadata("design:type", String)
     ], CreatePullRequestApprovalRuleInput.prototype, "approvalRuleContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvalRuleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvalRuleName" }),
         __metadata("design:type", String)
     ], CreatePullRequestApprovalRuleInput.prototype, "approvalRuleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pullRequestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pullRequestId" }),
         __metadata("design:type", String)
     ], CreatePullRequestApprovalRuleInput.prototype, "pullRequestId", void 0);
     return CreatePullRequestApprovalRuleInput;
-}(SpeakeasyBase));
-export { CreatePullRequestApprovalRuleInput };
+}(utils_1.SpeakeasyBase));
+exports.CreatePullRequestApprovalRuleInput = CreatePullRequestApprovalRuleInput;

@@ -46,7 +46,7 @@ export class DeleteFleetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteFleetResponse?: Map<string, any>;
+  deleteFleetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

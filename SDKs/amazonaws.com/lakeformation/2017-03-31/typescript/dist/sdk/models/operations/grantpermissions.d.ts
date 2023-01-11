@@ -21,7 +21,7 @@ export declare class GrantPermissionsResponse extends SpeakeasyBase {
     concurrentModificationException?: any;
     contentType: string;
     entityNotFoundException?: any;
-    grantPermissionsResponse?: Map<string, any>;
+    grantPermissionsResponse?: Record<string, any>;
     invalidInputException?: any;
     statusCode: number;
 }

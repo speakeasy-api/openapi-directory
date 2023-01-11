@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-var LeaveTypeInput = /** @class */ (function (_super) {
-    __extends(LeaveTypeInput, _super);
-    function LeaveTypeInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=CurrentRecord" }),
-        __metadata("design:type", Boolean)
-    ], LeaveTypeInput.prototype, "currentRecord", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsPaidLeave" }),
-        __metadata("design:type", Boolean)
-    ], LeaveTypeInput.prototype, "isPaidLeave", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeaveLoadingRate" }),
-        __metadata("design:type", Number)
-    ], LeaveTypeInput.prototype, "leaveLoadingRate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeaveTypeID" }),
-        __metadata("design:type", String)
-    ], LeaveTypeInput.prototype, "leaveTypeId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
-        __metadata("design:type", String)
-    ], LeaveTypeInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=NormalEntitlement" }),
-        __metadata("design:type", Number)
-    ], LeaveTypeInput.prototype, "normalEntitlement", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=ShowOnPayslip" }),
-        __metadata("design:type", Boolean)
-    ], LeaveTypeInput.prototype, "showOnPayslip", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=TypeOfUnits" }),
-        __metadata("design:type", String)
-    ], LeaveTypeInput.prototype, "typeOfUnits", void 0);
-    return LeaveTypeInput;
-}(SpeakeasyBase));
-export { LeaveTypeInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LeaveTypeInput = exports.LeaveType = void 0;
+var utils_1 = require("../../../internal/utils");
 var LeaveType = /** @class */ (function (_super) {
     __extends(LeaveType, _super);
     function LeaveType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CurrentRecord" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CurrentRecord" }),
         __metadata("design:type", Boolean)
     ], LeaveType.prototype, "currentRecord", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsPaidLeave" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsPaidLeave" }),
         __metadata("design:type", Boolean)
     ], LeaveType.prototype, "isPaidLeave", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeaveLoadingRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeaveLoadingRate" }),
         __metadata("design:type", Number)
     ], LeaveType.prototype, "leaveLoadingRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeaveTypeID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeaveTypeID" }),
         __metadata("design:type", String)
-    ], LeaveType.prototype, "leaveTypeId", void 0);
+    ], LeaveType.prototype, "leaveTypeID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], LeaveType.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NormalEntitlement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NormalEntitlement" }),
         __metadata("design:type", Number)
     ], LeaveType.prototype, "normalEntitlement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ShowOnPayslip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ShowOnPayslip" }),
         __metadata("design:type", Boolean)
     ], LeaveType.prototype, "showOnPayslip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TypeOfUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TypeOfUnits" }),
         __metadata("design:type", String)
     ], LeaveType.prototype, "typeOfUnits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdatedDateUTC" }),
         __metadata("design:type", String)
-    ], LeaveType.prototype, "updatedDateUtc", void 0);
+    ], LeaveType.prototype, "updatedDateUTC", void 0);
     return LeaveType;
-}(SpeakeasyBase));
-export { LeaveType };
+}(utils_1.SpeakeasyBase));
+exports.LeaveType = LeaveType;
+var LeaveTypeInput = /** @class */ (function (_super) {
+    __extends(LeaveTypeInput, _super);
+    function LeaveTypeInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CurrentRecord" }),
+        __metadata("design:type", Boolean)
+    ], LeaveTypeInput.prototype, "currentRecord", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsPaidLeave" }),
+        __metadata("design:type", Boolean)
+    ], LeaveTypeInput.prototype, "isPaidLeave", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeaveLoadingRate" }),
+        __metadata("design:type", Number)
+    ], LeaveTypeInput.prototype, "leaveLoadingRate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeaveTypeID" }),
+        __metadata("design:type", String)
+    ], LeaveTypeInput.prototype, "leaveTypeID", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
+        __metadata("design:type", String)
+    ], LeaveTypeInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NormalEntitlement" }),
+        __metadata("design:type", Number)
+    ], LeaveTypeInput.prototype, "normalEntitlement", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ShowOnPayslip" }),
+        __metadata("design:type", Boolean)
+    ], LeaveTypeInput.prototype, "showOnPayslip", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TypeOfUnits" }),
+        __metadata("design:type", String)
+    ], LeaveTypeInput.prototype, "typeOfUnits", void 0);
+    return LeaveTypeInput;
+}(utils_1.SpeakeasyBase));
+exports.LeaveTypeInput = LeaveTypeInput;

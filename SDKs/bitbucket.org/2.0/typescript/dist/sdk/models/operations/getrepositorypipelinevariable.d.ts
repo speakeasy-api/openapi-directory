@@ -10,6 +10,6 @@ export declare class GetRepositoryPipelineVariableRequest extends SpeakeasyBase 
 export declare class GetRepositoryPipelineVariableResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pipelineVariable?: Map<string, any>;
+    error?: Record<string, any>;
+    pipelineVariable?: Record<string, any>;
 }

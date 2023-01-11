@@ -106,11 +106,11 @@ export declare class PalcsRequest extends SpeakeasyBase {
 export declare class PalcsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    palcs400ApplicationJsonObject?: Palcs400ApplicationJson;
-    palcs401ApplicationJsonObject?: Palcs401ApplicationJson;
-    palcs404ApplicationJsonObject?: Palcs404ApplicationJson;
-    palcs500ApplicationJsonObject?: Palcs500ApplicationJson;
-    palcs502ApplicationJsonObject?: Palcs502ApplicationJson;
-    palcs503ApplicationJsonObject?: Palcs503ApplicationJson;
-    palcs504ApplicationJsonObject?: Palcs504ApplicationJson;
+    palcs400ApplicationJSONObject?: Palcs400ApplicationJson;
+    palcs401ApplicationJSONObject?: Palcs401ApplicationJson;
+    palcs404ApplicationJSONObject?: Palcs404ApplicationJson;
+    palcs500ApplicationJSONObject?: Palcs500ApplicationJson;
+    palcs502ApplicationJSONObject?: Palcs502ApplicationJson;
+    palcs503ApplicationJSONObject?: Palcs503ApplicationJson;
+    palcs504ApplicationJSONObject?: Palcs504ApplicationJson;
 }

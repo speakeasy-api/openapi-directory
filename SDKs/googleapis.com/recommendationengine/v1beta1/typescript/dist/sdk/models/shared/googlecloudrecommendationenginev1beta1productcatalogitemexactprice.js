@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice
 /**
  * Exact product price.
@@ -33,13 +36,13 @@ var GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice = /** @cl
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayPrice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayPrice" }),
         __metadata("design:type", Number)
     ], GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice.prototype, "displayPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originalPrice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originalPrice" }),
         __metadata("design:type", Number)
     ], GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice.prototype, "originalPrice", void 0);
     return GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice;
-}(SpeakeasyBase));
-export { GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice = GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMeInboxUnreadResponse = exports.GetMeInboxUnreadRequest = exports.GetMeInboxUnreadQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetMeInboxUnreadQueryParams = /** @class */ (function (_super) {
     __extends(GetMeInboxUnreadQueryParams, _super);
     function GetMeInboxUnreadQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetMeInboxUnreadQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetMeInboxUnreadQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetMeInboxUnreadQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetMeInboxUnreadQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=since" }),
         __metadata("design:type", Number)
     ], GetMeInboxUnreadQueryParams.prototype, "since", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetMeInboxUnreadQueryParams.prototype, "site", void 0);
     return GetMeInboxUnreadQueryParams;
-}(SpeakeasyBase));
-export { GetMeInboxUnreadQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMeInboxUnreadQueryParams = GetMeInboxUnreadQueryParams;
 var GetMeInboxUnreadRequest = /** @class */ (function (_super) {
     __extends(GetMeInboxUnreadRequest, _super);
     function GetMeInboxUnreadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMeInboxUnreadQueryParams)
     ], GetMeInboxUnreadRequest.prototype, "queryParams", void 0);
     return GetMeInboxUnreadRequest;
-}(SpeakeasyBase));
-export { GetMeInboxUnreadRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMeInboxUnreadRequest = GetMeInboxUnreadRequest;
 var GetMeInboxUnreadResponse = /** @class */ (function (_super) {
     __extends(GetMeInboxUnreadResponse, _super);
     function GetMeInboxUnreadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetMeInboxUnreadResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMeInboxUnreadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMeInboxUnreadResponse.prototype, "statusCode", void 0);
     return GetMeInboxUnreadResponse;
-}(SpeakeasyBase));
-export { GetMeInboxUnreadResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMeInboxUnreadResponse = GetMeInboxUnreadResponse;

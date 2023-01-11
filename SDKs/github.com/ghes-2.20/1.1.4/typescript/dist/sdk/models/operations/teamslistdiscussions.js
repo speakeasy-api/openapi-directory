@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,91 +14,111 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsListDiscussionsResponse = exports.TeamsListDiscussionsRequest = exports.TeamsListDiscussionsQueryParams = exports.TeamsListDiscussionsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var TeamsListDiscussionsPathParams = /** @class */ (function (_super) {
     __extends(TeamsListDiscussionsPathParams, _super);
     function TeamsListDiscussionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_id" }),
         __metadata("design:type", Number)
     ], TeamsListDiscussionsPathParams.prototype, "teamId", void 0);
     return TeamsListDiscussionsPathParams;
-}(SpeakeasyBase));
-export { TeamsListDiscussionsPathParams };
-export var TeamsListDiscussionsDirectionEnum;
-(function (TeamsListDiscussionsDirectionEnum) {
-    TeamsListDiscussionsDirectionEnum["Asc"] = "asc";
-    TeamsListDiscussionsDirectionEnum["Desc"] = "desc";
-})(TeamsListDiscussionsDirectionEnum || (TeamsListDiscussionsDirectionEnum = {}));
+}(utils_1.SpeakeasyBase));
+exports.TeamsListDiscussionsPathParams = TeamsListDiscussionsPathParams;
 var TeamsListDiscussionsQueryParams = /** @class */ (function (_super) {
     __extends(TeamsListDiscussionsQueryParams, _super);
     function TeamsListDiscussionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=direction" }),
         __metadata("design:type", String)
     ], TeamsListDiscussionsQueryParams.prototype, "direction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], TeamsListDiscussionsQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=per_page" }),
         __metadata("design:type", Number)
     ], TeamsListDiscussionsQueryParams.prototype, "perPage", void 0);
     return TeamsListDiscussionsQueryParams;
-}(SpeakeasyBase));
-export { TeamsListDiscussionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamsListDiscussionsQueryParams = TeamsListDiscussionsQueryParams;
 var TeamsListDiscussionsRequest = /** @class */ (function (_super) {
     __extends(TeamsListDiscussionsRequest, _super);
     function TeamsListDiscussionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsListDiscussionsPathParams)
     ], TeamsListDiscussionsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsListDiscussionsQueryParams)
     ], TeamsListDiscussionsRequest.prototype, "queryParams", void 0);
     return TeamsListDiscussionsRequest;
-}(SpeakeasyBase));
-export { TeamsListDiscussionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsListDiscussionsRequest = TeamsListDiscussionsRequest;
 var TeamsListDiscussionsResponse = /** @class */ (function (_super) {
     __extends(TeamsListDiscussionsResponse, _super);
     function TeamsListDiscussionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsListDiscussionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], TeamsListDiscussionsResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsListDiscussionsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.TeamDiscussion }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.TeamDiscussion }),
         __metadata("design:type", Array)
     ], TeamsListDiscussionsResponse.prototype, "teamDiscussions", void 0);
     return TeamsListDiscussionsResponse;
-}(SpeakeasyBase));
-export { TeamsListDiscussionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsListDiscussionsResponse = TeamsListDiscussionsResponse;

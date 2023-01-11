@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MetricFormattingTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Metric = exports.MetricFormattingTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MetricFormattingTypeEnum;
 (function (MetricFormattingTypeEnum) {
     MetricFormattingTypeEnum["MetricTypeUnspecified"] = "METRIC_TYPE_UNSPECIFIED";
     MetricFormattingTypeEnum["Integer"] = "INTEGER";
@@ -31,7 +34,7 @@ export var MetricFormattingTypeEnum;
     MetricFormattingTypeEnum["Currency"] = "CURRENCY";
     MetricFormattingTypeEnum["Percent"] = "PERCENT";
     MetricFormattingTypeEnum["Time"] = "TIME";
-})(MetricFormattingTypeEnum || (MetricFormattingTypeEnum = {}));
+})(MetricFormattingTypeEnum = exports.MetricFormattingTypeEnum || (exports.MetricFormattingTypeEnum = {}));
 // Metric
 /**
  * [Metrics](https://support.google.com/analytics/answer/1033861) are the quantitative measurements. For example, the metric `ga:users` indicates the total number of users for the requested time period.
@@ -42,17 +45,17 @@ var Metric = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alias" }),
         __metadata("design:type", String)
     ], Metric.prototype, "alias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expression" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expression" }),
         __metadata("design:type", String)
     ], Metric.prototype, "expression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formattingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formattingType" }),
         __metadata("design:type", String)
     ], Metric.prototype, "formattingType", void 0);
     return Metric;
-}(SpeakeasyBase));
-export { Metric };
+}(utils_1.SpeakeasyBase));
+exports.Metric = Metric;

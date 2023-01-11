@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class GetPodcastsInBatchHeaders extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-ListenAPI-Key" })
-  xListenApiKey: string;
+  xListenAPIKey: string;
 }
 
 
@@ -26,7 +26,7 @@ export class GetPodcastsInBatchResponse extends SpeakeasyBase {
   getPodcastsInBatchResponse?: shared.GetPodcastsInBatchResponse;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

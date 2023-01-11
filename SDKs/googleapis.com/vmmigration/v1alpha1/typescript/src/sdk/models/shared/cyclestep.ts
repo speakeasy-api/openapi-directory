@@ -12,10 +12,10 @@ export class CycleStep extends SpeakeasyBase {
   endTime?: string;
 
   @SpeakeasyMetadata({ data: "json, name=initializingReplication" })
-  initializingReplication?: Map<string, any>;
+  initializingReplication?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=postProcessing" })
-  postProcessing?: Map<string, any>;
+  postProcessing?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=replicating" })
   replicating?: ReplicatingStep;

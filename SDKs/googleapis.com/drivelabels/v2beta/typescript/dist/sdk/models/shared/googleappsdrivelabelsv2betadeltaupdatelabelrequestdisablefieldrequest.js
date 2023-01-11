@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy } from "./googleappsdrivelabelsv2betalifecycledisabledpolicy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableFieldRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betalifecycledisabledpolicy_1 = require("./googleappsdrivelabelsv2betalifecycledisabledpolicy");
 // GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableFieldRequest
 /**
  * Request to disable the Field.
@@ -34,17 +37,17 @@ var GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableFieldRequest = /** 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disabledPolicy" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disabledPolicy" }),
+        __metadata("design:type", googleappsdrivelabelsv2betalifecycledisabledpolicy_1.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableFieldRequest.prototype, "disabledPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableFieldRequest.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateMask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateMask" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableFieldRequest.prototype, "updateMask", void 0);
     return GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableFieldRequest;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableFieldRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableFieldRequest = GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestDisableFieldRequest;

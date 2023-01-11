@@ -14,7 +14,7 @@ export declare class DescribeJobLogItemsHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class DescribeJobLogItemsRequestBody extends SpeakeasyBase {
-    jobId: string;
+    jobID: string;
     maxResults?: number;
     nextToken?: string;
 }

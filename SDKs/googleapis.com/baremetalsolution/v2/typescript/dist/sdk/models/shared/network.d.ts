@@ -23,7 +23,7 @@ export declare class Network extends SpeakeasyBase {
     id?: string;
     ipAddress?: string;
     jumboFramesEnabled?: boolean;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     macAddress?: string[];
     mountPoints?: NetworkMountPoint[];
     name?: string;

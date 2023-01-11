@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LegacyReference } from "./legacyreference";
-import { SimpleAmount } from "./simpleamount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RefundItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var legacyreference_1 = require("./legacyreference");
+var simpleamount_1 = require("./simpleamount");
 // RefundItem
 /**
  * This type is used if the seller is issuing a refund for one or more individual order line items in a multiple line item order. Otherwise, the seller just uses the orderLevelRefundAmount container to specify the amount of the refund for the entire order.
@@ -35,17 +38,17 @@ var RefundItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legacyReference" }),
-        __metadata("design:type", LegacyReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legacyReference" }),
+        __metadata("design:type", legacyreference_1.LegacyReference)
     ], RefundItem.prototype, "legacyReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineItemId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineItemId" }),
         __metadata("design:type", String)
     ], RefundItem.prototype, "lineItemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refundAmount" }),
-        __metadata("design:type", SimpleAmount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refundAmount" }),
+        __metadata("design:type", simpleamount_1.SimpleAmount)
     ], RefundItem.prototype, "refundAmount", void 0);
     return RefundItem;
-}(SpeakeasyBase));
-export { RefundItem };
+}(utils_1.SpeakeasyBase));
+exports.RefundItem = RefundItem;

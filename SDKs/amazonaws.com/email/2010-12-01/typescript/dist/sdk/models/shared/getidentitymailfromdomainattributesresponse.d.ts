@@ -4,5 +4,5 @@ import { IdentityMailFromDomainAttributes } from "./identitymailfromdomainattrib
  * Represents the custom MAIL FROM attributes for a list of identities.
 **/
 export declare class GetIdentityMailFromDomainAttributesResponse extends SpeakeasyBase {
-    mailFromDomainAttributes: Map<string, IdentityMailFromDomainAttributes>;
+    mailFromDomainAttributes: Record<string, IdentityMailFromDomainAttributes>;
 }

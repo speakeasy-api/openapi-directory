@@ -18,7 +18,7 @@ export declare class DeleteComputeEnvironmentRequest extends SpeakeasyBase {
 export declare class DeleteComputeEnvironmentResponse extends SpeakeasyBase {
     clientException?: any;
     contentType: string;
-    deleteComputeEnvironmentResponse?: Map<string, any>;
+    deleteComputeEnvironmentResponse?: Record<string, any>;
     serverException?: any;
     statusCode: number;
 }

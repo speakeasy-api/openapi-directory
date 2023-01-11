@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,53 +14,78 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateEventIntegrationResponse = exports.CreateEventIntegrationRequest = exports.CreateEventIntegrationRequestBody = exports.CreateEventIntegrationRequestBodyEventFilter = exports.CreateEventIntegrationHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CreateEventIntegrationHeaders = /** @class */ (function (_super) {
     __extends(CreateEventIntegrationHeaders, _super);
     function CreateEventIntegrationHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], CreateEventIntegrationHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], CreateEventIntegrationHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], CreateEventIntegrationHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], CreateEventIntegrationHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], CreateEventIntegrationHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], CreateEventIntegrationHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], CreateEventIntegrationHeaders.prototype, "xAmzSignedHeaders", void 0);
     return CreateEventIntegrationHeaders;
-}(SpeakeasyBase));
-export { CreateEventIntegrationHeaders };
+}(utils_1.SpeakeasyBase));
+exports.CreateEventIntegrationHeaders = CreateEventIntegrationHeaders;
 // CreateEventIntegrationRequestBodyEventFilter
 /**
  * The event filter.
@@ -70,101 +96,101 @@ var CreateEventIntegrationRequestBodyEventFilter = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Source" }),
         __metadata("design:type", String)
     ], CreateEventIntegrationRequestBodyEventFilter.prototype, "source", void 0);
     return CreateEventIntegrationRequestBodyEventFilter;
-}(SpeakeasyBase));
-export { CreateEventIntegrationRequestBodyEventFilter };
+}(utils_1.SpeakeasyBase));
+exports.CreateEventIntegrationRequestBodyEventFilter = CreateEventIntegrationRequestBodyEventFilter;
 var CreateEventIntegrationRequestBody = /** @class */ (function (_super) {
     __extends(CreateEventIntegrationRequestBody, _super);
     function CreateEventIntegrationRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClientToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClientToken" }),
         __metadata("design:type", String)
     ], CreateEventIntegrationRequestBody.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], CreateEventIntegrationRequestBody.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventBridgeBus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventBridgeBus" }),
         __metadata("design:type", String)
     ], CreateEventIntegrationRequestBody.prototype, "eventBridgeBus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventFilter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventFilter" }),
         __metadata("design:type", CreateEventIntegrationRequestBodyEventFilter)
     ], CreateEventIntegrationRequestBody.prototype, "eventFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], CreateEventIntegrationRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags" }),
+        __metadata("design:type", Object)
     ], CreateEventIntegrationRequestBody.prototype, "tags", void 0);
     return CreateEventIntegrationRequestBody;
-}(SpeakeasyBase));
-export { CreateEventIntegrationRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateEventIntegrationRequestBody = CreateEventIntegrationRequestBody;
 var CreateEventIntegrationRequest = /** @class */ (function (_super) {
     __extends(CreateEventIntegrationRequest, _super);
     function CreateEventIntegrationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateEventIntegrationHeaders)
     ], CreateEventIntegrationRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateEventIntegrationRequestBody)
     ], CreateEventIntegrationRequest.prototype, "request", void 0);
     return CreateEventIntegrationRequest;
-}(SpeakeasyBase));
-export { CreateEventIntegrationRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateEventIntegrationRequest = CreateEventIntegrationRequest;
 var CreateEventIntegrationResponse = /** @class */ (function (_super) {
     __extends(CreateEventIntegrationResponse, _super);
     function CreateEventIntegrationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateEventIntegrationResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateEventIntegrationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.CreateEventIntegrationResponse)
     ], CreateEventIntegrationResponse.prototype, "createEventIntegrationResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateEventIntegrationResponse.prototype, "duplicateResourceException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateEventIntegrationResponse.prototype, "internalServiceError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateEventIntegrationResponse.prototype, "invalidRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateEventIntegrationResponse.prototype, "resourceQuotaExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateEventIntegrationResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateEventIntegrationResponse.prototype, "throttlingException", void 0);
     return CreateEventIntegrationResponse;
-}(SpeakeasyBase));
-export { CreateEventIntegrationResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateEventIntegrationResponse = CreateEventIntegrationResponse;

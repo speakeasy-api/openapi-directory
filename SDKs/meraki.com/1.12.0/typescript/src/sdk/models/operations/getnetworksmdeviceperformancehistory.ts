@@ -37,11 +37,11 @@ export class GetNetworkSmDevicePerformanceHistoryResponse extends SpeakeasyBase 
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSmDevicePerformanceHistory200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSmDevicePerformanceHistory200ApplicationJSONObject?: Record<string, any>;
 }

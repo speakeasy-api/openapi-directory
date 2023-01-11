@@ -48,7 +48,7 @@ export class CreateMlModelResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createMlModelOutput?: shared.CreateMlModelOutput;
+  createMLModelOutput?: shared.CreateMlModelOutput;
 
   @SpeakeasyMetadata()
   idempotentParameterMismatchException?: any;

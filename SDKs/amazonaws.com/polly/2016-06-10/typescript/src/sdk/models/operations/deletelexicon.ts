@@ -46,7 +46,7 @@ export class DeleteLexiconResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteLexiconOutput?: Map<string, any>;
+  deleteLexiconOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   lexiconNotFoundException?: any;

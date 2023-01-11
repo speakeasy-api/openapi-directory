@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReviewPolicy } from "./reviewpolicy";
-import { ReviewReport } from "./reviewreport";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListReviewPolicyResultsForHitResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var reviewpolicy_1 = require("./reviewpolicy");
+var reviewreport_1 = require("./reviewreport");
 var ListReviewPolicyResultsForHitResponse = /** @class */ (function (_super) {
     __extends(ListReviewPolicyResultsForHitResponse, _super);
     function ListReviewPolicyResultsForHitResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssignmentReviewPolicy" }),
-        __metadata("design:type", ReviewPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssignmentReviewPolicy" }),
+        __metadata("design:type", reviewpolicy_1.ReviewPolicy)
     ], ListReviewPolicyResultsForHitResponse.prototype, "assignmentReviewPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssignmentReviewReport" }),
-        __metadata("design:type", ReviewReport)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssignmentReviewReport" }),
+        __metadata("design:type", reviewreport_1.ReviewReport)
     ], ListReviewPolicyResultsForHitResponse.prototype, "assignmentReviewReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HITId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HITId" }),
         __metadata("design:type", String)
     ], ListReviewPolicyResultsForHitResponse.prototype, "hitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HITReviewPolicy" }),
-        __metadata("design:type", ReviewPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HITReviewPolicy" }),
+        __metadata("design:type", reviewpolicy_1.ReviewPolicy)
     ], ListReviewPolicyResultsForHitResponse.prototype, "hitReviewPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HITReviewReport" }),
-        __metadata("design:type", ReviewReport)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HITReviewReport" }),
+        __metadata("design:type", reviewreport_1.ReviewReport)
     ], ListReviewPolicyResultsForHitResponse.prototype, "hitReviewReport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListReviewPolicyResultsForHitResponse.prototype, "nextToken", void 0);
     return ListReviewPolicyResultsForHitResponse;
-}(SpeakeasyBase));
-export { ListReviewPolicyResultsForHitResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListReviewPolicyResultsForHitResponse = ListReviewPolicyResultsForHitResponse;

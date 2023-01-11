@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StringMatcher } from "./stringmatcher";
-import { StructMatcher } from "./structmatcher";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodeMatcher = void 0;
+var utils_1 = require("../../../internal/utils");
+var stringmatcher_1 = require("./stringmatcher");
+var structmatcher_1 = require("./structmatcher");
 // NodeMatcher
 /**
  * Specifies the way to match a Node. The match follows AND semantics.
@@ -35,13 +38,13 @@ var NodeMatcher = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeId" }),
-        __metadata("design:type", StringMatcher)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeId" }),
+        __metadata("design:type", stringmatcher_1.StringMatcher)
     ], NodeMatcher.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeMetadatas", elemType: StructMatcher }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeMetadatas", elemType: structmatcher_1.StructMatcher }),
         __metadata("design:type", Array)
     ], NodeMatcher.prototype, "nodeMetadatas", void 0);
     return NodeMatcher;
-}(SpeakeasyBase));
-export { NodeMatcher };
+}(utils_1.SpeakeasyBase));
+exports.NodeMatcher = NodeMatcher;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,21 +14,46 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var CreateParameter200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateParameterResponse = exports.CreateParameterRequest = exports.CreateParameter200ApplicationJson = exports.CreateParameter200ApplicationJsonResultEnum = exports.CreateParameter200ApplicationJsonData = exports.CreateParameter200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var CreateParameter200ApplicationJsonActionEnum;
 (function (CreateParameter200ApplicationJsonActionEnum) {
     CreateParameter200ApplicationJsonActionEnum["CreateParameter"] = "createParameter";
-})(CreateParameter200ApplicationJsonActionEnum || (CreateParameter200ApplicationJsonActionEnum = {}));
+})(CreateParameter200ApplicationJsonActionEnum = exports.CreateParameter200ApplicationJsonActionEnum || (exports.CreateParameter200ApplicationJsonActionEnum = {}));
 // CreateParameter200ApplicationJsonData
 /**
  * Parameters
@@ -38,70 +64,70 @@ var CreateParameter200ApplicationJsonData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters", elemType: shared.Parameter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters", elemType: shared.Parameter }),
         __metadata("design:type", Array)
     ], CreateParameter200ApplicationJsonData.prototype, "parameters", void 0);
     return CreateParameter200ApplicationJsonData;
-}(SpeakeasyBase));
-export { CreateParameter200ApplicationJsonData };
-export var CreateParameter200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.CreateParameter200ApplicationJsonData = CreateParameter200ApplicationJsonData;
+var CreateParameter200ApplicationJsonResultEnum;
 (function (CreateParameter200ApplicationJsonResultEnum) {
     CreateParameter200ApplicationJsonResultEnum["Success"] = "success";
     CreateParameter200ApplicationJsonResultEnum["Error"] = "error";
-})(CreateParameter200ApplicationJsonResultEnum || (CreateParameter200ApplicationJsonResultEnum = {}));
+})(CreateParameter200ApplicationJsonResultEnum = exports.CreateParameter200ApplicationJsonResultEnum || (exports.CreateParameter200ApplicationJsonResultEnum = {}));
 var CreateParameter200ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateParameter200ApplicationJson, _super);
     function CreateParameter200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], CreateParameter200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", CreateParameter200ApplicationJsonData)
     ], CreateParameter200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CreateParameter200ApplicationJson.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], CreateParameter200ApplicationJson.prototype, "result", void 0);
     return CreateParameter200ApplicationJson;
-}(SpeakeasyBase));
-export { CreateParameter200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateParameter200ApplicationJson = CreateParameter200ApplicationJson;
 var CreateParameterRequest = /** @class */ (function (_super) {
     __extends(CreateParameterRequest, _super);
     function CreateParameterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.Parameter)
     ], CreateParameterRequest.prototype, "request", void 0);
     return CreateParameterRequest;
-}(SpeakeasyBase));
-export { CreateParameterRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateParameterRequest = CreateParameterRequest;
 var CreateParameterResponse = /** @class */ (function (_super) {
     __extends(CreateParameterResponse, _super);
     function CreateParameterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateParameterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateParameterResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateParameter200ApplicationJson)
-    ], CreateParameterResponse.prototype, "createParameter200ApplicationJsonObject", void 0);
+    ], CreateParameterResponse.prototype, "createParameter200ApplicationJSONObject", void 0);
     return CreateParameterResponse;
-}(SpeakeasyBase));
-export { CreateParameterResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateParameterResponse = CreateParameterResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResetPasswordResponse = exports.ResetPasswordRequest = exports.ResetPasswordQueryParams = exports.ResetPasswordPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ResetPasswordPathParams = /** @class */ (function (_super) {
     __extends(ResetPasswordPathParams, _super);
     function ResetPasswordPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userId" }),
         __metadata("design:type", String)
     ], ResetPasswordPathParams.prototype, "userId", void 0);
     return ResetPasswordPathParams;
-}(SpeakeasyBase));
-export { ResetPasswordPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ResetPasswordPathParams = ResetPasswordPathParams;
 var ResetPasswordQueryParams = /** @class */ (function (_super) {
     __extends(ResetPasswordQueryParams, _super);
     function ResetPasswordQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sendEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sendEmail" }),
         __metadata("design:type", String)
     ], ResetPasswordQueryParams.prototype, "sendEmail", void 0);
     return ResetPasswordQueryParams;
-}(SpeakeasyBase));
-export { ResetPasswordQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ResetPasswordQueryParams = ResetPasswordQueryParams;
 var ResetPasswordRequest = /** @class */ (function (_super) {
     __extends(ResetPasswordRequest, _super);
     function ResetPasswordRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ResetPasswordPathParams)
     ], ResetPasswordRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ResetPasswordQueryParams)
     ], ResetPasswordRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/plain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/plain" }),
         __metadata("design:type", Uint8Array)
     ], ResetPasswordRequest.prototype, "request", void 0);
     return ResetPasswordRequest;
-}(SpeakeasyBase));
-export { ResetPasswordRequest };
+}(utils_1.SpeakeasyBase));
+exports.ResetPasswordRequest = ResetPasswordRequest;
 var ResetPasswordResponse = /** @class */ (function (_super) {
     __extends(ResetPasswordResponse, _super);
     function ResetPasswordResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ResetPasswordResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ResetPasswordResponse.prototype, "statusCode", void 0);
     return ResetPasswordResponse;
-}(SpeakeasyBase));
-export { ResetPasswordResponse };
+}(utils_1.SpeakeasyBase));
+exports.ResetPasswordResponse = ResetPasswordResponse;

@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class JwksAlgoSettings extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, string>;
+  headers?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=kty" })
   kty?: string;

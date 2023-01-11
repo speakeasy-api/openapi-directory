@@ -1,8 +1,8 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Category } from "./category";
-import { EmbedSettings } from "./embedsettings";
 import { User } from "./user";
 import { Picture } from "./picture";
+import { Category } from "./category";
+import { EmbedSettings } from "./embedsettings";
 import { Tag } from "./tag";
 
 
@@ -23,7 +23,7 @@ export class VideoContext extends SpeakeasyBase {
   action: VideoContextActionEnum;
 
   @SpeakeasyMetadata({ data: "json, name=resource" })
-  resource: Map<string, any>;
+  resource: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=resource_type" })
   resourceType: string;

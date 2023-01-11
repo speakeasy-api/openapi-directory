@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class PadUsersUsingGetQueryParams extends SpeakeasyBase {
-    padId?: string;
+    padID?: string;
 }
 export declare class PadUsersUsingGet200ApplicationJsonDataPadUsers extends SpeakeasyBase {
     colorId?: string;
@@ -18,17 +18,17 @@ export declare class PadUsersUsingGet200ApplicationJson extends SpeakeasyBase {
 }
 export declare class PadUsersUsingGet400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class PadUsersUsingGet401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class PadUsersUsingGet500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class PadUsersUsingGetRequest extends SpeakeasyBase {
@@ -37,8 +37,8 @@ export declare class PadUsersUsingGetRequest extends SpeakeasyBase {
 export declare class PadUsersUsingGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    padUsersUsingGet200ApplicationJsonObject?: PadUsersUsingGet200ApplicationJson;
-    padUsersUsingGet400ApplicationJsonObject?: PadUsersUsingGet400ApplicationJson;
-    padUsersUsingGet401ApplicationJsonObject?: PadUsersUsingGet401ApplicationJson;
-    padUsersUsingGet500ApplicationJsonObject?: PadUsersUsingGet500ApplicationJson;
+    padUsersUsingGET200ApplicationJSONObject?: PadUsersUsingGet200ApplicationJson;
+    padUsersUsingGET400ApplicationJSONObject?: PadUsersUsingGet400ApplicationJson;
+    padUsersUsingGET401ApplicationJSONObject?: PadUsersUsingGet401ApplicationJson;
+    padUsersUsingGET500ApplicationJSONObject?: PadUsersUsingGet500ApplicationJson;
 }

@@ -10,7 +10,7 @@ import { AppTypeEnum } from "./apptypeenum";
 export declare class App extends SpeakeasyBase {
     appId?: string;
     appSource?: Source;
-    attributes?: Map<string, string>;
+    attributes?: Record<string, string>;
     createdAt?: string;
     dataSources?: DataSource[];
     description?: string;

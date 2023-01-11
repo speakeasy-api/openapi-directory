@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSurveyResponse = exports.GetSurveyRequest = exports.GetSurveyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSurveyPathParams = /** @class */ (function (_super) {
     __extends(GetSurveyPathParams, _super);
     function GetSurveyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=SurveyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=SurveyId" }),
         __metadata("design:type", String)
     ], GetSurveyPathParams.prototype, "surveyId", void 0);
     return GetSurveyPathParams;
-}(SpeakeasyBase));
-export { GetSurveyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSurveyPathParams = GetSurveyPathParams;
 var GetSurveyRequest = /** @class */ (function (_super) {
     __extends(GetSurveyRequest, _super);
     function GetSurveyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSurveyPathParams)
     ], GetSurveyRequest.prototype, "pathParams", void 0);
     return GetSurveyRequest;
-}(SpeakeasyBase));
-export { GetSurveyRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSurveyRequest = GetSurveyRequest;
 var GetSurveyResponse = /** @class */ (function (_super) {
     __extends(GetSurveyResponse, _super);
     function GetSurveyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSurveyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSurveyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetSurveyResponse.prototype, "surveyResponse", void 0);
     return GetSurveyResponse;
-}(SpeakeasyBase));
-export { GetSurveyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSurveyResponse = GetSurveyResponse;

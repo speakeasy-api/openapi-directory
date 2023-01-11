@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RepeatViewModel } from "./repeatviewmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceAllocationViewModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var repeatviewmodel_1 = require("./repeatviewmodel");
 var ResourceAllocationViewModel = /** @class */ (function (_super) {
     __extends(ResourceAllocationViewModel, _super);
     function ResourceAllocationViewModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessId" }),
         __metadata("design:type", Number)
     ], ResourceAllocationViewModel.prototype, "businessId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", Date)
     ], ResourceAllocationViewModel.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Number)
     ], ResourceAllocationViewModel.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ResourceAllocationViewModel.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectName" }),
         __metadata("design:type", String)
     ], ResourceAllocationViewModel.prototype, "objectName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], ResourceAllocationViewModel.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repeat" }),
-        __metadata("design:type", RepeatViewModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repeat" }),
+        __metadata("design:type", repeatviewmodel_1.RepeatViewModel)
     ], ResourceAllocationViewModel.prototype, "repeat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repeats" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repeats" }),
         __metadata("design:type", Boolean)
     ], ResourceAllocationViewModel.prototype, "repeats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceId" }),
         __metadata("design:type", Number)
     ], ResourceAllocationViewModel.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", Date)
     ], ResourceAllocationViewModel.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Number)
     ], ResourceAllocationViewModel.prototype, "startTime", void 0);
     return ResourceAllocationViewModel;
-}(SpeakeasyBase));
-export { ResourceAllocationViewModel };
+}(utils_1.SpeakeasyBase));
+exports.ResourceAllocationViewModel = ResourceAllocationViewModel;

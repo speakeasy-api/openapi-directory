@@ -1,9 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { PublicKey } from "./publickey";
+export declare class ExpiredCertPublicKey extends SpeakeasyBase {
+    algorithm?: string;
+    bits?: number;
+}
 export declare class ExpiredCert extends SpeakeasyBase {
     fileHash?: string;
     fileName?: string;
-    publicKey?: PublicKey;
+    publicKey?: ExpiredCertPublicKey;
     subjectName?: string;
     thumbPrint?: string;
     validFrom?: string;

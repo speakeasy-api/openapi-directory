@@ -13,7 +13,15 @@ export declare class GetCmsV3DomainsGetPageQueryParams extends SpeakeasyBase {
     updatedBefore?: Date;
 }
 export declare class GetCmsV3DomainsGetPageSecurity extends SpeakeasyBase {
-    hapikey: shared.SchemeHapikey;
+    privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
+    oauth2?: shared.SchemeOauth2;
+    privateApps?: shared.SchemePrivateApps;
+    hapikey?: shared.SchemeHapikey;
+    privateApps1?: shared.SchemePrivateApps;
+    oauth3?: shared.SchemeOauth2;
+    privateAppsLegacy1?: shared.SchemePrivateAppsLegacy;
+    oauth2Legacy?: shared.SchemeOauth2Legacy;
+    oauth2Legacy1?: shared.SchemeOauth2Legacy;
 }
 export declare class GetCmsV3DomainsGetPageRequest extends SpeakeasyBase {
     queryParams: GetCmsV3DomainsGetPageQueryParams;

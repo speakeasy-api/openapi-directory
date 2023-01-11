@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObExternalRequestStatus1CodeEnum } from "./obexternalrequeststatus1codeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObReadDataConsentResponse1 = void 0;
+var utils_1 = require("../../../internal/utils");
+var obexternalrequeststatus1codeenum_1 = require("./obexternalrequeststatus1codeenum");
 var ObReadDataConsentResponse1 = /** @class */ (function (_super) {
     __extends(ObReadDataConsentResponse1, _super);
     function ObReadDataConsentResponse1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConsentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConsentId" }),
         __metadata("design:type", String)
     ], ObReadDataConsentResponse1.prototype, "consentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDateTime" }),
         __metadata("design:type", Date)
     ], ObReadDataConsentResponse1.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExpirationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExpirationDateTime" }),
         __metadata("design:type", Date)
     ], ObReadDataConsentResponse1.prototype, "expirationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Permissions" }),
         __metadata("design:type", Array)
     ], ObReadDataConsentResponse1.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], ObReadDataConsentResponse1.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatusUpdateDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatusUpdateDateTime" }),
         __metadata("design:type", Date)
     ], ObReadDataConsentResponse1.prototype, "statusUpdateDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransactionFromDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransactionFromDateTime" }),
         __metadata("design:type", Date)
     ], ObReadDataConsentResponse1.prototype, "transactionFromDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransactionToDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransactionToDateTime" }),
         __metadata("design:type", Date)
     ], ObReadDataConsentResponse1.prototype, "transactionToDateTime", void 0);
     return ObReadDataConsentResponse1;
-}(SpeakeasyBase));
-export { ObReadDataConsentResponse1 };
+}(utils_1.SpeakeasyBase));
+exports.ObReadDataConsentResponse1 = ObReadDataConsentResponse1;

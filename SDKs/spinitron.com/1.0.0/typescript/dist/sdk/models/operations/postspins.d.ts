@@ -18,7 +18,7 @@ export declare class PostSpinsRequest extends SpeakeasyBase {
 export declare class PostSpinsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     spin?: shared.Spin;
     statusCode: number;
     validationErrors?: shared.ValidationError[];

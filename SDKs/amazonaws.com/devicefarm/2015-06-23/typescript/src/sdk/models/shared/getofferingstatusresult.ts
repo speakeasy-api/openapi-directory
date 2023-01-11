@@ -9,10 +9,10 @@ import { OfferingStatus } from "./offeringstatus";
 **/
 export class GetOfferingStatusResult extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=current", elemType: OfferingStatus })
-  current?: Map<string, OfferingStatus>;
+  current?: Record<string, OfferingStatus>;
 
   @SpeakeasyMetadata({ data: "json, name=nextPeriod", elemType: OfferingStatus })
-  nextPeriod?: Map<string, OfferingStatus>;
+  nextPeriod?: Record<string, OfferingStatus>;
 
   @SpeakeasyMetadata({ data: "json, name=nextToken" })
   nextToken?: string;

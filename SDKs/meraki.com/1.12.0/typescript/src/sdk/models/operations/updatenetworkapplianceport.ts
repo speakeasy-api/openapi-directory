@@ -49,5 +49,5 @@ export class UpdateNetworkAppliancePortResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkAppliancePort200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkAppliancePort200ApplicationJSONObject?: Record<string, any>;
 }

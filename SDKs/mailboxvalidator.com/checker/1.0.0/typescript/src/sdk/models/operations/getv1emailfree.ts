@@ -30,8 +30,8 @@ export class GetV1EmailFreeResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getV1EmailFree200ApplicationJsonString?: string;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getV1EmailFree200ApplicationJSONString?: string;
 }

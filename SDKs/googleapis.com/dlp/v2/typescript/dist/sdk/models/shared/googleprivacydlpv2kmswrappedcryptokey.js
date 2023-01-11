@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2KmsWrappedCryptoKey = void 0;
+var utils_1 = require("../../../internal/utils");
 // GooglePrivacyDlpV2KmsWrappedCryptoKey
 /**
  * Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt For more information, see [Creating a wrapped key] (https://cloud.google.com/dlp/docs/create-wrapped-key). Note: When you use Cloud KMS for cryptographic operations, [charges apply](https://cloud.google.com/kms/pricing).
@@ -33,13 +36,13 @@ var GooglePrivacyDlpV2KmsWrappedCryptoKey = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cryptoKeyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cryptoKeyName" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2KmsWrappedCryptoKey.prototype, "cryptoKeyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wrappedKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wrappedKey" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2KmsWrappedCryptoKey.prototype, "wrappedKey", void 0);
     return GooglePrivacyDlpV2KmsWrappedCryptoKey;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2KmsWrappedCryptoKey };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2KmsWrappedCryptoKey = GooglePrivacyDlpV2KmsWrappedCryptoKey;

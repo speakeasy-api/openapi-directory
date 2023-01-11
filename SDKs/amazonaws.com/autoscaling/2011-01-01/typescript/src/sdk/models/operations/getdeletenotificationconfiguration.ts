@@ -18,7 +18,7 @@ export class GetDeleteNotificationConfigurationQueryParams extends SpeakeasyBase
   autoScalingGroupName: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TopicARN" })
-  topicArn: string;
+  topicARN: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetDeleteNotificationConfigurationVersionEnum;

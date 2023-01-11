@@ -12,7 +12,7 @@ export declare class EinVerificationComprehensiveRequest extends SpeakeasyBase {
 }
 export declare class EinVerificationComprehensiveResponse extends SpeakeasyBase {
     contentType: string;
-    einVerificationComprehensive200ApplicationJsonAny?: any;
-    einVerificationComprehensiveDefaultApplicationJsonAny?: any;
+    einVerificationComprehensive200ApplicationJSONAny?: any;
+    einVerificationComprehensiveDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

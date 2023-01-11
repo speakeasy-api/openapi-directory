@@ -22,6 +22,6 @@ export declare class PostPortfolioOptimizationMinimumVarianceRequest extends Spe
 }
 export declare class PostPortfolioOptimizationMinimumVarianceResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioOptimizationMinimumVariance200ApplicationJsonObject?: PostPortfolioOptimizationMinimumVariance200ApplicationJson;
     statusCode: number;
+    postPortfolioOptimizationMinimumVariance200ApplicationJSONObject?: PostPortfolioOptimizationMinimumVariance200ApplicationJson;
 }

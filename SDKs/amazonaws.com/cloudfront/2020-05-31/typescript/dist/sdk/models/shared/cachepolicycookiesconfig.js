@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CachePolicyCookieBehaviorEnum } from "./cachepolicycookiebehaviorenum";
-import { CookieNames } from "./cookienames";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CachePolicyCookiesConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var cachepolicycookiebehaviorenum_1 = require("./cachepolicycookiebehaviorenum");
+var cookienames_1 = require("./cookienames");
 // CachePolicyCookiesConfig
 /**
  * An object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the cache key and automatically included in requests that CloudFront sends to the origin.
@@ -35,13 +38,13 @@ var CachePolicyCookiesConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CachePolicyCookiesConfig.prototype, "cookieBehavior", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", CookieNames)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", cookienames_1.CookieNames)
     ], CachePolicyCookiesConfig.prototype, "cookies", void 0);
     return CachePolicyCookiesConfig;
-}(SpeakeasyBase));
-export { CachePolicyCookiesConfig };
+}(utils_1.SpeakeasyBase));
+exports.CachePolicyCookiesConfig = CachePolicyCookiesConfig;

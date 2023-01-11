@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DedicatedIp } from "./dedicatedip";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDedicatedIpResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var dedicatedip_1 = require("./dedicatedip");
 // GetDedicatedIpResponse
 /**
  * Information about a dedicated IP address.
@@ -34,9 +37,9 @@ var GetDedicatedIpResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DedicatedIp" }),
-        __metadata("design:type", DedicatedIp)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DedicatedIp" }),
+        __metadata("design:type", dedicatedip_1.DedicatedIp)
     ], GetDedicatedIpResponse.prototype, "dedicatedIp", void 0);
     return GetDedicatedIpResponse;
-}(SpeakeasyBase));
-export { GetDedicatedIpResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDedicatedIpResponse = GetDedicatedIpResponse;

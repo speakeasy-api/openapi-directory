@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,82 +14,107 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListPolicyAttachmentsResponse = exports.ListPolicyAttachmentsRequest = exports.ListPolicyAttachmentsRequestBody = exports.ListPolicyAttachmentsRequestBodyPolicyReference = exports.ListPolicyAttachmentsHeaders = exports.ListPolicyAttachmentsXAmzConsistencyLevelEnum = exports.ListPolicyAttachmentsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ListPolicyAttachmentsQueryParams = /** @class */ (function (_super) {
     __extends(ListPolicyAttachmentsQueryParams, _super);
     function ListPolicyAttachmentsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
         __metadata("design:type", String)
     ], ListPolicyAttachmentsQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], ListPolicyAttachmentsQueryParams.prototype, "nextToken", void 0);
     return ListPolicyAttachmentsQueryParams;
-}(SpeakeasyBase));
-export { ListPolicyAttachmentsQueryParams };
-export var ListPolicyAttachmentsXAmzConsistencyLevelEnum;
+}(utils_1.SpeakeasyBase));
+exports.ListPolicyAttachmentsQueryParams = ListPolicyAttachmentsQueryParams;
+var ListPolicyAttachmentsXAmzConsistencyLevelEnum;
 (function (ListPolicyAttachmentsXAmzConsistencyLevelEnum) {
     ListPolicyAttachmentsXAmzConsistencyLevelEnum["Serializable"] = "SERIALIZABLE";
     ListPolicyAttachmentsXAmzConsistencyLevelEnum["Eventual"] = "EVENTUAL";
-})(ListPolicyAttachmentsXAmzConsistencyLevelEnum || (ListPolicyAttachmentsXAmzConsistencyLevelEnum = {}));
+})(ListPolicyAttachmentsXAmzConsistencyLevelEnum = exports.ListPolicyAttachmentsXAmzConsistencyLevelEnum || (exports.ListPolicyAttachmentsXAmzConsistencyLevelEnum = {}));
 var ListPolicyAttachmentsHeaders = /** @class */ (function (_super) {
     __extends(ListPolicyAttachmentsHeaders, _super);
     function ListPolicyAttachmentsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], ListPolicyAttachmentsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], ListPolicyAttachmentsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], ListPolicyAttachmentsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], ListPolicyAttachmentsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], ListPolicyAttachmentsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], ListPolicyAttachmentsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], ListPolicyAttachmentsHeaders.prototype, "xAmzSignedHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-amz-consistency-level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-amz-consistency-level" }),
         __metadata("design:type", String)
     ], ListPolicyAttachmentsHeaders.prototype, "xAmzConsistencyLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-amz-data-partition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-amz-data-partition" }),
         __metadata("design:type", String)
     ], ListPolicyAttachmentsHeaders.prototype, "xAmzDataPartition", void 0);
     return ListPolicyAttachmentsHeaders;
-}(SpeakeasyBase));
-export { ListPolicyAttachmentsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.ListPolicyAttachmentsHeaders = ListPolicyAttachmentsHeaders;
 // ListPolicyAttachmentsRequestBodyPolicyReference
 /**
  * The reference that identifies an object.
@@ -99,109 +125,109 @@ var ListPolicyAttachmentsRequestBodyPolicyReference = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Selector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Selector" }),
         __metadata("design:type", String)
     ], ListPolicyAttachmentsRequestBodyPolicyReference.prototype, "selector", void 0);
     return ListPolicyAttachmentsRequestBodyPolicyReference;
-}(SpeakeasyBase));
-export { ListPolicyAttachmentsRequestBodyPolicyReference };
+}(utils_1.SpeakeasyBase));
+exports.ListPolicyAttachmentsRequestBodyPolicyReference = ListPolicyAttachmentsRequestBodyPolicyReference;
 var ListPolicyAttachmentsRequestBody = /** @class */ (function (_super) {
     __extends(ListPolicyAttachmentsRequestBody, _super);
     function ListPolicyAttachmentsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], ListPolicyAttachmentsRequestBody.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListPolicyAttachmentsRequestBody.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyReference" }),
         __metadata("design:type", ListPolicyAttachmentsRequestBodyPolicyReference)
     ], ListPolicyAttachmentsRequestBody.prototype, "policyReference", void 0);
     return ListPolicyAttachmentsRequestBody;
-}(SpeakeasyBase));
-export { ListPolicyAttachmentsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ListPolicyAttachmentsRequestBody = ListPolicyAttachmentsRequestBody;
 var ListPolicyAttachmentsRequest = /** @class */ (function (_super) {
     __extends(ListPolicyAttachmentsRequest, _super);
     function ListPolicyAttachmentsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListPolicyAttachmentsQueryParams)
     ], ListPolicyAttachmentsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListPolicyAttachmentsHeaders)
     ], ListPolicyAttachmentsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ListPolicyAttachmentsRequestBody)
     ], ListPolicyAttachmentsRequest.prototype, "request", void 0);
     return ListPolicyAttachmentsRequest;
-}(SpeakeasyBase));
-export { ListPolicyAttachmentsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListPolicyAttachmentsRequest = ListPolicyAttachmentsRequest;
 var ListPolicyAttachmentsResponse = /** @class */ (function (_super) {
     __extends(ListPolicyAttachmentsResponse, _super);
     function ListPolicyAttachmentsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.AccessDeniedException)
     ], ListPolicyAttachmentsResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListPolicyAttachmentsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.DirectoryNotEnabledException)
     ], ListPolicyAttachmentsResponse.prototype, "directoryNotEnabledException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.InternalServiceException)
     ], ListPolicyAttachmentsResponse.prototype, "internalServiceException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.InvalidArnException)
     ], ListPolicyAttachmentsResponse.prototype, "invalidArnException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.InvalidNextTokenException)
     ], ListPolicyAttachmentsResponse.prototype, "invalidNextTokenException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.LimitExceededException)
     ], ListPolicyAttachmentsResponse.prototype, "limitExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ListPolicyAttachmentsResponse)
     ], ListPolicyAttachmentsResponse.prototype, "listPolicyAttachmentsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.NotPolicyException)
     ], ListPolicyAttachmentsResponse.prototype, "notPolicyException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ResourceNotFoundException)
     ], ListPolicyAttachmentsResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.RetryableConflictException)
     ], ListPolicyAttachmentsResponse.prototype, "retryableConflictException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ListPolicyAttachmentsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ValidationException)
     ], ListPolicyAttachmentsResponse.prototype, "validationException", void 0);
     return ListPolicyAttachmentsResponse;
-}(SpeakeasyBase));
-export { ListPolicyAttachmentsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListPolicyAttachmentsResponse = ListPolicyAttachmentsResponse;

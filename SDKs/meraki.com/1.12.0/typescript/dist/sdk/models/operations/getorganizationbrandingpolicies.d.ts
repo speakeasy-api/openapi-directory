@@ -8,5 +8,5 @@ export declare class GetOrganizationBrandingPoliciesRequest extends SpeakeasyBas
 export declare class GetOrganizationBrandingPoliciesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationBrandingPolicies200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationBrandingPolicies200ApplicationJSONObject?: Record<string, any>;
 }

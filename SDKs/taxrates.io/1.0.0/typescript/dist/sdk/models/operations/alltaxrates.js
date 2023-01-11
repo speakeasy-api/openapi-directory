@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,136 +23,138 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllTaxRatesResponse = exports.AllTaxRatesRequest = exports.AllTaxRates500ApplicationJson = exports.AllTaxRates200ApplicationJson = exports.AllTaxRates200ApplicationJsonRates = exports.AllTaxRatesQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AllTaxRatesQueryParams = /** @class */ (function (_super) {
     __extends(AllTaxRatesQueryParams, _super);
     function AllTaxRatesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Product_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Product_code" }),
         __metadata("design:type", String)
     ], AllTaxRatesQueryParams.prototype, "productCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=cursor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=cursor" }),
         __metadata("design:type", String)
     ], AllTaxRatesQueryParams.prototype, "cursor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=domain" }),
         __metadata("design:type", String)
     ], AllTaxRatesQueryParams.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], AllTaxRatesQueryParams.prototype, "filter", void 0);
     return AllTaxRatesQueryParams;
-}(SpeakeasyBase));
-export { AllTaxRatesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AllTaxRatesQueryParams = AllTaxRatesQueryParams;
 var AllTaxRates200ApplicationJsonRates = /** @class */ (function (_super) {
     __extends(AllTaxRates200ApplicationJsonRates, _super);
     function AllTaxRates200ApplicationJsonRates() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data_name" }),
         __metadata("design:type", String)
     ], AllTaxRates200ApplicationJsonRates.prototype, "dataName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data_value" }),
         __metadata("design:type", String)
     ], AllTaxRates200ApplicationJsonRates.prototype, "dataValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=product_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=product_code" }),
         __metadata("design:type", String)
     ], AllTaxRates200ApplicationJsonRates.prototype, "productCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], AllTaxRates200ApplicationJsonRates.prototype, "type", void 0);
     return AllTaxRates200ApplicationJsonRates;
-}(SpeakeasyBase));
-export { AllTaxRates200ApplicationJsonRates };
+}(utils_1.SpeakeasyBase));
+exports.AllTaxRates200ApplicationJsonRates = AllTaxRates200ApplicationJsonRates;
 var AllTaxRates200ApplicationJson = /** @class */ (function (_super) {
     __extends(AllTaxRates200ApplicationJson, _super);
     function AllTaxRates200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AllTaxRates200ApplicationJson.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AllTaxRates200ApplicationJson.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rates", elemType: AllTaxRates200ApplicationJsonRates }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rates", elemType: AllTaxRates200ApplicationJsonRates }),
         __metadata("design:type", Array)
     ], AllTaxRates200ApplicationJson.prototype, "rates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], AllTaxRates200ApplicationJson.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zip" }),
         __metadata("design:type", String)
     ], AllTaxRates200ApplicationJson.prototype, "zip", void 0);
     return AllTaxRates200ApplicationJson;
-}(SpeakeasyBase));
-export { AllTaxRates200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AllTaxRates200ApplicationJson = AllTaxRates200ApplicationJson;
 var AllTaxRates500ApplicationJson = /** @class */ (function (_super) {
     __extends(AllTaxRates500ApplicationJson, _super);
     function AllTaxRates500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], AllTaxRates500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields" }),
         __metadata("design:type", String)
     ], AllTaxRates500ApplicationJson.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], AllTaxRates500ApplicationJson.prototype, "message", void 0);
     return AllTaxRates500ApplicationJson;
-}(SpeakeasyBase));
-export { AllTaxRates500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AllTaxRates500ApplicationJson = AllTaxRates500ApplicationJson;
 var AllTaxRatesRequest = /** @class */ (function (_super) {
     __extends(AllTaxRatesRequest, _super);
     function AllTaxRatesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AllTaxRatesQueryParams)
     ], AllTaxRatesRequest.prototype, "queryParams", void 0);
     return AllTaxRatesRequest;
-}(SpeakeasyBase));
-export { AllTaxRatesRequest };
+}(utils_1.SpeakeasyBase));
+exports.AllTaxRatesRequest = AllTaxRatesRequest;
 var AllTaxRatesResponse = /** @class */ (function (_super) {
     __extends(AllTaxRatesResponse, _super);
     function AllTaxRatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AllTaxRatesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AllTaxRatesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: AllTaxRates200ApplicationJson }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: AllTaxRates200ApplicationJson }),
         __metadata("design:type", Array)
-    ], AllTaxRatesResponse.prototype, "allTaxRates200ApplicationJsonObjects", void 0);
+    ], AllTaxRatesResponse.prototype, "allTaxRates200ApplicationJSONObjects", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AllTaxRates500ApplicationJson)
-    ], AllTaxRatesResponse.prototype, "allTaxRates500ApplicationJsonObject", void 0);
+    ], AllTaxRatesResponse.prototype, "allTaxRates500ApplicationJSONObject", void 0);
     return AllTaxRatesResponse;
-}(SpeakeasyBase));
-export { AllTaxRatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.AllTaxRatesResponse = AllTaxRatesResponse;

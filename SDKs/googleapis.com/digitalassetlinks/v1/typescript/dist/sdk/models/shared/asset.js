@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AndroidAppAsset } from "./androidappasset";
-import { WebAsset } from "./webasset";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Asset = void 0;
+var utils_1 = require("../../../internal/utils");
+var androidappasset_1 = require("./androidappasset");
+var webasset_1 = require("./webasset");
 // Asset
 /**
  * Uniquely identifies an asset. A digital asset is an identifiable and addressable online entity that typically provides some service or content. Examples of assets are websites, Android apps, Twitter feeds, and Plus Pages.
@@ -35,13 +38,13 @@ var Asset = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidApp" }),
-        __metadata("design:type", AndroidAppAsset)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidApp" }),
+        __metadata("design:type", androidappasset_1.AndroidAppAsset)
     ], Asset.prototype, "androidApp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=web" }),
-        __metadata("design:type", WebAsset)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=web" }),
+        __metadata("design:type", webasset_1.WebAsset)
     ], Asset.prototype, "web", void 0);
     return Asset;
-}(SpeakeasyBase));
-export { Asset };
+}(utils_1.SpeakeasyBase));
+exports.Asset = Asset;

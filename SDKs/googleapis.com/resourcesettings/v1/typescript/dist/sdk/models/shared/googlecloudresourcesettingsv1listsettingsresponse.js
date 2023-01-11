@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudResourcesettingsV1Setting } from "./googlecloudresourcesettingsv1setting";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudResourcesettingsV1ListSettingsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudresourcesettingsv1setting_1 = require("./googlecloudresourcesettingsv1setting");
 // GoogleCloudResourcesettingsV1ListSettingsResponse
 /**
  * The response from ListSettings.
@@ -34,13 +37,13 @@ var GoogleCloudResourcesettingsV1ListSettingsResponse = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleCloudResourcesettingsV1ListSettingsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings", elemType: GoogleCloudResourcesettingsV1Setting }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings", elemType: googlecloudresourcesettingsv1setting_1.GoogleCloudResourcesettingsV1Setting }),
         __metadata("design:type", Array)
     ], GoogleCloudResourcesettingsV1ListSettingsResponse.prototype, "settings", void 0);
     return GoogleCloudResourcesettingsV1ListSettingsResponse;
-}(SpeakeasyBase));
-export { GoogleCloudResourcesettingsV1ListSettingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudResourcesettingsV1ListSettingsResponse = GoogleCloudResourcesettingsV1ListSettingsResponse;

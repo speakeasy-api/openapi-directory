@@ -28,6 +28,6 @@ export declare class RecaptchaenterpriseProjectsAssessmentsAnnotateRequest exten
 }
 export declare class RecaptchaenterpriseProjectsAssessmentsAnnotateResponse extends SpeakeasyBase {
     contentType: string;
-    googleCloudRecaptchaenterpriseV1AnnotateAssessmentResponse?: Map<string, any>;
+    googleCloudRecaptchaenterpriseV1AnnotateAssessmentResponse?: Record<string, any>;
     statusCode: number;
 }

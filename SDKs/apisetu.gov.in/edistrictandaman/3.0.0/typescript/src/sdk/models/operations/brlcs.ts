@@ -185,23 +185,23 @@ export class BrlcsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  brlcs400ApplicationJsonObject?: Brlcs400ApplicationJson;
+  brlcs400ApplicationJSONObject?: Brlcs400ApplicationJson;
 
   @SpeakeasyMetadata()
-  brlcs401ApplicationJsonObject?: Brlcs401ApplicationJson;
+  brlcs401ApplicationJSONObject?: Brlcs401ApplicationJson;
 
   @SpeakeasyMetadata()
-  brlcs404ApplicationJsonObject?: Brlcs404ApplicationJson;
+  brlcs404ApplicationJSONObject?: Brlcs404ApplicationJson;
 
   @SpeakeasyMetadata()
-  brlcs500ApplicationJsonObject?: Brlcs500ApplicationJson;
+  brlcs500ApplicationJSONObject?: Brlcs500ApplicationJson;
 
   @SpeakeasyMetadata()
-  brlcs502ApplicationJsonObject?: Brlcs502ApplicationJson;
+  brlcs502ApplicationJSONObject?: Brlcs502ApplicationJson;
 
   @SpeakeasyMetadata()
-  brlcs503ApplicationJsonObject?: Brlcs503ApplicationJson;
+  brlcs503ApplicationJSONObject?: Brlcs503ApplicationJson;
 
   @SpeakeasyMetadata()
-  brlcs504ApplicationJsonObject?: Brlcs504ApplicationJson;
+  brlcs504ApplicationJSONObject?: Brlcs504ApplicationJson;
 }

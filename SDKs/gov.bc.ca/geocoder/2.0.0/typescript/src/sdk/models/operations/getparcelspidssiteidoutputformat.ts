@@ -17,7 +17,7 @@ export class GetParcelsPidsSiteIdOutputFormatPathParams extends SpeakeasyBase {
   outputFormat: GetParcelsPidsSiteIdOutputFormatOutputFormatEnum;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=siteID" })
-  siteId: string;
+  siteID: string;
 }
 
 

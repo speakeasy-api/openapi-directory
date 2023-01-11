@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,328 +23,330 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Address } from "./address";
-import { BankAccount } from "./bankaccount";
-import { CurrencyEnum } from "./currencyenum";
-import { CustomField } from "./customfield";
-import { Email } from "./email";
-import { PhoneNumber } from "./phonenumber";
-import { SocialLink } from "./sociallink";
-import { Website } from "./website";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompanyInput = exports.Company = exports.CompanyCompanyRowType = void 0;
+var utils_1 = require("../../../internal/utils");
+var address_1 = require("./address");
+var bankaccount_1 = require("./bankaccount");
+var currencyenum_1 = require("./currencyenum");
+var customfield_1 = require("./customfield");
+var email_1 = require("./email");
+var phonenumber_1 = require("./phonenumber");
+var sociallink_1 = require("./sociallink");
+var website_1 = require("./website");
 var CompanyCompanyRowType = /** @class */ (function (_super) {
     __extends(CompanyCompanyRowType, _super);
     function CompanyCompanyRowType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CompanyCompanyRowType.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CompanyCompanyRowType.prototype, "name", void 0);
     return CompanyCompanyRowType;
-}(SpeakeasyBase));
-export { CompanyCompanyRowType };
-var CompanyInput = /** @class */ (function (_super) {
-    __extends(CompanyInput, _super);
-    function CompanyInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=abn_branch" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "abnBranch", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=abn_or_tfn" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "abnOrTfn", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=acn" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "acn", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=addresses", elemType: Address }),
-        __metadata("design:type", Array)
-    ], CompanyInput.prototype, "addresses", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=annual_revenue" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "annualRevenue", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=bank_accounts", elemType: BankAccount }),
-        __metadata("design:type", Array)
-    ], CompanyInput.prototype, "bankAccounts", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=birthday" }),
-        __metadata("design:type", Date)
-    ], CompanyInput.prototype, "birthday", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "currency", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields", elemType: CustomField }),
-        __metadata("design:type", Array)
-    ], CompanyInput.prototype, "customFields", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=emails", elemType: Email }),
-        __metadata("design:type", Array)
-    ], CompanyInput.prototype, "emails", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=fax" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "fax", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=first_name" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "firstName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "image", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=industry" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "industry", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_name" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "lastName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=number_of_employees" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "numberOfEmployees", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner_id" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "ownerId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownership" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "ownership", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=payee_number" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "payeeNumber", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=phone_numbers", elemType: PhoneNumber }),
-        __metadata("design:type", Array)
-    ], CompanyInput.prototype, "phoneNumbers", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=read_only" }),
-        __metadata("design:type", Boolean)
-    ], CompanyInput.prototype, "readOnly", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=row_type" }),
-        __metadata("design:type", CompanyCompanyRowType)
-    ], CompanyInput.prototype, "rowType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=sales_tax_number" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "salesTaxNumber", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=salutation" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "salutation", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=social_links", elemType: SocialLink }),
-        __metadata("design:type", Array)
-    ], CompanyInput.prototype, "socialLinks", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "status", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Array)
-    ], CompanyInput.prototype, "tags", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=vat_number" }),
-        __metadata("design:type", String)
-    ], CompanyInput.prototype, "vatNumber", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=websites", elemType: Website }),
-        __metadata("design:type", Array)
-    ], CompanyInput.prototype, "websites", void 0);
-    return CompanyInput;
-}(SpeakeasyBase));
-export { CompanyInput };
+}(utils_1.SpeakeasyBase));
+exports.CompanyCompanyRowType = CompanyCompanyRowType;
 var Company = /** @class */ (function (_super) {
     __extends(Company, _super);
     function Company() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=abn_branch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=abn_branch" }),
         __metadata("design:type", String)
     ], Company.prototype, "abnBranch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=abn_or_tfn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=abn_or_tfn" }),
         __metadata("design:type", String)
     ], Company.prototype, "abnOrTfn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acn" }),
         __metadata("design:type", String)
     ], Company.prototype, "acn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addresses", elemType: Address }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addresses", elemType: address_1.Address }),
         __metadata("design:type", Array)
     ], Company.prototype, "addresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annual_revenue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annual_revenue" }),
         __metadata("design:type", String)
     ], Company.prototype, "annualRevenue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bank_accounts", elemType: BankAccount }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bank_accounts", elemType: bankaccount_1.BankAccount }),
         __metadata("design:type", Array)
     ], Company.prototype, "bankAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=birthday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=birthday" }),
         __metadata("design:type", Date)
     ], Company.prototype, "birthday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], Company.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
         __metadata("design:type", String)
     ], Company.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], Company.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields", elemType: CustomField }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields", elemType: customfield_1.CustomField }),
         __metadata("design:type", Array)
     ], Company.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], Company.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Company.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emails", elemType: Email }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emails", elemType: email_1.Email }),
         __metadata("design:type", Array)
     ], Company.prototype, "emails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fax" }),
         __metadata("design:type", String)
     ], Company.prototype, "fax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=first_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_name" }),
         __metadata("design:type", String)
     ], Company.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Company.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", String)
     ], Company.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=industry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=industry" }),
         __metadata("design:type", String)
     ], Company.prototype, "industry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interaction_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interaction_count" }),
         __metadata("design:type", Number)
     ], Company.prototype, "interactionCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_activity_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_activity_at" }),
         __metadata("design:type", Date)
     ], Company.prototype, "lastActivityAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_name" }),
         __metadata("design:type", String)
     ], Company.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Company.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=number_of_employees" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number_of_employees" }),
         __metadata("design:type", String)
     ], Company.prototype, "numberOfEmployees", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner_id" }),
         __metadata("design:type", String)
     ], Company.prototype, "ownerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownership" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownership" }),
         __metadata("design:type", String)
     ], Company.prototype, "ownership", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent_id" }),
         __metadata("design:type", String)
     ], Company.prototype, "parentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payee_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payee_number" }),
         __metadata("design:type", String)
     ], Company.prototype, "payeeNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phone_numbers", elemType: PhoneNumber }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phone_numbers", elemType: phonenumber_1.PhoneNumber }),
         __metadata("design:type", Array)
     ], Company.prototype, "phoneNumbers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=read_only" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=read_only" }),
         __metadata("design:type", Boolean)
     ], Company.prototype, "readOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=row_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=row_type" }),
         __metadata("design:type", CompanyCompanyRowType)
     ], Company.prototype, "rowType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sales_tax_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sales_tax_number" }),
         __metadata("design:type", String)
     ], Company.prototype, "salesTaxNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=salutation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=salutation" }),
         __metadata("design:type", String)
     ], Company.prototype, "salutation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=social_links", elemType: SocialLink }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=social_links", elemType: sociallink_1.SocialLink }),
         __metadata("design:type", Array)
     ], Company.prototype, "socialLinks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Company.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], Company.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], Company.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_by" }),
         __metadata("design:type", String)
     ], Company.prototype, "updatedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vat_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vat_number" }),
         __metadata("design:type", String)
     ], Company.prototype, "vatNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=websites", elemType: Website }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=websites", elemType: website_1.Website }),
         __metadata("design:type", Array)
     ], Company.prototype, "websites", void 0);
     return Company;
-}(SpeakeasyBase));
-export { Company };
+}(utils_1.SpeakeasyBase));
+exports.Company = Company;
+var CompanyInput = /** @class */ (function (_super) {
+    __extends(CompanyInput, _super);
+    function CompanyInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=abn_branch" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "abnBranch", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=abn_or_tfn" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "abnOrTfn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acn" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "acn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addresses", elemType: address_1.Address }),
+        __metadata("design:type", Array)
+    ], CompanyInput.prototype, "addresses", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annual_revenue" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "annualRevenue", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bank_accounts", elemType: bankaccount_1.BankAccount }),
+        __metadata("design:type", Array)
+    ], CompanyInput.prototype, "bankAccounts", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=birthday" }),
+        __metadata("design:type", Date)
+    ], CompanyInput.prototype, "birthday", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "currency", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields", elemType: customfield_1.CustomField }),
+        __metadata("design:type", Array)
+    ], CompanyInput.prototype, "customFields", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emails", elemType: email_1.Email }),
+        __metadata("design:type", Array)
+    ], CompanyInput.prototype, "emails", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fax" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "fax", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_name" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "firstName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "image", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=industry" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "industry", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_name" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "lastName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number_of_employees" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "numberOfEmployees", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner_id" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "ownerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownership" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "ownership", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payee_number" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "payeeNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phone_numbers", elemType: phonenumber_1.PhoneNumber }),
+        __metadata("design:type", Array)
+    ], CompanyInput.prototype, "phoneNumbers", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=read_only" }),
+        __metadata("design:type", Boolean)
+    ], CompanyInput.prototype, "readOnly", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=row_type" }),
+        __metadata("design:type", CompanyCompanyRowType)
+    ], CompanyInput.prototype, "rowType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sales_tax_number" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "salesTaxNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=salutation" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "salutation", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=social_links", elemType: sociallink_1.SocialLink }),
+        __metadata("design:type", Array)
+    ], CompanyInput.prototype, "socialLinks", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Array)
+    ], CompanyInput.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vat_number" }),
+        __metadata("design:type", String)
+    ], CompanyInput.prototype, "vatNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=websites", elemType: website_1.Website }),
+        __metadata("design:type", Array)
+    ], CompanyInput.prototype, "websites", void 0);
+    return CompanyInput;
+}(utils_1.SpeakeasyBase));
+exports.CompanyInput = CompanyInput;

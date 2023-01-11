@@ -44,7 +44,7 @@ export declare class GetRouteRequest extends SpeakeasyBase {
 export declare class GetRouteResponse extends SpeakeasyBase {
     contentType: string;
     ghError?: shared.GhError;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     routeResponse?: shared.RouteResponse;
     statusCode: number;
 }

@@ -20,5 +20,5 @@ export declare class UpdatePolicies200ApplicationJson extends SpeakeasyBase {
 export declare class UpdatePoliciesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updatePolicies200ApplicationJsonObject?: UpdatePolicies200ApplicationJson;
+    updatePolicies200ApplicationJSONObject?: UpdatePolicies200ApplicationJson;
 }

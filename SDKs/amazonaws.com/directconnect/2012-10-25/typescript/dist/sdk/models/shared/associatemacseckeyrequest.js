@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssociateMacSecKeyRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var AssociateMacSecKeyRequest = /** @class */ (function (_super) {
     __extends(AssociateMacSecKeyRequest, _super);
     function AssociateMacSecKeyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cak" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cak" }),
         __metadata("design:type", String)
     ], AssociateMacSecKeyRequest.prototype, "cak", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ckn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ckn" }),
         __metadata("design:type", String)
     ], AssociateMacSecKeyRequest.prototype, "ckn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionId" }),
         __metadata("design:type", String)
     ], AssociateMacSecKeyRequest.prototype, "connectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secretARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secretARN" }),
         __metadata("design:type", String)
-    ], AssociateMacSecKeyRequest.prototype, "secretArn", void 0);
+    ], AssociateMacSecKeyRequest.prototype, "secretARN", void 0);
     return AssociateMacSecKeyRequest;
-}(SpeakeasyBase));
-export { AssociateMacSecKeyRequest };
+}(utils_1.SpeakeasyBase));
+exports.AssociateMacSecKeyRequest = AssociateMacSecKeyRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Webfont } from "./webfont";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebfontList = void 0;
+var utils_1 = require("../../../internal/utils");
+var webfont_1 = require("./webfont");
 // WebfontList
 /**
  * Response containing the list of fonts currently served by the Google Fonts API.
@@ -34,13 +37,13 @@ var WebfontList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: Webfont }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: webfont_1.Webfont }),
         __metadata("design:type", Array)
     ], WebfontList.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], WebfontList.prototype, "kind", void 0);
     return WebfontList;
-}(SpeakeasyBase));
-export { WebfontList };
+}(utils_1.SpeakeasyBase));
+exports.WebfontList = WebfontList;

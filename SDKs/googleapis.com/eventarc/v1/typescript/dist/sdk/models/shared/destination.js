@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudRun } from "./cloudrun";
-import { Gke } from "./gke";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Destination = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudrun_1 = require("./cloudrun");
+var gke_1 = require("./gke");
 // Destination
 /**
  * Represents a target of an invocation over HTTP.
@@ -35,21 +38,21 @@ var Destination = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudFunction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudFunction" }),
         __metadata("design:type", String)
     ], Destination.prototype, "cloudFunction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudRun" }),
-        __metadata("design:type", CloudRun)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudRun" }),
+        __metadata("design:type", cloudrun_1.CloudRun)
     ], Destination.prototype, "cloudRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gke" }),
-        __metadata("design:type", Gke)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gke" }),
+        __metadata("design:type", gke_1.Gke)
     ], Destination.prototype, "gke", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workflow" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workflow" }),
         __metadata("design:type", String)
     ], Destination.prototype, "workflow", void 0);
     return Destination;
-}(SpeakeasyBase));
-export { Destination };
+}(utils_1.SpeakeasyBase));
+exports.Destination = Destination;

@@ -17,6 +17,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugRefsTagsNameRequest extends
 export declare class GetRepositoriesWorkspaceRepoSlugRefsTagsNameResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    tag?: Map<string, any>;
+    error?: Record<string, any>;
+    tag?: Record<string, any>;
 }

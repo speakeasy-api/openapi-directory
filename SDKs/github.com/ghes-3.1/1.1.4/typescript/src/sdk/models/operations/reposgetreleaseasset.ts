@@ -44,5 +44,5 @@ export class ReposGetReleaseAssetResponse extends SpeakeasyBase {
   releaseAsset?: shared.ReleaseAsset;
 
   @SpeakeasyMetadata()
-  reposGetReleaseAsset415ApplicationJsonObject?: ReposGetReleaseAsset415ApplicationJson;
+  reposGetReleaseAsset415ApplicationJSONObject?: ReposGetReleaseAsset415ApplicationJson;
 }

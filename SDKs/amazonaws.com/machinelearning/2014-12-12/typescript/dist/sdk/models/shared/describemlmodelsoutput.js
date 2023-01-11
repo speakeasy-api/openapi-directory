@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MlModel } from "./mlmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeMlModelsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var mlmodel_1 = require("./mlmodel");
 // DescribeMlModelsOutput
 /**
  * Represents the output of a <code>DescribeMLModels</code> operation. The content is essentially a list of <code>MLModel</code>.
@@ -34,13 +37,13 @@ var DescribeMlModelsOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeMlModelsOutput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Results", elemType: MlModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Results", elemType: mlmodel_1.MlModel }),
         __metadata("design:type", Array)
     ], DescribeMlModelsOutput.prototype, "results", void 0);
     return DescribeMlModelsOutput;
-}(SpeakeasyBase));
-export { DescribeMlModelsOutput };
+}(utils_1.SpeakeasyBase));
+exports.DescribeMlModelsOutput = DescribeMlModelsOutput;

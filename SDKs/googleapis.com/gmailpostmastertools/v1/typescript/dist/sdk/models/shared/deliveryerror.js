@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DeliveryErrorErrorClassEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeliveryError = exports.DeliveryErrorErrorTypeEnum = exports.DeliveryErrorErrorClassEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DeliveryErrorErrorClassEnum;
 (function (DeliveryErrorErrorClassEnum) {
     DeliveryErrorErrorClassEnum["DeliveryErrorClassUnspecified"] = "DELIVERY_ERROR_CLASS_UNSPECIFIED";
     DeliveryErrorErrorClassEnum["PermanentError"] = "PERMANENT_ERROR";
     DeliveryErrorErrorClassEnum["TemporaryError"] = "TEMPORARY_ERROR";
-})(DeliveryErrorErrorClassEnum || (DeliveryErrorErrorClassEnum = {}));
-export var DeliveryErrorErrorTypeEnum;
+})(DeliveryErrorErrorClassEnum = exports.DeliveryErrorErrorClassEnum || (exports.DeliveryErrorErrorClassEnum = {}));
+var DeliveryErrorErrorTypeEnum;
 (function (DeliveryErrorErrorTypeEnum) {
     DeliveryErrorErrorTypeEnum["DeliveryErrorTypeUnspecified"] = "DELIVERY_ERROR_TYPE_UNSPECIFIED";
     DeliveryErrorErrorTypeEnum["RateLimitExceeded"] = "RATE_LIMIT_EXCEEDED";
@@ -42,7 +45,7 @@ export var DeliveryErrorErrorTypeEnum;
     DeliveryErrorErrorTypeEnum["IpInRbl"] = "IP_IN_RBL";
     DeliveryErrorErrorTypeEnum["DomainInRbl"] = "DOMAIN_IN_RBL";
     DeliveryErrorErrorTypeEnum["BadPtrRecord"] = "BAD_PTR_RECORD";
-})(DeliveryErrorErrorTypeEnum || (DeliveryErrorErrorTypeEnum = {}));
+})(DeliveryErrorErrorTypeEnum = exports.DeliveryErrorErrorTypeEnum || (exports.DeliveryErrorErrorTypeEnum = {}));
 // DeliveryError
 /**
  * Metric on a particular delivery error type.
@@ -53,17 +56,17 @@ var DeliveryError = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorClass" }),
         __metadata("design:type", String)
     ], DeliveryError.prototype, "errorClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorRatio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorRatio" }),
         __metadata("design:type", Number)
     ], DeliveryError.prototype, "errorRatio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorType" }),
         __metadata("design:type", String)
     ], DeliveryError.prototype, "errorType", void 0);
     return DeliveryError;
-}(SpeakeasyBase));
-export { DeliveryError };
+}(utils_1.SpeakeasyBase));
+exports.DeliveryError = DeliveryError;

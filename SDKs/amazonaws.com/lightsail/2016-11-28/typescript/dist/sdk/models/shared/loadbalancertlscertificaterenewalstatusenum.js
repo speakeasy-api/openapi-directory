@@ -1,7 +1,10 @@
-export var LoadBalancerTlsCertificateRenewalStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadBalancerTlsCertificateRenewalStatusEnum = void 0;
+var LoadBalancerTlsCertificateRenewalStatusEnum;
 (function (LoadBalancerTlsCertificateRenewalStatusEnum) {
     LoadBalancerTlsCertificateRenewalStatusEnum["PendingAutoRenewal"] = "PENDING_AUTO_RENEWAL";
     LoadBalancerTlsCertificateRenewalStatusEnum["PendingValidation"] = "PENDING_VALIDATION";
     LoadBalancerTlsCertificateRenewalStatusEnum["Success"] = "SUCCESS";
     LoadBalancerTlsCertificateRenewalStatusEnum["Failed"] = "FAILED";
-})(LoadBalancerTlsCertificateRenewalStatusEnum || (LoadBalancerTlsCertificateRenewalStatusEnum = {}));
+})(LoadBalancerTlsCertificateRenewalStatusEnum = exports.LoadBalancerTlsCertificateRenewalStatusEnum || (exports.LoadBalancerTlsCertificateRenewalStatusEnum = {}));

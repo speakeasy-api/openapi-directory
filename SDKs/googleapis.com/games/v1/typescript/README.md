@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GamesAchievementDefinitionsListRequest, GamesAchievementDefinitionsListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,26 +30,26 @@ const req: GamesAchievementDefinitionsListRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "iusto",
-    alt: "proto",
-    callback: "accusantium",
-    fields: "eaque",
-    key: "eaque",
-    language: "dicta",
-    maxResults: 1126920409312496146,
-    oauthToken: "ea",
-    pageToken: "delectus",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    language: "expedita",
+    maxResults: 6044372234677422456,
+    oauthToken: "fugit",
+    pageToken: "et",
     prettyPrint: true,
-    quotaUser: "hic",
-    uploadType: "quasi",
-    uploadProtocol: "eum",
+    quotaUser: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
 };
 

@@ -1,9 +1,10 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://api.peoplefinderspro.com"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -11,7 +12,60 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
+    /**
+     * search - Search
+     *
+     * ###### *Click on the grey search box above, to view sample request/response objects for the Identity Verification Search*
+     *
+     * Perform a search:
+     *
+     * 1. Add your key and key secret to the request headers.
+     *     + galaxy-ap-name: [Key]
+     *     + galaxy-ap-password: [Secret]
+     *     + galaxy-search-type: DevAPIIDVerification
+     *
+     * 2.  Add search criteria to your request. At least two are required: SSN, Name, Phone, Address or Email.
+     *     ~~~html
+     *             {
+     *                 "FirstName": "John",
+     *                 "MiddleName": "T",
+     *                 "LastName": "Lawrence",
+     *                 "Dob":"",
+     *                 "Age": 0,
+     *                 "Address": {
+     *                     "addressLine1":"123 Q Street, Unit 102",
+     *                     "addressLine2":"Sacramento, CA"
+     *                 },
+     *                 "PhoneNumber":"",
+     *                 "Email":""
+     *             }
+     *     ~~~
+     *
+     * 3.  Submit your search
+     *
+     * A complete list of JSON request properties follows.
+     *
+     * + <code>FirstName</code>= null (optional, string) ... First name.
+     *
+     * + <code>MiddleName</code> = null (optional, string) ... Middle name or middle initial.
+     *
+     * + <code>LastName</code> = null (optional, string) ... Last name.
+     *
+     * + <code>Dob</code> = null (optional, string) ... Date of birth (format: MM/DD/YYYY).
+     *
+     * + <code>Age</code> = null (optional, int) ... Age.
+     *
+     * + <code>Addresses</code> = null (optional, Addresses[]) ... List of addresses.
+     *     + <code>Members</code>
+     *         + <code>AddressLine1</code> = null (optional, string) ... House number, street name and Unit number (i.e. 123 Q Street, Unit 102) or PO Box (i.e. 1821 Q Street).
+     *         + <code>AddressLine2</code> = null (optional, string) ... State or City and State or Zip (i.e. Sacramento, CA).
+     *
+     * + <code>Phone</code> = null (optional, string) ... Phone number (formats: ###-###-####, (###) ###-####).
+     *
+     * + <code>Email</code> = null (optional, string) ... E-mail address.
+    **/
+    search(req: operations.SearchRequest, config?: AxiosRequestConfig): Promise<operations.SearchResponse>;
     /**
      * postAddressAutocomplete - Search
      *
@@ -143,58 +197,4 @@ export declare class SDK {
      * + <code>Phone</code> = null (optional, string) ... Phone number (formats: ###-###-####, (###) ###-####).
     **/
     postPhoneEnrich(req: operations.PostPhoneEnrichRequest, config?: AxiosRequestConfig): Promise<operations.PostPhoneEnrichResponse>;
-    /**
-     * search - Search
-     *
-     * ###### *Click on the grey search box above, to view sample request/response objects for the Identity Verification Search*
-     *
-     * Perform a search:
-     *
-     * 1. Add your key and key secret to the request headers.
-     *     + galaxy-ap-name: [Key]
-     *     + galaxy-ap-password: [Secret]
-     *     + galaxy-search-type: DevAPIIDVerification
-     *
-     * 2.  Add search criteria to your request. At least two are required: SSN, Name, Phone, Address or Email.
-     *     ~~~html
-     *             {
-     *                 "FirstName": "John",
-     *                 "MiddleName": "T",
-     *                 "LastName": "Lawrence",
-     *                 "Dob":"",
-     *                 "Age": 0,
-     *                 "Address": {
-     *                     "addressLine1":"123 Q Street, Unit 102",
-     *                     "addressLine2":"Sacramento, CA"
-     *                 },
-     *                 "PhoneNumber":"",
-     *                 "Email":""
-     *             }
-     *     ~~~
-     *
-     * 3.  Submit your search
-     *
-     * A complete list of JSON request properties follows.
-     *
-     * + <code>FirstName</code>= null (optional, string) ... First name.
-     *
-     * + <code>MiddleName</code> = null (optional, string) ... Middle name or middle initial.
-     *
-     * + <code>LastName</code> = null (optional, string) ... Last name.
-     *
-     * + <code>Dob</code> = null (optional, string) ... Date of birth (format: MM/DD/YYYY).
-     *
-     * + <code>Age</code> = null (optional, int) ... Age.
-     *
-     * + <code>Addresses</code> = null (optional, Addresses[]) ... List of addresses.
-     *     + <code>Members</code>
-     *         + <code>AddressLine1</code> = null (optional, string) ... House number, street name and Unit number (i.e. 123 Q Street, Unit 102) or PO Box (i.e. 1821 Q Street).
-     *         + <code>AddressLine2</code> = null (optional, string) ... State or City and State or Zip (i.e. Sacramento, CA).
-     *
-     * + <code>Phone</code> = null (optional, string) ... Phone number (formats: ###-###-####, (###) ###-####).
-     *
-     * + <code>Email</code> = null (optional, string) ... E-mail address.
-    **/
-    search(req: operations.SearchRequest, config?: AxiosRequestConfig): Promise<operations.SearchResponse>;
 }
-export {};

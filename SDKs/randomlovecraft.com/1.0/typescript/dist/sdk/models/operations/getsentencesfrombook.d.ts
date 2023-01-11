@@ -16,5 +16,5 @@ export declare class GetSentencesFromBookRequest extends SpeakeasyBase {
 export declare class GetSentencesFromBookResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSentencesFromBook200ApplicationJsonObject?: GetSentencesFromBook200ApplicationJson;
+    getSentencesFromBook200ApplicationJSONObject?: GetSentencesFromBook200ApplicationJson;
 }

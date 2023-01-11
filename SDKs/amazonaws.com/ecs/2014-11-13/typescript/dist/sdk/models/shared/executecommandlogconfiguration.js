@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExecuteCommandLogConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
 // ExecuteCommandLogConfiguration
 /**
  * The log configuration for the results of the execute command actions. The logs can be sent to CloudWatch Logs or an Amazon S3 bucket.
@@ -33,25 +36,25 @@ var ExecuteCommandLogConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudWatchEncryptionEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudWatchEncryptionEnabled" }),
         __metadata("design:type", Boolean)
     ], ExecuteCommandLogConfiguration.prototype, "cloudWatchEncryptionEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudWatchLogGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudWatchLogGroupName" }),
         __metadata("design:type", String)
     ], ExecuteCommandLogConfiguration.prototype, "cloudWatchLogGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3BucketName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3BucketName" }),
         __metadata("design:type", String)
     ], ExecuteCommandLogConfiguration.prototype, "s3BucketName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3EncryptionEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3EncryptionEnabled" }),
         __metadata("design:type", Boolean)
     ], ExecuteCommandLogConfiguration.prototype, "s3EncryptionEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3KeyPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3KeyPrefix" }),
         __metadata("design:type", String)
     ], ExecuteCommandLogConfiguration.prototype, "s3KeyPrefix", void 0);
     return ExecuteCommandLogConfiguration;
-}(SpeakeasyBase));
-export { ExecuteCommandLogConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.ExecuteCommandLogConfiguration = ExecuteCommandLogConfiguration;

@@ -40,5 +40,5 @@ export declare class GetBlobsRequest extends SpeakeasyBase {
 export declare class GetBlobsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getBlobs200ApplicationJsonObject?: GetBlobs200ApplicationJson;
+    getBlobs200ApplicationJSONObject?: GetBlobs200ApplicationJson;
 }

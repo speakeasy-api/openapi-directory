@@ -7,6 +7,6 @@ export declare class KeysApiExpiryRequest extends SpeakeasyBase {
 }
 export declare class KeysApiExpiryResponse extends SpeakeasyBase {
     contentType: string;
-    keysApiExpiry200ApplicationJsonOneOf?: any;
+    keysApiExpiry200ApplicationJSONOneOf?: any;
     statusCode: number;
 }

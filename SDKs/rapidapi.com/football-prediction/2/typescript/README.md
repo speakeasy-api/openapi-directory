@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetApiV2ListFederationsRequest, GetApiV2ListFederationsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,11 +28,11 @@ const sdk = new SDK();
     
 const req: GetApiV2ListFederationsRequest = {
   headers: {
-    xRapidApiKey: "vel",
+    xRapidApiKey: "sit",
   },
 };
 
-sdk.sdk.getApiV2ListFederations(req).then((res: GetApiV2ListFederationsResponse | AxiosError) => {
+sdk.getApiV2ListFederations(req).then((res: GetApiV2ListFederationsResponse | AxiosError) => {
    // handle response
 });
 ```

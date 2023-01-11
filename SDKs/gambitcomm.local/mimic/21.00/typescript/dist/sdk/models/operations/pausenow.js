@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PauseNowResponse = exports.PauseNowRequest = exports.PauseNowPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PauseNowPathParams = /** @class */ (function (_super) {
     __extends(PauseNowPathParams, _super);
     function PauseNowPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], PauseNowPathParams.prototype, "agentNum", void 0);
     return PauseNowPathParams;
-}(SpeakeasyBase));
-export { PauseNowPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PauseNowPathParams = PauseNowPathParams;
 var PauseNowRequest = /** @class */ (function (_super) {
     __extends(PauseNowRequest, _super);
     function PauseNowRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PauseNowPathParams)
     ], PauseNowRequest.prototype, "pathParams", void 0);
     return PauseNowRequest;
-}(SpeakeasyBase));
-export { PauseNowRequest };
+}(utils_1.SpeakeasyBase));
+exports.PauseNowRequest = PauseNowRequest;
 var PauseNowResponse = /** @class */ (function (_super) {
     __extends(PauseNowResponse, _super);
     function PauseNowResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PauseNowResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PauseNowResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], PauseNowResponse.prototype, "pauseNow200ApplicationJsonString", void 0);
+    ], PauseNowResponse.prototype, "pauseNow200ApplicationJSONString", void 0);
     return PauseNowResponse;
-}(SpeakeasyBase));
-export { PauseNowResponse };
+}(utils_1.SpeakeasyBase));
+exports.PauseNowResponse = PauseNowResponse;

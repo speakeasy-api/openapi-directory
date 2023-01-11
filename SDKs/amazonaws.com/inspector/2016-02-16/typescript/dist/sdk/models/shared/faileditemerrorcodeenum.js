@@ -1,4 +1,7 @@
-export var FailedItemErrorCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FailedItemErrorCodeEnum = void 0;
+var FailedItemErrorCodeEnum;
 (function (FailedItemErrorCodeEnum) {
     FailedItemErrorCodeEnum["InvalidArn"] = "INVALID_ARN";
     FailedItemErrorCodeEnum["DuplicateArn"] = "DUPLICATE_ARN";
@@ -6,4 +9,4 @@ export var FailedItemErrorCodeEnum;
     FailedItemErrorCodeEnum["AccessDenied"] = "ACCESS_DENIED";
     FailedItemErrorCodeEnum["LimitExceeded"] = "LIMIT_EXCEEDED";
     FailedItemErrorCodeEnum["InternalError"] = "INTERNAL_ERROR";
-})(FailedItemErrorCodeEnum || (FailedItemErrorCodeEnum = {}));
+})(FailedItemErrorCodeEnum = exports.FailedItemErrorCodeEnum || (exports.FailedItemErrorCodeEnum = {}));

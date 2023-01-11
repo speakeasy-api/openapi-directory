@@ -71,5 +71,5 @@ export class UpdateNetworkWirelessSsidVpnResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkWirelessSsidVpn200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkWirelessSsidVpn200ApplicationJSONObject?: Record<string, any>;
 }

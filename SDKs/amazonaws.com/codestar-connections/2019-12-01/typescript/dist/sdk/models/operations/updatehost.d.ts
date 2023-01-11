@@ -24,5 +24,5 @@ export declare class UpdateHostResponse extends SpeakeasyBase {
     resourceUnavailableException?: any;
     statusCode: number;
     unsupportedOperationException?: any;
-    updateHostOutput?: Map<string, any>;
+    updateHostOutput?: Record<string, any>;
 }

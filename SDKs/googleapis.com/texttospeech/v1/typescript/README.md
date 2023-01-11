@@ -16,69 +16,49 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { TexttospeechTextSynthesizeRequest, TexttospeechTextSynthesizeResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { TexttospeechOperationsCancelRequest, TexttospeechOperationsCancelResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: TexttospeechTextSynthesizeRequest = {
+const req: TexttospeechOperationsCancelRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
+  pathParams: {
+    name: "sit",
+  },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "quam",
-    alt: "json",
-    callback: "mollitia",
-    fields: "qui",
-    key: "perspiciatis",
-    oauthToken: "debitis",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "hic",
-    uploadType: "voluptatem",
-    uploadProtocol: "voluptas",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    audioConfig: {
-      audioEncoding: "OGG_OPUS",
-      effectsProfileId: [
-        "quis",
-        "molestias",
-        "labore",
-      ],
-      pitch: 74.199997,
-      sampleRateHertz: 762565853273289943,
-      speakingRate: 85.199997,
-      volumeGainDb: 59.200001,
-    },
-    input: {
-      ssml: "adipisci",
-      text: "aspernatur",
-    },
-    voice: {
-      customVoice: {
-        model: "quis",
-        reportedUsage: "REPORTED_USAGE_UNSPECIFIED",
-      },
-      languageCode: "modi",
-      name: "consequuntur",
-      ssmlGender: "SSML_VOICE_GENDER_UNSPECIFIED",
-    },
+    "debitis": "voluptatum",
+    "et": "ut",
+    "dolorem": "et",
   },
 };
 
-sdk.text.texttospeechTextSynthesize(req).then((res: TexttospeechTextSynthesizeResponse | AxiosError) => {
+sdk.operations.texttospeechOperationsCancel(req).then((res: TexttospeechOperationsCancelResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -86,6 +66,16 @@ sdk.text.texttospeechTextSynthesize(req).then((res: TexttospeechTextSynthesizeRe
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
+### operations
+
+* `texttospeechOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* `texttospeechOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* `texttospeechOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+
+### projects
+
+* `texttospeechProjectsLocationsVoicesSynthesizeLongAudio` - Synthesizes long form text asynchronously.
 
 ### text
 

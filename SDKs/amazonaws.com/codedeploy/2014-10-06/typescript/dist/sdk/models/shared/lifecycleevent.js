@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Diagnostics } from "./diagnostics";
-import { LifecycleEventStatusEnum } from "./lifecycleeventstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LifecycleEvent = void 0;
+var utils_1 = require("../../../internal/utils");
+var diagnostics_1 = require("./diagnostics");
+var lifecycleeventstatusenum_1 = require("./lifecycleeventstatusenum");
 // LifecycleEvent
 /**
  * Information about a deployment lifecycle event.
@@ -35,25 +38,25 @@ var LifecycleEvent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diagnostics" }),
-        __metadata("design:type", Diagnostics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diagnostics" }),
+        __metadata("design:type", diagnostics_1.Diagnostics)
     ], LifecycleEvent.prototype, "diagnostics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Date)
     ], LifecycleEvent.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifecycleEventName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifecycleEventName" }),
         __metadata("design:type", String)
     ], LifecycleEvent.prototype, "lifecycleEventName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], LifecycleEvent.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], LifecycleEvent.prototype, "status", void 0);
     return LifecycleEvent;
-}(SpeakeasyBase));
-export { LifecycleEvent };
+}(utils_1.SpeakeasyBase));
+exports.LifecycleEvent = LifecycleEvent;

@@ -1,4 +1,7 @@
-export var CurrencyCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CurrencyCodeEnum = void 0;
+var CurrencyCodeEnum;
 (function (CurrencyCodeEnum) {
     CurrencyCodeEnum["Aed"] = "AED";
     CurrencyCodeEnum["Afn"] = "AFN";
@@ -178,4 +181,4 @@ export var CurrencyCodeEnum;
     CurrencyCodeEnum["Yer"] = "YER";
     CurrencyCodeEnum["Zar"] = "ZAR";
     CurrencyCodeEnum["Zmw"] = "ZMW";
-})(CurrencyCodeEnum || (CurrencyCodeEnum = {}));
+})(CurrencyCodeEnum = exports.CurrencyCodeEnum || (exports.CurrencyCodeEnum = {}));

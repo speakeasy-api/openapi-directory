@@ -16,5 +16,5 @@ export declare class GetDeviceCameraAnalyticsRecentRequest extends SpeakeasyBase
 export declare class GetDeviceCameraAnalyticsRecentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceCameraAnalyticsRecent200ApplicationJsonObject?: Map<string, any>;
+    getDeviceCameraAnalyticsRecent200ApplicationJSONObject?: Record<string, any>;
 }

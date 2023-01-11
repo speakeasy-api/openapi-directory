@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var NotificationEntitySendIntervalEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NotificationEntity = exports.NotificationEntityUnsubscribedReasonEnum = exports.NotificationEntitySendIntervalEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var NotificationEntitySendIntervalEnum;
 (function (NotificationEntitySendIntervalEnum) {
     NotificationEntitySendIntervalEnum["FiveMinutes"] = "five_minutes";
     NotificationEntitySendIntervalEnum["FifteenMinutes"] = "fifteen_minutes";
     NotificationEntitySendIntervalEnum["Hourly"] = "hourly";
     NotificationEntitySendIntervalEnum["Daily"] = "daily";
-})(NotificationEntitySendIntervalEnum || (NotificationEntitySendIntervalEnum = {}));
-export var NotificationEntityUnsubscribedReasonEnum;
+})(NotificationEntitySendIntervalEnum = exports.NotificationEntitySendIntervalEnum || (exports.NotificationEntitySendIntervalEnum = {}));
+var NotificationEntityUnsubscribedReasonEnum;
 (function (NotificationEntityUnsubscribedReasonEnum) {
     NotificationEntityUnsubscribedReasonEnum["None"] = "none";
     NotificationEntityUnsubscribedReasonEnum["UnsubscribeLinkClicked"] = "unsubscribe_link_clicked";
     NotificationEntityUnsubscribedReasonEnum["MailBounced"] = "mail_bounced";
     NotificationEntityUnsubscribedReasonEnum["MailMarkedAsSpam"] = "mail_marked_as_spam";
-})(NotificationEntityUnsubscribedReasonEnum || (NotificationEntityUnsubscribedReasonEnum = {}));
+})(NotificationEntityUnsubscribedReasonEnum = exports.NotificationEntityUnsubscribedReasonEnum || (exports.NotificationEntityUnsubscribedReasonEnum = {}));
 // NotificationEntity
 /**
  * List Notifications
@@ -47,57 +50,57 @@ var NotificationEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group_id" }),
         __metadata("design:type", Number)
     ], NotificationEntity.prototype, "groupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group_name" }),
         __metadata("design:type", String)
     ], NotificationEntity.prototype, "groupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], NotificationEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notify_on_copy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notify_on_copy" }),
         __metadata("design:type", Boolean)
     ], NotificationEntity.prototype, "notifyOnCopy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notify_user_actions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notify_user_actions" }),
         __metadata("design:type", Boolean)
     ], NotificationEntity.prototype, "notifyUserActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], NotificationEntity.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recursive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recursive" }),
         __metadata("design:type", Boolean)
     ], NotificationEntity.prototype, "recursive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=send_interval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=send_interval" }),
         __metadata("design:type", String)
     ], NotificationEntity.prototype, "sendInterval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suppressed_email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suppressed_email" }),
         __metadata("design:type", Boolean)
     ], NotificationEntity.prototype, "suppressedEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unsubscribed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unsubscribed" }),
         __metadata("design:type", Boolean)
     ], NotificationEntity.prototype, "unsubscribed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unsubscribed_reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unsubscribed_reason" }),
         __metadata("design:type", String)
     ], NotificationEntity.prototype, "unsubscribedReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_id" }),
         __metadata("design:type", Number)
     ], NotificationEntity.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], NotificationEntity.prototype, "username", void 0);
     return NotificationEntity;
-}(SpeakeasyBase));
-export { NotificationEntity };
+}(utils_1.SpeakeasyBase));
+exports.NotificationEntity = NotificationEntity;

@@ -1,6 +1,9 @@
-export var ChoiceStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChoiceStatusEnum = void 0;
+var ChoiceStatusEnum;
 (function (ChoiceStatusEnum) {
     ChoiceStatusEnum["Selected"] = "SELECTED";
     ChoiceStatusEnum["NotApplicable"] = "NOT_APPLICABLE";
     ChoiceStatusEnum["Unselected"] = "UNSELECTED";
-})(ChoiceStatusEnum || (ChoiceStatusEnum = {}));
+})(ChoiceStatusEnum = exports.ChoiceStatusEnum || (exports.ChoiceStatusEnum = {}));

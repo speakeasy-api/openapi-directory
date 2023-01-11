@@ -194,23 +194,23 @@ export class WtrblResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  wtrbl400ApplicationJsonObject?: Wtrbl400ApplicationJson;
+  wtrbl400ApplicationJSONObject?: Wtrbl400ApplicationJson;
 
   @SpeakeasyMetadata()
-  wtrbl401ApplicationJsonObject?: Wtrbl401ApplicationJson;
+  wtrbl401ApplicationJSONObject?: Wtrbl401ApplicationJson;
 
   @SpeakeasyMetadata()
-  wtrbl404ApplicationJsonObject?: Wtrbl404ApplicationJson;
+  wtrbl404ApplicationJSONObject?: Wtrbl404ApplicationJson;
 
   @SpeakeasyMetadata()
-  wtrbl500ApplicationJsonObject?: Wtrbl500ApplicationJson;
+  wtrbl500ApplicationJSONObject?: Wtrbl500ApplicationJson;
 
   @SpeakeasyMetadata()
-  wtrbl502ApplicationJsonObject?: Wtrbl502ApplicationJson;
+  wtrbl502ApplicationJSONObject?: Wtrbl502ApplicationJson;
 
   @SpeakeasyMetadata()
-  wtrbl503ApplicationJsonObject?: Wtrbl503ApplicationJson;
+  wtrbl503ApplicationJSONObject?: Wtrbl503ApplicationJson;
 
   @SpeakeasyMetadata()
-  wtrbl504ApplicationJsonObject?: Wtrbl504ApplicationJson;
+  wtrbl504ApplicationJSONObject?: Wtrbl504ApplicationJson;
 }

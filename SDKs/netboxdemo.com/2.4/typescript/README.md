@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CircuitsChoicesListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     bearer: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -32,7 +31,7 @@ const sdk = new SDK(WithSecurity(
   }
 ));
 
-sdk.sdk.circuitsChoicesList().then((res: CircuitsChoicesListResponse | AxiosError) => {
+sdk.circuits.circuitsChoicesList().then((res: CircuitsChoicesListResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -41,7 +40,7 @@ sdk.sdk.circuitsChoicesList().then((res: CircuitsChoicesListResponse | AxiosErro
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### circuits
 
 * `circuitsChoicesList`
 * `circuitsChoicesRead`
@@ -70,6 +69,9 @@ sdk.sdk.circuitsChoicesList().then((res: CircuitsChoicesListResponse | AxiosErro
 * `circuitsProvidersPartialUpdate`
 * `circuitsProvidersRead`
 * `circuitsProvidersUpdate`
+
+### dcim
+
 * `dcimChoicesList`
 * `dcimChoicesRead`
 * `dcimConnectedDeviceList` - This endpoint allows a user to determine what device (if any) is connected to a given peer device and peer
@@ -240,6 +242,9 @@ via a protocol such as LLDP. Two query parameters must be included in the reques
 * `dcimVirtualChassisPartialUpdate`
 * `dcimVirtualChassisRead`
 * `dcimVirtualChassisUpdate`
+
+### extras
+
 * `extrasChoicesList`
 * `extrasChoicesRead`
 * `extrasConfigContextsCreate`
@@ -283,6 +288,9 @@ via a protocol such as LLDP. Two query parameters must be included in the reques
 * `extrasTopologyMapsRead`
 * `extrasTopologyMapsRender`
 * `extrasTopologyMapsUpdate`
+
+### ipam
+
 * `ipamChoicesList`
 * `ipamChoicesRead`
 * `ipamAggregatesCreate`
@@ -347,6 +355,9 @@ however results will not be paginated.
 * `ipamVrfsPartialUpdate`
 * `ipamVrfsRead`
 * `ipamVrfsUpdate`
+
+### secrets
+
 * `secretsChoicesList`
 * `secretsChoicesRead`
 * `secretsGenerateRsaKeyPairList` - This endpoint can be used to generate a new RSA key pair. The keys are returned in PEM format.
@@ -381,6 +392,9 @@ key will be returned instead of a new one.
 * `secretsSecretsPartialUpdate`
 * `secretsSecretsRead`
 * `secretsSecretsUpdate`
+
+### tenancy
+
 * `tenancyChoicesList`
 * `tenancyChoicesRead`
 * `tenancyTenantGroupsCreate`
@@ -395,6 +409,9 @@ key will be returned instead of a new one.
 * `tenancyTenantsPartialUpdate`
 * `tenancyTenantsRead`
 * `tenancyTenantsUpdate`
+
+### virtualization
+
 * `virtualizationChoicesList`
 * `virtualizationChoicesRead`
 * `virtualizationClusterGroupsCreate`

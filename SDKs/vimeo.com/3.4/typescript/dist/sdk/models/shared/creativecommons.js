@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CreativeCommonsCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreativeCommons = exports.CreativeCommonsCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CreativeCommonsCodeEnum;
 (function (CreativeCommonsCodeEnum) {
     CreativeCommonsCodeEnum["By"] = "by";
     CreativeCommonsCodeEnum["ByNc"] = "by-nc";
@@ -32,24 +35,24 @@ export var CreativeCommonsCodeEnum;
     CreativeCommonsCodeEnum["ByNd"] = "by-nd";
     CreativeCommonsCodeEnum["BySa"] = "by-sa";
     CreativeCommonsCodeEnum["Cc0"] = "cc0";
-})(CreativeCommonsCodeEnum || (CreativeCommonsCodeEnum = {}));
+})(CreativeCommonsCodeEnum = exports.CreativeCommonsCodeEnum || (exports.CreativeCommonsCodeEnum = {}));
 var CreativeCommons = /** @class */ (function (_super) {
     __extends(CreativeCommons, _super);
     function CreativeCommons() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], CreativeCommons.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreativeCommons.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], CreativeCommons.prototype, "uri", void 0);
     return CreativeCommons;
-}(SpeakeasyBase));
-export { CreativeCommons };
+}(utils_1.SpeakeasyBase));
+exports.CreativeCommons = CreativeCommons;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AuthorizedbuyersmarketplaceBuyersAuctionPackagesListRequest, AuthorizedbuyersmarketplaceBuyersAuctionPackagesListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,28 +30,28 @@ const req: AuthorizedbuyersmarketplaceBuyersAuctionPackagesListRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "quo",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "totam",
+    accessToken: "culpa",
     alt: "media",
-    callback: "sunt",
-    fields: "enim",
-    key: "qui",
-    oauthToken: "deleniti",
-    pageSize: 5518598320821928085,
-    pageToken: "est",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    pageSize: 8274930044578894929,
+    pageToken: "et",
     prettyPrint: true,
-    quotaUser: "tenetur",
-    uploadType: "cumque",
-    uploadProtocol: "reprehenderit",
+    quotaUser: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
 };
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,154 +23,156 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedRegion } from "./nestedregion";
-import { NestedTenant } from "./nestedtenant";
-export var SiteStatusLabelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Site = exports.SiteStatus = exports.SiteStatusValueEnum = exports.SiteStatusLabelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedregion_1 = require("./nestedregion");
+var nestedtenant_1 = require("./nestedtenant");
+var SiteStatusLabelEnum;
 (function (SiteStatusLabelEnum) {
     SiteStatusLabelEnum["Active"] = "Active";
     SiteStatusLabelEnum["Planned"] = "Planned";
     SiteStatusLabelEnum["Retired"] = "Retired";
-})(SiteStatusLabelEnum || (SiteStatusLabelEnum = {}));
-export var SiteStatusValueEnum;
+})(SiteStatusLabelEnum = exports.SiteStatusLabelEnum || (exports.SiteStatusLabelEnum = {}));
+var SiteStatusValueEnum;
 (function (SiteStatusValueEnum) {
     SiteStatusValueEnum["Active"] = "active";
     SiteStatusValueEnum["Planned"] = "planned";
     SiteStatusValueEnum["Retired"] = "retired";
-})(SiteStatusValueEnum || (SiteStatusValueEnum = {}));
+})(SiteStatusValueEnum = exports.SiteStatusValueEnum || (exports.SiteStatusValueEnum = {}));
 var SiteStatus = /** @class */ (function (_super) {
     __extends(SiteStatus, _super);
     function SiteStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], SiteStatus.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], SiteStatus.prototype, "value", void 0);
     return SiteStatus;
-}(SpeakeasyBase));
-export { SiteStatus };
+}(utils_1.SpeakeasyBase));
+exports.SiteStatus = SiteStatus;
 var Site = /** @class */ (function (_super) {
     __extends(Site, _super);
     function Site() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asn" }),
         __metadata("design:type", Number)
     ], Site.prototype, "asn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=circuit_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=circuit_count" }),
         __metadata("design:type", Number)
     ], Site.prototype, "circuitCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", String)
     ], Site.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contact_email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contact_email" }),
         __metadata("design:type", String)
     ], Site.prototype, "contactEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contact_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contact_name" }),
         __metadata("design:type", String)
     ], Site.prototype, "contactName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contact_phone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contact_phone" }),
         __metadata("design:type", String)
     ], Site.prototype, "contactPhone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Site.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], Site.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Site.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_count" }),
         __metadata("design:type", Number)
     ], Site.prototype, "deviceCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=facility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=facility" }),
         __metadata("design:type", String)
     ], Site.prototype, "facility", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Site.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_updated" }),
         __metadata("design:type", Date)
     ], Site.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", String)
     ], Site.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", String)
     ], Site.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Site.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=physical_address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=physical_address" }),
         __metadata("design:type", String)
     ], Site.prototype, "physicalAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prefix_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prefix_count" }),
         __metadata("design:type", Number)
     ], Site.prototype, "prefixCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rack_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rack_count" }),
         __metadata("design:type", Number)
     ], Site.prototype, "rackCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
-        __metadata("design:type", NestedRegion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
+        __metadata("design:type", nestedregion_1.NestedRegion)
     ], Site.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipping_address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipping_address" }),
         __metadata("design:type", String)
     ], Site.prototype, "shippingAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], Site.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", SiteStatus)
     ], Site.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], Site.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant" }),
-        __metadata("design:type", NestedTenant)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant" }),
+        __metadata("design:type", nestedtenant_1.NestedTenant)
     ], Site.prototype, "tenant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_zone" }),
         __metadata("design:type", String)
     ], Site.prototype, "timeZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualmachine_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualmachine_count" }),
         __metadata("design:type", Number)
     ], Site.prototype, "virtualmachineCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlan_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlan_count" }),
         __metadata("design:type", Number)
     ], Site.prototype, "vlanCount", void 0);
     return Site;
-}(SpeakeasyBase));
-export { Site };
+}(utils_1.SpeakeasyBase));
+exports.Site = Site;

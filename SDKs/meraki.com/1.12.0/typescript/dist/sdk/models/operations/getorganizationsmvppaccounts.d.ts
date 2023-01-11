@@ -8,5 +8,5 @@ export declare class GetOrganizationSmVppAccountsRequest extends SpeakeasyBase {
 export declare class GetOrganizationSmVppAccountsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationSmVppAccounts200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationSmVppAccounts200ApplicationJSONObject?: Record<string, any>;
 }

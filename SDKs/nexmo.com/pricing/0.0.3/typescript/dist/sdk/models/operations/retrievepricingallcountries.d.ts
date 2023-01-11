@@ -28,6 +28,6 @@ export declare class RetrievePricingAllCountriesResponse extends SpeakeasyBase {
     contentType: string;
     pricingCountriesResponse?: any;
     statusCode: number;
-    retrievePricingAllCountries400ApplicationJsonObject?: RetrievePricingAllCountries400ApplicationJson;
-    retrievePricingAllCountries401ApplicationJsonObject?: RetrievePricingAllCountries401ApplicationJson;
+    retrievePricingAllCountries400ApplicationJSONObject?: RetrievePricingAllCountries400ApplicationJson;
+    retrievePricingAllCountries401ApplicationJSONObject?: RetrievePricingAllCountries401ApplicationJson;
 }

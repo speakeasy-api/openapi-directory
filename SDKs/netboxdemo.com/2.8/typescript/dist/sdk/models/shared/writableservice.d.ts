@@ -4,7 +4,7 @@ export declare enum WritableServiceProtocolEnum {
     Udp = "udp"
 }
 export declare class WritableServiceInput extends SpeakeasyBase {
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     device?: number;
     ipaddresses?: number[];

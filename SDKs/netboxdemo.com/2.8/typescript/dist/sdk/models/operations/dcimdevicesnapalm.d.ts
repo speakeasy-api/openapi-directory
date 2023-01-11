@@ -12,6 +12,6 @@ export declare class DcimDevicesNapalmRequest extends SpeakeasyBase {
 }
 export declare class DcimDevicesNapalmResponse extends SpeakeasyBase {
     contentType: string;
-    deviceNapalm?: shared.DeviceNapalm;
+    deviceNAPALM?: shared.DeviceNapalm;
     statusCode: number;
 }

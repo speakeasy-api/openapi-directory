@@ -1,0 +1,50 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import { RecurringChargeList } from "./recurringchargelist";
+import { ReservedNodeOfferingTypeEnum } from "./reservednodeofferingtypeenum";
+
+
+
+// ReservedNodeList
+/** 
+ * Describes a reserved node. You can call the <a>DescribeReservedNodeOfferings</a> API to obtain the available reserved node offerings. 
+**/
+export class ReservedNodeList extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  currencyCode?: string;
+
+  @SpeakeasyMetadata()
+  duration?: number;
+
+  @SpeakeasyMetadata()
+  fixedPrice?: number;
+
+  @SpeakeasyMetadata()
+  nodeCount?: number;
+
+  @SpeakeasyMetadata()
+  nodeType?: string;
+
+  @SpeakeasyMetadata()
+  offeringType?: string;
+
+  @SpeakeasyMetadata({ elemType: RecurringChargeList })
+  recurringCharges?: RecurringChargeList[];
+
+  @SpeakeasyMetadata()
+  reservedNodeId?: string;
+
+  @SpeakeasyMetadata()
+  reservedNodeOfferingId?: string;
+
+  @SpeakeasyMetadata()
+  reservedNodeOfferingType?: ReservedNodeOfferingTypeEnum;
+
+  @SpeakeasyMetadata()
+  startTime?: Date;
+
+  @SpeakeasyMetadata()
+  state?: string;
+
+  @SpeakeasyMetadata()
+  usagePrice?: number;
+}

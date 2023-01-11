@@ -24,5 +24,5 @@ export declare class UpdateNetworkSwitchQosRuleRequest extends SpeakeasyBase {
 export declare class UpdateNetworkSwitchQosRuleResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkSwitchQosRule200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkSwitchQosRule200ApplicationJSONObject?: Record<string, any>;
 }

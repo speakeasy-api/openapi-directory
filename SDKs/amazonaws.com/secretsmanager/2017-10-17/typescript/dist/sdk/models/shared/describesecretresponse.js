@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,83 +23,85 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReplicationStatusType } from "./replicationstatustype";
-import { RotationRulesType } from "./rotationrulestype";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeSecretResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var replicationstatustype_1 = require("./replicationstatustype");
+var rotationrulestype_1 = require("./rotationrulestype");
+var tag_1 = require("./tag");
 var DescribeSecretResponse = /** @class */ (function (_super) {
     __extends(DescribeSecretResponse, _super);
     function DescribeSecretResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ARN" }),
         __metadata("design:type", String)
     ], DescribeSecretResponse.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedDate" }),
         __metadata("design:type", Date)
     ], DescribeSecretResponse.prototype, "createdDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeletedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeletedDate" }),
         __metadata("design:type", Date)
     ], DescribeSecretResponse.prototype, "deletedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], DescribeSecretResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KmsKeyId" }),
         __metadata("design:type", String)
     ], DescribeSecretResponse.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastAccessedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastAccessedDate" }),
         __metadata("design:type", Date)
     ], DescribeSecretResponse.prototype, "lastAccessedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastChangedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastChangedDate" }),
         __metadata("design:type", Date)
     ], DescribeSecretResponse.prototype, "lastChangedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastRotatedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastRotatedDate" }),
         __metadata("design:type", Date)
     ], DescribeSecretResponse.prototype, "lastRotatedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], DescribeSecretResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OwningService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OwningService" }),
         __metadata("design:type", String)
     ], DescribeSecretResponse.prototype, "owningService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PrimaryRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PrimaryRegion" }),
         __metadata("design:type", String)
     ], DescribeSecretResponse.prototype, "primaryRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationStatus", elemType: ReplicationStatusType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationStatus", elemType: replicationstatustype_1.ReplicationStatusType }),
         __metadata("design:type", Array)
     ], DescribeSecretResponse.prototype, "replicationStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RotationEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RotationEnabled" }),
         __metadata("design:type", Boolean)
     ], DescribeSecretResponse.prototype, "rotationEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RotationLambdaARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RotationLambdaARN" }),
         __metadata("design:type", String)
-    ], DescribeSecretResponse.prototype, "rotationLambdaArn", void 0);
+    ], DescribeSecretResponse.prototype, "rotationLambdaARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RotationRules" }),
-        __metadata("design:type", RotationRulesType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RotationRules" }),
+        __metadata("design:type", rotationrulestype_1.RotationRulesType)
     ], DescribeSecretResponse.prototype, "rotationRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], DescribeSecretResponse.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VersionIdsToStages" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VersionIdsToStages" }),
+        __metadata("design:type", Object)
     ], DescribeSecretResponse.prototype, "versionIdsToStages", void 0);
     return DescribeSecretResponse;
-}(SpeakeasyBase));
-export { DescribeSecretResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeSecretResponse = DescribeSecretResponse;

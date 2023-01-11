@@ -47,7 +47,7 @@ export class ExportTask extends SpeakeasyBase {
   taskStartTime?: Date;
 
   @SpeakeasyMetadata()
-  totalExtractedDataInGb?: number;
+  totalExtractedDataInGB?: number;
 
   @SpeakeasyMetadata()
   warningMessage?: string;

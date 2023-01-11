@@ -28,7 +28,7 @@ export class RotatePagesV1RequestBody extends SpeakeasyBase {
 
 export class RotatePagesV14XxApplicationProblemPlusJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
-  errors?: Map<string, any>;
+  errors?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: number;
@@ -58,5 +58,5 @@ export class RotatePagesV1Response extends SpeakeasyBase {
   rotatePagesV1200ApplicationPdfBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
-  rotatePagesV14XxApplicationProblemPlusJsonObject?: RotatePagesV14XxApplicationProblemPlusJson;
+  rotatePagesV14XXApplicationProblemPlusJsonObject?: RotatePagesV14XxApplicationProblemPlusJson;
 }

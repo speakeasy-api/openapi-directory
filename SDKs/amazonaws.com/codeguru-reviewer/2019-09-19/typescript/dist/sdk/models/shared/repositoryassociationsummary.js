@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProviderTypeEnum } from "./providertypeenum";
-import { RepositoryAssociationStateEnum } from "./repositoryassociationstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RepositoryAssociationSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var providertypeenum_1 = require("./providertypeenum");
+var repositoryassociationstateenum_1 = require("./repositoryassociationstateenum");
 // RepositoryAssociationSummary
 /**
  * Summary information about a repository association. The <a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_ListRepositoryAssociations.html"> <code>ListRepositoryAssociations</code> </a> operation returns a list of <code>RepositoryAssociationSummary</code> objects.
@@ -35,37 +38,37 @@ var RepositoryAssociationSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssociationArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssociationArn" }),
         __metadata("design:type", String)
     ], RepositoryAssociationSummary.prototype, "associationArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssociationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssociationId" }),
         __metadata("design:type", String)
     ], RepositoryAssociationSummary.prototype, "associationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConnectionArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConnectionArn" }),
         __metadata("design:type", String)
     ], RepositoryAssociationSummary.prototype, "connectionArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdatedTimeStamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdatedTimeStamp" }),
         __metadata("design:type", Date)
     ], RepositoryAssociationSummary.prototype, "lastUpdatedTimeStamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], RepositoryAssociationSummary.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Owner" }),
         __metadata("design:type", String)
     ], RepositoryAssociationSummary.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProviderType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProviderType" }),
         __metadata("design:type", String)
     ], RepositoryAssociationSummary.prototype, "providerType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], RepositoryAssociationSummary.prototype, "state", void 0);
     return RepositoryAssociationSummary;
-}(SpeakeasyBase));
-export { RepositoryAssociationSummary };
+}(utils_1.SpeakeasyBase));
+exports.RepositoryAssociationSummary = RepositoryAssociationSummary;

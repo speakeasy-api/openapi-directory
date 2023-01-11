@@ -8,5 +8,5 @@ export declare class GetOrganizationLicensesOverviewRequest extends SpeakeasyBas
 export declare class GetOrganizationLicensesOverviewResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationLicensesOverview200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationLicensesOverview200ApplicationJSONObject?: Record<string, any>;
 }

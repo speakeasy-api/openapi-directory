@@ -68,7 +68,7 @@ export class ClassroomCoursesCourseWorkStudentSubmissionsReclaimRequest extends 
   queryParams: ClassroomCoursesCourseWorkStudentSubmissionsReclaimQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: ClassroomCoursesCourseWorkStudentSubmissionsReclaimSecurity;
@@ -80,7 +80,7 @@ export class ClassroomCoursesCourseWorkStudentSubmissionsReclaimResponse extends
   contentType: string;
 
   @SpeakeasyMetadata()
-  empty?: Map<string, any>;
+  empty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

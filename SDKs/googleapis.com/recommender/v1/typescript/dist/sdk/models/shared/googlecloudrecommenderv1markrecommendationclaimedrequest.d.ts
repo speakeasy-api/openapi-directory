@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class GoogleCloudRecommenderV1MarkRecommendationClaimedRequest extends SpeakeasyBase {
     etag?: string;
-    stateMetadata?: Map<string, string>;
+    stateMetadata?: Record<string, string>;
 }

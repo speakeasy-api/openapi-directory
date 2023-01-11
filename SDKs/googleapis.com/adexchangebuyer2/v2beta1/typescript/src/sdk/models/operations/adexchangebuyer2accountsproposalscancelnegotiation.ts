@@ -65,7 +65,7 @@ export class Adexchangebuyer2AccountsProposalsCancelNegotiationRequest extends S
   queryParams: Adexchangebuyer2AccountsProposalsCancelNegotiationQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: Adexchangebuyer2AccountsProposalsCancelNegotiationSecurity;

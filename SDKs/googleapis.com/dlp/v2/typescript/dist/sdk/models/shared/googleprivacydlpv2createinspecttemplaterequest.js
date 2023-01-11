@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2InspectTemplateInput } from "./googleprivacydlpv2inspecttemplate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2CreateInspectTemplateRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2inspecttemplate_1 = require("./googleprivacydlpv2inspecttemplate");
 // GooglePrivacyDlpV2CreateInspectTemplateRequestInput
 /**
  * Request message for CreateInspectTemplate.
@@ -34,17 +37,17 @@ var GooglePrivacyDlpV2CreateInspectTemplateRequestInput = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inspectTemplate" }),
-        __metadata("design:type", GooglePrivacyDlpV2InspectTemplateInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inspectTemplate" }),
+        __metadata("design:type", googleprivacydlpv2inspecttemplate_1.GooglePrivacyDlpV2InspectTemplateInput)
     ], GooglePrivacyDlpV2CreateInspectTemplateRequestInput.prototype, "inspectTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationId" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2CreateInspectTemplateRequestInput.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=templateId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=templateId" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2CreateInspectTemplateRequestInput.prototype, "templateId", void 0);
     return GooglePrivacyDlpV2CreateInspectTemplateRequestInput;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2CreateInspectTemplateRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2CreateInspectTemplateRequestInput = GooglePrivacyDlpV2CreateInspectTemplateRequestInput;

@@ -22,5 +22,5 @@ export class GetNetworkFloorPlansResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkFloorPlans200ApplicationJsonObject?: Map<string, any>;
+  getNetworkFloorPlans200ApplicationJSONObject?: Record<string, any>;
 }

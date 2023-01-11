@@ -14,5 +14,5 @@ export declare class PushLoginRequestResponse extends SpeakeasyBase {
     contentType: string;
     error?: any;
     statusCode: number;
-    pushLoginRequest200ApplicationJsonObject?: PushLoginRequest200ApplicationJson;
+    pushLoginRequest200ApplicationJSONObject?: PushLoginRequest200ApplicationJson;
 }

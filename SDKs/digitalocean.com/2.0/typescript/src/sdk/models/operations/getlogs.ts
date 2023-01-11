@@ -1,84 +1,78 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class GetLogsPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=app_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=app_id" })
   appId: string;
 
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=component_name" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=component_name" })
   componentName: string;
 
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=deployment_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=deployment_id" })
   deploymentId: string;
-}
-
-export enum GetLogsTypeEnum {
-    Unspecified = "UNSPECIFIED"
-,    Build = "BUILD"
-,    Deploy = "DEPLOY"
-,    Run = "RUN"
 }
 
 
 export class GetLogsQueryParams extends SpeakeasyBase {
-  @Metadata({ data: "queryParam, style=form;explode=true;name=follow" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=follow" })
   follow?: boolean;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=pod_connection_timeout" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pod_connection_timeout" })
   podConnectionTimeout?: string;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=type" })
-  type: GetLogsTypeEnum;
-}
-
-
-export class GetLogsRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: GetLogsPathParams;
-
-  @Metadata()
-  queryParams: GetLogsQueryParams;
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type" })
+  type: shared.Onev21apps1Percent7BappIdPercent7D1deploymentsGetParameters0Enum;
 }
 
 
 export class GetLogs200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=historic_urls" })
+  @SpeakeasyMetadata({ data: "json, name=historic_urls" })
   historicUrls?: string[];
 
-  @Metadata({ data: "json, name=live_url" })
+  @SpeakeasyMetadata({ data: "json, name=live_url" })
   liveUrl?: string;
 }
 
 
 export class GetLogs401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class GetLogsRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: GetLogsPathParams;
+
+  @SpeakeasyMetadata()
+  queryParams: GetLogsQueryParams;
+}
+
+
 export class GetLogsResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  getLogs200ApplicationJsonObject?: GetLogs200ApplicationJson;
+  @SpeakeasyMetadata()
+  getLogs200ApplicationJSONObject?: GetLogs200ApplicationJson;
 
-  @Metadata()
-  getLogs401ApplicationJsonObject?: GetLogs401ApplicationJson;
+  @SpeakeasyMetadata()
+  getLogs401ApplicationJSONObject?: GetLogs401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

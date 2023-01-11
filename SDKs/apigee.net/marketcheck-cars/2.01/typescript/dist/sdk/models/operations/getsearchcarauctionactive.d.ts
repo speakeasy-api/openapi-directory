@@ -93,7 +93,7 @@ export declare class GetSearchCarAuctionActiveRequest extends SpeakeasyBase {
 }
 export declare class GetSearchCarAuctionActiveResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     searchResponse?: shared.SearchResponse;
     statusCode: number;
 }

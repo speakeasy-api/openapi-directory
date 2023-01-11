@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComputeNodeDeleteUserResponse = exports.ComputeNodeDeleteUserRequest = exports.ComputeNodeDeleteUserHeaders = exports.ComputeNodeDeleteUserQueryParams = exports.ComputeNodeDeleteUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ComputeNodeDeleteUserPathParams = /** @class */ (function (_super) {
     __extends(ComputeNodeDeleteUserPathParams, _super);
     function ComputeNodeDeleteUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=nodeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=nodeId" }),
         __metadata("design:type", String)
     ], ComputeNodeDeleteUserPathParams.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=poolId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=poolId" }),
         __metadata("design:type", String)
     ], ComputeNodeDeleteUserPathParams.prototype, "poolId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userName" }),
         __metadata("design:type", String)
     ], ComputeNodeDeleteUserPathParams.prototype, "userName", void 0);
     return ComputeNodeDeleteUserPathParams;
-}(SpeakeasyBase));
-export { ComputeNodeDeleteUserPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeDeleteUserPathParams = ComputeNodeDeleteUserPathParams;
 var ComputeNodeDeleteUserQueryParams = /** @class */ (function (_super) {
     __extends(ComputeNodeDeleteUserQueryParams, _super);
     function ComputeNodeDeleteUserQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], ComputeNodeDeleteUserQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], ComputeNodeDeleteUserQueryParams.prototype, "timeout", void 0);
     return ComputeNodeDeleteUserQueryParams;
-}(SpeakeasyBase));
-export { ComputeNodeDeleteUserQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeDeleteUserQueryParams = ComputeNodeDeleteUserQueryParams;
 var ComputeNodeDeleteUserHeaders = /** @class */ (function (_super) {
     __extends(ComputeNodeDeleteUserHeaders, _super);
     function ComputeNodeDeleteUserHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], ComputeNodeDeleteUserHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], ComputeNodeDeleteUserHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], ComputeNodeDeleteUserHeaders.prototype, "returnClientRequestId", void 0);
     return ComputeNodeDeleteUserHeaders;
-}(SpeakeasyBase));
-export { ComputeNodeDeleteUserHeaders };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeDeleteUserHeaders = ComputeNodeDeleteUserHeaders;
 var ComputeNodeDeleteUserRequest = /** @class */ (function (_super) {
     __extends(ComputeNodeDeleteUserRequest, _super);
     function ComputeNodeDeleteUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ComputeNodeDeleteUserPathParams)
     ], ComputeNodeDeleteUserRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ComputeNodeDeleteUserQueryParams)
     ], ComputeNodeDeleteUserRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ComputeNodeDeleteUserHeaders)
     ], ComputeNodeDeleteUserRequest.prototype, "headers", void 0);
     return ComputeNodeDeleteUserRequest;
-}(SpeakeasyBase));
-export { ComputeNodeDeleteUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeDeleteUserRequest = ComputeNodeDeleteUserRequest;
 var ComputeNodeDeleteUserResponse = /** @class */ (function (_super) {
     __extends(ComputeNodeDeleteUserResponse, _super);
     function ComputeNodeDeleteUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], ComputeNodeDeleteUserResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ComputeNodeDeleteUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ComputeNodeDeleteUserResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ComputeNodeDeleteUserResponse.prototype, "statusCode", void 0);
     return ComputeNodeDeleteUserResponse;
-}(SpeakeasyBase));
-export { ComputeNodeDeleteUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.ComputeNodeDeleteUserResponse = ComputeNodeDeleteUserResponse;

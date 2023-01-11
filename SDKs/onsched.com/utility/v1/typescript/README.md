@@ -16,32 +16,22 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { GetPlanIdRequest, GetPlanIdResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetUtilityV1HealthHeartbeatResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   }
 ));
-    
-const req: GetPlanIdRequest = {
-  pathParams: {
-    planId: "voluptates",
-  },
-  queryParams: {
-    locationId: "ea",
-  },
-};
 
-sdk.sdk.getPlanId(req).then((res: GetPlanIdResponse | AxiosError) => {
+sdk.health.getUtilityV1HealthHeartbeat().then((res: GetUtilityV1HealthHeartbeatResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -50,10 +40,13 @@ sdk.sdk.getPlanId(req).then((res: GetPlanIdResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Health
+
+* `getUtilityV1HealthHeartbeat`
+
+### StripePlans
 
 * `getPlanId`
-* `getUtilityV1HealthHeartbeat`
 
 <!-- End SDK Available Operations -->
 

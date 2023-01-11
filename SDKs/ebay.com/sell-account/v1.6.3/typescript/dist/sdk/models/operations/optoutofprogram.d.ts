@@ -10,5 +10,5 @@ export declare class OptOutOfProgramRequest extends SpeakeasyBase {
 export declare class OptOutOfProgramResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    optOutOfProgram200ApplicationJsonObject?: Map<string, any>;
+    optOutOfProgram200ApplicationJSONObject?: Record<string, any>;
 }

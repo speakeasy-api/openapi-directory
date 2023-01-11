@@ -1,4 +1,7 @@
-export var BatchReadExceptionTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchReadExceptionTypeEnum = void 0;
+var BatchReadExceptionTypeEnum;
 (function (BatchReadExceptionTypeEnum) {
     BatchReadExceptionTypeEnum["ValidationException"] = "ValidationException";
     BatchReadExceptionTypeEnum["InvalidArnException"] = "InvalidArnException";
@@ -13,4 +16,4 @@ export var BatchReadExceptionTypeEnum;
     BatchReadExceptionTypeEnum["DirectoryNotEnabledException"] = "DirectoryNotEnabledException";
     BatchReadExceptionTypeEnum["LimitExceededException"] = "LimitExceededException";
     BatchReadExceptionTypeEnum["InternalServiceException"] = "InternalServiceException";
-})(BatchReadExceptionTypeEnum || (BatchReadExceptionTypeEnum = {}));
+})(BatchReadExceptionTypeEnum = exports.BatchReadExceptionTypeEnum || (exports.BatchReadExceptionTypeEnum = {}));

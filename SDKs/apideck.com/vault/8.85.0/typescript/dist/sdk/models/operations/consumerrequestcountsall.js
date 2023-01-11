@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,134 +14,159 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsumerRequestCountsAllResponse = exports.ConsumerRequestCountsAllRequest = exports.ConsumerRequestCountsAllSecurity = exports.ConsumerRequestCountsAllHeaders = exports.ConsumerRequestCountsAllQueryParams = exports.ConsumerRequestCountsAllPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ConsumerRequestCountsAllPathParams = /** @class */ (function (_super) {
     __extends(ConsumerRequestCountsAllPathParams, _super);
     function ConsumerRequestCountsAllPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=consumer_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=consumer_id" }),
         __metadata("design:type", String)
     ], ConsumerRequestCountsAllPathParams.prototype, "consumerId", void 0);
     return ConsumerRequestCountsAllPathParams;
-}(SpeakeasyBase));
-export { ConsumerRequestCountsAllPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ConsumerRequestCountsAllPathParams = ConsumerRequestCountsAllPathParams;
 var ConsumerRequestCountsAllQueryParams = /** @class */ (function (_super) {
     __extends(ConsumerRequestCountsAllQueryParams, _super);
     function ConsumerRequestCountsAllQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=end_datetime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=end_datetime" }),
         __metadata("design:type", String)
     ], ConsumerRequestCountsAllQueryParams.prototype, "endDatetime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=start_datetime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=start_datetime" }),
         __metadata("design:type", String)
     ], ConsumerRequestCountsAllQueryParams.prototype, "startDatetime", void 0);
     return ConsumerRequestCountsAllQueryParams;
-}(SpeakeasyBase));
-export { ConsumerRequestCountsAllQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ConsumerRequestCountsAllQueryParams = ConsumerRequestCountsAllQueryParams;
 var ConsumerRequestCountsAllHeaders = /** @class */ (function (_super) {
     __extends(ConsumerRequestCountsAllHeaders, _super);
     function ConsumerRequestCountsAllHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-apideck-app-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-app-id" }),
         __metadata("design:type", String)
     ], ConsumerRequestCountsAllHeaders.prototype, "xApideckAppId", void 0);
     return ConsumerRequestCountsAllHeaders;
-}(SpeakeasyBase));
-export { ConsumerRequestCountsAllHeaders };
+}(utils_1.SpeakeasyBase));
+exports.ConsumerRequestCountsAllHeaders = ConsumerRequestCountsAllHeaders;
 var ConsumerRequestCountsAllSecurity = /** @class */ (function (_super) {
     __extends(ConsumerRequestCountsAllSecurity, _super);
     function ConsumerRequestCountsAllSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], ConsumerRequestCountsAllSecurity.prototype, "apiKey", void 0);
     return ConsumerRequestCountsAllSecurity;
-}(SpeakeasyBase));
-export { ConsumerRequestCountsAllSecurity };
+}(utils_1.SpeakeasyBase));
+exports.ConsumerRequestCountsAllSecurity = ConsumerRequestCountsAllSecurity;
 var ConsumerRequestCountsAllRequest = /** @class */ (function (_super) {
     __extends(ConsumerRequestCountsAllRequest, _super);
     function ConsumerRequestCountsAllRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ConsumerRequestCountsAllPathParams)
     ], ConsumerRequestCountsAllRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ConsumerRequestCountsAllQueryParams)
     ], ConsumerRequestCountsAllRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ConsumerRequestCountsAllHeaders)
     ], ConsumerRequestCountsAllRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ConsumerRequestCountsAllSecurity)
     ], ConsumerRequestCountsAllRequest.prototype, "security", void 0);
     return ConsumerRequestCountsAllRequest;
-}(SpeakeasyBase));
-export { ConsumerRequestCountsAllRequest };
+}(utils_1.SpeakeasyBase));
+exports.ConsumerRequestCountsAllRequest = ConsumerRequestCountsAllRequest;
 var ConsumerRequestCountsAllResponse = /** @class */ (function (_super) {
     __extends(ConsumerRequestCountsAllResponse, _super);
     function ConsumerRequestCountsAllResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BadRequestResponse)
     ], ConsumerRequestCountsAllResponse.prototype, "badRequestResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ConsumerRequestCountsInDateRangeResponse)
     ], ConsumerRequestCountsAllResponse.prototype, "consumerRequestCountsInDateRangeResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConsumerRequestCountsAllResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.NotFoundResponse)
     ], ConsumerRequestCountsAllResponse.prototype, "notFoundResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.PaymentRequiredResponse)
     ], ConsumerRequestCountsAllResponse.prototype, "paymentRequiredResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ConsumerRequestCountsAllResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UnauthorizedResponse)
     ], ConsumerRequestCountsAllResponse.prototype, "unauthorizedResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UnexpectedErrorResponse)
     ], ConsumerRequestCountsAllResponse.prototype, "unexpectedErrorResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UnprocessableResponse)
     ], ConsumerRequestCountsAllResponse.prototype, "unprocessableResponse", void 0);
     return ConsumerRequestCountsAllResponse;
-}(SpeakeasyBase));
-export { ConsumerRequestCountsAllResponse };
+}(utils_1.SpeakeasyBase));
+exports.ConsumerRequestCountsAllResponse = ConsumerRequestCountsAllResponse;

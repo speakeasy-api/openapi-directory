@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReposDeleteInvitationResponse = exports.ReposDeleteInvitationRequest = exports.ReposDeleteInvitationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReposDeleteInvitationPathParams = /** @class */ (function (_super) {
     __extends(ReposDeleteInvitationPathParams, _super);
     function ReposDeleteInvitationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=invitation_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=invitation_id" }),
         __metadata("design:type", Number)
     ], ReposDeleteInvitationPathParams.prototype, "invitationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReposDeleteInvitationPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReposDeleteInvitationPathParams.prototype, "repo", void 0);
     return ReposDeleteInvitationPathParams;
-}(SpeakeasyBase));
-export { ReposDeleteInvitationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReposDeleteInvitationPathParams = ReposDeleteInvitationPathParams;
 var ReposDeleteInvitationRequest = /** @class */ (function (_super) {
     __extends(ReposDeleteInvitationRequest, _super);
     function ReposDeleteInvitationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReposDeleteInvitationPathParams)
     ], ReposDeleteInvitationRequest.prototype, "pathParams", void 0);
     return ReposDeleteInvitationRequest;
-}(SpeakeasyBase));
-export { ReposDeleteInvitationRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReposDeleteInvitationRequest = ReposDeleteInvitationRequest;
 var ReposDeleteInvitationResponse = /** @class */ (function (_super) {
     __extends(ReposDeleteInvitationResponse, _super);
     function ReposDeleteInvitationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReposDeleteInvitationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReposDeleteInvitationResponse.prototype, "statusCode", void 0);
     return ReposDeleteInvitationResponse;
-}(SpeakeasyBase));
-export { ReposDeleteInvitationResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReposDeleteInvitationResponse = ReposDeleteInvitationResponse;

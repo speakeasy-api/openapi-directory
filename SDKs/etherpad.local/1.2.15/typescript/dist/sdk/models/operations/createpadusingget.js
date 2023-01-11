@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,144 +23,146 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePadUsingGetResponse = exports.CreatePadUsingGetRequest = exports.CreatePadUsingGet500ApplicationJson = exports.CreatePadUsingGet401ApplicationJson = exports.CreatePadUsingGet400ApplicationJson = exports.CreatePadUsingGet200ApplicationJson = exports.CreatePadUsingGetQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreatePadUsingGetQueryParams = /** @class */ (function (_super) {
     __extends(CreatePadUsingGetQueryParams, _super);
     function CreatePadUsingGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=padID" }),
         __metadata("design:type", String)
-    ], CreatePadUsingGetQueryParams.prototype, "padId", void 0);
+    ], CreatePadUsingGetQueryParams.prototype, "padID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], CreatePadUsingGetQueryParams.prototype, "text", void 0);
     return CreatePadUsingGetQueryParams;
-}(SpeakeasyBase));
-export { CreatePadUsingGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CreatePadUsingGetQueryParams = CreatePadUsingGetQueryParams;
 var CreatePadUsingGet200ApplicationJson = /** @class */ (function (_super) {
     __extends(CreatePadUsingGet200ApplicationJson, _super);
     function CreatePadUsingGet200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreatePadUsingGet200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreatePadUsingGet200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreatePadUsingGet200ApplicationJson.prototype, "message", void 0);
     return CreatePadUsingGet200ApplicationJson;
-}(SpeakeasyBase));
-export { CreatePadUsingGet200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreatePadUsingGet200ApplicationJson = CreatePadUsingGet200ApplicationJson;
 var CreatePadUsingGet400ApplicationJson = /** @class */ (function (_super) {
     __extends(CreatePadUsingGet400ApplicationJson, _super);
     function CreatePadUsingGet400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreatePadUsingGet400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreatePadUsingGet400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreatePadUsingGet400ApplicationJson.prototype, "message", void 0);
     return CreatePadUsingGet400ApplicationJson;
-}(SpeakeasyBase));
-export { CreatePadUsingGet400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreatePadUsingGet400ApplicationJson = CreatePadUsingGet400ApplicationJson;
 var CreatePadUsingGet401ApplicationJson = /** @class */ (function (_super) {
     __extends(CreatePadUsingGet401ApplicationJson, _super);
     function CreatePadUsingGet401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreatePadUsingGet401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreatePadUsingGet401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreatePadUsingGet401ApplicationJson.prototype, "message", void 0);
     return CreatePadUsingGet401ApplicationJson;
-}(SpeakeasyBase));
-export { CreatePadUsingGet401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreatePadUsingGet401ApplicationJson = CreatePadUsingGet401ApplicationJson;
 var CreatePadUsingGet500ApplicationJson = /** @class */ (function (_super) {
     __extends(CreatePadUsingGet500ApplicationJson, _super);
     function CreatePadUsingGet500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreatePadUsingGet500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreatePadUsingGet500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreatePadUsingGet500ApplicationJson.prototype, "message", void 0);
     return CreatePadUsingGet500ApplicationJson;
-}(SpeakeasyBase));
-export { CreatePadUsingGet500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreatePadUsingGet500ApplicationJson = CreatePadUsingGet500ApplicationJson;
 var CreatePadUsingGetRequest = /** @class */ (function (_super) {
     __extends(CreatePadUsingGetRequest, _super);
     function CreatePadUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreatePadUsingGetQueryParams)
     ], CreatePadUsingGetRequest.prototype, "queryParams", void 0);
     return CreatePadUsingGetRequest;
-}(SpeakeasyBase));
-export { CreatePadUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreatePadUsingGetRequest = CreatePadUsingGetRequest;
 var CreatePadUsingGetResponse = /** @class */ (function (_super) {
     __extends(CreatePadUsingGetResponse, _super);
     function CreatePadUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreatePadUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatePadUsingGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreatePadUsingGet200ApplicationJson)
-    ], CreatePadUsingGetResponse.prototype, "createPadUsingGet200ApplicationJsonObject", void 0);
+    ], CreatePadUsingGetResponse.prototype, "createPadUsingGET200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreatePadUsingGet400ApplicationJson)
-    ], CreatePadUsingGetResponse.prototype, "createPadUsingGet400ApplicationJsonObject", void 0);
+    ], CreatePadUsingGetResponse.prototype, "createPadUsingGET400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreatePadUsingGet401ApplicationJson)
-    ], CreatePadUsingGetResponse.prototype, "createPadUsingGet401ApplicationJsonObject", void 0);
+    ], CreatePadUsingGetResponse.prototype, "createPadUsingGET401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreatePadUsingGet500ApplicationJson)
-    ], CreatePadUsingGetResponse.prototype, "createPadUsingGet500ApplicationJsonObject", void 0);
+    ], CreatePadUsingGetResponse.prototype, "createPadUsingGET500ApplicationJSONObject", void 0);
     return CreatePadUsingGetResponse;
-}(SpeakeasyBase));
-export { CreatePadUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreatePadUsingGetResponse = CreatePadUsingGetResponse;

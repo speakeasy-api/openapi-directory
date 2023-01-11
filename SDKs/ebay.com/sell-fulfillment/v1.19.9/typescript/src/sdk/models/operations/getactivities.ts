@@ -20,7 +20,7 @@ export class GetActivitiesSecurity extends SpeakeasyBase {
 
 export class GetActivitiesRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   pathParams: GetActivitiesPathParams;

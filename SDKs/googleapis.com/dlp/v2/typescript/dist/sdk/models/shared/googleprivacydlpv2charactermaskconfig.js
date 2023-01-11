@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2CharsToIgnore } from "./googleprivacydlpv2charstoignore";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2CharacterMaskConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2charstoignore_1 = require("./googleprivacydlpv2charstoignore");
 // GooglePrivacyDlpV2CharacterMaskConfig
 /**
  * Partially mask a string by replacing a given number of characters with a fixed character. Masking can start from the beginning or end of the string. This can be used on data of any type (numbers, longs, and so on) and when de-identifying structured data we'll attempt to preserve the original data's type. (This allows you to take a long like 123 and modify it to a string like **3.
@@ -34,21 +37,21 @@ var GooglePrivacyDlpV2CharacterMaskConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=charactersToIgnore", elemType: GooglePrivacyDlpV2CharsToIgnore }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=charactersToIgnore", elemType: googleprivacydlpv2charstoignore_1.GooglePrivacyDlpV2CharsToIgnore }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2CharacterMaskConfig.prototype, "charactersToIgnore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maskingCharacter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maskingCharacter" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2CharacterMaskConfig.prototype, "maskingCharacter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberToMask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberToMask" }),
         __metadata("design:type", Number)
     ], GooglePrivacyDlpV2CharacterMaskConfig.prototype, "numberToMask", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reverseOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reverseOrder" }),
         __metadata("design:type", Boolean)
     ], GooglePrivacyDlpV2CharacterMaskConfig.prototype, "reverseOrder", void 0);
     return GooglePrivacyDlpV2CharacterMaskConfig;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2CharacterMaskConfig };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2CharacterMaskConfig = GooglePrivacyDlpV2CharacterMaskConfig;

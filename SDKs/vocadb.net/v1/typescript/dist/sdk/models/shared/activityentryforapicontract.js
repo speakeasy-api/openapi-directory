@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArchivedObjectVersionForApiContract } from "./archivedobjectversionforapicontract";
-import { UserForApiContract } from "./userforapicontract";
-import { EntryForApiContract } from "./entryforapicontract";
-export var ActivityEntryForApiContractEditEventEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActivityEntryForApiContract = exports.ActivityEntryForApiContractEditEventEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var archivedobjectversionforapicontract_1 = require("./archivedobjectversionforapicontract");
+var userforapicontract_1 = require("./userforapicontract");
+var entryforapicontract_1 = require("./entryforapicontract");
+var ActivityEntryForApiContractEditEventEnum;
 (function (ActivityEntryForApiContractEditEventEnum) {
     ActivityEntryForApiContractEditEventEnum["Created"] = "Created";
     ActivityEntryForApiContractEditEventEnum["Updated"] = "Updated";
     ActivityEntryForApiContractEditEventEnum["Deleted"] = "Deleted";
     ActivityEntryForApiContractEditEventEnum["Restored"] = "Restored";
-})(ActivityEntryForApiContractEditEventEnum || (ActivityEntryForApiContractEditEventEnum = {}));
+})(ActivityEntryForApiContractEditEventEnum = exports.ActivityEntryForApiContractEditEventEnum || (exports.ActivityEntryForApiContractEditEventEnum = {}));
 var ActivityEntryForApiContract = /** @class */ (function (_super) {
     __extends(ActivityEntryForApiContract, _super);
     function ActivityEntryForApiContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=archivedVersion" }),
-        __metadata("design:type", ArchivedObjectVersionForApiContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=archivedVersion" }),
+        __metadata("design:type", archivedobjectversionforapicontract_1.ArchivedObjectVersionForApiContract)
     ], ActivityEntryForApiContract.prototype, "archivedVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
-        __metadata("design:type", UserForApiContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
+        __metadata("design:type", userforapicontract_1.UserForApiContract)
     ], ActivityEntryForApiContract.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createDate" }),
         __metadata("design:type", Date)
     ], ActivityEntryForApiContract.prototype, "createDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=editEvent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=editEvent" }),
         __metadata("design:type", String)
     ], ActivityEntryForApiContract.prototype, "editEvent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entry" }),
-        __metadata("design:type", EntryForApiContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entry" }),
+        __metadata("design:type", entryforapicontract_1.EntryForApiContract)
     ], ActivityEntryForApiContract.prototype, "entry", void 0);
     return ActivityEntryForApiContract;
-}(SpeakeasyBase));
-export { ActivityEntryForApiContract };
+}(utils_1.SpeakeasyBase));
+exports.ActivityEntryForApiContract = ActivityEntryForApiContract;

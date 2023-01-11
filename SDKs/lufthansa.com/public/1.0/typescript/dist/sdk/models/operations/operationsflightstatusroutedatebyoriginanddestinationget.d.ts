@@ -23,6 +23,6 @@ export declare class OperationsFlightstatusRouteDateByOriginAndDestinationGetReq
 }
 export declare class OperationsFlightstatusRouteDateByOriginAndDestinationGetResponse extends SpeakeasyBase {
     contentType: string;
-    operationsFlightstatusRouteDateByOriginAndDestinationGet200ApplicationJsonObject?: Map<string, any>;
+    operationsFlightstatusRouteDateByOriginAndDestinationGet200ApplicationJSONObject?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,254 +14,279 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DrivePermissionsListResponse = exports.DrivePermissionsListRequest = exports.DrivePermissionsListSecurity = exports.DrivePermissionsListSecurityOption6 = exports.DrivePermissionsListSecurityOption5 = exports.DrivePermissionsListSecurityOption4 = exports.DrivePermissionsListSecurityOption3 = exports.DrivePermissionsListSecurityOption2 = exports.DrivePermissionsListSecurityOption1 = exports.DrivePermissionsListQueryParams = exports.DrivePermissionsListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DrivePermissionsListPathParams = /** @class */ (function (_super) {
     __extends(DrivePermissionsListPathParams, _super);
     function DrivePermissionsListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=fileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=fileId" }),
         __metadata("design:type", String)
     ], DrivePermissionsListPathParams.prototype, "fileId", void 0);
     return DrivePermissionsListPathParams;
-}(SpeakeasyBase));
-export { DrivePermissionsListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsListPathParams = DrivePermissionsListPathParams;
 var DrivePermissionsListQueryParams = /** @class */ (function (_super) {
     __extends(DrivePermissionsListQueryParams, _super);
     function DrivePermissionsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], DrivePermissionsListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], DrivePermissionsListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includePermissionsForView" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includePermissionsForView" }),
         __metadata("design:type", String)
     ], DrivePermissionsListQueryParams.prototype, "includePermissionsForView", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], DrivePermissionsListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], DrivePermissionsListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageSize" }),
         __metadata("design:type", Number)
     ], DrivePermissionsListQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], DrivePermissionsListQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], DrivePermissionsListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], DrivePermissionsListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=supportsAllDrives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=supportsAllDrives" }),
         __metadata("design:type", Boolean)
     ], DrivePermissionsListQueryParams.prototype, "supportsAllDrives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=supportsTeamDrives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=supportsTeamDrives" }),
         __metadata("design:type", Boolean)
     ], DrivePermissionsListQueryParams.prototype, "supportsTeamDrives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=useDomainAdminAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=useDomainAdminAccess" }),
         __metadata("design:type", Boolean)
     ], DrivePermissionsListQueryParams.prototype, "useDomainAdminAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], DrivePermissionsListQueryParams.prototype, "userIp", void 0);
     return DrivePermissionsListQueryParams;
-}(SpeakeasyBase));
-export { DrivePermissionsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsListQueryParams = DrivePermissionsListQueryParams;
 var DrivePermissionsListSecurityOption1 = /** @class */ (function (_super) {
     __extends(DrivePermissionsListSecurityOption1, _super);
     function DrivePermissionsListSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DrivePermissionsListSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DrivePermissionsListSecurityOption1.prototype, "oauth2c", void 0);
     return DrivePermissionsListSecurityOption1;
-}(SpeakeasyBase));
-export { DrivePermissionsListSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsListSecurityOption1 = DrivePermissionsListSecurityOption1;
 var DrivePermissionsListSecurityOption2 = /** @class */ (function (_super) {
     __extends(DrivePermissionsListSecurityOption2, _super);
     function DrivePermissionsListSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DrivePermissionsListSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DrivePermissionsListSecurityOption2.prototype, "oauth2c", void 0);
     return DrivePermissionsListSecurityOption2;
-}(SpeakeasyBase));
-export { DrivePermissionsListSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsListSecurityOption2 = DrivePermissionsListSecurityOption2;
 var DrivePermissionsListSecurityOption3 = /** @class */ (function (_super) {
     __extends(DrivePermissionsListSecurityOption3, _super);
     function DrivePermissionsListSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DrivePermissionsListSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DrivePermissionsListSecurityOption3.prototype, "oauth2c", void 0);
     return DrivePermissionsListSecurityOption3;
-}(SpeakeasyBase));
-export { DrivePermissionsListSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsListSecurityOption3 = DrivePermissionsListSecurityOption3;
 var DrivePermissionsListSecurityOption4 = /** @class */ (function (_super) {
     __extends(DrivePermissionsListSecurityOption4, _super);
     function DrivePermissionsListSecurityOption4() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DrivePermissionsListSecurityOption4.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DrivePermissionsListSecurityOption4.prototype, "oauth2c", void 0);
     return DrivePermissionsListSecurityOption4;
-}(SpeakeasyBase));
-export { DrivePermissionsListSecurityOption4 };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsListSecurityOption4 = DrivePermissionsListSecurityOption4;
 var DrivePermissionsListSecurityOption5 = /** @class */ (function (_super) {
     __extends(DrivePermissionsListSecurityOption5, _super);
     function DrivePermissionsListSecurityOption5() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DrivePermissionsListSecurityOption5.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DrivePermissionsListSecurityOption5.prototype, "oauth2c", void 0);
     return DrivePermissionsListSecurityOption5;
-}(SpeakeasyBase));
-export { DrivePermissionsListSecurityOption5 };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsListSecurityOption5 = DrivePermissionsListSecurityOption5;
 var DrivePermissionsListSecurityOption6 = /** @class */ (function (_super) {
     __extends(DrivePermissionsListSecurityOption6, _super);
     function DrivePermissionsListSecurityOption6() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DrivePermissionsListSecurityOption6.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DrivePermissionsListSecurityOption6.prototype, "oauth2c", void 0);
     return DrivePermissionsListSecurityOption6;
-}(SpeakeasyBase));
-export { DrivePermissionsListSecurityOption6 };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsListSecurityOption6 = DrivePermissionsListSecurityOption6;
 var DrivePermissionsListSecurity = /** @class */ (function (_super) {
     __extends(DrivePermissionsListSecurity, _super);
     function DrivePermissionsListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DrivePermissionsListSecurityOption1)
     ], DrivePermissionsListSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DrivePermissionsListSecurityOption2)
     ], DrivePermissionsListSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DrivePermissionsListSecurityOption3)
     ], DrivePermissionsListSecurity.prototype, "option3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DrivePermissionsListSecurityOption4)
     ], DrivePermissionsListSecurity.prototype, "option4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DrivePermissionsListSecurityOption5)
     ], DrivePermissionsListSecurity.prototype, "option5", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DrivePermissionsListSecurityOption6)
     ], DrivePermissionsListSecurity.prototype, "option6", void 0);
     return DrivePermissionsListSecurity;
-}(SpeakeasyBase));
-export { DrivePermissionsListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsListSecurity = DrivePermissionsListSecurity;
 var DrivePermissionsListRequest = /** @class */ (function (_super) {
     __extends(DrivePermissionsListRequest, _super);
     function DrivePermissionsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DrivePermissionsListPathParams)
     ], DrivePermissionsListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DrivePermissionsListQueryParams)
     ], DrivePermissionsListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DrivePermissionsListSecurity)
     ], DrivePermissionsListRequest.prototype, "security", void 0);
     return DrivePermissionsListRequest;
-}(SpeakeasyBase));
-export { DrivePermissionsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsListRequest = DrivePermissionsListRequest;
 var DrivePermissionsListResponse = /** @class */ (function (_super) {
     __extends(DrivePermissionsListResponse, _super);
     function DrivePermissionsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DrivePermissionsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.PermissionList)
     ], DrivePermissionsListResponse.prototype, "permissionList", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DrivePermissionsListResponse.prototype, "statusCode", void 0);
     return DrivePermissionsListResponse;
-}(SpeakeasyBase));
-export { DrivePermissionsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.DrivePermissionsListResponse = DrivePermissionsListResponse;

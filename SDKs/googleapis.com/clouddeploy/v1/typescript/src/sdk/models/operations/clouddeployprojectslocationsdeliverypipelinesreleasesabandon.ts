@@ -62,7 +62,7 @@ export class ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonRequest
   queryParams: ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonSecurity;
@@ -71,7 +71,7 @@ export class ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonRequest
 
 export class ClouddeployProjectsLocationsDeliveryPipelinesReleasesAbandonResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  abandonReleaseResponse?: Map<string, any>;
+  abandonReleaseResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

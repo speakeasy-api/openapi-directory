@@ -1,4 +1,7 @@
-export var PermissionEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PermissionEnum = void 0;
+var PermissionEnum;
 (function (PermissionEnum) {
     PermissionEnum["All"] = "ALL";
     PermissionEnum["Select"] = "SELECT";
@@ -15,4 +18,4 @@ export var PermissionEnum;
     PermissionEnum["DeleteTag"] = "DELETE_TAG";
     PermissionEnum["DescribeTag"] = "DESCRIBE_TAG";
     PermissionEnum["AssociateTag"] = "ASSOCIATE_TAG";
-})(PermissionEnum || (PermissionEnum = {}));
+})(PermissionEnum = exports.PermissionEnum || (exports.PermissionEnum = {}));

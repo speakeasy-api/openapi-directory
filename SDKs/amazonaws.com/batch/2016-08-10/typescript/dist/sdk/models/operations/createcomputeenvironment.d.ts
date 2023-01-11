@@ -18,7 +18,7 @@ export declare class CreateComputeEnvironmentRequestBodyComputeResources extends
     desiredvCpus?: number;
     ec2Configuration?: shared.Ec2Configuration[];
     ec2KeyPair?: string;
-    imageId?: string;
+    imageId?: Record<string, any>;
     instanceRole?: string;
     instanceTypes?: string[];
     launchTemplate?: shared.LaunchTemplateSpecification;
@@ -28,7 +28,7 @@ export declare class CreateComputeEnvironmentRequestBodyComputeResources extends
     securityGroupIds?: string[];
     spotIamFleetRole?: string;
     subnets?: string[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     type?: shared.CrTypeEnum;
 }
 export declare enum CreateComputeEnvironmentRequestBodyStateEnum {
@@ -44,7 +44,7 @@ export declare class CreateComputeEnvironmentRequestBody extends SpeakeasyBase {
     computeResources?: CreateComputeEnvironmentRequestBodyComputeResources;
     serviceRole?: string;
     state?: CreateComputeEnvironmentRequestBodyStateEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     type: CreateComputeEnvironmentRequestBodyTypeEnum;
 }
 export declare class CreateComputeEnvironmentRequest extends SpeakeasyBase {

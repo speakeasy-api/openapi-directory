@@ -57,5 +57,5 @@ export class GetNetworkWirelessClientConnectionStatsResponse extends SpeakeasyBa
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessClientConnectionStats200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessClientConnectionStats200ApplicationJSONObject?: Record<string, any>;
 }

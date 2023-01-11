@@ -19,7 +19,7 @@ export declare class DeleteTableVersionRequest extends SpeakeasyBase {
 }
 export declare class DeleteTableVersionResponse extends SpeakeasyBase {
     contentType: string;
-    deleteTableVersionResponse?: Map<string, any>;
+    deleteTableVersionResponse?: Record<string, any>;
     entityNotFoundException?: any;
     internalServiceException?: any;
     invalidInputException?: any;

@@ -22,10 +22,6 @@ export enum StateConditionCodeEnum {
 }
 
 
-// StateCondition
-/** 
- * A condition that is part of the trigger state computation.
-**/
 export class StateCondition extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=code" })
   code?: StateConditionCodeEnum;

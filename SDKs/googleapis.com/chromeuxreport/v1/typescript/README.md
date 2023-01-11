@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ChromeuxreportRecordsQueryRecordRequest, ChromeuxreportRecordsQueryRecordResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -30,26 +29,24 @@ const sdk = new SDK();
 const req: ChromeuxreportRecordsQueryRecordRequest = {
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "quia",
-    alt: "json",
-    callback: "et",
-    fields: "itaque",
-    key: "delectus",
-    oauthToken: "eos",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
     prettyPrint: true,
-    quotaUser: "placeat",
-    uploadType: "facere",
-    uploadProtocol: "aperiam",
+    quotaUser: "fugit",
+    uploadType: "et",
+    uploadProtocol: "nihil",
   },
   request: {
-    effectiveConnectionType: "minus",
-    formFactor: "ALL_FORM_FACTORS",
+    effectiveConnectionType: "rerum",
+    formFactor: "TABLET",
     metrics: [
-      "omnis",
       "voluptatum",
-      "voluptas",
     ],
-    origin: "rerum",
+    origin: "et",
     url: "ut",
   },
 };

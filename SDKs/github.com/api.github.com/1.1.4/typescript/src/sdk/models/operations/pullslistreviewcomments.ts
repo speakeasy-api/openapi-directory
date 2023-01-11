@@ -14,15 +14,10 @@ export class PullsListReviewCommentsPathParams extends SpeakeasyBase {
   repo: string;
 }
 
-export enum PullsListReviewCommentsDirectionEnum {
-    Asc = "asc",
-    Desc = "desc"
-}
-
 
 export class PullsListReviewCommentsQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
-  direction?: PullsListReviewCommentsDirectionEnum;
+  direction?: shared.SortEnum1;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -52,7 +47,7 @@ export class PullsListReviewCommentsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

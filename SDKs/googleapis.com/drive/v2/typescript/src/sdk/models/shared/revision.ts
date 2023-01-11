@@ -15,7 +15,7 @@ export class Revision extends SpeakeasyBase {
   etag?: string;
 
   @SpeakeasyMetadata({ data: "json, name=exportLinks" })
-  exportLinks?: Map<string, string>;
+  exportLinks?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=fileSize" })
   fileSize?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,30 +14,55 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagApiGetByIdResponse = exports.TagApiGetByIdRequest = exports.TagApiGetByIdQueryParams = exports.TagApiGetByIdLangEnum = exports.TagApiGetByIdFieldsEnum = exports.TagApiGetByIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var TagApiGetByIdPathParams = /** @class */ (function (_super) {
     __extends(TagApiGetByIdPathParams, _super);
     function TagApiGetByIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], TagApiGetByIdPathParams.prototype, "id", void 0);
     return TagApiGetByIdPathParams;
-}(SpeakeasyBase));
-export { TagApiGetByIdPathParams };
-export var TagApiGetByIdFieldsEnum;
+}(utils_1.SpeakeasyBase));
+exports.TagApiGetByIdPathParams = TagApiGetByIdPathParams;
+var TagApiGetByIdFieldsEnum;
 (function (TagApiGetByIdFieldsEnum) {
     TagApiGetByIdFieldsEnum["None"] = "None";
     TagApiGetByIdFieldsEnum["AdditionalNames"] = "AdditionalNames";
@@ -48,67 +74,67 @@ export var TagApiGetByIdFieldsEnum;
     TagApiGetByIdFieldsEnum["RelatedTags"] = "RelatedTags";
     TagApiGetByIdFieldsEnum["TranslatedDescription"] = "TranslatedDescription";
     TagApiGetByIdFieldsEnum["WebLinks"] = "WebLinks";
-})(TagApiGetByIdFieldsEnum || (TagApiGetByIdFieldsEnum = {}));
-export var TagApiGetByIdLangEnum;
+})(TagApiGetByIdFieldsEnum = exports.TagApiGetByIdFieldsEnum || (exports.TagApiGetByIdFieldsEnum = {}));
+var TagApiGetByIdLangEnum;
 (function (TagApiGetByIdLangEnum) {
     TagApiGetByIdLangEnum["Default"] = "Default";
     TagApiGetByIdLangEnum["Japanese"] = "Japanese";
     TagApiGetByIdLangEnum["Romaji"] = "Romaji";
     TagApiGetByIdLangEnum["English"] = "English";
-})(TagApiGetByIdLangEnum || (TagApiGetByIdLangEnum = {}));
+})(TagApiGetByIdLangEnum = exports.TagApiGetByIdLangEnum || (exports.TagApiGetByIdLangEnum = {}));
 var TagApiGetByIdQueryParams = /** @class */ (function (_super) {
     __extends(TagApiGetByIdQueryParams, _super);
     function TagApiGetByIdQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], TagApiGetByIdQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=lang" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=lang" }),
         __metadata("design:type", String)
     ], TagApiGetByIdQueryParams.prototype, "lang", void 0);
     return TagApiGetByIdQueryParams;
-}(SpeakeasyBase));
-export { TagApiGetByIdQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.TagApiGetByIdQueryParams = TagApiGetByIdQueryParams;
 var TagApiGetByIdRequest = /** @class */ (function (_super) {
     __extends(TagApiGetByIdRequest, _super);
     function TagApiGetByIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TagApiGetByIdPathParams)
     ], TagApiGetByIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TagApiGetByIdQueryParams)
     ], TagApiGetByIdRequest.prototype, "queryParams", void 0);
     return TagApiGetByIdRequest;
-}(SpeakeasyBase));
-export { TagApiGetByIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.TagApiGetByIdRequest = TagApiGetByIdRequest;
 var TagApiGetByIdResponse = /** @class */ (function (_super) {
     __extends(TagApiGetByIdResponse, _super);
     function TagApiGetByIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], TagApiGetByIdResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TagApiGetByIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagApiGetByIdResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.TagForApiContract)
     ], TagApiGetByIdResponse.prototype, "tagForApiContract", void 0);
     return TagApiGetByIdResponse;
-}(SpeakeasyBase));
-export { TagApiGetByIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.TagApiGetByIdResponse = TagApiGetByIdResponse;

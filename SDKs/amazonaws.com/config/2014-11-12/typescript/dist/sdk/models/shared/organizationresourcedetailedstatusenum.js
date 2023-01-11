@@ -1,4 +1,7 @@
-export var OrganizationResourceDetailedStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrganizationResourceDetailedStatusEnum = void 0;
+var OrganizationResourceDetailedStatusEnum;
 (function (OrganizationResourceDetailedStatusEnum) {
     OrganizationResourceDetailedStatusEnum["CreateSuccessful"] = "CREATE_SUCCESSFUL";
     OrganizationResourceDetailedStatusEnum["CreateInProgress"] = "CREATE_IN_PROGRESS";
@@ -9,4 +12,4 @@ export var OrganizationResourceDetailedStatusEnum;
     OrganizationResourceDetailedStatusEnum["UpdateSuccessful"] = "UPDATE_SUCCESSFUL";
     OrganizationResourceDetailedStatusEnum["UpdateInProgress"] = "UPDATE_IN_PROGRESS";
     OrganizationResourceDetailedStatusEnum["UpdateFailed"] = "UPDATE_FAILED";
-})(OrganizationResourceDetailedStatusEnum || (OrganizationResourceDetailedStatusEnum = {}));
+})(OrganizationResourceDetailedStatusEnum = exports.OrganizationResourceDetailedStatusEnum || (exports.OrganizationResourceDetailedStatusEnum = {}));

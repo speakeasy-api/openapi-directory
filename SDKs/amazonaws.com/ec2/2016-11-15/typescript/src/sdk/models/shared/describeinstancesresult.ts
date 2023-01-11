@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Reservation } from "./reservation";
 
 
 
 export class DescribeInstancesResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: Reservation })
-  reservations?: Reservation[];
+  @SpeakeasyMetadata()
+  reservations?: Record<string, any>;
 }

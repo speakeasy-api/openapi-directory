@@ -1,5 +1,8 @@
-export var UpdateActionTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateActionTypeEnum = void 0;
+var UpdateActionTypeEnum;
 (function (UpdateActionTypeEnum) {
     UpdateActionTypeEnum["CreateOrUpdate"] = "CREATE_OR_UPDATE";
     UpdateActionTypeEnum["Delete"] = "DELETE";
-})(UpdateActionTypeEnum || (UpdateActionTypeEnum = {}));
+})(UpdateActionTypeEnum = exports.UpdateActionTypeEnum || (exports.UpdateActionTypeEnum = {}));

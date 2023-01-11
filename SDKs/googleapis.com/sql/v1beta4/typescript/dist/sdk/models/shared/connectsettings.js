@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IpMapping } from "./ipmapping";
-import { SslCert } from "./sslcert";
-export var ConnectSettingsBackendTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConnectSettings = exports.ConnectSettingsDatabaseVersionEnum = exports.ConnectSettingsBackendTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ipmapping_1 = require("./ipmapping");
+var sslcert_1 = require("./sslcert");
+var ConnectSettingsBackendTypeEnum;
 (function (ConnectSettingsBackendTypeEnum) {
     ConnectSettingsBackendTypeEnum["SqlBackendTypeUnspecified"] = "SQL_BACKEND_TYPE_UNSPECIFIED";
     ConnectSettingsBackendTypeEnum["FirstGen"] = "FIRST_GEN";
     ConnectSettingsBackendTypeEnum["SecondGen"] = "SECOND_GEN";
     ConnectSettingsBackendTypeEnum["External"] = "EXTERNAL";
-})(ConnectSettingsBackendTypeEnum || (ConnectSettingsBackendTypeEnum = {}));
-export var ConnectSettingsDatabaseVersionEnum;
+})(ConnectSettingsBackendTypeEnum = exports.ConnectSettingsBackendTypeEnum || (exports.ConnectSettingsBackendTypeEnum = {}));
+var ConnectSettingsDatabaseVersionEnum;
 (function (ConnectSettingsDatabaseVersionEnum) {
     ConnectSettingsDatabaseVersionEnum["SqlDatabaseVersionUnspecified"] = "SQL_DATABASE_VERSION_UNSPECIFIED";
     ConnectSettingsDatabaseVersionEnum["Mysql51"] = "MYSQL_5_1";
@@ -60,7 +63,7 @@ export var ConnectSettingsDatabaseVersionEnum;
     ConnectSettingsDatabaseVersionEnum["Sqlserver2019Enterprise"] = "SQLSERVER_2019_ENTERPRISE";
     ConnectSettingsDatabaseVersionEnum["Sqlserver2019Express"] = "SQLSERVER_2019_EXPRESS";
     ConnectSettingsDatabaseVersionEnum["Sqlserver2019Web"] = "SQLSERVER_2019_WEB";
-})(ConnectSettingsDatabaseVersionEnum || (ConnectSettingsDatabaseVersionEnum = {}));
+})(ConnectSettingsDatabaseVersionEnum = exports.ConnectSettingsDatabaseVersionEnum || (exports.ConnectSettingsDatabaseVersionEnum = {}));
 // ConnectSettings
 /**
  * Connect settings retrieval response.
@@ -71,29 +74,29 @@ var ConnectSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backendType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backendType" }),
         __metadata("design:type", String)
     ], ConnectSettings.prototype, "backendType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=databaseVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=databaseVersion" }),
         __metadata("design:type", String)
     ], ConnectSettings.prototype, "databaseVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddresses", elemType: IpMapping }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddresses", elemType: ipmapping_1.IpMapping }),
         __metadata("design:type", Array)
     ], ConnectSettings.prototype, "ipAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ConnectSettings.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], ConnectSettings.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverCaCert" }),
-        __metadata("design:type", SslCert)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverCaCert" }),
+        __metadata("design:type", sslcert_1.SslCert)
     ], ConnectSettings.prototype, "serverCaCert", void 0);
     return ConnectSettings;
-}(SpeakeasyBase));
-export { ConnectSettings };
+}(utils_1.SpeakeasyBase));
+exports.ConnectSettings = ConnectSettings;

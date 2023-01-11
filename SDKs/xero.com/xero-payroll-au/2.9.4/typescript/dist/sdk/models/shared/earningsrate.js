@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,156 +23,158 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AllowanceTypeEnum } from "./allowancetypeenum";
-import { EarningsTypeEnum } from "./earningstypeenum";
-import { EmploymentTerminationPaymentTypeEnum } from "./employmentterminationpaymenttypeenum";
-import { RateTypeEnum } from "./ratetypeenum";
-var EarningsRateInput = /** @class */ (function (_super) {
-    __extends(EarningsRateInput, _super);
-    function EarningsRateInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountCode" }),
-        __metadata("design:type", String)
-    ], EarningsRateInput.prototype, "accountCode", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccrueLeave" }),
-        __metadata("design:type", Boolean)
-    ], EarningsRateInput.prototype, "accrueLeave", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=AllowanceType" }),
-        __metadata("design:type", String)
-    ], EarningsRateInput.prototype, "allowanceType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=Amount" }),
-        __metadata("design:type", Number)
-    ], EarningsRateInput.prototype, "amount", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=CurrentRecord" }),
-        __metadata("design:type", Boolean)
-    ], EarningsRateInput.prototype, "currentRecord", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=EarningsRateID" }),
-        __metadata("design:type", String)
-    ], EarningsRateInput.prototype, "earningsRateId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=EarningsType" }),
-        __metadata("design:type", String)
-    ], EarningsRateInput.prototype, "earningsType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmploymentTerminationPaymentType" }),
-        __metadata("design:type", String)
-    ], EarningsRateInput.prototype, "employmentTerminationPaymentType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsExemptFromSuper" }),
-        __metadata("design:type", Boolean)
-    ], EarningsRateInput.prototype, "isExemptFromSuper", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsExemptFromTax" }),
-        __metadata("design:type", Boolean)
-    ], EarningsRateInput.prototype, "isExemptFromTax", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsReportableAsW1" }),
-        __metadata("design:type", Boolean)
-    ], EarningsRateInput.prototype, "isReportableAsW1", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=Multiplier" }),
-        __metadata("design:type", Number)
-    ], EarningsRateInput.prototype, "multiplier", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
-        __metadata("design:type", String)
-    ], EarningsRateInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=RatePerUnit" }),
-        __metadata("design:type", String)
-    ], EarningsRateInput.prototype, "ratePerUnit", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=RateType" }),
-        __metadata("design:type", String)
-    ], EarningsRateInput.prototype, "rateType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=TypeOfUnits" }),
-        __metadata("design:type", String)
-    ], EarningsRateInput.prototype, "typeOfUnits", void 0);
-    return EarningsRateInput;
-}(SpeakeasyBase));
-export { EarningsRateInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EarningsRateInput = exports.EarningsRate = void 0;
+var utils_1 = require("../../../internal/utils");
+var allowancetypeenum_1 = require("./allowancetypeenum");
+var earningstypeenum_1 = require("./earningstypeenum");
+var employmentterminationpaymenttypeenum_1 = require("./employmentterminationpaymenttypeenum");
+var ratetypeenum_1 = require("./ratetypeenum");
 var EarningsRate = /** @class */ (function (_super) {
     __extends(EarningsRate, _super);
     function EarningsRate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountCode" }),
         __metadata("design:type", String)
     ], EarningsRate.prototype, "accountCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccrueLeave" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccrueLeave" }),
         __metadata("design:type", Boolean)
     ], EarningsRate.prototype, "accrueLeave", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AllowanceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllowanceType" }),
         __metadata("design:type", String)
     ], EarningsRate.prototype, "allowanceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Amount" }),
         __metadata("design:type", Number)
     ], EarningsRate.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CurrentRecord" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CurrentRecord" }),
         __metadata("design:type", Boolean)
     ], EarningsRate.prototype, "currentRecord", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EarningsRateID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EarningsRateID" }),
         __metadata("design:type", String)
-    ], EarningsRate.prototype, "earningsRateId", void 0);
+    ], EarningsRate.prototype, "earningsRateID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EarningsType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EarningsType" }),
         __metadata("design:type", String)
     ], EarningsRate.prototype, "earningsType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmploymentTerminationPaymentType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmploymentTerminationPaymentType" }),
         __metadata("design:type", String)
     ], EarningsRate.prototype, "employmentTerminationPaymentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsExemptFromSuper" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsExemptFromSuper" }),
         __metadata("design:type", Boolean)
     ], EarningsRate.prototype, "isExemptFromSuper", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsExemptFromTax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsExemptFromTax" }),
         __metadata("design:type", Boolean)
     ], EarningsRate.prototype, "isExemptFromTax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsReportableAsW1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsReportableAsW1" }),
         __metadata("design:type", Boolean)
     ], EarningsRate.prototype, "isReportableAsW1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Multiplier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Multiplier" }),
         __metadata("design:type", Number)
     ], EarningsRate.prototype, "multiplier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], EarningsRate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RatePerUnit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RatePerUnit" }),
         __metadata("design:type", String)
     ], EarningsRate.prototype, "ratePerUnit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RateType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RateType" }),
         __metadata("design:type", String)
     ], EarningsRate.prototype, "rateType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TypeOfUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TypeOfUnits" }),
         __metadata("design:type", String)
     ], EarningsRate.prototype, "typeOfUnits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdatedDateUTC" }),
         __metadata("design:type", String)
-    ], EarningsRate.prototype, "updatedDateUtc", void 0);
+    ], EarningsRate.prototype, "updatedDateUTC", void 0);
     return EarningsRate;
-}(SpeakeasyBase));
-export { EarningsRate };
+}(utils_1.SpeakeasyBase));
+exports.EarningsRate = EarningsRate;
+var EarningsRateInput = /** @class */ (function (_super) {
+    __extends(EarningsRateInput, _super);
+    function EarningsRateInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountCode" }),
+        __metadata("design:type", String)
+    ], EarningsRateInput.prototype, "accountCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccrueLeave" }),
+        __metadata("design:type", Boolean)
+    ], EarningsRateInput.prototype, "accrueLeave", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllowanceType" }),
+        __metadata("design:type", String)
+    ], EarningsRateInput.prototype, "allowanceType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Amount" }),
+        __metadata("design:type", Number)
+    ], EarningsRateInput.prototype, "amount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CurrentRecord" }),
+        __metadata("design:type", Boolean)
+    ], EarningsRateInput.prototype, "currentRecord", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EarningsRateID" }),
+        __metadata("design:type", String)
+    ], EarningsRateInput.prototype, "earningsRateID", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EarningsType" }),
+        __metadata("design:type", String)
+    ], EarningsRateInput.prototype, "earningsType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmploymentTerminationPaymentType" }),
+        __metadata("design:type", String)
+    ], EarningsRateInput.prototype, "employmentTerminationPaymentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsExemptFromSuper" }),
+        __metadata("design:type", Boolean)
+    ], EarningsRateInput.prototype, "isExemptFromSuper", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsExemptFromTax" }),
+        __metadata("design:type", Boolean)
+    ], EarningsRateInput.prototype, "isExemptFromTax", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsReportableAsW1" }),
+        __metadata("design:type", Boolean)
+    ], EarningsRateInput.prototype, "isReportableAsW1", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Multiplier" }),
+        __metadata("design:type", Number)
+    ], EarningsRateInput.prototype, "multiplier", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
+        __metadata("design:type", String)
+    ], EarningsRateInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RatePerUnit" }),
+        __metadata("design:type", String)
+    ], EarningsRateInput.prototype, "ratePerUnit", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RateType" }),
+        __metadata("design:type", String)
+    ], EarningsRateInput.prototype, "rateType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TypeOfUnits" }),
+        __metadata("design:type", String)
+    ], EarningsRateInput.prototype, "typeOfUnits", void 0);
+    return EarningsRateInput;
+}(utils_1.SpeakeasyBase));
+exports.EarningsRateInput = EarningsRateInput;

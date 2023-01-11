@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LicenseAssignment } from "./licenseassignment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LicenseAssignmentList = void 0;
+var utils_1 = require("../../../internal/utils");
+var licenseassignment_1 = require("./licenseassignment");
 var LicenseAssignmentList = /** @class */ (function (_super) {
     __extends(LicenseAssignmentList, _super);
     function LicenseAssignmentList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], LicenseAssignmentList.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: LicenseAssignment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: licenseassignment_1.LicenseAssignment }),
         __metadata("design:type", Array)
     ], LicenseAssignmentList.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], LicenseAssignmentList.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], LicenseAssignmentList.prototype, "nextPageToken", void 0);
     return LicenseAssignmentList;
-}(SpeakeasyBase));
-export { LicenseAssignmentList };
+}(utils_1.SpeakeasyBase));
+exports.LicenseAssignmentList = LicenseAssignmentList;

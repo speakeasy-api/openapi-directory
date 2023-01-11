@@ -25,5 +25,5 @@ export declare class CircuitsProvidersListRequest extends SpeakeasyBase {
 export declare class CircuitsProvidersListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    circuitsProvidersList200ApplicationJsonObject?: CircuitsProvidersList200ApplicationJson;
+    circuitsProvidersList200ApplicationJSONObject?: CircuitsProvidersList200ApplicationJson;
 }

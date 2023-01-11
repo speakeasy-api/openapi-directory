@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * A Page view within a session-create
+ * Base model for all types
 **/
 export declare class View extends SpeakeasyBase {
     activeMsecs?: number;

@@ -18,7 +18,7 @@ export declare class CancelClusterRequest extends SpeakeasyBase {
     request: shared.CancelClusterRequest;
 }
 export declare class CancelClusterResponse extends SpeakeasyBase {
-    cancelClusterResult?: Map<string, any>;
+    cancelClusterResult?: Record<string, any>;
     contentType: string;
     invalidJobStateException?: any;
     invalidResourceException?: any;

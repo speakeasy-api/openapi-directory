@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeleteConnectionRequest, DeleteConnectionResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,11 +33,11 @@ const req: DeleteConnectionRequest = {
     },
   },
   pathParams: {
-    id: "in",
+    id: "sit",
   },
 };
 
-sdk.sdk.deleteConnection(req).then((res: DeleteConnectionResponse | AxiosError) => {
+sdk.identity.deleteConnection(req).then((res: DeleteConnectionResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -47,7 +46,7 @@ sdk.sdk.deleteConnection(req).then((res: DeleteConnectionResponse | AxiosError) 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### identity
 
 * `deleteConnection` - Deletes a connection for this user (i.e. disconnect a tenant)
 * `getConnections` - Retrieves the connections for this user

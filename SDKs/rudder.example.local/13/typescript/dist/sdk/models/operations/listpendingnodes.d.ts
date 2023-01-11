@@ -31,5 +31,5 @@ export declare class ListPendingNodesRequest extends SpeakeasyBase {
 export declare class ListPendingNodesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listPendingNodes200ApplicationJsonObject?: ListPendingNodes200ApplicationJson;
+    listPendingNodes200ApplicationJSONObject?: ListPendingNodes200ApplicationJson;
 }

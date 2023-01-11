@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChannelProfileDetails } from "./channelprofiledetails";
-import { MembershipsDetails } from "./membershipsdetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MemberSnippet = void 0;
+var utils_1 = require("../../../internal/utils");
+var channelprofiledetails_1 = require("./channelprofiledetails");
+var membershipsdetails_1 = require("./membershipsdetails");
 var MemberSnippet = /** @class */ (function (_super) {
     __extends(MemberSnippet, _super);
     function MemberSnippet() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creatorChannelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creatorChannelId" }),
         __metadata("design:type", String)
     ], MemberSnippet.prototype, "creatorChannelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memberDetails" }),
-        __metadata("design:type", ChannelProfileDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memberDetails" }),
+        __metadata("design:type", channelprofiledetails_1.ChannelProfileDetails)
     ], MemberSnippet.prototype, "memberDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membershipsDetails" }),
-        __metadata("design:type", MembershipsDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membershipsDetails" }),
+        __metadata("design:type", membershipsdetails_1.MembershipsDetails)
     ], MemberSnippet.prototype, "membershipsDetails", void 0);
     return MemberSnippet;
-}(SpeakeasyBase));
-export { MemberSnippet };
+}(utils_1.SpeakeasyBase));
+exports.MemberSnippet = MemberSnippet;

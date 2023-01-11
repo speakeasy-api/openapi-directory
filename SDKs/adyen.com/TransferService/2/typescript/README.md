@@ -16,35 +16,26 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { GetTransactionsRequest, GetTransactionsResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { PostTransfersRequest, PostTransfersResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: GetTransactionsRequest = {
+const req: PostTransfersRequest = {
   security: {
     apiKeyAuth: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
-  queryParams: {
-    accountHolderId: "in",
-    balanceAccountId: "autem",
-    balancePlatform: "qui",
-    createdSince: "2022-08-17T18:55:28Z",
-    createdUntil: "2008-01-31T10:27:18Z",
-    cursor: "neque",
-    limit: 4255970180603226314,
-  },
+  request: "sit",
 };
 
-sdk.sdk.getTransactions(req).then((res: GetTransactionsResponse | AxiosError) => {
+sdk.general.postTransfers(req).then((res: PostTransfersResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -53,11 +44,14 @@ sdk.sdk.getTransactions(req).then((res: GetTransactionsResponse | AxiosError) =>
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### General
+
+* `postTransfers` - Transfer funds.
+
+### Transactions
 
 * `getTransactions` - Get all transactions.
 * `getTransactionsId` - Get a transaction.
-* `postTransfers` - Transfer funds.
 
 <!-- End SDK Available Operations -->
 

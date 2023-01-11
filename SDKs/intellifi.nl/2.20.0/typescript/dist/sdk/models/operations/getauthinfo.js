@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,74 +23,76 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetAuthinfo200ApplicationJsonAuthMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAuthinfoResponse = exports.GetAuthinfo200ApplicationJson = exports.GetAuthinfo200ApplicationJsonPermissions = exports.GetAuthinfo200ApplicationJsonAuthMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetAuthinfo200ApplicationJsonAuthMethodEnum;
 (function (GetAuthinfo200ApplicationJsonAuthMethodEnum) {
     GetAuthinfo200ApplicationJsonAuthMethodEnum["UserSession"] = "user_session";
     GetAuthinfo200ApplicationJsonAuthMethodEnum["Internal"] = "internal";
     GetAuthinfo200ApplicationJsonAuthMethodEnum["StaticApiKey"] = "static_api_key";
-})(GetAuthinfo200ApplicationJsonAuthMethodEnum || (GetAuthinfo200ApplicationJsonAuthMethodEnum = {}));
+})(GetAuthinfo200ApplicationJsonAuthMethodEnum = exports.GetAuthinfo200ApplicationJsonAuthMethodEnum || (exports.GetAuthinfo200ApplicationJsonAuthMethodEnum = {}));
 var GetAuthinfo200ApplicationJsonPermissions = /** @class */ (function (_super) {
     __extends(GetAuthinfo200ApplicationJsonPermissions, _super);
     function GetAuthinfo200ApplicationJsonPermissions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mutate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mutate" }),
         __metadata("design:type", Boolean)
     ], GetAuthinfo200ApplicationJsonPermissions.prototype, "mutate", void 0);
     return GetAuthinfo200ApplicationJsonPermissions;
-}(SpeakeasyBase));
-export { GetAuthinfo200ApplicationJsonPermissions };
+}(utils_1.SpeakeasyBase));
+exports.GetAuthinfo200ApplicationJsonPermissions = GetAuthinfo200ApplicationJsonPermissions;
 var GetAuthinfo200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetAuthinfo200ApplicationJson, _super);
     function GetAuthinfo200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=api_key_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=api_key_id" }),
         __metadata("design:type", String)
     ], GetAuthinfo200ApplicationJson.prototype, "apiKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auth_method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auth_method" }),
         __metadata("design:type", String)
     ], GetAuthinfo200ApplicationJson.prototype, "authMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authenticated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authenticated" }),
         __metadata("design:type", Boolean)
     ], GetAuthinfo200ApplicationJson.prototype, "authenticated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions" }),
         __metadata("design:type", GetAuthinfo200ApplicationJsonPermissions)
     ], GetAuthinfo200ApplicationJson.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GetAuthinfo200ApplicationJson.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_id" }),
         __metadata("design:type", String)
     ], GetAuthinfo200ApplicationJson.prototype, "userId", void 0);
     return GetAuthinfo200ApplicationJson;
-}(SpeakeasyBase));
-export { GetAuthinfo200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetAuthinfo200ApplicationJson = GetAuthinfo200ApplicationJson;
 var GetAuthinfoResponse = /** @class */ (function (_super) {
     __extends(GetAuthinfoResponse, _super);
     function GetAuthinfoResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAuthinfoResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAuthinfoResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAuthinfo200ApplicationJson)
-    ], GetAuthinfoResponse.prototype, "getAuthinfo200ApplicationJsonObject", void 0);
+    ], GetAuthinfoResponse.prototype, "getAuthinfo200ApplicationJSONObject", void 0);
     return GetAuthinfoResponse;
-}(SpeakeasyBase));
-export { GetAuthinfoResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAuthinfoResponse = GetAuthinfoResponse;

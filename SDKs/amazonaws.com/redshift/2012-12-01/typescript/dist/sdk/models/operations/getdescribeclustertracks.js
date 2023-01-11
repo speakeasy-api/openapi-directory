@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeClusterTracksActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeClusterTracksResponse = exports.GetDescribeClusterTracksRequest = exports.GetDescribeClusterTracksHeaders = exports.GetDescribeClusterTracksQueryParams = exports.GetDescribeClusterTracksVersionEnum = exports.GetDescribeClusterTracksActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeClusterTracksActionEnum;
 (function (GetDescribeClusterTracksActionEnum) {
     GetDescribeClusterTracksActionEnum["DescribeClusterTracks"] = "DescribeClusterTracks";
-})(GetDescribeClusterTracksActionEnum || (GetDescribeClusterTracksActionEnum = {}));
-export var GetDescribeClusterTracksVersionEnum;
+})(GetDescribeClusterTracksActionEnum = exports.GetDescribeClusterTracksActionEnum || (exports.GetDescribeClusterTracksActionEnum = {}));
+var GetDescribeClusterTracksVersionEnum;
 (function (GetDescribeClusterTracksVersionEnum) {
     GetDescribeClusterTracksVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(GetDescribeClusterTracksVersionEnum || (GetDescribeClusterTracksVersionEnum = {}));
+})(GetDescribeClusterTracksVersionEnum = exports.GetDescribeClusterTracksVersionEnum || (exports.GetDescribeClusterTracksVersionEnum = {}));
 var GetDescribeClusterTracksQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeClusterTracksQueryParams, _super);
     function GetDescribeClusterTracksQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeClusterTracksQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaintenanceTrackName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaintenanceTrackName" }),
         __metadata("design:type", String)
     ], GetDescribeClusterTracksQueryParams.prototype, "maintenanceTrackName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetDescribeClusterTracksQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", Number)
     ], GetDescribeClusterTracksQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeClusterTracksQueryParams.prototype, "version", void 0);
     return GetDescribeClusterTracksQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeClusterTracksQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeClusterTracksQueryParams = GetDescribeClusterTracksQueryParams;
 var GetDescribeClusterTracksHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeClusterTracksHeaders, _super);
     function GetDescribeClusterTracksHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeClusterTracksHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeClusterTracksHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeClusterTracksHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeClusterTracksHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeClusterTracksHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeClusterTracksHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeClusterTracksHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeClusterTracksHeaders;
-}(SpeakeasyBase));
-export { GetDescribeClusterTracksHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeClusterTracksHeaders = GetDescribeClusterTracksHeaders;
 var GetDescribeClusterTracksRequest = /** @class */ (function (_super) {
     __extends(GetDescribeClusterTracksRequest, _super);
     function GetDescribeClusterTracksRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeClusterTracksQueryParams)
     ], GetDescribeClusterTracksRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeClusterTracksHeaders)
     ], GetDescribeClusterTracksRequest.prototype, "headers", void 0);
     return GetDescribeClusterTracksRequest;
-}(SpeakeasyBase));
-export { GetDescribeClusterTracksRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeClusterTracksRequest = GetDescribeClusterTracksRequest;
 var GetDescribeClusterTracksResponse = /** @class */ (function (_super) {
     __extends(GetDescribeClusterTracksResponse, _super);
     function GetDescribeClusterTracksResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeClusterTracksResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeClusterTracksResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeClusterTracksResponse.prototype, "statusCode", void 0);
     return GetDescribeClusterTracksResponse;
-}(SpeakeasyBase));
-export { GetDescribeClusterTracksResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeClusterTracksResponse = GetDescribeClusterTracksResponse;

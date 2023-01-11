@@ -8,14 +8,14 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class JobLogEventData extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=conversionServerID" })
-  conversionServerId?: string;
+  conversionServerID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=rawError" })
   rawError?: string;
 
   @SpeakeasyMetadata({ data: "json, name=sourceServerID" })
-  sourceServerId?: string;
+  sourceServerID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=targetInstanceID" })
-  targetInstanceId?: string;
+  targetInstanceID?: string;
 }

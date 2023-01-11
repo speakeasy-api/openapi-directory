@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AlbumContractInput } from "./albumcontract";
+import { AlbumContract } from "./albumcontract";
 import { ArtistForSongContract } from "./artistforsongcontract";
 import { LyricsForSongContract } from "./lyricsforsongcontract";
 import { EntryThumbForApiContract } from "./entrythumbforapicontract";
 import { LocalizedStringContract } from "./localizedstringcontract";
 import { PvContract } from "./pvcontract";
-import { ReleaseEventForApiContractInput } from "./releaseeventforapicontract";
+import { ReleaseEventForApiContract } from "./releaseeventforapicontract";
 import { TagUsageForApiContract } from "./tagusageforapicontract";
 import { WebLinkForApiContract } from "./weblinkforapicontract";
-import { AlbumContract } from "./albumcontract";
-import { ReleaseEventForApiContract } from "./releaseeventforapicontract";
+import { AlbumContractInput } from "./albumcontract";
+import { ReleaseEventForApiContractInput } from "./releaseeventforapicontract";
 export declare enum SongForApiContractDefaultNameLanguageEnum {
     Unspecified = "Unspecified",
     Japanese = "Japanese",
@@ -50,36 +50,6 @@ export declare enum SongForApiContractStatusEnum {
     Approved = "Approved",
     Locked = "Locked"
 }
-export declare class SongForApiContractInput extends SpeakeasyBase {
-    additionalNames?: string;
-    albums?: AlbumContractInput[];
-    artistString?: string;
-    artists?: ArtistForSongContract[];
-    createDate?: Date;
-    defaultName?: string;
-    defaultNameLanguage?: SongForApiContractDefaultNameLanguageEnum;
-    deleted?: boolean;
-    favoritedTimes?: number;
-    id?: number;
-    lengthSeconds?: number;
-    lyrics?: LyricsForSongContract[];
-    mainPicture?: EntryThumbForApiContract;
-    mergedTo?: number;
-    name?: string;
-    names?: LocalizedStringContract[];
-    originalVersionId?: number;
-    publishDate?: Date;
-    pvServices?: SongForApiContractPvServicesEnum;
-    pvs?: PvContract[];
-    ratingScore?: number;
-    releaseEvent?: ReleaseEventForApiContractInput;
-    songType?: SongForApiContractSongTypeEnum;
-    status?: SongForApiContractStatusEnum;
-    tags?: TagUsageForApiContract[];
-    thumbUrl?: string;
-    version?: number;
-    webLinks?: WebLinkForApiContract[];
-}
 export declare class SongForApiContract extends SpeakeasyBase {
     additionalNames?: string;
     albums?: AlbumContract[];
@@ -103,6 +73,36 @@ export declare class SongForApiContract extends SpeakeasyBase {
     pvs?: PvContract[];
     ratingScore?: number;
     releaseEvent?: ReleaseEventForApiContract;
+    songType?: SongForApiContractSongTypeEnum;
+    status?: SongForApiContractStatusEnum;
+    tags?: TagUsageForApiContract[];
+    thumbUrl?: string;
+    version?: number;
+    webLinks?: WebLinkForApiContract[];
+}
+export declare class SongForApiContractInput extends SpeakeasyBase {
+    additionalNames?: string;
+    albums?: AlbumContractInput[];
+    artistString?: string;
+    artists?: ArtistForSongContract[];
+    createDate?: Date;
+    defaultName?: string;
+    defaultNameLanguage?: SongForApiContractDefaultNameLanguageEnum;
+    deleted?: boolean;
+    favoritedTimes?: number;
+    id?: number;
+    lengthSeconds?: number;
+    lyrics?: LyricsForSongContract[];
+    mainPicture?: EntryThumbForApiContract;
+    mergedTo?: number;
+    name?: string;
+    names?: LocalizedStringContract[];
+    originalVersionId?: number;
+    publishDate?: Date;
+    pvServices?: SongForApiContractPvServicesEnum;
+    pvs?: PvContract[];
+    ratingScore?: number;
+    releaseEvent?: ReleaseEventForApiContractInput;
     songType?: SongForApiContractSongTypeEnum;
     status?: SongForApiContractStatusEnum;
     tags?: TagUsageForApiContract[];

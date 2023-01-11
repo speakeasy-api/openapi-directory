@@ -50,5 +50,5 @@ export class DeleteDataSourceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteDataSource200ApplicationJsonObject?: DeleteDataSource200ApplicationJson;
+  deleteDataSource200ApplicationJSONObject?: DeleteDataSource200ApplicationJson;
 }

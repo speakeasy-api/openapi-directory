@@ -44,5 +44,5 @@ export class GetWorkspaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getWorkspace200ApplicationJsonObject?: GetWorkspace200ApplicationJson;
+  getWorkspace200ApplicationJSONObject?: GetWorkspace200ApplicationJson;
 }

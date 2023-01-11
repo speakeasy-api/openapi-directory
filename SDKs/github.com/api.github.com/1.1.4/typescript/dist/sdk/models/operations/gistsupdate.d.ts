@@ -9,7 +9,7 @@ export declare class GistsUpdateRequestBodyFiles extends SpeakeasyBase {
 }
 export declare class GistsUpdateRequestBody extends SpeakeasyBase {
     description?: string;
-    files?: Map<string, GistsUpdateRequestBodyFiles>;
+    files?: Record<string, GistsUpdateRequestBodyFiles>;
 }
 export declare class GistsUpdateRequest extends SpeakeasyBase {
     pathParams: GistsUpdatePathParams;

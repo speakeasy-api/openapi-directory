@@ -1,7 +1,7 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuxiliaryVersionConfigInput } from "./auxiliaryversionconfig";
-import { KerberosConfig } from "./kerberosconfig";
 import { AuxiliaryVersionConfig } from "./auxiliaryversionconfig";
+import { KerberosConfig } from "./kerberosconfig";
+import { AuxiliaryVersionConfigInput } from "./auxiliaryversionconfig";
 
 
 export enum HiveMetastoreConfigEndpointProtocolEnum {
@@ -11,16 +11,16 @@ export enum HiveMetastoreConfigEndpointProtocolEnum {
 }
 
 
-// HiveMetastoreConfigInput
+// HiveMetastoreConfig
 /** 
  * Specifies configuration information specific to running Hive metastore software as the metastore service.
 **/
-export class HiveMetastoreConfigInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=auxiliaryVersions", elemType: AuxiliaryVersionConfigInput })
-  auxiliaryVersions?: Map<string, AuxiliaryVersionConfigInput>;
+export class HiveMetastoreConfig extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=auxiliaryVersions", elemType: AuxiliaryVersionConfig })
+  auxiliaryVersions?: Record<string, AuxiliaryVersionConfig>;
 
   @SpeakeasyMetadata({ data: "json, name=configOverrides" })
-  configOverrides?: Map<string, string>;
+  configOverrides?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=endpointProtocol" })
   endpointProtocol?: HiveMetastoreConfigEndpointProtocolEnum;
@@ -33,16 +33,16 @@ export class HiveMetastoreConfigInput extends SpeakeasyBase {
 }
 
 
-// HiveMetastoreConfig
+// HiveMetastoreConfigInput
 /** 
  * Specifies configuration information specific to running Hive metastore software as the metastore service.
 **/
-export class HiveMetastoreConfig extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=auxiliaryVersions", elemType: AuxiliaryVersionConfig })
-  auxiliaryVersions?: Map<string, AuxiliaryVersionConfig>;
+export class HiveMetastoreConfigInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=auxiliaryVersions", elemType: AuxiliaryVersionConfigInput })
+  auxiliaryVersions?: Record<string, AuxiliaryVersionConfigInput>;
 
   @SpeakeasyMetadata({ data: "json, name=configOverrides" })
-  configOverrides?: Map<string, string>;
+  configOverrides?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=endpointProtocol" })
   endpointProtocol?: HiveMetastoreConfigEndpointProtocolEnum;

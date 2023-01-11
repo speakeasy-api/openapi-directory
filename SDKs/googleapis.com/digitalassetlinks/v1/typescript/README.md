@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DigitalassetlinksAssetlinksBulkCheckRequest, DigitalassetlinksAssetlinksBulkCheckResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -30,26 +29,26 @@ const sdk = new SDK();
 const req: DigitalassetlinksAssetlinksBulkCheckRequest = {
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "nesciunt",
-    alt: "proto",
-    callback: "et",
-    fields: "qui",
-    key: "voluptatem",
-    oauthToken: "aliquam",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
     prettyPrint: true,
-    quotaUser: "voluptatem",
-    uploadType: "quidem",
-    uploadProtocol: "enim",
+    quotaUser: "fugit",
+    uploadType: "et",
+    uploadProtocol: "nihil",
   },
   request: {
-    allowGoogleInternalDataSources: false,
-    defaultRelation: "enim",
+    allowGoogleInternalDataSources: true,
+    defaultRelation: "dicta",
     defaultSource: {
       androidApp: {
         certificate: {
-          sha256Fingerprint: "porro",
+          sha256Fingerprint: "debitis",
         },
-        packageName: "voluptatem",
+        packageName: "voluptatum",
       },
       web: {
         site: "et",
@@ -58,63 +57,88 @@ const req: DigitalassetlinksAssetlinksBulkCheckRequest = {
     defaultTarget: {
       androidApp: {
         certificate: {
-          sha256Fingerprint: "consequatur",
+          sha256Fingerprint: "ut",
         },
-        packageName: "totam",
+        packageName: "dolorem",
       },
       web: {
-        site: "eius",
+        site: "et",
       },
     },
     skipCacheLookup: false,
     statements: [
       {
-        relation: "pariatur",
+        relation: "vitae",
         source: {
           androidApp: {
             certificate: {
-              sha256Fingerprint: "ipsam",
+              sha256Fingerprint: "totam",
             },
-            packageName: "voluptatibus",
+            packageName: "dolores",
           },
           web: {
-            site: "nesciunt",
+            site: "illum",
           },
         },
         target: {
           androidApp: {
             certificate: {
-              sha256Fingerprint: "quo",
+              sha256Fingerprint: "debitis",
             },
-            packageName: "rerum",
+            packageName: "vel",
           },
           web: {
-            site: "eos",
+            site: "odio",
           },
         },
       },
       {
-        relation: "distinctio",
+        relation: "dolore",
         source: {
           androidApp: {
             certificate: {
-              sha256Fingerprint: "nisi",
+              sha256Fingerprint: "id",
             },
-            packageName: "dolorum",
+            packageName: "aspernatur",
           },
           web: {
-            site: "velit",
+            site: "accusantium",
           },
         },
         target: {
           androidApp: {
             certificate: {
-              sha256Fingerprint: "dolor",
+              sha256Fingerprint: "totam",
             },
-            packageName: "molestiae",
+            packageName: "commodi",
           },
           web: {
-            site: "consequatur",
+            site: "quis",
+          },
+        },
+      },
+      {
+        relation: "est",
+        source: {
+          androidApp: {
+            certificate: {
+              sha256Fingerprint: "aut",
+            },
+            packageName: "odit",
+          },
+          web: {
+            site: "non",
+          },
+        },
+        target: {
+          androidApp: {
+            certificate: {
+              sha256Fingerprint: "voluptas",
+            },
+            packageName: "omnis",
+          },
+          web: {
+            site: "aut",
           },
         },
       },

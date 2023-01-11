@@ -63,5 +63,5 @@ export class NodeDetailsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  nodeDetails200ApplicationJsonObject?: NodeDetails200ApplicationJson;
+  nodeDetails200ApplicationJSONObject?: NodeDetails200ApplicationJson;
 }

@@ -14,7 +14,7 @@ export class PostSimpleQueryRequest extends SpeakeasyBase {
   queryParams: PostSimpleQueryQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 

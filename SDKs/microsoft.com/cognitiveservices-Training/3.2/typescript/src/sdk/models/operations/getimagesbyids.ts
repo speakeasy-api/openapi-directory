@@ -1,0 +1,45 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+
+
+
+export class GetImagesByIdsPathParams extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectId" })
+  projectId: string;
+}
+
+
+export class GetImagesByIdsQueryParams extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=imageIds" })
+  imageIds?: string[];
+
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=iterationId" })
+  iterationId?: string;
+}
+
+
+export class GetImagesByIdsRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: GetImagesByIdsPathParams;
+
+  @SpeakeasyMetadata()
+  queryParams: GetImagesByIdsQueryParams;
+}
+
+
+export class GetImagesByIdsResponse extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  body?: Uint8Array;
+
+  @SpeakeasyMetadata()
+  contentType: string;
+
+  @SpeakeasyMetadata()
+  customVisionError?: shared.CustomVisionError;
+
+  @SpeakeasyMetadata({ elemType: shared.Image })
+  images?: shared.Image[];
+
+  @SpeakeasyMetadata()
+  statusCode: number;
+}

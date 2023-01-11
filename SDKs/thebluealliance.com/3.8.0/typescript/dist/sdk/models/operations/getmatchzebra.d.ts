@@ -16,7 +16,7 @@ export declare class GetMatchZebraRequest extends SpeakeasyBase {
 }
 export declare class GetMatchZebraResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     zebra?: shared.Zebra;
 }

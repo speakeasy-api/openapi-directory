@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContactTypeEnum } from "./contacttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Contact = void 0;
+var utils_1 = require("../../../internal/utils");
+var contacttypeenum_1 = require("./contacttypeenum");
 // Contact
 /**
  * A personal contact or escalation plan that Incident Manager engages during an incident.
@@ -34,21 +37,21 @@ var Contact = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Alias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Alias" }),
         __metadata("design:type", String)
     ], Contact.prototype, "alias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContactArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContactArn" }),
         __metadata("design:type", String)
     ], Contact.prototype, "contactArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DisplayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DisplayName" }),
         __metadata("design:type", String)
     ], Contact.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], Contact.prototype, "type", void 0);
     return Contact;
-}(SpeakeasyBase));
-export { Contact };
+}(utils_1.SpeakeasyBase));
+exports.Contact = Contact;

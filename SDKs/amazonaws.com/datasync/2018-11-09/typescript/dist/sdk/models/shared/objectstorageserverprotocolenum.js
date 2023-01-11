@@ -1,5 +1,8 @@
-export var ObjectStorageServerProtocolEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObjectStorageServerProtocolEnum = void 0;
+var ObjectStorageServerProtocolEnum;
 (function (ObjectStorageServerProtocolEnum) {
     ObjectStorageServerProtocolEnum["Https"] = "HTTPS";
     ObjectStorageServerProtocolEnum["Http"] = "HTTP";
-})(ObjectStorageServerProtocolEnum || (ObjectStorageServerProtocolEnum = {}));
+})(ObjectStorageServerProtocolEnum = exports.ObjectStorageServerProtocolEnum || (exports.ObjectStorageServerProtocolEnum = {}));

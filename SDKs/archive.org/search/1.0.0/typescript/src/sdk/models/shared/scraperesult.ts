@@ -14,7 +14,7 @@ export class ScrapeResult extends SpeakeasyBase {
   cursor?: string;
 
   @SpeakeasyMetadata({ data: "json, name=items" })
-  items?: Map<string, any>[];
+  items?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=previous" })
   previous?: string;

@@ -29,11 +29,8 @@ export class GetSearchResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getSearch200ApplicationJsonAny?: any;
-
-  @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
-
-  @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getSearch200ApplicationJSONAny?: any;
 }

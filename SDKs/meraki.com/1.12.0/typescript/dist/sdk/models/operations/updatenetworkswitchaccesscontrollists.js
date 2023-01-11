@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,125 +23,127 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkSwitchAccessControlListsResponse = exports.UpdateNetworkSwitchAccessControlListsRequest = exports.UpdateNetworkSwitchAccessControlListsRequestBody = exports.UpdateNetworkSwitchAccessControlListsRequestBodyRules = exports.UpdateNetworkSwitchAccessControlListsRequestBodyRulesProtocolEnum = exports.UpdateNetworkSwitchAccessControlListsRequestBodyRulesPolicyEnum = exports.UpdateNetworkSwitchAccessControlListsRequestBodyRulesIpVersionEnum = exports.UpdateNetworkSwitchAccessControlListsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkSwitchAccessControlListsPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchAccessControlListsPathParams, _super);
     function UpdateNetworkSwitchAccessControlListsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchAccessControlListsPathParams.prototype, "networkId", void 0);
     return UpdateNetworkSwitchAccessControlListsPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchAccessControlListsPathParams };
-export var UpdateNetworkSwitchAccessControlListsRequestBodyRulesIpVersionEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchAccessControlListsPathParams = UpdateNetworkSwitchAccessControlListsPathParams;
+var UpdateNetworkSwitchAccessControlListsRequestBodyRulesIpVersionEnum;
 (function (UpdateNetworkSwitchAccessControlListsRequestBodyRulesIpVersionEnum) {
     UpdateNetworkSwitchAccessControlListsRequestBodyRulesIpVersionEnum["Any"] = "any";
     UpdateNetworkSwitchAccessControlListsRequestBodyRulesIpVersionEnum["Ipv4"] = "ipv4";
     UpdateNetworkSwitchAccessControlListsRequestBodyRulesIpVersionEnum["Ipv6"] = "ipv6";
-})(UpdateNetworkSwitchAccessControlListsRequestBodyRulesIpVersionEnum || (UpdateNetworkSwitchAccessControlListsRequestBodyRulesIpVersionEnum = {}));
-export var UpdateNetworkSwitchAccessControlListsRequestBodyRulesPolicyEnum;
+})(UpdateNetworkSwitchAccessControlListsRequestBodyRulesIpVersionEnum = exports.UpdateNetworkSwitchAccessControlListsRequestBodyRulesIpVersionEnum || (exports.UpdateNetworkSwitchAccessControlListsRequestBodyRulesIpVersionEnum = {}));
+var UpdateNetworkSwitchAccessControlListsRequestBodyRulesPolicyEnum;
 (function (UpdateNetworkSwitchAccessControlListsRequestBodyRulesPolicyEnum) {
     UpdateNetworkSwitchAccessControlListsRequestBodyRulesPolicyEnum["Allow"] = "allow";
     UpdateNetworkSwitchAccessControlListsRequestBodyRulesPolicyEnum["Deny"] = "deny";
-})(UpdateNetworkSwitchAccessControlListsRequestBodyRulesPolicyEnum || (UpdateNetworkSwitchAccessControlListsRequestBodyRulesPolicyEnum = {}));
-export var UpdateNetworkSwitchAccessControlListsRequestBodyRulesProtocolEnum;
+})(UpdateNetworkSwitchAccessControlListsRequestBodyRulesPolicyEnum = exports.UpdateNetworkSwitchAccessControlListsRequestBodyRulesPolicyEnum || (exports.UpdateNetworkSwitchAccessControlListsRequestBodyRulesPolicyEnum = {}));
+var UpdateNetworkSwitchAccessControlListsRequestBodyRulesProtocolEnum;
 (function (UpdateNetworkSwitchAccessControlListsRequestBodyRulesProtocolEnum) {
     UpdateNetworkSwitchAccessControlListsRequestBodyRulesProtocolEnum["Tcp"] = "tcp";
     UpdateNetworkSwitchAccessControlListsRequestBodyRulesProtocolEnum["Udp"] = "udp";
     UpdateNetworkSwitchAccessControlListsRequestBodyRulesProtocolEnum["Any"] = "any";
-})(UpdateNetworkSwitchAccessControlListsRequestBodyRulesProtocolEnum || (UpdateNetworkSwitchAccessControlListsRequestBodyRulesProtocolEnum = {}));
+})(UpdateNetworkSwitchAccessControlListsRequestBodyRulesProtocolEnum = exports.UpdateNetworkSwitchAccessControlListsRequestBodyRulesProtocolEnum || (exports.UpdateNetworkSwitchAccessControlListsRequestBodyRulesProtocolEnum = {}));
 var UpdateNetworkSwitchAccessControlListsRequestBodyRules = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchAccessControlListsRequestBodyRules, _super);
     function UpdateNetworkSwitchAccessControlListsRequestBodyRules() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchAccessControlListsRequestBodyRules.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dstCidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dstCidr" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchAccessControlListsRequestBodyRules.prototype, "dstCidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dstPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dstPort" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchAccessControlListsRequestBodyRules.prototype, "dstPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipVersion" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchAccessControlListsRequestBodyRules.prototype, "ipVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policy" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchAccessControlListsRequestBodyRules.prototype, "policy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchAccessControlListsRequestBodyRules.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=srcCidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=srcCidr" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchAccessControlListsRequestBodyRules.prototype, "srcCidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=srcPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=srcPort" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchAccessControlListsRequestBodyRules.prototype, "srcPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlan" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchAccessControlListsRequestBodyRules.prototype, "vlan", void 0);
     return UpdateNetworkSwitchAccessControlListsRequestBodyRules;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchAccessControlListsRequestBodyRules };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchAccessControlListsRequestBodyRules = UpdateNetworkSwitchAccessControlListsRequestBodyRules;
 var UpdateNetworkSwitchAccessControlListsRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchAccessControlListsRequestBody, _super);
     function UpdateNetworkSwitchAccessControlListsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: UpdateNetworkSwitchAccessControlListsRequestBodyRules }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: UpdateNetworkSwitchAccessControlListsRequestBodyRules }),
         __metadata("design:type", Array)
     ], UpdateNetworkSwitchAccessControlListsRequestBody.prototype, "rules", void 0);
     return UpdateNetworkSwitchAccessControlListsRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchAccessControlListsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchAccessControlListsRequestBody = UpdateNetworkSwitchAccessControlListsRequestBody;
 var UpdateNetworkSwitchAccessControlListsRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchAccessControlListsRequest, _super);
     function UpdateNetworkSwitchAccessControlListsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkSwitchAccessControlListsPathParams)
     ], UpdateNetworkSwitchAccessControlListsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkSwitchAccessControlListsRequestBody)
     ], UpdateNetworkSwitchAccessControlListsRequest.prototype, "request", void 0);
     return UpdateNetworkSwitchAccessControlListsRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchAccessControlListsRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchAccessControlListsRequest = UpdateNetworkSwitchAccessControlListsRequest;
 var UpdateNetworkSwitchAccessControlListsResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchAccessControlListsResponse, _super);
     function UpdateNetworkSwitchAccessControlListsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchAccessControlListsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkSwitchAccessControlListsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkSwitchAccessControlListsResponse.prototype, "updateNetworkSwitchAccessControlLists200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkSwitchAccessControlListsResponse.prototype, "updateNetworkSwitchAccessControlLists200ApplicationJSONObject", void 0);
     return UpdateNetworkSwitchAccessControlListsResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchAccessControlListsResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchAccessControlListsResponse = UpdateNetworkSwitchAccessControlListsResponse;

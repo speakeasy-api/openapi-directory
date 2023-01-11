@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { JobComparatorEnum } from "./jobcomparatorenum";
-import { TagCriterionPairForJob } from "./tagcriterionpairforjob";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagCriterionForJob = void 0;
+var utils_1 = require("../../../internal/utils");
+var jobcomparatorenum_1 = require("./jobcomparatorenum");
+var tagcriterionpairforjob_1 = require("./tagcriterionpairforjob");
 // TagCriterionForJob
 /**
  * Specifies a tag-based condition that determines whether an S3 bucket is included or excluded from a classification job.
@@ -35,13 +38,13 @@ var TagCriterionForJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparator" }),
         __metadata("design:type", String)
     ], TagCriterionForJob.prototype, "comparator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagValues", elemType: TagCriterionPairForJob }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagValues", elemType: tagcriterionpairforjob_1.TagCriterionPairForJob }),
         __metadata("design:type", Array)
     ], TagCriterionForJob.prototype, "tagValues", void 0);
     return TagCriterionForJob;
-}(SpeakeasyBase));
-export { TagCriterionForJob };
+}(utils_1.SpeakeasyBase));
+exports.TagCriterionForJob = TagCriterionForJob;

@@ -65,5 +65,5 @@ export class UpdateNetworkApplianceSecurityIntrusionResponse extends SpeakeasyBa
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkApplianceSecurityIntrusion200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkApplianceSecurityIntrusion200ApplicationJSONObject?: Record<string, any>;
 }

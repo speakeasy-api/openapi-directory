@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DatasetTypeEnum } from "./datasettypeenum";
-import { DomainEnum } from "./domainenum";
-import { EncryptionConfig } from "./encryptionconfig";
-import { Schema } from "./schema";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDatasetRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasettypeenum_1 = require("./datasettypeenum");
+var domainenum_1 = require("./domainenum");
+var encryptionconfig_1 = require("./encryptionconfig");
+var schema_1 = require("./schema");
+var tag_1 = require("./tag");
 var CreateDatasetRequest = /** @class */ (function (_super) {
     __extends(CreateDatasetRequest, _super);
     function CreateDatasetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataFrequency" }),
         __metadata("design:type", String)
     ], CreateDatasetRequest.prototype, "dataFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetName" }),
         __metadata("design:type", String)
     ], CreateDatasetRequest.prototype, "datasetName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetType" }),
         __metadata("design:type", String)
     ], CreateDatasetRequest.prototype, "datasetType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Domain" }),
         __metadata("design:type", String)
     ], CreateDatasetRequest.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EncryptionConfig" }),
-        __metadata("design:type", EncryptionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EncryptionConfig" }),
+        __metadata("design:type", encryptionconfig_1.EncryptionConfig)
     ], CreateDatasetRequest.prototype, "encryptionConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Schema" }),
-        __metadata("design:type", Schema)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Schema" }),
+        __metadata("design:type", schema_1.Schema)
     ], CreateDatasetRequest.prototype, "schema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateDatasetRequest.prototype, "tags", void 0);
     return CreateDatasetRequest;
-}(SpeakeasyBase));
-export { CreateDatasetRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateDatasetRequest = CreateDatasetRequest;

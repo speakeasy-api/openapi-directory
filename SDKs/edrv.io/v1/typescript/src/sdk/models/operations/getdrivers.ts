@@ -71,5 +71,5 @@ export class GetDriversResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDrivers200ApplicationJsonObject?: GetDrivers200ApplicationJson;
+  getDrivers200ApplicationJSONObject?: GetDrivers200ApplicationJson;
 }

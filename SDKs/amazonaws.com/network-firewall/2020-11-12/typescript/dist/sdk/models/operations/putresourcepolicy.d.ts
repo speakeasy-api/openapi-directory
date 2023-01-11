@@ -22,7 +22,7 @@ export declare class PutResourcePolicyResponse extends SpeakeasyBase {
     internalServerError?: any;
     invalidRequestException?: any;
     invalidResourcePolicyException?: any;
-    putResourcePolicyResponse?: Map<string, any>;
+    putResourcePolicyResponse?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
     throttlingException?: any;

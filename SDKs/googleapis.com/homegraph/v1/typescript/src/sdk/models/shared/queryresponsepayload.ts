@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class QueryResponsePayload extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=devices" })
-  devices?: Map<string, Map<string, any>>;
+  devices?: Record<string, Record<string, any>>;
 }

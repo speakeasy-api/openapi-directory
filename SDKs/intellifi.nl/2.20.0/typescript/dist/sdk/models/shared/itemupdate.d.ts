@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ItemUpdate extends SpeakeasyBase {
-    configRequest?: Map<string, any>;
+    configRequest?: Record<string, any>;
     custom?: any;
     label?: string;
     locationRequest?: string;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
 }

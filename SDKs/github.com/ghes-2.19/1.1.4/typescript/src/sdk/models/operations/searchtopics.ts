@@ -44,8 +44,8 @@ export class SearchTopicsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  searchTopics200ApplicationJsonObject?: SearchTopics200ApplicationJson;
+  searchTopics200ApplicationJSONObject?: SearchTopics200ApplicationJson;
 
   @SpeakeasyMetadata()
-  searchTopics415ApplicationJsonObject?: SearchTopics415ApplicationJson;
+  searchTopics415ApplicationJSONObject?: SearchTopics415ApplicationJson;
 }

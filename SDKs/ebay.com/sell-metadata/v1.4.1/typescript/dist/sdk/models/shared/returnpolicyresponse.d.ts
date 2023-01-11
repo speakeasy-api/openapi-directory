@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ReturnPolicy } from "./returnpolicy";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 export declare class ReturnPolicyResponse extends SpeakeasyBase {
     returnPolicies?: ReturnPolicy[];
-    warnings?: Error[];
+    warnings?: ErrorT[];
 }

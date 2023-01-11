@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeTaskSetsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var DescribeTaskSetsRequest = /** @class */ (function (_super) {
     __extends(DescribeTaskSetsRequest, _super);
     function DescribeTaskSetsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster" }),
         __metadata("design:type", String)
     ], DescribeTaskSetsRequest.prototype, "cluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=include" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=include" }),
         __metadata("design:type", Array)
     ], DescribeTaskSetsRequest.prototype, "include", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service" }),
         __metadata("design:type", String)
     ], DescribeTaskSetsRequest.prototype, "service", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskSets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskSets" }),
         __metadata("design:type", Array)
     ], DescribeTaskSetsRequest.prototype, "taskSets", void 0);
     return DescribeTaskSetsRequest;
-}(SpeakeasyBase));
-export { DescribeTaskSetsRequest };
+}(utils_1.SpeakeasyBase));
+exports.DescribeTaskSetsRequest = DescribeTaskSetsRequest;

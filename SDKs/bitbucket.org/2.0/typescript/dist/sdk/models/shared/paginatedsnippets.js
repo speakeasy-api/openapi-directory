@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaginatedSnippets = void 0;
+var utils_1 = require("../../../internal/utils");
 // PaginatedSnippets
 /**
  * A paginated list of snippets.
@@ -33,29 +36,29 @@ var PaginatedSnippets = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], PaginatedSnippets.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", Number)
     ], PaginatedSnippets.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagelen" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagelen" }),
         __metadata("design:type", Number)
     ], PaginatedSnippets.prototype, "pagelen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], PaginatedSnippets.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], PaginatedSnippets.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
         __metadata("design:type", Array)
     ], PaginatedSnippets.prototype, "values", void 0);
     return PaginatedSnippets;
-}(SpeakeasyBase));
-export { PaginatedSnippets };
+}(utils_1.SpeakeasyBase));
+exports.PaginatedSnippets = PaginatedSnippets;

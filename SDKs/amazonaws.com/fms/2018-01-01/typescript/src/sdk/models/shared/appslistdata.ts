@@ -27,5 +27,5 @@ export class AppsListData extends SpeakeasyBase {
   listUpdateToken?: string;
 
   @SpeakeasyMetadata({ data: "json, name=PreviousAppsList", elemType: App, elemDepth: 2 })
-  previousAppsList?: Map<string, App[]>;
+  previousAppsList?: Record<string, App[]>;
 }

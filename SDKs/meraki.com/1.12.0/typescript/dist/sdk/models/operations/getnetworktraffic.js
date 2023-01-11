@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,79 +23,81 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkTrafficResponse = exports.GetNetworkTrafficRequest = exports.GetNetworkTrafficQueryParams = exports.GetNetworkTrafficDeviceTypeEnum = exports.GetNetworkTrafficPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkTrafficPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkTrafficPathParams, _super);
     function GetNetworkTrafficPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkTrafficPathParams.prototype, "networkId", void 0);
     return GetNetworkTrafficPathParams;
-}(SpeakeasyBase));
-export { GetNetworkTrafficPathParams };
-export var GetNetworkTrafficDeviceTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkTrafficPathParams = GetNetworkTrafficPathParams;
+var GetNetworkTrafficDeviceTypeEnum;
 (function (GetNetworkTrafficDeviceTypeEnum) {
     GetNetworkTrafficDeviceTypeEnum["Combined"] = "combined";
     GetNetworkTrafficDeviceTypeEnum["Wireless"] = "wireless";
     GetNetworkTrafficDeviceTypeEnum["Switch"] = "switch";
     GetNetworkTrafficDeviceTypeEnum["Appliance"] = "appliance";
-})(GetNetworkTrafficDeviceTypeEnum || (GetNetworkTrafficDeviceTypeEnum = {}));
+})(GetNetworkTrafficDeviceTypeEnum = exports.GetNetworkTrafficDeviceTypeEnum || (exports.GetNetworkTrafficDeviceTypeEnum = {}));
 var GetNetworkTrafficQueryParams = /** @class */ (function (_super) {
     __extends(GetNetworkTrafficQueryParams, _super);
     function GetNetworkTrafficQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=deviceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=deviceType" }),
         __metadata("design:type", String)
     ], GetNetworkTrafficQueryParams.prototype, "deviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t0" }),
         __metadata("design:type", String)
     ], GetNetworkTrafficQueryParams.prototype, "t0", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timespan" }),
         __metadata("design:type", Number)
     ], GetNetworkTrafficQueryParams.prototype, "timespan", void 0);
     return GetNetworkTrafficQueryParams;
-}(SpeakeasyBase));
-export { GetNetworkTrafficQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkTrafficQueryParams = GetNetworkTrafficQueryParams;
 var GetNetworkTrafficRequest = /** @class */ (function (_super) {
     __extends(GetNetworkTrafficRequest, _super);
     function GetNetworkTrafficRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkTrafficPathParams)
     ], GetNetworkTrafficRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkTrafficQueryParams)
     ], GetNetworkTrafficRequest.prototype, "queryParams", void 0);
     return GetNetworkTrafficRequest;
-}(SpeakeasyBase));
-export { GetNetworkTrafficRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkTrafficRequest = GetNetworkTrafficRequest;
 var GetNetworkTrafficResponse = /** @class */ (function (_super) {
     __extends(GetNetworkTrafficResponse, _super);
     function GetNetworkTrafficResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkTrafficResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkTrafficResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkTrafficResponse.prototype, "getNetworkTraffic200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkTrafficResponse.prototype, "getNetworkTraffic200ApplicationJSONObject", void 0);
     return GetNetworkTrafficResponse;
-}(SpeakeasyBase));
-export { GetNetworkTrafficResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkTrafficResponse = GetNetworkTrafficResponse;

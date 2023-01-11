@@ -19,7 +19,7 @@ export declare class DeleteMemberResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     conflictException?: any;
     contentType: string;
-    deleteMemberResponse?: Map<string, any>;
+    deleteMemberResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     serviceQuotaExceededException?: any;

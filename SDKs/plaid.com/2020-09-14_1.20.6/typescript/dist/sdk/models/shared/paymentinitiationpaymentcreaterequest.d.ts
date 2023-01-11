@@ -3,11 +3,11 @@ import { SpeakeasyBase } from "../../../internal/utils";
  * PaymentInitiationPaymentCreateRequest defines the request schema for `/payment_initiation/payment/create`
 **/
 export declare class PaymentInitiationPaymentCreateRequest extends SpeakeasyBase {
-    amount: Map<string, any>;
+    amount: Record<string, any>;
     clientId?: string;
-    options?: Map<string, any>;
+    options?: Record<string, any>;
     recipientId: string;
     reference: string;
-    schedule?: Map<string, any>;
+    schedule?: Record<string, any>;
     secret?: string;
 }

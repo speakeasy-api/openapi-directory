@@ -4,7 +4,7 @@ export declare class PostV05ConsentRequestsStatusHeaders extends SpeakeasyBase {
     authorization: string;
 }
 export declare class PostV05ConsentRequestsStatusRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     consentRequestStatusRequest?: shared.ConsentRequestStatusRequest;
 }
 export declare class PostV05ConsentRequestsStatusRequest extends SpeakeasyBase {

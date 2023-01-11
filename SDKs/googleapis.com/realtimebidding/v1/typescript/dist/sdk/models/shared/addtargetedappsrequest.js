@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AddTargetedAppsRequestTargetingModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddTargetedAppsRequest = exports.AddTargetedAppsRequestTargetingModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AddTargetedAppsRequestTargetingModeEnum;
 (function (AddTargetedAppsRequestTargetingModeEnum) {
     AddTargetedAppsRequestTargetingModeEnum["TargetingModeUnspecified"] = "TARGETING_MODE_UNSPECIFIED";
     AddTargetedAppsRequestTargetingModeEnum["Inclusive"] = "INCLUSIVE";
     AddTargetedAppsRequestTargetingModeEnum["Exclusive"] = "EXCLUSIVE";
-})(AddTargetedAppsRequestTargetingModeEnum || (AddTargetedAppsRequestTargetingModeEnum = {}));
+})(AddTargetedAppsRequestTargetingModeEnum = exports.AddTargetedAppsRequestTargetingModeEnum || (exports.AddTargetedAppsRequestTargetingModeEnum = {}));
 // AddTargetedAppsRequest
 /**
  * A request to start targeting the provided app IDs in a specific pretargeting configuration. The pretargeting configuration itself specifies how these apps are targeted. in PretargetingConfig.appTargeting.mobileAppTargeting.
@@ -39,13 +42,13 @@ var AddTargetedAppsRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appIds" }),
         __metadata("design:type", Array)
     ], AddTargetedAppsRequest.prototype, "appIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetingMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetingMode" }),
         __metadata("design:type", String)
     ], AddTargetedAppsRequest.prototype, "targetingMode", void 0);
     return AddTargetedAppsRequest;
-}(SpeakeasyBase));
-export { AddTargetedAppsRequest };
+}(utils_1.SpeakeasyBase));
+exports.AddTargetedAppsRequest = AddTargetedAppsRequest;

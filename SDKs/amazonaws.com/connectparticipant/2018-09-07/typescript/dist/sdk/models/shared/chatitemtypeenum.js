@@ -1,4 +1,7 @@
-export var ChatItemTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChatItemTypeEnum = void 0;
+var ChatItemTypeEnum;
 (function (ChatItemTypeEnum) {
     ChatItemTypeEnum["Typing"] = "TYPING";
     ChatItemTypeEnum["ParticipantJoined"] = "PARTICIPANT_JOINED";
@@ -10,4 +13,4 @@ export var ChatItemTypeEnum;
     ChatItemTypeEnum["Event"] = "EVENT";
     ChatItemTypeEnum["Attachment"] = "ATTACHMENT";
     ChatItemTypeEnum["ConnectionAck"] = "CONNECTION_ACK";
-})(ChatItemTypeEnum || (ChatItemTypeEnum = {}));
+})(ChatItemTypeEnum = exports.ChatItemTypeEnum || (exports.ChatItemTypeEnum = {}));

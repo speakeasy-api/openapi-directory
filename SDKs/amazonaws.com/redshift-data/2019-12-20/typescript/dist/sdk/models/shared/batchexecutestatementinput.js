@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchExecuteStatementInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var BatchExecuteStatementInput = /** @class */ (function (_super) {
     __extends(BatchExecuteStatementInput, _super);
     function BatchExecuteStatementInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClusterIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClusterIdentifier" }),
         __metadata("design:type", String)
     ], BatchExecuteStatementInput.prototype, "clusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Database" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Database" }),
         __metadata("design:type", String)
     ], BatchExecuteStatementInput.prototype, "database", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DbUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DbUser" }),
         __metadata("design:type", String)
     ], BatchExecuteStatementInput.prototype, "dbUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretArn" }),
         __metadata("design:type", String)
     ], BatchExecuteStatementInput.prototype, "secretArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Sqls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Sqls" }),
         __metadata("design:type", Array)
     ], BatchExecuteStatementInput.prototype, "sqls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatementName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatementName" }),
         __metadata("design:type", String)
     ], BatchExecuteStatementInput.prototype, "statementName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WithEvent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WithEvent" }),
         __metadata("design:type", Boolean)
     ], BatchExecuteStatementInput.prototype, "withEvent", void 0);
     return BatchExecuteStatementInput;
-}(SpeakeasyBase));
-export { BatchExecuteStatementInput };
+}(utils_1.SpeakeasyBase));
+exports.BatchExecuteStatementInput = BatchExecuteStatementInput;

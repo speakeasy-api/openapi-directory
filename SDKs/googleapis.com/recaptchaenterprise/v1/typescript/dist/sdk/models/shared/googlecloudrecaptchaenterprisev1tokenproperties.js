@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecaptchaenterpriseV1TokenProperties = exports.GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum;
 (function (GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum) {
     GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum["InvalidReasonUnspecified"] = "INVALID_REASON_UNSPECIFIED";
     GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum["UnknownInvalidReason"] = "UNKNOWN_INVALID_REASON";
@@ -32,40 +35,40 @@ export var GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum;
     GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum["Dupe"] = "DUPE";
     GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum["Missing"] = "MISSING";
     GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum["BrowserError"] = "BROWSER_ERROR";
-})(GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum || (GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum = {}));
+})(GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum = exports.GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum || (exports.GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum = {}));
 var GoogleCloudRecaptchaenterpriseV1TokenProperties = /** @class */ (function (_super) {
     __extends(GoogleCloudRecaptchaenterpriseV1TokenProperties, _super);
     function GoogleCloudRecaptchaenterpriseV1TokenProperties() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1TokenProperties.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidPackageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidPackageName" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1TokenProperties.prototype, "androidPackageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1TokenProperties.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostname" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1TokenProperties.prototype, "hostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invalidReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invalidReason" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1TokenProperties.prototype, "invalidReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosBundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosBundleId" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1TokenProperties.prototype, "iosBundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valid" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudRecaptchaenterpriseV1TokenProperties.prototype, "valid", void 0);
     return GoogleCloudRecaptchaenterpriseV1TokenProperties;
-}(SpeakeasyBase));
-export { GoogleCloudRecaptchaenterpriseV1TokenProperties };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecaptchaenterpriseV1TokenProperties = GoogleCloudRecaptchaenterpriseV1TokenProperties;

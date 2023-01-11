@@ -16,28 +16,27 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { PostCloseAccountRequest, PostCloseAccountResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { PostCloseAccountHolderRequest, PostCloseAccountHolderResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: PostCloseAccountRequest = {
+const req: PostCloseAccountHolderRequest = {
   security: {
     basicAuth: {
       password: "YOUR_PASSWORD_HERE",
       username: "YOUR_USERNAME_HERE",
     },
   },
-  request: "inventore",
+  request: "sit",
 };
 
-sdk.sdk.postCloseAccount(req).then((res: PostCloseAccountResponse | AxiosError) => {
+sdk.accountHolders.postCloseAccountHolder(req).then((res: PostCloseAccountHolderResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -46,23 +45,29 @@ sdk.sdk.postCloseAccount(req).then((res: PostCloseAccountResponse | AxiosError) 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Account holders
+
+* `postCloseAccountHolder` - Close an account holder.
+* `postCreateAccountHolder` - Create a new account holder.
+* `postGetAccountHolder` - Get an account holder.
+* `postGetTaxForm` - Get a tax form.
+* `postSuspendAccountHolder` - Suspend an account holder.
+* `postUnSuspendAccountHolder` - Unsuspend an account holder.
+* `postUpdateAccountHolder` - Update an account holder.
+* `postUpdateAccountHolderState` - Update payout or processing state.
+
+### Accounts
 
 * `postCloseAccount` - Close an account.
-* `postCloseAccountHolder` - Close an account holder.
 * `postCreateAccount` - Create a new account.
-* `postCreateAccountHolder` - Create a new account holder.
+* `postUpdateAccount` - Update an account.
+
+### Verification
+
 * `postDeleteBankAccounts` - Delete bank accounts.
 * `postDeleteShareholders` - Delete shareholders.
 * `postDeleteSignatories` - Delete signatories.
-* `postGetAccountHolder` - Get an account holder.
-* `postGetTaxForm` - Get a tax form.
 * `postGetUploadedDocuments` - Get documents.
-* `postSuspendAccountHolder` - Suspend an account holder.
-* `postUnSuspendAccountHolder` - Unsuspend an account holder.
-* `postUpdateAccount` - Update an account.
-* `postUpdateAccountHolder` - Update an account holder.
-* `postUpdateAccountHolderState` - Update payout or processing state.
 * `postUploadDocument` - Upload a document.
 
 <!-- End SDK Available Operations -->

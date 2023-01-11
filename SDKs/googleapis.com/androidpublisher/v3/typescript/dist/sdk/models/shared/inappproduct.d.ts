@@ -20,10 +20,10 @@ export declare class InAppProduct extends SpeakeasyBase {
     defaultLanguage?: string;
     defaultPrice?: Price;
     gracePeriod?: string;
-    listings?: Map<string, InAppProductListing>;
+    listings?: Record<string, InAppProductListing>;
     managedProductTaxesAndComplianceSettings?: ManagedProductTaxAndComplianceSettings;
     packageName?: string;
-    prices?: Map<string, Price>;
+    prices?: Record<string, Price>;
     purchaseType?: InAppProductPurchaseTypeEnum;
     sku?: string;
     status?: InAppProductStatusEnum;

@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FunctionSummary } from "./functionsummary";
+import { FunctionSummaryList } from "./functionsummarylist";
 
 
 
@@ -8,8 +8,8 @@ import { FunctionSummary } from "./functionsummary";
  * A list of CloudFront functions.
 **/
 export class FunctionList extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: FunctionSummary })
-  items?: FunctionSummary[];
+  @SpeakeasyMetadata({ elemType: FunctionSummaryList })
+  items?: FunctionSummaryList[];
 
   @SpeakeasyMetadata()
   maxItems: number;

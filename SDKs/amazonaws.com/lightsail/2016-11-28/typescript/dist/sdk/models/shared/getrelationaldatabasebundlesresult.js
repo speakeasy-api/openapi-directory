@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RelationalDatabaseBundle } from "./relationaldatabasebundle";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRelationalDatabaseBundlesResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var relationaldatabasebundle_1 = require("./relationaldatabasebundle");
 var GetRelationalDatabaseBundlesResult = /** @class */ (function (_super) {
     __extends(GetRelationalDatabaseBundlesResult, _super);
     function GetRelationalDatabaseBundlesResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundles", elemType: RelationalDatabaseBundle }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundles", elemType: relationaldatabasebundle_1.RelationalDatabaseBundle }),
         __metadata("design:type", Array)
     ], GetRelationalDatabaseBundlesResult.prototype, "bundles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GetRelationalDatabaseBundlesResult.prototype, "nextPageToken", void 0);
     return GetRelationalDatabaseBundlesResult;
-}(SpeakeasyBase));
-export { GetRelationalDatabaseBundlesResult };
+}(utils_1.SpeakeasyBase));
+exports.GetRelationalDatabaseBundlesResult = GetRelationalDatabaseBundlesResult;

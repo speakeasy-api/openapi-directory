@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReplaceRootVolumeTask } from "./replacerootvolumetask";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateReplaceRootVolumeTaskResult = exports.CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask
+/**
+ * Information about the root volume replacement task.
+**/
+var CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask = /** @class */ (function (_super) {
+    __extends(CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask, _super);
+    function CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask.prototype, "completeTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask.prototype, "instanceId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask.prototype, "replaceRootVolumeTaskId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask.prototype, "startTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask.prototype, "taskState", void 0);
+    return CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask;
+}(utils_1.SpeakeasyBase));
+exports.CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask = CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask;
 var CreateReplaceRootVolumeTaskResult = /** @class */ (function (_super) {
     __extends(CreateReplaceRootVolumeTaskResult, _super);
     function CreateReplaceRootVolumeTaskResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ReplaceRootVolumeTask)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateReplaceRootVolumeTaskResultReplaceRootVolumeTask)
     ], CreateReplaceRootVolumeTaskResult.prototype, "replaceRootVolumeTask", void 0);
     return CreateReplaceRootVolumeTaskResult;
-}(SpeakeasyBase));
-export { CreateReplaceRootVolumeTaskResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateReplaceRootVolumeTaskResult = CreateReplaceRootVolumeTaskResult;

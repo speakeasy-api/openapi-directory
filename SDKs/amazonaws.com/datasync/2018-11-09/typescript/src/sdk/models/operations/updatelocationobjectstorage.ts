@@ -57,5 +57,5 @@ export class UpdateLocationObjectStorageResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateLocationObjectStorageResponse?: Map<string, any>;
+  updateLocationObjectStorageResponse?: Record<string, any>;
 }

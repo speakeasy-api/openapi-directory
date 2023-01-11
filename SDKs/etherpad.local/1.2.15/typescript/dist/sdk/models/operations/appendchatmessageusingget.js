@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,152 +23,154 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppendChatMessageUsingGetResponse = exports.AppendChatMessageUsingGetRequest = exports.AppendChatMessageUsingGet500ApplicationJson = exports.AppendChatMessageUsingGet401ApplicationJson = exports.AppendChatMessageUsingGet400ApplicationJson = exports.AppendChatMessageUsingGet200ApplicationJson = exports.AppendChatMessageUsingGetQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AppendChatMessageUsingGetQueryParams = /** @class */ (function (_super) {
     __extends(AppendChatMessageUsingGetQueryParams, _super);
     function AppendChatMessageUsingGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=authorID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=authorID" }),
         __metadata("design:type", String)
-    ], AppendChatMessageUsingGetQueryParams.prototype, "authorId", void 0);
+    ], AppendChatMessageUsingGetQueryParams.prototype, "authorID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=padID" }),
         __metadata("design:type", String)
-    ], AppendChatMessageUsingGetQueryParams.prototype, "padId", void 0);
+    ], AppendChatMessageUsingGetQueryParams.prototype, "padID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], AppendChatMessageUsingGetQueryParams.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=time" }),
         __metadata("design:type", String)
     ], AppendChatMessageUsingGetQueryParams.prototype, "time", void 0);
     return AppendChatMessageUsingGetQueryParams;
-}(SpeakeasyBase));
-export { AppendChatMessageUsingGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AppendChatMessageUsingGetQueryParams = AppendChatMessageUsingGetQueryParams;
 var AppendChatMessageUsingGet200ApplicationJson = /** @class */ (function (_super) {
     __extends(AppendChatMessageUsingGet200ApplicationJson, _super);
     function AppendChatMessageUsingGet200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], AppendChatMessageUsingGet200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], AppendChatMessageUsingGet200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], AppendChatMessageUsingGet200ApplicationJson.prototype, "message", void 0);
     return AppendChatMessageUsingGet200ApplicationJson;
-}(SpeakeasyBase));
-export { AppendChatMessageUsingGet200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AppendChatMessageUsingGet200ApplicationJson = AppendChatMessageUsingGet200ApplicationJson;
 var AppendChatMessageUsingGet400ApplicationJson = /** @class */ (function (_super) {
     __extends(AppendChatMessageUsingGet400ApplicationJson, _super);
     function AppendChatMessageUsingGet400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], AppendChatMessageUsingGet400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], AppendChatMessageUsingGet400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], AppendChatMessageUsingGet400ApplicationJson.prototype, "message", void 0);
     return AppendChatMessageUsingGet400ApplicationJson;
-}(SpeakeasyBase));
-export { AppendChatMessageUsingGet400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AppendChatMessageUsingGet400ApplicationJson = AppendChatMessageUsingGet400ApplicationJson;
 var AppendChatMessageUsingGet401ApplicationJson = /** @class */ (function (_super) {
     __extends(AppendChatMessageUsingGet401ApplicationJson, _super);
     function AppendChatMessageUsingGet401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], AppendChatMessageUsingGet401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], AppendChatMessageUsingGet401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], AppendChatMessageUsingGet401ApplicationJson.prototype, "message", void 0);
     return AppendChatMessageUsingGet401ApplicationJson;
-}(SpeakeasyBase));
-export { AppendChatMessageUsingGet401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AppendChatMessageUsingGet401ApplicationJson = AppendChatMessageUsingGet401ApplicationJson;
 var AppendChatMessageUsingGet500ApplicationJson = /** @class */ (function (_super) {
     __extends(AppendChatMessageUsingGet500ApplicationJson, _super);
     function AppendChatMessageUsingGet500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], AppendChatMessageUsingGet500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], AppendChatMessageUsingGet500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], AppendChatMessageUsingGet500ApplicationJson.prototype, "message", void 0);
     return AppendChatMessageUsingGet500ApplicationJson;
-}(SpeakeasyBase));
-export { AppendChatMessageUsingGet500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AppendChatMessageUsingGet500ApplicationJson = AppendChatMessageUsingGet500ApplicationJson;
 var AppendChatMessageUsingGetRequest = /** @class */ (function (_super) {
     __extends(AppendChatMessageUsingGetRequest, _super);
     function AppendChatMessageUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppendChatMessageUsingGetQueryParams)
     ], AppendChatMessageUsingGetRequest.prototype, "queryParams", void 0);
     return AppendChatMessageUsingGetRequest;
-}(SpeakeasyBase));
-export { AppendChatMessageUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.AppendChatMessageUsingGetRequest = AppendChatMessageUsingGetRequest;
 var AppendChatMessageUsingGetResponse = /** @class */ (function (_super) {
     __extends(AppendChatMessageUsingGetResponse, _super);
     function AppendChatMessageUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AppendChatMessageUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AppendChatMessageUsingGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppendChatMessageUsingGet200ApplicationJson)
-    ], AppendChatMessageUsingGetResponse.prototype, "appendChatMessageUsingGet200ApplicationJsonObject", void 0);
+    ], AppendChatMessageUsingGetResponse.prototype, "appendChatMessageUsingGET200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppendChatMessageUsingGet400ApplicationJson)
-    ], AppendChatMessageUsingGetResponse.prototype, "appendChatMessageUsingGet400ApplicationJsonObject", void 0);
+    ], AppendChatMessageUsingGetResponse.prototype, "appendChatMessageUsingGET400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppendChatMessageUsingGet401ApplicationJson)
-    ], AppendChatMessageUsingGetResponse.prototype, "appendChatMessageUsingGet401ApplicationJsonObject", void 0);
+    ], AppendChatMessageUsingGetResponse.prototype, "appendChatMessageUsingGET401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppendChatMessageUsingGet500ApplicationJson)
-    ], AppendChatMessageUsingGetResponse.prototype, "appendChatMessageUsingGet500ApplicationJsonObject", void 0);
+    ], AppendChatMessageUsingGetResponse.prototype, "appendChatMessageUsingGET500ApplicationJSONObject", void 0);
     return AppendChatMessageUsingGetResponse;
-}(SpeakeasyBase));
-export { AppendChatMessageUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.AppendChatMessageUsingGetResponse = AppendChatMessageUsingGetResponse;

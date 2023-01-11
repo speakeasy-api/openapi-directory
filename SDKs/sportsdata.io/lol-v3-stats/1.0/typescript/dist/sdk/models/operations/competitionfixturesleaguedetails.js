@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CompetitionFixturesLeagueDetailsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompetitionFixturesLeagueDetailsResponse = exports.CompetitionFixturesLeagueDetailsRequest = exports.CompetitionFixturesLeagueDetailsPathParams = exports.CompetitionFixturesLeagueDetailsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CompetitionFixturesLeagueDetailsFormatEnum;
 (function (CompetitionFixturesLeagueDetailsFormatEnum) {
     CompetitionFixturesLeagueDetailsFormatEnum["Xml"] = "xml";
     CompetitionFixturesLeagueDetailsFormatEnum["Json"] = "json";
-})(CompetitionFixturesLeagueDetailsFormatEnum || (CompetitionFixturesLeagueDetailsFormatEnum = {}));
+})(CompetitionFixturesLeagueDetailsFormatEnum = exports.CompetitionFixturesLeagueDetailsFormatEnum || (exports.CompetitionFixturesLeagueDetailsFormatEnum = {}));
 var CompetitionFixturesLeagueDetailsPathParams = /** @class */ (function (_super) {
     __extends(CompetitionFixturesLeagueDetailsPathParams, _super);
     function CompetitionFixturesLeagueDetailsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=competitionid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=competitionid" }),
         __metadata("design:type", String)
     ], CompetitionFixturesLeagueDetailsPathParams.prototype, "competitionid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], CompetitionFixturesLeagueDetailsPathParams.prototype, "format", void 0);
     return CompetitionFixturesLeagueDetailsPathParams;
-}(SpeakeasyBase));
-export { CompetitionFixturesLeagueDetailsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CompetitionFixturesLeagueDetailsPathParams = CompetitionFixturesLeagueDetailsPathParams;
 var CompetitionFixturesLeagueDetailsRequest = /** @class */ (function (_super) {
     __extends(CompetitionFixturesLeagueDetailsRequest, _super);
     function CompetitionFixturesLeagueDetailsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CompetitionFixturesLeagueDetailsPathParams)
     ], CompetitionFixturesLeagueDetailsRequest.prototype, "pathParams", void 0);
     return CompetitionFixturesLeagueDetailsRequest;
-}(SpeakeasyBase));
-export { CompetitionFixturesLeagueDetailsRequest };
+}(utils_1.SpeakeasyBase));
+exports.CompetitionFixturesLeagueDetailsRequest = CompetitionFixturesLeagueDetailsRequest;
 var CompetitionFixturesLeagueDetailsResponse = /** @class */ (function (_super) {
     __extends(CompetitionFixturesLeagueDetailsResponse, _super);
     function CompetitionFixturesLeagueDetailsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CompetitionFixturesLeagueDetailsResponse.prototype, "competitionDetail", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CompetitionFixturesLeagueDetailsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CompetitionFixturesLeagueDetailsResponse.prototype, "statusCode", void 0);
     return CompetitionFixturesLeagueDetailsResponse;
-}(SpeakeasyBase));
-export { CompetitionFixturesLeagueDetailsResponse };
+}(utils_1.SpeakeasyBase));
+exports.CompetitionFixturesLeagueDetailsResponse = CompetitionFixturesLeagueDetailsResponse;

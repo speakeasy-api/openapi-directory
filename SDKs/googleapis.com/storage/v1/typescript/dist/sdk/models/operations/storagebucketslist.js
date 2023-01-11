@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,227 +14,252 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var StorageBucketsListProjectionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StorageBucketsListResponse = exports.StorageBucketsListRequest = exports.StorageBucketsListSecurity = exports.StorageBucketsListSecurityOption5 = exports.StorageBucketsListSecurityOption4 = exports.StorageBucketsListSecurityOption3 = exports.StorageBucketsListSecurityOption2 = exports.StorageBucketsListSecurityOption1 = exports.StorageBucketsListQueryParams = exports.StorageBucketsListProjectionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var StorageBucketsListProjectionEnum;
 (function (StorageBucketsListProjectionEnum) {
     StorageBucketsListProjectionEnum["Full"] = "full";
     StorageBucketsListProjectionEnum["NoAcl"] = "noAcl";
-})(StorageBucketsListProjectionEnum || (StorageBucketsListProjectionEnum = {}));
+})(StorageBucketsListProjectionEnum = exports.StorageBucketsListProjectionEnum || (exports.StorageBucketsListProjectionEnum = {}));
 var StorageBucketsListQueryParams = /** @class */ (function (_super) {
     __extends(StorageBucketsListQueryParams, _super);
     function StorageBucketsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], StorageBucketsListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], StorageBucketsListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], StorageBucketsListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxResults" }),
         __metadata("design:type", Number)
     ], StorageBucketsListQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], StorageBucketsListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], StorageBucketsListQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prefix" }),
         __metadata("design:type", String)
     ], StorageBucketsListQueryParams.prototype, "prefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], StorageBucketsListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=project" }),
         __metadata("design:type", String)
     ], StorageBucketsListQueryParams.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=projection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=projection" }),
         __metadata("design:type", String)
     ], StorageBucketsListQueryParams.prototype, "projection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], StorageBucketsListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], StorageBucketsListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], StorageBucketsListQueryParams.prototype, "userIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userProject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userProject" }),
         __metadata("design:type", String)
     ], StorageBucketsListQueryParams.prototype, "userProject", void 0);
     return StorageBucketsListQueryParams;
-}(SpeakeasyBase));
-export { StorageBucketsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsListQueryParams = StorageBucketsListQueryParams;
 var StorageBucketsListSecurityOption1 = /** @class */ (function (_super) {
     __extends(StorageBucketsListSecurityOption1, _super);
     function StorageBucketsListSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageBucketsListSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageBucketsListSecurityOption1.prototype, "oauth2c", void 0);
     return StorageBucketsListSecurityOption1;
-}(SpeakeasyBase));
-export { StorageBucketsListSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsListSecurityOption1 = StorageBucketsListSecurityOption1;
 var StorageBucketsListSecurityOption2 = /** @class */ (function (_super) {
     __extends(StorageBucketsListSecurityOption2, _super);
     function StorageBucketsListSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageBucketsListSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageBucketsListSecurityOption2.prototype, "oauth2c", void 0);
     return StorageBucketsListSecurityOption2;
-}(SpeakeasyBase));
-export { StorageBucketsListSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsListSecurityOption2 = StorageBucketsListSecurityOption2;
 var StorageBucketsListSecurityOption3 = /** @class */ (function (_super) {
     __extends(StorageBucketsListSecurityOption3, _super);
     function StorageBucketsListSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageBucketsListSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageBucketsListSecurityOption3.prototype, "oauth2c", void 0);
     return StorageBucketsListSecurityOption3;
-}(SpeakeasyBase));
-export { StorageBucketsListSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsListSecurityOption3 = StorageBucketsListSecurityOption3;
 var StorageBucketsListSecurityOption4 = /** @class */ (function (_super) {
     __extends(StorageBucketsListSecurityOption4, _super);
     function StorageBucketsListSecurityOption4() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageBucketsListSecurityOption4.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageBucketsListSecurityOption4.prototype, "oauth2c", void 0);
     return StorageBucketsListSecurityOption4;
-}(SpeakeasyBase));
-export { StorageBucketsListSecurityOption4 };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsListSecurityOption4 = StorageBucketsListSecurityOption4;
 var StorageBucketsListSecurityOption5 = /** @class */ (function (_super) {
     __extends(StorageBucketsListSecurityOption5, _super);
     function StorageBucketsListSecurityOption5() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageBucketsListSecurityOption5.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageBucketsListSecurityOption5.prototype, "oauth2c", void 0);
     return StorageBucketsListSecurityOption5;
-}(SpeakeasyBase));
-export { StorageBucketsListSecurityOption5 };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsListSecurityOption5 = StorageBucketsListSecurityOption5;
 var StorageBucketsListSecurity = /** @class */ (function (_super) {
     __extends(StorageBucketsListSecurity, _super);
     function StorageBucketsListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageBucketsListSecurityOption1)
     ], StorageBucketsListSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageBucketsListSecurityOption2)
     ], StorageBucketsListSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageBucketsListSecurityOption3)
     ], StorageBucketsListSecurity.prototype, "option3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageBucketsListSecurityOption4)
     ], StorageBucketsListSecurity.prototype, "option4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageBucketsListSecurityOption5)
     ], StorageBucketsListSecurity.prototype, "option5", void 0);
     return StorageBucketsListSecurity;
-}(SpeakeasyBase));
-export { StorageBucketsListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsListSecurity = StorageBucketsListSecurity;
 var StorageBucketsListRequest = /** @class */ (function (_super) {
     __extends(StorageBucketsListRequest, _super);
     function StorageBucketsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StorageBucketsListQueryParams)
     ], StorageBucketsListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StorageBucketsListSecurity)
     ], StorageBucketsListRequest.prototype, "security", void 0);
     return StorageBucketsListRequest;
-}(SpeakeasyBase));
-export { StorageBucketsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsListRequest = StorageBucketsListRequest;
 var StorageBucketsListResponse = /** @class */ (function (_super) {
     __extends(StorageBucketsListResponse, _super);
     function StorageBucketsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Buckets)
     ], StorageBucketsListResponse.prototype, "buckets", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StorageBucketsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StorageBucketsListResponse.prototype, "statusCode", void 0);
     return StorageBucketsListResponse;
-}(SpeakeasyBase));
-export { StorageBucketsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.StorageBucketsListResponse = StorageBucketsListResponse;

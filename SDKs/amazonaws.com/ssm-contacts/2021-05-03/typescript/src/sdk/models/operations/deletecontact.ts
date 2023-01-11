@@ -51,7 +51,7 @@ export class DeleteContactResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteContactResult?: Map<string, any>;
+  deleteContactResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

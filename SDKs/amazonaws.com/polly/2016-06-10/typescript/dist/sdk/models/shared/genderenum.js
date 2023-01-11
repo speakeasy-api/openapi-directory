@@ -1,5 +1,8 @@
-export var GenderEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GenderEnum = void 0;
+var GenderEnum;
 (function (GenderEnum) {
     GenderEnum["Female"] = "Female";
     GenderEnum["Male"] = "Male";
-})(GenderEnum || (GenderEnum = {}));
+})(GenderEnum = exports.GenderEnum || (exports.GenderEnum = {}));

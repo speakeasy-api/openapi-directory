@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Color } from "./color";
-export var ColorStyleThemeColorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ColorStyle = exports.ColorStyleThemeColorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var color_1 = require("./color");
+var ColorStyleThemeColorEnum;
 (function (ColorStyleThemeColorEnum) {
     ColorStyleThemeColorEnum["ThemeColorTypeUnspecified"] = "THEME_COLOR_TYPE_UNSPECIFIED";
     ColorStyleThemeColorEnum["Text"] = "TEXT";
@@ -36,7 +39,7 @@ export var ColorStyleThemeColorEnum;
     ColorStyleThemeColorEnum["Accent5"] = "ACCENT5";
     ColorStyleThemeColorEnum["Accent6"] = "ACCENT6";
     ColorStyleThemeColorEnum["Link"] = "LINK";
-})(ColorStyleThemeColorEnum || (ColorStyleThemeColorEnum = {}));
+})(ColorStyleThemeColorEnum = exports.ColorStyleThemeColorEnum || (exports.ColorStyleThemeColorEnum = {}));
 // ColorStyle
 /**
  * A color value.
@@ -47,13 +50,13 @@ var ColorStyle = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rgbColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rgbColor" }),
+        __metadata("design:type", color_1.Color)
     ], ColorStyle.prototype, "rgbColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=themeColor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=themeColor" }),
         __metadata("design:type", String)
     ], ColorStyle.prototype, "themeColor", void 0);
     return ColorStyle;
-}(SpeakeasyBase));
-export { ColorStyle };
+}(utils_1.SpeakeasyBase));
+exports.ColorStyle = ColorStyle;

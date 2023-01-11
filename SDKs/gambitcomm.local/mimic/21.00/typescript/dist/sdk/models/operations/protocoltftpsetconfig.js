@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolTftpSetConfigResponse = exports.ProtocolTftpSetConfigRequest = exports.ProtocolTftpSetConfigPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolTftpSetConfigPathParams = /** @class */ (function (_super) {
     __extends(ProtocolTftpSetConfigPathParams, _super);
     function ProtocolTftpSetConfigPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolTftpSetConfigPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=argument" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=argument" }),
         __metadata("design:type", String)
     ], ProtocolTftpSetConfigPathParams.prototype, "argument", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=value" }),
         __metadata("design:type", String)
     ], ProtocolTftpSetConfigPathParams.prototype, "value", void 0);
     return ProtocolTftpSetConfigPathParams;
-}(SpeakeasyBase));
-export { ProtocolTftpSetConfigPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTftpSetConfigPathParams = ProtocolTftpSetConfigPathParams;
 var ProtocolTftpSetConfigRequest = /** @class */ (function (_super) {
     __extends(ProtocolTftpSetConfigRequest, _super);
     function ProtocolTftpSetConfigRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolTftpSetConfigPathParams)
     ], ProtocolTftpSetConfigRequest.prototype, "pathParams", void 0);
     return ProtocolTftpSetConfigRequest;
-}(SpeakeasyBase));
-export { ProtocolTftpSetConfigRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTftpSetConfigRequest = ProtocolTftpSetConfigRequest;
 var ProtocolTftpSetConfigResponse = /** @class */ (function (_super) {
     __extends(ProtocolTftpSetConfigResponse, _super);
     function ProtocolTftpSetConfigResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolTftpSetConfigResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolTftpSetConfigResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolTftpSetConfigResponse.prototype, "protocolTftpSetConfig200ApplicationJsonString", void 0);
+    ], ProtocolTftpSetConfigResponse.prototype, "protocolTftpSetConfig200ApplicationJSONString", void 0);
     return ProtocolTftpSetConfigResponse;
-}(SpeakeasyBase));
-export { ProtocolTftpSetConfigResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTftpSetConfigResponse = ProtocolTftpSetConfigResponse;

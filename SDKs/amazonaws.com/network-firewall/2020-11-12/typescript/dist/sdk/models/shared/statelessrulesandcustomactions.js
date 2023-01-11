@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomAction } from "./customaction";
-import { StatelessRule } from "./statelessrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StatelessRulesAndCustomActions = void 0;
+var utils_1 = require("../../../internal/utils");
+var customaction_1 = require("./customaction");
+var statelessrule_1 = require("./statelessrule");
 // StatelessRulesAndCustomActions
 /**
  * Stateless inspection criteria. Each stateless rule group uses exactly one of these data types to define its stateless rules.
@@ -35,13 +38,13 @@ var StatelessRulesAndCustomActions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomActions", elemType: CustomAction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomActions", elemType: customaction_1.CustomAction }),
         __metadata("design:type", Array)
     ], StatelessRulesAndCustomActions.prototype, "customActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatelessRules", elemType: StatelessRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatelessRules", elemType: statelessrule_1.StatelessRule }),
         __metadata("design:type", Array)
     ], StatelessRulesAndCustomActions.prototype, "statelessRules", void 0);
     return StatelessRulesAndCustomActions;
-}(SpeakeasyBase));
-export { StatelessRulesAndCustomActions };
+}(utils_1.SpeakeasyBase));
+exports.StatelessRulesAndCustomActions = StatelessRulesAndCustomActions;

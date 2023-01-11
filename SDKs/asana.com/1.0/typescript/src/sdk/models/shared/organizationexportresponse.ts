@@ -10,6 +10,10 @@ export enum OrganizationExportResponseStateEnum {
 }
 
 
+// OrganizationExportResponse
+/** 
+ * An *organization_export* object represents a request to export the complete data of an Organization in JSON format.
+**/
 export class OrganizationExportResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=created_at" })
   createdAt?: Date;

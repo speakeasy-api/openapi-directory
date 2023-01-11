@@ -62,7 +62,7 @@ export class CloudchannelOperationsCancelRequest extends SpeakeasyBase {
   queryParams: CloudchannelOperationsCancelQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: CloudchannelOperationsCancelSecurity;
@@ -74,7 +74,7 @@ export class CloudchannelOperationsCancelResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  googleProtobufEmpty?: Map<string, any>;
+  googleProtobufEmpty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

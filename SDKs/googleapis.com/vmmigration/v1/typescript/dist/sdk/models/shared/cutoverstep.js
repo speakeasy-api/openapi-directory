@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReplicationCycle } from "./replicationcycle";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CutoverStep = void 0;
+var utils_1 = require("../../../internal/utils");
+var replicationcycle_1 = require("./replicationcycle");
 // CutoverStep
 /**
  * CutoverStep holds information about the cutover step progress.
@@ -34,33 +37,33 @@ var CutoverStep = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], CutoverStep.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finalSync" }),
-        __metadata("design:type", ReplicationCycle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finalSync" }),
+        __metadata("design:type", replicationcycle_1.ReplicationCycle)
     ], CutoverStep.prototype, "finalSync", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instantiatingMigratedVm" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instantiatingMigratedVm" }),
+        __metadata("design:type", Object)
     ], CutoverStep.prototype, "instantiatingMigratedVm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preparingVmDisks" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preparingVmDisks" }),
+        __metadata("design:type", Object)
     ], CutoverStep.prototype, "preparingVmDisks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previousReplicationCycle" }),
-        __metadata("design:type", ReplicationCycle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previousReplicationCycle" }),
+        __metadata("design:type", replicationcycle_1.ReplicationCycle)
     ], CutoverStep.prototype, "previousReplicationCycle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shuttingDownSourceVm" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shuttingDownSourceVm" }),
+        __metadata("design:type", Object)
     ], CutoverStep.prototype, "shuttingDownSourceVm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], CutoverStep.prototype, "startTime", void 0);
     return CutoverStep;
-}(SpeakeasyBase));
-export { CutoverStep };
+}(utils_1.SpeakeasyBase));
+exports.CutoverStep = CutoverStep;

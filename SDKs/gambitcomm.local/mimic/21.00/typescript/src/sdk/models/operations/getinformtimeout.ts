@@ -22,5 +22,5 @@ export class GetInformTimeoutResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getInformTimeout200ApplicationJsonInt32Integer?: number;
+  getInformTimeout200ApplicationJSONInt32Integer?: number;
 }

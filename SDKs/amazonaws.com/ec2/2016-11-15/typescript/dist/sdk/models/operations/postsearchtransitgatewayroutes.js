@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostSearchTransitGatewayRoutesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostSearchTransitGatewayRoutesResponse = exports.PostSearchTransitGatewayRoutesRequest = exports.PostSearchTransitGatewayRoutesHeaders = exports.PostSearchTransitGatewayRoutesQueryParams = exports.PostSearchTransitGatewayRoutesVersionEnum = exports.PostSearchTransitGatewayRoutesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostSearchTransitGatewayRoutesActionEnum;
 (function (PostSearchTransitGatewayRoutesActionEnum) {
     PostSearchTransitGatewayRoutesActionEnum["SearchTransitGatewayRoutes"] = "SearchTransitGatewayRoutes";
-})(PostSearchTransitGatewayRoutesActionEnum || (PostSearchTransitGatewayRoutesActionEnum = {}));
-export var PostSearchTransitGatewayRoutesVersionEnum;
+})(PostSearchTransitGatewayRoutesActionEnum = exports.PostSearchTransitGatewayRoutesActionEnum || (exports.PostSearchTransitGatewayRoutesActionEnum = {}));
+var PostSearchTransitGatewayRoutesVersionEnum;
 (function (PostSearchTransitGatewayRoutesVersionEnum) {
     PostSearchTransitGatewayRoutesVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostSearchTransitGatewayRoutesVersionEnum || (PostSearchTransitGatewayRoutesVersionEnum = {}));
+})(PostSearchTransitGatewayRoutesVersionEnum = exports.PostSearchTransitGatewayRoutesVersionEnum || (exports.PostSearchTransitGatewayRoutesVersionEnum = {}));
 var PostSearchTransitGatewayRoutesQueryParams = /** @class */ (function (_super) {
     __extends(PostSearchTransitGatewayRoutesQueryParams, _super);
     function PostSearchTransitGatewayRoutesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostSearchTransitGatewayRoutesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostSearchTransitGatewayRoutesQueryParams.prototype, "version", void 0);
     return PostSearchTransitGatewayRoutesQueryParams;
-}(SpeakeasyBase));
-export { PostSearchTransitGatewayRoutesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostSearchTransitGatewayRoutesQueryParams = PostSearchTransitGatewayRoutesQueryParams;
 var PostSearchTransitGatewayRoutesHeaders = /** @class */ (function (_super) {
     __extends(PostSearchTransitGatewayRoutesHeaders, _super);
     function PostSearchTransitGatewayRoutesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostSearchTransitGatewayRoutesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostSearchTransitGatewayRoutesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostSearchTransitGatewayRoutesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostSearchTransitGatewayRoutesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostSearchTransitGatewayRoutesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostSearchTransitGatewayRoutesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostSearchTransitGatewayRoutesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostSearchTransitGatewayRoutesHeaders;
-}(SpeakeasyBase));
-export { PostSearchTransitGatewayRoutesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostSearchTransitGatewayRoutesHeaders = PostSearchTransitGatewayRoutesHeaders;
 var PostSearchTransitGatewayRoutesRequest = /** @class */ (function (_super) {
     __extends(PostSearchTransitGatewayRoutesRequest, _super);
     function PostSearchTransitGatewayRoutesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostSearchTransitGatewayRoutesQueryParams)
     ], PostSearchTransitGatewayRoutesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostSearchTransitGatewayRoutesHeaders)
     ], PostSearchTransitGatewayRoutesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostSearchTransitGatewayRoutesRequest.prototype, "request", void 0);
     return PostSearchTransitGatewayRoutesRequest;
-}(SpeakeasyBase));
-export { PostSearchTransitGatewayRoutesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostSearchTransitGatewayRoutesRequest = PostSearchTransitGatewayRoutesRequest;
 var PostSearchTransitGatewayRoutesResponse = /** @class */ (function (_super) {
     __extends(PostSearchTransitGatewayRoutesResponse, _super);
     function PostSearchTransitGatewayRoutesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostSearchTransitGatewayRoutesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostSearchTransitGatewayRoutesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostSearchTransitGatewayRoutesResponse.prototype, "statusCode", void 0);
     return PostSearchTransitGatewayRoutesResponse;
-}(SpeakeasyBase));
-export { PostSearchTransitGatewayRoutesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostSearchTransitGatewayRoutesResponse = PostSearchTransitGatewayRoutesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CheckResponseErrorCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CheckResponse = exports.CheckResponseErrorCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CheckResponseErrorCodeEnum;
 (function (CheckResponseErrorCodeEnum) {
     CheckResponseErrorCodeEnum["ErrorCodeUnspecified"] = "ERROR_CODE_UNSPECIFIED";
     CheckResponseErrorCodeEnum["ErrorCodeInvalidQuery"] = "ERROR_CODE_INVALID_QUERY";
@@ -36,7 +39,7 @@ export var CheckResponseErrorCodeEnum;
     CheckResponseErrorCodeEnum["ErrorCodeMalformedContent"] = "ERROR_CODE_MALFORMED_CONTENT";
     CheckResponseErrorCodeEnum["ErrorCodeSecureAssetIncludesInsecure"] = "ERROR_CODE_SECURE_ASSET_INCLUDES_INSECURE";
     CheckResponseErrorCodeEnum["ErrorCodeFetchBudgetExhausted"] = "ERROR_CODE_FETCH_BUDGET_EXHAUSTED";
-})(CheckResponseErrorCodeEnum || (CheckResponseErrorCodeEnum = {}));
+})(CheckResponseErrorCodeEnum = exports.CheckResponseErrorCodeEnum || (exports.CheckResponseErrorCodeEnum = {}));
 // CheckResponse
 /**
  * Response message for the CheckAssetLinks call.
@@ -47,21 +50,21 @@ var CheckResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=debugString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=debugString" }),
         __metadata("design:type", String)
     ], CheckResponse.prototype, "debugString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorCode" }),
         __metadata("design:type", Array)
     ], CheckResponse.prototype, "errorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linked" }),
         __metadata("design:type", Boolean)
     ], CheckResponse.prototype, "linked", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxAge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxAge" }),
         __metadata("design:type", String)
     ], CheckResponse.prototype, "maxAge", void 0);
     return CheckResponse;
-}(SpeakeasyBase));
-export { CheckResponse };
+}(utils_1.SpeakeasyBase));
+exports.CheckResponse = CheckResponse;

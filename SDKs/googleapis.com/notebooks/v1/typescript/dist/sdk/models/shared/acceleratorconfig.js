@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AcceleratorConfigTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AcceleratorConfig = exports.AcceleratorConfigTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AcceleratorConfigTypeEnum;
 (function (AcceleratorConfigTypeEnum) {
     AcceleratorConfigTypeEnum["AcceleratorTypeUnspecified"] = "ACCELERATOR_TYPE_UNSPECIFIED";
     AcceleratorConfigTypeEnum["NvidiaTeslaK80"] = "NVIDIA_TESLA_K80";
@@ -37,7 +40,7 @@ export var AcceleratorConfigTypeEnum;
     AcceleratorConfigTypeEnum["NvidiaTeslaP4Vws"] = "NVIDIA_TESLA_P4_VWS";
     AcceleratorConfigTypeEnum["TpuV2"] = "TPU_V2";
     AcceleratorConfigTypeEnum["TpuV3"] = "TPU_V3";
-})(AcceleratorConfigTypeEnum || (AcceleratorConfigTypeEnum = {}));
+})(AcceleratorConfigTypeEnum = exports.AcceleratorConfigTypeEnum || (exports.AcceleratorConfigTypeEnum = {}));
 // AcceleratorConfig
 /**
  * Definition of a hardware accelerator. Note that not all combinations of `type` and `core_count` are valid. Check [GPUs on Compute Engine](/compute/docs/gpus/#gpus-list) to find a valid combination. TPUs are not supported.
@@ -48,13 +51,13 @@ var AcceleratorConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coreCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coreCount" }),
         __metadata("design:type", String)
     ], AcceleratorConfig.prototype, "coreCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], AcceleratorConfig.prototype, "type", void 0);
     return AcceleratorConfig;
-}(SpeakeasyBase));
-export { AcceleratorConfig };
+}(utils_1.SpeakeasyBase));
+exports.AcceleratorConfig = AcceleratorConfig;

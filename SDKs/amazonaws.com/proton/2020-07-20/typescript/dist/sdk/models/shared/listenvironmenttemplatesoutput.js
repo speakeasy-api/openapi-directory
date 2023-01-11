@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EnvironmentTemplateSummary } from "./environmenttemplatesummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListEnvironmentTemplatesOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var environmenttemplatesummary_1 = require("./environmenttemplatesummary");
 var ListEnvironmentTemplatesOutput = /** @class */ (function (_super) {
     __extends(ListEnvironmentTemplatesOutput, _super);
     function ListEnvironmentTemplatesOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListEnvironmentTemplatesOutput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=templates", elemType: EnvironmentTemplateSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=templates", elemType: environmenttemplatesummary_1.EnvironmentTemplateSummary }),
         __metadata("design:type", Array)
     ], ListEnvironmentTemplatesOutput.prototype, "templates", void 0);
     return ListEnvironmentTemplatesOutput;
-}(SpeakeasyBase));
-export { ListEnvironmentTemplatesOutput };
+}(utils_1.SpeakeasyBase));
+exports.ListEnvironmentTemplatesOutput = ListEnvironmentTemplatesOutput;

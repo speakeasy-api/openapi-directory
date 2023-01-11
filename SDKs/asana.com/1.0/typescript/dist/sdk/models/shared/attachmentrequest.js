@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttachmentRequest = exports.AttachmentRequestResourceSubtypeEnum = exports.AttachmentRequestFile = void 0;
+var utils_1 = require("../../../internal/utils");
 var AttachmentRequestFile = /** @class */ (function (_super) {
     __extends(AttachmentRequestFile, _super);
     function AttachmentRequestFile() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, content=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
         __metadata("design:type", Uint8Array)
     ], AttachmentRequestFile.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=file" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=file" }),
         __metadata("design:type", String)
     ], AttachmentRequestFile.prototype, "file", void 0);
     return AttachmentRequestFile;
-}(SpeakeasyBase));
-export { AttachmentRequestFile };
-export var AttachmentRequestResourceSubtypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.AttachmentRequestFile = AttachmentRequestFile;
+var AttachmentRequestResourceSubtypeEnum;
 (function (AttachmentRequestResourceSubtypeEnum) {
     AttachmentRequestResourceSubtypeEnum["AsanaFileAttachments"] = "asana_file_attachments";
     AttachmentRequestResourceSubtypeEnum["External"] = "external";
-})(AttachmentRequestResourceSubtypeEnum || (AttachmentRequestResourceSubtypeEnum = {}));
+})(AttachmentRequestResourceSubtypeEnum = exports.AttachmentRequestResourceSubtypeEnum || (exports.AttachmentRequestResourceSubtypeEnum = {}));
 var AttachmentRequest = /** @class */ (function (_super) {
     __extends(AttachmentRequest, _super);
     function AttachmentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, file=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
         __metadata("design:type", AttachmentRequestFile)
     ], AttachmentRequest.prototype, "file", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=name" }),
         __metadata("design:type", String)
     ], AttachmentRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=resource_subtype" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=resource_subtype" }),
         __metadata("design:type", String)
     ], AttachmentRequest.prototype, "resourceSubtype", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=url" }),
         __metadata("design:type", String)
     ], AttachmentRequest.prototype, "url", void 0);
     return AttachmentRequest;
-}(SpeakeasyBase));
-export { AttachmentRequest };
+}(utils_1.SpeakeasyBase));
+exports.AttachmentRequest = AttachmentRequest;

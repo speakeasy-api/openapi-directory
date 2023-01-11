@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Deal } from "./deal";
-import { DealPausingInfo } from "./dealpausinginfo";
-import { RtbMetrics } from "./rtbmetrics";
-export var FinalizedDealDealServingStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FinalizedDeal = exports.FinalizedDealDealServingStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var deal_1 = require("./deal");
+var dealpausinginfo_1 = require("./dealpausinginfo");
+var rtbmetrics_1 = require("./rtbmetrics");
+var FinalizedDealDealServingStatusEnum;
 (function (FinalizedDealDealServingStatusEnum) {
     FinalizedDealDealServingStatusEnum["DealServingStatusUnspecified"] = "DEAL_SERVING_STATUS_UNSPECIFIED";
     FinalizedDealDealServingStatusEnum["Active"] = "ACTIVE";
     FinalizedDealDealServingStatusEnum["Ended"] = "ENDED";
     FinalizedDealDealServingStatusEnum["PausedByBuyer"] = "PAUSED_BY_BUYER";
     FinalizedDealDealServingStatusEnum["PausedBySeller"] = "PAUSED_BY_SELLER";
-})(FinalizedDealDealServingStatusEnum || (FinalizedDealDealServingStatusEnum = {}));
+})(FinalizedDealDealServingStatusEnum = exports.FinalizedDealDealServingStatusEnum || (exports.FinalizedDealDealServingStatusEnum = {}));
 // FinalizedDeal
 /**
  * A finalized deal is a snapshot of the deal when both buyer and seller accept the deal. The buyer or seller can update the deal after it's been finalized and renegotiate on the deal targeting, terms and other fields, while at the same time the finalized snapshot of the deal can still be retrieved using this API. The finalized deal contains a copy of the deal as it existed when most recently finalized, as well as fields related to deal serving such as pause/resume status, RTB metrics, and more.
@@ -44,29 +47,29 @@ var FinalizedDeal = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deal" }),
-        __metadata("design:type", Deal)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deal" }),
+        __metadata("design:type", deal_1.Deal)
     ], FinalizedDeal.prototype, "deal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dealPausingInfo" }),
-        __metadata("design:type", DealPausingInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dealPausingInfo" }),
+        __metadata("design:type", dealpausinginfo_1.DealPausingInfo)
     ], FinalizedDeal.prototype, "dealPausingInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dealServingStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dealServingStatus" }),
         __metadata("design:type", String)
     ], FinalizedDeal.prototype, "dealServingStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], FinalizedDeal.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readyToServe" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readyToServe" }),
         __metadata("design:type", Boolean)
     ], FinalizedDeal.prototype, "readyToServe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rtbMetrics" }),
-        __metadata("design:type", RtbMetrics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rtbMetrics" }),
+        __metadata("design:type", rtbmetrics_1.RtbMetrics)
     ], FinalizedDeal.prototype, "rtbMetrics", void 0);
     return FinalizedDeal;
-}(SpeakeasyBase));
-export { FinalizedDeal };
+}(utils_1.SpeakeasyBase));
+exports.FinalizedDeal = FinalizedDeal;

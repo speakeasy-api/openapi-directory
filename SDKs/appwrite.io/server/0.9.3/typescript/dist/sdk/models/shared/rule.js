@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Rule = void 0;
+var utils_1 = require("../../../internal/utils");
 // Rule
 /**
  * Rule
@@ -33,41 +36,41 @@ var Rule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=$collection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=$collection" }),
         __metadata("design:type", String)
     ], Rule.prototype, "dollarCollection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=$id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=$id" }),
         __metadata("design:type", String)
     ], Rule.prototype, "dollarId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=array" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=array" }),
         __metadata("design:type", Boolean)
     ], Rule.prototype, "array", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=default" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=default" }),
         __metadata("design:type", String)
     ], Rule.prototype, "default", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], Rule.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], Rule.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=list" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=list" }),
         __metadata("design:type", Array)
     ], Rule.prototype, "list", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=required" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=required" }),
         __metadata("design:type", Boolean)
     ], Rule.prototype, "required", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Rule.prototype, "type", void 0);
     return Rule;
-}(SpeakeasyBase));
-export { Rule };
+}(utils_1.SpeakeasyBase));
+exports.Rule = Rule;

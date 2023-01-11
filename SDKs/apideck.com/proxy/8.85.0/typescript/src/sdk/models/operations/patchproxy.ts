@@ -65,17 +65,14 @@ export class PatchProxyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
-
-  @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  patchProxy200ApplicationJsonAny?: any;
+  patchProxy200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  patchProxy401ApplicationJsonObject?: PatchProxy401ApplicationJson;
+  patchProxy401ApplicationJSONObject?: PatchProxy401ApplicationJson;
 
   @SpeakeasyMetadata()
-  patchProxyDefaultApplicationJsonAny?: any;
+  patchProxyDefaultApplicationJSONAny?: any;
 }

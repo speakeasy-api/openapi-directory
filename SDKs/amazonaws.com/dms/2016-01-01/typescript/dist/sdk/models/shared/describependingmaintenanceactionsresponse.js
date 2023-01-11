@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourcePendingMaintenanceActions } from "./resourcependingmaintenanceactions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribePendingMaintenanceActionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcependingmaintenanceactions_1 = require("./resourcependingmaintenanceactions");
 // DescribePendingMaintenanceActionsResponse
 /**
  * <p/>
@@ -34,13 +37,13 @@ var DescribePendingMaintenanceActionsResponse = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Marker" }),
         __metadata("design:type", String)
     ], DescribePendingMaintenanceActionsResponse.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PendingMaintenanceActions", elemType: ResourcePendingMaintenanceActions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PendingMaintenanceActions", elemType: resourcependingmaintenanceactions_1.ResourcePendingMaintenanceActions }),
         __metadata("design:type", Array)
     ], DescribePendingMaintenanceActionsResponse.prototype, "pendingMaintenanceActions", void 0);
     return DescribePendingMaintenanceActionsResponse;
-}(SpeakeasyBase));
-export { DescribePendingMaintenanceActionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribePendingMaintenanceActionsResponse = DescribePendingMaintenanceActionsResponse;

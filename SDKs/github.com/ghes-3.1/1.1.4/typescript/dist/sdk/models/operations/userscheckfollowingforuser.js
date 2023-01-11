@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UsersCheckFollowingForUserResponse = exports.UsersCheckFollowingForUserRequest = exports.UsersCheckFollowingForUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UsersCheckFollowingForUserPathParams = /** @class */ (function (_super) {
     __extends(UsersCheckFollowingForUserPathParams, _super);
     function UsersCheckFollowingForUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=target_user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=target_user" }),
         __metadata("design:type", String)
     ], UsersCheckFollowingForUserPathParams.prototype, "targetUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], UsersCheckFollowingForUserPathParams.prototype, "username", void 0);
     return UsersCheckFollowingForUserPathParams;
-}(SpeakeasyBase));
-export { UsersCheckFollowingForUserPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UsersCheckFollowingForUserPathParams = UsersCheckFollowingForUserPathParams;
 var UsersCheckFollowingForUserRequest = /** @class */ (function (_super) {
     __extends(UsersCheckFollowingForUserRequest, _super);
     function UsersCheckFollowingForUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UsersCheckFollowingForUserPathParams)
     ], UsersCheckFollowingForUserRequest.prototype, "pathParams", void 0);
     return UsersCheckFollowingForUserRequest;
-}(SpeakeasyBase));
-export { UsersCheckFollowingForUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.UsersCheckFollowingForUserRequest = UsersCheckFollowingForUserRequest;
 var UsersCheckFollowingForUserResponse = /** @class */ (function (_super) {
     __extends(UsersCheckFollowingForUserResponse, _super);
     function UsersCheckFollowingForUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UsersCheckFollowingForUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UsersCheckFollowingForUserResponse.prototype, "statusCode", void 0);
     return UsersCheckFollowingForUserResponse;
-}(SpeakeasyBase));
-export { UsersCheckFollowingForUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.UsersCheckFollowingForUserResponse = UsersCheckFollowingForUserResponse;

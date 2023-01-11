@@ -22,5 +22,5 @@ export class GetOrganizationAdminsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationAdmins200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationAdmins200ApplicationJSONObject?: Record<string, any>;
 }

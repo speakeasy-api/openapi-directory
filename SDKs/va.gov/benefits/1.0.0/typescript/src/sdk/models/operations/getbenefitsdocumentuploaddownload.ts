@@ -83,17 +83,17 @@ export class GetBenefitsDocumentUploadDownloadResponse extends SpeakeasyBase {
   getBenefitsDocumentUploadDownload200ApplicationZipBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
-  getBenefitsDocumentUploadDownload401ApplicationJsonObject?: GetBenefitsDocumentUploadDownload401ApplicationJson;
+  getBenefitsDocumentUploadDownload401ApplicationJSONObject?: GetBenefitsDocumentUploadDownload401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getBenefitsDocumentUploadDownload403ApplicationJsonObject?: GetBenefitsDocumentUploadDownload403ApplicationJson;
+  getBenefitsDocumentUploadDownload403ApplicationJSONObject?: GetBenefitsDocumentUploadDownload403ApplicationJson;
 
   @SpeakeasyMetadata()
-  getBenefitsDocumentUploadDownload404ApplicationJsonObject?: GetBenefitsDocumentUploadDownload404ApplicationJson;
+  getBenefitsDocumentUploadDownload404ApplicationJSONObject?: GetBenefitsDocumentUploadDownload404ApplicationJson;
 
   @SpeakeasyMetadata()
-  getBenefitsDocumentUploadDownload429ApplicationJsonObject?: GetBenefitsDocumentUploadDownload429ApplicationJson;
+  getBenefitsDocumentUploadDownload429ApplicationJSONObject?: GetBenefitsDocumentUploadDownload429ApplicationJson;
 
   @SpeakeasyMetadata()
-  getBenefitsDocumentUploadDownload500ApplicationJsonObject?: GetBenefitsDocumentUploadDownload500ApplicationJson;
+  getBenefitsDocumentUploadDownload500ApplicationJSONObject?: GetBenefitsDocumentUploadDownload500ApplicationJson;
 }

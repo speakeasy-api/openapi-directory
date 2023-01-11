@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfidentialInstanceConfig } from "./confidentialinstanceconfig";
-import { NodeGroupAffinity } from "./nodegroupaffinity";
-import { ReservationAffinity } from "./reservationaffinity";
-import { ShieldedInstanceConfig } from "./shieldedinstanceconfig";
-export var GceClusterConfigPrivateIpv6GoogleAccessEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GceClusterConfig = exports.GceClusterConfigPrivateIpv6GoogleAccessEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var confidentialinstanceconfig_1 = require("./confidentialinstanceconfig");
+var nodegroupaffinity_1 = require("./nodegroupaffinity");
+var reservationaffinity_1 = require("./reservationaffinity");
+var shieldedinstanceconfig_1 = require("./shieldedinstanceconfig");
+var GceClusterConfigPrivateIpv6GoogleAccessEnum;
 (function (GceClusterConfigPrivateIpv6GoogleAccessEnum) {
     GceClusterConfigPrivateIpv6GoogleAccessEnum["PrivateIpv6GoogleAccessUnspecified"] = "PRIVATE_IPV6_GOOGLE_ACCESS_UNSPECIFIED";
     GceClusterConfigPrivateIpv6GoogleAccessEnum["InheritFromSubnetwork"] = "INHERIT_FROM_SUBNETWORK";
     GceClusterConfigPrivateIpv6GoogleAccessEnum["Outbound"] = "OUTBOUND";
     GceClusterConfigPrivateIpv6GoogleAccessEnum["Bidirectional"] = "BIDIRECTIONAL";
-})(GceClusterConfigPrivateIpv6GoogleAccessEnum || (GceClusterConfigPrivateIpv6GoogleAccessEnum = {}));
+})(GceClusterConfigPrivateIpv6GoogleAccessEnum = exports.GceClusterConfigPrivateIpv6GoogleAccessEnum || (exports.GceClusterConfigPrivateIpv6GoogleAccessEnum = {}));
 // GceClusterConfig
 /**
  * Common config settings for resources of Compute Engine cluster instances, applicable to all instances in the cluster.
@@ -44,57 +47,57 @@ var GceClusterConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confidentialInstanceConfig" }),
-        __metadata("design:type", ConfidentialInstanceConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confidentialInstanceConfig" }),
+        __metadata("design:type", confidentialinstanceconfig_1.ConfidentialInstanceConfig)
     ], GceClusterConfig.prototype, "confidentialInstanceConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=internalIpOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=internalIpOnly" }),
         __metadata("design:type", Boolean)
     ], GceClusterConfig.prototype, "internalIpOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], GceClusterConfig.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkUri" }),
         __metadata("design:type", String)
     ], GceClusterConfig.prototype, "networkUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeGroupAffinity" }),
-        __metadata("design:type", NodeGroupAffinity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeGroupAffinity" }),
+        __metadata("design:type", nodegroupaffinity_1.NodeGroupAffinity)
     ], GceClusterConfig.prototype, "nodeGroupAffinity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateIpv6GoogleAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateIpv6GoogleAccess" }),
         __metadata("design:type", String)
     ], GceClusterConfig.prototype, "privateIpv6GoogleAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reservationAffinity" }),
-        __metadata("design:type", ReservationAffinity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reservationAffinity" }),
+        __metadata("design:type", reservationaffinity_1.ReservationAffinity)
     ], GceClusterConfig.prototype, "reservationAffinity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccount" }),
         __metadata("design:type", String)
     ], GceClusterConfig.prototype, "serviceAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccountScopes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccountScopes" }),
         __metadata("design:type", Array)
     ], GceClusterConfig.prototype, "serviceAccountScopes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shieldedInstanceConfig" }),
-        __metadata("design:type", ShieldedInstanceConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shieldedInstanceConfig" }),
+        __metadata("design:type", shieldedinstanceconfig_1.ShieldedInstanceConfig)
     ], GceClusterConfig.prototype, "shieldedInstanceConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subnetworkUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subnetworkUri" }),
         __metadata("design:type", String)
     ], GceClusterConfig.prototype, "subnetworkUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], GceClusterConfig.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zoneUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zoneUri" }),
         __metadata("design:type", String)
     ], GceClusterConfig.prototype, "zoneUri", void 0);
     return GceClusterConfig;
-}(SpeakeasyBase));
-export { GceClusterConfig };
+}(utils_1.SpeakeasyBase));
+exports.GceClusterConfig = GceClusterConfig;

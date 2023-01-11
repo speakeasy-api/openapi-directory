@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPrivilegesResponse = exports.GetPrivilegesRequest = exports.GetPrivilegesQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPrivilegesQueryParams = /** @class */ (function (_super) {
     __extends(GetPrivilegesQueryParams, _super);
     function GetPrivilegesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetPrivilegesQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetPrivilegesQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetPrivilegesQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetPrivilegesQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetPrivilegesQueryParams.prototype, "site", void 0);
     return GetPrivilegesQueryParams;
-}(SpeakeasyBase));
-export { GetPrivilegesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPrivilegesQueryParams = GetPrivilegesQueryParams;
 var GetPrivilegesRequest = /** @class */ (function (_super) {
     __extends(GetPrivilegesRequest, _super);
     function GetPrivilegesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPrivilegesQueryParams)
     ], GetPrivilegesRequest.prototype, "queryParams", void 0);
     return GetPrivilegesRequest;
-}(SpeakeasyBase));
-export { GetPrivilegesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPrivilegesRequest = GetPrivilegesRequest;
 var GetPrivilegesResponse = /** @class */ (function (_super) {
     __extends(GetPrivilegesResponse, _super);
     function GetPrivilegesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetPrivilegesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPrivilegesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPrivilegesResponse.prototype, "statusCode", void 0);
     return GetPrivilegesResponse;
-}(SpeakeasyBase));
-export { GetPrivilegesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPrivilegesResponse = GetPrivilegesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,94 +14,119 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadServiceResponse = exports.LoadServiceRequest = exports.LoadService200ApplicationJson = exports.LoadService200ApplicationJsonStatusEnum = exports.LoadServiceRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var LoadServiceRequestBody = /** @class */ (function (_super) {
     __extends(LoadServiceRequestBody, _super);
     function LoadServiceRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_description_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_description_url" }),
         __metadata("design:type", String)
     ], LoadServiceRequestBody.prototype, "serviceDescriptionUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_moniker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_moniker" }),
         __metadata("design:type", String)
     ], LoadServiceRequestBody.prototype, "serviceMoniker", void 0);
     return LoadServiceRequestBody;
-}(SpeakeasyBase));
-export { LoadServiceRequestBody };
-export var LoadService200ApplicationJsonStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.LoadServiceRequestBody = LoadServiceRequestBody;
+var LoadService200ApplicationJsonStatusEnum;
 (function (LoadService200ApplicationJsonStatusEnum) {
     LoadService200ApplicationJsonStatusEnum["Success"] = "success";
-})(LoadService200ApplicationJsonStatusEnum || (LoadService200ApplicationJsonStatusEnum = {}));
+})(LoadService200ApplicationJsonStatusEnum = exports.LoadService200ApplicationJsonStatusEnum || (exports.LoadService200ApplicationJsonStatusEnum = {}));
 var LoadService200ApplicationJson = /** @class */ (function (_super) {
     __extends(LoadService200ApplicationJson, _super);
     function LoadService200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=api" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=api" }),
         __metadata("design:type", String)
     ], LoadService200ApplicationJson.prototype, "api", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], LoadService200ApplicationJson.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=response" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=response" }),
         __metadata("design:type", String)
     ], LoadService200ApplicationJson.prototype, "response", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], LoadService200ApplicationJson.prototype, "status", void 0);
     return LoadService200ApplicationJson;
-}(SpeakeasyBase));
-export { LoadService200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.LoadService200ApplicationJson = LoadService200ApplicationJson;
 var LoadServiceRequest = /** @class */ (function (_super) {
     __extends(LoadServiceRequest, _super);
     function LoadServiceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", LoadServiceRequestBody)
     ], LoadServiceRequest.prototype, "request", void 0);
     return LoadServiceRequest;
-}(SpeakeasyBase));
-export { LoadServiceRequest };
+}(utils_1.SpeakeasyBase));
+exports.LoadServiceRequest = LoadServiceRequest;
 var LoadServiceResponse = /** @class */ (function (_super) {
     __extends(LoadServiceResponse, _super);
     function LoadServiceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LoadServiceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorModel)
     ], LoadServiceResponse.prototype, "errorModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LoadServiceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LoadService200ApplicationJson)
-    ], LoadServiceResponse.prototype, "loadService200ApplicationJsonObject", void 0);
+    ], LoadServiceResponse.prototype, "loadService200ApplicationJSONObject", void 0);
     return LoadServiceResponse;
-}(SpeakeasyBase));
-export { LoadServiceResponse };
+}(utils_1.SpeakeasyBase));
+exports.LoadServiceResponse = LoadServiceResponse;

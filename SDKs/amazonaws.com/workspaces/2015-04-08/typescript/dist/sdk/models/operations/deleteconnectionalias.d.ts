@@ -20,7 +20,7 @@ export declare class DeleteConnectionAliasRequest extends SpeakeasyBase {
 export declare class DeleteConnectionAliasResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    deleteConnectionAliasResult?: Map<string, any>;
+    deleteConnectionAliasResult?: Record<string, any>;
     invalidParameterValuesException?: any;
     invalidResourceStateException?: any;
     operationNotSupportedException?: any;

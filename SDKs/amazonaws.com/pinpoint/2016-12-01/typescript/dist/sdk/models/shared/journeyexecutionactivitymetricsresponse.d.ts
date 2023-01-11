@@ -8,5 +8,5 @@ export declare class JourneyExecutionActivityMetricsResponse extends SpeakeasyBa
     journeyActivityId: string;
     journeyId: string;
     lastEvaluatedTime: string;
-    metrics: Map<string, string>;
+    metrics: Record<string, string>;
 }

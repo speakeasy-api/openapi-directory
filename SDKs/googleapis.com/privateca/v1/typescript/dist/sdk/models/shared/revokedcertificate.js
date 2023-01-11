@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RevokedCertificateRevocationReasonEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RevokedCertificate = exports.RevokedCertificateRevocationReasonEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RevokedCertificateRevocationReasonEnum;
 (function (RevokedCertificateRevocationReasonEnum) {
     RevokedCertificateRevocationReasonEnum["RevocationReasonUnspecified"] = "REVOCATION_REASON_UNSPECIFIED";
     RevokedCertificateRevocationReasonEnum["KeyCompromise"] = "KEY_COMPROMISE";
@@ -34,7 +37,7 @@ export var RevokedCertificateRevocationReasonEnum;
     RevokedCertificateRevocationReasonEnum["CertificateHold"] = "CERTIFICATE_HOLD";
     RevokedCertificateRevocationReasonEnum["PrivilegeWithdrawn"] = "PRIVILEGE_WITHDRAWN";
     RevokedCertificateRevocationReasonEnum["AttributeAuthorityCompromise"] = "ATTRIBUTE_AUTHORITY_COMPROMISE";
-})(RevokedCertificateRevocationReasonEnum || (RevokedCertificateRevocationReasonEnum = {}));
+})(RevokedCertificateRevocationReasonEnum = exports.RevokedCertificateRevocationReasonEnum || (exports.RevokedCertificateRevocationReasonEnum = {}));
 // RevokedCertificate
 /**
  * Describes a revoked Certificate.
@@ -45,17 +48,17 @@ var RevokedCertificate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificate" }),
         __metadata("design:type", String)
     ], RevokedCertificate.prototype, "certificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hexSerialNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hexSerialNumber" }),
         __metadata("design:type", String)
     ], RevokedCertificate.prototype, "hexSerialNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revocationReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revocationReason" }),
         __metadata("design:type", String)
     ], RevokedCertificate.prototype, "revocationReason", void 0);
     return RevokedCertificate;
-}(SpeakeasyBase));
-export { RevokedCertificate };
+}(utils_1.SpeakeasyBase));
+exports.RevokedCertificate = RevokedCertificate;

@@ -10,5 +10,5 @@ export declare class StopPipelineRequest extends SpeakeasyBase {
 export declare class StopPipelineResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

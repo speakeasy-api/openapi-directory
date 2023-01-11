@@ -1,11 +1,27 @@
-export * from "./altenum";
-export * from "./generateaccesstokenrequest";
-export * from "./generateaccesstokenresponse";
-export * from "./generateidtokenrequest";
-export * from "./generateidtokenresponse";
-export * from "./security";
-export * from "./signblobrequest";
-export * from "./signblobresponse";
-export * from "./signjwtrequest";
-export * from "./signjwtresponse";
-export * from "./xgafvenum";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./altenum"), exports);
+__exportStar(require("./generateaccesstokenrequest"), exports);
+__exportStar(require("./generateaccesstokenresponse"), exports);
+__exportStar(require("./generateidtokenrequest"), exports);
+__exportStar(require("./generateidtokenresponse"), exports);
+__exportStar(require("./security"), exports);
+__exportStar(require("./signblobrequest"), exports);
+__exportStar(require("./signblobresponse"), exports);
+__exportStar(require("./signjwtrequest"), exports);
+__exportStar(require("./signjwtresponse"), exports);
+__exportStar(require("./xgafvenum"), exports);

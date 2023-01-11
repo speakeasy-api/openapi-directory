@@ -3,10 +3,11 @@ import * as operations from "./models/operations";
 import { CreateUser } from "./createuser";
 import { CredentialOperations } from "./credentialoperations";
 import { LifecycleOperations } from "./lifecycleoperations";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://okta.local", "https://,"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     createUser: CreateUser;
     credentialOperations: CredentialOperations;
@@ -17,7 +18,7 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * clearUserSessions - Clear User Sessions
      *
@@ -31,4 +32,3 @@ export declare class SDK {
     **/
     resetFactors(req: operations.ResetFactorsRequest, config?: AxiosRequestConfig): Promise<operations.ResetFactorsResponse>;
 }
-export {};

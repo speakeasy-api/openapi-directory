@@ -48,7 +48,7 @@ export class DeleteEvaluationResultsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteEvaluationResultsResponse?: Map<string, any>;
+  deleteEvaluationResultsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   noSuchConfigRuleException?: any;

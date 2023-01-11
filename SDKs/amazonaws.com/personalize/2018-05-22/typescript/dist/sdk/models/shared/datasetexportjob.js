@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IngestionModeEnum } from "./ingestionmodeenum";
-import { DatasetExportJobOutput } from "./datasetexportjoboutput";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DatasetExportJob = void 0;
+var utils_1 = require("../../../internal/utils");
+var ingestionmodeenum_1 = require("./ingestionmodeenum");
+var datasetexportjoboutput_1 = require("./datasetexportjoboutput");
 // DatasetExportJob
 /**
  * <p>Describes a job that exports a dataset to an Amazon S3 bucket. For more information, see <a>CreateDatasetExportJob</a>.</p> <p>A dataset export job can be in one of the following states:</p> <ul> <li> <p>CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE FAILED</p> </li> </ul>
@@ -35,45 +38,45 @@ var DatasetExportJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateTime" }),
         __metadata("design:type", Date)
     ], DatasetExportJob.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasetArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasetArn" }),
         __metadata("design:type", String)
     ], DatasetExportJob.prototype, "datasetArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasetExportJobArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasetExportJobArn" }),
         __metadata("design:type", String)
     ], DatasetExportJob.prototype, "datasetExportJobArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureReason" }),
         __metadata("design:type", String)
     ], DatasetExportJob.prototype, "failureReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ingestionMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ingestionMode" }),
         __metadata("design:type", String)
     ], DatasetExportJob.prototype, "ingestionMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobName" }),
         __metadata("design:type", String)
     ], DatasetExportJob.prototype, "jobName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobOutput" }),
-        __metadata("design:type", DatasetExportJobOutput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobOutput" }),
+        __metadata("design:type", datasetexportjoboutput_1.DatasetExportJobOutput)
     ], DatasetExportJob.prototype, "jobOutput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedDateTime" }),
         __metadata("design:type", Date)
     ], DatasetExportJob.prototype, "lastUpdatedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleArn" }),
         __metadata("design:type", String)
     ], DatasetExportJob.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], DatasetExportJob.prototype, "status", void 0);
     return DatasetExportJob;
-}(SpeakeasyBase));
-export { DatasetExportJob };
+}(utils_1.SpeakeasyBase));
+exports.DatasetExportJob = DatasetExportJob;

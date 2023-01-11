@@ -22,5 +22,5 @@ export declare class UpdateWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    updateWorkspace200ApplicationJsonObject?: UpdateWorkspace200ApplicationJson;
+    updateWorkspace200ApplicationJSONObject?: UpdateWorkspace200ApplicationJson;
 }

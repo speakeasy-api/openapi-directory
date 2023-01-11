@@ -23,7 +23,7 @@ export declare class PutDeliverabilityDashboardOptionResponse extends SpeakeasyB
     contentType: string;
     limitExceededException?: any;
     notFoundException?: any;
-    putDeliverabilityDashboardOptionResponse?: Map<string, any>;
+    putDeliverabilityDashboardOptionResponse?: Record<string, any>;
     statusCode: number;
     tooManyRequestsException?: any;
 }

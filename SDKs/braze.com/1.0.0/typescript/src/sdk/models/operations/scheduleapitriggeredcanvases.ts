@@ -28,7 +28,7 @@ export class ScheduleApiTriggeredCanvasesRequestBodyAudience extends SpeakeasyBa
 
 export class ScheduleApiTriggeredCanvasesRequestBodyRecipients extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=canvas_entry_properties" })
-  canvasEntryProperties?: Map<string, any>;
+  canvasEntryProperties?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=external_user_id" })
   externalUserId?: string;
@@ -61,7 +61,7 @@ export class ScheduleApiTriggeredCanvasesRequestBody extends SpeakeasyBase {
   broadcast?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=canvas_entry_properties" })
-  canvasEntryProperties?: Map<string, any>;
+  canvasEntryProperties?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=canvas_id" })
   canvasId?: string;

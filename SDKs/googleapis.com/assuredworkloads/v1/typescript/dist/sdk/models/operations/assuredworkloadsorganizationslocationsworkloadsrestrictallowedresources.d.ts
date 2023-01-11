@@ -28,6 +28,6 @@ export declare class AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllo
 }
 export declare class AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesResponse extends SpeakeasyBase {
     contentType: string;
-    googleCloudAssuredworkloadsV1RestrictAllowedResourcesResponse?: Map<string, any>;
+    googleCloudAssuredworkloadsV1RestrictAllowedResourcesResponse?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDecodeAuthorizationMessageActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDecodeAuthorizationMessageResponse = exports.GetDecodeAuthorizationMessageRequest = exports.GetDecodeAuthorizationMessageHeaders = exports.GetDecodeAuthorizationMessageQueryParams = exports.GetDecodeAuthorizationMessageVersionEnum = exports.GetDecodeAuthorizationMessageActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDecodeAuthorizationMessageActionEnum;
 (function (GetDecodeAuthorizationMessageActionEnum) {
     GetDecodeAuthorizationMessageActionEnum["DecodeAuthorizationMessage"] = "DecodeAuthorizationMessage";
-})(GetDecodeAuthorizationMessageActionEnum || (GetDecodeAuthorizationMessageActionEnum = {}));
-export var GetDecodeAuthorizationMessageVersionEnum;
+})(GetDecodeAuthorizationMessageActionEnum = exports.GetDecodeAuthorizationMessageActionEnum || (exports.GetDecodeAuthorizationMessageActionEnum = {}));
+var GetDecodeAuthorizationMessageVersionEnum;
 (function (GetDecodeAuthorizationMessageVersionEnum) {
     GetDecodeAuthorizationMessageVersionEnum["TwoThousandAndEleven0615"] = "2011-06-15";
-})(GetDecodeAuthorizationMessageVersionEnum || (GetDecodeAuthorizationMessageVersionEnum = {}));
+})(GetDecodeAuthorizationMessageVersionEnum = exports.GetDecodeAuthorizationMessageVersionEnum || (exports.GetDecodeAuthorizationMessageVersionEnum = {}));
 var GetDecodeAuthorizationMessageQueryParams = /** @class */ (function (_super) {
     __extends(GetDecodeAuthorizationMessageQueryParams, _super);
     function GetDecodeAuthorizationMessageQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDecodeAuthorizationMessageQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EncodedMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EncodedMessage" }),
         __metadata("design:type", String)
     ], GetDecodeAuthorizationMessageQueryParams.prototype, "encodedMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDecodeAuthorizationMessageQueryParams.prototype, "version", void 0);
     return GetDecodeAuthorizationMessageQueryParams;
-}(SpeakeasyBase));
-export { GetDecodeAuthorizationMessageQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDecodeAuthorizationMessageQueryParams = GetDecodeAuthorizationMessageQueryParams;
 var GetDecodeAuthorizationMessageHeaders = /** @class */ (function (_super) {
     __extends(GetDecodeAuthorizationMessageHeaders, _super);
     function GetDecodeAuthorizationMessageHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDecodeAuthorizationMessageHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDecodeAuthorizationMessageHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDecodeAuthorizationMessageHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDecodeAuthorizationMessageHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDecodeAuthorizationMessageHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDecodeAuthorizationMessageHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDecodeAuthorizationMessageHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDecodeAuthorizationMessageHeaders;
-}(SpeakeasyBase));
-export { GetDecodeAuthorizationMessageHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDecodeAuthorizationMessageHeaders = GetDecodeAuthorizationMessageHeaders;
 var GetDecodeAuthorizationMessageRequest = /** @class */ (function (_super) {
     __extends(GetDecodeAuthorizationMessageRequest, _super);
     function GetDecodeAuthorizationMessageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDecodeAuthorizationMessageQueryParams)
     ], GetDecodeAuthorizationMessageRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDecodeAuthorizationMessageHeaders)
     ], GetDecodeAuthorizationMessageRequest.prototype, "headers", void 0);
     return GetDecodeAuthorizationMessageRequest;
-}(SpeakeasyBase));
-export { GetDecodeAuthorizationMessageRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDecodeAuthorizationMessageRequest = GetDecodeAuthorizationMessageRequest;
 var GetDecodeAuthorizationMessageResponse = /** @class */ (function (_super) {
     __extends(GetDecodeAuthorizationMessageResponse, _super);
     function GetDecodeAuthorizationMessageResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDecodeAuthorizationMessageResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDecodeAuthorizationMessageResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDecodeAuthorizationMessageResponse.prototype, "statusCode", void 0);
     return GetDecodeAuthorizationMessageResponse;
-}(SpeakeasyBase));
-export { GetDecodeAuthorizationMessageResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDecodeAuthorizationMessageResponse = GetDecodeAuthorizationMessageResponse;

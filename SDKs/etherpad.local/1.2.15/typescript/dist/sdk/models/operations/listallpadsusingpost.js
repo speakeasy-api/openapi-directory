@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,128 +23,130 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListAllPadsUsingPostResponse = exports.ListAllPadsUsingPost500ApplicationJson = exports.ListAllPadsUsingPost401ApplicationJson = exports.ListAllPadsUsingPost400ApplicationJson = exports.ListAllPadsUsingPost200ApplicationJson = exports.ListAllPadsUsingPost200ApplicationJsonData = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListAllPadsUsingPost200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(ListAllPadsUsingPost200ApplicationJsonData, _super);
     function ListAllPadsUsingPost200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=padIDs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=padIDs" }),
         __metadata("design:type", Array)
     ], ListAllPadsUsingPost200ApplicationJsonData.prototype, "padIDs", void 0);
     return ListAllPadsUsingPost200ApplicationJsonData;
-}(SpeakeasyBase));
-export { ListAllPadsUsingPost200ApplicationJsonData };
+}(utils_1.SpeakeasyBase));
+exports.ListAllPadsUsingPost200ApplicationJsonData = ListAllPadsUsingPost200ApplicationJsonData;
 var ListAllPadsUsingPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(ListAllPadsUsingPost200ApplicationJson, _super);
     function ListAllPadsUsingPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], ListAllPadsUsingPost200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", ListAllPadsUsingPost200ApplicationJsonData)
     ], ListAllPadsUsingPost200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ListAllPadsUsingPost200ApplicationJson.prototype, "message", void 0);
     return ListAllPadsUsingPost200ApplicationJson;
-}(SpeakeasyBase));
-export { ListAllPadsUsingPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ListAllPadsUsingPost200ApplicationJson = ListAllPadsUsingPost200ApplicationJson;
 var ListAllPadsUsingPost400ApplicationJson = /** @class */ (function (_super) {
     __extends(ListAllPadsUsingPost400ApplicationJson, _super);
     function ListAllPadsUsingPost400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], ListAllPadsUsingPost400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], ListAllPadsUsingPost400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ListAllPadsUsingPost400ApplicationJson.prototype, "message", void 0);
     return ListAllPadsUsingPost400ApplicationJson;
-}(SpeakeasyBase));
-export { ListAllPadsUsingPost400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ListAllPadsUsingPost400ApplicationJson = ListAllPadsUsingPost400ApplicationJson;
 var ListAllPadsUsingPost401ApplicationJson = /** @class */ (function (_super) {
     __extends(ListAllPadsUsingPost401ApplicationJson, _super);
     function ListAllPadsUsingPost401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], ListAllPadsUsingPost401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], ListAllPadsUsingPost401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ListAllPadsUsingPost401ApplicationJson.prototype, "message", void 0);
     return ListAllPadsUsingPost401ApplicationJson;
-}(SpeakeasyBase));
-export { ListAllPadsUsingPost401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ListAllPadsUsingPost401ApplicationJson = ListAllPadsUsingPost401ApplicationJson;
 var ListAllPadsUsingPost500ApplicationJson = /** @class */ (function (_super) {
     __extends(ListAllPadsUsingPost500ApplicationJson, _super);
     function ListAllPadsUsingPost500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], ListAllPadsUsingPost500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], ListAllPadsUsingPost500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ListAllPadsUsingPost500ApplicationJson.prototype, "message", void 0);
     return ListAllPadsUsingPost500ApplicationJson;
-}(SpeakeasyBase));
-export { ListAllPadsUsingPost500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ListAllPadsUsingPost500ApplicationJson = ListAllPadsUsingPost500ApplicationJson;
 var ListAllPadsUsingPostResponse = /** @class */ (function (_super) {
     __extends(ListAllPadsUsingPostResponse, _super);
     function ListAllPadsUsingPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListAllPadsUsingPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ListAllPadsUsingPostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListAllPadsUsingPost200ApplicationJson)
-    ], ListAllPadsUsingPostResponse.prototype, "listAllPadsUsingPost200ApplicationJsonObject", void 0);
+    ], ListAllPadsUsingPostResponse.prototype, "listAllPadsUsingPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListAllPadsUsingPost400ApplicationJson)
-    ], ListAllPadsUsingPostResponse.prototype, "listAllPadsUsingPost400ApplicationJsonObject", void 0);
+    ], ListAllPadsUsingPostResponse.prototype, "listAllPadsUsingPOST400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListAllPadsUsingPost401ApplicationJson)
-    ], ListAllPadsUsingPostResponse.prototype, "listAllPadsUsingPost401ApplicationJsonObject", void 0);
+    ], ListAllPadsUsingPostResponse.prototype, "listAllPadsUsingPOST401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListAllPadsUsingPost500ApplicationJson)
-    ], ListAllPadsUsingPostResponse.prototype, "listAllPadsUsingPost500ApplicationJsonObject", void 0);
+    ], ListAllPadsUsingPostResponse.prototype, "listAllPadsUsingPOST500ApplicationJSONObject", void 0);
     return ListAllPadsUsingPostResponse;
-}(SpeakeasyBase));
-export { ListAllPadsUsingPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListAllPadsUsingPostResponse = ListAllPadsUsingPostResponse;

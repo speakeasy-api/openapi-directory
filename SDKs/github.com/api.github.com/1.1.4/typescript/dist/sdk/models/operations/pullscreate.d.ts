@@ -19,7 +19,7 @@ export declare class PullsCreateRequest extends SpeakeasyBase {
 }
 export declare class PullsCreateResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     pullRequest?: shared.PullRequest;

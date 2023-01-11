@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LifecyclePolicyRuleAction } from "./lifecyclepolicyruleaction";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LifecyclePolicyPreviewResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var lifecyclepolicyruleaction_1 = require("./lifecyclepolicyruleaction");
 // LifecyclePolicyPreviewResult
 /**
  * The result of the lifecycle policy preview.
@@ -34,25 +37,25 @@ var LifecyclePolicyPreviewResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
-        __metadata("design:type", LifecyclePolicyRuleAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
+        __metadata("design:type", lifecyclepolicyruleaction_1.LifecyclePolicyRuleAction)
     ], LifecyclePolicyPreviewResult.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appliedRulePriority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appliedRulePriority" }),
         __metadata("design:type", Number)
     ], LifecyclePolicyPreviewResult.prototype, "appliedRulePriority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageDigest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageDigest" }),
         __metadata("design:type", String)
     ], LifecyclePolicyPreviewResult.prototype, "imageDigest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imagePushedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imagePushedAt" }),
         __metadata("design:type", Date)
     ], LifecyclePolicyPreviewResult.prototype, "imagePushedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageTags" }),
         __metadata("design:type", Array)
     ], LifecyclePolicyPreviewResult.prototype, "imageTags", void 0);
     return LifecyclePolicyPreviewResult;
-}(SpeakeasyBase));
-export { LifecyclePolicyPreviewResult };
+}(utils_1.SpeakeasyBase));
+exports.LifecyclePolicyPreviewResult = LifecyclePolicyPreviewResult;

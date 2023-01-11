@@ -16,7 +16,7 @@ export declare class PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsRe
 }
 export declare class PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

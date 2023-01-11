@@ -1,0 +1,36 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+
+
+
+export class GetExportsPathParams extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=iterationId" })
+  iterationId: string;
+
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectId" })
+  projectId: string;
+}
+
+
+export class GetExportsRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: GetExportsPathParams;
+}
+
+
+export class GetExportsResponse extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  body?: Uint8Array;
+
+  @SpeakeasyMetadata()
+  contentType: string;
+
+  @SpeakeasyMetadata()
+  customVisionError?: shared.CustomVisionError;
+
+  @SpeakeasyMetadata({ elemType: shared.Export })
+  exports?: shared.Export[];
+
+  @SpeakeasyMetadata()
+  statusCode: number;
+}

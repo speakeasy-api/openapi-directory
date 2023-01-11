@@ -11,10 +11,10 @@ export class RebootandFactoryResetRequest extends SpeakeasyBase {
 
 export class RebootandFactoryResetResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  body?: Uint8Array;
+  contentType: string;
 
   @SpeakeasyMetadata()
-  contentType: string;
+  rebootandFactoryReset200TextPlainObject?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

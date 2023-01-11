@@ -49,13 +49,13 @@ export class ComputeNodeGetRemoteDesktopResponse extends SpeakeasyBase {
   batchError?: any;
 
   @SpeakeasyMetadata()
-  computeNodeGetRemoteDesktop200ApplicationJsonBinaryString?: Uint8Array;
+  computeNodeGetRemoteDesktop200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

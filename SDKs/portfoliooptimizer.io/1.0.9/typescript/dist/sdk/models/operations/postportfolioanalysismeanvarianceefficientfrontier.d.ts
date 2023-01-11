@@ -28,6 +28,6 @@ export declare class PostPortfolioAnalysisMeanVarianceEfficientFrontierRequest e
 }
 export declare class PostPortfolioAnalysisMeanVarianceEfficientFrontierResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioAnalysisMeanVarianceEfficientFrontier200ApplicationJsonObject?: PostPortfolioAnalysisMeanVarianceEfficientFrontier200ApplicationJson;
     statusCode: number;
+    postPortfolioAnalysisMeanVarianceEfficientFrontier200ApplicationJSONObject?: PostPortfolioAnalysisMeanVarianceEfficientFrontier200ApplicationJson;
 }

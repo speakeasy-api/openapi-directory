@@ -29,5 +29,5 @@ export declare class TeamsAddOrUpdateMembershipForUserInOrgResponse extends Spea
     contentType: string;
     statusCode: number;
     teamMembership?: shared.TeamMembership;
-    teamsAddOrUpdateMembershipForUserInOrg422ApplicationJsonObject?: TeamsAddOrUpdateMembershipForUserInOrg422ApplicationJson;
+    teamsAddOrUpdateMembershipForUserInOrg422ApplicationJSONObject?: TeamsAddOrUpdateMembershipForUserInOrg422ApplicationJson;
 }

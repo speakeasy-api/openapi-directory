@@ -1,4 +1,7 @@
-export var StreamingImageStatusCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreamingImageStatusCodeEnum = void 0;
+var StreamingImageStatusCodeEnum;
 (function (StreamingImageStatusCodeEnum) {
     StreamingImageStatusCodeEnum["StreamingImageCreateInProgress"] = "STREAMING_IMAGE_CREATE_IN_PROGRESS";
     StreamingImageStatusCodeEnum["StreamingImageReady"] = "STREAMING_IMAGE_READY";
@@ -6,4 +9,4 @@ export var StreamingImageStatusCodeEnum;
     StreamingImageStatusCodeEnum["StreamingImageDeleted"] = "STREAMING_IMAGE_DELETED";
     StreamingImageStatusCodeEnum["StreamingImageUpdateInProgress"] = "STREAMING_IMAGE_UPDATE_IN_PROGRESS";
     StreamingImageStatusCodeEnum["InternalError"] = "INTERNAL_ERROR";
-})(StreamingImageStatusCodeEnum || (StreamingImageStatusCodeEnum = {}));
+})(StreamingImageStatusCodeEnum = exports.StreamingImageStatusCodeEnum || (exports.StreamingImageStatusCodeEnum = {}));

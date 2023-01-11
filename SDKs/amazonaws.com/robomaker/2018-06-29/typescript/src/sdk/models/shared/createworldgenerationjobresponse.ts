@@ -22,7 +22,7 @@ export class CreateWorldGenerationJobResponse extends SpeakeasyBase {
   status?: WorldGenerationJobStatusEnum;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=template" })
   template?: string;
@@ -31,5 +31,5 @@ export class CreateWorldGenerationJobResponse extends SpeakeasyBase {
   worldCount?: WorldCount;
 
   @SpeakeasyMetadata({ data: "json, name=worldTags" })
-  worldTags?: Map<string, string>;
+  worldTags?: Record<string, string>;
 }

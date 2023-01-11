@@ -48,7 +48,7 @@ export class GetMlModelResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getMlModelOutput?: shared.GetMlModelOutput;
+  getMLModelOutput?: shared.GetMlModelOutput;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { EnvironmentConfig } from "./environmentconfig";
 import { EnvironmentConfigInput } from "./environmentconfig";
+import { EnvironmentConfig } from "./environmentconfig";
 export declare enum EnvironmentStateEnum {
     StateUnspecified = "STATE_UNSPECIFIED",
     Creating = "CREATING",
@@ -12,10 +12,10 @@ export declare enum EnvironmentStateEnum {
 /**
  * An environment for running orchestration tasks.
 **/
-export declare class Environment extends SpeakeasyBase {
-    config?: EnvironmentConfig;
+export declare class EnvironmentInput extends SpeakeasyBase {
+    config?: EnvironmentConfigInput;
     createTime?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     state?: EnvironmentStateEnum;
     updateTime?: string;
@@ -24,10 +24,10 @@ export declare class Environment extends SpeakeasyBase {
 /**
  * An environment for running orchestration tasks.
 **/
-export declare class EnvironmentInput extends SpeakeasyBase {
-    config?: EnvironmentConfigInput;
+export declare class Environment extends SpeakeasyBase {
+    config?: EnvironmentConfig;
     createTime?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     state?: EnvironmentStateEnum;
     updateTime?: string;

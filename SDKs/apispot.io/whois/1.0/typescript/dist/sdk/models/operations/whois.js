@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,66 +23,68 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WhoisResponse = exports.WhoisRequest = exports.WhoisQueryParams = exports.WhoisFormatEnum = exports.WhoisPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var WhoisPathParams = /** @class */ (function (_super) {
     __extends(WhoisPathParams, _super);
     function WhoisPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=domain" }),
         __metadata("design:type", String)
     ], WhoisPathParams.prototype, "domain", void 0);
     return WhoisPathParams;
-}(SpeakeasyBase));
-export { WhoisPathParams };
-export var WhoisFormatEnum;
+}(utils_1.SpeakeasyBase));
+exports.WhoisPathParams = WhoisPathParams;
+var WhoisFormatEnum;
 (function (WhoisFormatEnum) {
     WhoisFormatEnum["Raw"] = "raw";
     WhoisFormatEnum["Formatted"] = "formatted";
     WhoisFormatEnum["Json"] = "json";
-})(WhoisFormatEnum || (WhoisFormatEnum = {}));
+})(WhoisFormatEnum = exports.WhoisFormatEnum || (exports.WhoisFormatEnum = {}));
 var WhoisQueryParams = /** @class */ (function (_super) {
     __extends(WhoisQueryParams, _super);
     function WhoisQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], WhoisQueryParams.prototype, "format", void 0);
     return WhoisQueryParams;
-}(SpeakeasyBase));
-export { WhoisQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.WhoisQueryParams = WhoisQueryParams;
 var WhoisRequest = /** @class */ (function (_super) {
     __extends(WhoisRequest, _super);
     function WhoisRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", WhoisPathParams)
     ], WhoisRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", WhoisQueryParams)
     ], WhoisRequest.prototype, "queryParams", void 0);
     return WhoisRequest;
-}(SpeakeasyBase));
-export { WhoisRequest };
+}(utils_1.SpeakeasyBase));
+exports.WhoisRequest = WhoisRequest;
 var WhoisResponse = /** @class */ (function (_super) {
     __extends(WhoisResponse, _super);
     function WhoisResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], WhoisResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], WhoisResponse.prototype, "statusCode", void 0);
     return WhoisResponse;
-}(SpeakeasyBase));
-export { WhoisResponse };
+}(utils_1.SpeakeasyBase));
+exports.WhoisResponse = WhoisResponse;

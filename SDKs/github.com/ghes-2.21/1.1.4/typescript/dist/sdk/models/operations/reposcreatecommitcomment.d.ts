@@ -17,7 +17,7 @@ export declare class ReposCreateCommitCommentRequest extends SpeakeasyBase {
 }
 export declare class ReposCreateCommitCommentResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     commitComment?: shared.CommitComment;

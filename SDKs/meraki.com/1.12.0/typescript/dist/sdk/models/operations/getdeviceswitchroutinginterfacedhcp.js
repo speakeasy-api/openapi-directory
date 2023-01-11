@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceSwitchRoutingInterfaceDhcpResponse = exports.GetDeviceSwitchRoutingInterfaceDhcpRequest = exports.GetDeviceSwitchRoutingInterfaceDhcpPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceSwitchRoutingInterfaceDhcpPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceSwitchRoutingInterfaceDhcpPathParams, _super);
     function GetDeviceSwitchRoutingInterfaceDhcpPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=interfaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=interfaceId" }),
         __metadata("design:type", String)
     ], GetDeviceSwitchRoutingInterfaceDhcpPathParams.prototype, "interfaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceSwitchRoutingInterfaceDhcpPathParams.prototype, "serial", void 0);
     return GetDeviceSwitchRoutingInterfaceDhcpPathParams;
-}(SpeakeasyBase));
-export { GetDeviceSwitchRoutingInterfaceDhcpPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceSwitchRoutingInterfaceDhcpPathParams = GetDeviceSwitchRoutingInterfaceDhcpPathParams;
 var GetDeviceSwitchRoutingInterfaceDhcpRequest = /** @class */ (function (_super) {
     __extends(GetDeviceSwitchRoutingInterfaceDhcpRequest, _super);
     function GetDeviceSwitchRoutingInterfaceDhcpRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceSwitchRoutingInterfaceDhcpPathParams)
     ], GetDeviceSwitchRoutingInterfaceDhcpRequest.prototype, "pathParams", void 0);
     return GetDeviceSwitchRoutingInterfaceDhcpRequest;
-}(SpeakeasyBase));
-export { GetDeviceSwitchRoutingInterfaceDhcpRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceSwitchRoutingInterfaceDhcpRequest = GetDeviceSwitchRoutingInterfaceDhcpRequest;
 var GetDeviceSwitchRoutingInterfaceDhcpResponse = /** @class */ (function (_super) {
     __extends(GetDeviceSwitchRoutingInterfaceDhcpResponse, _super);
     function GetDeviceSwitchRoutingInterfaceDhcpResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceSwitchRoutingInterfaceDhcpResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceSwitchRoutingInterfaceDhcpResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceSwitchRoutingInterfaceDhcpResponse.prototype, "getDeviceSwitchRoutingInterfaceDhcp200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceSwitchRoutingInterfaceDhcpResponse.prototype, "getDeviceSwitchRoutingInterfaceDhcp200ApplicationJSONObject", void 0);
     return GetDeviceSwitchRoutingInterfaceDhcpResponse;
-}(SpeakeasyBase));
-export { GetDeviceSwitchRoutingInterfaceDhcpResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceSwitchRoutingInterfaceDhcpResponse = GetDeviceSwitchRoutingInterfaceDhcpResponse;

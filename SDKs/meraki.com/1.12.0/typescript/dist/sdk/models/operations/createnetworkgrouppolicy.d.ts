@@ -270,5 +270,5 @@ export declare class CreateNetworkGroupPolicyRequest extends SpeakeasyBase {
 export declare class CreateNetworkGroupPolicyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createNetworkGroupPolicy201ApplicationJsonObject?: Map<string, any>;
+    createNetworkGroupPolicy201ApplicationJSONObject?: Record<string, any>;
 }

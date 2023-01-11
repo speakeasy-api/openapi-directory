@@ -77,5 +77,5 @@ export class DcimInventoryItemsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimInventoryItemsList200ApplicationJsonObject?: DcimInventoryItemsList200ApplicationJson;
+  dcimInventoryItemsList200ApplicationJSONObject?: DcimInventoryItemsList200ApplicationJson;
 }

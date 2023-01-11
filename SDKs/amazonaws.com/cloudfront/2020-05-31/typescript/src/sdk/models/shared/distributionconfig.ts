@@ -67,5 +67,5 @@ export class DistributionConfig extends SpeakeasyBase {
   viewerCertificate?: ViewerCertificate;
 
   @SpeakeasyMetadata()
-  webAclId?: string;
+  webACLId?: string;
 }

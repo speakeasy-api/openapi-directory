@@ -14,7 +14,7 @@ export class StartTaskRequest extends SpeakeasyBase {
   containerInstances: string[];
 
   @SpeakeasyMetadata({ data: "json, name=enableECSManagedTags" })
-  enableEcsManagedTags?: boolean;
+  enableECSManagedTags?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=enableExecuteCommand" })
   enableExecuteCommand?: boolean;

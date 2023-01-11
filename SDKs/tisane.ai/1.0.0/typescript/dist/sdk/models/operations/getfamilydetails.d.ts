@@ -17,5 +17,5 @@ export declare class GetFamilyDetailsRequest extends SpeakeasyBase {
 export declare class GetFamilyDetailsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getFamilyDetails200ApplicationJsonObject?: GetFamilyDetails200ApplicationJson;
+    getFamilyDetails200ApplicationJSONObject?: GetFamilyDetails200ApplicationJson;
 }

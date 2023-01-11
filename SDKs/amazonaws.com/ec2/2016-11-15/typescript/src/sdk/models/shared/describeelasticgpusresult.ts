@@ -1,15 +1,14 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ElasticGpus } from "./elasticgpus";
 
 
 
 export class DescribeElasticGpusResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: ElasticGpus })
-  elasticGpuSet?: ElasticGpus[];
+  @SpeakeasyMetadata()
+  elasticGpuSet?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  maxResults?: number;
+  maxResults?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 }

@@ -7,7 +7,7 @@ export declare enum GetUpdateOpenIdConnectProviderThumbprintVersionEnum {
 }
 export declare class GetUpdateOpenIdConnectProviderThumbprintQueryParams extends SpeakeasyBase {
     action: GetUpdateOpenIdConnectProviderThumbprintActionEnum;
-    openIdConnectProviderArn: string;
+    openIDConnectProviderArn: string;
     thumbprintList: string[];
     version: GetUpdateOpenIdConnectProviderThumbprintVersionEnum;
 }

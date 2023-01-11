@@ -21,5 +21,5 @@ export class SupportedEndpointType extends SpeakeasyBase {
   replicationInstanceEngineMinimumVersion?: string;
 
   @SpeakeasyMetadata({ data: "json, name=SupportsCDC" })
-  supportsCdc?: boolean;
+  supportsCDC?: boolean;
 }

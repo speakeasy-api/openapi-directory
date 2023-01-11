@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Embedded } from "./embedded";
-import { Links } from "./links";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Applications = void 0;
+var utils_1 = require("../../../internal/utils");
+var embedded_1 = require("./embedded");
+var links_1 = require("./links");
 var Applications = /** @class */ (function (_super) {
     __extends(Applications, _super);
     function Applications() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_embedded" }),
-        __metadata("design:type", Embedded)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_embedded" }),
+        __metadata("design:type", embedded_1.Embedded)
     ], Applications.prototype, "embedded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
-        __metadata("design:type", Links)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
+        __metadata("design:type", links_1.Links)
     ], Applications.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], Applications.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page_index" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page_index" }),
         __metadata("design:type", Number)
     ], Applications.prototype, "pageIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page_size" }),
         __metadata("design:type", Number)
     ], Applications.prototype, "pageSize", void 0);
     return Applications;
-}(SpeakeasyBase));
-export { Applications };
+}(utils_1.SpeakeasyBase));
+exports.Applications = Applications;

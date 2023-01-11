@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleChromeManagementV1ChromeAppRequest } from "./googlechromemanagementv1chromeapprequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1CountChromeAppRequestsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlechromemanagementv1chromeapprequest_1 = require("./googlechromemanagementv1chromeapprequest");
 // GoogleChromeManagementV1CountChromeAppRequestsResponse
 /**
  * Response containing summary of requested app installations.
@@ -34,17 +37,17 @@ var GoogleChromeManagementV1CountChromeAppRequestsResponse = /** @class */ (func
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1CountChromeAppRequestsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedApps", elemType: GoogleChromeManagementV1ChromeAppRequest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedApps", elemType: googlechromemanagementv1chromeapprequest_1.GoogleChromeManagementV1ChromeAppRequest }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1CountChromeAppRequestsResponse.prototype, "requestedApps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalSize" }),
         __metadata("design:type", Number)
     ], GoogleChromeManagementV1CountChromeAppRequestsResponse.prototype, "totalSize", void 0);
     return GoogleChromeManagementV1CountChromeAppRequestsResponse;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1CountChromeAppRequestsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1CountChromeAppRequestsResponse = GoogleChromeManagementV1CountChromeAppRequestsResponse;

@@ -7,7 +7,7 @@ export class SendClientsMessageUsingPostQueryParams extends SpeakeasyBase {
   msg?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -16,7 +16,7 @@ export class SendClientsMessageUsingPost200ApplicationJson extends SpeakeasyBase
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -28,7 +28,7 @@ export class SendClientsMessageUsingPost400ApplicationJson extends SpeakeasyBase
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -40,7 +40,7 @@ export class SendClientsMessageUsingPost401ApplicationJson extends SpeakeasyBase
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -52,7 +52,7 @@ export class SendClientsMessageUsingPost500ApplicationJson extends SpeakeasyBase
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -73,14 +73,14 @@ export class SendClientsMessageUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  sendClientsMessageUsingPost200ApplicationJsonObject?: SendClientsMessageUsingPost200ApplicationJson;
+  sendClientsMessageUsingPOST200ApplicationJSONObject?: SendClientsMessageUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  sendClientsMessageUsingPost400ApplicationJsonObject?: SendClientsMessageUsingPost400ApplicationJson;
+  sendClientsMessageUsingPOST400ApplicationJSONObject?: SendClientsMessageUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  sendClientsMessageUsingPost401ApplicationJsonObject?: SendClientsMessageUsingPost401ApplicationJson;
+  sendClientsMessageUsingPOST401ApplicationJSONObject?: SendClientsMessageUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  sendClientsMessageUsingPost500ApplicationJsonObject?: SendClientsMessageUsingPost500ApplicationJson;
+  sendClientsMessageUsingPOST500ApplicationJSONObject?: SendClientsMessageUsingPost500ApplicationJson;
 }

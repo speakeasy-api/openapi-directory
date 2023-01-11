@@ -44,26 +44,26 @@ export class UpdatePortfolioTemplateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updatePortfolioTemplate200ApplicationJsonAny?: any;
+  updatePortfolioTemplate200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updatePortfolioTemplate400ApplicationJsonAny?: any;
+  updatePortfolioTemplate400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updatePortfolioTemplate401ApplicationJsonAny?: any;
+  updatePortfolioTemplate401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updatePortfolioTemplate403ApplicationJsonAny?: any;
+  updatePortfolioTemplate403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updatePortfolioTemplate404ApplicationJsonAny?: any;
+  updatePortfolioTemplate404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updatePortfolioTemplate409ApplicationJsonAny?: any;
+  updatePortfolioTemplate409ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updatePortfolioTemplate429ApplicationJsonAny?: any;
+  updatePortfolioTemplate429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  updatePortfolioTemplate500ApplicationJsonAny?: any;
+  updatePortfolioTemplate500ApplicationJSONAny?: any;
 }

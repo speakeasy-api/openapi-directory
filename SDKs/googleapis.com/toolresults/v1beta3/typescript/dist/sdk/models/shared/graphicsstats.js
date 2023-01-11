@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GraphicsStatsBucket } from "./graphicsstatsbucket";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GraphicsStats = void 0;
+var utils_1 = require("../../../internal/utils");
+var graphicsstatsbucket_1 = require("./graphicsstatsbucket");
 // GraphicsStats
 /**
  * Graphics statistics for the App. The information is collected from 'adb shell dumpsys graphicsstats'. For more info see: https://developer.android.com/training/testing/performance.html Statistics will only be present for API 23+.
@@ -34,53 +37,53 @@ var GraphicsStats = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buckets", elemType: GraphicsStatsBucket }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buckets", elemType: graphicsstatsbucket_1.GraphicsStatsBucket }),
         __metadata("design:type", Array)
     ], GraphicsStats.prototype, "buckets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=highInputLatencyCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=highInputLatencyCount" }),
         __metadata("design:type", String)
     ], GraphicsStats.prototype, "highInputLatencyCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jankyFrames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jankyFrames" }),
         __metadata("design:type", String)
     ], GraphicsStats.prototype, "jankyFrames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=missedVsyncCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=missedVsyncCount" }),
         __metadata("design:type", String)
     ], GraphicsStats.prototype, "missedVsyncCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=p50Millis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=p50Millis" }),
         __metadata("design:type", String)
     ], GraphicsStats.prototype, "p50Millis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=p90Millis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=p90Millis" }),
         __metadata("design:type", String)
     ], GraphicsStats.prototype, "p90Millis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=p95Millis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=p95Millis" }),
         __metadata("design:type", String)
     ], GraphicsStats.prototype, "p95Millis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=p99Millis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=p99Millis" }),
         __metadata("design:type", String)
     ], GraphicsStats.prototype, "p99Millis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slowBitmapUploadCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slowBitmapUploadCount" }),
         __metadata("design:type", String)
     ], GraphicsStats.prototype, "slowBitmapUploadCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slowDrawCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slowDrawCount" }),
         __metadata("design:type", String)
     ], GraphicsStats.prototype, "slowDrawCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slowUiThreadCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slowUiThreadCount" }),
         __metadata("design:type", String)
     ], GraphicsStats.prototype, "slowUiThreadCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalFrames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalFrames" }),
         __metadata("design:type", String)
     ], GraphicsStats.prototype, "totalFrames", void 0);
     return GraphicsStats;
-}(SpeakeasyBase));
-export { GraphicsStats };
+}(utils_1.SpeakeasyBase));
+exports.GraphicsStats = GraphicsStats;

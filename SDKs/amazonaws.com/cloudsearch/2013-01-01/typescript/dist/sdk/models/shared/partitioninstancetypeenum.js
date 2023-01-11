@@ -1,4 +1,7 @@
-export var PartitionInstanceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PartitionInstanceTypeEnum = void 0;
+var PartitionInstanceTypeEnum;
 (function (PartitionInstanceTypeEnum) {
     PartitionInstanceTypeEnum["SearchM1Small"] = "search.m1.small";
     PartitionInstanceTypeEnum["SearchM1Large"] = "search.m1.large";
@@ -17,4 +20,4 @@ export var PartitionInstanceTypeEnum;
     PartitionInstanceTypeEnum["SearchPreviousgenerationLarge"] = "search.previousgeneration.large";
     PartitionInstanceTypeEnum["SearchPreviousgenerationXlarge"] = "search.previousgeneration.xlarge";
     PartitionInstanceTypeEnum["SearchPreviousgeneration2xlarge"] = "search.previousgeneration.2xlarge";
-})(PartitionInstanceTypeEnum || (PartitionInstanceTypeEnum = {}));
+})(PartitionInstanceTypeEnum = exports.PartitionInstanceTypeEnum || (exports.PartitionInstanceTypeEnum = {}));

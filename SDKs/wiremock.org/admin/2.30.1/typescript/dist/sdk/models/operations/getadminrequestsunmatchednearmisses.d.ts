@@ -2,8 +2,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses extends SpeakeasyBase {
     absoluteUrl?: string;
     body?: string;
-    cookies?: Map<string, any>;
-    headers?: Map<string, any>;
+    cookies?: Record<string, any>;
+    headers?: Record<string, any>;
     method?: string;
     url?: string;
 }
@@ -12,6 +12,6 @@ export declare class GetAdminRequestsUnmatchedNearMisses200ApplicationJson exten
 }
 export declare class GetAdminRequestsUnmatchedNearMissesResponse extends SpeakeasyBase {
     contentType: string;
-    getAdminRequestsUnmatchedNearMisses200ApplicationJsonObject?: GetAdminRequestsUnmatchedNearMisses200ApplicationJson;
     statusCode: number;
+    getAdminRequestsUnmatchedNearMisses200ApplicationJSONObject?: GetAdminRequestsUnmatchedNearMisses200ApplicationJson;
 }

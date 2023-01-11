@@ -9,5 +9,5 @@ export declare class GetDeviceSwitchRoutingInterfaceRequest extends SpeakeasyBas
 export declare class GetDeviceSwitchRoutingInterfaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceSwitchRoutingInterface200ApplicationJsonObject?: Map<string, any>;
+    getDeviceSwitchRoutingInterface200ApplicationJSONObject?: Record<string, any>;
 }

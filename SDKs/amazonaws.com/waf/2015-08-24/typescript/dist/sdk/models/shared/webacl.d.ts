@@ -9,6 +9,6 @@ export declare class WebAcl extends SpeakeasyBase {
     metricName?: string;
     name?: string;
     rules: ActivatedRule[];
-    webAclArn?: string;
-    webAclId: string;
+    webACLArn?: string;
+    webACLId: string;
 }

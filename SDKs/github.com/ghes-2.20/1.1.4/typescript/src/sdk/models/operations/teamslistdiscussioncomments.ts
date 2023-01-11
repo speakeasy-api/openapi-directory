@@ -11,15 +11,10 @@ export class TeamsListDiscussionCommentsPathParams extends SpeakeasyBase {
   teamId: number;
 }
 
-export enum TeamsListDiscussionCommentsDirectionEnum {
-    Asc = "asc",
-    Desc = "desc"
-}
-
 
 export class TeamsListDiscussionCommentsQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
-  direction?: TeamsListDiscussionCommentsDirectionEnum;
+  direction?: shared.DiscussionNumberEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -43,7 +38,7 @@ export class TeamsListDiscussionCommentsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -9,6 +9,6 @@ export declare class GetOfferingsOfferingIdAssessmentsRequest extends SpeakeasyB
 export declare class GetOfferingsOfferingIdAssessmentsResponse extends SpeakeasyBase {
     assessmentResponses?: shared.AssessmentResponse[];
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

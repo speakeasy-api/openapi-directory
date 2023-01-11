@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2FieldId } from "./googleprivacydlpv2fieldid";
-import { GooglePrivacyDlpV2InfoType } from "./googleprivacydlpv2infotype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2TaggedField = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2fieldid_1 = require("./googleprivacydlpv2fieldid");
+var googleprivacydlpv2infotype_1 = require("./googleprivacydlpv2infotype");
 // GooglePrivacyDlpV2TaggedField
 /**
  * A column with a semantic tag attached.
@@ -35,21 +38,21 @@ var GooglePrivacyDlpV2TaggedField = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customTag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customTag" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2TaggedField.prototype, "customTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field" }),
-        __metadata("design:type", GooglePrivacyDlpV2FieldId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field" }),
+        __metadata("design:type", googleprivacydlpv2fieldid_1.GooglePrivacyDlpV2FieldId)
     ], GooglePrivacyDlpV2TaggedField.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inferred" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inferred" }),
+        __metadata("design:type", Object)
     ], GooglePrivacyDlpV2TaggedField.prototype, "inferred", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=infoType" }),
-        __metadata("design:type", GooglePrivacyDlpV2InfoType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=infoType" }),
+        __metadata("design:type", googleprivacydlpv2infotype_1.GooglePrivacyDlpV2InfoType)
     ], GooglePrivacyDlpV2TaggedField.prototype, "infoType", void 0);
     return GooglePrivacyDlpV2TaggedField;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2TaggedField };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2TaggedField = GooglePrivacyDlpV2TaggedField;

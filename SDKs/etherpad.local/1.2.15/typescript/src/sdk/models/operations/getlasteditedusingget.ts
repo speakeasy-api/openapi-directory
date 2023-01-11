@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetLastEditedUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -31,7 +31,7 @@ export class GetLastEditedUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class GetLastEditedUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class GetLastEditedUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class GetLastEditedUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getLastEditedUsingGet200ApplicationJsonObject?: GetLastEditedUsingGet200ApplicationJson;
+  getLastEditedUsingGET200ApplicationJSONObject?: GetLastEditedUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getLastEditedUsingGet400ApplicationJsonObject?: GetLastEditedUsingGet400ApplicationJson;
+  getLastEditedUsingGET400ApplicationJSONObject?: GetLastEditedUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getLastEditedUsingGet401ApplicationJsonObject?: GetLastEditedUsingGet401ApplicationJson;
+  getLastEditedUsingGET401ApplicationJSONObject?: GetLastEditedUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getLastEditedUsingGet500ApplicationJsonObject?: GetLastEditedUsingGet500ApplicationJson;
+  getLastEditedUsingGET500ApplicationJSONObject?: GetLastEditedUsingGet500ApplicationJson;
 }

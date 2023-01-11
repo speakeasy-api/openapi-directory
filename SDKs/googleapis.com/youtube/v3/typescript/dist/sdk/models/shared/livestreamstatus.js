@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LiveStreamHealthStatus } from "./livestreamhealthstatus";
-export var LiveStreamStatusStreamStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiveStreamStatus = exports.LiveStreamStatusStreamStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var livestreamhealthstatus_1 = require("./livestreamhealthstatus");
+var LiveStreamStatusStreamStatusEnum;
 (function (LiveStreamStatusStreamStatusEnum) {
     LiveStreamStatusStreamStatusEnum["Created"] = "created";
     LiveStreamStatusStreamStatusEnum["Ready"] = "ready";
     LiveStreamStatusStreamStatusEnum["Active"] = "active";
     LiveStreamStatusStreamStatusEnum["Inactive"] = "inactive";
     LiveStreamStatusStreamStatusEnum["Error"] = "error";
-})(LiveStreamStatusStreamStatusEnum || (LiveStreamStatusStreamStatusEnum = {}));
+})(LiveStreamStatusStreamStatusEnum = exports.LiveStreamStatusStreamStatusEnum || (exports.LiveStreamStatusStreamStatusEnum = {}));
 // LiveStreamStatus
 /**
  * Brief description of the live stream status.
@@ -42,13 +45,13 @@ var LiveStreamStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthStatus" }),
-        __metadata("design:type", LiveStreamHealthStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthStatus" }),
+        __metadata("design:type", livestreamhealthstatus_1.LiveStreamHealthStatus)
     ], LiveStreamStatus.prototype, "healthStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streamStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streamStatus" }),
         __metadata("design:type", String)
     ], LiveStreamStatus.prototype, "streamStatus", void 0);
     return LiveStreamStatus;
-}(SpeakeasyBase));
-export { LiveStreamStatus };
+}(utils_1.SpeakeasyBase));
+exports.LiveStreamStatus = LiveStreamStatus;

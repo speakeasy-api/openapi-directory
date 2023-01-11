@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostModifyTransitGatewayActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostModifyTransitGatewayResponse = exports.PostModifyTransitGatewayRequest = exports.PostModifyTransitGatewayHeaders = exports.PostModifyTransitGatewayQueryParams = exports.PostModifyTransitGatewayVersionEnum = exports.PostModifyTransitGatewayActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostModifyTransitGatewayActionEnum;
 (function (PostModifyTransitGatewayActionEnum) {
     PostModifyTransitGatewayActionEnum["ModifyTransitGateway"] = "ModifyTransitGateway";
-})(PostModifyTransitGatewayActionEnum || (PostModifyTransitGatewayActionEnum = {}));
-export var PostModifyTransitGatewayVersionEnum;
+})(PostModifyTransitGatewayActionEnum = exports.PostModifyTransitGatewayActionEnum || (exports.PostModifyTransitGatewayActionEnum = {}));
+var PostModifyTransitGatewayVersionEnum;
 (function (PostModifyTransitGatewayVersionEnum) {
     PostModifyTransitGatewayVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostModifyTransitGatewayVersionEnum || (PostModifyTransitGatewayVersionEnum = {}));
+})(PostModifyTransitGatewayVersionEnum = exports.PostModifyTransitGatewayVersionEnum || (exports.PostModifyTransitGatewayVersionEnum = {}));
 var PostModifyTransitGatewayQueryParams = /** @class */ (function (_super) {
     __extends(PostModifyTransitGatewayQueryParams, _super);
     function PostModifyTransitGatewayQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostModifyTransitGatewayQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostModifyTransitGatewayQueryParams.prototype, "version", void 0);
     return PostModifyTransitGatewayQueryParams;
-}(SpeakeasyBase));
-export { PostModifyTransitGatewayQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyTransitGatewayQueryParams = PostModifyTransitGatewayQueryParams;
 var PostModifyTransitGatewayHeaders = /** @class */ (function (_super) {
     __extends(PostModifyTransitGatewayHeaders, _super);
     function PostModifyTransitGatewayHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostModifyTransitGatewayHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostModifyTransitGatewayHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostModifyTransitGatewayHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostModifyTransitGatewayHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostModifyTransitGatewayHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostModifyTransitGatewayHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostModifyTransitGatewayHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostModifyTransitGatewayHeaders;
-}(SpeakeasyBase));
-export { PostModifyTransitGatewayHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyTransitGatewayHeaders = PostModifyTransitGatewayHeaders;
 var PostModifyTransitGatewayRequest = /** @class */ (function (_super) {
     __extends(PostModifyTransitGatewayRequest, _super);
     function PostModifyTransitGatewayRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyTransitGatewayQueryParams)
     ], PostModifyTransitGatewayRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyTransitGatewayHeaders)
     ], PostModifyTransitGatewayRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostModifyTransitGatewayRequest.prototype, "request", void 0);
     return PostModifyTransitGatewayRequest;
-}(SpeakeasyBase));
-export { PostModifyTransitGatewayRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyTransitGatewayRequest = PostModifyTransitGatewayRequest;
 var PostModifyTransitGatewayResponse = /** @class */ (function (_super) {
     __extends(PostModifyTransitGatewayResponse, _super);
     function PostModifyTransitGatewayResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostModifyTransitGatewayResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostModifyTransitGatewayResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostModifyTransitGatewayResponse.prototype, "statusCode", void 0);
     return PostModifyTransitGatewayResponse;
-}(SpeakeasyBase));
-export { PostModifyTransitGatewayResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyTransitGatewayResponse = PostModifyTransitGatewayResponse;

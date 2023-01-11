@@ -41,26 +41,26 @@ export class GetBankAccountResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getBankAccount200ApplicationJsonAny?: any;
+  getBankAccount200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getBankAccount400ApplicationJsonAny?: any;
+  getBankAccount400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getBankAccount401ApplicationJsonAny?: any;
+  getBankAccount401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getBankAccount403ApplicationJsonAny?: any;
+  getBankAccount403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getBankAccount404ApplicationJsonAny?: any;
+  getBankAccount404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getBankAccount409ApplicationJsonAny?: any;
+  getBankAccount409ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getBankAccount429ApplicationJsonAny?: any;
+  getBankAccount429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getBankAccount500ApplicationJsonAny?: any;
+  getBankAccount500ApplicationJSONAny?: any;
 }

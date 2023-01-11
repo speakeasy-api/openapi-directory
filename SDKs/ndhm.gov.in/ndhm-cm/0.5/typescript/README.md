@@ -16,18 +16,82 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { GetV05HeartbeatResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { PostV05ConsentRequestsInitRequest, PostV05ConsentRequestsInitResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
+    
+const req: PostV05ConsentRequestsInitRequest = {
+  headers: {
+    authorization: "sit",
+  },
+  request: {
+    applicationXML: "voluptas".encode(),
+    consentRequest: {
+      consent: {
+        careContexts: [
+          {
+            careContextReference: "expedita",
+            patientReference: "consequuntur",
+          },
+          {
+            careContextReference: "dolor",
+            patientReference: "expedita",
+          },
+        ],
+        hiTypes: [
+          "OPConsultation",
+          "OPConsultation",
+          "OPConsultation",
+        ],
+        hip: {
+          id: "rerum",
+        },
+        hiu: {
+          id: "dicta",
+        },
+        patient: {
+          id: "debitis",
+        },
+        permission: {
+          accessMode: "VIEW",
+          dataEraseAt: "2005-09-27T09:17:54Z",
+          dateRange: {
+            from: "1970-04-14T21:44:49Z",
+            to: "2021-10-23T13:19:10Z",
+          },
+          frequency: {
+            repeats: 7259475919510918339,
+            unit: "YEAR",
+            value: 3287288577352441706,
+          },
+        },
+        purpose: {
+          code: "vitae",
+          refUri: "totam",
+          text: "dolores",
+        },
+        requester: {
+          identifier: {
+            system: "illum",
+            type: "debitis",
+            value: "vel",
+          },
+          name: "odio",
+        },
+      },
+      requestId: "dolore",
+      timestamp: "1993-03-23T22:53:08Z",
+    },
+  },
+};
 
-sdk.sdk.getV05Heartbeat().then((res: GetV05HeartbeatResponse | AxiosError) => {
+sdk.consent.postV05ConsentRequestsInit(req).then((res: PostV05ConsentRequestsInitResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -36,26 +100,60 @@ sdk.sdk.getV05Heartbeat().then((res: GetV05HeartbeatResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### consent
 
-* `getV05Heartbeat` - Get consent request status
-* `postV05CareContextsOnDiscover` - Response to patient's account discovery request
 * `postV05ConsentRequestsInit` - Create consent request
 * `postV05ConsentRequestsStatus` - Get consent request status
 * `postV05ConsentsFetch` - Get consent artefact
 * `postV05ConsentsHipOnNotify` - Consent notification
 * `postV05ConsentsHiuOnNotify` - Consent notification
+
+### data flow
+
 * `postV05HealthInformationNotify` - Notifications corresponding to events during data flow
 * `postV05HealthInformationOnRequest` - Health information data request acknowledgement from HIP
 * `postV05HealthInformationRequest` - Health information data request from HIU
+
+### discovery
+
+* `postV05CareContextsOnDiscover` - Response to patient's account discovery request
+
+### hip facing
+
+* `postV05UsersAuthFetchModes` - Get a patient's authentication modes relevant to specified purpose
+* `postV05UsersAuthOnNotify` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+
+### hiu facing
+
+* `postV05SubscriptionsHiuOnNotify` - Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
+* `postV05UsersAuthOnNotify` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+
+### identification
+
+* `postV05PatientsFind` - Identify a patient by her consent-manager user-id
+
+### link
+
 * `postV05LinksLinkAddContexts` - API for HIP initiated care-context linking for patient
 * `postV05LinksLinkOnConfirm` - Token authenticated by HIP, indicating completion of linkage of care-contexts
 * `postV05LinksLinkOnInit` - Response to patient's care context link request
-* `postV05PatientsFind` - Identify a patient by her consent-manager user-id
+
+### monitoring
+
+* `getV05Heartbeat` - Get consent request status
+
+### profile
+
 * `postV05PatientsProfileOnShare` - Response to patient's share profile request
+
+### subscriptions
+
 * `postV05SubscriptionRequestsCmInit` - Request for subscription
 * `postV05SubscriptionRequestsHiuOnNotify` - Callback API for /subscription-requests/hiu/notify to acknowledge receipt of notification.
 * `postV05SubscriptionsHiuOnNotify` - Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
+
+### user auth
+
 * `postV05UsersAuthConfirm` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
 * `postV05UsersAuthFetchModes` - Get a patient's authentication modes relevant to specified purpose
 * `postV05UsersAuthInit` - Initialize authentication from HIP

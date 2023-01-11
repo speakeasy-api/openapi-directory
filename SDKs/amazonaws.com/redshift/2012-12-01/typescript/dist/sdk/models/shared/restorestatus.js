@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RestoreStatus = void 0;
+var utils_1 = require("../../../internal/utils");
 // RestoreStatus
 /**
  * Describes the status of a cluster restore action. Returns null if the cluster was not created by restoring a snapshot.
@@ -33,29 +36,29 @@ var RestoreStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RestoreStatus.prototype, "currentRestoreRateInMegaBytesPerSecond", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RestoreStatus.prototype, "elapsedTimeInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RestoreStatus.prototype, "estimatedTimeToCompletionInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RestoreStatus.prototype, "progressInMegaBytes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RestoreStatus.prototype, "snapshotSizeInMegaBytes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RestoreStatus.prototype, "status", void 0);
     return RestoreStatus;
-}(SpeakeasyBase));
-export { RestoreStatus };
+}(utils_1.SpeakeasyBase));
+exports.RestoreStatus = RestoreStatus;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VerificationRefreshStatusEnum } from "./verificationrefreshstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IncomeVerificationRefreshResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var verificationrefreshstatusenum_1 = require("./verificationrefreshstatusenum");
 // IncomeVerificationRefreshResponse
 /**
  * IncomeVerificationRequestResponse defines the response schema for `/income/verification/refresh`
@@ -34,13 +37,13 @@ var IncomeVerificationRefreshResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=request_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=request_id" }),
         __metadata("design:type", String)
     ], IncomeVerificationRefreshResponse.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verification_refresh_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verification_refresh_status" }),
         __metadata("design:type", String)
     ], IncomeVerificationRefreshResponse.prototype, "verificationRefreshStatus", void 0);
     return IncomeVerificationRefreshResponse;
-}(SpeakeasyBase));
-export { IncomeVerificationRefreshResponse };
+}(utils_1.SpeakeasyBase));
+exports.IncomeVerificationRefreshResponse = IncomeVerificationRefreshResponse;

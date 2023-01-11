@@ -10,6 +10,6 @@ export declare class GetRepositoryPipelineKnownHostRequest extends SpeakeasyBase
 export declare class GetRepositoryPipelineKnownHostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pipelineKnownHost?: Map<string, any>;
+    error?: Record<string, any>;
+    pipelineKnownHost?: Record<string, any>;
 }

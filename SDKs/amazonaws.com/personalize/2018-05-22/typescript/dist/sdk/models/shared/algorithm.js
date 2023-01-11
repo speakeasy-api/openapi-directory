@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AlgorithmImage } from "./algorithmimage";
-import { DefaultHyperParameterRanges } from "./defaulthyperparameterranges";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Algorithm = void 0;
+var utils_1 = require("../../../internal/utils");
+var algorithmimage_1 = require("./algorithmimage");
+var defaulthyperparameterranges_1 = require("./defaulthyperparameterranges");
 // Algorithm
 /**
  * Describes a custom algorithm.
@@ -35,45 +38,45 @@ var Algorithm = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=algorithmArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=algorithmArn" }),
         __metadata("design:type", String)
     ], Algorithm.prototype, "algorithmArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=algorithmImage" }),
-        __metadata("design:type", AlgorithmImage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=algorithmImage" }),
+        __metadata("design:type", algorithmimage_1.AlgorithmImage)
     ], Algorithm.prototype, "algorithmImage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDateTime" }),
         __metadata("design:type", Date)
     ], Algorithm.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultHyperParameterRanges" }),
-        __metadata("design:type", DefaultHyperParameterRanges)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultHyperParameterRanges" }),
+        __metadata("design:type", defaulthyperparameterranges_1.DefaultHyperParameterRanges)
     ], Algorithm.prototype, "defaultHyperParameterRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultHyperParameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultHyperParameters" }),
+        __metadata("design:type", Object)
     ], Algorithm.prototype, "defaultHyperParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultResourceConfig" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultResourceConfig" }),
+        __metadata("design:type", Object)
     ], Algorithm.prototype, "defaultResourceConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedDateTime" }),
         __metadata("design:type", Date)
     ], Algorithm.prototype, "lastUpdatedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Algorithm.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleArn" }),
         __metadata("design:type", String)
     ], Algorithm.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trainingInputMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trainingInputMode" }),
         __metadata("design:type", String)
     ], Algorithm.prototype, "trainingInputMode", void 0);
     return Algorithm;
-}(SpeakeasyBase));
-export { Algorithm };
+}(utils_1.SpeakeasyBase));
+exports.Algorithm = Algorithm;

@@ -50,5 +50,5 @@ export declare class UpdateAccessPolicyResponse extends SpeakeasyBase {
     resourceNotFoundException?: any;
     statusCode: number;
     throttlingException?: any;
-    updateAccessPolicyResponse?: Map<string, any>;
+    updateAccessPolicyResponse?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ConnectivityFreeWifiExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Connectivity = exports.ConnectivityWifiAvailableExceptionEnum = exports.ConnectivityPublicInternetTerminalExceptionEnum = exports.ConnectivityPublicAreaWifiAvailableExceptionEnum = exports.ConnectivityFreeWifiExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ConnectivityFreeWifiExceptionEnum;
 (function (ConnectivityFreeWifiExceptionEnum) {
     ConnectivityFreeWifiExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ConnectivityFreeWifiExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ConnectivityFreeWifiExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ConnectivityFreeWifiExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ConnectivityFreeWifiExceptionEnum || (ConnectivityFreeWifiExceptionEnum = {}));
-export var ConnectivityPublicAreaWifiAvailableExceptionEnum;
+})(ConnectivityFreeWifiExceptionEnum = exports.ConnectivityFreeWifiExceptionEnum || (exports.ConnectivityFreeWifiExceptionEnum = {}));
+var ConnectivityPublicAreaWifiAvailableExceptionEnum;
 (function (ConnectivityPublicAreaWifiAvailableExceptionEnum) {
     ConnectivityPublicAreaWifiAvailableExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ConnectivityPublicAreaWifiAvailableExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ConnectivityPublicAreaWifiAvailableExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ConnectivityPublicAreaWifiAvailableExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ConnectivityPublicAreaWifiAvailableExceptionEnum || (ConnectivityPublicAreaWifiAvailableExceptionEnum = {}));
-export var ConnectivityPublicInternetTerminalExceptionEnum;
+})(ConnectivityPublicAreaWifiAvailableExceptionEnum = exports.ConnectivityPublicAreaWifiAvailableExceptionEnum || (exports.ConnectivityPublicAreaWifiAvailableExceptionEnum = {}));
+var ConnectivityPublicInternetTerminalExceptionEnum;
 (function (ConnectivityPublicInternetTerminalExceptionEnum) {
     ConnectivityPublicInternetTerminalExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ConnectivityPublicInternetTerminalExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ConnectivityPublicInternetTerminalExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ConnectivityPublicInternetTerminalExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ConnectivityPublicInternetTerminalExceptionEnum || (ConnectivityPublicInternetTerminalExceptionEnum = {}));
-export var ConnectivityWifiAvailableExceptionEnum;
+})(ConnectivityPublicInternetTerminalExceptionEnum = exports.ConnectivityPublicInternetTerminalExceptionEnum || (exports.ConnectivityPublicInternetTerminalExceptionEnum = {}));
+var ConnectivityWifiAvailableExceptionEnum;
 (function (ConnectivityWifiAvailableExceptionEnum) {
     ConnectivityWifiAvailableExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     ConnectivityWifiAvailableExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     ConnectivityWifiAvailableExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     ConnectivityWifiAvailableExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(ConnectivityWifiAvailableExceptionEnum || (ConnectivityWifiAvailableExceptionEnum = {}));
+})(ConnectivityWifiAvailableExceptionEnum = exports.ConnectivityWifiAvailableExceptionEnum || (exports.ConnectivityWifiAvailableExceptionEnum = {}));
 // Connectivity
 /**
  * The ways in which the property provides guests with the ability to access the internet.
@@ -61,37 +64,37 @@ var Connectivity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeWifi" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeWifi" }),
         __metadata("design:type", Boolean)
     ], Connectivity.prototype, "freeWifi", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeWifiException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeWifiException" }),
         __metadata("design:type", String)
     ], Connectivity.prototype, "freeWifiException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicAreaWifiAvailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicAreaWifiAvailable" }),
         __metadata("design:type", Boolean)
     ], Connectivity.prototype, "publicAreaWifiAvailable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicAreaWifiAvailableException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicAreaWifiAvailableException" }),
         __metadata("design:type", String)
     ], Connectivity.prototype, "publicAreaWifiAvailableException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicInternetTerminal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicInternetTerminal" }),
         __metadata("design:type", Boolean)
     ], Connectivity.prototype, "publicInternetTerminal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicInternetTerminalException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicInternetTerminalException" }),
         __metadata("design:type", String)
     ], Connectivity.prototype, "publicInternetTerminalException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wifiAvailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wifiAvailable" }),
         __metadata("design:type", Boolean)
     ], Connectivity.prototype, "wifiAvailable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wifiAvailableException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wifiAvailableException" }),
         __metadata("design:type", String)
     ], Connectivity.prototype, "wifiAvailableException", void 0);
     return Connectivity;
-}(SpeakeasyBase));
-export { Connectivity };
+}(utils_1.SpeakeasyBase));
+exports.Connectivity = Connectivity;

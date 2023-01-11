@@ -6,7 +6,7 @@ import { PermissionsBoundaryDecisionDetail } from "./permissionsboundarydecision
  * <p>Contains the result of the simulation of a single API operation call on a single resource.</p> <p>This data type is used by a member of the <a>EvaluationResult</a> data type.</p>
 **/
 export declare class ResourceSpecificResult extends SpeakeasyBase {
-    evalDecisionDetails?: Map<string, PolicyEvaluationDecisionTypeEnum>;
+    evalDecisionDetails?: Record<string, string>;
     evalResourceDecision: PolicyEvaluationDecisionTypeEnum;
     evalResourceName: string;
     matchedStatements?: Statement[];

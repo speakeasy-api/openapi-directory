@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicationTaskAssessmentResult = void 0;
+var utils_1 = require("../../../internal/utils");
 // ReplicationTaskAssessmentResult
 /**
  *  The task assessment report in JSON format.
@@ -33,33 +36,33 @@ var ReplicationTaskAssessmentResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssessmentResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssessmentResults" }),
         __metadata("design:type", String)
     ], ReplicationTaskAssessmentResult.prototype, "assessmentResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssessmentResultsFile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssessmentResultsFile" }),
         __metadata("design:type", String)
     ], ReplicationTaskAssessmentResult.prototype, "assessmentResultsFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssessmentStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssessmentStatus" }),
         __metadata("design:type", String)
     ], ReplicationTaskAssessmentResult.prototype, "assessmentStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationTaskArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationTaskArn" }),
         __metadata("design:type", String)
     ], ReplicationTaskAssessmentResult.prototype, "replicationTaskArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationTaskIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationTaskIdentifier" }),
         __metadata("design:type", String)
     ], ReplicationTaskAssessmentResult.prototype, "replicationTaskIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationTaskLastAssessmentDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationTaskLastAssessmentDate" }),
         __metadata("design:type", Date)
     ], ReplicationTaskAssessmentResult.prototype, "replicationTaskLastAssessmentDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3ObjectUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3ObjectUrl" }),
         __metadata("design:type", String)
     ], ReplicationTaskAssessmentResult.prototype, "s3ObjectUrl", void 0);
     return ReplicationTaskAssessmentResult;
-}(SpeakeasyBase));
-export { ReplicationTaskAssessmentResult };
+}(utils_1.SpeakeasyBase));
+exports.ReplicationTaskAssessmentResult = ReplicationTaskAssessmentResult;

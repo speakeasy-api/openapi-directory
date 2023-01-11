@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LaunchProfile } from "./launchprofile";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLaunchProfileResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var launchprofile_1 = require("./launchprofile");
 var GetLaunchProfileResponse = /** @class */ (function (_super) {
     __extends(GetLaunchProfileResponse, _super);
     function GetLaunchProfileResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=launchProfile" }),
-        __metadata("design:type", LaunchProfile)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launchProfile" }),
+        __metadata("design:type", launchprofile_1.LaunchProfile)
     ], GetLaunchProfileResponse.prototype, "launchProfile", void 0);
     return GetLaunchProfileResponse;
-}(SpeakeasyBase));
-export { GetLaunchProfileResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetLaunchProfileResponse = GetLaunchProfileResponse;

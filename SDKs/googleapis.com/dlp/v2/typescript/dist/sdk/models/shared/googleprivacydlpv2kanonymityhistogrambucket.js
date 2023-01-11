@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2KAnonymityEquivalenceClass } from "./googleprivacydlpv2kanonymityequivalenceclass";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2KAnonymityHistogramBucket = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2kanonymityequivalenceclass_1 = require("./googleprivacydlpv2kanonymityequivalenceclass");
 // GooglePrivacyDlpV2KAnonymityHistogramBucket
 /**
  * Histogram of k-anonymity equivalence classes.
@@ -34,25 +37,25 @@ var GooglePrivacyDlpV2KAnonymityHistogramBucket = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketSize" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2KAnonymityHistogramBucket.prototype, "bucketSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketValueCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketValueCount" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2KAnonymityHistogramBucket.prototype, "bucketValueCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketValues", elemType: GooglePrivacyDlpV2KAnonymityEquivalenceClass }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketValues", elemType: googleprivacydlpv2kanonymityequivalenceclass_1.GooglePrivacyDlpV2KAnonymityEquivalenceClass }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2KAnonymityHistogramBucket.prototype, "bucketValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=equivalenceClassSizeLowerBound" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=equivalenceClassSizeLowerBound" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2KAnonymityHistogramBucket.prototype, "equivalenceClassSizeLowerBound", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=equivalenceClassSizeUpperBound" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=equivalenceClassSizeUpperBound" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2KAnonymityHistogramBucket.prototype, "equivalenceClassSizeUpperBound", void 0);
     return GooglePrivacyDlpV2KAnonymityHistogramBucket;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2KAnonymityHistogramBucket };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2KAnonymityHistogramBucket = GooglePrivacyDlpV2KAnonymityHistogramBucket;

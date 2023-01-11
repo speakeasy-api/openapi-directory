@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransformSettings } from "./transformsettings";
-import { VerificationSettings } from "./verificationsettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Transform = void 0;
+var utils_1 = require("../../../internal/utils");
+var transformsettings_1 = require("./transformsettings");
+var verificationsettings_1 = require("./verificationsettings");
 // Transform
 /**
  * Strategy where signature and field values are verified, trasnformed and then token si re-signed
@@ -35,21 +38,21 @@ var Transform = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=algoSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=algoSettings" }),
         __metadata("design:type", Object)
     ], Transform.prototype, "algoSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transformSettings" }),
-        __metadata("design:type", TransformSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transformSettings" }),
+        __metadata("design:type", transformsettings_1.TransformSettings)
     ], Transform.prototype, "transformSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Transform.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verificationSettings" }),
-        __metadata("design:type", VerificationSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verificationSettings" }),
+        __metadata("design:type", verificationsettings_1.VerificationSettings)
     ], Transform.prototype, "verificationSettings", void 0);
     return Transform;
-}(SpeakeasyBase));
-export { Transform };
+}(utils_1.SpeakeasyBase));
+exports.Transform = Transform;

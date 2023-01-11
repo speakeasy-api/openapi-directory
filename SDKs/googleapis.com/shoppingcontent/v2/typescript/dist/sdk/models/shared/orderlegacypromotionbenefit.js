@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Price } from "./price";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderLegacyPromotionBenefit = void 0;
+var utils_1 = require("../../../internal/utils");
+var price_1 = require("./price");
 var OrderLegacyPromotionBenefit = /** @class */ (function (_super) {
     __extends(OrderLegacyPromotionBenefit, _super);
     function OrderLegacyPromotionBenefit() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discount" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discount" }),
+        __metadata("design:type", price_1.Price)
     ], OrderLegacyPromotionBenefit.prototype, "discount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offerIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offerIds" }),
         __metadata("design:type", Array)
     ], OrderLegacyPromotionBenefit.prototype, "offerIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subType" }),
         __metadata("design:type", String)
     ], OrderLegacyPromotionBenefit.prototype, "subType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxImpact" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxImpact" }),
+        __metadata("design:type", price_1.Price)
     ], OrderLegacyPromotionBenefit.prototype, "taxImpact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], OrderLegacyPromotionBenefit.prototype, "type", void 0);
     return OrderLegacyPromotionBenefit;
-}(SpeakeasyBase));
-export { OrderLegacyPromotionBenefit };
+}(utils_1.SpeakeasyBase));
+exports.OrderLegacyPromotionBenefit = OrderLegacyPromotionBenefit;

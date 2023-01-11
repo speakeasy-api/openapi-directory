@@ -56,7 +56,7 @@ export class CompanyIdDatasetRequest extends SpeakeasyBase {
 
 export class CompanyIdDatasetResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  companyIdDatasetDefaultApplicationJsonAny?: any;
+  companyIdDatasetDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   contentType: string;

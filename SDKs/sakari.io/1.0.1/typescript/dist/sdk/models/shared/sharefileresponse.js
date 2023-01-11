@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShareFileResponse = exports.ShareFileResponseData = void 0;
+var utils_1 = require("../../../internal/utils");
 var ShareFileResponseData = /** @class */ (function (_super) {
     __extends(ShareFileResponseData, _super);
     function ShareFileResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires" }),
         __metadata("design:type", Date)
     ], ShareFileResponseData.prototype, "expires", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], ShareFileResponseData.prototype, "link", void 0);
     return ShareFileResponseData;
-}(SpeakeasyBase));
-export { ShareFileResponseData };
+}(utils_1.SpeakeasyBase));
+exports.ShareFileResponseData = ShareFileResponseData;
 var ShareFileResponse = /** @class */ (function (_super) {
     __extends(ShareFileResponse, _super);
     function ShareFileResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", ShareFileResponseData)
     ], ShareFileResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], ShareFileResponse.prototype, "success", void 0);
     return ShareFileResponse;
-}(SpeakeasyBase));
-export { ShareFileResponse };
+}(utils_1.SpeakeasyBase));
+exports.ShareFileResponse = ShareFileResponse;

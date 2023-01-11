@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OperatingSystem } from "./operatingsystem";
-import { WorkspaceImageRequiredTenancyEnum } from "./workspaceimagerequiredtenancyenum";
-import { WorkspaceImageStateEnum } from "./workspaceimagestateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkspaceImage = void 0;
+var utils_1 = require("../../../internal/utils");
+var operatingsystem_1 = require("./operatingsystem");
+var workspaceimagerequiredtenancyenum_1 = require("./workspaceimagerequiredtenancyenum");
+var workspaceimagestateenum_1 = require("./workspaceimagestateenum");
 // WorkspaceImage
 /**
  * Describes a WorkSpace image.
@@ -36,45 +39,45 @@ var WorkspaceImage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Created" }),
         __metadata("design:type", Date)
     ], WorkspaceImage.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], WorkspaceImage.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorCode" }),
         __metadata("design:type", String)
     ], WorkspaceImage.prototype, "errorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorMessage" }),
         __metadata("design:type", String)
     ], WorkspaceImage.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ImageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ImageId" }),
         __metadata("design:type", String)
     ], WorkspaceImage.prototype, "imageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], WorkspaceImage.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OperatingSystem" }),
-        __metadata("design:type", OperatingSystem)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OperatingSystem" }),
+        __metadata("design:type", operatingsystem_1.OperatingSystem)
     ], WorkspaceImage.prototype, "operatingSystem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OwnerAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OwnerAccountId" }),
         __metadata("design:type", String)
     ], WorkspaceImage.prototype, "ownerAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequiredTenancy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequiredTenancy" }),
         __metadata("design:type", String)
     ], WorkspaceImage.prototype, "requiredTenancy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], WorkspaceImage.prototype, "state", void 0);
     return WorkspaceImage;
-}(SpeakeasyBase));
-export { WorkspaceImage };
+}(utils_1.SpeakeasyBase));
+exports.WorkspaceImage = WorkspaceImage;

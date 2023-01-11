@@ -22,5 +22,5 @@ export class GetNetworkSettingsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSettings200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSettings200ApplicationJSONObject?: Record<string, any>;
 }

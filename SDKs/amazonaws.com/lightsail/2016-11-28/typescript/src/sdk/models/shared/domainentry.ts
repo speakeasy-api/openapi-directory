@@ -17,7 +17,7 @@ export class DomainEntry extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=options" })
-  options?: Map<string, string>;
+  options?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=target" })
   target?: string;

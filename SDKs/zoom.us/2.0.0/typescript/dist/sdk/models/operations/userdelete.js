@@ -1,0 +1,105 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserDeleteResponse = exports.UserDeleteRequest = exports.UserDeleteQueryParams = exports.UserDeleteActionEnum = exports.UserDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var UserDeletePathParams = /** @class */ (function (_super) {
+    __extends(UserDeletePathParams, _super);
+    function UserDeletePathParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userId" }),
+        __metadata("design:type", String)
+    ], UserDeletePathParams.prototype, "userId", void 0);
+    return UserDeletePathParams;
+}(utils_1.SpeakeasyBase));
+exports.UserDeletePathParams = UserDeletePathParams;
+var UserDeleteActionEnum;
+(function (UserDeleteActionEnum) {
+    UserDeleteActionEnum["Disassociate"] = "disassociate";
+    UserDeleteActionEnum["Delete"] = "delete";
+})(UserDeleteActionEnum = exports.UserDeleteActionEnum || (exports.UserDeleteActionEnum = {}));
+var UserDeleteQueryParams = /** @class */ (function (_super) {
+    __extends(UserDeleteQueryParams, _super);
+    function UserDeleteQueryParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=action" }),
+        __metadata("design:type", String)
+    ], UserDeleteQueryParams.prototype, "action", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=transfer_email" }),
+        __metadata("design:type", String)
+    ], UserDeleteQueryParams.prototype, "transferEmail", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=transfer_meeting" }),
+        __metadata("design:type", Boolean)
+    ], UserDeleteQueryParams.prototype, "transferMeeting", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=transfer_recording" }),
+        __metadata("design:type", Boolean)
+    ], UserDeleteQueryParams.prototype, "transferRecording", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=transfer_webinar" }),
+        __metadata("design:type", Boolean)
+    ], UserDeleteQueryParams.prototype, "transferWebinar", void 0);
+    return UserDeleteQueryParams;
+}(utils_1.SpeakeasyBase));
+exports.UserDeleteQueryParams = UserDeleteQueryParams;
+var UserDeleteRequest = /** @class */ (function (_super) {
+    __extends(UserDeleteRequest, _super);
+    function UserDeleteRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", UserDeletePathParams)
+    ], UserDeleteRequest.prototype, "pathParams", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", UserDeleteQueryParams)
+    ], UserDeleteRequest.prototype, "queryParams", void 0);
+    return UserDeleteRequest;
+}(utils_1.SpeakeasyBase));
+exports.UserDeleteRequest = UserDeleteRequest;
+var UserDeleteResponse = /** @class */ (function (_super) {
+    __extends(UserDeleteResponse, _super);
+    function UserDeleteResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], UserDeleteResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], UserDeleteResponse.prototype, "statusCode", void 0);
+    return UserDeleteResponse;
+}(utils_1.SpeakeasyBase));
+exports.UserDeleteResponse = UserDeleteResponse;

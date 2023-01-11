@@ -107,11 +107,11 @@ export declare class NtmksRequest extends SpeakeasyBase {
 export declare class NtmksResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ntmks400ApplicationJsonObject?: Ntmks400ApplicationJson;
-    ntmks401ApplicationJsonObject?: Ntmks401ApplicationJson;
-    ntmks404ApplicationJsonObject?: Ntmks404ApplicationJson;
-    ntmks500ApplicationJsonObject?: Ntmks500ApplicationJson;
-    ntmks502ApplicationJsonObject?: Ntmks502ApplicationJson;
-    ntmks503ApplicationJsonObject?: Ntmks503ApplicationJson;
-    ntmks504ApplicationJsonObject?: Ntmks504ApplicationJson;
+    ntmks400ApplicationJSONObject?: Ntmks400ApplicationJson;
+    ntmks401ApplicationJSONObject?: Ntmks401ApplicationJson;
+    ntmks404ApplicationJSONObject?: Ntmks404ApplicationJson;
+    ntmks500ApplicationJSONObject?: Ntmks500ApplicationJson;
+    ntmks502ApplicationJSONObject?: Ntmks502ApplicationJson;
+    ntmks503ApplicationJSONObject?: Ntmks503ApplicationJson;
+    ntmks504ApplicationJSONObject?: Ntmks504ApplicationJson;
 }

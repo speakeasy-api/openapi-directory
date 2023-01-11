@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetDeleteAlarmsRequest, GetDeleteAlarmsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -36,23 +35,22 @@ const req: GetDeleteAlarmsRequest = {
   queryParams: {
     action: "DeleteAlarms",
     alarmNames: [
-      "sed",
-      "praesentium",
+      "culpa",
     ],
     version: "2010-08-01",
   },
   headers: {
-    xAmzAlgorithm: "ea",
-    xAmzContentSha256: "iure",
-    xAmzCredential: "rerum",
-    xAmzDate: "voluptates",
-    xAmzSecurityToken: "et",
-    xAmzSignature: "adipisci",
-    xAmzSignedHeaders: "eum",
+    xAmzAlgorithm: "consequuntur",
+    xAmzContentSha256: "dolor",
+    xAmzCredential: "expedita",
+    xAmzDate: "voluptas",
+    xAmzSecurityToken: "fugit",
+    xAmzSignature: "et",
+    xAmzSignedHeaders: "nihil",
   },
 };
 
-sdk.sdk.getDeleteAlarms(req).then((res: GetDeleteAlarmsResponse | AxiosError) => {
+sdk.getDeleteAlarms(req).then((res: GetDeleteAlarmsResponse | AxiosError) => {
    // handle response
 });
 ```

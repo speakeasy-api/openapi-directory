@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,156 +23,158 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatchDriverResponse = exports.PatchDriverRequest = exports.PatchDriver200ApplicationJson = exports.PatchDriverRequestBody = exports.PatchDriverRequestBodyPhone = exports.PatchDriverRequestBodyAddress = exports.PatchDriverPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PatchDriverPathParams = /** @class */ (function (_super) {
     __extends(PatchDriverPathParams, _super);
     function PatchDriverPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], PatchDriverPathParams.prototype, "id", void 0);
     return PatchDriverPathParams;
-}(SpeakeasyBase));
-export { PatchDriverPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PatchDriverPathParams = PatchDriverPathParams;
 var PatchDriverRequestBodyAddress = /** @class */ (function (_super) {
     __extends(PatchDriverRequestBodyAddress, _super);
     function PatchDriverRequestBodyAddress() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], PatchDriverRequestBodyAddress.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], PatchDriverRequestBodyAddress.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postalCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postalCode" }),
         __metadata("design:type", String)
     ], PatchDriverRequestBodyAddress.prototype, "postalCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streetAndNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streetAndNumber" }),
         __metadata("design:type", String)
     ], PatchDriverRequestBodyAddress.prototype, "streetAndNumber", void 0);
     return PatchDriverRequestBodyAddress;
-}(SpeakeasyBase));
-export { PatchDriverRequestBodyAddress };
+}(utils_1.SpeakeasyBase));
+exports.PatchDriverRequestBodyAddress = PatchDriverRequestBodyAddress;
 var PatchDriverRequestBodyPhone = /** @class */ (function (_super) {
     __extends(PatchDriverRequestBodyPhone, _super);
     function PatchDriverRequestBodyPhone() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=home" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=home" }),
         __metadata("design:type", String)
     ], PatchDriverRequestBodyPhone.prototype, "home", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobile" }),
         __metadata("design:type", String)
     ], PatchDriverRequestBodyPhone.prototype, "mobile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=work" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=work" }),
         __metadata("design:type", String)
     ], PatchDriverRequestBodyPhone.prototype, "work", void 0);
     return PatchDriverRequestBodyPhone;
-}(SpeakeasyBase));
-export { PatchDriverRequestBodyPhone };
+}(utils_1.SpeakeasyBase));
+exports.PatchDriverRequestBodyPhone = PatchDriverRequestBodyPhone;
 var PatchDriverRequestBody = /** @class */ (function (_super) {
     __extends(PatchDriverRequestBody, _super);
     function PatchDriverRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], PatchDriverRequestBody.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", PatchDriverRequestBodyAddress)
     ], PatchDriverRequestBody.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], PatchDriverRequestBody.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstname" }),
         __metadata("design:type", String)
     ], PatchDriverRequestBody.prototype, "firstname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastname" }),
         __metadata("design:type", String)
     ], PatchDriverRequestBody.prototype, "lastname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phone" }),
         __metadata("design:type", PatchDriverRequestBodyPhone)
     ], PatchDriverRequestBody.prototype, "phone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], PatchDriverRequestBody.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokens" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokens" }),
         __metadata("design:type", Array)
     ], PatchDriverRequestBody.prototype, "tokens", void 0);
     return PatchDriverRequestBody;
-}(SpeakeasyBase));
-export { PatchDriverRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PatchDriverRequestBody = PatchDriverRequestBody;
 var PatchDriver200ApplicationJson = /** @class */ (function (_super) {
     __extends(PatchDriver200ApplicationJson, _super);
     function PatchDriver200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PatchDriver200ApplicationJson.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ok" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ok" }),
         __metadata("design:type", Boolean)
     ], PatchDriver200ApplicationJson.prototype, "ok", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", Array)
     ], PatchDriver200ApplicationJson.prototype, "result", void 0);
     return PatchDriver200ApplicationJson;
-}(SpeakeasyBase));
-export { PatchDriver200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PatchDriver200ApplicationJson = PatchDriver200ApplicationJson;
 var PatchDriverRequest = /** @class */ (function (_super) {
     __extends(PatchDriverRequest, _super);
     function PatchDriverRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PatchDriverPathParams)
     ], PatchDriverRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PatchDriverRequestBody)
     ], PatchDriverRequest.prototype, "request", void 0);
     return PatchDriverRequest;
-}(SpeakeasyBase));
-export { PatchDriverRequest };
+}(utils_1.SpeakeasyBase));
+exports.PatchDriverRequest = PatchDriverRequest;
 var PatchDriverResponse = /** @class */ (function (_super) {
     __extends(PatchDriverResponse, _super);
     function PatchDriverResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PatchDriverResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PatchDriverResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PatchDriver200ApplicationJson)
-    ], PatchDriverResponse.prototype, "patchDriver200ApplicationJsonObject", void 0);
+    ], PatchDriverResponse.prototype, "patchDriver200ApplicationJSONObject", void 0);
     return PatchDriverResponse;
-}(SpeakeasyBase));
-export { PatchDriverResponse };
+}(utils_1.SpeakeasyBase));
+exports.PatchDriverResponse = PatchDriverResponse;

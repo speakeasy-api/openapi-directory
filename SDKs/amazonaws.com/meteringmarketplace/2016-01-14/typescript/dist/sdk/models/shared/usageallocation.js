@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UsageAllocation = void 0;
+var utils_1 = require("../../../internal/utils");
+var tag_1 = require("./tag");
 // UsageAllocation
 /**
  * <p>Usage allocations allow you to split usage into buckets by tags.</p> <p>Each UsageAllocation indicates the usage quantity for a specific set of tags.</p>
@@ -34,13 +37,13 @@ var UsageAllocation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AllocatedUsageQuantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllocatedUsageQuantity" }),
         __metadata("design:type", Number)
     ], UsageAllocation.prototype, "allocatedUsageQuantity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], UsageAllocation.prototype, "tags", void 0);
     return UsageAllocation;
-}(SpeakeasyBase));
-export { UsageAllocation };
+}(utils_1.SpeakeasyBase));
+exports.UsageAllocation = UsageAllocation;

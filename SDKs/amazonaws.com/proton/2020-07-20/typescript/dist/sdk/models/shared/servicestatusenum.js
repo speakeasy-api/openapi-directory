@@ -1,4 +1,7 @@
-export var ServiceStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceStatusEnum = void 0;
+var ServiceStatusEnum;
 (function (ServiceStatusEnum) {
     ServiceStatusEnum["CreateInProgress"] = "CREATE_IN_PROGRESS";
     ServiceStatusEnum["CreateFailedCleanupInProgress"] = "CREATE_FAILED_CLEANUP_IN_PROGRESS";
@@ -14,4 +17,4 @@ export var ServiceStatusEnum;
     ServiceStatusEnum["UpdateFailedCleanupFailed"] = "UPDATE_FAILED_CLEANUP_FAILED";
     ServiceStatusEnum["UpdateFailed"] = "UPDATE_FAILED";
     ServiceStatusEnum["UpdateCompleteCleanupFailed"] = "UPDATE_COMPLETE_CLEANUP_FAILED";
-})(ServiceStatusEnum || (ServiceStatusEnum = {}));
+})(ServiceStatusEnum = exports.ServiceStatusEnum || (exports.ServiceStatusEnum = {}));

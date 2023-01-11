@@ -13,7 +13,7 @@ export declare class AppsGetBySlugRequest extends SpeakeasyBase {
 export declare class AppsGetBySlugResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    appsGetBySlug415ApplicationJsonObject?: AppsGetBySlug415ApplicationJson;
+    appsGetBySlug415ApplicationJSONObject?: AppsGetBySlug415ApplicationJson;
     basicError?: shared.BasicError;
-    integration?: Map<string, any>;
+    integration?: Record<string, any>;
 }

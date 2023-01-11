@@ -19,7 +19,7 @@ export declare class GetMlModelRequest extends SpeakeasyBase {
 }
 export declare class GetMlModelResponse extends SpeakeasyBase {
     contentType: string;
-    getMlModelOutput?: shared.GetMlModelOutput;
+    getMLModelOutput?: shared.GetMlModelOutput;
     internalServerException?: any;
     invalidInputException?: any;
     resourceNotFoundException?: any;

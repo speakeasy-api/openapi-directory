@@ -11,7 +11,7 @@ export declare class AppointmentViewModel extends SpeakeasyBase {
     confirmationNumber?: string;
     confirmed?: boolean;
     createDate?: string;
-    customFields?: Map<string, CustomFieldViewModel>;
+    customFields?: Record<string, CustomFieldViewModel>;
     customerId?: string;
     customerMessage?: string;
     customers?: AppointmentCustomerViewModel[];

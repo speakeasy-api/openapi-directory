@@ -23,7 +23,7 @@ export class ProtocolsListData extends SpeakeasyBase {
   listUpdateToken?: string;
 
   @SpeakeasyMetadata({ data: "json, name=PreviousProtocolsList" })
-  previousProtocolsList?: Map<string, string[]>;
+  previousProtocolsList?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=ProtocolsList" })
   protocolsList: string[];

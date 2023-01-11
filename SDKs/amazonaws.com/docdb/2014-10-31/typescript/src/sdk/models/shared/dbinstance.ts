@@ -2,8 +2,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { DbSubnetGroup } from "./dbsubnetgroup";
 import { Endpoint } from "./endpoint";
 import { PendingModifiedValues } from "./pendingmodifiedvalues";
-import { DbInstanceStatusInfo } from "./dbinstancestatusinfo";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+import { DbInstanceStatusInfoList } from "./dbinstancestatusinfolist";
+import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 
 
 
@@ -81,12 +81,12 @@ export class DbInstance extends SpeakeasyBase {
   @SpeakeasyMetadata()
   publiclyAccessible?: boolean;
 
-  @SpeakeasyMetadata({ elemType: DbInstanceStatusInfo })
-  statusInfos?: DbInstanceStatusInfo[];
+  @SpeakeasyMetadata({ elemType: DbInstanceStatusInfoList })
+  statusInfos?: DbInstanceStatusInfoList[];
 
   @SpeakeasyMetadata()
   storageEncrypted?: boolean;
 
-  @SpeakeasyMetadata({ elemType: VpcSecurityGroupMembership })
-  vpcSecurityGroups?: VpcSecurityGroupMembership[];
+  @SpeakeasyMetadata({ elemType: VpcSecurityGroupMembershipList })
+  vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

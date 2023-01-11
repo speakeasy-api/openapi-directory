@@ -8,5 +8,5 @@ export declare class GetNetworkFirmwareUpgradesRequest extends SpeakeasyBase {
 export declare class GetNetworkFirmwareUpgradesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkFirmwareUpgrades200ApplicationJsonObject?: Map<string, any>;
+    getNetworkFirmwareUpgrades200ApplicationJSONObject?: Record<string, any>;
 }

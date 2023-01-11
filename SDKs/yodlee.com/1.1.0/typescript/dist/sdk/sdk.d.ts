@@ -1,0 +1,45 @@
+import { AxiosInstance } from "axios";
+import { Accounts } from "./accounts";
+import { Auth } from "./auth";
+import { Cobrand } from "./cobrand";
+import { Configs } from "./configs";
+import { DataExtracts } from "./dataextracts";
+import { Derived } from "./derived";
+import { Documents } from "./documents";
+import { Holdings } from "./holdings";
+import { ProviderAccounts } from "./provideraccounts";
+import { Providers } from "./providers";
+import { Statements } from "./statements";
+import { Transactions } from "./transactions";
+import { User } from "./user";
+import { Verification } from "./verification";
+import { VerifyAccount } from "./verifyaccount";
+export declare const ServerList: readonly ["https://yodlee.com/"];
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
+export declare class SDK {
+    accounts: Accounts;
+    auth: Auth;
+    cobrand: Cobrand;
+    configs: Configs;
+    dataExtracts: DataExtracts;
+    derived: Derived;
+    documents: Documents;
+    holdings: Holdings;
+    providerAccounts: ProviderAccounts;
+    providers: Providers;
+    statements: Statements;
+    transactions: Transactions;
+    user: User;
+    verification: Verification;
+    verifyAccount: VerifyAccount;
+    _defaultClient: AxiosInstance;
+    _securityClient: AxiosInstance;
+    _serverURL: string;
+    private _language;
+    private _sdkVersion;
+    private _genVersion;
+    constructor(props: SDKProps);
+}

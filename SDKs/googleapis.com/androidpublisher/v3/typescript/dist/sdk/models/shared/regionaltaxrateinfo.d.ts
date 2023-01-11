@@ -16,9 +16,6 @@ export declare enum RegionalTaxRateInfoTaxTierEnum {
     TaxTierMusicOrAudio1 = "TAX_TIER_MUSIC_OR_AUDIO_1",
     TaxTierLiveOrBroadcast1 = "TAX_TIER_LIVE_OR_BROADCAST_1"
 }
-/**
- * Specified details about taxation in a given geographical region.
-**/
 export declare class RegionalTaxRateInfo extends SpeakeasyBase {
     eligibleForStreamingServiceTaxRate?: boolean;
     streamingTaxType?: RegionalTaxRateInfoStreamingTaxTypeEnum;

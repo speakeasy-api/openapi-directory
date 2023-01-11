@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MaximumExecutionFrequencyEnum } from "./maximumexecutionfrequencyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrganizationCustomRuleMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var maximumexecutionfrequencyenum_1 = require("./maximumexecutionfrequencyenum");
 // OrganizationCustomRuleMetadata
 /**
  * An object that specifies organization custom rule metadata such as resource type, resource ID of Amazon Web Services resource, Lambda function ARN, and organization trigger types that trigger Config to evaluate your Amazon Web Services resources against a rule. It also provides the frequency with which you want Config to run evaluations for the rule if the trigger type is periodic.
@@ -34,41 +37,41 @@ var OrganizationCustomRuleMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], OrganizationCustomRuleMetadata.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InputParameters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InputParameters" }),
         __metadata("design:type", String)
     ], OrganizationCustomRuleMetadata.prototype, "inputParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LambdaFunctionArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LambdaFunctionArn" }),
         __metadata("design:type", String)
     ], OrganizationCustomRuleMetadata.prototype, "lambdaFunctionArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumExecutionFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumExecutionFrequency" }),
         __metadata("design:type", String)
     ], OrganizationCustomRuleMetadata.prototype, "maximumExecutionFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OrganizationConfigRuleTriggerTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OrganizationConfigRuleTriggerTypes" }),
         __metadata("design:type", Array)
     ], OrganizationCustomRuleMetadata.prototype, "organizationConfigRuleTriggerTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceIdScope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceIdScope" }),
         __metadata("design:type", String)
     ], OrganizationCustomRuleMetadata.prototype, "resourceIdScope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceTypesScope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceTypesScope" }),
         __metadata("design:type", Array)
     ], OrganizationCustomRuleMetadata.prototype, "resourceTypesScope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TagKeyScope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TagKeyScope" }),
         __metadata("design:type", String)
     ], OrganizationCustomRuleMetadata.prototype, "tagKeyScope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TagValueScope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TagValueScope" }),
         __metadata("design:type", String)
     ], OrganizationCustomRuleMetadata.prototype, "tagValueScope", void 0);
     return OrganizationCustomRuleMetadata;
-}(SpeakeasyBase));
-export { OrganizationCustomRuleMetadata };
+}(utils_1.SpeakeasyBase));
+exports.OrganizationCustomRuleMetadata = OrganizationCustomRuleMetadata;

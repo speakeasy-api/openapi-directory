@@ -40,5 +40,5 @@ export class WipeNetworkSmDevicesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  wipeNetworkSmDevices200ApplicationJsonObject?: Map<string, any>;
+  wipeNetworkSmDevices200ApplicationJSONObject?: Record<string, any>;
 }

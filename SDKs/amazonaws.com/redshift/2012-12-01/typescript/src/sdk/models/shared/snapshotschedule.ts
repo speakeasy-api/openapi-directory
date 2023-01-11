@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClusterAssociatedToSchedule } from "./clusterassociatedtoschedule";
-import { Tag } from "./tag";
+import { AssociatedClusterList } from "./associatedclusterlist";
+import { TagList } from "./taglist";
 
 
 
@@ -12,14 +12,14 @@ export class SnapshotSchedule extends SpeakeasyBase {
   @SpeakeasyMetadata()
   associatedClusterCount?: number;
 
-  @SpeakeasyMetadata({ elemType: ClusterAssociatedToSchedule })
-  associatedClusters?: ClusterAssociatedToSchedule[];
+  @SpeakeasyMetadata({ elemType: AssociatedClusterList })
+  associatedClusters?: AssociatedClusterList[];
 
   @SpeakeasyMetadata()
-  nextInvocations?: Date[];
+  nextInvocations?: Record<string, any>[];
 
   @SpeakeasyMetadata()
-  scheduleDefinitions?: string[];
+  scheduleDefinitions?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   scheduleDescription?: string;
@@ -27,6 +27,6 @@ export class SnapshotSchedule extends SpeakeasyBase {
   @SpeakeasyMetadata()
   scheduleIdentifier?: string;
 
-  @SpeakeasyMetadata({ elemType: Tag })
-  tags?: Tag[];
+  @SpeakeasyMetadata({ elemType: TagList })
+  tags?: TagList[];
 }

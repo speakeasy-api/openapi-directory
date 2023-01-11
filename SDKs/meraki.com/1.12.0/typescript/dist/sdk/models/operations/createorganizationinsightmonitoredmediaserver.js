@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateOrganizationInsightMonitoredMediaServerResponse = exports.CreateOrganizationInsightMonitoredMediaServerRequest = exports.CreateOrganizationInsightMonitoredMediaServerRequestBody = exports.CreateOrganizationInsightMonitoredMediaServerPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateOrganizationInsightMonitoredMediaServerPathParams = /** @class */ (function (_super) {
     __extends(CreateOrganizationInsightMonitoredMediaServerPathParams, _super);
     function CreateOrganizationInsightMonitoredMediaServerPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], CreateOrganizationInsightMonitoredMediaServerPathParams.prototype, "organizationId", void 0);
     return CreateOrganizationInsightMonitoredMediaServerPathParams;
-}(SpeakeasyBase));
-export { CreateOrganizationInsightMonitoredMediaServerPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrganizationInsightMonitoredMediaServerPathParams = CreateOrganizationInsightMonitoredMediaServerPathParams;
 var CreateOrganizationInsightMonitoredMediaServerRequestBody = /** @class */ (function (_super) {
     __extends(CreateOrganizationInsightMonitoredMediaServerRequestBody, _super);
     function CreateOrganizationInsightMonitoredMediaServerRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], CreateOrganizationInsightMonitoredMediaServerRequestBody.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bestEffortMonitoringEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bestEffortMonitoringEnabled" }),
         __metadata("design:type", Boolean)
     ], CreateOrganizationInsightMonitoredMediaServerRequestBody.prototype, "bestEffortMonitoringEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateOrganizationInsightMonitoredMediaServerRequestBody.prototype, "name", void 0);
     return CreateOrganizationInsightMonitoredMediaServerRequestBody;
-}(SpeakeasyBase));
-export { CreateOrganizationInsightMonitoredMediaServerRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrganizationInsightMonitoredMediaServerRequestBody = CreateOrganizationInsightMonitoredMediaServerRequestBody;
 var CreateOrganizationInsightMonitoredMediaServerRequest = /** @class */ (function (_super) {
     __extends(CreateOrganizationInsightMonitoredMediaServerRequest, _super);
     function CreateOrganizationInsightMonitoredMediaServerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateOrganizationInsightMonitoredMediaServerPathParams)
     ], CreateOrganizationInsightMonitoredMediaServerRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateOrganizationInsightMonitoredMediaServerRequestBody)
     ], CreateOrganizationInsightMonitoredMediaServerRequest.prototype, "request", void 0);
     return CreateOrganizationInsightMonitoredMediaServerRequest;
-}(SpeakeasyBase));
-export { CreateOrganizationInsightMonitoredMediaServerRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrganizationInsightMonitoredMediaServerRequest = CreateOrganizationInsightMonitoredMediaServerRequest;
 var CreateOrganizationInsightMonitoredMediaServerResponse = /** @class */ (function (_super) {
     __extends(CreateOrganizationInsightMonitoredMediaServerResponse, _super);
     function CreateOrganizationInsightMonitoredMediaServerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateOrganizationInsightMonitoredMediaServerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateOrganizationInsightMonitoredMediaServerResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], CreateOrganizationInsightMonitoredMediaServerResponse.prototype, "createOrganizationInsightMonitoredMediaServer201ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateOrganizationInsightMonitoredMediaServerResponse.prototype, "createOrganizationInsightMonitoredMediaServer201ApplicationJSONObject", void 0);
     return CreateOrganizationInsightMonitoredMediaServerResponse;
-}(SpeakeasyBase));
-export { CreateOrganizationInsightMonitoredMediaServerResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrganizationInsightMonitoredMediaServerResponse = CreateOrganizationInsightMonitoredMediaServerResponse;

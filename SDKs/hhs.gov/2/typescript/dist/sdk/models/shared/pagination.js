@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Pagination = void 0;
+var utils_1 = require("../../../internal/utils");
 var Pagination = /** @class */ (function (_super) {
     __extends(Pagination, _super);
     function Pagination() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], Pagination.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentUrl" }),
         __metadata("design:type", String)
     ], Pagination.prototype, "currentUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max" }),
         __metadata("design:type", Number)
     ], Pagination.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextUrl" }),
         __metadata("design:type", String)
     ], Pagination.prototype, "nextUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], Pagination.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageNum" }),
         __metadata("design:type", Number)
     ], Pagination.prototype, "pageNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previousUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previousUrl" }),
         __metadata("design:type", String)
     ], Pagination.prototype, "previousUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sort" }),
         __metadata("design:type", String)
     ], Pagination.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], Pagination.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPages" }),
         __metadata("design:type", Number)
     ], Pagination.prototype, "totalPages", void 0);
     return Pagination;
-}(SpeakeasyBase));
-export { Pagination };
+}(utils_1.SpeakeasyBase));
+exports.Pagination = Pagination;

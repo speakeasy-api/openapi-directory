@@ -7,7 +7,7 @@ export declare class PostServersCreateServerRequest extends SpeakeasyBase {
     datacenter?: string;
     firewalls?: PostServersCreateServerRequestFirewalls[];
     image: string;
-    labels?: Map<string, any>;
+    labels?: Record<string, any>;
     location?: string;
     name: string;
     networks?: number[];
@@ -114,7 +114,7 @@ export declare class PostServersCreateServerResponseServerImage extends Speakeas
     diskSize: number;
     id: number;
     imageSize: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     osFlavor: PostServersCreateServerResponseServerImageOsFlavorEnum;
     osVersion: string;
@@ -143,7 +143,7 @@ export declare enum PostServersCreateServerResponseServerPlacementGroupNullableT
 export declare class PostServersCreateServerResponseServerPlacementGroupNullable extends SpeakeasyBase {
     created: string;
     id: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     servers: number[];
     type: PostServersCreateServerResponseServerPlacementGroupNullableTypeEnum;
@@ -260,7 +260,7 @@ export declare class PostServersCreateServerResponseServer extends SpeakeasyBase
     includedTraffic: number;
     ingoingTraffic: number;
     iso: PostServersCreateServerResponseServerIso;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     loadBalancers?: number[];
     locked: boolean;
     name: string;

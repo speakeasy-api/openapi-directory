@@ -16,7 +16,7 @@ export declare enum ProfileProfileTypeEnum {
 export declare class ProfileInput extends SpeakeasyBase {
     deployment?: Deployment;
     duration?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     profileBytes?: string;
     profileType?: ProfileProfileTypeEnum;
 }
@@ -26,7 +26,7 @@ export declare class ProfileInput extends SpeakeasyBase {
 export declare class Profile extends SpeakeasyBase {
     deployment?: Deployment;
     duration?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     profileBytes?: string;
     profileType?: ProfileProfileTypeEnum;

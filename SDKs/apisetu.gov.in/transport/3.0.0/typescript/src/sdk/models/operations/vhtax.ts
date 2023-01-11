@@ -197,23 +197,23 @@ export class VhtaxResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  vhtax400ApplicationJsonObject?: Vhtax400ApplicationJson;
+  vhtax400ApplicationJSONObject?: Vhtax400ApplicationJson;
 
   @SpeakeasyMetadata()
-  vhtax401ApplicationJsonObject?: Vhtax401ApplicationJson;
+  vhtax401ApplicationJSONObject?: Vhtax401ApplicationJson;
 
   @SpeakeasyMetadata()
-  vhtax404ApplicationJsonObject?: Vhtax404ApplicationJson;
+  vhtax404ApplicationJSONObject?: Vhtax404ApplicationJson;
 
   @SpeakeasyMetadata()
-  vhtax500ApplicationJsonObject?: Vhtax500ApplicationJson;
+  vhtax500ApplicationJSONObject?: Vhtax500ApplicationJson;
 
   @SpeakeasyMetadata()
-  vhtax502ApplicationJsonObject?: Vhtax502ApplicationJson;
+  vhtax502ApplicationJSONObject?: Vhtax502ApplicationJson;
 
   @SpeakeasyMetadata()
-  vhtax503ApplicationJsonObject?: Vhtax503ApplicationJson;
+  vhtax503ApplicationJSONObject?: Vhtax503ApplicationJson;
 
   @SpeakeasyMetadata()
-  vhtax504ApplicationJsonObject?: Vhtax504ApplicationJson;
+  vhtax504ApplicationJSONObject?: Vhtax504ApplicationJson;
 }

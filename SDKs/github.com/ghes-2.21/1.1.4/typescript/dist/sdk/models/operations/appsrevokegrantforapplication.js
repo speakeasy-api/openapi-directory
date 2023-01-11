@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppsRevokeGrantForApplicationResponse = exports.AppsRevokeGrantForApplicationRequest = exports.AppsRevokeGrantForApplicationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AppsRevokeGrantForApplicationPathParams = /** @class */ (function (_super) {
     __extends(AppsRevokeGrantForApplicationPathParams, _super);
     function AppsRevokeGrantForApplicationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=access_token" }),
         __metadata("design:type", String)
     ], AppsRevokeGrantForApplicationPathParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=client_id" }),
         __metadata("design:type", String)
     ], AppsRevokeGrantForApplicationPathParams.prototype, "clientId", void 0);
     return AppsRevokeGrantForApplicationPathParams;
-}(SpeakeasyBase));
-export { AppsRevokeGrantForApplicationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AppsRevokeGrantForApplicationPathParams = AppsRevokeGrantForApplicationPathParams;
 var AppsRevokeGrantForApplicationRequest = /** @class */ (function (_super) {
     __extends(AppsRevokeGrantForApplicationRequest, _super);
     function AppsRevokeGrantForApplicationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AppsRevokeGrantForApplicationPathParams)
     ], AppsRevokeGrantForApplicationRequest.prototype, "pathParams", void 0);
     return AppsRevokeGrantForApplicationRequest;
-}(SpeakeasyBase));
-export { AppsRevokeGrantForApplicationRequest };
+}(utils_1.SpeakeasyBase));
+exports.AppsRevokeGrantForApplicationRequest = AppsRevokeGrantForApplicationRequest;
 var AppsRevokeGrantForApplicationResponse = /** @class */ (function (_super) {
     __extends(AppsRevokeGrantForApplicationResponse, _super);
     function AppsRevokeGrantForApplicationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AppsRevokeGrantForApplicationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AppsRevokeGrantForApplicationResponse.prototype, "statusCode", void 0);
     return AppsRevokeGrantForApplicationResponse;
-}(SpeakeasyBase));
-export { AppsRevokeGrantForApplicationResponse };
+}(utils_1.SpeakeasyBase));
+exports.AppsRevokeGrantForApplicationResponse = AppsRevokeGrantForApplicationResponse;

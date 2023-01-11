@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePayeesCsvResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreatePayeesCsvResponse = /** @class */ (function (_super) {
     __extends(CreatePayeesCsvResponse, _super);
     function CreatePayeesCsvResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchId" }),
         __metadata("design:type", String)
     ], CreatePayeesCsvResponse.prototype, "batchId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rejectedCsvRows" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rejectedCsvRows" }),
         __metadata("design:type", Array)
     ], CreatePayeesCsvResponse.prototype, "rejectedCsvRows", void 0);
     return CreatePayeesCsvResponse;
-}(SpeakeasyBase));
-export { CreatePayeesCsvResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreatePayeesCsvResponse = CreatePayeesCsvResponse;

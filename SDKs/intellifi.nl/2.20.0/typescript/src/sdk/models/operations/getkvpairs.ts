@@ -101,5 +101,5 @@ export class GetKvPairsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getKvPairs200ApplicationJsonObject?: GetKvPairs200ApplicationJson;
+  getKvPairs200ApplicationJSONObject?: GetKvPairs200ApplicationJson;
 }

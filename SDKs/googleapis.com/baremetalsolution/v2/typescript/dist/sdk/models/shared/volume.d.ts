@@ -1,10 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { SnapshotReservationDetail } from "./snapshotreservationdetail";
-export declare enum VolumeProtocolEnum {
-    ProtocolUnspecified = "PROTOCOL_UNSPECIFIED",
-    FibreChannel = "FIBRE_CHANNEL",
-    Nfs = "NFS"
-}
 export declare enum VolumePerformanceTierEnum {
     VolumePerformanceTierUnspecified = "VOLUME_PERFORMANCE_TIER_UNSPECIFIED",
     VolumePerformanceTierShared = "VOLUME_PERFORMANCE_TIER_SHARED",
@@ -29,6 +24,40 @@ export declare enum VolumeStorageTypeEnum {
     Ssd = "SSD",
     Hdd = "HDD"
 }
+export declare enum VolumeWorkloadProfileEnum {
+    WorkloadProfileUnspecified = "WORKLOAD_PROFILE_UNSPECIFIED",
+    Generic = "GENERIC",
+    Hana = "HANA"
+}
+export declare enum VolumeProtocolEnum {
+    ProtocolUnspecified = "PROTOCOL_UNSPECIFIED",
+    FibreChannel = "FIBRE_CHANNEL",
+    Nfs = "NFS"
+}
+/**
+ * A storage volume.
+**/
+export declare class VolumeInput extends SpeakeasyBase {
+    autoGrownSizeGib?: string;
+    currentSizeGib?: string;
+    emergencySizeGib?: string;
+    id?: string;
+    labels?: Record<string, string>;
+    maxSizeGib?: string;
+    notes?: string;
+    originallyRequestedSizeGib?: string;
+    performanceTier?: VolumePerformanceTierEnum;
+    pod?: string;
+    remainingSpaceGib?: string;
+    requestedSizeGib?: string;
+    snapshotAutoDeleteBehavior?: VolumeSnapshotAutoDeleteBehaviorEnum;
+    snapshotEnabled?: boolean;
+    snapshotReservationDetail?: SnapshotReservationDetail;
+    snapshotSchedulePolicy?: string;
+    state?: VolumeStateEnum;
+    storageType?: VolumeStorageTypeEnum;
+    workloadProfile?: VolumeWorkloadProfileEnum;
+}
 /**
  * A storage volume.
 **/
@@ -38,7 +67,7 @@ export declare class Volume extends SpeakeasyBase {
     currentSizeGib?: string;
     emergencySizeGib?: string;
     id?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     maxSizeGib?: string;
     name?: string;
     notes?: string;
@@ -54,27 +83,5 @@ export declare class Volume extends SpeakeasyBase {
     snapshotSchedulePolicy?: string;
     state?: VolumeStateEnum;
     storageType?: VolumeStorageTypeEnum;
-}
-/**
- * A storage volume.
-**/
-export declare class VolumeInput extends SpeakeasyBase {
-    autoGrownSizeGib?: string;
-    currentSizeGib?: string;
-    emergencySizeGib?: string;
-    id?: string;
-    labels?: Map<string, string>;
-    maxSizeGib?: string;
-    notes?: string;
-    originallyRequestedSizeGib?: string;
-    performanceTier?: VolumePerformanceTierEnum;
-    pod?: string;
-    remainingSpaceGib?: string;
-    requestedSizeGib?: string;
-    snapshotAutoDeleteBehavior?: VolumeSnapshotAutoDeleteBehaviorEnum;
-    snapshotEnabled?: boolean;
-    snapshotReservationDetail?: SnapshotReservationDetail;
-    snapshotSchedulePolicy?: string;
-    state?: VolumeStateEnum;
-    storageType?: VolumeStorageTypeEnum;
+    workloadProfile?: VolumeWorkloadProfileEnum;
 }

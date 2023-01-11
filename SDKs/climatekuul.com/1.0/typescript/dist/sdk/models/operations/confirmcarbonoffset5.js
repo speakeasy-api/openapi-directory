@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ConfirmCarbonOffset5ServerList = [
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfirmCarbonOffset5Response = exports.ConfirmCarbonOffset5Request = exports.ConfirmCarbonOffset5RequestBody = exports.ConfirmCarbonOffset5ServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+exports.ConfirmCarbonOffset5ServerList = [
     "http://api.climatekuul.com:8000/footprint",
 ];
 var ConfirmCarbonOffset5RequestBody = /** @class */ (function (_super) {
@@ -32,57 +35,57 @@ var ConfirmCarbonOffset5RequestBody = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=carbonOffset;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=carbonOffset;" }),
         __metadata("design:type", String)
     ], ConfirmCarbonOffset5RequestBody.prototype, "carbonOffset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=contactEmail;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=contactEmail;" }),
         __metadata("design:type", String)
     ], ConfirmCarbonOffset5RequestBody.prototype, "contactEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=contactFirstName;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=contactFirstName;" }),
         __metadata("design:type", String)
     ], ConfirmCarbonOffset5RequestBody.prototype, "contactFirstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=contactLastName;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=contactLastName;" }),
         __metadata("design:type", String)
     ], ConfirmCarbonOffset5RequestBody.prototype, "contactLastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=transaction_id;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=transaction_id;" }),
         __metadata("design:type", String)
     ], ConfirmCarbonOffset5RequestBody.prototype, "transactionId", void 0);
     return ConfirmCarbonOffset5RequestBody;
-}(SpeakeasyBase));
-export { ConfirmCarbonOffset5RequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ConfirmCarbonOffset5RequestBody = ConfirmCarbonOffset5RequestBody;
 var ConfirmCarbonOffset5Request = /** @class */ (function (_super) {
     __extends(ConfirmCarbonOffset5Request, _super);
     function ConfirmCarbonOffset5Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ConfirmCarbonOffset5Request.prototype, "serverUrl", void 0);
+    ], ConfirmCarbonOffset5Request.prototype, "serverURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", ConfirmCarbonOffset5RequestBody)
     ], ConfirmCarbonOffset5Request.prototype, "request", void 0);
     return ConfirmCarbonOffset5Request;
-}(SpeakeasyBase));
-export { ConfirmCarbonOffset5Request };
+}(utils_1.SpeakeasyBase));
+exports.ConfirmCarbonOffset5Request = ConfirmCarbonOffset5Request;
 var ConfirmCarbonOffset5Response = /** @class */ (function (_super) {
     __extends(ConfirmCarbonOffset5Response, _super);
     function ConfirmCarbonOffset5Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConfirmCarbonOffset5Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ConfirmCarbonOffset5Response.prototype, "statusCode", void 0);
     return ConfirmCarbonOffset5Response;
-}(SpeakeasyBase));
-export { ConfirmCarbonOffset5Response };
+}(utils_1.SpeakeasyBase));
+exports.ConfirmCarbonOffset5Response = ConfirmCarbonOffset5Response;

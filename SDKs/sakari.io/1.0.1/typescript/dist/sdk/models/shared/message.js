@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,107 +23,109 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContactIdentifiers } from "./contactidentifiers";
-import { Updated } from "./updated";
-import { Error } from "./error";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Message = exports.MessageMedia = exports.MessageConversation = void 0;
+var utils_1 = require("../../../internal/utils");
+var contactidentifiers_1 = require("./contactidentifiers");
+var updated_1 = require("./updated");
+var error_1 = require("./error");
 var MessageConversation = /** @class */ (function (_super) {
     __extends(MessageConversation, _super);
     function MessageConversation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], MessageConversation.prototype, "id", void 0);
     return MessageConversation;
-}(SpeakeasyBase));
-export { MessageConversation };
+}(utils_1.SpeakeasyBase));
+exports.MessageConversation = MessageConversation;
 var MessageMedia = /** @class */ (function (_super) {
     __extends(MessageMedia, _super);
     function MessageMedia() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filename" }),
         __metadata("design:type", String)
     ], MessageMedia.prototype, "filename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], MessageMedia.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], MessageMedia.prototype, "url", void 0);
     return MessageMedia;
-}(SpeakeasyBase));
-export { MessageMedia };
+}(utils_1.SpeakeasyBase));
+exports.MessageMedia = MessageMedia;
 var Message = /** @class */ (function (_super) {
     __extends(Message, _super);
     function Message() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contact" }),
-        __metadata("design:type", ContactIdentifiers)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contact" }),
+        __metadata("design:type", contactidentifiers_1.ContactIdentifiers)
     ], Message.prototype, "contact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conversation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conversation" }),
         __metadata("design:type", MessageConversation)
     ], Message.prototype, "conversation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
-        __metadata("design:type", Updated)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
+        __metadata("design:type", updated_1.Updated)
     ], Message.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Error)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", error_1.ErrorT)
     ], Message.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Message.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=media", elemType: MessageMedia }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=media", elemType: MessageMedia }),
         __metadata("design:type", Array)
     ], Message.prototype, "media", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], Message.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outgoing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outgoing" }),
         __metadata("design:type", Boolean)
     ], Message.prototype, "outgoing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneNumber" }),
         __metadata("design:type", String)
     ], Message.prototype, "phoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
         __metadata("design:type", Number)
     ], Message.prototype, "price", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=read" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=read" }),
         __metadata("design:type", Boolean)
     ], Message.prototype, "read", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=segments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segments" }),
         __metadata("design:type", Number)
     ], Message.prototype, "segments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Message.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=template" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=template" }),
         __metadata("design:type", String)
     ], Message.prototype, "template", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
-        __metadata("design:type", Updated)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
+        __metadata("design:type", updated_1.Updated)
     ], Message.prototype, "updated", void 0);
     return Message;
-}(SpeakeasyBase));
-export { Message };
+}(utils_1.SpeakeasyBase));
+exports.Message = Message;

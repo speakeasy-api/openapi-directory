@@ -1,9 +1,55 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BlockDeviceMapping } from "./blockdevicemapping";
-import { AttributeValue } from "./attributevalue";
-import { LaunchPermission } from "./launchpermission";
-import { ProductCode } from "./productcode";
 
+
+
+// ImageAttributeBootMode
+/** 
+ * Describes a value for a resource attribute that is a String.
+**/
+export class ImageAttributeBootMode extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  value?: Record<string, any>;
+}
+
+
+// ImageAttributeDescription
+/** 
+ * A description for the AMI.
+**/
+export class ImageAttributeDescription extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  value?: Record<string, any>;
+}
+
+
+// ImageAttributeKernelId
+/** 
+ * The kernel ID.
+**/
+export class ImageAttributeKernelId extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  value?: Record<string, any>;
+}
+
+
+// ImageAttributeRamdiskId
+/** 
+ * The RAM disk ID.
+**/
+export class ImageAttributeRamdiskId extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  value?: Record<string, any>;
+}
+
+
+// ImageAttributeSriovNetSupport
+/** 
+ * Indicates whether enhanced networking with the Intel 82599 Virtual Function interface is enabled.
+**/
+export class ImageAttributeSriovNetSupport extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  value?: Record<string, any>;
+}
 
 
 // ImageAttribute
@@ -11,30 +57,30 @@ import { ProductCode } from "./productcode";
  * Describes an image attribute.
 **/
 export class ImageAttribute extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: BlockDeviceMapping })
-  blockDeviceMappings?: BlockDeviceMapping[];
+  @SpeakeasyMetadata()
+  blockDeviceMappings?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  bootMode?: AttributeValue;
+  bootMode?: ImageAttributeBootMode;
 
   @SpeakeasyMetadata()
-  description?: AttributeValue;
+  description?: ImageAttributeDescription;
 
   @SpeakeasyMetadata()
-  imageId?: string;
+  imageId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  kernelId?: AttributeValue;
-
-  @SpeakeasyMetadata({ elemType: LaunchPermission })
-  launchPermissions?: LaunchPermission[];
-
-  @SpeakeasyMetadata({ elemType: ProductCode })
-  productCodes?: ProductCode[];
+  kernelId?: ImageAttributeKernelId;
 
   @SpeakeasyMetadata()
-  ramdiskId?: AttributeValue;
+  launchPermissions?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  sriovNetSupport?: AttributeValue;
+  productCodes?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  ramdiskId?: ImageAttributeRamdiskId;
+
+  @SpeakeasyMetadata()
+  sriovNetSupport?: ImageAttributeSriovNetSupport;
 }

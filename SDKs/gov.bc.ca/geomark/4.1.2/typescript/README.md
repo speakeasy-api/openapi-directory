@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionRequest, GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,11 +28,11 @@ const sdk = new SDK();
     
 const req: GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionRequest = {
   pathParams: {
-    fileFormatExtension: "kmz",
-    geomarkId: "repellat",
+    fileFormatExtension: "json",
+    geomarkId: "voluptas",
   },
   queryParams: {
-    srid: 7267726663042679943,
+    srid: 6050128673802995827,
   },
 };
 

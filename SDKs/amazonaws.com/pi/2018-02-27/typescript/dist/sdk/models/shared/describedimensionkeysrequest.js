@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,58 +23,60 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DimensionGroup } from "./dimensiongroup";
-import { ServiceTypeEnum } from "./servicetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeDimensionKeysRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimensiongroup_1 = require("./dimensiongroup");
+var servicetypeenum_1 = require("./servicetypeenum");
 var DescribeDimensionKeysRequest = /** @class */ (function (_super) {
     __extends(DescribeDimensionKeysRequest, _super);
     function DescribeDimensionKeysRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndTime" }),
         __metadata("design:type", Date)
     ], DescribeDimensionKeysRequest.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Filter" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Filter" }),
+        __metadata("design:type", Object)
     ], DescribeDimensionKeysRequest.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GroupBy" }),
-        __metadata("design:type", DimensionGroup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GroupBy" }),
+        __metadata("design:type", dimensiongroup_1.DimensionGroup)
     ], DescribeDimensionKeysRequest.prototype, "groupBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Identifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Identifier" }),
         __metadata("design:type", String)
     ], DescribeDimensionKeysRequest.prototype, "identifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], DescribeDimensionKeysRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Metric" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Metric" }),
         __metadata("design:type", String)
     ], DescribeDimensionKeysRequest.prototype, "metric", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeDimensionKeysRequest.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PartitionBy" }),
-        __metadata("design:type", DimensionGroup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PartitionBy" }),
+        __metadata("design:type", dimensiongroup_1.DimensionGroup)
     ], DescribeDimensionKeysRequest.prototype, "partitionBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PeriodInSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PeriodInSeconds" }),
         __metadata("design:type", Number)
     ], DescribeDimensionKeysRequest.prototype, "periodInSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceType" }),
         __metadata("design:type", String)
     ], DescribeDimensionKeysRequest.prototype, "serviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartTime" }),
         __metadata("design:type", Date)
     ], DescribeDimensionKeysRequest.prototype, "startTime", void 0);
     return DescribeDimensionKeysRequest;
-}(SpeakeasyBase));
-export { DescribeDimensionKeysRequest };
+}(utils_1.SpeakeasyBase));
+exports.DescribeDimensionKeysRequest = DescribeDimensionKeysRequest;

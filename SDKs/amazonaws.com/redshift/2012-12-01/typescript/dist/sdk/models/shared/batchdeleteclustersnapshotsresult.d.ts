@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SnapshotErrorMessage } from "./snapshoterrormessage";
+import { BatchSnapshotOperationErrorList } from "./batchsnapshotoperationerrorlist";
 export declare class BatchDeleteClusterSnapshotsResult extends SpeakeasyBase {
-    errors?: SnapshotErrorMessage[];
-    resources?: string[];
+    errors?: BatchSnapshotOperationErrorList[];
+    resources?: Record<string, any>[];
 }

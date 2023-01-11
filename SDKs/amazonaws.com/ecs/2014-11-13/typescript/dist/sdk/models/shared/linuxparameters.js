@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KernelCapabilities } from "./kernelcapabilities";
-import { Device } from "./device";
-import { Tmpfs } from "./tmpfs";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LinuxParameters = void 0;
+var utils_1 = require("../../../internal/utils");
+var kernelcapabilities_1 = require("./kernelcapabilities");
+var device_1 = require("./device");
+var tmpfs_1 = require("./tmpfs");
 // LinuxParameters
 /**
  * Linux-specific options that are applied to the container, such as Linux <a>KernelCapabilities</a>.
@@ -36,33 +39,33 @@ var LinuxParameters = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capabilities" }),
-        __metadata("design:type", KernelCapabilities)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capabilities" }),
+        __metadata("design:type", kernelcapabilities_1.KernelCapabilities)
     ], LinuxParameters.prototype, "capabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devices", elemType: Device }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devices", elemType: device_1.Device }),
         __metadata("design:type", Array)
     ], LinuxParameters.prototype, "devices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initProcessEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initProcessEnabled" }),
         __metadata("design:type", Boolean)
     ], LinuxParameters.prototype, "initProcessEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxSwap" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxSwap" }),
         __metadata("design:type", Number)
     ], LinuxParameters.prototype, "maxSwap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sharedMemorySize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sharedMemorySize" }),
         __metadata("design:type", Number)
     ], LinuxParameters.prototype, "sharedMemorySize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=swappiness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=swappiness" }),
         __metadata("design:type", Number)
     ], LinuxParameters.prototype, "swappiness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tmpfs", elemType: Tmpfs }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tmpfs", elemType: tmpfs_1.Tmpfs }),
         __metadata("design:type", Array)
     ], LinuxParameters.prototype, "tmpfs", void 0);
     return LinuxParameters;
-}(SpeakeasyBase));
-export { LinuxParameters };
+}(utils_1.SpeakeasyBase));
+exports.LinuxParameters = LinuxParameters;

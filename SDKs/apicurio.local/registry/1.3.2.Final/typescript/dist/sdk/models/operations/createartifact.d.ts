@@ -34,6 +34,6 @@ export declare class CreateArtifactRequest extends SpeakeasyBase {
 export declare class CreateArtifactResponse extends SpeakeasyBase {
     artifactMetaData?: shared.ArtifactMetaData;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

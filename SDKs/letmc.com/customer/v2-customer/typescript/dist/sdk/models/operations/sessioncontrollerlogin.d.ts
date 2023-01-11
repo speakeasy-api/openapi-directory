@@ -12,9 +12,9 @@ export declare class SessionControllerLoginRequest extends SpeakeasyBase {
 }
 export declare class SessionControllerLoginResponse extends SpeakeasyBase {
     contentType: string;
-    sessionControllerLogin200ApplicationJsonString?: string;
-    sessionControllerLogin200ApplicationXmlString?: string;
-    sessionControllerLogin200TextJsonString?: string;
-    sessionControllerLogin200TextXmlString?: string;
+    sessionControllerLogin200ApplicationJSONString?: string;
+    sessionControllerLogin200ApplicationXMLString?: string;
+    sessionControllerLogin200TextJSONString?: string;
+    sessionControllerLogin200TextXMLString?: string;
     statusCode: number;
 }

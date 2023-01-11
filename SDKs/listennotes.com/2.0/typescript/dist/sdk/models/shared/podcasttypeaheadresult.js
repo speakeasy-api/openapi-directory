@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PodcastTypeaheadResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var PodcastTypeaheadResult = /** @class */ (function (_super) {
     __extends(PodcastTypeaheadResult, _super);
     function PodcastTypeaheadResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explicit_content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explicit_content" }),
         __metadata("design:type", Boolean)
     ], PodcastTypeaheadResult.prototype, "explicitContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PodcastTypeaheadResult.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", String)
     ], PodcastTypeaheadResult.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisher_highlighted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisher_highlighted" }),
         __metadata("design:type", String)
     ], PodcastTypeaheadResult.prototype, "publisherHighlighted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisher_original" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisher_original" }),
         __metadata("design:type", String)
     ], PodcastTypeaheadResult.prototype, "publisherOriginal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnail" }),
         __metadata("design:type", String)
     ], PodcastTypeaheadResult.prototype, "thumbnail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title_highlighted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title_highlighted" }),
         __metadata("design:type", String)
     ], PodcastTypeaheadResult.prototype, "titleHighlighted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title_original" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title_original" }),
         __metadata("design:type", String)
     ], PodcastTypeaheadResult.prototype, "titleOriginal", void 0);
     return PodcastTypeaheadResult;
-}(SpeakeasyBase));
-export { PodcastTypeaheadResult };
+}(utils_1.SpeakeasyBase));
+exports.PodcastTypeaheadResult = PodcastTypeaheadResult;

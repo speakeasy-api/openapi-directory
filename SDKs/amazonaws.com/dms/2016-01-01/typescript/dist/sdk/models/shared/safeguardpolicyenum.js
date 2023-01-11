@@ -1,6 +1,9 @@
-export var SafeguardPolicyEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SafeguardPolicyEnum = void 0;
+var SafeguardPolicyEnum;
 (function (SafeguardPolicyEnum) {
     SafeguardPolicyEnum["RelyOnSqlServerReplicationAgent"] = "rely-on-sql-server-replication-agent";
     SafeguardPolicyEnum["ExclusiveAutomaticTruncation"] = "exclusive-automatic-truncation";
     SafeguardPolicyEnum["SharedAutomaticTruncation"] = "shared-automatic-truncation";
-})(SafeguardPolicyEnum || (SafeguardPolicyEnum = {}));
+})(SafeguardPolicyEnum = exports.SafeguardPolicyEnum || (exports.SafeguardPolicyEnum = {}));

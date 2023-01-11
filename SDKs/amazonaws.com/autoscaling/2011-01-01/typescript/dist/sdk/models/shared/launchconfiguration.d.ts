@@ -8,8 +8,8 @@ import { InstanceMetadataOptions } from "./instancemetadataoptions";
 export declare class LaunchConfiguration extends SpeakeasyBase {
     associatePublicIpAddress?: boolean;
     blockDeviceMappings?: BlockDeviceMapping[];
-    classicLinkVpcId?: string;
-    classicLinkVpcSecurityGroups?: string[];
+    classicLinkVPCId?: string;
+    classicLinkVPCSecurityGroups?: string[];
     createdTime: Date;
     ebsOptimized?: boolean;
     iamInstanceProfile?: string;
@@ -18,7 +18,7 @@ export declare class LaunchConfiguration extends SpeakeasyBase {
     instanceType: string;
     kernelId?: string;
     keyName?: string;
-    launchConfigurationArn?: string;
+    launchConfigurationARN?: string;
     launchConfigurationName: string;
     metadataOptions?: InstanceMetadataOptions;
     placementTenancy?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PathwayObject } from "./pathwayobject";
-import { Reference } from "./reference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Pathway = void 0;
+var utils_1 = require("../../../internal/utils");
+var pathwayobject_1 = require("./pathwayobject");
+var reference_1 = require("./reference");
 var Pathway = /** @class */ (function (_super) {
     __extends(Pathway, _super);
     function Pathway() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Pathway.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Pathway.prototype, "hasAlteredPath", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Pathway.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Pathway.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: PathwayObject }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: pathwayobject_1.PathwayObject }),
         __metadata("design:type", Array)
     ], Pathway.prototype, "objectList", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], Pathway.prototype, "pathwayCategories", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Reference }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: reference_1.Reference }),
         __metadata("design:type", Array)
     ], Pathway.prototype, "referenceList", void 0);
     return Pathway;
-}(SpeakeasyBase));
-export { Pathway };
+}(utils_1.SpeakeasyBase));
+exports.Pathway = Pathway;

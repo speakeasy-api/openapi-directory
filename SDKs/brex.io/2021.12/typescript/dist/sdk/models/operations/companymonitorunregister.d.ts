@@ -11,7 +11,7 @@ export declare class CompanyMonitorUnregisterRequest extends SpeakeasyBase {
     security: CompanyMonitorUnregisterSecurity;
 }
 export declare class CompanyMonitorUnregisterResponse extends SpeakeasyBase {
-    companyMonitorUnregisterDefaultApplicationJsonAny?: any;
+    companyMonitorUnregisterDefaultApplicationJSONAny?: any;
     contentType: string;
     statusCode: number;
 }

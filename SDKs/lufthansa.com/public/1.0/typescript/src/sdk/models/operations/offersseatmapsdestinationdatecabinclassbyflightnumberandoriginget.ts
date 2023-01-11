@@ -50,7 +50,7 @@ export class OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRe
   contentType: string;
 
   @SpeakeasyMetadata()
-  offersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet200ApplicationJsonObject?: Map<string, any>;
+  offersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet200ApplicationJSONObject?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

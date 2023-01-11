@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbProxyTargetGroup } from "./dbproxytargetgroup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeDbProxyTargetGroupsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var dbproxytargetgroup_1 = require("./dbproxytargetgroup");
 var DescribeDbProxyTargetGroupsResponse = /** @class */ (function (_super) {
     __extends(DescribeDbProxyTargetGroupsResponse, _super);
     function DescribeDbProxyTargetGroupsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DescribeDbProxyTargetGroupsResponse.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: DbProxyTargetGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: dbproxytargetgroup_1.DbProxyTargetGroup }),
         __metadata("design:type", Array)
     ], DescribeDbProxyTargetGroupsResponse.prototype, "targetGroups", void 0);
     return DescribeDbProxyTargetGroupsResponse;
-}(SpeakeasyBase));
-export { DescribeDbProxyTargetGroupsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeDbProxyTargetGroupsResponse = DescribeDbProxyTargetGroupsResponse;

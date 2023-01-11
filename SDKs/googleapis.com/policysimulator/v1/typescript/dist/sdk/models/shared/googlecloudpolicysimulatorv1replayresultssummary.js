@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleTypeDate } from "./googletypedate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPolicysimulatorV1ReplayResultsSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var googletypedate_1 = require("./googletypedate");
 // GoogleCloudPolicysimulatorV1ReplayResultsSummary
 /**
  * Summary statistics about the replayed log entries.
@@ -34,29 +37,29 @@ var GoogleCloudPolicysimulatorV1ReplayResultsSummary = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=differenceCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=differenceCount" }),
         __metadata("design:type", Number)
     ], GoogleCloudPolicysimulatorV1ReplayResultsSummary.prototype, "differenceCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorCount" }),
         __metadata("design:type", Number)
     ], GoogleCloudPolicysimulatorV1ReplayResultsSummary.prototype, "errorCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logCount" }),
         __metadata("design:type", Number)
     ], GoogleCloudPolicysimulatorV1ReplayResultsSummary.prototype, "logCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newestDate" }),
-        __metadata("design:type", GoogleTypeDate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newestDate" }),
+        __metadata("design:type", googletypedate_1.GoogleTypeDate)
     ], GoogleCloudPolicysimulatorV1ReplayResultsSummary.prototype, "newestDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oldestDate" }),
-        __metadata("design:type", GoogleTypeDate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oldestDate" }),
+        __metadata("design:type", googletypedate_1.GoogleTypeDate)
     ], GoogleCloudPolicysimulatorV1ReplayResultsSummary.prototype, "oldestDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unchangedCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unchangedCount" }),
         __metadata("design:type", Number)
     ], GoogleCloudPolicysimulatorV1ReplayResultsSummary.prototype, "unchangedCount", void 0);
     return GoogleCloudPolicysimulatorV1ReplayResultsSummary;
-}(SpeakeasyBase));
-export { GoogleCloudPolicysimulatorV1ReplayResultsSummary };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPolicysimulatorV1ReplayResultsSummary = GoogleCloudPolicysimulatorV1ReplayResultsSummary;

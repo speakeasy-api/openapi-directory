@@ -25,5 +25,5 @@ export class GetNetworkWirelessSsidResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWirelessSsid200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWirelessSsid200ApplicationJSONObject?: Record<string, any>;
 }

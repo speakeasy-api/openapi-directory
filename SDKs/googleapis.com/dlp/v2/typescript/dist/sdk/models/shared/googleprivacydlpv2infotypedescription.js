@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2InfoTypeCategory } from "./googleprivacydlpv2infotypecategory";
-import { GooglePrivacyDlpV2SensitivityScore } from "./googleprivacydlpv2sensitivityscore";
-import { GooglePrivacyDlpV2VersionDescription } from "./googleprivacydlpv2versiondescription";
-export var GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2InfoTypeDescription = exports.GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2infotypecategory_1 = require("./googleprivacydlpv2infotypecategory");
+var googleprivacydlpv2sensitivityscore_1 = require("./googleprivacydlpv2sensitivityscore");
+var googleprivacydlpv2versiondescription_1 = require("./googleprivacydlpv2versiondescription");
+var GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum;
 (function (GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum) {
     GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum["EnumTypeUnspecified"] = "ENUM_TYPE_UNSPECIFIED";
     GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum["Inspect"] = "INSPECT";
     GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum["RiskAnalysis"] = "RISK_ANALYSIS";
-})(GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum || (GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum = {}));
+})(GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum = exports.GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum || (exports.GooglePrivacyDlpV2InfoTypeDescriptionSupportedByEnum = {}));
 // GooglePrivacyDlpV2InfoTypeDescription
 /**
  * InfoType description.
@@ -42,33 +45,33 @@ var GooglePrivacyDlpV2InfoTypeDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categories", elemType: GooglePrivacyDlpV2InfoTypeCategory }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categories", elemType: googleprivacydlpv2infotypecategory_1.GooglePrivacyDlpV2InfoTypeCategory }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2InfoTypeDescription.prototype, "categories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2InfoTypeDescription.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2InfoTypeDescription.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2InfoTypeDescription.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sensitivityScore" }),
-        __metadata("design:type", GooglePrivacyDlpV2SensitivityScore)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sensitivityScore" }),
+        __metadata("design:type", googleprivacydlpv2sensitivityscore_1.GooglePrivacyDlpV2SensitivityScore)
     ], GooglePrivacyDlpV2InfoTypeDescription.prototype, "sensitivityScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportedBy" }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2InfoTypeDescription.prototype, "supportedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versions", elemType: GooglePrivacyDlpV2VersionDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versions", elemType: googleprivacydlpv2versiondescription_1.GooglePrivacyDlpV2VersionDescription }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2InfoTypeDescription.prototype, "versions", void 0);
     return GooglePrivacyDlpV2InfoTypeDescription;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2InfoTypeDescription };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2InfoTypeDescription = GooglePrivacyDlpV2InfoTypeDescription;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SupportedCurrencyV2 = void 0;
+var utils_1 = require("../../../internal/utils");
 var SupportedCurrencyV2 = /** @class */ (function (_super) {
     __extends(SupportedCurrencyV2, _super);
     function SupportedCurrencyV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], SupportedCurrencyV2.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxPaymentAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxPaymentAmount" }),
         __metadata("design:type", Number)
     ], SupportedCurrencyV2.prototype, "maxPaymentAmount", void 0);
     return SupportedCurrencyV2;
-}(SpeakeasyBase));
-export { SupportedCurrencyV2 };
+}(utils_1.SpeakeasyBase));
+exports.SupportedCurrencyV2 = SupportedCurrencyV2;

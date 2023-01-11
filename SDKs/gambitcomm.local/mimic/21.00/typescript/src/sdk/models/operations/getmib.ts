@@ -25,5 +25,5 @@ export class GetMibResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getMib200ApplicationJsonString?: string;
+  getMib200ApplicationJSONString?: string;
 }

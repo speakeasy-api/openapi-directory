@@ -21,7 +21,6 @@ export declare class GetAccountsAccountIdStandingOrdersRequest extends Speakeasy
 }
 export declare class GetAccountsAccountIdStandingOrdersResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
     obErrorResponse1?: shared.ObErrorResponse1;
     obReadStandingOrder6?: shared.ObReadStandingOrder6;
     statusCode: number;

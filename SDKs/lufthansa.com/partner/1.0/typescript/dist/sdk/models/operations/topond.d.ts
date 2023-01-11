@@ -18,5 +18,5 @@ export declare class TopOndRequest extends SpeakeasyBase {
 export declare class TopOndResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    topOnd200ApplicationJsonString?: string;
+    topOND200ApplicationJSONString?: string;
 }

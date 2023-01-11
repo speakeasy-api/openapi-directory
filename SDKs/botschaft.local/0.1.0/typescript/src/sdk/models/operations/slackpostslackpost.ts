@@ -29,5 +29,5 @@ export class SlackPostSlackPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  slackPostSlackPost200ApplicationJsonAny?: any;
+  slackPostSlackPost200ApplicationJSONAny?: any;
 }

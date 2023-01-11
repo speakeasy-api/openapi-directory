@@ -1,4 +1,7 @@
-export var AgeOfPeopleFilterTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgeOfPeopleFilterTypeEnum = void 0;
+var AgeOfPeopleFilterTypeEnum;
 (function (AgeOfPeopleFilterTypeEnum) {
     AgeOfPeopleFilterTypeEnum["Newborn"] = "newborn";
     AgeOfPeopleFilterTypeEnum["Baby"] = "baby";
@@ -42,4 +45,4 @@ export var AgeOfPeopleFilterTypeEnum;
     AgeOfPeopleFilterTypeEnum["Eighty89Years"] = "80-89_years";
     AgeOfPeopleFilterTypeEnum["NinetyPlusYears"] = "90_plus_years";
     AgeOfPeopleFilterTypeEnum["OneHundredOver"] = "100_over";
-})(AgeOfPeopleFilterTypeEnum || (AgeOfPeopleFilterTypeEnum = {}));
+})(AgeOfPeopleFilterTypeEnum = exports.AgeOfPeopleFilterTypeEnum || (exports.AgeOfPeopleFilterTypeEnum = {}));

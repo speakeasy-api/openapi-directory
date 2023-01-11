@@ -1,5 +1,8 @@
-export var ImageTagMutabilityEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageTagMutabilityEnum = void 0;
+var ImageTagMutabilityEnum;
 (function (ImageTagMutabilityEnum) {
     ImageTagMutabilityEnum["Mutable"] = "MUTABLE";
     ImageTagMutabilityEnum["Immutable"] = "IMMUTABLE";
-})(ImageTagMutabilityEnum || (ImageTagMutabilityEnum = {}));
+})(ImageTagMutabilityEnum = exports.ImageTagMutabilityEnum || (exports.ImageTagMutabilityEnum = {}));

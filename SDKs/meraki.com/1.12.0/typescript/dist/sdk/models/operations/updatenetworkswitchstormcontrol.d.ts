@@ -14,5 +14,5 @@ export declare class UpdateNetworkSwitchStormControlRequest extends SpeakeasyBas
 export declare class UpdateNetworkSwitchStormControlResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkSwitchStormControl200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkSwitchStormControl200ApplicationJSONObject?: Record<string, any>;
 }

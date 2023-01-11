@@ -4,7 +4,7 @@ export declare class ControllersAdvisoryDetailAttributes extends SpeakeasyBase {
     description?: string;
     fixes?: string;
     modifiedDate?: string;
-    packages?: Map<string, string>;
+    packages?: Record<string, string>;
     publicDate?: string;
     references?: string[];
     severity?: number;

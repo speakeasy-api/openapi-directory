@@ -21,6 +21,9 @@ export class ImportContextBakImportOptionsEncryptionOptions extends SpeakeasyBas
 export class ImportContextBakImportOptions extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=encryptionOptions" })
   encryptionOptions?: ImportContextBakImportOptionsEncryptionOptions;
+
+  @SpeakeasyMetadata({ data: "json, name=striped" })
+  striped?: boolean;
 }
 
 

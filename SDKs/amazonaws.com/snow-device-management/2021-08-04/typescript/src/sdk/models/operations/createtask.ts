@@ -33,10 +33,10 @@ export class CreateTaskHeaders extends SpeakeasyBase {
 **/
 export class CreateTaskRequestBodyCommand extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=reboot" })
-  reboot?: Map<string, any>;
+  reboot?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=unlock" })
-  unlock?: Map<string, any>;
+  unlock?: Record<string, any>;
 }
 
 
@@ -51,7 +51,7 @@ export class CreateTaskRequestBody extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=targets" })
   targets: string[];

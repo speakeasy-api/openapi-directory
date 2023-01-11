@@ -2,5 +2,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class DemoV2LocationsTilesViewerGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    demoV2LocationsTilesViewerGet200TextHtmlString?: string;
+    demoV2LocationsTilesViewerGet200TextHTMLString?: string;
 }

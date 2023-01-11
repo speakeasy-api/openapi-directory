@@ -64,5 +64,5 @@ export class UpdateNetworkWirelessSsidSchedulesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkWirelessSsidSchedules200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkWirelessSsidSchedules200ApplicationJSONObject?: Record<string, any>;
 }

@@ -185,23 +185,23 @@ export class AemtwResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  aemtw400ApplicationJsonObject?: Aemtw400ApplicationJson;
+  aemtw400ApplicationJSONObject?: Aemtw400ApplicationJson;
 
   @SpeakeasyMetadata()
-  aemtw401ApplicationJsonObject?: Aemtw401ApplicationJson;
+  aemtw401ApplicationJSONObject?: Aemtw401ApplicationJson;
 
   @SpeakeasyMetadata()
-  aemtw404ApplicationJsonObject?: Aemtw404ApplicationJson;
+  aemtw404ApplicationJSONObject?: Aemtw404ApplicationJson;
 
   @SpeakeasyMetadata()
-  aemtw500ApplicationJsonObject?: Aemtw500ApplicationJson;
+  aemtw500ApplicationJSONObject?: Aemtw500ApplicationJson;
 
   @SpeakeasyMetadata()
-  aemtw502ApplicationJsonObject?: Aemtw502ApplicationJson;
+  aemtw502ApplicationJSONObject?: Aemtw502ApplicationJson;
 
   @SpeakeasyMetadata()
-  aemtw503ApplicationJsonObject?: Aemtw503ApplicationJson;
+  aemtw503ApplicationJSONObject?: Aemtw503ApplicationJson;
 
   @SpeakeasyMetadata()
-  aemtw504ApplicationJsonObject?: Aemtw504ApplicationJson;
+  aemtw504ApplicationJSONObject?: Aemtw504ApplicationJson;
 }

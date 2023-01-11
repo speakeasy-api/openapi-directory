@@ -22,7 +22,7 @@ export declare class GetNamesDecisionsRecentQueryParams extends SpeakeasyBase {
     featureType?: string;
     itemsPerPage?: number;
     outputFormat: GetNamesDecisionsRecentOutputFormatEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     outputStyle?: GetNamesDecisionsRecentOutputStyleEnum;
     sortBy?: GetNamesDecisionsRecentSortByEnum;
     startIndex?: number;

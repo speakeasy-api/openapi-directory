@@ -1,5 +1,8 @@
-export var ChangeTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChangeTypeEnum = void 0;
+var ChangeTypeEnum;
 (function (ChangeTypeEnum) {
     ChangeTypeEnum["Immediate"] = "immediate";
     ChangeTypeEnum["RequiresReboot"] = "requires-reboot";
-})(ChangeTypeEnum || (ChangeTypeEnum = {}));
+})(ChangeTypeEnum = exports.ChangeTypeEnum || (exports.ChangeTypeEnum = {}));

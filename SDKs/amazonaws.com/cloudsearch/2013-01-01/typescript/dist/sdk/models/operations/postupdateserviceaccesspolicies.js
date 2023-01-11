@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostUpdateServiceAccessPoliciesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostUpdateServiceAccessPoliciesResponse = exports.PostUpdateServiceAccessPoliciesRequest = exports.PostUpdateServiceAccessPoliciesHeaders = exports.PostUpdateServiceAccessPoliciesQueryParams = exports.PostUpdateServiceAccessPoliciesVersionEnum = exports.PostUpdateServiceAccessPoliciesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostUpdateServiceAccessPoliciesActionEnum;
 (function (PostUpdateServiceAccessPoliciesActionEnum) {
     PostUpdateServiceAccessPoliciesActionEnum["UpdateServiceAccessPolicies"] = "UpdateServiceAccessPolicies";
-})(PostUpdateServiceAccessPoliciesActionEnum || (PostUpdateServiceAccessPoliciesActionEnum = {}));
-export var PostUpdateServiceAccessPoliciesVersionEnum;
+})(PostUpdateServiceAccessPoliciesActionEnum = exports.PostUpdateServiceAccessPoliciesActionEnum || (exports.PostUpdateServiceAccessPoliciesActionEnum = {}));
+var PostUpdateServiceAccessPoliciesVersionEnum;
 (function (PostUpdateServiceAccessPoliciesVersionEnum) {
     PostUpdateServiceAccessPoliciesVersionEnum["TwoThousandAndThirteen0101"] = "2013-01-01";
-})(PostUpdateServiceAccessPoliciesVersionEnum || (PostUpdateServiceAccessPoliciesVersionEnum = {}));
+})(PostUpdateServiceAccessPoliciesVersionEnum = exports.PostUpdateServiceAccessPoliciesVersionEnum || (exports.PostUpdateServiceAccessPoliciesVersionEnum = {}));
 var PostUpdateServiceAccessPoliciesQueryParams = /** @class */ (function (_super) {
     __extends(PostUpdateServiceAccessPoliciesQueryParams, _super);
     function PostUpdateServiceAccessPoliciesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostUpdateServiceAccessPoliciesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostUpdateServiceAccessPoliciesQueryParams.prototype, "version", void 0);
     return PostUpdateServiceAccessPoliciesQueryParams;
-}(SpeakeasyBase));
-export { PostUpdateServiceAccessPoliciesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateServiceAccessPoliciesQueryParams = PostUpdateServiceAccessPoliciesQueryParams;
 var PostUpdateServiceAccessPoliciesHeaders = /** @class */ (function (_super) {
     __extends(PostUpdateServiceAccessPoliciesHeaders, _super);
     function PostUpdateServiceAccessPoliciesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostUpdateServiceAccessPoliciesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostUpdateServiceAccessPoliciesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostUpdateServiceAccessPoliciesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostUpdateServiceAccessPoliciesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostUpdateServiceAccessPoliciesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostUpdateServiceAccessPoliciesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostUpdateServiceAccessPoliciesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostUpdateServiceAccessPoliciesHeaders;
-}(SpeakeasyBase));
-export { PostUpdateServiceAccessPoliciesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateServiceAccessPoliciesHeaders = PostUpdateServiceAccessPoliciesHeaders;
 var PostUpdateServiceAccessPoliciesRequest = /** @class */ (function (_super) {
     __extends(PostUpdateServiceAccessPoliciesRequest, _super);
     function PostUpdateServiceAccessPoliciesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostUpdateServiceAccessPoliciesQueryParams)
     ], PostUpdateServiceAccessPoliciesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostUpdateServiceAccessPoliciesHeaders)
     ], PostUpdateServiceAccessPoliciesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostUpdateServiceAccessPoliciesRequest.prototype, "request", void 0);
     return PostUpdateServiceAccessPoliciesRequest;
-}(SpeakeasyBase));
-export { PostUpdateServiceAccessPoliciesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateServiceAccessPoliciesRequest = PostUpdateServiceAccessPoliciesRequest;
 var PostUpdateServiceAccessPoliciesResponse = /** @class */ (function (_super) {
     __extends(PostUpdateServiceAccessPoliciesResponse, _super);
     function PostUpdateServiceAccessPoliciesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostUpdateServiceAccessPoliciesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostUpdateServiceAccessPoliciesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostUpdateServiceAccessPoliciesResponse.prototype, "statusCode", void 0);
     return PostUpdateServiceAccessPoliciesResponse;
-}(SpeakeasyBase));
-export { PostUpdateServiceAccessPoliciesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateServiceAccessPoliciesResponse = PostUpdateServiceAccessPoliciesResponse;

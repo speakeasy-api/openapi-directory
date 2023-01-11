@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TanzaniaRegionsResponse = exports.TanzaniaRegionsRequest = exports.TanzaniaRegionsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TanzaniaRegionsPathParams = /** @class */ (function (_super) {
     __extends(TanzaniaRegionsPathParams, _super);
     function TanzaniaRegionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=country" }),
         __metadata("design:type", String)
     ], TanzaniaRegionsPathParams.prototype, "country", void 0);
     return TanzaniaRegionsPathParams;
-}(SpeakeasyBase));
-export { TanzaniaRegionsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TanzaniaRegionsPathParams = TanzaniaRegionsPathParams;
 var TanzaniaRegionsRequest = /** @class */ (function (_super) {
     __extends(TanzaniaRegionsRequest, _super);
     function TanzaniaRegionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TanzaniaRegionsPathParams)
     ], TanzaniaRegionsRequest.prototype, "pathParams", void 0);
     return TanzaniaRegionsRequest;
-}(SpeakeasyBase));
-export { TanzaniaRegionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.TanzaniaRegionsRequest = TanzaniaRegionsRequest;
 var TanzaniaRegionsResponse = /** @class */ (function (_super) {
     __extends(TanzaniaRegionsResponse, _super);
     function TanzaniaRegionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TanzaniaRegionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TanzaniaRegionsResponse.prototype, "statusCode", void 0);
     return TanzaniaRegionsResponse;
-}(SpeakeasyBase));
-export { TanzaniaRegionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.TanzaniaRegionsResponse = TanzaniaRegionsResponse;

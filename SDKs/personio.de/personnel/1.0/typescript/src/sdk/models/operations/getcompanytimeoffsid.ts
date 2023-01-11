@@ -16,7 +16,7 @@ export class GetCompanyTimeOffsIdRequest extends SpeakeasyBase {
 
 export class GetCompanyTimeOffsIdResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  absencePeriodResponse?: Map<string, any>;
+  absencePeriodResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

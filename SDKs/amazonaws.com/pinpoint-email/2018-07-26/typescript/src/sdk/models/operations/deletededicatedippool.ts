@@ -52,7 +52,7 @@ export class DeleteDedicatedIpPoolResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteDedicatedIpPoolResponse?: Map<string, any>;
+  deleteDedicatedIpPoolResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   notFoundException?: any;

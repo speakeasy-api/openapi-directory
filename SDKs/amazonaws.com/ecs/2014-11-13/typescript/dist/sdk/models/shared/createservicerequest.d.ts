@@ -18,7 +18,7 @@ export declare class CreateServiceRequest extends SpeakeasyBase {
     deploymentConfiguration?: DeploymentConfiguration;
     deploymentController?: DeploymentController;
     desiredCount?: number;
-    enableEcsManagedTags?: boolean;
+    enableECSManagedTags?: boolean;
     enableExecuteCommand?: boolean;
     healthCheckGracePeriodSeconds?: number;
     launchType?: LaunchTypeEnum;

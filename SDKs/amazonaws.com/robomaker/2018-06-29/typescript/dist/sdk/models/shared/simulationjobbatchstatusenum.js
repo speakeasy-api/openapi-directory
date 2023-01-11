@@ -1,4 +1,7 @@
-export var SimulationJobBatchStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SimulationJobBatchStatusEnum = void 0;
+var SimulationJobBatchStatusEnum;
 (function (SimulationJobBatchStatusEnum) {
     SimulationJobBatchStatusEnum["Pending"] = "Pending";
     SimulationJobBatchStatusEnum["InProgress"] = "InProgress";
@@ -9,4 +12,4 @@ export var SimulationJobBatchStatusEnum;
     SimulationJobBatchStatusEnum["Completing"] = "Completing";
     SimulationJobBatchStatusEnum["TimingOut"] = "TimingOut";
     SimulationJobBatchStatusEnum["TimedOut"] = "TimedOut";
-})(SimulationJobBatchStatusEnum || (SimulationJobBatchStatusEnum = {}));
+})(SimulationJobBatchStatusEnum = exports.SimulationJobBatchStatusEnum || (exports.SimulationJobBatchStatusEnum = {}));

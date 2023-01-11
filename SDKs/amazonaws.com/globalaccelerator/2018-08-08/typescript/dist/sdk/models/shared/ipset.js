@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IpSet = void 0;
+var utils_1 = require("../../../internal/utils");
 // IpSet
 /**
  * A complex type for the set of IP addresses for an accelerator.
@@ -33,13 +36,13 @@ var IpSet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IpAddresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IpAddresses" }),
         __metadata("design:type", Array)
     ], IpSet.prototype, "ipAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IpFamily" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IpFamily" }),
         __metadata("design:type", String)
     ], IpSet.prototype, "ipFamily", void 0);
     return IpSet;
-}(SpeakeasyBase));
-export { IpSet };
+}(utils_1.SpeakeasyBase));
+exports.IpSet = IpSet;

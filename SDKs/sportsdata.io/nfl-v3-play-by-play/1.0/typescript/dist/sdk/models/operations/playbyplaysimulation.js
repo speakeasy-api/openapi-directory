@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayByPlaySimulationFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayByPlaySimulationResponse = exports.PlayByPlaySimulationRequest = exports.PlayByPlaySimulationPathParams = exports.PlayByPlaySimulationFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayByPlaySimulationFormatEnum;
 (function (PlayByPlaySimulationFormatEnum) {
     PlayByPlaySimulationFormatEnum["Xml"] = "XML";
     PlayByPlaySimulationFormatEnum["Json"] = "JSON";
-})(PlayByPlaySimulationFormatEnum || (PlayByPlaySimulationFormatEnum = {}));
+})(PlayByPlaySimulationFormatEnum = exports.PlayByPlaySimulationFormatEnum || (exports.PlayByPlaySimulationFormatEnum = {}));
 var PlayByPlaySimulationPathParams = /** @class */ (function (_super) {
     __extends(PlayByPlaySimulationPathParams, _super);
     function PlayByPlaySimulationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayByPlaySimulationPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=numberofplays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=numberofplays" }),
         __metadata("design:type", String)
     ], PlayByPlaySimulationPathParams.prototype, "numberofplays", void 0);
     return PlayByPlaySimulationPathParams;
-}(SpeakeasyBase));
-export { PlayByPlaySimulationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayByPlaySimulationPathParams = PlayByPlaySimulationPathParams;
 var PlayByPlaySimulationRequest = /** @class */ (function (_super) {
     __extends(PlayByPlaySimulationRequest, _super);
     function PlayByPlaySimulationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayByPlaySimulationPathParams)
     ], PlayByPlaySimulationRequest.prototype, "pathParams", void 0);
     return PlayByPlaySimulationRequest;
-}(SpeakeasyBase));
-export { PlayByPlaySimulationRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayByPlaySimulationRequest = PlayByPlaySimulationRequest;
 var PlayByPlaySimulationResponse = /** @class */ (function (_super) {
     __extends(PlayByPlaySimulationResponse, _super);
     function PlayByPlaySimulationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayByPlaySimulationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayByPlaySimulationResponse.prototype, "playByPlays", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayByPlaySimulationResponse.prototype, "statusCode", void 0);
     return PlayByPlaySimulationResponse;
-}(SpeakeasyBase));
-export { PlayByPlaySimulationResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayByPlaySimulationResponse = PlayByPlaySimulationResponse;

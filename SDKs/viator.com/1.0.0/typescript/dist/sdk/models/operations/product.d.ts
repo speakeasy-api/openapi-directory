@@ -1,16 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum ProductVoucherOptionEnum {
-    VoucherPaperOnly = "VOUCHER_PAPER_ONLY",
-    VoucherE = "VOUCHER_E"
-}
 export declare class ProductQueryParams extends SpeakeasyBase {
     code?: string;
     currencyCode?: string;
     excludeTourGradeAvailability?: boolean;
     showUnavailable?: boolean;
     sortOrder?: shared.SortOrderReviewEnum;
-    voucherOption?: ProductVoucherOptionEnum;
+    voucherOption?: shared.SortOrderReviewEnum1;
 }
 export declare class ProductHeaders extends SpeakeasyBase {
     acceptLanguage: string;
@@ -60,7 +56,7 @@ export declare class Product200ApplicationJsonDataPassengerAttributes extends Sp
 }
 export declare class Product200ApplicationJsonDataProductPhotos extends SpeakeasyBase {
     caption?: string;
-    photoUrl?: string;
+    photoURL?: string;
     supplier?: string;
 }
 export declare class Product200ApplicationJsonDataTourGrades extends SpeakeasyBase {
@@ -70,7 +66,7 @@ export declare class Product200ApplicationJsonDataTourGrades extends SpeakeasyBa
     gradeDepartureTime?: string;
     gradeDescription?: string;
     gradeTitle?: string;
-    langServices?: Map<string, string>;
+    langServices?: Record<string, string>;
     merchantNetPriceFrom?: number;
     merchantNetPriceFromFormatted?: string;
     priceFrom?: number;
@@ -107,7 +103,7 @@ export declare class Product200ApplicationJsonData extends SpeakeasyBase {
     inclusions?: string[];
     itinerary?: string;
     location?: string;
-    mapUrl?: string;
+    mapURL?: string;
     maxTravellerCount?: number;
     merchantCancellable?: boolean;
     merchantNetPriceFrom?: number;
@@ -117,7 +113,7 @@ export declare class Product200ApplicationJsonData extends SpeakeasyBase {
     onSale?: boolean;
     operates?: string;
     panoramaCount?: number;
-    pas?: Map<string, any>;
+    pas?: Record<string, any>;
     passengerAttributes?: Product200ApplicationJsonDataPassengerAttributes[];
     photoCount?: number;
     price?: number;
@@ -149,8 +145,8 @@ export declare class Product200ApplicationJsonData extends SpeakeasyBase {
     subCatIds?: number[];
     supplierCode?: string;
     supplierName?: string;
-    thumbnailHiResUrl?: string;
-    thumbnailUrl?: string;
+    thumbnailHiResURL?: string;
+    thumbnailURL?: string;
     title?: string;
     tourGrades?: Product200ApplicationJsonDataTourGrades[];
     tourGradesAvailable?: boolean;
@@ -160,7 +156,7 @@ export declare class Product200ApplicationJsonData extends SpeakeasyBase {
     videos?: string;
     voucherOption?: string;
     voucherRequirements?: any;
-    webUrl?: string;
+    webURL?: string;
 }
 export declare class Product200ApplicationJson extends SpeakeasyBase {
     data?: Product200ApplicationJsonData;
@@ -171,8 +167,8 @@ export declare class Product200ApplicationJson extends SpeakeasyBase {
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -184,5 +180,5 @@ export declare class ProductRequest extends SpeakeasyBase {
 export declare class ProductResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    product200ApplicationJsonObject?: Product200ApplicationJson;
+    product200ApplicationJSONObject?: Product200ApplicationJson;
 }

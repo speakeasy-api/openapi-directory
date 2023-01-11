@@ -10,8 +10,8 @@ export declare class UploadBoundaryRequest extends SpeakeasyBase {
 }
 export declare class UploadBoundaryResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
-    headers: Map<string, string[]>;
+    error?: shared.ErrorT;
+    headers: Record<string, string[]>;
     statusCode: number;
     uploadedBoundaryId?: any;
 }

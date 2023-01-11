@@ -5,5 +5,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class SparkSqlBatch extends SpeakeasyBase {
     jarFileUris?: string[];
     queryFileUri?: string;
-    queryVariables?: Map<string, string>;
+    queryVariables?: Record<string, string>;
 }

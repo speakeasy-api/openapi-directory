@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TopModelEntry } from "./topmodelentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TopModelResp = void 0;
+var utils_1 = require("../../../internal/utils");
+var topmodelentry_1 = require("./topmodelentry");
 var TopModelResp = /** @class */ (function (_super) {
     __extends(TopModelResp, _super);
     function TopModelResp() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brandName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brandName" }),
         __metadata("design:type", String)
     ], TopModelResp.prototype, "brandName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cacheTimeLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cacheTimeLimit" }),
         __metadata("design:type", Number)
     ], TopModelResp.prototype, "cacheTimeLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=condition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=condition" }),
         __metadata("design:type", String)
     ], TopModelResp.prototype, "condition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: TopModelEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: topmodelentry_1.TopModelEntry }),
         __metadata("design:type", Array)
     ], TopModelResp.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modelName" }),
         __metadata("design:type", String)
     ], TopModelResp.prototype, "modelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=msg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=msg" }),
         __metadata("design:type", String)
     ], TopModelResp.prototype, "msg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionName" }),
         __metadata("design:type", String)
     ], TopModelResp.prototype, "regionName", void 0);
     return TopModelResp;
-}(SpeakeasyBase));
-export { TopModelResp };
+}(utils_1.SpeakeasyBase));
+exports.TopModelResp = TopModelResp;

@@ -10,7 +10,7 @@ export declare class FinalizeCutoverHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class FinalizeCutoverRequestBody extends SpeakeasyBase {
-    sourceServerId: string;
+    sourceServerID: string;
 }
 export declare class FinalizeCutoverRequest extends SpeakeasyBase {
     headers: FinalizeCutoverHeaders;

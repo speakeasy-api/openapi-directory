@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateAMapResponse = exports.CreateAMapRequest = exports.CreateAMapHeaders = exports.CreateAMapQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateAMapQueryParams = /** @class */ (function (_super) {
     __extends(CreateAMapQueryParams, _super);
     function CreateAMapQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=app_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=app_token" }),
         __metadata("design:type", String)
     ], CreateAMapQueryParams.prototype, "appToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=constraint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=constraint" }),
         __metadata("design:type", String)
     ], CreateAMapQueryParams.prototype, "constraint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=entity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=entity_id" }),
         __metadata("design:type", String)
     ], CreateAMapQueryParams.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=variable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=variable" }),
         __metadata("design:type", String)
     ], CreateAMapQueryParams.prototype, "variable", void 0);
     return CreateAMapQueryParams;
-}(SpeakeasyBase));
-export { CreateAMapQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateAMapQueryParams = CreateAMapQueryParams;
 var CreateAMapHeaders = /** @class */ (function (_super) {
     __extends(CreateAMapHeaders, _super);
     function CreateAMapHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-App-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-App-Token" }),
         __metadata("design:type", String)
     ], CreateAMapHeaders.prototype, "xAppToken", void 0);
     return CreateAMapHeaders;
-}(SpeakeasyBase));
-export { CreateAMapHeaders };
+}(utils_1.SpeakeasyBase));
+exports.CreateAMapHeaders = CreateAMapHeaders;
 var CreateAMapRequest = /** @class */ (function (_super) {
     __extends(CreateAMapRequest, _super);
     function CreateAMapRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateAMapQueryParams)
     ], CreateAMapRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateAMapHeaders)
     ], CreateAMapRequest.prototype, "headers", void 0);
     return CreateAMapRequest;
-}(SpeakeasyBase));
-export { CreateAMapRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateAMapRequest = CreateAMapRequest;
 var CreateAMapResponse = /** @class */ (function (_super) {
     __extends(CreateAMapResponse, _super);
     function CreateAMapResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateAMapResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateAMapResponse.prototype, "statusCode", void 0);
     return CreateAMapResponse;
-}(SpeakeasyBase));
-export { CreateAMapResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateAMapResponse = CreateAMapResponse;

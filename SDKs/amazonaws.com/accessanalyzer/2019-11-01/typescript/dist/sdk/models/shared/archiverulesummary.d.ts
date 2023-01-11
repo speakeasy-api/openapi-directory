@@ -5,7 +5,7 @@ import { Criterion } from "./criterion";
 **/
 export declare class ArchiveRuleSummary extends SpeakeasyBase {
     createdAt: Date;
-    filter: Map<string, Criterion>;
+    filter: Record<string, Criterion>;
     ruleName: string;
     updatedAt: Date;
 }

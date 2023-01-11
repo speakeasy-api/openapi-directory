@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2Action } from "./googleprivacydlpv2action";
-import { GooglePrivacyDlpV2PrivacyMetric } from "./googleprivacydlpv2privacymetric";
-import { GooglePrivacyDlpV2BigQueryTable } from "./googleprivacydlpv2bigquerytable";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2RiskAnalysisJobConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2action_1 = require("./googleprivacydlpv2action");
+var googleprivacydlpv2privacymetric_1 = require("./googleprivacydlpv2privacymetric");
+var googleprivacydlpv2bigquerytable_1 = require("./googleprivacydlpv2bigquerytable");
 // GooglePrivacyDlpV2RiskAnalysisJobConfig
 /**
  * Configuration for a risk analysis job. See https://cloud.google.com/dlp/docs/concepts-risk-analysis to learn more.
@@ -36,17 +39,17 @@ var GooglePrivacyDlpV2RiskAnalysisJobConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actions", elemType: GooglePrivacyDlpV2Action }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actions", elemType: googleprivacydlpv2action_1.GooglePrivacyDlpV2Action }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2RiskAnalysisJobConfig.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privacyMetric" }),
-        __metadata("design:type", GooglePrivacyDlpV2PrivacyMetric)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privacyMetric" }),
+        __metadata("design:type", googleprivacydlpv2privacymetric_1.GooglePrivacyDlpV2PrivacyMetric)
     ], GooglePrivacyDlpV2RiskAnalysisJobConfig.prototype, "privacyMetric", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceTable" }),
-        __metadata("design:type", GooglePrivacyDlpV2BigQueryTable)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceTable" }),
+        __metadata("design:type", googleprivacydlpv2bigquerytable_1.GooglePrivacyDlpV2BigQueryTable)
     ], GooglePrivacyDlpV2RiskAnalysisJobConfig.prototype, "sourceTable", void 0);
     return GooglePrivacyDlpV2RiskAnalysisJobConfig;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2RiskAnalysisJobConfig };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2RiskAnalysisJobConfig = GooglePrivacyDlpV2RiskAnalysisJobConfig;

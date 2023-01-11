@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApiDataRow } from "./apidatarow";
-export var SearchAnalyticsQueryResponseResponseAggregationTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchAnalyticsQueryResponse = exports.SearchAnalyticsQueryResponseResponseAggregationTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var apidatarow_1 = require("./apidatarow");
+var SearchAnalyticsQueryResponseResponseAggregationTypeEnum;
 (function (SearchAnalyticsQueryResponseResponseAggregationTypeEnum) {
     SearchAnalyticsQueryResponseResponseAggregationTypeEnum["Auto"] = "AUTO";
     SearchAnalyticsQueryResponseResponseAggregationTypeEnum["ByProperty"] = "BY_PROPERTY";
     SearchAnalyticsQueryResponseResponseAggregationTypeEnum["ByPage"] = "BY_PAGE";
-})(SearchAnalyticsQueryResponseResponseAggregationTypeEnum || (SearchAnalyticsQueryResponseResponseAggregationTypeEnum = {}));
+})(SearchAnalyticsQueryResponseResponseAggregationTypeEnum = exports.SearchAnalyticsQueryResponseResponseAggregationTypeEnum || (exports.SearchAnalyticsQueryResponseResponseAggregationTypeEnum = {}));
 // SearchAnalyticsQueryResponse
 /**
  * A list of rows, one per result, grouped by key. Metrics in each row are aggregated for all data grouped by that key either by page or property, as specified by the aggregation type parameter.
@@ -40,13 +43,13 @@ var SearchAnalyticsQueryResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responseAggregationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responseAggregationType" }),
         __metadata("design:type", String)
     ], SearchAnalyticsQueryResponse.prototype, "responseAggregationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rows", elemType: ApiDataRow }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rows", elemType: apidatarow_1.ApiDataRow }),
         __metadata("design:type", Array)
     ], SearchAnalyticsQueryResponse.prototype, "rows", void 0);
     return SearchAnalyticsQueryResponse;
-}(SpeakeasyBase));
-export { SearchAnalyticsQueryResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchAnalyticsQueryResponse = SearchAnalyticsQueryResponse;

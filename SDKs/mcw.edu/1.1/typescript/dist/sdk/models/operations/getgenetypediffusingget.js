@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGeneTypeDiffUsingGetResponse = exports.GetGeneTypeDiffUsingGetRequest = exports.GetGeneTypeDiffUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetGeneTypeDiffUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetGeneTypeDiffUsingGetPathParams, _super);
     function GetGeneTypeDiffUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateFromYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateFromYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetGeneTypeDiffUsingGetPathParams.prototype, "dateFromYyyymmdd", void 0);
+    ], GetGeneTypeDiffUsingGetPathParams.prototype, "dateFromYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateToYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateToYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetGeneTypeDiffUsingGetPathParams.prototype, "dateToYyyymmdd", void 0);
+    ], GetGeneTypeDiffUsingGetPathParams.prototype, "dateToYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
         __metadata("design:type", Number)
     ], GetGeneTypeDiffUsingGetPathParams.prototype, "speciesTypeKey", void 0);
     return GetGeneTypeDiffUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetGeneTypeDiffUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGeneTypeDiffUsingGetPathParams = GetGeneTypeDiffUsingGetPathParams;
 var GetGeneTypeDiffUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetGeneTypeDiffUsingGetRequest, _super);
     function GetGeneTypeDiffUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGeneTypeDiffUsingGetPathParams)
     ], GetGeneTypeDiffUsingGetRequest.prototype, "pathParams", void 0);
     return GetGeneTypeDiffUsingGetRequest;
-}(SpeakeasyBase));
-export { GetGeneTypeDiffUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGeneTypeDiffUsingGetRequest = GetGeneTypeDiffUsingGetRequest;
 var GetGeneTypeDiffUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetGeneTypeDiffUsingGetResponse, _super);
     function GetGeneTypeDiffUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGeneTypeDiffUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGeneTypeDiffUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGeneTypeDiffUsingGetResponse.prototype, "statusCode", void 0);
     return GetGeneTypeDiffUsingGetResponse;
-}(SpeakeasyBase));
-export { GetGeneTypeDiffUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGeneTypeDiffUsingGetResponse = GetGeneTypeDiffUsingGetResponse;

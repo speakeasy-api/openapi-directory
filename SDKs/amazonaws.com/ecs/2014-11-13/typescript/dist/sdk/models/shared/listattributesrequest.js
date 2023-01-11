@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TargetTypeEnum } from "./targettypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListAttributesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var targettypeenum_1 = require("./targettypeenum");
 var ListAttributesRequest = /** @class */ (function (_super) {
     __extends(ListAttributesRequest, _super);
     function ListAttributesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributeName" }),
         __metadata("design:type", String)
     ], ListAttributesRequest.prototype, "attributeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributeValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributeValue" }),
         __metadata("design:type", String)
     ], ListAttributesRequest.prototype, "attributeValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster" }),
         __metadata("design:type", String)
     ], ListAttributesRequest.prototype, "cluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxResults" }),
         __metadata("design:type", Number)
     ], ListAttributesRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListAttributesRequest.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetType" }),
         __metadata("design:type", String)
     ], ListAttributesRequest.prototype, "targetType", void 0);
     return ListAttributesRequest;
-}(SpeakeasyBase));
-export { ListAttributesRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListAttributesRequest = ListAttributesRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EgressFrom } from "./egressfrom";
-import { EgressTo } from "./egressto";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EgressPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var egressfrom_1 = require("./egressfrom");
+var egressto_1 = require("./egressto");
 // EgressPolicy
 /**
  * Policy for egress from perimeter. EgressPolicies match requests based on `egress_from` and `egress_to` stanzas. For an EgressPolicy to match, both `egress_from` and `egress_to` stanzas must be matched. If an EgressPolicy matches a request, the request is allowed to span the ServicePerimeter boundary. For example, an EgressPolicy can be used to allow VMs on networks within the ServicePerimeter to access a defined set of projects outside the perimeter in certain contexts (e.g. to read data from a Cloud Storage bucket or query against a BigQuery dataset). EgressPolicies are concerned with the *resources* that a request relates as well as the API services and API actions being used. They do not related to the direction of data movement. More detailed documentation for this concept can be found in the descriptions of EgressFrom and EgressTo.
@@ -35,13 +38,13 @@ var EgressPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=egressFrom" }),
-        __metadata("design:type", EgressFrom)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=egressFrom" }),
+        __metadata("design:type", egressfrom_1.EgressFrom)
     ], EgressPolicy.prototype, "egressFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=egressTo" }),
-        __metadata("design:type", EgressTo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=egressTo" }),
+        __metadata("design:type", egressto_1.EgressTo)
     ], EgressPolicy.prototype, "egressTo", void 0);
     return EgressPolicy;
-}(SpeakeasyBase));
-export { EgressPolicy };
+}(utils_1.SpeakeasyBase));
+exports.EgressPolicy = EgressPolicy;

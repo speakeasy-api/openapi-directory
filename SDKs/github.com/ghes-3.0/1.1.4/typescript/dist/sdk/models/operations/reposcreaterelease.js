@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,106 +14,131 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReposCreateReleaseResponse = exports.ReposCreateReleaseRequest = exports.ReposCreateReleaseRequestBody = exports.ReposCreateReleasePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ReposCreateReleasePathParams = /** @class */ (function (_super) {
     __extends(ReposCreateReleasePathParams, _super);
     function ReposCreateReleasePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReposCreateReleasePathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReposCreateReleasePathParams.prototype, "repo", void 0);
     return ReposCreateReleasePathParams;
-}(SpeakeasyBase));
-export { ReposCreateReleasePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateReleasePathParams = ReposCreateReleasePathParams;
 var ReposCreateReleaseRequestBody = /** @class */ (function (_super) {
     __extends(ReposCreateReleaseRequestBody, _super);
     function ReposCreateReleaseRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], ReposCreateReleaseRequestBody.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=draft" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=draft" }),
         __metadata("design:type", Boolean)
     ], ReposCreateReleaseRequestBody.prototype, "draft", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ReposCreateReleaseRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prerelease" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prerelease" }),
         __metadata("design:type", Boolean)
     ], ReposCreateReleaseRequestBody.prototype, "prerelease", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tag_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tag_name" }),
         __metadata("design:type", String)
     ], ReposCreateReleaseRequestBody.prototype, "tagName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_commitish" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_commitish" }),
         __metadata("design:type", String)
     ], ReposCreateReleaseRequestBody.prototype, "targetCommitish", void 0);
     return ReposCreateReleaseRequestBody;
-}(SpeakeasyBase));
-export { ReposCreateReleaseRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateReleaseRequestBody = ReposCreateReleaseRequestBody;
 var ReposCreateReleaseRequest = /** @class */ (function (_super) {
     __extends(ReposCreateReleaseRequest, _super);
     function ReposCreateReleaseRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReposCreateReleasePathParams)
     ], ReposCreateReleaseRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ReposCreateReleaseRequestBody)
     ], ReposCreateReleaseRequest.prototype, "request", void 0);
     return ReposCreateReleaseRequest;
-}(SpeakeasyBase));
-export { ReposCreateReleaseRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateReleaseRequest = ReposCreateReleaseRequest;
 var ReposCreateReleaseResponse = /** @class */ (function (_super) {
     __extends(ReposCreateReleaseResponse, _super);
     function ReposCreateReleaseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReposCreateReleaseResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ReposCreateReleaseResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReposCreateReleaseResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Release)
     ], ReposCreateReleaseResponse.prototype, "release", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ValidationError)
     ], ReposCreateReleaseResponse.prototype, "validationError", void 0);
     return ReposCreateReleaseResponse;
-}(SpeakeasyBase));
-export { ReposCreateReleaseResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReposCreateReleaseResponse = ReposCreateReleaseResponse;

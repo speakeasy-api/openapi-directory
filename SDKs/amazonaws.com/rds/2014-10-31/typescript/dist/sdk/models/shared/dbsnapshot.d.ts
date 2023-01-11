@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { ProcessorFeature } from "./processorfeature";
-import { Tag } from "./tag";
+import { ProcessorFeatureList } from "./processorfeaturelist";
+import { TagList } from "./taglist";
 /**
  * <p>Contains the details of an Amazon RDS DB snapshot. </p> <p>This data type is used as a response element in the <code>DescribeDBSnapshots</code> action. </p>
 **/
@@ -24,14 +24,14 @@ export declare class DbSnapshot extends SpeakeasyBase {
     originalSnapshotCreateTime?: Date;
     percentProgress?: number;
     port?: number;
-    processorFeatures?: ProcessorFeature[];
+    processorFeatures?: ProcessorFeatureList[];
     snapshotCreateTime?: Date;
     snapshotType?: string;
-    sourceDbSnapshotIdentifier?: string;
+    sourceDBSnapshotIdentifier?: string;
     sourceRegion?: string;
     status?: string;
     storageType?: string;
-    tagList?: Tag[];
+    tagList?: TagList[];
     tdeCredentialArn?: string;
     timezone?: string;
     vpcId?: string;

@@ -11,5 +11,5 @@ export class LifeCycleLastTestInitiated extends SpeakeasyBase {
   apiCallDateTime?: string;
 
   @SpeakeasyMetadata({ data: "json, name=jobID" })
-  jobId?: string;
+  jobID?: string;
 }

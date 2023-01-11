@@ -5,6 +5,6 @@ import { ApnsFcmOptions } from "./apnsfcmoptions";
 **/
 export declare class ApnsConfig extends SpeakeasyBase {
     fcmOptions?: ApnsFcmOptions;
-    headers?: Map<string, string>;
-    payload?: Map<string, any>;
+    headers?: Record<string, string>;
+    payload?: Record<string, any>;
 }

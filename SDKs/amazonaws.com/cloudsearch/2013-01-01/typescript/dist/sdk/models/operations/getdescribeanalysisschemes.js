@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeAnalysisSchemesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeAnalysisSchemesResponse = exports.GetDescribeAnalysisSchemesRequest = exports.GetDescribeAnalysisSchemesHeaders = exports.GetDescribeAnalysisSchemesQueryParams = exports.GetDescribeAnalysisSchemesVersionEnum = exports.GetDescribeAnalysisSchemesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeAnalysisSchemesActionEnum;
 (function (GetDescribeAnalysisSchemesActionEnum) {
     GetDescribeAnalysisSchemesActionEnum["DescribeAnalysisSchemes"] = "DescribeAnalysisSchemes";
-})(GetDescribeAnalysisSchemesActionEnum || (GetDescribeAnalysisSchemesActionEnum = {}));
-export var GetDescribeAnalysisSchemesVersionEnum;
+})(GetDescribeAnalysisSchemesActionEnum = exports.GetDescribeAnalysisSchemesActionEnum || (exports.GetDescribeAnalysisSchemesActionEnum = {}));
+var GetDescribeAnalysisSchemesVersionEnum;
 (function (GetDescribeAnalysisSchemesVersionEnum) {
     GetDescribeAnalysisSchemesVersionEnum["TwoThousandAndThirteen0101"] = "2013-01-01";
-})(GetDescribeAnalysisSchemesVersionEnum || (GetDescribeAnalysisSchemesVersionEnum = {}));
+})(GetDescribeAnalysisSchemesVersionEnum = exports.GetDescribeAnalysisSchemesVersionEnum || (exports.GetDescribeAnalysisSchemesVersionEnum = {}));
 var GetDescribeAnalysisSchemesQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeAnalysisSchemesQueryParams, _super);
     function GetDescribeAnalysisSchemesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeAnalysisSchemesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AnalysisSchemeNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AnalysisSchemeNames" }),
         __metadata("design:type", Array)
     ], GetDescribeAnalysisSchemesQueryParams.prototype, "analysisSchemeNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Deployed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Deployed" }),
         __metadata("design:type", Boolean)
     ], GetDescribeAnalysisSchemesQueryParams.prototype, "deployed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DomainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DomainName" }),
         __metadata("design:type", String)
     ], GetDescribeAnalysisSchemesQueryParams.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeAnalysisSchemesQueryParams.prototype, "version", void 0);
     return GetDescribeAnalysisSchemesQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeAnalysisSchemesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeAnalysisSchemesQueryParams = GetDescribeAnalysisSchemesQueryParams;
 var GetDescribeAnalysisSchemesHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeAnalysisSchemesHeaders, _super);
     function GetDescribeAnalysisSchemesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeAnalysisSchemesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeAnalysisSchemesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeAnalysisSchemesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeAnalysisSchemesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeAnalysisSchemesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeAnalysisSchemesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeAnalysisSchemesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeAnalysisSchemesHeaders;
-}(SpeakeasyBase));
-export { GetDescribeAnalysisSchemesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeAnalysisSchemesHeaders = GetDescribeAnalysisSchemesHeaders;
 var GetDescribeAnalysisSchemesRequest = /** @class */ (function (_super) {
     __extends(GetDescribeAnalysisSchemesRequest, _super);
     function GetDescribeAnalysisSchemesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeAnalysisSchemesQueryParams)
     ], GetDescribeAnalysisSchemesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeAnalysisSchemesHeaders)
     ], GetDescribeAnalysisSchemesRequest.prototype, "headers", void 0);
     return GetDescribeAnalysisSchemesRequest;
-}(SpeakeasyBase));
-export { GetDescribeAnalysisSchemesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeAnalysisSchemesRequest = GetDescribeAnalysisSchemesRequest;
 var GetDescribeAnalysisSchemesResponse = /** @class */ (function (_super) {
     __extends(GetDescribeAnalysisSchemesResponse, _super);
     function GetDescribeAnalysisSchemesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeAnalysisSchemesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeAnalysisSchemesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeAnalysisSchemesResponse.prototype, "statusCode", void 0);
     return GetDescribeAnalysisSchemesResponse;
-}(SpeakeasyBase));
-export { GetDescribeAnalysisSchemesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeAnalysisSchemesResponse = GetDescribeAnalysisSchemesResponse;

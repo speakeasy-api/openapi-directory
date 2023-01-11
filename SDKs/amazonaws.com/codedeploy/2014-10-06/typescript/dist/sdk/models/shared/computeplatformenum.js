@@ -1,6 +1,9 @@
-export var ComputePlatformEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComputePlatformEnum = void 0;
+var ComputePlatformEnum;
 (function (ComputePlatformEnum) {
     ComputePlatformEnum["Server"] = "Server";
     ComputePlatformEnum["Lambda"] = "Lambda";
     ComputePlatformEnum["Ecs"] = "ECS";
-})(ComputePlatformEnum || (ComputePlatformEnum = {}));
+})(ComputePlatformEnum = exports.ComputePlatformEnum || (exports.ComputePlatformEnum = {}));

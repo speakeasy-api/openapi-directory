@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuxiliaryVersionConfigInput } from "./auxiliaryversionconfig";
-import { KerberosConfig } from "./kerberosconfig";
-import { AuxiliaryVersionConfig } from "./auxiliaryversionconfig";
-export var HiveMetastoreConfigEndpointProtocolEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HiveMetastoreConfigInput = exports.HiveMetastoreConfig = exports.HiveMetastoreConfigEndpointProtocolEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var auxiliaryversionconfig_1 = require("./auxiliaryversionconfig");
+var kerberosconfig_1 = require("./kerberosconfig");
+var auxiliaryversionconfig_2 = require("./auxiliaryversionconfig");
+var HiveMetastoreConfigEndpointProtocolEnum;
 (function (HiveMetastoreConfigEndpointProtocolEnum) {
     HiveMetastoreConfigEndpointProtocolEnum["EndpointProtocolUnspecified"] = "ENDPOINT_PROTOCOL_UNSPECIFIED";
     HiveMetastoreConfigEndpointProtocolEnum["Thrift"] = "THRIFT";
     HiveMetastoreConfigEndpointProtocolEnum["Grpc"] = "GRPC";
-})(HiveMetastoreConfigEndpointProtocolEnum || (HiveMetastoreConfigEndpointProtocolEnum = {}));
-// HiveMetastoreConfigInput
-/**
- * Specifies configuration information specific to running Hive metastore software as the metastore service.
-**/
-var HiveMetastoreConfigInput = /** @class */ (function (_super) {
-    __extends(HiveMetastoreConfigInput, _super);
-    function HiveMetastoreConfigInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=auxiliaryVersions", elemType: AuxiliaryVersionConfigInput }),
-        __metadata("design:type", Map)
-    ], HiveMetastoreConfigInput.prototype, "auxiliaryVersions", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=configOverrides" }),
-        __metadata("design:type", Map)
-    ], HiveMetastoreConfigInput.prototype, "configOverrides", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpointProtocol" }),
-        __metadata("design:type", String)
-    ], HiveMetastoreConfigInput.prototype, "endpointProtocol", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=kerberosConfig" }),
-        __metadata("design:type", KerberosConfig)
-    ], HiveMetastoreConfigInput.prototype, "kerberosConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
-        __metadata("design:type", String)
-    ], HiveMetastoreConfigInput.prototype, "version", void 0);
-    return HiveMetastoreConfigInput;
-}(SpeakeasyBase));
-export { HiveMetastoreConfigInput };
+})(HiveMetastoreConfigEndpointProtocolEnum = exports.HiveMetastoreConfigEndpointProtocolEnum || (exports.HiveMetastoreConfigEndpointProtocolEnum = {}));
 // HiveMetastoreConfig
 /**
  * Specifies configuration information specific to running Hive metastore software as the metastore service.
@@ -74,25 +45,57 @@ var HiveMetastoreConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auxiliaryVersions", elemType: AuxiliaryVersionConfig }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auxiliaryVersions", elemType: auxiliaryversionconfig_1.AuxiliaryVersionConfig }),
+        __metadata("design:type", Object)
     ], HiveMetastoreConfig.prototype, "auxiliaryVersions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configOverrides" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configOverrides" }),
+        __metadata("design:type", Object)
     ], HiveMetastoreConfig.prototype, "configOverrides", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpointProtocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpointProtocol" }),
         __metadata("design:type", String)
     ], HiveMetastoreConfig.prototype, "endpointProtocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kerberosConfig" }),
-        __metadata("design:type", KerberosConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kerberosConfig" }),
+        __metadata("design:type", kerberosconfig_1.KerberosConfig)
     ], HiveMetastoreConfig.prototype, "kerberosConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], HiveMetastoreConfig.prototype, "version", void 0);
     return HiveMetastoreConfig;
-}(SpeakeasyBase));
-export { HiveMetastoreConfig };
+}(utils_1.SpeakeasyBase));
+exports.HiveMetastoreConfig = HiveMetastoreConfig;
+// HiveMetastoreConfigInput
+/**
+ * Specifies configuration information specific to running Hive metastore software as the metastore service.
+**/
+var HiveMetastoreConfigInput = /** @class */ (function (_super) {
+    __extends(HiveMetastoreConfigInput, _super);
+    function HiveMetastoreConfigInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auxiliaryVersions", elemType: auxiliaryversionconfig_2.AuxiliaryVersionConfigInput }),
+        __metadata("design:type", Object)
+    ], HiveMetastoreConfigInput.prototype, "auxiliaryVersions", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configOverrides" }),
+        __metadata("design:type", Object)
+    ], HiveMetastoreConfigInput.prototype, "configOverrides", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpointProtocol" }),
+        __metadata("design:type", String)
+    ], HiveMetastoreConfigInput.prototype, "endpointProtocol", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kerberosConfig" }),
+        __metadata("design:type", kerberosconfig_1.KerberosConfig)
+    ], HiveMetastoreConfigInput.prototype, "kerberosConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
+        __metadata("design:type", String)
+    ], HiveMetastoreConfigInput.prototype, "version", void 0);
+    return HiveMetastoreConfigInput;
+}(utils_1.SpeakeasyBase));
+exports.HiveMetastoreConfigInput = HiveMetastoreConfigInput;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,104 +14,129 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var GetFilesSortEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetFilesResponse = exports.GetFilesRequest = exports.GetFilesSecurity = exports.GetFilesHeaders = exports.GetFilesQueryParams = exports.GetFilesSortEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var GetFilesSortEnum;
 (function (GetFilesSortEnum) {
     GetFilesSortEnum["Name"] = "Name";
     GetFilesSortEnum["Size"] = "Size";
     GetFilesSortEnum["CreatedDateUtc"] = "CreatedDateUTC";
-})(GetFilesSortEnum || (GetFilesSortEnum = {}));
+})(GetFilesSortEnum = exports.GetFilesSortEnum || (exports.GetFilesSortEnum = {}));
 var GetFilesQueryParams = /** @class */ (function (_super) {
     __extends(GetFilesQueryParams, _super);
     function GetFilesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetFilesQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetFilesQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetFilesQueryParams.prototype, "sort", void 0);
     return GetFilesQueryParams;
-}(SpeakeasyBase));
-export { GetFilesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetFilesQueryParams = GetFilesQueryParams;
 var GetFilesHeaders = /** @class */ (function (_super) {
     __extends(GetFilesHeaders, _super);
     function GetFilesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=xero-tenant-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=xero-tenant-id" }),
         __metadata("design:type", String)
     ], GetFilesHeaders.prototype, "xeroTenantId", void 0);
     return GetFilesHeaders;
-}(SpeakeasyBase));
-export { GetFilesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetFilesHeaders = GetFilesHeaders;
 var GetFilesSecurity = /** @class */ (function (_super) {
     __extends(GetFilesSecurity, _super);
     function GetFilesSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOAuth2)
     ], GetFilesSecurity.prototype, "oAuth2", void 0);
     return GetFilesSecurity;
-}(SpeakeasyBase));
-export { GetFilesSecurity };
+}(utils_1.SpeakeasyBase));
+exports.GetFilesSecurity = GetFilesSecurity;
 var GetFilesRequest = /** @class */ (function (_super) {
     __extends(GetFilesRequest, _super);
     function GetFilesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetFilesQueryParams)
     ], GetFilesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetFilesHeaders)
     ], GetFilesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetFilesSecurity)
     ], GetFilesRequest.prototype, "security", void 0);
     return GetFilesRequest;
-}(SpeakeasyBase));
-export { GetFilesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetFilesRequest = GetFilesRequest;
 var GetFilesResponse = /** @class */ (function (_super) {
     __extends(GetFilesResponse, _super);
     function GetFilesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetFilesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Files)
     ], GetFilesResponse.prototype, "files", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetFilesResponse.prototype, "statusCode", void 0);
     return GetFilesResponse;
-}(SpeakeasyBase));
-export { GetFilesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetFilesResponse = GetFilesResponse;

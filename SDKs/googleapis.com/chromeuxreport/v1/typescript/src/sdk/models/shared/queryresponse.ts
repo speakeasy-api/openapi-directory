@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Record } from "./record";
+import { RecordT } from "./record";
 import { UrlNormalization } from "./urlnormalization";
 
 
@@ -10,7 +10,7 @@ import { UrlNormalization } from "./urlnormalization";
 **/
 export class QueryResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=record" })
-  record?: Record;
+  record?: RecordT;
 
   @SpeakeasyMetadata({ data: "json, name=urlNormalizationDetails" })
   urlNormalizationDetails?: UrlNormalization;

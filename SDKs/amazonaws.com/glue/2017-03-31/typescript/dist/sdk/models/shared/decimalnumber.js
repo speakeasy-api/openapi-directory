@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DecimalNumber = void 0;
+var utils_1 = require("../../../internal/utils");
 // DecimalNumber
 /**
  * Contains a numeric value in decimal format.
@@ -33,13 +36,13 @@ var DecimalNumber = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Scale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Scale" }),
         __metadata("design:type", Number)
     ], DecimalNumber.prototype, "scale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UnscaledValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UnscaledValue" }),
         __metadata("design:type", String)
     ], DecimalNumber.prototype, "unscaledValue", void 0);
     return DecimalNumber;
-}(SpeakeasyBase));
-export { DecimalNumber };
+}(utils_1.SpeakeasyBase));
+exports.DecimalNumber = DecimalNumber;

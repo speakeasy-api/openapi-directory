@@ -75,5 +75,5 @@ export class EndpointGetRecentlyPlayedResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  endpointGetRecentlyPlayed200ApplicationJsonObject?: EndpointGetRecentlyPlayed200ApplicationJson;
+  endpointGetRecentlyPlayed200ApplicationJSONObject?: EndpointGetRecentlyPlayed200ApplicationJson;
 }

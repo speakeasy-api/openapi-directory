@@ -19,7 +19,7 @@ export class GetSetupV1CustomersIdPrivacyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  customerPrivacyViewModel?: Map<string, any>;
+  customerPrivacyViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

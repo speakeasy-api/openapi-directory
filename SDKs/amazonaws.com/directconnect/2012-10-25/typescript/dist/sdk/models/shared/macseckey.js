@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MacSecKey = void 0;
+var utils_1 = require("../../../internal/utils");
 // MacSecKey
 /**
  * Information about the MAC Security (MACsec) secret key.
@@ -33,21 +36,21 @@ var MacSecKey = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ckn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ckn" }),
         __metadata("design:type", String)
     ], MacSecKey.prototype, "ckn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secretARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secretARN" }),
         __metadata("design:type", String)
-    ], MacSecKey.prototype, "secretArn", void 0);
+    ], MacSecKey.prototype, "secretARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startOn" }),
         __metadata("design:type", String)
     ], MacSecKey.prototype, "startOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], MacSecKey.prototype, "state", void 0);
     return MacSecKey;
-}(SpeakeasyBase));
-export { MacSecKey };
+}(utils_1.SpeakeasyBase));
+exports.MacSecKey = MacSecKey;

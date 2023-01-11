@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Sentiment } from "./sentiment";
-import { TextSpan } from "./textspan";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Sentence = void 0;
+var utils_1 = require("../../../internal/utils");
+var sentiment_1 = require("./sentiment");
+var textspan_1 = require("./textspan");
 // Sentence
 /**
  * Represents a sentence in the input document.
@@ -35,13 +38,13 @@ var Sentence = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sentiment" }),
-        __metadata("design:type", Sentiment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sentiment" }),
+        __metadata("design:type", sentiment_1.Sentiment)
     ], Sentence.prototype, "sentiment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
-        __metadata("design:type", TextSpan)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
+        __metadata("design:type", textspan_1.TextSpan)
     ], Sentence.prototype, "text", void 0);
     return Sentence;
-}(SpeakeasyBase));
-export { Sentence };
+}(utils_1.SpeakeasyBase));
+exports.Sentence = Sentence;

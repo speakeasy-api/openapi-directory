@@ -11,7 +11,7 @@ export class ClusterMetadata extends SpeakeasyBase {
   anthosVersion?: string;
 
   @SpeakeasyMetadata({ data: "json, name=backupCrdVersions" })
-  backupCrdVersions?: Map<string, string>;
+  backupCrdVersions?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=cluster" })
   cluster?: string;

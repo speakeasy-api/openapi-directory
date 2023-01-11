@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SnapshotReservationDetail = void 0;
+var utils_1 = require("../../../internal/utils");
 // SnapshotReservationDetail
 /**
  * Details about snapshot space reservation and usage on the storage volume.
@@ -33,21 +36,21 @@ var SnapshotReservationDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reservedSpaceGib" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reservedSpaceGib" }),
         __metadata("design:type", String)
     ], SnapshotReservationDetail.prototype, "reservedSpaceGib", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reservedSpacePercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reservedSpacePercent" }),
         __metadata("design:type", Number)
     ], SnapshotReservationDetail.prototype, "reservedSpacePercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reservedSpaceRemainingGib" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reservedSpaceRemainingGib" }),
         __metadata("design:type", String)
     ], SnapshotReservationDetail.prototype, "reservedSpaceRemainingGib", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reservedSpaceUsedPercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reservedSpaceUsedPercent" }),
         __metadata("design:type", Number)
     ], SnapshotReservationDetail.prototype, "reservedSpaceUsedPercent", void 0);
     return SnapshotReservationDetail;
-}(SpeakeasyBase));
-export { SnapshotReservationDetail };
+}(utils_1.SpeakeasyBase));
+exports.SnapshotReservationDetail = SnapshotReservationDetail;

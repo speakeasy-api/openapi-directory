@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeResponse = exports.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest = exports.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeQueryParams = exports.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetExportCsvRegistrierkassenRegistrierkasseUuidBelegePathParams = /** @class */ (function (_super) {
     __extends(GetExportCsvRegistrierkassenRegistrierkasseUuidBelegePathParams, _super);
     function GetExportCsvRegistrierkassenRegistrierkasseUuidBelegePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=registrierkasseUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=registrierkasseUuid" }),
         __metadata("design:type", String)
     ], GetExportCsvRegistrierkassenRegistrierkasseUuidBelegePathParams.prototype, "registrierkasseUuid", void 0);
     return GetExportCsvRegistrierkassenRegistrierkasseUuidBelegePathParams;
-}(SpeakeasyBase));
-export { GetExportCsvRegistrierkassenRegistrierkasseUuidBelegePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegePathParams = GetExportCsvRegistrierkassenRegistrierkasseUuidBelegePathParams;
 var GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeQueryParams = /** @class */ (function (_super) {
     __extends(GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeQueryParams, _super);
     function GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=after" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=after" }),
         __metadata("design:type", String)
     ], GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeQueryParams.prototype, "after", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=before" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=before" }),
         __metadata("design:type", String)
     ], GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeQueryParams.prototype, "before", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=posten" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=posten" }),
         __metadata("design:type", Boolean)
     ], GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeQueryParams.prototype, "posten", void 0);
     return GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeQueryParams;
-}(SpeakeasyBase));
-export { GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeQueryParams = GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeQueryParams;
 var GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest = /** @class */ (function (_super) {
     __extends(GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest, _super);
     function GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetExportCsvRegistrierkassenRegistrierkasseUuidBelegePathParams)
     ], GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeQueryParams)
     ], GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest.prototype, "queryParams", void 0);
     return GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest;
-}(SpeakeasyBase));
-export { GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest = GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest;
 var GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeResponse = /** @class */ (function (_super) {
     __extends(GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeResponse, _super);
     function GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeResponse.prototype, "statusCode", void 0);
     return GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeResponse;
-}(SpeakeasyBase));
-export { GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeResponse = GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeResponse;

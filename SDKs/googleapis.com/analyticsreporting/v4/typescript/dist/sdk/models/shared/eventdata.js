@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventData = void 0;
+var utils_1 = require("../../../internal/utils");
 // EventData
 /**
  * Represents all the details pertaining to an event.
@@ -33,25 +36,25 @@ var EventData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventAction" }),
         __metadata("design:type", String)
     ], EventData.prototype, "eventAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventCategory" }),
         __metadata("design:type", String)
     ], EventData.prototype, "eventCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventCount" }),
         __metadata("design:type", String)
     ], EventData.prototype, "eventCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventLabel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventLabel" }),
         __metadata("design:type", String)
     ], EventData.prototype, "eventLabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventValue" }),
         __metadata("design:type", String)
     ], EventData.prototype, "eventValue", void 0);
     return EventData;
-}(SpeakeasyBase));
-export { EventData };
+}(utils_1.SpeakeasyBase));
+exports.EventData = EventData;

@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class ApplicationsUpdateKeyCredentialsPathParams extends SpeakeasyBase {
     applicationObjectId: string;
-    tenantId: string;
+    tenantID: string;
 }
 export declare class ApplicationsUpdateKeyCredentialsQueryParams extends SpeakeasyBase {
     apiVersion: string;

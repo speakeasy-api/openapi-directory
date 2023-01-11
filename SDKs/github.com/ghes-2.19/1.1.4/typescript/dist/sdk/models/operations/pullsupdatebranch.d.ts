@@ -24,7 +24,7 @@ export declare class PullsUpdateBranchResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    pullsUpdateBranch202ApplicationJsonObject?: PullsUpdateBranch202ApplicationJson;
-    pullsUpdateBranch415ApplicationJsonObject?: PullsUpdateBranch415ApplicationJson;
+    pullsUpdateBranch202ApplicationJSONObject?: PullsUpdateBranch202ApplicationJson;
+    pullsUpdateBranch415ApplicationJSONObject?: PullsUpdateBranch415ApplicationJson;
     validationError?: shared.ValidationError;
 }

@@ -36,5 +36,5 @@ export declare class GetNodesStatusRequest extends SpeakeasyBase {
 export declare class GetNodesStatusResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNodesStatus200ApplicationJsonObject?: GetNodesStatus200ApplicationJson;
+    getNodesStatus200ApplicationJSONObject?: GetNodesStatus200ApplicationJson;
 }

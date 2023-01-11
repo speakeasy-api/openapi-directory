@@ -36,5 +36,5 @@ export declare class IpamPrefixesListRequest extends SpeakeasyBase {
 export declare class IpamPrefixesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ipamPrefixesList200ApplicationJsonObject?: IpamPrefixesList200ApplicationJson;
+    ipamPrefixesList200ApplicationJSONObject?: IpamPrefixesList200ApplicationJson;
 }

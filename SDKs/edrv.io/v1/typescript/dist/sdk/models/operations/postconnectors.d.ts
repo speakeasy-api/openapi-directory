@@ -10,7 +10,7 @@ export declare class PostConnectorsRequestBody extends SpeakeasyBase {
 export declare class PostConnectors200ApplicationJson extends SpeakeasyBase {
     message?: string;
     ok?: boolean;
-    result?: Map<string, any>;
+    result?: Record<string, any>;
 }
 export declare class PostConnectorsRequest extends SpeakeasyBase {
     request: PostConnectorsRequestBody;
@@ -18,5 +18,5 @@ export declare class PostConnectorsRequest extends SpeakeasyBase {
 export declare class PostConnectorsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postConnectors200ApplicationJsonObject?: PostConnectors200ApplicationJson;
+    postConnectors200ApplicationJSONObject?: PostConnectors200ApplicationJson;
 }

@@ -1,7 +1,10 @@
-export var CapabilitySyncStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CapabilitySyncStatusEnum = void 0;
+var CapabilitySyncStatusEnum;
 (function (CapabilitySyncStatusEnum) {
     CapabilitySyncStatusEnum["InSync"] = "IN_SYNC";
     CapabilitySyncStatusEnum["OutOfSync"] = "OUT_OF_SYNC";
     CapabilitySyncStatusEnum["SyncFailed"] = "SYNC_FAILED";
     CapabilitySyncStatusEnum["Unknown"] = "UNKNOWN";
-})(CapabilitySyncStatusEnum || (CapabilitySyncStatusEnum = {}));
+})(CapabilitySyncStatusEnum = exports.CapabilitySyncStatusEnum || (exports.CapabilitySyncStatusEnum = {}));

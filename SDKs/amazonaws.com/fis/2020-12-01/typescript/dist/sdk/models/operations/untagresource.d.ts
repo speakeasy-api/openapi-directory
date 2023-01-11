@@ -22,5 +22,5 @@ export declare class UntagResourceRequest extends SpeakeasyBase {
 export declare class UntagResourceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    untagResourceResponse?: Map<string, any>;
+    untagResourceResponse?: Record<string, any>;
 }

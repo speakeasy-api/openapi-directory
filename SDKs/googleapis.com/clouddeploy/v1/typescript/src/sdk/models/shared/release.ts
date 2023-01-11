@@ -24,7 +24,7 @@ export class Release extends SpeakeasyBase {
   abandoned?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=annotations" })
-  annotations?: Map<string, string>;
+  annotations?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=buildArtifacts", elemType: BuildArtifact })
   buildArtifacts?: BuildArtifact[];
@@ -42,7 +42,7 @@ export class Release extends SpeakeasyBase {
   etag?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -66,10 +66,10 @@ export class Release extends SpeakeasyBase {
   skaffoldVersion?: string;
 
   @SpeakeasyMetadata({ data: "json, name=targetArtifacts", elemType: TargetArtifact })
-  targetArtifacts?: Map<string, TargetArtifact>;
+  targetArtifacts?: Record<string, TargetArtifact>;
 
   @SpeakeasyMetadata({ data: "json, name=targetRenders", elemType: TargetRender })
-  targetRenders?: Map<string, TargetRender>;
+  targetRenders?: Record<string, TargetRender>;
 
   @SpeakeasyMetadata({ data: "json, name=targetSnapshots", elemType: Target })
   targetSnapshots?: Target[];
@@ -85,7 +85,7 @@ export class Release extends SpeakeasyBase {
 **/
 export class ReleaseInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=annotations" })
-  annotations?: Map<string, string>;
+  annotations?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=buildArtifacts", elemType: BuildArtifact })
   buildArtifacts?: BuildArtifact[];
@@ -100,7 +100,7 @@ export class ReleaseInput extends SpeakeasyBase {
   etag?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

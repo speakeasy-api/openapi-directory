@@ -11,7 +11,7 @@ export declare class AddProjectForTaskRequestBody extends SpeakeasyBase {
     data?: shared.TaskAddProjectRequest;
 }
 export declare class AddProjectForTask200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class AddProjectForTaskRequest extends SpeakeasyBase {
     pathParams: AddProjectForTaskPathParams;
@@ -22,5 +22,5 @@ export declare class AddProjectForTaskResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    addProjectForTask200ApplicationJsonObject?: AddProjectForTask200ApplicationJson;
+    addProjectForTask200ApplicationJSONObject?: AddProjectForTask200ApplicationJson;
 }

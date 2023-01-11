@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListHyponymsResponse = exports.ListHyponymsRequest = exports.ListHyponymsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListHyponymsQueryParams = /** @class */ (function (_super) {
     __extends(ListHyponymsQueryParams, _super);
     function ListHyponymsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=family" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=family" }),
         __metadata("design:type", String)
     ], ListHyponymsQueryParams.prototype, "family", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxLevel" }),
         __metadata("design:type", String)
     ], ListHyponymsQueryParams.prototype, "maxLevel", void 0);
     return ListHyponymsQueryParams;
-}(SpeakeasyBase));
-export { ListHyponymsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ListHyponymsQueryParams = ListHyponymsQueryParams;
 var ListHyponymsRequest = /** @class */ (function (_super) {
     __extends(ListHyponymsRequest, _super);
     function ListHyponymsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListHyponymsQueryParams)
     ], ListHyponymsRequest.prototype, "queryParams", void 0);
     return ListHyponymsRequest;
-}(SpeakeasyBase));
-export { ListHyponymsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListHyponymsRequest = ListHyponymsRequest;
 var ListHyponymsResponse = /** @class */ (function (_super) {
     __extends(ListHyponymsResponse, _super);
     function ListHyponymsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListHyponymsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ListHyponymsResponse.prototype, "statusCode", void 0);
     return ListHyponymsResponse;
-}(SpeakeasyBase));
-export { ListHyponymsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListHyponymsResponse = ListHyponymsResponse;

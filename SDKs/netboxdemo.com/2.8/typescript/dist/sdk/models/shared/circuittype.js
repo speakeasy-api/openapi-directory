@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CircuitTypeInput = exports.CircuitType = void 0;
+var utils_1 = require("../../../internal/utils");
 var CircuitType = /** @class */ (function (_super) {
     __extends(CircuitType, _super);
     function CircuitType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=circuit_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=circuit_count" }),
         __metadata("design:type", Number)
     ], CircuitType.prototype, "circuitCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CircuitType.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], CircuitType.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CircuitType.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], CircuitType.prototype, "slug", void 0);
     return CircuitType;
-}(SpeakeasyBase));
-export { CircuitType };
+}(utils_1.SpeakeasyBase));
+exports.CircuitType = CircuitType;
 var CircuitTypeInput = /** @class */ (function (_super) {
     __extends(CircuitTypeInput, _super);
     function CircuitTypeInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CircuitTypeInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CircuitTypeInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], CircuitTypeInput.prototype, "slug", void 0);
     return CircuitTypeInput;
-}(SpeakeasyBase));
-export { CircuitTypeInput };
+}(utils_1.SpeakeasyBase));
+exports.CircuitTypeInput = CircuitTypeInput;

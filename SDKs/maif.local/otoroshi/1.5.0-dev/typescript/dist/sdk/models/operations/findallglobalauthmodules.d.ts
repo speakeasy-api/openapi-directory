@@ -9,5 +9,5 @@ export declare class FindAllGlobalAuthModulesRequest extends SpeakeasyBase {
 export declare class FindAllGlobalAuthModulesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    findAllGlobalAuthModules200ApplicationJsonOneoves?: any[];
+    findAllGlobalAuthModules200ApplicationJSONOneoves?: any[];
 }

@@ -7,6 +7,6 @@ export declare class GetSetupV1CustomersIdPrivacyRequest extends SpeakeasyBase {
 }
 export declare class GetSetupV1CustomersIdPrivacyResponse extends SpeakeasyBase {
     contentType: string;
-    customerPrivacyViewModel?: Map<string, any>;
+    customerPrivacyViewModel?: Record<string, any>;
     statusCode: number;
 }

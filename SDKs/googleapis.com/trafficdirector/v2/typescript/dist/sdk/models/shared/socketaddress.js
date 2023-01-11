@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SocketAddressProtocolEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SocketAddress = exports.SocketAddressProtocolEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SocketAddressProtocolEnum;
 (function (SocketAddressProtocolEnum) {
     SocketAddressProtocolEnum["Tcp"] = "TCP";
     SocketAddressProtocolEnum["Udp"] = "UDP";
-})(SocketAddressProtocolEnum || (SocketAddressProtocolEnum = {}));
+})(SocketAddressProtocolEnum = exports.SocketAddressProtocolEnum || (exports.SocketAddressProtocolEnum = {}));
 // SocketAddress
 /**
  * [#next-free-field: 7]
@@ -38,29 +41,29 @@ var SocketAddress = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], SocketAddress.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipv4Compat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipv4Compat" }),
         __metadata("design:type", Boolean)
     ], SocketAddress.prototype, "ipv4Compat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=namedPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=namedPort" }),
         __metadata("design:type", String)
     ], SocketAddress.prototype, "namedPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portValue" }),
         __metadata("design:type", Number)
     ], SocketAddress.prototype, "portValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], SocketAddress.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolverName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolverName" }),
         __metadata("design:type", String)
     ], SocketAddress.prototype, "resolverName", void 0);
     return SocketAddress;
-}(SpeakeasyBase));
-export { SocketAddress };
+}(utils_1.SpeakeasyBase));
+exports.SocketAddress = SocketAddress;

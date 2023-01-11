@@ -1,8 +1,11 @@
-export var FargateProfileStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FargateProfileStatusEnum = void 0;
+var FargateProfileStatusEnum;
 (function (FargateProfileStatusEnum) {
     FargateProfileStatusEnum["Creating"] = "CREATING";
     FargateProfileStatusEnum["Active"] = "ACTIVE";
     FargateProfileStatusEnum["Deleting"] = "DELETING";
     FargateProfileStatusEnum["CreateFailed"] = "CREATE_FAILED";
     FargateProfileStatusEnum["DeleteFailed"] = "DELETE_FAILED";
-})(FargateProfileStatusEnum || (FargateProfileStatusEnum = {}));
+})(FargateProfileStatusEnum = exports.FargateProfileStatusEnum || (exports.FargateProfileStatusEnum = {}));

@@ -1,125 +1,126 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class CreateDropletRequestBodySingleDropletRequest extends SpeakeasyBase {
-  @Metadata({ data: "json, name=backups" })
+  @SpeakeasyMetadata({ data: "json, name=backups" })
   backups?: boolean;
 
-  @Metadata({ data: "json, name=image" })
+  @SpeakeasyMetadata({ data: "json, name=image" })
   image: any;
 
-  @Metadata({ data: "json, name=ipv6" })
+  @SpeakeasyMetadata({ data: "json, name=ipv6" })
   ipv6?: boolean;
 
-  @Metadata({ data: "json, name=monitoring" })
+  @SpeakeasyMetadata({ data: "json, name=monitoring" })
   monitoring?: boolean;
 
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=private_networking" })
+  @SpeakeasyMetadata({ data: "json, name=private_networking" })
   privateNetworking?: boolean;
 
-  @Metadata({ data: "json, name=region" })
+  @SpeakeasyMetadata({ data: "json, name=region" })
   region: string;
 
-  @Metadata({ data: "json, name=size" })
+  @SpeakeasyMetadata({ data: "json, name=size" })
   size: string;
 
-  @Metadata({ data: "json, name=ssh_keys" })
+  @SpeakeasyMetadata({ data: "json, name=ssh_keys" })
   sshKeys?: any[];
 
-  @Metadata({ data: "json, name=tags" })
+  @SpeakeasyMetadata({ data: "json, name=tags" })
   tags?: string[];
 
-  @Metadata({ data: "json, name=user_data" })
+  @SpeakeasyMetadata({ data: "json, name=user_data" })
   userData?: string;
 
-  @Metadata({ data: "json, name=vpc_uuid" })
+  @SpeakeasyMetadata({ data: "json, name=vpc_uuid" })
   vpcUuid?: string;
 
-  @Metadata({ data: "json, name=with_droplet_agent" })
+  @SpeakeasyMetadata({ data: "json, name=with_droplet_agent" })
   withDropletAgent?: boolean;
 }
 
 
 export class CreateDropletRequestBodyMultipleDropletRequest extends SpeakeasyBase {
-  @Metadata({ data: "json, name=backups" })
+  @SpeakeasyMetadata({ data: "json, name=backups" })
   backups?: boolean;
 
-  @Metadata({ data: "json, name=image" })
+  @SpeakeasyMetadata({ data: "json, name=image" })
   image: any;
 
-  @Metadata({ data: "json, name=ipv6" })
+  @SpeakeasyMetadata({ data: "json, name=ipv6" })
   ipv6?: boolean;
 
-  @Metadata({ data: "json, name=monitoring" })
+  @SpeakeasyMetadata({ data: "json, name=monitoring" })
   monitoring?: boolean;
 
-  @Metadata({ data: "json, name=names" })
+  @SpeakeasyMetadata({ data: "json, name=names" })
   names: string[];
 
-  @Metadata({ data: "json, name=private_networking" })
+  @SpeakeasyMetadata({ data: "json, name=private_networking" })
   privateNetworking?: boolean;
 
-  @Metadata({ data: "json, name=region" })
+  @SpeakeasyMetadata({ data: "json, name=region" })
   region: string;
 
-  @Metadata({ data: "json, name=size" })
+  @SpeakeasyMetadata({ data: "json, name=size" })
   size: string;
 
-  @Metadata({ data: "json, name=ssh_keys" })
+  @SpeakeasyMetadata({ data: "json, name=ssh_keys" })
   sshKeys?: any[];
 
-  @Metadata({ data: "json, name=tags" })
+  @SpeakeasyMetadata({ data: "json, name=tags" })
   tags?: string[];
 
-  @Metadata({ data: "json, name=user_data" })
+  @SpeakeasyMetadata({ data: "json, name=user_data" })
   userData?: string;
 
-  @Metadata({ data: "json, name=vpc_uuid" })
+  @SpeakeasyMetadata({ data: "json, name=vpc_uuid" })
   vpcUuid?: string;
 
-  @Metadata({ data: "json, name=with_droplet_agent" })
+  @SpeakeasyMetadata({ data: "json, name=with_droplet_agent" })
   withDropletAgent?: boolean;
 }
 
 
-export class CreateDropletRequest extends SpeakeasyBase {
-  @Metadata({ data: "request, media_type=application/json" })
-  request?: any;
-}
-
-
 export class CreateDroplet401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class CreateDropletRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request?: any;
+}
+
+
 export class CreateDropletResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  createDroplet202ApplicationJsonOneOf?: any;
+  @SpeakeasyMetadata()
+  createDroplet202ApplicationJSONOneOf?: any;
 
-  @Metadata()
-  createDroplet401ApplicationJsonObject?: CreateDroplet401ApplicationJson;
+  @SpeakeasyMetadata()
+  createDroplet401ApplicationJSONObject?: CreateDroplet401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

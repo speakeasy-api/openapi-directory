@@ -38,5 +38,5 @@ export class ListGroupsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listGroups200ApplicationJsonObject?: ListGroups200ApplicationJson;
+  listGroups200ApplicationJSONObject?: ListGroups200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CreateFundingAccountRequestV2TypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateFundingAccountRequestV2 = exports.CreateFundingAccountRequestV2TypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CreateFundingAccountRequestV2TypeEnum;
 (function (CreateFundingAccountRequestV2TypeEnum) {
     CreateFundingAccountRequestV2TypeEnum["Fbo"] = "FBO";
     CreateFundingAccountRequestV2TypeEnum["WubsDecoupled"] = "WUBS_DECOUPLED";
-})(CreateFundingAccountRequestV2TypeEnum || (CreateFundingAccountRequestV2TypeEnum = {}));
+})(CreateFundingAccountRequestV2TypeEnum = exports.CreateFundingAccountRequestV2TypeEnum || (exports.CreateFundingAccountRequestV2TypeEnum = {}));
 var CreateFundingAccountRequestV2 = /** @class */ (function (_super) {
     __extends(CreateFundingAccountRequestV2, _super);
     function CreateFundingAccountRequestV2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountName" }),
         __metadata("design:type", String)
     ], CreateFundingAccountRequestV2.prototype, "accountName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountNumber" }),
         __metadata("design:type", String)
     ], CreateFundingAccountRequestV2.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], CreateFundingAccountRequestV2.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateFundingAccountRequestV2.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payorId" }),
         __metadata("design:type", String)
     ], CreateFundingAccountRequestV2.prototype, "payorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routingNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routingNumber" }),
         __metadata("design:type", String)
     ], CreateFundingAccountRequestV2.prototype, "routingNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CreateFundingAccountRequestV2.prototype, "type", void 0);
     return CreateFundingAccountRequestV2;
-}(SpeakeasyBase));
-export { CreateFundingAccountRequestV2 };
+}(utils_1.SpeakeasyBase));
+exports.CreateFundingAccountRequestV2 = CreateFundingAccountRequestV2;

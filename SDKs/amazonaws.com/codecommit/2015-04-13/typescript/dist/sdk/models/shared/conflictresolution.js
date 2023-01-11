@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeleteFileEntry } from "./deletefileentry";
-import { ReplaceContentEntry } from "./replacecontententry";
-import { SetFileModeEntry } from "./setfilemodeentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConflictResolution = void 0;
+var utils_1 = require("../../../internal/utils");
+var deletefileentry_1 = require("./deletefileentry");
+var replacecontententry_1 = require("./replacecontententry");
+var setfilemodeentry_1 = require("./setfilemodeentry");
 // ConflictResolution
 /**
  * If AUTOMERGE is the conflict resolution strategy, a list of inputs to use when resolving conflicts during a merge.
@@ -36,17 +39,17 @@ var ConflictResolution = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleteFiles", elemType: DeleteFileEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleteFiles", elemType: deletefileentry_1.DeleteFileEntry }),
         __metadata("design:type", Array)
     ], ConflictResolution.prototype, "deleteFiles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replaceContents", elemType: ReplaceContentEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replaceContents", elemType: replacecontententry_1.ReplaceContentEntry }),
         __metadata("design:type", Array)
     ], ConflictResolution.prototype, "replaceContents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=setFileModes", elemType: SetFileModeEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=setFileModes", elemType: setfilemodeentry_1.SetFileModeEntry }),
         __metadata("design:type", Array)
     ], ConflictResolution.prototype, "setFileModes", void 0);
     return ConflictResolution;
-}(SpeakeasyBase));
-export { ConflictResolution };
+}(utils_1.SpeakeasyBase));
+exports.ConflictResolution = ConflictResolution;

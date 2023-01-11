@@ -14,7 +14,7 @@ export declare class CreateArchiveRuleHeaders extends SpeakeasyBase {
 }
 export declare class CreateArchiveRuleRequestBody extends SpeakeasyBase {
     clientToken?: string;
-    filter: Map<string, shared.Criterion>;
+    filter: Record<string, shared.Criterion>;
     ruleName: string;
 }
 export declare class CreateArchiveRuleRequest extends SpeakeasyBase {

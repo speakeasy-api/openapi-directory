@@ -2,11 +2,11 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { Buyer } from "./buyer";
 import { ContactInformation } from "./contactinformation";
 import { PrivateData } from "./privatedata";
-import { DealInput } from "./deal";
-import { SellerInput } from "./seller";
 import { Deal } from "./deal";
 import { Note } from "./note";
 import { Seller } from "./seller";
+import { DealInput } from "./deal";
+import { SellerInput } from "./seller";
 
 
 export enum ProposalLastUpdaterOrCommentorRoleEnum {
@@ -28,34 +28,6 @@ export enum ProposalProposalStateEnum {
     SellerAccepted = "SELLER_ACCEPTED",
     Canceled = "CANCELED",
     Finalized = "FINALIZED"
-}
-
-
-// ProposalInput
-/** 
- * Represents a proposal in the Marketplace. A proposal is the unit of negotiation between a seller and a buyer and contains deals which are served. Note: You can't update, create, or otherwise modify Private Auction deals through the API. Fields are updatable unless noted otherwise.
-**/
-export class ProposalInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=billedBuyer" })
-  billedBuyer?: Buyer;
-
-  @SpeakeasyMetadata({ data: "json, name=buyer" })
-  buyer?: Buyer;
-
-  @SpeakeasyMetadata({ data: "json, name=buyerContacts", elemType: ContactInformation })
-  buyerContacts?: ContactInformation[];
-
-  @SpeakeasyMetadata({ data: "json, name=buyerPrivateData" })
-  buyerPrivateData?: PrivateData;
-
-  @SpeakeasyMetadata({ data: "json, name=deals", elemType: DealInput })
-  deals?: DealInput[];
-
-  @SpeakeasyMetadata({ data: "json, name=displayName" })
-  displayName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=seller" })
-  seller?: SellerInput;
 }
 
 
@@ -120,4 +92,32 @@ export class Proposal extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+}
+
+
+// ProposalInput
+/** 
+ * Represents a proposal in the Marketplace. A proposal is the unit of negotiation between a seller and a buyer and contains deals which are served. Note: You can't update, create, or otherwise modify Private Auction deals through the API. Fields are updatable unless noted otherwise.
+**/
+export class ProposalInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=billedBuyer" })
+  billedBuyer?: Buyer;
+
+  @SpeakeasyMetadata({ data: "json, name=buyer" })
+  buyer?: Buyer;
+
+  @SpeakeasyMetadata({ data: "json, name=buyerContacts", elemType: ContactInformation })
+  buyerContacts?: ContactInformation[];
+
+  @SpeakeasyMetadata({ data: "json, name=buyerPrivateData" })
+  buyerPrivateData?: PrivateData;
+
+  @SpeakeasyMetadata({ data: "json, name=deals", elemType: DealInput })
+  deals?: DealInput[];
+
+  @SpeakeasyMetadata({ data: "json, name=displayName" })
+  displayName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=seller" })
+  seller?: SellerInput;
 }

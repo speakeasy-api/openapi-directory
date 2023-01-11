@@ -24,5 +24,5 @@ export declare class ExportSystemAdvisoriesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    controllersSystemAdvisoriesDbLookups?: shared.ControllersSystemAdvisoriesDbLookup[];
+    controllersSystemAdvisoriesDBLookups?: shared.ControllersSystemAdvisoriesDbLookup[];
 }

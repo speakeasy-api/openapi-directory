@@ -1,5 +1,8 @@
-export var FailureCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FailureCodeEnum = void 0;
+var FailureCodeEnum;
 (function (FailureCodeEnum) {
     FailureCodeEnum["ClientError"] = "CLIENT_ERROR";
     FailureCodeEnum["ServerFault"] = "SERVER_FAULT";
-})(FailureCodeEnum || (FailureCodeEnum = {}));
+})(FailureCodeEnum = exports.FailureCodeEnum || (exports.FailureCodeEnum = {}));

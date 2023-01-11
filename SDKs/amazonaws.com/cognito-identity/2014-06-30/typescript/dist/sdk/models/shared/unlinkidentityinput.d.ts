@@ -4,6 +4,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class UnlinkIdentityInput extends SpeakeasyBase {
     identityId: string;
-    logins: Map<string, string>;
+    logins: Record<string, string>;
     loginsToRemove: string[];
 }

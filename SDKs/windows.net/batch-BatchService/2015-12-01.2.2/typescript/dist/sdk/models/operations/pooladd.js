@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PoolAddResponse = exports.PoolAddRequest = exports.PoolAddHeaders = exports.PoolAddQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PoolAddQueryParams = /** @class */ (function (_super) {
     __extends(PoolAddQueryParams, _super);
     function PoolAddQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], PoolAddQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], PoolAddQueryParams.prototype, "timeout", void 0);
     return PoolAddQueryParams;
-}(SpeakeasyBase));
-export { PoolAddQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PoolAddQueryParams = PoolAddQueryParams;
 var PoolAddHeaders = /** @class */ (function (_super) {
     __extends(PoolAddHeaders, _super);
     function PoolAddHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], PoolAddHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], PoolAddHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], PoolAddHeaders.prototype, "returnClientRequestId", void 0);
     return PoolAddHeaders;
-}(SpeakeasyBase));
-export { PoolAddHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PoolAddHeaders = PoolAddHeaders;
 var PoolAddRequest = /** @class */ (function (_super) {
     __extends(PoolAddRequest, _super);
     function PoolAddRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PoolAddQueryParams)
     ], PoolAddRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PoolAddHeaders)
     ], PoolAddRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], PoolAddRequest.prototype, "request", void 0);
     return PoolAddRequest;
-}(SpeakeasyBase));
-export { PoolAddRequest };
+}(utils_1.SpeakeasyBase));
+exports.PoolAddRequest = PoolAddRequest;
 var PoolAddResponse = /** @class */ (function (_super) {
     __extends(PoolAddResponse, _super);
     function PoolAddResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PoolAddResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PoolAddResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PoolAddResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PoolAddResponse.prototype, "statusCode", void 0);
     return PoolAddResponse;
-}(SpeakeasyBase));
-export { PoolAddResponse };
+}(utils_1.SpeakeasyBase));
+exports.PoolAddResponse = PoolAddResponse;

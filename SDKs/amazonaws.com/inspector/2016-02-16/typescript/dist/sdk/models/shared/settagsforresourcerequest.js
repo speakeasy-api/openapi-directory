@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetTagsForResourceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var tag_1 = require("./tag");
 var SetTagsForResourceRequest = /** @class */ (function (_super) {
     __extends(SetTagsForResourceRequest, _super);
     function SetTagsForResourceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceArn" }),
         __metadata("design:type", String)
     ], SetTagsForResourceRequest.prototype, "resourceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], SetTagsForResourceRequest.prototype, "tags", void 0);
     return SetTagsForResourceRequest;
-}(SpeakeasyBase));
-export { SetTagsForResourceRequest };
+}(utils_1.SpeakeasyBase));
+exports.SetTagsForResourceRequest = SetTagsForResourceRequest;

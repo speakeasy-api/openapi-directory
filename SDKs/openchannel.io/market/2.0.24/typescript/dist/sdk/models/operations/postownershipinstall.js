@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostOwnershipInstallResponse = exports.PostOwnershipInstallRequest = exports.PostOwnershipInstallQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostOwnershipInstallQueryParams = /** @class */ (function (_super) {
     __extends(PostOwnershipInstallQueryParams, _super);
     function PostOwnershipInstallQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=appId" }),
         __metadata("design:type", String)
     ], PostOwnershipInstallQueryParams.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=customData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=customData" }),
         __metadata("design:type", String)
     ], PostOwnershipInstallQueryParams.prototype, "customData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=model" }),
         __metadata("design:type", String)
     ], PostOwnershipInstallQueryParams.prototype, "model", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=modelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=modelId" }),
         __metadata("design:type", String)
     ], PostOwnershipInstallQueryParams.prototype, "modelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userId" }),
         __metadata("design:type", String)
     ], PostOwnershipInstallQueryParams.prototype, "userId", void 0);
     return PostOwnershipInstallQueryParams;
-}(SpeakeasyBase));
-export { PostOwnershipInstallQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostOwnershipInstallQueryParams = PostOwnershipInstallQueryParams;
 var PostOwnershipInstallRequest = /** @class */ (function (_super) {
     __extends(PostOwnershipInstallRequest, _super);
     function PostOwnershipInstallRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostOwnershipInstallQueryParams)
     ], PostOwnershipInstallRequest.prototype, "queryParams", void 0);
     return PostOwnershipInstallRequest;
-}(SpeakeasyBase));
-export { PostOwnershipInstallRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostOwnershipInstallRequest = PostOwnershipInstallRequest;
 var PostOwnershipInstallResponse = /** @class */ (function (_super) {
     __extends(PostOwnershipInstallResponse, _super);
     function PostOwnershipInstallResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostOwnershipInstallResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostOwnershipInstallResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostOwnershipInstallResponse.prototype, "statusCode", void 0);
     return PostOwnershipInstallResponse;
-}(SpeakeasyBase));
-export { PostOwnershipInstallResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostOwnershipInstallResponse = PostOwnershipInstallResponse;

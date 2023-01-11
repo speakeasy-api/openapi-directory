@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCreateAccessKeyActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCreateAccessKeyResponse = exports.PostCreateAccessKeyRequest = exports.PostCreateAccessKeyHeaders = exports.PostCreateAccessKeyQueryParams = exports.PostCreateAccessKeyVersionEnum = exports.PostCreateAccessKeyActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCreateAccessKeyActionEnum;
 (function (PostCreateAccessKeyActionEnum) {
     PostCreateAccessKeyActionEnum["CreateAccessKey"] = "CreateAccessKey";
-})(PostCreateAccessKeyActionEnum || (PostCreateAccessKeyActionEnum = {}));
-export var PostCreateAccessKeyVersionEnum;
+})(PostCreateAccessKeyActionEnum = exports.PostCreateAccessKeyActionEnum || (exports.PostCreateAccessKeyActionEnum = {}));
+var PostCreateAccessKeyVersionEnum;
 (function (PostCreateAccessKeyVersionEnum) {
     PostCreateAccessKeyVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostCreateAccessKeyVersionEnum || (PostCreateAccessKeyVersionEnum = {}));
+})(PostCreateAccessKeyVersionEnum = exports.PostCreateAccessKeyVersionEnum || (exports.PostCreateAccessKeyVersionEnum = {}));
 var PostCreateAccessKeyQueryParams = /** @class */ (function (_super) {
     __extends(PostCreateAccessKeyQueryParams, _super);
     function PostCreateAccessKeyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCreateAccessKeyQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCreateAccessKeyQueryParams.prototype, "version", void 0);
     return PostCreateAccessKeyQueryParams;
-}(SpeakeasyBase));
-export { PostCreateAccessKeyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateAccessKeyQueryParams = PostCreateAccessKeyQueryParams;
 var PostCreateAccessKeyHeaders = /** @class */ (function (_super) {
     __extends(PostCreateAccessKeyHeaders, _super);
     function PostCreateAccessKeyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCreateAccessKeyHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCreateAccessKeyHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCreateAccessKeyHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCreateAccessKeyHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCreateAccessKeyHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCreateAccessKeyHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCreateAccessKeyHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCreateAccessKeyHeaders;
-}(SpeakeasyBase));
-export { PostCreateAccessKeyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateAccessKeyHeaders = PostCreateAccessKeyHeaders;
 var PostCreateAccessKeyRequest = /** @class */ (function (_super) {
     __extends(PostCreateAccessKeyRequest, _super);
     function PostCreateAccessKeyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateAccessKeyQueryParams)
     ], PostCreateAccessKeyRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateAccessKeyHeaders)
     ], PostCreateAccessKeyRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCreateAccessKeyRequest.prototype, "request", void 0);
     return PostCreateAccessKeyRequest;
-}(SpeakeasyBase));
-export { PostCreateAccessKeyRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateAccessKeyRequest = PostCreateAccessKeyRequest;
 var PostCreateAccessKeyResponse = /** @class */ (function (_super) {
     __extends(PostCreateAccessKeyResponse, _super);
     function PostCreateAccessKeyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCreateAccessKeyResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCreateAccessKeyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCreateAccessKeyResponse.prototype, "statusCode", void 0);
     return PostCreateAccessKeyResponse;
-}(SpeakeasyBase));
-export { PostCreateAccessKeyResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateAccessKeyResponse = PostCreateAccessKeyResponse;

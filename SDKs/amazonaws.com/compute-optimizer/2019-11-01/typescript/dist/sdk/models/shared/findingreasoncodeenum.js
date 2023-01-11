@@ -1,5 +1,8 @@
-export var FindingReasonCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindingReasonCodeEnum = void 0;
+var FindingReasonCodeEnum;
 (function (FindingReasonCodeEnum) {
     FindingReasonCodeEnum["MemoryOverprovisioned"] = "MemoryOverprovisioned";
     FindingReasonCodeEnum["MemoryUnderprovisioned"] = "MemoryUnderprovisioned";
-})(FindingReasonCodeEnum || (FindingReasonCodeEnum = {}));
+})(FindingReasonCodeEnum = exports.FindingReasonCodeEnum || (exports.FindingReasonCodeEnum = {}));

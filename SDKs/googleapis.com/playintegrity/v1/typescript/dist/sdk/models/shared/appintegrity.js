@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AppIntegrityAppRecognitionVerdictEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppIntegrity = exports.AppIntegrityAppRecognitionVerdictEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AppIntegrityAppRecognitionVerdictEnum;
 (function (AppIntegrityAppRecognitionVerdictEnum) {
     AppIntegrityAppRecognitionVerdictEnum["Unknown"] = "UNKNOWN";
     AppIntegrityAppRecognitionVerdictEnum["PlayRecognized"] = "PLAY_RECOGNIZED";
     AppIntegrityAppRecognitionVerdictEnum["UnrecognizedVersion"] = "UNRECOGNIZED_VERSION";
     AppIntegrityAppRecognitionVerdictEnum["Unevaluated"] = "UNEVALUATED";
-})(AppIntegrityAppRecognitionVerdictEnum || (AppIntegrityAppRecognitionVerdictEnum = {}));
+})(AppIntegrityAppRecognitionVerdictEnum = exports.AppIntegrityAppRecognitionVerdictEnum || (exports.AppIntegrityAppRecognitionVerdictEnum = {}));
 // AppIntegrity
 /**
  * Contains the application integrity information.
@@ -40,21 +43,21 @@ var AppIntegrity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appRecognitionVerdict" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appRecognitionVerdict" }),
         __metadata("design:type", String)
     ], AppIntegrity.prototype, "appRecognitionVerdict", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateSha256Digest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateSha256Digest" }),
         __metadata("design:type", Array)
     ], AppIntegrity.prototype, "certificateSha256Digest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packageName" }),
         __metadata("design:type", String)
     ], AppIntegrity.prototype, "packageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versionCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versionCode" }),
         __metadata("design:type", String)
     ], AppIntegrity.prototype, "versionCode", void 0);
     return AppIntegrity;
-}(SpeakeasyBase));
-export { AppIntegrity };
+}(utils_1.SpeakeasyBase));
+exports.AppIntegrity = AppIntegrity;

@@ -106,11 +106,11 @@ export declare class FfcerRequest extends SpeakeasyBase {
 export declare class FfcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ffcer400ApplicationJsonObject?: Ffcer400ApplicationJson;
-    ffcer401ApplicationJsonObject?: Ffcer401ApplicationJson;
-    ffcer404ApplicationJsonObject?: Ffcer404ApplicationJson;
-    ffcer500ApplicationJsonObject?: Ffcer500ApplicationJson;
-    ffcer502ApplicationJsonObject?: Ffcer502ApplicationJson;
-    ffcer503ApplicationJsonObject?: Ffcer503ApplicationJson;
-    ffcer504ApplicationJsonObject?: Ffcer504ApplicationJson;
+    ffcer400ApplicationJSONObject?: Ffcer400ApplicationJson;
+    ffcer401ApplicationJSONObject?: Ffcer401ApplicationJson;
+    ffcer404ApplicationJSONObject?: Ffcer404ApplicationJson;
+    ffcer500ApplicationJSONObject?: Ffcer500ApplicationJson;
+    ffcer502ApplicationJSONObject?: Ffcer502ApplicationJson;
+    ffcer503ApplicationJSONObject?: Ffcer503ApplicationJson;
+    ffcer504ApplicationJSONObject?: Ffcer504ApplicationJson;
 }

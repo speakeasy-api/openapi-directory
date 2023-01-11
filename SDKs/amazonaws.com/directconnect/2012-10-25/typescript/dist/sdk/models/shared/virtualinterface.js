@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddressFamilyEnum } from "./addressfamilyenum";
-import { BgpPeer } from "./bgppeer";
-import { RouteFilterPrefix } from "./routefilterprefix";
-import { Tag } from "./tag";
-import { VirtualInterfaceStateEnum } from "./virtualinterfacestateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualInterface = void 0;
+var utils_1 = require("../../../internal/utils");
+var addressfamilyenum_1 = require("./addressfamilyenum");
+var bgppeer_1 = require("./bgppeer");
+var routefilterprefix_1 = require("./routefilterprefix");
+var tag_1 = require("./tag");
+var virtualinterfacestateenum_1 = require("./virtualinterfacestateenum");
 // VirtualInterface
 /**
  * Information about a virtual interface.
@@ -38,105 +41,105 @@ var VirtualInterface = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressFamily" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressFamily" }),
         __metadata("design:type", String)
     ], VirtualInterface.prototype, "addressFamily", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amazonAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amazonAddress" }),
         __metadata("design:type", String)
     ], VirtualInterface.prototype, "amazonAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amazonSideAsn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amazonSideAsn" }),
         __metadata("design:type", Number)
     ], VirtualInterface.prototype, "amazonSideAsn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asn" }),
         __metadata("design:type", Number)
     ], VirtualInterface.prototype, "asn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authKey" }),
         __metadata("design:type", String)
     ], VirtualInterface.prototype, "authKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awsDeviceV2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awsDeviceV2" }),
         __metadata("design:type", String)
     ], VirtualInterface.prototype, "awsDeviceV2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awsLogicalDeviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awsLogicalDeviceId" }),
         __metadata("design:type", String)
     ], VirtualInterface.prototype, "awsLogicalDeviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bgpPeers", elemType: BgpPeer }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bgpPeers", elemType: bgppeer_1.BgpPeer }),
         __metadata("design:type", Array)
     ], VirtualInterface.prototype, "bgpPeers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionId" }),
         __metadata("design:type", String)
     ], VirtualInterface.prototype, "connectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerAddress" }),
         __metadata("design:type", String)
     ], VirtualInterface.prototype, "customerAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerRouterConfig" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerRouterConfig" }),
         __metadata("design:type", String)
     ], VirtualInterface.prototype, "customerRouterConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directConnectGatewayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directConnectGatewayId" }),
         __metadata("design:type", String)
     ], VirtualInterface.prototype, "directConnectGatewayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jumboFrameCapable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jumboFrameCapable" }),
         __metadata("design:type", Boolean)
     ], VirtualInterface.prototype, "jumboFrameCapable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], VirtualInterface.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mtu" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mtu" }),
         __metadata("design:type", Number)
     ], VirtualInterface.prototype, "mtu", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerAccount" }),
         __metadata("design:type", String)
     ], VirtualInterface.prototype, "ownerAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], VirtualInterface.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routeFilterPrefixes", elemType: RouteFilterPrefix }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routeFilterPrefixes", elemType: routefilterprefix_1.RouteFilterPrefix }),
         __metadata("design:type", Array)
     ], VirtualInterface.prototype, "routeFilterPrefixes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], VirtualInterface.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualGatewayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualGatewayId" }),
         __metadata("design:type", String)
     ], VirtualInterface.prototype, "virtualGatewayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualInterfaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualInterfaceId" }),
         __metadata("design:type", String)
     ], VirtualInterface.prototype, "virtualInterfaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualInterfaceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualInterfaceName" }),
         __metadata("design:type", String)
     ], VirtualInterface.prototype, "virtualInterfaceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualInterfaceState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualInterfaceState" }),
         __metadata("design:type", String)
     ], VirtualInterface.prototype, "virtualInterfaceState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualInterfaceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualInterfaceType" }),
         __metadata("design:type", String)
     ], VirtualInterface.prototype, "virtualInterfaceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlan" }),
         __metadata("design:type", Number)
     ], VirtualInterface.prototype, "vlan", void 0);
     return VirtualInterface;
-}(SpeakeasyBase));
-export { VirtualInterface };
+}(utils_1.SpeakeasyBase));
+exports.VirtualInterface = VirtualInterface;

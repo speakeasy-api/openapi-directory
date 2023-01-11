@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Extension } from "./extension";
-import { Address } from "./address";
-import { Locality } from "./locality";
-import { BuildVersion } from "./buildversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Node = void 0;
+var utils_1 = require("../../../internal/utils");
+var extension_1 = require("./extension");
+var address_1 = require("./address");
+var locality_1 = require("./locality");
+var buildversion_1 = require("./buildversion");
 // Node
 /**
  * Identifies a specific Envoy instance. The node identifier is presented to the management server, which may use this identifier to distinguish per Envoy configuration for serving. [#next-free-field: 12]
@@ -37,49 +40,49 @@ var Node = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildVersion" }),
         __metadata("design:type", String)
     ], Node.prototype, "buildVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientFeatures" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientFeatures" }),
         __metadata("design:type", Array)
     ], Node.prototype, "clientFeatures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster" }),
         __metadata("design:type", String)
     ], Node.prototype, "cluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extensions", elemType: Extension }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extensions", elemType: extension_1.Extension }),
         __metadata("design:type", Array)
     ], Node.prototype, "extensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Node.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listeningAddresses", elemType: Address }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listeningAddresses", elemType: address_1.Address }),
         __metadata("design:type", Array)
     ], Node.prototype, "listeningAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locality" }),
-        __metadata("design:type", Locality)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locality" }),
+        __metadata("design:type", locality_1.Locality)
     ], Node.prototype, "locality", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], Node.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userAgentBuildVersion" }),
-        __metadata("design:type", BuildVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userAgentBuildVersion" }),
+        __metadata("design:type", buildversion_1.BuildVersion)
     ], Node.prototype, "userAgentBuildVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userAgentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userAgentName" }),
         __metadata("design:type", String)
     ], Node.prototype, "userAgentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userAgentVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userAgentVersion" }),
         __metadata("design:type", String)
     ], Node.prototype, "userAgentVersion", void 0);
     return Node;
-}(SpeakeasyBase));
-export { Node };
+}(utils_1.SpeakeasyBase));
+exports.Node = Node;

@@ -28,6 +28,6 @@ export declare class GetSearchJsonRequest extends SpeakeasyBase {
 }
 export declare class GetSearchJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getSearchJson200ApplicationJsonObject?: GetSearchJson200ApplicationJson;
     statusCode: number;
+    getSearchJSON200ApplicationJSONObject?: GetSearchJson200ApplicationJson;
 }

@@ -10,5 +10,5 @@ export declare class ProtocolIpmiSetConfigRequest extends SpeakeasyBase {
 export declare class ProtocolIpmiSetConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolIpmiSetConfig200ApplicationJsonString?: string;
+    protocolIpmiSetConfig200ApplicationJSONString?: string;
 }

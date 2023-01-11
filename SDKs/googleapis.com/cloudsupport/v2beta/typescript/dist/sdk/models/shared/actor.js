@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActorInput = exports.Actor = void 0;
+var utils_1 = require("../../../internal/utils");
 // Actor
 /**
  * An object containing information about the effective user and authenticated principal responsible for an action.
@@ -33,20 +36,20 @@ var Actor = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Actor.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], Actor.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleSupport" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleSupport" }),
         __metadata("design:type", Boolean)
     ], Actor.prototype, "googleSupport", void 0);
     return Actor;
-}(SpeakeasyBase));
-export { Actor };
+}(utils_1.SpeakeasyBase));
+exports.Actor = Actor;
 // ActorInput
 /**
  * An object containing information about the effective user and authenticated principal responsible for an action.
@@ -57,13 +60,13 @@ var ActorInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], ActorInput.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], ActorInput.prototype, "email", void 0);
     return ActorInput;
-}(SpeakeasyBase));
-export { ActorInput };
+}(utils_1.SpeakeasyBase));
+exports.ActorInput = ActorInput;

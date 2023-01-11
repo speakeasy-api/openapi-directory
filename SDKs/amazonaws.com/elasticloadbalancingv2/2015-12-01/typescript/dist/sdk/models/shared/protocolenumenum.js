@@ -1,4 +1,7 @@
-export var ProtocolEnumEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolEnumEnum = void 0;
+var ProtocolEnumEnum;
 (function (ProtocolEnumEnum) {
     ProtocolEnumEnum["Http"] = "HTTP";
     ProtocolEnumEnum["Https"] = "HTTPS";
@@ -7,4 +10,4 @@ export var ProtocolEnumEnum;
     ProtocolEnumEnum["Udp"] = "UDP";
     ProtocolEnumEnum["TcpUdp"] = "TCP_UDP";
     ProtocolEnumEnum["Geneve"] = "GENEVE";
-})(ProtocolEnumEnum || (ProtocolEnumEnum = {}));
+})(ProtocolEnumEnum = exports.ProtocolEnumEnum || (exports.ProtocolEnumEnum = {}));

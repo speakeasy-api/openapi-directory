@@ -1,4 +1,7 @@
-export var DataLakeResourceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataLakeResourceTypeEnum = void 0;
+var DataLakeResourceTypeEnum;
 (function (DataLakeResourceTypeEnum) {
     DataLakeResourceTypeEnum["Catalog"] = "CATALOG";
     DataLakeResourceTypeEnum["Database"] = "DATABASE";
@@ -8,4 +11,4 @@ export var DataLakeResourceTypeEnum;
     DataLakeResourceTypeEnum["LfTagPolicy"] = "LF_TAG_POLICY";
     DataLakeResourceTypeEnum["LfTagPolicyDatabase"] = "LF_TAG_POLICY_DATABASE";
     DataLakeResourceTypeEnum["LfTagPolicyTable"] = "LF_TAG_POLICY_TABLE";
-})(DataLakeResourceTypeEnum || (DataLakeResourceTypeEnum = {}));
+})(DataLakeResourceTypeEnum = exports.DataLakeResourceTypeEnum || (exports.DataLakeResourceTypeEnum = {}));

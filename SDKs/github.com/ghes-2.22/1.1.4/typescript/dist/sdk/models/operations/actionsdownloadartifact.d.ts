@@ -10,6 +10,6 @@ export declare class ActionsDownloadArtifactRequest extends SpeakeasyBase {
 }
 export declare class ActionsDownloadArtifactResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

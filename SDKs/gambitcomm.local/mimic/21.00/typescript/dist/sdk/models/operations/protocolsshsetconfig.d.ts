@@ -10,5 +10,5 @@ export declare class ProtocolSshSetConfigRequest extends SpeakeasyBase {
 export declare class ProtocolSshSetConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSshSetConfig200ApplicationJsonString?: string;
+    protocolSshSetConfig200ApplicationJSONString?: string;
 }

@@ -8,5 +8,5 @@ export declare class GetOrganizationAdaptivePolicyAclsRequest extends SpeakeasyB
 export declare class GetOrganizationAdaptivePolicyAclsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationAdaptivePolicyAcls200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationAdaptivePolicyAcls200ApplicationJSONObject?: Record<string, any>;
 }

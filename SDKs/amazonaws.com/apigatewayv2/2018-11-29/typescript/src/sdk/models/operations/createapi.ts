@@ -33,22 +33,22 @@ export class CreateApiHeaders extends SpeakeasyBase {
 **/
 export class CreateApiRequestBodyCorsConfiguration extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AllowCredentials" })
-  allowCredentials?: boolean;
+  allowCredentials?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=AllowHeaders" })
-  allowHeaders?: string[];
+  allowHeaders?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=AllowMethods" })
-  allowMethods?: string[];
+  allowMethods?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=AllowOrigins" })
-  allowOrigins?: string[];
+  allowOrigins?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ExposeHeaders" })
-  exposeHeaders?: string[];
+  exposeHeaders?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=MaxAge" })
-  maxAge?: number;
+  maxAge?: Record<string, any>;
 }
 
 export enum CreateApiRequestBodyProtocolTypeEnum {
@@ -89,7 +89,7 @@ export class CreateApiRequestBody extends SpeakeasyBase {
   routeSelectionExpression?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=target" })
   target?: string;

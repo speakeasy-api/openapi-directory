@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InvalidationSummary } from "./invalidationsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InvalidationList = void 0;
+var utils_1 = require("../../../internal/utils");
+var invalidationsummarylist_1 = require("./invalidationsummarylist");
 // InvalidationList
 /**
  * The <code>InvalidationList</code> complex type describes the list of invalidation objects. For more information about invalidation, see <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html">Invalidating Objects (Web Distributions Only)</a> in the <i>Amazon CloudFront Developer Guide</i>.
@@ -34,29 +37,29 @@ var InvalidationList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], InvalidationList.prototype, "isTruncated", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: InvalidationSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: invalidationsummarylist_1.InvalidationSummaryList }),
         __metadata("design:type", Array)
     ], InvalidationList.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], InvalidationList.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], InvalidationList.prototype, "maxItems", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], InvalidationList.prototype, "nextMarker", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], InvalidationList.prototype, "quantity", void 0);
     return InvalidationList;
-}(SpeakeasyBase));
-export { InvalidationList };
+}(utils_1.SpeakeasyBase));
+exports.InvalidationList = InvalidationList;

@@ -29,7 +29,7 @@ export class DisconnectFromServiceHeaders extends SpeakeasyBase {
 
 export class DisconnectFromServiceRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=sourceServerID" })
-  sourceServerId: string;
+  sourceServerID: string;
 }
 
 

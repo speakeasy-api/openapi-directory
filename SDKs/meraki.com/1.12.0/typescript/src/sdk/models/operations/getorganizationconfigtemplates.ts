@@ -22,5 +22,5 @@ export class GetOrganizationConfigTemplatesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationConfigTemplates200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationConfigTemplates200ApplicationJSONObject?: Record<string, any>;
 }

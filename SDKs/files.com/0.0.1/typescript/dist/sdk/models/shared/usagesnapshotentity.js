@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UsageSnapshotEntity = void 0;
+var utils_1 = require("../../../internal/utils");
 // UsageSnapshotEntity
 /**
  * List Usage Snapshots
@@ -33,61 +36,61 @@ var UsageSnapshotEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], UsageSnapshotEntity.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current_storage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current_storage" }),
         __metadata("design:type", Number)
     ], UsageSnapshotEntity.prototype, "currentStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted_files_counted_in_minimum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted_files_counted_in_minimum" }),
         __metadata("design:type", Number)
     ], UsageSnapshotEntity.prototype, "deletedFilesCountedInMinimum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted_files_storage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted_files_storage" }),
         __metadata("design:type", Number)
     ], UsageSnapshotEntity.prototype, "deletedFilesStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_at" }),
         __metadata("design:type", Date)
     ], UsageSnapshotEntity.prototype, "endAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=high_water_storage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=high_water_storage" }),
         __metadata("design:type", Number)
     ], UsageSnapshotEntity.prototype, "highWaterStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=high_water_user_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=high_water_user_count" }),
         __metadata("design:type", Number)
     ], UsageSnapshotEntity.prototype, "highWaterUserCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], UsageSnapshotEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=root_storage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=root_storage" }),
         __metadata("design:type", Number)
     ], UsageSnapshotEntity.prototype, "rootStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_at" }),
         __metadata("design:type", Date)
     ], UsageSnapshotEntity.prototype, "startAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_downloads" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_downloads" }),
         __metadata("design:type", Number)
     ], UsageSnapshotEntity.prototype, "totalDownloads", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_uploads" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_uploads" }),
         __metadata("design:type", Number)
     ], UsageSnapshotEntity.prototype, "totalUploads", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], UsageSnapshotEntity.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usage_by_top_level_dir" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usage_by_top_level_dir" }),
+        __metadata("design:type", Object)
     ], UsageSnapshotEntity.prototype, "usageByTopLevelDir", void 0);
     return UsageSnapshotEntity;
-}(SpeakeasyBase));
-export { UsageSnapshotEntity };
+}(utils_1.SpeakeasyBase));
+exports.UsageSnapshotEntity = UsageSnapshotEntity;

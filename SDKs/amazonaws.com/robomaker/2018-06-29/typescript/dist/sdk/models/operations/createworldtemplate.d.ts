@@ -19,7 +19,7 @@ export declare class CreateWorldTemplateRequestBodyTemplateLocation extends Spea
 export declare class CreateWorldTemplateRequestBody extends SpeakeasyBase {
     clientRequestToken?: string;
     name?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     templateBody?: string;
     templateLocation?: CreateWorldTemplateRequestBodyTemplateLocation;
 }

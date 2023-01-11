@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkloadImprovementStatusEnum } from "./workloadimprovementstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkloadSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var workloadimprovementstatusenum_1 = require("./workloadimprovementstatusenum");
 // WorkloadSummary
 /**
  * A workload summary return object.
@@ -34,37 +37,37 @@ var WorkloadSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ImprovementStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ImprovementStatus" }),
         __metadata("design:type", String)
     ], WorkloadSummary.prototype, "improvementStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Lenses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Lenses" }),
         __metadata("design:type", Array)
     ], WorkloadSummary.prototype, "lenses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Owner" }),
         __metadata("design:type", String)
     ], WorkloadSummary.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RiskCounts" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RiskCounts" }),
+        __metadata("design:type", Object)
     ], WorkloadSummary.prototype, "riskCounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdatedAt" }),
         __metadata("design:type", Date)
     ], WorkloadSummary.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkloadArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkloadArn" }),
         __metadata("design:type", String)
     ], WorkloadSummary.prototype, "workloadArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkloadId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkloadId" }),
         __metadata("design:type", String)
     ], WorkloadSummary.prototype, "workloadId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkloadName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkloadName" }),
         __metadata("design:type", String)
     ], WorkloadSummary.prototype, "workloadName", void 0);
     return WorkloadSummary;
-}(SpeakeasyBase));
-export { WorkloadSummary };
+}(utils_1.SpeakeasyBase));
+exports.WorkloadSummary = WorkloadSummary;

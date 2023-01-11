@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class SignedInUserListOwnedObjectsPathParams extends SpeakeasyBase {
-    tenantId: string;
+    tenantID: string;
 }
 export declare class SignedInUserListOwnedObjectsQueryParams extends SpeakeasyBase {
     apiVersion: string;

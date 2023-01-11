@@ -5,7 +5,7 @@ import { LifecycleEventConfiguration } from "./lifecycleeventconfiguration";
 import { LayerTypeEnum } from "./layertypeenum";
 import { VolumeConfiguration } from "./volumeconfiguration";
 export declare class CreateLayerRequest extends SpeakeasyBase {
-    attributes?: Map<string, string>;
+    attributes?: Record<string, string>;
     autoAssignElasticIps?: boolean;
     autoAssignPublicIps?: boolean;
     cloudWatchLogsConfiguration?: CloudWatchLogsConfiguration;

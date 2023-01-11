@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,53 +14,78 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateConfigurationSetResponse = exports.CreateConfigurationSetRequest = exports.CreateConfigurationSetRequestBody = exports.CreateConfigurationSetRequestBodyTrackingOptions = exports.CreateConfigurationSetRequestBodySendingOptions = exports.CreateConfigurationSetRequestBodyReputationOptions = exports.CreateConfigurationSetRequestBodyDeliveryOptions = exports.CreateConfigurationSetHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CreateConfigurationSetHeaders = /** @class */ (function (_super) {
     __extends(CreateConfigurationSetHeaders, _super);
     function CreateConfigurationSetHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], CreateConfigurationSetHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], CreateConfigurationSetHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], CreateConfigurationSetHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], CreateConfigurationSetHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], CreateConfigurationSetHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], CreateConfigurationSetHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], CreateConfigurationSetHeaders.prototype, "xAmzSignedHeaders", void 0);
     return CreateConfigurationSetHeaders;
-}(SpeakeasyBase));
-export { CreateConfigurationSetHeaders };
+}(utils_1.SpeakeasyBase));
+exports.CreateConfigurationSetHeaders = CreateConfigurationSetHeaders;
 // CreateConfigurationSetRequestBodyDeliveryOptions
 /**
  * Used to associate a configuration set with a dedicated IP pool.
@@ -70,16 +96,16 @@ var CreateConfigurationSetRequestBodyDeliveryOptions = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SendingPoolName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SendingPoolName" }),
         __metadata("design:type", String)
     ], CreateConfigurationSetRequestBodyDeliveryOptions.prototype, "sendingPoolName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TlsPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TlsPolicy" }),
         __metadata("design:type", String)
     ], CreateConfigurationSetRequestBodyDeliveryOptions.prototype, "tlsPolicy", void 0);
     return CreateConfigurationSetRequestBodyDeliveryOptions;
-}(SpeakeasyBase));
-export { CreateConfigurationSetRequestBodyDeliveryOptions };
+}(utils_1.SpeakeasyBase));
+exports.CreateConfigurationSetRequestBodyDeliveryOptions = CreateConfigurationSetRequestBodyDeliveryOptions;
 // CreateConfigurationSetRequestBodyReputationOptions
 /**
  * Enable or disable collection of reputation metrics for emails that you send using this configuration set in the current AWS Region.
@@ -90,16 +116,16 @@ var CreateConfigurationSetRequestBodyReputationOptions = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastFreshStart" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastFreshStart" }),
         __metadata("design:type", Date)
     ], CreateConfigurationSetRequestBodyReputationOptions.prototype, "lastFreshStart", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReputationMetricsEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReputationMetricsEnabled" }),
         __metadata("design:type", Boolean)
     ], CreateConfigurationSetRequestBodyReputationOptions.prototype, "reputationMetricsEnabled", void 0);
     return CreateConfigurationSetRequestBodyReputationOptions;
-}(SpeakeasyBase));
-export { CreateConfigurationSetRequestBodyReputationOptions };
+}(utils_1.SpeakeasyBase));
+exports.CreateConfigurationSetRequestBodyReputationOptions = CreateConfigurationSetRequestBodyReputationOptions;
 // CreateConfigurationSetRequestBodySendingOptions
 /**
  * Used to enable or disable email sending for messages that use this configuration set in the current AWS Region.
@@ -110,12 +136,12 @@ var CreateConfigurationSetRequestBodySendingOptions = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SendingEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SendingEnabled" }),
         __metadata("design:type", Boolean)
     ], CreateConfigurationSetRequestBodySendingOptions.prototype, "sendingEnabled", void 0);
     return CreateConfigurationSetRequestBodySendingOptions;
-}(SpeakeasyBase));
-export { CreateConfigurationSetRequestBodySendingOptions };
+}(utils_1.SpeakeasyBase));
+exports.CreateConfigurationSetRequestBodySendingOptions = CreateConfigurationSetRequestBodySendingOptions;
 // CreateConfigurationSetRequestBodyTrackingOptions
 /**
  * <p>An object that defines the tracking options for a configuration set. When you use Amazon Pinpoint to send an email, it contains an invisible image that's used to track when recipients open your email. If your email contains links, those links are changed slightly in order to track when recipients click them.</p> <p>These images and links include references to a domain operated by AWS. You can optionally configure Amazon Pinpoint to use a domain that you operate for these images and links.</p>
@@ -126,101 +152,101 @@ var CreateConfigurationSetRequestBodyTrackingOptions = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomRedirectDomain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomRedirectDomain" }),
         __metadata("design:type", String)
     ], CreateConfigurationSetRequestBodyTrackingOptions.prototype, "customRedirectDomain", void 0);
     return CreateConfigurationSetRequestBodyTrackingOptions;
-}(SpeakeasyBase));
-export { CreateConfigurationSetRequestBodyTrackingOptions };
+}(utils_1.SpeakeasyBase));
+exports.CreateConfigurationSetRequestBodyTrackingOptions = CreateConfigurationSetRequestBodyTrackingOptions;
 var CreateConfigurationSetRequestBody = /** @class */ (function (_super) {
     __extends(CreateConfigurationSetRequestBody, _super);
     function CreateConfigurationSetRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigurationSetName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigurationSetName" }),
         __metadata("design:type", String)
     ], CreateConfigurationSetRequestBody.prototype, "configurationSetName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeliveryOptions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeliveryOptions" }),
         __metadata("design:type", CreateConfigurationSetRequestBodyDeliveryOptions)
     ], CreateConfigurationSetRequestBody.prototype, "deliveryOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReputationOptions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReputationOptions" }),
         __metadata("design:type", CreateConfigurationSetRequestBodyReputationOptions)
     ], CreateConfigurationSetRequestBody.prototype, "reputationOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SendingOptions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SendingOptions" }),
         __metadata("design:type", CreateConfigurationSetRequestBodySendingOptions)
     ], CreateConfigurationSetRequestBody.prototype, "sendingOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: shared.Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: shared.Tag }),
         __metadata("design:type", Array)
     ], CreateConfigurationSetRequestBody.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrackingOptions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrackingOptions" }),
         __metadata("design:type", CreateConfigurationSetRequestBodyTrackingOptions)
     ], CreateConfigurationSetRequestBody.prototype, "trackingOptions", void 0);
     return CreateConfigurationSetRequestBody;
-}(SpeakeasyBase));
-export { CreateConfigurationSetRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateConfigurationSetRequestBody = CreateConfigurationSetRequestBody;
 var CreateConfigurationSetRequest = /** @class */ (function (_super) {
     __extends(CreateConfigurationSetRequest, _super);
     function CreateConfigurationSetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateConfigurationSetHeaders)
     ], CreateConfigurationSetRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateConfigurationSetRequestBody)
     ], CreateConfigurationSetRequest.prototype, "request", void 0);
     return CreateConfigurationSetRequest;
-}(SpeakeasyBase));
-export { CreateConfigurationSetRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateConfigurationSetRequest = CreateConfigurationSetRequest;
 var CreateConfigurationSetResponse = /** @class */ (function (_super) {
     __extends(CreateConfigurationSetResponse, _super);
     function CreateConfigurationSetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateConfigurationSetResponse.prototype, "alreadyExistsException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateConfigurationSetResponse.prototype, "badRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateConfigurationSetResponse.prototype, "concurrentModificationException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateConfigurationSetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateConfigurationSetResponse.prototype, "createConfigurationSetResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateConfigurationSetResponse.prototype, "limitExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateConfigurationSetResponse.prototype, "notFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateConfigurationSetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateConfigurationSetResponse.prototype, "tooManyRequestsException", void 0);
     return CreateConfigurationSetResponse;
-}(SpeakeasyBase));
-export { CreateConfigurationSetResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateConfigurationSetResponse = CreateConfigurationSetResponse;

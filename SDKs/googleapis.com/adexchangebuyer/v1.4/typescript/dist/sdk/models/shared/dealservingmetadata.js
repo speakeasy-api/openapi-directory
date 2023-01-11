@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DealServingMetadataDealPauseStatus } from "./dealservingmetadatadealpausestatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DealServingMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var dealservingmetadatadealpausestatus_1 = require("./dealservingmetadatadealpausestatus");
 var DealServingMetadata = /** @class */ (function (_super) {
     __extends(DealServingMetadata, _super);
     function DealServingMetadata() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alcoholAdsAllowed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alcoholAdsAllowed" }),
         __metadata("design:type", Boolean)
     ], DealServingMetadata.prototype, "alcoholAdsAllowed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dealPauseStatus" }),
-        __metadata("design:type", DealServingMetadataDealPauseStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dealPauseStatus" }),
+        __metadata("design:type", dealservingmetadatadealpausestatus_1.DealServingMetadataDealPauseStatus)
     ], DealServingMetadata.prototype, "dealPauseStatus", void 0);
     return DealServingMetadata;
-}(SpeakeasyBase));
-export { DealServingMetadata };
+}(utils_1.SpeakeasyBase));
+exports.DealServingMetadata = DealServingMetadata;

@@ -23,7 +23,7 @@ export class GistsUpdateRequestBody extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=files", elemType: GistsUpdateRequestBodyFiles })
-  files?: Map<string, GistsUpdateRequestBodyFiles>;
+  files?: Record<string, GistsUpdateRequestBodyFiles>;
 }
 
 

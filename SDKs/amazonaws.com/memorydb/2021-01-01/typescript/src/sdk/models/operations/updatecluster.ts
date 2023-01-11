@@ -57,13 +57,13 @@ export class UpdateClusterResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  invalidAclStateFault?: any;
+  invalidACLStateFault?: any;
 
   @SpeakeasyMetadata()
   invalidClusterStateFault?: any;
 
   @SpeakeasyMetadata()
-  invalidKmsKeyFault?: any;
+  invalidKMSKeyFault?: any;
 
   @SpeakeasyMetadata()
   invalidNodeStateFault?: any;
@@ -75,7 +75,7 @@ export class UpdateClusterResponse extends SpeakeasyBase {
   invalidParameterValueException?: any;
 
   @SpeakeasyMetadata()
-  invalidVpcNetworkStateFault?: any;
+  invalidVPCNetworkStateFault?: any;
 
   @SpeakeasyMetadata()
   noOperationFault?: any;

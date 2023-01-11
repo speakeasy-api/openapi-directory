@@ -89,7 +89,7 @@ export class UpdateTypedLinkFacetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateTypedLinkFacetResponse?: Map<string, any>;
+  updateTypedLinkFacetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: shared.ValidationException;

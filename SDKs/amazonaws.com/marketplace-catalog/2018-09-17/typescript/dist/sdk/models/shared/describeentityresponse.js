@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeEntityResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var DescribeEntityResponse = /** @class */ (function (_super) {
     __extends(DescribeEntityResponse, _super);
     function DescribeEntityResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Details" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Details" }),
         __metadata("design:type", String)
     ], DescribeEntityResponse.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EntityArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EntityArn" }),
         __metadata("design:type", String)
     ], DescribeEntityResponse.prototype, "entityArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EntityIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EntityIdentifier" }),
         __metadata("design:type", String)
     ], DescribeEntityResponse.prototype, "entityIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EntityType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EntityType" }),
         __metadata("design:type", String)
     ], DescribeEntityResponse.prototype, "entityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedDate" }),
         __metadata("design:type", String)
     ], DescribeEntityResponse.prototype, "lastModifiedDate", void 0);
     return DescribeEntityResponse;
-}(SpeakeasyBase));
-export { DescribeEntityResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeEntityResponse = DescribeEntityResponse;

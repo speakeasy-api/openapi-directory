@@ -1,4 +1,7 @@
-export var S3StorageClassEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3StorageClassEnum = void 0;
+var S3StorageClassEnum;
 (function (S3StorageClassEnum) {
     S3StorageClassEnum["Standard"] = "STANDARD";
     S3StorageClassEnum["StandardIa"] = "STANDARD_IA";
@@ -7,4 +10,4 @@ export var S3StorageClassEnum;
     S3StorageClassEnum["Glacier"] = "GLACIER";
     S3StorageClassEnum["DeepArchive"] = "DEEP_ARCHIVE";
     S3StorageClassEnum["Outposts"] = "OUTPOSTS";
-})(S3StorageClassEnum || (S3StorageClassEnum = {}));
+})(S3StorageClassEnum = exports.S3StorageClassEnum || (exports.S3StorageClassEnum = {}));

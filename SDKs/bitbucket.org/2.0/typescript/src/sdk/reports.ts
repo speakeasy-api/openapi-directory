@@ -1,0 +1,547 @@
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import * as operations from "./models/operations";
+import * as utils from "../internal/utils";
+
+export class Reports {
+  _defaultClient: AxiosInstance;
+  _securityClient: AxiosInstance;
+  _serverURL: string;
+  _language: string;
+  _sdkVersion: string;
+  _genVersion: string;
+
+  constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string) {
+    this._defaultClient = defaultClient;
+    this._securityClient = securityClient;
+    this._serverURL = serverURL;
+    this._language = language;
+    this._sdkVersion = sdkVersion;
+    this._genVersion = genVersion;
+  }
+  
+  /**
+   * bulkCreateOrUpdateAnnotations - Bulk upload of annotations.
+   * Annotations are individual findings that have been identified as part of a report, for example, a line of code that represents a vulnerability. These annotations can be attached to a specific file and even a specific line in that file, however, that is optional. Annotations are not mandatory and a report can contain up to 1000 annotations.
+   * 
+   * Add the annotations you want to upload as objects in a JSON array and make sure each annotation has the external_id field set to a unique value. If you want to use an existing id from your own system, we recommend prefixing it with your system's name to avoid collisions, for example, mySystem-annotation001. The external id can later be used to identify the report as an alternative to the generated [UUID](https://developer.atlassian.com/bitbucket/api/2/reference/meta/uri-uuid#uuid). You can upload up to 100 annotations per POST request.
+   * 
+   * ### Sample cURL request:
+   * ```
+   * curl --location 'https://api.bitbucket.org/2.0/repositories/<username>/<reposity-name>/commit/<commit-hash>/reports/mysystem-001/annotations' \
+   * --header 'Content-Type: application/json' \
+   * --data-raw '[
+   *   {
+   *         "external_id": "mysystem-annotation001",
+   *         "title": "Security scan report",
+   *         "annotation_type": "VULNERABILITY",
+   *         "summary": "This line represents a security threat.",
+   *         "severity": "HIGH",
+   *       "path": "my-service/src/main/java/com/myCompany/mysystem/logic/Main.java",
+   *         "line": 42
+   *   },
+   *   {
+   *         "external_id": "mySystem-annotation002",
+   *         "title": "Bug report",
+   *         "annotation_type": "BUG",
+   *         "result": "FAILED",
+   *         "summary": "This line might introduce a bug.",
+   *         "severity": "MEDIUM",
+   *       "path": "my-service/src/main/java/com/myCompany/mysystem/logic/Helper.java",
+   *         "line": 13
+   *   }
+   * ]'
+   * ```
+   * 
+   * ### Possible field values:
+   * annotation_type: VULNERABILITY, CODE_SMELL, BUG
+   * result: PASSED, FAILED, IGNORED, SKIPPED
+   * severity: HIGH, MEDIUM, LOW, CRITICAL
+   * 
+   * Please refer to the [Code Insights documentation](https://confluence.atlassian.com/bitbucket/code-insights-994316785.html) for more information.
+   * 
+  **/
+  bulkCreateOrUpdateAnnotations(
+    req: operations.BulkCreateOrUpdateAnnotationsRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.BulkCreateOrUpdateAnnotationsResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.BulkCreateOrUpdateAnnotationsRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations", req.pathParams);
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.BulkCreateOrUpdateAnnotationsResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.reportAnnotations = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * createOrUpdateAnnotation - Creates or updates an individual annotation for the specified report.
+   * Annotations are individual findings that have been identified as part of a report, for example, a line of code that represents a vulnerability. These annotations can be attached to a specific file and even a specific line in that file, however, that is optional. Annotations are not mandatory and a report can contain up to 1000 annotations.
+   * 
+   * Just as reports, annotation needs to be uploaded with a unique ID that can later be used to identify the report as an alternative to the generated [UUID](https://developer.atlassian.com/bitbucket/api/2/reference/meta/uri-uuid#uuid). If you want to use an existing id from your own system, we recommend prefixing it with your system's name to avoid collisions, for example, mySystem-annotation001.
+   * 
+   * ### Sample cURL request:
+   * ```
+   * curl --request PUT 'https://api.bitbucket.org/2.0/repositories/<username>/<reposity-name>/commit/<commit-hash>/reports/mySystem-001/annotations/mysystem-annotation001' \
+   * --header 'Content-Type: application/json' \
+   * --data-raw '{
+   *     "title": "Security scan report",
+   *     "annotation_type": "VULNERABILITY",
+   *     "summary": "This line represents a security thread.",
+   *     "severity": "HIGH",
+   *     "path": "my-service/src/main/java/com/myCompany/mysystem/logic/Main.java",
+   *     "line": 42
+   * }'
+   * ```
+   * 
+   * ### Possible field values:
+   * annotation_type: VULNERABILITY, CODE_SMELL, BUG
+   * result: PASSED, FAILED, IGNORED, SKIPPED
+   * severity: HIGH, MEDIUM, LOW, CRITICAL
+   * 
+   * Please refer to the [Code Insights documentation](https://confluence.atlassian.com/bitbucket/code-insights-994316785.html) for more information.
+   * 
+  **/
+  createOrUpdateAnnotation(
+    req: operations.CreateOrUpdateAnnotationRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CreateOrUpdateAnnotationResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CreateOrUpdateAnnotationRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", req.pathParams);
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CreateOrUpdateAnnotationResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.reportAnnotation = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * createOrUpdateReport - Creates or updates a report for the specified commit.
+   * To upload a report, make sure to generate an ID that is unique across all reports for that commit. If you want to use an existing id from your own system, we recommend prefixing it with your system's name to avoid collisions, for example, mySystem-001.
+   * 
+   * ### Sample cURL request:
+   * ```
+   * curl --request PUT 'https://api.bitbucket.org/2.0/repositories/<username>/<reposity-name>/commit/<commit-hash>/reports/mysystem-001' \
+   * --header 'Content-Type: application/json' \
+   * --data-raw '{
+   *     "title": "Security scan report",
+   *     "details": "This pull request introduces 10 new dependency vulnerabilities.",
+   *     "report_type": "SECURITY",
+   *     "reporter": "mySystem",
+   *     "link": "http://www.mysystem.com/reports/001",
+   *     "result": "FAILED",
+   *     "data": [
+   *         {
+   *             "title": "Duration (seconds)",
+   *             "type": "DURATION",
+   *             "value": 14
+   *         },
+   *         {
+   *             "title": "Safe to merge?",
+   *             "type": "BOOLEAN",
+   *             "value": false
+   *         }
+   *     ]
+   * }'
+   * ```
+   * 
+   * ### Possible field values:
+   * report_type: SECURITY, COVERAGE, TEST, BUG
+   * result: PASSED, FAILED, PENDING
+   * data.type: BOOLEAN, DATE, DURATION, LINK, NUMBER, PERCENTAGE, TEXT
+   * 
+   * #### Data field formats
+   * | Type  Field   | Value Field Type  | Value Field Display |
+   * |:--------------|:------------------|:--------------------|
+   * | None/ Omitted | Number, String or Boolean (not an array or object) | Plain text |
+   * | BOOLEAN	| Boolean | The value will be read as a JSON boolean and displayed as 'Yes' or 'No'. |
+   * | DATE  | Number | The value will be read as a JSON number in the form of a Unix timestamp (milliseconds) and will be displayed as a relative date if the date is less than one week ago, otherwise  it will be displayed as an absolute date. |
+   * | DURATION | Number | The value will be read as a JSON number in milliseconds and will be displayed in a human readable duration format. |
+   * | LINK | Object: `{"text": "Link text here", "href": "https://link.to.annotation/in/external/tool"}` | The value will be read as a JSON object containing the fields "text" and "href" and will be displayed as a clickable link on the report. |
+   * | NUMBER | Number | The value will be read as a JSON number and large numbers will be  displayed in a human readable format (e.g. 14.3k). |
+   * | PERCENTAGE | Number (between 0 and 100) | The value will be read as a JSON number between 0 and 100 and will be displayed with a percentage sign. |
+   * | TEXT | String | The value will be read as a JSON string and will be displayed as-is |
+   * 
+   * Please refer to the [Code Insights documentation](https://confluence.atlassian.com/bitbucket/code-insights-994316785.html) for more information.
+   * 
+  **/
+  createOrUpdateReport(
+    req: operations.CreateOrUpdateReportRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.CreateOrUpdateReportResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.CreateOrUpdateReportRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}", req.pathParams);
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.CreateOrUpdateReportResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.report = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * deleteAnnotation - Deletes a single Annotation matching the provided ID.
+  **/
+  deleteAnnotation(
+    req: operations.DeleteAnnotationRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.DeleteAnnotationResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.DeleteAnnotationRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.DeleteAnnotationResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * deleteReport - Deletes a single Report matching the provided ID.
+  **/
+  deleteReport(
+    req: operations.DeleteReportRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.DeleteReportResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.DeleteReportRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.DeleteReportResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getAnnotation - Returns a single Annotation matching the provided ID.
+  **/
+  getAnnotation(
+    req: operations.GetAnnotationRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetAnnotationResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetAnnotationRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetAnnotationResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.reportAnnotation = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getAnnotationsForReport - Returns a paginated list of Annotations for a specified report.
+  **/
+  getAnnotationsForReport(
+    req: operations.GetAnnotationsForReportRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetAnnotationsForReportResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetAnnotationsForReportRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetAnnotationsForReportResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.paginatedAnnotations = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getReport - Returns a single Report matching the provided ID.
+  **/
+  getReport(
+    req: operations.GetReportRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetReportResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetReportRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetReportResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.report = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getReportsForCommit - Returns a paginated list of Reports linked to this commit.
+  **/
+  getReportsForCommit(
+    req: operations.GetReportsForCommitRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetReportsForCommitResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetReportsForCommitRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetReportsForCommitResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.paginatedReports = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+}

@@ -35,10 +35,10 @@ export class AccountDetailApiIdRequest extends SpeakeasyBase {
 
 export class AccountDetailApiIdResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  accountDetailApiId401ApplicationJsonObject?: AccountDetailApiId401ApplicationJson;
+  accountDetailAPIId401ApplicationJSONObject?: AccountDetailApiId401ApplicationJson;
 
   @SpeakeasyMetadata()
-  accountDetailApiId500ApplicationJsonObject?: AccountDetailApiId500ApplicationJson;
+  accountDetailAPIId500ApplicationJSONObject?: AccountDetailApiId500ApplicationJson;
 
   @SpeakeasyMetadata()
   contentType: string;

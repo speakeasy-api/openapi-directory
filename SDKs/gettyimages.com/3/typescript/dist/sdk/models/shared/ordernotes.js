@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderNotes = void 0;
+var utils_1 = require("../../../internal/utils");
 var OrderNotes = /** @class */ (function (_super) {
     __extends(OrderNotes, _super);
     function OrderNotes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=licensee_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=licensee_name" }),
         __metadata("design:type", String)
     ], OrderNotes.prototype, "licenseeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ordered_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ordered_by" }),
         __metadata("design:type", String)
     ], OrderNotes.prototype, "orderedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=project_title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=project_title" }),
         __metadata("design:type", String)
     ], OrderNotes.prototype, "projectTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purchase_order_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purchase_order_number" }),
         __metadata("design:type", String)
     ], OrderNotes.prototype, "purchaseOrderNumber", void 0);
     return OrderNotes;
-}(SpeakeasyBase));
-export { OrderNotes };
+}(utils_1.SpeakeasyBase));
+exports.OrderNotes = OrderNotes;

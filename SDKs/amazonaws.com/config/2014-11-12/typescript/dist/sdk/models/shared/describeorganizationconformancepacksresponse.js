@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrganizationConformancePack } from "./organizationconformancepack";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeOrganizationConformancePacksResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var organizationconformancepack_1 = require("./organizationconformancepack");
 var DescribeOrganizationConformancePacksResponse = /** @class */ (function (_super) {
     __extends(DescribeOrganizationConformancePacksResponse, _super);
     function DescribeOrganizationConformancePacksResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeOrganizationConformancePacksResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OrganizationConformancePacks", elemType: OrganizationConformancePack }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OrganizationConformancePacks", elemType: organizationconformancepack_1.OrganizationConformancePack }),
         __metadata("design:type", Array)
     ], DescribeOrganizationConformancePacksResponse.prototype, "organizationConformancePacks", void 0);
     return DescribeOrganizationConformancePacksResponse;
-}(SpeakeasyBase));
-export { DescribeOrganizationConformancePacksResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeOrganizationConformancePacksResponse = DescribeOrganizationConformancePacksResponse;

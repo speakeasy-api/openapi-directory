@@ -11,5 +11,5 @@ export declare class DelTimerScriptRequest extends SpeakeasyBase {
 export declare class DelTimerScriptResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    delTimerScript200ApplicationJsonString?: string;
+    delTimerScript200ApplicationJSONString?: string;
 }

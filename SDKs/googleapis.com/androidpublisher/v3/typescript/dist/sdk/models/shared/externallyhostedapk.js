@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UsesPermission } from "./usespermission";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExternallyHostedApk = void 0;
+var utils_1 = require("../../../internal/utils");
+var usespermission_1 = require("./usespermission");
 // ExternallyHostedApk
 /**
  * Defines an APK available for this application that is hosted externally and not uploaded to Google Play. This function is only available to organizations using Managed Play whose application is configured to restrict distribution to the organizations.
@@ -34,65 +37,65 @@ var ExternallyHostedApk = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applicationLabel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applicationLabel" }),
         __metadata("design:type", String)
     ], ExternallyHostedApk.prototype, "applicationLabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateBase64s" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateBase64s" }),
         __metadata("design:type", Array)
     ], ExternallyHostedApk.prototype, "certificateBase64s", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externallyHostedUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externallyHostedUrl" }),
         __metadata("design:type", String)
     ], ExternallyHostedApk.prototype, "externallyHostedUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileSha1Base64" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileSha1Base64" }),
         __metadata("design:type", String)
     ], ExternallyHostedApk.prototype, "fileSha1Base64", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileSha256Base64" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileSha256Base64" }),
         __metadata("design:type", String)
     ], ExternallyHostedApk.prototype, "fileSha256Base64", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileSize" }),
         __metadata("design:type", String)
     ], ExternallyHostedApk.prototype, "fileSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iconBase64" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iconBase64" }),
         __metadata("design:type", String)
     ], ExternallyHostedApk.prototype, "iconBase64", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximumSdk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximumSdk" }),
         __metadata("design:type", Number)
     ], ExternallyHostedApk.prototype, "maximumSdk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimumSdk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimumSdk" }),
         __metadata("design:type", Number)
     ], ExternallyHostedApk.prototype, "minimumSdk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nativeCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nativeCodes" }),
         __metadata("design:type", Array)
     ], ExternallyHostedApk.prototype, "nativeCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packageName" }),
         __metadata("design:type", String)
     ], ExternallyHostedApk.prototype, "packageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usesFeatures" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usesFeatures" }),
         __metadata("design:type", Array)
     ], ExternallyHostedApk.prototype, "usesFeatures", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usesPermissions", elemType: UsesPermission }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usesPermissions", elemType: usespermission_1.UsesPermission }),
         __metadata("design:type", Array)
     ], ExternallyHostedApk.prototype, "usesPermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versionCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versionCode" }),
         __metadata("design:type", Number)
     ], ExternallyHostedApk.prototype, "versionCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versionName" }),
         __metadata("design:type", String)
     ], ExternallyHostedApk.prototype, "versionName", void 0);
     return ExternallyHostedApk;
-}(SpeakeasyBase));
-export { ExternallyHostedApk };
+}(utils_1.SpeakeasyBase));
+exports.ExternallyHostedApk = ExternallyHostedApk;

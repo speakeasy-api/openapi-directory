@@ -41,11 +41,11 @@ export class PostCoursesRootContentIdPermissionsUserEmailResponse extends Speake
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
-
-  @SpeakeasyMetadata()
-  postCoursesRootContentIdPermissionsUserEmail201ApplicationJsonObject?: PostCoursesRootContentIdPermissionsUserEmail201ApplicationJson;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  postCoursesRootContentIdPermissionsUserEmail201ApplicationJSONObject?: PostCoursesRootContentIdPermissionsUserEmail201ApplicationJson;
 }

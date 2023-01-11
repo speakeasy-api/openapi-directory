@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRealtimeResponse = exports.GetRealtimeRequest = exports.GetRealtimeHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetRealtimeHeaders = /** @class */ (function (_super) {
     __extends(GetRealtimeHeaders, _super);
     function GetRealtimeHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=sec-websocket-protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=sec-websocket-protocol" }),
         __metadata("design:type", String)
     ], GetRealtimeHeaders.prototype, "secWebsocketProtocol", void 0);
     return GetRealtimeHeaders;
-}(SpeakeasyBase));
-export { GetRealtimeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetRealtimeHeaders = GetRealtimeHeaders;
 var GetRealtimeRequest = /** @class */ (function (_super) {
     __extends(GetRealtimeRequest, _super);
     function GetRealtimeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRealtimeHeaders)
     ], GetRealtimeRequest.prototype, "headers", void 0);
     return GetRealtimeRequest;
-}(SpeakeasyBase));
-export { GetRealtimeRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRealtimeRequest = GetRealtimeRequest;
 var GetRealtimeResponse = /** @class */ (function (_super) {
     __extends(GetRealtimeResponse, _super);
     function GetRealtimeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRealtimeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRealtimeResponse.prototype, "statusCode", void 0);
     return GetRealtimeResponse;
-}(SpeakeasyBase));
-export { GetRealtimeResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRealtimeResponse = GetRealtimeResponse;

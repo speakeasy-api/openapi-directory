@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeAvailabilityOptionsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeAvailabilityOptionsResponse = exports.PostDescribeAvailabilityOptionsRequest = exports.PostDescribeAvailabilityOptionsHeaders = exports.PostDescribeAvailabilityOptionsQueryParams = exports.PostDescribeAvailabilityOptionsVersionEnum = exports.PostDescribeAvailabilityOptionsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeAvailabilityOptionsActionEnum;
 (function (PostDescribeAvailabilityOptionsActionEnum) {
     PostDescribeAvailabilityOptionsActionEnum["DescribeAvailabilityOptions"] = "DescribeAvailabilityOptions";
-})(PostDescribeAvailabilityOptionsActionEnum || (PostDescribeAvailabilityOptionsActionEnum = {}));
-export var PostDescribeAvailabilityOptionsVersionEnum;
+})(PostDescribeAvailabilityOptionsActionEnum = exports.PostDescribeAvailabilityOptionsActionEnum || (exports.PostDescribeAvailabilityOptionsActionEnum = {}));
+var PostDescribeAvailabilityOptionsVersionEnum;
 (function (PostDescribeAvailabilityOptionsVersionEnum) {
     PostDescribeAvailabilityOptionsVersionEnum["TwoThousandAndEleven0201"] = "2011-02-01";
-})(PostDescribeAvailabilityOptionsVersionEnum || (PostDescribeAvailabilityOptionsVersionEnum = {}));
+})(PostDescribeAvailabilityOptionsVersionEnum = exports.PostDescribeAvailabilityOptionsVersionEnum || (exports.PostDescribeAvailabilityOptionsVersionEnum = {}));
 var PostDescribeAvailabilityOptionsQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeAvailabilityOptionsQueryParams, _super);
     function PostDescribeAvailabilityOptionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeAvailabilityOptionsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeAvailabilityOptionsQueryParams.prototype, "version", void 0);
     return PostDescribeAvailabilityOptionsQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeAvailabilityOptionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeAvailabilityOptionsQueryParams = PostDescribeAvailabilityOptionsQueryParams;
 var PostDescribeAvailabilityOptionsHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeAvailabilityOptionsHeaders, _super);
     function PostDescribeAvailabilityOptionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeAvailabilityOptionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeAvailabilityOptionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeAvailabilityOptionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeAvailabilityOptionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeAvailabilityOptionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeAvailabilityOptionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeAvailabilityOptionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeAvailabilityOptionsHeaders;
-}(SpeakeasyBase));
-export { PostDescribeAvailabilityOptionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeAvailabilityOptionsHeaders = PostDescribeAvailabilityOptionsHeaders;
 var PostDescribeAvailabilityOptionsRequest = /** @class */ (function (_super) {
     __extends(PostDescribeAvailabilityOptionsRequest, _super);
     function PostDescribeAvailabilityOptionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeAvailabilityOptionsQueryParams)
     ], PostDescribeAvailabilityOptionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeAvailabilityOptionsHeaders)
     ], PostDescribeAvailabilityOptionsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeAvailabilityOptionsRequest.prototype, "request", void 0);
     return PostDescribeAvailabilityOptionsRequest;
-}(SpeakeasyBase));
-export { PostDescribeAvailabilityOptionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeAvailabilityOptionsRequest = PostDescribeAvailabilityOptionsRequest;
 var PostDescribeAvailabilityOptionsResponse = /** @class */ (function (_super) {
     __extends(PostDescribeAvailabilityOptionsResponse, _super);
     function PostDescribeAvailabilityOptionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeAvailabilityOptionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeAvailabilityOptionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeAvailabilityOptionsResponse.prototype, "statusCode", void 0);
     return PostDescribeAvailabilityOptionsResponse;
-}(SpeakeasyBase));
-export { PostDescribeAvailabilityOptionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeAvailabilityOptionsResponse = PostDescribeAvailabilityOptionsResponse;

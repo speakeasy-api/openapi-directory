@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccessRules } from "./accessrules";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateBucketRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var accessrules_1 = require("./accessrules");
 var UpdateBucketRequest = /** @class */ (function (_super) {
     __extends(UpdateBucketRequest, _super);
     function UpdateBucketRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessRules" }),
-        __metadata("design:type", AccessRules)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessRules" }),
+        __metadata("design:type", accessrules_1.AccessRules)
     ], UpdateBucketRequest.prototype, "accessRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketName" }),
         __metadata("design:type", String)
     ], UpdateBucketRequest.prototype, "bucketName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readonlyAccessAccounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readonlyAccessAccounts" }),
         __metadata("design:type", Array)
     ], UpdateBucketRequest.prototype, "readonlyAccessAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versioning" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versioning" }),
         __metadata("design:type", String)
     ], UpdateBucketRequest.prototype, "versioning", void 0);
     return UpdateBucketRequest;
-}(SpeakeasyBase));
-export { UpdateBucketRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateBucketRequest = UpdateBucketRequest;

@@ -17,7 +17,7 @@ export declare class GetTeamEventsStatusesByYearRequest extends SpeakeasyBase {
 }
 export declare class GetTeamEventsStatusesByYearResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getTeamEventsStatusesByYear200ApplicationJsonObject?: Map<string, shared.TeamEventStatus>;
+    getTeamEventsStatusesByYear200ApplicationJSONObject?: Record<string, shared.TeamEventStatus>;
 }

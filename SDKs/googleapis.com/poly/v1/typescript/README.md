@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PolyAssetsGetRequest, PolyAssetsGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,20 +28,20 @@ const sdk = new SDK();
     
 const req: PolyAssetsGetRequest = {
   pathParams: {
-    name: "rerum",
+    name: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "repudiandae",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "nisi",
-    fields: "sit",
-    key: "aut",
-    oauthToken: "exercitationem",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "corporis",
-    uploadType: "odio",
-    uploadProtocol: "animi",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
 };
 

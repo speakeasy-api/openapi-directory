@@ -1,7 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Meta } from "./meta";
 import { ParametersRow } from "./parametersrow";
+export declare class OpenAqParametersResultMeta extends SpeakeasyBase {
+    found?: number;
+    license?: string;
+    limit?: number;
+    name?: string;
+    page?: number;
+    website?: string;
+}
 export declare class OpenAqParametersResult extends SpeakeasyBase {
-    meta?: Meta;
+    meta?: OpenAqParametersResultMeta;
     results: ParametersRow[];
 }

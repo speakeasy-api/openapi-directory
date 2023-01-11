@@ -9,9 +9,9 @@ export declare class CreateCustomVerificationEmailTemplateHeaders extends Speake
     xAmzSignedHeaders?: string;
 }
 export declare class CreateCustomVerificationEmailTemplateRequestBody extends SpeakeasyBase {
-    failureRedirectionUrl: string;
+    failureRedirectionURL: string;
     fromEmailAddress: string;
-    successRedirectionUrl: string;
+    successRedirectionURL: string;
     templateContent: string;
     templateName: string;
     templateSubject: string;
@@ -24,7 +24,7 @@ export declare class CreateCustomVerificationEmailTemplateResponse extends Speak
     alreadyExistsException?: any;
     badRequestException?: any;
     contentType: string;
-    createCustomVerificationEmailTemplateResponse?: Map<string, any>;
+    createCustomVerificationEmailTemplateResponse?: Record<string, any>;
     limitExceededException?: any;
     notFoundException?: any;
     statusCode: number;

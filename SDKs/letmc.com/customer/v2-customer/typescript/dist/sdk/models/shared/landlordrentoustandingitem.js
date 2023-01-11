@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LandlordRentOustandingItem = void 0;
+var utils_1 = require("../../../internal/utils");
 // LandlordRentOustandingItem
 /**
  * Outstanding Rent
@@ -33,25 +36,25 @@ var LandlordRentOustandingItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DebtDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DebtDays" }),
         __metadata("design:type", Number)
     ], LandlordRentOustandingItem.prototype, "debtDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OutstandingRent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OutstandingRent" }),
         __metadata("design:type", Number)
     ], LandlordRentOustandingItem.prototype, "outstandingRent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Property" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Property" }),
         __metadata("design:type", String)
     ], LandlordRentOustandingItem.prototype, "property", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tenant" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tenant" }),
         __metadata("design:type", String)
     ], LandlordRentOustandingItem.prototype, "tenant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TenantID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TenantID" }),
         __metadata("design:type", String)
-    ], LandlordRentOustandingItem.prototype, "tenantId", void 0);
+    ], LandlordRentOustandingItem.prototype, "tenantID", void 0);
     return LandlordRentOustandingItem;
-}(SpeakeasyBase));
-export { LandlordRentOustandingItem };
+}(utils_1.SpeakeasyBase));
+exports.LandlordRentOustandingItem = LandlordRentOustandingItem;

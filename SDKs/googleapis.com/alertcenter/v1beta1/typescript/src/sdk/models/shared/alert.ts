@@ -18,7 +18,7 @@ export class Alert extends SpeakeasyBase {
   customerId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=deleted" })
   deleted?: boolean;

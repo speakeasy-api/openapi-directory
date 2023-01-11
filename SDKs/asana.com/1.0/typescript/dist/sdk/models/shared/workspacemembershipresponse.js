@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,47 +23,53 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserCompact } from "./usercompact";
-import { UserTaskListResponse } from "./usertasklistresponse";
-import { WorkspaceCompact } from "./workspacecompact";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkspaceMembershipResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var usercompact_1 = require("./usercompact");
+var usertasklistresponse_1 = require("./usertasklistresponse");
+var workspacecompact_1 = require("./workspacecompact");
+// WorkspaceMembershipResponse
+/**
+ * This object determines if a user is a member of a workspace.
+**/
 var WorkspaceMembershipResponse = /** @class */ (function (_super) {
     __extends(WorkspaceMembershipResponse, _super);
     function WorkspaceMembershipResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], WorkspaceMembershipResponse.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_active" }),
         __metadata("design:type", Boolean)
     ], WorkspaceMembershipResponse.prototype, "isActive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_admin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_admin" }),
         __metadata("design:type", Boolean)
     ], WorkspaceMembershipResponse.prototype, "isAdmin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_guest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_guest" }),
         __metadata("design:type", Boolean)
     ], WorkspaceMembershipResponse.prototype, "isGuest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], WorkspaceMembershipResponse.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", UserCompact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", usercompact_1.UserCompact)
     ], WorkspaceMembershipResponse.prototype, "user", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_task_list" }),
-        __metadata("design:type", UserTaskListResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_task_list" }),
+        __metadata("design:type", usertasklistresponse_1.UserTaskListResponse)
     ], WorkspaceMembershipResponse.prototype, "userTaskList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workspace" }),
-        __metadata("design:type", WorkspaceCompact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workspace" }),
+        __metadata("design:type", workspacecompact_1.WorkspaceCompact)
     ], WorkspaceMembershipResponse.prototype, "workspace", void 0);
     return WorkspaceMembershipResponse;
-}(SpeakeasyBase));
-export { WorkspaceMembershipResponse };
+}(utils_1.SpeakeasyBase));
+exports.WorkspaceMembershipResponse = WorkspaceMembershipResponse;

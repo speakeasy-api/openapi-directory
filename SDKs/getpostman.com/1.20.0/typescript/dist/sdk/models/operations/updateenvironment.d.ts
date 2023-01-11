@@ -35,6 +35,6 @@ export declare class UpdateEnvironmentRequest extends SpeakeasyBase {
 export declare class UpdateEnvironmentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateEnvironment200ApplicationJsonObject?: UpdateEnvironment200ApplicationJson;
-    updateEnvironment400ApplicationJsonObject?: UpdateEnvironment400ApplicationJson;
+    updateEnvironment200ApplicationJSONObject?: UpdateEnvironment200ApplicationJson;
+    updateEnvironment400ApplicationJSONObject?: UpdateEnvironment400ApplicationJson;
 }

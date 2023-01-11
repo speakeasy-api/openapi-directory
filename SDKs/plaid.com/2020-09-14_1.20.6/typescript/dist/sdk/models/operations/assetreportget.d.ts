@@ -4,7 +4,7 @@ export declare class AssetReportGetRequest extends SpeakeasyBase {
     request: shared.AssetReportGetRequest;
 }
 export declare class AssetReportGetResponse extends SpeakeasyBase {
-    assetReportGetResponse?: Map<string, any>;
+    assetReportGetResponse?: Record<string, any>;
     contentType: string;
     statusCode: number;
 }

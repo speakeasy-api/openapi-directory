@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsDownloadJobLogsForWorkflowRunResponse = exports.ActionsDownloadJobLogsForWorkflowRunRequest = exports.ActionsDownloadJobLogsForWorkflowRunPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsDownloadJobLogsForWorkflowRunPathParams = /** @class */ (function (_super) {
     __extends(ActionsDownloadJobLogsForWorkflowRunPathParams, _super);
     function ActionsDownloadJobLogsForWorkflowRunPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=job_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=job_id" }),
         __metadata("design:type", Number)
     ], ActionsDownloadJobLogsForWorkflowRunPathParams.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ActionsDownloadJobLogsForWorkflowRunPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ActionsDownloadJobLogsForWorkflowRunPathParams.prototype, "repo", void 0);
     return ActionsDownloadJobLogsForWorkflowRunPathParams;
-}(SpeakeasyBase));
-export { ActionsDownloadJobLogsForWorkflowRunPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDownloadJobLogsForWorkflowRunPathParams = ActionsDownloadJobLogsForWorkflowRunPathParams;
 var ActionsDownloadJobLogsForWorkflowRunRequest = /** @class */ (function (_super) {
     __extends(ActionsDownloadJobLogsForWorkflowRunRequest, _super);
     function ActionsDownloadJobLogsForWorkflowRunRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsDownloadJobLogsForWorkflowRunPathParams)
     ], ActionsDownloadJobLogsForWorkflowRunRequest.prototype, "pathParams", void 0);
     return ActionsDownloadJobLogsForWorkflowRunRequest;
-}(SpeakeasyBase));
-export { ActionsDownloadJobLogsForWorkflowRunRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDownloadJobLogsForWorkflowRunRequest = ActionsDownloadJobLogsForWorkflowRunRequest;
 var ActionsDownloadJobLogsForWorkflowRunResponse = /** @class */ (function (_super) {
     __extends(ActionsDownloadJobLogsForWorkflowRunResponse, _super);
     function ActionsDownloadJobLogsForWorkflowRunResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsDownloadJobLogsForWorkflowRunResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ActionsDownloadJobLogsForWorkflowRunResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsDownloadJobLogsForWorkflowRunResponse.prototype, "statusCode", void 0);
     return ActionsDownloadJobLogsForWorkflowRunResponse;
-}(SpeakeasyBase));
-export { ActionsDownloadJobLogsForWorkflowRunResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDownloadJobLogsForWorkflowRunResponse = ActionsDownloadJobLogsForWorkflowRunResponse;

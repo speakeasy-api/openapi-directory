@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,146 +14,171 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddBankTransferBatchPaymentResponse = exports.AddBankTransferBatchPaymentRequest = exports.AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1 = exports.AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1PayeeTypeEnum = exports.AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2 = exports.AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2PayeeTypeEnum = exports.AddBankTransferBatchPaymentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var AddBankTransferBatchPaymentPathParams = /** @class */ (function (_super) {
     __extends(AddBankTransferBatchPaymentPathParams, _super);
     function AddBankTransferBatchPaymentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=batchUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=batchUuid" }),
         __metadata("design:type", String)
     ], AddBankTransferBatchPaymentPathParams.prototype, "batchUuid", void 0);
     return AddBankTransferBatchPaymentPathParams;
-}(SpeakeasyBase));
-export { AddBankTransferBatchPaymentPathParams };
-export var AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2PayeeTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.AddBankTransferBatchPaymentPathParams = AddBankTransferBatchPaymentPathParams;
+var AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2PayeeTypeEnum;
 (function (AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2PayeeTypeEnum) {
     AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2PayeeTypeEnum["AccountDetails"] = "ACCOUNT_DETAILS";
-})(AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2PayeeTypeEnum || (AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2PayeeTypeEnum = {}));
+})(AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2PayeeTypeEnum = exports.AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2PayeeTypeEnum || (exports.AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2PayeeTypeEnum = {}));
 var AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2 = /** @class */ (function (_super) {
     __extends(AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2, _super);
     function AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destAccountHolderName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destAccountHolderName" }),
         __metadata("design:type", String)
     ], AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2.prototype, "destAccountHolderName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destAccountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destAccountNumber" }),
         __metadata("design:type", String)
     ], AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2.prototype, "destAccountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destIban" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destIban" }),
         __metadata("design:type", String)
     ], AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2.prototype, "destIban", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destNsc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destNsc" }),
         __metadata("design:type", String)
     ], AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2.prototype, "destNsc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icanFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icanFrom" }),
         __metadata("design:type", Number)
     ], AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2.prototype, "icanFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=myRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=myRef" }),
         __metadata("design:type", String)
     ], AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2.prototype, "myRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payeeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payeeType" }),
         __metadata("design:type", String)
     ], AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2.prototype, "payeeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=yourRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=yourRef" }),
         __metadata("design:type", String)
     ], AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2.prototype, "yourRef", void 0);
     return AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2;
-}(SpeakeasyBase));
-export { AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2 };
-export var AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1PayeeTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2 = AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode2;
+var AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1PayeeTypeEnum;
 (function (AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1PayeeTypeEnum) {
     AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1PayeeTypeEnum["PayeeId"] = "PAYEE_ID";
-})(AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1PayeeTypeEnum || (AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1PayeeTypeEnum = {}));
+})(AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1PayeeTypeEnum = exports.AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1PayeeTypeEnum || (exports.AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1PayeeTypeEnum = {}));
 var AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1 = /** @class */ (function (_super) {
     __extends(AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1, _super);
     function AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icanFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icanFrom" }),
         __metadata("design:type", Number)
     ], AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1.prototype, "icanFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=myRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=myRef" }),
         __metadata("design:type", String)
     ], AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1.prototype, "myRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payeeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payeeId" }),
         __metadata("design:type", Number)
     ], AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1.prototype, "payeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payeeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payeeType" }),
         __metadata("design:type", String)
     ], AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1.prototype, "payeeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=yourRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=yourRef" }),
         __metadata("design:type", String)
     ], AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1.prototype, "yourRef", void 0);
     return AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1;
-}(SpeakeasyBase));
-export { AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1 };
+}(utils_1.SpeakeasyBase));
+exports.AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1 = AddBankTransferBatchPaymentRequestBodyBatchItemBankTransferMode1;
 var AddBankTransferBatchPaymentRequest = /** @class */ (function (_super) {
     __extends(AddBankTransferBatchPaymentRequest, _super);
     function AddBankTransferBatchPaymentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AddBankTransferBatchPaymentPathParams)
     ], AddBankTransferBatchPaymentRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], AddBankTransferBatchPaymentRequest.prototype, "request", void 0);
     return AddBankTransferBatchPaymentRequest;
-}(SpeakeasyBase));
-export { AddBankTransferBatchPaymentRequest };
+}(utils_1.SpeakeasyBase));
+exports.AddBankTransferBatchPaymentRequest = AddBankTransferBatchPaymentRequest;
 var AddBankTransferBatchPaymentResponse = /** @class */ (function (_super) {
     __extends(AddBankTransferBatchPaymentResponse, _super);
     function AddBankTransferBatchPaymentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AddBankTransferBatchPaymentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AddBankTransferBatchPaymentResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Onebatches1Percent7BbatchUuidPercent7D1internaltransfersPostResponses200ContentApplication1jsonSchema)
     ], AddBankTransferBatchPaymentResponse.prototype, "onebatches1Percent7BbatchUuidPercent7D1internaltransfersPostResponses200ContentApplication1jsonSchema", void 0);
     return AddBankTransferBatchPaymentResponse;
-}(SpeakeasyBase));
-export { AddBankTransferBatchPaymentResponse };
+}(utils_1.SpeakeasyBase));
+exports.AddBankTransferBatchPaymentResponse = AddBankTransferBatchPaymentResponse;

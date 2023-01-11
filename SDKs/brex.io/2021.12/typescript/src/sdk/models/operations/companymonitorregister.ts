@@ -38,10 +38,10 @@ export class CompanyMonitorRegisterRequest extends SpeakeasyBase {
 
 export class CompanyMonitorRegisterResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  companyMonitorRegister200ApplicationJsonAny?: any;
+  companyMonitorRegister200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  companyMonitorRegisterDefaultApplicationJsonAny?: any;
+  companyMonitorRegisterDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   contentType: string;

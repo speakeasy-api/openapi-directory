@@ -58,5 +58,5 @@ export class GetglobalnumberinfoResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getglobalnumberinfo200ApplicationJsonObject?: Getglobalnumberinfo200ApplicationJson;
+  getglobalnumberinfo200ApplicationJSONObject?: Getglobalnumberinfo200ApplicationJson;
 }

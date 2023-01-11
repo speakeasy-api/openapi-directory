@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTheStatusOfTheApiServiceResponse = exports.GetTheStatusOfTheApiService200ApplicationJson = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTheStatusOfTheApiService200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetTheStatusOfTheApiService200ApplicationJson, _super);
     function GetTheStatusOfTheApiService200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Boolean)
     ], GetTheStatusOfTheApiService200ApplicationJson.prototype, "status", void 0);
     return GetTheStatusOfTheApiService200ApplicationJson;
-}(SpeakeasyBase));
-export { GetTheStatusOfTheApiService200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetTheStatusOfTheApiService200ApplicationJson = GetTheStatusOfTheApiService200ApplicationJson;
 var GetTheStatusOfTheApiServiceResponse = /** @class */ (function (_super) {
     __extends(GetTheStatusOfTheApiServiceResponse, _super);
     function GetTheStatusOfTheApiServiceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTheStatusOfTheApiServiceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTheStatusOfTheApiService200ApplicationJson)
-    ], GetTheStatusOfTheApiServiceResponse.prototype, "getTheStatusOfTheApiService200ApplicationJsonObject", void 0);
+    ], GetTheStatusOfTheApiServiceResponse.prototype, "getTheStatusOfTheAPIService200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTheStatusOfTheApiServiceResponse.prototype, "statusCode", void 0);
     return GetTheStatusOfTheApiServiceResponse;
-}(SpeakeasyBase));
-export { GetTheStatusOfTheApiServiceResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTheStatusOfTheApiServiceResponse = GetTheStatusOfTheApiServiceResponse;

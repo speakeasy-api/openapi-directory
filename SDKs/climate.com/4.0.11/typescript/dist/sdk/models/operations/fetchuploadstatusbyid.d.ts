@@ -13,8 +13,8 @@ export declare class FetchUploadStatusByIdRequest extends SpeakeasyBase {
 }
 export declare class FetchUploadStatusByIdResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
-    headers: Map<string, string[]>;
+    error?: shared.ErrorT;
+    headers: Record<string, string[]>;
     statusCode: number;
     uploadStatus?: shared.UploadStatus;
 }

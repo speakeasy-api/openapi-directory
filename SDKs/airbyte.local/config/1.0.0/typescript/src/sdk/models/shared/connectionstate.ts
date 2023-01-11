@@ -7,5 +7,5 @@ export class ConnectionState extends SpeakeasyBase {
   connectionId: string;
 
   @SpeakeasyMetadata({ data: "json, name=state" })
-  state?: Map<string, any>;
+  state?: Record<string, any>;
 }

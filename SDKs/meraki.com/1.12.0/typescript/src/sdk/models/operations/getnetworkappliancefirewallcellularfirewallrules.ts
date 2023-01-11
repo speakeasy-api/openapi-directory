@@ -22,5 +22,5 @@ export class GetNetworkApplianceFirewallCellularFirewallRulesResponse extends Sp
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceFirewallCellularFirewallRules200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceFirewallCellularFirewallRules200ApplicationJSONObject?: Record<string, any>;
 }

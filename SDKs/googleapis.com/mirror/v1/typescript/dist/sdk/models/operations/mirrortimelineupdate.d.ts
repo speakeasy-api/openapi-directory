@@ -75,7 +75,7 @@ export declare class MirrorTimelineUpdateRequests extends SpeakeasyBase {
     audioGsm: Uint8Array;
     audioGsmEfr: Uint8Array;
     audioGsmHr08: Uint8Array;
-    audioIpMrV25: Uint8Array;
+    audioIPMrV25: Uint8Array;
     audioIlbc: Uint8Array;
     audioIsac: Uint8Array;
     audioL16: Uint8Array;

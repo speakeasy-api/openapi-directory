@@ -6,10 +6,10 @@ import { BatchDocumentOutputConfig } from "./batchdocumentoutputconfig";
  * The BatchTranslateDocument request.
 **/
 export declare class BatchTranslateDocumentRequest extends SpeakeasyBase {
-    formatConversions?: Map<string, string>;
-    glossaries?: Map<string, TranslateTextGlossaryConfig>;
+    formatConversions?: Record<string, string>;
+    glossaries?: Record<string, TranslateTextGlossaryConfig>;
     inputConfigs?: BatchDocumentInputConfig[];
-    models?: Map<string, string>;
+    models?: Record<string, string>;
     outputConfig?: BatchDocumentOutputConfig;
     sourceLanguageCode?: string;
     targetLanguageCodes?: string[];

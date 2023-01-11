@@ -1,4 +1,7 @@
-export var DeploymentCreatorEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeploymentCreatorEnum = void 0;
+var DeploymentCreatorEnum;
 (function (DeploymentCreatorEnum) {
     DeploymentCreatorEnum["User"] = "user";
     DeploymentCreatorEnum["Autoscaling"] = "autoscaling";
@@ -7,4 +10,4 @@ export var DeploymentCreatorEnum;
     DeploymentCreatorEnum["CodeDeployAutoUpdate"] = "CodeDeployAutoUpdate";
     DeploymentCreatorEnum["CloudFormation"] = "CloudFormation";
     DeploymentCreatorEnum["CloudFormationRollback"] = "CloudFormationRollback";
-})(DeploymentCreatorEnum || (DeploymentCreatorEnum = {}));
+})(DeploymentCreatorEnum = exports.DeploymentCreatorEnum || (exports.DeploymentCreatorEnum = {}));

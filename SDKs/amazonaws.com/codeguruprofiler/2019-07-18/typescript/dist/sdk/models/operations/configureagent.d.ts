@@ -14,7 +14,7 @@ export declare class ConfigureAgentHeaders extends SpeakeasyBase {
 }
 export declare class ConfigureAgentRequestBody extends SpeakeasyBase {
     fleetInstanceId?: string;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
 }
 export declare class ConfigureAgentRequest extends SpeakeasyBase {
     pathParams: ConfigureAgentPathParams;

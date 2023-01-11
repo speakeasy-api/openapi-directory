@@ -22,5 +22,5 @@ export class GetDeviceWirelessStatusResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceWirelessStatus200ApplicationJsonObject?: Map<string, any>;
+  getDeviceWirelessStatus200ApplicationJSONObject?: Record<string, any>;
 }

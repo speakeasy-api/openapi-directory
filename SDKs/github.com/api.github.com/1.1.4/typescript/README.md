@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest, ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,13 +28,13 @@ const sdk = new SDK();
     
 const req: ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest = {
   pathParams: {
-    org: "fugiat",
-    repositoryId: 7721589441139439455,
-    runnerGroupId: 3226718161535449406,
+    org: "sit",
+    repositoryId: 2259404117704393152,
+    runnerGroupId: 6050128673802995827,
   },
 };
 
-sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse | AxiosError) => {
+sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -44,7 +43,7 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### actions
 
 * `actionsAddRepoAccessToSelfHostedRunnerGroupInOrg` - Add repository access to a self-hosted runner group in an organization
 * `actionsAddSelectedRepoToOrgSecret` - Add selected repository to an organization secret
@@ -128,6 +127,9 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `actionsSetSelectedRepositoriesEnabledGithubActionsOrganization` - Set selected repositories enabled for GitHub Actions in an organization
 * `actionsSetSelfHostedRunnersInGroupForOrg` - Set self-hosted runners in a group for an organization
 * `actionsUpdateSelfHostedRunnerGroupForOrg` - Update a self-hosted runner group for an organization
+
+### activity
+
 * `activityCheckRepoIsStarredByAuthenticatedUser` - Check if a repository is starred by the authenticated user
 * `activityDeleteRepoSubscription` - Delete a repository subscription
 * `activityDeleteThreadSubscription` - Delete a thread subscription
@@ -159,6 +161,9 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `activitySetThreadSubscription` - Set a thread subscription
 * `activityStarRepoForAuthenticatedUser` - Star a repository for the authenticated user
 * `activityUnstarRepoForAuthenticatedUser` - Unstar a repository for the authenticated user
+
+### apps
+
 * `appsAddRepoToInstallation` - Add a repository to an app installation
 * `appsCheckAuthorization` - Check an authorization
 * `appsCheckToken` - Check a token
@@ -197,7 +202,13 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `appsSuspendInstallation` - Suspend an app installation
 * `appsUnsuspendInstallation` - Unsuspend an app installation
 * `appsUpdateWebhookConfigForApp` - Update a webhook configuration for an app
+
+### audit-log
+
 * `auditLogGetAuditLog` - Get the audit log for an enterprise
+
+### billing
+
 * `billingGetGithubActionsBillingGhe` - Get GitHub Actions billing for an enterprise
 * `billingGetGithubActionsBillingOrg` - Get GitHub Actions billing for an organization
 * `billingGetGithubActionsBillingUser` - Get GitHub Actions billing for a user
@@ -207,6 +218,9 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `billingGetSharedStorageBillingGhe` - Get shared storage billing for an enterprise
 * `billingGetSharedStorageBillingOrg` - Get shared storage billing for an organization
 * `billingGetSharedStorageBillingUser` - Get shared storage billing for a user
+
+### checks
+
 * `checksCreate` - Create a check run
 * `checksCreateSuite` - Create a check suite
 * `checksGet` - Get a check run
@@ -218,6 +232,9 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `checksRerequestSuite` - Rerequest a check suite
 * `checksSetSuitesPreferences` - Update repository preferences for check suites
 * `checksUpdate` - Update a check run
+
+### code-scanning
+
 * `codeScanningDeleteAnalysis` - Delete a code scanning analysis from a repository
 * `codeScanningGetAlert` - Get a code scanning alert
 * `codeScanningGetAnalysis` - Get a code scanning analysis for a repository
@@ -227,10 +244,19 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `codeScanningListRecentAnalyses` - List code scanning analyses for a repository
 * `codeScanningUpdateAlert` - Update a code scanning alert
 * `codeScanningUploadSarif` - Upload an analysis as SARIF data
+
+### codes-of-conduct
+
 * `codesOfConductGetAllCodesOfConduct` - Get all codes of conduct
 * `codesOfConductGetConductCode` - Get a code of conduct
 * `codesOfConductGetForRepo` - Get the code of conduct for a repository
+
+### emojis
+
 * `emojisGet` - Get emojis
+
+### enterprise-admin
+
 * `enterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterprise` - Add organization access to a self-hosted runner group in an enterprise
 * `enterpriseAdminAddSelfHostedRunnerToGroupForEnterprise` - Add a self-hosted runner to a group for an enterprise
 * `enterpriseAdminCreateRegistrationTokenForEnterprise` - Create a registration token for an enterprise
@@ -270,6 +296,9 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `enterpriseAdminUpdateAttributeForEnterpriseGroup` - Update an attribute for a SCIM enterprise group
 * `enterpriseAdminUpdateAttributeForEnterpriseUser` - Update an attribute for a SCIM enterprise user
 * `enterpriseAdminUpdateSelfHostedRunnerGroupForEnterprise` - Update a self-hosted runner group for an enterprise
+
+### gists
+
 * `gistsCheckIsStarred` - Check if a gist is starred
 * `gistsCreate` - Create a gist
 * `gistsCreateComment` - Create a gist comment
@@ -290,6 +319,9 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `gistsUnstar` - Unstar a gist
 * `gistsUpdate` - Update a gist
 * `gistsUpdateComment` - Update a gist comment
+
+### git
+
 * `gitCreateBlob` - Create a blob
 * `gitCreateCommit` - Create a commit
 * `gitCreateRef` - Create a reference
@@ -303,8 +335,14 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `gitGetTree` - Get a tree
 * `gitListMatchingRefs` - List matching references
 * `gitUpdateRef` - Update a reference
+
+### gitignore
+
 * `gitignoreGetAllTemplates` - Get all gitignore templates
 * `gitignoreGetTemplate` - Get a gitignore template
+
+### interactions
+
 * `interactionsGetRestrictionsForAuthenticatedUser` - Get interaction restrictions for your public repositories
 * `interactionsGetRestrictionsForOrg` - Get interaction restrictions for an organization
 * `interactionsGetRestrictionsForRepo` - Get interaction restrictions for a repository
@@ -314,6 +352,9 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `interactionsSetRestrictionsForAuthenticatedUser` - Set interaction restrictions for your public repositories
 * `interactionsSetRestrictionsForOrg` - Set interaction restrictions for an organization
 * `interactionsSetRestrictionsForRepo` - Set interaction restrictions for a repository
+
+### issues
+
 * `issuesAddAssignees` - Add assignees to an issue
 * `issuesAddLabels` - Add labels to an issue
 * `issuesCheckUserCanBeAssigned` - Check if a user can be assigned
@@ -353,15 +394,27 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `issuesUpdateComment` - Update an issue comment
 * `issuesUpdateLabel` - Update a label
 * `issuesUpdateMilestone` - Update a milestone
+
+### licenses
+
 * `licensesGet` - Get a license
 * `licensesGetAllCommonlyUsed` - Get all commonly used licenses
 * `licensesGetForRepo` - Get the license for a repository
+
+### markdown
+
 * `markdownRender` - Render a Markdown document
 * `markdownRenderRaw` - Render a Markdown document in raw mode
+
+### meta
+
 * `metaGet` - Get GitHub meta information
 * `metaGetOctocat` - Get Octocat
 * `metaGetZen` - Get the Zen of GitHub
 * `metaRoot` - GitHub API Root
+
+### migrations
+
 * `migrationsCancelImport` - Cancel an import
 * `migrationsDeleteArchiveForAuthenticatedUser` - Delete a user migration archive
 * `migrationsDeleteArchiveForOrg` - Delete an organization migration archive
@@ -384,6 +437,9 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `migrationsUnlockRepoForAuthenticatedUser` - Unlock a user repository
 * `migrationsUnlockRepoForOrg` - Unlock an organization repository
 * `migrationsUpdateImport` - Update an import
+
+### oauth-authorizations
+
 * `oauthAuthorizationsCreateAuthorization` - Create a new authorization
 * `oauthAuthorizationsDeleteAuthorization` - Delete an authorization
 * `oauthAuthorizationsDeleteGrant` - Delete a grant
@@ -394,6 +450,9 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `oauthAuthorizationsListAuthorizations` - List your authorizations
 * `oauthAuthorizationsListGrants` - List your grants
 * `oauthAuthorizationsUpdateAuthorization` - Update an existing authorization
+
+### orgs
+
 * `orgsBlockUser` - Block a user from an organization
 * `orgsCancelInvitation` - Cancel an organization invitation
 * `orgsCheckBlockedUser` - Check if a user is blocked by an organization
@@ -436,6 +495,9 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `orgsUpdateMembershipForAuthenticatedUser` - Update an organization membership for the authenticated user
 * `orgsUpdateWebhook` - Update an organization webhook
 * `orgsUpdateWebhookConfigForOrg` - Update a webhook configuration for an organization
+
+### packages
+
 * `packagesDeletePackageForAuthenticatedUser` - Delete a package for the authenticated user
 * `packagesDeletePackageForOrg` - Delete a package for an organization
 * `packagesDeletePackageVersionForAuthenticatedUser` - Delete a package version for the authenticated user
@@ -453,6 +515,9 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `packagesRestorePackageForOrg` - Restore a package for an organization
 * `packagesRestorePackageVersionForAuthenticatedUser` - Restore a package version for the authenticated user
 * `packagesRestorePackageVersionForOrg` - Restore package version for an organization
+
+### projects
+
 * `projectsAddCollaborator` - Add project collaborator
 * `projectsCreateCard` - Create a project card
 * `projectsCreateColumn` - Create a project column
@@ -478,6 +543,9 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `projectsUpdate` - Update a project
 * `projectsUpdateCard` - Update an existing project card
 * `projectsUpdateColumn` - Update an existing project column
+
+### pulls
+
 * `pullsCheckIfMerged` - Check if a pull request has been merged
 * `pullsCreate` - Create a pull request
 * `pullsCreateReplyForReviewComment` - Create a reply for a review comment
@@ -505,7 +573,13 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `pullsUpdateBranch` - Update a pull request branch
 * `pullsUpdateReview` - Update a review for a pull request
 * `pullsUpdateReviewComment` - Update a review comment for a pull request
+
+### rate-limit
+
 * `rateLimitGet` - Get rate limit status for the authenticated user
+
+### reactions
+
 * `reactionsCreateForCommitComment` - Create reaction for a commit comment
 * `reactionsCreateForIssue` - Create reaction for an issue
 * `reactionsCreateForIssueComment` - Create reaction for an issue comment
@@ -529,6 +603,9 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `reactionsListForTeamDiscussionCommentLegacy` - List reactions for a team discussion comment (Legacy)
 * `reactionsListForTeamDiscussionInOrg` - List reactions for a team discussion
 * `reactionsListForTeamDiscussionLegacy` - List reactions for a team discussion (Legacy)
+
+### repos
+
 * `reposAcceptInvitation` - Accept a repository invitation
 * `reposAddAppAccessRestrictions` - Add app access restrictions
 * `reposAddCollaborator` - Add a repository collaborator
@@ -677,12 +754,18 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `reposUpdateWebhook` - Update a repository webhook
 * `reposUpdateWebhookConfigForRepo` - Update a webhook configuration for a repository
 * `reposUploadReleaseAsset` - Upload a release asset
+
+### scim
+
 * `scimDeleteUserFromOrg` - Delete a SCIM user from an organization
 * `scimGetProvisioningInformationForUser` - Get SCIM provisioning information for a user
 * `scimListProvisionedIdentities` - List SCIM provisioned identities
 * `scimProvisionAndInviteUser` - Provision and invite a SCIM user
 * `scimSetInformationForProvisionedUser` - Update a provisioned organization membership
 * `scimUpdateAttributeForUser` - Update an attribute for a SCIM user
+
+### search
+
 * `searchCode` - Search code
 * `searchCommits` - Search commits
 * `searchIssuesAndPullRequests` - Search issues and pull requests
@@ -690,9 +773,15 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `searchRepos` - Search repositories
 * `searchTopics` - Search topics
 * `searchUsers` - Search users
+
+### secret-scanning
+
 * `secretScanningGetAlert` - Get a secret scanning alert
 * `secretScanningListAlertsForRepo` - List secret scanning alerts for a repository
 * `secretScanningUpdateAlert` - Update a secret scanning alert
+
+### teams
+
 * `teamsAddMemberLegacy` - Add team member (Legacy)
 * `teamsAddOrUpdateMembershipForUserInOrg` - Add or update team membership for a user
 * `teamsAddOrUpdateMembershipForUserLegacy` - Add or update team membership for a user (Legacy)
@@ -758,6 +847,9 @@ sdk.sdk.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req).then((res: Actions
 * `teamsUpdateDiscussionLegacy` - Update a discussion (Legacy)
 * `teamsUpdateInOrg` - Update a team
 * `teamsUpdateLegacy` - Update a team (Legacy)
+
+### users
+
 * `usersAddEmailForAuthenticated` - Add an email address for the authenticated user
 * `usersBlock` - Block a user
 * `usersCheckBlocked` - Check if a user is blocked by the authenticated user

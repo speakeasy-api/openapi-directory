@@ -50,5 +50,5 @@ export class DeclineChangeRequestResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  declineChangeRequest200ApplicationJsonObject?: DeclineChangeRequest200ApplicationJson;
+  declineChangeRequest200ApplicationJSONObject?: DeclineChangeRequest200ApplicationJson;
 }

@@ -1,29 +1,30 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class UpdateLoadBalancerPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=lb_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=lb_id" })
   lbId: string;
 }
 
 export enum UpdateLoadBalancerRequestBodyAssignDropletsByIdAlgorithmEnum {
-    RoundRobin = "round_robin"
-,    LeastConnections = "least_connections"
+    RoundRobin = "round_robin",
+    LeastConnections = "least_connections"
 }
 
 export enum UpdateLoadBalancerRequestBodyAssignDropletsByIdForwardingRulesEntryProtocolEnum {
-    Http = "http"
-,    Https = "https"
-,    Http2 = "http2"
-,    Tcp = "tcp"
+    Http = "http",
+    Https = "https",
+    Http2 = "http2",
+    Tcp = "tcp"
 }
 
 export enum UpdateLoadBalancerRequestBodyAssignDropletsByIdForwardingRulesTargetProtocolEnum {
-    Http = "http"
-,    Https = "https"
-,    Http2 = "http2"
-,    Tcp = "tcp"
+    Http = "http",
+    Https = "https",
+    Http2 = "http2",
+    Tcp = "tcp"
 }
 
 
@@ -32,29 +33,29 @@ export enum UpdateLoadBalancerRequestBodyAssignDropletsByIdForwardingRulesTarget
  * An object specifying a forwarding rule for a load balancer.
 **/
 export class UpdateLoadBalancerRequestBodyAssignDropletsByIdForwardingRules extends SpeakeasyBase {
-  @Metadata({ data: "json, name=certificate_id" })
+  @SpeakeasyMetadata({ data: "json, name=certificate_id" })
   certificateId?: string;
 
-  @Metadata({ data: "json, name=entry_port" })
+  @SpeakeasyMetadata({ data: "json, name=entry_port" })
   entryPort: number;
 
-  @Metadata({ data: "json, name=entry_protocol" })
+  @SpeakeasyMetadata({ data: "json, name=entry_protocol" })
   entryProtocol: UpdateLoadBalancerRequestBodyAssignDropletsByIdForwardingRulesEntryProtocolEnum;
 
-  @Metadata({ data: "json, name=target_port" })
+  @SpeakeasyMetadata({ data: "json, name=target_port" })
   targetPort: number;
 
-  @Metadata({ data: "json, name=target_protocol" })
+  @SpeakeasyMetadata({ data: "json, name=target_protocol" })
   targetProtocol: UpdateLoadBalancerRequestBodyAssignDropletsByIdForwardingRulesTargetProtocolEnum;
 
-  @Metadata({ data: "json, name=tls_passthrough" })
+  @SpeakeasyMetadata({ data: "json, name=tls_passthrough" })
   tlsPassthrough?: boolean;
 }
 
 export enum UpdateLoadBalancerRequestBodyAssignDropletsByIdHealthCheckProtocolEnum {
-    Http = "http"
-,    Https = "https"
-,    Tcp = "tcp"
+    Http = "http",
+    Https = "https",
+    Tcp = "tcp"
 }
 
 
@@ -63,43 +64,37 @@ export enum UpdateLoadBalancerRequestBodyAssignDropletsByIdHealthCheckProtocolEn
  * An object specifying health check settings for the load balancer.
 **/
 export class UpdateLoadBalancerRequestBodyAssignDropletsByIdHealthCheck extends SpeakeasyBase {
-  @Metadata({ data: "json, name=check_interval_seconds" })
+  @SpeakeasyMetadata({ data: "json, name=check_interval_seconds" })
   checkIntervalSeconds?: number;
 
-  @Metadata({ data: "json, name=healthy_threshold" })
+  @SpeakeasyMetadata({ data: "json, name=healthy_threshold" })
   healthyThreshold?: number;
 
-  @Metadata({ data: "json, name=path" })
+  @SpeakeasyMetadata({ data: "json, name=path" })
   path?: string;
 
-  @Metadata({ data: "json, name=port" })
+  @SpeakeasyMetadata({ data: "json, name=port" })
   port?: number;
 
-  @Metadata({ data: "json, name=protocol" })
+  @SpeakeasyMetadata({ data: "json, name=protocol" })
   protocol?: UpdateLoadBalancerRequestBodyAssignDropletsByIdHealthCheckProtocolEnum;
 
-  @Metadata({ data: "json, name=response_timeout_seconds" })
+  @SpeakeasyMetadata({ data: "json, name=response_timeout_seconds" })
   responseTimeoutSeconds?: number;
 
-  @Metadata({ data: "json, name=unhealthy_threshold" })
+  @SpeakeasyMetadata({ data: "json, name=unhealthy_threshold" })
   unhealthyThreshold?: number;
 }
 
 export enum UpdateLoadBalancerRequestBodyAssignDropletsByIdSizeEnum {
-    LbSmall = "lb-small"
-,    LbMedium = "lb-medium"
-,    LbLarge = "lb-large"
-}
-
-export enum UpdateLoadBalancerRequestBodyAssignDropletsByIdStatusEnum {
-    New = "new"
-,    Active = "active"
-,    Errored = "errored"
+    LbSmall = "lb-small",
+    LbMedium = "lb-medium",
+    LbLarge = "lb-large"
 }
 
 export enum UpdateLoadBalancerRequestBodyAssignDropletsByIdStickySessionsTypeEnum {
-    Cookies = "cookies"
-,    None = "none"
+    Cookies = "cookies",
+    None = "none"
 }
 
 
@@ -108,84 +103,72 @@ export enum UpdateLoadBalancerRequestBodyAssignDropletsByIdStickySessionsTypeEnu
  * An object specifying sticky sessions settings for the load balancer.
 **/
 export class UpdateLoadBalancerRequestBodyAssignDropletsByIdStickySessions extends SpeakeasyBase {
-  @Metadata({ data: "json, name=cookie_name" })
+  @SpeakeasyMetadata({ data: "json, name=cookie_name" })
   cookieName?: string;
 
-  @Metadata({ data: "json, name=cookie_ttl_seconds" })
+  @SpeakeasyMetadata({ data: "json, name=cookie_ttl_seconds" })
   cookieTtlSeconds?: number;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type?: UpdateLoadBalancerRequestBodyAssignDropletsByIdStickySessionsTypeEnum;
 }
 
 
-export class UpdateLoadBalancerRequestBodyAssignDropletsById extends SpeakeasyBase {
-  @Metadata({ data: "json, name=algorithm" })
+export class UpdateLoadBalancerRequestBodyAssignDropletsByIdInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=algorithm" })
   algorithm?: UpdateLoadBalancerRequestBodyAssignDropletsByIdAlgorithmEnum;
 
-  @Metadata({ data: "json, name=created_at" })
-  createdAt?: Date;
-
-  @Metadata({ data: "json, name=droplet_ids" })
+  @SpeakeasyMetadata({ data: "json, name=droplet_ids" })
   dropletIds: number[];
 
-  @Metadata({ data: "json, name=enable_backend_keepalive" })
+  @SpeakeasyMetadata({ data: "json, name=enable_backend_keepalive" })
   enableBackendKeepalive?: boolean;
 
-  @Metadata({ data: "json, name=enable_proxy_protocol" })
+  @SpeakeasyMetadata({ data: "json, name=enable_proxy_protocol" })
   enableProxyProtocol?: boolean;
 
-  @Metadata({ data: "json, name=forwarding_rules", elemType: operations.UpdateLoadBalancerRequestBodyAssignDropletsByIdForwardingRules })
+  @SpeakeasyMetadata({ data: "json, name=forwarding_rules", elemType: UpdateLoadBalancerRequestBodyAssignDropletsByIdForwardingRules })
   forwardingRules: UpdateLoadBalancerRequestBodyAssignDropletsByIdForwardingRules[];
 
-  @Metadata({ data: "json, name=health_check" })
+  @SpeakeasyMetadata({ data: "json, name=health_check" })
   healthCheck?: UpdateLoadBalancerRequestBodyAssignDropletsByIdHealthCheck;
 
-  @Metadata({ data: "json, name=id" })
-  id?: string;
-
-  @Metadata({ data: "json, name=ip" })
-  ip?: string;
-
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 
-  @Metadata({ data: "json, name=redirect_http_to_https" })
+  @SpeakeasyMetadata({ data: "json, name=redirect_http_to_https" })
   redirectHttpToHttps?: boolean;
 
-  @Metadata({ data: "json, name=region" })
+  @SpeakeasyMetadata({ data: "json, name=region" })
   region: shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesRegionsItemsEnum;
 
-  @Metadata({ data: "json, name=size" })
+  @SpeakeasyMetadata({ data: "json, name=size" })
   size?: UpdateLoadBalancerRequestBodyAssignDropletsByIdSizeEnum;
 
-  @Metadata({ data: "json, name=status" })
-  status?: UpdateLoadBalancerRequestBodyAssignDropletsByIdStatusEnum;
-
-  @Metadata({ data: "json, name=sticky_sessions" })
+  @SpeakeasyMetadata({ data: "json, name=sticky_sessions" })
   stickySessions?: UpdateLoadBalancerRequestBodyAssignDropletsByIdStickySessions;
 
-  @Metadata({ data: "json, name=vpc_uuid" })
+  @SpeakeasyMetadata({ data: "json, name=vpc_uuid" })
   vpcUuid?: string;
 }
 
 export enum UpdateLoadBalancerRequestBodyAssignDropletsByTagAlgorithmEnum {
-    RoundRobin = "round_robin"
-,    LeastConnections = "least_connections"
+    RoundRobin = "round_robin",
+    LeastConnections = "least_connections"
 }
 
 export enum UpdateLoadBalancerRequestBodyAssignDropletsByTagForwardingRulesEntryProtocolEnum {
-    Http = "http"
-,    Https = "https"
-,    Http2 = "http2"
-,    Tcp = "tcp"
+    Http = "http",
+    Https = "https",
+    Http2 = "http2",
+    Tcp = "tcp"
 }
 
 export enum UpdateLoadBalancerRequestBodyAssignDropletsByTagForwardingRulesTargetProtocolEnum {
-    Http = "http"
-,    Https = "https"
-,    Http2 = "http2"
-,    Tcp = "tcp"
+    Http = "http",
+    Https = "https",
+    Http2 = "http2",
+    Tcp = "tcp"
 }
 
 
@@ -194,29 +177,29 @@ export enum UpdateLoadBalancerRequestBodyAssignDropletsByTagForwardingRulesTarge
  * An object specifying a forwarding rule for a load balancer.
 **/
 export class UpdateLoadBalancerRequestBodyAssignDropletsByTagForwardingRules extends SpeakeasyBase {
-  @Metadata({ data: "json, name=certificate_id" })
+  @SpeakeasyMetadata({ data: "json, name=certificate_id" })
   certificateId?: string;
 
-  @Metadata({ data: "json, name=entry_port" })
+  @SpeakeasyMetadata({ data: "json, name=entry_port" })
   entryPort: number;
 
-  @Metadata({ data: "json, name=entry_protocol" })
+  @SpeakeasyMetadata({ data: "json, name=entry_protocol" })
   entryProtocol: UpdateLoadBalancerRequestBodyAssignDropletsByTagForwardingRulesEntryProtocolEnum;
 
-  @Metadata({ data: "json, name=target_port" })
+  @SpeakeasyMetadata({ data: "json, name=target_port" })
   targetPort: number;
 
-  @Metadata({ data: "json, name=target_protocol" })
+  @SpeakeasyMetadata({ data: "json, name=target_protocol" })
   targetProtocol: UpdateLoadBalancerRequestBodyAssignDropletsByTagForwardingRulesTargetProtocolEnum;
 
-  @Metadata({ data: "json, name=tls_passthrough" })
+  @SpeakeasyMetadata({ data: "json, name=tls_passthrough" })
   tlsPassthrough?: boolean;
 }
 
 export enum UpdateLoadBalancerRequestBodyAssignDropletsByTagHealthCheckProtocolEnum {
-    Http = "http"
-,    Https = "https"
-,    Tcp = "tcp"
+    Http = "http",
+    Https = "https",
+    Tcp = "tcp"
 }
 
 
@@ -225,43 +208,37 @@ export enum UpdateLoadBalancerRequestBodyAssignDropletsByTagHealthCheckProtocolE
  * An object specifying health check settings for the load balancer.
 **/
 export class UpdateLoadBalancerRequestBodyAssignDropletsByTagHealthCheck extends SpeakeasyBase {
-  @Metadata({ data: "json, name=check_interval_seconds" })
+  @SpeakeasyMetadata({ data: "json, name=check_interval_seconds" })
   checkIntervalSeconds?: number;
 
-  @Metadata({ data: "json, name=healthy_threshold" })
+  @SpeakeasyMetadata({ data: "json, name=healthy_threshold" })
   healthyThreshold?: number;
 
-  @Metadata({ data: "json, name=path" })
+  @SpeakeasyMetadata({ data: "json, name=path" })
   path?: string;
 
-  @Metadata({ data: "json, name=port" })
+  @SpeakeasyMetadata({ data: "json, name=port" })
   port?: number;
 
-  @Metadata({ data: "json, name=protocol" })
+  @SpeakeasyMetadata({ data: "json, name=protocol" })
   protocol?: UpdateLoadBalancerRequestBodyAssignDropletsByTagHealthCheckProtocolEnum;
 
-  @Metadata({ data: "json, name=response_timeout_seconds" })
+  @SpeakeasyMetadata({ data: "json, name=response_timeout_seconds" })
   responseTimeoutSeconds?: number;
 
-  @Metadata({ data: "json, name=unhealthy_threshold" })
+  @SpeakeasyMetadata({ data: "json, name=unhealthy_threshold" })
   unhealthyThreshold?: number;
 }
 
 export enum UpdateLoadBalancerRequestBodyAssignDropletsByTagSizeEnum {
-    LbSmall = "lb-small"
-,    LbMedium = "lb-medium"
-,    LbLarge = "lb-large"
-}
-
-export enum UpdateLoadBalancerRequestBodyAssignDropletsByTagStatusEnum {
-    New = "new"
-,    Active = "active"
-,    Errored = "errored"
+    LbSmall = "lb-small",
+    LbMedium = "lb-medium",
+    LbLarge = "lb-large"
 }
 
 export enum UpdateLoadBalancerRequestBodyAssignDropletsByTagStickySessionsTypeEnum {
-    Cookies = "cookies"
-,    None = "none"
+    Cookies = "cookies",
+    None = "none"
 }
 
 
@@ -270,105 +247,93 @@ export enum UpdateLoadBalancerRequestBodyAssignDropletsByTagStickySessionsTypeEn
  * An object specifying sticky sessions settings for the load balancer.
 **/
 export class UpdateLoadBalancerRequestBodyAssignDropletsByTagStickySessions extends SpeakeasyBase {
-  @Metadata({ data: "json, name=cookie_name" })
+  @SpeakeasyMetadata({ data: "json, name=cookie_name" })
   cookieName?: string;
 
-  @Metadata({ data: "json, name=cookie_ttl_seconds" })
+  @SpeakeasyMetadata({ data: "json, name=cookie_ttl_seconds" })
   cookieTtlSeconds?: number;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type?: UpdateLoadBalancerRequestBodyAssignDropletsByTagStickySessionsTypeEnum;
 }
 
 
-export class UpdateLoadBalancerRequestBodyAssignDropletsByTag extends SpeakeasyBase {
-  @Metadata({ data: "json, name=algorithm" })
+export class UpdateLoadBalancerRequestBodyAssignDropletsByTagInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=algorithm" })
   algorithm?: UpdateLoadBalancerRequestBodyAssignDropletsByTagAlgorithmEnum;
 
-  @Metadata({ data: "json, name=created_at" })
-  createdAt?: Date;
-
-  @Metadata({ data: "json, name=enable_backend_keepalive" })
+  @SpeakeasyMetadata({ data: "json, name=enable_backend_keepalive" })
   enableBackendKeepalive?: boolean;
 
-  @Metadata({ data: "json, name=enable_proxy_protocol" })
+  @SpeakeasyMetadata({ data: "json, name=enable_proxy_protocol" })
   enableProxyProtocol?: boolean;
 
-  @Metadata({ data: "json, name=forwarding_rules", elemType: operations.UpdateLoadBalancerRequestBodyAssignDropletsByTagForwardingRules })
+  @SpeakeasyMetadata({ data: "json, name=forwarding_rules", elemType: UpdateLoadBalancerRequestBodyAssignDropletsByTagForwardingRules })
   forwardingRules: UpdateLoadBalancerRequestBodyAssignDropletsByTagForwardingRules[];
 
-  @Metadata({ data: "json, name=health_check" })
+  @SpeakeasyMetadata({ data: "json, name=health_check" })
   healthCheck?: UpdateLoadBalancerRequestBodyAssignDropletsByTagHealthCheck;
 
-  @Metadata({ data: "json, name=id" })
-  id?: string;
-
-  @Metadata({ data: "json, name=ip" })
-  ip?: string;
-
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 
-  @Metadata({ data: "json, name=redirect_http_to_https" })
+  @SpeakeasyMetadata({ data: "json, name=redirect_http_to_https" })
   redirectHttpToHttps?: boolean;
 
-  @Metadata({ data: "json, name=region" })
+  @SpeakeasyMetadata({ data: "json, name=region" })
   region: shared.Onev21dropletsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesDropletsItemsPropertiesImagePropertiesRegionsItemsEnum;
 
-  @Metadata({ data: "json, name=size" })
+  @SpeakeasyMetadata({ data: "json, name=size" })
   size?: UpdateLoadBalancerRequestBodyAssignDropletsByTagSizeEnum;
 
-  @Metadata({ data: "json, name=status" })
-  status?: UpdateLoadBalancerRequestBodyAssignDropletsByTagStatusEnum;
-
-  @Metadata({ data: "json, name=sticky_sessions" })
+  @SpeakeasyMetadata({ data: "json, name=sticky_sessions" })
   stickySessions?: UpdateLoadBalancerRequestBodyAssignDropletsByTagStickySessions;
 
-  @Metadata({ data: "json, name=tag" })
+  @SpeakeasyMetadata({ data: "json, name=tag" })
   tag: string;
 
-  @Metadata({ data: "json, name=vpc_uuid" })
+  @SpeakeasyMetadata({ data: "json, name=vpc_uuid" })
   vpcUuid?: string;
 }
 
 
-export class UpdateLoadBalancerRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: UpdateLoadBalancerPathParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request: any;
-}
-
-
 export class UpdateLoadBalancer401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class UpdateLoadBalancerRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: UpdateLoadBalancerPathParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: any;
+}
+
+
 export class UpdateLoadBalancerResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  updateLoadBalancer200ApplicationJsonAny?: any;
+  @SpeakeasyMetadata()
+  updateLoadBalancer200ApplicationJSONAny?: any;
 
-  @Metadata()
-  updateLoadBalancer401ApplicationJsonObject?: UpdateLoadBalancer401ApplicationJson;
+  @SpeakeasyMetadata()
+  updateLoadBalancer401ApplicationJSONObject?: UpdateLoadBalancer401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

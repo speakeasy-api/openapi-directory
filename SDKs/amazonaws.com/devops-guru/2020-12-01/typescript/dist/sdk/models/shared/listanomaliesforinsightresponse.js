@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProactiveAnomalySummary } from "./proactiveanomalysummary";
-import { ReactiveAnomalySummary } from "./reactiveanomalysummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListAnomaliesForInsightResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var proactiveanomalysummary_1 = require("./proactiveanomalysummary");
+var reactiveanomalysummary_1 = require("./reactiveanomalysummary");
 var ListAnomaliesForInsightResponse = /** @class */ (function (_super) {
     __extends(ListAnomaliesForInsightResponse, _super);
     function ListAnomaliesForInsightResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListAnomaliesForInsightResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProactiveAnomalies", elemType: ProactiveAnomalySummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProactiveAnomalies", elemType: proactiveanomalysummary_1.ProactiveAnomalySummary }),
         __metadata("design:type", Array)
     ], ListAnomaliesForInsightResponse.prototype, "proactiveAnomalies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReactiveAnomalies", elemType: ReactiveAnomalySummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReactiveAnomalies", elemType: reactiveanomalysummary_1.ReactiveAnomalySummary }),
         __metadata("design:type", Array)
     ], ListAnomaliesForInsightResponse.prototype, "reactiveAnomalies", void 0);
     return ListAnomaliesForInsightResponse;
-}(SpeakeasyBase));
-export { ListAnomaliesForInsightResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListAnomaliesForInsightResponse = ListAnomaliesForInsightResponse;

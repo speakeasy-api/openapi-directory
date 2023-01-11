@@ -10,7 +10,7 @@ import { GoogleCloudDatalabelingV1beta1TextClassificationConfig } from "./google
  * Configures specific details of how a continuous evaluation job works. Provide this configuration when you create an EvaluationJob.
 **/
 export declare class GoogleCloudDatalabelingV1beta1EvaluationJobConfig extends SpeakeasyBase {
-    bigqueryImportKeys?: Map<string, string>;
+    bigqueryImportKeys?: Record<string, string>;
     boundingPolyConfig?: GoogleCloudDatalabelingV1beta1BoundingPolyConfig;
     evaluationConfig?: GoogleCloudDatalabelingV1beta1EvaluationConfig;
     evaluationJobAlertConfig?: GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProviderInput = exports.Provider = void 0;
+var utils_1 = require("../../../internal/utils");
 var Provider = /** @class */ (function (_super) {
     __extends(Provider, _super);
     function Provider() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
         __metadata("design:type", String)
     ], Provider.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=admin_contact" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=admin_contact" }),
         __metadata("design:type", String)
     ], Provider.prototype, "adminContact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asn" }),
         __metadata("design:type", Number)
     ], Provider.prototype, "asn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=circuit_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=circuit_count" }),
         __metadata("design:type", Number)
     ], Provider.prototype, "circuitCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", String)
     ], Provider.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Provider.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], Provider.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Provider.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_updated" }),
         __metadata("design:type", Date)
     ], Provider.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Provider.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noc_contact" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noc_contact" }),
         __metadata("design:type", String)
     ], Provider.prototype, "nocContact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portal_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portal_url" }),
         __metadata("design:type", String)
     ], Provider.prototype, "portalUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], Provider.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], Provider.prototype, "tags", void 0);
     return Provider;
-}(SpeakeasyBase));
-export { Provider };
+}(utils_1.SpeakeasyBase));
+exports.Provider = Provider;
 var ProviderInput = /** @class */ (function (_super) {
     __extends(ProviderInput, _super);
     function ProviderInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
         __metadata("design:type", String)
     ], ProviderInput.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=admin_contact" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=admin_contact" }),
         __metadata("design:type", String)
     ], ProviderInput.prototype, "adminContact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asn" }),
         __metadata("design:type", Number)
     ], ProviderInput.prototype, "asn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", String)
     ], ProviderInput.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], ProviderInput.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ProviderInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noc_contact" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noc_contact" }),
         __metadata("design:type", String)
     ], ProviderInput.prototype, "nocContact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portal_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portal_url" }),
         __metadata("design:type", String)
     ], ProviderInput.prototype, "portalUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], ProviderInput.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], ProviderInput.prototype, "tags", void 0);
     return ProviderInput;
-}(SpeakeasyBase));
-export { ProviderInput };
+}(utils_1.SpeakeasyBase));
+exports.ProviderInput = ProviderInput;

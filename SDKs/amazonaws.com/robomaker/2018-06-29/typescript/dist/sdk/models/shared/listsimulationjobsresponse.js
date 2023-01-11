@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimulationJobSummary } from "./simulationjobsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListSimulationJobsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var simulationjobsummary_1 = require("./simulationjobsummary");
 var ListSimulationJobsResponse = /** @class */ (function (_super) {
     __extends(ListSimulationJobsResponse, _super);
     function ListSimulationJobsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListSimulationJobsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=simulationJobSummaries", elemType: SimulationJobSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=simulationJobSummaries", elemType: simulationjobsummary_1.SimulationJobSummary }),
         __metadata("design:type", Array)
     ], ListSimulationJobsResponse.prototype, "simulationJobSummaries", void 0);
     return ListSimulationJobsResponse;
-}(SpeakeasyBase));
-export { ListSimulationJobsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListSimulationJobsResponse = ListSimulationJobsResponse;

@@ -10,10 +10,10 @@ export class GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses ext
   body?: string;
 
   @SpeakeasyMetadata({ data: "json, name=cookies" })
-  cookies?: Map<string, any>;
+  cookies?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, any>;
+  headers?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=method" })
   method?: string;
@@ -34,8 +34,8 @@ export class GetAdminRequestsUnmatchedNearMissesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getAdminRequestsUnmatchedNearMisses200ApplicationJsonObject?: GetAdminRequestsUnmatchedNearMisses200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getAdminRequestsUnmatchedNearMisses200ApplicationJSONObject?: GetAdminRequestsUnmatchedNearMisses200ApplicationJson;
 }

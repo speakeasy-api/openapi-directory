@@ -7,6 +7,6 @@ export declare class PostWalletAccountIdErc20Request extends SpeakeasyBase {
 }
 export declare class PostWalletAccountIdErc20Response extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

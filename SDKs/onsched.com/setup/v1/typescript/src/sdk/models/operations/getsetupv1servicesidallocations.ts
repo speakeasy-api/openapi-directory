@@ -43,7 +43,7 @@ export class GetSetupV1ServicesIdAllocationsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  serviceAllocationListViewModel?: Map<string, any>;
+  serviceAllocationListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

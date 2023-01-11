@@ -7,6 +7,6 @@ export declare class GetAddressRequest extends SpeakeasyBase {
 }
 export declare class GetAddressResponse extends SpeakeasyBase {
     contentType: string;
-    getAddress200ApplicationJsonAny?: any;
     statusCode: number;
+    getAddress200ApplicationJSONAny?: any;
 }

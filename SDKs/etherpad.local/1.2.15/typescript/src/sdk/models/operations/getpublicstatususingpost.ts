@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetPublicStatusUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -31,7 +31,7 @@ export class GetPublicStatusUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class GetPublicStatusUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class GetPublicStatusUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class GetPublicStatusUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getPublicStatusUsingPost200ApplicationJsonObject?: GetPublicStatusUsingPost200ApplicationJson;
+  getPublicStatusUsingPOST200ApplicationJSONObject?: GetPublicStatusUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getPublicStatusUsingPost400ApplicationJsonObject?: GetPublicStatusUsingPost400ApplicationJson;
+  getPublicStatusUsingPOST400ApplicationJSONObject?: GetPublicStatusUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getPublicStatusUsingPost401ApplicationJsonObject?: GetPublicStatusUsingPost401ApplicationJson;
+  getPublicStatusUsingPOST401ApplicationJSONObject?: GetPublicStatusUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getPublicStatusUsingPost500ApplicationJsonObject?: GetPublicStatusUsingPost500ApplicationJson;
+  getPublicStatusUsingPOST500ApplicationJSONObject?: GetPublicStatusUsingPost500ApplicationJson;
 }

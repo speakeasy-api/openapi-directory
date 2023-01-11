@@ -9,6 +9,6 @@ export declare class CreateArtifactRuleRequest extends SpeakeasyBase {
 }
 export declare class CreateArtifactRuleResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

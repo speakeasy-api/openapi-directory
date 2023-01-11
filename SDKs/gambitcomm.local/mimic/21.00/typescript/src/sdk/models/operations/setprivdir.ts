@@ -25,5 +25,5 @@ export class SetPrivdirResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setPrivdir200ApplicationJsonString?: string;
+  setPrivdir200ApplicationJSONString?: string;
 }

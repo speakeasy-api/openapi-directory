@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObjectAccessControl } from "./objectaccesscontrol";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObjectT = exports.ObjectOwner = void 0;
+var utils_1 = require("../../../internal/utils");
+var objectaccesscontrol_1 = require("./objectaccesscontrol");
 // ObjectOwner
 /**
  * The owner of the object. This will always be the uploader of the object.
@@ -34,121 +37,121 @@ var ObjectOwner = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity" }),
         __metadata("design:type", String)
     ], ObjectOwner.prototype, "entity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entityId" }),
         __metadata("design:type", String)
     ], ObjectOwner.prototype, "entityId", void 0);
     return ObjectOwner;
-}(SpeakeasyBase));
-export { ObjectOwner };
-// Object
+}(utils_1.SpeakeasyBase));
+exports.ObjectOwner = ObjectOwner;
+// ObjectT
 /**
  * An object.
 **/
-var Object = /** @class */ (function (_super) {
-    __extends(Object, _super);
-    function Object() {
+var ObjectT = /** @class */ (function (_super) {
+    __extends(ObjectT, _super);
+    function ObjectT() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acl", elemType: ObjectAccessControl }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acl", elemType: objectaccesscontrol_1.ObjectAccessControl }),
         __metadata("design:type", Array)
-    ], Object.prototype, "acl", void 0);
+    ], ObjectT.prototype, "acl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucket" }),
         __metadata("design:type", String)
-    ], Object.prototype, "bucket", void 0);
+    ], ObjectT.prototype, "bucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cacheControl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cacheControl" }),
         __metadata("design:type", String)
-    ], Object.prototype, "cacheControl", void 0);
+    ], ObjectT.prototype, "cacheControl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=componentCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=componentCount" }),
         __metadata("design:type", Number)
-    ], Object.prototype, "componentCount", void 0);
+    ], ObjectT.prototype, "componentCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentDisposition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentDisposition" }),
         __metadata("design:type", String)
-    ], Object.prototype, "contentDisposition", void 0);
+    ], ObjectT.prototype, "contentDisposition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentEncoding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentEncoding" }),
         __metadata("design:type", String)
-    ], Object.prototype, "contentEncoding", void 0);
+    ], ObjectT.prototype, "contentEncoding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentLanguage" }),
         __metadata("design:type", String)
-    ], Object.prototype, "contentLanguage", void 0);
+    ], ObjectT.prototype, "contentLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentType" }),
         __metadata("design:type", String)
-    ], Object.prototype, "contentType", void 0);
+    ], ObjectT.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crc32c" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crc32c" }),
         __metadata("design:type", String)
-    ], Object.prototype, "crc32c", void 0);
+    ], ObjectT.prototype, "crc32c", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
-    ], Object.prototype, "etag", void 0);
+    ], ObjectT.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=generation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=generation" }),
         __metadata("design:type", String)
-    ], Object.prototype, "generation", void 0);
+    ], ObjectT.prototype, "generation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
-    ], Object.prototype, "id", void 0);
+    ], ObjectT.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
-    ], Object.prototype, "kind", void 0);
+    ], ObjectT.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=md5Hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=md5Hash" }),
         __metadata("design:type", String)
-    ], Object.prototype, "md5Hash", void 0);
+    ], ObjectT.prototype, "md5Hash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mediaLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mediaLink" }),
         __metadata("design:type", String)
-    ], Object.prototype, "mediaLink", void 0);
+    ], ObjectT.prototype, "mediaLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
-    ], Object.prototype, "metadata", void 0);
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
+    ], ObjectT.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metageneration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metageneration" }),
         __metadata("design:type", String)
-    ], Object.prototype, "metageneration", void 0);
+    ], ObjectT.prototype, "metageneration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
-    ], Object.prototype, "name", void 0);
+    ], ObjectT.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
         __metadata("design:type", ObjectOwner)
-    ], Object.prototype, "owner", void 0);
+    ], ObjectT.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
-    ], Object.prototype, "selfLink", void 0);
+    ], ObjectT.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", String)
-    ], Object.prototype, "size", void 0);
+    ], ObjectT.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageClass" }),
         __metadata("design:type", String)
-    ], Object.prototype, "storageClass", void 0);
+    ], ObjectT.prototype, "storageClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeDeleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeDeleted" }),
         __metadata("design:type", Date)
-    ], Object.prototype, "timeDeleted", void 0);
+    ], ObjectT.prototype, "timeDeleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", Date)
-    ], Object.prototype, "updated", void 0);
-    return Object;
-}(SpeakeasyBase));
-export { Object };
+    ], ObjectT.prototype, "updated", void 0);
+    return ObjectT;
+}(utils_1.SpeakeasyBase));
+exports.ObjectT = ObjectT;

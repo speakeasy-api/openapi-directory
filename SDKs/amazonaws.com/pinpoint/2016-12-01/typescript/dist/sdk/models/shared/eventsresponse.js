@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ItemResponse } from "./itemresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var itemresponse_1 = require("./itemresponse");
 // EventsResponse
 /**
  * Provides information about endpoints and the events that they're associated with.
@@ -34,9 +37,9 @@ var EventsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Results", elemType: ItemResponse }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Results", elemType: itemresponse_1.ItemResponse }),
+        __metadata("design:type", Object)
     ], EventsResponse.prototype, "results", void 0);
     return EventsResponse;
-}(SpeakeasyBase));
-export { EventsResponse };
+}(utils_1.SpeakeasyBase));
+exports.EventsResponse = EventsResponse;

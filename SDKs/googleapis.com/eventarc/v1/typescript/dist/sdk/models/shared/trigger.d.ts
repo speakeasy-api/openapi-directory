@@ -9,12 +9,12 @@ import { TransportInput } from "./transport";
 **/
 export declare class Trigger extends SpeakeasyBase {
     channel?: string;
-    conditions?: Map<string, StateCondition>;
+    conditions?: Record<string, StateCondition>;
     createTime?: string;
     destination?: Destination;
     etag?: string;
     eventFilters?: EventFilter[];
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     serviceAccount?: string;
     transport?: Transport;
@@ -28,7 +28,7 @@ export declare class TriggerInput extends SpeakeasyBase {
     channel?: string;
     destination?: Destination;
     eventFilters?: EventFilter[];
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     serviceAccount?: string;
     transport?: TransportInput;

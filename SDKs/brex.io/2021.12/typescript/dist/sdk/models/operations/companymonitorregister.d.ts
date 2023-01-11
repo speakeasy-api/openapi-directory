@@ -16,8 +16,8 @@ export declare class CompanyMonitorRegisterRequest extends SpeakeasyBase {
     security: CompanyMonitorRegisterSecurity;
 }
 export declare class CompanyMonitorRegisterResponse extends SpeakeasyBase {
-    companyMonitorRegister200ApplicationJsonAny?: any;
-    companyMonitorRegisterDefaultApplicationJsonAny?: any;
+    companyMonitorRegister200ApplicationJSONAny?: any;
+    companyMonitorRegisterDefaultApplicationJSONAny?: any;
     contentType: string;
     statusCode: number;
 }

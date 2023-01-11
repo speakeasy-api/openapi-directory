@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,102 +23,104 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetNamesInsideOutputFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNamesInsideResponse = exports.GetNamesInsideRequest = exports.GetNamesInsideQueryParams = exports.GetNamesInsideSortByEnum = exports.GetNamesInsideOutputStyleEnum = exports.GetNamesInsideOutputFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetNamesInsideOutputFormatEnum;
 (function (GetNamesInsideOutputFormatEnum) {
     GetNamesInsideOutputFormatEnum["Json"] = "json";
     GetNamesInsideOutputFormatEnum["Xml"] = "xml";
     GetNamesInsideOutputFormatEnum["Kml"] = "kml";
     GetNamesInsideOutputFormatEnum["Csv"] = "csv";
-})(GetNamesInsideOutputFormatEnum || (GetNamesInsideOutputFormatEnum = {}));
-export var GetNamesInsideOutputStyleEnum;
+})(GetNamesInsideOutputFormatEnum = exports.GetNamesInsideOutputFormatEnum || (exports.GetNamesInsideOutputFormatEnum = {}));
+var GetNamesInsideOutputStyleEnum;
 (function (GetNamesInsideOutputStyleEnum) {
     GetNamesInsideOutputStyleEnum["Summary"] = "summary";
     GetNamesInsideOutputStyleEnum["Detail"] = "detail";
-})(GetNamesInsideOutputStyleEnum || (GetNamesInsideOutputStyleEnum = {}));
-export var GetNamesInsideSortByEnum;
+})(GetNamesInsideOutputStyleEnum = exports.GetNamesInsideOutputStyleEnum || (exports.GetNamesInsideOutputStyleEnum = {}));
+var GetNamesInsideSortByEnum;
 (function (GetNamesInsideSortByEnum) {
     GetNamesInsideSortByEnum["Name"] = "name";
     GetNamesInsideSortByEnum["FeatureType"] = "featureType";
     GetNamesInsideSortByEnum["DecisionDate"] = "decisionDate";
-})(GetNamesInsideSortByEnum || (GetNamesInsideSortByEnum = {}));
+})(GetNamesInsideSortByEnum = exports.GetNamesInsideSortByEnum || (exports.GetNamesInsideSortByEnum = {}));
 var GetNamesInsideQueryParams = /** @class */ (function (_super) {
     __extends(GetNamesInsideQueryParams, _super);
     function GetNamesInsideQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=bbox" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=bbox" }),
         __metadata("design:type", String)
     ], GetNamesInsideQueryParams.prototype, "bbox", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=embed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=embed" }),
         __metadata("design:type", Number)
     ], GetNamesInsideQueryParams.prototype, "embed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=featureCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=featureCategory" }),
         __metadata("design:type", String)
     ], GetNamesInsideQueryParams.prototype, "featureCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=featureClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=featureClass" }),
         __metadata("design:type", String)
     ], GetNamesInsideQueryParams.prototype, "featureClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=featureType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=featureType" }),
         __metadata("design:type", String)
     ], GetNamesInsideQueryParams.prototype, "featureType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=itemsPerPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=itemsPerPage" }),
         __metadata("design:type", Number)
     ], GetNamesInsideQueryParams.prototype, "itemsPerPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputFormat" }),
         __metadata("design:type", String)
     ], GetNamesInsideQueryParams.prototype, "outputFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
         __metadata("design:type", Number)
-    ], GetNamesInsideQueryParams.prototype, "outputSrs", void 0);
+    ], GetNamesInsideQueryParams.prototype, "outputSRS", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputStyle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputStyle" }),
         __metadata("design:type", String)
     ], GetNamesInsideQueryParams.prototype, "outputStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sortBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sortBy" }),
         __metadata("design:type", String)
     ], GetNamesInsideQueryParams.prototype, "sortBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startIndex" }),
         __metadata("design:type", Number)
     ], GetNamesInsideQueryParams.prototype, "startIndex", void 0);
     return GetNamesInsideQueryParams;
-}(SpeakeasyBase));
-export { GetNamesInsideQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNamesInsideQueryParams = GetNamesInsideQueryParams;
 var GetNamesInsideRequest = /** @class */ (function (_super) {
     __extends(GetNamesInsideRequest, _super);
     function GetNamesInsideRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNamesInsideQueryParams)
     ], GetNamesInsideRequest.prototype, "queryParams", void 0);
     return GetNamesInsideRequest;
-}(SpeakeasyBase));
-export { GetNamesInsideRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNamesInsideRequest = GetNamesInsideRequest;
 var GetNamesInsideResponse = /** @class */ (function (_super) {
     __extends(GetNamesInsideResponse, _super);
     function GetNamesInsideResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNamesInsideResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNamesInsideResponse.prototype, "statusCode", void 0);
     return GetNamesInsideResponse;
-}(SpeakeasyBase));
-export { GetNamesInsideResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNamesInsideResponse = GetNamesInsideResponse;

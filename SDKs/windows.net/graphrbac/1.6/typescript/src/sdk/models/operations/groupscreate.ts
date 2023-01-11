@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class GroupsCreatePathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" })
-  tenantId: string;
+  tenantID: string;
 }
 
 
@@ -17,10 +17,10 @@ export class GroupsCreateQueryParams extends SpeakeasyBase {
 
 export class GroupsCreateRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  groupCreateParameters?: Map<string, Map<string, any>>;
+  groupCreateParameters?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata({ data: "request, media_type=text/json" })
-  groupCreateParameters1?: Map<string, Map<string, any>>;
+  groupCreateParameters1?: Record<string, Record<string, any>>;
 }
 
 
@@ -38,7 +38,7 @@ export class GroupsCreateRequest extends SpeakeasyBase {
 
 export class GroupsCreateResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  adGroup?: Map<string, Map<string, any>>;
+  adGroup?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata()
   contentType: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutConsumerV1AppointmentsIdNoshowResponse = exports.PutConsumerV1AppointmentsIdNoshowRequest = exports.PutConsumerV1AppointmentsIdNoshowRequests = exports.PutConsumerV1AppointmentsIdNoshowPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PutConsumerV1AppointmentsIdNoshowPathParams = /** @class */ (function (_super) {
     __extends(PutConsumerV1AppointmentsIdNoshowPathParams, _super);
     function PutConsumerV1AppointmentsIdNoshowPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PutConsumerV1AppointmentsIdNoshowPathParams.prototype, "id", void 0);
     return PutConsumerV1AppointmentsIdNoshowPathParams;
-}(SpeakeasyBase));
-export { PutConsumerV1AppointmentsIdNoshowPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PutConsumerV1AppointmentsIdNoshowPathParams = PutConsumerV1AppointmentsIdNoshowPathParams;
 var PutConsumerV1AppointmentsIdNoshowRequests = /** @class */ (function (_super) {
     __extends(PutConsumerV1AppointmentsIdNoshowRequests, _super);
     function PutConsumerV1AppointmentsIdNoshowRequests() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/*+json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/*+json" }),
+        __metadata("design:type", Object)
     ], PutConsumerV1AppointmentsIdNoshowRequests.prototype, "appointmentNoShowModel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], PutConsumerV1AppointmentsIdNoshowRequests.prototype, "appointmentNoShowModel1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json-patch+json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json-patch+json" }),
+        __metadata("design:type", Object)
     ], PutConsumerV1AppointmentsIdNoshowRequests.prototype, "appointmentNoShowModel2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/json" }),
+        __metadata("design:type", Object)
     ], PutConsumerV1AppointmentsIdNoshowRequests.prototype, "appointmentNoShowModel3", void 0);
     return PutConsumerV1AppointmentsIdNoshowRequests;
-}(SpeakeasyBase));
-export { PutConsumerV1AppointmentsIdNoshowRequests };
+}(utils_1.SpeakeasyBase));
+exports.PutConsumerV1AppointmentsIdNoshowRequests = PutConsumerV1AppointmentsIdNoshowRequests;
 var PutConsumerV1AppointmentsIdNoshowRequest = /** @class */ (function (_super) {
     __extends(PutConsumerV1AppointmentsIdNoshowRequest, _super);
     function PutConsumerV1AppointmentsIdNoshowRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutConsumerV1AppointmentsIdNoshowPathParams)
     ], PutConsumerV1AppointmentsIdNoshowRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutConsumerV1AppointmentsIdNoshowRequests)
     ], PutConsumerV1AppointmentsIdNoshowRequest.prototype, "request", void 0);
     return PutConsumerV1AppointmentsIdNoshowRequest;
-}(SpeakeasyBase));
-export { PutConsumerV1AppointmentsIdNoshowRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutConsumerV1AppointmentsIdNoshowRequest = PutConsumerV1AppointmentsIdNoshowRequest;
 var PutConsumerV1AppointmentsIdNoshowResponse = /** @class */ (function (_super) {
     __extends(PutConsumerV1AppointmentsIdNoshowResponse, _super);
     function PutConsumerV1AppointmentsIdNoshowResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PutConsumerV1AppointmentsIdNoshowResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PutConsumerV1AppointmentsIdNoshowResponse.prototype, "statusCode", void 0);
     return PutConsumerV1AppointmentsIdNoshowResponse;
-}(SpeakeasyBase));
-export { PutConsumerV1AppointmentsIdNoshowResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutConsumerV1AppointmentsIdNoshowResponse = PutConsumerV1AppointmentsIdNoshowResponse;

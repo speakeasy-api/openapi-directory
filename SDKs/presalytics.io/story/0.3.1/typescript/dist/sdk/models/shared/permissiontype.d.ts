@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * A permission type that can be applied to story collaborator
+ * Base model for all types
 **/
 export declare class PermissionType extends SpeakeasyBase {
     canAddCollaborators?: boolean;

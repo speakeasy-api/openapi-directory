@@ -13,7 +13,7 @@ export declare class TeamsListPendingInvitationsLegacyRequest extends SpeakeasyB
 }
 export declare class TeamsListPendingInvitationsLegacyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     organizationInvitations?: shared.OrganizationInvitation[];
 }

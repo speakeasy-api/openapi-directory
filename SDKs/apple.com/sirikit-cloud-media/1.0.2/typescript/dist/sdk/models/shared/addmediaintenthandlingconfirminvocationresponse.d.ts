@@ -4,5 +4,5 @@ export declare class AddMediaIntentHandlingConfirmInvocationResponse extends Spe
     debug?: string;
     method: string;
     metrics?: ExecutionMetrics;
-    result: Map<string, any>;
+    result: Record<string, any>;
 }

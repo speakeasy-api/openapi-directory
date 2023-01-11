@@ -74,7 +74,7 @@ export class IssuesCreateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
@@ -86,7 +86,7 @@ export class IssuesCreateResponse extends SpeakeasyBase {
   issue?: shared.Issue;
 
   @SpeakeasyMetadata()
-  issuesCreate503ApplicationJsonObject?: IssuesCreate503ApplicationJson;
+  issuesCreate503ApplicationJSONObject?: IssuesCreate503ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

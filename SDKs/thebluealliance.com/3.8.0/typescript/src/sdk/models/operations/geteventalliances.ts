@@ -41,7 +41,7 @@ export class GetEventAlliancesResponse extends SpeakeasyBase {
   eliminationAlliances?: shared.EliminationAlliance[];
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

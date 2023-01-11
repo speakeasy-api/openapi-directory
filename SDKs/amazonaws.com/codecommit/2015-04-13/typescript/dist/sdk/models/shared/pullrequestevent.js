@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApprovalRuleEventMetadata } from "./approvalruleeventmetadata";
-import { ApprovalRuleOverriddenEventMetadata } from "./approvalruleoverriddeneventmetadata";
-import { ApprovalStateChangedEventMetadata } from "./approvalstatechangedeventmetadata";
-import { PullRequestCreatedEventMetadata } from "./pullrequestcreatedeventmetadata";
-import { PullRequestEventTypeEnum } from "./pullrequesteventtypeenum";
-import { PullRequestMergedStateChangedEventMetadata } from "./pullrequestmergedstatechangedeventmetadata";
-import { PullRequestSourceReferenceUpdatedEventMetadata } from "./pullrequestsourcereferenceupdatedeventmetadata";
-import { PullRequestStatusChangedEventMetadata } from "./pullrequeststatuschangedeventmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PullRequestEvent = void 0;
+var utils_1 = require("../../../internal/utils");
+var approvalruleeventmetadata_1 = require("./approvalruleeventmetadata");
+var approvalruleoverriddeneventmetadata_1 = require("./approvalruleoverriddeneventmetadata");
+var approvalstatechangedeventmetadata_1 = require("./approvalstatechangedeventmetadata");
+var pullrequestcreatedeventmetadata_1 = require("./pullrequestcreatedeventmetadata");
+var pullrequesteventtypeenum_1 = require("./pullrequesteventtypeenum");
+var pullrequestmergedstatechangedeventmetadata_1 = require("./pullrequestmergedstatechangedeventmetadata");
+var pullrequestsourcereferenceupdatedeventmetadata_1 = require("./pullrequestsourcereferenceupdatedeventmetadata");
+var pullrequeststatuschangedeventmetadata_1 = require("./pullrequeststatuschangedeventmetadata");
 // PullRequestEvent
 /**
  * Returns information about a pull request event.
@@ -41,49 +44,49 @@ var PullRequestEvent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actorArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actorArn" }),
         __metadata("design:type", String)
     ], PullRequestEvent.prototype, "actorArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvalRuleEventMetadata" }),
-        __metadata("design:type", ApprovalRuleEventMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvalRuleEventMetadata" }),
+        __metadata("design:type", approvalruleeventmetadata_1.ApprovalRuleEventMetadata)
     ], PullRequestEvent.prototype, "approvalRuleEventMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvalRuleOverriddenEventMetadata" }),
-        __metadata("design:type", ApprovalRuleOverriddenEventMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvalRuleOverriddenEventMetadata" }),
+        __metadata("design:type", approvalruleoverriddeneventmetadata_1.ApprovalRuleOverriddenEventMetadata)
     ], PullRequestEvent.prototype, "approvalRuleOverriddenEventMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvalStateChangedEventMetadata" }),
-        __metadata("design:type", ApprovalStateChangedEventMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvalStateChangedEventMetadata" }),
+        __metadata("design:type", approvalstatechangedeventmetadata_1.ApprovalStateChangedEventMetadata)
     ], PullRequestEvent.prototype, "approvalStateChangedEventMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventDate" }),
         __metadata("design:type", Date)
     ], PullRequestEvent.prototype, "eventDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pullRequestCreatedEventMetadata" }),
-        __metadata("design:type", PullRequestCreatedEventMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pullRequestCreatedEventMetadata" }),
+        __metadata("design:type", pullrequestcreatedeventmetadata_1.PullRequestCreatedEventMetadata)
     ], PullRequestEvent.prototype, "pullRequestCreatedEventMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pullRequestEventType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pullRequestEventType" }),
         __metadata("design:type", String)
     ], PullRequestEvent.prototype, "pullRequestEventType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pullRequestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pullRequestId" }),
         __metadata("design:type", String)
     ], PullRequestEvent.prototype, "pullRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pullRequestMergedStateChangedEventMetadata" }),
-        __metadata("design:type", PullRequestMergedStateChangedEventMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pullRequestMergedStateChangedEventMetadata" }),
+        __metadata("design:type", pullrequestmergedstatechangedeventmetadata_1.PullRequestMergedStateChangedEventMetadata)
     ], PullRequestEvent.prototype, "pullRequestMergedStateChangedEventMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pullRequestSourceReferenceUpdatedEventMetadata" }),
-        __metadata("design:type", PullRequestSourceReferenceUpdatedEventMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pullRequestSourceReferenceUpdatedEventMetadata" }),
+        __metadata("design:type", pullrequestsourcereferenceupdatedeventmetadata_1.PullRequestSourceReferenceUpdatedEventMetadata)
     ], PullRequestEvent.prototype, "pullRequestSourceReferenceUpdatedEventMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pullRequestStatusChangedEventMetadata" }),
-        __metadata("design:type", PullRequestStatusChangedEventMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pullRequestStatusChangedEventMetadata" }),
+        __metadata("design:type", pullrequeststatuschangedeventmetadata_1.PullRequestStatusChangedEventMetadata)
     ], PullRequestEvent.prototype, "pullRequestStatusChangedEventMetadata", void 0);
     return PullRequestEvent;
-}(SpeakeasyBase));
-export { PullRequestEvent };
+}(utils_1.SpeakeasyBase));
+exports.PullRequestEvent = PullRequestEvent;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EpisodeObject } from "./episodeobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SavedEpisodeObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var episodeobject_1 = require("./episodeobject");
 // SavedEpisodeObject
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-savedepisodeobject - Find more info on the official Spotify Web API Reference
@@ -34,13 +37,13 @@ var SavedEpisodeObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=added_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=added_at" }),
         __metadata("design:type", Date)
     ], SavedEpisodeObject.prototype, "addedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=episode" }),
-        __metadata("design:type", EpisodeObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=episode" }),
+        __metadata("design:type", episodeobject_1.EpisodeObject)
     ], SavedEpisodeObject.prototype, "episode", void 0);
     return SavedEpisodeObject;
-}(SpeakeasyBase));
-export { SavedEpisodeObject };
+}(utils_1.SpeakeasyBase));
+exports.SavedEpisodeObject = SavedEpisodeObject;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRetiredObjectCountUsingGetResponse = exports.GetRetiredObjectCountUsingGetRequest = exports.GetRetiredObjectCountUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetRetiredObjectCountUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetRetiredObjectCountUsingGetPathParams, _super);
     function GetRetiredObjectCountUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetRetiredObjectCountUsingGetPathParams.prototype, "dateYyyymmdd", void 0);
+    ], GetRetiredObjectCountUsingGetPathParams.prototype, "dateYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
         __metadata("design:type", Number)
     ], GetRetiredObjectCountUsingGetPathParams.prototype, "speciesTypeKey", void 0);
     return GetRetiredObjectCountUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetRetiredObjectCountUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRetiredObjectCountUsingGetPathParams = GetRetiredObjectCountUsingGetPathParams;
 var GetRetiredObjectCountUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetRetiredObjectCountUsingGetRequest, _super);
     function GetRetiredObjectCountUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRetiredObjectCountUsingGetPathParams)
     ], GetRetiredObjectCountUsingGetRequest.prototype, "pathParams", void 0);
     return GetRetiredObjectCountUsingGetRequest;
-}(SpeakeasyBase));
-export { GetRetiredObjectCountUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRetiredObjectCountUsingGetRequest = GetRetiredObjectCountUsingGetRequest;
 var GetRetiredObjectCountUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetRetiredObjectCountUsingGetResponse, _super);
     function GetRetiredObjectCountUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetRetiredObjectCountUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRetiredObjectCountUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRetiredObjectCountUsingGetResponse.prototype, "statusCode", void 0);
     return GetRetiredObjectCountUsingGetResponse;
-}(SpeakeasyBase));
-export { GetRetiredObjectCountUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRetiredObjectCountUsingGetResponse = GetRetiredObjectCountUsingGetResponse;

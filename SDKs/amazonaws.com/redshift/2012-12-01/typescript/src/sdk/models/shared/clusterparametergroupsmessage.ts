@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClusterParameterGroup } from "./clusterparametergroup";
+import { ParameterGroupList } from "./parametergrouplist";
 
 
 
@@ -11,6 +11,6 @@ export class ClusterParameterGroupsMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: ClusterParameterGroup })
-  parameterGroups?: ClusterParameterGroup[];
+  @SpeakeasyMetadata({ elemType: ParameterGroupList })
+  parameterGroups?: ParameterGroupList[];
 }

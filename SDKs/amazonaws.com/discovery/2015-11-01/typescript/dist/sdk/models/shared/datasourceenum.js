@@ -1,4 +1,7 @@
-export var DataSourceEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataSourceEnum = void 0;
+var DataSourceEnum;
 (function (DataSourceEnum) {
     DataSourceEnum["Agent"] = "AGENT";
-})(DataSourceEnum || (DataSourceEnum = {}));
+})(DataSourceEnum = exports.DataSourceEnum || (exports.DataSourceEnum = {}));

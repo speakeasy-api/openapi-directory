@@ -8,7 +8,7 @@ export declare enum GetAttachLoadBalancerTargetGroupsVersionEnum {
 export declare class GetAttachLoadBalancerTargetGroupsQueryParams extends SpeakeasyBase {
     action: GetAttachLoadBalancerTargetGroupsActionEnum;
     autoScalingGroupName: string;
-    targetGroupArNs: string[];
+    targetGroupARNs: string[];
     version: GetAttachLoadBalancerTargetGroupsVersionEnum;
 }
 export declare class GetAttachLoadBalancerTargetGroupsHeaders extends SpeakeasyBase {

@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SpotPrice } from "./spotprice";
 
 
 
@@ -9,8 +8,8 @@ import { SpotPrice } from "./spotprice";
 **/
 export class DescribeSpotPriceHistoryResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: SpotPrice })
-  spotPriceHistory?: SpotPrice[];
+  @SpeakeasyMetadata()
+  spotPriceHistory?: Record<string, any>;
 }

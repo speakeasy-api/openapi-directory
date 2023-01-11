@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RestorePlan } from "./restoreplan";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListRestorePlansResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var restoreplan_1 = require("./restoreplan");
 // ListRestorePlansResponse
 /**
  * Response message for ListRestorePlans.
@@ -34,17 +37,17 @@ var ListRestorePlansResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListRestorePlansResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restorePlans", elemType: RestorePlan }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restorePlans", elemType: restoreplan_1.RestorePlan }),
         __metadata("design:type", Array)
     ], ListRestorePlansResponse.prototype, "restorePlans", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unreachable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unreachable" }),
         __metadata("design:type", Array)
     ], ListRestorePlansResponse.prototype, "unreachable", void 0);
     return ListRestorePlansResponse;
-}(SpeakeasyBase));
-export { ListRestorePlansResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListRestorePlansResponse = ListRestorePlansResponse;

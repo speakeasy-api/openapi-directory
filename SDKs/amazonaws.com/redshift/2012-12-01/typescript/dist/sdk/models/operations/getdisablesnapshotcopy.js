@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDisableSnapshotCopyActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDisableSnapshotCopyResponse = exports.GetDisableSnapshotCopyRequest = exports.GetDisableSnapshotCopyHeaders = exports.GetDisableSnapshotCopyQueryParams = exports.GetDisableSnapshotCopyVersionEnum = exports.GetDisableSnapshotCopyActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDisableSnapshotCopyActionEnum;
 (function (GetDisableSnapshotCopyActionEnum) {
     GetDisableSnapshotCopyActionEnum["DisableSnapshotCopy"] = "DisableSnapshotCopy";
-})(GetDisableSnapshotCopyActionEnum || (GetDisableSnapshotCopyActionEnum = {}));
-export var GetDisableSnapshotCopyVersionEnum;
+})(GetDisableSnapshotCopyActionEnum = exports.GetDisableSnapshotCopyActionEnum || (exports.GetDisableSnapshotCopyActionEnum = {}));
+var GetDisableSnapshotCopyVersionEnum;
 (function (GetDisableSnapshotCopyVersionEnum) {
     GetDisableSnapshotCopyVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(GetDisableSnapshotCopyVersionEnum || (GetDisableSnapshotCopyVersionEnum = {}));
+})(GetDisableSnapshotCopyVersionEnum = exports.GetDisableSnapshotCopyVersionEnum || (exports.GetDisableSnapshotCopyVersionEnum = {}));
 var GetDisableSnapshotCopyQueryParams = /** @class */ (function (_super) {
     __extends(GetDisableSnapshotCopyQueryParams, _super);
     function GetDisableSnapshotCopyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDisableSnapshotCopyQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ClusterIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ClusterIdentifier" }),
         __metadata("design:type", String)
     ], GetDisableSnapshotCopyQueryParams.prototype, "clusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDisableSnapshotCopyQueryParams.prototype, "version", void 0);
     return GetDisableSnapshotCopyQueryParams;
-}(SpeakeasyBase));
-export { GetDisableSnapshotCopyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDisableSnapshotCopyQueryParams = GetDisableSnapshotCopyQueryParams;
 var GetDisableSnapshotCopyHeaders = /** @class */ (function (_super) {
     __extends(GetDisableSnapshotCopyHeaders, _super);
     function GetDisableSnapshotCopyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDisableSnapshotCopyHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDisableSnapshotCopyHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDisableSnapshotCopyHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDisableSnapshotCopyHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDisableSnapshotCopyHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDisableSnapshotCopyHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDisableSnapshotCopyHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDisableSnapshotCopyHeaders;
-}(SpeakeasyBase));
-export { GetDisableSnapshotCopyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDisableSnapshotCopyHeaders = GetDisableSnapshotCopyHeaders;
 var GetDisableSnapshotCopyRequest = /** @class */ (function (_super) {
     __extends(GetDisableSnapshotCopyRequest, _super);
     function GetDisableSnapshotCopyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDisableSnapshotCopyQueryParams)
     ], GetDisableSnapshotCopyRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDisableSnapshotCopyHeaders)
     ], GetDisableSnapshotCopyRequest.prototype, "headers", void 0);
     return GetDisableSnapshotCopyRequest;
-}(SpeakeasyBase));
-export { GetDisableSnapshotCopyRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDisableSnapshotCopyRequest = GetDisableSnapshotCopyRequest;
 var GetDisableSnapshotCopyResponse = /** @class */ (function (_super) {
     __extends(GetDisableSnapshotCopyResponse, _super);
     function GetDisableSnapshotCopyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDisableSnapshotCopyResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDisableSnapshotCopyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDisableSnapshotCopyResponse.prototype, "statusCode", void 0);
     return GetDisableSnapshotCopyResponse;
-}(SpeakeasyBase));
-export { GetDisableSnapshotCopyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDisableSnapshotCopyResponse = GetDisableSnapshotCopyResponse;

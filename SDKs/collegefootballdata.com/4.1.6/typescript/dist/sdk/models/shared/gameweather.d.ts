@@ -7,7 +7,7 @@ export declare class GameWeather extends SpeakeasyBase {
     homeTeam?: string;
     humidity?: number;
     id?: number;
-    isStartTimeTbd?: boolean;
+    isStartTimeTBD?: boolean;
     precipitation?: number;
     pressure?: number;
     season?: number;

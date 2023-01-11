@@ -11,7 +11,7 @@ export declare enum GetSetQueueAttributesVersionEnum {
 }
 export declare class GetSetQueueAttributesQueryParams extends SpeakeasyBase {
     action: GetSetQueueAttributesActionEnum;
-    attribute: Map<string, string>;
+    attribute: Record<string, string>;
     version: GetSetQueueAttributesVersionEnum;
 }
 export declare class GetSetQueueAttributesHeaders extends SpeakeasyBase {

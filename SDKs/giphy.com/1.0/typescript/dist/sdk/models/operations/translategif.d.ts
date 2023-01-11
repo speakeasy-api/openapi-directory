@@ -13,5 +13,5 @@ export declare class TranslateGifRequest extends SpeakeasyBase {
 export declare class TranslateGifResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    translateGif200ApplicationJsonObject?: TranslateGif200ApplicationJson;
+    translateGif200ApplicationJSONObject?: TranslateGif200ApplicationJson;
 }

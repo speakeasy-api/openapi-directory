@@ -1,4 +1,7 @@
-export var AttributeTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttributeTypeEnum = void 0;
+var AttributeTypeEnum;
 (function (AttributeTypeEnum) {
     AttributeTypeEnum["Inclusive"] = "INCLUSIVE";
     AttributeTypeEnum["Exclusive"] = "EXCLUSIVE";
@@ -7,4 +10,4 @@ export var AttributeTypeEnum;
     AttributeTypeEnum["After"] = "AFTER";
     AttributeTypeEnum["On"] = "ON";
     AttributeTypeEnum["Between"] = "BETWEEN";
-})(AttributeTypeEnum || (AttributeTypeEnum = {}));
+})(AttributeTypeEnum = exports.AttributeTypeEnum || (exports.AttributeTypeEnum = {}));

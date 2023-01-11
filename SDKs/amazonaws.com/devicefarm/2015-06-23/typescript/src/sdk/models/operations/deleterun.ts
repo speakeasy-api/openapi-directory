@@ -51,7 +51,7 @@ export class DeleteRunResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteRunResult?: Map<string, any>;
+  deleteRunResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   limitExceededException?: any;

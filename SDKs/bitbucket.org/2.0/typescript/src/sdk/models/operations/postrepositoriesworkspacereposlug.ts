@@ -29,7 +29,7 @@ export class PostRepositoriesWorkspaceRepoSlugRequest extends SpeakeasyBase {
   pathParams: PostRepositoriesWorkspaceRepoSlugPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: PostRepositoriesWorkspaceRepoSlugSecurity;
@@ -44,8 +44,8 @@ export class PostRepositoriesWorkspaceRepoSlugResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  repository?: Map<string, any>;
+  repository?: Record<string, any>;
 }

@@ -4,7 +4,7 @@ export declare class PostV05PatientsFindHeaders extends SpeakeasyBase {
     authorization: string;
 }
 export declare class PostV05PatientsFindRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     patientIdentificationRequest?: shared.PatientIdentificationRequest;
 }
 export declare class PostV05PatientsFindRequest extends SpeakeasyBase {

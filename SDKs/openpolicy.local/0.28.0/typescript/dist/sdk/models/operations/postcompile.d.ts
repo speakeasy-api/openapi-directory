@@ -80,11 +80,11 @@ export declare class PostCompile200ApplicationJson extends SpeakeasyBase {
 }
 export declare class PostCompileRequest extends SpeakeasyBase {
     queryParams: PostCompileQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class PostCompileResponse extends SpeakeasyBase {
     fourHundred?: shared.FourHundred;
     contentType: string;
     statusCode: number;
-    postCompile200ApplicationJsonObject?: PostCompile200ApplicationJson;
+    postCompile200ApplicationJSONObject?: PostCompile200ApplicationJson;
 }

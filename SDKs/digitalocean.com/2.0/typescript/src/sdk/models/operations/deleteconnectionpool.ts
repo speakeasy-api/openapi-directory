@@ -1,47 +1,48 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class DeleteConnectionPoolPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=database_cluster_uuid" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=database_cluster_uuid" })
   databaseClusterUuid: string;
 
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=pool_name" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=pool_name" })
   poolName: string;
 }
 
 
-export class DeleteConnectionPoolRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: DeleteConnectionPoolPathParams;
-}
-
-
 export class DeleteConnectionPool401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class DeleteConnectionPoolRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: DeleteConnectionPoolPathParams;
+}
+
+
 export class DeleteConnectionPoolResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  deleteConnectionPool401ApplicationJsonObject?: DeleteConnectionPool401ApplicationJson;
+  @SpeakeasyMetadata()
+  deleteConnectionPool401ApplicationJSONObject?: DeleteConnectionPool401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

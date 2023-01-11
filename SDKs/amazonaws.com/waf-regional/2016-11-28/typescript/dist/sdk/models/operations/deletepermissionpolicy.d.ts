@@ -19,7 +19,7 @@ export declare class DeletePermissionPolicyRequest extends SpeakeasyBase {
 }
 export declare class DeletePermissionPolicyResponse extends SpeakeasyBase {
     contentType: string;
-    deletePermissionPolicyResponse?: Map<string, any>;
+    deletePermissionPolicyResponse?: Record<string, any>;
     statusCode: number;
     wafInternalErrorException?: any;
     wafNonexistentItemException?: any;

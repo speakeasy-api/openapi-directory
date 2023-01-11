@@ -23,7 +23,7 @@ export declare class VaultMattersCloseSecurity extends SpeakeasyBase {
 export declare class VaultMattersCloseRequest extends SpeakeasyBase {
     pathParams: VaultMattersClosePathParams;
     queryParams: VaultMattersCloseQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: VaultMattersCloseSecurity;
 }
 export declare class VaultMattersCloseResponse extends SpeakeasyBase {

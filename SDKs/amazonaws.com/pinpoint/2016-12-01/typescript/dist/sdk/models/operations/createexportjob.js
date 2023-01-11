@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,65 +14,90 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateExportJobResponse = exports.CreateExportJobRequest = exports.CreateExportJobRequestBody = exports.CreateExportJobRequestBodyExportJobRequest = exports.CreateExportJobHeaders = exports.CreateExportJobPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CreateExportJobPathParams = /** @class */ (function (_super) {
     __extends(CreateExportJobPathParams, _super);
     function CreateExportJobPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=application-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=application-id" }),
         __metadata("design:type", String)
     ], CreateExportJobPathParams.prototype, "applicationId", void 0);
     return CreateExportJobPathParams;
-}(SpeakeasyBase));
-export { CreateExportJobPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateExportJobPathParams = CreateExportJobPathParams;
 var CreateExportJobHeaders = /** @class */ (function (_super) {
     __extends(CreateExportJobHeaders, _super);
     function CreateExportJobHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], CreateExportJobHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], CreateExportJobHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], CreateExportJobHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], CreateExportJobHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], CreateExportJobHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], CreateExportJobHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], CreateExportJobHeaders.prototype, "xAmzSignedHeaders", void 0);
     return CreateExportJobHeaders;
-}(SpeakeasyBase));
-export { CreateExportJobHeaders };
+}(utils_1.SpeakeasyBase));
+exports.CreateExportJobHeaders = CreateExportJobHeaders;
 // CreateExportJobRequestBodyExportJobRequest
 /**
  * Specifies the settings for a job that exports endpoint definitions to an Amazon Simple Storage Service (Amazon S3) bucket.
@@ -82,101 +108,101 @@ var CreateExportJobRequestBodyExportJobRequest = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RoleArn" }),
         __metadata("design:type", String)
     ], CreateExportJobRequestBodyExportJobRequest.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3UrlPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3UrlPrefix" }),
         __metadata("design:type", String)
     ], CreateExportJobRequestBodyExportJobRequest.prototype, "s3UrlPrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SegmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SegmentId" }),
         __metadata("design:type", String)
     ], CreateExportJobRequestBodyExportJobRequest.prototype, "segmentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SegmentVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SegmentVersion" }),
         __metadata("design:type", Number)
     ], CreateExportJobRequestBodyExportJobRequest.prototype, "segmentVersion", void 0);
     return CreateExportJobRequestBodyExportJobRequest;
-}(SpeakeasyBase));
-export { CreateExportJobRequestBodyExportJobRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateExportJobRequestBodyExportJobRequest = CreateExportJobRequestBodyExportJobRequest;
 var CreateExportJobRequestBody = /** @class */ (function (_super) {
     __extends(CreateExportJobRequestBody, _super);
     function CreateExportJobRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExportJobRequest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExportJobRequest" }),
         __metadata("design:type", CreateExportJobRequestBodyExportJobRequest)
     ], CreateExportJobRequestBody.prototype, "exportJobRequest", void 0);
     return CreateExportJobRequestBody;
-}(SpeakeasyBase));
-export { CreateExportJobRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateExportJobRequestBody = CreateExportJobRequestBody;
 var CreateExportJobRequest = /** @class */ (function (_super) {
     __extends(CreateExportJobRequest, _super);
     function CreateExportJobRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateExportJobPathParams)
     ], CreateExportJobRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateExportJobHeaders)
     ], CreateExportJobRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateExportJobRequestBody)
     ], CreateExportJobRequest.prototype, "request", void 0);
     return CreateExportJobRequest;
-}(SpeakeasyBase));
-export { CreateExportJobRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateExportJobRequest = CreateExportJobRequest;
 var CreateExportJobResponse = /** @class */ (function (_super) {
     __extends(CreateExportJobResponse, _super);
     function CreateExportJobResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateExportJobResponse.prototype, "badRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateExportJobResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.CreateExportJobResponse)
     ], CreateExportJobResponse.prototype, "createExportJobResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateExportJobResponse.prototype, "forbiddenException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateExportJobResponse.prototype, "internalServerErrorException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateExportJobResponse.prototype, "methodNotAllowedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateExportJobResponse.prototype, "notFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateExportJobResponse.prototype, "payloadTooLargeException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateExportJobResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateExportJobResponse.prototype, "tooManyRequestsException", void 0);
     return CreateExportJobResponse;
-}(SpeakeasyBase));
-export { CreateExportJobResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateExportJobResponse = CreateExportJobResponse;

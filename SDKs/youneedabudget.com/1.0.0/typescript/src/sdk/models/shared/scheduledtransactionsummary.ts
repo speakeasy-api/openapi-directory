@@ -7,7 +7,8 @@ export enum ScheduledTransactionSummaryFlagColorEnum {
     Yellow = "yellow",
     Green = "green",
     Blue = "blue",
-    Purple = "purple"
+    Purple = "purple",
+    Null = "null"
 }
 
 export enum ScheduledTransactionSummaryFrequencyEnum {

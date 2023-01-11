@@ -5,14 +5,14 @@ export declare class CancelBookingQuotePathParams extends SpeakeasyBase {
     bookingReference: string;
 }
 export declare class CancelBookingQuoteRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     pathParams: CancelBookingQuotePathParams;
 }
 export declare class CancelBookingQuoteResponse extends SpeakeasyBase {
-    fourHundredAndOneUnauthorized?: shared.FourHundredAndOneUnauthorized;
-    fourHundredAndSixNotAcceptable?: shared.FourHundredAndSixNotAcceptable;
-    fiveHundredInternalServerError?: shared.FiveHundredInternalServerError;
-    fiveHundredAndThreeServiceUnavailable?: shared.FiveHundredAndThreeServiceUnavailable;
+    fourHundredAndOneUNAUTHORIZED?: shared.FourHundredAndOneUnauthorized;
+    fourHundredAndSixNOTACCEPTABLE?: shared.FourHundredAndSixNotAcceptable;
+    fiveHundredINTERNALSERVERERROR?: shared.FiveHundredInternalServerError;
+    fiveHundredAndThreeSERVICEUNAVAILABLE?: shared.FiveHundredAndThreeServiceUnavailable;
     cancelBookingQuoteResponse?: shared.CancelBookingQuoteResponse;
     contentType: string;
     statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,142 +14,167 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClassroomCoursesAnnouncementsModifyAssigneesResponse = exports.ClassroomCoursesAnnouncementsModifyAssigneesRequest = exports.ClassroomCoursesAnnouncementsModifyAssigneesSecurity = exports.ClassroomCoursesAnnouncementsModifyAssigneesQueryParams = exports.ClassroomCoursesAnnouncementsModifyAssigneesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ClassroomCoursesAnnouncementsModifyAssigneesPathParams = /** @class */ (function (_super) {
     __extends(ClassroomCoursesAnnouncementsModifyAssigneesPathParams, _super);
     function ClassroomCoursesAnnouncementsModifyAssigneesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=courseId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=courseId" }),
         __metadata("design:type", String)
     ], ClassroomCoursesAnnouncementsModifyAssigneesPathParams.prototype, "courseId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], ClassroomCoursesAnnouncementsModifyAssigneesPathParams.prototype, "id", void 0);
     return ClassroomCoursesAnnouncementsModifyAssigneesPathParams;
-}(SpeakeasyBase));
-export { ClassroomCoursesAnnouncementsModifyAssigneesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ClassroomCoursesAnnouncementsModifyAssigneesPathParams = ClassroomCoursesAnnouncementsModifyAssigneesPathParams;
 var ClassroomCoursesAnnouncementsModifyAssigneesQueryParams = /** @class */ (function (_super) {
     __extends(ClassroomCoursesAnnouncementsModifyAssigneesQueryParams, _super);
     function ClassroomCoursesAnnouncementsModifyAssigneesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], ClassroomCoursesAnnouncementsModifyAssigneesQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], ClassroomCoursesAnnouncementsModifyAssigneesQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], ClassroomCoursesAnnouncementsModifyAssigneesQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], ClassroomCoursesAnnouncementsModifyAssigneesQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], ClassroomCoursesAnnouncementsModifyAssigneesQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], ClassroomCoursesAnnouncementsModifyAssigneesQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], ClassroomCoursesAnnouncementsModifyAssigneesQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], ClassroomCoursesAnnouncementsModifyAssigneesQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], ClassroomCoursesAnnouncementsModifyAssigneesQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], ClassroomCoursesAnnouncementsModifyAssigneesQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], ClassroomCoursesAnnouncementsModifyAssigneesQueryParams.prototype, "uploadProtocol", void 0);
     return ClassroomCoursesAnnouncementsModifyAssigneesQueryParams;
-}(SpeakeasyBase));
-export { ClassroomCoursesAnnouncementsModifyAssigneesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ClassroomCoursesAnnouncementsModifyAssigneesQueryParams = ClassroomCoursesAnnouncementsModifyAssigneesQueryParams;
 var ClassroomCoursesAnnouncementsModifyAssigneesSecurity = /** @class */ (function (_super) {
     __extends(ClassroomCoursesAnnouncementsModifyAssigneesSecurity, _super);
     function ClassroomCoursesAnnouncementsModifyAssigneesSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], ClassroomCoursesAnnouncementsModifyAssigneesSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], ClassroomCoursesAnnouncementsModifyAssigneesSecurity.prototype, "oauth2c", void 0);
     return ClassroomCoursesAnnouncementsModifyAssigneesSecurity;
-}(SpeakeasyBase));
-export { ClassroomCoursesAnnouncementsModifyAssigneesSecurity };
+}(utils_1.SpeakeasyBase));
+exports.ClassroomCoursesAnnouncementsModifyAssigneesSecurity = ClassroomCoursesAnnouncementsModifyAssigneesSecurity;
 var ClassroomCoursesAnnouncementsModifyAssigneesRequest = /** @class */ (function (_super) {
     __extends(ClassroomCoursesAnnouncementsModifyAssigneesRequest, _super);
     function ClassroomCoursesAnnouncementsModifyAssigneesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ClassroomCoursesAnnouncementsModifyAssigneesPathParams)
     ], ClassroomCoursesAnnouncementsModifyAssigneesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ClassroomCoursesAnnouncementsModifyAssigneesQueryParams)
     ], ClassroomCoursesAnnouncementsModifyAssigneesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.ModifyAnnouncementAssigneesRequest)
     ], ClassroomCoursesAnnouncementsModifyAssigneesRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ClassroomCoursesAnnouncementsModifyAssigneesSecurity)
     ], ClassroomCoursesAnnouncementsModifyAssigneesRequest.prototype, "security", void 0);
     return ClassroomCoursesAnnouncementsModifyAssigneesRequest;
-}(SpeakeasyBase));
-export { ClassroomCoursesAnnouncementsModifyAssigneesRequest };
+}(utils_1.SpeakeasyBase));
+exports.ClassroomCoursesAnnouncementsModifyAssigneesRequest = ClassroomCoursesAnnouncementsModifyAssigneesRequest;
 var ClassroomCoursesAnnouncementsModifyAssigneesResponse = /** @class */ (function (_super) {
     __extends(ClassroomCoursesAnnouncementsModifyAssigneesResponse, _super);
     function ClassroomCoursesAnnouncementsModifyAssigneesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Announcement)
     ], ClassroomCoursesAnnouncementsModifyAssigneesResponse.prototype, "announcement", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ClassroomCoursesAnnouncementsModifyAssigneesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ClassroomCoursesAnnouncementsModifyAssigneesResponse.prototype, "statusCode", void 0);
     return ClassroomCoursesAnnouncementsModifyAssigneesResponse;
-}(SpeakeasyBase));
-export { ClassroomCoursesAnnouncementsModifyAssigneesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ClassroomCoursesAnnouncementsModifyAssigneesResponse = ClassroomCoursesAnnouncementsModifyAssigneesResponse;

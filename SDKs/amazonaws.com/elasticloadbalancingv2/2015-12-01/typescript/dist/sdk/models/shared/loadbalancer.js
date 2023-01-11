@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AvailabilityZone } from "./availabilityzone";
-import { IpAddressTypeEnum } from "./ipaddresstypeenum";
-import { LoadBalancerSchemeEnumEnum } from "./loadbalancerschemeenumenum";
-import { LoadBalancerState } from "./loadbalancerstate";
-import { LoadBalancerTypeEnumEnum } from "./loadbalancertypeenumenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadBalancer = void 0;
+var utils_1 = require("../../../internal/utils");
+var availabilityzone_1 = require("./availabilityzone");
+var ipaddresstypeenum_1 = require("./ipaddresstypeenum");
+var loadbalancerschemeenumenum_1 = require("./loadbalancerschemeenumenum");
+var loadbalancerstate_1 = require("./loadbalancerstate");
+var loadbalancertypeenumenum_1 = require("./loadbalancertypeenumenum");
 // LoadBalancer
 /**
  * Information about a load balancer.
@@ -38,57 +41,57 @@ var LoadBalancer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: AvailabilityZone }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: availabilityzone_1.AvailabilityZone }),
         __metadata("design:type", Array)
     ], LoadBalancer.prototype, "availabilityZones", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "canonicalHostedZoneId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], LoadBalancer.prototype, "createdTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "customerOwnedIpv4Pool", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "dnsName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "ipAddressType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "loadBalancerArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "loadBalancerName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "scheme", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], LoadBalancer.prototype, "securityGroups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", LoadBalancerState)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", loadbalancerstate_1.LoadBalancerState)
     ], LoadBalancer.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LoadBalancer.prototype, "vpcId", void 0);
     return LoadBalancer;
-}(SpeakeasyBase));
-export { LoadBalancer };
+}(utils_1.SpeakeasyBase));
+exports.LoadBalancer = LoadBalancer;

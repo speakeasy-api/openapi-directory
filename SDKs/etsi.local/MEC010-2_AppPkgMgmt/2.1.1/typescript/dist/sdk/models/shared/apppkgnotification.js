@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppPkgNotificationLinks } from "./apppkgnotificationlinks";
-import { AppPkgNotificationTypeEnum } from "./apppkgnotificationtypeenum";
-import { TimeStamp } from "./timestamp";
-export var AppPkgNotificationOperationalStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppPkgNotification = exports.AppPkgNotificationOperationalStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var apppkgnotificationlinks_1 = require("./apppkgnotificationlinks");
+var apppkgnotificationtypeenum_1 = require("./apppkgnotificationtypeenum");
+var timestamp_1 = require("./timestamp");
+var AppPkgNotificationOperationalStateEnum;
 (function (AppPkgNotificationOperationalStateEnum) {
     AppPkgNotificationOperationalStateEnum["Disabled"] = "DISABLED";
     AppPkgNotificationOperationalStateEnum["Enabled"] = "ENABLED";
-})(AppPkgNotificationOperationalStateEnum || (AppPkgNotificationOperationalStateEnum = {}));
+})(AppPkgNotificationOperationalStateEnum = exports.AppPkgNotificationOperationalStateEnum || (exports.AppPkgNotificationOperationalStateEnum = {}));
 // AppPkgNotification
 /**
  * 'This data type represents an application package management notification for informing the subscribers about onboarding application package resources. The notification is triggered when a new application package is onboarded'
@@ -41,37 +44,37 @@ var AppPkgNotification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
-        __metadata("design:type", AppPkgNotificationLinks)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
+        __metadata("design:type", apppkgnotificationlinks_1.AppPkgNotificationLinks)
     ], AppPkgNotification.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appDId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appDId" }),
         __metadata("design:type", String)
     ], AppPkgNotification.prototype, "appDId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appPkgId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appPkgId" }),
         __metadata("design:type", String)
     ], AppPkgNotification.prototype, "appPkgId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AppPkgNotification.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationType" }),
         __metadata("design:type", String)
     ], AppPkgNotification.prototype, "notificationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operationalState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operationalState" }),
         __metadata("design:type", String)
     ], AppPkgNotification.prototype, "operationalState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptionId" }),
         __metadata("design:type", String)
     ], AppPkgNotification.prototype, "subscriptionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeStamp" }),
-        __metadata("design:type", TimeStamp)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeStamp" }),
+        __metadata("design:type", timestamp_1.TimeStamp)
     ], AppPkgNotification.prototype, "timeStamp", void 0);
     return AppPkgNotification;
-}(SpeakeasyBase));
-export { AppPkgNotification };
+}(utils_1.SpeakeasyBase));
+exports.AppPkgNotification = AppPkgNotification;

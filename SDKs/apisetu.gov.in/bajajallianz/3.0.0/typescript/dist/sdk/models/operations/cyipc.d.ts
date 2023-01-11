@@ -106,11 +106,11 @@ export declare class CyipcRequest extends SpeakeasyBase {
 export declare class CyipcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    cyipc400ApplicationJsonObject?: Cyipc400ApplicationJson;
-    cyipc401ApplicationJsonObject?: Cyipc401ApplicationJson;
-    cyipc404ApplicationJsonObject?: Cyipc404ApplicationJson;
-    cyipc500ApplicationJsonObject?: Cyipc500ApplicationJson;
-    cyipc502ApplicationJsonObject?: Cyipc502ApplicationJson;
-    cyipc503ApplicationJsonObject?: Cyipc503ApplicationJson;
-    cyipc504ApplicationJsonObject?: Cyipc504ApplicationJson;
+    cyipc400ApplicationJSONObject?: Cyipc400ApplicationJson;
+    cyipc401ApplicationJSONObject?: Cyipc401ApplicationJson;
+    cyipc404ApplicationJSONObject?: Cyipc404ApplicationJson;
+    cyipc500ApplicationJSONObject?: Cyipc500ApplicationJson;
+    cyipc502ApplicationJSONObject?: Cyipc502ApplicationJson;
+    cyipc503ApplicationJSONObject?: Cyipc503ApplicationJson;
+    cyipc504ApplicationJSONObject?: Cyipc504ApplicationJson;
 }

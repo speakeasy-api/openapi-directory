@@ -1,42 +1,37 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class ListAllKeysQueryParams extends SpeakeasyBase {
-  @Metadata({ data: "queryParam, style=form;explode=true;name=page" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
 
-  @Metadata({ data: "queryParam, style=form;explode=true;name=per_page" })
+  @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" })
   perPage?: number;
 }
 
 
-export class ListAllKeysRequest extends SpeakeasyBase {
-  @Metadata()
-  queryParams: ListAllKeysQueryParams;
-}
-
-
 export class ListAllKeys200ApplicationJsonLinksPages1 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=last" })
+  @SpeakeasyMetadata({ data: "json, name=last" })
   last?: string;
 
-  @Metadata({ data: "json, name=next" })
+  @SpeakeasyMetadata({ data: "json, name=next" })
   next?: string;
 }
 
 
 export class ListAllKeys200ApplicationJsonLinksPages2 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=first" })
+  @SpeakeasyMetadata({ data: "json, name=first" })
   first?: string;
 
-  @Metadata({ data: "json, name=prev" })
+  @SpeakeasyMetadata({ data: "json, name=prev" })
   prev?: string;
 }
 
 
 export class ListAllKeys200ApplicationJsonLinks extends SpeakeasyBase {
-  @Metadata({ data: "json, name=pages" })
+  @SpeakeasyMetadata({ data: "json, name=pages" })
   pages?: any;
 }
 
@@ -46,66 +41,72 @@ export class ListAllKeys200ApplicationJsonLinks extends SpeakeasyBase {
  * Information about the response itself.
 **/
 export class ListAllKeys200ApplicationJsonMeta extends SpeakeasyBase {
-  @Metadata({ data: "json, name=total" })
+  @SpeakeasyMetadata({ data: "json, name=total" })
   total: number;
 }
 
 
 export class ListAllKeys200ApplicationJsonSshKeys extends SpeakeasyBase {
-  @Metadata({ data: "json, name=fingerprint" })
+  @SpeakeasyMetadata({ data: "json, name=fingerprint" })
   fingerprint?: string;
 
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id?: number;
 
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=public_key" })
+  @SpeakeasyMetadata({ data: "json, name=public_key" })
   publicKey: string;
 }
 
 
 export class ListAllKeys200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=links" })
+  @SpeakeasyMetadata({ data: "json, name=links" })
   links?: ListAllKeys200ApplicationJsonLinks;
 
-  @Metadata({ data: "json, name=meta" })
+  @SpeakeasyMetadata({ data: "json, name=meta" })
   meta: ListAllKeys200ApplicationJsonMeta;
 
-  @Metadata({ data: "json, name=ssh_keys", elemType: operations.ListAllKeys200ApplicationJsonSshKeys })
+  @SpeakeasyMetadata({ data: "json, name=ssh_keys", elemType: ListAllKeys200ApplicationJsonSshKeys })
   sshKeys?: ListAllKeys200ApplicationJsonSshKeys[];
 }
 
 
 export class ListAllKeys401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class ListAllKeysRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  queryParams: ListAllKeysQueryParams;
+}
+
+
 export class ListAllKeysResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  listAllKeys200ApplicationJsonObject?: ListAllKeys200ApplicationJson;
+  @SpeakeasyMetadata()
+  listAllKeys200ApplicationJSONObject?: ListAllKeys200ApplicationJson;
 
-  @Metadata()
-  listAllKeys401ApplicationJsonObject?: ListAllKeys401ApplicationJson;
+  @SpeakeasyMetadata()
+  listAllKeys401ApplicationJSONObject?: ListAllKeys401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

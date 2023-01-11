@@ -11,10 +11,6 @@ import { WaitActivity } from "./waitactivity";
 
 
 
-// Activity
-/** 
- * Specifies the configuration and other settings for an activity in a journey.
-**/
 export class Activity extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=CUSTOM" })
   custom?: CustomMessageActivity;

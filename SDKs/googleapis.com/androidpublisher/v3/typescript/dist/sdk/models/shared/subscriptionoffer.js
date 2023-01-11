@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,67 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OfferTag } from "./offertag";
-import { OtherRegionsSubscriptionOfferConfig } from "./otherregionssubscriptionofferconfig";
-import { SubscriptionOfferPhase } from "./subscriptionofferphase";
-import { RegionalSubscriptionOfferConfig } from "./regionalsubscriptionofferconfig";
-import { SubscriptionOfferTargeting } from "./subscriptionoffertargeting";
-export var SubscriptionOfferStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionOfferInput = exports.SubscriptionOffer = exports.SubscriptionOfferStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var offertag_1 = require("./offertag");
+var otherregionssubscriptionofferconfig_1 = require("./otherregionssubscriptionofferconfig");
+var subscriptionofferphase_1 = require("./subscriptionofferphase");
+var regionalsubscriptionofferconfig_1 = require("./regionalsubscriptionofferconfig");
+var subscriptionoffertargeting_1 = require("./subscriptionoffertargeting");
+var SubscriptionOfferStateEnum;
 (function (SubscriptionOfferStateEnum) {
     SubscriptionOfferStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     SubscriptionOfferStateEnum["Draft"] = "DRAFT";
     SubscriptionOfferStateEnum["Active"] = "ACTIVE";
     SubscriptionOfferStateEnum["Inactive"] = "INACTIVE";
-})(SubscriptionOfferStateEnum || (SubscriptionOfferStateEnum = {}));
-// SubscriptionOfferInput
-/**
- * A single, temporary offer
-**/
-var SubscriptionOfferInput = /** @class */ (function (_super) {
-    __extends(SubscriptionOfferInput, _super);
-    function SubscriptionOfferInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=basePlanId" }),
-        __metadata("design:type", String)
-    ], SubscriptionOfferInput.prototype, "basePlanId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=offerId" }),
-        __metadata("design:type", String)
-    ], SubscriptionOfferInput.prototype, "offerId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=offerTags", elemType: OfferTag }),
-        __metadata("design:type", Array)
-    ], SubscriptionOfferInput.prototype, "offerTags", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=otherRegionsConfig" }),
-        __metadata("design:type", OtherRegionsSubscriptionOfferConfig)
-    ], SubscriptionOfferInput.prototype, "otherRegionsConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=packageName" }),
-        __metadata("design:type", String)
-    ], SubscriptionOfferInput.prototype, "packageName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=phases", elemType: SubscriptionOfferPhase }),
-        __metadata("design:type", Array)
-    ], SubscriptionOfferInput.prototype, "phases", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=productId" }),
-        __metadata("design:type", String)
-    ], SubscriptionOfferInput.prototype, "productId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionalConfigs", elemType: RegionalSubscriptionOfferConfig }),
-        __metadata("design:type", Array)
-    ], SubscriptionOfferInput.prototype, "regionalConfigs", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=targeting" }),
-        __metadata("design:type", SubscriptionOfferTargeting)
-    ], SubscriptionOfferInput.prototype, "targeting", void 0);
-    return SubscriptionOfferInput;
-}(SpeakeasyBase));
-export { SubscriptionOfferInput };
+})(SubscriptionOfferStateEnum = exports.SubscriptionOfferStateEnum || (exports.SubscriptionOfferStateEnum = {}));
 // SubscriptionOffer
 /**
  * A single, temporary offer
@@ -93,45 +48,93 @@ var SubscriptionOffer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=basePlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=basePlanId" }),
         __metadata("design:type", String)
     ], SubscriptionOffer.prototype, "basePlanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offerId" }),
         __metadata("design:type", String)
     ], SubscriptionOffer.prototype, "offerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offerTags", elemType: OfferTag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offerTags", elemType: offertag_1.OfferTag }),
         __metadata("design:type", Array)
     ], SubscriptionOffer.prototype, "offerTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=otherRegionsConfig" }),
-        __metadata("design:type", OtherRegionsSubscriptionOfferConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=otherRegionsConfig" }),
+        __metadata("design:type", otherregionssubscriptionofferconfig_1.OtherRegionsSubscriptionOfferConfig)
     ], SubscriptionOffer.prototype, "otherRegionsConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packageName" }),
         __metadata("design:type", String)
     ], SubscriptionOffer.prototype, "packageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phases", elemType: SubscriptionOfferPhase }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phases", elemType: subscriptionofferphase_1.SubscriptionOfferPhase }),
         __metadata("design:type", Array)
     ], SubscriptionOffer.prototype, "phases", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productId" }),
         __metadata("design:type", String)
     ], SubscriptionOffer.prototype, "productId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regionalConfigs", elemType: RegionalSubscriptionOfferConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionalConfigs", elemType: regionalsubscriptionofferconfig_1.RegionalSubscriptionOfferConfig }),
         __metadata("design:type", Array)
     ], SubscriptionOffer.prototype, "regionalConfigs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], SubscriptionOffer.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targeting" }),
-        __metadata("design:type", SubscriptionOfferTargeting)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targeting" }),
+        __metadata("design:type", subscriptionoffertargeting_1.SubscriptionOfferTargeting)
     ], SubscriptionOffer.prototype, "targeting", void 0);
     return SubscriptionOffer;
-}(SpeakeasyBase));
-export { SubscriptionOffer };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionOffer = SubscriptionOffer;
+// SubscriptionOfferInput
+/**
+ * A single, temporary offer
+**/
+var SubscriptionOfferInput = /** @class */ (function (_super) {
+    __extends(SubscriptionOfferInput, _super);
+    function SubscriptionOfferInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=basePlanId" }),
+        __metadata("design:type", String)
+    ], SubscriptionOfferInput.prototype, "basePlanId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offerId" }),
+        __metadata("design:type", String)
+    ], SubscriptionOfferInput.prototype, "offerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offerTags", elemType: offertag_1.OfferTag }),
+        __metadata("design:type", Array)
+    ], SubscriptionOfferInput.prototype, "offerTags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=otherRegionsConfig" }),
+        __metadata("design:type", otherregionssubscriptionofferconfig_1.OtherRegionsSubscriptionOfferConfig)
+    ], SubscriptionOfferInput.prototype, "otherRegionsConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packageName" }),
+        __metadata("design:type", String)
+    ], SubscriptionOfferInput.prototype, "packageName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phases", elemType: subscriptionofferphase_1.SubscriptionOfferPhase }),
+        __metadata("design:type", Array)
+    ], SubscriptionOfferInput.prototype, "phases", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productId" }),
+        __metadata("design:type", String)
+    ], SubscriptionOfferInput.prototype, "productId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regionalConfigs", elemType: regionalsubscriptionofferconfig_1.RegionalSubscriptionOfferConfig }),
+        __metadata("design:type", Array)
+    ], SubscriptionOfferInput.prototype, "regionalConfigs", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targeting" }),
+        __metadata("design:type", subscriptionoffertargeting_1.SubscriptionOfferTargeting)
+    ], SubscriptionOfferInput.prototype, "targeting", void 0);
+    return SubscriptionOfferInput;
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionOfferInput = SubscriptionOfferInput;

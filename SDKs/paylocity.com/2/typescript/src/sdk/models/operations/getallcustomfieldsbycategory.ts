@@ -37,6 +37,6 @@ export class GetAllCustomFieldsByCategoryResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ elemType: shared.CustomFieldDefinition })
   customFieldDefinitions?: shared.CustomFieldDefinition[];
 
-  @SpeakeasyMetadata({ elemType: shared.Error })
-  errors?: shared.Error[];
+  @SpeakeasyMetadata({ elemType: shared.ErrorT })
+  errors?: shared.ErrorT[];
 }

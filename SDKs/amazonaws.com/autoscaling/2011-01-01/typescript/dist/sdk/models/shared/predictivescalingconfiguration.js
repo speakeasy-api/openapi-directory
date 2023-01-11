@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PredictiveScalingMaxCapacityBreachBehaviorEnum } from "./predictivescalingmaxcapacitybreachbehaviorenum";
-import { PredictiveScalingMetricSpecification } from "./predictivescalingmetricspecification";
-import { PredictiveScalingModeEnum } from "./predictivescalingmodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PredictiveScalingConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var predictivescalingmaxcapacitybreachbehaviorenum_1 = require("./predictivescalingmaxcapacitybreachbehaviorenum");
+var predictivescalingmetricspecification_1 = require("./predictivescalingmetricspecification");
+var predictivescalingmodeenum_1 = require("./predictivescalingmodeenum");
 // PredictiveScalingConfiguration
 /**
  * Represents a predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
@@ -36,25 +39,25 @@ var PredictiveScalingConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PredictiveScalingConfiguration.prototype, "maxCapacityBreachBehavior", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PredictiveScalingConfiguration.prototype, "maxCapacityBuffer", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: PredictiveScalingMetricSpecification }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: predictivescalingmetricspecification_1.PredictiveScalingMetricSpecification }),
         __metadata("design:type", Array)
     ], PredictiveScalingConfiguration.prototype, "metricSpecifications", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PredictiveScalingConfiguration.prototype, "mode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PredictiveScalingConfiguration.prototype, "schedulingBufferTime", void 0);
     return PredictiveScalingConfiguration;
-}(SpeakeasyBase));
-export { PredictiveScalingConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.PredictiveScalingConfiguration = PredictiveScalingConfiguration;

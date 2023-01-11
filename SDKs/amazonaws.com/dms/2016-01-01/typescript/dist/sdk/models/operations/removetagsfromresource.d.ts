@@ -19,7 +19,7 @@ export declare class RemoveTagsFromResourceRequest extends SpeakeasyBase {
 }
 export declare class RemoveTagsFromResourceResponse extends SpeakeasyBase {
     contentType: string;
-    removeTagsFromResourceResponse?: Map<string, any>;
+    removeTagsFromResourceResponse?: Record<string, any>;
     resourceNotFoundFault?: any;
     statusCode: number;
 }

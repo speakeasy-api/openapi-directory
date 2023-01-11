@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomRoutingListener } from "./customroutinglistener";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateCustomRoutingListenerResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var customroutinglistener_1 = require("./customroutinglistener");
 var CreateCustomRoutingListenerResponse = /** @class */ (function (_super) {
     __extends(CreateCustomRoutingListenerResponse, _super);
     function CreateCustomRoutingListenerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Listener" }),
-        __metadata("design:type", CustomRoutingListener)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Listener" }),
+        __metadata("design:type", customroutinglistener_1.CustomRoutingListener)
     ], CreateCustomRoutingListenerResponse.prototype, "listener", void 0);
     return CreateCustomRoutingListenerResponse;
-}(SpeakeasyBase));
-export { CreateCustomRoutingListenerResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateCustomRoutingListenerResponse = CreateCustomRoutingListenerResponse;

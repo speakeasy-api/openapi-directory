@@ -26,5 +26,5 @@ export class ReadmeGetV2SourcesReadmeSlugGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  readmeGetV2SourcesReadmeSlugGet200ApplicationJsonAny?: any;
+  readmeGetV2SourcesReadmeSlugGet200ApplicationJSONAny?: any;
 }

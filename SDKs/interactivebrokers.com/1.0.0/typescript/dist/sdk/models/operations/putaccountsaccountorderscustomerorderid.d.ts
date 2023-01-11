@@ -14,7 +14,7 @@ export declare class PutAccountsAccountOrdersCustomerOrderIdRequestBody extends 
     mifid2ExecutionTrader?: string;
     orderType?: number;
     origCustomerOrderId?: string;
-    outsideRth?: number;
+    outsideRTH?: number;
     price?: number;
     quantity?: number;
     side?: number;
@@ -36,6 +36,6 @@ export declare class PutAccountsAccountOrdersCustomerOrderIdRequest extends Spea
 }
 export declare class PutAccountsAccountOrdersCustomerOrderIdResponse extends SpeakeasyBase {
     contentType: string;
-    putAccountsAccountOrdersCustomerOrderId200ApplicationJsonObjects?: PutAccountsAccountOrdersCustomerOrderId200ApplicationJson[];
     statusCode: number;
+    putAccountsAccountOrdersCustomerOrderId200ApplicationJSONObjects?: PutAccountsAccountOrdersCustomerOrderId200ApplicationJson[];
 }

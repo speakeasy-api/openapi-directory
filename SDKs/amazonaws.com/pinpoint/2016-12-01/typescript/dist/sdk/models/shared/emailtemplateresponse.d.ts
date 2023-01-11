@@ -16,5 +16,5 @@ export declare class EmailTemplateResponse extends SpeakeasyBase {
     templateType: TemplateTypeEnum;
     textPart?: string;
     version?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

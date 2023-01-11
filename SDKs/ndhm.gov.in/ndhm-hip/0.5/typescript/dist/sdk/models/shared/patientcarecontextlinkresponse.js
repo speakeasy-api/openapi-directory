@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,50 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
-import { RequestReference } from "./requestreference";
-export var PatientCareContextLinkResponseAcknowledgementStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatientCareContextLinkResponse = exports.PatientCareContextLinkResponseAcknowledgement = exports.PatientCareContextLinkResponseAcknowledgementStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var error_1 = require("./error");
+var requestreference_1 = require("./requestreference");
+var PatientCareContextLinkResponseAcknowledgementStatusEnum;
 (function (PatientCareContextLinkResponseAcknowledgementStatusEnum) {
     PatientCareContextLinkResponseAcknowledgementStatusEnum["Success"] = "SUCCESS";
-})(PatientCareContextLinkResponseAcknowledgementStatusEnum || (PatientCareContextLinkResponseAcknowledgementStatusEnum = {}));
+})(PatientCareContextLinkResponseAcknowledgementStatusEnum = exports.PatientCareContextLinkResponseAcknowledgementStatusEnum || (exports.PatientCareContextLinkResponseAcknowledgementStatusEnum = {}));
 var PatientCareContextLinkResponseAcknowledgement = /** @class */ (function (_super) {
     __extends(PatientCareContextLinkResponseAcknowledgement, _super);
     function PatientCareContextLinkResponseAcknowledgement() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PatientCareContextLinkResponseAcknowledgement.prototype, "status", void 0);
     return PatientCareContextLinkResponseAcknowledgement;
-}(SpeakeasyBase));
-export { PatientCareContextLinkResponseAcknowledgement };
+}(utils_1.SpeakeasyBase));
+exports.PatientCareContextLinkResponseAcknowledgement = PatientCareContextLinkResponseAcknowledgement;
 var PatientCareContextLinkResponse = /** @class */ (function (_super) {
     __extends(PatientCareContextLinkResponse, _super);
     function PatientCareContextLinkResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acknowledgement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acknowledgement" }),
         __metadata("design:type", PatientCareContextLinkResponseAcknowledgement)
     ], PatientCareContextLinkResponse.prototype, "acknowledgement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Error)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", error_1.ErrorT)
     ], PatientCareContextLinkResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], PatientCareContextLinkResponse.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resp" }),
-        __metadata("design:type", RequestReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resp" }),
+        __metadata("design:type", requestreference_1.RequestReference)
     ], PatientCareContextLinkResponse.prototype, "resp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], PatientCareContextLinkResponse.prototype, "timestamp", void 0);
     return PatientCareContextLinkResponse;
-}(SpeakeasyBase));
-export { PatientCareContextLinkResponse };
+}(utils_1.SpeakeasyBase));
+exports.PatientCareContextLinkResponse = PatientCareContextLinkResponse;

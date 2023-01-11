@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostListPoliciesGrantingServiceAccessActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostListPoliciesGrantingServiceAccessResponse = exports.PostListPoliciesGrantingServiceAccessRequest = exports.PostListPoliciesGrantingServiceAccessHeaders = exports.PostListPoliciesGrantingServiceAccessQueryParams = exports.PostListPoliciesGrantingServiceAccessVersionEnum = exports.PostListPoliciesGrantingServiceAccessActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostListPoliciesGrantingServiceAccessActionEnum;
 (function (PostListPoliciesGrantingServiceAccessActionEnum) {
     PostListPoliciesGrantingServiceAccessActionEnum["ListPoliciesGrantingServiceAccess"] = "ListPoliciesGrantingServiceAccess";
-})(PostListPoliciesGrantingServiceAccessActionEnum || (PostListPoliciesGrantingServiceAccessActionEnum = {}));
-export var PostListPoliciesGrantingServiceAccessVersionEnum;
+})(PostListPoliciesGrantingServiceAccessActionEnum = exports.PostListPoliciesGrantingServiceAccessActionEnum || (exports.PostListPoliciesGrantingServiceAccessActionEnum = {}));
+var PostListPoliciesGrantingServiceAccessVersionEnum;
 (function (PostListPoliciesGrantingServiceAccessVersionEnum) {
     PostListPoliciesGrantingServiceAccessVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostListPoliciesGrantingServiceAccessVersionEnum || (PostListPoliciesGrantingServiceAccessVersionEnum = {}));
+})(PostListPoliciesGrantingServiceAccessVersionEnum = exports.PostListPoliciesGrantingServiceAccessVersionEnum || (exports.PostListPoliciesGrantingServiceAccessVersionEnum = {}));
 var PostListPoliciesGrantingServiceAccessQueryParams = /** @class */ (function (_super) {
     __extends(PostListPoliciesGrantingServiceAccessQueryParams, _super);
     function PostListPoliciesGrantingServiceAccessQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostListPoliciesGrantingServiceAccessQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostListPoliciesGrantingServiceAccessQueryParams.prototype, "version", void 0);
     return PostListPoliciesGrantingServiceAccessQueryParams;
-}(SpeakeasyBase));
-export { PostListPoliciesGrantingServiceAccessQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostListPoliciesGrantingServiceAccessQueryParams = PostListPoliciesGrantingServiceAccessQueryParams;
 var PostListPoliciesGrantingServiceAccessHeaders = /** @class */ (function (_super) {
     __extends(PostListPoliciesGrantingServiceAccessHeaders, _super);
     function PostListPoliciesGrantingServiceAccessHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostListPoliciesGrantingServiceAccessHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostListPoliciesGrantingServiceAccessHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostListPoliciesGrantingServiceAccessHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostListPoliciesGrantingServiceAccessHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostListPoliciesGrantingServiceAccessHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostListPoliciesGrantingServiceAccessHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostListPoliciesGrantingServiceAccessHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostListPoliciesGrantingServiceAccessHeaders;
-}(SpeakeasyBase));
-export { PostListPoliciesGrantingServiceAccessHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostListPoliciesGrantingServiceAccessHeaders = PostListPoliciesGrantingServiceAccessHeaders;
 var PostListPoliciesGrantingServiceAccessRequest = /** @class */ (function (_super) {
     __extends(PostListPoliciesGrantingServiceAccessRequest, _super);
     function PostListPoliciesGrantingServiceAccessRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostListPoliciesGrantingServiceAccessQueryParams)
     ], PostListPoliciesGrantingServiceAccessRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostListPoliciesGrantingServiceAccessHeaders)
     ], PostListPoliciesGrantingServiceAccessRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostListPoliciesGrantingServiceAccessRequest.prototype, "request", void 0);
     return PostListPoliciesGrantingServiceAccessRequest;
-}(SpeakeasyBase));
-export { PostListPoliciesGrantingServiceAccessRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostListPoliciesGrantingServiceAccessRequest = PostListPoliciesGrantingServiceAccessRequest;
 var PostListPoliciesGrantingServiceAccessResponse = /** @class */ (function (_super) {
     __extends(PostListPoliciesGrantingServiceAccessResponse, _super);
     function PostListPoliciesGrantingServiceAccessResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostListPoliciesGrantingServiceAccessResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostListPoliciesGrantingServiceAccessResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostListPoliciesGrantingServiceAccessResponse.prototype, "statusCode", void 0);
     return PostListPoliciesGrantingServiceAccessResponse;
-}(SpeakeasyBase));
-export { PostListPoliciesGrantingServiceAccessResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostListPoliciesGrantingServiceAccessResponse = PostListPoliciesGrantingServiceAccessResponse;

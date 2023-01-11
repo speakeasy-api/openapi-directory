@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Contact } from "./contact";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContactUploadResponse = exports.ContactUploadResponseData = void 0;
+var utils_1 = require("../../../internal/utils");
+var contact_1 = require("./contact");
 var ContactUploadResponseData = /** @class */ (function (_super) {
     __extends(ContactUploadResponseData, _super);
     function ContactUploadResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contacts", elemType: Contact }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contacts", elemType: contact_1.Contact }),
         __metadata("design:type", Array)
     ], ContactUploadResponseData.prototype, "contacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: Contact }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: contact_1.Contact }),
         __metadata("design:type", Array)
     ], ContactUploadResponseData.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inserted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inserted" }),
         __metadata("design:type", Number)
     ], ContactUploadResponseData.prototype, "inserted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=submitted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=submitted" }),
         __metadata("design:type", Number)
     ], ContactUploadResponseData.prototype, "submitted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Number)
     ], ContactUploadResponseData.prototype, "success", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", Number)
     ], ContactUploadResponseData.prototype, "updated", void 0);
     return ContactUploadResponseData;
-}(SpeakeasyBase));
-export { ContactUploadResponseData };
+}(utils_1.SpeakeasyBase));
+exports.ContactUploadResponseData = ContactUploadResponseData;
 var ContactUploadResponse = /** @class */ (function (_super) {
     __extends(ContactUploadResponse, _super);
     function ContactUploadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", ContactUploadResponseData)
     ], ContactUploadResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], ContactUploadResponse.prototype, "success", void 0);
     return ContactUploadResponse;
-}(SpeakeasyBase));
-export { ContactUploadResponse };
+}(utils_1.SpeakeasyBase));
+exports.ContactUploadResponse = ContactUploadResponse;

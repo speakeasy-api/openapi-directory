@@ -1,6 +1,9 @@
-export var ResourceShareFeatureSetEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceShareFeatureSetEnum = void 0;
+var ResourceShareFeatureSetEnum;
 (function (ResourceShareFeatureSetEnum) {
     ResourceShareFeatureSetEnum["CreatedFromPolicy"] = "CREATED_FROM_POLICY";
     ResourceShareFeatureSetEnum["PromotingToStandard"] = "PROMOTING_TO_STANDARD";
     ResourceShareFeatureSetEnum["Standard"] = "STANDARD";
-})(ResourceShareFeatureSetEnum || (ResourceShareFeatureSetEnum = {}));
+})(ResourceShareFeatureSetEnum = exports.ResourceShareFeatureSetEnum || (exports.ResourceShareFeatureSetEnum = {}));

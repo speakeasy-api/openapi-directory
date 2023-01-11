@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BrandedFoodObject = exports.BrandedFoodObjectItems = exports.BrandedFoodObjectItemsServing = exports.BrandedFoodObjectItemsPackagingPhotos = exports.BrandedFoodObjectItemsPackagingPhotosNutrition = exports.BrandedFoodObjectItemsPackagingPhotosIngredients = exports.BrandedFoodObjectItemsPackagingPhotosFront = exports.BrandedFoodObjectItemsPackage = exports.BrandedFoodObjectItemsNutrients = exports.BrandedFoodObjectItemsDietLabels = exports.BrandedFoodObjectItemsDietLabelsVegetarian = exports.BrandedFoodObjectItemsDietLabelsVegan = exports.BrandedFoodObjectItemsDietLabelsGlutenFree = exports.BrandedFoodObjectItemsDietFlags = exports.BrandedFoodObjectItemsCountryDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 // BrandedFoodObjectItemsCountryDetails
 /**
  * An object containing additional information on the countries where this item is found
@@ -33,16 +36,16 @@ var BrandedFoodObjectItemsCountryDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=english_speaking" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=english_speaking" }),
         __metadata("design:type", Number)
     ], BrandedFoodObjectItemsCountryDetails.prototype, "englishSpeaking", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=non_english_speaking" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=non_english_speaking" }),
         __metadata("design:type", Number)
     ], BrandedFoodObjectItemsCountryDetails.prototype, "nonEnglishSpeaking", void 0);
     return BrandedFoodObjectItemsCountryDetails;
-}(SpeakeasyBase));
-export { BrandedFoodObjectItemsCountryDetails };
+}(utils_1.SpeakeasyBase));
+exports.BrandedFoodObjectItemsCountryDetails = BrandedFoodObjectItemsCountryDetails;
 // BrandedFoodObjectItemsDietFlags
 /**
  * An object containing information on an individual ingredient that was flagged as potentially not being compatible with a certain diet
@@ -53,36 +56,36 @@ var BrandedFoodObjectItemsDietFlags = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compatibility_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compatibility_description" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsDietFlags.prototype, "compatibilityDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compatibility_level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compatibility_level" }),
         __metadata("design:type", Number)
     ], BrandedFoodObjectItemsDietFlags.prototype, "compatibilityLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diet_label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diet_label" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsDietFlags.prototype, "dietLabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ingredient" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ingredient" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsDietFlags.prototype, "ingredient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ingredient_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ingredient_description" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsDietFlags.prototype, "ingredientDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_allergen" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_allergen" }),
         __metadata("design:type", Boolean)
     ], BrandedFoodObjectItemsDietFlags.prototype, "isAllergen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_compatible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_compatible" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsDietFlags.prototype, "isCompatible", void 0);
     return BrandedFoodObjectItemsDietFlags;
-}(SpeakeasyBase));
-export { BrandedFoodObjectItemsDietFlags };
+}(utils_1.SpeakeasyBase));
+exports.BrandedFoodObjectItemsDietFlags = BrandedFoodObjectItemsDietFlags;
 // BrandedFoodObjectItemsDietLabelsGlutenFree
 /**
  * An object containing information on this item's compatibility with Gluten Free diets
@@ -93,28 +96,28 @@ var BrandedFoodObjectItemsDietLabelsGlutenFree = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compatibility_level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compatibility_level" }),
         __metadata("design:type", Number)
     ], BrandedFoodObjectItemsDietLabelsGlutenFree.prototype, "compatibilityLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confidence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confidence" }),
         __metadata("design:type", Number)
     ], BrandedFoodObjectItemsDietLabelsGlutenFree.prototype, "confidence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confidence_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confidence_description" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsDietLabelsGlutenFree.prototype, "confidenceDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_compatible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_compatible" }),
         __metadata("design:type", Boolean)
     ], BrandedFoodObjectItemsDietLabelsGlutenFree.prototype, "isCompatible", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsDietLabelsGlutenFree.prototype, "name", void 0);
     return BrandedFoodObjectItemsDietLabelsGlutenFree;
-}(SpeakeasyBase));
-export { BrandedFoodObjectItemsDietLabelsGlutenFree };
+}(utils_1.SpeakeasyBase));
+exports.BrandedFoodObjectItemsDietLabelsGlutenFree = BrandedFoodObjectItemsDietLabelsGlutenFree;
 // BrandedFoodObjectItemsDietLabelsVegan
 /**
  * An object containing information on this item's compatibility with the Vegan diets
@@ -125,28 +128,28 @@ var BrandedFoodObjectItemsDietLabelsVegan = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compatibility_level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compatibility_level" }),
         __metadata("design:type", Number)
     ], BrandedFoodObjectItemsDietLabelsVegan.prototype, "compatibilityLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confidence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confidence" }),
         __metadata("design:type", Number)
     ], BrandedFoodObjectItemsDietLabelsVegan.prototype, "confidence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confidence_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confidence_description" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsDietLabelsVegan.prototype, "confidenceDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_compatible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_compatible" }),
         __metadata("design:type", Boolean)
     ], BrandedFoodObjectItemsDietLabelsVegan.prototype, "isCompatible", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsDietLabelsVegan.prototype, "name", void 0);
     return BrandedFoodObjectItemsDietLabelsVegan;
-}(SpeakeasyBase));
-export { BrandedFoodObjectItemsDietLabelsVegan };
+}(utils_1.SpeakeasyBase));
+exports.BrandedFoodObjectItemsDietLabelsVegan = BrandedFoodObjectItemsDietLabelsVegan;
 // BrandedFoodObjectItemsDietLabelsVegetarian
 /**
  * An object containing information on this item's compatibility with Vegetarian diets
@@ -157,28 +160,28 @@ var BrandedFoodObjectItemsDietLabelsVegetarian = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compatibility_level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compatibility_level" }),
         __metadata("design:type", Number)
     ], BrandedFoodObjectItemsDietLabelsVegetarian.prototype, "compatibilityLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confidence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confidence" }),
         __metadata("design:type", Number)
     ], BrandedFoodObjectItemsDietLabelsVegetarian.prototype, "confidence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confidence_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confidence_description" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsDietLabelsVegetarian.prototype, "confidenceDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_compatible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_compatible" }),
         __metadata("design:type", Boolean)
     ], BrandedFoodObjectItemsDietLabelsVegetarian.prototype, "isCompatible", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsDietLabelsVegetarian.prototype, "name", void 0);
     return BrandedFoodObjectItemsDietLabelsVegetarian;
-}(SpeakeasyBase));
-export { BrandedFoodObjectItemsDietLabelsVegetarian };
+}(utils_1.SpeakeasyBase));
+exports.BrandedFoodObjectItemsDietLabelsVegetarian = BrandedFoodObjectItemsDietLabelsVegetarian;
 // BrandedFoodObjectItemsDietLabels
 /**
  * An object containing this item's compatibility grades for each supported diet
@@ -189,20 +192,20 @@ var BrandedFoodObjectItemsDietLabels = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gluten_free" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gluten_free" }),
         __metadata("design:type", BrandedFoodObjectItemsDietLabelsGlutenFree)
     ], BrandedFoodObjectItemsDietLabels.prototype, "glutenFree", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vegan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vegan" }),
         __metadata("design:type", BrandedFoodObjectItemsDietLabelsVegan)
     ], BrandedFoodObjectItemsDietLabels.prototype, "vegan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vegetarian" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vegetarian" }),
         __metadata("design:type", BrandedFoodObjectItemsDietLabelsVegetarian)
     ], BrandedFoodObjectItemsDietLabels.prototype, "vegetarian", void 0);
     return BrandedFoodObjectItemsDietLabels;
-}(SpeakeasyBase));
-export { BrandedFoodObjectItemsDietLabels };
+}(utils_1.SpeakeasyBase));
+exports.BrandedFoodObjectItemsDietLabels = BrandedFoodObjectItemsDietLabels;
 // BrandedFoodObjectItemsNutrients
 /**
  * An object containing information for a specific nutrient found in this food item
@@ -213,32 +216,32 @@ var BrandedFoodObjectItemsNutrients = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data_points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data_points" }),
         __metadata("design:type", Number)
     ], BrandedFoodObjectItemsNutrients.prototype, "dataPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsNutrients.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=measurement_unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=measurement_unit" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsNutrients.prototype, "measurementUnit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsNutrients.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=per_100g" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=per_100g" }),
         __metadata("design:type", Number)
     ], BrandedFoodObjectItemsNutrients.prototype, "per100g", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rank" }),
         __metadata("design:type", Number)
     ], BrandedFoodObjectItemsNutrients.prototype, "rank", void 0);
     return BrandedFoodObjectItemsNutrients;
-}(SpeakeasyBase));
-export { BrandedFoodObjectItemsNutrients };
+}(utils_1.SpeakeasyBase));
+exports.BrandedFoodObjectItemsNutrients = BrandedFoodObjectItemsNutrients;
 // BrandedFoodObjectItemsPackage
 /**
  * An object containing basic packaging information about this item
@@ -249,16 +252,16 @@ var BrandedFoodObjectItemsPackage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantity" }),
         __metadata("design:type", Number)
     ], BrandedFoodObjectItemsPackage.prototype, "quantity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsPackage.prototype, "size", void 0);
     return BrandedFoodObjectItemsPackage;
-}(SpeakeasyBase));
-export { BrandedFoodObjectItemsPackage };
+}(utils_1.SpeakeasyBase));
+exports.BrandedFoodObjectItemsPackage = BrandedFoodObjectItemsPackage;
 // BrandedFoodObjectItemsPackagingPhotosFront
 /**
  * An object containing photos of the front of this item's packaging
@@ -269,20 +272,20 @@ var BrandedFoodObjectItemsPackagingPhotosFront = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsPackagingPhotosFront.prototype, "display", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=small" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=small" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsPackagingPhotosFront.prototype, "small", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumb" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsPackagingPhotosFront.prototype, "thumb", void 0);
     return BrandedFoodObjectItemsPackagingPhotosFront;
-}(SpeakeasyBase));
-export { BrandedFoodObjectItemsPackagingPhotosFront };
+}(utils_1.SpeakeasyBase));
+exports.BrandedFoodObjectItemsPackagingPhotosFront = BrandedFoodObjectItemsPackagingPhotosFront;
 // BrandedFoodObjectItemsPackagingPhotosIngredients
 /**
  * An object containing photos of the ingredients on this item's packaging
@@ -293,20 +296,20 @@ var BrandedFoodObjectItemsPackagingPhotosIngredients = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsPackagingPhotosIngredients.prototype, "display", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=small" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=small" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsPackagingPhotosIngredients.prototype, "small", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumb" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsPackagingPhotosIngredients.prototype, "thumb", void 0);
     return BrandedFoodObjectItemsPackagingPhotosIngredients;
-}(SpeakeasyBase));
-export { BrandedFoodObjectItemsPackagingPhotosIngredients };
+}(utils_1.SpeakeasyBase));
+exports.BrandedFoodObjectItemsPackagingPhotosIngredients = BrandedFoodObjectItemsPackagingPhotosIngredients;
 // BrandedFoodObjectItemsPackagingPhotosNutrition
 /**
  * An object containing photos of this item's nutrition label
@@ -317,20 +320,20 @@ var BrandedFoodObjectItemsPackagingPhotosNutrition = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsPackagingPhotosNutrition.prototype, "display", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=small" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=small" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsPackagingPhotosNutrition.prototype, "small", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumb" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsPackagingPhotosNutrition.prototype, "thumb", void 0);
     return BrandedFoodObjectItemsPackagingPhotosNutrition;
-}(SpeakeasyBase));
-export { BrandedFoodObjectItemsPackagingPhotosNutrition };
+}(utils_1.SpeakeasyBase));
+exports.BrandedFoodObjectItemsPackagingPhotosNutrition = BrandedFoodObjectItemsPackagingPhotosNutrition;
 // BrandedFoodObjectItemsPackagingPhotos
 /**
  * A object containing a collection of photos of this item's packaging
@@ -341,20 +344,20 @@ var BrandedFoodObjectItemsPackagingPhotos = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=front" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=front" }),
         __metadata("design:type", BrandedFoodObjectItemsPackagingPhotosFront)
     ], BrandedFoodObjectItemsPackagingPhotos.prototype, "front", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ingredients" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ingredients" }),
         __metadata("design:type", BrandedFoodObjectItemsPackagingPhotosIngredients)
     ], BrandedFoodObjectItemsPackagingPhotos.prototype, "ingredients", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nutrition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nutrition" }),
         __metadata("design:type", BrandedFoodObjectItemsPackagingPhotosNutrition)
     ], BrandedFoodObjectItemsPackagingPhotos.prototype, "nutrition", void 0);
     return BrandedFoodObjectItemsPackagingPhotos;
-}(SpeakeasyBase));
-export { BrandedFoodObjectItemsPackagingPhotos };
+}(utils_1.SpeakeasyBase));
+exports.BrandedFoodObjectItemsPackagingPhotos = BrandedFoodObjectItemsPackagingPhotos;
 // BrandedFoodObjectItemsServing
 /**
  * An object containing serving information for this item
@@ -365,20 +368,20 @@ var BrandedFoodObjectItemsServing = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=measurement_unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=measurement_unit" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsServing.prototype, "measurementUnit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsServing.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size_fulltext" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size_fulltext" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItemsServing.prototype, "sizeFulltext", void 0);
     return BrandedFoodObjectItemsServing;
-}(SpeakeasyBase));
-export { BrandedFoodObjectItemsServing };
+}(utils_1.SpeakeasyBase));
+exports.BrandedFoodObjectItemsServing = BrandedFoodObjectItemsServing;
 // BrandedFoodObjectItems
 /**
  * An object containing information for this specific item.
@@ -389,100 +392,100 @@ var BrandedFoodObjectItems = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allergens" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allergens" }),
         __metadata("design:type", Array)
     ], BrandedFoodObjectItems.prototype, "allergens", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=barcode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=barcode" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItems.prototype, "barcode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brand" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brand" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItems.prototype, "brand", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brand_list" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brand_list" }),
         __metadata("design:type", Array)
     ], BrandedFoodObjectItems.prototype, "brandList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categories" }),
         __metadata("design:type", Array)
     ], BrandedFoodObjectItems.prototype, "categories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countries" }),
         __metadata("design:type", Array)
     ], BrandedFoodObjectItems.prototype, "countries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country_details" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country_details" }),
         __metadata("design:type", BrandedFoodObjectItemsCountryDetails)
     ], BrandedFoodObjectItems.prototype, "countryDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItems.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diet_flags", elemType: BrandedFoodObjectItemsDietFlags }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diet_flags", elemType: BrandedFoodObjectItemsDietFlags }),
         __metadata("design:type", Array)
     ], BrandedFoodObjectItems.prototype, "dietFlags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diet_labels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diet_labels" }),
         __metadata("design:type", BrandedFoodObjectItemsDietLabels)
     ], BrandedFoodObjectItems.prototype, "dietLabels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=has_english_ingredients" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=has_english_ingredients" }),
         __metadata("design:type", Boolean)
     ], BrandedFoodObjectItems.prototype, "hasEnglishIngredients", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ingredient_list" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ingredient_list" }),
         __metadata("design:type", Array)
     ], BrandedFoodObjectItems.prototype, "ingredientList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ingredients" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ingredients" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItems.prototype, "ingredients", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keywords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keywords" }),
         __metadata("design:type", Array)
     ], BrandedFoodObjectItems.prototype, "keywords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minerals" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minerals" }),
         __metadata("design:type", Array)
     ], BrandedFoodObjectItems.prototype, "minerals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BrandedFoodObjectItems.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nutrients", elemType: BrandedFoodObjectItemsNutrients }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nutrients", elemType: BrandedFoodObjectItemsNutrients }),
         __metadata("design:type", Array)
     ], BrandedFoodObjectItems.prototype, "nutrients", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=package" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=package" }),
         __metadata("design:type", BrandedFoodObjectItemsPackage)
     ], BrandedFoodObjectItems.prototype, "package", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packaging_photos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packaging_photos" }),
         __metadata("design:type", BrandedFoodObjectItemsPackagingPhotos)
     ], BrandedFoodObjectItems.prototype, "packagingPhotos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=palm_oil_ingredients" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=palm_oil_ingredients" }),
         __metadata("design:type", Array)
     ], BrandedFoodObjectItems.prototype, "palmOilIngredients", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serving" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serving" }),
         __metadata("design:type", BrandedFoodObjectItemsServing)
     ], BrandedFoodObjectItems.prototype, "serving", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=traces" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=traces" }),
         __metadata("design:type", Array)
     ], BrandedFoodObjectItems.prototype, "traces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vitamins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vitamins" }),
         __metadata("design:type", Array)
     ], BrandedFoodObjectItems.prototype, "vitamins", void 0);
     return BrandedFoodObjectItems;
-}(SpeakeasyBase));
-export { BrandedFoodObjectItems };
+}(utils_1.SpeakeasyBase));
+exports.BrandedFoodObjectItems = BrandedFoodObjectItems;
 // BrandedFoodObject
 /**
  * Please read the description of each field in this API response object example. By default, the value of each field is **null**. This indicates an unknown state or that no data exists.
@@ -493,9 +496,9 @@ var BrandedFoodObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: BrandedFoodObjectItems }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: BrandedFoodObjectItems }),
         __metadata("design:type", Array)
     ], BrandedFoodObject.prototype, "items", void 0);
     return BrandedFoodObject;
-}(SpeakeasyBase));
-export { BrandedFoodObject };
+}(utils_1.SpeakeasyBase));
+exports.BrandedFoodObject = BrandedFoodObject;

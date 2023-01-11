@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostGetCredentialReportActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostGetCredentialReportResponse = exports.PostGetCredentialReportRequest = exports.PostGetCredentialReportHeaders = exports.PostGetCredentialReportQueryParams = exports.PostGetCredentialReportVersionEnum = exports.PostGetCredentialReportActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostGetCredentialReportActionEnum;
 (function (PostGetCredentialReportActionEnum) {
     PostGetCredentialReportActionEnum["GetCredentialReport"] = "GetCredentialReport";
-})(PostGetCredentialReportActionEnum || (PostGetCredentialReportActionEnum = {}));
-export var PostGetCredentialReportVersionEnum;
+})(PostGetCredentialReportActionEnum = exports.PostGetCredentialReportActionEnum || (exports.PostGetCredentialReportActionEnum = {}));
+var PostGetCredentialReportVersionEnum;
 (function (PostGetCredentialReportVersionEnum) {
     PostGetCredentialReportVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostGetCredentialReportVersionEnum || (PostGetCredentialReportVersionEnum = {}));
+})(PostGetCredentialReportVersionEnum = exports.PostGetCredentialReportVersionEnum || (exports.PostGetCredentialReportVersionEnum = {}));
 var PostGetCredentialReportQueryParams = /** @class */ (function (_super) {
     __extends(PostGetCredentialReportQueryParams, _super);
     function PostGetCredentialReportQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostGetCredentialReportQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostGetCredentialReportQueryParams.prototype, "version", void 0);
     return PostGetCredentialReportQueryParams;
-}(SpeakeasyBase));
-export { PostGetCredentialReportQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostGetCredentialReportQueryParams = PostGetCredentialReportQueryParams;
 var PostGetCredentialReportHeaders = /** @class */ (function (_super) {
     __extends(PostGetCredentialReportHeaders, _super);
     function PostGetCredentialReportHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostGetCredentialReportHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostGetCredentialReportHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostGetCredentialReportHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostGetCredentialReportHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostGetCredentialReportHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostGetCredentialReportHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostGetCredentialReportHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostGetCredentialReportHeaders;
-}(SpeakeasyBase));
-export { PostGetCredentialReportHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostGetCredentialReportHeaders = PostGetCredentialReportHeaders;
 var PostGetCredentialReportRequest = /** @class */ (function (_super) {
     __extends(PostGetCredentialReportRequest, _super);
     function PostGetCredentialReportRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetCredentialReportQueryParams)
     ], PostGetCredentialReportRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetCredentialReportHeaders)
     ], PostGetCredentialReportRequest.prototype, "headers", void 0);
     return PostGetCredentialReportRequest;
-}(SpeakeasyBase));
-export { PostGetCredentialReportRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostGetCredentialReportRequest = PostGetCredentialReportRequest;
 var PostGetCredentialReportResponse = /** @class */ (function (_super) {
     __extends(PostGetCredentialReportResponse, _super);
     function PostGetCredentialReportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostGetCredentialReportResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostGetCredentialReportResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostGetCredentialReportResponse.prototype, "statusCode", void 0);
     return PostGetCredentialReportResponse;
-}(SpeakeasyBase));
-export { PostGetCredentialReportResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostGetCredentialReportResponse = PostGetCredentialReportResponse;

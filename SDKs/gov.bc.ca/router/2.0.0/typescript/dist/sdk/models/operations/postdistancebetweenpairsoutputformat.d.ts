@@ -22,7 +22,7 @@ export declare class PostDistanceBetweenPairsOutputFormatQueryParams extends Spe
     distanceUnit?: PostDistanceBetweenPairsOutputFormatDistanceUnitEnum;
     fromPoints: string;
     maxPairs?: number;
-    outputSrs?: number;
+    outputSRS?: number;
     routeDescription?: string;
     toPoints: string;
 }

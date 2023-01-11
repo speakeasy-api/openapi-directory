@@ -4,6 +4,6 @@ import { MergedResult } from "./mergedresult";
  * Result summary for a shard in an environment.
 **/
 export declare class ShardSummary extends SpeakeasyBase {
-    runs?: Map<string, any>[];
+    runs?: Record<string, any>[];
     shardResult?: MergedResult;
 }

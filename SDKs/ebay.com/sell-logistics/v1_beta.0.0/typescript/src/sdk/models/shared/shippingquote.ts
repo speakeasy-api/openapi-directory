@@ -3,7 +3,7 @@ import { Order } from "./order";
 import { PackageSpecification } from "./packagespecification";
 import { Rate } from "./rate";
 import { Contact } from "./contact";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 
 
 
@@ -36,6 +36,6 @@ export class ShippingQuote extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=shippingQuoteId" })
   shippingQuoteId?: string;
 
-  @SpeakeasyMetadata({ data: "json, name=warnings", elemType: Error })
-  warnings?: Error[];
+  @SpeakeasyMetadata({ data: "json, name=warnings", elemType: ErrorT })
+  warnings?: ErrorT[];
 }

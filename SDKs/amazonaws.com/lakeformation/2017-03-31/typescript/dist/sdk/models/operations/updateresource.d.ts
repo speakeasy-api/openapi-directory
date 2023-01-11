@@ -24,5 +24,5 @@ export declare class UpdateResourceResponse extends SpeakeasyBase {
     invalidInputException?: any;
     operationTimeoutException?: any;
     statusCode: number;
-    updateResourceResponse?: Map<string, any>;
+    updateResourceResponse?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExecutionTemplate } from "./executiontemplate";
-import { Execution } from "./execution";
-export var ScheduleStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduleInput = exports.Schedule = exports.ScheduleStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var executiontemplate_1 = require("./executiontemplate");
+var execution_1 = require("./execution");
+var ScheduleStateEnum;
 (function (ScheduleStateEnum) {
     ScheduleStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     ScheduleStateEnum["Enabled"] = "ENABLED";
@@ -34,39 +37,7 @@ export var ScheduleStateEnum;
     ScheduleStateEnum["UpdateFailed"] = "UPDATE_FAILED";
     ScheduleStateEnum["Initializing"] = "INITIALIZING";
     ScheduleStateEnum["Deleting"] = "DELETING";
-})(ScheduleStateEnum || (ScheduleStateEnum = {}));
-// ScheduleInput
-/**
- * The definition of a schedule.
-**/
-var ScheduleInput = /** @class */ (function (_super) {
-    __extends(ScheduleInput, _super);
-    function ScheduleInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=cronSchedule" }),
-        __metadata("design:type", String)
-    ], ScheduleInput.prototype, "cronSchedule", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], ScheduleInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionTemplate" }),
-        __metadata("design:type", ExecutionTemplate)
-    ], ScheduleInput.prototype, "executionTemplate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
-        __metadata("design:type", String)
-    ], ScheduleInput.prototype, "state", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
-        __metadata("design:type", String)
-    ], ScheduleInput.prototype, "timeZone", void 0);
-    return ScheduleInput;
-}(SpeakeasyBase));
-export { ScheduleInput };
+})(ScheduleStateEnum = exports.ScheduleStateEnum || (exports.ScheduleStateEnum = {}));
 // Schedule
 /**
  * The definition of a schedule.
@@ -77,45 +48,77 @@ var Schedule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Schedule.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cronSchedule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cronSchedule" }),
         __metadata("design:type", String)
     ], Schedule.prototype, "cronSchedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Schedule.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Schedule.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionTemplate" }),
-        __metadata("design:type", ExecutionTemplate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionTemplate" }),
+        __metadata("design:type", executiontemplate_1.ExecutionTemplate)
     ], Schedule.prototype, "executionTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Schedule.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recentExecutions", elemType: Execution }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recentExecutions", elemType: execution_1.Execution }),
         __metadata("design:type", Array)
     ], Schedule.prototype, "recentExecutions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Schedule.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
         __metadata("design:type", String)
     ], Schedule.prototype, "timeZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Schedule.prototype, "updateTime", void 0);
     return Schedule;
-}(SpeakeasyBase));
-export { Schedule };
+}(utils_1.SpeakeasyBase));
+exports.Schedule = Schedule;
+// ScheduleInput
+/**
+ * The definition of a schedule.
+**/
+var ScheduleInput = /** @class */ (function (_super) {
+    __extends(ScheduleInput, _super);
+    function ScheduleInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cronSchedule" }),
+        __metadata("design:type", String)
+    ], ScheduleInput.prototype, "cronSchedule", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], ScheduleInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionTemplate" }),
+        __metadata("design:type", executiontemplate_1.ExecutionTemplate)
+    ], ScheduleInput.prototype, "executionTemplate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", String)
+    ], ScheduleInput.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
+        __metadata("design:type", String)
+    ], ScheduleInput.prototype, "timeZone", void 0);
+    return ScheduleInput;
+}(utils_1.SpeakeasyBase));
+exports.ScheduleInput = ScheduleInput;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MarketingEventExternalUniqueIdentifier = void 0;
+var utils_1 = require("../../../internal/utils");
 var MarketingEventExternalUniqueIdentifier = /** @class */ (function (_super) {
     __extends(MarketingEventExternalUniqueIdentifier, _super);
     function MarketingEventExternalUniqueIdentifier() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appId" }),
         __metadata("design:type", Number)
     ], MarketingEventExternalUniqueIdentifier.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalAccountId" }),
         __metadata("design:type", String)
     ], MarketingEventExternalUniqueIdentifier.prototype, "externalAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalEventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalEventId" }),
         __metadata("design:type", String)
     ], MarketingEventExternalUniqueIdentifier.prototype, "externalEventId", void 0);
     return MarketingEventExternalUniqueIdentifier;
-}(SpeakeasyBase));
-export { MarketingEventExternalUniqueIdentifier };
+}(utils_1.SpeakeasyBase));
+exports.MarketingEventExternalUniqueIdentifier = MarketingEventExternalUniqueIdentifier;

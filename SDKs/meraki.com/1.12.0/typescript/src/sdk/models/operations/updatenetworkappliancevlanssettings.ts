@@ -31,5 +31,5 @@ export class UpdateNetworkApplianceVlansSettingsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkApplianceVlansSettings200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkApplianceVlansSettings200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,156 +23,158 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAccountsAccountOrderImpactResponse = exports.PostAccountsAccountOrderImpactRequest = exports.PostAccountsAccountOrderImpact200ApplicationJson = exports.PostAccountsAccountOrderImpactRequestBody = exports.PostAccountsAccountOrderImpactPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAccountsAccountOrderImpactPathParams = /** @class */ (function (_super) {
     __extends(PostAccountsAccountOrderImpactPathParams, _super);
     function PostAccountsAccountOrderImpactPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=account" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=account" }),
         __metadata("design:type", String)
     ], PostAccountsAccountOrderImpactPathParams.prototype, "account", void 0);
     return PostAccountsAccountOrderImpactPathParams;
-}(SpeakeasyBase));
-export { PostAccountsAccountOrderImpactPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAccountsAccountOrderImpactPathParams = PostAccountsAccountOrderImpactPathParams;
 var PostAccountsAccountOrderImpactRequestBody = /** @class */ (function (_super) {
     __extends(PostAccountsAccountOrderImpactRequestBody, _super);
     function PostAccountsAccountOrderImpactRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Aux Price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Aux Price" }),
         __metadata("design:type", Number)
     ], PostAccountsAccountOrderImpactRequestBody.prototype, "auxPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContractId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContractId" }),
         __metadata("design:type", Number)
     ], PostAccountsAccountOrderImpactRequestBody.prototype, "contractId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Currency" }),
         __metadata("design:type", String)
     ], PostAccountsAccountOrderImpactRequestBody.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CustomerOrderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CustomerOrderId" }),
         __metadata("design:type", String)
     ], PostAccountsAccountOrderImpactRequestBody.prototype, "customerOrderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstrumentType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstrumentType" }),
         __metadata("design:type", String)
     ], PostAccountsAccountOrderImpactRequestBody.prototype, "instrumentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListingExchange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListingExchange" }),
         __metadata("design:type", String)
     ], PostAccountsAccountOrderImpactRequestBody.prototype, "listingExchange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Order Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Order Type" }),
         __metadata("design:type", Number)
     ], PostAccountsAccountOrderImpactRequestBody.prototype, "orderType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Price" }),
         __metadata("design:type", Number)
     ], PostAccountsAccountOrderImpactRequestBody.prototype, "price", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Quantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Quantity" }),
         __metadata("design:type", Number)
     ], PostAccountsAccountOrderImpactRequestBody.prototype, "quantity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Side" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Side" }),
         __metadata("design:type", Number)
     ], PostAccountsAccountOrderImpactRequestBody.prototype, "side", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Ticker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Ticker" }),
         __metadata("design:type", String)
     ], PostAccountsAccountOrderImpactRequestBody.prototype, "ticker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Time in Force" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Time in Force" }),
         __metadata("design:type", Number)
     ], PostAccountsAccountOrderImpactRequestBody.prototype, "timeInForce", void 0);
     return PostAccountsAccountOrderImpactRequestBody;
-}(SpeakeasyBase));
-export { PostAccountsAccountOrderImpactRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostAccountsAccountOrderImpactRequestBody = PostAccountsAccountOrderImpactRequestBody;
 var PostAccountsAccountOrderImpact200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostAccountsAccountOrderImpact200ApplicationJson, _super);
     function PostAccountsAccountOrderImpact200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Commission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Commission" }),
         __metadata("design:type", Number)
     ], PostAccountsAccountOrderImpact200ApplicationJson.prototype, "commission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CommissionsCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CommissionsCurrency" }),
         __metadata("design:type", String)
     ], PostAccountsAccountOrderImpact200ApplicationJson.prototype, "commissionsCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EquityWithLoan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EquityWithLoan" }),
         __metadata("design:type", Number)
     ], PostAccountsAccountOrderImpact200ApplicationJson.prototype, "equityWithLoan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InitMargin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InitMargin" }),
         __metadata("design:type", Number)
     ], PostAccountsAccountOrderImpact200ApplicationJson.prototype, "initMargin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InitMarginBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InitMarginBefore" }),
         __metadata("design:type", Number)
     ], PostAccountsAccountOrderImpact200ApplicationJson.prototype, "initMarginBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaintMargin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaintMargin" }),
         __metadata("design:type", Number)
     ], PostAccountsAccountOrderImpact200ApplicationJson.prototype, "maintMargin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaintMarginBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaintMarginBefore" }),
         __metadata("design:type", Number)
     ], PostAccountsAccountOrderImpact200ApplicationJson.prototype, "maintMarginBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MarginCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MarginCurrency" }),
         __metadata("design:type", String)
     ], PostAccountsAccountOrderImpact200ApplicationJson.prototype, "marginCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxCommissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxCommissions" }),
         __metadata("design:type", Number)
     ], PostAccountsAccountOrderImpact200ApplicationJson.prototype, "maxCommissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinCommissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinCommissions" }),
         __metadata("design:type", Number)
     ], PostAccountsAccountOrderImpact200ApplicationJson.prototype, "minCommissions", void 0);
     return PostAccountsAccountOrderImpact200ApplicationJson;
-}(SpeakeasyBase));
-export { PostAccountsAccountOrderImpact200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostAccountsAccountOrderImpact200ApplicationJson = PostAccountsAccountOrderImpact200ApplicationJson;
 var PostAccountsAccountOrderImpactRequest = /** @class */ (function (_super) {
     __extends(PostAccountsAccountOrderImpactRequest, _super);
     function PostAccountsAccountOrderImpactRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAccountsAccountOrderImpactPathParams)
     ], PostAccountsAccountOrderImpactRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostAccountsAccountOrderImpactRequestBody)
     ], PostAccountsAccountOrderImpactRequest.prototype, "request", void 0);
     return PostAccountsAccountOrderImpactRequest;
-}(SpeakeasyBase));
-export { PostAccountsAccountOrderImpactRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAccountsAccountOrderImpactRequest = PostAccountsAccountOrderImpactRequest;
 var PostAccountsAccountOrderImpactResponse = /** @class */ (function (_super) {
     __extends(PostAccountsAccountOrderImpactResponse, _super);
     function PostAccountsAccountOrderImpactResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAccountsAccountOrderImpactResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostAccountsAccountOrderImpact200ApplicationJson)
-    ], PostAccountsAccountOrderImpactResponse.prototype, "postAccountsAccountOrderImpact200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAccountsAccountOrderImpactResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostAccountsAccountOrderImpact200ApplicationJson)
+    ], PostAccountsAccountOrderImpactResponse.prototype, "postAccountsAccountOrderImpact200ApplicationJSONObject", void 0);
     return PostAccountsAccountOrderImpactResponse;
-}(SpeakeasyBase));
-export { PostAccountsAccountOrderImpactResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAccountsAccountOrderImpactResponse = PostAccountsAccountOrderImpactResponse;

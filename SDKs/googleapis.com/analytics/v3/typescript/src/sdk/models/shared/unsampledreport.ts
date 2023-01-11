@@ -25,46 +25,6 @@ export class UnsampledReportDriveDownloadDetails extends SpeakeasyBase {
 }
 
 
-// UnsampledReportInput
-/** 
- * JSON template for Analytics unsampled report resource.
-**/
-export class UnsampledReportInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=accountId" })
-  accountId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=dimensions" })
-  dimensions?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=end-date" })
-  endDate?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=filters" })
-  filters?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=id" })
-  id?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=metrics" })
-  metrics?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=profileId" })
-  profileId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=segment" })
-  segment?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=start-date" })
-  startDate?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=title" })
-  title?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=webPropertyId" })
-  webPropertyId?: string;
-}
-
-
 // UnsampledReport
 /** 
  * JSON template for Analytics unsampled report resource.
@@ -123,6 +83,46 @@ export class UnsampledReport extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updated" })
   updated?: Date;
+
+  @SpeakeasyMetadata({ data: "json, name=webPropertyId" })
+  webPropertyId?: string;
+}
+
+
+// UnsampledReportInput
+/** 
+ * JSON template for Analytics unsampled report resource.
+**/
+export class UnsampledReportInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=accountId" })
+  accountId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=dimensions" })
+  dimensions?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=end-date" })
+  endDate?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=filters" })
+  filters?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=id" })
+  id?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=metrics" })
+  metrics?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=profileId" })
+  profileId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=segment" })
+  segment?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=start-date" })
+  startDate?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=title" })
+  title?: string;
 
   @SpeakeasyMetadata({ data: "json, name=webPropertyId" })
   webPropertyId?: string;

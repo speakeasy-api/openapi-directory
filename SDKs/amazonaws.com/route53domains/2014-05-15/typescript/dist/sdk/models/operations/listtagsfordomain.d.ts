@@ -23,5 +23,5 @@ export declare class ListTagsForDomainResponse extends SpeakeasyBase {
     listTagsForDomainResponse?: shared.ListTagsForDomainResponse;
     operationLimitExceeded?: any;
     statusCode: number;
-    unsupportedTld?: any;
+    unsupportedTLD?: any;
 }

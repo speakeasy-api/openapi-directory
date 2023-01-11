@@ -4,7 +4,7 @@ export declare class FilesPatchPathParams extends SpeakeasyBase {
 }
 export declare class FilesPatchRequest extends SpeakeasyBase {
     pathParams: FilesPatchPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class FilesPatchResponse extends SpeakeasyBase {
     contentType: string;

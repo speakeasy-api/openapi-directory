@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Environment } from "./environment";
-import { Shard } from "./shard";
-import { TestDetails } from "./testdetails";
-import { TestSpecification } from "./testspecification";
-import { ToolResultsStep } from "./toolresultsstep";
-export var TestExecutionStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestExecution = exports.TestExecutionStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var environment_1 = require("./environment");
+var shard_1 = require("./shard");
+var testdetails_1 = require("./testdetails");
+var testspecification_1 = require("./testspecification");
+var toolresultsstep_1 = require("./toolresultsstep");
+var TestExecutionStateEnum;
 (function (TestExecutionStateEnum) {
     TestExecutionStateEnum["TestStateUnspecified"] = "TEST_STATE_UNSPECIFIED";
     TestExecutionStateEnum["Validating"] = "VALIDATING";
@@ -41,7 +44,7 @@ export var TestExecutionStateEnum;
     TestExecutionStateEnum["IncompatibleArchitecture"] = "INCOMPATIBLE_ARCHITECTURE";
     TestExecutionStateEnum["Cancelled"] = "CANCELLED";
     TestExecutionStateEnum["Invalid"] = "INVALID";
-})(TestExecutionStateEnum || (TestExecutionStateEnum = {}));
+})(TestExecutionStateEnum = exports.TestExecutionStateEnum || (exports.TestExecutionStateEnum = {}));
 // TestExecution
 /**
  * A single test executed in a single environment.
@@ -52,45 +55,45 @@ var TestExecution = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
-        __metadata("design:type", Environment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
+        __metadata("design:type", environment_1.Environment)
     ], TestExecution.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], TestExecution.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matrixId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matrixId" }),
         __metadata("design:type", String)
     ], TestExecution.prototype, "matrixId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
         __metadata("design:type", String)
     ], TestExecution.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shard" }),
-        __metadata("design:type", Shard)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shard" }),
+        __metadata("design:type", shard_1.Shard)
     ], TestExecution.prototype, "shard", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], TestExecution.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testDetails" }),
-        __metadata("design:type", TestDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testDetails" }),
+        __metadata("design:type", testdetails_1.TestDetails)
     ], TestExecution.prototype, "testDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testSpecification" }),
-        __metadata("design:type", TestSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testSpecification" }),
+        __metadata("design:type", testspecification_1.TestSpecification)
     ], TestExecution.prototype, "testSpecification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", String)
     ], TestExecution.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=toolResultsStep" }),
-        __metadata("design:type", ToolResultsStep)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=toolResultsStep" }),
+        __metadata("design:type", toolresultsstep_1.ToolResultsStep)
     ], TestExecution.prototype, "toolResultsStep", void 0);
     return TestExecution;
-}(SpeakeasyBase));
-export { TestExecution };
+}(utils_1.SpeakeasyBase));
+exports.TestExecution = TestExecution;

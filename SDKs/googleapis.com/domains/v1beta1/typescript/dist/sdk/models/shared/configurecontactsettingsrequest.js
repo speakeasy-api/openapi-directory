@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContactSettings } from "./contactsettings";
-export var ConfigureContactSettingsRequestContactNoticesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigureContactSettingsRequest = exports.ConfigureContactSettingsRequestContactNoticesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var contactsettings_1 = require("./contactsettings");
+var ConfigureContactSettingsRequestContactNoticesEnum;
 (function (ConfigureContactSettingsRequestContactNoticesEnum) {
     ConfigureContactSettingsRequestContactNoticesEnum["ContactNoticeUnspecified"] = "CONTACT_NOTICE_UNSPECIFIED";
     ConfigureContactSettingsRequestContactNoticesEnum["PublicContactDataAcknowledgement"] = "PUBLIC_CONTACT_DATA_ACKNOWLEDGEMENT";
-})(ConfigureContactSettingsRequestContactNoticesEnum || (ConfigureContactSettingsRequestContactNoticesEnum = {}));
+})(ConfigureContactSettingsRequestContactNoticesEnum = exports.ConfigureContactSettingsRequestContactNoticesEnum || (exports.ConfigureContactSettingsRequestContactNoticesEnum = {}));
 // ConfigureContactSettingsRequest
 /**
  * Request for the `ConfigureContactSettings` method.
@@ -39,21 +42,21 @@ var ConfigureContactSettingsRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contactNotices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contactNotices" }),
         __metadata("design:type", Array)
     ], ConfigureContactSettingsRequest.prototype, "contactNotices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contactSettings" }),
-        __metadata("design:type", ContactSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contactSettings" }),
+        __metadata("design:type", contactsettings_1.ContactSettings)
     ], ConfigureContactSettingsRequest.prototype, "contactSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateMask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateMask" }),
         __metadata("design:type", String)
     ], ConfigureContactSettingsRequest.prototype, "updateMask", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validateOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validateOnly" }),
         __metadata("design:type", Boolean)
     ], ConfigureContactSettingsRequest.prototype, "validateOnly", void 0);
     return ConfigureContactSettingsRequest;
-}(SpeakeasyBase));
-export { ConfigureContactSettingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ConfigureContactSettingsRequest = ConfigureContactSettingsRequest;

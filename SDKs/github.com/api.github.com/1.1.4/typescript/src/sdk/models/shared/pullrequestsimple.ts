@@ -1,9 +1,9 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { Link } from "./link";
+import { Repository } from "./repository";
 import { SimpleUser } from "./simpleuser";
 import { AuthorAssociationEnum } from "./authorassociationenum";
 import { AutoMerge } from "./automerge";
-import { Repository } from "./repository";
 import { TeamSimple } from "./teamsimple";
 
 
@@ -35,6 +35,10 @@ export class PullRequestSimpleLinks extends SpeakeasyBase {
 }
 
 
+// PullRequestSimpleSimpleUser
+/** 
+ * Simple User
+**/
 export class PullRequestSimpleSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -95,6 +99,10 @@ export class PullRequestSimpleSimpleUser extends SpeakeasyBase {
 }
 
 
+// PullRequestSimpleBaseSimpleUser
+/** 
+ * Simple User
+**/
 export class PullRequestSimpleBaseSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -173,6 +181,10 @@ export class PullRequestSimpleBase extends SpeakeasyBase {
 }
 
 
+// PullRequestSimpleHeadSimpleUser
+/** 
+ * Simple User
+**/
 export class PullRequestSimpleHeadSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -275,6 +287,10 @@ export class PullRequestSimpleLabels extends SpeakeasyBase {
 }
 
 
+// PullRequestSimpleMilestoneSimpleUser
+/** 
+ * Simple User
+**/
 export class PullRequestSimpleMilestoneSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -340,6 +356,10 @@ export enum PullRequestSimpleMilestoneStateEnum {
 }
 
 
+// PullRequestSimpleMilestone
+/** 
+ * A collection of related issues and pull requests.
+**/
 export class PullRequestSimpleMilestone extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=closed_at" })
   closedAt: Date;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GridCoordinate } from "./gridcoordinate";
-export var PasteDataRequestTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PasteDataRequest = exports.PasteDataRequestTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var gridcoordinate_1 = require("./gridcoordinate");
+var PasteDataRequestTypeEnum;
 (function (PasteDataRequestTypeEnum) {
     PasteDataRequestTypeEnum["PasteNormal"] = "PASTE_NORMAL";
     PasteDataRequestTypeEnum["PasteValues"] = "PASTE_VALUES";
@@ -33,7 +36,7 @@ export var PasteDataRequestTypeEnum;
     PasteDataRequestTypeEnum["PasteFormula"] = "PASTE_FORMULA";
     PasteDataRequestTypeEnum["PasteDataValidation"] = "PASTE_DATA_VALIDATION";
     PasteDataRequestTypeEnum["PasteConditionalFormatting"] = "PASTE_CONDITIONAL_FORMATTING";
-})(PasteDataRequestTypeEnum || (PasteDataRequestTypeEnum = {}));
+})(PasteDataRequestTypeEnum = exports.PasteDataRequestTypeEnum || (exports.PasteDataRequestTypeEnum = {}));
 // PasteDataRequest
 /**
  * Inserts data into the spreadsheet starting at the specified coordinate.
@@ -44,25 +47,25 @@ var PasteDataRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coordinate" }),
-        __metadata("design:type", GridCoordinate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coordinate" }),
+        __metadata("design:type", gridcoordinate_1.GridCoordinate)
     ], PasteDataRequest.prototype, "coordinate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", String)
     ], PasteDataRequest.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delimiter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delimiter" }),
         __metadata("design:type", String)
     ], PasteDataRequest.prototype, "delimiter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html" }),
         __metadata("design:type", Boolean)
     ], PasteDataRequest.prototype, "html", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PasteDataRequest.prototype, "type", void 0);
     return PasteDataRequest;
-}(SpeakeasyBase));
-export { PasteDataRequest };
+}(utils_1.SpeakeasyBase));
+exports.PasteDataRequest = PasteDataRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ConfirmsPlanting5ServerList = [
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfirmsPlanting5Response = exports.ConfirmsPlanting5Request = exports.ConfirmsPlanting5RequestBody = exports.ConfirmsPlanting5ServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+exports.ConfirmsPlanting5ServerList = [
     "http://api.climatekuul.com:8000/footprint",
 ];
 var ConfirmsPlanting5RequestBody = /** @class */ (function (_super) {
@@ -32,53 +35,53 @@ var ConfirmsPlanting5RequestBody = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=apiKey_l1;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=apiKey_l1;" }),
         __metadata("design:type", String)
     ], ConfirmsPlanting5RequestBody.prototype, "apiKeyL1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=apiKey_l2;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=apiKey_l2;" }),
         __metadata("design:type", String)
     ], ConfirmsPlanting5RequestBody.prototype, "apiKeyL2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=confirmPlanting;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=confirmPlanting;" }),
         __metadata("design:type", String)
     ], ConfirmsPlanting5RequestBody.prototype, "confirmPlanting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=transaction_id;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=transaction_id;" }),
         __metadata("design:type", String)
     ], ConfirmsPlanting5RequestBody.prototype, "transactionId", void 0);
     return ConfirmsPlanting5RequestBody;
-}(SpeakeasyBase));
-export { ConfirmsPlanting5RequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ConfirmsPlanting5RequestBody = ConfirmsPlanting5RequestBody;
 var ConfirmsPlanting5Request = /** @class */ (function (_super) {
     __extends(ConfirmsPlanting5Request, _super);
     function ConfirmsPlanting5Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ConfirmsPlanting5Request.prototype, "serverUrl", void 0);
+    ], ConfirmsPlanting5Request.prototype, "serverURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", ConfirmsPlanting5RequestBody)
     ], ConfirmsPlanting5Request.prototype, "request", void 0);
     return ConfirmsPlanting5Request;
-}(SpeakeasyBase));
-export { ConfirmsPlanting5Request };
+}(utils_1.SpeakeasyBase));
+exports.ConfirmsPlanting5Request = ConfirmsPlanting5Request;
 var ConfirmsPlanting5Response = /** @class */ (function (_super) {
     __extends(ConfirmsPlanting5Response, _super);
     function ConfirmsPlanting5Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConfirmsPlanting5Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ConfirmsPlanting5Response.prototype, "statusCode", void 0);
     return ConfirmsPlanting5Response;
-}(SpeakeasyBase));
-export { ConfirmsPlanting5Response };
+}(utils_1.SpeakeasyBase));
+exports.ConfirmsPlanting5Response = ConfirmsPlanting5Response;

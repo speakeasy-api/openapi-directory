@@ -12,12 +12,12 @@ export declare class CreateClusterRequest extends SpeakeasyBase {
     description?: string;
     forwardingAddressId?: string;
     jobType: JobTypeEnum;
-    kmsKeyArn?: string;
+    kmsKeyARN?: string;
     notification?: Notification;
     onDeviceServiceConfiguration?: OnDeviceServiceConfiguration;
     remoteManagement?: RemoteManagementEnum;
     resources: JobResource;
-    roleArn: string;
+    roleARN: string;
     shippingOption: ShippingOptionEnum;
     snowballType: SnowballTypeEnum;
     taxDocuments?: TaxDocuments;

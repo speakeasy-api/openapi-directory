@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PublicUpdateSubscriptionStatusRequestLegalBasisEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PublicUpdateSubscriptionStatusRequest = exports.PublicUpdateSubscriptionStatusRequestLegalBasisEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PublicUpdateSubscriptionStatusRequestLegalBasisEnum;
 (function (PublicUpdateSubscriptionStatusRequestLegalBasisEnum) {
     PublicUpdateSubscriptionStatusRequestLegalBasisEnum["LegitimateInterestPql"] = "LEGITIMATE_INTEREST_PQL";
     PublicUpdateSubscriptionStatusRequestLegalBasisEnum["LegitimateInterestClient"] = "LEGITIMATE_INTEREST_CLIENT";
@@ -32,7 +35,7 @@ export var PublicUpdateSubscriptionStatusRequestLegalBasisEnum;
     PublicUpdateSubscriptionStatusRequestLegalBasisEnum["NonGdpr"] = "NON_GDPR";
     PublicUpdateSubscriptionStatusRequestLegalBasisEnum["ProcessAndStore"] = "PROCESS_AND_STORE";
     PublicUpdateSubscriptionStatusRequestLegalBasisEnum["LegitimateInterestOther"] = "LEGITIMATE_INTEREST_OTHER";
-})(PublicUpdateSubscriptionStatusRequestLegalBasisEnum || (PublicUpdateSubscriptionStatusRequestLegalBasisEnum = {}));
+})(PublicUpdateSubscriptionStatusRequestLegalBasisEnum = exports.PublicUpdateSubscriptionStatusRequestLegalBasisEnum || (exports.PublicUpdateSubscriptionStatusRequestLegalBasisEnum = {}));
 // PublicUpdateSubscriptionStatusRequest
 /**
  * A request to change the status of a contact's subscription.
@@ -43,21 +46,21 @@ var PublicUpdateSubscriptionStatusRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emailAddress" }),
         __metadata("design:type", String)
     ], PublicUpdateSubscriptionStatusRequest.prototype, "emailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legalBasis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legalBasis" }),
         __metadata("design:type", String)
     ], PublicUpdateSubscriptionStatusRequest.prototype, "legalBasis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legalBasisExplanation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legalBasisExplanation" }),
         __metadata("design:type", String)
     ], PublicUpdateSubscriptionStatusRequest.prototype, "legalBasisExplanation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptionId" }),
         __metadata("design:type", String)
     ], PublicUpdateSubscriptionStatusRequest.prototype, "subscriptionId", void 0);
     return PublicUpdateSubscriptionStatusRequest;
-}(SpeakeasyBase));
-export { PublicUpdateSubscriptionStatusRequest };
+}(utils_1.SpeakeasyBase));
+exports.PublicUpdateSubscriptionStatusRequest = PublicUpdateSubscriptionStatusRequest;

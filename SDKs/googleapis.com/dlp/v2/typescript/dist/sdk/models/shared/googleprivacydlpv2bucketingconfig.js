@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2Bucket } from "./googleprivacydlpv2bucket";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2BucketingConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2bucket_1 = require("./googleprivacydlpv2bucket");
 // GooglePrivacyDlpV2BucketingConfig
 /**
  * Generalization function that buckets values based on ranges. The ranges and replacement values are dynamically provided by the user for custom behavior, such as 1-30 -> LOW 31-65 -> MEDIUM 66-100 -> HIGH This can be used on data of type: number, long, string, timestamp. If the bound `Value` type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing. See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more.
@@ -34,9 +37,9 @@ var GooglePrivacyDlpV2BucketingConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buckets", elemType: GooglePrivacyDlpV2Bucket }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buckets", elemType: googleprivacydlpv2bucket_1.GooglePrivacyDlpV2Bucket }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2BucketingConfig.prototype, "buckets", void 0);
     return GooglePrivacyDlpV2BucketingConfig;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2BucketingConfig };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2BucketingConfig = GooglePrivacyDlpV2BucketingConfig;

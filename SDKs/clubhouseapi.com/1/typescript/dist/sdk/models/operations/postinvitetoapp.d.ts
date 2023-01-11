@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class PostInviteToAppRequest extends SpeakeasyBase {
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class PostInviteToAppResponse extends SpeakeasyBase {
     contentType: string;

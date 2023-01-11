@@ -37,7 +37,7 @@ export declare class SearchIssuesAndPullRequestsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    searchIssuesAndPullRequests200ApplicationJsonObject?: SearchIssuesAndPullRequests200ApplicationJson;
-    searchIssuesAndPullRequests503ApplicationJsonObject?: SearchIssuesAndPullRequests503ApplicationJson;
+    searchIssuesAndPullRequests200ApplicationJSONObject?: SearchIssuesAndPullRequests200ApplicationJson;
+    searchIssuesAndPullRequests503ApplicationJSONObject?: SearchIssuesAndPullRequests503ApplicationJson;
     validationError?: shared.ValidationError;
 }

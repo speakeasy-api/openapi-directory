@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RegexPatternSet } from "./regexpatternset";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateRegexPatternSetResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var regexpatternset_1 = require("./regexpatternset");
 var CreateRegexPatternSetResponse = /** @class */ (function (_super) {
     __extends(CreateRegexPatternSetResponse, _super);
     function CreateRegexPatternSetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChangeToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChangeToken" }),
         __metadata("design:type", String)
     ], CreateRegexPatternSetResponse.prototype, "changeToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RegexPatternSet" }),
-        __metadata("design:type", RegexPatternSet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RegexPatternSet" }),
+        __metadata("design:type", regexpatternset_1.RegexPatternSet)
     ], CreateRegexPatternSetResponse.prototype, "regexPatternSet", void 0);
     return CreateRegexPatternSetResponse;
-}(SpeakeasyBase));
-export { CreateRegexPatternSetResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateRegexPatternSetResponse = CreateRegexPatternSetResponse;

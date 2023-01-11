@@ -108,11 +108,11 @@ export declare class PsnocRequest extends SpeakeasyBase {
 export declare class PsnocResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    psnoc400ApplicationJsonObject?: Psnoc400ApplicationJson;
-    psnoc401ApplicationJsonObject?: Psnoc401ApplicationJson;
-    psnoc404ApplicationJsonObject?: Psnoc404ApplicationJson;
-    psnoc500ApplicationJsonObject?: Psnoc500ApplicationJson;
-    psnoc502ApplicationJsonObject?: Psnoc502ApplicationJson;
-    psnoc503ApplicationJsonObject?: Psnoc503ApplicationJson;
-    psnoc504ApplicationJsonObject?: Psnoc504ApplicationJson;
+    psnoc400ApplicationJSONObject?: Psnoc400ApplicationJson;
+    psnoc401ApplicationJSONObject?: Psnoc401ApplicationJson;
+    psnoc404ApplicationJSONObject?: Psnoc404ApplicationJson;
+    psnoc500ApplicationJSONObject?: Psnoc500ApplicationJson;
+    psnoc502ApplicationJSONObject?: Psnoc502ApplicationJson;
+    psnoc503ApplicationJSONObject?: Psnoc503ApplicationJson;
+    psnoc504ApplicationJSONObject?: Psnoc504ApplicationJson;
 }

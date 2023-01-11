@@ -117,5 +117,5 @@ export class UpdateAccessPolicyResponse extends SpeakeasyBase {
   throttlingException?: any;
 
   @SpeakeasyMetadata()
-  updateAccessPolicyResponse?: Map<string, any>;
+  updateAccessPolicyResponse?: Record<string, any>;
 }

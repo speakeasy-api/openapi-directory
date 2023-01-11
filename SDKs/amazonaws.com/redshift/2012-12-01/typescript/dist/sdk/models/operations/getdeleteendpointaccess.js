@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteEndpointAccessActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteEndpointAccessResponse = exports.GetDeleteEndpointAccessRequest = exports.GetDeleteEndpointAccessHeaders = exports.GetDeleteEndpointAccessQueryParams = exports.GetDeleteEndpointAccessVersionEnum = exports.GetDeleteEndpointAccessActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteEndpointAccessActionEnum;
 (function (GetDeleteEndpointAccessActionEnum) {
     GetDeleteEndpointAccessActionEnum["DeleteEndpointAccess"] = "DeleteEndpointAccess";
-})(GetDeleteEndpointAccessActionEnum || (GetDeleteEndpointAccessActionEnum = {}));
-export var GetDeleteEndpointAccessVersionEnum;
+})(GetDeleteEndpointAccessActionEnum = exports.GetDeleteEndpointAccessActionEnum || (exports.GetDeleteEndpointAccessActionEnum = {}));
+var GetDeleteEndpointAccessVersionEnum;
 (function (GetDeleteEndpointAccessVersionEnum) {
     GetDeleteEndpointAccessVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(GetDeleteEndpointAccessVersionEnum || (GetDeleteEndpointAccessVersionEnum = {}));
+})(GetDeleteEndpointAccessVersionEnum = exports.GetDeleteEndpointAccessVersionEnum || (exports.GetDeleteEndpointAccessVersionEnum = {}));
 var GetDeleteEndpointAccessQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteEndpointAccessQueryParams, _super);
     function GetDeleteEndpointAccessQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteEndpointAccessQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EndpointName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EndpointName" }),
         __metadata("design:type", String)
     ], GetDeleteEndpointAccessQueryParams.prototype, "endpointName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteEndpointAccessQueryParams.prototype, "version", void 0);
     return GetDeleteEndpointAccessQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteEndpointAccessQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteEndpointAccessQueryParams = GetDeleteEndpointAccessQueryParams;
 var GetDeleteEndpointAccessHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteEndpointAccessHeaders, _super);
     function GetDeleteEndpointAccessHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteEndpointAccessHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteEndpointAccessHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteEndpointAccessHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteEndpointAccessHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteEndpointAccessHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteEndpointAccessHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteEndpointAccessHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteEndpointAccessHeaders;
-}(SpeakeasyBase));
-export { GetDeleteEndpointAccessHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteEndpointAccessHeaders = GetDeleteEndpointAccessHeaders;
 var GetDeleteEndpointAccessRequest = /** @class */ (function (_super) {
     __extends(GetDeleteEndpointAccessRequest, _super);
     function GetDeleteEndpointAccessRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteEndpointAccessQueryParams)
     ], GetDeleteEndpointAccessRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteEndpointAccessHeaders)
     ], GetDeleteEndpointAccessRequest.prototype, "headers", void 0);
     return GetDeleteEndpointAccessRequest;
-}(SpeakeasyBase));
-export { GetDeleteEndpointAccessRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteEndpointAccessRequest = GetDeleteEndpointAccessRequest;
 var GetDeleteEndpointAccessResponse = /** @class */ (function (_super) {
     __extends(GetDeleteEndpointAccessResponse, _super);
     function GetDeleteEndpointAccessResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteEndpointAccessResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteEndpointAccessResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteEndpointAccessResponse.prototype, "statusCode", void 0);
     return GetDeleteEndpointAccessResponse;
-}(SpeakeasyBase));
-export { GetDeleteEndpointAccessResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteEndpointAccessResponse = GetDeleteEndpointAccessResponse;

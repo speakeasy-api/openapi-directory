@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class PerformanceMetrics extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Properties" })
-  properties?: Map<string, string>;
+  properties?: Record<string, string>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,87 +23,89 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedProvider } from "./nestedprovider";
-import { NestedTenant } from "./nestedtenant";
-import { NestedCircuitType } from "./nestedcircuittype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Circuit = exports.CircuitStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedprovider_1 = require("./nestedprovider");
+var nestedtenant_1 = require("./nestedtenant");
+var nestedcircuittype_1 = require("./nestedcircuittype");
 var CircuitStatus = /** @class */ (function (_super) {
     __extends(CircuitStatus, _super);
     function CircuitStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], CircuitStatus.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], CircuitStatus.prototype, "value", void 0);
     return CircuitStatus;
-}(SpeakeasyBase));
-export { CircuitStatus };
+}(utils_1.SpeakeasyBase));
+exports.CircuitStatus = CircuitStatus;
 var Circuit = /** @class */ (function (_super) {
     __extends(Circuit, _super);
     function Circuit() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cid" }),
         __metadata("design:type", String)
     ], Circuit.prototype, "cid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", String)
     ], Circuit.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commit_rate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commit_rate" }),
         __metadata("design:type", Number)
     ], Circuit.prototype, "commitRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Circuit.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], Circuit.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Circuit.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Circuit.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=install_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=install_date" }),
         __metadata("design:type", Date)
     ], Circuit.prototype, "installDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_updated" }),
         __metadata("design:type", Date)
     ], Circuit.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provider" }),
-        __metadata("design:type", NestedProvider)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provider" }),
+        __metadata("design:type", nestedprovider_1.NestedProvider)
     ], Circuit.prototype, "provider", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", CircuitStatus)
     ], Circuit.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], Circuit.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant" }),
-        __metadata("design:type", NestedTenant)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant" }),
+        __metadata("design:type", nestedtenant_1.NestedTenant)
     ], Circuit.prototype, "tenant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
-        __metadata("design:type", NestedCircuitType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", nestedcircuittype_1.NestedCircuitType)
     ], Circuit.prototype, "type", void 0);
     return Circuit;
-}(SpeakeasyBase));
-export { Circuit };
+}(utils_1.SpeakeasyBase));
+exports.Circuit = Circuit;

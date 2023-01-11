@@ -23,6 +23,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugSrcRequest extends Speakeas
 export declare class GetRepositoriesWorkspaceRepoSlugSrcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedTreeentries?: shared.PaginatedTreeentries;
 }

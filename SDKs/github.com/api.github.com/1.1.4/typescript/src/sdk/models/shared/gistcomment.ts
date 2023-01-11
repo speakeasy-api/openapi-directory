@@ -3,6 +3,10 @@ import { AuthorAssociationEnum } from "./authorassociationenum";
 
 
 
+// GistCommentSimpleUser
+/** 
+ * Simple User
+**/
 export class GistCommentSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

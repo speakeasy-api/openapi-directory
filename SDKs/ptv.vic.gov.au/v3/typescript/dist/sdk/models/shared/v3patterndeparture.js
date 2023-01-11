@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { V3StopModel } from "./v3stopmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3PatternDeparture = void 0;
+var utils_1 = require("../../../internal/utils");
+var v3stopmodel_1 = require("./v3stopmodel");
 var V3PatternDeparture = /** @class */ (function (_super) {
     __extends(V3PatternDeparture, _super);
     function V3PatternDeparture() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=at_platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=at_platform" }),
         __metadata("design:type", Boolean)
     ], V3PatternDeparture.prototype, "atPlatform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=departure_sequence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=departure_sequence" }),
         __metadata("design:type", Number)
     ], V3PatternDeparture.prototype, "departureSequence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=direction_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=direction_id" }),
         __metadata("design:type", Number)
     ], V3PatternDeparture.prototype, "directionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disruption_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disruption_ids" }),
         __metadata("design:type", Array)
     ], V3PatternDeparture.prototype, "disruptionIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=estimated_departure_utc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=estimated_departure_utc" }),
         __metadata("design:type", Date)
     ], V3PatternDeparture.prototype, "estimatedDepartureUtc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flags" }),
         __metadata("design:type", String)
     ], V3PatternDeparture.prototype, "flags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform_number" }),
         __metadata("design:type", String)
     ], V3PatternDeparture.prototype, "platformNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=route_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=route_id" }),
         __metadata("design:type", Number)
     ], V3PatternDeparture.prototype, "routeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=run_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=run_id" }),
         __metadata("design:type", Number)
     ], V3PatternDeparture.prototype, "runId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=run_ref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=run_ref" }),
         __metadata("design:type", String)
     ], V3PatternDeparture.prototype, "runRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduled_departure_utc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduled_departure_utc" }),
         __metadata("design:type", Date)
     ], V3PatternDeparture.prototype, "scheduledDepartureUtc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skipped_stops", elemType: V3StopModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skipped_stops", elemType: v3stopmodel_1.V3StopModel }),
         __metadata("design:type", Array)
     ], V3PatternDeparture.prototype, "skippedStops", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stop_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stop_id" }),
         __metadata("design:type", Number)
     ], V3PatternDeparture.prototype, "stopId", void 0);
     return V3PatternDeparture;
-}(SpeakeasyBase));
-export { V3PatternDeparture };
+}(utils_1.SpeakeasyBase));
+exports.V3PatternDeparture = V3PatternDeparture;

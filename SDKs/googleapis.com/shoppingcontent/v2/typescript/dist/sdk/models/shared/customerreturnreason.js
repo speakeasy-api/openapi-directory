@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomerReturnReason = void 0;
+var utils_1 = require("../../../internal/utils");
 var CustomerReturnReason = /** @class */ (function (_super) {
     __extends(CustomerReturnReason, _super);
     function CustomerReturnReason() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CustomerReturnReason.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasonCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasonCode" }),
         __metadata("design:type", String)
     ], CustomerReturnReason.prototype, "reasonCode", void 0);
     return CustomerReturnReason;
-}(SpeakeasyBase));
-export { CustomerReturnReason };
+}(utils_1.SpeakeasyBase));
+exports.CustomerReturnReason = CustomerReturnReason;

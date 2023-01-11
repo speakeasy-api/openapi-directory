@@ -46,7 +46,7 @@ export class CancelPolicyGenerationResponse extends SpeakeasyBase {
   accessDeniedException?: any;
 
   @SpeakeasyMetadata()
-  cancelPolicyGenerationResponse?: Map<string, any>;
+  cancelPolicyGenerationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

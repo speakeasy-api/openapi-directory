@@ -1,24 +1,24 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
-export enum GetMapVersionNumberTileLayerStyleZoomXYFormatFormatEnum {
+export enum GetMapVersionNumberTileLayerStyleZoomXyFormatFormatEnum {
     Jpg = "jpg",
     Png = "png"
 }
 
-export enum GetMapVersionNumberTileLayerStyleZoomXYFormatLayerEnum {
+export enum GetMapVersionNumberTileLayerStyleZoomXyFormatLayerEnum {
     Basic = "basic",
     Hybrid = "hybrid",
     Labels = "labels"
 }
 
-export enum GetMapVersionNumberTileLayerStyleZoomXYFormatStyleEnum {
+export enum GetMapVersionNumberTileLayerStyleZoomXyFormatStyleEnum {
     Main = "main",
     Night = "night"
 }
 
 
-export class GetMapVersionNumberTileLayerStyleZoomXYFormatPathParams extends SpeakeasyBase {
+export class GetMapVersionNumberTileLayerStyleZoomXyFormatPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=X" })
   x: number;
 
@@ -26,13 +26,13 @@ export class GetMapVersionNumberTileLayerStyleZoomXYFormatPathParams extends Spe
   y: number;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" })
-  format: GetMapVersionNumberTileLayerStyleZoomXYFormatFormatEnum;
+  format: GetMapVersionNumberTileLayerStyleZoomXyFormatFormatEnum;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=layer" })
-  layer: GetMapVersionNumberTileLayerStyleZoomXYFormatLayerEnum;
+  layer: GetMapVersionNumberTileLayerStyleZoomXyFormatLayerEnum;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=style" })
-  style: GetMapVersionNumberTileLayerStyleZoomXYFormatStyleEnum;
+  style: GetMapVersionNumberTileLayerStyleZoomXyFormatStyleEnum;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=versionNumber" })
   versionNumber: number;
@@ -41,31 +41,31 @@ export class GetMapVersionNumberTileLayerStyleZoomXYFormatPathParams extends Spe
   zoom: number;
 }
 
-export enum GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum {
+export enum GetMapVersionNumberTileLayerStyleZoomXyFormatViewEnum {
     Unified = "Unified",
     In = "IN"
 }
 
 
-export class GetMapVersionNumberTileLayerStyleZoomXYFormatQueryParams extends SpeakeasyBase {
+export class GetMapVersionNumberTileLayerStyleZoomXyFormatQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tileSize" })
   tileSize?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=view" })
-  view?: GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum;
+  view?: GetMapVersionNumberTileLayerStyleZoomXyFormatViewEnum;
 }
 
 
-export class GetMapVersionNumberTileLayerStyleZoomXYFormatRequest extends SpeakeasyBase {
+export class GetMapVersionNumberTileLayerStyleZoomXyFormatRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  pathParams: GetMapVersionNumberTileLayerStyleZoomXYFormatPathParams;
+  pathParams: GetMapVersionNumberTileLayerStyleZoomXyFormatPathParams;
 
   @SpeakeasyMetadata()
-  queryParams: GetMapVersionNumberTileLayerStyleZoomXYFormatQueryParams;
+  queryParams: GetMapVersionNumberTileLayerStyleZoomXyFormatQueryParams;
 }
 
 
-export class GetMapVersionNumberTileLayerStyleZoomXYFormatResponse extends SpeakeasyBase {
+export class GetMapVersionNumberTileLayerStyleZoomXyFormatResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
   contentType: string;
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistryUpdateApiSpecResponse = exports.RegistryUpdateApiSpecRequest = exports.RegistryUpdateApiSpecQueryParams = exports.RegistryUpdateApiSpecPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RegistryUpdateApiSpecPathParams = /** @class */ (function (_super) {
     __extends(RegistryUpdateApiSpecPathParams, _super);
     function RegistryUpdateApiSpecPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=api" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=api" }),
         __metadata("design:type", String)
     ], RegistryUpdateApiSpecPathParams.prototype, "api", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], RegistryUpdateApiSpecPathParams.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=spec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=spec" }),
         __metadata("design:type", String)
     ], RegistryUpdateApiSpecPathParams.prototype, "spec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=version" }),
         __metadata("design:type", String)
     ], RegistryUpdateApiSpecPathParams.prototype, "version", void 0);
     return RegistryUpdateApiSpecPathParams;
-}(SpeakeasyBase));
-export { RegistryUpdateApiSpecPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistryUpdateApiSpecPathParams = RegistryUpdateApiSpecPathParams;
 var RegistryUpdateApiSpecQueryParams = /** @class */ (function (_super) {
     __extends(RegistryUpdateApiSpecQueryParams, _super);
     function RegistryUpdateApiSpecQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=allow_missing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=allow_missing" }),
         __metadata("design:type", String)
     ], RegistryUpdateApiSpecQueryParams.prototype, "allowMissing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=update_mask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=update_mask" }),
         __metadata("design:type", String)
     ], RegistryUpdateApiSpecQueryParams.prototype, "updateMask", void 0);
     return RegistryUpdateApiSpecQueryParams;
-}(SpeakeasyBase));
-export { RegistryUpdateApiSpecQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistryUpdateApiSpecQueryParams = RegistryUpdateApiSpecQueryParams;
 var RegistryUpdateApiSpecRequest = /** @class */ (function (_super) {
     __extends(RegistryUpdateApiSpecRequest, _super);
     function RegistryUpdateApiSpecRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistryUpdateApiSpecPathParams)
     ], RegistryUpdateApiSpecRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistryUpdateApiSpecQueryParams)
     ], RegistryUpdateApiSpecRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], RegistryUpdateApiSpecRequest.prototype, "request", void 0);
     return RegistryUpdateApiSpecRequest;
-}(SpeakeasyBase));
-export { RegistryUpdateApiSpecRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegistryUpdateApiSpecRequest = RegistryUpdateApiSpecRequest;
 var RegistryUpdateApiSpecResponse = /** @class */ (function (_super) {
     __extends(RegistryUpdateApiSpecResponse, _super);
     function RegistryUpdateApiSpecResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], RegistryUpdateApiSpecResponse.prototype, "apiSpec", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RegistryUpdateApiSpecResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RegistryUpdateApiSpecResponse.prototype, "statusCode", void 0);
     return RegistryUpdateApiSpecResponse;
-}(SpeakeasyBase));
-export { RegistryUpdateApiSpecResponse };
+}(utils_1.SpeakeasyBase));
+exports.RegistryUpdateApiSpecResponse = RegistryUpdateApiSpecResponse;

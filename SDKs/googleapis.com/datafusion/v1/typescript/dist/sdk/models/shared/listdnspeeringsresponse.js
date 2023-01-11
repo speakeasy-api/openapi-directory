@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DnsPeering } from "./dnspeering";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListDnsPeeringsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var dnspeering_1 = require("./dnspeering");
 // ListDnsPeeringsResponse
 /**
  * Response message for list DNS peerings.
@@ -34,13 +37,13 @@ var ListDnsPeeringsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dnsPeerings", elemType: DnsPeering }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dnsPeerings", elemType: dnspeering_1.DnsPeering }),
         __metadata("design:type", Array)
     ], ListDnsPeeringsResponse.prototype, "dnsPeerings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListDnsPeeringsResponse.prototype, "nextPageToken", void 0);
     return ListDnsPeeringsResponse;
-}(SpeakeasyBase));
-export { ListDnsPeeringsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListDnsPeeringsResponse = ListDnsPeeringsResponse;

@@ -17,5 +17,5 @@ export declare class GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsern
 export declare class GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

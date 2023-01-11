@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Object } from "./object";
+import { ObjectT } from "./object";
 
 
 
@@ -31,7 +31,7 @@ export class ComposeRequestSourceObjects extends SpeakeasyBase {
 **/
 export class ComposeRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=destination" })
-  destination?: Object;
+  destination?: ObjectT;
 
   @SpeakeasyMetadata({ data: "json, name=kind" })
   kind?: string;

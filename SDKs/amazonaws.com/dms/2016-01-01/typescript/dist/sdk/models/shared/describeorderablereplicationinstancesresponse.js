@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrderableReplicationInstance } from "./orderablereplicationinstance";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeOrderableReplicationInstancesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var orderablereplicationinstance_1 = require("./orderablereplicationinstance");
 // DescribeOrderableReplicationInstancesResponse
 /**
  * <p/>
@@ -34,13 +37,13 @@ var DescribeOrderableReplicationInstancesResponse = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Marker" }),
         __metadata("design:type", String)
     ], DescribeOrderableReplicationInstancesResponse.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OrderableReplicationInstances", elemType: OrderableReplicationInstance }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OrderableReplicationInstances", elemType: orderablereplicationinstance_1.OrderableReplicationInstance }),
         __metadata("design:type", Array)
     ], DescribeOrderableReplicationInstancesResponse.prototype, "orderableReplicationInstances", void 0);
     return DescribeOrderableReplicationInstancesResponse;
-}(SpeakeasyBase));
-export { DescribeOrderableReplicationInstancesResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeOrderableReplicationInstancesResponse = DescribeOrderableReplicationInstancesResponse;

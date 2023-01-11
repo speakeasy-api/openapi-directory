@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var VeteranStatusRequestGenderEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VeteranStatusRequest = exports.VeteranStatusRequestGenderEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var VeteranStatusRequestGenderEnum;
 (function (VeteranStatusRequestGenderEnum) {
     VeteranStatusRequestGenderEnum["M"] = "M";
     VeteranStatusRequestGenderEnum["F"] = "F";
-})(VeteranStatusRequestGenderEnum || (VeteranStatusRequestGenderEnum = {}));
+})(VeteranStatusRequestGenderEnum = exports.VeteranStatusRequestGenderEnum || (exports.VeteranStatusRequestGenderEnum = {}));
 // VeteranStatusRequest
 /**
  * Attributes required to retrieve a Veteran's status
@@ -38,29 +41,29 @@ var VeteranStatusRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=birth_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=birth_date" }),
         __metadata("design:type", String)
     ], VeteranStatusRequest.prototype, "birthDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=first_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_name" }),
         __metadata("design:type", String)
     ], VeteranStatusRequest.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gender" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gender" }),
         __metadata("design:type", String)
     ], VeteranStatusRequest.prototype, "gender", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_name" }),
         __metadata("design:type", String)
     ], VeteranStatusRequest.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=middle_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=middle_name" }),
         __metadata("design:type", String)
     ], VeteranStatusRequest.prototype, "middleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssn" }),
         __metadata("design:type", String)
     ], VeteranStatusRequest.prototype, "ssn", void 0);
     return VeteranStatusRequest;
-}(SpeakeasyBase));
-export { VeteranStatusRequest };
+}(utils_1.SpeakeasyBase));
+exports.VeteranStatusRequest = VeteranStatusRequest;

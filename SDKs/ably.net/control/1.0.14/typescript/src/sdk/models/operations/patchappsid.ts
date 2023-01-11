@@ -38,5 +38,5 @@ export class PatchAppsIdResponse extends SpeakeasyBase {
   appResponse?: shared.AppResponse;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 }

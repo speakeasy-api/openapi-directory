@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostModifyVpnTunnelOptionsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostModifyVpnTunnelOptionsResponse = exports.PostModifyVpnTunnelOptionsRequest = exports.PostModifyVpnTunnelOptionsHeaders = exports.PostModifyVpnTunnelOptionsQueryParams = exports.PostModifyVpnTunnelOptionsVersionEnum = exports.PostModifyVpnTunnelOptionsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostModifyVpnTunnelOptionsActionEnum;
 (function (PostModifyVpnTunnelOptionsActionEnum) {
     PostModifyVpnTunnelOptionsActionEnum["ModifyVpnTunnelOptions"] = "ModifyVpnTunnelOptions";
-})(PostModifyVpnTunnelOptionsActionEnum || (PostModifyVpnTunnelOptionsActionEnum = {}));
-export var PostModifyVpnTunnelOptionsVersionEnum;
+})(PostModifyVpnTunnelOptionsActionEnum = exports.PostModifyVpnTunnelOptionsActionEnum || (exports.PostModifyVpnTunnelOptionsActionEnum = {}));
+var PostModifyVpnTunnelOptionsVersionEnum;
 (function (PostModifyVpnTunnelOptionsVersionEnum) {
     PostModifyVpnTunnelOptionsVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostModifyVpnTunnelOptionsVersionEnum || (PostModifyVpnTunnelOptionsVersionEnum = {}));
+})(PostModifyVpnTunnelOptionsVersionEnum = exports.PostModifyVpnTunnelOptionsVersionEnum || (exports.PostModifyVpnTunnelOptionsVersionEnum = {}));
 var PostModifyVpnTunnelOptionsQueryParams = /** @class */ (function (_super) {
     __extends(PostModifyVpnTunnelOptionsQueryParams, _super);
     function PostModifyVpnTunnelOptionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostModifyVpnTunnelOptionsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostModifyVpnTunnelOptionsQueryParams.prototype, "version", void 0);
     return PostModifyVpnTunnelOptionsQueryParams;
-}(SpeakeasyBase));
-export { PostModifyVpnTunnelOptionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyVpnTunnelOptionsQueryParams = PostModifyVpnTunnelOptionsQueryParams;
 var PostModifyVpnTunnelOptionsHeaders = /** @class */ (function (_super) {
     __extends(PostModifyVpnTunnelOptionsHeaders, _super);
     function PostModifyVpnTunnelOptionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostModifyVpnTunnelOptionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostModifyVpnTunnelOptionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostModifyVpnTunnelOptionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostModifyVpnTunnelOptionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostModifyVpnTunnelOptionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostModifyVpnTunnelOptionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostModifyVpnTunnelOptionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostModifyVpnTunnelOptionsHeaders;
-}(SpeakeasyBase));
-export { PostModifyVpnTunnelOptionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyVpnTunnelOptionsHeaders = PostModifyVpnTunnelOptionsHeaders;
 var PostModifyVpnTunnelOptionsRequest = /** @class */ (function (_super) {
     __extends(PostModifyVpnTunnelOptionsRequest, _super);
     function PostModifyVpnTunnelOptionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyVpnTunnelOptionsQueryParams)
     ], PostModifyVpnTunnelOptionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyVpnTunnelOptionsHeaders)
     ], PostModifyVpnTunnelOptionsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostModifyVpnTunnelOptionsRequest.prototype, "request", void 0);
     return PostModifyVpnTunnelOptionsRequest;
-}(SpeakeasyBase));
-export { PostModifyVpnTunnelOptionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyVpnTunnelOptionsRequest = PostModifyVpnTunnelOptionsRequest;
 var PostModifyVpnTunnelOptionsResponse = /** @class */ (function (_super) {
     __extends(PostModifyVpnTunnelOptionsResponse, _super);
     function PostModifyVpnTunnelOptionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostModifyVpnTunnelOptionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostModifyVpnTunnelOptionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostModifyVpnTunnelOptionsResponse.prototype, "statusCode", void 0);
     return PostModifyVpnTunnelOptionsResponse;
-}(SpeakeasyBase));
-export { PostModifyVpnTunnelOptionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyVpnTunnelOptionsResponse = PostModifyVpnTunnelOptionsResponse;

@@ -53,5 +53,5 @@ export class CreateSectionForProjectResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createSectionForProject201ApplicationJsonObject?: CreateSectionForProject201ApplicationJson;
+  createSectionForProject201ApplicationJSONObject?: CreateSectionForProject201ApplicationJson;
 }

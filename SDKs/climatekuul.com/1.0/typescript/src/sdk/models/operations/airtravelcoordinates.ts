@@ -43,7 +43,7 @@ export class AirtravelCoordinatesRequestBody extends SpeakeasyBase {
 
 export class AirtravelCoordinatesRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   headers: AirtravelCoordinatesHeaders;

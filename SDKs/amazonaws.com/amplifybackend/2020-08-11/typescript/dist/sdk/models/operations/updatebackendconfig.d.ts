@@ -16,10 +16,10 @@ export declare class UpdateBackendConfigHeaders extends SpeakeasyBase {
  * The request object for this operation.
 **/
 export declare class UpdateBackendConfigRequestBodyLoginAuthConfig extends SpeakeasyBase {
-    awsCognitoIdentityPoolId?: string;
-    awsCognitoRegion?: string;
-    awsUserPoolsId?: string;
-    awsUserPoolsWebClientId?: string;
+    awsCognitoIdentityPoolId?: Record<string, any>;
+    awsCognitoRegion?: Record<string, any>;
+    awsUserPoolsId?: Record<string, any>;
+    awsUserPoolsWebClientId?: Record<string, any>;
 }
 export declare class UpdateBackendConfigRequestBody extends SpeakeasyBase {
     loginAuthConfig?: UpdateBackendConfigRequestBodyLoginAuthConfig;

@@ -8,5 +8,5 @@ export declare class ProtocolDhcpGetStatisticsRequest extends SpeakeasyBase {
 export declare class ProtocolDhcpGetStatisticsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolDhcpGetStatistics200ApplicationJsonInt32Integers?: number[];
+    protocolDhcpGetStatistics200ApplicationJSONInt32Integers?: number[];
 }

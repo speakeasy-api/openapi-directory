@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetModifyCertificatesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetModifyCertificatesResponse = exports.GetModifyCertificatesRequest = exports.GetModifyCertificatesHeaders = exports.GetModifyCertificatesQueryParams = exports.GetModifyCertificatesVersionEnum = exports.GetModifyCertificatesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetModifyCertificatesActionEnum;
 (function (GetModifyCertificatesActionEnum) {
     GetModifyCertificatesActionEnum["ModifyCertificates"] = "ModifyCertificates";
-})(GetModifyCertificatesActionEnum || (GetModifyCertificatesActionEnum = {}));
-export var GetModifyCertificatesVersionEnum;
+})(GetModifyCertificatesActionEnum = exports.GetModifyCertificatesActionEnum || (exports.GetModifyCertificatesActionEnum = {}));
+var GetModifyCertificatesVersionEnum;
 (function (GetModifyCertificatesVersionEnum) {
     GetModifyCertificatesVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(GetModifyCertificatesVersionEnum || (GetModifyCertificatesVersionEnum = {}));
+})(GetModifyCertificatesVersionEnum = exports.GetModifyCertificatesVersionEnum || (exports.GetModifyCertificatesVersionEnum = {}));
 var GetModifyCertificatesQueryParams = /** @class */ (function (_super) {
     __extends(GetModifyCertificatesQueryParams, _super);
     function GetModifyCertificatesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetModifyCertificatesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=CertificateIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=CertificateIdentifier" }),
         __metadata("design:type", String)
     ], GetModifyCertificatesQueryParams.prototype, "certificateIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RemoveCustomerOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=RemoveCustomerOverride" }),
         __metadata("design:type", Boolean)
     ], GetModifyCertificatesQueryParams.prototype, "removeCustomerOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetModifyCertificatesQueryParams.prototype, "version", void 0);
     return GetModifyCertificatesQueryParams;
-}(SpeakeasyBase));
-export { GetModifyCertificatesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyCertificatesQueryParams = GetModifyCertificatesQueryParams;
 var GetModifyCertificatesHeaders = /** @class */ (function (_super) {
     __extends(GetModifyCertificatesHeaders, _super);
     function GetModifyCertificatesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetModifyCertificatesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetModifyCertificatesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetModifyCertificatesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetModifyCertificatesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetModifyCertificatesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetModifyCertificatesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetModifyCertificatesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetModifyCertificatesHeaders;
-}(SpeakeasyBase));
-export { GetModifyCertificatesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyCertificatesHeaders = GetModifyCertificatesHeaders;
 var GetModifyCertificatesRequest = /** @class */ (function (_super) {
     __extends(GetModifyCertificatesRequest, _super);
     function GetModifyCertificatesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyCertificatesQueryParams)
     ], GetModifyCertificatesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyCertificatesHeaders)
     ], GetModifyCertificatesRequest.prototype, "headers", void 0);
     return GetModifyCertificatesRequest;
-}(SpeakeasyBase));
-export { GetModifyCertificatesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyCertificatesRequest = GetModifyCertificatesRequest;
 var GetModifyCertificatesResponse = /** @class */ (function (_super) {
     __extends(GetModifyCertificatesResponse, _super);
     function GetModifyCertificatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetModifyCertificatesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetModifyCertificatesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetModifyCertificatesResponse.prototype, "statusCode", void 0);
     return GetModifyCertificatesResponse;
-}(SpeakeasyBase));
-export { GetModifyCertificatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyCertificatesResponse = GetModifyCertificatesResponse;

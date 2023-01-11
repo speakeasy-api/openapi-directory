@@ -22,5 +22,5 @@ export declare class DuplicateTaskResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    duplicateTask201ApplicationJsonObject?: DuplicateTask201ApplicationJson;
+    duplicateTask201ApplicationJSONObject?: DuplicateTask201ApplicationJson;
 }

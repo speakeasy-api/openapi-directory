@@ -15,18 +15,6 @@ export declare enum GoogleCloudContactcenterinsightsV1PhraseMatcherTypeEnum {
 /**
  * The phrase matcher resource.
 **/
-export declare class GoogleCloudContactcenterinsightsV1PhraseMatcherInput extends SpeakeasyBase {
-    active?: boolean;
-    displayName?: string;
-    name?: string;
-    phraseMatchRuleGroups?: GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup[];
-    roleMatch?: GoogleCloudContactcenterinsightsV1PhraseMatcherRoleMatchEnum;
-    type?: GoogleCloudContactcenterinsightsV1PhraseMatcherTypeEnum;
-    versionTag?: string;
-}
-/**
- * The phrase matcher resource.
-**/
 export declare class GoogleCloudContactcenterinsightsV1PhraseMatcher extends SpeakeasyBase {
     activationUpdateTime?: string;
     active?: boolean;
@@ -38,5 +26,17 @@ export declare class GoogleCloudContactcenterinsightsV1PhraseMatcher extends Spe
     roleMatch?: GoogleCloudContactcenterinsightsV1PhraseMatcherRoleMatchEnum;
     type?: GoogleCloudContactcenterinsightsV1PhraseMatcherTypeEnum;
     updateTime?: string;
+    versionTag?: string;
+}
+/**
+ * The phrase matcher resource.
+**/
+export declare class GoogleCloudContactcenterinsightsV1PhraseMatcherInput extends SpeakeasyBase {
+    active?: boolean;
+    displayName?: string;
+    name?: string;
+    phraseMatchRuleGroups?: GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup[];
+    roleMatch?: GoogleCloudContactcenterinsightsV1PhraseMatcherRoleMatchEnum;
+    type?: GoogleCloudContactcenterinsightsV1PhraseMatcherTypeEnum;
     versionTag?: string;
 }

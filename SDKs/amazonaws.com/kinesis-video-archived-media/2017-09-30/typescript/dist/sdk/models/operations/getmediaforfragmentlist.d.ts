@@ -11,7 +11,7 @@ export declare class GetMediaForFragmentListHeaders extends SpeakeasyBase {
 }
 export declare class GetMediaForFragmentListRequestBody extends SpeakeasyBase {
     fragments: string[];
-    streamArn?: string;
+    streamARN?: string;
     streamName?: string;
 }
 export declare class GetMediaForFragmentListRequest extends SpeakeasyBase {

@@ -5,11 +5,11 @@ export declare class UpdatePipelineVariableForWorkspacePathParams extends Speake
 }
 export declare class UpdatePipelineVariableForWorkspaceRequest extends SpeakeasyBase {
     pathParams: UpdatePipelineVariableForWorkspacePathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class UpdatePipelineVariableForWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pipelineVariable?: Map<string, any>;
+    error?: Record<string, any>;
+    pipelineVariable?: Record<string, any>;
 }

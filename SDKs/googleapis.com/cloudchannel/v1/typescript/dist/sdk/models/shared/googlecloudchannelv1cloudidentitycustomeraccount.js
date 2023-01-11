@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1CloudIdentityCustomerAccount = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudChannelV1CloudIdentityCustomerAccount
 /**
  * Entity representing a Cloud Identity account that may be associated with a Channel Services API partner.
@@ -33,21 +36,21 @@ var GoogleCloudChannelV1CloudIdentityCustomerAccount = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerCloudIdentityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerCloudIdentityId" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1CloudIdentityCustomerAccount.prototype, "customerCloudIdentityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerName" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1CloudIdentityCustomerAccount.prototype, "customerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=existing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=existing" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudChannelV1CloudIdentityCustomerAccount.prototype, "existing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owned" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owned" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudChannelV1CloudIdentityCustomerAccount.prototype, "owned", void 0);
     return GoogleCloudChannelV1CloudIdentityCustomerAccount;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1CloudIdentityCustomerAccount };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1CloudIdentityCustomerAccount = GoogleCloudChannelV1CloudIdentityCustomerAccount;

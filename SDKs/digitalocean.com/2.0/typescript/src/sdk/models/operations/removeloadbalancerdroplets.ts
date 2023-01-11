@@ -1,47 +1,48 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class RemoveLoadBalancerDropletsPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=lb_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=lb_id" })
   lbId: string;
 }
 
 
-export class RemoveLoadBalancerDropletsRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: RemoveLoadBalancerDropletsPathParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request: shared.Onev21loadBalancersPostRequestBodyContentApplication1jsonSchemaOneOf0AllOf0;
-}
-
-
 export class RemoveLoadBalancerDroplets401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class RemoveLoadBalancerDropletsRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: RemoveLoadBalancerDropletsPathParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: shared.Onev21loadBalancersPostRequestBodyContentApplication1jsonSchemaOneOf0AllOf0;
+}
+
+
 export class RemoveLoadBalancerDropletsResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  removeLoadBalancerDroplets401ApplicationJsonObject?: RemoveLoadBalancerDroplets401ApplicationJson;
+  @SpeakeasyMetadata()
+  removeLoadBalancerDroplets401ApplicationJSONObject?: RemoveLoadBalancerDroplets401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

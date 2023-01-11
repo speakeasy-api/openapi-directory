@@ -60,7 +60,7 @@ export class ListReviewableHiTsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  listReviewableHiTsResponse?: shared.ListReviewableHiTsResponse;
+  listReviewableHITsResponse?: shared.ListReviewableHiTsResponse;
 
   @SpeakeasyMetadata()
   requestError?: any;

@@ -194,23 +194,23 @@ export class BtcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  btcer400ApplicationJsonObject?: Btcer400ApplicationJson;
+  btcer400ApplicationJSONObject?: Btcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  btcer401ApplicationJsonObject?: Btcer401ApplicationJson;
+  btcer401ApplicationJSONObject?: Btcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  btcer404ApplicationJsonObject?: Btcer404ApplicationJson;
+  btcer404ApplicationJSONObject?: Btcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  btcer500ApplicationJsonObject?: Btcer500ApplicationJson;
+  btcer500ApplicationJSONObject?: Btcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  btcer502ApplicationJsonObject?: Btcer502ApplicationJson;
+  btcer502ApplicationJSONObject?: Btcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  btcer503ApplicationJsonObject?: Btcer503ApplicationJson;
+  btcer503ApplicationJSONObject?: Btcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  btcer504ApplicationJsonObject?: Btcer504ApplicationJson;
+  btcer504ApplicationJSONObject?: Btcer504ApplicationJson;
 }

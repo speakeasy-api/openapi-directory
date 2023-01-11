@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,325 +14,350 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BookingCalculatepriceResponse = exports.BookingCalculatepriceRequest = exports.BookingCalculateprice200ApplicationJson = exports.BookingCalculateprice200ApplicationJsonData = exports.BookingCalculateprice200ApplicationJsonDataItinerary = exports.BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries = exports.BookingCalculateprice200ApplicationJsonDataItineraryItemSummariesTravellerAgeBands = exports.BookingCalculatepriceRequestBody = exports.BookingCalculatepriceRequestBodyItems = exports.BookingCalculatepriceRequestBodyItemsTravellers = exports.BookingCalculatepriceHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var BookingCalculatepriceHeaders = /** @class */ (function (_super) {
     __extends(BookingCalculatepriceHeaders, _super);
     function BookingCalculatepriceHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Accept-Language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Accept-Language" }),
         __metadata("design:type", String)
     ], BookingCalculatepriceHeaders.prototype, "acceptLanguage", void 0);
     return BookingCalculatepriceHeaders;
-}(SpeakeasyBase));
-export { BookingCalculatepriceHeaders };
+}(utils_1.SpeakeasyBase));
+exports.BookingCalculatepriceHeaders = BookingCalculatepriceHeaders;
 var BookingCalculatepriceRequestBodyItemsTravellers = /** @class */ (function (_super) {
     __extends(BookingCalculatepriceRequestBodyItemsTravellers, _super);
     function BookingCalculatepriceRequestBodyItemsTravellers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bandId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bandId" }),
         __metadata("design:type", Number)
     ], BookingCalculatepriceRequestBodyItemsTravellers.prototype, "bandId", void 0);
     return BookingCalculatepriceRequestBodyItemsTravellers;
-}(SpeakeasyBase));
-export { BookingCalculatepriceRequestBodyItemsTravellers };
+}(utils_1.SpeakeasyBase));
+exports.BookingCalculatepriceRequestBodyItemsTravellers = BookingCalculatepriceRequestBodyItemsTravellers;
 var BookingCalculatepriceRequestBodyItems = /** @class */ (function (_super) {
     __extends(BookingCalculatepriceRequestBodyItems, _super);
     function BookingCalculatepriceRequestBodyItems() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productCode" }),
         __metadata("design:type", String)
     ], BookingCalculatepriceRequestBodyItems.prototype, "productCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tourGradeCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tourGradeCode" }),
         __metadata("design:type", String)
     ], BookingCalculatepriceRequestBodyItems.prototype, "tourGradeCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=travelDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=travelDate" }),
         __metadata("design:type", String)
     ], BookingCalculatepriceRequestBodyItems.prototype, "travelDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=travellers", elemType: BookingCalculatepriceRequestBodyItemsTravellers }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=travellers", elemType: BookingCalculatepriceRequestBodyItemsTravellers }),
         __metadata("design:type", Array)
     ], BookingCalculatepriceRequestBodyItems.prototype, "travellers", void 0);
     return BookingCalculatepriceRequestBodyItems;
-}(SpeakeasyBase));
-export { BookingCalculatepriceRequestBodyItems };
+}(utils_1.SpeakeasyBase));
+exports.BookingCalculatepriceRequestBodyItems = BookingCalculatepriceRequestBodyItems;
 var BookingCalculatepriceRequestBody = /** @class */ (function (_super) {
     __extends(BookingCalculatepriceRequestBody, _super);
     function BookingCalculatepriceRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], BookingCalculatepriceRequestBody.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: BookingCalculatepriceRequestBodyItems }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: BookingCalculatepriceRequestBodyItems }),
         __metadata("design:type", Array)
     ], BookingCalculatepriceRequestBody.prototype, "items", void 0);
     return BookingCalculatepriceRequestBody;
-}(SpeakeasyBase));
-export { BookingCalculatepriceRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.BookingCalculatepriceRequestBody = BookingCalculatepriceRequestBody;
 var BookingCalculateprice200ApplicationJsonDataItineraryItemSummariesTravellerAgeBands = /** @class */ (function (_super) {
     __extends(BookingCalculateprice200ApplicationJsonDataItineraryItemSummariesTravellerAgeBands, _super);
     function BookingCalculateprice200ApplicationJsonDataItineraryItemSummariesTravellerAgeBands() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ageBandId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ageBandId" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummariesTravellerAgeBands.prototype, "ageBandId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummariesTravellerAgeBands.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummariesTravellerAgeBands.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pluralDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pluralDescription" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummariesTravellerAgeBands.prototype, "pluralDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortOrder" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummariesTravellerAgeBands.prototype, "sortOrder", void 0);
     return BookingCalculateprice200ApplicationJsonDataItineraryItemSummariesTravellerAgeBands;
-}(SpeakeasyBase));
-export { BookingCalculateprice200ApplicationJsonDataItineraryItemSummariesTravellerAgeBands };
+}(utils_1.SpeakeasyBase));
+exports.BookingCalculateprice200ApplicationJsonDataItineraryItemSummariesTravellerAgeBands = BookingCalculateprice200ApplicationJsonDataItineraryItemSummariesTravellerAgeBands;
 var BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries = /** @class */ (function (_super) {
     __extends(BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries, _super);
     function BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=applePassSupported" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=applePassSupported" }),
         __metadata("design:type", Boolean)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "applePassSupported", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=barcodeOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=barcodeOption" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "barcodeOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=barcodeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=barcodeType" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "barcodeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingEngineId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingEngineId" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "bookingEngineId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingStatus" }),
         __metadata("design:type", shared.BookingStatusItem)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "bookingStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=departsFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=departsFrom" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "departsFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=departurePoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=departurePoint" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "departurePoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=departurePointAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=departurePointAddress" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "departurePointAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=departurePointDirections" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=departurePointDirections" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "departurePointDirections", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destId" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "destId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distributorItemRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distributorItemRef" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "distributorItemRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hoursConfirmed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hoursConfirmed" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "hoursConfirmed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemId" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "itemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itineraryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itineraryId" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "itineraryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageServicesLanguageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageServicesLanguageCode" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "languageServicesLanguageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastRetailPrice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastRetailPrice" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "lastRetailPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastRetailPriceFormatted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastRetailPriceFormatted" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "lastRetailPriceFormatted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=leadTravellerFirstname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=leadTravellerFirstname" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "leadTravellerFirstname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=leadTravellerSurname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=leadTravellerSurname" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "leadTravellerSurname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=leadTravellerTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=leadTravellerTitle" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "leadTravellerTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantCancellable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantCancellable" }),
         __metadata("design:type", Boolean)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "merchantCancellable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantNetPrice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantNetPrice" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "merchantNetPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantNetPriceFormatted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantNetPriceFormatted" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "merchantNetPriceFormatted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=obfsId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=obfsId" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "obfsId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passbooks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passbooks" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "passbooks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pickupHotelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pickupHotelId" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "pickupHotelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pickupHotelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pickupHotelName" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "pickupHotelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "price", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceFormatted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceFormatted" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "priceFormatted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priceUSD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priceUSD" }),
         __metadata("design:type", Number)
-    ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "priceUsd", void 0);
+    ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "priceUSD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productCode" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "productCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productPulledDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productPulledDown" }),
         __metadata("design:type", Boolean)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "productPulledDown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productTitle" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "productTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productWidgetList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productWidgetList" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "productWidgetList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rulesApplied" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rulesApplied" }),
         __metadata("design:type", Array)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "rulesApplied", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=savingAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=savingAmount" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "savingAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=savingAmountFormated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=savingAmountFormated" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "savingAmountFormated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortOrder" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "sortOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startingTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startingTime" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "startingTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supplierName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supplierName" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "supplierName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supplierPhoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supplierPhoneNumber" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "supplierPhoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=termsAndConditions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=termsAndConditions" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "termsAndConditions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tourGradeCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tourGradeCode" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "tourGradeCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tourGradeDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tourGradeDescription" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "tourGradeDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=travelDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=travelDate" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "travelDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=travellerAgeBands", elemType: BookingCalculateprice200ApplicationJsonDataItineraryItemSummariesTravellerAgeBands }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=travellerAgeBands", elemType: BookingCalculateprice200ApplicationJsonDataItineraryItemSummariesTravellerAgeBands }),
         __metadata("design:type", Array)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "travellerAgeBands", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voucherKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voucherKey" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "voucherKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voucherOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voucherOption" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "voucherOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voucherRequirements" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voucherRequirements" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "voucherRequirements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voucherURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voucherURL" }),
         __metadata("design:type", String)
-    ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "voucherUrl", void 0);
+    ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "voucherURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vouchers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vouchers" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries.prototype, "vouchers", void 0);
     return BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries;
-}(SpeakeasyBase));
-export { BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries };
+}(utils_1.SpeakeasyBase));
+exports.BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries = BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries;
 // BookingCalculateprice200ApplicationJsonDataItinerary
 /**
  * **summary results** for all itinerary items
@@ -342,245 +368,245 @@ var BookingCalculateprice200ApplicationJsonDataItinerary = /** @class */ (functi
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookerEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookerEmail" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "bookerEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingDate" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "bookingDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingStatus" }),
         __metadata("design:type", shared.BookingStatusItinerary)
     ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "bookingStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distributorRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distributorRef" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "distributorRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exchangeRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exchangeRate" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "exchangeRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasVoucher" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasVoucher" }),
         __metadata("design:type", Boolean)
     ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "hasVoucher", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemSummaries", elemType: BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemSummaries", elemType: BookingCalculateprice200ApplicationJsonDataItineraryItemSummaries }),
         __metadata("design:type", Array)
     ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "itemSummaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itineraryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itineraryId" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "itineraryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=omniPreRuleList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=omniPreRuleList" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "omniPreRuleList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paypalRedirectURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paypalRedirectURL" }),
         __metadata("design:type", String)
-    ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "paypalRedirectUrl", void 0);
+    ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "paypalRedirectURL", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rulesApplied" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rulesApplied" }),
         __metadata("design:type", Array)
     ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "rulesApplied", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=securityToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=securityToken" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "securityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortOrder" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "sortOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPrice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPrice" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "totalPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPriceFormatted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPriceFormatted" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "totalPriceFormatted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPriceUSD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPriceUSD" }),
         __metadata("design:type", Number)
-    ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "totalPriceUsd", void 0);
+    ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "totalPriceUSD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userId" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voucherKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voucherKey" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "voucherKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voucherURL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voucherURL" }),
         __metadata("design:type", String)
-    ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "voucherUrl", void 0);
+    ], BookingCalculateprice200ApplicationJsonDataItinerary.prototype, "voucherURL", void 0);
     return BookingCalculateprice200ApplicationJsonDataItinerary;
-}(SpeakeasyBase));
-export { BookingCalculateprice200ApplicationJsonDataItinerary };
+}(utils_1.SpeakeasyBase));
+exports.BookingCalculateprice200ApplicationJsonDataItinerary = BookingCalculateprice200ApplicationJsonDataItinerary;
 var BookingCalculateprice200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(BookingCalculateprice200ApplicationJsonData, _super);
     function BookingCalculateprice200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonData.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasPromoCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasPromoCode" }),
         __metadata("design:type", Boolean)
     ], BookingCalculateprice200ApplicationJsonData.prototype, "hasPromoCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itinerary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itinerary" }),
         __metadata("design:type", BookingCalculateprice200ApplicationJsonDataItinerary)
     ], BookingCalculateprice200ApplicationJsonData.prototype, "itinerary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itineraryFromPrice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itineraryFromPrice" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonData.prototype, "itineraryFromPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itineraryFromPriceFormatted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itineraryFromPriceFormatted" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonData.prototype, "itineraryFromPriceFormatted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itineraryNewPrice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itineraryNewPrice" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonData.prototype, "itineraryNewPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itineraryNewPriceFormatted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itineraryNewPriceFormatted" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonData.prototype, "itineraryNewPriceFormatted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itinerarySaving" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itinerarySaving" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJsonData.prototype, "itinerarySaving", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itinerarySavingFormatted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itinerarySavingFormatted" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonData.prototype, "itinerarySavingFormatted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentGatewayInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentGatewayInfo" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonData.prototype, "paymentGatewayInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promoCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promoCode" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJsonData.prototype, "promoCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promoCodeExpired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promoCodeExpired" }),
         __metadata("design:type", Boolean)
     ], BookingCalculateprice200ApplicationJsonData.prototype, "promoCodeExpired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promoCodeValid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promoCodeValid" }),
         __metadata("design:type", Boolean)
     ], BookingCalculateprice200ApplicationJsonData.prototype, "promoCodeValid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rulesApplied" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rulesApplied" }),
         __metadata("design:type", Array)
     ], BookingCalculateprice200ApplicationJsonData.prototype, "rulesApplied", void 0);
     return BookingCalculateprice200ApplicationJsonData;
-}(SpeakeasyBase));
-export { BookingCalculateprice200ApplicationJsonData };
+}(utils_1.SpeakeasyBase));
+exports.BookingCalculateprice200ApplicationJsonData = BookingCalculateprice200ApplicationJsonData;
 var BookingCalculateprice200ApplicationJson = /** @class */ (function (_super) {
     __extends(BookingCalculateprice200ApplicationJson, _super);
     function BookingCalculateprice200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", BookingCalculateprice200ApplicationJsonData)
     ], BookingCalculateprice200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateStamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateStamp" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJson.prototype, "dateStamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorCodes" }),
         __metadata("design:type", Array)
     ], BookingCalculateprice200ApplicationJson.prototype, "errorCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessage" }),
         __metadata("design:type", Array)
     ], BookingCalculateprice200ApplicationJson.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorMessageText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorMessageText" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJson.prototype, "errorMessageText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorName" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJson.prototype, "errorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorReference" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJson.prototype, "errorReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorType" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJson.prototype, "errorType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extraInfo" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extraInfo" }),
+        __metadata("design:type", Object)
     ], BookingCalculateprice200ApplicationJson.prototype, "extraInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extraObject" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extraObject" }),
+        __metadata("design:type", Object)
     ], BookingCalculateprice200ApplicationJson.prototype, "extraObject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], BookingCalculateprice200ApplicationJson.prototype, "success", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCount" }),
         __metadata("design:type", Number)
     ], BookingCalculateprice200ApplicationJson.prototype, "totalCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmid" }),
         __metadata("design:type", String)
     ], BookingCalculateprice200ApplicationJson.prototype, "vmid", void 0);
     return BookingCalculateprice200ApplicationJson;
-}(SpeakeasyBase));
-export { BookingCalculateprice200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.BookingCalculateprice200ApplicationJson = BookingCalculateprice200ApplicationJson;
 var BookingCalculatepriceRequest = /** @class */ (function (_super) {
     __extends(BookingCalculatepriceRequest, _super);
     function BookingCalculatepriceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BookingCalculatepriceHeaders)
     ], BookingCalculatepriceRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", BookingCalculatepriceRequestBody)
     ], BookingCalculatepriceRequest.prototype, "request", void 0);
     return BookingCalculatepriceRequest;
-}(SpeakeasyBase));
-export { BookingCalculatepriceRequest };
+}(utils_1.SpeakeasyBase));
+exports.BookingCalculatepriceRequest = BookingCalculatepriceRequest;
 var BookingCalculatepriceResponse = /** @class */ (function (_super) {
     __extends(BookingCalculatepriceResponse, _super);
     function BookingCalculatepriceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BookingCalculatepriceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BookingCalculatepriceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BookingCalculateprice200ApplicationJson)
-    ], BookingCalculatepriceResponse.prototype, "bookingCalculateprice200ApplicationJsonObject", void 0);
+    ], BookingCalculatepriceResponse.prototype, "bookingCalculateprice200ApplicationJSONObject", void 0);
     return BookingCalculatepriceResponse;
-}(SpeakeasyBase));
-export { BookingCalculatepriceResponse };
+}(utils_1.SpeakeasyBase));
+exports.BookingCalculatepriceResponse = BookingCalculatepriceResponse;

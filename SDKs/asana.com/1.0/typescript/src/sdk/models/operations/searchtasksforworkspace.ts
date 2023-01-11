@@ -8,19 +8,6 @@ export class SearchTasksForWorkspacePathParams extends SpeakeasyBase {
   workspaceGid: string;
 }
 
-export enum SearchTasksForWorkspaceResourceSubtypeEnum {
-    DefaultTask = "default_task",
-    Milestone = "milestone"
-}
-
-export enum SearchTasksForWorkspaceSortByEnum {
-    DueDate = "due_date",
-    CreatedAt = "created_at",
-    CompletedAt = "completed_at",
-    Likes = "likes",
-    ModifiedAt = "modified_at"
-}
-
 
 export class SearchTasksForWorkspaceQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=assigned_by.any" })
@@ -153,7 +140,7 @@ export class SearchTasksForWorkspaceQueryParams extends SpeakeasyBase {
   projectsNot?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=resource_subtype" })
-  resourceSubtype?: SearchTasksForWorkspaceResourceSubtypeEnum;
+  resourceSubtype?: shared.FieldsEnum1;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sections.all" })
   sectionsAll?: string;
@@ -168,7 +155,7 @@ export class SearchTasksForWorkspaceQueryParams extends SpeakeasyBase {
   sortAscending?: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort_by" })
-  sortBy?: SearchTasksForWorkspaceSortByEnum;
+  sortBy?: shared.FieldsEnum2;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=start_on" })
   startOn?: Date;
@@ -222,5 +209,5 @@ export class SearchTasksForWorkspaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  searchTasksForWorkspace200ApplicationJsonObject?: SearchTasksForWorkspace200ApplicationJson;
+  searchTasksForWorkspace200ApplicationJSONObject?: SearchTasksForWorkspace200ApplicationJson;
 }

@@ -1,4 +1,7 @@
-export var BulkDeploymentStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BulkDeploymentStatusEnum = void 0;
+var BulkDeploymentStatusEnum;
 (function (BulkDeploymentStatusEnum) {
     BulkDeploymentStatusEnum["Initializing"] = "Initializing";
     BulkDeploymentStatusEnum["Running"] = "Running";
@@ -6,4 +9,4 @@ export var BulkDeploymentStatusEnum;
     BulkDeploymentStatusEnum["Stopping"] = "Stopping";
     BulkDeploymentStatusEnum["Stopped"] = "Stopped";
     BulkDeploymentStatusEnum["Failed"] = "Failed";
-})(BulkDeploymentStatusEnum || (BulkDeploymentStatusEnum = {}));
+})(BulkDeploymentStatusEnum = exports.BulkDeploymentStatusEnum || (exports.BulkDeploymentStatusEnum = {}));

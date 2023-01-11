@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { S3LocationDescription } from "./s3locationdescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomPluginLocationDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var s3locationdescription_1 = require("./s3locationdescription");
 // CustomPluginLocationDescription
 /**
  * Information about the location of a custom plugin.
@@ -34,9 +37,9 @@ var CustomPluginLocationDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3Location" }),
-        __metadata("design:type", S3LocationDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3Location" }),
+        __metadata("design:type", s3locationdescription_1.S3LocationDescription)
     ], CustomPluginLocationDescription.prototype, "s3Location", void 0);
     return CustomPluginLocationDescription;
-}(SpeakeasyBase));
-export { CustomPluginLocationDescription };
+}(utils_1.SpeakeasyBase));
+exports.CustomPluginLocationDescription = CustomPluginLocationDescription;

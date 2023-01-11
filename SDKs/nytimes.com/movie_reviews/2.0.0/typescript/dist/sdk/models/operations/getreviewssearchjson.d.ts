@@ -24,6 +24,6 @@ export declare class GetReviewsSearchJsonRequest extends SpeakeasyBase {
 }
 export declare class GetReviewsSearchJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getReviewsSearchJson200ApplicationJsonObject?: GetReviewsSearchJson200ApplicationJson;
     statusCode: number;
+    getReviewsSearchJSON200ApplicationJSONObject?: GetReviewsSearchJson200ApplicationJson;
 }

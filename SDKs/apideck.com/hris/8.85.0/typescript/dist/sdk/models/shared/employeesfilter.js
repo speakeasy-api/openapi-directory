@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,51 +23,53 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var EmployeesFilterEmploymentStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmployeesFilter = exports.EmployeesFilterEmploymentStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var EmployeesFilterEmploymentStatusEnum;
 (function (EmployeesFilterEmploymentStatusEnum) {
     EmployeesFilterEmploymentStatusEnum["Active"] = "active";
     EmployeesFilterEmploymentStatusEnum["Inactive"] = "inactive";
     EmployeesFilterEmploymentStatusEnum["Terminated"] = "terminated";
     EmployeesFilterEmploymentStatusEnum["Other"] = "other";
-})(EmployeesFilterEmploymentStatusEnum || (EmployeesFilterEmploymentStatusEnum = {}));
+})(EmployeesFilterEmploymentStatusEnum = exports.EmployeesFilterEmploymentStatusEnum || (exports.EmployeesFilterEmploymentStatusEnum = {}));
 var EmployeesFilter = /** @class */ (function (_super) {
     __extends(EmployeesFilter, _super);
     function EmployeesFilter() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=company_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=company_id" }),
         __metadata("design:type", String)
     ], EmployeesFilter.prototype, "companyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=email" }),
         __metadata("design:type", String)
     ], EmployeesFilter.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=employee_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=employee_number" }),
         __metadata("design:type", String)
     ], EmployeesFilter.prototype, "employeeNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=employment_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=employment_status" }),
         __metadata("design:type", String)
     ], EmployeesFilter.prototype, "employmentStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=first_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=first_name" }),
         __metadata("design:type", String)
     ], EmployeesFilter.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=last_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=last_name" }),
         __metadata("design:type", String)
     ], EmployeesFilter.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=manager_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=manager_id" }),
         __metadata("design:type", String)
     ], EmployeesFilter.prototype, "managerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=title" }),
         __metadata("design:type", String)
     ], EmployeesFilter.prototype, "title", void 0);
     return EmployeesFilter;
-}(SpeakeasyBase));
-export { EmployeesFilter };
+}(utils_1.SpeakeasyBase));
+exports.EmployeesFilter = EmployeesFilter;

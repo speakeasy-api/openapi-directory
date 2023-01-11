@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var VideoTargetingExcludedPositionTypesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoTargeting = exports.VideoTargetingTargetedPositionTypesEnum = exports.VideoTargetingExcludedPositionTypesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var VideoTargetingExcludedPositionTypesEnum;
 (function (VideoTargetingExcludedPositionTypesEnum) {
     VideoTargetingExcludedPositionTypesEnum["PositionTypeUnspecified"] = "POSITION_TYPE_UNSPECIFIED";
     VideoTargetingExcludedPositionTypesEnum["Preroll"] = "PREROLL";
     VideoTargetingExcludedPositionTypesEnum["Midroll"] = "MIDROLL";
     VideoTargetingExcludedPositionTypesEnum["Postroll"] = "POSTROLL";
-})(VideoTargetingExcludedPositionTypesEnum || (VideoTargetingExcludedPositionTypesEnum = {}));
-export var VideoTargetingTargetedPositionTypesEnum;
+})(VideoTargetingExcludedPositionTypesEnum = exports.VideoTargetingExcludedPositionTypesEnum || (exports.VideoTargetingExcludedPositionTypesEnum = {}));
+var VideoTargetingTargetedPositionTypesEnum;
 (function (VideoTargetingTargetedPositionTypesEnum) {
     VideoTargetingTargetedPositionTypesEnum["PositionTypeUnspecified"] = "POSITION_TYPE_UNSPECIFIED";
     VideoTargetingTargetedPositionTypesEnum["Preroll"] = "PREROLL";
     VideoTargetingTargetedPositionTypesEnum["Midroll"] = "MIDROLL";
     VideoTargetingTargetedPositionTypesEnum["Postroll"] = "POSTROLL";
-})(VideoTargetingTargetedPositionTypesEnum || (VideoTargetingTargetedPositionTypesEnum = {}));
+})(VideoTargetingTargetedPositionTypesEnum = exports.VideoTargetingTargetedPositionTypesEnum || (exports.VideoTargetingTargetedPositionTypesEnum = {}));
 // VideoTargeting
 /**
  * Represents targeting information about video.
@@ -47,13 +50,13 @@ var VideoTargeting = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludedPositionTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludedPositionTypes" }),
         __metadata("design:type", Array)
     ], VideoTargeting.prototype, "excludedPositionTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetedPositionTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetedPositionTypes" }),
         __metadata("design:type", Array)
     ], VideoTargeting.prototype, "targetedPositionTypes", void 0);
     return VideoTargeting;
-}(SpeakeasyBase));
-export { VideoTargeting };
+}(utils_1.SpeakeasyBase));
+exports.VideoTargeting = VideoTargeting;

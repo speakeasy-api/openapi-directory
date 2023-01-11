@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,184 +23,186 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetChatHistoryUsingGetResponse = exports.GetChatHistoryUsingGetRequest = exports.GetChatHistoryUsingGet500ApplicationJson = exports.GetChatHistoryUsingGet401ApplicationJson = exports.GetChatHistoryUsingGet400ApplicationJson = exports.GetChatHistoryUsingGet200ApplicationJson = exports.GetChatHistoryUsingGet200ApplicationJsonData = exports.GetChatHistoryUsingGet200ApplicationJsonDataMessages = exports.GetChatHistoryUsingGetQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetChatHistoryUsingGetQueryParams = /** @class */ (function (_super) {
     __extends(GetChatHistoryUsingGetQueryParams, _super);
     function GetChatHistoryUsingGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=end" }),
         __metadata("design:type", String)
     ], GetChatHistoryUsingGetQueryParams.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=padID" }),
         __metadata("design:type", String)
-    ], GetChatHistoryUsingGetQueryParams.prototype, "padId", void 0);
+    ], GetChatHistoryUsingGetQueryParams.prototype, "padID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=start" }),
         __metadata("design:type", String)
     ], GetChatHistoryUsingGetQueryParams.prototype, "start", void 0);
     return GetChatHistoryUsingGetQueryParams;
-}(SpeakeasyBase));
-export { GetChatHistoryUsingGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetChatHistoryUsingGetQueryParams = GetChatHistoryUsingGetQueryParams;
 var GetChatHistoryUsingGet200ApplicationJsonDataMessages = /** @class */ (function (_super) {
     __extends(GetChatHistoryUsingGet200ApplicationJsonDataMessages, _super);
     function GetChatHistoryUsingGet200ApplicationJsonDataMessages() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], GetChatHistoryUsingGet200ApplicationJsonDataMessages.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time" }),
         __metadata("design:type", Number)
     ], GetChatHistoryUsingGet200ApplicationJsonDataMessages.prototype, "time", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userId" }),
         __metadata("design:type", String)
     ], GetChatHistoryUsingGet200ApplicationJsonDataMessages.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userName" }),
         __metadata("design:type", String)
     ], GetChatHistoryUsingGet200ApplicationJsonDataMessages.prototype, "userName", void 0);
     return GetChatHistoryUsingGet200ApplicationJsonDataMessages;
-}(SpeakeasyBase));
-export { GetChatHistoryUsingGet200ApplicationJsonDataMessages };
+}(utils_1.SpeakeasyBase));
+exports.GetChatHistoryUsingGet200ApplicationJsonDataMessages = GetChatHistoryUsingGet200ApplicationJsonDataMessages;
 var GetChatHistoryUsingGet200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(GetChatHistoryUsingGet200ApplicationJsonData, _super);
     function GetChatHistoryUsingGet200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messages", elemType: GetChatHistoryUsingGet200ApplicationJsonDataMessages }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messages", elemType: GetChatHistoryUsingGet200ApplicationJsonDataMessages }),
         __metadata("design:type", Array)
     ], GetChatHistoryUsingGet200ApplicationJsonData.prototype, "messages", void 0);
     return GetChatHistoryUsingGet200ApplicationJsonData;
-}(SpeakeasyBase));
-export { GetChatHistoryUsingGet200ApplicationJsonData };
+}(utils_1.SpeakeasyBase));
+exports.GetChatHistoryUsingGet200ApplicationJsonData = GetChatHistoryUsingGet200ApplicationJsonData;
 var GetChatHistoryUsingGet200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetChatHistoryUsingGet200ApplicationJson, _super);
     function GetChatHistoryUsingGet200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetChatHistoryUsingGet200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", GetChatHistoryUsingGet200ApplicationJsonData)
     ], GetChatHistoryUsingGet200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetChatHistoryUsingGet200ApplicationJson.prototype, "message", void 0);
     return GetChatHistoryUsingGet200ApplicationJson;
-}(SpeakeasyBase));
-export { GetChatHistoryUsingGet200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetChatHistoryUsingGet200ApplicationJson = GetChatHistoryUsingGet200ApplicationJson;
 var GetChatHistoryUsingGet400ApplicationJson = /** @class */ (function (_super) {
     __extends(GetChatHistoryUsingGet400ApplicationJson, _super);
     function GetChatHistoryUsingGet400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetChatHistoryUsingGet400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetChatHistoryUsingGet400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetChatHistoryUsingGet400ApplicationJson.prototype, "message", void 0);
     return GetChatHistoryUsingGet400ApplicationJson;
-}(SpeakeasyBase));
-export { GetChatHistoryUsingGet400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetChatHistoryUsingGet400ApplicationJson = GetChatHistoryUsingGet400ApplicationJson;
 var GetChatHistoryUsingGet401ApplicationJson = /** @class */ (function (_super) {
     __extends(GetChatHistoryUsingGet401ApplicationJson, _super);
     function GetChatHistoryUsingGet401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetChatHistoryUsingGet401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetChatHistoryUsingGet401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetChatHistoryUsingGet401ApplicationJson.prototype, "message", void 0);
     return GetChatHistoryUsingGet401ApplicationJson;
-}(SpeakeasyBase));
-export { GetChatHistoryUsingGet401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetChatHistoryUsingGet401ApplicationJson = GetChatHistoryUsingGet401ApplicationJson;
 var GetChatHistoryUsingGet500ApplicationJson = /** @class */ (function (_super) {
     __extends(GetChatHistoryUsingGet500ApplicationJson, _super);
     function GetChatHistoryUsingGet500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], GetChatHistoryUsingGet500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], GetChatHistoryUsingGet500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetChatHistoryUsingGet500ApplicationJson.prototype, "message", void 0);
     return GetChatHistoryUsingGet500ApplicationJson;
-}(SpeakeasyBase));
-export { GetChatHistoryUsingGet500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetChatHistoryUsingGet500ApplicationJson = GetChatHistoryUsingGet500ApplicationJson;
 var GetChatHistoryUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetChatHistoryUsingGetRequest, _super);
     function GetChatHistoryUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetChatHistoryUsingGetQueryParams)
     ], GetChatHistoryUsingGetRequest.prototype, "queryParams", void 0);
     return GetChatHistoryUsingGetRequest;
-}(SpeakeasyBase));
-export { GetChatHistoryUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetChatHistoryUsingGetRequest = GetChatHistoryUsingGetRequest;
 var GetChatHistoryUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetChatHistoryUsingGetResponse, _super);
     function GetChatHistoryUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetChatHistoryUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetChatHistoryUsingGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetChatHistoryUsingGet200ApplicationJson)
-    ], GetChatHistoryUsingGetResponse.prototype, "getChatHistoryUsingGet200ApplicationJsonObject", void 0);
+    ], GetChatHistoryUsingGetResponse.prototype, "getChatHistoryUsingGET200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetChatHistoryUsingGet400ApplicationJson)
-    ], GetChatHistoryUsingGetResponse.prototype, "getChatHistoryUsingGet400ApplicationJsonObject", void 0);
+    ], GetChatHistoryUsingGetResponse.prototype, "getChatHistoryUsingGET400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetChatHistoryUsingGet401ApplicationJson)
-    ], GetChatHistoryUsingGetResponse.prototype, "getChatHistoryUsingGet401ApplicationJsonObject", void 0);
+    ], GetChatHistoryUsingGetResponse.prototype, "getChatHistoryUsingGET401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetChatHistoryUsingGet500ApplicationJson)
-    ], GetChatHistoryUsingGetResponse.prototype, "getChatHistoryUsingGet500ApplicationJsonObject", void 0);
+    ], GetChatHistoryUsingGetResponse.prototype, "getChatHistoryUsingGET500ApplicationJSONObject", void 0);
     return GetChatHistoryUsingGetResponse;
-}(SpeakeasyBase));
-export { GetChatHistoryUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetChatHistoryUsingGetResponse = GetChatHistoryUsingGetResponse;

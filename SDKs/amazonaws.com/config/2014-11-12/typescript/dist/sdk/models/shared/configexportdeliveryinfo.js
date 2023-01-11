@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeliveryStatusEnum } from "./deliverystatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigExportDeliveryInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var deliverystatusenum_1 = require("./deliverystatusenum");
 // ConfigExportDeliveryInfo
 /**
  * Provides status of the delivery of the snapshot or the configuration history to the specified Amazon S3 bucket. Also provides the status of notifications about the Amazon S3 delivery to the specified Amazon SNS topic.
@@ -34,29 +37,29 @@ var ConfigExportDeliveryInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastAttemptTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastAttemptTime" }),
         __metadata("design:type", Date)
     ], ConfigExportDeliveryInfo.prototype, "lastAttemptTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastErrorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastErrorCode" }),
         __metadata("design:type", String)
     ], ConfigExportDeliveryInfo.prototype, "lastErrorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastErrorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastErrorMessage" }),
         __metadata("design:type", String)
     ], ConfigExportDeliveryInfo.prototype, "lastErrorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastStatus" }),
         __metadata("design:type", String)
     ], ConfigExportDeliveryInfo.prototype, "lastStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastSuccessfulTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastSuccessfulTime" }),
         __metadata("design:type", Date)
     ], ConfigExportDeliveryInfo.prototype, "lastSuccessfulTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextDeliveryTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextDeliveryTime" }),
         __metadata("design:type", Date)
     ], ConfigExportDeliveryInfo.prototype, "nextDeliveryTime", void 0);
     return ConfigExportDeliveryInfo;
-}(SpeakeasyBase));
-export { ConfigExportDeliveryInfo };
+}(utils_1.SpeakeasyBase));
+exports.ConfigExportDeliveryInfo = ConfigExportDeliveryInfo;

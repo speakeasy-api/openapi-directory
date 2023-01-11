@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetVehicleOdometerResponse = exports.GetVehicleOdometerRequest = exports.GetVehicleOdometerPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetVehicleOdometerPathParams = /** @class */ (function (_super) {
     __extends(GetVehicleOdometerPathParams, _super);
     function GetVehicleOdometerPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetVehicleOdometerPathParams.prototype, "id", void 0);
     return GetVehicleOdometerPathParams;
-}(SpeakeasyBase));
-export { GetVehicleOdometerPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetVehicleOdometerPathParams = GetVehicleOdometerPathParams;
 var GetVehicleOdometerRequest = /** @class */ (function (_super) {
     __extends(GetVehicleOdometerRequest, _super);
     function GetVehicleOdometerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetVehicleOdometerPathParams)
     ], GetVehicleOdometerRequest.prototype, "pathParams", void 0);
     return GetVehicleOdometerRequest;
-}(SpeakeasyBase));
-export { GetVehicleOdometerRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetVehicleOdometerRequest = GetVehicleOdometerRequest;
 var GetVehicleOdometerResponse = /** @class */ (function (_super) {
     __extends(GetVehicleOdometerResponse, _super);
     function GetVehicleOdometerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetVehicleOdometerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetVehicleOdometerResponse.prototype, "statusCode", void 0);
     return GetVehicleOdometerResponse;
-}(SpeakeasyBase));
-export { GetVehicleOdometerResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetVehicleOdometerResponse = GetVehicleOdometerResponse;

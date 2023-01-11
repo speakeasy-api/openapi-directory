@@ -46,7 +46,7 @@ export class EcommerceDeliveryRequestBody extends SpeakeasyBase {
 
 export class EcommerceDeliveryRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   headers: EcommerceDeliveryHeaders;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DatasetImportJob } from "./datasetimportjob";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeDatasetImportJobResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasetimportjob_1 = require("./datasetimportjob");
 var DescribeDatasetImportJobResponse = /** @class */ (function (_super) {
     __extends(DescribeDatasetImportJobResponse, _super);
     function DescribeDatasetImportJobResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasetImportJob" }),
-        __metadata("design:type", DatasetImportJob)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasetImportJob" }),
+        __metadata("design:type", datasetimportjob_1.DatasetImportJob)
     ], DescribeDatasetImportJobResponse.prototype, "datasetImportJob", void 0);
     return DescribeDatasetImportJobResponse;
-}(SpeakeasyBase));
-export { DescribeDatasetImportJobResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeDatasetImportJobResponse = DescribeDatasetImportJobResponse;

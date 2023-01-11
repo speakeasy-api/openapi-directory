@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,94 +14,119 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse = exports.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest = exports.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtQueryParams = exports.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtPathParams = /** @class */ (function (_super) {
     __extends(GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtPathParams, _super);
     function GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ext" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ext" }),
         __metadata("design:type", String)
     ], GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtPathParams.prototype, "ext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=position" }),
         __metadata("design:type", String)
     ], GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtPathParams.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=versionNumber" }),
         __metadata("design:type", Number)
     ], GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtPathParams.prototype, "versionNumber", void 0);
     return GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtPathParams;
-}(SpeakeasyBase));
-export { GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtPathParams = GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtPathParams;
 var GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtQueryParams = /** @class */ (function (_super) {
     __extends(GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtQueryParams, _super);
     function GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=heading" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=heading" }),
         __metadata("design:type", Number)
     ], GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtQueryParams.prototype, "heading", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=language" }),
         __metadata("design:type", String)
     ], GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtQueryParams.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=radius" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=radius" }),
         __metadata("design:type", Number)
     ], GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtQueryParams.prototype, "radius", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=spatialKeys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=spatialKeys" }),
         __metadata("design:type", Boolean)
     ], GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtQueryParams.prototype, "spatialKeys", void 0);
     return GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtQueryParams;
-}(SpeakeasyBase));
-export { GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtQueryParams = GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtQueryParams;
 var GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest = /** @class */ (function (_super) {
     __extends(GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest, _super);
     function GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtPathParams)
     ], GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtQueryParams)
     ], GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest.prototype, "queryParams", void 0);
     return GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest;
-}(SpeakeasyBase));
-export { GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest = GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest;
 var GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse = /** @class */ (function (_super) {
     __extends(GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse, _super);
     function GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse.prototype, "statusCode", void 0);
     return GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse;
-}(SpeakeasyBase));
-export { GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse = GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse;

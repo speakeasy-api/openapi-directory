@@ -10,5 +10,5 @@ export declare class ChecksRerequestSuiteRequest extends SpeakeasyBase {
 export declare class ChecksRerequestSuiteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    checksRerequestSuite201ApplicationJsonObject?: Map<string, any>;
+    checksRerequestSuite201ApplicationJSONObject?: Record<string, any>;
 }

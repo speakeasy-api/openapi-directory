@@ -9,7 +9,7 @@ import { Pipeline } from "./pipeline";
 **/
 export class RunPipelineRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=pipeline" })
   pipeline?: Pipeline;

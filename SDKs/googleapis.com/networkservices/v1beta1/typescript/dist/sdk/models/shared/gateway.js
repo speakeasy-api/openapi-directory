@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GatewayTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GatewayInput = exports.Gateway = exports.GatewayTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GatewayTypeEnum;
 (function (GatewayTypeEnum) {
     GatewayTypeEnum["TypeUnspecified"] = "TYPE_UNSPECIFIED";
     GatewayTypeEnum["OpenMesh"] = "OPEN_MESH";
     GatewayTypeEnum["SecureWebGateway"] = "SECURE_WEB_GATEWAY";
-})(GatewayTypeEnum || (GatewayTypeEnum = {}));
-// GatewayInput
-/**
- * Gateway represents the configuration for a proxy, typically a load balancer. It captures the ip:port over which the services are exposed by the proxy, along with any policy configurations. Routes have reference to to Gateways to dictate how requests should be routed by this Gateway.
-**/
-var GatewayInput = /** @class */ (function (_super) {
-    __extends(GatewayInput, _super);
-    function GatewayInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], GatewayInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], GatewayInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], GatewayInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=ports" }),
-        __metadata("design:type", Array)
-    ], GatewayInput.prototype, "ports", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
-        __metadata("design:type", String)
-    ], GatewayInput.prototype, "scope", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverTlsPolicy" }),
-        __metadata("design:type", String)
-    ], GatewayInput.prototype, "serverTlsPolicy", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
-        __metadata("design:type", String)
-    ], GatewayInput.prototype, "type", void 0);
-    return GatewayInput;
-}(SpeakeasyBase));
-export { GatewayInput };
+})(GatewayTypeEnum = exports.GatewayTypeEnum || (exports.GatewayTypeEnum = {}));
 // Gateway
 /**
  * Gateway represents the configuration for a proxy, typically a load balancer. It captures the ip:port over which the services are exposed by the proxy, along with any policy configurations. Routes have reference to to Gateways to dictate how requests should be routed by this Gateway.
@@ -79,45 +42,85 @@ var Gateway = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Gateway.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Gateway.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Gateway.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Gateway.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ports" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ports" }),
         __metadata("design:type", Array)
     ], Gateway.prototype, "ports", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", String)
     ], Gateway.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Gateway.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverTlsPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverTlsPolicy" }),
         __metadata("design:type", String)
     ], Gateway.prototype, "serverTlsPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Gateway.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Gateway.prototype, "updateTime", void 0);
     return Gateway;
-}(SpeakeasyBase));
-export { Gateway };
+}(utils_1.SpeakeasyBase));
+exports.Gateway = Gateway;
+// GatewayInput
+/**
+ * Gateway represents the configuration for a proxy, typically a load balancer. It captures the ip:port over which the services are exposed by the proxy, along with any policy configurations. Routes have reference to to Gateways to dictate how requests should be routed by this Gateway.
+**/
+var GatewayInput = /** @class */ (function (_super) {
+    __extends(GatewayInput, _super);
+    function GatewayInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], GatewayInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], GatewayInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], GatewayInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ports" }),
+        __metadata("design:type", Array)
+    ], GatewayInput.prototype, "ports", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
+        __metadata("design:type", String)
+    ], GatewayInput.prototype, "scope", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverTlsPolicy" }),
+        __metadata("design:type", String)
+    ], GatewayInput.prototype, "serverTlsPolicy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], GatewayInput.prototype, "type", void 0);
+    return GatewayInput;
+}(utils_1.SpeakeasyBase));
+exports.GatewayInput = GatewayInput;

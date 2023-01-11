@@ -802,7 +802,7 @@ export declare enum ParametersTypeEnum {
 /**
  * Parameters of a query or report.
 **/
-export declare class Parameters extends SpeakeasyBase {
+export declare class ParametersT extends SpeakeasyBase {
     filters?: FilterPair[];
     groupBys?: ParametersGroupBysEnum[];
     includeInviteData?: boolean;

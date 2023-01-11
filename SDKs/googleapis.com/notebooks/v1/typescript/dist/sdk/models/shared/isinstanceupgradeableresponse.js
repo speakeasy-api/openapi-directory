@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IsInstanceUpgradeableResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 // IsInstanceUpgradeableResponse
 /**
  * Response for checking if a notebook instance is upgradeable.
@@ -33,21 +36,21 @@ var IsInstanceUpgradeableResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upgradeImage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upgradeImage" }),
         __metadata("design:type", String)
     ], IsInstanceUpgradeableResponse.prototype, "upgradeImage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upgradeInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upgradeInfo" }),
         __metadata("design:type", String)
     ], IsInstanceUpgradeableResponse.prototype, "upgradeInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upgradeVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upgradeVersion" }),
         __metadata("design:type", String)
     ], IsInstanceUpgradeableResponse.prototype, "upgradeVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upgradeable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upgradeable" }),
         __metadata("design:type", Boolean)
     ], IsInstanceUpgradeableResponse.prototype, "upgradeable", void 0);
     return IsInstanceUpgradeableResponse;
-}(SpeakeasyBase));
-export { IsInstanceUpgradeableResponse };
+}(utils_1.SpeakeasyBase));
+exports.IsInstanceUpgradeableResponse = IsInstanceUpgradeableResponse;

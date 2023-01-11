@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1AnswerFeedback } from "./googlecloudcontactcenterinsightsv1answerfeedback";
-import { GoogleCloudContactcenterinsightsV1ArticleSuggestionData } from "./googlecloudcontactcenterinsightsv1articlesuggestiondata";
-import { GoogleCloudContactcenterinsightsV1DialogflowInteractionData } from "./googlecloudcontactcenterinsightsv1dialogflowinteractiondata";
-import { GoogleCloudContactcenterinsightsV1AnnotationBoundary } from "./googlecloudcontactcenterinsightsv1annotationboundary";
-import { GoogleCloudContactcenterinsightsV1FaqAnswerData } from "./googlecloudcontactcenterinsightsv1faqanswerdata";
-import { GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData } from "./googlecloudcontactcenterinsightsv1smartcomposesuggestiondata";
-import { GoogleCloudContactcenterinsightsV1SmartReplyData } from "./googlecloudcontactcenterinsightsv1smartreplydata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1RuntimeAnnotation = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1answerfeedback_1 = require("./googlecloudcontactcenterinsightsv1answerfeedback");
+var googlecloudcontactcenterinsightsv1articlesuggestiondata_1 = require("./googlecloudcontactcenterinsightsv1articlesuggestiondata");
+var googlecloudcontactcenterinsightsv1dialogflowinteractiondata_1 = require("./googlecloudcontactcenterinsightsv1dialogflowinteractiondata");
+var googlecloudcontactcenterinsightsv1annotationboundary_1 = require("./googlecloudcontactcenterinsightsv1annotationboundary");
+var googlecloudcontactcenterinsightsv1faqanswerdata_1 = require("./googlecloudcontactcenterinsightsv1faqanswerdata");
+var googlecloudcontactcenterinsightsv1smartcomposesuggestiondata_1 = require("./googlecloudcontactcenterinsightsv1smartcomposesuggestiondata");
+var googlecloudcontactcenterinsightsv1smartreplydata_1 = require("./googlecloudcontactcenterinsightsv1smartreplydata");
 // GoogleCloudContactcenterinsightsV1RuntimeAnnotation
 /**
  * An annotation that was generated during the customer and agent interaction.
@@ -40,45 +43,45 @@ var GoogleCloudContactcenterinsightsV1RuntimeAnnotation = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotationId" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1RuntimeAnnotation.prototype, "annotationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=answerFeedback" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1AnswerFeedback)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=answerFeedback" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1answerfeedback_1.GoogleCloudContactcenterinsightsV1AnswerFeedback)
     ], GoogleCloudContactcenterinsightsV1RuntimeAnnotation.prototype, "answerFeedback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=articleSuggestion" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1ArticleSuggestionData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=articleSuggestion" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1articlesuggestiondata_1.GoogleCloudContactcenterinsightsV1ArticleSuggestionData)
     ], GoogleCloudContactcenterinsightsV1RuntimeAnnotation.prototype, "articleSuggestion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1RuntimeAnnotation.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dialogflowInteraction" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1DialogflowInteractionData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dialogflowInteraction" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1dialogflowinteractiondata_1.GoogleCloudContactcenterinsightsV1DialogflowInteractionData)
     ], GoogleCloudContactcenterinsightsV1RuntimeAnnotation.prototype, "dialogflowInteraction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endBoundary" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1AnnotationBoundary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endBoundary" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1annotationboundary_1.GoogleCloudContactcenterinsightsV1AnnotationBoundary)
     ], GoogleCloudContactcenterinsightsV1RuntimeAnnotation.prototype, "endBoundary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=faqAnswer" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1FaqAnswerData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=faqAnswer" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1faqanswerdata_1.GoogleCloudContactcenterinsightsV1FaqAnswerData)
     ], GoogleCloudContactcenterinsightsV1RuntimeAnnotation.prototype, "faqAnswer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smartComposeSuggestion" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smartComposeSuggestion" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1smartcomposesuggestiondata_1.GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData)
     ], GoogleCloudContactcenterinsightsV1RuntimeAnnotation.prototype, "smartComposeSuggestion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smartReply" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1SmartReplyData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smartReply" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1smartreplydata_1.GoogleCloudContactcenterinsightsV1SmartReplyData)
     ], GoogleCloudContactcenterinsightsV1RuntimeAnnotation.prototype, "smartReply", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startBoundary" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1AnnotationBoundary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startBoundary" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1annotationboundary_1.GoogleCloudContactcenterinsightsV1AnnotationBoundary)
     ], GoogleCloudContactcenterinsightsV1RuntimeAnnotation.prototype, "startBoundary", void 0);
     return GoogleCloudContactcenterinsightsV1RuntimeAnnotation;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1RuntimeAnnotation };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1RuntimeAnnotation = GoogleCloudContactcenterinsightsV1RuntimeAnnotation;

@@ -35,5 +35,5 @@ export class SerpResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  serp200ApplicationJsonObject?: Serp200ApplicationJson;
+  serp200ApplicationJSONObject?: Serp200ApplicationJson;
 }

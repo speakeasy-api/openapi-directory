@@ -32,7 +32,7 @@ export declare class Match extends SpeakeasyBase {
     matchNumber: number;
     postResultTime?: number;
     predictedTime?: number;
-    scoreBreakdown?: Map<string, any>;
+    scoreBreakdown?: Record<string, any>;
     setNumber: number;
     time?: number;
     videos?: MatchVideos[];

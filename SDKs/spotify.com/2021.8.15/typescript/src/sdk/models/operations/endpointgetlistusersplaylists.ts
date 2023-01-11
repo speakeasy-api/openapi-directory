@@ -84,5 +84,5 @@ export class EndpointGetListUsersPlaylistsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  endpointGetListUsersPlaylists200ApplicationJsonObject?: EndpointGetListUsersPlaylists200ApplicationJson;
+  endpointGetListUsersPlaylists200ApplicationJSONObject?: EndpointGetListUsersPlaylists200ApplicationJson;
 }

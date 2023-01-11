@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetQtlInheritanceTypeCountUsingGetResponse = exports.GetQtlInheritanceTypeCountUsingGetRequest = exports.GetQtlInheritanceTypeCountUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetQtlInheritanceTypeCountUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetQtlInheritanceTypeCountUsingGetPathParams, _super);
     function GetQtlInheritanceTypeCountUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetQtlInheritanceTypeCountUsingGetPathParams.prototype, "dateYyyymmdd", void 0);
+    ], GetQtlInheritanceTypeCountUsingGetPathParams.prototype, "dateYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
         __metadata("design:type", Number)
     ], GetQtlInheritanceTypeCountUsingGetPathParams.prototype, "speciesTypeKey", void 0);
     return GetQtlInheritanceTypeCountUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetQtlInheritanceTypeCountUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetQtlInheritanceTypeCountUsingGetPathParams = GetQtlInheritanceTypeCountUsingGetPathParams;
 var GetQtlInheritanceTypeCountUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetQtlInheritanceTypeCountUsingGetRequest, _super);
     function GetQtlInheritanceTypeCountUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetQtlInheritanceTypeCountUsingGetPathParams)
     ], GetQtlInheritanceTypeCountUsingGetRequest.prototype, "pathParams", void 0);
     return GetQtlInheritanceTypeCountUsingGetRequest;
-}(SpeakeasyBase));
-export { GetQtlInheritanceTypeCountUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetQtlInheritanceTypeCountUsingGetRequest = GetQtlInheritanceTypeCountUsingGetRequest;
 var GetQtlInheritanceTypeCountUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetQtlInheritanceTypeCountUsingGetResponse, _super);
     function GetQtlInheritanceTypeCountUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetQtlInheritanceTypeCountUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetQtlInheritanceTypeCountUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetQtlInheritanceTypeCountUsingGetResponse.prototype, "statusCode", void 0);
     return GetQtlInheritanceTypeCountUsingGetResponse;
-}(SpeakeasyBase));
-export { GetQtlInheritanceTypeCountUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetQtlInheritanceTypeCountUsingGetResponse = GetQtlInheritanceTypeCountUsingGetResponse;

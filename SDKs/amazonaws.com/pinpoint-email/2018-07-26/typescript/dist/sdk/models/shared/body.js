@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Content } from "./content";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Body = void 0;
+var utils_1 = require("../../../internal/utils");
+var content_1 = require("./content");
 // Body
 /**
  * Represents the body of the email message.
@@ -34,13 +37,13 @@ var Body = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Html" }),
-        __metadata("design:type", Content)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Html" }),
+        __metadata("design:type", content_1.Content)
     ], Body.prototype, "html", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Text" }),
-        __metadata("design:type", Content)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Text" }),
+        __metadata("design:type", content_1.Content)
     ], Body.prototype, "text", void 0);
     return Body;
-}(SpeakeasyBase));
-export { Body };
+}(utils_1.SpeakeasyBase));
+exports.Body = Body;

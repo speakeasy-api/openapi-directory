@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PortOverride = void 0;
+var utils_1 = require("../../../internal/utils");
 // PortOverride
 /**
  * <p>Override specific listener ports used to route traffic to endpoints that are part of an endpoint group. For example, you can create a port override in which the listener receives user traffic on ports 80 and 443, but your accelerator routes that traffic to ports 1080 and 1443, respectively, on the endpoints.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/global-accelerator/latest/dg/about-endpoint-groups-port-override.html"> Port overrides</a> in the <i>AWS Global Accelerator Developer Guide</i>.</p>
@@ -33,13 +36,13 @@ var PortOverride = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointPort" }),
         __metadata("design:type", Number)
     ], PortOverride.prototype, "endpointPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListenerPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListenerPort" }),
         __metadata("design:type", Number)
     ], PortOverride.prototype, "listenerPort", void 0);
     return PortOverride;
-}(SpeakeasyBase));
-export { PortOverride };
+}(utils_1.SpeakeasyBase));
+exports.PortOverride = PortOverride;

@@ -6,5 +6,5 @@ export declare class WebhookVerificationKeyGetRequest extends SpeakeasyBase {
 export declare class WebhookVerificationKeyGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    webhookVerificationKeyGetResponse?: Map<string, any>;
+    webhookVerificationKeyGetResponse?: Record<string, any>;
 }

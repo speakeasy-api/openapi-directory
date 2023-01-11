@@ -26,5 +26,5 @@ export declare class GetCategorySubscriptionsAlt1Response extends SpeakeasyBase 
     contentType: string;
     statusCode: number;
     categories?: shared.Category[];
-    error?: shared.Error;
+    error?: shared.ErrorT;
 }

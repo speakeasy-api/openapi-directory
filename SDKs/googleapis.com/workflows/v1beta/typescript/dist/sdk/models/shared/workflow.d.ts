@@ -9,7 +9,7 @@ export declare enum WorkflowStateEnum {
 export declare class Workflow extends SpeakeasyBase {
     createTime?: string;
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     revisionCreateTime?: string;
     revisionId?: string;
@@ -23,7 +23,7 @@ export declare class Workflow extends SpeakeasyBase {
 **/
 export declare class WorkflowInput extends SpeakeasyBase {
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     serviceAccount?: string;
     sourceContents?: string;

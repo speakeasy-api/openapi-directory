@@ -23,7 +23,7 @@ export class GetOfferingsOfferingIdUsersMarkerEmailMarksResponse extends Speakea
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.OfferingUser })
   offeringUsers?: shared.OfferingUser[];

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,338 +14,363 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CircuitsCircuitsListResponse = exports.CircuitsCircuitsListRequest = exports.CircuitsCircuitsList200ApplicationJson = exports.CircuitsCircuitsListQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CircuitsCircuitsListQueryParams = /** @class */ (function (_super) {
     __extends(CircuitsCircuitsListQueryParams, _super);
     function CircuitsCircuitsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=cid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=cid" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "cid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=cid__ic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=cid__ic" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "cidIc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=cid__ie" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=cid__ie" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "cidIe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=cid__iew" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=cid__iew" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "cidIew", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=cid__isw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=cid__isw" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "cidIsw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=cid__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=cid__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "cidN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=cid__nic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=cid__nic" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "cidNic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=cid__nie" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=cid__nie" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "cidNie", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=cid__niew" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=cid__niew" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "cidNiew", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=cid__nisw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=cid__nisw" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "cidNisw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=commit_rate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=commit_rate" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "commitRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=commit_rate__gt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=commit_rate__gt" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "commitRateGt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=commit_rate__gte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=commit_rate__gte" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "commitRateGte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=commit_rate__lt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=commit_rate__lt" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "commitRateLt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=commit_rate__lte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=commit_rate__lte" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "commitRateLte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=commit_rate__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=commit_rate__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "commitRateN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=created" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=created__gte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=created__gte" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "createdGte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=created__lte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=created__lte" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "createdLte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__gt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__gt" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "idGt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__gte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__gte" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "idGte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__lt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__lt" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "idLt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__lte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__lte" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "idLte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "idN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=install_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=install_date" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "installDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=install_date__gt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=install_date__gt" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "installDateGt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=install_date__gte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=install_date__gte" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "installDateGte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=install_date__lt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=install_date__lt" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "installDateLt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=install_date__lte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=install_date__lte" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "installDateLte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=install_date__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=install_date__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "installDateN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=last_updated" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=last_updated__gte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=last_updated__gte" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "lastUpdatedGte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=last_updated__lte" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=last_updated__lte" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "lastUpdatedLte", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], CircuitsCircuitsListQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], CircuitsCircuitsListQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=provider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=provider" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "provider", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=provider__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=provider__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "providerN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=provider_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=provider_id" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "providerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=provider_id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=provider_id__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "providerIdN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=q" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=q" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "q", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=region" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=region__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=region__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "regionN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=region_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=region_id" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "regionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=region_id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=region_id__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "regionIdN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "siteN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site_id" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "siteId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site_id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site_id__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "siteIdN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=status" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=status__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=status__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "statusN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tag" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "tag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tag__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tag__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "tagN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenant" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenant" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "tenant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenant__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenant__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "tenantN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenant_group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenant_group" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "tenantGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenant_group__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenant_group__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "tenantGroupN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenant_group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenant_group_id" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "tenantGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenant_group_id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenant_group_id__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "tenantGroupIdN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenant_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenant_id" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "tenantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tenant_id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tenant_id__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "tenantIdN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=type" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=type__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "typeN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=type_id" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "typeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type_id__n" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=type_id__n" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsListQueryParams.prototype, "typeIdN", void 0);
     return CircuitsCircuitsListQueryParams;
-}(SpeakeasyBase));
-export { CircuitsCircuitsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CircuitsCircuitsListQueryParams = CircuitsCircuitsListQueryParams;
 var CircuitsCircuitsList200ApplicationJson = /** @class */ (function (_super) {
     __extends(CircuitsCircuitsList200ApplicationJson, _super);
     function CircuitsCircuitsList200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], CircuitsCircuitsList200ApplicationJson.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsList200ApplicationJson.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], CircuitsCircuitsList200ApplicationJson.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: shared.Circuit }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: shared.Circuit }),
         __metadata("design:type", Array)
     ], CircuitsCircuitsList200ApplicationJson.prototype, "results", void 0);
     return CircuitsCircuitsList200ApplicationJson;
-}(SpeakeasyBase));
-export { CircuitsCircuitsList200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CircuitsCircuitsList200ApplicationJson = CircuitsCircuitsList200ApplicationJson;
 var CircuitsCircuitsListRequest = /** @class */ (function (_super) {
     __extends(CircuitsCircuitsListRequest, _super);
     function CircuitsCircuitsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CircuitsCircuitsListQueryParams)
     ], CircuitsCircuitsListRequest.prototype, "queryParams", void 0);
     return CircuitsCircuitsListRequest;
-}(SpeakeasyBase));
-export { CircuitsCircuitsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.CircuitsCircuitsListRequest = CircuitsCircuitsListRequest;
 var CircuitsCircuitsListResponse = /** @class */ (function (_super) {
     __extends(CircuitsCircuitsListResponse, _super);
     function CircuitsCircuitsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CircuitsCircuitsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CircuitsCircuitsListResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CircuitsCircuitsList200ApplicationJson)
-    ], CircuitsCircuitsListResponse.prototype, "circuitsCircuitsList200ApplicationJsonObject", void 0);
+    ], CircuitsCircuitsListResponse.prototype, "circuitsCircuitsList200ApplicationJSONObject", void 0);
     return CircuitsCircuitsListResponse;
-}(SpeakeasyBase));
-export { CircuitsCircuitsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.CircuitsCircuitsListResponse = CircuitsCircuitsListResponse;

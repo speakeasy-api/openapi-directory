@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostTruststorePkcs12Response = exports.PostTruststorePkcs12Request = exports.PostTruststorePkcs12RequestBody = exports.PostTruststorePkcs12RequestBodyTruststoreP12 = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostTruststorePkcs12RequestBodyTruststoreP12 = /** @class */ (function (_super) {
     __extends(PostTruststorePkcs12RequestBodyTruststoreP12, _super);
     function PostTruststorePkcs12RequestBodyTruststoreP12() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, content=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
         __metadata("design:type", Uint8Array)
     ], PostTruststorePkcs12RequestBodyTruststoreP12.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=truststore.p12" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=truststore.p12" }),
         __metadata("design:type", String)
     ], PostTruststorePkcs12RequestBodyTruststoreP12.prototype, "truststoreP12", void 0);
     return PostTruststorePkcs12RequestBodyTruststoreP12;
-}(SpeakeasyBase));
-export { PostTruststorePkcs12RequestBodyTruststoreP12 };
+}(utils_1.SpeakeasyBase));
+exports.PostTruststorePkcs12RequestBodyTruststoreP12 = PostTruststorePkcs12RequestBodyTruststoreP12;
 var PostTruststorePkcs12RequestBody = /** @class */ (function (_super) {
     __extends(PostTruststorePkcs12RequestBody, _super);
     function PostTruststorePkcs12RequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, file=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
         __metadata("design:type", PostTruststorePkcs12RequestBodyTruststoreP12)
     ], PostTruststorePkcs12RequestBody.prototype, "truststoreP12", void 0);
     return PostTruststorePkcs12RequestBody;
-}(SpeakeasyBase));
-export { PostTruststorePkcs12RequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostTruststorePkcs12RequestBody = PostTruststorePkcs12RequestBody;
 var PostTruststorePkcs12Request = /** @class */ (function (_super) {
     __extends(PostTruststorePkcs12Request, _super);
     function PostTruststorePkcs12Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", PostTruststorePkcs12RequestBody)
     ], PostTruststorePkcs12Request.prototype, "request", void 0);
     return PostTruststorePkcs12Request;
-}(SpeakeasyBase));
-export { PostTruststorePkcs12Request };
+}(utils_1.SpeakeasyBase));
+exports.PostTruststorePkcs12Request = PostTruststorePkcs12Request;
 var PostTruststorePkcs12Response = /** @class */ (function (_super) {
     __extends(PostTruststorePkcs12Response, _super);
     function PostTruststorePkcs12Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostTruststorePkcs12Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostTruststorePkcs12Response.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostTruststorePkcs12Response.prototype, "postTruststorePkcs12DefaultTextPlainString", void 0);
     return PostTruststorePkcs12Response;
-}(SpeakeasyBase));
-export { PostTruststorePkcs12Response };
+}(utils_1.SpeakeasyBase));
+exports.PostTruststorePkcs12Response = PostTruststorePkcs12Response;

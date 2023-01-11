@@ -78,8 +78,8 @@ export class GetIsosResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getIsos200ApplicationJsonObject?: GetIsos200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getIsos200ApplicationJSONObject?: GetIsos200ApplicationJson;
 }

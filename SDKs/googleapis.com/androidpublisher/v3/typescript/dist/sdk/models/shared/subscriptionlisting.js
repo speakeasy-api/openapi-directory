@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionListing = void 0;
+var utils_1 = require("../../../internal/utils");
 // SubscriptionListing
 /**
  * The consumer-visible metadata of a subscription.
@@ -33,21 +36,21 @@ var SubscriptionListing = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=benefits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=benefits" }),
         __metadata("design:type", Array)
     ], SubscriptionListing.prototype, "benefits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], SubscriptionListing.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], SubscriptionListing.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], SubscriptionListing.prototype, "title", void 0);
     return SubscriptionListing;
-}(SpeakeasyBase));
-export { SubscriptionListing };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionListing = SubscriptionListing;

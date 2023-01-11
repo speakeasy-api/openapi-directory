@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NamespacedName } from "./namespacedname";
-export var VolumeRestoreStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VolumeRestore = exports.VolumeRestoreVolumeTypeEnum = exports.VolumeRestoreStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var namespacedname_1 = require("./namespacedname");
+var VolumeRestoreStateEnum;
 (function (VolumeRestoreStateEnum) {
     VolumeRestoreStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     VolumeRestoreStateEnum["Creating"] = "CREATING";
@@ -32,12 +35,12 @@ export var VolumeRestoreStateEnum;
     VolumeRestoreStateEnum["Succeeded"] = "SUCCEEDED";
     VolumeRestoreStateEnum["Failed"] = "FAILED";
     VolumeRestoreStateEnum["Deleting"] = "DELETING";
-})(VolumeRestoreStateEnum || (VolumeRestoreStateEnum = {}));
-export var VolumeRestoreVolumeTypeEnum;
+})(VolumeRestoreStateEnum = exports.VolumeRestoreStateEnum || (exports.VolumeRestoreStateEnum = {}));
+var VolumeRestoreVolumeTypeEnum;
 (function (VolumeRestoreVolumeTypeEnum) {
     VolumeRestoreVolumeTypeEnum["VolumeTypeUnspecified"] = "VOLUME_TYPE_UNSPECIFIED";
     VolumeRestoreVolumeTypeEnum["GcePersistentDisk"] = "GCE_PERSISTENT_DISK";
-})(VolumeRestoreVolumeTypeEnum || (VolumeRestoreVolumeTypeEnum = {}));
+})(VolumeRestoreVolumeTypeEnum = exports.VolumeRestoreVolumeTypeEnum || (exports.VolumeRestoreVolumeTypeEnum = {}));
 // VolumeRestore
 /**
  * Represents the operation of restoring a volume from a VolumeBackup. Next id: 13
@@ -48,53 +51,53 @@ var VolumeRestore = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=completeTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=completeTime" }),
         __metadata("design:type", String)
     ], VolumeRestore.prototype, "completeTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], VolumeRestore.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], VolumeRestore.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], VolumeRestore.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], VolumeRestore.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateMessage" }),
         __metadata("design:type", String)
     ], VolumeRestore.prototype, "stateMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetPvc" }),
-        __metadata("design:type", NamespacedName)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetPvc" }),
+        __metadata("design:type", namespacedname_1.NamespacedName)
     ], VolumeRestore.prototype, "targetPvc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], VolumeRestore.prototype, "uid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], VolumeRestore.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumeBackup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumeBackup" }),
         __metadata("design:type", String)
     ], VolumeRestore.prototype, "volumeBackup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumeHandle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumeHandle" }),
         __metadata("design:type", String)
     ], VolumeRestore.prototype, "volumeHandle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumeType" }),
         __metadata("design:type", String)
     ], VolumeRestore.prototype, "volumeType", void 0);
     return VolumeRestore;
-}(SpeakeasyBase));
-export { VolumeRestore };
+}(utils_1.SpeakeasyBase));
+exports.VolumeRestore = VolumeRestore;

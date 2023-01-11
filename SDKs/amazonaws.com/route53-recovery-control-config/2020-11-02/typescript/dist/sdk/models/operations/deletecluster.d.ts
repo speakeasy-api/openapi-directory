@@ -19,7 +19,7 @@ export declare class DeleteClusterResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     conflictException?: any;
     contentType: string;
-    deleteClusterResponse?: Map<string, any>;
+    deleteClusterResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     statusCode: number;

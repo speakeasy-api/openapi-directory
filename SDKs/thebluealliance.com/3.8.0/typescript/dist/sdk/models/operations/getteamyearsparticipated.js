@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,94 +14,119 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTeamYearsParticipatedResponse = exports.GetTeamYearsParticipatedRequest = exports.GetTeamYearsParticipatedSecurity = exports.GetTeamYearsParticipatedHeaders = exports.GetTeamYearsParticipatedPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetTeamYearsParticipatedPathParams = /** @class */ (function (_super) {
     __extends(GetTeamYearsParticipatedPathParams, _super);
     function GetTeamYearsParticipatedPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_key" }),
         __metadata("design:type", String)
     ], GetTeamYearsParticipatedPathParams.prototype, "teamKey", void 0);
     return GetTeamYearsParticipatedPathParams;
-}(SpeakeasyBase));
-export { GetTeamYearsParticipatedPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTeamYearsParticipatedPathParams = GetTeamYearsParticipatedPathParams;
 var GetTeamYearsParticipatedHeaders = /** @class */ (function (_super) {
     __extends(GetTeamYearsParticipatedHeaders, _super);
     function GetTeamYearsParticipatedHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
         __metadata("design:type", String)
     ], GetTeamYearsParticipatedHeaders.prototype, "ifModifiedSince", void 0);
     return GetTeamYearsParticipatedHeaders;
-}(SpeakeasyBase));
-export { GetTeamYearsParticipatedHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetTeamYearsParticipatedHeaders = GetTeamYearsParticipatedHeaders;
 var GetTeamYearsParticipatedSecurity = /** @class */ (function (_super) {
     __extends(GetTeamYearsParticipatedSecurity, _super);
     function GetTeamYearsParticipatedSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], GetTeamYearsParticipatedSecurity.prototype, "apiKey", void 0);
     return GetTeamYearsParticipatedSecurity;
-}(SpeakeasyBase));
-export { GetTeamYearsParticipatedSecurity };
+}(utils_1.SpeakeasyBase));
+exports.GetTeamYearsParticipatedSecurity = GetTeamYearsParticipatedSecurity;
 var GetTeamYearsParticipatedRequest = /** @class */ (function (_super) {
     __extends(GetTeamYearsParticipatedRequest, _super);
     function GetTeamYearsParticipatedRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTeamYearsParticipatedPathParams)
     ], GetTeamYearsParticipatedRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTeamYearsParticipatedHeaders)
     ], GetTeamYearsParticipatedRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTeamYearsParticipatedSecurity)
     ], GetTeamYearsParticipatedRequest.prototype, "security", void 0);
     return GetTeamYearsParticipatedRequest;
-}(SpeakeasyBase));
-export { GetTeamYearsParticipatedRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTeamYearsParticipatedRequest = GetTeamYearsParticipatedRequest;
 var GetTeamYearsParticipatedResponse = /** @class */ (function (_super) {
     __extends(GetTeamYearsParticipatedResponse, _super);
     function GetTeamYearsParticipatedResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTeamYearsParticipatedResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetTeamYearsParticipatedResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTeamYearsParticipatedResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], GetTeamYearsParticipatedResponse.prototype, "getTeamYearsParticipated200ApplicationJsonIntegers", void 0);
+    ], GetTeamYearsParticipatedResponse.prototype, "getTeamYearsParticipated200ApplicationJSONIntegers", void 0);
     return GetTeamYearsParticipatedResponse;
-}(SpeakeasyBase));
-export { GetTeamYearsParticipatedResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTeamYearsParticipatedResponse = GetTeamYearsParticipatedResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MobileFriendlyIssue } from "./mobilefriendlyissue";
-import { ResourceIssue } from "./resourceissue";
-import { Image } from "./image";
-import { TestStatus } from "./teststatus";
-export var RunMobileFriendlyTestResponseMobileFriendlinessEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RunMobileFriendlyTestResponse = exports.RunMobileFriendlyTestResponseMobileFriendlinessEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var mobilefriendlyissue_1 = require("./mobilefriendlyissue");
+var resourceissue_1 = require("./resourceissue");
+var image_1 = require("./image");
+var teststatus_1 = require("./teststatus");
+var RunMobileFriendlyTestResponseMobileFriendlinessEnum;
 (function (RunMobileFriendlyTestResponseMobileFriendlinessEnum) {
     RunMobileFriendlyTestResponseMobileFriendlinessEnum["MobileFriendlyTestResultUnspecified"] = "MOBILE_FRIENDLY_TEST_RESULT_UNSPECIFIED";
     RunMobileFriendlyTestResponseMobileFriendlinessEnum["MobileFriendly"] = "MOBILE_FRIENDLY";
     RunMobileFriendlyTestResponseMobileFriendlinessEnum["NotMobileFriendly"] = "NOT_MOBILE_FRIENDLY";
-})(RunMobileFriendlyTestResponseMobileFriendlinessEnum || (RunMobileFriendlyTestResponseMobileFriendlinessEnum = {}));
+})(RunMobileFriendlyTestResponseMobileFriendlinessEnum = exports.RunMobileFriendlyTestResponseMobileFriendlinessEnum || (exports.RunMobileFriendlyTestResponseMobileFriendlinessEnum = {}));
 // RunMobileFriendlyTestResponse
 /**
  * Mobile-friendly test response, including mobile-friendly issues and resource issues.
@@ -43,25 +46,25 @@ var RunMobileFriendlyTestResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobileFriendliness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobileFriendliness" }),
         __metadata("design:type", String)
     ], RunMobileFriendlyTestResponse.prototype, "mobileFriendliness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobileFriendlyIssues", elemType: MobileFriendlyIssue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobileFriendlyIssues", elemType: mobilefriendlyissue_1.MobileFriendlyIssue }),
         __metadata("design:type", Array)
     ], RunMobileFriendlyTestResponse.prototype, "mobileFriendlyIssues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceIssues", elemType: ResourceIssue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceIssues", elemType: resourceissue_1.ResourceIssue }),
         __metadata("design:type", Array)
     ], RunMobileFriendlyTestResponse.prototype, "resourceIssues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenshot" }),
-        __metadata("design:type", Image)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenshot" }),
+        __metadata("design:type", image_1.Image)
     ], RunMobileFriendlyTestResponse.prototype, "screenshot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testStatus" }),
-        __metadata("design:type", TestStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testStatus" }),
+        __metadata("design:type", teststatus_1.TestStatus)
     ], RunMobileFriendlyTestResponse.prototype, "testStatus", void 0);
     return RunMobileFriendlyTestResponse;
-}(SpeakeasyBase));
-export { RunMobileFriendlyTestResponse };
+}(utils_1.SpeakeasyBase));
+exports.RunMobileFriendlyTestResponse = RunMobileFriendlyTestResponse;

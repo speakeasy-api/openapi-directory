@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Route } from "./route";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NetworkFirewallUnexpectedFirewallRoutesViolation = void 0;
+var utils_1 = require("../../../internal/utils");
+var route_1 = require("./route");
 // NetworkFirewallUnexpectedFirewallRoutesViolation
 /**
  * Violation detail for an unexpected route that's present in a route table.
@@ -34,25 +37,25 @@ var NetworkFirewallUnexpectedFirewallRoutesViolation = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirewallEndpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirewallEndpoint" }),
         __metadata("design:type", String)
     ], NetworkFirewallUnexpectedFirewallRoutesViolation.prototype, "firewallEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirewallSubnetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirewallSubnetId" }),
         __metadata("design:type", String)
     ], NetworkFirewallUnexpectedFirewallRoutesViolation.prototype, "firewallSubnetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RouteTableId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RouteTableId" }),
         __metadata("design:type", String)
     ], NetworkFirewallUnexpectedFirewallRoutesViolation.prototype, "routeTableId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ViolatingRoutes", elemType: Route }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ViolatingRoutes", elemType: route_1.Route }),
         __metadata("design:type", Array)
     ], NetworkFirewallUnexpectedFirewallRoutesViolation.prototype, "violatingRoutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VpcId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VpcId" }),
         __metadata("design:type", String)
     ], NetworkFirewallUnexpectedFirewallRoutesViolation.prototype, "vpcId", void 0);
     return NetworkFirewallUnexpectedFirewallRoutesViolation;
-}(SpeakeasyBase));
-export { NetworkFirewallUnexpectedFirewallRoutesViolation };
+}(utils_1.SpeakeasyBase));
+exports.NetworkFirewallUnexpectedFirewallRoutesViolation = NetworkFirewallUnexpectedFirewallRoutesViolation;

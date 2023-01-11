@@ -105,11 +105,11 @@ export declare class CoprgRequest extends SpeakeasyBase {
 export declare class CoprgResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    coprg400ApplicationJsonObject?: Coprg400ApplicationJson;
-    coprg401ApplicationJsonObject?: Coprg401ApplicationJson;
-    coprg404ApplicationJsonObject?: Coprg404ApplicationJson;
-    coprg500ApplicationJsonObject?: Coprg500ApplicationJson;
-    coprg502ApplicationJsonObject?: Coprg502ApplicationJson;
-    coprg503ApplicationJsonObject?: Coprg503ApplicationJson;
-    coprg504ApplicationJsonObject?: Coprg504ApplicationJson;
+    coprg400ApplicationJSONObject?: Coprg400ApplicationJson;
+    coprg401ApplicationJSONObject?: Coprg401ApplicationJson;
+    coprg404ApplicationJSONObject?: Coprg404ApplicationJson;
+    coprg500ApplicationJSONObject?: Coprg500ApplicationJson;
+    coprg502ApplicationJSONObject?: Coprg502ApplicationJson;
+    coprg503ApplicationJSONObject?: Coprg503ApplicationJson;
+    coprg504ApplicationJSONObject?: Coprg504ApplicationJson;
 }

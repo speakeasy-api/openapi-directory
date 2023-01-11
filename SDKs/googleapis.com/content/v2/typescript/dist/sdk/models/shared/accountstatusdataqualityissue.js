@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountStatusExampleItem } from "./accountstatusexampleitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountStatusDataQualityIssue = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountstatusexampleitem_1 = require("./accountstatusexampleitem");
 var AccountStatusDataQualityIssue = /** @class */ (function (_super) {
     __extends(AccountStatusDataQualityIssue, _super);
     function AccountStatusDataQualityIssue() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], AccountStatusDataQualityIssue.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], AccountStatusDataQualityIssue.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
         __metadata("design:type", String)
     ], AccountStatusDataQualityIssue.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayedValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayedValue" }),
         __metadata("design:type", String)
     ], AccountStatusDataQualityIssue.prototype, "displayedValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exampleItems", elemType: AccountStatusExampleItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exampleItems", elemType: accountstatusexampleitem_1.AccountStatusExampleItem }),
         __metadata("design:type", Array)
     ], AccountStatusDataQualityIssue.prototype, "exampleItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AccountStatusDataQualityIssue.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastChecked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastChecked" }),
         __metadata("design:type", String)
     ], AccountStatusDataQualityIssue.prototype, "lastChecked", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], AccountStatusDataQualityIssue.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numItems" }),
         __metadata("design:type", Number)
     ], AccountStatusDataQualityIssue.prototype, "numItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=severity" }),
         __metadata("design:type", String)
     ], AccountStatusDataQualityIssue.prototype, "severity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=submittedValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=submittedValue" }),
         __metadata("design:type", String)
     ], AccountStatusDataQualityIssue.prototype, "submittedValue", void 0);
     return AccountStatusDataQualityIssue;
-}(SpeakeasyBase));
-export { AccountStatusDataQualityIssue };
+}(utils_1.SpeakeasyBase));
+exports.AccountStatusDataQualityIssue = AccountStatusDataQualityIssue;

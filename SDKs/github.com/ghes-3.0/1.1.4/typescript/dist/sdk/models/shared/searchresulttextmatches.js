@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchResultTextMatches = exports.SearchResultTextMatchesMatches = void 0;
+var utils_1 = require("../../../internal/utils");
 var SearchResultTextMatchesMatches = /** @class */ (function (_super) {
     __extends(SearchResultTextMatchesMatches, _super);
     function SearchResultTextMatchesMatches() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=indices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=indices" }),
         __metadata("design:type", Array)
     ], SearchResultTextMatchesMatches.prototype, "indices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], SearchResultTextMatchesMatches.prototype, "text", void 0);
     return SearchResultTextMatchesMatches;
-}(SpeakeasyBase));
-export { SearchResultTextMatchesMatches };
+}(utils_1.SpeakeasyBase));
+exports.SearchResultTextMatchesMatches = SearchResultTextMatchesMatches;
 var SearchResultTextMatches = /** @class */ (function (_super) {
     __extends(SearchResultTextMatches, _super);
     function SearchResultTextMatches() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fragment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fragment" }),
         __metadata("design:type", String)
     ], SearchResultTextMatches.prototype, "fragment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matches", elemType: SearchResultTextMatchesMatches }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matches", elemType: SearchResultTextMatchesMatches }),
         __metadata("design:type", Array)
     ], SearchResultTextMatches.prototype, "matches", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=object_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object_type" }),
         __metadata("design:type", String)
     ], SearchResultTextMatches.prototype, "objectType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=object_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object_url" }),
         __metadata("design:type", String)
     ], SearchResultTextMatches.prototype, "objectUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=property" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=property" }),
         __metadata("design:type", String)
     ], SearchResultTextMatches.prototype, "property", void 0);
     return SearchResultTextMatches;
-}(SpeakeasyBase));
-export { SearchResultTextMatches };
+}(utils_1.SpeakeasyBase));
+exports.SearchResultTextMatches = SearchResultTextMatches;

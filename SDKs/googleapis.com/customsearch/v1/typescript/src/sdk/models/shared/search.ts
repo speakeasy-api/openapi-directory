@@ -416,7 +416,7 @@ export class SearchUrl extends SpeakeasyBase {
 **/
 export class Search extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=context" })
-  context?: Map<string, any>;
+  context?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=items", elemType: Result })
   items?: Result[];

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Font } from "./font";
-import { Soundtrack } from "./soundtrack";
-import { Track } from "./track";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Timeline = void 0;
+var utils_1 = require("../../../internal/utils");
+var font_1 = require("./font");
+var soundtrack_1 = require("./soundtrack");
+var track_1 = require("./track");
 // Timeline
 /**
  * A timeline represents the contents of a video edit over time, an audio edit over time, in seconds, or an image layout. A timeline consists of layers called tracks. Tracks are composed of titles, images, audio, html or video segments referred to as clips which are placed along the track at specific starting point and lasting for a specific amount of time.
@@ -36,25 +39,25 @@ var Timeline = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=background" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=background" }),
         __metadata("design:type", String)
     ], Timeline.prototype, "background", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cache" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cache" }),
         __metadata("design:type", Boolean)
     ], Timeline.prototype, "cache", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fonts", elemType: Font }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fonts", elemType: font_1.Font }),
         __metadata("design:type", Array)
     ], Timeline.prototype, "fonts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=soundtrack" }),
-        __metadata("design:type", Soundtrack)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=soundtrack" }),
+        __metadata("design:type", soundtrack_1.Soundtrack)
     ], Timeline.prototype, "soundtrack", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tracks", elemType: Track }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tracks", elemType: track_1.Track }),
         __metadata("design:type", Array)
     ], Timeline.prototype, "tracks", void 0);
     return Timeline;
-}(SpeakeasyBase));
-export { Timeline };
+}(utils_1.SpeakeasyBase));
+exports.Timeline = Timeline;

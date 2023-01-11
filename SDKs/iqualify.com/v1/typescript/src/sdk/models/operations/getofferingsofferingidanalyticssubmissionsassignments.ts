@@ -23,7 +23,7 @@ export class GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse exten
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;

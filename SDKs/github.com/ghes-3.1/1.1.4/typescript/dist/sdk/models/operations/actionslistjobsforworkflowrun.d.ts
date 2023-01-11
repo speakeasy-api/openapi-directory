@@ -5,12 +5,8 @@ export declare class ActionsListJobsForWorkflowRunPathParams extends SpeakeasyBa
     repo: string;
     runId: number;
 }
-export declare enum ActionsListJobsForWorkflowRunFilterEnum {
-    Latest = "latest",
-    All = "all"
-}
 export declare class ActionsListJobsForWorkflowRunQueryParams extends SpeakeasyBase {
-    filter?: ActionsListJobsForWorkflowRunFilterEnum;
+    filter?: shared.RunIdEnum;
     page?: number;
     perPage?: number;
 }
@@ -24,7 +20,7 @@ export declare class ActionsListJobsForWorkflowRunRequest extends SpeakeasyBase 
 }
 export declare class ActionsListJobsForWorkflowRunResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    actionsListJobsForWorkflowRun200ApplicationJsonObject?: ActionsListJobsForWorkflowRun200ApplicationJson;
+    actionsListJobsForWorkflowRun200ApplicationJSONObject?: ActionsListJobsForWorkflowRun200ApplicationJson;
 }

@@ -63,9 +63,9 @@ export declare class Instance extends SpeakeasyBase {
     installGpuDriver?: boolean;
     instanceOwners?: string[];
     kmsKey?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     machineType?: string;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     name?: string;
     network?: string;
     nicType?: InstanceNicTypeEnum;
@@ -101,9 +101,9 @@ export declare class InstanceInput extends SpeakeasyBase {
     installGpuDriver?: boolean;
     instanceOwners?: string[];
     kmsKey?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     machineType?: string;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     network?: string;
     nicType?: InstanceNicTypeEnum;
     noProxyAccess?: boolean;

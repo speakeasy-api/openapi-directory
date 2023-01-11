@@ -13,10 +13,10 @@ export class ReimbursementType extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ReimbursementTypeID" })
-  reimbursementTypeId?: string;
+  reimbursementTypeID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" })
-  updatedDateUtc?: string;
+  updatedDateUTC?: string;
 }
 
 
@@ -31,5 +31,5 @@ export class ReimbursementTypeInput extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ReimbursementTypeID" })
-  reimbursementTypeId?: string;
+  reimbursementTypeID?: string;
 }

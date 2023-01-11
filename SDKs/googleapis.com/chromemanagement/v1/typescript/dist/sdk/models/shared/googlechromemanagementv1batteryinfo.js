@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleTypeDate } from "./googletypedate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1BatteryInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var googletypedate_1 = require("./googletypedate");
 // GoogleChromeManagementV1BatteryInfo
 /**
  * Information about the battery. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDevicePowerStatus](https://chromeenterprise.google/policies/#ReportDevicePowerStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
@@ -34,29 +37,29 @@ var GoogleChromeManagementV1BatteryInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=designCapacity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=designCapacity" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BatteryInfo.prototype, "designCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=designMinVoltage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=designMinVoltage" }),
         __metadata("design:type", Number)
     ], GoogleChromeManagementV1BatteryInfo.prototype, "designMinVoltage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manufactureDate" }),
-        __metadata("design:type", GoogleTypeDate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manufactureDate" }),
+        __metadata("design:type", googletypedate_1.GoogleTypeDate)
     ], GoogleChromeManagementV1BatteryInfo.prototype, "manufactureDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manufacturer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manufacturer" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BatteryInfo.prototype, "manufacturer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serialNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serialNumber" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BatteryInfo.prototype, "serialNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=technology" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=technology" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1BatteryInfo.prototype, "technology", void 0);
     return GoogleChromeManagementV1BatteryInfo;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1BatteryInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1BatteryInfo = GoogleChromeManagementV1BatteryInfo;

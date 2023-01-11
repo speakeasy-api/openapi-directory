@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StoryIdPublicResponse = exports.StoryIdPublicRequest = exports.StoryIdPublicPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var StoryIdPublicPathParams = /** @class */ (function (_super) {
     __extends(StoryIdPublicPathParams, _super);
     function StoryIdPublicPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], StoryIdPublicPathParams.prototype, "id", void 0);
     return StoryIdPublicPathParams;
-}(SpeakeasyBase));
-export { StoryIdPublicPathParams };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdPublicPathParams = StoryIdPublicPathParams;
 var StoryIdPublicRequest = /** @class */ (function (_super) {
     __extends(StoryIdPublicRequest, _super);
     function StoryIdPublicRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StoryIdPublicPathParams)
     ], StoryIdPublicRequest.prototype, "pathParams", void 0);
     return StoryIdPublicRequest;
-}(SpeakeasyBase));
-export { StoryIdPublicRequest };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdPublicRequest = StoryIdPublicRequest;
 var StoryIdPublicResponse = /** @class */ (function (_super) {
     __extends(StoryIdPublicResponse, _super);
     function StoryIdPublicResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StoryIdPublicResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StoryIdPublicResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StoryIdPublicResponse.prototype, "problemDetail", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StoryIdPublicResponse.prototype, "revealJsPresenation", void 0);
     return StoryIdPublicResponse;
-}(SpeakeasyBase));
-export { StoryIdPublicResponse };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdPublicResponse = StoryIdPublicResponse;

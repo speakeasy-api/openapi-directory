@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var IngestionResultStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IngestionResult = exports.IngestionResultStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var IngestionResultStatusEnum;
 (function (IngestionResultStatusEnum) {
     IngestionResultStatusEnum["Error"] = "Error";
     IngestionResultStatusEnum["SuccessWarning"] = "SuccessWarning";
     IngestionResultStatusEnum["Success"] = "Success";
-})(IngestionResultStatusEnum || (IngestionResultStatusEnum = {}));
+})(IngestionResultStatusEnum = exports.IngestionResultStatusEnum || (exports.IngestionResultStatusEnum = {}));
 // IngestionResult
 /**
  * This class defines the IngestionResult on the Publish API
@@ -39,33 +42,33 @@ var IngestionResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], IngestionResult.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], IngestionResult.prototype, "ignoredProperties", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], IngestionResult.prototype, "invalidProperties", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], IngestionResult.prototype, "invalidValues", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], IngestionResult.prototype, "missingProperties", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], IngestionResult.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], IngestionResult.prototype, "unknownProperties", void 0);
     return IngestionResult;
-}(SpeakeasyBase));
-export { IngestionResult };
+}(utils_1.SpeakeasyBase));
+exports.IngestionResult = IngestionResult;

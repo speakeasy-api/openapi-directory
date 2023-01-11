@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Event } from "./event";
+import { EventList } from "./eventlist";
 /**
  * Represents the output of <a>DescribeEvents</a>.
 **/
 export declare class EventsMessage extends SpeakeasyBase {
-    events?: Event[];
+    events?: EventList[];
     marker?: string;
 }

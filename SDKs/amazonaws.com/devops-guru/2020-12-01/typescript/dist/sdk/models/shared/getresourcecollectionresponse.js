@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceCollectionFilter } from "./resourcecollectionfilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetResourceCollectionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcecollectionfilter_1 = require("./resourcecollectionfilter");
 var GetResourceCollectionResponse = /** @class */ (function (_super) {
     __extends(GetResourceCollectionResponse, _super);
     function GetResourceCollectionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetResourceCollectionResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceCollection" }),
-        __metadata("design:type", ResourceCollectionFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceCollection" }),
+        __metadata("design:type", resourcecollectionfilter_1.ResourceCollectionFilter)
     ], GetResourceCollectionResponse.prototype, "resourceCollection", void 0);
     return GetResourceCollectionResponse;
-}(SpeakeasyBase));
-export { GetResourceCollectionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetResourceCollectionResponse = GetResourceCollectionResponse;

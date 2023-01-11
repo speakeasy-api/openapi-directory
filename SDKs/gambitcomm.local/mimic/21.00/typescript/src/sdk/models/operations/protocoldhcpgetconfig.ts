@@ -17,7 +17,7 @@ export class ProtocolDhcpGetConfigRequest extends SpeakeasyBase {
 
 export class ProtocolDhcpGetConfigResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configDhcp?: shared.ConfigDhcp;
+  configDHCP?: shared.ConfigDhcp;
 
   @SpeakeasyMetadata()
   contentType: string;

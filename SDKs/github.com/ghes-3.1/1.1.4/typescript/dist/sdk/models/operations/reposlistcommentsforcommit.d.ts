@@ -15,7 +15,7 @@ export declare class ReposListCommentsForCommitRequest extends SpeakeasyBase {
 }
 export declare class ReposListCommentsForCommitResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     commitComments?: shared.CommitComment[];
 }

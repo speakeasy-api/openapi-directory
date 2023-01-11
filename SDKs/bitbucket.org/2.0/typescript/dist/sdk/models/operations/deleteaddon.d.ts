@@ -11,5 +11,5 @@ export declare class DeleteAddonRequest extends SpeakeasyBase {
 export declare class DeleteAddonResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

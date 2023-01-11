@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LinkedInterconnectAttachments } from "./linkedinterconnectattachments";
-import { LinkedRouterApplianceInstances } from "./linkedrouterapplianceinstances";
-import { LinkedVpnTunnels } from "./linkedvpntunnels";
-import { LinkedInterconnectAttachmentsInput } from "./linkedinterconnectattachments";
-import { LinkedRouterApplianceInstancesInput } from "./linkedrouterapplianceinstances";
-import { LinkedVpnTunnelsInput } from "./linkedvpntunnels";
-export var SpokeStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SpokeInput = exports.Spoke = exports.SpokeStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var linkedinterconnectattachments_1 = require("./linkedinterconnectattachments");
+var linkedrouterapplianceinstances_1 = require("./linkedrouterapplianceinstances");
+var linkedvpntunnels_1 = require("./linkedvpntunnels");
+var linkedinterconnectattachments_2 = require("./linkedinterconnectattachments");
+var linkedrouterapplianceinstances_2 = require("./linkedrouterapplianceinstances");
+var linkedvpntunnels_2 = require("./linkedvpntunnels");
+var SpokeStateEnum;
 (function (SpokeStateEnum) {
     SpokeStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     SpokeStateEnum["Creating"] = "CREATING";
     SpokeStateEnum["Active"] = "ACTIVE";
     SpokeStateEnum["Deleting"] = "DELETING";
     SpokeStateEnum["Updating"] = "UPDATING";
-})(SpokeStateEnum || (SpokeStateEnum = {}));
+})(SpokeStateEnum = exports.SpokeStateEnum || (exports.SpokeStateEnum = {}));
 // Spoke
 /**
- * A Network Connectivity Center spoke represents a connection between your Google Cloud network resources and a non-Google-Cloud network. When you create a spoke, you associate it with a hub. You must also identify a value for exactly one of the following fields: * linked_vpn_tunnels * linked_interconnect_attachments * linked_router_appliance_instances
+ * A Network Connectivity Center spoke represents one or more network connectivity resources. When you create a spoke, you associate it with a hub. You must also identify a value for exactly one of the following fields: * linked_vpn_tunnels * linked_interconnect_attachments * linked_router_appliance_instances
 **/
 var Spoke = /** @class */ (function (_super) {
     __extends(Spoke, _super);
@@ -47,55 +50,55 @@ var Spoke = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Spoke.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Spoke.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hub" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hub" }),
         __metadata("design:type", String)
     ], Spoke.prototype, "hub", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Spoke.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkedInterconnectAttachments" }),
-        __metadata("design:type", LinkedInterconnectAttachments)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkedInterconnectAttachments" }),
+        __metadata("design:type", linkedinterconnectattachments_1.LinkedInterconnectAttachments)
     ], Spoke.prototype, "linkedInterconnectAttachments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkedRouterApplianceInstances" }),
-        __metadata("design:type", LinkedRouterApplianceInstances)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkedRouterApplianceInstances" }),
+        __metadata("design:type", linkedrouterapplianceinstances_1.LinkedRouterApplianceInstances)
     ], Spoke.prototype, "linkedRouterApplianceInstances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkedVpnTunnels" }),
-        __metadata("design:type", LinkedVpnTunnels)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkedVpnTunnels" }),
+        __metadata("design:type", linkedvpntunnels_1.LinkedVpnTunnels)
     ], Spoke.prototype, "linkedVpnTunnels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Spoke.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Spoke.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uniqueId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uniqueId" }),
         __metadata("design:type", String)
     ], Spoke.prototype, "uniqueId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Spoke.prototype, "updateTime", void 0);
     return Spoke;
-}(SpeakeasyBase));
-export { Spoke };
+}(utils_1.SpeakeasyBase));
+exports.Spoke = Spoke;
 // SpokeInput
 /**
- * A Network Connectivity Center spoke represents a connection between your Google Cloud network resources and a non-Google-Cloud network. When you create a spoke, you associate it with a hub. You must also identify a value for exactly one of the following fields: * linked_vpn_tunnels * linked_interconnect_attachments * linked_router_appliance_instances
+ * A Network Connectivity Center spoke represents one or more network connectivity resources. When you create a spoke, you associate it with a hub. You must also identify a value for exactly one of the following fields: * linked_vpn_tunnels * linked_interconnect_attachments * linked_router_appliance_instances
 **/
 var SpokeInput = /** @class */ (function (_super) {
     __extends(SpokeInput, _super);
@@ -103,33 +106,33 @@ var SpokeInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], SpokeInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hub" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hub" }),
         __metadata("design:type", String)
     ], SpokeInput.prototype, "hub", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], SpokeInput.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkedInterconnectAttachments" }),
-        __metadata("design:type", LinkedInterconnectAttachmentsInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkedInterconnectAttachments" }),
+        __metadata("design:type", linkedinterconnectattachments_2.LinkedInterconnectAttachmentsInput)
     ], SpokeInput.prototype, "linkedInterconnectAttachments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkedRouterApplianceInstances" }),
-        __metadata("design:type", LinkedRouterApplianceInstancesInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkedRouterApplianceInstances" }),
+        __metadata("design:type", linkedrouterapplianceinstances_2.LinkedRouterApplianceInstancesInput)
     ], SpokeInput.prototype, "linkedRouterApplianceInstances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkedVpnTunnels" }),
-        __metadata("design:type", LinkedVpnTunnelsInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkedVpnTunnels" }),
+        __metadata("design:type", linkedvpntunnels_2.LinkedVpnTunnelsInput)
     ], SpokeInput.prototype, "linkedVpnTunnels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SpokeInput.prototype, "name", void 0);
     return SpokeInput;
-}(SpeakeasyBase));
-export { SpokeInput };
+}(utils_1.SpeakeasyBase));
+exports.SpokeInput = SpokeInput;

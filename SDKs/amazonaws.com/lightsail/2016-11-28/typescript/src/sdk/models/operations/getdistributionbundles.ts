@@ -39,7 +39,7 @@ export class GetDistributionBundlesRequest extends SpeakeasyBase {
   headers: GetDistributionBundlesHeaders;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 

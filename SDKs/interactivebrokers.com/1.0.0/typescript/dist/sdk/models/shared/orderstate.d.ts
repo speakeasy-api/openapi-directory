@@ -13,7 +13,7 @@ export declare class OrderState extends SpeakeasyBase {
     filledQuantity?: number;
     listingExchange?: string;
     orderType?: number;
-    outsideRth?: string;
+    outsideRTH?: string;
     price?: number;
     remainingQuantity?: number;
     side?: OrderStateSideEnum;

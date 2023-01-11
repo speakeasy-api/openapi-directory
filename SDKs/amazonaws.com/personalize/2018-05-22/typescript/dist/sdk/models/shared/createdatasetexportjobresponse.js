@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDatasetExportJobResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateDatasetExportJobResponse = /** @class */ (function (_super) {
     __extends(CreateDatasetExportJobResponse, _super);
     function CreateDatasetExportJobResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasetExportJobArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasetExportJobArn" }),
         __metadata("design:type", String)
     ], CreateDatasetExportJobResponse.prototype, "datasetExportJobArn", void 0);
     return CreateDatasetExportJobResponse;
-}(SpeakeasyBase));
-export { CreateDatasetExportJobResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateDatasetExportJobResponse = CreateDatasetExportJobResponse;

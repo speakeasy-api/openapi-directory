@@ -66,5 +66,5 @@ export class MlModel extends SpeakeasyBase {
   trainingDataSourceId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=TrainingParameters" })
-  trainingParameters?: Map<string, string>;
+  trainingParameters?: Record<string, string>;
 }

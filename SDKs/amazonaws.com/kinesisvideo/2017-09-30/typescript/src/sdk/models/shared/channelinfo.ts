@@ -11,7 +11,7 @@ import { SingleMasterConfiguration } from "./singlemasterconfiguration";
 **/
 export class ChannelInfo extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ChannelARN" })
-  channelArn?: string;
+  channelARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ChannelName" })
   channelName?: string;

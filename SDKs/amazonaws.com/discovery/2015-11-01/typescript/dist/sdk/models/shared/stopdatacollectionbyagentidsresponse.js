@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AgentConfigurationStatus } from "./agentconfigurationstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StopDataCollectionByAgentIdsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var agentconfigurationstatus_1 = require("./agentconfigurationstatus");
 var StopDataCollectionByAgentIdsResponse = /** @class */ (function (_super) {
     __extends(StopDataCollectionByAgentIdsResponse, _super);
     function StopDataCollectionByAgentIdsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentsConfigurationStatus", elemType: AgentConfigurationStatus }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentsConfigurationStatus", elemType: agentconfigurationstatus_1.AgentConfigurationStatus }),
         __metadata("design:type", Array)
     ], StopDataCollectionByAgentIdsResponse.prototype, "agentsConfigurationStatus", void 0);
     return StopDataCollectionByAgentIdsResponse;
-}(SpeakeasyBase));
-export { StopDataCollectionByAgentIdsResponse };
+}(utils_1.SpeakeasyBase));
+exports.StopDataCollectionByAgentIdsResponse = StopDataCollectionByAgentIdsResponse;

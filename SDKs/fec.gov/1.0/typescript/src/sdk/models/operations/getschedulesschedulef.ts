@@ -281,8 +281,8 @@ export class GetSchedulesScheduleFResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getSchedulesScheduleFDefaultApplicationJsonObject?: GetSchedulesScheduleFDefaultApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getSchedulesScheduleFDefaultApplicationJSONObject?: GetSchedulesScheduleFDefaultApplicationJson;
 }

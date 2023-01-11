@@ -63,5 +63,5 @@ export class UpdateHostResponse extends SpeakeasyBase {
   unsupportedOperationException?: any;
 
   @SpeakeasyMetadata()
-  updateHostOutput?: Map<string, any>;
+  updateHostOutput?: Record<string, any>;
 }

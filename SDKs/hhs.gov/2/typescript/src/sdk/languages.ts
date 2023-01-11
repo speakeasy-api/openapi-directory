@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -20,51 +20,6 @@ export class Languages {
   }
   
   /**
-   * getResourcesLanguagesIdJson - Get Language by ID
-   *
-   * Information about a specific language
-  **/
-  getResourcesLanguagesIdJson(
-    req: operations.GetResourcesLanguagesIdJsonRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetResourcesLanguagesIdJsonResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetResourcesLanguagesIdJsonRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/languages/{id}.json", req.pathParams);
-    
-    const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetResourcesLanguagesIdJsonResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.languageWrappeds = httpRes?.data;
-            }
-            break;
-          case httpRes?.status == 400:
-            break;
-          case httpRes?.status == 500:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
    * getResourcesLanguagesJson - Get Languages
    *
    * Language Listings
@@ -81,7 +36,7 @@ export class Languages {
     const url: string = baseURL.replace(/\/$/, "") + "/resources/languages.json";
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -89,19 +44,21 @@ export class Languages {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetResourcesLanguagesJsonResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.languageWrappeds = httpRes?.data;
             }
             break;
@@ -113,7 +70,52 @@ export class Languages {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
+  }
+
+  
+  /**
+   * getResourcesLanguagesIdJson - Get Language by ID
+   *
+   * Information about a specific language
+  **/
+  getResourcesLanguagesIdJson(
+    req: operations.GetResourcesLanguagesIdJsonRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetResourcesLanguagesIdJsonResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetResourcesLanguagesIdJsonRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/resources/languages/{id}.json", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetResourcesLanguagesIdJsonResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.languageWrappeds = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            break;
+          case httpRes?.status == 500:
+            break;
+        }
+
+        return res;
+      })
   }
 
 }

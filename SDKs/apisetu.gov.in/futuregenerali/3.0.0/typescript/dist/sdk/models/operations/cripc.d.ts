@@ -106,11 +106,11 @@ export declare class CripcRequest extends SpeakeasyBase {
 export declare class CripcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    cripc400ApplicationJsonObject?: Cripc400ApplicationJson;
-    cripc401ApplicationJsonObject?: Cripc401ApplicationJson;
-    cripc404ApplicationJsonObject?: Cripc404ApplicationJson;
-    cripc500ApplicationJsonObject?: Cripc500ApplicationJson;
-    cripc502ApplicationJsonObject?: Cripc502ApplicationJson;
-    cripc503ApplicationJsonObject?: Cripc503ApplicationJson;
-    cripc504ApplicationJsonObject?: Cripc504ApplicationJson;
+    cripc400ApplicationJSONObject?: Cripc400ApplicationJson;
+    cripc401ApplicationJSONObject?: Cripc401ApplicationJson;
+    cripc404ApplicationJSONObject?: Cripc404ApplicationJson;
+    cripc500ApplicationJSONObject?: Cripc500ApplicationJson;
+    cripc502ApplicationJSONObject?: Cripc502ApplicationJson;
+    cripc503ApplicationJSONObject?: Cripc503ApplicationJson;
+    cripc504ApplicationJSONObject?: Cripc504ApplicationJson;
 }

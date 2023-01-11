@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var LivingAreaLayoutBalconyExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LivingAreaLayout = exports.LivingAreaLayoutStairsExceptionEnum = exports.LivingAreaLayoutPatioExceptionEnum = exports.LivingAreaLayoutNonSmokingExceptionEnum = exports.LivingAreaLayoutLoftExceptionEnum = exports.LivingAreaLayoutLivingAreaSqMetersExceptionEnum = exports.LivingAreaLayoutBalconyExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var LivingAreaLayoutBalconyExceptionEnum;
 (function (LivingAreaLayoutBalconyExceptionEnum) {
     LivingAreaLayoutBalconyExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     LivingAreaLayoutBalconyExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     LivingAreaLayoutBalconyExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     LivingAreaLayoutBalconyExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(LivingAreaLayoutBalconyExceptionEnum || (LivingAreaLayoutBalconyExceptionEnum = {}));
-export var LivingAreaLayoutLivingAreaSqMetersExceptionEnum;
+})(LivingAreaLayoutBalconyExceptionEnum = exports.LivingAreaLayoutBalconyExceptionEnum || (exports.LivingAreaLayoutBalconyExceptionEnum = {}));
+var LivingAreaLayoutLivingAreaSqMetersExceptionEnum;
 (function (LivingAreaLayoutLivingAreaSqMetersExceptionEnum) {
     LivingAreaLayoutLivingAreaSqMetersExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     LivingAreaLayoutLivingAreaSqMetersExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     LivingAreaLayoutLivingAreaSqMetersExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     LivingAreaLayoutLivingAreaSqMetersExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(LivingAreaLayoutLivingAreaSqMetersExceptionEnum || (LivingAreaLayoutLivingAreaSqMetersExceptionEnum = {}));
-export var LivingAreaLayoutLoftExceptionEnum;
+})(LivingAreaLayoutLivingAreaSqMetersExceptionEnum = exports.LivingAreaLayoutLivingAreaSqMetersExceptionEnum || (exports.LivingAreaLayoutLivingAreaSqMetersExceptionEnum = {}));
+var LivingAreaLayoutLoftExceptionEnum;
 (function (LivingAreaLayoutLoftExceptionEnum) {
     LivingAreaLayoutLoftExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     LivingAreaLayoutLoftExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     LivingAreaLayoutLoftExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     LivingAreaLayoutLoftExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(LivingAreaLayoutLoftExceptionEnum || (LivingAreaLayoutLoftExceptionEnum = {}));
-export var LivingAreaLayoutNonSmokingExceptionEnum;
+})(LivingAreaLayoutLoftExceptionEnum = exports.LivingAreaLayoutLoftExceptionEnum || (exports.LivingAreaLayoutLoftExceptionEnum = {}));
+var LivingAreaLayoutNonSmokingExceptionEnum;
 (function (LivingAreaLayoutNonSmokingExceptionEnum) {
     LivingAreaLayoutNonSmokingExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     LivingAreaLayoutNonSmokingExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     LivingAreaLayoutNonSmokingExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     LivingAreaLayoutNonSmokingExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(LivingAreaLayoutNonSmokingExceptionEnum || (LivingAreaLayoutNonSmokingExceptionEnum = {}));
-export var LivingAreaLayoutPatioExceptionEnum;
+})(LivingAreaLayoutNonSmokingExceptionEnum = exports.LivingAreaLayoutNonSmokingExceptionEnum || (exports.LivingAreaLayoutNonSmokingExceptionEnum = {}));
+var LivingAreaLayoutPatioExceptionEnum;
 (function (LivingAreaLayoutPatioExceptionEnum) {
     LivingAreaLayoutPatioExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     LivingAreaLayoutPatioExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     LivingAreaLayoutPatioExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     LivingAreaLayoutPatioExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(LivingAreaLayoutPatioExceptionEnum || (LivingAreaLayoutPatioExceptionEnum = {}));
-export var LivingAreaLayoutStairsExceptionEnum;
+})(LivingAreaLayoutPatioExceptionEnum = exports.LivingAreaLayoutPatioExceptionEnum || (exports.LivingAreaLayoutPatioExceptionEnum = {}));
+var LivingAreaLayoutStairsExceptionEnum;
 (function (LivingAreaLayoutStairsExceptionEnum) {
     LivingAreaLayoutStairsExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     LivingAreaLayoutStairsExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     LivingAreaLayoutStairsExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     LivingAreaLayoutStairsExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(LivingAreaLayoutStairsExceptionEnum || (LivingAreaLayoutStairsExceptionEnum = {}));
+})(LivingAreaLayoutStairsExceptionEnum = exports.LivingAreaLayoutStairsExceptionEnum || (exports.LivingAreaLayoutStairsExceptionEnum = {}));
 // LivingAreaLayout
 /**
  * Information about the layout of the living area.
@@ -75,53 +78,53 @@ var LivingAreaLayout = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balcony" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balcony" }),
         __metadata("design:type", Boolean)
     ], LivingAreaLayout.prototype, "balcony", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balconyException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balconyException" }),
         __metadata("design:type", String)
     ], LivingAreaLayout.prototype, "balconyException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=livingAreaSqMeters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=livingAreaSqMeters" }),
         __metadata("design:type", Number)
     ], LivingAreaLayout.prototype, "livingAreaSqMeters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=livingAreaSqMetersException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=livingAreaSqMetersException" }),
         __metadata("design:type", String)
     ], LivingAreaLayout.prototype, "livingAreaSqMetersException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loft" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loft" }),
         __metadata("design:type", Boolean)
     ], LivingAreaLayout.prototype, "loft", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loftException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loftException" }),
         __metadata("design:type", String)
     ], LivingAreaLayout.prototype, "loftException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nonSmoking" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nonSmoking" }),
         __metadata("design:type", Boolean)
     ], LivingAreaLayout.prototype, "nonSmoking", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nonSmokingException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nonSmokingException" }),
         __metadata("design:type", String)
     ], LivingAreaLayout.prototype, "nonSmokingException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=patio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patio" }),
         __metadata("design:type", Boolean)
     ], LivingAreaLayout.prototype, "patio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=patioException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patioException" }),
         __metadata("design:type", String)
     ], LivingAreaLayout.prototype, "patioException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stairs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stairs" }),
         __metadata("design:type", Boolean)
     ], LivingAreaLayout.prototype, "stairs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stairsException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stairsException" }),
         __metadata("design:type", String)
     ], LivingAreaLayout.prototype, "stairsException", void 0);
     return LivingAreaLayout;
-}(SpeakeasyBase));
-export { LivingAreaLayout };
+}(utils_1.SpeakeasyBase));
+exports.LivingAreaLayout = LivingAreaLayout;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// ServiceBindingInput
-/**
- * ServiceBinding is the resource that defines a Service Directory Service to be used in a BackendService resource.
-**/
-var ServiceBindingInput = /** @class */ (function (_super) {
-    __extends(ServiceBindingInput, _super);
-    function ServiceBindingInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], ServiceBindingInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], ServiceBindingInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], ServiceBindingInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=service" }),
-        __metadata("design:type", String)
-    ], ServiceBindingInput.prototype, "service", void 0);
-    return ServiceBindingInput;
-}(SpeakeasyBase));
-export { ServiceBindingInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceBindingInput = exports.ServiceBinding = void 0;
+var utils_1 = require("../../../internal/utils");
 // ServiceBinding
 /**
  * ServiceBinding is the resource that defines a Service Directory Service to be used in a BackendService resource.
@@ -61,29 +36,57 @@ var ServiceBinding = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], ServiceBinding.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ServiceBinding.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], ServiceBinding.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ServiceBinding.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service" }),
         __metadata("design:type", String)
     ], ServiceBinding.prototype, "service", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], ServiceBinding.prototype, "updateTime", void 0);
     return ServiceBinding;
-}(SpeakeasyBase));
-export { ServiceBinding };
+}(utils_1.SpeakeasyBase));
+exports.ServiceBinding = ServiceBinding;
+// ServiceBindingInput
+/**
+ * ServiceBinding is the resource that defines a Service Directory Service to be used in a BackendService resource.
+**/
+var ServiceBindingInput = /** @class */ (function (_super) {
+    __extends(ServiceBindingInput, _super);
+    function ServiceBindingInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], ServiceBindingInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], ServiceBindingInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], ServiceBindingInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service" }),
+        __metadata("design:type", String)
+    ], ServiceBindingInput.prototype, "service", void 0);
+    return ServiceBindingInput;
+}(utils_1.SpeakeasyBase));
+exports.ServiceBindingInput = ServiceBindingInput;

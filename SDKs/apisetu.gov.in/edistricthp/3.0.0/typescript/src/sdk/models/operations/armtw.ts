@@ -185,23 +185,23 @@ export class ArmtwResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  armtw400ApplicationJsonObject?: Armtw400ApplicationJson;
+  armtw400ApplicationJSONObject?: Armtw400ApplicationJson;
 
   @SpeakeasyMetadata()
-  armtw401ApplicationJsonObject?: Armtw401ApplicationJson;
+  armtw401ApplicationJSONObject?: Armtw401ApplicationJson;
 
   @SpeakeasyMetadata()
-  armtw404ApplicationJsonObject?: Armtw404ApplicationJson;
+  armtw404ApplicationJSONObject?: Armtw404ApplicationJson;
 
   @SpeakeasyMetadata()
-  armtw500ApplicationJsonObject?: Armtw500ApplicationJson;
+  armtw500ApplicationJSONObject?: Armtw500ApplicationJson;
 
   @SpeakeasyMetadata()
-  armtw502ApplicationJsonObject?: Armtw502ApplicationJson;
+  armtw502ApplicationJSONObject?: Armtw502ApplicationJson;
 
   @SpeakeasyMetadata()
-  armtw503ApplicationJsonObject?: Armtw503ApplicationJson;
+  armtw503ApplicationJSONObject?: Armtw503ApplicationJson;
 
   @SpeakeasyMetadata()
-  armtw504ApplicationJsonObject?: Armtw504ApplicationJson;
+  armtw504ApplicationJSONObject?: Armtw504ApplicationJson;
 }

@@ -15,7 +15,7 @@ export declare class SubmitPayoutV3Request extends SpeakeasyBase {
 }
 export declare class SubmitPayoutV3Response extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     inlineResponse400?: any;
     inlineResponse401?: any;

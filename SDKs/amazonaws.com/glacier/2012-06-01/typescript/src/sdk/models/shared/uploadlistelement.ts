@@ -20,5 +20,5 @@ export class UploadListElement extends SpeakeasyBase {
   partSizeInBytes?: number;
 
   @SpeakeasyMetadata({ data: "json, name=VaultARN" })
-  vaultArn?: string;
+  vaultARN?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SelfManagedCertificate = void 0;
+var utils_1 = require("../../../internal/utils");
 // SelfManagedCertificate
 /**
  * Certificate data for a SelfManaged Certificate. SelfManaged Certificates are uploaded by the user. Updating such certificates before they expire remains the user's responsibility.
@@ -33,13 +36,13 @@ var SelfManagedCertificate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pemCertificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pemCertificate" }),
         __metadata("design:type", String)
     ], SelfManagedCertificate.prototype, "pemCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pemPrivateKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pemPrivateKey" }),
         __metadata("design:type", String)
     ], SelfManagedCertificate.prototype, "pemPrivateKey", void 0);
     return SelfManagedCertificate;
-}(SpeakeasyBase));
-export { SelfManagedCertificate };
+}(utils_1.SpeakeasyBase));
+exports.SelfManagedCertificate = SelfManagedCertificate;

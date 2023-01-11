@@ -1,8 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VolumeAttachment } from "./volumeattachment";
-import { VolumeStateEnum } from "./volumestateenum";
-import { Tag } from "./tag";
-import { VolumeTypeEnum } from "./volumetypeenum";
 
 
 
@@ -11,51 +7,51 @@ import { VolumeTypeEnum } from "./volumetypeenum";
  * Describes a volume.
 **/
 export class Volume extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: VolumeAttachment })
-  attachments?: VolumeAttachment[];
+  @SpeakeasyMetadata()
+  attachments?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  availabilityZone?: string;
+  availabilityZone?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  createTime?: Date;
+  createTime?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  encrypted?: boolean;
+  encrypted?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  fastRestored?: boolean;
+  fastRestored?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  iops?: number;
+  iops?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  kmsKeyId?: string;
+  kmsKeyId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  multiAttachEnabled?: boolean;
+  multiAttachEnabled?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  outpostArn?: string;
+  outpostArn?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  size?: number;
+  size?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  snapshotId?: string;
+  snapshotId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  state?: VolumeStateEnum;
-
-  @SpeakeasyMetadata({ elemType: Tag })
-  tags?: Tag[];
+  state?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  throughput?: number;
+  tags?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  volumeId?: string;
+  throughput?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  volumeType?: VolumeTypeEnum;
+  volumeId?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  volumeType?: Record<string, any>;
 }

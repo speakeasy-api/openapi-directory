@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccessPolicy } from "./accesspolicy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoMonetizationDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var accesspolicy_1 = require("./accesspolicy");
 // VideoMonetizationDetails
 /**
  * Details about monetization of a YouTube Video.
@@ -34,9 +37,9 @@ var VideoMonetizationDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access" }),
-        __metadata("design:type", AccessPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access" }),
+        __metadata("design:type", accesspolicy_1.AccessPolicy)
     ], VideoMonetizationDetails.prototype, "access", void 0);
     return VideoMonetizationDetails;
-}(SpeakeasyBase));
-export { VideoMonetizationDetails };
+}(utils_1.SpeakeasyBase));
+exports.VideoMonetizationDetails = VideoMonetizationDetails;

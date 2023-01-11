@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ListTargetsFilterNameEnum } from "./listtargetsfilternameenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListTargetsFilter = void 0;
+var utils_1 = require("../../../internal/utils");
+var listtargetsfilternameenum_1 = require("./listtargetsfilternameenum");
 // ListTargetsFilter
 /**
  * Information about a filter to apply to the list of returned targets. You can filter by target type, address, or status. For example, to filter results to notification rules that have active Amazon SNS topics as targets, you could specify a ListTargetsFilter Name as TargetType and a Value of SNS, and a Name of TARGET_STATUS and a Value of ACTIVE.
@@ -34,13 +37,13 @@ var ListTargetsFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], ListTargetsFilter.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Value" }),
         __metadata("design:type", String)
     ], ListTargetsFilter.prototype, "value", void 0);
     return ListTargetsFilter;
-}(SpeakeasyBase));
-export { ListTargetsFilter };
+}(utils_1.SpeakeasyBase));
+exports.ListTargetsFilter = ListTargetsFilter;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.License = void 0;
+var utils_1 = require("../../../internal/utils");
 // License
 /**
  * License
@@ -33,57 +36,57 @@ var License = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], License.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conditions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conditions" }),
         __metadata("design:type", Array)
     ], License.prototype, "conditions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], License.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=featured" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=featured" }),
         __metadata("design:type", Boolean)
     ], License.prototype, "featured", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], License.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=implementation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=implementation" }),
         __metadata("design:type", String)
     ], License.prototype, "implementation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], License.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limitations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limitations" }),
         __metadata("design:type", Array)
     ], License.prototype, "limitations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], License.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], License.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions" }),
         __metadata("design:type", Array)
     ], License.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spdx_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spdx_id" }),
         __metadata("design:type", String)
     ], License.prototype, "spdxId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], License.prototype, "url", void 0);
     return License;
-}(SpeakeasyBase));
-export { License };
+}(utils_1.SpeakeasyBase));
+exports.License = License;

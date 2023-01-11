@@ -48,7 +48,7 @@ export class DeletePartitionResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deletePartitionResponse?: Map<string, any>;
+  deletePartitionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   entityNotFoundException?: any;

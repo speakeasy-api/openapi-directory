@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CommitteeClassificationEnum } from "./committeeclassificationenum";
-import { Link } from "./link";
-import { CommitteeMembership } from "./committeemembership";
-import { AltName } from "./altname";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Committee = void 0;
+var utils_1 = require("../../../internal/utils");
+var committeeclassificationenum_1 = require("./committeeclassificationenum");
+var link_1 = require("./link");
+var committeemembership_1 = require("./committeemembership");
+var altname_1 = require("./altname");
 var Committee = /** @class */ (function (_super) {
     __extends(Committee, _super);
     function Committee() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=classification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=classification" }),
         __metadata("design:type", String)
     ], Committee.prototype, "classification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extras" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extras" }),
+        __metadata("design:type", Object)
     ], Committee.prototype, "extras", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Committee.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links", elemType: Link }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links", elemType: link_1.Link }),
         __metadata("design:type", Array)
     ], Committee.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memberships", elemType: CommitteeMembership }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memberships", elemType: committeemembership_1.CommitteeMembership }),
         __metadata("design:type", Array)
     ], Committee.prototype, "memberships", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Committee.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=other_names", elemType: AltName }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=other_names", elemType: altname_1.AltName }),
         __metadata("design:type", Array)
     ], Committee.prototype, "otherNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent_id" }),
         __metadata("design:type", String)
     ], Committee.prototype, "parentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sources", elemType: Link }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sources", elemType: link_1.Link }),
         __metadata("design:type", Array)
     ], Committee.prototype, "sources", void 0);
     return Committee;
-}(SpeakeasyBase));
-export { Committee };
+}(utils_1.SpeakeasyBase));
+exports.Committee = Committee;

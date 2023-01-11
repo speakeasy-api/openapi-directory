@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Session } from "./session";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListSessionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var session_1 = require("./session");
 var ListSessionsResponse = /** @class */ (function (_super) {
     __extends(ListSessionsResponse, _super);
     function ListSessionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletedSession", elemType: Session }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletedSession", elemType: session_1.Session }),
         __metadata("design:type", Array)
     ], ListSessionsResponse.prototype, "deletedSession", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasMoreData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasMoreData" }),
         __metadata("design:type", Boolean)
     ], ListSessionsResponse.prototype, "hasMoreData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListSessionsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=session", elemType: Session }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=session", elemType: session_1.Session }),
         __metadata("design:type", Array)
     ], ListSessionsResponse.prototype, "session", void 0);
     return ListSessionsResponse;
-}(SpeakeasyBase));
-export { ListSessionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsResponse = ListSessionsResponse;

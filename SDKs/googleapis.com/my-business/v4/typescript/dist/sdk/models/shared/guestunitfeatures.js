@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,78 +23,80 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LivingArea } from "./livingarea";
-import { ViewsFromUnit } from "./viewsfromunit";
-export var GuestUnitFeaturesBungalowOrVillaExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GuestUnitFeatures = exports.GuestUnitFeaturesTierExceptionEnum = exports.GuestUnitFeaturesTierEnum = exports.GuestUnitFeaturesSuiteExceptionEnum = exports.GuestUnitFeaturesPrivateHomeExceptionEnum = exports.GuestUnitFeaturesMaxOccupantsCountExceptionEnum = exports.GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum = exports.GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum = exports.GuestUnitFeaturesExecutiveFloorExceptionEnum = exports.GuestUnitFeaturesConnectingUnitAvailableExceptionEnum = exports.GuestUnitFeaturesBungalowOrVillaExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var livingarea_1 = require("./livingarea");
+var viewsfromunit_1 = require("./viewsfromunit");
+var GuestUnitFeaturesBungalowOrVillaExceptionEnum;
 (function (GuestUnitFeaturesBungalowOrVillaExceptionEnum) {
     GuestUnitFeaturesBungalowOrVillaExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     GuestUnitFeaturesBungalowOrVillaExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     GuestUnitFeaturesBungalowOrVillaExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     GuestUnitFeaturesBungalowOrVillaExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(GuestUnitFeaturesBungalowOrVillaExceptionEnum || (GuestUnitFeaturesBungalowOrVillaExceptionEnum = {}));
-export var GuestUnitFeaturesConnectingUnitAvailableExceptionEnum;
+})(GuestUnitFeaturesBungalowOrVillaExceptionEnum = exports.GuestUnitFeaturesBungalowOrVillaExceptionEnum || (exports.GuestUnitFeaturesBungalowOrVillaExceptionEnum = {}));
+var GuestUnitFeaturesConnectingUnitAvailableExceptionEnum;
 (function (GuestUnitFeaturesConnectingUnitAvailableExceptionEnum) {
     GuestUnitFeaturesConnectingUnitAvailableExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     GuestUnitFeaturesConnectingUnitAvailableExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     GuestUnitFeaturesConnectingUnitAvailableExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     GuestUnitFeaturesConnectingUnitAvailableExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(GuestUnitFeaturesConnectingUnitAvailableExceptionEnum || (GuestUnitFeaturesConnectingUnitAvailableExceptionEnum = {}));
-export var GuestUnitFeaturesExecutiveFloorExceptionEnum;
+})(GuestUnitFeaturesConnectingUnitAvailableExceptionEnum = exports.GuestUnitFeaturesConnectingUnitAvailableExceptionEnum || (exports.GuestUnitFeaturesConnectingUnitAvailableExceptionEnum = {}));
+var GuestUnitFeaturesExecutiveFloorExceptionEnum;
 (function (GuestUnitFeaturesExecutiveFloorExceptionEnum) {
     GuestUnitFeaturesExecutiveFloorExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     GuestUnitFeaturesExecutiveFloorExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     GuestUnitFeaturesExecutiveFloorExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     GuestUnitFeaturesExecutiveFloorExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(GuestUnitFeaturesExecutiveFloorExceptionEnum || (GuestUnitFeaturesExecutiveFloorExceptionEnum = {}));
-export var GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum;
+})(GuestUnitFeaturesExecutiveFloorExceptionEnum = exports.GuestUnitFeaturesExecutiveFloorExceptionEnum || (exports.GuestUnitFeaturesExecutiveFloorExceptionEnum = {}));
+var GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum;
 (function (GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum) {
     GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum || (GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum = {}));
-export var GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum;
+})(GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum = exports.GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum || (exports.GuestUnitFeaturesMaxAdultOccupantsCountExceptionEnum = {}));
+var GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum;
 (function (GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum) {
     GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum || (GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum = {}));
-export var GuestUnitFeaturesMaxOccupantsCountExceptionEnum;
+})(GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum = exports.GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum || (exports.GuestUnitFeaturesMaxChildOccupantsCountExceptionEnum = {}));
+var GuestUnitFeaturesMaxOccupantsCountExceptionEnum;
 (function (GuestUnitFeaturesMaxOccupantsCountExceptionEnum) {
     GuestUnitFeaturesMaxOccupantsCountExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     GuestUnitFeaturesMaxOccupantsCountExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     GuestUnitFeaturesMaxOccupantsCountExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     GuestUnitFeaturesMaxOccupantsCountExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(GuestUnitFeaturesMaxOccupantsCountExceptionEnum || (GuestUnitFeaturesMaxOccupantsCountExceptionEnum = {}));
-export var GuestUnitFeaturesPrivateHomeExceptionEnum;
+})(GuestUnitFeaturesMaxOccupantsCountExceptionEnum = exports.GuestUnitFeaturesMaxOccupantsCountExceptionEnum || (exports.GuestUnitFeaturesMaxOccupantsCountExceptionEnum = {}));
+var GuestUnitFeaturesPrivateHomeExceptionEnum;
 (function (GuestUnitFeaturesPrivateHomeExceptionEnum) {
     GuestUnitFeaturesPrivateHomeExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     GuestUnitFeaturesPrivateHomeExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     GuestUnitFeaturesPrivateHomeExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     GuestUnitFeaturesPrivateHomeExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(GuestUnitFeaturesPrivateHomeExceptionEnum || (GuestUnitFeaturesPrivateHomeExceptionEnum = {}));
-export var GuestUnitFeaturesSuiteExceptionEnum;
+})(GuestUnitFeaturesPrivateHomeExceptionEnum = exports.GuestUnitFeaturesPrivateHomeExceptionEnum || (exports.GuestUnitFeaturesPrivateHomeExceptionEnum = {}));
+var GuestUnitFeaturesSuiteExceptionEnum;
 (function (GuestUnitFeaturesSuiteExceptionEnum) {
     GuestUnitFeaturesSuiteExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     GuestUnitFeaturesSuiteExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     GuestUnitFeaturesSuiteExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     GuestUnitFeaturesSuiteExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(GuestUnitFeaturesSuiteExceptionEnum || (GuestUnitFeaturesSuiteExceptionEnum = {}));
-export var GuestUnitFeaturesTierEnum;
+})(GuestUnitFeaturesSuiteExceptionEnum = exports.GuestUnitFeaturesSuiteExceptionEnum || (exports.GuestUnitFeaturesSuiteExceptionEnum = {}));
+var GuestUnitFeaturesTierEnum;
 (function (GuestUnitFeaturesTierEnum) {
     GuestUnitFeaturesTierEnum["UnitTierUnspecified"] = "UNIT_TIER_UNSPECIFIED";
     GuestUnitFeaturesTierEnum["StandardUnit"] = "STANDARD_UNIT";
     GuestUnitFeaturesTierEnum["DeluxeUnit"] = "DELUXE_UNIT";
-})(GuestUnitFeaturesTierEnum || (GuestUnitFeaturesTierEnum = {}));
-export var GuestUnitFeaturesTierExceptionEnum;
+})(GuestUnitFeaturesTierEnum = exports.GuestUnitFeaturesTierEnum || (exports.GuestUnitFeaturesTierEnum = {}));
+var GuestUnitFeaturesTierExceptionEnum;
 (function (GuestUnitFeaturesTierExceptionEnum) {
     GuestUnitFeaturesTierExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     GuestUnitFeaturesTierExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     GuestUnitFeaturesTierExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     GuestUnitFeaturesTierExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(GuestUnitFeaturesTierExceptionEnum || (GuestUnitFeaturesTierExceptionEnum = {}));
+})(GuestUnitFeaturesTierExceptionEnum = exports.GuestUnitFeaturesTierExceptionEnum || (exports.GuestUnitFeaturesTierExceptionEnum = {}));
 // GuestUnitFeatures
 /**
  * Features and available amenities in the guest unit.
@@ -104,85 +107,85 @@ var GuestUnitFeatures = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bungalowOrVilla" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bungalowOrVilla" }),
         __metadata("design:type", Boolean)
     ], GuestUnitFeatures.prototype, "bungalowOrVilla", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bungalowOrVillaException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bungalowOrVillaException" }),
         __metadata("design:type", String)
     ], GuestUnitFeatures.prototype, "bungalowOrVillaException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectingUnitAvailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectingUnitAvailable" }),
         __metadata("design:type", Boolean)
     ], GuestUnitFeatures.prototype, "connectingUnitAvailable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectingUnitAvailableException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectingUnitAvailableException" }),
         __metadata("design:type", String)
     ], GuestUnitFeatures.prototype, "connectingUnitAvailableException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executiveFloor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executiveFloor" }),
         __metadata("design:type", Boolean)
     ], GuestUnitFeatures.prototype, "executiveFloor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executiveFloorException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executiveFloorException" }),
         __metadata("design:type", String)
     ], GuestUnitFeatures.prototype, "executiveFloorException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxAdultOccupantsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxAdultOccupantsCount" }),
         __metadata("design:type", Number)
     ], GuestUnitFeatures.prototype, "maxAdultOccupantsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxAdultOccupantsCountException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxAdultOccupantsCountException" }),
         __metadata("design:type", String)
     ], GuestUnitFeatures.prototype, "maxAdultOccupantsCountException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxChildOccupantsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxChildOccupantsCount" }),
         __metadata("design:type", Number)
     ], GuestUnitFeatures.prototype, "maxChildOccupantsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxChildOccupantsCountException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxChildOccupantsCountException" }),
         __metadata("design:type", String)
     ], GuestUnitFeatures.prototype, "maxChildOccupantsCountException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxOccupantsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxOccupantsCount" }),
         __metadata("design:type", Number)
     ], GuestUnitFeatures.prototype, "maxOccupantsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxOccupantsCountException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxOccupantsCountException" }),
         __metadata("design:type", String)
     ], GuestUnitFeatures.prototype, "maxOccupantsCountException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateHome" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateHome" }),
         __metadata("design:type", Boolean)
     ], GuestUnitFeatures.prototype, "privateHome", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateHomeException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateHomeException" }),
         __metadata("design:type", String)
     ], GuestUnitFeatures.prototype, "privateHomeException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suite" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suite" }),
         __metadata("design:type", Boolean)
     ], GuestUnitFeatures.prototype, "suite", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suiteException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suiteException" }),
         __metadata("design:type", String)
     ], GuestUnitFeatures.prototype, "suiteException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tier" }),
         __metadata("design:type", String)
     ], GuestUnitFeatures.prototype, "tier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tierException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tierException" }),
         __metadata("design:type", String)
     ], GuestUnitFeatures.prototype, "tierException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalLivingAreas" }),
-        __metadata("design:type", LivingArea)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalLivingAreas" }),
+        __metadata("design:type", livingarea_1.LivingArea)
     ], GuestUnitFeatures.prototype, "totalLivingAreas", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=views" }),
-        __metadata("design:type", ViewsFromUnit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=views" }),
+        __metadata("design:type", viewsfromunit_1.ViewsFromUnit)
     ], GuestUnitFeatures.prototype, "views", void 0);
     return GuestUnitFeatures;
-}(SpeakeasyBase));
-export { GuestUnitFeatures };
+}(utils_1.SpeakeasyBase));
+exports.GuestUnitFeatures = GuestUnitFeatures;

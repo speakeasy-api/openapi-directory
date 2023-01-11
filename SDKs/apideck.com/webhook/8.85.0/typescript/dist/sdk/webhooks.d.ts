@@ -9,21 +9,21 @@ export declare class Webhooks {
     _genVersion: string;
     constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string);
     /**
-     * webhooksAdd - Create webhook
+     * webhooksAdd - Create webhook subscription
      *
-     * Create webhook
+     * Create a webhook subscription to receive events
     **/
     webhooksAdd(req: operations.WebhooksAddRequest, config?: AxiosRequestConfig): Promise<operations.WebhooksAddResponse>;
     /**
-     * webhooksAll - List webhooks
+     * webhooksAll - List webhook subscriptions
      *
-     * List webhooks
+     * List all webhook subscriptions
     **/
     webhooksAll(req: operations.WebhooksAllRequest, config?: AxiosRequestConfig): Promise<operations.WebhooksAllResponse>;
     /**
-     * webhooksDelete - Delete webhook
+     * webhooksDelete - Delete webhook subscription
      *
-     * Delete webhook
+     * Delete a webhook subscription
     **/
     webhooksDelete(req: operations.WebhooksDeleteRequest, config?: AxiosRequestConfig): Promise<operations.WebhooksDeleteResponse>;
     /**
@@ -33,9 +33,9 @@ export declare class Webhooks {
     **/
     webhooksExecute(req: operations.WebhooksExecuteRequest, config?: AxiosRequestConfig): Promise<operations.WebhooksExecuteResponse>;
     /**
-     * webhooksOne - Get webhook
+     * webhooksOne - Get webhook subscription
      *
-     * Get webhook
+     * Get the webhook subscription details
     **/
     webhooksOne(req: operations.WebhooksOneRequest, config?: AxiosRequestConfig): Promise<operations.WebhooksOneResponse>;
     /**
@@ -51,9 +51,9 @@ export declare class Webhooks {
     **/
     webhooksShortExecute(req: operations.WebhooksShortExecuteRequest, config?: AxiosRequestConfig): Promise<operations.WebhooksShortExecuteResponse>;
     /**
-     * webhooksUpdate - Update webhook
+     * webhooksUpdate - Update webhook subscription
      *
-     * Update webhook
+     * Update a webhook subscription
     **/
     webhooksUpdate(req: operations.WebhooksUpdateRequest, config?: AxiosRequestConfig): Promise<operations.WebhooksUpdateResponse>;
 }

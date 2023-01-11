@@ -12,13 +12,13 @@ export declare enum ManagementSettingsTransferLockStateEnum {
 /**
  * Defines renewal, billing, and transfer settings for a `Registration`.
 **/
-export declare class ManagementSettingsInput extends SpeakeasyBase {
+export declare class ManagementSettings extends SpeakeasyBase {
+    renewalMethod?: ManagementSettingsRenewalMethodEnum;
     transferLockState?: ManagementSettingsTransferLockStateEnum;
 }
 /**
  * Defines renewal, billing, and transfer settings for a `Registration`.
 **/
-export declare class ManagementSettings extends SpeakeasyBase {
-    renewalMethod?: ManagementSettingsRenewalMethodEnum;
+export declare class ManagementSettingsInput extends SpeakeasyBase {
     transferLockState?: ManagementSettingsTransferLockStateEnum;
 }

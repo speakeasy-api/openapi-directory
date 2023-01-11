@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SupportedLanguage } from "./supportedlanguage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SupportedLanguages = void 0;
+var utils_1 = require("../../../internal/utils");
+var supportedlanguage_1 = require("./supportedlanguage");
 // SupportedLanguages
 /**
  * The response message for discovering supported languages.
@@ -34,9 +37,9 @@ var SupportedLanguages = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languages", elemType: SupportedLanguage }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languages", elemType: supportedlanguage_1.SupportedLanguage }),
         __metadata("design:type", Array)
     ], SupportedLanguages.prototype, "languages", void 0);
     return SupportedLanguages;
-}(SpeakeasyBase));
-export { SupportedLanguages };
+}(utils_1.SpeakeasyBase));
+exports.SupportedLanguages = SupportedLanguages;

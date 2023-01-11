@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Node } from "./node";
-import { PerXdsConfig } from "./perxdsconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClientConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var node_1 = require("./node");
+var perxdsconfig_1 = require("./perxdsconfig");
 // ClientConfig
 /**
  * All xds configs for a particular client.
@@ -35,13 +38,13 @@ var ClientConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node" }),
-        __metadata("design:type", Node)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node" }),
+        __metadata("design:type", node_1.Node)
     ], ClientConfig.prototype, "node", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=xdsConfig", elemType: PerXdsConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=xdsConfig", elemType: perxdsconfig_1.PerXdsConfig }),
         __metadata("design:type", Array)
     ], ClientConfig.prototype, "xdsConfig", void 0);
     return ClientConfig;
-}(SpeakeasyBase));
-export { ClientConfig };
+}(utils_1.SpeakeasyBase));
+exports.ClientConfig = ClientConfig;

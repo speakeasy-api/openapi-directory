@@ -64,10 +64,10 @@ export class FileGetFromComputeNodeResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  fileGetFromComputeNode200ApplicationJsonBinaryString?: Uint8Array;
+  fileGetFromComputeNode200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

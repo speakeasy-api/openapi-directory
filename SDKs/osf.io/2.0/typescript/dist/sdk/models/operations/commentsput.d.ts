@@ -4,7 +4,7 @@ export declare class CommentsPutPathParams extends SpeakeasyBase {
 }
 export declare class CommentsPutRequest extends SpeakeasyBase {
     pathParams: CommentsPutPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class CommentsPutResponse extends SpeakeasyBase {
     contentType: string;

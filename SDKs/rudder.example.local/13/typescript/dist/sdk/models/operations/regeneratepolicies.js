@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,69 +23,71 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RegeneratePolicies200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegeneratePoliciesResponse = exports.RegeneratePolicies200ApplicationJson = exports.RegeneratePolicies200ApplicationJsonResultEnum = exports.RegeneratePolicies200ApplicationJsonData = exports.RegeneratePolicies200ApplicationJsonDataPoliciesEnum = exports.RegeneratePolicies200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RegeneratePolicies200ApplicationJsonActionEnum;
 (function (RegeneratePolicies200ApplicationJsonActionEnum) {
     RegeneratePolicies200ApplicationJsonActionEnum["RegeneratePolicies"] = "regeneratePolicies";
-})(RegeneratePolicies200ApplicationJsonActionEnum || (RegeneratePolicies200ApplicationJsonActionEnum = {}));
-export var RegeneratePolicies200ApplicationJsonDataPoliciesEnum;
+})(RegeneratePolicies200ApplicationJsonActionEnum = exports.RegeneratePolicies200ApplicationJsonActionEnum || (exports.RegeneratePolicies200ApplicationJsonActionEnum = {}));
+var RegeneratePolicies200ApplicationJsonDataPoliciesEnum;
 (function (RegeneratePolicies200ApplicationJsonDataPoliciesEnum) {
     RegeneratePolicies200ApplicationJsonDataPoliciesEnum["Started"] = "Started";
-})(RegeneratePolicies200ApplicationJsonDataPoliciesEnum || (RegeneratePolicies200ApplicationJsonDataPoliciesEnum = {}));
+})(RegeneratePolicies200ApplicationJsonDataPoliciesEnum = exports.RegeneratePolicies200ApplicationJsonDataPoliciesEnum || (exports.RegeneratePolicies200ApplicationJsonDataPoliciesEnum = {}));
 var RegeneratePolicies200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(RegeneratePolicies200ApplicationJsonData, _super);
     function RegeneratePolicies200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policies" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policies" }),
         __metadata("design:type", String)
     ], RegeneratePolicies200ApplicationJsonData.prototype, "policies", void 0);
     return RegeneratePolicies200ApplicationJsonData;
-}(SpeakeasyBase));
-export { RegeneratePolicies200ApplicationJsonData };
-export var RegeneratePolicies200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.RegeneratePolicies200ApplicationJsonData = RegeneratePolicies200ApplicationJsonData;
+var RegeneratePolicies200ApplicationJsonResultEnum;
 (function (RegeneratePolicies200ApplicationJsonResultEnum) {
     RegeneratePolicies200ApplicationJsonResultEnum["Success"] = "success";
     RegeneratePolicies200ApplicationJsonResultEnum["Error"] = "error";
-})(RegeneratePolicies200ApplicationJsonResultEnum || (RegeneratePolicies200ApplicationJsonResultEnum = {}));
+})(RegeneratePolicies200ApplicationJsonResultEnum = exports.RegeneratePolicies200ApplicationJsonResultEnum || (exports.RegeneratePolicies200ApplicationJsonResultEnum = {}));
 var RegeneratePolicies200ApplicationJson = /** @class */ (function (_super) {
     __extends(RegeneratePolicies200ApplicationJson, _super);
     function RegeneratePolicies200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], RegeneratePolicies200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", RegeneratePolicies200ApplicationJsonData)
     ], RegeneratePolicies200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], RegeneratePolicies200ApplicationJson.prototype, "result", void 0);
     return RegeneratePolicies200ApplicationJson;
-}(SpeakeasyBase));
-export { RegeneratePolicies200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.RegeneratePolicies200ApplicationJson = RegeneratePolicies200ApplicationJson;
 var RegeneratePoliciesResponse = /** @class */ (function (_super) {
     __extends(RegeneratePoliciesResponse, _super);
     function RegeneratePoliciesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RegeneratePoliciesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RegeneratePoliciesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegeneratePolicies200ApplicationJson)
-    ], RegeneratePoliciesResponse.prototype, "regeneratePolicies200ApplicationJsonObject", void 0);
+    ], RegeneratePoliciesResponse.prototype, "regeneratePolicies200ApplicationJSONObject", void 0);
     return RegeneratePoliciesResponse;
-}(SpeakeasyBase));
-export { RegeneratePoliciesResponse };
+}(utils_1.SpeakeasyBase));
+exports.RegeneratePoliciesResponse = RegeneratePoliciesResponse;

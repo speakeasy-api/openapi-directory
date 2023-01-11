@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnimationEnd = void 0;
+var utils_1 = require("../../../internal/utils");
 // AnimationEnd
 /**
  * End previous overlay animation from the video. Without AnimationEnd, the overlay object will keep the state of previous animation until the end of the video.
@@ -33,9 +36,9 @@ var AnimationEnd = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTimeOffset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTimeOffset" }),
         __metadata("design:type", String)
     ], AnimationEnd.prototype, "startTimeOffset", void 0);
     return AnimationEnd;
-}(SpeakeasyBase));
-export { AnimationEnd };
+}(utils_1.SpeakeasyBase));
+exports.AnimationEnd = AnimationEnd;

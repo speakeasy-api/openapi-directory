@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource
 /**
  * Configuration for Cloud Storage bucket sources.
@@ -33,9 +36,9 @@ var GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource = /** 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketUri" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource.prototype, "bucketUri", void 0);
     return GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource = GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource;

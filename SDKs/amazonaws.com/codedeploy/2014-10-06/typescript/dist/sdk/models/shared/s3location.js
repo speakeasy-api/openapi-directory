@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BundleTypeEnum } from "./bundletypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3Location = void 0;
+var utils_1 = require("../../../internal/utils");
+var bundletypeenum_1 = require("./bundletypeenum");
 // S3Location
 /**
  * Information about the location of application artifacts stored in Amazon S3.
@@ -34,25 +37,25 @@ var S3Location = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucket" }),
         __metadata("design:type", String)
     ], S3Location.prototype, "bucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundleType" }),
         __metadata("design:type", String)
     ], S3Location.prototype, "bundleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eTag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eTag" }),
         __metadata("design:type", String)
     ], S3Location.prototype, "eTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], S3Location.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], S3Location.prototype, "version", void 0);
     return S3Location;
-}(SpeakeasyBase));
-export { S3Location };
+}(utils_1.SpeakeasyBase));
+exports.S3Location = S3Location;

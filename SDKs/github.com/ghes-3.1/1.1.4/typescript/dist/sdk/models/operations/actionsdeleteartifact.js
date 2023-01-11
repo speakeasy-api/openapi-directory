@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsDeleteArtifactResponse = exports.ActionsDeleteArtifactRequest = exports.ActionsDeleteArtifactPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsDeleteArtifactPathParams = /** @class */ (function (_super) {
     __extends(ActionsDeleteArtifactPathParams, _super);
     function ActionsDeleteArtifactPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=artifact_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=artifact_id" }),
         __metadata("design:type", Number)
     ], ActionsDeleteArtifactPathParams.prototype, "artifactId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ActionsDeleteArtifactPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ActionsDeleteArtifactPathParams.prototype, "repo", void 0);
     return ActionsDeleteArtifactPathParams;
-}(SpeakeasyBase));
-export { ActionsDeleteArtifactPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDeleteArtifactPathParams = ActionsDeleteArtifactPathParams;
 var ActionsDeleteArtifactRequest = /** @class */ (function (_super) {
     __extends(ActionsDeleteArtifactRequest, _super);
     function ActionsDeleteArtifactRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsDeleteArtifactPathParams)
     ], ActionsDeleteArtifactRequest.prototype, "pathParams", void 0);
     return ActionsDeleteArtifactRequest;
-}(SpeakeasyBase));
-export { ActionsDeleteArtifactRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDeleteArtifactRequest = ActionsDeleteArtifactRequest;
 var ActionsDeleteArtifactResponse = /** @class */ (function (_super) {
     __extends(ActionsDeleteArtifactResponse, _super);
     function ActionsDeleteArtifactResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsDeleteArtifactResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsDeleteArtifactResponse.prototype, "statusCode", void 0);
     return ActionsDeleteArtifactResponse;
-}(SpeakeasyBase));
-export { ActionsDeleteArtifactResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDeleteArtifactResponse = ActionsDeleteArtifactResponse;

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateDatasetRequest, CreateDatasetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,42 +33,50 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateDatasetRequest = {
   headers: {
-    xAmzAlgorithm: "odio",
-    xAmzContentSha256: "est",
-    xAmzCredential: "adipisci",
-    xAmzDate: "quo",
-    xAmzSecurityToken: "rerum",
-    xAmzSignature: "error",
-    xAmzSignedHeaders: "suscipit",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AmazonForecast.CreateDataset",
   },
   request: {
-    dataFrequency: "minus",
-    datasetName: "ullam",
-    datasetType: "RELATED_TIME_SERIES",
-    domain: "EC2_CAPACITY",
+    dataFrequency: "fugit",
+    datasetName: "et",
+    datasetType: "TARGET_TIME_SERIES",
+    domain: "METRICS",
     encryptionConfig: {
-      kmsKeyArn: "et",
-      roleArn: "nobis",
+      kmsKeyArn: "dicta",
+      roleArn: "debitis",
     },
     schema: {
       attributes: [
         {
-          attributeName: "eius",
-          attributeType: "geolocation",
+          attributeName: "et",
+          attributeType: "integer",
         },
       ],
     },
     tags: [
       {
-        key: "est",
-        value: "in",
+        key: "et",
+        value: "voluptate",
+      },
+      {
+        key: "iste",
+        value: "vitae",
+      },
+      {
+        key: "totam",
+        value: "dolores",
       },
     ],
   },
 };
 
-sdk.sdk.createDataset(req).then((res: CreateDatasetResponse | AxiosError) => {
+sdk.createDataset(req).then((res: CreateDatasetResponse | AxiosError) => {
    // handle response
 });
 ```

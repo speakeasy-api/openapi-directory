@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1AssociationInfo } from "./googlecloudchannelv1associationinfo";
-import { GoogleCloudChannelV1CommitmentSettingsInput } from "./googlecloudchannelv1commitmentsettings";
-import { GoogleCloudChannelV1ParameterInput } from "./googlecloudchannelv1parameter";
-import { GoogleCloudChannelV1TrialSettings } from "./googlecloudchannelv1trialsettings";
-import { GoogleCloudChannelV1CommitmentSettings } from "./googlecloudchannelv1commitmentsettings";
-import { GoogleCloudChannelV1Parameter } from "./googlecloudchannelv1parameter";
-import { GoogleCloudChannelV1ProvisionedService } from "./googlecloudchannelv1provisionedservice";
-export var GoogleCloudChannelV1EntitlementProvisioningStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1EntitlementInput = exports.GoogleCloudChannelV1Entitlement = exports.GoogleCloudChannelV1EntitlementSuspensionReasonsEnum = exports.GoogleCloudChannelV1EntitlementProvisioningStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1associationinfo_1 = require("./googlecloudchannelv1associationinfo");
+var googlecloudchannelv1commitmentsettings_1 = require("./googlecloudchannelv1commitmentsettings");
+var googlecloudchannelv1parameter_1 = require("./googlecloudchannelv1parameter");
+var googlecloudchannelv1provisionedservice_1 = require("./googlecloudchannelv1provisionedservice");
+var googlecloudchannelv1trialsettings_1 = require("./googlecloudchannelv1trialsettings");
+var googlecloudchannelv1commitmentsettings_2 = require("./googlecloudchannelv1commitmentsettings");
+var googlecloudchannelv1parameter_2 = require("./googlecloudchannelv1parameter");
+var GoogleCloudChannelV1EntitlementProvisioningStateEnum;
 (function (GoogleCloudChannelV1EntitlementProvisioningStateEnum) {
     GoogleCloudChannelV1EntitlementProvisioningStateEnum["ProvisioningStateUnspecified"] = "PROVISIONING_STATE_UNSPECIFIED";
     GoogleCloudChannelV1EntitlementProvisioningStateEnum["Active"] = "ACTIVE";
     GoogleCloudChannelV1EntitlementProvisioningStateEnum["Suspended"] = "SUSPENDED";
-})(GoogleCloudChannelV1EntitlementProvisioningStateEnum || (GoogleCloudChannelV1EntitlementProvisioningStateEnum = {}));
-export var GoogleCloudChannelV1EntitlementSuspensionReasonsEnum;
+})(GoogleCloudChannelV1EntitlementProvisioningStateEnum = exports.GoogleCloudChannelV1EntitlementProvisioningStateEnum || (exports.GoogleCloudChannelV1EntitlementProvisioningStateEnum = {}));
+var GoogleCloudChannelV1EntitlementSuspensionReasonsEnum;
 (function (GoogleCloudChannelV1EntitlementSuspensionReasonsEnum) {
     GoogleCloudChannelV1EntitlementSuspensionReasonsEnum["SuspensionReasonUnspecified"] = "SUSPENSION_REASON_UNSPECIFIED";
     GoogleCloudChannelV1EntitlementSuspensionReasonsEnum["ResellerInitiated"] = "RESELLER_INITIATED";
@@ -44,43 +47,7 @@ export var GoogleCloudChannelV1EntitlementSuspensionReasonsEnum;
     GoogleCloudChannelV1EntitlementSuspensionReasonsEnum["RenewalWithTypeCancel"] = "RENEWAL_WITH_TYPE_CANCEL";
     GoogleCloudChannelV1EntitlementSuspensionReasonsEnum["PendingTosAcceptance"] = "PENDING_TOS_ACCEPTANCE";
     GoogleCloudChannelV1EntitlementSuspensionReasonsEnum["Other"] = "OTHER";
-})(GoogleCloudChannelV1EntitlementSuspensionReasonsEnum || (GoogleCloudChannelV1EntitlementSuspensionReasonsEnum = {}));
-// GoogleCloudChannelV1EntitlementInput
-/**
- * An entitlement is a representation of a customer's ability to use a service.
-**/
-var GoogleCloudChannelV1EntitlementInput = /** @class */ (function (_super) {
-    __extends(GoogleCloudChannelV1EntitlementInput, _super);
-    function GoogleCloudChannelV1EntitlementInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=associationInfo" }),
-        __metadata("design:type", GoogleCloudChannelV1AssociationInfo)
-    ], GoogleCloudChannelV1EntitlementInput.prototype, "associationInfo", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=commitmentSettings" }),
-        __metadata("design:type", GoogleCloudChannelV1CommitmentSettingsInput)
-    ], GoogleCloudChannelV1EntitlementInput.prototype, "commitmentSettings", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=offer" }),
-        __metadata("design:type", String)
-    ], GoogleCloudChannelV1EntitlementInput.prototype, "offer", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters", elemType: GoogleCloudChannelV1ParameterInput }),
-        __metadata("design:type", Array)
-    ], GoogleCloudChannelV1EntitlementInput.prototype, "parameters", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=purchaseOrderId" }),
-        __metadata("design:type", String)
-    ], GoogleCloudChannelV1EntitlementInput.prototype, "purchaseOrderId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=trialSettings" }),
-        __metadata("design:type", GoogleCloudChannelV1TrialSettings)
-    ], GoogleCloudChannelV1EntitlementInput.prototype, "trialSettings", void 0);
-    return GoogleCloudChannelV1EntitlementInput;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1EntitlementInput };
+})(GoogleCloudChannelV1EntitlementSuspensionReasonsEnum = exports.GoogleCloudChannelV1EntitlementSuspensionReasonsEnum || (exports.GoogleCloudChannelV1EntitlementSuspensionReasonsEnum = {}));
 // GoogleCloudChannelV1Entitlement
 /**
  * An entitlement is a representation of a customer's ability to use a service.
@@ -91,53 +58,89 @@ var GoogleCloudChannelV1Entitlement = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=associationInfo" }),
-        __metadata("design:type", GoogleCloudChannelV1AssociationInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=associationInfo" }),
+        __metadata("design:type", googlecloudchannelv1associationinfo_1.GoogleCloudChannelV1AssociationInfo)
     ], GoogleCloudChannelV1Entitlement.prototype, "associationInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commitmentSettings" }),
-        __metadata("design:type", GoogleCloudChannelV1CommitmentSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commitmentSettings" }),
+        __metadata("design:type", googlecloudchannelv1commitmentsettings_1.GoogleCloudChannelV1CommitmentSettings)
     ], GoogleCloudChannelV1Entitlement.prototype, "commitmentSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Entitlement.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Entitlement.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offer" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Entitlement.prototype, "offer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parameters", elemType: GoogleCloudChannelV1Parameter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters", elemType: googlecloudchannelv1parameter_1.GoogleCloudChannelV1Parameter }),
         __metadata("design:type", Array)
     ], GoogleCloudChannelV1Entitlement.prototype, "parameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provisionedService" }),
-        __metadata("design:type", GoogleCloudChannelV1ProvisionedService)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provisionedService" }),
+        __metadata("design:type", googlecloudchannelv1provisionedservice_1.GoogleCloudChannelV1ProvisionedService)
     ], GoogleCloudChannelV1Entitlement.prototype, "provisionedService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provisioningState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provisioningState" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Entitlement.prototype, "provisioningState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purchaseOrderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purchaseOrderId" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Entitlement.prototype, "purchaseOrderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suspensionReasons" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suspensionReasons" }),
         __metadata("design:type", Array)
     ], GoogleCloudChannelV1Entitlement.prototype, "suspensionReasons", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trialSettings" }),
-        __metadata("design:type", GoogleCloudChannelV1TrialSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trialSettings" }),
+        __metadata("design:type", googlecloudchannelv1trialsettings_1.GoogleCloudChannelV1TrialSettings)
     ], GoogleCloudChannelV1Entitlement.prototype, "trialSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Entitlement.prototype, "updateTime", void 0);
     return GoogleCloudChannelV1Entitlement;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1Entitlement };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1Entitlement = GoogleCloudChannelV1Entitlement;
+// GoogleCloudChannelV1EntitlementInput
+/**
+ * An entitlement is a representation of a customer's ability to use a service.
+**/
+var GoogleCloudChannelV1EntitlementInput = /** @class */ (function (_super) {
+    __extends(GoogleCloudChannelV1EntitlementInput, _super);
+    function GoogleCloudChannelV1EntitlementInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=associationInfo" }),
+        __metadata("design:type", googlecloudchannelv1associationinfo_1.GoogleCloudChannelV1AssociationInfo)
+    ], GoogleCloudChannelV1EntitlementInput.prototype, "associationInfo", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commitmentSettings" }),
+        __metadata("design:type", googlecloudchannelv1commitmentsettings_2.GoogleCloudChannelV1CommitmentSettingsInput)
+    ], GoogleCloudChannelV1EntitlementInput.prototype, "commitmentSettings", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offer" }),
+        __metadata("design:type", String)
+    ], GoogleCloudChannelV1EntitlementInput.prototype, "offer", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parameters", elemType: googlecloudchannelv1parameter_2.GoogleCloudChannelV1ParameterInput }),
+        __metadata("design:type", Array)
+    ], GoogleCloudChannelV1EntitlementInput.prototype, "parameters", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purchaseOrderId" }),
+        __metadata("design:type", String)
+    ], GoogleCloudChannelV1EntitlementInput.prototype, "purchaseOrderId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trialSettings" }),
+        __metadata("design:type", googlecloudchannelv1trialsettings_1.GoogleCloudChannelV1TrialSettings)
+    ], GoogleCloudChannelV1EntitlementInput.prototype, "trialSettings", void 0);
+    return GoogleCloudChannelV1EntitlementInput;
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1EntitlementInput = GoogleCloudChannelV1EntitlementInput;

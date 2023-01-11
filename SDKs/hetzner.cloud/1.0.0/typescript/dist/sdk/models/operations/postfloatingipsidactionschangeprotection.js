@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostFloatingIpsIdActionsChangeProtectionResponse = exports.PostFloatingIpsIdActionsChangeProtectionRequest = exports.PostFloatingIpsIdActionsChangeProtectionActionResponse = exports.PostFloatingIpsIdActionsChangeProtectionActionResponseAction = exports.PostFloatingIpsIdActionsChangeProtectionActionResponseActionStatusEnum = exports.PostFloatingIpsIdActionsChangeProtectionActionResponseActionResources = exports.PostFloatingIpsIdActionsChangeProtectionActionResponseActionError = exports.PostFloatingIpsIdActionsChangeProtectionChangeProtectionRequest = exports.PostFloatingIpsIdActionsChangeProtectionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostFloatingIpsIdActionsChangeProtectionPathParams = /** @class */ (function (_super) {
     __extends(PostFloatingIpsIdActionsChangeProtectionPathParams, _super);
     function PostFloatingIpsIdActionsChangeProtectionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PostFloatingIpsIdActionsChangeProtectionPathParams.prototype, "id", void 0);
     return PostFloatingIpsIdActionsChangeProtectionPathParams;
-}(SpeakeasyBase));
-export { PostFloatingIpsIdActionsChangeProtectionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostFloatingIpsIdActionsChangeProtectionPathParams = PostFloatingIpsIdActionsChangeProtectionPathParams;
 var PostFloatingIpsIdActionsChangeProtectionChangeProtectionRequest = /** @class */ (function (_super) {
     __extends(PostFloatingIpsIdActionsChangeProtectionChangeProtectionRequest, _super);
     function PostFloatingIpsIdActionsChangeProtectionChangeProtectionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delete" }),
         __metadata("design:type", Boolean)
     ], PostFloatingIpsIdActionsChangeProtectionChangeProtectionRequest.prototype, "delete", void 0);
     return PostFloatingIpsIdActionsChangeProtectionChangeProtectionRequest;
-}(SpeakeasyBase));
-export { PostFloatingIpsIdActionsChangeProtectionChangeProtectionRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostFloatingIpsIdActionsChangeProtectionChangeProtectionRequest = PostFloatingIpsIdActionsChangeProtectionChangeProtectionRequest;
 // PostFloatingIpsIdActionsChangeProtectionActionResponseActionError
 /**
  * Error message for the Action if error occurred, otherwise null
@@ -57,123 +60,123 @@ var PostFloatingIpsIdActionsChangeProtectionActionResponseActionError = /** @cla
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PostFloatingIpsIdActionsChangeProtectionActionResponseActionError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostFloatingIpsIdActionsChangeProtectionActionResponseActionError.prototype, "message", void 0);
     return PostFloatingIpsIdActionsChangeProtectionActionResponseActionError;
-}(SpeakeasyBase));
-export { PostFloatingIpsIdActionsChangeProtectionActionResponseActionError };
+}(utils_1.SpeakeasyBase));
+exports.PostFloatingIpsIdActionsChangeProtectionActionResponseActionError = PostFloatingIpsIdActionsChangeProtectionActionResponseActionError;
 var PostFloatingIpsIdActionsChangeProtectionActionResponseActionResources = /** @class */ (function (_super) {
     __extends(PostFloatingIpsIdActionsChangeProtectionActionResponseActionResources, _super);
     function PostFloatingIpsIdActionsChangeProtectionActionResponseActionResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostFloatingIpsIdActionsChangeProtectionActionResponseActionResources.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostFloatingIpsIdActionsChangeProtectionActionResponseActionResources.prototype, "type", void 0);
     return PostFloatingIpsIdActionsChangeProtectionActionResponseActionResources;
-}(SpeakeasyBase));
-export { PostFloatingIpsIdActionsChangeProtectionActionResponseActionResources };
-export var PostFloatingIpsIdActionsChangeProtectionActionResponseActionStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostFloatingIpsIdActionsChangeProtectionActionResponseActionResources = PostFloatingIpsIdActionsChangeProtectionActionResponseActionResources;
+var PostFloatingIpsIdActionsChangeProtectionActionResponseActionStatusEnum;
 (function (PostFloatingIpsIdActionsChangeProtectionActionResponseActionStatusEnum) {
     PostFloatingIpsIdActionsChangeProtectionActionResponseActionStatusEnum["Success"] = "success";
     PostFloatingIpsIdActionsChangeProtectionActionResponseActionStatusEnum["Running"] = "running";
     PostFloatingIpsIdActionsChangeProtectionActionResponseActionStatusEnum["Error"] = "error";
-})(PostFloatingIpsIdActionsChangeProtectionActionResponseActionStatusEnum || (PostFloatingIpsIdActionsChangeProtectionActionResponseActionStatusEnum = {}));
+})(PostFloatingIpsIdActionsChangeProtectionActionResponseActionStatusEnum = exports.PostFloatingIpsIdActionsChangeProtectionActionResponseActionStatusEnum || (exports.PostFloatingIpsIdActionsChangeProtectionActionResponseActionStatusEnum = {}));
 var PostFloatingIpsIdActionsChangeProtectionActionResponseAction = /** @class */ (function (_super) {
     __extends(PostFloatingIpsIdActionsChangeProtectionActionResponseAction, _super);
     function PostFloatingIpsIdActionsChangeProtectionActionResponseAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], PostFloatingIpsIdActionsChangeProtectionActionResponseAction.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", PostFloatingIpsIdActionsChangeProtectionActionResponseActionError)
     ], PostFloatingIpsIdActionsChangeProtectionActionResponseAction.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", String)
     ], PostFloatingIpsIdActionsChangeProtectionActionResponseAction.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostFloatingIpsIdActionsChangeProtectionActionResponseAction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], PostFloatingIpsIdActionsChangeProtectionActionResponseAction.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: PostFloatingIpsIdActionsChangeProtectionActionResponseActionResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: PostFloatingIpsIdActionsChangeProtectionActionResponseActionResources }),
         __metadata("design:type", Array)
     ], PostFloatingIpsIdActionsChangeProtectionActionResponseAction.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", String)
     ], PostFloatingIpsIdActionsChangeProtectionActionResponseAction.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PostFloatingIpsIdActionsChangeProtectionActionResponseAction.prototype, "status", void 0);
     return PostFloatingIpsIdActionsChangeProtectionActionResponseAction;
-}(SpeakeasyBase));
-export { PostFloatingIpsIdActionsChangeProtectionActionResponseAction };
+}(utils_1.SpeakeasyBase));
+exports.PostFloatingIpsIdActionsChangeProtectionActionResponseAction = PostFloatingIpsIdActionsChangeProtectionActionResponseAction;
 var PostFloatingIpsIdActionsChangeProtectionActionResponse = /** @class */ (function (_super) {
     __extends(PostFloatingIpsIdActionsChangeProtectionActionResponse, _super);
     function PostFloatingIpsIdActionsChangeProtectionActionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", PostFloatingIpsIdActionsChangeProtectionActionResponseAction)
     ], PostFloatingIpsIdActionsChangeProtectionActionResponse.prototype, "action", void 0);
     return PostFloatingIpsIdActionsChangeProtectionActionResponse;
-}(SpeakeasyBase));
-export { PostFloatingIpsIdActionsChangeProtectionActionResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostFloatingIpsIdActionsChangeProtectionActionResponse = PostFloatingIpsIdActionsChangeProtectionActionResponse;
 var PostFloatingIpsIdActionsChangeProtectionRequest = /** @class */ (function (_super) {
     __extends(PostFloatingIpsIdActionsChangeProtectionRequest, _super);
     function PostFloatingIpsIdActionsChangeProtectionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostFloatingIpsIdActionsChangeProtectionPathParams)
     ], PostFloatingIpsIdActionsChangeProtectionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostFloatingIpsIdActionsChangeProtectionChangeProtectionRequest)
     ], PostFloatingIpsIdActionsChangeProtectionRequest.prototype, "request", void 0);
     return PostFloatingIpsIdActionsChangeProtectionRequest;
-}(SpeakeasyBase));
-export { PostFloatingIpsIdActionsChangeProtectionRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostFloatingIpsIdActionsChangeProtectionRequest = PostFloatingIpsIdActionsChangeProtectionRequest;
 var PostFloatingIpsIdActionsChangeProtectionResponse = /** @class */ (function (_super) {
     __extends(PostFloatingIpsIdActionsChangeProtectionResponse, _super);
     function PostFloatingIpsIdActionsChangeProtectionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostFloatingIpsIdActionsChangeProtectionActionResponse)
     ], PostFloatingIpsIdActionsChangeProtectionResponse.prototype, "actionResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostFloatingIpsIdActionsChangeProtectionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostFloatingIpsIdActionsChangeProtectionResponse.prototype, "statusCode", void 0);
     return PostFloatingIpsIdActionsChangeProtectionResponse;
-}(SpeakeasyBase));
-export { PostFloatingIpsIdActionsChangeProtectionResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostFloatingIpsIdActionsChangeProtectionResponse = PostFloatingIpsIdActionsChangeProtectionResponse;

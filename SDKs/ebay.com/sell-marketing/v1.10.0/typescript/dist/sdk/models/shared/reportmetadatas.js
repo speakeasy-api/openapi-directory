@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReportMetadata } from "./reportmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportMetadatas = void 0;
+var utils_1 = require("../../../internal/utils");
+var reportmetadata_1 = require("./reportmetadata");
 // ReportMetadatas
 /**
  * This type defines the metadata used by the all report types.
@@ -34,9 +37,9 @@ var ReportMetadatas = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportMetadata", elemType: ReportMetadata }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportMetadata", elemType: reportmetadata_1.ReportMetadata }),
         __metadata("design:type", Array)
     ], ReportMetadatas.prototype, "reportMetadata", void 0);
     return ReportMetadatas;
-}(SpeakeasyBase));
-export { ReportMetadatas };
+}(utils_1.SpeakeasyBase));
+exports.ReportMetadatas = ReportMetadatas;

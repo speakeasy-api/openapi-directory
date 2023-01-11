@@ -48,8 +48,8 @@ export class GetBng2latlongEastingNorthingResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getBng2latlongEastingNorthing200ApplicationJsonObject?: GetBng2latlongEastingNorthing200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getBng2latlongEastingNorthing200ApplicationJSONObject?: GetBng2latlongEastingNorthing200ApplicationJson;
 }

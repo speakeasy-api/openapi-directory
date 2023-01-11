@@ -1,4 +1,7 @@
-export var StartSelectorTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartSelectorTypeEnum = void 0;
+var StartSelectorTypeEnum;
 (function (StartSelectorTypeEnum) {
     StartSelectorTypeEnum["FragmentNumber"] = "FRAGMENT_NUMBER";
     StartSelectorTypeEnum["ServerTimestamp"] = "SERVER_TIMESTAMP";
@@ -6,4 +9,4 @@ export var StartSelectorTypeEnum;
     StartSelectorTypeEnum["Now"] = "NOW";
     StartSelectorTypeEnum["Earliest"] = "EARLIEST";
     StartSelectorTypeEnum["ContinuationToken"] = "CONTINUATION_TOKEN";
-})(StartSelectorTypeEnum || (StartSelectorTypeEnum = {}));
+})(StartSelectorTypeEnum = exports.StartSelectorTypeEnum || (exports.StartSelectorTypeEnum = {}));

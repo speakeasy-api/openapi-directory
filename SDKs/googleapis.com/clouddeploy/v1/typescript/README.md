@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest, ClouddeployProjectsLocationsDeliveryPipelinesCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,96 +30,97 @@ const req: ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "dolorum",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "repellendus",
-    alt: "json",
-    callback: "commodi",
-    deliveryPipelineId: "illo",
-    fields: "qui",
-    key: "vel",
-    oauthToken: "aliquam",
-    prettyPrint: true,
-    quotaUser: "necessitatibus",
-    requestId: "omnis",
-    uploadType: "inventore",
-    uploadProtocol: "nihil",
-    validateOnly: false,
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    deliveryPipelineId: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    prettyPrint: false,
+    quotaUser: "nihil",
+    requestId: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
+    validateOnly: true,
   },
   request: {
     annotations: {
-      "mollitia": "et",
-      "impedit": "cupiditate",
-      "ut": "earum",
+      "ut": "dolorem",
     },
     condition: {
       pipelineReadyCondition: {
-        status: true,
-        updateTime: "atque",
+        status: false,
+        updateTime: "voluptate",
       },
       targetsPresentCondition: {
         missingTargets: [
-          "aut",
-          "itaque",
-          "praesentium",
+          "vitae",
+          "totam",
+          "dolores",
         ],
-        status: true,
-        updateTime: "corrupti",
+        status: false,
+        updateTime: "debitis",
       },
     },
-    description: "pariatur",
-    etag: "ex",
+    description: "vel",
+    etag: "odio",
     labels: {
-      "similique": "natus",
+      "id": "aspernatur",
+      "accusantium": "totam",
     },
-    name: "omnis",
+    name: "commodi",
     serialPipeline: {
       stages: [
         {
           profiles: [
-            "corrupti",
+            "aut",
+            "odit",
           ],
           strategy: {
             standard: {
-              verify: false,
+              verify: true,
             },
           },
-          targetId: "aut",
+          targetId: "voluptas",
         },
         {
           profiles: [
-            "et",
-            "eos",
+            "aut",
+            "illo",
           ],
           strategy: {
             standard: {
               verify: false,
             },
           },
-          targetId: "voluptatem",
+          targetId: "officiis",
         },
         {
           profiles: [
-            "deserunt",
+            "consectetur",
+            "nobis",
           ],
           strategy: {
             standard: {
               verify: false,
             },
           },
-          targetId: "aspernatur",
+          targetId: "qui",
         },
       ],
     },
-    suspended: false,
+    suspended: true,
   },
 };
 

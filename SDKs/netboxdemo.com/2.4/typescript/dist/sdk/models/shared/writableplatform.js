@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var WritablePlatformLegacyRpcClientEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritablePlatformInput = exports.WritablePlatformLegacyRpcClientEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var WritablePlatformLegacyRpcClientEnum;
 (function (WritablePlatformLegacyRpcClientEnum) {
     WritablePlatformLegacyRpcClientEnum["JuniperJunos"] = "juniper-junos";
     WritablePlatformLegacyRpcClientEnum["CiscoIos"] = "cisco-ios";
     WritablePlatformLegacyRpcClientEnum["Opengear"] = "opengear";
-})(WritablePlatformLegacyRpcClientEnum || (WritablePlatformLegacyRpcClientEnum = {}));
+})(WritablePlatformLegacyRpcClientEnum = exports.WritablePlatformLegacyRpcClientEnum || (exports.WritablePlatformLegacyRpcClientEnum = {}));
 var WritablePlatformInput = /** @class */ (function (_super) {
     __extends(WritablePlatformInput, _super);
     function WritablePlatformInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manufacturer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manufacturer" }),
         __metadata("design:type", Number)
     ], WritablePlatformInput.prototype, "manufacturer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WritablePlatformInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=napalm_args" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=napalm_args" }),
         __metadata("design:type", String)
     ], WritablePlatformInput.prototype, "napalmArgs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=napalm_driver" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=napalm_driver" }),
         __metadata("design:type", String)
     ], WritablePlatformInput.prototype, "napalmDriver", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rpc_client" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rpc_client" }),
         __metadata("design:type", String)
     ], WritablePlatformInput.prototype, "rpcClient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], WritablePlatformInput.prototype, "slug", void 0);
     return WritablePlatformInput;
-}(SpeakeasyBase));
-export { WritablePlatformInput };
+}(utils_1.SpeakeasyBase));
+exports.WritablePlatformInput = WritablePlatformInput;

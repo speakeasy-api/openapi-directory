@@ -11,7 +11,7 @@ export class UpdateContainerServiceRequest extends SpeakeasyBase {
   power?: ContainerServicePowerNameEnum;
 
   @SpeakeasyMetadata({ data: "json, name=publicDomainNames" })
-  publicDomainNames?: Map<string, string[]>;
+  publicDomainNames?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=scale" })
   scale?: number;

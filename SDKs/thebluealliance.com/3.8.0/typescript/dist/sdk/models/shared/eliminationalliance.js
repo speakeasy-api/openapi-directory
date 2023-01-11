@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WltRecord } from "./wltrecord";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EliminationAlliance = exports.EliminationAllianceStatus = exports.EliminationAllianceBackup = void 0;
+var utils_1 = require("../../../internal/utils");
+var wltrecord_1 = require("./wltrecord");
 // EliminationAllianceBackup
 /**
  * Backup team called in, may be null.
@@ -34,69 +37,69 @@ var EliminationAllianceBackup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=in" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=in" }),
         __metadata("design:type", String)
     ], EliminationAllianceBackup.prototype, "in", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=out" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=out" }),
         __metadata("design:type", String)
     ], EliminationAllianceBackup.prototype, "out", void 0);
     return EliminationAllianceBackup;
-}(SpeakeasyBase));
-export { EliminationAllianceBackup };
+}(utils_1.SpeakeasyBase));
+exports.EliminationAllianceBackup = EliminationAllianceBackup;
 var EliminationAllianceStatus = /** @class */ (function (_super) {
     __extends(EliminationAllianceStatus, _super);
     function EliminationAllianceStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current_level_record" }),
-        __metadata("design:type", WltRecord)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current_level_record" }),
+        __metadata("design:type", wltrecord_1.WltRecord)
     ], EliminationAllianceStatus.prototype, "currentLevelRecord", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=level" }),
         __metadata("design:type", String)
     ], EliminationAllianceStatus.prototype, "level", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=playoff_average" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=playoff_average" }),
         __metadata("design:type", Number)
     ], EliminationAllianceStatus.prototype, "playoffAverage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=record" }),
-        __metadata("design:type", WltRecord)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=record" }),
+        __metadata("design:type", wltrecord_1.WltRecord)
     ], EliminationAllianceStatus.prototype, "record", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], EliminationAllianceStatus.prototype, "status", void 0);
     return EliminationAllianceStatus;
-}(SpeakeasyBase));
-export { EliminationAllianceStatus };
+}(utils_1.SpeakeasyBase));
+exports.EliminationAllianceStatus = EliminationAllianceStatus;
 var EliminationAlliance = /** @class */ (function (_super) {
     __extends(EliminationAlliance, _super);
     function EliminationAlliance() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backup" }),
         __metadata("design:type", EliminationAllianceBackup)
     ], EliminationAlliance.prototype, "backup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=declines" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=declines" }),
         __metadata("design:type", Array)
     ], EliminationAlliance.prototype, "declines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], EliminationAlliance.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=picks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=picks" }),
         __metadata("design:type", Array)
     ], EliminationAlliance.prototype, "picks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", EliminationAllianceStatus)
     ], EliminationAlliance.prototype, "status", void 0);
     return EliminationAlliance;
-}(SpeakeasyBase));
-export { EliminationAlliance };
+}(utils_1.SpeakeasyBase));
+exports.EliminationAlliance = EliminationAlliance;

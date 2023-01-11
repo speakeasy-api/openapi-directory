@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Query } from "./query";
-export var CountArtifactsRequestViewEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CountArtifactsRequest = exports.CountArtifactsRequestViewEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var query_1 = require("./query");
+var CountArtifactsRequestViewEnum;
 (function (CountArtifactsRequestViewEnum) {
     CountArtifactsRequestViewEnum["CountResultViewUnspecified"] = "COUNT_RESULT_VIEW_UNSPECIFIED";
     CountArtifactsRequestViewEnum["TotalCount"] = "TOTAL_COUNT";
     CountArtifactsRequestViewEnum["All"] = "ALL";
-})(CountArtifactsRequestViewEnum || (CountArtifactsRequestViewEnum = {}));
+})(CountArtifactsRequestViewEnum = exports.CountArtifactsRequestViewEnum || (exports.CountArtifactsRequestViewEnum = {}));
 // CountArtifactsRequest
 /**
  * Count artifacts request.
@@ -40,13 +43,13 @@ var CountArtifactsRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query" }),
-        __metadata("design:type", Query)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query" }),
+        __metadata("design:type", query_1.Query)
     ], CountArtifactsRequest.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=view" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=view" }),
         __metadata("design:type", String)
     ], CountArtifactsRequest.prototype, "view", void 0);
     return CountArtifactsRequest;
-}(SpeakeasyBase));
-export { CountArtifactsRequest };
+}(utils_1.SpeakeasyBase));
+exports.CountArtifactsRequest = CountArtifactsRequest;

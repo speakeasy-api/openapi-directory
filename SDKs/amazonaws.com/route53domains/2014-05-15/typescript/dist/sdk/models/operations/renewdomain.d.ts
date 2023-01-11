@@ -25,5 +25,5 @@ export declare class RenewDomainResponse extends SpeakeasyBase {
     renewDomainResponse?: shared.RenewDomainResponse;
     statusCode: number;
     tldRulesViolation?: any;
-    unsupportedTld?: any;
+    unsupportedTLD?: any;
 }

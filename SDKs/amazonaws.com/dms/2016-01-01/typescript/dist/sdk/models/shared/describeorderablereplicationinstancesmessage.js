@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeOrderableReplicationInstancesMessage = void 0;
+var utils_1 = require("../../../internal/utils");
 // DescribeOrderableReplicationInstancesMessage
 /**
  * <p/>
@@ -33,13 +36,13 @@ var DescribeOrderableReplicationInstancesMessage = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Marker" }),
         __metadata("design:type", String)
     ], DescribeOrderableReplicationInstancesMessage.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxRecords" }),
         __metadata("design:type", Number)
     ], DescribeOrderableReplicationInstancesMessage.prototype, "maxRecords", void 0);
     return DescribeOrderableReplicationInstancesMessage;
-}(SpeakeasyBase));
-export { DescribeOrderableReplicationInstancesMessage };
+}(utils_1.SpeakeasyBase));
+exports.DescribeOrderableReplicationInstancesMessage = DescribeOrderableReplicationInstancesMessage;

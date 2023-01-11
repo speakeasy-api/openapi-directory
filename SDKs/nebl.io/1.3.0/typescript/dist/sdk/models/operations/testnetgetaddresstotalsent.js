@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestnetGetAddressTotalSentResponse = exports.TestnetGetAddressTotalSentRequest = exports.TestnetGetAddressTotalSentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TestnetGetAddressTotalSentPathParams = /** @class */ (function (_super) {
     __extends(TestnetGetAddressTotalSentPathParams, _super);
     function TestnetGetAddressTotalSentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=address" }),
         __metadata("design:type", String)
     ], TestnetGetAddressTotalSentPathParams.prototype, "address", void 0);
     return TestnetGetAddressTotalSentPathParams;
-}(SpeakeasyBase));
-export { TestnetGetAddressTotalSentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TestnetGetAddressTotalSentPathParams = TestnetGetAddressTotalSentPathParams;
 var TestnetGetAddressTotalSentRequest = /** @class */ (function (_super) {
     __extends(TestnetGetAddressTotalSentRequest, _super);
     function TestnetGetAddressTotalSentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TestnetGetAddressTotalSentPathParams)
     ], TestnetGetAddressTotalSentRequest.prototype, "pathParams", void 0);
     return TestnetGetAddressTotalSentRequest;
-}(SpeakeasyBase));
-export { TestnetGetAddressTotalSentRequest };
+}(utils_1.SpeakeasyBase));
+exports.TestnetGetAddressTotalSentRequest = TestnetGetAddressTotalSentRequest;
 var TestnetGetAddressTotalSentResponse = /** @class */ (function (_super) {
     __extends(TestnetGetAddressTotalSentResponse, _super);
     function TestnetGetAddressTotalSentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TestnetGetAddressTotalSentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TestnetGetAddressTotalSentResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TestnetGetAddressTotalSentResponse.prototype, "getAddressTotalSentResponse", void 0);
     return TestnetGetAddressTotalSentResponse;
-}(SpeakeasyBase));
-export { TestnetGetAddressTotalSentResponse };
+}(utils_1.SpeakeasyBase));
+exports.TestnetGetAddressTotalSentResponse = TestnetGetAddressTotalSentResponse;

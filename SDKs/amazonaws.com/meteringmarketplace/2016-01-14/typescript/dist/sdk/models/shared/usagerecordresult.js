@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UsageRecordResultStatusEnum } from "./usagerecordresultstatusenum";
-import { UsageRecord } from "./usagerecord";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UsageRecordResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var usagerecordresultstatusenum_1 = require("./usagerecordresultstatusenum");
+var usagerecord_1 = require("./usagerecord");
 // UsageRecordResult
 /**
  * A UsageRecordResult indicates the status of a given UsageRecord processed by BatchMeterUsage.
@@ -35,17 +38,17 @@ var UsageRecordResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MeteringRecordId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MeteringRecordId" }),
         __metadata("design:type", String)
     ], UsageRecordResult.prototype, "meteringRecordId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], UsageRecordResult.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UsageRecord" }),
-        __metadata("design:type", UsageRecord)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UsageRecord" }),
+        __metadata("design:type", usagerecord_1.UsageRecord)
     ], UsageRecordResult.prototype, "usageRecord", void 0);
     return UsageRecordResult;
-}(SpeakeasyBase));
-export { UsageRecordResult };
+}(utils_1.SpeakeasyBase));
+exports.UsageRecordResult = UsageRecordResult;

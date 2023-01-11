@@ -1,5 +1,8 @@
-export var OrderStringEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderStringEnum = void 0;
+var OrderStringEnum;
 (function (OrderStringEnum) {
     OrderStringEnum["Asc"] = "ASC";
     OrderStringEnum["Desc"] = "DESC";
-})(OrderStringEnum || (OrderStringEnum = {}));
+})(OrderStringEnum = exports.OrderStringEnum || (exports.OrderStringEnum = {}));

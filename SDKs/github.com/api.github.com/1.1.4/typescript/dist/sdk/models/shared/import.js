@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Import = exports.ImportStatusEnum = exports.ImportProjectChoices = void 0;
+var utils_1 = require("../../../internal/utils");
 var ImportProjectChoices = /** @class */ (function (_super) {
     __extends(ImportProjectChoices, _super);
     function ImportProjectChoices() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=human_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=human_name" }),
         __metadata("design:type", String)
     ], ImportProjectChoices.prototype, "humanName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tfvc_project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tfvc_project" }),
         __metadata("design:type", String)
     ], ImportProjectChoices.prototype, "tfvcProject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vcs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vcs" }),
         __metadata("design:type", String)
     ], ImportProjectChoices.prototype, "vcs", void 0);
     return ImportProjectChoices;
-}(SpeakeasyBase));
-export { ImportProjectChoices };
-export var ImportStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.ImportProjectChoices = ImportProjectChoices;
+var ImportStatusEnum;
 (function (ImportStatusEnum) {
     ImportStatusEnum["Auth"] = "auth";
     ImportStatusEnum["Error"] = "error";
@@ -61,7 +64,7 @@ export var ImportStatusEnum;
     ImportStatusEnum["DetectionFoundMultiple"] = "detection_found_multiple";
     ImportStatusEnum["DetectionFoundNothing"] = "detection_found_nothing";
     ImportStatusEnum["DetectionNeedsAuth"] = "detection_needs_auth";
-})(ImportStatusEnum || (ImportStatusEnum = {}));
+})(ImportStatusEnum = exports.ImportStatusEnum || (exports.ImportStatusEnum = {}));
 // Import
 /**
  * A repository import from an external source.
@@ -72,97 +75,97 @@ var Import = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authors_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authors_count" }),
         __metadata("design:type", Number)
     ], Import.prototype, "authorsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authors_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authors_url" }),
         __metadata("design:type", String)
     ], Import.prototype, "authorsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commit_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commit_count" }),
         __metadata("design:type", Number)
     ], Import.prototype, "commitCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error_message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error_message" }),
         __metadata("design:type", String)
     ], Import.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failed_step" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failed_step" }),
         __metadata("design:type", String)
     ], Import.prototype, "failedStep", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=has_large_files" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=has_large_files" }),
         __metadata("design:type", Boolean)
     ], Import.prototype, "hasLargeFiles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], Import.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=import_percent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=import_percent" }),
         __metadata("design:type", Number)
     ], Import.prototype, "importPercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=large_files_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=large_files_count" }),
         __metadata("design:type", Number)
     ], Import.prototype, "largeFilesCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=large_files_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=large_files_size" }),
         __metadata("design:type", Number)
     ], Import.prototype, "largeFilesSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], Import.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=project_choices", elemType: ImportProjectChoices }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=project_choices", elemType: ImportProjectChoices }),
         __metadata("design:type", Array)
     ], Import.prototype, "projectChoices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=push_percent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=push_percent" }),
         __metadata("design:type", Number)
     ], Import.prototype, "pushPercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repository_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repository_url" }),
         __metadata("design:type", String)
     ], Import.prototype, "repositoryUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Import.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status_text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status_text" }),
         __metadata("design:type", String)
     ], Import.prototype, "statusText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=svc_root" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=svc_root" }),
         __metadata("design:type", String)
     ], Import.prototype, "svcRoot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=svn_root" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=svn_root" }),
         __metadata("design:type", String)
     ], Import.prototype, "svnRoot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tfvc_project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tfvc_project" }),
         __metadata("design:type", String)
     ], Import.prototype, "tfvcProject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Import.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=use_lfs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=use_lfs" }),
         __metadata("design:type", String)
     ], Import.prototype, "useLfs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vcs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vcs" }),
         __metadata("design:type", String)
     ], Import.prototype, "vcs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vcs_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vcs_url" }),
         __metadata("design:type", String)
     ], Import.prototype, "vcsUrl", void 0);
     return Import;
-}(SpeakeasyBase));
-export { Import };
+}(utils_1.SpeakeasyBase));
+exports.Import = Import;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GlobalReplicationGroup } from "./globalreplicationgroup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateGlobalReplicationGroupResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var globalreplicationgroup_1 = require("./globalreplicationgroup");
 var CreateGlobalReplicationGroupResult = /** @class */ (function (_super) {
     __extends(CreateGlobalReplicationGroupResult, _super);
     function CreateGlobalReplicationGroupResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GlobalReplicationGroup)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", globalreplicationgroup_1.GlobalReplicationGroup)
     ], CreateGlobalReplicationGroupResult.prototype, "globalReplicationGroup", void 0);
     return CreateGlobalReplicationGroupResult;
-}(SpeakeasyBase));
-export { CreateGlobalReplicationGroupResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateGlobalReplicationGroupResult = CreateGlobalReplicationGroupResult;

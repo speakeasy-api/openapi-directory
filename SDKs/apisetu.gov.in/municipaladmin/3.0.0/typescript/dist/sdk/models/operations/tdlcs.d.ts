@@ -105,11 +105,11 @@ export declare class TdlcsRequest extends SpeakeasyBase {
 export declare class TdlcsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    tdlcs400ApplicationJsonObject?: Tdlcs400ApplicationJson;
-    tdlcs401ApplicationJsonObject?: Tdlcs401ApplicationJson;
-    tdlcs404ApplicationJsonObject?: Tdlcs404ApplicationJson;
-    tdlcs500ApplicationJsonObject?: Tdlcs500ApplicationJson;
-    tdlcs502ApplicationJsonObject?: Tdlcs502ApplicationJson;
-    tdlcs503ApplicationJsonObject?: Tdlcs503ApplicationJson;
-    tdlcs504ApplicationJsonObject?: Tdlcs504ApplicationJson;
+    tdlcs400ApplicationJSONObject?: Tdlcs400ApplicationJson;
+    tdlcs401ApplicationJSONObject?: Tdlcs401ApplicationJson;
+    tdlcs404ApplicationJSONObject?: Tdlcs404ApplicationJson;
+    tdlcs500ApplicationJSONObject?: Tdlcs500ApplicationJson;
+    tdlcs502ApplicationJSONObject?: Tdlcs502ApplicationJson;
+    tdlcs503ApplicationJSONObject?: Tdlcs503ApplicationJson;
+    tdlcs504ApplicationJSONObject?: Tdlcs504ApplicationJson;
 }

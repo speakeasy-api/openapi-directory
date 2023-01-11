@@ -29,6 +29,6 @@ export declare class BaremetalsolutionProjectsLocationsSshKeysListRequest extend
 }
 export declare class BaremetalsolutionProjectsLocationsSshKeysListResponse extends SpeakeasyBase {
     contentType: string;
-    listSshKeysResponse?: shared.ListSshKeysResponse;
+    listSSHKeysResponse?: shared.ListSshKeysResponse;
     statusCode: number;
 }

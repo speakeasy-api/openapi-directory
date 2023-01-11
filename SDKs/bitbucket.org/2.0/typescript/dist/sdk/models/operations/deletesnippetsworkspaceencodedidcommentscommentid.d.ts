@@ -17,5 +17,5 @@ export declare class DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdRequest ex
 export declare class DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Geofence = void 0;
+var utils_1 = require("../../../internal/utils");
 var Geofence = /** @class */ (function (_super) {
     __extends(Geofence, _super);
     function Geofence() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=area" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=area" }),
         __metadata("design:type", String)
     ], Geofence.prototype, "area", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
+        __metadata("design:type", Object)
     ], Geofence.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=calendarId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=calendarId" }),
         __metadata("design:type", Number)
     ], Geofence.prototype, "calendarId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Geofence.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Geofence.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Geofence.prototype, "name", void 0);
     return Geofence;
-}(SpeakeasyBase));
-export { Geofence };
+}(utils_1.SpeakeasyBase));
+exports.Geofence = Geofence;

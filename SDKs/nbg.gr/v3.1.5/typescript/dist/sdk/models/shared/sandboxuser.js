@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SandboxBankAccount } from "./sandboxbankaccount";
-import { SandboxCard } from "./sandboxcard";
-import { SandboxRetryCacheEntry } from "./sandboxretrycacheentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SandboxUser = void 0;
+var utils_1 = require("../../../internal/utils");
+var sandboxbankaccount_1 = require("./sandboxbankaccount");
+var sandboxcard_1 = require("./sandboxcard");
+var sandboxretrycacheentry_1 = require("./sandboxretrycacheentry");
 // SandboxUser
 /**
  * User data
@@ -36,21 +39,21 @@ var SandboxUser = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accounts", elemType: SandboxBankAccount }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accounts", elemType: sandboxbankaccount_1.SandboxBankAccount }),
         __metadata("design:type", Array)
     ], SandboxUser.prototype, "accounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cards", elemType: SandboxCard }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cards", elemType: sandboxcard_1.SandboxCard }),
         __metadata("design:type", Array)
     ], SandboxUser.prototype, "cards", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retryCacheEntries", elemType: SandboxRetryCacheEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retryCacheEntries", elemType: sandboxretrycacheentry_1.SandboxRetryCacheEntry }),
         __metadata("design:type", Array)
     ], SandboxUser.prototype, "retryCacheEntries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userId" }),
         __metadata("design:type", String)
     ], SandboxUser.prototype, "userId", void 0);
     return SandboxUser;
-}(SpeakeasyBase));
-export { SandboxUser };
+}(utils_1.SpeakeasyBase));
+exports.SandboxUser = SandboxUser;

@@ -17,11 +17,11 @@ export class PostApiPdfWkhtmltopdfResponse extends SpeakeasyBase {
   errorResponseDto?: shared.ErrorResponseDto;
 
   @SpeakeasyMetadata()
-  postApiPdfWkhtmltopdf200ApplicationPdfBinaryString?: Uint8Array;
-
-  @SpeakeasyMetadata()
   pdfResponseDto?: shared.PdfResponseDto;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  postApiPdfWkhtmltopdf200ApplicationPdfBinaryString?: Uint8Array;
 }

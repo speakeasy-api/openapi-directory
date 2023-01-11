@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Action } from "./action";
-import { EventBatchingCondition } from "./eventbatchingcondition";
-import { Predicate } from "./predicate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TriggerUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
+var action_1 = require("./action");
+var eventbatchingcondition_1 = require("./eventbatchingcondition");
+var predicate_1 = require("./predicate");
 // TriggerUpdate
 /**
  * A structure used to provide information used to update a trigger. This object updates the previous trigger definition by overwriting it completely.
@@ -36,29 +39,29 @@ var TriggerUpdate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Actions", elemType: Action }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Actions", elemType: action_1.Action }),
         __metadata("design:type", Array)
     ], TriggerUpdate.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], TriggerUpdate.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventBatchingCondition" }),
-        __metadata("design:type", EventBatchingCondition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventBatchingCondition" }),
+        __metadata("design:type", eventbatchingcondition_1.EventBatchingCondition)
     ], TriggerUpdate.prototype, "eventBatchingCondition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], TriggerUpdate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Predicate" }),
-        __metadata("design:type", Predicate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Predicate" }),
+        __metadata("design:type", predicate_1.Predicate)
     ], TriggerUpdate.prototype, "predicate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Schedule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Schedule" }),
         __metadata("design:type", String)
     ], TriggerUpdate.prototype, "schedule", void 0);
     return TriggerUpdate;
-}(SpeakeasyBase));
-export { TriggerUpdate };
+}(utils_1.SpeakeasyBase));
+exports.TriggerUpdate = TriggerUpdate;

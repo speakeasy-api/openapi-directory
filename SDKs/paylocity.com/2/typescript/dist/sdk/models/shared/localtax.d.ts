@@ -6,7 +6,7 @@ export declare class LocalTax extends SpeakeasyBase {
     exemptions?: number;
     exemptions2?: number;
     filingStatus?: string;
-    residentPsd?: string;
+    residentPSD?: string;
     taxCode?: string;
-    workPsd?: string;
+    workPSD?: string;
 }

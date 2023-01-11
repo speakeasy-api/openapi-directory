@@ -1,28 +1,17 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
-import * as operations from "./models/operations";
-type OptsFunc = (sdk: SDK) => void;
+import { AxiosInstance } from "axios";
+import { ApIs } from "./apis";
 export declare const ServerList: readonly ["https://apisetu.gov.in/agtripura/v3"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
+    apIs: ApIs;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
-    /**
-     * pecer - Pension Certificate
-     *
-     * API to verify Pension Certificate.
-    **/
-    pecer(req: operations.PecerRequest, config?: AxiosRequestConfig): Promise<operations.PecerResponse>;
-    /**
-     * prfnd - Provident Fund
-     *
-     * API to verify Provident Fund.
-    **/
-    prfnd(req: operations.PrfndRequest, config?: AxiosRequestConfig): Promise<operations.PrfndResponse>;
+    constructor(props: SDKProps);
 }
-export {};

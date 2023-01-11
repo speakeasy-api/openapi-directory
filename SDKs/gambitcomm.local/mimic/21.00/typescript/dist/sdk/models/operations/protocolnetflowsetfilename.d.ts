@@ -9,5 +9,5 @@ export declare class ProtocolNetflowSetFileNameRequest extends SpeakeasyBase {
 export declare class ProtocolNetflowSetFileNameResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolNetflowSetFileName200ApplicationJsonString?: string;
+    protocolNetflowSetFileName200ApplicationJSONString?: string;
 }

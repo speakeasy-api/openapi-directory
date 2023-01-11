@@ -5,5 +5,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ArrayPropertiesDetail extends SpeakeasyBase {
     index?: number;
     size?: number;
-    statusSummary?: Map<string, number>;
+    statusSummary?: Record<string, number>;
 }

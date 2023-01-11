@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var FourHundredAndSixNotAcceptableCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FourHundredAndSixNotAcceptable = exports.FourHundredAndSixNotAcceptableCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var FourHundredAndSixNotAcceptableCodeEnum;
 (function (FourHundredAndSixNotAcceptableCodeEnum) {
     FourHundredAndSixNotAcceptableCodeEnum["InvalidHeaderValue"] = "INVALID_HEADER_VALUE";
-})(FourHundredAndSixNotAcceptableCodeEnum || (FourHundredAndSixNotAcceptableCodeEnum = {}));
+})(FourHundredAndSixNotAcceptableCodeEnum = exports.FourHundredAndSixNotAcceptableCodeEnum || (exports.FourHundredAndSixNotAcceptableCodeEnum = {}));
 var FourHundredAndSixNotAcceptable = /** @class */ (function (_super) {
     __extends(FourHundredAndSixNotAcceptable, _super);
     function FourHundredAndSixNotAcceptable() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], FourHundredAndSixNotAcceptable.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], FourHundredAndSixNotAcceptable.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", String)
     ], FourHundredAndSixNotAcceptable.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trackingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trackingId" }),
         __metadata("design:type", String)
     ], FourHundredAndSixNotAcceptable.prototype, "trackingId", void 0);
     return FourHundredAndSixNotAcceptable;
-}(SpeakeasyBase));
-export { FourHundredAndSixNotAcceptable };
+}(utils_1.SpeakeasyBase));
+exports.FourHundredAndSixNotAcceptable = FourHundredAndSixNotAcceptable;

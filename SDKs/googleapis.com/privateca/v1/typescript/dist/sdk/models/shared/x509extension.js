@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObjectId } from "./objectid";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.X509Extension = void 0;
+var utils_1 = require("../../../internal/utils");
+var objectid_1 = require("./objectid");
 // X509Extension
 /**
  * An X509Extension specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs.
@@ -34,17 +37,17 @@ var X509Extension = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=critical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=critical" }),
         __metadata("design:type", Boolean)
     ], X509Extension.prototype, "critical", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectId" }),
-        __metadata("design:type", ObjectId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectId" }),
+        __metadata("design:type", objectid_1.ObjectId)
     ], X509Extension.prototype, "objectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], X509Extension.prototype, "value", void 0);
     return X509Extension;
-}(SpeakeasyBase));
-export { X509Extension };
+}(utils_1.SpeakeasyBase));
+exports.X509Extension = X509Extension;

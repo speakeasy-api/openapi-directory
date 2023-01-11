@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SpotFleetRequestConfig } from "./spotfleetrequestconfig";
 
 
 
@@ -9,8 +8,8 @@ import { SpotFleetRequestConfig } from "./spotfleetrequestconfig";
 **/
 export class DescribeSpotFleetRequestsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: SpotFleetRequestConfig })
-  spotFleetRequestConfigs?: SpotFleetRequestConfig[];
+  @SpeakeasyMetadata()
+  spotFleetRequestConfigs?: Record<string, any>;
 }

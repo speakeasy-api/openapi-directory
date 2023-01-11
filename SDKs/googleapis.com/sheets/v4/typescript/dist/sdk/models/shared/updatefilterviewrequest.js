@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FilterView } from "./filterview";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateFilterViewRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var filterview_1 = require("./filterview");
 // UpdateFilterViewRequest
 /**
  * Updates properties of the filter view.
@@ -34,13 +37,13 @@ var UpdateFilterViewRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields" }),
         __metadata("design:type", String)
     ], UpdateFilterViewRequest.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
-        __metadata("design:type", FilterView)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
+        __metadata("design:type", filterview_1.FilterView)
     ], UpdateFilterViewRequest.prototype, "filter", void 0);
     return UpdateFilterViewRequest;
-}(SpeakeasyBase));
-export { UpdateFilterViewRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateFilterViewRequest = UpdateFilterViewRequest;

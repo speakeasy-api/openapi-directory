@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeliverabilityTestStatusEnum } from "./deliverabilityteststatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeliverabilityTestReport = void 0;
+var utils_1 = require("../../../internal/utils");
+var deliverabilityteststatusenum_1 = require("./deliverabilityteststatusenum");
 // DeliverabilityTestReport
 /**
  * An object that contains metadata related to a predictive inbox placement test.
@@ -34,29 +37,29 @@ var DeliverabilityTestReport = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreateDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreateDate" }),
         __metadata("design:type", Date)
     ], DeliverabilityTestReport.prototype, "createDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeliverabilityTestStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeliverabilityTestStatus" }),
         __metadata("design:type", String)
     ], DeliverabilityTestReport.prototype, "deliverabilityTestStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FromEmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FromEmailAddress" }),
         __metadata("design:type", String)
     ], DeliverabilityTestReport.prototype, "fromEmailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReportId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReportId" }),
         __metadata("design:type", String)
     ], DeliverabilityTestReport.prototype, "reportId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReportName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReportName" }),
         __metadata("design:type", String)
     ], DeliverabilityTestReport.prototype, "reportName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Subject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Subject" }),
         __metadata("design:type", String)
     ], DeliverabilityTestReport.prototype, "subject", void 0);
     return DeliverabilityTestReport;
-}(SpeakeasyBase));
-export { DeliverabilityTestReport };
+}(utils_1.SpeakeasyBase));
+exports.DeliverabilityTestReport = DeliverabilityTestReport;

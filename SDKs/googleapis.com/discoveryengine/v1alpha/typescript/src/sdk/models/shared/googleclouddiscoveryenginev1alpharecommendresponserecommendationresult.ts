@@ -15,5 +15,5 @@ export class GoogleCloudDiscoveryengineV1alphaRecommendResponseRecommendationRes
   id?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 }

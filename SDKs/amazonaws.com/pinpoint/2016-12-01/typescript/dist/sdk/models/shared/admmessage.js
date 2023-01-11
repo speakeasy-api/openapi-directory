@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActionEnum } from "./actionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdmMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var actionenum_1 = require("./actionenum");
 // AdmMessage
 /**
  * Specifies the settings for a one-time message that's sent directly to an endpoint through the ADM (Amazon Device Messaging) channel.
@@ -34,69 +37,69 @@ var AdmMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Action" }),
         __metadata("design:type", String)
     ], AdmMessage.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Body" }),
         __metadata("design:type", String)
     ], AdmMessage.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConsolidationKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConsolidationKey" }),
         __metadata("design:type", String)
     ], AdmMessage.prototype, "consolidationKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Data" }),
+        __metadata("design:type", Object)
     ], AdmMessage.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExpiresAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExpiresAfter" }),
         __metadata("design:type", String)
     ], AdmMessage.prototype, "expiresAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IconReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IconReference" }),
         __metadata("design:type", String)
     ], AdmMessage.prototype, "iconReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ImageIconUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ImageIconUrl" }),
         __metadata("design:type", String)
     ], AdmMessage.prototype, "imageIconUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ImageUrl" }),
         __metadata("design:type", String)
     ], AdmMessage.prototype, "imageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MD5" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MD5" }),
         __metadata("design:type", String)
     ], AdmMessage.prototype, "md5", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RawContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RawContent" }),
         __metadata("design:type", String)
     ], AdmMessage.prototype, "rawContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SilentPush" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SilentPush" }),
         __metadata("design:type", Boolean)
     ], AdmMessage.prototype, "silentPush", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SmallImageIconUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SmallImageIconUrl" }),
         __metadata("design:type", String)
     ], AdmMessage.prototype, "smallImageIconUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Sound" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Sound" }),
         __metadata("design:type", String)
     ], AdmMessage.prototype, "sound", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Substitutions" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Substitutions" }),
+        __metadata("design:type", Object)
     ], AdmMessage.prototype, "substitutions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Title" }),
         __metadata("design:type", String)
     ], AdmMessage.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Url" }),
         __metadata("design:type", String)
     ], AdmMessage.prototype, "url", void 0);
     return AdmMessage;
-}(SpeakeasyBase));
-export { AdmMessage };
+}(utils_1.SpeakeasyBase));
+exports.AdmMessage = AdmMessage;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GatewayConfigGatewayAuthMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GatewayConfig = exports.GatewayConfigGatewayTypeEnum = exports.GatewayConfigGatewayAuthMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GatewayConfigGatewayAuthMethodEnum;
 (function (GatewayConfigGatewayAuthMethodEnum) {
     GatewayConfigGatewayAuthMethodEnum["GatewayAuthMethodUnspecified"] = "GATEWAY_AUTH_METHOD_UNSPECIFIED";
     GatewayConfigGatewayAuthMethodEnum["AssociationOnly"] = "ASSOCIATION_ONLY";
     GatewayConfigGatewayAuthMethodEnum["DeviceAuthTokenOnly"] = "DEVICE_AUTH_TOKEN_ONLY";
     GatewayConfigGatewayAuthMethodEnum["AssociationAndDeviceAuthToken"] = "ASSOCIATION_AND_DEVICE_AUTH_TOKEN";
-})(GatewayConfigGatewayAuthMethodEnum || (GatewayConfigGatewayAuthMethodEnum = {}));
-export var GatewayConfigGatewayTypeEnum;
+})(GatewayConfigGatewayAuthMethodEnum = exports.GatewayConfigGatewayAuthMethodEnum || (exports.GatewayConfigGatewayAuthMethodEnum = {}));
+var GatewayConfigGatewayTypeEnum;
 (function (GatewayConfigGatewayTypeEnum) {
     GatewayConfigGatewayTypeEnum["GatewayTypeUnspecified"] = "GATEWAY_TYPE_UNSPECIFIED";
     GatewayConfigGatewayTypeEnum["Gateway"] = "GATEWAY";
     GatewayConfigGatewayTypeEnum["NonGateway"] = "NON_GATEWAY";
-})(GatewayConfigGatewayTypeEnum || (GatewayConfigGatewayTypeEnum = {}));
+})(GatewayConfigGatewayTypeEnum = exports.GatewayConfigGatewayTypeEnum || (exports.GatewayConfigGatewayTypeEnum = {}));
 // GatewayConfig
 /**
  * Gateway-related configuration and state.
@@ -46,21 +49,21 @@ var GatewayConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gatewayAuthMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gatewayAuthMethod" }),
         __metadata("design:type", String)
     ], GatewayConfig.prototype, "gatewayAuthMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gatewayType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gatewayType" }),
         __metadata("design:type", String)
     ], GatewayConfig.prototype, "gatewayType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastAccessedGatewayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastAccessedGatewayId" }),
         __metadata("design:type", String)
     ], GatewayConfig.prototype, "lastAccessedGatewayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastAccessedGatewayTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastAccessedGatewayTime" }),
         __metadata("design:type", String)
     ], GatewayConfig.prototype, "lastAccessedGatewayTime", void 0);
     return GatewayConfig;
-}(SpeakeasyBase));
-export { GatewayConfig };
+}(utils_1.SpeakeasyBase));
+exports.GatewayConfig = GatewayConfig;

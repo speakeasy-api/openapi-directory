@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Query } from "./query";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SavedQuery = void 0;
+var utils_1 = require("../../../internal/utils");
+var query_1 = require("./query");
 // SavedQuery
 /**
  * The definition of a saved query. To work with Vault resources, the account must have the [required Vault privileges](https://support.google.com/vault/answer/2799699) and access to the matter. To access a matter, the account must have created the matter, have the matter shared with them, or have the **View All Matters** privilege.
@@ -34,25 +37,25 @@ var SavedQuery = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], SavedQuery.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], SavedQuery.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matterId" }),
         __metadata("design:type", String)
     ], SavedQuery.prototype, "matterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query" }),
-        __metadata("design:type", Query)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query" }),
+        __metadata("design:type", query_1.Query)
     ], SavedQuery.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=savedQueryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=savedQueryId" }),
         __metadata("design:type", String)
     ], SavedQuery.prototype, "savedQueryId", void 0);
     return SavedQuery;
-}(SpeakeasyBase));
-export { SavedQuery };
+}(utils_1.SpeakeasyBase));
+exports.SavedQuery = SavedQuery;

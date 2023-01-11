@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MobileFriendlyIssueRuleEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MobileFriendlyIssue = exports.MobileFriendlyIssueRuleEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MobileFriendlyIssueRuleEnum;
 (function (MobileFriendlyIssueRuleEnum) {
     MobileFriendlyIssueRuleEnum["MobileFriendlyRuleUnspecified"] = "MOBILE_FRIENDLY_RULE_UNSPECIFIED";
     MobileFriendlyIssueRuleEnum["UsesIncompatiblePlugins"] = "USES_INCOMPATIBLE_PLUGINS";
@@ -32,7 +35,7 @@ export var MobileFriendlyIssueRuleEnum;
     MobileFriendlyIssueRuleEnum["SizeContentToViewport"] = "SIZE_CONTENT_TO_VIEWPORT";
     MobileFriendlyIssueRuleEnum["UseLegibleFontSizes"] = "USE_LEGIBLE_FONT_SIZES";
     MobileFriendlyIssueRuleEnum["TapTargetsTooClose"] = "TAP_TARGETS_TOO_CLOSE";
-})(MobileFriendlyIssueRuleEnum || (MobileFriendlyIssueRuleEnum = {}));
+})(MobileFriendlyIssueRuleEnum = exports.MobileFriendlyIssueRuleEnum || (exports.MobileFriendlyIssueRuleEnum = {}));
 // MobileFriendlyIssue
 /**
  * Mobile-friendly issue.
@@ -43,9 +46,9 @@ var MobileFriendlyIssue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rule" }),
         __metadata("design:type", String)
     ], MobileFriendlyIssue.prototype, "rule", void 0);
     return MobileFriendlyIssue;
-}(SpeakeasyBase));
-export { MobileFriendlyIssue };
+}(utils_1.SpeakeasyBase));
+exports.MobileFriendlyIssue = MobileFriendlyIssue;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TileCoordinates = void 0;
+var utils_1 = require("../../../internal/utils");
 // TileCoordinates
 /**
  * Global tile coordinates. Global tile coordinates reference a specific tile on the map at a specific zoom level. The origin of this coordinate system is always at the northwest corner of the map, with x values increasing from west to east and y values increasing from north to south. Tiles are indexed using x, y coordinates from that origin. The zoom level containing the entire world in a tile is 0, and it increases as you zoom in. Zoom level n + 1 will contain 4 times as many tiles as zoom level n. The zoom level controls the level of detail of the data that is returned. In particular, this affects the set of feature types returned, their density, and geometry simplification. The exact tile contents may change over time, but care will be taken to keep supporting the most important use cases. For example, zoom level 15 shows roads for orientation and planning in the local neighborhood and zoom level 17 shows buildings to give users on foot a sense of situational awareness.
@@ -33,17 +36,17 @@ var TileCoordinates = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=x" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=x" }),
         __metadata("design:type", Number)
     ], TileCoordinates.prototype, "x", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=y" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=y" }),
         __metadata("design:type", Number)
     ], TileCoordinates.prototype, "y", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zoom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zoom" }),
         __metadata("design:type", Number)
     ], TileCoordinates.prototype, "zoom", void 0);
     return TileCoordinates;
-}(SpeakeasyBase));
-export { TileCoordinates };
+}(utils_1.SpeakeasyBase));
+exports.TileCoordinates = TileCoordinates;

@@ -11,10 +11,10 @@ export class IlpmtRequestBodyCertificateParameters extends SpeakeasyBase {
   uid: string;
 
   @SpeakeasyMetadata({ data: "json, name=eILPAppId" })
-  eIlpAppId: string;
+  eILPAppId: string;
 
   @SpeakeasyMetadata({ data: "json, name=eILPContactNumber" })
-  eIlpContactNumber: string;
+  eILPContactNumber: string;
 }
 
 export enum IlpmtRequestBodyFormatEnum {
@@ -194,23 +194,23 @@ export class IlpmtResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ilpmt400ApplicationJsonObject?: Ilpmt400ApplicationJson;
+  ilpmt400ApplicationJSONObject?: Ilpmt400ApplicationJson;
 
   @SpeakeasyMetadata()
-  ilpmt401ApplicationJsonObject?: Ilpmt401ApplicationJson;
+  ilpmt401ApplicationJSONObject?: Ilpmt401ApplicationJson;
 
   @SpeakeasyMetadata()
-  ilpmt404ApplicationJsonObject?: Ilpmt404ApplicationJson;
+  ilpmt404ApplicationJSONObject?: Ilpmt404ApplicationJson;
 
   @SpeakeasyMetadata()
-  ilpmt500ApplicationJsonObject?: Ilpmt500ApplicationJson;
+  ilpmt500ApplicationJSONObject?: Ilpmt500ApplicationJson;
 
   @SpeakeasyMetadata()
-  ilpmt502ApplicationJsonObject?: Ilpmt502ApplicationJson;
+  ilpmt502ApplicationJSONObject?: Ilpmt502ApplicationJson;
 
   @SpeakeasyMetadata()
-  ilpmt503ApplicationJsonObject?: Ilpmt503ApplicationJson;
+  ilpmt503ApplicationJSONObject?: Ilpmt503ApplicationJson;
 
   @SpeakeasyMetadata()
-  ilpmt504ApplicationJsonObject?: Ilpmt504ApplicationJson;
+  ilpmt504ApplicationJSONObject?: Ilpmt504ApplicationJson;
 }

@@ -1,56 +1,57 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
-export class CreateNewTagRequest extends SpeakeasyBase {
-  @Metadata({ data: "request, media_type=application/json" })
-  request: shared.Onev21tagsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesTagsItems;
-}
-
 
 export class CreateNewTag400ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=error" })
+  @SpeakeasyMetadata({ data: "json, name=error" })
   error: string;
 
-  @Metadata({ data: "json, name=messages" })
+  @SpeakeasyMetadata({ data: "json, name=messages" })
   messages?: string[];
 
-  @Metadata({ data: "json, name=root_causes" })
+  @SpeakeasyMetadata({ data: "json, name=root_causes" })
   rootCauses: string[];
 }
 
 
 export class CreateNewTag401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class CreateNewTagRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: shared.Onev21tagsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesTagsItemsInput;
+}
+
+
 export class CreateNewTagResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  createNewTag201ApplicationJsonAny?: any;
+  @SpeakeasyMetadata()
+  createNewTag201ApplicationJSONAny?: any;
 
-  @Metadata()
-  createNewTag400ApplicationJsonObject?: CreateNewTag400ApplicationJson;
+  @SpeakeasyMetadata()
+  createNewTag400ApplicationJSONObject?: CreateNewTag400ApplicationJson;
 
-  @Metadata()
-  createNewTag401ApplicationJsonObject?: CreateNewTag401ApplicationJson;
+  @SpeakeasyMetadata()
+  createNewTag401ApplicationJSONObject?: CreateNewTag401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

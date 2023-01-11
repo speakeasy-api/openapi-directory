@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UsersAddonAccountsReadResponse = exports.UsersAddonAccountsReadRequest = exports.UsersAddonAccountsReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UsersAddonAccountsReadPathParams = /** @class */ (function (_super) {
     __extends(UsersAddonAccountsReadPathParams, _super);
     function UsersAddonAccountsReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=account_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=account_id" }),
         __metadata("design:type", String)
     ], UsersAddonAccountsReadPathParams.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=provider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=provider" }),
         __metadata("design:type", String)
     ], UsersAddonAccountsReadPathParams.prototype, "provider", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=user_id" }),
         __metadata("design:type", String)
     ], UsersAddonAccountsReadPathParams.prototype, "userId", void 0);
     return UsersAddonAccountsReadPathParams;
-}(SpeakeasyBase));
-export { UsersAddonAccountsReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UsersAddonAccountsReadPathParams = UsersAddonAccountsReadPathParams;
 var UsersAddonAccountsReadRequest = /** @class */ (function (_super) {
     __extends(UsersAddonAccountsReadRequest, _super);
     function UsersAddonAccountsReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UsersAddonAccountsReadPathParams)
     ], UsersAddonAccountsReadRequest.prototype, "pathParams", void 0);
     return UsersAddonAccountsReadRequest;
-}(SpeakeasyBase));
-export { UsersAddonAccountsReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.UsersAddonAccountsReadRequest = UsersAddonAccountsReadRequest;
 var UsersAddonAccountsReadResponse = /** @class */ (function (_super) {
     __extends(UsersAddonAccountsReadResponse, _super);
     function UsersAddonAccountsReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], UsersAddonAccountsReadResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UsersAddonAccountsReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UsersAddonAccountsReadResponse.prototype, "statusCode", void 0);
     return UsersAddonAccountsReadResponse;
-}(SpeakeasyBase));
-export { UsersAddonAccountsReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.UsersAddonAccountsReadResponse = UsersAddonAccountsReadResponse;

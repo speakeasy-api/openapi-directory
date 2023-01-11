@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,69 +14,94 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateSegmentResponse = exports.UpdateSegmentRequest = exports.UpdateSegmentRequestBody = exports.UpdateSegmentRequestBodyWriteSegmentRequest = exports.UpdateSegmentHeaders = exports.UpdateSegmentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var UpdateSegmentPathParams = /** @class */ (function (_super) {
     __extends(UpdateSegmentPathParams, _super);
     function UpdateSegmentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=application-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=application-id" }),
         __metadata("design:type", String)
     ], UpdateSegmentPathParams.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=segment-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=segment-id" }),
         __metadata("design:type", String)
     ], UpdateSegmentPathParams.prototype, "segmentId", void 0);
     return UpdateSegmentPathParams;
-}(SpeakeasyBase));
-export { UpdateSegmentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateSegmentPathParams = UpdateSegmentPathParams;
 var UpdateSegmentHeaders = /** @class */ (function (_super) {
     __extends(UpdateSegmentHeaders, _super);
     function UpdateSegmentHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], UpdateSegmentHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], UpdateSegmentHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], UpdateSegmentHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], UpdateSegmentHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], UpdateSegmentHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], UpdateSegmentHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], UpdateSegmentHeaders.prototype, "xAmzSignedHeaders", void 0);
     return UpdateSegmentHeaders;
-}(SpeakeasyBase));
-export { UpdateSegmentHeaders };
+}(utils_1.SpeakeasyBase));
+exports.UpdateSegmentHeaders = UpdateSegmentHeaders;
 // UpdateSegmentRequestBodyWriteSegmentRequest
 /**
  * Specifies the configuration, dimension, and other settings for a segment. A WriteSegmentRequest object can include a Dimensions object or a SegmentGroups object, but not both.
@@ -86,101 +112,101 @@ var UpdateSegmentRequestBodyWriteSegmentRequest = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Dimensions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Dimensions" }),
         __metadata("design:type", shared.SegmentDimensions)
     ], UpdateSegmentRequestBodyWriteSegmentRequest.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], UpdateSegmentRequestBodyWriteSegmentRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SegmentGroups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SegmentGroups" }),
         __metadata("design:type", shared.SegmentGroupList)
     ], UpdateSegmentRequestBodyWriteSegmentRequest.prototype, "segmentGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], UpdateSegmentRequestBodyWriteSegmentRequest.prototype, "tags", void 0);
     return UpdateSegmentRequestBodyWriteSegmentRequest;
-}(SpeakeasyBase));
-export { UpdateSegmentRequestBodyWriteSegmentRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateSegmentRequestBodyWriteSegmentRequest = UpdateSegmentRequestBodyWriteSegmentRequest;
 var UpdateSegmentRequestBody = /** @class */ (function (_super) {
     __extends(UpdateSegmentRequestBody, _super);
     function UpdateSegmentRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WriteSegmentRequest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WriteSegmentRequest" }),
         __metadata("design:type", UpdateSegmentRequestBodyWriteSegmentRequest)
     ], UpdateSegmentRequestBody.prototype, "writeSegmentRequest", void 0);
     return UpdateSegmentRequestBody;
-}(SpeakeasyBase));
-export { UpdateSegmentRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateSegmentRequestBody = UpdateSegmentRequestBody;
 var UpdateSegmentRequest = /** @class */ (function (_super) {
     __extends(UpdateSegmentRequest, _super);
     function UpdateSegmentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateSegmentPathParams)
     ], UpdateSegmentRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateSegmentHeaders)
     ], UpdateSegmentRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateSegmentRequestBody)
     ], UpdateSegmentRequest.prototype, "request", void 0);
     return UpdateSegmentRequest;
-}(SpeakeasyBase));
-export { UpdateSegmentRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateSegmentRequest = UpdateSegmentRequest;
 var UpdateSegmentResponse = /** @class */ (function (_super) {
     __extends(UpdateSegmentResponse, _super);
     function UpdateSegmentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateSegmentResponse.prototype, "badRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateSegmentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateSegmentResponse.prototype, "forbiddenException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateSegmentResponse.prototype, "internalServerErrorException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateSegmentResponse.prototype, "methodNotAllowedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateSegmentResponse.prototype, "notFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateSegmentResponse.prototype, "payloadTooLargeException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateSegmentResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateSegmentResponse.prototype, "tooManyRequestsException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UpdateSegmentResponse)
     ], UpdateSegmentResponse.prototype, "updateSegmentResponse", void 0);
     return UpdateSegmentResponse;
-}(SpeakeasyBase));
-export { UpdateSegmentResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateSegmentResponse = UpdateSegmentResponse;

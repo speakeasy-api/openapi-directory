@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceEnumNumberSelectionBehaviorEnum = void 0;
+var ServiceEnumNumberSelectionBehaviorEnum;
+(function (ServiceEnumNumberSelectionBehaviorEnum) {
+    ServiceEnumNumberSelectionBehaviorEnum["AvoidSticky"] = "avoid-sticky";
+    ServiceEnumNumberSelectionBehaviorEnum["PreferSticky"] = "prefer-sticky";
+})(ServiceEnumNumberSelectionBehaviorEnum = exports.ServiceEnumNumberSelectionBehaviorEnum || (exports.ServiceEnumNumberSelectionBehaviorEnum = {}));

@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class StatusCodes extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  items: number[];
+  items: Record<string, any>[];
 
   @SpeakeasyMetadata()
   quantity: number;

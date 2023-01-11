@@ -105,11 +105,11 @@ export declare class MncerRequest extends SpeakeasyBase {
 export declare class MncerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    mncer400ApplicationJsonObject?: Mncer400ApplicationJson;
-    mncer401ApplicationJsonObject?: Mncer401ApplicationJson;
-    mncer404ApplicationJsonObject?: Mncer404ApplicationJson;
-    mncer500ApplicationJsonObject?: Mncer500ApplicationJson;
-    mncer502ApplicationJsonObject?: Mncer502ApplicationJson;
-    mncer503ApplicationJsonObject?: Mncer503ApplicationJson;
-    mncer504ApplicationJsonObject?: Mncer504ApplicationJson;
+    mncer400ApplicationJSONObject?: Mncer400ApplicationJson;
+    mncer401ApplicationJSONObject?: Mncer401ApplicationJson;
+    mncer404ApplicationJSONObject?: Mncer404ApplicationJson;
+    mncer500ApplicationJSONObject?: Mncer500ApplicationJson;
+    mncer502ApplicationJSONObject?: Mncer502ApplicationJson;
+    mncer503ApplicationJSONObject?: Mncer503ApplicationJson;
+    mncer504ApplicationJSONObject?: Mncer504ApplicationJson;
 }

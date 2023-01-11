@@ -10,13 +10,13 @@ export declare enum StandardHl7ConfigurationPhoneNumberFormattingEnum {
 export declare class StandardHl7Configuration extends SpeakeasyBase {
     convertTimestampToDateTime?: string;
     defaultAoeToUnknown?: boolean;
-    includeAoe: boolean;
+    includeAOE: boolean;
     nameFormat?: string;
     phoneNumberFormatting?: StandardHl7ConfigurationPhoneNumberFormattingEnum;
     receivingApplicationName?: string;
-    receivingApplicationOid?: string;
+    receivingApplicationOID?: string;
     receivingFacilityName?: string;
-    receivingFacilityOid?: string;
+    receivingFacilityOID?: string;
     receivingOrganization?: string;
     reportingFacilityId?: string;
     reportingFacilityIdType?: string;
@@ -25,7 +25,7 @@ export declare class StandardHl7Configuration extends SpeakeasyBase {
     suppressHl7Fields?: string;
     suppressQstForAoe?: boolean;
     transport: any;
-    truncateHdNamespaceIds?: boolean;
+    truncateHDNamespaceIds?: boolean;
     type: string;
     useBatchHeaders: boolean;
     useBlankInsteadOfUnknown?: string;

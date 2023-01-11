@@ -23,7 +23,7 @@ export declare class RealtimebiddingBiddersBiddingFunctionsArchiveSecurity exten
 export declare class RealtimebiddingBiddersBiddingFunctionsArchiveRequest extends SpeakeasyBase {
     pathParams: RealtimebiddingBiddersBiddingFunctionsArchivePathParams;
     queryParams: RealtimebiddingBiddersBiddingFunctionsArchiveQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: RealtimebiddingBiddersBiddingFunctionsArchiveSecurity;
 }
 export declare class RealtimebiddingBiddersBiddingFunctionsArchiveResponse extends SpeakeasyBase {

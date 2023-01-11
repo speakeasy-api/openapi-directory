@@ -22,6 +22,6 @@ export declare class PostPortfolioAnalysisFactorExposuresRequest extends Speakea
 }
 export declare class PostPortfolioAnalysisFactorExposuresResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioAnalysisFactorExposures200ApplicationJsonObject?: PostPortfolioAnalysisFactorExposures200ApplicationJson;
     statusCode: number;
+    postPortfolioAnalysisFactorExposures200ApplicationJSONObject?: PostPortfolioAnalysisFactorExposures200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DetailedErrorResponse = exports.DetailedErrorResponseError = exports.DetailedErrorResponseErrorDetailedMessage = void 0;
+var utils_1 = require("../../../internal/utils");
 var DetailedErrorResponseErrorDetailedMessage = /** @class */ (function (_super) {
     __extends(DetailedErrorResponseErrorDetailedMessage, _super);
     function DetailedErrorResponseErrorDetailedMessage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=break" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=break" }),
         __metadata("design:type", Number)
     ], DetailedErrorResponseErrorDetailedMessage.prototype, "break", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment" }),
         __metadata("design:type", String)
     ], DetailedErrorResponseErrorDetailedMessage.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", String)
     ], DetailedErrorResponseErrorDetailedMessage.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=employee" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=employee" }),
         __metadata("design:type", Number)
     ], DetailedErrorResponseErrorDetailedMessage.prototype, "employee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_time" }),
         __metadata("design:type", String)
     ], DetailedErrorResponseErrorDetailedMessage.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error_msg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error_msg" }),
         __metadata("design:type", String)
     ], DetailedErrorResponseErrorDetailedMessage.prototype, "errorMsg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], DetailedErrorResponseErrorDetailedMessage.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_time" }),
         __metadata("design:type", String)
     ], DetailedErrorResponseErrorDetailedMessage.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], DetailedErrorResponseErrorDetailedMessage.prototype, "success", void 0);
     return DetailedErrorResponseErrorDetailedMessage;
-}(SpeakeasyBase));
-export { DetailedErrorResponseErrorDetailedMessage };
+}(utils_1.SpeakeasyBase));
+exports.DetailedErrorResponseErrorDetailedMessage = DetailedErrorResponseErrorDetailedMessage;
 var DetailedErrorResponseError = /** @class */ (function (_super) {
     __extends(DetailedErrorResponseError, _super);
     function DetailedErrorResponseError() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], DetailedErrorResponseError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detailed_message", elemType: DetailedErrorResponseErrorDetailedMessage }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detailed_message", elemType: DetailedErrorResponseErrorDetailedMessage }),
         __metadata("design:type", Array)
     ], DetailedErrorResponseError.prototype, "detailedMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DetailedErrorResponseError.prototype, "message", void 0);
     return DetailedErrorResponseError;
-}(SpeakeasyBase));
-export { DetailedErrorResponseError };
+}(utils_1.SpeakeasyBase));
+exports.DetailedErrorResponseError = DetailedErrorResponseError;
 var DetailedErrorResponse = /** @class */ (function (_super) {
     __extends(DetailedErrorResponse, _super);
     function DetailedErrorResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", DetailedErrorResponseError)
     ], DetailedErrorResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], DetailedErrorResponse.prototype, "success", void 0);
     return DetailedErrorResponse;
-}(SpeakeasyBase));
-export { DetailedErrorResponse };
+}(utils_1.SpeakeasyBase));
+exports.DetailedErrorResponse = DetailedErrorResponse;

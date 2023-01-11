@@ -22,5 +22,5 @@ export class ProtocolTftpGetArgsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTftpGetArgs200ApplicationJsonObject?: Map<string, any>;
+  protocolTftpGetArgs200ApplicationJSONObject?: Record<string, any>;
 }

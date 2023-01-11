@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PublishMetricAction } from "./publishmetricaction";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionDefinition = void 0;
+var utils_1 = require("../../../internal/utils");
+var publishmetricaction_1 = require("./publishmetricaction");
 // ActionDefinition
 /**
  * A custom action to use in stateless rule actions settings. This is used in <a>CustomAction</a>.
@@ -34,9 +37,9 @@ var ActionDefinition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PublishMetricAction" }),
-        __metadata("design:type", PublishMetricAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PublishMetricAction" }),
+        __metadata("design:type", publishmetricaction_1.PublishMetricAction)
     ], ActionDefinition.prototype, "publishMetricAction", void 0);
     return ActionDefinition;
-}(SpeakeasyBase));
-export { ActionDefinition };
+}(utils_1.SpeakeasyBase));
+exports.ActionDefinition = ActionDefinition;

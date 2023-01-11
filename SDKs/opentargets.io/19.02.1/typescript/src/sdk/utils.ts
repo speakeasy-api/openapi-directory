@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -32,12 +32,14 @@ export class Utils {
     const url: string = baseURL.replace(/\/$/, "") + "/platform/public/utils/metrics";
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -49,7 +51,6 @@ export class Utils {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -66,12 +67,14 @@ export class Utils {
     const url: string = baseURL.replace(/\/$/, "") + "/platform/public/utils/stats";
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -83,7 +86,6 @@ export class Utils {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -100,12 +102,14 @@ export class Utils {
     const url: string = baseURL.replace(/\/$/, "") + "/platform/public/utils/ping";
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -117,7 +121,6 @@ export class Utils {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -134,12 +137,14 @@ export class Utils {
     const url: string = baseURL.replace(/\/$/, "") + "/platform/public/utils/therapeuticareas";
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -151,7 +156,6 @@ export class Utils {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -168,12 +172,14 @@ export class Utils {
     const url: string = baseURL.replace(/\/$/, "") + "/platform/public/utils/version";
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -185,7 +191,6 @@ export class Utils {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

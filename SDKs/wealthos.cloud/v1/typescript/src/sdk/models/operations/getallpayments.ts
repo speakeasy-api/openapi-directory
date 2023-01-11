@@ -70,23 +70,23 @@ export class GetAllPaymentsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getAllPayments200ApplicationJsonObject?: GetAllPayments200ApplicationJson;
+  getAllPayments200ApplicationJSONObject?: GetAllPayments200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getAllPayments400ApplicationJsonAny?: any;
+  getAllPayments400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getAllPayments401ApplicationJsonAny?: any;
+  getAllPayments401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getAllPayments403ApplicationJsonAny?: any;
+  getAllPayments403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getAllPayments404ApplicationJsonAny?: any;
+  getAllPayments404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getAllPayments429ApplicationJsonAny?: any;
+  getAllPayments429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getAllPayments500ApplicationJsonAny?: any;
+  getAllPayments500ApplicationJSONAny?: any;
 }

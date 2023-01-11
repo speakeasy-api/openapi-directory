@@ -14,7 +14,7 @@ export class GetEventsQueryParams extends SpeakeasyBase {
 
 export class GetEventsHeaders extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-EBAY-C-MARKETPLACE-ID" })
-  xEbayCMarketplaceId: string;
+  xEBAYCMARKETPLACEID: string;
 }
 
 

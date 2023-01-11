@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ErrorCategory } from "./errorcategory";
-import { ErrorDetail } from "./errordetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StandardError = void 0;
+var utils_1 = require("../../../internal/utils");
+var errorcategory_1 = require("./errorcategory");
+var errordetail_1 = require("./errordetail");
 var StandardError = /** @class */ (function (_super) {
     __extends(StandardError, _super);
     function StandardError() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
-        __metadata("design:type", ErrorCategory)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
+        __metadata("design:type", errorcategory_1.ErrorCategory)
     ], StandardError.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=context" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=context" }),
+        __metadata("design:type", Object)
     ], StandardError.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: ErrorDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: errordetail_1.ErrorDetail }),
         __metadata("design:type", Array)
     ], StandardError.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], StandardError.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
+        __metadata("design:type", Object)
     ], StandardError.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], StandardError.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], StandardError.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subCategory" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subCategory" }),
+        __metadata("design:type", Object)
     ], StandardError.prototype, "subCategory", void 0);
     return StandardError;
-}(SpeakeasyBase));
-export { StandardError };
+}(utils_1.SpeakeasyBase));
+exports.StandardError = StandardError;

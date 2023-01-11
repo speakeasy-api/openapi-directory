@@ -6,6 +6,6 @@ import { Secret } from "./secret";
 **/
 export declare class LogConfiguration extends SpeakeasyBase {
     logDriver: LogDriverEnum;
-    options?: Map<string, string>;
+    options?: Record<string, string>;
     secretOptions?: Secret[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContactToCreateInput } from "./contacttocreate";
-export var BatchCreateContactsRequestSourcesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchCreateContactsRequestInput = exports.BatchCreateContactsRequestSourcesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var contacttocreate_1 = require("./contacttocreate");
+var BatchCreateContactsRequestSourcesEnum;
 (function (BatchCreateContactsRequestSourcesEnum) {
     BatchCreateContactsRequestSourcesEnum["ReadSourceTypeUnspecified"] = "READ_SOURCE_TYPE_UNSPECIFIED";
     BatchCreateContactsRequestSourcesEnum["ReadSourceTypeProfile"] = "READ_SOURCE_TYPE_PROFILE";
     BatchCreateContactsRequestSourcesEnum["ReadSourceTypeContact"] = "READ_SOURCE_TYPE_CONTACT";
     BatchCreateContactsRequestSourcesEnum["ReadSourceTypeDomainContact"] = "READ_SOURCE_TYPE_DOMAIN_CONTACT";
-})(BatchCreateContactsRequestSourcesEnum || (BatchCreateContactsRequestSourcesEnum = {}));
+})(BatchCreateContactsRequestSourcesEnum = exports.BatchCreateContactsRequestSourcesEnum || (exports.BatchCreateContactsRequestSourcesEnum = {}));
 // BatchCreateContactsRequestInput
 /**
  * A request to create a batch of contacts.
@@ -41,17 +44,17 @@ var BatchCreateContactsRequestInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contacts", elemType: ContactToCreateInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contacts", elemType: contacttocreate_1.ContactToCreateInput }),
         __metadata("design:type", Array)
     ], BatchCreateContactsRequestInput.prototype, "contacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readMask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readMask" }),
         __metadata("design:type", String)
     ], BatchCreateContactsRequestInput.prototype, "readMask", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sources" }),
         __metadata("design:type", Array)
     ], BatchCreateContactsRequestInput.prototype, "sources", void 0);
     return BatchCreateContactsRequestInput;
-}(SpeakeasyBase));
-export { BatchCreateContactsRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.BatchCreateContactsRequestInput = BatchCreateContactsRequestInput;

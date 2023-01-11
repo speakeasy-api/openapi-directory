@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstancePlatformEnum } from "./instanceplatformenum";
-import { BlueprintTypeEnum } from "./blueprinttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Blueprint = void 0;
+var utils_1 = require("../../../internal/utils");
+var instanceplatformenum_1 = require("./instanceplatformenum");
+var blueprinttypeenum_1 = require("./blueprinttypeenum");
 // Blueprint
 /**
  * Describes a blueprint (a virtual private server image).
@@ -35,53 +38,53 @@ var Blueprint = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blueprintId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blueprintId" }),
         __metadata("design:type", String)
     ], Blueprint.prototype, "blueprintId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Blueprint.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=group" }),
         __metadata("design:type", String)
     ], Blueprint.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isActive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isActive" }),
         __metadata("design:type", Boolean)
     ], Blueprint.prototype, "isActive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=licenseUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=licenseUrl" }),
         __metadata("design:type", String)
     ], Blueprint.prototype, "licenseUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minPower" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minPower" }),
         __metadata("design:type", Number)
     ], Blueprint.prototype, "minPower", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Blueprint.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
         __metadata("design:type", String)
     ], Blueprint.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productUrl" }),
         __metadata("design:type", String)
     ], Blueprint.prototype, "productUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Blueprint.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], Blueprint.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versionCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versionCode" }),
         __metadata("design:type", String)
     ], Blueprint.prototype, "versionCode", void 0);
     return Blueprint;
-}(SpeakeasyBase));
-export { Blueprint };
+}(utils_1.SpeakeasyBase));
+exports.Blueprint = Blueprint;

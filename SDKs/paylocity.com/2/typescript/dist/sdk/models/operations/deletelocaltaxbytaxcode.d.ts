@@ -15,5 +15,5 @@ export declare class DeleteLocalTaxByTaxCodeRequest extends SpeakeasyBase {
 export declare class DeleteLocalTaxByTaxCodeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }

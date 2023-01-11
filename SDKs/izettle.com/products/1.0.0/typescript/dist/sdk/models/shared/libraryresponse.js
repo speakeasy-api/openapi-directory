@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DiscountResponse } from "./discountresponse";
-import { ProductResponse } from "./productresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LibraryResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var discountresponse_1 = require("./discountresponse");
+var productresponse_1 = require("./productresponse");
 var LibraryResponse = /** @class */ (function (_super) {
     __extends(LibraryResponse, _super);
     function LibraryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletedDiscounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletedDiscounts" }),
         __metadata("design:type", Array)
     ], LibraryResponse.prototype, "deletedDiscounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletedProducts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletedProducts" }),
         __metadata("design:type", Array)
     ], LibraryResponse.prototype, "deletedProducts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discounts", elemType: DiscountResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discounts", elemType: discountresponse_1.DiscountResponse }),
         __metadata("design:type", Array)
     ], LibraryResponse.prototype, "discounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromEventLogUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromEventLogUuid" }),
         __metadata("design:type", String)
     ], LibraryResponse.prototype, "fromEventLogUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=products", elemType: ProductResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=products", elemType: productresponse_1.ProductResponse }),
         __metadata("design:type", Array)
     ], LibraryResponse.prototype, "products", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=untilEventLogUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=untilEventLogUuid" }),
         __metadata("design:type", String)
     ], LibraryResponse.prototype, "untilEventLogUuid", void 0);
     return LibraryResponse;
-}(SpeakeasyBase));
-export { LibraryResponse };
+}(utils_1.SpeakeasyBase));
+exports.LibraryResponse = LibraryResponse;

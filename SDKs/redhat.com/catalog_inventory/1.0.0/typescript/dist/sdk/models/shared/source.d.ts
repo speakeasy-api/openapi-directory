@@ -7,7 +7,7 @@ export declare class Source extends SpeakeasyBase {
     createdAt?: Date;
     enabled?: boolean;
     id?: string;
-    info?: Map<string, any>;
+    info?: Record<string, any>;
     lastAvailableAt?: Date;
     lastCheckedAt?: Date;
     lastRefreshMessage?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AlbumApiDeleteReviewResponse = exports.AlbumApiDeleteReviewRequest = exports.AlbumApiDeleteReviewPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AlbumApiDeleteReviewPathParams = /** @class */ (function (_super) {
     __extends(AlbumApiDeleteReviewPathParams, _super);
     function AlbumApiDeleteReviewPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], AlbumApiDeleteReviewPathParams.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=reviewId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=reviewId" }),
         __metadata("design:type", Number)
     ], AlbumApiDeleteReviewPathParams.prototype, "reviewId", void 0);
     return AlbumApiDeleteReviewPathParams;
-}(SpeakeasyBase));
-export { AlbumApiDeleteReviewPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AlbumApiDeleteReviewPathParams = AlbumApiDeleteReviewPathParams;
 var AlbumApiDeleteReviewRequest = /** @class */ (function (_super) {
     __extends(AlbumApiDeleteReviewRequest, _super);
     function AlbumApiDeleteReviewRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AlbumApiDeleteReviewPathParams)
     ], AlbumApiDeleteReviewRequest.prototype, "pathParams", void 0);
     return AlbumApiDeleteReviewRequest;
-}(SpeakeasyBase));
-export { AlbumApiDeleteReviewRequest };
+}(utils_1.SpeakeasyBase));
+exports.AlbumApiDeleteReviewRequest = AlbumApiDeleteReviewRequest;
 var AlbumApiDeleteReviewResponse = /** @class */ (function (_super) {
     __extends(AlbumApiDeleteReviewResponse, _super);
     function AlbumApiDeleteReviewResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AlbumApiDeleteReviewResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AlbumApiDeleteReviewResponse.prototype, "statusCode", void 0);
     return AlbumApiDeleteReviewResponse;
-}(SpeakeasyBase));
-export { AlbumApiDeleteReviewResponse };
+}(utils_1.SpeakeasyBase));
+exports.AlbumApiDeleteReviewResponse = AlbumApiDeleteReviewResponse;

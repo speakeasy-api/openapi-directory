@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComputeLocationEnum } from "./computelocationenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricProcessingConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var computelocationenum_1 = require("./computelocationenum");
 // MetricProcessingConfig
 /**
  * The processing configuration for the given metric property. You can configure metrics to be computed at the edge or in the Amazon Web Services Cloud. By default, metrics are forwarded to the cloud.
@@ -34,9 +37,9 @@ var MetricProcessingConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeLocation" }),
         __metadata("design:type", String)
     ], MetricProcessingConfig.prototype, "computeLocation", void 0);
     return MetricProcessingConfig;
-}(SpeakeasyBase));
-export { MetricProcessingConfig };
+}(utils_1.SpeakeasyBase));
+exports.MetricProcessingConfig = MetricProcessingConfig;

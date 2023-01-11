@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,154 +14,179 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudsupportMediaUploadResponse = exports.CloudsupportMediaUploadRequest = exports.CloudsupportMediaUploadSecurity = exports.CloudsupportMediaUploadRequestsInput = exports.CloudsupportMediaUploadQueryParams = exports.CloudsupportMediaUploadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CloudsupportMediaUploadPathParams = /** @class */ (function (_super) {
     __extends(CloudsupportMediaUploadPathParams, _super);
     function CloudsupportMediaUploadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=parent" }),
         __metadata("design:type", String)
     ], CloudsupportMediaUploadPathParams.prototype, "parent", void 0);
     return CloudsupportMediaUploadPathParams;
-}(SpeakeasyBase));
-export { CloudsupportMediaUploadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudsupportMediaUploadPathParams = CloudsupportMediaUploadPathParams;
 var CloudsupportMediaUploadQueryParams = /** @class */ (function (_super) {
     __extends(CloudsupportMediaUploadQueryParams, _super);
     function CloudsupportMediaUploadQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], CloudsupportMediaUploadQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], CloudsupportMediaUploadQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], CloudsupportMediaUploadQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], CloudsupportMediaUploadQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], CloudsupportMediaUploadQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], CloudsupportMediaUploadQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], CloudsupportMediaUploadQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], CloudsupportMediaUploadQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], CloudsupportMediaUploadQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], CloudsupportMediaUploadQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], CloudsupportMediaUploadQueryParams.prototype, "uploadProtocol", void 0);
     return CloudsupportMediaUploadQueryParams;
-}(SpeakeasyBase));
-export { CloudsupportMediaUploadQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudsupportMediaUploadQueryParams = CloudsupportMediaUploadQueryParams;
 var CloudsupportMediaUploadRequestsInput = /** @class */ (function (_super) {
     __extends(CloudsupportMediaUploadRequestsInput, _super);
     function CloudsupportMediaUploadRequestsInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/octet-stream" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/octet-stream" }),
         __metadata("design:type", Uint8Array)
     ], CloudsupportMediaUploadRequestsInput.prototype, "applicationOctetStream", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.CreateAttachmentRequestInput)
     ], CloudsupportMediaUploadRequestsInput.prototype, "createAttachmentRequest", void 0);
     return CloudsupportMediaUploadRequestsInput;
-}(SpeakeasyBase));
-export { CloudsupportMediaUploadRequestsInput };
+}(utils_1.SpeakeasyBase));
+exports.CloudsupportMediaUploadRequestsInput = CloudsupportMediaUploadRequestsInput;
 var CloudsupportMediaUploadSecurity = /** @class */ (function (_super) {
     __extends(CloudsupportMediaUploadSecurity, _super);
     function CloudsupportMediaUploadSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CloudsupportMediaUploadSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CloudsupportMediaUploadSecurity.prototype, "oauth2c", void 0);
     return CloudsupportMediaUploadSecurity;
-}(SpeakeasyBase));
-export { CloudsupportMediaUploadSecurity };
+}(utils_1.SpeakeasyBase));
+exports.CloudsupportMediaUploadSecurity = CloudsupportMediaUploadSecurity;
 var CloudsupportMediaUploadRequest = /** @class */ (function (_super) {
     __extends(CloudsupportMediaUploadRequest, _super);
     function CloudsupportMediaUploadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudsupportMediaUploadPathParams)
     ], CloudsupportMediaUploadRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudsupportMediaUploadQueryParams)
     ], CloudsupportMediaUploadRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudsupportMediaUploadRequestsInput)
     ], CloudsupportMediaUploadRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudsupportMediaUploadSecurity)
     ], CloudsupportMediaUploadRequest.prototype, "security", void 0);
     return CloudsupportMediaUploadRequest;
-}(SpeakeasyBase));
-export { CloudsupportMediaUploadRequest };
+}(utils_1.SpeakeasyBase));
+exports.CloudsupportMediaUploadRequest = CloudsupportMediaUploadRequest;
 var CloudsupportMediaUploadResponse = /** @class */ (function (_super) {
     __extends(CloudsupportMediaUploadResponse, _super);
     function CloudsupportMediaUploadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Attachment)
     ], CloudsupportMediaUploadResponse.prototype, "attachment", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CloudsupportMediaUploadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CloudsupportMediaUploadResponse.prototype, "statusCode", void 0);
     return CloudsupportMediaUploadResponse;
-}(SpeakeasyBase));
-export { CloudsupportMediaUploadResponse };
+}(utils_1.SpeakeasyBase));
+exports.CloudsupportMediaUploadResponse = CloudsupportMediaUploadResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolMqttClientSubscribeGetResponse = exports.ProtocolMqttClientSubscribeGetRequest = exports.ProtocolMqttClientSubscribeGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolMqttClientSubscribeGetPathParams = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSubscribeGetPathParams, _super);
     function ProtocolMqttClientSubscribeGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolMqttClientSubscribeGetPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=attr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=attr" }),
         __metadata("design:type", String)
     ], ProtocolMqttClientSubscribeGetPathParams.prototype, "attr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=subNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=subNum" }),
         __metadata("design:type", Number)
     ], ProtocolMqttClientSubscribeGetPathParams.prototype, "subNum", void 0);
     return ProtocolMqttClientSubscribeGetPathParams;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSubscribeGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSubscribeGetPathParams = ProtocolMqttClientSubscribeGetPathParams;
 var ProtocolMqttClientSubscribeGetRequest = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSubscribeGetRequest, _super);
     function ProtocolMqttClientSubscribeGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolMqttClientSubscribeGetPathParams)
     ], ProtocolMqttClientSubscribeGetRequest.prototype, "pathParams", void 0);
     return ProtocolMqttClientSubscribeGetRequest;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSubscribeGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSubscribeGetRequest = ProtocolMqttClientSubscribeGetRequest;
 var ProtocolMqttClientSubscribeGetResponse = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSubscribeGetResponse, _super);
     function ProtocolMqttClientSubscribeGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolMqttClientSubscribeGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolMqttClientSubscribeGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolMqttClientSubscribeGetResponse.prototype, "protocolMqttClientSubscribeGet200ApplicationJsonStrings", void 0);
+    ], ProtocolMqttClientSubscribeGetResponse.prototype, "protocolMqttClientSubscribeGet200ApplicationJSONStrings", void 0);
     return ProtocolMqttClientSubscribeGetResponse;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSubscribeGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSubscribeGetResponse = ProtocolMqttClientSubscribeGetResponse;

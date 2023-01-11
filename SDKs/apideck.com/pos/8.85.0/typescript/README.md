@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ItemsAddRequest, ItemsAddResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -42,50 +41,53 @@ const req: ItemsAddRequest = {
     raw: false,
   },
   headers: {
-    xApideckAppId: "non",
-    xApideckConsumerId: "doloribus",
-    xApideckServiceId: "illo",
+    xApideckAppId: "voluptas",
+    xApideckConsumerId: "culpa",
+    xApideckServiceId: "expedita",
   },
   request: {
-    abbreviation: "molestias",
+    abbreviation: "consequuntur",
     absentAtLocationIds: [
-      "asperiores",
+      "expedita",
+      "voluptas",
     ],
-    available: false,
-    availableForPickup: true,
-    availableOnline: false,
+    available: true,
+    availableForPickup: false,
+    availableOnline: true,
     categories: [
-      "odio",
+      "dicta",
+      "debitis",
+      "voluptatum",
     ],
-    code: "qui",
-    cost: 37.099998,
+    code: "et",
+    cost: 11.100000,
     deleted: false,
-    description: "dolore",
-    hidden: false,
-    id: "explicabo",
-    idempotencyKey: "repudiandae",
+    description: "voluptate",
+    hidden: true,
+    id: "vitae",
+    idempotencyKey: "totam",
     modifierGroups: [
-      "nesciunt",
-      "ab",
-      "ab",
+      "illum",
     ],
-    name: "ullam",
+    name: "debitis",
     options: [
-      "eos",
-      "et",
+      "odio",
+      "dolore",
     ],
-    presentAtAllLocations: true,
-    priceAmount: 16.200001,
-    priceCurrency: "MNT",
-    pricingType: "per_unit",
-    productType: "other",
-    sku: "in",
+    presentAtAllLocations: false,
+    priceAmount: 57.099998,
+    priceCurrency: "UGX",
+    pricingType: "fixed",
+    productType: "regular",
+    sku: "est",
     taxIds: [
-      "nesciunt",
-      "hic",
+      "odit",
+      "non",
+      "voluptas",
     ],
     variations: [
-      "quod",
+      "aut",
+      "illo",
     ],
   },
 };

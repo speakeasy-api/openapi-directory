@@ -1,15 +1,15 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { ActivityStreamModeEnum } from "./activitystreammodeenum";
 import { ActivityStreamStatusEnum } from "./activitystreamstatusenum";
-import { DbClusterRole } from "./dbclusterrole";
-import { DbClusterMember } from "./dbclustermember";
-import { DbClusterOptionGroupStatus } from "./dbclusteroptiongroupstatus";
-import { DomainMembership } from "./domainmembership";
+import { DbClusterRoles } from "./dbclusterroles";
+import { DbClusterMemberList } from "./dbclustermemberlist";
+import { DbClusterOptionGroupMemberships } from "./dbclusteroptiongroupmemberships";
+import { DomainMembershipList } from "./domainmembershiplist";
 import { WriteForwardingStatusEnum } from "./writeforwardingstatusenum";
 import { ClusterPendingModifiedValues } from "./clusterpendingmodifiedvalues";
 import { ScalingConfigurationInfo } from "./scalingconfigurationinfo";
-import { Tag } from "./tag";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+import { TagList } from "./taglist";
+import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 
 
 
@@ -33,14 +33,14 @@ export class DbCluster extends SpeakeasyBase {
   @SpeakeasyMetadata()
   allocatedStorage?: number;
 
-  @SpeakeasyMetadata({ elemType: DbClusterRole })
-  associatedRoles?: DbClusterRole[];
+  @SpeakeasyMetadata({ elemType: DbClusterRoles })
+  associatedRoles?: DbClusterRoles[];
 
   @SpeakeasyMetadata()
   automaticRestartTime?: Date;
 
   @SpeakeasyMetadata()
-  availabilityZones?: string[];
+  availabilityZones?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   backtrackConsumedChangeRecords?: number;
@@ -78,11 +78,11 @@ export class DbCluster extends SpeakeasyBase {
   @SpeakeasyMetadata()
   dbClusterIdentifier?: string;
 
-  @SpeakeasyMetadata({ elemType: DbClusterMember })
-  dbClusterMembers?: DbClusterMember[];
+  @SpeakeasyMetadata({ elemType: DbClusterMemberList })
+  dbClusterMembers?: DbClusterMemberList[];
 
-  @SpeakeasyMetadata({ elemType: DbClusterOptionGroupStatus })
-  dbClusterOptionGroupMemberships?: DbClusterOptionGroupStatus[];
+  @SpeakeasyMetadata({ elemType: DbClusterOptionGroupMemberships })
+  dbClusterOptionGroupMemberships?: DbClusterOptionGroupMemberships[];
 
   @SpeakeasyMetadata()
   dbClusterParameterGroup?: string;
@@ -99,8 +99,8 @@ export class DbCluster extends SpeakeasyBase {
   @SpeakeasyMetadata()
   deletionProtection?: boolean;
 
-  @SpeakeasyMetadata({ elemType: DomainMembership })
-  domainMemberships?: DomainMembership[];
+  @SpeakeasyMetadata({ elemType: DomainMembershipList })
+  domainMemberships?: DomainMembershipList[];
 
   @SpeakeasyMetadata()
   earliestBacktrackTime?: Date;
@@ -148,7 +148,7 @@ export class DbCluster extends SpeakeasyBase {
   masterUsername?: string;
 
   @SpeakeasyMetadata()
-  multiAz?: boolean;
+  multiAZ?: boolean;
 
   @SpeakeasyMetadata()
   pendingModifiedValues?: ClusterPendingModifiedValues;
@@ -166,7 +166,7 @@ export class DbCluster extends SpeakeasyBase {
   preferredMaintenanceWindow?: string;
 
   @SpeakeasyMetadata()
-  readReplicaIdentifiers?: string[];
+  readReplicaIdentifiers?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   readerEndpoint?: string;
@@ -183,9 +183,9 @@ export class DbCluster extends SpeakeasyBase {
   @SpeakeasyMetadata()
   storageEncrypted?: boolean;
 
-  @SpeakeasyMetadata({ elemType: Tag })
-  tagList?: Tag[];
+  @SpeakeasyMetadata({ elemType: TagList })
+  tagList?: TagList[];
 
-  @SpeakeasyMetadata({ elemType: VpcSecurityGroupMembership })
-  vpcSecurityGroups?: VpcSecurityGroupMembership[];
+  @SpeakeasyMetadata({ elemType: VpcSecurityGroupMembershipList })
+  vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

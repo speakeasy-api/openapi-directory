@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Sentiment } from "./sentiment";
-import { Entity } from "./entity";
-import { Sentence } from "./sentence";
-import { Token } from "./token";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnnotateTextResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var sentiment_1 = require("./sentiment");
+var entity_1 = require("./entity");
+var sentence_1 = require("./sentence");
+var token_1 = require("./token");
 // AnnotateTextResponse
 /**
  * The text annotations response message.
@@ -37,25 +40,25 @@ var AnnotateTextResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentSentiment" }),
-        __metadata("design:type", Sentiment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentSentiment" }),
+        __metadata("design:type", sentiment_1.Sentiment)
     ], AnnotateTextResponse.prototype, "documentSentiment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entities", elemType: Entity }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entities", elemType: entity_1.Entity }),
         __metadata("design:type", Array)
     ], AnnotateTextResponse.prototype, "entities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], AnnotateTextResponse.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sentences", elemType: Sentence }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sentences", elemType: sentence_1.Sentence }),
         __metadata("design:type", Array)
     ], AnnotateTextResponse.prototype, "sentences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokens", elemType: Token }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokens", elemType: token_1.Token }),
         __metadata("design:type", Array)
     ], AnnotateTextResponse.prototype, "tokens", void 0);
     return AnnotateTextResponse;
-}(SpeakeasyBase));
-export { AnnotateTextResponse };
+}(utils_1.SpeakeasyBase));
+exports.AnnotateTextResponse = AnnotateTextResponse;

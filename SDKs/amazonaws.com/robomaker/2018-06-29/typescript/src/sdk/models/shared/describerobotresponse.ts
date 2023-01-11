@@ -33,5 +33,5 @@ export class DescribeRobotResponse extends SpeakeasyBase {
   status?: RobotStatusEnum;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }

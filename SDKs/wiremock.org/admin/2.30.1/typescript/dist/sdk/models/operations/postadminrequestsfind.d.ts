@@ -8,11 +8,11 @@ export declare class PostAdminRequestsFindRequestBodyBasicAuthCredentials extend
 }
 export declare class PostAdminRequestsFindRequestBody extends SpeakeasyBase {
     basicAuthCredentials?: PostAdminRequestsFindRequestBodyBasicAuthCredentials;
-    bodyPatterns?: Map<string, any>[];
-    cookies?: Map<string, any>;
-    headers?: Map<string, any>;
+    bodyPatterns?: Record<string, any>[];
+    cookies?: Record<string, any>;
+    headers?: Record<string, any>;
     method?: string;
-    queryParameters?: Map<string, any>;
+    queryParameters?: Record<string, any>;
     url?: string;
     urlPath?: string;
     urlPathPattern?: string;

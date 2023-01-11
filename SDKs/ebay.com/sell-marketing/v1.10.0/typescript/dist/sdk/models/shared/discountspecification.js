@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiscountSpecification = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
 // DiscountSpecification
 /**
  * This container defines the criteria for when the discounts of a promotion trigger, such as the minimum quantity the buyer must purchase before the promotion kicks in. The promotional discount is applied each time the criteria defined by this container is met. Note: When configuring the rules that govern when the discounts are applied, populate just one of the following fields in the discountSpecification container: minAmount minQuantity forEachQuantity forEachAmount Tip: Refer to Configuring discounts for threshold promotions for information and examples on how to combine discountBenefit and discountSpecification to create different types of promotions.
@@ -34,25 +37,25 @@ var DiscountSpecification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=forEachAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=forEachAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], DiscountSpecification.prototype, "forEachAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=forEachQuantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=forEachQuantity" }),
         __metadata("design:type", Number)
     ], DiscountSpecification.prototype, "forEachQuantity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], DiscountSpecification.prototype, "minAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minQuantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minQuantity" }),
         __metadata("design:type", Number)
     ], DiscountSpecification.prototype, "minQuantity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberOfDiscountedItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberOfDiscountedItems" }),
         __metadata("design:type", Number)
     ], DiscountSpecification.prototype, "numberOfDiscountedItems", void 0);
     return DiscountSpecification;
-}(SpeakeasyBase));
-export { DiscountSpecification };
+}(utils_1.SpeakeasyBase));
+exports.DiscountSpecification = DiscountSpecification;

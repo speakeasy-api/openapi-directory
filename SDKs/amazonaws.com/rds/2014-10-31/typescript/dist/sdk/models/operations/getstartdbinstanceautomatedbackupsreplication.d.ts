@@ -10,7 +10,7 @@ export declare class GetStartDbInstanceAutomatedBackupsReplicationQueryParams ex
     backupRetentionPeriod?: number;
     kmsKeyId?: string;
     preSignedUrl?: string;
-    sourceDbInstanceArn: string;
+    sourceDBInstanceArn: string;
     version: GetStartDbInstanceAutomatedBackupsReplicationVersionEnum;
 }
 export declare class GetStartDbInstanceAutomatedBackupsReplicationHeaders extends SpeakeasyBase {

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AcceptInvitationRequest, AcceptInvitationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,22 +33,22 @@ const sdk = new SDK(WithSecurity(
     
 const req: AcceptInvitationRequest = {
   headers: {
-    xAmzAlgorithm: "laudantium",
-    xAmzContentSha256: "iure",
-    xAmzCredential: "dolor",
-    xAmzDate: "doloribus",
-    xAmzSecurityToken: "rem",
-    xAmzSignature: "sit",
-    xAmzSignedHeaders: "aut",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
-    administratorAccountId: "non",
-    invitationId: "quod",
-    masterAccount: "ut",
+    administratorAccountId: "voluptas",
+    invitationId: "fugit",
+    masterAccount: "et",
   },
 };
 
-sdk.sdk.acceptInvitation(req).then((res: AcceptInvitationResponse | AxiosError) => {
+sdk.acceptInvitation(req).then((res: AcceptInvitationResponse | AxiosError) => {
    // handle response
 });
 ```

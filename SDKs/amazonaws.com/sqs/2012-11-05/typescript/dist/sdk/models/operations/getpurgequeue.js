@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,120 +23,122 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPurgeQueueResponse = exports.GetPurgeQueueRequest = exports.GetPurgeQueueHeaders = exports.GetPurgeQueueQueryParams = exports.GetPurgeQueueVersionEnum = exports.GetPurgeQueueActionEnum = exports.GetPurgeQueuePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPurgeQueuePathParams = /** @class */ (function (_super) {
     __extends(GetPurgeQueuePathParams, _super);
     function GetPurgeQueuePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=AccountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=AccountNumber" }),
         __metadata("design:type", Number)
     ], GetPurgeQueuePathParams.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=QueueName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=QueueName" }),
         __metadata("design:type", String)
     ], GetPurgeQueuePathParams.prototype, "queueName", void 0);
     return GetPurgeQueuePathParams;
-}(SpeakeasyBase));
-export { GetPurgeQueuePathParams };
-export var GetPurgeQueueActionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPurgeQueuePathParams = GetPurgeQueuePathParams;
+var GetPurgeQueueActionEnum;
 (function (GetPurgeQueueActionEnum) {
     GetPurgeQueueActionEnum["PurgeQueue"] = "PurgeQueue";
-})(GetPurgeQueueActionEnum || (GetPurgeQueueActionEnum = {}));
-export var GetPurgeQueueVersionEnum;
+})(GetPurgeQueueActionEnum = exports.GetPurgeQueueActionEnum || (exports.GetPurgeQueueActionEnum = {}));
+var GetPurgeQueueVersionEnum;
 (function (GetPurgeQueueVersionEnum) {
     GetPurgeQueueVersionEnum["TwoThousandAndTwelve1105"] = "2012-11-05";
-})(GetPurgeQueueVersionEnum || (GetPurgeQueueVersionEnum = {}));
+})(GetPurgeQueueVersionEnum = exports.GetPurgeQueueVersionEnum || (exports.GetPurgeQueueVersionEnum = {}));
 var GetPurgeQueueQueryParams = /** @class */ (function (_super) {
     __extends(GetPurgeQueueQueryParams, _super);
     function GetPurgeQueueQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetPurgeQueueQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetPurgeQueueQueryParams.prototype, "version", void 0);
     return GetPurgeQueueQueryParams;
-}(SpeakeasyBase));
-export { GetPurgeQueueQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPurgeQueueQueryParams = GetPurgeQueueQueryParams;
 var GetPurgeQueueHeaders = /** @class */ (function (_super) {
     __extends(GetPurgeQueueHeaders, _super);
     function GetPurgeQueueHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetPurgeQueueHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetPurgeQueueHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetPurgeQueueHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetPurgeQueueHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetPurgeQueueHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetPurgeQueueHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetPurgeQueueHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetPurgeQueueHeaders;
-}(SpeakeasyBase));
-export { GetPurgeQueueHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetPurgeQueueHeaders = GetPurgeQueueHeaders;
 var GetPurgeQueueRequest = /** @class */ (function (_super) {
     __extends(GetPurgeQueueRequest, _super);
     function GetPurgeQueueRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPurgeQueuePathParams)
     ], GetPurgeQueueRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPurgeQueueQueryParams)
     ], GetPurgeQueueRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPurgeQueueHeaders)
     ], GetPurgeQueueRequest.prototype, "headers", void 0);
     return GetPurgeQueueRequest;
-}(SpeakeasyBase));
-export { GetPurgeQueueRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPurgeQueueRequest = GetPurgeQueueRequest;
 var GetPurgeQueueResponse = /** @class */ (function (_super) {
     __extends(GetPurgeQueueResponse, _super);
     function GetPurgeQueueResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetPurgeQueueResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPurgeQueueResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPurgeQueueResponse.prototype, "statusCode", void 0);
     return GetPurgeQueueResponse;
-}(SpeakeasyBase));
-export { GetPurgeQueueResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPurgeQueueResponse = GetPurgeQueueResponse;

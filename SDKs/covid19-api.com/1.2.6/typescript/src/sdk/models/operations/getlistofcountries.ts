@@ -48,5 +48,5 @@ export class GetListOfCountriesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: GetListOfCountries200ApplicationJson })
-  getListOfCountries200ApplicationJsonObjects?: GetListOfCountries200ApplicationJson[];
+  getListOfCountries200ApplicationJSONObjects?: GetListOfCountries200ApplicationJson[];
 }

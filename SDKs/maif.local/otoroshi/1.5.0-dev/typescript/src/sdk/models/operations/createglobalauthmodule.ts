@@ -26,5 +26,5 @@ export class CreateGlobalAuthModuleResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createGlobalAuthModule200ApplicationJsonOneOf?: any;
+  createGlobalAuthModule200ApplicationJSONOneOf?: any;
 }

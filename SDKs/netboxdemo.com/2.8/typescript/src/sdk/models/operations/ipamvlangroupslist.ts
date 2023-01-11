@@ -176,5 +176,5 @@ export class IpamVlanGroupsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ipamVlanGroupsList200ApplicationJsonObject?: IpamVlanGroupsList200ApplicationJson;
+  ipamVlanGroupsList200ApplicationJSONObject?: IpamVlanGroupsList200ApplicationJson;
 }

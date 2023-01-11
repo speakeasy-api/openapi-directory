@@ -24,7 +24,7 @@ export class GetSetQueueAttributesQueryParams extends SpeakeasyBase {
   action: GetSetQueueAttributesActionEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Attribute" })
-  attribute: Map<string, string>;
+  attribute: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetSetQueueAttributesVersionEnum;

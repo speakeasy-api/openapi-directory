@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Run } from "./run";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduleRunResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var run_1 = require("./run");
 // ScheduleRunResult
 /**
  * Represents the result of a schedule run request.
@@ -34,9 +37,9 @@ var ScheduleRunResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=run" }),
-        __metadata("design:type", Run)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=run" }),
+        __metadata("design:type", run_1.Run)
     ], ScheduleRunResult.prototype, "run", void 0);
     return ScheduleRunResult;
-}(SpeakeasyBase));
-export { ScheduleRunResult };
+}(utils_1.SpeakeasyBase));
+exports.ScheduleRunResult = ScheduleRunResult;

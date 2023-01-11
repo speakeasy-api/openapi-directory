@@ -11,7 +11,7 @@ export class AssetReportCreateRequestOptions extends SpeakeasyBase {
   clientReportId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=user" })
-  user?: Map<string, any>;
+  user?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=webhook" })
   webhook?: string;

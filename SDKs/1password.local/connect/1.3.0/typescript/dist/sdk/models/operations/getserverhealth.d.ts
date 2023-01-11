@@ -7,10 +7,10 @@ export declare class GetServerHealth200ApplicationJson extends SpeakeasyBase {
     version: string;
 }
 export declare class GetServerHealthRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
 }
 export declare class GetServerHealthResponse extends SpeakeasyBase {
     contentType: string;
-    getServerHealth200ApplicationJsonObject?: GetServerHealth200ApplicationJson;
+    getServerHealth200ApplicationJSONObject?: GetServerHealth200ApplicationJson;
     statusCode: number;
 }

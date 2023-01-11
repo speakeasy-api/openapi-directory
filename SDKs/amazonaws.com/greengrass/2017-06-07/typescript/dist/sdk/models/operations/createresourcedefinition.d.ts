@@ -19,7 +19,7 @@ export declare class CreateResourceDefinitionRequestBodyInitialVersion extends S
 export declare class CreateResourceDefinitionRequestBody extends SpeakeasyBase {
     initialVersion?: CreateResourceDefinitionRequestBodyInitialVersion;
     name?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateResourceDefinitionRequest extends SpeakeasyBase {
     headers: CreateResourceDefinitionHeaders;

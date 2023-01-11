@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SourceSourceTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Source = exports.SourceSourceTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SourceSourceTypeEnum;
 (function (SourceSourceTypeEnum) {
     SourceSourceTypeEnum["SourceTypeUnspecified"] = "SOURCE_TYPE_UNSPECIFIED";
     SourceSourceTypeEnum["ConfigVariable"] = "CONFIG_VARIABLE";
-})(SourceSourceTypeEnum || (SourceSourceTypeEnum = {}));
+})(SourceSourceTypeEnum = exports.SourceSourceTypeEnum || (exports.SourceSourceTypeEnum = {}));
 // Source
 /**
  * Source to extract the backend from.
@@ -38,13 +41,13 @@ var Source = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fieldId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fieldId" }),
         __metadata("design:type", String)
     ], Source.prototype, "fieldId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceType" }),
         __metadata("design:type", String)
     ], Source.prototype, "sourceType", void 0);
     return Source;
-}(SpeakeasyBase));
-export { Source };
+}(utils_1.SpeakeasyBase));
+exports.Source = Source;

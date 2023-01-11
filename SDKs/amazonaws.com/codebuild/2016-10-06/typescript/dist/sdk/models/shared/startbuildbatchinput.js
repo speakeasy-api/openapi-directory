@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,146 +23,148 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProjectArtifacts } from "./projectartifacts";
-import { ProjectBuildBatchConfig } from "./projectbuildbatchconfig";
-import { ProjectCache } from "./projectcache";
-import { ComputeTypeEnum } from "./computetypeenum";
-import { EnvironmentTypeEnum } from "./environmenttypeenum";
-import { EnvironmentVariable } from "./environmentvariable";
-import { GitSubmodulesConfig } from "./gitsubmodulesconfig";
-import { ImagePullCredentialsTypeEnum } from "./imagepullcredentialstypeenum";
-import { LogsConfig } from "./logsconfig";
-import { RegistryCredential } from "./registrycredential";
-import { ProjectSource } from "./projectsource";
-import { ProjectSourceVersion } from "./projectsourceversion";
-import { SourceAuth } from "./sourceauth";
-import { SourceTypeEnum } from "./sourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartBuildBatchInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var projectartifacts_1 = require("./projectartifacts");
+var projectbuildbatchconfig_1 = require("./projectbuildbatchconfig");
+var projectcache_1 = require("./projectcache");
+var computetypeenum_1 = require("./computetypeenum");
+var environmenttypeenum_1 = require("./environmenttypeenum");
+var environmentvariable_1 = require("./environmentvariable");
+var gitsubmodulesconfig_1 = require("./gitsubmodulesconfig");
+var imagepullcredentialstypeenum_1 = require("./imagepullcredentialstypeenum");
+var logsconfig_1 = require("./logsconfig");
+var registrycredential_1 = require("./registrycredential");
+var projectsource_1 = require("./projectsource");
+var projectsourceversion_1 = require("./projectsourceversion");
+var sourceauth_1 = require("./sourceauth");
+var sourcetypeenum_1 = require("./sourcetypeenum");
 var StartBuildBatchInput = /** @class */ (function (_super) {
     __extends(StartBuildBatchInput, _super);
     function StartBuildBatchInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artifactsOverride" }),
-        __metadata("design:type", ProjectArtifacts)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artifactsOverride" }),
+        __metadata("design:type", projectartifacts_1.ProjectArtifacts)
     ], StartBuildBatchInput.prototype, "artifactsOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildBatchConfigOverride" }),
-        __metadata("design:type", ProjectBuildBatchConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildBatchConfigOverride" }),
+        __metadata("design:type", projectbuildbatchconfig_1.ProjectBuildBatchConfig)
     ], StartBuildBatchInput.prototype, "buildBatchConfigOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildTimeoutInMinutesOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildTimeoutInMinutesOverride" }),
         __metadata("design:type", Number)
     ], StartBuildBatchInput.prototype, "buildTimeoutInMinutesOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildspecOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildspecOverride" }),
         __metadata("design:type", String)
     ], StartBuildBatchInput.prototype, "buildspecOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cacheOverride" }),
-        __metadata("design:type", ProjectCache)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cacheOverride" }),
+        __metadata("design:type", projectcache_1.ProjectCache)
     ], StartBuildBatchInput.prototype, "cacheOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateOverride" }),
         __metadata("design:type", String)
     ], StartBuildBatchInput.prototype, "certificateOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeTypeOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeTypeOverride" }),
         __metadata("design:type", String)
     ], StartBuildBatchInput.prototype, "computeTypeOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=debugSessionEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=debugSessionEnabled" }),
         __metadata("design:type", Boolean)
     ], StartBuildBatchInput.prototype, "debugSessionEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionKeyOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionKeyOverride" }),
         __metadata("design:type", String)
     ], StartBuildBatchInput.prototype, "encryptionKeyOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environmentTypeOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environmentTypeOverride" }),
         __metadata("design:type", String)
     ], StartBuildBatchInput.prototype, "environmentTypeOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environmentVariablesOverride", elemType: EnvironmentVariable }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environmentVariablesOverride", elemType: environmentvariable_1.EnvironmentVariable }),
         __metadata("design:type", Array)
     ], StartBuildBatchInput.prototype, "environmentVariablesOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gitCloneDepthOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gitCloneDepthOverride" }),
         __metadata("design:type", Number)
     ], StartBuildBatchInput.prototype, "gitCloneDepthOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gitSubmodulesConfigOverride" }),
-        __metadata("design:type", GitSubmodulesConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gitSubmodulesConfigOverride" }),
+        __metadata("design:type", gitsubmodulesconfig_1.GitSubmodulesConfig)
     ], StartBuildBatchInput.prototype, "gitSubmodulesConfigOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageOverride" }),
         __metadata("design:type", String)
     ], StartBuildBatchInput.prototype, "imageOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imagePullCredentialsTypeOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imagePullCredentialsTypeOverride" }),
         __metadata("design:type", String)
     ], StartBuildBatchInput.prototype, "imagePullCredentialsTypeOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insecureSslOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insecureSslOverride" }),
         __metadata("design:type", Boolean)
     ], StartBuildBatchInput.prototype, "insecureSslOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logsConfigOverride" }),
-        __metadata("design:type", LogsConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logsConfigOverride" }),
+        __metadata("design:type", logsconfig_1.LogsConfig)
     ], StartBuildBatchInput.prototype, "logsConfigOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privilegedModeOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privilegedModeOverride" }),
         __metadata("design:type", Boolean)
     ], StartBuildBatchInput.prototype, "privilegedModeOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectName" }),
         __metadata("design:type", String)
     ], StartBuildBatchInput.prototype, "projectName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queuedTimeoutInMinutesOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queuedTimeoutInMinutesOverride" }),
         __metadata("design:type", Number)
     ], StartBuildBatchInput.prototype, "queuedTimeoutInMinutesOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registryCredentialOverride" }),
-        __metadata("design:type", RegistryCredential)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registryCredentialOverride" }),
+        __metadata("design:type", registrycredential_1.RegistryCredential)
     ], StartBuildBatchInput.prototype, "registryCredentialOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportBuildBatchStatusOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportBuildBatchStatusOverride" }),
         __metadata("design:type", Boolean)
     ], StartBuildBatchInput.prototype, "reportBuildBatchStatusOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondaryArtifactsOverride", elemType: ProjectArtifacts }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondaryArtifactsOverride", elemType: projectartifacts_1.ProjectArtifacts }),
         __metadata("design:type", Array)
     ], StartBuildBatchInput.prototype, "secondaryArtifactsOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondarySourcesOverride", elemType: ProjectSource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondarySourcesOverride", elemType: projectsource_1.ProjectSource }),
         __metadata("design:type", Array)
     ], StartBuildBatchInput.prototype, "secondarySourcesOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondarySourcesVersionOverride", elemType: ProjectSourceVersion }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondarySourcesVersionOverride", elemType: projectsourceversion_1.ProjectSourceVersion }),
         __metadata("design:type", Array)
     ], StartBuildBatchInput.prototype, "secondarySourcesVersionOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceRoleOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceRoleOverride" }),
         __metadata("design:type", String)
     ], StartBuildBatchInput.prototype, "serviceRoleOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceAuthOverride" }),
-        __metadata("design:type", SourceAuth)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceAuthOverride" }),
+        __metadata("design:type", sourceauth_1.SourceAuth)
     ], StartBuildBatchInput.prototype, "sourceAuthOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceLocationOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceLocationOverride" }),
         __metadata("design:type", String)
     ], StartBuildBatchInput.prototype, "sourceLocationOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceTypeOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceTypeOverride" }),
         __metadata("design:type", String)
     ], StartBuildBatchInput.prototype, "sourceTypeOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceVersion" }),
         __metadata("design:type", String)
     ], StartBuildBatchInput.prototype, "sourceVersion", void 0);
     return StartBuildBatchInput;
-}(SpeakeasyBase));
-export { StartBuildBatchInput };
+}(utils_1.SpeakeasyBase));
+exports.StartBuildBatchInput = StartBuildBatchInput;

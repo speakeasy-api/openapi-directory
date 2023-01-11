@@ -50,5 +50,5 @@ export class GetTeamResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getTeam200ApplicationJsonObject?: GetTeam200ApplicationJson;
+  getTeam200ApplicationJSONObject?: GetTeam200ApplicationJson;
 }

@@ -28,8 +28,8 @@ export class DeleteSetupV1LocationsIdDeleteallimagesResponse extends SpeakeasyBa
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteSetupV1LocationsIdDeleteallimages200ApplicationJsonBoolean?: boolean;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  deleteSetupV1LocationsIdDeleteallimages200ApplicationJSONBoolean?: boolean;
 }

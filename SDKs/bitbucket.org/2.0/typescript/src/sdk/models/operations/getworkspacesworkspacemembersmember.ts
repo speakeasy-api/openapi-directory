@@ -41,8 +41,8 @@ export class GetWorkspacesWorkspaceMembersMemberResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  workspaceMembership?: Map<string, any>;
+  workspaceMembership?: Record<string, any>;
 }

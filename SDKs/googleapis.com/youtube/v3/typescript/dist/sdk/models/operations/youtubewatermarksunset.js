@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,174 +14,199 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.YoutubeWatermarksUnsetResponse = exports.YoutubeWatermarksUnsetRequest = exports.YoutubeWatermarksUnsetSecurity = exports.YoutubeWatermarksUnsetSecurityOption3 = exports.YoutubeWatermarksUnsetSecurityOption2 = exports.YoutubeWatermarksUnsetSecurityOption1 = exports.YoutubeWatermarksUnsetQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var YoutubeWatermarksUnsetQueryParams = /** @class */ (function (_super) {
     __extends(YoutubeWatermarksUnsetQueryParams, _super);
     function YoutubeWatermarksUnsetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], YoutubeWatermarksUnsetQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], YoutubeWatermarksUnsetQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], YoutubeWatermarksUnsetQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], YoutubeWatermarksUnsetQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=channelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=channelId" }),
         __metadata("design:type", String)
     ], YoutubeWatermarksUnsetQueryParams.prototype, "channelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], YoutubeWatermarksUnsetQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], YoutubeWatermarksUnsetQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], YoutubeWatermarksUnsetQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=onBehalfOfContentOwner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=onBehalfOfContentOwner" }),
         __metadata("design:type", String)
     ], YoutubeWatermarksUnsetQueryParams.prototype, "onBehalfOfContentOwner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], YoutubeWatermarksUnsetQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], YoutubeWatermarksUnsetQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], YoutubeWatermarksUnsetQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], YoutubeWatermarksUnsetQueryParams.prototype, "uploadProtocol", void 0);
     return YoutubeWatermarksUnsetQueryParams;
-}(SpeakeasyBase));
-export { YoutubeWatermarksUnsetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeWatermarksUnsetQueryParams = YoutubeWatermarksUnsetQueryParams;
 var YoutubeWatermarksUnsetSecurityOption1 = /** @class */ (function (_super) {
     __extends(YoutubeWatermarksUnsetSecurityOption1, _super);
     function YoutubeWatermarksUnsetSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], YoutubeWatermarksUnsetSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], YoutubeWatermarksUnsetSecurityOption1.prototype, "oauth2c", void 0);
     return YoutubeWatermarksUnsetSecurityOption1;
-}(SpeakeasyBase));
-export { YoutubeWatermarksUnsetSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeWatermarksUnsetSecurityOption1 = YoutubeWatermarksUnsetSecurityOption1;
 var YoutubeWatermarksUnsetSecurityOption2 = /** @class */ (function (_super) {
     __extends(YoutubeWatermarksUnsetSecurityOption2, _super);
     function YoutubeWatermarksUnsetSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], YoutubeWatermarksUnsetSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], YoutubeWatermarksUnsetSecurityOption2.prototype, "oauth2c", void 0);
     return YoutubeWatermarksUnsetSecurityOption2;
-}(SpeakeasyBase));
-export { YoutubeWatermarksUnsetSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeWatermarksUnsetSecurityOption2 = YoutubeWatermarksUnsetSecurityOption2;
 var YoutubeWatermarksUnsetSecurityOption3 = /** @class */ (function (_super) {
     __extends(YoutubeWatermarksUnsetSecurityOption3, _super);
     function YoutubeWatermarksUnsetSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], YoutubeWatermarksUnsetSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], YoutubeWatermarksUnsetSecurityOption3.prototype, "oauth2c", void 0);
     return YoutubeWatermarksUnsetSecurityOption3;
-}(SpeakeasyBase));
-export { YoutubeWatermarksUnsetSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeWatermarksUnsetSecurityOption3 = YoutubeWatermarksUnsetSecurityOption3;
 var YoutubeWatermarksUnsetSecurity = /** @class */ (function (_super) {
     __extends(YoutubeWatermarksUnsetSecurity, _super);
     function YoutubeWatermarksUnsetSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", YoutubeWatermarksUnsetSecurityOption1)
     ], YoutubeWatermarksUnsetSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", YoutubeWatermarksUnsetSecurityOption2)
     ], YoutubeWatermarksUnsetSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", YoutubeWatermarksUnsetSecurityOption3)
     ], YoutubeWatermarksUnsetSecurity.prototype, "option3", void 0);
     return YoutubeWatermarksUnsetSecurity;
-}(SpeakeasyBase));
-export { YoutubeWatermarksUnsetSecurity };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeWatermarksUnsetSecurity = YoutubeWatermarksUnsetSecurity;
 var YoutubeWatermarksUnsetRequest = /** @class */ (function (_super) {
     __extends(YoutubeWatermarksUnsetRequest, _super);
     function YoutubeWatermarksUnsetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", YoutubeWatermarksUnsetQueryParams)
     ], YoutubeWatermarksUnsetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", YoutubeWatermarksUnsetSecurity)
     ], YoutubeWatermarksUnsetRequest.prototype, "security", void 0);
     return YoutubeWatermarksUnsetRequest;
-}(SpeakeasyBase));
-export { YoutubeWatermarksUnsetRequest };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeWatermarksUnsetRequest = YoutubeWatermarksUnsetRequest;
 var YoutubeWatermarksUnsetResponse = /** @class */ (function (_super) {
     __extends(YoutubeWatermarksUnsetResponse, _super);
     function YoutubeWatermarksUnsetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], YoutubeWatermarksUnsetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], YoutubeWatermarksUnsetResponse.prototype, "statusCode", void 0);
     return YoutubeWatermarksUnsetResponse;
-}(SpeakeasyBase));
-export { YoutubeWatermarksUnsetResponse };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeWatermarksUnsetResponse = YoutubeWatermarksUnsetResponse;

@@ -4,8 +4,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class CreateFpgaImageResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  fpgaImageGlobalId?: string;
+  fpgaImageGlobalId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  fpgaImageId?: string;
+  fpgaImageId?: Record<string, any>;
 }

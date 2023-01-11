@@ -2,24 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-export class ImageAttachmentInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=content_type" })
-  contentType: string;
-
-  @SpeakeasyMetadata({ data: "json, name=image_height" })
-  imageHeight: number;
-
-  @SpeakeasyMetadata({ data: "json, name=image_width" })
-  imageWidth: number;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=object_id" })
-  objectId: number;
-}
-
-
 export class ImageAttachment extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=content_type" })
   contentType: string;
@@ -47,4 +29,22 @@ export class ImageAttachment extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=parent" })
   parent?: string;
+}
+
+
+export class ImageAttachmentInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=content_type" })
+  contentType: string;
+
+  @SpeakeasyMetadata({ data: "json, name=image_height" })
+  imageHeight: number;
+
+  @SpeakeasyMetadata({ data: "json, name=image_width" })
+  imageWidth: number;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=object_id" })
+  objectId: number;
 }

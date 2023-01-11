@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostScrobbleShowsResponse = exports.PostScrobbleShowsRequest = exports.PostScrobbleShowsRequestBody = exports.PostScrobbleShowsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostScrobbleShowsQueryParams = /** @class */ (function (_super) {
     __extends(PostScrobbleShowsQueryParams, _super);
     function PostScrobbleShowsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=imdb_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=imdb_id" }),
         __metadata("design:type", Number)
     ], PostScrobbleShowsQueryParams.prototype, "imdbId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=thetvdb_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=thetvdb_id" }),
         __metadata("design:type", Number)
     ], PostScrobbleShowsQueryParams.prototype, "thetvdbId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=tvmaze_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=tvmaze_id" }),
         __metadata("design:type", Number)
     ], PostScrobbleShowsQueryParams.prototype, "tvmazeId", void 0);
     return PostScrobbleShowsQueryParams;
-}(SpeakeasyBase));
-export { PostScrobbleShowsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostScrobbleShowsQueryParams = PostScrobbleShowsQueryParams;
 var PostScrobbleShowsRequestBody = /** @class */ (function (_super) {
     __extends(PostScrobbleShowsRequestBody, _super);
     function PostScrobbleShowsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=airdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=airdate" }),
         __metadata("design:type", Date)
     ], PostScrobbleShowsRequestBody.prototype, "airdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=episode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=episode" }),
         __metadata("design:type", Number)
     ], PostScrobbleShowsRequestBody.prototype, "episode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marked_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marked_at" }),
         __metadata("design:type", Number)
     ], PostScrobbleShowsRequestBody.prototype, "markedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=season" }),
         __metadata("design:type", Number)
     ], PostScrobbleShowsRequestBody.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", Object)
     ], PostScrobbleShowsRequestBody.prototype, "type", void 0);
     return PostScrobbleShowsRequestBody;
-}(SpeakeasyBase));
-export { PostScrobbleShowsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostScrobbleShowsRequestBody = PostScrobbleShowsRequestBody;
 var PostScrobbleShowsRequest = /** @class */ (function (_super) {
     __extends(PostScrobbleShowsRequest, _super);
     function PostScrobbleShowsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostScrobbleShowsQueryParams)
     ], PostScrobbleShowsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json", elemType: PostScrobbleShowsRequestBody }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json", elemType: PostScrobbleShowsRequestBody }),
         __metadata("design:type", Array)
     ], PostScrobbleShowsRequest.prototype, "request", void 0);
     return PostScrobbleShowsRequest;
-}(SpeakeasyBase));
-export { PostScrobbleShowsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostScrobbleShowsRequest = PostScrobbleShowsRequest;
 var PostScrobbleShowsResponse = /** @class */ (function (_super) {
     __extends(PostScrobbleShowsResponse, _super);
     function PostScrobbleShowsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PostScrobbleShowsResponse.prototype, "bulkResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostScrobbleShowsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostScrobbleShowsResponse.prototype, "statusCode", void 0);
     return PostScrobbleShowsResponse;
-}(SpeakeasyBase));
-export { PostScrobbleShowsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostScrobbleShowsResponse = PostScrobbleShowsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentReadyActionEnum } from "./deploymentreadyactionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeploymentReadyOption = void 0;
+var utils_1 = require("../../../internal/utils");
+var deploymentreadyactionenum_1 = require("./deploymentreadyactionenum");
 // DeploymentReadyOption
 /**
  * Information about how traffic is rerouted to instances in a replacement environment in a blue/green deployment.
@@ -34,13 +37,13 @@ var DeploymentReadyOption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionOnTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionOnTimeout" }),
         __metadata("design:type", String)
     ], DeploymentReadyOption.prototype, "actionOnTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=waitTimeInMinutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=waitTimeInMinutes" }),
         __metadata("design:type", Number)
     ], DeploymentReadyOption.prototype, "waitTimeInMinutes", void 0);
     return DeploymentReadyOption;
-}(SpeakeasyBase));
-export { DeploymentReadyOption };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentReadyOption = DeploymentReadyOption;

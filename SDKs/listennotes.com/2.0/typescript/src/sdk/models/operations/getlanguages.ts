@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class GetLanguagesHeaders extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-ListenAPI-Key" })
-  xListenApiKey: string;
+  xListenAPIKey: string;
 }
 
 
@@ -23,7 +23,7 @@ export class GetLanguagesResponse extends SpeakeasyBase {
   getLanguagesResponse?: shared.GetLanguagesResponse;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -7,7 +7,7 @@ export declare class ProtocolIpmiGetTraceRequest extends SpeakeasyBase {
     pathParams: ProtocolIpmiGetTracePathParams;
 }
 export declare class ProtocolIpmiGetTraceResponse extends SpeakeasyBase {
-    configIpmi?: shared.ConfigIpmi;
+    configIPMI?: shared.ConfigIpmi;
     contentType: string;
     statusCode: number;
 }

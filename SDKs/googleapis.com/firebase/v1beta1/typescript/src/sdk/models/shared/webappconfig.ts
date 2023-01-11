@@ -17,7 +17,7 @@ export class WebAppConfig extends SpeakeasyBase {
   authDomain?: string;
 
   @SpeakeasyMetadata({ data: "json, name=databaseURL" })
-  databaseUrl?: string;
+  databaseURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=locationId" })
   locationId?: string;

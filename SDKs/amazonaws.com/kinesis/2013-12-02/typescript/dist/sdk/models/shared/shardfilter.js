@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ShardFilterTypeEnum } from "./shardfiltertypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShardFilter = void 0;
+var utils_1 = require("../../../internal/utils");
+var shardfiltertypeenum_1 = require("./shardfiltertypeenum");
 var ShardFilter = /** @class */ (function (_super) {
     __extends(ShardFilter, _super);
     function ShardFilter() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ShardId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ShardId" }),
         __metadata("design:type", String)
     ], ShardFilter.prototype, "shardId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Timestamp" }),
         __metadata("design:type", Date)
     ], ShardFilter.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], ShardFilter.prototype, "type", void 0);
     return ShardFilter;
-}(SpeakeasyBase));
-export { ShardFilter };
+}(utils_1.SpeakeasyBase));
+exports.ShardFilter = ShardFilter;

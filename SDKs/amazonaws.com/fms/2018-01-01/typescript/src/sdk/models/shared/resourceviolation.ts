@@ -31,7 +31,7 @@ export class ResourceViolation extends SpeakeasyBase {
   awsEc2NetworkInterfaceViolation?: AwsEc2NetworkInterfaceViolation;
 
   @SpeakeasyMetadata({ data: "json, name=AwsVPCSecurityGroupViolation" })
-  awsVpcSecurityGroupViolation?: AwsVpcSecurityGroupViolation;
+  awsVPCSecurityGroupViolation?: AwsVpcSecurityGroupViolation;
 
   @SpeakeasyMetadata({ data: "json, name=DnsDuplicateRuleGroupViolation" })
   dnsDuplicateRuleGroupViolation?: DnsDuplicateRuleGroupViolation;
@@ -52,7 +52,7 @@ export class ResourceViolation extends SpeakeasyBase {
   networkFirewallInvalidRouteConfigurationViolation?: NetworkFirewallInvalidRouteConfigurationViolation;
 
   @SpeakeasyMetadata({ data: "json, name=NetworkFirewallMissingExpectedRTViolation" })
-  networkFirewallMissingExpectedRtViolation?: NetworkFirewallMissingExpectedRtViolation;
+  networkFirewallMissingExpectedRTViolation?: NetworkFirewallMissingExpectedRtViolation;
 
   @SpeakeasyMetadata({ data: "json, name=NetworkFirewallMissingExpectedRoutesViolation" })
   networkFirewallMissingExpectedRoutesViolation?: NetworkFirewallMissingExpectedRoutesViolation;

@@ -29,7 +29,7 @@ export class RemediationConfiguration extends SpeakeasyBase {
   maximumAutomaticAttempts?: number;
 
   @SpeakeasyMetadata({ data: "json, name=Parameters", elemType: RemediationParameterValue })
-  parameters?: Map<string, RemediationParameterValue>;
+  parameters?: Record<string, RemediationParameterValue>;
 
   @SpeakeasyMetadata({ data: "json, name=ResourceType" })
   resourceType?: string;

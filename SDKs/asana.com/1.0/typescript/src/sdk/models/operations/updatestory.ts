@@ -53,5 +53,5 @@ export class UpdateStoryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateStory200ApplicationJsonObject?: UpdateStory200ApplicationJson;
+  updateStory200ApplicationJSONObject?: UpdateStory200ApplicationJson;
 }

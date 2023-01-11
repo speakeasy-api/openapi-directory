@@ -20,7 +20,7 @@ export declare enum UpdateFindingsFilterRequestBodyActionEnum {
  * Specifies, as a map, one or more property-based conditions that filter the results of a query for findings.
 **/
 export declare class UpdateFindingsFilterRequestBodyFindingCriteria extends SpeakeasyBase {
-    criterion?: Map<string, shared.CriterionAdditionalProperties>;
+    criterion?: Record<string, shared.CriterionAdditionalProperties>;
 }
 export declare class UpdateFindingsFilterRequestBody extends SpeakeasyBase {
     action?: UpdateFindingsFilterRequestBodyActionEnum;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModelYearDistEntry = void 0;
+var utils_1 = require("../../../internal/utils");
 var ModelYearDistEntry = /** @class */ (function (_super) {
     __extends(ModelYearDistEntry, _super);
     function ModelYearDistEntry() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brandName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brandName" }),
         __metadata("design:type", String)
     ], ModelYearDistEntry.prototype, "brandName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modelName" }),
         __metadata("design:type", String)
     ], ModelYearDistEntry.prototype, "modelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentOfMarket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentOfMarket" }),
         __metadata("design:type", Number)
     ], ModelYearDistEntry.prototype, "percentOfMarket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=year" }),
         __metadata("design:type", Number)
     ], ModelYearDistEntry.prototype, "year", void 0);
     return ModelYearDistEntry;
-}(SpeakeasyBase));
-export { ModelYearDistEntry };
+}(utils_1.SpeakeasyBase));
+exports.ModelYearDistEntry = ModelYearDistEntry;

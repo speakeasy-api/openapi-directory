@@ -7,7 +7,7 @@ export class ProtocolTftpSessionStartPathParams extends SpeakeasyBase {
   agentNum: number;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=sessionID" })
-  sessionId: string;
+  sessionID: string;
 }
 
 
@@ -25,5 +25,5 @@ export class ProtocolTftpSessionStartResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTftpSessionStart200ApplicationJsonString?: string;
+  protocolTftpSessionStart200ApplicationJSONString?: string;
 }

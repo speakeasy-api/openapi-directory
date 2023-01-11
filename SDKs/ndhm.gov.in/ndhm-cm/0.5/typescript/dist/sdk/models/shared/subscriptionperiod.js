@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionPeriod = void 0;
+var utils_1 = require("../../../internal/utils");
 var SubscriptionPeriod = /** @class */ (function (_super) {
     __extends(SubscriptionPeriod, _super);
     function SubscriptionPeriod() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", Date)
     ], SubscriptionPeriod.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to" }),
         __metadata("design:type", Date)
     ], SubscriptionPeriod.prototype, "to", void 0);
     return SubscriptionPeriod;
-}(SpeakeasyBase));
-export { SubscriptionPeriod };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionPeriod = SubscriptionPeriod;

@@ -191,23 +191,23 @@ export class FmcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  fmcer400ApplicationJsonObject?: Fmcer400ApplicationJson;
+  fmcer400ApplicationJSONObject?: Fmcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  fmcer401ApplicationJsonObject?: Fmcer401ApplicationJson;
+  fmcer401ApplicationJSONObject?: Fmcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  fmcer404ApplicationJsonObject?: Fmcer404ApplicationJson;
+  fmcer404ApplicationJSONObject?: Fmcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  fmcer500ApplicationJsonObject?: Fmcer500ApplicationJson;
+  fmcer500ApplicationJSONObject?: Fmcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  fmcer502ApplicationJsonObject?: Fmcer502ApplicationJson;
+  fmcer502ApplicationJSONObject?: Fmcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  fmcer503ApplicationJsonObject?: Fmcer503ApplicationJson;
+  fmcer503ApplicationJSONObject?: Fmcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  fmcer504ApplicationJsonObject?: Fmcer504ApplicationJson;
+  fmcer504ApplicationJSONObject?: Fmcer504ApplicationJson;
 }

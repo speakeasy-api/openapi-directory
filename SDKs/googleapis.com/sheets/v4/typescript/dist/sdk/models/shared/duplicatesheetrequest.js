@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DuplicateSheetRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // DuplicateSheetRequest
 /**
  * Duplicates the contents of a sheet.
@@ -33,21 +36,21 @@ var DuplicateSheetRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insertSheetIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insertSheetIndex" }),
         __metadata("design:type", Number)
     ], DuplicateSheetRequest.prototype, "insertSheetIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newSheetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newSheetId" }),
         __metadata("design:type", Number)
     ], DuplicateSheetRequest.prototype, "newSheetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newSheetName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newSheetName" }),
         __metadata("design:type", String)
     ], DuplicateSheetRequest.prototype, "newSheetName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceSheetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceSheetId" }),
         __metadata("design:type", Number)
     ], DuplicateSheetRequest.prototype, "sourceSheetId", void 0);
     return DuplicateSheetRequest;
-}(SpeakeasyBase));
-export { DuplicateSheetRequest };
+}(utils_1.SpeakeasyBase));
+exports.DuplicateSheetRequest = DuplicateSheetRequest;

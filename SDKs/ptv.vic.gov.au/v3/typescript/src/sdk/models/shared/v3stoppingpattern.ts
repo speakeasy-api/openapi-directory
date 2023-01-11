@@ -13,20 +13,20 @@ export class V3StoppingPattern extends SpeakeasyBase {
   departures?: V3PatternDeparture[];
 
   @SpeakeasyMetadata({ data: "json, name=directions", elemType: V3Direction })
-  directions?: Map<string, V3Direction>;
+  directions?: Record<string, V3Direction>;
 
   @SpeakeasyMetadata({ data: "json, name=disruptions", elemType: V3Disruption })
   disruptions?: V3Disruption[];
 
   @SpeakeasyMetadata({ data: "json, name=routes" })
-  routes?: Map<string, Map<string, any>>;
+  routes?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata({ data: "json, name=runs", elemType: V3Run })
-  runs?: Map<string, V3Run>;
+  runs?: Record<string, V3Run>;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: V3Status;
 
   @SpeakeasyMetadata({ data: "json, name=stops", elemType: V3StoppingPatternStop })
-  stops?: Map<string, V3StoppingPatternStop>;
+  stops?: Record<string, V3StoppingPatternStop>;
 }

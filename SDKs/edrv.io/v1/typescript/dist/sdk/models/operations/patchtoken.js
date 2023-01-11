@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,107 +23,109 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatchTokenResponse = exports.PatchTokenRequest = exports.PatchToken201ApplicationJson = exports.PatchTokenRequestBody = exports.PatchTokenRequestBodyChannelEnum = exports.PatchTokenPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PatchTokenPathParams = /** @class */ (function (_super) {
     __extends(PatchTokenPathParams, _super);
     function PatchTokenPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], PatchTokenPathParams.prototype, "id", void 0);
     return PatchTokenPathParams;
-}(SpeakeasyBase));
-export { PatchTokenPathParams };
-export var PatchTokenRequestBodyChannelEnum;
+}(utils_1.SpeakeasyBase));
+exports.PatchTokenPathParams = PatchTokenPathParams;
+var PatchTokenRequestBodyChannelEnum;
 (function (PatchTokenRequestBodyChannelEnum) {
     PatchTokenRequestBodyChannelEnum["Physical"] = "physical";
     PatchTokenRequestBodyChannelEnum["Slack"] = "slack";
     PatchTokenRequestBodyChannelEnum["Telegram"] = "telegram";
     PatchTokenRequestBodyChannelEnum["Sms"] = "sms";
-})(PatchTokenRequestBodyChannelEnum || (PatchTokenRequestBodyChannelEnum = {}));
+})(PatchTokenRequestBodyChannelEnum = exports.PatchTokenRequestBodyChannelEnum || (exports.PatchTokenRequestBodyChannelEnum = {}));
 var PatchTokenRequestBody = /** @class */ (function (_super) {
     __extends(PatchTokenRequestBody, _super);
     function PatchTokenRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], PatchTokenRequestBody.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channel" }),
         __metadata("design:type", String)
     ], PatchTokenRequestBody.prototype, "channel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driver" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driver" }),
         __metadata("design:type", String)
     ], PatchTokenRequestBody.prototype, "driver", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=physicalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=physicalId" }),
         __metadata("design:type", String)
     ], PatchTokenRequestBody.prototype, "physicalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PatchTokenRequestBody.prototype, "type", void 0);
     return PatchTokenRequestBody;
-}(SpeakeasyBase));
-export { PatchTokenRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PatchTokenRequestBody = PatchTokenRequestBody;
 var PatchToken201ApplicationJson = /** @class */ (function (_super) {
     __extends(PatchToken201ApplicationJson, _super);
     function PatchToken201ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PatchToken201ApplicationJson.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ok" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ok" }),
         __metadata("design:type", Boolean)
     ], PatchToken201ApplicationJson.prototype, "ok", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", Array)
     ], PatchToken201ApplicationJson.prototype, "result", void 0);
     return PatchToken201ApplicationJson;
-}(SpeakeasyBase));
-export { PatchToken201ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PatchToken201ApplicationJson = PatchToken201ApplicationJson;
 var PatchTokenRequest = /** @class */ (function (_super) {
     __extends(PatchTokenRequest, _super);
     function PatchTokenRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PatchTokenPathParams)
     ], PatchTokenRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PatchTokenRequestBody)
     ], PatchTokenRequest.prototype, "request", void 0);
     return PatchTokenRequest;
-}(SpeakeasyBase));
-export { PatchTokenRequest };
+}(utils_1.SpeakeasyBase));
+exports.PatchTokenRequest = PatchTokenRequest;
 var PatchTokenResponse = /** @class */ (function (_super) {
     __extends(PatchTokenResponse, _super);
     function PatchTokenResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PatchTokenResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PatchTokenResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PatchToken201ApplicationJson)
-    ], PatchTokenResponse.prototype, "patchToken201ApplicationJsonObject", void 0);
+    ], PatchTokenResponse.prototype, "patchToken201ApplicationJSONObject", void 0);
     return PatchTokenResponse;
-}(SpeakeasyBase));
-export { PatchTokenResponse };
+}(utils_1.SpeakeasyBase));
+exports.PatchTokenResponse = PatchTokenResponse;

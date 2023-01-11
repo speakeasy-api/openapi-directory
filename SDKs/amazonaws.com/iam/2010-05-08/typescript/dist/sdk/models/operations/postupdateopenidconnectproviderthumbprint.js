@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostUpdateOpenIdConnectProviderThumbprintActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostUpdateOpenIdConnectProviderThumbprintResponse = exports.PostUpdateOpenIdConnectProviderThumbprintRequest = exports.PostUpdateOpenIdConnectProviderThumbprintHeaders = exports.PostUpdateOpenIdConnectProviderThumbprintQueryParams = exports.PostUpdateOpenIdConnectProviderThumbprintVersionEnum = exports.PostUpdateOpenIdConnectProviderThumbprintActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostUpdateOpenIdConnectProviderThumbprintActionEnum;
 (function (PostUpdateOpenIdConnectProviderThumbprintActionEnum) {
     PostUpdateOpenIdConnectProviderThumbprintActionEnum["UpdateOpenIdConnectProviderThumbprint"] = "UpdateOpenIDConnectProviderThumbprint";
-})(PostUpdateOpenIdConnectProviderThumbprintActionEnum || (PostUpdateOpenIdConnectProviderThumbprintActionEnum = {}));
-export var PostUpdateOpenIdConnectProviderThumbprintVersionEnum;
+})(PostUpdateOpenIdConnectProviderThumbprintActionEnum = exports.PostUpdateOpenIdConnectProviderThumbprintActionEnum || (exports.PostUpdateOpenIdConnectProviderThumbprintActionEnum = {}));
+var PostUpdateOpenIdConnectProviderThumbprintVersionEnum;
 (function (PostUpdateOpenIdConnectProviderThumbprintVersionEnum) {
     PostUpdateOpenIdConnectProviderThumbprintVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostUpdateOpenIdConnectProviderThumbprintVersionEnum || (PostUpdateOpenIdConnectProviderThumbprintVersionEnum = {}));
+})(PostUpdateOpenIdConnectProviderThumbprintVersionEnum = exports.PostUpdateOpenIdConnectProviderThumbprintVersionEnum || (exports.PostUpdateOpenIdConnectProviderThumbprintVersionEnum = {}));
 var PostUpdateOpenIdConnectProviderThumbprintQueryParams = /** @class */ (function (_super) {
     __extends(PostUpdateOpenIdConnectProviderThumbprintQueryParams, _super);
     function PostUpdateOpenIdConnectProviderThumbprintQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostUpdateOpenIdConnectProviderThumbprintQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostUpdateOpenIdConnectProviderThumbprintQueryParams.prototype, "version", void 0);
     return PostUpdateOpenIdConnectProviderThumbprintQueryParams;
-}(SpeakeasyBase));
-export { PostUpdateOpenIdConnectProviderThumbprintQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateOpenIdConnectProviderThumbprintQueryParams = PostUpdateOpenIdConnectProviderThumbprintQueryParams;
 var PostUpdateOpenIdConnectProviderThumbprintHeaders = /** @class */ (function (_super) {
     __extends(PostUpdateOpenIdConnectProviderThumbprintHeaders, _super);
     function PostUpdateOpenIdConnectProviderThumbprintHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostUpdateOpenIdConnectProviderThumbprintHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostUpdateOpenIdConnectProviderThumbprintHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostUpdateOpenIdConnectProviderThumbprintHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostUpdateOpenIdConnectProviderThumbprintHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostUpdateOpenIdConnectProviderThumbprintHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostUpdateOpenIdConnectProviderThumbprintHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostUpdateOpenIdConnectProviderThumbprintHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostUpdateOpenIdConnectProviderThumbprintHeaders;
-}(SpeakeasyBase));
-export { PostUpdateOpenIdConnectProviderThumbprintHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateOpenIdConnectProviderThumbprintHeaders = PostUpdateOpenIdConnectProviderThumbprintHeaders;
 var PostUpdateOpenIdConnectProviderThumbprintRequest = /** @class */ (function (_super) {
     __extends(PostUpdateOpenIdConnectProviderThumbprintRequest, _super);
     function PostUpdateOpenIdConnectProviderThumbprintRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostUpdateOpenIdConnectProviderThumbprintQueryParams)
     ], PostUpdateOpenIdConnectProviderThumbprintRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostUpdateOpenIdConnectProviderThumbprintHeaders)
     ], PostUpdateOpenIdConnectProviderThumbprintRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostUpdateOpenIdConnectProviderThumbprintRequest.prototype, "request", void 0);
     return PostUpdateOpenIdConnectProviderThumbprintRequest;
-}(SpeakeasyBase));
-export { PostUpdateOpenIdConnectProviderThumbprintRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateOpenIdConnectProviderThumbprintRequest = PostUpdateOpenIdConnectProviderThumbprintRequest;
 var PostUpdateOpenIdConnectProviderThumbprintResponse = /** @class */ (function (_super) {
     __extends(PostUpdateOpenIdConnectProviderThumbprintResponse, _super);
     function PostUpdateOpenIdConnectProviderThumbprintResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostUpdateOpenIdConnectProviderThumbprintResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostUpdateOpenIdConnectProviderThumbprintResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostUpdateOpenIdConnectProviderThumbprintResponse.prototype, "statusCode", void 0);
     return PostUpdateOpenIdConnectProviderThumbprintResponse;
-}(SpeakeasyBase));
-export { PostUpdateOpenIdConnectProviderThumbprintResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateOpenIdConnectProviderThumbprintResponse = PostUpdateOpenIdConnectProviderThumbprintResponse;

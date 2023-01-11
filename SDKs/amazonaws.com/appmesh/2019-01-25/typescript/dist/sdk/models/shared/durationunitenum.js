@@ -1,5 +1,8 @@
-export var DurationUnitEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DurationUnitEnum = void 0;
+var DurationUnitEnum;
 (function (DurationUnitEnum) {
     DurationUnitEnum["S"] = "s";
     DurationUnitEnum["Ms"] = "ms";
-})(DurationUnitEnum || (DurationUnitEnum = {}));
+})(DurationUnitEnum = exports.DurationUnitEnum || (exports.DurationUnitEnum = {}));

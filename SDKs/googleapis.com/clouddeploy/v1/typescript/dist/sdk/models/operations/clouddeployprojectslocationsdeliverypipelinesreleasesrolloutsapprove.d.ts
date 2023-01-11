@@ -27,7 +27,7 @@ export declare class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollou
     security: ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveSecurity;
 }
 export declare class ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveResponse extends SpeakeasyBase {
-    approveRolloutResponse?: Map<string, any>;
+    approveRolloutResponse?: Record<string, any>;
     contentType: string;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Endpoint = void 0;
+var utils_1 = require("../../../internal/utils");
 // Endpoint
 /**
  * Represents an available endpoint against which to make API calls agaisnt, as well as the TTL for that endpoint.
@@ -33,13 +36,13 @@ var Endpoint = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Address" }),
         __metadata("design:type", String)
     ], Endpoint.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CachePeriodInMinutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CachePeriodInMinutes" }),
         __metadata("design:type", Number)
     ], Endpoint.prototype, "cachePeriodInMinutes", void 0);
     return Endpoint;
-}(SpeakeasyBase));
-export { Endpoint };
+}(utils_1.SpeakeasyBase));
+exports.Endpoint = Endpoint;

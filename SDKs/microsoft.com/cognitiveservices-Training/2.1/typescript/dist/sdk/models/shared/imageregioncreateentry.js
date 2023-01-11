@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageRegionCreateEntry = void 0;
+var utils_1 = require("../../../internal/utils");
 var ImageRegionCreateEntry = /** @class */ (function (_super) {
     __extends(ImageRegionCreateEntry, _super);
     function ImageRegionCreateEntry() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], ImageRegionCreateEntry.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageId" }),
         __metadata("design:type", String)
     ], ImageRegionCreateEntry.prototype, "imageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=left" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=left" }),
         __metadata("design:type", Number)
     ], ImageRegionCreateEntry.prototype, "left", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagId" }),
         __metadata("design:type", String)
     ], ImageRegionCreateEntry.prototype, "tagId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=top" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=top" }),
         __metadata("design:type", Number)
     ], ImageRegionCreateEntry.prototype, "top", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], ImageRegionCreateEntry.prototype, "width", void 0);
     return ImageRegionCreateEntry;
-}(SpeakeasyBase));
-export { ImageRegionCreateEntry };
+}(utils_1.SpeakeasyBase));
+exports.ImageRegionCreateEntry = ImageRegionCreateEntry;

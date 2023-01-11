@@ -122,5 +122,5 @@ export class DcimPowerPanelsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimPowerPanelsList200ApplicationJsonObject?: DcimPowerPanelsList200ApplicationJson;
+  dcimPowerPanelsList200ApplicationJSONObject?: DcimPowerPanelsList200ApplicationJson;
 }

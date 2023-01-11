@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AssociateRepositoryRequest, AssociateRepositoryResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,48 +33,46 @@ const sdk = new SDK(WithSecurity(
     
 const req: AssociateRepositoryRequest = {
   headers: {
-    xAmzAlgorithm: "id",
-    xAmzContentSha256: "repellat",
-    xAmzCredential: "repellendus",
-    xAmzDate: "numquam",
-    xAmzSecurityToken: "aspernatur",
-    xAmzSignature: "ad",
-    xAmzSignedHeaders: "velit",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
-    clientRequestToken: "distinctio",
+    clientRequestToken: "voluptas",
     kmsKeyDetails: {
       encryptionOption: "AWS_OWNED_CMK",
-      kmsKeyId: "ad",
+      kmsKeyId: "et",
     },
     repository: {
       bitbucket: {
-        connectionArn: "error",
-        name: "enim",
-        owner: "necessitatibus",
+        connectionArn: "nihil",
+        name: "rerum",
+        owner: "dicta",
       },
       codeCommit: {
-        name: "non",
+        name: "debitis",
       },
       gitHubEnterpriseServer: {
-        connectionArn: "nam",
-        name: "in",
-        owner: "eum",
+        connectionArn: "voluptatum",
+        name: "et",
+        owner: "ut",
       },
       s3Bucket: {
-        bucketName: "hic",
-        name: "ut",
+        bucketName: "dolorem",
+        name: "et",
       },
     },
     tags: {
-      "odio": "voluptate",
-      "velit": "commodi",
-      "iste": "vero",
+      "iste": "vitae",
     },
   },
 };
 
-sdk.sdk.associateRepository(req).then((res: AssociateRepositoryResponse | AxiosError) => {
+sdk.associateRepository(req).then((res: AssociateRepositoryResponse | AxiosError) => {
    // handle response
 });
 ```

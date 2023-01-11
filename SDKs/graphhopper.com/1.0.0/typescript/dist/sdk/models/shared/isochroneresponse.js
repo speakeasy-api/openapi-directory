@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IsochroneResponsePolygon } from "./isochroneresponsepolygon";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IsochroneResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var isochroneresponsepolygon_1 = require("./isochroneresponsepolygon");
 var IsochroneResponse = /** @class */ (function (_super) {
     __extends(IsochroneResponse, _super);
     function IsochroneResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=copyrights" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=copyrights" }),
         __metadata("design:type", Array)
     ], IsochroneResponse.prototype, "copyrights", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=polygons", elemType: IsochroneResponsePolygon }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=polygons", elemType: isochroneresponsepolygon_1.IsochroneResponsePolygon }),
         __metadata("design:type", Array)
     ], IsochroneResponse.prototype, "polygons", void 0);
     return IsochroneResponse;
-}(SpeakeasyBase));
-export { IsochroneResponse };
+}(utils_1.SpeakeasyBase));
+exports.IsochroneResponse = IsochroneResponse;

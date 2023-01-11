@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,78 +14,103 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveResponse = exports.DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest = exports.DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveSecurity = exports.DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchivePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchivePathParams = /** @class */ (function (_super) {
     __extends(DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchivePathParams, _super);
     function DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchivePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=appId" }),
         __metadata("design:type", Number)
     ], DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchivePathParams.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=subscriptionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=subscriptionId" }),
         __metadata("design:type", Number)
     ], DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchivePathParams.prototype, "subscriptionId", void 0);
     return DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchivePathParams;
-}(SpeakeasyBase));
-export { DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchivePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchivePathParams = DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchivePathParams;
 var DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveSecurity = /** @class */ (function (_super) {
     __extends(DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveSecurity, _super);
     function DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=query" }),
         __metadata("design:type", shared.SchemeDeveloperHapikey)
     ], DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveSecurity.prototype, "developerHapikey", void 0);
     return DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveSecurity;
-}(SpeakeasyBase));
-export { DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveSecurity };
+}(utils_1.SpeakeasyBase));
+exports.DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveSecurity = DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveSecurity;
 var DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest = /** @class */ (function (_super) {
     __extends(DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest, _super);
     function DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchivePathParams)
     ], DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveSecurity)
     ], DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest.prototype, "security", void 0);
     return DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest;
-}(SpeakeasyBase));
-export { DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest = DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest;
 var DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveResponse = /** @class */ (function (_super) {
     __extends(DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveResponse, _super);
     function DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveResponse.prototype, "statusCode", void 0);
     return DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveResponse;
-}(SpeakeasyBase));
-export { DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveResponse = DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveResponse;

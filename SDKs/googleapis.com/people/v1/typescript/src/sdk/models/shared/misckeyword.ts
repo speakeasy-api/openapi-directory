@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FieldMetadataInput } from "./fieldmetadata";
 import { FieldMetadata } from "./fieldmetadata";
+import { FieldMetadataInput } from "./fieldmetadata";
 
 
 export enum MiscKeywordTypeEnum {
@@ -19,22 +19,6 @@ export enum MiscKeywordTypeEnum {
 }
 
 
-// MiscKeywordInput
-/** 
- * A person's miscellaneous keyword.
-**/
-export class MiscKeywordInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: FieldMetadataInput;
-
-  @SpeakeasyMetadata({ data: "json, name=type" })
-  type?: MiscKeywordTypeEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=value" })
-  value?: string;
-}
-
-
 // MiscKeyword
 /** 
  * A person's miscellaneous keyword.
@@ -45,6 +29,22 @@ export class MiscKeyword extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
   metadata?: FieldMetadata;
+
+  @SpeakeasyMetadata({ data: "json, name=type" })
+  type?: MiscKeywordTypeEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=value" })
+  value?: string;
+}
+
+
+// MiscKeywordInput
+/** 
+ * A person's miscellaneous keyword.
+**/
+export class MiscKeywordInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=metadata" })
+  metadata?: FieldMetadataInput;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: MiscKeywordTypeEnum;

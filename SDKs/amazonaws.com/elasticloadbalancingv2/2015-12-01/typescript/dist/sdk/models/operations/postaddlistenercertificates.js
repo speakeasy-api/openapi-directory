@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostAddListenerCertificatesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAddListenerCertificatesResponse = exports.PostAddListenerCertificatesRequest = exports.PostAddListenerCertificatesHeaders = exports.PostAddListenerCertificatesQueryParams = exports.PostAddListenerCertificatesVersionEnum = exports.PostAddListenerCertificatesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostAddListenerCertificatesActionEnum;
 (function (PostAddListenerCertificatesActionEnum) {
     PostAddListenerCertificatesActionEnum["AddListenerCertificates"] = "AddListenerCertificates";
-})(PostAddListenerCertificatesActionEnum || (PostAddListenerCertificatesActionEnum = {}));
-export var PostAddListenerCertificatesVersionEnum;
+})(PostAddListenerCertificatesActionEnum = exports.PostAddListenerCertificatesActionEnum || (exports.PostAddListenerCertificatesActionEnum = {}));
+var PostAddListenerCertificatesVersionEnum;
 (function (PostAddListenerCertificatesVersionEnum) {
     PostAddListenerCertificatesVersionEnum["TwoThousandAndFifteen1201"] = "2015-12-01";
-})(PostAddListenerCertificatesVersionEnum || (PostAddListenerCertificatesVersionEnum = {}));
+})(PostAddListenerCertificatesVersionEnum = exports.PostAddListenerCertificatesVersionEnum || (exports.PostAddListenerCertificatesVersionEnum = {}));
 var PostAddListenerCertificatesQueryParams = /** @class */ (function (_super) {
     __extends(PostAddListenerCertificatesQueryParams, _super);
     function PostAddListenerCertificatesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostAddListenerCertificatesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostAddListenerCertificatesQueryParams.prototype, "version", void 0);
     return PostAddListenerCertificatesQueryParams;
-}(SpeakeasyBase));
-export { PostAddListenerCertificatesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAddListenerCertificatesQueryParams = PostAddListenerCertificatesQueryParams;
 var PostAddListenerCertificatesHeaders = /** @class */ (function (_super) {
     __extends(PostAddListenerCertificatesHeaders, _super);
     function PostAddListenerCertificatesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostAddListenerCertificatesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostAddListenerCertificatesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostAddListenerCertificatesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostAddListenerCertificatesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostAddListenerCertificatesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostAddListenerCertificatesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostAddListenerCertificatesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostAddListenerCertificatesHeaders;
-}(SpeakeasyBase));
-export { PostAddListenerCertificatesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostAddListenerCertificatesHeaders = PostAddListenerCertificatesHeaders;
 var PostAddListenerCertificatesRequest = /** @class */ (function (_super) {
     __extends(PostAddListenerCertificatesRequest, _super);
     function PostAddListenerCertificatesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAddListenerCertificatesQueryParams)
     ], PostAddListenerCertificatesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAddListenerCertificatesHeaders)
     ], PostAddListenerCertificatesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostAddListenerCertificatesRequest.prototype, "request", void 0);
     return PostAddListenerCertificatesRequest;
-}(SpeakeasyBase));
-export { PostAddListenerCertificatesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAddListenerCertificatesRequest = PostAddListenerCertificatesRequest;
 var PostAddListenerCertificatesResponse = /** @class */ (function (_super) {
     __extends(PostAddListenerCertificatesResponse, _super);
     function PostAddListenerCertificatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostAddListenerCertificatesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAddListenerCertificatesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAddListenerCertificatesResponse.prototype, "statusCode", void 0);
     return PostAddListenerCertificatesResponse;
-}(SpeakeasyBase));
-export { PostAddListenerCertificatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAddListenerCertificatesResponse = PostAddListenerCertificatesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PricingSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
 // PricingSummary
 /**
  * The type that defines the fields for the price details for an item.
@@ -34,17 +37,17 @@ var PricingSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auctionReservePrice" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auctionReservePrice" }),
+        __metadata("design:type", amount_1.Amount)
     ], PricingSummary.prototype, "auctionReservePrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auctionStartPrice" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auctionStartPrice" }),
+        __metadata("design:type", amount_1.Amount)
     ], PricingSummary.prototype, "auctionStartPrice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
+        __metadata("design:type", amount_1.Amount)
     ], PricingSummary.prototype, "price", void 0);
     return PricingSummary;
-}(SpeakeasyBase));
-export { PricingSummary };
+}(utils_1.SpeakeasyBase));
+exports.PricingSummary = PricingSummary;

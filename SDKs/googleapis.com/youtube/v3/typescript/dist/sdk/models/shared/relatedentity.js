@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Entity } from "./entity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelatedEntity = void 0;
+var utils_1 = require("../../../internal/utils");
+var entity_1 = require("./entity");
 var RelatedEntity = /** @class */ (function (_super) {
     __extends(RelatedEntity, _super);
     function RelatedEntity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity" }),
-        __metadata("design:type", Entity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity" }),
+        __metadata("design:type", entity_1.Entity)
     ], RelatedEntity.prototype, "entity", void 0);
     return RelatedEntity;
-}(SpeakeasyBase));
-export { RelatedEntity };
+}(utils_1.SpeakeasyBase));
+exports.RelatedEntity = RelatedEntity;

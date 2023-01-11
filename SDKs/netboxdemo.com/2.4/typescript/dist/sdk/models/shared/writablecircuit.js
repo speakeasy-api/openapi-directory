@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritableCircuitInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var WritableCircuitInput = /** @class */ (function (_super) {
     __extends(WritableCircuitInput, _super);
     function WritableCircuitInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cid" }),
         __metadata("design:type", String)
     ], WritableCircuitInput.prototype, "cid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", String)
     ], WritableCircuitInput.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commit_rate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commit_rate" }),
         __metadata("design:type", Number)
     ], WritableCircuitInput.prototype, "commitRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], WritableCircuitInput.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], WritableCircuitInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=install_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=install_date" }),
         __metadata("design:type", Date)
     ], WritableCircuitInput.prototype, "installDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provider" }),
         __metadata("design:type", Number)
     ], WritableCircuitInput.prototype, "provider", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Number)
     ], WritableCircuitInput.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], WritableCircuitInput.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant" }),
         __metadata("design:type", Number)
     ], WritableCircuitInput.prototype, "tenant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", Number)
     ], WritableCircuitInput.prototype, "type", void 0);
     return WritableCircuitInput;
-}(SpeakeasyBase));
-export { WritableCircuitInput };
+}(utils_1.SpeakeasyBase));
+exports.WritableCircuitInput = WritableCircuitInput;

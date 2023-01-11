@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DiscoverableParticipantDocumentTypesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiscoverableParticipant = exports.DiscoverableParticipantDocumentTypesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DiscoverableParticipantDocumentTypesEnum;
 (function (DiscoverableParticipantDocumentTypesEnum) {
     DiscoverableParticipantDocumentTypesEnum["Invoice"] = "invoice";
     DiscoverableParticipantDocumentTypesEnum["Creditnote"] = "creditnote";
@@ -32,7 +35,7 @@ export var DiscoverableParticipantDocumentTypesEnum;
     DiscoverableParticipantDocumentTypesEnum["OrderResponse"] = "order_response";
     DiscoverableParticipantDocumentTypesEnum["DespatchNotification"] = "despatch_notification";
     DiscoverableParticipantDocumentTypesEnum["ProductCatalogue"] = "product_catalogue";
-})(DiscoverableParticipantDocumentTypesEnum || (DiscoverableParticipantDocumentTypesEnum = {}));
+})(DiscoverableParticipantDocumentTypesEnum = exports.DiscoverableParticipantDocumentTypesEnum || (exports.DiscoverableParticipantDocumentTypesEnum = {}));
 // DiscoverableParticipant
 /**
  * A participant to be discovered.
@@ -43,25 +46,25 @@ var DiscoverableParticipant = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentTypes" }),
         __metadata("design:type", Array)
     ], DiscoverableParticipant.prototype, "documentTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identifier" }),
         __metadata("design:type", String)
     ], DiscoverableParticipant.prototype, "identifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metaScheme" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metaScheme" }),
         __metadata("design:type", String)
     ], DiscoverableParticipant.prototype, "metaScheme", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
         __metadata("design:type", String)
     ], DiscoverableParticipant.prototype, "network", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheme" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheme" }),
         __metadata("design:type", String)
     ], DiscoverableParticipant.prototype, "scheme", void 0);
     return DiscoverableParticipant;
-}(SpeakeasyBase));
-export { DiscoverableParticipant };
+}(utils_1.SpeakeasyBase));
+exports.DiscoverableParticipant = DiscoverableParticipant;

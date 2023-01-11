@@ -51,7 +51,7 @@ export declare class GetSearchHeavyEquipmentActiveRequest extends SpeakeasyBase 
 }
 export declare class GetSearchHeavyEquipmentActiveResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     heavyEquipmentsSearchResponse?: shared.HeavyEquipmentsSearchResponse;
     statusCode: number;
 }

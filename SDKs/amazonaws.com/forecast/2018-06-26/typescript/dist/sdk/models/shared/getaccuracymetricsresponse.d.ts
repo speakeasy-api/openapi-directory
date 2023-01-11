@@ -3,7 +3,7 @@ import { AutoMlOverrideStrategyEnum } from "./automloverridestrategyenum";
 import { OptimizationMetricEnum } from "./optimizationmetricenum";
 import { EvaluationResult } from "./evaluationresult";
 export declare class GetAccuracyMetricsResponse extends SpeakeasyBase {
-    autoMlOverrideStrategy?: AutoMlOverrideStrategyEnum;
+    autoMLOverrideStrategy?: AutoMlOverrideStrategyEnum;
     optimizationMetric?: OptimizationMetricEnum;
     predictorEvaluationResults?: EvaluationResult[];
 }

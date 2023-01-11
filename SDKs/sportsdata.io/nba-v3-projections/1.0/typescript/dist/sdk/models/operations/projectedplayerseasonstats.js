@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ProjectedPlayerSeasonStatsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectedPlayerSeasonStatsResponse = exports.ProjectedPlayerSeasonStatsRequest = exports.ProjectedPlayerSeasonStatsPathParams = exports.ProjectedPlayerSeasonStatsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ProjectedPlayerSeasonStatsFormatEnum;
 (function (ProjectedPlayerSeasonStatsFormatEnum) {
     ProjectedPlayerSeasonStatsFormatEnum["Xml"] = "XML";
     ProjectedPlayerSeasonStatsFormatEnum["Json"] = "JSON";
-})(ProjectedPlayerSeasonStatsFormatEnum || (ProjectedPlayerSeasonStatsFormatEnum = {}));
+})(ProjectedPlayerSeasonStatsFormatEnum = exports.ProjectedPlayerSeasonStatsFormatEnum || (exports.ProjectedPlayerSeasonStatsFormatEnum = {}));
 var ProjectedPlayerSeasonStatsPathParams = /** @class */ (function (_super) {
     __extends(ProjectedPlayerSeasonStatsPathParams, _super);
     function ProjectedPlayerSeasonStatsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], ProjectedPlayerSeasonStatsPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], ProjectedPlayerSeasonStatsPathParams.prototype, "season", void 0);
     return ProjectedPlayerSeasonStatsPathParams;
-}(SpeakeasyBase));
-export { ProjectedPlayerSeasonStatsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedPlayerSeasonStatsPathParams = ProjectedPlayerSeasonStatsPathParams;
 var ProjectedPlayerSeasonStatsRequest = /** @class */ (function (_super) {
     __extends(ProjectedPlayerSeasonStatsRequest, _super);
     function ProjectedPlayerSeasonStatsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProjectedPlayerSeasonStatsPathParams)
     ], ProjectedPlayerSeasonStatsRequest.prototype, "pathParams", void 0);
     return ProjectedPlayerSeasonStatsRequest;
-}(SpeakeasyBase));
-export { ProjectedPlayerSeasonStatsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedPlayerSeasonStatsRequest = ProjectedPlayerSeasonStatsRequest;
 var ProjectedPlayerSeasonStatsResponse = /** @class */ (function (_super) {
     __extends(ProjectedPlayerSeasonStatsResponse, _super);
     function ProjectedPlayerSeasonStatsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProjectedPlayerSeasonStatsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ProjectedPlayerSeasonStatsResponse.prototype, "playerSeasonProjections", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProjectedPlayerSeasonStatsResponse.prototype, "statusCode", void 0);
     return ProjectedPlayerSeasonStatsResponse;
-}(SpeakeasyBase));
-export { ProjectedPlayerSeasonStatsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProjectedPlayerSeasonStatsResponse = ProjectedPlayerSeasonStatsResponse;

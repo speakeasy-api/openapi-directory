@@ -15,7 +15,7 @@ export class PolicyComplianceDetail extends SpeakeasyBase {
   expiredAt?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=IssueInfoMap" })
-  issueInfoMap?: Map<string, string>;
+  issueInfoMap?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=MemberAccount" })
   memberAccount?: string;

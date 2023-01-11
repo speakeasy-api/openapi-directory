@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetApiNameSuggestionsResponse = exports.GetApiNameSuggestionsRequest = exports.GetApiNameSuggestionsHeaders = exports.GetApiNameSuggestionsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetApiNameSuggestionsQueryParams = /** @class */ (function (_super) {
     __extends(GetApiNameSuggestionsQueryParams, _super);
     function GetApiNameSuggestionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingWords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingWords" }),
         __metadata("design:type", String)
     ], GetApiNameSuggestionsQueryParams.prototype, "startingWords", void 0);
     return GetApiNameSuggestionsQueryParams;
-}(SpeakeasyBase));
-export { GetApiNameSuggestionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetApiNameSuggestionsQueryParams = GetApiNameSuggestionsQueryParams;
 var GetApiNameSuggestionsHeaders = /** @class */ (function (_super) {
     __extends(GetApiNameSuggestionsHeaders, _super);
     function GetApiNameSuggestionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
         __metadata("design:type", String)
     ], GetApiNameSuggestionsHeaders.prototype, "xApiKey", void 0);
     return GetApiNameSuggestionsHeaders;
-}(SpeakeasyBase));
-export { GetApiNameSuggestionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetApiNameSuggestionsHeaders = GetApiNameSuggestionsHeaders;
 var GetApiNameSuggestionsRequest = /** @class */ (function (_super) {
     __extends(GetApiNameSuggestionsRequest, _super);
     function GetApiNameSuggestionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetApiNameSuggestionsQueryParams)
     ], GetApiNameSuggestionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetApiNameSuggestionsHeaders)
     ], GetApiNameSuggestionsRequest.prototype, "headers", void 0);
     return GetApiNameSuggestionsRequest;
-}(SpeakeasyBase));
-export { GetApiNameSuggestionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetApiNameSuggestionsRequest = GetApiNameSuggestionsRequest;
 var GetApiNameSuggestionsResponse = /** @class */ (function (_super) {
     __extends(GetApiNameSuggestionsResponse, _super);
     function GetApiNameSuggestionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetApiNameSuggestionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetApiNameSuggestionsResponse.prototype, "statusCode", void 0);
     return GetApiNameSuggestionsResponse;
-}(SpeakeasyBase));
-export { GetApiNameSuggestionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetApiNameSuggestionsResponse = GetApiNameSuggestionsResponse;

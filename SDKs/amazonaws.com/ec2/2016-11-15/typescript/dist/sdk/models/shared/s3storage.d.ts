@@ -4,8 +4,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class S3Storage extends SpeakeasyBase {
     awsAccessKeyId?: string;
-    bucket?: string;
-    prefix?: string;
-    uploadPolicy?: string;
-    uploadPolicySignature?: string;
+    bucket?: Record<string, any>;
+    prefix?: Record<string, any>;
+    uploadPolicy?: Record<string, any>;
+    uploadPolicySignature?: Record<string, any>;
 }

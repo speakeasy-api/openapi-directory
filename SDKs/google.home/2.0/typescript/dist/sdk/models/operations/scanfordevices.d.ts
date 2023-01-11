@@ -4,7 +4,7 @@ export declare class ScanfordevicesRequest extends SpeakeasyBase {
     request: shared.ScanfordevicesRequest;
 }
 export declare class ScanfordevicesResponse extends SpeakeasyBase {
-    body?: Uint8Array;
     contentType: string;
+    scanfordevices200TextPlainObject?: string;
     statusCode: number;
 }

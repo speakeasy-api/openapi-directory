@@ -20,7 +20,7 @@ export declare class UntagResourceRequest extends SpeakeasyBase {
 export declare class UntagResourceResponse extends SpeakeasyBase {
     clusterNotFoundFault?: any;
     contentType: string;
-    invalidArnFault?: any;
+    invalidARNFault?: any;
     invalidClusterStateFault?: any;
     invalidParameterCombinationException?: any;
     invalidParameterValueException?: any;

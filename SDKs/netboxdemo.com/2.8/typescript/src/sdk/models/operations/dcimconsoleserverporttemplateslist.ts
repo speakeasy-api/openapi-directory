@@ -104,5 +104,5 @@ export class DcimConsoleServerPortTemplatesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimConsoleServerPortTemplatesList200ApplicationJsonObject?: DcimConsoleServerPortTemplatesList200ApplicationJson;
+  dcimConsoleServerPortTemplatesList200ApplicationJSONObject?: DcimConsoleServerPortTemplatesList200ApplicationJson;
 }

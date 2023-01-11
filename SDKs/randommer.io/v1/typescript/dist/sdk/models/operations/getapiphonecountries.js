@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetApiPhoneCountriesResponse = exports.GetApiPhoneCountriesRequest = exports.GetApiPhoneCountriesHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetApiPhoneCountriesHeaders = /** @class */ (function (_super) {
     __extends(GetApiPhoneCountriesHeaders, _super);
     function GetApiPhoneCountriesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
         __metadata("design:type", String)
     ], GetApiPhoneCountriesHeaders.prototype, "xApiKey", void 0);
     return GetApiPhoneCountriesHeaders;
-}(SpeakeasyBase));
-export { GetApiPhoneCountriesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetApiPhoneCountriesHeaders = GetApiPhoneCountriesHeaders;
 var GetApiPhoneCountriesRequest = /** @class */ (function (_super) {
     __extends(GetApiPhoneCountriesRequest, _super);
     function GetApiPhoneCountriesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetApiPhoneCountriesHeaders)
     ], GetApiPhoneCountriesRequest.prototype, "headers", void 0);
     return GetApiPhoneCountriesRequest;
-}(SpeakeasyBase));
-export { GetApiPhoneCountriesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetApiPhoneCountriesRequest = GetApiPhoneCountriesRequest;
 var GetApiPhoneCountriesResponse = /** @class */ (function (_super) {
     __extends(GetApiPhoneCountriesResponse, _super);
     function GetApiPhoneCountriesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetApiPhoneCountriesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetApiPhoneCountriesResponse.prototype, "statusCode", void 0);
     return GetApiPhoneCountriesResponse;
-}(SpeakeasyBase));
-export { GetApiPhoneCountriesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetApiPhoneCountriesResponse = GetApiPhoneCountriesResponse;

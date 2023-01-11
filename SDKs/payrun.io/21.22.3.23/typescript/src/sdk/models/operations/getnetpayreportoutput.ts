@@ -50,7 +50,7 @@ export class GetNetPayReportOutputResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getNetPayReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+  getNetPayReportOutput200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

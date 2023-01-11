@@ -17,7 +17,7 @@ export declare class GetTeamEventMatchesRequest extends SpeakeasyBase {
 }
 export declare class GetTeamEventMatchesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     matches?: shared.Match[];
     statusCode: number;
 }

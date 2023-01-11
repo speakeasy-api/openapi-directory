@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttributeValue = void 0;
+var utils_1 = require("../../../internal/utils");
 // AttributeValue
 /**
  * AttributeValue can be <code>String</code>, <code>Number</code>, <code>Binary</code>, <code>StringSet</code>, <code>NumberSet</code>, <code>BinarySet</code>.
@@ -33,29 +36,29 @@ var AttributeValue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=B" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=B" }),
         __metadata("design:type", String)
     ], AttributeValue.prototype, "b", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BS" }),
         __metadata("design:type", Array)
     ], AttributeValue.prototype, "bs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=N" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=N" }),
         __metadata("design:type", String)
     ], AttributeValue.prototype, "n", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NS" }),
         __metadata("design:type", Array)
     ], AttributeValue.prototype, "ns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S" }),
         __metadata("design:type", String)
     ], AttributeValue.prototype, "s", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SS" }),
         __metadata("design:type", Array)
     ], AttributeValue.prototype, "ss", void 0);
     return AttributeValue;
-}(SpeakeasyBase));
-export { AttributeValue };
+}(utils_1.SpeakeasyBase));
+exports.AttributeValue = AttributeValue;

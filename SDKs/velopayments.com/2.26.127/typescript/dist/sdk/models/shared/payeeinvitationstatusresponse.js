@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PayeeInvitationStatusResponseInvitationStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayeeInvitationStatusResponse = exports.PayeeInvitationStatusResponseInvitationStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PayeeInvitationStatusResponseInvitationStatusEnum;
 (function (PayeeInvitationStatusResponseInvitationStatusEnum) {
     PayeeInvitationStatusResponseInvitationStatusEnum["Accepted"] = "ACCEPTED";
     PayeeInvitationStatusResponseInvitationStatusEnum["Pending"] = "PENDING";
     PayeeInvitationStatusResponseInvitationStatusEnum["Declined"] = "DECLINED";
-})(PayeeInvitationStatusResponseInvitationStatusEnum || (PayeeInvitationStatusResponseInvitationStatusEnum = {}));
+})(PayeeInvitationStatusResponseInvitationStatusEnum = exports.PayeeInvitationStatusResponseInvitationStatusEnum || (exports.PayeeInvitationStatusResponseInvitationStatusEnum = {}));
 var PayeeInvitationStatusResponse = /** @class */ (function (_super) {
     __extends(PayeeInvitationStatusResponse, _super);
     function PayeeInvitationStatusResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gracePeriodEndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gracePeriodEndDate" }),
         __metadata("design:type", Date)
     ], PayeeInvitationStatusResponse.prototype, "gracePeriodEndDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invitationStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invitationStatus" }),
         __metadata("design:type", String)
     ], PayeeInvitationStatusResponse.prototype, "invitationStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payeeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payeeId" }),
         __metadata("design:type", String)
     ], PayeeInvitationStatusResponse.prototype, "payeeId", void 0);
     return PayeeInvitationStatusResponse;
-}(SpeakeasyBase));
-export { PayeeInvitationStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.PayeeInvitationStatusResponse = PayeeInvitationStatusResponse;

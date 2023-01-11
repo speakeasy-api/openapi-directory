@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConsumerStatusEnum } from "./consumerstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Consumer = void 0;
+var utils_1 = require("../../../internal/utils");
+var consumerstatusenum_1 = require("./consumerstatusenum");
 // Consumer
 /**
  * An object that represents the details of the consumer you registered. This type of object is returned by <a>RegisterStreamConsumer</a>.
@@ -34,21 +37,21 @@ var Consumer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConsumerARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConsumerARN" }),
         __metadata("design:type", String)
-    ], Consumer.prototype, "consumerArn", void 0);
+    ], Consumer.prototype, "consumerARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConsumerCreationTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConsumerCreationTimestamp" }),
         __metadata("design:type", Date)
     ], Consumer.prototype, "consumerCreationTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConsumerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConsumerName" }),
         __metadata("design:type", String)
     ], Consumer.prototype, "consumerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConsumerStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConsumerStatus" }),
         __metadata("design:type", String)
     ], Consumer.prototype, "consumerStatus", void 0);
     return Consumer;
-}(SpeakeasyBase));
-export { Consumer };
+}(utils_1.SpeakeasyBase));
+exports.Consumer = Consumer;

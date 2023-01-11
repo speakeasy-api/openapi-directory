@@ -8,7 +8,7 @@ export declare class GetUsersUserEmailBadgesRequest extends SpeakeasyBase {
 }
 export declare class GetUsersUserEmailBadgesResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     userBadges?: shared.UserBadge[];
 }

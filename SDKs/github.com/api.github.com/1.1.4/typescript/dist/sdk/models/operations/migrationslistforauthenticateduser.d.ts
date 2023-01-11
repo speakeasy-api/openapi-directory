@@ -9,7 +9,7 @@ export declare class MigrationsListForAuthenticatedUserRequest extends Speakeasy
 }
 export declare class MigrationsListForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     migrations?: shared.Migration[];

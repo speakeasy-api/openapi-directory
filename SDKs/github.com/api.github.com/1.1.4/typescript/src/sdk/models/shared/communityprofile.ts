@@ -2,6 +2,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
+// CommunityProfileFilesCodeOfConductSimple
+/** 
+ * Code of Conduct Simple
+**/
 export class CommunityProfileFilesCodeOfConductSimple extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=html_url" })
   htmlUrl: string;
@@ -26,6 +30,10 @@ export class CommunityProfileFilesCommunityHealthFile extends SpeakeasyBase {
 }
 
 
+// CommunityProfileFilesLicenseSimple
+/** 
+ * License Simple
+**/
 export class CommunityProfileFilesLicenseSimple extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=html_url" })
   htmlUrl?: string;

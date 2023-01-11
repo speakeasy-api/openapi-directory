@@ -58,7 +58,7 @@ export class SavingsPlan extends SpeakeasyBase {
   state?: SavingsPlanStateEnum;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=termDurationInSeconds" })
   termDurationInSeconds?: number;

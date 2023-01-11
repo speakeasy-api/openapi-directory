@@ -26,8 +26,8 @@ export class DepositSwitchAltCreateRequest extends SpeakeasyBase {
   secret?: string;
 
   @SpeakeasyMetadata({ data: "json, name=target_account" })
-  targetAccount: Map<string, any>;
+  targetAccount: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=target_user" })
-  targetUser: Map<string, any>;
+  targetUser: Record<string, any>;
 }

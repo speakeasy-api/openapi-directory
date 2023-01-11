@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 
 
 
@@ -11,8 +11,8 @@ export class ErrorResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=correlationId" })
   correlationId?: string;
 
-  @SpeakeasyMetadata({ data: "json, name=errors", elemType: Error })
-  errors?: Error[];
+  @SpeakeasyMetadata({ data: "json, name=errors", elemType: ErrorT })
+  errors?: ErrorT[];
 
   @SpeakeasyMetadata({ data: "json, name=httpStatusCode" })
   httpStatusCode?: number;

@@ -19,7 +19,7 @@ export declare class DeleteConnectionRequest extends SpeakeasyBase {
 }
 export declare class DeleteConnectionResponse extends SpeakeasyBase {
     contentType: string;
-    deleteConnectionOutput?: Map<string, any>;
+    deleteConnectionOutput?: Record<string, any>;
     resourceNotFoundException?: any;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PublicKeyCredential } from "./publickeycredential";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceCredential = void 0;
+var utils_1 = require("../../../internal/utils");
+var publickeycredential_1 = require("./publickeycredential");
 // DeviceCredential
 /**
  * A server-stored device credential used for authentication.
@@ -34,13 +37,13 @@ var DeviceCredential = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expirationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expirationTime" }),
         __metadata("design:type", String)
     ], DeviceCredential.prototype, "expirationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicKey" }),
-        __metadata("design:type", PublicKeyCredential)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicKey" }),
+        __metadata("design:type", publickeycredential_1.PublicKeyCredential)
     ], DeviceCredential.prototype, "publicKey", void 0);
     return DeviceCredential;
-}(SpeakeasyBase));
-export { DeviceCredential };
+}(utils_1.SpeakeasyBase));
+exports.DeviceCredential = DeviceCredential;

@@ -23,7 +23,7 @@ export declare class WebsecurityscannerProjectsScanConfigsScanRunsStopSecurity e
 export declare class WebsecurityscannerProjectsScanConfigsScanRunsStopRequest extends SpeakeasyBase {
     pathParams: WebsecurityscannerProjectsScanConfigsScanRunsStopPathParams;
     queryParams: WebsecurityscannerProjectsScanConfigsScanRunsStopQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: WebsecurityscannerProjectsScanConfigsScanRunsStopSecurity;
 }
 export declare class WebsecurityscannerProjectsScanConfigsScanRunsStopResponse extends SpeakeasyBase {

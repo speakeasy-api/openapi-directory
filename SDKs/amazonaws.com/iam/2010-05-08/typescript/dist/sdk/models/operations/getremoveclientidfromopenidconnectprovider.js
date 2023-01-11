@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetRemoveClientIdFromOpenIdConnectProviderActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRemoveClientIdFromOpenIdConnectProviderResponse = exports.GetRemoveClientIdFromOpenIdConnectProviderRequest = exports.GetRemoveClientIdFromOpenIdConnectProviderHeaders = exports.GetRemoveClientIdFromOpenIdConnectProviderQueryParams = exports.GetRemoveClientIdFromOpenIdConnectProviderVersionEnum = exports.GetRemoveClientIdFromOpenIdConnectProviderActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetRemoveClientIdFromOpenIdConnectProviderActionEnum;
 (function (GetRemoveClientIdFromOpenIdConnectProviderActionEnum) {
     GetRemoveClientIdFromOpenIdConnectProviderActionEnum["RemoveClientIdFromOpenIdConnectProvider"] = "RemoveClientIDFromOpenIDConnectProvider";
-})(GetRemoveClientIdFromOpenIdConnectProviderActionEnum || (GetRemoveClientIdFromOpenIdConnectProviderActionEnum = {}));
-export var GetRemoveClientIdFromOpenIdConnectProviderVersionEnum;
+})(GetRemoveClientIdFromOpenIdConnectProviderActionEnum = exports.GetRemoveClientIdFromOpenIdConnectProviderActionEnum || (exports.GetRemoveClientIdFromOpenIdConnectProviderActionEnum = {}));
+var GetRemoveClientIdFromOpenIdConnectProviderVersionEnum;
 (function (GetRemoveClientIdFromOpenIdConnectProviderVersionEnum) {
     GetRemoveClientIdFromOpenIdConnectProviderVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetRemoveClientIdFromOpenIdConnectProviderVersionEnum || (GetRemoveClientIdFromOpenIdConnectProviderVersionEnum = {}));
+})(GetRemoveClientIdFromOpenIdConnectProviderVersionEnum = exports.GetRemoveClientIdFromOpenIdConnectProviderVersionEnum || (exports.GetRemoveClientIdFromOpenIdConnectProviderVersionEnum = {}));
 var GetRemoveClientIdFromOpenIdConnectProviderQueryParams = /** @class */ (function (_super) {
     __extends(GetRemoveClientIdFromOpenIdConnectProviderQueryParams, _super);
     function GetRemoveClientIdFromOpenIdConnectProviderQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetRemoveClientIdFromOpenIdConnectProviderQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ClientID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ClientID" }),
         __metadata("design:type", String)
-    ], GetRemoveClientIdFromOpenIdConnectProviderQueryParams.prototype, "clientId", void 0);
+    ], GetRemoveClientIdFromOpenIdConnectProviderQueryParams.prototype, "clientID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=OpenIDConnectProviderArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=OpenIDConnectProviderArn" }),
         __metadata("design:type", String)
-    ], GetRemoveClientIdFromOpenIdConnectProviderQueryParams.prototype, "openIdConnectProviderArn", void 0);
+    ], GetRemoveClientIdFromOpenIdConnectProviderQueryParams.prototype, "openIDConnectProviderArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetRemoveClientIdFromOpenIdConnectProviderQueryParams.prototype, "version", void 0);
     return GetRemoveClientIdFromOpenIdConnectProviderQueryParams;
-}(SpeakeasyBase));
-export { GetRemoveClientIdFromOpenIdConnectProviderQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveClientIdFromOpenIdConnectProviderQueryParams = GetRemoveClientIdFromOpenIdConnectProviderQueryParams;
 var GetRemoveClientIdFromOpenIdConnectProviderHeaders = /** @class */ (function (_super) {
     __extends(GetRemoveClientIdFromOpenIdConnectProviderHeaders, _super);
     function GetRemoveClientIdFromOpenIdConnectProviderHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetRemoveClientIdFromOpenIdConnectProviderHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetRemoveClientIdFromOpenIdConnectProviderHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetRemoveClientIdFromOpenIdConnectProviderHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetRemoveClientIdFromOpenIdConnectProviderHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetRemoveClientIdFromOpenIdConnectProviderHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetRemoveClientIdFromOpenIdConnectProviderHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetRemoveClientIdFromOpenIdConnectProviderHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetRemoveClientIdFromOpenIdConnectProviderHeaders;
-}(SpeakeasyBase));
-export { GetRemoveClientIdFromOpenIdConnectProviderHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveClientIdFromOpenIdConnectProviderHeaders = GetRemoveClientIdFromOpenIdConnectProviderHeaders;
 var GetRemoveClientIdFromOpenIdConnectProviderRequest = /** @class */ (function (_super) {
     __extends(GetRemoveClientIdFromOpenIdConnectProviderRequest, _super);
     function GetRemoveClientIdFromOpenIdConnectProviderRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRemoveClientIdFromOpenIdConnectProviderQueryParams)
     ], GetRemoveClientIdFromOpenIdConnectProviderRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRemoveClientIdFromOpenIdConnectProviderHeaders)
     ], GetRemoveClientIdFromOpenIdConnectProviderRequest.prototype, "headers", void 0);
     return GetRemoveClientIdFromOpenIdConnectProviderRequest;
-}(SpeakeasyBase));
-export { GetRemoveClientIdFromOpenIdConnectProviderRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveClientIdFromOpenIdConnectProviderRequest = GetRemoveClientIdFromOpenIdConnectProviderRequest;
 var GetRemoveClientIdFromOpenIdConnectProviderResponse = /** @class */ (function (_super) {
     __extends(GetRemoveClientIdFromOpenIdConnectProviderResponse, _super);
     function GetRemoveClientIdFromOpenIdConnectProviderResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetRemoveClientIdFromOpenIdConnectProviderResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRemoveClientIdFromOpenIdConnectProviderResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRemoveClientIdFromOpenIdConnectProviderResponse.prototype, "statusCode", void 0);
     return GetRemoveClientIdFromOpenIdConnectProviderResponse;
-}(SpeakeasyBase));
-export { GetRemoveClientIdFromOpenIdConnectProviderResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRemoveClientIdFromOpenIdConnectProviderResponse = GetRemoveClientIdFromOpenIdConnectProviderResponse;

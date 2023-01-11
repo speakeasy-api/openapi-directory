@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var IssueResolutionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Issue = exports.IssueSeverityEnum = exports.IssueResolutionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var IssueResolutionEnum;
 (function (IssueResolutionEnum) {
     IssueResolutionEnum["ResolutionUnspecified"] = "RESOLUTION_UNSPECIFIED";
     IssueResolutionEnum["UserAction"] = "USER_ACTION";
     IssueResolutionEnum["PendingProcessing"] = "PENDING_PROCESSING";
-})(IssueResolutionEnum || (IssueResolutionEnum = {}));
-export var IssueSeverityEnum;
+})(IssueResolutionEnum = exports.IssueResolutionEnum || (exports.IssueResolutionEnum = {}));
+var IssueSeverityEnum;
 (function (IssueSeverityEnum) {
     IssueSeverityEnum["SeverityUnspecified"] = "SEVERITY_UNSPECIFIED";
     IssueSeverityEnum["Error"] = "ERROR";
     IssueSeverityEnum["Warning"] = "WARNING";
     IssueSeverityEnum["Info"] = "INFO";
-})(IssueSeverityEnum || (IssueSeverityEnum = {}));
+})(IssueSeverityEnum = exports.IssueSeverityEnum || (exports.IssueSeverityEnum = {}));
 // Issue
 /**
  * Product issue.
@@ -46,37 +49,37 @@ var Issue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attribute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attribute" }),
         __metadata("design:type", String)
     ], Issue.prototype, "attribute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Issue.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], Issue.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolution" }),
         __metadata("design:type", String)
     ], Issue.prototype, "resolution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=severity" }),
         __metadata("design:type", String)
     ], Issue.prototype, "severity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", String)
     ], Issue.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Issue.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Issue.prototype, "type", void 0);
     return Issue;
-}(SpeakeasyBase));
-export { Issue };
+}(utils_1.SpeakeasyBase));
+exports.Issue = Issue;

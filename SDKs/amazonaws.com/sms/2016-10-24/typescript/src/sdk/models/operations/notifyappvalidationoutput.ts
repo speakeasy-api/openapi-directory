@@ -57,7 +57,7 @@ export class NotifyAppValidationOutputResponse extends SpeakeasyBase {
   missingRequiredParameterException?: any;
 
   @SpeakeasyMetadata()
-  notifyAppValidationOutputResponse?: Map<string, any>;
+  notifyAppValidationOutputResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   operationNotPermittedException?: any;

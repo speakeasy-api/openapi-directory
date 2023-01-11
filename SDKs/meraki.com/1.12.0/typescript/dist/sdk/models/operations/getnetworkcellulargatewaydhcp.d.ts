@@ -8,5 +8,5 @@ export declare class GetNetworkCellularGatewayDhcpRequest extends SpeakeasyBase 
 export declare class GetNetworkCellularGatewayDhcpResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkCellularGatewayDhcp200ApplicationJsonObject?: Map<string, any>;
+    getNetworkCellularGatewayDhcp200ApplicationJSONObject?: Record<string, any>;
 }

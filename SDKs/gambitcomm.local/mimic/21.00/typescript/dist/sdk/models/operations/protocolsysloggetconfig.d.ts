@@ -7,7 +7,7 @@ export declare class ProtocolSyslogGetConfigRequest extends SpeakeasyBase {
     pathParams: ProtocolSyslogGetConfigPathParams;
 }
 export declare class ProtocolSyslogGetConfigResponse extends SpeakeasyBase {
-    configSyslog?: shared.ConfigSyslog;
+    configSYSLOG?: shared.ConfigSyslog;
     contentType: string;
     statusCode: number;
 }

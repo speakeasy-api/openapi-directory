@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BatchReadException } from "./batchreadexception";
-import { BatchReadSuccessfulResponse } from "./batchreadsuccessfulresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchReadOperationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var batchreadexception_1 = require("./batchreadexception");
+var batchreadsuccessfulresponse_1 = require("./batchreadsuccessfulresponse");
 // BatchReadOperationResponse
 /**
  * Represents the output of a <code>BatchRead</code> response operation.
@@ -35,13 +38,13 @@ var BatchReadOperationResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExceptionResponse" }),
-        __metadata("design:type", BatchReadException)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExceptionResponse" }),
+        __metadata("design:type", batchreadexception_1.BatchReadException)
     ], BatchReadOperationResponse.prototype, "exceptionResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SuccessfulResponse" }),
-        __metadata("design:type", BatchReadSuccessfulResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SuccessfulResponse" }),
+        __metadata("design:type", batchreadsuccessfulresponse_1.BatchReadSuccessfulResponse)
     ], BatchReadOperationResponse.prototype, "successfulResponse", void 0);
     return BatchReadOperationResponse;
-}(SpeakeasyBase));
-export { BatchReadOperationResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchReadOperationResponse = BatchReadOperationResponse;

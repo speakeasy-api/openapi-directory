@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DirectDeposit = exports.DirectDepositMainDirectDeposit = exports.DirectDepositAdditionalDirectDeposit = void 0;
+var utils_1 = require("../../../internal/utils");
 // DirectDepositAdditionalDirectDeposit
 /**
  * The additional direct deposit model
@@ -33,44 +36,44 @@ var DirectDepositAdditionalDirectDeposit = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountNumber" }),
         __metadata("design:type", String)
     ], DirectDepositAdditionalDirectDeposit.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountType" }),
         __metadata("design:type", String)
     ], DirectDepositAdditionalDirectDeposit.prototype, "accountType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], DirectDepositAdditionalDirectDeposit.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amountType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amountType" }),
         __metadata("design:type", String)
     ], DirectDepositAdditionalDirectDeposit.prototype, "amountType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blockSpecial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blockSpecial" }),
         __metadata("design:type", Boolean)
     ], DirectDepositAdditionalDirectDeposit.prototype, "blockSpecial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isSkipPreNote" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isSkipPreNote" }),
         __metadata("design:type", Boolean)
     ], DirectDepositAdditionalDirectDeposit.prototype, "isSkipPreNote", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nameOnAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nameOnAccount" }),
         __metadata("design:type", String)
     ], DirectDepositAdditionalDirectDeposit.prototype, "nameOnAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preNoteDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preNoteDate" }),
         __metadata("design:type", String)
     ], DirectDepositAdditionalDirectDeposit.prototype, "preNoteDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routingNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routingNumber" }),
         __metadata("design:type", String)
     ], DirectDepositAdditionalDirectDeposit.prototype, "routingNumber", void 0);
     return DirectDepositAdditionalDirectDeposit;
-}(SpeakeasyBase));
-export { DirectDepositAdditionalDirectDeposit };
+}(utils_1.SpeakeasyBase));
+exports.DirectDepositAdditionalDirectDeposit = DirectDepositAdditionalDirectDeposit;
 // DirectDepositMainDirectDeposit
 /**
  * The main Direct Deposit account.
@@ -81,36 +84,36 @@ var DirectDepositMainDirectDeposit = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountNumber" }),
         __metadata("design:type", String)
     ], DirectDepositMainDirectDeposit.prototype, "accountNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountType" }),
         __metadata("design:type", String)
     ], DirectDepositMainDirectDeposit.prototype, "accountType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blockSpecial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blockSpecial" }),
         __metadata("design:type", Boolean)
     ], DirectDepositMainDirectDeposit.prototype, "blockSpecial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isSkipPreNote" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isSkipPreNote" }),
         __metadata("design:type", Boolean)
     ], DirectDepositMainDirectDeposit.prototype, "isSkipPreNote", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nameOnAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nameOnAccount" }),
         __metadata("design:type", String)
     ], DirectDepositMainDirectDeposit.prototype, "nameOnAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preNoteDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preNoteDate" }),
         __metadata("design:type", String)
     ], DirectDepositMainDirectDeposit.prototype, "preNoteDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routingNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routingNumber" }),
         __metadata("design:type", String)
     ], DirectDepositMainDirectDeposit.prototype, "routingNumber", void 0);
     return DirectDepositMainDirectDeposit;
-}(SpeakeasyBase));
-export { DirectDepositMainDirectDeposit };
+}(utils_1.SpeakeasyBase));
+exports.DirectDepositMainDirectDeposit = DirectDepositMainDirectDeposit;
 // DirectDeposit
 /**
  * The Direct Deposit model
@@ -121,13 +124,13 @@ var DirectDeposit = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalDirectDeposit", elemType: DirectDepositAdditionalDirectDeposit }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalDirectDeposit", elemType: DirectDepositAdditionalDirectDeposit }),
         __metadata("design:type", Array)
     ], DirectDeposit.prototype, "additionalDirectDeposit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mainDirectDeposit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mainDirectDeposit" }),
         __metadata("design:type", DirectDepositMainDirectDeposit)
     ], DirectDeposit.prototype, "mainDirectDeposit", void 0);
     return DirectDeposit;
-}(SpeakeasyBase));
-export { DirectDeposit };
+}(utils_1.SpeakeasyBase));
+exports.DirectDeposit = DirectDeposit;

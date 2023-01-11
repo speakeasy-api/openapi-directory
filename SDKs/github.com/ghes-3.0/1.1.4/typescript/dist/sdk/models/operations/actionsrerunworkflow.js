@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsReRunWorkflowResponse = exports.ActionsReRunWorkflowRequest = exports.ActionsReRunWorkflowPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsReRunWorkflowPathParams = /** @class */ (function (_super) {
     __extends(ActionsReRunWorkflowPathParams, _super);
     function ActionsReRunWorkflowPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ActionsReRunWorkflowPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ActionsReRunWorkflowPathParams.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=run_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=run_id" }),
         __metadata("design:type", Number)
     ], ActionsReRunWorkflowPathParams.prototype, "runId", void 0);
     return ActionsReRunWorkflowPathParams;
-}(SpeakeasyBase));
-export { ActionsReRunWorkflowPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsReRunWorkflowPathParams = ActionsReRunWorkflowPathParams;
 var ActionsReRunWorkflowRequest = /** @class */ (function (_super) {
     __extends(ActionsReRunWorkflowRequest, _super);
     function ActionsReRunWorkflowRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsReRunWorkflowPathParams)
     ], ActionsReRunWorkflowRequest.prototype, "pathParams", void 0);
     return ActionsReRunWorkflowRequest;
-}(SpeakeasyBase));
-export { ActionsReRunWorkflowRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsReRunWorkflowRequest = ActionsReRunWorkflowRequest;
 var ActionsReRunWorkflowResponse = /** @class */ (function (_super) {
     __extends(ActionsReRunWorkflowResponse, _super);
     function ActionsReRunWorkflowResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsReRunWorkflowResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsReRunWorkflowResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], ActionsReRunWorkflowResponse.prototype, "actionsReRunWorkflow201ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ActionsReRunWorkflowResponse.prototype, "actionsReRunWorkflow201ApplicationJSONObject", void 0);
     return ActionsReRunWorkflowResponse;
-}(SpeakeasyBase));
-export { ActionsReRunWorkflowResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsReRunWorkflowResponse = ActionsReRunWorkflowResponse;

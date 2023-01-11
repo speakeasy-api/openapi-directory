@@ -8,7 +8,7 @@ export declare class GetRateLimitsSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;
 }
 export declare class GetRateLimits500ApplicationJson extends SpeakeasyBase {
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }
 export declare class GetRateLimitsRequest extends SpeakeasyBase {
     queryParams: GetRateLimitsQueryParams;
@@ -18,5 +18,5 @@ export declare class GetRateLimitsResponse extends SpeakeasyBase {
     contentType: string;
     rateLimitsResponse?: shared.RateLimitsResponse;
     statusCode: number;
-    getRateLimits500ApplicationJsonObject?: GetRateLimits500ApplicationJson;
+    getRateLimits500ApplicationJSONObject?: GetRateLimits500ApplicationJson;
 }

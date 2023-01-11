@@ -1,4 +1,7 @@
-export var QuantumTaskStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuantumTaskStatusEnum = void 0;
+var QuantumTaskStatusEnum;
 (function (QuantumTaskStatusEnum) {
     QuantumTaskStatusEnum["Created"] = "CREATED";
     QuantumTaskStatusEnum["Queued"] = "QUEUED";
@@ -7,4 +10,4 @@ export var QuantumTaskStatusEnum;
     QuantumTaskStatusEnum["Failed"] = "FAILED";
     QuantumTaskStatusEnum["Cancelling"] = "CANCELLING";
     QuantumTaskStatusEnum["Cancelled"] = "CANCELLED";
-})(QuantumTaskStatusEnum || (QuantumTaskStatusEnum = {}));
+})(QuantumTaskStatusEnum = exports.QuantumTaskStatusEnum || (exports.QuantumTaskStatusEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationAdaptivePolicySettingsResponse = exports.GetOrganizationAdaptivePolicySettingsRequest = exports.GetOrganizationAdaptivePolicySettingsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationAdaptivePolicySettingsPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationAdaptivePolicySettingsPathParams, _super);
     function GetOrganizationAdaptivePolicySettingsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationAdaptivePolicySettingsPathParams.prototype, "organizationId", void 0);
     return GetOrganizationAdaptivePolicySettingsPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationAdaptivePolicySettingsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationAdaptivePolicySettingsPathParams = GetOrganizationAdaptivePolicySettingsPathParams;
 var GetOrganizationAdaptivePolicySettingsRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationAdaptivePolicySettingsRequest, _super);
     function GetOrganizationAdaptivePolicySettingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationAdaptivePolicySettingsPathParams)
     ], GetOrganizationAdaptivePolicySettingsRequest.prototype, "pathParams", void 0);
     return GetOrganizationAdaptivePolicySettingsRequest;
-}(SpeakeasyBase));
-export { GetOrganizationAdaptivePolicySettingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationAdaptivePolicySettingsRequest = GetOrganizationAdaptivePolicySettingsRequest;
 var GetOrganizationAdaptivePolicySettingsResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationAdaptivePolicySettingsResponse, _super);
     function GetOrganizationAdaptivePolicySettingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationAdaptivePolicySettingsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationAdaptivePolicySettingsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationAdaptivePolicySettingsResponse.prototype, "getOrganizationAdaptivePolicySettings200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationAdaptivePolicySettingsResponse.prototype, "getOrganizationAdaptivePolicySettings200ApplicationJSONObject", void 0);
     return GetOrganizationAdaptivePolicySettingsResponse;
-}(SpeakeasyBase));
-export { GetOrganizationAdaptivePolicySettingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationAdaptivePolicySettingsResponse = GetOrganizationAdaptivePolicySettingsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GhError = exports.GhErrorHints = void 0;
+var utils_1 = require("../../../internal/utils");
 var GhErrorHints = /** @class */ (function (_super) {
     __extends(GhErrorHints, _super);
     function GhErrorHints() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GhErrorHints.prototype, "message", void 0);
     return GhErrorHints;
-}(SpeakeasyBase));
-export { GhErrorHints };
+}(utils_1.SpeakeasyBase));
+exports.GhErrorHints = GhErrorHints;
 var GhError = /** @class */ (function (_super) {
     __extends(GhError, _super);
     function GhError() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hints", elemType: GhErrorHints }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hints", elemType: GhErrorHints }),
         __metadata("design:type", Array)
     ], GhError.prototype, "hints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GhError.prototype, "message", void 0);
     return GhError;
-}(SpeakeasyBase));
-export { GhError };
+}(utils_1.SpeakeasyBase));
+exports.GhError = GhError;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HolidayScheme = exports.HolidaySchemeHolidayScheme = exports.HolidaySchemeHolidaySchemeAccrualPayCodes = void 0;
+var utils_1 = require("../../../internal/utils");
 // HolidaySchemeHolidaySchemeAccrualPayCodes
 /**
  * The holiday schemes' accrual pay codes
@@ -33,81 +36,81 @@ var HolidaySchemeHolidaySchemeAccrualPayCodes = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PayCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PayCode" }),
         __metadata("design:type", Array)
     ], HolidaySchemeHolidaySchemeAccrualPayCodes.prototype, "payCode", void 0);
     return HolidaySchemeHolidaySchemeAccrualPayCodes;
-}(SpeakeasyBase));
-export { HolidaySchemeHolidaySchemeAccrualPayCodes };
+}(utils_1.SpeakeasyBase));
+exports.HolidaySchemeHolidaySchemeAccrualPayCodes = HolidaySchemeHolidaySchemeAccrualPayCodes;
 var HolidaySchemeHolidayScheme = /** @class */ (function (_super) {
     __extends(HolidaySchemeHolidayScheme, _super);
     function HolidaySchemeHolidayScheme() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccrualPayCodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccrualPayCodes" }),
         __metadata("design:type", HolidaySchemeHolidaySchemeAccrualPayCodes)
     ], HolidaySchemeHolidayScheme.prototype, "accrualPayCodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AllowNegativeBalance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllowNegativeBalance" }),
         __metadata("design:type", Boolean)
     ], HolidaySchemeHolidayScheme.prototype, "allowNegativeBalance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AnnualEntitlementWeeks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AnnualEntitlementWeeks" }),
         __metadata("design:type", Number)
     ], HolidaySchemeHolidayScheme.prototype, "annualEntitlementWeeks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BankHolidayInclusive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BankHolidayInclusive" }),
         __metadata("design:type", Boolean)
     ], HolidaySchemeHolidayScheme.prototype, "bankHolidayInclusive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], HolidaySchemeHolidayScheme.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EffectiveDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EffectiveDate" }),
         __metadata("design:type", Date)
     ], HolidaySchemeHolidayScheme.prototype, "effectiveDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxCarryOverDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxCarryOverDays" }),
         __metadata("design:type", Number)
     ], HolidaySchemeHolidayScheme.prototype, "maxCarryOverDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Revision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Revision" }),
         __metadata("design:type", Number)
     ], HolidaySchemeHolidayScheme.prototype, "revision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemeCeasedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemeCeasedDate" }),
         __metadata("design:type", Date)
     ], HolidaySchemeHolidayScheme.prototype, "schemeCeasedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemeKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemeKey" }),
         __metadata("design:type", String)
     ], HolidaySchemeHolidayScheme.prototype, "schemeKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SchemeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SchemeName" }),
         __metadata("design:type", String)
     ], HolidaySchemeHolidayScheme.prototype, "schemeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=YearStartDay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=YearStartDay" }),
         __metadata("design:type", Number)
     ], HolidaySchemeHolidayScheme.prototype, "yearStartDay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=YearStartMonth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=YearStartMonth" }),
         __metadata("design:type", Number)
     ], HolidaySchemeHolidayScheme.prototype, "yearStartMonth", void 0);
     return HolidaySchemeHolidayScheme;
-}(SpeakeasyBase));
-export { HolidaySchemeHolidayScheme };
+}(utils_1.SpeakeasyBase));
+exports.HolidaySchemeHolidayScheme = HolidaySchemeHolidayScheme;
 var HolidayScheme = /** @class */ (function (_super) {
     __extends(HolidayScheme, _super);
     function HolidayScheme() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HolidayScheme" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HolidayScheme" }),
         __metadata("design:type", HolidaySchemeHolidayScheme)
     ], HolidayScheme.prototype, "holidayScheme", void 0);
     return HolidayScheme;
-}(SpeakeasyBase));
-export { HolidayScheme };
+}(utils_1.SpeakeasyBase));
+exports.HolidayScheme = HolidayScheme;

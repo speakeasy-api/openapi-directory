@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolDhcpGetArgsResponse = exports.ProtocolDhcpGetArgsRequest = exports.ProtocolDhcpGetArgsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolDhcpGetArgsPathParams = /** @class */ (function (_super) {
     __extends(ProtocolDhcpGetArgsPathParams, _super);
     function ProtocolDhcpGetArgsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolDhcpGetArgsPathParams.prototype, "agentNum", void 0);
     return ProtocolDhcpGetArgsPathParams;
-}(SpeakeasyBase));
-export { ProtocolDhcpGetArgsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolDhcpGetArgsPathParams = ProtocolDhcpGetArgsPathParams;
 var ProtocolDhcpGetArgsRequest = /** @class */ (function (_super) {
     __extends(ProtocolDhcpGetArgsRequest, _super);
     function ProtocolDhcpGetArgsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolDhcpGetArgsPathParams)
     ], ProtocolDhcpGetArgsRequest.prototype, "pathParams", void 0);
     return ProtocolDhcpGetArgsRequest;
-}(SpeakeasyBase));
-export { ProtocolDhcpGetArgsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolDhcpGetArgsRequest = ProtocolDhcpGetArgsRequest;
 var ProtocolDhcpGetArgsResponse = /** @class */ (function (_super) {
     __extends(ProtocolDhcpGetArgsResponse, _super);
     function ProtocolDhcpGetArgsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolDhcpGetArgsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolDhcpGetArgsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], ProtocolDhcpGetArgsResponse.prototype, "protocolDhcpGetArgs200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ProtocolDhcpGetArgsResponse.prototype, "protocolDhcpGetArgs200ApplicationJSONObject", void 0);
     return ProtocolDhcpGetArgsResponse;
-}(SpeakeasyBase));
-export { ProtocolDhcpGetArgsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolDhcpGetArgsResponse = ProtocolDhcpGetArgsResponse;

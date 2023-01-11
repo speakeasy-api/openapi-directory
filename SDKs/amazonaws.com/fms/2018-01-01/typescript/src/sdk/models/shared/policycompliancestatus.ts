@@ -12,7 +12,7 @@ export class PolicyComplianceStatus extends SpeakeasyBase {
   evaluationResults?: EvaluationResult[];
 
   @SpeakeasyMetadata({ data: "json, name=IssueInfoMap" })
-  issueInfoMap?: Map<string, string>;
+  issueInfoMap?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=LastUpdated" })
   lastUpdated?: Date;

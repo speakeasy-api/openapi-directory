@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetUsersModeratorsOrderEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUsersModeratorsResponse = exports.GetUsersModeratorsRequest = exports.GetUsersModeratorsQueryParams = exports.GetUsersModeratorsSortEnum = exports.GetUsersModeratorsOrderEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetUsersModeratorsOrderEnum;
 (function (GetUsersModeratorsOrderEnum) {
     GetUsersModeratorsOrderEnum["Desc"] = "desc";
     GetUsersModeratorsOrderEnum["Asc"] = "asc";
-})(GetUsersModeratorsOrderEnum || (GetUsersModeratorsOrderEnum = {}));
-export var GetUsersModeratorsSortEnum;
+})(GetUsersModeratorsOrderEnum = exports.GetUsersModeratorsOrderEnum || (exports.GetUsersModeratorsOrderEnum = {}));
+var GetUsersModeratorsSortEnum;
 (function (GetUsersModeratorsSortEnum) {
     GetUsersModeratorsSortEnum["Reputation"] = "reputation";
     GetUsersModeratorsSortEnum["Creation"] = "creation";
     GetUsersModeratorsSortEnum["Name"] = "name";
     GetUsersModeratorsSortEnum["Modified"] = "modified";
-})(GetUsersModeratorsSortEnum || (GetUsersModeratorsSortEnum = {}));
+})(GetUsersModeratorsSortEnum = exports.GetUsersModeratorsSortEnum || (exports.GetUsersModeratorsSortEnum = {}));
 var GetUsersModeratorsQueryParams = /** @class */ (function (_super) {
     __extends(GetUsersModeratorsQueryParams, _super);
     function GetUsersModeratorsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetUsersModeratorsQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetUsersModeratorsQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Number)
     ], GetUsersModeratorsQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", String)
     ], GetUsersModeratorsQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=min" }),
         __metadata("design:type", String)
     ], GetUsersModeratorsQueryParams.prototype, "min", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=order" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=order" }),
         __metadata("design:type", String)
     ], GetUsersModeratorsQueryParams.prototype, "order", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetUsersModeratorsQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetUsersModeratorsQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetUsersModeratorsQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetUsersModeratorsQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Number)
     ], GetUsersModeratorsQueryParams.prototype, "todate", void 0);
     return GetUsersModeratorsQueryParams;
-}(SpeakeasyBase));
-export { GetUsersModeratorsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersModeratorsQueryParams = GetUsersModeratorsQueryParams;
 var GetUsersModeratorsRequest = /** @class */ (function (_super) {
     __extends(GetUsersModeratorsRequest, _super);
     function GetUsersModeratorsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUsersModeratorsQueryParams)
     ], GetUsersModeratorsRequest.prototype, "queryParams", void 0);
     return GetUsersModeratorsRequest;
-}(SpeakeasyBase));
-export { GetUsersModeratorsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersModeratorsRequest = GetUsersModeratorsRequest;
 var GetUsersModeratorsResponse = /** @class */ (function (_super) {
     __extends(GetUsersModeratorsResponse, _super);
     function GetUsersModeratorsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetUsersModeratorsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUsersModeratorsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUsersModeratorsResponse.prototype, "statusCode", void 0);
     return GetUsersModeratorsResponse;
-}(SpeakeasyBase));
-export { GetUsersModeratorsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersModeratorsResponse = GetUsersModeratorsResponse;

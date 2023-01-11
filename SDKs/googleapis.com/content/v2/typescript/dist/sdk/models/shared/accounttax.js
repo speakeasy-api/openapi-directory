@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountTaxTaxRule } from "./accounttaxtaxrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountTax = void 0;
+var utils_1 = require("../../../internal/utils");
+var accounttaxtaxrule_1 = require("./accounttaxtaxrule");
 // AccountTax
 /**
  * The tax settings of a merchant account. All methods require the admin role.
@@ -34,17 +37,17 @@ var AccountTax = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], AccountTax.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], AccountTax.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: AccountTaxTaxRule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: accounttaxtaxrule_1.AccountTaxTaxRule }),
         __metadata("design:type", Array)
     ], AccountTax.prototype, "rules", void 0);
     return AccountTax;
-}(SpeakeasyBase));
-export { AccountTax };
+}(utils_1.SpeakeasyBase));
+exports.AccountTax = AccountTax;

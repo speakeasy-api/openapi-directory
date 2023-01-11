@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ChangeOpEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Change = exports.ChangeOpEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ChangeOpEnum;
 (function (ChangeOpEnum) {
     ChangeOpEnum["Add"] = "add";
     ChangeOpEnum["Remove"] = "remove";
@@ -31,7 +34,7 @@ export var ChangeOpEnum;
     ChangeOpEnum["Move"] = "move";
     ChangeOpEnum["Copy"] = "copy";
     ChangeOpEnum["Test"] = "test";
-})(ChangeOpEnum || (ChangeOpEnum = {}));
+})(ChangeOpEnum = exports.ChangeOpEnum || (exports.ChangeOpEnum = {}));
 // Change
 /**
  * This class defines the Changes on the Publish API
@@ -42,21 +45,21 @@ var Change = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", String)
     ], Change.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=op" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=op" }),
         __metadata("design:type", String)
     ], Change.prototype, "op", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], Change.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", Object)
     ], Change.prototype, "value", void 0);
     return Change;
-}(SpeakeasyBase));
-export { Change };
+}(utils_1.SpeakeasyBase));
+exports.Change = Change;

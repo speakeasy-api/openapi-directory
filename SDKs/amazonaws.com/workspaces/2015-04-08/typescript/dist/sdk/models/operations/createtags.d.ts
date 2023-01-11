@@ -19,7 +19,7 @@ export declare class CreateTagsRequest extends SpeakeasyBase {
 }
 export declare class CreateTagsResponse extends SpeakeasyBase {
     contentType: string;
-    createTagsResult?: Map<string, any>;
+    createTagsResult?: Record<string, any>;
     invalidParameterValuesException?: any;
     resourceLimitExceededException?: any;
     resourceNotFoundException?: any;

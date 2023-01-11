@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeObjectResponse = exports.DescribeObjectRequest = exports.DescribeObjectHeaders = exports.DescribeObjectPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DescribeObjectPathParams = /** @class */ (function (_super) {
     __extends(DescribeObjectPathParams, _super);
     function DescribeObjectPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=Path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=Path" }),
         __metadata("design:type", String)
     ], DescribeObjectPathParams.prototype, "path", void 0);
     return DescribeObjectPathParams;
-}(SpeakeasyBase));
-export { DescribeObjectPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DescribeObjectPathParams = DescribeObjectPathParams;
 var DescribeObjectHeaders = /** @class */ (function (_super) {
     __extends(DescribeObjectHeaders, _super);
     function DescribeObjectHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DescribeObjectHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DescribeObjectHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DescribeObjectHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DescribeObjectHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DescribeObjectHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DescribeObjectHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DescribeObjectHeaders.prototype, "xAmzSignedHeaders", void 0);
     return DescribeObjectHeaders;
-}(SpeakeasyBase));
-export { DescribeObjectHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DescribeObjectHeaders = DescribeObjectHeaders;
 var DescribeObjectRequest = /** @class */ (function (_super) {
     __extends(DescribeObjectRequest, _super);
     function DescribeObjectRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DescribeObjectPathParams)
     ], DescribeObjectRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DescribeObjectHeaders)
     ], DescribeObjectRequest.prototype, "headers", void 0);
     return DescribeObjectRequest;
-}(SpeakeasyBase));
-export { DescribeObjectRequest };
+}(utils_1.SpeakeasyBase));
+exports.DescribeObjectRequest = DescribeObjectRequest;
 var DescribeObjectResponse = /** @class */ (function (_super) {
     __extends(DescribeObjectResponse, _super);
     function DescribeObjectResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DescribeObjectResponse.prototype, "containerNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DescribeObjectResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DescribeObjectResponse.prototype, "describeObjectResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DescribeObjectResponse.prototype, "internalServerError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DescribeObjectResponse.prototype, "objectNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DescribeObjectResponse.prototype, "statusCode", void 0);
     return DescribeObjectResponse;
-}(SpeakeasyBase));
-export { DescribeObjectResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeObjectResponse = DescribeObjectResponse;

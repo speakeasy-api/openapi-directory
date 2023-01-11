@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObjectDetectionRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var ObjectDetectionRequest = /** @class */ (function (_super) {
     __extends(ObjectDetectionRequest, _super);
     function ObjectDetectionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modelId, multipart_form, name=modelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modelId, multipart_form, name=modelId" }),
         __metadata("design:type", String)
     ], ObjectDetectionRequest.prototype, "modelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleBase64Content, multipart_form, name=sampleBase64Content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleBase64Content, multipart_form, name=sampleBase64Content" }),
         __metadata("design:type", String)
     ], ObjectDetectionRequest.prototype, "sampleBase64Content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleId, multipart_form, name=sampleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleId, multipart_form, name=sampleId" }),
         __metadata("design:type", String)
     ], ObjectDetectionRequest.prototype, "sampleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleLocation, multipart_form, name=sampleLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleLocation, multipart_form, name=sampleLocation" }),
         __metadata("design:type", String)
     ], ObjectDetectionRequest.prototype, "sampleLocation", void 0);
     return ObjectDetectionRequest;
-}(SpeakeasyBase));
-export { ObjectDetectionRequest };
+}(utils_1.SpeakeasyBase));
+exports.ObjectDetectionRequest = ObjectDetectionRequest;

@@ -1,0 +1,27 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+export declare class CreateImagesFromDataPathParams extends SpeakeasyBase {
+    projectId: string;
+}
+export declare class CreateImagesFromDataQueryParams extends SpeakeasyBase {
+    tagIds?: string[];
+}
+export declare class CreateImagesFromDataRequestBodyImageData extends SpeakeasyBase {
+    content: Uint8Array;
+    imageData: string;
+}
+export declare class CreateImagesFromDataRequestBody extends SpeakeasyBase {
+    imageData: CreateImagesFromDataRequestBodyImageData;
+}
+export declare class CreateImagesFromDataRequest extends SpeakeasyBase {
+    pathParams: CreateImagesFromDataPathParams;
+    queryParams: CreateImagesFromDataQueryParams;
+    request: CreateImagesFromDataRequestBody;
+}
+export declare class CreateImagesFromDataResponse extends SpeakeasyBase {
+    body?: Uint8Array;
+    contentType: string;
+    customVisionError?: shared.CustomVisionError;
+    imageCreateSummary?: shared.ImageCreateSummary;
+    statusCode: number;
+}

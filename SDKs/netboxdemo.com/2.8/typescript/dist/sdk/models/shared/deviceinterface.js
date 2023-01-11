@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedCable } from "./nestedcable";
-import { NestedDevice } from "./nesteddevice";
-import { NestedInterface } from "./nestedinterface";
-import { NestedVlan } from "./nestedvlan";
-export var DeviceInterfaceConnectionStatusLabelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceInterface = exports.DeviceInterfaceType = exports.DeviceInterfaceTypeValueEnum = exports.DeviceInterfaceTypeLabelEnum = exports.DeviceInterfaceMode = exports.DeviceInterfaceModeValueEnum = exports.DeviceInterfaceModeLabelEnum = exports.DeviceInterfaceConnectionStatus = exports.DeviceInterfaceConnectionStatusLabelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedcable_1 = require("./nestedcable");
+var nesteddevice_1 = require("./nesteddevice");
+var nestedinterface_1 = require("./nestedinterface");
+var nestedvlan_1 = require("./nestedvlan");
+var DeviceInterfaceConnectionStatusLabelEnum;
 (function (DeviceInterfaceConnectionStatusLabelEnum) {
     DeviceInterfaceConnectionStatusLabelEnum["NotConnected"] = "Not Connected";
     DeviceInterfaceConnectionStatusLabelEnum["Connected"] = "Connected";
-})(DeviceInterfaceConnectionStatusLabelEnum || (DeviceInterfaceConnectionStatusLabelEnum = {}));
+})(DeviceInterfaceConnectionStatusLabelEnum = exports.DeviceInterfaceConnectionStatusLabelEnum || (exports.DeviceInterfaceConnectionStatusLabelEnum = {}));
 var DeviceInterfaceConnectionStatus = /** @class */ (function (_super) {
     __extends(DeviceInterfaceConnectionStatus, _super);
     function DeviceInterfaceConnectionStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], DeviceInterfaceConnectionStatus.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Boolean)
     ], DeviceInterfaceConnectionStatus.prototype, "value", void 0);
     return DeviceInterfaceConnectionStatus;
-}(SpeakeasyBase));
-export { DeviceInterfaceConnectionStatus };
-export var DeviceInterfaceModeLabelEnum;
+}(utils_1.SpeakeasyBase));
+exports.DeviceInterfaceConnectionStatus = DeviceInterfaceConnectionStatus;
+var DeviceInterfaceModeLabelEnum;
 (function (DeviceInterfaceModeLabelEnum) {
     DeviceInterfaceModeLabelEnum["Access"] = "Access";
     DeviceInterfaceModeLabelEnum["Tagged"] = "Tagged";
     DeviceInterfaceModeLabelEnum["TaggedAll"] = "Tagged (All)";
-})(DeviceInterfaceModeLabelEnum || (DeviceInterfaceModeLabelEnum = {}));
-export var DeviceInterfaceModeValueEnum;
+})(DeviceInterfaceModeLabelEnum = exports.DeviceInterfaceModeLabelEnum || (exports.DeviceInterfaceModeLabelEnum = {}));
+var DeviceInterfaceModeValueEnum;
 (function (DeviceInterfaceModeValueEnum) {
     DeviceInterfaceModeValueEnum["Access"] = "access";
     DeviceInterfaceModeValueEnum["Tagged"] = "tagged";
     DeviceInterfaceModeValueEnum["TaggedAll"] = "tagged-all";
-})(DeviceInterfaceModeValueEnum || (DeviceInterfaceModeValueEnum = {}));
+})(DeviceInterfaceModeValueEnum = exports.DeviceInterfaceModeValueEnum || (exports.DeviceInterfaceModeValueEnum = {}));
 var DeviceInterfaceMode = /** @class */ (function (_super) {
     __extends(DeviceInterfaceMode, _super);
     function DeviceInterfaceMode() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], DeviceInterfaceMode.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], DeviceInterfaceMode.prototype, "value", void 0);
     return DeviceInterfaceMode;
-}(SpeakeasyBase));
-export { DeviceInterfaceMode };
-export var DeviceInterfaceTypeLabelEnum;
+}(utils_1.SpeakeasyBase));
+exports.DeviceInterfaceMode = DeviceInterfaceMode;
+var DeviceInterfaceTypeLabelEnum;
 (function (DeviceInterfaceTypeLabelEnum) {
     DeviceInterfaceTypeLabelEnum["Virtual"] = "Virtual";
     DeviceInterfaceTypeLabelEnum["LinkAggregationGroupLag"] = "Link Aggregation Group (LAG)";
@@ -150,8 +153,8 @@ export var DeviceInterfaceTypeLabelEnum;
     DeviceInterfaceTypeLabelEnum["ExtremeSummitStack256"] = "Extreme SummitStack-256";
     DeviceInterfaceTypeLabelEnum["ExtremeSummitStack512"] = "Extreme SummitStack-512";
     DeviceInterfaceTypeLabelEnum["Other"] = "Other";
-})(DeviceInterfaceTypeLabelEnum || (DeviceInterfaceTypeLabelEnum = {}));
-export var DeviceInterfaceTypeValueEnum;
+})(DeviceInterfaceTypeLabelEnum = exports.DeviceInterfaceTypeLabelEnum || (exports.DeviceInterfaceTypeLabelEnum = {}));
+var DeviceInterfaceTypeValueEnum;
 (function (DeviceInterfaceTypeValueEnum) {
     DeviceInterfaceTypeValueEnum["Virtual"] = "virtual";
     DeviceInterfaceTypeValueEnum["Lag"] = "lag";
@@ -225,104 +228,104 @@ export var DeviceInterfaceTypeValueEnum;
     DeviceInterfaceTypeValueEnum["ExtremeSummitstack256"] = "extreme-summitstack-256";
     DeviceInterfaceTypeValueEnum["ExtremeSummitstack512"] = "extreme-summitstack-512";
     DeviceInterfaceTypeValueEnum["Other"] = "other";
-})(DeviceInterfaceTypeValueEnum || (DeviceInterfaceTypeValueEnum = {}));
+})(DeviceInterfaceTypeValueEnum = exports.DeviceInterfaceTypeValueEnum || (exports.DeviceInterfaceTypeValueEnum = {}));
 var DeviceInterfaceType = /** @class */ (function (_super) {
     __extends(DeviceInterfaceType, _super);
     function DeviceInterfaceType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], DeviceInterfaceType.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], DeviceInterfaceType.prototype, "value", void 0);
     return DeviceInterfaceType;
-}(SpeakeasyBase));
-export { DeviceInterfaceType };
+}(utils_1.SpeakeasyBase));
+exports.DeviceInterfaceType = DeviceInterfaceType;
 var DeviceInterface = /** @class */ (function (_super) {
     __extends(DeviceInterface, _super);
     function DeviceInterface() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cable" }),
-        __metadata("design:type", NestedCable)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cable" }),
+        __metadata("design:type", nestedcable_1.NestedCable)
     ], DeviceInterface.prototype, "cable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connected_endpoint" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connected_endpoint" }),
+        __metadata("design:type", Object)
     ], DeviceInterface.prototype, "connectedEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connected_endpoint_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connected_endpoint_type" }),
         __metadata("design:type", String)
     ], DeviceInterface.prototype, "connectedEndpointType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connection_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connection_status" }),
         __metadata("design:type", DeviceInterfaceConnectionStatus)
     ], DeviceInterface.prototype, "connectionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count_ipaddresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count_ipaddresses" }),
         __metadata("design:type", Number)
     ], DeviceInterface.prototype, "countIpaddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], DeviceInterface.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device" }),
-        __metadata("design:type", NestedDevice)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device" }),
+        __metadata("design:type", nesteddevice_1.NestedDevice)
     ], DeviceInterface.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], DeviceInterface.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], DeviceInterface.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lag" }),
-        __metadata("design:type", NestedInterface)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lag" }),
+        __metadata("design:type", nestedinterface_1.NestedInterface)
     ], DeviceInterface.prototype, "lag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mac_address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mac_address" }),
         __metadata("design:type", String)
     ], DeviceInterface.prototype, "macAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mgmt_only" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mgmt_only" }),
         __metadata("design:type", Boolean)
     ], DeviceInterface.prototype, "mgmtOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mode" }),
         __metadata("design:type", DeviceInterfaceMode)
     ], DeviceInterface.prototype, "mode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mtu" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mtu" }),
         __metadata("design:type", Number)
     ], DeviceInterface.prototype, "mtu", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DeviceInterface.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagged_vlans", elemType: NestedVlan }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagged_vlans", elemType: nestedvlan_1.NestedVlan }),
         __metadata("design:type", Array)
     ], DeviceInterface.prototype, "taggedVlans", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], DeviceInterface.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", DeviceInterfaceType)
     ], DeviceInterface.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=untagged_vlan" }),
-        __metadata("design:type", NestedVlan)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=untagged_vlan" }),
+        __metadata("design:type", nestedvlan_1.NestedVlan)
     ], DeviceInterface.prototype, "untaggedVlan", void 0);
     return DeviceInterface;
-}(SpeakeasyBase));
-export { DeviceInterface };
+}(utils_1.SpeakeasyBase));
+exports.DeviceInterface = DeviceInterface;

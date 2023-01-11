@@ -5,10 +5,10 @@ import * as shared from "../shared";
 
 export class GetCachedImagePathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=imageID" })
-  imageId: string;
+  imageID: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=listingID" })
-  listingId: string;
+  listingID: string;
 }
 
 
@@ -35,7 +35,7 @@ export class GetCachedImageResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;

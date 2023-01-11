@@ -34,6 +34,10 @@ export class PullRequestLinks extends SpeakeasyBase {
 }
 
 
+// PullRequestSimpleUser
+/** 
+ * Simple User
+**/
 export class PullRequestSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -94,6 +98,10 @@ export class PullRequestSimpleUser extends SpeakeasyBase {
 }
 
 
+// PullRequestBaseRepoLicenseSimple
+/** 
+ * License Simple
+**/
 export class PullRequestBaseRepoLicenseSimple extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=html_url" })
   htmlUrl?: string;
@@ -931,6 +939,10 @@ export class PullRequestLabels extends SpeakeasyBase {
 }
 
 
+// PullRequestMilestoneSimpleUser
+/** 
+ * Simple User
+**/
 export class PullRequestMilestoneSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -996,6 +1008,10 @@ export enum PullRequestMilestoneStateEnum {
 }
 
 
+// PullRequestMilestone
+/** 
+ * A collection of related issues and pull requests.
+**/
 export class PullRequestMilestone extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=closed_at" })
   closedAt: Date;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteUserPolicyActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteUserPolicyResponse = exports.GetDeleteUserPolicyRequest = exports.GetDeleteUserPolicyHeaders = exports.GetDeleteUserPolicyQueryParams = exports.GetDeleteUserPolicyVersionEnum = exports.GetDeleteUserPolicyActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteUserPolicyActionEnum;
 (function (GetDeleteUserPolicyActionEnum) {
     GetDeleteUserPolicyActionEnum["DeleteUserPolicy"] = "DeleteUserPolicy";
-})(GetDeleteUserPolicyActionEnum || (GetDeleteUserPolicyActionEnum = {}));
-export var GetDeleteUserPolicyVersionEnum;
+})(GetDeleteUserPolicyActionEnum = exports.GetDeleteUserPolicyActionEnum || (exports.GetDeleteUserPolicyActionEnum = {}));
+var GetDeleteUserPolicyVersionEnum;
 (function (GetDeleteUserPolicyVersionEnum) {
     GetDeleteUserPolicyVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetDeleteUserPolicyVersionEnum || (GetDeleteUserPolicyVersionEnum = {}));
+})(GetDeleteUserPolicyVersionEnum = exports.GetDeleteUserPolicyVersionEnum || (exports.GetDeleteUserPolicyVersionEnum = {}));
 var GetDeleteUserPolicyQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteUserPolicyQueryParams, _super);
     function GetDeleteUserPolicyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteUserPolicyQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PolicyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PolicyName" }),
         __metadata("design:type", String)
     ], GetDeleteUserPolicyQueryParams.prototype, "policyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=UserName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=UserName" }),
         __metadata("design:type", String)
     ], GetDeleteUserPolicyQueryParams.prototype, "userName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteUserPolicyQueryParams.prototype, "version", void 0);
     return GetDeleteUserPolicyQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteUserPolicyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteUserPolicyQueryParams = GetDeleteUserPolicyQueryParams;
 var GetDeleteUserPolicyHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteUserPolicyHeaders, _super);
     function GetDeleteUserPolicyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteUserPolicyHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteUserPolicyHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteUserPolicyHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteUserPolicyHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteUserPolicyHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteUserPolicyHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteUserPolicyHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteUserPolicyHeaders;
-}(SpeakeasyBase));
-export { GetDeleteUserPolicyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteUserPolicyHeaders = GetDeleteUserPolicyHeaders;
 var GetDeleteUserPolicyRequest = /** @class */ (function (_super) {
     __extends(GetDeleteUserPolicyRequest, _super);
     function GetDeleteUserPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteUserPolicyQueryParams)
     ], GetDeleteUserPolicyRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteUserPolicyHeaders)
     ], GetDeleteUserPolicyRequest.prototype, "headers", void 0);
     return GetDeleteUserPolicyRequest;
-}(SpeakeasyBase));
-export { GetDeleteUserPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteUserPolicyRequest = GetDeleteUserPolicyRequest;
 var GetDeleteUserPolicyResponse = /** @class */ (function (_super) {
     __extends(GetDeleteUserPolicyResponse, _super);
     function GetDeleteUserPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteUserPolicyResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteUserPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteUserPolicyResponse.prototype, "statusCode", void 0);
     return GetDeleteUserPolicyResponse;
-}(SpeakeasyBase));
-export { GetDeleteUserPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteUserPolicyResponse = GetDeleteUserPolicyResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventSubscriptionsResponse = exports.EventSubscriptionsResponseResult = exports.EventSubscriptionsResponseResultResult = exports.EventSubscriptionsResponseResultMeta = exports.EventSubscriptionsResponseMeta = void 0;
+var utils_1 = require("../../../internal/utils");
 var EventSubscriptionsResponseMeta = /** @class */ (function (_super) {
     __extends(EventSubscriptionsResponseMeta, _super);
     function EventSubscriptionsResponseMeta() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpStatus" }),
         __metadata("design:type", String)
     ], EventSubscriptionsResponseMeta.prototype, "httpStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], EventSubscriptionsResponseMeta.prototype, "requestId", void 0);
     return EventSubscriptionsResponseMeta;
-}(SpeakeasyBase));
-export { EventSubscriptionsResponseMeta };
+}(utils_1.SpeakeasyBase));
+exports.EventSubscriptionsResponseMeta = EventSubscriptionsResponseMeta;
 var EventSubscriptionsResponseResultMeta = /** @class */ (function (_super) {
     __extends(EventSubscriptionsResponseResultMeta, _super);
     function EventSubscriptionsResponseResultMeta() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpStatus" }),
         __metadata("design:type", String)
     ], EventSubscriptionsResponseResultMeta.prototype, "httpStatus", void 0);
     return EventSubscriptionsResponseResultMeta;
-}(SpeakeasyBase));
-export { EventSubscriptionsResponseResultMeta };
+}(utils_1.SpeakeasyBase));
+exports.EventSubscriptionsResponseResultMeta = EventSubscriptionsResponseResultMeta;
 var EventSubscriptionsResponseResultResult = /** @class */ (function (_super) {
     __extends(EventSubscriptionsResponseResultResult, _super);
     function EventSubscriptionsResponseResultResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], EventSubscriptionsResponseResultResult.prototype, "id", void 0);
     return EventSubscriptionsResponseResultResult;
-}(SpeakeasyBase));
-export { EventSubscriptionsResponseResultResult };
+}(utils_1.SpeakeasyBase));
+exports.EventSubscriptionsResponseResultResult = EventSubscriptionsResponseResultResult;
 var EventSubscriptionsResponseResult = /** @class */ (function (_super) {
     __extends(EventSubscriptionsResponseResult, _super);
     function EventSubscriptionsResponseResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", EventSubscriptionsResponseResultMeta)
     ], EventSubscriptionsResponseResult.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", EventSubscriptionsResponseResultResult)
     ], EventSubscriptionsResponseResult.prototype, "result", void 0);
     return EventSubscriptionsResponseResult;
-}(SpeakeasyBase));
-export { EventSubscriptionsResponseResult };
+}(utils_1.SpeakeasyBase));
+exports.EventSubscriptionsResponseResult = EventSubscriptionsResponseResult;
 var EventSubscriptionsResponse = /** @class */ (function (_super) {
     __extends(EventSubscriptionsResponse, _super);
     function EventSubscriptionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", EventSubscriptionsResponseMeta)
     ], EventSubscriptionsResponse.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", EventSubscriptionsResponseResult)
     ], EventSubscriptionsResponse.prototype, "result", void 0);
     return EventSubscriptionsResponse;
-}(SpeakeasyBase));
-export { EventSubscriptionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.EventSubscriptionsResponse = EventSubscriptionsResponse;

@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class ListTagsForResourcePathParams extends SpeakeasyBase {
-    resourceArn: string;
+    resourceARN: string;
 }
 export declare class ListTagsForResourceHeaders extends SpeakeasyBase {
     xAmzAlgorithm?: string;

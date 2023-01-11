@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RealtimeTimeRange = void 0;
+var utils_1 = require("../../../internal/utils");
 // RealtimeTimeRange
 /**
  * An open-ended realtime time range specified by the start timestamp. For filter sets that specify a realtime time range RTB metrics continue to be aggregated throughout the lifetime of the filter set.
@@ -33,9 +36,9 @@ var RealtimeTimeRange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTimestamp" }),
         __metadata("design:type", String)
     ], RealtimeTimeRange.prototype, "startTimestamp", void 0);
     return RealtimeTimeRange;
-}(SpeakeasyBase));
-export { RealtimeTimeRange };
+}(utils_1.SpeakeasyBase));
+exports.RealtimeTimeRange = RealtimeTimeRange;

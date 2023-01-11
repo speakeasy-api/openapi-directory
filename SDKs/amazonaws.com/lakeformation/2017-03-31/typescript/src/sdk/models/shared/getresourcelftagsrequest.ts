@@ -11,5 +11,5 @@ export class GetResourceLfTagsRequest extends SpeakeasyBase {
   resource: Resource;
 
   @SpeakeasyMetadata({ data: "json, name=ShowAssignedLFTags" })
-  showAssignedLfTags?: boolean;
+  showAssignedLFTags?: boolean;
 }

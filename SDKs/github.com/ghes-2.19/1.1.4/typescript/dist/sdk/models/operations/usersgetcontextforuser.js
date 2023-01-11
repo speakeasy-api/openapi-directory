@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,93 +14,111 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UsersGetContextForUserResponse = exports.UsersGetContextForUserRequest = exports.UsersGetContextForUserQueryParams = exports.UsersGetContextForUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var UsersGetContextForUserPathParams = /** @class */ (function (_super) {
     __extends(UsersGetContextForUserPathParams, _super);
     function UsersGetContextForUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], UsersGetContextForUserPathParams.prototype, "username", void 0);
     return UsersGetContextForUserPathParams;
-}(SpeakeasyBase));
-export { UsersGetContextForUserPathParams };
-export var UsersGetContextForUserSubjectTypeEnum;
-(function (UsersGetContextForUserSubjectTypeEnum) {
-    UsersGetContextForUserSubjectTypeEnum["Organization"] = "organization";
-    UsersGetContextForUserSubjectTypeEnum["Repository"] = "repository";
-    UsersGetContextForUserSubjectTypeEnum["Issue"] = "issue";
-    UsersGetContextForUserSubjectTypeEnum["PullRequest"] = "pull_request";
-})(UsersGetContextForUserSubjectTypeEnum || (UsersGetContextForUserSubjectTypeEnum = {}));
+}(utils_1.SpeakeasyBase));
+exports.UsersGetContextForUserPathParams = UsersGetContextForUserPathParams;
 var UsersGetContextForUserQueryParams = /** @class */ (function (_super) {
     __extends(UsersGetContextForUserQueryParams, _super);
     function UsersGetContextForUserQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=subject_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=subject_id" }),
         __metadata("design:type", String)
     ], UsersGetContextForUserQueryParams.prototype, "subjectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=subject_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=subject_type" }),
         __metadata("design:type", String)
     ], UsersGetContextForUserQueryParams.prototype, "subjectType", void 0);
     return UsersGetContextForUserQueryParams;
-}(SpeakeasyBase));
-export { UsersGetContextForUserQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.UsersGetContextForUserQueryParams = UsersGetContextForUserQueryParams;
 var UsersGetContextForUserRequest = /** @class */ (function (_super) {
     __extends(UsersGetContextForUserRequest, _super);
     function UsersGetContextForUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UsersGetContextForUserPathParams)
     ], UsersGetContextForUserRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UsersGetContextForUserQueryParams)
     ], UsersGetContextForUserRequest.prototype, "queryParams", void 0);
     return UsersGetContextForUserRequest;
-}(SpeakeasyBase));
-export { UsersGetContextForUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.UsersGetContextForUserRequest = UsersGetContextForUserRequest;
 var UsersGetContextForUserResponse = /** @class */ (function (_super) {
     __extends(UsersGetContextForUserResponse, _super);
     function UsersGetContextForUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UsersGetContextForUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UsersGetContextForUserResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BasicError)
     ], UsersGetContextForUserResponse.prototype, "basicError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Hovercard)
     ], UsersGetContextForUserResponse.prototype, "hovercard", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ValidationError)
     ], UsersGetContextForUserResponse.prototype, "validationError", void 0);
     return UsersGetContextForUserResponse;
-}(SpeakeasyBase));
-export { UsersGetContextForUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.UsersGetContextForUserResponse = UsersGetContextForUserResponse;

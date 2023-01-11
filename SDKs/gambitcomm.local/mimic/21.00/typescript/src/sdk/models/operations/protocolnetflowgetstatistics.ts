@@ -22,5 +22,5 @@ export class ProtocolNetflowGetStatisticsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolNetflowGetStatistics200ApplicationJsonInt32Integers?: number[];
+  protocolNetflowGetStatistics200ApplicationJSONInt32Integers?: number[];
 }

@@ -24,7 +24,7 @@ export declare class CreateNotificationRuleRequestBody extends SpeakeasyBase {
     name: string;
     resource: string;
     status?: CreateNotificationRuleRequestBodyStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     targets: shared.Target[];
 }
 export declare class CreateNotificationRuleRequest extends SpeakeasyBase {

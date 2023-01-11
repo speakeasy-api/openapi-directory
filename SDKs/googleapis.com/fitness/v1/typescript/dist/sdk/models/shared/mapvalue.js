@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MapValue = void 0;
+var utils_1 = require("../../../internal/utils");
 // MapValue
 /**
  * Holder object for the value of an entry in a map field of a data point. A map value supports a subset of the formats that the regular Value supports.
@@ -33,9 +36,9 @@ var MapValue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fpVal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fpVal" }),
         __metadata("design:type", Number)
     ], MapValue.prototype, "fpVal", void 0);
     return MapValue;
-}(SpeakeasyBase));
-export { MapValue };
+}(utils_1.SpeakeasyBase));
+exports.MapValue = MapValue;

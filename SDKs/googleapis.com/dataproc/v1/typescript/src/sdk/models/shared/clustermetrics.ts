@@ -8,8 +8,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class ClusterMetrics extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=hdfsMetrics" })
-  hdfsMetrics?: Map<string, string>;
+  hdfsMetrics?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=yarnMetrics" })
-  yarnMetrics?: Map<string, string>;
+  yarnMetrics?: Record<string, string>;
 }

@@ -29,5 +29,5 @@ export class OrgsConvertMemberToOutsideCollaboratorResponse extends SpeakeasyBas
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  orgsConvertMemberToOutsideCollaborator202ApplicationJsonObject?: Map<string, any>;
+  orgsConvertMemberToOutsideCollaborator202ApplicationJSONObject?: Record<string, any>;
 }

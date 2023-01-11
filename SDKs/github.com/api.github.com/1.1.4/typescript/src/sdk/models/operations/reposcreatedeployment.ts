@@ -80,10 +80,10 @@ export class ReposCreateDeploymentResponse extends SpeakeasyBase {
   deployment?: shared.Deployment;
 
   @SpeakeasyMetadata()
-  reposCreateDeployment202ApplicationJsonObject?: ReposCreateDeployment202ApplicationJson;
+  reposCreateDeployment202ApplicationJSONObject?: ReposCreateDeployment202ApplicationJson;
 
   @SpeakeasyMetadata()
-  reposCreateDeployment409ApplicationJsonObject?: ReposCreateDeployment409ApplicationJson;
+  reposCreateDeployment409ApplicationJSONObject?: ReposCreateDeployment409ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

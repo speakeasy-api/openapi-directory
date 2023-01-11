@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UpdateAction } from "./updateaction";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateActionsMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var updateactionlist_1 = require("./updateactionlist");
 var UpdateActionsMessage = /** @class */ (function (_super) {
     __extends(UpdateActionsMessage, _super);
     function UpdateActionsMessage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateActionsMessage.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: UpdateAction }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: updateactionlist_1.UpdateActionList }),
         __metadata("design:type", Array)
     ], UpdateActionsMessage.prototype, "updateActions", void 0);
     return UpdateActionsMessage;
-}(SpeakeasyBase));
-export { UpdateActionsMessage };
+}(utils_1.SpeakeasyBase));
+exports.UpdateActionsMessage = UpdateActionsMessage;

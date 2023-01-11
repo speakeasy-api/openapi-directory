@@ -26,7 +26,7 @@ export class FunctionsUpdateRequestBody extends SpeakeasyBase {
   timeout?: number;
 
   @SpeakeasyMetadata({ data: "json, name=vars" })
-  vars?: Map<string, any>;
+  vars?: Record<string, any>;
 }
 
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPullRequestHostedPropertyValueResponse = exports.GetPullRequestHostedPropertyValueRequest = exports.GetPullRequestHostedPropertyValuePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPullRequestHostedPropertyValuePathParams = /** @class */ (function (_super) {
     __extends(GetPullRequestHostedPropertyValuePathParams, _super);
     function GetPullRequestHostedPropertyValuePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=app_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=app_key" }),
         __metadata("design:type", String)
     ], GetPullRequestHostedPropertyValuePathParams.prototype, "appKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=property_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=property_name" }),
         __metadata("design:type", String)
     ], GetPullRequestHostedPropertyValuePathParams.prototype, "propertyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=pullrequest_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=pullrequest_id" }),
         __metadata("design:type", String)
     ], GetPullRequestHostedPropertyValuePathParams.prototype, "pullrequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], GetPullRequestHostedPropertyValuePathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], GetPullRequestHostedPropertyValuePathParams.prototype, "workspace", void 0);
     return GetPullRequestHostedPropertyValuePathParams;
-}(SpeakeasyBase));
-export { GetPullRequestHostedPropertyValuePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPullRequestHostedPropertyValuePathParams = GetPullRequestHostedPropertyValuePathParams;
 var GetPullRequestHostedPropertyValueRequest = /** @class */ (function (_super) {
     __extends(GetPullRequestHostedPropertyValueRequest, _super);
     function GetPullRequestHostedPropertyValueRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPullRequestHostedPropertyValuePathParams)
     ], GetPullRequestHostedPropertyValueRequest.prototype, "pathParams", void 0);
     return GetPullRequestHostedPropertyValueRequest;
-}(SpeakeasyBase));
-export { GetPullRequestHostedPropertyValueRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPullRequestHostedPropertyValueRequest = GetPullRequestHostedPropertyValueRequest;
 var GetPullRequestHostedPropertyValueResponse = /** @class */ (function (_super) {
     __extends(GetPullRequestHostedPropertyValueResponse, _super);
     function GetPullRequestHostedPropertyValueResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPullRequestHostedPropertyValueResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPullRequestHostedPropertyValueResponse.prototype, "statusCode", void 0);
     return GetPullRequestHostedPropertyValueResponse;
-}(SpeakeasyBase));
-export { GetPullRequestHostedPropertyValueResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPullRequestHostedPropertyValueResponse = GetPullRequestHostedPropertyValueResponse;

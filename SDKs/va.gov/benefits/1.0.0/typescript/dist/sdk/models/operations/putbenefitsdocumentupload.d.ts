@@ -24,8 +24,8 @@ export declare class PutBenefitsDocumentUploadResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    putBenefitsDocumentUpload401ApplicationJsonObject?: PutBenefitsDocumentUpload401ApplicationJson;
-    putBenefitsDocumentUpload422ApplicationJsonObject?: PutBenefitsDocumentUpload422ApplicationJson;
-    putBenefitsDocumentUpload429ApplicationJsonObject?: PutBenefitsDocumentUpload429ApplicationJson;
-    putBenefitsDocumentUpload500ApplicationJsonObject?: PutBenefitsDocumentUpload500ApplicationJson;
+    putBenefitsDocumentUpload401ApplicationJSONObject?: PutBenefitsDocumentUpload401ApplicationJson;
+    putBenefitsDocumentUpload422ApplicationJSONObject?: PutBenefitsDocumentUpload422ApplicationJson;
+    putBenefitsDocumentUpload429ApplicationJSONObject?: PutBenefitsDocumentUpload429ApplicationJson;
+    putBenefitsDocumentUpload500ApplicationJSONObject?: PutBenefitsDocumentUpload500ApplicationJson;
 }

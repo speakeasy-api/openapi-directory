@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InfoInput } from "./info";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateFormInfoRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var info_1 = require("./info");
 // UpdateFormInfoRequestInput
 /**
  * Update Form's Info.
@@ -34,13 +37,13 @@ var UpdateFormInfoRequestInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=info" }),
-        __metadata("design:type", InfoInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=info" }),
+        __metadata("design:type", info_1.InfoInput)
     ], UpdateFormInfoRequestInput.prototype, "info", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateMask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateMask" }),
         __metadata("design:type", String)
     ], UpdateFormInfoRequestInput.prototype, "updateMask", void 0);
     return UpdateFormInfoRequestInput;
-}(SpeakeasyBase));
-export { UpdateFormInfoRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.UpdateFormInfoRequestInput = UpdateFormInfoRequestInput;

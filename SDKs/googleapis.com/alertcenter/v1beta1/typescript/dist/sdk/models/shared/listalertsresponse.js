@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Alert } from "./alert";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListAlertsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var alert_1 = require("./alert");
 // ListAlertsResponse
 /**
  * Response message for an alert listing request.
@@ -34,13 +37,13 @@ var ListAlertsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alerts", elemType: Alert }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alerts", elemType: alert_1.Alert }),
         __metadata("design:type", Array)
     ], ListAlertsResponse.prototype, "alerts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListAlertsResponse.prototype, "nextPageToken", void 0);
     return ListAlertsResponse;
-}(SpeakeasyBase));
-export { ListAlertsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListAlertsResponse = ListAlertsResponse;

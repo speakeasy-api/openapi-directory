@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DetectDeviceDetectPostRequest, DetectDeviceDetectPostResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,19 +33,19 @@ const req: DetectDeviceDetectPostRequest = {
     },
   },
   request: {
-    ftpBanner: "itaque",
+    ftpBanner: "sit",
     hostname: "voluptas",
-    httpResponse: "adipisci",
-    httpsResponse: "vel",
-    nicMac: "mollitia",
-    snmpSysdescr: "est",
-    snmpSysoid: "omnis",
-    telnetBanner: "assumenda",
-    upnpResponse: "temporibus",
+    httpResponse: "culpa",
+    httpsResponse: "expedita",
+    nicMac: "consequuntur",
+    snmpSysdescr: "dolor",
+    snmpSysoid: "expedita",
+    telnetBanner: "voluptas",
+    upnpResponse: "fugit",
   },
 };
 
-sdk.sdk.detectDeviceDetectPost(req).then((res: DetectDeviceDetectPostResponse | AxiosError) => {
+sdk.device.detectDeviceDetectPost(req).then((res: DetectDeviceDetectPostResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -55,9 +54,12 @@ sdk.sdk.detectDeviceDetectPost(req).then((res: DetectDeviceDetectPostResponse | 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### device
 
 * `detectDeviceDetectPost` - Detect iot device by service banners and mac address
+
+### firmware
+
 * `firmwareAccountsFirmwareFirmwareHashAccountsGet` - Get default accounts and password hashes of a firmware
 * `firmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGet` - Get default OS configuration issues of a device firmware
 * `firmwareExpiredCertsFirmwareFirmwareHashExpiredCertsGet` - Get expired digital certificates embedded in a device firmware

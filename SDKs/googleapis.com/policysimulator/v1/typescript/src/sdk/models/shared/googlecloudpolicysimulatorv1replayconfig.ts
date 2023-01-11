@@ -17,5 +17,5 @@ export class GoogleCloudPolicysimulatorV1ReplayConfig extends SpeakeasyBase {
   logSource?: GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum;
 
   @SpeakeasyMetadata({ data: "json, name=policyOverlay", elemType: GoogleIamV1Policy })
-  policyOverlay?: Map<string, GoogleIamV1Policy>;
+  policyOverlay?: Record<string, GoogleIamV1Policy>;
 }

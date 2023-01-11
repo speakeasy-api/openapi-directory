@@ -10,7 +10,7 @@ import { TransactionStatusEnum } from "./transactionstatusenum";
  * Body of the response for a successful payment initiation request.
 **/
 export declare class PaymentInitationRequestResponse201 extends SpeakeasyBase {
-    links: Map<string, HrefType>;
+    links: Record<string, HrefType>;
     challengeData?: ChallengeData;
     chosenScaMethod?: ChosenScaMethod;
     currencyConversionFee?: Amount;

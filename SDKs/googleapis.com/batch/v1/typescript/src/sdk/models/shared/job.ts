@@ -3,37 +3,9 @@ import { AllocationPolicy } from "./allocationpolicy";
 import { LogsPolicy } from "./logspolicy";
 import { JobNotification } from "./jobnotification";
 import { JobStatus } from "./jobstatus";
-import { TaskGroupInput } from "./taskgroup";
 import { TaskGroup } from "./taskgroup";
+import { TaskGroupInput } from "./taskgroup";
 
-
-
-// JobInput
-/** 
- * The Cloud Batch Job description.
-**/
-export class JobInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=allocationPolicy" })
-  allocationPolicy?: AllocationPolicy;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=logsPolicy" })
-  logsPolicy?: LogsPolicy;
-
-  @SpeakeasyMetadata({ data: "json, name=notifications", elemType: JobNotification })
-  notifications?: JobNotification[];
-
-  @SpeakeasyMetadata({ data: "json, name=priority" })
-  priority?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=status" })
-  status?: JobStatus;
-
-  @SpeakeasyMetadata({ data: "json, name=taskGroups", elemType: TaskGroupInput })
-  taskGroups?: TaskGroupInput[];
-}
 
 
 // Job
@@ -48,7 +20,7 @@ export class Job extends SpeakeasyBase {
   createTime?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=logsPolicy" })
   logsPolicy?: LogsPolicy;
@@ -73,4 +45,32 @@ export class Job extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+}
+
+
+// JobInput
+/** 
+ * The Cloud Batch Job description.
+**/
+export class JobInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=allocationPolicy" })
+  allocationPolicy?: AllocationPolicy;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=logsPolicy" })
+  logsPolicy?: LogsPolicy;
+
+  @SpeakeasyMetadata({ data: "json, name=notifications", elemType: JobNotification })
+  notifications?: JobNotification[];
+
+  @SpeakeasyMetadata({ data: "json, name=priority" })
+  priority?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=status" })
+  status?: JobStatus;
+
+  @SpeakeasyMetadata({ data: "json, name=taskGroups", elemType: TaskGroupInput })
+  taskGroups?: TaskGroupInput[];
 }

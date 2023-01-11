@@ -9,7 +9,7 @@ import { CodeGenNodeArg } from "./codegennodearg";
 **/
 export class Location extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=DynamoDB", elemType: CodeGenNodeArg })
-  dynamoDb?: CodeGenNodeArg[];
+  dynamoDB?: CodeGenNodeArg[];
 
   @SpeakeasyMetadata({ data: "json, name=Jdbc", elemType: CodeGenNodeArg })
   jdbc?: CodeGenNodeArg[];

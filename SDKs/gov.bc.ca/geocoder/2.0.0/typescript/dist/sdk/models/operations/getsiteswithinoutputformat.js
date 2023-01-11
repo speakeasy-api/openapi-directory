@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetSitesWithinOutputFormatOutputFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSitesWithinOutputFormatResponse = exports.GetSitesWithinOutputFormatRequest = exports.GetSitesWithinOutputFormatQueryParams = exports.GetSitesWithinOutputFormatLocationDescriptorEnum = exports.GetSitesWithinOutputFormatPathParams = exports.GetSitesWithinOutputFormatOutputFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetSitesWithinOutputFormatOutputFormatEnum;
 (function (GetSitesWithinOutputFormatOutputFormatEnum) {
     GetSitesWithinOutputFormatOutputFormatEnum["Json"] = "json";
     GetSitesWithinOutputFormatOutputFormatEnum["Geojson"] = "geojson";
@@ -32,20 +35,20 @@ export var GetSitesWithinOutputFormatOutputFormatEnum;
     GetSitesWithinOutputFormatOutputFormatEnum["Gml"] = "gml";
     GetSitesWithinOutputFormatOutputFormatEnum["Csv"] = "csv";
     GetSitesWithinOutputFormatOutputFormatEnum["Shpz"] = "shpz";
-})(GetSitesWithinOutputFormatOutputFormatEnum || (GetSitesWithinOutputFormatOutputFormatEnum = {}));
+})(GetSitesWithinOutputFormatOutputFormatEnum = exports.GetSitesWithinOutputFormatOutputFormatEnum || (exports.GetSitesWithinOutputFormatOutputFormatEnum = {}));
 var GetSitesWithinOutputFormatPathParams = /** @class */ (function (_super) {
     __extends(GetSitesWithinOutputFormatPathParams, _super);
     function GetSitesWithinOutputFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
         __metadata("design:type", String)
     ], GetSitesWithinOutputFormatPathParams.prototype, "outputFormat", void 0);
     return GetSitesWithinOutputFormatPathParams;
-}(SpeakeasyBase));
-export { GetSitesWithinOutputFormatPathParams };
-export var GetSitesWithinOutputFormatLocationDescriptorEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetSitesWithinOutputFormatPathParams = GetSitesWithinOutputFormatPathParams;
+var GetSitesWithinOutputFormatLocationDescriptorEnum;
 (function (GetSitesWithinOutputFormatLocationDescriptorEnum) {
     GetSitesWithinOutputFormatLocationDescriptorEnum["Any"] = "any";
     GetSitesWithinOutputFormatLocationDescriptorEnum["AccessPoint"] = "accessPoint";
@@ -53,76 +56,76 @@ export var GetSitesWithinOutputFormatLocationDescriptorEnum;
     GetSitesWithinOutputFormatLocationDescriptorEnum["ParcelPoint"] = "parcelPoint";
     GetSitesWithinOutputFormatLocationDescriptorEnum["RooftopPoint"] = "rooftopPoint";
     GetSitesWithinOutputFormatLocationDescriptorEnum["RoutingPoint"] = "routingPoint";
-})(GetSitesWithinOutputFormatLocationDescriptorEnum || (GetSitesWithinOutputFormatLocationDescriptorEnum = {}));
+})(GetSitesWithinOutputFormatLocationDescriptorEnum = exports.GetSitesWithinOutputFormatLocationDescriptorEnum || (exports.GetSitesWithinOutputFormatLocationDescriptorEnum = {}));
 var GetSitesWithinOutputFormatQueryParams = /** @class */ (function (_super) {
     __extends(GetSitesWithinOutputFormatQueryParams, _super);
     function GetSitesWithinOutputFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=bbox" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=bbox" }),
         __metadata("design:type", String)
     ], GetSitesWithinOutputFormatQueryParams.prototype, "bbox", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=brief" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=brief" }),
         __metadata("design:type", Boolean)
     ], GetSitesWithinOutputFormatQueryParams.prototype, "brief", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=excludeUnits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=excludeUnits" }),
         __metadata("design:type", Boolean)
     ], GetSitesWithinOutputFormatQueryParams.prototype, "excludeUnits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=locationDescriptor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=locationDescriptor" }),
         __metadata("design:type", String)
     ], GetSitesWithinOutputFormatQueryParams.prototype, "locationDescriptor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxResults" }),
         __metadata("design:type", Number)
     ], GetSitesWithinOutputFormatQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=onlyCivic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=onlyCivic" }),
         __metadata("design:type", Boolean)
     ], GetSitesWithinOutputFormatQueryParams.prototype, "onlyCivic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
         __metadata("design:type", Number)
-    ], GetSitesWithinOutputFormatQueryParams.prototype, "outputSrs", void 0);
+    ], GetSitesWithinOutputFormatQueryParams.prototype, "outputSRS", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=setBack" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=setBack" }),
         __metadata("design:type", Number)
     ], GetSitesWithinOutputFormatQueryParams.prototype, "setBack", void 0);
     return GetSitesWithinOutputFormatQueryParams;
-}(SpeakeasyBase));
-export { GetSitesWithinOutputFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSitesWithinOutputFormatQueryParams = GetSitesWithinOutputFormatQueryParams;
 var GetSitesWithinOutputFormatRequest = /** @class */ (function (_super) {
     __extends(GetSitesWithinOutputFormatRequest, _super);
     function GetSitesWithinOutputFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSitesWithinOutputFormatPathParams)
     ], GetSitesWithinOutputFormatRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSitesWithinOutputFormatQueryParams)
     ], GetSitesWithinOutputFormatRequest.prototype, "queryParams", void 0);
     return GetSitesWithinOutputFormatRequest;
-}(SpeakeasyBase));
-export { GetSitesWithinOutputFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSitesWithinOutputFormatRequest = GetSitesWithinOutputFormatRequest;
 var GetSitesWithinOutputFormatResponse = /** @class */ (function (_super) {
     __extends(GetSitesWithinOutputFormatResponse, _super);
     function GetSitesWithinOutputFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSitesWithinOutputFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSitesWithinOutputFormatResponse.prototype, "statusCode", void 0);
     return GetSitesWithinOutputFormatResponse;
-}(SpeakeasyBase));
-export { GetSitesWithinOutputFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSitesWithinOutputFormatResponse = GetSitesWithinOutputFormatResponse;

@@ -5,5 +5,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class Connector extends SpeakeasyBase {
     connectorArn: string;
     id: string;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
 }

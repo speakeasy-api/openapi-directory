@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AgentUpdateStatusEnum } from "./agentupdatestatusenum";
-import { Attachment } from "./attachment";
-import { Attribute } from "./attribute";
-import { Resource } from "./resource";
-import { Tag } from "./tag";
-import { VersionInfo } from "./versioninfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContainerInstance = void 0;
+var utils_1 = require("../../../internal/utils");
+var agentupdatestatusenum_1 = require("./agentupdatestatusenum");
+var attachment_1 = require("./attachment");
+var attribute_1 = require("./attribute");
+var resource_1 = require("./resource");
+var tag_1 = require("./tag");
+var versioninfo_1 = require("./versioninfo");
 // ContainerInstance
 /**
  * An EC2 instance that is running the Amazon ECS agent and has been registered with a cluster.
@@ -39,73 +42,73 @@ var ContainerInstance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentConnected" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentConnected" }),
         __metadata("design:type", Boolean)
     ], ContainerInstance.prototype, "agentConnected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentUpdateStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentUpdateStatus" }),
         __metadata("design:type", String)
     ], ContainerInstance.prototype, "agentUpdateStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attachments", elemType: Attachment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attachments", elemType: attachment_1.Attachment }),
         __metadata("design:type", Array)
     ], ContainerInstance.prototype, "attachments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes", elemType: Attribute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes", elemType: attribute_1.Attribute }),
         __metadata("design:type", Array)
     ], ContainerInstance.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capacityProviderName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capacityProviderName" }),
         __metadata("design:type", String)
     ], ContainerInstance.prototype, "capacityProviderName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerInstanceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerInstanceArn" }),
         __metadata("design:type", String)
     ], ContainerInstance.prototype, "containerInstanceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ec2InstanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ec2InstanceId" }),
         __metadata("design:type", String)
     ], ContainerInstance.prototype, "ec2InstanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pendingTasksCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pendingTasksCount" }),
         __metadata("design:type", Number)
     ], ContainerInstance.prototype, "pendingTasksCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registeredAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registeredAt" }),
         __metadata("design:type", Date)
     ], ContainerInstance.prototype, "registeredAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registeredResources", elemType: Resource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registeredResources", elemType: resource_1.Resource }),
         __metadata("design:type", Array)
     ], ContainerInstance.prototype, "registeredResources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remainingResources", elemType: Resource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remainingResources", elemType: resource_1.Resource }),
         __metadata("design:type", Array)
     ], ContainerInstance.prototype, "remainingResources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runningTasksCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runningTasksCount" }),
         __metadata("design:type", Number)
     ], ContainerInstance.prototype, "runningTasksCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ContainerInstance.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusReason" }),
         __metadata("design:type", String)
     ], ContainerInstance.prototype, "statusReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], ContainerInstance.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], ContainerInstance.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versionInfo" }),
-        __metadata("design:type", VersionInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versionInfo" }),
+        __metadata("design:type", versioninfo_1.VersionInfo)
     ], ContainerInstance.prototype, "versionInfo", void 0);
     return ContainerInstance;
-}(SpeakeasyBase));
-export { ContainerInstance };
+}(utils_1.SpeakeasyBase));
+exports.ContainerInstance = ContainerInstance;

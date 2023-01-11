@@ -25,7 +25,7 @@ export class ListAllGroupsUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -37,7 +37,7 @@ export class ListAllGroupsUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -49,7 +49,7 @@ export class ListAllGroupsUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -64,14 +64,14 @@ export class ListAllGroupsUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listAllGroupsUsingPost200ApplicationJsonObject?: ListAllGroupsUsingPost200ApplicationJson;
+  listAllGroupsUsingPOST200ApplicationJSONObject?: ListAllGroupsUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  listAllGroupsUsingPost400ApplicationJsonObject?: ListAllGroupsUsingPost400ApplicationJson;
+  listAllGroupsUsingPOST400ApplicationJSONObject?: ListAllGroupsUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  listAllGroupsUsingPost401ApplicationJsonObject?: ListAllGroupsUsingPost401ApplicationJson;
+  listAllGroupsUsingPOST401ApplicationJSONObject?: ListAllGroupsUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  listAllGroupsUsingPost500ApplicationJsonObject?: ListAllGroupsUsingPost500ApplicationJson;
+  listAllGroupsUsingPOST500ApplicationJSONObject?: ListAllGroupsUsingPost500ApplicationJson;
 }

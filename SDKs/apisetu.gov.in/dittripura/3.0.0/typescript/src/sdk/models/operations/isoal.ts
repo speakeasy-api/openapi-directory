@@ -188,23 +188,23 @@ export class IsoalResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  isoal400ApplicationJsonObject?: Isoal400ApplicationJson;
+  isoal400ApplicationJSONObject?: Isoal400ApplicationJson;
 
   @SpeakeasyMetadata()
-  isoal401ApplicationJsonObject?: Isoal401ApplicationJson;
+  isoal401ApplicationJSONObject?: Isoal401ApplicationJson;
 
   @SpeakeasyMetadata()
-  isoal404ApplicationJsonObject?: Isoal404ApplicationJson;
+  isoal404ApplicationJSONObject?: Isoal404ApplicationJson;
 
   @SpeakeasyMetadata()
-  isoal500ApplicationJsonObject?: Isoal500ApplicationJson;
+  isoal500ApplicationJSONObject?: Isoal500ApplicationJson;
 
   @SpeakeasyMetadata()
-  isoal502ApplicationJsonObject?: Isoal502ApplicationJson;
+  isoal502ApplicationJSONObject?: Isoal502ApplicationJson;
 
   @SpeakeasyMetadata()
-  isoal503ApplicationJsonObject?: Isoal503ApplicationJson;
+  isoal503ApplicationJSONObject?: Isoal503ApplicationJson;
 
   @SpeakeasyMetadata()
-  isoal504ApplicationJsonObject?: Isoal504ApplicationJson;
+  isoal504ApplicationJSONObject?: Isoal504ApplicationJson;
 }

@@ -15,6 +15,6 @@ export declare class GetDomainDomainnameRequest extends SpeakeasyBase {
 }
 export declare class GetDomainDomainnameResponse extends SpeakeasyBase {
     contentType: string;
-    getDomainDomainname200ApplicationJsonObject?: GetDomainDomainname200ApplicationJson;
     statusCode: number;
+    getDomainDomainname200ApplicationJSONObject?: GetDomainDomainname200ApplicationJson;
 }

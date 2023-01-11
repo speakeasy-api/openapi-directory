@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Filtering } from "./filtering";
-import { Location } from "./location";
-export var DataExporterConfigTypEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataExporterConfig = exports.DataExporterConfigTypEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var filtering_1 = require("./filtering");
+var location_1 = require("./location");
+var DataExporterConfigTypEnum;
 (function (DataExporterConfigTypEnum) {
     DataExporterConfigTypEnum["Kafka"] = "kafka";
     DataExporterConfigTypEnum["Pulsar"] = "pulsar";
@@ -34,7 +37,7 @@ export var DataExporterConfigTypEnum;
     DataExporterConfigTypEnum["Elastic"] = "elastic";
     DataExporterConfigTypEnum["Console"] = "console";
     DataExporterConfigTypEnum["Custom"] = "custom";
-})(DataExporterConfigTypEnum || (DataExporterConfigTypEnum = {}));
+})(DataExporterConfigTypEnum = exports.DataExporterConfigTypEnum || (exports.DataExporterConfigTypEnum = {}));
 // DataExporterConfig
 /**
  * Settings to export Otorshi events
@@ -45,65 +48,65 @@ var DataExporterConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bufferSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bufferSize" }),
         __metadata("design:type", Number)
     ], DataExporterConfig.prototype, "bufferSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
         __metadata("design:type", Object)
     ], DataExporterConfig.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=desc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=desc" }),
         __metadata("design:type", String)
     ], DataExporterConfig.prototype, "desc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", String)
     ], DataExporterConfig.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filtering" }),
-        __metadata("design:type", Filtering)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filtering" }),
+        __metadata("design:type", filtering_1.Filtering)
     ], DataExporterConfig.prototype, "filtering", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupDuration" }),
         __metadata("design:type", Number)
     ], DataExporterConfig.prototype, "groupDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupSize" }),
         __metadata("design:type", Number)
     ], DataExporterConfig.prototype, "groupSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], DataExporterConfig.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jsonWorkers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jsonWorkers" }),
         __metadata("design:type", Number)
     ], DataExporterConfig.prototype, "jsonWorkers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", Location)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", location_1.Location)
     ], DataExporterConfig.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], DataExporterConfig.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DataExporterConfig.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projection" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projection" }),
+        __metadata("design:type", Object)
     ], DataExporterConfig.prototype, "projection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sendWorkers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sendWorkers" }),
         __metadata("design:type", Number)
     ], DataExporterConfig.prototype, "sendWorkers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=typ" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=typ" }),
         __metadata("design:type", String)
     ], DataExporterConfig.prototype, "typ", void 0);
     return DataExporterConfig;
-}(SpeakeasyBase));
-export { DataExporterConfig };
+}(utils_1.SpeakeasyBase));
+exports.DataExporterConfig = DataExporterConfig;

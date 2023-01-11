@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Object } from "./object";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComposeRequest = exports.ComposeRequestSourceObjects = exports.ComposeRequestSourceObjectsObjectPreconditions = void 0;
+var utils_1 = require("../../../internal/utils");
+var object_1 = require("./object");
 // ComposeRequestSourceObjectsObjectPreconditions
 /**
  * Conditions that must be met for this operation to execute.
@@ -34,32 +37,32 @@ var ComposeRequestSourceObjectsObjectPreconditions = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ifGenerationMatch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ifGenerationMatch" }),
         __metadata("design:type", String)
     ], ComposeRequestSourceObjectsObjectPreconditions.prototype, "ifGenerationMatch", void 0);
     return ComposeRequestSourceObjectsObjectPreconditions;
-}(SpeakeasyBase));
-export { ComposeRequestSourceObjectsObjectPreconditions };
+}(utils_1.SpeakeasyBase));
+exports.ComposeRequestSourceObjectsObjectPreconditions = ComposeRequestSourceObjectsObjectPreconditions;
 var ComposeRequestSourceObjects = /** @class */ (function (_super) {
     __extends(ComposeRequestSourceObjects, _super);
     function ComposeRequestSourceObjects() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=generation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=generation" }),
         __metadata("design:type", String)
     ], ComposeRequestSourceObjects.prototype, "generation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ComposeRequestSourceObjects.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectPreconditions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectPreconditions" }),
         __metadata("design:type", ComposeRequestSourceObjectsObjectPreconditions)
     ], ComposeRequestSourceObjects.prototype, "objectPreconditions", void 0);
     return ComposeRequestSourceObjects;
-}(SpeakeasyBase));
-export { ComposeRequestSourceObjects };
+}(utils_1.SpeakeasyBase));
+exports.ComposeRequestSourceObjects = ComposeRequestSourceObjects;
 // ComposeRequest
 /**
  * A Compose request.
@@ -70,17 +73,17 @@ var ComposeRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
-        __metadata("design:type", Object)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
+        __metadata("design:type", object_1.ObjectT)
     ], ComposeRequest.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ComposeRequest.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceObjects", elemType: ComposeRequestSourceObjects }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceObjects", elemType: ComposeRequestSourceObjects }),
         __metadata("design:type", Array)
     ], ComposeRequest.prototype, "sourceObjects", void 0);
     return ComposeRequest;
-}(SpeakeasyBase));
-export { ComposeRequest };
+}(utils_1.SpeakeasyBase));
+exports.ComposeRequest = ComposeRequest;

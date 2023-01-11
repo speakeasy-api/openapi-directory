@@ -54,7 +54,7 @@ export class CreateAclResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createAclResponse?: shared.CreateAclResponse;
+  createACLResponse?: shared.CreateAclResponse;
 
   @SpeakeasyMetadata()
   defaultUserRequired?: any;

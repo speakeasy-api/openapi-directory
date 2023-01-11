@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttributeScores } from "./attributescores";
-import { TextEntry } from "./textentry";
-import { Context } from "./context";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SuggestCommentScoreRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var attributescores_1 = require("./attributescores");
+var textentry_1 = require("./textentry");
+var context_1 = require("./context");
 // SuggestCommentScoreRequest
 /**
  * The comment score suggestion request message.
@@ -36,33 +39,33 @@ var SuggestCommentScoreRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributeScores", elemType: AttributeScores }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributeScores", elemType: attributescores_1.AttributeScores }),
+        __metadata("design:type", Object)
     ], SuggestCommentScoreRequest.prototype, "attributeScores", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientToken" }),
         __metadata("design:type", String)
     ], SuggestCommentScoreRequest.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment" }),
-        __metadata("design:type", TextEntry)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment" }),
+        __metadata("design:type", textentry_1.TextEntry)
     ], SuggestCommentScoreRequest.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=communityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=communityId" }),
         __metadata("design:type", String)
     ], SuggestCommentScoreRequest.prototype, "communityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=context" }),
-        __metadata("design:type", Context)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=context" }),
+        __metadata("design:type", context_1.Context)
     ], SuggestCommentScoreRequest.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languages" }),
         __metadata("design:type", Array)
     ], SuggestCommentScoreRequest.prototype, "languages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessionId" }),
         __metadata("design:type", String)
     ], SuggestCommentScoreRequest.prototype, "sessionId", void 0);
     return SuggestCommentScoreRequest;
-}(SpeakeasyBase));
-export { SuggestCommentScoreRequest };
+}(utils_1.SpeakeasyBase));
+exports.SuggestCommentScoreRequest = SuggestCommentScoreRequest;

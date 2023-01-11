@@ -46,7 +46,7 @@ export class ReportsIndexResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  object?: Map<string, any>;
+  object?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

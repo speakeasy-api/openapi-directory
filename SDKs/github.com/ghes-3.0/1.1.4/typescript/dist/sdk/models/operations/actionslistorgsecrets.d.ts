@@ -17,7 +17,7 @@ export declare class ActionsListOrgSecretsRequest extends SpeakeasyBase {
 }
 export declare class ActionsListOrgSecretsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    actionsListOrgSecrets200ApplicationJsonObject?: ActionsListOrgSecrets200ApplicationJson;
+    actionsListOrgSecrets200ApplicationJSONObject?: ActionsListOrgSecrets200ApplicationJson;
 }

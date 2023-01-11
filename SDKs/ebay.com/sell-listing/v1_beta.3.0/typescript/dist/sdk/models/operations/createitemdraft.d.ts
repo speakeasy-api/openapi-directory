@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class CreateItemDraftHeaders extends SpeakeasyBase {
     contentLanguage?: string;
-    xEbayCMarketplaceId: string;
+    xEBAYCMARKETPLACEID: string;
 }
 export declare class CreateItemDraftSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;

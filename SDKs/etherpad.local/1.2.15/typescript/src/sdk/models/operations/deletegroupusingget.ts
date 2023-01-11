@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class DeleteGroupUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=groupID" })
-  groupId?: string;
+  groupID?: string;
 }
 
 
@@ -13,7 +13,7 @@ export class DeleteGroupUsingGet200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -25,7 +25,7 @@ export class DeleteGroupUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -37,7 +37,7 @@ export class DeleteGroupUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -49,7 +49,7 @@ export class DeleteGroupUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,14 +70,14 @@ export class DeleteGroupUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteGroupUsingGet200ApplicationJsonObject?: DeleteGroupUsingGet200ApplicationJson;
+  deleteGroupUsingGET200ApplicationJSONObject?: DeleteGroupUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  deleteGroupUsingGet400ApplicationJsonObject?: DeleteGroupUsingGet400ApplicationJson;
+  deleteGroupUsingGET400ApplicationJSONObject?: DeleteGroupUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  deleteGroupUsingGet401ApplicationJsonObject?: DeleteGroupUsingGet401ApplicationJson;
+  deleteGroupUsingGET401ApplicationJSONObject?: DeleteGroupUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  deleteGroupUsingGet500ApplicationJsonObject?: DeleteGroupUsingGet500ApplicationJson;
+  deleteGroupUsingGET500ApplicationJSONObject?: DeleteGroupUsingGet500ApplicationJson;
 }

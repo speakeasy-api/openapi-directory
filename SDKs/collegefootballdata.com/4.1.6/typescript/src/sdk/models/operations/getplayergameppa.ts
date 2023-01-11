@@ -41,7 +41,7 @@ export class GetPlayerGamePpaResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata({ elemType: shared.PlayerGamePpa })
-  playerGamePpas?: shared.PlayerGamePpa[];
+  playerGamePPAS?: shared.PlayerGamePpa[];
 
   @SpeakeasyMetadata()
   statusCode: number;

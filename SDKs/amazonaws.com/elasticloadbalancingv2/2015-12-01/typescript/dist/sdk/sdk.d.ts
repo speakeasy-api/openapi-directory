@@ -1,20 +1,20 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://elasticloadbalancing.{region}.amazonaws.com", "https://elasticloadbalancing.{region}.amazonaws.com", "http://elasticloadbalancing.amazonaws.com", "https://elasticloadbalancing.amazonaws.com", "http://elasticloadbalancing.{region}.amazonaws.com.cn", "https://elasticloadbalancing.{region}.amazonaws.com.cn"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * getDeleteListener - <p>Deletes the specified listener.</p> <p>Alternatively, your listener is deleted when you delete the load balancer to which it is attached.</p>
     **/
@@ -224,4 +224,3 @@ export declare class SDK {
     **/
     postSetSubnets(req: operations.PostSetSubnetsRequest, config?: AxiosRequestConfig): Promise<operations.PostSetSubnetsResponse>;
 }
-export {};

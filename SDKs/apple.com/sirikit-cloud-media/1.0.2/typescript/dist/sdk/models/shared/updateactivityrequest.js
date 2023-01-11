@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Constraints } from "./constraints";
-import { PlayerContext } from "./playercontext";
-import { QueueActivityReportEventEnum } from "./queueactivityreporteventenum";
-import { UserActivity } from "./useractivity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateActivityRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var constraints_1 = require("./constraints");
+var playercontext_1 = require("./playercontext");
+var queueactivityreporteventenum_1 = require("./queueactivityreporteventenum");
+var useractivity_1 = require("./useractivity");
 var UpdateActivityRequest = /** @class */ (function (_super) {
     __extends(UpdateActivityRequest, _super);
     function UpdateActivityRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=constraints" }),
-        __metadata("design:type", Constraints)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=constraints" }),
+        __metadata("design:type", constraints_1.Constraints)
     ], UpdateActivityRequest.prototype, "constraints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nowPlaying" }),
-        __metadata("design:type", PlayerContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nowPlaying" }),
+        __metadata("design:type", playercontext_1.PlayerContext)
     ], UpdateActivityRequest.prototype, "nowPlaying", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previouslyPlaying" }),
-        __metadata("design:type", PlayerContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previouslyPlaying" }),
+        __metadata("design:type", playercontext_1.PlayerContext)
     ], UpdateActivityRequest.prototype, "previouslyPlaying", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=report" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=report" }),
         __metadata("design:type", String)
     ], UpdateActivityRequest.prototype, "report", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], UpdateActivityRequest.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userActivity" }),
-        __metadata("design:type", UserActivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userActivity" }),
+        __metadata("design:type", useractivity_1.UserActivity)
     ], UpdateActivityRequest.prototype, "userActivity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], UpdateActivityRequest.prototype, "version", void 0);
     return UpdateActivityRequest;
-}(SpeakeasyBase));
-export { UpdateActivityRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateActivityRequest = UpdateActivityRequest;

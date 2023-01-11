@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HsmStatusEnum } from "./hsmstatusenum";
-import { SubscriptionTypeEnum } from "./subscriptiontypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeHsmResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var hsmstatusenum_1 = require("./hsmstatusenum");
+var subscriptiontypeenum_1 = require("./subscriptiontypeenum");
 // DescribeHsmResponse
 /**
  * Contains the output of the <a>DescribeHsm</a> operation.
@@ -35,89 +38,89 @@ var DescribeHsmResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AvailabilityZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AvailabilityZone" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EniId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EniId" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "eniId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EniIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EniIp" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "eniIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HsmArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HsmArn" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "hsmArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HsmType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HsmType" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "hsmType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IamRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IamRoleArn" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "iamRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Partitions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Partitions" }),
         __metadata("design:type", Array)
     ], DescribeHsmResponse.prototype, "partitions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SerialNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SerialNumber" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "serialNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServerCertLastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServerCertLastUpdated" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "serverCertLastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServerCertUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServerCertUri" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "serverCertUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SoftwareVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SoftwareVersion" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "softwareVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SshKeyLastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SshKeyLastUpdated" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "sshKeyLastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SshPublicKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SshPublicKey" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "sshPublicKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatusDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatusDetails" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "statusDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetId" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "subnetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubscriptionEndDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubscriptionEndDate" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "subscriptionEndDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubscriptionStartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubscriptionStartDate" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "subscriptionStartDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubscriptionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubscriptionType" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "subscriptionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VendorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VendorName" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "vendorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VpcId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VpcId" }),
         __metadata("design:type", String)
     ], DescribeHsmResponse.prototype, "vpcId", void 0);
     return DescribeHsmResponse;
-}(SpeakeasyBase));
-export { DescribeHsmResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeHsmResponse = DescribeHsmResponse;

@@ -56,7 +56,7 @@ export class YoutubeCaptionsUpdateRequests extends SpeakeasyBase {
   applicationOctetStream: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=text/xml" })
-  textXml: Uint8Array;
+  textXML: Uint8Array;
 }
 
 

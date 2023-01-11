@@ -1,0 +1,44 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import { FailoverState } from "./failoverstate";
+import { GlobalClusterMemberList } from "./globalclustermemberlist";
+
+
+
+// GlobalClusterList
+/** 
+ * A data type representing an Aurora global database.
+**/
+export class GlobalClusterList extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  databaseName?: string;
+
+  @SpeakeasyMetadata()
+  deletionProtection?: boolean;
+
+  @SpeakeasyMetadata()
+  engine?: string;
+
+  @SpeakeasyMetadata()
+  engineVersion?: string;
+
+  @SpeakeasyMetadata()
+  failoverState?: FailoverState;
+
+  @SpeakeasyMetadata()
+  globalClusterArn?: string;
+
+  @SpeakeasyMetadata()
+  globalClusterIdentifier?: string;
+
+  @SpeakeasyMetadata({ elemType: GlobalClusterMemberList })
+  globalClusterMembers?: GlobalClusterMemberList[];
+
+  @SpeakeasyMetadata()
+  globalClusterResourceId?: string;
+
+  @SpeakeasyMetadata()
+  status?: string;
+
+  @SpeakeasyMetadata()
+  storageEncrypted?: boolean;
+}

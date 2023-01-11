@@ -10,13 +10,13 @@ export declare class PostSnippetsWorkspaceSecurity extends SpeakeasyBase {
 }
 export declare class PostSnippetsWorkspaceRequest extends SpeakeasyBase {
     pathParams: PostSnippetsWorkspacePathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
     security: PostSnippetsWorkspaceSecurity;
 }
 export declare class PostSnippetsWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    error?: Map<string, any>;
-    snippet?: Map<string, any>;
+    error?: Record<string, any>;
+    snippet?: Record<string, any>;
 }

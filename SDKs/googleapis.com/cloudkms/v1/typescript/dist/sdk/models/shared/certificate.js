@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CertificateInput = exports.Certificate = void 0;
+var utils_1 = require("../../../internal/utils");
 // Certificate
 /**
  * A Certificate represents an X.509 certificate used to authenticate HTTPS connections to EKM replicas.
@@ -33,44 +36,44 @@ var Certificate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuer" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "issuer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notAfterTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notAfterTime" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "notAfterTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notBeforeTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notBeforeTime" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "notBeforeTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parsed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parsed" }),
         __metadata("design:type", Boolean)
     ], Certificate.prototype, "parsed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rawDer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rawDer" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "rawDer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serialNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serialNumber" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "serialNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha256Fingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha256Fingerprint" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "sha256Fingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subject" }),
         __metadata("design:type", String)
     ], Certificate.prototype, "subject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subjectAlternativeDnsNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subjectAlternativeDnsNames" }),
         __metadata("design:type", Array)
     ], Certificate.prototype, "subjectAlternativeDnsNames", void 0);
     return Certificate;
-}(SpeakeasyBase));
-export { Certificate };
+}(utils_1.SpeakeasyBase));
+exports.Certificate = Certificate;
 // CertificateInput
 /**
  * A Certificate represents an X.509 certificate used to authenticate HTTPS connections to EKM replicas.
@@ -81,9 +84,9 @@ var CertificateInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rawDer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rawDer" }),
         __metadata("design:type", String)
     ], CertificateInput.prototype, "rawDer", void 0);
     return CertificateInput;
-}(SpeakeasyBase));
-export { CertificateInput };
+}(utils_1.SpeakeasyBase));
+exports.CertificateInput = CertificateInput;

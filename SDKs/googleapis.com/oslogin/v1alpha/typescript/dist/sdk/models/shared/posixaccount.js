@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PosixAccountOperatingSystemTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PosixAccount = exports.PosixAccountOperatingSystemTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PosixAccountOperatingSystemTypeEnum;
 (function (PosixAccountOperatingSystemTypeEnum) {
     PosixAccountOperatingSystemTypeEnum["OperatingSystemTypeUnspecified"] = "OPERATING_SYSTEM_TYPE_UNSPECIFIED";
     PosixAccountOperatingSystemTypeEnum["Linux"] = "LINUX";
     PosixAccountOperatingSystemTypeEnum["Windows"] = "WINDOWS";
-})(PosixAccountOperatingSystemTypeEnum || (PosixAccountOperatingSystemTypeEnum = {}));
+})(PosixAccountOperatingSystemTypeEnum = exports.PosixAccountOperatingSystemTypeEnum || (exports.PosixAccountOperatingSystemTypeEnum = {}));
 // PosixAccount
 /**
  * The POSIX account information associated with a Google account.
@@ -39,49 +42,49 @@ var PosixAccount = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], PosixAccount.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gecos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gecos" }),
         __metadata("design:type", String)
     ], PosixAccount.prototype, "gecos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], PosixAccount.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=homeDirectory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=homeDirectory" }),
         __metadata("design:type", String)
     ], PosixAccount.prototype, "homeDirectory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PosixAccount.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operatingSystemType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operatingSystemType" }),
         __metadata("design:type", String)
     ], PosixAccount.prototype, "operatingSystemType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary" }),
         __metadata("design:type", Boolean)
     ], PosixAccount.prototype, "primary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shell" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shell" }),
         __metadata("design:type", String)
     ], PosixAccount.prototype, "shell", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=systemId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=systemId" }),
         __metadata("design:type", String)
     ], PosixAccount.prototype, "systemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], PosixAccount.prototype, "uid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], PosixAccount.prototype, "username", void 0);
     return PosixAccount;
-}(SpeakeasyBase));
-export { PosixAccount };
+}(utils_1.SpeakeasyBase));
+exports.PosixAccount = PosixAccount;

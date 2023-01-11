@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkSwitchAccessPolicyResponse = exports.GetNetworkSwitchAccessPolicyRequest = exports.GetNetworkSwitchAccessPolicyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkSwitchAccessPolicyPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkSwitchAccessPolicyPathParams, _super);
     function GetNetworkSwitchAccessPolicyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=accessPolicyNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=accessPolicyNumber" }),
         __metadata("design:type", String)
     ], GetNetworkSwitchAccessPolicyPathParams.prototype, "accessPolicyNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkSwitchAccessPolicyPathParams.prototype, "networkId", void 0);
     return GetNetworkSwitchAccessPolicyPathParams;
-}(SpeakeasyBase));
-export { GetNetworkSwitchAccessPolicyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSwitchAccessPolicyPathParams = GetNetworkSwitchAccessPolicyPathParams;
 var GetNetworkSwitchAccessPolicyRequest = /** @class */ (function (_super) {
     __extends(GetNetworkSwitchAccessPolicyRequest, _super);
     function GetNetworkSwitchAccessPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkSwitchAccessPolicyPathParams)
     ], GetNetworkSwitchAccessPolicyRequest.prototype, "pathParams", void 0);
     return GetNetworkSwitchAccessPolicyRequest;
-}(SpeakeasyBase));
-export { GetNetworkSwitchAccessPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSwitchAccessPolicyRequest = GetNetworkSwitchAccessPolicyRequest;
 var GetNetworkSwitchAccessPolicyResponse = /** @class */ (function (_super) {
     __extends(GetNetworkSwitchAccessPolicyResponse, _super);
     function GetNetworkSwitchAccessPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkSwitchAccessPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkSwitchAccessPolicyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkSwitchAccessPolicyResponse.prototype, "getNetworkSwitchAccessPolicy200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkSwitchAccessPolicyResponse.prototype, "getNetworkSwitchAccessPolicy200ApplicationJSONObject", void 0);
     return GetNetworkSwitchAccessPolicyResponse;
-}(SpeakeasyBase));
-export { GetNetworkSwitchAccessPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSwitchAccessPolicyResponse = GetNetworkSwitchAccessPolicyResponse;

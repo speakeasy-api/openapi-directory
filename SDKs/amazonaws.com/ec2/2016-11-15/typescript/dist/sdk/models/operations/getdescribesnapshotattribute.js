@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,117 +23,119 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeSnapshotAttributeActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeSnapshotAttributeResponse = exports.GetDescribeSnapshotAttributeRequest = exports.GetDescribeSnapshotAttributeHeaders = exports.GetDescribeSnapshotAttributeQueryParams = exports.GetDescribeSnapshotAttributeVersionEnum = exports.GetDescribeSnapshotAttributeAttributeEnum = exports.GetDescribeSnapshotAttributeActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeSnapshotAttributeActionEnum;
 (function (GetDescribeSnapshotAttributeActionEnum) {
     GetDescribeSnapshotAttributeActionEnum["DescribeSnapshotAttribute"] = "DescribeSnapshotAttribute";
-})(GetDescribeSnapshotAttributeActionEnum || (GetDescribeSnapshotAttributeActionEnum = {}));
-export var GetDescribeSnapshotAttributeAttributeEnum;
+})(GetDescribeSnapshotAttributeActionEnum = exports.GetDescribeSnapshotAttributeActionEnum || (exports.GetDescribeSnapshotAttributeActionEnum = {}));
+var GetDescribeSnapshotAttributeAttributeEnum;
 (function (GetDescribeSnapshotAttributeAttributeEnum) {
     GetDescribeSnapshotAttributeAttributeEnum["ProductCodes"] = "productCodes";
     GetDescribeSnapshotAttributeAttributeEnum["CreateVolumePermission"] = "createVolumePermission";
-})(GetDescribeSnapshotAttributeAttributeEnum || (GetDescribeSnapshotAttributeAttributeEnum = {}));
-export var GetDescribeSnapshotAttributeVersionEnum;
+})(GetDescribeSnapshotAttributeAttributeEnum = exports.GetDescribeSnapshotAttributeAttributeEnum || (exports.GetDescribeSnapshotAttributeAttributeEnum = {}));
+var GetDescribeSnapshotAttributeVersionEnum;
 (function (GetDescribeSnapshotAttributeVersionEnum) {
     GetDescribeSnapshotAttributeVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDescribeSnapshotAttributeVersionEnum || (GetDescribeSnapshotAttributeVersionEnum = {}));
+})(GetDescribeSnapshotAttributeVersionEnum = exports.GetDescribeSnapshotAttributeVersionEnum || (exports.GetDescribeSnapshotAttributeVersionEnum = {}));
 var GetDescribeSnapshotAttributeQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeSnapshotAttributeQueryParams, _super);
     function GetDescribeSnapshotAttributeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeSnapshotAttributeQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Attribute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Attribute" }),
         __metadata("design:type", String)
     ], GetDescribeSnapshotAttributeQueryParams.prototype, "attribute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDescribeSnapshotAttributeQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SnapshotId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SnapshotId" }),
         __metadata("design:type", String)
     ], GetDescribeSnapshotAttributeQueryParams.prototype, "snapshotId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeSnapshotAttributeQueryParams.prototype, "version", void 0);
     return GetDescribeSnapshotAttributeQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeSnapshotAttributeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeSnapshotAttributeQueryParams = GetDescribeSnapshotAttributeQueryParams;
 var GetDescribeSnapshotAttributeHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeSnapshotAttributeHeaders, _super);
     function GetDescribeSnapshotAttributeHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeSnapshotAttributeHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeSnapshotAttributeHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeSnapshotAttributeHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeSnapshotAttributeHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeSnapshotAttributeHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeSnapshotAttributeHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeSnapshotAttributeHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeSnapshotAttributeHeaders;
-}(SpeakeasyBase));
-export { GetDescribeSnapshotAttributeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeSnapshotAttributeHeaders = GetDescribeSnapshotAttributeHeaders;
 var GetDescribeSnapshotAttributeRequest = /** @class */ (function (_super) {
     __extends(GetDescribeSnapshotAttributeRequest, _super);
     function GetDescribeSnapshotAttributeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeSnapshotAttributeQueryParams)
     ], GetDescribeSnapshotAttributeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeSnapshotAttributeHeaders)
     ], GetDescribeSnapshotAttributeRequest.prototype, "headers", void 0);
     return GetDescribeSnapshotAttributeRequest;
-}(SpeakeasyBase));
-export { GetDescribeSnapshotAttributeRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeSnapshotAttributeRequest = GetDescribeSnapshotAttributeRequest;
 var GetDescribeSnapshotAttributeResponse = /** @class */ (function (_super) {
     __extends(GetDescribeSnapshotAttributeResponse, _super);
     function GetDescribeSnapshotAttributeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeSnapshotAttributeResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeSnapshotAttributeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeSnapshotAttributeResponse.prototype, "statusCode", void 0);
     return GetDescribeSnapshotAttributeResponse;
-}(SpeakeasyBase));
-export { GetDescribeSnapshotAttributeResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeSnapshotAttributeResponse = GetDescribeSnapshotAttributeResponse;

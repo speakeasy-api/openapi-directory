@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudPrivatecatalogproducerV1beta1Version } from "./googlecloudprivatecatalogproducerv1beta1version";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPrivatecatalogproducerV1beta1ListVersionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudprivatecatalogproducerv1beta1version_1 = require("./googlecloudprivatecatalogproducerv1beta1version");
 var GoogleCloudPrivatecatalogproducerV1beta1ListVersionsResponse = /** @class */ (function (_super) {
     __extends(GoogleCloudPrivatecatalogproducerV1beta1ListVersionsResponse, _super);
     function GoogleCloudPrivatecatalogproducerV1beta1ListVersionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GoogleCloudPrivatecatalogproducerV1beta1ListVersionsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: GoogleCloudPrivatecatalogproducerV1beta1Version }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: googlecloudprivatecatalogproducerv1beta1version_1.GoogleCloudPrivatecatalogproducerV1beta1Version }),
         __metadata("design:type", Array)
     ], GoogleCloudPrivatecatalogproducerV1beta1ListVersionsResponse.prototype, "versions", void 0);
     return GoogleCloudPrivatecatalogproducerV1beta1ListVersionsResponse;
-}(SpeakeasyBase));
-export { GoogleCloudPrivatecatalogproducerV1beta1ListVersionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPrivatecatalogproducerV1beta1ListVersionsResponse = GoogleCloudPrivatecatalogproducerV1beta1ListVersionsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DriveFolder } from "./drivefolder";
-import { Folder } from "./folder";
-import { Owner } from "./owner";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DriveItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var drivefolder_1 = require("./drivefolder");
+var folder_1 = require("./folder");
+var owner_1 = require("./owner");
 // DriveItem
 /**
  * A Drive item, such as a file or folder.
@@ -36,37 +39,37 @@ var DriveItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driveFile" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driveFile" }),
+        __metadata("design:type", Object)
     ], DriveItem.prototype, "driveFile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driveFolder" }),
-        __metadata("design:type", DriveFolder)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driveFolder" }),
+        __metadata("design:type", drivefolder_1.DriveFolder)
     ], DriveItem.prototype, "driveFolder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=file" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=file" }),
+        __metadata("design:type", Object)
     ], DriveItem.prototype, "file", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=folder" }),
-        __metadata("design:type", Folder)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=folder" }),
+        __metadata("design:type", folder_1.Folder)
     ], DriveItem.prototype, "folder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mimeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mimeType" }),
         __metadata("design:type", String)
     ], DriveItem.prototype, "mimeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DriveItem.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner" }),
-        __metadata("design:type", Owner)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
+        __metadata("design:type", owner_1.Owner)
     ], DriveItem.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], DriveItem.prototype, "title", void 0);
     return DriveItem;
-}(SpeakeasyBase));
-export { DriveItem };
+}(utils_1.SpeakeasyBase));
+exports.DriveItem = DriveItem;

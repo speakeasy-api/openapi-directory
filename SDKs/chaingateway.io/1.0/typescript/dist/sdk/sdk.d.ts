@@ -3,14 +3,15 @@ import { AddressRequests } from "./addressrequests";
 import { InfoRequests } from "./inforequests";
 import { SubscriptionIpnRequests } from "./subscriptionipnrequests";
 import { TransactionRequests } from "./transactionrequests";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://eu.eth.chaingateway.io/v1"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     addressRequests: AddressRequests;
     infoRequests: InfoRequests;
-    subscriptionIpnRequests: SubscriptionIpnRequests;
+    subscriptionIPNRequests: SubscriptionIpnRequests;
     transactionRequests: TransactionRequests;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -18,6 +19,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

@@ -28,7 +28,7 @@ export class Service extends SpeakeasyBase {
   canary?: Canary;
 
   @SpeakeasyMetadata({ data: "json, name=additionalHeaders" })
-  additionalHeaders?: Map<string, string>;
+  additionalHeaders?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=api" })
   api?: ExposedApi;
@@ -73,7 +73,7 @@ export class Service extends SpeakeasyBase {
   gzip?: Gzip;
 
   @SpeakeasyMetadata({ data: "json, name=headersVerification" })
-  headersVerification?: Map<string, string>;
+  headersVerification?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=healthCheck" })
   healthCheck?: HealthCheck;
@@ -97,13 +97,13 @@ export class Service extends SpeakeasyBase {
   maintenanceMode: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=matchingHeaders" })
-  matchingHeaders?: Map<string, string>;
+  matchingHeaders?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=matchingRoot" })
   matchingRoot?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, string>;
+  metadata?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;

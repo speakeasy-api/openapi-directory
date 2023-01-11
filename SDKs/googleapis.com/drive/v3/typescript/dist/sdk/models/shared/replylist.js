@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Reply } from "./reply";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplyList = void 0;
+var utils_1 = require("../../../internal/utils");
+var reply_1 = require("./reply");
 // ReplyList
 /**
  * A list of replies to a comment on a file.
@@ -34,17 +37,17 @@ var ReplyList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ReplyList.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ReplyList.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replies", elemType: Reply }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replies", elemType: reply_1.Reply }),
         __metadata("design:type", Array)
     ], ReplyList.prototype, "replies", void 0);
     return ReplyList;
-}(SpeakeasyBase));
-export { ReplyList };
+}(utils_1.SpeakeasyBase));
+exports.ReplyList = ReplyList;

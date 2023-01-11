@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,66 +23,68 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Picture = exports.PictureTypeEnum = exports.PictureSizes = void 0;
+var utils_1 = require("../../../internal/utils");
 var PictureSizes = /** @class */ (function (_super) {
     __extends(PictureSizes, _super);
     function PictureSizes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], PictureSizes.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], PictureSizes.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link_with_play_button" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link_with_play_button" }),
         __metadata("design:type", String)
     ], PictureSizes.prototype, "linkWithPlayButton", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], PictureSizes.prototype, "width", void 0);
     return PictureSizes;
-}(SpeakeasyBase));
-export { PictureSizes };
-export var PictureTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.PictureSizes = PictureSizes;
+var PictureTypeEnum;
 (function (PictureTypeEnum) {
     PictureTypeEnum["Caution"] = "caution";
     PictureTypeEnum["Custom"] = "custom";
     PictureTypeEnum["Default"] = "default";
-})(PictureTypeEnum || (PictureTypeEnum = {}));
+})(PictureTypeEnum = exports.PictureTypeEnum || (exports.PictureTypeEnum = {}));
 var Picture = /** @class */ (function (_super) {
     __extends(Picture, _super);
     function Picture() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], Picture.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], Picture.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_key" }),
         __metadata("design:type", String)
     ], Picture.prototype, "resourceKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizes", elemType: PictureSizes }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizes", elemType: PictureSizes }),
         __metadata("design:type", Array)
     ], Picture.prototype, "sizes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Picture.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], Picture.prototype, "uri", void 0);
     return Picture;
-}(SpeakeasyBase));
-export { Picture };
+}(utils_1.SpeakeasyBase));
+exports.Picture = Picture;

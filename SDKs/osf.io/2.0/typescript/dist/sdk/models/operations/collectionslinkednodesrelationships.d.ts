@@ -4,7 +4,7 @@ export declare class CollectionsLinkedNodesRelationshipsPathParams extends Speak
 }
 export declare class CollectionsLinkedNodesRelationshipsRequest extends SpeakeasyBase {
     pathParams: CollectionsLinkedNodesRelationshipsPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class CollectionsLinkedNodesRelationshipsResponse extends SpeakeasyBase {
     contentType: string;

@@ -14,6 +14,6 @@ export declare class TinVerificationBasicCheckRequest extends SpeakeasyBase {
 export declare class TinVerificationBasicCheckResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    tinVerificationBasicCheck200ApplicationJsonAny?: any;
-    tinVerificationBasicCheckDefaultApplicationJsonAny?: any;
+    tinVerificationBasicCheck200ApplicationJSONAny?: any;
+    tinVerificationBasicCheckDefaultApplicationJSONAny?: any;
 }

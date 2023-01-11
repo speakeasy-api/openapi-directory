@@ -7,17 +7,17 @@ export declare enum SslConfigTypeEnum {
 /**
  * SSL configuration information.
 **/
-export declare class SslConfigInput extends SpeakeasyBase {
-    caCertificate?: string;
-    clientCertificate?: string;
-    clientKey?: string;
-}
-/**
- * SSL configuration information.
-**/
 export declare class SslConfig extends SpeakeasyBase {
     caCertificate?: string;
     clientCertificate?: string;
     clientKey?: string;
     type?: SslConfigTypeEnum;
+}
+/**
+ * SSL configuration information.
+**/
+export declare class SslConfigInput extends SpeakeasyBase {
+    caCertificate?: string;
+    clientCertificate?: string;
+    clientKey?: string;
 }

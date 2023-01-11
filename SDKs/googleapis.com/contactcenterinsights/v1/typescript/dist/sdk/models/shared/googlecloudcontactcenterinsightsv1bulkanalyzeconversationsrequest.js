@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1annotatorselector_1 = require("./googlecloudcontactcenterinsightsv1annotatorselector");
 // GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest
 /**
  * The request to analyze conversations in bulk.
@@ -33,17 +37,21 @@ var GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest = /** @cla
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analysisPercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analysisPercentage" }),
         __metadata("design:type", Number)
     ], GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest.prototype, "analysisPercentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotatorSelector" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1annotatorselector_1.GoogleCloudContactcenterinsightsV1AnnotatorSelector)
+    ], GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest.prototype, "annotatorSelector", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest.prototype, "parent", void 0);
     return GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest = GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest;

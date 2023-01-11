@@ -11,6 +11,6 @@ export declare class DescribeRobotApplicationResponse extends SpeakeasyBase {
     revisionId?: string;
     robotSoftwareSuite?: RobotSoftwareSuite;
     sources?: Source[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     version?: string;
 }

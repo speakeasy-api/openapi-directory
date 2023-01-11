@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,145 +14,170 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var ListAccessPoliciesIdentityTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListAccessPoliciesResponse = exports.ListAccessPoliciesRequest = exports.ListAccessPoliciesHeaders = exports.ListAccessPoliciesQueryParams = exports.ListAccessPoliciesResourceTypeEnum = exports.ListAccessPoliciesIdentityTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var ListAccessPoliciesIdentityTypeEnum;
 (function (ListAccessPoliciesIdentityTypeEnum) {
     ListAccessPoliciesIdentityTypeEnum["User"] = "USER";
     ListAccessPoliciesIdentityTypeEnum["Group"] = "GROUP";
     ListAccessPoliciesIdentityTypeEnum["Iam"] = "IAM";
-})(ListAccessPoliciesIdentityTypeEnum || (ListAccessPoliciesIdentityTypeEnum = {}));
-export var ListAccessPoliciesResourceTypeEnum;
+})(ListAccessPoliciesIdentityTypeEnum = exports.ListAccessPoliciesIdentityTypeEnum || (exports.ListAccessPoliciesIdentityTypeEnum = {}));
+var ListAccessPoliciesResourceTypeEnum;
 (function (ListAccessPoliciesResourceTypeEnum) {
     ListAccessPoliciesResourceTypeEnum["Portal"] = "PORTAL";
     ListAccessPoliciesResourceTypeEnum["Project"] = "PROJECT";
-})(ListAccessPoliciesResourceTypeEnum || (ListAccessPoliciesResourceTypeEnum = {}));
+})(ListAccessPoliciesResourceTypeEnum = exports.ListAccessPoliciesResourceTypeEnum || (exports.ListAccessPoliciesResourceTypeEnum = {}));
 var ListAccessPoliciesQueryParams = /** @class */ (function (_super) {
     __extends(ListAccessPoliciesQueryParams, _super);
     function ListAccessPoliciesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=iamArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=iamArn" }),
         __metadata("design:type", String)
     ], ListAccessPoliciesQueryParams.prototype, "iamArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=identityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=identityId" }),
         __metadata("design:type", String)
     ], ListAccessPoliciesQueryParams.prototype, "identityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=identityType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=identityType" }),
         __metadata("design:type", String)
     ], ListAccessPoliciesQueryParams.prototype, "identityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxResults" }),
         __metadata("design:type", Number)
     ], ListAccessPoliciesQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=nextToken" }),
         __metadata("design:type", String)
     ], ListAccessPoliciesQueryParams.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=resourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=resourceId" }),
         __metadata("design:type", String)
     ], ListAccessPoliciesQueryParams.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=resourceType" }),
         __metadata("design:type", String)
     ], ListAccessPoliciesQueryParams.prototype, "resourceType", void 0);
     return ListAccessPoliciesQueryParams;
-}(SpeakeasyBase));
-export { ListAccessPoliciesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ListAccessPoliciesQueryParams = ListAccessPoliciesQueryParams;
 var ListAccessPoliciesHeaders = /** @class */ (function (_super) {
     __extends(ListAccessPoliciesHeaders, _super);
     function ListAccessPoliciesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], ListAccessPoliciesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], ListAccessPoliciesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], ListAccessPoliciesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], ListAccessPoliciesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], ListAccessPoliciesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], ListAccessPoliciesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], ListAccessPoliciesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return ListAccessPoliciesHeaders;
-}(SpeakeasyBase));
-export { ListAccessPoliciesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.ListAccessPoliciesHeaders = ListAccessPoliciesHeaders;
 var ListAccessPoliciesRequest = /** @class */ (function (_super) {
     __extends(ListAccessPoliciesRequest, _super);
     function ListAccessPoliciesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListAccessPoliciesQueryParams)
     ], ListAccessPoliciesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListAccessPoliciesHeaders)
     ], ListAccessPoliciesRequest.prototype, "headers", void 0);
     return ListAccessPoliciesRequest;
-}(SpeakeasyBase));
-export { ListAccessPoliciesRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListAccessPoliciesRequest = ListAccessPoliciesRequest;
 var ListAccessPoliciesResponse = /** @class */ (function (_super) {
     __extends(ListAccessPoliciesResponse, _super);
     function ListAccessPoliciesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListAccessPoliciesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], ListAccessPoliciesResponse.prototype, "internalFailureException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], ListAccessPoliciesResponse.prototype, "invalidRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ListAccessPoliciesResponse)
     ], ListAccessPoliciesResponse.prototype, "listAccessPoliciesResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ListAccessPoliciesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], ListAccessPoliciesResponse.prototype, "throttlingException", void 0);
     return ListAccessPoliciesResponse;
-}(SpeakeasyBase));
-export { ListAccessPoliciesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListAccessPoliciesResponse = ListAccessPoliciesResponse;

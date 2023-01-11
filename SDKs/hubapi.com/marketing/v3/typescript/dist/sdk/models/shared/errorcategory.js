@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ErrorCategoryHttpStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorCategory = exports.ErrorCategoryHttpStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ErrorCategoryHttpStatusEnum;
 (function (ErrorCategoryHttpStatusEnum) {
     ErrorCategoryHttpStatusEnum["Continue"] = "CONTINUE";
     ErrorCategoryHttpStatusEnum["SwitchingProtocols"] = "SWITCHING_PROTOCOLS";
@@ -87,20 +90,20 @@ export var ErrorCategoryHttpStatusEnum;
     ErrorCategoryHttpStatusEnum["LoopDetected"] = "LOOP_DETECTED";
     ErrorCategoryHttpStatusEnum["NotExtended"] = "NOT_EXTENDED";
     ErrorCategoryHttpStatusEnum["NetworkAuthenticationRequired"] = "NETWORK_AUTHENTICATION_REQUIRED";
-})(ErrorCategoryHttpStatusEnum || (ErrorCategoryHttpStatusEnum = {}));
+})(ErrorCategoryHttpStatusEnum = exports.ErrorCategoryHttpStatusEnum || (exports.ErrorCategoryHttpStatusEnum = {}));
 var ErrorCategory = /** @class */ (function (_super) {
     __extends(ErrorCategory, _super);
     function ErrorCategory() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpStatus" }),
         __metadata("design:type", String)
     ], ErrorCategory.prototype, "httpStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ErrorCategory.prototype, "name", void 0);
     return ErrorCategory;
-}(SpeakeasyBase));
-export { ErrorCategory };
+}(utils_1.SpeakeasyBase));
+exports.ErrorCategory = ErrorCategory;

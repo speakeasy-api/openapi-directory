@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2PartitionId } from "./googleprivacydlpv2partitionid";
-import { GooglePrivacyDlpV2PathElement } from "./googleprivacydlpv2pathelement";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2Key = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2partitionid_1 = require("./googleprivacydlpv2partitionid");
+var googleprivacydlpv2pathelement_1 = require("./googleprivacydlpv2pathelement");
 // GooglePrivacyDlpV2Key
 /**
  * A unique identifier for a Datastore entity. If a key's partition ID or any of its path kinds or names are reserved/read-only, the key is reserved/read-only. A reserved/read-only key is forbidden in certain documented contexts.
@@ -35,13 +38,13 @@ var GooglePrivacyDlpV2Key = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=partitionId" }),
-        __metadata("design:type", GooglePrivacyDlpV2PartitionId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=partitionId" }),
+        __metadata("design:type", googleprivacydlpv2partitionid_1.GooglePrivacyDlpV2PartitionId)
     ], GooglePrivacyDlpV2Key.prototype, "partitionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path", elemType: GooglePrivacyDlpV2PathElement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path", elemType: googleprivacydlpv2pathelement_1.GooglePrivacyDlpV2PathElement }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2Key.prototype, "path", void 0);
     return GooglePrivacyDlpV2Key;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2Key };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2Key = GooglePrivacyDlpV2Key;

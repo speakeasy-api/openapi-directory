@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecommendationExportJob } from "./recommendationexportjob";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeRecommendationExportJobsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var recommendationexportjob_1 = require("./recommendationexportjob");
 var DescribeRecommendationExportJobsResponse = /** @class */ (function (_super) {
     __extends(DescribeRecommendationExportJobsResponse, _super);
     function DescribeRecommendationExportJobsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], DescribeRecommendationExportJobsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommendationExportJobs", elemType: RecommendationExportJob }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommendationExportJobs", elemType: recommendationexportjob_1.RecommendationExportJob }),
         __metadata("design:type", Array)
     ], DescribeRecommendationExportJobsResponse.prototype, "recommendationExportJobs", void 0);
     return DescribeRecommendationExportJobsResponse;
-}(SpeakeasyBase));
-export { DescribeRecommendationExportJobsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeRecommendationExportJobsResponse = DescribeRecommendationExportJobsResponse;

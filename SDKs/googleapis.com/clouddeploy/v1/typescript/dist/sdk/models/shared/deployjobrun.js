@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeployJobRunMetadata } from "./deployjobrunmetadata";
-export var DeployJobRunFailureCauseEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeployJobRun = exports.DeployJobRunFailureCauseEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var deployjobrunmetadata_1 = require("./deployjobrunmetadata");
+var DeployJobRunFailureCauseEnum;
 (function (DeployJobRunFailureCauseEnum) {
     DeployJobRunFailureCauseEnum["FailureCauseUnspecified"] = "FAILURE_CAUSE_UNSPECIFIED";
     DeployJobRunFailureCauseEnum["CloudBuildUnavailable"] = "CLOUD_BUILD_UNAVAILABLE";
     DeployJobRunFailureCauseEnum["ExecutionFailed"] = "EXECUTION_FAILED";
     DeployJobRunFailureCauseEnum["DeadlineExceeded"] = "DEADLINE_EXCEEDED";
-})(DeployJobRunFailureCauseEnum || (DeployJobRunFailureCauseEnum = {}));
+})(DeployJobRunFailureCauseEnum = exports.DeployJobRunFailureCauseEnum || (exports.DeployJobRunFailureCauseEnum = {}));
 // DeployJobRun
 /**
  * DeployJobRun contains information specific to a deploy `JobRun`.
@@ -41,21 +44,21 @@ var DeployJobRun = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=build" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=build" }),
         __metadata("design:type", String)
     ], DeployJobRun.prototype, "build", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureCause" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureCause" }),
         __metadata("design:type", String)
     ], DeployJobRun.prototype, "failureCause", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureMessage" }),
         __metadata("design:type", String)
     ], DeployJobRun.prototype, "failureMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", DeployJobRunMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", deployjobrunmetadata_1.DeployJobRunMetadata)
     ], DeployJobRun.prototype, "metadata", void 0);
     return DeployJobRun;
-}(SpeakeasyBase));
-export { DeployJobRun };
+}(utils_1.SpeakeasyBase));
+exports.DeployJobRun = DeployJobRun;

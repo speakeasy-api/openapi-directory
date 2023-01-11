@@ -37,7 +37,7 @@ export class UpdateStreamRequestBody extends SpeakeasyBase {
   mediaType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamARN" })
-  streamArn?: string;
+  streamARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamName" })
   streamName?: string;
@@ -76,7 +76,7 @@ export class UpdateStreamResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateStreamOutput?: Map<string, any>;
+  updateStreamOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   versionMismatchException?: any;

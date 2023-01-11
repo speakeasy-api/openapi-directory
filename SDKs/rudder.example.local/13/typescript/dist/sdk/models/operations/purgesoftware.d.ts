@@ -14,5 +14,5 @@ export declare class PurgeSoftware200ApplicationJson extends SpeakeasyBase {
 export declare class PurgeSoftwareResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    purgeSoftware200ApplicationJsonObject?: PurgeSoftware200ApplicationJson;
+    purgeSoftware200ApplicationJSONObject?: PurgeSoftware200ApplicationJson;
 }

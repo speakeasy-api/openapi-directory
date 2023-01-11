@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateOrganizationAdaptivePolicySettingsResponse = exports.UpdateOrganizationAdaptivePolicySettingsRequest = exports.UpdateOrganizationAdaptivePolicySettingsRequestBody = exports.UpdateOrganizationAdaptivePolicySettingsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateOrganizationAdaptivePolicySettingsPathParams = /** @class */ (function (_super) {
     __extends(UpdateOrganizationAdaptivePolicySettingsPathParams, _super);
     function UpdateOrganizationAdaptivePolicySettingsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], UpdateOrganizationAdaptivePolicySettingsPathParams.prototype, "organizationId", void 0);
     return UpdateOrganizationAdaptivePolicySettingsPathParams;
-}(SpeakeasyBase));
-export { UpdateOrganizationAdaptivePolicySettingsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationAdaptivePolicySettingsPathParams = UpdateOrganizationAdaptivePolicySettingsPathParams;
 var UpdateOrganizationAdaptivePolicySettingsRequestBody = /** @class */ (function (_super) {
     __extends(UpdateOrganizationAdaptivePolicySettingsRequestBody, _super);
     function UpdateOrganizationAdaptivePolicySettingsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabledNetworks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabledNetworks" }),
         __metadata("design:type", Array)
     ], UpdateOrganizationAdaptivePolicySettingsRequestBody.prototype, "enabledNetworks", void 0);
     return UpdateOrganizationAdaptivePolicySettingsRequestBody;
-}(SpeakeasyBase));
-export { UpdateOrganizationAdaptivePolicySettingsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationAdaptivePolicySettingsRequestBody = UpdateOrganizationAdaptivePolicySettingsRequestBody;
 var UpdateOrganizationAdaptivePolicySettingsRequest = /** @class */ (function (_super) {
     __extends(UpdateOrganizationAdaptivePolicySettingsRequest, _super);
     function UpdateOrganizationAdaptivePolicySettingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateOrganizationAdaptivePolicySettingsPathParams)
     ], UpdateOrganizationAdaptivePolicySettingsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateOrganizationAdaptivePolicySettingsRequestBody)
     ], UpdateOrganizationAdaptivePolicySettingsRequest.prototype, "request", void 0);
     return UpdateOrganizationAdaptivePolicySettingsRequest;
-}(SpeakeasyBase));
-export { UpdateOrganizationAdaptivePolicySettingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationAdaptivePolicySettingsRequest = UpdateOrganizationAdaptivePolicySettingsRequest;
 var UpdateOrganizationAdaptivePolicySettingsResponse = /** @class */ (function (_super) {
     __extends(UpdateOrganizationAdaptivePolicySettingsResponse, _super);
     function UpdateOrganizationAdaptivePolicySettingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateOrganizationAdaptivePolicySettingsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateOrganizationAdaptivePolicySettingsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateOrganizationAdaptivePolicySettingsResponse.prototype, "updateOrganizationAdaptivePolicySettings200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateOrganizationAdaptivePolicySettingsResponse.prototype, "updateOrganizationAdaptivePolicySettings200ApplicationJSONObject", void 0);
     return UpdateOrganizationAdaptivePolicySettingsResponse;
-}(SpeakeasyBase));
-export { UpdateOrganizationAdaptivePolicySettingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateOrganizationAdaptivePolicySettingsResponse = UpdateOrganizationAdaptivePolicySettingsResponse;

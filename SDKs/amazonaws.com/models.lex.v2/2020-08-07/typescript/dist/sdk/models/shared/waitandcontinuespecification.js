@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResponseSpecification } from "./responsespecification";
-import { StillWaitingResponseSpecification } from "./stillwaitingresponsespecification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WaitAndContinueSpecification = void 0;
+var utils_1 = require("../../../internal/utils");
+var responsespecification_1 = require("./responsespecification");
+var stillwaitingresponsespecification_1 = require("./stillwaitingresponsespecification");
 // WaitAndContinueSpecification
 /**
  * Specifies the prompts that Amazon Lex uses while a bot is waiting for customer input.
@@ -35,21 +38,21 @@ var WaitAndContinueSpecification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], WaitAndContinueSpecification.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=continueResponse" }),
-        __metadata("design:type", ResponseSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=continueResponse" }),
+        __metadata("design:type", responsespecification_1.ResponseSpecification)
     ], WaitAndContinueSpecification.prototype, "continueResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stillWaitingResponse" }),
-        __metadata("design:type", StillWaitingResponseSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stillWaitingResponse" }),
+        __metadata("design:type", stillwaitingresponsespecification_1.StillWaitingResponseSpecification)
     ], WaitAndContinueSpecification.prototype, "stillWaitingResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=waitingResponse" }),
-        __metadata("design:type", ResponseSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=waitingResponse" }),
+        __metadata("design:type", responsespecification_1.ResponseSpecification)
     ], WaitAndContinueSpecification.prototype, "waitingResponse", void 0);
     return WaitAndContinueSpecification;
-}(SpeakeasyBase));
-export { WaitAndContinueSpecification };
+}(utils_1.SpeakeasyBase));
+exports.WaitAndContinueSpecification = WaitAndContinueSpecification;

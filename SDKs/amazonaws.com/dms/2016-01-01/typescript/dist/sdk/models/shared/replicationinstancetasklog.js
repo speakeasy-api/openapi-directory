@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicationInstanceTaskLog = void 0;
+var utils_1 = require("../../../internal/utils");
 // ReplicationInstanceTaskLog
 /**
  * Contains metadata for a replication instance task log.
@@ -33,17 +36,17 @@ var ReplicationInstanceTaskLog = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationInstanceTaskLogSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationInstanceTaskLogSize" }),
         __metadata("design:type", Number)
     ], ReplicationInstanceTaskLog.prototype, "replicationInstanceTaskLogSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationTaskArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationTaskArn" }),
         __metadata("design:type", String)
     ], ReplicationInstanceTaskLog.prototype, "replicationTaskArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationTaskName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationTaskName" }),
         __metadata("design:type", String)
     ], ReplicationInstanceTaskLog.prototype, "replicationTaskName", void 0);
     return ReplicationInstanceTaskLog;
-}(SpeakeasyBase));
-export { ReplicationInstanceTaskLog };
+}(utils_1.SpeakeasyBase));
+exports.ReplicationInstanceTaskLog = ReplicationInstanceTaskLog;

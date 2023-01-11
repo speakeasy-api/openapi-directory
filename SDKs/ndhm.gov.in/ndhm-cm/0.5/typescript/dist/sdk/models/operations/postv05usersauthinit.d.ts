@@ -4,7 +4,7 @@ export declare class PostV05UsersAuthInitHeaders extends SpeakeasyBase {
     authorization: string;
 }
 export declare class PostV05UsersAuthInitRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     patientAuthInitRequest?: shared.PatientAuthInitRequest;
 }
 export declare class PostV05UsersAuthInitRequest extends SpeakeasyBase {

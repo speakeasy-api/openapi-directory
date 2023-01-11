@@ -22,7 +22,7 @@ export declare class PutAccountDetailsRequestBody extends SpeakeasyBase {
     mailType: PutAccountDetailsRequestBodyMailTypeEnum;
     productionAccessEnabled?: boolean;
     useCaseDescription: string;
-    websiteUrl: string;
+    websiteURL: string;
 }
 export declare class PutAccountDetailsRequest extends SpeakeasyBase {
     headers: PutAccountDetailsHeaders;
@@ -32,7 +32,7 @@ export declare class PutAccountDetailsResponse extends SpeakeasyBase {
     badRequestException?: any;
     conflictException?: any;
     contentType: string;
-    putAccountDetailsResponse?: Map<string, any>;
+    putAccountDetailsResponse?: Record<string, any>;
     statusCode: number;
     tooManyRequestsException?: any;
 }

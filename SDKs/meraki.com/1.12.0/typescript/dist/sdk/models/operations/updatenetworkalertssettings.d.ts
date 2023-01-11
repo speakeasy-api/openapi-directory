@@ -14,7 +14,7 @@ export declare class UpdateNetworkAlertsSettingsRequestBodyAlertsAlertDestinatio
 export declare class UpdateNetworkAlertsSettingsRequestBodyAlerts extends SpeakeasyBase {
     alertDestinations?: UpdateNetworkAlertsSettingsRequestBodyAlertsAlertDestinations;
     enabled?: boolean;
-    filters?: Map<string, any>;
+    filters?: Record<string, any>;
     type: string;
 }
 /**
@@ -37,5 +37,5 @@ export declare class UpdateNetworkAlertsSettingsRequest extends SpeakeasyBase {
 export declare class UpdateNetworkAlertsSettingsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkAlertsSettings200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkAlertsSettings200ApplicationJSONObject?: Record<string, any>;
 }

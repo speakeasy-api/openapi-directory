@@ -22,5 +22,5 @@ export declare class GetAnApiVersionRequest extends SpeakeasyBase {
 export declare class GetAnApiVersionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getAnApiVersion200ApplicationJsonObject?: GetAnApiVersion200ApplicationJson;
+    getAnApiVersion200ApplicationJSONObject?: GetAnApiVersion200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AzStatusEnum } from "./azstatusenum";
-import { Endpoint } from "./endpoint";
-import { ClusterPendingUpdates } from "./clusterpendingupdates";
-import { SecurityGroupMembership } from "./securitygroupmembership";
-import { Shard } from "./shard";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Cluster = void 0;
+var utils_1 = require("../../../internal/utils");
+var azstatusenum_1 = require("./azstatusenum");
+var endpoint_1 = require("./endpoint");
+var clusterpendingupdates_1 = require("./clusterpendingupdates");
+var securitygroupmembership_1 = require("./securitygroupmembership");
+var shard_1 = require("./shard");
 // Cluster
 /**
  * Contains all of the attributes of a specific cluster.
@@ -38,105 +41,105 @@ var Cluster = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ACLName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ACLName" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "aclName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ARN" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoMinorVersionUpgrade" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoMinorVersionUpgrade" }),
         __metadata("design:type", Boolean)
     ], Cluster.prototype, "autoMinorVersionUpgrade", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AvailabilityMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AvailabilityMode" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "availabilityMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClusterEndpoint" }),
-        __metadata("design:type", Endpoint)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClusterEndpoint" }),
+        __metadata("design:type", endpoint_1.Endpoint)
     ], Cluster.prototype, "clusterEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnginePatchVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnginePatchVersion" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "enginePatchVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EngineVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EngineVersion" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KmsKeyId" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaintenanceWindow" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaintenanceWindow" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "maintenanceWindow", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NodeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NodeType" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "nodeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfShards" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfShards" }),
         __metadata("design:type", Number)
     ], Cluster.prototype, "numberOfShards", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParameterGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParameterGroupName" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "parameterGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParameterGroupStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParameterGroupStatus" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "parameterGroupStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PendingUpdates" }),
-        __metadata("design:type", ClusterPendingUpdates)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PendingUpdates" }),
+        __metadata("design:type", clusterpendingupdates_1.ClusterPendingUpdates)
     ], Cluster.prototype, "pendingUpdates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityGroups", elemType: SecurityGroupMembership }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityGroups", elemType: securitygroupmembership_1.SecurityGroupMembership }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "securityGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Shards", elemType: Shard }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Shards", elemType: shard_1.Shard }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "shards", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnapshotRetentionLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnapshotRetentionLimit" }),
         __metadata("design:type", Number)
     ], Cluster.prototype, "snapshotRetentionLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnapshotWindow" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnapshotWindow" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "snapshotWindow", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnsTopicArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnsTopicArn" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "snsTopicArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SnsTopicStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SnsTopicStatus" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "snsTopicStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetGroupName" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "subnetGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TLSEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TLSEnabled" }),
         __metadata("design:type", Boolean)
     ], Cluster.prototype, "tlsEnabled", void 0);
     return Cluster;
-}(SpeakeasyBase));
-export { Cluster };
+}(utils_1.SpeakeasyBase));
+exports.Cluster = Cluster;

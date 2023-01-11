@@ -5,7 +5,7 @@ export declare class WritableSiteInput extends SpeakeasyBase {
     contactEmail?: string;
     contactName?: string;
     contactPhone?: string;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     facility?: string;
     latitude?: string;

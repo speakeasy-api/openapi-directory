@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MonitorErrorDetails } from "./monitorerrordetails";
-import { PortalStateEnum } from "./portalstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PortalStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var monitorerrordetails_1 = require("./monitorerrordetails");
+var portalstateenum_1 = require("./portalstateenum");
 // PortalStatus
 /**
  * Contains information about the current status of a portal.
@@ -35,13 +38,13 @@ var PortalStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", MonitorErrorDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", monitorerrordetails_1.MonitorErrorDetails)
     ], PortalStatus.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], PortalStatus.prototype, "state", void 0);
     return PortalStatus;
-}(SpeakeasyBase));
-export { PortalStatus };
+}(utils_1.SpeakeasyBase));
+exports.PortalStatus = PortalStatus;

@@ -15,7 +15,7 @@ export declare class GetInsightSummariesHeaders extends SpeakeasyBase {
 }
 export declare class GetInsightSummariesRequestBody extends SpeakeasyBase {
     endTime: Date;
-    groupArn?: string;
+    groupARN?: string;
     groupName?: string;
     maxResults?: number;
     nextToken?: string;

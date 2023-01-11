@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConflictMetadata } from "./conflictmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMergeConflictsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var conflictmetadata_1 = require("./conflictmetadata");
 var GetMergeConflictsOutput = /** @class */ (function (_super) {
     __extends(GetMergeConflictsOutput, _super);
     function GetMergeConflictsOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseCommitId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseCommitId" }),
         __metadata("design:type", String)
     ], GetMergeConflictsOutput.prototype, "baseCommitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conflictMetadataList", elemType: ConflictMetadata }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conflictMetadataList", elemType: conflictmetadata_1.ConflictMetadata }),
         __metadata("design:type", Array)
     ], GetMergeConflictsOutput.prototype, "conflictMetadataList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationCommitId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationCommitId" }),
         __metadata("design:type", String)
     ], GetMergeConflictsOutput.prototype, "destinationCommitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mergeable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mergeable" }),
         __metadata("design:type", Boolean)
     ], GetMergeConflictsOutput.prototype, "mergeable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], GetMergeConflictsOutput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceCommitId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceCommitId" }),
         __metadata("design:type", String)
     ], GetMergeConflictsOutput.prototype, "sourceCommitId", void 0);
     return GetMergeConflictsOutput;
-}(SpeakeasyBase));
-export { GetMergeConflictsOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetMergeConflictsOutput = GetMergeConflictsOutput;

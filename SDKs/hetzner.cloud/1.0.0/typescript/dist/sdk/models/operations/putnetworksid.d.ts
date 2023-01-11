@@ -37,7 +37,7 @@ export declare class PutNetworksId200ApplicationJsonNetwork extends SpeakeasyBas
     created: string;
     id: number;
     ipRange: string;
-    labels: Map<string, any>;
+    labels: Record<string, any>;
     loadBalancers?: number[];
     name: string;
     protection: PutNetworksId200ApplicationJsonNetworkProtection;
@@ -54,6 +54,6 @@ export declare class PutNetworksIdRequest extends SpeakeasyBase {
 }
 export declare class PutNetworksIdResponse extends SpeakeasyBase {
     contentType: string;
-    putNetworksId200ApplicationJsonObject?: PutNetworksId200ApplicationJson;
     statusCode: number;
+    putNetworksId200ApplicationJSONObject?: PutNetworksId200ApplicationJson;
 }

@@ -1,0 +1,8 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+
+
+
+export class TotalCount extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=count" })
+  count?: number;
+}

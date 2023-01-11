@@ -1,4 +1,7 @@
-export var AuthSchemeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuthSchemeEnum = void 0;
+var AuthSchemeEnum;
 (function (AuthSchemeEnum) {
     AuthSchemeEnum["Secrets"] = "SECRETS";
-})(AuthSchemeEnum || (AuthSchemeEnum = {}));
+})(AuthSchemeEnum = exports.AuthSchemeEnum || (exports.AuthSchemeEnum = {}));

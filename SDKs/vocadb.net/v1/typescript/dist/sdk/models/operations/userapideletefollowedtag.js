@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserApiDeleteFollowedTagResponse = exports.UserApiDeleteFollowedTagRequest = exports.UserApiDeleteFollowedTagPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UserApiDeleteFollowedTagPathParams = /** @class */ (function (_super) {
     __extends(UserApiDeleteFollowedTagPathParams, _super);
     function UserApiDeleteFollowedTagPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tagId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=tagId" }),
         __metadata("design:type", Number)
     ], UserApiDeleteFollowedTagPathParams.prototype, "tagId", void 0);
     return UserApiDeleteFollowedTagPathParams;
-}(SpeakeasyBase));
-export { UserApiDeleteFollowedTagPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UserApiDeleteFollowedTagPathParams = UserApiDeleteFollowedTagPathParams;
 var UserApiDeleteFollowedTagRequest = /** @class */ (function (_super) {
     __extends(UserApiDeleteFollowedTagRequest, _super);
     function UserApiDeleteFollowedTagRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UserApiDeleteFollowedTagPathParams)
     ], UserApiDeleteFollowedTagRequest.prototype, "pathParams", void 0);
     return UserApiDeleteFollowedTagRequest;
-}(SpeakeasyBase));
-export { UserApiDeleteFollowedTagRequest };
+}(utils_1.SpeakeasyBase));
+exports.UserApiDeleteFollowedTagRequest = UserApiDeleteFollowedTagRequest;
 var UserApiDeleteFollowedTagResponse = /** @class */ (function (_super) {
     __extends(UserApiDeleteFollowedTagResponse, _super);
     function UserApiDeleteFollowedTagResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UserApiDeleteFollowedTagResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UserApiDeleteFollowedTagResponse.prototype, "statusCode", void 0);
     return UserApiDeleteFollowedTagResponse;
-}(SpeakeasyBase));
-export { UserApiDeleteFollowedTagResponse };
+}(utils_1.SpeakeasyBase));
+exports.UserApiDeleteFollowedTagResponse = UserApiDeleteFollowedTagResponse;

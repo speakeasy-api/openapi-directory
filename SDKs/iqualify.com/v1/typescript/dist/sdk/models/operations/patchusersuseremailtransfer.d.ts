@@ -9,6 +9,6 @@ export declare class PatchUsersUserEmailTransferRequest extends SpeakeasyBase {
 }
 export declare class PatchUsersUserEmailTransferResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

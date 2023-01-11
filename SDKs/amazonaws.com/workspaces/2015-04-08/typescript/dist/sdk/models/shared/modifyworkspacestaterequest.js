@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TargetWorkspaceStateEnum } from "./targetworkspacestateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyWorkspaceStateRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var targetworkspacestateenum_1 = require("./targetworkspacestateenum");
 var ModifyWorkspaceStateRequest = /** @class */ (function (_super) {
     __extends(ModifyWorkspaceStateRequest, _super);
     function ModifyWorkspaceStateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkspaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkspaceId" }),
         __metadata("design:type", String)
     ], ModifyWorkspaceStateRequest.prototype, "workspaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkspaceState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkspaceState" }),
         __metadata("design:type", String)
     ], ModifyWorkspaceStateRequest.prototype, "workspaceState", void 0);
     return ModifyWorkspaceStateRequest;
-}(SpeakeasyBase));
-export { ModifyWorkspaceStateRequest };
+}(utils_1.SpeakeasyBase));
+exports.ModifyWorkspaceStateRequest = ModifyWorkspaceStateRequest;

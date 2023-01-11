@@ -1,4 +1,4 @@
 import { AxiosResponseHeaders, RawAxiosResponseHeaders } from "axios";
-export declare const headerMetadataKey = "headerParam";
-export declare function GetHeadersFromRequest(headerParams: any): any;
-export declare function GetHeadersFromResponse(headers: RawAxiosResponseHeaders | AxiosResponseHeaders): Map<string, string[]>;
+export declare const headerMetadataKey = "header";
+export declare function getHeadersFromRequest(headerParams: any): any;
+export declare function getHeadersFromResponse(headers: RawAxiosResponseHeaders | AxiosResponseHeaders): Record<string, string[]>;

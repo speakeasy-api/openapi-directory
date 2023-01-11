@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,125 +23,127 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutEmailIdentityMailFromAttributesResponse = exports.PutEmailIdentityMailFromAttributesRequest = exports.PutEmailIdentityMailFromAttributesRequestBody = exports.PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum = exports.PutEmailIdentityMailFromAttributesHeaders = exports.PutEmailIdentityMailFromAttributesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PutEmailIdentityMailFromAttributesPathParams = /** @class */ (function (_super) {
     __extends(PutEmailIdentityMailFromAttributesPathParams, _super);
     function PutEmailIdentityMailFromAttributesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=EmailIdentity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=EmailIdentity" }),
         __metadata("design:type", String)
     ], PutEmailIdentityMailFromAttributesPathParams.prototype, "emailIdentity", void 0);
     return PutEmailIdentityMailFromAttributesPathParams;
-}(SpeakeasyBase));
-export { PutEmailIdentityMailFromAttributesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PutEmailIdentityMailFromAttributesPathParams = PutEmailIdentityMailFromAttributesPathParams;
 var PutEmailIdentityMailFromAttributesHeaders = /** @class */ (function (_super) {
     __extends(PutEmailIdentityMailFromAttributesHeaders, _super);
     function PutEmailIdentityMailFromAttributesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PutEmailIdentityMailFromAttributesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PutEmailIdentityMailFromAttributesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PutEmailIdentityMailFromAttributesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PutEmailIdentityMailFromAttributesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PutEmailIdentityMailFromAttributesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PutEmailIdentityMailFromAttributesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PutEmailIdentityMailFromAttributesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PutEmailIdentityMailFromAttributesHeaders;
-}(SpeakeasyBase));
-export { PutEmailIdentityMailFromAttributesHeaders };
-export var PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum;
+}(utils_1.SpeakeasyBase));
+exports.PutEmailIdentityMailFromAttributesHeaders = PutEmailIdentityMailFromAttributesHeaders;
+var PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum;
 (function (PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum) {
     PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum["UseDefaultValue"] = "USE_DEFAULT_VALUE";
     PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum["RejectMessage"] = "REJECT_MESSAGE";
-})(PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum || (PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum = {}));
+})(PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum = exports.PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum || (exports.PutEmailIdentityMailFromAttributesRequestBodyBehaviorOnMxFailureEnum = {}));
 var PutEmailIdentityMailFromAttributesRequestBody = /** @class */ (function (_super) {
     __extends(PutEmailIdentityMailFromAttributesRequestBody, _super);
     function PutEmailIdentityMailFromAttributesRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BehaviorOnMxFailure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BehaviorOnMxFailure" }),
         __metadata("design:type", String)
     ], PutEmailIdentityMailFromAttributesRequestBody.prototype, "behaviorOnMxFailure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MailFromDomain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MailFromDomain" }),
         __metadata("design:type", String)
     ], PutEmailIdentityMailFromAttributesRequestBody.prototype, "mailFromDomain", void 0);
     return PutEmailIdentityMailFromAttributesRequestBody;
-}(SpeakeasyBase));
-export { PutEmailIdentityMailFromAttributesRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PutEmailIdentityMailFromAttributesRequestBody = PutEmailIdentityMailFromAttributesRequestBody;
 var PutEmailIdentityMailFromAttributesRequest = /** @class */ (function (_super) {
     __extends(PutEmailIdentityMailFromAttributesRequest, _super);
     function PutEmailIdentityMailFromAttributesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutEmailIdentityMailFromAttributesPathParams)
     ], PutEmailIdentityMailFromAttributesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutEmailIdentityMailFromAttributesHeaders)
     ], PutEmailIdentityMailFromAttributesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PutEmailIdentityMailFromAttributesRequestBody)
     ], PutEmailIdentityMailFromAttributesRequest.prototype, "request", void 0);
     return PutEmailIdentityMailFromAttributesRequest;
-}(SpeakeasyBase));
-export { PutEmailIdentityMailFromAttributesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutEmailIdentityMailFromAttributesRequest = PutEmailIdentityMailFromAttributesRequest;
 var PutEmailIdentityMailFromAttributesResponse = /** @class */ (function (_super) {
     __extends(PutEmailIdentityMailFromAttributesResponse, _super);
     function PutEmailIdentityMailFromAttributesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutEmailIdentityMailFromAttributesResponse.prototype, "badRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PutEmailIdentityMailFromAttributesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutEmailIdentityMailFromAttributesResponse.prototype, "notFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], PutEmailIdentityMailFromAttributesResponse.prototype, "putEmailIdentityMailFromAttributesResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PutEmailIdentityMailFromAttributesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], PutEmailIdentityMailFromAttributesResponse.prototype, "tooManyRequestsException", void 0);
     return PutEmailIdentityMailFromAttributesResponse;
-}(SpeakeasyBase));
-export { PutEmailIdentityMailFromAttributesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutEmailIdentityMailFromAttributesResponse = PutEmailIdentityMailFromAttributesResponse;

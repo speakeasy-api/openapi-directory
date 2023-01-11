@@ -43,5 +43,5 @@ export class UpdateNetworkNetflowResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkNetflow200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkNetflow200ApplicationJSONObject?: Record<string, any>;
 }

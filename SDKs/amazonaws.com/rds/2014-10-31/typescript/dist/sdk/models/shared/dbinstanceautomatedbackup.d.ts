@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbInstanceAutomatedBackupsReplication } from "./dbinstanceautomatedbackupsreplication";
+import { DbInstanceAutomatedBackupsReplicationList } from "./dbinstanceautomatedbackupsreplicationlist";
 import { RestoreWindow } from "./restorewindow";
 /**
  * An automated backup of a DB instance. It consists of system backups, transaction logs, and the database instance properties that existed at the time you deleted the source instance.
@@ -10,7 +10,7 @@ export declare class DbInstanceAutomatedBackup extends SpeakeasyBase {
     backupRetentionPeriod?: number;
     dbInstanceArn?: string;
     dbInstanceAutomatedBackupsArn?: string;
-    dbInstanceAutomatedBackupsReplications?: DbInstanceAutomatedBackupsReplication[];
+    dbInstanceAutomatedBackupsReplications?: DbInstanceAutomatedBackupsReplicationList[];
     dbInstanceIdentifier?: string;
     dbiResourceId?: string;
     encrypted?: boolean;

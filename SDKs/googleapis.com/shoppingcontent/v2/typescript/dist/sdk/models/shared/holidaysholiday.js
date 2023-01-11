@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HolidaysHoliday = void 0;
+var utils_1 = require("../../../internal/utils");
 var HolidaysHoliday = /** @class */ (function (_super) {
     __extends(HolidaysHoliday, _super);
     function HolidaysHoliday() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countryCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countryCode" }),
         __metadata("design:type", String)
     ], HolidaysHoliday.prototype, "countryCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", String)
     ], HolidaysHoliday.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryGuaranteeDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryGuaranteeDate" }),
         __metadata("design:type", String)
     ], HolidaysHoliday.prototype, "deliveryGuaranteeDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryGuaranteeHour" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryGuaranteeHour" }),
         __metadata("design:type", String)
     ], HolidaysHoliday.prototype, "deliveryGuaranteeHour", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], HolidaysHoliday.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], HolidaysHoliday.prototype, "type", void 0);
     return HolidaysHoliday;
-}(SpeakeasyBase));
-export { HolidaysHoliday };
+}(utils_1.SpeakeasyBase));
+exports.HolidaysHoliday = HolidaysHoliday;

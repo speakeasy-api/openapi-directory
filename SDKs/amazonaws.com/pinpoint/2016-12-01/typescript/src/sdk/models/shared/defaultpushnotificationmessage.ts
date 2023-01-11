@@ -15,13 +15,13 @@ export class DefaultPushNotificationMessage extends SpeakeasyBase {
   body?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Data" })
-  data?: Map<string, string>;
+  data?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=SilentPush" })
   silentPush?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=Substitutions" })
-  substitutions?: Map<string, string[]>;
+  substitutions?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=Title" })
   title?: string;

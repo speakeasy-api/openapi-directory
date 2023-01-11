@@ -22,6 +22,6 @@ export declare class ReferencesCitiesByCityCodeGetRequest extends SpeakeasyBase 
 }
 export declare class ReferencesCitiesByCityCodeGetResponse extends SpeakeasyBase {
     contentType: string;
-    referencesCitiesByCityCodeGet200ApplicationJsonObject?: Map<string, any>;
+    referencesCitiesByCityCodeGet200ApplicationJSONObject?: Record<string, any>;
     statusCode: number;
 }

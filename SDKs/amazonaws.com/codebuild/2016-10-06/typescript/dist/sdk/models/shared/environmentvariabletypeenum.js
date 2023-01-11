@@ -1,6 +1,9 @@
-export var EnvironmentVariableTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentVariableTypeEnum = void 0;
+var EnvironmentVariableTypeEnum;
 (function (EnvironmentVariableTypeEnum) {
     EnvironmentVariableTypeEnum["Plaintext"] = "PLAINTEXT";
     EnvironmentVariableTypeEnum["ParameterStore"] = "PARAMETER_STORE";
     EnvironmentVariableTypeEnum["SecretsManager"] = "SECRETS_MANAGER";
-})(EnvironmentVariableTypeEnum || (EnvironmentVariableTypeEnum = {}));
+})(EnvironmentVariableTypeEnum = exports.EnvironmentVariableTypeEnum || (exports.EnvironmentVariableTypeEnum = {}));

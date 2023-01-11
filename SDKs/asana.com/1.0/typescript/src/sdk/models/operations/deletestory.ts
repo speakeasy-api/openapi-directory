@@ -20,7 +20,7 @@ export class DeleteStoryQueryParams extends SpeakeasyBase {
 
 export class DeleteStory200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -44,5 +44,5 @@ export class DeleteStoryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteStory200ApplicationJsonObject?: DeleteStory200ApplicationJson;
+  deleteStory200ApplicationJSONObject?: DeleteStory200ApplicationJson;
 }

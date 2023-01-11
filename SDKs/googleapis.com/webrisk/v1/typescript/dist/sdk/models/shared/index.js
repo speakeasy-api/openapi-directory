@@ -1,19 +1,35 @@
-export * from "./altenum";
-export * from "./googlecloudwebriskv1computethreatlistdiffresponse";
-export * from "./googlecloudwebriskv1computethreatlistdiffresponsechecksum";
-export * from "./googlecloudwebriskv1rawhashes";
-export * from "./googlecloudwebriskv1rawindices";
-export * from "./googlecloudwebriskv1ricedeltaencoding";
-export * from "./googlecloudwebriskv1searchhashesresponse";
-export * from "./googlecloudwebriskv1searchhashesresponsethreathash";
-export * from "./googlecloudwebriskv1searchurisresponse";
-export * from "./googlecloudwebriskv1searchurisresponsethreaturi";
-export * from "./googlecloudwebriskv1submission";
-export * from "./googlecloudwebriskv1submiturirequest";
-export * from "./googlecloudwebriskv1threatentryadditions";
-export * from "./googlecloudwebriskv1threatentryremovals";
-export * from "./googlelongrunninglistoperationsresponse";
-export * from "./googlelongrunningoperation";
-export * from "./googlerpcstatus";
-export * from "./security";
-export * from "./xgafvenum";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./altenum"), exports);
+__exportStar(require("./googlecloudwebriskv1computethreatlistdiffresponse"), exports);
+__exportStar(require("./googlecloudwebriskv1computethreatlistdiffresponsechecksum"), exports);
+__exportStar(require("./googlecloudwebriskv1rawhashes"), exports);
+__exportStar(require("./googlecloudwebriskv1rawindices"), exports);
+__exportStar(require("./googlecloudwebriskv1ricedeltaencoding"), exports);
+__exportStar(require("./googlecloudwebriskv1searchhashesresponse"), exports);
+__exportStar(require("./googlecloudwebriskv1searchhashesresponsethreathash"), exports);
+__exportStar(require("./googlecloudwebriskv1searchurisresponse"), exports);
+__exportStar(require("./googlecloudwebriskv1searchurisresponsethreaturi"), exports);
+__exportStar(require("./googlecloudwebriskv1submission"), exports);
+__exportStar(require("./googlecloudwebriskv1submiturirequest"), exports);
+__exportStar(require("./googlecloudwebriskv1threatentryadditions"), exports);
+__exportStar(require("./googlecloudwebriskv1threatentryremovals"), exports);
+__exportStar(require("./googlelongrunninglistoperationsresponse"), exports);
+__exportStar(require("./googlelongrunningoperation"), exports);
+__exportStar(require("./googlerpcstatus"), exports);
+__exportStar(require("./security"), exports);
+__exportStar(require("./xgafvenum"), exports);

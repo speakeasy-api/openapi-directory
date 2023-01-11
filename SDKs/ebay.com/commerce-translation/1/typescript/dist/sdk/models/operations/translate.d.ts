@@ -4,10 +4,10 @@ export declare class TranslateSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;
 }
 export declare class Translate400ApplicationJson extends SpeakeasyBase {
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }
 export declare class Translate500ApplicationJson extends SpeakeasyBase {
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }
 export declare class TranslateRequest extends SpeakeasyBase {
     request: shared.TranslateRequest;
@@ -17,6 +17,6 @@ export declare class TranslateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     translateResponse?: shared.TranslateResponse;
-    translate400ApplicationJsonObject?: Translate400ApplicationJson;
-    translate500ApplicationJsonObject?: Translate500ApplicationJson;
+    translate400ApplicationJSONObject?: Translate400ApplicationJson;
+    translate500ApplicationJSONObject?: Translate500ApplicationJson;
 }

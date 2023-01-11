@@ -32,6 +32,6 @@ export declare class GetProjectVideosRequest extends SpeakeasyBase {
 export declare class GetProjectVideosResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     videos?: shared.Video[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LicenseeListResult } from "./licenseelistresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LicenseeListResponseSchema = void 0;
+var utils_1 = require("../../../internal/utils");
+var licenseelistresult_1 = require("./licenseelistresult");
 var LicenseeListResponseSchema = /** @class */ (function (_super) {
     __extends(LicenseeListResponseSchema, _super);
     function LicenseeListResponseSchema() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], LicenseeListResponseSchema.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], LicenseeListResponseSchema.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
-        __metadata("design:type", LicenseeListResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
+        __metadata("design:type", licenseelistresult_1.LicenseeListResult)
     ], LicenseeListResponseSchema.prototype, "result", void 0);
     return LicenseeListResponseSchema;
-}(SpeakeasyBase));
-export { LicenseeListResponseSchema };
+}(utils_1.SpeakeasyBase));
+exports.LicenseeListResponseSchema = LicenseeListResponseSchema;

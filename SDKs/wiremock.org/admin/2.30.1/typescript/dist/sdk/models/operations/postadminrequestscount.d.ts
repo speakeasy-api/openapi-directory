@@ -8,11 +8,11 @@ export declare class PostAdminRequestsCountRequestBodyBasicAuthCredentials exten
 }
 export declare class PostAdminRequestsCountRequestBody extends SpeakeasyBase {
     basicAuthCredentials?: PostAdminRequestsCountRequestBodyBasicAuthCredentials;
-    bodyPatterns?: Map<string, any>[];
-    cookies?: Map<string, any>;
-    headers?: Map<string, any>;
+    bodyPatterns?: Record<string, any>[];
+    cookies?: Record<string, any>;
+    headers?: Record<string, any>;
     method?: string;
-    queryParameters?: Map<string, any>;
+    queryParameters?: Record<string, any>;
     url?: string;
     urlPath?: string;
     urlPathPattern?: string;
@@ -26,6 +26,6 @@ export declare class PostAdminRequestsCountRequest extends SpeakeasyBase {
 }
 export declare class PostAdminRequestsCountResponse extends SpeakeasyBase {
     contentType: string;
-    postAdminRequestsCount200ApplicationJsonObject?: PostAdminRequestsCount200ApplicationJson;
     statusCode: number;
+    postAdminRequestsCount200ApplicationJSONObject?: PostAdminRequestsCount200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetApplyEnvironmentManagedActionActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetApplyEnvironmentManagedActionResponse = exports.GetApplyEnvironmentManagedActionRequest = exports.GetApplyEnvironmentManagedActionHeaders = exports.GetApplyEnvironmentManagedActionQueryParams = exports.GetApplyEnvironmentManagedActionVersionEnum = exports.GetApplyEnvironmentManagedActionActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetApplyEnvironmentManagedActionActionEnum;
 (function (GetApplyEnvironmentManagedActionActionEnum) {
     GetApplyEnvironmentManagedActionActionEnum["ApplyEnvironmentManagedAction"] = "ApplyEnvironmentManagedAction";
-})(GetApplyEnvironmentManagedActionActionEnum || (GetApplyEnvironmentManagedActionActionEnum = {}));
-export var GetApplyEnvironmentManagedActionVersionEnum;
+})(GetApplyEnvironmentManagedActionActionEnum = exports.GetApplyEnvironmentManagedActionActionEnum || (exports.GetApplyEnvironmentManagedActionActionEnum = {}));
+var GetApplyEnvironmentManagedActionVersionEnum;
 (function (GetApplyEnvironmentManagedActionVersionEnum) {
     GetApplyEnvironmentManagedActionVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetApplyEnvironmentManagedActionVersionEnum || (GetApplyEnvironmentManagedActionVersionEnum = {}));
+})(GetApplyEnvironmentManagedActionVersionEnum = exports.GetApplyEnvironmentManagedActionVersionEnum || (exports.GetApplyEnvironmentManagedActionVersionEnum = {}));
 var GetApplyEnvironmentManagedActionQueryParams = /** @class */ (function (_super) {
     __extends(GetApplyEnvironmentManagedActionQueryParams, _super);
     function GetApplyEnvironmentManagedActionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetApplyEnvironmentManagedActionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ActionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ActionId" }),
         __metadata("design:type", String)
     ], GetApplyEnvironmentManagedActionQueryParams.prototype, "actionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EnvironmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EnvironmentId" }),
         __metadata("design:type", String)
     ], GetApplyEnvironmentManagedActionQueryParams.prototype, "environmentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EnvironmentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EnvironmentName" }),
         __metadata("design:type", String)
     ], GetApplyEnvironmentManagedActionQueryParams.prototype, "environmentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetApplyEnvironmentManagedActionQueryParams.prototype, "version", void 0);
     return GetApplyEnvironmentManagedActionQueryParams;
-}(SpeakeasyBase));
-export { GetApplyEnvironmentManagedActionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetApplyEnvironmentManagedActionQueryParams = GetApplyEnvironmentManagedActionQueryParams;
 var GetApplyEnvironmentManagedActionHeaders = /** @class */ (function (_super) {
     __extends(GetApplyEnvironmentManagedActionHeaders, _super);
     function GetApplyEnvironmentManagedActionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetApplyEnvironmentManagedActionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetApplyEnvironmentManagedActionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetApplyEnvironmentManagedActionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetApplyEnvironmentManagedActionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetApplyEnvironmentManagedActionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetApplyEnvironmentManagedActionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetApplyEnvironmentManagedActionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetApplyEnvironmentManagedActionHeaders;
-}(SpeakeasyBase));
-export { GetApplyEnvironmentManagedActionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetApplyEnvironmentManagedActionHeaders = GetApplyEnvironmentManagedActionHeaders;
 var GetApplyEnvironmentManagedActionRequest = /** @class */ (function (_super) {
     __extends(GetApplyEnvironmentManagedActionRequest, _super);
     function GetApplyEnvironmentManagedActionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetApplyEnvironmentManagedActionQueryParams)
     ], GetApplyEnvironmentManagedActionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetApplyEnvironmentManagedActionHeaders)
     ], GetApplyEnvironmentManagedActionRequest.prototype, "headers", void 0);
     return GetApplyEnvironmentManagedActionRequest;
-}(SpeakeasyBase));
-export { GetApplyEnvironmentManagedActionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetApplyEnvironmentManagedActionRequest = GetApplyEnvironmentManagedActionRequest;
 var GetApplyEnvironmentManagedActionResponse = /** @class */ (function (_super) {
     __extends(GetApplyEnvironmentManagedActionResponse, _super);
     function GetApplyEnvironmentManagedActionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetApplyEnvironmentManagedActionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetApplyEnvironmentManagedActionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetApplyEnvironmentManagedActionResponse.prototype, "statusCode", void 0);
     return GetApplyEnvironmentManagedActionResponse;
-}(SpeakeasyBase));
-export { GetApplyEnvironmentManagedActionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetApplyEnvironmentManagedActionResponse = GetApplyEnvironmentManagedActionResponse;

@@ -48,11 +48,11 @@ export class GetOrganizationNetworksResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationNetworks200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationNetworks200ApplicationJSONObject?: Record<string, any>;
 }

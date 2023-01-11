@@ -11,7 +11,7 @@ export class GetGenresQueryParams extends SpeakeasyBase {
 
 export class GetGenresHeaders extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-ListenAPI-Key" })
-  xListenApiKey: string;
+  xListenAPIKey: string;
 }
 
 
@@ -32,7 +32,7 @@ export class GetGenresResponse extends SpeakeasyBase {
   getGenresResponse?: shared.GetGenresResponse;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

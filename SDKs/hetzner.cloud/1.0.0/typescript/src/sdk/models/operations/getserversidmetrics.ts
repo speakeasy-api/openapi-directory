@@ -46,7 +46,7 @@ export class GetServersIdMetrics200ApplicationJsonMetrics extends SpeakeasyBase 
   step: number;
 
   @SpeakeasyMetadata({ data: "json, name=time_series", elemType: GetServersIdMetrics200ApplicationJsonMetricsTimeSeries })
-  timeSeries: Map<string, GetServersIdMetrics200ApplicationJsonMetricsTimeSeries>;
+  timeSeries: Record<string, GetServersIdMetrics200ApplicationJsonMetricsTimeSeries>;
 }
 
 
@@ -70,8 +70,8 @@ export class GetServersIdMetricsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getServersIdMetrics200ApplicationJsonObject?: GetServersIdMetrics200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getServersIdMetrics200ApplicationJSONObject?: GetServersIdMetrics200ApplicationJson;
 }

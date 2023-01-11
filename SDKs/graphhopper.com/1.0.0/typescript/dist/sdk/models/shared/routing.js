@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RoutingCurbsideStrictnessEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Routing = exports.RoutingSnapPreventionsEnum = exports.RoutingNetworkDataProviderEnum = exports.RoutingCurbsideStrictnessEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RoutingCurbsideStrictnessEnum;
 (function (RoutingCurbsideStrictnessEnum) {
     RoutingCurbsideStrictnessEnum["Ignore"] = "ignore";
     RoutingCurbsideStrictnessEnum["Soft"] = "soft";
     RoutingCurbsideStrictnessEnum["Strict"] = "strict";
-})(RoutingCurbsideStrictnessEnum || (RoutingCurbsideStrictnessEnum = {}));
-export var RoutingNetworkDataProviderEnum;
+})(RoutingCurbsideStrictnessEnum = exports.RoutingCurbsideStrictnessEnum || (exports.RoutingCurbsideStrictnessEnum = {}));
+var RoutingNetworkDataProviderEnum;
 (function (RoutingNetworkDataProviderEnum) {
     RoutingNetworkDataProviderEnum["Openstreetmap"] = "openstreetmap";
     RoutingNetworkDataProviderEnum["Tomtom"] = "tomtom";
-})(RoutingNetworkDataProviderEnum || (RoutingNetworkDataProviderEnum = {}));
-export var RoutingSnapPreventionsEnum;
+})(RoutingNetworkDataProviderEnum = exports.RoutingNetworkDataProviderEnum || (exports.RoutingNetworkDataProviderEnum = {}));
+var RoutingSnapPreventionsEnum;
 (function (RoutingSnapPreventionsEnum) {
     RoutingSnapPreventionsEnum["Motorway"] = "motorway";
     RoutingSnapPreventionsEnum["Trunk"] = "trunk";
@@ -42,7 +45,7 @@ export var RoutingSnapPreventionsEnum;
     RoutingSnapPreventionsEnum["Ford"] = "ford";
     RoutingSnapPreventionsEnum["Tunnel"] = "tunnel";
     RoutingSnapPreventionsEnum["Ferry"] = "ferry";
-})(RoutingSnapPreventionsEnum || (RoutingSnapPreventionsEnum = {}));
+})(RoutingSnapPreventionsEnum = exports.RoutingSnapPreventionsEnum || (exports.RoutingSnapPreventionsEnum = {}));
 // Routing
 /**
  * This contains all routing specific configurations.
@@ -53,33 +56,33 @@ var Routing = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=calc_points" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=calc_points" }),
         __metadata("design:type", Boolean)
     ], Routing.prototype, "calcPoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consider_traffic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consider_traffic" }),
         __metadata("design:type", Boolean)
     ], Routing.prototype, "considerTraffic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=curbside_strictness" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=curbside_strictness" }),
         __metadata("design:type", String)
     ], Routing.prototype, "curbsideStrictness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fail_fast" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fail_fast" }),
         __metadata("design:type", Boolean)
     ], Routing.prototype, "failFast", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network_data_provider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network_data_provider" }),
         __metadata("design:type", String)
     ], Routing.prototype, "networkDataProvider", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=return_snapped_waypoints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=return_snapped_waypoints" }),
         __metadata("design:type", Boolean)
     ], Routing.prototype, "returnSnappedWaypoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snap_preventions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snap_preventions" }),
         __metadata("design:type", Array)
     ], Routing.prototype, "snapPreventions", void 0);
     return Routing;
-}(SpeakeasyBase));
-export { Routing };
+}(utils_1.SpeakeasyBase));
+exports.Routing = Routing;

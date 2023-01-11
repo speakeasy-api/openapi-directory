@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkSwitchLinkAggregationResponse = exports.UpdateNetworkSwitchLinkAggregationRequest = exports.UpdateNetworkSwitchLinkAggregationRequestBody = exports.UpdateNetworkSwitchLinkAggregationRequestBodySwitchProfilePorts = exports.UpdateNetworkSwitchLinkAggregationRequestBodySwitchPorts = exports.UpdateNetworkSwitchLinkAggregationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkSwitchLinkAggregationPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchLinkAggregationPathParams, _super);
     function UpdateNetworkSwitchLinkAggregationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=linkAggregationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=linkAggregationId" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchLinkAggregationPathParams.prototype, "linkAggregationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchLinkAggregationPathParams.prototype, "networkId", void 0);
     return UpdateNetworkSwitchLinkAggregationPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchLinkAggregationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchLinkAggregationPathParams = UpdateNetworkSwitchLinkAggregationPathParams;
 var UpdateNetworkSwitchLinkAggregationRequestBodySwitchPorts = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchLinkAggregationRequestBodySwitchPorts, _super);
     function UpdateNetworkSwitchLinkAggregationRequestBodySwitchPorts() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portId" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchLinkAggregationRequestBodySwitchPorts.prototype, "portId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serial" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchLinkAggregationRequestBodySwitchPorts.prototype, "serial", void 0);
     return UpdateNetworkSwitchLinkAggregationRequestBodySwitchPorts;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchLinkAggregationRequestBodySwitchPorts };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchLinkAggregationRequestBodySwitchPorts = UpdateNetworkSwitchLinkAggregationRequestBodySwitchPorts;
 var UpdateNetworkSwitchLinkAggregationRequestBodySwitchProfilePorts = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchLinkAggregationRequestBodySwitchProfilePorts, _super);
     function UpdateNetworkSwitchLinkAggregationRequestBodySwitchProfilePorts() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portId" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchLinkAggregationRequestBodySwitchProfilePorts.prototype, "portId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchLinkAggregationRequestBodySwitchProfilePorts.prototype, "profile", void 0);
     return UpdateNetworkSwitchLinkAggregationRequestBodySwitchProfilePorts;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchLinkAggregationRequestBodySwitchProfilePorts };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchLinkAggregationRequestBodySwitchProfilePorts = UpdateNetworkSwitchLinkAggregationRequestBodySwitchProfilePorts;
 var UpdateNetworkSwitchLinkAggregationRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchLinkAggregationRequestBody, _super);
     function UpdateNetworkSwitchLinkAggregationRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=switchPorts", elemType: UpdateNetworkSwitchLinkAggregationRequestBodySwitchPorts }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=switchPorts", elemType: UpdateNetworkSwitchLinkAggregationRequestBodySwitchPorts }),
         __metadata("design:type", Array)
     ], UpdateNetworkSwitchLinkAggregationRequestBody.prototype, "switchPorts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=switchProfilePorts", elemType: UpdateNetworkSwitchLinkAggregationRequestBodySwitchProfilePorts }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=switchProfilePorts", elemType: UpdateNetworkSwitchLinkAggregationRequestBodySwitchProfilePorts }),
         __metadata("design:type", Array)
     ], UpdateNetworkSwitchLinkAggregationRequestBody.prototype, "switchProfilePorts", void 0);
     return UpdateNetworkSwitchLinkAggregationRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchLinkAggregationRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchLinkAggregationRequestBody = UpdateNetworkSwitchLinkAggregationRequestBody;
 var UpdateNetworkSwitchLinkAggregationRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchLinkAggregationRequest, _super);
     function UpdateNetworkSwitchLinkAggregationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkSwitchLinkAggregationPathParams)
     ], UpdateNetworkSwitchLinkAggregationRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkSwitchLinkAggregationRequestBody)
     ], UpdateNetworkSwitchLinkAggregationRequest.prototype, "request", void 0);
     return UpdateNetworkSwitchLinkAggregationRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchLinkAggregationRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchLinkAggregationRequest = UpdateNetworkSwitchLinkAggregationRequest;
 var UpdateNetworkSwitchLinkAggregationResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchLinkAggregationResponse, _super);
     function UpdateNetworkSwitchLinkAggregationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchLinkAggregationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkSwitchLinkAggregationResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkSwitchLinkAggregationResponse.prototype, "updateNetworkSwitchLinkAggregation200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkSwitchLinkAggregationResponse.prototype, "updateNetworkSwitchLinkAggregation200ApplicationJSONObject", void 0);
     return UpdateNetworkSwitchLinkAggregationResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchLinkAggregationResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchLinkAggregationResponse = UpdateNetworkSwitchLinkAggregationResponse;

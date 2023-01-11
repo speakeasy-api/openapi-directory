@@ -1,25 +1,41 @@
-export * from "./changeserverlifecyclestate";
-export * from "./createreplicationconfigurationtemplate";
-export * from "./deletejob";
-export * from "./deletereplicationconfigurationtemplate";
-export * from "./deletesourceserver";
-export * from "./describejoblogitems";
-export * from "./describejobs";
-export * from "./describereplicationconfigurationtemplates";
-export * from "./describesourceservers";
-export * from "./disconnectfromservice";
-export * from "./finalizecutover";
-export * from "./getlaunchconfiguration";
-export * from "./getreplicationconfiguration";
-export * from "./initializeservice";
-export * from "./listtagsforresource";
-export * from "./markasarchived";
-export * from "./retrydatareplication";
-export * from "./startcutover";
-export * from "./starttest";
-export * from "./tagresource";
-export * from "./terminatetargetinstances";
-export * from "./untagresource";
-export * from "./updatelaunchconfiguration";
-export * from "./updatereplicationconfiguration";
-export * from "./updatereplicationconfigurationtemplate";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./changeserverlifecyclestate"), exports);
+__exportStar(require("./createreplicationconfigurationtemplate"), exports);
+__exportStar(require("./deletejob"), exports);
+__exportStar(require("./deletereplicationconfigurationtemplate"), exports);
+__exportStar(require("./deletesourceserver"), exports);
+__exportStar(require("./describejoblogitems"), exports);
+__exportStar(require("./describejobs"), exports);
+__exportStar(require("./describereplicationconfigurationtemplates"), exports);
+__exportStar(require("./describesourceservers"), exports);
+__exportStar(require("./disconnectfromservice"), exports);
+__exportStar(require("./finalizecutover"), exports);
+__exportStar(require("./getlaunchconfiguration"), exports);
+__exportStar(require("./getreplicationconfiguration"), exports);
+__exportStar(require("./initializeservice"), exports);
+__exportStar(require("./listtagsforresource"), exports);
+__exportStar(require("./markasarchived"), exports);
+__exportStar(require("./retrydatareplication"), exports);
+__exportStar(require("./startcutover"), exports);
+__exportStar(require("./starttest"), exports);
+__exportStar(require("./tagresource"), exports);
+__exportStar(require("./terminatetargetinstances"), exports);
+__exportStar(require("./untagresource"), exports);
+__exportStar(require("./updatelaunchconfiguration"), exports);
+__exportStar(require("./updatereplicationconfiguration"), exports);
+__exportStar(require("./updatereplicationconfigurationtemplate"), exports);

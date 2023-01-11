@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CommentApiDeleteCommentEntryTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommentApiDeleteCommentResponse = exports.CommentApiDeleteCommentRequest = exports.CommentApiDeleteCommentPathParams = exports.CommentApiDeleteCommentEntryTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CommentApiDeleteCommentEntryTypeEnum;
 (function (CommentApiDeleteCommentEntryTypeEnum) {
     CommentApiDeleteCommentEntryTypeEnum["Undefined"] = "Undefined";
     CommentApiDeleteCommentEntryTypeEnum["Album"] = "Album";
@@ -37,48 +40,48 @@ export var CommentApiDeleteCommentEntryTypeEnum;
     CommentApiDeleteCommentEntryTypeEnum["Tag"] = "Tag";
     CommentApiDeleteCommentEntryTypeEnum["User"] = "User";
     CommentApiDeleteCommentEntryTypeEnum["Venue"] = "Venue";
-})(CommentApiDeleteCommentEntryTypeEnum || (CommentApiDeleteCommentEntryTypeEnum = {}));
+})(CommentApiDeleteCommentEntryTypeEnum = exports.CommentApiDeleteCommentEntryTypeEnum || (exports.CommentApiDeleteCommentEntryTypeEnum = {}));
 var CommentApiDeleteCommentPathParams = /** @class */ (function (_super) {
     __extends(CommentApiDeleteCommentPathParams, _super);
     function CommentApiDeleteCommentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=commentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=commentId" }),
         __metadata("design:type", Number)
     ], CommentApiDeleteCommentPathParams.prototype, "commentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=entryType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=entryType" }),
         __metadata("design:type", String)
     ], CommentApiDeleteCommentPathParams.prototype, "entryType", void 0);
     return CommentApiDeleteCommentPathParams;
-}(SpeakeasyBase));
-export { CommentApiDeleteCommentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CommentApiDeleteCommentPathParams = CommentApiDeleteCommentPathParams;
 var CommentApiDeleteCommentRequest = /** @class */ (function (_super) {
     __extends(CommentApiDeleteCommentRequest, _super);
     function CommentApiDeleteCommentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CommentApiDeleteCommentPathParams)
     ], CommentApiDeleteCommentRequest.prototype, "pathParams", void 0);
     return CommentApiDeleteCommentRequest;
-}(SpeakeasyBase));
-export { CommentApiDeleteCommentRequest };
+}(utils_1.SpeakeasyBase));
+exports.CommentApiDeleteCommentRequest = CommentApiDeleteCommentRequest;
 var CommentApiDeleteCommentResponse = /** @class */ (function (_super) {
     __extends(CommentApiDeleteCommentResponse, _super);
     function CommentApiDeleteCommentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CommentApiDeleteCommentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CommentApiDeleteCommentResponse.prototype, "statusCode", void 0);
     return CommentApiDeleteCommentResponse;
-}(SpeakeasyBase));
-export { CommentApiDeleteCommentResponse };
+}(utils_1.SpeakeasyBase));
+exports.CommentApiDeleteCommentResponse = CommentApiDeleteCommentResponse;

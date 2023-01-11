@@ -30,5 +30,5 @@ export declare class GetShopScriptTagRequest extends SpeakeasyBase {
 export declare class GetShopScriptTagResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getShopScriptTag200ApplicationJsonObject?: GetShopScriptTag200ApplicationJson;
+    getShopScriptTag200ApplicationJSONObject?: GetShopScriptTag200ApplicationJson;
 }

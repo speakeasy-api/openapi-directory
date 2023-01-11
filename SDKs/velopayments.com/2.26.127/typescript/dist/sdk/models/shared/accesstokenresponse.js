@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserInfo } from "./userinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccessTokenResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var userinfo_1 = require("./userinfo");
 var AccessTokenResponse = /** @class */ (function (_super) {
     __extends(AccessTokenResponse, _super);
     function AccessTokenResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access_token" }),
         __metadata("design:type", String)
     ], AccessTokenResponse.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entityIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entityIds" }),
         __metadata("design:type", Array)
     ], AccessTokenResponse.prototype, "entityIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires_in" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires_in" }),
         __metadata("design:type", Number)
     ], AccessTokenResponse.prototype, "expiresIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refresh_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refresh_token" }),
         __metadata("design:type", String)
     ], AccessTokenResponse.prototype, "refreshToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", String)
     ], AccessTokenResponse.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token_type" }),
         __metadata("design:type", String)
     ], AccessTokenResponse.prototype, "tokenType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_info" }),
-        __metadata("design:type", UserInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_info" }),
+        __metadata("design:type", userinfo_1.UserInfo)
     ], AccessTokenResponse.prototype, "userInfo", void 0);
     return AccessTokenResponse;
-}(SpeakeasyBase));
-export { AccessTokenResponse };
+}(utils_1.SpeakeasyBase));
+exports.AccessTokenResponse = AccessTokenResponse;

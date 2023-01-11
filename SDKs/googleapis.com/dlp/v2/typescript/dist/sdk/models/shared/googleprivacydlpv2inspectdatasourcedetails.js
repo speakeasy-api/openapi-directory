@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2RequestedOptions } from "./googleprivacydlpv2requestedoptions";
-import { GooglePrivacyDlpV2Result } from "./googleprivacydlpv2result";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2InspectDataSourceDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2requestedoptions_1 = require("./googleprivacydlpv2requestedoptions");
+var googleprivacydlpv2result_1 = require("./googleprivacydlpv2result");
 // GooglePrivacyDlpV2InspectDataSourceDetails
 /**
  * The results of an inspect DataSource job.
@@ -35,13 +38,13 @@ var GooglePrivacyDlpV2InspectDataSourceDetails = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedOptions" }),
-        __metadata("design:type", GooglePrivacyDlpV2RequestedOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedOptions" }),
+        __metadata("design:type", googleprivacydlpv2requestedoptions_1.GooglePrivacyDlpV2RequestedOptions)
     ], GooglePrivacyDlpV2InspectDataSourceDetails.prototype, "requestedOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
-        __metadata("design:type", GooglePrivacyDlpV2Result)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
+        __metadata("design:type", googleprivacydlpv2result_1.GooglePrivacyDlpV2Result)
     ], GooglePrivacyDlpV2InspectDataSourceDetails.prototype, "result", void 0);
     return GooglePrivacyDlpV2InspectDataSourceDetails;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2InspectDataSourceDetails };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2InspectDataSourceDetails = GooglePrivacyDlpV2InspectDataSourceDetails;

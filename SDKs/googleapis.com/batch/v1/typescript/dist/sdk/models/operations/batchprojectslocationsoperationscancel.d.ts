@@ -23,11 +23,11 @@ export declare class BatchProjectsLocationsOperationsCancelSecurity extends Spea
 export declare class BatchProjectsLocationsOperationsCancelRequest extends SpeakeasyBase {
     pathParams: BatchProjectsLocationsOperationsCancelPathParams;
     queryParams: BatchProjectsLocationsOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: BatchProjectsLocationsOperationsCancelSecurity;
 }
 export declare class BatchProjectsLocationsOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

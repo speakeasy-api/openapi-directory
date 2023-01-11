@@ -14,7 +14,7 @@ export declare class GroupRelation extends SpeakeasyBase {
     displayName?: string;
     group?: string;
     groupKey?: EntityKey;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     relationType?: GroupRelationRelationTypeEnum;
     roles?: TransitiveMembershipRole[];
 }

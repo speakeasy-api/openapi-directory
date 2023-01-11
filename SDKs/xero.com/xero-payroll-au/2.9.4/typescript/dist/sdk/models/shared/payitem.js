@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeductionTypeInput } from "./deductiontype";
-import { EarningsRateInput } from "./earningsrate";
-import { LeaveTypeInput } from "./leavetype";
-import { ReimbursementTypeInput } from "./reimbursementtype";
-import { DeductionType } from "./deductiontype";
-import { EarningsRate } from "./earningsrate";
-import { LeaveType } from "./leavetype";
-import { ReimbursementType } from "./reimbursementtype";
-var PayItemInput = /** @class */ (function (_super) {
-    __extends(PayItemInput, _super);
-    function PayItemInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeductionTypes", elemType: DeductionTypeInput }),
-        __metadata("design:type", Array)
-    ], PayItemInput.prototype, "deductionTypes", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=EarningsRates", elemType: EarningsRateInput }),
-        __metadata("design:type", Array)
-    ], PayItemInput.prototype, "earningsRates", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeaveTypes", elemType: LeaveTypeInput }),
-        __metadata("design:type", Array)
-    ], PayItemInput.prototype, "leaveTypes", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReimbursementTypes", elemType: ReimbursementTypeInput }),
-        __metadata("design:type", Array)
-    ], PayItemInput.prototype, "reimbursementTypes", void 0);
-    return PayItemInput;
-}(SpeakeasyBase));
-export { PayItemInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayItemInput = exports.PayItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var deductiontype_1 = require("./deductiontype");
+var earningsrate_1 = require("./earningsrate");
+var leavetype_1 = require("./leavetype");
+var reimbursementtype_1 = require("./reimbursementtype");
+var deductiontype_2 = require("./deductiontype");
+var earningsrate_2 = require("./earningsrate");
+var leavetype_2 = require("./leavetype");
+var reimbursementtype_2 = require("./reimbursementtype");
 var PayItem = /** @class */ (function (_super) {
     __extends(PayItem, _super);
     function PayItem() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeductionTypes", elemType: DeductionType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeductionTypes", elemType: deductiontype_1.DeductionType }),
         __metadata("design:type", Array)
     ], PayItem.prototype, "deductionTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EarningsRates", elemType: EarningsRate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EarningsRates", elemType: earningsrate_1.EarningsRate }),
         __metadata("design:type", Array)
     ], PayItem.prototype, "earningsRates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LeaveTypes", elemType: LeaveType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeaveTypes", elemType: leavetype_1.LeaveType }),
         __metadata("design:type", Array)
     ], PayItem.prototype, "leaveTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReimbursementTypes", elemType: ReimbursementType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReimbursementTypes", elemType: reimbursementtype_1.ReimbursementType }),
         __metadata("design:type", Array)
     ], PayItem.prototype, "reimbursementTypes", void 0);
     return PayItem;
-}(SpeakeasyBase));
-export { PayItem };
+}(utils_1.SpeakeasyBase));
+exports.PayItem = PayItem;
+var PayItemInput = /** @class */ (function (_super) {
+    __extends(PayItemInput, _super);
+    function PayItemInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeductionTypes", elemType: deductiontype_2.DeductionTypeInput }),
+        __metadata("design:type", Array)
+    ], PayItemInput.prototype, "deductionTypes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EarningsRates", elemType: earningsrate_2.EarningsRateInput }),
+        __metadata("design:type", Array)
+    ], PayItemInput.prototype, "earningsRates", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LeaveTypes", elemType: leavetype_2.LeaveTypeInput }),
+        __metadata("design:type", Array)
+    ], PayItemInput.prototype, "leaveTypes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReimbursementTypes", elemType: reimbursementtype_2.ReimbursementTypeInput }),
+        __metadata("design:type", Array)
+    ], PayItemInput.prototype, "reimbursementTypes", void 0);
+    return PayItemInput;
+}(utils_1.SpeakeasyBase));
+exports.PayItemInput = PayItemInput;

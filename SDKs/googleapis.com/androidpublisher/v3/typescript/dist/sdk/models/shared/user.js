@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Grant } from "./grant";
-export var UserDeveloperAccountPermissionsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.User = exports.UserInput = exports.UserAccessStateEnum = exports.UserDeveloperAccountPermissionsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var grant_1 = require("./grant");
+var UserDeveloperAccountPermissionsEnum;
 (function (UserDeveloperAccountPermissionsEnum) {
     UserDeveloperAccountPermissionsEnum["DeveloperLevelPermissionUnspecified"] = "DEVELOPER_LEVEL_PERMISSION_UNSPECIFIED";
     UserDeveloperAccountPermissionsEnum["CanSeeAllApps"] = "CAN_SEE_ALL_APPS";
@@ -41,15 +44,15 @@ export var UserDeveloperAccountPermissionsEnum;
     UserDeveloperAccountPermissionsEnum["CanCreateManagedPlayAppsGlobal"] = "CAN_CREATE_MANAGED_PLAY_APPS_GLOBAL";
     UserDeveloperAccountPermissionsEnum["CanChangeManagedPlaySettingGlobal"] = "CAN_CHANGE_MANAGED_PLAY_SETTING_GLOBAL";
     UserDeveloperAccountPermissionsEnum["CanManageOrdersGlobal"] = "CAN_MANAGE_ORDERS_GLOBAL";
-})(UserDeveloperAccountPermissionsEnum || (UserDeveloperAccountPermissionsEnum = {}));
-export var UserAccessStateEnum;
+})(UserDeveloperAccountPermissionsEnum = exports.UserDeveloperAccountPermissionsEnum || (exports.UserDeveloperAccountPermissionsEnum = {}));
+var UserAccessStateEnum;
 (function (UserAccessStateEnum) {
     UserAccessStateEnum["AccessStateUnspecified"] = "ACCESS_STATE_UNSPECIFIED";
     UserAccessStateEnum["Invited"] = "INVITED";
     UserAccessStateEnum["InvitationExpired"] = "INVITATION_EXPIRED";
     UserAccessStateEnum["AccessGranted"] = "ACCESS_GRANTED";
     UserAccessStateEnum["AccessExpired"] = "ACCESS_EXPIRED";
-})(UserAccessStateEnum || (UserAccessStateEnum = {}));
+})(UserAccessStateEnum = exports.UserAccessStateEnum || (exports.UserAccessStateEnum = {}));
 // UserInput
 /**
  * A user resource.
@@ -60,24 +63,24 @@ var UserInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=developerAccountPermissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=developerAccountPermissions" }),
         __metadata("design:type", Array)
     ], UserInput.prototype, "developerAccountPermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], UserInput.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expirationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expirationTime" }),
         __metadata("design:type", String)
     ], UserInput.prototype, "expirationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UserInput.prototype, "name", void 0);
     return UserInput;
-}(SpeakeasyBase));
-export { UserInput };
+}(utils_1.SpeakeasyBase));
+exports.UserInput = UserInput;
 // User
 /**
  * A user resource.
@@ -88,33 +91,33 @@ var User = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessState" }),
         __metadata("design:type", String)
     ], User.prototype, "accessState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=developerAccountPermissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=developerAccountPermissions" }),
         __metadata("design:type", Array)
     ], User.prototype, "developerAccountPermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], User.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expirationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expirationTime" }),
         __metadata("design:type", String)
     ], User.prototype, "expirationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grants", elemType: Grant }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grants", elemType: grant_1.Grant }),
         __metadata("design:type", Array)
     ], User.prototype, "grants", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], User.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=partial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=partial" }),
         __metadata("design:type", Boolean)
     ], User.prototype, "partial", void 0);
     return User;
-}(SpeakeasyBase));
-export { User };
+}(utils_1.SpeakeasyBase));
+exports.User = User;

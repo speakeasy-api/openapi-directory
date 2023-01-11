@@ -4,11 +4,8 @@ export declare class MigrationsGetStatusForOrgPathParams extends SpeakeasyBase {
     migrationId: number;
     org: string;
 }
-export declare enum MigrationsGetStatusForOrgExcludeEnum {
-    Repositories = "repositories"
-}
 export declare class MigrationsGetStatusForOrgQueryParams extends SpeakeasyBase {
-    exclude?: MigrationsGetStatusForOrgExcludeEnum[];
+    exclude?: shared.MigrationIdEnum[];
 }
 export declare class MigrationsGetStatusForOrgRequest extends SpeakeasyBase {
     pathParams: MigrationsGetStatusForOrgPathParams;

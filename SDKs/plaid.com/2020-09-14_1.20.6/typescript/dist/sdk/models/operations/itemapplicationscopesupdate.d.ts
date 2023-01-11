@@ -5,7 +5,7 @@ export declare class ItemApplicationScopesUpdateRequest extends SpeakeasyBase {
 }
 export declare class ItemApplicationScopesUpdateResponse extends SpeakeasyBase {
     contentType: string;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     itemApplicationScopesUpdateResponse?: shared.ItemApplicationScopesUpdateResponse;
     statusCode: number;
 }

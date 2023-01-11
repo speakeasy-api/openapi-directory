@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CategoriesGetResponse = exports.CategoriesGetRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var CategoriesGetRequest = /** @class */ (function (_super) {
     __extends(CategoriesGetRequest, _super);
     function CategoriesGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], CategoriesGetRequest.prototype, "request", void 0);
     return CategoriesGetRequest;
-}(SpeakeasyBase));
-export { CategoriesGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.CategoriesGetRequest = CategoriesGetRequest;
 var CategoriesGetResponse = /** @class */ (function (_super) {
     __extends(CategoriesGetResponse, _super);
     function CategoriesGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CategoriesGetResponse.prototype, "categoriesGetResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CategoriesGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CategoriesGetResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CategoriesGetResponse.prototype, "statusCode", void 0);
     return CategoriesGetResponse;
-}(SpeakeasyBase));
-export { CategoriesGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.CategoriesGetResponse = CategoriesGetResponse;

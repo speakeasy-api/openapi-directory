@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,131 +23,133 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLoadBalancersIdMetricsResponse = exports.GetLoadBalancersIdMetricsRequest = exports.GetLoadBalancersIdMetrics200ApplicationJson = exports.GetLoadBalancersIdMetrics200ApplicationJsonMetrics = exports.GetLoadBalancersIdMetrics200ApplicationJsonMetricsTimeSeries = exports.GetLoadBalancersIdMetricsQueryParams = exports.GetLoadBalancersIdMetricsTypeEnum = exports.GetLoadBalancersIdMetricsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetLoadBalancersIdMetricsPathParams = /** @class */ (function (_super) {
     __extends(GetLoadBalancersIdMetricsPathParams, _super);
     function GetLoadBalancersIdMetricsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetLoadBalancersIdMetricsPathParams.prototype, "id", void 0);
     return GetLoadBalancersIdMetricsPathParams;
-}(SpeakeasyBase));
-export { GetLoadBalancersIdMetricsPathParams };
-export var GetLoadBalancersIdMetricsTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetLoadBalancersIdMetricsPathParams = GetLoadBalancersIdMetricsPathParams;
+var GetLoadBalancersIdMetricsTypeEnum;
 (function (GetLoadBalancersIdMetricsTypeEnum) {
     GetLoadBalancersIdMetricsTypeEnum["OpenConnections"] = "open_connections";
     GetLoadBalancersIdMetricsTypeEnum["ConnectionsPerSecond"] = "connections_per_second";
     GetLoadBalancersIdMetricsTypeEnum["RequestsPerSecond"] = "requests_per_second";
     GetLoadBalancersIdMetricsTypeEnum["Bandwidth"] = "bandwidth";
-})(GetLoadBalancersIdMetricsTypeEnum || (GetLoadBalancersIdMetricsTypeEnum = {}));
+})(GetLoadBalancersIdMetricsTypeEnum = exports.GetLoadBalancersIdMetricsTypeEnum || (exports.GetLoadBalancersIdMetricsTypeEnum = {}));
 var GetLoadBalancersIdMetricsQueryParams = /** @class */ (function (_super) {
     __extends(GetLoadBalancersIdMetricsQueryParams, _super);
     function GetLoadBalancersIdMetricsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=end" }),
         __metadata("design:type", String)
     ], GetLoadBalancersIdMetricsQueryParams.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=start" }),
         __metadata("design:type", String)
     ], GetLoadBalancersIdMetricsQueryParams.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=step" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=step" }),
         __metadata("design:type", String)
     ], GetLoadBalancersIdMetricsQueryParams.prototype, "step", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=type" }),
         __metadata("design:type", String)
     ], GetLoadBalancersIdMetricsQueryParams.prototype, "type", void 0);
     return GetLoadBalancersIdMetricsQueryParams;
-}(SpeakeasyBase));
-export { GetLoadBalancersIdMetricsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetLoadBalancersIdMetricsQueryParams = GetLoadBalancersIdMetricsQueryParams;
 var GetLoadBalancersIdMetrics200ApplicationJsonMetricsTimeSeries = /** @class */ (function (_super) {
     __extends(GetLoadBalancersIdMetrics200ApplicationJsonMetricsTimeSeries, _super);
     function GetLoadBalancersIdMetrics200ApplicationJsonMetricsTimeSeries() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
         __metadata("design:type", Array)
     ], GetLoadBalancersIdMetrics200ApplicationJsonMetricsTimeSeries.prototype, "values", void 0);
     return GetLoadBalancersIdMetrics200ApplicationJsonMetricsTimeSeries;
-}(SpeakeasyBase));
-export { GetLoadBalancersIdMetrics200ApplicationJsonMetricsTimeSeries };
+}(utils_1.SpeakeasyBase));
+exports.GetLoadBalancersIdMetrics200ApplicationJsonMetricsTimeSeries = GetLoadBalancersIdMetrics200ApplicationJsonMetricsTimeSeries;
 var GetLoadBalancersIdMetrics200ApplicationJsonMetrics = /** @class */ (function (_super) {
     __extends(GetLoadBalancersIdMetrics200ApplicationJsonMetrics, _super);
     function GetLoadBalancersIdMetrics200ApplicationJsonMetrics() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end" }),
         __metadata("design:type", String)
     ], GetLoadBalancersIdMetrics200ApplicationJsonMetrics.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
         __metadata("design:type", String)
     ], GetLoadBalancersIdMetrics200ApplicationJsonMetrics.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=step" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=step" }),
         __metadata("design:type", Number)
     ], GetLoadBalancersIdMetrics200ApplicationJsonMetrics.prototype, "step", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_series", elemType: GetLoadBalancersIdMetrics200ApplicationJsonMetricsTimeSeries }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_series", elemType: GetLoadBalancersIdMetrics200ApplicationJsonMetricsTimeSeries }),
+        __metadata("design:type", Object)
     ], GetLoadBalancersIdMetrics200ApplicationJsonMetrics.prototype, "timeSeries", void 0);
     return GetLoadBalancersIdMetrics200ApplicationJsonMetrics;
-}(SpeakeasyBase));
-export { GetLoadBalancersIdMetrics200ApplicationJsonMetrics };
+}(utils_1.SpeakeasyBase));
+exports.GetLoadBalancersIdMetrics200ApplicationJsonMetrics = GetLoadBalancersIdMetrics200ApplicationJsonMetrics;
 var GetLoadBalancersIdMetrics200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetLoadBalancersIdMetrics200ApplicationJson, _super);
     function GetLoadBalancersIdMetrics200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics" }),
         __metadata("design:type", GetLoadBalancersIdMetrics200ApplicationJsonMetrics)
     ], GetLoadBalancersIdMetrics200ApplicationJson.prototype, "metrics", void 0);
     return GetLoadBalancersIdMetrics200ApplicationJson;
-}(SpeakeasyBase));
-export { GetLoadBalancersIdMetrics200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetLoadBalancersIdMetrics200ApplicationJson = GetLoadBalancersIdMetrics200ApplicationJson;
 var GetLoadBalancersIdMetricsRequest = /** @class */ (function (_super) {
     __extends(GetLoadBalancersIdMetricsRequest, _super);
     function GetLoadBalancersIdMetricsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLoadBalancersIdMetricsPathParams)
     ], GetLoadBalancersIdMetricsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLoadBalancersIdMetricsQueryParams)
     ], GetLoadBalancersIdMetricsRequest.prototype, "queryParams", void 0);
     return GetLoadBalancersIdMetricsRequest;
-}(SpeakeasyBase));
-export { GetLoadBalancersIdMetricsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetLoadBalancersIdMetricsRequest = GetLoadBalancersIdMetricsRequest;
 var GetLoadBalancersIdMetricsResponse = /** @class */ (function (_super) {
     __extends(GetLoadBalancersIdMetricsResponse, _super);
     function GetLoadBalancersIdMetricsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetLoadBalancersIdMetricsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetLoadBalancersIdMetrics200ApplicationJson)
-    ], GetLoadBalancersIdMetricsResponse.prototype, "getLoadBalancersIdMetrics200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetLoadBalancersIdMetricsResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetLoadBalancersIdMetrics200ApplicationJson)
+    ], GetLoadBalancersIdMetricsResponse.prototype, "getLoadBalancersIdMetrics200ApplicationJSONObject", void 0);
     return GetLoadBalancersIdMetricsResponse;
-}(SpeakeasyBase));
-export { GetLoadBalancersIdMetricsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetLoadBalancersIdMetricsResponse = GetLoadBalancersIdMetricsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,43 +23,45 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KeySchema } from "./keyschema";
-import { ProvisionedThroughputDescription } from "./provisionedthroughputdescription";
-import { TableStatusEnum } from "./tablestatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TableDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var keyschema_1 = require("./keyschema");
+var provisionedthroughputdescription_1 = require("./provisionedthroughputdescription");
+var tablestatusenum_1 = require("./tablestatusenum");
 var TableDescription = /** @class */ (function (_super) {
     __extends(TableDescription, _super);
     function TableDescription() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDateTime" }),
         __metadata("design:type", Date)
     ], TableDescription.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ItemCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ItemCount" }),
         __metadata("design:type", Number)
     ], TableDescription.prototype, "itemCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KeySchema" }),
-        __metadata("design:type", KeySchema)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KeySchema" }),
+        __metadata("design:type", keyschema_1.KeySchema)
     ], TableDescription.prototype, "keySchema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProvisionedThroughput" }),
-        __metadata("design:type", ProvisionedThroughputDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProvisionedThroughput" }),
+        __metadata("design:type", provisionedthroughputdescription_1.ProvisionedThroughputDescription)
     ], TableDescription.prototype, "provisionedThroughput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableName" }),
         __metadata("design:type", String)
     ], TableDescription.prototype, "tableName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableSizeBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableSizeBytes" }),
         __metadata("design:type", Number)
     ], TableDescription.prototype, "tableSizeBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableStatus" }),
         __metadata("design:type", String)
     ], TableDescription.prototype, "tableStatus", void 0);
     return TableDescription;
-}(SpeakeasyBase));
-export { TableDescription };
+}(utils_1.SpeakeasyBase));
+exports.TableDescription = TableDescription;

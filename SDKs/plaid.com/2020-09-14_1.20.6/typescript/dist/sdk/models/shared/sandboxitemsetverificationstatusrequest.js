@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SandboxItemSetVerificationStatusRequestVerificationStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SandboxItemSetVerificationStatusRequest = exports.SandboxItemSetVerificationStatusRequestVerificationStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SandboxItemSetVerificationStatusRequestVerificationStatusEnum;
 (function (SandboxItemSetVerificationStatusRequestVerificationStatusEnum) {
     SandboxItemSetVerificationStatusRequestVerificationStatusEnum["AutomaticallyVerified"] = "automatically_verified";
     SandboxItemSetVerificationStatusRequestVerificationStatusEnum["VerificationExpired"] = "verification_expired";
-})(SandboxItemSetVerificationStatusRequestVerificationStatusEnum || (SandboxItemSetVerificationStatusRequestVerificationStatusEnum = {}));
+})(SandboxItemSetVerificationStatusRequestVerificationStatusEnum = exports.SandboxItemSetVerificationStatusRequestVerificationStatusEnum || (exports.SandboxItemSetVerificationStatusRequestVerificationStatusEnum = {}));
 // SandboxItemSetVerificationStatusRequest
 /**
  * SandboxItemSetVerificationStatusRequest defines the request schema for `/sandbox/item/set_verification_status`
@@ -38,25 +41,25 @@ var SandboxItemSetVerificationStatusRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access_token" }),
         __metadata("design:type", String)
     ], SandboxItemSetVerificationStatusRequest.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_id" }),
         __metadata("design:type", String)
     ], SandboxItemSetVerificationStatusRequest.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], SandboxItemSetVerificationStatusRequest.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], SandboxItemSetVerificationStatusRequest.prototype, "secret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verification_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verification_status" }),
         __metadata("design:type", String)
     ], SandboxItemSetVerificationStatusRequest.prototype, "verificationStatus", void 0);
     return SandboxItemSetVerificationStatusRequest;
-}(SpeakeasyBase));
-export { SandboxItemSetVerificationStatusRequest };
+}(utils_1.SpeakeasyBase));
+exports.SandboxItemSetVerificationStatusRequest = SandboxItemSetVerificationStatusRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AgentTaskInfo } from "./agenttaskinfo";
-export var AgentInfoStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgentInfo = exports.AgentInfoStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var agenttaskinfo_1 = require("./agenttaskinfo");
+var AgentInfoStateEnum;
 (function (AgentInfoStateEnum) {
     AgentInfoStateEnum["AgentStateUnspecified"] = "AGENT_STATE_UNSPECIFIED";
     AgentInfoStateEnum["AgentStarting"] = "AGENT_STARTING";
     AgentInfoStateEnum["AgentRunning"] = "AGENT_RUNNING";
     AgentInfoStateEnum["AgentStopped"] = "AGENT_STOPPED";
-})(AgentInfoStateEnum || (AgentInfoStateEnum = {}));
+})(AgentInfoStateEnum = exports.AgentInfoStateEnum || (exports.AgentInfoStateEnum = {}));
 // AgentInfo
 /**
  * VM Agent Info.
@@ -41,25 +44,25 @@ var AgentInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobId" }),
         __metadata("design:type", String)
     ], AgentInfo.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportTime" }),
         __metadata("design:type", String)
     ], AgentInfo.prototype, "reportTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], AgentInfo.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskGroupId" }),
         __metadata("design:type", String)
     ], AgentInfo.prototype, "taskGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tasks", elemType: AgentTaskInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tasks", elemType: agenttaskinfo_1.AgentTaskInfo }),
         __metadata("design:type", Array)
     ], AgentInfo.prototype, "tasks", void 0);
     return AgentInfo;
-}(SpeakeasyBase));
-export { AgentInfo };
+}(utils_1.SpeakeasyBase));
+exports.AgentInfo = AgentInfo;

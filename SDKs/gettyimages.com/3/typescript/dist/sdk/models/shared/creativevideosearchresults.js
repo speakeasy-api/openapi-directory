@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoCorrections } from "./autocorrections";
-import { SearchFacetsResponse } from "./searchfacetsresponse";
-import { RelatedSearch } from "./relatedsearch";
-import { CreativeVideoSearchItem } from "./creativevideosearchitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreativeVideoSearchResults = void 0;
+var utils_1 = require("../../../internal/utils");
+var autocorrections_1 = require("./autocorrections");
+var searchfacetsresponse_1 = require("./searchfacetsresponse");
+var relatedsearch_1 = require("./relatedsearch");
+var creativevideosearchitem_1 = require("./creativevideosearchitem");
 var CreativeVideoSearchResults = /** @class */ (function (_super) {
     __extends(CreativeVideoSearchResults, _super);
     function CreativeVideoSearchResults() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auto_corrections" }),
-        __metadata("design:type", AutoCorrections)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auto_corrections" }),
+        __metadata("design:type", autocorrections_1.AutoCorrections)
     ], CreativeVideoSearchResults.prototype, "autoCorrections", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=facets" }),
-        __metadata("design:type", SearchFacetsResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=facets" }),
+        __metadata("design:type", searchfacetsresponse_1.SearchFacetsResponse)
     ], CreativeVideoSearchResults.prototype, "facets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=related_searches", elemType: RelatedSearch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=related_searches", elemType: relatedsearch_1.RelatedSearch }),
         __metadata("design:type", Array)
     ], CreativeVideoSearchResults.prototype, "relatedSearches", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result_count" }),
         __metadata("design:type", Number)
     ], CreativeVideoSearchResults.prototype, "resultCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videos", elemType: CreativeVideoSearchItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videos", elemType: creativevideosearchitem_1.CreativeVideoSearchItem }),
         __metadata("design:type", Array)
     ], CreativeVideoSearchResults.prototype, "videos", void 0);
     return CreativeVideoSearchResults;
-}(SpeakeasyBase));
-export { CreativeVideoSearchResults };
+}(utils_1.SpeakeasyBase));
+exports.CreativeVideoSearchResults = CreativeVideoSearchResults;

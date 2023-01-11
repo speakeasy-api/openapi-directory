@@ -8,8 +8,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class KinesisFirehoseOutputDescription extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ResourceARN" })
-  resourceArn?: string;
+  resourceARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=RoleARN" })
-  roleArn?: string;
+  roleARN?: string;
 }

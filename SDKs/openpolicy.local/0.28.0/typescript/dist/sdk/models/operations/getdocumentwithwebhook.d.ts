@@ -77,7 +77,7 @@ export declare class GetDocumentWithWebHook200ApplicationJsonProvenance extends 
     buildCommit?: string;
     buildHostname?: string;
     buildTimestamp?: string;
-    bundles?: Map<string, any>;
+    bundles?: Record<string, any>;
     version?: string;
 }
 export declare class GetDocumentWithWebHook200ApplicationJson extends SpeakeasyBase {
@@ -96,5 +96,5 @@ export declare class GetDocumentWithWebHookResponse extends SpeakeasyBase {
     fourHundredAndFour?: shared.FourHundredAndFour;
     contentType: string;
     statusCode: number;
-    getDocumentWithWebHook200ApplicationJsonObject?: GetDocumentWithWebHook200ApplicationJson;
+    getDocumentWithWebHook200ApplicationJSONObject?: GetDocumentWithWebHook200ApplicationJson;
 }

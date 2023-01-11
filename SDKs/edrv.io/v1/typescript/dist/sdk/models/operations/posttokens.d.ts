@@ -23,5 +23,5 @@ export declare class PostTokensRequest extends SpeakeasyBase {
 export declare class PostTokensResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postTokens201ApplicationJsonObject?: PostTokens201ApplicationJson;
+    postTokens201ApplicationJSONObject?: PostTokens201ApplicationJson;
 }

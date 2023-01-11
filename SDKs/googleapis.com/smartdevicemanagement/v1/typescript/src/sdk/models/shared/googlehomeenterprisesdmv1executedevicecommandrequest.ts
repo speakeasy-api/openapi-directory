@@ -11,5 +11,5 @@ export class GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest extends Speake
   command?: string;
 
   @SpeakeasyMetadata({ data: "json, name=params" })
-  params?: Map<string, any>;
+  params?: Record<string, any>;
 }

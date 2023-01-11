@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExportImageTask } from "./exportimagetask";
 
 
 
 export class DescribeExportImageTasksResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: ExportImageTask })
-  exportImageTasks?: ExportImageTask[];
+  @SpeakeasyMetadata()
+  exportImageTasks?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 }

@@ -9,7 +9,7 @@ import { AttributeValue } from "./attributevalue";
 **/
 export class Attributes extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=attributeMap", elemType: AttributeValue })
-  attributeMap?: Map<string, AttributeValue>;
+  attributeMap?: Record<string, AttributeValue>;
 
   @SpeakeasyMetadata({ data: "json, name=droppedAttributesCount" })
   droppedAttributesCount?: number;

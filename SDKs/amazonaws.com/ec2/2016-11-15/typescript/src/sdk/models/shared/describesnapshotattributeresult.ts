@@ -1,16 +1,14 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CreateVolumePermission } from "./createvolumepermission";
-import { ProductCode } from "./productcode";
 
 
 
 export class DescribeSnapshotAttributeResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: CreateVolumePermission })
-  createVolumePermissions?: CreateVolumePermission[];
-
-  @SpeakeasyMetadata({ elemType: ProductCode })
-  productCodes?: ProductCode[];
+  @SpeakeasyMetadata()
+  createVolumePermissions?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  snapshotId?: string;
+  productCodes?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  snapshotId?: Record<string, any>;
 }

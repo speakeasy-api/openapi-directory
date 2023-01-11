@@ -63,7 +63,7 @@ export class CreateClusterResponse extends SpeakeasyBase {
   insufficientClusterCapacityFault?: any;
 
   @SpeakeasyMetadata()
-  invalidAclStateFault?: any;
+  invalidACLStateFault?: any;
 
   @SpeakeasyMetadata()
   invalidCredentialsException?: any;
@@ -75,7 +75,7 @@ export class CreateClusterResponse extends SpeakeasyBase {
   invalidParameterValueException?: any;
 
   @SpeakeasyMetadata()
-  invalidVpcNetworkStateFault?: any;
+  invalidVPCNetworkStateFault?: any;
 
   @SpeakeasyMetadata()
   nodeQuotaForClusterExceededFault?: any;

@@ -10,7 +10,7 @@ export declare class GetTextTrackRequest extends SpeakeasyBase {
 export declare class GetTextTrackResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     legacyError?: shared.LegacyError;
     textTrack?: shared.TextTrack;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FileshareParam = void 0;
+var utils_1 = require("../../../internal/utils");
 var FileshareParam = /** @class */ (function (_super) {
     __extends(FileshareParam, _super);
     function FileshareParam() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fsIOPS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fsIOPS" }),
         __metadata("design:type", Number)
-    ], FileshareParam.prototype, "fsIops", void 0);
+    ], FileshareParam.prototype, "fsIOPS", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fsName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fsName" }),
         __metadata("design:type", String)
     ], FileshareParam.prototype, "fsName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fsSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fsSize" }),
         __metadata("design:type", Number)
     ], FileshareParam.prototype, "fsSize", void 0);
     return FileshareParam;
-}(SpeakeasyBase));
-export { FileshareParam };
+}(utils_1.SpeakeasyBase));
+exports.FileshareParam = FileshareParam;

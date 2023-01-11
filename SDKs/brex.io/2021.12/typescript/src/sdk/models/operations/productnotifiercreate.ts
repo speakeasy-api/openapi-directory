@@ -35,10 +35,10 @@ export class ProductNotifierCreateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  productNotifierCreate200ApplicationJsonAny?: any;
+  productNotifierCreate200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  productNotifierCreateDefaultApplicationJsonAny?: any;
+  productNotifierCreateDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

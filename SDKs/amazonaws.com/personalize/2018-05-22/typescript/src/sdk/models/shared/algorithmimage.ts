@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class AlgorithmImage extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=dockerURI" })
-  dockerUri: string;
+  dockerURI: string;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

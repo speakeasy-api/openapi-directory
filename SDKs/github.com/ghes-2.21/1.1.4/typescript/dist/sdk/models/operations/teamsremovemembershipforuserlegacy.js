@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsRemoveMembershipForUserLegacyResponse = exports.TeamsRemoveMembershipForUserLegacyRequest = exports.TeamsRemoveMembershipForUserLegacyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamsRemoveMembershipForUserLegacyPathParams = /** @class */ (function (_super) {
     __extends(TeamsRemoveMembershipForUserLegacyPathParams, _super);
     function TeamsRemoveMembershipForUserLegacyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_id" }),
         __metadata("design:type", Number)
     ], TeamsRemoveMembershipForUserLegacyPathParams.prototype, "teamId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], TeamsRemoveMembershipForUserLegacyPathParams.prototype, "username", void 0);
     return TeamsRemoveMembershipForUserLegacyPathParams;
-}(SpeakeasyBase));
-export { TeamsRemoveMembershipForUserLegacyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveMembershipForUserLegacyPathParams = TeamsRemoveMembershipForUserLegacyPathParams;
 var TeamsRemoveMembershipForUserLegacyRequest = /** @class */ (function (_super) {
     __extends(TeamsRemoveMembershipForUserLegacyRequest, _super);
     function TeamsRemoveMembershipForUserLegacyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsRemoveMembershipForUserLegacyPathParams)
     ], TeamsRemoveMembershipForUserLegacyRequest.prototype, "pathParams", void 0);
     return TeamsRemoveMembershipForUserLegacyRequest;
-}(SpeakeasyBase));
-export { TeamsRemoveMembershipForUserLegacyRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveMembershipForUserLegacyRequest = TeamsRemoveMembershipForUserLegacyRequest;
 var TeamsRemoveMembershipForUserLegacyResponse = /** @class */ (function (_super) {
     __extends(TeamsRemoveMembershipForUserLegacyResponse, _super);
     function TeamsRemoveMembershipForUserLegacyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsRemoveMembershipForUserLegacyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsRemoveMembershipForUserLegacyResponse.prototype, "statusCode", void 0);
     return TeamsRemoveMembershipForUserLegacyResponse;
-}(SpeakeasyBase));
-export { TeamsRemoveMembershipForUserLegacyResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveMembershipForUserLegacyResponse = TeamsRemoveMembershipForUserLegacyResponse;

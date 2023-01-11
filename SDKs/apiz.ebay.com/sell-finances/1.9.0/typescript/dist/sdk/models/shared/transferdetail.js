@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BalanceAdjustment } from "./balanceadjustment";
-import { Charge } from "./charge";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransferDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var balanceadjustment_1 = require("./balanceadjustment");
+var charge_1 = require("./charge");
+var amount_1 = require("./amount");
 // TransferDetail
 /**
  * This type is used by the transferDetail container, which provides more details about the transfer and the charge(s) associated with the transfer.
@@ -36,17 +39,17 @@ var TransferDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balanceAdjustment" }),
-        __metadata("design:type", BalanceAdjustment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balanceAdjustment" }),
+        __metadata("design:type", balanceadjustment_1.BalanceAdjustment)
     ], TransferDetail.prototype, "balanceAdjustment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=charges", elemType: Charge }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=charges", elemType: charge_1.Charge }),
         __metadata("design:type", Array)
     ], TransferDetail.prototype, "charges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalChargeNetAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalChargeNetAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], TransferDetail.prototype, "totalChargeNetAmount", void 0);
     return TransferDetail;
-}(SpeakeasyBase));
-export { TransferDetail };
+}(utils_1.SpeakeasyBase));
+exports.TransferDetail = TransferDetail;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { StsTokenRequest, StsTokenResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,26 +28,26 @@ const sdk = new SDK();
     
 const req: StsTokenRequest = {
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "sint",
-    alt: "proto",
-    callback: "quia",
-    fields: "quo",
-    key: "mollitia",
-    oauthToken: "totam",
-    prettyPrint: false,
-    quotaUser: "et",
-    uploadType: "esse",
-    uploadProtocol: "modi",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
+    prettyPrint: true,
+    quotaUser: "fugit",
+    uploadType: "et",
+    uploadProtocol: "nihil",
   },
   request: {
-    audience: "qui",
-    grantType: "nobis",
-    options: "est",
-    requestedTokenType: "alias",
-    scope: "quae",
-    subjectToken: "illum",
-    subjectTokenType: "et",
+    audience: "rerum",
+    grantType: "dicta",
+    options: "debitis",
+    requestedTokenType: "voluptatum",
+    scope: "et",
+    subjectToken: "ut",
+    subjectTokenType: "dolorem",
   },
 };
 

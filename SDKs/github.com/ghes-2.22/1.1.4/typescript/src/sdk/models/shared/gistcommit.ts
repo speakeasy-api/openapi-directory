@@ -14,6 +14,10 @@ export class GistCommitChangeStatus extends SpeakeasyBase {
 }
 
 
+// GistCommitSimpleUser
+/** 
+ * Simple User
+**/
 export class GistCommitSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

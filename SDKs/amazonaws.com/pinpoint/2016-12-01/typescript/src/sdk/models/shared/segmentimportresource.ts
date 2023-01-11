@@ -9,7 +9,7 @@ import { FormatEnum } from "./formatenum";
 **/
 export class SegmentImportResource extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ChannelCounts" })
-  channelCounts?: Map<string, number>;
+  channelCounts?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=ExternalId" })
   externalId: string;

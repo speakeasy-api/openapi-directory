@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AlarmModelVersionStatusEnum } from "./alarmmodelversionstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateAlarmModelResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var alarmmodelversionstatusenum_1 = require("./alarmmodelversionstatusenum");
 var UpdateAlarmModelResponse = /** @class */ (function (_super) {
     __extends(UpdateAlarmModelResponse, _super);
     function UpdateAlarmModelResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmModelArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmModelArn" }),
         __metadata("design:type", String)
     ], UpdateAlarmModelResponse.prototype, "alarmModelArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmModelVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmModelVersion" }),
         __metadata("design:type", String)
     ], UpdateAlarmModelResponse.prototype, "alarmModelVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTime" }),
         __metadata("design:type", Date)
     ], UpdateAlarmModelResponse.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdateTime" }),
         __metadata("design:type", Date)
     ], UpdateAlarmModelResponse.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], UpdateAlarmModelResponse.prototype, "status", void 0);
     return UpdateAlarmModelResponse;
-}(SpeakeasyBase));
-export { UpdateAlarmModelResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateAlarmModelResponse = UpdateAlarmModelResponse;

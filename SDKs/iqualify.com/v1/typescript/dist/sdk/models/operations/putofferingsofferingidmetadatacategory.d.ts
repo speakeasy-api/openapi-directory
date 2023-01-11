@@ -12,7 +12,7 @@ export declare class PutOfferingsOfferingIdMetadataCategoryRequest extends Speak
 }
 export declare class PutOfferingsOfferingIdMetadataCategoryResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     offeringMetadataResponse?: shared.OfferingMetadataResponse;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,91 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SqlIpConfig } from "./sqlipconfig";
-export var CloudSqlSettingsActivationPolicyEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudSqlSettingsInput = exports.CloudSqlSettings = exports.CloudSqlSettingsDatabaseVersionEnum = exports.CloudSqlSettingsDataDiskTypeEnum = exports.CloudSqlSettingsActivationPolicyEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var sqlipconfig_1 = require("./sqlipconfig");
+var CloudSqlSettingsActivationPolicyEnum;
 (function (CloudSqlSettingsActivationPolicyEnum) {
     CloudSqlSettingsActivationPolicyEnum["SqlActivationPolicyUnspecified"] = "SQL_ACTIVATION_POLICY_UNSPECIFIED";
     CloudSqlSettingsActivationPolicyEnum["Always"] = "ALWAYS";
     CloudSqlSettingsActivationPolicyEnum["Never"] = "NEVER";
-})(CloudSqlSettingsActivationPolicyEnum || (CloudSqlSettingsActivationPolicyEnum = {}));
-export var CloudSqlSettingsDataDiskTypeEnum;
+})(CloudSqlSettingsActivationPolicyEnum = exports.CloudSqlSettingsActivationPolicyEnum || (exports.CloudSqlSettingsActivationPolicyEnum = {}));
+var CloudSqlSettingsDataDiskTypeEnum;
 (function (CloudSqlSettingsDataDiskTypeEnum) {
     CloudSqlSettingsDataDiskTypeEnum["SqlDataDiskTypeUnspecified"] = "SQL_DATA_DISK_TYPE_UNSPECIFIED";
     CloudSqlSettingsDataDiskTypeEnum["PdSsd"] = "PD_SSD";
     CloudSqlSettingsDataDiskTypeEnum["PdHdd"] = "PD_HDD";
-})(CloudSqlSettingsDataDiskTypeEnum || (CloudSqlSettingsDataDiskTypeEnum = {}));
-export var CloudSqlSettingsDatabaseVersionEnum;
+})(CloudSqlSettingsDataDiskTypeEnum = exports.CloudSqlSettingsDataDiskTypeEnum || (exports.CloudSqlSettingsDataDiskTypeEnum = {}));
+var CloudSqlSettingsDatabaseVersionEnum;
 (function (CloudSqlSettingsDatabaseVersionEnum) {
     CloudSqlSettingsDatabaseVersionEnum["SqlDatabaseVersionUnspecified"] = "SQL_DATABASE_VERSION_UNSPECIFIED";
     CloudSqlSettingsDatabaseVersionEnum["Mysql56"] = "MYSQL_5_6";
     CloudSqlSettingsDatabaseVersionEnum["Mysql57"] = "MYSQL_5_7";
     CloudSqlSettingsDatabaseVersionEnum["Mysql80"] = "MYSQL_8_0";
-})(CloudSqlSettingsDatabaseVersionEnum || (CloudSqlSettingsDatabaseVersionEnum = {}));
-// CloudSqlSettingsInput
-/**
- * Settings for creating a Cloud SQL database instance.
-**/
-var CloudSqlSettingsInput = /** @class */ (function (_super) {
-    __extends(CloudSqlSettingsInput, _super);
-    function CloudSqlSettingsInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=activationPolicy" }),
-        __metadata("design:type", String)
-    ], CloudSqlSettingsInput.prototype, "activationPolicy", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoStorageIncrease" }),
-        __metadata("design:type", Boolean)
-    ], CloudSqlSettingsInput.prototype, "autoStorageIncrease", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataDiskSizeGb" }),
-        __metadata("design:type", String)
-    ], CloudSqlSettingsInput.prototype, "dataDiskSizeGb", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataDiskType" }),
-        __metadata("design:type", String)
-    ], CloudSqlSettingsInput.prototype, "dataDiskType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=databaseFlags" }),
-        __metadata("design:type", Map)
-    ], CloudSqlSettingsInput.prototype, "databaseFlags", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=databaseVersion" }),
-        __metadata("design:type", String)
-    ], CloudSqlSettingsInput.prototype, "databaseVersion", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipConfig" }),
-        __metadata("design:type", SqlIpConfig)
-    ], CloudSqlSettingsInput.prototype, "ipConfig", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=rootPassword" }),
-        __metadata("design:type", String)
-    ], CloudSqlSettingsInput.prototype, "rootPassword", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceId" }),
-        __metadata("design:type", String)
-    ], CloudSqlSettingsInput.prototype, "sourceId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageAutoResizeLimit" }),
-        __metadata("design:type", String)
-    ], CloudSqlSettingsInput.prototype, "storageAutoResizeLimit", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=tier" }),
-        __metadata("design:type", String)
-    ], CloudSqlSettingsInput.prototype, "tier", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=userLabels" }),
-        __metadata("design:type", Map)
-    ], CloudSqlSettingsInput.prototype, "userLabels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=zone" }),
-        __metadata("design:type", String)
-    ], CloudSqlSettingsInput.prototype, "zone", void 0);
-    return CloudSqlSettingsInput;
-}(SpeakeasyBase));
-export { CloudSqlSettingsInput };
+})(CloudSqlSettingsDatabaseVersionEnum = exports.CloudSqlSettingsDatabaseVersionEnum || (exports.CloudSqlSettingsDatabaseVersionEnum = {}));
 // CloudSqlSettings
 /**
  * Settings for creating a Cloud SQL database instance.
@@ -117,61 +56,125 @@ var CloudSqlSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activationPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activationPolicy" }),
         __metadata("design:type", String)
     ], CloudSqlSettings.prototype, "activationPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoStorageIncrease" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoStorageIncrease" }),
         __metadata("design:type", Boolean)
     ], CloudSqlSettings.prototype, "autoStorageIncrease", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataDiskSizeGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataDiskSizeGb" }),
         __metadata("design:type", String)
     ], CloudSqlSettings.prototype, "dataDiskSizeGb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataDiskType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataDiskType" }),
         __metadata("design:type", String)
     ], CloudSqlSettings.prototype, "dataDiskType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=databaseFlags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=databaseFlags" }),
+        __metadata("design:type", Object)
     ], CloudSqlSettings.prototype, "databaseFlags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=databaseVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=databaseVersion" }),
         __metadata("design:type", String)
     ], CloudSqlSettings.prototype, "databaseVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipConfig" }),
-        __metadata("design:type", SqlIpConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipConfig" }),
+        __metadata("design:type", sqlipconfig_1.SqlIpConfig)
     ], CloudSqlSettings.prototype, "ipConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rootPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rootPassword" }),
         __metadata("design:type", String)
     ], CloudSqlSettings.prototype, "rootPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rootPasswordSet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rootPasswordSet" }),
         __metadata("design:type", Boolean)
     ], CloudSqlSettings.prototype, "rootPasswordSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceId" }),
         __metadata("design:type", String)
     ], CloudSqlSettings.prototype, "sourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageAutoResizeLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageAutoResizeLimit" }),
         __metadata("design:type", String)
     ], CloudSqlSettings.prototype, "storageAutoResizeLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tier" }),
         __metadata("design:type", String)
     ], CloudSqlSettings.prototype, "tier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userLabels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userLabels" }),
+        __metadata("design:type", Object)
     ], CloudSqlSettings.prototype, "userLabels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zone" }),
         __metadata("design:type", String)
     ], CloudSqlSettings.prototype, "zone", void 0);
     return CloudSqlSettings;
-}(SpeakeasyBase));
-export { CloudSqlSettings };
+}(utils_1.SpeakeasyBase));
+exports.CloudSqlSettings = CloudSqlSettings;
+// CloudSqlSettingsInput
+/**
+ * Settings for creating a Cloud SQL database instance.
+**/
+var CloudSqlSettingsInput = /** @class */ (function (_super) {
+    __extends(CloudSqlSettingsInput, _super);
+    function CloudSqlSettingsInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activationPolicy" }),
+        __metadata("design:type", String)
+    ], CloudSqlSettingsInput.prototype, "activationPolicy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoStorageIncrease" }),
+        __metadata("design:type", Boolean)
+    ], CloudSqlSettingsInput.prototype, "autoStorageIncrease", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataDiskSizeGb" }),
+        __metadata("design:type", String)
+    ], CloudSqlSettingsInput.prototype, "dataDiskSizeGb", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataDiskType" }),
+        __metadata("design:type", String)
+    ], CloudSqlSettingsInput.prototype, "dataDiskType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=databaseFlags" }),
+        __metadata("design:type", Object)
+    ], CloudSqlSettingsInput.prototype, "databaseFlags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=databaseVersion" }),
+        __metadata("design:type", String)
+    ], CloudSqlSettingsInput.prototype, "databaseVersion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipConfig" }),
+        __metadata("design:type", sqlipconfig_1.SqlIpConfig)
+    ], CloudSqlSettingsInput.prototype, "ipConfig", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rootPassword" }),
+        __metadata("design:type", String)
+    ], CloudSqlSettingsInput.prototype, "rootPassword", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceId" }),
+        __metadata("design:type", String)
+    ], CloudSqlSettingsInput.prototype, "sourceId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageAutoResizeLimit" }),
+        __metadata("design:type", String)
+    ], CloudSqlSettingsInput.prototype, "storageAutoResizeLimit", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tier" }),
+        __metadata("design:type", String)
+    ], CloudSqlSettingsInput.prototype, "tier", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userLabels" }),
+        __metadata("design:type", Object)
+    ], CloudSqlSettingsInput.prototype, "userLabels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zone" }),
+        __metadata("design:type", String)
+    ], CloudSqlSettingsInput.prototype, "zone", void 0);
+    return CloudSqlSettingsInput;
+}(utils_1.SpeakeasyBase));
+exports.CloudSqlSettingsInput = CloudSqlSettingsInput;

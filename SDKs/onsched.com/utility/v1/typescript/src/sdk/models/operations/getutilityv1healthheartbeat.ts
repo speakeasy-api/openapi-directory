@@ -7,8 +7,8 @@ export class GetUtilityV1HealthHeartbeatResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getUtilityV1HealthHeartbeat200ApplicationJsonString?: string;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getUtilityV1HealthHeartbeat200ApplicationJSONString?: string;
 }

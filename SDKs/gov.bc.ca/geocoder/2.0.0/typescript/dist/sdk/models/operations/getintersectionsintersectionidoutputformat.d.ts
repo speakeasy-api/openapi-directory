@@ -9,11 +9,11 @@ export declare enum GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum {
     Shpz = "shpz"
 }
 export declare class GetIntersectionsIntersectionIdOutputFormatPathParams extends SpeakeasyBase {
-    intersectionId: string;
+    intersectionID: string;
     outputFormat: GetIntersectionsIntersectionIdOutputFormatOutputFormatEnum;
 }
 export declare class GetIntersectionsIntersectionIdOutputFormatQueryParams extends SpeakeasyBase {
-    outputSrs?: number;
+    outputSRS?: number;
 }
 export declare class GetIntersectionsIntersectionIdOutputFormatRequest extends SpeakeasyBase {
     pathParams: GetIntersectionsIntersectionIdOutputFormatPathParams;

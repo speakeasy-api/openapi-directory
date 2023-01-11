@@ -70,26 +70,26 @@ export class ExecuteBuyTrasactionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  executeBuyTrasaction200ApplicationJsonAny?: any;
+  executeBuyTrasaction200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  executeBuyTrasaction400ApplicationJsonAny?: any;
+  executeBuyTrasaction400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  executeBuyTrasaction401ApplicationJsonAny?: any;
+  executeBuyTrasaction401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  executeBuyTrasaction403ApplicationJsonAny?: any;
+  executeBuyTrasaction403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  executeBuyTrasaction404ApplicationJsonAny?: any;
+  executeBuyTrasaction404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  executeBuyTrasaction409ApplicationJsonAny?: any;
+  executeBuyTrasaction409ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  executeBuyTrasaction429ApplicationJsonAny?: any;
+  executeBuyTrasaction429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  executeBuyTrasaction500ApplicationJsonAny?: any;
+  executeBuyTrasaction500ApplicationJSONAny?: any;
 }

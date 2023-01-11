@@ -1,0 +1,120 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChargeMetricsDiscountAllocationDetailResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var ChargeMetricsDiscountAllocationDetailResponse = /** @class */ (function (_super) {
+    __extends(ChargeMetricsDiscountAllocationDetailResponse, _super);
+    function ChargeMetricsDiscountAllocationDetailResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amendmentId" }),
+        __metadata("design:type", String)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "amendmentId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amendmentType" }),
+        __metadata("design:type", String)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "amendmentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chargeMetricsId" }),
+        __metadata("design:type", String)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "chargeMetricsId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chargeNumber" }),
+        __metadata("design:type", String)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "chargeNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdOn" }),
+        __metadata("design:type", Date)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "createdOn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
+        __metadata("design:type", String)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "currency", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
+        __metadata("design:type", Boolean)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "deleted", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discountChargeNumber" }),
+        __metadata("design:type", String)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "discountChargeNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discountMrr" }),
+        __metadata("design:type", Number)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "discountMrr", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discountTcv" }),
+        __metadata("design:type", Number)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "discountTcv", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
+        __metadata("design:type", Date)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "endDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoiceOwnerAccountNumber" }),
+        __metadata("design:type", String)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "invoiceOwnerAccountNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productId" }),
+        __metadata("design:type", String)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "productId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productRatePlanChargeId" }),
+        __metadata("design:type", String)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "productRatePlanChargeId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productRatePlanId" }),
+        __metadata("design:type", String)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "productRatePlanId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ratePlanChargeId" }),
+        __metadata("design:type", String)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "ratePlanChargeId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
+        __metadata("design:type", Date)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "startDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptionName" }),
+        __metadata("design:type", String)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "subscriptionName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptionOwnerAccountNumber" }),
+        __metadata("design:type", String)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "subscriptionOwnerAccountNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedOn" }),
+        __metadata("design:type", Date)
+    ], ChargeMetricsDiscountAllocationDetailResponse.prototype, "updatedOn", void 0);
+    return ChargeMetricsDiscountAllocationDetailResponse;
+}(utils_1.SpeakeasyBase));
+exports.ChargeMetricsDiscountAllocationDetailResponse = ChargeMetricsDiscountAllocationDetailResponse;

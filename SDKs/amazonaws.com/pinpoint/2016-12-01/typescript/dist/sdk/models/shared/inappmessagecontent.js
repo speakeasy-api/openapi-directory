@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InAppMessageBodyConfig } from "./inappmessagebodyconfig";
-import { InAppMessageHeaderConfig } from "./inappmessageheaderconfig";
-import { InAppMessageButton } from "./inappmessagebutton";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InAppMessageContent = void 0;
+var utils_1 = require("../../../internal/utils");
+var inappmessagebodyconfig_1 = require("./inappmessagebodyconfig");
+var inappmessageheaderconfig_1 = require("./inappmessageheaderconfig");
+var inappmessagebutton_1 = require("./inappmessagebutton");
 // InAppMessageContent
 /**
  * The configuration for the message content.
@@ -36,29 +39,29 @@ var InAppMessageContent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BackgroundColor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BackgroundColor" }),
         __metadata("design:type", String)
     ], InAppMessageContent.prototype, "backgroundColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BodyConfig" }),
-        __metadata("design:type", InAppMessageBodyConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BodyConfig" }),
+        __metadata("design:type", inappmessagebodyconfig_1.InAppMessageBodyConfig)
     ], InAppMessageContent.prototype, "bodyConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HeaderConfig" }),
-        __metadata("design:type", InAppMessageHeaderConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HeaderConfig" }),
+        __metadata("design:type", inappmessageheaderconfig_1.InAppMessageHeaderConfig)
     ], InAppMessageContent.prototype, "headerConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ImageUrl" }),
         __metadata("design:type", String)
     ], InAppMessageContent.prototype, "imageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PrimaryBtn" }),
-        __metadata("design:type", InAppMessageButton)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PrimaryBtn" }),
+        __metadata("design:type", inappmessagebutton_1.InAppMessageButton)
     ], InAppMessageContent.prototype, "primaryBtn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecondaryBtn" }),
-        __metadata("design:type", InAppMessageButton)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecondaryBtn" }),
+        __metadata("design:type", inappmessagebutton_1.InAppMessageButton)
     ], InAppMessageContent.prototype, "secondaryBtn", void 0);
     return InAppMessageContent;
-}(SpeakeasyBase));
-export { InAppMessageContent };
+}(utils_1.SpeakeasyBase));
+exports.InAppMessageContent = InAppMessageContent;

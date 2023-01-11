@@ -1,7 +1,10 @@
-export var RevisionLocationTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RevisionLocationTypeEnum = void 0;
+var RevisionLocationTypeEnum;
 (function (RevisionLocationTypeEnum) {
     RevisionLocationTypeEnum["S3"] = "S3";
     RevisionLocationTypeEnum["GitHub"] = "GitHub";
     RevisionLocationTypeEnum["String"] = "String";
     RevisionLocationTypeEnum["AppSpecContent"] = "AppSpecContent";
-})(RevisionLocationTypeEnum || (RevisionLocationTypeEnum = {}));
+})(RevisionLocationTypeEnum = exports.RevisionLocationTypeEnum || (exports.RevisionLocationTypeEnum = {}));

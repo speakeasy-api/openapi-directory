@@ -31,8 +31,8 @@ export class PostAssetsCorrelationMatrixNearestResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postAssetsCorrelationMatrixNearest200ApplicationJsonObject?: PostAssetsCorrelationMatrixNearest200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postAssetsCorrelationMatrixNearest200ApplicationJSONObject?: PostAssetsCorrelationMatrixNearest200ApplicationJson;
 }

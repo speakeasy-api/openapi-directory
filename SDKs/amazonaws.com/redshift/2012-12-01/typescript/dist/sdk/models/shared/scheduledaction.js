@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ScheduledActionStateEnum } from "./scheduledactionstateenum";
-import { ScheduledActionType } from "./scheduledactiontype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScheduledAction = void 0;
+var utils_1 = require("../../../internal/utils");
+var scheduledactionstateenum_1 = require("./scheduledactionstateenum");
+var scheduledactiontype_1 = require("./scheduledactiontype");
 // ScheduledAction
 /**
  * Describes a scheduled action. You can use a scheduled action to trigger some Amazon Redshift API operations on a schedule. For information about which API operations can be scheduled, see <a>ScheduledActionType</a>.
@@ -35,41 +38,41 @@ var ScheduledAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], ScheduledAction.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScheduledAction.prototype, "iamRole", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ScheduledAction.prototype, "nextInvocations", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScheduledAction.prototype, "schedule", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScheduledAction.prototype, "scheduledActionDescription", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScheduledAction.prototype, "scheduledActionName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], ScheduledAction.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScheduledAction.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ScheduledActionType)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", scheduledactiontype_1.ScheduledActionType)
     ], ScheduledAction.prototype, "targetAction", void 0);
     return ScheduledAction;
-}(SpeakeasyBase));
-export { ScheduledAction };
+}(utils_1.SpeakeasyBase));
+exports.ScheduledAction = ScheduledAction;

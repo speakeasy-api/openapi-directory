@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GrpcGatewayRoute } from "./grpcgatewayroute";
-import { HttpGatewayRoute } from "./httpgatewayroute";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GatewayRouteSpec = void 0;
+var utils_1 = require("../../../internal/utils");
+var grpcgatewayroute_1 = require("./grpcgatewayroute");
+var httpgatewayroute_1 = require("./httpgatewayroute");
 // GatewayRouteSpec
 /**
  * An object that represents a gateway route specification. Specify one gateway route type.
@@ -35,21 +38,21 @@ var GatewayRouteSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grpcRoute" }),
-        __metadata("design:type", GrpcGatewayRoute)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grpcRoute" }),
+        __metadata("design:type", grpcgatewayroute_1.GrpcGatewayRoute)
     ], GatewayRouteSpec.prototype, "grpcRoute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=http2Route" }),
-        __metadata("design:type", HttpGatewayRoute)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=http2Route" }),
+        __metadata("design:type", httpgatewayroute_1.HttpGatewayRoute)
     ], GatewayRouteSpec.prototype, "http2Route", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpRoute" }),
-        __metadata("design:type", HttpGatewayRoute)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpRoute" }),
+        __metadata("design:type", httpgatewayroute_1.HttpGatewayRoute)
     ], GatewayRouteSpec.prototype, "httpRoute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", Number)
     ], GatewayRouteSpec.prototype, "priority", void 0);
     return GatewayRouteSpec;
-}(SpeakeasyBase));
-export { GatewayRouteSpec };
+}(utils_1.SpeakeasyBase));
+exports.GatewayRouteSpec = GatewayRouteSpec;

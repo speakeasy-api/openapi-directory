@@ -1,6 +1,9 @@
-export var TagStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagStatusEnum = void 0;
+var TagStatusEnum;
 (function (TagStatusEnum) {
     TagStatusEnum["Tagged"] = "TAGGED";
     TagStatusEnum["Untagged"] = "UNTAGGED";
     TagStatusEnum["Any"] = "ANY";
-})(TagStatusEnum || (TagStatusEnum = {}));
+})(TagStatusEnum = exports.TagStatusEnum || (exports.TagStatusEnum = {}));

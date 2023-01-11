@@ -18,7 +18,7 @@ export declare class PutAccountDedicatedIpWarmupAttributesRequest extends Speake
 export declare class PutAccountDedicatedIpWarmupAttributesResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
-    putAccountDedicatedIpWarmupAttributesResponse?: Map<string, any>;
+    putAccountDedicatedIpWarmupAttributesResponse?: Record<string, any>;
     statusCode: number;
     tooManyRequestsException?: any;
 }

@@ -93,8 +93,8 @@ export class GetLoadBalancerTypesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getLoadBalancerTypes200ApplicationJsonObject?: GetLoadBalancerTypes200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getLoadBalancerTypes200ApplicationJSONObject?: GetLoadBalancerTypes200ApplicationJson;
 }

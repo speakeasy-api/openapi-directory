@@ -25,5 +25,5 @@ export declare class UpdateClusterResponse extends SpeakeasyBase {
     invalidResourceException?: any;
     kmsRequestFailedException?: any;
     statusCode: number;
-    updateClusterResult?: Map<string, any>;
+    updateClusterResult?: Record<string, any>;
 }

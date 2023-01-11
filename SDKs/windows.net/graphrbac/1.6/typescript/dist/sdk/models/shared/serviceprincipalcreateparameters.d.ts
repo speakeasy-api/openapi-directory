@@ -1,13 +1,13 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 /**
- * Request parameters for creating a new service principal.
+ * Active Directory service principal common properties shared among GET, POST and PATCH
 **/
 export declare class ServicePrincipalCreateParameters extends SpeakeasyBase {
     accountEnabled?: boolean;
     appId: string;
     appRoleAssignmentRequired?: boolean;
-    keyCredentials?: Map<string, Map<string, any>>[];
-    passwordCredentials?: Map<string, Map<string, any>>[];
+    keyCredentials?: Record<string, Record<string, any>>[];
+    passwordCredentials?: Record<string, Record<string, any>>[];
     servicePrincipalType?: string;
     tags?: string[];
 }

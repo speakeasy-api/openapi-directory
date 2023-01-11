@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataFilter } from "./datafilter";
-import { DeveloperMetadata } from "./developermetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDeveloperMetadataRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var datafilter_1 = require("./datafilter");
+var developermetadata_1 = require("./developermetadata");
 // UpdateDeveloperMetadataRequest
 /**
  * A request to update properties of developer metadata. Updates the properties of the developer metadata selected by the filters to the values provided in the DeveloperMetadata resource. Callers must specify the properties they wish to update in the fields parameter, as well as specify at least one DataFilter matching the metadata they wish to update.
@@ -35,17 +38,17 @@ var UpdateDeveloperMetadataRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataFilters", elemType: DataFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataFilters", elemType: datafilter_1.DataFilter }),
         __metadata("design:type", Array)
     ], UpdateDeveloperMetadataRequest.prototype, "dataFilters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=developerMetadata" }),
-        __metadata("design:type", DeveloperMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=developerMetadata" }),
+        __metadata("design:type", developermetadata_1.DeveloperMetadata)
     ], UpdateDeveloperMetadataRequest.prototype, "developerMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields" }),
         __metadata("design:type", String)
     ], UpdateDeveloperMetadataRequest.prototype, "fields", void 0);
     return UpdateDeveloperMetadataRequest;
-}(SpeakeasyBase));
-export { UpdateDeveloperMetadataRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeveloperMetadataRequest = UpdateDeveloperMetadataRequest;

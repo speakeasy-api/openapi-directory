@@ -74,7 +74,7 @@ export class RecaptchaenterpriseProjectsAssessmentsAnnotateResponse extends Spea
   contentType: string;
 
   @SpeakeasyMetadata()
-  googleCloudRecaptchaenterpriseV1AnnotateAssessmentResponse?: Map<string, any>;
+  googleCloudRecaptchaenterpriseV1AnnotateAssessmentResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

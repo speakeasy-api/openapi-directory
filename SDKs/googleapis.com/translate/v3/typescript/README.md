@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { TranslateProjectsLocationsBatchTranslateDocumentRequest, TranslateProjectsLocationsBatchTranslateDocumentResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,58 +30,57 @@ const req: TranslateProjectsLocationsBatchTranslateDocumentRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "nihil",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "sequi",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "et",
-    fields: "eveniet",
-    key: "molestiae",
-    oauthToken: "velit",
-    prettyPrint: false,
-    quotaUser: "corrupti",
-    uploadType: "molestiae",
-    uploadProtocol: "molestias",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     formatConversions: {
-      "saepe": "omnis",
-      "quos": "sunt",
-      "aut": "sit",
+      "debitis": "voluptatum",
+      "et": "ut",
+      "dolorem": "et",
     },
     glossaries: {
-      "adipisci": {
-        glossary: "repudiandae",
-        ignoreCase: false,
+      "iste": {
+        glossary: "vitae",
+        ignoreCase: true,
       },
     },
     inputConfigs: [
       {
         gcsSource: {
-          inputUri: "totam",
+          inputUri: "illum",
         },
       },
     ],
     models: {
-      "nesciunt": "fuga",
+      "vel": "odio",
     },
     outputConfig: {
       gcsDestination: {
-        outputUriPrefix: "dolor",
+        outputUriPrefix: "dolore",
       },
     },
-    sourceLanguageCode: "voluptatem",
+    sourceLanguageCode: "id",
     targetLanguageCodes: [
-      "vel",
-      "ut",
+      "accusantium",
     ],
   },
 };

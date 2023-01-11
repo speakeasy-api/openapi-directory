@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContainerServiceDeployment } from "./containerservicedeployment";
-import { ResourceLocation } from "./resourcelocation";
-import { ContainerServicePowerNameEnum } from "./containerservicepowernameenum";
-import { ResourceTypeEnum } from "./resourcetypeenum";
-import { ContainerServiceStateEnum } from "./containerservicestateenum";
-import { ContainerServiceStateDetail } from "./containerservicestatedetail";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContainerService = void 0;
+var utils_1 = require("../../../internal/utils");
+var containerservicedeployment_1 = require("./containerservicedeployment");
+var resourcelocation_1 = require("./resourcelocation");
+var containerservicepowernameenum_1 = require("./containerservicepowernameenum");
+var resourcetypeenum_1 = require("./resourcetypeenum");
+var containerservicestateenum_1 = require("./containerservicestateenum");
+var containerservicestatedetail_1 = require("./containerservicestatedetail");
+var tag_1 = require("./tag");
 // ContainerService
 /**
  * Describes an Amazon Lightsail container service.
@@ -40,77 +43,77 @@ var ContainerService = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], ContainerService.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerServiceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerServiceName" }),
         __metadata("design:type", String)
     ], ContainerService.prototype, "containerServiceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], ContainerService.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentDeployment" }),
-        __metadata("design:type", ContainerServiceDeployment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentDeployment" }),
+        __metadata("design:type", containerservicedeployment_1.ContainerServiceDeployment)
     ], ContainerService.prototype, "currentDeployment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDisabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDisabled" }),
         __metadata("design:type", Boolean)
     ], ContainerService.prototype, "isDisabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", ResourceLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", resourcelocation_1.ResourceLocation)
     ], ContainerService.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextDeployment" }),
-        __metadata("design:type", ContainerServiceDeployment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextDeployment" }),
+        __metadata("design:type", containerservicedeployment_1.ContainerServiceDeployment)
     ], ContainerService.prototype, "nextDeployment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=power" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=power" }),
         __metadata("design:type", String)
     ], ContainerService.prototype, "power", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=powerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=powerId" }),
         __metadata("design:type", String)
     ], ContainerService.prototype, "powerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=principalArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=principalArn" }),
         __metadata("design:type", String)
     ], ContainerService.prototype, "principalArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateDomainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateDomainName" }),
         __metadata("design:type", String)
     ], ContainerService.prototype, "privateDomainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicDomainNames" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicDomainNames" }),
+        __metadata("design:type", Object)
     ], ContainerService.prototype, "publicDomainNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], ContainerService.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scale" }),
         __metadata("design:type", Number)
     ], ContainerService.prototype, "scale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ContainerService.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateDetail" }),
-        __metadata("design:type", ContainerServiceStateDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateDetail" }),
+        __metadata("design:type", containerservicestatedetail_1.ContainerServiceStateDetail)
     ], ContainerService.prototype, "stateDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], ContainerService.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ContainerService.prototype, "url", void 0);
     return ContainerService;
-}(SpeakeasyBase));
-export { ContainerService };
+}(utils_1.SpeakeasyBase));
+exports.ContainerService = ContainerService;

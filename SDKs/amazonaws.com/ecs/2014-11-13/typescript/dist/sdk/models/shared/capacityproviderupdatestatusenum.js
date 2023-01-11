@@ -1,4 +1,7 @@
-export var CapacityProviderUpdateStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CapacityProviderUpdateStatusEnum = void 0;
+var CapacityProviderUpdateStatusEnum;
 (function (CapacityProviderUpdateStatusEnum) {
     CapacityProviderUpdateStatusEnum["DeleteInProgress"] = "DELETE_IN_PROGRESS";
     CapacityProviderUpdateStatusEnum["DeleteComplete"] = "DELETE_COMPLETE";
@@ -6,4 +9,4 @@ export var CapacityProviderUpdateStatusEnum;
     CapacityProviderUpdateStatusEnum["UpdateInProgress"] = "UPDATE_IN_PROGRESS";
     CapacityProviderUpdateStatusEnum["UpdateComplete"] = "UPDATE_COMPLETE";
     CapacityProviderUpdateStatusEnum["UpdateFailed"] = "UPDATE_FAILED";
-})(CapacityProviderUpdateStatusEnum || (CapacityProviderUpdateStatusEnum = {}));
+})(CapacityProviderUpdateStatusEnum = exports.CapacityProviderUpdateStatusEnum || (exports.CapacityProviderUpdateStatusEnum = {}));

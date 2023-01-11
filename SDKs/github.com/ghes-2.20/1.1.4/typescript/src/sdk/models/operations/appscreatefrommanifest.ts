@@ -14,7 +14,7 @@ export class AppsCreateFromManifestRequest extends SpeakeasyBase {
   pathParams: AppsCreateFromManifestPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 }
 
 
@@ -23,7 +23,7 @@ export class AppsCreateFromManifestResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  gitHubApp?: Map<string, any>;
+  gitHubApp?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteDbProxyEndpointActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteDbProxyEndpointResponse = exports.GetDeleteDbProxyEndpointRequest = exports.GetDeleteDbProxyEndpointHeaders = exports.GetDeleteDbProxyEndpointQueryParams = exports.GetDeleteDbProxyEndpointVersionEnum = exports.GetDeleteDbProxyEndpointActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteDbProxyEndpointActionEnum;
 (function (GetDeleteDbProxyEndpointActionEnum) {
     GetDeleteDbProxyEndpointActionEnum["DeleteDbProxyEndpoint"] = "DeleteDBProxyEndpoint";
-})(GetDeleteDbProxyEndpointActionEnum || (GetDeleteDbProxyEndpointActionEnum = {}));
-export var GetDeleteDbProxyEndpointVersionEnum;
+})(GetDeleteDbProxyEndpointActionEnum = exports.GetDeleteDbProxyEndpointActionEnum || (exports.GetDeleteDbProxyEndpointActionEnum = {}));
+var GetDeleteDbProxyEndpointVersionEnum;
 (function (GetDeleteDbProxyEndpointVersionEnum) {
     GetDeleteDbProxyEndpointVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(GetDeleteDbProxyEndpointVersionEnum || (GetDeleteDbProxyEndpointVersionEnum = {}));
+})(GetDeleteDbProxyEndpointVersionEnum = exports.GetDeleteDbProxyEndpointVersionEnum || (exports.GetDeleteDbProxyEndpointVersionEnum = {}));
 var GetDeleteDbProxyEndpointQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteDbProxyEndpointQueryParams, _super);
     function GetDeleteDbProxyEndpointQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyEndpointQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DBProxyEndpointName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DBProxyEndpointName" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyEndpointQueryParams.prototype, "dbProxyEndpointName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyEndpointQueryParams.prototype, "version", void 0);
     return GetDeleteDbProxyEndpointQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteDbProxyEndpointQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteDbProxyEndpointQueryParams = GetDeleteDbProxyEndpointQueryParams;
 var GetDeleteDbProxyEndpointHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteDbProxyEndpointHeaders, _super);
     function GetDeleteDbProxyEndpointHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyEndpointHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyEndpointHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyEndpointHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyEndpointHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyEndpointHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyEndpointHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteDbProxyEndpointHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteDbProxyEndpointHeaders;
-}(SpeakeasyBase));
-export { GetDeleteDbProxyEndpointHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteDbProxyEndpointHeaders = GetDeleteDbProxyEndpointHeaders;
 var GetDeleteDbProxyEndpointRequest = /** @class */ (function (_super) {
     __extends(GetDeleteDbProxyEndpointRequest, _super);
     function GetDeleteDbProxyEndpointRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteDbProxyEndpointQueryParams)
     ], GetDeleteDbProxyEndpointRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteDbProxyEndpointHeaders)
     ], GetDeleteDbProxyEndpointRequest.prototype, "headers", void 0);
     return GetDeleteDbProxyEndpointRequest;
-}(SpeakeasyBase));
-export { GetDeleteDbProxyEndpointRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteDbProxyEndpointRequest = GetDeleteDbProxyEndpointRequest;
 var GetDeleteDbProxyEndpointResponse = /** @class */ (function (_super) {
     __extends(GetDeleteDbProxyEndpointResponse, _super);
     function GetDeleteDbProxyEndpointResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteDbProxyEndpointResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteDbProxyEndpointResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteDbProxyEndpointResponse.prototype, "statusCode", void 0);
     return GetDeleteDbProxyEndpointResponse;
-}(SpeakeasyBase));
-export { GetDeleteDbProxyEndpointResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteDbProxyEndpointResponse = GetDeleteDbProxyEndpointResponse;

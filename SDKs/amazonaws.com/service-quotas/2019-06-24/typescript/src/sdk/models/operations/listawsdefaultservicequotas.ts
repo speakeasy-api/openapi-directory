@@ -69,7 +69,7 @@ export class ListAwsDefaultServiceQuotasResponse extends SpeakeasyBase {
   invalidPaginationTokenException?: any;
 
   @SpeakeasyMetadata()
-  listAwsDefaultServiceQuotasResponse?: shared.ListAwsDefaultServiceQuotasResponse;
+  listAWSDefaultServiceQuotasResponse?: shared.ListAwsDefaultServiceQuotasResponse;
 
   @SpeakeasyMetadata()
   noSuchResourceException?: any;

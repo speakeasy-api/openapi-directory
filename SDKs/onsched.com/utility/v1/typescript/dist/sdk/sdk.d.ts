@@ -1,21 +1,21 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
-import * as operations from "./models/operations";
+import { AxiosInstance } from "axios";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
+import { Health } from "./health";
+import { StripePlans } from "./stripeplans";
 export declare const ServerList: readonly ["https://onsched.com"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
+    health: Health;
+    stripePlans: StripePlans;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
-    getPlanId(req: operations.GetPlanIdRequest, config?: AxiosRequestConfig): Promise<operations.GetPlanIdResponse>;
-    getUtilityV1HealthHeartbeat(config?: AxiosRequestConfig): Promise<operations.GetUtilityV1HealthHeartbeatResponse>;
+    constructor(props: SDKProps);
 }
-export {};

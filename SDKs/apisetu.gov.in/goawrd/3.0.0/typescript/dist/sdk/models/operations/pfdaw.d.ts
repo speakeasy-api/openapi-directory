@@ -106,11 +106,11 @@ export declare class PfdawRequest extends SpeakeasyBase {
 export declare class PfdawResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    pfdaw400ApplicationJsonObject?: Pfdaw400ApplicationJson;
-    pfdaw401ApplicationJsonObject?: Pfdaw401ApplicationJson;
-    pfdaw404ApplicationJsonObject?: Pfdaw404ApplicationJson;
-    pfdaw500ApplicationJsonObject?: Pfdaw500ApplicationJson;
-    pfdaw502ApplicationJsonObject?: Pfdaw502ApplicationJson;
-    pfdaw503ApplicationJsonObject?: Pfdaw503ApplicationJson;
-    pfdaw504ApplicationJsonObject?: Pfdaw504ApplicationJson;
+    pfdaw400ApplicationJSONObject?: Pfdaw400ApplicationJson;
+    pfdaw401ApplicationJSONObject?: Pfdaw401ApplicationJson;
+    pfdaw404ApplicationJSONObject?: Pfdaw404ApplicationJson;
+    pfdaw500ApplicationJSONObject?: Pfdaw500ApplicationJson;
+    pfdaw502ApplicationJSONObject?: Pfdaw502ApplicationJson;
+    pfdaw503ApplicationJSONObject?: Pfdaw503ApplicationJson;
+    pfdaw504ApplicationJSONObject?: Pfdaw504ApplicationJson;
 }

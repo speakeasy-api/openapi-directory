@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
+import { TagList } from "./taglist";
 export declare class TagListMessage extends SpeakeasyBase {
-    tagList?: Tag[];
+    tagList?: TagList[];
 }

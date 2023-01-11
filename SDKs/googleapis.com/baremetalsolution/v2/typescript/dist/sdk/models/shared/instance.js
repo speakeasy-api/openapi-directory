@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudBaremetalsolutionV2LogicalInterface } from "./googlecloudbaremetalsolutionv2logicalinterface";
-import { LunInput } from "./lun";
-import { VolumeInput } from "./volume";
-import { Lun } from "./lun";
-import { Network } from "./network";
-import { Volume } from "./volume";
-export var InstanceStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceInput = exports.Instance = exports.InstanceWorkloadProfileEnum = exports.InstanceStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudbaremetalsolutionv2logicalinterface_1 = require("./googlecloudbaremetalsolutionv2logicalinterface");
+var lun_1 = require("./lun");
+var network_1 = require("./network");
+var volume_1 = require("./volume");
+var lun_2 = require("./lun");
+var volume_2 = require("./volume");
+var InstanceStateEnum;
 (function (InstanceStateEnum) {
     InstanceStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     InstanceStateEnum["Provisioning"] = "PROVISIONING";
@@ -39,59 +42,13 @@ export var InstanceStateEnum;
     InstanceStateEnum["Starting"] = "STARTING";
     InstanceStateEnum["Stopping"] = "STOPPING";
     InstanceStateEnum["Shutdown"] = "SHUTDOWN";
-})(InstanceStateEnum || (InstanceStateEnum = {}));
-// InstanceInput
-/**
- * A server.
-**/
-var InstanceInput = /** @class */ (function (_super) {
-    __extends(InstanceInput, _super);
-    function InstanceInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=hyperthreadingEnabled" }),
-        __metadata("design:type", Boolean)
-    ], InstanceInput.prototype, "hyperthreadingEnabled", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], InstanceInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=logicalInterfaces", elemType: GoogleCloudBaremetalsolutionV2LogicalInterface }),
-        __metadata("design:type", Array)
-    ], InstanceInput.prototype, "logicalInterfaces", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=luns", elemType: LunInput }),
-        __metadata("design:type", Array)
-    ], InstanceInput.prototype, "luns", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineType" }),
-        __metadata("design:type", String)
-    ], InstanceInput.prototype, "machineType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], InstanceInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkTemplate" }),
-        __metadata("design:type", String)
-    ], InstanceInput.prototype, "networkTemplate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=osImage" }),
-        __metadata("design:type", String)
-    ], InstanceInput.prototype, "osImage", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=pod" }),
-        __metadata("design:type", String)
-    ], InstanceInput.prototype, "pod", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumes", elemType: VolumeInput }),
-        __metadata("design:type", Array)
-    ], InstanceInput.prototype, "volumes", void 0);
-    return InstanceInput;
-}(SpeakeasyBase));
-export { InstanceInput };
+})(InstanceStateEnum = exports.InstanceStateEnum || (exports.InstanceStateEnum = {}));
+var InstanceWorkloadProfileEnum;
+(function (InstanceWorkloadProfileEnum) {
+    InstanceWorkloadProfileEnum["WorkloadProfileUnspecified"] = "WORKLOAD_PROFILE_UNSPECIFIED";
+    InstanceWorkloadProfileEnum["WorkloadProfileGeneric"] = "WORKLOAD_PROFILE_GENERIC";
+    InstanceWorkloadProfileEnum["WorkloadProfileHana"] = "WORKLOAD_PROFILE_HANA";
+})(InstanceWorkloadProfileEnum = exports.InstanceWorkloadProfileEnum || (exports.InstanceWorkloadProfileEnum = {}));
 // Instance
 /**
  * A server.
@@ -102,73 +59,133 @@ var Instance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Instance.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hyperthreadingEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hyperthreadingEnabled" }),
         __metadata("design:type", Boolean)
     ], Instance.prototype, "hyperthreadingEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Instance.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interactiveSerialConsoleEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interactiveSerialConsoleEnabled" }),
         __metadata("design:type", Boolean)
     ], Instance.prototype, "interactiveSerialConsoleEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Instance.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logicalInterfaces", elemType: GoogleCloudBaremetalsolutionV2LogicalInterface }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logicalInterfaces", elemType: googlecloudbaremetalsolutionv2logicalinterface_1.GoogleCloudBaremetalsolutionV2LogicalInterface }),
         __metadata("design:type", Array)
     ], Instance.prototype, "logicalInterfaces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loginInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loginInfo" }),
         __metadata("design:type", String)
     ], Instance.prototype, "loginInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=luns", elemType: Lun }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=luns", elemType: lun_1.Lun }),
         __metadata("design:type", Array)
     ], Instance.prototype, "luns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineType" }),
         __metadata("design:type", String)
     ], Instance.prototype, "machineType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Instance.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkTemplate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkTemplate" }),
         __metadata("design:type", String)
     ], Instance.prototype, "networkTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networks", elemType: Network }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networks", elemType: network_1.Network }),
         __metadata("design:type", Array)
     ], Instance.prototype, "networks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=osImage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=osImage" }),
         __metadata("design:type", String)
     ], Instance.prototype, "osImage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pod" }),
         __metadata("design:type", String)
     ], Instance.prototype, "pod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Instance.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Instance.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumes", elemType: Volume }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumes", elemType: volume_1.Volume }),
         __metadata("design:type", Array)
     ], Instance.prototype, "volumes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workloadProfile" }),
+        __metadata("design:type", String)
+    ], Instance.prototype, "workloadProfile", void 0);
     return Instance;
-}(SpeakeasyBase));
-export { Instance };
+}(utils_1.SpeakeasyBase));
+exports.Instance = Instance;
+// InstanceInput
+/**
+ * A server.
+**/
+var InstanceInput = /** @class */ (function (_super) {
+    __extends(InstanceInput, _super);
+    function InstanceInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hyperthreadingEnabled" }),
+        __metadata("design:type", Boolean)
+    ], InstanceInput.prototype, "hyperthreadingEnabled", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], InstanceInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logicalInterfaces", elemType: googlecloudbaremetalsolutionv2logicalinterface_1.GoogleCloudBaremetalsolutionV2LogicalInterface }),
+        __metadata("design:type", Array)
+    ], InstanceInput.prototype, "logicalInterfaces", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=luns", elemType: lun_2.LunInput }),
+        __metadata("design:type", Array)
+    ], InstanceInput.prototype, "luns", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineType" }),
+        __metadata("design:type", String)
+    ], InstanceInput.prototype, "machineType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], InstanceInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkTemplate" }),
+        __metadata("design:type", String)
+    ], InstanceInput.prototype, "networkTemplate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=osImage" }),
+        __metadata("design:type", String)
+    ], InstanceInput.prototype, "osImage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pod" }),
+        __metadata("design:type", String)
+    ], InstanceInput.prototype, "pod", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumes", elemType: volume_2.VolumeInput }),
+        __metadata("design:type", Array)
+    ], InstanceInput.prototype, "volumes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workloadProfile" }),
+        __metadata("design:type", String)
+    ], InstanceInput.prototype, "workloadProfile", void 0);
+    return InstanceInput;
+}(utils_1.SpeakeasyBase));
+exports.InstanceInput = InstanceInput;

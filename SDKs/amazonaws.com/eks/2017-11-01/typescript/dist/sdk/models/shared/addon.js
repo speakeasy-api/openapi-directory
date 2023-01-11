@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddonHealth } from "./addonhealth";
-import { AddonStatusEnum } from "./addonstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Addon = void 0;
+var utils_1 = require("../../../internal/utils");
+var addonhealth_1 = require("./addonhealth");
+var addonstatusenum_1 = require("./addonstatusenum");
 // Addon
 /**
  * An Amazon EKS add-on.
@@ -35,45 +38,45 @@ var Addon = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addonArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addonArn" }),
         __metadata("design:type", String)
     ], Addon.prototype, "addonArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addonName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addonName" }),
         __metadata("design:type", String)
     ], Addon.prototype, "addonName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addonVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addonVersion" }),
         __metadata("design:type", String)
     ], Addon.prototype, "addonVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterName" }),
         __metadata("design:type", String)
     ], Addon.prototype, "clusterName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], Addon.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=health" }),
-        __metadata("design:type", AddonHealth)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=health" }),
+        __metadata("design:type", addonhealth_1.AddonHealth)
     ], Addon.prototype, "health", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modifiedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modifiedAt" }),
         __metadata("design:type", Date)
     ], Addon.prototype, "modifiedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccountRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccountRoleArn" }),
         __metadata("design:type", String)
     ], Addon.prototype, "serviceAccountRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Addon.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], Addon.prototype, "tags", void 0);
     return Addon;
-}(SpeakeasyBase));
-export { Addon };
+}(utils_1.SpeakeasyBase));
+exports.Addon = Addon;

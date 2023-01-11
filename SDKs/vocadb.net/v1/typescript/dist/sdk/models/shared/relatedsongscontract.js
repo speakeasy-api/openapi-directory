@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SongForApiContract } from "./songforapicontract";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelatedSongsContract = void 0;
+var utils_1 = require("../../../internal/utils");
+var songforapicontract_1 = require("./songforapicontract");
 var RelatedSongsContract = /** @class */ (function (_super) {
     __extends(RelatedSongsContract, _super);
     function RelatedSongsContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artistMatches", elemType: SongForApiContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artistMatches", elemType: songforapicontract_1.SongForApiContract }),
         __metadata("design:type", Array)
     ], RelatedSongsContract.prototype, "artistMatches", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=likeMatches", elemType: SongForApiContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=likeMatches", elemType: songforapicontract_1.SongForApiContract }),
         __metadata("design:type", Array)
     ], RelatedSongsContract.prototype, "likeMatches", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagMatches", elemType: SongForApiContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagMatches", elemType: songforapicontract_1.SongForApiContract }),
         __metadata("design:type", Array)
     ], RelatedSongsContract.prototype, "tagMatches", void 0);
     return RelatedSongsContract;
-}(SpeakeasyBase));
-export { RelatedSongsContract };
+}(utils_1.SpeakeasyBase));
+exports.RelatedSongsContract = RelatedSongsContract;

@@ -5,7 +5,7 @@ export declare class GetRequestsQueryParams extends SpeakeasyBase {
     mine?: boolean;
     path?: string;
     perPage?: number;
-    sortBy?: Map<string, any>;
+    sortBy?: Record<string, any>;
 }
 export declare class GetRequestsRequest extends SpeakeasyBase {
     queryParams: GetRequestsQueryParams;

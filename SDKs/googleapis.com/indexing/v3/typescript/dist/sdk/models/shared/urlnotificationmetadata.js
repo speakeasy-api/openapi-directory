@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UrlNotification } from "./urlnotification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UrlNotificationMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var urlnotification_1 = require("./urlnotification");
 // UrlNotificationMetadata
 /**
  * Summary of the most recent Indexing API notifications successfully received, for a given URL.
@@ -34,17 +37,17 @@ var UrlNotificationMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestRemove" }),
-        __metadata("design:type", UrlNotification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestRemove" }),
+        __metadata("design:type", urlnotification_1.UrlNotification)
     ], UrlNotificationMetadata.prototype, "latestRemove", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestUpdate" }),
-        __metadata("design:type", UrlNotification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestUpdate" }),
+        __metadata("design:type", urlnotification_1.UrlNotification)
     ], UrlNotificationMetadata.prototype, "latestUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], UrlNotificationMetadata.prototype, "url", void 0);
     return UrlNotificationMetadata;
-}(SpeakeasyBase));
-export { UrlNotificationMetadata };
+}(utils_1.SpeakeasyBase));
+exports.UrlNotificationMetadata = UrlNotificationMetadata;

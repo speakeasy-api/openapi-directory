@@ -1,8 +1,8 @@
 import "reflect-metadata";
 
 import {
-  GetSimplePathParams,
   ParamDecorator,
+  getSimplePathParams,
   ppMetadataKey,
 } from "./pathparams";
 
@@ -135,7 +135,7 @@ export function SpeakeasyMetadata<
   };
 }
 
-export function ReplaceParameters(
+export function replaceParameters(
   stringWithParams: string,
   params: Map<string, string>
 ): string {
@@ -147,7 +147,7 @@ export function ReplaceParameters(
   return res;
 }
 
-export function GenerateURL(
+export function generateURL(
   serverURL: string,
   path: string,
   pathParams: any
@@ -158,7 +158,7 @@ export function GenerateURL(
   fieldNames.forEach((fname) => {
     const ppAnn: string = Reflect.getMetadata(ppMetadataKey, pathParams, fname);
     if (ppAnn == null) return;
-    const ppDecorator: ParamDecorator = ParseParamDecorator(
+    const ppDecorator: ParamDecorator = parseParamDecorator(
       ppAnn,
       fname,
       "simple",
@@ -167,7 +167,7 @@ export function GenerateURL(
     if (ppDecorator == null) return;
     switch (ppDecorator.Style) {
       case "simple":
-        const simpleParams: Map<string, string> = GetSimplePathParams(
+        const simpleParams: Map<string, string> = getSimplePathParams(
           ppDecorator.ParamName,
           pathParams[fname],
           ppDecorator.Explode
@@ -177,10 +177,10 @@ export function GenerateURL(
         });
     }
   });
-  return ReplaceParameters(url, parsedParameters);
+  return replaceParameters(url, parsedParameters);
 }
 
-export function ParseParamDecorator(
+export function parseParamDecorator(
   ann: string,
   fName: string,
   defaultStyle: string,
@@ -210,4 +210,45 @@ export function ParseParamDecorator(
     }
   });
   return decorator;
+}
+
+export function isStringRecord(obj: any): obj is Record<string, string> {
+  if (typeof obj !== "object")
+    return false
+
+  if (Object.getOwnPropertySymbols(obj).length > 0)
+    return false
+
+  return Object.getOwnPropertyNames(obj)
+      .every(prop => typeof obj[prop] === "string")
+}
+
+export function isNumberRecord(obj: any): obj is Record<string, number> {
+  if (typeof obj !== "object")
+    return false
+
+  if (Object.getOwnPropertySymbols(obj).length > 0)
+    return false
+
+  return Object.getOwnPropertyNames(obj)
+      .every(prop => typeof obj[prop] === "number")
+}
+
+export function isBooleanRecord(obj: any): obj is Record<string, boolean> {
+  if (typeof obj !== "object")
+    return false
+
+  if (Object.getOwnPropertySymbols(obj).length > 0)
+    return false
+
+  return Object.getOwnPropertyNames(obj)
+      .every(prop => typeof obj[prop] === "boolean")
+}
+
+export function isEmpty(value: any): boolean {
+  // check for undefined, null, and NaN
+  let res: boolean = false;
+  if (typeof value === "number") res = Number.isNaN(value);
+  else if (typeof value === "string") res = value === "";
+  return res || value == null;
 }

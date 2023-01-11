@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SynchronousJobRead } from "./synchronousjobread";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DestinationDefinitionSpecificationRead = void 0;
+var utils_1 = require("../../../internal/utils");
+var synchronousjobread_1 = require("./synchronousjobread");
 var DestinationDefinitionSpecificationRead = /** @class */ (function (_super) {
     __extends(DestinationDefinitionSpecificationRead, _super);
     function DestinationDefinitionSpecificationRead() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionSpecification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionSpecification" }),
         __metadata("design:type", Object)
     ], DestinationDefinitionSpecificationRead.prototype, "connectionSpecification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationDefinitionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationDefinitionId" }),
         __metadata("design:type", String)
     ], DestinationDefinitionSpecificationRead.prototype, "destinationDefinitionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentationUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentationUrl" }),
         __metadata("design:type", String)
     ], DestinationDefinitionSpecificationRead.prototype, "documentationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobInfo" }),
-        __metadata("design:type", SynchronousJobRead)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobInfo" }),
+        __metadata("design:type", synchronousjobread_1.SynchronousJobRead)
     ], DestinationDefinitionSpecificationRead.prototype, "jobInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportedDestinationSyncModes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportedDestinationSyncModes" }),
         __metadata("design:type", Array)
     ], DestinationDefinitionSpecificationRead.prototype, "supportedDestinationSyncModes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportsDbt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportsDbt" }),
         __metadata("design:type", Boolean)
     ], DestinationDefinitionSpecificationRead.prototype, "supportsDbt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportsNormalization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportsNormalization" }),
         __metadata("design:type", Boolean)
     ], DestinationDefinitionSpecificationRead.prototype, "supportsNormalization", void 0);
     return DestinationDefinitionSpecificationRead;
-}(SpeakeasyBase));
-export { DestinationDefinitionSpecificationRead };
+}(utils_1.SpeakeasyBase));
+exports.DestinationDefinitionSpecificationRead = DestinationDefinitionSpecificationRead;

@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class SaveRevisionUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=rev" })
   rev?: string;
@@ -16,7 +16,7 @@ export class SaveRevisionUsingGet200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -28,7 +28,7 @@ export class SaveRevisionUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -40,7 +40,7 @@ export class SaveRevisionUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -52,7 +52,7 @@ export class SaveRevisionUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -73,14 +73,14 @@ export class SaveRevisionUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  saveRevisionUsingGet200ApplicationJsonObject?: SaveRevisionUsingGet200ApplicationJson;
+  saveRevisionUsingGET200ApplicationJSONObject?: SaveRevisionUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  saveRevisionUsingGet400ApplicationJsonObject?: SaveRevisionUsingGet400ApplicationJson;
+  saveRevisionUsingGET400ApplicationJSONObject?: SaveRevisionUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  saveRevisionUsingGet401ApplicationJsonObject?: SaveRevisionUsingGet401ApplicationJson;
+  saveRevisionUsingGET401ApplicationJSONObject?: SaveRevisionUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  saveRevisionUsingGet500ApplicationJsonObject?: SaveRevisionUsingGet500ApplicationJson;
+  saveRevisionUsingGET500ApplicationJSONObject?: SaveRevisionUsingGet500ApplicationJson;
 }

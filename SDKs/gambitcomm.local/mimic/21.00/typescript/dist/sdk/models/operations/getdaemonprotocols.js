@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDaemonProtocolsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDaemonProtocolsResponse = /** @class */ (function (_super) {
     __extends(GetDaemonProtocolsResponse, _super);
     function GetDaemonProtocolsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDaemonProtocolsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDaemonProtocolsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDaemonProtocolsResponse.prototype, "getDaemonProtocols200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDaemonProtocolsResponse.prototype, "getDaemonProtocols200ApplicationJSONObject", void 0);
     return GetDaemonProtocolsResponse;
-}(SpeakeasyBase));
-export { GetDaemonProtocolsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDaemonProtocolsResponse = GetDaemonProtocolsResponse;

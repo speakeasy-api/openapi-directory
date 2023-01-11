@@ -11,12 +11,6 @@ export class ProjectsListForRepoPathParams extends SpeakeasyBase {
   repo: string;
 }
 
-export enum ProjectsListForRepoStateEnum {
-    Open = "open",
-    Closed = "closed",
-    All = "all"
-}
-
 
 export class ProjectsListForRepoQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
@@ -26,7 +20,7 @@ export class ProjectsListForRepoQueryParams extends SpeakeasyBase {
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" })
-  state?: ProjectsListForRepoStateEnum;
+  state?: shared.RepoEnum2;
 }
 
 
@@ -44,7 +38,7 @@ export class ProjectsListForRepoResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

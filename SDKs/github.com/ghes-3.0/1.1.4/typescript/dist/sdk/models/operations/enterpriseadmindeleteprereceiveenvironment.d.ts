@@ -17,5 +17,5 @@ export declare class EnterpriseAdminDeletePreReceiveEnvironmentRequest extends S
 export declare class EnterpriseAdminDeletePreReceiveEnvironmentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    enterpriseAdminDeletePreReceiveEnvironment422ApplicationJsonObject?: EnterpriseAdminDeletePreReceiveEnvironment422ApplicationJson;
+    enterpriseAdminDeletePreReceiveEnvironment422ApplicationJSONObject?: EnterpriseAdminDeletePreReceiveEnvironment422ApplicationJson;
 }

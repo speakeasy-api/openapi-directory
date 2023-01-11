@@ -4,6 +4,6 @@ import { GoogleTypeMoney } from "./googletypemoney";
  * The budgeted amount for each usage period.
 **/
 export declare class GoogleCloudBillingBudgetsV1BudgetAmount extends SpeakeasyBase {
-    lastPeriodAmount?: Map<string, any>;
+    lastPeriodAmount?: Record<string, any>;
     specifiedAmount?: GoogleTypeMoney;
 }

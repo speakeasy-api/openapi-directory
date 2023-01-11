@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GridRange } from "./gridrange";
-export var CopyPasteRequestPasteOrientationEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CopyPasteRequest = exports.CopyPasteRequestPasteTypeEnum = exports.CopyPasteRequestPasteOrientationEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var gridrange_1 = require("./gridrange");
+var CopyPasteRequestPasteOrientationEnum;
 (function (CopyPasteRequestPasteOrientationEnum) {
     CopyPasteRequestPasteOrientationEnum["Normal"] = "NORMAL";
     CopyPasteRequestPasteOrientationEnum["Transpose"] = "TRANSPOSE";
-})(CopyPasteRequestPasteOrientationEnum || (CopyPasteRequestPasteOrientationEnum = {}));
-export var CopyPasteRequestPasteTypeEnum;
+})(CopyPasteRequestPasteOrientationEnum = exports.CopyPasteRequestPasteOrientationEnum || (exports.CopyPasteRequestPasteOrientationEnum = {}));
+var CopyPasteRequestPasteTypeEnum;
 (function (CopyPasteRequestPasteTypeEnum) {
     CopyPasteRequestPasteTypeEnum["PasteNormal"] = "PASTE_NORMAL";
     CopyPasteRequestPasteTypeEnum["PasteValues"] = "PASTE_VALUES";
@@ -38,7 +41,7 @@ export var CopyPasteRequestPasteTypeEnum;
     CopyPasteRequestPasteTypeEnum["PasteFormula"] = "PASTE_FORMULA";
     CopyPasteRequestPasteTypeEnum["PasteDataValidation"] = "PASTE_DATA_VALIDATION";
     CopyPasteRequestPasteTypeEnum["PasteConditionalFormatting"] = "PASTE_CONDITIONAL_FORMATTING";
-})(CopyPasteRequestPasteTypeEnum || (CopyPasteRequestPasteTypeEnum = {}));
+})(CopyPasteRequestPasteTypeEnum = exports.CopyPasteRequestPasteTypeEnum || (exports.CopyPasteRequestPasteTypeEnum = {}));
 // CopyPasteRequest
 /**
  * Copies data from the source to the destination.
@@ -49,21 +52,21 @@ var CopyPasteRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], CopyPasteRequest.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pasteOrientation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pasteOrientation" }),
         __metadata("design:type", String)
     ], CopyPasteRequest.prototype, "pasteOrientation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pasteType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pasteType" }),
         __metadata("design:type", String)
     ], CopyPasteRequest.prototype, "pasteType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], CopyPasteRequest.prototype, "source", void 0);
     return CopyPasteRequest;
-}(SpeakeasyBase));
-export { CopyPasteRequest };
+}(utils_1.SpeakeasyBase));
+exports.CopyPasteRequest = CopyPasteRequest;

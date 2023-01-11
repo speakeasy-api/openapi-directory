@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -33,51 +33,54 @@ export class Branch {
     const baseURL: string = this._serverURL;
     const url: string = baseURL.replace(/\/$/, "") + "/branches";
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetBranchesResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetBranchesResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/prs.openbanking.opendata.v1.3+json`)) {
+            if (utils.matchContentType(contentType, `application/prs.openbanking.opendata.v1.3+json`)) {
                 res.getBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/prs.openbanking.opendata.v1.3+json`)) {
+            if (utils.matchContentType(contentType, `application/prs.openbanking.opendata.v1.3+json`)) {
                 res.fourHundredErrorObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 408:
-            if (utils.MatchContentType(contentType, `application/prs.openbanking.opendata.v1.3+json`)) {
+            if (utils.matchContentType(contentType, `application/prs.openbanking.opendata.v1.3+json`)) {
                 res.fourHundredAndEightErrorObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 429:
-            if (utils.MatchContentType(contentType, `application/prs.openbanking.opendata.v1.3+json`)) {
+            if (utils.matchContentType(contentType, `application/prs.openbanking.opendata.v1.3+json`)) {
                 res.fourHundredAndTwentyNineErrorObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
-            if (utils.MatchContentType(contentType, `application/prs.openbanking.opendata.v1.3+json`)) {
+            if (utils.matchContentType(contentType, `application/prs.openbanking.opendata.v1.3+json`)) {
                 res.fiveHundredErrorObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 503:
-            if (utils.MatchContentType(contentType, `application/prs.openbanking.opendata.v1.3+json`)) {
+            if (utils.matchContentType(contentType, `application/prs.openbanking.opendata.v1.3+json`)) {
                 res.fiveHundredAndThreeErrorObject = httpRes?.data;
             }
             break;
           default:
-            if (utils.MatchContentType(contentType, `application/prs.openbanking.opendata.v1.3+json`)) {
+            if (utils.matchContentType(contentType, `application/prs.openbanking.opendata.v1.3+json`)) {
                 res.errorObject = httpRes?.data;
             }
             break;
@@ -85,7 +88,6 @@ export class Branch {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -103,21 +105,24 @@ export class Branch {
     const baseURL: string = this._serverURL;
     const url: string = baseURL.replace(/\/$/, "") + "/branches";
     
-    const client: AxiosInstance = this._defaultClient!;const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "head",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "head",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.HeadBranchesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           default:
-            if (utils.MatchContentType(contentType, `application/prs.openbanking.opendata.v1.3+json`)) {
+            if (utils.matchContentType(contentType, `application/prs.openbanking.opendata.v1.3+json`)) {
                 res.noResponse = httpRes?.data;
             }
             break;
@@ -125,7 +130,6 @@ export class Branch {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

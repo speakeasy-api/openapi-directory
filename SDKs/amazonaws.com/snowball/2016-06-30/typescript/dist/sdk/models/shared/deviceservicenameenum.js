@@ -1,5 +1,8 @@
-export var DeviceServiceNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceServiceNameEnum = void 0;
+var DeviceServiceNameEnum;
 (function (DeviceServiceNameEnum) {
     DeviceServiceNameEnum["NfsOnDeviceService"] = "NFS_ON_DEVICE_SERVICE";
     DeviceServiceNameEnum["S3OnDeviceService"] = "S3_ON_DEVICE_SERVICE";
-})(DeviceServiceNameEnum || (DeviceServiceNameEnum = {}));
+})(DeviceServiceNameEnum = exports.DeviceServiceNameEnum || (exports.DeviceServiceNameEnum = {}));

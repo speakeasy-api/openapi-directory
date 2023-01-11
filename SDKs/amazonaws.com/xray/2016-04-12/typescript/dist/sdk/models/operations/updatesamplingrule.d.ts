@@ -13,14 +13,14 @@ export declare class UpdateSamplingRuleHeaders extends SpeakeasyBase {
  * A document specifying changes to a sampling rule's configuration.
 **/
 export declare class UpdateSamplingRuleRequestBodySamplingRuleUpdate extends SpeakeasyBase {
-    attributes?: Map<string, string>;
+    attributes?: Record<string, string>;
     fixedRate?: number;
     httpMethod?: string;
     host?: string;
     priority?: number;
     reservoirSize?: number;
-    resourceArn?: string;
-    ruleArn?: string;
+    resourceARN?: string;
+    ruleARN?: string;
     ruleName?: string;
     serviceName?: string;
     serviceType?: string;

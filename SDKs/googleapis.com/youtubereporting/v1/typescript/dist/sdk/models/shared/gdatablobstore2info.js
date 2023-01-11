@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GdataBlobstore2Info = void 0;
+var utils_1 = require("../../../internal/utils");
 // GdataBlobstore2Info
 /**
  * gdata
@@ -33,25 +36,25 @@ var GdataBlobstore2Info = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blobGeneration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blobGeneration" }),
         __metadata("design:type", String)
     ], GdataBlobstore2Info.prototype, "blobGeneration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blobId" }),
         __metadata("design:type", String)
     ], GdataBlobstore2Info.prototype, "blobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downloadReadHandle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downloadReadHandle" }),
         __metadata("design:type", String)
     ], GdataBlobstore2Info.prototype, "downloadReadHandle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readToken" }),
         __metadata("design:type", String)
     ], GdataBlobstore2Info.prototype, "readToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uploadMetadataContainer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uploadMetadataContainer" }),
         __metadata("design:type", String)
     ], GdataBlobstore2Info.prototype, "uploadMetadataContainer", void 0);
     return GdataBlobstore2Info;
-}(SpeakeasyBase));
-export { GdataBlobstore2Info };
+}(utils_1.SpeakeasyBase));
+exports.GdataBlobstore2Info = GdataBlobstore2Info;

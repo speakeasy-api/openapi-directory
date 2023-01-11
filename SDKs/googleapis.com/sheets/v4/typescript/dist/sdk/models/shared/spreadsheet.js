@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSource } from "./datasource";
-import { DeveloperMetadata } from "./developermetadata";
-import { NamedRange } from "./namedrange";
-import { SpreadsheetProperties } from "./spreadsheetproperties";
-import { Sheet } from "./sheet";
-import { DataSourceRefreshSchedule } from "./datasourcerefreshschedule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Spreadsheet = exports.SpreadsheetInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasource_1 = require("./datasource");
+var developermetadata_1 = require("./developermetadata");
+var namedrange_1 = require("./namedrange");
+var spreadsheetproperties_1 = require("./spreadsheetproperties");
+var sheet_1 = require("./sheet");
+var datasourcerefreshschedule_1 = require("./datasourcerefreshschedule");
 // SpreadsheetInput
 /**
  * Resource that represents a spreadsheet.
@@ -39,36 +42,36 @@ var SpreadsheetInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSources", elemType: DataSource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSources", elemType: datasource_1.DataSource }),
         __metadata("design:type", Array)
     ], SpreadsheetInput.prototype, "dataSources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=developerMetadata", elemType: DeveloperMetadata }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=developerMetadata", elemType: developermetadata_1.DeveloperMetadata }),
         __metadata("design:type", Array)
     ], SpreadsheetInput.prototype, "developerMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=namedRanges", elemType: NamedRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=namedRanges", elemType: namedrange_1.NamedRange }),
         __metadata("design:type", Array)
     ], SpreadsheetInput.prototype, "namedRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", SpreadsheetProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", spreadsheetproperties_1.SpreadsheetProperties)
     ], SpreadsheetInput.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sheets", elemType: Sheet }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sheets", elemType: sheet_1.Sheet }),
         __metadata("design:type", Array)
     ], SpreadsheetInput.prototype, "sheets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spreadsheetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spreadsheetId" }),
         __metadata("design:type", String)
     ], SpreadsheetInput.prototype, "spreadsheetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spreadsheetUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spreadsheetUrl" }),
         __metadata("design:type", String)
     ], SpreadsheetInput.prototype, "spreadsheetUrl", void 0);
     return SpreadsheetInput;
-}(SpeakeasyBase));
-export { SpreadsheetInput };
+}(utils_1.SpeakeasyBase));
+exports.SpreadsheetInput = SpreadsheetInput;
 // Spreadsheet
 /**
  * Resource that represents a spreadsheet.
@@ -79,37 +82,37 @@ var Spreadsheet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceSchedules", elemType: DataSourceRefreshSchedule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceSchedules", elemType: datasourcerefreshschedule_1.DataSourceRefreshSchedule }),
         __metadata("design:type", Array)
     ], Spreadsheet.prototype, "dataSourceSchedules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSources", elemType: DataSource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSources", elemType: datasource_1.DataSource }),
         __metadata("design:type", Array)
     ], Spreadsheet.prototype, "dataSources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=developerMetadata", elemType: DeveloperMetadata }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=developerMetadata", elemType: developermetadata_1.DeveloperMetadata }),
         __metadata("design:type", Array)
     ], Spreadsheet.prototype, "developerMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=namedRanges", elemType: NamedRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=namedRanges", elemType: namedrange_1.NamedRange }),
         __metadata("design:type", Array)
     ], Spreadsheet.prototype, "namedRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", SpreadsheetProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", spreadsheetproperties_1.SpreadsheetProperties)
     ], Spreadsheet.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sheets", elemType: Sheet }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sheets", elemType: sheet_1.Sheet }),
         __metadata("design:type", Array)
     ], Spreadsheet.prototype, "sheets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spreadsheetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spreadsheetId" }),
         __metadata("design:type", String)
     ], Spreadsheet.prototype, "spreadsheetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spreadsheetUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spreadsheetUrl" }),
         __metadata("design:type", String)
     ], Spreadsheet.prototype, "spreadsheetUrl", void 0);
     return Spreadsheet;
-}(SpeakeasyBase));
-export { Spreadsheet };
+}(utils_1.SpeakeasyBase));
+exports.Spreadsheet = Spreadsheet;

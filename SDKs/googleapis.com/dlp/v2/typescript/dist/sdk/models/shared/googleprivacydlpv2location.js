@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2Range } from "./googleprivacydlpv2range";
-import { GooglePrivacyDlpV2Container } from "./googleprivacydlpv2container";
-import { GooglePrivacyDlpV2ContentLocation } from "./googleprivacydlpv2contentlocation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2Location = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2range_1 = require("./googleprivacydlpv2range");
+var googleprivacydlpv2container_1 = require("./googleprivacydlpv2container");
+var googleprivacydlpv2contentlocation_1 = require("./googleprivacydlpv2contentlocation");
 // GooglePrivacyDlpV2Location
 /**
  * Specifies the location of the finding.
@@ -36,21 +39,21 @@ var GooglePrivacyDlpV2Location = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=byteRange" }),
-        __metadata("design:type", GooglePrivacyDlpV2Range)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=byteRange" }),
+        __metadata("design:type", googleprivacydlpv2range_1.GooglePrivacyDlpV2Range)
     ], GooglePrivacyDlpV2Location.prototype, "byteRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=codepointRange" }),
-        __metadata("design:type", GooglePrivacyDlpV2Range)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=codepointRange" }),
+        __metadata("design:type", googleprivacydlpv2range_1.GooglePrivacyDlpV2Range)
     ], GooglePrivacyDlpV2Location.prototype, "codepointRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=container" }),
-        __metadata("design:type", GooglePrivacyDlpV2Container)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=container" }),
+        __metadata("design:type", googleprivacydlpv2container_1.GooglePrivacyDlpV2Container)
     ], GooglePrivacyDlpV2Location.prototype, "container", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentLocations", elemType: GooglePrivacyDlpV2ContentLocation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentLocations", elemType: googleprivacydlpv2contentlocation_1.GooglePrivacyDlpV2ContentLocation }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2Location.prototype, "contentLocations", void 0);
     return GooglePrivacyDlpV2Location;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2Location };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2Location = GooglePrivacyDlpV2Location;

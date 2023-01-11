@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecaptchaenterpriseV1WebKeySettings = exports.GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum = exports.GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum;
 (function (GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum) {
     GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum["ChallengeSecurityPreferenceUnspecified"] = "CHALLENGE_SECURITY_PREFERENCE_UNSPECIFIED";
     GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum["Usability"] = "USABILITY";
     GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum["Balance"] = "BALANCE";
     GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum["Security"] = "SECURITY";
-})(GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum || (GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum = {}));
-export var GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum;
+})(GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum = exports.GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum || (exports.GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum = {}));
+var GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum;
 (function (GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum) {
     GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum["IntegrationTypeUnspecified"] = "INTEGRATION_TYPE_UNSPECIFIED";
     GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum["Score"] = "SCORE";
     GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum["Checkbox"] = "CHECKBOX";
     GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum["Invisible"] = "INVISIBLE";
-})(GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum || (GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum = {}));
+})(GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum = exports.GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum || (exports.GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum = {}));
 // GoogleCloudRecaptchaenterpriseV1WebKeySettings
 /**
  * Settings specific to keys that can be used by websites.
@@ -47,25 +50,25 @@ var GoogleCloudRecaptchaenterpriseV1WebKeySettings = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowAllDomains" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowAllDomains" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudRecaptchaenterpriseV1WebKeySettings.prototype, "allowAllDomains", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowAmpTraffic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowAmpTraffic" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudRecaptchaenterpriseV1WebKeySettings.prototype, "allowAmpTraffic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedDomains" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedDomains" }),
         __metadata("design:type", Array)
     ], GoogleCloudRecaptchaenterpriseV1WebKeySettings.prototype, "allowedDomains", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=challengeSecurityPreference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=challengeSecurityPreference" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1WebKeySettings.prototype, "challengeSecurityPreference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=integrationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=integrationType" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1WebKeySettings.prototype, "integrationType", void 0);
     return GoogleCloudRecaptchaenterpriseV1WebKeySettings;
-}(SpeakeasyBase));
-export { GoogleCloudRecaptchaenterpriseV1WebKeySettings };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecaptchaenterpriseV1WebKeySettings = GoogleCloudRecaptchaenterpriseV1WebKeySettings;

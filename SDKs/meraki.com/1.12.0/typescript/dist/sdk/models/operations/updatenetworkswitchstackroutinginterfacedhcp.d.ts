@@ -63,5 +63,5 @@ export declare class UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest extends
 export declare class UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkSwitchStackRoutingInterfaceDhcp200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkSwitchStackRoutingInterfaceDhcp200ApplicationJSONObject?: Record<string, any>;
 }

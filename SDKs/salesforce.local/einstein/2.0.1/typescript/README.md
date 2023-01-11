@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GenerateTokenV2Request, GenerateTokenV2Response } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,11 +28,11 @@ const sdk = new SDK();
     
 const req: GenerateTokenV2Request = {
   request: {
-    assertion: "dolorem",
+    assertion: "sit",
     grantType: "urn:ietf:params:oauth:grant-type:jwt-bearer",
-    refreshToken: "distinctio",
-    scope: "error",
-    validFor: 8073439294806826991,
+    refreshToken: "culpa",
+    scope: "expedita",
+    validFor: 3390393562759376202,
   },
 };
 

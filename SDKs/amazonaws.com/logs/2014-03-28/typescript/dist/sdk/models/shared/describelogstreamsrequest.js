@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrderByEnum } from "./orderbyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeLogStreamsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var orderbyenum_1 = require("./orderbyenum");
 var DescribeLogStreamsRequest = /** @class */ (function (_super) {
     __extends(DescribeLogStreamsRequest, _super);
     function DescribeLogStreamsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=descending" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=descending" }),
         __metadata("design:type", Boolean)
     ], DescribeLogStreamsRequest.prototype, "descending", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], DescribeLogStreamsRequest.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logGroupName" }),
         __metadata("design:type", String)
     ], DescribeLogStreamsRequest.prototype, "logGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logStreamNamePrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logStreamNamePrefix" }),
         __metadata("design:type", String)
     ], DescribeLogStreamsRequest.prototype, "logStreamNamePrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], DescribeLogStreamsRequest.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderBy" }),
         __metadata("design:type", String)
     ], DescribeLogStreamsRequest.prototype, "orderBy", void 0);
     return DescribeLogStreamsRequest;
-}(SpeakeasyBase));
-export { DescribeLogStreamsRequest };
+}(utils_1.SpeakeasyBase));
+exports.DescribeLogStreamsRequest = DescribeLogStreamsRequest;

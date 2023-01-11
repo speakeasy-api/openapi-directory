@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,95 +14,115 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsListDiscussionCommentsResponse = exports.TeamsListDiscussionCommentsRequest = exports.TeamsListDiscussionCommentsQueryParams = exports.TeamsListDiscussionCommentsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var TeamsListDiscussionCommentsPathParams = /** @class */ (function (_super) {
     __extends(TeamsListDiscussionCommentsPathParams, _super);
     function TeamsListDiscussionCommentsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=discussion_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=discussion_number" }),
         __metadata("design:type", Number)
     ], TeamsListDiscussionCommentsPathParams.prototype, "discussionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_id" }),
         __metadata("design:type", Number)
     ], TeamsListDiscussionCommentsPathParams.prototype, "teamId", void 0);
     return TeamsListDiscussionCommentsPathParams;
-}(SpeakeasyBase));
-export { TeamsListDiscussionCommentsPathParams };
-export var TeamsListDiscussionCommentsDirectionEnum;
-(function (TeamsListDiscussionCommentsDirectionEnum) {
-    TeamsListDiscussionCommentsDirectionEnum["Asc"] = "asc";
-    TeamsListDiscussionCommentsDirectionEnum["Desc"] = "desc";
-})(TeamsListDiscussionCommentsDirectionEnum || (TeamsListDiscussionCommentsDirectionEnum = {}));
+}(utils_1.SpeakeasyBase));
+exports.TeamsListDiscussionCommentsPathParams = TeamsListDiscussionCommentsPathParams;
 var TeamsListDiscussionCommentsQueryParams = /** @class */ (function (_super) {
     __extends(TeamsListDiscussionCommentsQueryParams, _super);
     function TeamsListDiscussionCommentsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=direction" }),
         __metadata("design:type", String)
     ], TeamsListDiscussionCommentsQueryParams.prototype, "direction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], TeamsListDiscussionCommentsQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=per_page" }),
         __metadata("design:type", Number)
     ], TeamsListDiscussionCommentsQueryParams.prototype, "perPage", void 0);
     return TeamsListDiscussionCommentsQueryParams;
-}(SpeakeasyBase));
-export { TeamsListDiscussionCommentsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamsListDiscussionCommentsQueryParams = TeamsListDiscussionCommentsQueryParams;
 var TeamsListDiscussionCommentsRequest = /** @class */ (function (_super) {
     __extends(TeamsListDiscussionCommentsRequest, _super);
     function TeamsListDiscussionCommentsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsListDiscussionCommentsPathParams)
     ], TeamsListDiscussionCommentsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsListDiscussionCommentsQueryParams)
     ], TeamsListDiscussionCommentsRequest.prototype, "queryParams", void 0);
     return TeamsListDiscussionCommentsRequest;
-}(SpeakeasyBase));
-export { TeamsListDiscussionCommentsRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsListDiscussionCommentsRequest = TeamsListDiscussionCommentsRequest;
 var TeamsListDiscussionCommentsResponse = /** @class */ (function (_super) {
     __extends(TeamsListDiscussionCommentsResponse, _super);
     function TeamsListDiscussionCommentsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsListDiscussionCommentsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], TeamsListDiscussionCommentsResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsListDiscussionCommentsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.TeamDiscussionComment }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.TeamDiscussionComment }),
         __metadata("design:type", Array)
     ], TeamsListDiscussionCommentsResponse.prototype, "teamDiscussionComments", void 0);
     return TeamsListDiscussionCommentsResponse;
-}(SpeakeasyBase));
-export { TeamsListDiscussionCommentsResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsListDiscussionCommentsResponse = TeamsListDiscussionCommentsResponse;

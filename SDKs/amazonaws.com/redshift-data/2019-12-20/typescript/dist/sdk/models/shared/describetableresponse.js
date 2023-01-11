@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ColumnMetadata } from "./columnmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeTableResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var columnmetadata_1 = require("./columnmetadata");
 var DescribeTableResponse = /** @class */ (function (_super) {
     __extends(DescribeTableResponse, _super);
     function DescribeTableResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ColumnList", elemType: ColumnMetadata }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ColumnList", elemType: columnmetadata_1.ColumnMetadata }),
         __metadata("design:type", Array)
     ], DescribeTableResponse.prototype, "columnList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeTableResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableName" }),
         __metadata("design:type", String)
     ], DescribeTableResponse.prototype, "tableName", void 0);
     return DescribeTableResponse;
-}(SpeakeasyBase));
-export { DescribeTableResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeTableResponse = DescribeTableResponse;

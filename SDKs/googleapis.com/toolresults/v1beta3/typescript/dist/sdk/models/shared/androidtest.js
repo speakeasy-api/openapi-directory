@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AndroidAppInfo } from "./androidappinfo";
-import { AndroidInstrumentationTest } from "./androidinstrumentationtest";
-import { AndroidRoboTest } from "./androidrobotest";
-import { Duration } from "./duration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AndroidTest = void 0;
+var utils_1 = require("../../../internal/utils");
+var androidappinfo_1 = require("./androidappinfo");
+var androidinstrumentationtest_1 = require("./androidinstrumentationtest");
+var androidrobotest_1 = require("./androidrobotest");
+var duration_1 = require("./duration");
 // AndroidTest
 /**
  * An Android mobile test specification.
@@ -37,25 +40,25 @@ var AndroidTest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidAppInfo" }),
-        __metadata("design:type", AndroidAppInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidAppInfo" }),
+        __metadata("design:type", androidappinfo_1.AndroidAppInfo)
     ], AndroidTest.prototype, "androidAppInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidInstrumentationTest" }),
-        __metadata("design:type", AndroidInstrumentationTest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidInstrumentationTest" }),
+        __metadata("design:type", androidinstrumentationtest_1.AndroidInstrumentationTest)
     ], AndroidTest.prototype, "androidInstrumentationTest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidRoboTest" }),
-        __metadata("design:type", AndroidRoboTest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidRoboTest" }),
+        __metadata("design:type", androidrobotest_1.AndroidRoboTest)
     ], AndroidTest.prototype, "androidRoboTest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidTestLoop" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidTestLoop" }),
+        __metadata("design:type", Object)
     ], AndroidTest.prototype, "androidTestLoop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testTimeout" }),
-        __metadata("design:type", Duration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testTimeout" }),
+        __metadata("design:type", duration_1.Duration)
     ], AndroidTest.prototype, "testTimeout", void 0);
     return AndroidTest;
-}(SpeakeasyBase));
-export { AndroidTest };
+}(utils_1.SpeakeasyBase));
+exports.AndroidTest = AndroidTest;

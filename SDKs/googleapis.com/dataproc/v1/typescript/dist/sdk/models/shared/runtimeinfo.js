@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UsageMetrics } from "./usagemetrics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuntimeInfoInput = exports.RuntimeInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var usagemetrics_1 = require("./usagemetrics");
 // RuntimeInfo
 /**
  * Runtime information about workload execution.
@@ -34,24 +37,24 @@ var RuntimeInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approximateUsage" }),
-        __metadata("design:type", UsageMetrics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approximateUsage" }),
+        __metadata("design:type", usagemetrics_1.UsageMetrics)
     ], RuntimeInfo.prototype, "approximateUsage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diagnosticOutputUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diagnosticOutputUri" }),
         __metadata("design:type", String)
     ], RuntimeInfo.prototype, "diagnosticOutputUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpoints" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpoints" }),
+        __metadata("design:type", Object)
     ], RuntimeInfo.prototype, "endpoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputUri" }),
         __metadata("design:type", String)
     ], RuntimeInfo.prototype, "outputUri", void 0);
     return RuntimeInfo;
-}(SpeakeasyBase));
-export { RuntimeInfo };
+}(utils_1.SpeakeasyBase));
+exports.RuntimeInfo = RuntimeInfo;
 // RuntimeInfoInput
 /**
  * Runtime information about workload execution.
@@ -62,9 +65,9 @@ var RuntimeInfoInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approximateUsage" }),
-        __metadata("design:type", UsageMetrics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approximateUsage" }),
+        __metadata("design:type", usagemetrics_1.UsageMetrics)
     ], RuntimeInfoInput.prototype, "approximateUsage", void 0);
     return RuntimeInfoInput;
-}(SpeakeasyBase));
-export { RuntimeInfoInput };
+}(utils_1.SpeakeasyBase));
+exports.RuntimeInfoInput = RuntimeInfoInput;

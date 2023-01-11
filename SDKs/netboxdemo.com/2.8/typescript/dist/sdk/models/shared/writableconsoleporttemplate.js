@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var WritableConsolePortTemplateTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritableConsolePortTemplateInput = exports.WritableConsolePortTemplateTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var WritableConsolePortTemplateTypeEnum;
 (function (WritableConsolePortTemplateTypeEnum) {
     WritableConsolePortTemplateTypeEnum["De9"] = "de-9";
     WritableConsolePortTemplateTypeEnum["Db25"] = "db-25";
@@ -38,24 +41,24 @@ export var WritableConsolePortTemplateTypeEnum;
     WritableConsolePortTemplateTypeEnum["UsbMicroA"] = "usb-micro-a";
     WritableConsolePortTemplateTypeEnum["UsbMicroB"] = "usb-micro-b";
     WritableConsolePortTemplateTypeEnum["Other"] = "other";
-})(WritableConsolePortTemplateTypeEnum || (WritableConsolePortTemplateTypeEnum = {}));
+})(WritableConsolePortTemplateTypeEnum = exports.WritableConsolePortTemplateTypeEnum || (exports.WritableConsolePortTemplateTypeEnum = {}));
 var WritableConsolePortTemplateInput = /** @class */ (function (_super) {
     __extends(WritableConsolePortTemplateInput, _super);
     function WritableConsolePortTemplateInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_type" }),
         __metadata("design:type", Number)
     ], WritableConsolePortTemplateInput.prototype, "deviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WritableConsolePortTemplateInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], WritableConsolePortTemplateInput.prototype, "type", void 0);
     return WritableConsolePortTemplateInput;
-}(SpeakeasyBase));
-export { WritableConsolePortTemplateInput };
+}(utils_1.SpeakeasyBase));
+exports.WritableConsolePortTemplateInput = WritableConsolePortTemplateInput;

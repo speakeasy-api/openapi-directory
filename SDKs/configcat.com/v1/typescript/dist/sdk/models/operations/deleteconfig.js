@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteConfigResponse = exports.DeleteConfigRequest = exports.DeleteConfigPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteConfigPathParams = /** @class */ (function (_super) {
     __extends(DeleteConfigPathParams, _super);
     function DeleteConfigPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=configId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=configId" }),
         __metadata("design:type", String)
     ], DeleteConfigPathParams.prototype, "configId", void 0);
     return DeleteConfigPathParams;
-}(SpeakeasyBase));
-export { DeleteConfigPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteConfigPathParams = DeleteConfigPathParams;
 var DeleteConfigRequest = /** @class */ (function (_super) {
     __extends(DeleteConfigRequest, _super);
     function DeleteConfigRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteConfigPathParams)
     ], DeleteConfigRequest.prototype, "pathParams", void 0);
     return DeleteConfigRequest;
-}(SpeakeasyBase));
-export { DeleteConfigRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteConfigRequest = DeleteConfigRequest;
 var DeleteConfigResponse = /** @class */ (function (_super) {
     __extends(DeleteConfigResponse, _super);
     function DeleteConfigResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteConfigResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteConfigResponse.prototype, "statusCode", void 0);
     return DeleteConfigResponse;
-}(SpeakeasyBase));
-export { DeleteConfigResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteConfigResponse = DeleteConfigResponse;

@@ -23,7 +23,7 @@ export declare class PutConfigurationSetSendingOptionsResponse extends Speakeasy
     badRequestException?: any;
     contentType: string;
     notFoundException?: any;
-    putConfigurationSetSendingOptionsResponse?: Map<string, any>;
+    putConfigurationSetSendingOptionsResponse?: Record<string, any>;
     statusCode: number;
     tooManyRequestsException?: any;
 }

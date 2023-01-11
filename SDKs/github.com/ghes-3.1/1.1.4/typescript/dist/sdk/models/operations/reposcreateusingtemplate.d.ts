@@ -17,7 +17,7 @@ export declare class ReposCreateUsingTemplateRequest extends SpeakeasyBase {
 }
 export declare class ReposCreateUsingTemplateResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     repository?: shared.Repository;
 }

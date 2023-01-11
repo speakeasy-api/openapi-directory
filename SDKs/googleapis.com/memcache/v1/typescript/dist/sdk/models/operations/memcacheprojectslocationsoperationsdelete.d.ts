@@ -27,6 +27,6 @@ export declare class MemcacheProjectsLocationsOperationsDeleteRequest extends Sp
 }
 export declare class MemcacheProjectsLocationsOperationsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

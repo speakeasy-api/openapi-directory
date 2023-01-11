@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,164 +23,166 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetaRootResponse = exports.MetaRoot200ApplicationJson = void 0;
+var utils_1 = require("../../../internal/utils");
 var MetaRoot200ApplicationJson = /** @class */ (function (_super) {
     __extends(MetaRoot200ApplicationJson, _super);
     function MetaRoot200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorizations_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorizations_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "authorizationsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code_search_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code_search_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "codeSearchUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commit_search_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commit_search_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "commitSearchUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current_user_authorizations_html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current_user_authorizations_html_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "currentUserAuthorizationsHtmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current_user_repositories_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current_user_repositories_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "currentUserRepositoriesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current_user_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current_user_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "currentUserUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emails_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emails_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "emailsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emojis_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emojis_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "emojisUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=events_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=events_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "eventsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feeds_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feeds_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "feedsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=followers_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=followers_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "followersUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=following_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=following_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "followingUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gists_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gists_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "gistsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hub_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hub_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "hubUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issue_search_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issue_search_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "issueSearchUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issues_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issues_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "issuesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keys_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keys_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "keysUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label_search_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label_search_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "labelSearchUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notifications_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notifications_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "notificationsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization_repositories_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization_repositories_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "organizationRepositoriesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization_teams_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization_teams_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "organizationTeamsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "organizationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public_gists_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public_gists_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "publicGistsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rate_limit_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rate_limit_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "rateLimitUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repository_search_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repository_search_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "repositorySearchUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repository_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repository_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "repositoryUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=starred_gists_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=starred_gists_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "starredGistsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=starred_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=starred_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "starredUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topic_search_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topic_search_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "topicSearchUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_organizations_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_organizations_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "userOrganizationsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_repositories_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_repositories_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "userRepositoriesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_search_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_search_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "userSearchUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_url" }),
         __metadata("design:type", String)
     ], MetaRoot200ApplicationJson.prototype, "userUrl", void 0);
     return MetaRoot200ApplicationJson;
-}(SpeakeasyBase));
-export { MetaRoot200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.MetaRoot200ApplicationJson = MetaRoot200ApplicationJson;
 var MetaRootResponse = /** @class */ (function (_super) {
     __extends(MetaRootResponse, _super);
     function MetaRootResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MetaRootResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MetaRootResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MetaRoot200ApplicationJson)
-    ], MetaRootResponse.prototype, "metaRoot200ApplicationJsonObject", void 0);
+    ], MetaRootResponse.prototype, "metaRoot200ApplicationJSONObject", void 0);
     return MetaRootResponse;
-}(SpeakeasyBase));
-export { MetaRootResponse };
+}(utils_1.SpeakeasyBase));
+exports.MetaRootResponse = MetaRootResponse;

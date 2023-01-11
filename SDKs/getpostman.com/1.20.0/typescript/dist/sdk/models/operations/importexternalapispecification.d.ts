@@ -96,6 +96,6 @@ export declare class ImportExternalApiSpecificationRequest extends SpeakeasyBase
 export declare class ImportExternalApiSpecificationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    importExternalApiSpecification200ApplicationJsonObject?: ImportExternalApiSpecification200ApplicationJson;
-    importExternalApiSpecification400ApplicationJsonObject?: ImportExternalApiSpecification400ApplicationJson;
+    importExternalApiSpecification200ApplicationJSONObject?: ImportExternalApiSpecification200ApplicationJson;
+    importExternalApiSpecification400ApplicationJSONObject?: ImportExternalApiSpecification400ApplicationJson;
 }

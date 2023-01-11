@@ -15,5 +15,5 @@ export class SendUsersMessageResponse extends SpeakeasyBase {
   requestId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Result", elemType: EndpointMessageResult, elemDepth: 2 })
-  result?: Map<string, Map<string, EndpointMessageResult>>;
+  result?: Record<string, Record<string, EndpointMessageResult>>;
 }

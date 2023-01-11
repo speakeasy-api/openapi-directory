@@ -72,7 +72,7 @@ export class DescribeSimulationJobResponse extends SpeakeasyBase {
   status?: SimulationJobStatusEnum;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=vpcConfig" })
   vpcConfig?: VpcConfigResponse;

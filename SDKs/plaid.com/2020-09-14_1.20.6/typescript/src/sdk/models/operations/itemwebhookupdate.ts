@@ -14,7 +14,7 @@ export class ItemWebhookUpdateResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  itemWebhookUpdateResponse?: Map<string, any>;
+  itemWebhookUpdateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

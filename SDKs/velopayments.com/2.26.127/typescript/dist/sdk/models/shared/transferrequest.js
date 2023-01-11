@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransferRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var TransferRequest = /** @class */ (function (_super) {
     __extends(TransferRequest, _super);
     function TransferRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], TransferRequest.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], TransferRequest.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=toSourceAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=toSourceAccountId" }),
         __metadata("design:type", String)
     ], TransferRequest.prototype, "toSourceAccountId", void 0);
     return TransferRequest;
-}(SpeakeasyBase));
-export { TransferRequest };
+}(utils_1.SpeakeasyBase));
+exports.TransferRequest = TransferRequest;

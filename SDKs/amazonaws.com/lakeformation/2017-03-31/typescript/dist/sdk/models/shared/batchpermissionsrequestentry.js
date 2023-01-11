@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataLakePrincipal } from "./datalakeprincipal";
-import { Resource } from "./resource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchPermissionsRequestEntry = void 0;
+var utils_1 = require("../../../internal/utils");
+var datalakeprincipal_1 = require("./datalakeprincipal");
+var resource_1 = require("./resource");
 // BatchPermissionsRequestEntry
 /**
  * A permission to a resource granted by batch operation to the principal.
@@ -35,25 +38,25 @@ var BatchPermissionsRequestEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], BatchPermissionsRequestEntry.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Permissions" }),
         __metadata("design:type", Array)
     ], BatchPermissionsRequestEntry.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PermissionsWithGrantOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PermissionsWithGrantOption" }),
         __metadata("design:type", Array)
     ], BatchPermissionsRequestEntry.prototype, "permissionsWithGrantOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Principal" }),
-        __metadata("design:type", DataLakePrincipal)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Principal" }),
+        __metadata("design:type", datalakeprincipal_1.DataLakePrincipal)
     ], BatchPermissionsRequestEntry.prototype, "principal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Resource" }),
-        __metadata("design:type", Resource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Resource" }),
+        __metadata("design:type", resource_1.Resource)
     ], BatchPermissionsRequestEntry.prototype, "resource", void 0);
     return BatchPermissionsRequestEntry;
-}(SpeakeasyBase));
-export { BatchPermissionsRequestEntry };
+}(utils_1.SpeakeasyBase));
+exports.BatchPermissionsRequestEntry = BatchPermissionsRequestEntry;

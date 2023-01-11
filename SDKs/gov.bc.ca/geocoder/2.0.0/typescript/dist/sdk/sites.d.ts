@@ -27,6 +27,12 @@ export declare class Sites {
     **/
     getSitesNearestOutputFormat(req: operations.GetSitesNearestOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetSitesNearestOutputFormatResponse>;
     /**
+     * getSitesWithinOutputFormat - Find sites in a geographic area
+     *
+     * Represents sites within a given area
+    **/
+    getSitesWithinOutputFormat(req: operations.GetSitesWithinOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetSitesWithinOutputFormatResponse>;
+    /**
      * getSitesSiteIdOutputFormat - Get a site by its unique ID
      *
      * Represents an individual site
@@ -38,10 +44,4 @@ export declare class Sites {
      * Represents all subsites of a given site
     **/
     getSitesSiteIdSubsitesOutputFormat(req: operations.GetSitesSiteIdSubsitesOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetSitesSiteIdSubsitesOutputFormatResponse>;
-    /**
-     * getSitesWithinOutputFormat - Find sites in a geographic area
-     *
-     * Represents sites within a given area
-    **/
-    getSitesWithinOutputFormat(req: operations.GetSitesWithinOutputFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetSitesWithinOutputFormatResponse>;
 }

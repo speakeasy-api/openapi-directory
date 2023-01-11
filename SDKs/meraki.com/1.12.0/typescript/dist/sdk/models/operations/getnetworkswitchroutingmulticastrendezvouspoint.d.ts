@@ -9,5 +9,5 @@ export declare class GetNetworkSwitchRoutingMulticastRendezvousPointRequest exte
 export declare class GetNetworkSwitchRoutingMulticastRendezvousPointResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSwitchRoutingMulticastRendezvousPoint200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSwitchRoutingMulticastRendezvousPoint200ApplicationJSONObject?: Record<string, any>;
 }

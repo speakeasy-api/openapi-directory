@@ -62,8 +62,8 @@ export class GetPlaylistsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getPlaylists200ApplicationJsonObject?: GetPlaylists200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getPlaylists200ApplicationJSONObject?: GetPlaylists200ApplicationJson;
 }

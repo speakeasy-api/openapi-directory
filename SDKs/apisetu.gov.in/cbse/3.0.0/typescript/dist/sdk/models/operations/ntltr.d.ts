@@ -107,11 +107,11 @@ export declare class NtltrRequest extends SpeakeasyBase {
 export declare class NtltrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ntltr400ApplicationJsonObject?: Ntltr400ApplicationJson;
-    ntltr401ApplicationJsonObject?: Ntltr401ApplicationJson;
-    ntltr404ApplicationJsonObject?: Ntltr404ApplicationJson;
-    ntltr500ApplicationJsonObject?: Ntltr500ApplicationJson;
-    ntltr502ApplicationJsonObject?: Ntltr502ApplicationJson;
-    ntltr503ApplicationJsonObject?: Ntltr503ApplicationJson;
-    ntltr504ApplicationJsonObject?: Ntltr504ApplicationJson;
+    ntltr400ApplicationJSONObject?: Ntltr400ApplicationJson;
+    ntltr401ApplicationJSONObject?: Ntltr401ApplicationJson;
+    ntltr404ApplicationJSONObject?: Ntltr404ApplicationJson;
+    ntltr500ApplicationJSONObject?: Ntltr500ApplicationJson;
+    ntltr502ApplicationJSONObject?: Ntltr502ApplicationJson;
+    ntltr503ApplicationJSONObject?: Ntltr503ApplicationJson;
+    ntltr504ApplicationJSONObject?: Ntltr504ApplicationJson;
 }

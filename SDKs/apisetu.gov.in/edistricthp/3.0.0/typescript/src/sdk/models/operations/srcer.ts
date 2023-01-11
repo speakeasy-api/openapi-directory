@@ -185,23 +185,23 @@ export class SrcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  srcer400ApplicationJsonObject?: Srcer400ApplicationJson;
+  srcer400ApplicationJSONObject?: Srcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  srcer401ApplicationJsonObject?: Srcer401ApplicationJson;
+  srcer401ApplicationJSONObject?: Srcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  srcer404ApplicationJsonObject?: Srcer404ApplicationJson;
+  srcer404ApplicationJSONObject?: Srcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  srcer500ApplicationJsonObject?: Srcer500ApplicationJson;
+  srcer500ApplicationJSONObject?: Srcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  srcer502ApplicationJsonObject?: Srcer502ApplicationJson;
+  srcer502ApplicationJSONObject?: Srcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  srcer503ApplicationJsonObject?: Srcer503ApplicationJson;
+  srcer503ApplicationJSONObject?: Srcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  srcer504ApplicationJsonObject?: Srcer504ApplicationJson;
+  srcer504ApplicationJSONObject?: Srcer504ApplicationJson;
 }

@@ -25,5 +25,5 @@ export class GetNetworkClientResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkClient200ApplicationJsonObject?: Map<string, any>;
+  getNetworkClient200ApplicationJSONObject?: Record<string, any>;
 }

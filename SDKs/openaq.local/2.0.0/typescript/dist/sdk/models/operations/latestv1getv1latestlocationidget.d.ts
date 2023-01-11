@@ -18,13 +18,13 @@ export declare class LatestV1GetV1LatestLocationIdGetQueryParams extends Speakea
     manufacturerName?: string[];
     modelName?: string[];
     offset?: number;
-    orderBy?: shared.LocationsOrderEnum;
+    orderBy?: Record<string, any>;
     page?: number;
     parameter?: any[];
     parameterId?: number;
     radius?: number;
     sensorType?: shared.SensorTypesEnum;
-    sort?: shared.SortEnum;
+    sort?: Record<string, any>;
     sourceName?: string[];
     unit?: string[];
 }
@@ -35,6 +35,6 @@ export declare class LatestV1GetV1LatestLocationIdGetRequest extends SpeakeasyBa
 export declare class LatestV1GetV1LatestLocationIdGetResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
-    openAqResult?: shared.OpenAqResult;
+    openAQResult?: shared.OpenAqResult;
     statusCode: number;
 }

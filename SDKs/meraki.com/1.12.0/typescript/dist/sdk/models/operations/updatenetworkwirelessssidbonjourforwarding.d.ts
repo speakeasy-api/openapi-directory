@@ -32,5 +32,5 @@ export declare class UpdateNetworkWirelessSsidBonjourForwardingRequest extends S
 export declare class UpdateNetworkWirelessSsidBonjourForwardingResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkWirelessSsidBonjourForwarding200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkWirelessSsidBonjourForwarding200ApplicationJSONObject?: Record<string, any>;
 }

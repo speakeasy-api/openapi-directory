@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProviderTypeEnum } from "./providertypeenum";
-import { VpcConfiguration } from "./vpcconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Host = void 0;
+var utils_1 = require("../../../internal/utils");
+var providertypeenum_1 = require("./providertypeenum");
+var vpcconfiguration_1 = require("./vpcconfiguration");
 // Host
 /**
  * <p>A resource that represents the infrastructure where a third-party provider is installed. The host is used when you create connections to an installed third-party provider type, such as GitHub Enterprise Server. You create one host for all connections to that provider.</p> <note> <p>A host created through the CLI or the SDK is in `PENDING` status by default. You can make its status `AVAILABLE` by setting up the host in the console.</p> </note>
@@ -35,33 +38,33 @@ var Host = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HostArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HostArn" }),
         __metadata("design:type", String)
     ], Host.prototype, "hostArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Host.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProviderEndpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProviderEndpoint" }),
         __metadata("design:type", String)
     ], Host.prototype, "providerEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProviderType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProviderType" }),
         __metadata("design:type", String)
     ], Host.prototype, "providerType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], Host.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StatusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StatusMessage" }),
         __metadata("design:type", String)
     ], Host.prototype, "statusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VpcConfiguration" }),
-        __metadata("design:type", VpcConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VpcConfiguration" }),
+        __metadata("design:type", vpcconfiguration_1.VpcConfiguration)
     ], Host.prototype, "vpcConfiguration", void 0);
     return Host;
-}(SpeakeasyBase));
-export { Host };
+}(utils_1.SpeakeasyBase));
+exports.Host = Host;

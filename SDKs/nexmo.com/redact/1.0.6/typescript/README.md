@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { RedactMessageRequest, RedactMessageResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -35,13 +34,13 @@ const req: RedactMessageRequest = {
     },
   },
   request: {
-    id: "repellendus",
-    product: "voice",
-    type: "inbound",
+    id: "sit",
+    product: "sms",
+    type: "outbound",
   },
 };
 
-sdk.sdk.redactMessage(req).then((res: RedactMessageResponse | AxiosError) => {
+sdk.redactMessage(req).then((res: RedactMessageResponse | AxiosError) => {
    // handle response
 });
 ```

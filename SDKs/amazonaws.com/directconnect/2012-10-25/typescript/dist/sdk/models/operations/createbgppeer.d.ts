@@ -19,7 +19,7 @@ export declare class CreateBgpPeerRequest extends SpeakeasyBase {
 }
 export declare class CreateBgpPeerResponse extends SpeakeasyBase {
     contentType: string;
-    createBgpPeerResponse?: shared.CreateBgpPeerResponse;
+    createBGPPeerResponse?: shared.CreateBgpPeerResponse;
     directConnectClientException?: any;
     directConnectServerException?: any;
     statusCode: number;

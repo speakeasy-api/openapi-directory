@@ -71,5 +71,5 @@ export declare class PatchLocationRequest extends SpeakeasyBase {
 export declare class PatchLocationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    patchLocation200ApplicationJsonObject?: PatchLocation200ApplicationJson;
+    patchLocation200ApplicationJSONObject?: PatchLocation200ApplicationJson;
 }

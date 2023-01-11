@@ -10,9 +10,6 @@ export class GetMarketingV3MarketingEventsEventsSearchDoSearchQueryParams extend
 
 
 export class GetMarketingV3MarketingEventsEventsSearchDoSearchSecurity extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=query" })
-  hapikey?: shared.SchemeHapikey;
-
   @SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" })
   oauth2Legacy?: shared.SchemeOauth2Legacy;
 

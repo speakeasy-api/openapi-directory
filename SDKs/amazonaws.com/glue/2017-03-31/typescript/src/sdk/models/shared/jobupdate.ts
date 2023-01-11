@@ -13,7 +13,7 @@ import { WorkerTypeEnum } from "./workertypeenum";
 **/
 export class JobUpdate extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AllocatedCapacity" })
-  allocatedCapacity?: number;
+  allocatedCapacity?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Command" })
   command?: JobCommand;
@@ -22,7 +22,7 @@ export class JobUpdate extends SpeakeasyBase {
   connections?: ConnectionsList;
 
   @SpeakeasyMetadata({ data: "json, name=DefaultArguments" })
-  defaultArguments?: Map<string, string>;
+  defaultArguments?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Description" })
   description?: string;
@@ -43,7 +43,7 @@ export class JobUpdate extends SpeakeasyBase {
   maxRetries?: number;
 
   @SpeakeasyMetadata({ data: "json, name=NonOverridableArguments" })
-  nonOverridableArguments?: Map<string, string>;
+  nonOverridableArguments?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=NotificationProperty" })
   notificationProperty?: NotificationProperty;

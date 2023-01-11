@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AttributeParametersScoreTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttributeParameters = exports.AttributeParametersScoreTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AttributeParametersScoreTypeEnum;
 (function (AttributeParametersScoreTypeEnum) {
     AttributeParametersScoreTypeEnum["ScoreTypeUnspecified"] = "SCORE_TYPE_UNSPECIFIED";
     AttributeParametersScoreTypeEnum["Probability"] = "PROBABILITY";
     AttributeParametersScoreTypeEnum["StdDevScore"] = "STD_DEV_SCORE";
     AttributeParametersScoreTypeEnum["Percentile"] = "PERCENTILE";
     AttributeParametersScoreTypeEnum["Raw"] = "RAW";
-})(AttributeParametersScoreTypeEnum || (AttributeParametersScoreTypeEnum = {}));
-// AttributeParameters
-/**
- * Configurable parameters for attribute scoring.
-**/
+})(AttributeParametersScoreTypeEnum = exports.AttributeParametersScoreTypeEnum || (exports.AttributeParametersScoreTypeEnum = {}));
 var AttributeParameters = /** @class */ (function (_super) {
     __extends(AttributeParameters, _super);
     function AttributeParameters() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scoreThreshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scoreThreshold" }),
         __metadata("design:type", Number)
     ], AttributeParameters.prototype, "scoreThreshold", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scoreType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scoreType" }),
         __metadata("design:type", String)
     ], AttributeParameters.prototype, "scoreType", void 0);
     return AttributeParameters;
-}(SpeakeasyBase));
-export { AttributeParameters };
+}(utils_1.SpeakeasyBase));
+exports.AttributeParameters = AttributeParameters;

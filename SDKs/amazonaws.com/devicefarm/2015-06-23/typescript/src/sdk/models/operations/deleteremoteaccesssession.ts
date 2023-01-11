@@ -51,7 +51,7 @@ export class DeleteRemoteAccessSessionResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteRemoteAccessSessionResult?: Map<string, any>;
+  deleteRemoteAccessSessionResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   limitExceededException?: any;

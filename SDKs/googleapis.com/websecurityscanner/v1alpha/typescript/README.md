@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { WebsecurityscannerProjectsScanConfigsCreateRequest, WebsecurityscannerProjectsScanConfigsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,72 +30,72 @@ const req: WebsecurityscannerProjectsScanConfigsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "aperiam",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "eius",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "rem",
-    fields: "cupiditate",
-    key: "omnis",
-    oauthToken: "velit",
-    prettyPrint: false,
-    quotaUser: "tempore",
-    uploadType: "repellendus",
-    uploadProtocol: "ipsa",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     authentication: {
       customAccount: {
-        loginUrl: "quaerat",
-        password: "ut",
-        username: "qui",
+        loginUrl: "dicta",
+        password: "debitis",
+        username: "voluptatum",
       },
       googleAccount: {
-        password: "vero",
-        username: "quia",
+        password: "et",
+        username: "ut",
       },
     },
     blacklistPatterns: [
-      "doloribus",
-      "vitae",
-      "quos",
+      "et",
+      "voluptate",
+      "iste",
     ],
-    displayName: "et",
+    displayName: "vitae",
     latestRun: {
-      endTime: "quasi",
-      executionState: "FINISHED",
+      endTime: "totam",
+      executionState: "EXECUTION_STATE_UNSPECIFIED",
       hasVulnerabilities: false,
-      name: "id",
-      progressPercent: 2697806848195229402,
+      name: "debitis",
+      progressPercent: 3706853784096366226,
       resultState: "RESULT_STATE_UNSPECIFIED",
-      startTime: "ea",
-      urlsCrawledCount: "possimus",
-      urlsTestedCount: "numquam",
+      startTime: "dolore",
+      urlsCrawledCount: "id",
+      urlsTestedCount: "aspernatur",
     },
-    maxQps: 6954057250565448800,
-    name: "veniam",
+    maxQps: 2914295034816259174,
+    name: "totam",
     schedule: {
-      intervalDurationDays: 7230071004187882185,
-      scheduleTime: "et",
+      intervalDurationDays: 6745438398739480977,
+      scheduleTime: "quis",
     },
     startingUrls: [
-      "id",
-      "ipsum",
-      "sit",
+      "aut",
+      "odit",
     ],
     targetPlatforms: [
-      "CLOUD_RUN",
+      "CLOUD_FUNCTIONS",
+      "COMPUTE",
       "CLOUD_FUNCTIONS",
     ],
-    userAgent: "CHROME_ANDROID",
+    userAgent: "USER_AGENT_UNSPECIFIED",
   },
 };
 

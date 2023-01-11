@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UsageLimitBreachActionEnum } from "./usagelimitbreachactionenum";
-import { UsageLimitFeatureTypeEnum } from "./usagelimitfeaturetypeenum";
-import { UsageLimitLimitTypeEnum } from "./usagelimitlimittypeenum";
-import { UsageLimitPeriodEnum } from "./usagelimitperiodenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UsageLimit = void 0;
+var utils_1 = require("../../../internal/utils");
+var usagelimitbreachactionenum_1 = require("./usagelimitbreachactionenum");
+var usagelimitfeaturetypeenum_1 = require("./usagelimitfeaturetypeenum");
+var usagelimitlimittypeenum_1 = require("./usagelimitlimittypeenum");
+var usagelimitperiodenum_1 = require("./usagelimitperiodenum");
+var taglist_1 = require("./taglist");
 // UsageLimit
 /**
  * Describes a usage limit object for a cluster.
@@ -38,37 +41,37 @@ var UsageLimit = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UsageLimit.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UsageLimit.prototype, "breachAction", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UsageLimit.prototype, "clusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UsageLimit.prototype, "featureType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UsageLimit.prototype, "limitType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UsageLimit.prototype, "period", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: taglist_1.TagList }),
         __metadata("design:type", Array)
     ], UsageLimit.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UsageLimit.prototype, "usageLimitId", void 0);
     return UsageLimit;
-}(SpeakeasyBase));
-export { UsageLimit };
+}(utils_1.SpeakeasyBase));
+exports.UsageLimit = UsageLimit;

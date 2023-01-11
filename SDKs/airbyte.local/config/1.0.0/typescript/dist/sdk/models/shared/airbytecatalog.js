@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AirbyteStreamAndConfiguration } from "./airbytestreamandconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AirbyteCatalog = void 0;
+var utils_1 = require("../../../internal/utils");
+var airbytestreamandconfiguration_1 = require("./airbytestreamandconfiguration");
 // AirbyteCatalog
 /**
  * describes the available schema (catalog).
@@ -34,9 +37,9 @@ var AirbyteCatalog = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streams", elemType: AirbyteStreamAndConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streams", elemType: airbytestreamandconfiguration_1.AirbyteStreamAndConfiguration }),
         __metadata("design:type", Array)
     ], AirbyteCatalog.prototype, "streams", void 0);
     return AirbyteCatalog;
-}(SpeakeasyBase));
-export { AirbyteCatalog };
+}(utils_1.SpeakeasyBase));
+exports.AirbyteCatalog = AirbyteCatalog;

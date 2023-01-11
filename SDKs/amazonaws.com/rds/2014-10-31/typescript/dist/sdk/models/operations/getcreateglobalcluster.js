@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,128 +23,130 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCreateGlobalClusterActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCreateGlobalClusterResponse = exports.GetCreateGlobalClusterRequest = exports.GetCreateGlobalClusterHeaders = exports.GetCreateGlobalClusterQueryParams = exports.GetCreateGlobalClusterVersionEnum = exports.GetCreateGlobalClusterActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCreateGlobalClusterActionEnum;
 (function (GetCreateGlobalClusterActionEnum) {
     GetCreateGlobalClusterActionEnum["CreateGlobalCluster"] = "CreateGlobalCluster";
-})(GetCreateGlobalClusterActionEnum || (GetCreateGlobalClusterActionEnum = {}));
-export var GetCreateGlobalClusterVersionEnum;
+})(GetCreateGlobalClusterActionEnum = exports.GetCreateGlobalClusterActionEnum || (exports.GetCreateGlobalClusterActionEnum = {}));
+var GetCreateGlobalClusterVersionEnum;
 (function (GetCreateGlobalClusterVersionEnum) {
     GetCreateGlobalClusterVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(GetCreateGlobalClusterVersionEnum || (GetCreateGlobalClusterVersionEnum = {}));
+})(GetCreateGlobalClusterVersionEnum = exports.GetCreateGlobalClusterVersionEnum || (exports.GetCreateGlobalClusterVersionEnum = {}));
 var GetCreateGlobalClusterQueryParams = /** @class */ (function (_super) {
     __extends(GetCreateGlobalClusterQueryParams, _super);
     function GetCreateGlobalClusterQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetCreateGlobalClusterQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DatabaseName" }),
         __metadata("design:type", String)
     ], GetCreateGlobalClusterQueryParams.prototype, "databaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DeletionProtection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DeletionProtection" }),
         __metadata("design:type", Boolean)
     ], GetCreateGlobalClusterQueryParams.prototype, "deletionProtection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Engine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Engine" }),
         __metadata("design:type", String)
     ], GetCreateGlobalClusterQueryParams.prototype, "engine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EngineVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EngineVersion" }),
         __metadata("design:type", String)
     ], GetCreateGlobalClusterQueryParams.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=GlobalClusterIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=GlobalClusterIdentifier" }),
         __metadata("design:type", String)
     ], GetCreateGlobalClusterQueryParams.prototype, "globalClusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SourceDBClusterIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SourceDBClusterIdentifier" }),
         __metadata("design:type", String)
-    ], GetCreateGlobalClusterQueryParams.prototype, "sourceDbClusterIdentifier", void 0);
+    ], GetCreateGlobalClusterQueryParams.prototype, "sourceDBClusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=StorageEncrypted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=StorageEncrypted" }),
         __metadata("design:type", Boolean)
     ], GetCreateGlobalClusterQueryParams.prototype, "storageEncrypted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetCreateGlobalClusterQueryParams.prototype, "version", void 0);
     return GetCreateGlobalClusterQueryParams;
-}(SpeakeasyBase));
-export { GetCreateGlobalClusterQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateGlobalClusterQueryParams = GetCreateGlobalClusterQueryParams;
 var GetCreateGlobalClusterHeaders = /** @class */ (function (_super) {
     __extends(GetCreateGlobalClusterHeaders, _super);
     function GetCreateGlobalClusterHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetCreateGlobalClusterHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetCreateGlobalClusterHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetCreateGlobalClusterHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetCreateGlobalClusterHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetCreateGlobalClusterHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetCreateGlobalClusterHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetCreateGlobalClusterHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetCreateGlobalClusterHeaders;
-}(SpeakeasyBase));
-export { GetCreateGlobalClusterHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateGlobalClusterHeaders = GetCreateGlobalClusterHeaders;
 var GetCreateGlobalClusterRequest = /** @class */ (function (_super) {
     __extends(GetCreateGlobalClusterRequest, _super);
     function GetCreateGlobalClusterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateGlobalClusterQueryParams)
     ], GetCreateGlobalClusterRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateGlobalClusterHeaders)
     ], GetCreateGlobalClusterRequest.prototype, "headers", void 0);
     return GetCreateGlobalClusterRequest;
-}(SpeakeasyBase));
-export { GetCreateGlobalClusterRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateGlobalClusterRequest = GetCreateGlobalClusterRequest;
 var GetCreateGlobalClusterResponse = /** @class */ (function (_super) {
     __extends(GetCreateGlobalClusterResponse, _super);
     function GetCreateGlobalClusterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetCreateGlobalClusterResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCreateGlobalClusterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCreateGlobalClusterResponse.prototype, "statusCode", void 0);
     return GetCreateGlobalClusterResponse;
-}(SpeakeasyBase));
-export { GetCreateGlobalClusterResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateGlobalClusterResponse = GetCreateGlobalClusterResponse;

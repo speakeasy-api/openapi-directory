@@ -4,8 +4,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class Location extends SpeakeasyBase {
     displayName?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     locationId?: string;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     name?: string;
 }

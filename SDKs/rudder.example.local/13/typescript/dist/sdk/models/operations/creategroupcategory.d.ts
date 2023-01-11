@@ -20,6 +20,6 @@ export declare class CreateGroupCategoryRequest extends SpeakeasyBase {
 }
 export declare class CreateGroupCategoryResponse extends SpeakeasyBase {
     contentType: string;
-    createGroupCategory200ApplicationJsonObject?: CreateGroupCategory200ApplicationJson;
+    createGroupCategory200ApplicationJSONObject?: CreateGroupCategory200ApplicationJson;
     statusCode: number;
 }

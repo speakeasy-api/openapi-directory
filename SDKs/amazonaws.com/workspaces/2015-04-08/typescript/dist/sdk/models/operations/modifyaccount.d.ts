@@ -22,7 +22,7 @@ export declare class ModifyAccountResponse extends SpeakeasyBase {
     contentType: string;
     invalidParameterValuesException?: any;
     invalidResourceStateException?: any;
-    modifyAccountResult?: Map<string, any>;
+    modifyAccountResult?: Record<string, any>;
     resourceNotFoundException?: any;
     resourceUnavailableException?: any;
     statusCode: number;

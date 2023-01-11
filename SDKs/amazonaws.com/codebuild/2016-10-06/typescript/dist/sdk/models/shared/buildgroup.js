@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BuildSummary } from "./buildsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BuildGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var buildsummary_1 = require("./buildsummary");
 // BuildGroup
 /**
  * Contains information about a batch build build group. Build groups are used to combine builds that can run in parallel, while still being able to set dependencies on other build groups.
@@ -34,25 +37,25 @@ var BuildGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentBuildSummary" }),
-        __metadata("design:type", BuildSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentBuildSummary" }),
+        __metadata("design:type", buildsummary_1.BuildSummary)
     ], BuildGroup.prototype, "currentBuildSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dependsOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dependsOn" }),
         __metadata("design:type", Array)
     ], BuildGroup.prototype, "dependsOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identifier" }),
         __metadata("design:type", String)
     ], BuildGroup.prototype, "identifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ignoreFailure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ignoreFailure" }),
         __metadata("design:type", Boolean)
     ], BuildGroup.prototype, "ignoreFailure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priorBuildSummaryList", elemType: BuildSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priorBuildSummaryList", elemType: buildsummary_1.BuildSummary }),
         __metadata("design:type", Array)
     ], BuildGroup.prototype, "priorBuildSummaryList", void 0);
     return BuildGroup;
-}(SpeakeasyBase));
-export { BuildGroup };
+}(utils_1.SpeakeasyBase));
+exports.BuildGroup = BuildGroup;

@@ -29,7 +29,7 @@ export declare class CreateMessengerAccountResponse extends SpeakeasyBase {
     fourHundredAndOneResponse?: shared.FourHundredAndOneResponse;
     fourHundredAndThreeResponse?: shared.FourHundredAndThreeResponse;
     contentType: string;
-    createMessengerAccount400ApplicationJsonObject?: CreateMessengerAccount400ApplicationJson;
+    createMessengerAccount400ApplicationJSONObject?: CreateMessengerAccount400ApplicationJson;
     messengerAccountResponse?: shared.MessengerAccountResponse;
     statusCode: number;
 }

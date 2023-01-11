@@ -13,7 +13,7 @@ export declare class CrawlRequest extends SpeakeasyBase {
 }
 export declare class CrawlResponse extends SpeakeasyBase {
     contentType: string;
-    crawl200ApplicationJsonObject?: Crawl200ApplicationJson;
+    crawl200ApplicationJSONObject?: Crawl200ApplicationJson;
     httpValidationError?: shared.HttpValidationError;
     statusCode: number;
 }

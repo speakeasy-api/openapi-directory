@@ -4,7 +4,7 @@ export declare class PreprintsPartialUpdatePathParams extends SpeakeasyBase {
 }
 export declare class PreprintsPartialUpdateRequest extends SpeakeasyBase {
     pathParams: PreprintsPartialUpdatePathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class PreprintsPartialUpdateResponse extends SpeakeasyBase {
     contentType: string;

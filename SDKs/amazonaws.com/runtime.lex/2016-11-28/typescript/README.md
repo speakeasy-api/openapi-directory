@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeleteSessionRequest, DeleteSessionResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,22 +33,22 @@ const sdk = new SDK(WithSecurity(
     
 const req: DeleteSessionRequest = {
   pathParams: {
-    botAlias: "consequatur",
-    botName: "delectus",
-    userId: "qui",
+    botAlias: "sit",
+    botName: "voluptas",
+    userId: "culpa",
   },
   headers: {
-    xAmzAlgorithm: "et",
-    xAmzContentSha256: "quaerat",
-    xAmzCredential: "voluptatem",
-    xAmzDate: "et",
-    xAmzSecurityToken: "et",
-    xAmzSignature: "qui",
-    xAmzSignedHeaders: "deleniti",
+    xAmzAlgorithm: "expedita",
+    xAmzContentSha256: "consequuntur",
+    xAmzCredential: "dolor",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "voluptas",
+    xAmzSignature: "fugit",
+    xAmzSignedHeaders: "et",
   },
 };
 
-sdk.sdk.deleteSession(req).then((res: DeleteSessionResponse | AxiosError) => {
+sdk.deleteSession(req).then((res: DeleteSessionResponse | AxiosError) => {
    // handle response
 });
 ```

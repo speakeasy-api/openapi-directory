@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateExportTaskRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateExportTaskRequest = /** @class */ (function (_super) {
     __extends(CreateExportTaskRequest, _super);
     function CreateExportTaskRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], CreateExportTaskRequest.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationPrefix" }),
         __metadata("design:type", String)
     ], CreateExportTaskRequest.prototype, "destinationPrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", Number)
     ], CreateExportTaskRequest.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logGroupName" }),
         __metadata("design:type", String)
     ], CreateExportTaskRequest.prototype, "logGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logStreamNamePrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logStreamNamePrefix" }),
         __metadata("design:type", String)
     ], CreateExportTaskRequest.prototype, "logStreamNamePrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskName" }),
         __metadata("design:type", String)
     ], CreateExportTaskRequest.prototype, "taskName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to" }),
         __metadata("design:type", Number)
     ], CreateExportTaskRequest.prototype, "to", void 0);
     return CreateExportTaskRequest;
-}(SpeakeasyBase));
-export { CreateExportTaskRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateExportTaskRequest = CreateExportTaskRequest;

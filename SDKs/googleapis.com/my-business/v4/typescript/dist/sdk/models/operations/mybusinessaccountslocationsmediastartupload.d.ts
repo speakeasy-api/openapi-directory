@@ -19,7 +19,7 @@ export declare class MybusinessAccountsLocationsMediaStartUploadQueryParams exte
 export declare class MybusinessAccountsLocationsMediaStartUploadRequest extends SpeakeasyBase {
     pathParams: MybusinessAccountsLocationsMediaStartUploadPathParams;
     queryParams: MybusinessAccountsLocationsMediaStartUploadQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class MybusinessAccountsLocationsMediaStartUploadResponse extends SpeakeasyBase {
     contentType: string;

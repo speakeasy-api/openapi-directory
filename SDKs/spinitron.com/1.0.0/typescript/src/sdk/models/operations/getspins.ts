@@ -62,8 +62,8 @@ export class GetSpinsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getSpins200ApplicationJsonObject?: GetSpins200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getSpins200ApplicationJSONObject?: GetSpins200ApplicationJson;
 }

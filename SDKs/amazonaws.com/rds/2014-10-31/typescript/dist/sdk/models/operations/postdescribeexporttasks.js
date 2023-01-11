@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeExportTasksActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeExportTasksResponse = exports.PostDescribeExportTasksRequest = exports.PostDescribeExportTasksHeaders = exports.PostDescribeExportTasksQueryParams = exports.PostDescribeExportTasksVersionEnum = exports.PostDescribeExportTasksActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeExportTasksActionEnum;
 (function (PostDescribeExportTasksActionEnum) {
     PostDescribeExportTasksActionEnum["DescribeExportTasks"] = "DescribeExportTasks";
-})(PostDescribeExportTasksActionEnum || (PostDescribeExportTasksActionEnum = {}));
-export var PostDescribeExportTasksVersionEnum;
+})(PostDescribeExportTasksActionEnum = exports.PostDescribeExportTasksActionEnum || (exports.PostDescribeExportTasksActionEnum = {}));
+var PostDescribeExportTasksVersionEnum;
 (function (PostDescribeExportTasksVersionEnum) {
     PostDescribeExportTasksVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostDescribeExportTasksVersionEnum || (PostDescribeExportTasksVersionEnum = {}));
+})(PostDescribeExportTasksVersionEnum = exports.PostDescribeExportTasksVersionEnum || (exports.PostDescribeExportTasksVersionEnum = {}));
 var PostDescribeExportTasksQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeExportTasksQueryParams, _super);
     function PostDescribeExportTasksQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeExportTasksQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], PostDescribeExportTasksQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", String)
     ], PostDescribeExportTasksQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeExportTasksQueryParams.prototype, "version", void 0);
     return PostDescribeExportTasksQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeExportTasksQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeExportTasksQueryParams = PostDescribeExportTasksQueryParams;
 var PostDescribeExportTasksHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeExportTasksHeaders, _super);
     function PostDescribeExportTasksHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeExportTasksHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeExportTasksHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeExportTasksHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeExportTasksHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeExportTasksHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeExportTasksHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeExportTasksHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeExportTasksHeaders;
-}(SpeakeasyBase));
-export { PostDescribeExportTasksHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeExportTasksHeaders = PostDescribeExportTasksHeaders;
 var PostDescribeExportTasksRequest = /** @class */ (function (_super) {
     __extends(PostDescribeExportTasksRequest, _super);
     function PostDescribeExportTasksRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeExportTasksQueryParams)
     ], PostDescribeExportTasksRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeExportTasksHeaders)
     ], PostDescribeExportTasksRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeExportTasksRequest.prototype, "request", void 0);
     return PostDescribeExportTasksRequest;
-}(SpeakeasyBase));
-export { PostDescribeExportTasksRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeExportTasksRequest = PostDescribeExportTasksRequest;
 var PostDescribeExportTasksResponse = /** @class */ (function (_super) {
     __extends(PostDescribeExportTasksResponse, _super);
     function PostDescribeExportTasksResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeExportTasksResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeExportTasksResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeExportTasksResponse.prototype, "statusCode", void 0);
     return PostDescribeExportTasksResponse;
-}(SpeakeasyBase));
-export { PostDescribeExportTasksResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeExportTasksResponse = PostDescribeExportTasksResponse;

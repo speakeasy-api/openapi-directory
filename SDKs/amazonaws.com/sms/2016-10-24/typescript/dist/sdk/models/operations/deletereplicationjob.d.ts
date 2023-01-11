@@ -19,7 +19,7 @@ export declare class DeleteReplicationJobRequest extends SpeakeasyBase {
 }
 export declare class DeleteReplicationJobResponse extends SpeakeasyBase {
     contentType: string;
-    deleteReplicationJobResponse?: Map<string, any>;
+    deleteReplicationJobResponse?: Record<string, any>;
     invalidParameterException?: any;
     missingRequiredParameterException?: any;
     operationNotPermittedException?: any;

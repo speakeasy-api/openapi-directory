@@ -15,5 +15,5 @@ export declare class StreamingImage extends SpeakeasyBase {
     statusCode?: StreamingImageStatusCodeEnum;
     statusMessage?: string;
     streamingImageId?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Permission = void 0;
+var utils_1 = require("../../../internal/utils");
 // Permission
 /**
  * This is a permission map that contain two object indexes. It is used to link/unlink objects. Order is important. Example: { deviceId:8, geofenceId: 16 }
@@ -33,37 +36,37 @@ var Permission = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributeId" }),
         __metadata("design:type", Number)
     ], Permission.prototype, "attributeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=calendarId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=calendarId" }),
         __metadata("design:type", Number)
     ], Permission.prototype, "calendarId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceId" }),
         __metadata("design:type", Number)
     ], Permission.prototype, "deviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driverId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driverId" }),
         __metadata("design:type", Number)
     ], Permission.prototype, "driverId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=geofenceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=geofenceId" }),
         __metadata("design:type", Number)
     ], Permission.prototype, "geofenceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupId" }),
         __metadata("design:type", Number)
     ], Permission.prototype, "groupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managedUserId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managedUserId" }),
         __metadata("design:type", Number)
     ], Permission.prototype, "managedUserId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userId" }),
         __metadata("design:type", Number)
     ], Permission.prototype, "userId", void 0);
     return Permission;
-}(SpeakeasyBase));
-export { Permission };
+}(utils_1.SpeakeasyBase));
+exports.Permission = Permission;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMappedGenesByPositionUsingGetResponse = exports.GetMappedGenesByPositionUsingGetRequest = exports.GetMappedGenesByPositionUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetMappedGenesByPositionUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetMappedGenesByPositionUsingGetPathParams, _super);
     function GetMappedGenesByPositionUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=chr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=chr" }),
         __metadata("design:type", String)
     ], GetMappedGenesByPositionUsingGetPathParams.prototype, "chr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=mapKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=mapKey" }),
         __metadata("design:type", Number)
     ], GetMappedGenesByPositionUsingGetPathParams.prototype, "mapKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=start" }),
         __metadata("design:type", Number)
     ], GetMappedGenesByPositionUsingGetPathParams.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=stop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=stop" }),
         __metadata("design:type", Number)
     ], GetMappedGenesByPositionUsingGetPathParams.prototype, "stop", void 0);
     return GetMappedGenesByPositionUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetMappedGenesByPositionUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMappedGenesByPositionUsingGetPathParams = GetMappedGenesByPositionUsingGetPathParams;
 var GetMappedGenesByPositionUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetMappedGenesByPositionUsingGetRequest, _super);
     function GetMappedGenesByPositionUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMappedGenesByPositionUsingGetPathParams)
     ], GetMappedGenesByPositionUsingGetRequest.prototype, "pathParams", void 0);
     return GetMappedGenesByPositionUsingGetRequest;
-}(SpeakeasyBase));
-export { GetMappedGenesByPositionUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMappedGenesByPositionUsingGetRequest = GetMappedGenesByPositionUsingGetRequest;
 var GetMappedGenesByPositionUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetMappedGenesByPositionUsingGetResponse, _super);
     function GetMappedGenesByPositionUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetMappedGenesByPositionUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMappedGenesByPositionUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMappedGenesByPositionUsingGetResponse.prototype, "statusCode", void 0);
     return GetMappedGenesByPositionUsingGetResponse;
-}(SpeakeasyBase));
-export { GetMappedGenesByPositionUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMappedGenesByPositionUsingGetResponse = GetMappedGenesByPositionUsingGetResponse;

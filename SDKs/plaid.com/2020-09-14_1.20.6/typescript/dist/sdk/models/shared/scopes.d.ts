@@ -6,5 +6,5 @@ import { AccountAccess } from "./accountaccess";
 export declare class Scopes extends SpeakeasyBase {
     accounts?: AccountAccess[];
     newAccounts?: boolean;
-    productAccess?: Map<string, any>;
+    productAccess?: Record<string, any>;
 }

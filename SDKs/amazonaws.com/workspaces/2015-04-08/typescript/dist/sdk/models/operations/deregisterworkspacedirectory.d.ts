@@ -20,7 +20,7 @@ export declare class DeregisterWorkspaceDirectoryRequest extends SpeakeasyBase {
 export declare class DeregisterWorkspaceDirectoryResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    deregisterWorkspaceDirectoryResult?: Map<string, any>;
+    deregisterWorkspaceDirectoryResult?: Record<string, any>;
     invalidParameterValuesException?: any;
     invalidResourceStateException?: any;
     operationNotSupportedException?: any;

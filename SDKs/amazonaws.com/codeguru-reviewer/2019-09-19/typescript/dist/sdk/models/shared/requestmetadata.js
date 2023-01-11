@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EventInfo } from "./eventinfo";
-import { VendorNameEnum } from "./vendornameenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RequestMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var eventinfo_1 = require("./eventinfo");
+var vendornameenum_1 = require("./vendornameenum");
 // RequestMetadata
 /**
  * Metadata that is associated with a code review. This applies to both pull request and repository analysis code reviews.
@@ -35,21 +38,21 @@ var RequestMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EventInfo" }),
-        __metadata("design:type", EventInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EventInfo" }),
+        __metadata("design:type", eventinfo_1.EventInfo)
     ], RequestMetadata.prototype, "eventInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequestId" }),
         __metadata("design:type", String)
     ], RequestMetadata.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Requester" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Requester" }),
         __metadata("design:type", String)
     ], RequestMetadata.prototype, "requester", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VendorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VendorName" }),
         __metadata("design:type", String)
     ], RequestMetadata.prototype, "vendorName", void 0);
     return RequestMetadata;
-}(SpeakeasyBase));
-export { RequestMetadata };
+}(utils_1.SpeakeasyBase));
+exports.RequestMetadata = RequestMetadata;

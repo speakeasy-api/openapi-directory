@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { User } from "./user";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Impersonation = void 0;
+var utils_1 = require("../../../internal/utils");
+var user_1 = require("./user");
 // Impersonation
 /**
  * Information about an impersonation, where an admin acts on behalf of an end user. Information about the acting admin is not currently available.
@@ -34,9 +37,9 @@ var Impersonation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=impersonatedUser" }),
-        __metadata("design:type", User)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=impersonatedUser" }),
+        __metadata("design:type", user_1.User)
     ], Impersonation.prototype, "impersonatedUser", void 0);
     return Impersonation;
-}(SpeakeasyBase));
-export { Impersonation };
+}(utils_1.SpeakeasyBase));
+exports.Impersonation = Impersonation;

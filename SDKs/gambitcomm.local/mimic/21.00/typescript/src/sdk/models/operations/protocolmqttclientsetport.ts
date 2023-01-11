@@ -25,5 +25,5 @@ export class ProtocolMqttClientSetPortResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolMqttClientSetPort200ApplicationJsonInt32Integers?: number[];
+  protocolMqttClientSetPort200ApplicationJSONInt32Integers?: number[];
 }

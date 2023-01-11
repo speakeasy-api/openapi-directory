@@ -18,6 +18,6 @@ export declare class GetTeamEventsByYearSimpleRequest extends SpeakeasyBase {
 export declare class GetTeamEventsByYearSimpleResponse extends SpeakeasyBase {
     contentType: string;
     eventSimples?: shared.EventSimple[];
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

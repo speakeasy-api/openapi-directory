@@ -19,5 +19,5 @@ export declare class EditCommentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     comment?: shared.Comment;
-    error?: shared.Error;
+    error?: shared.ErrorT;
 }

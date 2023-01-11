@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserDefinedFunction } from "./userdefinedfunction";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUserDefinedFunctionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var userdefinedfunction_1 = require("./userdefinedfunction");
 var GetUserDefinedFunctionResponse = /** @class */ (function (_super) {
     __extends(GetUserDefinedFunctionResponse, _super);
     function GetUserDefinedFunctionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UserDefinedFunction" }),
-        __metadata("design:type", UserDefinedFunction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UserDefinedFunction" }),
+        __metadata("design:type", userdefinedfunction_1.UserDefinedFunction)
     ], GetUserDefinedFunctionResponse.prototype, "userDefinedFunction", void 0);
     return GetUserDefinedFunctionResponse;
-}(SpeakeasyBase));
-export { GetUserDefinedFunctionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUserDefinedFunctionResponse = GetUserDefinedFunctionResponse;

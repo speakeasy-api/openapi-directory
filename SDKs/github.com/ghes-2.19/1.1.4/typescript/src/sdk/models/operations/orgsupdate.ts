@@ -105,8 +105,8 @@ export class OrgsUpdateResponse extends SpeakeasyBase {
   organizationFull?: shared.OrganizationFull;
 
   @SpeakeasyMetadata()
-  orgsUpdate415ApplicationJsonObject?: OrgsUpdate415ApplicationJson;
+  orgsUpdate415ApplicationJSONObject?: OrgsUpdate415ApplicationJson;
 
   @SpeakeasyMetadata()
-  orgsUpdate422ApplicationJsonOneOf?: any;
+  orgsUpdate422ApplicationJSONOneOf?: any;
 }

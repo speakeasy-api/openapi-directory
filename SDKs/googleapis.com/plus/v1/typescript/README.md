@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PlusActivitiesGetRequest, PlusActivitiesGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,23 +31,23 @@ const req: PlusActivitiesGetRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   pathParams: {
-    activityId: "quis",
+    activityId: "sit",
   },
   queryParams: {
     alt: "json",
-    fields: "sed",
-    key: "dignissimos",
-    oauthToken: "nihil",
-    prettyPrint: true,
-    quotaUser: "id",
-    userIp: "consectetur",
+    fields: "culpa",
+    key: "expedita",
+    oauthToken: "consequuntur",
+    prettyPrint: false,
+    quotaUser: "expedita",
+    userIp: "voluptas",
   },
 };
 

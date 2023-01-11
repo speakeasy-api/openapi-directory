@@ -15,7 +15,7 @@ export declare class PullsCreateReviewCommentAlternativeRequest extends Speakeas
 }
 export declare class PullsCreateReviewCommentAlternativeResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     legacyReviewComment?: shared.LegacyReviewComment;
 }

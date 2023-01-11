@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { S3EncryptionModeEnum } from "./s3encryptionmodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3Encryption = void 0;
+var utils_1 = require("../../../internal/utils");
+var s3encryptionmodeenum_1 = require("./s3encryptionmodeenum");
 // S3Encryption
 /**
  * Specifies how Amazon Simple Storage Service (Amazon S3) data should be encrypted.
@@ -34,13 +37,13 @@ var S3Encryption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KmsKeyArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KmsKeyArn" }),
         __metadata("design:type", String)
     ], S3Encryption.prototype, "kmsKeyArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3EncryptionMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3EncryptionMode" }),
         __metadata("design:type", String)
     ], S3Encryption.prototype, "s3EncryptionMode", void 0);
     return S3Encryption;
-}(SpeakeasyBase));
-export { S3Encryption };
+}(utils_1.SpeakeasyBase));
+exports.S3Encryption = S3Encryption;

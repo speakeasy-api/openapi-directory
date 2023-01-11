@@ -20,7 +20,7 @@ export class GetOfferingsOfferingIdAnalyticsMarksQuizzesResponse extends Speakea
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.QuizMarkResponse })
   quizMarkResponses?: shared.QuizMarkResponse[];

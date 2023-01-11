@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class GetV2CustomerShortNameBranchBranchesBranchIdPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=branchID" })
-  branchId: string;
+  branchID: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=shortName" })
   shortName: string;

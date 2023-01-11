@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GkeNodePoolAutoscalingConfig } from "./gkenodepoolautoscalingconfig";
-import { GkeNodeConfig } from "./gkenodeconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GkeNodePoolConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var gkenodepoolautoscalingconfig_1 = require("./gkenodepoolautoscalingconfig");
+var gkenodeconfig_1 = require("./gkenodeconfig");
 // GkeNodePoolConfig
 /**
  * The configuration of a GKE node pool used by a Dataproc-on-GKE cluster (https://cloud.google.com/dataproc/docs/concepts/jobs/dataproc-gke#create-a-dataproc-on-gke-cluster).
@@ -35,17 +38,17 @@ var GkeNodePoolConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoscaling" }),
-        __metadata("design:type", GkeNodePoolAutoscalingConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoscaling" }),
+        __metadata("design:type", gkenodepoolautoscalingconfig_1.GkeNodePoolAutoscalingConfig)
     ], GkeNodePoolConfig.prototype, "autoscaling", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
-        __metadata("design:type", GkeNodeConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
+        __metadata("design:type", gkenodeconfig_1.GkeNodeConfig)
     ], GkeNodePoolConfig.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locations" }),
         __metadata("design:type", Array)
     ], GkeNodePoolConfig.prototype, "locations", void 0);
     return GkeNodePoolConfig;
-}(SpeakeasyBase));
-export { GkeNodePoolConfig };
+}(utils_1.SpeakeasyBase));
+exports.GkeNodePoolConfig = GkeNodePoolConfig;

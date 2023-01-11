@@ -17,6 +17,6 @@ export declare class GetSchedulesScheduleBByRecipientIdRequest extends Speakeasy
 }
 export declare class GetSchedulesScheduleBByRecipientIdResponse extends SpeakeasyBase {
     contentType: string;
-    scheduleBByRecipientIdPage?: shared.ScheduleBByRecipientIdPage;
+    scheduleBByRecipientIDPage?: shared.ScheduleBByRecipientIdPage;
     statusCode: number;
 }

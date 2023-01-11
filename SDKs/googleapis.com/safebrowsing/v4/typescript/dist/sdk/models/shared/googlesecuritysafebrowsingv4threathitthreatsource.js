@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleSecuritySafebrowsingV4ThreatHitThreatSource = exports.GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum;
 (function (GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum) {
     GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum["ThreatSourceTypeUnspecified"] = "THREAT_SOURCE_TYPE_UNSPECIFIED";
     GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum["MatchingUrl"] = "MATCHING_URL";
     GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum["TabUrl"] = "TAB_URL";
     GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum["TabRedirect"] = "TAB_REDIRECT";
     GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum["TabResource"] = "TAB_RESOURCE";
-})(GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum || (GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum = {}));
+})(GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum = exports.GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum || (exports.GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum = {}));
 // GoogleSecuritySafebrowsingV4ThreatHitThreatSource
 /**
  * A single resource related to a threat hit.
@@ -41,21 +44,21 @@ var GoogleSecuritySafebrowsingV4ThreatHitThreatSource = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referrer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referrer" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4ThreatHitThreatSource.prototype, "referrer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remoteIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remoteIp" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4ThreatHitThreatSource.prototype, "remoteIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4ThreatHitThreatSource.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4ThreatHitThreatSource.prototype, "url", void 0);
     return GoogleSecuritySafebrowsingV4ThreatHitThreatSource;
-}(SpeakeasyBase));
-export { GoogleSecuritySafebrowsingV4ThreatHitThreatSource };
+}(utils_1.SpeakeasyBase));
+exports.GoogleSecuritySafebrowsingV4ThreatHitThreatSource = GoogleSecuritySafebrowsingV4ThreatHitThreatSource;

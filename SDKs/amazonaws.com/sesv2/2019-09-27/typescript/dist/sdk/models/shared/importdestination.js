@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContactListDestination } from "./contactlistdestination";
-import { SuppressionListDestination } from "./suppressionlistdestination";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportDestination = void 0;
+var utils_1 = require("../../../internal/utils");
+var contactlistdestination_1 = require("./contactlistdestination");
+var suppressionlistdestination_1 = require("./suppressionlistdestination");
 // ImportDestination
 /**
  * An object that contains details about the resource destination the import job is going to target.
@@ -35,13 +38,13 @@ var ImportDestination = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContactListDestination" }),
-        __metadata("design:type", ContactListDestination)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContactListDestination" }),
+        __metadata("design:type", contactlistdestination_1.ContactListDestination)
     ], ImportDestination.prototype, "contactListDestination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SuppressionListDestination" }),
-        __metadata("design:type", SuppressionListDestination)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SuppressionListDestination" }),
+        __metadata("design:type", suppressionlistdestination_1.SuppressionListDestination)
     ], ImportDestination.prototype, "suppressionListDestination", void 0);
     return ImportDestination;
-}(SpeakeasyBase));
-export { ImportDestination };
+}(utils_1.SpeakeasyBase));
+exports.ImportDestination = ImportDestination;

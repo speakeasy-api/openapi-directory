@@ -24,7 +24,7 @@ export declare class ListReviewableHiTsRequest extends SpeakeasyBase {
 }
 export declare class ListReviewableHiTsResponse extends SpeakeasyBase {
     contentType: string;
-    listReviewableHiTsResponse?: shared.ListReviewableHiTsResponse;
+    listReviewableHITsResponse?: shared.ListReviewableHiTsResponse;
     requestError?: any;
     serviceFault?: any;
     statusCode: number;

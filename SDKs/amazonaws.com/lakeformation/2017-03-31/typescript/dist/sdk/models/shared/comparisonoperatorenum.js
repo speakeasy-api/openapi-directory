@@ -1,4 +1,7 @@
-export var ComparisonOperatorEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComparisonOperatorEnum = void 0;
+var ComparisonOperatorEnum;
 (function (ComparisonOperatorEnum) {
     ComparisonOperatorEnum["Eq"] = "EQ";
     ComparisonOperatorEnum["Ne"] = "NE";
@@ -11,4 +14,4 @@ export var ComparisonOperatorEnum;
     ComparisonOperatorEnum["BeginsWith"] = "BEGINS_WITH";
     ComparisonOperatorEnum["In"] = "IN";
     ComparisonOperatorEnum["Between"] = "BETWEEN";
-})(ComparisonOperatorEnum || (ComparisonOperatorEnum = {}));
+})(ComparisonOperatorEnum = exports.ComparisonOperatorEnum || (exports.ComparisonOperatorEnum = {}));

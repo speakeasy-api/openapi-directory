@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HistogramSeries } from "./histogramseries";
-export var HistogramChartSpecLegendPositionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HistogramChartSpec = exports.HistogramChartSpecLegendPositionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var histogramseries_1 = require("./histogramseries");
+var HistogramChartSpecLegendPositionEnum;
 (function (HistogramChartSpecLegendPositionEnum) {
     HistogramChartSpecLegendPositionEnum["HistogramChartLegendPositionUnspecified"] = "HISTOGRAM_CHART_LEGEND_POSITION_UNSPECIFIED";
     HistogramChartSpecLegendPositionEnum["BottomLegend"] = "BOTTOM_LEGEND";
@@ -33,7 +36,7 @@ export var HistogramChartSpecLegendPositionEnum;
     HistogramChartSpecLegendPositionEnum["TopLegend"] = "TOP_LEGEND";
     HistogramChartSpecLegendPositionEnum["NoLegend"] = "NO_LEGEND";
     HistogramChartSpecLegendPositionEnum["InsideLegend"] = "INSIDE_LEGEND";
-})(HistogramChartSpecLegendPositionEnum || (HistogramChartSpecLegendPositionEnum = {}));
+})(HistogramChartSpecLegendPositionEnum = exports.HistogramChartSpecLegendPositionEnum || (exports.HistogramChartSpecLegendPositionEnum = {}));
 // HistogramChartSpec
 /**
  * A histogram chart. A histogram chart groups data items into bins, displaying each bin as a column of stacked items. Histograms are used to display the distribution of a dataset. Each column of items represents a range into which those items fall. The number of bins can be chosen automatically or specified explicitly.
@@ -44,25 +47,25 @@ var HistogramChartSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketSize" }),
         __metadata("design:type", Number)
     ], HistogramChartSpec.prototype, "bucketSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legendPosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legendPosition" }),
         __metadata("design:type", String)
     ], HistogramChartSpec.prototype, "legendPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outlierPercentile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outlierPercentile" }),
         __metadata("design:type", Number)
     ], HistogramChartSpec.prototype, "outlierPercentile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=series", elemType: HistogramSeries }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=series", elemType: histogramseries_1.HistogramSeries }),
         __metadata("design:type", Array)
     ], HistogramChartSpec.prototype, "series", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=showItemDividers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=showItemDividers" }),
         __metadata("design:type", Boolean)
     ], HistogramChartSpec.prototype, "showItemDividers", void 0);
     return HistogramChartSpec;
-}(SpeakeasyBase));
-export { HistogramChartSpec };
+}(utils_1.SpeakeasyBase));
+exports.HistogramChartSpec = HistogramChartSpec;

@@ -17,6 +17,6 @@ export declare class PostPortfolioAnalysisTrackingErrorRequest extends Speakeasy
 }
 export declare class PostPortfolioAnalysisTrackingErrorResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioAnalysisTrackingError200ApplicationJsonObject?: PostPortfolioAnalysisTrackingError200ApplicationJson;
     statusCode: number;
+    postPortfolioAnalysisTrackingError200ApplicationJSONObject?: PostPortfolioAnalysisTrackingError200ApplicationJson;
 }

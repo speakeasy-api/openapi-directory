@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExperimentTemplate } from "./experimenttemplate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteExperimentTemplateResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var experimenttemplate_1 = require("./experimenttemplate");
 var DeleteExperimentTemplateResponse = /** @class */ (function (_super) {
     __extends(DeleteExperimentTemplateResponse, _super);
     function DeleteExperimentTemplateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=experimentTemplate" }),
-        __metadata("design:type", ExperimentTemplate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=experimentTemplate" }),
+        __metadata("design:type", experimenttemplate_1.ExperimentTemplate)
     ], DeleteExperimentTemplateResponse.prototype, "experimentTemplate", void 0);
     return DeleteExperimentTemplateResponse;
-}(SpeakeasyBase));
-export { DeleteExperimentTemplateResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteExperimentTemplateResponse = DeleteExperimentTemplateResponse;

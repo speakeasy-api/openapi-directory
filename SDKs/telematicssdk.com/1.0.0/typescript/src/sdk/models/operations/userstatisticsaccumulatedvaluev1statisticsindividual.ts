@@ -124,11 +124,11 @@ export class UserStatisticsAccumulatedValueV1StatisticsIndividualResponse extend
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  userStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJsonObject?: UserStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJson;
+  userStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJSONObject?: UserStatisticsAccumulatedValueV1StatisticsIndividual200ApplicationJson;
 }

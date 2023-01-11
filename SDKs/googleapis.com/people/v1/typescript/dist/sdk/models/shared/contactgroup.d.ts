@@ -9,15 +9,6 @@ export declare enum ContactGroupGroupTypeEnum {
 /**
  * A contact group.
 **/
-export declare class ContactGroupInput extends SpeakeasyBase {
-    clientData?: GroupClientData[];
-    etag?: string;
-    name?: string;
-    resourceName?: string;
-}
-/**
- * A contact group.
-**/
 export declare class ContactGroup extends SpeakeasyBase {
     clientData?: GroupClientData[];
     etag?: string;
@@ -26,6 +17,15 @@ export declare class ContactGroup extends SpeakeasyBase {
     memberCount?: number;
     memberResourceNames?: string[];
     metadata?: ContactGroupMetadata;
+    name?: string;
+    resourceName?: string;
+}
+/**
+ * A contact group.
+**/
+export declare class ContactGroupInput extends SpeakeasyBase {
+    clientData?: GroupClientData[];
+    etag?: string;
     name?: string;
     resourceName?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -9,9 +10,33 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import FormData from "form-data";
-import * as operations from "./models/operations";
-import * as utils from "../internal/utils";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountInformationServiceAis = void 0;
+var operations = __importStar(require("./models/operations"));
+var utils = __importStar(require("../internal/utils"));
 var AccountInformationServiceAis = /** @class */ (function () {
     function AccountInformationServiceAis(defaultClient, securityClient, serverURL, language, sdkVersion, genVersion) {
         this._defaultClient = defaultClient;
@@ -54,7 +79,7 @@ var AccountInformationServiceAis = /** @class */ (function () {
         var url = baseURL.replace(/\/$/, "") + "/v1/consents";
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -62,91 +87,86 @@ var AccountInformationServiceAis = /** @class */ (function () {
             }
         }
         var client = this._securityClient;
-        var headers = __assign(__assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 201:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.consentsResponse201 = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error400NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error400NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error400Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error400AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error401NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error401NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error401Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error401AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error403NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error403NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error403Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error403AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error404NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error404NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error404Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error404AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error405NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error405NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error405Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error405AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error406NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error406NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error406Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error406AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 408:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 409:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error409NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error409NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error409Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error409AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 415:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 429:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error429NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error429NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error429Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error429AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
@@ -155,8 +175,7 @@ var AccountInformationServiceAis = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * deleteConsent - Delete Consent
@@ -168,85 +187,85 @@ var AccountInformationServiceAis = /** @class */ (function () {
             req = new operations.DeleteConsentRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v1/consents/{consentId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/v1/consents/{consentId}", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "delete", headers: headers }, config)).then(function (httpRes) {
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "delete", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 204:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error400NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error400NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error400Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error400AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error401NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error401NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error401Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error401AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error403NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error403NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error403Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error403AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error404NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error404NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error404Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error404AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error405NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error405NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error405Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error405AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error406NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error406NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error406Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error406AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 408:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 409:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error409NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error409NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error409Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error409AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 415:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 429:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error429NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error429NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error429Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error429AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
@@ -255,8 +274,7 @@ var AccountInformationServiceAis = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getAccountList - Read account list
@@ -286,88 +304,88 @@ var AccountInformationServiceAis = /** @class */ (function () {
         var baseURL = this._serverURL;
         var url = baseURL.replace(/\/$/, "") + "/v1/accounts";
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.accountList = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error400NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error400NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error400Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error400AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error401NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error401NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error401Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error401AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error403NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error403NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error403Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error403AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error404NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error404NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error404Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error404AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error405NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error405NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error405Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error405AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error406NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error406NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error406Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error406AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 408:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 409:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error409NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error409NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error409Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error409AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 415:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 429:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error429NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error429NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error429Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error429AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
@@ -376,8 +394,7 @@ var AccountInformationServiceAis = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getBalances - Read balance
@@ -396,88 +413,88 @@ var AccountInformationServiceAis = /** @class */ (function () {
             req = new operations.GetBalancesRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v1/accounts/{account-id}/balances", req.pathParams);
+        var url = utils.generateURL(baseURL, "/v1/accounts/{account-id}/balances", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.readAccountBalanceResponse200 = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error400NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error400NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error400Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error400AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error401NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error401NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error401Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error401AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error403NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error403NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error403Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error403AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error404NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error404NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error404Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error404AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error405NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error405NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error405Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error405AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error406NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error406NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error406Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error406AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 408:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 409:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error409NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error409NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error409Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error409AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 415:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 429:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error429NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error429NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error429Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error429AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
@@ -486,8 +503,7 @@ var AccountInformationServiceAis = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getConsentAuthorisation - Get consent authorisation sub-resources request
@@ -502,88 +518,88 @@ var AccountInformationServiceAis = /** @class */ (function () {
             req = new operations.GetConsentAuthorisationRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v1/consents/{consentId}/authorisations", req.pathParams);
+        var url = utils.generateURL(baseURL, "/v1/consents/{consentId}/authorisations", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.authorisations = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error400NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error400NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error400Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error400AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error401NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error401NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error401Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error401AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error403NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error403NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error403Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error403AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error404NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error404NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error404Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error404AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error405NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error405NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error405Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error405AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error406NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error406NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error406Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error406AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 408:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 409:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error409NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error409NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error409Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error409AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 415:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 429:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error429NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error429NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error429Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error429AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
@@ -592,8 +608,7 @@ var AccountInformationServiceAis = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getConsentInformation - Get consent request
@@ -608,88 +623,88 @@ var AccountInformationServiceAis = /** @class */ (function () {
             req = new operations.GetConsentInformationRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v1/consents/{consentId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/v1/consents/{consentId}", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.consentInformationResponse200Json = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error400NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error400NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error400Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error400AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error401NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error401NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error401Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error401AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error403NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error403NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error403Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error403AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error404NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error404NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error404Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error404AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error405NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error405NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error405Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error405AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error406NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error406NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error406Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error406AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 408:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 409:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error409NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error409NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error409Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error409AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 415:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 429:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error429NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error429NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error429Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error429AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
@@ -698,8 +713,7 @@ var AccountInformationServiceAis = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getConsentScaStatus - Read the SCA status of the consent authorisation
@@ -712,88 +726,88 @@ var AccountInformationServiceAis = /** @class */ (function () {
             req = new operations.GetConsentScaStatusRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.scaStatusResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error400NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error400NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error400Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error400AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error401NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error401NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error401Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error401AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error403NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error403NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error403Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error403AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error404NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error404NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error404Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error404AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error405NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error405NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error405Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error405AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error406NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error406NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error406Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error406AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 408:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 409:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error409NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error409NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error409Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error409AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 415:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 429:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error429NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error429NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error429Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error429AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
@@ -802,8 +816,7 @@ var AccountInformationServiceAis = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getConsentStatus - Consent status request
@@ -815,88 +828,88 @@ var AccountInformationServiceAis = /** @class */ (function () {
             req = new operations.GetConsentStatusRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v1/consents/{consentId}/status", req.pathParams);
+        var url = utils.generateURL(baseURL, "/v1/consents/{consentId}/status", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.consentStatusResponse200 = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error400NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error400NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error400Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error400AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error401NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error401NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error401Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error401AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error403NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error403NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error403Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error403AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error404NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error404NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error404Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error404AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error405NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error405NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error405Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error405AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error406NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error406NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error406Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error406AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 408:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 409:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error409NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error409NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error409Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error409AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 415:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 429:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error429NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error429NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error429Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error429AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
@@ -905,8 +918,7 @@ var AccountInformationServiceAis = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTransactionDetails - Read transaction details
@@ -923,88 +935,88 @@ var AccountInformationServiceAis = /** @class */ (function () {
             req = new operations.GetTransactionDetailsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v1/accounts/{account-id}/transactions/{transactionId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/v1/accounts/{account-id}/transactions/{transactionId}", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, config)).then(function (httpRes) {
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.getTransactionDetails200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.getTransactionDetails200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error400NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error400NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error400Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error400AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error401NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error401NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error401Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error401AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error403NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error403NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error403Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error403AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error404NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error404NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error404Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error404AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error405NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error405NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error405Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error405AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error406NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error406NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error406Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error406AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 408:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 409:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error409NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error409NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error409Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error409AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 415:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 429:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error429NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error429NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error429Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error429AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
@@ -1013,8 +1025,7 @@ var AccountInformationServiceAis = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * getTransactionList - Read transaction list of an account
@@ -1031,104 +1042,100 @@ var AccountInformationServiceAis = /** @class */ (function () {
             req = new operations.GetTransactionListRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v1/accounts/{account-id}/transactions", req.pathParams);
+        var url = utils.generateURL(baseURL, "/v1/accounts/{account-id}/transactions", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.transactionsResponse200Json = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/xml")) {
+                    if (utils.matchContentType(contentType, "application/xml")) {
                         var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
                         var out = new Uint8Array(resBody.length);
                         for (var i = 0; i < resBody.length; i++)
                             out[i] = resBody.charCodeAt(i);
                         res.body = out;
                     }
-                    if (utils.MatchContentType(contentType, "text/plain")) {
-                        var resBody = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data, null, 0);
-                        var out = new Uint8Array(resBody.length);
-                        for (var i = 0; i < resBody.length; i++)
-                            out[i] = resBody.charCodeAt(i);
-                        res.body = out;
+                    if (utils.matchContentType(contentType, "text/plain")) {
+                        res.getTransactionList200TextPlainOneOf = JSON.stringify(httpRes === null || httpRes === void 0 ? void 0 : httpRes.data);
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error400NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error400NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error400Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error400AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error401NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error401NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error401Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error401AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error403NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error403NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error403Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error403AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error404NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error404NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error404Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error404AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error405NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error405NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error405Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error405AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error406NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error406NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error406Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error406AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 408:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 409:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error409NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error409NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error409Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error409AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 415:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 429:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error429NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error429NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error429Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error429AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
@@ -1137,8 +1144,7 @@ var AccountInformationServiceAis = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * readAccountDetails - Read account details
@@ -1162,90 +1168,90 @@ var AccountInformationServiceAis = /** @class */ (function () {
             req = new operations.ReadAccountDetailsRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v1/accounts/{account-id}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/v1/accounts/{account-id}", req.pathParams);
         var client = this._securityClient;
-        var headers = __assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
-        var qpSerializer = utils.GetQueryParamSerializer(req.queryParams);
+        var headers = __assign(__assign({}, utils.getHeadersFromRequest(req.headers)), config === null || config === void 0 ? void 0 : config.headers);
+        var qpSerializer = utils.getQueryParamSerializer(req.queryParams);
         var requestConfig = __assign(__assign({}, config), { params: req.queryParams, paramsSerializer: qpSerializer });
-        return client
-            .request(__assign({ url: url, method: "get", headers: headers }, requestConfig)).then(function (httpRes) {
+        var r = client.request(__assign({ url: url, method: "get", headers: headers }, requestConfig));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.readAccountDetails200ApplicationJsonObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.readAccountDetails200ApplicationJSONObject = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error400NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error400NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error400Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error400AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error401NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error401NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error401Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error401AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error403NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error403NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error403Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error403AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error404NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error404NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error404Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error404AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error405NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error405NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error405Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error405AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error406NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error406NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error406Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error406AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 408:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 409:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error409NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error409NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error409Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error409AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 415:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 429:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error429NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error429NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error429Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error429AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
@@ -1254,8 +1260,7 @@ var AccountInformationServiceAis = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * startConsentAuthorisation - Start the authorisation process for a consent
@@ -1300,10 +1305,10 @@ var AccountInformationServiceAis = /** @class */ (function () {
             req = new operations.StartConsentAuthorisationRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v1/consents/{consentId}/authorisations", req.pathParams);
+        var url = utils.generateURL(baseURL, "/v1/consents/{consentId}/authorisations", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -1311,91 +1316,86 @@ var AccountInformationServiceAis = /** @class */ (function () {
             }
         }
         var client = this._securityClient;
-        var headers = __assign(__assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "post", headers: headers, data: body }, config)).then(function (httpRes) {
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "post", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 201:
-                    if (utils.MatchContentType(contentType, "application/json")) {
+                    if (utils.matchContentType(contentType, "application/json")) {
                         res.startScaprocessResponse = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error400NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error400NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error400Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error400AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error401NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error401NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error401Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error401AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error403NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error403NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error403Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error403AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error404NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error404NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error404Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error404AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error405NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error405NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error405Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error405AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error406NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error406NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error406Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error406AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 408:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 409:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error409NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error409NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error409Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error409AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 415:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 429:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error429NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error429NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error429Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error429AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
@@ -1404,8 +1404,7 @@ var AccountInformationServiceAis = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     /**
      * updateConsentsPsuData - Update PSU Data for consents
@@ -1456,10 +1455,10 @@ var AccountInformationServiceAis = /** @class */ (function () {
             req = new operations.UpdateConsentsPsuDataRequest(req);
         }
         var baseURL = this._serverURL;
-        var url = utils.GenerateURL(baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", req.pathParams);
+        var url = utils.generateURL(baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", req.pathParams);
         var _b = [{}, {}], reqBodyHeaders = _b[0], reqBody = _b[1];
         try {
-            _a = utils.SerializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
+            _a = utils.serializeRequestBody(req), reqBodyHeaders = _a[0], reqBody = _a[1];
         }
         catch (e) {
             if (e instanceof Error) {
@@ -1467,91 +1466,86 @@ var AccountInformationServiceAis = /** @class */ (function () {
             }
         }
         var client = this._securityClient;
-        var headers = __assign(__assign(__assign({}, utils.GetHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
-        var body;
-        if (reqBody instanceof FormData)
-            body = reqBody;
-        else
-            body = __assign({}, reqBody);
-        return client
-            .request(__assign({ url: url, method: "put", headers: headers, data: body }, config)).then(function (httpRes) {
+        var headers = __assign(__assign(__assign({}, utils.getHeadersFromRequest(req.headers)), reqBodyHeaders), config === null || config === void 0 ? void 0 : config.headers);
+        var r = client.request(__assign({ url: url, method: "put", headers: headers, data: reqBody }, config));
+        return r.then(function (httpRes) {
             var _a, _b;
             var contentType = (_b = (_a = httpRes === null || httpRes === void 0 ? void 0 : httpRes.headers) === null || _a === void 0 ? void 0 : _a["content-type"]) !== null && _b !== void 0 ? _b : "";
             if ((httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == null)
                 throw new Error("status code not found in response: ".concat(httpRes));
-            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers) };
+            var res = { statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers) };
             switch (true) {
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 200:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.updateConsentsPsuData200ApplicationJsonOneOf = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.updateConsentsPsuData200ApplicationJSONOneOf = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 400:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error400NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error400NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error400Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error400AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 401:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error401NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error401NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error401Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error401AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 403:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error403NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error403NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error403Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error403AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 404:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error404NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error404NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error404Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error404AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 405:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error405NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error405NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error405Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error405AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 406:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error406NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error406NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error406Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error406AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 408:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 409:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error409NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error409NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error409Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error409AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 415:
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 429:
-                    if (utils.MatchContentType(contentType, "application/json")) {
-                        res.error429NgAis = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/json")) {
+                        res.error429NGAIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
-                    if (utils.MatchContentType(contentType, "application/problem+json")) {
-                        res.error429Ais = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
+                    if (utils.matchContentType(contentType, "application/problem+json")) {
+                        res.error429AIS = httpRes === null || httpRes === void 0 ? void 0 : httpRes.data;
                     }
                     break;
                 case (httpRes === null || httpRes === void 0 ? void 0 : httpRes.status) == 500:
@@ -1560,9 +1554,8 @@ var AccountInformationServiceAis = /** @class */ (function () {
                     break;
             }
             return res;
-        })
-            .catch(function (error) { throw error; });
+        });
     };
     return AccountInformationServiceAis;
 }());
-export { AccountInformationServiceAis };
+exports.AccountInformationServiceAis = AccountInformationServiceAis;

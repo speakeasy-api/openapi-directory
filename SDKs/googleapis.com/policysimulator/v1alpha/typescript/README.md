@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PolicysimulatorProjectsLocationsReplaysOperationsListRequest, PolicysimulatorProjectsLocationsReplaysOperationsListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,29 +30,29 @@ const req: PolicysimulatorProjectsLocationsReplaysOperationsListRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "ipsa",
+    name: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "aut",
+    accessToken: "culpa",
     alt: "media",
-    callback: "vitae",
-    fields: "cupiditate",
-    filter: "nostrum",
-    key: "laudantium",
-    oauthToken: "aut",
-    pageSize: 3914789093648986750,
-    pageToken: "et",
-    prettyPrint: false,
-    quotaUser: "architecto",
-    uploadType: "ullam",
-    uploadProtocol: "nemo",
+    callback: "consequuntur",
+    fields: "dolor",
+    filter: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    pageSize: 1543572285742637646,
+    pageToken: "nihil",
+    prettyPrint: true,
+    quotaUser: "dicta",
+    uploadType: "debitis",
+    uploadProtocol: "voluptatum",
   },
 };
 

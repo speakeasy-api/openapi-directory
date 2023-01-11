@@ -21,5 +21,5 @@ export declare class TeamsAddMemberLegacyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    teamsAddMemberLegacy422ApplicationJsonObject?: TeamsAddMemberLegacy422ApplicationJson;
+    teamsAddMemberLegacy422ApplicationJSONObject?: TeamsAddMemberLegacy422ApplicationJson;
 }

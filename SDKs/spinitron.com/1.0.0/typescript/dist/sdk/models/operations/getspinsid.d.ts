@@ -14,7 +14,7 @@ export declare class GetSpinsIdRequest extends SpeakeasyBase {
 export declare class GetSpinsIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     spin?: shared.Spin;
     statusCode: number;
 }

@@ -1,19 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetSpecsCarAutoCompleteFieldEnum {
-    Make = "make",
-    Model = "model",
-    Trim = "trim",
-    BodyType = "body_type",
-    BodySubtype = "body_subtype",
-    VehicleType = "vehicle_type",
-    Transmission = "transmission",
-    Drivetrain = "drivetrain",
-    FuelType = "fuel_type",
-    Engine = "engine",
-    EngineSize = "engine_size",
-    EngineBlock = "engine_block"
-}
 export declare class GetSpecsCarAutoCompleteQueryParams extends SpeakeasyBase {
     apiKey?: string;
     bodySubtype?: string;
@@ -22,7 +8,7 @@ export declare class GetSpecsCarAutoCompleteQueryParams extends SpeakeasyBase {
     engine?: string;
     engineBlock?: string;
     engineSize?: string;
-    field: GetSpecsCarAutoCompleteFieldEnum;
+    field: shared.ApiKeyEnum7;
     fuelType?: string;
     ignoreCase?: boolean;
     input: string;
@@ -38,7 +24,7 @@ export declare class GetSpecsCarAutoCompleteRequest extends SpeakeasyBase {
 }
 export declare class GetSpecsCarAutoCompleteResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     specsAutoCompleteResponse?: shared.SpecsAutoCompleteResponse;
     statusCode: number;
 }

@@ -4,10 +4,6 @@ import { ChoiceStatusEnum } from "./choicestatusenum";
 
 
 
-// ChoiceUpdate
-/** 
- * A list of choices to be updated.
-**/
 export class ChoiceUpdate extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Notes" })
   notes?: string;
@@ -16,5 +12,5 @@ export class ChoiceUpdate extends SpeakeasyBase {
   reason?: ChoiceReasonEnum;
 
   @SpeakeasyMetadata({ data: "json, name=Status" })
-  status: ChoiceStatusEnum;
+  status?: ChoiceStatusEnum;
 }

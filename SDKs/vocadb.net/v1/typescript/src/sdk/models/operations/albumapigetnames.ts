@@ -30,13 +30,13 @@ export class AlbumApiGetNamesRequest extends SpeakeasyBase {
 
 export class AlbumApiGetNamesResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  albumApiGetNames200ApplicationJsonStrings?: string[];
+  albumApiGetNames200ApplicationJSONStrings?: string[];
 
   @SpeakeasyMetadata()
   albumApiGetNames200ApplicationJsonpStrings?: string[];
 
   @SpeakeasyMetadata()
-  albumApiGetNames200TextJsonStrings?: string[];
+  albumApiGetNames200TextJSONStrings?: string[];
 
   @SpeakeasyMetadata()
   body?: Uint8Array;

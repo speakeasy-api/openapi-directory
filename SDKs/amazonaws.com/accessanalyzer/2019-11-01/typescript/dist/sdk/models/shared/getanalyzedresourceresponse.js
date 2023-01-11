@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AnalyzedResource } from "./analyzedresource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAnalyzedResourceResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var analyzedresource_1 = require("./analyzedresource");
 // GetAnalyzedResourceResponse
 /**
  * The response to the request.
@@ -34,9 +37,9 @@ var GetAnalyzedResourceResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
-        __metadata("design:type", AnalyzedResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
+        __metadata("design:type", analyzedresource_1.AnalyzedResource)
     ], GetAnalyzedResourceResponse.prototype, "resource", void 0);
     return GetAnalyzedResourceResponse;
-}(SpeakeasyBase));
-export { GetAnalyzedResourceResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAnalyzedResourceResponse = GetAnalyzedResourceResponse;

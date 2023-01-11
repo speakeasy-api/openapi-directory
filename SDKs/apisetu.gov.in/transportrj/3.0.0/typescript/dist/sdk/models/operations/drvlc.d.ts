@@ -110,11 +110,11 @@ export declare class DrvlcResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    drvlc400ApplicationJsonObject?: Drvlc400ApplicationJson;
-    drvlc401ApplicationJsonObject?: Drvlc401ApplicationJson;
-    drvlc404ApplicationJsonObject?: Drvlc404ApplicationJson;
-    drvlc500ApplicationJsonObject?: Drvlc500ApplicationJson;
-    drvlc502ApplicationJsonObject?: Drvlc502ApplicationJson;
-    drvlc503ApplicationJsonObject?: Drvlc503ApplicationJson;
-    drvlc504ApplicationJsonObject?: Drvlc504ApplicationJson;
+    drvlc400ApplicationJSONObject?: Drvlc400ApplicationJson;
+    drvlc401ApplicationJSONObject?: Drvlc401ApplicationJson;
+    drvlc404ApplicationJSONObject?: Drvlc404ApplicationJson;
+    drvlc500ApplicationJSONObject?: Drvlc500ApplicationJson;
+    drvlc502ApplicationJSONObject?: Drvlc502ApplicationJson;
+    drvlc503ApplicationJSONObject?: Drvlc503ApplicationJson;
+    drvlc504ApplicationJSONObject?: Drvlc504ApplicationJson;
 }

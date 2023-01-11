@@ -12,7 +12,7 @@ export declare class GetCreateGlobalClusterQueryParams extends SpeakeasyBase {
     engine?: string;
     engineVersion?: string;
     globalClusterIdentifier?: string;
-    sourceDbClusterIdentifier?: string;
+    sourceDBClusterIdentifier?: string;
     storageEncrypted?: boolean;
     version: GetCreateGlobalClusterVersionEnum;
 }

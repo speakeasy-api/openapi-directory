@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Crop = void 0;
+var utils_1 = require("../../../internal/utils");
 // Crop
 /**
  * Video cropping configuration for the input video. The cropped input video is scaled to match the output resolution.
@@ -33,21 +36,21 @@ var Crop = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bottomPixels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bottomPixels" }),
         __metadata("design:type", Number)
     ], Crop.prototype, "bottomPixels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=leftPixels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=leftPixels" }),
         __metadata("design:type", Number)
     ], Crop.prototype, "leftPixels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rightPixels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rightPixels" }),
         __metadata("design:type", Number)
     ], Crop.prototype, "rightPixels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topPixels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topPixels" }),
         __metadata("design:type", Number)
     ], Crop.prototype, "topPixels", void 0);
     return Crop;
-}(SpeakeasyBase));
-export { Crop };
+}(utils_1.SpeakeasyBase));
+exports.Crop = Crop;

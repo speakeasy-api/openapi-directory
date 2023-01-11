@@ -6,6 +6,6 @@ export declare class SandboxBankTransferSimulateRequest extends SpeakeasyBase {
     bankTransferId: string;
     clientId?: string;
     eventType: string;
-    failureReason?: Map<string, any>;
+    failureReason?: Record<string, any>;
     secret?: string;
 }

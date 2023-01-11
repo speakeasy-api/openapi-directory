@@ -50,7 +50,7 @@ export class AppsCreateContentAttachmentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  appsCreateContentAttachment415ApplicationJsonObject?: AppsCreateContentAttachment415ApplicationJson;
+  appsCreateContentAttachment415ApplicationJSONObject?: AppsCreateContentAttachment415ApplicationJson;
 
   @SpeakeasyMetadata()
   basicError?: shared.BasicError;

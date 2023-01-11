@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Headers } from "./headers";
-import { Row } from "./row";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Table = void 0;
+var utils_1 = require("../../../internal/utils");
+var headers_1 = require("./headers");
+var row_1 = require("./row");
 var Table = /** @class */ (function (_super) {
     __extends(Table, _super);
     function Table() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnHeaders" }),
-        __metadata("design:type", Headers)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnHeaders" }),
+        __metadata("design:type", headers_1.Headers)
     ], Table.prototype, "columnHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Table.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rowHeaders" }),
-        __metadata("design:type", Headers)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rowHeaders" }),
+        __metadata("design:type", headers_1.Headers)
     ], Table.prototype, "rowHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rows", elemType: Row }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rows", elemType: row_1.Row }),
         __metadata("design:type", Array)
     ], Table.prototype, "rows", void 0);
     return Table;
-}(SpeakeasyBase));
-export { Table };
+}(utils_1.SpeakeasyBase));
+exports.Table = Table;

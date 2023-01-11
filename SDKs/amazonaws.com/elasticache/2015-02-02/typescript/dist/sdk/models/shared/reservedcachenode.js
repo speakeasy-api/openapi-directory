@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecurringCharge } from "./recurringcharge";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReservedCacheNode = void 0;
+var utils_1 = require("../../../internal/utils");
+var recurringchargelist_1 = require("./recurringchargelist");
 // ReservedCacheNode
 /**
  * Represents the output of a <code>PurchaseReservedCacheNodesOffering</code> operation.
@@ -34,57 +37,57 @@ var ReservedCacheNode = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReservedCacheNode.prototype, "cacheNodeCount", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReservedCacheNode.prototype, "cacheNodeType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReservedCacheNode.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReservedCacheNode.prototype, "fixedPrice", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReservedCacheNode.prototype, "offeringType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReservedCacheNode.prototype, "productDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: RecurringCharge }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: recurringchargelist_1.RecurringChargeList }),
         __metadata("design:type", Array)
     ], ReservedCacheNode.prototype, "recurringCharges", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ReservedCacheNode.prototype, "reservationArn", void 0);
+    ], ReservedCacheNode.prototype, "reservationARN", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReservedCacheNode.prototype, "reservedCacheNodeId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReservedCacheNode.prototype, "reservedCacheNodesOfferingId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], ReservedCacheNode.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReservedCacheNode.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReservedCacheNode.prototype, "usagePrice", void 0);
     return ReservedCacheNode;
-}(SpeakeasyBase));
-export { ReservedCacheNode };
+}(utils_1.SpeakeasyBase));
+exports.ReservedCacheNode = ReservedCacheNode;

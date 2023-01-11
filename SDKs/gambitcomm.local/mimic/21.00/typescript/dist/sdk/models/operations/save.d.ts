@@ -8,5 +8,5 @@ export declare class SaveRequest extends SpeakeasyBase {
 export declare class SaveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    save200ApplicationJsonString?: string;
+    save200ApplicationJSONString?: string;
 }

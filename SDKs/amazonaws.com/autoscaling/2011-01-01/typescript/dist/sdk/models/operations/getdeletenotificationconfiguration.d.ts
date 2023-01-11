@@ -8,7 +8,7 @@ export declare enum GetDeleteNotificationConfigurationVersionEnum {
 export declare class GetDeleteNotificationConfigurationQueryParams extends SpeakeasyBase {
     action: GetDeleteNotificationConfigurationActionEnum;
     autoScalingGroupName: string;
-    topicArn: string;
+    topicARN: string;
     version: GetDeleteNotificationConfigurationVersionEnum;
 }
 export declare class GetDeleteNotificationConfigurationHeaders extends SpeakeasyBase {

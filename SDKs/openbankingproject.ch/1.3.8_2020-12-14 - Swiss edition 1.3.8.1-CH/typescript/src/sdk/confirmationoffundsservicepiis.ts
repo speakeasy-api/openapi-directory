@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -40,7 +39,7 @@ export class ConfirmationOfFundsServicePiis {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -48,67 +47,67 @@ export class ConfirmationOfFundsServicePiis {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    if (body == null || Object.keys(body).length === 0) throw new Error("request body is required");
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.CheckAvailabilityOfFundsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.CheckAvailabilityOfFundsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.checkAvailabilityOfFunds200ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.checkAvailabilityOfFunds200ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgPiis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGPIIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Piis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401PIIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgPiis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGPIIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Piis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403PIIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgPiis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGPIIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Piis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404PIIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgPiis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGPIIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Piis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405PIIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
@@ -116,11 +115,11 @@ export class ConfirmationOfFundsServicePiis {
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgPiis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGPIIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Piis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409PIIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
@@ -135,7 +134,6 @@ export class ConfirmationOfFundsServicePiis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

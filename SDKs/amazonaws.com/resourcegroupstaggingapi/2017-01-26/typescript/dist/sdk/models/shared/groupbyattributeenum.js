@@ -1,6 +1,9 @@
-export var GroupByAttributeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GroupByAttributeEnum = void 0;
+var GroupByAttributeEnum;
 (function (GroupByAttributeEnum) {
     GroupByAttributeEnum["TargetId"] = "TARGET_ID";
     GroupByAttributeEnum["Region"] = "REGION";
     GroupByAttributeEnum["ResourceType"] = "RESOURCE_TYPE";
-})(GroupByAttributeEnum || (GroupByAttributeEnum = {}));
+})(GroupByAttributeEnum = exports.GroupByAttributeEnum || (exports.GroupByAttributeEnum = {}));

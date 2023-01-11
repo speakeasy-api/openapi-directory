@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteBundlesIdResponse = exports.DeleteBundlesIdRequest = exports.DeleteBundlesIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteBundlesIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteBundlesIdPathParams, _super);
     function DeleteBundlesIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], DeleteBundlesIdPathParams.prototype, "id", void 0);
     return DeleteBundlesIdPathParams;
-}(SpeakeasyBase));
-export { DeleteBundlesIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteBundlesIdPathParams = DeleteBundlesIdPathParams;
 var DeleteBundlesIdRequest = /** @class */ (function (_super) {
     __extends(DeleteBundlesIdRequest, _super);
     function DeleteBundlesIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteBundlesIdPathParams)
     ], DeleteBundlesIdRequest.prototype, "pathParams", void 0);
     return DeleteBundlesIdRequest;
-}(SpeakeasyBase));
-export { DeleteBundlesIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteBundlesIdRequest = DeleteBundlesIdRequest;
 var DeleteBundlesIdResponse = /** @class */ (function (_super) {
     __extends(DeleteBundlesIdResponse, _super);
     function DeleteBundlesIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteBundlesIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteBundlesIdResponse.prototype, "statusCode", void 0);
     return DeleteBundlesIdResponse;
-}(SpeakeasyBase));
-export { DeleteBundlesIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteBundlesIdResponse = DeleteBundlesIdResponse;

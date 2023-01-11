@@ -5,8 +5,8 @@ export declare class SpotUpdateAntennaReportLocationsInput extends SpeakeasyBase
 }
 export declare class SpotUpdateInput extends SpeakeasyBase {
     antennaReportLocations?: SpotUpdateAntennaReportLocationsInput[];
-    configRequest?: Map<string, any>;
+    configRequest?: Record<string, any>;
     geoCoords?: GeoCoordsInput;
     reportLocation?: string;
-    sensesRequest?: Map<string, any>;
+    sensesRequest?: Record<string, any>;
 }

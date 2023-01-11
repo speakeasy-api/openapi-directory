@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DimensionMetric } from "./dimensionmetric";
-import { EvaluationCycle } from "./evaluationcycle";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCustomerServiceMetricResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimensionmetric_1 = require("./dimensionmetric");
+var evaluationcycle_1 = require("./evaluationcycle");
 // GetCustomerServiceMetricResponse
 /**
  * This complex data type defines the response data that is returned from a request to getCustomerServiceMetric. The dimensionMetrics object contains the details of the dimension being measured and the calculated customer service metric values. The evaluationCycle defines the period used to calculate the metric values. The marketplaceId is the eBay marketplace for which the metrics are being considered.
@@ -35,17 +38,17 @@ var GetCustomerServiceMetricResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensionMetrics", elemType: DimensionMetric }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensionMetrics", elemType: dimensionmetric_1.DimensionMetric }),
         __metadata("design:type", Array)
     ], GetCustomerServiceMetricResponse.prototype, "dimensionMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evaluationCycle" }),
-        __metadata("design:type", EvaluationCycle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evaluationCycle" }),
+        __metadata("design:type", evaluationcycle_1.EvaluationCycle)
     ], GetCustomerServiceMetricResponse.prototype, "evaluationCycle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marketplaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketplaceId" }),
         __metadata("design:type", String)
     ], GetCustomerServiceMetricResponse.prototype, "marketplaceId", void 0);
     return GetCustomerServiceMetricResponse;
-}(SpeakeasyBase));
-export { GetCustomerServiceMetricResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCustomerServiceMetricResponse = GetCustomerServiceMetricResponse;

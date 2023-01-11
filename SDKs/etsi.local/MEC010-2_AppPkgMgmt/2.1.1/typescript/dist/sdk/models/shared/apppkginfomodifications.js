@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AppPkgInfoModificationsOperationStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppPkgInfoModifications = exports.AppPkgInfoModificationsOperationStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AppPkgInfoModificationsOperationStateEnum;
 (function (AppPkgInfoModificationsOperationStateEnum) {
     AppPkgInfoModificationsOperationStateEnum["Disabled"] = "DISABLED";
     AppPkgInfoModificationsOperationStateEnum["Enabled"] = "ENABLED";
-})(AppPkgInfoModificationsOperationStateEnum || (AppPkgInfoModificationsOperationStateEnum = {}));
+})(AppPkgInfoModificationsOperationStateEnum = exports.AppPkgInfoModificationsOperationStateEnum || (exports.AppPkgInfoModificationsOperationStateEnum = {}));
 // AppPkgInfoModifications
 /**
  * 'The data type represents the operational state for an application package resource'
@@ -38,9 +41,9 @@ var AppPkgInfoModifications = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operationState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operationState" }),
         __metadata("design:type", String)
     ], AppPkgInfoModifications.prototype, "operationState", void 0);
     return AppPkgInfoModifications;
-}(SpeakeasyBase));
-export { AppPkgInfoModifications };
+}(utils_1.SpeakeasyBase));
+exports.AppPkgInfoModifications = AppPkgInfoModifications;

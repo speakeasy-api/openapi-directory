@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { S3Destination } from "./s3destination";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClassificationExportConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var s3destination_1 = require("./s3destination");
 // ClassificationExportConfiguration
 /**
  * Specifies where to store data classification results, and the encryption settings to use when storing results in that location. Currently, you can store classification results only in an S3 bucket.
@@ -34,9 +37,9 @@ var ClassificationExportConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3Destination" }),
-        __metadata("design:type", S3Destination)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3Destination" }),
+        __metadata("design:type", s3destination_1.S3Destination)
     ], ClassificationExportConfiguration.prototype, "s3Destination", void 0);
     return ClassificationExportConfiguration;
-}(SpeakeasyBase));
-export { ClassificationExportConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.ClassificationExportConfiguration = ClassificationExportConfiguration;

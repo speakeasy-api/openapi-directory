@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AirtravelCoordinatesServerList = [
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AirtravelCoordinatesResponse = exports.AirtravelCoordinatesRequest = exports.AirtravelCoordinatesRequestBody = exports.AirtravelCoordinatesHeaders = exports.AirtravelCoordinatesServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+exports.AirtravelCoordinatesServerList = [
     "http://api.climatekuul.com:8000/footprint",
 ];
 var AirtravelCoordinatesHeaders = /** @class */ (function (_super) {
@@ -32,89 +35,89 @@ var AirtravelCoordinatesHeaders = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Content-Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Content-Type" }),
         __metadata("design:type", String)
     ], AirtravelCoordinatesHeaders.prototype, "contentType", void 0);
     return AirtravelCoordinatesHeaders;
-}(SpeakeasyBase));
-export { AirtravelCoordinatesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.AirtravelCoordinatesHeaders = AirtravelCoordinatesHeaders;
 var AirtravelCoordinatesRequestBody = /** @class */ (function (_super) {
     __extends(AirtravelCoordinatesRequestBody, _super);
     function AirtravelCoordinatesRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=apiKey_l1;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=apiKey_l1;" }),
         __metadata("design:type", String)
     ], AirtravelCoordinatesRequestBody.prototype, "apiKeyL1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=apiKey_l2;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=apiKey_l2;" }),
         __metadata("design:type", String)
     ], AirtravelCoordinatesRequestBody.prototype, "apiKeyL2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=destination_airport_latitude;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=destination_airport_latitude;" }),
         __metadata("design:type", Number)
     ], AirtravelCoordinatesRequestBody.prototype, "destinationAirportLatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=destination_airport_longitude;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=destination_airport_longitude;" }),
         __metadata("design:type", Number)
     ], AirtravelCoordinatesRequestBody.prototype, "destinationAirportLongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=number_of_passengers;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=number_of_passengers;" }),
         __metadata("design:type", Number)
     ], AirtravelCoordinatesRequestBody.prototype, "numberOfPassengers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=origin_airport_latitude;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=origin_airport_latitude;" }),
         __metadata("design:type", Number)
     ], AirtravelCoordinatesRequestBody.prototype, "originAirportLatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=origin_airport_longitude;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=origin_airport_longitude;" }),
         __metadata("design:type", Number)
     ], AirtravelCoordinatesRequestBody.prototype, "originAirportLongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=travel_class;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=travel_class;" }),
         __metadata("design:type", String)
     ], AirtravelCoordinatesRequestBody.prototype, "travelClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=travel_mode;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=travel_mode;" }),
         __metadata("design:type", String)
     ], AirtravelCoordinatesRequestBody.prototype, "travelMode", void 0);
     return AirtravelCoordinatesRequestBody;
-}(SpeakeasyBase));
-export { AirtravelCoordinatesRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.AirtravelCoordinatesRequestBody = AirtravelCoordinatesRequestBody;
 var AirtravelCoordinatesRequest = /** @class */ (function (_super) {
     __extends(AirtravelCoordinatesRequest, _super);
     function AirtravelCoordinatesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], AirtravelCoordinatesRequest.prototype, "serverUrl", void 0);
+    ], AirtravelCoordinatesRequest.prototype, "serverURL", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AirtravelCoordinatesHeaders)
     ], AirtravelCoordinatesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", AirtravelCoordinatesRequestBody)
     ], AirtravelCoordinatesRequest.prototype, "request", void 0);
     return AirtravelCoordinatesRequest;
-}(SpeakeasyBase));
-export { AirtravelCoordinatesRequest };
+}(utils_1.SpeakeasyBase));
+exports.AirtravelCoordinatesRequest = AirtravelCoordinatesRequest;
 var AirtravelCoordinatesResponse = /** @class */ (function (_super) {
     __extends(AirtravelCoordinatesResponse, _super);
     function AirtravelCoordinatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AirtravelCoordinatesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AirtravelCoordinatesResponse.prototype, "statusCode", void 0);
     return AirtravelCoordinatesResponse;
-}(SpeakeasyBase));
-export { AirtravelCoordinatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.AirtravelCoordinatesResponse = AirtravelCoordinatesResponse;

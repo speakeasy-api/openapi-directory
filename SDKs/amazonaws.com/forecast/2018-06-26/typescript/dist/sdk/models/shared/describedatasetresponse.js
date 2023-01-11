@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DatasetTypeEnum } from "./datasettypeenum";
-import { DomainEnum } from "./domainenum";
-import { EncryptionConfig } from "./encryptionconfig";
-import { Schema } from "./schema";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeDatasetResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasettypeenum_1 = require("./datasettypeenum");
+var domainenum_1 = require("./domainenum");
+var encryptionconfig_1 = require("./encryptionconfig");
+var schema_1 = require("./schema");
 var DescribeDatasetResponse = /** @class */ (function (_super) {
     __extends(DescribeDatasetResponse, _super);
     function DescribeDatasetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], DescribeDatasetResponse.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataFrequency" }),
         __metadata("design:type", String)
     ], DescribeDatasetResponse.prototype, "dataFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetArn" }),
         __metadata("design:type", String)
     ], DescribeDatasetResponse.prototype, "datasetArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetName" }),
         __metadata("design:type", String)
     ], DescribeDatasetResponse.prototype, "datasetName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetType" }),
         __metadata("design:type", String)
     ], DescribeDatasetResponse.prototype, "datasetType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Domain" }),
         __metadata("design:type", String)
     ], DescribeDatasetResponse.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EncryptionConfig" }),
-        __metadata("design:type", EncryptionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EncryptionConfig" }),
+        __metadata("design:type", encryptionconfig_1.EncryptionConfig)
     ], DescribeDatasetResponse.prototype, "encryptionConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModificationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModificationTime" }),
         __metadata("design:type", Date)
     ], DescribeDatasetResponse.prototype, "lastModificationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Schema" }),
-        __metadata("design:type", Schema)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Schema" }),
+        __metadata("design:type", schema_1.Schema)
     ], DescribeDatasetResponse.prototype, "schema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], DescribeDatasetResponse.prototype, "status", void 0);
     return DescribeDatasetResponse;
-}(SpeakeasyBase));
-export { DescribeDatasetResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeDatasetResponse = DescribeDatasetResponse;

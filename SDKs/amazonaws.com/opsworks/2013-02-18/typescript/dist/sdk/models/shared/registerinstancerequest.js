@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceIdentity } from "./instanceidentity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegisterInstanceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var instanceidentity_1 = require("./instanceidentity");
 var RegisterInstanceRequest = /** @class */ (function (_super) {
     __extends(RegisterInstanceRequest, _super);
     function RegisterInstanceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Hostname" }),
         __metadata("design:type", String)
     ], RegisterInstanceRequest.prototype, "hostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstanceIdentity" }),
-        __metadata("design:type", InstanceIdentity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstanceIdentity" }),
+        __metadata("design:type", instanceidentity_1.InstanceIdentity)
     ], RegisterInstanceRequest.prototype, "instanceIdentity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PrivateIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PrivateIp" }),
         __metadata("design:type", String)
     ], RegisterInstanceRequest.prototype, "privateIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PublicIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PublicIp" }),
         __metadata("design:type", String)
     ], RegisterInstanceRequest.prototype, "publicIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RsaPublicKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RsaPublicKey" }),
         __metadata("design:type", String)
     ], RegisterInstanceRequest.prototype, "rsaPublicKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RsaPublicKeyFingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RsaPublicKeyFingerprint" }),
         __metadata("design:type", String)
     ], RegisterInstanceRequest.prototype, "rsaPublicKeyFingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StackId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StackId" }),
         __metadata("design:type", String)
     ], RegisterInstanceRequest.prototype, "stackId", void 0);
     return RegisterInstanceRequest;
-}(SpeakeasyBase));
-export { RegisterInstanceRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegisterInstanceRequest = RegisterInstanceRequest;

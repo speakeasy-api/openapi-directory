@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StatisticSet = void 0;
+var utils_1 = require("../../../internal/utils");
 // StatisticSet
 /**
  * Internal only API.
@@ -33,21 +36,21 @@ var StatisticSet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Maximum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Maximum" }),
         __metadata("design:type", Number)
     ], StatisticSet.prototype, "maximum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Minimum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Minimum" }),
         __metadata("design:type", Number)
     ], StatisticSet.prototype, "minimum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SampleCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SampleCount" }),
         __metadata("design:type", Number)
     ], StatisticSet.prototype, "sampleCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Sum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Sum" }),
         __metadata("design:type", Number)
     ], StatisticSet.prototype, "sum", void 0);
     return StatisticSet;
-}(SpeakeasyBase));
-export { StatisticSet };
+}(utils_1.SpeakeasyBase));
+exports.StatisticSet = StatisticSet;

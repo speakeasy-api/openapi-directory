@@ -8,5 +8,5 @@ export declare class GetDeviceAppliancePerformanceRequest extends SpeakeasyBase 
 export declare class GetDeviceAppliancePerformanceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceAppliancePerformance200ApplicationJsonObject?: Map<string, any>;
+    getDeviceAppliancePerformance200ApplicationJSONObject?: Record<string, any>;
 }

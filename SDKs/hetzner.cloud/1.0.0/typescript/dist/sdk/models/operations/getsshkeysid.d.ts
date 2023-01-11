@@ -6,7 +6,7 @@ export declare class GetSshKeysId200ApplicationJsonSshKey extends SpeakeasyBase 
     created: string;
     fingerprint: string;
     id: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     publicKey: string;
 }
@@ -18,6 +18,6 @@ export declare class GetSshKeysIdRequest extends SpeakeasyBase {
 }
 export declare class GetSshKeysIdResponse extends SpeakeasyBase {
     contentType: string;
-    getSshKeysId200ApplicationJsonObject?: GetSshKeysId200ApplicationJson;
     statusCode: number;
+    getSshKeysId200ApplicationJSONObject?: GetSshKeysId200ApplicationJson;
 }

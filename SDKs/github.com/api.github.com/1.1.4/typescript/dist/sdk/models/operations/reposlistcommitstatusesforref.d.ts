@@ -15,7 +15,7 @@ export declare class ReposListCommitStatusesForRefRequest extends SpeakeasyBase 
 }
 export declare class ReposListCommitStatusesForRefResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     statuses?: shared.Status[];
 }

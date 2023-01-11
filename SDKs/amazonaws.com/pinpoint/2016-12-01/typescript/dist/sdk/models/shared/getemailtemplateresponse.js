@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EmailTemplateResponse } from "./emailtemplateresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEmailTemplateResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var emailtemplateresponse_1 = require("./emailtemplateresponse");
 var GetEmailTemplateResponse = /** @class */ (function (_super) {
     __extends(GetEmailTemplateResponse, _super);
     function GetEmailTemplateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmailTemplateResponse" }),
-        __metadata("design:type", EmailTemplateResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmailTemplateResponse" }),
+        __metadata("design:type", emailtemplateresponse_1.EmailTemplateResponse)
     ], GetEmailTemplateResponse.prototype, "emailTemplateResponse", void 0);
     return GetEmailTemplateResponse;
-}(SpeakeasyBase));
-export { GetEmailTemplateResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetEmailTemplateResponse = GetEmailTemplateResponse;

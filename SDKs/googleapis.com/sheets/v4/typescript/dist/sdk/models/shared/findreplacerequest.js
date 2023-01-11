@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GridRange } from "./gridrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindReplaceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var gridrange_1 = require("./gridrange");
 // FindReplaceRequest
 /**
  * Finds and replaces data in cells over a range, sheet, or all sheets.
@@ -34,41 +37,41 @@ var FindReplaceRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allSheets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allSheets" }),
         __metadata("design:type", Boolean)
     ], FindReplaceRequest.prototype, "allSheets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=find" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=find" }),
         __metadata("design:type", String)
     ], FindReplaceRequest.prototype, "find", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeFormulas" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeFormulas" }),
         __metadata("design:type", Boolean)
     ], FindReplaceRequest.prototype, "includeFormulas", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchCase" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchCase" }),
         __metadata("design:type", Boolean)
     ], FindReplaceRequest.prototype, "matchCase", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchEntireCell" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchEntireCell" }),
         __metadata("design:type", Boolean)
     ], FindReplaceRequest.prototype, "matchEntireCell", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], FindReplaceRequest.prototype, "range", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replacement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replacement" }),
         __metadata("design:type", String)
     ], FindReplaceRequest.prototype, "replacement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=searchByRegex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=searchByRegex" }),
         __metadata("design:type", Boolean)
     ], FindReplaceRequest.prototype, "searchByRegex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sheetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sheetId" }),
         __metadata("design:type", Number)
     ], FindReplaceRequest.prototype, "sheetId", void 0);
     return FindReplaceRequest;
-}(SpeakeasyBase));
-export { FindReplaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.FindReplaceRequest = FindReplaceRequest;

@@ -20,7 +20,7 @@ export class GetOfferingsOfferingIdActivitiesOpenresponseResponse extends Speake
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.OfferingActivitiesResponse })
   offeringActivitiesResponses?: shared.OfferingActivitiesResponse[];

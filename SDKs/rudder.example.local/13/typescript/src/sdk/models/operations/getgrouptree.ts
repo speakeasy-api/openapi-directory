@@ -8,7 +8,7 @@ export enum GetGroupTree200ApplicationJsonActionEnum {
 
 export class GetGroupTree200ApplicationJsonData extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=groupCategories" })
-  groupCategories: Map<string, any>;
+  groupCategories: Record<string, any>;
 }
 
 export enum GetGroupTree200ApplicationJsonResultEnum {
@@ -34,7 +34,7 @@ export class GetGroupTreeResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getGroupTree200ApplicationJsonObject?: GetGroupTree200ApplicationJson;
+  getGroupTree200ApplicationJSONObject?: GetGroupTree200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

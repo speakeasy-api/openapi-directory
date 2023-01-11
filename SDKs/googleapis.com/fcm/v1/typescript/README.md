@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { FcmProjectsMessagesSendRequest, FcmProjectsMessagesSendResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,138 +31,137 @@ const req: FcmProjectsMessagesSendRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   pathParams: {
-    parent: "eaque",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "magni",
-    alt: "json",
-    callback: "exercitationem",
-    fields: "et",
-    key: "recusandae",
-    oauthToken: "rem",
-    prettyPrint: false,
-    quotaUser: "facilis",
-    uploadType: "provident",
-    uploadProtocol: "illum",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     message: {
       android: {
-        collapseKey: "est",
+        collapseKey: "dicta",
         data: {
-          "illum": "quia",
+          "voluptatum": "et",
         },
-        directBootOk: true,
+        directBootOk: false,
         fcmOptions: {
-          analyticsLabel: "quae",
+          analyticsLabel: "dolorem",
         },
         notification: {
-          body: "consectetur",
+          body: "et",
           bodyLocArgs: [
-            "aut",
+            "iste",
           ],
-          bodyLocKey: "praesentium",
+          bodyLocKey: "vitae",
           bypassProxyNotification: true,
-          channelId: "labore",
-          clickAction: "quisquam",
-          color: "dicta",
+          channelId: "dolores",
+          clickAction: "illum",
+          color: "debitis",
           defaultLightSettings: false,
           defaultSound: false,
-          defaultVibrateTimings: false,
-          eventTime: "ut",
-          icon: "et",
-          image: "tempora",
+          defaultVibrateTimings: true,
+          eventTime: "id",
+          icon: "aspernatur",
+          image: "accusantium",
           lightSettings: {
             color: {
-              alpha: 37.200001,
-              blue: 52.200001,
-              green: 70.199997,
-              red: 45.099998,
+              alpha: 45.099998,
+              blue: 78.199997,
+              green: 0.100000,
+              red: 49.099998,
             },
-            lightOffDuration: "incidunt",
-            lightOnDuration: "iusto",
+            lightOffDuration: "omnis",
+            lightOnDuration: "aut",
           },
-          localOnly: false,
-          notificationCount: 9090797606458476403,
-          notificationPriority: "PRIORITY_HIGH",
-          sound: "id",
-          sticky: false,
-          tag: "autem",
-          ticker: "consequatur",
-          title: "officiis",
+          localOnly: true,
+          notificationCount: 5558237345453186302,
+          notificationPriority: "PRIORITY_MIN",
+          sound: "autem",
+          sticky: true,
+          tag: "nobis",
+          ticker: "odio",
+          title: "qui",
           titleLocArgs: [
-            "voluptate",
-            "doloribus",
-            "nesciunt",
+            "at",
+            "ipsum",
+            "eveniet",
           ],
-          titleLocKey: "exercitationem",
+          titleLocKey: "modi",
           vibrateTimings: [
-            "ut",
+            "inventore",
           ],
-          visibility: "SECRET",
+          visibility: "PUBLIC",
         },
-        priority: "HIGH",
-        restrictedPackageName: "ducimus",
-        ttl: "et",
+        priority: "NORMAL",
+        restrictedPackageName: "aut",
+        ttl: "reprehenderit",
       },
       apns: {
         fcmOptions: {
-          analyticsLabel: "quia",
-          image: "error",
+          analyticsLabel: "tempore",
+          image: "maiores",
         },
         headers: {
-          "molestias": "sequi",
+          "dolor": "beatae",
+          "veritatis": "in",
+          "et": "omnis",
         },
         payload: {
-          "id": "occaecati",
-          "nulla": "omnis",
-          "molestias": "nemo",
+          "ex": "dolores",
         },
       },
-      condition: "provident",
+      condition: "placeat",
       data: {
-        "officiis": "et",
-        "eaque": "a",
-        "odit": "velit",
+        "rerum": "mollitia",
+        "voluptas": "quam",
       },
       fcmOptions: {
-        analyticsLabel: "est",
+        analyticsLabel: "reprehenderit",
       },
-      name: "sunt",
+      name: "qui",
       notification: {
-        body: "nisi",
-        image: "commodi",
-        title: "facere",
+        body: "qui",
+        image: "unde",
+        title: "in",
       },
-      token: "pariatur",
-      topic: "voluptate",
+      token: "autem",
+      topic: "qui",
       webpush: {
         data: {
-          "voluptatum": "perferendis",
-          "quis": "ab",
-          "et": "distinctio",
+          "itaque": "ab",
+          "neque": "ullam",
+          "et": "accusantium",
         },
         fcmOptions: {
-          analyticsLabel: "doloremque",
-          link: "voluptas",
+          analyticsLabel: "esse",
+          link: "architecto",
         },
         headers: {
-          "consequatur": "alias",
+          "velit": "cumque",
         },
         notification: {
-          "fuga": "ab",
+          "sunt": "voluptates",
         },
       },
     },
-    validateOnly: true,
+    validateOnly: false,
   },
 };
 

@@ -1,12 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { HistoryRecord } from "./historyrecord";
 /**
  * Contains the output of DescribeSpotFleetRequestHistory.
 **/
 export declare class DescribeSpotFleetRequestHistoryResponse extends SpeakeasyBase {
-    historyRecords?: HistoryRecord[];
-    lastEvaluatedTime?: Date;
-    nextToken?: string;
-    spotFleetRequestId?: string;
-    startTime?: Date;
+    historyRecords?: Record<string, any>;
+    lastEvaluatedTime?: Record<string, any>;
+    nextToken?: Record<string, any>;
+    spotFleetRequestId?: Record<string, any>;
+    startTime?: Record<string, any>;
 }

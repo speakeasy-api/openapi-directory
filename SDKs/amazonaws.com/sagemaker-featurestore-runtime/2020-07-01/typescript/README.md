@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BatchGetRecordRequest, BatchGetRecordResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,40 +33,54 @@ const sdk = new SDK(WithSecurity(
     
 const req: BatchGetRecordRequest = {
   headers: {
-    xAmzAlgorithm: "voluptatibus",
-    xAmzContentSha256: "tempore",
-    xAmzCredential: "laudantium",
-    xAmzDate: "perferendis",
-    xAmzSecurityToken: "impedit",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
     xAmzSignature: "dolor",
-    xAmzSignedHeaders: "sunt",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
     identifiers: [
       {
-        featureGroupName: "dolore",
+        featureGroupName: "fugit",
         featureNames: [
-          "reiciendis",
+          "nihil",
         ],
         recordIdentifiersValueAsString: [
-          "corrupti",
+          "dicta",
+          "debitis",
+          "voluptatum",
         ],
       },
       {
-        featureGroupName: "ex",
+        featureGroupName: "et",
         featureNames: [
-          "voluptas",
+          "dolorem",
+          "et",
+          "voluptate",
         ],
         recordIdentifiersValueAsString: [
-          "doloribus",
-          "est",
+          "vitae",
+          "totam",
+          "dolores",
+        ],
+      },
+      {
+        featureGroupName: "illum",
+        featureNames: [
+          "vel",
+        ],
+        recordIdentifiersValueAsString: [
+          "dolore",
         ],
       },
     ],
   },
 };
 
-sdk.sdk.batchGetRecord(req).then((res: BatchGetRecordResponse | AxiosError) => {
+sdk.batchGetRecord(req).then((res: BatchGetRecordResponse | AxiosError) => {
    // handle response
 });
 ```

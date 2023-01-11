@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ComposerProjectsLocationsEnvironmentsCreateRequest, ComposerProjectsLocationsEnvironmentsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,159 +30,164 @@ const req: ComposerProjectsLocationsEnvironmentsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "corporis",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "consequatur",
+    accessToken: "culpa",
     alt: "media",
-    callback: "tempora",
-    fields: "in",
-    key: "sed",
-    oauthToken: "dolor",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "assumenda",
-    uploadType: "est",
-    uploadProtocol: "consequatur",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     config: {
-      airflowUri: "ipsa",
-      dagGcsPrefix: "ut",
+      airflowUri: "dicta",
+      dagGcsPrefix: "debitis",
       databaseConfig: {
-        machineType: "iure",
+        machineType: "voluptatum",
       },
       encryptionConfig: {
-        kmsKeyName: "dicta",
+        kmsKeyName: "et",
       },
-      environmentSize: "ENVIRONMENT_SIZE_UNSPECIFIED",
-      gkeCluster: "voluptatem",
+      environmentSize: "ENVIRONMENT_SIZE_LARGE",
+      gkeCluster: "dolorem",
       maintenanceWindow: {
-        endTime: "sit",
-        recurrence: "qui",
-        startTime: "autem",
+        endTime: "et",
+        recurrence: "voluptate",
+        startTime: "iste",
       },
       masterAuthorizedNetworksConfig: {
         cidrBlocks: [
           {
-            cidrBlock: "fugiat",
-            displayName: "eligendi",
-          },
-          {
-            cidrBlock: "quia",
-            displayName: "neque",
+            cidrBlock: "totam",
+            displayName: "dolores",
           },
         ],
-        enabled: true,
+        enabled: false,
       },
       nodeConfig: {
-        diskSizeGb: 4168920819476378105,
-        enableIpMasqAgent: true,
+        diskSizeGb: 6392442863481646880,
+        enableIpMasqAgent: false,
         ipAllocationPolicy: {
-          clusterIpv4CidrBlock: "aut",
-          clusterSecondaryRangeName: "sit",
-          servicesIpv4CidrBlock: "in",
-          servicesSecondaryRangeName: "sunt",
+          clusterIpv4CidrBlock: "odio",
+          clusterSecondaryRangeName: "dolore",
+          servicesIpv4CidrBlock: "id",
+          servicesSecondaryRangeName: "aspernatur",
           useIpAliases: true,
         },
-        location: "ullam",
-        machineType: "consequuntur",
-        network: "aperiam",
+        location: "totam",
+        machineType: "commodi",
+        network: "quis",
         oauthScopes: [
-          "repellendus",
-          "natus",
-          "consectetur",
+          "aut",
+          "odit",
         ],
-        serviceAccount: "unde",
-        subnetwork: "ut",
+        serviceAccount: "non",
+        subnetwork: "voluptas",
         tags: [
-          "ut",
-          "qui",
-          "aspernatur",
+          "aut",
+          "illo",
         ],
       },
-      nodeCount: 2279341170733245843,
+      nodeCount: 5558237345453186302,
       privateEnvironmentConfig: {
-        cloudComposerConnectionSubnetwork: "quas",
-        cloudComposerNetworkIpv4CidrBlock: "distinctio",
-        cloudSqlIpv4CidrBlock: "saepe",
-        enablePrivateEnvironment: true,
+        cloudComposerConnectionSubnetwork: "officiis",
+        cloudComposerNetworkIpv4CidrBlock: "autem",
+        cloudSqlIpv4CidrBlock: "consectetur",
+        enablePrivateEnvironment: false,
         enablePrivatelyUsedPublicIps: false,
         networkingConfig: {
           connectionType: "CONNECTION_TYPE_UNSPECIFIED",
         },
         privateClusterConfig: {
-          enablePrivateEndpoint: false,
-          masterIpv4CidrBlock: "nesciunt",
+          enablePrivateEndpoint: true,
+          masterIpv4CidrBlock: "at",
         },
-        webServerIpv4CidrBlock: "rem",
+        webServerIpv4CidrBlock: "ipsum",
+      },
+      recoveryConfig: {
+        scheduledSnapshotsConfig: {
+          enabled: true,
+          snapshotCreationSchedule: "modi",
+          snapshotLocation: "sint",
+          timeZone: "inventore",
+        },
       },
       softwareConfig: {
         airflowConfigOverrides: {
-          "ratione": "placeat",
-          "quam": "odit",
-          "voluptate": "ipsum",
+          "exercitationem": "aut",
+          "reprehenderit": "tempore",
+          "maiores": "incidunt",
         },
         envVariables: {
-          "pariatur": "dicta",
-          "nulla": "tenetur",
+          "beatae": "veritatis",
+          "in": "et",
         },
-        imageVersion: "et",
+        imageVersion: "omnis",
         pypiPackages: {
-          "ut": "modi",
-          "consequuntur": "ducimus",
-          "molestiae": "voluptas",
+          "ex": "dolores",
         },
-        pythonVersion: "facilis",
-        schedulerCount: 2867322181936390622,
+        pythonVersion: "placeat",
+        schedulerCount: 2118716725206170867,
       },
       webServerConfig: {
-        machineType: "modi",
+        machineType: "rerum",
       },
       webServerNetworkAccessControl: {
         allowedIpRanges: [
           {
-            description: "quasi",
-            value: "necessitatibus",
+            description: "voluptas",
+            value: "quam",
+          },
+          {
+            description: "reprehenderit",
+            value: "qui",
           },
         ],
       },
       workloadsConfig: {
         scheduler: {
-          count: 3406083734481139106,
-          cpu: 7.100000,
-          memoryGb: 34.099998,
-          storageGb: 50.099998,
+          count: 8056746523676181822,
+          cpu: 72.199997,
+          memoryGb: 72.199997,
+          storageGb: 22.100000,
         },
         webServer: {
-          cpu: 80.099998,
-          memoryGb: 75.099998,
-          storageGb: 88.199997,
+          cpu: 12.100000,
+          memoryGb: 76.099998,
+          storageGb: 40.099998,
         },
         worker: {
-          cpu: 3.200000,
-          maxCount: 8764901745431848692,
-          memoryGb: 61.099998,
-          minCount: 3415318281050260438,
-          storageGb: 35.200001,
+          cpu: 28.100000,
+          maxCount: 3604381780091280195,
+          memoryGb: 20.100000,
+          minCount: 759605945513541974,
+          storageGb: 31.200001,
         },
       },
     },
-    createTime: "dolores",
+    createTime: "et",
     labels: {
-      "tempora": "aliquam",
-      "in": "iusto",
+      "qui": "earum",
+      "illo": "omnis",
+      "ut": "consequatur",
     },
-    name: "reiciendis",
-    state: "CREATING",
-    updateTime: "laudantium",
-    uuid: "quae",
+    name: "dolor",
+    state: "DELETING",
+    updateTime: "error",
+    uuid: "reprehenderit",
   },
 };
 
@@ -200,7 +204,9 @@ sdk.projects.composerProjectsLocationsEnvironmentsCreate(req).then((res: Compose
 
 * `composerProjectsLocationsEnvironmentsCreate` - Create a new environment.
 * `composerProjectsLocationsEnvironmentsList` - List environments.
+* `composerProjectsLocationsEnvironmentsLoadSnapshot` - Loads a snapshot of a Cloud Composer environment. As a result of this operation, a snapshot of environment's specified in LoadSnapshotRequest is loaded into the environment.
 * `composerProjectsLocationsEnvironmentsPatch` - Update an environment.
+* `composerProjectsLocationsEnvironmentsSaveSnapshot` - Creates a snapshots of a Cloud Composer environment. As a result of this operation, snapshot of environment's state is stored in a location specified in the SaveSnapshotRequest.
 * `composerProjectsLocationsImageVersionsList` - List ImageVersions for provided location.
 * `composerProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `composerProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.

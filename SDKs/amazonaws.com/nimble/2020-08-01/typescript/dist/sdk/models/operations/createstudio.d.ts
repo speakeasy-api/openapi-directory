@@ -22,7 +22,7 @@ export declare class CreateStudioRequestBody extends SpeakeasyBase {
     displayName: string;
     studioEncryptionConfiguration?: CreateStudioRequestBodyStudioEncryptionConfiguration;
     studioName: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     userRoleArn: string;
 }
 export declare class CreateStudioRequest extends SpeakeasyBase {

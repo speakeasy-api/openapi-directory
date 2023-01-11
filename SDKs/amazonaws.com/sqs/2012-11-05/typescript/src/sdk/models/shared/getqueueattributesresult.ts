@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class GetQueueAttributesResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  attributes?: Map<string, string>;
+  attributes?: Record<string, string>;
 }

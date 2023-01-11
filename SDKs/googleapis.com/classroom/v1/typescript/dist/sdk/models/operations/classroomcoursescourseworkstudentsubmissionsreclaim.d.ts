@@ -25,11 +25,11 @@ export declare class ClassroomCoursesCourseWorkStudentSubmissionsReclaimSecurity
 export declare class ClassroomCoursesCourseWorkStudentSubmissionsReclaimRequest extends SpeakeasyBase {
     pathParams: ClassroomCoursesCourseWorkStudentSubmissionsReclaimPathParams;
     queryParams: ClassroomCoursesCourseWorkStudentSubmissionsReclaimQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: ClassroomCoursesCourseWorkStudentSubmissionsReclaimSecurity;
 }
 export declare class ClassroomCoursesCourseWorkStudentSubmissionsReclaimResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

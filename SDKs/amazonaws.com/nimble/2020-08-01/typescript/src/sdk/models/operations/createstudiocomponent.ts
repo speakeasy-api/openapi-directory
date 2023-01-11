@@ -93,7 +93,7 @@ export class CreateStudioComponentRequestBody extends SpeakeasyBase {
   subtype?: CreateStudioComponentRequestBodySubtypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type: CreateStudioComponentRequestBodyTypeEnum;

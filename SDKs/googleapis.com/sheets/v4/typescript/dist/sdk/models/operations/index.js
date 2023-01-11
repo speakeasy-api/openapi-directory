@@ -1,17 +1,33 @@
-export * from "./sheetsspreadsheetsbatchupdate";
-export * from "./sheetsspreadsheetscreate";
-export * from "./sheetsspreadsheetsdevelopermetadataget";
-export * from "./sheetsspreadsheetsdevelopermetadatasearch";
-export * from "./sheetsspreadsheetsget";
-export * from "./sheetsspreadsheetsgetbydatafilter";
-export * from "./sheetsspreadsheetssheetscopyto";
-export * from "./sheetsspreadsheetsvaluesappend";
-export * from "./sheetsspreadsheetsvaluesbatchclear";
-export * from "./sheetsspreadsheetsvaluesbatchclearbydatafilter";
-export * from "./sheetsspreadsheetsvaluesbatchget";
-export * from "./sheetsspreadsheetsvaluesbatchgetbydatafilter";
-export * from "./sheetsspreadsheetsvaluesbatchupdate";
-export * from "./sheetsspreadsheetsvaluesbatchupdatebydatafilter";
-export * from "./sheetsspreadsheetsvaluesclear";
-export * from "./sheetsspreadsheetsvaluesget";
-export * from "./sheetsspreadsheetsvaluesupdate";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./sheetsspreadsheetsbatchupdate"), exports);
+__exportStar(require("./sheetsspreadsheetscreate"), exports);
+__exportStar(require("./sheetsspreadsheetsdevelopermetadataget"), exports);
+__exportStar(require("./sheetsspreadsheetsdevelopermetadatasearch"), exports);
+__exportStar(require("./sheetsspreadsheetsget"), exports);
+__exportStar(require("./sheetsspreadsheetsgetbydatafilter"), exports);
+__exportStar(require("./sheetsspreadsheetssheetscopyto"), exports);
+__exportStar(require("./sheetsspreadsheetsvaluesappend"), exports);
+__exportStar(require("./sheetsspreadsheetsvaluesbatchclear"), exports);
+__exportStar(require("./sheetsspreadsheetsvaluesbatchclearbydatafilter"), exports);
+__exportStar(require("./sheetsspreadsheetsvaluesbatchget"), exports);
+__exportStar(require("./sheetsspreadsheetsvaluesbatchgetbydatafilter"), exports);
+__exportStar(require("./sheetsspreadsheetsvaluesbatchupdate"), exports);
+__exportStar(require("./sheetsspreadsheetsvaluesbatchupdatebydatafilter"), exports);
+__exportStar(require("./sheetsspreadsheetsvaluesclear"), exports);
+__exportStar(require("./sheetsspreadsheetsvaluesget"), exports);
+__exportStar(require("./sheetsspreadsheetsvaluesupdate"), exports);

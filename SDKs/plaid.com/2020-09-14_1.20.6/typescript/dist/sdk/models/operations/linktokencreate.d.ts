@@ -5,6 +5,6 @@ export declare class LinkTokenCreateRequest extends SpeakeasyBase {
 }
 export declare class LinkTokenCreateResponse extends SpeakeasyBase {
     contentType: string;
-    linkTokenCreateResponse?: Map<string, any>;
+    linkTokenCreateResponse?: Record<string, any>;
     statusCode: number;
 }

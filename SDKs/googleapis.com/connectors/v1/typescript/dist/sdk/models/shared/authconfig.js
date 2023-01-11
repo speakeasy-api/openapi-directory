@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigVariable } from "./configvariable";
-import { Oauth2ClientCredentials } from "./oauth2clientcredentials";
-import { Oauth2JwtBearer } from "./oauth2jwtbearer";
-import { SshPublicKey } from "./sshpublickey";
-import { UserPassword } from "./userpassword";
-export var AuthConfigAuthTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuthConfig = exports.AuthConfigAuthTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var configvariable_1 = require("./configvariable");
+var oauth2clientcredentials_1 = require("./oauth2clientcredentials");
+var oauth2jwtbearer_1 = require("./oauth2jwtbearer");
+var sshpublickey_1 = require("./sshpublickey");
+var userpassword_1 = require("./userpassword");
+var AuthConfigAuthTypeEnum;
 (function (AuthConfigAuthTypeEnum) {
     AuthConfigAuthTypeEnum["AuthTypeUnspecified"] = "AUTH_TYPE_UNSPECIFIED";
     AuthConfigAuthTypeEnum["UserPassword"] = "USER_PASSWORD";
@@ -36,7 +39,7 @@ export var AuthConfigAuthTypeEnum;
     AuthConfigAuthTypeEnum["Oauth2ClientCredentials"] = "OAUTH2_CLIENT_CREDENTIALS";
     AuthConfigAuthTypeEnum["SshPublicKey"] = "SSH_PUBLIC_KEY";
     AuthConfigAuthTypeEnum["Oauth2AuthCodeFlow"] = "OAUTH2_AUTH_CODE_FLOW";
-})(AuthConfigAuthTypeEnum || (AuthConfigAuthTypeEnum = {}));
+})(AuthConfigAuthTypeEnum = exports.AuthConfigAuthTypeEnum || (exports.AuthConfigAuthTypeEnum = {}));
 // AuthConfig
 /**
  * AuthConfig defines details of a authentication type.
@@ -47,29 +50,29 @@ var AuthConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalVariables", elemType: ConfigVariable }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalVariables", elemType: configvariable_1.ConfigVariable }),
         __metadata("design:type", Array)
     ], AuthConfig.prototype, "additionalVariables", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authType" }),
         __metadata("design:type", String)
     ], AuthConfig.prototype, "authType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth2ClientCredentials" }),
-        __metadata("design:type", Oauth2ClientCredentials)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth2ClientCredentials" }),
+        __metadata("design:type", oauth2clientcredentials_1.Oauth2ClientCredentials)
     ], AuthConfig.prototype, "oauth2ClientCredentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth2JwtBearer" }),
-        __metadata("design:type", Oauth2JwtBearer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth2JwtBearer" }),
+        __metadata("design:type", oauth2jwtbearer_1.Oauth2JwtBearer)
     ], AuthConfig.prototype, "oauth2JwtBearer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sshPublicKey" }),
-        __metadata("design:type", SshPublicKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sshPublicKey" }),
+        __metadata("design:type", sshpublickey_1.SshPublicKey)
     ], AuthConfig.prototype, "sshPublicKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userPassword" }),
-        __metadata("design:type", UserPassword)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userPassword" }),
+        __metadata("design:type", userpassword_1.UserPassword)
     ], AuthConfig.prototype, "userPassword", void 0);
     return AuthConfig;
-}(SpeakeasyBase));
-export { AuthConfig };
+}(utils_1.SpeakeasyBase));
+exports.AuthConfig = AuthConfig;

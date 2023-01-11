@@ -12,8 +12,8 @@ export declare class SixGetTheMinimumPaymentAmountRequest extends SpeakeasyBase 
     queryParams: SixGetTheMinimumPaymentAmountQueryParams;
 }
 export declare class SixGetTheMinimumPaymentAmountResponse extends SpeakeasyBase {
-    sixGetTheMinimumPaymentAmount200ApplicationJsonObject?: SixGetTheMinimumPaymentAmount200ApplicationJson;
+    sixGetTheMinimumPaymentAmount200ApplicationJSONObject?: SixGetTheMinimumPaymentAmount200ApplicationJson;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

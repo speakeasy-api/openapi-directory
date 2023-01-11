@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RepeatViewModel } from "./repeatviewmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceBlockViewModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var repeatviewmodel_1 = require("./repeatviewmodel");
 var ServiceBlockViewModel = /** @class */ (function (_super) {
     __extends(ServiceBlockViewModel, _super);
     function ServiceBlockViewModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletedStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletedStatus" }),
         __metadata("design:type", Boolean)
     ], ServiceBlockViewModel.prototype, "deletedStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletedTime" }),
         __metadata("design:type", String)
     ], ServiceBlockViewModel.prototype, "deletedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", Date)
     ], ServiceBlockViewModel.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Number)
     ], ServiceBlockViewModel.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ServiceBlockViewModel.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationId" }),
         __metadata("design:type", String)
     ], ServiceBlockViewModel.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectName" }),
         __metadata("design:type", String)
     ], ServiceBlockViewModel.prototype, "objectName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], ServiceBlockViewModel.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repeat" }),
-        __metadata("design:type", RepeatViewModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repeat" }),
+        __metadata("design:type", repeatviewmodel_1.RepeatViewModel)
     ], ServiceBlockViewModel.prototype, "repeat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repeats" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repeats" }),
         __metadata("design:type", Boolean)
     ], ServiceBlockViewModel.prototype, "repeats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceId" }),
         __metadata("design:type", String)
     ], ServiceBlockViewModel.prototype, "serviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", Date)
     ], ServiceBlockViewModel.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Number)
     ], ServiceBlockViewModel.prototype, "startTime", void 0);
     return ServiceBlockViewModel;
-}(SpeakeasyBase));
-export { ServiceBlockViewModel };
+}(utils_1.SpeakeasyBase));
+exports.ServiceBlockViewModel = ServiceBlockViewModel;

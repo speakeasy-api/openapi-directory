@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaUpdateLabelPermissionRequest } from "./googleappsdrivelabelsv2betaupdatelabelpermissionrequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betaupdatelabelpermissionrequest_1 = require("./googleappsdrivelabelsv2betaupdatelabelpermissionrequest");
 // GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest
 /**
  * Updates one or more Label Permissions.
@@ -34,13 +37,13 @@ var GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requests", elemType: GoogleAppsDriveLabelsV2betaUpdateLabelPermissionRequest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requests", elemType: googleappsdrivelabelsv2betaupdatelabelpermissionrequest_1.GoogleAppsDriveLabelsV2betaUpdateLabelPermissionRequest }),
         __metadata("design:type", Array)
     ], GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest.prototype, "requests", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useAdminAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useAdminAccess" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest.prototype, "useAdminAccess", void 0);
     return GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest = GoogleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest;

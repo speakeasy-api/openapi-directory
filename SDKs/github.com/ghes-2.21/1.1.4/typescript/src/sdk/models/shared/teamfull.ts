@@ -3,6 +3,10 @@ import { OrganizationFull } from "./organizationfull";
 
 
 
+// TeamFullTeamSimple
+/** 
+ * Groups of organization members that gives permissions on specified repositories.
+**/
 export class TeamFullTeamSimple extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=description" })
   description: string;

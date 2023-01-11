@@ -8,8 +8,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class ConsolidationStrategy extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=legacy" })
-  legacy?: Map<string, any>;
+  legacy?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=none" })
-  none?: Map<string, any>;
+  none?: Record<string, any>;
 }

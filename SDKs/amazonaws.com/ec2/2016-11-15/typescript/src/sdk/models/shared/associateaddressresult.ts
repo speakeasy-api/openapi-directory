@@ -4,5 +4,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class AssociateAddressResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  associationId?: string;
+  associationId?: Record<string, any>;
 }

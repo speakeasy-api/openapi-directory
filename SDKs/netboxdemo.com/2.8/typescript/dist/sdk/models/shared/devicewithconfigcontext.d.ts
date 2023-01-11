@@ -47,9 +47,9 @@ export declare class DeviceWithConfigContext extends SpeakeasyBase {
     assetTag?: string;
     cluster?: NestedCluster;
     comments?: string;
-    configContext?: Map<string, string>;
+    configContext?: Record<string, string>;
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     deviceRole: NestedDeviceRole;
     deviceType: NestedDeviceType;
     displayName?: string;

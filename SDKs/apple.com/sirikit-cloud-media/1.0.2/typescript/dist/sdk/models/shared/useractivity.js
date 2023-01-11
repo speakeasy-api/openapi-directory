@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserActivity = void 0;
+var utils_1 = require("../../../internal/utils");
 var UserActivity = /** @class */ (function (_super) {
     __extends(UserActivity, _super);
     function UserActivity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activityType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activityType" }),
         __metadata("design:type", String)
     ], UserActivity.prototype, "activityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=persistentIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=persistentIdentifier" }),
         __metadata("design:type", String)
     ], UserActivity.prototype, "persistentIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], UserActivity.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userInfo" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userInfo" }),
+        __metadata("design:type", Object)
     ], UserActivity.prototype, "userInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], UserActivity.prototype, "version", void 0);
     return UserActivity;
-}(SpeakeasyBase));
-export { UserActivity };
+}(utils_1.SpeakeasyBase));
+exports.UserActivity = UserActivity;

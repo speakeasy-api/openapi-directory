@@ -44,5 +44,5 @@ export class SupportingWorkResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  supportingWork200ApplicationJsonObject?: SupportingWork200ApplicationJson;
+  supportingWork200ApplicationJSONObject?: SupportingWork200ApplicationJson;
 }

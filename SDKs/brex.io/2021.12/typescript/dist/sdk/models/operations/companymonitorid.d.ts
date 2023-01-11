@@ -11,8 +11,8 @@ export declare class CompanyMonitorIdRequest extends SpeakeasyBase {
     security: CompanyMonitorIdSecurity;
 }
 export declare class CompanyMonitorIdResponse extends SpeakeasyBase {
-    companyMonitorId200ApplicationJsonAnies?: any[];
-    companyMonitorIdDefaultApplicationJsonAny?: any;
+    companyMonitorId200ApplicationJSONAnies?: any[];
+    companyMonitorIdDefaultApplicationJSONAny?: any;
     contentType: string;
     statusCode: number;
 }

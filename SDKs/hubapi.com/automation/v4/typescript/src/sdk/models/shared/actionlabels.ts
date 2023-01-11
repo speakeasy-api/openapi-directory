@@ -2,10 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-// ActionLabels
-/** 
- * User-facing labels for this custom workflow action.
-**/
 export class ActionLabels extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=actionCardContent" })
   actionCardContent?: string;
@@ -14,14 +10,14 @@ export class ActionLabels extends SpeakeasyBase {
   actionDescription?: string;
 
   @SpeakeasyMetadata({ data: "json, name=actionName" })
-  actionName: string;
+  actionName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=appDisplayName" })
   appDisplayName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=inputFieldDescriptions" })
-  inputFieldDescriptions?: Map<string, string>;
+  inputFieldDescriptions?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=inputFieldLabels" })
-  inputFieldLabels?: Map<string, string>;
+  inputFieldLabels?: Record<string, string>;
 }

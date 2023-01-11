@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Target } from "./target";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Canary = void 0;
+var utils_1 = require("../../../internal/utils");
+var target_1 = require("./target");
 // Canary
 /**
  * The configuration of the canary mode for a service descriptor
@@ -34,21 +37,21 @@ var Canary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], Canary.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=root" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=root" }),
         __metadata("design:type", String)
     ], Canary.prototype, "root", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targets", elemType: Target }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targets", elemType: target_1.Target }),
         __metadata("design:type", Array)
     ], Canary.prototype, "targets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=traffic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=traffic" }),
         __metadata("design:type", Number)
     ], Canary.prototype, "traffic", void 0);
     return Canary;
-}(SpeakeasyBase));
-export { Canary };
+}(utils_1.SpeakeasyBase));
+exports.Canary = Canary;

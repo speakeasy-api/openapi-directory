@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InputParallelism } from "./inputparallelism";
-import { InputProcessingConfigurationDescription } from "./inputprocessingconfigurationdescription";
-import { SourceSchema } from "./sourceschema";
-import { InputStartingPositionConfiguration } from "./inputstartingpositionconfiguration";
-import { KinesisFirehoseInputDescription } from "./kinesisfirehoseinputdescription";
-import { KinesisStreamsInputDescription } from "./kinesisstreamsinputdescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InputDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var inputparallelism_1 = require("./inputparallelism");
+var inputprocessingconfigurationdescription_1 = require("./inputprocessingconfigurationdescription");
+var sourceschema_1 = require("./sourceschema");
+var inputstartingpositionconfiguration_1 = require("./inputstartingpositionconfiguration");
+var kinesisfirehoseinputdescription_1 = require("./kinesisfirehoseinputdescription");
+var kinesisstreamsinputdescription_1 = require("./kinesisstreamsinputdescription");
 // InputDescription
 /**
  * Describes the application input configuration. For more information, see <a href="https://docs.aws.amazon.com/kinesisanalytics/latest/dev/how-it-works-input.html">Configuring Application Input</a>.
@@ -39,41 +42,41 @@ var InputDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InAppStreamNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InAppStreamNames" }),
         __metadata("design:type", Array)
     ], InputDescription.prototype, "inAppStreamNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InputId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InputId" }),
         __metadata("design:type", String)
     ], InputDescription.prototype, "inputId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InputParallelism" }),
-        __metadata("design:type", InputParallelism)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InputParallelism" }),
+        __metadata("design:type", inputparallelism_1.InputParallelism)
     ], InputDescription.prototype, "inputParallelism", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InputProcessingConfigurationDescription" }),
-        __metadata("design:type", InputProcessingConfigurationDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InputProcessingConfigurationDescription" }),
+        __metadata("design:type", inputprocessingconfigurationdescription_1.InputProcessingConfigurationDescription)
     ], InputDescription.prototype, "inputProcessingConfigurationDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InputSchema" }),
-        __metadata("design:type", SourceSchema)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InputSchema" }),
+        __metadata("design:type", sourceschema_1.SourceSchema)
     ], InputDescription.prototype, "inputSchema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InputStartingPositionConfiguration" }),
-        __metadata("design:type", InputStartingPositionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InputStartingPositionConfiguration" }),
+        __metadata("design:type", inputstartingpositionconfiguration_1.InputStartingPositionConfiguration)
     ], InputDescription.prototype, "inputStartingPositionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KinesisFirehoseInputDescription" }),
-        __metadata("design:type", KinesisFirehoseInputDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KinesisFirehoseInputDescription" }),
+        __metadata("design:type", kinesisfirehoseinputdescription_1.KinesisFirehoseInputDescription)
     ], InputDescription.prototype, "kinesisFirehoseInputDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KinesisStreamsInputDescription" }),
-        __metadata("design:type", KinesisStreamsInputDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KinesisStreamsInputDescription" }),
+        __metadata("design:type", kinesisstreamsinputdescription_1.KinesisStreamsInputDescription)
     ], InputDescription.prototype, "kinesisStreamsInputDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NamePrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NamePrefix" }),
         __metadata("design:type", String)
     ], InputDescription.prototype, "namePrefix", void 0);
     return InputDescription;
-}(SpeakeasyBase));
-export { InputDescription };
+}(utils_1.SpeakeasyBase));
+exports.InputDescription = InputDescription;

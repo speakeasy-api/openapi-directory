@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomerManagedEncryptionStatus } from "./customermanagedencryptionstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AutomaticStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var customermanagedencryptionstatus_1 = require("./customermanagedencryptionstatus");
 // AutomaticStatus
 /**
  * The replication status of a SecretVersion using automatic replication. Only populated if the parent Secret has an automatic replication policy.
@@ -34,9 +37,9 @@ var AutomaticStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerManagedEncryption" }),
-        __metadata("design:type", CustomerManagedEncryptionStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerManagedEncryption" }),
+        __metadata("design:type", customermanagedencryptionstatus_1.CustomerManagedEncryptionStatus)
     ], AutomaticStatus.prototype, "customerManagedEncryption", void 0);
     return AutomaticStatus;
-}(SpeakeasyBase));
-export { AutomaticStatus };
+}(utils_1.SpeakeasyBase));
+exports.AutomaticStatus = AutomaticStatus;

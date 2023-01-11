@@ -1,22 +1,38 @@
-export * from "./domainsprojectslocationslist";
-export * from "./domainsprojectslocationsoperationslist";
-export * from "./domainsprojectslocationsregistrationsconfigurecontactsettings";
-export * from "./domainsprojectslocationsregistrationsconfigurednssettings";
-export * from "./domainsprojectslocationsregistrationsconfiguremanagementsettings";
-export * from "./domainsprojectslocationsregistrationsdelete";
-export * from "./domainsprojectslocationsregistrationsexport";
-export * from "./domainsprojectslocationsregistrationsget";
-export * from "./domainsprojectslocationsregistrationsgetiampolicy";
-export * from "./domainsprojectslocationsregistrationsimport";
-export * from "./domainsprojectslocationsregistrationslist";
-export * from "./domainsprojectslocationsregistrationspatch";
-export * from "./domainsprojectslocationsregistrationsregister";
-export * from "./domainsprojectslocationsregistrationsresetauthorizationcode";
-export * from "./domainsprojectslocationsregistrationsretrieveauthorizationcode";
-export * from "./domainsprojectslocationsregistrationsretrieveimportabledomains";
-export * from "./domainsprojectslocationsregistrationsretrieveregisterparameters";
-export * from "./domainsprojectslocationsregistrationsretrievetransferparameters";
-export * from "./domainsprojectslocationsregistrationssearchdomains";
-export * from "./domainsprojectslocationsregistrationssetiampolicy";
-export * from "./domainsprojectslocationsregistrationstestiampermissions";
-export * from "./domainsprojectslocationsregistrationstransfer";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./domainsprojectslocationslist"), exports);
+__exportStar(require("./domainsprojectslocationsoperationslist"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationsconfigurecontactsettings"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationsconfigurednssettings"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationsconfiguremanagementsettings"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationsdelete"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationsexport"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationsget"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationsgetiampolicy"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationsimport"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationslist"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationspatch"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationsregister"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationsresetauthorizationcode"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationsretrieveauthorizationcode"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationsretrieveimportabledomains"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationsretrieveregisterparameters"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationsretrievetransferparameters"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationssearchdomains"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationssetiampolicy"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationstestiampermissions"), exports);
+__exportStar(require("./domainsprojectslocationsregistrationstransfer"), exports);

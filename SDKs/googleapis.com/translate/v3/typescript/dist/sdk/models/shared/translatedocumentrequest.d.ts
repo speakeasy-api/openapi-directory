@@ -11,7 +11,7 @@ export declare class TranslateDocumentRequest extends SpeakeasyBase {
     documentOutputConfig?: DocumentOutputConfig;
     glossaryConfig?: TranslateTextGlossaryConfig;
     isTranslateNativePdfOnly?: boolean;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     model?: string;
     sourceLanguageCode?: string;
     targetLanguageCode?: string;

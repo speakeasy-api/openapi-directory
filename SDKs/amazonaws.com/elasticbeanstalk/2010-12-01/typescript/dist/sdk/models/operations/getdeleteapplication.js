@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteApplicationActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteApplicationResponse = exports.GetDeleteApplicationRequest = exports.GetDeleteApplicationHeaders = exports.GetDeleteApplicationQueryParams = exports.GetDeleteApplicationVersionEnum = exports.GetDeleteApplicationActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteApplicationActionEnum;
 (function (GetDeleteApplicationActionEnum) {
     GetDeleteApplicationActionEnum["DeleteApplication"] = "DeleteApplication";
-})(GetDeleteApplicationActionEnum || (GetDeleteApplicationActionEnum = {}));
-export var GetDeleteApplicationVersionEnum;
+})(GetDeleteApplicationActionEnum = exports.GetDeleteApplicationActionEnum || (exports.GetDeleteApplicationActionEnum = {}));
+var GetDeleteApplicationVersionEnum;
 (function (GetDeleteApplicationVersionEnum) {
     GetDeleteApplicationVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetDeleteApplicationVersionEnum || (GetDeleteApplicationVersionEnum = {}));
+})(GetDeleteApplicationVersionEnum = exports.GetDeleteApplicationVersionEnum || (exports.GetDeleteApplicationVersionEnum = {}));
 var GetDeleteApplicationQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteApplicationQueryParams, _super);
     function GetDeleteApplicationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteApplicationQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ApplicationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ApplicationName" }),
         __metadata("design:type", String)
     ], GetDeleteApplicationQueryParams.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TerminateEnvByForce" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TerminateEnvByForce" }),
         __metadata("design:type", Boolean)
     ], GetDeleteApplicationQueryParams.prototype, "terminateEnvByForce", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteApplicationQueryParams.prototype, "version", void 0);
     return GetDeleteApplicationQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteApplicationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteApplicationQueryParams = GetDeleteApplicationQueryParams;
 var GetDeleteApplicationHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteApplicationHeaders, _super);
     function GetDeleteApplicationHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteApplicationHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteApplicationHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteApplicationHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteApplicationHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteApplicationHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteApplicationHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteApplicationHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteApplicationHeaders;
-}(SpeakeasyBase));
-export { GetDeleteApplicationHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteApplicationHeaders = GetDeleteApplicationHeaders;
 var GetDeleteApplicationRequest = /** @class */ (function (_super) {
     __extends(GetDeleteApplicationRequest, _super);
     function GetDeleteApplicationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteApplicationQueryParams)
     ], GetDeleteApplicationRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteApplicationHeaders)
     ], GetDeleteApplicationRequest.prototype, "headers", void 0);
     return GetDeleteApplicationRequest;
-}(SpeakeasyBase));
-export { GetDeleteApplicationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteApplicationRequest = GetDeleteApplicationRequest;
 var GetDeleteApplicationResponse = /** @class */ (function (_super) {
     __extends(GetDeleteApplicationResponse, _super);
     function GetDeleteApplicationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteApplicationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteApplicationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteApplicationResponse.prototype, "statusCode", void 0);
     return GetDeleteApplicationResponse;
-}(SpeakeasyBase));
-export { GetDeleteApplicationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteApplicationResponse = GetDeleteApplicationResponse;

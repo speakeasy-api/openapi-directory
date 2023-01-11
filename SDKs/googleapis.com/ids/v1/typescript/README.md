@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { IdsProjectsLocationsEndpointsCreateRequest, IdsProjectsLocationsEndpointsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,7 +30,7 @@ const req: IdsProjectsLocationsEndpointsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
@@ -41,28 +40,27 @@ const req: IdsProjectsLocationsEndpointsCreateRequest = {
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "odit",
-    alt: "proto",
-    callback: "et",
-    endpointId: "tempore",
-    fields: "reprehenderit",
-    key: "tempore",
-    oauthToken: "perspiciatis",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    endpointId: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
     prettyPrint: false,
-    quotaUser: "et",
-    requestId: "pariatur",
-    uploadType: "sed",
-    uploadProtocol: "et",
+    quotaUser: "nihil",
+    requestId: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
   request: {
-    description: "debitis",
+    description: "voluptatum",
     labels: {
-      "labore": "qui",
-      "voluptatem": "consequatur",
+      "ut": "dolorem",
     },
-    network: "mollitia",
-    severity: "INFORMATIONAL",
-    trafficLogs: false,
+    network: "et",
+    severity: "SEVERITY_UNSPECIFIED",
+    trafficLogs: true,
   },
 };
 

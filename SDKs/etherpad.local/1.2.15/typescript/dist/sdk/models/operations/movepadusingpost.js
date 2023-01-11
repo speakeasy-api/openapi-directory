@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,148 +23,150 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MovePadUsingPostResponse = exports.MovePadUsingPostRequest = exports.MovePadUsingPost500ApplicationJson = exports.MovePadUsingPost401ApplicationJson = exports.MovePadUsingPost400ApplicationJson = exports.MovePadUsingPost200ApplicationJson = exports.MovePadUsingPostQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var MovePadUsingPostQueryParams = /** @class */ (function (_super) {
     __extends(MovePadUsingPostQueryParams, _super);
     function MovePadUsingPostQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=destinationID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=destinationID" }),
         __metadata("design:type", String)
-    ], MovePadUsingPostQueryParams.prototype, "destinationId", void 0);
+    ], MovePadUsingPostQueryParams.prototype, "destinationID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=force" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=force" }),
         __metadata("design:type", String)
     ], MovePadUsingPostQueryParams.prototype, "force", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sourceID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sourceID" }),
         __metadata("design:type", String)
-    ], MovePadUsingPostQueryParams.prototype, "sourceId", void 0);
+    ], MovePadUsingPostQueryParams.prototype, "sourceID", void 0);
     return MovePadUsingPostQueryParams;
-}(SpeakeasyBase));
-export { MovePadUsingPostQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.MovePadUsingPostQueryParams = MovePadUsingPostQueryParams;
 var MovePadUsingPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(MovePadUsingPost200ApplicationJson, _super);
     function MovePadUsingPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], MovePadUsingPost200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], MovePadUsingPost200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], MovePadUsingPost200ApplicationJson.prototype, "message", void 0);
     return MovePadUsingPost200ApplicationJson;
-}(SpeakeasyBase));
-export { MovePadUsingPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.MovePadUsingPost200ApplicationJson = MovePadUsingPost200ApplicationJson;
 var MovePadUsingPost400ApplicationJson = /** @class */ (function (_super) {
     __extends(MovePadUsingPost400ApplicationJson, _super);
     function MovePadUsingPost400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], MovePadUsingPost400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], MovePadUsingPost400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], MovePadUsingPost400ApplicationJson.prototype, "message", void 0);
     return MovePadUsingPost400ApplicationJson;
-}(SpeakeasyBase));
-export { MovePadUsingPost400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.MovePadUsingPost400ApplicationJson = MovePadUsingPost400ApplicationJson;
 var MovePadUsingPost401ApplicationJson = /** @class */ (function (_super) {
     __extends(MovePadUsingPost401ApplicationJson, _super);
     function MovePadUsingPost401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], MovePadUsingPost401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], MovePadUsingPost401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], MovePadUsingPost401ApplicationJson.prototype, "message", void 0);
     return MovePadUsingPost401ApplicationJson;
-}(SpeakeasyBase));
-export { MovePadUsingPost401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.MovePadUsingPost401ApplicationJson = MovePadUsingPost401ApplicationJson;
 var MovePadUsingPost500ApplicationJson = /** @class */ (function (_super) {
     __extends(MovePadUsingPost500ApplicationJson, _super);
     function MovePadUsingPost500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], MovePadUsingPost500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], MovePadUsingPost500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], MovePadUsingPost500ApplicationJson.prototype, "message", void 0);
     return MovePadUsingPost500ApplicationJson;
-}(SpeakeasyBase));
-export { MovePadUsingPost500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.MovePadUsingPost500ApplicationJson = MovePadUsingPost500ApplicationJson;
 var MovePadUsingPostRequest = /** @class */ (function (_super) {
     __extends(MovePadUsingPostRequest, _super);
     function MovePadUsingPostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MovePadUsingPostQueryParams)
     ], MovePadUsingPostRequest.prototype, "queryParams", void 0);
     return MovePadUsingPostRequest;
-}(SpeakeasyBase));
-export { MovePadUsingPostRequest };
+}(utils_1.SpeakeasyBase));
+exports.MovePadUsingPostRequest = MovePadUsingPostRequest;
 var MovePadUsingPostResponse = /** @class */ (function (_super) {
     __extends(MovePadUsingPostResponse, _super);
     function MovePadUsingPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MovePadUsingPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MovePadUsingPostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MovePadUsingPost200ApplicationJson)
-    ], MovePadUsingPostResponse.prototype, "movePadUsingPost200ApplicationJsonObject", void 0);
+    ], MovePadUsingPostResponse.prototype, "movePadUsingPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MovePadUsingPost400ApplicationJson)
-    ], MovePadUsingPostResponse.prototype, "movePadUsingPost400ApplicationJsonObject", void 0);
+    ], MovePadUsingPostResponse.prototype, "movePadUsingPOST400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MovePadUsingPost401ApplicationJson)
-    ], MovePadUsingPostResponse.prototype, "movePadUsingPost401ApplicationJsonObject", void 0);
+    ], MovePadUsingPostResponse.prototype, "movePadUsingPOST401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MovePadUsingPost500ApplicationJson)
-    ], MovePadUsingPostResponse.prototype, "movePadUsingPost500ApplicationJsonObject", void 0);
+    ], MovePadUsingPostResponse.prototype, "movePadUsingPOST500ApplicationJSONObject", void 0);
     return MovePadUsingPostResponse;
-}(SpeakeasyBase));
-export { MovePadUsingPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.MovePadUsingPostResponse = MovePadUsingPostResponse;

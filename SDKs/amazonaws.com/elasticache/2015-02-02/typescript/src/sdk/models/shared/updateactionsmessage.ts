@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UpdateAction } from "./updateaction";
+import { UpdateActionList } from "./updateactionlist";
 
 
 
@@ -7,6 +7,6 @@ export class UpdateActionsMessage extends SpeakeasyBase {
   @SpeakeasyMetadata()
   marker?: string;
 
-  @SpeakeasyMetadata({ elemType: UpdateAction })
-  updateActions?: UpdateAction[];
+  @SpeakeasyMetadata({ elemType: UpdateActionList })
+  updateActions?: UpdateActionList[];
 }

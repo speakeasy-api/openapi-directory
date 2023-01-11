@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceAuthorizationCodeResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeviceAuthorizationCodeResponse = /** @class */ (function (_super) {
     __extends(DeviceAuthorizationCodeResponse, _super);
     function DeviceAuthorizationCodeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_code" }),
         __metadata("design:type", String)
     ], DeviceAuthorizationCodeResponse.prototype, "deviceCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dl_masked_email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dl_masked_email" }),
         __metadata("design:type", String)
     ], DeviceAuthorizationCodeResponse.prototype, "dlMaskedEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dl_masked_mobile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dl_masked_mobile" }),
         __metadata("design:type", Number)
     ], DeviceAuthorizationCodeResponse.prototype, "dlMaskedMobile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires_in" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires_in" }),
         __metadata("design:type", Number)
     ], DeviceAuthorizationCodeResponse.prototype, "expiresIn", void 0);
     return DeviceAuthorizationCodeResponse;
-}(SpeakeasyBase));
-export { DeviceAuthorizationCodeResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeviceAuthorizationCodeResponse = DeviceAuthorizationCodeResponse;

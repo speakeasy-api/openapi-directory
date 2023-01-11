@@ -8,7 +8,7 @@ export declare class HealthCheckRequest extends SpeakeasyBase {
 }
 export declare class HealthCheckResponse extends SpeakeasyBase {
     contentType: string;
-    healthCheck200ApplicationJsonAnies?: any[];
-    healthCheckDefaultApplicationJsonAny?: any;
+    healthCheck200ApplicationJSONAnies?: any[];
+    healthCheckDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

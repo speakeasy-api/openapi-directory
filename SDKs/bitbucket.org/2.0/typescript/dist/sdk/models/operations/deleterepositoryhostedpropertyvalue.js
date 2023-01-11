@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteRepositoryHostedPropertyValueResponse = exports.DeleteRepositoryHostedPropertyValueRequest = exports.DeleteRepositoryHostedPropertyValuePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteRepositoryHostedPropertyValuePathParams = /** @class */ (function (_super) {
     __extends(DeleteRepositoryHostedPropertyValuePathParams, _super);
     function DeleteRepositoryHostedPropertyValuePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=app_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=app_key" }),
         __metadata("design:type", String)
     ], DeleteRepositoryHostedPropertyValuePathParams.prototype, "appKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=property_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=property_name" }),
         __metadata("design:type", String)
     ], DeleteRepositoryHostedPropertyValuePathParams.prototype, "propertyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], DeleteRepositoryHostedPropertyValuePathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], DeleteRepositoryHostedPropertyValuePathParams.prototype, "workspace", void 0);
     return DeleteRepositoryHostedPropertyValuePathParams;
-}(SpeakeasyBase));
-export { DeleteRepositoryHostedPropertyValuePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteRepositoryHostedPropertyValuePathParams = DeleteRepositoryHostedPropertyValuePathParams;
 var DeleteRepositoryHostedPropertyValueRequest = /** @class */ (function (_super) {
     __extends(DeleteRepositoryHostedPropertyValueRequest, _super);
     function DeleteRepositoryHostedPropertyValueRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteRepositoryHostedPropertyValuePathParams)
     ], DeleteRepositoryHostedPropertyValueRequest.prototype, "pathParams", void 0);
     return DeleteRepositoryHostedPropertyValueRequest;
-}(SpeakeasyBase));
-export { DeleteRepositoryHostedPropertyValueRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteRepositoryHostedPropertyValueRequest = DeleteRepositoryHostedPropertyValueRequest;
 var DeleteRepositoryHostedPropertyValueResponse = /** @class */ (function (_super) {
     __extends(DeleteRepositoryHostedPropertyValueResponse, _super);
     function DeleteRepositoryHostedPropertyValueResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteRepositoryHostedPropertyValueResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteRepositoryHostedPropertyValueResponse.prototype, "statusCode", void 0);
     return DeleteRepositoryHostedPropertyValueResponse;
-}(SpeakeasyBase));
-export { DeleteRepositoryHostedPropertyValueResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteRepositoryHostedPropertyValueResponse = DeleteRepositoryHostedPropertyValueResponse;

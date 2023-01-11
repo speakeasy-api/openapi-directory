@@ -16,5 +16,5 @@ export declare class GetNetworkInsightApplicationHealthByTimeRequest extends Spe
 export declare class GetNetworkInsightApplicationHealthByTimeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkInsightApplicationHealthByTime200ApplicationJsonObject?: Map<string, any>;
+    getNetworkInsightApplicationHealthByTime200ApplicationJSONObject?: Record<string, any>;
 }

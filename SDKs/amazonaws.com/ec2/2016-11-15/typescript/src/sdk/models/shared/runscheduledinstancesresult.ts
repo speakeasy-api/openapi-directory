@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class RunScheduledInstancesResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  instanceIdSet?: string[];
+  instanceIdSet?: Record<string, any>;
 }

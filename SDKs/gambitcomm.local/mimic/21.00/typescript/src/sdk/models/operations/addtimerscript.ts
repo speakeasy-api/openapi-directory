@@ -31,5 +31,5 @@ export class AddTimerScriptResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  addTimerScript200ApplicationJsonString?: string;
+  addTimerScript200ApplicationJSONString?: string;
 }

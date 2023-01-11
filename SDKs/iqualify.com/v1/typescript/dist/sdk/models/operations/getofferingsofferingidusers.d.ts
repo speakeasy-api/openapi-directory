@@ -3,22 +3,10 @@ import * as shared from "../shared";
 export declare class GetOfferingsOfferingIdUsersPathParams extends SpeakeasyBase {
     offeringId: string;
 }
-export declare enum GetOfferingsOfferingIdUsersFacilitatorsEnum {
-    True = "true",
-    False = "false"
-}
-export declare enum GetOfferingsOfferingIdUsersLearnersEnum {
-    True = "true",
-    False = "false"
-}
-export declare enum GetOfferingsOfferingIdUsersMarkersEnum {
-    True = "true",
-    False = "false"
-}
 export declare class GetOfferingsOfferingIdUsersQueryParams extends SpeakeasyBase {
-    facilitators?: GetOfferingsOfferingIdUsersFacilitatorsEnum;
-    learners?: GetOfferingsOfferingIdUsersLearnersEnum;
-    markers?: GetOfferingsOfferingIdUsersMarkersEnum;
+    facilitators?: shared.OfferingIdEnum1;
+    learners?: shared.OfferingIdEnum1;
+    markers?: shared.OfferingIdEnum1;
 }
 export declare class GetOfferingsOfferingIdUsersRequest extends SpeakeasyBase {
     pathParams: GetOfferingsOfferingIdUsersPathParams;
@@ -26,7 +14,7 @@ export declare class GetOfferingsOfferingIdUsersRequest extends SpeakeasyBase {
 }
 export declare class GetOfferingsOfferingIdUsersResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     offeringUserResponses?: shared.OfferingUserResponse[];
     statusCode: number;
 }

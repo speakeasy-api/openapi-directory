@@ -45,7 +45,7 @@ export class ExecutionTemplate extends SpeakeasyBase {
   kernelSpec?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=masterType" })
   masterType?: string;

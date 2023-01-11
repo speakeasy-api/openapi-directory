@@ -26,5 +26,5 @@ export declare class GetzipcodeinfoRequest extends SpeakeasyBase {
 export declare class GetzipcodeinfoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getzipcodeinfo200ApplicationJsonObject?: Getzipcodeinfo200ApplicationJson;
+    getzipcodeinfo200ApplicationJSONObject?: Getzipcodeinfo200ApplicationJson;
 }

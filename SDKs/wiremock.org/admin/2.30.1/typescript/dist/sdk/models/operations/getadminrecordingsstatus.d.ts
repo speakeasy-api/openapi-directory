@@ -9,6 +9,6 @@ export declare class GetAdminRecordingsStatus200ApplicationJson extends Speakeas
 }
 export declare class GetAdminRecordingsStatusResponse extends SpeakeasyBase {
     contentType: string;
-    getAdminRecordingsStatus200ApplicationJsonObject?: GetAdminRecordingsStatus200ApplicationJson;
     statusCode: number;
+    getAdminRecordingsStatus200ApplicationJSONObject?: GetAdminRecordingsStatus200ApplicationJson;
 }

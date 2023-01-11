@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PreviewEntity } from "./previewentity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FileEntity = void 0;
+var utils_1 = require("../../../internal/utils");
+var previewentity_1 = require("./previewentity");
 // FileEntity
 /**
  * List Folders by path
@@ -34,69 +37,69 @@ var FileEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crc32" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crc32" }),
         __metadata("design:type", String)
     ], FileEntity.prototype, "crc32", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_name" }),
         __metadata("design:type", String)
     ], FileEntity.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download_uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download_uri" }),
         __metadata("design:type", String)
     ], FileEntity.prototype, "downloadUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=md5" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=md5" }),
         __metadata("design:type", String)
     ], FileEntity.prototype, "md5", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mime_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mime_type" }),
         __metadata("design:type", String)
     ], FileEntity.prototype, "mimeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mtime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mtime" }),
         __metadata("design:type", Date)
     ], FileEntity.prototype, "mtime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], FileEntity.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions" }),
         __metadata("design:type", String)
     ], FileEntity.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preview" }),
-        __metadata("design:type", PreviewEntity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preview" }),
+        __metadata("design:type", previewentity_1.PreviewEntity)
     ], FileEntity.prototype, "preview", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preview_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preview_id" }),
         __metadata("design:type", Number)
     ], FileEntity.prototype, "previewId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority_color" }),
         __metadata("design:type", String)
     ], FileEntity.prototype, "priorityColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provided_mtime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provided_mtime" }),
         __metadata("design:type", Date)
     ], FileEntity.prototype, "providedMtime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], FileEntity.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], FileEntity.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subfolders_locked?" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subfolders_locked?" }),
         __metadata("design:type", Boolean)
     ], FileEntity.prototype, "subfoldersLocked", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], FileEntity.prototype, "type", void 0);
     return FileEntity;
-}(SpeakeasyBase));
-export { FileEntity };
+}(utils_1.SpeakeasyBase));
+exports.FileEntity = FileEntity;

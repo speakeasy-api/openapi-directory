@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceConfig } from "./instanceconfig";
-import { NetworkConfig } from "./networkconfig";
-import { VolumeConfig } from "./volumeconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProvisioningConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var instanceconfig_1 = require("./instanceconfig");
+var networkconfig_1 = require("./networkconfig");
+var volumeconfig_1 = require("./volumeconfig");
 // ProvisioningConfig
 /**
  * An provisioning configuration.
@@ -36,21 +39,21 @@ var ProvisioningConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instances", elemType: InstanceConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instances", elemType: instanceconfig_1.InstanceConfig }),
         __metadata("design:type", Array)
     ], ProvisioningConfig.prototype, "instances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networks", elemType: NetworkConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networks", elemType: networkconfig_1.NetworkConfig }),
         __metadata("design:type", Array)
     ], ProvisioningConfig.prototype, "networks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ticketId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ticketId" }),
         __metadata("design:type", String)
     ], ProvisioningConfig.prototype, "ticketId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumes", elemType: VolumeConfig }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumes", elemType: volumeconfig_1.VolumeConfig }),
         __metadata("design:type", Array)
     ], ProvisioningConfig.prototype, "volumes", void 0);
     return ProvisioningConfig;
-}(SpeakeasyBase));
-export { ProvisioningConfig };
+}(utils_1.SpeakeasyBase));
+exports.ProvisioningConfig = ProvisioningConfig;

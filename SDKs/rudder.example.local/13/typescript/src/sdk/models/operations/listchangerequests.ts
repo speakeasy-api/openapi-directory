@@ -38,5 +38,5 @@ export class ListChangeRequestsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listChangeRequests200ApplicationJsonObject?: ListChangeRequests200ApplicationJson;
+  listChangeRequests200ApplicationJSONObject?: ListChangeRequests200ApplicationJson;
 }

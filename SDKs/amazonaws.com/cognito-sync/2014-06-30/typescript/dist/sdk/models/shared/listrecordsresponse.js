@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Record } from "./record";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListRecordsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var record_1 = require("./record");
 // ListRecordsResponse
 /**
  * Returned for a successful ListRecordsRequest.
@@ -34,41 +37,41 @@ var ListRecordsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Count" }),
         __metadata("design:type", Number)
     ], ListRecordsResponse.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetDeletedAfterRequestedSyncCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetDeletedAfterRequestedSyncCount" }),
         __metadata("design:type", Boolean)
     ], ListRecordsResponse.prototype, "datasetDeletedAfterRequestedSyncCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetExists" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetExists" }),
         __metadata("design:type", Boolean)
     ], ListRecordsResponse.prototype, "datasetExists", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatasetSyncCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatasetSyncCount" }),
         __metadata("design:type", Number)
     ], ListRecordsResponse.prototype, "datasetSyncCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedBy" }),
         __metadata("design:type", String)
     ], ListRecordsResponse.prototype, "lastModifiedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MergedDatasetNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MergedDatasetNames" }),
         __metadata("design:type", Array)
     ], ListRecordsResponse.prototype, "mergedDatasetNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListRecordsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Records", elemType: Record }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Records", elemType: record_1.RecordT }),
         __metadata("design:type", Array)
     ], ListRecordsResponse.prototype, "records", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SyncSessionToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SyncSessionToken" }),
         __metadata("design:type", String)
     ], ListRecordsResponse.prototype, "syncSessionToken", void 0);
     return ListRecordsResponse;
-}(SpeakeasyBase));
-export { ListRecordsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListRecordsResponse = ListRecordsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetConfigurationResponse = exports.GetConfigurationRequest = exports.GetConfigurationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetConfigurationPathParams = /** @class */ (function (_super) {
     __extends(GetConfigurationPathParams, _super);
     function GetConfigurationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetConfigurationPathParams.prototype, "id", void 0);
     return GetConfigurationPathParams;
-}(SpeakeasyBase));
-export { GetConfigurationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetConfigurationPathParams = GetConfigurationPathParams;
 var GetConfigurationRequest = /** @class */ (function (_super) {
     __extends(GetConfigurationRequest, _super);
     function GetConfigurationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetConfigurationPathParams)
     ], GetConfigurationRequest.prototype, "pathParams", void 0);
     return GetConfigurationRequest;
-}(SpeakeasyBase));
-export { GetConfigurationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetConfigurationRequest = GetConfigurationRequest;
 var GetConfigurationResponse = /** @class */ (function (_super) {
     __extends(GetConfigurationResponse, _super);
     function GetConfigurationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetConfigurationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetConfigurationResponse.prototype, "statusCode", void 0);
     return GetConfigurationResponse;
-}(SpeakeasyBase));
-export { GetConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetConfigurationResponse = GetConfigurationResponse;

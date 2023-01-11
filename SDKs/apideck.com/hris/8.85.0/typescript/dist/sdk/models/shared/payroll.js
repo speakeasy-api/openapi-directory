@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,50 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Compensation } from "./compensation";
-import { PayrollTotals } from "./payrolltotals";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Payroll = void 0;
+var utils_1 = require("../../../internal/utils");
+var compensation_1 = require("./compensation");
+var payrolltotals_1 = require("./payrolltotals");
 var Payroll = /** @class */ (function (_super) {
     __extends(Payroll, _super);
     function Payroll() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=check_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=check_date" }),
         __metadata("design:type", String)
     ], Payroll.prototype, "checkDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=company_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company_id" }),
         __metadata("design:type", String)
     ], Payroll.prototype, "companyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compensations", elemType: Compensation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compensations", elemType: compensation_1.Compensation }),
         __metadata("design:type", Array)
     ], Payroll.prototype, "compensations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_date" }),
         __metadata("design:type", String)
     ], Payroll.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Payroll.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processed" }),
         __metadata("design:type", Boolean)
     ], Payroll.prototype, "processed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=processed_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=processed_date" }),
         __metadata("design:type", String)
     ], Payroll.prototype, "processedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_date" }),
         __metadata("design:type", String)
     ], Payroll.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totals" }),
-        __metadata("design:type", PayrollTotals)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totals" }),
+        __metadata("design:type", payrolltotals_1.PayrollTotals)
     ], Payroll.prototype, "totals", void 0);
     return Payroll;
-}(SpeakeasyBase));
-export { Payroll };
+}(utils_1.SpeakeasyBase));
+exports.Payroll = Payroll;

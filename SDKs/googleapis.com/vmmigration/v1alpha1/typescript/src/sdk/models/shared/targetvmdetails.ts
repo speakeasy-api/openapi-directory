@@ -24,70 +24,6 @@ export enum TargetVmDetailsLicenseTypeEnum {
 }
 
 
-// TargetVmDetailsInput
-/** 
- * TargetVMDetails is a collection of details for creating a VM in a target Compute Engine project.
-**/
-export class TargetVmDetailsInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=appliedLicense" })
-  appliedLicense?: AppliedLicense;
-
-  @SpeakeasyMetadata({ data: "json, name=computeScheduling" })
-  computeScheduling?: ComputeScheduling;
-
-  @SpeakeasyMetadata({ data: "json, name=diskType" })
-  diskType?: TargetVmDetailsDiskTypeEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=externalIp" })
-  externalIp?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=internalIp" })
-  internalIp?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=licenseType" })
-  licenseType?: TargetVmDetailsLicenseTypeEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=machineType" })
-  machineType?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=machineTypeSeries" })
-  machineTypeSeries?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=network" })
-  network?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=networkInterfaces", elemType: NetworkInterface })
-  networkInterfaces?: NetworkInterface[];
-
-  @SpeakeasyMetadata({ data: "json, name=networkTags" })
-  networkTags?: string[];
-
-  @SpeakeasyMetadata({ data: "json, name=secureBoot" })
-  secureBoot?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=serviceAccount" })
-  serviceAccount?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=subnetwork" })
-  subnetwork?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=targetProject" })
-  targetProject?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=zone" })
-  zone?: string;
-}
-
-
 // TargetVmDetails
 /** 
  * TargetVMDetails is a collection of details for creating a VM in a target Compute Engine project.
@@ -112,7 +48,7 @@ export class TargetVmDetails extends SpeakeasyBase {
   internalIp?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=licenseType" })
   licenseType?: TargetVmDetailsLicenseTypeEnum;
@@ -124,7 +60,7 @@ export class TargetVmDetails extends SpeakeasyBase {
   machineTypeSeries?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, string>;
+  metadata?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -140,6 +76,70 @@ export class TargetVmDetails extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=project" })
   project?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=secureBoot" })
+  secureBoot?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=serviceAccount" })
+  serviceAccount?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=subnetwork" })
+  subnetwork?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=targetProject" })
+  targetProject?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=zone" })
+  zone?: string;
+}
+
+
+// TargetVmDetailsInput
+/** 
+ * TargetVMDetails is a collection of details for creating a VM in a target Compute Engine project.
+**/
+export class TargetVmDetailsInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=appliedLicense" })
+  appliedLicense?: AppliedLicense;
+
+  @SpeakeasyMetadata({ data: "json, name=computeScheduling" })
+  computeScheduling?: ComputeScheduling;
+
+  @SpeakeasyMetadata({ data: "json, name=diskType" })
+  diskType?: TargetVmDetailsDiskTypeEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=externalIp" })
+  externalIp?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=internalIp" })
+  internalIp?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=licenseType" })
+  licenseType?: TargetVmDetailsLicenseTypeEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=machineType" })
+  machineType?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=machineTypeSeries" })
+  machineTypeSeries?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=metadata" })
+  metadata?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=network" })
+  network?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=networkInterfaces", elemType: NetworkInterface })
+  networkInterfaces?: NetworkInterface[];
+
+  @SpeakeasyMetadata({ data: "json, name=networkTags" })
+  networkTags?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=secureBoot" })
   secureBoot?: boolean;

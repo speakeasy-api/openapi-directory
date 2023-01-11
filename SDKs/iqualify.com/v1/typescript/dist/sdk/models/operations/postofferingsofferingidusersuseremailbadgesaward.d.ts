@@ -10,6 +10,6 @@ export declare class PostOfferingsOfferingIdUsersUserEmailBadgesAwardRequest ext
 export declare class PostOfferingsOfferingIdUsersUserEmailBadgesAwardResponse extends SpeakeasyBase {
     awardedResponse?: shared.AwardedResponse;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

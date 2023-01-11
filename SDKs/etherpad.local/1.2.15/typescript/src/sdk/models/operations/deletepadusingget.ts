@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class DeletePadUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -13,7 +13,7 @@ export class DeletePadUsingGet200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -25,7 +25,7 @@ export class DeletePadUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -37,7 +37,7 @@ export class DeletePadUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -49,7 +49,7 @@ export class DeletePadUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,14 +70,14 @@ export class DeletePadUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deletePadUsingGet200ApplicationJsonObject?: DeletePadUsingGet200ApplicationJson;
+  deletePadUsingGET200ApplicationJSONObject?: DeletePadUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  deletePadUsingGet400ApplicationJsonObject?: DeletePadUsingGet400ApplicationJson;
+  deletePadUsingGET400ApplicationJSONObject?: DeletePadUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  deletePadUsingGet401ApplicationJsonObject?: DeletePadUsingGet401ApplicationJson;
+  deletePadUsingGET401ApplicationJSONObject?: DeletePadUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  deletePadUsingGet500ApplicationJsonObject?: DeletePadUsingGet500ApplicationJson;
+  deletePadUsingGET500ApplicationJSONObject?: DeletePadUsingGet500ApplicationJson;
 }

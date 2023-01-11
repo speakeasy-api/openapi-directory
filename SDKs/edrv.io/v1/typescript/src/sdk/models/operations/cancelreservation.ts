@@ -16,7 +16,7 @@ export class Cancelreservation201ApplicationJson extends SpeakeasyBase {
   ok?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=result" })
-  result?: Map<string, any>;
+  result?: Record<string, any>;
 }
 
 
@@ -34,5 +34,5 @@ export class CancelreservationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cancelreservation201ApplicationJsonObject?: Cancelreservation201ApplicationJson;
+  cancelreservation201ApplicationJSONObject?: Cancelreservation201ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PeeringConnectionOptions } from "./peeringconnectionoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyVpcPeeringConnectionOptionsResult = exports.ModifyVpcPeeringConnectionOptionsResultRequesterPeeringConnectionOptions = exports.ModifyVpcPeeringConnectionOptionsResultAccepterPeeringConnectionOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+// ModifyVpcPeeringConnectionOptionsResultAccepterPeeringConnectionOptions
+/**
+ * Information about the VPC peering connection options for the accepter VPC.
+**/
+var ModifyVpcPeeringConnectionOptionsResultAccepterPeeringConnectionOptions = /** @class */ (function (_super) {
+    __extends(ModifyVpcPeeringConnectionOptionsResultAccepterPeeringConnectionOptions, _super);
+    function ModifyVpcPeeringConnectionOptionsResultAccepterPeeringConnectionOptions() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpcPeeringConnectionOptionsResultAccepterPeeringConnectionOptions.prototype, "allowDnsResolutionFromRemoteVpc", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpcPeeringConnectionOptionsResultAccepterPeeringConnectionOptions.prototype, "allowEgressFromLocalClassicLinkToRemoteVpc", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpcPeeringConnectionOptionsResultAccepterPeeringConnectionOptions.prototype, "allowEgressFromLocalVpcToRemoteClassicLink", void 0);
+    return ModifyVpcPeeringConnectionOptionsResultAccepterPeeringConnectionOptions;
+}(utils_1.SpeakeasyBase));
+exports.ModifyVpcPeeringConnectionOptionsResultAccepterPeeringConnectionOptions = ModifyVpcPeeringConnectionOptionsResultAccepterPeeringConnectionOptions;
+// ModifyVpcPeeringConnectionOptionsResultRequesterPeeringConnectionOptions
+/**
+ * Information about the VPC peering connection options for the requester VPC.
+**/
+var ModifyVpcPeeringConnectionOptionsResultRequesterPeeringConnectionOptions = /** @class */ (function (_super) {
+    __extends(ModifyVpcPeeringConnectionOptionsResultRequesterPeeringConnectionOptions, _super);
+    function ModifyVpcPeeringConnectionOptionsResultRequesterPeeringConnectionOptions() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpcPeeringConnectionOptionsResultRequesterPeeringConnectionOptions.prototype, "allowDnsResolutionFromRemoteVpc", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpcPeeringConnectionOptionsResultRequesterPeeringConnectionOptions.prototype, "allowEgressFromLocalClassicLinkToRemoteVpc", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyVpcPeeringConnectionOptionsResultRequesterPeeringConnectionOptions.prototype, "allowEgressFromLocalVpcToRemoteClassicLink", void 0);
+    return ModifyVpcPeeringConnectionOptionsResultRequesterPeeringConnectionOptions;
+}(utils_1.SpeakeasyBase));
+exports.ModifyVpcPeeringConnectionOptionsResultRequesterPeeringConnectionOptions = ModifyVpcPeeringConnectionOptionsResultRequesterPeeringConnectionOptions;
 var ModifyVpcPeeringConnectionOptionsResult = /** @class */ (function (_super) {
     __extends(ModifyVpcPeeringConnectionOptionsResult, _super);
     function ModifyVpcPeeringConnectionOptionsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PeeringConnectionOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ModifyVpcPeeringConnectionOptionsResultAccepterPeeringConnectionOptions)
     ], ModifyVpcPeeringConnectionOptionsResult.prototype, "accepterPeeringConnectionOptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PeeringConnectionOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ModifyVpcPeeringConnectionOptionsResultRequesterPeeringConnectionOptions)
     ], ModifyVpcPeeringConnectionOptionsResult.prototype, "requesterPeeringConnectionOptions", void 0);
     return ModifyVpcPeeringConnectionOptionsResult;
-}(SpeakeasyBase));
-export { ModifyVpcPeeringConnectionOptionsResult };
+}(utils_1.SpeakeasyBase));
+exports.ModifyVpcPeeringConnectionOptionsResult = ModifyVpcPeeringConnectionOptionsResult;

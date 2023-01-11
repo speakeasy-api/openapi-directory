@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LinksSigningBasket } from "./linkssigningbasket";
-import { TransactionStatusSbsEnum } from "./transactionstatussbsenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SigningBasketResponse200 = void 0;
+var utils_1 = require("../../../internal/utils");
+var linkssigningbasket_1 = require("./linkssigningbasket");
+var transactionstatussbsenum_1 = require("./transactionstatussbsenum");
 // SigningBasketResponse200
 /**
  * Body of the JSON response for a successful get signing basket request.
@@ -41,21 +44,21 @@ var SigningBasketResponse200 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
-        __metadata("design:type", LinksSigningBasket)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
+        __metadata("design:type", linkssigningbasket_1.LinksSigningBasket)
     ], SigningBasketResponse200.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consents" }),
         __metadata("design:type", Array)
     ], SigningBasketResponse200.prototype, "consents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payments" }),
         __metadata("design:type", Array)
     ], SigningBasketResponse200.prototype, "payments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionStatus" }),
         __metadata("design:type", String)
     ], SigningBasketResponse200.prototype, "transactionStatus", void 0);
     return SigningBasketResponse200;
-}(SpeakeasyBase));
-export { SigningBasketResponse200 };
+}(utils_1.SpeakeasyBase));
+exports.SigningBasketResponse200 = SigningBasketResponse200;

@@ -68,5 +68,5 @@ export class CodeScanningListRecentAnalysesResponse extends SpeakeasyBase {
   codeScanningAnalyses?: shared.CodeScanningAnalysis[];
 
   @SpeakeasyMetadata()
-  codeScanningListRecentAnalyses503ApplicationJsonObject?: CodeScanningListRecentAnalyses503ApplicationJson;
+  codeScanningListRecentAnalyses503ApplicationJSONObject?: CodeScanningListRecentAnalyses503ApplicationJson;
 }

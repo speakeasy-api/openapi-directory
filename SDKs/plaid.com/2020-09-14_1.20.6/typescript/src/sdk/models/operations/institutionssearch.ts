@@ -14,10 +14,10 @@ export class InstitutionsSearchResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  institutionsSearchResponse?: Map<string, any>;
+  institutionsSearchResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

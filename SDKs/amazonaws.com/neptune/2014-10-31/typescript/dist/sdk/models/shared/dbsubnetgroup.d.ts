@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Subnet } from "./subnet";
+import { SubnetList } from "./subnetlist";
 /**
  * <p>Contains the details of an Amazon Neptune DB subnet group.</p> <p>This data type is used as a response element in the <a>DescribeDBSubnetGroups</a> action.</p>
 **/
@@ -8,6 +8,6 @@ export declare class DbSubnetGroup extends SpeakeasyBase {
     dbSubnetGroupDescription?: string;
     dbSubnetGroupName?: string;
     subnetGroupStatus?: string;
-    subnets?: Subnet[];
+    subnets?: SubnetList[];
     vpcId?: string;
 }

@@ -29,7 +29,7 @@ export class GetLaunchConfigurationHeaders extends SpeakeasyBase {
 
 export class GetLaunchConfigurationRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=sourceServerID" })
-  sourceServerId: string;
+  sourceServerID: string;
 }
 
 

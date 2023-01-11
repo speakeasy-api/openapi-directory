@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SegmentMetricFilterOperatorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SegmentMetricFilter = exports.SegmentMetricFilterScopeEnum = exports.SegmentMetricFilterOperatorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SegmentMetricFilterOperatorEnum;
 (function (SegmentMetricFilterOperatorEnum) {
     SegmentMetricFilterOperatorEnum["UnspecifiedOperator"] = "UNSPECIFIED_OPERATOR";
     SegmentMetricFilterOperatorEnum["LessThan"] = "LESS_THAN";
     SegmentMetricFilterOperatorEnum["GreaterThan"] = "GREATER_THAN";
     SegmentMetricFilterOperatorEnum["Equal"] = "EQUAL";
     SegmentMetricFilterOperatorEnum["Between"] = "BETWEEN";
-})(SegmentMetricFilterOperatorEnum || (SegmentMetricFilterOperatorEnum = {}));
-export var SegmentMetricFilterScopeEnum;
+})(SegmentMetricFilterOperatorEnum = exports.SegmentMetricFilterOperatorEnum || (exports.SegmentMetricFilterOperatorEnum = {}));
+var SegmentMetricFilterScopeEnum;
 (function (SegmentMetricFilterScopeEnum) {
     SegmentMetricFilterScopeEnum["UnspecifiedScope"] = "UNSPECIFIED_SCOPE";
     SegmentMetricFilterScopeEnum["Product"] = "PRODUCT";
     SegmentMetricFilterScopeEnum["Hit"] = "HIT";
     SegmentMetricFilterScopeEnum["Session"] = "SESSION";
     SegmentMetricFilterScopeEnum["User"] = "USER";
-})(SegmentMetricFilterScopeEnum || (SegmentMetricFilterScopeEnum = {}));
+})(SegmentMetricFilterScopeEnum = exports.SegmentMetricFilterScopeEnum || (exports.SegmentMetricFilterScopeEnum = {}));
 // SegmentMetricFilter
 /**
  * Metric filter to be used in a segment filter clause.
@@ -49,25 +52,25 @@ var SegmentMetricFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparisonValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparisonValue" }),
         __metadata("design:type", String)
     ], SegmentMetricFilter.prototype, "comparisonValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxComparisonValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxComparisonValue" }),
         __metadata("design:type", String)
     ], SegmentMetricFilter.prototype, "maxComparisonValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricName" }),
         __metadata("design:type", String)
     ], SegmentMetricFilter.prototype, "metricName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operator" }),
         __metadata("design:type", String)
     ], SegmentMetricFilter.prototype, "operator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", String)
     ], SegmentMetricFilter.prototype, "scope", void 0);
     return SegmentMetricFilter;
-}(SpeakeasyBase));
-export { SegmentMetricFilter };
+}(utils_1.SpeakeasyBase));
+exports.SegmentMetricFilter = SegmentMetricFilter;

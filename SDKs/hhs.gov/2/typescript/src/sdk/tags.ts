@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -33,10 +33,10 @@ export class Tags {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/tags.{format}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/resources/tags.{format}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -44,19 +44,21 @@ export class Tags {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetResourcesTagsFormatResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.tagMarshallerWrappeds = httpRes?.data;
             }
             break;
@@ -68,211 +70,6 @@ export class Tags {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getResourcesTagsIdFormat - Get Tag by ID
-   *
-   * Information about a specific tag
-  **/
-  getResourcesTagsIdFormat(
-    req: operations.GetResourcesTagsIdFormatRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetResourcesTagsIdFormatResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetResourcesTagsIdFormatRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/tags/{id}.{format}", req.pathParams);
-    
-    const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetResourcesTagsIdFormatResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.tagMarshallerWrappeds = httpRes?.data;
-            }
-            break;
-          case httpRes?.status == 400:
-            break;
-          case httpRes?.status == 500:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getResourcesTagsIdMediaFormat - Get MediaItems for Tag
-   *
-   * MediaItem
-  **/
-  getResourcesTagsIdMediaFormat(
-    req: operations.GetResourcesTagsIdMediaFormatRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetResourcesTagsIdMediaFormatResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetResourcesTagsIdMediaFormatRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/tags/{id}/media.{format}", req.pathParams);
-    
-    const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetResourcesTagsIdMediaFormatResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.mediaItemWrappeds = httpRes?.data;
-            }
-            break;
-          case httpRes?.status == 400:
-            break;
-          case httpRes?.status == 500:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getResourcesTagsIdRelatedFormat - Get related Tags by ID
-   *
-   * Information about related tags to a specific tag
-  **/
-  getResourcesTagsIdRelatedFormat(
-    req: operations.GetResourcesTagsIdRelatedFormatRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetResourcesTagsIdRelatedFormatResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetResourcesTagsIdRelatedFormatRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/tags/{id}/related.{format}", req.pathParams);
-    
-    const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetResourcesTagsIdRelatedFormatResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.tagMarshallerWrappeds = httpRes?.data;
-            }
-            break;
-          case httpRes?.status == 400:
-            break;
-          case httpRes?.status == 500:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getResourcesTagsIdSyndicateFormat - Get MediaItems for Tag
-   *
-   * MediaItem
-  **/
-  getResourcesTagsIdSyndicateFormat(
-    req: operations.GetResourcesTagsIdSyndicateFormatRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetResourcesTagsIdSyndicateFormatResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetResourcesTagsIdSyndicateFormatRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/tags/{id}/syndicate.{format}", req.pathParams);
-    
-    const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetResourcesTagsIdSyndicateFormatResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getResourcesTagsIdSyndicateFormat200ApplicationJsonString = JSON.stringify(httpRes?.data);
-            }
-            break;
-          case httpRes?.status == 400:
-            break;
-          case httpRes?.status == 500:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -290,22 +87,24 @@ export class Tags {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/tags/tagLanguages.{format}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/resources/tags/tagLanguages.{format}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetResourcesTagsTagLanguagesFormatResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.tagLanguageMarshallerWrappeds = httpRes?.data;
             }
             break;
@@ -317,7 +116,6 @@ export class Tags {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -335,22 +133,24 @@ export class Tags {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/tags/tagTypes.{format}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/resources/tags/tagTypes.{format}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetResourcesTagsTagTypesFormatResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.tagTypeMarshallerWrappeds = httpRes?.data;
             }
             break;
@@ -362,7 +162,214 @@ export class Tags {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
+  }
+
+  
+  /**
+   * getResourcesTagsIdFormat - Get Tag by ID
+   *
+   * Information about a specific tag
+  **/
+  getResourcesTagsIdFormat(
+    req: operations.GetResourcesTagsIdFormatRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetResourcesTagsIdFormatResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetResourcesTagsIdFormatRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/resources/tags/{id}.{format}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetResourcesTagsIdFormatResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.tagMarshallerWrappeds = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            break;
+          case httpRes?.status == 500:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getResourcesTagsIdMediaFormat - Get MediaItems for Tag
+   *
+   * MediaItem
+  **/
+  getResourcesTagsIdMediaFormat(
+    req: operations.GetResourcesTagsIdMediaFormatRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetResourcesTagsIdMediaFormatResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetResourcesTagsIdMediaFormatRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/resources/tags/{id}/media.{format}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetResourcesTagsIdMediaFormatResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.mediaItemWrappeds = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            break;
+          case httpRes?.status == 500:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getResourcesTagsIdRelatedFormat - Get related Tags by ID
+   *
+   * Information about related tags to a specific tag
+  **/
+  getResourcesTagsIdRelatedFormat(
+    req: operations.GetResourcesTagsIdRelatedFormatRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetResourcesTagsIdRelatedFormatResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetResourcesTagsIdRelatedFormatRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/resources/tags/{id}/related.{format}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetResourcesTagsIdRelatedFormatResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.tagMarshallerWrappeds = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            break;
+          case httpRes?.status == 500:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getResourcesTagsIdSyndicateFormat - Get MediaItems for Tag
+   *
+   * MediaItem
+  **/
+  getResourcesTagsIdSyndicateFormat(
+    req: operations.GetResourcesTagsIdSyndicateFormatRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetResourcesTagsIdSyndicateFormatResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetResourcesTagsIdSyndicateFormatRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/resources/tags/{id}/syndicate.{format}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetResourcesTagsIdSyndicateFormatResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getResourcesTagsIdSyndicateFormat200ApplicationJSONString = JSON.stringify(httpRes?.data);
+            }
+            break;
+          case httpRes?.status == 400:
+            break;
+          case httpRes?.status == 500:
+            break;
+        }
+
+        return res;
+      })
   }
 
 }

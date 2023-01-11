@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MotorcycleBaseListing } from "./motorcyclebaselisting";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MotorcycleSearchResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var motorcyclebaselisting_1 = require("./motorcyclebaselisting");
 // MotorcycleSearchResponse
 /**
  * Motorcycle search query response
@@ -34,25 +37,25 @@ var MotorcycleSearchResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=facets" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=facets" }),
+        __metadata("design:type", Object)
     ], MotorcycleSearchResponse.prototype, "facets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listings", elemType: MotorcycleBaseListing }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listings", elemType: motorcyclebaselisting_1.MotorcycleBaseListing }),
         __metadata("design:type", Array)
     ], MotorcycleSearchResponse.prototype, "listings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=num_found" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=num_found" }),
         __metadata("design:type", Number)
     ], MotorcycleSearchResponse.prototype, "numFound", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range_facets" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range_facets" }),
+        __metadata("design:type", Object)
     ], MotorcycleSearchResponse.prototype, "rangeFacets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stats" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stats" }),
+        __metadata("design:type", Object)
     ], MotorcycleSearchResponse.prototype, "stats", void 0);
     return MotorcycleSearchResponse;
-}(SpeakeasyBase));
-export { MotorcycleSearchResponse };
+}(utils_1.SpeakeasyBase));
+exports.MotorcycleSearchResponse = MotorcycleSearchResponse;

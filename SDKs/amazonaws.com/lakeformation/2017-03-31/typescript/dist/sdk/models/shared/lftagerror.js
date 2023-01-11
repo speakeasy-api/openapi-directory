@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ErrorDetail } from "./errordetail";
-import { LfTagPair } from "./lftagpair";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LfTagError = void 0;
+var utils_1 = require("../../../internal/utils");
+var errordetail_1 = require("./errordetail");
+var lftagpair_1 = require("./lftagpair");
 // LfTagError
 /**
  * A structure containing an error related to a <code>TagResource</code> or <code>UnTagResource</code> operation.
@@ -35,13 +38,13 @@ var LfTagError = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Error" }),
-        __metadata("design:type", ErrorDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Error" }),
+        __metadata("design:type", errordetail_1.ErrorDetail)
     ], LfTagError.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LFTag" }),
-        __metadata("design:type", LfTagPair)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LFTag" }),
+        __metadata("design:type", lftagpair_1.LfTagPair)
     ], LfTagError.prototype, "lfTag", void 0);
     return LfTagError;
-}(SpeakeasyBase));
-export { LfTagError };
+}(utils_1.SpeakeasyBase));
+exports.LfTagError = LfTagError;

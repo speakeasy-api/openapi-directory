@@ -25,5 +25,5 @@ export class MunsetValueResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  munsetValue200ApplicationJsonString?: string;
+  munsetValue200ApplicationJSONString?: string;
 }

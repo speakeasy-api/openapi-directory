@@ -1,16 +1,32 @@
-export * from "./altenum";
-export * from "./apigatewayauditconfig";
-export * from "./apigatewayauditlogconfig";
-export * from "./apigatewaybinding";
-export * from "./apigatewayexpr";
-export * from "./apigatewaylistlocationsresponse";
-export * from "./apigatewaylistoperationsresponse";
-export * from "./apigatewaylocation";
-export * from "./apigatewayoperation";
-export * from "./apigatewaypolicy";
-export * from "./apigatewaysetiampolicyrequest";
-export * from "./apigatewaystatus";
-export * from "./apigatewaytestiampermissionsrequest";
-export * from "./apigatewaytestiampermissionsresponse";
-export * from "./security";
-export * from "./xgafvenum";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./altenum"), exports);
+__exportStar(require("./apigatewayauditconfig"), exports);
+__exportStar(require("./apigatewayauditlogconfig"), exports);
+__exportStar(require("./apigatewaybinding"), exports);
+__exportStar(require("./apigatewayexpr"), exports);
+__exportStar(require("./apigatewaylistlocationsresponse"), exports);
+__exportStar(require("./apigatewaylistoperationsresponse"), exports);
+__exportStar(require("./apigatewaylocation"), exports);
+__exportStar(require("./apigatewayoperation"), exports);
+__exportStar(require("./apigatewaypolicy"), exports);
+__exportStar(require("./apigatewaysetiampolicyrequest"), exports);
+__exportStar(require("./apigatewaystatus"), exports);
+__exportStar(require("./apigatewaytestiampermissionsrequest"), exports);
+__exportStar(require("./apigatewaytestiampermissionsresponse"), exports);
+__exportStar(require("./security"), exports);
+__exportStar(require("./xgafvenum"), exports);

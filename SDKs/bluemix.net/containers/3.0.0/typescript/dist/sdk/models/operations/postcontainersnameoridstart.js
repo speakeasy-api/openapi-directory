@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostContainersNameOrIdStartResponse = exports.PostContainersNameOrIdStartRequest = exports.PostContainersNameOrIdStartHeaders = exports.PostContainersNameOrIdStartPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostContainersNameOrIdStartPathParams = /** @class */ (function (_super) {
     __extends(PostContainersNameOrIdStartPathParams, _super);
     function PostContainersNameOrIdStartPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name_or_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name_or_id" }),
         __metadata("design:type", String)
     ], PostContainersNameOrIdStartPathParams.prototype, "nameOrId", void 0);
     return PostContainersNameOrIdStartPathParams;
-}(SpeakeasyBase));
-export { PostContainersNameOrIdStartPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersNameOrIdStartPathParams = PostContainersNameOrIdStartPathParams;
 var PostContainersNameOrIdStartHeaders = /** @class */ (function (_super) {
     __extends(PostContainersNameOrIdStartHeaders, _super);
     function PostContainersNameOrIdStartHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
         __metadata("design:type", String)
     ], PostContainersNameOrIdStartHeaders.prototype, "xAuthProjectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
         __metadata("design:type", String)
     ], PostContainersNameOrIdStartHeaders.prototype, "xAuthToken", void 0);
     return PostContainersNameOrIdStartHeaders;
-}(SpeakeasyBase));
-export { PostContainersNameOrIdStartHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersNameOrIdStartHeaders = PostContainersNameOrIdStartHeaders;
 var PostContainersNameOrIdStartRequest = /** @class */ (function (_super) {
     __extends(PostContainersNameOrIdStartRequest, _super);
     function PostContainersNameOrIdStartRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostContainersNameOrIdStartPathParams)
     ], PostContainersNameOrIdStartRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostContainersNameOrIdStartHeaders)
     ], PostContainersNameOrIdStartRequest.prototype, "headers", void 0);
     return PostContainersNameOrIdStartRequest;
-}(SpeakeasyBase));
-export { PostContainersNameOrIdStartRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersNameOrIdStartRequest = PostContainersNameOrIdStartRequest;
 var PostContainersNameOrIdStartResponse = /** @class */ (function (_super) {
     __extends(PostContainersNameOrIdStartResponse, _super);
     function PostContainersNameOrIdStartResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostContainersNameOrIdStartResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostContainersNameOrIdStartResponse.prototype, "statusCode", void 0);
     return PostContainersNameOrIdStartResponse;
-}(SpeakeasyBase));
-export { PostContainersNameOrIdStartResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostContainersNameOrIdStartResponse = PostContainersNameOrIdStartResponse;

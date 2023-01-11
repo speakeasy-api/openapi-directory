@@ -55,5 +55,5 @@ export class UpdateNetworkSwitchAlternateManagementInterfaceResponse extends Spe
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkSwitchAlternateManagementInterface200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkSwitchAlternateManagementInterface200ApplicationJSONObject?: Record<string, any>;
 }

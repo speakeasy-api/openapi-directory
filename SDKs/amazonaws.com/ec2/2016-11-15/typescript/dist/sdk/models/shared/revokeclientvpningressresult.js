@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientVpnAuthorizationRuleStatus } from "./clientvpnauthorizationrulestatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RevokeClientVpnIngressResult = exports.RevokeClientVpnIngressResultStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+// RevokeClientVpnIngressResultStatus
+/**
+ * The current state of the authorization rule.
+**/
+var RevokeClientVpnIngressResultStatus = /** @class */ (function (_super) {
+    __extends(RevokeClientVpnIngressResultStatus, _super);
+    function RevokeClientVpnIngressResultStatus() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RevokeClientVpnIngressResultStatus.prototype, "code", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], RevokeClientVpnIngressResultStatus.prototype, "message", void 0);
+    return RevokeClientVpnIngressResultStatus;
+}(utils_1.SpeakeasyBase));
+exports.RevokeClientVpnIngressResultStatus = RevokeClientVpnIngressResultStatus;
 var RevokeClientVpnIngressResult = /** @class */ (function (_super) {
     __extends(RevokeClientVpnIngressResult, _super);
     function RevokeClientVpnIngressResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ClientVpnAuthorizationRuleStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", RevokeClientVpnIngressResultStatus)
     ], RevokeClientVpnIngressResult.prototype, "status", void 0);
     return RevokeClientVpnIngressResult;
-}(SpeakeasyBase));
-export { RevokeClientVpnIngressResult };
+}(utils_1.SpeakeasyBase));
+exports.RevokeClientVpnIngressResult = RevokeClientVpnIngressResult;

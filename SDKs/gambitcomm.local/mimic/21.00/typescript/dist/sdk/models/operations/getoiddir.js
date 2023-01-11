@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOiddirResponse = exports.GetOiddirRequest = exports.GetOiddirPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOiddirPathParams = /** @class */ (function (_super) {
     __extends(GetOiddirPathParams, _super);
     function GetOiddirPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], GetOiddirPathParams.prototype, "agentNum", void 0);
     return GetOiddirPathParams;
-}(SpeakeasyBase));
-export { GetOiddirPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOiddirPathParams = GetOiddirPathParams;
 var GetOiddirRequest = /** @class */ (function (_super) {
     __extends(GetOiddirRequest, _super);
     function GetOiddirRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOiddirPathParams)
     ], GetOiddirRequest.prototype, "pathParams", void 0);
     return GetOiddirRequest;
-}(SpeakeasyBase));
-export { GetOiddirRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOiddirRequest = GetOiddirRequest;
 var GetOiddirResponse = /** @class */ (function (_super) {
     __extends(GetOiddirResponse, _super);
     function GetOiddirResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOiddirResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOiddirResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], GetOiddirResponse.prototype, "getOiddir200ApplicationJsonString", void 0);
+    ], GetOiddirResponse.prototype, "getOiddir200ApplicationJSONString", void 0);
     return GetOiddirResponse;
-}(SpeakeasyBase));
-export { GetOiddirResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOiddirResponse = GetOiddirResponse;

@@ -177,7 +177,7 @@ export class DeletePolicyModule200ApplicationJsonProvenance extends SpeakeasyBas
   buildTimestamp?: string;
 
   @SpeakeasyMetadata({ data: "json, name=bundles" })
-  bundles?: Map<string, any>;
+  bundles?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=version" })
   version?: string;
@@ -222,5 +222,5 @@ export class DeletePolicyModuleResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deletePolicyModule200ApplicationJsonObject?: DeletePolicyModule200ApplicationJson;
+  deletePolicyModule200ApplicationJSONObject?: DeletePolicyModule200ApplicationJson;
 }

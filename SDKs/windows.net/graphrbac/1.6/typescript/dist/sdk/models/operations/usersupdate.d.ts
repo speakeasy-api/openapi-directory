@@ -1,15 +1,15 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class UsersUpdatePathParams extends SpeakeasyBase {
-    tenantId: string;
+    tenantID: string;
     upnOrObjectId: string;
 }
 export declare class UsersUpdateQueryParams extends SpeakeasyBase {
     apiVersion: string;
 }
 export declare class UsersUpdateRequests extends SpeakeasyBase {
-    userUpdateParameters?: Map<string, Map<string, any>>;
-    userUpdateParameters1?: Map<string, Map<string, any>>;
+    userUpdateParameters?: Record<string, Record<string, any>>;
+    userUpdateParameters1?: Record<string, Record<string, any>>;
 }
 export declare class UsersUpdateRequest extends SpeakeasyBase {
     pathParams: UsersUpdatePathParams;

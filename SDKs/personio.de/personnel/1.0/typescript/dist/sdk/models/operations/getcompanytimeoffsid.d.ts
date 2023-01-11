@@ -6,7 +6,7 @@ export declare class GetCompanyTimeOffsIdRequest extends SpeakeasyBase {
     pathParams: GetCompanyTimeOffsIdPathParams;
 }
 export declare class GetCompanyTimeOffsIdResponse extends SpeakeasyBase {
-    absencePeriodResponse?: Map<string, any>;
+    absencePeriodResponse?: Record<string, any>;
     contentType: string;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LaunchProfilePlatformEnum } from "./launchprofileplatformenum";
-import { StudioComponentInitializationScriptRunContextEnum } from "./studiocomponentinitializationscriptruncontextenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StudioComponentInitializationScript = void 0;
+var utils_1 = require("../../../internal/utils");
+var launchprofileplatformenum_1 = require("./launchprofileplatformenum");
+var studiocomponentinitializationscriptruncontextenum_1 = require("./studiocomponentinitializationscriptruncontextenum");
 // StudioComponentInitializationScript
 /**
  * Initialization scripts for studio components.
@@ -35,21 +38,21 @@ var StudioComponentInitializationScript = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=launchProfileProtocolVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launchProfileProtocolVersion" }),
         __metadata("design:type", String)
     ], StudioComponentInitializationScript.prototype, "launchProfileProtocolVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
         __metadata("design:type", String)
     ], StudioComponentInitializationScript.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runContext" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runContext" }),
         __metadata("design:type", String)
     ], StudioComponentInitializationScript.prototype, "runContext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=script" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=script" }),
         __metadata("design:type", String)
     ], StudioComponentInitializationScript.prototype, "script", void 0);
     return StudioComponentInitializationScript;
-}(SpeakeasyBase));
-export { StudioComponentInitializationScript };
+}(utils_1.SpeakeasyBase));
+exports.StudioComponentInitializationScript = StudioComponentInitializationScript;

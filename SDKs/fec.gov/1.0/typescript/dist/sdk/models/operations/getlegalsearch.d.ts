@@ -68,7 +68,7 @@ export declare class GetLegalSearchDefaultApplicationJsonAdminFines extends Spea
     commissionVotes?: GetLegalSearchDefaultApplicationJsonAdminFinesCommissionVotes[];
     committeeId?: string;
     docId?: string;
-    documentHighlights?: Map<string, any>;
+    documentHighlights?: Record<string, any>;
     documents?: GetLegalSearchDefaultApplicationJsonAdminFinesDocuments[];
     finalDeterminationAmount?: number;
     finalDeterminationDate?: Date;
@@ -110,7 +110,7 @@ export declare class GetLegalSearchDefaultApplicationJsonAdrsDocuments extends S
     url?: string;
 }
 export declare class GetLegalSearchDefaultApplicationJsonAdrsParticipants extends SpeakeasyBase {
-    citations?: Map<string, any>;
+    citations?: Record<string, any>;
     name?: string;
     role?: string;
 }
@@ -119,7 +119,7 @@ export declare class GetLegalSearchDefaultApplicationJsonAdrs extends SpeakeasyB
     commissionVotes?: GetLegalSearchDefaultApplicationJsonAdrsCommissionVotes[];
     dispositions?: GetLegalSearchDefaultApplicationJsonAdrsDispositions[];
     docId?: string;
-    documentHighlights?: Map<string, any>;
+    documentHighlights?: Record<string, any>;
     documents?: GetLegalSearchDefaultApplicationJsonAdrsDocuments[];
     electionCycles?: number;
     highlights?: string[];
@@ -164,7 +164,7 @@ export declare class GetLegalSearchDefaultApplicationJsonAdvisoryOpinions extend
     aoCitations?: GetLegalSearchDefaultApplicationJsonAdvisoryOpinionsAoCitations[];
     aosCitedBy?: GetLegalSearchDefaultApplicationJsonAdvisoryOpinionsAosCitedBy[];
     commenterNames?: string[];
-    documentHighlights?: Map<string, any>;
+    documentHighlights?: Record<string, any>;
     documents?: GetLegalSearchDefaultApplicationJsonAdvisoryOpinionsDocuments[];
     entities?: GetLegalSearchDefaultApplicationJsonAdvisoryOpinionsEntities[];
     highlights?: string[];
@@ -210,7 +210,7 @@ export declare enum GetLegalSearchDefaultApplicationJsonMursMurTypeEnum {
     Archived = "archived"
 }
 export declare class GetLegalSearchDefaultApplicationJsonMursParticipants extends SpeakeasyBase {
-    citations?: Map<string, any>;
+    citations?: Record<string, any>;
     name?: string;
     role?: string;
 }
@@ -219,7 +219,7 @@ export declare class GetLegalSearchDefaultApplicationJsonMurs extends SpeakeasyB
     commissionVotes?: GetLegalSearchDefaultApplicationJsonMursCommissionVotes[];
     dispositions?: GetLegalSearchDefaultApplicationJsonMursDispositions[];
     docId?: string;
-    documentHighlights?: Map<string, any>;
+    documentHighlights?: Record<string, any>;
     documents?: GetLegalSearchDefaultApplicationJsonMursDocuments[];
     electionCycles?: number;
     highlights?: string[];
@@ -234,7 +234,7 @@ export declare class GetLegalSearchDefaultApplicationJsonMurs extends SpeakeasyB
 }
 export declare class GetLegalSearchDefaultApplicationJsonRegulations extends SpeakeasyBase {
     docId?: string;
-    documentHighlights?: Map<string, any>;
+    documentHighlights?: Record<string, any>;
     highlights?: string[];
     name?: string;
     no?: string;
@@ -243,7 +243,7 @@ export declare class GetLegalSearchDefaultApplicationJsonRegulations extends Spe
 export declare class GetLegalSearchDefaultApplicationJsonStatutes extends SpeakeasyBase {
     chapter?: string;
     docId?: string;
-    documentHighlights?: Map<string, any>;
+    documentHighlights?: Record<string, any>;
     highlights?: string[];
     name?: string;
     no?: string;
@@ -270,6 +270,6 @@ export declare class GetLegalSearchRequest extends SpeakeasyBase {
 }
 export declare class GetLegalSearchResponse extends SpeakeasyBase {
     contentType: string;
-    getLegalSearchDefaultApplicationJsonObject?: GetLegalSearchDefaultApplicationJson;
     statusCode: number;
+    getLegalSearchDefaultApplicationJSONObject?: GetLegalSearchDefaultApplicationJson;
 }

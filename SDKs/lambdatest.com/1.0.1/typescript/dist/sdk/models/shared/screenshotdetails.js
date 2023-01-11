@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ScreenshotType } from "./screenshottype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScreenshotDetails = void 0;
+var utils_1 = require("../../../internal/utils");
+var screenshottype_1 = require("./screenshottype");
 var ScreenshotDetails = /** @class */ (function (_super) {
     __extends(ScreenshotDetails, _super);
     function ScreenshotDetails() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callback_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callback_url" }),
         __metadata("design:type", String)
     ], ScreenshotDetails.prototype, "callbackUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defer_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defer_time" }),
         __metadata("design:type", Number)
     ], ScreenshotDetails.prototype, "deferTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenshots", elemType: ScreenshotType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenshots", elemType: screenshottype_1.ScreenshotType }),
         __metadata("design:type", Array)
     ], ScreenshotDetails.prototype, "screenshots", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=test_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=test_id" }),
         __metadata("design:type", String)
     ], ScreenshotDetails.prototype, "testId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=test_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=test_status" }),
         __metadata("design:type", String)
     ], ScreenshotDetails.prototype, "testStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ScreenshotDetails.prototype, "url", void 0);
     return ScreenshotDetails;
-}(SpeakeasyBase));
-export { ScreenshotDetails };
+}(utils_1.SpeakeasyBase));
+exports.ScreenshotDetails = ScreenshotDetails;

@@ -32,5 +32,5 @@ export class JobQueueDetail extends SpeakeasyBase {
   statusReason?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }

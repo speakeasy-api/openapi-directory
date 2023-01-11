@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,226 +14,251 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeploymentmanagerManifestsListResponse = exports.DeploymentmanagerManifestsListRequest = exports.DeploymentmanagerManifestsListSecurity = exports.DeploymentmanagerManifestsListSecurityOption4 = exports.DeploymentmanagerManifestsListSecurityOption3 = exports.DeploymentmanagerManifestsListSecurityOption2 = exports.DeploymentmanagerManifestsListSecurityOption1 = exports.DeploymentmanagerManifestsListQueryParams = exports.DeploymentmanagerManifestsListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DeploymentmanagerManifestsListPathParams = /** @class */ (function (_super) {
     __extends(DeploymentmanagerManifestsListPathParams, _super);
     function DeploymentmanagerManifestsListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=deployment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=deployment" }),
         __metadata("design:type", String)
     ], DeploymentmanagerManifestsListPathParams.prototype, "deployment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], DeploymentmanagerManifestsListPathParams.prototype, "project", void 0);
     return DeploymentmanagerManifestsListPathParams;
-}(SpeakeasyBase));
-export { DeploymentmanagerManifestsListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentmanagerManifestsListPathParams = DeploymentmanagerManifestsListPathParams;
 var DeploymentmanagerManifestsListQueryParams = /** @class */ (function (_super) {
     __extends(DeploymentmanagerManifestsListQueryParams, _super);
     function DeploymentmanagerManifestsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], DeploymentmanagerManifestsListQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], DeploymentmanagerManifestsListQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], DeploymentmanagerManifestsListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], DeploymentmanagerManifestsListQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], DeploymentmanagerManifestsListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], DeploymentmanagerManifestsListQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], DeploymentmanagerManifestsListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxResults" }),
         __metadata("design:type", Number)
     ], DeploymentmanagerManifestsListQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], DeploymentmanagerManifestsListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=orderBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=orderBy" }),
         __metadata("design:type", String)
     ], DeploymentmanagerManifestsListQueryParams.prototype, "orderBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], DeploymentmanagerManifestsListQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], DeploymentmanagerManifestsListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], DeploymentmanagerManifestsListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], DeploymentmanagerManifestsListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], DeploymentmanagerManifestsListQueryParams.prototype, "uploadProtocol", void 0);
     return DeploymentmanagerManifestsListQueryParams;
-}(SpeakeasyBase));
-export { DeploymentmanagerManifestsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentmanagerManifestsListQueryParams = DeploymentmanagerManifestsListQueryParams;
 var DeploymentmanagerManifestsListSecurityOption1 = /** @class */ (function (_super) {
     __extends(DeploymentmanagerManifestsListSecurityOption1, _super);
     function DeploymentmanagerManifestsListSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DeploymentmanagerManifestsListSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DeploymentmanagerManifestsListSecurityOption1.prototype, "oauth2c", void 0);
     return DeploymentmanagerManifestsListSecurityOption1;
-}(SpeakeasyBase));
-export { DeploymentmanagerManifestsListSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentmanagerManifestsListSecurityOption1 = DeploymentmanagerManifestsListSecurityOption1;
 var DeploymentmanagerManifestsListSecurityOption2 = /** @class */ (function (_super) {
     __extends(DeploymentmanagerManifestsListSecurityOption2, _super);
     function DeploymentmanagerManifestsListSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DeploymentmanagerManifestsListSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DeploymentmanagerManifestsListSecurityOption2.prototype, "oauth2c", void 0);
     return DeploymentmanagerManifestsListSecurityOption2;
-}(SpeakeasyBase));
-export { DeploymentmanagerManifestsListSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentmanagerManifestsListSecurityOption2 = DeploymentmanagerManifestsListSecurityOption2;
 var DeploymentmanagerManifestsListSecurityOption3 = /** @class */ (function (_super) {
     __extends(DeploymentmanagerManifestsListSecurityOption3, _super);
     function DeploymentmanagerManifestsListSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DeploymentmanagerManifestsListSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DeploymentmanagerManifestsListSecurityOption3.prototype, "oauth2c", void 0);
     return DeploymentmanagerManifestsListSecurityOption3;
-}(SpeakeasyBase));
-export { DeploymentmanagerManifestsListSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentmanagerManifestsListSecurityOption3 = DeploymentmanagerManifestsListSecurityOption3;
 var DeploymentmanagerManifestsListSecurityOption4 = /** @class */ (function (_super) {
     __extends(DeploymentmanagerManifestsListSecurityOption4, _super);
     function DeploymentmanagerManifestsListSecurityOption4() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DeploymentmanagerManifestsListSecurityOption4.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DeploymentmanagerManifestsListSecurityOption4.prototype, "oauth2c", void 0);
     return DeploymentmanagerManifestsListSecurityOption4;
-}(SpeakeasyBase));
-export { DeploymentmanagerManifestsListSecurityOption4 };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentmanagerManifestsListSecurityOption4 = DeploymentmanagerManifestsListSecurityOption4;
 var DeploymentmanagerManifestsListSecurity = /** @class */ (function (_super) {
     __extends(DeploymentmanagerManifestsListSecurity, _super);
     function DeploymentmanagerManifestsListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DeploymentmanagerManifestsListSecurityOption1)
     ], DeploymentmanagerManifestsListSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DeploymentmanagerManifestsListSecurityOption2)
     ], DeploymentmanagerManifestsListSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DeploymentmanagerManifestsListSecurityOption3)
     ], DeploymentmanagerManifestsListSecurity.prototype, "option3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DeploymentmanagerManifestsListSecurityOption4)
     ], DeploymentmanagerManifestsListSecurity.prototype, "option4", void 0);
     return DeploymentmanagerManifestsListSecurity;
-}(SpeakeasyBase));
-export { DeploymentmanagerManifestsListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentmanagerManifestsListSecurity = DeploymentmanagerManifestsListSecurity;
 var DeploymentmanagerManifestsListRequest = /** @class */ (function (_super) {
     __extends(DeploymentmanagerManifestsListRequest, _super);
     function DeploymentmanagerManifestsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeploymentmanagerManifestsListPathParams)
     ], DeploymentmanagerManifestsListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeploymentmanagerManifestsListQueryParams)
     ], DeploymentmanagerManifestsListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeploymentmanagerManifestsListSecurity)
     ], DeploymentmanagerManifestsListRequest.prototype, "security", void 0);
     return DeploymentmanagerManifestsListRequest;
-}(SpeakeasyBase));
-export { DeploymentmanagerManifestsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentmanagerManifestsListRequest = DeploymentmanagerManifestsListRequest;
 var DeploymentmanagerManifestsListResponse = /** @class */ (function (_super) {
     __extends(DeploymentmanagerManifestsListResponse, _super);
     function DeploymentmanagerManifestsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeploymentmanagerManifestsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ManifestsListResponse)
     ], DeploymentmanagerManifestsListResponse.prototype, "manifestsListResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeploymentmanagerManifestsListResponse.prototype, "statusCode", void 0);
     return DeploymentmanagerManifestsListResponse;
-}(SpeakeasyBase));
-export { DeploymentmanagerManifestsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentmanagerManifestsListResponse = DeploymentmanagerManifestsListResponse;

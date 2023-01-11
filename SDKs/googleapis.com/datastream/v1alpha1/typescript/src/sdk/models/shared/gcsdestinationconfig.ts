@@ -14,7 +14,7 @@ export enum GcsDestinationConfigGcsFileFormatEnum {
 **/
 export class GcsDestinationConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avroFileFormat" })
-  avroFileFormat?: Map<string, any>;
+  avroFileFormat?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=fileRotationInterval" })
   fileRotationInterval?: string;

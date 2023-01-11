@@ -53,13 +53,13 @@ export class VerifyAccountIdResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  verifyAccountId400ApplicationJsonObject?: VerifyAccountId400ApplicationJson;
+  verifyAccountId400ApplicationJSONObject?: VerifyAccountId400ApplicationJson;
 
   @SpeakeasyMetadata()
-  verifyAccountId401ApplicationJsonObject?: VerifyAccountId401ApplicationJson;
+  verifyAccountId401ApplicationJSONObject?: VerifyAccountId401ApplicationJson;
 
   @SpeakeasyMetadata()
-  verifyAccountId500ApplicationJsonObject?: VerifyAccountId500ApplicationJson;
+  verifyAccountId500ApplicationJSONObject?: VerifyAccountId500ApplicationJson;
 
   @SpeakeasyMetadata()
   verifyAccountResponse?: shared.VerifyAccountResponse;

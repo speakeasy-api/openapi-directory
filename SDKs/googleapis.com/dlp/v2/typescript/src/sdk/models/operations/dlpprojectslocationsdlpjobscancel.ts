@@ -62,7 +62,7 @@ export class DlpProjectsLocationsDlpJobsCancelRequest extends SpeakeasyBase {
   queryParams: DlpProjectsLocationsDlpJobsCancelQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: DlpProjectsLocationsDlpJobsCancelSecurity;
@@ -74,7 +74,7 @@ export class DlpProjectsLocationsDlpJobsCancelResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  googleProtobufEmpty?: Map<string, any>;
+  googleProtobufEmpty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

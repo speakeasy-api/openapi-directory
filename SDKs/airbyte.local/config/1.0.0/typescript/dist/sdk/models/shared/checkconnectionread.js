@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SynchronousJobRead } from "./synchronousjobread";
-export var CheckConnectionReadStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CheckConnectionRead = exports.CheckConnectionReadStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var synchronousjobread_1 = require("./synchronousjobread");
+var CheckConnectionReadStatusEnum;
 (function (CheckConnectionReadStatusEnum) {
     CheckConnectionReadStatusEnum["Succeeded"] = "succeeded";
     CheckConnectionReadStatusEnum["Failed"] = "failed";
-})(CheckConnectionReadStatusEnum || (CheckConnectionReadStatusEnum = {}));
+})(CheckConnectionReadStatusEnum = exports.CheckConnectionReadStatusEnum || (exports.CheckConnectionReadStatusEnum = {}));
 var CheckConnectionRead = /** @class */ (function (_super) {
     __extends(CheckConnectionRead, _super);
     function CheckConnectionRead() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobInfo" }),
-        __metadata("design:type", SynchronousJobRead)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobInfo" }),
+        __metadata("design:type", synchronousjobread_1.SynchronousJobRead)
     ], CheckConnectionRead.prototype, "jobInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CheckConnectionRead.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], CheckConnectionRead.prototype, "status", void 0);
     return CheckConnectionRead;
-}(SpeakeasyBase));
-export { CheckConnectionRead };
+}(utils_1.SpeakeasyBase));
+exports.CheckConnectionRead = CheckConnectionRead;

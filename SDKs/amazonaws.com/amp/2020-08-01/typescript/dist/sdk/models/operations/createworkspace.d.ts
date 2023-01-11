@@ -12,7 +12,7 @@ export declare class CreateWorkspaceHeaders extends SpeakeasyBase {
 export declare class CreateWorkspaceRequestBody extends SpeakeasyBase {
     alias?: string;
     clientToken?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateWorkspaceRequest extends SpeakeasyBase {
     headers: CreateWorkspaceHeaders;

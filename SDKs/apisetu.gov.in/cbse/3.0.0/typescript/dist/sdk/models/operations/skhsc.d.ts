@@ -107,11 +107,11 @@ export declare class SkhscRequest extends SpeakeasyBase {
 export declare class SkhscResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    skhsc400ApplicationJsonObject?: Skhsc400ApplicationJson;
-    skhsc401ApplicationJsonObject?: Skhsc401ApplicationJson;
-    skhsc404ApplicationJsonObject?: Skhsc404ApplicationJson;
-    skhsc500ApplicationJsonObject?: Skhsc500ApplicationJson;
-    skhsc502ApplicationJsonObject?: Skhsc502ApplicationJson;
-    skhsc503ApplicationJsonObject?: Skhsc503ApplicationJson;
-    skhsc504ApplicationJsonObject?: Skhsc504ApplicationJson;
+    skhsc400ApplicationJSONObject?: Skhsc400ApplicationJson;
+    skhsc401ApplicationJSONObject?: Skhsc401ApplicationJson;
+    skhsc404ApplicationJSONObject?: Skhsc404ApplicationJson;
+    skhsc500ApplicationJSONObject?: Skhsc500ApplicationJson;
+    skhsc502ApplicationJSONObject?: Skhsc502ApplicationJson;
+    skhsc503ApplicationJSONObject?: Skhsc503ApplicationJson;
+    skhsc504ApplicationJSONObject?: Skhsc504ApplicationJson;
 }

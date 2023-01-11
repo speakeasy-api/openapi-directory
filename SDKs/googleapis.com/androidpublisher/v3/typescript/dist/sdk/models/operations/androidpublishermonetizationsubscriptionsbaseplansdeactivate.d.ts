@@ -25,7 +25,7 @@ export declare class AndroidpublisherMonetizationSubscriptionsBasePlansDeactivat
 export declare class AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateRequest extends SpeakeasyBase {
     pathParams: AndroidpublisherMonetizationSubscriptionsBasePlansDeactivatePathParams;
     queryParams: AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateSecurity;
 }
 export declare class AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateResponse extends SpeakeasyBase {

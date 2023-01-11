@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DynamicSegment } from "./dynamicsegment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Segment = void 0;
+var utils_1 = require("../../../internal/utils");
+var dynamicsegment_1 = require("./dynamicsegment");
 // Segment
 /**
  * The segment definition, if the report needs to be segmented. A Segment is a subset of the Analytics data. For example, of the entire set of users, one Segment might be users from a particular country or city.
@@ -34,13 +37,13 @@ var Segment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dynamicSegment" }),
-        __metadata("design:type", DynamicSegment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dynamicSegment" }),
+        __metadata("design:type", dynamicsegment_1.DynamicSegment)
     ], Segment.prototype, "dynamicSegment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=segmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segmentId" }),
         __metadata("design:type", String)
     ], Segment.prototype, "segmentId", void 0);
     return Segment;
-}(SpeakeasyBase));
-export { Segment };
+}(utils_1.SpeakeasyBase));
+exports.Segment = Segment;

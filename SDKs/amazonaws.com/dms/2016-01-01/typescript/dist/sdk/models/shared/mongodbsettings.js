@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthMechanismValueEnum } from "./authmechanismvalueenum";
-import { AuthTypeValueEnum } from "./authtypevalueenum";
-import { NestingLevelValueEnum } from "./nestinglevelvalueenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MongoDbSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var authmechanismvalueenum_1 = require("./authmechanismvalueenum");
+var authtypevalueenum_1 = require("./authtypevalueenum");
+var nestinglevelvalueenum_1 = require("./nestinglevelvalueenum");
 // MongoDbSettings
 /**
  * Provides information that defines a MongoDB endpoint.
@@ -36,61 +39,61 @@ var MongoDbSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AuthMechanism" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AuthMechanism" }),
         __metadata("design:type", String)
     ], MongoDbSettings.prototype, "authMechanism", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AuthSource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AuthSource" }),
         __metadata("design:type", String)
     ], MongoDbSettings.prototype, "authSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AuthType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AuthType" }),
         __metadata("design:type", String)
     ], MongoDbSettings.prototype, "authType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseName" }),
         __metadata("design:type", String)
     ], MongoDbSettings.prototype, "databaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DocsToInvestigate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DocsToInvestigate" }),
         __metadata("design:type", String)
     ], MongoDbSettings.prototype, "docsToInvestigate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExtractDocId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExtractDocId" }),
         __metadata("design:type", String)
     ], MongoDbSettings.prototype, "extractDocId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KmsKeyId" }),
         __metadata("design:type", String)
     ], MongoDbSettings.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NestingLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NestingLevel" }),
         __metadata("design:type", String)
     ], MongoDbSettings.prototype, "nestingLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Password" }),
         __metadata("design:type", String)
     ], MongoDbSettings.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Port" }),
         __metadata("design:type", Number)
     ], MongoDbSettings.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretsManagerAccessRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretsManagerAccessRoleArn" }),
         __metadata("design:type", String)
     ], MongoDbSettings.prototype, "secretsManagerAccessRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretsManagerSecretId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretsManagerSecretId" }),
         __metadata("design:type", String)
     ], MongoDbSettings.prototype, "secretsManagerSecretId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServerName" }),
         __metadata("design:type", String)
     ], MongoDbSettings.prototype, "serverName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Username" }),
         __metadata("design:type", String)
     ], MongoDbSettings.prototype, "username", void 0);
     return MongoDbSettings;
-}(SpeakeasyBase));
-export { MongoDbSettings };
+}(utils_1.SpeakeasyBase));
+exports.MongoDbSettings = MongoDbSettings;

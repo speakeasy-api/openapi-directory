@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RawMessage = void 0;
+var utils_1 = require("../../../internal/utils");
 // RawMessage
 /**
  * Represents the raw content of an email message.
@@ -33,9 +36,9 @@ var RawMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Data" }),
         __metadata("design:type", String)
     ], RawMessage.prototype, "data", void 0);
     return RawMessage;
-}(SpeakeasyBase));
-export { RawMessage };
+}(utils_1.SpeakeasyBase));
+exports.RawMessage = RawMessage;

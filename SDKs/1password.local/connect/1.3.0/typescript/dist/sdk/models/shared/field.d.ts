@@ -19,8 +19,7 @@ export declare enum FieldTypeEnum {
     MonthYear = "MONTH_YEAR",
     Menu = "MENU"
 }
-export declare class Field extends SpeakeasyBase {
-    entropy?: number;
+export declare class FieldInput extends SpeakeasyBase {
     generate?: boolean;
     id: string;
     label?: string;
@@ -30,7 +29,8 @@ export declare class Field extends SpeakeasyBase {
     type: FieldTypeEnum;
     value?: string;
 }
-export declare class FieldInput extends SpeakeasyBase {
+export declare class Field extends SpeakeasyBase {
+    entropy?: number;
     generate?: boolean;
     id: string;
     label?: string;

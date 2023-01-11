@@ -7,22 +7,10 @@ export declare enum GatewayTypeEnum {
 /**
  * Gateway represents the configuration for a proxy, typically a load balancer. It captures the ip:port over which the services are exposed by the proxy, along with any policy configurations. Routes have reference to to Gateways to dictate how requests should be routed by this Gateway.
 **/
-export declare class GatewayInput extends SpeakeasyBase {
-    description?: string;
-    labels?: Map<string, string>;
-    name?: string;
-    ports?: number[];
-    scope?: string;
-    serverTlsPolicy?: string;
-    type?: GatewayTypeEnum;
-}
-/**
- * Gateway represents the configuration for a proxy, typically a load balancer. It captures the ip:port over which the services are exposed by the proxy, along with any policy configurations. Routes have reference to to Gateways to dictate how requests should be routed by this Gateway.
-**/
 export declare class Gateway extends SpeakeasyBase {
     createTime?: string;
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     ports?: number[];
     scope?: string;
@@ -30,4 +18,16 @@ export declare class Gateway extends SpeakeasyBase {
     serverTlsPolicy?: string;
     type?: GatewayTypeEnum;
     updateTime?: string;
+}
+/**
+ * Gateway represents the configuration for a proxy, typically a load balancer. It captures the ip:port over which the services are exposed by the proxy, along with any policy configurations. Routes have reference to to Gateways to dictate how requests should be routed by this Gateway.
+**/
+export declare class GatewayInput extends SpeakeasyBase {
+    description?: string;
+    labels?: Record<string, string>;
+    name?: string;
+    ports?: number[];
+    scope?: string;
+    serverTlsPolicy?: string;
+    type?: GatewayTypeEnum;
 }

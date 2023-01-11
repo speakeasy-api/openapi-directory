@@ -5,7 +5,7 @@ export declare class FindEligibleItemsQueryParams extends SpeakeasyBase {
     offset?: string;
 }
 export declare class FindEligibleItemsHeaders extends SpeakeasyBase {
-    xEbayCMarketplaceId: string;
+    xEBAYCMARKETPLACEID: string;
 }
 export declare class FindEligibleItemsSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;

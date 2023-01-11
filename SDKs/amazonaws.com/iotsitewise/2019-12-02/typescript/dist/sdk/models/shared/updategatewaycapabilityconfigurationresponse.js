@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CapabilitySyncStatusEnum } from "./capabilitysyncstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateGatewayCapabilityConfigurationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var capabilitysyncstatusenum_1 = require("./capabilitysyncstatusenum");
 var UpdateGatewayCapabilityConfigurationResponse = /** @class */ (function (_super) {
     __extends(UpdateGatewayCapabilityConfigurationResponse, _super);
     function UpdateGatewayCapabilityConfigurationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capabilityNamespace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capabilityNamespace" }),
         __metadata("design:type", String)
     ], UpdateGatewayCapabilityConfigurationResponse.prototype, "capabilityNamespace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capabilitySyncStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capabilitySyncStatus" }),
         __metadata("design:type", String)
     ], UpdateGatewayCapabilityConfigurationResponse.prototype, "capabilitySyncStatus", void 0);
     return UpdateGatewayCapabilityConfigurationResponse;
-}(SpeakeasyBase));
-export { UpdateGatewayCapabilityConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateGatewayCapabilityConfigurationResponse = UpdateGatewayCapabilityConfigurationResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Session } from "./session";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayMediaIntentHandlingInvocation = void 0;
+var utils_1 = require("../../../internal/utils");
+var session_1 = require("./session");
 var PlayMediaIntentHandlingInvocation = /** @class */ (function (_super) {
     __extends(PlayMediaIntentHandlingInvocation, _super);
     function PlayMediaIntentHandlingInvocation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], PlayMediaIntentHandlingInvocation.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=params" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=params" }),
+        __metadata("design:type", Object)
     ], PlayMediaIntentHandlingInvocation.prototype, "params", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=session" }),
-        __metadata("design:type", Session)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=session" }),
+        __metadata("design:type", session_1.Session)
     ], PlayMediaIntentHandlingInvocation.prototype, "session", void 0);
     return PlayMediaIntentHandlingInvocation;
-}(SpeakeasyBase));
-export { PlayMediaIntentHandlingInvocation };
+}(utils_1.SpeakeasyBase));
+exports.PlayMediaIntentHandlingInvocation = PlayMediaIntentHandlingInvocation;

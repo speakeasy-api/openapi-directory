@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddOnRequest } from "./addonrequest";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDiskRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var addonrequest_1 = require("./addonrequest");
+var tag_1 = require("./tag");
 var CreateDiskRequest = /** @class */ (function (_super) {
     __extends(CreateDiskRequest, _super);
     function CreateDiskRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addOns", elemType: AddOnRequest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addOns", elemType: addonrequest_1.AddOnRequest }),
         __metadata("design:type", Array)
     ], CreateDiskRequest.prototype, "addOns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availabilityZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availabilityZone" }),
         __metadata("design:type", String)
     ], CreateDiskRequest.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=diskName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=diskName" }),
         __metadata("design:type", String)
     ], CreateDiskRequest.prototype, "diskName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeInGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeInGb" }),
         __metadata("design:type", Number)
     ], CreateDiskRequest.prototype, "sizeInGb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateDiskRequest.prototype, "tags", void 0);
     return CreateDiskRequest;
-}(SpeakeasyBase));
-export { CreateDiskRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateDiskRequest = CreateDiskRequest;

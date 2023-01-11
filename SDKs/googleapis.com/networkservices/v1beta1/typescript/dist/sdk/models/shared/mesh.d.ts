@@ -6,7 +6,7 @@ export declare class Mesh extends SpeakeasyBase {
     createTime?: string;
     description?: string;
     interceptionPort?: number;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     selfLink?: string;
     updateTime?: string;
@@ -17,6 +17,6 @@ export declare class Mesh extends SpeakeasyBase {
 export declare class MeshInput extends SpeakeasyBase {
     description?: string;
     interceptionPort?: number;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
 }

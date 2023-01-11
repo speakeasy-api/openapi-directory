@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,86 +23,88 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationDevicesUplinksLossAndLatencyResponse = exports.GetOrganizationDevicesUplinksLossAndLatencyRequest = exports.GetOrganizationDevicesUplinksLossAndLatencyQueryParams = exports.GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum = exports.GetOrganizationDevicesUplinksLossAndLatencyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationDevicesUplinksLossAndLatencyPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationDevicesUplinksLossAndLatencyPathParams, _super);
     function GetOrganizationDevicesUplinksLossAndLatencyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationDevicesUplinksLossAndLatencyPathParams.prototype, "organizationId", void 0);
     return GetOrganizationDevicesUplinksLossAndLatencyPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationDevicesUplinksLossAndLatencyPathParams };
-export var GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationDevicesUplinksLossAndLatencyPathParams = GetOrganizationDevicesUplinksLossAndLatencyPathParams;
+var GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum;
 (function (GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum) {
     GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum["Wan1"] = "wan1";
     GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum["Wan2"] = "wan2";
     GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum["Cellular"] = "cellular";
-})(GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum || (GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum = {}));
+})(GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum = exports.GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum || (exports.GetOrganizationDevicesUplinksLossAndLatencyUplinkEnum = {}));
 var GetOrganizationDevicesUplinksLossAndLatencyQueryParams = /** @class */ (function (_super) {
     __extends(GetOrganizationDevicesUplinksLossAndLatencyQueryParams, _super);
     function GetOrganizationDevicesUplinksLossAndLatencyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ip" }),
         __metadata("design:type", String)
     ], GetOrganizationDevicesUplinksLossAndLatencyQueryParams.prototype, "ip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t0" }),
         __metadata("design:type", String)
     ], GetOrganizationDevicesUplinksLossAndLatencyQueryParams.prototype, "t0", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t1" }),
         __metadata("design:type", String)
     ], GetOrganizationDevicesUplinksLossAndLatencyQueryParams.prototype, "t1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timespan" }),
         __metadata("design:type", Number)
     ], GetOrganizationDevicesUplinksLossAndLatencyQueryParams.prototype, "timespan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uplink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uplink" }),
         __metadata("design:type", String)
     ], GetOrganizationDevicesUplinksLossAndLatencyQueryParams.prototype, "uplink", void 0);
     return GetOrganizationDevicesUplinksLossAndLatencyQueryParams;
-}(SpeakeasyBase));
-export { GetOrganizationDevicesUplinksLossAndLatencyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationDevicesUplinksLossAndLatencyQueryParams = GetOrganizationDevicesUplinksLossAndLatencyQueryParams;
 var GetOrganizationDevicesUplinksLossAndLatencyRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationDevicesUplinksLossAndLatencyRequest, _super);
     function GetOrganizationDevicesUplinksLossAndLatencyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationDevicesUplinksLossAndLatencyPathParams)
     ], GetOrganizationDevicesUplinksLossAndLatencyRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationDevicesUplinksLossAndLatencyQueryParams)
     ], GetOrganizationDevicesUplinksLossAndLatencyRequest.prototype, "queryParams", void 0);
     return GetOrganizationDevicesUplinksLossAndLatencyRequest;
-}(SpeakeasyBase));
-export { GetOrganizationDevicesUplinksLossAndLatencyRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationDevicesUplinksLossAndLatencyRequest = GetOrganizationDevicesUplinksLossAndLatencyRequest;
 var GetOrganizationDevicesUplinksLossAndLatencyResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationDevicesUplinksLossAndLatencyResponse, _super);
     function GetOrganizationDevicesUplinksLossAndLatencyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationDevicesUplinksLossAndLatencyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationDevicesUplinksLossAndLatencyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationDevicesUplinksLossAndLatencyResponse.prototype, "getOrganizationDevicesUplinksLossAndLatency200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationDevicesUplinksLossAndLatencyResponse.prototype, "getOrganizationDevicesUplinksLossAndLatency200ApplicationJSONObject", void 0);
     return GetOrganizationDevicesUplinksLossAndLatencyResponse;
-}(SpeakeasyBase));
-export { GetOrganizationDevicesUplinksLossAndLatencyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationDevicesUplinksLossAndLatencyResponse = GetOrganizationDevicesUplinksLossAndLatencyResponse;

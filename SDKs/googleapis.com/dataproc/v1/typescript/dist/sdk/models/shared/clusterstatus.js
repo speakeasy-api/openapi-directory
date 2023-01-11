@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ClusterStatusStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClusterStatus = exports.ClusterStatusSubstateEnum = exports.ClusterStatusStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ClusterStatusStateEnum;
 (function (ClusterStatusStateEnum) {
     ClusterStatusStateEnum["Unknown"] = "UNKNOWN";
     ClusterStatusStateEnum["Creating"] = "CREATING";
@@ -36,13 +39,13 @@ export var ClusterStatusStateEnum;
     ClusterStatusStateEnum["Stopped"] = "STOPPED";
     ClusterStatusStateEnum["Starting"] = "STARTING";
     ClusterStatusStateEnum["Repairing"] = "REPAIRING";
-})(ClusterStatusStateEnum || (ClusterStatusStateEnum = {}));
-export var ClusterStatusSubstateEnum;
+})(ClusterStatusStateEnum = exports.ClusterStatusStateEnum || (exports.ClusterStatusStateEnum = {}));
+var ClusterStatusSubstateEnum;
 (function (ClusterStatusSubstateEnum) {
     ClusterStatusSubstateEnum["Unspecified"] = "UNSPECIFIED";
     ClusterStatusSubstateEnum["Unhealthy"] = "UNHEALTHY";
     ClusterStatusSubstateEnum["StaleStatus"] = "STALE_STATUS";
-})(ClusterStatusSubstateEnum || (ClusterStatusSubstateEnum = {}));
+})(ClusterStatusSubstateEnum = exports.ClusterStatusSubstateEnum || (exports.ClusterStatusSubstateEnum = {}));
 // ClusterStatus
 /**
  * The status of a cluster and its instances.
@@ -53,21 +56,21 @@ var ClusterStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
         __metadata("design:type", String)
     ], ClusterStatus.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ClusterStatus.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateStartTime" }),
         __metadata("design:type", String)
     ], ClusterStatus.prototype, "stateStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=substate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=substate" }),
         __metadata("design:type", String)
     ], ClusterStatus.prototype, "substate", void 0);
     return ClusterStatus;
-}(SpeakeasyBase));
-export { ClusterStatus };
+}(utils_1.SpeakeasyBase));
+exports.ClusterStatus = ClusterStatus;

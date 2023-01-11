@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConsentArtefactReference } from "./consentartefactreference";
-import { ConsentStatusEnum } from "./consentstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HiuConsentNotificationEvent = exports.HiuConsentNotificationEventNotification = void 0;
+var utils_1 = require("../../../internal/utils");
+var consentartefactreference_1 = require("./consentartefactreference");
+var consentstatusenum_1 = require("./consentstatusenum");
 var HiuConsentNotificationEventNotification = /** @class */ (function (_super) {
     __extends(HiuConsentNotificationEventNotification, _super);
     function HiuConsentNotificationEventNotification() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consentArtefacts", elemType: ConsentArtefactReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consentArtefacts", elemType: consentartefactreference_1.ConsentArtefactReference }),
         __metadata("design:type", Array)
     ], HiuConsentNotificationEventNotification.prototype, "consentArtefacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consentRequestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consentRequestId" }),
         __metadata("design:type", String)
     ], HiuConsentNotificationEventNotification.prototype, "consentRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], HiuConsentNotificationEventNotification.prototype, "status", void 0);
     return HiuConsentNotificationEventNotification;
-}(SpeakeasyBase));
-export { HiuConsentNotificationEventNotification };
+}(utils_1.SpeakeasyBase));
+exports.HiuConsentNotificationEventNotification = HiuConsentNotificationEventNotification;
 var HiuConsentNotificationEvent = /** @class */ (function (_super) {
     __extends(HiuConsentNotificationEvent, _super);
     function HiuConsentNotificationEvent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notification" }),
         __metadata("design:type", HiuConsentNotificationEventNotification)
     ], HiuConsentNotificationEvent.prototype, "notification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], HiuConsentNotificationEvent.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], HiuConsentNotificationEvent.prototype, "timestamp", void 0);
     return HiuConsentNotificationEvent;
-}(SpeakeasyBase));
-export { HiuConsentNotificationEvent };
+}(utils_1.SpeakeasyBase));
+exports.HiuConsentNotificationEvent = HiuConsentNotificationEvent;

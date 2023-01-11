@@ -24,7 +24,7 @@ export declare class GetOccupantsWithinOutputFormatQueryParams extends Speakeasy
     brief?: boolean;
     locationDescriptor?: GetOccupantsWithinOutputFormatLocationDescriptorEnum;
     maxResults?: number;
-    outputSrs?: number;
+    outputSRS?: number;
     setBack?: number;
     tags?: string;
 }

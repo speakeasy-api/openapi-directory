@@ -14,16 +14,6 @@ export enum ManagementSettingsTransferLockStateEnum {
 }
 
 
-// ManagementSettingsInput
-/** 
- * Defines renewal, billing, and transfer settings for a `Registration`.
-**/
-export class ManagementSettingsInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=transferLockState" })
-  transferLockState?: ManagementSettingsTransferLockStateEnum;
-}
-
-
 // ManagementSettings
 /** 
  * Defines renewal, billing, and transfer settings for a `Registration`.
@@ -32,6 +22,16 @@ export class ManagementSettings extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=renewalMethod" })
   renewalMethod?: ManagementSettingsRenewalMethodEnum;
 
+  @SpeakeasyMetadata({ data: "json, name=transferLockState" })
+  transferLockState?: ManagementSettingsTransferLockStateEnum;
+}
+
+
+// ManagementSettingsInput
+/** 
+ * Defines renewal, billing, and transfer settings for a `Registration`.
+**/
+export class ManagementSettingsInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=transferLockState" })
   transferLockState?: ManagementSettingsTransferLockStateEnum;
 }

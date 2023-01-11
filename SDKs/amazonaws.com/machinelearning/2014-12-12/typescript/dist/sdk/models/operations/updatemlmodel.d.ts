@@ -23,5 +23,5 @@ export declare class UpdateMlModelResponse extends SpeakeasyBase {
     invalidInputException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    updateMlModelOutput?: shared.UpdateMlModelOutput;
+    updateMLModelOutput?: shared.UpdateMlModelOutput;
 }

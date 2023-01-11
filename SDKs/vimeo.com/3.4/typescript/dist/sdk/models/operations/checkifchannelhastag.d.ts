@@ -10,6 +10,6 @@ export declare class CheckIfChannelHasTagRequest extends SpeakeasyBase {
 export declare class CheckIfChannelHasTagResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     legacyError?: shared.LegacyError;
 }

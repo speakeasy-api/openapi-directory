@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,90 +14,115 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ZebraGetResponse = exports.ZebraGetRequest = exports.ZebraGetSecurity = exports.ZebraGetQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ZebraGetQueryParams = /** @class */ (function (_super) {
     __extends(ZebraGetQueryParams, _super);
     function ZebraGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], ZebraGetQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=height" }),
         __metadata("design:type", Number)
     ], ZebraGetQueryParams.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=showlabel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=showlabel" }),
         __metadata("design:type", Boolean)
     ], ZebraGetQueryParams.prototype, "showlabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=value" }),
         __metadata("design:type", String)
     ], ZebraGetQueryParams.prototype, "value", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=width" }),
         __metadata("design:type", Number)
     ], ZebraGetQueryParams.prototype, "width", void 0);
     return ZebraGetQueryParams;
-}(SpeakeasyBase));
-export { ZebraGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ZebraGetQueryParams = ZebraGetQueryParams;
 var ZebraGetSecurity = /** @class */ (function (_super) {
     __extends(ZebraGetSecurity, _super);
     function ZebraGetSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=query" }),
         __metadata("design:type", shared.SchemeQueryApiKey)
     ], ZebraGetSecurity.prototype, "queryApiKey", void 0);
     return ZebraGetSecurity;
-}(SpeakeasyBase));
-export { ZebraGetSecurity };
+}(utils_1.SpeakeasyBase));
+exports.ZebraGetSecurity = ZebraGetSecurity;
 var ZebraGetRequest = /** @class */ (function (_super) {
     __extends(ZebraGetRequest, _super);
     function ZebraGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ZebraGetQueryParams)
     ], ZebraGetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ZebraGetSecurity)
     ], ZebraGetRequest.prototype, "security", void 0);
     return ZebraGetRequest;
-}(SpeakeasyBase));
-export { ZebraGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.ZebraGetRequest = ZebraGetRequest;
 var ZebraGetResponse = /** @class */ (function (_super) {
     __extends(ZebraGetResponse, _super);
     function ZebraGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ZebraGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ZebraGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
-    ], ZebraGetResponse.prototype, "zebraGet200ImagePngBinaryString", void 0);
+    ], ZebraGetResponse.prototype, "zebraGET200ImagePngBinaryString", void 0);
     return ZebraGetResponse;
-}(SpeakeasyBase));
-export { ZebraGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.ZebraGetResponse = ZebraGetResponse;

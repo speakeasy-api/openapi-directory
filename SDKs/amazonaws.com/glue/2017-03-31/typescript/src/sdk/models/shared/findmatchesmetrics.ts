@@ -10,7 +10,7 @@ import { ConfusionMatrix } from "./confusionmatrix";
 **/
 export class FindMatchesMetrics extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AreaUnderPRCurve" })
-  areaUnderPrCurve?: number;
+  areaUnderPRCurve?: number;
 
   @SpeakeasyMetadata({ data: "json, name=ColumnImportances", elemType: ColumnImportance })
   columnImportances?: ColumnImportance[];

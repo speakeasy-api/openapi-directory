@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ImageOcrImageLinesWithLocationRequest, ImageOcrImageLinesWithLocationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,18 +33,18 @@ const req: ImageOcrImageLinesWithLocationRequest = {
     },
   },
   headers: {
-    language: "deleniti",
-    preprocessing: "qui",
+    language: "sit",
+    preprocessing: "voluptas",
   },
   request: {
     imageFile: {
-      content: "et".encode(),
-      imageFile: "quia",
+      content: "culpa".encode(),
+      imageFile: "expedita",
     },
   },
 };
 
-sdk.sdk.imageOcrImageLinesWithLocation(req).then((res: ImageOcrImageLinesWithLocationResponse | AxiosError) => {
+sdk.imageOcr.imageOcrImageLinesWithLocation(req).then((res: ImageOcrImageLinesWithLocationResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -54,7 +53,7 @@ sdk.sdk.imageOcrImageLinesWithLocation(req).then((res: ImageOcrImageLinesWithLoc
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### ImageOcr
 
 * `imageOcrImageLinesWithLocation` - Convert a scanned image into words with location
 * `imageOcrImageWordsWithLocation` - Convert a scanned image into words with location
@@ -64,15 +63,24 @@ sdk.sdk.imageOcrImageLinesWithLocation(req).then((res: ImageOcrImageLinesWithLoc
 * `imageOcrPhotoToText` - Convert a photo of a document into text
 * `imageOcrPhotoWordsWithLocation` - Convert a photo of a document or receipt into words with location
 * `imageOcrPost` - Convert a scanned image into text
+
+### PdfOcr
+
 * `pdfOcrPdfToLinesWithLocation` - Convert a PDF into text lines with location
 * `pdfOcrPdfToWordsWithLocation` - Convert a PDF into words with location
 * `pdfOcrPost` - Converts an uploaded PDF file into text via Optical Character Recognition.
+
+### Preprocessing
+
 * `preprocessingBinarize` - Convert an image of text into a binarized (light and dark) view
 * `preprocessingBinarizeAdvanced` - Convert an image of text into a binary (light and dark) view with ML
 * `preprocessingGetPageAngle` - Get the angle of the page / document / receipt
 * `preprocessingUnrotate` - Detect and unrotate a document image
 * `preprocessingUnrotateAdvanced` - Detect and unrotate a document image (advanced)
 * `preprocessingUnskew` - Detect and unskew a photo of a document
+
+### Receipts
+
 * `receiptsPhotoToCsv` - Convert a photo of a receipt into a CSV file containing structured information from the receipt
 
 <!-- End SDK Available Operations -->

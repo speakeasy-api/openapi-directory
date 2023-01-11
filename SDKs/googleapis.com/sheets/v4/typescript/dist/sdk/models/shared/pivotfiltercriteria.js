@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BooleanCondition } from "./booleancondition";
-// PivotFilterCriteria
-/**
- * Criteria for showing/hiding rows in a pivot table.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PivotFilterCriteria = void 0;
+var utils_1 = require("../../../internal/utils");
+var booleancondition_1 = require("./booleancondition");
 var PivotFilterCriteria = /** @class */ (function (_super) {
     __extends(PivotFilterCriteria, _super);
     function PivotFilterCriteria() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=condition" }),
-        __metadata("design:type", BooleanCondition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=condition" }),
+        __metadata("design:type", booleancondition_1.BooleanCondition)
     ], PivotFilterCriteria.prototype, "condition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visibleByDefault" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visibleByDefault" }),
         __metadata("design:type", Boolean)
     ], PivotFilterCriteria.prototype, "visibleByDefault", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visibleValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visibleValues" }),
         __metadata("design:type", Array)
     ], PivotFilterCriteria.prototype, "visibleValues", void 0);
     return PivotFilterCriteria;
-}(SpeakeasyBase));
-export { PivotFilterCriteria };
+}(utils_1.SpeakeasyBase));
+exports.PivotFilterCriteria = PivotFilterCriteria;

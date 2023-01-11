@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,158 +14,183 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataprocProjectsRegionsClustersPatchResponse = exports.DataprocProjectsRegionsClustersPatchRequest = exports.DataprocProjectsRegionsClustersPatchSecurity = exports.DataprocProjectsRegionsClustersPatchQueryParams = exports.DataprocProjectsRegionsClustersPatchPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DataprocProjectsRegionsClustersPatchPathParams = /** @class */ (function (_super) {
     __extends(DataprocProjectsRegionsClustersPatchPathParams, _super);
     function DataprocProjectsRegionsClustersPatchPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=clusterName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=clusterName" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersPatchPathParams.prototype, "clusterName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=projectId" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersPatchPathParams.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=region" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersPatchPathParams.prototype, "region", void 0);
     return DataprocProjectsRegionsClustersPatchPathParams;
-}(SpeakeasyBase));
-export { DataprocProjectsRegionsClustersPatchPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DataprocProjectsRegionsClustersPatchPathParams = DataprocProjectsRegionsClustersPatchPathParams;
 var DataprocProjectsRegionsClustersPatchQueryParams = /** @class */ (function (_super) {
     __extends(DataprocProjectsRegionsClustersPatchQueryParams, _super);
     function DataprocProjectsRegionsClustersPatchQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersPatchQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersPatchQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersPatchQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersPatchQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersPatchQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=gracefulDecommissionTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=gracefulDecommissionTimeout" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersPatchQueryParams.prototype, "gracefulDecommissionTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersPatchQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersPatchQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], DataprocProjectsRegionsClustersPatchQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersPatchQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=requestId" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersPatchQueryParams.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=updateMask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=updateMask" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersPatchQueryParams.prototype, "updateMask", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersPatchQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersPatchQueryParams.prototype, "uploadProtocol", void 0);
     return DataprocProjectsRegionsClustersPatchQueryParams;
-}(SpeakeasyBase));
-export { DataprocProjectsRegionsClustersPatchQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DataprocProjectsRegionsClustersPatchQueryParams = DataprocProjectsRegionsClustersPatchQueryParams;
 var DataprocProjectsRegionsClustersPatchSecurity = /** @class */ (function (_super) {
     __extends(DataprocProjectsRegionsClustersPatchSecurity, _super);
     function DataprocProjectsRegionsClustersPatchSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DataprocProjectsRegionsClustersPatchSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DataprocProjectsRegionsClustersPatchSecurity.prototype, "oauth2c", void 0);
     return DataprocProjectsRegionsClustersPatchSecurity;
-}(SpeakeasyBase));
-export { DataprocProjectsRegionsClustersPatchSecurity };
+}(utils_1.SpeakeasyBase));
+exports.DataprocProjectsRegionsClustersPatchSecurity = DataprocProjectsRegionsClustersPatchSecurity;
 var DataprocProjectsRegionsClustersPatchRequest = /** @class */ (function (_super) {
     __extends(DataprocProjectsRegionsClustersPatchRequest, _super);
     function DataprocProjectsRegionsClustersPatchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DataprocProjectsRegionsClustersPatchPathParams)
     ], DataprocProjectsRegionsClustersPatchRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DataprocProjectsRegionsClustersPatchQueryParams)
     ], DataprocProjectsRegionsClustersPatchRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.ClusterInput)
     ], DataprocProjectsRegionsClustersPatchRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DataprocProjectsRegionsClustersPatchSecurity)
     ], DataprocProjectsRegionsClustersPatchRequest.prototype, "security", void 0);
     return DataprocProjectsRegionsClustersPatchRequest;
-}(SpeakeasyBase));
-export { DataprocProjectsRegionsClustersPatchRequest };
+}(utils_1.SpeakeasyBase));
+exports.DataprocProjectsRegionsClustersPatchRequest = DataprocProjectsRegionsClustersPatchRequest;
 var DataprocProjectsRegionsClustersPatchResponse = /** @class */ (function (_super) {
     __extends(DataprocProjectsRegionsClustersPatchResponse, _super);
     function DataprocProjectsRegionsClustersPatchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersPatchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Operation)
     ], DataprocProjectsRegionsClustersPatchResponse.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DataprocProjectsRegionsClustersPatchResponse.prototype, "statusCode", void 0);
     return DataprocProjectsRegionsClustersPatchResponse;
-}(SpeakeasyBase));
-export { DataprocProjectsRegionsClustersPatchResponse };
+}(utils_1.SpeakeasyBase));
+exports.DataprocProjectsRegionsClustersPatchResponse = DataprocProjectsRegionsClustersPatchResponse;

@@ -45,7 +45,7 @@ export class GetClipRequestBody extends SpeakeasyBase {
   clipFragmentSelector: GetClipRequestBodyClipFragmentSelector;
 
   @SpeakeasyMetadata({ data: "json, name=StreamARN" })
-  streamArn?: string;
+  streamARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=StreamName" })
   streamName?: string;

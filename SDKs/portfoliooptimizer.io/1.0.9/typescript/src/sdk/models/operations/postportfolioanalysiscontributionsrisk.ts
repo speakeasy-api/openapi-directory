@@ -49,8 +49,8 @@ export class PostPortfolioAnalysisContributionsRiskResponse extends SpeakeasyBas
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioAnalysisContributionsRisk200ApplicationJsonObject?: PostPortfolioAnalysisContributionsRisk200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioAnalysisContributionsRisk200ApplicationJSONObject?: PostPortfolioAnalysisContributionsRisk200ApplicationJson;
 }

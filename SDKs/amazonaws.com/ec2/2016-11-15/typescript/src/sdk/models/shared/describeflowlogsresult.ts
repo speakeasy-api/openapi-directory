@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FlowLog } from "./flowlog";
 
 
 
 export class DescribeFlowLogsResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: FlowLog })
-  flowLogs?: FlowLog[];
+  @SpeakeasyMetadata()
+  flowLogs?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 }

@@ -10,7 +10,7 @@ export class FilterLogEventsRequest extends SpeakeasyBase {
   filterPattern?: string;
 
   @SpeakeasyMetadata({ data: "json, name=interleaved" })
-  interleaved?: boolean;
+  interleaved?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=limit" })
   limit?: number;

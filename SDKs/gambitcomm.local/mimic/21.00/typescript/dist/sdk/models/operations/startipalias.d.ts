@@ -10,5 +10,5 @@ export declare class StartIpaliasRequest extends SpeakeasyBase {
 export declare class StartIpaliasResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    startIpalias200ApplicationJsonString?: string;
+    startIpalias200ApplicationJSONString?: string;
 }

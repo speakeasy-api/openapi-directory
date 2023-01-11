@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TaxAddress } from "./taxaddress";
-import { TaxIdentifier } from "./taxidentifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Buyer = void 0;
+var utils_1 = require("../../../internal/utils");
+var taxaddress_1 = require("./taxaddress");
+var taxidentifier_1 = require("./taxidentifier");
 // Buyer
 /**
  * This type contains information about the order's buyer.
@@ -35,17 +38,17 @@ var Buyer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxAddress" }),
-        __metadata("design:type", TaxAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxAddress" }),
+        __metadata("design:type", taxaddress_1.TaxAddress)
     ], Buyer.prototype, "taxAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxIdentifier" }),
-        __metadata("design:type", TaxIdentifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxIdentifier" }),
+        __metadata("design:type", taxidentifier_1.TaxIdentifier)
     ], Buyer.prototype, "taxIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], Buyer.prototype, "username", void 0);
     return Buyer;
-}(SpeakeasyBase));
-export { Buyer };
+}(utils_1.SpeakeasyBase));
+exports.Buyer = Buyer;

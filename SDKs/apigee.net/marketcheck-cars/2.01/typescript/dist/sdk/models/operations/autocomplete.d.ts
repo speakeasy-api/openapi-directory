@@ -1,33 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum AutoCompleteFieldEnum {
-    Ymm = "ymm",
-    Mm = "mm",
-    Make = "make",
-    Model = "model",
-    Trim = "trim",
-    BodyType = "body_type",
-    BodySubtype = "body_subtype",
-    VehicleType = "vehicle_type",
-    Transmission = "transmission",
-    Drivetrain = "drivetrain",
-    FuelType = "fuel_type",
-    ExteriorColor = "exterior_color",
-    InteriorColor = "interior_color",
-    Engine = "engine",
-    EngineSize = "engine_size",
-    EngineBlock = "engine_block",
-    State = "state",
-    City = "city"
-}
-export declare enum AutoCompleteIncludeNonVinListingsEnum {
-    True = "true",
-    False = "false"
-}
-export declare enum AutoCompleteSortByEnum {
-    Index = "index",
-    Count = "count"
-}
 export declare class AutoCompleteQueryParams extends SpeakeasyBase {
     apiKey?: string;
     bodySubtype?: string;
@@ -40,15 +12,15 @@ export declare class AutoCompleteQueryParams extends SpeakeasyBase {
     engineBlock?: string;
     engineSize?: string;
     exteriorColor?: string;
-    field: AutoCompleteFieldEnum;
+    field: shared.ApiKeyEnum2;
     fuelType?: string;
     ignoreCase?: boolean;
-    includeNonVinListings?: AutoCompleteIncludeNonVinListingsEnum;
+    includeNonVinListings?: shared.CarTypeEnum1;
     input: string;
     interiorColor?: string;
     make?: string;
     model?: string;
-    sortBy?: AutoCompleteSortByEnum;
+    sortBy?: shared.CarTypeEnum2;
     state?: string;
     termCounts?: boolean;
     transmission?: string;
@@ -61,7 +33,7 @@ export declare class AutoCompleteRequest extends SpeakeasyBase {
 }
 export declare class AutoCompleteResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     searchAutoCompleteResponse?: shared.SearchAutoCompleteResponse;
     statusCode: number;
 }

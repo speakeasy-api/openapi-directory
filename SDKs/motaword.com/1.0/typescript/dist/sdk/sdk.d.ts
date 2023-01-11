@@ -1,0 +1,70 @@
+import { AxiosInstance, AxiosRequestConfig } from "axios";
+import * as operations from "./models/operations";
+import { Security } from "./models/shared";
+import { Activity } from "./activity";
+import { Async } from "./async";
+import { Auth } from "./auth";
+import { Blog } from "./blog";
+import { Commission } from "./commission";
+import { ContinuousProject } from "./continuousproject";
+import { Corporate } from "./corporate";
+import { Document } from "./document";
+import { Glossary } from "./glossary";
+import { Invitation } from "./invitation";
+import { Pam } from "./pam";
+import { Payment } from "./payment";
+import { Project } from "./project";
+import { ProjectDocument } from "./projectdocument";
+import { ProjectWebhooks } from "./projectwebhooks";
+import { Report } from "./report";
+import { Search } from "./search";
+import { Static } from "./static";
+import { Stats } from "./stats";
+import { Strings } from "./strings";
+import { StyleGuide } from "./styleguide";
+import { Translations } from "./translations";
+import { User } from "./user";
+import { Vendor } from "./vendor";
+export declare const ServerList: readonly ["https://api.motaword.com", "https://sandbox.motaword.com", "http://localhost"];
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
+export declare class SDK {
+    activity: Activity;
+    async: Async;
+    auth: Auth;
+    blog: Blog;
+    commission: Commission;
+    continuousProject: ContinuousProject;
+    corporate: Corporate;
+    document: Document;
+    glossary: Glossary;
+    invitation: Invitation;
+    pam: Pam;
+    payment: Payment;
+    project: Project;
+    projectDocument: ProjectDocument;
+    projectWebhooks: ProjectWebhooks;
+    report: Report;
+    search: Search;
+    static: Static;
+    stats: Stats;
+    strings: Strings;
+    styleGuide: StyleGuide;
+    translations: Translations;
+    user: User;
+    vendor: Vendor;
+    _defaultClient: AxiosInstance;
+    _securityClient: AxiosInstance;
+    _serverURL: string;
+    private _language;
+    private _sdkVersion;
+    private _genVersion;
+    constructor(props: SDKProps);
+    /**
+     * deleteCache - Clear cache by key
+    **/
+    deleteCache(req: operations.DeleteCacheRequest, config?: AxiosRequestConfig): Promise<operations.DeleteCacheResponse>;
+}

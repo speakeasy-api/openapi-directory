@@ -26,5 +26,5 @@ export class GetSpRatingsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: shared.TeamSpRating })
-  teamSpRatings?: shared.TeamSpRating[];
+  teamSPRatings?: shared.TeamSpRating[];
 }

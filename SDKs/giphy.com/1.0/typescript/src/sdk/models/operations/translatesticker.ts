@@ -32,5 +32,5 @@ export class TranslateStickerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  translateSticker200ApplicationJsonObject?: TranslateSticker200ApplicationJson;
+  translateSticker200ApplicationJSONObject?: TranslateSticker200ApplicationJson;
 }

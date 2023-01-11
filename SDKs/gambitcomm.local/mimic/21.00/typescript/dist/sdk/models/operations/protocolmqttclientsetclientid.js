@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolMqttClientSetClientidResponse = exports.ProtocolMqttClientSetClientidRequest = exports.ProtocolMqttClientSetClientidPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolMqttClientSetClientidPathParams = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSetClientidPathParams, _super);
     function ProtocolMqttClientSetClientidPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolMqttClientSetClientidPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=clientID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=clientID" }),
         __metadata("design:type", String)
-    ], ProtocolMqttClientSetClientidPathParams.prototype, "clientId", void 0);
+    ], ProtocolMqttClientSetClientidPathParams.prototype, "clientID", void 0);
     return ProtocolMqttClientSetClientidPathParams;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSetClientidPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSetClientidPathParams = ProtocolMqttClientSetClientidPathParams;
 var ProtocolMqttClientSetClientidRequest = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSetClientidRequest, _super);
     function ProtocolMqttClientSetClientidRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolMqttClientSetClientidPathParams)
     ], ProtocolMqttClientSetClientidRequest.prototype, "pathParams", void 0);
     return ProtocolMqttClientSetClientidRequest;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSetClientidRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSetClientidRequest = ProtocolMqttClientSetClientidRequest;
 var ProtocolMqttClientSetClientidResponse = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientSetClientidResponse, _super);
     function ProtocolMqttClientSetClientidResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolMqttClientSetClientidResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolMqttClientSetClientidResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolMqttClientSetClientidResponse.prototype, "protocolMqttClientSetClientid200ApplicationJsonInt32Integers", void 0);
+    ], ProtocolMqttClientSetClientidResponse.prototype, "protocolMqttClientSetClientid200ApplicationJSONInt32Integers", void 0);
     return ProtocolMqttClientSetClientidResponse;
-}(SpeakeasyBase));
-export { ProtocolMqttClientSetClientidResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientSetClientidResponse = ProtocolMqttClientSetClientidResponse;

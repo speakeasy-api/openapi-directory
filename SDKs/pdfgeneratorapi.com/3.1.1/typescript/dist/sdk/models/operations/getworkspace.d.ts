@@ -58,10 +58,10 @@ export declare class GetWorkspaceRequest extends SpeakeasyBase {
 export declare class GetWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getWorkspace200ApplicationJsonObject?: GetWorkspace200ApplicationJson;
-    getWorkspace401ApplicationJsonObject?: GetWorkspace401ApplicationJson;
-    getWorkspace403ApplicationJsonObject?: GetWorkspace403ApplicationJson;
-    getWorkspace404ApplicationJsonObject?: GetWorkspace404ApplicationJson;
-    getWorkspace422ApplicationJsonObject?: GetWorkspace422ApplicationJson;
-    getWorkspace500ApplicationJsonObject?: GetWorkspace500ApplicationJson;
+    getWorkspace200ApplicationJSONObject?: GetWorkspace200ApplicationJson;
+    getWorkspace401ApplicationJSONObject?: GetWorkspace401ApplicationJson;
+    getWorkspace403ApplicationJSONObject?: GetWorkspace403ApplicationJson;
+    getWorkspace404ApplicationJSONObject?: GetWorkspace404ApplicationJson;
+    getWorkspace422ApplicationJSONObject?: GetWorkspace422ApplicationJson;
+    getWorkspace500ApplicationJSONObject?: GetWorkspace500ApplicationJson;
 }

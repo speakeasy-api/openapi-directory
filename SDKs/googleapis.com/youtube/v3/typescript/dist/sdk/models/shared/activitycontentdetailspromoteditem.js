@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ActivityContentDetailsPromotedItemCtaTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActivityContentDetailsPromotedItem = exports.ActivityContentDetailsPromotedItemCtaTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ActivityContentDetailsPromotedItemCtaTypeEnum;
 (function (ActivityContentDetailsPromotedItemCtaTypeEnum) {
     ActivityContentDetailsPromotedItemCtaTypeEnum["CtaTypeUnspecified"] = "ctaTypeUnspecified";
     ActivityContentDetailsPromotedItemCtaTypeEnum["VisitAdvertiserSite"] = "visitAdvertiserSite";
-})(ActivityContentDetailsPromotedItemCtaTypeEnum || (ActivityContentDetailsPromotedItemCtaTypeEnum = {}));
+})(ActivityContentDetailsPromotedItemCtaTypeEnum = exports.ActivityContentDetailsPromotedItemCtaTypeEnum || (exports.ActivityContentDetailsPromotedItemCtaTypeEnum = {}));
 // ActivityContentDetailsPromotedItem
 /**
  * Details about a resource which is being promoted.
@@ -38,45 +41,45 @@ var ActivityContentDetailsPromotedItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adTag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adTag" }),
         __metadata("design:type", String)
     ], ActivityContentDetailsPromotedItem.prototype, "adTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clickTrackingUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clickTrackingUrl" }),
         __metadata("design:type", String)
     ], ActivityContentDetailsPromotedItem.prototype, "clickTrackingUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativeViewUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativeViewUrl" }),
         __metadata("design:type", String)
     ], ActivityContentDetailsPromotedItem.prototype, "creativeViewUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ctaType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ctaType" }),
         __metadata("design:type", String)
     ], ActivityContentDetailsPromotedItem.prototype, "ctaType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customCtaButtonText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customCtaButtonText" }),
         __metadata("design:type", String)
     ], ActivityContentDetailsPromotedItem.prototype, "customCtaButtonText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=descriptionText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=descriptionText" }),
         __metadata("design:type", String)
     ], ActivityContentDetailsPromotedItem.prototype, "descriptionText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationUrl" }),
         __metadata("design:type", String)
     ], ActivityContentDetailsPromotedItem.prototype, "destinationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=forecastingUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=forecastingUrl" }),
         __metadata("design:type", Array)
     ], ActivityContentDetailsPromotedItem.prototype, "forecastingUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=impressionUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=impressionUrl" }),
         __metadata("design:type", Array)
     ], ActivityContentDetailsPromotedItem.prototype, "impressionUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoId" }),
         __metadata("design:type", String)
     ], ActivityContentDetailsPromotedItem.prototype, "videoId", void 0);
     return ActivityContentDetailsPromotedItem;
-}(SpeakeasyBase));
-export { ActivityContentDetailsPromotedItem };
+}(utils_1.SpeakeasyBase));
+exports.ActivityContentDetailsPromotedItem = ActivityContentDetailsPromotedItem;

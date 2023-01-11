@@ -26,5 +26,5 @@ export declare class GetDriversRequest extends SpeakeasyBase {
 export declare class GetDriversResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDrivers200ApplicationJsonObject?: GetDrivers200ApplicationJson;
+    getDrivers200ApplicationJSONObject?: GetDrivers200ApplicationJson;
 }

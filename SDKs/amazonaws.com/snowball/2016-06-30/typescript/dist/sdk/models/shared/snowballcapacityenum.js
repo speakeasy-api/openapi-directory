@@ -1,4 +1,7 @@
-export var SnowballCapacityEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SnowballCapacityEnum = void 0;
+var SnowballCapacityEnum;
 (function (SnowballCapacityEnum) {
     SnowballCapacityEnum["T50"] = "T50";
     SnowballCapacityEnum["T80"] = "T80";
@@ -8,4 +11,4 @@ export var SnowballCapacityEnum;
     SnowballCapacityEnum["T8"] = "T8";
     SnowballCapacityEnum["T14"] = "T14";
     SnowballCapacityEnum["NoPreference"] = "NoPreference";
-})(SnowballCapacityEnum || (SnowballCapacityEnum = {}));
+})(SnowballCapacityEnum = exports.SnowballCapacityEnum || (exports.SnowballCapacityEnum = {}));

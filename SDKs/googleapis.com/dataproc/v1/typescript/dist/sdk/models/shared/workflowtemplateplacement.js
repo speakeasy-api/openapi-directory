@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClusterSelector } from "./clusterselector";
-import { ManagedCluster } from "./managedcluster";
-import { ManagedClusterInput } from "./managedcluster";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkflowTemplatePlacementInput = exports.WorkflowTemplatePlacement = void 0;
+var utils_1 = require("../../../internal/utils");
+var clusterselector_1 = require("./clusterselector");
+var managedcluster_1 = require("./managedcluster");
+var managedcluster_2 = require("./managedcluster");
 // WorkflowTemplatePlacement
 /**
  * Specifies workflow execution target.Either managed_cluster or cluster_selector is required.
@@ -36,16 +39,16 @@ var WorkflowTemplatePlacement = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterSelector" }),
-        __metadata("design:type", ClusterSelector)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterSelector" }),
+        __metadata("design:type", clusterselector_1.ClusterSelector)
     ], WorkflowTemplatePlacement.prototype, "clusterSelector", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managedCluster" }),
-        __metadata("design:type", ManagedCluster)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managedCluster" }),
+        __metadata("design:type", managedcluster_1.ManagedCluster)
     ], WorkflowTemplatePlacement.prototype, "managedCluster", void 0);
     return WorkflowTemplatePlacement;
-}(SpeakeasyBase));
-export { WorkflowTemplatePlacement };
+}(utils_1.SpeakeasyBase));
+exports.WorkflowTemplatePlacement = WorkflowTemplatePlacement;
 // WorkflowTemplatePlacementInput
 /**
  * Specifies workflow execution target.Either managed_cluster or cluster_selector is required.
@@ -56,13 +59,13 @@ var WorkflowTemplatePlacementInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterSelector" }),
-        __metadata("design:type", ClusterSelector)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterSelector" }),
+        __metadata("design:type", clusterselector_1.ClusterSelector)
     ], WorkflowTemplatePlacementInput.prototype, "clusterSelector", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managedCluster" }),
-        __metadata("design:type", ManagedClusterInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managedCluster" }),
+        __metadata("design:type", managedcluster_2.ManagedClusterInput)
     ], WorkflowTemplatePlacementInput.prototype, "managedCluster", void 0);
     return WorkflowTemplatePlacementInput;
-}(SpeakeasyBase));
-export { WorkflowTemplatePlacementInput };
+}(utils_1.SpeakeasyBase));
+exports.WorkflowTemplatePlacementInput = WorkflowTemplatePlacementInput;

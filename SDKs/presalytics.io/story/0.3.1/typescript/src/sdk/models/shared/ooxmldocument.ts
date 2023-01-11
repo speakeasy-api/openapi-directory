@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 // OoxmlDocument
 /** 
- * A reference to an Ooxml Automation Document from the Presalytics Ooxml Automation API
+ * Base model for all types
 **/
 export class OoxmlDocument extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=created_at" })

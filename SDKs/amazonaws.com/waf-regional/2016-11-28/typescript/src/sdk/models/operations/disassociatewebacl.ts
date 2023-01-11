@@ -48,7 +48,7 @@ export class DisassociateWebAclResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  disassociateWebAclResponse?: Map<string, any>;
+  disassociateWebACLResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

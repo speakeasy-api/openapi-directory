@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAnnotationsByRgdIdAndOntologyUsingGetResponse = exports.GetAnnotationsByRgdIdAndOntologyUsingGetRequest = exports.GetAnnotationsByRgdIdAndOntologyUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAnnotationsByRgdIdAndOntologyUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetAnnotationsByRgdIdAndOntologyUsingGetPathParams, _super);
     function GetAnnotationsByRgdIdAndOntologyUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ontologyPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ontologyPrefix" }),
         __metadata("design:type", String)
     ], GetAnnotationsByRgdIdAndOntologyUsingGetPathParams.prototype, "ontologyPrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
         __metadata("design:type", Number)
     ], GetAnnotationsByRgdIdAndOntologyUsingGetPathParams.prototype, "rgdId", void 0);
     return GetAnnotationsByRgdIdAndOntologyUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetAnnotationsByRgdIdAndOntologyUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAnnotationsByRgdIdAndOntologyUsingGetPathParams = GetAnnotationsByRgdIdAndOntologyUsingGetPathParams;
 var GetAnnotationsByRgdIdAndOntologyUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetAnnotationsByRgdIdAndOntologyUsingGetRequest, _super);
     function GetAnnotationsByRgdIdAndOntologyUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAnnotationsByRgdIdAndOntologyUsingGetPathParams)
     ], GetAnnotationsByRgdIdAndOntologyUsingGetRequest.prototype, "pathParams", void 0);
     return GetAnnotationsByRgdIdAndOntologyUsingGetRequest;
-}(SpeakeasyBase));
-export { GetAnnotationsByRgdIdAndOntologyUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAnnotationsByRgdIdAndOntologyUsingGetRequest = GetAnnotationsByRgdIdAndOntologyUsingGetRequest;
 var GetAnnotationsByRgdIdAndOntologyUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetAnnotationsByRgdIdAndOntologyUsingGetResponse, _super);
     function GetAnnotationsByRgdIdAndOntologyUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetAnnotationsByRgdIdAndOntologyUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAnnotationsByRgdIdAndOntologyUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAnnotationsByRgdIdAndOntologyUsingGetResponse.prototype, "statusCode", void 0);
     return GetAnnotationsByRgdIdAndOntologyUsingGetResponse;
-}(SpeakeasyBase));
-export { GetAnnotationsByRgdIdAndOntologyUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAnnotationsByRgdIdAndOntologyUsingGetResponse = GetAnnotationsByRgdIdAndOntologyUsingGetResponse;

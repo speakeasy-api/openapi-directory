@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AddFacetToObjectRequest, AddFacetToObjectResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,43 +33,43 @@ const sdk = new SDK(WithSecurity(
     
 const req: AddFacetToObjectRequest = {
   headers: {
-    xAmzAlgorithm: "qui",
-    xAmzContentSha256: "doloribus",
-    xAmzCredential: "ad",
-    xAmzDate: "minus",
-    xAmzSecurityToken: "sit",
-    xAmzSignature: "est",
-    xAmzSignedHeaders: "voluptas",
-    xAmzDataPartition: "quisquam",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
+    xAmzDataPartition: "voluptas",
   },
   request: {
     objectAttributeList: [
       {
         key: {
-          facetName: "dolor",
+          facetName: "et",
           name: "nihil",
-          schemaArn: "error",
+          schemaArn: "rerum",
         },
         value: {
-          binaryValue: "sunt",
-          booleanValue: false,
-          datetimeValue: "2019-10-18T17:40:39Z",
-          numberValue: "dolores",
-          stringValue: "quae",
+          binaryValue: "dicta",
+          booleanValue: true,
+          datetimeValue: "1981-07-21T06:30:48Z",
+          numberValue: "et",
+          stringValue: "ut",
         },
       },
     ],
     objectReference: {
-      selector: "id",
+      selector: "dolorem",
     },
     schemaFacet: {
-      facetName: "eaque",
-      schemaArn: "et",
+      facetName: "et",
+      schemaArn: "voluptate",
     },
   },
 };
 
-sdk.sdk.addFacetToObject(req).then((res: AddFacetToObjectResponse | AxiosError) => {
+sdk.addFacetToObject(req).then((res: AddFacetToObjectResponse | AxiosError) => {
    // handle response
 });
 ```

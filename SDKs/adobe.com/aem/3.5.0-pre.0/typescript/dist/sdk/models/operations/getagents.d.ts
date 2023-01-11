@@ -8,5 +8,5 @@ export declare class GetAgentsRequest extends SpeakeasyBase {
 export declare class GetAgentsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getAgentsDefaultApplicationJsonString?: string;
+    getAgentsDefaultApplicationJSONString?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeActiveReceiptRuleSetActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeActiveReceiptRuleSetResponse = exports.PostDescribeActiveReceiptRuleSetRequest = exports.PostDescribeActiveReceiptRuleSetHeaders = exports.PostDescribeActiveReceiptRuleSetQueryParams = exports.PostDescribeActiveReceiptRuleSetVersionEnum = exports.PostDescribeActiveReceiptRuleSetActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeActiveReceiptRuleSetActionEnum;
 (function (PostDescribeActiveReceiptRuleSetActionEnum) {
     PostDescribeActiveReceiptRuleSetActionEnum["DescribeActiveReceiptRuleSet"] = "DescribeActiveReceiptRuleSet";
-})(PostDescribeActiveReceiptRuleSetActionEnum || (PostDescribeActiveReceiptRuleSetActionEnum = {}));
-export var PostDescribeActiveReceiptRuleSetVersionEnum;
+})(PostDescribeActiveReceiptRuleSetActionEnum = exports.PostDescribeActiveReceiptRuleSetActionEnum || (exports.PostDescribeActiveReceiptRuleSetActionEnum = {}));
+var PostDescribeActiveReceiptRuleSetVersionEnum;
 (function (PostDescribeActiveReceiptRuleSetVersionEnum) {
     PostDescribeActiveReceiptRuleSetVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(PostDescribeActiveReceiptRuleSetVersionEnum || (PostDescribeActiveReceiptRuleSetVersionEnum = {}));
+})(PostDescribeActiveReceiptRuleSetVersionEnum = exports.PostDescribeActiveReceiptRuleSetVersionEnum || (exports.PostDescribeActiveReceiptRuleSetVersionEnum = {}));
 var PostDescribeActiveReceiptRuleSetQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeActiveReceiptRuleSetQueryParams, _super);
     function PostDescribeActiveReceiptRuleSetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeActiveReceiptRuleSetQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeActiveReceiptRuleSetQueryParams.prototype, "version", void 0);
     return PostDescribeActiveReceiptRuleSetQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeActiveReceiptRuleSetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeActiveReceiptRuleSetQueryParams = PostDescribeActiveReceiptRuleSetQueryParams;
 var PostDescribeActiveReceiptRuleSetHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeActiveReceiptRuleSetHeaders, _super);
     function PostDescribeActiveReceiptRuleSetHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeActiveReceiptRuleSetHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeActiveReceiptRuleSetHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeActiveReceiptRuleSetHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeActiveReceiptRuleSetHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeActiveReceiptRuleSetHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeActiveReceiptRuleSetHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeActiveReceiptRuleSetHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeActiveReceiptRuleSetHeaders;
-}(SpeakeasyBase));
-export { PostDescribeActiveReceiptRuleSetHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeActiveReceiptRuleSetHeaders = PostDescribeActiveReceiptRuleSetHeaders;
 var PostDescribeActiveReceiptRuleSetRequest = /** @class */ (function (_super) {
     __extends(PostDescribeActiveReceiptRuleSetRequest, _super);
     function PostDescribeActiveReceiptRuleSetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeActiveReceiptRuleSetQueryParams)
     ], PostDescribeActiveReceiptRuleSetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeActiveReceiptRuleSetHeaders)
     ], PostDescribeActiveReceiptRuleSetRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeActiveReceiptRuleSetRequest.prototype, "request", void 0);
     return PostDescribeActiveReceiptRuleSetRequest;
-}(SpeakeasyBase));
-export { PostDescribeActiveReceiptRuleSetRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeActiveReceiptRuleSetRequest = PostDescribeActiveReceiptRuleSetRequest;
 var PostDescribeActiveReceiptRuleSetResponse = /** @class */ (function (_super) {
     __extends(PostDescribeActiveReceiptRuleSetResponse, _super);
     function PostDescribeActiveReceiptRuleSetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeActiveReceiptRuleSetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeActiveReceiptRuleSetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeActiveReceiptRuleSetResponse.prototype, "statusCode", void 0);
     return PostDescribeActiveReceiptRuleSetResponse;
-}(SpeakeasyBase));
-export { PostDescribeActiveReceiptRuleSetResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeActiveReceiptRuleSetResponse = PostDescribeActiveReceiptRuleSetResponse;

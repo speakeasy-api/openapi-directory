@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,71 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamResponse = exports.TeamResponseOrganization = void 0;
+var utils_1 = require("../../../internal/utils");
+// TeamResponseOrganization
+/**
+ * The organization/workspace the team belongs to.
+ *
+**/
 var TeamResponseOrganization = /** @class */ (function (_super) {
     __extends(TeamResponseOrganization, _super);
     function TeamResponseOrganization() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], TeamResponseOrganization.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TeamResponseOrganization.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], TeamResponseOrganization.prototype, "resourceType", void 0);
     return TeamResponseOrganization;
-}(SpeakeasyBase));
-export { TeamResponseOrganization };
+}(utils_1.SpeakeasyBase));
+exports.TeamResponseOrganization = TeamResponseOrganization;
+// TeamResponse
+/**
+ * A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.
+**/
 var TeamResponse = /** @class */ (function (_super) {
     __extends(TeamResponse, _super);
     function TeamResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], TeamResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], TeamResponse.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_description" }),
         __metadata("design:type", String)
     ], TeamResponse.prototype, "htmlDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TeamResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization" }),
         __metadata("design:type", TeamResponseOrganization)
     ], TeamResponse.prototype, "organization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permalink_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permalink_url" }),
         __metadata("design:type", String)
     ], TeamResponse.prototype, "permalinkUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], TeamResponse.prototype, "resourceType", void 0);
     return TeamResponse;
-}(SpeakeasyBase));
-export { TeamResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamResponse = TeamResponse;

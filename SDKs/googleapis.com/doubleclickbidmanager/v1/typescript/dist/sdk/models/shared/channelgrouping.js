@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Rule } from "./rule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChannelGrouping = void 0;
+var utils_1 = require("../../../internal/utils");
+var rule_1 = require("./rule");
 // ChannelGrouping
 /**
  * A channel grouping defines a set of rules that can be used to categorize events in a path report.
@@ -34,17 +37,17 @@ var ChannelGrouping = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fallbackName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fallbackName" }),
         __metadata("design:type", String)
     ], ChannelGrouping.prototype, "fallbackName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ChannelGrouping.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: Rule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: rule_1.Rule }),
         __metadata("design:type", Array)
     ], ChannelGrouping.prototype, "rules", void 0);
     return ChannelGrouping;
-}(SpeakeasyBase));
-export { ChannelGrouping };
+}(utils_1.SpeakeasyBase));
+exports.ChannelGrouping = ChannelGrouping;

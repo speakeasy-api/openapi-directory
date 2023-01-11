@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FilteredBidDetailRow } from "./filteredbiddetailrow";
-export var ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListCreativeStatusBreakdownByDetailResponse = exports.ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var filteredbiddetailrow_1 = require("./filteredbiddetailrow");
+var ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum;
 (function (ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum) {
     ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum["DetailTypeUnspecified"] = "DETAIL_TYPE_UNSPECIFIED";
     ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum["CreativeAttribute"] = "CREATIVE_ATTRIBUTE";
@@ -36,7 +39,7 @@ export var ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum;
     ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum["AtpVendor"] = "ATP_VENDOR";
     ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum["VendorDomain"] = "VENDOR_DOMAIN";
     ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum["GvlId"] = "GVL_ID";
-})(ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum || (ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum = {}));
+})(ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum = exports.ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum || (exports.ListCreativeStatusBreakdownByDetailResponseDetailTypeEnum = {}));
 // ListCreativeStatusBreakdownByDetailResponse
 /**
  * Response message for listing all details associated with a given filtered bid reason.
@@ -47,17 +50,17 @@ var ListCreativeStatusBreakdownByDetailResponse = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detailType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detailType" }),
         __metadata("design:type", String)
     ], ListCreativeStatusBreakdownByDetailResponse.prototype, "detailType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filteredBidDetailRows", elemType: FilteredBidDetailRow }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filteredBidDetailRows", elemType: filteredbiddetailrow_1.FilteredBidDetailRow }),
         __metadata("design:type", Array)
     ], ListCreativeStatusBreakdownByDetailResponse.prototype, "filteredBidDetailRows", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListCreativeStatusBreakdownByDetailResponse.prototype, "nextPageToken", void 0);
     return ListCreativeStatusBreakdownByDetailResponse;
-}(SpeakeasyBase));
-export { ListCreativeStatusBreakdownByDetailResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListCreativeStatusBreakdownByDetailResponse = ListCreativeStatusBreakdownByDetailResponse;

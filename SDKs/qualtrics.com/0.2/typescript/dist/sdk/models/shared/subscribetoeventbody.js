@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscribeToEventBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var SubscribeToEventBody = /** @class */ (function (_super) {
     __extends(SubscribeToEventBody, _super);
     function SubscribeToEventBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encrypt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encrypt" }),
         __metadata("design:type", Boolean)
     ], SubscribeToEventBody.prototype, "encrypt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicationUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicationUrl" }),
         __metadata("design:type", String)
     ], SubscribeToEventBody.prototype, "publicationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topics" }),
         __metadata("design:type", String)
     ], SubscribeToEventBody.prototype, "topics", void 0);
     return SubscribeToEventBody;
-}(SpeakeasyBase));
-export { SubscribeToEventBody };
+}(utils_1.SpeakeasyBase));
+exports.SubscribeToEventBody = SubscribeToEventBody;

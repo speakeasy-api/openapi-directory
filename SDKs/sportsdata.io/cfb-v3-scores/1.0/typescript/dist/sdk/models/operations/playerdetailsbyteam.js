@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayerDetailsByTeamFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerDetailsByTeamResponse = exports.PlayerDetailsByTeamRequest = exports.PlayerDetailsByTeamPathParams = exports.PlayerDetailsByTeamFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayerDetailsByTeamFormatEnum;
 (function (PlayerDetailsByTeamFormatEnum) {
     PlayerDetailsByTeamFormatEnum["Xml"] = "XML";
     PlayerDetailsByTeamFormatEnum["Json"] = "JSON";
-})(PlayerDetailsByTeamFormatEnum || (PlayerDetailsByTeamFormatEnum = {}));
+})(PlayerDetailsByTeamFormatEnum = exports.PlayerDetailsByTeamFormatEnum || (exports.PlayerDetailsByTeamFormatEnum = {}));
 var PlayerDetailsByTeamPathParams = /** @class */ (function (_super) {
     __extends(PlayerDetailsByTeamPathParams, _super);
     function PlayerDetailsByTeamPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayerDetailsByTeamPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team" }),
         __metadata("design:type", String)
     ], PlayerDetailsByTeamPathParams.prototype, "team", void 0);
     return PlayerDetailsByTeamPathParams;
-}(SpeakeasyBase));
-export { PlayerDetailsByTeamPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayerDetailsByTeamPathParams = PlayerDetailsByTeamPathParams;
 var PlayerDetailsByTeamRequest = /** @class */ (function (_super) {
     __extends(PlayerDetailsByTeamRequest, _super);
     function PlayerDetailsByTeamRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayerDetailsByTeamPathParams)
     ], PlayerDetailsByTeamRequest.prototype, "pathParams", void 0);
     return PlayerDetailsByTeamRequest;
-}(SpeakeasyBase));
-export { PlayerDetailsByTeamRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayerDetailsByTeamRequest = PlayerDetailsByTeamRequest;
 var PlayerDetailsByTeamResponse = /** @class */ (function (_super) {
     __extends(PlayerDetailsByTeamResponse, _super);
     function PlayerDetailsByTeamResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayerDetailsByTeamResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayerDetailsByTeamResponse.prototype, "players", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayerDetailsByTeamResponse.prototype, "statusCode", void 0);
     return PlayerDetailsByTeamResponse;
-}(SpeakeasyBase));
-export { PlayerDetailsByTeamResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerDetailsByTeamResponse = PlayerDetailsByTeamResponse;

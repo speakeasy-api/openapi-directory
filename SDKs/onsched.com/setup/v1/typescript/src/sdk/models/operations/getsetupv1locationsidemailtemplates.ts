@@ -19,7 +19,7 @@ export class GetSetupV1LocationsIdEmailTemplatesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  emailTemplateListViewModel?: Map<string, any>;
+  emailTemplateListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

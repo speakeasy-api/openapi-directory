@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,106 +23,108 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetNamesNearOutputFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNamesNearResponse = exports.GetNamesNearRequest = exports.GetNamesNearQueryParams = exports.GetNamesNearSortByEnum = exports.GetNamesNearOutputStyleEnum = exports.GetNamesNearOutputFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetNamesNearOutputFormatEnum;
 (function (GetNamesNearOutputFormatEnum) {
     GetNamesNearOutputFormatEnum["Json"] = "json";
     GetNamesNearOutputFormatEnum["Xml"] = "xml";
     GetNamesNearOutputFormatEnum["Kml"] = "kml";
     GetNamesNearOutputFormatEnum["Csv"] = "csv";
-})(GetNamesNearOutputFormatEnum || (GetNamesNearOutputFormatEnum = {}));
-export var GetNamesNearOutputStyleEnum;
+})(GetNamesNearOutputFormatEnum = exports.GetNamesNearOutputFormatEnum || (exports.GetNamesNearOutputFormatEnum = {}));
+var GetNamesNearOutputStyleEnum;
 (function (GetNamesNearOutputStyleEnum) {
     GetNamesNearOutputStyleEnum["Summary"] = "summary";
     GetNamesNearOutputStyleEnum["Detail"] = "detail";
-})(GetNamesNearOutputStyleEnum || (GetNamesNearOutputStyleEnum = {}));
-export var GetNamesNearSortByEnum;
+})(GetNamesNearOutputStyleEnum = exports.GetNamesNearOutputStyleEnum || (exports.GetNamesNearOutputStyleEnum = {}));
+var GetNamesNearSortByEnum;
 (function (GetNamesNearSortByEnum) {
     GetNamesNearSortByEnum["Name"] = "name";
     GetNamesNearSortByEnum["FeatureType"] = "featureType";
     GetNamesNearSortByEnum["DecisionDate"] = "decisionDate";
-})(GetNamesNearSortByEnum || (GetNamesNearSortByEnum = {}));
+})(GetNamesNearSortByEnum = exports.GetNamesNearSortByEnum || (exports.GetNamesNearSortByEnum = {}));
 var GetNamesNearQueryParams = /** @class */ (function (_super) {
     __extends(GetNamesNearQueryParams, _super);
     function GetNamesNearQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=distance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=distance" }),
         __metadata("design:type", String)
     ], GetNamesNearQueryParams.prototype, "distance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=embed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=embed" }),
         __metadata("design:type", Number)
     ], GetNamesNearQueryParams.prototype, "embed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=featureCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=featureCategory" }),
         __metadata("design:type", String)
     ], GetNamesNearQueryParams.prototype, "featureCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=featureClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=featureClass" }),
         __metadata("design:type", String)
     ], GetNamesNearQueryParams.prototype, "featureClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=featurePoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=featurePoint" }),
         __metadata("design:type", String)
     ], GetNamesNearQueryParams.prototype, "featurePoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=featureType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=featureType" }),
         __metadata("design:type", String)
     ], GetNamesNearQueryParams.prototype, "featureType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=itemsPerPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=itemsPerPage" }),
         __metadata("design:type", Number)
     ], GetNamesNearQueryParams.prototype, "itemsPerPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputFormat" }),
         __metadata("design:type", String)
     ], GetNamesNearQueryParams.prototype, "outputFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
         __metadata("design:type", Number)
-    ], GetNamesNearQueryParams.prototype, "outputSrs", void 0);
+    ], GetNamesNearQueryParams.prototype, "outputSRS", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputStyle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputStyle" }),
         __metadata("design:type", String)
     ], GetNamesNearQueryParams.prototype, "outputStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sortBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sortBy" }),
         __metadata("design:type", String)
     ], GetNamesNearQueryParams.prototype, "sortBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startIndex" }),
         __metadata("design:type", Number)
     ], GetNamesNearQueryParams.prototype, "startIndex", void 0);
     return GetNamesNearQueryParams;
-}(SpeakeasyBase));
-export { GetNamesNearQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNamesNearQueryParams = GetNamesNearQueryParams;
 var GetNamesNearRequest = /** @class */ (function (_super) {
     __extends(GetNamesNearRequest, _super);
     function GetNamesNearRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNamesNearQueryParams)
     ], GetNamesNearRequest.prototype, "queryParams", void 0);
     return GetNamesNearRequest;
-}(SpeakeasyBase));
-export { GetNamesNearRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNamesNearRequest = GetNamesNearRequest;
 var GetNamesNearResponse = /** @class */ (function (_super) {
     __extends(GetNamesNearResponse, _super);
     function GetNamesNearResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNamesNearResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNamesNearResponse.prototype, "statusCode", void 0);
     return GetNamesNearResponse;
-}(SpeakeasyBase));
-export { GetNamesNearResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNamesNearResponse = GetNamesNearResponse;

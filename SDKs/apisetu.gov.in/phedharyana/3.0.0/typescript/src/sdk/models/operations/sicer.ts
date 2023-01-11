@@ -188,23 +188,23 @@ export class SicerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  sicer400ApplicationJsonObject?: Sicer400ApplicationJson;
+  sicer400ApplicationJSONObject?: Sicer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  sicer401ApplicationJsonObject?: Sicer401ApplicationJson;
+  sicer401ApplicationJSONObject?: Sicer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  sicer404ApplicationJsonObject?: Sicer404ApplicationJson;
+  sicer404ApplicationJSONObject?: Sicer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  sicer500ApplicationJsonObject?: Sicer500ApplicationJson;
+  sicer500ApplicationJSONObject?: Sicer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  sicer502ApplicationJsonObject?: Sicer502ApplicationJson;
+  sicer502ApplicationJSONObject?: Sicer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  sicer503ApplicationJsonObject?: Sicer503ApplicationJson;
+  sicer503ApplicationJSONObject?: Sicer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  sicer504ApplicationJsonObject?: Sicer504ApplicationJson;
+  sicer504ApplicationJSONObject?: Sicer504ApplicationJson;
 }

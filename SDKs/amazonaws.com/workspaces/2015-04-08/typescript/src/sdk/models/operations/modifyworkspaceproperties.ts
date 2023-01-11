@@ -57,7 +57,7 @@ export class ModifyWorkspacePropertiesResponse extends SpeakeasyBase {
   invalidResourceStateException?: any;
 
   @SpeakeasyMetadata()
-  modifyWorkspacePropertiesResult?: Map<string, any>;
+  modifyWorkspacePropertiesResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   operationInProgressException?: any;

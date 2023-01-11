@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TagListEntry } from "./taglistentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateAgentRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var taglistentry_1 = require("./taglistentry");
 // CreateAgentRequest
 /**
  * CreateAgentRequest
@@ -34,29 +37,29 @@ var CreateAgentRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ActivationKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ActivationKey" }),
         __metadata("design:type", String)
     ], CreateAgentRequest.prototype, "activationKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AgentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AgentName" }),
         __metadata("design:type", String)
     ], CreateAgentRequest.prototype, "agentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityGroupArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityGroupArns" }),
         __metadata("design:type", Array)
     ], CreateAgentRequest.prototype, "securityGroupArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetArns" }),
         __metadata("design:type", Array)
     ], CreateAgentRequest.prototype, "subnetArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: TagListEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: taglistentry_1.TagListEntry }),
         __metadata("design:type", Array)
     ], CreateAgentRequest.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VpcEndpointId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VpcEndpointId" }),
         __metadata("design:type", String)
     ], CreateAgentRequest.prototype, "vpcEndpointId", void 0);
     return CreateAgentRequest;
-}(SpeakeasyBase));
-export { CreateAgentRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateAgentRequest = CreateAgentRequest;

@@ -4,7 +4,7 @@ export declare class AccountsBalanceGetRequest extends SpeakeasyBase {
     request: shared.AccountsBalanceGetRequest;
 }
 export declare class AccountsBalanceGetResponse extends SpeakeasyBase {
-    accountsGetResponse?: Map<string, any>;
+    accountsGetResponse?: Record<string, any>;
     contentType: string;
     statusCode: number;
 }

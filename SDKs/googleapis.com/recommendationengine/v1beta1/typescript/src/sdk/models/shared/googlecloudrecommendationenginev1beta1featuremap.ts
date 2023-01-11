@@ -10,8 +10,8 @@ import { GoogleCloudRecommendationengineV1beta1FeatureMapFloatList } from "./goo
 **/
 export class GoogleCloudRecommendationengineV1beta1FeatureMap extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=categoricalFeatures", elemType: GoogleCloudRecommendationengineV1beta1FeatureMapStringList })
-  categoricalFeatures?: Map<string, GoogleCloudRecommendationengineV1beta1FeatureMapStringList>;
+  categoricalFeatures?: Record<string, GoogleCloudRecommendationengineV1beta1FeatureMapStringList>;
 
   @SpeakeasyMetadata({ data: "json, name=numericalFeatures", elemType: GoogleCloudRecommendationengineV1beta1FeatureMapFloatList })
-  numericalFeatures?: Map<string, GoogleCloudRecommendationengineV1beta1FeatureMapFloatList>;
+  numericalFeatures?: Record<string, GoogleCloudRecommendationengineV1beta1FeatureMapFloatList>;
 }

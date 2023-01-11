@@ -11,7 +11,7 @@ export class CreateBotAliasResponse extends SpeakeasyBase {
   botAliasId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=botAliasLocaleSettings", elemType: BotAliasLocaleSettings })
-  botAliasLocaleSettings?: Map<string, BotAliasLocaleSettings>;
+  botAliasLocaleSettings?: Record<string, BotAliasLocaleSettings>;
 
   @SpeakeasyMetadata({ data: "json, name=botAliasName" })
   botAliasName?: string;
@@ -38,5 +38,5 @@ export class CreateBotAliasResponse extends SpeakeasyBase {
   sentimentAnalysisSettings?: SentimentAnalysisSettings;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }

@@ -65,7 +65,7 @@ export class HomegraphDevicesRequestSyncResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  requestSyncDevicesResponse?: Map<string, any>;
+  requestSyncDevicesResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

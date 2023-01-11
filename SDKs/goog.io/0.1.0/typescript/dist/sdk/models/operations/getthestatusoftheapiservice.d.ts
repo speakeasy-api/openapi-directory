@@ -4,6 +4,6 @@ export declare class GetTheStatusOfTheApiService200ApplicationJson extends Speak
 }
 export declare class GetTheStatusOfTheApiServiceResponse extends SpeakeasyBase {
     contentType: string;
-    getTheStatusOfTheApiService200ApplicationJsonObject?: GetTheStatusOfTheApiService200ApplicationJson;
+    getTheStatusOfTheAPIService200ApplicationJSONObject?: GetTheStatusOfTheApiService200ApplicationJson;
     statusCode: number;
 }

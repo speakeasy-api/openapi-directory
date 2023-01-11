@@ -39,7 +39,7 @@ export class StartContinuousExportRequest extends SpeakeasyBase {
   headers: StartContinuousExportHeaders;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 

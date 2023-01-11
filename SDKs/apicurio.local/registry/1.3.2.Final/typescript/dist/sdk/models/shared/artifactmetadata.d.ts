@@ -11,7 +11,7 @@ export declare class ArtifactMetaData extends SpeakeasyBase {
     modifiedBy: string;
     modifiedOn: Date;
     name?: string;
-    properties?: Map<string, string>;
+    properties?: Record<string, string>;
     state: ArtifactStateEnum;
     type: ArtifactTypeEnum;
     version: number;

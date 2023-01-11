@@ -28,5 +28,5 @@ export class StartIpaliasResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  startIpalias200ApplicationJsonString?: string;
+  startIpalias200ApplicationJSONString?: string;
 }

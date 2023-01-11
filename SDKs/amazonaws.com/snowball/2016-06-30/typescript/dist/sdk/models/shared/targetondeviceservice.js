@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeviceServiceNameEnum } from "./deviceservicenameenum";
-import { TransferOptionEnum } from "./transferoptionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetOnDeviceService = void 0;
+var utils_1 = require("../../../internal/utils");
+var deviceservicenameenum_1 = require("./deviceservicenameenum");
+var transferoptionenum_1 = require("./transferoptionenum");
 // TargetOnDeviceService
 /**
  * An object that represents the service or services on the Snow Family device that your transferred data will be exported from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
@@ -35,13 +38,13 @@ var TargetOnDeviceService = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceName" }),
         __metadata("design:type", String)
     ], TargetOnDeviceService.prototype, "serviceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransferOption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransferOption" }),
         __metadata("design:type", String)
     ], TargetOnDeviceService.prototype, "transferOption", void 0);
     return TargetOnDeviceService;
-}(SpeakeasyBase));
-export { TargetOnDeviceService };
+}(utils_1.SpeakeasyBase));
+exports.TargetOnDeviceService = TargetOnDeviceService;

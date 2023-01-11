@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUniProtMappingUsingGetResponse = exports.GetUniProtMappingUsingGetRequest = exports.GetUniProtMappingUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetUniProtMappingUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetUniProtMappingUsingGetPathParams, _super);
     function GetUniProtMappingUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
         __metadata("design:type", Number)
     ], GetUniProtMappingUsingGetPathParams.prototype, "rgdId", void 0);
     return GetUniProtMappingUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetUniProtMappingUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUniProtMappingUsingGetPathParams = GetUniProtMappingUsingGetPathParams;
 var GetUniProtMappingUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetUniProtMappingUsingGetRequest, _super);
     function GetUniProtMappingUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUniProtMappingUsingGetPathParams)
     ], GetUniProtMappingUsingGetRequest.prototype, "pathParams", void 0);
     return GetUniProtMappingUsingGetRequest;
-}(SpeakeasyBase));
-export { GetUniProtMappingUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUniProtMappingUsingGetRequest = GetUniProtMappingUsingGetRequest;
 var GetUniProtMappingUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetUniProtMappingUsingGetResponse, _super);
     function GetUniProtMappingUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetUniProtMappingUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUniProtMappingUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUniProtMappingUsingGetResponse.prototype, "statusCode", void 0);
     return GetUniProtMappingUsingGetResponse;
-}(SpeakeasyBase));
-export { GetUniProtMappingUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUniProtMappingUsingGetResponse = GetUniProtMappingUsingGetResponse;

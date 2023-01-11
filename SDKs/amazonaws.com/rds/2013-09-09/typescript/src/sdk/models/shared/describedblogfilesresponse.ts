@@ -1,11 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DescribeDbLogFilesDetails } from "./describedblogfilesdetails";
+import { DescribeDbLogFilesList } from "./describedblogfileslist";
 
 
 
 export class DescribeDbLogFilesResponse extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: DescribeDbLogFilesDetails })
-  describeDbLogFiles?: DescribeDbLogFilesDetails[];
+  @SpeakeasyMetadata({ elemType: DescribeDbLogFilesList })
+  describeDBLogFiles?: DescribeDbLogFilesList[];
 
   @SpeakeasyMetadata()
   marker?: string;

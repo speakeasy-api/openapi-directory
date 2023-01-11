@@ -22,5 +22,5 @@ export class GetNetworkSyslogServersResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSyslogServers200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSyslogServers200ApplicationJSONObject?: Record<string, any>;
 }

@@ -14,7 +14,7 @@ export declare class GetPlaylistsIdRequest extends SpeakeasyBase {
 export declare class GetPlaylistsIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     playlist?: shared.Playlist;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicationTaskStats = void 0;
+var utils_1 = require("../../../internal/utils");
 // ReplicationTaskStats
 /**
  * In response to a request by the <code>DescribeReplicationTasks</code> operation, this object provides a collection of statistics about a replication task.
@@ -33,49 +36,49 @@ var ReplicationTaskStats = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ElapsedTimeMillis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ElapsedTimeMillis" }),
         __metadata("design:type", Number)
     ], ReplicationTaskStats.prototype, "elapsedTimeMillis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FreshStartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FreshStartDate" }),
         __metadata("design:type", Date)
     ], ReplicationTaskStats.prototype, "freshStartDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FullLoadFinishDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FullLoadFinishDate" }),
         __metadata("design:type", Date)
     ], ReplicationTaskStats.prototype, "fullLoadFinishDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FullLoadProgressPercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FullLoadProgressPercent" }),
         __metadata("design:type", Number)
     ], ReplicationTaskStats.prototype, "fullLoadProgressPercent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FullLoadStartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FullLoadStartDate" }),
         __metadata("design:type", Date)
     ], ReplicationTaskStats.prototype, "fullLoadStartDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartDate" }),
         __metadata("design:type", Date)
     ], ReplicationTaskStats.prototype, "startDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StopDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StopDate" }),
         __metadata("design:type", Date)
     ], ReplicationTaskStats.prototype, "stopDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TablesErrored" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TablesErrored" }),
         __metadata("design:type", Number)
     ], ReplicationTaskStats.prototype, "tablesErrored", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TablesLoaded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TablesLoaded" }),
         __metadata("design:type", Number)
     ], ReplicationTaskStats.prototype, "tablesLoaded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TablesLoading" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TablesLoading" }),
         __metadata("design:type", Number)
     ], ReplicationTaskStats.prototype, "tablesLoading", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TablesQueued" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TablesQueued" }),
         __metadata("design:type", Number)
     ], ReplicationTaskStats.prototype, "tablesQueued", void 0);
     return ReplicationTaskStats;
-}(SpeakeasyBase));
-export { ReplicationTaskStats };
+}(utils_1.SpeakeasyBase));
+exports.ReplicationTaskStats = ReplicationTaskStats;

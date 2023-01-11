@@ -10,5 +10,5 @@ export class TerminateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  terminate200ApplicationJsonObject?: Map<string, number>;
+  terminate200ApplicationJSONObject?: Record<string, number>;
 }

@@ -215,7 +215,7 @@ export class MirrorTimelineInsertRequests extends SpeakeasyBase {
   audioGsmHr08: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=audio/ip-mr_v2.5" })
-  audioIpMrV25: Uint8Array;
+  audioIPMrV25: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=audio/ilbc" })
   audioIlbc: Uint8Array;

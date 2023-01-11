@@ -17,12 +17,12 @@ export declare class CreateBotRequestBodyDataPrivacy extends SpeakeasyBase {
 }
 export declare class CreateBotRequestBody extends SpeakeasyBase {
     botName: string;
-    botTags?: Map<string, string>;
+    botTags?: Record<string, string>;
     dataPrivacy: CreateBotRequestBodyDataPrivacy;
     description?: string;
-    idleSessionTtlInSeconds: number;
+    idleSessionTTLInSeconds: number;
     roleArn: string;
-    testBotAliasTags?: Map<string, string>;
+    testBotAliasTags?: Record<string, string>;
 }
 export declare class CreateBotRequest extends SpeakeasyBase {
     headers: CreateBotHeaders;

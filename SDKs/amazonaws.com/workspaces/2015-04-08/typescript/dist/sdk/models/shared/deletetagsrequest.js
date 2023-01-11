@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteTagsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteTagsRequest = /** @class */ (function (_super) {
     __extends(DeleteTagsRequest, _super);
     function DeleteTagsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceId" }),
         __metadata("design:type", String)
     ], DeleteTagsRequest.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TagKeys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TagKeys" }),
         __metadata("design:type", Array)
     ], DeleteTagsRequest.prototype, "tagKeys", void 0);
     return DeleteTagsRequest;
-}(SpeakeasyBase));
-export { DeleteTagsRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteTagsRequest = DeleteTagsRequest;

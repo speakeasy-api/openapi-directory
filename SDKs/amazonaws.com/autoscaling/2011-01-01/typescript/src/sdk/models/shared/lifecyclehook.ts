@@ -29,8 +29,8 @@ export class LifecycleHook extends SpeakeasyBase {
   notificationMetadata?: string;
 
   @SpeakeasyMetadata()
-  notificationTargetArn?: string;
+  notificationTargetARN?: string;
 
   @SpeakeasyMetadata()
-  roleArn?: string;
+  roleARN?: string;
 }

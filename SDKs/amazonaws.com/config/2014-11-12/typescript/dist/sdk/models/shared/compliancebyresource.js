@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Compliance } from "./compliance";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComplianceByResource = void 0;
+var utils_1 = require("../../../internal/utils");
+var compliance_1 = require("./compliance");
 // ComplianceByResource
 /**
  * Indicates whether an Amazon Web Services resource that is evaluated according to one or more Config rules is compliant. A resource is compliant if it complies with all of the rules that evaluate it. A resource is noncompliant if it does not comply with one or more of these rules.
@@ -34,17 +37,17 @@ var ComplianceByResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Compliance" }),
-        __metadata("design:type", Compliance)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Compliance" }),
+        __metadata("design:type", compliance_1.Compliance)
     ], ComplianceByResource.prototype, "compliance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceId" }),
         __metadata("design:type", String)
     ], ComplianceByResource.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceType" }),
         __metadata("design:type", String)
     ], ComplianceByResource.prototype, "resourceType", void 0);
     return ComplianceByResource;
-}(SpeakeasyBase));
-export { ComplianceByResource };
+}(utils_1.SpeakeasyBase));
+exports.ComplianceByResource = ComplianceByResource;

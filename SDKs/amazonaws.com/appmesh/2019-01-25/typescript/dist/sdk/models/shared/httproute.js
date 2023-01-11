@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HttpRouteAction } from "./httprouteaction";
-import { HttpRouteMatch } from "./httproutematch";
-import { HttpRetryPolicy } from "./httpretrypolicy";
-import { HttpTimeout } from "./httptimeout";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpRoute = void 0;
+var utils_1 = require("../../../internal/utils");
+var httprouteaction_1 = require("./httprouteaction");
+var httproutematch_1 = require("./httproutematch");
+var httpretrypolicy_1 = require("./httpretrypolicy");
+var httptimeout_1 = require("./httptimeout");
 // HttpRoute
 /**
  * An object that represents an HTTP or HTTP/2 route type.
@@ -37,21 +40,21 @@ var HttpRoute = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
-        __metadata("design:type", HttpRouteAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
+        __metadata("design:type", httprouteaction_1.HttpRouteAction)
     ], HttpRoute.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=match" }),
-        __metadata("design:type", HttpRouteMatch)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=match" }),
+        __metadata("design:type", httproutematch_1.HttpRouteMatch)
     ], HttpRoute.prototype, "match", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retryPolicy" }),
-        __metadata("design:type", HttpRetryPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retryPolicy" }),
+        __metadata("design:type", httpretrypolicy_1.HttpRetryPolicy)
     ], HttpRoute.prototype, "retryPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeout" }),
-        __metadata("design:type", HttpTimeout)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeout" }),
+        __metadata("design:type", httptimeout_1.HttpTimeout)
     ], HttpRoute.prototype, "timeout", void 0);
     return HttpRoute;
-}(SpeakeasyBase));
-export { HttpRoute };
+}(utils_1.SpeakeasyBase));
+exports.HttpRoute = HttpRoute;

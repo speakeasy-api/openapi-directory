@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LoggingConfig } from "./loggingconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PySparkJob = void 0;
+var utils_1 = require("../../../internal/utils");
+var loggingconfig_1 = require("./loggingconfig");
 // PySparkJob
 /**
  * A Dataproc job for running Apache PySpark (https://spark.apache.org/docs/0.9.0/python-programming-guide.html) applications on YARN.
@@ -34,37 +37,37 @@ var PySparkJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=archiveUris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=archiveUris" }),
         __metadata("design:type", Array)
     ], PySparkJob.prototype, "archiveUris", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=args" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=args" }),
         __metadata("design:type", Array)
     ], PySparkJob.prototype, "args", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileUris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileUris" }),
         __metadata("design:type", Array)
     ], PySparkJob.prototype, "fileUris", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jarFileUris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jarFileUris" }),
         __metadata("design:type", Array)
     ], PySparkJob.prototype, "jarFileUris", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loggingConfig" }),
-        __metadata("design:type", LoggingConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loggingConfig" }),
+        __metadata("design:type", loggingconfig_1.LoggingConfig)
     ], PySparkJob.prototype, "loggingConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mainPythonFileUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mainPythonFileUri" }),
         __metadata("design:type", String)
     ], PySparkJob.prototype, "mainPythonFileUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", Object)
     ], PySparkJob.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pythonFileUris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pythonFileUris" }),
         __metadata("design:type", Array)
     ], PySparkJob.prototype, "pythonFileUris", void 0);
     return PySparkJob;
-}(SpeakeasyBase));
-export { PySparkJob };
+}(utils_1.SpeakeasyBase));
+exports.PySparkJob = PySparkJob;

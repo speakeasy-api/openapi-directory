@@ -184,14 +184,14 @@ export class UpdateCollectionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateCollection200ApplicationJsonObject?: UpdateCollection200ApplicationJson;
+  updateCollection200ApplicationJSONObject?: UpdateCollection200ApplicationJson;
 
   @SpeakeasyMetadata()
-  updateCollection400ApplicationJsonObject?: UpdateCollection400ApplicationJson;
+  updateCollection400ApplicationJSONObject?: UpdateCollection400ApplicationJson;
 
   @SpeakeasyMetadata()
-  updateCollection403ApplicationJsonObject?: UpdateCollection403ApplicationJson;
+  updateCollection403ApplicationJSONObject?: UpdateCollection403ApplicationJson;
 
   @SpeakeasyMetadata()
-  updateCollection404ApplicationJsonObject?: UpdateCollection404ApplicationJson;
+  updateCollection404ApplicationJSONObject?: UpdateCollection404ApplicationJson;
 }

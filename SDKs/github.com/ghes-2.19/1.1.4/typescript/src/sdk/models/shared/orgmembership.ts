@@ -20,6 +20,10 @@ export enum OrgMembershipStateEnum {
 }
 
 
+// OrgMembershipSimpleUser
+/** 
+ * Simple User
+**/
 export class OrgMembershipSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

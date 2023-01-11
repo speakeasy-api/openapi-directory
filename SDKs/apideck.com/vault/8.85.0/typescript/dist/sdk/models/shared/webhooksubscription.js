@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebhookSubscription = void 0;
+var utils_1 = require("../../../internal/utils");
 var WebhookSubscription = /** @class */ (function (_super) {
     __extends(WebhookSubscription, _super);
     function WebhookSubscription() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", String)
     ], WebhookSubscription.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downstream_event_types" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downstream_event_types" }),
         __metadata("design:type", Array)
     ], WebhookSubscription.prototype, "downstreamEventTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downstream_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downstream_id" }),
         __metadata("design:type", String)
     ], WebhookSubscription.prototype, "downstreamId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=execute_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=execute_url" }),
         __metadata("design:type", String)
     ], WebhookSubscription.prototype, "executeUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unify_event_types" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unify_event_types" }),
         __metadata("design:type", Array)
     ], WebhookSubscription.prototype, "unifyEventTypes", void 0);
     return WebhookSubscription;
-}(SpeakeasyBase));
-export { WebhookSubscription };
+}(utils_1.SpeakeasyBase));
+exports.WebhookSubscription = WebhookSubscription;

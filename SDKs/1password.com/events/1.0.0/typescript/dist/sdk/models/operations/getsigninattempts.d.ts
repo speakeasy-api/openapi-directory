@@ -9,7 +9,7 @@ export declare class GetSignInAttemptsRequest extends SpeakeasyBase {
 }
 export declare class GetSignInAttemptsResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
-    getSignInAttempts200ApplicationJsonAny?: any;
+    getSignInAttempts200ApplicationJSONAny?: any;
 }

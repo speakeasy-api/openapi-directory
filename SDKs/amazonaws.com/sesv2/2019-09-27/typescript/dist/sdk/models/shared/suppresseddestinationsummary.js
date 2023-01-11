@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SuppressionListReasonEnum } from "./suppressionlistreasonenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SuppressedDestinationSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var suppressionlistreasonenum_1 = require("./suppressionlistreasonenum");
 // SuppressedDestinationSummary
 /**
  * A summary that describes the suppressed email address.
@@ -34,17 +37,17 @@ var SuppressedDestinationSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmailAddress" }),
         __metadata("design:type", String)
     ], SuppressedDestinationSummary.prototype, "emailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdateTime" }),
         __metadata("design:type", Date)
     ], SuppressedDestinationSummary.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Reason" }),
         __metadata("design:type", String)
     ], SuppressedDestinationSummary.prototype, "reason", void 0);
     return SuppressedDestinationSummary;
-}(SpeakeasyBase));
-export { SuppressedDestinationSummary };
+}(utils_1.SpeakeasyBase));
+exports.SuppressedDestinationSummary = SuppressedDestinationSummary;

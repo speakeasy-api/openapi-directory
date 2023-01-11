@@ -8,5 +8,5 @@ export declare class ProtocolMqttClientGetProtstateRequest extends SpeakeasyBase
 export declare class ProtocolMqttClientGetProtstateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolMqttClientGetProtstate200ApplicationJsonInt32Integers?: number[];
+    protocolMqttClientGetProtstate200ApplicationJSONInt32Integers?: number[];
 }

@@ -12,7 +12,7 @@ export declare class ExtensionActionDefinitionInput extends SpeakeasyBase {
     functions: ActionFunction[];
     inputFieldDependencies?: any[];
     inputFields: InputFieldDefinition[];
-    labels: Map<string, ActionLabels>;
+    labels: Record<string, ActionLabels>;
     objectRequestOptions?: ObjectRequestOptions;
     objectTypes: string[];
     published: boolean;

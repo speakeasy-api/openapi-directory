@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LocalizedStringBundle } from "./localizedstringbundle";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AchievementConfigurationDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var localizedstringbundle_1 = require("./localizedstringbundle");
 // AchievementConfigurationDetail
 /**
  * An achievement configuration detail.
@@ -34,29 +37,29 @@ var AchievementConfigurationDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", LocalizedStringBundle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", localizedstringbundle_1.LocalizedStringBundle)
     ], AchievementConfigurationDetail.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iconUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iconUrl" }),
         __metadata("design:type", String)
     ], AchievementConfigurationDetail.prototype, "iconUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], AchievementConfigurationDetail.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", LocalizedStringBundle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", localizedstringbundle_1.LocalizedStringBundle)
     ], AchievementConfigurationDetail.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pointValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pointValue" }),
         __metadata("design:type", Number)
     ], AchievementConfigurationDetail.prototype, "pointValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortRank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortRank" }),
         __metadata("design:type", Number)
     ], AchievementConfigurationDetail.prototype, "sortRank", void 0);
     return AchievementConfigurationDetail;
-}(SpeakeasyBase));
-export { AchievementConfigurationDetail };
+}(utils_1.SpeakeasyBase));
+exports.AchievementConfigurationDetail = AchievementConfigurationDetail;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
-import { CollectionLinks } from "./collectionlinks";
-import { CollectionMetadata } from "./collectionmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagsCollection = void 0;
+var utils_1 = require("../../../internal/utils");
+var tag_1 = require("./tag");
+var collectionlinks_1 = require("./collectionlinks");
+var collectionmetadata_1 = require("./collectionmetadata");
 var TagsCollection = /** @class */ (function (_super) {
     __extends(TagsCollection, _super);
     function TagsCollection() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], TagsCollection.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
-        __metadata("design:type", CollectionLinks)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
+        __metadata("design:type", collectionlinks_1.CollectionLinks)
     ], TagsCollection.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", CollectionMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", collectionmetadata_1.CollectionMetadata)
     ], TagsCollection.prototype, "meta", void 0);
     return TagsCollection;
-}(SpeakeasyBase));
-export { TagsCollection };
+}(utils_1.SpeakeasyBase));
+exports.TagsCollection = TagsCollection;

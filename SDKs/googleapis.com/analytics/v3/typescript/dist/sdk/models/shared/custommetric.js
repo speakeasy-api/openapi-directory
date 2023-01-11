@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomMetricInput = exports.CustomMetric = exports.CustomMetricParentLink = void 0;
+var utils_1 = require("../../../internal/utils");
 // CustomMetricParentLink
 /**
  * Parent link for the custom metric. Points to the property to which the custom metric belongs.
@@ -33,16 +36,16 @@ var CustomMetricParentLink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], CustomMetricParentLink.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CustomMetricParentLink.prototype, "type", void 0);
     return CustomMetricParentLink;
-}(SpeakeasyBase));
-export { CustomMetricParentLink };
+}(utils_1.SpeakeasyBase));
+exports.CustomMetricParentLink = CustomMetricParentLink;
 // CustomMetric
 /**
  * JSON template for Analytics Custom Metric.
@@ -53,68 +56,68 @@ var CustomMetric = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], CustomMetric.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], CustomMetric.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], CustomMetric.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CustomMetric.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=index" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=index" }),
         __metadata("design:type", Number)
     ], CustomMetric.prototype, "index", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], CustomMetric.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max_value" }),
         __metadata("design:type", String)
     ], CustomMetric.prototype, "maxValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=min_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=min_value" }),
         __metadata("design:type", String)
     ], CustomMetric.prototype, "minValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CustomMetric.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentLink" }),
         __metadata("design:type", CustomMetricParentLink)
     ], CustomMetric.prototype, "parentLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", String)
     ], CustomMetric.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], CustomMetric.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CustomMetric.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", Date)
     ], CustomMetric.prototype, "updated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webPropertyId" }),
         __metadata("design:type", String)
     ], CustomMetric.prototype, "webPropertyId", void 0);
     return CustomMetric;
-}(SpeakeasyBase));
-export { CustomMetric };
+}(utils_1.SpeakeasyBase));
+exports.CustomMetric = CustomMetric;
 // CustomMetricInput
 /**
  * JSON template for Analytics Custom Metric.
@@ -125,45 +128,45 @@ var CustomMetricInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], CustomMetricInput.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], CustomMetricInput.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CustomMetricInput.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max_value" }),
         __metadata("design:type", String)
     ], CustomMetricInput.prototype, "maxValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=min_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=min_value" }),
         __metadata("design:type", String)
     ], CustomMetricInput.prototype, "minValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CustomMetricInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentLink" }),
         __metadata("design:type", CustomMetricParentLink)
     ], CustomMetricInput.prototype, "parentLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", String)
     ], CustomMetricInput.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CustomMetricInput.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webPropertyId" }),
         __metadata("design:type", String)
     ], CustomMetricInput.prototype, "webPropertyId", void 0);
     return CustomMetricInput;
-}(SpeakeasyBase));
-export { CustomMetricInput };
+}(utils_1.SpeakeasyBase));
+exports.CustomMetricInput = CustomMetricInput;

@@ -46,7 +46,7 @@ export class DeleteEnvironmentResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteEnvironmentOutput?: Map<string, any>;
+  deleteEnvironmentOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

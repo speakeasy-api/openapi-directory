@@ -19,7 +19,7 @@ export declare class DeactivatePipelineRequest extends SpeakeasyBase {
 }
 export declare class DeactivatePipelineResponse extends SpeakeasyBase {
     contentType: string;
-    deactivatePipelineOutput?: Map<string, any>;
+    deactivatePipelineOutput?: Record<string, any>;
     internalServiceError?: any;
     invalidRequestException?: any;
     pipelineDeletedException?: any;

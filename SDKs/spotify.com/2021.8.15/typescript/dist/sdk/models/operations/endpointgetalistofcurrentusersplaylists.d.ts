@@ -31,5 +31,5 @@ export declare class EndpointGetAListOfCurrentUsersPlaylistsResponse extends Spe
     contentType: string;
     errorResponseObject?: shared.ErrorResponseObject;
     statusCode: number;
-    endpointGetAListOfCurrentUsersPlaylists200ApplicationJsonObject?: EndpointGetAListOfCurrentUsersPlaylists200ApplicationJson;
+    endpointGetAListOfCurrentUsersPlaylists200ApplicationJSONObject?: EndpointGetAListOfCurrentUsersPlaylists200ApplicationJson;
 }

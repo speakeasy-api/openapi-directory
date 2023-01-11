@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAuthorizablesResponse = exports.PostAuthorizablesRequest = exports.PostAuthorizablesQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAuthorizablesQueryParams = /** @class */ (function (_super) {
     __extends(PostAuthorizablesQueryParams, _super);
     function PostAuthorizablesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=authorizableId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=authorizableId" }),
         __metadata("design:type", String)
     ], PostAuthorizablesQueryParams.prototype, "authorizableId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createGroup" }),
         __metadata("design:type", String)
     ], PostAuthorizablesQueryParams.prototype, "createGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createUser" }),
         __metadata("design:type", String)
     ], PostAuthorizablesQueryParams.prototype, "createUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=intermediatePath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=intermediatePath" }),
         __metadata("design:type", String)
     ], PostAuthorizablesQueryParams.prototype, "intermediatePath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=profile/givenName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=profile/givenName" }),
         __metadata("design:type", String)
     ], PostAuthorizablesQueryParams.prototype, "profileGivenName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=rep:password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=rep:password" }),
         __metadata("design:type", String)
     ], PostAuthorizablesQueryParams.prototype, "repPassword", void 0);
     return PostAuthorizablesQueryParams;
-}(SpeakeasyBase));
-export { PostAuthorizablesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthorizablesQueryParams = PostAuthorizablesQueryParams;
 var PostAuthorizablesRequest = /** @class */ (function (_super) {
     __extends(PostAuthorizablesRequest, _super);
     function PostAuthorizablesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAuthorizablesQueryParams)
     ], PostAuthorizablesRequest.prototype, "queryParams", void 0);
     return PostAuthorizablesRequest;
-}(SpeakeasyBase));
-export { PostAuthorizablesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthorizablesRequest = PostAuthorizablesRequest;
 var PostAuthorizablesResponse = /** @class */ (function (_super) {
     __extends(PostAuthorizablesResponse, _super);
     function PostAuthorizablesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAuthorizablesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAuthorizablesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], PostAuthorizablesResponse.prototype, "postAuthorizablesDefaultTextHtmlString", void 0);
+    ], PostAuthorizablesResponse.prototype, "postAuthorizablesDefaultTextHTMLString", void 0);
     return PostAuthorizablesResponse;
-}(SpeakeasyBase));
-export { PostAuthorizablesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthorizablesResponse = PostAuthorizablesResponse;

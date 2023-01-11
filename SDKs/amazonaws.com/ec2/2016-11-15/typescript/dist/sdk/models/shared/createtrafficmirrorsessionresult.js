@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TrafficMirrorSession } from "./trafficmirrorsession";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateTrafficMirrorSessionResult = exports.CreateTrafficMirrorSessionResultTrafficMirrorSession = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateTrafficMirrorSessionResultTrafficMirrorSession
+/**
+ * Information about the Traffic Mirror session.
+**/
+var CreateTrafficMirrorSessionResultTrafficMirrorSession = /** @class */ (function (_super) {
+    __extends(CreateTrafficMirrorSessionResultTrafficMirrorSession, _super);
+    function CreateTrafficMirrorSessionResultTrafficMirrorSession() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorSessionResultTrafficMirrorSession.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorSessionResultTrafficMirrorSession.prototype, "networkInterfaceId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorSessionResultTrafficMirrorSession.prototype, "ownerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorSessionResultTrafficMirrorSession.prototype, "packetLength", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorSessionResultTrafficMirrorSession.prototype, "sessionNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorSessionResultTrafficMirrorSession.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorSessionResultTrafficMirrorSession.prototype, "trafficMirrorFilterId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorSessionResultTrafficMirrorSession.prototype, "trafficMirrorSessionId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorSessionResultTrafficMirrorSession.prototype, "trafficMirrorTargetId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTrafficMirrorSessionResultTrafficMirrorSession.prototype, "virtualNetworkId", void 0);
+    return CreateTrafficMirrorSessionResultTrafficMirrorSession;
+}(utils_1.SpeakeasyBase));
+exports.CreateTrafficMirrorSessionResultTrafficMirrorSession = CreateTrafficMirrorSessionResultTrafficMirrorSession;
 var CreateTrafficMirrorSessionResult = /** @class */ (function (_super) {
     __extends(CreateTrafficMirrorSessionResult, _super);
     function CreateTrafficMirrorSessionResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateTrafficMirrorSessionResult.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TrafficMirrorSession)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateTrafficMirrorSessionResultTrafficMirrorSession)
     ], CreateTrafficMirrorSessionResult.prototype, "trafficMirrorSession", void 0);
     return CreateTrafficMirrorSessionResult;
-}(SpeakeasyBase));
-export { CreateTrafficMirrorSessionResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateTrafficMirrorSessionResult = CreateTrafficMirrorSessionResult;

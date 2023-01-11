@@ -48,7 +48,7 @@ export class RejectQualificationRequestResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  rejectQualificationRequestResponse?: Map<string, any>;
+  rejectQualificationRequestResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   requestError?: any;

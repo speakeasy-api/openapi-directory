@@ -22,5 +22,5 @@ export class ProtocolDhcpParamsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolDhcpParams200ApplicationJsonObjects?: Map<string, any>[];
+  protocolDhcpParams200ApplicationJSONObjects?: Record<string, any>[];
 }

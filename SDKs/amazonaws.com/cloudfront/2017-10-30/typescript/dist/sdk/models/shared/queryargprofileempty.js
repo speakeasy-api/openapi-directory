@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryArgProfileEmpty = void 0;
+var utils_1 = require("../../../internal/utils");
 // QueryArgProfileEmpty
 /**
  * No profile specified for the field-level encryption query argument.
@@ -33,9 +36,9 @@ var QueryArgProfileEmpty = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], QueryArgProfileEmpty.prototype, "message", void 0);
     return QueryArgProfileEmpty;
-}(SpeakeasyBase));
-export { QueryArgProfileEmpty };
+}(utils_1.SpeakeasyBase));
+exports.QueryArgProfileEmpty = QueryArgProfileEmpty;

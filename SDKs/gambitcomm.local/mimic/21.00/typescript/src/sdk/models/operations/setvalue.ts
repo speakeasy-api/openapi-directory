@@ -34,5 +34,5 @@ export class SetValueResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setValue200ApplicationJsonString?: string;
+  setValue200ApplicationJSONString?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteEmailTemplateResponse = exports.DeleteEmailTemplateRequest = exports.DeleteEmailTemplateHeaders = exports.DeleteEmailTemplatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteEmailTemplatePathParams = /** @class */ (function (_super) {
     __extends(DeleteEmailTemplatePathParams, _super);
     function DeleteEmailTemplatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=TemplateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=TemplateName" }),
         __metadata("design:type", String)
     ], DeleteEmailTemplatePathParams.prototype, "templateName", void 0);
     return DeleteEmailTemplatePathParams;
-}(SpeakeasyBase));
-export { DeleteEmailTemplatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteEmailTemplatePathParams = DeleteEmailTemplatePathParams;
 var DeleteEmailTemplateHeaders = /** @class */ (function (_super) {
     __extends(DeleteEmailTemplateHeaders, _super);
     function DeleteEmailTemplateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DeleteEmailTemplateHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DeleteEmailTemplateHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DeleteEmailTemplateHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DeleteEmailTemplateHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DeleteEmailTemplateHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DeleteEmailTemplateHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DeleteEmailTemplateHeaders.prototype, "xAmzSignedHeaders", void 0);
     return DeleteEmailTemplateHeaders;
-}(SpeakeasyBase));
-export { DeleteEmailTemplateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteEmailTemplateHeaders = DeleteEmailTemplateHeaders;
 var DeleteEmailTemplateRequest = /** @class */ (function (_super) {
     __extends(DeleteEmailTemplateRequest, _super);
     function DeleteEmailTemplateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteEmailTemplatePathParams)
     ], DeleteEmailTemplateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteEmailTemplateHeaders)
     ], DeleteEmailTemplateRequest.prototype, "headers", void 0);
     return DeleteEmailTemplateRequest;
-}(SpeakeasyBase));
-export { DeleteEmailTemplateRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteEmailTemplateRequest = DeleteEmailTemplateRequest;
 var DeleteEmailTemplateResponse = /** @class */ (function (_super) {
     __extends(DeleteEmailTemplateResponse, _super);
     function DeleteEmailTemplateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteEmailTemplateResponse.prototype, "badRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteEmailTemplateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeleteEmailTemplateResponse.prototype, "deleteEmailTemplateResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteEmailTemplateResponse.prototype, "notFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteEmailTemplateResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteEmailTemplateResponse.prototype, "tooManyRequestsException", void 0);
     return DeleteEmailTemplateResponse;
-}(SpeakeasyBase));
-export { DeleteEmailTemplateResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteEmailTemplateResponse = DeleteEmailTemplateResponse;

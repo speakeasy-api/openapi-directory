@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolSflowHaltResponse = exports.ProtocolSflowHaltRequest = exports.ProtocolSflowHaltPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolSflowHaltPathParams = /** @class */ (function (_super) {
     __extends(ProtocolSflowHaltPathParams, _super);
     function ProtocolSflowHaltPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolSflowHaltPathParams.prototype, "agentNum", void 0);
     return ProtocolSflowHaltPathParams;
-}(SpeakeasyBase));
-export { ProtocolSflowHaltPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSflowHaltPathParams = ProtocolSflowHaltPathParams;
 var ProtocolSflowHaltRequest = /** @class */ (function (_super) {
     __extends(ProtocolSflowHaltRequest, _super);
     function ProtocolSflowHaltRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolSflowHaltPathParams)
     ], ProtocolSflowHaltRequest.prototype, "pathParams", void 0);
     return ProtocolSflowHaltRequest;
-}(SpeakeasyBase));
-export { ProtocolSflowHaltRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSflowHaltRequest = ProtocolSflowHaltRequest;
 var ProtocolSflowHaltResponse = /** @class */ (function (_super) {
     __extends(ProtocolSflowHaltResponse, _super);
     function ProtocolSflowHaltResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolSflowHaltResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolSflowHaltResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolSflowHaltResponse.prototype, "protocolSflowHalt200ApplicationJsonString", void 0);
+    ], ProtocolSflowHaltResponse.prototype, "protocolSflowHalt200ApplicationJSONString", void 0);
     return ProtocolSflowHaltResponse;
-}(SpeakeasyBase));
-export { ProtocolSflowHaltResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSflowHaltResponse = ProtocolSflowHaltResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DimensionRange } from "./dimensionrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteDimensionGroupRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimensionrange_1 = require("./dimensionrange");
 // DeleteDimensionGroupRequest
 /**
  * Deletes a group over the specified range by decrementing the depth of the dimensions in the range. For example, assume the sheet has a depth-1 group over B:E and a depth-2 group over C:D. Deleting a group over D:E leaves the sheet with a depth-1 group over B:D and a depth-2 group over C:C.
@@ -34,9 +37,9 @@ var DeleteDimensionGroupRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
-        __metadata("design:type", DimensionRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
+        __metadata("design:type", dimensionrange_1.DimensionRange)
     ], DeleteDimensionGroupRequest.prototype, "range", void 0);
     return DeleteDimensionGroupRequest;
-}(SpeakeasyBase));
-export { DeleteDimensionGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDimensionGroupRequest = DeleteDimensionGroupRequest;

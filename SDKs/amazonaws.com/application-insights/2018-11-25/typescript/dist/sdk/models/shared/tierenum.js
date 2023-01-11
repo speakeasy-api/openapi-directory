@@ -1,4 +1,7 @@
-export var TierEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TierEnum = void 0;
+var TierEnum;
 (function (TierEnum) {
     TierEnum["Custom"] = "CUSTOM";
     TierEnum["Default"] = "DEFAULT";
@@ -12,4 +15,4 @@ export var TierEnum;
     TierEnum["Postgresql"] = "POSTGRESQL";
     TierEnum["JavaJmx"] = "JAVA_JMX";
     TierEnum["Oracle"] = "ORACLE";
-})(TierEnum || (TierEnum = {}));
+})(TierEnum = exports.TierEnum || (exports.TierEnum = {}));

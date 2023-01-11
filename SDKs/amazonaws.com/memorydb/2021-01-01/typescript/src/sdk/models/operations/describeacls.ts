@@ -51,7 +51,7 @@ export class DescribeAcLsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  describeAcLsResponse?: shared.DescribeAcLsResponse;
+  describeACLsResponse?: shared.DescribeAcLsResponse;
 
   @SpeakeasyMetadata()
   invalidParameterCombinationException?: any;

@@ -8,5 +8,5 @@ export declare class PostPackageServiceRequest extends SpeakeasyBase {
 export declare class PostPackageServiceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postPackageServiceDefaultTextXmlString?: string;
+    postPackageServiceDefaultTextXMLString?: string;
 }

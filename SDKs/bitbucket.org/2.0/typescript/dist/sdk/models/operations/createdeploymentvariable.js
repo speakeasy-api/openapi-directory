@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDeploymentVariableResponse = exports.CreateDeploymentVariableRequest = exports.CreateDeploymentVariableQueryParams = exports.CreateDeploymentVariablePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateDeploymentVariablePathParams = /** @class */ (function (_super) {
     __extends(CreateDeploymentVariablePathParams, _super);
     function CreateDeploymentVariablePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=environment_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=environment_uuid" }),
         __metadata("design:type", String)
     ], CreateDeploymentVariablePathParams.prototype, "environmentUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], CreateDeploymentVariablePathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], CreateDeploymentVariablePathParams.prototype, "workspace", void 0);
     return CreateDeploymentVariablePathParams;
-}(SpeakeasyBase));
-export { CreateDeploymentVariablePathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeploymentVariablePathParams = CreateDeploymentVariablePathParams;
 var CreateDeploymentVariableQueryParams = /** @class */ (function (_super) {
     __extends(CreateDeploymentVariableQueryParams, _super);
     function CreateDeploymentVariableQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=variable_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=variable_uuid" }),
         __metadata("design:type", String)
     ], CreateDeploymentVariableQueryParams.prototype, "variableUuid", void 0);
     return CreateDeploymentVariableQueryParams;
-}(SpeakeasyBase));
-export { CreateDeploymentVariableQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeploymentVariableQueryParams = CreateDeploymentVariableQueryParams;
 var CreateDeploymentVariableRequest = /** @class */ (function (_super) {
     __extends(CreateDeploymentVariableRequest, _super);
     function CreateDeploymentVariableRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateDeploymentVariablePathParams)
     ], CreateDeploymentVariableRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateDeploymentVariableQueryParams)
     ], CreateDeploymentVariableRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], CreateDeploymentVariableRequest.prototype, "request", void 0);
     return CreateDeploymentVariableRequest;
-}(SpeakeasyBase));
-export { CreateDeploymentVariableRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeploymentVariableRequest = CreateDeploymentVariableRequest;
 var CreateDeploymentVariableResponse = /** @class */ (function (_super) {
     __extends(CreateDeploymentVariableResponse, _super);
     function CreateDeploymentVariableResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateDeploymentVariableResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateDeploymentVariableResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateDeploymentVariableResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateDeploymentVariableResponse.prototype, "deploymentVariable", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateDeploymentVariableResponse.prototype, "error", void 0);
     return CreateDeploymentVariableResponse;
-}(SpeakeasyBase));
-export { CreateDeploymentVariableResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeploymentVariableResponse = CreateDeploymentVariableResponse;

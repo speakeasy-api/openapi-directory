@@ -35,8 +35,8 @@ export class GetCriticsResourceTypeJsonResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getCriticsResourceTypeJson200ApplicationJsonObject?: GetCriticsResourceTypeJson200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getCriticsResourceTypeJSON200ApplicationJSONObject?: GetCriticsResourceTypeJson200ApplicationJson;
 }

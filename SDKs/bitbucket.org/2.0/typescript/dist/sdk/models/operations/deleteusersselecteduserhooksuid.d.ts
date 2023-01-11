@@ -16,5 +16,5 @@ export declare class DeleteUsersSelectedUserHooksUidRequest extends SpeakeasyBas
 export declare class DeleteUsersSelectedUserHooksUidResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

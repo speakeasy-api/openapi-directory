@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetcountrystandardRequest, GetcountrystandardResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: GetcountrystandardRequest = {
   queryParams: {
-    country: "ut",
-    license: "magnam",
+    country: "sit",
+    license: "voluptas",
   },
 };
 
-sdk.sdk.getcountrystandard(req).then((res: GetcountrystandardResponse | AxiosError) => {
+sdk.countryNameStandardization.getcountrystandard(req).then((res: GetcountrystandardResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -43,7 +42,7 @@ sdk.sdk.getcountrystandard(req).then((res: GetcountrystandardResponse | AxiosErr
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Country Name Standardization
 
 * `getcountrystandard` - Gets country name standard
 

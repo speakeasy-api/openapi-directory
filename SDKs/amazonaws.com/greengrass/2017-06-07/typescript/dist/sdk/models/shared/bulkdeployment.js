@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BulkDeployment = void 0;
+var utils_1 = require("../../../internal/utils");
 // BulkDeployment
 /**
  * Information about a bulk deployment. You cannot start a new bulk deployment while another one is still running or in a non-terminal state.
@@ -33,17 +36,17 @@ var BulkDeployment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BulkDeploymentArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BulkDeploymentArn" }),
         __metadata("design:type", String)
     ], BulkDeployment.prototype, "bulkDeploymentArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BulkDeploymentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BulkDeploymentId" }),
         __metadata("design:type", String)
     ], BulkDeployment.prototype, "bulkDeploymentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedAt" }),
         __metadata("design:type", String)
     ], BulkDeployment.prototype, "createdAt", void 0);
     return BulkDeployment;
-}(SpeakeasyBase));
-export { BulkDeployment };
+}(utils_1.SpeakeasyBase));
+exports.BulkDeployment = BulkDeployment;

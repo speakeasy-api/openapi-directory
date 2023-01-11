@@ -11,12 +11,12 @@ export declare class PutUsersSelectedUserSshKeysKeyIdSecurity extends SpeakeasyB
 }
 export declare class PutUsersSelectedUserSshKeysKeyIdRequest extends SpeakeasyBase {
     pathParams: PutUsersSelectedUserSshKeysKeyIdPathParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: PutUsersSelectedUserSshKeysKeyIdSecurity;
 }
 export declare class PutUsersSelectedUserSshKeysKeyIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    sshAccountKey?: Map<string, any>;
+    error?: Record<string, any>;
+    sshAccountKey?: Record<string, any>;
 }

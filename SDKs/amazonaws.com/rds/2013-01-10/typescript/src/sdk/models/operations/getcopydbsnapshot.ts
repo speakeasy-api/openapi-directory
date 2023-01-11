@@ -15,10 +15,10 @@ export class GetCopyDbSnapshotQueryParams extends SpeakeasyBase {
   action: GetCopyDbSnapshotActionEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SourceDBSnapshotIdentifier" })
-  sourceDbSnapshotIdentifier: string;
+  sourceDBSnapshotIdentifier: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TargetDBSnapshotIdentifier" })
-  targetDbSnapshotIdentifier: string;
+  targetDBSnapshotIdentifier: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetCopyDbSnapshotVersionEnum;

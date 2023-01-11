@@ -65,5 +65,5 @@ export class ModifySettingResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  modifySetting200ApplicationJsonObject?: ModifySetting200ApplicationJson;
+  modifySetting200ApplicationJSONObject?: ModifySetting200ApplicationJson;
 }

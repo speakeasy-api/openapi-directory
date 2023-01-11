@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MarketplaceDealParty } from "./marketplacedealparty";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MarketplaceLabel = void 0;
+var utils_1 = require("../../../internal/utils");
+var marketplacedealparty_1 = require("./marketplacedealparty");
 var MarketplaceLabel = /** @class */ (function (_super) {
     __extends(MarketplaceLabel, _super);
     function MarketplaceLabel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], MarketplaceLabel.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTimeMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTimeMs" }),
         __metadata("design:type", String)
     ], MarketplaceLabel.prototype, "createTimeMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deprecatedMarketplaceDealParty" }),
-        __metadata("design:type", MarketplaceDealParty)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deprecatedMarketplaceDealParty" }),
+        __metadata("design:type", marketplacedealparty_1.MarketplaceDealParty)
     ], MarketplaceLabel.prototype, "deprecatedMarketplaceDealParty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], MarketplaceLabel.prototype, "label", void 0);
     return MarketplaceLabel;
-}(SpeakeasyBase));
-export { MarketplaceLabel };
+}(utils_1.SpeakeasyBase));
+exports.MarketplaceLabel = MarketplaceLabel;

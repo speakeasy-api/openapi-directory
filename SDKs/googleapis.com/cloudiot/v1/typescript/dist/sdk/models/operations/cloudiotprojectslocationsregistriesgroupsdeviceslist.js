@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,204 +14,229 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse = exports.CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest = exports.CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurity = exports.CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption2 = exports.CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption1 = exports.CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams = exports.CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum = exports.CloudiotProjectsLocationsRegistriesGroupsDevicesListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CloudiotProjectsLocationsRegistriesGroupsDevicesListPathParams = /** @class */ (function (_super) {
     __extends(CloudiotProjectsLocationsRegistriesGroupsDevicesListPathParams, _super);
     function CloudiotProjectsLocationsRegistriesGroupsDevicesListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=parent" }),
         __metadata("design:type", String)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListPathParams.prototype, "parent", void 0);
     return CloudiotProjectsLocationsRegistriesGroupsDevicesListPathParams;
-}(SpeakeasyBase));
-export { CloudiotProjectsLocationsRegistriesGroupsDevicesListPathParams };
-export var CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.CloudiotProjectsLocationsRegistriesGroupsDevicesListPathParams = CloudiotProjectsLocationsRegistriesGroupsDevicesListPathParams;
+var CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum;
 (function (CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum) {
     CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum["GatewayTypeUnspecified"] = "GATEWAY_TYPE_UNSPECIFIED";
     CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum["Gateway"] = "GATEWAY";
     CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum["NonGateway"] = "NON_GATEWAY";
-})(CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum || (CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum = {}));
+})(CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum = exports.CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum || (exports.CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum = {}));
 var CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams = /** @class */ (function (_super) {
     __extends(CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams, _super);
     function CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=deviceIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=deviceIds" }),
         __metadata("design:type", Array)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "deviceIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=deviceNumIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=deviceNumIds" }),
         __metadata("design:type", Array)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "deviceNumIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fieldMask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fieldMask" }),
         __metadata("design:type", String)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "fieldMask", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=gatewayListOptions.associationsDeviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=gatewayListOptions.associationsDeviceId" }),
         __metadata("design:type", String)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "gatewayListOptionsAssociationsDeviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=gatewayListOptions.associationsGatewayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=gatewayListOptions.associationsGatewayId" }),
         __metadata("design:type", String)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "gatewayListOptionsAssociationsGatewayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=gatewayListOptions.gatewayType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=gatewayListOptions.gatewayType" }),
         __metadata("design:type", String)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "gatewayListOptionsGatewayType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageSize" }),
         __metadata("design:type", Number)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.prototype, "uploadProtocol", void 0);
     return CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams;
-}(SpeakeasyBase));
-export { CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams = CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams;
 var CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption1 = /** @class */ (function (_super) {
     __extends(CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption1, _super);
     function CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption1.prototype, "oauth2c", void 0);
     return CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption1;
-}(SpeakeasyBase));
-export { CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption1 = CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption1;
 var CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption2 = /** @class */ (function (_super) {
     __extends(CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption2, _super);
     function CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption2.prototype, "oauth2c", void 0);
     return CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption2;
-}(SpeakeasyBase));
-export { CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption2 = CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption2;
 var CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurity = /** @class */ (function (_super) {
     __extends(CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurity, _super);
     function CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption1)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurityOption2)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurity.prototype, "option2", void 0);
     return CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurity;
-}(SpeakeasyBase));
-export { CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurity = CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurity;
 var CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest = /** @class */ (function (_super) {
     __extends(CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest, _super);
     function CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudiotProjectsLocationsRegistriesGroupsDevicesListPathParams)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurity)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest.prototype, "security", void 0);
     return CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest;
-}(SpeakeasyBase));
-export { CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest };
+}(utils_1.SpeakeasyBase));
+exports.CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest = CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest;
 var CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse = /** @class */ (function (_super) {
     __extends(CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse, _super);
     function CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ListDevicesResponse)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse.prototype, "listDevicesResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse.prototype, "statusCode", void 0);
     return CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse;
-}(SpeakeasyBase));
-export { CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse };
+}(utils_1.SpeakeasyBase));
+exports.CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse = CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse;

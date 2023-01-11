@@ -15,7 +15,7 @@ export declare class ActivityListPublicEventsRequest extends SpeakeasyBase {
 export declare class ActivityListPublicEventsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    activityListPublicEvents503ApplicationJsonObject?: ActivityListPublicEvents503ApplicationJson;
+    activityListPublicEvents503ApplicationJSONObject?: ActivityListPublicEvents503ApplicationJson;
     basicError?: shared.BasicError;
     events?: shared.Event[];
 }

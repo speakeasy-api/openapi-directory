@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AsyncOperationStatusEnumEnum = void 0;
+var AsyncOperationStatusEnumEnum;
+(function (AsyncOperationStatusEnumEnum) {
+    AsyncOperationStatusEnumEnum["Sent"] = "sent";
+    AsyncOperationStatusEnumEnum["Started"] = "started";
+    AsyncOperationStatusEnumEnum["Completed"] = "completed";
+    AsyncOperationStatusEnumEnum["Failed"] = "failed";
+})(AsyncOperationStatusEnumEnum = exports.AsyncOperationStatusEnumEnum || (exports.AsyncOperationStatusEnumEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetBlobByIdResponse = exports.GetBlobByIdRequest = exports.GetBlobByIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetBlobByIdPathParams = /** @class */ (function (_super) {
     __extends(GetBlobByIdPathParams, _super);
     function GetBlobByIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=filename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=filename" }),
         __metadata("design:type", String)
     ], GetBlobByIdPathParams.prototype, "filename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetBlobByIdPathParams.prototype, "id", void 0);
     return GetBlobByIdPathParams;
-}(SpeakeasyBase));
-export { GetBlobByIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetBlobByIdPathParams = GetBlobByIdPathParams;
 var GetBlobByIdRequest = /** @class */ (function (_super) {
     __extends(GetBlobByIdRequest, _super);
     function GetBlobByIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetBlobByIdPathParams)
     ], GetBlobByIdRequest.prototype, "pathParams", void 0);
     return GetBlobByIdRequest;
-}(SpeakeasyBase));
-export { GetBlobByIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetBlobByIdRequest = GetBlobByIdRequest;
 var GetBlobByIdResponse = /** @class */ (function (_super) {
     __extends(GetBlobByIdResponse, _super);
     function GetBlobByIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetBlobByIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetBlobByIdResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetBlobByIdResponse.prototype, "getBlobById200ImageWildcardBinaryString", void 0);
     return GetBlobByIdResponse;
-}(SpeakeasyBase));
-export { GetBlobByIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetBlobByIdResponse = GetBlobByIdResponse;

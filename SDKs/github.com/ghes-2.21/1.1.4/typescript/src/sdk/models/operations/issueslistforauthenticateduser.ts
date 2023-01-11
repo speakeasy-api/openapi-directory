@@ -11,12 +11,6 @@ export enum IssuesListForAuthenticatedUserFilterEnum {
     All = "all"
 }
 
-export enum IssuesListForAuthenticatedUserSortEnum {
-    Created = "created",
-    Updated = "updated",
-    Comments = "comments"
-}
-
 export enum IssuesListForAuthenticatedUserStateEnum {
     Open = "open",
     Closed = "closed",
@@ -44,7 +38,7 @@ export class IssuesListForAuthenticatedUserQueryParams extends SpeakeasyBase {
   since?: Date;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: IssuesListForAuthenticatedUserSortEnum;
+  sort?: shared.LabelsEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" })
   state?: IssuesListForAuthenticatedUserStateEnum;
@@ -62,7 +56,7 @@ export class IssuesListForAuthenticatedUserResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

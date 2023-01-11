@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DomainSummary } from "./domainsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListDomainsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var domainsummary_1 = require("./domainsummary");
 // ListDomainsResponse
 /**
  * The ListDomains response includes the following elements.
@@ -34,13 +37,13 @@ var ListDomainsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Domains", elemType: DomainSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Domains", elemType: domainsummary_1.DomainSummary }),
         __metadata("design:type", Array)
     ], ListDomainsResponse.prototype, "domains", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextPageMarker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextPageMarker" }),
         __metadata("design:type", String)
     ], ListDomainsResponse.prototype, "nextPageMarker", void 0);
     return ListDomainsResponse;
-}(SpeakeasyBase));
-export { ListDomainsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListDomainsResponse = ListDomainsResponse;

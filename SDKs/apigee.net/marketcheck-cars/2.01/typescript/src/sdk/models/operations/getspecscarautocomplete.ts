@@ -2,21 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
-export enum GetSpecsCarAutoCompleteFieldEnum {
-    Make = "make",
-    Model = "model",
-    Trim = "trim",
-    BodyType = "body_type",
-    BodySubtype = "body_subtype",
-    VehicleType = "vehicle_type",
-    Transmission = "transmission",
-    Drivetrain = "drivetrain",
-    FuelType = "fuel_type",
-    Engine = "engine",
-    EngineSize = "engine_size",
-    EngineBlock = "engine_block"
-}
-
 
 export class GetSpecsCarAutoCompleteQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api_key" })
@@ -41,7 +26,7 @@ export class GetSpecsCarAutoCompleteQueryParams extends SpeakeasyBase {
   engineSize?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=field" })
-  field: GetSpecsCarAutoCompleteFieldEnum;
+  field: shared.ApiKeyEnum7;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fuel_type" })
   fuelType?: string;
@@ -83,7 +68,7 @@ export class GetSpecsCarAutoCompleteResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   specsAutoCompleteResponse?: shared.SpecsAutoCompleteResponse;

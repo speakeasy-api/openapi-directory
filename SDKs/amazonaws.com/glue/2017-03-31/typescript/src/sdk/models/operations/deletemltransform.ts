@@ -48,7 +48,7 @@ export class DeleteMlTransformResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteMlTransformResponse?: shared.DeleteMlTransformResponse;
+  deleteMLTransformResponse?: shared.DeleteMlTransformResponse;
 
   @SpeakeasyMetadata()
   entityNotFoundException?: any;

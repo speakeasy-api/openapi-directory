@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MetricValue } from "./metricvalue";
-import { RowDimensions } from "./rowdimensions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BidMetricsRow = void 0;
+var utils_1 = require("../../../internal/utils");
+var metricvalue_1 = require("./metricvalue");
+var rowdimensions_1 = require("./rowdimensions");
 // BidMetricsRow
 /**
  * The set of metrics that are measured in numbers of bids, representing how many bids with the specified dimension values were considered eligible at each stage of the bidding funnel;
@@ -35,37 +38,37 @@ var BidMetricsRow = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bids" }),
-        __metadata("design:type", MetricValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bids" }),
+        __metadata("design:type", metricvalue_1.MetricValue)
     ], BidMetricsRow.prototype, "bids", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bidsInAuction" }),
-        __metadata("design:type", MetricValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bidsInAuction" }),
+        __metadata("design:type", metricvalue_1.MetricValue)
     ], BidMetricsRow.prototype, "bidsInAuction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billedImpressions" }),
-        __metadata("design:type", MetricValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billedImpressions" }),
+        __metadata("design:type", metricvalue_1.MetricValue)
     ], BidMetricsRow.prototype, "billedImpressions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=impressionsWon" }),
-        __metadata("design:type", MetricValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=impressionsWon" }),
+        __metadata("design:type", metricvalue_1.MetricValue)
     ], BidMetricsRow.prototype, "impressionsWon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=measurableImpressions" }),
-        __metadata("design:type", MetricValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=measurableImpressions" }),
+        __metadata("design:type", metricvalue_1.MetricValue)
     ], BidMetricsRow.prototype, "measurableImpressions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reachedQueries" }),
-        __metadata("design:type", MetricValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reachedQueries" }),
+        __metadata("design:type", metricvalue_1.MetricValue)
     ], BidMetricsRow.prototype, "reachedQueries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rowDimensions" }),
-        __metadata("design:type", RowDimensions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rowDimensions" }),
+        __metadata("design:type", rowdimensions_1.RowDimensions)
     ], BidMetricsRow.prototype, "rowDimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=viewableImpressions" }),
-        __metadata("design:type", MetricValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=viewableImpressions" }),
+        __metadata("design:type", metricvalue_1.MetricValue)
     ], BidMetricsRow.prototype, "viewableImpressions", void 0);
     return BidMetricsRow;
-}(SpeakeasyBase));
-export { BidMetricsRow };
+}(utils_1.SpeakeasyBase));
+exports.BidMetricsRow = BidMetricsRow;

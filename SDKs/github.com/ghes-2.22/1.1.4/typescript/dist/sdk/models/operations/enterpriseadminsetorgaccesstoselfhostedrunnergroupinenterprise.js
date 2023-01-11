@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse = exports.EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest = exports.EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody = exports.EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams, _super);
     function EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=enterprise" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=enterprise" }),
         __metadata("design:type", String)
     ], EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams.prototype, "enterprise", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=runner_group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=runner_group_id" }),
         __metadata("design:type", Number)
     ], EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams.prototype, "runnerGroupId", void 0);
     return EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams = EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams;
 var EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody, _super);
     function EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selected_organization_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selected_organization_ids" }),
         __metadata("design:type", Array)
     ], EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody.prototype, "selectedOrganizationIds", void 0);
     return EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody;
-}(SpeakeasyBase));
-export { EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody = EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody;
 var EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest, _super);
     function EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams)
     ], EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody)
     ], EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest.prototype, "request", void 0);
     return EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest = EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest;
 var EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse, _super);
     function EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse.prototype, "statusCode", void 0);
     return EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse = EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse;

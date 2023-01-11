@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AndroidRoboTest = void 0;
+var utils_1 = require("../../../internal/utils");
 // AndroidRoboTest
 /**
  * A test of an android application that explores the application on a virtual or physical Android device, finding culprits and crashes as it goes.
@@ -33,25 +36,25 @@ var AndroidRoboTest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appInitialActivity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appInitialActivity" }),
         __metadata("design:type", String)
     ], AndroidRoboTest.prototype, "appInitialActivity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootstrapPackageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootstrapPackageId" }),
         __metadata("design:type", String)
     ], AndroidRoboTest.prototype, "bootstrapPackageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootstrapRunnerClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootstrapRunnerClass" }),
         __metadata("design:type", String)
     ], AndroidRoboTest.prototype, "bootstrapRunnerClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxDepth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxDepth" }),
         __metadata("design:type", Number)
     ], AndroidRoboTest.prototype, "maxDepth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxSteps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxSteps" }),
         __metadata("design:type", Number)
     ], AndroidRoboTest.prototype, "maxSteps", void 0);
     return AndroidRoboTest;
-}(SpeakeasyBase));
-export { AndroidRoboTest };
+}(utils_1.SpeakeasyBase));
+exports.AndroidRoboTest = AndroidRoboTest;

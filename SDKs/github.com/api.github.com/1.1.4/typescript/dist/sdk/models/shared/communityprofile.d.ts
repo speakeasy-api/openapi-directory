@@ -1,4 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
+/**
+ * Code of Conduct Simple
+**/
 export declare class CommunityProfileFilesCodeOfConductSimple extends SpeakeasyBase {
     htmlUrl: string;
     key: string;
@@ -9,6 +12,9 @@ export declare class CommunityProfileFilesCommunityHealthFile extends SpeakeasyB
     htmlUrl: string;
     url: string;
 }
+/**
+ * License Simple
+**/
 export declare class CommunityProfileFilesLicenseSimple extends SpeakeasyBase {
     htmlUrl?: string;
     key: string;

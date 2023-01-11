@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReturningProduction = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReturningProduction = /** @class */ (function (_super) {
     __extends(ReturningProduction, _super);
     function ReturningProduction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conference" }),
         __metadata("design:type", String)
     ], ReturningProduction.prototype, "conference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passingUsage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passingUsage" }),
         __metadata("design:type", Number)
     ], ReturningProduction.prototype, "passingUsage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentPPA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentPPA" }),
         __metadata("design:type", Number)
-    ], ReturningProduction.prototype, "percentPpa", void 0);
+    ], ReturningProduction.prototype, "percentPPA", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentPassingPPA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentPassingPPA" }),
         __metadata("design:type", Number)
-    ], ReturningProduction.prototype, "percentPassingPpa", void 0);
+    ], ReturningProduction.prototype, "percentPassingPPA", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentReceivingPPA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentReceivingPPA" }),
         __metadata("design:type", Number)
-    ], ReturningProduction.prototype, "percentReceivingPpa", void 0);
+    ], ReturningProduction.prototype, "percentReceivingPPA", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentRushingPPA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentRushingPPA" }),
         __metadata("design:type", Number)
-    ], ReturningProduction.prototype, "percentRushingPpa", void 0);
+    ], ReturningProduction.prototype, "percentRushingPPA", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=receivingUsage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=receivingUsage" }),
         __metadata("design:type", Number)
     ], ReturningProduction.prototype, "receivingUsage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rushingUsage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rushingUsage" }),
         __metadata("design:type", Number)
     ], ReturningProduction.prototype, "rushingUsage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=season" }),
         __metadata("design:type", Number)
     ], ReturningProduction.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team" }),
         __metadata("design:type", String)
     ], ReturningProduction.prototype, "team", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPPA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPPA" }),
         __metadata("design:type", Number)
-    ], ReturningProduction.prototype, "totalPpa", void 0);
+    ], ReturningProduction.prototype, "totalPPA", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPassingPPA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPassingPPA" }),
         __metadata("design:type", Number)
-    ], ReturningProduction.prototype, "totalPassingPpa", void 0);
+    ], ReturningProduction.prototype, "totalPassingPPA", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalReceivingPPA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalReceivingPPA" }),
         __metadata("design:type", Number)
-    ], ReturningProduction.prototype, "totalReceivingPpa", void 0);
+    ], ReturningProduction.prototype, "totalReceivingPPA", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalRushingPPA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalRushingPPA" }),
         __metadata("design:type", Number)
-    ], ReturningProduction.prototype, "totalRushingPpa", void 0);
+    ], ReturningProduction.prototype, "totalRushingPPA", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usage" }),
         __metadata("design:type", Number)
     ], ReturningProduction.prototype, "usage", void 0);
     return ReturningProduction;
-}(SpeakeasyBase));
-export { ReturningProduction };
+}(utils_1.SpeakeasyBase));
+exports.ReturningProduction = ReturningProduction;

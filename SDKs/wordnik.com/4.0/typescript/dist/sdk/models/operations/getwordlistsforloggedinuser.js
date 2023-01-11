@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetWordListsForLoggedInUserResponse = exports.GetWordListsForLoggedInUserRequest = exports.GetWordListsForLoggedInUserHeaders = exports.GetWordListsForLoggedInUserQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetWordListsForLoggedInUserQueryParams = /** @class */ (function (_super) {
     __extends(GetWordListsForLoggedInUserQueryParams, _super);
     function GetWordListsForLoggedInUserQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetWordListsForLoggedInUserQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=skip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=skip" }),
         __metadata("design:type", Number)
     ], GetWordListsForLoggedInUserQueryParams.prototype, "skip", void 0);
     return GetWordListsForLoggedInUserQueryParams;
-}(SpeakeasyBase));
-export { GetWordListsForLoggedInUserQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetWordListsForLoggedInUserQueryParams = GetWordListsForLoggedInUserQueryParams;
 var GetWordListsForLoggedInUserHeaders = /** @class */ (function (_super) {
     __extends(GetWordListsForLoggedInUserHeaders, _super);
     function GetWordListsForLoggedInUserHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=auth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=auth_token" }),
         __metadata("design:type", String)
     ], GetWordListsForLoggedInUserHeaders.prototype, "authToken", void 0);
     return GetWordListsForLoggedInUserHeaders;
-}(SpeakeasyBase));
-export { GetWordListsForLoggedInUserHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetWordListsForLoggedInUserHeaders = GetWordListsForLoggedInUserHeaders;
 var GetWordListsForLoggedInUserRequest = /** @class */ (function (_super) {
     __extends(GetWordListsForLoggedInUserRequest, _super);
     function GetWordListsForLoggedInUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetWordListsForLoggedInUserQueryParams)
     ], GetWordListsForLoggedInUserRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetWordListsForLoggedInUserHeaders)
     ], GetWordListsForLoggedInUserRequest.prototype, "headers", void 0);
     return GetWordListsForLoggedInUserRequest;
-}(SpeakeasyBase));
-export { GetWordListsForLoggedInUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetWordListsForLoggedInUserRequest = GetWordListsForLoggedInUserRequest;
 var GetWordListsForLoggedInUserResponse = /** @class */ (function (_super) {
     __extends(GetWordListsForLoggedInUserResponse, _super);
     function GetWordListsForLoggedInUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetWordListsForLoggedInUserResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetWordListsForLoggedInUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetWordListsForLoggedInUserResponse.prototype, "statusCode", void 0);
     return GetWordListsForLoggedInUserResponse;
-}(SpeakeasyBase));
-export { GetWordListsForLoggedInUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetWordListsForLoggedInUserResponse = GetWordListsForLoggedInUserResponse;

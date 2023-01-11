@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleTypeTimeZone } from "./googletypetimezone";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleTypeDateTime = void 0;
+var utils_1 = require("../../../internal/utils");
+var googletypetimezone_1 = require("./googletypetimezone");
 // GoogleTypeDateTime
 /**
  * Represents civil time (or occasionally physical time). This type can represent a civil time in one of a few possible ways: * When utc_offset is set and time_zone is unset: a civil time on a calendar day with a particular offset from UTC. * When time_zone is set and utc_offset is unset: a civil time on a calendar day in a particular time zone. * When neither time_zone nor utc_offset is set: a civil time on a calendar day in local time. The date is relative to the Proleptic Gregorian Calendar. If year, month, or day are 0, the DateTime is considered not to have a specific year, month, or day respectively. This type may also be used to represent a physical time if all the date and time fields are set and either case of the `time_offset` oneof is set. Consider using `Timestamp` message for physical time instead. If your use case also would like to store the user's timezone, that can be done in another field. This type is more flexible than some applications may want. Make sure to document and validate your application's limitations.
@@ -34,41 +37,41 @@ var GoogleTypeDateTime = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=day" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=day" }),
         __metadata("design:type", Number)
     ], GoogleTypeDateTime.prototype, "day", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hours" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hours" }),
         __metadata("design:type", Number)
     ], GoogleTypeDateTime.prototype, "hours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minutes" }),
         __metadata("design:type", Number)
     ], GoogleTypeDateTime.prototype, "minutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=month" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=month" }),
         __metadata("design:type", Number)
     ], GoogleTypeDateTime.prototype, "month", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nanos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nanos" }),
         __metadata("design:type", Number)
     ], GoogleTypeDateTime.prototype, "nanos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seconds" }),
         __metadata("design:type", Number)
     ], GoogleTypeDateTime.prototype, "seconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
-        __metadata("design:type", GoogleTypeTimeZone)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
+        __metadata("design:type", googletypetimezone_1.GoogleTypeTimeZone)
     ], GoogleTypeDateTime.prototype, "timeZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=utcOffset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=utcOffset" }),
         __metadata("design:type", String)
     ], GoogleTypeDateTime.prototype, "utcOffset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=year" }),
         __metadata("design:type", Number)
     ], GoogleTypeDateTime.prototype, "year", void 0);
     return GoogleTypeDateTime;
-}(SpeakeasyBase));
-export { GoogleTypeDateTime };
+}(utils_1.SpeakeasyBase));
+exports.GoogleTypeDateTime = GoogleTypeDateTime;

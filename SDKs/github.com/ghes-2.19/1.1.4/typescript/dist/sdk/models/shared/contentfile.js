@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContentFile = exports.ContentFileLinks = void 0;
+var utils_1 = require("../../../internal/utils");
 var ContentFileLinks = /** @class */ (function (_super) {
     __extends(ContentFileLinks, _super);
     function ContentFileLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=git" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=git" }),
         __metadata("design:type", String)
     ], ContentFileLinks.prototype, "git", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html" }),
         __metadata("design:type", String)
     ], ContentFileLinks.prototype, "html", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=self" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=self" }),
         __metadata("design:type", String)
     ], ContentFileLinks.prototype, "self", void 0);
     return ContentFileLinks;
-}(SpeakeasyBase));
-export { ContentFileLinks };
+}(utils_1.SpeakeasyBase));
+exports.ContentFileLinks = ContentFileLinks;
 // ContentFile
 /**
  * Content File
@@ -53,61 +56,61 @@ var ContentFile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
         __metadata("design:type", ContentFileLinks)
     ], ContentFile.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], ContentFile.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download_url" }),
         __metadata("design:type", String)
     ], ContentFile.prototype, "downloadUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encoding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encoding" }),
         __metadata("design:type", String)
     ], ContentFile.prototype, "encoding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=git_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=git_url" }),
         __metadata("design:type", String)
     ], ContentFile.prototype, "gitUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], ContentFile.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ContentFile.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], ContentFile.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha" }),
         __metadata("design:type", String)
     ], ContentFile.prototype, "sha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], ContentFile.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=submodule_git_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=submodule_git_url" }),
         __metadata("design:type", String)
     ], ContentFile.prototype, "submoduleGitUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", String)
     ], ContentFile.prototype, "target", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ContentFile.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ContentFile.prototype, "url", void 0);
     return ContentFile;
-}(SpeakeasyBase));
-export { ContentFile };
+}(utils_1.SpeakeasyBase));
+exports.ContentFile = ContentFile;

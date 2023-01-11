@@ -7,7 +7,7 @@ import { AppTypeEnum } from "./apptypeenum";
 export declare class UpdateAppRequest extends SpeakeasyBase {
     appId: string;
     appSource?: Source;
-    attributes?: Map<string, string>;
+    attributes?: Record<string, string>;
     dataSources?: DataSource[];
     description?: string;
     domains?: string[];

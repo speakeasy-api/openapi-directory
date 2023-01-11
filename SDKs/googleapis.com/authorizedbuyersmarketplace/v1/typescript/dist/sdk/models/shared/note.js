@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var NoteCreatorRoleEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NoteInput = exports.Note = exports.NoteCreatorRoleEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var NoteCreatorRoleEnum;
 (function (NoteCreatorRoleEnum) {
     NoteCreatorRoleEnum["BuyerSellerRoleUnspecified"] = "BUYER_SELLER_ROLE_UNSPECIFIED";
     NoteCreatorRoleEnum["Buyer"] = "BUYER";
     NoteCreatorRoleEnum["Seller"] = "SELLER";
-})(NoteCreatorRoleEnum || (NoteCreatorRoleEnum = {}));
+})(NoteCreatorRoleEnum = exports.NoteCreatorRoleEnum || (exports.NoteCreatorRoleEnum = {}));
 // Note
 /**
  * A text note attached to the proposal to facilitate the communication between buyers and sellers.
@@ -39,20 +42,20 @@ var Note = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Note.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creatorRole" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creatorRole" }),
         __metadata("design:type", String)
     ], Note.prototype, "creatorRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=note" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=note" }),
         __metadata("design:type", String)
     ], Note.prototype, "note", void 0);
     return Note;
-}(SpeakeasyBase));
-export { Note };
+}(utils_1.SpeakeasyBase));
+exports.Note = Note;
 // NoteInput
 /**
  * A text note attached to the proposal to facilitate the communication between buyers and sellers.
@@ -63,9 +66,9 @@ var NoteInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=note" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=note" }),
         __metadata("design:type", String)
     ], NoteInput.prototype, "note", void 0);
     return NoteInput;
-}(SpeakeasyBase));
-export { NoteInput };
+}(utils_1.SpeakeasyBase));
+exports.NoteInput = NoteInput;

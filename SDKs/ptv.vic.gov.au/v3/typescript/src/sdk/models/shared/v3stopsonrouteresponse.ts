@@ -7,10 +7,10 @@ import { V3StopOnRoute } from "./v3stoponroute";
 
 export class V3StopsOnRouteResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=disruptions", elemType: V3Disruption })
-  disruptions?: Map<string, V3Disruption>;
+  disruptions?: Record<string, V3Disruption>;
 
   @SpeakeasyMetadata({ data: "json, name=geopath" })
-  geopath?: Map<string, any>[];
+  geopath?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: V3Status;

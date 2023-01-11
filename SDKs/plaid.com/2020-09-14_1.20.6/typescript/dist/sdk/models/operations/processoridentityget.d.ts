@@ -5,6 +5,6 @@ export declare class ProcessorIdentityGetRequest extends SpeakeasyBase {
 }
 export declare class ProcessorIdentityGetResponse extends SpeakeasyBase {
     contentType: string;
-    processorIdentityGetResponse?: Map<string, any>;
+    processorIdentityGetResponse?: Record<string, any>;
     statusCode: number;
 }

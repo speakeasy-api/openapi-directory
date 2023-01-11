@@ -50,7 +50,7 @@ export class GetApiVVersionMetalsSpotRatioHistoryResponse extends SpeakeasyBase 
   intervalCollectionResponses?: shared.IntervalCollectionResponse[];
 
   @SpeakeasyMetadata()
-  problemDetails?: Map<string, any>;
+  problemDetails?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

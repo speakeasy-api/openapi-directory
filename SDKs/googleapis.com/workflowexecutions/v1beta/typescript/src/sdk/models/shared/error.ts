@@ -3,11 +3,11 @@ import { StackTrace } from "./stacktrace";
 
 
 
-// Error
+// ErrorT
 /** 
  * Error describes why the execution was abnormally terminated.
 **/
-export class Error extends SpeakeasyBase {
+export class ErrorT extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=context" })
   context?: string;
 

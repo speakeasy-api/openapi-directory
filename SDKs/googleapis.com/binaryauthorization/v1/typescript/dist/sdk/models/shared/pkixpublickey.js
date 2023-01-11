@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PkixPublicKeySignatureAlgorithmEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PkixPublicKey = exports.PkixPublicKeySignatureAlgorithmEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PkixPublicKeySignatureAlgorithmEnum;
 (function (PkixPublicKeySignatureAlgorithmEnum) {
     PkixPublicKeySignatureAlgorithmEnum["SignatureAlgorithmUnspecified"] = "SIGNATURE_ALGORITHM_UNSPECIFIED";
     PkixPublicKeySignatureAlgorithmEnum["RsaPss2048Sha256"] = "RSA_PSS_2048_SHA256";
@@ -44,7 +47,7 @@ export var PkixPublicKeySignatureAlgorithmEnum;
     PkixPublicKeySignatureAlgorithmEnum["EcSignP384Sha384"] = "EC_SIGN_P384_SHA384";
     PkixPublicKeySignatureAlgorithmEnum["EcdsaP521Sha512"] = "ECDSA_P521_SHA512";
     PkixPublicKeySignatureAlgorithmEnum["EcSignP521Sha512"] = "EC_SIGN_P521_SHA512";
-})(PkixPublicKeySignatureAlgorithmEnum || (PkixPublicKeySignatureAlgorithmEnum = {}));
+})(PkixPublicKeySignatureAlgorithmEnum = exports.PkixPublicKeySignatureAlgorithmEnum || (exports.PkixPublicKeySignatureAlgorithmEnum = {}));
 // PkixPublicKey
 /**
  * A public key in the PkixPublicKey format (see https://tools.ietf.org/html/rfc5280#section-4.1.2.7 for details). Public keys of this type are typically textually encoded using the PEM format.
@@ -55,13 +58,13 @@ var PkixPublicKey = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicKeyPem" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicKeyPem" }),
         __metadata("design:type", String)
     ], PkixPublicKey.prototype, "publicKeyPem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signatureAlgorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signatureAlgorithm" }),
         __metadata("design:type", String)
     ], PkixPublicKey.prototype, "signatureAlgorithm", void 0);
     return PkixPublicKey;
-}(SpeakeasyBase));
-export { PkixPublicKey };
+}(utils_1.SpeakeasyBase));
+exports.PkixPublicKey = PkixPublicKey;

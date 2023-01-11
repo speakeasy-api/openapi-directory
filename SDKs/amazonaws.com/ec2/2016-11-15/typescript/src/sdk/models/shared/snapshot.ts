@@ -1,6 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SnapshotStateEnum } from "./snapshotstateenum";
-import { Tag } from "./tag";
 
 
 
@@ -10,47 +8,47 @@ import { Tag } from "./tag";
 **/
 export class Snapshot extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  dataEncryptionKeyId?: string;
+  dataEncryptionKeyId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  description?: string;
+  description?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  encrypted?: boolean;
+  encrypted?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  kmsKeyId?: string;
+  kmsKeyId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  outpostArn?: string;
+  outpostArn?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  ownerAlias?: string;
+  ownerAlias?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  ownerId?: string;
+  ownerId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  progress?: string;
+  progress?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  snapshotId?: string;
+  snapshotId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  startTime?: Date;
+  startTime?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  state?: SnapshotStateEnum;
+  state?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  stateMessage?: string;
-
-  @SpeakeasyMetadata({ elemType: Tag })
-  tags?: Tag[];
+  stateMessage?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  volumeId?: string;
+  tags?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  volumeSize?: number;
+  volumeId?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  volumeSize?: Record<string, any>;
 }

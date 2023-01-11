@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConstraintViolation } from "./constraintviolation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var constraintviolation_1 = require("./constraintviolation");
 var ErrorResponse = /** @class */ (function (_super) {
     __extends(ErrorResponse, _super);
     function ErrorResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=developerMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=developerMessage" }),
         __metadata("design:type", String)
     ], ErrorResponse.prototype, "developerMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorType" }),
         __metadata("design:type", String)
     ], ErrorResponse.prototype, "errorType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=violations", elemType: ConstraintViolation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=violations", elemType: constraintviolation_1.ConstraintViolation }),
         __metadata("design:type", Array)
     ], ErrorResponse.prototype, "violations", void 0);
     return ErrorResponse;
-}(SpeakeasyBase));
-export { ErrorResponse };
+}(utils_1.SpeakeasyBase));
+exports.ErrorResponse = ErrorResponse;

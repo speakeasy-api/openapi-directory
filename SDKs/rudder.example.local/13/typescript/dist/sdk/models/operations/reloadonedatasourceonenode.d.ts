@@ -20,6 +20,6 @@ export declare class ReloadOneDatasourceOneNodeRequest extends SpeakeasyBase {
 }
 export declare class ReloadOneDatasourceOneNodeResponse extends SpeakeasyBase {
     contentType: string;
-    reloadOneDatasourceOneNode200ApplicationJsonObject?: ReloadOneDatasourceOneNode200ApplicationJson;
+    reloadOneDatasourceOneNode200ApplicationJSONObject?: ReloadOneDatasourceOneNode200ApplicationJson;
     statusCode: number;
 }

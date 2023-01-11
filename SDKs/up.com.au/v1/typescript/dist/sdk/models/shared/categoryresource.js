@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,135 +23,137 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CategoryResource = exports.CategoryResourceRelationships = exports.CategoryResourceRelationshipsParent = exports.CategoryResourceRelationshipsParentLinks = exports.CategoryResourceRelationshipsParentData = exports.CategoryResourceRelationshipsChildren = exports.CategoryResourceRelationshipsChildrenLinks = exports.CategoryResourceRelationshipsChildrenData = exports.CategoryResourceLinks = exports.CategoryResourceAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
 var CategoryResourceAttributes = /** @class */ (function (_super) {
     __extends(CategoryResourceAttributes, _super);
     function CategoryResourceAttributes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CategoryResourceAttributes.prototype, "name", void 0);
     return CategoryResourceAttributes;
-}(SpeakeasyBase));
-export { CategoryResourceAttributes };
+}(utils_1.SpeakeasyBase));
+exports.CategoryResourceAttributes = CategoryResourceAttributes;
 var CategoryResourceLinks = /** @class */ (function (_super) {
     __extends(CategoryResourceLinks, _super);
     function CategoryResourceLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=self" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=self" }),
         __metadata("design:type", String)
     ], CategoryResourceLinks.prototype, "self", void 0);
     return CategoryResourceLinks;
-}(SpeakeasyBase));
-export { CategoryResourceLinks };
+}(utils_1.SpeakeasyBase));
+exports.CategoryResourceLinks = CategoryResourceLinks;
 var CategoryResourceRelationshipsChildrenData = /** @class */ (function (_super) {
     __extends(CategoryResourceRelationshipsChildrenData, _super);
     function CategoryResourceRelationshipsChildrenData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CategoryResourceRelationshipsChildrenData.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CategoryResourceRelationshipsChildrenData.prototype, "type", void 0);
     return CategoryResourceRelationshipsChildrenData;
-}(SpeakeasyBase));
-export { CategoryResourceRelationshipsChildrenData };
+}(utils_1.SpeakeasyBase));
+exports.CategoryResourceRelationshipsChildrenData = CategoryResourceRelationshipsChildrenData;
 var CategoryResourceRelationshipsChildrenLinks = /** @class */ (function (_super) {
     __extends(CategoryResourceRelationshipsChildrenLinks, _super);
     function CategoryResourceRelationshipsChildrenLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=related" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=related" }),
         __metadata("design:type", String)
     ], CategoryResourceRelationshipsChildrenLinks.prototype, "related", void 0);
     return CategoryResourceRelationshipsChildrenLinks;
-}(SpeakeasyBase));
-export { CategoryResourceRelationshipsChildrenLinks };
+}(utils_1.SpeakeasyBase));
+exports.CategoryResourceRelationshipsChildrenLinks = CategoryResourceRelationshipsChildrenLinks;
 var CategoryResourceRelationshipsChildren = /** @class */ (function (_super) {
     __extends(CategoryResourceRelationshipsChildren, _super);
     function CategoryResourceRelationshipsChildren() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: CategoryResourceRelationshipsChildrenData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: CategoryResourceRelationshipsChildrenData }),
         __metadata("design:type", Array)
     ], CategoryResourceRelationshipsChildren.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
         __metadata("design:type", CategoryResourceRelationshipsChildrenLinks)
     ], CategoryResourceRelationshipsChildren.prototype, "links", void 0);
     return CategoryResourceRelationshipsChildren;
-}(SpeakeasyBase));
-export { CategoryResourceRelationshipsChildren };
+}(utils_1.SpeakeasyBase));
+exports.CategoryResourceRelationshipsChildren = CategoryResourceRelationshipsChildren;
 var CategoryResourceRelationshipsParentData = /** @class */ (function (_super) {
     __extends(CategoryResourceRelationshipsParentData, _super);
     function CategoryResourceRelationshipsParentData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CategoryResourceRelationshipsParentData.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CategoryResourceRelationshipsParentData.prototype, "type", void 0);
     return CategoryResourceRelationshipsParentData;
-}(SpeakeasyBase));
-export { CategoryResourceRelationshipsParentData };
+}(utils_1.SpeakeasyBase));
+exports.CategoryResourceRelationshipsParentData = CategoryResourceRelationshipsParentData;
 var CategoryResourceRelationshipsParentLinks = /** @class */ (function (_super) {
     __extends(CategoryResourceRelationshipsParentLinks, _super);
     function CategoryResourceRelationshipsParentLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=related" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=related" }),
         __metadata("design:type", String)
     ], CategoryResourceRelationshipsParentLinks.prototype, "related", void 0);
     return CategoryResourceRelationshipsParentLinks;
-}(SpeakeasyBase));
-export { CategoryResourceRelationshipsParentLinks };
+}(utils_1.SpeakeasyBase));
+exports.CategoryResourceRelationshipsParentLinks = CategoryResourceRelationshipsParentLinks;
 var CategoryResourceRelationshipsParent = /** @class */ (function (_super) {
     __extends(CategoryResourceRelationshipsParent, _super);
     function CategoryResourceRelationshipsParent() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", CategoryResourceRelationshipsParentData)
     ], CategoryResourceRelationshipsParent.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
         __metadata("design:type", CategoryResourceRelationshipsParentLinks)
     ], CategoryResourceRelationshipsParent.prototype, "links", void 0);
     return CategoryResourceRelationshipsParent;
-}(SpeakeasyBase));
-export { CategoryResourceRelationshipsParent };
+}(utils_1.SpeakeasyBase));
+exports.CategoryResourceRelationshipsParent = CategoryResourceRelationshipsParent;
 var CategoryResourceRelationships = /** @class */ (function (_super) {
     __extends(CategoryResourceRelationships, _super);
     function CategoryResourceRelationships() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=children" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=children" }),
         __metadata("design:type", CategoryResourceRelationshipsChildren)
     ], CategoryResourceRelationships.prototype, "children", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent" }),
         __metadata("design:type", CategoryResourceRelationshipsParent)
     ], CategoryResourceRelationships.prototype, "parent", void 0);
     return CategoryResourceRelationships;
-}(SpeakeasyBase));
-export { CategoryResourceRelationships };
+}(utils_1.SpeakeasyBase));
+exports.CategoryResourceRelationships = CategoryResourceRelationships;
 // CategoryResource
 /**
  * Provides information about a category and its ancestry.
@@ -162,25 +165,25 @@ var CategoryResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
         __metadata("design:type", CategoryResourceAttributes)
     ], CategoryResource.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CategoryResource.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
         __metadata("design:type", CategoryResourceLinks)
     ], CategoryResource.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationships" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationships" }),
         __metadata("design:type", CategoryResourceRelationships)
     ], CategoryResource.prototype, "relationships", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CategoryResource.prototype, "type", void 0);
     return CategoryResource;
-}(SpeakeasyBase));
-export { CategoryResource };
+}(utils_1.SpeakeasyBase));
+exports.CategoryResource = CategoryResource;

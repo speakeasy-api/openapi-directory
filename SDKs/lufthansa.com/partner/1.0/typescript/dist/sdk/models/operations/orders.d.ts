@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class OrdersPathParams extends SpeakeasyBase {
     name: string;
-    orderId: string;
+    orderID: string;
 }
 export declare class OrdersHeaders extends SpeakeasyBase {
     accept: string;
@@ -17,6 +17,6 @@ export declare class OrdersRequest extends SpeakeasyBase {
 }
 export declare class OrdersResponse extends SpeakeasyBase {
     contentType: string;
-    orders200ApplicationJsonString?: string;
+    orders200ApplicationJSONString?: string;
     statusCode: number;
 }

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { GetMapVersionNumberCopyrightsCaptionFormatRequest, GetMapVersionNumberCopyrightsCaptionFormatResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetMapVersionNumberCopyrightsFormatRequest, GetMapVersionNumberCopyrightsFormatResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -32,17 +31,17 @@ const sdk = new SDK(WithSecurity(
   }
 ));
     
-const req: GetMapVersionNumberCopyrightsCaptionFormatRequest = {
+const req: GetMapVersionNumberCopyrightsFormatRequest = {
   pathParams: {
     format: "json",
-    versionNumber: 3490182019411094151,
+    versionNumber: 2259404117704393152,
   },
   queryParams: {
-    callback: "suscipit",
+    callback: "culpa",
   },
 };
 
-sdk.sdk.getMapVersionNumberCopyrightsCaptionFormat(req).then((res: GetMapVersionNumberCopyrightsCaptionFormatResponse | AxiosError) => {
+sdk.copyrights.getMapVersionNumberCopyrightsFormat(req).then((res: GetMapVersionNumberCopyrightsFormatResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -51,18 +50,27 @@ sdk.sdk.getMapVersionNumberCopyrightsCaptionFormat(req).then((res: GetMapVersion
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Copyrights
 
-* `getMapVersionNumberCopyrightsCaptionFormat` - Captions
 * `getMapVersionNumberCopyrightsFormat` - Copyrights whole world
+* `getMapVersionNumberCopyrightsCaptionFormat` - Captions
 * `getMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormat` - Copyrights bounding box
 * `getMapVersionNumberCopyrightsZoomXYFormat` - Copyrights tile
+
+### Raster
+
 * `getMapVersionNumberStaticimage` - Static Image
 * `getMapVersionNumberTileLayerStyleZoomXYFormat` - Tile
+
+### Vector
+
 * `getMapVersionNumberTileLayerStyleZoomXYPbf` - Tile
-* `getMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXml` - WMTS
+
+### WMS / WMTS
+
 * `getCapabilities` - GetCapabilities
 * `getMap` - GetMap
+* `getMapVersionNumberWmtsKeyWmtsVersionWmtsCapabilitiesXml` - WMTS
 
 <!-- End SDK Available Operations -->
 

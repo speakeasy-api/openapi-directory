@@ -38,8 +38,8 @@ export class TinVerificationComprehensiveCheckResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tinVerificationComprehensiveCheck200ApplicationJsonAny?: any;
+  tinVerificationComprehensiveCheck200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  tinVerificationComprehensiveCheckDefaultApplicationJsonAny?: any;
+  tinVerificationComprehensiveCheckDefaultApplicationJSONAny?: any;
 }

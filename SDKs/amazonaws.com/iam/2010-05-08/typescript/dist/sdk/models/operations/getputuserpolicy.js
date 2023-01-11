@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetPutUserPolicyActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPutUserPolicyResponse = exports.GetPutUserPolicyRequest = exports.GetPutUserPolicyHeaders = exports.GetPutUserPolicyQueryParams = exports.GetPutUserPolicyVersionEnum = exports.GetPutUserPolicyActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetPutUserPolicyActionEnum;
 (function (GetPutUserPolicyActionEnum) {
     GetPutUserPolicyActionEnum["PutUserPolicy"] = "PutUserPolicy";
-})(GetPutUserPolicyActionEnum || (GetPutUserPolicyActionEnum = {}));
-export var GetPutUserPolicyVersionEnum;
+})(GetPutUserPolicyActionEnum = exports.GetPutUserPolicyActionEnum || (exports.GetPutUserPolicyActionEnum = {}));
+var GetPutUserPolicyVersionEnum;
 (function (GetPutUserPolicyVersionEnum) {
     GetPutUserPolicyVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetPutUserPolicyVersionEnum || (GetPutUserPolicyVersionEnum = {}));
+})(GetPutUserPolicyVersionEnum = exports.GetPutUserPolicyVersionEnum || (exports.GetPutUserPolicyVersionEnum = {}));
 var GetPutUserPolicyQueryParams = /** @class */ (function (_super) {
     __extends(GetPutUserPolicyQueryParams, _super);
     function GetPutUserPolicyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetPutUserPolicyQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PolicyDocument" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PolicyDocument" }),
         __metadata("design:type", String)
     ], GetPutUserPolicyQueryParams.prototype, "policyDocument", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PolicyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PolicyName" }),
         __metadata("design:type", String)
     ], GetPutUserPolicyQueryParams.prototype, "policyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=UserName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=UserName" }),
         __metadata("design:type", String)
     ], GetPutUserPolicyQueryParams.prototype, "userName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetPutUserPolicyQueryParams.prototype, "version", void 0);
     return GetPutUserPolicyQueryParams;
-}(SpeakeasyBase));
-export { GetPutUserPolicyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPutUserPolicyQueryParams = GetPutUserPolicyQueryParams;
 var GetPutUserPolicyHeaders = /** @class */ (function (_super) {
     __extends(GetPutUserPolicyHeaders, _super);
     function GetPutUserPolicyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetPutUserPolicyHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetPutUserPolicyHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetPutUserPolicyHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetPutUserPolicyHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetPutUserPolicyHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetPutUserPolicyHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetPutUserPolicyHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetPutUserPolicyHeaders;
-}(SpeakeasyBase));
-export { GetPutUserPolicyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetPutUserPolicyHeaders = GetPutUserPolicyHeaders;
 var GetPutUserPolicyRequest = /** @class */ (function (_super) {
     __extends(GetPutUserPolicyRequest, _super);
     function GetPutUserPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPutUserPolicyQueryParams)
     ], GetPutUserPolicyRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPutUserPolicyHeaders)
     ], GetPutUserPolicyRequest.prototype, "headers", void 0);
     return GetPutUserPolicyRequest;
-}(SpeakeasyBase));
-export { GetPutUserPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPutUserPolicyRequest = GetPutUserPolicyRequest;
 var GetPutUserPolicyResponse = /** @class */ (function (_super) {
     __extends(GetPutUserPolicyResponse, _super);
     function GetPutUserPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetPutUserPolicyResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPutUserPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPutUserPolicyResponse.prototype, "statusCode", void 0);
     return GetPutUserPolicyResponse;
-}(SpeakeasyBase));
-export { GetPutUserPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPutUserPolicyResponse = GetPutUserPolicyResponse;

@@ -1,5 +1,8 @@
-export var RuleGroupTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuleGroupTypeEnum = void 0;
+var RuleGroupTypeEnum;
 (function (RuleGroupTypeEnum) {
     RuleGroupTypeEnum["Stateless"] = "STATELESS";
     RuleGroupTypeEnum["Stateful"] = "STATEFUL";
-})(RuleGroupTypeEnum || (RuleGroupTypeEnum = {}));
+})(RuleGroupTypeEnum = exports.RuleGroupTypeEnum || (exports.RuleGroupTypeEnum = {}));

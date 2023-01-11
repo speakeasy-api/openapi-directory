@@ -8,15 +8,10 @@ export class TeamsListDiscussionsPathParams extends SpeakeasyBase {
   teamId: number;
 }
 
-export enum TeamsListDiscussionsDirectionEnum {
-    Asc = "asc",
-    Desc = "desc"
-}
-
 
 export class TeamsListDiscussionsQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
-  direction?: TeamsListDiscussionsDirectionEnum;
+  direction?: shared.TeamIdEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -40,7 +35,7 @@ export class TeamsListDiscussionsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

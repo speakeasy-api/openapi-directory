@@ -25,10 +25,10 @@ export declare class PushUriToAccountIdRequest extends SpeakeasyBase {
 }
 export declare class PushUriToAccountIdResponse extends SpeakeasyBase {
     contentType: string;
-    pushUriToAccountId400ApplicationJsonObject?: PushUriToAccountId400ApplicationJson;
-    pushUriToAccountId401ApplicationJsonObject?: PushUriToAccountId401ApplicationJson;
-    pushUriToAccountId404ApplicationJsonObject?: PushUriToAccountId404ApplicationJson;
-    pushUriToAccountId500ApplicationJsonObject?: PushUriToAccountId500ApplicationJson;
+    pushURIToAccountId400ApplicationJSONObject?: PushUriToAccountId400ApplicationJson;
+    pushURIToAccountId401ApplicationJSONObject?: PushUriToAccountId401ApplicationJson;
+    pushURIToAccountId404ApplicationJSONObject?: PushUriToAccountId404ApplicationJson;
+    pushURIToAccountId500ApplicationJSONObject?: PushUriToAccountId500ApplicationJson;
     sample?: any;
     statusCode: number;
 }

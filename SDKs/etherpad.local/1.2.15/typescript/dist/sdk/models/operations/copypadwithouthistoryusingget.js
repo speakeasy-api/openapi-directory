@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,148 +23,150 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CopyPadWithoutHistoryUsingGetResponse = exports.CopyPadWithoutHistoryUsingGetRequest = exports.CopyPadWithoutHistoryUsingGet500ApplicationJson = exports.CopyPadWithoutHistoryUsingGet401ApplicationJson = exports.CopyPadWithoutHistoryUsingGet400ApplicationJson = exports.CopyPadWithoutHistoryUsingGet200ApplicationJson = exports.CopyPadWithoutHistoryUsingGetQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CopyPadWithoutHistoryUsingGetQueryParams = /** @class */ (function (_super) {
     __extends(CopyPadWithoutHistoryUsingGetQueryParams, _super);
     function CopyPadWithoutHistoryUsingGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=destinationID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=destinationID" }),
         __metadata("design:type", String)
-    ], CopyPadWithoutHistoryUsingGetQueryParams.prototype, "destinationId", void 0);
+    ], CopyPadWithoutHistoryUsingGetQueryParams.prototype, "destinationID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=force" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=force" }),
         __metadata("design:type", String)
     ], CopyPadWithoutHistoryUsingGetQueryParams.prototype, "force", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sourceID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sourceID" }),
         __metadata("design:type", String)
-    ], CopyPadWithoutHistoryUsingGetQueryParams.prototype, "sourceId", void 0);
+    ], CopyPadWithoutHistoryUsingGetQueryParams.prototype, "sourceID", void 0);
     return CopyPadWithoutHistoryUsingGetQueryParams;
-}(SpeakeasyBase));
-export { CopyPadWithoutHistoryUsingGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CopyPadWithoutHistoryUsingGetQueryParams = CopyPadWithoutHistoryUsingGetQueryParams;
 var CopyPadWithoutHistoryUsingGet200ApplicationJson = /** @class */ (function (_super) {
     __extends(CopyPadWithoutHistoryUsingGet200ApplicationJson, _super);
     function CopyPadWithoutHistoryUsingGet200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CopyPadWithoutHistoryUsingGet200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CopyPadWithoutHistoryUsingGet200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CopyPadWithoutHistoryUsingGet200ApplicationJson.prototype, "message", void 0);
     return CopyPadWithoutHistoryUsingGet200ApplicationJson;
-}(SpeakeasyBase));
-export { CopyPadWithoutHistoryUsingGet200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CopyPadWithoutHistoryUsingGet200ApplicationJson = CopyPadWithoutHistoryUsingGet200ApplicationJson;
 var CopyPadWithoutHistoryUsingGet400ApplicationJson = /** @class */ (function (_super) {
     __extends(CopyPadWithoutHistoryUsingGet400ApplicationJson, _super);
     function CopyPadWithoutHistoryUsingGet400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CopyPadWithoutHistoryUsingGet400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CopyPadWithoutHistoryUsingGet400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CopyPadWithoutHistoryUsingGet400ApplicationJson.prototype, "message", void 0);
     return CopyPadWithoutHistoryUsingGet400ApplicationJson;
-}(SpeakeasyBase));
-export { CopyPadWithoutHistoryUsingGet400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CopyPadWithoutHistoryUsingGet400ApplicationJson = CopyPadWithoutHistoryUsingGet400ApplicationJson;
 var CopyPadWithoutHistoryUsingGet401ApplicationJson = /** @class */ (function (_super) {
     __extends(CopyPadWithoutHistoryUsingGet401ApplicationJson, _super);
     function CopyPadWithoutHistoryUsingGet401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CopyPadWithoutHistoryUsingGet401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CopyPadWithoutHistoryUsingGet401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CopyPadWithoutHistoryUsingGet401ApplicationJson.prototype, "message", void 0);
     return CopyPadWithoutHistoryUsingGet401ApplicationJson;
-}(SpeakeasyBase));
-export { CopyPadWithoutHistoryUsingGet401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CopyPadWithoutHistoryUsingGet401ApplicationJson = CopyPadWithoutHistoryUsingGet401ApplicationJson;
 var CopyPadWithoutHistoryUsingGet500ApplicationJson = /** @class */ (function (_super) {
     __extends(CopyPadWithoutHistoryUsingGet500ApplicationJson, _super);
     function CopyPadWithoutHistoryUsingGet500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CopyPadWithoutHistoryUsingGet500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CopyPadWithoutHistoryUsingGet500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CopyPadWithoutHistoryUsingGet500ApplicationJson.prototype, "message", void 0);
     return CopyPadWithoutHistoryUsingGet500ApplicationJson;
-}(SpeakeasyBase));
-export { CopyPadWithoutHistoryUsingGet500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CopyPadWithoutHistoryUsingGet500ApplicationJson = CopyPadWithoutHistoryUsingGet500ApplicationJson;
 var CopyPadWithoutHistoryUsingGetRequest = /** @class */ (function (_super) {
     __extends(CopyPadWithoutHistoryUsingGetRequest, _super);
     function CopyPadWithoutHistoryUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CopyPadWithoutHistoryUsingGetQueryParams)
     ], CopyPadWithoutHistoryUsingGetRequest.prototype, "queryParams", void 0);
     return CopyPadWithoutHistoryUsingGetRequest;
-}(SpeakeasyBase));
-export { CopyPadWithoutHistoryUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.CopyPadWithoutHistoryUsingGetRequest = CopyPadWithoutHistoryUsingGetRequest;
 var CopyPadWithoutHistoryUsingGetResponse = /** @class */ (function (_super) {
     __extends(CopyPadWithoutHistoryUsingGetResponse, _super);
     function CopyPadWithoutHistoryUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CopyPadWithoutHistoryUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CopyPadWithoutHistoryUsingGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CopyPadWithoutHistoryUsingGet200ApplicationJson)
-    ], CopyPadWithoutHistoryUsingGetResponse.prototype, "copyPadWithoutHistoryUsingGet200ApplicationJsonObject", void 0);
+    ], CopyPadWithoutHistoryUsingGetResponse.prototype, "copyPadWithoutHistoryUsingGET200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CopyPadWithoutHistoryUsingGet400ApplicationJson)
-    ], CopyPadWithoutHistoryUsingGetResponse.prototype, "copyPadWithoutHistoryUsingGet400ApplicationJsonObject", void 0);
+    ], CopyPadWithoutHistoryUsingGetResponse.prototype, "copyPadWithoutHistoryUsingGET400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CopyPadWithoutHistoryUsingGet401ApplicationJson)
-    ], CopyPadWithoutHistoryUsingGetResponse.prototype, "copyPadWithoutHistoryUsingGet401ApplicationJsonObject", void 0);
+    ], CopyPadWithoutHistoryUsingGetResponse.prototype, "copyPadWithoutHistoryUsingGET401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CopyPadWithoutHistoryUsingGet500ApplicationJson)
-    ], CopyPadWithoutHistoryUsingGetResponse.prototype, "copyPadWithoutHistoryUsingGet500ApplicationJsonObject", void 0);
+    ], CopyPadWithoutHistoryUsingGetResponse.prototype, "copyPadWithoutHistoryUsingGET500ApplicationJSONObject", void 0);
     return CopyPadWithoutHistoryUsingGetResponse;
-}(SpeakeasyBase));
-export { CopyPadWithoutHistoryUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.CopyPadWithoutHistoryUsingGetResponse = CopyPadWithoutHistoryUsingGetResponse;

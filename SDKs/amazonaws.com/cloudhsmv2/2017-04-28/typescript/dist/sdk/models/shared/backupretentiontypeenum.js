@@ -1,4 +1,7 @@
-export var BackupRetentionTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BackupRetentionTypeEnum = void 0;
+var BackupRetentionTypeEnum;
 (function (BackupRetentionTypeEnum) {
     BackupRetentionTypeEnum["Days"] = "DAYS";
-})(BackupRetentionTypeEnum || (BackupRetentionTypeEnum = {}));
+})(BackupRetentionTypeEnum = exports.BackupRetentionTypeEnum || (exports.BackupRetentionTypeEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FindingFilter } from "./findingfilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListFindingsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var findingfilter_1 = require("./findingfilter");
 var ListFindingsRequest = /** @class */ (function (_super) {
     __extends(ListFindingsRequest, _super);
     function ListFindingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assessmentRunArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assessmentRunArns" }),
         __metadata("design:type", Array)
     ], ListFindingsRequest.prototype, "assessmentRunArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
-        __metadata("design:type", FindingFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
+        __metadata("design:type", findingfilter_1.FindingFilter)
     ], ListFindingsRequest.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxResults" }),
         __metadata("design:type", Number)
     ], ListFindingsRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListFindingsRequest.prototype, "nextToken", void 0);
     return ListFindingsRequest;
-}(SpeakeasyBase));
-export { ListFindingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListFindingsRequest = ListFindingsRequest;

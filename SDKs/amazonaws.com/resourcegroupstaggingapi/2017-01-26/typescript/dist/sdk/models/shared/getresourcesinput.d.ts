@@ -4,7 +4,7 @@ export declare class GetResourcesInput extends SpeakeasyBase {
     excludeCompliantResources?: boolean;
     includeComplianceDetails?: boolean;
     paginationToken?: string;
-    resourceArnList?: string[];
+    resourceARNList?: string[];
     resourceTypeFilters?: string[];
     resourcesPerPage?: number;
     tagFilters?: TagFilter[];

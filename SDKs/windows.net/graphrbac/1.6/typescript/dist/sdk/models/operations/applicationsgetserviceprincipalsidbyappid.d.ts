@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class ApplicationsGetServicePrincipalsIdByAppIdPathParams extends SpeakeasyBase {
-    applicationId: string;
-    tenantId: string;
+    applicationID: string;
+    tenantID: string;
 }
 export declare class ApplicationsGetServicePrincipalsIdByAppIdQueryParams extends SpeakeasyBase {
     apiVersion: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,142 +14,167 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SiteVerificationWebResourceInsertResponse = exports.SiteVerificationWebResourceInsertRequest = exports.SiteVerificationWebResourceInsertSecurity = exports.SiteVerificationWebResourceInsertSecurityOption2 = exports.SiteVerificationWebResourceInsertSecurityOption1 = exports.SiteVerificationWebResourceInsertQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var SiteVerificationWebResourceInsertQueryParams = /** @class */ (function (_super) {
     __extends(SiteVerificationWebResourceInsertQueryParams, _super);
     function SiteVerificationWebResourceInsertQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], SiteVerificationWebResourceInsertQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], SiteVerificationWebResourceInsertQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], SiteVerificationWebResourceInsertQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], SiteVerificationWebResourceInsertQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], SiteVerificationWebResourceInsertQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], SiteVerificationWebResourceInsertQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], SiteVerificationWebResourceInsertQueryParams.prototype, "userIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=verificationMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=verificationMethod" }),
         __metadata("design:type", String)
     ], SiteVerificationWebResourceInsertQueryParams.prototype, "verificationMethod", void 0);
     return SiteVerificationWebResourceInsertQueryParams;
-}(SpeakeasyBase));
-export { SiteVerificationWebResourceInsertQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SiteVerificationWebResourceInsertQueryParams = SiteVerificationWebResourceInsertQueryParams;
 var SiteVerificationWebResourceInsertSecurityOption1 = /** @class */ (function (_super) {
     __extends(SiteVerificationWebResourceInsertSecurityOption1, _super);
     function SiteVerificationWebResourceInsertSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], SiteVerificationWebResourceInsertSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], SiteVerificationWebResourceInsertSecurityOption1.prototype, "oauth2c", void 0);
     return SiteVerificationWebResourceInsertSecurityOption1;
-}(SpeakeasyBase));
-export { SiteVerificationWebResourceInsertSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.SiteVerificationWebResourceInsertSecurityOption1 = SiteVerificationWebResourceInsertSecurityOption1;
 var SiteVerificationWebResourceInsertSecurityOption2 = /** @class */ (function (_super) {
     __extends(SiteVerificationWebResourceInsertSecurityOption2, _super);
     function SiteVerificationWebResourceInsertSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], SiteVerificationWebResourceInsertSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], SiteVerificationWebResourceInsertSecurityOption2.prototype, "oauth2c", void 0);
     return SiteVerificationWebResourceInsertSecurityOption2;
-}(SpeakeasyBase));
-export { SiteVerificationWebResourceInsertSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.SiteVerificationWebResourceInsertSecurityOption2 = SiteVerificationWebResourceInsertSecurityOption2;
 var SiteVerificationWebResourceInsertSecurity = /** @class */ (function (_super) {
     __extends(SiteVerificationWebResourceInsertSecurity, _super);
     function SiteVerificationWebResourceInsertSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", SiteVerificationWebResourceInsertSecurityOption1)
     ], SiteVerificationWebResourceInsertSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", SiteVerificationWebResourceInsertSecurityOption2)
     ], SiteVerificationWebResourceInsertSecurity.prototype, "option2", void 0);
     return SiteVerificationWebResourceInsertSecurity;
-}(SpeakeasyBase));
-export { SiteVerificationWebResourceInsertSecurity };
+}(utils_1.SpeakeasyBase));
+exports.SiteVerificationWebResourceInsertSecurity = SiteVerificationWebResourceInsertSecurity;
 var SiteVerificationWebResourceInsertRequest = /** @class */ (function (_super) {
     __extends(SiteVerificationWebResourceInsertRequest, _super);
     function SiteVerificationWebResourceInsertRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SiteVerificationWebResourceInsertQueryParams)
     ], SiteVerificationWebResourceInsertRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.SiteVerificationWebResourceResource)
     ], SiteVerificationWebResourceInsertRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SiteVerificationWebResourceInsertSecurity)
     ], SiteVerificationWebResourceInsertRequest.prototype, "security", void 0);
     return SiteVerificationWebResourceInsertRequest;
-}(SpeakeasyBase));
-export { SiteVerificationWebResourceInsertRequest };
+}(utils_1.SpeakeasyBase));
+exports.SiteVerificationWebResourceInsertRequest = SiteVerificationWebResourceInsertRequest;
 var SiteVerificationWebResourceInsertResponse = /** @class */ (function (_super) {
     __extends(SiteVerificationWebResourceInsertResponse, _super);
     function SiteVerificationWebResourceInsertResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SiteVerificationWebResourceInsertResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.SiteVerificationWebResourceResource)
     ], SiteVerificationWebResourceInsertResponse.prototype, "siteVerificationWebResourceResource", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SiteVerificationWebResourceInsertResponse.prototype, "statusCode", void 0);
     return SiteVerificationWebResourceInsertResponse;
-}(SpeakeasyBase));
-export { SiteVerificationWebResourceInsertResponse };
+}(utils_1.SpeakeasyBase));
+exports.SiteVerificationWebResourceInsertResponse = SiteVerificationWebResourceInsertResponse;

@@ -9,5 +9,5 @@ export declare class SetReadCommunityRequest extends SpeakeasyBase {
 export declare class SetReadCommunityResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    setReadCommunity200ApplicationJsonString?: string;
+    setReadCommunity200ApplicationJSONString?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,109 +23,111 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Link } from "./link";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Playlist = exports.PlaylistLinks = void 0;
+var utils_1 = require("../../../internal/utils");
+var link_1 = require("./link");
 var PlaylistLinks = /** @class */ (function (_super) {
     __extends(PlaylistLinks, _super);
     function PlaylistLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=persona" }),
-        __metadata("design:type", Link)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=persona" }),
+        __metadata("design:type", link_1.Link)
     ], PlaylistLinks.prototype, "persona", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=self" }),
-        __metadata("design:type", Link)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=self" }),
+        __metadata("design:type", link_1.Link)
     ], PlaylistLinks.prototype, "self", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=show" }),
-        __metadata("design:type", Link)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=show" }),
+        __metadata("design:type", link_1.Link)
     ], PlaylistLinks.prototype, "show", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spins" }),
-        __metadata("design:type", Link)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spins" }),
+        __metadata("design:type", link_1.Link)
     ], PlaylistLinks.prototype, "spins", void 0);
     return PlaylistLinks;
-}(SpeakeasyBase));
-export { PlaylistLinks };
+}(utils_1.SpeakeasyBase));
+exports.PlaylistLinks = PlaylistLinks;
 var Playlist = /** @class */ (function (_super) {
     __extends(Playlist, _super);
     function Playlist() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
         __metadata("design:type", PlaylistLinks)
     ], Playlist.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=automation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=automation" }),
         __metadata("design:type", Boolean)
     ], Playlist.prototype, "automation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], Playlist.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Playlist.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", Number)
     ], Playlist.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end" }),
         __metadata("design:type", Date)
     ], Playlist.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=episode_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=episode_description" }),
         __metadata("design:type", String)
     ], Playlist.prototype, "episodeDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=episode_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=episode_name" }),
         __metadata("design:type", String)
     ], Playlist.prototype, "episodeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hide_dj" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hide_dj" }),
         __metadata("design:type", Boolean)
     ], Playlist.prototype, "hideDj", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Playlist.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", String)
     ], Playlist.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=persona_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=persona_id" }),
         __metadata("design:type", Number)
     ], Playlist.prototype, "personaId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=show_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=show_id" }),
         __metadata("design:type", Number)
     ], Playlist.prototype, "showId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=since" }),
         __metadata("design:type", Number)
     ], Playlist.prototype, "since", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
         __metadata("design:type", Date)
     ], Playlist.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezone" }),
         __metadata("design:type", String)
     ], Playlist.prototype, "timezone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Playlist.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Playlist.prototype, "url", void 0);
     return Playlist;
-}(SpeakeasyBase));
-export { Playlist };
+}(utils_1.SpeakeasyBase));
+exports.Playlist = Playlist;

@@ -27,6 +27,9 @@ export declare enum TaskRequestResourceSubtypeEnum {
     Section = "section",
     Approval = "approval"
 }
+/**
+ * The *task* is the basic object around which many operations in Asana are centered.
+**/
 export declare class TaskRequestInput extends SpeakeasyBase {
     approvalStatus?: TaskRequestApprovalStatusEnum;
     assignee?: string;
@@ -34,7 +37,7 @@ export declare class TaskRequestInput extends SpeakeasyBase {
     assigneeStatus?: TaskRequestAssigneeStatusEnum;
     completed?: boolean;
     completedBy?: UserCompactInput;
-    customFields?: Map<string, string>;
+    customFields?: Record<string, string>;
     dueAt?: Date;
     dueOn?: Date;
     external?: TaskRequestExternal;

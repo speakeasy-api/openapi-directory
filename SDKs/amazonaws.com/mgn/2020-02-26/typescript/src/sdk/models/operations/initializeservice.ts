@@ -40,7 +40,7 @@ export class InitializeServiceResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  initializeServiceResponse?: Map<string, any>;
+  initializeServiceResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

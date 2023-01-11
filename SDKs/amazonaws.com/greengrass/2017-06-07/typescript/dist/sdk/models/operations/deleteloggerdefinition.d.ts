@@ -18,6 +18,6 @@ export declare class DeleteLoggerDefinitionRequest extends SpeakeasyBase {
 export declare class DeleteLoggerDefinitionResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
-    deleteLoggerDefinitionResponse?: Map<string, any>;
+    deleteLoggerDefinitionResponse?: Record<string, any>;
     statusCode: number;
 }

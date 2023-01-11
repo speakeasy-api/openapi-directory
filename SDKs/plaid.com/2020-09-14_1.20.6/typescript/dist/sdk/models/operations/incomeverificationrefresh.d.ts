@@ -5,7 +5,7 @@ export declare class IncomeVerificationRefreshRequest extends SpeakeasyBase {
 }
 export declare class IncomeVerificationRefreshResponse extends SpeakeasyBase {
     contentType: string;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     incomeVerificationRefreshResponse?: shared.IncomeVerificationRefreshResponse;
     statusCode: number;
 }

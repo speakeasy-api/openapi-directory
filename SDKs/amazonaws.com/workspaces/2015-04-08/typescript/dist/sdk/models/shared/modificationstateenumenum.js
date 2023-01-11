@@ -1,5 +1,8 @@
-export var ModificationStateEnumEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModificationStateEnumEnum = void 0;
+var ModificationStateEnumEnum;
 (function (ModificationStateEnumEnum) {
     ModificationStateEnumEnum["UpdateInitiated"] = "UPDATE_INITIATED";
     ModificationStateEnumEnum["UpdateInProgress"] = "UPDATE_IN_PROGRESS";
-})(ModificationStateEnumEnum || (ModificationStateEnumEnum = {}));
+})(ModificationStateEnumEnum = exports.ModificationStateEnumEnum || (exports.ModificationStateEnumEnum = {}));

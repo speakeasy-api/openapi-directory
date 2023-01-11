@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReactionsDeleteForTeamDiscussionResponse = exports.ReactionsDeleteForTeamDiscussionRequest = exports.ReactionsDeleteForTeamDiscussionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReactionsDeleteForTeamDiscussionPathParams = /** @class */ (function (_super) {
     __extends(ReactionsDeleteForTeamDiscussionPathParams, _super);
     function ReactionsDeleteForTeamDiscussionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=discussion_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=discussion_number" }),
         __metadata("design:type", Number)
     ], ReactionsDeleteForTeamDiscussionPathParams.prototype, "discussionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], ReactionsDeleteForTeamDiscussionPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=reaction_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=reaction_id" }),
         __metadata("design:type", Number)
     ], ReactionsDeleteForTeamDiscussionPathParams.prototype, "reactionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_slug" }),
         __metadata("design:type", String)
     ], ReactionsDeleteForTeamDiscussionPathParams.prototype, "teamSlug", void 0);
     return ReactionsDeleteForTeamDiscussionPathParams;
-}(SpeakeasyBase));
-export { ReactionsDeleteForTeamDiscussionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteForTeamDiscussionPathParams = ReactionsDeleteForTeamDiscussionPathParams;
 var ReactionsDeleteForTeamDiscussionRequest = /** @class */ (function (_super) {
     __extends(ReactionsDeleteForTeamDiscussionRequest, _super);
     function ReactionsDeleteForTeamDiscussionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReactionsDeleteForTeamDiscussionPathParams)
     ], ReactionsDeleteForTeamDiscussionRequest.prototype, "pathParams", void 0);
     return ReactionsDeleteForTeamDiscussionRequest;
-}(SpeakeasyBase));
-export { ReactionsDeleteForTeamDiscussionRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteForTeamDiscussionRequest = ReactionsDeleteForTeamDiscussionRequest;
 var ReactionsDeleteForTeamDiscussionResponse = /** @class */ (function (_super) {
     __extends(ReactionsDeleteForTeamDiscussionResponse, _super);
     function ReactionsDeleteForTeamDiscussionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReactionsDeleteForTeamDiscussionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReactionsDeleteForTeamDiscussionResponse.prototype, "statusCode", void 0);
     return ReactionsDeleteForTeamDiscussionResponse;
-}(SpeakeasyBase));
-export { ReactionsDeleteForTeamDiscussionResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsDeleteForTeamDiscussionResponse = ReactionsDeleteForTeamDiscussionResponse;

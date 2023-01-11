@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,99 +23,101 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetEventsEventTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEventsResponse = exports.GetEventsRequest = exports.GetEventsQueryParams = exports.GetEventsStatusEnum = exports.GetEventsFormatEnum = exports.GetEventsEventTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetEventsEventTypeEnum;
 (function (GetEventsEventTypeEnum) {
     GetEventsEventTypeEnum["Construction"] = "CONSTRUCTION";
     GetEventsEventTypeEnum["SpecialEvent"] = "SPECIAL_EVENT";
     GetEventsEventTypeEnum["Incident"] = "INCIDENT";
     GetEventsEventTypeEnum["WeatherCondition"] = "WEATHER_CONDITION";
     GetEventsEventTypeEnum["RoadCondition"] = "ROAD_CONDITION";
-})(GetEventsEventTypeEnum || (GetEventsEventTypeEnum = {}));
-export var GetEventsFormatEnum;
+})(GetEventsEventTypeEnum = exports.GetEventsEventTypeEnum || (exports.GetEventsEventTypeEnum = {}));
+var GetEventsFormatEnum;
 (function (GetEventsFormatEnum) {
     GetEventsFormatEnum["Json"] = "json";
     GetEventsFormatEnum["Xml"] = "xml";
-})(GetEventsFormatEnum || (GetEventsFormatEnum = {}));
-export var GetEventsStatusEnum;
+})(GetEventsFormatEnum = exports.GetEventsFormatEnum || (exports.GetEventsFormatEnum = {}));
+var GetEventsStatusEnum;
 (function (GetEventsStatusEnum) {
     GetEventsStatusEnum["All"] = "ALL";
     GetEventsStatusEnum["Active"] = "ACTIVE";
     GetEventsStatusEnum["Archived"] = "ARCHIVED";
-})(GetEventsStatusEnum || (GetEventsStatusEnum = {}));
+})(GetEventsStatusEnum = exports.GetEventsStatusEnum || (exports.GetEventsStatusEnum = {}));
 var GetEventsQueryParams = /** @class */ (function (_super) {
     __extends(GetEventsQueryParams, _super);
     function GetEventsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=area_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=area_id" }),
         __metadata("design:type", String)
     ], GetEventsQueryParams.prototype, "areaId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=bbox" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=bbox" }),
         __metadata("design:type", String)
     ], GetEventsQueryParams.prototype, "bbox", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=created" }),
         __metadata("design:type", String)
     ], GetEventsQueryParams.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=event_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=event_type" }),
         __metadata("design:type", String)
     ], GetEventsQueryParams.prototype, "eventType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetEventsQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jurisdiction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=jurisdiction" }),
         __metadata("design:type", String)
     ], GetEventsQueryParams.prototype, "jurisdiction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=road_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=road_name" }),
         __metadata("design:type", String)
     ], GetEventsQueryParams.prototype, "roadName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=severity" }),
         __metadata("design:type", String)
     ], GetEventsQueryParams.prototype, "severity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=status" }),
         __metadata("design:type", String)
     ], GetEventsQueryParams.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=updated" }),
         __metadata("design:type", String)
     ], GetEventsQueryParams.prototype, "updated", void 0);
     return GetEventsQueryParams;
-}(SpeakeasyBase));
-export { GetEventsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetEventsQueryParams = GetEventsQueryParams;
 var GetEventsRequest = /** @class */ (function (_super) {
     __extends(GetEventsRequest, _super);
     function GetEventsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEventsQueryParams)
     ], GetEventsRequest.prototype, "queryParams", void 0);
     return GetEventsRequest;
-}(SpeakeasyBase));
-export { GetEventsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetEventsRequest = GetEventsRequest;
 var GetEventsResponse = /** @class */ (function (_super) {
     __extends(GetEventsResponse, _super);
     function GetEventsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetEventsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetEventsResponse.prototype, "statusCode", void 0);
     return GetEventsResponse;
-}(SpeakeasyBase));
-export { GetEventsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetEventsResponse = GetEventsResponse;

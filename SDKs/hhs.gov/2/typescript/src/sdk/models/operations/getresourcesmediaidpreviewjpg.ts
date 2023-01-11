@@ -19,8 +19,8 @@ export class GetResourcesMediaIdPreviewJpgResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getResourcesMediaIdPreviewJpg200ApplicationJsonObject?: Map<string, any>;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getResourcesMediaIdPreviewJpg200ApplicationJSONObject?: Record<string, any>;
 }

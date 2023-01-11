@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceTypeEnum } from "./resourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AggregateResourceIdentifier = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcetypeenum_1 = require("./resourcetypeenum");
 // AggregateResourceIdentifier
 /**
  * The details that identify a resource that is collected by Config aggregator, including the resource type, ID, (if available) the custom resource name, the source account, and source region.
@@ -34,25 +37,25 @@ var AggregateResourceIdentifier = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceId" }),
         __metadata("design:type", String)
     ], AggregateResourceIdentifier.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceName" }),
         __metadata("design:type", String)
     ], AggregateResourceIdentifier.prototype, "resourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceType" }),
         __metadata("design:type", String)
     ], AggregateResourceIdentifier.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceAccountId" }),
         __metadata("design:type", String)
     ], AggregateResourceIdentifier.prototype, "sourceAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceRegion" }),
         __metadata("design:type", String)
     ], AggregateResourceIdentifier.prototype, "sourceRegion", void 0);
     return AggregateResourceIdentifier;
-}(SpeakeasyBase));
-export { AggregateResourceIdentifier };
+}(utils_1.SpeakeasyBase));
+exports.AggregateResourceIdentifier = AggregateResourceIdentifier;

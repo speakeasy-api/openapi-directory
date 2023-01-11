@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReposDeleteAccessRestrictionsResponse = exports.ReposDeleteAccessRestrictionsRequest = exports.ReposDeleteAccessRestrictionsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReposDeleteAccessRestrictionsPathParams = /** @class */ (function (_super) {
     __extends(ReposDeleteAccessRestrictionsPathParams, _super);
     function ReposDeleteAccessRestrictionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=branch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=branch" }),
         __metadata("design:type", String)
     ], ReposDeleteAccessRestrictionsPathParams.prototype, "branch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReposDeleteAccessRestrictionsPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReposDeleteAccessRestrictionsPathParams.prototype, "repo", void 0);
     return ReposDeleteAccessRestrictionsPathParams;
-}(SpeakeasyBase));
-export { ReposDeleteAccessRestrictionsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReposDeleteAccessRestrictionsPathParams = ReposDeleteAccessRestrictionsPathParams;
 var ReposDeleteAccessRestrictionsRequest = /** @class */ (function (_super) {
     __extends(ReposDeleteAccessRestrictionsRequest, _super);
     function ReposDeleteAccessRestrictionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReposDeleteAccessRestrictionsPathParams)
     ], ReposDeleteAccessRestrictionsRequest.prototype, "pathParams", void 0);
     return ReposDeleteAccessRestrictionsRequest;
-}(SpeakeasyBase));
-export { ReposDeleteAccessRestrictionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReposDeleteAccessRestrictionsRequest = ReposDeleteAccessRestrictionsRequest;
 var ReposDeleteAccessRestrictionsResponse = /** @class */ (function (_super) {
     __extends(ReposDeleteAccessRestrictionsResponse, _super);
     function ReposDeleteAccessRestrictionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReposDeleteAccessRestrictionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReposDeleteAccessRestrictionsResponse.prototype, "statusCode", void 0);
     return ReposDeleteAccessRestrictionsResponse;
-}(SpeakeasyBase));
-export { ReposDeleteAccessRestrictionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReposDeleteAccessRestrictionsResponse = ReposDeleteAccessRestrictionsResponse;

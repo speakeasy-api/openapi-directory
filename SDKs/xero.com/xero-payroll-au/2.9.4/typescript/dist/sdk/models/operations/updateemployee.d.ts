@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class UpdateEmployeePathParams extends SpeakeasyBase {
-    employeeId: string;
+    employeeID: string;
 }
 export declare class UpdateEmployeeHeaders extends SpeakeasyBase {
     xeroTenantId: string;

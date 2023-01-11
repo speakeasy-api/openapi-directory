@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetApiTokenStatusResponse = exports.GetApiTokenStatusRequest = exports.GetApiTokenStatusHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetApiTokenStatusHeaders = /** @class */ (function (_super) {
     __extends(GetApiTokenStatusHeaders, _super);
     function GetApiTokenStatusHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=api_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=api_key" }),
         __metadata("design:type", String)
     ], GetApiTokenStatusHeaders.prototype, "apiKey", void 0);
     return GetApiTokenStatusHeaders;
-}(SpeakeasyBase));
-export { GetApiTokenStatusHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetApiTokenStatusHeaders = GetApiTokenStatusHeaders;
 var GetApiTokenStatusRequest = /** @class */ (function (_super) {
     __extends(GetApiTokenStatusRequest, _super);
     function GetApiTokenStatusRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetApiTokenStatusHeaders)
     ], GetApiTokenStatusRequest.prototype, "headers", void 0);
     return GetApiTokenStatusRequest;
-}(SpeakeasyBase));
-export { GetApiTokenStatusRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetApiTokenStatusRequest = GetApiTokenStatusRequest;
 var GetApiTokenStatusResponse = /** @class */ (function (_super) {
     __extends(GetApiTokenStatusResponse, _super);
     function GetApiTokenStatusResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetApiTokenStatusResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetApiTokenStatusResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetApiTokenStatusResponse.prototype, "statusCode", void 0);
     return GetApiTokenStatusResponse;
-}(SpeakeasyBase));
-export { GetApiTokenStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetApiTokenStatusResponse = GetApiTokenStatusResponse;

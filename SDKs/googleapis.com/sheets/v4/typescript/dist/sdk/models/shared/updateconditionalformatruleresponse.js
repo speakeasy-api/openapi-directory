@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConditionalFormatRule } from "./conditionalformatrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateConditionalFormatRuleResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var conditionalformatrule_1 = require("./conditionalformatrule");
 // UpdateConditionalFormatRuleResponse
 /**
  * The result of updating a conditional format rule.
@@ -34,21 +37,21 @@ var UpdateConditionalFormatRuleResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newIndex" }),
         __metadata("design:type", Number)
     ], UpdateConditionalFormatRuleResponse.prototype, "newIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newRule" }),
-        __metadata("design:type", ConditionalFormatRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newRule" }),
+        __metadata("design:type", conditionalformatrule_1.ConditionalFormatRule)
     ], UpdateConditionalFormatRuleResponse.prototype, "newRule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oldIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oldIndex" }),
         __metadata("design:type", Number)
     ], UpdateConditionalFormatRuleResponse.prototype, "oldIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oldRule" }),
-        __metadata("design:type", ConditionalFormatRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oldRule" }),
+        __metadata("design:type", conditionalformatrule_1.ConditionalFormatRule)
     ], UpdateConditionalFormatRuleResponse.prototype, "oldRule", void 0);
     return UpdateConditionalFormatRuleResponse;
-}(SpeakeasyBase));
-export { UpdateConditionalFormatRuleResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateConditionalFormatRuleResponse = UpdateConditionalFormatRuleResponse;

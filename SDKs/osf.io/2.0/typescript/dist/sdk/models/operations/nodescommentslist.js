@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodesCommentsListResponse = exports.NodesCommentsListRequest = exports.NodesCommentsListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var NodesCommentsListPathParams = /** @class */ (function (_super) {
     __extends(NodesCommentsListPathParams, _super);
     function NodesCommentsListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=node_id" }),
         __metadata("design:type", String)
     ], NodesCommentsListPathParams.prototype, "nodeId", void 0);
     return NodesCommentsListPathParams;
-}(SpeakeasyBase));
-export { NodesCommentsListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.NodesCommentsListPathParams = NodesCommentsListPathParams;
 var NodesCommentsListRequest = /** @class */ (function (_super) {
     __extends(NodesCommentsListRequest, _super);
     function NodesCommentsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NodesCommentsListPathParams)
     ], NodesCommentsListRequest.prototype, "pathParams", void 0);
     return NodesCommentsListRequest;
-}(SpeakeasyBase));
-export { NodesCommentsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.NodesCommentsListRequest = NodesCommentsListRequest;
 var NodesCommentsListResponse = /** @class */ (function (_super) {
     __extends(NodesCommentsListResponse, _super);
     function NodesCommentsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], NodesCommentsListResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NodesCommentsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], NodesCommentsListResponse.prototype, "statusCode", void 0);
     return NodesCommentsListResponse;
-}(SpeakeasyBase));
-export { NodesCommentsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.NodesCommentsListResponse = NodesCommentsListResponse;

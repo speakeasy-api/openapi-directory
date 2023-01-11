@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DisplayOption } from "./displayoption";
-export var CardDisplayPropertyDataTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CardDisplayProperty = exports.CardDisplayPropertyDataTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var displayoption_1 = require("./displayoption");
+var CardDisplayPropertyDataTypeEnum;
 (function (CardDisplayPropertyDataTypeEnum) {
     CardDisplayPropertyDataTypeEnum["Boolean"] = "BOOLEAN";
     CardDisplayPropertyDataTypeEnum["Currency"] = "CURRENCY";
@@ -35,7 +38,7 @@ export var CardDisplayPropertyDataTypeEnum;
     CardDisplayPropertyDataTypeEnum["Numeric"] = "NUMERIC";
     CardDisplayPropertyDataTypeEnum["String"] = "STRING";
     CardDisplayPropertyDataTypeEnum["Status"] = "STATUS";
-})(CardDisplayPropertyDataTypeEnum || (CardDisplayPropertyDataTypeEnum = {}));
+})(CardDisplayPropertyDataTypeEnum = exports.CardDisplayPropertyDataTypeEnum || (exports.CardDisplayPropertyDataTypeEnum = {}));
 // CardDisplayProperty
 /**
  * Definition for a card display property.
@@ -46,21 +49,21 @@ var CardDisplayProperty = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataType" }),
         __metadata("design:type", String)
     ], CardDisplayProperty.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], CardDisplayProperty.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CardDisplayProperty.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options", elemType: DisplayOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options", elemType: displayoption_1.DisplayOption }),
         __metadata("design:type", Array)
     ], CardDisplayProperty.prototype, "options", void 0);
     return CardDisplayProperty;
-}(SpeakeasyBase));
-export { CardDisplayProperty };
+}(utils_1.SpeakeasyBase));
+exports.CardDisplayProperty = CardDisplayProperty;

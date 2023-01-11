@@ -23,5 +23,5 @@ export declare class UpdateCoreDefinitionResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
     statusCode: number;
-    updateCoreDefinitionResponse?: Map<string, any>;
+    updateCoreDefinitionResponse?: Record<string, any>;
 }

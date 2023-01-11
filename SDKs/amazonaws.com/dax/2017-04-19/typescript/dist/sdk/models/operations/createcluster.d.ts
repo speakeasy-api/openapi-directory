@@ -27,7 +27,7 @@ export declare class CreateClusterResponse extends SpeakeasyBase {
     invalidParameterCombinationException?: any;
     invalidParameterGroupStateFault?: any;
     invalidParameterValueException?: any;
-    invalidVpcNetworkStateFault?: any;
+    invalidVPCNetworkStateFault?: any;
     nodeQuotaForClusterExceededFault?: any;
     nodeQuotaForCustomerExceededFault?: any;
     parameterGroupNotFoundFault?: any;

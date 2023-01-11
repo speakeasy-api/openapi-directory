@@ -62,7 +62,7 @@ export class RemotebuildexecutionProjectsInstancesTestNotifyRequest extends Spea
   queryParams: RemotebuildexecutionProjectsInstancesTestNotifyQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: RemotebuildexecutionProjectsInstancesTestNotifySecurity;
@@ -74,7 +74,7 @@ export class RemotebuildexecutionProjectsInstancesTestNotifyResponse extends Spe
   contentType: string;
 
   @SpeakeasyMetadata()
-  googleProtobufEmpty?: Map<string, any>;
+  googleProtobufEmpty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

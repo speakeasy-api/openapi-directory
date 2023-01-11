@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PortfolioRequestColorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PortfolioRequestInput = exports.PortfolioRequestColorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PortfolioRequestColorEnum;
 (function (PortfolioRequestColorEnum) {
     PortfolioRequestColorEnum["DarkPink"] = "dark-pink";
     PortfolioRequestColorEnum["DarkGreen"] = "dark-green";
@@ -43,28 +46,33 @@ export var PortfolioRequestColorEnum;
     PortfolioRequestColorEnum["LightOrange"] = "light-orange";
     PortfolioRequestColorEnum["LightPurple"] = "light-purple";
     PortfolioRequestColorEnum["LightWarmGray"] = "light-warm-gray";
-})(PortfolioRequestColorEnum || (PortfolioRequestColorEnum = {}));
+})(PortfolioRequestColorEnum = exports.PortfolioRequestColorEnum || (exports.PortfolioRequestColorEnum = {}));
+// PortfolioRequestInput
+/**
+ * A *portfolio* gives a high-level overview of the status of multiple initiatives in Asana. Portfolios provide a dashboard overview of the state of multiple projects, including a progress report and the most recent [project status](/docs/asana-project-statuses) update.
+ * Portfolios have some restrictions on size. Each portfolio has a max of 250 items and, like projects, a max of 20 custom fields.
+**/
 var PortfolioRequestInput = /** @class */ (function (_super) {
     __extends(PortfolioRequestInput, _super);
     function PortfolioRequestInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
         __metadata("design:type", String)
     ], PortfolioRequestInput.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members" }),
         __metadata("design:type", Array)
     ], PortfolioRequestInput.prototype, "members", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PortfolioRequestInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workspace" }),
         __metadata("design:type", String)
     ], PortfolioRequestInput.prototype, "workspace", void 0);
     return PortfolioRequestInput;
-}(SpeakeasyBase));
-export { PortfolioRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.PortfolioRequestInput = PortfolioRequestInput;

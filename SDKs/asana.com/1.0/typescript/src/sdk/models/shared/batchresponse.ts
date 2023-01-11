@@ -8,10 +8,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class BatchResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=body" })
-  body?: Map<string, any>;
+  body?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, any>;
+  headers?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=status_code" })
   statusCode?: number;

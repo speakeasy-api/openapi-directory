@@ -1,6 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { CarrierGateway } from "./carriergateway";
 export declare class DescribeCarrierGatewaysResult extends SpeakeasyBase {
-    carrierGateways?: CarrierGateway[];
-    nextToken?: string;
+    carrierGateways?: Record<string, any>;
+    nextToken?: Record<string, any>;
 }

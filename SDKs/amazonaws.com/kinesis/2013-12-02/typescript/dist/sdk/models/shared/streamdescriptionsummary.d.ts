@@ -12,7 +12,7 @@ export declare class StreamDescriptionSummary extends SpeakeasyBase {
     keyId?: string;
     openShardCount: number;
     retentionPeriodHours: number;
-    streamArn: string;
+    streamARN: string;
     streamCreationTimestamp: Date;
     streamName: string;
     streamStatus: StreamStatusEnum;

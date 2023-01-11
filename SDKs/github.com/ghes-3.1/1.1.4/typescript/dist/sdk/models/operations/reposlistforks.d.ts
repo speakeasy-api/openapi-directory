@@ -4,16 +4,10 @@ export declare class ReposListForksPathParams extends SpeakeasyBase {
     owner: string;
     repo: string;
 }
-export declare enum ReposListForksSortEnum {
-    Newest = "newest",
-    Oldest = "oldest",
-    Stargazers = "stargazers",
-    Watchers = "watchers"
-}
 export declare class ReposListForksQueryParams extends SpeakeasyBase {
     page?: number;
     perPage?: number;
-    sort?: ReposListForksSortEnum;
+    sort?: shared.RepoEnum1;
 }
 export declare class ReposListForksRequest extends SpeakeasyBase {
     pathParams: ReposListForksPathParams;
@@ -21,7 +15,7 @@ export declare class ReposListForksRequest extends SpeakeasyBase {
 }
 export declare class ReposListForksResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     minimalRepositories?: shared.MinimalRepository[];

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PostalCodeGroup } from "./postalcodegroup";
-import { Service } from "./service";
-import { Warehouse } from "./warehouse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShippingSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var postalcodegroup_1 = require("./postalcodegroup");
+var service_1 = require("./service");
+var warehouse_1 = require("./warehouse");
 // ShippingSettings
 /**
  * The merchant account's shipping settings. All methods except getsupportedcarriers and getsupportedholidays require the admin role.
@@ -36,21 +39,21 @@ var ShippingSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], ShippingSettings.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postalCodeGroups", elemType: PostalCodeGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postalCodeGroups", elemType: postalcodegroup_1.PostalCodeGroup }),
         __metadata("design:type", Array)
     ], ShippingSettings.prototype, "postalCodeGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=services", elemType: Service }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=services", elemType: service_1.Service }),
         __metadata("design:type", Array)
     ], ShippingSettings.prototype, "services", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=warehouses", elemType: Warehouse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=warehouses", elemType: warehouse_1.Warehouse }),
         __metadata("design:type", Array)
     ], ShippingSettings.prototype, "warehouses", void 0);
     return ShippingSettings;
-}(SpeakeasyBase));
-export { ShippingSettings };
+}(utils_1.SpeakeasyBase));
+exports.ShippingSettings = ShippingSettings;

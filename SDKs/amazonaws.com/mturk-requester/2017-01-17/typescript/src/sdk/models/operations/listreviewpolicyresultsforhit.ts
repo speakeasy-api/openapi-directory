@@ -60,7 +60,7 @@ export class ListReviewPolicyResultsForHitResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  listReviewPolicyResultsForHitResponse?: shared.ListReviewPolicyResultsForHitResponse;
+  listReviewPolicyResultsForHITResponse?: shared.ListReviewPolicyResultsForHitResponse;
 
   @SpeakeasyMetadata()
   requestError?: any;

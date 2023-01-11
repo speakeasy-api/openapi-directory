@@ -25,5 +25,5 @@ export class SetPortResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setPort200ApplicationJsonString?: string;
+  setPort200ApplicationJSONString?: string;
 }

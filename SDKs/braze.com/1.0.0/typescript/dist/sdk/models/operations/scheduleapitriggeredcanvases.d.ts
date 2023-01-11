@@ -11,7 +11,7 @@ export declare class ScheduleApiTriggeredCanvasesRequestBodyAudience extends Spe
     and?: ScheduleApiTriggeredCanvasesRequestBodyAudienceAnd[];
 }
 export declare class ScheduleApiTriggeredCanvasesRequestBodyRecipients extends SpeakeasyBase {
-    canvasEntryProperties?: Map<string, any>;
+    canvasEntryProperties?: Record<string, any>;
     externalUserId?: string;
     triggerProperties?: string;
     userAlias?: string;
@@ -24,7 +24,7 @@ export declare class ScheduleApiTriggeredCanvasesRequestBodySchedule extends Spe
 export declare class ScheduleApiTriggeredCanvasesRequestBody extends SpeakeasyBase {
     audience?: ScheduleApiTriggeredCanvasesRequestBodyAudience;
     broadcast?: boolean;
-    canvasEntryProperties?: Map<string, any>;
+    canvasEntryProperties?: Record<string, any>;
     canvasId?: string;
     recipients?: ScheduleApiTriggeredCanvasesRequestBodyRecipients[];
     schedule?: ScheduleApiTriggeredCanvasesRequestBodySchedule;

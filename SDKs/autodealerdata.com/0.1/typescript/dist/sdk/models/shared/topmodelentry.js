@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TopModelEntry = void 0;
+var utils_1 = require("../../../internal/utils");
 var TopModelEntry = /** @class */ (function (_super) {
     __extends(TopModelEntry, _super);
     function TopModelEntry() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brandMarketShare" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brandMarketShare" }),
         __metadata("design:type", Number)
     ], TopModelEntry.prototype, "brandMarketShare", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brandName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brandName" }),
         __metadata("design:type", String)
     ], TopModelEntry.prototype, "brandName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modelName" }),
         __metadata("design:type", String)
     ], TopModelEntry.prototype, "modelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentOfBrandSales" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentOfBrandSales" }),
         __metadata("design:type", Number)
     ], TopModelEntry.prototype, "percentOfBrandSales", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentOfTopSales" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentOfTopSales" }),
         __metadata("design:type", Number)
     ], TopModelEntry.prototype, "percentOfTopSales", void 0);
     return TopModelEntry;
-}(SpeakeasyBase));
-export { TopModelEntry };
+}(utils_1.SpeakeasyBase));
+exports.TopModelEntry = TopModelEntry;

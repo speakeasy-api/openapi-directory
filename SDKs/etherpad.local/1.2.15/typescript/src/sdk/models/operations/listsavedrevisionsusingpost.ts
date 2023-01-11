@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class ListSavedRevisionsUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -13,7 +13,7 @@ export class ListSavedRevisionsUsingPost200ApplicationJson extends SpeakeasyBase
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -25,7 +25,7 @@ export class ListSavedRevisionsUsingPost400ApplicationJson extends SpeakeasyBase
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -37,7 +37,7 @@ export class ListSavedRevisionsUsingPost401ApplicationJson extends SpeakeasyBase
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -49,7 +49,7 @@ export class ListSavedRevisionsUsingPost500ApplicationJson extends SpeakeasyBase
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -70,14 +70,14 @@ export class ListSavedRevisionsUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listSavedRevisionsUsingPost200ApplicationJsonObject?: ListSavedRevisionsUsingPost200ApplicationJson;
+  listSavedRevisionsUsingPOST200ApplicationJSONObject?: ListSavedRevisionsUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  listSavedRevisionsUsingPost400ApplicationJsonObject?: ListSavedRevisionsUsingPost400ApplicationJson;
+  listSavedRevisionsUsingPOST400ApplicationJSONObject?: ListSavedRevisionsUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  listSavedRevisionsUsingPost401ApplicationJsonObject?: ListSavedRevisionsUsingPost401ApplicationJson;
+  listSavedRevisionsUsingPOST401ApplicationJSONObject?: ListSavedRevisionsUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  listSavedRevisionsUsingPost500ApplicationJsonObject?: ListSavedRevisionsUsingPost500ApplicationJson;
+  listSavedRevisionsUsingPOST500ApplicationJSONObject?: ListSavedRevisionsUsingPost500ApplicationJson;
 }

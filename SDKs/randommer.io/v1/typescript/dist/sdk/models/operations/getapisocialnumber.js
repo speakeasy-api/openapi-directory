@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetApiSocialNumberResponse = exports.GetApiSocialNumberRequest = exports.GetApiSocialNumberHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetApiSocialNumberHeaders = /** @class */ (function (_super) {
     __extends(GetApiSocialNumberHeaders, _super);
     function GetApiSocialNumberHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Api-Key" }),
         __metadata("design:type", String)
     ], GetApiSocialNumberHeaders.prototype, "xApiKey", void 0);
     return GetApiSocialNumberHeaders;
-}(SpeakeasyBase));
-export { GetApiSocialNumberHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetApiSocialNumberHeaders = GetApiSocialNumberHeaders;
 var GetApiSocialNumberRequest = /** @class */ (function (_super) {
     __extends(GetApiSocialNumberRequest, _super);
     function GetApiSocialNumberRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetApiSocialNumberHeaders)
     ], GetApiSocialNumberRequest.prototype, "headers", void 0);
     return GetApiSocialNumberRequest;
-}(SpeakeasyBase));
-export { GetApiSocialNumberRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetApiSocialNumberRequest = GetApiSocialNumberRequest;
 var GetApiSocialNumberResponse = /** @class */ (function (_super) {
     __extends(GetApiSocialNumberResponse, _super);
     function GetApiSocialNumberResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetApiSocialNumberResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetApiSocialNumberResponse.prototype, "statusCode", void 0);
     return GetApiSocialNumberResponse;
-}(SpeakeasyBase));
-export { GetApiSocialNumberResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetApiSocialNumberResponse = GetApiSocialNumberResponse;

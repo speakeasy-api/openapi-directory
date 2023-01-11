@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ParameterRanges } from "./parameterranges";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HyperParameterTuningJobConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var parameterranges_1 = require("./parameterranges");
 // HyperParameterTuningJobConfig
 /**
  * <p>Configuration information for a hyperparameter tuning job. You specify this object in the <a>CreatePredictor</a> request.</p> <p>A <i>hyperparameter</i> is a parameter that governs the model training process. You set hyperparameters before training starts, unlike model parameters, which are determined during training. The values of the hyperparameters effect which values are chosen for the model parameters.</p> <p>In a <i>hyperparameter tuning job</i>, Amazon Forecast chooses the set of hyperparameter values that optimize a specified metric. Forecast accomplishes this by running many training jobs over a range of hyperparameter values. The optimum set of values depends on the algorithm, the training data, and the specified metric objective.</p>
@@ -34,9 +37,9 @@ var HyperParameterTuningJobConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParameterRanges" }),
-        __metadata("design:type", ParameterRanges)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParameterRanges" }),
+        __metadata("design:type", parameterranges_1.ParameterRanges)
     ], HyperParameterTuningJobConfig.prototype, "parameterRanges", void 0);
     return HyperParameterTuningJobConfig;
-}(SpeakeasyBase));
-export { HyperParameterTuningJobConfig };
+}(utils_1.SpeakeasyBase));
+exports.HyperParameterTuningJobConfig = HyperParameterTuningJobConfig;

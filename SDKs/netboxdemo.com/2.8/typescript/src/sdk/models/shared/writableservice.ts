@@ -9,7 +9,7 @@ export enum WritableServiceProtocolEnum {
 
 export class WritableServiceInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=custom_fields" })
-  customFields?: Map<string, any>;
+  customFields?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=description" })
   description?: string;

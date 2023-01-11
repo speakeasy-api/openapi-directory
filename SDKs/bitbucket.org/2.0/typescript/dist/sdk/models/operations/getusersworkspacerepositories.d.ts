@@ -15,5 +15,5 @@ export declare class GetUsersWorkspaceRepositoriesRequest extends SpeakeasyBase 
 export declare class GetUsersWorkspaceRepositoriesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

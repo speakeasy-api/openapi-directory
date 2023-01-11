@@ -8,5 +8,5 @@ export declare class TestnetGetStatusRequest extends SpeakeasyBase {
 export declare class TestnetGetStatusResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getStatusResponse?: Map<string, any>;
+    getStatusResponse?: Record<string, any>;
 }

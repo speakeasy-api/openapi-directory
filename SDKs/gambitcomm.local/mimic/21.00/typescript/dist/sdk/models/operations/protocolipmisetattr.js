@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolIpmiSetAttrResponse = exports.ProtocolIpmiSetAttrRequest = exports.ProtocolIpmiSetAttrPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolIpmiSetAttrPathParams = /** @class */ (function (_super) {
     __extends(ProtocolIpmiSetAttrPathParams, _super);
     function ProtocolIpmiSetAttrPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolIpmiSetAttrPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=attr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=attr" }),
         __metadata("design:type", String)
     ], ProtocolIpmiSetAttrPathParams.prototype, "attr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=value" }),
         __metadata("design:type", String)
     ], ProtocolIpmiSetAttrPathParams.prototype, "value", void 0);
     return ProtocolIpmiSetAttrPathParams;
-}(SpeakeasyBase));
-export { ProtocolIpmiSetAttrPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolIpmiSetAttrPathParams = ProtocolIpmiSetAttrPathParams;
 var ProtocolIpmiSetAttrRequest = /** @class */ (function (_super) {
     __extends(ProtocolIpmiSetAttrRequest, _super);
     function ProtocolIpmiSetAttrRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolIpmiSetAttrPathParams)
     ], ProtocolIpmiSetAttrRequest.prototype, "pathParams", void 0);
     return ProtocolIpmiSetAttrRequest;
-}(SpeakeasyBase));
-export { ProtocolIpmiSetAttrRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolIpmiSetAttrRequest = ProtocolIpmiSetAttrRequest;
 var ProtocolIpmiSetAttrResponse = /** @class */ (function (_super) {
     __extends(ProtocolIpmiSetAttrResponse, _super);
     function ProtocolIpmiSetAttrResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolIpmiSetAttrResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolIpmiSetAttrResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolIpmiSetAttrResponse.prototype, "protocolIpmiSetAttr200ApplicationJsonString", void 0);
+    ], ProtocolIpmiSetAttrResponse.prototype, "protocolIpmiSetAttr200ApplicationJSONString", void 0);
     return ProtocolIpmiSetAttrResponse;
-}(SpeakeasyBase));
-export { ProtocolIpmiSetAttrResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolIpmiSetAttrResponse = ProtocolIpmiSetAttrResponse;

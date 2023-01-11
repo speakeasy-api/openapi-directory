@@ -9,7 +9,7 @@ export enum AppResponseStatusEnum {
 
 export class AppResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=_links" })
-  links?: Map<string, any>;
+  links?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=accountId" })
   accountId?: string;

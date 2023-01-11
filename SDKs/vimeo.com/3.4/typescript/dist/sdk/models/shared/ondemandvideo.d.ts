@@ -6,7 +6,7 @@ import { User } from "./user";
 **/
 export declare class OnDemandVideoBuy extends SpeakeasyBase {
     active: boolean;
-    price: Map<string, any>;
+    price: Record<string, any>;
     purchased?: boolean;
 }
 /**
@@ -66,7 +66,7 @@ export declare class OnDemandVideoMetadata extends SpeakeasyBase {
 **/
 export declare class OnDemandVideoRent extends SpeakeasyBase {
     active: boolean;
-    price: Map<string, any>;
+    price: Record<string, any>;
     purchased?: boolean;
 }
 export declare enum OnDemandVideoTypeEnum {

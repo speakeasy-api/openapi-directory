@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,59 +23,61 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddressUpdateModel } from "./addressupdatemodel";
-import { ContactUpdateModel } from "./contactupdatemodel";
-import { CustomFieldUpdateModel } from "./customfieldupdatemodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomerUpdateModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var addressupdatemodel_1 = require("./addressupdatemodel");
+var contactupdatemodel_1 = require("./contactupdatemodel");
+var customfieldupdatemodel_1 = require("./customfieldupdatemodel");
 var CustomerUpdateModel = /** @class */ (function (_super) {
     __extends(CustomerUpdateModel, _super);
     function CustomerUpdateModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
-        __metadata("design:type", AddressUpdateModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", addressupdatemodel_1.AddressUpdateModel)
     ], CustomerUpdateModel.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contact" }),
-        __metadata("design:type", ContactUpdateModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contact" }),
+        __metadata("design:type", contactupdatemodel_1.ContactUpdateModel)
     ], CustomerUpdateModel.prototype, "contact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customFields" }),
-        __metadata("design:type", CustomFieldUpdateModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customFields" }),
+        __metadata("design:type", customfieldupdatemodel_1.CustomFieldUpdateModel)
     ], CustomerUpdateModel.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], CustomerUpdateModel.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstname" }),
         __metadata("design:type", String)
     ], CustomerUpdateModel.prototype, "firstname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastname" }),
         __metadata("design:type", String)
     ], CustomerUpdateModel.prototype, "lastname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationId" }),
         __metadata("design:type", String)
     ], CustomerUpdateModel.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CustomerUpdateModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationType" }),
         __metadata("design:type", String)
     ], CustomerUpdateModel.prototype, "notificationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stripeCustomerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stripeCustomerId" }),
         __metadata("design:type", String)
     ], CustomerUpdateModel.prototype, "stripeCustomerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", Number)
     ], CustomerUpdateModel.prototype, "type", void 0);
     return CustomerUpdateModel;
-}(SpeakeasyBase));
-export { CustomerUpdateModel };
+}(utils_1.SpeakeasyBase));
+exports.CustomerUpdateModel = CustomerUpdateModel;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GroupKind } from "./groupkind";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubstitutionRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var groupkind_1 = require("./groupkind");
 // SubstitutionRule
 /**
  * A transformation rule to be applied against Kubernetes resources as they are selected for restoration from a Backup. A rule contains both filtering logic (which resources are subject to substitution) and substitution logic.
@@ -34,25 +37,25 @@ var SubstitutionRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newValue" }),
         __metadata("design:type", String)
     ], SubstitutionRule.prototype, "newValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originalValuePattern" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originalValuePattern" }),
         __metadata("design:type", String)
     ], SubstitutionRule.prototype, "originalValuePattern", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetGroupKinds", elemType: GroupKind }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetGroupKinds", elemType: groupkind_1.GroupKind }),
         __metadata("design:type", Array)
     ], SubstitutionRule.prototype, "targetGroupKinds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetJsonPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetJsonPath" }),
         __metadata("design:type", String)
     ], SubstitutionRule.prototype, "targetJsonPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetNamespaces" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetNamespaces" }),
         __metadata("design:type", Array)
     ], SubstitutionRule.prototype, "targetNamespaces", void 0);
     return SubstitutionRule;
-}(SpeakeasyBase));
-export { SubstitutionRule };
+}(utils_1.SpeakeasyBase));
+exports.SubstitutionRule = SubstitutionRule;

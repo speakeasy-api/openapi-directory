@@ -21,7 +21,7 @@ export class AndroidTest extends SpeakeasyBase {
   androidRoboTest?: AndroidRoboTest;
 
   @SpeakeasyMetadata({ data: "json, name=androidTestLoop" })
-  androidTestLoop?: Map<string, any>;
+  androidTestLoop?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=testTimeout" })
   testTimeout?: Duration;

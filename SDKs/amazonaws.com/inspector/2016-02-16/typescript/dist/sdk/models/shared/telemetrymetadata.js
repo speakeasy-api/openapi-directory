@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TelemetryMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
 // TelemetryMetadata
 /**
  * The metadata about the Amazon Inspector application data metrics collected by the agent. This data type is used as the response element in the <a>GetTelemetryMetadata</a> action.
@@ -33,17 +36,17 @@ var TelemetryMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], TelemetryMetadata.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSize" }),
         __metadata("design:type", Number)
     ], TelemetryMetadata.prototype, "dataSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageType" }),
         __metadata("design:type", String)
     ], TelemetryMetadata.prototype, "messageType", void 0);
     return TelemetryMetadata;
-}(SpeakeasyBase));
-export { TelemetryMetadata };
+}(utils_1.SpeakeasyBase));
+exports.TelemetryMetadata = TelemetryMetadata;

@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -37,7 +37,7 @@ export class CategoriesEssentials {
     
     const client: AxiosInstance = this._securityClient!;
     
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -45,19 +45,21 @@ export class CategoriesEssentials {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCategoriesResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.category+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.category+json`)) {
                 res.categories = httpRes?.data;
             }
             break;
@@ -65,7 +67,6 @@ export class CategoriesEssentials {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -81,28 +82,30 @@ export class CategoriesEssentials {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/categories/{category}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/categories/{category}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetCategoryResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.category+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.category+json`)) {
                 res.category = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/vnd.vimeo.category+json`)) {
+            if (utils.matchContentType(contentType, `application/vnd.vimeo.category+json`)) {
                 res.legacyError = httpRes?.data;
             }
             break;
@@ -110,7 +113,6 @@ export class CategoriesEssentials {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

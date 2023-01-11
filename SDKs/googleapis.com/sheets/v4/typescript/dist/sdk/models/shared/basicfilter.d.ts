@@ -7,7 +7,7 @@ import { SortSpec } from "./sortspec";
  * The default filter associated with a sheet.
 **/
 export declare class BasicFilter extends SpeakeasyBase {
-    criteria?: Map<string, FilterCriteria>;
+    criteria?: Record<string, FilterCriteria>;
     filterSpecs?: FilterSpec[];
     range?: GridRange;
     sortSpecs?: SortSpec[];

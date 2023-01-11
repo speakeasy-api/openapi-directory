@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,86 +23,88 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LifecycleEnum } from "./lifecycleenum";
-import { PreviousBuild } from "./previousbuild";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Build = void 0;
+var utils_1 = require("../../../internal/utils");
+var lifecycleenum_1 = require("./lifecycleenum");
+var previousbuild_1 = require("./previousbuild");
 var Build = /** @class */ (function (_super) {
     __extends(Build, _super);
     function Build() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], Build.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=branch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=branch" }),
         __metadata("design:type", String)
     ], Build.prototype, "branch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=build_time_millis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=build_time_millis" }),
         __metadata("design:type", Number)
     ], Build.prototype, "buildTimeMillis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=build_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=build_url" }),
         __metadata("design:type", String)
     ], Build.prototype, "buildUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committer_email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committer_email" }),
         __metadata("design:type", String)
     ], Build.prototype, "committerEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committer_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committer_name" }),
         __metadata("design:type", String)
     ], Build.prototype, "committerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dont_build" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dont_build" }),
         __metadata("design:type", String)
     ], Build.prototype, "dontBuild", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifecycle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifecycle" }),
         __metadata("design:type", String)
     ], Build.prototype, "lifecycle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
-        __metadata("design:type", PreviousBuild)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
+        __metadata("design:type", previousbuild_1.PreviousBuild)
     ], Build.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queued_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queued_at" }),
         __metadata("design:type", Date)
     ], Build.prototype, "queuedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reponame" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reponame" }),
         __metadata("design:type", String)
     ], Build.prototype, "reponame", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retry_of" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retry_of" }),
         __metadata("design:type", Number)
     ], Build.prototype, "retryOf", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_time" }),
         __metadata("design:type", Date)
     ], Build.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stop_time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stop_time" }),
         __metadata("design:type", Date)
     ], Build.prototype, "stopTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subject" }),
         __metadata("design:type", String)
     ], Build.prototype, "subject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], Build.prototype, "username", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vcs_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vcs_url" }),
         __metadata("design:type", String)
     ], Build.prototype, "vcsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=why" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=why" }),
         __metadata("design:type", String)
     ], Build.prototype, "why", void 0);
     return Build;
-}(SpeakeasyBase));
-export { Build };
+}(utils_1.SpeakeasyBase));
+exports.Build = Build;

@@ -3,7 +3,7 @@ import * as shared from "../shared";
 export declare class GroupsRemoveMemberPathParams extends SpeakeasyBase {
     groupObjectId: string;
     memberObjectId: string;
-    tenantId: string;
+    tenantID: string;
 }
 export declare class GroupsRemoveMemberQueryParams extends SpeakeasyBase {
     apiVersion: string;

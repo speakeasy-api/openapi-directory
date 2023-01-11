@@ -43,7 +43,7 @@ export class CancelSimulationJobBatchRequest extends SpeakeasyBase {
 
 export class CancelSimulationJobBatchResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  cancelSimulationJobBatchResponse?: Map<string, any>;
+  cancelSimulationJobBatchResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

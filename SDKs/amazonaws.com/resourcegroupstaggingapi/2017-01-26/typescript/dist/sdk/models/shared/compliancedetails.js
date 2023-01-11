@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComplianceDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 // ComplianceDetails
 /**
  * Information that shows whether a resource is compliant with the effective tag policy, including details on any noncompliant tag keys.
@@ -33,17 +36,17 @@ var ComplianceDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComplianceStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComplianceStatus" }),
         __metadata("design:type", Boolean)
     ], ComplianceDetails.prototype, "complianceStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KeysWithNoncompliantValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KeysWithNoncompliantValues" }),
         __metadata("design:type", Array)
     ], ComplianceDetails.prototype, "keysWithNoncompliantValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NoncompliantKeys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NoncompliantKeys" }),
         __metadata("design:type", Array)
     ], ComplianceDetails.prototype, "noncompliantKeys", void 0);
     return ComplianceDetails;
-}(SpeakeasyBase));
-export { ComplianceDetails };
+}(utils_1.SpeakeasyBase));
+exports.ComplianceDetails = ComplianceDetails;

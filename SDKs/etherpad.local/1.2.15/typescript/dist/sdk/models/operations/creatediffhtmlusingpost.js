@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,148 +23,150 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDiffHtmlUsingPostResponse = exports.CreateDiffHtmlUsingPostRequest = exports.CreateDiffHtmlUsingPost500ApplicationJson = exports.CreateDiffHtmlUsingPost401ApplicationJson = exports.CreateDiffHtmlUsingPost400ApplicationJson = exports.CreateDiffHtmlUsingPost200ApplicationJson = exports.CreateDiffHtmlUsingPostQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateDiffHtmlUsingPostQueryParams = /** @class */ (function (_super) {
     __extends(CreateDiffHtmlUsingPostQueryParams, _super);
     function CreateDiffHtmlUsingPostQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endRev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endRev" }),
         __metadata("design:type", String)
     ], CreateDiffHtmlUsingPostQueryParams.prototype, "endRev", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=padID" }),
         __metadata("design:type", String)
-    ], CreateDiffHtmlUsingPostQueryParams.prototype, "padId", void 0);
+    ], CreateDiffHtmlUsingPostQueryParams.prototype, "padID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startRev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startRev" }),
         __metadata("design:type", String)
     ], CreateDiffHtmlUsingPostQueryParams.prototype, "startRev", void 0);
     return CreateDiffHtmlUsingPostQueryParams;
-}(SpeakeasyBase));
-export { CreateDiffHtmlUsingPostQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateDiffHtmlUsingPostQueryParams = CreateDiffHtmlUsingPostQueryParams;
 var CreateDiffHtmlUsingPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateDiffHtmlUsingPost200ApplicationJson, _super);
     function CreateDiffHtmlUsingPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreateDiffHtmlUsingPost200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreateDiffHtmlUsingPost200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateDiffHtmlUsingPost200ApplicationJson.prototype, "message", void 0);
     return CreateDiffHtmlUsingPost200ApplicationJson;
-}(SpeakeasyBase));
-export { CreateDiffHtmlUsingPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateDiffHtmlUsingPost200ApplicationJson = CreateDiffHtmlUsingPost200ApplicationJson;
 var CreateDiffHtmlUsingPost400ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateDiffHtmlUsingPost400ApplicationJson, _super);
     function CreateDiffHtmlUsingPost400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreateDiffHtmlUsingPost400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreateDiffHtmlUsingPost400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateDiffHtmlUsingPost400ApplicationJson.prototype, "message", void 0);
     return CreateDiffHtmlUsingPost400ApplicationJson;
-}(SpeakeasyBase));
-export { CreateDiffHtmlUsingPost400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateDiffHtmlUsingPost400ApplicationJson = CreateDiffHtmlUsingPost400ApplicationJson;
 var CreateDiffHtmlUsingPost401ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateDiffHtmlUsingPost401ApplicationJson, _super);
     function CreateDiffHtmlUsingPost401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreateDiffHtmlUsingPost401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreateDiffHtmlUsingPost401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateDiffHtmlUsingPost401ApplicationJson.prototype, "message", void 0);
     return CreateDiffHtmlUsingPost401ApplicationJson;
-}(SpeakeasyBase));
-export { CreateDiffHtmlUsingPost401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateDiffHtmlUsingPost401ApplicationJson = CreateDiffHtmlUsingPost401ApplicationJson;
 var CreateDiffHtmlUsingPost500ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateDiffHtmlUsingPost500ApplicationJson, _super);
     function CreateDiffHtmlUsingPost500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], CreateDiffHtmlUsingPost500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], CreateDiffHtmlUsingPost500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CreateDiffHtmlUsingPost500ApplicationJson.prototype, "message", void 0);
     return CreateDiffHtmlUsingPost500ApplicationJson;
-}(SpeakeasyBase));
-export { CreateDiffHtmlUsingPost500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateDiffHtmlUsingPost500ApplicationJson = CreateDiffHtmlUsingPost500ApplicationJson;
 var CreateDiffHtmlUsingPostRequest = /** @class */ (function (_super) {
     __extends(CreateDiffHtmlUsingPostRequest, _super);
     function CreateDiffHtmlUsingPostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateDiffHtmlUsingPostQueryParams)
     ], CreateDiffHtmlUsingPostRequest.prototype, "queryParams", void 0);
     return CreateDiffHtmlUsingPostRequest;
-}(SpeakeasyBase));
-export { CreateDiffHtmlUsingPostRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateDiffHtmlUsingPostRequest = CreateDiffHtmlUsingPostRequest;
 var CreateDiffHtmlUsingPostResponse = /** @class */ (function (_super) {
     __extends(CreateDiffHtmlUsingPostResponse, _super);
     function CreateDiffHtmlUsingPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateDiffHtmlUsingPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateDiffHtmlUsingPostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateDiffHtmlUsingPost200ApplicationJson)
-    ], CreateDiffHtmlUsingPostResponse.prototype, "createDiffHtmlUsingPost200ApplicationJsonObject", void 0);
+    ], CreateDiffHtmlUsingPostResponse.prototype, "createDiffHTMLUsingPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateDiffHtmlUsingPost400ApplicationJson)
-    ], CreateDiffHtmlUsingPostResponse.prototype, "createDiffHtmlUsingPost400ApplicationJsonObject", void 0);
+    ], CreateDiffHtmlUsingPostResponse.prototype, "createDiffHTMLUsingPOST400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateDiffHtmlUsingPost401ApplicationJson)
-    ], CreateDiffHtmlUsingPostResponse.prototype, "createDiffHtmlUsingPost401ApplicationJsonObject", void 0);
+    ], CreateDiffHtmlUsingPostResponse.prototype, "createDiffHTMLUsingPOST401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateDiffHtmlUsingPost500ApplicationJson)
-    ], CreateDiffHtmlUsingPostResponse.prototype, "createDiffHtmlUsingPost500ApplicationJsonObject", void 0);
+    ], CreateDiffHtmlUsingPostResponse.prototype, "createDiffHTMLUsingPOST500ApplicationJSONObject", void 0);
     return CreateDiffHtmlUsingPostResponse;
-}(SpeakeasyBase));
-export { CreateDiffHtmlUsingPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateDiffHtmlUsingPostResponse = CreateDiffHtmlUsingPostResponse;

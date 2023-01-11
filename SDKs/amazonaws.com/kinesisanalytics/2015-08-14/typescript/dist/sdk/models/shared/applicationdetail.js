@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApplicationStatusEnum } from "./applicationstatusenum";
-import { CloudWatchLoggingOptionDescription } from "./cloudwatchloggingoptiondescription";
-import { InputDescription } from "./inputdescription";
-import { OutputDescription } from "./outputdescription";
-import { ReferenceDataSourceDescription } from "./referencedatasourcedescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var applicationstatusenum_1 = require("./applicationstatusenum");
+var cloudwatchloggingoptiondescription_1 = require("./cloudwatchloggingoptiondescription");
+var inputdescription_1 = require("./inputdescription");
+var outputdescription_1 = require("./outputdescription");
+var referencedatasourcedescription_1 = require("./referencedatasourcedescription");
 // ApplicationDetail
 /**
  * <note> <p>This documentation is for version 1 of the Amazon Kinesis Data Analytics API, which only supports SQL applications. Version 2 of the API supports SQL and Java applications. For more information about version 2, see <a href="/kinesisanalytics/latest/apiv2/Welcome.html">Amazon Kinesis Data Analytics API V2 Documentation</a>.</p> </note> <p>Provides a description of the application, including the application Amazon Resource Name (ARN), status, latest version, and input and output configuration.</p>
@@ -38,53 +41,53 @@ var ApplicationDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationARN" }),
         __metadata("design:type", String)
-    ], ApplicationDetail.prototype, "applicationArn", void 0);
+    ], ApplicationDetail.prototype, "applicationARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationCode" }),
         __metadata("design:type", String)
     ], ApplicationDetail.prototype, "applicationCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationDescription" }),
         __metadata("design:type", String)
     ], ApplicationDetail.prototype, "applicationDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationName" }),
         __metadata("design:type", String)
     ], ApplicationDetail.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationStatus" }),
         __metadata("design:type", String)
     ], ApplicationDetail.prototype, "applicationStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationVersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationVersionId" }),
         __metadata("design:type", Number)
     ], ApplicationDetail.prototype, "applicationVersionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CloudWatchLoggingOptionDescriptions", elemType: CloudWatchLoggingOptionDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CloudWatchLoggingOptionDescriptions", elemType: cloudwatchloggingoptiondescription_1.CloudWatchLoggingOptionDescription }),
         __metadata("design:type", Array)
     ], ApplicationDetail.prototype, "cloudWatchLoggingOptionDescriptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreateTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreateTimestamp" }),
         __metadata("design:type", Date)
     ], ApplicationDetail.prototype, "createTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InputDescriptions", elemType: InputDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InputDescriptions", elemType: inputdescription_1.InputDescription }),
         __metadata("design:type", Array)
     ], ApplicationDetail.prototype, "inputDescriptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdateTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdateTimestamp" }),
         __metadata("design:type", Date)
     ], ApplicationDetail.prototype, "lastUpdateTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OutputDescriptions", elemType: OutputDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OutputDescriptions", elemType: outputdescription_1.OutputDescription }),
         __metadata("design:type", Array)
     ], ApplicationDetail.prototype, "outputDescriptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReferenceDataSourceDescriptions", elemType: ReferenceDataSourceDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReferenceDataSourceDescriptions", elemType: referencedatasourcedescription_1.ReferenceDataSourceDescription }),
         __metadata("design:type", Array)
     ], ApplicationDetail.prototype, "referenceDataSourceDescriptions", void 0);
     return ApplicationDetail;
-}(SpeakeasyBase));
-export { ApplicationDetail };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationDetail = ApplicationDetail;

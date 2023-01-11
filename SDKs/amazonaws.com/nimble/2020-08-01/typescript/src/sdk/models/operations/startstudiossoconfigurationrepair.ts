@@ -65,7 +65,7 @@ export class StartStudioSsoConfigurationRepairResponse extends SpeakeasyBase {
   serviceQuotaExceededException?: any;
 
   @SpeakeasyMetadata()
-  startStudioSsoConfigurationRepairResponse?: shared.StartStudioSsoConfigurationRepairResponse;
+  startStudioSSOConfigurationRepairResponse?: shared.StartStudioSsoConfigurationRepairResponse;
 
   @SpeakeasyMetadata()
   statusCode: number;

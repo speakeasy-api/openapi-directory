@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CallEnumUpdateStatusEnum = void 0;
+var CallEnumUpdateStatusEnum;
+(function (CallEnumUpdateStatusEnum) {
+    CallEnumUpdateStatusEnum["Canceled"] = "canceled";
+    CallEnumUpdateStatusEnum["Completed"] = "completed";
+})(CallEnumUpdateStatusEnum = exports.CallEnumUpdateStatusEnum || (exports.CallEnumUpdateStatusEnum = {}));

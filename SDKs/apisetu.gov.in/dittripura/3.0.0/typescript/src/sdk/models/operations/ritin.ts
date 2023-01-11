@@ -188,23 +188,23 @@ export class RitinResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ritin400ApplicationJsonObject?: Ritin400ApplicationJson;
+  ritin400ApplicationJSONObject?: Ritin400ApplicationJson;
 
   @SpeakeasyMetadata()
-  ritin401ApplicationJsonObject?: Ritin401ApplicationJson;
+  ritin401ApplicationJSONObject?: Ritin401ApplicationJson;
 
   @SpeakeasyMetadata()
-  ritin404ApplicationJsonObject?: Ritin404ApplicationJson;
+  ritin404ApplicationJSONObject?: Ritin404ApplicationJson;
 
   @SpeakeasyMetadata()
-  ritin500ApplicationJsonObject?: Ritin500ApplicationJson;
+  ritin500ApplicationJSONObject?: Ritin500ApplicationJson;
 
   @SpeakeasyMetadata()
-  ritin502ApplicationJsonObject?: Ritin502ApplicationJson;
+  ritin502ApplicationJSONObject?: Ritin502ApplicationJson;
 
   @SpeakeasyMetadata()
-  ritin503ApplicationJsonObject?: Ritin503ApplicationJson;
+  ritin503ApplicationJSONObject?: Ritin503ApplicationJson;
 
   @SpeakeasyMetadata()
-  ritin504ApplicationJsonObject?: Ritin504ApplicationJson;
+  ritin504ApplicationJSONObject?: Ritin504ApplicationJson;
 }

@@ -1,0 +1,384 @@
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import * as operations from "./models/operations";
+import * as utils from "../internal/utils";
+
+export class Export {
+  _defaultClient: AxiosInstance;
+  _securityClient: AxiosInstance;
+  _serverURL: string;
+  _language: string;
+  _sdkVersion: string;
+  _genVersion: string;
+
+  constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string) {
+    this._defaultClient = defaultClient;
+    this._securityClient = securityClient;
+    this._serverURL = serverURL;
+    this._language = language;
+    this._sdkVersion = sdkVersion;
+    this._genVersion = genVersion;
+  }
+  
+  getExportCsvRegistrierkassenRegistrierkasseUuidBelege(
+    req: operations.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/export/csv/registrierkassen/{registrierkasseUuid}/belege", req.pathParams);
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  getExportDep131RegistrierkassenRegistrierkasseUuidBelege(
+    req: operations.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/export/dep131/registrierkassen/{registrierkasseUuid}/belege", req.pathParams);
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  getExportDep7RegistrierkassenRegistrierkasseUuidBelege(
+    req: operations.GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/export/dep7/registrierkassen/{registrierkasseUuid}/belege", req.pathParams);
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  getExportGobdRegistrierkassenRegistrierkasseUuid(
+    req: operations.GetExportGobdRegistrierkassenRegistrierkasseUuidRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetExportGobdRegistrierkassenRegistrierkasseUuidResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetExportGobdRegistrierkassenRegistrierkasseUuidRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/export/gobd/registrierkassen/{registrierkasseUuid}", req.pathParams);
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetExportGobdRegistrierkassenRegistrierkasseUuidResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  getExportHtmlBelegeBelegUuid(
+    req: operations.GetExportHtmlBelegeBelegUuidRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetExportHtmlBelegeBelegUuidResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetExportHtmlBelegeBelegUuidRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/export/html/belege/{belegUuid}", req.pathParams);
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetExportHtmlBelegeBelegUuidResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  getExportPdfBelegeBelegUuid(
+    req: operations.GetExportPdfBelegeBelegUuidRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetExportPdfBelegeBelegUuidResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetExportPdfBelegeBelegUuidRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/export/pdf/belege/{belegUuid}", req.pathParams);
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetExportPdfBelegeBelegUuidResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  getExportQrBelegeBelegUuid(
+    req: operations.GetExportQrBelegeBelegUuidRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetExportQrBelegeBelegUuidResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetExportQrBelegeBelegUuidRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/export/qr/belege/{belegUuid}", req.pathParams);
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetExportQrBelegeBelegUuidResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  getExportThermalPrintBelegeBelegUuid(
+    req: operations.GetExportThermalPrintBelegeBelegUuidRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetExportThermalPrintBelegeBelegUuidResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetExportThermalPrintBelegeBelegUuidRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/export/thermal-print/belege/{belegUuid}", req.pathParams);
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetExportThermalPrintBelegeBelegUuidResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  getExportXlsRegistrierkassenRegistrierkasseUuidBelege(
+    req: operations.GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/export/xls/registrierkassen/{registrierkasseUuid}/belege", req.pathParams);
+    
+    const client: AxiosInstance = this._securityClient!;
+    
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+}

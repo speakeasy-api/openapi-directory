@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ChromemanagementCustomersAppsCountChromeAppRequestsRequest, ChromemanagementCustomersAppsCountChromeAppRequestsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,30 +30,30 @@ const req: ChromemanagementCustomersAppsCountChromeAppRequestsRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    customer: "vel",
+    customer: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "esse",
-    alt: "json",
-    callback: "ab",
-    fields: "vitae",
-    key: "labore",
-    oauthToken: "nemo",
-    orderBy: "atque",
-    orgUnitId: "vel",
-    pageSize: 5104981729836945890,
-    pageToken: "nostrum",
-    prettyPrint: true,
-    quotaUser: "in",
-    uploadType: "recusandae",
-    uploadProtocol: "ut",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    orderBy: "fugit",
+    orgUnitId: "et",
+    pageSize: 2661732831099943416,
+    pageToken: "rerum",
+    prettyPrint: false,
+    quotaUser: "debitis",
+    uploadType: "voluptatum",
+    uploadProtocol: "et",
   },
 };
 
@@ -78,6 +77,7 @@ sdk.customers.chromemanagementCustomersAppsCountChromeAppRequests(req).then((res
 * `chromemanagementCustomersReportsFindInstalledAppDevices` - Generate report of devices that have a specified app installed.
 * `chromemanagementCustomersTelemetryDevicesGet` - Get telemetry device.
 * `chromemanagementCustomersTelemetryDevicesList` - List all telemetry devices.
+* `chromemanagementCustomersTelemetryEventsList` - List telemetry events.
 
 <!-- End SDK Available Operations -->
 

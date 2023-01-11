@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { JobScopeTerm } from "./jobscopeterm";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobScopingBlock = void 0;
+var utils_1 = require("../../../internal/utils");
+var jobscopeterm_1 = require("./jobscopeterm");
 // JobScopingBlock
 /**
  * Specifies one or more property- and tag-based conditions that define criteria for including or excluding S3 objects from a classification job.
@@ -34,9 +37,9 @@ var JobScopingBlock = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=and", elemType: JobScopeTerm }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=and", elemType: jobscopeterm_1.JobScopeTerm }),
         __metadata("design:type", Array)
     ], JobScopingBlock.prototype, "and", void 0);
     return JobScopingBlock;
-}(SpeakeasyBase));
-export { JobScopingBlock };
+}(utils_1.SpeakeasyBase));
+exports.JobScopingBlock = JobScopingBlock;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BackupRetentionPolicy } from "./backupretentionpolicy";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateClusterRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var backupretentionpolicy_1 = require("./backupretentionpolicy");
+var tag_1 = require("./tag");
 var CreateClusterRequest = /** @class */ (function (_super) {
     __extends(CreateClusterRequest, _super);
     function CreateClusterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BackupRetentionPolicy" }),
-        __metadata("design:type", BackupRetentionPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BackupRetentionPolicy" }),
+        __metadata("design:type", backupretentionpolicy_1.BackupRetentionPolicy)
     ], CreateClusterRequest.prototype, "backupRetentionPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HsmType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HsmType" }),
         __metadata("design:type", String)
     ], CreateClusterRequest.prototype, "hsmType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceBackupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceBackupId" }),
         __metadata("design:type", String)
     ], CreateClusterRequest.prototype, "sourceBackupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetIds" }),
         __metadata("design:type", Array)
     ], CreateClusterRequest.prototype, "subnetIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TagList", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TagList", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateClusterRequest.prototype, "tagList", void 0);
     return CreateClusterRequest;
-}(SpeakeasyBase));
-export { CreateClusterRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateClusterRequest = CreateClusterRequest;

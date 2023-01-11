@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutAdminMappingsStubMappingIdResponse = exports.PutAdminMappingsStubMappingIdRequest = exports.PutAdminMappingsStubMappingId200ApplicationJson = exports.PutAdminMappingsStubMappingId200ApplicationJsonResponse = exports.PutAdminMappingsStubMappingId200ApplicationJsonResponseFaultEnum = exports.PutAdminMappingsStubMappingId200ApplicationJsonRequest = exports.PutAdminMappingsStubMappingId200ApplicationJsonRequestBasicAuthCredentials = exports.PutAdminMappingsStubMappingIdRequestBody = exports.PutAdminMappingsStubMappingIdRequestBodyResponse = exports.PutAdminMappingsStubMappingIdRequestBodyResponseFaultEnum = exports.PutAdminMappingsStubMappingIdRequestBodyRequest = exports.PutAdminMappingsStubMappingIdRequestBodyRequestBasicAuthCredentials = exports.PutAdminMappingsStubMappingIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PutAdminMappingsStubMappingIdPathParams = /** @class */ (function (_super) {
     __extends(PutAdminMappingsStubMappingIdPathParams, _super);
     function PutAdminMappingsStubMappingIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=stubMappingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=stubMappingId" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdPathParams.prototype, "stubMappingId", void 0);
     return PutAdminMappingsStubMappingIdPathParams;
-}(SpeakeasyBase));
-export { PutAdminMappingsStubMappingIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PutAdminMappingsStubMappingIdPathParams = PutAdminMappingsStubMappingIdPathParams;
 // PutAdminMappingsStubMappingIdRequestBodyRequestBasicAuthCredentials
 /**
  * Pre-emptive basic auth credentials to match against
@@ -45,191 +48,191 @@ var PutAdminMappingsStubMappingIdRequestBodyRequestBasicAuthCredentials = /** @c
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBodyRequestBasicAuthCredentials.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBodyRequestBasicAuthCredentials.prototype, "username", void 0);
     return PutAdminMappingsStubMappingIdRequestBodyRequestBasicAuthCredentials;
-}(SpeakeasyBase));
-export { PutAdminMappingsStubMappingIdRequestBodyRequestBasicAuthCredentials };
+}(utils_1.SpeakeasyBase));
+exports.PutAdminMappingsStubMappingIdRequestBodyRequestBasicAuthCredentials = PutAdminMappingsStubMappingIdRequestBodyRequestBasicAuthCredentials;
 var PutAdminMappingsStubMappingIdRequestBodyRequest = /** @class */ (function (_super) {
     __extends(PutAdminMappingsStubMappingIdRequestBodyRequest, _super);
     function PutAdminMappingsStubMappingIdRequestBodyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=basicAuthCredentials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=basicAuthCredentials" }),
         __metadata("design:type", PutAdminMappingsStubMappingIdRequestBodyRequestBasicAuthCredentials)
     ], PutAdminMappingsStubMappingIdRequestBodyRequest.prototype, "basicAuthCredentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bodyPatterns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bodyPatterns" }),
         __metadata("design:type", Array)
     ], PutAdminMappingsStubMappingIdRequestBodyRequest.prototype, "bodyPatterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cookies" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cookies" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingIdRequestBodyRequest.prototype, "cookies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingIdRequestBodyRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBodyRequest.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryParameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryParameters" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingIdRequestBodyRequest.prototype, "queryParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBodyRequest.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlPath" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBodyRequest.prototype, "urlPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlPathPattern" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlPathPattern" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBodyRequest.prototype, "urlPathPattern", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlPattern" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlPattern" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBodyRequest.prototype, "urlPattern", void 0);
     return PutAdminMappingsStubMappingIdRequestBodyRequest;
-}(SpeakeasyBase));
-export { PutAdminMappingsStubMappingIdRequestBodyRequest };
-export var PutAdminMappingsStubMappingIdRequestBodyResponseFaultEnum;
+}(utils_1.SpeakeasyBase));
+exports.PutAdminMappingsStubMappingIdRequestBodyRequest = PutAdminMappingsStubMappingIdRequestBodyRequest;
+var PutAdminMappingsStubMappingIdRequestBodyResponseFaultEnum;
 (function (PutAdminMappingsStubMappingIdRequestBodyResponseFaultEnum) {
     PutAdminMappingsStubMappingIdRequestBodyResponseFaultEnum["ConnectionResetByPeer"] = "CONNECTION_RESET_BY_PEER";
     PutAdminMappingsStubMappingIdRequestBodyResponseFaultEnum["EmptyResponse"] = "EMPTY_RESPONSE";
     PutAdminMappingsStubMappingIdRequestBodyResponseFaultEnum["MalformedResponseChunk"] = "MALFORMED_RESPONSE_CHUNK";
     PutAdminMappingsStubMappingIdRequestBodyResponseFaultEnum["RandomDataThenClose"] = "RANDOM_DATA_THEN_CLOSE";
-})(PutAdminMappingsStubMappingIdRequestBodyResponseFaultEnum || (PutAdminMappingsStubMappingIdRequestBodyResponseFaultEnum = {}));
+})(PutAdminMappingsStubMappingIdRequestBodyResponseFaultEnum = exports.PutAdminMappingsStubMappingIdRequestBodyResponseFaultEnum || (exports.PutAdminMappingsStubMappingIdRequestBodyResponseFaultEnum = {}));
 var PutAdminMappingsStubMappingIdRequestBodyResponse = /** @class */ (function (_super) {
     __extends(PutAdminMappingsStubMappingIdRequestBodyResponse, _super);
     function PutAdminMappingsStubMappingIdRequestBodyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalProxyRequestHeaders" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalProxyRequestHeaders" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingIdRequestBodyResponse.prototype, "additionalProxyRequestHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=base64Body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=base64Body" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBodyResponse.prototype, "base64Body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBodyResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bodyFileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bodyFileName" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBodyResponse.prototype, "bodyFileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fault" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fault" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBodyResponse.prototype, "fault", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fixedDelayMilliseconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fixedDelayMilliseconds" }),
         __metadata("design:type", Number)
     ], PutAdminMappingsStubMappingIdRequestBodyResponse.prototype, "fixedDelayMilliseconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromConfiguredStub" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromConfiguredStub" }),
         __metadata("design:type", Boolean)
     ], PutAdminMappingsStubMappingIdRequestBodyResponse.prototype, "fromConfiguredStub", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingIdRequestBodyResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jsonBody" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jsonBody" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingIdRequestBodyResponse.prototype, "jsonBody", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proxyBaseUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proxyBaseUrl" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBodyResponse.prototype, "proxyBaseUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Number)
     ], PutAdminMappingsStubMappingIdRequestBodyResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusMessage" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBodyResponse.prototype, "statusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transformerParameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transformerParameters" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingIdRequestBodyResponse.prototype, "transformerParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transformers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transformers" }),
         __metadata("design:type", Array)
     ], PutAdminMappingsStubMappingIdRequestBodyResponse.prototype, "transformers", void 0);
     return PutAdminMappingsStubMappingIdRequestBodyResponse;
-}(SpeakeasyBase));
-export { PutAdminMappingsStubMappingIdRequestBodyResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutAdminMappingsStubMappingIdRequestBodyResponse = PutAdminMappingsStubMappingIdRequestBodyResponse;
 var PutAdminMappingsStubMappingIdRequestBody = /** @class */ (function (_super) {
     __extends(PutAdminMappingsStubMappingIdRequestBody, _super);
     function PutAdminMappingsStubMappingIdRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBody.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingIdRequestBody.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newScenarioState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newScenarioState" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBody.prototype, "newScenarioState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=persistent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=persistent" }),
         __metadata("design:type", Boolean)
     ], PutAdminMappingsStubMappingIdRequestBody.prototype, "persistent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postServeActions" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postServeActions" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingIdRequestBody.prototype, "postServeActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", Number)
     ], PutAdminMappingsStubMappingIdRequestBody.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=request" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=request" }),
         __metadata("design:type", PutAdminMappingsStubMappingIdRequestBodyRequest)
     ], PutAdminMappingsStubMappingIdRequestBody.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requiredScenarioState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requiredScenarioState" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBody.prototype, "requiredScenarioState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=response" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=response" }),
         __metadata("design:type", PutAdminMappingsStubMappingIdRequestBodyResponse)
     ], PutAdminMappingsStubMappingIdRequestBody.prototype, "response", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scenarioName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scenarioName" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBody.prototype, "scenarioName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uuid" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdRequestBody.prototype, "uuid", void 0);
     return PutAdminMappingsStubMappingIdRequestBody;
-}(SpeakeasyBase));
-export { PutAdminMappingsStubMappingIdRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PutAdminMappingsStubMappingIdRequestBody = PutAdminMappingsStubMappingIdRequestBody;
 // PutAdminMappingsStubMappingId200ApplicationJsonRequestBasicAuthCredentials
 /**
  * Pre-emptive basic auth credentials to match against
@@ -240,224 +243,224 @@ var PutAdminMappingsStubMappingId200ApplicationJsonRequestBasicAuthCredentials =
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJsonRequestBasicAuthCredentials.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJsonRequestBasicAuthCredentials.prototype, "username", void 0);
     return PutAdminMappingsStubMappingId200ApplicationJsonRequestBasicAuthCredentials;
-}(SpeakeasyBase));
-export { PutAdminMappingsStubMappingId200ApplicationJsonRequestBasicAuthCredentials };
+}(utils_1.SpeakeasyBase));
+exports.PutAdminMappingsStubMappingId200ApplicationJsonRequestBasicAuthCredentials = PutAdminMappingsStubMappingId200ApplicationJsonRequestBasicAuthCredentials;
 var PutAdminMappingsStubMappingId200ApplicationJsonRequest = /** @class */ (function (_super) {
     __extends(PutAdminMappingsStubMappingId200ApplicationJsonRequest, _super);
     function PutAdminMappingsStubMappingId200ApplicationJsonRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=basicAuthCredentials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=basicAuthCredentials" }),
         __metadata("design:type", PutAdminMappingsStubMappingId200ApplicationJsonRequestBasicAuthCredentials)
     ], PutAdminMappingsStubMappingId200ApplicationJsonRequest.prototype, "basicAuthCredentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bodyPatterns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bodyPatterns" }),
         __metadata("design:type", Array)
     ], PutAdminMappingsStubMappingId200ApplicationJsonRequest.prototype, "bodyPatterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cookies" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cookies" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingId200ApplicationJsonRequest.prototype, "cookies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingId200ApplicationJsonRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJsonRequest.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryParameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryParameters" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingId200ApplicationJsonRequest.prototype, "queryParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJsonRequest.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlPath" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJsonRequest.prototype, "urlPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlPathPattern" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlPathPattern" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJsonRequest.prototype, "urlPathPattern", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlPattern" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlPattern" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJsonRequest.prototype, "urlPattern", void 0);
     return PutAdminMappingsStubMappingId200ApplicationJsonRequest;
-}(SpeakeasyBase));
-export { PutAdminMappingsStubMappingId200ApplicationJsonRequest };
-export var PutAdminMappingsStubMappingId200ApplicationJsonResponseFaultEnum;
+}(utils_1.SpeakeasyBase));
+exports.PutAdminMappingsStubMappingId200ApplicationJsonRequest = PutAdminMappingsStubMappingId200ApplicationJsonRequest;
+var PutAdminMappingsStubMappingId200ApplicationJsonResponseFaultEnum;
 (function (PutAdminMappingsStubMappingId200ApplicationJsonResponseFaultEnum) {
     PutAdminMappingsStubMappingId200ApplicationJsonResponseFaultEnum["ConnectionResetByPeer"] = "CONNECTION_RESET_BY_PEER";
     PutAdminMappingsStubMappingId200ApplicationJsonResponseFaultEnum["EmptyResponse"] = "EMPTY_RESPONSE";
     PutAdminMappingsStubMappingId200ApplicationJsonResponseFaultEnum["MalformedResponseChunk"] = "MALFORMED_RESPONSE_CHUNK";
     PutAdminMappingsStubMappingId200ApplicationJsonResponseFaultEnum["RandomDataThenClose"] = "RANDOM_DATA_THEN_CLOSE";
-})(PutAdminMappingsStubMappingId200ApplicationJsonResponseFaultEnum || (PutAdminMappingsStubMappingId200ApplicationJsonResponseFaultEnum = {}));
+})(PutAdminMappingsStubMappingId200ApplicationJsonResponseFaultEnum = exports.PutAdminMappingsStubMappingId200ApplicationJsonResponseFaultEnum || (exports.PutAdminMappingsStubMappingId200ApplicationJsonResponseFaultEnum = {}));
 var PutAdminMappingsStubMappingId200ApplicationJsonResponse = /** @class */ (function (_super) {
     __extends(PutAdminMappingsStubMappingId200ApplicationJsonResponse, _super);
     function PutAdminMappingsStubMappingId200ApplicationJsonResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalProxyRequestHeaders" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalProxyRequestHeaders" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingId200ApplicationJsonResponse.prototype, "additionalProxyRequestHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=base64Body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=base64Body" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJsonResponse.prototype, "base64Body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJsonResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bodyFileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bodyFileName" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJsonResponse.prototype, "bodyFileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fault" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fault" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJsonResponse.prototype, "fault", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fixedDelayMilliseconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fixedDelayMilliseconds" }),
         __metadata("design:type", Number)
     ], PutAdminMappingsStubMappingId200ApplicationJsonResponse.prototype, "fixedDelayMilliseconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromConfiguredStub" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromConfiguredStub" }),
         __metadata("design:type", Boolean)
     ], PutAdminMappingsStubMappingId200ApplicationJsonResponse.prototype, "fromConfiguredStub", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingId200ApplicationJsonResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jsonBody" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jsonBody" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingId200ApplicationJsonResponse.prototype, "jsonBody", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proxyBaseUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proxyBaseUrl" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJsonResponse.prototype, "proxyBaseUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Number)
     ], PutAdminMappingsStubMappingId200ApplicationJsonResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusMessage" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJsonResponse.prototype, "statusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transformerParameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transformerParameters" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingId200ApplicationJsonResponse.prototype, "transformerParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transformers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transformers" }),
         __metadata("design:type", Array)
     ], PutAdminMappingsStubMappingId200ApplicationJsonResponse.prototype, "transformers", void 0);
     return PutAdminMappingsStubMappingId200ApplicationJsonResponse;
-}(SpeakeasyBase));
-export { PutAdminMappingsStubMappingId200ApplicationJsonResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutAdminMappingsStubMappingId200ApplicationJsonResponse = PutAdminMappingsStubMappingId200ApplicationJsonResponse;
 var PutAdminMappingsStubMappingId200ApplicationJson = /** @class */ (function (_super) {
     __extends(PutAdminMappingsStubMappingId200ApplicationJson, _super);
     function PutAdminMappingsStubMappingId200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJson.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingId200ApplicationJson.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJson.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newScenarioState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newScenarioState" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJson.prototype, "newScenarioState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=persistent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=persistent" }),
         __metadata("design:type", Boolean)
     ], PutAdminMappingsStubMappingId200ApplicationJson.prototype, "persistent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postServeActions" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postServeActions" }),
+        __metadata("design:type", Object)
     ], PutAdminMappingsStubMappingId200ApplicationJson.prototype, "postServeActions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", Number)
     ], PutAdminMappingsStubMappingId200ApplicationJson.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=request" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=request" }),
         __metadata("design:type", PutAdminMappingsStubMappingId200ApplicationJsonRequest)
     ], PutAdminMappingsStubMappingId200ApplicationJson.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requiredScenarioState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requiredScenarioState" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJson.prototype, "requiredScenarioState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=response" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=response" }),
         __metadata("design:type", PutAdminMappingsStubMappingId200ApplicationJsonResponse)
     ], PutAdminMappingsStubMappingId200ApplicationJson.prototype, "response", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scenarioName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scenarioName" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJson.prototype, "scenarioName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uuid" }),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingId200ApplicationJson.prototype, "uuid", void 0);
     return PutAdminMappingsStubMappingId200ApplicationJson;
-}(SpeakeasyBase));
-export { PutAdminMappingsStubMappingId200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PutAdminMappingsStubMappingId200ApplicationJson = PutAdminMappingsStubMappingId200ApplicationJson;
 var PutAdminMappingsStubMappingIdRequest = /** @class */ (function (_super) {
     __extends(PutAdminMappingsStubMappingIdRequest, _super);
     function PutAdminMappingsStubMappingIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutAdminMappingsStubMappingIdPathParams)
     ], PutAdminMappingsStubMappingIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PutAdminMappingsStubMappingIdRequestBody)
     ], PutAdminMappingsStubMappingIdRequest.prototype, "request", void 0);
     return PutAdminMappingsStubMappingIdRequest;
-}(SpeakeasyBase));
-export { PutAdminMappingsStubMappingIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutAdminMappingsStubMappingIdRequest = PutAdminMappingsStubMappingIdRequest;
 var PutAdminMappingsStubMappingIdResponse = /** @class */ (function (_super) {
     __extends(PutAdminMappingsStubMappingIdResponse, _super);
     function PutAdminMappingsStubMappingIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PutAdminMappingsStubMappingIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PutAdminMappingsStubMappingId200ApplicationJson)
-    ], PutAdminMappingsStubMappingIdResponse.prototype, "putAdminMappingsStubMappingId200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PutAdminMappingsStubMappingIdResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PutAdminMappingsStubMappingId200ApplicationJson)
+    ], PutAdminMappingsStubMappingIdResponse.prototype, "putAdminMappingsStubMappingId200ApplicationJSONObject", void 0);
     return PutAdminMappingsStubMappingIdResponse;
-}(SpeakeasyBase));
-export { PutAdminMappingsStubMappingIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutAdminMappingsStubMappingIdResponse = PutAdminMappingsStubMappingIdResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MembershipsByCompetitionHistoricalFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MembershipsByCompetitionHistoricalResponse = exports.MembershipsByCompetitionHistoricalRequest = exports.MembershipsByCompetitionHistoricalPathParams = exports.MembershipsByCompetitionHistoricalFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MembershipsByCompetitionHistoricalFormatEnum;
 (function (MembershipsByCompetitionHistoricalFormatEnum) {
     MembershipsByCompetitionHistoricalFormatEnum["Xml"] = "xml";
     MembershipsByCompetitionHistoricalFormatEnum["Json"] = "json";
-})(MembershipsByCompetitionHistoricalFormatEnum || (MembershipsByCompetitionHistoricalFormatEnum = {}));
+})(MembershipsByCompetitionHistoricalFormatEnum = exports.MembershipsByCompetitionHistoricalFormatEnum || (exports.MembershipsByCompetitionHistoricalFormatEnum = {}));
 var MembershipsByCompetitionHistoricalPathParams = /** @class */ (function (_super) {
     __extends(MembershipsByCompetitionHistoricalPathParams, _super);
     function MembershipsByCompetitionHistoricalPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=competition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=competition" }),
         __metadata("design:type", String)
     ], MembershipsByCompetitionHistoricalPathParams.prototype, "competition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], MembershipsByCompetitionHistoricalPathParams.prototype, "format", void 0);
     return MembershipsByCompetitionHistoricalPathParams;
-}(SpeakeasyBase));
-export { MembershipsByCompetitionHistoricalPathParams };
+}(utils_1.SpeakeasyBase));
+exports.MembershipsByCompetitionHistoricalPathParams = MembershipsByCompetitionHistoricalPathParams;
 var MembershipsByCompetitionHistoricalRequest = /** @class */ (function (_super) {
     __extends(MembershipsByCompetitionHistoricalRequest, _super);
     function MembershipsByCompetitionHistoricalRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MembershipsByCompetitionHistoricalPathParams)
     ], MembershipsByCompetitionHistoricalRequest.prototype, "pathParams", void 0);
     return MembershipsByCompetitionHistoricalRequest;
-}(SpeakeasyBase));
-export { MembershipsByCompetitionHistoricalRequest };
+}(utils_1.SpeakeasyBase));
+exports.MembershipsByCompetitionHistoricalRequest = MembershipsByCompetitionHistoricalRequest;
 var MembershipsByCompetitionHistoricalResponse = /** @class */ (function (_super) {
     __extends(MembershipsByCompetitionHistoricalResponse, _super);
     function MembershipsByCompetitionHistoricalResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MembershipsByCompetitionHistoricalResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], MembershipsByCompetitionHistoricalResponse.prototype, "memberships", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MembershipsByCompetitionHistoricalResponse.prototype, "statusCode", void 0);
     return MembershipsByCompetitionHistoricalResponse;
-}(SpeakeasyBase));
-export { MembershipsByCompetitionHistoricalResponse };
+}(utils_1.SpeakeasyBase));
+exports.MembershipsByCompetitionHistoricalResponse = MembershipsByCompetitionHistoricalResponse;

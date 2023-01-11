@@ -74,5 +74,5 @@ export class UpdateContactListResponse extends SpeakeasyBase {
   tooManyRequestsException?: any;
 
   @SpeakeasyMetadata()
-  updateContactListResponse?: Map<string, any>;
+  updateContactListResponse?: Record<string, any>;
 }

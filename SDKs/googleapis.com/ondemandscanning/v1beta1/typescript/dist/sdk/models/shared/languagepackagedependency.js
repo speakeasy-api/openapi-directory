@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LanguagePackageDependency = void 0;
+var utils_1 = require("../../../internal/utils");
 // LanguagePackageDependency
 /**
  * Indicates a language package available between this package and the customer's resource artifact.
@@ -33,13 +36,13 @@ var LanguagePackageDependency = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=package" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=package" }),
         __metadata("design:type", String)
     ], LanguagePackageDependency.prototype, "package", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], LanguagePackageDependency.prototype, "version", void 0);
     return LanguagePackageDependency;
-}(SpeakeasyBase));
-export { LanguagePackageDependency };
+}(utils_1.SpeakeasyBase));
+exports.LanguagePackageDependency = LanguagePackageDependency;

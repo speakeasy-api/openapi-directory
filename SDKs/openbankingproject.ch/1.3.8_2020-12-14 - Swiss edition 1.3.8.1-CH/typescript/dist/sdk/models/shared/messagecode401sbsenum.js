@@ -1,4 +1,7 @@
-export var MessageCode401SbsEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MessageCode401SbsEnum = void 0;
+var MessageCode401SbsEnum;
 (function (MessageCode401SbsEnum) {
     MessageCode401SbsEnum["CertificateInvalid"] = "CERTIFICATE_INVALID";
     MessageCode401SbsEnum["RoleInvalid"] = "ROLE_INVALID";
@@ -15,4 +18,4 @@ export var MessageCode401SbsEnum;
     MessageCode401SbsEnum["TokenUnknown"] = "TOKEN_UNKNOWN";
     MessageCode401SbsEnum["TokenInvalid"] = "TOKEN_INVALID";
     MessageCode401SbsEnum["TokenExpired"] = "TOKEN_EXPIRED";
-})(MessageCode401SbsEnum || (MessageCode401SbsEnum = {}));
+})(MessageCode401SbsEnum = exports.MessageCode401SbsEnum || (exports.MessageCode401SbsEnum = {}));

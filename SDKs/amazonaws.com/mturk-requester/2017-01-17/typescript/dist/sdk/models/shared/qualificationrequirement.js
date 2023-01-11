@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HitAccessActionsEnum } from "./hitaccessactionsenum";
-import { ComparatorEnum } from "./comparatorenum";
-import { Locale } from "./locale";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QualificationRequirement = void 0;
+var utils_1 = require("../../../internal/utils");
+var hitaccessactionsenum_1 = require("./hitaccessactionsenum");
+var comparatorenum_1 = require("./comparatorenum");
+var locale_1 = require("./locale");
 // QualificationRequirement
 /**
  *  The QualificationRequirement data structure describes a Qualification that a Worker must have before the Worker is allowed to accept a HIT. A requirement may optionally state that a Worker must have the Qualification in order to preview the HIT, or see the HIT in search results.
@@ -36,29 +39,29 @@ var QualificationRequirement = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ActionsGuarded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ActionsGuarded" }),
         __metadata("design:type", String)
     ], QualificationRequirement.prototype, "actionsGuarded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Comparator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Comparator" }),
         __metadata("design:type", String)
     ], QualificationRequirement.prototype, "comparator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IntegerValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IntegerValues" }),
         __metadata("design:type", Array)
     ], QualificationRequirement.prototype, "integerValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LocaleValues", elemType: Locale }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LocaleValues", elemType: locale_1.Locale }),
         __metadata("design:type", Array)
     ], QualificationRequirement.prototype, "localeValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QualificationTypeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QualificationTypeId" }),
         __metadata("design:type", String)
     ], QualificationRequirement.prototype, "qualificationTypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequiredToPreview" }),
-        __metadata("design:type", Boolean)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequiredToPreview" }),
+        __metadata("design:type", Object)
     ], QualificationRequirement.prototype, "requiredToPreview", void 0);
     return QualificationRequirement;
-}(SpeakeasyBase));
-export { QualificationRequirement };
+}(utils_1.SpeakeasyBase));
+exports.QualificationRequirement = QualificationRequirement;

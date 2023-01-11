@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AlloyDbSettings } from "./alloydbsettings";
-import { AlloyDbSettingsInput } from "./alloydbsettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AlloyDbConnectionProfileInput = exports.AlloyDbConnectionProfile = void 0;
+var utils_1 = require("../../../internal/utils");
+var alloydbsettings_1 = require("./alloydbsettings");
+var alloydbsettings_2 = require("./alloydbsettings");
 // AlloyDbConnectionProfile
 /**
  * Specifies required connection parameters, and the parameters required to create an AlloyDB destination cluster.
@@ -35,16 +38,16 @@ var AlloyDbConnectionProfile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterId" }),
         __metadata("design:type", String)
     ], AlloyDbConnectionProfile.prototype, "clusterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", AlloyDbSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", alloydbsettings_1.AlloyDbSettings)
     ], AlloyDbConnectionProfile.prototype, "settings", void 0);
     return AlloyDbConnectionProfile;
-}(SpeakeasyBase));
-export { AlloyDbConnectionProfile };
+}(utils_1.SpeakeasyBase));
+exports.AlloyDbConnectionProfile = AlloyDbConnectionProfile;
 // AlloyDbConnectionProfileInput
 /**
  * Specifies required connection parameters, and the parameters required to create an AlloyDB destination cluster.
@@ -55,13 +58,13 @@ var AlloyDbConnectionProfileInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterId" }),
         __metadata("design:type", String)
     ], AlloyDbConnectionProfileInput.prototype, "clusterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", AlloyDbSettingsInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", alloydbsettings_2.AlloyDbSettingsInput)
     ], AlloyDbConnectionProfileInput.prototype, "settings", void 0);
     return AlloyDbConnectionProfileInput;
-}(SpeakeasyBase));
-export { AlloyDbConnectionProfileInput };
+}(utils_1.SpeakeasyBase));
+exports.AlloyDbConnectionProfileInput = AlloyDbConnectionProfileInput;

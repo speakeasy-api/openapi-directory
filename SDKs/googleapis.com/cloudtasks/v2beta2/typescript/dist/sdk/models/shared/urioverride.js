@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var UriOverrideSchemeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UriOverride = exports.UriOverrideUriOverrideEnforceModeEnum = exports.UriOverrideSchemeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var UriOverrideSchemeEnum;
 (function (UriOverrideSchemeEnum) {
     UriOverrideSchemeEnum["SchemeUnspecified"] = "SCHEME_UNSPECIFIED";
     UriOverrideSchemeEnum["Http"] = "HTTP";
     UriOverrideSchemeEnum["Https"] = "HTTPS";
-})(UriOverrideSchemeEnum || (UriOverrideSchemeEnum = {}));
-export var UriOverrideUriOverrideEnforceModeEnum;
+})(UriOverrideSchemeEnum = exports.UriOverrideSchemeEnum || (exports.UriOverrideSchemeEnum = {}));
+var UriOverrideUriOverrideEnforceModeEnum;
 (function (UriOverrideUriOverrideEnforceModeEnum) {
     UriOverrideUriOverrideEnforceModeEnum["UriOverrideEnforceModeUnspecified"] = "URI_OVERRIDE_ENFORCE_MODE_UNSPECIFIED";
     UriOverrideUriOverrideEnforceModeEnum["IfNotExists"] = "IF_NOT_EXISTS";
     UriOverrideUriOverrideEnforceModeEnum["Always"] = "ALWAYS";
-})(UriOverrideUriOverrideEnforceModeEnum || (UriOverrideUriOverrideEnforceModeEnum = {}));
+})(UriOverrideUriOverrideEnforceModeEnum = exports.UriOverrideUriOverrideEnforceModeEnum || (exports.UriOverrideUriOverrideEnforceModeEnum = {}));
 // UriOverride
 /**
  * Uri Override. When specified, all the HTTP tasks inside the queue will be partially or fully overridden depending on the configured values.
@@ -45,29 +48,29 @@ var UriOverride = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", String)
     ], UriOverride.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], UriOverride.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", String)
     ], UriOverride.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query" }),
         __metadata("design:type", String)
     ], UriOverride.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheme" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheme" }),
         __metadata("design:type", String)
     ], UriOverride.prototype, "scheme", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uriOverrideEnforceMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uriOverrideEnforceMode" }),
         __metadata("design:type", String)
     ], UriOverride.prototype, "uriOverrideEnforceMode", void 0);
     return UriOverride;
-}(SpeakeasyBase));
-export { UriOverride };
+}(utils_1.SpeakeasyBase));
+exports.UriOverride = UriOverride;

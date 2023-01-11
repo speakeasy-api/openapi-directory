@@ -5,7 +5,7 @@ export declare class GameMedia extends SpeakeasyBase {
     homeConference?: string;
     homeTeam?: string;
     id?: number;
-    isStartTimeTbd?: boolean;
+    isStartTimeTBD?: boolean;
     mediaType?: string;
     outlet?: string;
     season?: number;

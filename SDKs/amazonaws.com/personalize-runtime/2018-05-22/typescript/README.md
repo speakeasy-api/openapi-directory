@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetPersonalizedRankingRequest, GetPersonalizedRankingResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,35 +33,33 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetPersonalizedRankingRequest = {
   headers: {
-    xAmzAlgorithm: "magnam",
-    xAmzContentSha256: "a",
-    xAmzCredential: "et",
-    xAmzDate: "omnis",
-    xAmzSecurityToken: "dicta",
-    xAmzSignature: "in",
-    xAmzSignedHeaders: "et",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
-    campaignArn: "enim",
+    campaignArn: "voluptas",
     context: {
-      "dolores": "quasi",
-      "recusandae": "numquam",
-      "numquam": "occaecati",
+      "et": "nihil",
     },
-    filterArn: "aut",
+    filterArn: "rerum",
     filterValues: {
-      "occaecati": "et",
-      "et": "non",
-      "molestias": "aut",
+      "debitis": "voluptatum",
+      "et": "ut",
+      "dolorem": "et",
     },
     inputList: [
-      "consequuntur",
+      "iste",
     ],
-    userId: "exercitationem",
+    userId: "vitae",
   },
 };
 
-sdk.sdk.getPersonalizedRanking(req).then((res: GetPersonalizedRankingResponse | AxiosError) => {
+sdk.getPersonalizedRanking(req).then((res: GetPersonalizedRankingResponse | AxiosError) => {
    // handle response
 });
 ```

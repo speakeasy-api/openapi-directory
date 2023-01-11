@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworksIdActionsActionIdResponse = exports.GetNetworksIdActionsActionIdRequest = exports.GetNetworksIdActionsActionIdActionResponse = exports.GetNetworksIdActionsActionIdActionResponseAction = exports.GetNetworksIdActionsActionIdActionResponseActionStatusEnum = exports.GetNetworksIdActionsActionIdActionResponseActionResources = exports.GetNetworksIdActionsActionIdActionResponseActionError = exports.GetNetworksIdActionsActionIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworksIdActionsActionIdPathParams = /** @class */ (function (_super) {
     __extends(GetNetworksIdActionsActionIdPathParams, _super);
     function GetNetworksIdActionsActionIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=action_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=action_id" }),
         __metadata("design:type", Number)
     ], GetNetworksIdActionsActionIdPathParams.prototype, "actionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetNetworksIdActionsActionIdPathParams.prototype, "id", void 0);
     return GetNetworksIdActionsActionIdPathParams;
-}(SpeakeasyBase));
-export { GetNetworksIdActionsActionIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworksIdActionsActionIdPathParams = GetNetworksIdActionsActionIdPathParams;
 // GetNetworksIdActionsActionIdActionResponseActionError
 /**
  * Error message for the Action if error occurred, otherwise null
@@ -49,119 +52,119 @@ var GetNetworksIdActionsActionIdActionResponseActionError = /** @class */ (funct
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], GetNetworksIdActionsActionIdActionResponseActionError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetNetworksIdActionsActionIdActionResponseActionError.prototype, "message", void 0);
     return GetNetworksIdActionsActionIdActionResponseActionError;
-}(SpeakeasyBase));
-export { GetNetworksIdActionsActionIdActionResponseActionError };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworksIdActionsActionIdActionResponseActionError = GetNetworksIdActionsActionIdActionResponseActionError;
 var GetNetworksIdActionsActionIdActionResponseActionResources = /** @class */ (function (_super) {
     __extends(GetNetworksIdActionsActionIdActionResponseActionResources, _super);
     function GetNetworksIdActionsActionIdActionResponseActionResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetNetworksIdActionsActionIdActionResponseActionResources.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetNetworksIdActionsActionIdActionResponseActionResources.prototype, "type", void 0);
     return GetNetworksIdActionsActionIdActionResponseActionResources;
-}(SpeakeasyBase));
-export { GetNetworksIdActionsActionIdActionResponseActionResources };
-export var GetNetworksIdActionsActionIdActionResponseActionStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetNetworksIdActionsActionIdActionResponseActionResources = GetNetworksIdActionsActionIdActionResponseActionResources;
+var GetNetworksIdActionsActionIdActionResponseActionStatusEnum;
 (function (GetNetworksIdActionsActionIdActionResponseActionStatusEnum) {
     GetNetworksIdActionsActionIdActionResponseActionStatusEnum["Success"] = "success";
     GetNetworksIdActionsActionIdActionResponseActionStatusEnum["Running"] = "running";
     GetNetworksIdActionsActionIdActionResponseActionStatusEnum["Error"] = "error";
-})(GetNetworksIdActionsActionIdActionResponseActionStatusEnum || (GetNetworksIdActionsActionIdActionResponseActionStatusEnum = {}));
+})(GetNetworksIdActionsActionIdActionResponseActionStatusEnum = exports.GetNetworksIdActionsActionIdActionResponseActionStatusEnum || (exports.GetNetworksIdActionsActionIdActionResponseActionStatusEnum = {}));
 var GetNetworksIdActionsActionIdActionResponseAction = /** @class */ (function (_super) {
     __extends(GetNetworksIdActionsActionIdActionResponseAction, _super);
     function GetNetworksIdActionsActionIdActionResponseAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], GetNetworksIdActionsActionIdActionResponseAction.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", GetNetworksIdActionsActionIdActionResponseActionError)
     ], GetNetworksIdActionsActionIdActionResponseAction.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", String)
     ], GetNetworksIdActionsActionIdActionResponseAction.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetNetworksIdActionsActionIdActionResponseAction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], GetNetworksIdActionsActionIdActionResponseAction.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: GetNetworksIdActionsActionIdActionResponseActionResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: GetNetworksIdActionsActionIdActionResponseActionResources }),
         __metadata("design:type", Array)
     ], GetNetworksIdActionsActionIdActionResponseAction.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", String)
     ], GetNetworksIdActionsActionIdActionResponseAction.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetNetworksIdActionsActionIdActionResponseAction.prototype, "status", void 0);
     return GetNetworksIdActionsActionIdActionResponseAction;
-}(SpeakeasyBase));
-export { GetNetworksIdActionsActionIdActionResponseAction };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworksIdActionsActionIdActionResponseAction = GetNetworksIdActionsActionIdActionResponseAction;
 var GetNetworksIdActionsActionIdActionResponse = /** @class */ (function (_super) {
     __extends(GetNetworksIdActionsActionIdActionResponse, _super);
     function GetNetworksIdActionsActionIdActionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", GetNetworksIdActionsActionIdActionResponseAction)
     ], GetNetworksIdActionsActionIdActionResponse.prototype, "action", void 0);
     return GetNetworksIdActionsActionIdActionResponse;
-}(SpeakeasyBase));
-export { GetNetworksIdActionsActionIdActionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworksIdActionsActionIdActionResponse = GetNetworksIdActionsActionIdActionResponse;
 var GetNetworksIdActionsActionIdRequest = /** @class */ (function (_super) {
     __extends(GetNetworksIdActionsActionIdRequest, _super);
     function GetNetworksIdActionsActionIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworksIdActionsActionIdPathParams)
     ], GetNetworksIdActionsActionIdRequest.prototype, "pathParams", void 0);
     return GetNetworksIdActionsActionIdRequest;
-}(SpeakeasyBase));
-export { GetNetworksIdActionsActionIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworksIdActionsActionIdRequest = GetNetworksIdActionsActionIdRequest;
 var GetNetworksIdActionsActionIdResponse = /** @class */ (function (_super) {
     __extends(GetNetworksIdActionsActionIdResponse, _super);
     function GetNetworksIdActionsActionIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworksIdActionsActionIdActionResponse)
     ], GetNetworksIdActionsActionIdResponse.prototype, "actionResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworksIdActionsActionIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworksIdActionsActionIdResponse.prototype, "statusCode", void 0);
     return GetNetworksIdActionsActionIdResponse;
-}(SpeakeasyBase));
-export { GetNetworksIdActionsActionIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworksIdActionsActionIdResponse = GetNetworksIdActionsActionIdResponse;

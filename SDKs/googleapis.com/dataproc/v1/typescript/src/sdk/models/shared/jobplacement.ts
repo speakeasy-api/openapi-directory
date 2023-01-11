@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class JobPlacement extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=clusterLabels" })
-  clusterLabels?: Map<string, string>;
+  clusterLabels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=clusterName" })
   clusterName?: string;
@@ -24,7 +24,7 @@ export class JobPlacement extends SpeakeasyBase {
 **/
 export class JobPlacementInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=clusterLabels" })
-  clusterLabels?: Map<string, string>;
+  clusterLabels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=clusterName" })
   clusterName?: string;

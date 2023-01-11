@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminUpgradeLicenseResponse = exports.EnterpriseAdminUpgradeLicenseRequest = exports.EnterpriseAdminUpgradeLicenseRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseAdminUpgradeLicenseRequestBody = /** @class */ (function (_super) {
     __extends(EnterpriseAdminUpgradeLicenseRequestBody, _super);
     function EnterpriseAdminUpgradeLicenseRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=license" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=license" }),
         __metadata("design:type", String)
     ], EnterpriseAdminUpgradeLicenseRequestBody.prototype, "license", void 0);
     return EnterpriseAdminUpgradeLicenseRequestBody;
-}(SpeakeasyBase));
-export { EnterpriseAdminUpgradeLicenseRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminUpgradeLicenseRequestBody = EnterpriseAdminUpgradeLicenseRequestBody;
 var EnterpriseAdminUpgradeLicenseRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminUpgradeLicenseRequest, _super);
     function EnterpriseAdminUpgradeLicenseRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", EnterpriseAdminUpgradeLicenseRequestBody)
     ], EnterpriseAdminUpgradeLicenseRequest.prototype, "request", void 0);
     return EnterpriseAdminUpgradeLicenseRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminUpgradeLicenseRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminUpgradeLicenseRequest = EnterpriseAdminUpgradeLicenseRequest;
 var EnterpriseAdminUpgradeLicenseResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminUpgradeLicenseResponse, _super);
     function EnterpriseAdminUpgradeLicenseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminUpgradeLicenseResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminUpgradeLicenseResponse.prototype, "statusCode", void 0);
     return EnterpriseAdminUpgradeLicenseResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminUpgradeLicenseResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminUpgradeLicenseResponse = EnterpriseAdminUpgradeLicenseResponse;

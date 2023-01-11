@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClustersConfigDump } from "./clustersconfigdump";
-import { ListenersConfigDump } from "./listenersconfigdump";
-import { RoutesConfigDump } from "./routesconfigdump";
-import { ScopedRoutesConfigDump } from "./scopedroutesconfigdump";
-export var PerXdsConfigStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PerXdsConfig = exports.PerXdsConfigStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var clustersconfigdump_1 = require("./clustersconfigdump");
+var listenersconfigdump_1 = require("./listenersconfigdump");
+var routesconfigdump_1 = require("./routesconfigdump");
+var scopedroutesconfigdump_1 = require("./scopedroutesconfigdump");
+var PerXdsConfigStatusEnum;
 (function (PerXdsConfigStatusEnum) {
     PerXdsConfigStatusEnum["Unknown"] = "UNKNOWN";
     PerXdsConfigStatusEnum["Synced"] = "SYNCED";
     PerXdsConfigStatusEnum["NotSent"] = "NOT_SENT";
     PerXdsConfigStatusEnum["Stale"] = "STALE";
     PerXdsConfigStatusEnum["Error"] = "ERROR";
-})(PerXdsConfigStatusEnum || (PerXdsConfigStatusEnum = {}));
+})(PerXdsConfigStatusEnum = exports.PerXdsConfigStatusEnum || (exports.PerXdsConfigStatusEnum = {}));
 // PerXdsConfig
 /**
  * Detailed config (per xDS) with status. [#next-free-field: 6]
@@ -45,25 +48,25 @@ var PerXdsConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterConfig" }),
-        __metadata("design:type", ClustersConfigDump)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterConfig" }),
+        __metadata("design:type", clustersconfigdump_1.ClustersConfigDump)
     ], PerXdsConfig.prototype, "clusterConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listenerConfig" }),
-        __metadata("design:type", ListenersConfigDump)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listenerConfig" }),
+        __metadata("design:type", listenersconfigdump_1.ListenersConfigDump)
     ], PerXdsConfig.prototype, "listenerConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=routeConfig" }),
-        __metadata("design:type", RoutesConfigDump)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=routeConfig" }),
+        __metadata("design:type", routesconfigdump_1.RoutesConfigDump)
     ], PerXdsConfig.prototype, "routeConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scopedRouteConfig" }),
-        __metadata("design:type", ScopedRoutesConfigDump)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scopedRouteConfig" }),
+        __metadata("design:type", scopedroutesconfigdump_1.ScopedRoutesConfigDump)
     ], PerXdsConfig.prototype, "scopedRouteConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PerXdsConfig.prototype, "status", void 0);
     return PerXdsConfig;
-}(SpeakeasyBase));
-export { PerXdsConfig };
+}(utils_1.SpeakeasyBase));
+exports.PerXdsConfig = PerXdsConfig;

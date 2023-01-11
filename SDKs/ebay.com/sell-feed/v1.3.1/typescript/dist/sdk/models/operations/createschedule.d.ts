@@ -9,7 +9,7 @@ export declare class CreateScheduleRequest extends SpeakeasyBase {
 }
 export declare class CreateScheduleResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    createSchedule201ApplicationJsonObject?: Map<string, any>;
+    createSchedule201ApplicationJSONObject?: Record<string, any>;
 }

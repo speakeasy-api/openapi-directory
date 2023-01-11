@@ -13,7 +13,7 @@ export class PutFloatingIpsIdUpdateFloatingIpRequest extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, any>;
+  labels?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -98,7 +98,7 @@ export class PutFloatingIpsId200ApplicationJsonFloatingIp extends SpeakeasyBase 
   ip: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
@@ -134,8 +134,8 @@ export class PutFloatingIpsIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  putFloatingIpsId200ApplicationJsonObject?: PutFloatingIpsId200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  putFloatingIpsId200ApplicationJSONObject?: PutFloatingIpsId200ApplicationJson;
 }

@@ -47,7 +47,7 @@ export class GetMostviewedSectionTimePeriodJsonResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getMostviewedSectionTimePeriodJson200ApplicationJsonObject?: GetMostviewedSectionTimePeriodJson200ApplicationJson;
+  getMostviewedSectionTimePeriodJSON200ApplicationJSONObject?: GetMostviewedSectionTimePeriodJson200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

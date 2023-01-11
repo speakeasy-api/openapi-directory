@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Comment = exports.CommentStatusEnum = exports.CommentPost = exports.CommentInReplyTo = exports.CommentBlog = exports.CommentAuthor = exports.CommentAuthorImage = void 0;
+var utils_1 = require("../../../internal/utils");
 // CommentAuthorImage
 /**
  * The creator's avatar.
@@ -33,12 +36,12 @@ var CommentAuthorImage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], CommentAuthorImage.prototype, "url", void 0);
     return CommentAuthorImage;
-}(SpeakeasyBase));
-export { CommentAuthorImage };
+}(utils_1.SpeakeasyBase));
+exports.CommentAuthorImage = CommentAuthorImage;
 // CommentAuthor
 /**
  * The author of this Comment.
@@ -49,24 +52,24 @@ var CommentAuthor = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], CommentAuthor.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CommentAuthor.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", CommentAuthorImage)
     ], CommentAuthor.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], CommentAuthor.prototype, "url", void 0);
     return CommentAuthor;
-}(SpeakeasyBase));
-export { CommentAuthor };
+}(utils_1.SpeakeasyBase));
+exports.CommentAuthor = CommentAuthor;
 // CommentBlog
 /**
  * Data about the blog containing this comment.
@@ -77,12 +80,12 @@ var CommentBlog = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CommentBlog.prototype, "id", void 0);
     return CommentBlog;
-}(SpeakeasyBase));
-export { CommentBlog };
+}(utils_1.SpeakeasyBase));
+exports.CommentBlog = CommentBlog;
 // CommentInReplyTo
 /**
  * Data about the comment this is in reply to.
@@ -93,12 +96,12 @@ var CommentInReplyTo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CommentInReplyTo.prototype, "id", void 0);
     return CommentInReplyTo;
-}(SpeakeasyBase));
-export { CommentInReplyTo };
+}(utils_1.SpeakeasyBase));
+exports.CommentInReplyTo = CommentInReplyTo;
 // CommentPost
 /**
  * Data about the post containing this comment.
@@ -109,68 +112,68 @@ var CommentPost = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CommentPost.prototype, "id", void 0);
     return CommentPost;
-}(SpeakeasyBase));
-export { CommentPost };
-export var CommentStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.CommentPost = CommentPost;
+var CommentStatusEnum;
 (function (CommentStatusEnum) {
     CommentStatusEnum["Live"] = "LIVE";
     CommentStatusEnum["Emptied"] = "EMPTIED";
     CommentStatusEnum["Pending"] = "PENDING";
     CommentStatusEnum["Spam"] = "SPAM";
-})(CommentStatusEnum || (CommentStatusEnum = {}));
+})(CommentStatusEnum = exports.CommentStatusEnum || (exports.CommentStatusEnum = {}));
 var Comment = /** @class */ (function (_super) {
     __extends(Comment, _super);
     function Comment() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
         __metadata("design:type", CommentAuthor)
     ], Comment.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blog" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blog" }),
         __metadata("design:type", CommentBlog)
     ], Comment.prototype, "blog", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], Comment.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Comment.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inReplyTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inReplyTo" }),
         __metadata("design:type", CommentInReplyTo)
     ], Comment.prototype, "inReplyTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Comment.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=post" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=post" }),
         __metadata("design:type", CommentPost)
     ], Comment.prototype, "post", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=published" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=published" }),
         __metadata("design:type", String)
     ], Comment.prototype, "published", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Comment.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Comment.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", String)
     ], Comment.prototype, "updated", void 0);
     return Comment;
-}(SpeakeasyBase));
-export { Comment };
+}(utils_1.SpeakeasyBase));
+exports.Comment = Comment;

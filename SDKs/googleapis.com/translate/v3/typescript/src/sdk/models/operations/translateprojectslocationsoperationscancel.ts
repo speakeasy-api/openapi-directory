@@ -80,7 +80,7 @@ export class TranslateProjectsLocationsOperationsCancelRequest extends Speakeasy
   queryParams: TranslateProjectsLocationsOperationsCancelQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: TranslateProjectsLocationsOperationsCancelSecurity;
@@ -92,7 +92,7 @@ export class TranslateProjectsLocationsOperationsCancelResponse extends Speakeas
   contentType: string;
 
   @SpeakeasyMetadata()
-  empty?: Map<string, any>;
+  empty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

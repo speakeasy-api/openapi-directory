@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Query = exports.QueryQuery = exports.QueryQueryVariable = exports.QueryQueryGroup = void 0;
+var utils_1 = require("../../../internal/utils");
 // QueryQueryGroup
 /**
  * The querys' groups
@@ -33,12 +36,12 @@ var QueryQueryGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Group" }),
         __metadata("design:type", Array)
     ], QueryQueryGroup.prototype, "group", void 0);
     return QueryQueryGroup;
-}(SpeakeasyBase));
-export { QueryQueryGroup };
+}(utils_1.SpeakeasyBase));
+exports.QueryQueryGroup = QueryQueryGroup;
 // QueryQueryVariable
 /**
  * The querys' variables
@@ -49,49 +52,49 @@ var QueryQueryVariable = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Variable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Variable" }),
         __metadata("design:type", Array)
     ], QueryQueryVariable.prototype, "variable", void 0);
     return QueryQueryVariable;
-}(SpeakeasyBase));
-export { QueryQueryVariable };
+}(utils_1.SpeakeasyBase));
+exports.QueryQueryVariable = QueryQueryVariable;
 var QueryQuery = /** @class */ (function (_super) {
     __extends(QueryQuery, _super);
     function QueryQuery() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExcludeNullOrEmptyElements" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExcludeNullOrEmptyElements" }),
         __metadata("design:type", Boolean)
     ], QueryQuery.prototype, "excludeNullOrEmptyElements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Groups" }),
         __metadata("design:type", QueryQueryGroup)
     ], QueryQuery.prototype, "groups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RootNodeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RootNodeName" }),
         __metadata("design:type", String)
     ], QueryQuery.prototype, "rootNodeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SuppressMetricAttributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SuppressMetricAttributes" }),
         __metadata("design:type", Boolean)
     ], QueryQuery.prototype, "suppressMetricAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Variables" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Variables" }),
         __metadata("design:type", QueryQueryVariable)
     ], QueryQuery.prototype, "variables", void 0);
     return QueryQuery;
-}(SpeakeasyBase));
-export { QueryQuery };
+}(utils_1.SpeakeasyBase));
+exports.QueryQuery = QueryQuery;
 var Query = /** @class */ (function (_super) {
     __extends(Query, _super);
     function Query() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Query" }),
         __metadata("design:type", QueryQuery)
     ], Query.prototype, "query", void 0);
     return Query;
-}(SpeakeasyBase));
-export { Query };
+}(utils_1.SpeakeasyBase));
+exports.Query = Query;

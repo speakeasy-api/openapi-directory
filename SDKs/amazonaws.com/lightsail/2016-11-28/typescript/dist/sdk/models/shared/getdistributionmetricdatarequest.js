@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DistributionMetricNameEnum } from "./distributionmetricnameenum";
-import { MetricUnitEnum } from "./metricunitenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDistributionMetricDataRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var distributionmetricnameenum_1 = require("./distributionmetricnameenum");
+var metricunitenum_1 = require("./metricunitenum");
 var GetDistributionMetricDataRequest = /** @class */ (function (_super) {
     __extends(GetDistributionMetricDataRequest, _super);
     function GetDistributionMetricDataRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distributionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distributionName" }),
         __metadata("design:type", String)
     ], GetDistributionMetricDataRequest.prototype, "distributionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Date)
     ], GetDistributionMetricDataRequest.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricName" }),
         __metadata("design:type", String)
     ], GetDistributionMetricDataRequest.prototype, "metricName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=period" }),
         __metadata("design:type", Number)
     ], GetDistributionMetricDataRequest.prototype, "period", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], GetDistributionMetricDataRequest.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statistics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statistics" }),
         __metadata("design:type", Array)
     ], GetDistributionMetricDataRequest.prototype, "statistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unit" }),
         __metadata("design:type", String)
     ], GetDistributionMetricDataRequest.prototype, "unit", void 0);
     return GetDistributionMetricDataRequest;
-}(SpeakeasyBase));
-export { GetDistributionMetricDataRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDistributionMetricDataRequest = GetDistributionMetricDataRequest;

@@ -8,7 +8,7 @@ export declare class UpdateEvidenceSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;
 }
 export declare class UpdateEvidenceRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     pathParams: UpdateEvidencePathParams;
     request?: shared.UpdateEvidencePaymentDisputeRequest;
     security: UpdateEvidenceSecurity;

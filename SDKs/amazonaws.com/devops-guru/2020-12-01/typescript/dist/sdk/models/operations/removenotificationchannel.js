@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemoveNotificationChannelResponse = exports.RemoveNotificationChannelRequest = exports.RemoveNotificationChannelHeaders = exports.RemoveNotificationChannelPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RemoveNotificationChannelPathParams = /** @class */ (function (_super) {
     __extends(RemoveNotificationChannelPathParams, _super);
     function RemoveNotificationChannelPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=Id" }),
         __metadata("design:type", String)
     ], RemoveNotificationChannelPathParams.prototype, "id", void 0);
     return RemoveNotificationChannelPathParams;
-}(SpeakeasyBase));
-export { RemoveNotificationChannelPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RemoveNotificationChannelPathParams = RemoveNotificationChannelPathParams;
 var RemoveNotificationChannelHeaders = /** @class */ (function (_super) {
     __extends(RemoveNotificationChannelHeaders, _super);
     function RemoveNotificationChannelHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], RemoveNotificationChannelHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], RemoveNotificationChannelHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], RemoveNotificationChannelHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], RemoveNotificationChannelHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], RemoveNotificationChannelHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], RemoveNotificationChannelHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], RemoveNotificationChannelHeaders.prototype, "xAmzSignedHeaders", void 0);
     return RemoveNotificationChannelHeaders;
-}(SpeakeasyBase));
-export { RemoveNotificationChannelHeaders };
+}(utils_1.SpeakeasyBase));
+exports.RemoveNotificationChannelHeaders = RemoveNotificationChannelHeaders;
 var RemoveNotificationChannelRequest = /** @class */ (function (_super) {
     __extends(RemoveNotificationChannelRequest, _super);
     function RemoveNotificationChannelRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RemoveNotificationChannelPathParams)
     ], RemoveNotificationChannelRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RemoveNotificationChannelHeaders)
     ], RemoveNotificationChannelRequest.prototype, "headers", void 0);
     return RemoveNotificationChannelRequest;
-}(SpeakeasyBase));
-export { RemoveNotificationChannelRequest };
+}(utils_1.SpeakeasyBase));
+exports.RemoveNotificationChannelRequest = RemoveNotificationChannelRequest;
 var RemoveNotificationChannelResponse = /** @class */ (function (_super) {
     __extends(RemoveNotificationChannelResponse, _super);
     function RemoveNotificationChannelResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], RemoveNotificationChannelResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], RemoveNotificationChannelResponse.prototype, "conflictException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RemoveNotificationChannelResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], RemoveNotificationChannelResponse.prototype, "internalServerException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], RemoveNotificationChannelResponse.prototype, "removeNotificationChannelResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], RemoveNotificationChannelResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RemoveNotificationChannelResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], RemoveNotificationChannelResponse.prototype, "throttlingException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], RemoveNotificationChannelResponse.prototype, "validationException", void 0);
     return RemoveNotificationChannelResponse;
-}(SpeakeasyBase));
-export { RemoveNotificationChannelResponse };
+}(utils_1.SpeakeasyBase));
+exports.RemoveNotificationChannelResponse = RemoveNotificationChannelResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Stats = void 0;
+var utils_1 = require("../../../internal/utils");
 // Stats
 /**
  * Live stats for a service or globally
@@ -33,41 +36,41 @@ var Stats = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=calls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=calls" }),
         __metadata("design:type", Number)
     ], Stats.prototype, "calls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=concurrentHandledRequests" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=concurrentHandledRequests" }),
         __metadata("design:type", Number)
     ], Stats.prototype, "concurrentHandledRequests", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataIn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataIn" }),
         __metadata("design:type", Number)
     ], Stats.prototype, "dataIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataInRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataInRate" }),
         __metadata("design:type", Number)
     ], Stats.prototype, "dataInRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataOut" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataOut" }),
         __metadata("design:type", Number)
     ], Stats.prototype, "dataOut", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataOutRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataOutRate" }),
         __metadata("design:type", Number)
     ], Stats.prototype, "dataOutRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", Number)
     ], Stats.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overhead" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overhead" }),
         __metadata("design:type", Number)
     ], Stats.prototype, "overhead", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rate" }),
         __metadata("design:type", Number)
     ], Stats.prototype, "rate", void 0);
     return Stats;
-}(SpeakeasyBase));
-export { Stats };
+}(utils_1.SpeakeasyBase));
+exports.Stats = Stats;

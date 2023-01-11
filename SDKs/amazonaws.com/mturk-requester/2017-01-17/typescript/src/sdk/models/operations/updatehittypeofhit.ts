@@ -57,5 +57,5 @@ export class UpdateHitTypeOfHitResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateHitTypeOfHitResponse?: Map<string, any>;
+  updateHITTypeOfHITResponse?: Record<string, any>;
 }

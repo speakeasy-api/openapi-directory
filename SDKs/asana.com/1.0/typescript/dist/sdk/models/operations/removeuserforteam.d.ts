@@ -11,7 +11,7 @@ export declare class RemoveUserForTeamRequestBody extends SpeakeasyBase {
     data?: shared.TeamRemoveUserRequest;
 }
 export declare class RemoveUserForTeam204ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class RemoveUserForTeamRequest extends SpeakeasyBase {
     pathParams: RemoveUserForTeamPathParams;
@@ -22,5 +22,5 @@ export declare class RemoveUserForTeamResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    removeUserForTeam204ApplicationJsonObject?: RemoveUserForTeam204ApplicationJson;
+    removeUserForTeam204ApplicationJSONObject?: RemoveUserForTeam204ApplicationJson;
 }

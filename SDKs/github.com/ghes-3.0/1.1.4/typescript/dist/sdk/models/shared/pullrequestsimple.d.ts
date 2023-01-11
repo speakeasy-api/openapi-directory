@@ -1,8 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { Link } from "./link";
+import { Repository } from "./repository";
 import { SimpleUser } from "./simpleuser";
 import { AuthorAssociationEnum } from "./authorassociationenum";
-import { Repository } from "./repository";
 import { TeamSimple } from "./teamsimple";
 export declare class PullRequestSimpleLinks extends SpeakeasyBase {
     comments: Link;
@@ -14,6 +14,9 @@ export declare class PullRequestSimpleLinks extends SpeakeasyBase {
     self: Link;
     statuses: Link;
 }
+/**
+ * Simple User
+**/
 export declare class PullRequestSimpleSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -35,6 +38,9 @@ export declare class PullRequestSimpleSimpleUser extends SpeakeasyBase {
     type: string;
     url: string;
 }
+/**
+ * Simple User
+**/
 export declare class PullRequestSimpleBaseSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -63,6 +69,9 @@ export declare class PullRequestSimpleBase extends SpeakeasyBase {
     sha: string;
     user: PullRequestSimpleBaseSimpleUser;
 }
+/**
+ * Simple User
+**/
 export declare class PullRequestSimpleHeadSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -100,6 +109,9 @@ export declare class PullRequestSimpleLabels extends SpeakeasyBase {
     nodeId?: string;
     url?: string;
 }
+/**
+ * Simple User
+**/
 export declare class PullRequestSimpleMilestoneSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -125,6 +137,9 @@ export declare enum PullRequestSimpleMilestoneStateEnum {
     Open = "open",
     Closed = "closed"
 }
+/**
+ * A collection of related issues and pull requests.
+**/
 export declare class PullRequestSimpleMilestone extends SpeakeasyBase {
     closedAt: Date;
     closedIssues: number;

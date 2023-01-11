@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Price } from "./price";
-import { GuaranteedFixedPriceTerms } from "./guaranteedfixedpriceterms";
-import { NonGuaranteedAuctionTerms } from "./nonguaranteedauctionterms";
-import { NonGuaranteedFixedPriceTerms } from "./nonguaranteedfixedpriceterms";
-export var DealTermsBrandingTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DealTerms = exports.DealTermsBrandingTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var price_1 = require("./price");
+var guaranteedfixedpriceterms_1 = require("./guaranteedfixedpriceterms");
+var nonguaranteedauctionterms_1 = require("./nonguaranteedauctionterms");
+var nonguaranteedfixedpriceterms_1 = require("./nonguaranteedfixedpriceterms");
+var DealTermsBrandingTypeEnum;
 (function (DealTermsBrandingTypeEnum) {
     DealTermsBrandingTypeEnum["BrandingTypeUnspecified"] = "BRANDING_TYPE_UNSPECIFIED";
     DealTermsBrandingTypeEnum["Branded"] = "BRANDED";
     DealTermsBrandingTypeEnum["SemiTransparent"] = "SEMI_TRANSPARENT";
-})(DealTermsBrandingTypeEnum || (DealTermsBrandingTypeEnum = {}));
+})(DealTermsBrandingTypeEnum = exports.DealTermsBrandingTypeEnum || (exports.DealTermsBrandingTypeEnum = {}));
 // DealTerms
 /**
  * The deal terms specify the details of a Product/deal. They specify things like price per buyer, the type of pricing model (for example, fixed price, auction) and expected impressions from the publisher.
@@ -43,37 +46,37 @@ var DealTerms = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brandingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brandingType" }),
         __metadata("design:type", String)
     ], DealTerms.prototype, "brandingType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], DealTerms.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=estimatedGrossSpend" }),
-        __metadata("design:type", Price)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=estimatedGrossSpend" }),
+        __metadata("design:type", price_1.Price)
     ], DealTerms.prototype, "estimatedGrossSpend", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=estimatedImpressionsPerDay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=estimatedImpressionsPerDay" }),
         __metadata("design:type", String)
     ], DealTerms.prototype, "estimatedImpressionsPerDay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=guaranteedFixedPriceTerms" }),
-        __metadata("design:type", GuaranteedFixedPriceTerms)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=guaranteedFixedPriceTerms" }),
+        __metadata("design:type", guaranteedfixedpriceterms_1.GuaranteedFixedPriceTerms)
     ], DealTerms.prototype, "guaranteedFixedPriceTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nonGuaranteedAuctionTerms" }),
-        __metadata("design:type", NonGuaranteedAuctionTerms)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nonGuaranteedAuctionTerms" }),
+        __metadata("design:type", nonguaranteedauctionterms_1.NonGuaranteedAuctionTerms)
     ], DealTerms.prototype, "nonGuaranteedAuctionTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nonGuaranteedFixedPriceTerms" }),
-        __metadata("design:type", NonGuaranteedFixedPriceTerms)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nonGuaranteedFixedPriceTerms" }),
+        __metadata("design:type", nonguaranteedfixedpriceterms_1.NonGuaranteedFixedPriceTerms)
     ], DealTerms.prototype, "nonGuaranteedFixedPriceTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sellerTimeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sellerTimeZone" }),
         __metadata("design:type", String)
     ], DealTerms.prototype, "sellerTimeZone", void 0);
     return DealTerms;
-}(SpeakeasyBase));
-export { DealTerms };
+}(utils_1.SpeakeasyBase));
+exports.DealTerms = DealTerms;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimpleCondition } from "./simplecondition";
-import { OperatorEnum } from "./operatorenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Condition = void 0;
+var utils_1 = require("../../../internal/utils");
+var simplecondition_1 = require("./simplecondition");
+var operatorenum_1 = require("./operatorenum");
 // Condition
 /**
  * Specifies the conditions to evaluate for an activity in a journey, and how to evaluate those conditions.
@@ -35,13 +38,13 @@ var Condition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Conditions", elemType: SimpleCondition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Conditions", elemType: simplecondition_1.SimpleCondition }),
         __metadata("design:type", Array)
     ], Condition.prototype, "conditions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Operator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Operator" }),
         __metadata("design:type", String)
     ], Condition.prototype, "operator", void 0);
     return Condition;
-}(SpeakeasyBase));
-export { Condition };
+}(utils_1.SpeakeasyBase));
+exports.Condition = Condition;

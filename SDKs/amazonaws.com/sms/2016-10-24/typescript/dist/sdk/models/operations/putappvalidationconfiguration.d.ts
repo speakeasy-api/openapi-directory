@@ -23,7 +23,7 @@ export declare class PutAppValidationConfigurationResponse extends SpeakeasyBase
     invalidParameterException?: any;
     missingRequiredParameterException?: any;
     operationNotPermittedException?: any;
-    putAppValidationConfigurationResponse?: Map<string, any>;
+    putAppValidationConfigurationResponse?: Record<string, any>;
     statusCode: number;
     unauthorizedOperationException?: any;
 }

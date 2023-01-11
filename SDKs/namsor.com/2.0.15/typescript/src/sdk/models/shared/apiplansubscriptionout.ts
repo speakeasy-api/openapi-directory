@@ -41,10 +41,10 @@ export class ApiPlanSubscriptionOut extends SpeakeasyBase {
   priceOverage?: number;
 
   @SpeakeasyMetadata({ data: "json, name=priceOverageUSD" })
-  priceOverageUsd?: number;
+  priceOverageUSD?: number;
 
   @SpeakeasyMetadata({ data: "json, name=priceUSD" })
-  priceUsd?: number;
+  priceUSD?: number;
 
   @SpeakeasyMetadata({ data: "json, name=priorPlanStarted" })
   priorPlanStarted?: number;

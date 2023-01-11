@@ -11,6 +11,6 @@ export declare class GetQueryResponseRequest extends SpeakeasyBase {
 export declare class GetQueryResponseResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getQueryResponse200ApplicationJsonBinaryString?: Uint8Array;
+    getQueryResponse200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

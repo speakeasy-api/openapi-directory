@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LifecycleEvent } from "./lifecycleevent";
-import { TargetStatusEnum } from "./targetstatusenum";
-import { EcsTaskSet } from "./ecstaskset";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EcsTarget = void 0;
+var utils_1 = require("../../../internal/utils");
+var lifecycleevent_1 = require("./lifecycleevent");
+var targetstatusenum_1 = require("./targetstatusenum");
+var ecstaskset_1 = require("./ecstaskset");
 // EcsTarget
 /**
  *  Information about the target of an Amazon ECS deployment.
@@ -36,33 +39,33 @@ var EcsTarget = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentId" }),
         __metadata("design:type", String)
     ], EcsTarget.prototype, "deploymentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdatedAt" }),
         __metadata("design:type", Date)
     ], EcsTarget.prototype, "lastUpdatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifecycleEvents", elemType: LifecycleEvent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifecycleEvents", elemType: lifecycleevent_1.LifecycleEvent }),
         __metadata("design:type", Array)
     ], EcsTarget.prototype, "lifecycleEvents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], EcsTarget.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetArn" }),
         __metadata("design:type", String)
     ], EcsTarget.prototype, "targetArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetId" }),
         __metadata("design:type", String)
     ], EcsTarget.prototype, "targetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskSetsInfo", elemType: EcsTaskSet }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskSetsInfo", elemType: ecstaskset_1.EcsTaskSet }),
         __metadata("design:type", Array)
     ], EcsTarget.prototype, "taskSetsInfo", void 0);
     return EcsTarget;
-}(SpeakeasyBase));
-export { EcsTarget };
+}(utils_1.SpeakeasyBase));
+exports.EcsTarget = EcsTarget;

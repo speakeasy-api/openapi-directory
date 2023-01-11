@@ -18,13 +18,13 @@ export declare class LocationsGetV2LocationsLocationIdGetQueryParams extends Spe
     manufacturerName?: string[];
     modelName?: string[];
     offset?: number;
-    orderBy?: shared.LocationsOrderEnum;
+    orderBy?: Record<string, any>;
     page?: number;
     parameter?: any[];
     parameterId?: number;
     radius?: number;
     sensorType?: shared.SensorTypesEnum;
-    sort?: shared.SortEnum;
+    sort?: Record<string, any>;
     sourceName?: string[];
     unit?: string[];
 }
@@ -35,6 +35,6 @@ export declare class LocationsGetV2LocationsLocationIdGetRequest extends Speakea
 export declare class LocationsGetV2LocationsLocationIdGetResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
-    openAqResult?: shared.OpenAqResult;
+    openAQResult?: shared.OpenAqResult;
     statusCode: number;
 }

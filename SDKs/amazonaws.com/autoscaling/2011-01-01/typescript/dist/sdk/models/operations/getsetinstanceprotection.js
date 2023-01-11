@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetSetInstanceProtectionActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSetInstanceProtectionResponse = exports.GetSetInstanceProtectionRequest = exports.GetSetInstanceProtectionHeaders = exports.GetSetInstanceProtectionQueryParams = exports.GetSetInstanceProtectionVersionEnum = exports.GetSetInstanceProtectionActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetSetInstanceProtectionActionEnum;
 (function (GetSetInstanceProtectionActionEnum) {
     GetSetInstanceProtectionActionEnum["SetInstanceProtection"] = "SetInstanceProtection";
-})(GetSetInstanceProtectionActionEnum || (GetSetInstanceProtectionActionEnum = {}));
-export var GetSetInstanceProtectionVersionEnum;
+})(GetSetInstanceProtectionActionEnum = exports.GetSetInstanceProtectionActionEnum || (exports.GetSetInstanceProtectionActionEnum = {}));
+var GetSetInstanceProtectionVersionEnum;
 (function (GetSetInstanceProtectionVersionEnum) {
     GetSetInstanceProtectionVersionEnum["TwoThousandAndEleven0101"] = "2011-01-01";
-})(GetSetInstanceProtectionVersionEnum || (GetSetInstanceProtectionVersionEnum = {}));
+})(GetSetInstanceProtectionVersionEnum = exports.GetSetInstanceProtectionVersionEnum || (exports.GetSetInstanceProtectionVersionEnum = {}));
 var GetSetInstanceProtectionQueryParams = /** @class */ (function (_super) {
     __extends(GetSetInstanceProtectionQueryParams, _super);
     function GetSetInstanceProtectionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetSetInstanceProtectionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AutoScalingGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AutoScalingGroupName" }),
         __metadata("design:type", String)
     ], GetSetInstanceProtectionQueryParams.prototype, "autoScalingGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=InstanceIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=InstanceIds" }),
         __metadata("design:type", Array)
     ], GetSetInstanceProtectionQueryParams.prototype, "instanceIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ProtectedFromScaleIn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ProtectedFromScaleIn" }),
         __metadata("design:type", Boolean)
     ], GetSetInstanceProtectionQueryParams.prototype, "protectedFromScaleIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetSetInstanceProtectionQueryParams.prototype, "version", void 0);
     return GetSetInstanceProtectionQueryParams;
-}(SpeakeasyBase));
-export { GetSetInstanceProtectionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSetInstanceProtectionQueryParams = GetSetInstanceProtectionQueryParams;
 var GetSetInstanceProtectionHeaders = /** @class */ (function (_super) {
     __extends(GetSetInstanceProtectionHeaders, _super);
     function GetSetInstanceProtectionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetSetInstanceProtectionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetSetInstanceProtectionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetSetInstanceProtectionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetSetInstanceProtectionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetSetInstanceProtectionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetSetInstanceProtectionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetSetInstanceProtectionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetSetInstanceProtectionHeaders;
-}(SpeakeasyBase));
-export { GetSetInstanceProtectionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetSetInstanceProtectionHeaders = GetSetInstanceProtectionHeaders;
 var GetSetInstanceProtectionRequest = /** @class */ (function (_super) {
     __extends(GetSetInstanceProtectionRequest, _super);
     function GetSetInstanceProtectionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetInstanceProtectionQueryParams)
     ], GetSetInstanceProtectionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetInstanceProtectionHeaders)
     ], GetSetInstanceProtectionRequest.prototype, "headers", void 0);
     return GetSetInstanceProtectionRequest;
-}(SpeakeasyBase));
-export { GetSetInstanceProtectionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSetInstanceProtectionRequest = GetSetInstanceProtectionRequest;
 var GetSetInstanceProtectionResponse = /** @class */ (function (_super) {
     __extends(GetSetInstanceProtectionResponse, _super);
     function GetSetInstanceProtectionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetSetInstanceProtectionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSetInstanceProtectionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSetInstanceProtectionResponse.prototype, "statusCode", void 0);
     return GetSetInstanceProtectionResponse;
-}(SpeakeasyBase));
-export { GetSetInstanceProtectionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSetInstanceProtectionResponse = GetSetInstanceProtectionResponse;

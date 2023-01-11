@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestGridSessionAction = void 0;
+var utils_1 = require("../../../internal/utils");
 // TestGridSessionAction
 /**
  * An action taken by a <a>TestGridSession</a> browser instance.
@@ -33,25 +36,25 @@ var TestGridSessionAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], TestGridSessionAction.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=duration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=duration" }),
         __metadata("design:type", Number)
     ], TestGridSessionAction.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMethod" }),
         __metadata("design:type", String)
     ], TestGridSessionAction.prototype, "requestMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", Date)
     ], TestGridSessionAction.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusCode" }),
         __metadata("design:type", String)
     ], TestGridSessionAction.prototype, "statusCode", void 0);
     return TestGridSessionAction;
-}(SpeakeasyBase));
-export { TestGridSessionAction };
+}(utils_1.SpeakeasyBase));
+exports.TestGridSessionAction = TestGridSessionAction;

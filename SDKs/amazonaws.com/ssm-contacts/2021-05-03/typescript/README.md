@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AcceptPageRequest, AcceptPageResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,26 +33,26 @@ const sdk = new SDK(WithSecurity(
     
 const req: AcceptPageRequest = {
   headers: {
-    xAmzAlgorithm: "at",
-    xAmzContentSha256: "repellat",
-    xAmzCredential: "placeat",
-    xAmzDate: "accusantium",
-    xAmzSecurityToken: "sunt",
-    xAmzSignature: "at",
-    xAmzSignedHeaders: "et",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "SSMContacts.AcceptPage",
   },
   request: {
-    acceptCode: "consequatur",
+    acceptCode: "fugit",
     acceptCodeValidation: "IGNORE",
-    acceptType: "READ",
-    contactChannelId: "quia",
-    note: "eaque",
-    pageId: "et",
+    acceptType: "DELIVERED",
+    contactChannelId: "rerum",
+    note: "dicta",
+    pageId: "debitis",
   },
 };
 
-sdk.sdk.acceptPage(req).then((res: AcceptPageResponse | AxiosError) => {
+sdk.acceptPage(req).then((res: AcceptPageResponse | AxiosError) => {
    // handle response
 });
 ```

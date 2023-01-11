@@ -14,7 +14,7 @@ export declare class Connector extends SpeakeasyBase {
     displayName?: string;
     documentationUri?: string;
     externalUri?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     launchStage?: ConnectorLaunchStageEnum;
     name?: string;
     updateTime?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagApiDeleteResponse = exports.TagApiDeleteRequest = exports.TagApiDeleteQueryParams = exports.TagApiDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TagApiDeletePathParams = /** @class */ (function (_super) {
     __extends(TagApiDeletePathParams, _super);
     function TagApiDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], TagApiDeletePathParams.prototype, "id", void 0);
     return TagApiDeletePathParams;
-}(SpeakeasyBase));
-export { TagApiDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.TagApiDeletePathParams = TagApiDeletePathParams;
 var TagApiDeleteQueryParams = /** @class */ (function (_super) {
     __extends(TagApiDeleteQueryParams, _super);
     function TagApiDeleteQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=hardDelete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=hardDelete" }),
         __metadata("design:type", Boolean)
     ], TagApiDeleteQueryParams.prototype, "hardDelete", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=notes" }),
         __metadata("design:type", String)
     ], TagApiDeleteQueryParams.prototype, "notes", void 0);
     return TagApiDeleteQueryParams;
-}(SpeakeasyBase));
-export { TagApiDeleteQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.TagApiDeleteQueryParams = TagApiDeleteQueryParams;
 var TagApiDeleteRequest = /** @class */ (function (_super) {
     __extends(TagApiDeleteRequest, _super);
     function TagApiDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TagApiDeletePathParams)
     ], TagApiDeleteRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TagApiDeleteQueryParams)
     ], TagApiDeleteRequest.prototype, "queryParams", void 0);
     return TagApiDeleteRequest;
-}(SpeakeasyBase));
-export { TagApiDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.TagApiDeleteRequest = TagApiDeleteRequest;
 var TagApiDeleteResponse = /** @class */ (function (_super) {
     __extends(TagApiDeleteResponse, _super);
     function TagApiDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TagApiDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagApiDeleteResponse.prototype, "statusCode", void 0);
     return TagApiDeleteResponse;
-}(SpeakeasyBase));
-export { TagApiDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.TagApiDeleteResponse = TagApiDeleteResponse;

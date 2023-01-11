@@ -72,5 +72,5 @@ export class UpdateEnvironmentResponse extends SpeakeasyBase {
   tooManyRequestsException?: any;
 
   @SpeakeasyMetadata()
-  updateEnvironmentResult?: Map<string, any>;
+  updateEnvironmentResult?: Record<string, any>;
 }

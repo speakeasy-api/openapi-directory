@@ -21,6 +21,6 @@ export declare class GetIsosIdRequest extends SpeakeasyBase {
 }
 export declare class GetIsosIdResponse extends SpeakeasyBase {
     contentType: string;
-    getIsosId200ApplicationJsonObject?: GetIsosId200ApplicationJson;
     statusCode: number;
+    getIsosId200ApplicationJSONObject?: GetIsosId200ApplicationJson;
 }

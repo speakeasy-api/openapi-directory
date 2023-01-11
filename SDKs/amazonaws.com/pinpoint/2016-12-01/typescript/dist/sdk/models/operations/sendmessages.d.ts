@@ -16,9 +16,9 @@ export declare class SendMessagesHeaders extends SpeakeasyBase {
  * Specifies the configuration and other settings for a message.
 **/
 export declare class SendMessagesRequestBodyMessageRequest extends SpeakeasyBase {
-    addresses?: Map<string, shared.AddressConfiguration>;
-    context?: Map<string, string>;
-    endpoints?: Map<string, shared.EndpointSendConfiguration>;
+    addresses?: Record<string, shared.AddressConfiguration>;
+    context?: Record<string, string>;
+    endpoints?: Record<string, shared.EndpointSendConfiguration>;
     messageConfiguration?: shared.DirectMessageConfiguration;
     templateConfiguration?: shared.TemplateConfiguration;
     traceId?: string;

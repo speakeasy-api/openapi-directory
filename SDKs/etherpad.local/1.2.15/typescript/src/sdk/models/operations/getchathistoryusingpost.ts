@@ -7,7 +7,7 @@ export class GetChatHistoryUsingPostQueryParams extends SpeakeasyBase {
   end?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=start" })
   start?: string;
@@ -52,7 +52,7 @@ export class GetChatHistoryUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -64,7 +64,7 @@ export class GetChatHistoryUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,7 +76,7 @@ export class GetChatHistoryUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -97,14 +97,14 @@ export class GetChatHistoryUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getChatHistoryUsingPost200ApplicationJsonObject?: GetChatHistoryUsingPost200ApplicationJson;
+  getChatHistoryUsingPOST200ApplicationJSONObject?: GetChatHistoryUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getChatHistoryUsingPost400ApplicationJsonObject?: GetChatHistoryUsingPost400ApplicationJson;
+  getChatHistoryUsingPOST400ApplicationJSONObject?: GetChatHistoryUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getChatHistoryUsingPost401ApplicationJsonObject?: GetChatHistoryUsingPost401ApplicationJson;
+  getChatHistoryUsingPOST401ApplicationJSONObject?: GetChatHistoryUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getChatHistoryUsingPost500ApplicationJsonObject?: GetChatHistoryUsingPost500ApplicationJson;
+  getChatHistoryUsingPOST500ApplicationJSONObject?: GetChatHistoryUsingPost500ApplicationJson;
 }

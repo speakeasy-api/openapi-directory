@@ -22,6 +22,10 @@ export class WorkflowRunSimpleCommitCommitter extends SpeakeasyBase {
 }
 
 
+// WorkflowRunSimpleCommit
+/** 
+ * Simple Commit
+**/
 export class WorkflowRunSimpleCommit extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=author" })
   author: WorkflowRunSimpleCommitAuthor;

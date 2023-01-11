@@ -5,7 +5,7 @@ export declare class LandlordControllerCreateMaintenancePreferencePathParams ext
 export declare class LandlordControllerCreateMaintenancePreferenceQueryParams extends SpeakeasyBase {
     name: string;
     notes: string;
-    tenancyId: string;
+    tenancyID: string;
     token: string;
 }
 export declare class LandlordControllerCreateMaintenancePreferenceRequest extends SpeakeasyBase {
@@ -14,9 +14,9 @@ export declare class LandlordControllerCreateMaintenancePreferenceRequest extend
 }
 export declare class LandlordControllerCreateMaintenancePreferenceResponse extends SpeakeasyBase {
     contentType: string;
-    landlordControllerCreateMaintenancePreference200ApplicationJsonString?: string;
-    landlordControllerCreateMaintenancePreference200ApplicationXmlString?: string;
-    landlordControllerCreateMaintenancePreference200TextJsonString?: string;
-    landlordControllerCreateMaintenancePreference200TextXmlString?: string;
+    landlordControllerCreateMaintenancePreference200ApplicationJSONString?: string;
+    landlordControllerCreateMaintenancePreference200ApplicationXMLString?: string;
+    landlordControllerCreateMaintenancePreference200TextJSONString?: string;
+    landlordControllerCreateMaintenancePreference200TextXMLString?: string;
     statusCode: number;
 }

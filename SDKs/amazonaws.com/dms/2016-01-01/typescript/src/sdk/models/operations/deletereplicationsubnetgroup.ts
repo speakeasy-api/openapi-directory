@@ -48,7 +48,7 @@ export class DeleteReplicationSubnetGroupResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteReplicationSubnetGroupResponse?: Map<string, any>;
+  deleteReplicationSubnetGroupResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidResourceStateFault?: any;

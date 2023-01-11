@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetChargeStationResponse = exports.GetChargeStationRequest = exports.GetChargeStationQueryParams = exports.GetChargeStationPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetChargeStationPathParams = /** @class */ (function (_super) {
     __extends(GetChargeStationPathParams, _super);
     function GetChargeStationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetChargeStationPathParams.prototype, "id", void 0);
     return GetChargeStationPathParams;
-}(SpeakeasyBase));
-export { GetChargeStationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetChargeStationPathParams = GetChargeStationPathParams;
 var GetChargeStationQueryParams = /** @class */ (function (_super) {
     __extends(GetChargeStationQueryParams, _super);
     function GetChargeStationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_evses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_evses" }),
         __metadata("design:type", Boolean)
     ], GetChargeStationQueryParams.prototype, "includeEvses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_location" }),
         __metadata("design:type", Boolean)
     ], GetChargeStationQueryParams.prototype, "includeLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_organization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_organization" }),
         __metadata("design:type", Boolean)
     ], GetChargeStationQueryParams.prototype, "includeOrganization", void 0);
     return GetChargeStationQueryParams;
-}(SpeakeasyBase));
-export { GetChargeStationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetChargeStationQueryParams = GetChargeStationQueryParams;
 var GetChargeStationRequest = /** @class */ (function (_super) {
     __extends(GetChargeStationRequest, _super);
     function GetChargeStationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetChargeStationPathParams)
     ], GetChargeStationRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetChargeStationQueryParams)
     ], GetChargeStationRequest.prototype, "queryParams", void 0);
     return GetChargeStationRequest;
-}(SpeakeasyBase));
-export { GetChargeStationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetChargeStationRequest = GetChargeStationRequest;
 var GetChargeStationResponse = /** @class */ (function (_super) {
     __extends(GetChargeStationResponse, _super);
     function GetChargeStationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetChargeStationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetChargeStationResponse.prototype, "statusCode", void 0);
     return GetChargeStationResponse;
-}(SpeakeasyBase));
-export { GetChargeStationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetChargeStationResponse = GetChargeStationResponse;

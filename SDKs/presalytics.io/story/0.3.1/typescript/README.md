@@ -16,24 +16,17 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { CacheNonceGetRequest, CacheNonceGetResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetEnvironmentResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
-    
-const req: CacheNonceGetRequest = {
-  pathParams: {
-    nonce: "animi",
-  },
-};
 
-sdk.sdk.cacheNonceGet(req).then((res: CacheNonceGetResponse | AxiosError) => {
+sdk.getEnvironment().then((res: GetEnvironmentResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -44,46 +37,76 @@ sdk.sdk.cacheNonceGet(req).then((res: CacheNonceGetResponse | AxiosError) => {
 
 ### SDK SDK
 
+* `getEnvironment` - Environment: Get
+* `specNoTags` - Specification: No tags
+
+### Cache
+
 * `cacheNonceGet` - Cache: Get Subdocument
 * `cachePost` - Cache: Store Subdocument
-* `collaboratorsPost` - Collborators: Bulk Update (Admin Only)
-* `getEnvironment` - Environment: Get
-* `sessionIdDelete` - Sessions: Delete by Id
-* `sessionIdGet` - Sessions: Get
-* `sessionsIdViewsGet` - Views: List Session Views
-* `sessionsIdViewsPost` - Views: Create A Session View
-* `specNoTags` - Specification: No tags
-* `storyGet` - Story: Get List of User Stories
-* `storyIdAnalytics` - Story: View Analytics
-* `storyIdCollaboratorsGet` - Story Collaborators: List
-* `storyIdCollaboratorsInactivePost` - Story Collaborators: Edit Inactive User Permission
-* `storyIdCollaboratorsPost` - Story Collaborators: Add New User
-* `storyIdCollaboratorsUseridDelete` - Story Collaborators: Remove User
-* `storyIdCollaboratorsUseridGet` - Story Collaborators: Access Permissions
-* `storyIdCollaboratorsUseridPermissiontypeGet` - Permissions: Story Authorization for a User
-* `storyIdCollaboratorsUseridPut` - Story Collaborators: Edit Access Rights
-* `storyIdDelete` - Story: Delete by Id
+
+### Conversation
+
+* `storyIdMessagesGet` - Conversation: List Conversation Messages
+* `storyIdMessagesPost` - Conversation: Send a Message
+
+### Events
+
 * `storyIdEventsGet` - Events: List Events
 * `storyIdEventsPost` - Events: Manage Events
+
+### Permissions
+
+* `storyIdCollaboratorsUseridPermissiontypeGet` - Permissions: Story Authorization for a User
+* `storyPermissionTypesGet` - Permissions: List Permission Types
+
+### Restricted
+
+* `collaboratorsPost` - Collborators: Bulk Update (Admin Only)
+
+### Schemas
+
+* `storyOutlineSchema` - Story Outline Schema
+
+### Sessions
+
+* `sessionIdDelete` - Sessions: Delete by Id
+* `sessionIdGet` - Sessions: Get
+* `storyIdSessionPost` - Sessions: Create a Session
+* `storyIdSessionsGet` - Sessions: List Story Sessions
+
+### Story
+
+* `storyGet` - Story: Get List of User Stories
+* `storyIdAnalytics` - Story: View Analytics
+* `storyIdDelete` - Story: Delete by Id
 * `storyIdFileOoxmlautomationidDelete` - Story: Delete Subdocument
 * `storyIdFileOoxmlautomationidGet` - Story: Download Updated File
 * `storyIdFilePost` - Story: Upload a File To Existing Story
 * `storyIdGet` - Story: Get by Id
-* `storyIdMessagesGet` - Conversation: List Conversation Messages
-* `storyIdMessagesPost` - Conversation: Send a Message
 * `storyIdOutlineGet` - Story: Get Story Outline
 * `storyIdOutlinePost` - Story: Post Story Outline
 * `storyIdPublic` - Story: Public Link to Story Reveal.js Document
 * `storyIdPut` - Story: Modify
 * `storyIdReveal` - Story: Get Story at Reveal.js Document
-* `storyIdSessionPost` - Sessions: Create a Session
-* `storyIdSessionsGet` - Sessions: List Story Sessions
 * `storyIdStatusGet` - Story: Get Story Status
-* `storyOutlineSchema` - Story Outline Schema
-* `storyPermissionTypesGet` - Permissions: List Permission Types
 * `storyPost` - Story: Upload
 * `storyPostFile` - Story: Upload a File
 * `storyPostFileJson` - Story: Upload a File (base64)
+
+### Story Collaborators
+
+* `storyIdCollaboratorsGet` - Story Collaborators: List
+* `storyIdCollaboratorsInactivePost` - Story Collaborators: Edit Inactive User Permission
+* `storyIdCollaboratorsPost` - Story Collaborators: Add New User
+* `storyIdCollaboratorsUseridDelete` - Story Collaborators: Remove User
+* `storyIdCollaboratorsUseridGet` - Story Collaborators: Access Permissions
+* `storyIdCollaboratorsUseridPut` - Story Collaborators: Edit Access Rights
+
+### Views
+
+* `sessionsIdViewsGet` - Views: List Session Views
+* `sessionsIdViewsPost` - Views: Create A Session View
 * `viewsIdDelete` - Views: Delete by Id
 * `viewsIdGet` - Views: Get View
 

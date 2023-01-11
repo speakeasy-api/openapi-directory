@@ -19,17 +19,17 @@ export declare class Belegdaten extends SpeakeasyBase {
     posten?: Posten[];
     rabatte?: Rabatt[];
     storno?: boolean;
-    stornoBelegUuid?: string;
+    stornoBelegUUID?: string;
     stornoText?: string;
     training?: boolean;
     unternehmenAdresse1?: string;
     unternehmenAdresse2?: string;
     unternehmenFusszeile?: string;
-    unternehmenId?: string;
-    unternehmenIdTyp?: BelegdatenUnternehmenIdTypEnum;
+    unternehmenID?: string;
+    unternehmenIDTyp?: BelegdatenUnternehmenIdTypEnum;
     unternehmenKopfzeile?: string;
     unternehmenName?: string;
     unternehmenOrt?: string;
-    unternehmenPlz?: string;
+    unternehmenPLZ?: string;
     zahlungen?: Zahlung[];
 }

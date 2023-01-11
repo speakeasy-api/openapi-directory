@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FailedItemDetails } from "./faileditemdetails";
-import { RulesPackage } from "./rulespackage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeRulesPackagesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var faileditemdetails_1 = require("./faileditemdetails");
+var rulespackage_1 = require("./rulespackage");
 var DescribeRulesPackagesResponse = /** @class */ (function (_super) {
     __extends(DescribeRulesPackagesResponse, _super);
     function DescribeRulesPackagesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failedItems", elemType: FailedItemDetails }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failedItems", elemType: faileditemdetails_1.FailedItemDetails }),
+        __metadata("design:type", Object)
     ], DescribeRulesPackagesResponse.prototype, "failedItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rulesPackages", elemType: RulesPackage }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rulesPackages", elemType: rulespackage_1.RulesPackage }),
         __metadata("design:type", Array)
     ], DescribeRulesPackagesResponse.prototype, "rulesPackages", void 0);
     return DescribeRulesPackagesResponse;
-}(SpeakeasyBase));
-export { DescribeRulesPackagesResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeRulesPackagesResponse = DescribeRulesPackagesResponse;

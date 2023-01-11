@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricValue = void 0;
+var utils_1 = require("../../../internal/utils");
 // MetricValue
 /**
  * A metric value, with an expected value and a variance; represents a count that may be either exact or estimated (for example, when sampled).
@@ -33,13 +36,13 @@ var MetricValue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], MetricValue.prototype, "value", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=variance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=variance" }),
         __metadata("design:type", String)
     ], MetricValue.prototype, "variance", void 0);
     return MetricValue;
-}(SpeakeasyBase));
-export { MetricValue };
+}(utils_1.SpeakeasyBase));
+exports.MetricValue = MetricValue;

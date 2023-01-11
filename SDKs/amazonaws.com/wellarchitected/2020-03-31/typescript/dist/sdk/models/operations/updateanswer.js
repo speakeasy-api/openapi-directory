@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,170 +14,195 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateAnswerResponse = exports.UpdateAnswerRequest = exports.UpdateAnswerRequestBody = exports.UpdateAnswerRequestBodyReasonEnum = exports.UpdateAnswerHeaders = exports.UpdateAnswerPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var UpdateAnswerPathParams = /** @class */ (function (_super) {
     __extends(UpdateAnswerPathParams, _super);
     function UpdateAnswerPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=LensAlias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=LensAlias" }),
         __metadata("design:type", String)
     ], UpdateAnswerPathParams.prototype, "lensAlias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=QuestionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=QuestionId" }),
         __metadata("design:type", String)
     ], UpdateAnswerPathParams.prototype, "questionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=WorkloadId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=WorkloadId" }),
         __metadata("design:type", String)
     ], UpdateAnswerPathParams.prototype, "workloadId", void 0);
     return UpdateAnswerPathParams;
-}(SpeakeasyBase));
-export { UpdateAnswerPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateAnswerPathParams = UpdateAnswerPathParams;
 var UpdateAnswerHeaders = /** @class */ (function (_super) {
     __extends(UpdateAnswerHeaders, _super);
     function UpdateAnswerHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], UpdateAnswerHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], UpdateAnswerHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], UpdateAnswerHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], UpdateAnswerHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], UpdateAnswerHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], UpdateAnswerHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], UpdateAnswerHeaders.prototype, "xAmzSignedHeaders", void 0);
     return UpdateAnswerHeaders;
-}(SpeakeasyBase));
-export { UpdateAnswerHeaders };
-export var UpdateAnswerRequestBodyReasonEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateAnswerHeaders = UpdateAnswerHeaders;
+var UpdateAnswerRequestBodyReasonEnum;
 (function (UpdateAnswerRequestBodyReasonEnum) {
     UpdateAnswerRequestBodyReasonEnum["OutOfScope"] = "OUT_OF_SCOPE";
     UpdateAnswerRequestBodyReasonEnum["BusinessPriorities"] = "BUSINESS_PRIORITIES";
     UpdateAnswerRequestBodyReasonEnum["ArchitectureConstraints"] = "ARCHITECTURE_CONSTRAINTS";
     UpdateAnswerRequestBodyReasonEnum["Other"] = "OTHER";
     UpdateAnswerRequestBodyReasonEnum["None"] = "NONE";
-})(UpdateAnswerRequestBodyReasonEnum || (UpdateAnswerRequestBodyReasonEnum = {}));
+})(UpdateAnswerRequestBodyReasonEnum = exports.UpdateAnswerRequestBodyReasonEnum || (exports.UpdateAnswerRequestBodyReasonEnum = {}));
 var UpdateAnswerRequestBody = /** @class */ (function (_super) {
     __extends(UpdateAnswerRequestBody, _super);
     function UpdateAnswerRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChoiceUpdates", elemType: shared.ChoiceUpdate }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChoiceUpdates", elemType: shared.ChoiceUpdate }),
+        __metadata("design:type", Object)
     ], UpdateAnswerRequestBody.prototype, "choiceUpdates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsApplicable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsApplicable" }),
         __metadata("design:type", Boolean)
     ], UpdateAnswerRequestBody.prototype, "isApplicable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Notes" }),
         __metadata("design:type", String)
     ], UpdateAnswerRequestBody.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Reason" }),
         __metadata("design:type", String)
     ], UpdateAnswerRequestBody.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SelectedChoices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SelectedChoices" }),
         __metadata("design:type", Array)
     ], UpdateAnswerRequestBody.prototype, "selectedChoices", void 0);
     return UpdateAnswerRequestBody;
-}(SpeakeasyBase));
-export { UpdateAnswerRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateAnswerRequestBody = UpdateAnswerRequestBody;
 var UpdateAnswerRequest = /** @class */ (function (_super) {
     __extends(UpdateAnswerRequest, _super);
     function UpdateAnswerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateAnswerPathParams)
     ], UpdateAnswerRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateAnswerHeaders)
     ], UpdateAnswerRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateAnswerRequestBody)
     ], UpdateAnswerRequest.prototype, "request", void 0);
     return UpdateAnswerRequest;
-}(SpeakeasyBase));
-export { UpdateAnswerRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateAnswerRequest = UpdateAnswerRequest;
 var UpdateAnswerResponse = /** @class */ (function (_super) {
     __extends(UpdateAnswerResponse, _super);
     function UpdateAnswerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateAnswerResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateAnswerResponse.prototype, "conflictException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateAnswerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateAnswerResponse.prototype, "internalServerException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateAnswerResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateAnswerResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateAnswerResponse.prototype, "throttlingException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UpdateAnswerOutput)
     ], UpdateAnswerResponse.prototype, "updateAnswerOutput", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], UpdateAnswerResponse.prototype, "validationException", void 0);
     return UpdateAnswerResponse;
-}(SpeakeasyBase));
-export { UpdateAnswerResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateAnswerResponse = UpdateAnswerResponse;

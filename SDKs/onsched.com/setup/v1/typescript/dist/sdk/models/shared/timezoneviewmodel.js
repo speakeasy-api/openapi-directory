@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TimezonesViewModel } from "./timezonesviewmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TimezoneViewModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var timezonesviewmodel_1 = require("./timezonesviewmodel");
 var TimezoneViewModel = /** @class */ (function (_super) {
     __extends(TimezoneViewModel, _super);
     function TimezoneViewModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regions" }),
         __metadata("design:type", Array)
     ], TimezoneViewModel.prototype, "regions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezones", elemType: TimezonesViewModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezones", elemType: timezonesviewmodel_1.TimezonesViewModel }),
         __metadata("design:type", Array)
     ], TimezoneViewModel.prototype, "timezones", void 0);
     return TimezoneViewModel;
-}(SpeakeasyBase));
-export { TimezoneViewModel };
+}(utils_1.SpeakeasyBase));
+exports.TimezoneViewModel = TimezoneViewModel;

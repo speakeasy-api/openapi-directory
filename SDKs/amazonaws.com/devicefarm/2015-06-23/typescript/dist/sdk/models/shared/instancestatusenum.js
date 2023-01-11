@@ -1,7 +1,10 @@
-export var InstanceStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceStatusEnum = void 0;
+var InstanceStatusEnum;
 (function (InstanceStatusEnum) {
     InstanceStatusEnum["InUse"] = "IN_USE";
     InstanceStatusEnum["Preparing"] = "PREPARING";
     InstanceStatusEnum["Available"] = "AVAILABLE";
     InstanceStatusEnum["NotAvailable"] = "NOT_AVAILABLE";
-})(InstanceStatusEnum || (InstanceStatusEnum = {}));
+})(InstanceStatusEnum = exports.InstanceStatusEnum || (exports.InstanceStatusEnum = {}));

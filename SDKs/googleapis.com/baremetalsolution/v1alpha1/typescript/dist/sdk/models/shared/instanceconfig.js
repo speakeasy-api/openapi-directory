@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NetworkAddress } from "./networkaddress";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var networkaddress_1 = require("./networkaddress");
 // InstanceConfig
 /**
  * Configuration parameters for a new instance.
@@ -34,37 +37,37 @@ var InstanceConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientNetwork" }),
-        __metadata("design:type", NetworkAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientNetwork" }),
+        __metadata("design:type", networkaddress_1.NetworkAddress)
     ], InstanceConfig.prototype, "clientNetwork", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hyperthreading" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hyperthreading" }),
         __metadata("design:type", Boolean)
     ], InstanceConfig.prototype, "hyperthreading", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], InstanceConfig.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceType" }),
         __metadata("design:type", String)
     ], InstanceConfig.prototype, "instanceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], InstanceConfig.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=osImage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=osImage" }),
         __metadata("design:type", String)
     ], InstanceConfig.prototype, "osImage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateNetwork" }),
-        __metadata("design:type", NetworkAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateNetwork" }),
+        __metadata("design:type", networkaddress_1.NetworkAddress)
     ], InstanceConfig.prototype, "privateNetwork", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userNote" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userNote" }),
         __metadata("design:type", String)
     ], InstanceConfig.prototype, "userNote", void 0);
     return InstanceConfig;
-}(SpeakeasyBase));
-export { InstanceConfig };
+}(utils_1.SpeakeasyBase));
+exports.InstanceConfig = InstanceConfig;

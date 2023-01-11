@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BetPlaced = void 0;
+var utils_1 = require("../../../internal/utils");
 var BetPlaced = /** @class */ (function (_super) {
     __extends(BetPlaced, _super);
     function BetPlaced() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], BetPlaced.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numLines" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numLines" }),
         __metadata("design:type", Number)
     ], BetPlaced.prototype, "numLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number" }),
         __metadata("design:type", Number)
     ], BetPlaced.prototype, "number", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placedDateTime" }),
         __metadata("design:type", String)
     ], BetPlaced.prototype, "placedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=receipt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=receipt" }),
         __metadata("design:type", String)
     ], BetPlaced.prototype, "receipt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalStake" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalStake" }),
         __metadata("design:type", Number)
     ], BetPlaced.prototype, "totalStake", void 0);
     return BetPlaced;
-}(SpeakeasyBase));
-export { BetPlaced };
+}(utils_1.SpeakeasyBase));
+exports.BetPlaced = BetPlaced;

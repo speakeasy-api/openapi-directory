@@ -25,5 +25,5 @@ export class ProtocolDhcpSetTraceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolDhcpSetTrace200ApplicationJsonString?: string;
+  protocolDhcpSetTrace200ApplicationJSONString?: string;
 }

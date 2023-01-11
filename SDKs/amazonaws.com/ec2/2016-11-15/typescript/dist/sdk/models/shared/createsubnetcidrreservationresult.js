@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SubnetCidrReservation } from "./subnetcidrreservation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateSubnetCidrReservationResult = exports.CreateSubnetCidrReservationResultSubnetCidrReservation = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateSubnetCidrReservationResultSubnetCidrReservation
+/**
+ * Information about the created subnet CIDR reservation.
+**/
+var CreateSubnetCidrReservationResultSubnetCidrReservation = /** @class */ (function (_super) {
+    __extends(CreateSubnetCidrReservationResultSubnetCidrReservation, _super);
+    function CreateSubnetCidrReservationResultSubnetCidrReservation() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateSubnetCidrReservationResultSubnetCidrReservation.prototype, "cidr", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateSubnetCidrReservationResultSubnetCidrReservation.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateSubnetCidrReservationResultSubnetCidrReservation.prototype, "ownerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateSubnetCidrReservationResultSubnetCidrReservation.prototype, "reservationType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateSubnetCidrReservationResultSubnetCidrReservation.prototype, "subnetCidrReservationId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateSubnetCidrReservationResultSubnetCidrReservation.prototype, "subnetId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateSubnetCidrReservationResultSubnetCidrReservation.prototype, "tags", void 0);
+    return CreateSubnetCidrReservationResultSubnetCidrReservation;
+}(utils_1.SpeakeasyBase));
+exports.CreateSubnetCidrReservationResultSubnetCidrReservation = CreateSubnetCidrReservationResultSubnetCidrReservation;
 var CreateSubnetCidrReservationResult = /** @class */ (function (_super) {
     __extends(CreateSubnetCidrReservationResult, _super);
     function CreateSubnetCidrReservationResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", SubnetCidrReservation)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateSubnetCidrReservationResultSubnetCidrReservation)
     ], CreateSubnetCidrReservationResult.prototype, "subnetCidrReservation", void 0);
     return CreateSubnetCidrReservationResult;
-}(SpeakeasyBase));
-export { CreateSubnetCidrReservationResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateSubnetCidrReservationResult = CreateSubnetCidrReservationResult;

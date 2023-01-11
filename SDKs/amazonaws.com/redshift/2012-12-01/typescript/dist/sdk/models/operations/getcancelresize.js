@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCancelResizeActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCancelResizeResponse = exports.GetCancelResizeRequest = exports.GetCancelResizeHeaders = exports.GetCancelResizeQueryParams = exports.GetCancelResizeVersionEnum = exports.GetCancelResizeActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCancelResizeActionEnum;
 (function (GetCancelResizeActionEnum) {
     GetCancelResizeActionEnum["CancelResize"] = "CancelResize";
-})(GetCancelResizeActionEnum || (GetCancelResizeActionEnum = {}));
-export var GetCancelResizeVersionEnum;
+})(GetCancelResizeActionEnum = exports.GetCancelResizeActionEnum || (exports.GetCancelResizeActionEnum = {}));
+var GetCancelResizeVersionEnum;
 (function (GetCancelResizeVersionEnum) {
     GetCancelResizeVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(GetCancelResizeVersionEnum || (GetCancelResizeVersionEnum = {}));
+})(GetCancelResizeVersionEnum = exports.GetCancelResizeVersionEnum || (exports.GetCancelResizeVersionEnum = {}));
 var GetCancelResizeQueryParams = /** @class */ (function (_super) {
     __extends(GetCancelResizeQueryParams, _super);
     function GetCancelResizeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetCancelResizeQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ClusterIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ClusterIdentifier" }),
         __metadata("design:type", String)
     ], GetCancelResizeQueryParams.prototype, "clusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetCancelResizeQueryParams.prototype, "version", void 0);
     return GetCancelResizeQueryParams;
-}(SpeakeasyBase));
-export { GetCancelResizeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCancelResizeQueryParams = GetCancelResizeQueryParams;
 var GetCancelResizeHeaders = /** @class */ (function (_super) {
     __extends(GetCancelResizeHeaders, _super);
     function GetCancelResizeHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetCancelResizeHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetCancelResizeHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetCancelResizeHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetCancelResizeHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetCancelResizeHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetCancelResizeHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetCancelResizeHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetCancelResizeHeaders;
-}(SpeakeasyBase));
-export { GetCancelResizeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetCancelResizeHeaders = GetCancelResizeHeaders;
 var GetCancelResizeRequest = /** @class */ (function (_super) {
     __extends(GetCancelResizeRequest, _super);
     function GetCancelResizeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCancelResizeQueryParams)
     ], GetCancelResizeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCancelResizeHeaders)
     ], GetCancelResizeRequest.prototype, "headers", void 0);
     return GetCancelResizeRequest;
-}(SpeakeasyBase));
-export { GetCancelResizeRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCancelResizeRequest = GetCancelResizeRequest;
 var GetCancelResizeResponse = /** @class */ (function (_super) {
     __extends(GetCancelResizeResponse, _super);
     function GetCancelResizeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetCancelResizeResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCancelResizeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCancelResizeResponse.prototype, "statusCode", void 0);
     return GetCancelResizeResponse;
-}(SpeakeasyBase));
-export { GetCancelResizeResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCancelResizeResponse = GetCancelResizeResponse;

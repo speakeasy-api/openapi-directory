@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PecerRequest, PecerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,23 +30,23 @@ const req: PecerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      acNo: "quo",
-      dob: "ut",
+      acNO: "sit",
+      dob: "voluptas",
     },
-    consentArtifact: "vel",
+    consentArtifact: "culpa",
     format: "pdf",
-    txnId: "eligendi",
+    txnId: "consequuntur",
   },
 };
 
-sdk.sdk.pecer(req).then((res: PecerResponse | AxiosError) => {
+sdk.apIs.pecer(req).then((res: PecerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -56,7 +55,7 @@ sdk.sdk.pecer(req).then((res: PecerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `pecer` - Pension Certificate
 * `prfnd` - Provident Fund

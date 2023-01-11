@@ -63,7 +63,7 @@ export class GetMlTransformsResponse extends SpeakeasyBase {
   entityNotFoundException?: any;
 
   @SpeakeasyMetadata()
-  getMlTransformsResponse?: shared.GetMlTransformsResponse;
+  getMLTransformsResponse?: shared.GetMlTransformsResponse;
 
   @SpeakeasyMetadata()
   internalServiceException?: any;

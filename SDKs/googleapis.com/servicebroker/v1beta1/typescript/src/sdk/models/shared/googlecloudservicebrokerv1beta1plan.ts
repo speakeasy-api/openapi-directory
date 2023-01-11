@@ -20,11 +20,11 @@ export class GoogleCloudServicebrokerV1beta1Plan extends SpeakeasyBase {
   id?: string;
 
   @SpeakeasyMetadata()
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 
   @SpeakeasyMetadata()
   name?: string;
 
   @SpeakeasyMetadata()
-  schemas?: Map<string, any>;
+  schemas?: Record<string, any>;
 }

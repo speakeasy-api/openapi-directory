@@ -10,6 +10,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class GoogleRpcStatus extends SpeakeasyBase {
     code?: number;
-    details?: Map<string, any>[];
+    details?: Record<string, any>[];
     message?: string;
 }

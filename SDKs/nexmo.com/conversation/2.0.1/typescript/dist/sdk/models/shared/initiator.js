@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Initiator = exports.InitiatorJoined = void 0;
+var utils_1 = require("../../../internal/utils");
 var InitiatorJoined = /** @class */ (function (_super) {
     __extends(InitiatorJoined, _super);
     function InitiatorJoined() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isSystem" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isSystem" }),
         __metadata("design:type", Boolean)
     ], InitiatorJoined.prototype, "isSystem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=member_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=member_id" }),
         __metadata("design:type", String)
     ], InitiatorJoined.prototype, "memberId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_id" }),
         __metadata("design:type", String)
     ], InitiatorJoined.prototype, "userId", void 0);
     return InitiatorJoined;
-}(SpeakeasyBase));
-export { InitiatorJoined };
+}(utils_1.SpeakeasyBase));
+exports.InitiatorJoined = InitiatorJoined;
 var Initiator = /** @class */ (function (_super) {
     __extends(Initiator, _super);
     function Initiator() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=joined" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=joined" }),
         __metadata("design:type", InitiatorJoined)
     ], Initiator.prototype, "joined", void 0);
     return Initiator;
-}(SpeakeasyBase));
-export { Initiator };
+}(utils_1.SpeakeasyBase));
+exports.Initiator = Initiator;

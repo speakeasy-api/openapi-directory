@@ -9,6 +9,6 @@ export declare class WorkspaceDescription extends SpeakeasyBase {
     createdAt: Date;
     prometheusEndpoint?: string;
     status: WorkspaceStatus;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     workspaceId: string;
 }

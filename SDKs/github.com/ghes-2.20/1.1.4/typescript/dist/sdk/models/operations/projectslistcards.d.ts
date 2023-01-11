@@ -3,13 +3,8 @@ import * as shared from "../shared";
 export declare class ProjectsListCardsPathParams extends SpeakeasyBase {
     columnId: number;
 }
-export declare enum ProjectsListCardsArchivedStateEnum {
-    All = "all",
-    Archived = "archived",
-    NotArchived = "not_archived"
-}
 export declare class ProjectsListCardsQueryParams extends SpeakeasyBase {
-    archivedState?: ProjectsListCardsArchivedStateEnum;
+    archivedState?: shared.ColumnIdEnum;
     page?: number;
     perPage?: number;
 }
@@ -19,7 +14,7 @@ export declare class ProjectsListCardsRequest extends SpeakeasyBase {
 }
 export declare class ProjectsListCardsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     projectCards?: shared.ProjectCard[];

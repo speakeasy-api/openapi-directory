@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IndividualOutcome } from "./individualoutcome";
-export var PrimaryStepRollUpEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PrimaryStep = exports.PrimaryStepRollUpEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var individualoutcome_1 = require("./individualoutcome");
+var PrimaryStepRollUpEnum;
 (function (PrimaryStepRollUpEnum) {
     PrimaryStepRollUpEnum["Unset"] = "unset";
     PrimaryStepRollUpEnum["Success"] = "success";
@@ -32,7 +35,7 @@ export var PrimaryStepRollUpEnum;
     PrimaryStepRollUpEnum["Inconclusive"] = "inconclusive";
     PrimaryStepRollUpEnum["Skipped"] = "skipped";
     PrimaryStepRollUpEnum["Flaky"] = "flaky";
-})(PrimaryStepRollUpEnum || (PrimaryStepRollUpEnum = {}));
+})(PrimaryStepRollUpEnum = exports.PrimaryStepRollUpEnum || (exports.PrimaryStepRollUpEnum = {}));
 // PrimaryStep
 /**
  * Stores rollup test status of multiple steps that were run as a group and outcome of each individual step.
@@ -43,13 +46,13 @@ var PrimaryStep = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=individualOutcome", elemType: IndividualOutcome }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=individualOutcome", elemType: individualoutcome_1.IndividualOutcome }),
         __metadata("design:type", Array)
     ], PrimaryStep.prototype, "individualOutcome", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rollUp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rollUp" }),
         __metadata("design:type", String)
     ], PrimaryStep.prototype, "rollUp", void 0);
     return PrimaryStep;
-}(SpeakeasyBase));
-export { PrimaryStep };
+}(utils_1.SpeakeasyBase));
+exports.PrimaryStep = PrimaryStep;

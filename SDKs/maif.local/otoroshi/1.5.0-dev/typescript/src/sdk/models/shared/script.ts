@@ -8,10 +8,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class Script extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=code" })
-  code: Map<string, string>;
+  code: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=desc" })
-  desc: Map<string, string>;
+  desc: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CocerRequest, CocerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,25 +30,25 @@ const req: CocerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      certType: "aliquam",
-      companyName: "pariatur",
-      regNo: "at",
-      sector: "id",
+      certType: "sit",
+      companyName: "voluptas",
+      regNo: "culpa",
+      sector: "expedita",
     },
-    consentArtifact: "quidem",
+    consentArtifact: "consequuntur",
     format: "pdf",
-    txnId: "tempora",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.cocer(req).then((res: CocerResponse | AxiosError) => {
+sdk.apIs.cocer(req).then((res: CocerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -58,7 +57,7 @@ sdk.sdk.cocer(req).then((res: CocerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `cocer` - Company Related Certificate
 * `rfcer` - Registration Certificate of Firm/ Company

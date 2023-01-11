@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExportFilter } from "./exportfilter";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartExportTaskRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var exportfilter_1 = require("./exportfilter");
 var StartExportTaskRequest = /** @class */ (function (_super) {
     __extends(StartExportTaskRequest, _super);
     function StartExportTaskRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Date)
     ], StartExportTaskRequest.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exportDataFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exportDataFormat" }),
         __metadata("design:type", Array)
     ], StartExportTaskRequest.prototype, "exportDataFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filters", elemType: ExportFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filters", elemType: exportfilter_1.ExportFilter }),
         __metadata("design:type", Array)
     ], StartExportTaskRequest.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], StartExportTaskRequest.prototype, "startTime", void 0);
     return StartExportTaskRequest;
-}(SpeakeasyBase));
-export { StartExportTaskRequest };
+}(utils_1.SpeakeasyBase));
+exports.StartExportTaskRequest = StartExportTaskRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttributeValueUpdate } from "./attributevalueupdate";
-import { ExpectedAttributeValue } from "./expectedattributevalue";
-import { Key } from "./key";
-import { ReturnValueEnum } from "./returnvalueenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateItemInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var attributevalueupdate_1 = require("./attributevalueupdate");
+var expectedattributevalue_1 = require("./expectedattributevalue");
+var key_1 = require("./key");
+var returnvalueenum_1 = require("./returnvalueenum");
 var UpdateItemInput = /** @class */ (function (_super) {
     __extends(UpdateItemInput, _super);
     function UpdateItemInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AttributeUpdates", elemType: AttributeValueUpdate }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AttributeUpdates", elemType: attributevalueupdate_1.AttributeValueUpdate }),
+        __metadata("design:type", Object)
     ], UpdateItemInput.prototype, "attributeUpdates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Expected", elemType: ExpectedAttributeValue }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Expected", elemType: expectedattributevalue_1.ExpectedAttributeValue }),
+        __metadata("design:type", Object)
     ], UpdateItemInput.prototype, "expected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Key" }),
-        __metadata("design:type", Key)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Key" }),
+        __metadata("design:type", key_1.Key)
     ], UpdateItemInput.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReturnValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReturnValues" }),
         __metadata("design:type", String)
     ], UpdateItemInput.prototype, "returnValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableName" }),
         __metadata("design:type", String)
     ], UpdateItemInput.prototype, "tableName", void 0);
     return UpdateItemInput;
-}(SpeakeasyBase));
-export { UpdateItemInput };
+}(utils_1.SpeakeasyBase));
+exports.UpdateItemInput = UpdateItemInput;

@@ -18,5 +18,5 @@ export declare class EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseReque
 export declare class EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    enterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJsonObject?: EnterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJson;
+    enterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJSONObject?: EnterpriseAdminListSelfHostedRunnerGroupsForEnterprise200ApplicationJson;
 }

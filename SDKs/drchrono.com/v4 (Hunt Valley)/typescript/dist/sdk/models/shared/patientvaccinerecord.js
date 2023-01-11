@@ -1,0 +1,222 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatientVaccineRecord = exports.PatientVaccineRecordRecordTypeEnum = exports.PatientVaccineRecordObservedImmunityEnum = exports.PatientVaccineRecordFundingEligibilityEnum = exports.PatientVaccineRecordVaccineDose = exports.PatientVaccineRecordVaccinationStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PatientVaccineRecordVaccinationStatusEnum;
+(function (PatientVaccineRecordVaccinationStatusEnum) {
+    PatientVaccineRecordVaccinationStatusEnum["Cp"] = "CP";
+    PatientVaccineRecordVaccinationStatusEnum["Re"] = "RE";
+    PatientVaccineRecordVaccinationStatusEnum["Na"] = "NA";
+    PatientVaccineRecordVaccinationStatusEnum["Pa"] = "PA";
+})(PatientVaccineRecordVaccinationStatusEnum = exports.PatientVaccineRecordVaccinationStatusEnum || (exports.PatientVaccineRecordVaccinationStatusEnum = {}));
+// PatientVaccineRecordVaccineDose
+/**
+ * Vaccine dose ID
+**/
+var PatientVaccineRecordVaccineDose = /** @class */ (function (_super) {
+    __extends(PatientVaccineRecordVaccineDose, _super);
+    function PatientVaccineRecordVaccineDose() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", Number)
+    ], PatientVaccineRecordVaccineDose.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max_age_months" }),
+        __metadata("design:type", Number)
+    ], PatientVaccineRecordVaccineDose.prototype, "maxAgeMonths", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=min_age_months" }),
+        __metadata("design:type", Number)
+    ], PatientVaccineRecordVaccineDose.prototype, "minAgeMonths", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecordVaccineDose.prototype, "title", void 0);
+    return PatientVaccineRecordVaccineDose;
+}(utils_1.SpeakeasyBase));
+exports.PatientVaccineRecordVaccineDose = PatientVaccineRecordVaccineDose;
+var PatientVaccineRecordFundingEligibilityEnum;
+(function (PatientVaccineRecordFundingEligibilityEnum) {
+    PatientVaccineRecordFundingEligibilityEnum["V01"] = "V01";
+    PatientVaccineRecordFundingEligibilityEnum["V02"] = "V02";
+    PatientVaccineRecordFundingEligibilityEnum["V03"] = "V03";
+    PatientVaccineRecordFundingEligibilityEnum["V04"] = "V04";
+    PatientVaccineRecordFundingEligibilityEnum["V05"] = "V05";
+    PatientVaccineRecordFundingEligibilityEnum["V07"] = "V07";
+})(PatientVaccineRecordFundingEligibilityEnum = exports.PatientVaccineRecordFundingEligibilityEnum || (exports.PatientVaccineRecordFundingEligibilityEnum = {}));
+var PatientVaccineRecordObservedImmunityEnum;
+(function (PatientVaccineRecordObservedImmunityEnum) {
+    PatientVaccineRecordObservedImmunityEnum["ThreeHundredAndNinetyEightMillionOneHundredAndTwoThousandAndNine"] = "398102009";
+    PatientVaccineRecordObservedImmunityEnum["FourHundredAndNineMillionFourHundredAndNinetyEightThousandAndFour"] = "409498004";
+    PatientVaccineRecordObservedImmunityEnum["ThreeHundredAndNinetySevenMillionFourHundredAndTwentyEightThousand"] = "397428000";
+    PatientVaccineRecordObservedImmunityEnum["EighteenMillionSixHundredAndTwentyFourThousand"] = "18624000";
+    PatientVaccineRecordObservedImmunityEnum["NinetyOneMillionFourHundredAndTwentyEightThousandAndFive"] = "91428005";
+    PatientVaccineRecordObservedImmunityEnum["TwoHundredAndSeventyOneMillionFiveHundredAndElevenThousand"] = "271511000";
+    PatientVaccineRecordObservedImmunityEnum["TwoHundredAndFortyMillionFiveHundredAndThirtyTwoThousandAndNine"] = "240532009";
+    PatientVaccineRecordObservedImmunityEnum["SixMillionOneHundredAndFortyTwoThousandAndFour"] = "6142004";
+    PatientVaccineRecordObservedImmunityEnum["FiftyTwoMillionNineHundredAndFortySevenThousandAndSix"] = "52947006";
+    PatientVaccineRecordObservedImmunityEnum["FourteenMillionOneHundredAndEightyNineThousandAndFour"] = "14189004";
+    PatientVaccineRecordObservedImmunityEnum["TwentyThreeMillionFiveHundredAndElevenThousandAndSix"] = "23511006";
+    PatientVaccineRecordObservedImmunityEnum["ThirtySixMillionNineHundredAndEightyNineThousandAndFive"] = "36989005";
+    PatientVaccineRecordObservedImmunityEnum["TwentySevenMillionEightHundredAndThirtySixThousandAndSeven"] = "27836007";
+    PatientVaccineRecordObservedImmunityEnum["SixteenMillionEightHundredAndFourteenThousandAndFour"] = "16814004";
+    PatientVaccineRecordObservedImmunityEnum["FourteenMillionOneHundredAndSixtyEightThousandAndEight"] = "14168008";
+    PatientVaccineRecordObservedImmunityEnum["ThirtySixMillionSixHundredAndFiftyThreeThousand"] = "36653000";
+    PatientVaccineRecordObservedImmunityEnum["SeventySixMillionNineHundredAndTwoThousandAndSix"] = "76902006";
+    PatientVaccineRecordObservedImmunityEnum["SixtySixMillionSeventyOneThousandAndTwo"] = "66071002";
+    PatientVaccineRecordObservedImmunityEnum["FourMillionEightHundredAndThirtyFourThousand"] = "4834000";
+    PatientVaccineRecordObservedImmunityEnum["OneHundredAndElevenMillionEightHundredAndFiftyTwoThousandAndThree"] = "111852003";
+    PatientVaccineRecordObservedImmunityEnum["ThirtyEightMillionNineHundredAndSevenThousandAndThree"] = "38907003";
+    PatientVaccineRecordObservedImmunityEnum["FortyMillionFourHundredAndSixtyEightThousandAndThree"] = "40468003";
+    PatientVaccineRecordObservedImmunityEnum["SixteenMillionFiveHundredAndFortyOneThousandAndOne"] = "16541001";
+})(PatientVaccineRecordObservedImmunityEnum = exports.PatientVaccineRecordObservedImmunityEnum || (exports.PatientVaccineRecordObservedImmunityEnum = {}));
+var PatientVaccineRecordRecordTypeEnum;
+(function (PatientVaccineRecordRecordTypeEnum) {
+    PatientVaccineRecordRecordTypeEnum["Zero"] = "00";
+    PatientVaccineRecordRecordTypeEnum["One"] = "01";
+    PatientVaccineRecordRecordTypeEnum["Two"] = "02";
+    PatientVaccineRecordRecordTypeEnum["Three"] = "03";
+    PatientVaccineRecordRecordTypeEnum["Four"] = "04";
+    PatientVaccineRecordRecordTypeEnum["Five"] = "05";
+    PatientVaccineRecordRecordTypeEnum["Six"] = "06";
+    PatientVaccineRecordRecordTypeEnum["Seven"] = "07";
+    PatientVaccineRecordRecordTypeEnum["Eight"] = "08";
+})(PatientVaccineRecordRecordTypeEnum = exports.PatientVaccineRecordRecordTypeEnum || (exports.PatientVaccineRecordRecordTypeEnum = {}));
+var PatientVaccineRecord = /** @class */ (function (_super) {
+    __extends(PatientVaccineRecord, _super);
+    function PatientVaccineRecord() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=administered_at" }),
+        __metadata("design:type", Number)
+    ], PatientVaccineRecord.prototype, "administeredAt", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=administered_by" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "administeredBy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=administration_start" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "administrationStart", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", Number)
+    ], PatientVaccineRecord.prototype, "amount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "comments", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=completion_status" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "completionStatus", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consent_form" }),
+        __metadata("design:type", Number)
+    ], PatientVaccineRecord.prototype, "consentForm", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpt_code" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "cptCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "createdAt", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cvx_code" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "cvxCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=doses", elemType: PatientVaccineRecordVaccineDose }),
+        __metadata("design:type", Array)
+    ], PatientVaccineRecord.prototype, "doses", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entered_by" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "enteredBy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=funding_eligibility" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "fundingEligibility", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", Number)
+    ], PatientVaccineRecord.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_dose_date" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "nextDoseDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=observed_immunity" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "observedImmunity", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ordering_doctor" }),
+        __metadata("design:type", Number)
+    ], PatientVaccineRecord.prototype, "orderingDoctor", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patient" }),
+        __metadata("design:type", Number)
+    ], PatientVaccineRecord.prototype, "patient", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=record_source" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "recordSource", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=route" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "route", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=site" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "site", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=units" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "units", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "updatedAt", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vaccine_inventory" }),
+        __metadata("design:type", Number)
+    ], PatientVaccineRecord.prototype, "vaccineInventory", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vis" }),
+        __metadata("design:type", String)
+    ], PatientVaccineRecord.prototype, "vis", void 0);
+    return PatientVaccineRecord;
+}(utils_1.SpeakeasyBase));
+exports.PatientVaccineRecord = PatientVaccineRecord;

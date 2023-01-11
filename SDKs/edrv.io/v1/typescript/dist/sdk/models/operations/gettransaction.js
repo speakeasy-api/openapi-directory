@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTransactionResponse = exports.GetTransactionRequest = exports.GetTransactionQueryParams = exports.GetTransactionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTransactionPathParams = /** @class */ (function (_super) {
     __extends(GetTransactionPathParams, _super);
     function GetTransactionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetTransactionPathParams.prototype, "id", void 0);
     return GetTransactionPathParams;
-}(SpeakeasyBase));
-export { GetTransactionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionPathParams = GetTransactionPathParams;
 var GetTransactionQueryParams = /** @class */ (function (_super) {
     __extends(GetTransactionQueryParams, _super);
     function GetTransactionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_chargestation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_chargestation" }),
         __metadata("design:type", Boolean)
     ], GetTransactionQueryParams.prototype, "includeChargestation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_connector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_connector" }),
         __metadata("design:type", Boolean)
     ], GetTransactionQueryParams.prototype, "includeConnector", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_driver" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_driver" }),
         __metadata("design:type", Boolean)
     ], GetTransactionQueryParams.prototype, "includeDriver", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_evse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_evse" }),
         __metadata("design:type", Boolean)
     ], GetTransactionQueryParams.prototype, "includeEvse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_organization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_organization" }),
         __metadata("design:type", Boolean)
     ], GetTransactionQueryParams.prototype, "includeOrganization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_rate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_rate" }),
         __metadata("design:type", Boolean)
     ], GetTransactionQueryParams.prototype, "includeRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_reservation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_reservation" }),
         __metadata("design:type", Boolean)
     ], GetTransactionQueryParams.prototype, "includeReservation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_token" }),
         __metadata("design:type", Boolean)
     ], GetTransactionQueryParams.prototype, "includeToken", void 0);
     return GetTransactionQueryParams;
-}(SpeakeasyBase));
-export { GetTransactionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionQueryParams = GetTransactionQueryParams;
 var GetTransactionRequest = /** @class */ (function (_super) {
     __extends(GetTransactionRequest, _super);
     function GetTransactionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTransactionPathParams)
     ], GetTransactionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTransactionQueryParams)
     ], GetTransactionRequest.prototype, "queryParams", void 0);
     return GetTransactionRequest;
-}(SpeakeasyBase));
-export { GetTransactionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionRequest = GetTransactionRequest;
 var GetTransactionResponse = /** @class */ (function (_super) {
     __extends(GetTransactionResponse, _super);
     function GetTransactionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTransactionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTransactionResponse.prototype, "statusCode", void 0);
     return GetTransactionResponse;
-}(SpeakeasyBase));
-export { GetTransactionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionResponse = GetTransactionResponse;

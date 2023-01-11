@@ -18,7 +18,7 @@ export declare class AddTagsRequest extends SpeakeasyBase {
     request: shared.AddTagsInput;
 }
 export declare class AddTagsResponse extends SpeakeasyBase {
-    addTagsOutput?: Map<string, any>;
+    addTagsOutput?: Record<string, any>;
     contentType: string;
     internalServiceError?: any;
     invalidRequestException?: any;

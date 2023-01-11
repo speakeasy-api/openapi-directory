@@ -59,7 +59,7 @@ export class CreateProfilingGroupRequestBody extends SpeakeasyBase {
   profilingGroupName: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

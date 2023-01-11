@@ -22,5 +22,5 @@ export class ProtocolSnmpv3GetEngineidResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolSnmpv3GetEngineid200ApplicationJsonString?: string;
+  protocolSnmpv3GetEngineid200ApplicationJSONString?: string;
 }

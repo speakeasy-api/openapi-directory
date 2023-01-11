@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { JsonFileFormat } from "./jsonfileformat";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GcsDestinationConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var jsonfileformat_1 = require("./jsonfileformat");
 // GcsDestinationConfig
 /**
  * Google Cloud Storage destination configuration
@@ -34,25 +37,25 @@ var GcsDestinationConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=avroFileFormat" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=avroFileFormat" }),
+        __metadata("design:type", Object)
     ], GcsDestinationConfig.prototype, "avroFileFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileRotationInterval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileRotationInterval" }),
         __metadata("design:type", String)
     ], GcsDestinationConfig.prototype, "fileRotationInterval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileRotationMb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileRotationMb" }),
         __metadata("design:type", Number)
     ], GcsDestinationConfig.prototype, "fileRotationMb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jsonFileFormat" }),
-        __metadata("design:type", JsonFileFormat)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jsonFileFormat" }),
+        __metadata("design:type", jsonfileformat_1.JsonFileFormat)
     ], GcsDestinationConfig.prototype, "jsonFileFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], GcsDestinationConfig.prototype, "path", void 0);
     return GcsDestinationConfig;
-}(SpeakeasyBase));
-export { GcsDestinationConfig };
+}(utils_1.SpeakeasyBase));
+exports.GcsDestinationConfig = GcsDestinationConfig;

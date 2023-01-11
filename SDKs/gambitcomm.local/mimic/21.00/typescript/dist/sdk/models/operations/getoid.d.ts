@@ -9,5 +9,5 @@ export declare class GetOidRequest extends SpeakeasyBase {
 export declare class GetOidResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOid200ApplicationJsonString?: string;
+    getOid200ApplicationJSONString?: string;
 }

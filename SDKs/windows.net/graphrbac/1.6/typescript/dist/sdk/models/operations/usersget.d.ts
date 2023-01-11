@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class UsersGetPathParams extends SpeakeasyBase {
-    tenantId: string;
+    tenantID: string;
     upnOrObjectId: string;
 }
 export declare class UsersGetQueryParams extends SpeakeasyBase {
@@ -15,5 +15,5 @@ export declare class UsersGetResponse extends SpeakeasyBase {
     contentType: string;
     graphError?: shared.GraphError;
     statusCode: number;
-    user?: Map<string, Map<string, any>>;
+    user?: Record<string, Record<string, any>>;
 }

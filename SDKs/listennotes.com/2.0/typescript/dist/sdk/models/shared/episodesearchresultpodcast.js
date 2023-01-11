@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EpisodeSearchResultPodcast = void 0;
+var utils_1 = require("../../../internal/utils");
 // EpisodeSearchResultPodcast
 /**
  * The podcast that this episode belongs to.
@@ -33,49 +36,49 @@ var EpisodeSearchResultPodcast = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=genre_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=genre_ids" }),
         __metadata("design:type", Array)
     ], EpisodeSearchResultPodcast.prototype, "genreIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], EpisodeSearchResultPodcast.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", String)
     ], EpisodeSearchResultPodcast.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listen_score" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listen_score" }),
         __metadata("design:type", Number)
     ], EpisodeSearchResultPodcast.prototype, "listenScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listen_score_global_rank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listen_score_global_rank" }),
         __metadata("design:type", String)
     ], EpisodeSearchResultPodcast.prototype, "listenScoreGlobalRank", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listennotes_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listennotes_url" }),
         __metadata("design:type", String)
     ], EpisodeSearchResultPodcast.prototype, "listennotesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisher_highlighted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisher_highlighted" }),
         __metadata("design:type", String)
     ], EpisodeSearchResultPodcast.prototype, "publisherHighlighted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisher_original" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisher_original" }),
         __metadata("design:type", String)
     ], EpisodeSearchResultPodcast.prototype, "publisherOriginal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnail" }),
         __metadata("design:type", String)
     ], EpisodeSearchResultPodcast.prototype, "thumbnail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title_highlighted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title_highlighted" }),
         __metadata("design:type", String)
     ], EpisodeSearchResultPodcast.prototype, "titleHighlighted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title_original" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title_original" }),
         __metadata("design:type", String)
     ], EpisodeSearchResultPodcast.prototype, "titleOriginal", void 0);
     return EpisodeSearchResultPodcast;
-}(SpeakeasyBase));
-export { EpisodeSearchResultPodcast };
+}(utils_1.SpeakeasyBase));
+exports.EpisodeSearchResultPodcast = EpisodeSearchResultPodcast;

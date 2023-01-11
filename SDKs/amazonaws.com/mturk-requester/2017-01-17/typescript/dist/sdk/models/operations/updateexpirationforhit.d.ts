@@ -22,5 +22,5 @@ export declare class UpdateExpirationForHitResponse extends SpeakeasyBase {
     requestError?: any;
     serviceFault?: any;
     statusCode: number;
-    updateExpirationForHitResponse?: Map<string, any>;
+    updateExpirationForHITResponse?: Record<string, any>;
 }

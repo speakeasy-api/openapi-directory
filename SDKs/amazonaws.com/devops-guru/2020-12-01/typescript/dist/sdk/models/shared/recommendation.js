@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecommendationRelatedAnomaly } from "./recommendationrelatedanomaly";
-import { RecommendationRelatedEvent } from "./recommendationrelatedevent";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Recommendation = void 0;
+var utils_1 = require("../../../internal/utils");
+var recommendationrelatedanomaly_1 = require("./recommendationrelatedanomaly");
+var recommendationrelatedevent_1 = require("./recommendationrelatedevent");
 // Recommendation
 /**
  *  Recommendation information to help you remediate detected anomalous behavior that generated an insight.
@@ -35,29 +38,29 @@ var Recommendation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], Recommendation.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Link" }),
         __metadata("design:type", String)
     ], Recommendation.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Recommendation.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Reason" }),
         __metadata("design:type", String)
     ], Recommendation.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RelatedAnomalies", elemType: RecommendationRelatedAnomaly }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RelatedAnomalies", elemType: recommendationrelatedanomaly_1.RecommendationRelatedAnomaly }),
         __metadata("design:type", Array)
     ], Recommendation.prototype, "relatedAnomalies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RelatedEvents", elemType: RecommendationRelatedEvent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RelatedEvents", elemType: recommendationrelatedevent_1.RecommendationRelatedEvent }),
         __metadata("design:type", Array)
     ], Recommendation.prototype, "relatedEvents", void 0);
     return Recommendation;
-}(SpeakeasyBase));
-export { Recommendation };
+}(utils_1.SpeakeasyBase));
+exports.Recommendation = Recommendation;

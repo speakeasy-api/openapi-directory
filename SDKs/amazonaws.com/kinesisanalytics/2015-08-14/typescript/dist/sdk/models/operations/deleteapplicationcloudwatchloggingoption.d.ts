@@ -20,7 +20,7 @@ export declare class DeleteApplicationCloudWatchLoggingOptionRequest extends Spe
 export declare class DeleteApplicationCloudWatchLoggingOptionResponse extends SpeakeasyBase {
     concurrentModificationException?: any;
     contentType: string;
-    deleteApplicationCloudWatchLoggingOptionResponse?: Map<string, any>;
+    deleteApplicationCloudWatchLoggingOptionResponse?: Record<string, any>;
     invalidArgumentException?: any;
     resourceInUseException?: any;
     resourceNotFoundException?: any;

@@ -3,7 +3,7 @@ import { ErrorParameter } from "./errorparameter";
 /**
  * A container that defines the elements of error and warning message.
 **/
-export declare class Error extends SpeakeasyBase {
+export declare class ErrorT extends SpeakeasyBase {
     category?: string;
     domain?: string;
     errorId?: number;

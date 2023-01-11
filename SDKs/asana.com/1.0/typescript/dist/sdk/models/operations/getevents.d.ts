@@ -20,5 +20,5 @@ export declare class GetEventsResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getEvents200ApplicationJsonObject?: GetEvents200ApplicationJson;
+    getEvents200ApplicationJSONObject?: GetEvents200ApplicationJson;
 }

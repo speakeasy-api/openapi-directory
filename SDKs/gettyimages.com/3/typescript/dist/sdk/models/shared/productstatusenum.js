@@ -1,5 +1,8 @@
-export var ProductStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductStatusEnum = void 0;
+var ProductStatusEnum;
 (function (ProductStatusEnum) {
     ProductStatusEnum["Active"] = "active";
     ProductStatusEnum["Inactive"] = "inactive";
-})(ProductStatusEnum || (ProductStatusEnum = {}));
+})(ProductStatusEnum = exports.ProductStatusEnum || (exports.ProductStatusEnum = {}));

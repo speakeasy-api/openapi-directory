@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Statement } from "./statement";
-export var ListResponseErrorCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListResponse = exports.ListResponseErrorCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var statement_1 = require("./statement");
+var ListResponseErrorCodeEnum;
 (function (ListResponseErrorCodeEnum) {
     ListResponseErrorCodeEnum["ErrorCodeUnspecified"] = "ERROR_CODE_UNSPECIFIED";
     ListResponseErrorCodeEnum["ErrorCodeInvalidQuery"] = "ERROR_CODE_INVALID_QUERY";
@@ -37,7 +40,7 @@ export var ListResponseErrorCodeEnum;
     ListResponseErrorCodeEnum["ErrorCodeMalformedContent"] = "ERROR_CODE_MALFORMED_CONTENT";
     ListResponseErrorCodeEnum["ErrorCodeSecureAssetIncludesInsecure"] = "ERROR_CODE_SECURE_ASSET_INCLUDES_INSECURE";
     ListResponseErrorCodeEnum["ErrorCodeFetchBudgetExhausted"] = "ERROR_CODE_FETCH_BUDGET_EXHAUSTED";
-})(ListResponseErrorCodeEnum || (ListResponseErrorCodeEnum = {}));
+})(ListResponseErrorCodeEnum = exports.ListResponseErrorCodeEnum || (exports.ListResponseErrorCodeEnum = {}));
 // ListResponse
 /**
  * Response message for the List call.
@@ -48,21 +51,21 @@ var ListResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=debugString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=debugString" }),
         __metadata("design:type", String)
     ], ListResponse.prototype, "debugString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorCode" }),
         __metadata("design:type", Array)
     ], ListResponse.prototype, "errorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxAge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxAge" }),
         __metadata("design:type", String)
     ], ListResponse.prototype, "maxAge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statements", elemType: Statement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statements", elemType: statement_1.Statement }),
         __metadata("design:type", Array)
     ], ListResponse.prototype, "statements", void 0);
     return ListResponse;
-}(SpeakeasyBase));
-export { ListResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListResponse = ListResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,111 +23,117 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GistCommit = exports.GistCommitSimpleUser = exports.GistCommitChangeStatus = void 0;
+var utils_1 = require("../../../internal/utils");
 var GistCommitChangeStatus = /** @class */ (function (_super) {
     __extends(GistCommitChangeStatus, _super);
     function GistCommitChangeStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additions" }),
         __metadata("design:type", Number)
     ], GistCommitChangeStatus.prototype, "additions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletions" }),
         __metadata("design:type", Number)
     ], GistCommitChangeStatus.prototype, "deletions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], GistCommitChangeStatus.prototype, "total", void 0);
     return GistCommitChangeStatus;
-}(SpeakeasyBase));
-export { GistCommitChangeStatus };
+}(utils_1.SpeakeasyBase));
+exports.GistCommitChangeStatus = GistCommitChangeStatus;
+// GistCommitSimpleUser
+/**
+ * Simple User
+**/
 var GistCommitSimpleUser = /** @class */ (function (_super) {
     __extends(GistCommitSimpleUser, _super);
     function GistCommitSimpleUser() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=avatar_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=avatar_url" }),
         __metadata("design:type", String)
     ], GistCommitSimpleUser.prototype, "avatarUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=events_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=events_url" }),
         __metadata("design:type", String)
     ], GistCommitSimpleUser.prototype, "eventsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=followers_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=followers_url" }),
         __metadata("design:type", String)
     ], GistCommitSimpleUser.prototype, "followersUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=following_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=following_url" }),
         __metadata("design:type", String)
     ], GistCommitSimpleUser.prototype, "followingUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gists_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gists_url" }),
         __metadata("design:type", String)
     ], GistCommitSimpleUser.prototype, "gistsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gravatar_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gravatar_id" }),
         __metadata("design:type", String)
     ], GistCommitSimpleUser.prototype, "gravatarId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], GistCommitSimpleUser.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GistCommitSimpleUser.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=login" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=login" }),
         __metadata("design:type", String)
     ], GistCommitSimpleUser.prototype, "login", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], GistCommitSimpleUser.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organizations_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organizations_url" }),
         __metadata("design:type", String)
     ], GistCommitSimpleUser.prototype, "organizationsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=received_events_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=received_events_url" }),
         __metadata("design:type", String)
     ], GistCommitSimpleUser.prototype, "receivedEventsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repos_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repos_url" }),
         __metadata("design:type", String)
     ], GistCommitSimpleUser.prototype, "reposUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=site_admin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=site_admin" }),
         __metadata("design:type", Boolean)
     ], GistCommitSimpleUser.prototype, "siteAdmin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=starred_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=starred_at" }),
         __metadata("design:type", String)
     ], GistCommitSimpleUser.prototype, "starredAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=starred_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=starred_url" }),
         __metadata("design:type", String)
     ], GistCommitSimpleUser.prototype, "starredUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptions_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptions_url" }),
         __metadata("design:type", String)
     ], GistCommitSimpleUser.prototype, "subscriptionsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GistCommitSimpleUser.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GistCommitSimpleUser.prototype, "url", void 0);
     return GistCommitSimpleUser;
-}(SpeakeasyBase));
-export { GistCommitSimpleUser };
+}(utils_1.SpeakeasyBase));
+exports.GistCommitSimpleUser = GistCommitSimpleUser;
 // GistCommit
 /**
  * Gist Commit
@@ -137,25 +144,25 @@ var GistCommit = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=change_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=change_status" }),
         __metadata("design:type", GistCommitChangeStatus)
     ], GistCommit.prototype, "changeStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committed_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committed_at" }),
         __metadata("design:type", Date)
     ], GistCommit.prototype, "committedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GistCommit.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
         __metadata("design:type", GistCommitSimpleUser)
     ], GistCommit.prototype, "user", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], GistCommit.prototype, "version", void 0);
     return GistCommit;
-}(SpeakeasyBase));
-export { GistCommit };
+}(utils_1.SpeakeasyBase));
+exports.GistCommit = GistCommit;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CollectionsMetadataRegistrationsListResponse = exports.CollectionsMetadataRegistrationsListRequest = exports.CollectionsMetadataRegistrationsListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CollectionsMetadataRegistrationsListPathParams = /** @class */ (function (_super) {
     __extends(CollectionsMetadataRegistrationsListPathParams, _super);
     function CollectionsMetadataRegistrationsListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=collection_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=collection_id" }),
         __metadata("design:type", String)
     ], CollectionsMetadataRegistrationsListPathParams.prototype, "collectionId", void 0);
     return CollectionsMetadataRegistrationsListPathParams;
-}(SpeakeasyBase));
-export { CollectionsMetadataRegistrationsListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsMetadataRegistrationsListPathParams = CollectionsMetadataRegistrationsListPathParams;
 var CollectionsMetadataRegistrationsListRequest = /** @class */ (function (_super) {
     __extends(CollectionsMetadataRegistrationsListRequest, _super);
     function CollectionsMetadataRegistrationsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CollectionsMetadataRegistrationsListPathParams)
     ], CollectionsMetadataRegistrationsListRequest.prototype, "pathParams", void 0);
     return CollectionsMetadataRegistrationsListRequest;
-}(SpeakeasyBase));
-export { CollectionsMetadataRegistrationsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsMetadataRegistrationsListRequest = CollectionsMetadataRegistrationsListRequest;
 var CollectionsMetadataRegistrationsListResponse = /** @class */ (function (_super) {
     __extends(CollectionsMetadataRegistrationsListResponse, _super);
     function CollectionsMetadataRegistrationsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CollectionsMetadataRegistrationsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CollectionsMetadataRegistrationsListResponse.prototype, "statusCode", void 0);
     return CollectionsMetadataRegistrationsListResponse;
-}(SpeakeasyBase));
-export { CollectionsMetadataRegistrationsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.CollectionsMetadataRegistrationsListResponse = CollectionsMetadataRegistrationsListResponse;

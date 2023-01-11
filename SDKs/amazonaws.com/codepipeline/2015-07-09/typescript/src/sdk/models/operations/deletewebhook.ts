@@ -51,7 +51,7 @@ export class DeleteWebhookResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteWebhookOutput?: Map<string, any>;
+  deleteWebhookOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

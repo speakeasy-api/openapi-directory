@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostGetHostReservationPurchasePreviewActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostGetHostReservationPurchasePreviewResponse = exports.PostGetHostReservationPurchasePreviewRequest = exports.PostGetHostReservationPurchasePreviewHeaders = exports.PostGetHostReservationPurchasePreviewQueryParams = exports.PostGetHostReservationPurchasePreviewVersionEnum = exports.PostGetHostReservationPurchasePreviewActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostGetHostReservationPurchasePreviewActionEnum;
 (function (PostGetHostReservationPurchasePreviewActionEnum) {
     PostGetHostReservationPurchasePreviewActionEnum["GetHostReservationPurchasePreview"] = "GetHostReservationPurchasePreview";
-})(PostGetHostReservationPurchasePreviewActionEnum || (PostGetHostReservationPurchasePreviewActionEnum = {}));
-export var PostGetHostReservationPurchasePreviewVersionEnum;
+})(PostGetHostReservationPurchasePreviewActionEnum = exports.PostGetHostReservationPurchasePreviewActionEnum || (exports.PostGetHostReservationPurchasePreviewActionEnum = {}));
+var PostGetHostReservationPurchasePreviewVersionEnum;
 (function (PostGetHostReservationPurchasePreviewVersionEnum) {
     PostGetHostReservationPurchasePreviewVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostGetHostReservationPurchasePreviewVersionEnum || (PostGetHostReservationPurchasePreviewVersionEnum = {}));
+})(PostGetHostReservationPurchasePreviewVersionEnum = exports.PostGetHostReservationPurchasePreviewVersionEnum || (exports.PostGetHostReservationPurchasePreviewVersionEnum = {}));
 var PostGetHostReservationPurchasePreviewQueryParams = /** @class */ (function (_super) {
     __extends(PostGetHostReservationPurchasePreviewQueryParams, _super);
     function PostGetHostReservationPurchasePreviewQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostGetHostReservationPurchasePreviewQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostGetHostReservationPurchasePreviewQueryParams.prototype, "version", void 0);
     return PostGetHostReservationPurchasePreviewQueryParams;
-}(SpeakeasyBase));
-export { PostGetHostReservationPurchasePreviewQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostGetHostReservationPurchasePreviewQueryParams = PostGetHostReservationPurchasePreviewQueryParams;
 var PostGetHostReservationPurchasePreviewHeaders = /** @class */ (function (_super) {
     __extends(PostGetHostReservationPurchasePreviewHeaders, _super);
     function PostGetHostReservationPurchasePreviewHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostGetHostReservationPurchasePreviewHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostGetHostReservationPurchasePreviewHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostGetHostReservationPurchasePreviewHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostGetHostReservationPurchasePreviewHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostGetHostReservationPurchasePreviewHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostGetHostReservationPurchasePreviewHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostGetHostReservationPurchasePreviewHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostGetHostReservationPurchasePreviewHeaders;
-}(SpeakeasyBase));
-export { PostGetHostReservationPurchasePreviewHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostGetHostReservationPurchasePreviewHeaders = PostGetHostReservationPurchasePreviewHeaders;
 var PostGetHostReservationPurchasePreviewRequest = /** @class */ (function (_super) {
     __extends(PostGetHostReservationPurchasePreviewRequest, _super);
     function PostGetHostReservationPurchasePreviewRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetHostReservationPurchasePreviewQueryParams)
     ], PostGetHostReservationPurchasePreviewRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetHostReservationPurchasePreviewHeaders)
     ], PostGetHostReservationPurchasePreviewRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostGetHostReservationPurchasePreviewRequest.prototype, "request", void 0);
     return PostGetHostReservationPurchasePreviewRequest;
-}(SpeakeasyBase));
-export { PostGetHostReservationPurchasePreviewRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostGetHostReservationPurchasePreviewRequest = PostGetHostReservationPurchasePreviewRequest;
 var PostGetHostReservationPurchasePreviewResponse = /** @class */ (function (_super) {
     __extends(PostGetHostReservationPurchasePreviewResponse, _super);
     function PostGetHostReservationPurchasePreviewResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostGetHostReservationPurchasePreviewResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostGetHostReservationPurchasePreviewResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostGetHostReservationPurchasePreviewResponse.prototype, "statusCode", void 0);
     return PostGetHostReservationPurchasePreviewResponse;
-}(SpeakeasyBase));
-export { PostGetHostReservationPurchasePreviewResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostGetHostReservationPurchasePreviewResponse = PostGetHostReservationPurchasePreviewResponse;

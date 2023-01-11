@@ -43,5 +43,5 @@ export class ReloadUserConfResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  reloadUserConf200ApplicationJsonObject?: ReloadUserConf200ApplicationJson;
+  reloadUserConf200ApplicationJSONObject?: ReloadUserConf200ApplicationJson;
 }

@@ -1,6 +1,9 @@
-export var FindingStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindingStatusEnum = void 0;
+var FindingStatusEnum;
 (function (FindingStatusEnum) {
     FindingStatusEnum["Active"] = "ACTIVE";
     FindingStatusEnum["Archived"] = "ARCHIVED";
     FindingStatusEnum["Resolved"] = "RESOLVED";
-})(FindingStatusEnum || (FindingStatusEnum = {}));
+})(FindingStatusEnum = exports.FindingStatusEnum || (exports.FindingStatusEnum = {}));

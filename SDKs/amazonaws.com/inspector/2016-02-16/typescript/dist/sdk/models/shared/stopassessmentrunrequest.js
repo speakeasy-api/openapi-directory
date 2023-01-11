@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StopActionEnum } from "./stopactionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StopAssessmentRunRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var stopactionenum_1 = require("./stopactionenum");
 var StopAssessmentRunRequest = /** @class */ (function (_super) {
     __extends(StopAssessmentRunRequest, _super);
     function StopAssessmentRunRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assessmentRunArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assessmentRunArn" }),
         __metadata("design:type", String)
     ], StopAssessmentRunRequest.prototype, "assessmentRunArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stopAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stopAction" }),
         __metadata("design:type", String)
     ], StopAssessmentRunRequest.prototype, "stopAction", void 0);
     return StopAssessmentRunRequest;
-}(SpeakeasyBase));
-export { StopAssessmentRunRequest };
+}(utils_1.SpeakeasyBase));
+exports.StopAssessmentRunRequest = StopAssessmentRunRequest;

@@ -11,13 +11,13 @@ import { Owner } from "./owner";
 **/
 export class DriveItem extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=driveFile" })
-  driveFile?: Map<string, any>;
+  driveFile?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=driveFolder" })
   driveFolder?: DriveFolder;
 
   @SpeakeasyMetadata({ data: "json, name=file" })
-  file?: Map<string, any>;
+  file?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=folder" })
   folder?: Folder;

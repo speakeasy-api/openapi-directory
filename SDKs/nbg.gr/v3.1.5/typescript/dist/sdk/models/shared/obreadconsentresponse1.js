@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObReadDataConsentResponse1 } from "./obreaddataconsentresponse1";
-import { Links } from "./links";
-import { Meta } from "./meta";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObReadConsentResponse1 = void 0;
+var utils_1 = require("../../../internal/utils");
+var obreaddataconsentresponse1_1 = require("./obreaddataconsentresponse1");
+var links_1 = require("./links");
+var meta_1 = require("./meta");
 var ObReadConsentResponse1 = /** @class */ (function (_super) {
     __extends(ObReadConsentResponse1, _super);
     function ObReadConsentResponse1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Data" }),
-        __metadata("design:type", ObReadDataConsentResponse1)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Data" }),
+        __metadata("design:type", obreaddataconsentresponse1_1.ObReadDataConsentResponse1)
     ], ObReadConsentResponse1.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Links" }),
-        __metadata("design:type", Links)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Links" }),
+        __metadata("design:type", links_1.Links)
     ], ObReadConsentResponse1.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Meta" }),
-        __metadata("design:type", Meta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Meta" }),
+        __metadata("design:type", meta_1.Meta)
     ], ObReadConsentResponse1.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Risk" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Risk" }),
+        __metadata("design:type", Object)
     ], ObReadConsentResponse1.prototype, "risk", void 0);
     return ObReadConsentResponse1;
-}(SpeakeasyBase));
-export { ObReadConsentResponse1 };
+}(utils_1.SpeakeasyBase));
+exports.ObReadConsentResponse1 = ObReadConsentResponse1;

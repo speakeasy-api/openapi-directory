@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Level } from "./level";
-import { Segment } from "./segment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Classification = void 0;
+var utils_1 = require("../../../internal/utils");
+var level_1 = require("./level");
+var segment_1 = require("./segment");
 // Classification
 /**
  * Classification
@@ -35,29 +38,29 @@ var Classification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=genre" }),
-        __metadata("design:type", Level)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=genre" }),
+        __metadata("design:type", level_1.Level)
     ], Classification.prototype, "genre", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary" }),
         __metadata("design:type", Boolean)
     ], Classification.prototype, "primary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=segment" }),
-        __metadata("design:type", Segment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segment" }),
+        __metadata("design:type", segment_1.Segment)
     ], Classification.prototype, "segment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subGenre" }),
-        __metadata("design:type", Level)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subGenre" }),
+        __metadata("design:type", level_1.Level)
     ], Classification.prototype, "subGenre", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subType" }),
-        __metadata("design:type", Level)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subType" }),
+        __metadata("design:type", level_1.Level)
     ], Classification.prototype, "subType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
-        __metadata("design:type", Level)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", level_1.Level)
     ], Classification.prototype, "type", void 0);
     return Classification;
-}(SpeakeasyBase));
-export { Classification };
+}(utils_1.SpeakeasyBase));
+exports.Classification = Classification;

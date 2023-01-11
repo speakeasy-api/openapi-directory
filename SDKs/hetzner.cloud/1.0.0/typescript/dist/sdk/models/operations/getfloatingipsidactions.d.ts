@@ -66,6 +66,6 @@ export declare class GetFloatingIpsIdActionsRequest extends SpeakeasyBase {
 }
 export declare class GetFloatingIpsIdActionsResponse extends SpeakeasyBase {
     contentType: string;
-    getFloatingIpsIdActions200ApplicationJsonObject?: GetFloatingIpsIdActions200ApplicationJson;
     statusCode: number;
+    getFloatingIpsIdActions200ApplicationJSONObject?: GetFloatingIpsIdActions200ApplicationJson;
 }

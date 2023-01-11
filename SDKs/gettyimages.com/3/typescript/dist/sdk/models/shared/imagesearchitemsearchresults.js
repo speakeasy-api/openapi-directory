@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImageSearchItem } from "./imagesearchitem";
-import { RelatedSearch } from "./relatedsearch";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageSearchItemSearchResults = void 0;
+var utils_1 = require("../../../internal/utils");
+var imagesearchitem_1 = require("./imagesearchitem");
+var relatedsearch_1 = require("./relatedsearch");
 var ImageSearchItemSearchResults = /** @class */ (function (_super) {
     __extends(ImageSearchItemSearchResults, _super);
     function ImageSearchItemSearchResults() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=images", elemType: ImageSearchItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=images", elemType: imagesearchitem_1.ImageSearchItem }),
         __metadata("design:type", Array)
     ], ImageSearchItemSearchResults.prototype, "images", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=related_searches", elemType: RelatedSearch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=related_searches", elemType: relatedsearch_1.RelatedSearch }),
         __metadata("design:type", Array)
     ], ImageSearchItemSearchResults.prototype, "relatedSearches", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result_count" }),
         __metadata("design:type", Number)
     ], ImageSearchItemSearchResults.prototype, "resultCount", void 0);
     return ImageSearchItemSearchResults;
-}(SpeakeasyBase));
-export { ImageSearchItemSearchResults };
+}(utils_1.SpeakeasyBase));
+exports.ImageSearchItemSearchResults = ImageSearchItemSearchResults;

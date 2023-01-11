@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateWebhookResponse = exports.CreateWebhookRequest = exports.CreateWebhookRequestBody = exports.CreateWebhookRequestBodyWebhook = exports.CreateWebhookQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateWebhookQueryParams = /** @class */ (function (_super) {
     __extends(CreateWebhookQueryParams, _super);
     function CreateWebhookQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=workspace" }),
         __metadata("design:type", String)
     ], CreateWebhookQueryParams.prototype, "workspace", void 0);
     return CreateWebhookQueryParams;
-}(SpeakeasyBase));
-export { CreateWebhookQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateWebhookQueryParams = CreateWebhookQueryParams;
 var CreateWebhookRequestBodyWebhook = /** @class */ (function (_super) {
     __extends(CreateWebhookRequestBodyWebhook, _super);
     function CreateWebhookRequestBodyWebhook() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collection" }),
         __metadata("design:type", String)
     ], CreateWebhookRequestBodyWebhook.prototype, "collection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateWebhookRequestBodyWebhook.prototype, "name", void 0);
     return CreateWebhookRequestBodyWebhook;
-}(SpeakeasyBase));
-export { CreateWebhookRequestBodyWebhook };
+}(utils_1.SpeakeasyBase));
+exports.CreateWebhookRequestBodyWebhook = CreateWebhookRequestBodyWebhook;
 var CreateWebhookRequestBody = /** @class */ (function (_super) {
     __extends(CreateWebhookRequestBody, _super);
     function CreateWebhookRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webhook" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webhook" }),
         __metadata("design:type", CreateWebhookRequestBodyWebhook)
     ], CreateWebhookRequestBody.prototype, "webhook", void 0);
     return CreateWebhookRequestBody;
-}(SpeakeasyBase));
-export { CreateWebhookRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateWebhookRequestBody = CreateWebhookRequestBody;
 var CreateWebhookRequest = /** @class */ (function (_super) {
     __extends(CreateWebhookRequest, _super);
     function CreateWebhookRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateWebhookQueryParams)
     ], CreateWebhookRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateWebhookRequestBody)
     ], CreateWebhookRequest.prototype, "request", void 0);
     return CreateWebhookRequest;
-}(SpeakeasyBase));
-export { CreateWebhookRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateWebhookRequest = CreateWebhookRequest;
 var CreateWebhookResponse = /** @class */ (function (_super) {
     __extends(CreateWebhookResponse, _super);
     function CreateWebhookResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateWebhookResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateWebhookResponse.prototype, "statusCode", void 0);
     return CreateWebhookResponse;
-}(SpeakeasyBase));
-export { CreateWebhookResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateWebhookResponse = CreateWebhookResponse;

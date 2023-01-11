@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchRequest, BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,26 +30,26 @@ const req: BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchRe
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    location: "soluta",
+    location: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "ducimus",
+    accessToken: "culpa",
     alt: "media",
-    callback: "amet",
-    fields: "iusto",
-    key: "atque",
-    oauthToken: "et",
-    prettyPrint: false,
-    quotaUser: "eligendi",
-    uploadType: "sit",
-    uploadProtocol: "illum",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
 };
 

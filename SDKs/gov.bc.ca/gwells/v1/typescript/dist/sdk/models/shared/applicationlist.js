@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,43 +23,45 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApplicationStatusCode } from "./applicationstatuscode";
-import { Qualification } from "./qualification";
-import { Subactivity } from "./subactivity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationList = void 0;
+var utils_1 = require("../../../internal/utils");
+var applicationstatuscode_1 = require("./applicationstatuscode");
+var qualification_1 = require("./qualification");
+var subactivity_1 = require("./subactivity");
 var ApplicationList = /** @class */ (function (_super) {
     __extends(ApplicationList, _super);
     function ApplicationList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cert_authority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cert_authority" }),
         __metadata("design:type", String)
     ], ApplicationList.prototype, "certAuthority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificate" }),
         __metadata("design:type", String)
     ], ApplicationList.prototype, "certificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current_status" }),
-        __metadata("design:type", ApplicationStatusCode)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current_status" }),
+        __metadata("design:type", applicationstatuscode_1.ApplicationStatusCode)
     ], ApplicationList.prototype, "currentStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_status" }),
         __metadata("design:type", String)
     ], ApplicationList.prototype, "displayStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=qualifications", elemType: Qualification }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=qualifications", elemType: qualification_1.Qualification }),
         __metadata("design:type", Array)
     ], ApplicationList.prototype, "qualifications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=removal_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=removal_date" }),
         __metadata("design:type", Date)
     ], ApplicationList.prototype, "removalDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subactivity" }),
-        __metadata("design:type", Subactivity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subactivity" }),
+        __metadata("design:type", subactivity_1.Subactivity)
     ], ApplicationList.prototype, "subactivity", void 0);
     return ApplicationList;
-}(SpeakeasyBase));
-export { ApplicationList };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationList = ApplicationList;

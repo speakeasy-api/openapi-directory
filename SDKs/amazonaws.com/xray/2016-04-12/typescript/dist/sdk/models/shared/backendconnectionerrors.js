@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BackendConnectionErrors = void 0;
+var utils_1 = require("../../../internal/utils");
 // BackendConnectionErrors
 /**
  * <p/>
@@ -33,29 +36,29 @@ var BackendConnectionErrors = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConnectionRefusedCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConnectionRefusedCount" }),
         __metadata("design:type", Number)
     ], BackendConnectionErrors.prototype, "connectionRefusedCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HTTPCode4XXCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HTTPCode4XXCount" }),
         __metadata("design:type", Number)
-    ], BackendConnectionErrors.prototype, "httpCode4XxCount", void 0);
+    ], BackendConnectionErrors.prototype, "httpCode4XXCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HTTPCode5XXCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HTTPCode5XXCount" }),
         __metadata("design:type", Number)
-    ], BackendConnectionErrors.prototype, "httpCode5XxCount", void 0);
+    ], BackendConnectionErrors.prototype, "httpCode5XXCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OtherCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OtherCount" }),
         __metadata("design:type", Number)
     ], BackendConnectionErrors.prototype, "otherCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimeoutCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimeoutCount" }),
         __metadata("design:type", Number)
     ], BackendConnectionErrors.prototype, "timeoutCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UnknownHostCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UnknownHostCount" }),
         __metadata("design:type", Number)
     ], BackendConnectionErrors.prototype, "unknownHostCount", void 0);
     return BackendConnectionErrors;
-}(SpeakeasyBase));
-export { BackendConnectionErrors };
+}(utils_1.SpeakeasyBase));
+exports.BackendConnectionErrors = BackendConnectionErrors;

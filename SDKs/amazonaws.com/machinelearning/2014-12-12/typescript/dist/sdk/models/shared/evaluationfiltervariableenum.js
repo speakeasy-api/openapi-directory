@@ -1,4 +1,7 @@
-export var EvaluationFilterVariableEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EvaluationFilterVariableEnum = void 0;
+var EvaluationFilterVariableEnum;
 (function (EvaluationFilterVariableEnum) {
     EvaluationFilterVariableEnum["CreatedAt"] = "CreatedAt";
     EvaluationFilterVariableEnum["LastUpdatedAt"] = "LastUpdatedAt";
@@ -8,4 +11,4 @@ export var EvaluationFilterVariableEnum;
     EvaluationFilterVariableEnum["MlModelId"] = "MLModelId";
     EvaluationFilterVariableEnum["DataSourceId"] = "DataSourceId";
     EvaluationFilterVariableEnum["DataUri"] = "DataURI";
-})(EvaluationFilterVariableEnum || (EvaluationFilterVariableEnum = {}));
+})(EvaluationFilterVariableEnum = exports.EvaluationFilterVariableEnum || (exports.EvaluationFilterVariableEnum = {}));

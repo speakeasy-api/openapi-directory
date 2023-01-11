@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Actor } from "./actor";
-import { ActorInput } from "./actor";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommentInput = exports.Comment = void 0;
+var utils_1 = require("../../../internal/utils");
+var actor_1 = require("./actor");
+var actor_2 = require("./actor");
 // Comment
 /**
  * A comment associated with a support case.
@@ -35,28 +38,28 @@ var Comment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], Comment.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Comment.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creator" }),
-        __metadata("design:type", Actor)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creator" }),
+        __metadata("design:type", actor_1.Actor)
     ], Comment.prototype, "creator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Comment.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plainTextBody" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plainTextBody" }),
         __metadata("design:type", String)
     ], Comment.prototype, "plainTextBody", void 0);
     return Comment;
-}(SpeakeasyBase));
-export { Comment };
+}(utils_1.SpeakeasyBase));
+exports.Comment = Comment;
 // CommentInput
 /**
  * A comment associated with a support case.
@@ -67,13 +70,13 @@ var CommentInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], CommentInput.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creator" }),
-        __metadata("design:type", ActorInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creator" }),
+        __metadata("design:type", actor_2.ActorInput)
     ], CommentInput.prototype, "creator", void 0);
     return CommentInput;
-}(SpeakeasyBase));
-export { CommentInput };
+}(utils_1.SpeakeasyBase));
+exports.CommentInput = CommentInput;

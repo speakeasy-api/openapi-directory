@@ -9,6 +9,7 @@ export declare class ImportContextBakImportOptionsEncryptionOptions extends Spea
 **/
 export declare class ImportContextBakImportOptions extends SpeakeasyBase {
     encryptionOptions?: ImportContextBakImportOptionsEncryptionOptions;
+    striped?: boolean;
 }
 /**
  * Options for importing data as CSV.

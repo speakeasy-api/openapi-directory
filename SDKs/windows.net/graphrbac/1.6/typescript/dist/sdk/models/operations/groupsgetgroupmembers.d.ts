@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class GroupsGetGroupMembersPathParams extends SpeakeasyBase {
     objectId: string;
-    tenantId: string;
+    tenantID: string;
 }
 export declare class GroupsGetGroupMembersQueryParams extends SpeakeasyBase {
     apiVersion: string;

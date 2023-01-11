@@ -9,5 +9,5 @@ import { PersonResponse } from "./personresponse";
 **/
 export class BatchUpdateContactsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=updateResult", elemType: PersonResponse })
-  updateResult?: Map<string, PersonResponse>;
+  updateResult?: Record<string, PersonResponse>;
 }

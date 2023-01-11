@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DomainSuggestion } from "./domainsuggestion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDomainSuggestionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var domainsuggestion_1 = require("./domainsuggestion");
 var GetDomainSuggestionsResponse = /** @class */ (function (_super) {
     __extends(GetDomainSuggestionsResponse, _super);
     function GetDomainSuggestionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SuggestionsList", elemType: DomainSuggestion }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SuggestionsList", elemType: domainsuggestion_1.DomainSuggestion }),
         __metadata("design:type", Array)
     ], GetDomainSuggestionsResponse.prototype, "suggestionsList", void 0);
     return GetDomainSuggestionsResponse;
-}(SpeakeasyBase));
-export { GetDomainSuggestionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainSuggestionsResponse = GetDomainSuggestionsResponse;

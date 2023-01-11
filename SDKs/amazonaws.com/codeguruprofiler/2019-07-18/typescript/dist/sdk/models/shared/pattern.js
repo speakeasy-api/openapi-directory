@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Pattern = void 0;
+var utils_1 = require("../../../internal/utils");
 // Pattern
 /**
  *  A set of rules used to make a recommendation during an analysis.
@@ -33,33 +36,33 @@ var Pattern = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countersToAggregate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countersToAggregate" }),
         __metadata("design:type", Array)
     ], Pattern.prototype, "countersToAggregate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Pattern.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Pattern.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Pattern.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolutionSteps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolutionSteps" }),
         __metadata("design:type", String)
     ], Pattern.prototype, "resolutionSteps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetFrames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetFrames" }),
         __metadata("design:type", Array)
     ], Pattern.prototype, "targetFrames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thresholdPercent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thresholdPercent" }),
         __metadata("design:type", Number)
     ], Pattern.prototype, "thresholdPercent", void 0);
     return Pattern;
-}(SpeakeasyBase));
-export { Pattern };
+}(utils_1.SpeakeasyBase));
+exports.Pattern = Pattern;

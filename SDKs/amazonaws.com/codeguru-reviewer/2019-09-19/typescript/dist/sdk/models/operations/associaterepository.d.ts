@@ -29,7 +29,7 @@ export declare class AssociateRepositoryRequestBody extends SpeakeasyBase {
     clientRequestToken?: string;
     kmsKeyDetails?: AssociateRepositoryRequestBodyKmsKeyDetails;
     repository: AssociateRepositoryRequestBodyRepository;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class AssociateRepositoryRequest extends SpeakeasyBase {
     headers: AssociateRepositoryHeaders;

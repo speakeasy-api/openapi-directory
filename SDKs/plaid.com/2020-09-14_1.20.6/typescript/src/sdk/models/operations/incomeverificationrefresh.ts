@@ -14,7 +14,7 @@ export class IncomeVerificationRefreshResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   incomeVerificationRefreshResponse?: shared.IncomeVerificationRefreshResponse;

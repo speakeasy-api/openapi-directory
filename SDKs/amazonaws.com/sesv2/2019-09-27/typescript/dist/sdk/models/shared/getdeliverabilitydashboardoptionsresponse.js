@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeliverabilityDashboardAccountStatusEnum } from "./deliverabilitydashboardaccountstatusenum";
-import { DomainDeliverabilityTrackingOption } from "./domaindeliverabilitytrackingoption";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeliverabilityDashboardOptionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var deliverabilitydashboardaccountstatusenum_1 = require("./deliverabilitydashboardaccountstatusenum");
+var domaindeliverabilitytrackingoption_1 = require("./domaindeliverabilitytrackingoption");
 // GetDeliverabilityDashboardOptionsResponse
 /**
  * An object that shows the status of the Deliverability dashboard.
@@ -35,25 +38,25 @@ var GetDeliverabilityDashboardOptionsResponse = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountStatus" }),
         __metadata("design:type", String)
     ], GetDeliverabilityDashboardOptionsResponse.prototype, "accountStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ActiveSubscribedDomains", elemType: DomainDeliverabilityTrackingOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ActiveSubscribedDomains", elemType: domaindeliverabilitytrackingoption_1.DomainDeliverabilityTrackingOption }),
         __metadata("design:type", Array)
     ], GetDeliverabilityDashboardOptionsResponse.prototype, "activeSubscribedDomains", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DashboardEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DashboardEnabled" }),
         __metadata("design:type", Boolean)
     ], GetDeliverabilityDashboardOptionsResponse.prototype, "dashboardEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PendingExpirationSubscribedDomains", elemType: DomainDeliverabilityTrackingOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PendingExpirationSubscribedDomains", elemType: domaindeliverabilitytrackingoption_1.DomainDeliverabilityTrackingOption }),
         __metadata("design:type", Array)
     ], GetDeliverabilityDashboardOptionsResponse.prototype, "pendingExpirationSubscribedDomains", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubscriptionExpiryDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubscriptionExpiryDate" }),
         __metadata("design:type", Date)
     ], GetDeliverabilityDashboardOptionsResponse.prototype, "subscriptionExpiryDate", void 0);
     return GetDeliverabilityDashboardOptionsResponse;
-}(SpeakeasyBase));
-export { GetDeliverabilityDashboardOptionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeliverabilityDashboardOptionsResponse = GetDeliverabilityDashboardOptionsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PersonInput } from "./person";
-export var BatchUpdateContactsRequestSourcesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchUpdateContactsRequestInput = exports.BatchUpdateContactsRequestSourcesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var person_1 = require("./person");
+var BatchUpdateContactsRequestSourcesEnum;
 (function (BatchUpdateContactsRequestSourcesEnum) {
     BatchUpdateContactsRequestSourcesEnum["ReadSourceTypeUnspecified"] = "READ_SOURCE_TYPE_UNSPECIFIED";
     BatchUpdateContactsRequestSourcesEnum["ReadSourceTypeProfile"] = "READ_SOURCE_TYPE_PROFILE";
     BatchUpdateContactsRequestSourcesEnum["ReadSourceTypeContact"] = "READ_SOURCE_TYPE_CONTACT";
     BatchUpdateContactsRequestSourcesEnum["ReadSourceTypeDomainContact"] = "READ_SOURCE_TYPE_DOMAIN_CONTACT";
-})(BatchUpdateContactsRequestSourcesEnum || (BatchUpdateContactsRequestSourcesEnum = {}));
+})(BatchUpdateContactsRequestSourcesEnum = exports.BatchUpdateContactsRequestSourcesEnum || (exports.BatchUpdateContactsRequestSourcesEnum = {}));
 // BatchUpdateContactsRequestInput
 /**
  * A request to update a batch of contacts.
@@ -41,21 +44,21 @@ var BatchUpdateContactsRequestInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contacts", elemType: PersonInput }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contacts", elemType: person_1.PersonInput }),
+        __metadata("design:type", Object)
     ], BatchUpdateContactsRequestInput.prototype, "contacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readMask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readMask" }),
         __metadata("design:type", String)
     ], BatchUpdateContactsRequestInput.prototype, "readMask", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sources" }),
         __metadata("design:type", Array)
     ], BatchUpdateContactsRequestInput.prototype, "sources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateMask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateMask" }),
         __metadata("design:type", String)
     ], BatchUpdateContactsRequestInput.prototype, "updateMask", void 0);
     return BatchUpdateContactsRequestInput;
-}(SpeakeasyBase));
-export { BatchUpdateContactsRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.BatchUpdateContactsRequestInput = BatchUpdateContactsRequestInput;

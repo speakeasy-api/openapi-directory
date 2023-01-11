@@ -65,5 +65,5 @@ export class IpamVrfsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ipamVrfsList200ApplicationJsonObject?: IpamVrfsList200ApplicationJson;
+  ipamVrfsList200ApplicationJSONObject?: IpamVrfsList200ApplicationJson;
 }

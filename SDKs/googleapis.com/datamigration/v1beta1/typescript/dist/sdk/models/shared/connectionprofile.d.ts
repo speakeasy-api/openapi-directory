@@ -27,7 +27,7 @@ export declare class ConnectionProfile extends SpeakeasyBase {
     createTime?: string;
     displayName?: string;
     error?: Status;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     mysql?: MySqlConnectionProfile;
     name?: string;
     provider?: ConnectionProfileProviderEnum;
@@ -41,7 +41,7 @@ export declare class ConnectionProfileInput extends SpeakeasyBase {
     cloudsql?: CloudSqlConnectionProfileInput;
     displayName?: string;
     error?: Status;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     mysql?: MySqlConnectionProfileInput;
     name?: string;
     provider?: ConnectionProfileProviderEnum;

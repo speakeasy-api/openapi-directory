@@ -26,6 +26,6 @@ export declare class DescribeClassificationJobResponse extends SpeakeasyBase {
     samplingPercentage?: number;
     scheduleFrequency?: JobScheduleFrequency;
     statistics?: Statistics;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     userPausedDetails?: UserPausedDetails;
 }

@@ -29,5 +29,5 @@ export class ReposGetContributorsStatsResponse extends SpeakeasyBase {
   contributorActivities?: shared.ContributorActivity[];
 
   @SpeakeasyMetadata()
-  reposGetContributorsStats202ApplicationJsonObject?: Map<string, any>;
+  reposGetContributorsStats202ApplicationJSONObject?: Record<string, any>;
 }

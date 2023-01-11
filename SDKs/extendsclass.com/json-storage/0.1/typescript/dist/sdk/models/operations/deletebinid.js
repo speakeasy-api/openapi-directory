@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteBinIdResponse = exports.DeleteBinIdRequest = exports.DeleteBinIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteBinIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteBinIdPathParams, _super);
     function DeleteBinIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], DeleteBinIdPathParams.prototype, "id", void 0);
     return DeleteBinIdPathParams;
-}(SpeakeasyBase));
-export { DeleteBinIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteBinIdPathParams = DeleteBinIdPathParams;
 var DeleteBinIdRequest = /** @class */ (function (_super) {
     __extends(DeleteBinIdRequest, _super);
     function DeleteBinIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteBinIdPathParams)
     ], DeleteBinIdRequest.prototype, "pathParams", void 0);
     return DeleteBinIdRequest;
-}(SpeakeasyBase));
-export { DeleteBinIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteBinIdRequest = DeleteBinIdRequest;
 var DeleteBinIdResponse = /** @class */ (function (_super) {
     __extends(DeleteBinIdResponse, _super);
     function DeleteBinIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteBinIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteBinIdResponse.prototype, "deleteStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteBinIdResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteBinIdResponse.prototype, "statusCode", void 0);
     return DeleteBinIdResponse;
-}(SpeakeasyBase));
-export { DeleteBinIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteBinIdResponse = DeleteBinIdResponse;

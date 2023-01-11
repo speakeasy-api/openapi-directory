@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Aggregates = void 0;
+var utils_1 = require("../../../internal/utils");
 // Aggregates
 /**
  * Contains the (pre-calculated) aggregate values for an asset property.
@@ -33,29 +36,29 @@ var Aggregates = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=average" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=average" }),
         __metadata("design:type", Number)
     ], Aggregates.prototype, "average", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], Aggregates.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maximum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maximum" }),
         __metadata("design:type", Number)
     ], Aggregates.prototype, "maximum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimum" }),
         __metadata("design:type", Number)
     ], Aggregates.prototype, "minimum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=standardDeviation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=standardDeviation" }),
         __metadata("design:type", Number)
     ], Aggregates.prototype, "standardDeviation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sum" }),
         __metadata("design:type", Number)
     ], Aggregates.prototype, "sum", void 0);
     return Aggregates;
-}(SpeakeasyBase));
-export { Aggregates };
+}(utils_1.SpeakeasyBase));
+exports.Aggregates = Aggregates;

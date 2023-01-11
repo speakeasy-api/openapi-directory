@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InvoiceLineItemEntity } from "./invoicelineitementity";
-import { PaymentLineItemEntity } from "./paymentlineitementity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountLineItemEntity = void 0;
+var utils_1 = require("../../../internal/utils");
+var invoicelineitementity_1 = require("./invoicelineitementity");
+var paymentlineitementity_1 = require("./paymentlineitementity");
 // AccountLineItemEntity
 /**
  * List Payments
@@ -35,61 +38,61 @@ var AccountLineItemEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], AccountLineItemEntity.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=balance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=balance" }),
         __metadata("design:type", Number)
     ], AccountLineItemEntity.prototype, "balance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], AccountLineItemEntity.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], AccountLineItemEntity.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download_uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download_uri" }),
         __metadata("design:type", String)
     ], AccountLineItemEntity.prototype, "downloadUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], AccountLineItemEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invoice_line_items" }),
-        __metadata("design:type", InvoiceLineItemEntity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoice_line_items" }),
+        __metadata("design:type", invoicelineitementity_1.InvoiceLineItemEntity)
     ], AccountLineItemEntity.prototype, "invoiceLineItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], AccountLineItemEntity.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payment_line_items" }),
-        __metadata("design:type", PaymentLineItemEntity)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payment_line_items" }),
+        __metadata("design:type", paymentlineitementity_1.PaymentLineItemEntity)
     ], AccountLineItemEntity.prototype, "paymentLineItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payment_reversed_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payment_reversed_at" }),
         __metadata("design:type", Date)
     ], AccountLineItemEntity.prototype, "paymentReversedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payment_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payment_type" }),
         __metadata("design:type", String)
     ], AccountLineItemEntity.prototype, "paymentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=site_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=site_name" }),
         __metadata("design:type", String)
     ], AccountLineItemEntity.prototype, "siteName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], AccountLineItemEntity.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], AccountLineItemEntity.prototype, "updatedAt", void 0);
     return AccountLineItemEntity;
-}(SpeakeasyBase));
-export { AccountLineItemEntity };
+}(utils_1.SpeakeasyBase));
+exports.AccountLineItemEntity = AccountLineItemEntity;

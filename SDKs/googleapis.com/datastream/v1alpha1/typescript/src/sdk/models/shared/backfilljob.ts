@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 
 
 export enum BackfillJobStateEnum {
@@ -25,8 +25,8 @@ export enum BackfillJobTriggerEnum {
  * Represents a backfill job on a specific stream object.
 **/
 export class BackfillJob extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=errors", elemType: Error })
-  errors?: Error[];
+  @SpeakeasyMetadata({ data: "json, name=errors", elemType: ErrorT })
+  errors?: ErrorT[];
 
   @SpeakeasyMetadata({ data: "json, name=lastEndTime" })
   lastEndTime?: string;

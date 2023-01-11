@@ -61,8 +61,8 @@ export class PostPortfolioOptimizationMaximumSharpeRatioResponse extends Speakea
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioOptimizationMaximumSharpeRatio200ApplicationJsonObject?: PostPortfolioOptimizationMaximumSharpeRatio200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioOptimizationMaximumSharpeRatio200ApplicationJSONObject?: PostPortfolioOptimizationMaximumSharpeRatio200ApplicationJson;
 }

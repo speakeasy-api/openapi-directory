@@ -8,5 +8,5 @@ export declare class GetNetworkWirelessBillingRequest extends SpeakeasyBase {
 export declare class GetNetworkWirelessBillingResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkWirelessBilling200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessBilling200ApplicationJSONObject?: Record<string, any>;
 }

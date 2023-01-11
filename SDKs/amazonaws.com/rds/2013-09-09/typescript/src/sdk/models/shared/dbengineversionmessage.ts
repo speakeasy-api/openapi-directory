@@ -1,11 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbEngineVersion } from "./dbengineversion";
+import { DbEngineVersionList } from "./dbengineversionlist";
 
 
 
 export class DbEngineVersionMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: DbEngineVersion })
-  dbEngineVersions?: DbEngineVersion[];
+  @SpeakeasyMetadata({ elemType: DbEngineVersionList })
+  dbEngineVersions?: DbEngineVersionList[];
 
   @SpeakeasyMetadata()
   marker?: string;

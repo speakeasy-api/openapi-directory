@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AddTagsToResourceRequest, AddTagsToResourceResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,27 +33,27 @@ const sdk = new SDK(WithSecurity(
     
 const req: AddTagsToResourceRequest = {
   headers: {
-    xAmzAlgorithm: "modi",
-    xAmzContentSha256: "dolor",
-    xAmzCredential: "omnis",
-    xAmzDate: "explicabo",
-    xAmzSecurityToken: "voluptatum",
-    xAmzSignature: "quia",
-    xAmzSignedHeaders: "perferendis",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "CloudHsmFrontendService.AddTagsToResource",
   },
   request: {
-    resourceArn: "incidunt",
+    resourceArn: "fugit",
     tagList: [
       {
-        key: "velit",
-        value: "voluptatem",
+        key: "nihil",
+        value: "rerum",
       },
     ],
   },
 };
 
-sdk.sdk.addTagsToResource(req).then((res: AddTagsToResourceResponse | AxiosError) => {
+sdk.addTagsToResource(req).then((res: AddTagsToResourceResponse | AxiosError) => {
    // handle response
 });
 ```

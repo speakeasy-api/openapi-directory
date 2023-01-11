@@ -191,23 +191,23 @@ export class PscerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  pscer400ApplicationJsonObject?: Pscer400ApplicationJson;
+  pscer400ApplicationJSONObject?: Pscer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  pscer401ApplicationJsonObject?: Pscer401ApplicationJson;
+  pscer401ApplicationJSONObject?: Pscer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  pscer404ApplicationJsonObject?: Pscer404ApplicationJson;
+  pscer404ApplicationJSONObject?: Pscer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  pscer500ApplicationJsonObject?: Pscer500ApplicationJson;
+  pscer500ApplicationJSONObject?: Pscer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  pscer502ApplicationJsonObject?: Pscer502ApplicationJson;
+  pscer502ApplicationJSONObject?: Pscer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  pscer503ApplicationJsonObject?: Pscer503ApplicationJson;
+  pscer503ApplicationJSONObject?: Pscer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  pscer504ApplicationJsonObject?: Pscer504ApplicationJson;
+  pscer504ApplicationJSONObject?: Pscer504ApplicationJson;
 }

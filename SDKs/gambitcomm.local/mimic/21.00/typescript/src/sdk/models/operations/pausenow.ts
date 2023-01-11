@@ -22,5 +22,5 @@ export class PauseNowResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  pauseNow200ApplicationJsonString?: string;
+  pauseNow200ApplicationJSONString?: string;
 }

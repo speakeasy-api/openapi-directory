@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigurationAggregator } from "./configurationaggregator";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutConfigurationAggregatorResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var configurationaggregator_1 = require("./configurationaggregator");
 var PutConfigurationAggregatorResponse = /** @class */ (function (_super) {
     __extends(PutConfigurationAggregatorResponse, _super);
     function PutConfigurationAggregatorResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigurationAggregator" }),
-        __metadata("design:type", ConfigurationAggregator)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigurationAggregator" }),
+        __metadata("design:type", configurationaggregator_1.ConfigurationAggregator)
     ], PutConfigurationAggregatorResponse.prototype, "configurationAggregator", void 0);
     return PutConfigurationAggregatorResponse;
-}(SpeakeasyBase));
-export { PutConfigurationAggregatorResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutConfigurationAggregatorResponse = PutConfigurationAggregatorResponse;

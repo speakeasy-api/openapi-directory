@@ -20,7 +20,7 @@ export declare class CreatePartitionIndexRequest extends SpeakeasyBase {
 export declare class CreatePartitionIndexResponse extends SpeakeasyBase {
     alreadyExistsException?: any;
     contentType: string;
-    createPartitionIndexResponse?: Map<string, any>;
+    createPartitionIndexResponse?: Record<string, any>;
     entityNotFoundException?: any;
     glueEncryptionException?: any;
     internalServiceException?: any;

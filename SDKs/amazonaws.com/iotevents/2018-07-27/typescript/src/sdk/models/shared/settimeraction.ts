@@ -11,7 +11,7 @@ export class SetTimerAction extends SpeakeasyBase {
   durationExpression?: string;
 
   @SpeakeasyMetadata({ data: "json, name=seconds" })
-  seconds?: number;
+  seconds?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=timerName" })
   timerName: string;

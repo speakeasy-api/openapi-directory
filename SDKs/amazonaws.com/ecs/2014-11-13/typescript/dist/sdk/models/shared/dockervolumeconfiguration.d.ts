@@ -6,7 +6,7 @@ import { ScopeEnum } from "./scopeenum";
 export declare class DockerVolumeConfiguration extends SpeakeasyBase {
     autoprovision?: boolean;
     driver?: string;
-    driverOpts?: Map<string, string>;
-    labels?: Map<string, string>;
+    driverOpts?: Record<string, string>;
+    labels?: Record<string, string>;
     scope?: ScopeEnum;
 }

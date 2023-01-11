@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComputeEnum } from "./computeenum";
-import { RunningModeEnum } from "./runningmodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkspaceProperties = void 0;
+var utils_1 = require("../../../internal/utils");
+var computeenum_1 = require("./computeenum");
+var runningmodeenum_1 = require("./runningmodeenum");
 // WorkspaceProperties
 /**
  * Describes a WorkSpace.
@@ -35,25 +38,25 @@ var WorkspaceProperties = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComputeTypeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComputeTypeName" }),
         __metadata("design:type", String)
     ], WorkspaceProperties.prototype, "computeTypeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RootVolumeSizeGib" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RootVolumeSizeGib" }),
         __metadata("design:type", Number)
     ], WorkspaceProperties.prototype, "rootVolumeSizeGib", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RunningMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RunningMode" }),
         __metadata("design:type", String)
     ], WorkspaceProperties.prototype, "runningMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RunningModeAutoStopTimeoutInMinutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RunningModeAutoStopTimeoutInMinutes" }),
         __metadata("design:type", Number)
     ], WorkspaceProperties.prototype, "runningModeAutoStopTimeoutInMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UserVolumeSizeGib" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UserVolumeSizeGib" }),
         __metadata("design:type", Number)
     ], WorkspaceProperties.prototype, "userVolumeSizeGib", void 0);
     return WorkspaceProperties;
-}(SpeakeasyBase));
-export { WorkspaceProperties };
+}(utils_1.SpeakeasyBase));
+exports.WorkspaceProperties = WorkspaceProperties;

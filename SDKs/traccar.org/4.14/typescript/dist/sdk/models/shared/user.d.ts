@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class User extends SpeakeasyBase {
     administrator?: boolean;
-    attributes?: Map<string, any>;
+    attributes?: Record<string, any>;
     coordinateFormat?: string;
     deviceLimit?: number;
     deviceReadonly?: boolean;

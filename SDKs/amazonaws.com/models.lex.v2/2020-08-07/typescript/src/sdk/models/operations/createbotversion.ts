@@ -35,7 +35,7 @@ export class CreateBotVersionHeaders extends SpeakeasyBase {
 
 export class CreateBotVersionRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=botVersionLocaleSpecification", elemType: shared.BotVersionLocaleDetails })
-  botVersionLocaleSpecification: Map<string, shared.BotVersionLocaleDetails>;
+  botVersionLocaleSpecification: Record<string, shared.BotVersionLocaleDetails>;
 
   @SpeakeasyMetadata({ data: "json, name=description" })
   description?: string;

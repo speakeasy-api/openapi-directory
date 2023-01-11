@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountInfo } from "./accountinfo";
-import { DriveOptions } from "./driveoptions";
-import { HangoutsChatInfo } from "./hangoutschatinfo";
-import { HangoutsChatOptions } from "./hangoutschatoptions";
-import { MailOptions } from "./mailoptions";
-import { OrgUnitInfo } from "./orgunitinfo";
-import { SharedDriveInfo } from "./shareddriveinfo";
-import { SitesUrlInfo } from "./sitesurlinfo";
-import { TeamDriveInfo } from "./teamdriveinfo";
-import { VoiceOptions } from "./voiceoptions";
-export var QueryCorpusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Query = exports.QuerySearchMethodEnum = exports.QueryMethodEnum = exports.QueryDataScopeEnum = exports.QueryCorpusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountinfo_1 = require("./accountinfo");
+var driveoptions_1 = require("./driveoptions");
+var hangoutschatinfo_1 = require("./hangoutschatinfo");
+var hangoutschatoptions_1 = require("./hangoutschatoptions");
+var mailoptions_1 = require("./mailoptions");
+var orgunitinfo_1 = require("./orgunitinfo");
+var shareddriveinfo_1 = require("./shareddriveinfo");
+var sitesurlinfo_1 = require("./sitesurlinfo");
+var teamdriveinfo_1 = require("./teamdriveinfo");
+var voiceoptions_1 = require("./voiceoptions");
+var QueryCorpusEnum;
 (function (QueryCorpusEnum) {
     QueryCorpusEnum["CorpusTypeUnspecified"] = "CORPUS_TYPE_UNSPECIFIED";
     QueryCorpusEnum["Drive"] = "DRIVE";
@@ -41,15 +44,15 @@ export var QueryCorpusEnum;
     QueryCorpusEnum["Groups"] = "GROUPS";
     QueryCorpusEnum["HangoutsChat"] = "HANGOUTS_CHAT";
     QueryCorpusEnum["Voice"] = "VOICE";
-})(QueryCorpusEnum || (QueryCorpusEnum = {}));
-export var QueryDataScopeEnum;
+})(QueryCorpusEnum = exports.QueryCorpusEnum || (exports.QueryCorpusEnum = {}));
+var QueryDataScopeEnum;
 (function (QueryDataScopeEnum) {
     QueryDataScopeEnum["DataScopeUnspecified"] = "DATA_SCOPE_UNSPECIFIED";
     QueryDataScopeEnum["AllData"] = "ALL_DATA";
     QueryDataScopeEnum["HeldData"] = "HELD_DATA";
     QueryDataScopeEnum["UnprocessedData"] = "UNPROCESSED_DATA";
-})(QueryDataScopeEnum || (QueryDataScopeEnum = {}));
-export var QueryMethodEnum;
+})(QueryDataScopeEnum = exports.QueryDataScopeEnum || (exports.QueryDataScopeEnum = {}));
+var QueryMethodEnum;
 (function (QueryMethodEnum) {
     QueryMethodEnum["SearchMethodUnspecified"] = "SEARCH_METHOD_UNSPECIFIED";
     QueryMethodEnum["Account"] = "ACCOUNT";
@@ -59,8 +62,8 @@ export var QueryMethodEnum;
     QueryMethodEnum["Room"] = "ROOM";
     QueryMethodEnum["SitesUrl"] = "SITES_URL";
     QueryMethodEnum["SharedDrive"] = "SHARED_DRIVE";
-})(QueryMethodEnum || (QueryMethodEnum = {}));
-export var QuerySearchMethodEnum;
+})(QueryMethodEnum = exports.QueryMethodEnum || (exports.QueryMethodEnum = {}));
+var QuerySearchMethodEnum;
 (function (QuerySearchMethodEnum) {
     QuerySearchMethodEnum["SearchMethodUnspecified"] = "SEARCH_METHOD_UNSPECIFIED";
     QuerySearchMethodEnum["Account"] = "ACCOUNT";
@@ -70,7 +73,7 @@ export var QuerySearchMethodEnum;
     QuerySearchMethodEnum["Room"] = "ROOM";
     QuerySearchMethodEnum["SitesUrl"] = "SITES_URL";
     QuerySearchMethodEnum["SharedDrive"] = "SHARED_DRIVE";
-})(QuerySearchMethodEnum || (QuerySearchMethodEnum = {}));
+})(QuerySearchMethodEnum = exports.QuerySearchMethodEnum || (exports.QuerySearchMethodEnum = {}));
 // Query
 /**
  * The query definition used for search and export.
@@ -81,77 +84,77 @@ var Query = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountInfo" }),
-        __metadata("design:type", AccountInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountInfo" }),
+        __metadata("design:type", accountinfo_1.AccountInfo)
     ], Query.prototype, "accountInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=corpus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=corpus" }),
         __metadata("design:type", String)
     ], Query.prototype, "corpus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataScope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataScope" }),
         __metadata("design:type", String)
     ], Query.prototype, "dataScope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driveOptions" }),
-        __metadata("design:type", DriveOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driveOptions" }),
+        __metadata("design:type", driveoptions_1.DriveOptions)
     ], Query.prototype, "driveOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], Query.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hangoutsChatInfo" }),
-        __metadata("design:type", HangoutsChatInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hangoutsChatInfo" }),
+        __metadata("design:type", hangoutschatinfo_1.HangoutsChatInfo)
     ], Query.prototype, "hangoutsChatInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hangoutsChatOptions" }),
-        __metadata("design:type", HangoutsChatOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hangoutsChatOptions" }),
+        __metadata("design:type", hangoutschatoptions_1.HangoutsChatOptions)
     ], Query.prototype, "hangoutsChatOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mailOptions" }),
-        __metadata("design:type", MailOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mailOptions" }),
+        __metadata("design:type", mailoptions_1.MailOptions)
     ], Query.prototype, "mailOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], Query.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orgUnitInfo" }),
-        __metadata("design:type", OrgUnitInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orgUnitInfo" }),
+        __metadata("design:type", orgunitinfo_1.OrgUnitInfo)
     ], Query.prototype, "orgUnitInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=searchMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=searchMethod" }),
         __metadata("design:type", String)
     ], Query.prototype, "searchMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sharedDriveInfo" }),
-        __metadata("design:type", SharedDriveInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sharedDriveInfo" }),
+        __metadata("design:type", shareddriveinfo_1.SharedDriveInfo)
     ], Query.prototype, "sharedDriveInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sitesUrlInfo" }),
-        __metadata("design:type", SitesUrlInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sitesUrlInfo" }),
+        __metadata("design:type", sitesurlinfo_1.SitesUrlInfo)
     ], Query.prototype, "sitesUrlInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], Query.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teamDriveInfo" }),
-        __metadata("design:type", TeamDriveInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teamDriveInfo" }),
+        __metadata("design:type", teamdriveinfo_1.TeamDriveInfo)
     ], Query.prototype, "teamDriveInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=terms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=terms" }),
         __metadata("design:type", String)
     ], Query.prototype, "terms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
         __metadata("design:type", String)
     ], Query.prototype, "timeZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voiceOptions" }),
-        __metadata("design:type", VoiceOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voiceOptions" }),
+        __metadata("design:type", voiceoptions_1.VoiceOptions)
     ], Query.prototype, "voiceOptions", void 0);
     return Query;
-}(SpeakeasyBase));
-export { Query };
+}(utils_1.SpeakeasyBase));
+exports.Query = Query;

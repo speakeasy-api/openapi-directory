@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ApikeysKeysLookupKeyRequest, ApikeysKeysLookupKeyResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,25 +31,25 @@ const req: ApikeysKeysLookupKeyRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "labore",
-    alt: "proto",
-    callback: "doloribus",
-    fields: "blanditiis",
-    key: "labore",
-    keyString: "pariatur",
-    oauthToken: "natus",
-    prettyPrint: false,
-    quotaUser: "praesentium",
-    uploadType: "minima",
-    uploadProtocol: "accusantium",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    keyString: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
 };
 

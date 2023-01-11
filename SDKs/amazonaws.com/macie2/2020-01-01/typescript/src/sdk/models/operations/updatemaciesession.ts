@@ -81,7 +81,7 @@ export class UpdateMacieSessionResponse extends SpeakeasyBase {
   throttlingException?: any;
 
   @SpeakeasyMetadata()
-  updateMacieSessionResponse?: Map<string, any>;
+  updateMacieSessionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExtendedValue } from "./extendedvalue";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ManualRuleGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var extendedvalue_1 = require("./extendedvalue");
 // ManualRuleGroup
 /**
  * A group name and a list of items from the source data that should be placed in the group with this name.
@@ -34,13 +37,13 @@ var ManualRuleGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupName" }),
-        __metadata("design:type", ExtendedValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupName" }),
+        __metadata("design:type", extendedvalue_1.ExtendedValue)
     ], ManualRuleGroup.prototype, "groupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: ExtendedValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: extendedvalue_1.ExtendedValue }),
         __metadata("design:type", Array)
     ], ManualRuleGroup.prototype, "items", void 0);
     return ManualRuleGroup;
-}(SpeakeasyBase));
-export { ManualRuleGroup };
+}(utils_1.SpeakeasyBase));
+exports.ManualRuleGroup = ManualRuleGroup;

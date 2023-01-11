@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KeyMaterial } from "./keymaterial";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataNotification = void 0;
+var utils_1 = require("../../../internal/utils");
+var keymaterial_1 = require("./keymaterial");
 var DataNotification = /** @class */ (function (_super) {
     __extends(DataNotification, _super);
     function DataNotification() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entries" }),
         __metadata("design:type", Array)
     ], DataNotification.prototype, "entries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyMaterial" }),
-        __metadata("design:type", KeyMaterial)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyMaterial" }),
+        __metadata("design:type", keymaterial_1.KeyMaterial)
     ], DataNotification.prototype, "keyMaterial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageCount" }),
         __metadata("design:type", Number)
     ], DataNotification.prototype, "pageCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageNumber" }),
         __metadata("design:type", Number)
     ], DataNotification.prototype, "pageNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionId" }),
         __metadata("design:type", String)
     ], DataNotification.prototype, "transactionId", void 0);
     return DataNotification;
-}(SpeakeasyBase));
-export { DataNotification };
+}(utils_1.SpeakeasyBase));
+exports.DataNotification = DataNotification;

@@ -14,7 +14,7 @@ export declare class GetPersonasIdRequest extends SpeakeasyBase {
 export declare class GetPersonasIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     persona?: shared.Persona;
     statusCode: number;
 }

@@ -43,13 +43,13 @@ export declare class MigrationJobInput extends SpeakeasyBase {
     displayName?: string;
     dumpPath?: string;
     error?: Status;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     reverseSshConnectivity?: ReverseSshConnectivity;
     source?: string;
     sourceDatabase?: DatabaseType;
     state?: MigrationJobStateEnum;
-    staticIpConnectivity?: Map<string, any>;
+    staticIpConnectivity?: Record<string, any>;
     type?: MigrationJobTypeEnum;
     vpcPeeringConnectivity?: VpcPeeringConnectivity;
 }
@@ -65,14 +65,14 @@ export declare class MigrationJob extends SpeakeasyBase {
     duration?: string;
     endTime?: string;
     error?: Status;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     phase?: MigrationJobPhaseEnum;
     reverseSshConnectivity?: ReverseSshConnectivity;
     source?: string;
     sourceDatabase?: DatabaseType;
     state?: MigrationJobStateEnum;
-    staticIpConnectivity?: Map<string, any>;
+    staticIpConnectivity?: Record<string, any>;
     type?: MigrationJobTypeEnum;
     updateTime?: string;
     vpcPeeringConnectivity?: VpcPeeringConnectivity;

@@ -32,7 +32,7 @@ export class PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest extend
   pathParams: PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsSecurity;
@@ -44,7 +44,7 @@ export class PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsResponse exten
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImportTaskFilterNameEnum } from "./importtaskfilternameenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportTaskFilter = void 0;
+var utils_1 = require("../../../internal/utils");
+var importtaskfilternameenum_1 = require("./importtaskfilternameenum");
 // ImportTaskFilter
 /**
  * <p>A name-values pair of elements you can use to filter the results when querying your import tasks. Currently, wildcards are not supported for filters.</p> <note> <p>When filtering by import status, all other filter values are ignored.</p> </note>
@@ -34,13 +37,13 @@ var ImportTaskFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ImportTaskFilter.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values" }),
         __metadata("design:type", Array)
     ], ImportTaskFilter.prototype, "values", void 0);
     return ImportTaskFilter;
-}(SpeakeasyBase));
-export { ImportTaskFilter };
+}(utils_1.SpeakeasyBase));
+exports.ImportTaskFilter = ImportTaskFilter;

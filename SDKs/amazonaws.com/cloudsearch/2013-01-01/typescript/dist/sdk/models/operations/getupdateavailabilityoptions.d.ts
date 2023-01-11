@@ -8,7 +8,7 @@ export declare enum GetUpdateAvailabilityOptionsVersionEnum {
 export declare class GetUpdateAvailabilityOptionsQueryParams extends SpeakeasyBase {
     action: GetUpdateAvailabilityOptionsActionEnum;
     domainName: string;
-    multiAz: boolean;
+    multiAZ: boolean;
     version: GetUpdateAvailabilityOptionsVersionEnum;
 }
 export declare class GetUpdateAvailabilityOptionsHeaders extends SpeakeasyBase {

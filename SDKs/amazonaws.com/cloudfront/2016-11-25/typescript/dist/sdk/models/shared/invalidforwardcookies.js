@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InvalidForwardCookies = void 0;
+var utils_1 = require("../../../internal/utils");
 // InvalidForwardCookies
 /**
  * Your request contains forward cookies option which doesn't match with the expectation for the <code>whitelisted</code> list of cookie names. Either list of cookie names has been specified when not allowed or list of cookie names is missing when expected.
@@ -33,9 +36,9 @@ var InvalidForwardCookies = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], InvalidForwardCookies.prototype, "message", void 0);
     return InvalidForwardCookies;
-}(SpeakeasyBase));
-export { InvalidForwardCookies };
+}(utils_1.SpeakeasyBase));
+exports.InvalidForwardCookies = InvalidForwardCookies;

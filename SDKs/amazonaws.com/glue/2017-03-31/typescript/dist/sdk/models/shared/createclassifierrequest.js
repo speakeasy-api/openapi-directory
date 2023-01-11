@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CreateCsvClassifierRequest } from "./createcsvclassifierrequest";
-import { CreateGrokClassifierRequest } from "./creategrokclassifierrequest";
-import { CreateJsonClassifierRequest } from "./createjsonclassifierrequest";
-import { CreateXmlClassifierRequest } from "./createxmlclassifierrequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateClassifierRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var createcsvclassifierrequest_1 = require("./createcsvclassifierrequest");
+var creategrokclassifierrequest_1 = require("./creategrokclassifierrequest");
+var createjsonclassifierrequest_1 = require("./createjsonclassifierrequest");
+var createxmlclassifierrequest_1 = require("./createxmlclassifierrequest");
 var CreateClassifierRequest = /** @class */ (function (_super) {
     __extends(CreateClassifierRequest, _super);
     function CreateClassifierRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CsvClassifier" }),
-        __metadata("design:type", CreateCsvClassifierRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CsvClassifier" }),
+        __metadata("design:type", createcsvclassifierrequest_1.CreateCsvClassifierRequest)
     ], CreateClassifierRequest.prototype, "csvClassifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GrokClassifier" }),
-        __metadata("design:type", CreateGrokClassifierRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GrokClassifier" }),
+        __metadata("design:type", creategrokclassifierrequest_1.CreateGrokClassifierRequest)
     ], CreateClassifierRequest.prototype, "grokClassifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JsonClassifier" }),
-        __metadata("design:type", CreateJsonClassifierRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JsonClassifier" }),
+        __metadata("design:type", createjsonclassifierrequest_1.CreateJsonClassifierRequest)
     ], CreateClassifierRequest.prototype, "jsonClassifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=XMLClassifier" }),
-        __metadata("design:type", CreateXmlClassifierRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=XMLClassifier" }),
+        __metadata("design:type", createxmlclassifierrequest_1.CreateXmlClassifierRequest)
     ], CreateClassifierRequest.prototype, "xmlClassifier", void 0);
     return CreateClassifierRequest;
-}(SpeakeasyBase));
-export { CreateClassifierRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateClassifierRequest = CreateClassifierRequest;

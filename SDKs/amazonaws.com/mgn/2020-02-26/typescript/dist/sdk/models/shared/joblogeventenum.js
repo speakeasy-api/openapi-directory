@@ -1,4 +1,7 @@
-export var JobLogEventEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobLogEventEnum = void 0;
+var JobLogEventEnum;
 (function (JobLogEventEnum) {
     JobLogEventEnum["JobStart"] = "JOB_START";
     JobLogEventEnum["ServerSkipped"] = "SERVER_SKIPPED";
@@ -16,4 +19,4 @@ export var JobLogEventEnum;
     JobLogEventEnum["LaunchFailed"] = "LAUNCH_FAILED";
     JobLogEventEnum["JobCancel"] = "JOB_CANCEL";
     JobLogEventEnum["JobEnd"] = "JOB_END";
-})(JobLogEventEnum || (JobLogEventEnum = {}));
+})(JobLogEventEnum = exports.JobLogEventEnum || (exports.JobLogEventEnum = {}));

@@ -15,7 +15,7 @@ export declare class DeleteRegistryPolicyHeaders extends SpeakeasyBase {
 }
 export declare class DeleteRegistryPolicyRequest extends SpeakeasyBase {
     headers: DeleteRegistryPolicyHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class DeleteRegistryPolicyResponse extends SpeakeasyBase {
     contentType: string;

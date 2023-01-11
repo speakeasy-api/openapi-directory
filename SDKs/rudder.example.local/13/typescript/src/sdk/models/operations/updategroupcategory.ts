@@ -53,5 +53,5 @@ export class UpdateGroupCategoryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateGroupCategory200ApplicationJsonObject?: UpdateGroupCategory200ApplicationJson;
+  updateGroupCategory200ApplicationJSONObject?: UpdateGroupCategory200ApplicationJson;
 }

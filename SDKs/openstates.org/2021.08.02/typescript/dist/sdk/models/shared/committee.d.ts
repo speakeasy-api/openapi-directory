@@ -5,7 +5,7 @@ import { CommitteeMembership } from "./committeemembership";
 import { AltName } from "./altname";
 export declare class Committee extends SpeakeasyBase {
     classification: CommitteeClassificationEnum;
-    extras: Map<string, any>;
+    extras: Record<string, any>;
     id: string;
     links?: Link[];
     memberships?: CommitteeMembership[];

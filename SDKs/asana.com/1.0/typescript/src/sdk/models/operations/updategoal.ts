@@ -53,5 +53,5 @@ export class UpdateGoalResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateGoal200ApplicationJsonObject?: UpdateGoal200ApplicationJson;
+  updateGoal200ApplicationJSONObject?: UpdateGoal200ApplicationJson;
 }

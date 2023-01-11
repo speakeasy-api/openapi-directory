@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,94 +23,96 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsAddOrUpdateProjectPermissionsInOrgResponse = exports.TeamsAddOrUpdateProjectPermissionsInOrgRequest = exports.TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJson = exports.TeamsAddOrUpdateProjectPermissionsInOrgRequestBody = exports.TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum = exports.TeamsAddOrUpdateProjectPermissionsInOrgPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamsAddOrUpdateProjectPermissionsInOrgPathParams = /** @class */ (function (_super) {
     __extends(TeamsAddOrUpdateProjectPermissionsInOrgPathParams, _super);
     function TeamsAddOrUpdateProjectPermissionsInOrgPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], TeamsAddOrUpdateProjectPermissionsInOrgPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project_id" }),
         __metadata("design:type", Number)
     ], TeamsAddOrUpdateProjectPermissionsInOrgPathParams.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_slug" }),
         __metadata("design:type", String)
     ], TeamsAddOrUpdateProjectPermissionsInOrgPathParams.prototype, "teamSlug", void 0);
     return TeamsAddOrUpdateProjectPermissionsInOrgPathParams;
-}(SpeakeasyBase));
-export { TeamsAddOrUpdateProjectPermissionsInOrgPathParams };
-export var TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum;
+}(utils_1.SpeakeasyBase));
+exports.TeamsAddOrUpdateProjectPermissionsInOrgPathParams = TeamsAddOrUpdateProjectPermissionsInOrgPathParams;
+var TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum;
 (function (TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum) {
     TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum["Read"] = "read";
     TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum["Write"] = "write";
     TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum["Admin"] = "admin";
-})(TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum || (TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum = {}));
+})(TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum = exports.TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum || (exports.TeamsAddOrUpdateProjectPermissionsInOrgRequestBodyPermissionEnum = {}));
 var TeamsAddOrUpdateProjectPermissionsInOrgRequestBody = /** @class */ (function (_super) {
     __extends(TeamsAddOrUpdateProjectPermissionsInOrgRequestBody, _super);
     function TeamsAddOrUpdateProjectPermissionsInOrgRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission" }),
         __metadata("design:type", String)
     ], TeamsAddOrUpdateProjectPermissionsInOrgRequestBody.prototype, "permission", void 0);
     return TeamsAddOrUpdateProjectPermissionsInOrgRequestBody;
-}(SpeakeasyBase));
-export { TeamsAddOrUpdateProjectPermissionsInOrgRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.TeamsAddOrUpdateProjectPermissionsInOrgRequestBody = TeamsAddOrUpdateProjectPermissionsInOrgRequestBody;
 var TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJson = /** @class */ (function (_super) {
     __extends(TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJson, _super);
     function TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentation_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentation_url" }),
         __metadata("design:type", String)
     ], TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJson.prototype, "documentationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJson.prototype, "message", void 0);
     return TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJson;
-}(SpeakeasyBase));
-export { TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJson = TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJson;
 var TeamsAddOrUpdateProjectPermissionsInOrgRequest = /** @class */ (function (_super) {
     __extends(TeamsAddOrUpdateProjectPermissionsInOrgRequest, _super);
     function TeamsAddOrUpdateProjectPermissionsInOrgRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsAddOrUpdateProjectPermissionsInOrgPathParams)
     ], TeamsAddOrUpdateProjectPermissionsInOrgRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", TeamsAddOrUpdateProjectPermissionsInOrgRequestBody)
     ], TeamsAddOrUpdateProjectPermissionsInOrgRequest.prototype, "request", void 0);
     return TeamsAddOrUpdateProjectPermissionsInOrgRequest;
-}(SpeakeasyBase));
-export { TeamsAddOrUpdateProjectPermissionsInOrgRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsAddOrUpdateProjectPermissionsInOrgRequest = TeamsAddOrUpdateProjectPermissionsInOrgRequest;
 var TeamsAddOrUpdateProjectPermissionsInOrgResponse = /** @class */ (function (_super) {
     __extends(TeamsAddOrUpdateProjectPermissionsInOrgResponse, _super);
     function TeamsAddOrUpdateProjectPermissionsInOrgResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsAddOrUpdateProjectPermissionsInOrgResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsAddOrUpdateProjectPermissionsInOrgResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJson)
-    ], TeamsAddOrUpdateProjectPermissionsInOrgResponse.prototype, "teamsAddOrUpdateProjectPermissionsInOrg403ApplicationJsonObject", void 0);
+    ], TeamsAddOrUpdateProjectPermissionsInOrgResponse.prototype, "teamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSONObject", void 0);
     return TeamsAddOrUpdateProjectPermissionsInOrgResponse;
-}(SpeakeasyBase));
-export { TeamsAddOrUpdateProjectPermissionsInOrgResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsAddOrUpdateProjectPermissionsInOrgResponse = TeamsAddOrUpdateProjectPermissionsInOrgResponse;

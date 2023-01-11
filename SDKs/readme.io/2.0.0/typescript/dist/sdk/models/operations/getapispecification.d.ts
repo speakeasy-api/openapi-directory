@@ -17,6 +17,6 @@ export declare class GetApiSpecificationRequest extends SpeakeasyBase {
 }
 export declare class GetApiSpecificationResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

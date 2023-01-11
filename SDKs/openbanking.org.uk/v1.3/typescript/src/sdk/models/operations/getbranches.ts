@@ -308,10 +308,10 @@ export enum GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrga
 **/
 export class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationBrand extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=TrademarkID" })
-  trademarkId: string;
+  trademarkID: string;
 
   @SpeakeasyMetadata({ data: "json, name=TrademarkIPOCode" })
-  trademarkIpoCode: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationBrandTrademarkIpoCodeEnum;
+  trademarkIPOCode: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationBrandTrademarkIpoCodeEnum;
 }
 
 
@@ -519,11 +519,11 @@ export class GetBranchesResponse extends SpeakeasyBase {
   errorObject?: GetBranchesErrorObject;
 
   @SpeakeasyMetadata()
-  getBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJson;
-
-  @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJson;
 }

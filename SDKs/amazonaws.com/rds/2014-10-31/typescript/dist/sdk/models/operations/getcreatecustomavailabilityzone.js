@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCreateCustomAvailabilityZoneActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCreateCustomAvailabilityZoneResponse = exports.GetCreateCustomAvailabilityZoneRequest = exports.GetCreateCustomAvailabilityZoneHeaders = exports.GetCreateCustomAvailabilityZoneQueryParams = exports.GetCreateCustomAvailabilityZoneVersionEnum = exports.GetCreateCustomAvailabilityZoneActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCreateCustomAvailabilityZoneActionEnum;
 (function (GetCreateCustomAvailabilityZoneActionEnum) {
     GetCreateCustomAvailabilityZoneActionEnum["CreateCustomAvailabilityZone"] = "CreateCustomAvailabilityZone";
-})(GetCreateCustomAvailabilityZoneActionEnum || (GetCreateCustomAvailabilityZoneActionEnum = {}));
-export var GetCreateCustomAvailabilityZoneVersionEnum;
+})(GetCreateCustomAvailabilityZoneActionEnum = exports.GetCreateCustomAvailabilityZoneActionEnum || (exports.GetCreateCustomAvailabilityZoneActionEnum = {}));
+var GetCreateCustomAvailabilityZoneVersionEnum;
 (function (GetCreateCustomAvailabilityZoneVersionEnum) {
     GetCreateCustomAvailabilityZoneVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(GetCreateCustomAvailabilityZoneVersionEnum || (GetCreateCustomAvailabilityZoneVersionEnum = {}));
+})(GetCreateCustomAvailabilityZoneVersionEnum = exports.GetCreateCustomAvailabilityZoneVersionEnum || (exports.GetCreateCustomAvailabilityZoneVersionEnum = {}));
 var GetCreateCustomAvailabilityZoneQueryParams = /** @class */ (function (_super) {
     __extends(GetCreateCustomAvailabilityZoneQueryParams, _super);
     function GetCreateCustomAvailabilityZoneQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetCreateCustomAvailabilityZoneQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=CustomAvailabilityZoneName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=CustomAvailabilityZoneName" }),
         __metadata("design:type", String)
     ], GetCreateCustomAvailabilityZoneQueryParams.prototype, "customAvailabilityZoneName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ExistingVpnId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ExistingVpnId" }),
         __metadata("design:type", String)
     ], GetCreateCustomAvailabilityZoneQueryParams.prototype, "existingVpnId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NewVpnTunnelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NewVpnTunnelName" }),
         __metadata("design:type", String)
     ], GetCreateCustomAvailabilityZoneQueryParams.prototype, "newVpnTunnelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetCreateCustomAvailabilityZoneQueryParams.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=VpnTunnelOriginatorIP" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=VpnTunnelOriginatorIP" }),
         __metadata("design:type", String)
-    ], GetCreateCustomAvailabilityZoneQueryParams.prototype, "vpnTunnelOriginatorIp", void 0);
+    ], GetCreateCustomAvailabilityZoneQueryParams.prototype, "vpnTunnelOriginatorIP", void 0);
     return GetCreateCustomAvailabilityZoneQueryParams;
-}(SpeakeasyBase));
-export { GetCreateCustomAvailabilityZoneQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateCustomAvailabilityZoneQueryParams = GetCreateCustomAvailabilityZoneQueryParams;
 var GetCreateCustomAvailabilityZoneHeaders = /** @class */ (function (_super) {
     __extends(GetCreateCustomAvailabilityZoneHeaders, _super);
     function GetCreateCustomAvailabilityZoneHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetCreateCustomAvailabilityZoneHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetCreateCustomAvailabilityZoneHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetCreateCustomAvailabilityZoneHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetCreateCustomAvailabilityZoneHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetCreateCustomAvailabilityZoneHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetCreateCustomAvailabilityZoneHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetCreateCustomAvailabilityZoneHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetCreateCustomAvailabilityZoneHeaders;
-}(SpeakeasyBase));
-export { GetCreateCustomAvailabilityZoneHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateCustomAvailabilityZoneHeaders = GetCreateCustomAvailabilityZoneHeaders;
 var GetCreateCustomAvailabilityZoneRequest = /** @class */ (function (_super) {
     __extends(GetCreateCustomAvailabilityZoneRequest, _super);
     function GetCreateCustomAvailabilityZoneRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateCustomAvailabilityZoneQueryParams)
     ], GetCreateCustomAvailabilityZoneRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateCustomAvailabilityZoneHeaders)
     ], GetCreateCustomAvailabilityZoneRequest.prototype, "headers", void 0);
     return GetCreateCustomAvailabilityZoneRequest;
-}(SpeakeasyBase));
-export { GetCreateCustomAvailabilityZoneRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateCustomAvailabilityZoneRequest = GetCreateCustomAvailabilityZoneRequest;
 var GetCreateCustomAvailabilityZoneResponse = /** @class */ (function (_super) {
     __extends(GetCreateCustomAvailabilityZoneResponse, _super);
     function GetCreateCustomAvailabilityZoneResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetCreateCustomAvailabilityZoneResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCreateCustomAvailabilityZoneResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCreateCustomAvailabilityZoneResponse.prototype, "statusCode", void 0);
     return GetCreateCustomAvailabilityZoneResponse;
-}(SpeakeasyBase));
-export { GetCreateCustomAvailabilityZoneResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateCustomAvailabilityZoneResponse = GetCreateCustomAvailabilityZoneResponse;

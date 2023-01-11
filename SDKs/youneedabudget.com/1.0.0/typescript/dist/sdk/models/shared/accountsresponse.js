@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Account } from "./account";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountsResponse = exports.AccountsResponseData = void 0;
+var utils_1 = require("../../../internal/utils");
+var account_1 = require("./account");
 var AccountsResponseData = /** @class */ (function (_super) {
     __extends(AccountsResponseData, _super);
     function AccountsResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accounts", elemType: Account }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accounts", elemType: account_1.Account }),
         __metadata("design:type", Array)
     ], AccountsResponseData.prototype, "accounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server_knowledge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server_knowledge" }),
         __metadata("design:type", Number)
     ], AccountsResponseData.prototype, "serverKnowledge", void 0);
     return AccountsResponseData;
-}(SpeakeasyBase));
-export { AccountsResponseData };
+}(utils_1.SpeakeasyBase));
+exports.AccountsResponseData = AccountsResponseData;
 var AccountsResponse = /** @class */ (function (_super) {
     __extends(AccountsResponse, _super);
     function AccountsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", AccountsResponseData)
     ], AccountsResponse.prototype, "data", void 0);
     return AccountsResponse;
-}(SpeakeasyBase));
-export { AccountsResponse };
+}(utils_1.SpeakeasyBase));
+exports.AccountsResponse = AccountsResponse;

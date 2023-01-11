@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HyperParameterRanges } from "./hyperparameterranges";
-import { HpoObjective } from "./hpoobjective";
-import { HpoResourceConfig } from "./hporesourceconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HpoConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var hyperparameterranges_1 = require("./hyperparameterranges");
+var hpoobjective_1 = require("./hpoobjective");
+var hporesourceconfig_1 = require("./hporesourceconfig");
 // HpoConfig
 /**
  * Describes the properties for hyperparameter optimization (HPO).
@@ -36,17 +39,17 @@ var HpoConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=algorithmHyperParameterRanges" }),
-        __metadata("design:type", HyperParameterRanges)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=algorithmHyperParameterRanges" }),
+        __metadata("design:type", hyperparameterranges_1.HyperParameterRanges)
     ], HpoConfig.prototype, "algorithmHyperParameterRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hpoObjective" }),
-        __metadata("design:type", HpoObjective)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hpoObjective" }),
+        __metadata("design:type", hpoobjective_1.HpoObjective)
     ], HpoConfig.prototype, "hpoObjective", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hpoResourceConfig" }),
-        __metadata("design:type", HpoResourceConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hpoResourceConfig" }),
+        __metadata("design:type", hporesourceconfig_1.HpoResourceConfig)
     ], HpoConfig.prototype, "hpoResourceConfig", void 0);
     return HpoConfig;
-}(SpeakeasyBase));
-export { HpoConfig };
+}(utils_1.SpeakeasyBase));
+exports.HpoConfig = HpoConfig;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientVpnEndpointStatus } from "./clientvpnendpointstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateClientVpnEndpointResult = exports.CreateClientVpnEndpointResultStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateClientVpnEndpointResultStatus
+/**
+ * The current state of the Client VPN endpoint.
+**/
+var CreateClientVpnEndpointResultStatus = /** @class */ (function (_super) {
+    __extends(CreateClientVpnEndpointResultStatus, _super);
+    function CreateClientVpnEndpointResultStatus() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateClientVpnEndpointResultStatus.prototype, "code", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateClientVpnEndpointResultStatus.prototype, "message", void 0);
+    return CreateClientVpnEndpointResultStatus;
+}(utils_1.SpeakeasyBase));
+exports.CreateClientVpnEndpointResultStatus = CreateClientVpnEndpointResultStatus;
 var CreateClientVpnEndpointResult = /** @class */ (function (_super) {
     __extends(CreateClientVpnEndpointResult, _super);
     function CreateClientVpnEndpointResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateClientVpnEndpointResult.prototype, "clientVpnEndpointId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateClientVpnEndpointResult.prototype, "dnsName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ClientVpnEndpointStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateClientVpnEndpointResultStatus)
     ], CreateClientVpnEndpointResult.prototype, "status", void 0);
     return CreateClientVpnEndpointResult;
-}(SpeakeasyBase));
-export { CreateClientVpnEndpointResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateClientVpnEndpointResult = CreateClientVpnEndpointResult;

@@ -22,7 +22,7 @@ export class GoogleCloudOrgpolicyV1Policy extends SpeakeasyBase {
   listPolicy?: GoogleCloudOrgpolicyV1ListPolicy;
 
   @SpeakeasyMetadata({ data: "json, name=restoreDefault" })
-  restoreDefault?: Map<string, any>;
+  restoreDefault?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;

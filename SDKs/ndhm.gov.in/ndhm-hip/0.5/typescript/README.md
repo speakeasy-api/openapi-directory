@@ -16,18 +16,17 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { GetV05CertsResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetV05WellKnownOpenidConfigurationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
 
-sdk.sdk.getV05Certs().then((res: GetV05CertsResponse | AxiosError) => {
+sdk.gateway.getV05WellKnownOpenidConfiguration().then((res: GetV05WellKnownOpenidConfigurationResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -36,38 +35,65 @@ sdk.sdk.getV05Certs().then((res: GetV05CertsResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Gateway
 
-* `getV05Certs` - Get certs for JWT verification
-* `getV05Heartbeat` - Get consent request status
 * `getV05WellKnownOpenidConfiguration` - Get openid configuration
-* `postV05CareContextsDiscover` - Discover patient's accounts
+* `getV05Certs` - Get certs for JWT verification
 * `postV05CareContextsOnDiscover` - Response to patient's account discovery request
-* `postV05ConsentsHipNotify` - Consent notification
 * `postV05ConsentsHipOnNotify` - Consent notification
 * `postV05HealthInformationHipOnRequest` - Health information data request
-* `postV05HealthInformationHipRequest` - Health information data request
 * `postV05HealthInformationNotify` - Notifications corresponding to events during data flow
-* `postV05HealthInformationTransfer` - health information transfer API
 * `postV05LinksLinkAddContexts` - API for HIP initiated care-context linking for patient
-* `postV05LinksLinkConfirm` - Token submission by Consent Manager for link confirmation
-* `postV05LinksLinkInit` - Link patient's care contexts
-* `postV05LinksLinkOnAddContexts` - callback API for HIP initiated patient linking /link/add-context
 * `postV05LinksLinkOnConfirm` - Token authenticated by HIP, indicating completion of linkage of care-contexts
 * `postV05LinksLinkOnInit` - Response to patient's care context link request
 * `postV05PatientsProfileOnShare` - Response to patient's share profile request
-* `postV05PatientsProfileShare` - Share patient profile details
 * `postV05PatientsSmsNotify` - API for HIP to send SMS notifications to patients
-* `postV05PatientsSmsOnNotify` - Acknowledgment response for SMS notification sent to patient by HIP
 * `postV05Sessions` - Get access token
 * `postV05UsersAuthConfirm` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
 * `postV05UsersAuthFetchModes` - Get a patient's authentication modes relevant to specified purpose
 * `postV05UsersAuthInit` - Initialize authentication from HIP
+* `postV05UsersAuthOnNotify` - callback API by HIU/HIPs as acknowledgement of auth notification
+
+### consent flow
+
+* `postV05ConsentsHipNotify` - Consent notification
+
+### data flow
+
+* `postV05HealthInformationHipRequest` - Health information data request
+
+### data transfer
+
+* `postV05HealthInformationTransfer` - health information transfer API
+
+### discovery
+
+* `postV05CareContextsDiscover` - Discover patient's accounts
+
+### link
+
+* `postV05LinksLinkConfirm` - Token submission by Consent Manager for link confirmation
+* `postV05LinksLinkInit` - Link patient's care contexts
+* `postV05LinksLinkOnAddContexts` - callback API for HIP initiated patient linking /link/add-context
+
+### monitoring
+
+* `getV05Heartbeat` - Get consent request status
+
+### patient notification
+
+* `postV05PatientsSmsOnNotify` - Acknowledgment response for SMS notification sent to patient by HIP
+
+### profile
+
+* `postV05PatientsProfileShare` - Share patient profile details
+
+### user auth
+
 * `postV05UsersAuthNotify` - notification API in case of DIRECT mode of authentication by the CM
 * `postV05UsersAuthOnConfirm` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
 * `postV05UsersAuthOnFetchModes` - Identification result for a consent-manager user-id
 * `postV05UsersAuthOnInit` - Response to user authentication initialization from HIP
-* `postV05UsersAuthOnNotify` - callback API by HIU/HIPs as acknowledgement of auth notification
 
 <!-- End SDK Available Operations -->
 

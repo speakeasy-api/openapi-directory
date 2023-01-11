@@ -20,6 +20,10 @@ export class BaseGistFiles extends SpeakeasyBase {
 }
 
 
+// BaseGistSimpleUser
+/** 
+ * Simple User
+**/
 export class BaseGistSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;
@@ -101,7 +105,7 @@ export class BaseGist extends SpeakeasyBase {
   description: string;
 
   @SpeakeasyMetadata({ data: "json, name=files", elemType: BaseGistFiles })
-  files: Map<string, BaseGistFiles>;
+  files: Record<string, BaseGistFiles>;
 
   @SpeakeasyMetadata({ data: "json, name=forks" })
   forks?: any[];

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetActionPackageRelationshipsListResponse = exports.GetActionPackageRelationshipsListRequest = exports.GetActionPackageRelationshipsListQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetActionPackageRelationshipsListQueryParams = /** @class */ (function (_super) {
     __extends(GetActionPackageRelationshipsListQueryParams, _super);
     function GetActionPackageRelationshipsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id" }),
         __metadata("design:type", String)
     ], GetActionPackageRelationshipsListQueryParams.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id2" }),
         __metadata("design:type", String)
     ], GetActionPackageRelationshipsListQueryParams.prototype, "id2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=rel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=rel" }),
         __metadata("design:type", String)
     ], GetActionPackageRelationshipsListQueryParams.prototype, "rel", void 0);
     return GetActionPackageRelationshipsListQueryParams;
-}(SpeakeasyBase));
-export { GetActionPackageRelationshipsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetActionPackageRelationshipsListQueryParams = GetActionPackageRelationshipsListQueryParams;
 var GetActionPackageRelationshipsListRequest = /** @class */ (function (_super) {
     __extends(GetActionPackageRelationshipsListRequest, _super);
     function GetActionPackageRelationshipsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetActionPackageRelationshipsListQueryParams)
     ], GetActionPackageRelationshipsListRequest.prototype, "queryParams", void 0);
     return GetActionPackageRelationshipsListRequest;
-}(SpeakeasyBase));
-export { GetActionPackageRelationshipsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetActionPackageRelationshipsListRequest = GetActionPackageRelationshipsListRequest;
 var GetActionPackageRelationshipsListResponse = /** @class */ (function (_super) {
     __extends(GetActionPackageRelationshipsListResponse, _super);
     function GetActionPackageRelationshipsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetActionPackageRelationshipsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetActionPackageRelationshipsListResponse.prototype, "statusCode", void 0);
     return GetActionPackageRelationshipsListResponse;
-}(SpeakeasyBase));
-export { GetActionPackageRelationshipsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetActionPackageRelationshipsListResponse = GetActionPackageRelationshipsListResponse;

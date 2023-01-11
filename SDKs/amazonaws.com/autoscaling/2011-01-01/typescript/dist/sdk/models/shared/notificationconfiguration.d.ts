@@ -5,5 +5,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class NotificationConfiguration extends SpeakeasyBase {
     autoScalingGroupName?: string;
     notificationType?: string;
-    topicArn?: string;
+    topicARN?: string;
 }

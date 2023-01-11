@@ -50,13 +50,13 @@ export class GetListOfIssuersIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getListOfIssuersId400ApplicationJsonObject?: GetListOfIssuersId400ApplicationJson;
+  getListOfIssuersId400ApplicationJSONObject?: GetListOfIssuersId400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getListOfIssuersId401ApplicationJsonObject?: GetListOfIssuersId401ApplicationJson;
+  getListOfIssuersId401ApplicationJSONObject?: GetListOfIssuersId401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getListOfIssuersId500ApplicationJsonObject?: GetListOfIssuersId500ApplicationJson;
+  getListOfIssuersId500ApplicationJSONObject?: GetListOfIssuersId500ApplicationJson;
 
   @SpeakeasyMetadata()
   issuerResponse?: shared.IssuerResponse;

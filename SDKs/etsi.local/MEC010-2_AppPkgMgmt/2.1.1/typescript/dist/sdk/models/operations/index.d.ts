@@ -13,3 +13,4 @@ export * from "./apppkgput";
 export * from "./individualsubscriptiondelete";
 export * from "./individualsubscriptionget";
 export * from "./subscriptionsget";
+export * from "./subscriptionspost";

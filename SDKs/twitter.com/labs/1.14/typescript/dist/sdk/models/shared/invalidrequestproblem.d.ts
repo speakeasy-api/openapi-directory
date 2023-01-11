@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class InvalidRequestProblemErrors extends SpeakeasyBase {
     message?: string;
-    parameters?: Map<string, string[]>;
+    parameters?: Record<string, string[]>;
 }
 /**
  * A problem that indicates this request is invalid.

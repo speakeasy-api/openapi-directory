@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Counters } from "./counters";
-import { DeviceMinutes } from "./deviceminutes";
-import { ExecutionResultEnum } from "./executionresultenum";
-import { ExecutionStatusEnum } from "./executionstatusenum";
-import { TestTypeEnum } from "./testtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Suite = void 0;
+var utils_1 = require("../../../internal/utils");
+var counters_1 = require("./counters");
+var deviceminutes_1 = require("./deviceminutes");
+var executionresultenum_1 = require("./executionresultenum");
+var executionstatusenum_1 = require("./executionstatusenum");
+var testtypeenum_1 = require("./testtypeenum");
 // Suite
 /**
  * Represents a collection of one or more tests.
@@ -38,49 +41,49 @@ var Suite = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], Suite.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=counters" }),
-        __metadata("design:type", Counters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=counters" }),
+        __metadata("design:type", counters_1.Counters)
     ], Suite.prototype, "counters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Suite.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceMinutes" }),
-        __metadata("design:type", DeviceMinutes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceMinutes" }),
+        __metadata("design:type", deviceminutes_1.DeviceMinutes)
     ], Suite.prototype, "deviceMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], Suite.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Suite.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], Suite.prototype, "result", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", Date)
     ], Suite.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Suite.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stopped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stopped" }),
         __metadata("design:type", Date)
     ], Suite.prototype, "stopped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Suite.prototype, "type", void 0);
     return Suite;
-}(SpeakeasyBase));
-export { Suite };
+}(utils_1.SpeakeasyBase));
+exports.Suite = Suite;

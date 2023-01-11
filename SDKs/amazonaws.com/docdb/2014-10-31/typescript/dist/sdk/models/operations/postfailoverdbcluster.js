@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostFailoverDbClusterActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostFailoverDbClusterResponse = exports.PostFailoverDbClusterRequest = exports.PostFailoverDbClusterHeaders = exports.PostFailoverDbClusterQueryParams = exports.PostFailoverDbClusterVersionEnum = exports.PostFailoverDbClusterActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostFailoverDbClusterActionEnum;
 (function (PostFailoverDbClusterActionEnum) {
     PostFailoverDbClusterActionEnum["FailoverDbCluster"] = "FailoverDBCluster";
-})(PostFailoverDbClusterActionEnum || (PostFailoverDbClusterActionEnum = {}));
-export var PostFailoverDbClusterVersionEnum;
+})(PostFailoverDbClusterActionEnum = exports.PostFailoverDbClusterActionEnum || (exports.PostFailoverDbClusterActionEnum = {}));
+var PostFailoverDbClusterVersionEnum;
 (function (PostFailoverDbClusterVersionEnum) {
     PostFailoverDbClusterVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostFailoverDbClusterVersionEnum || (PostFailoverDbClusterVersionEnum = {}));
+})(PostFailoverDbClusterVersionEnum = exports.PostFailoverDbClusterVersionEnum || (exports.PostFailoverDbClusterVersionEnum = {}));
 var PostFailoverDbClusterQueryParams = /** @class */ (function (_super) {
     __extends(PostFailoverDbClusterQueryParams, _super);
     function PostFailoverDbClusterQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostFailoverDbClusterQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostFailoverDbClusterQueryParams.prototype, "version", void 0);
     return PostFailoverDbClusterQueryParams;
-}(SpeakeasyBase));
-export { PostFailoverDbClusterQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostFailoverDbClusterQueryParams = PostFailoverDbClusterQueryParams;
 var PostFailoverDbClusterHeaders = /** @class */ (function (_super) {
     __extends(PostFailoverDbClusterHeaders, _super);
     function PostFailoverDbClusterHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostFailoverDbClusterHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostFailoverDbClusterHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostFailoverDbClusterHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostFailoverDbClusterHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostFailoverDbClusterHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostFailoverDbClusterHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostFailoverDbClusterHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostFailoverDbClusterHeaders;
-}(SpeakeasyBase));
-export { PostFailoverDbClusterHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostFailoverDbClusterHeaders = PostFailoverDbClusterHeaders;
 var PostFailoverDbClusterRequest = /** @class */ (function (_super) {
     __extends(PostFailoverDbClusterRequest, _super);
     function PostFailoverDbClusterRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostFailoverDbClusterQueryParams)
     ], PostFailoverDbClusterRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostFailoverDbClusterHeaders)
     ], PostFailoverDbClusterRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostFailoverDbClusterRequest.prototype, "request", void 0);
     return PostFailoverDbClusterRequest;
-}(SpeakeasyBase));
-export { PostFailoverDbClusterRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostFailoverDbClusterRequest = PostFailoverDbClusterRequest;
 var PostFailoverDbClusterResponse = /** @class */ (function (_super) {
     __extends(PostFailoverDbClusterResponse, _super);
     function PostFailoverDbClusterResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostFailoverDbClusterResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostFailoverDbClusterResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostFailoverDbClusterResponse.prototype, "statusCode", void 0);
     return PostFailoverDbClusterResponse;
-}(SpeakeasyBase));
-export { PostFailoverDbClusterResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostFailoverDbClusterResponse = PostFailoverDbClusterResponse;

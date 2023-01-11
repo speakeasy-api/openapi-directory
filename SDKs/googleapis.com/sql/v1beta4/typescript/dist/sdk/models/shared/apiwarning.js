@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ApiWarningCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiWarning = exports.ApiWarningCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ApiWarningCodeEnum;
 (function (ApiWarningCodeEnum) {
     ApiWarningCodeEnum["SqlApiWarningCodeUnspecified"] = "SQL_API_WARNING_CODE_UNSPECIFIED";
     ApiWarningCodeEnum["RegionUnreachable"] = "REGION_UNREACHABLE";
     ApiWarningCodeEnum["MaxResultsExceedsLimit"] = "MAX_RESULTS_EXCEEDS_LIMIT";
-})(ApiWarningCodeEnum || (ApiWarningCodeEnum = {}));
+})(ApiWarningCodeEnum = exports.ApiWarningCodeEnum || (exports.ApiWarningCodeEnum = {}));
 // ApiWarning
 /**
  * An Admin API warning message.
@@ -39,17 +42,17 @@ var ApiWarning = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], ApiWarning.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ApiWarning.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], ApiWarning.prototype, "region", void 0);
     return ApiWarning;
-}(SpeakeasyBase));
-export { ApiWarning };
+}(utils_1.SpeakeasyBase));
+exports.ApiWarning = ApiWarning;

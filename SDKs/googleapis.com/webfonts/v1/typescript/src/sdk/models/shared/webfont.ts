@@ -14,7 +14,7 @@ export class Webfont extends SpeakeasyBase {
   family?: string;
 
   @SpeakeasyMetadata({ data: "json, name=files" })
-  files?: Map<string, string>;
+  files?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=kind" })
   kind?: string;

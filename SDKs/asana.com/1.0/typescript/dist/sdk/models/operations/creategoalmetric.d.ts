@@ -22,5 +22,5 @@ export declare class CreateGoalMetricResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    createGoalMetric200ApplicationJsonObject?: CreateGoalMetric200ApplicationJson;
+    createGoalMetric200ApplicationJSONObject?: CreateGoalMetric200ApplicationJson;
 }

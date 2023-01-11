@@ -1,5 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
-import FormData from "form-data";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -58,7 +57,7 @@ export class AccountInformationServiceAis {
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -66,94 +65,94 @@ export class AccountInformationServiceAis {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.CreateConsentResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.CreateConsentResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.consentsResponse201 = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error406NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error406NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error406Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error406AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
             break;
           case httpRes?.status == 429:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error429NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error429NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error429Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error429AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
@@ -164,7 +163,6 @@ export class AccountInformationServiceAis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -182,90 +180,93 @@ export class AccountInformationServiceAis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/consents/{consentId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/consents/{consentId}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "delete",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "delete",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.DeleteConsentResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.DeleteConsentResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 204:
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error406NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error406NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error406Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error406AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
             break;
           case httpRes?.status == 429:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error429NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error429NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error429Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error429AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
@@ -276,7 +277,6 @@ export class AccountInformationServiceAis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -313,8 +313,9 @@ export class AccountInformationServiceAis {
     const url: string = baseURL.replace(/\/$/, "") + "/v1/accounts";
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -322,89 +323,91 @@ export class AccountInformationServiceAis {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetAccountListResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetAccountListResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.accountList = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error406NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error406NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error406Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error406AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
             break;
           case httpRes?.status == 429:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error429NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error429NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error429Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error429AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
@@ -415,7 +418,6 @@ export class AccountInformationServiceAis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -440,93 +442,96 @@ export class AccountInformationServiceAis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/accounts/{account-id}/balances", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/accounts/{account-id}/balances", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetBalancesResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetBalancesResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.readAccountBalanceResponse200 = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error406NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error406NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error406Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error406AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
             break;
           case httpRes?.status == 429:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error429NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error429NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error429Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error429AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
@@ -537,7 +542,6 @@ export class AccountInformationServiceAis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -558,93 +562,96 @@ export class AccountInformationServiceAis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/consents/{consentId}/authorisations", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/consents/{consentId}/authorisations", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetConsentAuthorisationResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetConsentAuthorisationResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.authorisations = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error406NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error406NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error406Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error406AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
             break;
           case httpRes?.status == 429:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error429NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error429NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error429Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error429AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
@@ -655,7 +662,6 @@ export class AccountInformationServiceAis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -676,93 +682,96 @@ export class AccountInformationServiceAis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/consents/{consentId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/consents/{consentId}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetConsentInformationResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetConsentInformationResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.consentInformationResponse200Json = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error406NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error406NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error406Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error406AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
             break;
           case httpRes?.status == 429:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error429NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error429NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error429Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error429AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
@@ -773,7 +782,6 @@ export class AccountInformationServiceAis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -792,93 +800,96 @@ export class AccountInformationServiceAis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetConsentScaStatusResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetConsentScaStatusResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.scaStatusResponse = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error406NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error406NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error406Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error406AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
             break;
           case httpRes?.status == 429:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error429NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error429NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error429Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error429AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
@@ -889,7 +900,6 @@ export class AccountInformationServiceAis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -907,93 +917,96 @@ export class AccountInformationServiceAis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/consents/{consentId}/status", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/consents/{consentId}/status", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetConsentStatusResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetConsentStatusResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.consentStatusResponse200 = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error406NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error406NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error406Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error406AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
             break;
           case httpRes?.status == 429:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error429NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error429NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error429Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error429AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
@@ -1004,7 +1017,6 @@ export class AccountInformationServiceAis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1027,93 +1039,96 @@ export class AccountInformationServiceAis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/accounts/{account-id}/transactions/{transactionId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/accounts/{account-id}/transactions/{transactionId}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetTransactionDetailsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetTransactionDetailsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getTransactionDetails200ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getTransactionDetails200ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error406NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error406NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error406Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error406AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
             break;
           case httpRes?.status == 429:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error429NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error429NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error429Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error429AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
@@ -1124,7 +1139,6 @@ export class AccountInformationServiceAis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1147,11 +1161,12 @@ export class AccountInformationServiceAis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/accounts/{account-id}/transactions", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/accounts/{account-id}/transactions", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1159,101 +1174,100 @@ export class AccountInformationServiceAis {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetTransactionListResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.GetTransactionListResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.transactionsResponse200Json = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/xml`)) {
+            if (utils.matchContentType(contentType, `application/xml`)) {
                 const resBody: string = JSON.stringify(httpRes?.data, null, 0);
                 let out: Uint8Array = new Uint8Array(resBody.length);
                 for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
                 res.body = out;
             }
-            if (utils.MatchContentType(contentType, `text/plain`)) {
-                const resBody: string = JSON.stringify(httpRes?.data, null, 0);
-                let out: Uint8Array = new Uint8Array(resBody.length);
-                for (let i: number = 0; i < resBody.length; i++) out[i] = resBody.charCodeAt(i);
-                res.body = out;
+            if (utils.matchContentType(contentType, `text/plain`)) {
+                res.getTransactionList200TextPlainOneOf = JSON.stringify(httpRes?.data);
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error406NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error406NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error406Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error406AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
             break;
           case httpRes?.status == 429:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error429NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error429NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error429Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error429AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
@@ -1264,7 +1278,6 @@ export class AccountInformationServiceAis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1294,11 +1307,12 @@ export class AccountInformationServiceAis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/accounts/{account-id}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/accounts/{account-id}", req.pathParams);
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...config?.headers};
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -1306,89 +1320,91 @@ export class AccountInformationServiceAis {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        headers: headers,
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.ReadAccountDetailsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.ReadAccountDetailsResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.readAccountDetails200ApplicationJsonObject = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.readAccountDetails200ApplicationJSONObject = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error406NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error406NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error406Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error406AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
             break;
           case httpRes?.status == 429:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error429NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error429NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error429Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error429AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
@@ -1399,7 +1415,6 @@ export class AccountInformationServiceAis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1449,12 +1464,12 @@ export class AccountInformationServiceAis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/consents/{consentId}/authorisations", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/consents/{consentId}/authorisations", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -1462,94 +1477,94 @@ export class AccountInformationServiceAis {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "post",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.StartConsentAuthorisationResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.StartConsentAuthorisationResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 201:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.startScaprocessResponse = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error406NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error406NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error406Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error406AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
             break;
           case httpRes?.status == 429:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error429NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error429NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error429Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error429AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
@@ -1560,7 +1575,6 @@ export class AccountInformationServiceAis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -1616,12 +1630,12 @@ export class AccountInformationServiceAis {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", req.pathParams);
 
     let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
 
     try {
-      [reqBodyHeaders, reqBody] = utils.SerializeRequestBody(req);
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
@@ -1629,94 +1643,94 @@ export class AccountInformationServiceAis {
     }
     
     const client: AxiosInstance = this._securityClient!;
-    const headers = {...utils.GetHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
-    let body: any;
-    if (reqBody instanceof FormData) body = reqBody;
-    else body = {...reqBody};
-    return client
-      .request({
-        url: url,
-        method: "put",
-        headers: headers,
-        data: body, 
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...reqBodyHeaders, ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.UpdateConsentsPsuDataResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.GetHeadersFromResponse(httpRes.headers)};
+        const res: operations.UpdateConsentsPsuDataResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.updateConsentsPsuData200ApplicationJsonOneOf = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.updateConsentsPsuData200ApplicationJSONOneOf = httpRes?.data;
             }
             break;
           case httpRes?.status == 400:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error400NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error400NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error400Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error400AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 401:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error401NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error401NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error401Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error401AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 403:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error403NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error403NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error403Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error403AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 404:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error404NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error404NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error404Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error404AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 405:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error405NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error405NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error405Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error405AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 406:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error406NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error406NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error406Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error406AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 408:
             break;
           case httpRes?.status == 409:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error409NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error409NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error409Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error409AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 415:
             break;
           case httpRes?.status == 429:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.error429NgAis = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.error429NGAIS = httpRes?.data;
             }
-            if (utils.MatchContentType(contentType, `application/problem+json`)) {
-                res.error429Ais = httpRes?.data;
+            if (utils.matchContentType(contentType, `application/problem+json`)) {
+                res.error429AIS = httpRes?.data;
             }
             break;
           case httpRes?.status == 500:
@@ -1727,7 +1741,6 @@ export class AccountInformationServiceAis {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

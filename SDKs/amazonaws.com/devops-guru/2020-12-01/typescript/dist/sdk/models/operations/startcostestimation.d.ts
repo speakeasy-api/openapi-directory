@@ -29,7 +29,7 @@ export declare class StartCostEstimationResponse extends SpeakeasyBase {
     contentType: string;
     internalServerException?: any;
     resourceNotFoundException?: any;
-    startCostEstimationResponse?: Map<string, any>;
+    startCostEstimationResponse?: Record<string, any>;
     statusCode: number;
     throttlingException?: any;
     validationException?: any;

@@ -16,7 +16,7 @@ export declare class GetIntersectionsNearOutputFormatQueryParams extends Speakea
     maxDistance?: number;
     maxResults?: number;
     minDegree?: number;
-    outputSrs: number;
+    outputSRS: number;
     point: string;
 }
 export declare class GetIntersectionsNearOutputFormatRequest extends SpeakeasyBase {

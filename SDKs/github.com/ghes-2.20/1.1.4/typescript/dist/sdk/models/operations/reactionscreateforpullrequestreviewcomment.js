@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,38 +14,63 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReactionsCreateForPullRequestReviewCommentResponse = exports.ReactionsCreateForPullRequestReviewCommentRequest = exports.ReactionsCreateForPullRequestReviewComment415ApplicationJson = exports.ReactionsCreateForPullRequestReviewCommentRequestBody = exports.ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum = exports.ReactionsCreateForPullRequestReviewCommentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ReactionsCreateForPullRequestReviewCommentPathParams = /** @class */ (function (_super) {
     __extends(ReactionsCreateForPullRequestReviewCommentPathParams, _super);
     function ReactionsCreateForPullRequestReviewCommentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=comment_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=comment_id" }),
         __metadata("design:type", Number)
     ], ReactionsCreateForPullRequestReviewCommentPathParams.prototype, "commentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReactionsCreateForPullRequestReviewCommentPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReactionsCreateForPullRequestReviewCommentPathParams.prototype, "repo", void 0);
     return ReactionsCreateForPullRequestReviewCommentPathParams;
-}(SpeakeasyBase));
-export { ReactionsCreateForPullRequestReviewCommentPathParams };
-export var ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum;
+}(utils_1.SpeakeasyBase));
+exports.ReactionsCreateForPullRequestReviewCommentPathParams = ReactionsCreateForPullRequestReviewCommentPathParams;
+var ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum;
 (function (ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum) {
     ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum["Plus1"] = "+1";
     ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum["Minus1"] = "-1";
@@ -54,76 +80,76 @@ export var ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum;
     ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum["Hooray"] = "hooray";
     ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum["Rocket"] = "rocket";
     ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum["Eyes"] = "eyes";
-})(ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum || (ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum = {}));
+})(ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum = exports.ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum || (exports.ReactionsCreateForPullRequestReviewCommentRequestBodyContentEnum = {}));
 var ReactionsCreateForPullRequestReviewCommentRequestBody = /** @class */ (function (_super) {
     __extends(ReactionsCreateForPullRequestReviewCommentRequestBody, _super);
     function ReactionsCreateForPullRequestReviewCommentRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], ReactionsCreateForPullRequestReviewCommentRequestBody.prototype, "content", void 0);
     return ReactionsCreateForPullRequestReviewCommentRequestBody;
-}(SpeakeasyBase));
-export { ReactionsCreateForPullRequestReviewCommentRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsCreateForPullRequestReviewCommentRequestBody = ReactionsCreateForPullRequestReviewCommentRequestBody;
 var ReactionsCreateForPullRequestReviewComment415ApplicationJson = /** @class */ (function (_super) {
     __extends(ReactionsCreateForPullRequestReviewComment415ApplicationJson, _super);
     function ReactionsCreateForPullRequestReviewComment415ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentation_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentation_url" }),
         __metadata("design:type", String)
     ], ReactionsCreateForPullRequestReviewComment415ApplicationJson.prototype, "documentationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ReactionsCreateForPullRequestReviewComment415ApplicationJson.prototype, "message", void 0);
     return ReactionsCreateForPullRequestReviewComment415ApplicationJson;
-}(SpeakeasyBase));
-export { ReactionsCreateForPullRequestReviewComment415ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsCreateForPullRequestReviewComment415ApplicationJson = ReactionsCreateForPullRequestReviewComment415ApplicationJson;
 var ReactionsCreateForPullRequestReviewCommentRequest = /** @class */ (function (_super) {
     __extends(ReactionsCreateForPullRequestReviewCommentRequest, _super);
     function ReactionsCreateForPullRequestReviewCommentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReactionsCreateForPullRequestReviewCommentPathParams)
     ], ReactionsCreateForPullRequestReviewCommentRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ReactionsCreateForPullRequestReviewCommentRequestBody)
     ], ReactionsCreateForPullRequestReviewCommentRequest.prototype, "request", void 0);
     return ReactionsCreateForPullRequestReviewCommentRequest;
-}(SpeakeasyBase));
-export { ReactionsCreateForPullRequestReviewCommentRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsCreateForPullRequestReviewCommentRequest = ReactionsCreateForPullRequestReviewCommentRequest;
 var ReactionsCreateForPullRequestReviewCommentResponse = /** @class */ (function (_super) {
     __extends(ReactionsCreateForPullRequestReviewCommentResponse, _super);
     function ReactionsCreateForPullRequestReviewCommentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReactionsCreateForPullRequestReviewCommentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReactionsCreateForPullRequestReviewCommentResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Reaction)
     ], ReactionsCreateForPullRequestReviewCommentResponse.prototype, "reaction", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReactionsCreateForPullRequestReviewComment415ApplicationJson)
-    ], ReactionsCreateForPullRequestReviewCommentResponse.prototype, "reactionsCreateForPullRequestReviewComment415ApplicationJsonObject", void 0);
+    ], ReactionsCreateForPullRequestReviewCommentResponse.prototype, "reactionsCreateForPullRequestReviewComment415ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ValidationError)
     ], ReactionsCreateForPullRequestReviewCommentResponse.prototype, "validationError", void 0);
     return ReactionsCreateForPullRequestReviewCommentResponse;
-}(SpeakeasyBase));
-export { ReactionsCreateForPullRequestReviewCommentResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReactionsCreateForPullRequestReviewCommentResponse = ReactionsCreateForPullRequestReviewCommentResponse;

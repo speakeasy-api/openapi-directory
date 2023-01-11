@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceLldpCdpResponse = exports.GetDeviceLldpCdpRequest = exports.GetDeviceLldpCdpPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceLldpCdpPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceLldpCdpPathParams, _super);
     function GetDeviceLldpCdpPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceLldpCdpPathParams.prototype, "serial", void 0);
     return GetDeviceLldpCdpPathParams;
-}(SpeakeasyBase));
-export { GetDeviceLldpCdpPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceLldpCdpPathParams = GetDeviceLldpCdpPathParams;
 var GetDeviceLldpCdpRequest = /** @class */ (function (_super) {
     __extends(GetDeviceLldpCdpRequest, _super);
     function GetDeviceLldpCdpRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceLldpCdpPathParams)
     ], GetDeviceLldpCdpRequest.prototype, "pathParams", void 0);
     return GetDeviceLldpCdpRequest;
-}(SpeakeasyBase));
-export { GetDeviceLldpCdpRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceLldpCdpRequest = GetDeviceLldpCdpRequest;
 var GetDeviceLldpCdpResponse = /** @class */ (function (_super) {
     __extends(GetDeviceLldpCdpResponse, _super);
     function GetDeviceLldpCdpResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceLldpCdpResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceLldpCdpResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceLldpCdpResponse.prototype, "getDeviceLldpCdp200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceLldpCdpResponse.prototype, "getDeviceLldpCdp200ApplicationJSONObject", void 0);
     return GetDeviceLldpCdpResponse;
-}(SpeakeasyBase));
-export { GetDeviceLldpCdpResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceLldpCdpResponse = GetDeviceLldpCdpResponse;

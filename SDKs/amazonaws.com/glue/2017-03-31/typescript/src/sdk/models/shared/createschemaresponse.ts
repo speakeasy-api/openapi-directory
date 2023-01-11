@@ -47,5 +47,5 @@ export class CreateSchemaResponse extends SpeakeasyBase {
   schemaVersionStatus?: SchemaVersionStatusEnum;
 
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }

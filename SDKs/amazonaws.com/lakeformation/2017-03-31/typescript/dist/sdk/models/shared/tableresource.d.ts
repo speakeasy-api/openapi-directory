@@ -6,5 +6,5 @@ export declare class TableResource extends SpeakeasyBase {
     catalogId?: string;
     databaseName: string;
     name?: string;
-    tableWildcard?: Map<string, any>;
+    tableWildcard?: Record<string, any>;
 }

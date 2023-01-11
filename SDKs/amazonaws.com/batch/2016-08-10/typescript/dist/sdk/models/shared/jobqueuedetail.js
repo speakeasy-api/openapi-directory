@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComputeEnvironmentOrder } from "./computeenvironmentorder";
-import { JqStateEnum } from "./jqstateenum";
-import { JqStatusEnum } from "./jqstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobQueueDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var computeenvironmentorder_1 = require("./computeenvironmentorder");
+var jqstateenum_1 = require("./jqstateenum");
+var jqstatusenum_1 = require("./jqstatusenum");
 // JobQueueDetail
 /**
  * An object representing the details of an Batch job queue.
@@ -36,37 +39,37 @@ var JobQueueDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeEnvironmentOrder", elemType: ComputeEnvironmentOrder }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeEnvironmentOrder", elemType: computeenvironmentorder_1.ComputeEnvironmentOrder }),
         __metadata("design:type", Array)
     ], JobQueueDetail.prototype, "computeEnvironmentOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobQueueArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobQueueArn" }),
         __metadata("design:type", String)
     ], JobQueueDetail.prototype, "jobQueueArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobQueueName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobQueueName" }),
         __metadata("design:type", String)
     ], JobQueueDetail.prototype, "jobQueueName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", Number)
     ], JobQueueDetail.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], JobQueueDetail.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], JobQueueDetail.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusReason" }),
         __metadata("design:type", String)
     ], JobQueueDetail.prototype, "statusReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], JobQueueDetail.prototype, "tags", void 0);
     return JobQueueDetail;
-}(SpeakeasyBase));
-export { JobQueueDetail };
+}(utils_1.SpeakeasyBase));
+exports.JobQueueDetail = JobQueueDetail;

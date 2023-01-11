@@ -15,7 +15,7 @@ export class CreateWorkspaceResponse extends SpeakeasyBase {
   status: WorkspaceStatus;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=workspaceId" })
   workspaceId: string;

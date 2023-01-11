@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TrafficMirrorTarget } from "./trafficmirrortarget";
 
 
 
 export class DescribeTrafficMirrorTargetsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: TrafficMirrorTarget })
-  trafficMirrorTargets?: TrafficMirrorTarget[];
+  @SpeakeasyMetadata()
+  trafficMirrorTargets?: Record<string, any>;
 }

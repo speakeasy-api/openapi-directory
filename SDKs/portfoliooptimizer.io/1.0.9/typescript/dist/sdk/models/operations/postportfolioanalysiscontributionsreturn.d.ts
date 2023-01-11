@@ -20,6 +20,6 @@ export declare class PostPortfolioAnalysisContributionsReturnRequest extends Spe
 }
 export declare class PostPortfolioAnalysisContributionsReturnResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioAnalysisContributionsReturn200ApplicationJsonObject?: PostPortfolioAnalysisContributionsReturn200ApplicationJson;
     statusCode: number;
+    postPortfolioAnalysisContributionsReturn200ApplicationJSONObject?: PostPortfolioAnalysisContributionsReturn200ApplicationJson;
 }

@@ -15,7 +15,7 @@ export declare class AirtravelCoordinatesRequestBody extends SpeakeasyBase {
     travelMode: string;
 }
 export declare class AirtravelCoordinatesRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     headers: AirtravelCoordinatesHeaders;
     request?: AirtravelCoordinatesRequestBody;
 }

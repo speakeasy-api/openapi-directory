@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostPortfolioSimulationRebalancingRandomWeightResponse = exports.PostPortfolioSimulationRebalancingRandomWeightRequest = exports.PostPortfolioSimulationRebalancingRandomWeight200ApplicationJson = exports.PostPortfolioSimulationRebalancingRandomWeight200ApplicationJsonPortfolios = exports.PostPortfolioSimulationRebalancingRandomWeightRequestBody = exports.PostPortfolioSimulationRebalancingRandomWeightRequestBodyAssets = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostPortfolioSimulationRebalancingRandomWeightRequestBodyAssets = /** @class */ (function (_super) {
     __extends(PostPortfolioSimulationRebalancingRandomWeightRequestBodyAssets, _super);
     function PostPortfolioSimulationRebalancingRandomWeightRequestBodyAssets() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetPrices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetPrices" }),
         __metadata("design:type", Array)
     ], PostPortfolioSimulationRebalancingRandomWeightRequestBodyAssets.prototype, "assetPrices", void 0);
     return PostPortfolioSimulationRebalancingRandomWeightRequestBodyAssets;
-}(SpeakeasyBase));
-export { PostPortfolioSimulationRebalancingRandomWeightRequestBodyAssets };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioSimulationRebalancingRandomWeightRequestBodyAssets = PostPortfolioSimulationRebalancingRandomWeightRequestBodyAssets;
 var PostPortfolioSimulationRebalancingRandomWeightRequestBody = /** @class */ (function (_super) {
     __extends(PostPortfolioSimulationRebalancingRandomWeightRequestBody, _super);
     function PostPortfolioSimulationRebalancingRandomWeightRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets", elemType: PostPortfolioSimulationRebalancingRandomWeightRequestBodyAssets }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets", elemType: PostPortfolioSimulationRebalancingRandomWeightRequestBodyAssets }),
         __metadata("design:type", Array)
     ], PostPortfolioSimulationRebalancingRandomWeightRequestBody.prototype, "assets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolios" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolios" }),
         __metadata("design:type", Number)
     ], PostPortfolioSimulationRebalancingRandomWeightRequestBody.prototype, "portfolios", void 0);
     return PostPortfolioSimulationRebalancingRandomWeightRequestBody;
-}(SpeakeasyBase));
-export { PostPortfolioSimulationRebalancingRandomWeightRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioSimulationRebalancingRandomWeightRequestBody = PostPortfolioSimulationRebalancingRandomWeightRequestBody;
 var PostPortfolioSimulationRebalancingRandomWeight200ApplicationJsonPortfolios = /** @class */ (function (_super) {
     __extends(PostPortfolioSimulationRebalancingRandomWeight200ApplicationJsonPortfolios, _super);
     function PostPortfolioSimulationRebalancingRandomWeight200ApplicationJsonPortfolios() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolioValues" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolioValues" }),
         __metadata("design:type", Array)
     ], PostPortfolioSimulationRebalancingRandomWeight200ApplicationJsonPortfolios.prototype, "portfolioValues", void 0);
     return PostPortfolioSimulationRebalancingRandomWeight200ApplicationJsonPortfolios;
-}(SpeakeasyBase));
-export { PostPortfolioSimulationRebalancingRandomWeight200ApplicationJsonPortfolios };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioSimulationRebalancingRandomWeight200ApplicationJsonPortfolios = PostPortfolioSimulationRebalancingRandomWeight200ApplicationJsonPortfolios;
 var PostPortfolioSimulationRebalancingRandomWeight200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostPortfolioSimulationRebalancingRandomWeight200ApplicationJson, _super);
     function PostPortfolioSimulationRebalancingRandomWeight200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolios", elemType: PostPortfolioSimulationRebalancingRandomWeight200ApplicationJsonPortfolios }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolios", elemType: PostPortfolioSimulationRebalancingRandomWeight200ApplicationJsonPortfolios }),
         __metadata("design:type", Array)
     ], PostPortfolioSimulationRebalancingRandomWeight200ApplicationJson.prototype, "portfolios", void 0);
     return PostPortfolioSimulationRebalancingRandomWeight200ApplicationJson;
-}(SpeakeasyBase));
-export { PostPortfolioSimulationRebalancingRandomWeight200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioSimulationRebalancingRandomWeight200ApplicationJson = PostPortfolioSimulationRebalancingRandomWeight200ApplicationJson;
 var PostPortfolioSimulationRebalancingRandomWeightRequest = /** @class */ (function (_super) {
     __extends(PostPortfolioSimulationRebalancingRandomWeightRequest, _super);
     function PostPortfolioSimulationRebalancingRandomWeightRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostPortfolioSimulationRebalancingRandomWeightRequestBody)
     ], PostPortfolioSimulationRebalancingRandomWeightRequest.prototype, "request", void 0);
     return PostPortfolioSimulationRebalancingRandomWeightRequest;
-}(SpeakeasyBase));
-export { PostPortfolioSimulationRebalancingRandomWeightRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioSimulationRebalancingRandomWeightRequest = PostPortfolioSimulationRebalancingRandomWeightRequest;
 var PostPortfolioSimulationRebalancingRandomWeightResponse = /** @class */ (function (_super) {
     __extends(PostPortfolioSimulationRebalancingRandomWeightResponse, _super);
     function PostPortfolioSimulationRebalancingRandomWeightResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostPortfolioSimulationRebalancingRandomWeightResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostPortfolioSimulationRebalancingRandomWeight200ApplicationJson)
-    ], PostPortfolioSimulationRebalancingRandomWeightResponse.prototype, "postPortfolioSimulationRebalancingRandomWeight200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostPortfolioSimulationRebalancingRandomWeightResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostPortfolioSimulationRebalancingRandomWeight200ApplicationJson)
+    ], PostPortfolioSimulationRebalancingRandomWeightResponse.prototype, "postPortfolioSimulationRebalancingRandomWeight200ApplicationJSONObject", void 0);
     return PostPortfolioSimulationRebalancingRandomWeightResponse;
-}(SpeakeasyBase));
-export { PostPortfolioSimulationRebalancingRandomWeightResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioSimulationRebalancingRandomWeightResponse = PostPortfolioSimulationRebalancingRandomWeightResponse;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetReisezentrenRequest, GetReisezentrenResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,11 +28,11 @@ const sdk = new SDK();
     
 const req: GetReisezentrenRequest = {
   queryParams: {
-    name: "laboriosam",
+    name: "sit",
   },
 };
 
-sdk.sdk.getReisezentren(req).then((res: GetReisezentrenResponse | AxiosError) => {
+sdk.getReisezentren(req).then((res: GetReisezentrenResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -45,9 +44,9 @@ sdk.sdk.getReisezentren(req).then((res: GetReisezentrenResponse | AxiosError) =>
 ### SDK SDK
 
 * `getReisezentren` - Get all station infos
-* `getReisezentrenId` - Get information about a specific station
 * `getReisezentrenLocLatLon` - Get information about a station near a location
 * `getReisezentrenLocLatLonDist` - Get stations in a given radius
+* `getReisezentrenId` - Get information about a specific station
 
 <!-- End SDK Available Operations -->
 

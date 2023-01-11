@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HttpRouteHeader } from "./httprouteheader";
-import { HttpMethodEnum } from "./httpmethodenum";
-import { HttpPathMatch } from "./httppathmatch";
-import { HttpQueryParameter } from "./httpqueryparameter";
-import { HttpSchemeEnum } from "./httpschemeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpRouteMatch = void 0;
+var utils_1 = require("../../../internal/utils");
+var httprouteheader_1 = require("./httprouteheader");
+var httpmethodenum_1 = require("./httpmethodenum");
+var httppathmatch_1 = require("./httppathmatch");
+var httpqueryparameter_1 = require("./httpqueryparameter");
+var httpschemeenum_1 = require("./httpschemeenum");
 // HttpRouteMatch
 /**
  * An object that represents the requirements for a route to match HTTP requests for a virtual router.
@@ -38,29 +41,29 @@ var HttpRouteMatch = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers", elemType: HttpRouteHeader }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers", elemType: httprouteheader_1.HttpRouteHeader }),
         __metadata("design:type", Array)
     ], HttpRouteMatch.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], HttpRouteMatch.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
-        __metadata("design:type", HttpPathMatch)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
+        __metadata("design:type", httppathmatch_1.HttpPathMatch)
     ], HttpRouteMatch.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prefix" }),
         __metadata("design:type", String)
     ], HttpRouteMatch.prototype, "prefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queryParameters", elemType: HttpQueryParameter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queryParameters", elemType: httpqueryparameter_1.HttpQueryParameter }),
         __metadata("design:type", Array)
     ], HttpRouteMatch.prototype, "queryParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheme" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheme" }),
         __metadata("design:type", String)
     ], HttpRouteMatch.prototype, "scheme", void 0);
     return HttpRouteMatch;
-}(SpeakeasyBase));
-export { HttpRouteMatch };
+}(utils_1.SpeakeasyBase));
+exports.HttpRouteMatch = HttpRouteMatch;

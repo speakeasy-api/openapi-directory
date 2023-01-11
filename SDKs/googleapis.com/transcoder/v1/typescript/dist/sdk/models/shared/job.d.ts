@@ -17,7 +17,7 @@ export declare class Job extends SpeakeasyBase {
     endTime?: string;
     error?: Status;
     inputUri?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     outputUri?: string;
     startTime?: string;
@@ -32,7 +32,7 @@ export declare class JobInput extends SpeakeasyBase {
     config?: JobConfig;
     error?: Status;
     inputUri?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     outputUri?: string;
     templateId?: string;

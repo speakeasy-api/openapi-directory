@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationDevicesStatusesResponse = exports.GetOrganizationDevicesStatusesRequest = exports.GetOrganizationDevicesStatusesQueryParams = exports.GetOrganizationDevicesStatusesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationDevicesStatusesPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationDevicesStatusesPathParams, _super);
     function GetOrganizationDevicesStatusesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationDevicesStatusesPathParams.prototype, "organizationId", void 0);
     return GetOrganizationDevicesStatusesPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationDevicesStatusesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationDevicesStatusesPathParams = GetOrganizationDevicesStatusesPathParams;
 var GetOrganizationDevicesStatusesQueryParams = /** @class */ (function (_super) {
     __extends(GetOrganizationDevicesStatusesQueryParams, _super);
     function GetOrganizationDevicesStatusesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=components" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=components" }),
+        __metadata("design:type", Object)
     ], GetOrganizationDevicesStatusesQueryParams.prototype, "components", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
         __metadata("design:type", String)
     ], GetOrganizationDevicesStatusesQueryParams.prototype, "endingBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=perPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=perPage" }),
         __metadata("design:type", Number)
     ], GetOrganizationDevicesStatusesQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
         __metadata("design:type", String)
     ], GetOrganizationDevicesStatusesQueryParams.prototype, "startingAfter", void 0);
     return GetOrganizationDevicesStatusesQueryParams;
-}(SpeakeasyBase));
-export { GetOrganizationDevicesStatusesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationDevicesStatusesQueryParams = GetOrganizationDevicesStatusesQueryParams;
 var GetOrganizationDevicesStatusesRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationDevicesStatusesRequest, _super);
     function GetOrganizationDevicesStatusesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationDevicesStatusesPathParams)
     ], GetOrganizationDevicesStatusesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationDevicesStatusesQueryParams)
     ], GetOrganizationDevicesStatusesRequest.prototype, "queryParams", void 0);
     return GetOrganizationDevicesStatusesRequest;
-}(SpeakeasyBase));
-export { GetOrganizationDevicesStatusesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationDevicesStatusesRequest = GetOrganizationDevicesStatusesRequest;
 var GetOrganizationDevicesStatusesResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationDevicesStatusesResponse, _super);
     function GetOrganizationDevicesStatusesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationDevicesStatusesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetOrganizationDevicesStatusesResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationDevicesStatusesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationDevicesStatusesResponse.prototype, "getOrganizationDevicesStatuses200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationDevicesStatusesResponse.prototype, "getOrganizationDevicesStatuses200ApplicationJSONObject", void 0);
     return GetOrganizationDevicesStatusesResponse;
-}(SpeakeasyBase));
-export { GetOrganizationDevicesStatusesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationDevicesStatusesResponse = GetOrganizationDevicesStatusesResponse;

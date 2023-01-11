@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ProviderLaunchStageEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Provider = exports.ProviderLaunchStageEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ProviderLaunchStageEnum;
 (function (ProviderLaunchStageEnum) {
     ProviderLaunchStageEnum["LaunchStageUnspecified"] = "LAUNCH_STAGE_UNSPECIFIED";
     ProviderLaunchStageEnum["Preview"] = "PREVIEW";
     ProviderLaunchStageEnum["Ga"] = "GA";
     ProviderLaunchStageEnum["Deprecated"] = "DEPRECATED";
-})(ProviderLaunchStageEnum || (ProviderLaunchStageEnum = {}));
+})(ProviderLaunchStageEnum = exports.ProviderLaunchStageEnum || (exports.ProviderLaunchStageEnum = {}));
 // Provider
 /**
  * Provider indicates the owner who provides the connectors.
@@ -40,45 +43,45 @@ var Provider = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Provider.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Provider.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Provider.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentationUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentationUri" }),
         __metadata("design:type", String)
     ], Provider.prototype, "documentationUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalUri" }),
         __metadata("design:type", String)
     ], Provider.prototype, "externalUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Provider.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=launchStage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=launchStage" }),
         __metadata("design:type", String)
     ], Provider.prototype, "launchStage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Provider.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Provider.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webAssetsLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webAssetsLocation" }),
         __metadata("design:type", String)
     ], Provider.prototype, "webAssetsLocation", void 0);
     return Provider;
-}(SpeakeasyBase));
-export { Provider };
+}(utils_1.SpeakeasyBase));
+exports.Provider = Provider;

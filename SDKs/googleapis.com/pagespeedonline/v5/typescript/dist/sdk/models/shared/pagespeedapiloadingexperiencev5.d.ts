@@ -6,7 +6,7 @@ import { UserPageLoadMetricV5 } from "./userpageloadmetricv5";
 export declare class PagespeedApiLoadingExperienceV5 extends SpeakeasyBase {
     id?: string;
     initialUrl?: string;
-    metrics?: Map<string, UserPageLoadMetricV5>;
+    metrics?: Record<string, UserPageLoadMetricV5>;
     originFallback?: boolean;
     overallCategory?: string;
 }

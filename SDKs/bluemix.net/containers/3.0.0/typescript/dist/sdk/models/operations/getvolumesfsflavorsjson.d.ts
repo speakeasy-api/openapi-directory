@@ -8,6 +8,6 @@ export declare class GetVolumesFsFlavorsJsonRequest extends SpeakeasyBase {
 }
 export declare class GetVolumesFsFlavorsJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getVolumesFsFlavorsJson200ApplicationJsonIntegers?: number[];
     statusCode: number;
+    getVolumesFsFlavorsJSON200ApplicationJSONIntegers?: number[];
 }

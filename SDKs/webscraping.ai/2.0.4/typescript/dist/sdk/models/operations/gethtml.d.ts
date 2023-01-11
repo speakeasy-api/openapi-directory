@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class GetHtmlQueryParams extends SpeakeasyBase {
-    headers?: Map<string, string>;
+    headers?: Record<string, string>;
     js?: boolean;
     proxy?: shared.ProxyEnum;
     timeout?: number;
@@ -12,8 +12,8 @@ export declare class GetHtmlRequest extends SpeakeasyBase {
 }
 export declare class GetHtmlResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     pageError?: shared.PageError;
     statusCode: number;
-    getHtml200TextHtmlString?: string;
+    getHTML200TextHTMLString?: string;
 }

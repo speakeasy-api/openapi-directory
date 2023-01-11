@@ -12,14 +12,14 @@ export declare enum AttractionTypeEnum {
 **/
 export declare class Attraction extends SpeakeasyBase {
     active?: boolean;
-    additionalInfos?: Map<string, string>;
+    additionalInfos?: Record<string, string>;
     classifications?: Classification[];
-    descriptions?: Map<string, string>;
+    descriptions?: Record<string, string>;
     discoverable?: boolean;
     images?: Image[];
-    names?: Map<string, string>;
-    references?: Map<string, string>;
-    relationships?: Map<string, any>[];
+    names?: Record<string, string>;
+    references?: Record<string, string>;
+    relationships?: Record<string, any>[];
     source?: Source;
     test?: boolean;
     type: AttractionTypeEnum;

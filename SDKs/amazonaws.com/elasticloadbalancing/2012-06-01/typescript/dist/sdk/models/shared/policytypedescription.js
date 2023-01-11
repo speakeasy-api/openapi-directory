@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PolicyAttributeTypeDescription } from "./policyattributetypedescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PolicyTypeDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var policyattributetypedescription_1 = require("./policyattributetypedescription");
 // PolicyTypeDescription
 /**
  * Information about a policy type.
@@ -34,17 +37,17 @@ var PolicyTypeDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PolicyTypeDescription.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: PolicyAttributeTypeDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: policyattributetypedescription_1.PolicyAttributeTypeDescription }),
         __metadata("design:type", Array)
     ], PolicyTypeDescription.prototype, "policyAttributeTypeDescriptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PolicyTypeDescription.prototype, "policyTypeName", void 0);
     return PolicyTypeDescription;
-}(SpeakeasyBase));
-export { PolicyTypeDescription };
+}(utils_1.SpeakeasyBase));
+exports.PolicyTypeDescription = PolicyTypeDescription;

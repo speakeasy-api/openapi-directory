@@ -46,7 +46,7 @@ export class DeleteInputResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteInputResponse?: Map<string, any>;
+  deleteInputResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalFailureException?: any;

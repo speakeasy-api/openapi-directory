@@ -1,4 +1,7 @@
-export var PaymentProductEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentProductEnum = void 0;
+var PaymentProductEnum;
 (function (PaymentProductEnum) {
     PaymentProductEnum["DomesticSwissCreditTransfersIsr"] = "domestic-swiss-credit-transfers-isr";
     PaymentProductEnum["DomesticSwissCreditTransfers"] = "domestic-swiss-credit-transfers";
@@ -9,4 +12,4 @@ export var PaymentProductEnum;
     PaymentProductEnum["Pain001SepaCreditTransfers"] = "pain.001-sepa-credit-transfers";
     PaymentProductEnum["Pain001CrossBorderCreditTransfers"] = "pain.001-cross-border-credit-transfers";
     PaymentProductEnum["Pain001SwissSixCreditTransfers"] = "pain.001-swiss-six-credit-transfers";
-})(PaymentProductEnum || (PaymentProductEnum = {}));
+})(PaymentProductEnum = exports.PaymentProductEnum || (exports.PaymentProductEnum = {}));

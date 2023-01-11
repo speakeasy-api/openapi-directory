@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Country } from "./country";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CountriesList = void 0;
+var utils_1 = require("../../../internal/utils");
+var country_1 = require("./country");
 var CountriesList = /** @class */ (function (_super) {
     __extends(CountriesList, _super);
     function CountriesList() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=countries", elemType: Country }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=countries", elemType: country_1.Country }),
         __metadata("design:type", Array)
     ], CountriesList.prototype, "countries", void 0);
     return CountriesList;
-}(SpeakeasyBase));
-export { CountriesList };
+}(utils_1.SpeakeasyBase));
+exports.CountriesList = CountriesList;

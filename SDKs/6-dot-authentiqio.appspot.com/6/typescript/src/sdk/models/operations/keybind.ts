@@ -37,5 +37,5 @@ export class KeyBindResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  keyBind200ApplicationJsonObject?: KeyBind200ApplicationJson;
+  keyBind200ApplicationJSONObject?: KeyBind200ApplicationJson;
 }

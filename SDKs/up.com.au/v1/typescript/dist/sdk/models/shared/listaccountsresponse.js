@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountResource } from "./accountresource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListAccountsResponse = exports.ListAccountsResponseLinks = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountresource_1 = require("./accountresource");
 var ListAccountsResponseLinks = /** @class */ (function (_super) {
     __extends(ListAccountsResponseLinks, _super);
     function ListAccountsResponseLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], ListAccountsResponseLinks.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prev" }),
         __metadata("design:type", String)
     ], ListAccountsResponseLinks.prototype, "prev", void 0);
     return ListAccountsResponseLinks;
-}(SpeakeasyBase));
-export { ListAccountsResponseLinks };
+}(utils_1.SpeakeasyBase));
+exports.ListAccountsResponseLinks = ListAccountsResponseLinks;
 // ListAccountsResponse
 /**
  * Successful response to get all accounts. This returns a paginated list of
@@ -53,13 +56,13 @@ var ListAccountsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: AccountResource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: accountresource_1.AccountResource }),
         __metadata("design:type", Array)
     ], ListAccountsResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
         __metadata("design:type", ListAccountsResponseLinks)
     ], ListAccountsResponse.prototype, "links", void 0);
     return ListAccountsResponse;
-}(SpeakeasyBase));
-export { ListAccountsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListAccountsResponse = ListAccountsResponse;

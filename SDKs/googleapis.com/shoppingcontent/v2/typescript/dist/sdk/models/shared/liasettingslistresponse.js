@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LiaSettings } from "./liasettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiasettingsListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var liasettings_1 = require("./liasettings");
 var LiasettingsListResponse = /** @class */ (function (_super) {
     __extends(LiasettingsListResponse, _super);
     function LiasettingsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], LiasettingsListResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], LiasettingsListResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: LiaSettings }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: liasettings_1.LiaSettings }),
         __metadata("design:type", Array)
     ], LiasettingsListResponse.prototype, "resources", void 0);
     return LiasettingsListResponse;
-}(SpeakeasyBase));
-export { LiasettingsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.LiasettingsListResponse = LiasettingsListResponse;

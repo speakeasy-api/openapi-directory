@@ -26,6 +26,6 @@ export declare class GetReportingDatesRequest extends SpeakeasyBase {
 }
 export declare class GetReportingDatesResponse extends SpeakeasyBase {
     contentType: string;
-    getReportingDatesDefaultApplicationJsonObject?: GetReportingDatesDefaultApplicationJson;
     statusCode: number;
+    getReportingDatesDefaultApplicationJSONObject?: GetReportingDatesDefaultApplicationJson;
 }

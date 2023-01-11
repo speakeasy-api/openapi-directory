@@ -14,5 +14,5 @@ export class MetricFilterMatchRecord extends SpeakeasyBase {
   eventNumber?: number;
 
   @SpeakeasyMetadata({ data: "json, name=extractedValues" })
-  extractedValues?: Map<string, string>;
+  extractedValues?: Record<string, string>;
 }

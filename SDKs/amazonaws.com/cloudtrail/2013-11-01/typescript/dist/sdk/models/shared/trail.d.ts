@@ -16,7 +16,7 @@ export declare class Trail extends SpeakeasyBase {
     name?: string;
     s3BucketName?: string;
     s3KeyPrefix?: string;
-    snsTopicArn?: string;
-    snsTopicName?: string;
-    trailArn?: string;
+    snsTopicARN?: string;
+    snsTopicName?: Record<string, any>;
+    trailARN?: string;
 }

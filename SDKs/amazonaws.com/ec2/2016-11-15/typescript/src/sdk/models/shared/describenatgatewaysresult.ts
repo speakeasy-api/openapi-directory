@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NatGateway } from "./natgateway";
 
 
 
 export class DescribeNatGatewaysResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: NatGateway })
-  natGateways?: NatGateway[];
+  @SpeakeasyMetadata()
+  natGateways?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 }

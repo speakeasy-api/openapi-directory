@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LandlordAccountingEntryModel } from "./landlordaccountingentrymodel";
-import { LandlordAccountingInvoiceModel } from "./landlordaccountinginvoicemodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LandlordAccountingModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var landlordaccountingentrymodel_1 = require("./landlordaccountingentrymodel");
+var landlordaccountinginvoicemodel_1 = require("./landlordaccountinginvoicemodel");
 // LandlordAccountingModel
 /**
  * Landlord Accounting
@@ -35,21 +38,21 @@ var LandlordAccountingModel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountBalance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountBalance" }),
         __metadata("design:type", Number)
     ], LandlordAccountingModel.prototype, "accountBalance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastPayment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastPayment" }),
         __metadata("design:type", Date)
     ], LandlordAccountingModel.prototype, "lastPayment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PaymentHistory", elemType: LandlordAccountingEntryModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PaymentHistory", elemType: landlordaccountingentrymodel_1.LandlordAccountingEntryModel }),
         __metadata("design:type", Array)
     ], LandlordAccountingModel.prototype, "paymentHistory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Statements", elemType: LandlordAccountingInvoiceModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Statements", elemType: landlordaccountinginvoicemodel_1.LandlordAccountingInvoiceModel }),
         __metadata("design:type", Array)
     ], LandlordAccountingModel.prototype, "statements", void 0);
     return LandlordAccountingModel;
-}(SpeakeasyBase));
-export { LandlordAccountingModel };
+}(utils_1.SpeakeasyBase));
+exports.LandlordAccountingModel = LandlordAccountingModel;

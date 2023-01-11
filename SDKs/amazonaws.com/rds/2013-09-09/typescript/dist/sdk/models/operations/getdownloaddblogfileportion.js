@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDownloadDbLogFilePortionActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDownloadDbLogFilePortionResponse = exports.GetDownloadDbLogFilePortionRequest = exports.GetDownloadDbLogFilePortionHeaders = exports.GetDownloadDbLogFilePortionQueryParams = exports.GetDownloadDbLogFilePortionVersionEnum = exports.GetDownloadDbLogFilePortionActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDownloadDbLogFilePortionActionEnum;
 (function (GetDownloadDbLogFilePortionActionEnum) {
     GetDownloadDbLogFilePortionActionEnum["DownloadDbLogFilePortion"] = "DownloadDBLogFilePortion";
-})(GetDownloadDbLogFilePortionActionEnum || (GetDownloadDbLogFilePortionActionEnum = {}));
-export var GetDownloadDbLogFilePortionVersionEnum;
+})(GetDownloadDbLogFilePortionActionEnum = exports.GetDownloadDbLogFilePortionActionEnum || (exports.GetDownloadDbLogFilePortionActionEnum = {}));
+var GetDownloadDbLogFilePortionVersionEnum;
 (function (GetDownloadDbLogFilePortionVersionEnum) {
     GetDownloadDbLogFilePortionVersionEnum["TwoThousandAndThirteen0909"] = "2013-09-09";
-})(GetDownloadDbLogFilePortionVersionEnum || (GetDownloadDbLogFilePortionVersionEnum = {}));
+})(GetDownloadDbLogFilePortionVersionEnum = exports.GetDownloadDbLogFilePortionVersionEnum || (exports.GetDownloadDbLogFilePortionVersionEnum = {}));
 var GetDownloadDbLogFilePortionQueryParams = /** @class */ (function (_super) {
     __extends(GetDownloadDbLogFilePortionQueryParams, _super);
     function GetDownloadDbLogFilePortionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDownloadDbLogFilePortionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DBInstanceIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DBInstanceIdentifier" }),
         __metadata("design:type", String)
     ], GetDownloadDbLogFilePortionQueryParams.prototype, "dbInstanceIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=LogFileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=LogFileName" }),
         __metadata("design:type", String)
     ], GetDownloadDbLogFilePortionQueryParams.prototype, "logFileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetDownloadDbLogFilePortionQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NumberOfLines" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NumberOfLines" }),
         __metadata("design:type", Number)
     ], GetDownloadDbLogFilePortionQueryParams.prototype, "numberOfLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDownloadDbLogFilePortionQueryParams.prototype, "version", void 0);
     return GetDownloadDbLogFilePortionQueryParams;
-}(SpeakeasyBase));
-export { GetDownloadDbLogFilePortionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDownloadDbLogFilePortionQueryParams = GetDownloadDbLogFilePortionQueryParams;
 var GetDownloadDbLogFilePortionHeaders = /** @class */ (function (_super) {
     __extends(GetDownloadDbLogFilePortionHeaders, _super);
     function GetDownloadDbLogFilePortionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDownloadDbLogFilePortionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDownloadDbLogFilePortionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDownloadDbLogFilePortionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDownloadDbLogFilePortionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDownloadDbLogFilePortionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDownloadDbLogFilePortionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDownloadDbLogFilePortionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDownloadDbLogFilePortionHeaders;
-}(SpeakeasyBase));
-export { GetDownloadDbLogFilePortionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDownloadDbLogFilePortionHeaders = GetDownloadDbLogFilePortionHeaders;
 var GetDownloadDbLogFilePortionRequest = /** @class */ (function (_super) {
     __extends(GetDownloadDbLogFilePortionRequest, _super);
     function GetDownloadDbLogFilePortionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDownloadDbLogFilePortionQueryParams)
     ], GetDownloadDbLogFilePortionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDownloadDbLogFilePortionHeaders)
     ], GetDownloadDbLogFilePortionRequest.prototype, "headers", void 0);
     return GetDownloadDbLogFilePortionRequest;
-}(SpeakeasyBase));
-export { GetDownloadDbLogFilePortionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDownloadDbLogFilePortionRequest = GetDownloadDbLogFilePortionRequest;
 var GetDownloadDbLogFilePortionResponse = /** @class */ (function (_super) {
     __extends(GetDownloadDbLogFilePortionResponse, _super);
     function GetDownloadDbLogFilePortionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDownloadDbLogFilePortionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDownloadDbLogFilePortionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDownloadDbLogFilePortionResponse.prototype, "statusCode", void 0);
     return GetDownloadDbLogFilePortionResponse;
-}(SpeakeasyBase));
-export { GetDownloadDbLogFilePortionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDownloadDbLogFilePortionResponse = GetDownloadDbLogFilePortionResponse;

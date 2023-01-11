@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ElectionDate = void 0;
+var utils_1 = require("../../../internal/utils");
 var ElectionDate = /** @class */ (function (_super) {
     __extends(ElectionDate, _super);
     function ElectionDate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active_election" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active_election" }),
         __metadata("design:type", Boolean)
     ], ElectionDate.prototype, "activeElection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=create_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=create_date" }),
         __metadata("design:type", Date)
     ], ElectionDate.prototype, "createDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=election_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=election_date" }),
         __metadata("design:type", Date)
     ], ElectionDate.prototype, "electionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=election_district" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=election_district" }),
         __metadata("design:type", Number)
     ], ElectionDate.prototype, "electionDistrict", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=election_notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=election_notes" }),
         __metadata("design:type", String)
     ], ElectionDate.prototype, "electionNotes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=election_party" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=election_party" }),
         __metadata("design:type", String)
     ], ElectionDate.prototype, "electionParty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=election_state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=election_state" }),
         __metadata("design:type", String)
     ], ElectionDate.prototype, "electionState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=election_type_full" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=election_type_full" }),
         __metadata("design:type", String)
     ], ElectionDate.prototype, "electionTypeFull", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=election_type_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=election_type_id" }),
         __metadata("design:type", String)
     ], ElectionDate.prototype, "electionTypeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=election_year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=election_year" }),
         __metadata("design:type", Number)
     ], ElectionDate.prototype, "electionYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=office_sought" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=office_sought" }),
         __metadata("design:type", String)
     ], ElectionDate.prototype, "officeSought", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_general_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_general_date" }),
         __metadata("design:type", Date)
     ], ElectionDate.prototype, "primaryGeneralDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=update_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=update_date" }),
         __metadata("design:type", Date)
     ], ElectionDate.prototype, "updateDate", void 0);
     return ElectionDate;
-}(SpeakeasyBase));
-export { ElectionDate };
+}(utils_1.SpeakeasyBase));
+exports.ElectionDate = ElectionDate;

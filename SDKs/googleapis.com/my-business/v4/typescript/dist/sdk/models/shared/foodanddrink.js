@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,91 +23,93 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var FoodAndDrinkBarExceptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FoodAndDrink = exports.FoodAndDrinkVendingMachineExceptionEnum = exports.FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum = exports.FoodAndDrinkTableServiceExceptionEnum = exports.FoodAndDrinkRoomServiceExceptionEnum = exports.FoodAndDrinkRestaurantsCountExceptionEnum = exports.FoodAndDrinkRestaurantExceptionEnum = exports.FoodAndDrinkFreeBreakfastExceptionEnum = exports.FoodAndDrinkDinnerBuffetExceptionEnum = exports.FoodAndDrinkBuffetExceptionEnum = exports.FoodAndDrinkBreakfastBuffetExceptionEnum = exports.FoodAndDrinkBreakfastAvailableExceptionEnum = exports.FoodAndDrinkBarExceptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var FoodAndDrinkBarExceptionEnum;
 (function (FoodAndDrinkBarExceptionEnum) {
     FoodAndDrinkBarExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     FoodAndDrinkBarExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     FoodAndDrinkBarExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     FoodAndDrinkBarExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(FoodAndDrinkBarExceptionEnum || (FoodAndDrinkBarExceptionEnum = {}));
-export var FoodAndDrinkBreakfastAvailableExceptionEnum;
+})(FoodAndDrinkBarExceptionEnum = exports.FoodAndDrinkBarExceptionEnum || (exports.FoodAndDrinkBarExceptionEnum = {}));
+var FoodAndDrinkBreakfastAvailableExceptionEnum;
 (function (FoodAndDrinkBreakfastAvailableExceptionEnum) {
     FoodAndDrinkBreakfastAvailableExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     FoodAndDrinkBreakfastAvailableExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     FoodAndDrinkBreakfastAvailableExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     FoodAndDrinkBreakfastAvailableExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(FoodAndDrinkBreakfastAvailableExceptionEnum || (FoodAndDrinkBreakfastAvailableExceptionEnum = {}));
-export var FoodAndDrinkBreakfastBuffetExceptionEnum;
+})(FoodAndDrinkBreakfastAvailableExceptionEnum = exports.FoodAndDrinkBreakfastAvailableExceptionEnum || (exports.FoodAndDrinkBreakfastAvailableExceptionEnum = {}));
+var FoodAndDrinkBreakfastBuffetExceptionEnum;
 (function (FoodAndDrinkBreakfastBuffetExceptionEnum) {
     FoodAndDrinkBreakfastBuffetExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     FoodAndDrinkBreakfastBuffetExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     FoodAndDrinkBreakfastBuffetExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     FoodAndDrinkBreakfastBuffetExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(FoodAndDrinkBreakfastBuffetExceptionEnum || (FoodAndDrinkBreakfastBuffetExceptionEnum = {}));
-export var FoodAndDrinkBuffetExceptionEnum;
+})(FoodAndDrinkBreakfastBuffetExceptionEnum = exports.FoodAndDrinkBreakfastBuffetExceptionEnum || (exports.FoodAndDrinkBreakfastBuffetExceptionEnum = {}));
+var FoodAndDrinkBuffetExceptionEnum;
 (function (FoodAndDrinkBuffetExceptionEnum) {
     FoodAndDrinkBuffetExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     FoodAndDrinkBuffetExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     FoodAndDrinkBuffetExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     FoodAndDrinkBuffetExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(FoodAndDrinkBuffetExceptionEnum || (FoodAndDrinkBuffetExceptionEnum = {}));
-export var FoodAndDrinkDinnerBuffetExceptionEnum;
+})(FoodAndDrinkBuffetExceptionEnum = exports.FoodAndDrinkBuffetExceptionEnum || (exports.FoodAndDrinkBuffetExceptionEnum = {}));
+var FoodAndDrinkDinnerBuffetExceptionEnum;
 (function (FoodAndDrinkDinnerBuffetExceptionEnum) {
     FoodAndDrinkDinnerBuffetExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     FoodAndDrinkDinnerBuffetExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     FoodAndDrinkDinnerBuffetExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     FoodAndDrinkDinnerBuffetExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(FoodAndDrinkDinnerBuffetExceptionEnum || (FoodAndDrinkDinnerBuffetExceptionEnum = {}));
-export var FoodAndDrinkFreeBreakfastExceptionEnum;
+})(FoodAndDrinkDinnerBuffetExceptionEnum = exports.FoodAndDrinkDinnerBuffetExceptionEnum || (exports.FoodAndDrinkDinnerBuffetExceptionEnum = {}));
+var FoodAndDrinkFreeBreakfastExceptionEnum;
 (function (FoodAndDrinkFreeBreakfastExceptionEnum) {
     FoodAndDrinkFreeBreakfastExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     FoodAndDrinkFreeBreakfastExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     FoodAndDrinkFreeBreakfastExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     FoodAndDrinkFreeBreakfastExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(FoodAndDrinkFreeBreakfastExceptionEnum || (FoodAndDrinkFreeBreakfastExceptionEnum = {}));
-export var FoodAndDrinkRestaurantExceptionEnum;
+})(FoodAndDrinkFreeBreakfastExceptionEnum = exports.FoodAndDrinkFreeBreakfastExceptionEnum || (exports.FoodAndDrinkFreeBreakfastExceptionEnum = {}));
+var FoodAndDrinkRestaurantExceptionEnum;
 (function (FoodAndDrinkRestaurantExceptionEnum) {
     FoodAndDrinkRestaurantExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     FoodAndDrinkRestaurantExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     FoodAndDrinkRestaurantExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     FoodAndDrinkRestaurantExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(FoodAndDrinkRestaurantExceptionEnum || (FoodAndDrinkRestaurantExceptionEnum = {}));
-export var FoodAndDrinkRestaurantsCountExceptionEnum;
+})(FoodAndDrinkRestaurantExceptionEnum = exports.FoodAndDrinkRestaurantExceptionEnum || (exports.FoodAndDrinkRestaurantExceptionEnum = {}));
+var FoodAndDrinkRestaurantsCountExceptionEnum;
 (function (FoodAndDrinkRestaurantsCountExceptionEnum) {
     FoodAndDrinkRestaurantsCountExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     FoodAndDrinkRestaurantsCountExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     FoodAndDrinkRestaurantsCountExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     FoodAndDrinkRestaurantsCountExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(FoodAndDrinkRestaurantsCountExceptionEnum || (FoodAndDrinkRestaurantsCountExceptionEnum = {}));
-export var FoodAndDrinkRoomServiceExceptionEnum;
+})(FoodAndDrinkRestaurantsCountExceptionEnum = exports.FoodAndDrinkRestaurantsCountExceptionEnum || (exports.FoodAndDrinkRestaurantsCountExceptionEnum = {}));
+var FoodAndDrinkRoomServiceExceptionEnum;
 (function (FoodAndDrinkRoomServiceExceptionEnum) {
     FoodAndDrinkRoomServiceExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     FoodAndDrinkRoomServiceExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     FoodAndDrinkRoomServiceExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     FoodAndDrinkRoomServiceExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(FoodAndDrinkRoomServiceExceptionEnum || (FoodAndDrinkRoomServiceExceptionEnum = {}));
-export var FoodAndDrinkTableServiceExceptionEnum;
+})(FoodAndDrinkRoomServiceExceptionEnum = exports.FoodAndDrinkRoomServiceExceptionEnum || (exports.FoodAndDrinkRoomServiceExceptionEnum = {}));
+var FoodAndDrinkTableServiceExceptionEnum;
 (function (FoodAndDrinkTableServiceExceptionEnum) {
     FoodAndDrinkTableServiceExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     FoodAndDrinkTableServiceExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     FoodAndDrinkTableServiceExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     FoodAndDrinkTableServiceExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(FoodAndDrinkTableServiceExceptionEnum || (FoodAndDrinkTableServiceExceptionEnum = {}));
-export var FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum;
+})(FoodAndDrinkTableServiceExceptionEnum = exports.FoodAndDrinkTableServiceExceptionEnum || (exports.FoodAndDrinkTableServiceExceptionEnum = {}));
+var FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum;
 (function (FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum) {
     FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum || (FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum = {}));
-export var FoodAndDrinkVendingMachineExceptionEnum;
+})(FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum = exports.FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum || (exports.FoodAndDrinkTwentyFourHourRoomServiceExceptionEnum = {}));
+var FoodAndDrinkVendingMachineExceptionEnum;
 (function (FoodAndDrinkVendingMachineExceptionEnum) {
     FoodAndDrinkVendingMachineExceptionEnum["ExceptionUnspecified"] = "EXCEPTION_UNSPECIFIED";
     FoodAndDrinkVendingMachineExceptionEnum["UnderConstruction"] = "UNDER_CONSTRUCTION";
     FoodAndDrinkVendingMachineExceptionEnum["DependentOnSeason"] = "DEPENDENT_ON_SEASON";
     FoodAndDrinkVendingMachineExceptionEnum["DependentOnDayOfWeek"] = "DEPENDENT_ON_DAY_OF_WEEK";
-})(FoodAndDrinkVendingMachineExceptionEnum || (FoodAndDrinkVendingMachineExceptionEnum = {}));
+})(FoodAndDrinkVendingMachineExceptionEnum = exports.FoodAndDrinkVendingMachineExceptionEnum || (exports.FoodAndDrinkVendingMachineExceptionEnum = {}));
 // FoodAndDrink
 /**
  * Meals, snacks, and beverages available at the property.
@@ -117,101 +120,101 @@ var FoodAndDrink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bar" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bar" }),
         __metadata("design:type", Boolean)
     ], FoodAndDrink.prototype, "bar", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=barException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=barException" }),
         __metadata("design:type", String)
     ], FoodAndDrink.prototype, "barException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=breakfastAvailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=breakfastAvailable" }),
         __metadata("design:type", Boolean)
     ], FoodAndDrink.prototype, "breakfastAvailable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=breakfastAvailableException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=breakfastAvailableException" }),
         __metadata("design:type", String)
     ], FoodAndDrink.prototype, "breakfastAvailableException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=breakfastBuffet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=breakfastBuffet" }),
         __metadata("design:type", Boolean)
     ], FoodAndDrink.prototype, "breakfastBuffet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=breakfastBuffetException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=breakfastBuffetException" }),
         __metadata("design:type", String)
     ], FoodAndDrink.prototype, "breakfastBuffetException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buffet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buffet" }),
         __metadata("design:type", Boolean)
     ], FoodAndDrink.prototype, "buffet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buffetException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buffetException" }),
         __metadata("design:type", String)
     ], FoodAndDrink.prototype, "buffetException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dinnerBuffet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dinnerBuffet" }),
         __metadata("design:type", Boolean)
     ], FoodAndDrink.prototype, "dinnerBuffet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dinnerBuffetException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dinnerBuffetException" }),
         __metadata("design:type", String)
     ], FoodAndDrink.prototype, "dinnerBuffetException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeBreakfast" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeBreakfast" }),
         __metadata("design:type", Boolean)
     ], FoodAndDrink.prototype, "freeBreakfast", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeBreakfastException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeBreakfastException" }),
         __metadata("design:type", String)
     ], FoodAndDrink.prototype, "freeBreakfastException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restaurant" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restaurant" }),
         __metadata("design:type", Boolean)
     ], FoodAndDrink.prototype, "restaurant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restaurantException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restaurantException" }),
         __metadata("design:type", String)
     ], FoodAndDrink.prototype, "restaurantException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restaurantsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restaurantsCount" }),
         __metadata("design:type", Number)
     ], FoodAndDrink.prototype, "restaurantsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restaurantsCountException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restaurantsCountException" }),
         __metadata("design:type", String)
     ], FoodAndDrink.prototype, "restaurantsCountException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roomService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roomService" }),
         __metadata("design:type", Boolean)
     ], FoodAndDrink.prototype, "roomService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roomServiceException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roomServiceException" }),
         __metadata("design:type", String)
     ], FoodAndDrink.prototype, "roomServiceException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tableService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tableService" }),
         __metadata("design:type", Boolean)
     ], FoodAndDrink.prototype, "tableService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tableServiceException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tableServiceException" }),
         __metadata("design:type", String)
     ], FoodAndDrink.prototype, "tableServiceException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=twentyFourHourRoomService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=twentyFourHourRoomService" }),
         __metadata("design:type", Boolean)
     ], FoodAndDrink.prototype, "twentyFourHourRoomService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=twentyFourHourRoomServiceException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=twentyFourHourRoomServiceException" }),
         __metadata("design:type", String)
     ], FoodAndDrink.prototype, "twentyFourHourRoomServiceException", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vendingMachine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vendingMachine" }),
         __metadata("design:type", Boolean)
     ], FoodAndDrink.prototype, "vendingMachine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vendingMachineException" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vendingMachineException" }),
         __metadata("design:type", String)
     ], FoodAndDrink.prototype, "vendingMachineException", void 0);
     return FoodAndDrink;
-}(SpeakeasyBase));
-export { FoodAndDrink };
+}(utils_1.SpeakeasyBase));
+exports.FoodAndDrink = FoodAndDrink;

@@ -1,4 +1,7 @@
-export var LifecycleStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LifecycleStateEnum = void 0;
+var LifecycleStateEnum;
 (function (LifecycleStateEnum) {
     LifecycleStateEnum["Pending"] = "Pending";
     LifecycleStateEnum["PendingWait"] = "Pending:Wait";
@@ -22,4 +25,4 @@ export var LifecycleStateEnum;
     LifecycleStateEnum["WarmedTerminated"] = "Warmed:Terminated";
     LifecycleStateEnum["WarmedStopped"] = "Warmed:Stopped";
     LifecycleStateEnum["WarmedRunning"] = "Warmed:Running";
-})(LifecycleStateEnum || (LifecycleStateEnum = {}));
+})(LifecycleStateEnum = exports.LifecycleStateEnum || (exports.LifecycleStateEnum = {}));

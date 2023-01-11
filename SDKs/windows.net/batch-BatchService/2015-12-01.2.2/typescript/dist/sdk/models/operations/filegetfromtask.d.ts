@@ -24,7 +24,7 @@ export declare class FileGetFromTaskRequest extends SpeakeasyBase {
 export declare class FileGetFromTaskResponse extends SpeakeasyBase {
     batchError?: any;
     contentType: string;
-    fileGetFromTask200ApplicationJsonBinaryString?: Uint8Array;
-    headers: Map<string, string[]>;
+    fileGetFromTask200ApplicationJSONBinaryString?: Uint8Array;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

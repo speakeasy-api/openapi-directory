@@ -17,7 +17,7 @@ export class ProtocolMqttGetTraceRequest extends SpeakeasyBase {
 
 export class ProtocolMqttGetTraceResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configMqtt?: shared.ConfigMqtt;
+  configMQTT?: shared.ConfigMqtt;
 
   @SpeakeasyMetadata()
   contentType: string;

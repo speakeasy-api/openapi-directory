@@ -24,7 +24,7 @@ export class SeasonUpcomingResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  seasonUpcoming200ApplicationJsonInteger?: number;
+  seasonUpcoming200ApplicationJSONInteger?: number;
 
   @SpeakeasyMetadata()
   statusCode: number;

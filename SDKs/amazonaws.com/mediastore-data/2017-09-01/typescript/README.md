@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DeleteObjectRequest, DeleteObjectResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,20 +33,20 @@ const sdk = new SDK(WithSecurity(
     
 const req: DeleteObjectRequest = {
   pathParams: {
-    path: "itaque",
+    path: "sit",
   },
   headers: {
-    xAmzAlgorithm: "veritatis",
-    xAmzContentSha256: "sapiente",
-    xAmzCredential: "molestiae",
-    xAmzDate: "aut",
-    xAmzSecurityToken: "illo",
-    xAmzSignature: "sapiente",
-    xAmzSignedHeaders: "quisquam",
+    xAmzAlgorithm: "voluptas",
+    xAmzContentSha256: "culpa",
+    xAmzCredential: "expedita",
+    xAmzDate: "consequuntur",
+    xAmzSecurityToken: "dolor",
+    xAmzSignature: "expedita",
+    xAmzSignedHeaders: "voluptas",
   },
 };
 
-sdk.sdk.deleteObject(req).then((res: DeleteObjectResponse | AxiosError) => {
+sdk.deleteObject(req).then((res: DeleteObjectResponse | AxiosError) => {
    // handle response
 });
 ```

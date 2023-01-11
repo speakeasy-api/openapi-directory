@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostGetContextKeysForPrincipalPolicyActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostGetContextKeysForPrincipalPolicyResponse = exports.PostGetContextKeysForPrincipalPolicyRequest = exports.PostGetContextKeysForPrincipalPolicyHeaders = exports.PostGetContextKeysForPrincipalPolicyQueryParams = exports.PostGetContextKeysForPrincipalPolicyVersionEnum = exports.PostGetContextKeysForPrincipalPolicyActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostGetContextKeysForPrincipalPolicyActionEnum;
 (function (PostGetContextKeysForPrincipalPolicyActionEnum) {
     PostGetContextKeysForPrincipalPolicyActionEnum["GetContextKeysForPrincipalPolicy"] = "GetContextKeysForPrincipalPolicy";
-})(PostGetContextKeysForPrincipalPolicyActionEnum || (PostGetContextKeysForPrincipalPolicyActionEnum = {}));
-export var PostGetContextKeysForPrincipalPolicyVersionEnum;
+})(PostGetContextKeysForPrincipalPolicyActionEnum = exports.PostGetContextKeysForPrincipalPolicyActionEnum || (exports.PostGetContextKeysForPrincipalPolicyActionEnum = {}));
+var PostGetContextKeysForPrincipalPolicyVersionEnum;
 (function (PostGetContextKeysForPrincipalPolicyVersionEnum) {
     PostGetContextKeysForPrincipalPolicyVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostGetContextKeysForPrincipalPolicyVersionEnum || (PostGetContextKeysForPrincipalPolicyVersionEnum = {}));
+})(PostGetContextKeysForPrincipalPolicyVersionEnum = exports.PostGetContextKeysForPrincipalPolicyVersionEnum || (exports.PostGetContextKeysForPrincipalPolicyVersionEnum = {}));
 var PostGetContextKeysForPrincipalPolicyQueryParams = /** @class */ (function (_super) {
     __extends(PostGetContextKeysForPrincipalPolicyQueryParams, _super);
     function PostGetContextKeysForPrincipalPolicyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostGetContextKeysForPrincipalPolicyQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostGetContextKeysForPrincipalPolicyQueryParams.prototype, "version", void 0);
     return PostGetContextKeysForPrincipalPolicyQueryParams;
-}(SpeakeasyBase));
-export { PostGetContextKeysForPrincipalPolicyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostGetContextKeysForPrincipalPolicyQueryParams = PostGetContextKeysForPrincipalPolicyQueryParams;
 var PostGetContextKeysForPrincipalPolicyHeaders = /** @class */ (function (_super) {
     __extends(PostGetContextKeysForPrincipalPolicyHeaders, _super);
     function PostGetContextKeysForPrincipalPolicyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostGetContextKeysForPrincipalPolicyHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostGetContextKeysForPrincipalPolicyHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostGetContextKeysForPrincipalPolicyHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostGetContextKeysForPrincipalPolicyHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostGetContextKeysForPrincipalPolicyHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostGetContextKeysForPrincipalPolicyHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostGetContextKeysForPrincipalPolicyHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostGetContextKeysForPrincipalPolicyHeaders;
-}(SpeakeasyBase));
-export { PostGetContextKeysForPrincipalPolicyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostGetContextKeysForPrincipalPolicyHeaders = PostGetContextKeysForPrincipalPolicyHeaders;
 var PostGetContextKeysForPrincipalPolicyRequest = /** @class */ (function (_super) {
     __extends(PostGetContextKeysForPrincipalPolicyRequest, _super);
     function PostGetContextKeysForPrincipalPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetContextKeysForPrincipalPolicyQueryParams)
     ], PostGetContextKeysForPrincipalPolicyRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostGetContextKeysForPrincipalPolicyHeaders)
     ], PostGetContextKeysForPrincipalPolicyRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostGetContextKeysForPrincipalPolicyRequest.prototype, "request", void 0);
     return PostGetContextKeysForPrincipalPolicyRequest;
-}(SpeakeasyBase));
-export { PostGetContextKeysForPrincipalPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostGetContextKeysForPrincipalPolicyRequest = PostGetContextKeysForPrincipalPolicyRequest;
 var PostGetContextKeysForPrincipalPolicyResponse = /** @class */ (function (_super) {
     __extends(PostGetContextKeysForPrincipalPolicyResponse, _super);
     function PostGetContextKeysForPrincipalPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostGetContextKeysForPrincipalPolicyResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostGetContextKeysForPrincipalPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostGetContextKeysForPrincipalPolicyResponse.prototype, "statusCode", void 0);
     return PostGetContextKeysForPrincipalPolicyResponse;
-}(SpeakeasyBase));
-export { PostGetContextKeysForPrincipalPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostGetContextKeysForPrincipalPolicyResponse = PostGetContextKeysForPrincipalPolicyResponse;

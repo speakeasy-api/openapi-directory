@@ -1,16 +1,14 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CreateFleetError } from "./createfleeterror";
-import { CreateFleetInstance } from "./createfleetinstance";
 
 
 
 export class CreateFleetResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: CreateFleetError })
-  errors?: CreateFleetError[];
+  @SpeakeasyMetadata()
+  errors?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  fleetId?: string;
+  fleetId?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: CreateFleetInstance })
-  instances?: CreateFleetInstance[];
+  @SpeakeasyMetadata()
+  instances?: Record<string, any>;
 }

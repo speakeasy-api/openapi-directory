@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,99 +23,101 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContentTree = exports.ContentTreeEntries = exports.ContentTreeEntriesLinks = exports.ContentTreeLinks = void 0;
+var utils_1 = require("../../../internal/utils");
 var ContentTreeLinks = /** @class */ (function (_super) {
     __extends(ContentTreeLinks, _super);
     function ContentTreeLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTreeLinks.prototype, "git", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTreeLinks.prototype, "html", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTreeLinks.prototype, "self", void 0);
     return ContentTreeLinks;
-}(SpeakeasyBase));
-export { ContentTreeLinks };
+}(utils_1.SpeakeasyBase));
+exports.ContentTreeLinks = ContentTreeLinks;
 var ContentTreeEntriesLinks = /** @class */ (function (_super) {
     __extends(ContentTreeEntriesLinks, _super);
     function ContentTreeEntriesLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTreeEntriesLinks.prototype, "git", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTreeEntriesLinks.prototype, "html", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTreeEntriesLinks.prototype, "self", void 0);
     return ContentTreeEntriesLinks;
-}(SpeakeasyBase));
-export { ContentTreeEntriesLinks };
+}(utils_1.SpeakeasyBase));
+exports.ContentTreeEntriesLinks = ContentTreeEntriesLinks;
 var ContentTreeEntries = /** @class */ (function (_super) {
     __extends(ContentTreeEntries, _super);
     function ContentTreeEntries() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ContentTreeEntriesLinks)
     ], ContentTreeEntries.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTreeEntries.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTreeEntries.prototype, "downloadUrl", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTreeEntries.prototype, "gitUrl", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTreeEntries.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTreeEntries.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTreeEntries.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTreeEntries.prototype, "sha", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ContentTreeEntries.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTreeEntries.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTreeEntries.prototype, "url", void 0);
     return ContentTreeEntries;
-}(SpeakeasyBase));
-export { ContentTreeEntries };
+}(utils_1.SpeakeasyBase));
+exports.ContentTreeEntries = ContentTreeEntries;
 // ContentTree
 /**
  * Content Tree
@@ -125,49 +128,49 @@ var ContentTree = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ContentTreeLinks)
     ], ContentTree.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTree.prototype, "downloadUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ContentTreeEntries }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: ContentTreeEntries }),
         __metadata("design:type", Array)
     ], ContentTree.prototype, "entries", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTree.prototype, "gitUrl", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTree.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTree.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTree.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTree.prototype, "sha", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ContentTree.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTree.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ContentTree.prototype, "url", void 0);
     return ContentTree;
-}(SpeakeasyBase));
-export { ContentTree };
+}(utils_1.SpeakeasyBase));
+exports.ContentTree = ContentTree;

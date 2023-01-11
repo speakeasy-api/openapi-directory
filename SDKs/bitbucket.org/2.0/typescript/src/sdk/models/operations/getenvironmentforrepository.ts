@@ -28,8 +28,8 @@ export class GetEnvironmentForRepositoryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deploymentEnvironment?: Map<string, any>;
+  deploymentEnvironment?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

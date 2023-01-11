@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleMapsUnityClientInfo } from "./googlemapsunityclientinfo";
-import { GoogleMapsPlayablelocationsV3PlayerReport } from "./googlemapsplayablelocationsv3playerreport";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleMapsPlayablelocationsV3LogPlayerReportsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlemapsunityclientinfo_1 = require("./googlemapsunityclientinfo");
+var googlemapsplayablelocationsv3playerreport_1 = require("./googlemapsplayablelocationsv3playerreport");
 // GoogleMapsPlayablelocationsV3LogPlayerReportsRequest
 /**
  * A request for logging your player's bad location reports.
@@ -35,17 +38,17 @@ var GoogleMapsPlayablelocationsV3LogPlayerReportsRequest = /** @class */ (functi
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientInfo" }),
-        __metadata("design:type", GoogleMapsUnityClientInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientInfo" }),
+        __metadata("design:type", googlemapsunityclientinfo_1.GoogleMapsUnityClientInfo)
     ], GoogleMapsPlayablelocationsV3LogPlayerReportsRequest.prototype, "clientInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=playerReports", elemType: GoogleMapsPlayablelocationsV3PlayerReport }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=playerReports", elemType: googlemapsplayablelocationsv3playerreport_1.GoogleMapsPlayablelocationsV3PlayerReport }),
         __metadata("design:type", Array)
     ], GoogleMapsPlayablelocationsV3LogPlayerReportsRequest.prototype, "playerReports", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], GoogleMapsPlayablelocationsV3LogPlayerReportsRequest.prototype, "requestId", void 0);
     return GoogleMapsPlayablelocationsV3LogPlayerReportsRequest;
-}(SpeakeasyBase));
-export { GoogleMapsPlayablelocationsV3LogPlayerReportsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleMapsPlayablelocationsV3LogPlayerReportsRequest = GoogleMapsPlayablelocationsV3LogPlayerReportsRequest;

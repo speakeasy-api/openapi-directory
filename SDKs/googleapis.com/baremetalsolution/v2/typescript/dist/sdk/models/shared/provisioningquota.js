@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceQuota } from "./instancequota";
-export var ProvisioningQuotaAssetTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProvisioningQuota = exports.ProvisioningQuotaAssetTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var instancequota_1 = require("./instancequota");
+var ProvisioningQuotaAssetTypeEnum;
 (function (ProvisioningQuotaAssetTypeEnum) {
     ProvisioningQuotaAssetTypeEnum["AssetTypeUnspecified"] = "ASSET_TYPE_UNSPECIFIED";
     ProvisioningQuotaAssetTypeEnum["AssetTypeServer"] = "ASSET_TYPE_SERVER";
     ProvisioningQuotaAssetTypeEnum["AssetTypeStorage"] = "ASSET_TYPE_STORAGE";
     ProvisioningQuotaAssetTypeEnum["AssetTypeNetwork"] = "ASSET_TYPE_NETWORK";
-})(ProvisioningQuotaAssetTypeEnum || (ProvisioningQuotaAssetTypeEnum = {}));
+})(ProvisioningQuotaAssetTypeEnum = exports.ProvisioningQuotaAssetTypeEnum || (exports.ProvisioningQuotaAssetTypeEnum = {}));
 // ProvisioningQuota
 /**
  * A provisioning quota for a given project.
@@ -41,41 +44,41 @@ var ProvisioningQuota = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetType" }),
         __metadata("design:type", String)
     ], ProvisioningQuota.prototype, "assetType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availableCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availableCount" }),
         __metadata("design:type", Number)
     ], ProvisioningQuota.prototype, "availableCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcpService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcpService" }),
         __metadata("design:type", String)
     ], ProvisioningQuota.prototype, "gcpService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceQuota" }),
-        __metadata("design:type", InstanceQuota)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceQuota" }),
+        __metadata("design:type", instancequota_1.InstanceQuota)
     ], ProvisioningQuota.prototype, "instanceQuota", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], ProvisioningQuota.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ProvisioningQuota.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkBandwidth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkBandwidth" }),
         __metadata("design:type", String)
     ], ProvisioningQuota.prototype, "networkBandwidth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverCount" }),
         __metadata("design:type", String)
     ], ProvisioningQuota.prototype, "serverCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageGib" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageGib" }),
         __metadata("design:type", String)
     ], ProvisioningQuota.prototype, "storageGib", void 0);
     return ProvisioningQuota;
-}(SpeakeasyBase));
-export { ProvisioningQuota };
+}(utils_1.SpeakeasyBase));
+exports.ProvisioningQuota = ProvisioningQuota;

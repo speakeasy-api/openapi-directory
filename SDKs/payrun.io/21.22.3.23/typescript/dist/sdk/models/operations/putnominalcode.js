@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,90 +14,115 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutNominalCodeResponse = exports.PutNominalCodeRequest = exports.PutNominalCodeHeaders = exports.PutNominalCodePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var PutNominalCodePathParams = /** @class */ (function (_super) {
     __extends(PutNominalCodePathParams, _super);
     function PutNominalCodePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=EmployerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=EmployerId" }),
         __metadata("design:type", String)
     ], PutNominalCodePathParams.prototype, "employerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=NominalCodeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=NominalCodeId" }),
         __metadata("design:type", String)
     ], PutNominalCodePathParams.prototype, "nominalCodeId", void 0);
     return PutNominalCodePathParams;
-}(SpeakeasyBase));
-export { PutNominalCodePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PutNominalCodePathParams = PutNominalCodePathParams;
 var PutNominalCodeHeaders = /** @class */ (function (_super) {
     __extends(PutNominalCodeHeaders, _super);
     function PutNominalCodeHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Api-Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Api-Version" }),
         __metadata("design:type", String)
     ], PutNominalCodeHeaders.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Authorization" }),
         __metadata("design:type", String)
     ], PutNominalCodeHeaders.prototype, "authorization", void 0);
     return PutNominalCodeHeaders;
-}(SpeakeasyBase));
-export { PutNominalCodeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PutNominalCodeHeaders = PutNominalCodeHeaders;
 var PutNominalCodeRequest = /** @class */ (function (_super) {
     __extends(PutNominalCodeRequest, _super);
     function PutNominalCodeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutNominalCodePathParams)
     ], PutNominalCodeRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutNominalCodeHeaders)
     ], PutNominalCodeRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.NominalCode)
     ], PutNominalCodeRequest.prototype, "request", void 0);
     return PutNominalCodeRequest;
-}(SpeakeasyBase));
-export { PutNominalCodeRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutNominalCodeRequest = PutNominalCodeRequest;
 var PutNominalCodeResponse = /** @class */ (function (_super) {
     __extends(PutNominalCodeResponse, _super);
     function PutNominalCodeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PutNominalCodeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorModel)
     ], PutNominalCodeResponse.prototype, "errorModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.NominalCode)
     ], PutNominalCodeResponse.prototype, "nominalCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PutNominalCodeResponse.prototype, "statusCode", void 0);
     return PutNominalCodeResponse;
-}(SpeakeasyBase));
-export { PutNominalCodeResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutNominalCodeResponse = PutNominalCodeResponse;

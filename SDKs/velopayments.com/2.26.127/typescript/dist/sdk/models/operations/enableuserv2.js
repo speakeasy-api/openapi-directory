@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnableUserV2Response = exports.EnableUserV2Request = exports.EnableUserV2PathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnableUserV2PathParams = /** @class */ (function (_super) {
     __extends(EnableUserV2PathParams, _super);
     function EnableUserV2PathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userId" }),
         __metadata("design:type", String)
     ], EnableUserV2PathParams.prototype, "userId", void 0);
     return EnableUserV2PathParams;
-}(SpeakeasyBase));
-export { EnableUserV2PathParams };
+}(utils_1.SpeakeasyBase));
+exports.EnableUserV2PathParams = EnableUserV2PathParams;
 var EnableUserV2Request = /** @class */ (function (_super) {
     __extends(EnableUserV2Request, _super);
     function EnableUserV2Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnableUserV2PathParams)
     ], EnableUserV2Request.prototype, "pathParams", void 0);
     return EnableUserV2Request;
-}(SpeakeasyBase));
-export { EnableUserV2Request };
+}(utils_1.SpeakeasyBase));
+exports.EnableUserV2Request = EnableUserV2Request;
 var EnableUserV2Response = /** @class */ (function (_super) {
     __extends(EnableUserV2Response, _super);
     function EnableUserV2Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnableUserV2Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnableUserV2Response.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], EnableUserV2Response.prototype, "inlineResponse400", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], EnableUserV2Response.prototype, "inlineResponse401", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], EnableUserV2Response.prototype, "inlineResponse403", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], EnableUserV2Response.prototype, "inlineResponse404", void 0);
     return EnableUserV2Response;
-}(SpeakeasyBase));
-export { EnableUserV2Response };
+}(utils_1.SpeakeasyBase));
+exports.EnableUserV2Response = EnableUserV2Response;

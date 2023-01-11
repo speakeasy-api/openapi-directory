@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PublisherConnection } from "./publisherconnection";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchRejectPublisherConnectionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var publisherconnection_1 = require("./publisherconnection");
 // BatchRejectPublisherConnectionsResponse
 /**
  * A response for the request to reject a batch of publisher connections.
@@ -34,9 +37,9 @@ var BatchRejectPublisherConnectionsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisherConnections", elemType: PublisherConnection }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisherConnections", elemType: publisherconnection_1.PublisherConnection }),
         __metadata("design:type", Array)
     ], BatchRejectPublisherConnectionsResponse.prototype, "publisherConnections", void 0);
     return BatchRejectPublisherConnectionsResponse;
-}(SpeakeasyBase));
-export { BatchRejectPublisherConnectionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchRejectPublisherConnectionsResponse = BatchRejectPublisherConnectionsResponse;

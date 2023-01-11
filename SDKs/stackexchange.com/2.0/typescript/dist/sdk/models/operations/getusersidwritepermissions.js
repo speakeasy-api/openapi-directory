@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUsersIdWritePermissionsResponse = exports.GetUsersIdWritePermissionsRequest = exports.GetUsersIdWritePermissionsQueryParams = exports.GetUsersIdWritePermissionsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetUsersIdWritePermissionsPathParams = /** @class */ (function (_super) {
     __extends(GetUsersIdWritePermissionsPathParams, _super);
     function GetUsersIdWritePermissionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetUsersIdWritePermissionsPathParams.prototype, "id", void 0);
     return GetUsersIdWritePermissionsPathParams;
-}(SpeakeasyBase));
-export { GetUsersIdWritePermissionsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdWritePermissionsPathParams = GetUsersIdWritePermissionsPathParams;
 var GetUsersIdWritePermissionsQueryParams = /** @class */ (function (_super) {
     __extends(GetUsersIdWritePermissionsQueryParams, _super);
     function GetUsersIdWritePermissionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetUsersIdWritePermissionsQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetUsersIdWritePermissionsQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetUsersIdWritePermissionsQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetUsersIdWritePermissionsQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetUsersIdWritePermissionsQueryParams.prototype, "site", void 0);
     return GetUsersIdWritePermissionsQueryParams;
-}(SpeakeasyBase));
-export { GetUsersIdWritePermissionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdWritePermissionsQueryParams = GetUsersIdWritePermissionsQueryParams;
 var GetUsersIdWritePermissionsRequest = /** @class */ (function (_super) {
     __extends(GetUsersIdWritePermissionsRequest, _super);
     function GetUsersIdWritePermissionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUsersIdWritePermissionsPathParams)
     ], GetUsersIdWritePermissionsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUsersIdWritePermissionsQueryParams)
     ], GetUsersIdWritePermissionsRequest.prototype, "queryParams", void 0);
     return GetUsersIdWritePermissionsRequest;
-}(SpeakeasyBase));
-export { GetUsersIdWritePermissionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdWritePermissionsRequest = GetUsersIdWritePermissionsRequest;
 var GetUsersIdWritePermissionsResponse = /** @class */ (function (_super) {
     __extends(GetUsersIdWritePermissionsResponse, _super);
     function GetUsersIdWritePermissionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetUsersIdWritePermissionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUsersIdWritePermissionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUsersIdWritePermissionsResponse.prototype, "statusCode", void 0);
     return GetUsersIdWritePermissionsResponse;
-}(SpeakeasyBase));
-export { GetUsersIdWritePermissionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersIdWritePermissionsResponse = GetUsersIdWritePermissionsResponse;

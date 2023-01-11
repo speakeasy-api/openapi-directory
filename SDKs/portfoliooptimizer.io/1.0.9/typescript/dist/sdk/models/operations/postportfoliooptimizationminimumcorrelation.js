@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostPortfolioOptimizationMinimumCorrelationResponse = exports.PostPortfolioOptimizationMinimumCorrelationRequest = exports.PostPortfolioOptimizationMinimumCorrelation200ApplicationJson = exports.PostPortfolioOptimizationMinimumCorrelationRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostPortfolioOptimizationMinimumCorrelationRequestBody = /** @class */ (function (_super) {
     __extends(PostPortfolioOptimizationMinimumCorrelationRequestBody, _super);
     function PostPortfolioOptimizationMinimumCorrelationRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets" }),
         __metadata("design:type", Number)
     ], PostPortfolioOptimizationMinimumCorrelationRequestBody.prototype, "assets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsCorrelationMatrix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsCorrelationMatrix" }),
         __metadata("design:type", Array)
     ], PostPortfolioOptimizationMinimumCorrelationRequestBody.prototype, "assetsCorrelationMatrix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsVolatilities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsVolatilities" }),
         __metadata("design:type", Array)
     ], PostPortfolioOptimizationMinimumCorrelationRequestBody.prototype, "assetsVolatilities", void 0);
     return PostPortfolioOptimizationMinimumCorrelationRequestBody;
-}(SpeakeasyBase));
-export { PostPortfolioOptimizationMinimumCorrelationRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioOptimizationMinimumCorrelationRequestBody = PostPortfolioOptimizationMinimumCorrelationRequestBody;
 var PostPortfolioOptimizationMinimumCorrelation200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostPortfolioOptimizationMinimumCorrelation200ApplicationJson, _super);
     function PostPortfolioOptimizationMinimumCorrelation200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsWeights" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsWeights" }),
         __metadata("design:type", Array)
     ], PostPortfolioOptimizationMinimumCorrelation200ApplicationJson.prototype, "assetsWeights", void 0);
     return PostPortfolioOptimizationMinimumCorrelation200ApplicationJson;
-}(SpeakeasyBase));
-export { PostPortfolioOptimizationMinimumCorrelation200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioOptimizationMinimumCorrelation200ApplicationJson = PostPortfolioOptimizationMinimumCorrelation200ApplicationJson;
 var PostPortfolioOptimizationMinimumCorrelationRequest = /** @class */ (function (_super) {
     __extends(PostPortfolioOptimizationMinimumCorrelationRequest, _super);
     function PostPortfolioOptimizationMinimumCorrelationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostPortfolioOptimizationMinimumCorrelationRequestBody)
     ], PostPortfolioOptimizationMinimumCorrelationRequest.prototype, "request", void 0);
     return PostPortfolioOptimizationMinimumCorrelationRequest;
-}(SpeakeasyBase));
-export { PostPortfolioOptimizationMinimumCorrelationRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioOptimizationMinimumCorrelationRequest = PostPortfolioOptimizationMinimumCorrelationRequest;
 var PostPortfolioOptimizationMinimumCorrelationResponse = /** @class */ (function (_super) {
     __extends(PostPortfolioOptimizationMinimumCorrelationResponse, _super);
     function PostPortfolioOptimizationMinimumCorrelationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostPortfolioOptimizationMinimumCorrelationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostPortfolioOptimizationMinimumCorrelation200ApplicationJson)
-    ], PostPortfolioOptimizationMinimumCorrelationResponse.prototype, "postPortfolioOptimizationMinimumCorrelation200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostPortfolioOptimizationMinimumCorrelationResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostPortfolioOptimizationMinimumCorrelation200ApplicationJson)
+    ], PostPortfolioOptimizationMinimumCorrelationResponse.prototype, "postPortfolioOptimizationMinimumCorrelation200ApplicationJSONObject", void 0);
     return PostPortfolioOptimizationMinimumCorrelationResponse;
-}(SpeakeasyBase));
-export { PostPortfolioOptimizationMinimumCorrelationResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioOptimizationMinimumCorrelationResponse = PostPortfolioOptimizationMinimumCorrelationResponse;

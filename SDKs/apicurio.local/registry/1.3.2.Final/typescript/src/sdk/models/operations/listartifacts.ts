@@ -8,11 +8,11 @@ export class ListArtifactsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listArtifacts200ApplicationJsonStrings?: string[];
+  listArtifacts200ApplicationJSONStrings?: string[];
 }

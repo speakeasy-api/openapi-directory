@@ -28,8 +28,8 @@ export class GetPipelineForRepositoryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  pipeline?: Map<string, any>;
+  pipeline?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PermissionEnum } from "./permissionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceAccessPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var permissionenum_1 = require("./permissionenum");
 // ResourceAccessPolicy
 /**
  * A policy used by the function to access a resource.
@@ -34,13 +37,13 @@ var ResourceAccessPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Permission" }),
         __metadata("design:type", String)
     ], ResourceAccessPolicy.prototype, "permission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceId" }),
         __metadata("design:type", String)
     ], ResourceAccessPolicy.prototype, "resourceId", void 0);
     return ResourceAccessPolicy;
-}(SpeakeasyBase));
-export { ResourceAccessPolicy };
+}(utils_1.SpeakeasyBase));
+exports.ResourceAccessPolicy = ResourceAccessPolicy;

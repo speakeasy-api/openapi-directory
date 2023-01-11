@@ -8,5 +8,5 @@ export declare class GetScenRequest extends SpeakeasyBase {
 export declare class GetScenResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getScen200ApplicationJsonInt32Integer?: number;
+    getScen200ApplicationJSONInt32Integer?: number;
 }

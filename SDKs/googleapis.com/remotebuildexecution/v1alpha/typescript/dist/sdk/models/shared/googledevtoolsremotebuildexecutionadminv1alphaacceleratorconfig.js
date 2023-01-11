@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig
 /**
  * AcceleratorConfig defines the accelerator cards to attach to the VM.
@@ -33,13 +36,13 @@ var GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig = /** @class
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acceleratorCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acceleratorCount" }),
         __metadata("design:type", String)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig.prototype, "acceleratorCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acceleratorType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acceleratorType" }),
         __metadata("design:type", String)
     ], GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig.prototype, "acceleratorType", void 0);
     return GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig;
-}(SpeakeasyBase));
-export { GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig = GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig;

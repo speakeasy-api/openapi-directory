@@ -18,7 +18,7 @@ export declare class UpdateGroupRequestBodyInsightsConfiguration extends Speakea
 }
 export declare class UpdateGroupRequestBody extends SpeakeasyBase {
     filterExpression?: string;
-    groupArn?: string;
+    groupARN?: string;
     groupName?: string;
     insightsConfiguration?: UpdateGroupRequestBodyInsightsConfiguration;
 }

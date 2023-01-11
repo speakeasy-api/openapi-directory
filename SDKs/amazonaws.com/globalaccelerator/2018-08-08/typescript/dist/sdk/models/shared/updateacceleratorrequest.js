@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IpAddressTypeEnum } from "./ipaddresstypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateAcceleratorRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var ipaddresstypeenum_1 = require("./ipaddresstypeenum");
 var UpdateAcceleratorRequest = /** @class */ (function (_super) {
     __extends(UpdateAcceleratorRequest, _super);
     function UpdateAcceleratorRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AcceleratorArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AcceleratorArn" }),
         __metadata("design:type", String)
     ], UpdateAcceleratorRequest.prototype, "acceleratorArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateAcceleratorRequest.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IpAddressType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IpAddressType" }),
         __metadata("design:type", String)
     ], UpdateAcceleratorRequest.prototype, "ipAddressType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], UpdateAcceleratorRequest.prototype, "name", void 0);
     return UpdateAcceleratorRequest;
-}(SpeakeasyBase));
-export { UpdateAcceleratorRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateAcceleratorRequest = UpdateAcceleratorRequest;

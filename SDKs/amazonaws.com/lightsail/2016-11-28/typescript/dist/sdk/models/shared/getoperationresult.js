@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Operation } from "./operation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOperationResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var operation_1 = require("./operation");
 var GetOperationResult = /** @class */ (function (_super) {
     __extends(GetOperationResult, _super);
     function GetOperationResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operation" }),
-        __metadata("design:type", Operation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operation" }),
+        __metadata("design:type", operation_1.Operation)
     ], GetOperationResult.prototype, "operation", void 0);
     return GetOperationResult;
-}(SpeakeasyBase));
-export { GetOperationResult };
+}(utils_1.SpeakeasyBase));
+exports.GetOperationResult = GetOperationResult;

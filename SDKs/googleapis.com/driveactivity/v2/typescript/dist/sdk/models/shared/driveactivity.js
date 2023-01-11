@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Action } from "./action";
-import { Actor } from "./actor";
-import { ActionDetail } from "./actiondetail";
-import { Target } from "./target";
-import { TimeRange } from "./timerange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DriveActivity = void 0;
+var utils_1 = require("../../../internal/utils");
+var action_1 = require("./action");
+var actor_1 = require("./actor");
+var actiondetail_1 = require("./actiondetail");
+var target_1 = require("./target");
+var timerange_1 = require("./timerange");
 // DriveActivity
 /**
  * A single Drive activity comprising one or more Actions by one or more Actors on one or more Targets. Some Action groupings occur spontaneously, such as moving an item into a shared folder triggering a permission change. Other groupings of related Actions, such as multiple Actors editing one item or moving multiple files into a new folder, are controlled by the selection of a ConsolidationStrategy in the QueryDriveActivityRequest.
@@ -38,29 +41,29 @@ var DriveActivity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actions", elemType: Action }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actions", elemType: action_1.Action }),
         __metadata("design:type", Array)
     ], DriveActivity.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actors", elemType: Actor }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actors", elemType: actor_1.Actor }),
         __metadata("design:type", Array)
     ], DriveActivity.prototype, "actors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryActionDetail" }),
-        __metadata("design:type", ActionDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryActionDetail" }),
+        __metadata("design:type", actiondetail_1.ActionDetail)
     ], DriveActivity.prototype, "primaryActionDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targets", elemType: Target }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targets", elemType: target_1.Target }),
         __metadata("design:type", Array)
     ], DriveActivity.prototype, "targets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeRange" }),
-        __metadata("design:type", TimeRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeRange" }),
+        __metadata("design:type", timerange_1.TimeRange)
     ], DriveActivity.prototype, "timeRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", String)
     ], DriveActivity.prototype, "timestamp", void 0);
     return DriveActivity;
-}(SpeakeasyBase));
-export { DriveActivity };
+}(utils_1.SpeakeasyBase));
+exports.DriveActivity = DriveActivity;

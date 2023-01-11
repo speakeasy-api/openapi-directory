@@ -21,5 +21,5 @@ export declare class GetglobalnumberinfoRequest extends SpeakeasyBase {
 export declare class GetglobalnumberinfoResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getglobalnumberinfo200ApplicationJsonObject?: Getglobalnumberinfo200ApplicationJson;
+    getglobalnumberinfo200ApplicationJSONObject?: Getglobalnumberinfo200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReposGetCodeFrequencyStatsResponse = exports.ReposGetCodeFrequencyStatsRequest = exports.ReposGetCodeFrequencyStatsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReposGetCodeFrequencyStatsPathParams = /** @class */ (function (_super) {
     __extends(ReposGetCodeFrequencyStatsPathParams, _super);
     function ReposGetCodeFrequencyStatsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReposGetCodeFrequencyStatsPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReposGetCodeFrequencyStatsPathParams.prototype, "repo", void 0);
     return ReposGetCodeFrequencyStatsPathParams;
-}(SpeakeasyBase));
-export { ReposGetCodeFrequencyStatsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReposGetCodeFrequencyStatsPathParams = ReposGetCodeFrequencyStatsPathParams;
 var ReposGetCodeFrequencyStatsRequest = /** @class */ (function (_super) {
     __extends(ReposGetCodeFrequencyStatsRequest, _super);
     function ReposGetCodeFrequencyStatsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReposGetCodeFrequencyStatsPathParams)
     ], ReposGetCodeFrequencyStatsRequest.prototype, "pathParams", void 0);
     return ReposGetCodeFrequencyStatsRequest;
-}(SpeakeasyBase));
-export { ReposGetCodeFrequencyStatsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReposGetCodeFrequencyStatsRequest = ReposGetCodeFrequencyStatsRequest;
 var ReposGetCodeFrequencyStatsResponse = /** @class */ (function (_super) {
     __extends(ReposGetCodeFrequencyStatsResponse, _super);
     function ReposGetCodeFrequencyStatsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReposGetCodeFrequencyStatsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReposGetCodeFrequencyStatsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ReposGetCodeFrequencyStatsResponse.prototype, "codeFrequencyStats", void 0);
     return ReposGetCodeFrequencyStatsResponse;
-}(SpeakeasyBase));
-export { ReposGetCodeFrequencyStatsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReposGetCodeFrequencyStatsResponse = ReposGetCodeFrequencyStatsResponse;

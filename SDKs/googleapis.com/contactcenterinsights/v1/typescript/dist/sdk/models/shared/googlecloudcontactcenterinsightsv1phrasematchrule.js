@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig } from "./googlecloudcontactcenterinsightsv1phrasematchruleconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1PhraseMatchRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1phrasematchruleconfig_1 = require("./googlecloudcontactcenterinsightsv1phrasematchruleconfig");
 // GoogleCloudContactcenterinsightsV1PhraseMatchRule
 /**
  * The data for a phrase match rule.
@@ -34,17 +37,17 @@ var GoogleCloudContactcenterinsightsV1PhraseMatchRule = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1phrasematchruleconfig_1.GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig)
     ], GoogleCloudContactcenterinsightsV1PhraseMatchRule.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=negated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=negated" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudContactcenterinsightsV1PhraseMatchRule.prototype, "negated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1PhraseMatchRule.prototype, "query", void 0);
     return GoogleCloudContactcenterinsightsV1PhraseMatchRule;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1PhraseMatchRule };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1PhraseMatchRule = GoogleCloudContactcenterinsightsV1PhraseMatchRule;

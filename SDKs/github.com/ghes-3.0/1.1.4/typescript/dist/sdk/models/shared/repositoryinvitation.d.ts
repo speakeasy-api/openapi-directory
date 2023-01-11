@@ -1,5 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { MinimalRepository } from "./minimalrepository";
+/**
+ * Simple User
+**/
 export declare class RepositoryInvitationSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

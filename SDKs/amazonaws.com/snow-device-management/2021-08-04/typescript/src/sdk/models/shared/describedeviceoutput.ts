@@ -38,5 +38,5 @@ export class DescribeDeviceOutput extends SpeakeasyBase {
   software?: SoftwareInformation;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }

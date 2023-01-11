@@ -17,13 +17,13 @@ export class NodeGroupConfiguration extends SpeakeasyBase {
   primaryOutpostArn?: string;
 
   @SpeakeasyMetadata()
-  replicaAvailabilityZones?: string[];
+  replicaAvailabilityZones?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   replicaCount?: number;
 
   @SpeakeasyMetadata()
-  replicaOutpostArns?: string[];
+  replicaOutpostArns?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   slots?: string;

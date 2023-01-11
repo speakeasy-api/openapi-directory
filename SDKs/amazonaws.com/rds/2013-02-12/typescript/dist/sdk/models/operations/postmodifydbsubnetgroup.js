@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostModifyDbSubnetGroupActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostModifyDbSubnetGroupResponse = exports.PostModifyDbSubnetGroupRequest = exports.PostModifyDbSubnetGroupHeaders = exports.PostModifyDbSubnetGroupQueryParams = exports.PostModifyDbSubnetGroupVersionEnum = exports.PostModifyDbSubnetGroupActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostModifyDbSubnetGroupActionEnum;
 (function (PostModifyDbSubnetGroupActionEnum) {
     PostModifyDbSubnetGroupActionEnum["ModifyDbSubnetGroup"] = "ModifyDBSubnetGroup";
-})(PostModifyDbSubnetGroupActionEnum || (PostModifyDbSubnetGroupActionEnum = {}));
-export var PostModifyDbSubnetGroupVersionEnum;
+})(PostModifyDbSubnetGroupActionEnum = exports.PostModifyDbSubnetGroupActionEnum || (exports.PostModifyDbSubnetGroupActionEnum = {}));
+var PostModifyDbSubnetGroupVersionEnum;
 (function (PostModifyDbSubnetGroupVersionEnum) {
     PostModifyDbSubnetGroupVersionEnum["TwoThousandAndThirteen0212"] = "2013-02-12";
-})(PostModifyDbSubnetGroupVersionEnum || (PostModifyDbSubnetGroupVersionEnum = {}));
+})(PostModifyDbSubnetGroupVersionEnum = exports.PostModifyDbSubnetGroupVersionEnum || (exports.PostModifyDbSubnetGroupVersionEnum = {}));
 var PostModifyDbSubnetGroupQueryParams = /** @class */ (function (_super) {
     __extends(PostModifyDbSubnetGroupQueryParams, _super);
     function PostModifyDbSubnetGroupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostModifyDbSubnetGroupQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostModifyDbSubnetGroupQueryParams.prototype, "version", void 0);
     return PostModifyDbSubnetGroupQueryParams;
-}(SpeakeasyBase));
-export { PostModifyDbSubnetGroupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyDbSubnetGroupQueryParams = PostModifyDbSubnetGroupQueryParams;
 var PostModifyDbSubnetGroupHeaders = /** @class */ (function (_super) {
     __extends(PostModifyDbSubnetGroupHeaders, _super);
     function PostModifyDbSubnetGroupHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostModifyDbSubnetGroupHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostModifyDbSubnetGroupHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostModifyDbSubnetGroupHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostModifyDbSubnetGroupHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostModifyDbSubnetGroupHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostModifyDbSubnetGroupHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostModifyDbSubnetGroupHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostModifyDbSubnetGroupHeaders;
-}(SpeakeasyBase));
-export { PostModifyDbSubnetGroupHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyDbSubnetGroupHeaders = PostModifyDbSubnetGroupHeaders;
 var PostModifyDbSubnetGroupRequest = /** @class */ (function (_super) {
     __extends(PostModifyDbSubnetGroupRequest, _super);
     function PostModifyDbSubnetGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyDbSubnetGroupQueryParams)
     ], PostModifyDbSubnetGroupRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyDbSubnetGroupHeaders)
     ], PostModifyDbSubnetGroupRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostModifyDbSubnetGroupRequest.prototype, "request", void 0);
     return PostModifyDbSubnetGroupRequest;
-}(SpeakeasyBase));
-export { PostModifyDbSubnetGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyDbSubnetGroupRequest = PostModifyDbSubnetGroupRequest;
 var PostModifyDbSubnetGroupResponse = /** @class */ (function (_super) {
     __extends(PostModifyDbSubnetGroupResponse, _super);
     function PostModifyDbSubnetGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostModifyDbSubnetGroupResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostModifyDbSubnetGroupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostModifyDbSubnetGroupResponse.prototype, "statusCode", void 0);
     return PostModifyDbSubnetGroupResponse;
-}(SpeakeasyBase));
-export { PostModifyDbSubnetGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyDbSubnetGroupResponse = PostModifyDbSubnetGroupResponse;

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { BalanceGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     auth: {
       password: "YOUR_PASSWORD_HERE",
@@ -33,7 +32,7 @@ const sdk = new SDK(WithSecurity(
   }
 ));
 
-sdk.sdk.balanceGet().then((res: BalanceGetResponse | AxiosError) => {
+sdk.balanceGet().then((res: BalanceGetResponse | AxiosError) => {
    // handle response
 });
 ```

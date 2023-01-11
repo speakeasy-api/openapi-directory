@@ -12,6 +12,6 @@ export declare class Channel extends SpeakeasyBase {
     name?: string;
     playbackUrl?: string;
     recordingConfigurationArn?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     type?: ChannelTypeEnum;
 }

@@ -16,19 +16,18 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AddressSearchRequest, AddressSearchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     userToken: {
       apiKey: "YOUR_API_KEY_HERE",
     },
@@ -39,18 +38,18 @@ const req: AddressSearchRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     userToken: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   queryParams: {
-    filter: "cupiditate",
-    licensee: "deserunt",
-    limit: 5906822993303235775,
-    page: 509459186601495910,
-    postcodeOutward: "accusamus",
-    query: "in",
+    filter: "sit",
+    licensee: "voluptas",
+    limit: 6050128673802995827,
+    page: 501233450539197794,
+    postcodeOutward: "consequuntur",
+    query: "dolor",
   },
 };
 

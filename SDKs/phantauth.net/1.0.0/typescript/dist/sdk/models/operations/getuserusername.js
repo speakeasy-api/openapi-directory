@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUserUsernameResponse = exports.GetUserUsernameRequest = exports.GetUserUsername200ApplicationJson = exports.GetUserUsername200ApplicationJsonAddress = exports.GetUserUsernamePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetUserUsernamePathParams = /** @class */ (function (_super) {
     __extends(GetUserUsernamePathParams, _super);
     function GetUserUsernamePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], GetUserUsernamePathParams.prototype, "username", void 0);
     return GetUserUsernamePathParams;
-}(SpeakeasyBase));
-export { GetUserUsernamePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetUserUsernamePathParams = GetUserUsernamePathParams;
 // GetUserUsername200ApplicationJsonAddress
 /**
  * The user's preferred postal address.
@@ -45,169 +48,169 @@ var GetUserUsername200ApplicationJsonAddress = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJsonAddress.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formatted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formatted" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJsonAddress.prototype, "formatted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locality" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locality" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJsonAddress.prototype, "locality", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postal_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postal_code" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJsonAddress.prototype, "postalCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJsonAddress.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=street_address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=street_address" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJsonAddress.prototype, "streetAddress", void 0);
     return GetUserUsername200ApplicationJsonAddress;
-}(SpeakeasyBase));
-export { GetUserUsername200ApplicationJsonAddress };
+}(utils_1.SpeakeasyBase));
+exports.GetUserUsername200ApplicationJsonAddress = GetUserUsername200ApplicationJsonAddress;
 var GetUserUsername200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetUserUsername200ApplicationJson, _super);
     function GetUserUsername200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@id" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "atId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", GetUserUsername200ApplicationJsonAddress)
     ], GetUserUsername200ApplicationJson.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=birthdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=birthdate" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "birthdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email_verified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email_verified" }),
         __metadata("design:type", Boolean)
     ], GetUserUsername200ApplicationJson.prototype, "emailVerified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=family_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=family_name" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "familyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gender" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gender" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "gender", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=given_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=given_name" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "givenName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locale" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "locale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=me" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=me" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "me", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=middle_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=middle_name" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "middleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nickname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nickname" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "nickname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phone_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phone_number" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "phoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phone_number_verified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phone_number_verified" }),
         __metadata("design:type", Boolean)
     ], GetUserUsername200ApplicationJson.prototype, "phoneNumberVerified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=picture" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=picture" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "picture", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferred_username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferred_username" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "preferredUsername", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "profile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sub" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sub" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "sub", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "uid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Number)
     ], GetUserUsername200ApplicationJson.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webmail" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "webmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=website" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "website", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zoneinfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zoneinfo" }),
         __metadata("design:type", String)
     ], GetUserUsername200ApplicationJson.prototype, "zoneinfo", void 0);
     return GetUserUsername200ApplicationJson;
-}(SpeakeasyBase));
-export { GetUserUsername200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetUserUsername200ApplicationJson = GetUserUsername200ApplicationJson;
 var GetUserUsernameRequest = /** @class */ (function (_super) {
     __extends(GetUserUsernameRequest, _super);
     function GetUserUsernameRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetUserUsernamePathParams)
     ], GetUserUsernameRequest.prototype, "pathParams", void 0);
     return GetUserUsernameRequest;
-}(SpeakeasyBase));
-export { GetUserUsernameRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetUserUsernameRequest = GetUserUsernameRequest;
 var GetUserUsernameResponse = /** @class */ (function (_super) {
     __extends(GetUserUsernameResponse, _super);
     function GetUserUsernameResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUserUsernameResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetUserUsername200ApplicationJson)
-    ], GetUserUsernameResponse.prototype, "getUserUsername200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUserUsernameResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetUserUsername200ApplicationJson)
+    ], GetUserUsernameResponse.prototype, "getUserUsername200ApplicationJSONObject", void 0);
     return GetUserUsernameResponse;
-}(SpeakeasyBase));
-export { GetUserUsernameResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUserUsernameResponse = GetUserUsernameResponse;

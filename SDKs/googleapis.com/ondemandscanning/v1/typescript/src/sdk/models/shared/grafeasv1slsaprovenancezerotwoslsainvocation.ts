@@ -12,8 +12,8 @@ export class GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation extends SpeakeasyBase 
   configSource?: GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource;
 
   @SpeakeasyMetadata({ data: "json, name=environment" })
-  environment?: Map<string, any>;
+  environment?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
-  parameters?: Map<string, any>;
+  parameters?: Record<string, any>;
 }

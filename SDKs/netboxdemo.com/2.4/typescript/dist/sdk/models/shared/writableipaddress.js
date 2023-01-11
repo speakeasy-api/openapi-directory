@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritableIpAddressInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var WritableIpAddressInput = /** @class */ (function (_super) {
     __extends(WritableIpAddressInput, _super);
     function WritableIpAddressInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], WritableIpAddressInput.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], WritableIpAddressInput.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], WritableIpAddressInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interface" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interface" }),
         __metadata("design:type", Number)
     ], WritableIpAddressInput.prototype, "interface", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nat_inside" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nat_inside" }),
         __metadata("design:type", Number)
     ], WritableIpAddressInput.prototype, "natInside", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nat_outside" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nat_outside" }),
         __metadata("design:type", Number)
     ], WritableIpAddressInput.prototype, "natOutside", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", Number)
     ], WritableIpAddressInput.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Number)
     ], WritableIpAddressInput.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], WritableIpAddressInput.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant" }),
         __metadata("design:type", Number)
     ], WritableIpAddressInput.prototype, "tenant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vrf" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vrf" }),
         __metadata("design:type", Number)
     ], WritableIpAddressInput.prototype, "vrf", void 0);
     return WritableIpAddressInput;
-}(SpeakeasyBase));
-export { WritableIpAddressInput };
+}(utils_1.SpeakeasyBase));
+exports.WritableIpAddressInput = WritableIpAddressInput;

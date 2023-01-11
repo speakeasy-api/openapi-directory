@@ -22,5 +22,5 @@ export class GetNumberStartsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNumberStarts200ApplicationJsonInt32Integer?: number;
+  getNumberStarts200ApplicationJSONInt32Integer?: number;
 }

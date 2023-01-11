@@ -15,7 +15,7 @@ export declare class PoolGetAllPoolsLifetimeStatisticsRequest extends SpeakeasyB
 export declare class PoolGetAllPoolsLifetimeStatisticsResponse extends SpeakeasyBase {
     batchError?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     poolStatistics?: any;
     statusCode: number;
 }

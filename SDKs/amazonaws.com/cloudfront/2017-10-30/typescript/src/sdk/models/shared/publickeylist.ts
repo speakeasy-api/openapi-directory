@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PublicKeySummary } from "./publickeysummary";
+import { PublicKeySummaryList } from "./publickeysummarylist";
 
 
 
@@ -8,8 +8,8 @@ import { PublicKeySummary } from "./publickeysummary";
  * A list of public keys you've added to CloudFront to use with features like field-level encryption.
 **/
 export class PublicKeyList extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: PublicKeySummary })
-  items?: PublicKeySummary[];
+  @SpeakeasyMetadata({ elemType: PublicKeySummaryList })
+  items?: PublicKeySummaryList[];
 
   @SpeakeasyMetadata()
   maxItems: number;

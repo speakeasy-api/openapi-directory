@@ -5,6 +5,6 @@ export declare class DescribeWorldTemplateResponse extends SpeakeasyBase {
     createdAt?: Date;
     lastUpdatedAt?: Date;
     name?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     version?: string;
 }

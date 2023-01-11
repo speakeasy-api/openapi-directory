@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeDashboardResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var DescribeDashboardResponse = /** @class */ (function (_super) {
     __extends(DescribeDashboardResponse, _super);
     function DescribeDashboardResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dashboardArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dashboardArn" }),
         __metadata("design:type", String)
     ], DescribeDashboardResponse.prototype, "dashboardArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dashboardCreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dashboardCreationDate" }),
         __metadata("design:type", Date)
     ], DescribeDashboardResponse.prototype, "dashboardCreationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dashboardDefinition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dashboardDefinition" }),
         __metadata("design:type", String)
     ], DescribeDashboardResponse.prototype, "dashboardDefinition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dashboardDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dashboardDescription" }),
         __metadata("design:type", String)
     ], DescribeDashboardResponse.prototype, "dashboardDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dashboardId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dashboardId" }),
         __metadata("design:type", String)
     ], DescribeDashboardResponse.prototype, "dashboardId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dashboardLastUpdateDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dashboardLastUpdateDate" }),
         __metadata("design:type", Date)
     ], DescribeDashboardResponse.prototype, "dashboardLastUpdateDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dashboardName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dashboardName" }),
         __metadata("design:type", String)
     ], DescribeDashboardResponse.prototype, "dashboardName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
         __metadata("design:type", String)
     ], DescribeDashboardResponse.prototype, "projectId", void 0);
     return DescribeDashboardResponse;
-}(SpeakeasyBase));
-export { DescribeDashboardResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeDashboardResponse = DescribeDashboardResponse;

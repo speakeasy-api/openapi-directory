@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDisableImageDeprecationActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDisableImageDeprecationResponse = exports.GetDisableImageDeprecationRequest = exports.GetDisableImageDeprecationHeaders = exports.GetDisableImageDeprecationQueryParams = exports.GetDisableImageDeprecationVersionEnum = exports.GetDisableImageDeprecationActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDisableImageDeprecationActionEnum;
 (function (GetDisableImageDeprecationActionEnum) {
     GetDisableImageDeprecationActionEnum["DisableImageDeprecation"] = "DisableImageDeprecation";
-})(GetDisableImageDeprecationActionEnum || (GetDisableImageDeprecationActionEnum = {}));
-export var GetDisableImageDeprecationVersionEnum;
+})(GetDisableImageDeprecationActionEnum = exports.GetDisableImageDeprecationActionEnum || (exports.GetDisableImageDeprecationActionEnum = {}));
+var GetDisableImageDeprecationVersionEnum;
 (function (GetDisableImageDeprecationVersionEnum) {
     GetDisableImageDeprecationVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDisableImageDeprecationVersionEnum || (GetDisableImageDeprecationVersionEnum = {}));
+})(GetDisableImageDeprecationVersionEnum = exports.GetDisableImageDeprecationVersionEnum || (exports.GetDisableImageDeprecationVersionEnum = {}));
 var GetDisableImageDeprecationQueryParams = /** @class */ (function (_super) {
     __extends(GetDisableImageDeprecationQueryParams, _super);
     function GetDisableImageDeprecationQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDisableImageDeprecationQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDisableImageDeprecationQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ImageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ImageId" }),
         __metadata("design:type", String)
     ], GetDisableImageDeprecationQueryParams.prototype, "imageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDisableImageDeprecationQueryParams.prototype, "version", void 0);
     return GetDisableImageDeprecationQueryParams;
-}(SpeakeasyBase));
-export { GetDisableImageDeprecationQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDisableImageDeprecationQueryParams = GetDisableImageDeprecationQueryParams;
 var GetDisableImageDeprecationHeaders = /** @class */ (function (_super) {
     __extends(GetDisableImageDeprecationHeaders, _super);
     function GetDisableImageDeprecationHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDisableImageDeprecationHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDisableImageDeprecationHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDisableImageDeprecationHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDisableImageDeprecationHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDisableImageDeprecationHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDisableImageDeprecationHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDisableImageDeprecationHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDisableImageDeprecationHeaders;
-}(SpeakeasyBase));
-export { GetDisableImageDeprecationHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDisableImageDeprecationHeaders = GetDisableImageDeprecationHeaders;
 var GetDisableImageDeprecationRequest = /** @class */ (function (_super) {
     __extends(GetDisableImageDeprecationRequest, _super);
     function GetDisableImageDeprecationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDisableImageDeprecationQueryParams)
     ], GetDisableImageDeprecationRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDisableImageDeprecationHeaders)
     ], GetDisableImageDeprecationRequest.prototype, "headers", void 0);
     return GetDisableImageDeprecationRequest;
-}(SpeakeasyBase));
-export { GetDisableImageDeprecationRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDisableImageDeprecationRequest = GetDisableImageDeprecationRequest;
 var GetDisableImageDeprecationResponse = /** @class */ (function (_super) {
     __extends(GetDisableImageDeprecationResponse, _super);
     function GetDisableImageDeprecationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDisableImageDeprecationResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDisableImageDeprecationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDisableImageDeprecationResponse.prototype, "statusCode", void 0);
     return GetDisableImageDeprecationResponse;
-}(SpeakeasyBase));
-export { GetDisableImageDeprecationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDisableImageDeprecationResponse = GetDisableImageDeprecationResponse;

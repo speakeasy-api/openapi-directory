@@ -1,6 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CancelSpotFleetRequestsSuccessItem } from "./cancelspotfleetrequestssuccessitem";
-import { CancelSpotFleetRequestsErrorItem } from "./cancelspotfleetrequestserroritem";
 
 
 
@@ -9,9 +7,9 @@ import { CancelSpotFleetRequestsErrorItem } from "./cancelspotfleetrequestserror
  * Contains the output of CancelSpotFleetRequests.
 **/
 export class CancelSpotFleetRequestsResponse extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: CancelSpotFleetRequestsSuccessItem })
-  successfulFleetRequests?: CancelSpotFleetRequestsSuccessItem[];
+  @SpeakeasyMetadata()
+  successfulFleetRequests?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: CancelSpotFleetRequestsErrorItem })
-  unsuccessfulFleetRequests?: CancelSpotFleetRequestsErrorItem[];
+  @SpeakeasyMetadata()
+  unsuccessfulFleetRequests?: Record<string, any>;
 }

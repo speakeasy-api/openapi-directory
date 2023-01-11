@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Goal = exports.GoalVisitTimeOnSiteDetails = exports.GoalVisitNumPagesDetails = exports.GoalUrlDestinationDetails = exports.GoalUrlDestinationDetailsSteps = exports.GoalParentLink = exports.GoalEventDetails = exports.GoalEventDetailsEventConditions = void 0;
+var utils_1 = require("../../../internal/utils");
 var GoalEventDetailsEventConditions = /** @class */ (function (_super) {
     __extends(GoalEventDetailsEventConditions, _super);
     function GoalEventDetailsEventConditions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparisonType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparisonType" }),
         __metadata("design:type", String)
     ], GoalEventDetailsEventConditions.prototype, "comparisonType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparisonValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparisonValue" }),
         __metadata("design:type", String)
     ], GoalEventDetailsEventConditions.prototype, "comparisonValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expression" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expression" }),
         __metadata("design:type", String)
     ], GoalEventDetailsEventConditions.prototype, "expression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchType" }),
         __metadata("design:type", String)
     ], GoalEventDetailsEventConditions.prototype, "matchType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GoalEventDetailsEventConditions.prototype, "type", void 0);
     return GoalEventDetailsEventConditions;
-}(SpeakeasyBase));
-export { GoalEventDetailsEventConditions };
+}(utils_1.SpeakeasyBase));
+exports.GoalEventDetailsEventConditions = GoalEventDetailsEventConditions;
 // GoalEventDetails
 /**
  * Details for the goal of the type EVENT.
@@ -61,16 +64,16 @@ var GoalEventDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventConditions", elemType: GoalEventDetailsEventConditions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventConditions", elemType: GoalEventDetailsEventConditions }),
         __metadata("design:type", Array)
     ], GoalEventDetails.prototype, "eventConditions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useEventValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useEventValue" }),
         __metadata("design:type", Boolean)
     ], GoalEventDetails.prototype, "useEventValue", void 0);
     return GoalEventDetails;
-}(SpeakeasyBase));
-export { GoalEventDetails };
+}(utils_1.SpeakeasyBase));
+exports.GoalEventDetails = GoalEventDetails;
 // GoalParentLink
 /**
  * Parent link for a goal. Points to the view (profile) to which this goal belongs.
@@ -81,36 +84,36 @@ var GoalParentLink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], GoalParentLink.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GoalParentLink.prototype, "type", void 0);
     return GoalParentLink;
-}(SpeakeasyBase));
-export { GoalParentLink };
+}(utils_1.SpeakeasyBase));
+exports.GoalParentLink = GoalParentLink;
 var GoalUrlDestinationDetailsSteps = /** @class */ (function (_super) {
     __extends(GoalUrlDestinationDetailsSteps, _super);
     function GoalUrlDestinationDetailsSteps() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoalUrlDestinationDetailsSteps.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number" }),
         __metadata("design:type", Number)
     ], GoalUrlDestinationDetailsSteps.prototype, "number", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GoalUrlDestinationDetailsSteps.prototype, "url", void 0);
     return GoalUrlDestinationDetailsSteps;
-}(SpeakeasyBase));
-export { GoalUrlDestinationDetailsSteps };
+}(utils_1.SpeakeasyBase));
+exports.GoalUrlDestinationDetailsSteps = GoalUrlDestinationDetailsSteps;
 // GoalUrlDestinationDetails
 /**
  * Details for the goal of the type URL_DESTINATION.
@@ -121,28 +124,28 @@ var GoalUrlDestinationDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caseSensitive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caseSensitive" }),
         __metadata("design:type", Boolean)
     ], GoalUrlDestinationDetails.prototype, "caseSensitive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstStepRequired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstStepRequired" }),
         __metadata("design:type", Boolean)
     ], GoalUrlDestinationDetails.prototype, "firstStepRequired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchType" }),
         __metadata("design:type", String)
     ], GoalUrlDestinationDetails.prototype, "matchType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=steps", elemType: GoalUrlDestinationDetailsSteps }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=steps", elemType: GoalUrlDestinationDetailsSteps }),
         __metadata("design:type", Array)
     ], GoalUrlDestinationDetails.prototype, "steps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GoalUrlDestinationDetails.prototype, "url", void 0);
     return GoalUrlDestinationDetails;
-}(SpeakeasyBase));
-export { GoalUrlDestinationDetails };
+}(utils_1.SpeakeasyBase));
+exports.GoalUrlDestinationDetails = GoalUrlDestinationDetails;
 // GoalVisitNumPagesDetails
 /**
  * Details for the goal of the type VISIT_NUM_PAGES.
@@ -153,16 +156,16 @@ var GoalVisitNumPagesDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparisonType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparisonType" }),
         __metadata("design:type", String)
     ], GoalVisitNumPagesDetails.prototype, "comparisonType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparisonValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparisonValue" }),
         __metadata("design:type", String)
     ], GoalVisitNumPagesDetails.prototype, "comparisonValue", void 0);
     return GoalVisitNumPagesDetails;
-}(SpeakeasyBase));
-export { GoalVisitNumPagesDetails };
+}(utils_1.SpeakeasyBase));
+exports.GoalVisitNumPagesDetails = GoalVisitNumPagesDetails;
 // GoalVisitTimeOnSiteDetails
 /**
  * Details for the goal of the type VISIT_TIME_ON_SITE.
@@ -173,16 +176,16 @@ var GoalVisitTimeOnSiteDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparisonType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparisonType" }),
         __metadata("design:type", String)
     ], GoalVisitTimeOnSiteDetails.prototype, "comparisonType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparisonValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparisonValue" }),
         __metadata("design:type", String)
     ], GoalVisitTimeOnSiteDetails.prototype, "comparisonValue", void 0);
     return GoalVisitTimeOnSiteDetails;
-}(SpeakeasyBase));
-export { GoalVisitTimeOnSiteDetails };
+}(utils_1.SpeakeasyBase));
+exports.GoalVisitTimeOnSiteDetails = GoalVisitTimeOnSiteDetails;
 // Goal
 /**
  * JSON template for Analytics goal resource.
@@ -193,77 +196,77 @@ var Goal = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], Goal.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], Goal.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Goal.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventDetails" }),
         __metadata("design:type", GoalEventDetails)
     ], Goal.prototype, "eventDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Goal.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=internalWebPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=internalWebPropertyId" }),
         __metadata("design:type", String)
     ], Goal.prototype, "internalWebPropertyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Goal.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Goal.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentLink" }),
         __metadata("design:type", GoalParentLink)
     ], Goal.prototype, "parentLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileId" }),
         __metadata("design:type", String)
     ], Goal.prototype, "profileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Goal.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Goal.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", Date)
     ], Goal.prototype, "updated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlDestinationDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlDestinationDetails" }),
         __metadata("design:type", GoalUrlDestinationDetails)
     ], Goal.prototype, "urlDestinationDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], Goal.prototype, "value", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visitNumPagesDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visitNumPagesDetails" }),
         __metadata("design:type", GoalVisitNumPagesDetails)
     ], Goal.prototype, "visitNumPagesDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visitTimeOnSiteDetails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visitTimeOnSiteDetails" }),
         __metadata("design:type", GoalVisitTimeOnSiteDetails)
     ], Goal.prototype, "visitTimeOnSiteDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webPropertyId" }),
         __metadata("design:type", String)
     ], Goal.prototype, "webPropertyId", void 0);
     return Goal;
-}(SpeakeasyBase));
-export { Goal };
+}(utils_1.SpeakeasyBase));
+exports.Goal = Goal;

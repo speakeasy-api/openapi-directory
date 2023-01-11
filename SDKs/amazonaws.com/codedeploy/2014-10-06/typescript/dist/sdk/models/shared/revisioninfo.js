@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GenericRevisionInfo } from "./genericrevisioninfo";
-import { RevisionLocation } from "./revisionlocation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RevisionInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var genericrevisioninfo_1 = require("./genericrevisioninfo");
+var revisionlocation_1 = require("./revisionlocation");
 // RevisionInfo
 /**
  * Information about an application revision.
@@ -35,13 +38,13 @@ var RevisionInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=genericRevisionInfo" }),
-        __metadata("design:type", GenericRevisionInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=genericRevisionInfo" }),
+        __metadata("design:type", genericrevisioninfo_1.GenericRevisionInfo)
     ], RevisionInfo.prototype, "genericRevisionInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionLocation" }),
-        __metadata("design:type", RevisionLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionLocation" }),
+        __metadata("design:type", revisionlocation_1.RevisionLocation)
     ], RevisionInfo.prototype, "revisionLocation", void 0);
     return RevisionInfo;
-}(SpeakeasyBase));
-export { RevisionInfo };
+}(utils_1.SpeakeasyBase));
+exports.RevisionInfo = RevisionInfo;

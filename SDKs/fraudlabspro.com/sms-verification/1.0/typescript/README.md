@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetV1VerificationResultRequest, GetV1VerificationResultResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,14 +28,14 @@ const sdk = new SDK();
     
 const req: GetV1VerificationResultRequest = {
   queryParams: {
-    format: "xml",
-    key: "suscipit",
-    otp: "est",
-    tranId: "aut",
+    format: "json",
+    key: "voluptas",
+    otp: "culpa",
+    tranId: "expedita",
   },
 };
 
-sdk.sdk.getV1VerificationResult(req).then((res: GetV1VerificationResultResponse | AxiosError) => {
+sdk.getV1VerificationResult(req).then((res: GetV1VerificationResultResponse | AxiosError) => {
    // handle response
 });
 ```

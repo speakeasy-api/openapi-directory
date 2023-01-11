@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class OptionalClaim extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=additionalProperties" })
-  additionalProperties?: Map<string, any>;
+  additionalProperties?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=essential" })
   essential?: boolean;

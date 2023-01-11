@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolMqttGetArgsResponse = exports.ProtocolMqttGetArgsRequest = exports.ProtocolMqttGetArgsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolMqttGetArgsPathParams = /** @class */ (function (_super) {
     __extends(ProtocolMqttGetArgsPathParams, _super);
     function ProtocolMqttGetArgsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolMqttGetArgsPathParams.prototype, "agentNum", void 0);
     return ProtocolMqttGetArgsPathParams;
-}(SpeakeasyBase));
-export { ProtocolMqttGetArgsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttGetArgsPathParams = ProtocolMqttGetArgsPathParams;
 var ProtocolMqttGetArgsRequest = /** @class */ (function (_super) {
     __extends(ProtocolMqttGetArgsRequest, _super);
     function ProtocolMqttGetArgsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolMqttGetArgsPathParams)
     ], ProtocolMqttGetArgsRequest.prototype, "pathParams", void 0);
     return ProtocolMqttGetArgsRequest;
-}(SpeakeasyBase));
-export { ProtocolMqttGetArgsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttGetArgsRequest = ProtocolMqttGetArgsRequest;
 var ProtocolMqttGetArgsResponse = /** @class */ (function (_super) {
     __extends(ProtocolMqttGetArgsResponse, _super);
     function ProtocolMqttGetArgsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolMqttGetArgsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolMqttGetArgsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], ProtocolMqttGetArgsResponse.prototype, "protocolMqttGetArgs200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ProtocolMqttGetArgsResponse.prototype, "protocolMqttGetArgs200ApplicationJSONObject", void 0);
     return ProtocolMqttGetArgsResponse;
-}(SpeakeasyBase));
-export { ProtocolMqttGetArgsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttGetArgsResponse = ProtocolMqttGetArgsResponse;

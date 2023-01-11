@@ -11,7 +11,7 @@ export declare class GetVisualCrossingWebServicesRestServicesWeatherdataForecast
     unitGroup?: string;
 }
 export declare class GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     queryParams: GetVisualCrossingWebServicesRestServicesWeatherdataForecastQueryParams;
 }
 export declare class GetVisualCrossingWebServicesRestServicesWeatherdataForecastResponse extends SpeakeasyBase {

@@ -65,10 +65,10 @@ export class ReposMergeResponse extends SpeakeasyBase {
   commit?: shared.Commit;
 
   @SpeakeasyMetadata()
-  reposMerge404ApplicationJsonObject?: ReposMerge404ApplicationJson;
+  reposMerge404ApplicationJSONObject?: ReposMerge404ApplicationJson;
 
   @SpeakeasyMetadata()
-  reposMerge409ApplicationJsonObject?: ReposMerge409ApplicationJson;
+  reposMerge409ApplicationJSONObject?: ReposMerge409ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

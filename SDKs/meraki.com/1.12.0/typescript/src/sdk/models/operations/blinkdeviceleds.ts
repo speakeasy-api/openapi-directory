@@ -37,5 +37,5 @@ export class BlinkDeviceLedsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  blinkDeviceLeds202ApplicationJsonObject?: Map<string, any>;
+  blinkDeviceLeds202ApplicationJSONObject?: Record<string, any>;
 }

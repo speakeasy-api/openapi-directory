@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteTransactionsTransactionIdResponse = exports.DeleteTransactionsTransactionIdRequest = exports.DeleteTransactionsTransactionIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteTransactionsTransactionIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteTransactionsTransactionIdPathParams, _super);
     function DeleteTransactionsTransactionIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=transactionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=transactionId" }),
         __metadata("design:type", String)
     ], DeleteTransactionsTransactionIdPathParams.prototype, "transactionId", void 0);
     return DeleteTransactionsTransactionIdPathParams;
-}(SpeakeasyBase));
-export { DeleteTransactionsTransactionIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteTransactionsTransactionIdPathParams = DeleteTransactionsTransactionIdPathParams;
 var DeleteTransactionsTransactionIdRequest = /** @class */ (function (_super) {
     __extends(DeleteTransactionsTransactionIdRequest, _super);
     function DeleteTransactionsTransactionIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteTransactionsTransactionIdPathParams)
     ], DeleteTransactionsTransactionIdRequest.prototype, "pathParams", void 0);
     return DeleteTransactionsTransactionIdRequest;
-}(SpeakeasyBase));
-export { DeleteTransactionsTransactionIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteTransactionsTransactionIdRequest = DeleteTransactionsTransactionIdRequest;
 var DeleteTransactionsTransactionIdResponse = /** @class */ (function (_super) {
     __extends(DeleteTransactionsTransactionIdResponse, _super);
     function DeleteTransactionsTransactionIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteTransactionsTransactionIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteTransactionsTransactionIdResponse.prototype, "statusCode", void 0);
     return DeleteTransactionsTransactionIdResponse;
-}(SpeakeasyBase));
-export { DeleteTransactionsTransactionIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteTransactionsTransactionIdResponse = DeleteTransactionsTransactionIdResponse;

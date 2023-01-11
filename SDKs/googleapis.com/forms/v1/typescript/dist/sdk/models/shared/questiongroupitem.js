@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GridInput } from "./grid";
-import { ImageInput } from "./image";
-import { QuestionInput } from "./question";
-import { Grid } from "./grid";
-import { Image } from "./image";
-import { Question } from "./question";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuestionGroupItem = exports.QuestionGroupItemInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var grid_1 = require("./grid");
+var image_1 = require("./image");
+var question_1 = require("./question");
+var grid_2 = require("./grid");
+var image_2 = require("./image");
+var question_2 = require("./question");
 // QuestionGroupItemInput
 /**
  * Defines a question that comprises multiple questions grouped together.
@@ -39,20 +42,20 @@ var QuestionGroupItemInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grid" }),
-        __metadata("design:type", GridInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grid" }),
+        __metadata("design:type", grid_1.GridInput)
     ], QuestionGroupItemInput.prototype, "grid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
-        __metadata("design:type", ImageInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
+        __metadata("design:type", image_1.ImageInput)
     ], QuestionGroupItemInput.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=questions", elemType: QuestionInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=questions", elemType: question_1.QuestionInput }),
         __metadata("design:type", Array)
     ], QuestionGroupItemInput.prototype, "questions", void 0);
     return QuestionGroupItemInput;
-}(SpeakeasyBase));
-export { QuestionGroupItemInput };
+}(utils_1.SpeakeasyBase));
+exports.QuestionGroupItemInput = QuestionGroupItemInput;
 // QuestionGroupItem
 /**
  * Defines a question that comprises multiple questions grouped together.
@@ -63,17 +66,17 @@ var QuestionGroupItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grid" }),
-        __metadata("design:type", Grid)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grid" }),
+        __metadata("design:type", grid_2.Grid)
     ], QuestionGroupItem.prototype, "grid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
-        __metadata("design:type", Image)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
+        __metadata("design:type", image_2.Image)
     ], QuestionGroupItem.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=questions", elemType: Question }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=questions", elemType: question_2.Question }),
         __metadata("design:type", Array)
     ], QuestionGroupItem.prototype, "questions", void 0);
     return QuestionGroupItem;
-}(SpeakeasyBase));
-export { QuestionGroupItem };
+}(utils_1.SpeakeasyBase));
+exports.QuestionGroupItem = QuestionGroupItem;

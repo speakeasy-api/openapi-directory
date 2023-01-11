@@ -13,6 +13,6 @@ export declare class DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequest e
 }
 export declare class DeleteOfferingsOfferingIdChannelsChannelIdLearnersResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { OptCapProgramInPriceRequest, OptCapProgramInPriceResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     basicScheme: {
       password: "YOUR_PASSWORD_HERE",
@@ -35,19 +34,19 @@ const sdk = new SDK(WithSecurity(
     
 const req: OptCapProgramInPriceRequest = {
   headers: {
-    authorization: "sunt",
-    wmConsumerChannelType: "vel",
-    wmQosCorrelationId: "molestiae",
-    wmSecAccessToken: "aut",
-    wmSvcName: "nesciunt",
+    authorization: "sit",
+    wmCONSUMERCHANNELTYPE: "voluptas",
+    wmQOSCORRELATIONID: "culpa",
+    wmSECACCESSTOKEN: "expedita",
+    wmSVCNAME: "consequuntur",
   },
   request: {
-    subsidyEnrolled: true,
+    subsidyEnrolled: false,
     subsidyPreference: true,
   },
 };
 
-sdk.sdk.optCapProgramInPrice(req).then((res: OptCapProgramInPriceResponse | AxiosError) => {
+sdk.prices.optCapProgramInPrice(req).then((res: OptCapProgramInPriceResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -56,7 +55,7 @@ sdk.sdk.optCapProgramInPrice(req).then((res: OptCapProgramInPriceResponse | Axio
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Prices
 
 * `optCapProgramInPrice` - Set up CAP SKU All
 * `priceBulkUploads` - Update bulk prices (Multiple)

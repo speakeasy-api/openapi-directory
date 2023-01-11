@@ -59,16 +59,16 @@ export class PushUriToAccountIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  pushUriToAccountId400ApplicationJsonObject?: PushUriToAccountId400ApplicationJson;
+  pushURIToAccountId400ApplicationJSONObject?: PushUriToAccountId400ApplicationJson;
 
   @SpeakeasyMetadata()
-  pushUriToAccountId401ApplicationJsonObject?: PushUriToAccountId401ApplicationJson;
+  pushURIToAccountId401ApplicationJSONObject?: PushUriToAccountId401ApplicationJson;
 
   @SpeakeasyMetadata()
-  pushUriToAccountId404ApplicationJsonObject?: PushUriToAccountId404ApplicationJson;
+  pushURIToAccountId404ApplicationJSONObject?: PushUriToAccountId404ApplicationJson;
 
   @SpeakeasyMetadata()
-  pushUriToAccountId500ApplicationJsonObject?: PushUriToAccountId500ApplicationJson;
+  pushURIToAccountId500ApplicationJSONObject?: PushUriToAccountId500ApplicationJson;
 
   @SpeakeasyMetadata()
   sample?: any;

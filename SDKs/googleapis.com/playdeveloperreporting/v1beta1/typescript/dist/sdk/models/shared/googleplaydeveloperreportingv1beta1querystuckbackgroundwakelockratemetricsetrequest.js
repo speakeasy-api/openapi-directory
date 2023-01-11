@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePlayDeveloperReportingV1beta1TimelineSpec } from "./googleplaydeveloperreportingv1beta1timelinespec";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleplaydeveloperreportingv1beta1timelinespec_1 = require("./googleplaydeveloperreportingv1beta1timelinespec");
 // GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest
 /**
  * Request message for QueryStuckBackgroundWakelockRateMetricSet.
@@ -34,29 +37,29 @@ var GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSet
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensions" }),
         __metadata("design:type", Array)
     ], GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics" }),
         __metadata("design:type", Array)
     ], GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageSize" }),
         __metadata("design:type", Number)
     ], GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageToken" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timelineSpec" }),
-        __metadata("design:type", GooglePlayDeveloperReportingV1beta1TimelineSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timelineSpec" }),
+        __metadata("design:type", googleplaydeveloperreportingv1beta1timelinespec_1.GooglePlayDeveloperReportingV1beta1TimelineSpec)
     ], GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest.prototype, "timelineSpec", void 0);
     return GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest;
-}(SpeakeasyBase));
-export { GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest = GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest;

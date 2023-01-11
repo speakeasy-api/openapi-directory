@@ -3,10 +3,6 @@ import { ExperimentActionState } from "./experimentactionstate";
 
 
 
-// ExperimentAction
-/** 
- * Describes the action for an experiment.
-**/
 export class ExperimentAction extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=actionId" })
   actionId?: string;
@@ -15,7 +11,7 @@ export class ExperimentAction extends SpeakeasyBase {
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
-  parameters?: Map<string, string>;
+  parameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=startAfter" })
   startAfter?: string[];
@@ -24,5 +20,5 @@ export class ExperimentAction extends SpeakeasyBase {
   state?: ExperimentActionState;
 
   @SpeakeasyMetadata({ data: "json, name=targets" })
-  targets?: Map<string, string>;
+  targets?: Record<string, string>;
 }

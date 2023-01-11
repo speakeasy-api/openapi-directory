@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,69 +23,71 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { V3Disruption } from "./v3disruption";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3Disruptions = void 0;
+var utils_1 = require("../../../internal/utils");
+var v3disruption_1 = require("./v3disruption");
 var V3Disruptions = /** @class */ (function (_super) {
     __extends(V3Disruptions, _super);
     function V3Disruptions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ferry", elemType: V3Disruption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ferry", elemType: v3disruption_1.V3Disruption }),
         __metadata("design:type", Array)
     ], V3Disruptions.prototype, "ferry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=general", elemType: V3Disruption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=general", elemType: v3disruption_1.V3Disruption }),
         __metadata("design:type", Array)
     ], V3Disruptions.prototype, "general", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interstate_train", elemType: V3Disruption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interstate_train", elemType: v3disruption_1.V3Disruption }),
         __metadata("design:type", Array)
     ], V3Disruptions.prototype, "interstateTrain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metro_bus", elemType: V3Disruption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metro_bus", elemType: v3disruption_1.V3Disruption }),
         __metadata("design:type", Array)
     ], V3Disruptions.prototype, "metroBus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metro_train", elemType: V3Disruption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metro_train", elemType: v3disruption_1.V3Disruption }),
         __metadata("design:type", Array)
     ], V3Disruptions.prototype, "metroTrain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metro_tram", elemType: V3Disruption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metro_tram", elemType: v3disruption_1.V3Disruption }),
         __metadata("design:type", Array)
     ], V3Disruptions.prototype, "metroTram", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=night_bus", elemType: V3Disruption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=night_bus", elemType: v3disruption_1.V3Disruption }),
         __metadata("design:type", Array)
     ], V3Disruptions.prototype, "nightBus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regional_bus", elemType: V3Disruption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regional_bus", elemType: v3disruption_1.V3Disruption }),
         __metadata("design:type", Array)
     ], V3Disruptions.prototype, "regionalBus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regional_coach", elemType: V3Disruption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regional_coach", elemType: v3disruption_1.V3Disruption }),
         __metadata("design:type", Array)
     ], V3Disruptions.prototype, "regionalCoach", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=regional_train", elemType: V3Disruption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=regional_train", elemType: v3disruption_1.V3Disruption }),
         __metadata("design:type", Array)
     ], V3Disruptions.prototype, "regionalTrain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=school_bus", elemType: V3Disruption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=school_bus", elemType: v3disruption_1.V3Disruption }),
         __metadata("design:type", Array)
     ], V3Disruptions.prototype, "schoolBus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skybus", elemType: V3Disruption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skybus", elemType: v3disruption_1.V3Disruption }),
         __metadata("design:type", Array)
     ], V3Disruptions.prototype, "skybus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxi", elemType: V3Disruption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxi", elemType: v3disruption_1.V3Disruption }),
         __metadata("design:type", Array)
     ], V3Disruptions.prototype, "taxi", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=telebus", elemType: V3Disruption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=telebus", elemType: v3disruption_1.V3Disruption }),
         __metadata("design:type", Array)
     ], V3Disruptions.prototype, "telebus", void 0);
     return V3Disruptions;
-}(SpeakeasyBase));
-export { V3Disruptions };
+}(utils_1.SpeakeasyBase));
+exports.V3Disruptions = V3Disruptions;

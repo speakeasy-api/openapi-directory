@@ -1,5 +1,8 @@
-export var NetworkProfileTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NetworkProfileTypeEnum = void 0;
+var NetworkProfileTypeEnum;
 (function (NetworkProfileTypeEnum) {
     NetworkProfileTypeEnum["Curated"] = "CURATED";
     NetworkProfileTypeEnum["Private"] = "PRIVATE";
-})(NetworkProfileTypeEnum || (NetworkProfileTypeEnum = {}));
+})(NetworkProfileTypeEnum = exports.NetworkProfileTypeEnum || (exports.NetworkProfileTypeEnum = {}));

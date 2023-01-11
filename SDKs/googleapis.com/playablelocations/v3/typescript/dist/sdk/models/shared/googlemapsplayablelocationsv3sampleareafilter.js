@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleMapsPlayablelocationsV3SampleAreaFilter = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleMapsPlayablelocationsV3SampleAreaFilter
 /**
  * Specifies the area to search for playable locations.
@@ -33,9 +36,9 @@ var GoogleMapsPlayablelocationsV3SampleAreaFilter = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s2CellId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s2CellId" }),
         __metadata("design:type", String)
     ], GoogleMapsPlayablelocationsV3SampleAreaFilter.prototype, "s2CellId", void 0);
     return GoogleMapsPlayablelocationsV3SampleAreaFilter;
-}(SpeakeasyBase));
-export { GoogleMapsPlayablelocationsV3SampleAreaFilter };
+}(utils_1.SpeakeasyBase));
+exports.GoogleMapsPlayablelocationsV3SampleAreaFilter = GoogleMapsPlayablelocationsV3SampleAreaFilter;

@@ -188,23 +188,23 @@ export class DipcrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dipcr400ApplicationJsonObject?: Dipcr400ApplicationJson;
+  dipcr400ApplicationJSONObject?: Dipcr400ApplicationJson;
 
   @SpeakeasyMetadata()
-  dipcr401ApplicationJsonObject?: Dipcr401ApplicationJson;
+  dipcr401ApplicationJSONObject?: Dipcr401ApplicationJson;
 
   @SpeakeasyMetadata()
-  dipcr404ApplicationJsonObject?: Dipcr404ApplicationJson;
+  dipcr404ApplicationJSONObject?: Dipcr404ApplicationJson;
 
   @SpeakeasyMetadata()
-  dipcr500ApplicationJsonObject?: Dipcr500ApplicationJson;
+  dipcr500ApplicationJSONObject?: Dipcr500ApplicationJson;
 
   @SpeakeasyMetadata()
-  dipcr502ApplicationJsonObject?: Dipcr502ApplicationJson;
+  dipcr502ApplicationJSONObject?: Dipcr502ApplicationJson;
 
   @SpeakeasyMetadata()
-  dipcr503ApplicationJsonObject?: Dipcr503ApplicationJson;
+  dipcr503ApplicationJSONObject?: Dipcr503ApplicationJson;
 
   @SpeakeasyMetadata()
-  dipcr504ApplicationJsonObject?: Dipcr504ApplicationJson;
+  dipcr504ApplicationJSONObject?: Dipcr504ApplicationJson;
 }

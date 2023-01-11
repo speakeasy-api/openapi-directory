@@ -21,5 +21,5 @@ export declare class GetProjectMembershipsForProjectResponse extends SpeakeasyBa
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getProjectMembershipsForProject200ApplicationJsonObject?: GetProjectMembershipsForProject200ApplicationJson;
+    getProjectMembershipsForProject200ApplicationJSONObject?: GetProjectMembershipsForProject200ApplicationJson;
 }

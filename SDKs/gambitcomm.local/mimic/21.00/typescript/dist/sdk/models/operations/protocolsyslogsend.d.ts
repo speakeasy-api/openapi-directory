@@ -11,5 +11,5 @@ export declare class ProtocolSyslogSendRequest extends SpeakeasyBase {
 export declare class ProtocolSyslogSendResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSyslogSend200ApplicationJsonString?: string;
+    protocolSyslogSend200ApplicationJSONString?: string;
 }

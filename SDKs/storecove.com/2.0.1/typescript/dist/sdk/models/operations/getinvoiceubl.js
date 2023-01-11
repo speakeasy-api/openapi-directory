@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetInvoiceUblPackagingEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetInvoiceUblResponse = exports.GetInvoiceUblRequest = exports.GetInvoiceUblPathParams = exports.GetInvoiceUblPackagingEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetInvoiceUblPackagingEnum;
 (function (GetInvoiceUblPackagingEnum) {
     GetInvoiceUblPackagingEnum["Json"] = "json";
     GetInvoiceUblPackagingEnum["Ubl"] = "ubl";
-})(GetInvoiceUblPackagingEnum || (GetInvoiceUblPackagingEnum = {}));
+})(GetInvoiceUblPackagingEnum = exports.GetInvoiceUblPackagingEnum || (exports.GetInvoiceUblPackagingEnum = {}));
 var GetInvoiceUblPathParams = /** @class */ (function (_super) {
     __extends(GetInvoiceUblPathParams, _super);
     function GetInvoiceUblPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=guid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=guid" }),
         __metadata("design:type", String)
     ], GetInvoiceUblPathParams.prototype, "guid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=packaging" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=packaging" }),
         __metadata("design:type", String)
     ], GetInvoiceUblPathParams.prototype, "packaging", void 0);
     return GetInvoiceUblPathParams;
-}(SpeakeasyBase));
-export { GetInvoiceUblPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetInvoiceUblPathParams = GetInvoiceUblPathParams;
 var GetInvoiceUblRequest = /** @class */ (function (_super) {
     __extends(GetInvoiceUblRequest, _super);
     function GetInvoiceUblRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetInvoiceUblPathParams)
     ], GetInvoiceUblRequest.prototype, "pathParams", void 0);
     return GetInvoiceUblRequest;
-}(SpeakeasyBase));
-export { GetInvoiceUblRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetInvoiceUblRequest = GetInvoiceUblRequest;
 var GetInvoiceUblResponse = /** @class */ (function (_super) {
     __extends(GetInvoiceUblResponse, _super);
     function GetInvoiceUblResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetInvoiceUblResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetInvoiceUblResponse.prototype, "purchaseInvoiceUbl", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetInvoiceUblResponse.prototype, "statusCode", void 0);
     return GetInvoiceUblResponse;
-}(SpeakeasyBase));
-export { GetInvoiceUblResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetInvoiceUblResponse = GetInvoiceUblResponse;

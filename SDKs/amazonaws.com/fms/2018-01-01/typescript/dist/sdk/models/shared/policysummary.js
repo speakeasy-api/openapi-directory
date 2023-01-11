@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SecurityServiceTypeEnum } from "./securityservicetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PolicySummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var securityservicetypeenum_1 = require("./securityservicetypeenum");
 // PolicySummary
 /**
  * Details of the Firewall Manager policy.
@@ -34,33 +37,33 @@ var PolicySummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeleteUnusedFMManagedResources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeleteUnusedFMManagedResources" }),
         __metadata("design:type", Boolean)
-    ], PolicySummary.prototype, "deleteUnusedFmManagedResources", void 0);
+    ], PolicySummary.prototype, "deleteUnusedFMManagedResources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyArn" }),
         __metadata("design:type", String)
     ], PolicySummary.prototype, "policyArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyId" }),
         __metadata("design:type", String)
     ], PolicySummary.prototype, "policyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyName" }),
         __metadata("design:type", String)
     ], PolicySummary.prototype, "policyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RemediationEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RemediationEnabled" }),
         __metadata("design:type", Boolean)
     ], PolicySummary.prototype, "remediationEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceType" }),
         __metadata("design:type", String)
     ], PolicySummary.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityServiceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityServiceType" }),
         __metadata("design:type", String)
     ], PolicySummary.prototype, "securityServiceType", void 0);
     return PolicySummary;
-}(SpeakeasyBase));
-export { PolicySummary };
+}(utils_1.SpeakeasyBase));
+exports.PolicySummary = PolicySummary;

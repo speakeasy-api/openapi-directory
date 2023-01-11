@@ -15,6 +15,6 @@ export declare class GetUsersSelectedUserHooksRequest extends SpeakeasyBase {
 export declare class GetUsersSelectedUserHooksResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedWebhookSubscriptions?: shared.PaginatedWebhookSubscriptions;
 }

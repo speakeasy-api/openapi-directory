@@ -15,7 +15,7 @@ export declare class GetSnowballUsageHeaders extends SpeakeasyBase {
 }
 export declare class GetSnowballUsageRequest extends SpeakeasyBase {
     headers: GetSnowballUsageHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class GetSnowballUsageResponse extends SpeakeasyBase {
     contentType: string;

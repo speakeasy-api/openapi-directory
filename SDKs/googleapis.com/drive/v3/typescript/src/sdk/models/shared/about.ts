@@ -64,19 +64,19 @@ export class About extends SpeakeasyBase {
   driveThemes?: AboutDriveThemes[];
 
   @SpeakeasyMetadata({ data: "json, name=exportFormats" })
-  exportFormats?: Map<string, string[]>;
+  exportFormats?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=folderColorPalette" })
   folderColorPalette?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=importFormats" })
-  importFormats?: Map<string, string[]>;
+  importFormats?: Record<string, string[]>;
 
   @SpeakeasyMetadata({ data: "json, name=kind" })
   kind?: string;
 
   @SpeakeasyMetadata({ data: "json, name=maxImportSizes" })
-  maxImportSizes?: Map<string, string>;
+  maxImportSizes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=maxUploadSize" })
   maxUploadSize?: string;

@@ -80,7 +80,7 @@ export class UpdateResourceCollectionResponse extends SpeakeasyBase {
   throttlingException?: any;
 
   @SpeakeasyMetadata()
-  updateResourceCollectionResponse?: Map<string, any>;
+  updateResourceCollectionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

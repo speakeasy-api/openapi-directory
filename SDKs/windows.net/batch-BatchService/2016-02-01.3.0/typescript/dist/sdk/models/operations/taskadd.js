@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskAddResponse = exports.TaskAddRequest = exports.TaskAddHeaders = exports.TaskAddQueryParams = exports.TaskAddPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TaskAddPathParams = /** @class */ (function (_super) {
     __extends(TaskAddPathParams, _super);
     function TaskAddPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=jobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=jobId" }),
         __metadata("design:type", String)
     ], TaskAddPathParams.prototype, "jobId", void 0);
     return TaskAddPathParams;
-}(SpeakeasyBase));
-export { TaskAddPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TaskAddPathParams = TaskAddPathParams;
 var TaskAddQueryParams = /** @class */ (function (_super) {
     __extends(TaskAddQueryParams, _super);
     function TaskAddQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], TaskAddQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], TaskAddQueryParams.prototype, "timeout", void 0);
     return TaskAddQueryParams;
-}(SpeakeasyBase));
-export { TaskAddQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.TaskAddQueryParams = TaskAddQueryParams;
 var TaskAddHeaders = /** @class */ (function (_super) {
     __extends(TaskAddHeaders, _super);
     function TaskAddHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], TaskAddHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], TaskAddHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], TaskAddHeaders.prototype, "returnClientRequestId", void 0);
     return TaskAddHeaders;
-}(SpeakeasyBase));
-export { TaskAddHeaders };
+}(utils_1.SpeakeasyBase));
+exports.TaskAddHeaders = TaskAddHeaders;
 var TaskAddRequest = /** @class */ (function (_super) {
     __extends(TaskAddRequest, _super);
     function TaskAddRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TaskAddPathParams)
     ], TaskAddRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TaskAddQueryParams)
     ], TaskAddRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TaskAddHeaders)
     ], TaskAddRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], TaskAddRequest.prototype, "request", void 0);
     return TaskAddRequest;
-}(SpeakeasyBase));
-export { TaskAddRequest };
+}(utils_1.SpeakeasyBase));
+exports.TaskAddRequest = TaskAddRequest;
 var TaskAddResponse = /** @class */ (function (_super) {
     __extends(TaskAddResponse, _super);
     function TaskAddResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], TaskAddResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TaskAddResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], TaskAddResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TaskAddResponse.prototype, "statusCode", void 0);
     return TaskAddResponse;
-}(SpeakeasyBase));
-export { TaskAddResponse };
+}(utils_1.SpeakeasyBase));
+exports.TaskAddResponse = TaskAddResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminDeleteGlobalWebhookResponse = exports.EnterpriseAdminDeleteGlobalWebhookRequest = exports.EnterpriseAdminDeleteGlobalWebhookHeaders = exports.EnterpriseAdminDeleteGlobalWebhookPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseAdminDeleteGlobalWebhookPathParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeleteGlobalWebhookPathParams, _super);
     function EnterpriseAdminDeleteGlobalWebhookPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=hook_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=hook_id" }),
         __metadata("design:type", Number)
     ], EnterpriseAdminDeleteGlobalWebhookPathParams.prototype, "hookId", void 0);
     return EnterpriseAdminDeleteGlobalWebhookPathParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeleteGlobalWebhookPathParams };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeleteGlobalWebhookPathParams = EnterpriseAdminDeleteGlobalWebhookPathParams;
 var EnterpriseAdminDeleteGlobalWebhookHeaders = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeleteGlobalWebhookHeaders, _super);
     function EnterpriseAdminDeleteGlobalWebhookHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=accept" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=accept" }),
         __metadata("design:type", String)
     ], EnterpriseAdminDeleteGlobalWebhookHeaders.prototype, "accept", void 0);
     return EnterpriseAdminDeleteGlobalWebhookHeaders;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeleteGlobalWebhookHeaders };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeleteGlobalWebhookHeaders = EnterpriseAdminDeleteGlobalWebhookHeaders;
 var EnterpriseAdminDeleteGlobalWebhookRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeleteGlobalWebhookRequest, _super);
     function EnterpriseAdminDeleteGlobalWebhookRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminDeleteGlobalWebhookPathParams)
     ], EnterpriseAdminDeleteGlobalWebhookRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminDeleteGlobalWebhookHeaders)
     ], EnterpriseAdminDeleteGlobalWebhookRequest.prototype, "headers", void 0);
     return EnterpriseAdminDeleteGlobalWebhookRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeleteGlobalWebhookRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeleteGlobalWebhookRequest = EnterpriseAdminDeleteGlobalWebhookRequest;
 var EnterpriseAdminDeleteGlobalWebhookResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeleteGlobalWebhookResponse, _super);
     function EnterpriseAdminDeleteGlobalWebhookResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminDeleteGlobalWebhookResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminDeleteGlobalWebhookResponse.prototype, "statusCode", void 0);
     return EnterpriseAdminDeleteGlobalWebhookResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeleteGlobalWebhookResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeleteGlobalWebhookResponse = EnterpriseAdminDeleteGlobalWebhookResponse;

@@ -13,11 +13,11 @@ export declare class UpdateExperimentTemplateHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class UpdateExperimentTemplateRequestBody extends SpeakeasyBase {
-    actions?: Map<string, shared.UpdateExperimentTemplateActionInputItem>;
+    actions?: Record<string, shared.UpdateExperimentTemplateActionInputItem>;
     description?: string;
     roleArn?: string;
     stopConditions?: shared.UpdateExperimentTemplateStopConditionInput[];
-    targets?: Map<string, shared.UpdateExperimentTemplateTargetInput>;
+    targets?: Record<string, shared.UpdateExperimentTemplateTargetInput>;
 }
 export declare class UpdateExperimentTemplateRequest extends SpeakeasyBase {
     pathParams: UpdateExperimentTemplatePathParams;

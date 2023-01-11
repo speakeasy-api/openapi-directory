@@ -8,5 +8,5 @@ export declare class ProtocolNetflowResumeRequest extends SpeakeasyBase {
 export declare class ProtocolNetflowResumeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolNetflowResume200ApplicationJsonString?: string;
+    protocolNetflowResume200ApplicationJSONString?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,174 +14,199 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeploymentmanagerDeploymentsCancelPreviewResponse = exports.DeploymentmanagerDeploymentsCancelPreviewRequest = exports.DeploymentmanagerDeploymentsCancelPreviewSecurity = exports.DeploymentmanagerDeploymentsCancelPreviewSecurityOption2 = exports.DeploymentmanagerDeploymentsCancelPreviewSecurityOption1 = exports.DeploymentmanagerDeploymentsCancelPreviewQueryParams = exports.DeploymentmanagerDeploymentsCancelPreviewPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DeploymentmanagerDeploymentsCancelPreviewPathParams = /** @class */ (function (_super) {
     __extends(DeploymentmanagerDeploymentsCancelPreviewPathParams, _super);
     function DeploymentmanagerDeploymentsCancelPreviewPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=deployment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=deployment" }),
         __metadata("design:type", String)
     ], DeploymentmanagerDeploymentsCancelPreviewPathParams.prototype, "deployment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], DeploymentmanagerDeploymentsCancelPreviewPathParams.prototype, "project", void 0);
     return DeploymentmanagerDeploymentsCancelPreviewPathParams;
-}(SpeakeasyBase));
-export { DeploymentmanagerDeploymentsCancelPreviewPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentmanagerDeploymentsCancelPreviewPathParams = DeploymentmanagerDeploymentsCancelPreviewPathParams;
 var DeploymentmanagerDeploymentsCancelPreviewQueryParams = /** @class */ (function (_super) {
     __extends(DeploymentmanagerDeploymentsCancelPreviewQueryParams, _super);
     function DeploymentmanagerDeploymentsCancelPreviewQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], DeploymentmanagerDeploymentsCancelPreviewQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], DeploymentmanagerDeploymentsCancelPreviewQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], DeploymentmanagerDeploymentsCancelPreviewQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], DeploymentmanagerDeploymentsCancelPreviewQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], DeploymentmanagerDeploymentsCancelPreviewQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], DeploymentmanagerDeploymentsCancelPreviewQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], DeploymentmanagerDeploymentsCancelPreviewQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], DeploymentmanagerDeploymentsCancelPreviewQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], DeploymentmanagerDeploymentsCancelPreviewQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], DeploymentmanagerDeploymentsCancelPreviewQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], DeploymentmanagerDeploymentsCancelPreviewQueryParams.prototype, "uploadProtocol", void 0);
     return DeploymentmanagerDeploymentsCancelPreviewQueryParams;
-}(SpeakeasyBase));
-export { DeploymentmanagerDeploymentsCancelPreviewQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentmanagerDeploymentsCancelPreviewQueryParams = DeploymentmanagerDeploymentsCancelPreviewQueryParams;
 var DeploymentmanagerDeploymentsCancelPreviewSecurityOption1 = /** @class */ (function (_super) {
     __extends(DeploymentmanagerDeploymentsCancelPreviewSecurityOption1, _super);
     function DeploymentmanagerDeploymentsCancelPreviewSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DeploymentmanagerDeploymentsCancelPreviewSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DeploymentmanagerDeploymentsCancelPreviewSecurityOption1.prototype, "oauth2c", void 0);
     return DeploymentmanagerDeploymentsCancelPreviewSecurityOption1;
-}(SpeakeasyBase));
-export { DeploymentmanagerDeploymentsCancelPreviewSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentmanagerDeploymentsCancelPreviewSecurityOption1 = DeploymentmanagerDeploymentsCancelPreviewSecurityOption1;
 var DeploymentmanagerDeploymentsCancelPreviewSecurityOption2 = /** @class */ (function (_super) {
     __extends(DeploymentmanagerDeploymentsCancelPreviewSecurityOption2, _super);
     function DeploymentmanagerDeploymentsCancelPreviewSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DeploymentmanagerDeploymentsCancelPreviewSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DeploymentmanagerDeploymentsCancelPreviewSecurityOption2.prototype, "oauth2c", void 0);
     return DeploymentmanagerDeploymentsCancelPreviewSecurityOption2;
-}(SpeakeasyBase));
-export { DeploymentmanagerDeploymentsCancelPreviewSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentmanagerDeploymentsCancelPreviewSecurityOption2 = DeploymentmanagerDeploymentsCancelPreviewSecurityOption2;
 var DeploymentmanagerDeploymentsCancelPreviewSecurity = /** @class */ (function (_super) {
     __extends(DeploymentmanagerDeploymentsCancelPreviewSecurity, _super);
     function DeploymentmanagerDeploymentsCancelPreviewSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DeploymentmanagerDeploymentsCancelPreviewSecurityOption1)
     ], DeploymentmanagerDeploymentsCancelPreviewSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", DeploymentmanagerDeploymentsCancelPreviewSecurityOption2)
     ], DeploymentmanagerDeploymentsCancelPreviewSecurity.prototype, "option2", void 0);
     return DeploymentmanagerDeploymentsCancelPreviewSecurity;
-}(SpeakeasyBase));
-export { DeploymentmanagerDeploymentsCancelPreviewSecurity };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentmanagerDeploymentsCancelPreviewSecurity = DeploymentmanagerDeploymentsCancelPreviewSecurity;
 var DeploymentmanagerDeploymentsCancelPreviewRequest = /** @class */ (function (_super) {
     __extends(DeploymentmanagerDeploymentsCancelPreviewRequest, _super);
     function DeploymentmanagerDeploymentsCancelPreviewRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeploymentmanagerDeploymentsCancelPreviewPathParams)
     ], DeploymentmanagerDeploymentsCancelPreviewRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeploymentmanagerDeploymentsCancelPreviewQueryParams)
     ], DeploymentmanagerDeploymentsCancelPreviewRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.DeploymentsCancelPreviewRequest)
     ], DeploymentmanagerDeploymentsCancelPreviewRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeploymentmanagerDeploymentsCancelPreviewSecurity)
     ], DeploymentmanagerDeploymentsCancelPreviewRequest.prototype, "security", void 0);
     return DeploymentmanagerDeploymentsCancelPreviewRequest;
-}(SpeakeasyBase));
-export { DeploymentmanagerDeploymentsCancelPreviewRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentmanagerDeploymentsCancelPreviewRequest = DeploymentmanagerDeploymentsCancelPreviewRequest;
 var DeploymentmanagerDeploymentsCancelPreviewResponse = /** @class */ (function (_super) {
     __extends(DeploymentmanagerDeploymentsCancelPreviewResponse, _super);
     function DeploymentmanagerDeploymentsCancelPreviewResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeploymentmanagerDeploymentsCancelPreviewResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Operation)
     ], DeploymentmanagerDeploymentsCancelPreviewResponse.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeploymentmanagerDeploymentsCancelPreviewResponse.prototype, "statusCode", void 0);
     return DeploymentmanagerDeploymentsCancelPreviewResponse;
-}(SpeakeasyBase));
-export { DeploymentmanagerDeploymentsCancelPreviewResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentmanagerDeploymentsCancelPreviewResponse = DeploymentmanagerDeploymentsCancelPreviewResponse;

@@ -59,7 +59,7 @@ export class CreateDedicatedIpPoolResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createDedicatedIpPoolResponse?: Map<string, any>;
+  createDedicatedIpPoolResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   limitExceededException?: any;

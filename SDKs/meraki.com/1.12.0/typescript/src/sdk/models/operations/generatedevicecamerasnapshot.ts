@@ -34,5 +34,5 @@ export class GenerateDeviceCameraSnapshotResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  generateDeviceCameraSnapshot202ApplicationJsonObject?: Map<string, any>;
+  generateDeviceCameraSnapshot202ApplicationJSONObject?: Record<string, any>;
 }

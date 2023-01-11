@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Meta } from "./meta";
-import { Source } from "./source";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SourceWrapped = void 0;
+var utils_1 = require("../../../internal/utils");
+var meta_1 = require("./meta");
+var source_1 = require("./source");
 var SourceWrapped = /** @class */ (function (_super) {
     __extends(SourceWrapped, _super);
     function SourceWrapped() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callback" }),
         __metadata("design:type", String)
     ], SourceWrapped.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", Meta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", meta_1.Meta)
     ], SourceWrapped.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: Source }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: source_1.Source }),
         __metadata("design:type", Array)
     ], SourceWrapped.prototype, "results", void 0);
     return SourceWrapped;
-}(SpeakeasyBase));
-export { SourceWrapped };
+}(utils_1.SpeakeasyBase));
+exports.SourceWrapped = SourceWrapped;

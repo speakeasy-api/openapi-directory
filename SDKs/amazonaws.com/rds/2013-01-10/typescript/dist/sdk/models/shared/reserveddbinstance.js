@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,69 +23,71 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecurringCharge } from "./recurringcharge";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReservedDbInstance = void 0;
+var utils_1 = require("../../../internal/utils");
+var recurringchargelist_1 = require("./recurringchargelist");
 var ReservedDbInstance = /** @class */ (function (_super) {
     __extends(ReservedDbInstance, _super);
     function ReservedDbInstance() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReservedDbInstance.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReservedDbInstance.prototype, "dbInstanceClass", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReservedDbInstance.prototype, "dbInstanceCount", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReservedDbInstance.prototype, "duration", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReservedDbInstance.prototype, "fixedPrice", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
-    ], ReservedDbInstance.prototype, "multiAz", void 0);
+    ], ReservedDbInstance.prototype, "multiAZ", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReservedDbInstance.prototype, "offeringType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReservedDbInstance.prototype, "productDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: RecurringCharge }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: recurringchargelist_1.RecurringChargeList }),
         __metadata("design:type", Array)
     ], ReservedDbInstance.prototype, "recurringCharges", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ReservedDbInstance.prototype, "reservedDbInstanceId", void 0);
+    ], ReservedDbInstance.prototype, "reservedDBInstanceId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ReservedDbInstance.prototype, "reservedDbInstancesOfferingId", void 0);
+    ], ReservedDbInstance.prototype, "reservedDBInstancesOfferingId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], ReservedDbInstance.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReservedDbInstance.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReservedDbInstance.prototype, "usagePrice", void 0);
     return ReservedDbInstance;
-}(SpeakeasyBase));
-export { ReservedDbInstance };
+}(utils_1.SpeakeasyBase));
+exports.ReservedDbInstance = ReservedDbInstance;

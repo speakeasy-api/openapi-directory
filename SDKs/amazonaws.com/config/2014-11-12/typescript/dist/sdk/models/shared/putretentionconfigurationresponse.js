@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RetentionConfiguration } from "./retentionconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutRetentionConfigurationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var retentionconfiguration_1 = require("./retentionconfiguration");
 var PutRetentionConfigurationResponse = /** @class */ (function (_super) {
     __extends(PutRetentionConfigurationResponse, _super);
     function PutRetentionConfigurationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RetentionConfiguration" }),
-        __metadata("design:type", RetentionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RetentionConfiguration" }),
+        __metadata("design:type", retentionconfiguration_1.RetentionConfiguration)
     ], PutRetentionConfigurationResponse.prototype, "retentionConfiguration", void 0);
     return PutRetentionConfigurationResponse;
-}(SpeakeasyBase));
-export { PutRetentionConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutRetentionConfigurationResponse = PutRetentionConfigurationResponse;

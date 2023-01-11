@@ -1,0 +1,155 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDocumentsResponse = exports.GetDocumentsRequest = exports.GetDocumentsQueryParams = exports.GetDocumentsWithEnum = exports.GetDocumentsTypeFilterEnum = exports.GetDocumentsOrderByEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var GetDocumentsOrderByEnum;
+(function (GetDocumentsOrderByEnum) {
+    GetDocumentsOrderByEnum["Id"] = "id";
+    GetDocumentsOrderByEnum["UpdatedAt"] = "updated_at";
+    GetDocumentsOrderByEnum["CreatedAt"] = "created_at";
+    GetDocumentsOrderByEnum["Name"] = "name";
+})(GetDocumentsOrderByEnum = exports.GetDocumentsOrderByEnum || (exports.GetDocumentsOrderByEnum = {}));
+var GetDocumentsTypeFilterEnum;
+(function (GetDocumentsTypeFilterEnum) {
+    GetDocumentsTypeFilterEnum["All"] = "ALL";
+    GetDocumentsTypeFilterEnum["TextDocuments"] = "TEXT_DOCUMENTS";
+    GetDocumentsTypeFilterEnum["Presentations"] = "PRESENTATIONS";
+    GetDocumentsTypeFilterEnum["Spreadsheets"] = "SPREADSHEETS";
+    GetDocumentsTypeFilterEnum["Pdfs"] = "PDFS";
+    GetDocumentsTypeFilterEnum["Images"] = "IMAGES";
+    GetDocumentsTypeFilterEnum["Subtitles"] = "SUBTITLES";
+    GetDocumentsTypeFilterEnum["Designs"] = "DESIGNS";
+    GetDocumentsTypeFilterEnum["Localization"] = "LOCALIZATION";
+    GetDocumentsTypeFilterEnum["Web"] = "WEB";
+    GetDocumentsTypeFilterEnum["StyleGuides"] = "STYLE_GUIDES";
+    GetDocumentsTypeFilterEnum["Glossaries"] = "GLOSSARIES";
+})(GetDocumentsTypeFilterEnum = exports.GetDocumentsTypeFilterEnum || (exports.GetDocumentsTypeFilterEnum = {}));
+var GetDocumentsWithEnum;
+(function (GetDocumentsWithEnum) {
+    GetDocumentsWithEnum["Preview"] = "preview";
+    GetDocumentsWithEnum["Editors"] = "editors";
+})(GetDocumentsWithEnum = exports.GetDocumentsWithEnum || (exports.GetDocumentsWithEnum = {}));
+var GetDocumentsQueryParams = /** @class */ (function (_super) {
+    __extends(GetDocumentsQueryParams, _super);
+    function GetDocumentsQueryParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=language_code" }),
+        __metadata("design:type", String)
+    ], GetDocumentsQueryParams.prototype, "languageCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=order_by" }),
+        __metadata("design:type", String)
+    ], GetDocumentsQueryParams.prototype, "orderBy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=order_type" }),
+        __metadata("design:type", String)
+    ], GetDocumentsQueryParams.prototype, "orderType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
+        __metadata("design:type", Number)
+    ], GetDocumentsQueryParams.prototype, "page", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=per_page" }),
+        __metadata("design:type", Number)
+    ], GetDocumentsQueryParams.prototype, "perPage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=recent" }),
+        __metadata("design:type", Boolean)
+    ], GetDocumentsQueryParams.prototype, "recent", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search" }),
+        __metadata("design:type", String)
+    ], GetDocumentsQueryParams.prototype, "search", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=type_filter" }),
+        __metadata("design:type", String)
+    ], GetDocumentsQueryParams.prototype, "typeFilter", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=with[]" }),
+        __metadata("design:type", Array)
+    ], GetDocumentsQueryParams.prototype, "with", void 0);
+    return GetDocumentsQueryParams;
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentsQueryParams = GetDocumentsQueryParams;
+var GetDocumentsRequest = /** @class */ (function (_super) {
+    __extends(GetDocumentsRequest, _super);
+    function GetDocumentsRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetDocumentsQueryParams)
+    ], GetDocumentsRequest.prototype, "queryParams", void 0);
+    return GetDocumentsRequest;
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentsRequest = GetDocumentsRequest;
+var GetDocumentsResponse = /** @class */ (function (_super) {
+    __extends(GetDocumentsResponse, _super);
+    function GetDocumentsResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], GetDocumentsResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.DocumentList)
+    ], GetDocumentsResponse.prototype, "documentList", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], GetDocumentsResponse.prototype, "statusCode", void 0);
+    return GetDocumentsResponse;
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentsResponse = GetDocumentsResponse;

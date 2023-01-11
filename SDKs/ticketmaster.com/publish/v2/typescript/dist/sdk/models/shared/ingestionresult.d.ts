@@ -9,10 +9,10 @@ export declare enum IngestionResultStatusEnum {
 **/
 export declare class IngestionResult extends SpeakeasyBase {
     id?: string;
-    ignoredProperties?: Map<string, Map<string, any>>;
-    invalidProperties?: Map<string, Map<string, any>>;
-    invalidValues?: Map<string, Map<string, any>>;
-    missingProperties?: Map<string, Map<string, any>>;
+    ignoredProperties?: Record<string, Record<string, any>>;
+    invalidProperties?: Record<string, Record<string, any>>;
+    invalidValues?: Record<string, Record<string, any>>;
+    missingProperties?: Record<string, Record<string, any>>;
     status: IngestionResultStatusEnum;
-    unknownProperties?: Map<string, Map<string, any>>;
+    unknownProperties?: Record<string, Record<string, any>>;
 }

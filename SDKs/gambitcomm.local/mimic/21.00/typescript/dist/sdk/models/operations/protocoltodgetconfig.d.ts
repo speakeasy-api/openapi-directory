@@ -7,7 +7,7 @@ export declare class ProtocolTodGetConfigRequest extends SpeakeasyBase {
     pathParams: ProtocolTodGetConfigPathParams;
 }
 export declare class ProtocolTodGetConfigResponse extends SpeakeasyBase {
-    configTod?: shared.ConfigTod;
+    configTOD?: shared.ConfigTod;
     contentType: string;
     statusCode: number;
 }

@@ -20,7 +20,7 @@ export declare enum WritableRackTypeEnum {
 export declare class WritableRackInput extends SpeakeasyBase {
     assetTag?: string;
     comments?: string;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     descUnits?: boolean;
     facilityId?: string;
     group?: number;

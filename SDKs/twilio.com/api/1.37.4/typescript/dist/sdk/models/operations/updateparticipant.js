@@ -1,0 +1,214 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateParticipantResponse = exports.UpdateParticipantRequest = exports.UpdateParticipantSecurity = exports.UpdateParticipantUpdateParticipantRequest = exports.UpdateParticipantUpdateParticipantRequestWaitMethodEnum = exports.UpdateParticipantUpdateParticipantRequestHoldMethodEnum = exports.UpdateParticipantUpdateParticipantRequestAnnounceMethodEnum = exports.UpdateParticipantPathParams = exports.UpdateParticipantServerList = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+exports.UpdateParticipantServerList = [
+    "https://api.twilio.com",
+];
+var UpdateParticipantPathParams = /** @class */ (function (_super) {
+    __extends(UpdateParticipantPathParams, _super);
+    function UpdateParticipantPathParams() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=AccountSid" }),
+        __metadata("design:type", String)
+    ], UpdateParticipantPathParams.prototype, "accountSid", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=CallSid" }),
+        __metadata("design:type", String)
+    ], UpdateParticipantPathParams.prototype, "callSid", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ConferenceSid" }),
+        __metadata("design:type", String)
+    ], UpdateParticipantPathParams.prototype, "conferenceSid", void 0);
+    return UpdateParticipantPathParams;
+}(utils_1.SpeakeasyBase));
+exports.UpdateParticipantPathParams = UpdateParticipantPathParams;
+var UpdateParticipantUpdateParticipantRequestAnnounceMethodEnum;
+(function (UpdateParticipantUpdateParticipantRequestAnnounceMethodEnum) {
+    UpdateParticipantUpdateParticipantRequestAnnounceMethodEnum["Head"] = "HEAD";
+    UpdateParticipantUpdateParticipantRequestAnnounceMethodEnum["Get"] = "GET";
+    UpdateParticipantUpdateParticipantRequestAnnounceMethodEnum["Post"] = "POST";
+    UpdateParticipantUpdateParticipantRequestAnnounceMethodEnum["Patch"] = "PATCH";
+    UpdateParticipantUpdateParticipantRequestAnnounceMethodEnum["Put"] = "PUT";
+    UpdateParticipantUpdateParticipantRequestAnnounceMethodEnum["Delete"] = "DELETE";
+})(UpdateParticipantUpdateParticipantRequestAnnounceMethodEnum = exports.UpdateParticipantUpdateParticipantRequestAnnounceMethodEnum || (exports.UpdateParticipantUpdateParticipantRequestAnnounceMethodEnum = {}));
+var UpdateParticipantUpdateParticipantRequestHoldMethodEnum;
+(function (UpdateParticipantUpdateParticipantRequestHoldMethodEnum) {
+    UpdateParticipantUpdateParticipantRequestHoldMethodEnum["Head"] = "HEAD";
+    UpdateParticipantUpdateParticipantRequestHoldMethodEnum["Get"] = "GET";
+    UpdateParticipantUpdateParticipantRequestHoldMethodEnum["Post"] = "POST";
+    UpdateParticipantUpdateParticipantRequestHoldMethodEnum["Patch"] = "PATCH";
+    UpdateParticipantUpdateParticipantRequestHoldMethodEnum["Put"] = "PUT";
+    UpdateParticipantUpdateParticipantRequestHoldMethodEnum["Delete"] = "DELETE";
+})(UpdateParticipantUpdateParticipantRequestHoldMethodEnum = exports.UpdateParticipantUpdateParticipantRequestHoldMethodEnum || (exports.UpdateParticipantUpdateParticipantRequestHoldMethodEnum = {}));
+var UpdateParticipantUpdateParticipantRequestWaitMethodEnum;
+(function (UpdateParticipantUpdateParticipantRequestWaitMethodEnum) {
+    UpdateParticipantUpdateParticipantRequestWaitMethodEnum["Head"] = "HEAD";
+    UpdateParticipantUpdateParticipantRequestWaitMethodEnum["Get"] = "GET";
+    UpdateParticipantUpdateParticipantRequestWaitMethodEnum["Post"] = "POST";
+    UpdateParticipantUpdateParticipantRequestWaitMethodEnum["Patch"] = "PATCH";
+    UpdateParticipantUpdateParticipantRequestWaitMethodEnum["Put"] = "PUT";
+    UpdateParticipantUpdateParticipantRequestWaitMethodEnum["Delete"] = "DELETE";
+})(UpdateParticipantUpdateParticipantRequestWaitMethodEnum = exports.UpdateParticipantUpdateParticipantRequestWaitMethodEnum || (exports.UpdateParticipantUpdateParticipantRequestWaitMethodEnum = {}));
+var UpdateParticipantUpdateParticipantRequest = /** @class */ (function (_super) {
+    __extends(UpdateParticipantUpdateParticipantRequest, _super);
+    function UpdateParticipantUpdateParticipantRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=AnnounceMethod;" }),
+        __metadata("design:type", String)
+    ], UpdateParticipantUpdateParticipantRequest.prototype, "announceMethod", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=AnnounceUrl;" }),
+        __metadata("design:type", String)
+    ], UpdateParticipantUpdateParticipantRequest.prototype, "announceUrl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=BeepOnExit;" }),
+        __metadata("design:type", Boolean)
+    ], UpdateParticipantUpdateParticipantRequest.prototype, "beepOnExit", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=CallSidToCoach;" }),
+        __metadata("design:type", String)
+    ], UpdateParticipantUpdateParticipantRequest.prototype, "callSidToCoach", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=Coaching;" }),
+        __metadata("design:type", Boolean)
+    ], UpdateParticipantUpdateParticipantRequest.prototype, "coaching", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=EndConferenceOnExit;" }),
+        __metadata("design:type", Boolean)
+    ], UpdateParticipantUpdateParticipantRequest.prototype, "endConferenceOnExit", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=Hold;" }),
+        __metadata("design:type", Boolean)
+    ], UpdateParticipantUpdateParticipantRequest.prototype, "hold", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=HoldMethod;" }),
+        __metadata("design:type", String)
+    ], UpdateParticipantUpdateParticipantRequest.prototype, "holdMethod", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=HoldUrl;" }),
+        __metadata("design:type", String)
+    ], UpdateParticipantUpdateParticipantRequest.prototype, "holdUrl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=Muted;" }),
+        __metadata("design:type", Boolean)
+    ], UpdateParticipantUpdateParticipantRequest.prototype, "muted", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=WaitMethod;" }),
+        __metadata("design:type", String)
+    ], UpdateParticipantUpdateParticipantRequest.prototype, "waitMethod", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=WaitUrl;" }),
+        __metadata("design:type", String)
+    ], UpdateParticipantUpdateParticipantRequest.prototype, "waitUrl", void 0);
+    return UpdateParticipantUpdateParticipantRequest;
+}(utils_1.SpeakeasyBase));
+exports.UpdateParticipantUpdateParticipantRequest = UpdateParticipantUpdateParticipantRequest;
+var UpdateParticipantSecurity = /** @class */ (function (_super) {
+    __extends(UpdateParticipantSecurity, _super);
+    function UpdateParticipantSecurity() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=basic" }),
+        __metadata("design:type", shared.SchemeAccountSidAuthToken)
+    ], UpdateParticipantSecurity.prototype, "accountSidAuthToken", void 0);
+    return UpdateParticipantSecurity;
+}(utils_1.SpeakeasyBase));
+exports.UpdateParticipantSecurity = UpdateParticipantSecurity;
+var UpdateParticipantRequest = /** @class */ (function (_super) {
+    __extends(UpdateParticipantRequest, _super);
+    function UpdateParticipantRequest() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], UpdateParticipantRequest.prototype, "serverURL", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", UpdateParticipantPathParams)
+    ], UpdateParticipantRequest.prototype, "pathParams", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        __metadata("design:type", UpdateParticipantUpdateParticipantRequest)
+    ], UpdateParticipantRequest.prototype, "request", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", UpdateParticipantSecurity)
+    ], UpdateParticipantRequest.prototype, "security", void 0);
+    return UpdateParticipantRequest;
+}(utils_1.SpeakeasyBase));
+exports.UpdateParticipantRequest = UpdateParticipantRequest;
+var UpdateParticipantResponse = /** @class */ (function (_super) {
+    __extends(UpdateParticipantResponse, _super);
+    function UpdateParticipantResponse() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], UpdateParticipantResponse.prototype, "contentType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Number)
+    ], UpdateParticipantResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.ApiV2010AccountConferenceParticipant)
+    ], UpdateParticipantResponse.prototype, "apiV2010AccountConferenceParticipant", void 0);
+    return UpdateParticipantResponse;
+}(utils_1.SpeakeasyBase));
+exports.UpdateParticipantResponse = UpdateParticipantResponse;

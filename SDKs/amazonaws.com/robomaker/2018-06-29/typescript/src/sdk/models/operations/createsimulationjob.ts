@@ -113,7 +113,7 @@ export class CreateSimulationJobRequestBody extends SpeakeasyBase {
   simulationApplications?: shared.SimulationApplicationConfig[];
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=vpcConfig" })
   vpcConfig?: CreateSimulationJobRequestBodyVpcConfig;

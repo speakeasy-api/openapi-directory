@@ -1,0 +1,15 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+export declare class DeleteArtifactVersionMetaDataPathParams extends SpeakeasyBase {
+    artifactId: string;
+    groupId: string;
+    version: string;
+}
+export declare class DeleteArtifactVersionMetaDataRequest extends SpeakeasyBase {
+    pathParams: DeleteArtifactVersionMetaDataPathParams;
+}
+export declare class DeleteArtifactVersionMetaDataResponse extends SpeakeasyBase {
+    contentType: string;
+    error?: shared.ErrorT;
+    statusCode: number;
+}

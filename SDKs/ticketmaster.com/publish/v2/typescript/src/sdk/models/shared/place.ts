@@ -29,7 +29,7 @@ export class Place extends SpeakeasyBase {
   location?: Location;
 
   @SpeakeasyMetadata({ data: "json, name=names" })
-  names?: Map<string, string>;
+  names?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=postalCode" })
   postalCode?: string;

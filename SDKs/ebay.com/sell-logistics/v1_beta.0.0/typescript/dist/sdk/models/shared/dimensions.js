@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Dimensions = void 0;
+var utils_1 = require("../../../internal/utils");
 // Dimensions
 /**
  * This complex type defines the dimensions of a package to be shipped.
@@ -33,21 +36,21 @@ var Dimensions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", String)
     ], Dimensions.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=length" }),
         __metadata("design:type", String)
     ], Dimensions.prototype, "length", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unit" }),
         __metadata("design:type", String)
     ], Dimensions.prototype, "unit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", String)
     ], Dimensions.prototype, "width", void 0);
     return Dimensions;
-}(SpeakeasyBase));
-export { Dimensions };
+}(utils_1.SpeakeasyBase));
+exports.Dimensions = Dimensions;

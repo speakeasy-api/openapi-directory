@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { JobStatusEnum } from "./jobstatusenum";
-import { JobTypeEnum } from "./jobtypeenum";
-import { LastRunErrorStatus } from "./lastrunerrorstatus";
-import { ManagedDataIdentifierSelectorEnum } from "./manageddataidentifierselectorenum";
-import { S3JobDefinition } from "./s3jobdefinition";
-import { JobScheduleFrequency } from "./jobschedulefrequency";
-import { Statistics } from "./statistics";
-import { UserPausedDetails } from "./userpauseddetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeClassificationJobResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var jobstatusenum_1 = require("./jobstatusenum");
+var jobtypeenum_1 = require("./jobtypeenum");
+var lastrunerrorstatus_1 = require("./lastrunerrorstatus");
+var manageddataidentifierselectorenum_1 = require("./manageddataidentifierselectorenum");
+var s3jobdefinition_1 = require("./s3jobdefinition");
+var jobschedulefrequency_1 = require("./jobschedulefrequency");
+var statistics_1 = require("./statistics");
+var userpauseddetails_1 = require("./userpauseddetails");
 var DescribeClassificationJobResponse = /** @class */ (function (_super) {
     __extends(DescribeClassificationJobResponse, _super);
     function DescribeClassificationJobResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientToken" }),
         __metadata("design:type", String)
     ], DescribeClassificationJobResponse.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], DescribeClassificationJobResponse.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customDataIdentifierIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customDataIdentifierIds" }),
         __metadata("design:type", Array)
     ], DescribeClassificationJobResponse.prototype, "customDataIdentifierIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], DescribeClassificationJobResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initialRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initialRun" }),
         __metadata("design:type", Boolean)
     ], DescribeClassificationJobResponse.prototype, "initialRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobArn" }),
         __metadata("design:type", String)
     ], DescribeClassificationJobResponse.prototype, "jobArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobId" }),
         __metadata("design:type", String)
     ], DescribeClassificationJobResponse.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobStatus" }),
         __metadata("design:type", String)
     ], DescribeClassificationJobResponse.prototype, "jobStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobType" }),
         __metadata("design:type", String)
     ], DescribeClassificationJobResponse.prototype, "jobType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastRunErrorStatus" }),
-        __metadata("design:type", LastRunErrorStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastRunErrorStatus" }),
+        __metadata("design:type", lastrunerrorstatus_1.LastRunErrorStatus)
     ], DescribeClassificationJobResponse.prototype, "lastRunErrorStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastRunTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastRunTime" }),
         __metadata("design:type", Date)
     ], DescribeClassificationJobResponse.prototype, "lastRunTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managedDataIdentifierIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managedDataIdentifierIds" }),
         __metadata("design:type", Array)
     ], DescribeClassificationJobResponse.prototype, "managedDataIdentifierIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managedDataIdentifierSelector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managedDataIdentifierSelector" }),
         __metadata("design:type", String)
     ], DescribeClassificationJobResponse.prototype, "managedDataIdentifierSelector", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DescribeClassificationJobResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3JobDefinition" }),
-        __metadata("design:type", S3JobDefinition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3JobDefinition" }),
+        __metadata("design:type", s3jobdefinition_1.S3JobDefinition)
     ], DescribeClassificationJobResponse.prototype, "s3JobDefinition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=samplingPercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=samplingPercentage" }),
         __metadata("design:type", Number)
     ], DescribeClassificationJobResponse.prototype, "samplingPercentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduleFrequency" }),
-        __metadata("design:type", JobScheduleFrequency)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduleFrequency" }),
+        __metadata("design:type", jobschedulefrequency_1.JobScheduleFrequency)
     ], DescribeClassificationJobResponse.prototype, "scheduleFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statistics" }),
-        __metadata("design:type", Statistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statistics" }),
+        __metadata("design:type", statistics_1.Statistics)
     ], DescribeClassificationJobResponse.prototype, "statistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], DescribeClassificationJobResponse.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userPausedDetails" }),
-        __metadata("design:type", UserPausedDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userPausedDetails" }),
+        __metadata("design:type", userpauseddetails_1.UserPausedDetails)
     ], DescribeClassificationJobResponse.prototype, "userPausedDetails", void 0);
     return DescribeClassificationJobResponse;
-}(SpeakeasyBase));
-export { DescribeClassificationJobResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeClassificationJobResponse = DescribeClassificationJobResponse;

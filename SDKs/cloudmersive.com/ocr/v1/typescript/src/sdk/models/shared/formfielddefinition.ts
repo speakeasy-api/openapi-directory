@@ -23,7 +23,7 @@ export class FormFieldDefinition extends SpeakeasyBase {
   dataType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=FieldID" })
-  fieldId?: string;
+  fieldID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=HorizontalAlignmentType" })
   horizontalAlignmentType?: string;

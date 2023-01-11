@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Event } from "./event";
+import { EventList } from "./eventlist";
 
 
 
@@ -8,8 +8,8 @@ import { Event } from "./event";
  * Represents the output of <a>DescribeEvents</a>.
 **/
 export class EventsMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: Event })
-  events?: Event[];
+  @SpeakeasyMetadata({ elemType: EventList })
+  events?: EventList[];
 
   @SpeakeasyMetadata()
   marker?: string;

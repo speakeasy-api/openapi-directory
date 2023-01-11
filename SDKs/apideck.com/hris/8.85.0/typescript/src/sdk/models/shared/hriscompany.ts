@@ -13,39 +13,6 @@ export enum HrisCompanyStatusEnum {
 }
 
 
-export class HrisCompanyInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=addresses", elemType: Address })
-  addresses?: Address[];
-
-  @SpeakeasyMetadata({ data: "json, name=company_number" })
-  companyNumber?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=debtor_id" })
-  debtorId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=display_name" })
-  displayName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=emails", elemType: Email })
-  emails?: Email[];
-
-  @SpeakeasyMetadata({ data: "json, name=legal_name" })
-  legalName: string;
-
-  @SpeakeasyMetadata({ data: "json, name=phone_numbers", elemType: PhoneNumber })
-  phoneNumbers?: PhoneNumber[];
-
-  @SpeakeasyMetadata({ data: "json, name=status" })
-  status?: HrisCompanyStatusEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=subdomain" })
-  subdomain?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=websites", elemType: Website })
-  websites?: Website[];
-}
-
-
 export class HrisCompany extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=addresses", elemType: Address })
   addresses?: Address[];
@@ -91,6 +58,39 @@ export class HrisCompany extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updated_by" })
   updatedBy?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=websites", elemType: Website })
+  websites?: Website[];
+}
+
+
+export class HrisCompanyInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=addresses", elemType: Address })
+  addresses?: Address[];
+
+  @SpeakeasyMetadata({ data: "json, name=company_number" })
+  companyNumber?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=debtor_id" })
+  debtorId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=display_name" })
+  displayName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=emails", elemType: Email })
+  emails?: Email[];
+
+  @SpeakeasyMetadata({ data: "json, name=legal_name" })
+  legalName: string;
+
+  @SpeakeasyMetadata({ data: "json, name=phone_numbers", elemType: PhoneNumber })
+  phoneNumbers?: PhoneNumber[];
+
+  @SpeakeasyMetadata({ data: "json, name=status" })
+  status?: HrisCompanyStatusEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=subdomain" })
+  subdomain?: string;
 
   @SpeakeasyMetadata({ data: "json, name=websites", elemType: Website })
   websites?: Website[];

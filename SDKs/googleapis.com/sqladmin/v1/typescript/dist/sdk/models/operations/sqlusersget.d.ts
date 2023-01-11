@@ -11,6 +11,7 @@ export declare class SqlUsersGetQueryParams extends SpeakeasyBase {
     alt?: shared.AltEnum;
     callback?: string;
     fields?: string;
+    host?: string;
     key?: string;
     oauthToken?: string;
     prettyPrint?: boolean;

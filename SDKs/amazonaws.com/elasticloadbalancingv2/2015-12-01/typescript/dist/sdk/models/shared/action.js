@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthenticateCognitoActionConfig } from "./authenticatecognitoactionconfig";
-import { AuthenticateOidcActionConfig } from "./authenticateoidcactionconfig";
-import { FixedResponseActionConfig } from "./fixedresponseactionconfig";
-import { ForwardActionConfig } from "./forwardactionconfig";
-import { RedirectActionConfig } from "./redirectactionconfig";
-import { ActionTypeEnumEnum } from "./actiontypeenumenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Action = void 0;
+var utils_1 = require("../../../internal/utils");
+var authenticatecognitoactionconfig_1 = require("./authenticatecognitoactionconfig");
+var authenticateoidcactionconfig_1 = require("./authenticateoidcactionconfig");
+var fixedresponseactionconfig_1 = require("./fixedresponseactionconfig");
+var forwardactionconfig_1 = require("./forwardactionconfig");
+var redirectactionconfig_1 = require("./redirectactionconfig");
+var actiontypeenumenum_1 = require("./actiontypeenumenum");
 // Action
 /**
  * <p>Information about an action.</p> <p>Each rule must include exactly one of the following types of actions: <code>forward</code>, <code>fixed-response</code>, or <code>redirect</code>, and it must be the last action to be performed.</p>
@@ -39,37 +42,37 @@ var Action = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AuthenticateCognitoActionConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", authenticatecognitoactionconfig_1.AuthenticateCognitoActionConfig)
     ], Action.prototype, "authenticateCognitoConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AuthenticateOidcActionConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", authenticateoidcactionconfig_1.AuthenticateOidcActionConfig)
     ], Action.prototype, "authenticateOidcConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", FixedResponseActionConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", fixedresponseactionconfig_1.FixedResponseActionConfig)
     ], Action.prototype, "fixedResponseConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ForwardActionConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", forwardactionconfig_1.ForwardActionConfig)
     ], Action.prototype, "forwardConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Action.prototype, "order", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", RedirectActionConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", redirectactionconfig_1.RedirectActionConfig)
     ], Action.prototype, "redirectConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Action.prototype, "targetGroupArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Action.prototype, "type", void 0);
     return Action;
-}(SpeakeasyBase));
-export { Action };
+}(utils_1.SpeakeasyBase));
+exports.Action = Action;

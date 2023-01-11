@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DetectorStateDefinition } from "./detectorstatedefinition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDetectorRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var detectorstatedefinition_1 = require("./detectorstatedefinition");
 // UpdateDetectorRequest
 /**
  * Information used to update the detector (instance).
@@ -34,21 +37,21 @@ var UpdateDetectorRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detectorModelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detectorModelName" }),
         __metadata("design:type", String)
     ], UpdateDetectorRequest.prototype, "detectorModelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyValue" }),
         __metadata("design:type", String)
     ], UpdateDetectorRequest.prototype, "keyValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageId" }),
         __metadata("design:type", String)
     ], UpdateDetectorRequest.prototype, "messageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
-        __metadata("design:type", DetectorStateDefinition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", detectorstatedefinition_1.DetectorStateDefinition)
     ], UpdateDetectorRequest.prototype, "state", void 0);
     return UpdateDetectorRequest;
-}(SpeakeasyBase));
-export { UpdateDetectorRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDetectorRequest = UpdateDetectorRequest;

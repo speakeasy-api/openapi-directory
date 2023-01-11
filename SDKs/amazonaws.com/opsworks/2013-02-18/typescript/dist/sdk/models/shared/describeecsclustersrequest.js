@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeEcsClustersRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var DescribeEcsClustersRequest = /** @class */ (function (_super) {
     __extends(DescribeEcsClustersRequest, _super);
     function DescribeEcsClustersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EcsClusterArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EcsClusterArns" }),
         __metadata("design:type", Array)
     ], DescribeEcsClustersRequest.prototype, "ecsClusterArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], DescribeEcsClustersRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeEcsClustersRequest.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StackId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StackId" }),
         __metadata("design:type", String)
     ], DescribeEcsClustersRequest.prototype, "stackId", void 0);
     return DescribeEcsClustersRequest;
-}(SpeakeasyBase));
-export { DescribeEcsClustersRequest };
+}(utils_1.SpeakeasyBase));
+exports.DescribeEcsClustersRequest = DescribeEcsClustersRequest;

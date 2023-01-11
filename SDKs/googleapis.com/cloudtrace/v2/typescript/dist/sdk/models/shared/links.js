@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Link } from "./link";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Links = void 0;
+var utils_1 = require("../../../internal/utils");
+var link_1 = require("./link");
 // Links
 /**
  * A collection of links, which are references from this span to a span in the same or different trace.
@@ -34,13 +37,13 @@ var Links = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=droppedLinksCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=droppedLinksCount" }),
         __metadata("design:type", Number)
     ], Links.prototype, "droppedLinksCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link", elemType: Link }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link", elemType: link_1.Link }),
         __metadata("design:type", Array)
     ], Links.prototype, "link", void 0);
     return Links;
-}(SpeakeasyBase));
-export { Links };
+}(utils_1.SpeakeasyBase));
+exports.Links = Links;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PdfMetadataDto } from "./pdfmetadatadto";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FoRequestDto = void 0;
+var utils_1 = require("../../../internal/utils");
+var pdfmetadatadto_1 = require("./pdfmetadatadto");
 // FoRequestDto
 /**
  * The basic request with the XSL-FO document as a Base64 encoded string with a set of resources provided with a name and the data of the resource as a Base64 encoded string.
@@ -34,17 +37,17 @@ var FoRequestDto = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FoDocumentBase64String" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FoDocumentBase64String" }),
         __metadata("design:type", String)
     ], FoRequestDto.prototype, "foDocumentBase64String", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Metadata" }),
-        __metadata("design:type", PdfMetadataDto)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Metadata" }),
+        __metadata("design:type", pdfmetadatadto_1.PdfMetadataDto)
     ], FoRequestDto.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Resources" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Resources" }),
+        __metadata("design:type", Object)
     ], FoRequestDto.prototype, "resources", void 0);
     return FoRequestDto;
-}(SpeakeasyBase));
-export { FoRequestDto };
+}(utils_1.SpeakeasyBase));
+exports.FoRequestDto = FoRequestDto;

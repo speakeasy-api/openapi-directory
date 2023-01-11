@@ -30,5 +30,5 @@ export class XPingResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  xPing200ApplicationJsonAny?: any;
+  xPing200ApplicationJSONAny?: any;
 }

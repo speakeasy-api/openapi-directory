@@ -34,10 +34,10 @@ export declare class GetBenefitsDocumentUploadStatusRequest extends SpeakeasyBas
 export declare class GetBenefitsDocumentUploadStatusResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getBenefitsDocumentUploadStatus200ApplicationJsonAny?: any;
-    getBenefitsDocumentUploadStatus401ApplicationJsonObject?: GetBenefitsDocumentUploadStatus401ApplicationJson;
-    getBenefitsDocumentUploadStatus403ApplicationJsonObject?: GetBenefitsDocumentUploadStatus403ApplicationJson;
-    getBenefitsDocumentUploadStatus404ApplicationJsonObject?: GetBenefitsDocumentUploadStatus404ApplicationJson;
-    getBenefitsDocumentUploadStatus429ApplicationJsonObject?: GetBenefitsDocumentUploadStatus429ApplicationJson;
-    getBenefitsDocumentUploadStatus500ApplicationJsonObject?: GetBenefitsDocumentUploadStatus500ApplicationJson;
+    getBenefitsDocumentUploadStatus200ApplicationJSONAny?: any;
+    getBenefitsDocumentUploadStatus401ApplicationJSONObject?: GetBenefitsDocumentUploadStatus401ApplicationJson;
+    getBenefitsDocumentUploadStatus403ApplicationJSONObject?: GetBenefitsDocumentUploadStatus403ApplicationJson;
+    getBenefitsDocumentUploadStatus404ApplicationJSONObject?: GetBenefitsDocumentUploadStatus404ApplicationJson;
+    getBenefitsDocumentUploadStatus429ApplicationJSONObject?: GetBenefitsDocumentUploadStatus429ApplicationJson;
+    getBenefitsDocumentUploadStatus500ApplicationJSONObject?: GetBenefitsDocumentUploadStatus500ApplicationJson;
 }

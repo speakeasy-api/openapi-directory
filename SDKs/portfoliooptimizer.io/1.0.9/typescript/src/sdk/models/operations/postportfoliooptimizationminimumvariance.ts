@@ -58,8 +58,8 @@ export class PostPortfolioOptimizationMinimumVarianceResponse extends SpeakeasyB
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioOptimizationMinimumVariance200ApplicationJsonObject?: PostPortfolioOptimizationMinimumVariance200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioOptimizationMinimumVariance200ApplicationJSONObject?: PostPortfolioOptimizationMinimumVariance200ApplicationJson;
 }

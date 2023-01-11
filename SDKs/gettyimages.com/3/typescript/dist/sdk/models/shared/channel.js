@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssetFamilyEnum } from "./assetfamilyenum";
-import { AssetTypeEnum } from "./assettypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Channel = void 0;
+var utils_1 = require("../../../internal/utils");
+var assetfamilyenum_1 = require("./assetfamilyenum");
+var assettypeenum_1 = require("./assettypeenum");
 var Channel = /** @class */ (function (_super) {
     __extends(Channel, _super);
     function Channel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssetChangeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssetChangeType" }),
         __metadata("design:type", String)
     ], Channel.prototype, "assetChangeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssetFamily" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssetFamily" }),
         __metadata("design:type", String)
     ], Channel.prototype, "assetFamily", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssetType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssetType" }),
         __metadata("design:type", String)
     ], Channel.prototype, "assetType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChannelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChannelId" }),
         __metadata("design:type", Number)
     ], Channel.prototype, "channelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreateDateUtc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreateDateUtc" }),
         __metadata("design:type", Date)
     ], Channel.prototype, "createDateUtc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Metadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Metadata" }),
         __metadata("design:type", String)
     ], Channel.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NotificationCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NotificationCount" }),
         __metadata("design:type", Number)
     ], Channel.prototype, "notificationCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OldestChangeNotificationDateUtc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OldestChangeNotificationDateUtc" }),
         __metadata("design:type", Date)
     ], Channel.prototype, "oldestChangeNotificationDateUtc", void 0);
     return Channel;
-}(SpeakeasyBase));
-export { Channel };
+}(utils_1.SpeakeasyBase));
+exports.Channel = Channel;

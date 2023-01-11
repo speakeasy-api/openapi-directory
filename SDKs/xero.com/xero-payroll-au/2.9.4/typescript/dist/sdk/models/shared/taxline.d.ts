@@ -5,6 +5,6 @@ export declare class TaxLine extends SpeakeasyBase {
     description?: string;
     liabilityAccount?: string;
     manualTaxType?: ManualTaxTypeEnum;
-    payslipTaxLineId?: string;
+    payslipTaxLineID?: string;
     taxTypeName?: string;
 }

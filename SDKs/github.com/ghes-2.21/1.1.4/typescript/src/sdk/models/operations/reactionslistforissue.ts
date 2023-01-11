@@ -14,21 +14,10 @@ export class ReactionsListForIssuePathParams extends SpeakeasyBase {
   repo: string;
 }
 
-export enum ReactionsListForIssueContentEnum {
-    Plus1 = "+1",
-    Minus1 = "-1",
-    Laugh = "laugh",
-    Confused = "confused",
-    Heart = "heart",
-    Hooray = "hooray",
-    Rocket = "rocket",
-    Eyes = "eyes"
-}
-
 
 export class ReactionsListForIssueQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=content" })
-  content?: ReactionsListForIssueContentEnum;
+  content?: shared.IssueNumberEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -61,7 +50,7 @@ export class ReactionsListForIssueResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
@@ -73,5 +62,5 @@ export class ReactionsListForIssueResponse extends SpeakeasyBase {
   reactions?: shared.Reaction[];
 
   @SpeakeasyMetadata()
-  reactionsListForIssue415ApplicationJsonObject?: ReactionsListForIssue415ApplicationJson;
+  reactionsListForIssue415ApplicationJSONObject?: ReactionsListForIssue415ApplicationJson;
 }

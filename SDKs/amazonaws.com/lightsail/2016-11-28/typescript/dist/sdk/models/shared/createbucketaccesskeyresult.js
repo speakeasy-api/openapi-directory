@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccessKey } from "./accesskey";
-import { Operation } from "./operation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateBucketAccessKeyResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var accesskey_1 = require("./accesskey");
+var operation_1 = require("./operation");
 var CreateBucketAccessKeyResult = /** @class */ (function (_super) {
     __extends(CreateBucketAccessKeyResult, _super);
     function CreateBucketAccessKeyResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessKey" }),
-        __metadata("design:type", AccessKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessKey" }),
+        __metadata("design:type", accesskey_1.AccessKey)
     ], CreateBucketAccessKeyResult.prototype, "accessKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operations", elemType: Operation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operations", elemType: operation_1.Operation }),
         __metadata("design:type", Array)
     ], CreateBucketAccessKeyResult.prototype, "operations", void 0);
     return CreateBucketAccessKeyResult;
-}(SpeakeasyBase));
-export { CreateBucketAccessKeyResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateBucketAccessKeyResult = CreateBucketAccessKeyResult;

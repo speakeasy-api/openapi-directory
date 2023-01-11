@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Replica } from "./replica";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicasListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var replica_1 = require("./replica");
 var ReplicasListResponse = /** @class */ (function (_super) {
     __extends(ReplicasListResponse, _super);
     function ReplicasListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReplicasListResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Replica }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: replica_1.Replica }),
         __metadata("design:type", Array)
     ], ReplicasListResponse.prototype, "resources", void 0);
     return ReplicasListResponse;
-}(SpeakeasyBase));
-export { ReplicasListResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReplicasListResponse = ReplicasListResponse;

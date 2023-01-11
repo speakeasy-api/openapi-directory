@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppValidationOutput } from "./appvalidationoutput";
-import { ServerValidationOutput } from "./servervalidationoutput";
-import { ValidationStatusEnum } from "./validationstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ValidationOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var appvalidationoutput_1 = require("./appvalidationoutput");
+var servervalidationoutput_1 = require("./servervalidationoutput");
+var validationstatusenum_1 = require("./validationstatusenum");
 // ValidationOutput
 /**
  * Contains validation output.
@@ -36,33 +39,33 @@ var ValidationOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appValidationOutput" }),
-        __metadata("design:type", AppValidationOutput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appValidationOutput" }),
+        __metadata("design:type", appvalidationoutput_1.AppValidationOutput)
     ], ValidationOutput.prototype, "appValidationOutput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestValidationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestValidationTime" }),
         __metadata("design:type", Date)
     ], ValidationOutput.prototype, "latestValidationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ValidationOutput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverValidationOutput" }),
-        __metadata("design:type", ServerValidationOutput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverValidationOutput" }),
+        __metadata("design:type", servervalidationoutput_1.ServerValidationOutput)
     ], ValidationOutput.prototype, "serverValidationOutput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ValidationOutput.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusMessage" }),
         __metadata("design:type", String)
     ], ValidationOutput.prototype, "statusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validationId" }),
         __metadata("design:type", String)
     ], ValidationOutput.prototype, "validationId", void 0);
     return ValidationOutput;
-}(SpeakeasyBase));
-export { ValidationOutput };
+}(utils_1.SpeakeasyBase));
+exports.ValidationOutput = ValidationOutput;

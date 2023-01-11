@@ -9,7 +9,7 @@ export declare class DeleteGroupHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class DeleteGroupRequestBody extends SpeakeasyBase {
-    groupArn?: string;
+    groupARN?: string;
     groupName?: string;
 }
 export declare class DeleteGroupRequest extends SpeakeasyBase {
@@ -18,7 +18,7 @@ export declare class DeleteGroupRequest extends SpeakeasyBase {
 }
 export declare class DeleteGroupResponse extends SpeakeasyBase {
     contentType: string;
-    deleteGroupResult?: Map<string, any>;
+    deleteGroupResult?: Record<string, any>;
     invalidRequestException?: any;
     statusCode: number;
     throttledException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteNetworkAclEntryActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteNetworkAclEntryResponse = exports.GetDeleteNetworkAclEntryRequest = exports.GetDeleteNetworkAclEntryHeaders = exports.GetDeleteNetworkAclEntryQueryParams = exports.GetDeleteNetworkAclEntryVersionEnum = exports.GetDeleteNetworkAclEntryActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteNetworkAclEntryActionEnum;
 (function (GetDeleteNetworkAclEntryActionEnum) {
     GetDeleteNetworkAclEntryActionEnum["DeleteNetworkAclEntry"] = "DeleteNetworkAclEntry";
-})(GetDeleteNetworkAclEntryActionEnum || (GetDeleteNetworkAclEntryActionEnum = {}));
-export var GetDeleteNetworkAclEntryVersionEnum;
+})(GetDeleteNetworkAclEntryActionEnum = exports.GetDeleteNetworkAclEntryActionEnum || (exports.GetDeleteNetworkAclEntryActionEnum = {}));
+var GetDeleteNetworkAclEntryVersionEnum;
 (function (GetDeleteNetworkAclEntryVersionEnum) {
     GetDeleteNetworkAclEntryVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDeleteNetworkAclEntryVersionEnum || (GetDeleteNetworkAclEntryVersionEnum = {}));
+})(GetDeleteNetworkAclEntryVersionEnum = exports.GetDeleteNetworkAclEntryVersionEnum || (exports.GetDeleteNetworkAclEntryVersionEnum = {}));
 var GetDeleteNetworkAclEntryQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteNetworkAclEntryQueryParams, _super);
     function GetDeleteNetworkAclEntryQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkAclEntryQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDeleteNetworkAclEntryQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Egress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Egress" }),
         __metadata("design:type", Boolean)
     ], GetDeleteNetworkAclEntryQueryParams.prototype, "egress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NetworkAclId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NetworkAclId" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkAclEntryQueryParams.prototype, "networkAclId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RuleNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=RuleNumber" }),
         __metadata("design:type", Number)
     ], GetDeleteNetworkAclEntryQueryParams.prototype, "ruleNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkAclEntryQueryParams.prototype, "version", void 0);
     return GetDeleteNetworkAclEntryQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteNetworkAclEntryQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteNetworkAclEntryQueryParams = GetDeleteNetworkAclEntryQueryParams;
 var GetDeleteNetworkAclEntryHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteNetworkAclEntryHeaders, _super);
     function GetDeleteNetworkAclEntryHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkAclEntryHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkAclEntryHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkAclEntryHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkAclEntryHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkAclEntryHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkAclEntryHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkAclEntryHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteNetworkAclEntryHeaders;
-}(SpeakeasyBase));
-export { GetDeleteNetworkAclEntryHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteNetworkAclEntryHeaders = GetDeleteNetworkAclEntryHeaders;
 var GetDeleteNetworkAclEntryRequest = /** @class */ (function (_super) {
     __extends(GetDeleteNetworkAclEntryRequest, _super);
     function GetDeleteNetworkAclEntryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteNetworkAclEntryQueryParams)
     ], GetDeleteNetworkAclEntryRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteNetworkAclEntryHeaders)
     ], GetDeleteNetworkAclEntryRequest.prototype, "headers", void 0);
     return GetDeleteNetworkAclEntryRequest;
-}(SpeakeasyBase));
-export { GetDeleteNetworkAclEntryRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteNetworkAclEntryRequest = GetDeleteNetworkAclEntryRequest;
 var GetDeleteNetworkAclEntryResponse = /** @class */ (function (_super) {
     __extends(GetDeleteNetworkAclEntryResponse, _super);
     function GetDeleteNetworkAclEntryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteNetworkAclEntryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteNetworkAclEntryResponse.prototype, "statusCode", void 0);
     return GetDeleteNetworkAclEntryResponse;
-}(SpeakeasyBase));
-export { GetDeleteNetworkAclEntryResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteNetworkAclEntryResponse = GetDeleteNetworkAclEntryResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCopyFpgaImageActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCopyFpgaImageResponse = exports.PostCopyFpgaImageRequest = exports.PostCopyFpgaImageHeaders = exports.PostCopyFpgaImageQueryParams = exports.PostCopyFpgaImageVersionEnum = exports.PostCopyFpgaImageActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCopyFpgaImageActionEnum;
 (function (PostCopyFpgaImageActionEnum) {
     PostCopyFpgaImageActionEnum["CopyFpgaImage"] = "CopyFpgaImage";
-})(PostCopyFpgaImageActionEnum || (PostCopyFpgaImageActionEnum = {}));
-export var PostCopyFpgaImageVersionEnum;
+})(PostCopyFpgaImageActionEnum = exports.PostCopyFpgaImageActionEnum || (exports.PostCopyFpgaImageActionEnum = {}));
+var PostCopyFpgaImageVersionEnum;
 (function (PostCopyFpgaImageVersionEnum) {
     PostCopyFpgaImageVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostCopyFpgaImageVersionEnum || (PostCopyFpgaImageVersionEnum = {}));
+})(PostCopyFpgaImageVersionEnum = exports.PostCopyFpgaImageVersionEnum || (exports.PostCopyFpgaImageVersionEnum = {}));
 var PostCopyFpgaImageQueryParams = /** @class */ (function (_super) {
     __extends(PostCopyFpgaImageQueryParams, _super);
     function PostCopyFpgaImageQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCopyFpgaImageQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCopyFpgaImageQueryParams.prototype, "version", void 0);
     return PostCopyFpgaImageQueryParams;
-}(SpeakeasyBase));
-export { PostCopyFpgaImageQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCopyFpgaImageQueryParams = PostCopyFpgaImageQueryParams;
 var PostCopyFpgaImageHeaders = /** @class */ (function (_super) {
     __extends(PostCopyFpgaImageHeaders, _super);
     function PostCopyFpgaImageHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCopyFpgaImageHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCopyFpgaImageHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCopyFpgaImageHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCopyFpgaImageHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCopyFpgaImageHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCopyFpgaImageHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCopyFpgaImageHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCopyFpgaImageHeaders;
-}(SpeakeasyBase));
-export { PostCopyFpgaImageHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCopyFpgaImageHeaders = PostCopyFpgaImageHeaders;
 var PostCopyFpgaImageRequest = /** @class */ (function (_super) {
     __extends(PostCopyFpgaImageRequest, _super);
     function PostCopyFpgaImageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCopyFpgaImageQueryParams)
     ], PostCopyFpgaImageRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCopyFpgaImageHeaders)
     ], PostCopyFpgaImageRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCopyFpgaImageRequest.prototype, "request", void 0);
     return PostCopyFpgaImageRequest;
-}(SpeakeasyBase));
-export { PostCopyFpgaImageRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCopyFpgaImageRequest = PostCopyFpgaImageRequest;
 var PostCopyFpgaImageResponse = /** @class */ (function (_super) {
     __extends(PostCopyFpgaImageResponse, _super);
     function PostCopyFpgaImageResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCopyFpgaImageResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCopyFpgaImageResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCopyFpgaImageResponse.prototype, "statusCode", void 0);
     return PostCopyFpgaImageResponse;
-}(SpeakeasyBase));
-export { PostCopyFpgaImageResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCopyFpgaImageResponse = PostCopyFpgaImageResponse;

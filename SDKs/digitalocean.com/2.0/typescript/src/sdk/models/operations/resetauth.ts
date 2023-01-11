@@ -1,65 +1,66 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class ResetAuthPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=database_cluster_uuid" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=database_cluster_uuid" })
   databaseClusterUuid: string;
 
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=username" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" })
   username: string;
 }
 
 
 export class ResetAuthRequestBody extends SpeakeasyBase {
-  @Metadata({ data: "json, name=mysql_settings" })
+  @SpeakeasyMetadata({ data: "json, name=mysql_settings" })
   mysqlSettings?: shared.Onev21databasesGetResponses200ContentApplication1jsonSchemaPropertiesDatabasesItemsPropertiesUsersItemsPropertiesMysqlSettings;
 }
 
 
-export class ResetAuthRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: ResetAuthPathParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request: ResetAuthRequestBody;
-}
-
-
 export class ResetAuth200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=user" })
+  @SpeakeasyMetadata({ data: "json, name=user" })
   user: shared.Onev21databasesGetResponses200ContentApplication1jsonSchemaPropertiesDatabasesItemsPropertiesUsersItems;
 }
 
 
 export class ResetAuth401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class ResetAuthRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: ResetAuthPathParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: ResetAuthRequestBody;
+}
+
+
 export class ResetAuthResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  resetAuth200ApplicationJsonObject?: ResetAuth200ApplicationJson;
+  @SpeakeasyMetadata()
+  resetAuth200ApplicationJSONObject?: ResetAuth200ApplicationJson;
 
-  @Metadata()
-  resetAuth401ApplicationJsonObject?: ResetAuth401ApplicationJson;
+  @SpeakeasyMetadata()
+  resetAuth401ApplicationJSONObject?: ResetAuth401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

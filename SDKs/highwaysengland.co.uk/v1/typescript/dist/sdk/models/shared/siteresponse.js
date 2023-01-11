@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SiteResult } from "./siteresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SiteResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var siteresult_1 = require("./siteresult");
 var SiteResponse = /** @class */ (function (_super) {
     __extends(SiteResponse, _super);
     function SiteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=row_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=row_count" }),
         __metadata("design:type", Number)
     ], SiteResponse.prototype, "rowCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sites", elemType: SiteResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sites", elemType: siteresult_1.SiteResult }),
         __metadata("design:type", Array)
     ], SiteResponse.prototype, "sites", void 0);
     return SiteResponse;
-}(SpeakeasyBase));
-export { SiteResponse };
+}(utils_1.SpeakeasyBase));
+exports.SiteResponse = SiteResponse;

@@ -82,5 +82,5 @@ export class CreateCollectionFromSchemaResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createCollectionFromSchema200ApplicationJsonObject?: CreateCollectionFromSchema200ApplicationJson;
+  createCollectionFromSchema200ApplicationJSONObject?: CreateCollectionFromSchema200ApplicationJson;
 }

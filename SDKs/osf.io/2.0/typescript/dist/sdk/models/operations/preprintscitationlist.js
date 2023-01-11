@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PreprintsCitationListResponse = exports.PreprintsCitationListRequest = exports.PreprintsCitationListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PreprintsCitationListPathParams = /** @class */ (function (_super) {
     __extends(PreprintsCitationListPathParams, _super);
     function PreprintsCitationListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=preprint_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=preprint_id" }),
         __metadata("design:type", String)
     ], PreprintsCitationListPathParams.prototype, "preprintId", void 0);
     return PreprintsCitationListPathParams;
-}(SpeakeasyBase));
-export { PreprintsCitationListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PreprintsCitationListPathParams = PreprintsCitationListPathParams;
 var PreprintsCitationListRequest = /** @class */ (function (_super) {
     __extends(PreprintsCitationListRequest, _super);
     function PreprintsCitationListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PreprintsCitationListPathParams)
     ], PreprintsCitationListRequest.prototype, "pathParams", void 0);
     return PreprintsCitationListRequest;
-}(SpeakeasyBase));
-export { PreprintsCitationListRequest };
+}(utils_1.SpeakeasyBase));
+exports.PreprintsCitationListRequest = PreprintsCitationListRequest;
 var PreprintsCitationListResponse = /** @class */ (function (_super) {
     __extends(PreprintsCitationListResponse, _super);
     function PreprintsCitationListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PreprintsCitationListResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PreprintsCitationListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PreprintsCitationListResponse.prototype, "statusCode", void 0);
     return PreprintsCitationListResponse;
-}(SpeakeasyBase));
-export { PreprintsCitationListResponse };
+}(utils_1.SpeakeasyBase));
+exports.PreprintsCitationListResponse = PreprintsCitationListResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleChromeManagementV1Device } from "./googlechromemanagementv1device";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1FindInstalledAppDevicesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlechromemanagementv1device_1 = require("./googlechromemanagementv1device");
 // GoogleChromeManagementV1FindInstalledAppDevicesResponse
 /**
  * Response containing a list of devices with queried app installed.
@@ -34,17 +37,17 @@ var GoogleChromeManagementV1FindInstalledAppDevicesResponse = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devices", elemType: GoogleChromeManagementV1Device }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devices", elemType: googlechromemanagementv1device_1.GoogleChromeManagementV1Device }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1FindInstalledAppDevicesResponse.prototype, "devices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1FindInstalledAppDevicesResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalSize" }),
         __metadata("design:type", Number)
     ], GoogleChromeManagementV1FindInstalledAppDevicesResponse.prototype, "totalSize", void 0);
     return GoogleChromeManagementV1FindInstalledAppDevicesResponse;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1FindInstalledAppDevicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1FindInstalledAppDevicesResponse = GoogleChromeManagementV1FindInstalledAppDevicesResponse;

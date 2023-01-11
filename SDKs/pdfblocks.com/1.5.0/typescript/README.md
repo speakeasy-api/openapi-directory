@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AddImageWatermarkV1Request, AddImageWatermarkV1Response } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -35,19 +34,19 @@ const sdk = new SDK(WithSecurity(
 const req: AddImageWatermarkV1Request = {
   request: {
     file: {
-      content: "itaque".encode(),
-      file: "nesciunt",
+      content: "sit".encode(),
+      file: "voluptas",
     },
     image: {
-      content: "optio".encode(),
-      image: "eos",
+      content: "culpa".encode(),
+      image: "expedita",
     },
-    margin: 98.099998,
-    transparency: 3868947486814090347,
+    margin: 15.100000,
+    transparency: 1774932891286980153,
   },
 };
 
-sdk.sdk.addImageWatermarkV1(req).then((res: AddImageWatermarkV1Response | AxiosError) => {
+sdk.addImageWatermarkV1(req).then((res: AddImageWatermarkV1Response | AxiosError) => {
    // handle response
 });
 ```

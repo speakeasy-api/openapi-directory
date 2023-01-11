@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Snmp2cConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 var Snmp2cConfig = /** @class */ (function (_super) {
     __extends(Snmp2cConfig, _super);
     function Snmp2cConfig() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=community_string" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=community_string" }),
         __metadata("design:type", String)
     ], Snmp2cConfig.prototype, "communityString", void 0);
     return Snmp2cConfig;
-}(SpeakeasyBase));
-export { Snmp2cConfig };
+}(utils_1.SpeakeasyBase));
+exports.Snmp2cConfig = Snmp2cConfig;

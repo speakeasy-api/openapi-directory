@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObjectReference } from "./objectreference";
-import { ObjectAttributeRange } from "./objectattributerange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchListIndex = void 0;
+var utils_1 = require("../../../internal/utils");
+var objectreference_1 = require("./objectreference");
+var objectattributerange_1 = require("./objectattributerange");
 // BatchListIndex
 /**
  * Lists objects attached to the specified index inside a <a>BatchRead</a> operation. For more information, see <a>ListIndex</a> and <a>BatchReadRequest$Operations</a>.
@@ -35,21 +38,21 @@ var BatchListIndex = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IndexReference" }),
-        __metadata("design:type", ObjectReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IndexReference" }),
+        __metadata("design:type", objectreference_1.ObjectReference)
     ], BatchListIndex.prototype, "indexReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], BatchListIndex.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], BatchListIndex.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RangesOnIndexedValues", elemType: ObjectAttributeRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RangesOnIndexedValues", elemType: objectattributerange_1.ObjectAttributeRange }),
         __metadata("design:type", Array)
     ], BatchListIndex.prototype, "rangesOnIndexedValues", void 0);
     return BatchListIndex;
-}(SpeakeasyBase));
-export { BatchListIndex };
+}(utils_1.SpeakeasyBase));
+exports.BatchListIndex = BatchListIndex;

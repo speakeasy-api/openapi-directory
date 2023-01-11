@@ -19,7 +19,7 @@ export declare class DeleteReplicationSubnetGroupRequest extends SpeakeasyBase {
 }
 export declare class DeleteReplicationSubnetGroupResponse extends SpeakeasyBase {
     contentType: string;
-    deleteReplicationSubnetGroupResponse?: Map<string, any>;
+    deleteReplicationSubnetGroupResponse?: Record<string, any>;
     invalidResourceStateFault?: any;
     resourceNotFoundFault?: any;
     statusCode: number;

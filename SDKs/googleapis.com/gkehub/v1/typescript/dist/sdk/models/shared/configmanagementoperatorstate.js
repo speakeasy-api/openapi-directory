@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigManagementInstallError } from "./configmanagementinstallerror";
-export var ConfigManagementOperatorStateDeploymentStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigManagementOperatorState = exports.ConfigManagementOperatorStateDeploymentStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var configmanagementinstallerror_1 = require("./configmanagementinstallerror");
+var ConfigManagementOperatorStateDeploymentStateEnum;
 (function (ConfigManagementOperatorStateDeploymentStateEnum) {
     ConfigManagementOperatorStateDeploymentStateEnum["DeploymentStateUnspecified"] = "DEPLOYMENT_STATE_UNSPECIFIED";
     ConfigManagementOperatorStateDeploymentStateEnum["NotInstalled"] = "NOT_INSTALLED";
     ConfigManagementOperatorStateDeploymentStateEnum["Installed"] = "INSTALLED";
     ConfigManagementOperatorStateDeploymentStateEnum["Error"] = "ERROR";
-})(ConfigManagementOperatorStateDeploymentStateEnum || (ConfigManagementOperatorStateDeploymentStateEnum = {}));
+})(ConfigManagementOperatorStateDeploymentStateEnum = exports.ConfigManagementOperatorStateDeploymentStateEnum || (exports.ConfigManagementOperatorStateDeploymentStateEnum = {}));
 // ConfigManagementOperatorState
 /**
  * State information for an ACM's Operator
@@ -41,17 +44,17 @@ var ConfigManagementOperatorState = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentState" }),
         __metadata("design:type", String)
     ], ConfigManagementOperatorState.prototype, "deploymentState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: ConfigManagementInstallError }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: configmanagementinstallerror_1.ConfigManagementInstallError }),
         __metadata("design:type", Array)
     ], ConfigManagementOperatorState.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], ConfigManagementOperatorState.prototype, "version", void 0);
     return ConfigManagementOperatorState;
-}(SpeakeasyBase));
-export { ConfigManagementOperatorState };
+}(utils_1.SpeakeasyBase));
+exports.ConfigManagementOperatorState = ConfigManagementOperatorState;

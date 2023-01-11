@@ -35,7 +35,7 @@ export class PostAppsAppIdQueuesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   queueResponse?: shared.QueueResponse;

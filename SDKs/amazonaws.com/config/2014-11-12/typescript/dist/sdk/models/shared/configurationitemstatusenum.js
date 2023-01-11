@@ -1,8 +1,11 @@
-export var ConfigurationItemStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigurationItemStatusEnum = void 0;
+var ConfigurationItemStatusEnum;
 (function (ConfigurationItemStatusEnum) {
     ConfigurationItemStatusEnum["Ok"] = "OK";
     ConfigurationItemStatusEnum["ResourceDiscovered"] = "ResourceDiscovered";
     ConfigurationItemStatusEnum["ResourceNotRecorded"] = "ResourceNotRecorded";
     ConfigurationItemStatusEnum["ResourceDeleted"] = "ResourceDeleted";
     ConfigurationItemStatusEnum["ResourceDeletedNotRecorded"] = "ResourceDeletedNotRecorded";
-})(ConfigurationItemStatusEnum || (ConfigurationItemStatusEnum = {}));
+})(ConfigurationItemStatusEnum = exports.ConfigurationItemStatusEnum || (exports.ConfigurationItemStatusEnum = {}));

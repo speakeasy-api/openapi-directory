@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteServerCertificateActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteServerCertificateResponse = exports.PostDeleteServerCertificateRequest = exports.PostDeleteServerCertificateHeaders = exports.PostDeleteServerCertificateQueryParams = exports.PostDeleteServerCertificateVersionEnum = exports.PostDeleteServerCertificateActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteServerCertificateActionEnum;
 (function (PostDeleteServerCertificateActionEnum) {
     PostDeleteServerCertificateActionEnum["DeleteServerCertificate"] = "DeleteServerCertificate";
-})(PostDeleteServerCertificateActionEnum || (PostDeleteServerCertificateActionEnum = {}));
-export var PostDeleteServerCertificateVersionEnum;
+})(PostDeleteServerCertificateActionEnum = exports.PostDeleteServerCertificateActionEnum || (exports.PostDeleteServerCertificateActionEnum = {}));
+var PostDeleteServerCertificateVersionEnum;
 (function (PostDeleteServerCertificateVersionEnum) {
     PostDeleteServerCertificateVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostDeleteServerCertificateVersionEnum || (PostDeleteServerCertificateVersionEnum = {}));
+})(PostDeleteServerCertificateVersionEnum = exports.PostDeleteServerCertificateVersionEnum || (exports.PostDeleteServerCertificateVersionEnum = {}));
 var PostDeleteServerCertificateQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteServerCertificateQueryParams, _super);
     function PostDeleteServerCertificateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteServerCertificateQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteServerCertificateQueryParams.prototype, "version", void 0);
     return PostDeleteServerCertificateQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteServerCertificateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteServerCertificateQueryParams = PostDeleteServerCertificateQueryParams;
 var PostDeleteServerCertificateHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteServerCertificateHeaders, _super);
     function PostDeleteServerCertificateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteServerCertificateHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteServerCertificateHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteServerCertificateHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteServerCertificateHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteServerCertificateHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteServerCertificateHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteServerCertificateHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteServerCertificateHeaders;
-}(SpeakeasyBase));
-export { PostDeleteServerCertificateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteServerCertificateHeaders = PostDeleteServerCertificateHeaders;
 var PostDeleteServerCertificateRequest = /** @class */ (function (_super) {
     __extends(PostDeleteServerCertificateRequest, _super);
     function PostDeleteServerCertificateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteServerCertificateQueryParams)
     ], PostDeleteServerCertificateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteServerCertificateHeaders)
     ], PostDeleteServerCertificateRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteServerCertificateRequest.prototype, "request", void 0);
     return PostDeleteServerCertificateRequest;
-}(SpeakeasyBase));
-export { PostDeleteServerCertificateRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteServerCertificateRequest = PostDeleteServerCertificateRequest;
 var PostDeleteServerCertificateResponse = /** @class */ (function (_super) {
     __extends(PostDeleteServerCertificateResponse, _super);
     function PostDeleteServerCertificateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteServerCertificateResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteServerCertificateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteServerCertificateResponse.prototype, "statusCode", void 0);
     return PostDeleteServerCertificateResponse;
-}(SpeakeasyBase));
-export { PostDeleteServerCertificateResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteServerCertificateResponse = PostDeleteServerCertificateResponse;

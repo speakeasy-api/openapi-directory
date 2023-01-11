@@ -22,5 +22,5 @@ export class ProtocolProxyPortListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolProxyPortList200ApplicationJsonInt32Integers?: number[];
+  protocolProxyPortList200ApplicationJSONInt32Integers?: number[];
 }

@@ -47,5 +47,5 @@ export class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsCommentIdRespon
   statusCode: number;
 
   @SpeakeasyMetadata()
-  commitComment?: Map<string, any>;
+  commitComment?: Record<string, any>;
 }

@@ -251,7 +251,7 @@ export class EmployerEmployer extends SpeakeasyBase {
   hmrcSettings?: EmployerEmployerHmrcSettings;
 
   @SpeakeasyMetadata({ data: "json, name=MetaData" })
-  metaData?: Map<string, any>;
+  metaData?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Name" })
   name?: string;

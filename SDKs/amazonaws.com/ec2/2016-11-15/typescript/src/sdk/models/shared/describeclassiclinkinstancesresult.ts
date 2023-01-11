@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClassicLinkInstance } from "./classiclinkinstance";
 
 
 
 export class DescribeClassicLinkInstancesResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: ClassicLinkInstance })
-  instances?: ClassicLinkInstance[];
+  @SpeakeasyMetadata()
+  instances?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 }

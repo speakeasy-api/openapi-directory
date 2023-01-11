@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class ItemUpdate extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=config_request" })
-  configRequest?: Map<string, any>;
+  configRequest?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=custom" })
   custom?: any;
@@ -16,5 +16,5 @@ export class ItemUpdate extends SpeakeasyBase {
   locationRequest?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 }

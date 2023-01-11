@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChannelSectionContentDetails } from "./channelsectioncontentdetails";
-import { ChannelSectionLocalization } from "./channelsectionlocalization";
-import { ChannelSectionSnippet } from "./channelsectionsnippet";
-import { ChannelSectionTargeting } from "./channelsectiontargeting";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChannelSection = void 0;
+var utils_1 = require("../../../internal/utils");
+var channelsectioncontentdetails_1 = require("./channelsectioncontentdetails");
+var channelsectionlocalization_1 = require("./channelsectionlocalization");
+var channelsectionsnippet_1 = require("./channelsectionsnippet");
+var channelsectiontargeting_1 = require("./channelsectiontargeting");
 var ChannelSection = /** @class */ (function (_super) {
     __extends(ChannelSection, _super);
     function ChannelSection() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentDetails" }),
-        __metadata("design:type", ChannelSectionContentDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentDetails" }),
+        __metadata("design:type", channelsectioncontentdetails_1.ChannelSectionContentDetails)
     ], ChannelSection.prototype, "contentDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], ChannelSection.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ChannelSection.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ChannelSection.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localizations", elemType: ChannelSectionLocalization }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localizations", elemType: channelsectionlocalization_1.ChannelSectionLocalization }),
+        __metadata("design:type", Object)
     ], ChannelSection.prototype, "localizations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snippet" }),
-        __metadata("design:type", ChannelSectionSnippet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snippet" }),
+        __metadata("design:type", channelsectionsnippet_1.ChannelSectionSnippet)
     ], ChannelSection.prototype, "snippet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targeting" }),
-        __metadata("design:type", ChannelSectionTargeting)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targeting" }),
+        __metadata("design:type", channelsectiontargeting_1.ChannelSectionTargeting)
     ], ChannelSection.prototype, "targeting", void 0);
     return ChannelSection;
-}(SpeakeasyBase));
-export { ChannelSection };
+}(utils_1.SpeakeasyBase));
+exports.ChannelSection = ChannelSection;

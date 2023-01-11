@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ForwardingRuleInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // ForwardingRuleInfo
 /**
  * For display only. Metadata associated with a Compute Engine forwarding rule.
@@ -33,33 +36,33 @@ var ForwardingRuleInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], ForwardingRuleInfo.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchedPortRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchedPortRange" }),
         __metadata("design:type", String)
     ], ForwardingRuleInfo.prototype, "matchedPortRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matchedProtocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matchedProtocol" }),
         __metadata("design:type", String)
     ], ForwardingRuleInfo.prototype, "matchedProtocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkUri" }),
         __metadata("design:type", String)
     ], ForwardingRuleInfo.prototype, "networkUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", String)
     ], ForwardingRuleInfo.prototype, "target", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], ForwardingRuleInfo.prototype, "uri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vip" }),
         __metadata("design:type", String)
     ], ForwardingRuleInfo.prototype, "vip", void 0);
     return ForwardingRuleInfo;
-}(SpeakeasyBase));
-export { ForwardingRuleInfo };
+}(utils_1.SpeakeasyBase));
+exports.ForwardingRuleInfo = ForwardingRuleInfo;

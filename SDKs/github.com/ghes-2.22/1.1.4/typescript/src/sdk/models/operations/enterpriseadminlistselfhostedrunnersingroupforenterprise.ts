@@ -44,11 +44,11 @@ export class EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseResponse ex
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  enterpriseAdminListSelfHostedRunnersInGroupForEnterprise200ApplicationJsonObject?: EnterpriseAdminListSelfHostedRunnersInGroupForEnterprise200ApplicationJson;
+  enterpriseAdminListSelfHostedRunnersInGroupForEnterprise200ApplicationJSONObject?: EnterpriseAdminListSelfHostedRunnersInGroupForEnterprise200ApplicationJson;
 }

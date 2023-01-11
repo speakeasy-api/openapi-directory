@@ -1,9 +1,56 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NetworkInterfaceAttachment } from "./networkinterfaceattachment";
-import { AttributeValue } from "./attributevalue";
-import { GroupIdentifier } from "./groupidentifier";
-import { AttributeBooleanValue } from "./attributebooleanvalue";
 
+
+
+// DescribeNetworkInterfaceAttributeResultAttachment
+/** 
+ * The attachment (if any) of the network interface.
+**/
+export class DescribeNetworkInterfaceAttributeResultAttachment extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  attachTime?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  attachmentId?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  deleteOnTermination?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  deviceIndex?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  instanceId?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  instanceOwnerId?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  networkCardIndex?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  status?: Record<string, any>;
+}
+
+
+// DescribeNetworkInterfaceAttributeResultDescription
+/** 
+ * The description of the network interface.
+**/
+export class DescribeNetworkInterfaceAttributeResultDescription extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  value?: Record<string, any>;
+}
+
+
+// DescribeNetworkInterfaceAttributeResultSourceDestCheck
+/** 
+ * Indicates whether source/destination checking is enabled.
+**/
+export class DescribeNetworkInterfaceAttributeResultSourceDestCheck extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  value?: Record<string, any>;
+}
 
 
 // DescribeNetworkInterfaceAttributeResult
@@ -12,17 +59,17 @@ import { AttributeBooleanValue } from "./attributebooleanvalue";
 **/
 export class DescribeNetworkInterfaceAttributeResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  attachment?: NetworkInterfaceAttachment;
+  attachment?: DescribeNetworkInterfaceAttributeResultAttachment;
 
   @SpeakeasyMetadata()
-  description?: AttributeValue;
-
-  @SpeakeasyMetadata({ elemType: GroupIdentifier })
-  groups?: GroupIdentifier[];
+  description?: DescribeNetworkInterfaceAttributeResultDescription;
 
   @SpeakeasyMetadata()
-  networkInterfaceId?: string;
+  groups?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  sourceDestCheck?: AttributeBooleanValue;
+  networkInterfaceId?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  sourceDestCheck?: DescribeNetworkInterfaceAttributeResultSourceDestCheck;
 }

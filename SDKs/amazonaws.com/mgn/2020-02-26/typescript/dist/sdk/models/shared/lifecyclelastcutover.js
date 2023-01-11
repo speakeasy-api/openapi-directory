@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LifeCycleLastCutoverFinalized } from "./lifecyclelastcutoverfinalized";
-import { LifeCycleLastCutoverInitiated } from "./lifecyclelastcutoverinitiated";
-import { LifeCycleLastCutoverReverted } from "./lifecyclelastcutoverreverted";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LifeCycleLastCutover = void 0;
+var utils_1 = require("../../../internal/utils");
+var lifecyclelastcutoverfinalized_1 = require("./lifecyclelastcutoverfinalized");
+var lifecyclelastcutoverinitiated_1 = require("./lifecyclelastcutoverinitiated");
+var lifecyclelastcutoverreverted_1 = require("./lifecyclelastcutoverreverted");
 // LifeCycleLastCutover
 /**
  * Lifecycle last Cutover .
@@ -36,17 +39,17 @@ var LifeCycleLastCutover = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finalized" }),
-        __metadata("design:type", LifeCycleLastCutoverFinalized)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finalized" }),
+        __metadata("design:type", lifecyclelastcutoverfinalized_1.LifeCycleLastCutoverFinalized)
     ], LifeCycleLastCutover.prototype, "finalized", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=initiated" }),
-        __metadata("design:type", LifeCycleLastCutoverInitiated)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=initiated" }),
+        __metadata("design:type", lifecyclelastcutoverinitiated_1.LifeCycleLastCutoverInitiated)
     ], LifeCycleLastCutover.prototype, "initiated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reverted" }),
-        __metadata("design:type", LifeCycleLastCutoverReverted)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reverted" }),
+        __metadata("design:type", lifecyclelastcutoverreverted_1.LifeCycleLastCutoverReverted)
     ], LifeCycleLastCutover.prototype, "reverted", void 0);
     return LifeCycleLastCutover;
-}(SpeakeasyBase));
-export { LifeCycleLastCutover };
+}(utils_1.SpeakeasyBase));
+exports.LifeCycleLastCutover = LifeCycleLastCutover;

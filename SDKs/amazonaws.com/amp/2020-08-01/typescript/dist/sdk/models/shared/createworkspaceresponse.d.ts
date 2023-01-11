@@ -6,6 +6,6 @@ import { WorkspaceStatus } from "./workspacestatus";
 export declare class CreateWorkspaceResponse extends SpeakeasyBase {
     arn: string;
     status: WorkspaceStatus;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     workspaceId: string;
 }

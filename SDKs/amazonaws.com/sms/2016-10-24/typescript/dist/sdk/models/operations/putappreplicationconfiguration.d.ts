@@ -23,7 +23,7 @@ export declare class PutAppReplicationConfigurationResponse extends SpeakeasyBas
     invalidParameterException?: any;
     missingRequiredParameterException?: any;
     operationNotPermittedException?: any;
-    putAppReplicationConfigurationResponse?: Map<string, any>;
+    putAppReplicationConfigurationResponse?: Record<string, any>;
     statusCode: number;
     unauthorizedOperationException?: any;
 }

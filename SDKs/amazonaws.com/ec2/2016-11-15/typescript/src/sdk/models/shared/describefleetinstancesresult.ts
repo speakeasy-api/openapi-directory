@@ -1,15 +1,14 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActiveInstance } from "./activeinstance";
 
 
 
 export class DescribeFleetInstancesResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: ActiveInstance })
-  activeInstances?: ActiveInstance[];
+  @SpeakeasyMetadata()
+  activeInstances?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  fleetId?: string;
+  fleetId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 }

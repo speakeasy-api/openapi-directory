@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { ContactIdentifiers } from "./contactidentifiers";
 import { Updated } from "./updated";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 export declare class MessageConversation extends SpeakeasyBase {
     id?: string;
 }
@@ -14,7 +14,7 @@ export declare class Message extends SpeakeasyBase {
     contact?: ContactIdentifiers;
     conversation?: MessageConversation;
     created?: Updated;
-    error?: Error;
+    error?: ErrorT;
     id?: string;
     media?: MessageMedia[];
     message?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttachedPolicy } from "./attachedpolicy";
-import { PolicyDetail } from "./policydetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GroupDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var attachedpolicy_1 = require("./attachedpolicy");
+var policydetail_1 = require("./policydetail");
 // GroupDetail
 /**
  * <p>Contains information about an IAM group, including all of the group's policies.</p> <p>This data type is used as a response element in the <a>GetAccountAuthorizationDetails</a> operation.</p>
@@ -35,33 +38,33 @@ var GroupDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GroupDetail.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: AttachedPolicy }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: attachedpolicy_1.AttachedPolicy }),
         __metadata("design:type", Array)
     ], GroupDetail.prototype, "attachedManagedPolicies", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], GroupDetail.prototype, "createDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GroupDetail.prototype, "groupId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GroupDetail.prototype, "groupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: PolicyDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: policydetail_1.PolicyDetail }),
         __metadata("design:type", Array)
     ], GroupDetail.prototype, "groupPolicyList", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GroupDetail.prototype, "path", void 0);
     return GroupDetail;
-}(SpeakeasyBase));
-export { GroupDetail };
+}(utils_1.SpeakeasyBase));
+exports.GroupDetail = GroupDetail;

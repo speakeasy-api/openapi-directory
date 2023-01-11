@@ -6,5 +6,5 @@ import { EndpointMessageResult } from "./endpointmessageresult";
 export declare class SendUsersMessageResponse extends SpeakeasyBase {
     applicationId: string;
     requestId?: string;
-    result?: Map<string, Map<string, EndpointMessageResult>>;
+    result?: Record<string, Record<string, EndpointMessageResult>>;
 }

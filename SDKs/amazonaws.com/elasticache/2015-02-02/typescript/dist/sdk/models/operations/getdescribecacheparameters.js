@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeCacheParametersActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeCacheParametersResponse = exports.GetDescribeCacheParametersRequest = exports.GetDescribeCacheParametersHeaders = exports.GetDescribeCacheParametersQueryParams = exports.GetDescribeCacheParametersVersionEnum = exports.GetDescribeCacheParametersActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeCacheParametersActionEnum;
 (function (GetDescribeCacheParametersActionEnum) {
     GetDescribeCacheParametersActionEnum["DescribeCacheParameters"] = "DescribeCacheParameters";
-})(GetDescribeCacheParametersActionEnum || (GetDescribeCacheParametersActionEnum = {}));
-export var GetDescribeCacheParametersVersionEnum;
+})(GetDescribeCacheParametersActionEnum = exports.GetDescribeCacheParametersActionEnum || (exports.GetDescribeCacheParametersActionEnum = {}));
+var GetDescribeCacheParametersVersionEnum;
 (function (GetDescribeCacheParametersVersionEnum) {
     GetDescribeCacheParametersVersionEnum["TwoThousandAndFifteen0202"] = "2015-02-02";
-})(GetDescribeCacheParametersVersionEnum || (GetDescribeCacheParametersVersionEnum = {}));
+})(GetDescribeCacheParametersVersionEnum = exports.GetDescribeCacheParametersVersionEnum || (exports.GetDescribeCacheParametersVersionEnum = {}));
 var GetDescribeCacheParametersQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeCacheParametersQueryParams, _super);
     function GetDescribeCacheParametersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeCacheParametersQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=CacheParameterGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=CacheParameterGroupName" }),
         __metadata("design:type", String)
     ], GetDescribeCacheParametersQueryParams.prototype, "cacheParameterGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetDescribeCacheParametersQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", Number)
     ], GetDescribeCacheParametersQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Source" }),
         __metadata("design:type", String)
     ], GetDescribeCacheParametersQueryParams.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeCacheParametersQueryParams.prototype, "version", void 0);
     return GetDescribeCacheParametersQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeCacheParametersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeCacheParametersQueryParams = GetDescribeCacheParametersQueryParams;
 var GetDescribeCacheParametersHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeCacheParametersHeaders, _super);
     function GetDescribeCacheParametersHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeCacheParametersHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeCacheParametersHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeCacheParametersHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeCacheParametersHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeCacheParametersHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeCacheParametersHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeCacheParametersHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeCacheParametersHeaders;
-}(SpeakeasyBase));
-export { GetDescribeCacheParametersHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeCacheParametersHeaders = GetDescribeCacheParametersHeaders;
 var GetDescribeCacheParametersRequest = /** @class */ (function (_super) {
     __extends(GetDescribeCacheParametersRequest, _super);
     function GetDescribeCacheParametersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeCacheParametersQueryParams)
     ], GetDescribeCacheParametersRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeCacheParametersHeaders)
     ], GetDescribeCacheParametersRequest.prototype, "headers", void 0);
     return GetDescribeCacheParametersRequest;
-}(SpeakeasyBase));
-export { GetDescribeCacheParametersRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeCacheParametersRequest = GetDescribeCacheParametersRequest;
 var GetDescribeCacheParametersResponse = /** @class */ (function (_super) {
     __extends(GetDescribeCacheParametersResponse, _super);
     function GetDescribeCacheParametersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeCacheParametersResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeCacheParametersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeCacheParametersResponse.prototype, "statusCode", void 0);
     return GetDescribeCacheParametersResponse;
-}(SpeakeasyBase));
-export { GetDescribeCacheParametersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeCacheParametersResponse = GetDescribeCacheParametersResponse;

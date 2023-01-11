@@ -23,7 +23,7 @@ export declare class MigrationsStartImportRequest extends SpeakeasyBase {
 }
 export declare class MigrationsStartImportResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     import?: shared.Import;

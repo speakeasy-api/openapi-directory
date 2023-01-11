@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ScoresByDateFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScoresByDateResponse = exports.ScoresByDateRequest = exports.ScoresByDatePathParams = exports.ScoresByDateFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ScoresByDateFormatEnum;
 (function (ScoresByDateFormatEnum) {
     ScoresByDateFormatEnum["Xml"] = "XML";
     ScoresByDateFormatEnum["Json"] = "JSON";
-})(ScoresByDateFormatEnum || (ScoresByDateFormatEnum = {}));
+})(ScoresByDateFormatEnum = exports.ScoresByDateFormatEnum || (exports.ScoresByDateFormatEnum = {}));
 var ScoresByDatePathParams = /** @class */ (function (_super) {
     __extends(ScoresByDatePathParams, _super);
     function ScoresByDatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=date" }),
         __metadata("design:type", String)
     ], ScoresByDatePathParams.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], ScoresByDatePathParams.prototype, "format", void 0);
     return ScoresByDatePathParams;
-}(SpeakeasyBase));
-export { ScoresByDatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ScoresByDatePathParams = ScoresByDatePathParams;
 var ScoresByDateRequest = /** @class */ (function (_super) {
     __extends(ScoresByDateRequest, _super);
     function ScoresByDateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ScoresByDatePathParams)
     ], ScoresByDateRequest.prototype, "pathParams", void 0);
     return ScoresByDateRequest;
-}(SpeakeasyBase));
-export { ScoresByDateRequest };
+}(utils_1.SpeakeasyBase));
+exports.ScoresByDateRequest = ScoresByDateRequest;
 var ScoresByDateResponse = /** @class */ (function (_super) {
     __extends(ScoresByDateResponse, _super);
     function ScoresByDateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScoresByDateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], ScoresByDateResponse.prototype, "scores", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ScoresByDateResponse.prototype, "statusCode", void 0);
     return ScoresByDateResponse;
-}(SpeakeasyBase));
-export { ScoresByDateResponse };
+}(utils_1.SpeakeasyBase));
+exports.ScoresByDateResponse = ScoresByDateResponse;

@@ -10,6 +10,6 @@ export declare class GetRepositoryPipelineCachesRequest extends SpeakeasyBase {
 export declare class GetRepositoryPipelineCachesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedPipelineCaches?: shared.PaginatedPipelineCaches;
 }

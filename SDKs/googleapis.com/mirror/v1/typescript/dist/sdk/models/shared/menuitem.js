@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MenuValue } from "./menuvalue";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MenuItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var menuvalue_1 = require("./menuvalue");
 // MenuItem
 /**
  * A custom menu item that can be presented to the user by a timeline item.
@@ -34,29 +37,29 @@ var MenuItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], MenuItem.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contextual_command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contextual_command" }),
         __metadata("design:type", String)
     ], MenuItem.prototype, "contextualCommand", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], MenuItem.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payload" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payload" }),
         __metadata("design:type", String)
     ], MenuItem.prototype, "payload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=removeWhenSelected" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=removeWhenSelected" }),
         __metadata("design:type", Boolean)
     ], MenuItem.prototype, "removeWhenSelected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values", elemType: MenuValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values", elemType: menuvalue_1.MenuValue }),
         __metadata("design:type", Array)
     ], MenuItem.prototype, "values", void 0);
     return MenuItem;
-}(SpeakeasyBase));
-export { MenuItem };
+}(utils_1.SpeakeasyBase));
+exports.MenuItem = MenuItem;

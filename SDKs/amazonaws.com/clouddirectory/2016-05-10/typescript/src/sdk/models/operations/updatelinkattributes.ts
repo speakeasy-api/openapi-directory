@@ -99,7 +99,7 @@ export class UpdateLinkAttributesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateLinkAttributesResponse?: Map<string, any>;
+  updateLinkAttributesResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: shared.ValidationException;

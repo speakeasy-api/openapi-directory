@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,94 +14,119 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchGifsResponse = exports.SearchGifsRequest = exports.SearchGifs200ApplicationJson = exports.SearchGifsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var SearchGifsQueryParams = /** @class */ (function (_super) {
     __extends(SearchGifsQueryParams, _super);
     function SearchGifsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=lang" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=lang" }),
         __metadata("design:type", String)
     ], SearchGifsQueryParams.prototype, "lang", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], SearchGifsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], SearchGifsQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=q" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=q" }),
         __metadata("design:type", String)
     ], SearchGifsQueryParams.prototype, "q", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=rating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=rating" }),
         __metadata("design:type", String)
     ], SearchGifsQueryParams.prototype, "rating", void 0);
     return SearchGifsQueryParams;
-}(SpeakeasyBase));
-export { SearchGifsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SearchGifsQueryParams = SearchGifsQueryParams;
 var SearchGifs200ApplicationJson = /** @class */ (function (_super) {
     __extends(SearchGifs200ApplicationJson, _super);
     function SearchGifs200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: shared.Gif }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: shared.Gif }),
         __metadata("design:type", Array)
     ], SearchGifs200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", shared.Meta)
     ], SearchGifs200ApplicationJson.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
         __metadata("design:type", shared.Pagination)
     ], SearchGifs200ApplicationJson.prototype, "pagination", void 0);
     return SearchGifs200ApplicationJson;
-}(SpeakeasyBase));
-export { SearchGifs200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SearchGifs200ApplicationJson = SearchGifs200ApplicationJson;
 var SearchGifsRequest = /** @class */ (function (_super) {
     __extends(SearchGifsRequest, _super);
     function SearchGifsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchGifsQueryParams)
     ], SearchGifsRequest.prototype, "queryParams", void 0);
     return SearchGifsRequest;
-}(SpeakeasyBase));
-export { SearchGifsRequest };
+}(utils_1.SpeakeasyBase));
+exports.SearchGifsRequest = SearchGifsRequest;
 var SearchGifsResponse = /** @class */ (function (_super) {
     __extends(SearchGifsResponse, _super);
     function SearchGifsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SearchGifsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SearchGifsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchGifs200ApplicationJson)
-    ], SearchGifsResponse.prototype, "searchGifs200ApplicationJsonObject", void 0);
+    ], SearchGifsResponse.prototype, "searchGifs200ApplicationJSONObject", void 0);
     return SearchGifsResponse;
-}(SpeakeasyBase));
-export { SearchGifsResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchGifsResponse = SearchGifsResponse;

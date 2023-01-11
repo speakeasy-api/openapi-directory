@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AnswerSummary } from "./answersummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListAnswersOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var answersummary_1 = require("./answersummary");
 // ListAnswersOutput
 /**
  * Output of a list answers call.
@@ -34,25 +37,25 @@ var ListAnswersOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AnswerSummaries", elemType: AnswerSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AnswerSummaries", elemType: answersummary_1.AnswerSummary }),
         __metadata("design:type", Array)
     ], ListAnswersOutput.prototype, "answerSummaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LensAlias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LensAlias" }),
         __metadata("design:type", String)
     ], ListAnswersOutput.prototype, "lensAlias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MilestoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MilestoneNumber" }),
         __metadata("design:type", Number)
     ], ListAnswersOutput.prototype, "milestoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListAnswersOutput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkloadId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkloadId" }),
         __metadata("design:type", String)
     ], ListAnswersOutput.prototype, "workloadId", void 0);
     return ListAnswersOutput;
-}(SpeakeasyBase));
-export { ListAnswersOutput };
+}(utils_1.SpeakeasyBase));
+exports.ListAnswersOutput = ListAnswersOutput;

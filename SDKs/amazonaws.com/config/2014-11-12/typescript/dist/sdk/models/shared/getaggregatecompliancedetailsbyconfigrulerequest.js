@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComplianceTypeEnum } from "./compliancetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAggregateComplianceDetailsByConfigRuleRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var compliancetypeenum_1 = require("./compliancetypeenum");
 var GetAggregateComplianceDetailsByConfigRuleRequest = /** @class */ (function (_super) {
     __extends(GetAggregateComplianceDetailsByConfigRuleRequest, _super);
     function GetAggregateComplianceDetailsByConfigRuleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountId" }),
         __metadata("design:type", String)
     ], GetAggregateComplianceDetailsByConfigRuleRequest.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AwsRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AwsRegion" }),
         __metadata("design:type", String)
     ], GetAggregateComplianceDetailsByConfigRuleRequest.prototype, "awsRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComplianceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComplianceType" }),
         __metadata("design:type", String)
     ], GetAggregateComplianceDetailsByConfigRuleRequest.prototype, "complianceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigRuleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigRuleName" }),
         __metadata("design:type", String)
     ], GetAggregateComplianceDetailsByConfigRuleRequest.prototype, "configRuleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigurationAggregatorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigurationAggregatorName" }),
         __metadata("design:type", String)
     ], GetAggregateComplianceDetailsByConfigRuleRequest.prototype, "configurationAggregatorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Limit" }),
         __metadata("design:type", Number)
     ], GetAggregateComplianceDetailsByConfigRuleRequest.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetAggregateComplianceDetailsByConfigRuleRequest.prototype, "nextToken", void 0);
     return GetAggregateComplianceDetailsByConfigRuleRequest;
-}(SpeakeasyBase));
-export { GetAggregateComplianceDetailsByConfigRuleRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAggregateComplianceDetailsByConfigRuleRequest = GetAggregateComplianceDetailsByConfigRuleRequest;

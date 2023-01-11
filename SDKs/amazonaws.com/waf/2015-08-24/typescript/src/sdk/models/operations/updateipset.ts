@@ -51,7 +51,7 @@ export class UpdateIpSetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateIpSetResponse?: shared.UpdateIpSetResponse;
+  updateIPSetResponse?: shared.UpdateIpSetResponse;
 
   @SpeakeasyMetadata()
   wafInternalErrorException?: any;

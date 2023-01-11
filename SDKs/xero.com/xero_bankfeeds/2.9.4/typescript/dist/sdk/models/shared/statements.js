@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Statement } from "./statement";
-import { Pagination } from "./pagination";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Statements = void 0;
+var utils_1 = require("../../../internal/utils");
+var statement_1 = require("./statement");
+var pagination_1 = require("./pagination");
 // Statements
 /**
  * https://developer.xero.com/documentation/bank-feeds-api/statements
@@ -35,13 +38,13 @@ var Statements = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: Statement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: statement_1.Statement }),
         __metadata("design:type", Array)
     ], Statements.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
-        __metadata("design:type", Pagination)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
+        __metadata("design:type", pagination_1.Pagination)
     ], Statements.prototype, "pagination", void 0);
     return Statements;
-}(SpeakeasyBase));
-export { Statements };
+}(utils_1.SpeakeasyBase));
+exports.Statements = Statements;

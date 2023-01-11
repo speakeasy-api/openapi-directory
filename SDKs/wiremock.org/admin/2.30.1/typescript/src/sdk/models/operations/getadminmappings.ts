@@ -29,19 +29,19 @@ export class GetAdminMappings200ApplicationJsonMappingsRequest extends Speakeasy
   basicAuthCredentials?: GetAdminMappings200ApplicationJsonMappingsRequestBasicAuthCredentials;
 
   @SpeakeasyMetadata({ data: "json, name=bodyPatterns" })
-  bodyPatterns?: Map<string, any>[];
+  bodyPatterns?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=cookies" })
-  cookies?: Map<string, any>;
+  cookies?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, any>;
+  headers?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=method" })
   method?: string;
 
   @SpeakeasyMetadata({ data: "json, name=queryParameters" })
-  queryParameters?: Map<string, any>;
+  queryParameters?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=url" })
   url?: string;
@@ -66,7 +66,7 @@ export enum GetAdminMappings200ApplicationJsonMappingsResponseFaultEnum {
 
 export class GetAdminMappings200ApplicationJsonMappingsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=additionalProxyRequestHeaders" })
-  additionalProxyRequestHeaders?: Map<string, any>;
+  additionalProxyRequestHeaders?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=base64Body" })
   base64Body?: string;
@@ -87,10 +87,10 @@ export class GetAdminMappings200ApplicationJsonMappingsResponse extends Speakeas
   fromConfiguredStub?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, any>;
+  headers?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=jsonBody" })
-  jsonBody?: Map<string, any>;
+  jsonBody?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=proxyBaseUrl" })
   proxyBaseUrl?: string;
@@ -102,7 +102,7 @@ export class GetAdminMappings200ApplicationJsonMappingsResponse extends Speakeas
   statusMessage?: string;
 
   @SpeakeasyMetadata({ data: "json, name=transformerParameters" })
-  transformerParameters?: Map<string, any>;
+  transformerParameters?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=transformers" })
   transformers?: string[];
@@ -114,7 +114,7 @@ export class GetAdminMappings200ApplicationJsonMappings extends SpeakeasyBase {
   id?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, any>;
+  metadata?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -126,7 +126,7 @@ export class GetAdminMappings200ApplicationJsonMappings extends SpeakeasyBase {
   persistent?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=postServeActions" })
-  postServeActions?: Map<string, any>;
+  postServeActions?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=priority" })
   priority?: number;
@@ -174,8 +174,8 @@ export class GetAdminMappingsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getAdminMappings200ApplicationJsonObject?: GetAdminMappings200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getAdminMappings200ApplicationJSONObject?: GetAdminMappings200ApplicationJson;
 }

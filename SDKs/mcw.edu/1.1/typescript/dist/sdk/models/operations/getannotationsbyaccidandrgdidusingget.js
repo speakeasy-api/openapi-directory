@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAnnotationsByAccIdAndRgdIdUsingGetResponse = exports.GetAnnotationsByAccIdAndRgdIdUsingGetRequest = exports.GetAnnotationsByAccIdAndRgdIdUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAnnotationsByAccIdAndRgdIdUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetAnnotationsByAccIdAndRgdIdUsingGetPathParams, _super);
     function GetAnnotationsByAccIdAndRgdIdUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=accId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=accId" }),
         __metadata("design:type", String)
     ], GetAnnotationsByAccIdAndRgdIdUsingGetPathParams.prototype, "accId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=rgdId" }),
         __metadata("design:type", Number)
     ], GetAnnotationsByAccIdAndRgdIdUsingGetPathParams.prototype, "rgdId", void 0);
     return GetAnnotationsByAccIdAndRgdIdUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetAnnotationsByAccIdAndRgdIdUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAnnotationsByAccIdAndRgdIdUsingGetPathParams = GetAnnotationsByAccIdAndRgdIdUsingGetPathParams;
 var GetAnnotationsByAccIdAndRgdIdUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetAnnotationsByAccIdAndRgdIdUsingGetRequest, _super);
     function GetAnnotationsByAccIdAndRgdIdUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAnnotationsByAccIdAndRgdIdUsingGetPathParams)
     ], GetAnnotationsByAccIdAndRgdIdUsingGetRequest.prototype, "pathParams", void 0);
     return GetAnnotationsByAccIdAndRgdIdUsingGetRequest;
-}(SpeakeasyBase));
-export { GetAnnotationsByAccIdAndRgdIdUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAnnotationsByAccIdAndRgdIdUsingGetRequest = GetAnnotationsByAccIdAndRgdIdUsingGetRequest;
 var GetAnnotationsByAccIdAndRgdIdUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetAnnotationsByAccIdAndRgdIdUsingGetResponse, _super);
     function GetAnnotationsByAccIdAndRgdIdUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetAnnotationsByAccIdAndRgdIdUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAnnotationsByAccIdAndRgdIdUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAnnotationsByAccIdAndRgdIdUsingGetResponse.prototype, "statusCode", void 0);
     return GetAnnotationsByAccIdAndRgdIdUsingGetResponse;
-}(SpeakeasyBase));
-export { GetAnnotationsByAccIdAndRgdIdUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAnnotationsByAccIdAndRgdIdUsingGetResponse = GetAnnotationsByAccIdAndRgdIdUsingGetResponse;

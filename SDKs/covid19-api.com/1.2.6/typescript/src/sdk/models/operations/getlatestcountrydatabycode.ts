@@ -63,5 +63,5 @@ export class GetLatestCountryDataByCodeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: GetLatestCountryDataByCode200ApplicationJson })
-  getLatestCountryDataByCode200ApplicationJsonObjects?: GetLatestCountryDataByCode200ApplicationJson[];
+  getLatestCountryDataByCode200ApplicationJSONObjects?: GetLatestCountryDataByCode200ApplicationJson[];
 }

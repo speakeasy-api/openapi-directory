@@ -17,16 +17,16 @@ export class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadat
   annotations?: GoogleCloudContactcenterinsightsV1CallAnnotation[];
 
   @SpeakeasyMetadata({ data: "json, name=entities", elemType: GoogleCloudContactcenterinsightsV1Entity })
-  entities?: Map<string, GoogleCloudContactcenterinsightsV1Entity>;
+  entities?: Record<string, GoogleCloudContactcenterinsightsV1Entity>;
 
   @SpeakeasyMetadata({ data: "json, name=intents", elemType: GoogleCloudContactcenterinsightsV1Intent })
-  intents?: Map<string, GoogleCloudContactcenterinsightsV1Intent>;
+  intents?: Record<string, GoogleCloudContactcenterinsightsV1Intent>;
 
   @SpeakeasyMetadata({ data: "json, name=issueModelResult" })
   issueModelResult?: GoogleCloudContactcenterinsightsV1IssueModelResult;
 
   @SpeakeasyMetadata({ data: "json, name=phraseMatchers", elemType: GoogleCloudContactcenterinsightsV1PhraseMatchData })
-  phraseMatchers?: Map<string, GoogleCloudContactcenterinsightsV1PhraseMatchData>;
+  phraseMatchers?: Record<string, GoogleCloudContactcenterinsightsV1PhraseMatchData>;
 
   @SpeakeasyMetadata({ data: "json, name=sentiments", elemType: GoogleCloudContactcenterinsightsV1ConversationLevelSentiment })
   sentiments?: GoogleCloudContactcenterinsightsV1ConversationLevelSentiment[];

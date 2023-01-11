@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostScrobbleEpisodesResponse = exports.PostScrobbleEpisodesRequest = exports.PostScrobbleEpisodesRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostScrobbleEpisodesRequestBody = /** @class */ (function (_super) {
     __extends(PostScrobbleEpisodesRequestBody, _super);
     function PostScrobbleEpisodesRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=episode_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=episode_id" }),
         __metadata("design:type", Number)
     ], PostScrobbleEpisodesRequestBody.prototype, "episodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marked_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marked_at" }),
         __metadata("design:type", Number)
     ], PostScrobbleEpisodesRequestBody.prototype, "markedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", Object)
     ], PostScrobbleEpisodesRequestBody.prototype, "type", void 0);
     return PostScrobbleEpisodesRequestBody;
-}(SpeakeasyBase));
-export { PostScrobbleEpisodesRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostScrobbleEpisodesRequestBody = PostScrobbleEpisodesRequestBody;
 var PostScrobbleEpisodesRequest = /** @class */ (function (_super) {
     __extends(PostScrobbleEpisodesRequest, _super);
     function PostScrobbleEpisodesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json", elemType: PostScrobbleEpisodesRequestBody }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json", elemType: PostScrobbleEpisodesRequestBody }),
         __metadata("design:type", Array)
     ], PostScrobbleEpisodesRequest.prototype, "request", void 0);
     return PostScrobbleEpisodesRequest;
-}(SpeakeasyBase));
-export { PostScrobbleEpisodesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostScrobbleEpisodesRequest = PostScrobbleEpisodesRequest;
 var PostScrobbleEpisodesResponse = /** @class */ (function (_super) {
     __extends(PostScrobbleEpisodesResponse, _super);
     function PostScrobbleEpisodesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PostScrobbleEpisodesResponse.prototype, "bulkResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostScrobbleEpisodesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostScrobbleEpisodesResponse.prototype, "statusCode", void 0);
     return PostScrobbleEpisodesResponse;
-}(SpeakeasyBase));
-export { PostScrobbleEpisodesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostScrobbleEpisodesResponse = PostScrobbleEpisodesResponse;

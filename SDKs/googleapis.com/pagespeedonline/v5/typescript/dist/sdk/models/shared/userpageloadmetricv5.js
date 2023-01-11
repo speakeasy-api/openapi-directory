@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Bucket } from "./bucket";
-// UserPageLoadMetricV5
-/**
- * A CrUX metric object for a single metric and form factor.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserPageLoadMetricV5 = void 0;
+var utils_1 = require("../../../internal/utils");
+var bucket_1 = require("./bucket");
 var UserPageLoadMetricV5 = /** @class */ (function (_super) {
     __extends(UserPageLoadMetricV5, _super);
     function UserPageLoadMetricV5() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], UserPageLoadMetricV5.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distributions", elemType: Bucket }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distributions", elemType: bucket_1.Bucket }),
         __metadata("design:type", Array)
     ], UserPageLoadMetricV5.prototype, "distributions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formFactor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formFactor" }),
         __metadata("design:type", String)
     ], UserPageLoadMetricV5.prototype, "formFactor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=median" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=median" }),
         __metadata("design:type", Number)
     ], UserPageLoadMetricV5.prototype, "median", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricId" }),
         __metadata("design:type", String)
     ], UserPageLoadMetricV5.prototype, "metricId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentile" }),
         __metadata("design:type", Number)
     ], UserPageLoadMetricV5.prototype, "percentile", void 0);
     return UserPageLoadMetricV5;
-}(SpeakeasyBase));
-export { UserPageLoadMetricV5 };
+}(utils_1.SpeakeasyBase));
+exports.UserPageLoadMetricV5 = UserPageLoadMetricV5;

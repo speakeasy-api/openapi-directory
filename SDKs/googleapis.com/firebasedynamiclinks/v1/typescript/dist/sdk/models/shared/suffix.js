@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SuffixOptionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Suffix = exports.SuffixOptionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SuffixOptionEnum;
 (function (SuffixOptionEnum) {
     SuffixOptionEnum["OptionUnspecified"] = "OPTION_UNSPECIFIED";
     SuffixOptionEnum["Unguessable"] = "UNGUESSABLE";
     SuffixOptionEnum["Short"] = "SHORT";
     SuffixOptionEnum["Custom"] = "CUSTOM";
-})(SuffixOptionEnum || (SuffixOptionEnum = {}));
+})(SuffixOptionEnum = exports.SuffixOptionEnum || (exports.SuffixOptionEnum = {}));
 // Suffix
 /**
  * Short Dynamic Link suffix.
@@ -40,13 +43,13 @@ var Suffix = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customSuffix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customSuffix" }),
         __metadata("design:type", String)
     ], Suffix.prototype, "customSuffix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=option" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=option" }),
         __metadata("design:type", String)
     ], Suffix.prototype, "option", void 0);
     return Suffix;
-}(SpeakeasyBase));
-export { Suffix };
+}(utils_1.SpeakeasyBase));
+exports.Suffix = Suffix;

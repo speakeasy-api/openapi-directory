@@ -61,15 +61,15 @@ export declare class GetEditorUrl500ApplicationJson extends SpeakeasyBase {
 }
 export declare class GetEditorUrlRequest extends SpeakeasyBase {
     queryParams: GetEditorUrlQueryParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class GetEditorUrlResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getEditorUrl200ApplicationJsonObject?: GetEditorUrl200ApplicationJson;
-    getEditorUrl401ApplicationJsonObject?: GetEditorUrl401ApplicationJson;
-    getEditorUrl403ApplicationJsonObject?: GetEditorUrl403ApplicationJson;
-    getEditorUrl404ApplicationJsonObject?: GetEditorUrl404ApplicationJson;
-    getEditorUrl422ApplicationJsonObject?: GetEditorUrl422ApplicationJson;
-    getEditorUrl500ApplicationJsonObject?: GetEditorUrl500ApplicationJson;
+    getEditorUrl200ApplicationJSONObject?: GetEditorUrl200ApplicationJson;
+    getEditorUrl401ApplicationJSONObject?: GetEditorUrl401ApplicationJson;
+    getEditorUrl403ApplicationJSONObject?: GetEditorUrl403ApplicationJson;
+    getEditorUrl404ApplicationJSONObject?: GetEditorUrl404ApplicationJson;
+    getEditorUrl422ApplicationJSONObject?: GetEditorUrl422ApplicationJson;
+    getEditorUrl500ApplicationJSONObject?: GetEditorUrl500ApplicationJson;
 }

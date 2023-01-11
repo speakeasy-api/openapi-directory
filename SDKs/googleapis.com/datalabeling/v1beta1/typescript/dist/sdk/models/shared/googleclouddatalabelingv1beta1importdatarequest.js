@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1InputConfig } from "./googleclouddatalabelingv1beta1inputconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1ImportDataRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1inputconfig_1 = require("./googleclouddatalabelingv1beta1inputconfig");
 // GoogleCloudDatalabelingV1beta1ImportDataRequest
 /**
  * Request message for ImportData API.
@@ -34,13 +37,13 @@ var GoogleCloudDatalabelingV1beta1ImportDataRequest = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputConfig" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1InputConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputConfig" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1inputconfig_1.GoogleCloudDatalabelingV1beta1InputConfig)
     ], GoogleCloudDatalabelingV1beta1ImportDataRequest.prototype, "inputConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userEmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userEmailAddress" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1ImportDataRequest.prototype, "userEmailAddress", void 0);
     return GoogleCloudDatalabelingV1beta1ImportDataRequest;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1ImportDataRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1ImportDataRequest = GoogleCloudDatalabelingV1beta1ImportDataRequest;

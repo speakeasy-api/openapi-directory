@@ -62,10 +62,10 @@ export class GetMostsharedSectionTimePeriodJsonResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getMostsharedSectionTimePeriodJson200ApplicationJsonObject?: GetMostsharedSectionTimePeriodJson200ApplicationJson;
+  getMostsharedSectionTimePeriodJSON200ApplicationJSONObject?: GetMostsharedSectionTimePeriodJson200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getMostsharedSectionTimePeriodJson400ApplicationJsonObject?: GetMostsharedSectionTimePeriodJson400ApplicationJson;
+  getMostsharedSectionTimePeriodJSON400ApplicationJSONObject?: GetMostsharedSectionTimePeriodJson400ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

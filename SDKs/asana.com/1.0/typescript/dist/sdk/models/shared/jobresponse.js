@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,45 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProjectCompact } from "./projectcompact";
-import { TaskCompact } from "./taskcompact";
-export var JobResponseStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobResponse = exports.JobResponseStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var projectcompact_1 = require("./projectcompact");
+var taskcompact_1 = require("./taskcompact");
+var JobResponseStatusEnum;
 (function (JobResponseStatusEnum) {
     JobResponseStatusEnum["NotStarted"] = "not_started";
     JobResponseStatusEnum["InProgress"] = "in_progress";
     JobResponseStatusEnum["Completed"] = "completed";
     JobResponseStatusEnum["Failed"] = "failed";
-})(JobResponseStatusEnum || (JobResponseStatusEnum = {}));
+})(JobResponseStatusEnum = exports.JobResponseStatusEnum || (exports.JobResponseStatusEnum = {}));
+// JobResponse
+/**
+ * A *job* is an object representing a process that handles asynchronous work.
+**/
 var JobResponse = /** @class */ (function (_super) {
     __extends(JobResponse, _super);
     function JobResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], JobResponse.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=new_project" }),
-        __metadata("design:type", ProjectCompact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=new_project" }),
+        __metadata("design:type", projectcompact_1.ProjectCompact)
     ], JobResponse.prototype, "newProject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=new_task" }),
-        __metadata("design:type", TaskCompact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=new_task" }),
+        __metadata("design:type", taskcompact_1.TaskCompact)
     ], JobResponse.prototype, "newTask", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_subtype" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_subtype" }),
         __metadata("design:type", String)
     ], JobResponse.prototype, "resourceSubtype", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], JobResponse.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], JobResponse.prototype, "status", void 0);
     return JobResponse;
-}(SpeakeasyBase));
-export { JobResponse };
+}(utils_1.SpeakeasyBase));
+exports.JobResponse = JobResponse;

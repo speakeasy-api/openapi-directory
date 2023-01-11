@@ -14,7 +14,7 @@ export class ProcessorStripeBankAccountTokenCreateResponse extends SpeakeasyBase
   contentType: string;
 
   @SpeakeasyMetadata()
-  processorStripeBankAccountTokenCreateResponse?: Map<string, any>;
+  processorStripeBankAccountTokenCreateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

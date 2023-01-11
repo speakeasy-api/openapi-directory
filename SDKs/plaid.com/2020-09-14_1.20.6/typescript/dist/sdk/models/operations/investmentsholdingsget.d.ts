@@ -5,6 +5,6 @@ export declare class InvestmentsHoldingsGetRequest extends SpeakeasyBase {
 }
 export declare class InvestmentsHoldingsGetResponse extends SpeakeasyBase {
     contentType: string;
-    investmentsHoldingsGetResponse?: Map<string, any>;
+    investmentsHoldingsGetResponse?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PodcastSimple } from "./podcastsimple";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CuratedListFull = void 0;
+var utils_1 = require("../../../internal/utils");
+var podcastsimple_1 = require("./podcastsimple");
 var CuratedListFull = /** @class */ (function (_super) {
     __extends(CuratedListFull, _super);
     function CuratedListFull() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CuratedListFull.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CuratedListFull.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listennotes_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listennotes_url" }),
         __metadata("design:type", String)
     ], CuratedListFull.prototype, "listennotesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=podcasts", elemType: PodcastSimple }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=podcasts", elemType: podcastsimple_1.PodcastSimple }),
         __metadata("design:type", Array)
     ], CuratedListFull.prototype, "podcasts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pub_date_ms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pub_date_ms" }),
         __metadata("design:type", Number)
     ], CuratedListFull.prototype, "pubDateMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source_domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_domain" }),
         __metadata("design:type", String)
     ], CuratedListFull.prototype, "sourceDomain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_url" }),
         __metadata("design:type", String)
     ], CuratedListFull.prototype, "sourceUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], CuratedListFull.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], CuratedListFull.prototype, "total", void 0);
     return CuratedListFull;
-}(SpeakeasyBase));
-export { CuratedListFull };
+}(utils_1.SpeakeasyBase));
+exports.CuratedListFull = CuratedListFull;

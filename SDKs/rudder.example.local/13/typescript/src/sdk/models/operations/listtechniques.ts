@@ -38,5 +38,5 @@ export class ListTechniquesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listTechniques200ApplicationJsonObject?: ListTechniques200ApplicationJson;
+  listTechniques200ApplicationJSONObject?: ListTechniques200ApplicationJson;
 }

@@ -13,5 +13,5 @@ export declare class CloneOrganizationSwitchDevicesRequest extends SpeakeasyBase
 export declare class CloneOrganizationSwitchDevicesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    cloneOrganizationSwitchDevices200ApplicationJsonObject?: Map<string, any>;
+    cloneOrganizationSwitchDevices200ApplicationJSONObject?: Record<string, any>;
 }

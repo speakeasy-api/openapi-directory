@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttributeKey } from "./attributekey";
-import { ObjectReference } from "./objectreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchCreateIndex = void 0;
+var utils_1 = require("../../../internal/utils");
+var attributekey_1 = require("./attributekey");
+var objectreference_1 = require("./objectreference");
 // BatchCreateIndex
 /**
  * Creates an index object inside of a <a>BatchRead</a> operation. For more information, see <a>CreateIndex</a> and <a>BatchReadRequest$Operations</a>.
@@ -35,25 +38,25 @@ var BatchCreateIndex = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BatchReferenceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BatchReferenceName" }),
         __metadata("design:type", String)
     ], BatchCreateIndex.prototype, "batchReferenceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsUnique" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsUnique" }),
         __metadata("design:type", Boolean)
     ], BatchCreateIndex.prototype, "isUnique", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LinkName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LinkName" }),
         __metadata("design:type", String)
     ], BatchCreateIndex.prototype, "linkName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OrderedIndexedAttributeList", elemType: AttributeKey }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OrderedIndexedAttributeList", elemType: attributekey_1.AttributeKey }),
         __metadata("design:type", Array)
     ], BatchCreateIndex.prototype, "orderedIndexedAttributeList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParentReference" }),
-        __metadata("design:type", ObjectReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParentReference" }),
+        __metadata("design:type", objectreference_1.ObjectReference)
     ], BatchCreateIndex.prototype, "parentReference", void 0);
     return BatchCreateIndex;
-}(SpeakeasyBase));
-export { BatchCreateIndex };
+}(utils_1.SpeakeasyBase));
+exports.BatchCreateIndex = BatchCreateIndex;

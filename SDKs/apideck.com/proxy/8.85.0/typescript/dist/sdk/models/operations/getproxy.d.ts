@@ -24,9 +24,8 @@ export declare class GetProxyRequest extends SpeakeasyBase {
 }
 export declare class GetProxyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
     statusCode: number;
-    getProxy200ApplicationJsonAny?: any;
-    getProxy401ApplicationJsonObject?: GetProxy401ApplicationJson;
-    getProxyDefaultApplicationJsonAny?: any;
+    getProxy200ApplicationJSONAny?: any;
+    getProxy401ApplicationJSONObject?: GetProxy401ApplicationJson;
+    getProxyDefaultApplicationJSONAny?: any;
 }

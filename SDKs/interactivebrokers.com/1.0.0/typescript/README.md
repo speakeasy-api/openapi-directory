@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { DeleteAccountsAccountOrdersCustomerOrderIdRequest, DeleteAccountsAccountOrdersCustomerOrderIdResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetAccountsRequest, GetAccountsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     cookieAuth: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -32,14 +31,13 @@ const sdk = new SDK(WithSecurity(
   }
 ));
     
-const req: DeleteAccountsAccountOrdersCustomerOrderIdRequest = {
-  pathParams: {
-    customerOrderId: "fuga",
-    account: "ut",
+const req: GetAccountsRequest = {
+  queryParams: {
+    account: "sit",
   },
 };
 
-sdk.sdk.deleteAccountsAccountOrdersCustomerOrderId(req).then((res: DeleteAccountsAccountOrdersCustomerOrderIdResponse | AxiosError) => {
+sdk.accountAndPortfolio.getAccounts(req).then((res: GetAccountsResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -48,20 +46,32 @@ sdk.sdk.deleteAccountsAccountOrdersCustomerOrderId(req).then((res: DeleteAccount
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Account & Portfolio
 
-* `deleteAccountsAccountOrdersCustomerOrderId` - Cancel Order
 * `getAccounts` - Brokerage Accounts
-* `getAccountsAccountOrders` - Open Orders
-* `getAccountsAccountOrdersCustomerOrderId` - Return specific order info
 * `getAccountsAccountPositions` - Account Positions
 * `getAccountsAccountSummary` - Account Values Summary
+
+### Market Data
+
 * `getMarketdataExchangeComponents` - Exchange Components
-* `postAccountsAccountOrderImpact` - Return margin impact info
-* `postAccountsAccountOrders` - Place Order
+
+### OAuth
+
 * `postOauthAccessToken` - Obtain a access token
 * `postOauthLiveSessionToken` - Obtain a live session token
 * `postOauthRequestToken` - Obtain a request token
+
+### Order Margin Requirements
+
+* `postAccountsAccountOrderImpact` - Return margin impact info
+
+### Orders
+
+* `deleteAccountsAccountOrdersCustomerOrderId` - Cancel Order
+* `getAccountsAccountOrders` - Open Orders
+* `getAccountsAccountOrdersCustomerOrderId` - Return specific order info
+* `postAccountsAccountOrders` - Place Order
 * `putAccountsAccountOrdersCustomerOrderId` - Modify Order
 
 <!-- End SDK Available Operations -->

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateRelationsResponse = exports.CreateRelationsRequest = exports.CreateRelations200ApplicationJson = exports.CreateRelationsRequestBody = exports.CreateRelationsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateRelationsPathParams = /** @class */ (function (_super) {
     __extends(CreateRelationsPathParams, _super);
     function CreateRelationsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=apiId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=apiId" }),
         __metadata("design:type", String)
     ], CreateRelationsPathParams.prototype, "apiId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=apiVersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=apiVersionId" }),
         __metadata("design:type", String)
     ], CreateRelationsPathParams.prototype, "apiVersionId", void 0);
     return CreateRelationsPathParams;
-}(SpeakeasyBase));
-export { CreateRelationsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateRelationsPathParams = CreateRelationsPathParams;
 var CreateRelationsRequestBody = /** @class */ (function (_super) {
     __extends(CreateRelationsRequestBody, _super);
     function CreateRelationsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contracttest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contracttest" }),
         __metadata("design:type", Array)
     ], CreateRelationsRequestBody.prototype, "contracttest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentation" }),
         __metadata("design:type", Array)
     ], CreateRelationsRequestBody.prototype, "documentation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mock" }),
         __metadata("design:type", Array)
     ], CreateRelationsRequestBody.prototype, "mock", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testsuite" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testsuite" }),
         __metadata("design:type", Array)
     ], CreateRelationsRequestBody.prototype, "testsuite", void 0);
     return CreateRelationsRequestBody;
-}(SpeakeasyBase));
-export { CreateRelationsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateRelationsRequestBody = CreateRelationsRequestBody;
 var CreateRelations200ApplicationJson = /** @class */ (function (_super) {
     __extends(CreateRelations200ApplicationJson, _super);
     function CreateRelations200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contracttest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contracttest" }),
         __metadata("design:type", Array)
     ], CreateRelations200ApplicationJson.prototype, "contracttest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentation" }),
         __metadata("design:type", Array)
     ], CreateRelations200ApplicationJson.prototype, "documentation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testsuite" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testsuite" }),
         __metadata("design:type", Array)
     ], CreateRelations200ApplicationJson.prototype, "testsuite", void 0);
     return CreateRelations200ApplicationJson;
-}(SpeakeasyBase));
-export { CreateRelations200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.CreateRelations200ApplicationJson = CreateRelations200ApplicationJson;
 var CreateRelationsRequest = /** @class */ (function (_super) {
     __extends(CreateRelationsRequest, _super);
     function CreateRelationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateRelationsPathParams)
     ], CreateRelationsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateRelationsRequestBody)
     ], CreateRelationsRequest.prototype, "request", void 0);
     return CreateRelationsRequest;
-}(SpeakeasyBase));
-export { CreateRelationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateRelationsRequest = CreateRelationsRequest;
 var CreateRelationsResponse = /** @class */ (function (_super) {
     __extends(CreateRelationsResponse, _super);
     function CreateRelationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateRelationsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateRelationsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateRelations200ApplicationJson)
-    ], CreateRelationsResponse.prototype, "createRelations200ApplicationJsonObject", void 0);
+    ], CreateRelationsResponse.prototype, "createRelations200ApplicationJSONObject", void 0);
     return CreateRelationsResponse;
-}(SpeakeasyBase));
-export { CreateRelationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateRelationsResponse = CreateRelationsResponse;

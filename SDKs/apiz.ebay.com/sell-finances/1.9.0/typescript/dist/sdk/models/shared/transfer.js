@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FundingSource } from "./fundingsource";
-import { Amount } from "./amount";
-import { TransferDetail } from "./transferdetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Transfer = void 0;
+var utils_1 = require("../../../internal/utils");
+var fundingsource_1 = require("./fundingsource");
+var amount_1 = require("./amount");
+var transferdetail_1 = require("./transferdetail");
 // Transfer
 /**
  * This type is the base response type used by TRANSFER transaction type that is returned in the response.
@@ -36,25 +39,25 @@ var Transfer = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fundingSource" }),
-        __metadata("design:type", FundingSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fundingSource" }),
+        __metadata("design:type", fundingsource_1.FundingSource)
     ], Transfer.prototype, "fundingSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionDate" }),
         __metadata("design:type", String)
     ], Transfer.prototype, "transactionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transferAmount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transferAmount" }),
+        __metadata("design:type", amount_1.Amount)
     ], Transfer.prototype, "transferAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transferDetail" }),
-        __metadata("design:type", TransferDetail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transferDetail" }),
+        __metadata("design:type", transferdetail_1.TransferDetail)
     ], Transfer.prototype, "transferDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transferId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transferId" }),
         __metadata("design:type", String)
     ], Transfer.prototype, "transferId", void 0);
     return Transfer;
-}(SpeakeasyBase));
-export { Transfer };
+}(utils_1.SpeakeasyBase));
+exports.Transfer = Transfer;

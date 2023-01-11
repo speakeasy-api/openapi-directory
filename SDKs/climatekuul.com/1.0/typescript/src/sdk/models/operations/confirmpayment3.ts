@@ -16,7 +16,7 @@ export class ConfirmPayment3RequestBody extends SpeakeasyBase {
   confirmPayment: string;
 
   @SpeakeasyMetadata({ data: "form, name=paymentID;" })
-  paymentId: number;
+  paymentID: number;
 
   @SpeakeasyMetadata({ data: "form, name=transaction_id;" })
   transactionId: string;
@@ -25,7 +25,7 @@ export class ConfirmPayment3RequestBody extends SpeakeasyBase {
 
 export class ConfirmPayment3Request extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" })
   request?: ConfirmPayment3RequestBody;

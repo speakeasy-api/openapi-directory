@@ -106,11 +106,11 @@ export declare class IticrRequest extends SpeakeasyBase {
 export declare class IticrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    iticr400ApplicationJsonObject?: Iticr400ApplicationJson;
-    iticr401ApplicationJsonObject?: Iticr401ApplicationJson;
-    iticr404ApplicationJsonObject?: Iticr404ApplicationJson;
-    iticr500ApplicationJsonObject?: Iticr500ApplicationJson;
-    iticr502ApplicationJsonObject?: Iticr502ApplicationJson;
-    iticr503ApplicationJsonObject?: Iticr503ApplicationJson;
-    iticr504ApplicationJsonObject?: Iticr504ApplicationJson;
+    iticr400ApplicationJSONObject?: Iticr400ApplicationJson;
+    iticr401ApplicationJSONObject?: Iticr401ApplicationJson;
+    iticr404ApplicationJSONObject?: Iticr404ApplicationJson;
+    iticr500ApplicationJSONObject?: Iticr500ApplicationJson;
+    iticr502ApplicationJSONObject?: Iticr502ApplicationJson;
+    iticr503ApplicationJSONObject?: Iticr503ApplicationJson;
+    iticr504ApplicationJSONObject?: Iticr504ApplicationJson;
 }

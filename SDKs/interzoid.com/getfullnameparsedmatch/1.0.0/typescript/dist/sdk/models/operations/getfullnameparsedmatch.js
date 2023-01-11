@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetfullnameparsedmatchResponse = exports.GetfullnameparsedmatchRequest = exports.Getfullnameparsedmatch200ApplicationJson = exports.GetfullnameparsedmatchQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetfullnameparsedmatchQueryParams = /** @class */ (function (_super) {
     __extends(GetfullnameparsedmatchQueryParams, _super);
     function GetfullnameparsedmatchQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=firstname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=firstname" }),
         __metadata("design:type", String)
     ], GetfullnameparsedmatchQueryParams.prototype, "firstname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=lastname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=lastname" }),
         __metadata("design:type", String)
     ], GetfullnameparsedmatchQueryParams.prototype, "lastname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=license" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=license" }),
         __metadata("design:type", String)
     ], GetfullnameparsedmatchQueryParams.prototype, "license", void 0);
     return GetfullnameparsedmatchQueryParams;
-}(SpeakeasyBase));
-export { GetfullnameparsedmatchQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetfullnameparsedmatchQueryParams = GetfullnameparsedmatchQueryParams;
 var Getfullnameparsedmatch200ApplicationJson = /** @class */ (function (_super) {
     __extends(Getfullnameparsedmatch200ApplicationJson, _super);
     function Getfullnameparsedmatch200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], Getfullnameparsedmatch200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Credits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Credits" }),
         __metadata("design:type", String)
     ], Getfullnameparsedmatch200ApplicationJson.prototype, "credits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Simkey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Simkey" }),
         __metadata("design:type", String)
     ], Getfullnameparsedmatch200ApplicationJson.prototype, "simkey", void 0);
     return Getfullnameparsedmatch200ApplicationJson;
-}(SpeakeasyBase));
-export { Getfullnameparsedmatch200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.Getfullnameparsedmatch200ApplicationJson = Getfullnameparsedmatch200ApplicationJson;
 var GetfullnameparsedmatchRequest = /** @class */ (function (_super) {
     __extends(GetfullnameparsedmatchRequest, _super);
     function GetfullnameparsedmatchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetfullnameparsedmatchQueryParams)
     ], GetfullnameparsedmatchRequest.prototype, "queryParams", void 0);
     return GetfullnameparsedmatchRequest;
-}(SpeakeasyBase));
-export { GetfullnameparsedmatchRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetfullnameparsedmatchRequest = GetfullnameparsedmatchRequest;
 var GetfullnameparsedmatchResponse = /** @class */ (function (_super) {
     __extends(GetfullnameparsedmatchResponse, _super);
     function GetfullnameparsedmatchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetfullnameparsedmatchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetfullnameparsedmatchResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Getfullnameparsedmatch200ApplicationJson)
-    ], GetfullnameparsedmatchResponse.prototype, "getfullnameparsedmatch200ApplicationJsonObject", void 0);
+    ], GetfullnameparsedmatchResponse.prototype, "getfullnameparsedmatch200ApplicationJSONObject", void 0);
     return GetfullnameparsedmatchResponse;
-}(SpeakeasyBase));
-export { GetfullnameparsedmatchResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetfullnameparsedmatchResponse = GetfullnameparsedmatchResponse;

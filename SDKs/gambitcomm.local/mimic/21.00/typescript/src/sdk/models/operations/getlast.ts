@@ -10,5 +10,5 @@ export class GetLastResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getLast200ApplicationJsonInt32Integer?: number;
+  getLast200ApplicationJSONInt32Integer?: number;
 }

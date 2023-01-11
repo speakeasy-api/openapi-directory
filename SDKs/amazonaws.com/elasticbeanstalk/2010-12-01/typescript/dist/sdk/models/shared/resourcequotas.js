@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceQuota } from "./resourcequota";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceQuotas = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcequota_1 = require("./resourcequota");
 // ResourceQuotas
 /**
  * A set of per-resource AWS Elastic Beanstalk quotas associated with an AWS account. They reflect Elastic Beanstalk resource limits for this account.
@@ -34,25 +37,25 @@ var ResourceQuotas = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ResourceQuota)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", resourcequota_1.ResourceQuota)
     ], ResourceQuotas.prototype, "applicationQuota", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ResourceQuota)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", resourcequota_1.ResourceQuota)
     ], ResourceQuotas.prototype, "applicationVersionQuota", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ResourceQuota)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", resourcequota_1.ResourceQuota)
     ], ResourceQuotas.prototype, "configurationTemplateQuota", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ResourceQuota)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", resourcequota_1.ResourceQuota)
     ], ResourceQuotas.prototype, "customPlatformQuota", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ResourceQuota)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", resourcequota_1.ResourceQuota)
     ], ResourceQuotas.prototype, "environmentQuota", void 0);
     return ResourceQuotas;
-}(SpeakeasyBase));
-export { ResourceQuotas };
+}(utils_1.SpeakeasyBase));
+exports.ResourceQuotas = ResourceQuotas;

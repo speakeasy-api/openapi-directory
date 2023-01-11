@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RolloutRuleComparatorEnum } from "./rolloutrulecomparatorenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RolloutRuleModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var rolloutrulecomparatorenum_1 = require("./rolloutrulecomparatorenum");
 var RolloutRuleModel = /** @class */ (function (_super) {
     __extends(RolloutRuleModel, _super);
     function RolloutRuleModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparator" }),
         __metadata("design:type", String)
     ], RolloutRuleModel.prototype, "comparator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparisonAttribute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparisonAttribute" }),
         __metadata("design:type", String)
     ], RolloutRuleModel.prototype, "comparisonAttribute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparisonValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparisonValue" }),
         __metadata("design:type", String)
     ], RolloutRuleModel.prototype, "comparisonValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", Object)
     ], RolloutRuleModel.prototype, "value", void 0);
     return RolloutRuleModel;
-}(SpeakeasyBase));
-export { RolloutRuleModel };
+}(utils_1.SpeakeasyBase));
+exports.RolloutRuleModel = RolloutRuleModel;

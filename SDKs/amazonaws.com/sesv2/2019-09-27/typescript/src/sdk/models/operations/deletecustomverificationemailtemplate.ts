@@ -49,7 +49,7 @@ export class DeleteCustomVerificationEmailTemplateResponse extends SpeakeasyBase
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteCustomVerificationEmailTemplateResponse?: Map<string, any>;
+  deleteCustomVerificationEmailTemplateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   notFoundException?: any;

@@ -16,7 +16,7 @@ export declare class GetIpSetRequest extends SpeakeasyBase {
 }
 export declare class GetIpSetResponse extends SpeakeasyBase {
     apiError?: shared.ApiError;
-    baseIpSet?: shared.BaseIpSet;
+    baseIPSet?: shared.BaseIpSet;
     contentType: string;
     statusCode: number;
 }

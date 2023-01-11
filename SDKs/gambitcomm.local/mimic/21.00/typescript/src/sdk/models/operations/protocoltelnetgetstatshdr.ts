@@ -10,5 +10,5 @@ export class ProtocolTelnetGetStatsHdrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTelnetGetStatsHdr200ApplicationJsonStrings?: string[];
+  protocolTelnetGetStatsHdr200ApplicationJSONStrings?: string[];
 }

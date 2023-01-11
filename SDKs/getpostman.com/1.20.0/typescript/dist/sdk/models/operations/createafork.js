@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateAForkResponse = exports.CreateAForkRequest = exports.CreateAForkRequestBody = exports.CreateAForkQueryParams = exports.CreateAForkPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateAForkPathParams = /** @class */ (function (_super) {
     __extends(CreateAForkPathParams, _super);
     function CreateAForkPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=collection_uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=collection_uid" }),
         __metadata("design:type", String)
     ], CreateAForkPathParams.prototype, "collectionUid", void 0);
     return CreateAForkPathParams;
-}(SpeakeasyBase));
-export { CreateAForkPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateAForkPathParams = CreateAForkPathParams;
 var CreateAForkQueryParams = /** @class */ (function (_super) {
     __extends(CreateAForkQueryParams, _super);
     function CreateAForkQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=workspace" }),
         __metadata("design:type", String)
     ], CreateAForkQueryParams.prototype, "workspace", void 0);
     return CreateAForkQueryParams;
-}(SpeakeasyBase));
-export { CreateAForkQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateAForkQueryParams = CreateAForkQueryParams;
 var CreateAForkRequestBody = /** @class */ (function (_super) {
     __extends(CreateAForkRequestBody, _super);
     function CreateAForkRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateAForkRequestBody.prototype, "name", void 0);
     return CreateAForkRequestBody;
-}(SpeakeasyBase));
-export { CreateAForkRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateAForkRequestBody = CreateAForkRequestBody;
 var CreateAForkRequest = /** @class */ (function (_super) {
     __extends(CreateAForkRequest, _super);
     function CreateAForkRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateAForkPathParams)
     ], CreateAForkRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateAForkQueryParams)
     ], CreateAForkRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateAForkRequestBody)
     ], CreateAForkRequest.prototype, "request", void 0);
     return CreateAForkRequest;
-}(SpeakeasyBase));
-export { CreateAForkRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateAForkRequest = CreateAForkRequest;
 var CreateAForkResponse = /** @class */ (function (_super) {
     __extends(CreateAForkResponse, _super);
     function CreateAForkResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateAForkResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateAForkResponse.prototype, "statusCode", void 0);
     return CreateAForkResponse;
-}(SpeakeasyBase));
-export { CreateAForkResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateAForkResponse = CreateAForkResponse;

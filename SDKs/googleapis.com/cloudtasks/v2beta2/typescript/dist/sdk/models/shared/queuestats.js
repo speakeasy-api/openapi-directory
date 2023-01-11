@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueueStats = void 0;
+var utils_1 = require("../../../internal/utils");
 // QueueStats
 /**
  * Statistics for a queue.
@@ -33,25 +36,25 @@ var QueueStats = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=concurrentDispatchesCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=concurrentDispatchesCount" }),
         __metadata("design:type", String)
     ], QueueStats.prototype, "concurrentDispatchesCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effectiveExecutionRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effectiveExecutionRate" }),
         __metadata("design:type", Number)
     ], QueueStats.prototype, "effectiveExecutionRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executedLastMinuteCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executedLastMinuteCount" }),
         __metadata("design:type", String)
     ], QueueStats.prototype, "executedLastMinuteCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oldestEstimatedArrivalTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oldestEstimatedArrivalTime" }),
         __metadata("design:type", String)
     ], QueueStats.prototype, "oldestEstimatedArrivalTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tasksCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tasksCount" }),
         __metadata("design:type", String)
     ], QueueStats.prototype, "tasksCount", void 0);
     return QueueStats;
-}(SpeakeasyBase));
-export { QueueStats };
+}(utils_1.SpeakeasyBase));
+exports.QueueStats = QueueStats;

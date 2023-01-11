@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationConfigTemplateSwitchProfilesResponse = exports.GetOrganizationConfigTemplateSwitchProfilesRequest = exports.GetOrganizationConfigTemplateSwitchProfilesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationConfigTemplateSwitchProfilesPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationConfigTemplateSwitchProfilesPathParams, _super);
     function GetOrganizationConfigTemplateSwitchProfilesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=configTemplateId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=configTemplateId" }),
         __metadata("design:type", String)
     ], GetOrganizationConfigTemplateSwitchProfilesPathParams.prototype, "configTemplateId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationConfigTemplateSwitchProfilesPathParams.prototype, "organizationId", void 0);
     return GetOrganizationConfigTemplateSwitchProfilesPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationConfigTemplateSwitchProfilesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationConfigTemplateSwitchProfilesPathParams = GetOrganizationConfigTemplateSwitchProfilesPathParams;
 var GetOrganizationConfigTemplateSwitchProfilesRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationConfigTemplateSwitchProfilesRequest, _super);
     function GetOrganizationConfigTemplateSwitchProfilesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationConfigTemplateSwitchProfilesPathParams)
     ], GetOrganizationConfigTemplateSwitchProfilesRequest.prototype, "pathParams", void 0);
     return GetOrganizationConfigTemplateSwitchProfilesRequest;
-}(SpeakeasyBase));
-export { GetOrganizationConfigTemplateSwitchProfilesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationConfigTemplateSwitchProfilesRequest = GetOrganizationConfigTemplateSwitchProfilesRequest;
 var GetOrganizationConfigTemplateSwitchProfilesResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationConfigTemplateSwitchProfilesResponse, _super);
     function GetOrganizationConfigTemplateSwitchProfilesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationConfigTemplateSwitchProfilesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationConfigTemplateSwitchProfilesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationConfigTemplateSwitchProfilesResponse.prototype, "getOrganizationConfigTemplateSwitchProfiles200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationConfigTemplateSwitchProfilesResponse.prototype, "getOrganizationConfigTemplateSwitchProfiles200ApplicationJSONObject", void 0);
     return GetOrganizationConfigTemplateSwitchProfilesResponse;
-}(SpeakeasyBase));
-export { GetOrganizationConfigTemplateSwitchProfilesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationConfigTemplateSwitchProfilesResponse = GetOrganizationConfigTemplateSwitchProfilesResponse;

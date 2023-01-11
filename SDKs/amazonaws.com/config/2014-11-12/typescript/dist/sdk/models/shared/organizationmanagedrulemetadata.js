@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MaximumExecutionFrequencyEnum } from "./maximumexecutionfrequencyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrganizationManagedRuleMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var maximumexecutionfrequencyenum_1 = require("./maximumexecutionfrequencyenum");
 // OrganizationManagedRuleMetadata
 /**
  * An object that specifies organization managed rule metadata such as resource type and ID of Amazon Web Services resource along with the rule identifier. It also provides the frequency with which you want Config to run evaluations for the rule if the trigger type is periodic.
@@ -34,37 +37,37 @@ var OrganizationManagedRuleMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], OrganizationManagedRuleMetadata.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InputParameters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InputParameters" }),
         __metadata("design:type", String)
     ], OrganizationManagedRuleMetadata.prototype, "inputParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaximumExecutionFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaximumExecutionFrequency" }),
         __metadata("design:type", String)
     ], OrganizationManagedRuleMetadata.prototype, "maximumExecutionFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceIdScope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceIdScope" }),
         __metadata("design:type", String)
     ], OrganizationManagedRuleMetadata.prototype, "resourceIdScope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceTypesScope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceTypesScope" }),
         __metadata("design:type", Array)
     ], OrganizationManagedRuleMetadata.prototype, "resourceTypesScope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleIdentifier" }),
         __metadata("design:type", String)
     ], OrganizationManagedRuleMetadata.prototype, "ruleIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TagKeyScope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TagKeyScope" }),
         __metadata("design:type", String)
     ], OrganizationManagedRuleMetadata.prototype, "tagKeyScope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TagValueScope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TagValueScope" }),
         __metadata("design:type", String)
     ], OrganizationManagedRuleMetadata.prototype, "tagValueScope", void 0);
     return OrganizationManagedRuleMetadata;
-}(SpeakeasyBase));
-export { OrganizationManagedRuleMetadata };
+}(utils_1.SpeakeasyBase));
+exports.OrganizationManagedRuleMetadata = OrganizationManagedRuleMetadata;

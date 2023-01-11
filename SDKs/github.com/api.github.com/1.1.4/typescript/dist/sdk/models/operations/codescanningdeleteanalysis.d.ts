@@ -22,6 +22,6 @@ export declare class CodeScanningDeleteAnalysisResponse extends SpeakeasyBase {
     statusCode: number;
     basicError?: shared.BasicError;
     codeScanningAnalysisDeletion?: shared.CodeScanningAnalysisDeletion;
-    codeScanningDeleteAnalysis503ApplicationJsonObject?: CodeScanningDeleteAnalysis503ApplicationJson;
+    codeScanningDeleteAnalysis503ApplicationJSONObject?: CodeScanningDeleteAnalysis503ApplicationJson;
     scimError?: shared.ScimError;
 }

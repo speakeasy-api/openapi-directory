@@ -1,4 +1,7 @@
-export var PlatformDifferenceEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlatformDifferenceEnum = void 0;
+var PlatformDifferenceEnum;
 (function (PlatformDifferenceEnum) {
     PlatformDifferenceEnum["Hypervisor"] = "Hypervisor";
     PlatformDifferenceEnum["NetworkInterface"] = "NetworkInterface";
@@ -6,4 +9,4 @@ export var PlatformDifferenceEnum;
     PlatformDifferenceEnum["InstanceStoreAvailability"] = "InstanceStoreAvailability";
     PlatformDifferenceEnum["VirtualizationType"] = "VirtualizationType";
     PlatformDifferenceEnum["Architecture"] = "Architecture";
-})(PlatformDifferenceEnum || (PlatformDifferenceEnum = {}));
+})(PlatformDifferenceEnum = exports.PlatformDifferenceEnum || (exports.PlatformDifferenceEnum = {}));

@@ -5,10 +5,10 @@ import * as shared from "../shared";
 
 export class CargoShipmentTrackingByAwbPrefixAndAwbNumberGetPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=aWBNumber" })
-  aWbNumber: string;
+  aWBNumber: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=aWBPrefix" })
-  aWbPrefix: string;
+  aWBPrefix: string;
 }
 
 
@@ -38,7 +38,7 @@ export class CargoShipmentTrackingByAwbPrefixAndAwbNumberGetRequest extends Spea
 
 export class CargoShipmentTrackingByAwbPrefixAndAwbNumberGetResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  cargoShipmentTrackingByAwbPrefixAndAwbNumberGet200ApplicationJsonObject?: Map<string, any>;
+  cargoShipmentTrackingByAWBPrefixAndAWBNumberGet200ApplicationJSONObject?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

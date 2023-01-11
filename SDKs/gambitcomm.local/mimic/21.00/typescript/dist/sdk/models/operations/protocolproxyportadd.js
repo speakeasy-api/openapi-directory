@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolProxyPortAddResponse = exports.ProtocolProxyPortAddRequest = exports.ProtocolProxyPortAddPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolProxyPortAddPathParams = /** @class */ (function (_super) {
     __extends(ProtocolProxyPortAddPathParams, _super);
     function ProtocolProxyPortAddPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolProxyPortAddPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=port" }),
         __metadata("design:type", Number)
     ], ProtocolProxyPortAddPathParams.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=target" }),
         __metadata("design:type", String)
     ], ProtocolProxyPortAddPathParams.prototype, "target", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=targetPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=targetPort" }),
         __metadata("design:type", Number)
     ], ProtocolProxyPortAddPathParams.prototype, "targetPort", void 0);
     return ProtocolProxyPortAddPathParams;
-}(SpeakeasyBase));
-export { ProtocolProxyPortAddPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolProxyPortAddPathParams = ProtocolProxyPortAddPathParams;
 var ProtocolProxyPortAddRequest = /** @class */ (function (_super) {
     __extends(ProtocolProxyPortAddRequest, _super);
     function ProtocolProxyPortAddRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolProxyPortAddPathParams)
     ], ProtocolProxyPortAddRequest.prototype, "pathParams", void 0);
     return ProtocolProxyPortAddRequest;
-}(SpeakeasyBase));
-export { ProtocolProxyPortAddRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolProxyPortAddRequest = ProtocolProxyPortAddRequest;
 var ProtocolProxyPortAddResponse = /** @class */ (function (_super) {
     __extends(ProtocolProxyPortAddResponse, _super);
     function ProtocolProxyPortAddResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolProxyPortAddResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolProxyPortAddResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolProxyPortAddResponse.prototype, "protocolProxyPortAdd200ApplicationJsonString", void 0);
+    ], ProtocolProxyPortAddResponse.prototype, "protocolProxyPortAdd200ApplicationJSONString", void 0);
     return ProtocolProxyPortAddResponse;
-}(SpeakeasyBase));
-export { ProtocolProxyPortAddResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolProxyPortAddResponse = ProtocolProxyPortAddResponse;

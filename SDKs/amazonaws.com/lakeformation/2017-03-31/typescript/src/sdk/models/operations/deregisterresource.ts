@@ -48,7 +48,7 @@ export class DeregisterResourceResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deregisterResourceResponse?: Map<string, any>;
+  deregisterResourceResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   entityNotFoundException?: any;

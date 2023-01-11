@@ -32,7 +32,7 @@ export class AppsGetInstallationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  appsGetInstallation415ApplicationJsonObject?: AppsGetInstallation415ApplicationJson;
+  appsGetInstallation415ApplicationJSONObject?: AppsGetInstallation415ApplicationJson;
 
   @SpeakeasyMetadata()
   basicError?: shared.BasicError;

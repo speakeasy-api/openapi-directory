@@ -40,5 +40,5 @@ export declare class CreateOrganizationSamlRoleRequest extends SpeakeasyBase {
 export declare class CreateOrganizationSamlRoleResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createOrganizationSamlRole201ApplicationJsonObject?: Map<string, any>;
+    createOrganizationSamlRole201ApplicationJSONObject?: Record<string, any>;
 }

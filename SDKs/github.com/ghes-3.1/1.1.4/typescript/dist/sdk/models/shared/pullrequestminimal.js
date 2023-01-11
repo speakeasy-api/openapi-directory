@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PullRequestMinimal = exports.PullRequestMinimalHead = exports.PullRequestMinimalHeadRepo = exports.PullRequestMinimalBase = exports.PullRequestMinimalBaseRepo = void 0;
+var utils_1 = require("../../../internal/utils");
 var PullRequestMinimalBaseRepo = /** @class */ (function (_super) {
     __extends(PullRequestMinimalBaseRepo, _super);
     function PullRequestMinimalBaseRepo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PullRequestMinimalBaseRepo.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PullRequestMinimalBaseRepo.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PullRequestMinimalBaseRepo.prototype, "url", void 0);
     return PullRequestMinimalBaseRepo;
-}(SpeakeasyBase));
-export { PullRequestMinimalBaseRepo };
+}(utils_1.SpeakeasyBase));
+exports.PullRequestMinimalBaseRepo = PullRequestMinimalBaseRepo;
 var PullRequestMinimalBase = /** @class */ (function (_super) {
     __extends(PullRequestMinimalBase, _super);
     function PullRequestMinimalBase() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ref" }),
         __metadata("design:type", String)
     ], PullRequestMinimalBase.prototype, "ref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repo" }),
         __metadata("design:type", PullRequestMinimalBaseRepo)
     ], PullRequestMinimalBase.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha" }),
         __metadata("design:type", String)
     ], PullRequestMinimalBase.prototype, "sha", void 0);
     return PullRequestMinimalBase;
-}(SpeakeasyBase));
-export { PullRequestMinimalBase };
+}(utils_1.SpeakeasyBase));
+exports.PullRequestMinimalBase = PullRequestMinimalBase;
 var PullRequestMinimalHeadRepo = /** @class */ (function (_super) {
     __extends(PullRequestMinimalHeadRepo, _super);
     function PullRequestMinimalHeadRepo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PullRequestMinimalHeadRepo.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PullRequestMinimalHeadRepo.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PullRequestMinimalHeadRepo.prototype, "url", void 0);
     return PullRequestMinimalHeadRepo;
-}(SpeakeasyBase));
-export { PullRequestMinimalHeadRepo };
+}(utils_1.SpeakeasyBase));
+exports.PullRequestMinimalHeadRepo = PullRequestMinimalHeadRepo;
 var PullRequestMinimalHead = /** @class */ (function (_super) {
     __extends(PullRequestMinimalHead, _super);
     function PullRequestMinimalHead() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ref" }),
         __metadata("design:type", String)
     ], PullRequestMinimalHead.prototype, "ref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repo" }),
         __metadata("design:type", PullRequestMinimalHeadRepo)
     ], PullRequestMinimalHead.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha" }),
         __metadata("design:type", String)
     ], PullRequestMinimalHead.prototype, "sha", void 0);
     return PullRequestMinimalHead;
-}(SpeakeasyBase));
-export { PullRequestMinimalHead };
+}(utils_1.SpeakeasyBase));
+exports.PullRequestMinimalHead = PullRequestMinimalHead;
 var PullRequestMinimal = /** @class */ (function (_super) {
     __extends(PullRequestMinimal, _super);
     function PullRequestMinimal() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=base" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=base" }),
         __metadata("design:type", PullRequestMinimalBase)
     ], PullRequestMinimal.prototype, "base", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=head" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=head" }),
         __metadata("design:type", PullRequestMinimalHead)
     ], PullRequestMinimal.prototype, "head", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PullRequestMinimal.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number" }),
         __metadata("design:type", Number)
     ], PullRequestMinimal.prototype, "number", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], PullRequestMinimal.prototype, "url", void 0);
     return PullRequestMinimal;
-}(SpeakeasyBase));
-export { PullRequestMinimal };
+}(utils_1.SpeakeasyBase));
+exports.PullRequestMinimal = PullRequestMinimal;

@@ -24,5 +24,5 @@ export declare class UpdateWorkspaceBundleResponse extends SpeakeasyBase {
     resourceNotFoundException?: any;
     resourceUnavailableException?: any;
     statusCode: number;
-    updateWorkspaceBundleResult?: Map<string, any>;
+    updateWorkspaceBundleResult?: Record<string, any>;
 }

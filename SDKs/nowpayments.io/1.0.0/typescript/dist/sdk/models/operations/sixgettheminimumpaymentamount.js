@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SixGetTheMinimumPaymentAmountResponse = exports.SixGetTheMinimumPaymentAmountRequest = exports.SixGetTheMinimumPaymentAmount200ApplicationJson = exports.SixGetTheMinimumPaymentAmountQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SixGetTheMinimumPaymentAmountQueryParams = /** @class */ (function (_super) {
     __extends(SixGetTheMinimumPaymentAmountQueryParams, _super);
     function SixGetTheMinimumPaymentAmountQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=currency_from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=currency_from" }),
         __metadata("design:type", String)
     ], SixGetTheMinimumPaymentAmountQueryParams.prototype, "currencyFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=currency_to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=currency_to" }),
         __metadata("design:type", String)
     ], SixGetTheMinimumPaymentAmountQueryParams.prototype, "currencyTo", void 0);
     return SixGetTheMinimumPaymentAmountQueryParams;
-}(SpeakeasyBase));
-export { SixGetTheMinimumPaymentAmountQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SixGetTheMinimumPaymentAmountQueryParams = SixGetTheMinimumPaymentAmountQueryParams;
 var SixGetTheMinimumPaymentAmount200ApplicationJson = /** @class */ (function (_super) {
     __extends(SixGetTheMinimumPaymentAmount200ApplicationJson, _super);
     function SixGetTheMinimumPaymentAmount200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency_from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency_from" }),
         __metadata("design:type", String)
     ], SixGetTheMinimumPaymentAmount200ApplicationJson.prototype, "currencyFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency_to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency_to" }),
         __metadata("design:type", String)
     ], SixGetTheMinimumPaymentAmount200ApplicationJson.prototype, "currencyTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=min_amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=min_amount" }),
         __metadata("design:type", Number)
     ], SixGetTheMinimumPaymentAmount200ApplicationJson.prototype, "minAmount", void 0);
     return SixGetTheMinimumPaymentAmount200ApplicationJson;
-}(SpeakeasyBase));
-export { SixGetTheMinimumPaymentAmount200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SixGetTheMinimumPaymentAmount200ApplicationJson = SixGetTheMinimumPaymentAmount200ApplicationJson;
 var SixGetTheMinimumPaymentAmountRequest = /** @class */ (function (_super) {
     __extends(SixGetTheMinimumPaymentAmountRequest, _super);
     function SixGetTheMinimumPaymentAmountRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SixGetTheMinimumPaymentAmountQueryParams)
     ], SixGetTheMinimumPaymentAmountRequest.prototype, "queryParams", void 0);
     return SixGetTheMinimumPaymentAmountRequest;
-}(SpeakeasyBase));
-export { SixGetTheMinimumPaymentAmountRequest };
+}(utils_1.SpeakeasyBase));
+exports.SixGetTheMinimumPaymentAmountRequest = SixGetTheMinimumPaymentAmountRequest;
 var SixGetTheMinimumPaymentAmountResponse = /** @class */ (function (_super) {
     __extends(SixGetTheMinimumPaymentAmountResponse, _super);
     function SixGetTheMinimumPaymentAmountResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SixGetTheMinimumPaymentAmount200ApplicationJson)
-    ], SixGetTheMinimumPaymentAmountResponse.prototype, "sixGetTheMinimumPaymentAmount200ApplicationJsonObject", void 0);
+    ], SixGetTheMinimumPaymentAmountResponse.prototype, "sixGetTheMinimumPaymentAmount200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SixGetTheMinimumPaymentAmountResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], SixGetTheMinimumPaymentAmountResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SixGetTheMinimumPaymentAmountResponse.prototype, "statusCode", void 0);
     return SixGetTheMinimumPaymentAmountResponse;
-}(SpeakeasyBase));
-export { SixGetTheMinimumPaymentAmountResponse };
+}(utils_1.SpeakeasyBase));
+exports.SixGetTheMinimumPaymentAmountResponse = SixGetTheMinimumPaymentAmountResponse;

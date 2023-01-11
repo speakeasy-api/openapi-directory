@@ -31,8 +31,8 @@ export declare class BookingHotels200ApplicationJson extends SpeakeasyBase {
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -44,5 +44,5 @@ export declare class BookingHotelsRequest extends SpeakeasyBase {
 export declare class BookingHotelsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    bookingHotels200ApplicationJsonObject?: BookingHotels200ApplicationJson;
+    bookingHotels200ApplicationJSONObject?: BookingHotels200ApplicationJson;
 }

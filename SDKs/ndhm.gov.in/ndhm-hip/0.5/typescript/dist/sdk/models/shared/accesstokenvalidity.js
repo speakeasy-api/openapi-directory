@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PatientAuthPurposeEnum } from "./patientauthpurposeenum";
-import { PatientAuthRequester } from "./patientauthrequester";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccessTokenValidity = void 0;
+var utils_1 = require("../../../internal/utils");
+var patientauthpurposeenum_1 = require("./patientauthpurposeenum");
+var patientauthrequester_1 = require("./patientauthrequester");
 var AccessTokenValidity = /** @class */ (function (_super) {
     __extends(AccessTokenValidity, _super);
     function AccessTokenValidity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expiry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expiry" }),
         __metadata("design:type", Date)
     ], AccessTokenValidity.prototype, "expiry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], AccessTokenValidity.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purpose" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purpose" }),
         __metadata("design:type", String)
     ], AccessTokenValidity.prototype, "purpose", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requester" }),
-        __metadata("design:type", PatientAuthRequester)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requester" }),
+        __metadata("design:type", patientauthrequester_1.PatientAuthRequester)
     ], AccessTokenValidity.prototype, "requester", void 0);
     return AccessTokenValidity;
-}(SpeakeasyBase));
-export { AccessTokenValidity };
+}(utils_1.SpeakeasyBase));
+exports.AccessTokenValidity = AccessTokenValidity;

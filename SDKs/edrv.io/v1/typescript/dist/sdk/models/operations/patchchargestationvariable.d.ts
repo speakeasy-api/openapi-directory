@@ -17,7 +17,7 @@ export declare class PatchChargeStationVariableRequestBody extends SpeakeasyBase
 export declare class PatchChargeStationVariable201ApplicationJson extends SpeakeasyBase {
     message?: string;
     ok?: boolean;
-    result?: Map<string, any>;
+    result?: Record<string, any>;
 }
 export declare class PatchChargeStationVariableRequest extends SpeakeasyBase {
     pathParams: PatchChargeStationVariablePathParams;
@@ -26,5 +26,5 @@ export declare class PatchChargeStationVariableRequest extends SpeakeasyBase {
 export declare class PatchChargeStationVariableResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    patchChargeStationVariable201ApplicationJsonObject?: PatchChargeStationVariable201ApplicationJson;
+    patchChargeStationVariable201ApplicationJSONObject?: PatchChargeStationVariable201ApplicationJson;
 }

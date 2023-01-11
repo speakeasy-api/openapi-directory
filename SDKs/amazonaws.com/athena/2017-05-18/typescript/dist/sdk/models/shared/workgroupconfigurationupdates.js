@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EngineVersion } from "./engineversion";
-import { ResultConfigurationUpdates } from "./resultconfigurationupdates";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkGroupConfigurationUpdates = void 0;
+var utils_1 = require("../../../internal/utils");
+var engineversion_1 = require("./engineversion");
+var resultconfigurationupdates_1 = require("./resultconfigurationupdates");
 // WorkGroupConfigurationUpdates
 /**
  * The configuration information that will be updated for this workgroup, which includes the location in Amazon S3 where query results are stored, the encryption option, if any, used for query results, whether the Amazon CloudWatch Metrics are enabled for the workgroup, whether the workgroup settings override the client-side settings, and the data usage limit for the amount of bytes scanned per query, if it is specified.
@@ -35,33 +38,33 @@ var WorkGroupConfigurationUpdates = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BytesScannedCutoffPerQuery" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BytesScannedCutoffPerQuery" }),
         __metadata("design:type", Number)
     ], WorkGroupConfigurationUpdates.prototype, "bytesScannedCutoffPerQuery", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EnforceWorkGroupConfiguration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EnforceWorkGroupConfiguration" }),
         __metadata("design:type", Boolean)
     ], WorkGroupConfigurationUpdates.prototype, "enforceWorkGroupConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EngineVersion" }),
-        __metadata("design:type", EngineVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EngineVersion" }),
+        __metadata("design:type", engineversion_1.EngineVersion)
     ], WorkGroupConfigurationUpdates.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PublishCloudWatchMetricsEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PublishCloudWatchMetricsEnabled" }),
         __metadata("design:type", Boolean)
     ], WorkGroupConfigurationUpdates.prototype, "publishCloudWatchMetricsEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RemoveBytesScannedCutoffPerQuery" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RemoveBytesScannedCutoffPerQuery" }),
         __metadata("design:type", Boolean)
     ], WorkGroupConfigurationUpdates.prototype, "removeBytesScannedCutoffPerQuery", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequesterPaysEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequesterPaysEnabled" }),
         __metadata("design:type", Boolean)
     ], WorkGroupConfigurationUpdates.prototype, "requesterPaysEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResultConfigurationUpdates" }),
-        __metadata("design:type", ResultConfigurationUpdates)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResultConfigurationUpdates" }),
+        __metadata("design:type", resultconfigurationupdates_1.ResultConfigurationUpdates)
     ], WorkGroupConfigurationUpdates.prototype, "resultConfigurationUpdates", void 0);
     return WorkGroupConfigurationUpdates;
-}(SpeakeasyBase));
-export { WorkGroupConfigurationUpdates };
+}(utils_1.SpeakeasyBase));
+exports.WorkGroupConfigurationUpdates = WorkGroupConfigurationUpdates;

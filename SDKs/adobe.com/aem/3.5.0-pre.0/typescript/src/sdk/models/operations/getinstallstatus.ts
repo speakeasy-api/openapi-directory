@@ -14,5 +14,5 @@ export class GetInstallStatusResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getInstallStatusDefaultApplicationJsonString?: string;
+  getInstallStatusDefaultApplicationJSONString?: string;
 }

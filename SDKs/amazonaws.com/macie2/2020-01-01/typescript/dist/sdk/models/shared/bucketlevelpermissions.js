@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccessControlList } from "./accesscontrollist";
-import { BlockPublicAccess } from "./blockpublicaccess";
-import { BucketPolicy } from "./bucketpolicy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BucketLevelPermissions = void 0;
+var utils_1 = require("../../../internal/utils");
+var accesscontrollist_1 = require("./accesscontrollist");
+var blockpublicaccess_1 = require("./blockpublicaccess");
+var bucketpolicy_1 = require("./bucketpolicy");
 // BucketLevelPermissions
 /**
  * Provides information about the bucket-level permissions settings for an S3 bucket.
@@ -36,17 +39,17 @@ var BucketLevelPermissions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessControlList" }),
-        __metadata("design:type", AccessControlList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessControlList" }),
+        __metadata("design:type", accesscontrollist_1.AccessControlList)
     ], BucketLevelPermissions.prototype, "accessControlList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blockPublicAccess" }),
-        __metadata("design:type", BlockPublicAccess)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blockPublicAccess" }),
+        __metadata("design:type", blockpublicaccess_1.BlockPublicAccess)
     ], BucketLevelPermissions.prototype, "blockPublicAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketPolicy" }),
-        __metadata("design:type", BucketPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketPolicy" }),
+        __metadata("design:type", bucketpolicy_1.BucketPolicy)
     ], BucketLevelPermissions.prototype, "bucketPolicy", void 0);
     return BucketLevelPermissions;
-}(SpeakeasyBase));
-export { BucketLevelPermissions };
+}(utils_1.SpeakeasyBase));
+exports.BucketLevelPermissions = BucketLevelPermissions;

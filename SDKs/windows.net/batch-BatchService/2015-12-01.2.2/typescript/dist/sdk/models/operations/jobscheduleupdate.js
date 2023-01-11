@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobScheduleUpdateResponse = exports.JobScheduleUpdateRequest = exports.JobScheduleUpdateHeaders = exports.JobScheduleUpdateQueryParams = exports.JobScheduleUpdatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var JobScheduleUpdatePathParams = /** @class */ (function (_super) {
     __extends(JobScheduleUpdatePathParams, _super);
     function JobScheduleUpdatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=jobScheduleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=jobScheduleId" }),
         __metadata("design:type", String)
     ], JobScheduleUpdatePathParams.prototype, "jobScheduleId", void 0);
     return JobScheduleUpdatePathParams;
-}(SpeakeasyBase));
-export { JobScheduleUpdatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.JobScheduleUpdatePathParams = JobScheduleUpdatePathParams;
 var JobScheduleUpdateQueryParams = /** @class */ (function (_super) {
     __extends(JobScheduleUpdateQueryParams, _super);
     function JobScheduleUpdateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], JobScheduleUpdateQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], JobScheduleUpdateQueryParams.prototype, "timeout", void 0);
     return JobScheduleUpdateQueryParams;
-}(SpeakeasyBase));
-export { JobScheduleUpdateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.JobScheduleUpdateQueryParams = JobScheduleUpdateQueryParams;
 var JobScheduleUpdateHeaders = /** @class */ (function (_super) {
     __extends(JobScheduleUpdateHeaders, _super);
     function JobScheduleUpdateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Match" }),
         __metadata("design:type", String)
     ], JobScheduleUpdateHeaders.prototype, "ifMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
         __metadata("design:type", String)
     ], JobScheduleUpdateHeaders.prototype, "ifModifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-None-Match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-None-Match" }),
         __metadata("design:type", String)
     ], JobScheduleUpdateHeaders.prototype, "ifNoneMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
         __metadata("design:type", String)
     ], JobScheduleUpdateHeaders.prototype, "ifUnmodifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], JobScheduleUpdateHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], JobScheduleUpdateHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], JobScheduleUpdateHeaders.prototype, "returnClientRequestId", void 0);
     return JobScheduleUpdateHeaders;
-}(SpeakeasyBase));
-export { JobScheduleUpdateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.JobScheduleUpdateHeaders = JobScheduleUpdateHeaders;
 var JobScheduleUpdateRequest = /** @class */ (function (_super) {
     __extends(JobScheduleUpdateRequest, _super);
     function JobScheduleUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JobScheduleUpdatePathParams)
     ], JobScheduleUpdateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JobScheduleUpdateQueryParams)
     ], JobScheduleUpdateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JobScheduleUpdateHeaders)
     ], JobScheduleUpdateRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], JobScheduleUpdateRequest.prototype, "request", void 0);
     return JobScheduleUpdateRequest;
-}(SpeakeasyBase));
-export { JobScheduleUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.JobScheduleUpdateRequest = JobScheduleUpdateRequest;
 var JobScheduleUpdateResponse = /** @class */ (function (_super) {
     __extends(JobScheduleUpdateResponse, _super);
     function JobScheduleUpdateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], JobScheduleUpdateResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], JobScheduleUpdateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], JobScheduleUpdateResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], JobScheduleUpdateResponse.prototype, "statusCode", void 0);
     return JobScheduleUpdateResponse;
-}(SpeakeasyBase));
-export { JobScheduleUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.JobScheduleUpdateResponse = JobScheduleUpdateResponse;

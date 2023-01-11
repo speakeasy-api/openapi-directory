@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -31,15 +31,17 @@ export class OdWeather {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1.0/compareStation/{stationName}/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1.0/compareStation/{stationName}/", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -51,7 +53,6 @@ export class OdWeather {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -67,15 +68,17 @@ export class OdWeather {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1.0/getAemetStation/{stationName}/{period}/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1.0/getAemetStation/{stationName}/{period}/", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -87,7 +90,6 @@ export class OdWeather {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -103,10 +105,10 @@ export class OdWeather {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1.0/getEasyWind/{easywindId}/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1.0/getEasyWind/{easywindId}/", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -114,12 +116,14 @@ export class OdWeather {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -131,7 +135,6 @@ export class OdWeather {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -147,15 +150,17 @@ export class OdWeather {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1.0/getEventStations/{eventId}/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1.0/getEventStations/{eventId}/", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -167,7 +172,6 @@ export class OdWeather {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -183,15 +187,17 @@ export class OdWeather {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1.0/getForecastPoints/{yatchclubid}/language/{language}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1.0/getForecastPoints/{yatchclubid}/language/{language}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -203,7 +209,6 @@ export class OdWeather {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -219,10 +224,10 @@ export class OdWeather {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1.0/getForecastTimeSeries/{latitude}/{longitude}/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1.0/getForecastTimeSeries/{latitude}/{longitude}/", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -230,12 +235,14 @@ export class OdWeather {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -247,7 +254,6 @@ export class OdWeather {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -263,10 +269,10 @@ export class OdWeather {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1.0/getForecastTimeSeriesWrf/{latitude}/{longitude}/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1.0/getForecastTimeSeriesWrf/{latitude}/{longitude}/", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -274,12 +280,14 @@ export class OdWeather {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -291,7 +299,6 @@ export class OdWeather {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -307,15 +314,17 @@ export class OdWeather {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1.0/getSocibWeatherStation/{stationName}/{period}/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1.0/getSocibWeatherStation/{stationName}/{period}/", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -327,7 +336,6 @@ export class OdWeather {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -343,10 +351,10 @@ export class OdWeather {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/v1.0/getWeatherDisplay/{stationName}/", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/v1.0/getWeatherDisplay/{stationName}/", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -354,12 +362,14 @@ export class OdWeather {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -371,7 +381,6 @@ export class OdWeather {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -385,12 +394,14 @@ export class OdWeather {
     const url: string = baseURL.replace(/\/$/, "") + "/v1.0/getWebCams/";
     
     const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
@@ -402,7 +413,6 @@ export class OdWeather {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
 }

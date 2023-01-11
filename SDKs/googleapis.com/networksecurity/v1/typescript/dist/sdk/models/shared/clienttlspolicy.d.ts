@@ -8,7 +8,7 @@ export declare class ClientTlsPolicy extends SpeakeasyBase {
     clientCertificate?: GoogleCloudNetworksecurityV1CertificateProvider;
     createTime?: string;
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     serverValidationCa?: ValidationCa[];
     sni?: string;
@@ -20,7 +20,7 @@ export declare class ClientTlsPolicy extends SpeakeasyBase {
 export declare class ClientTlsPolicyInput extends SpeakeasyBase {
     clientCertificate?: GoogleCloudNetworksecurityV1CertificateProvider;
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     serverValidationCa?: ValidationCa[];
     sni?: string;

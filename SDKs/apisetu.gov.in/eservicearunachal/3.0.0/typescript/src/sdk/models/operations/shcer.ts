@@ -191,23 +191,23 @@ export class ShcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  shcer400ApplicationJsonObject?: Shcer400ApplicationJson;
+  shcer400ApplicationJSONObject?: Shcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  shcer401ApplicationJsonObject?: Shcer401ApplicationJson;
+  shcer401ApplicationJSONObject?: Shcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  shcer404ApplicationJsonObject?: Shcer404ApplicationJson;
+  shcer404ApplicationJSONObject?: Shcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  shcer500ApplicationJsonObject?: Shcer500ApplicationJson;
+  shcer500ApplicationJSONObject?: Shcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  shcer502ApplicationJsonObject?: Shcer502ApplicationJson;
+  shcer502ApplicationJSONObject?: Shcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  shcer503ApplicationJsonObject?: Shcer503ApplicationJson;
+  shcer503ApplicationJSONObject?: Shcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  shcer504ApplicationJsonObject?: Shcer504ApplicationJson;
+  shcer504ApplicationJSONObject?: Shcer504ApplicationJson;
 }

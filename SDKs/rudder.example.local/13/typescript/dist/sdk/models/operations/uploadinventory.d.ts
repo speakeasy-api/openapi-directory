@@ -29,5 +29,5 @@ export declare class UploadInventoryRequest extends SpeakeasyBase {
 export declare class UploadInventoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    uploadInventory200ApplicationJsonObject?: UploadInventory200ApplicationJson;
+    uploadInventory200ApplicationJSONObject?: UploadInventory200ApplicationJson;
 }

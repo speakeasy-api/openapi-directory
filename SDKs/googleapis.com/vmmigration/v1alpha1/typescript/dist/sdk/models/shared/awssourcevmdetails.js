@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AwsSourceVmDetailsFirmwareEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AwsSourceVmDetails = exports.AwsSourceVmDetailsFirmwareEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AwsSourceVmDetailsFirmwareEnum;
 (function (AwsSourceVmDetailsFirmwareEnum) {
     AwsSourceVmDetailsFirmwareEnum["FirmwareUnspecified"] = "FIRMWARE_UNSPECIFIED";
     AwsSourceVmDetailsFirmwareEnum["Efi"] = "EFI";
     AwsSourceVmDetailsFirmwareEnum["Bios"] = "BIOS";
-})(AwsSourceVmDetailsFirmwareEnum || (AwsSourceVmDetailsFirmwareEnum = {}));
+})(AwsSourceVmDetailsFirmwareEnum = exports.AwsSourceVmDetailsFirmwareEnum || (exports.AwsSourceVmDetailsFirmwareEnum = {}));
 // AwsSourceVmDetails
 /**
  * Represent the source AWS VM details.
@@ -39,13 +42,13 @@ var AwsSourceVmDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committedStorageBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committedStorageBytes" }),
         __metadata("design:type", String)
     ], AwsSourceVmDetails.prototype, "committedStorageBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firmware" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firmware" }),
         __metadata("design:type", String)
     ], AwsSourceVmDetails.prototype, "firmware", void 0);
     return AwsSourceVmDetails;
-}(SpeakeasyBase));
-export { AwsSourceVmDetails };
+}(utils_1.SpeakeasyBase));
+exports.AwsSourceVmDetails = AwsSourceVmDetails;

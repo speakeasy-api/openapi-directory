@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseResponse = exports.EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequest = exports.EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequestBody = exports.EnterpriseAdminSetSelfHostedRunnersInGroupForEnterprisePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseAdminSetSelfHostedRunnersInGroupForEnterprisePathParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSetSelfHostedRunnersInGroupForEnterprisePathParams, _super);
     function EnterpriseAdminSetSelfHostedRunnersInGroupForEnterprisePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=enterprise" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=enterprise" }),
         __metadata("design:type", String)
     ], EnterpriseAdminSetSelfHostedRunnersInGroupForEnterprisePathParams.prototype, "enterprise", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=runner_group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=runner_group_id" }),
         __metadata("design:type", Number)
     ], EnterpriseAdminSetSelfHostedRunnersInGroupForEnterprisePathParams.prototype, "runnerGroupId", void 0);
     return EnterpriseAdminSetSelfHostedRunnersInGroupForEnterprisePathParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminSetSelfHostedRunnersInGroupForEnterprisePathParams };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSetSelfHostedRunnersInGroupForEnterprisePathParams = EnterpriseAdminSetSelfHostedRunnersInGroupForEnterprisePathParams;
 var EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequestBody = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequestBody, _super);
     function EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runners" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runners" }),
         __metadata("design:type", Array)
     ], EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequestBody.prototype, "runners", void 0);
     return EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequestBody;
-}(SpeakeasyBase));
-export { EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequestBody = EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequestBody;
 var EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequest, _super);
     function EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminSetSelfHostedRunnersInGroupForEnterprisePathParams)
     ], EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequestBody)
     ], EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequest.prototype, "request", void 0);
     return EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequest = EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequest;
 var EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseResponse, _super);
     function EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseResponse.prototype, "statusCode", void 0);
     return EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseResponse = EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseResponse;

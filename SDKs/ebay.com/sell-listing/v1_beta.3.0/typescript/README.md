@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateItemDraftRequest, CreateItemDraftResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,60 +33,54 @@ const req: CreateItemDraftRequest = {
     },
   },
   headers: {
-    contentLanguage: "placeat",
-    xEbayCMarketplaceId: "cum",
+    contentLanguage: "sit",
+    xEBAYCMARKETPLACEID: "voluptas",
   },
   request: {
-    categoryId: "qui",
+    categoryId: "culpa",
     charity: {
-      charityId: "laudantium",
-      donationPercentage: "perspiciatis",
+      charityId: "expedita",
+      donationPercentage: "consequuntur",
     },
-    condition: "enim",
-    format: "deleniti",
+    condition: "dolor",
+    format: "expedita",
     pricingSummary: {
       auctionReservePrice: {
-        currency: "rerum",
-        value: "aspernatur",
+        currency: "voluptas",
+        value: "fugit",
       },
       auctionStartPrice: {
-        currency: "dicta",
-        value: "veritatis",
+        currency: "et",
+        value: "nihil",
       },
       price: {
-        currency: "unde",
-        value: "consequatur",
+        currency: "rerum",
+        value: "dicta",
       },
     },
     product: {
       aspects: [
         {
-          name: "est",
+          name: "voluptatum",
           values: [
-            "quia",
-            "occaecati",
-          ],
-        },
-        {
-          name: "veritatis",
-          values: [
-            "voluptates",
-            "at",
+            "ut",
           ],
         },
       ],
-      brand: "repellendus",
-      description: "fuga",
-      epid: "sequi",
+      brand: "dolorem",
+      description: "et",
+      epid: "voluptate",
       imageUrls: [
-        "ratione",
+        "vitae",
+        "totam",
+        "dolores",
       ],
-      title: "ipsam",
+      title: "illum",
     },
   },
 };
 
-sdk.sdk.createItemDraft(req).then((res: CreateItemDraftResponse | AxiosError) => {
+sdk.itemDraft.createItemDraft(req).then((res: CreateItemDraftResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -96,7 +89,7 @@ sdk.sdk.createItemDraft(req).then((res: CreateItemDraftResponse | AxiosError) =>
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### item_draft
 
 * `createItemDraft` - This call gives Partners the ability to create an eBay draft of a item for their seller using information from their site. This lets the Partner increase the exposure of items on their site and leverage the eBay user listing experience seamlessly. This experience provides guidance on pricing, aspects, etc. and recommendations that help create a listing that is complete and improves the exposure of the listing in search results. After the listing draft is created, the seller logs into their eBay account and uses the listing experience to finish the listing and publish the item on eBay.
 

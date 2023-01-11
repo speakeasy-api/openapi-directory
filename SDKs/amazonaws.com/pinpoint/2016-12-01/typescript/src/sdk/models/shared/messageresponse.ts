@@ -13,11 +13,11 @@ export class MessageResponse extends SpeakeasyBase {
   applicationId: string;
 
   @SpeakeasyMetadata({ data: "json, name=EndpointResult", elemType: EndpointMessageResult })
-  endpointResult?: Map<string, EndpointMessageResult>;
+  endpointResult?: Record<string, EndpointMessageResult>;
 
   @SpeakeasyMetadata({ data: "json, name=RequestId" })
   requestId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Result", elemType: MessageResult })
-  result?: Map<string, MessageResult>;
+  result?: Record<string, MessageResult>;
 }

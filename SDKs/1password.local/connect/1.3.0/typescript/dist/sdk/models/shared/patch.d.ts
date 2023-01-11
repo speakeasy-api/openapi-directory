@@ -7,5 +7,5 @@ export declare enum PatchOpEnum {
 export declare class Patch extends SpeakeasyBase {
     op: PatchOpEnum;
     path: string;
-    value?: Map<string, any>;
+    value?: Record<string, any>;
 }

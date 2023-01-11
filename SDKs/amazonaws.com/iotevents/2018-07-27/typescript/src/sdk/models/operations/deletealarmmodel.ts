@@ -46,7 +46,7 @@ export class DeleteAlarmModelResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteAlarmModelResponse?: Map<string, any>;
+  deleteAlarmModelResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalFailureException?: any;

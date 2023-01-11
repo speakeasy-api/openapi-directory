@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BlockDeviceMapping } from "./blockdevicemapping";
-import { InstanceMonitoring } from "./instancemonitoring";
-import { InstanceMetadataOptions } from "./instancemetadataoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LaunchConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var blockdevicemapping_1 = require("./blockdevicemapping");
+var instancemonitoring_1 = require("./instancemonitoring");
+var instancemetadataoptions_1 = require("./instancemetadataoptions");
 // LaunchConfiguration
 /**
  * Describes a launch configuration.
@@ -36,85 +39,85 @@ var LaunchConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], LaunchConfiguration.prototype, "associatePublicIpAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: BlockDeviceMapping }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: blockdevicemapping_1.BlockDeviceMapping }),
         __metadata("design:type", Array)
     ], LaunchConfiguration.prototype, "blockDeviceMappings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], LaunchConfiguration.prototype, "classicLinkVpcId", void 0);
+    ], LaunchConfiguration.prototype, "classicLinkVPCId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], LaunchConfiguration.prototype, "classicLinkVpcSecurityGroups", void 0);
+    ], LaunchConfiguration.prototype, "classicLinkVPCSecurityGroups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], LaunchConfiguration.prototype, "createdTime", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], LaunchConfiguration.prototype, "ebsOptimized", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LaunchConfiguration.prototype, "iamInstanceProfile", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LaunchConfiguration.prototype, "imageId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", InstanceMonitoring)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", instancemonitoring_1.InstanceMonitoring)
     ], LaunchConfiguration.prototype, "instanceMonitoring", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LaunchConfiguration.prototype, "instanceType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LaunchConfiguration.prototype, "kernelId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LaunchConfiguration.prototype, "keyName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], LaunchConfiguration.prototype, "launchConfigurationArn", void 0);
+    ], LaunchConfiguration.prototype, "launchConfigurationARN", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LaunchConfiguration.prototype, "launchConfigurationName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", InstanceMetadataOptions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", instancemetadataoptions_1.InstanceMetadataOptions)
     ], LaunchConfiguration.prototype, "metadataOptions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LaunchConfiguration.prototype, "placementTenancy", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LaunchConfiguration.prototype, "ramdiskId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], LaunchConfiguration.prototype, "securityGroups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LaunchConfiguration.prototype, "spotPrice", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LaunchConfiguration.prototype, "userData", void 0);
     return LaunchConfiguration;
-}(SpeakeasyBase));
-export { LaunchConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.LaunchConfiguration = LaunchConfiguration;

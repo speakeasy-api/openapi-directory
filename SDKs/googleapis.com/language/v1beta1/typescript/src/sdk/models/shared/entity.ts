@@ -23,7 +23,7 @@ export class Entity extends SpeakeasyBase {
   mentions?: EntityMention[];
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, string>;
+  metadata?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ServicedirectoryProjectsLocationsListRequest, ServicedirectoryProjectsLocationsListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,29 +30,29 @@ const req: ServicedirectoryProjectsLocationsListRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "blanditiis",
+    name: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "corporis",
-    alt: "proto",
-    callback: "cumque",
-    fields: "iusto",
-    filter: "quos",
-    key: "voluptatem",
-    oauthToken: "facere",
-    pageSize: 2571875354845078400,
-    pageToken: "dolores",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    filter: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
+    pageSize: 1543572285742637646,
+    pageToken: "nihil",
     prettyPrint: true,
-    quotaUser: "quidem",
-    uploadType: "consectetur",
-    uploadProtocol: "nostrum",
+    quotaUser: "dicta",
+    uploadType: "debitis",
+    uploadProtocol: "voluptatum",
   },
 };
 

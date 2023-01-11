@@ -14,11 +14,6 @@ export class GetRoutingVersionNumberCalculateReachableRangeOriginContentTypePath
   versionNumber: number;
 }
 
-export enum GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeVehicleEngineTypeEnum {
-    Combustion = "combustion",
-    Electric = "electric"
-}
-
 
 export class GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=accelerationEfficiency" })
@@ -91,7 +86,7 @@ export class GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeQuer
   vehicleCommercial?: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=vehicleEngineType" })
-  vehicleEngineType?: GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeVehicleEngineTypeEnum;
+  vehicleEngineType?: shared.DownhillEfficiencyEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=vehicleHeight" })
   vehicleHeight?: number;

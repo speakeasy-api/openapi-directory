@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AnomalyDetector } from "./anomalydetector";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeAnomalyDetectorsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var anomalydetector_1 = require("./anomalydetector");
 var DescribeAnomalyDetectorsOutput = /** @class */ (function (_super) {
     __extends(DescribeAnomalyDetectorsOutput, _super);
     function DescribeAnomalyDetectorsOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: AnomalyDetector }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: anomalydetector_1.AnomalyDetector }),
         __metadata("design:type", Array)
     ], DescribeAnomalyDetectorsOutput.prototype, "anomalyDetectors", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DescribeAnomalyDetectorsOutput.prototype, "nextToken", void 0);
     return DescribeAnomalyDetectorsOutput;
-}(SpeakeasyBase));
-export { DescribeAnomalyDetectorsOutput };
+}(utils_1.SpeakeasyBase));
+exports.DescribeAnomalyDetectorsOutput = DescribeAnomalyDetectorsOutput;

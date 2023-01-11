@@ -51,7 +51,7 @@ export class DeleteApplicationReferenceDataSourceResponse extends SpeakeasyBase 
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteApplicationReferenceDataSourceResponse?: Map<string, any>;
+  deleteApplicationReferenceDataSourceResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidArgumentException?: any;

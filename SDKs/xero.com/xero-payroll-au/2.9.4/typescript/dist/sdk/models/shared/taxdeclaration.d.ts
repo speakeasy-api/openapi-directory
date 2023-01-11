@@ -6,10 +6,10 @@ export declare class TaxDeclaration extends SpeakeasyBase {
     approvedWithholdingVariationPercentage?: number;
     australianResidentForTaxPurposes?: boolean;
     eligibleToReceiveLeaveLoading?: boolean;
-    employeeId?: string;
+    employeeID?: string;
     employmentBasis?: EmploymentBasisEnum;
-    hasHelpDebt?: boolean;
-    hasSfssDebt?: boolean;
+    hasHELPDebt?: boolean;
+    hasSFSSDebt?: boolean;
     hasStudentStartupLoan?: boolean;
     hasTradeSupportLoanDebt?: boolean;
     residencyStatus?: ResidencyStatusEnum;
@@ -17,17 +17,17 @@ export declare class TaxDeclaration extends SpeakeasyBase {
     taxFileNumber?: string;
     taxFreeThresholdClaimed?: boolean;
     taxOffsetEstimatedAmount?: number;
-    updatedDateUtc?: string;
+    updatedDateUTC?: string;
     upwardVariationTaxWithholdingAmount?: number;
 }
 export declare class TaxDeclarationInput extends SpeakeasyBase {
     approvedWithholdingVariationPercentage?: number;
     australianResidentForTaxPurposes?: boolean;
     eligibleToReceiveLeaveLoading?: boolean;
-    employeeId?: string;
+    employeeID?: string;
     employmentBasis?: EmploymentBasisEnum;
-    hasHelpDebt?: boolean;
-    hasSfssDebt?: boolean;
+    hasHELPDebt?: boolean;
+    hasSFSSDebt?: boolean;
     hasStudentStartupLoan?: boolean;
     hasTradeSupportLoanDebt?: boolean;
     residencyStatus?: ResidencyStatusEnum;

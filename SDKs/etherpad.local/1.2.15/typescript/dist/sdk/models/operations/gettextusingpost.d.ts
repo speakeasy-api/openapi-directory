@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetTextUsingPostQueryParams extends SpeakeasyBase {
-    padId?: string;
+    padID?: string;
     rev?: string;
 }
 export declare class GetTextUsingPost200ApplicationJsonData extends SpeakeasyBase {
@@ -13,17 +13,17 @@ export declare class GetTextUsingPost200ApplicationJson extends SpeakeasyBase {
 }
 export declare class GetTextUsingPost400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetTextUsingPost401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetTextUsingPost500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetTextUsingPostRequest extends SpeakeasyBase {
@@ -32,8 +32,8 @@ export declare class GetTextUsingPostRequest extends SpeakeasyBase {
 export declare class GetTextUsingPostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getTextUsingPost200ApplicationJsonObject?: GetTextUsingPost200ApplicationJson;
-    getTextUsingPost400ApplicationJsonObject?: GetTextUsingPost400ApplicationJson;
-    getTextUsingPost401ApplicationJsonObject?: GetTextUsingPost401ApplicationJson;
-    getTextUsingPost500ApplicationJsonObject?: GetTextUsingPost500ApplicationJson;
+    getTextUsingPOST200ApplicationJSONObject?: GetTextUsingPost200ApplicationJson;
+    getTextUsingPOST400ApplicationJSONObject?: GetTextUsingPost400ApplicationJson;
+    getTextUsingPOST401ApplicationJSONObject?: GetTextUsingPost401ApplicationJson;
+    getTextUsingPOST500ApplicationJSONObject?: GetTextUsingPost500ApplicationJson;
 }

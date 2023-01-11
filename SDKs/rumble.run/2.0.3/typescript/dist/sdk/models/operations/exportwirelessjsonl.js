@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,78 +14,103 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExportWirelessJsonlResponse = exports.ExportWirelessJsonlRequest = exports.ExportWirelessJsonlSecurity = exports.ExportWirelessJsonlQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ExportWirelessJsonlQueryParams = /** @class */ (function (_super) {
     __extends(ExportWirelessJsonlQueryParams, _super);
     function ExportWirelessJsonlQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], ExportWirelessJsonlQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search" }),
         __metadata("design:type", String)
     ], ExportWirelessJsonlQueryParams.prototype, "search", void 0);
     return ExportWirelessJsonlQueryParams;
-}(SpeakeasyBase));
-export { ExportWirelessJsonlQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ExportWirelessJsonlQueryParams = ExportWirelessJsonlQueryParams;
 var ExportWirelessJsonlSecurity = /** @class */ (function (_super) {
     __extends(ExportWirelessJsonlSecurity, _super);
     function ExportWirelessJsonlSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=http;subtype=bearer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=bearer" }),
         __metadata("design:type", shared.SchemeBearerAuth)
     ], ExportWirelessJsonlSecurity.prototype, "bearerAuth", void 0);
     return ExportWirelessJsonlSecurity;
-}(SpeakeasyBase));
-export { ExportWirelessJsonlSecurity };
+}(utils_1.SpeakeasyBase));
+exports.ExportWirelessJsonlSecurity = ExportWirelessJsonlSecurity;
 var ExportWirelessJsonlRequest = /** @class */ (function (_super) {
     __extends(ExportWirelessJsonlRequest, _super);
     function ExportWirelessJsonlRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ExportWirelessJsonlQueryParams)
     ], ExportWirelessJsonlRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ExportWirelessJsonlSecurity)
     ], ExportWirelessJsonlRequest.prototype, "security", void 0);
     return ExportWirelessJsonlRequest;
-}(SpeakeasyBase));
-export { ExportWirelessJsonlRequest };
+}(utils_1.SpeakeasyBase));
+exports.ExportWirelessJsonlRequest = ExportWirelessJsonlRequest;
 var ExportWirelessJsonlResponse = /** @class */ (function (_super) {
     __extends(ExportWirelessJsonlResponse, _super);
     function ExportWirelessJsonlResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ExportWirelessJsonlResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ExportWirelessJsonlResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
-    ], ExportWirelessJsonlResponse.prototype, "exportWirelessJsonl200ApplicationJsonBinaryString", void 0);
+    ], ExportWirelessJsonlResponse.prototype, "exportWirelessJSONL200ApplicationJSONBinaryString", void 0);
     return ExportWirelessJsonlResponse;
-}(SpeakeasyBase));
-export { ExportWirelessJsonlResponse };
+}(utils_1.SpeakeasyBase));
+exports.ExportWirelessJsonlResponse = ExportWirelessJsonlResponse;

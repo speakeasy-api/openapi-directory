@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BrandRegistrationsEnumBrandFeedbackEnum = void 0;
+var BrandRegistrationsEnumBrandFeedbackEnum;
+(function (BrandRegistrationsEnumBrandFeedbackEnum) {
+    BrandRegistrationsEnumBrandFeedbackEnum["TaxId"] = "TAX_ID";
+    BrandRegistrationsEnumBrandFeedbackEnum["StockSymbol"] = "STOCK_SYMBOL";
+    BrandRegistrationsEnumBrandFeedbackEnum["Nonprofit"] = "NONPROFIT";
+    BrandRegistrationsEnumBrandFeedbackEnum["GovernmentEntity"] = "GOVERNMENT_ENTITY";
+    BrandRegistrationsEnumBrandFeedbackEnum["Others"] = "OTHERS";
+})(BrandRegistrationsEnumBrandFeedbackEnum = exports.BrandRegistrationsEnumBrandFeedbackEnum || (exports.BrandRegistrationsEnumBrandFeedbackEnum = {}));

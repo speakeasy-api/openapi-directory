@@ -10,7 +10,7 @@ import { ResourceSpecificResult } from "./resourcespecificresult";
 export declare class EvaluationResult extends SpeakeasyBase {
     evalActionName: string;
     evalDecision: PolicyEvaluationDecisionTypeEnum;
-    evalDecisionDetails?: Map<string, PolicyEvaluationDecisionTypeEnum>;
+    evalDecisionDetails?: Record<string, string>;
     evalResourceName?: string;
     matchedStatements?: Statement[];
     missingContextValues?: string[];

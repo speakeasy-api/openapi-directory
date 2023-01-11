@@ -10,5 +10,5 @@ export declare class GetOrganizationConfigTemplateSwitchProfilePortsRequest exte
 export declare class GetOrganizationConfigTemplateSwitchProfilePortsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationConfigTemplateSwitchProfilePorts200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationConfigTemplateSwitchProfilePorts200ApplicationJSONObject?: Record<string, any>;
 }

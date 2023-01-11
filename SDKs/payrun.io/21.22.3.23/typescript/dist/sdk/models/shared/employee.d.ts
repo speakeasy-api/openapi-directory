@@ -178,7 +178,7 @@ export declare class EmployeeEmployee extends SpeakeasyBase {
     leaverReason?: EmployeeEmployeeLeaverReasonEnum;
     leavingDate?: Date;
     maritalStatus?: EmployeeEmployeeMaritalStatusEnum;
-    metaData?: Map<string, any>;
+    metaData?: Record<string, any>;
     middleName?: string;
     niNumber?: string;
     nicLiability?: EmployeeEmployeeNicLiabilityEnum;

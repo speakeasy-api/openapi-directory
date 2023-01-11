@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { User } from "./user";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.About = exports.AboutTeamDriveThemes = exports.AboutStorageQuota = exports.AboutDriveThemes = void 0;
+var utils_1 = require("../../../internal/utils");
+var user_1 = require("./user");
 var AboutDriveThemes = /** @class */ (function (_super) {
     __extends(AboutDriveThemes, _super);
     function AboutDriveThemes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backgroundImageLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backgroundImageLink" }),
         __metadata("design:type", String)
     ], AboutDriveThemes.prototype, "backgroundImageLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=colorRgb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=colorRgb" }),
         __metadata("design:type", String)
     ], AboutDriveThemes.prototype, "colorRgb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AboutDriveThemes.prototype, "id", void 0);
     return AboutDriveThemes;
-}(SpeakeasyBase));
-export { AboutDriveThemes };
+}(utils_1.SpeakeasyBase));
+exports.AboutDriveThemes = AboutDriveThemes;
 // AboutStorageQuota
 /**
  * The user's storage quota limits and usage. All fields are measured in bytes.
@@ -54,44 +57,44 @@ var AboutStorageQuota = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", String)
     ], AboutStorageQuota.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usage" }),
         __metadata("design:type", String)
     ], AboutStorageQuota.prototype, "usage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usageInDrive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usageInDrive" }),
         __metadata("design:type", String)
     ], AboutStorageQuota.prototype, "usageInDrive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usageInDriveTrash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usageInDriveTrash" }),
         __metadata("design:type", String)
     ], AboutStorageQuota.prototype, "usageInDriveTrash", void 0);
     return AboutStorageQuota;
-}(SpeakeasyBase));
-export { AboutStorageQuota };
+}(utils_1.SpeakeasyBase));
+exports.AboutStorageQuota = AboutStorageQuota;
 var AboutTeamDriveThemes = /** @class */ (function (_super) {
     __extends(AboutTeamDriveThemes, _super);
     function AboutTeamDriveThemes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backgroundImageLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backgroundImageLink" }),
         __metadata("design:type", String)
     ], AboutTeamDriveThemes.prototype, "backgroundImageLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=colorRgb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=colorRgb" }),
         __metadata("design:type", String)
     ], AboutTeamDriveThemes.prototype, "colorRgb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AboutTeamDriveThemes.prototype, "id", void 0);
     return AboutTeamDriveThemes;
-}(SpeakeasyBase));
-export { AboutTeamDriveThemes };
+}(utils_1.SpeakeasyBase));
+exports.AboutTeamDriveThemes = AboutTeamDriveThemes;
 // About
 /**
  * Information about the user, the user's Drive, and system capabilities.
@@ -102,57 +105,57 @@ var About = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appInstalled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appInstalled" }),
         __metadata("design:type", Boolean)
     ], About.prototype, "appInstalled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canCreateDrives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canCreateDrives" }),
         __metadata("design:type", Boolean)
     ], About.prototype, "canCreateDrives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canCreateTeamDrives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canCreateTeamDrives" }),
         __metadata("design:type", Boolean)
     ], About.prototype, "canCreateTeamDrives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driveThemes", elemType: AboutDriveThemes }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driveThemes", elemType: AboutDriveThemes }),
         __metadata("design:type", Array)
     ], About.prototype, "driveThemes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exportFormats" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exportFormats" }),
+        __metadata("design:type", Object)
     ], About.prototype, "exportFormats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=folderColorPalette" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=folderColorPalette" }),
         __metadata("design:type", Array)
     ], About.prototype, "folderColorPalette", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importFormats" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importFormats" }),
+        __metadata("design:type", Object)
     ], About.prototype, "importFormats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], About.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxImportSizes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxImportSizes" }),
+        __metadata("design:type", Object)
     ], About.prototype, "maxImportSizes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxUploadSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxUploadSize" }),
         __metadata("design:type", String)
     ], About.prototype, "maxUploadSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storageQuota" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storageQuota" }),
         __metadata("design:type", AboutStorageQuota)
     ], About.prototype, "storageQuota", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teamDriveThemes", elemType: AboutTeamDriveThemes }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teamDriveThemes", elemType: AboutTeamDriveThemes }),
         __metadata("design:type", Array)
     ], About.prototype, "teamDriveThemes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", User)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", user_1.User)
     ], About.prototype, "user", void 0);
     return About;
-}(SpeakeasyBase));
-export { About };
+}(utils_1.SpeakeasyBase));
+exports.About = About;

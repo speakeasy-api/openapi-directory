@@ -23,11 +23,11 @@ export declare class CertificatemanagerProjectsLocationsOperationsCancelSecurity
 export declare class CertificatemanagerProjectsLocationsOperationsCancelRequest extends SpeakeasyBase {
     pathParams: CertificatemanagerProjectsLocationsOperationsCancelPathParams;
     queryParams: CertificatemanagerProjectsLocationsOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: CertificatemanagerProjectsLocationsOperationsCancelSecurity;
 }
 export declare class CertificatemanagerProjectsLocationsOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StatusEvent } from "./statusevent";
-import { TaskGroupStatus } from "./taskgroupstatus";
-export var JobStatusStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobStatus = exports.JobStatusStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var statusevent_1 = require("./statusevent");
+var taskgroupstatus_1 = require("./taskgroupstatus");
+var JobStatusStateEnum;
 (function (JobStatusStateEnum) {
     JobStatusStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     JobStatusStateEnum["Queued"] = "QUEUED";
@@ -34,7 +37,7 @@ export var JobStatusStateEnum;
     JobStatusStateEnum["Succeeded"] = "SUCCEEDED";
     JobStatusStateEnum["Failed"] = "FAILED";
     JobStatusStateEnum["DeletionInProgress"] = "DELETION_IN_PROGRESS";
-})(JobStatusStateEnum || (JobStatusStateEnum = {}));
+})(JobStatusStateEnum = exports.JobStatusStateEnum || (exports.JobStatusStateEnum = {}));
 // JobStatus
 /**
  * Job status.
@@ -45,21 +48,21 @@ var JobStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runDuration" }),
         __metadata("design:type", String)
     ], JobStatus.prototype, "runDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], JobStatus.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusEvents", elemType: StatusEvent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusEvents", elemType: statusevent_1.StatusEvent }),
         __metadata("design:type", Array)
     ], JobStatus.prototype, "statusEvents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskGroups", elemType: TaskGroupStatus }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskGroups", elemType: taskgroupstatus_1.TaskGroupStatus }),
+        __metadata("design:type", Object)
     ], JobStatus.prototype, "taskGroups", void 0);
     return JobStatus;
-}(SpeakeasyBase));
-export { JobStatus };
+}(utils_1.SpeakeasyBase));
+exports.JobStatus = JobStatus;

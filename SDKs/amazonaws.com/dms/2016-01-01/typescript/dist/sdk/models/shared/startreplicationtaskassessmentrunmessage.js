@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartReplicationTaskAssessmentRunMessage = void 0;
+var utils_1 = require("../../../internal/utils");
 // StartReplicationTaskAssessmentRunMessage
 /**
  * <p/>
@@ -33,41 +36,41 @@ var StartReplicationTaskAssessmentRunMessage = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssessmentRunName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssessmentRunName" }),
         __metadata("design:type", String)
     ], StartReplicationTaskAssessmentRunMessage.prototype, "assessmentRunName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Exclude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Exclude" }),
         __metadata("design:type", Array)
     ], StartReplicationTaskAssessmentRunMessage.prototype, "exclude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncludeOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludeOnly" }),
         __metadata("design:type", Array)
     ], StartReplicationTaskAssessmentRunMessage.prototype, "includeOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationTaskArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationTaskArn" }),
         __metadata("design:type", String)
     ], StartReplicationTaskAssessmentRunMessage.prototype, "replicationTaskArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResultEncryptionMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResultEncryptionMode" }),
         __metadata("design:type", String)
     ], StartReplicationTaskAssessmentRunMessage.prototype, "resultEncryptionMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResultKmsKeyArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResultKmsKeyArn" }),
         __metadata("design:type", String)
     ], StartReplicationTaskAssessmentRunMessage.prototype, "resultKmsKeyArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResultLocationBucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResultLocationBucket" }),
         __metadata("design:type", String)
     ], StartReplicationTaskAssessmentRunMessage.prototype, "resultLocationBucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResultLocationFolder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResultLocationFolder" }),
         __metadata("design:type", String)
     ], StartReplicationTaskAssessmentRunMessage.prototype, "resultLocationFolder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceAccessRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceAccessRoleArn" }),
         __metadata("design:type", String)
     ], StartReplicationTaskAssessmentRunMessage.prototype, "serviceAccessRoleArn", void 0);
     return StartReplicationTaskAssessmentRunMessage;
-}(SpeakeasyBase));
-export { StartReplicationTaskAssessmentRunMessage };
+}(utils_1.SpeakeasyBase));
+exports.StartReplicationTaskAssessmentRunMessage = StartReplicationTaskAssessmentRunMessage;

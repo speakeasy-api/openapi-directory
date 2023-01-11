@@ -177,7 +177,7 @@ export class GetDocumentWithWebHook200ApplicationJsonProvenance extends Speakeas
   buildTimestamp?: string;
 
   @SpeakeasyMetadata({ data: "json, name=bundles" })
-  bundles?: Map<string, any>;
+  bundles?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=version" })
   version?: string;
@@ -225,5 +225,5 @@ export class GetDocumentWithWebHookResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDocumentWithWebHook200ApplicationJsonObject?: GetDocumentWithWebHook200ApplicationJson;
+  getDocumentWithWebHook200ApplicationJSONObject?: GetDocumentWithWebHook200ApplicationJson;
 }

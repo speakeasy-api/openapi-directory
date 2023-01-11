@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,111 +23,113 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AnalyticsGroupByEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnalyticsResponse = exports.AnalyticsRequest = exports.Analytics200ApplicationJson = exports.AnalyticsQueryParams = exports.AnalyticsGroupByEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AnalyticsGroupByEnum;
 (function (AnalyticsGroupByEnum) {
     AnalyticsGroupByEnum["Date"] = "date";
     AnalyticsGroupByEnum["Label"] = "label";
     AnalyticsGroupByEnum["Subaccount"] = "subaccount";
     AnalyticsGroupByEnum["Country"] = "country";
-})(AnalyticsGroupByEnum || (AnalyticsGroupByEnum = {}));
+})(AnalyticsGroupByEnum = exports.AnalyticsGroupByEnum || (exports.AnalyticsGroupByEnum = {}));
 var AnalyticsQueryParams = /** @class */ (function (_super) {
     __extends(AnalyticsQueryParams, _super);
     function AnalyticsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=end" }),
         __metadata("design:type", String)
     ], AnalyticsQueryParams.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=group_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=group_by" }),
         __metadata("design:type", String)
     ], AnalyticsQueryParams.prototype, "groupBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=label" }),
         __metadata("design:type", String)
     ], AnalyticsQueryParams.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=start" }),
         __metadata("design:type", String)
     ], AnalyticsQueryParams.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=subaccounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=subaccounts" }),
         __metadata("design:type", String)
     ], AnalyticsQueryParams.prototype, "subaccounts", void 0);
     return AnalyticsQueryParams;
-}(SpeakeasyBase));
-export { AnalyticsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AnalyticsQueryParams = AnalyticsQueryParams;
 var Analytics200ApplicationJson = /** @class */ (function (_super) {
     __extends(Analytics200ApplicationJson, _super);
     function Analytics200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", String)
     ], Analytics200ApplicationJson.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=direct" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=direct" }),
         __metadata("design:type", Number)
     ], Analytics200ApplicationJson.prototype, "direct", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=economy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=economy" }),
         __metadata("design:type", Number)
     ], Analytics200ApplicationJson.prototype, "economy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hlr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hlr" }),
         __metadata("design:type", Number)
     ], Analytics200ApplicationJson.prototype, "hlr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inbound" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inbound" }),
         __metadata("design:type", Number)
     ], Analytics200ApplicationJson.prototype, "inbound", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mnp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mnp" }),
         __metadata("design:type", Number)
     ], Analytics200ApplicationJson.prototype, "mnp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usage_eur" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usage_eur" }),
         __metadata("design:type", Number)
     ], Analytics200ApplicationJson.prototype, "usageEur", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voice" }),
         __metadata("design:type", Number)
     ], Analytics200ApplicationJson.prototype, "voice", void 0);
     return Analytics200ApplicationJson;
-}(SpeakeasyBase));
-export { Analytics200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.Analytics200ApplicationJson = Analytics200ApplicationJson;
 var AnalyticsRequest = /** @class */ (function (_super) {
     __extends(AnalyticsRequest, _super);
     function AnalyticsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AnalyticsQueryParams)
     ], AnalyticsRequest.prototype, "queryParams", void 0);
     return AnalyticsRequest;
-}(SpeakeasyBase));
-export { AnalyticsRequest };
+}(utils_1.SpeakeasyBase));
+exports.AnalyticsRequest = AnalyticsRequest;
 var AnalyticsResponse = /** @class */ (function (_super) {
     __extends(AnalyticsResponse, _super);
     function AnalyticsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Analytics200ApplicationJson)
-    ], AnalyticsResponse.prototype, "analytics200ApplicationJsonObject", void 0);
+    ], AnalyticsResponse.prototype, "analytics200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AnalyticsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AnalyticsResponse.prototype, "statusCode", void 0);
     return AnalyticsResponse;
-}(SpeakeasyBase));
-export { AnalyticsResponse };
+}(utils_1.SpeakeasyBase));
+exports.AnalyticsResponse = AnalyticsResponse;

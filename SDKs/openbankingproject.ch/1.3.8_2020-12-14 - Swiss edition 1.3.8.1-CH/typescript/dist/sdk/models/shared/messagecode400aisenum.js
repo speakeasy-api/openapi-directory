@@ -1,4 +1,7 @@
-export var MessageCode400AisEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MessageCode400AisEnum = void 0;
+var MessageCode400AisEnum;
 (function (MessageCode400AisEnum) {
     MessageCode400AisEnum["FormatError"] = "FORMAT_ERROR";
     MessageCode400AisEnum["ParameterNotConsistent"] = "PARAMETER_NOT_CONSISTENT";
@@ -13,4 +16,4 @@ export var MessageCode400AisEnum;
     MessageCode400AisEnum["ScaInvalid"] = "SCA_INVALID";
     MessageCode400AisEnum["ConsentUnknown"] = "CONSENT_UNKNOWN";
     MessageCode400AisEnum["SessionsNotSupported"] = "SESSIONS_NOT_SUPPORTED";
-})(MessageCode400AisEnum || (MessageCode400AisEnum = {}));
+})(MessageCode400AisEnum = exports.MessageCode400AisEnum || (exports.MessageCode400AisEnum = {}));

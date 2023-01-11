@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetSectionFormatRequest, GetSectionFormatResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apikey: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,15 +33,15 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetSectionFormatRequest = {
   pathParams: {
-    format: "jsonp",
-    section: "movies",
+    format: "json",
+    section: "travel",
   },
   queryParams: {
-    callback: "fugit",
+    callback: "culpa",
   },
 };
 
-sdk.sdk.getSectionFormat(req).then((res: GetSectionFormatResponse | AxiosError) => {
+sdk.stories.getSectionFormat(req).then((res: GetSectionFormatResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -51,7 +50,7 @@ sdk.sdk.getSectionFormat(req).then((res: GetSectionFormatResponse | AxiosError) 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Stories
 
 * `getSectionFormat` - Top Stories
 

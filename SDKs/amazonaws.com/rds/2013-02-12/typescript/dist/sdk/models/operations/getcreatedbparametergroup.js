@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCreateDbParameterGroupActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCreateDbParameterGroupResponse = exports.GetCreateDbParameterGroupRequest = exports.GetCreateDbParameterGroupHeaders = exports.GetCreateDbParameterGroupQueryParams = exports.GetCreateDbParameterGroupVersionEnum = exports.GetCreateDbParameterGroupActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCreateDbParameterGroupActionEnum;
 (function (GetCreateDbParameterGroupActionEnum) {
     GetCreateDbParameterGroupActionEnum["CreateDbParameterGroup"] = "CreateDBParameterGroup";
-})(GetCreateDbParameterGroupActionEnum || (GetCreateDbParameterGroupActionEnum = {}));
-export var GetCreateDbParameterGroupVersionEnum;
+})(GetCreateDbParameterGroupActionEnum = exports.GetCreateDbParameterGroupActionEnum || (exports.GetCreateDbParameterGroupActionEnum = {}));
+var GetCreateDbParameterGroupVersionEnum;
 (function (GetCreateDbParameterGroupVersionEnum) {
     GetCreateDbParameterGroupVersionEnum["TwoThousandAndThirteen0212"] = "2013-02-12";
-})(GetCreateDbParameterGroupVersionEnum || (GetCreateDbParameterGroupVersionEnum = {}));
+})(GetCreateDbParameterGroupVersionEnum = exports.GetCreateDbParameterGroupVersionEnum || (exports.GetCreateDbParameterGroupVersionEnum = {}));
 var GetCreateDbParameterGroupQueryParams = /** @class */ (function (_super) {
     __extends(GetCreateDbParameterGroupQueryParams, _super);
     function GetCreateDbParameterGroupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetCreateDbParameterGroupQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DBParameterGroupFamily" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DBParameterGroupFamily" }),
         __metadata("design:type", String)
     ], GetCreateDbParameterGroupQueryParams.prototype, "dbParameterGroupFamily", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DBParameterGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DBParameterGroupName" }),
         __metadata("design:type", String)
     ], GetCreateDbParameterGroupQueryParams.prototype, "dbParameterGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Description" }),
         __metadata("design:type", String)
     ], GetCreateDbParameterGroupQueryParams.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetCreateDbParameterGroupQueryParams.prototype, "version", void 0);
     return GetCreateDbParameterGroupQueryParams;
-}(SpeakeasyBase));
-export { GetCreateDbParameterGroupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateDbParameterGroupQueryParams = GetCreateDbParameterGroupQueryParams;
 var GetCreateDbParameterGroupHeaders = /** @class */ (function (_super) {
     __extends(GetCreateDbParameterGroupHeaders, _super);
     function GetCreateDbParameterGroupHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetCreateDbParameterGroupHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetCreateDbParameterGroupHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetCreateDbParameterGroupHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetCreateDbParameterGroupHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetCreateDbParameterGroupHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetCreateDbParameterGroupHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetCreateDbParameterGroupHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetCreateDbParameterGroupHeaders;
-}(SpeakeasyBase));
-export { GetCreateDbParameterGroupHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateDbParameterGroupHeaders = GetCreateDbParameterGroupHeaders;
 var GetCreateDbParameterGroupRequest = /** @class */ (function (_super) {
     __extends(GetCreateDbParameterGroupRequest, _super);
     function GetCreateDbParameterGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateDbParameterGroupQueryParams)
     ], GetCreateDbParameterGroupRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateDbParameterGroupHeaders)
     ], GetCreateDbParameterGroupRequest.prototype, "headers", void 0);
     return GetCreateDbParameterGroupRequest;
-}(SpeakeasyBase));
-export { GetCreateDbParameterGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateDbParameterGroupRequest = GetCreateDbParameterGroupRequest;
 var GetCreateDbParameterGroupResponse = /** @class */ (function (_super) {
     __extends(GetCreateDbParameterGroupResponse, _super);
     function GetCreateDbParameterGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetCreateDbParameterGroupResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCreateDbParameterGroupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCreateDbParameterGroupResponse.prototype, "statusCode", void 0);
     return GetCreateDbParameterGroupResponse;
-}(SpeakeasyBase));
-export { GetCreateDbParameterGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateDbParameterGroupResponse = GetCreateDbParameterGroupResponse;

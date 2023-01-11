@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DetectorModelConfiguration } from "./detectormodelconfiguration";
-import { DetectorModelDefinition } from "./detectormodeldefinition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DetectorModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var detectormodelconfiguration_1 = require("./detectormodelconfiguration");
+var detectormodeldefinition_1 = require("./detectormodeldefinition");
 // DetectorModel
 /**
  * Information about the detector model.
@@ -35,13 +38,13 @@ var DetectorModel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detectorModelConfiguration" }),
-        __metadata("design:type", DetectorModelConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detectorModelConfiguration" }),
+        __metadata("design:type", detectormodelconfiguration_1.DetectorModelConfiguration)
     ], DetectorModel.prototype, "detectorModelConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detectorModelDefinition" }),
-        __metadata("design:type", DetectorModelDefinition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detectorModelDefinition" }),
+        __metadata("design:type", detectormodeldefinition_1.DetectorModelDefinition)
     ], DetectorModel.prototype, "detectorModelDefinition", void 0);
     return DetectorModel;
-}(SpeakeasyBase));
-export { DetectorModel };
+}(utils_1.SpeakeasyBase));
+exports.DetectorModel = DetectorModel;

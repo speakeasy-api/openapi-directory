@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1DateRange } from "./googlecloudchannelv1daterange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1RunReportJobRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1daterange_1 = require("./googlecloudchannelv1daterange");
 // GoogleCloudChannelV1RunReportJobRequest
 /**
  * Request message for CloudChannelReportsService.RunReportJob.
@@ -34,17 +37,17 @@ var GoogleCloudChannelV1RunReportJobRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateRange" }),
-        __metadata("design:type", GoogleCloudChannelV1DateRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateRange" }),
+        __metadata("design:type", googlecloudchannelv1daterange_1.GoogleCloudChannelV1DateRange)
     ], GoogleCloudChannelV1RunReportJobRequest.prototype, "dateRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1RunReportJobRequest.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1RunReportJobRequest.prototype, "languageCode", void 0);
     return GoogleCloudChannelV1RunReportJobRequest;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1RunReportJobRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1RunReportJobRequest = GoogleCloudChannelV1RunReportJobRequest;

@@ -19,7 +19,7 @@ export class BatchResponseSubscriberVidResponse extends SpeakeasyBase {
   errors?: StandardError[];
 
   @SpeakeasyMetadata({ data: "json, name=links" })
-  links?: Map<string, string>;
+  links?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=numErrors" })
   numErrors?: number;

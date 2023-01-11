@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DataTypeFieldFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataTypeField = exports.DataTypeFieldFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DataTypeFieldFormatEnum;
 (function (DataTypeFieldFormatEnum) {
     DataTypeFieldFormatEnum["Integer"] = "integer";
     DataTypeFieldFormatEnum["FloatPoint"] = "floatPoint";
@@ -32,7 +35,7 @@ export var DataTypeFieldFormatEnum;
     DataTypeFieldFormatEnum["IntegerList"] = "integerList";
     DataTypeFieldFormatEnum["FloatList"] = "floatList";
     DataTypeFieldFormatEnum["Blob"] = "blob";
-})(DataTypeFieldFormatEnum || (DataTypeFieldFormatEnum = {}));
+})(DataTypeFieldFormatEnum = exports.DataTypeFieldFormatEnum || (exports.DataTypeFieldFormatEnum = {}));
 // DataTypeField
 /**
  * In case of multi-dimensional data (such as an accelerometer with x, y, and z axes) each field represents one dimension. Each data type field has a unique name which identifies it. The field also defines the format of the data (int, float, etc.). This message is only instantiated in code and not used for wire comms or stored in any way.
@@ -43,17 +46,17 @@ var DataTypeField = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], DataTypeField.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DataTypeField.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=optional" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=optional" }),
         __metadata("design:type", Boolean)
     ], DataTypeField.prototype, "optional", void 0);
     return DataTypeField;
-}(SpeakeasyBase));
-export { DataTypeField };
+}(utils_1.SpeakeasyBase));
+exports.DataTypeField = DataTypeField;

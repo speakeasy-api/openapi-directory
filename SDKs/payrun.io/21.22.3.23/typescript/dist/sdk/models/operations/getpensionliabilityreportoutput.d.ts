@@ -16,6 +16,6 @@ export declare class GetPensionLiabilityReportOutputRequest extends SpeakeasyBas
 export declare class GetPensionLiabilityReportOutputResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getPensionLiabilityReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+    getPensionLiabilityReportOutput200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

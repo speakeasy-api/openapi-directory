@@ -24,6 +24,6 @@ export declare class UpdateOrganizationConfigurationResponse extends SpeakeasyBa
     serviceQuotaExceededException?: any;
     statusCode: number;
     throttlingException?: any;
-    updateOrganizationConfigurationResponse?: Map<string, any>;
+    updateOrganizationConfigurationResponse?: Record<string, any>;
     validationException?: any;
 }

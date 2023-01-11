@@ -81,7 +81,7 @@ export class UpdateMemberSessionResponse extends SpeakeasyBase {
   throttlingException?: any;
 
   @SpeakeasyMetadata()
-  updateMemberSessionResponse?: Map<string, any>;
+  updateMemberSessionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

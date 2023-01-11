@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AddTargetedPublishersRequestTargetingModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddTargetedPublishersRequest = exports.AddTargetedPublishersRequestTargetingModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AddTargetedPublishersRequestTargetingModeEnum;
 (function (AddTargetedPublishersRequestTargetingModeEnum) {
     AddTargetedPublishersRequestTargetingModeEnum["TargetingModeUnspecified"] = "TARGETING_MODE_UNSPECIFIED";
     AddTargetedPublishersRequestTargetingModeEnum["Inclusive"] = "INCLUSIVE";
     AddTargetedPublishersRequestTargetingModeEnum["Exclusive"] = "EXCLUSIVE";
-})(AddTargetedPublishersRequestTargetingModeEnum || (AddTargetedPublishersRequestTargetingModeEnum = {}));
+})(AddTargetedPublishersRequestTargetingModeEnum = exports.AddTargetedPublishersRequestTargetingModeEnum || (exports.AddTargetedPublishersRequestTargetingModeEnum = {}));
 // AddTargetedPublishersRequest
 /**
  * A request to start targeting the provided publishers in a specific pretargeting configuration. The pretargeting configuration itself specifies how these publishers are targeted in PretargetingConfig.publisherTargeting.
@@ -39,13 +42,13 @@ var AddTargetedPublishersRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisherIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisherIds" }),
         __metadata("design:type", Array)
     ], AddTargetedPublishersRequest.prototype, "publisherIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetingMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetingMode" }),
         __metadata("design:type", String)
     ], AddTargetedPublishersRequest.prototype, "targetingMode", void 0);
     return AddTargetedPublishersRequest;
-}(SpeakeasyBase));
-export { AddTargetedPublishersRequest };
+}(utils_1.SpeakeasyBase));
+exports.AddTargetedPublishersRequest = AddTargetedPublishersRequest;

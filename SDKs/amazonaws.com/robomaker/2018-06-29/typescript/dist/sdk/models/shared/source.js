@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArchitectureEnum } from "./architectureenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Source = void 0;
+var utils_1 = require("../../../internal/utils");
+var architectureenum_1 = require("./architectureenum");
 // Source
 /**
  * Information about a source.
@@ -34,21 +37,21 @@ var Source = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=architecture" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=architecture" }),
         __metadata("design:type", String)
     ], Source.prototype, "architecture", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], Source.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3Bucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3Bucket" }),
         __metadata("design:type", String)
     ], Source.prototype, "s3Bucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3Key" }),
         __metadata("design:type", String)
     ], Source.prototype, "s3Key", void 0);
     return Source;
-}(SpeakeasyBase));
-export { Source };
+}(utils_1.SpeakeasyBase));
+exports.Source = Source;

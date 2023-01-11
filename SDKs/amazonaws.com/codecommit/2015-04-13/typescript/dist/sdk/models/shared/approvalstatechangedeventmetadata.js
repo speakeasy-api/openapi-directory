@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApprovalStateEnum } from "./approvalstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApprovalStateChangedEventMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var approvalstateenum_1 = require("./approvalstateenum");
 // ApprovalStateChangedEventMetadata
 /**
  * Returns information about a change in the approval state for a pull request.
@@ -34,13 +37,13 @@ var ApprovalStateChangedEventMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvalStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvalStatus" }),
         __metadata("design:type", String)
     ], ApprovalStateChangedEventMetadata.prototype, "approvalStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionId" }),
         __metadata("design:type", String)
     ], ApprovalStateChangedEventMetadata.prototype, "revisionId", void 0);
     return ApprovalStateChangedEventMetadata;
-}(SpeakeasyBase));
-export { ApprovalStateChangedEventMetadata };
+}(utils_1.SpeakeasyBase));
+exports.ApprovalStateChangedEventMetadata = ApprovalStateChangedEventMetadata;

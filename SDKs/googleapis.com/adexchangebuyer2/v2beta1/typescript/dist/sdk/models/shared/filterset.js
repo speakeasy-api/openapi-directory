@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,50 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AbsoluteDateRange } from "./absolutedaterange";
-import { RealtimeTimeRange } from "./realtimetimerange";
-import { RelativeDateRange } from "./relativedaterange";
-export var FilterSetBreakdownDimensionsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FilterSet = exports.FilterSetTimeSeriesGranularityEnum = exports.FilterSetPlatformsEnum = exports.FilterSetFormatsEnum = exports.FilterSetFormatEnum = exports.FilterSetEnvironmentEnum = exports.FilterSetBreakdownDimensionsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var absolutedaterange_1 = require("./absolutedaterange");
+var realtimetimerange_1 = require("./realtimetimerange");
+var relativedaterange_1 = require("./relativedaterange");
+var FilterSetBreakdownDimensionsEnum;
 (function (FilterSetBreakdownDimensionsEnum) {
     FilterSetBreakdownDimensionsEnum["BreakdownDimensionUnspecified"] = "BREAKDOWN_DIMENSION_UNSPECIFIED";
     FilterSetBreakdownDimensionsEnum["PublisherIdentifier"] = "PUBLISHER_IDENTIFIER";
-})(FilterSetBreakdownDimensionsEnum || (FilterSetBreakdownDimensionsEnum = {}));
-export var FilterSetEnvironmentEnum;
+})(FilterSetBreakdownDimensionsEnum = exports.FilterSetBreakdownDimensionsEnum || (exports.FilterSetBreakdownDimensionsEnum = {}));
+var FilterSetEnvironmentEnum;
 (function (FilterSetEnvironmentEnum) {
     FilterSetEnvironmentEnum["EnvironmentUnspecified"] = "ENVIRONMENT_UNSPECIFIED";
     FilterSetEnvironmentEnum["Web"] = "WEB";
     FilterSetEnvironmentEnum["App"] = "APP";
-})(FilterSetEnvironmentEnum || (FilterSetEnvironmentEnum = {}));
-export var FilterSetFormatEnum;
+})(FilterSetEnvironmentEnum = exports.FilterSetEnvironmentEnum || (exports.FilterSetEnvironmentEnum = {}));
+var FilterSetFormatEnum;
 (function (FilterSetFormatEnum) {
     FilterSetFormatEnum["FormatUnspecified"] = "FORMAT_UNSPECIFIED";
     FilterSetFormatEnum["NativeDisplay"] = "NATIVE_DISPLAY";
     FilterSetFormatEnum["NativeVideo"] = "NATIVE_VIDEO";
     FilterSetFormatEnum["NonNativeDisplay"] = "NON_NATIVE_DISPLAY";
     FilterSetFormatEnum["NonNativeVideo"] = "NON_NATIVE_VIDEO";
-})(FilterSetFormatEnum || (FilterSetFormatEnum = {}));
-export var FilterSetFormatsEnum;
+})(FilterSetFormatEnum = exports.FilterSetFormatEnum || (exports.FilterSetFormatEnum = {}));
+var FilterSetFormatsEnum;
 (function (FilterSetFormatsEnum) {
     FilterSetFormatsEnum["FormatUnspecified"] = "FORMAT_UNSPECIFIED";
     FilterSetFormatsEnum["NativeDisplay"] = "NATIVE_DISPLAY";
     FilterSetFormatsEnum["NativeVideo"] = "NATIVE_VIDEO";
     FilterSetFormatsEnum["NonNativeDisplay"] = "NON_NATIVE_DISPLAY";
     FilterSetFormatsEnum["NonNativeVideo"] = "NON_NATIVE_VIDEO";
-})(FilterSetFormatsEnum || (FilterSetFormatsEnum = {}));
-export var FilterSetPlatformsEnum;
+})(FilterSetFormatsEnum = exports.FilterSetFormatsEnum || (exports.FilterSetFormatsEnum = {}));
+var FilterSetPlatformsEnum;
 (function (FilterSetPlatformsEnum) {
     FilterSetPlatformsEnum["PlatformUnspecified"] = "PLATFORM_UNSPECIFIED";
     FilterSetPlatformsEnum["Desktop"] = "DESKTOP";
     FilterSetPlatformsEnum["Tablet"] = "TABLET";
     FilterSetPlatformsEnum["Mobile"] = "MOBILE";
-})(FilterSetPlatformsEnum || (FilterSetPlatformsEnum = {}));
-export var FilterSetTimeSeriesGranularityEnum;
+})(FilterSetPlatformsEnum = exports.FilterSetPlatformsEnum || (exports.FilterSetPlatformsEnum = {}));
+var FilterSetTimeSeriesGranularityEnum;
 (function (FilterSetTimeSeriesGranularityEnum) {
     FilterSetTimeSeriesGranularityEnum["TimeSeriesGranularityUnspecified"] = "TIME_SERIES_GRANULARITY_UNSPECIFIED";
     FilterSetTimeSeriesGranularityEnum["Hourly"] = "HOURLY";
     FilterSetTimeSeriesGranularityEnum["Daily"] = "DAILY";
-})(FilterSetTimeSeriesGranularityEnum || (FilterSetTimeSeriesGranularityEnum = {}));
+})(FilterSetTimeSeriesGranularityEnum = exports.FilterSetTimeSeriesGranularityEnum || (exports.FilterSetTimeSeriesGranularityEnum = {}));
 // FilterSet
 /**
  * A set of filters that is applied to a request for data. Within a filter set, an AND operation is performed across the filters represented by each field. An OR operation is performed across the filters represented by the multiple values of a repeated field, for example, "format=VIDEO AND deal_id=12 AND (seller_network_id=34 OR seller_network_id=56)".
@@ -76,61 +79,61 @@ var FilterSet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=absoluteDateRange" }),
-        __metadata("design:type", AbsoluteDateRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=absoluteDateRange" }),
+        __metadata("design:type", absolutedaterange_1.AbsoluteDateRange)
     ], FilterSet.prototype, "absoluteDateRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=breakdownDimensions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=breakdownDimensions" }),
         __metadata("design:type", Array)
     ], FilterSet.prototype, "breakdownDimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creativeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creativeId" }),
         __metadata("design:type", String)
     ], FilterSet.prototype, "creativeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dealId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dealId" }),
         __metadata("design:type", String)
     ], FilterSet.prototype, "dealId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
         __metadata("design:type", String)
     ], FilterSet.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], FilterSet.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formats" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formats" }),
         __metadata("design:type", Array)
     ], FilterSet.prototype, "formats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], FilterSet.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platforms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platforms" }),
         __metadata("design:type", Array)
     ], FilterSet.prototype, "platforms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisherIdentifiers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisherIdentifiers" }),
         __metadata("design:type", Array)
     ], FilterSet.prototype, "publisherIdentifiers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=realtimeTimeRange" }),
-        __metadata("design:type", RealtimeTimeRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=realtimeTimeRange" }),
+        __metadata("design:type", realtimetimerange_1.RealtimeTimeRange)
     ], FilterSet.prototype, "realtimeTimeRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relativeDateRange" }),
-        __metadata("design:type", RelativeDateRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relativeDateRange" }),
+        __metadata("design:type", relativedaterange_1.RelativeDateRange)
     ], FilterSet.prototype, "relativeDateRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sellerNetworkIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sellerNetworkIds" }),
         __metadata("design:type", Array)
     ], FilterSet.prototype, "sellerNetworkIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeSeriesGranularity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeSeriesGranularity" }),
         __metadata("design:type", String)
     ], FilterSet.prototype, "timeSeriesGranularity", void 0);
     return FilterSet;
-}(SpeakeasyBase));
-export { FilterSet };
+}(utils_1.SpeakeasyBase));
+exports.FilterSet = FilterSet;

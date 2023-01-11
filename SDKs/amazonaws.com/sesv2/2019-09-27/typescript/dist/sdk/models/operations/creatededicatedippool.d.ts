@@ -22,7 +22,7 @@ export declare class CreateDedicatedIpPoolResponse extends SpeakeasyBase {
     badRequestException?: any;
     concurrentModificationException?: any;
     contentType: string;
-    createDedicatedIpPoolResponse?: Map<string, any>;
+    createDedicatedIpPoolResponse?: Record<string, any>;
     limitExceededException?: any;
     statusCode: number;
     tooManyRequestsException?: any;

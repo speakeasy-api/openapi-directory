@@ -8,6 +8,6 @@ export declare class HeadPersonalCurrentAccountsRequest extends SpeakeasyBase {
 }
 export declare class HeadPersonalCurrentAccountsResponse extends SpeakeasyBase {
     contentType: string;
-    noResponse?: Map<string, any>;
+    noResponse?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AwardRecipient } from "./awardrecipient";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Award = void 0;
+var utils_1 = require("../../../internal/utils");
+var awardrecipient_1 = require("./awardrecipient");
 var Award = /** @class */ (function (_super) {
     __extends(Award, _super);
     function Award() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=award_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=award_type" }),
         __metadata("design:type", Number)
     ], Award.prototype, "awardType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event_key" }),
         __metadata("design:type", String)
     ], Award.prototype, "eventKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Award.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recipient_list", elemType: AwardRecipient }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recipient_list", elemType: awardrecipient_1.AwardRecipient }),
         __metadata("design:type", Array)
     ], Award.prototype, "recipientList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=year" }),
         __metadata("design:type", Number)
     ], Award.prototype, "year", void 0);
     return Award;
-}(SpeakeasyBase));
-export { Award };
+}(utils_1.SpeakeasyBase));
+exports.Award = Award;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileEvidence } from "./fileevidence";
-import { OrderLineItems } from "./orderlineitems";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateEvidencePaymentDisputeRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var fileevidence_1 = require("./fileevidence");
+var orderlineitems_1 = require("./orderlineitems");
 // UpdateEvidencePaymentDisputeRequest
 /**
  * This type is used by the request payload of the updateEvidence method. The updateEvidence method is used to update an existing evidence set against a payment dispute with one or more evidence files.
@@ -35,21 +38,21 @@ var UpdateEvidencePaymentDisputeRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evidenceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evidenceId" }),
         __metadata("design:type", String)
     ], UpdateEvidencePaymentDisputeRequest.prototype, "evidenceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evidenceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evidenceType" }),
         __metadata("design:type", String)
     ], UpdateEvidencePaymentDisputeRequest.prototype, "evidenceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=files", elemType: FileEvidence }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=files", elemType: fileevidence_1.FileEvidence }),
         __metadata("design:type", Array)
     ], UpdateEvidencePaymentDisputeRequest.prototype, "files", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineItems", elemType: OrderLineItems }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineItems", elemType: orderlineitems_1.OrderLineItems }),
         __metadata("design:type", Array)
     ], UpdateEvidencePaymentDisputeRequest.prototype, "lineItems", void 0);
     return UpdateEvidencePaymentDisputeRequest;
-}(SpeakeasyBase));
-export { UpdateEvidencePaymentDisputeRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateEvidencePaymentDisputeRequest = UpdateEvidencePaymentDisputeRequest;

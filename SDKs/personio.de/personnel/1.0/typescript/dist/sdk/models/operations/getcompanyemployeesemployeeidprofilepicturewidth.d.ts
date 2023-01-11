@@ -8,6 +8,6 @@ export declare class GetCompanyEmployeesEmployeeIdProfilePictureWidthRequest ext
 }
 export declare class GetCompanyEmployeesEmployeeIdProfilePictureWidthResponse extends SpeakeasyBase {
     contentType: string;
-    getCompanyEmployeesEmployeeIdProfilePictureWidth200ImagePngBinaryString?: Uint8Array;
     statusCode: number;
+    getCompanyEmployeesEmployeeIdProfilePictureWidth200ImagePngBinaryString?: Uint8Array;
 }

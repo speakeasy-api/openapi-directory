@@ -54,7 +54,7 @@ export class GetResourceLfTagsResponse extends SpeakeasyBase {
   entityNotFoundException?: any;
 
   @SpeakeasyMetadata()
-  getResourceLfTagsResponse?: shared.GetResourceLfTagsResponse;
+  getResourceLFTagsResponse?: shared.GetResourceLfTagsResponse;
 
   @SpeakeasyMetadata()
   glueEncryptionException?: any;

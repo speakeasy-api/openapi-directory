@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommendationengineV1beta1UserInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudRecommendationengineV1beta1UserInfo
 /**
  * Information of end users.
@@ -33,25 +36,25 @@ var GoogleCloudRecommendationengineV1beta1UserInfo = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directUserRequest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directUserRequest" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudRecommendationengineV1beta1UserInfo.prototype, "directUserRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddress" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1UserInfo.prototype, "ipAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userAgent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userAgent" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1UserInfo.prototype, "userAgent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userId" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1UserInfo.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visitorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visitorId" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1UserInfo.prototype, "visitorId", void 0);
     return GoogleCloudRecommendationengineV1beta1UserInfo;
-}(SpeakeasyBase));
-export { GoogleCloudRecommendationengineV1beta1UserInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommendationengineV1beta1UserInfo = GoogleCloudRecommendationengineV1beta1UserInfo;

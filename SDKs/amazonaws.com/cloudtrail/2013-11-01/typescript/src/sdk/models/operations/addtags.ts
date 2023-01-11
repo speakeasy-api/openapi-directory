@@ -45,10 +45,10 @@ export class AddTagsRequest extends SpeakeasyBase {
 
 export class AddTagsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  addTagsResponse?: Map<string, any>;
+  addTagsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  cloudTrailArnInvalidException?: any;
+  cloudTrailARNInvalidException?: any;
 
   @SpeakeasyMetadata()
   contentType: string;

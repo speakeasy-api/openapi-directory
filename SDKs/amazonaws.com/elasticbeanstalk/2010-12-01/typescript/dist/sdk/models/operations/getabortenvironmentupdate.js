@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetAbortEnvironmentUpdateActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAbortEnvironmentUpdateResponse = exports.GetAbortEnvironmentUpdateRequest = exports.GetAbortEnvironmentUpdateHeaders = exports.GetAbortEnvironmentUpdateQueryParams = exports.GetAbortEnvironmentUpdateVersionEnum = exports.GetAbortEnvironmentUpdateActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetAbortEnvironmentUpdateActionEnum;
 (function (GetAbortEnvironmentUpdateActionEnum) {
     GetAbortEnvironmentUpdateActionEnum["AbortEnvironmentUpdate"] = "AbortEnvironmentUpdate";
-})(GetAbortEnvironmentUpdateActionEnum || (GetAbortEnvironmentUpdateActionEnum = {}));
-export var GetAbortEnvironmentUpdateVersionEnum;
+})(GetAbortEnvironmentUpdateActionEnum = exports.GetAbortEnvironmentUpdateActionEnum || (exports.GetAbortEnvironmentUpdateActionEnum = {}));
+var GetAbortEnvironmentUpdateVersionEnum;
 (function (GetAbortEnvironmentUpdateVersionEnum) {
     GetAbortEnvironmentUpdateVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetAbortEnvironmentUpdateVersionEnum || (GetAbortEnvironmentUpdateVersionEnum = {}));
+})(GetAbortEnvironmentUpdateVersionEnum = exports.GetAbortEnvironmentUpdateVersionEnum || (exports.GetAbortEnvironmentUpdateVersionEnum = {}));
 var GetAbortEnvironmentUpdateQueryParams = /** @class */ (function (_super) {
     __extends(GetAbortEnvironmentUpdateQueryParams, _super);
     function GetAbortEnvironmentUpdateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetAbortEnvironmentUpdateQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EnvironmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EnvironmentId" }),
         __metadata("design:type", String)
     ], GetAbortEnvironmentUpdateQueryParams.prototype, "environmentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EnvironmentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EnvironmentName" }),
         __metadata("design:type", String)
     ], GetAbortEnvironmentUpdateQueryParams.prototype, "environmentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetAbortEnvironmentUpdateQueryParams.prototype, "version", void 0);
     return GetAbortEnvironmentUpdateQueryParams;
-}(SpeakeasyBase));
-export { GetAbortEnvironmentUpdateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAbortEnvironmentUpdateQueryParams = GetAbortEnvironmentUpdateQueryParams;
 var GetAbortEnvironmentUpdateHeaders = /** @class */ (function (_super) {
     __extends(GetAbortEnvironmentUpdateHeaders, _super);
     function GetAbortEnvironmentUpdateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetAbortEnvironmentUpdateHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetAbortEnvironmentUpdateHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetAbortEnvironmentUpdateHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetAbortEnvironmentUpdateHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetAbortEnvironmentUpdateHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetAbortEnvironmentUpdateHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetAbortEnvironmentUpdateHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetAbortEnvironmentUpdateHeaders;
-}(SpeakeasyBase));
-export { GetAbortEnvironmentUpdateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetAbortEnvironmentUpdateHeaders = GetAbortEnvironmentUpdateHeaders;
 var GetAbortEnvironmentUpdateRequest = /** @class */ (function (_super) {
     __extends(GetAbortEnvironmentUpdateRequest, _super);
     function GetAbortEnvironmentUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAbortEnvironmentUpdateQueryParams)
     ], GetAbortEnvironmentUpdateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAbortEnvironmentUpdateHeaders)
     ], GetAbortEnvironmentUpdateRequest.prototype, "headers", void 0);
     return GetAbortEnvironmentUpdateRequest;
-}(SpeakeasyBase));
-export { GetAbortEnvironmentUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAbortEnvironmentUpdateRequest = GetAbortEnvironmentUpdateRequest;
 var GetAbortEnvironmentUpdateResponse = /** @class */ (function (_super) {
     __extends(GetAbortEnvironmentUpdateResponse, _super);
     function GetAbortEnvironmentUpdateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetAbortEnvironmentUpdateResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAbortEnvironmentUpdateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAbortEnvironmentUpdateResponse.prototype, "statusCode", void 0);
     return GetAbortEnvironmentUpdateResponse;
-}(SpeakeasyBase));
-export { GetAbortEnvironmentUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAbortEnvironmentUpdateResponse = GetAbortEnvironmentUpdateResponse;

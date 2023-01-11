@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetApiCardRequest, GetApiCardResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,14 +28,14 @@ const sdk = new SDK();
     
 const req: GetApiCardRequest = {
   queryParams: {
-    type: "voluptatum",
+    type: "sit",
   },
   headers: {
-    xApiKey: "quo",
+    xApiKey: "voluptas",
   },
 };
 
-sdk.sdk.getApiCard(req).then((res: GetApiCardResponse | AxiosError) => {
+sdk.card.getApiCard(req).then((res: GetApiCardResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -45,21 +44,36 @@ sdk.sdk.getApiCard(req).then((res: GetApiCardResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Card
 
 * `getApiCard` - Get Card
 * `getApiCardTypes` - Get available card types
+
+### Misc
+
 * `getApiMiscCultures`
 * `getApiMiscRandomAddress`
+
+### Name
+
 * `getApiName` - Get name
 * `getApiNameSuggestions` - Get business name suggestions
+
+### Phone
+
 * `getApiPhoneCountries` - Get available countries
 * `getApiPhoneGenerate` - Get bulk telephone numbers for a country
 * `getApiPhoneValidate` - Validate a phone number
+
+### SocialNumber
+
 * `getApiSocialNumber` - Generate a social security number
+* `postApiSocialNumber` - Validate VAT/identity numbers
+
+### Text
+
 * `getApiTextLoremIpsum` - Generate lorem ipsum
 * `getApiTextPassword` - Generate password
-* `postApiSocialNumber` - Validate VAT/identity numbers
 * `postApiTextHumanize` - Humanize text
 * `postApiTextTransform` - Transform text
 

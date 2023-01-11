@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CacheSettings } from "./cachesettings";
-import { CacheBehaviorPerPath } from "./cachebehaviorperpath";
-import { CacheBehavior } from "./cachebehavior";
-import { IpAddressTypeEnum } from "./ipaddresstypeenum";
-import { ResourceLocation } from "./resourcelocation";
-import { Origin } from "./origin";
-import { ResourceTypeEnum } from "./resourcetypeenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LightsailDistribution = void 0;
+var utils_1 = require("../../../internal/utils");
+var cachesettings_1 = require("./cachesettings");
+var cachebehaviorperpath_1 = require("./cachebehaviorperpath");
+var cachebehavior_1 = require("./cachebehavior");
+var ipaddresstypeenum_1 = require("./ipaddresstypeenum");
+var resourcelocation_1 = require("./resourcelocation");
+var origin_1 = require("./origin");
+var resourcetypeenum_1 = require("./resourcetypeenum");
+var tag_1 = require("./tag");
 // LightsailDistribution
 /**
  * Describes an Amazon Lightsail content delivery network (CDN) distribution.
@@ -41,85 +44,85 @@ var LightsailDistribution = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ableToUpdateBundle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ableToUpdateBundle" }),
         __metadata("design:type", Boolean)
     ], LightsailDistribution.prototype, "ableToUpdateBundle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alternativeDomainNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alternativeDomainNames" }),
         __metadata("design:type", Array)
     ], LightsailDistribution.prototype, "alternativeDomainNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], LightsailDistribution.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundleId" }),
         __metadata("design:type", String)
     ], LightsailDistribution.prototype, "bundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cacheBehaviorSettings" }),
-        __metadata("design:type", CacheSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cacheBehaviorSettings" }),
+        __metadata("design:type", cachesettings_1.CacheSettings)
     ], LightsailDistribution.prototype, "cacheBehaviorSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cacheBehaviors", elemType: CacheBehaviorPerPath }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cacheBehaviors", elemType: cachebehaviorperpath_1.CacheBehaviorPerPath }),
         __metadata("design:type", Array)
     ], LightsailDistribution.prototype, "cacheBehaviors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateName" }),
         __metadata("design:type", String)
     ], LightsailDistribution.prototype, "certificateName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], LightsailDistribution.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultCacheBehavior" }),
-        __metadata("design:type", CacheBehavior)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultCacheBehavior" }),
+        __metadata("design:type", cachebehavior_1.CacheBehavior)
     ], LightsailDistribution.prototype, "defaultCacheBehavior", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainName" }),
         __metadata("design:type", String)
     ], LightsailDistribution.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddressType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddressType" }),
         __metadata("design:type", String)
     ], LightsailDistribution.prototype, "ipAddressType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isEnabled" }),
         __metadata("design:type", Boolean)
     ], LightsailDistribution.prototype, "isEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", ResourceLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", resourcelocation_1.ResourceLocation)
     ], LightsailDistribution.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], LightsailDistribution.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=origin" }),
-        __metadata("design:type", Origin)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=origin" }),
+        __metadata("design:type", origin_1.Origin)
     ], LightsailDistribution.prototype, "origin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originPublicDNS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originPublicDNS" }),
         __metadata("design:type", String)
-    ], LightsailDistribution.prototype, "originPublicDns", void 0);
+    ], LightsailDistribution.prototype, "originPublicDNS", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], LightsailDistribution.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], LightsailDistribution.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportCode" }),
         __metadata("design:type", String)
     ], LightsailDistribution.prototype, "supportCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], LightsailDistribution.prototype, "tags", void 0);
     return LightsailDistribution;
-}(SpeakeasyBase));
-export { LightsailDistribution };
+}(utils_1.SpeakeasyBase));
+exports.LightsailDistribution = LightsailDistribution;

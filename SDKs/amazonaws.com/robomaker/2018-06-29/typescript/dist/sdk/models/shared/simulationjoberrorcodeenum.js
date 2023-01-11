@@ -1,4 +1,7 @@
-export var SimulationJobErrorCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SimulationJobErrorCodeEnum = void 0;
+var SimulationJobErrorCodeEnum;
 (function (SimulationJobErrorCodeEnum) {
     SimulationJobErrorCodeEnum["InternalServiceError"] = "InternalServiceError";
     SimulationJobErrorCodeEnum["RobotApplicationCrash"] = "RobotApplicationCrash";
@@ -31,4 +34,4 @@ export var SimulationJobErrorCodeEnum;
     SimulationJobErrorCodeEnum["WrongRegionRobotApplication"] = "WrongRegionRobotApplication";
     SimulationJobErrorCodeEnum["WrongRegionSimulationApplication"] = "WrongRegionSimulationApplication";
     SimulationJobErrorCodeEnum["UploadContentMismatchError"] = "UploadContentMismatchError";
-})(SimulationJobErrorCodeEnum || (SimulationJobErrorCodeEnum = {}));
+})(SimulationJobErrorCodeEnum = exports.SimulationJobErrorCodeEnum || (exports.SimulationJobErrorCodeEnum = {}));

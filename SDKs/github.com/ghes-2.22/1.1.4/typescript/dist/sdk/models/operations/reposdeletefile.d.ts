@@ -40,6 +40,6 @@ export declare class ReposDeleteFileResponse extends SpeakeasyBase {
     statusCode: number;
     basicError?: shared.BasicError;
     fileCommit?: shared.FileCommit;
-    reposDeleteFile503ApplicationJsonObject?: ReposDeleteFile503ApplicationJson;
+    reposDeleteFile503ApplicationJSONObject?: ReposDeleteFile503ApplicationJson;
     validationError?: shared.ValidationError;
 }

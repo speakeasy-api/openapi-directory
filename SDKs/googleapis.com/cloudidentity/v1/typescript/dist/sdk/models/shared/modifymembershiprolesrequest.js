@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MembershipRole1 } from "./membershiprole1";
-import { UpdateMembershipRolesParams } from "./updatemembershiprolesparams";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyMembershipRolesRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var membershiprole1_1 = require("./membershiprole1");
+var updatemembershiprolesparams_1 = require("./updatemembershiprolesparams");
 // ModifyMembershipRolesRequest
 /**
  * The request message for MembershipsService.ModifyMembershipRoles.
@@ -35,17 +38,17 @@ var ModifyMembershipRolesRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addRoles", elemType: MembershipRole1 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addRoles", elemType: membershiprole1_1.MembershipRole1 }),
         __metadata("design:type", Array)
     ], ModifyMembershipRolesRequest.prototype, "addRoles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=removeRoles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=removeRoles" }),
         __metadata("design:type", Array)
     ], ModifyMembershipRolesRequest.prototype, "removeRoles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateRolesParams", elemType: UpdateMembershipRolesParams }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateRolesParams", elemType: updatemembershiprolesparams_1.UpdateMembershipRolesParams }),
         __metadata("design:type", Array)
     ], ModifyMembershipRolesRequest.prototype, "updateRolesParams", void 0);
     return ModifyMembershipRolesRequest;
-}(SpeakeasyBase));
-export { ModifyMembershipRolesRequest };
+}(utils_1.SpeakeasyBase));
+exports.ModifyMembershipRolesRequest = ModifyMembershipRolesRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostModifyVolumeActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostModifyVolumeResponse = exports.PostModifyVolumeRequest = exports.PostModifyVolumeHeaders = exports.PostModifyVolumeQueryParams = exports.PostModifyVolumeVersionEnum = exports.PostModifyVolumeActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostModifyVolumeActionEnum;
 (function (PostModifyVolumeActionEnum) {
     PostModifyVolumeActionEnum["ModifyVolume"] = "ModifyVolume";
-})(PostModifyVolumeActionEnum || (PostModifyVolumeActionEnum = {}));
-export var PostModifyVolumeVersionEnum;
+})(PostModifyVolumeActionEnum = exports.PostModifyVolumeActionEnum || (exports.PostModifyVolumeActionEnum = {}));
+var PostModifyVolumeVersionEnum;
 (function (PostModifyVolumeVersionEnum) {
     PostModifyVolumeVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostModifyVolumeVersionEnum || (PostModifyVolumeVersionEnum = {}));
+})(PostModifyVolumeVersionEnum = exports.PostModifyVolumeVersionEnum || (exports.PostModifyVolumeVersionEnum = {}));
 var PostModifyVolumeQueryParams = /** @class */ (function (_super) {
     __extends(PostModifyVolumeQueryParams, _super);
     function PostModifyVolumeQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostModifyVolumeQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostModifyVolumeQueryParams.prototype, "version", void 0);
     return PostModifyVolumeQueryParams;
-}(SpeakeasyBase));
-export { PostModifyVolumeQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyVolumeQueryParams = PostModifyVolumeQueryParams;
 var PostModifyVolumeHeaders = /** @class */ (function (_super) {
     __extends(PostModifyVolumeHeaders, _super);
     function PostModifyVolumeHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostModifyVolumeHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostModifyVolumeHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostModifyVolumeHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostModifyVolumeHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostModifyVolumeHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostModifyVolumeHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostModifyVolumeHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostModifyVolumeHeaders;
-}(SpeakeasyBase));
-export { PostModifyVolumeHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyVolumeHeaders = PostModifyVolumeHeaders;
 var PostModifyVolumeRequest = /** @class */ (function (_super) {
     __extends(PostModifyVolumeRequest, _super);
     function PostModifyVolumeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyVolumeQueryParams)
     ], PostModifyVolumeRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyVolumeHeaders)
     ], PostModifyVolumeRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostModifyVolumeRequest.prototype, "request", void 0);
     return PostModifyVolumeRequest;
-}(SpeakeasyBase));
-export { PostModifyVolumeRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyVolumeRequest = PostModifyVolumeRequest;
 var PostModifyVolumeResponse = /** @class */ (function (_super) {
     __extends(PostModifyVolumeResponse, _super);
     function PostModifyVolumeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostModifyVolumeResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostModifyVolumeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostModifyVolumeResponse.prototype, "statusCode", void 0);
     return PostModifyVolumeResponse;
-}(SpeakeasyBase));
-export { PostModifyVolumeResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyVolumeResponse = PostModifyVolumeResponse;

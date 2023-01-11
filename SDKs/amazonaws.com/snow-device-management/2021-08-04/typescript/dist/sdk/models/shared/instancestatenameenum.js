@@ -1,4 +1,7 @@
-export var InstanceStateNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InstanceStateNameEnum = void 0;
+var InstanceStateNameEnum;
 (function (InstanceStateNameEnum) {
     InstanceStateNameEnum["Pending"] = "PENDING";
     InstanceStateNameEnum["Running"] = "RUNNING";
@@ -6,4 +9,4 @@ export var InstanceStateNameEnum;
     InstanceStateNameEnum["Terminated"] = "TERMINATED";
     InstanceStateNameEnum["Stopping"] = "STOPPING";
     InstanceStateNameEnum["Stopped"] = "STOPPED";
-})(InstanceStateNameEnum || (InstanceStateNameEnum = {}));
+})(InstanceStateNameEnum = exports.InstanceStateNameEnum || (exports.InstanceStateNameEnum = {}));

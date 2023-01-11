@@ -15,5 +15,5 @@ export declare class CodesOfConductGetConductCodeResponse extends SpeakeasyBase 
     statusCode: number;
     basicError?: shared.BasicError;
     codeOfConduct?: shared.CodeOfConduct;
-    codesOfConductGetConductCode415ApplicationJsonObject?: CodesOfConductGetConductCode415ApplicationJson;
+    codesOfConductGetConductCode415ApplicationJSONObject?: CodesOfConductGetConductCode415ApplicationJson;
 }

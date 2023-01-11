@@ -20,7 +20,7 @@ export declare class CreateWorldExportJobRequestBody extends SpeakeasyBase {
     clientRequestToken?: string;
     iamRole: string;
     outputLocation: CreateWorldExportJobRequestBodyOutputLocation;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     worlds: string[];
 }
 export declare class CreateWorldExportJobRequest extends SpeakeasyBase {

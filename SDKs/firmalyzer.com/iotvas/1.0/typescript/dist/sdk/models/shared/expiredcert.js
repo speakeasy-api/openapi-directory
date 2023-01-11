@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PublicKey } from "./publickey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExpiredCert = exports.ExpiredCertPublicKey = void 0;
+var utils_1 = require("../../../internal/utils");
+var ExpiredCertPublicKey = /** @class */ (function (_super) {
+    __extends(ExpiredCertPublicKey, _super);
+    function ExpiredCertPublicKey() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=algorithm" }),
+        __metadata("design:type", String)
+    ], ExpiredCertPublicKey.prototype, "algorithm", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bits" }),
+        __metadata("design:type", Number)
+    ], ExpiredCertPublicKey.prototype, "bits", void 0);
+    return ExpiredCertPublicKey;
+}(utils_1.SpeakeasyBase));
+exports.ExpiredCertPublicKey = ExpiredCertPublicKey;
 var ExpiredCert = /** @class */ (function (_super) {
     __extends(ExpiredCert, _super);
     function ExpiredCert() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=file_hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=file_hash" }),
         __metadata("design:type", String)
     ], ExpiredCert.prototype, "fileHash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=file_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=file_name" }),
         __metadata("design:type", String)
     ], ExpiredCert.prototype, "fileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public_key" }),
-        __metadata("design:type", PublicKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public_key" }),
+        __metadata("design:type", ExpiredCertPublicKey)
     ], ExpiredCert.prototype, "publicKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subject_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subject_name" }),
         __metadata("design:type", String)
     ], ExpiredCert.prototype, "subjectName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumb_print" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumb_print" }),
         __metadata("design:type", String)
     ], ExpiredCert.prototype, "thumbPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valid_from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valid_from" }),
         __metadata("design:type", String)
     ], ExpiredCert.prototype, "validFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valid_to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valid_to" }),
         __metadata("design:type", String)
     ], ExpiredCert.prototype, "validTo", void 0);
     return ExpiredCert;
-}(SpeakeasyBase));
-export { ExpiredCert };
+}(utils_1.SpeakeasyBase));
+exports.ExpiredCert = ExpiredCert;

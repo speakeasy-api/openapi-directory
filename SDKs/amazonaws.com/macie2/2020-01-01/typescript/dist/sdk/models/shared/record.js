@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// Record
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecordT = void 0;
+var utils_1 = require("../../../internal/utils");
+// RecordT
 /**
  * Specifies the location of an occurrence of sensitive data in an Apache Avro object container, Apache Parquet file, JSON file, or JSON Lines file.
 **/
-var Record = /** @class */ (function (_super) {
-    __extends(Record, _super);
-    function Record() {
+var RecordT = /** @class */ (function (_super) {
+    __extends(RecordT, _super);
+    function RecordT() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jsonPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jsonPath" }),
         __metadata("design:type", String)
-    ], Record.prototype, "jsonPath", void 0);
+    ], RecordT.prototype, "jsonPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recordIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recordIndex" }),
         __metadata("design:type", Number)
-    ], Record.prototype, "recordIndex", void 0);
-    return Record;
-}(SpeakeasyBase));
-export { Record };
+    ], RecordT.prototype, "recordIndex", void 0);
+    return RecordT;
+}(utils_1.SpeakeasyBase));
+exports.RecordT = RecordT;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PlaceInfo } from "./placeinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Places = void 0;
+var utils_1 = require("../../../internal/utils");
+var placeinfo_1 = require("./placeinfo");
 // Places
 /**
  * Defines the union of areas represented by a set of places.
@@ -34,9 +37,9 @@ var Places = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placeInfos", elemType: PlaceInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placeInfos", elemType: placeinfo_1.PlaceInfo }),
         __metadata("design:type", Array)
     ], Places.prototype, "placeInfos", void 0);
     return Places;
-}(SpeakeasyBase));
-export { Places };
+}(utils_1.SpeakeasyBase));
+exports.Places = Places;

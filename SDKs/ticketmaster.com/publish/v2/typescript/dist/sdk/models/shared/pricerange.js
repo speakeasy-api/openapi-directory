@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PriceRangeTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PriceRange = exports.PriceRangeTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PriceRangeTypeEnum;
 (function (PriceRangeTypeEnum) {
     PriceRangeTypeEnum["Standard"] = "standard";
-})(PriceRangeTypeEnum || (PriceRangeTypeEnum = {}));
+})(PriceRangeTypeEnum = exports.PriceRangeTypeEnum || (exports.PriceRangeTypeEnum = {}));
 // PriceRange
 /**
  * PriceRange
@@ -37,21 +40,21 @@ var PriceRange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], PriceRange.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max" }),
         __metadata("design:type", Number)
     ], PriceRange.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=min" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=min" }),
         __metadata("design:type", Number)
     ], PriceRange.prototype, "min", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PriceRange.prototype, "type", void 0);
     return PriceRange;
-}(SpeakeasyBase));
-export { PriceRange };
+}(utils_1.SpeakeasyBase));
+exports.PriceRange = PriceRange;

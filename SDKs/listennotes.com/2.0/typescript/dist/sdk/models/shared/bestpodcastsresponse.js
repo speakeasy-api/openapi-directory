@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PodcastSimple } from "./podcastsimple";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BestPodcastsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var podcastsimple_1 = require("./podcastsimple");
 var BestPodcastsResponse = /** @class */ (function (_super) {
     __extends(BestPodcastsResponse, _super);
     function BestPodcastsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=has_next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=has_next" }),
         __metadata("design:type", Boolean)
     ], BestPodcastsResponse.prototype, "hasNext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=has_previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=has_previous" }),
         __metadata("design:type", Boolean)
     ], BestPodcastsResponse.prototype, "hasPrevious", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], BestPodcastsResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listennotes_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listennotes_url" }),
         __metadata("design:type", String)
     ], BestPodcastsResponse.prototype, "listennotesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BestPodcastsResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next_page_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_page_number" }),
         __metadata("design:type", Number)
     ], BestPodcastsResponse.prototype, "nextPageNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page_number" }),
         __metadata("design:type", Number)
     ], BestPodcastsResponse.prototype, "pageNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent_id" }),
         __metadata("design:type", Number)
     ], BestPodcastsResponse.prototype, "parentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=podcasts", elemType: PodcastSimple }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=podcasts", elemType: podcastsimple_1.PodcastSimple }),
         __metadata("design:type", Array)
     ], BestPodcastsResponse.prototype, "podcasts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous_page_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous_page_number" }),
         __metadata("design:type", Number)
     ], BestPodcastsResponse.prototype, "previousPageNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], BestPodcastsResponse.prototype, "total", void 0);
     return BestPodcastsResponse;
-}(SpeakeasyBase));
-export { BestPodcastsResponse };
+}(utils_1.SpeakeasyBase));
+exports.BestPodcastsResponse = BestPodcastsResponse;

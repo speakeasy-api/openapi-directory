@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArchitectureEnum } from "./architectureenum";
-import { AutoScalingTypeEnum } from "./autoscalingtypeenum";
-import { BlockDeviceMapping } from "./blockdevicemapping";
-import { ReportedOs } from "./reportedos";
-import { RootDeviceTypeEnum } from "./rootdevicetypeenum";
-import { VirtualizationTypeEnum } from "./virtualizationtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Instance = void 0;
+var utils_1 = require("../../../internal/utils");
+var architectureenum_1 = require("./architectureenum");
+var autoscalingtypeenum_1 = require("./autoscalingtypeenum");
+var blockdevicemapping_1 = require("./blockdevicemapping");
+var reportedos_1 = require("./reportedos");
+var rootdevicetypeenum_1 = require("./rootdevicetypeenum");
+var virtualizationtypeenum_1 = require("./virtualizationtypeenum");
 // Instance
 /**
  * Describes an instance.
@@ -39,169 +42,169 @@ var Instance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AgentVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AgentVersion" }),
         __metadata("design:type", String)
     ], Instance.prototype, "agentVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AmiId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AmiId" }),
         __metadata("design:type", String)
     ], Instance.prototype, "amiId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Architecture" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Architecture" }),
         __metadata("design:type", String)
     ], Instance.prototype, "architecture", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Arn" }),
         __metadata("design:type", String)
     ], Instance.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoScalingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoScalingType" }),
         __metadata("design:type", String)
     ], Instance.prototype, "autoScalingType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AvailabilityZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AvailabilityZone" }),
         __metadata("design:type", String)
     ], Instance.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BlockDeviceMappings", elemType: BlockDeviceMapping }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BlockDeviceMappings", elemType: blockdevicemapping_1.BlockDeviceMapping }),
         __metadata("design:type", Array)
     ], Instance.prototype, "blockDeviceMappings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedAt" }),
         __metadata("design:type", String)
     ], Instance.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EbsOptimized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EbsOptimized" }),
         __metadata("design:type", Boolean)
     ], Instance.prototype, "ebsOptimized", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Ec2InstanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Ec2InstanceId" }),
         __metadata("design:type", String)
     ], Instance.prototype, "ec2InstanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EcsClusterArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EcsClusterArn" }),
         __metadata("design:type", String)
     ], Instance.prototype, "ecsClusterArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EcsContainerInstanceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EcsContainerInstanceArn" }),
         __metadata("design:type", String)
     ], Instance.prototype, "ecsContainerInstanceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ElasticIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ElasticIp" }),
         __metadata("design:type", String)
     ], Instance.prototype, "elasticIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Hostname" }),
         __metadata("design:type", String)
     ], Instance.prototype, "hostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InfrastructureClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InfrastructureClass" }),
         __metadata("design:type", String)
     ], Instance.prototype, "infrastructureClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstallUpdatesOnBoot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstallUpdatesOnBoot" }),
         __metadata("design:type", Boolean)
     ], Instance.prototype, "installUpdatesOnBoot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstanceId" }),
         __metadata("design:type", String)
     ], Instance.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstanceProfileArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstanceProfileArn" }),
         __metadata("design:type", String)
     ], Instance.prototype, "instanceProfileArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstanceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstanceType" }),
         __metadata("design:type", String)
     ], Instance.prototype, "instanceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastServiceErrorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastServiceErrorId" }),
         __metadata("design:type", String)
     ], Instance.prototype, "lastServiceErrorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LayerIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LayerIds" }),
         __metadata("design:type", Array)
     ], Instance.prototype, "layerIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Os" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Os" }),
         __metadata("design:type", String)
     ], Instance.prototype, "os", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Platform" }),
         __metadata("design:type", String)
     ], Instance.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PrivateDns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PrivateDns" }),
         __metadata("design:type", String)
     ], Instance.prototype, "privateDns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PrivateIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PrivateIp" }),
         __metadata("design:type", String)
     ], Instance.prototype, "privateIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PublicDns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PublicDns" }),
         __metadata("design:type", String)
     ], Instance.prototype, "publicDns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PublicIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PublicIp" }),
         __metadata("design:type", String)
     ], Instance.prototype, "publicIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RegisteredBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RegisteredBy" }),
         __metadata("design:type", String)
     ], Instance.prototype, "registeredBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReportedAgentVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReportedAgentVersion" }),
         __metadata("design:type", String)
     ], Instance.prototype, "reportedAgentVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReportedOs" }),
-        __metadata("design:type", ReportedOs)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReportedOs" }),
+        __metadata("design:type", reportedos_1.ReportedOs)
     ], Instance.prototype, "reportedOs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RootDeviceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RootDeviceType" }),
         __metadata("design:type", String)
     ], Instance.prototype, "rootDeviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RootDeviceVolumeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RootDeviceVolumeId" }),
         __metadata("design:type", String)
     ], Instance.prototype, "rootDeviceVolumeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityGroupIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityGroupIds" }),
         __metadata("design:type", Array)
     ], Instance.prototype, "securityGroupIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SshHostDsaKeyFingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SshHostDsaKeyFingerprint" }),
         __metadata("design:type", String)
     ], Instance.prototype, "sshHostDsaKeyFingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SshHostRsaKeyFingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SshHostRsaKeyFingerprint" }),
         __metadata("design:type", String)
     ], Instance.prototype, "sshHostRsaKeyFingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SshKeyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SshKeyName" }),
         __metadata("design:type", String)
     ], Instance.prototype, "sshKeyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StackId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StackId" }),
         __metadata("design:type", String)
     ], Instance.prototype, "stackId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], Instance.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetId" }),
         __metadata("design:type", String)
     ], Instance.prototype, "subnetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tenancy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tenancy" }),
         __metadata("design:type", String)
     ], Instance.prototype, "tenancy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VirtualizationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VirtualizationType" }),
         __metadata("design:type", String)
     ], Instance.prototype, "virtualizationType", void 0);
     return Instance;
-}(SpeakeasyBase));
-export { Instance };
+}(utils_1.SpeakeasyBase));
+exports.Instance = Instance;

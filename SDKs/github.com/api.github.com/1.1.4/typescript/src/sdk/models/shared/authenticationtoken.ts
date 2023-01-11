@@ -17,7 +17,7 @@ export class AuthenticationToken extends SpeakeasyBase {
   expiresAt: Date;
 
   @SpeakeasyMetadata({ data: "json, name=permissions" })
-  permissions?: Map<string, any>;
+  permissions?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=repositories", elemType: Repository })
   repositories?: Repository[];

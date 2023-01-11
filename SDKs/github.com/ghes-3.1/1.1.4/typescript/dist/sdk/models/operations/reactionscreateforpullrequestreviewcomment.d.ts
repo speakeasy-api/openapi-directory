@@ -30,6 +30,6 @@ export declare class ReactionsCreateForPullRequestReviewCommentResponse extends 
     contentType: string;
     statusCode: number;
     reaction?: shared.Reaction;
-    reactionsCreateForPullRequestReviewComment415ApplicationJsonObject?: ReactionsCreateForPullRequestReviewComment415ApplicationJson;
+    reactionsCreateForPullRequestReviewComment415ApplicationJSONObject?: ReactionsCreateForPullRequestReviewComment415ApplicationJson;
     validationError?: shared.ValidationError;
 }

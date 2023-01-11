@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,62 +23,64 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSource } from "./rulesource";
-export var IftttRulePostRequestModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IftttRulePost = exports.IftttRulePostTarget = exports.IftttRulePostStatusEnum = exports.IftttRulePostRuleTypeEnum = exports.IftttRulePostRequestModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulesource_1 = require("./rulesource");
+var IftttRulePostRequestModeEnum;
 (function (IftttRulePostRequestModeEnum) {
     IftttRulePostRequestModeEnum["Single"] = "single";
-})(IftttRulePostRequestModeEnum || (IftttRulePostRequestModeEnum = {}));
-export var IftttRulePostRuleTypeEnum;
+})(IftttRulePostRequestModeEnum = exports.IftttRulePostRequestModeEnum || (exports.IftttRulePostRequestModeEnum = {}));
+var IftttRulePostRuleTypeEnum;
 (function (IftttRulePostRuleTypeEnum) {
     IftttRulePostRuleTypeEnum["HttpIfttt"] = "http/ifttt";
-})(IftttRulePostRuleTypeEnum || (IftttRulePostRuleTypeEnum = {}));
-export var IftttRulePostStatusEnum;
+})(IftttRulePostRuleTypeEnum = exports.IftttRulePostRuleTypeEnum || (exports.IftttRulePostRuleTypeEnum = {}));
+var IftttRulePostStatusEnum;
 (function (IftttRulePostStatusEnum) {
     IftttRulePostStatusEnum["Enabled"] = "enabled";
     IftttRulePostStatusEnum["Disabled"] = "disabled";
-})(IftttRulePostStatusEnum || (IftttRulePostStatusEnum = {}));
+})(IftttRulePostStatusEnum = exports.IftttRulePostStatusEnum || (exports.IftttRulePostStatusEnum = {}));
 var IftttRulePostTarget = /** @class */ (function (_super) {
     __extends(IftttRulePostTarget, _super);
     function IftttRulePostTarget() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventName" }),
         __metadata("design:type", String)
     ], IftttRulePostTarget.prototype, "eventName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webhookKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webhookKey" }),
         __metadata("design:type", String)
     ], IftttRulePostTarget.prototype, "webhookKey", void 0);
     return IftttRulePostTarget;
-}(SpeakeasyBase));
-export { IftttRulePostTarget };
+}(utils_1.SpeakeasyBase));
+exports.IftttRulePostTarget = IftttRulePostTarget;
 var IftttRulePost = /** @class */ (function (_super) {
     __extends(IftttRulePost, _super);
     function IftttRulePost() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMode" }),
         __metadata("design:type", String)
     ], IftttRulePost.prototype, "requestMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleType" }),
         __metadata("design:type", String)
     ], IftttRulePost.prototype, "ruleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", RuleSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", rulesource_1.RuleSource)
     ], IftttRulePost.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], IftttRulePost.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", IftttRulePostTarget)
     ], IftttRulePost.prototype, "target", void 0);
     return IftttRulePost;
-}(SpeakeasyBase));
-export { IftttRulePost };
+}(utils_1.SpeakeasyBase));
+exports.IftttRulePost = IftttRulePost;

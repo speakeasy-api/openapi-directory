@@ -16,6 +16,6 @@ export declare class PoolAddRequest extends SpeakeasyBase {
 export declare class PoolAddResponse extends SpeakeasyBase {
     batchError?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

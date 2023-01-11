@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SegmentListResponse = exports.SegmentListRequest = exports.SegmentListQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SegmentListQueryParams = /** @class */ (function (_super) {
     __extends(SegmentListQueryParams, _super);
     function SegmentListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", String)
     ], SegmentListQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort_direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort_direction" }),
         __metadata("design:type", String)
     ], SegmentListQueryParams.prototype, "sortDirection", void 0);
     return SegmentListQueryParams;
-}(SpeakeasyBase));
-export { SegmentListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SegmentListQueryParams = SegmentListQueryParams;
 var SegmentListRequest = /** @class */ (function (_super) {
     __extends(SegmentListRequest, _super);
     function SegmentListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SegmentListQueryParams)
     ], SegmentListRequest.prototype, "queryParams", void 0);
     return SegmentListRequest;
-}(SpeakeasyBase));
-export { SegmentListRequest };
+}(utils_1.SpeakeasyBase));
+exports.SegmentListRequest = SegmentListRequest;
 var SegmentListResponse = /** @class */ (function (_super) {
     __extends(SegmentListResponse, _super);
     function SegmentListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SegmentListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SegmentListResponse.prototype, "statusCode", void 0);
     return SegmentListResponse;
-}(SpeakeasyBase));
-export { SegmentListResponse };
+}(utils_1.SpeakeasyBase));
+exports.SegmentListResponse = SegmentListResponse;

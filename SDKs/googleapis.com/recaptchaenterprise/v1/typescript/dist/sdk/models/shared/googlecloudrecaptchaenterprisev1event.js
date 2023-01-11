@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecaptchaenterpriseV1Event = void 0;
+var utils_1 = require("../../../internal/utils");
 var GoogleCloudRecaptchaenterpriseV1Event = /** @class */ (function (_super) {
     __extends(GoogleCloudRecaptchaenterpriseV1Event, _super);
     function GoogleCloudRecaptchaenterpriseV1Event() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expectedAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expectedAction" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1Event.prototype, "expectedAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hashedAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hashedAccountId" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1Event.prototype, "hashedAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=siteKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=siteKey" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1Event.prototype, "siteKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1Event.prototype, "token", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userAgent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userAgent" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1Event.prototype, "userAgent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userIpAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userIpAddress" }),
         __metadata("design:type", String)
     ], GoogleCloudRecaptchaenterpriseV1Event.prototype, "userIpAddress", void 0);
     return GoogleCloudRecaptchaenterpriseV1Event;
-}(SpeakeasyBase));
-export { GoogleCloudRecaptchaenterpriseV1Event };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecaptchaenterpriseV1Event = GoogleCloudRecaptchaenterpriseV1Event;

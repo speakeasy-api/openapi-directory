@@ -6,10 +6,10 @@ export declare class EnterpriseAdminUpdatePreReceiveHookPathParams extends Speak
 export declare class EnterpriseAdminUpdatePreReceiveHookRequestBody extends SpeakeasyBase {
     allowDownstreamConfiguration?: boolean;
     enforcement?: string;
-    environment?: Map<string, any>;
+    environment?: Record<string, any>;
     name?: string;
     script?: string;
-    scriptRepository?: Map<string, any>;
+    scriptRepository?: Record<string, any>;
 }
 export declare class EnterpriseAdminUpdatePreReceiveHookRequest extends SpeakeasyBase {
     pathParams: EnterpriseAdminUpdatePreReceiveHookPathParams;

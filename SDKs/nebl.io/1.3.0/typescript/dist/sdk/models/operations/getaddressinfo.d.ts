@@ -8,7 +8,7 @@ export declare class GetAddressInfoRequest extends SpeakeasyBase {
 }
 export declare class GetAddressInfoResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     getAddressInfoResponse?: shared.GetAddressInfoResponse;
 }

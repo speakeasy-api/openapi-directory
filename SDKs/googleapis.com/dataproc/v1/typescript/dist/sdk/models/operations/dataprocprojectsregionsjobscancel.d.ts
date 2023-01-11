@@ -25,7 +25,7 @@ export declare class DataprocProjectsRegionsJobsCancelSecurity extends Speakeasy
 export declare class DataprocProjectsRegionsJobsCancelRequest extends SpeakeasyBase {
     pathParams: DataprocProjectsRegionsJobsCancelPathParams;
     queryParams: DataprocProjectsRegionsJobsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: DataprocProjectsRegionsJobsCancelSecurity;
 }
 export declare class DataprocProjectsRegionsJobsCancelResponse extends SpeakeasyBase {

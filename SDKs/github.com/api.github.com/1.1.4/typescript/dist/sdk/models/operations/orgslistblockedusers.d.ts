@@ -13,6 +13,6 @@ export declare class OrgsListBlockedUsersRequest extends SpeakeasyBase {
 export declare class OrgsListBlockedUsersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    orgsListBlockedUsers415ApplicationJsonObject?: OrgsListBlockedUsers415ApplicationJson;
+    orgsListBlockedUsers415ApplicationJSONObject?: OrgsListBlockedUsers415ApplicationJson;
     simpleUsers?: shared.SimpleUser[];
 }

@@ -55,5 +55,5 @@ export class GetCategorySubscriptionsAlt1Response extends SpeakeasyBase {
   categories?: shared.Category[];
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 }

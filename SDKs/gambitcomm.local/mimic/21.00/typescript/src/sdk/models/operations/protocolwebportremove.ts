@@ -25,5 +25,5 @@ export class ProtocolWebPortRemoveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolWebPortRemove200ApplicationJsonString?: string;
+  protocolWebPortRemove200ApplicationJSONString?: string;
 }

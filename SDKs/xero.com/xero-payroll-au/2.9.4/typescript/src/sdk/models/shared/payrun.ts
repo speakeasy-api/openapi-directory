@@ -14,7 +14,7 @@ export class PayRun extends SpeakeasyBase {
   netPay?: number;
 
   @SpeakeasyMetadata({ data: "json, name=PayRunID" })
-  payRunId?: string;
+  payRunID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=PayRunPeriodEndDate" })
   payRunPeriodEndDate?: string;
@@ -29,7 +29,7 @@ export class PayRun extends SpeakeasyBase {
   paymentDate?: string;
 
   @SpeakeasyMetadata({ data: "json, name=PayrollCalendarID" })
-  payrollCalendarId: string;
+  payrollCalendarID: string;
 
   @SpeakeasyMetadata({ data: "json, name=PayslipMessage" })
   payslipMessage?: string;
@@ -47,7 +47,7 @@ export class PayRun extends SpeakeasyBase {
   tax?: number;
 
   @SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" })
-  updatedDateUtc?: string;
+  updatedDateUTC?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ValidationErrors", elemType: ValidationError })
   validationErrors?: ValidationError[];
@@ -65,7 +65,7 @@ export class PayRunInput extends SpeakeasyBase {
   netPay?: number;
 
   @SpeakeasyMetadata({ data: "json, name=PayRunID" })
-  payRunId?: string;
+  payRunID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=PayRunPeriodEndDate" })
   payRunPeriodEndDate?: string;
@@ -80,7 +80,7 @@ export class PayRunInput extends SpeakeasyBase {
   paymentDate?: string;
 
   @SpeakeasyMetadata({ data: "json, name=PayrollCalendarID" })
-  payrollCalendarId: string;
+  payrollCalendarID: string;
 
   @SpeakeasyMetadata({ data: "json, name=PayslipMessage" })
   payslipMessage?: string;

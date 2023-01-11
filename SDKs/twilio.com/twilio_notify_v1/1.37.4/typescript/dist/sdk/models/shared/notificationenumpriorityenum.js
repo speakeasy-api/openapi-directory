@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NotificationEnumPriorityEnum = void 0;
+var NotificationEnumPriorityEnum;
+(function (NotificationEnumPriorityEnum) {
+    NotificationEnumPriorityEnum["High"] = "high";
+    NotificationEnumPriorityEnum["Low"] = "low";
+})(NotificationEnumPriorityEnum = exports.NotificationEnumPriorityEnum || (exports.NotificationEnumPriorityEnum = {}));

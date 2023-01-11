@@ -5,7 +5,7 @@ import { TestTypeEnum } from "./testtypeenum";
 **/
 export declare class ScheduleRunTest extends SpeakeasyBase {
     filter?: string;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
     testPackageArn?: string;
     testSpecArn?: string;
     type: TestTypeEnum;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GenderDetectionResponse = exports.GenderDetectionRequest = exports.GenderDetectionRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var GenderDetectionRequestBody = /** @class */ (function (_super) {
     __extends(GenderDetectionRequestBody, _super);
     function GenderDetectionRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=api_key;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=api_key;" }),
         __metadata("design:type", String)
     ], GenderDetectionRequestBody.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=text;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=text;" }),
         __metadata("design:type", String)
     ], GenderDetectionRequestBody.prototype, "text", void 0);
     return GenderDetectionRequestBody;
-}(SpeakeasyBase));
-export { GenderDetectionRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.GenderDetectionRequestBody = GenderDetectionRequestBody;
 var GenderDetectionRequest = /** @class */ (function (_super) {
     __extends(GenderDetectionRequest, _super);
     function GenderDetectionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", GenderDetectionRequestBody)
     ], GenderDetectionRequest.prototype, "request", void 0);
     return GenderDetectionRequest;
-}(SpeakeasyBase));
-export { GenderDetectionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GenderDetectionRequest = GenderDetectionRequest;
 var GenderDetectionResponse = /** @class */ (function (_super) {
     __extends(GenderDetectionResponse, _super);
     function GenderDetectionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GenderDetectionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GenderDetectionResponse.prototype, "statusCode", void 0);
     return GenderDetectionResponse;
-}(SpeakeasyBase));
-export { GenderDetectionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GenderDetectionResponse = GenderDetectionResponse;

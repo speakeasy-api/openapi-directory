@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,39 +23,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ValidationError = exports.ValidationErrorErrors = void 0;
+var utils_1 = require("../../../internal/utils");
 var ValidationErrorErrors = /** @class */ (function (_super) {
     __extends(ValidationErrorErrors, _super);
     function ValidationErrorErrors() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], ValidationErrorErrors.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field" }),
         __metadata("design:type", String)
     ], ValidationErrorErrors.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=index" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=index" }),
         __metadata("design:type", Number)
     ], ValidationErrorErrors.prototype, "index", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ValidationErrorErrors.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
         __metadata("design:type", String)
     ], ValidationErrorErrors.prototype, "resource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Object)
     ], ValidationErrorErrors.prototype, "value", void 0);
     return ValidationErrorErrors;
-}(SpeakeasyBase));
-export { ValidationErrorErrors };
+}(utils_1.SpeakeasyBase));
+exports.ValidationErrorErrors = ValidationErrorErrors;
 // ValidationError
 /**
  * Validation Error
@@ -65,17 +68,17 @@ var ValidationError = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentation_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentation_url" }),
         __metadata("design:type", String)
     ], ValidationError.prototype, "documentationUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: ValidationErrorErrors }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: ValidationErrorErrors }),
         __metadata("design:type", Array)
     ], ValidationError.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ValidationError.prototype, "message", void 0);
     return ValidationError;
-}(SpeakeasyBase));
-export { ValidationError };
+}(utils_1.SpeakeasyBase));
+exports.ValidationError = ValidationError;

@@ -1,6 +1,6 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-export declare class Parameters {
+export declare class ParametersT {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;

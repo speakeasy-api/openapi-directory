@@ -20,7 +20,7 @@ export declare class StartSimulationJobBatchRequestBody extends SpeakeasyBase {
     batchPolicy?: StartSimulationJobBatchRequestBodyBatchPolicy;
     clientRequestToken?: string;
     createSimulationJobRequests: shared.SimulationJobRequest[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class StartSimulationJobBatchRequest extends SpeakeasyBase {
     headers: StartSimulationJobBatchHeaders;

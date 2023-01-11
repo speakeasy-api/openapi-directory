@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,67 +23,75 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EnumOption } from "./enumoption";
-export var CustomFieldCompactResourceSubtypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CustomFieldCompact = exports.CustomFieldCompactTypeEnum = exports.CustomFieldCompactResourceSubtypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var enumoption_1 = require("./enumoption");
+var CustomFieldCompactResourceSubtypeEnum;
 (function (CustomFieldCompactResourceSubtypeEnum) {
     CustomFieldCompactResourceSubtypeEnum["Text"] = "text";
     CustomFieldCompactResourceSubtypeEnum["Enum"] = "enum";
     CustomFieldCompactResourceSubtypeEnum["MultiEnum"] = "multi_enum";
     CustomFieldCompactResourceSubtypeEnum["Number"] = "number";
-})(CustomFieldCompactResourceSubtypeEnum || (CustomFieldCompactResourceSubtypeEnum = {}));
-export var CustomFieldCompactTypeEnum;
+})(CustomFieldCompactResourceSubtypeEnum = exports.CustomFieldCompactResourceSubtypeEnum || (exports.CustomFieldCompactResourceSubtypeEnum = {}));
+var CustomFieldCompactTypeEnum;
 (function (CustomFieldCompactTypeEnum) {
     CustomFieldCompactTypeEnum["Text"] = "text";
     CustomFieldCompactTypeEnum["Enum"] = "enum";
     CustomFieldCompactTypeEnum["MultiEnum"] = "multi_enum";
     CustomFieldCompactTypeEnum["Number"] = "number";
-})(CustomFieldCompactTypeEnum || (CustomFieldCompactTypeEnum = {}));
+})(CustomFieldCompactTypeEnum = exports.CustomFieldCompactTypeEnum || (exports.CustomFieldCompactTypeEnum = {}));
+// CustomFieldCompact
+/**
+ * Custom Fields store the metadata that is used in order to add user-specified information to tasks in Asana. Be sure to reference the [Custom Fields](/docs/asana-custom-fields) developer documentation for more information about how custom fields relate to various resources in Asana.
+ *
+ * Users in Asana can [lock custom fields](https://asana.com/guide/help/premium/custom-fields#gl-lock-fields), which will make them read-only when accessed by other users. Attempting to edit a locked custom field will return HTTP error code `403 Forbidden`.
+**/
 var CustomFieldCompact = /** @class */ (function (_super) {
     __extends(CustomFieldCompact, _super);
     function CustomFieldCompact() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_value" }),
         __metadata("design:type", String)
     ], CustomFieldCompact.prototype, "displayValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], CustomFieldCompact.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enum_options", elemType: EnumOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enum_options", elemType: enumoption_1.EnumOption }),
         __metadata("design:type", Array)
     ], CustomFieldCompact.prototype, "enumOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], CustomFieldCompact.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CustomFieldCompact.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=number_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number_value" }),
         __metadata("design:type", Number)
     ], CustomFieldCompact.prototype, "numberValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_subtype" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_subtype" }),
         __metadata("design:type", String)
     ], CustomFieldCompact.prototype, "resourceSubtype", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], CustomFieldCompact.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text_value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text_value" }),
         __metadata("design:type", String)
     ], CustomFieldCompact.prototype, "textValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CustomFieldCompact.prototype, "type", void 0);
     return CustomFieldCompact;
-}(SpeakeasyBase));
-export { CustomFieldCompact };
+}(utils_1.SpeakeasyBase));
+exports.CustomFieldCompact = CustomFieldCompact;

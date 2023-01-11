@@ -1,6 +1,9 @@
-export var TargetIdTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetIdTypeEnum = void 0;
+var TargetIdTypeEnum;
 (function (TargetIdTypeEnum) {
     TargetIdTypeEnum["Account"] = "ACCOUNT";
     TargetIdTypeEnum["Ou"] = "OU";
     TargetIdTypeEnum["Root"] = "ROOT";
-})(TargetIdTypeEnum || (TargetIdTypeEnum = {}));
+})(TargetIdTypeEnum = exports.TargetIdTypeEnum || (exports.TargetIdTypeEnum = {}));

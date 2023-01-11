@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddInternalTransferBatchPaymentResponse = exports.AddInternalTransferBatchPaymentRequest = exports.AddInternalTransferBatchPaymentNewBatchItemResponse = exports.AddInternalTransferBatchPaymentBatchItemInternalTransfer = exports.AddInternalTransferBatchPaymentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AddInternalTransferBatchPaymentPathParams = /** @class */ (function (_super) {
     __extends(AddInternalTransferBatchPaymentPathParams, _super);
     function AddInternalTransferBatchPaymentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=batchUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=batchUuid" }),
         __metadata("design:type", String)
     ], AddInternalTransferBatchPaymentPathParams.prototype, "batchUuid", void 0);
     return AddInternalTransferBatchPaymentPathParams;
-}(SpeakeasyBase));
-export { AddInternalTransferBatchPaymentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AddInternalTransferBatchPaymentPathParams = AddInternalTransferBatchPaymentPathParams;
 var AddInternalTransferBatchPaymentBatchItemInternalTransfer = /** @class */ (function (_super) {
     __extends(AddInternalTransferBatchPaymentBatchItemInternalTransfer, _super);
     function AddInternalTransferBatchPaymentBatchItemInternalTransfer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], AddInternalTransferBatchPaymentBatchItemInternalTransfer.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icanFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icanFrom" }),
         __metadata("design:type", Number)
     ], AddInternalTransferBatchPaymentBatchItemInternalTransfer.prototype, "icanFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icanTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icanTo" }),
         __metadata("design:type", Number)
     ], AddInternalTransferBatchPaymentBatchItemInternalTransfer.prototype, "icanTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ref" }),
         __metadata("design:type", String)
     ], AddInternalTransferBatchPaymentBatchItemInternalTransfer.prototype, "ref", void 0);
     return AddInternalTransferBatchPaymentBatchItemInternalTransfer;
-}(SpeakeasyBase));
-export { AddInternalTransferBatchPaymentBatchItemInternalTransfer };
+}(utils_1.SpeakeasyBase));
+exports.AddInternalTransferBatchPaymentBatchItemInternalTransfer = AddInternalTransferBatchPaymentBatchItemInternalTransfer;
 var AddInternalTransferBatchPaymentNewBatchItemResponse = /** @class */ (function (_super) {
     __extends(AddInternalTransferBatchPaymentNewBatchItemResponse, _super);
     function AddInternalTransferBatchPaymentNewBatchItemResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchItemUuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchItemUuid" }),
         __metadata("design:type", String)
     ], AddInternalTransferBatchPaymentNewBatchItemResponse.prototype, "batchItemUuid", void 0);
     return AddInternalTransferBatchPaymentNewBatchItemResponse;
-}(SpeakeasyBase));
-export { AddInternalTransferBatchPaymentNewBatchItemResponse };
+}(utils_1.SpeakeasyBase));
+exports.AddInternalTransferBatchPaymentNewBatchItemResponse = AddInternalTransferBatchPaymentNewBatchItemResponse;
 var AddInternalTransferBatchPaymentRequest = /** @class */ (function (_super) {
     __extends(AddInternalTransferBatchPaymentRequest, _super);
     function AddInternalTransferBatchPaymentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AddInternalTransferBatchPaymentPathParams)
     ], AddInternalTransferBatchPaymentRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", AddInternalTransferBatchPaymentBatchItemInternalTransfer)
     ], AddInternalTransferBatchPaymentRequest.prototype, "request", void 0);
     return AddInternalTransferBatchPaymentRequest;
-}(SpeakeasyBase));
-export { AddInternalTransferBatchPaymentRequest };
+}(utils_1.SpeakeasyBase));
+exports.AddInternalTransferBatchPaymentRequest = AddInternalTransferBatchPaymentRequest;
 var AddInternalTransferBatchPaymentResponse = /** @class */ (function (_super) {
     __extends(AddInternalTransferBatchPaymentResponse, _super);
     function AddInternalTransferBatchPaymentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AddInternalTransferBatchPaymentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AddInternalTransferBatchPaymentNewBatchItemResponse)
     ], AddInternalTransferBatchPaymentResponse.prototype, "newBatchItemResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AddInternalTransferBatchPaymentResponse.prototype, "statusCode", void 0);
     return AddInternalTransferBatchPaymentResponse;
-}(SpeakeasyBase));
-export { AddInternalTransferBatchPaymentResponse };
+}(utils_1.SpeakeasyBase));
+exports.AddInternalTransferBatchPaymentResponse = AddInternalTransferBatchPaymentResponse;

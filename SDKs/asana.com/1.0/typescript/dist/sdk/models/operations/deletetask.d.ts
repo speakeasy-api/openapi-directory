@@ -8,7 +8,7 @@ export declare class DeleteTaskQueryParams extends SpeakeasyBase {
     optPretty?: boolean;
 }
 export declare class DeleteTask200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class DeleteTaskRequest extends SpeakeasyBase {
     pathParams: DeleteTaskPathParams;
@@ -18,5 +18,5 @@ export declare class DeleteTaskResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    deleteTask200ApplicationJsonObject?: DeleteTask200ApplicationJson;
+    deleteTask200ApplicationJSONObject?: DeleteTask200ApplicationJson;
 }

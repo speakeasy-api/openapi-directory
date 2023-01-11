@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UploadBlobByIdResponse = exports.UploadBlobByIdRequest = exports.UploadBlobByIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UploadBlobByIdPathParams = /** @class */ (function (_super) {
     __extends(UploadBlobByIdPathParams, _super);
     function UploadBlobByIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], UploadBlobByIdPathParams.prototype, "id", void 0);
     return UploadBlobByIdPathParams;
-}(SpeakeasyBase));
-export { UploadBlobByIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UploadBlobByIdPathParams = UploadBlobByIdPathParams;
 var UploadBlobByIdRequest = /** @class */ (function (_super) {
     __extends(UploadBlobByIdRequest, _super);
     function UploadBlobByIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UploadBlobByIdPathParams)
     ], UploadBlobByIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", Object)
     ], UploadBlobByIdRequest.prototype, "request", void 0);
     return UploadBlobByIdRequest;
-}(SpeakeasyBase));
-export { UploadBlobByIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.UploadBlobByIdRequest = UploadBlobByIdRequest;
 var UploadBlobByIdResponse = /** @class */ (function (_super) {
     __extends(UploadBlobByIdResponse, _super);
     function UploadBlobByIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UploadBlobByIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UploadBlobByIdResponse.prototype, "statusCode", void 0);
     return UploadBlobByIdResponse;
-}(SpeakeasyBase));
-export { UploadBlobByIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.UploadBlobByIdResponse = UploadBlobByIdResponse;

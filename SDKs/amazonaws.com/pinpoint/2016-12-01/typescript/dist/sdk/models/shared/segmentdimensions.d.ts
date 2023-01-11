@@ -8,10 +8,10 @@ import { MetricDimension } from "./metricdimension";
  * Specifies the dimension settings for a segment.
 **/
 export declare class SegmentDimensions extends SpeakeasyBase {
-    attributes?: Map<string, AttributeDimension>;
+    attributes?: Record<string, AttributeDimension>;
     behavior?: SegmentBehaviors;
     demographic?: SegmentDemographics;
     location?: SegmentLocation;
-    metrics?: Map<string, MetricDimension>;
-    userAttributes?: Map<string, AttributeDimension>;
+    metrics?: Record<string, MetricDimension>;
+    userAttributes?: Record<string, AttributeDimension>;
 }

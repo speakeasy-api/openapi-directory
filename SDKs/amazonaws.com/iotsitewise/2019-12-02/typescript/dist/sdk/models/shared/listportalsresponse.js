@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PortalSummary } from "./portalsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListPortalsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var portalsummary_1 = require("./portalsummary");
 var ListPortalsResponse = /** @class */ (function (_super) {
     __extends(ListPortalsResponse, _super);
     function ListPortalsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListPortalsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portalSummaries", elemType: PortalSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portalSummaries", elemType: portalsummary_1.PortalSummary }),
         __metadata("design:type", Array)
     ], ListPortalsResponse.prototype, "portalSummaries", void 0);
     return ListPortalsResponse;
-}(SpeakeasyBase));
-export { ListPortalsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListPortalsResponse = ListPortalsResponse;

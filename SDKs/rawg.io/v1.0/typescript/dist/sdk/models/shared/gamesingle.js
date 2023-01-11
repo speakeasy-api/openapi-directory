@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GamePlatformMetacritic } from "./gameplatformmetacritic";
-export var GameSingleEsrbRatingNameEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GameSingle = exports.GameSinglePlatforms = exports.GameSinglePlatformsRequirements = exports.GameSinglePlatformsPlatform = exports.GameSingleEsrbRating = exports.GameSingleEsrbRatingSlugEnum = exports.GameSingleEsrbRatingNameEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var gameplatformmetacritic_1 = require("./gameplatformmetacritic");
+var GameSingleEsrbRatingNameEnum;
 (function (GameSingleEsrbRatingNameEnum) {
     GameSingleEsrbRatingNameEnum["Everyone"] = "Everyone";
     GameSingleEsrbRatingNameEnum["Everyone10Plus"] = "Everyone 10+";
@@ -32,8 +35,8 @@ export var GameSingleEsrbRatingNameEnum;
     GameSingleEsrbRatingNameEnum["Mature"] = "Mature";
     GameSingleEsrbRatingNameEnum["AdultsOnly"] = "Adults Only";
     GameSingleEsrbRatingNameEnum["RatingPending"] = "Rating Pending";
-})(GameSingleEsrbRatingNameEnum || (GameSingleEsrbRatingNameEnum = {}));
-export var GameSingleEsrbRatingSlugEnum;
+})(GameSingleEsrbRatingNameEnum = exports.GameSingleEsrbRatingNameEnum || (exports.GameSingleEsrbRatingNameEnum = {}));
+var GameSingleEsrbRatingSlugEnum;
 (function (GameSingleEsrbRatingSlugEnum) {
     GameSingleEsrbRatingSlugEnum["Everyone"] = "everyone";
     GameSingleEsrbRatingSlugEnum["Everyone10Plus"] = "everyone-10-plus";
@@ -41,256 +44,256 @@ export var GameSingleEsrbRatingSlugEnum;
     GameSingleEsrbRatingSlugEnum["Mature"] = "mature";
     GameSingleEsrbRatingSlugEnum["AdultsOnly"] = "adults-only";
     GameSingleEsrbRatingSlugEnum["RatingPending"] = "rating-pending";
-})(GameSingleEsrbRatingSlugEnum || (GameSingleEsrbRatingSlugEnum = {}));
+})(GameSingleEsrbRatingSlugEnum = exports.GameSingleEsrbRatingSlugEnum || (exports.GameSingleEsrbRatingSlugEnum = {}));
 var GameSingleEsrbRating = /** @class */ (function (_super) {
     __extends(GameSingleEsrbRating, _super);
     function GameSingleEsrbRating() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GameSingleEsrbRating.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GameSingleEsrbRating.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], GameSingleEsrbRating.prototype, "slug", void 0);
     return GameSingleEsrbRating;
-}(SpeakeasyBase));
-export { GameSingleEsrbRating };
+}(utils_1.SpeakeasyBase));
+exports.GameSingleEsrbRating = GameSingleEsrbRating;
 var GameSinglePlatformsPlatform = /** @class */ (function (_super) {
     __extends(GameSinglePlatformsPlatform, _super);
     function GameSinglePlatformsPlatform() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GameSinglePlatformsPlatform.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GameSinglePlatformsPlatform.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], GameSinglePlatformsPlatform.prototype, "slug", void 0);
     return GameSinglePlatformsPlatform;
-}(SpeakeasyBase));
-export { GameSinglePlatformsPlatform };
+}(utils_1.SpeakeasyBase));
+exports.GameSinglePlatformsPlatform = GameSinglePlatformsPlatform;
 var GameSinglePlatformsRequirements = /** @class */ (function (_super) {
     __extends(GameSinglePlatformsRequirements, _super);
     function GameSinglePlatformsRequirements() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minimum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minimum" }),
         __metadata("design:type", String)
     ], GameSinglePlatformsRequirements.prototype, "minimum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommended" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommended" }),
         __metadata("design:type", String)
     ], GameSinglePlatformsRequirements.prototype, "recommended", void 0);
     return GameSinglePlatformsRequirements;
-}(SpeakeasyBase));
-export { GameSinglePlatformsRequirements };
+}(utils_1.SpeakeasyBase));
+exports.GameSinglePlatformsRequirements = GameSinglePlatformsRequirements;
 var GameSinglePlatforms = /** @class */ (function (_super) {
     __extends(GameSinglePlatforms, _super);
     function GameSinglePlatforms() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
         __metadata("design:type", GameSinglePlatformsPlatform)
     ], GameSinglePlatforms.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=released_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=released_at" }),
         __metadata("design:type", String)
     ], GameSinglePlatforms.prototype, "releasedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requirements" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requirements" }),
         __metadata("design:type", GameSinglePlatformsRequirements)
     ], GameSinglePlatforms.prototype, "requirements", void 0);
     return GameSinglePlatforms;
-}(SpeakeasyBase));
-export { GameSinglePlatforms };
+}(utils_1.SpeakeasyBase));
+exports.GameSinglePlatforms = GameSinglePlatforms;
 var GameSingle = /** @class */ (function (_super) {
     __extends(GameSingle, _super);
     function GameSingle() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=achievements_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=achievements_count" }),
         __metadata("design:type", Number)
     ], GameSingle.prototype, "achievementsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=added" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=added" }),
         __metadata("design:type", Number)
     ], GameSingle.prototype, "added", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=added_by_status" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=added_by_status" }),
+        __metadata("design:type", Object)
     ], GameSingle.prototype, "addedByStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additions_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additions_count" }),
         __metadata("design:type", Number)
     ], GameSingle.prototype, "additionsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alternative_names" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alternative_names" }),
         __metadata("design:type", Array)
     ], GameSingle.prototype, "alternativeNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=background_image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=background_image" }),
         __metadata("design:type", String)
     ], GameSingle.prototype, "backgroundImage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=background_image_additional" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=background_image_additional" }),
         __metadata("design:type", String)
     ], GameSingle.prototype, "backgroundImageAdditional", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creators_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creators_count" }),
         __metadata("design:type", Number)
     ], GameSingle.prototype, "creatorsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GameSingle.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=esrb_rating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=esrb_rating" }),
         __metadata("design:type", GameSingleEsrbRating)
     ], GameSingle.prototype, "esrbRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=game_series_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=game_series_count" }),
         __metadata("design:type", Number)
     ], GameSingle.prototype, "gameSeriesCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GameSingle.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metacritic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metacritic" }),
         __metadata("design:type", Number)
     ], GameSingle.prototype, "metacritic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metacritic_platforms", elemType: GamePlatformMetacritic }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metacritic_platforms", elemType: gameplatformmetacritic_1.GamePlatformMetacritic }),
         __metadata("design:type", Array)
     ], GameSingle.prototype, "metacriticPlatforms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metacritic_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metacritic_url" }),
         __metadata("design:type", String)
     ], GameSingle.prototype, "metacriticUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=movies_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=movies_count" }),
         __metadata("design:type", Number)
     ], GameSingle.prototype, "moviesCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GameSingle.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name_original" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name_original" }),
         __metadata("design:type", String)
     ], GameSingle.prototype, "nameOriginal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent_achievements_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent_achievements_count" }),
         __metadata("design:type", String)
     ], GameSingle.prototype, "parentAchievementsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parents_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parents_count" }),
         __metadata("design:type", Number)
     ], GameSingle.prototype, "parentsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platforms", elemType: GameSinglePlatforms }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platforms", elemType: GameSinglePlatforms }),
         __metadata("design:type", Array)
     ], GameSingle.prototype, "platforms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=playtime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=playtime" }),
         __metadata("design:type", Number)
     ], GameSingle.prototype, "playtime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rating" }),
         __metadata("design:type", Number)
     ], GameSingle.prototype, "rating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rating_top" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rating_top" }),
         __metadata("design:type", Number)
     ], GameSingle.prototype, "ratingTop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ratings" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ratings" }),
+        __metadata("design:type", Object)
     ], GameSingle.prototype, "ratings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ratings_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ratings_count" }),
         __metadata("design:type", Number)
     ], GameSingle.prototype, "ratingsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reactions" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reactions" }),
+        __metadata("design:type", Object)
     ], GameSingle.prototype, "reactions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reddit_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reddit_count" }),
         __metadata("design:type", Number)
     ], GameSingle.prototype, "redditCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reddit_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reddit_description" }),
         __metadata("design:type", String)
     ], GameSingle.prototype, "redditDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reddit_logo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reddit_logo" }),
         __metadata("design:type", String)
     ], GameSingle.prototype, "redditLogo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reddit_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reddit_name" }),
         __metadata("design:type", String)
     ], GameSingle.prototype, "redditName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reddit_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reddit_url" }),
         __metadata("design:type", String)
     ], GameSingle.prototype, "redditUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=released" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=released" }),
         __metadata("design:type", Date)
     ], GameSingle.prototype, "released", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reviews_text_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reviews_text_count" }),
         __metadata("design:type", String)
     ], GameSingle.prototype, "reviewsTextCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenshots_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenshots_count" }),
         __metadata("design:type", Number)
     ], GameSingle.prototype, "screenshotsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], GameSingle.prototype, "slug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suggestions_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suggestions_count" }),
         __metadata("design:type", Number)
     ], GameSingle.prototype, "suggestionsCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tba" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tba" }),
         __metadata("design:type", Boolean)
     ], GameSingle.prototype, "tba", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=twitch_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=twitch_count" }),
         __metadata("design:type", String)
     ], GameSingle.prototype, "twitchCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", Date)
     ], GameSingle.prototype, "updated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=website" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website" }),
         __metadata("design:type", String)
     ], GameSingle.prototype, "website", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=youtube_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=youtube_count" }),
         __metadata("design:type", String)
     ], GameSingle.prototype, "youtubeCount", void 0);
     return GameSingle;
-}(SpeakeasyBase));
-export { GameSingle };
+}(utils_1.SpeakeasyBase));
+exports.GameSingle = GameSingle;

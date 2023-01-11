@@ -4,15 +4,10 @@ export declare class TeamsListMembersInOrgPathParams extends SpeakeasyBase {
     org: string;
     teamSlug: string;
 }
-export declare enum TeamsListMembersInOrgRoleEnum {
-    Member = "member",
-    Maintainer = "maintainer",
-    All = "all"
-}
 export declare class TeamsListMembersInOrgQueryParams extends SpeakeasyBase {
     page?: number;
     perPage?: number;
-    role?: TeamsListMembersInOrgRoleEnum;
+    role?: shared.TeamSlugEnum;
 }
 export declare class TeamsListMembersInOrgRequest extends SpeakeasyBase {
     pathParams: TeamsListMembersInOrgPathParams;
@@ -20,7 +15,7 @@ export declare class TeamsListMembersInOrgRequest extends SpeakeasyBase {
 }
 export declare class TeamsListMembersInOrgResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     simpleUsers?: shared.SimpleUser[];
 }

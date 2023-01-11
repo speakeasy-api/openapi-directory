@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PosStore = void 0;
+var utils_1 = require("../../../internal/utils");
 // PosStore
 /**
  * Store resource.
@@ -33,37 +36,37 @@ var PosStore = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gcidCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gcidCategory" }),
         __metadata("design:type", Array)
     ], PosStore.prototype, "gcidCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], PosStore.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=phoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phoneNumber" }),
         __metadata("design:type", String)
     ], PosStore.prototype, "phoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placeId" }),
         __metadata("design:type", String)
     ], PosStore.prototype, "placeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storeAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storeAddress" }),
         __metadata("design:type", String)
     ], PosStore.prototype, "storeAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storeCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storeCode" }),
         __metadata("design:type", String)
     ], PosStore.prototype, "storeCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storeName" }),
         __metadata("design:type", String)
     ], PosStore.prototype, "storeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=websiteUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=websiteUrl" }),
         __metadata("design:type", String)
     ], PosStore.prototype, "websiteUrl", void 0);
     return PosStore;
-}(SpeakeasyBase));
-export { PosStore };
+}(utils_1.SpeakeasyBase));
+exports.PosStore = PosStore;

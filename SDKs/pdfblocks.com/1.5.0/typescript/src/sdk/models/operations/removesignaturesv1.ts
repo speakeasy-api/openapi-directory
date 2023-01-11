@@ -19,7 +19,7 @@ export class RemoveSignaturesV1RequestBody extends SpeakeasyBase {
 
 export class RemoveSignaturesV14XxApplicationProblemPlusJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
-  errors?: Map<string, any>;
+  errors?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: number;
@@ -49,5 +49,5 @@ export class RemoveSignaturesV1Response extends SpeakeasyBase {
   removeSignaturesV1200ApplicationPdfBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
-  removeSignaturesV14XxApplicationProblemPlusJsonObject?: RemoveSignaturesV14XxApplicationProblemPlusJson;
+  removeSignaturesV14XXApplicationProblemPlusJsonObject?: RemoveSignaturesV14XxApplicationProblemPlusJson;
 }

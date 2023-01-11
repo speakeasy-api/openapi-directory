@@ -3,6 +3,10 @@ import { UserCompact } from "./usercompact";
 
 
 
+// StoryCompact
+/** 
+ * A story represents an activity associated with an object in the Asana system.
+**/
 export class StoryCompact extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=created_at" })
   createdAt?: Date;

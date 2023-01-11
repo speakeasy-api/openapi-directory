@@ -22,5 +22,5 @@ export declare class RetrieveDomainAuthCodeResponse extends SpeakeasyBase {
     invalidInput?: any;
     retrieveDomainAuthCodeResponse?: shared.RetrieveDomainAuthCodeResponse;
     statusCode: number;
-    unsupportedTld?: any;
+    unsupportedTLD?: any;
 }

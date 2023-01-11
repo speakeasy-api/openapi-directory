@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var InvoiceDataConversionStrategyEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InvoiceData = exports.InvoiceDataConversionStrategyEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var InvoiceDataConversionStrategyEnum;
 (function (InvoiceDataConversionStrategyEnum) {
     InvoiceDataConversionStrategyEnum["Ubl"] = "ubl";
     InvoiceDataConversionStrategyEnum["Cii"] = "cii";
     InvoiceDataConversionStrategyEnum["Idoc"] = "idoc";
-})(InvoiceDataConversionStrategyEnum || (InvoiceDataConversionStrategyEnum = {}));
+})(InvoiceDataConversionStrategyEnum = exports.InvoiceDataConversionStrategyEnum || (exports.InvoiceDataConversionStrategyEnum = {}));
 // InvoiceData
 /**
  * The invoice to send, in base64 encoded format. Provide either invoice, or invoiceData, but not both.
@@ -39,13 +42,13 @@ var InvoiceData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conversionStrategy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conversionStrategy" }),
         __metadata("design:type", String)
     ], InvoiceData.prototype, "conversionStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=document" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=document" }),
         __metadata("design:type", String)
     ], InvoiceData.prototype, "document", void 0);
     return InvoiceData;
-}(SpeakeasyBase));
-export { InvoiceData };
+}(utils_1.SpeakeasyBase));
+exports.InvoiceData = InvoiceData;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SourceBuildInformation } from "./sourcebuildinformation";
-import { S3Location } from "./s3location";
-import { ApplicationVersionStatusEnum } from "./applicationversionstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationVersionDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var sourcebuildinformation_1 = require("./sourcebuildinformation");
+var s3location_1 = require("./s3location");
+var applicationversionstatusenum_1 = require("./applicationversionstatusenum");
 // ApplicationVersionDescription
 /**
  * Describes the properties of an application version.
@@ -36,45 +39,45 @@ var ApplicationVersionDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ApplicationVersionDescription.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ApplicationVersionDescription.prototype, "applicationVersionArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ApplicationVersionDescription.prototype, "buildArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], ApplicationVersionDescription.prototype, "dateCreated", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], ApplicationVersionDescription.prototype, "dateUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ApplicationVersionDescription.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", SourceBuildInformation)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", sourcebuildinformation_1.SourceBuildInformation)
     ], ApplicationVersionDescription.prototype, "sourceBuildInformation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", S3Location)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", s3location_1.S3Location)
     ], ApplicationVersionDescription.prototype, "sourceBundle", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ApplicationVersionDescription.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ApplicationVersionDescription.prototype, "versionLabel", void 0);
     return ApplicationVersionDescription;
-}(SpeakeasyBase));
-export { ApplicationVersionDescription };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationVersionDescription = ApplicationVersionDescription;

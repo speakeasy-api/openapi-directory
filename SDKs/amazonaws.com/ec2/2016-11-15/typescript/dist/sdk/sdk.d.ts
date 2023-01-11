@@ -1,24 +1,20 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://ec2.{region}.amazonaws.com", "https://ec2.{region}.amazonaws.com", "http://ec2.amazonaws.com", "https://ec2.amazonaws.com", "http://ec2.{region}.amazonaws.com.cn", "https://ec2.{region}.amazonaws.com.cn"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
-    /**
-     * getAcceptTransitGatewayMulticastDomainAssociations - Accepts a request to associate subnets with a transit gateway multicast domain.
-    **/
-    getAcceptTransitGatewayMulticastDomainAssociations(req: operations.GetAcceptTransitGatewayMulticastDomainAssociationsRequest, config?: AxiosRequestConfig): Promise<operations.GetAcceptTransitGatewayMulticastDomainAssociationsResponse>;
+    constructor(props: SDKProps);
     /**
      * getAcceptTransitGatewayPeeringAttachment - Accepts a transit gateway peering attachment request. The peering attachment must be in the <code>pendingAcceptance</code> state.
     **/
@@ -28,10 +24,6 @@ export declare class SDK {
     **/
     getAcceptTransitGatewayVpcAttachment(req: operations.GetAcceptTransitGatewayVpcAttachmentRequest, config?: AxiosRequestConfig): Promise<operations.GetAcceptTransitGatewayVpcAttachmentResponse>;
     /**
-     * getAcceptVpcEndpointConnections - Accepts one or more interface VPC endpoint connection requests to your VPC endpoint service.
-    **/
-    getAcceptVpcEndpointConnections(req: operations.GetAcceptVpcEndpointConnectionsRequest, config?: AxiosRequestConfig): Promise<operations.GetAcceptVpcEndpointConnectionsResponse>;
-    /**
      * getAcceptVpcPeeringConnection - <p>Accept a VPC peering connection request. To accept a request, the VPC peering connection must be in the <code>pending-acceptance</code> state, and you must be the owner of the peer VPC. Use <a>DescribeVpcPeeringConnections</a> to view your outstanding VPC peering connection requests.</p> <p>For an inter-Region VPC peering connection request, you must accept the VPC peering connection in the Region of the accepter VPC.</p>
     **/
     getAcceptVpcPeeringConnection(req: operations.GetAcceptVpcPeeringConnectionRequest, config?: AxiosRequestConfig): Promise<operations.GetAcceptVpcPeeringConnectionResponse>;
@@ -39,18 +31,6 @@ export declare class SDK {
      * getAdvertiseByoipCidr - <p>Advertises an IPv4 or IPv6 address range that is provisioned for use with your Amazon Web Services resources through bring your own IP addresses (BYOIP).</p> <p>You can perform this operation at most once every 10 seconds, even if you specify different address ranges each time.</p> <p>We recommend that you stop advertising the BYOIP CIDR from other locations when you advertise it from Amazon Web Services. To minimize down time, you can configure your Amazon Web Services resources to use an address from a BYOIP CIDR before it is advertised, and then simultaneously stop advertising it from the current location and start advertising it through Amazon Web Services.</p> <p>It can take a few minutes before traffic to the specified addresses starts routing to Amazon Web Services because of BGP propagation delays.</p> <p>To stop advertising the BYOIP CIDR, use <a>WithdrawByoipCidr</a>.</p>
     **/
     getAdvertiseByoipCidr(req: operations.GetAdvertiseByoipCidrRequest, config?: AxiosRequestConfig): Promise<operations.GetAdvertiseByoipCidrResponse>;
-    /**
-     * getApplySecurityGroupsToClientVpnTargetNetwork - Applies a security group to the association between the target network and the Client VPN endpoint. This action replaces the existing security groups with the specified security groups.
-    **/
-    getApplySecurityGroupsToClientVpnTargetNetwork(req: operations.GetApplySecurityGroupsToClientVpnTargetNetworkRequest, config?: AxiosRequestConfig): Promise<operations.GetApplySecurityGroupsToClientVpnTargetNetworkResponse>;
-    /**
-     * getAssignIpv6Addresses - <p>Assigns one or more IPv6 addresses to the specified network interface. You can specify one or more specific IPv6 addresses, or you can specify the number of IPv6 addresses to be automatically assigned from within the subnet's IPv6 CIDR block range. You can assign as many IPv6 addresses to a network interface as you can assign private IPv4 addresses, and the limit varies per instance type. For information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI">IP Addresses Per Network Interface Per Instance Type</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p> <p>You must specify either the IPv6 addresses or the IPv6 address count in the request. </p> <p>You can optionally use Prefix Delegation on the network interface. You must specify either the IPV6 Prefix Delegation prefixes, or the IPv6 Prefix Delegation count. For information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to Amazon EC2 network interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
-    **/
-    getAssignIpv6Addresses(req: operations.GetAssignIpv6AddressesRequest, config?: AxiosRequestConfig): Promise<operations.GetAssignIpv6AddressesResponse>;
-    /**
-     * getAssignPrivateIpAddresses - <p>Assigns one or more secondary private IP addresses to the specified network interface.</p> <p>You can specify one or more specific secondary IP addresses, or you can specify the number of secondary IP addresses to be automatically assigned within the subnet's CIDR block range. The number of secondary IP addresses that you can assign to an instance varies by instance type. For information about instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. For more information about Elastic IP addresses, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP Addresses</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p> <p>When you move a secondary private IP address to another network interface, any Elastic IP address that is associated with the IP address is also moved.</p> <p>Remapping an IP address is an asynchronous operation. When you move an IP address from one network interface to another, check <code>network/interfaces/macs/mac/local-ipv4s</code> in the instance metadata to confirm that the remapping is complete.</p> <p>You must specify either the IP addresses or the IP address count in the request.</p> <p>You can optionally use Prefix Delegation on the network interface. You must specify either the IPv4 Prefix Delegation prefixes, or the IPv4 Prefix Delegation count. For information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to Amazon EC2 network interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
-    **/
-    getAssignPrivateIpAddresses(req: operations.GetAssignPrivateIpAddressesRequest, config?: AxiosRequestConfig): Promise<operations.GetAssignPrivateIpAddressesResponse>;
     /**
      * getAssociateAddress - <p>Associates an Elastic IP address, or carrier IP address (for instances that are in subnets in Wavelength Zones) with an instance or a network interface. Before you can use an Elastic IP address, you must allocate it to your account.</p> <p>An Elastic IP address is for use in either the EC2-Classic platform or in a VPC. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP Addresses</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p> <p>[EC2-Classic, VPC in an EC2-VPC-only account] If the Elastic IP address is already associated with a different instance, it is disassociated from that instance and associated with the specified instance. If you associate an Elastic IP address with an instance that has an existing Elastic IP address, the existing address is disassociated from the instance, but remains allocated to your account.</p> <p>[VPC in an EC2-Classic account] If you don't specify a private IP address, the Elastic IP address is associated with the primary IP address. If the Elastic IP address is already associated with a different instance or a network interface, you get an error unless you allow reassociation. You cannot associate an Elastic IP address with an instance or network interface that has an existing Elastic IP address.</p> <p>[Subnets in Wavelength Zones] You can associate an IP address from the telecommunication carrier to the instance or network interface. </p> <p>You cannot associate an Elastic IP address with an interface in a different network border group.</p> <important> <p>This is an idempotent operation. If you perform the operation more than once, Amazon EC2 doesn't return an error, and you may be charged for each time the Elastic IP address is remapped to the same instance. For more information, see the <i>Elastic IP Addresses</i> section of <a href="http://aws.amazon.com/ec2/pricing/">Amazon EC2 Pricing</a>.</p> </important>
     **/
@@ -68,10 +48,6 @@ export declare class SDK {
     **/
     getAssociateEnclaveCertificateIamRole(req: operations.GetAssociateEnclaveCertificateIamRoleRequest, config?: AxiosRequestConfig): Promise<operations.GetAssociateEnclaveCertificateIamRoleResponse>;
     /**
-     * getAssociateIamInstanceProfile - Associates an IAM instance profile with a running or stopped instance. You cannot associate more than one IAM instance profile with an instance.
-    **/
-    getAssociateIamInstanceProfile(req: operations.GetAssociateIamInstanceProfileRequest, config?: AxiosRequestConfig): Promise<operations.GetAssociateIamInstanceProfileResponse>;
-    /**
      * getAssociateRouteTable - <p>Associates a subnet in your VPC or an internet gateway or virtual private gateway attached to your VPC with a route table in your VPC. This association causes traffic from the subnet or gateway to be routed according to the routes in the route table. The action returns an association ID, which you need in order to disassociate the route table later. A route table can be associated with multiple subnets.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html">Route tables</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.</p>
     **/
     getAssociateRouteTable(req: operations.GetAssociateRouteTableRequest, config?: AxiosRequestConfig): Promise<operations.GetAssociateRouteTableResponse>;
@@ -79,10 +55,6 @@ export declare class SDK {
      * getAssociateSubnetCidrBlock - Associates a CIDR block with your subnet. You can only associate a single IPv6 CIDR block with your subnet. An IPv6 CIDR block must have a prefix length of /64.
     **/
     getAssociateSubnetCidrBlock(req: operations.GetAssociateSubnetCidrBlockRequest, config?: AxiosRequestConfig): Promise<operations.GetAssociateSubnetCidrBlockResponse>;
-    /**
-     * getAssociateTransitGatewayMulticastDomain - <p>Associates the specified subnets and transit gateway attachments with the specified transit gateway multicast domain.</p> <p>The transit gateway attachment must be in the available state before you can add a resource. Use <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeTransitGatewayAttachments.html">DescribeTransitGatewayAttachments</a> to see the state of the attachment.</p>
-    **/
-    getAssociateTransitGatewayMulticastDomain(req: operations.GetAssociateTransitGatewayMulticastDomainRequest, config?: AxiosRequestConfig): Promise<operations.GetAssociateTransitGatewayMulticastDomainResponse>;
     /**
      * getAssociateTransitGatewayRouteTable - Associates the specified attachment with the specified transit gateway route table. You can associate only one route table with an attachment.
     **/
@@ -95,10 +67,6 @@ export declare class SDK {
      * getAssociateVpcCidrBlock - <p>Associates a CIDR block with your VPC. You can associate a secondary IPv4 CIDR block, an Amazon-provided IPv6 CIDR block, or an IPv6 CIDR block from an IPv6 address pool that you provisioned through bring your own IP addresses (<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html">BYOIP</a>). The IPv6 CIDR block size is fixed at /56.</p> <p>You must specify one of the following in the request: an IPv4 CIDR block, an IPv6 pool, or an Amazon-provided IPv6 CIDR block.</p> <p>For more information about associating CIDR blocks with your VPC and applicable restrictions, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#VPC_Sizing">VPC and subnet sizing</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.</p>
     **/
     getAssociateVpcCidrBlock(req: operations.GetAssociateVpcCidrBlockRequest, config?: AxiosRequestConfig): Promise<operations.GetAssociateVpcCidrBlockResponse>;
-    /**
-     * getAttachClassicLinkVpc - <p>Links an EC2-Classic instance to a ClassicLink-enabled VPC through one or more of the VPC's security groups. You cannot link an EC2-Classic instance to more than one VPC at a time. You can only link an instance that's in the <code>running</code> state. An instance is automatically unlinked from a VPC when it's stopped - you can link it to the VPC again when you restart it.</p> <p>After you've linked an instance, you cannot change the VPC security groups that are associated with it. To change the security groups, you must first unlink the instance, and then link it again.</p> <p>Linking your instance to a VPC is sometimes referred to as <i>attaching</i> your instance.</p>
-    **/
-    getAttachClassicLinkVpc(req: operations.GetAttachClassicLinkVpcRequest, config?: AxiosRequestConfig): Promise<operations.GetAttachClassicLinkVpcResponse>;
     /**
      * getAttachInternetGateway - Attaches an internet gateway or a virtual private gateway to a VPC, enabling connectivity between the internet and the VPC. For more information about your VPC and internet gateway, see the <a href="https://docs.aws.amazon.com/vpc/latest/userguide/">Amazon Virtual Private Cloud User Guide</a>.
     **/
@@ -144,14 +112,6 @@ export declare class SDK {
     **/
     getCancelReservedInstancesListing(req: operations.GetCancelReservedInstancesListingRequest, config?: AxiosRequestConfig): Promise<operations.GetCancelReservedInstancesListingResponse>;
     /**
-     * getCancelSpotFleetRequests - <p>Cancels the specified Spot Fleet requests.</p> <p>After you cancel a Spot Fleet request, the Spot Fleet launches no new Spot Instances. You must specify whether the Spot Fleet should also terminate its Spot Instances. If you terminate the instances, the Spot Fleet request enters the <code>cancelled_terminating</code> state. Otherwise, the Spot Fleet request enters the <code>cancelled_running</code> state and the instances continue to run until they are interrupted or you terminate them manually.</p>
-    **/
-    getCancelSpotFleetRequests(req: operations.GetCancelSpotFleetRequestsRequest, config?: AxiosRequestConfig): Promise<operations.GetCancelSpotFleetRequestsResponse>;
-    /**
-     * getCancelSpotInstanceRequests - <p>Cancels one or more Spot Instance requests.</p> <important> <p>Canceling a Spot Instance request does not terminate running Spot Instances associated with the request.</p> </important>
-    **/
-    getCancelSpotInstanceRequests(req: operations.GetCancelSpotInstanceRequestsRequest, config?: AxiosRequestConfig): Promise<operations.GetCancelSpotInstanceRequestsResponse>;
-    /**
      * getConfirmProductInstance - Determines whether a product code is associated with an instance. This action can only be used by the owner of the product code. It is useful when a product code owner must verify whether another user's instance is eligible for support.
     **/
     getConfirmProductInstance(req: operations.GetConfirmProductInstanceRequest, config?: AxiosRequestConfig): Promise<operations.GetConfirmProductInstanceResponse>;
@@ -180,10 +140,6 @@ export declare class SDK {
     **/
     getCreateLocalGatewayRoute(req: operations.GetCreateLocalGatewayRouteRequest, config?: AxiosRequestConfig): Promise<operations.GetCreateLocalGatewayRouteResponse>;
     /**
-     * getCreateNetworkAclEntry - <p>Creates an entry (a rule) in a network ACL with the specified rule number. Each network ACL has a set of numbered ingress rules and a separate set of numbered egress rules. When determining whether a packet should be allowed in or out of a subnet associated with the ACL, we process the entries in the ACL according to the rule numbers, in ascending order. Each network ACL has a set of ingress rules and a separate set of egress rules.</p> <p>We recommend that you leave room between the rule numbers (for example, 100, 110, 120, ...), and not number them one right after the other (for example, 101, 102, 103, ...). This makes it easier to add a rule between existing ones without having to renumber the rules.</p> <p>After you add an entry, you can't modify it; you must either replace it, or create an entry and delete the old one.</p> <p>For more information about network ACLs, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_ACLs.html">Network ACLs</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.</p>
-    **/
-    getCreateNetworkAclEntry(req: operations.GetCreateNetworkAclEntryRequest, config?: AxiosRequestConfig): Promise<operations.GetCreateNetworkAclEntryResponse>;
-    /**
      * getCreateNetworkInterfacePermission - <p>Grants an Amazon Web Services-authorized account permission to attach the specified network interface to an instance in their account.</p> <p>You can grant permission to a single Amazon Web Services account only, and only one account at a time.</p>
     **/
     getCreateNetworkInterfacePermission(req: operations.GetCreateNetworkInterfacePermissionRequest, config?: AxiosRequestConfig): Promise<operations.GetCreateNetworkInterfacePermissionResponse>;
@@ -207,10 +163,6 @@ export declare class SDK {
      * getCreateTransitGatewayRoute - Creates a static route for the specified transit gateway route table.
     **/
     getCreateTransitGatewayRoute(req: operations.GetCreateTransitGatewayRouteRequest, config?: AxiosRequestConfig): Promise<operations.GetCreateTransitGatewayRouteResponse>;
-    /**
-     * getCreateVpcEndpointConnectionNotification - <p>Creates a connection notification for a specified VPC endpoint or VPC endpoint service. A connection notification notifies you of specific endpoint events. You must create an SNS topic to receive notifications. For more information, see <a href="https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html">Create a Topic</a> in the <i>Amazon Simple Notification Service Developer Guide</i>.</p> <p>You can create a connection notification for interface endpoints only.</p>
-    **/
-    getCreateVpcEndpointConnectionNotification(req: operations.GetCreateVpcEndpointConnectionNotificationRequest, config?: AxiosRequestConfig): Promise<operations.GetCreateVpcEndpointConnectionNotificationResponse>;
     /**
      * getCreateVpnConnectionRoute - <p>Creates a static route associated with a VPN connection between an existing virtual private gateway and a VPN customer gateway. The static route allows traffic to be routed from the virtual private gateway to the VPN customer gateway.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">AWS Site-to-Site VPN</a> in the <i>AWS Site-to-Site VPN User Guide</i>.</p>
     **/
@@ -244,10 +196,6 @@ export declare class SDK {
     **/
     getDeleteFleets(req: operations.GetDeleteFleetsRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteFleetsResponse>;
     /**
-     * getDeleteFlowLogs - Deletes one or more flow logs.
-    **/
-    getDeleteFlowLogs(req: operations.GetDeleteFlowLogsRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteFlowLogsResponse>;
-    /**
      * getDeleteFpgaImage - Deletes the specified Amazon FPGA Image (AFI).
     **/
     getDeleteFpgaImage(req: operations.GetDeleteFpgaImageRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteFpgaImageResponse>;
@@ -267,10 +215,6 @@ export declare class SDK {
      * getDeleteLaunchTemplate - Deletes a launch template. Deleting a launch template deletes all of its versions.
     **/
     getDeleteLaunchTemplate(req: operations.GetDeleteLaunchTemplateRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteLaunchTemplateResponse>;
-    /**
-     * getDeleteLaunchTemplateVersions - Deletes one or more versions of a launch template. You cannot delete the default version of a launch template; you must first assign a different version as the default. If the default version is the only version for the launch template, you must delete the entire launch template using <a>DeleteLaunchTemplate</a>.
-    **/
-    getDeleteLaunchTemplateVersions(req: operations.GetDeleteLaunchTemplateVersionsRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteLaunchTemplateVersionsResponse>;
     /**
      * getDeleteLocalGatewayRoute - Deletes the specified route from the specified local gateway route table.
     **/
@@ -315,10 +259,6 @@ export declare class SDK {
      * getDeletePlacementGroup - Deletes the specified placement group. You must terminate all instances in the placement group before you can delete the placement group. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">Placement groups</a> in the <i>Amazon EC2 User Guide</i>.
     **/
     getDeletePlacementGroup(req: operations.GetDeletePlacementGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetDeletePlacementGroupResponse>;
-    /**
-     * getDeleteQueuedReservedInstances - Deletes the queued purchases for the specified Reserved Instances.
-    **/
-    getDeleteQueuedReservedInstances(req: operations.GetDeleteQueuedReservedInstancesRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteQueuedReservedInstancesResponse>;
     /**
      * getDeleteRoute - Deletes the specified route from the specified route table.
     **/
@@ -408,18 +348,6 @@ export declare class SDK {
     **/
     getDeleteVpc(req: operations.GetDeleteVpcRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteVpcResponse>;
     /**
-     * getDeleteVpcEndpointConnectionNotifications - Deletes one or more VPC endpoint connection notifications.
-    **/
-    getDeleteVpcEndpointConnectionNotifications(req: operations.GetDeleteVpcEndpointConnectionNotificationsRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteVpcEndpointConnectionNotificationsResponse>;
-    /**
-     * getDeleteVpcEndpointServiceConfigurations - Deletes one or more VPC endpoint service configurations in your account. Before you delete the endpoint service configuration, you must reject any <code>Available</code> or <code>PendingAcceptance</code> interface endpoint connections that are attached to the service.
-    **/
-    getDeleteVpcEndpointServiceConfigurations(req: operations.GetDeleteVpcEndpointServiceConfigurationsRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteVpcEndpointServiceConfigurationsResponse>;
-    /**
-     * getDeleteVpcEndpoints - <p>Deletes one or more specified VPC endpoints. You can delete any of the following types of VPC endpoints. </p> <ul> <li> <p>Gateway endpoint,</p> </li> <li> <p>Gateway Load Balancer endpoint,</p> </li> <li> <p>Interface endpoint</p> </li> </ul> <p>The following rules apply when you delete a VPC endpoint:</p> <ul> <li> <p>When you delete a gateway endpoint, we delete the endpoint routes in the route tables that are associated with the endpoint.</p> </li> <li> <p>When you delete a Gateway Load Balancer endpoint, we delete the endpoint network interfaces. </p> <p>You can only delete Gateway Load Balancer endpoints when the routes that are associated with the endpoint are deleted.</p> </li> <li> <p>When you delete an interface endpoint, we delete the endpoint network interfaces.</p> </li> </ul>
-    **/
-    getDeleteVpcEndpoints(req: operations.GetDeleteVpcEndpointsRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteVpcEndpointsResponse>;
-    /**
      * getDeleteVpcPeeringConnection - Deletes a VPC peering connection. Either the owner of the requester VPC or the owner of the accepter VPC can delete the VPC peering connection if it's in the <code>active</code> state. The owner of the requester VPC can delete a VPC peering connection in the <code>pending-acceptance</code> state. You cannot delete a VPC peering connection that's in the <code>failed</code> state.
     **/
     getDeleteVpcPeeringConnection(req: operations.GetDeleteVpcPeeringConnectionRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteVpcPeeringConnectionResponse>;
@@ -444,26 +372,6 @@ export declare class SDK {
     **/
     getDeregisterImage(req: operations.GetDeregisterImageRequest, config?: AxiosRequestConfig): Promise<operations.GetDeregisterImageResponse>;
     /**
-     * getDeregisterInstanceEventNotificationAttributes - <p>c</p> <p>Deregisters tag keys to prevent tags that have the specified tag keys from being included in scheduled event notifications for resources in the Region.</p>
-    **/
-    getDeregisterInstanceEventNotificationAttributes(req: operations.GetDeregisterInstanceEventNotificationAttributesRequest, config?: AxiosRequestConfig): Promise<operations.GetDeregisterInstanceEventNotificationAttributesResponse>;
-    /**
-     * getDeregisterTransitGatewayMulticastGroupMembers - Deregisters the specified members (network interfaces) from the transit gateway multicast group.
-    **/
-    getDeregisterTransitGatewayMulticastGroupMembers(req: operations.GetDeregisterTransitGatewayMulticastGroupMembersRequest, config?: AxiosRequestConfig): Promise<operations.GetDeregisterTransitGatewayMulticastGroupMembersResponse>;
-    /**
-     * getDeregisterTransitGatewayMulticastGroupSources - Deregisters the specified sources (network interfaces) from the transit gateway multicast group.
-    **/
-    getDeregisterTransitGatewayMulticastGroupSources(req: operations.GetDeregisterTransitGatewayMulticastGroupSourcesRequest, config?: AxiosRequestConfig): Promise<operations.GetDeregisterTransitGatewayMulticastGroupSourcesResponse>;
-    /**
-     * getDescribeAccountAttributes - <p>Describes attributes of your AWS account. The following are the supported account attributes:</p> <ul> <li> <p> <code>supported-platforms</code>: Indicates whether your account can launch instances into EC2-Classic and EC2-VPC, or only into EC2-VPC.</p> </li> <li> <p> <code>default-vpc</code>: The ID of the default VPC for your account, or <code>none</code>.</p> </li> <li> <p> <code>max-instances</code>: This attribute is no longer supported. The returned value does not reflect your actual vCPU limit for running On-Demand Instances. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-on-demand-instances.html#ec2-on-demand-instances-limits">On-Demand Instance Limits</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p> </li> <li> <p> <code>vpc-max-security-groups-per-interface</code>: The maximum number of security groups that you can assign to a network interface.</p> </li> <li> <p> <code>max-elastic-ips</code>: The maximum number of Elastic IP addresses that you can allocate for use with EC2-Classic. </p> </li> <li> <p> <code>vpc-max-elastic-ips</code>: The maximum number of Elastic IP addresses that you can allocate for use with EC2-VPC.</p> </li> </ul>
-    **/
-    getDescribeAccountAttributes(req: operations.GetDescribeAccountAttributesRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeAccountAttributesResponse>;
-    /**
-     * getDescribeAddressesAttribute - Describes the attributes of the specified Elastic IP addresses. For requirements, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#Using_Elastic_Addressing_Reverse_DNS">Using reverse DNS for email applications</a>.
-    **/
-    getDescribeAddressesAttribute(req: operations.GetDescribeAddressesAttributeRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeAddressesAttributeResponse>;
-    /**
      * getDescribeAggregateIdFormat - <p>Describes the longer ID format settings for all resource types in a specific Region. This request is useful for performing a quick audit to determine whether a specific Region is fully opted in for longer IDs (17-character IDs).</p> <p>This request only returns information about resource types that support longer IDs.</p> <p>The following resource types support longer IDs: <code>bundle</code> | <code>conversion-task</code> | <code>customer-gateway</code> | <code>dhcp-options</code> | <code>elastic-ip-allocation</code> | <code>elastic-ip-association</code> | <code>export-task</code> | <code>flow-log</code> | <code>image</code> | <code>import-task</code> | <code>instance</code> | <code>internet-gateway</code> | <code>network-acl</code> | <code>network-acl-association</code> | <code>network-interface</code> | <code>network-interface-attachment</code> | <code>prefix-list</code> | <code>reservation</code> | <code>route-table</code> | <code>route-table-association</code> | <code>security-group</code> | <code>snapshot</code> | <code>subnet</code> | <code>subnet-cidr-block-association</code> | <code>volume</code> | <code>vpc</code> | <code>vpc-cidr-block-association</code> | <code>vpc-endpoint</code> | <code>vpc-peering-connection</code> | <code>vpn-connection</code> | <code>vpn-gateway</code>.</p>
     **/
     getDescribeAggregateIdFormat(req: operations.GetDescribeAggregateIdFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeAggregateIdFormatResponse>;
@@ -471,10 +379,6 @@ export declare class SDK {
      * getDescribeByoipCidrs - <p>Describes the IP address ranges that were specified in calls to <a>ProvisionByoipCidr</a>.</p> <p>To describe the address pools that were created when you provisioned the address ranges, use <a>DescribePublicIpv4Pools</a> or <a>DescribeIpv6Pools</a>.</p>
     **/
     getDescribeByoipCidrs(req: operations.GetDescribeByoipCidrsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeByoipCidrsResponse>;
-    /**
-     * getDescribeConversionTasks - <p>Describes the specified conversion tasks or all your conversion tasks. For more information, see the <a href="https://docs.aws.amazon.com/vm-import/latest/userguide/">VM Import/Export User Guide</a>.</p> <p>For information about the import manifest referenced by this API action, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/manifest.html">VM Import Manifest</a>.</p>
-    **/
-    getDescribeConversionTasks(req: operations.GetDescribeConversionTasksRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeConversionTasksResponse>;
     /**
      * getDescribeFleetHistory - <p>Describes the events for the specified EC2 Fleet during the specified time.</p> <p>EC2 Fleet events are delayed by up to 30 seconds before they can be described. This ensures that you can query by the last evaluated time and not miss a recorded event. EC2 Fleet events are available for 48 hours.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html#monitor-ec2-fleet">Monitoring your EC2 Fleet</a> in the <i>Amazon EC2 User Guide</i>.</p>
     **/
@@ -508,14 +412,6 @@ export declare class SDK {
     **/
     getDescribeNetworkInterfaceAttribute(req: operations.GetDescribeNetworkInterfaceAttributeRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeNetworkInterfaceAttributeResponse>;
     /**
-     * getDescribePrincipalIdFormat - <p>Describes the ID format settings for the root user and all IAM roles and IAM users that have explicitly specified a longer ID (17-character ID) preference. </p> <p>By default, all IAM roles and IAM users default to the same ID settings as the root user, unless they explicitly override the settings. This request is useful for identifying those IAM users and IAM roles that have overridden the default ID settings.</p> <p>The following resource types support longer IDs: <code>bundle</code> | <code>conversion-task</code> | <code>customer-gateway</code> | <code>dhcp-options</code> | <code>elastic-ip-allocation</code> | <code>elastic-ip-association</code> | <code>export-task</code> | <code>flow-log</code> | <code>image</code> | <code>import-task</code> | <code>instance</code> | <code>internet-gateway</code> | <code>network-acl</code> | <code>network-acl-association</code> | <code>network-interface</code> | <code>network-interface-attachment</code> | <code>prefix-list</code> | <code>reservation</code> | <code>route-table</code> | <code>route-table-association</code> | <code>security-group</code> | <code>snapshot</code> | <code>subnet</code> | <code>subnet-cidr-block-association</code> | <code>volume</code> | <code>vpc</code> | <code>vpc-cidr-block-association</code> | <code>vpc-endpoint</code> | <code>vpc-peering-connection</code> | <code>vpn-connection</code> | <code>vpn-gateway</code>. </p>
-    **/
-    getDescribePrincipalIdFormat(req: operations.GetDescribePrincipalIdFormatRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribePrincipalIdFormatResponse>;
-    /**
-     * getDescribeSecurityGroupReferences - [VPC only] Describes the VPCs on the other side of a VPC peering connection that are referencing the security groups you've specified in this request.
-    **/
-    getDescribeSecurityGroupReferences(req: operations.GetDescribeSecurityGroupReferencesRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeSecurityGroupReferencesResponse>;
-    /**
      * getDescribeSnapshotAttribute - <p>Describes the specified attribute of the specified snapshot. You can specify only one attribute at a time.</p> <p>For more information about EBS snapshots, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSSnapshots.html">Amazon EBS snapshots</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
     **/
     getDescribeSnapshotAttribute(req: operations.GetDescribeSnapshotAttributeRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeSnapshotAttributeResponse>;
@@ -532,10 +428,6 @@ export declare class SDK {
     **/
     getDescribeSpotFleetRequestHistory(req: operations.GetDescribeSpotFleetRequestHistoryRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeSpotFleetRequestHistoryResponse>;
     /**
-     * getDescribeSpotFleetRequests - <p>Describes your Spot Fleet requests.</p> <p>Spot Fleet requests are deleted 48 hours after they are canceled and their instances are terminated.</p>
-    **/
-    getDescribeSpotFleetRequests(req: operations.GetDescribeSpotFleetRequestsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeSpotFleetRequestsResponse>;
-    /**
      * getDescribeStaleSecurityGroups - [VPC only] Describes the stale security group rules for security groups in a specified VPC. Rules are stale when they reference a deleted security group in a peer VPC, or a security group in a peer VPC for which the VPC peering connection has been deleted.
     **/
     getDescribeStaleSecurityGroups(req: operations.GetDescribeStaleSecurityGroupsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeStaleSecurityGroupsResponse>;
@@ -547,10 +439,6 @@ export declare class SDK {
      * getDescribeVpcAttribute - Describes the specified attribute of the specified VPC. You can specify only one attribute at a time.
     **/
     getDescribeVpcAttribute(req: operations.GetDescribeVpcAttributeRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeVpcAttributeResponse>;
-    /**
-     * getDescribeVpcClassicLinkDnsSupport - Describes the ClassicLink DNS support status of one or more VPCs. If enabled, the DNS hostname of a linked EC2-Classic instance resolves to its private IP address when addressed from an instance in the VPC to which it's linked. Similarly, the DNS hostname of an instance in a VPC resolves to its private IP address when addressed from a linked EC2-Classic instance. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html">ClassicLink</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
-    **/
-    getDescribeVpcClassicLinkDnsSupport(req: operations.GetDescribeVpcClassicLinkDnsSupportRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeVpcClassicLinkDnsSupportResponse>;
     /**
      * getDetachClassicLinkVpc - Unlinks (detaches) a linked EC2-Classic instance from a VPC. After the instance has been unlinked, the VPC security groups are no longer associated with it. An instance is automatically unlinked from a VPC when it's stopped.
     **/
@@ -575,10 +463,6 @@ export declare class SDK {
      * getDisableEbsEncryptionByDefault - <p>Disables EBS encryption by default for your account in the current Region.</p> <p>After you disable encryption by default, you can still create encrypted volumes by enabling encryption when you create each volume.</p> <p>Disabling encryption by default does not change the encryption status of your existing volumes.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
     **/
     getDisableEbsEncryptionByDefault(req: operations.GetDisableEbsEncryptionByDefaultRequest, config?: AxiosRequestConfig): Promise<operations.GetDisableEbsEncryptionByDefaultResponse>;
-    /**
-     * getDisableFastSnapshotRestores - Disables fast snapshot restores for the specified snapshots in the specified Availability Zones.
-    **/
-    getDisableFastSnapshotRestores(req: operations.GetDisableFastSnapshotRestoresRequest, config?: AxiosRequestConfig): Promise<operations.GetDisableFastSnapshotRestoresResponse>;
     /**
      * getDisableImageDeprecation - <p>Cancels the deprecation of the specified AMI.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-deprecate.html">Deprecate an AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
     **/
@@ -628,10 +512,6 @@ export declare class SDK {
     **/
     getDisassociateSubnetCidrBlock(req: operations.GetDisassociateSubnetCidrBlockRequest, config?: AxiosRequestConfig): Promise<operations.GetDisassociateSubnetCidrBlockResponse>;
     /**
-     * getDisassociateTransitGatewayMulticastDomain - Disassociates the specified subnets from the transit gateway multicast domain.
-    **/
-    getDisassociateTransitGatewayMulticastDomain(req: operations.GetDisassociateTransitGatewayMulticastDomainRequest, config?: AxiosRequestConfig): Promise<operations.GetDisassociateTransitGatewayMulticastDomainResponse>;
-    /**
      * getDisassociateTransitGatewayRouteTable - Disassociates a resource attachment from a transit gateway route table.
     **/
     getDisassociateTransitGatewayRouteTable(req: operations.GetDisassociateTransitGatewayRouteTableRequest, config?: AxiosRequestConfig): Promise<operations.GetDisassociateTransitGatewayRouteTableResponse>;
@@ -647,10 +527,6 @@ export declare class SDK {
      * getEnableEbsEncryptionByDefault - <p>Enables EBS encryption by default for your account in the current Region.</p> <p>After you enable encryption by default, the EBS volumes that you create are always encrypted, either using the default KMS key or the KMS key that you specified when you created each volume. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p> <p>You can specify the default KMS key for encryption by default using <a>ModifyEbsDefaultKmsKeyId</a> or <a>ResetEbsDefaultKmsKeyId</a>.</p> <p>Enabling encryption by default has no effect on the encryption status of your existing volumes.</p> <p>After you enable encryption by default, you can no longer launch instances using instance types that do not support encryption. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances">Supported instance types</a>.</p>
     **/
     getEnableEbsEncryptionByDefault(req: operations.GetEnableEbsEncryptionByDefaultRequest, config?: AxiosRequestConfig): Promise<operations.GetEnableEbsEncryptionByDefaultResponse>;
-    /**
-     * getEnableFastSnapshotRestores - <p>Enables fast snapshot restores for the specified snapshots in the specified Availability Zones.</p> <p>You get the full benefit of fast snapshot restores after they enter the <code>enabled</code> state. To get the current state of fast snapshot restores, use <a>DescribeFastSnapshotRestores</a>. To disable fast snapshot restores, use <a>DisableFastSnapshotRestores</a>.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-fast-snapshot-restore.html">Amazon EBS fast snapshot restore</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
-    **/
-    getEnableFastSnapshotRestores(req: operations.GetEnableFastSnapshotRestoresRequest, config?: AxiosRequestConfig): Promise<operations.GetEnableFastSnapshotRestoresResponse>;
     /**
      * getEnableImageDeprecation - <p>Enables deprecation of the specified AMI at the specified date and time.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-deprecate.html">Deprecate an AMI</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
     **/
@@ -724,10 +600,6 @@ export declare class SDK {
     **/
     getGetGroupsForCapacityReservation(req: operations.GetGetGroupsForCapacityReservationRequest, config?: AxiosRequestConfig): Promise<operations.GetGetGroupsForCapacityReservationResponse>;
     /**
-     * getGetHostReservationPurchasePreview - <p>Preview a reservation purchase with configurations that match those of your Dedicated Host. You must have active Dedicated Hosts in your account before you purchase a reservation.</p> <p>This is a preview of the <a>PurchaseHostReservation</a> action and does not result in the offering being purchased.</p>
-    **/
-    getGetHostReservationPurchasePreview(req: operations.GetGetHostReservationPurchasePreviewRequest, config?: AxiosRequestConfig): Promise<operations.GetGetHostReservationPurchasePreviewResponse>;
-    /**
      * getGetLaunchTemplateData - <p>Retrieves the configuration data of the specified instance. You can use this data to create a launch template. </p> <p>This action calls on other describe actions to get instance information. Depending on your instance configuration, you may need to allow the following actions in your IAM policy: DescribeSpotInstanceRequests, DescribeInstanceCreditSpecifications, DescribeVolumes, DescribeInstanceAttribute, and DescribeElasticGpus. Or, you can allow <code>describe*</code> depending on your instance requirements.</p>
     **/
     getGetLaunchTemplateData(req: operations.GetGetLaunchTemplateDataRequest, config?: AxiosRequestConfig): Promise<operations.GetGetLaunchTemplateDataResponse>;
@@ -752,10 +624,6 @@ export declare class SDK {
     **/
     getImportClientVpnClientCertificateRevocationList(req: operations.GetImportClientVpnClientCertificateRevocationListRequest, config?: AxiosRequestConfig): Promise<operations.GetImportClientVpnClientCertificateRevocationListResponse>;
     /**
-     * getImportVolume - <p>Creates an import volume task using metadata from the specified disk image.</p> <p>This API action supports only single-volume VMs. To import multi-volume VMs, use <a>ImportImage</a> instead. To import a disk to a snapshot, use <a>ImportSnapshot</a> instead.</p> <p>This API action is not supported by the Command Line Interface (CLI). For information about using the Amazon EC2 CLI, which is deprecated, see <a href="https://awsdocs.s3.amazonaws.com/EC2/ec2-clt.pdf#importing-your-volumes-into-amazon-ebs">Importing Disks to Amazon EBS</a> in the <i>Amazon EC2 CLI Reference</i> PDF file.</p> <p>For information about the import manifest referenced by this API action, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/manifest.html">VM Import Manifest</a>.</p>
-    **/
-    getImportVolume(req: operations.GetImportVolumeRequest, config?: AxiosRequestConfig): Promise<operations.GetImportVolumeResponse>;
-    /**
      * getModifyAddressAttribute - Modifies an attribute of the specified Elastic IP address. For requirements, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#Using_Elastic_Addressing_Reverse_DNS">Using reverse DNS for email applications</a>.
     **/
     getModifyAddressAttribute(req: operations.GetModifyAddressAttributeRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyAddressAttributeResponse>;
@@ -768,10 +636,6 @@ export declare class SDK {
     **/
     getModifyCapacityReservation(req: operations.GetModifyCapacityReservationRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyCapacityReservationResponse>;
     /**
-     * getModifyClientVpnEndpoint - Modifies the specified Client VPN endpoint. Modifying the DNS server resets existing client connections.
-    **/
-    getModifyClientVpnEndpoint(req: operations.GetModifyClientVpnEndpointRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyClientVpnEndpointResponse>;
-    /**
      * getModifyDefaultCreditSpecification - <p>Modifies the default credit option for CPU usage of burstable performance instances. The default credit option is set at the account level per Amazon Web Services Region, and is specified per instance family. All new burstable performance instances in the account launch using the default credit option.</p> <p> <code>ModifyDefaultCreditSpecification</code> is an asynchronous operation, which works at an Amazon Web Services Region level and modifies the credit option for each Availability Zone. All zones in a Region are updated within five minutes. But if instances are launched during this operation, they might not get the new credit option until the zone is updated. To verify whether the update has occurred, you can call <code>GetDefaultCreditSpecification</code> and check <code>DefaultCreditSpecification</code> for updates.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html">Burstable performance instances</a> in the <i>Amazon EC2 User Guide</i>.</p>
     **/
     getModifyDefaultCreditSpecification(req: operations.GetModifyDefaultCreditSpecificationRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyDefaultCreditSpecificationResponse>;
@@ -779,10 +643,6 @@ export declare class SDK {
      * getModifyEbsDefaultKmsKeyId - <p>Changes the default KMS key for EBS encryption by default for your account in this Region.</p> <p>Amazon Web Services creates a unique Amazon Web Services managed KMS key in each Region for use with encryption by default. If you change the default KMS key to a symmetric customer managed KMS key, it is used instead of the Amazon Web Services managed KMS key. To reset the default KMS key to the Amazon Web Services managed KMS key for EBS, use <a>ResetEbsDefaultKmsKeyId</a>. Amazon EBS does not support asymmetric KMS keys.</p> <p>If you delete or disable the customer managed KMS key that you specified for use with encryption by default, your instances will fail to launch.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html">Amazon EBS encryption</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
     **/
     getModifyEbsDefaultKmsKeyId(req: operations.GetModifyEbsDefaultKmsKeyIdRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyEbsDefaultKmsKeyIdResponse>;
-    /**
-     * getModifyHosts - <p>Modify the auto-placement setting of a Dedicated Host. When auto-placement is enabled, any instances that you launch with a tenancy of <code>host</code> but without a specific host ID are placed onto any available Dedicated Host in your account that has auto-placement enabled. When auto-placement is disabled, you need to provide a host ID to have the instance launch onto a specific host. If no host ID is provided, the instance is launched onto a suitable host with auto-placement enabled.</p> <p>You can also use this API action to modify a Dedicated Host to support either multiple instance types in an instance family, or to support a specific instance type only.</p>
-    **/
-    getModifyHosts(req: operations.GetModifyHostsRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyHostsResponse>;
     /**
      * getModifyIdFormat - <p>Modifies the ID format for the specified resource on a per-Region basis. You can specify that resources should receive longer IDs (17-character IDs) when they are created.</p> <p>This request can only be used to modify longer ID settings for resource types that are within the opt-in period. Resources currently in their opt-in period include: <code>bundle</code> | <code>conversion-task</code> | <code>customer-gateway</code> | <code>dhcp-options</code> | <code>elastic-ip-allocation</code> | <code>elastic-ip-association</code> | <code>export-task</code> | <code>flow-log</code> | <code>image</code> | <code>import-task</code> | <code>internet-gateway</code> | <code>network-acl</code> | <code>network-acl-association</code> | <code>network-interface</code> | <code>network-interface-attachment</code> | <code>prefix-list</code> | <code>route-table</code> | <code>route-table-association</code> | <code>security-group</code> | <code>subnet</code> | <code>subnet-cidr-block-association</code> | <code>vpc</code> | <code>vpc-cidr-block-association</code> | <code>vpc-endpoint</code> | <code>vpc-peering-connection</code> | <code>vpn-connection</code> | <code>vpn-gateway</code>.</p> <p>This setting applies to the IAM user who makes the request; it does not apply to the entire AWS account. By default, an IAM user defaults to the same settings as the root user. If you're using this action as the root user, then these settings apply to the entire account, unless an IAM user explicitly overrides these settings for themselves. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resource-ids.html">Resource IDs</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p> <p>Resources created with longer IDs are visible to all IAM roles and users, regardless of these settings and provided that they have permission to use the relevant <code>Describe</code> command for the resource type.</p>
     **/
@@ -808,18 +668,6 @@ export declare class SDK {
     **/
     getModifyLaunchTemplate(req: operations.GetModifyLaunchTemplateRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyLaunchTemplateResponse>;
     /**
-     * getModifyNetworkInterfaceAttribute - Modifies the specified network interface attribute. You can specify only one attribute at a time. You can use this action to attach and detach security groups from an existing EC2 instance.
-    **/
-    getModifyNetworkInterfaceAttribute(req: operations.GetModifyNetworkInterfaceAttributeRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyNetworkInterfaceAttributeResponse>;
-    /**
-     * getModifySubnetAttribute - Modifies a subnet attribute. You can only modify one attribute at a time.
-    **/
-    getModifySubnetAttribute(req: operations.GetModifySubnetAttributeRequest, config?: AxiosRequestConfig): Promise<operations.GetModifySubnetAttributeResponse>;
-    /**
-     * getModifyTrafficMirrorFilterNetworkServices - <p>Allows or restricts mirroring network services.</p> <p> By default, Amazon DNS network services are not eligible for Traffic Mirror. Use <code>AddNetworkServices</code> to add network services to a Traffic Mirror filter. When a network service is added to the Traffic Mirror filter, all traffic related to that network service will be mirrored. When you no longer want to mirror network services, use <code>RemoveNetworkServices</code> to remove the network services from the Traffic Mirror filter. </p> <p>For information about filter rule properties, see <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">Network Services</a> in the <i>Traffic Mirroring User Guide </i>.</p>
-    **/
-    getModifyTrafficMirrorFilterNetworkServices(req: operations.GetModifyTrafficMirrorFilterNetworkServicesRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyTrafficMirrorFilterNetworkServicesResponse>;
-    /**
      * getModifyTrafficMirrorFilterRule - <p>Modifies the specified Traffic Mirror rule.</p> <p> <code>DestinationCidrBlock</code> and <code>SourceCidrBlock</code> must both be an IPv4 range or an IPv6 range.</p>
     **/
     getModifyTrafficMirrorFilterRule(req: operations.GetModifyTrafficMirrorFilterRuleRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyTrafficMirrorFilterRuleResponse>;
@@ -828,45 +676,13 @@ export declare class SDK {
     **/
     getModifyTrafficMirrorSession(req: operations.GetModifyTrafficMirrorSessionRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyTrafficMirrorSessionResponse>;
     /**
-     * getModifyTransitGateway - Modifies the specified transit gateway. When you modify a transit gateway, the modified options are applied to new transit gateway attachments only. Your existing transit gateway attachments are not modified.
-    **/
-    getModifyTransitGateway(req: operations.GetModifyTransitGatewayRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyTransitGatewayResponse>;
-    /**
      * getModifyTransitGatewayPrefixListReference - Modifies a reference (route) to a prefix list in a specified transit gateway route table.
     **/
     getModifyTransitGatewayPrefixListReference(req: operations.GetModifyTransitGatewayPrefixListReferenceRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyTransitGatewayPrefixListReferenceResponse>;
     /**
-     * getModifyTransitGatewayVpcAttachment - Modifies the specified VPC attachment.
-    **/
-    getModifyTransitGatewayVpcAttachment(req: operations.GetModifyTransitGatewayVpcAttachmentRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyTransitGatewayVpcAttachmentResponse>;
-    /**
      * getModifyVolume - <p>You can modify several parameters of an existing EBS volume, including volume size, volume type, and IOPS capacity. If your EBS volume is attached to a current-generation EC2 instance type, you might be able to apply these changes without stopping the instance or detaching the volume from it. For more information about modifying EBS volumes, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modify-volume.html">Amazon EBS Elastic Volumes</a> (Linux instances) or <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-modify-volume.html">Amazon EBS Elastic Volumes</a> (Windows instances).</p> <p>When you complete a resize operation on your volume, you need to extend the volume's file-system size to take advantage of the new storage capacity. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-expand-volume.html#recognize-expanded-volume-linux">Extend a Linux file system</a> or <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-expand-volume.html#recognize-expanded-volume-windows">Extend a Windows file system</a>.</p> <p> You can use CloudWatch Events to check the status of a modification to an EBS volume. For information about CloudWatch Events, see the <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/">Amazon CloudWatch Events User Guide</a>. You can also track the status of a modification using <a>DescribeVolumesModifications</a>. For information about tracking status changes using either method, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-volume-modifications.html">Monitor the progress of volume modifications</a>.</p> <p>With previous-generation instance types, resizing an EBS volume might require detaching and reattaching the volume or stopping and restarting the instance.</p> <p>If you reach the maximum volume modification rate per volume limit, you must wait at least six hours before applying further modifications to the affected EBS volume.</p>
     **/
     getModifyVolume(req: operations.GetModifyVolumeRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyVolumeResponse>;
-    /**
-     * getModifyVolumeAttribute - <p>Modifies a volume attribute.</p> <p>By default, all I/O operations for the volume are suspended when the data on the volume is determined to be potentially inconsistent, to prevent undetectable, latent data corruption. The I/O access to the volume can be resumed by first enabling I/O access and then checking the data consistency on your volume.</p> <p>You can change the default behavior to resume I/O operations. We recommend that you change this only for boot volumes or for volumes that are stateless or disposable.</p>
-    **/
-    getModifyVolumeAttribute(req: operations.GetModifyVolumeAttributeRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyVolumeAttributeResponse>;
-    /**
-     * getModifyVpcAttribute - Modifies the specified attribute of the specified VPC.
-    **/
-    getModifyVpcAttribute(req: operations.GetModifyVpcAttributeRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyVpcAttributeResponse>;
-    /**
-     * getModifyVpcEndpoint - Modifies attributes of a specified VPC endpoint. The attributes that you can modify depend on the type of VPC endpoint (interface, gateway, or Gateway Load Balancer). For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html">VPC Endpoints</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
-    **/
-    getModifyVpcEndpoint(req: operations.GetModifyVpcEndpointRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyVpcEndpointResponse>;
-    /**
-     * getModifyVpcEndpointConnectionNotification - Modifies a connection notification for VPC endpoint or VPC endpoint service. You can change the SNS topic for the notification, or the events for which to be notified.
-    **/
-    getModifyVpcEndpointConnectionNotification(req: operations.GetModifyVpcEndpointConnectionNotificationRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyVpcEndpointConnectionNotificationResponse>;
-    /**
-     * getModifyVpcEndpointServiceConfiguration - <p>Modifies the attributes of your VPC endpoint service configuration. You can change the Network Load Balancers or Gateway Load Balancers for your service, and you can specify whether acceptance is required for requests to connect to your endpoint service through an interface VPC endpoint.</p> <p>If you set or modify the private DNS name, you must prove that you own the private DNS domain name. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-services-dns-validation.html">VPC Endpoint Service Private DNS Name Verification</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.</p>
-    **/
-    getModifyVpcEndpointServiceConfiguration(req: operations.GetModifyVpcEndpointServiceConfigurationRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyVpcEndpointServiceConfigurationResponse>;
-    /**
-     * getModifyVpcEndpointServicePermissions - <p>Modifies the permissions for your <a href="https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-service.html">VPC endpoint service</a>. You can add or remove permissions for service consumers (IAM users, IAM roles, and AWS accounts) to connect to your endpoint service.</p> <p>If you grant permissions to all principals, the service is public. Any users who know the name of a public service can send a request to attach an endpoint. If the service does not require manual approval, attachments are automatically approved.</p>
-    **/
-    getModifyVpcEndpointServicePermissions(req: operations.GetModifyVpcEndpointServicePermissionsRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyVpcEndpointServicePermissionsResponse>;
     /**
      * getModifyVpcPeeringConnectionOptions - <p>Modifies the VPC peering connection options on one side of a VPC peering connection. You can do the following:</p> <ul> <li> <p>Enable/disable communication over the peering connection between an EC2-Classic instance that's linked to your VPC (using ClassicLink) and instances in the peer VPC.</p> </li> <li> <p>Enable/disable communication over the peering connection between instances in your VPC and an EC2-Classic instance that's linked to the peer VPC.</p> </li> <li> <p>Enable/disable the ability to resolve public DNS hostnames to private IP addresses when queried from instances in the peer VPC.</p> </li> </ul> <p>If the peered VPCs are in the same Amazon Web Services account, you can enable DNS resolution for queries from the local VPC. This ensures that queries from the local VPC resolve to private IP addresses in the peer VPC. This option is not available if the peered VPCs are in different different Amazon Web Services accounts or different Regions. For peered VPCs in different Amazon Web Services accounts, each Amazon Web Services account owner must initiate a separate request to modify the peering connection options. For inter-region peering connections, you must use the Region for the requester VPC to modify the requester VPC peering options and the Region for the accepter VPC to modify the accepter VPC peering options. To verify which VPCs are the accepter and the requester for a VPC peering connection, use the <a>DescribeVpcPeeringConnections</a> command.</p>
     **/
@@ -888,37 +704,9 @@ export declare class SDK {
     **/
     getModifyVpnTunnelCertificate(req: operations.GetModifyVpnTunnelCertificateRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyVpnTunnelCertificateResponse>;
     /**
-     * getMonitorInstances - <p>Enables detailed monitoring for a running instance. Otherwise, basic monitoring is enabled. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch.html">Monitoring your instances and volumes</a> in the <i>Amazon EC2 User Guide</i>.</p> <p>To disable detailed monitoring, see .</p>
-    **/
-    getMonitorInstances(req: operations.GetMonitorInstancesRequest, config?: AxiosRequestConfig): Promise<operations.GetMonitorInstancesResponse>;
-    /**
      * getMoveAddressToVpc - Moves an Elastic IP address from the EC2-Classic platform to the EC2-VPC platform. The Elastic IP address must be allocated to your account for more than 24 hours, and it must not be associated with an instance. After the Elastic IP address is moved, it is no longer available for use in the EC2-Classic platform, unless you move it back using the <a>RestoreAddressToClassic</a> request. You cannot move an Elastic IP address that was originally allocated for use in the EC2-VPC platform to the EC2-Classic platform.
     **/
     getMoveAddressToVpc(req: operations.GetMoveAddressToVpcRequest, config?: AxiosRequestConfig): Promise<operations.GetMoveAddressToVpcResponse>;
-    /**
-     * getPurchaseReservedInstancesOffering - <p>Purchases a Reserved Instance for use with your account. With Reserved Instances, you pay a lower hourly rate compared to On-Demand instance pricing.</p> <p>Use <a>DescribeReservedInstancesOfferings</a> to get a list of Reserved Instance offerings that match your specifications. After you've purchased a Reserved Instance, you can check for your new Reserved Instance with <a>DescribeReservedInstances</a>.</p> <p>To queue a purchase for a future date and time, specify a purchase time. If you do not specify a purchase time, the default is the current time.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts-on-demand-reserved-instances.html">Reserved Instances</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-market-general.html">Reserved Instance Marketplace</a> in the <i>Amazon EC2 User Guide</i>.</p>
-    **/
-    getPurchaseReservedInstancesOffering(req: operations.GetPurchaseReservedInstancesOfferingRequest, config?: AxiosRequestConfig): Promise<operations.GetPurchaseReservedInstancesOfferingResponse>;
-    /**
-     * getRebootInstances - <p>Requests a reboot of the specified instances. This operation is asynchronous; it only queues a request to reboot the specified instances. The operation succeeds if the instances are valid and belong to you. Requests to reboot terminated instances are ignored.</p> <p>If an instance does not cleanly shut down within a few minutes, Amazon EC2 performs a hard reboot.</p> <p>For more information about troubleshooting, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-console.html">Getting console output and rebooting instances</a> in the <i>Amazon EC2 User Guide</i>.</p>
-    **/
-    getRebootInstances(req: operations.GetRebootInstancesRequest, config?: AxiosRequestConfig): Promise<operations.GetRebootInstancesResponse>;
-    /**
-     * getRegisterInstanceEventNotificationAttributes - <p>Registers a set of tag keys to include in scheduled event notifications for your resources. </p> <p>To remove tags, use .</p>
-    **/
-    getRegisterInstanceEventNotificationAttributes(req: operations.GetRegisterInstanceEventNotificationAttributesRequest, config?: AxiosRequestConfig): Promise<operations.GetRegisterInstanceEventNotificationAttributesResponse>;
-    /**
-     * getRegisterTransitGatewayMulticastGroupMembers - <p>Registers members (network interfaces) with the transit gateway multicast group. A member is a network interface associated with a supported EC2 instance that receives multicast traffic. For information about supported instances, see <a href="https://docs.aws.amazon.com/vpc/latest/tgw/transit-gateway-limits.html#multicast-limits">Multicast Consideration</a> in <i>Amazon VPC Transit Gateways</i>.</p> <p>After you add the members, use <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SearchTransitGatewayMulticastGroups.html">SearchTransitGatewayMulticastGroups</a> to verify that the members were added to the transit gateway multicast group.</p>
-    **/
-    getRegisterTransitGatewayMulticastGroupMembers(req: operations.GetRegisterTransitGatewayMulticastGroupMembersRequest, config?: AxiosRequestConfig): Promise<operations.GetRegisterTransitGatewayMulticastGroupMembersResponse>;
-    /**
-     * getRegisterTransitGatewayMulticastGroupSources - <p>Registers sources (network interfaces) with the specified transit gateway multicast group.</p> <p>A multicast source is a network interface attached to a supported instance that sends multicast traffic. For information about supported instances, see <a href="https://docs.aws.amazon.com/vpc/latest/tgw/transit-gateway-limits.html#multicast-limits">Multicast Considerations</a> in <i>Amazon VPC Transit Gateways</i>.</p> <p>After you add the source, use <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SearchTransitGatewayMulticastGroups.html">SearchTransitGatewayMulticastGroups</a> to verify that the source was added to the multicast group.</p>
-    **/
-    getRegisterTransitGatewayMulticastGroupSources(req: operations.GetRegisterTransitGatewayMulticastGroupSourcesRequest, config?: AxiosRequestConfig): Promise<operations.GetRegisterTransitGatewayMulticastGroupSourcesResponse>;
-    /**
-     * getRejectTransitGatewayMulticastDomainAssociations - Rejects a request to associate cross-account subnets with a transit gateway multicast domain.
-    **/
-    getRejectTransitGatewayMulticastDomainAssociations(req: operations.GetRejectTransitGatewayMulticastDomainAssociationsRequest, config?: AxiosRequestConfig): Promise<operations.GetRejectTransitGatewayMulticastDomainAssociationsResponse>;
     /**
      * getRejectTransitGatewayPeeringAttachment - Rejects a transit gateway peering attachment request.
     **/
@@ -928,10 +716,6 @@ export declare class SDK {
     **/
     getRejectTransitGatewayVpcAttachment(req: operations.GetRejectTransitGatewayVpcAttachmentRequest, config?: AxiosRequestConfig): Promise<operations.GetRejectTransitGatewayVpcAttachmentResponse>;
     /**
-     * getRejectVpcEndpointConnections - Rejects one or more VPC endpoint connection requests to your VPC endpoint service.
-    **/
-    getRejectVpcEndpointConnections(req: operations.GetRejectVpcEndpointConnectionsRequest, config?: AxiosRequestConfig): Promise<operations.GetRejectVpcEndpointConnectionsResponse>;
-    /**
      * getRejectVpcPeeringConnection - Rejects a VPC peering connection request. The VPC peering connection must be in the <code>pending-acceptance</code> state. Use the <a>DescribeVpcPeeringConnections</a> request to view your outstanding VPC peering connection requests. To delete an active VPC peering connection, or to delete a VPC peering connection request that you initiated, use <a>DeleteVpcPeeringConnection</a>.
     **/
     getRejectVpcPeeringConnection(req: operations.GetRejectVpcPeeringConnectionRequest, config?: AxiosRequestConfig): Promise<operations.GetRejectVpcPeeringConnectionResponse>;
@@ -940,21 +724,9 @@ export declare class SDK {
     **/
     getReleaseAddress(req: operations.GetReleaseAddressRequest, config?: AxiosRequestConfig): Promise<operations.GetReleaseAddressResponse>;
     /**
-     * getReleaseHosts - <p>When you no longer want to use an On-Demand Dedicated Host it can be released. On-Demand billing is stopped and the host goes into <code>released</code> state. The host ID of Dedicated Hosts that have been released can no longer be specified in another request, for example, to modify the host. You must stop or terminate all instances on a host before it can be released.</p> <p>When Dedicated Hosts are released, it may take some time for them to stop counting toward your limit and you may receive capacity errors when trying to allocate new Dedicated Hosts. Wait a few minutes and then try again.</p> <p>Released hosts still appear in a <a>DescribeHosts</a> response.</p>
-    **/
-    getReleaseHosts(req: operations.GetReleaseHostsRequest, config?: AxiosRequestConfig): Promise<operations.GetReleaseHostsResponse>;
-    /**
-     * getReplaceIamInstanceProfileAssociation - <p>Replaces an IAM instance profile for the specified running instance. You can use this action to change the IAM instance profile that's associated with an instance without having to disassociate the existing IAM instance profile first.</p> <p>Use <a>DescribeIamInstanceProfileAssociations</a> to get the association ID.</p>
-    **/
-    getReplaceIamInstanceProfileAssociation(req: operations.GetReplaceIamInstanceProfileAssociationRequest, config?: AxiosRequestConfig): Promise<operations.GetReplaceIamInstanceProfileAssociationResponse>;
-    /**
      * getReplaceNetworkAclAssociation - <p>Changes which network ACL a subnet is associated with. By default when you create a subnet, it's automatically associated with the default network ACL. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_ACLs.html">Network ACLs</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.</p> <p>This is an idempotent operation.</p>
     **/
     getReplaceNetworkAclAssociation(req: operations.GetReplaceNetworkAclAssociationRequest, config?: AxiosRequestConfig): Promise<operations.GetReplaceNetworkAclAssociationResponse>;
-    /**
-     * getReplaceNetworkAclEntry - Replaces an entry (rule) in a network ACL. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_ACLs.html">Network ACLs</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
-    **/
-    getReplaceNetworkAclEntry(req: operations.GetReplaceNetworkAclEntryRequest, config?: AxiosRequestConfig): Promise<operations.GetReplaceNetworkAclEntryResponse>;
     /**
      * getReplaceRoute - <p>Replaces an existing route within a route table in a VPC. You must provide only one of the following: internet gateway, virtual private gateway, NAT instance, NAT gateway, VPC peering connection, network interface, egress-only internet gateway, or transit gateway.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html">Route tables</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.</p>
     **/
@@ -967,10 +739,6 @@ export declare class SDK {
      * getReplaceTransitGatewayRoute - Replaces the specified route in the specified transit gateway route table.
     **/
     getReplaceTransitGatewayRoute(req: operations.GetReplaceTransitGatewayRouteRequest, config?: AxiosRequestConfig): Promise<operations.GetReplaceTransitGatewayRouteResponse>;
-    /**
-     * getReportInstanceStatus - <p>Submits feedback about the status of an instance. The instance must be in the <code>running</code> state. If your experience with the instance differs from the instance status returned by <a>DescribeInstanceStatus</a>, use <a>ReportInstanceStatus</a> to report your experience with the instance. Amazon EC2 collects this information to improve the accuracy of status checks.</p> <p>Use of this action does not change the value returned by <a>DescribeInstanceStatus</a>.</p>
-    **/
-    getReportInstanceStatus(req: operations.GetReportInstanceStatusRequest, config?: AxiosRequestConfig): Promise<operations.GetReportInstanceStatusResponse>;
     /**
      * getResetAddressAttribute - Resets the attribute of the specified IP address. For requirements, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#Using_Elastic_Addressing_Reverse_DNS">Using reverse DNS for email applications</a>.
     **/
@@ -1016,37 +784,13 @@ export declare class SDK {
     **/
     getSendDiagnosticInterrupt(req: operations.GetSendDiagnosticInterruptRequest, config?: AxiosRequestConfig): Promise<operations.GetSendDiagnosticInterruptResponse>;
     /**
-     * getStartInstances - <p>Starts an Amazon EBS-backed instance that you've previously stopped.</p> <p>Instances that use Amazon EBS volumes as their root devices can be quickly stopped and started. When an instance is stopped, the compute resources are released and you are not billed for instance usage. However, your root partition Amazon EBS volume remains and continues to persist your data, and you are charged for Amazon EBS volume usage. You can restart your instance at any time. Every time you start your instance, Amazon EC2 charges a one-minute minimum for instance usage, and thereafter charges per second for instance usage.</p> <p>Before stopping an instance, make sure it is in a state from which it can be restarted. Stopping an instance does not preserve data stored in RAM.</p> <p>Performing this operation on an instance that uses an instance store as its root device returns an error.</p> <p>If you attempt to start a T3 instance with <code>host</code> tenancy and the <code>unlimted</code> CPU credit option, the request fails. The <code>unlimited</code> CPU credit option is not supported on Dedicated Hosts. Before you start the instance, either change its CPU credit option to <code>standard</code>, or change its tenancy to <code>default</code> or <code>dedicated</code>.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html">Stopping instances</a> in the <i>Amazon EC2 User Guide</i>.</p>
-    **/
-    getStartInstances(req: operations.GetStartInstancesRequest, config?: AxiosRequestConfig): Promise<operations.GetStartInstancesResponse>;
-    /**
      * getStartVpcEndpointServicePrivateDnsVerification - <p>Initiates the verification process to prove that the service provider owns the private DNS name domain for the endpoint service.</p> <p>The service provider must successfully perform the verification before the consumer can use the name to access the service.</p> <p>Before the service provider runs this command, they must add a record to the DNS server. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-services-dns-validation.html#add-dns-txt-record">Adding a TXT Record to Your Domain's DNS Server </a> in the <i>Amazon VPC User Guide</i>.</p>
     **/
     getStartVpcEndpointServicePrivateDnsVerification(req: operations.GetStartVpcEndpointServicePrivateDnsVerificationRequest, config?: AxiosRequestConfig): Promise<operations.GetStartVpcEndpointServicePrivateDnsVerificationResponse>;
     /**
-     * getStopInstances - <p>Stops an Amazon EBS-backed instance.</p> <p>You can use the Stop action to hibernate an instance if the instance is <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html#enabling-hibernation">enabled for hibernation</a> and it meets the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html#hibernating-prerequisites">hibernation prerequisites</a>. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html">Hibernate your instance</a> in the <i>Amazon EC2 User Guide</i>.</p> <p>We don't charge usage for a stopped instance, or data transfer fees; however, your root partition Amazon EBS volume remains and continues to persist your data, and you are charged for Amazon EBS volume usage. Every time you start your instance, Amazon EC2 charges a one-minute minimum for instance usage, and thereafter charges per second for instance usage.</p> <p>You can't stop or hibernate instance store-backed instances. You can't use the Stop action to hibernate Spot Instances, but you can specify that Amazon EC2 should hibernate Spot Instances when they are interrupted. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html#hibernate-spot-instances">Hibernating interrupted Spot Instances</a> in the <i>Amazon EC2 User Guide</i>.</p> <p>When you stop or hibernate an instance, we shut it down. You can restart your instance at any time. Before stopping or hibernating an instance, make sure it is in a state from which it can be restarted. Stopping an instance does not preserve data stored in RAM, but hibernating an instance does preserve data stored in RAM. If an instance cannot hibernate successfully, a normal shutdown occurs.</p> <p>Stopping and hibernating an instance is different to rebooting or terminating it. For example, when you stop or hibernate an instance, the root device and any other devices attached to the instance persist. When you terminate an instance, the root device and any other devices attached during the instance launch are automatically deleted. For more information about the differences between rebooting, stopping, hibernating, and terminating instances, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html">Instance lifecycle</a> in the <i>Amazon EC2 User Guide</i>.</p> <p>When you stop an instance, we attempt to shut it down forcibly after a short while. If your instance appears stuck in the stopping state after a period of time, there may be an issue with the underlying host computer. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesStopping.html">Troubleshooting stopping your instance</a> in the <i>Amazon EC2 User Guide</i>.</p>
-    **/
-    getStopInstances(req: operations.GetStopInstancesRequest, config?: AxiosRequestConfig): Promise<operations.GetStopInstancesResponse>;
-    /**
      * getTerminateClientVpnConnections - Terminates active Client VPN endpoint connections. This action can be used to terminate a specific client connection, or up to five connections established by a specific user.
     **/
     getTerminateClientVpnConnections(req: operations.GetTerminateClientVpnConnectionsRequest, config?: AxiosRequestConfig): Promise<operations.GetTerminateClientVpnConnectionsResponse>;
-    /**
-     * getTerminateInstances - <p>Shuts down the specified instances. This operation is idempotent; if you terminate an instance more than once, each call succeeds. </p> <p>If you specify multiple instances and the request fails (for example, because of a single incorrect instance ID), none of the instances are terminated.</p> <p>If you terminate multiple instances across multiple Availability Zones, and one or more of the specified instances are enabled for termination protection, the request fails with the following results:</p> <ul> <li> <p>The specified instances that are in the same Availability Zone as the protected instance are not terminated.</p> </li> <li> <p>The specified instances that are in different Availability Zones, where no other specified instances are protected, are successfully terminated.</p> </li> </ul> <p>For example, say you have the following instances:</p> <ul> <li> <p>Instance A: <code>us-east-1a</code>; Not protected</p> </li> <li> <p>Instance B: <code>us-east-1a</code>; Not protected</p> </li> <li> <p>Instance C: <code>us-east-1b</code>; Protected</p> </li> <li> <p>Instance D: <code>us-east-1b</code>; not protected</p> </li> </ul> <p>If you attempt to terminate all of these instances in the same request, the request reports failure with the following results:</p> <ul> <li> <p>Instance A and Instance B are successfully terminated because none of the specified instances in <code>us-east-1a</code> are enabled for termination protection.</p> </li> <li> <p>Instance C and Instance D fail to terminate because at least one of the specified instances in <code>us-east-1b</code> (Instance C) is enabled for termination protection.</p> </li> </ul> <p>Terminated instances remain visible after termination (for approximately one hour).</p> <p>By default, Amazon EC2 deletes all EBS volumes that were attached when the instance launched. Volumes attached after instance launch continue running.</p> <p>You can stop, start, and terminate EBS-backed instances. You can only terminate instance store-backed instances. What happens to an instance differs if you stop it or terminate it. For example, when you stop an instance, the root device and any other devices attached to the instance persist. When you terminate an instance, any attached EBS volumes with the <code>DeleteOnTermination</code> block device mapping parameter set to <code>true</code> are automatically deleted. For more information about the differences between stopping and terminating instances, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html">Instance lifecycle</a> in the <i>Amazon EC2 User Guide</i>.</p> <p>For more information about troubleshooting, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesShuttingDown.html">Troubleshooting terminating your instance</a> in the <i>Amazon EC2 User Guide</i>.</p>
-    **/
-    getTerminateInstances(req: operations.GetTerminateInstancesRequest, config?: AxiosRequestConfig): Promise<operations.GetTerminateInstancesResponse>;
-    /**
-     * getUnassignIpv6Addresses - Unassigns one or more IPv6 addresses IPv4 Prefix Delegation prefixes from a network interface.
-    **/
-    getUnassignIpv6Addresses(req: operations.GetUnassignIpv6AddressesRequest, config?: AxiosRequestConfig): Promise<operations.GetUnassignIpv6AddressesResponse>;
-    /**
-     * getUnassignPrivateIpAddresses - Unassigns one or more secondary private IP addresses, or IPv4 Prefix Delegation prefixes from a network interface.
-    **/
-    getUnassignPrivateIpAddresses(req: operations.GetUnassignPrivateIpAddressesRequest, config?: AxiosRequestConfig): Promise<operations.GetUnassignPrivateIpAddressesResponse>;
-    /**
-     * getUnmonitorInstances - Disables detailed monitoring for a running instance. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch.html">Monitoring your instances and volumes</a> in the <i>Amazon EC2 User Guide</i>.
-    **/
-    getUnmonitorInstances(req: operations.GetUnmonitorInstancesRequest, config?: AxiosRequestConfig): Promise<operations.GetUnmonitorInstancesResponse>;
     /**
      * getWithdrawByoipCidr - <p>Stops advertising an address range that is provisioned as an address pool.</p> <p>You can perform this operation at most once every 10 seconds, even if you specify different address ranges each time.</p> <p>It can take a few minutes before traffic to the specified addresses stops routing to Amazon Web Services because of BGP propagation delays.</p>
     **/
@@ -2912,4 +2656,3 @@ export declare class SDK {
     **/
     postWithdrawByoipCidr(req: operations.PostWithdrawByoipCidrRequest, config?: AxiosRequestConfig): Promise<operations.PostWithdrawByoipCidrResponse>;
 }
-export {};

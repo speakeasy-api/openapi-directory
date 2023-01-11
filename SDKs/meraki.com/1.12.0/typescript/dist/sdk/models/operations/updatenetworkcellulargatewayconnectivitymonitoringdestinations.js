@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsResponse = exports.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequest = exports.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBody = exports.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBodyDestinations = exports.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams, _super);
     function UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams.prototype, "networkId", void 0);
     return UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams = UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams;
 var UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBodyDestinations = /** @class */ (function (_super) {
     __extends(UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBodyDestinations, _super);
     function UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBodyDestinations() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=default" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=default" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBodyDestinations.prototype, "default", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBodyDestinations.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip" }),
         __metadata("design:type", String)
     ], UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBodyDestinations.prototype, "ip", void 0);
     return UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBodyDestinations;
-}(SpeakeasyBase));
-export { UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBodyDestinations };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBodyDestinations = UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBodyDestinations;
 var UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBody, _super);
     function UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinations", elemType: UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBodyDestinations }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinations", elemType: UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBodyDestinations }),
         __metadata("design:type", Array)
     ], UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBody.prototype, "destinations", void 0);
     return UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBody = UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBody;
 var UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequest, _super);
     function UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams)
     ], UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequestBody)
     ], UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequest.prototype, "request", void 0);
     return UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequest = UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequest;
 var UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsResponse, _super);
     function UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsResponse.prototype, "updateNetworkCellularGatewayConnectivityMonitoringDestinations200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsResponse.prototype, "updateNetworkCellularGatewayConnectivityMonitoringDestinations200ApplicationJSONObject", void 0);
     return UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsResponse = UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsResponse;

@@ -106,11 +106,11 @@ export declare class AlimwRequest extends SpeakeasyBase {
 export declare class AlimwResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    alimw400ApplicationJsonObject?: Alimw400ApplicationJson;
-    alimw401ApplicationJsonObject?: Alimw401ApplicationJson;
-    alimw404ApplicationJsonObject?: Alimw404ApplicationJson;
-    alimw500ApplicationJsonObject?: Alimw500ApplicationJson;
-    alimw502ApplicationJsonObject?: Alimw502ApplicationJson;
-    alimw503ApplicationJsonObject?: Alimw503ApplicationJson;
-    alimw504ApplicationJsonObject?: Alimw504ApplicationJson;
+    alimw400ApplicationJSONObject?: Alimw400ApplicationJson;
+    alimw401ApplicationJSONObject?: Alimw401ApplicationJson;
+    alimw404ApplicationJSONObject?: Alimw404ApplicationJson;
+    alimw500ApplicationJSONObject?: Alimw500ApplicationJson;
+    alimw502ApplicationJSONObject?: Alimw502ApplicationJson;
+    alimw503ApplicationJSONObject?: Alimw503ApplicationJson;
+    alimw504ApplicationJSONObject?: Alimw504ApplicationJson;
 }

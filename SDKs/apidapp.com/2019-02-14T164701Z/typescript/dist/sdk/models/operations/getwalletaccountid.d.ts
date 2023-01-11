@@ -7,6 +7,6 @@ export declare class GetWalletAccountIdRequest extends SpeakeasyBase {
 }
 export declare class GetWalletAccountIdResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

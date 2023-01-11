@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ShaCertificateCertTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShaCertificate = exports.ShaCertificateCertTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ShaCertificateCertTypeEnum;
 (function (ShaCertificateCertTypeEnum) {
     ShaCertificateCertTypeEnum["ShaCertificateTypeUnspecified"] = "SHA_CERTIFICATE_TYPE_UNSPECIFIED";
     ShaCertificateCertTypeEnum["Sha1"] = "SHA_1";
     ShaCertificateCertTypeEnum["Sha256"] = "SHA_256";
-})(ShaCertificateCertTypeEnum || (ShaCertificateCertTypeEnum = {}));
+})(ShaCertificateCertTypeEnum = exports.ShaCertificateCertTypeEnum || (exports.ShaCertificateCertTypeEnum = {}));
 // ShaCertificate
 /**
  * A SHA-1 or SHA-256 certificate associated with the AndroidApp.
@@ -39,17 +42,17 @@ var ShaCertificate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certType" }),
         __metadata("design:type", String)
     ], ShaCertificate.prototype, "certType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ShaCertificate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shaHash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shaHash" }),
         __metadata("design:type", String)
     ], ShaCertificate.prototype, "shaHash", void 0);
     return ShaCertificate;
-}(SpeakeasyBase));
-export { ShaCertificate };
+}(utils_1.SpeakeasyBase));
+exports.ShaCertificate = ShaCertificate;

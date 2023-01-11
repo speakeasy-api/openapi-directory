@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,147 +23,149 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EmploymentBasisEnum } from "./employmentbasisenum";
-import { ResidencyStatusEnum } from "./residencystatusenum";
-import { TfnExemptionTypeEnum } from "./tfnexemptiontypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaxDeclarationInput = exports.TaxDeclaration = void 0;
+var utils_1 = require("../../../internal/utils");
+var employmentbasisenum_1 = require("./employmentbasisenum");
+var residencystatusenum_1 = require("./residencystatusenum");
+var tfnexemptiontypeenum_1 = require("./tfnexemptiontypeenum");
 var TaxDeclaration = /** @class */ (function (_super) {
     __extends(TaxDeclaration, _super);
     function TaxDeclaration() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApprovedWithholdingVariationPercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApprovedWithholdingVariationPercentage" }),
         __metadata("design:type", Number)
     ], TaxDeclaration.prototype, "approvedWithholdingVariationPercentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AustralianResidentForTaxPurposes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AustralianResidentForTaxPurposes" }),
         __metadata("design:type", Boolean)
     ], TaxDeclaration.prototype, "australianResidentForTaxPurposes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EligibleToReceiveLeaveLoading" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EligibleToReceiveLeaveLoading" }),
         __metadata("design:type", Boolean)
     ], TaxDeclaration.prototype, "eligibleToReceiveLeaveLoading", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmployeeID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmployeeID" }),
         __metadata("design:type", String)
-    ], TaxDeclaration.prototype, "employeeId", void 0);
+    ], TaxDeclaration.prototype, "employeeID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmploymentBasis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmploymentBasis" }),
         __metadata("design:type", String)
     ], TaxDeclaration.prototype, "employmentBasis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HasHELPDebt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HasHELPDebt" }),
         __metadata("design:type", Boolean)
-    ], TaxDeclaration.prototype, "hasHelpDebt", void 0);
+    ], TaxDeclaration.prototype, "hasHELPDebt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HasSFSSDebt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HasSFSSDebt" }),
         __metadata("design:type", Boolean)
-    ], TaxDeclaration.prototype, "hasSfssDebt", void 0);
+    ], TaxDeclaration.prototype, "hasSFSSDebt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HasStudentStartupLoan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HasStudentStartupLoan" }),
         __metadata("design:type", Boolean)
     ], TaxDeclaration.prototype, "hasStudentStartupLoan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HasTradeSupportLoanDebt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HasTradeSupportLoanDebt" }),
         __metadata("design:type", Boolean)
     ], TaxDeclaration.prototype, "hasTradeSupportLoanDebt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResidencyStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResidencyStatus" }),
         __metadata("design:type", String)
     ], TaxDeclaration.prototype, "residencyStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TFNExemptionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TFNExemptionType" }),
         __metadata("design:type", String)
     ], TaxDeclaration.prototype, "tfnExemptionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxFileNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxFileNumber" }),
         __metadata("design:type", String)
     ], TaxDeclaration.prototype, "taxFileNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxFreeThresholdClaimed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxFreeThresholdClaimed" }),
         __metadata("design:type", Boolean)
     ], TaxDeclaration.prototype, "taxFreeThresholdClaimed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxOffsetEstimatedAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxOffsetEstimatedAmount" }),
         __metadata("design:type", Number)
     ], TaxDeclaration.prototype, "taxOffsetEstimatedAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdatedDateUTC" }),
         __metadata("design:type", String)
-    ], TaxDeclaration.prototype, "updatedDateUtc", void 0);
+    ], TaxDeclaration.prototype, "updatedDateUTC", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpwardVariationTaxWithholdingAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpwardVariationTaxWithholdingAmount" }),
         __metadata("design:type", Number)
     ], TaxDeclaration.prototype, "upwardVariationTaxWithholdingAmount", void 0);
     return TaxDeclaration;
-}(SpeakeasyBase));
-export { TaxDeclaration };
+}(utils_1.SpeakeasyBase));
+exports.TaxDeclaration = TaxDeclaration;
 var TaxDeclarationInput = /** @class */ (function (_super) {
     __extends(TaxDeclarationInput, _super);
     function TaxDeclarationInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApprovedWithholdingVariationPercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApprovedWithholdingVariationPercentage" }),
         __metadata("design:type", Number)
     ], TaxDeclarationInput.prototype, "approvedWithholdingVariationPercentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AustralianResidentForTaxPurposes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AustralianResidentForTaxPurposes" }),
         __metadata("design:type", Boolean)
     ], TaxDeclarationInput.prototype, "australianResidentForTaxPurposes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EligibleToReceiveLeaveLoading" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EligibleToReceiveLeaveLoading" }),
         __metadata("design:type", Boolean)
     ], TaxDeclarationInput.prototype, "eligibleToReceiveLeaveLoading", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmployeeID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmployeeID" }),
         __metadata("design:type", String)
-    ], TaxDeclarationInput.prototype, "employeeId", void 0);
+    ], TaxDeclarationInput.prototype, "employeeID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmploymentBasis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmploymentBasis" }),
         __metadata("design:type", String)
     ], TaxDeclarationInput.prototype, "employmentBasis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HasHELPDebt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HasHELPDebt" }),
         __metadata("design:type", Boolean)
-    ], TaxDeclarationInput.prototype, "hasHelpDebt", void 0);
+    ], TaxDeclarationInput.prototype, "hasHELPDebt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HasSFSSDebt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HasSFSSDebt" }),
         __metadata("design:type", Boolean)
-    ], TaxDeclarationInput.prototype, "hasSfssDebt", void 0);
+    ], TaxDeclarationInput.prototype, "hasSFSSDebt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HasStudentStartupLoan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HasStudentStartupLoan" }),
         __metadata("design:type", Boolean)
     ], TaxDeclarationInput.prototype, "hasStudentStartupLoan", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HasTradeSupportLoanDebt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HasTradeSupportLoanDebt" }),
         __metadata("design:type", Boolean)
     ], TaxDeclarationInput.prototype, "hasTradeSupportLoanDebt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResidencyStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResidencyStatus" }),
         __metadata("design:type", String)
     ], TaxDeclarationInput.prototype, "residencyStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TFNExemptionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TFNExemptionType" }),
         __metadata("design:type", String)
     ], TaxDeclarationInput.prototype, "tfnExemptionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxFileNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxFileNumber" }),
         __metadata("design:type", String)
     ], TaxDeclarationInput.prototype, "taxFileNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxFreeThresholdClaimed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxFreeThresholdClaimed" }),
         __metadata("design:type", Boolean)
     ], TaxDeclarationInput.prototype, "taxFreeThresholdClaimed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaxOffsetEstimatedAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaxOffsetEstimatedAmount" }),
         __metadata("design:type", Number)
     ], TaxDeclarationInput.prototype, "taxOffsetEstimatedAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpwardVariationTaxWithholdingAmount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpwardVariationTaxWithholdingAmount" }),
         __metadata("design:type", Number)
     ], TaxDeclarationInput.prototype, "upwardVariationTaxWithholdingAmount", void 0);
     return TaxDeclarationInput;
-}(SpeakeasyBase));
-export { TaxDeclarationInput };
+}(utils_1.SpeakeasyBase));
+exports.TaxDeclarationInput = TaxDeclarationInput;

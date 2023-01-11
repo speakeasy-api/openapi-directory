@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RoleUpdateRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var RoleUpdateRequest = /** @class */ (function (_super) {
     __extends(RoleUpdateRequest, _super);
     function RoleUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roles" }),
         __metadata("design:type", Array)
     ], RoleUpdateRequest.prototype, "roles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verificationCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verificationCode" }),
         __metadata("design:type", String)
     ], RoleUpdateRequest.prototype, "verificationCode", void 0);
     return RoleUpdateRequest;
-}(SpeakeasyBase));
-export { RoleUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.RoleUpdateRequest = RoleUpdateRequest;

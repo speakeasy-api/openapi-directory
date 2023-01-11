@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOwnershipResponse = exports.GetOwnershipRequest = exports.GetOwnershipQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOwnershipQueryParams = /** @class */ (function (_super) {
     __extends(GetOwnershipQueryParams, _super);
     function GetOwnershipQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetOwnershipQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageNumber" }),
         __metadata("design:type", Number)
     ], GetOwnershipQueryParams.prototype, "pageNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], GetOwnershipQueryParams.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetOwnershipQueryParams.prototype, "sort", void 0);
     return GetOwnershipQueryParams;
-}(SpeakeasyBase));
-export { GetOwnershipQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOwnershipQueryParams = GetOwnershipQueryParams;
 var GetOwnershipRequest = /** @class */ (function (_super) {
     __extends(GetOwnershipRequest, _super);
     function GetOwnershipRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOwnershipQueryParams)
     ], GetOwnershipRequest.prototype, "queryParams", void 0);
     return GetOwnershipRequest;
-}(SpeakeasyBase));
-export { GetOwnershipRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOwnershipRequest = GetOwnershipRequest;
 var GetOwnershipResponse = /** @class */ (function (_super) {
     __extends(GetOwnershipResponse, _super);
     function GetOwnershipResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetOwnershipResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOwnershipResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOwnershipResponse.prototype, "statusCode", void 0);
     return GetOwnershipResponse;
-}(SpeakeasyBase));
-export { GetOwnershipResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOwnershipResponse = GetOwnershipResponse;

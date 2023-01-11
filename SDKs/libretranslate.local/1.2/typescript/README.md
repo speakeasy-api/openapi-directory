@@ -16,18 +16,17 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetFrontendSettingsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
 
-sdk.sdk.getFrontendSettings().then((res: GetFrontendSettingsResponse | AxiosError) => {
+sdk.frontend.getFrontendSettings().then((res: GetFrontendSettingsResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -36,9 +35,12 @@ sdk.sdk.getFrontendSettings().then((res: GetFrontendSettingsResponse | AxiosErro
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### frontend
 
 * `getFrontendSettings` - Retrieve frontend specific settings
+
+### translate
+
 * `getLanguages` - Retrieve list of supported languages
 * `postDetect` - Detect the language of a single text
 * `postLanguages` - Retrieve list of supported languages

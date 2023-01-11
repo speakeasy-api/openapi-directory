@@ -1,13 +1,29 @@
-export * from "./fitnessusersdatasetaggregate";
-export * from "./fitnessusersdatasourcescreate";
-export * from "./fitnessusersdatasourcesdatapointchangeslist";
-export * from "./fitnessusersdatasourcesdatasetsdelete";
-export * from "./fitnessusersdatasourcesdatasetsget";
-export * from "./fitnessusersdatasourcesdatasetspatch";
-export * from "./fitnessusersdatasourcesdelete";
-export * from "./fitnessusersdatasourcesget";
-export * from "./fitnessusersdatasourceslist";
-export * from "./fitnessusersdatasourcesupdate";
-export * from "./fitnessuserssessionsdelete";
-export * from "./fitnessuserssessionslist";
-export * from "./fitnessuserssessionsupdate";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./fitnessusersdatasetaggregate"), exports);
+__exportStar(require("./fitnessusersdatasourcescreate"), exports);
+__exportStar(require("./fitnessusersdatasourcesdatapointchangeslist"), exports);
+__exportStar(require("./fitnessusersdatasourcesdatasetsdelete"), exports);
+__exportStar(require("./fitnessusersdatasourcesdatasetsget"), exports);
+__exportStar(require("./fitnessusersdatasourcesdatasetspatch"), exports);
+__exportStar(require("./fitnessusersdatasourcesdelete"), exports);
+__exportStar(require("./fitnessusersdatasourcesget"), exports);
+__exportStar(require("./fitnessusersdatasourceslist"), exports);
+__exportStar(require("./fitnessusersdatasourcesupdate"), exports);
+__exportStar(require("./fitnessuserssessionsdelete"), exports);
+__exportStar(require("./fitnessuserssessionslist"), exports);
+__exportStar(require("./fitnessuserssessionsupdate"), exports);

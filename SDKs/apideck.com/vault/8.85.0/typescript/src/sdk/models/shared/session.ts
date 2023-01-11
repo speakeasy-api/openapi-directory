@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConsumerMetadata } from "./consumermetadata";
 import { UnifiedApiIdEnum } from "./unifiedapiidenum";
+import { ConsumerMetadata } from "./consumermetadata";
 
 
 
@@ -63,7 +63,7 @@ export class Session extends SpeakeasyBase {
   consumerMetadata?: ConsumerMetadata;
 
   @SpeakeasyMetadata({ data: "json, name=custom_consumer_settings" })
-  customConsumerSettings?: Map<string, any>;
+  customConsumerSettings?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=redirect_uri" })
   redirectUri?: string;

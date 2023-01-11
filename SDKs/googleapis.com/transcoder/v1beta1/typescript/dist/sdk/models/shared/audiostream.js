@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AudioAtom } from "./audioatom";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AudioStream = void 0;
+var utils_1 = require("../../../internal/utils");
+var audioatom_1 = require("./audioatom");
 // AudioStream
 /**
  * Audio stream resource.
@@ -34,29 +37,29 @@ var AudioStream = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bitrateBps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bitrateBps" }),
         __metadata("design:type", Number)
     ], AudioStream.prototype, "bitrateBps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelCount" }),
         __metadata("design:type", Number)
     ], AudioStream.prototype, "channelCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelLayout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelLayout" }),
         __metadata("design:type", Array)
     ], AudioStream.prototype, "channelLayout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=codec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=codec" }),
         __metadata("design:type", String)
     ], AudioStream.prototype, "codec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mapping", elemType: AudioAtom }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mapping", elemType: audioatom_1.AudioAtom }),
         __metadata("design:type", Array)
     ], AudioStream.prototype, "mapping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleRateHertz" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleRateHertz" }),
         __metadata("design:type", Number)
     ], AudioStream.prototype, "sampleRateHertz", void 0);
     return AudioStream;
-}(SpeakeasyBase));
-export { AudioStream };
+}(utils_1.SpeakeasyBase));
+exports.AudioStream = AudioStream;

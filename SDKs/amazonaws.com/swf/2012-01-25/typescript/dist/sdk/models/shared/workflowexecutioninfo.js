@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloseStatusEnum } from "./closestatusenum";
-import { WorkflowExecution } from "./workflowexecution";
-import { ExecutionStatusEnum } from "./executionstatusenum";
-import { WorkflowType } from "./workflowtype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkflowExecutionInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var closestatusenum_1 = require("./closestatusenum");
+var workflowexecution_1 = require("./workflowexecution");
+var executionstatusenum_1 = require("./executionstatusenum");
+var workflowtype_1 = require("./workflowtype");
 // WorkflowExecutionInfo
 /**
  * Contains information about a workflow execution.
@@ -37,41 +40,41 @@ var WorkflowExecutionInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancelRequested" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancelRequested" }),
         __metadata("design:type", Boolean)
     ], WorkflowExecutionInfo.prototype, "cancelRequested", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=closeStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=closeStatus" }),
         __metadata("design:type", String)
     ], WorkflowExecutionInfo.prototype, "closeStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=closeTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=closeTimestamp" }),
         __metadata("design:type", Date)
     ], WorkflowExecutionInfo.prototype, "closeTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=execution" }),
-        __metadata("design:type", WorkflowExecution)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=execution" }),
+        __metadata("design:type", workflowexecution_1.WorkflowExecution)
     ], WorkflowExecutionInfo.prototype, "execution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionStatus" }),
         __metadata("design:type", String)
     ], WorkflowExecutionInfo.prototype, "executionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent" }),
-        __metadata("design:type", WorkflowExecution)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent" }),
+        __metadata("design:type", workflowexecution_1.WorkflowExecution)
     ], WorkflowExecutionInfo.prototype, "parent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTimestamp" }),
         __metadata("design:type", Date)
     ], WorkflowExecutionInfo.prototype, "startTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagList" }),
         __metadata("design:type", Array)
     ], WorkflowExecutionInfo.prototype, "tagList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workflowType" }),
-        __metadata("design:type", WorkflowType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workflowType" }),
+        __metadata("design:type", workflowtype_1.WorkflowType)
     ], WorkflowExecutionInfo.prototype, "workflowType", void 0);
     return WorkflowExecutionInfo;
-}(SpeakeasyBase));
-export { WorkflowExecutionInfo };
+}(utils_1.SpeakeasyBase));
+exports.WorkflowExecutionInfo = WorkflowExecutionInfo;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SentimentResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 // SentimentResponse
 /**
  * <p>The sentiment expressed in an utterance.</p> <p>When the bot is configured to send utterances to Amazon Comprehend for sentiment analysis, this field structure contains the result of the analysis.</p>
@@ -33,13 +36,13 @@ var SentimentResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sentimentLabel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sentimentLabel" }),
         __metadata("design:type", String)
     ], SentimentResponse.prototype, "sentimentLabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sentimentScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sentimentScore" }),
         __metadata("design:type", String)
     ], SentimentResponse.prototype, "sentimentScore", void 0);
     return SentimentResponse;
-}(SpeakeasyBase));
-export { SentimentResponse };
+}(utils_1.SpeakeasyBase));
+exports.SentimentResponse = SentimentResponse;

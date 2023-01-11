@@ -22,5 +22,5 @@ export declare class UpdateProjectResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    updateProject200ApplicationJsonObject?: UpdateProject200ApplicationJson;
+    updateProject200ApplicationJSONObject?: UpdateProject200ApplicationJson;
 }

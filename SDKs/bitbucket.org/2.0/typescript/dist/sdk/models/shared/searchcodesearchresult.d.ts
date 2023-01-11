@@ -4,7 +4,7 @@ import { SearchSegment } from "./searchsegment";
 export declare class SearchCodeSearchResult extends SpeakeasyBase {
     contentMatchCount?: number;
     contentMatches?: SearchContentMatch[];
-    file?: Map<string, any>;
+    file?: Record<string, any>;
     pathMatches?: SearchSegment[];
     type?: string;
 }

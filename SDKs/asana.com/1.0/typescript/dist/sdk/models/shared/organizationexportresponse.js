@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkspaceCompact } from "./workspacecompact";
-export var OrganizationExportResponseStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrganizationExportResponse = exports.OrganizationExportResponseStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var workspacecompact_1 = require("./workspacecompact");
+var OrganizationExportResponseStateEnum;
 (function (OrganizationExportResponseStateEnum) {
     OrganizationExportResponseStateEnum["Pending"] = "pending";
     OrganizationExportResponseStateEnum["Started"] = "started";
     OrganizationExportResponseStateEnum["Finished"] = "finished";
     OrganizationExportResponseStateEnum["Error"] = "error";
-})(OrganizationExportResponseStateEnum || (OrganizationExportResponseStateEnum = {}));
+})(OrganizationExportResponseStateEnum = exports.OrganizationExportResponseStateEnum || (exports.OrganizationExportResponseStateEnum = {}));
+// OrganizationExportResponse
+/**
+ * An *organization_export* object represents a request to export the complete data of an Organization in JSON format.
+**/
 var OrganizationExportResponse = /** @class */ (function (_super) {
     __extends(OrganizationExportResponse, _super);
     function OrganizationExportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], OrganizationExportResponse.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download_url" }),
         __metadata("design:type", String)
     ], OrganizationExportResponse.prototype, "downloadUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], OrganizationExportResponse.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization" }),
-        __metadata("design:type", WorkspaceCompact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization" }),
+        __metadata("design:type", workspacecompact_1.WorkspaceCompact)
     ], OrganizationExportResponse.prototype, "organization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], OrganizationExportResponse.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], OrganizationExportResponse.prototype, "state", void 0);
     return OrganizationExportResponse;
-}(SpeakeasyBase));
-export { OrganizationExportResponse };
+}(utils_1.SpeakeasyBase));
+exports.OrganizationExportResponse = OrganizationExportResponse;

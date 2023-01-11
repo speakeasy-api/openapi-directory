@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeysApiCustomResponse = exports.KeysApiCustomRequest = exports.KeysApiCustomPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var KeysApiCustomPathParams = /** @class */ (function (_super) {
     __extends(KeysApiCustomPathParams, _super);
     function KeysApiCustomPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], KeysApiCustomPathParams.prototype, "serial", void 0);
     return KeysApiCustomPathParams;
-}(SpeakeasyBase));
-export { KeysApiCustomPathParams };
+}(utils_1.SpeakeasyBase));
+exports.KeysApiCustomPathParams = KeysApiCustomPathParams;
 var KeysApiCustomRequest = /** @class */ (function (_super) {
     __extends(KeysApiCustomRequest, _super);
     function KeysApiCustomRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", KeysApiCustomPathParams)
     ], KeysApiCustomRequest.prototype, "pathParams", void 0);
     return KeysApiCustomRequest;
-}(SpeakeasyBase));
-export { KeysApiCustomRequest };
+}(utils_1.SpeakeasyBase));
+exports.KeysApiCustomRequest = KeysApiCustomRequest;
 var KeysApiCustomResponse = /** @class */ (function (_super) {
     __extends(KeysApiCustomResponse, _super);
     function KeysApiCustomResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], KeysApiCustomResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], KeysApiCustomResponse.prototype, "keysApiCustom200ApplicationOctetStreamBinaryString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], KeysApiCustomResponse.prototype, "statusCode", void 0);
     return KeysApiCustomResponse;
-}(SpeakeasyBase));
-export { KeysApiCustomResponse };
+}(utils_1.SpeakeasyBase));
+exports.KeysApiCustomResponse = KeysApiCustomResponse;

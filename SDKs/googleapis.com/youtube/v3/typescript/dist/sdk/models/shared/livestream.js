@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CdnSettings } from "./cdnsettings";
-import { LiveStreamContentDetails } from "./livestreamcontentdetails";
-import { LiveStreamSnippet } from "./livestreamsnippet";
-import { LiveStreamStatus } from "./livestreamstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiveStream = void 0;
+var utils_1 = require("../../../internal/utils");
+var cdnsettings_1 = require("./cdnsettings");
+var livestreamcontentdetails_1 = require("./livestreamcontentdetails");
+var livestreamsnippet_1 = require("./livestreamsnippet");
+var livestreamstatus_1 = require("./livestreamstatus");
 // LiveStream
 /**
  * A live stream describes a live ingestion point.
@@ -37,33 +40,33 @@ var LiveStream = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cdn" }),
-        __metadata("design:type", CdnSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cdn" }),
+        __metadata("design:type", cdnsettings_1.CdnSettings)
     ], LiveStream.prototype, "cdn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentDetails" }),
-        __metadata("design:type", LiveStreamContentDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentDetails" }),
+        __metadata("design:type", livestreamcontentdetails_1.LiveStreamContentDetails)
     ], LiveStream.prototype, "contentDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], LiveStream.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], LiveStream.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], LiveStream.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snippet" }),
-        __metadata("design:type", LiveStreamSnippet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snippet" }),
+        __metadata("design:type", livestreamsnippet_1.LiveStreamSnippet)
     ], LiveStream.prototype, "snippet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", LiveStreamStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", livestreamstatus_1.LiveStreamStatus)
     ], LiveStream.prototype, "status", void 0);
     return LiveStream;
-}(SpeakeasyBase));
-export { LiveStream };
+}(utils_1.SpeakeasyBase));
+exports.LiveStream = LiveStream;

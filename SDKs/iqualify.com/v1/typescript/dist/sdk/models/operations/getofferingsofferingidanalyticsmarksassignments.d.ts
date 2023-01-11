@@ -9,6 +9,6 @@ export declare class GetOfferingsOfferingIdAnalyticsMarksAssignmentsRequest exte
 export declare class GetOfferingsOfferingIdAnalyticsMarksAssignmentsResponse extends SpeakeasyBase {
     assignmentMarkResponses?: shared.AssignmentMarkResponse[];
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

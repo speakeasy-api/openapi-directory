@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SafeHtmlProto = void 0;
+var utils_1 = require("../../../internal/utils");
 // SafeHtmlProto
 /**
  * IMPORTANT: It is unsafe to accept this message from an untrusted source, since it's trivial for an attacker to forge serialized messages that don't fulfill the type's safety contract -- for example, it could contain attacker controlled script. A system which receives a SafeHtmlProto implicitly trusts the producer of the SafeHtmlProto. So, it's generally safe to return this message in RPC responses, but generally unsafe to accept it in RPC requests.
@@ -33,9 +36,9 @@ var SafeHtmlProto = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateDoNotAccessOrElseSafeHtmlWrappedValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateDoNotAccessOrElseSafeHtmlWrappedValue" }),
         __metadata("design:type", String)
     ], SafeHtmlProto.prototype, "privateDoNotAccessOrElseSafeHtmlWrappedValue", void 0);
     return SafeHtmlProto;
-}(SpeakeasyBase));
-export { SafeHtmlProto };
+}(utils_1.SpeakeasyBase));
+exports.SafeHtmlProto = SafeHtmlProto;

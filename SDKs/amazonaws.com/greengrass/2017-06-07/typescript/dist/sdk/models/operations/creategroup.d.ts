@@ -25,7 +25,7 @@ export declare class CreateGroupRequestBodyInitialVersion extends SpeakeasyBase 
 export declare class CreateGroupRequestBody extends SpeakeasyBase {
     initialVersion?: CreateGroupRequestBodyInitialVersion;
     name: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateGroupRequest extends SpeakeasyBase {
     headers: CreateGroupHeaders;

@@ -44,8 +44,8 @@ export class GetRepositoriesWorkspaceRepoSlugVersionsVersionIdResponse extends S
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  version?: Map<string, any>;
+  version?: Record<string, any>;
 }

@@ -16,24 +16,17 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { GetComicIdInfo0JsonRequest, GetComicIdInfo0JsonResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetInfo0JsonResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
-    
-const req: GetComicIdInfo0JsonRequest = {
-  pathParams: {
-    comicId: 17.100000,
-  },
-};
 
-sdk.sdk.getComicIdInfo0Json(req).then((res: GetComicIdInfo0JsonResponse | AxiosError) => {
+sdk.getInfo0Json().then((res: GetInfo0JsonResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -44,9 +37,9 @@ sdk.sdk.getComicIdInfo0Json(req).then((res: GetComicIdInfo0JsonResponse | AxiosE
 
 ### SDK SDK
 
-* `getComicIdInfo0Json` - Fetch comics and metadata  by comic id.
-
 * `getInfo0Json` - Fetch current comic and metadata.
+
+* `getComicIdInfo0Json` - Fetch comics and metadata  by comic id.
 
 
 <!-- End SDK Available Operations -->

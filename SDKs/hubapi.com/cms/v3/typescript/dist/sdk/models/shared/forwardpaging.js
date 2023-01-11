@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NextPage } from "./nextpage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ForwardPaging = void 0;
+var utils_1 = require("../../../internal/utils");
+var nextpage_1 = require("./nextpage");
 var ForwardPaging = /** @class */ (function (_super) {
     __extends(ForwardPaging, _super);
     function ForwardPaging() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
-        __metadata("design:type", NextPage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
+        __metadata("design:type", nextpage_1.NextPage)
     ], ForwardPaging.prototype, "next", void 0);
     return ForwardPaging;
-}(SpeakeasyBase));
-export { ForwardPaging };
+}(utils_1.SpeakeasyBase));
+exports.ForwardPaging = ForwardPaging;

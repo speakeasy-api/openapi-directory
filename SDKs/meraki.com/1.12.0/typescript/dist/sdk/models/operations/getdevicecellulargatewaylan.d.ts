@@ -8,5 +8,5 @@ export declare class GetDeviceCellularGatewayLanRequest extends SpeakeasyBase {
 export declare class GetDeviceCellularGatewayLanResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceCellularGatewayLan200ApplicationJsonObject?: Map<string, any>;
+    getDeviceCellularGatewayLan200ApplicationJSONObject?: Record<string, any>;
 }

@@ -31,11 +31,11 @@ export class TagApiGetNamesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tagApiGetNames200ApplicationJsonStrings?: string[];
+  tagApiGetNames200ApplicationJSONStrings?: string[];
 
   @SpeakeasyMetadata()
   tagApiGetNames200ApplicationJsonpStrings?: string[];
 
   @SpeakeasyMetadata()
-  tagApiGetNames200TextJsonStrings?: string[];
+  tagApiGetNames200TextJSONStrings?: string[];
 }

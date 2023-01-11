@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,86 +14,111 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostSetupV1ResourcesIdUploadimageResponse = exports.PostSetupV1ResourcesIdUploadimageRequest = exports.PostSetupV1ResourcesIdUploadimageRequests = exports.PostSetupV1ResourcesIdUploadimagePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var PostSetupV1ResourcesIdUploadimagePathParams = /** @class */ (function (_super) {
     __extends(PostSetupV1ResourcesIdUploadimagePathParams, _super);
     function PostSetupV1ResourcesIdUploadimagePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], PostSetupV1ResourcesIdUploadimagePathParams.prototype, "id", void 0);
     return PostSetupV1ResourcesIdUploadimagePathParams;
-}(SpeakeasyBase));
-export { PostSetupV1ResourcesIdUploadimagePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostSetupV1ResourcesIdUploadimagePathParams = PostSetupV1ResourcesIdUploadimagePathParams;
 var PostSetupV1ResourcesIdUploadimageRequests = /** @class */ (function (_super) {
     __extends(PostSetupV1ResourcesIdUploadimageRequests, _super);
     function PostSetupV1ResourcesIdUploadimageRequests() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/*+json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/*+json" }),
         __metadata("design:type", shared.ResourceImageInputModel)
     ], PostSetupV1ResourcesIdUploadimageRequests.prototype, "resourceImageInputModel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.ResourceImageInputModel)
     ], PostSetupV1ResourcesIdUploadimageRequests.prototype, "resourceImageInputModel1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json-patch+json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json-patch+json" }),
         __metadata("design:type", shared.ResourceImageInputModel)
     ], PostSetupV1ResourcesIdUploadimageRequests.prototype, "resourceImageInputModel2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/json" }),
         __metadata("design:type", shared.ResourceImageInputModel)
     ], PostSetupV1ResourcesIdUploadimageRequests.prototype, "resourceImageInputModel3", void 0);
     return PostSetupV1ResourcesIdUploadimageRequests;
-}(SpeakeasyBase));
-export { PostSetupV1ResourcesIdUploadimageRequests };
+}(utils_1.SpeakeasyBase));
+exports.PostSetupV1ResourcesIdUploadimageRequests = PostSetupV1ResourcesIdUploadimageRequests;
 var PostSetupV1ResourcesIdUploadimageRequest = /** @class */ (function (_super) {
     __extends(PostSetupV1ResourcesIdUploadimageRequest, _super);
     function PostSetupV1ResourcesIdUploadimageRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostSetupV1ResourcesIdUploadimagePathParams)
     ], PostSetupV1ResourcesIdUploadimageRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostSetupV1ResourcesIdUploadimageRequests)
     ], PostSetupV1ResourcesIdUploadimageRequest.prototype, "request", void 0);
     return PostSetupV1ResourcesIdUploadimageRequest;
-}(SpeakeasyBase));
-export { PostSetupV1ResourcesIdUploadimageRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostSetupV1ResourcesIdUploadimageRequest = PostSetupV1ResourcesIdUploadimageRequest;
 var PostSetupV1ResourcesIdUploadimageResponse = /** @class */ (function (_super) {
     __extends(PostSetupV1ResourcesIdUploadimageResponse, _super);
     function PostSetupV1ResourcesIdUploadimageResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostSetupV1ResourcesIdUploadimageResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ResourceViewModel)
     ], PostSetupV1ResourcesIdUploadimageResponse.prototype, "resourceViewModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostSetupV1ResourcesIdUploadimageResponse.prototype, "statusCode", void 0);
     return PostSetupV1ResourcesIdUploadimageResponse;
-}(SpeakeasyBase));
-export { PostSetupV1ResourcesIdUploadimageResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostSetupV1ResourcesIdUploadimageResponse = PostSetupV1ResourcesIdUploadimageResponse;

@@ -12,7 +12,7 @@ export class UpdateDomainNameserversRequest extends SpeakeasyBase {
   domainName: string;
 
   @SpeakeasyMetadata({ data: "json, name=FIAuthKey" })
-  fiAuthKey?: string;
+  fiAuthKey?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Nameservers", elemType: Nameserver })
   nameservers: Nameserver[];

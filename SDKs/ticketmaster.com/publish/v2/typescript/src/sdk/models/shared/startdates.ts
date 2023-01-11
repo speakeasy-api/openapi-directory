@@ -9,10 +9,10 @@ import { LocalTime } from "./localtime";
 **/
 export class StartDates extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=dateTBA" })
-  dateTba?: boolean;
+  dateTBA?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=dateTBD" })
-  dateTbd?: boolean;
+  dateTBD?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=dateTime" })
   dateTime?: Date;
@@ -27,5 +27,5 @@ export class StartDates extends SpeakeasyBase {
   noSpecificTime?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=timeTBA" })
-  timeTba?: boolean;
+  timeTBA?: boolean;
 }

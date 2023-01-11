@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Asset } from "./asset";
-import { StatementTemplate } from "./statementtemplate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BulkCheckRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var asset_1 = require("./asset");
+var statementtemplate_1 = require("./statementtemplate");
 // BulkCheckRequest
 /**
  * Message used to check for the existence of multiple digital asset links within a single RPC.
@@ -35,29 +38,29 @@ var BulkCheckRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowGoogleInternalDataSources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowGoogleInternalDataSources" }),
         __metadata("design:type", Boolean)
     ], BulkCheckRequest.prototype, "allowGoogleInternalDataSources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultRelation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultRelation" }),
         __metadata("design:type", String)
     ], BulkCheckRequest.prototype, "defaultRelation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultSource" }),
-        __metadata("design:type", Asset)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultSource" }),
+        __metadata("design:type", asset_1.Asset)
     ], BulkCheckRequest.prototype, "defaultSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultTarget" }),
-        __metadata("design:type", Asset)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultTarget" }),
+        __metadata("design:type", asset_1.Asset)
     ], BulkCheckRequest.prototype, "defaultTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skipCacheLookup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skipCacheLookup" }),
         __metadata("design:type", Boolean)
     ], BulkCheckRequest.prototype, "skipCacheLookup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statements", elemType: StatementTemplate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statements", elemType: statementtemplate_1.StatementTemplate }),
         __metadata("design:type", Array)
     ], BulkCheckRequest.prototype, "statements", void 0);
     return BulkCheckRequest;
-}(SpeakeasyBase));
-export { BulkCheckRequest };
+}(utils_1.SpeakeasyBase));
+exports.BulkCheckRequest = BulkCheckRequest;

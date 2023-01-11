@@ -53,13 +53,13 @@ export class GetListOfDocumentsProvidedByAnIssuerIdResponse extends SpeakeasyBas
   docTypeResponse?: shared.DocTypeResponse;
 
   @SpeakeasyMetadata()
-  getListOfDocumentsProvidedByAnIssuerId400ApplicationJsonObject?: GetListOfDocumentsProvidedByAnIssuerId400ApplicationJson;
+  getListOfDocumentsProvidedByAnIssuerId400ApplicationJSONObject?: GetListOfDocumentsProvidedByAnIssuerId400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getListOfDocumentsProvidedByAnIssuerId401ApplicationJsonObject?: GetListOfDocumentsProvidedByAnIssuerId401ApplicationJson;
+  getListOfDocumentsProvidedByAnIssuerId401ApplicationJSONObject?: GetListOfDocumentsProvidedByAnIssuerId401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getListOfDocumentsProvidedByAnIssuerId500ApplicationJsonObject?: GetListOfDocumentsProvidedByAnIssuerId500ApplicationJson;
+  getListOfDocumentsProvidedByAnIssuerId500ApplicationJSONObject?: GetListOfDocumentsProvidedByAnIssuerId500ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

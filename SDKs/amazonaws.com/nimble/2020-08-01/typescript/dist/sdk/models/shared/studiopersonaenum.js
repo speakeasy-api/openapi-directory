@@ -1,4 +1,7 @@
-export var StudioPersonaEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StudioPersonaEnum = void 0;
+var StudioPersonaEnum;
 (function (StudioPersonaEnum) {
     StudioPersonaEnum["Administrator"] = "ADMINISTRATOR";
-})(StudioPersonaEnum || (StudioPersonaEnum = {}));
+})(StudioPersonaEnum = exports.StudioPersonaEnum || (exports.StudioPersonaEnum = {}));

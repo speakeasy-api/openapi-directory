@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,122 +14,147 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdsensehostUrlchannelsInsertResponse = exports.AdsensehostUrlchannelsInsertRequest = exports.AdsensehostUrlchannelsInsertSecurity = exports.AdsensehostUrlchannelsInsertQueryParams = exports.AdsensehostUrlchannelsInsertPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var AdsensehostUrlchannelsInsertPathParams = /** @class */ (function (_super) {
     __extends(AdsensehostUrlchannelsInsertPathParams, _super);
     function AdsensehostUrlchannelsInsertPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=adClientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=adClientId" }),
         __metadata("design:type", String)
     ], AdsensehostUrlchannelsInsertPathParams.prototype, "adClientId", void 0);
     return AdsensehostUrlchannelsInsertPathParams;
-}(SpeakeasyBase));
-export { AdsensehostUrlchannelsInsertPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AdsensehostUrlchannelsInsertPathParams = AdsensehostUrlchannelsInsertPathParams;
 var AdsensehostUrlchannelsInsertQueryParams = /** @class */ (function (_super) {
     __extends(AdsensehostUrlchannelsInsertQueryParams, _super);
     function AdsensehostUrlchannelsInsertQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], AdsensehostUrlchannelsInsertQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], AdsensehostUrlchannelsInsertQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], AdsensehostUrlchannelsInsertQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], AdsensehostUrlchannelsInsertQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], AdsensehostUrlchannelsInsertQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], AdsensehostUrlchannelsInsertQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], AdsensehostUrlchannelsInsertQueryParams.prototype, "userIp", void 0);
     return AdsensehostUrlchannelsInsertQueryParams;
-}(SpeakeasyBase));
-export { AdsensehostUrlchannelsInsertQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AdsensehostUrlchannelsInsertQueryParams = AdsensehostUrlchannelsInsertQueryParams;
 var AdsensehostUrlchannelsInsertSecurity = /** @class */ (function (_super) {
     __extends(AdsensehostUrlchannelsInsertSecurity, _super);
     function AdsensehostUrlchannelsInsertSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], AdsensehostUrlchannelsInsertSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], AdsensehostUrlchannelsInsertSecurity.prototype, "oauth2c", void 0);
     return AdsensehostUrlchannelsInsertSecurity;
-}(SpeakeasyBase));
-export { AdsensehostUrlchannelsInsertSecurity };
+}(utils_1.SpeakeasyBase));
+exports.AdsensehostUrlchannelsInsertSecurity = AdsensehostUrlchannelsInsertSecurity;
 var AdsensehostUrlchannelsInsertRequest = /** @class */ (function (_super) {
     __extends(AdsensehostUrlchannelsInsertRequest, _super);
     function AdsensehostUrlchannelsInsertRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AdsensehostUrlchannelsInsertPathParams)
     ], AdsensehostUrlchannelsInsertRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AdsensehostUrlchannelsInsertQueryParams)
     ], AdsensehostUrlchannelsInsertRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.UrlChannel)
     ], AdsensehostUrlchannelsInsertRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AdsensehostUrlchannelsInsertSecurity)
     ], AdsensehostUrlchannelsInsertRequest.prototype, "security", void 0);
     return AdsensehostUrlchannelsInsertRequest;
-}(SpeakeasyBase));
-export { AdsensehostUrlchannelsInsertRequest };
+}(utils_1.SpeakeasyBase));
+exports.AdsensehostUrlchannelsInsertRequest = AdsensehostUrlchannelsInsertRequest;
 var AdsensehostUrlchannelsInsertResponse = /** @class */ (function (_super) {
     __extends(AdsensehostUrlchannelsInsertResponse, _super);
     function AdsensehostUrlchannelsInsertResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AdsensehostUrlchannelsInsertResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AdsensehostUrlchannelsInsertResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UrlChannel)
     ], AdsensehostUrlchannelsInsertResponse.prototype, "urlChannel", void 0);
     return AdsensehostUrlchannelsInsertResponse;
-}(SpeakeasyBase));
-export { AdsensehostUrlchannelsInsertResponse };
+}(utils_1.SpeakeasyBase));
+exports.AdsensehostUrlchannelsInsertResponse = AdsensehostUrlchannelsInsertResponse;

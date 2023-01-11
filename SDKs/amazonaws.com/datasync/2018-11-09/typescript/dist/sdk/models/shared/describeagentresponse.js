@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EndpointTypeEnum } from "./endpointtypeenum";
-import { PrivateLinkConfig } from "./privatelinkconfig";
-import { AgentStatusEnum } from "./agentstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeAgentResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var endpointtypeenum_1 = require("./endpointtypeenum");
+var privatelinkconfig_1 = require("./privatelinkconfig");
+var agentstatusenum_1 = require("./agentstatusenum");
 // DescribeAgentResponse
 /**
  * DescribeAgentResponse
@@ -36,33 +39,33 @@ var DescribeAgentResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AgentArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AgentArn" }),
         __metadata("design:type", String)
     ], DescribeAgentResponse.prototype, "agentArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], DescribeAgentResponse.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointType" }),
         __metadata("design:type", String)
     ], DescribeAgentResponse.prototype, "endpointType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastConnectionTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastConnectionTime" }),
         __metadata("design:type", Date)
     ], DescribeAgentResponse.prototype, "lastConnectionTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], DescribeAgentResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PrivateLinkConfig" }),
-        __metadata("design:type", PrivateLinkConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PrivateLinkConfig" }),
+        __metadata("design:type", privatelinkconfig_1.PrivateLinkConfig)
     ], DescribeAgentResponse.prototype, "privateLinkConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], DescribeAgentResponse.prototype, "status", void 0);
     return DescribeAgentResponse;
-}(SpeakeasyBase));
-export { DescribeAgentResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeAgentResponse = DescribeAgentResponse;

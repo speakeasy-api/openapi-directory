@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EntryThumbForApiContract } from "./entrythumbforapicontract";
-import { LocalizedStringContract } from "./localizedstringcontract";
-import { PvContract } from "./pvcontract";
-import { TagUsageForApiContract } from "./tagusageforapicontract";
-import { ArchivedWebLinkContract } from "./archivedweblinkcontract";
-export var EntryForApiContractArtistTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EntryForApiContract = exports.EntryForApiContractStatusEnum = exports.EntryForApiContractSongTypeEnum = exports.EntryForApiContractSongListFeaturedCategoryEnum = exports.EntryForApiContractEventCategoryEnum = exports.EntryForApiContractEntryTypeEnum = exports.EntryForApiContractDiscTypeEnum = exports.EntryForApiContractDefaultNameLanguageEnum = exports.EntryForApiContractArtistTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var entrythumbforapicontract_1 = require("./entrythumbforapicontract");
+var localizedstringcontract_1 = require("./localizedstringcontract");
+var pvcontract_1 = require("./pvcontract");
+var tagusageforapicontract_1 = require("./tagusageforapicontract");
+var archivedweblinkcontract_1 = require("./archivedweblinkcontract");
+var EntryForApiContractArtistTypeEnum;
 (function (EntryForApiContractArtistTypeEnum) {
     EntryForApiContractArtistTypeEnum["Unknown"] = "Unknown";
     EntryForApiContractArtistTypeEnum["Circle"] = "Circle";
@@ -49,15 +52,15 @@ export var EntryForApiContractArtistTypeEnum;
     EntryForApiContractArtistTypeEnum["Vocalist"] = "Vocalist";
     EntryForApiContractArtistTypeEnum["Character"] = "Character";
     EntryForApiContractArtistTypeEnum["SynthesizerV"] = "SynthesizerV";
-})(EntryForApiContractArtistTypeEnum || (EntryForApiContractArtistTypeEnum = {}));
-export var EntryForApiContractDefaultNameLanguageEnum;
+})(EntryForApiContractArtistTypeEnum = exports.EntryForApiContractArtistTypeEnum || (exports.EntryForApiContractArtistTypeEnum = {}));
+var EntryForApiContractDefaultNameLanguageEnum;
 (function (EntryForApiContractDefaultNameLanguageEnum) {
     EntryForApiContractDefaultNameLanguageEnum["Unspecified"] = "Unspecified";
     EntryForApiContractDefaultNameLanguageEnum["Japanese"] = "Japanese";
     EntryForApiContractDefaultNameLanguageEnum["Romaji"] = "Romaji";
     EntryForApiContractDefaultNameLanguageEnum["English"] = "English";
-})(EntryForApiContractDefaultNameLanguageEnum || (EntryForApiContractDefaultNameLanguageEnum = {}));
-export var EntryForApiContractDiscTypeEnum;
+})(EntryForApiContractDefaultNameLanguageEnum = exports.EntryForApiContractDefaultNameLanguageEnum || (exports.EntryForApiContractDefaultNameLanguageEnum = {}));
+var EntryForApiContractDiscTypeEnum;
 (function (EntryForApiContractDiscTypeEnum) {
     EntryForApiContractDiscTypeEnum["Unknown"] = "Unknown";
     EntryForApiContractDiscTypeEnum["Album"] = "Album";
@@ -71,8 +74,8 @@ export var EntryForApiContractDiscTypeEnum;
     EntryForApiContractDiscTypeEnum["Fanmade"] = "Fanmade";
     EntryForApiContractDiscTypeEnum["Instrumental"] = "Instrumental";
     EntryForApiContractDiscTypeEnum["Other"] = "Other";
-})(EntryForApiContractDiscTypeEnum || (EntryForApiContractDiscTypeEnum = {}));
-export var EntryForApiContractEntryTypeEnum;
+})(EntryForApiContractDiscTypeEnum = exports.EntryForApiContractDiscTypeEnum || (exports.EntryForApiContractDiscTypeEnum = {}));
+var EntryForApiContractEntryTypeEnum;
 (function (EntryForApiContractEntryTypeEnum) {
     EntryForApiContractEntryTypeEnum["Undefined"] = "Undefined";
     EntryForApiContractEntryTypeEnum["Album"] = "Album";
@@ -86,8 +89,8 @@ export var EntryForApiContractEntryTypeEnum;
     EntryForApiContractEntryTypeEnum["Tag"] = "Tag";
     EntryForApiContractEntryTypeEnum["User"] = "User";
     EntryForApiContractEntryTypeEnum["Venue"] = "Venue";
-})(EntryForApiContractEntryTypeEnum || (EntryForApiContractEntryTypeEnum = {}));
-export var EntryForApiContractEventCategoryEnum;
+})(EntryForApiContractEntryTypeEnum = exports.EntryForApiContractEntryTypeEnum || (exports.EntryForApiContractEntryTypeEnum = {}));
+var EntryForApiContractEventCategoryEnum;
 (function (EntryForApiContractEventCategoryEnum) {
     EntryForApiContractEventCategoryEnum["Unspecified"] = "Unspecified";
     EntryForApiContractEventCategoryEnum["AlbumRelease"] = "AlbumRelease";
@@ -97,16 +100,16 @@ export var EntryForApiContractEventCategoryEnum;
     EntryForApiContractEventCategoryEnum["Contest"] = "Contest";
     EntryForApiContractEventCategoryEnum["Convention"] = "Convention";
     EntryForApiContractEventCategoryEnum["Other"] = "Other";
-})(EntryForApiContractEventCategoryEnum || (EntryForApiContractEventCategoryEnum = {}));
-export var EntryForApiContractSongListFeaturedCategoryEnum;
+})(EntryForApiContractEventCategoryEnum = exports.EntryForApiContractEventCategoryEnum || (exports.EntryForApiContractEventCategoryEnum = {}));
+var EntryForApiContractSongListFeaturedCategoryEnum;
 (function (EntryForApiContractSongListFeaturedCategoryEnum) {
     EntryForApiContractSongListFeaturedCategoryEnum["Nothing"] = "Nothing";
     EntryForApiContractSongListFeaturedCategoryEnum["Concerts"] = "Concerts";
     EntryForApiContractSongListFeaturedCategoryEnum["VocaloidRanking"] = "VocaloidRanking";
     EntryForApiContractSongListFeaturedCategoryEnum["Pools"] = "Pools";
     EntryForApiContractSongListFeaturedCategoryEnum["Other"] = "Other";
-})(EntryForApiContractSongListFeaturedCategoryEnum || (EntryForApiContractSongListFeaturedCategoryEnum = {}));
-export var EntryForApiContractSongTypeEnum;
+})(EntryForApiContractSongListFeaturedCategoryEnum = exports.EntryForApiContractSongListFeaturedCategoryEnum || (exports.EntryForApiContractSongListFeaturedCategoryEnum = {}));
+var EntryForApiContractSongTypeEnum;
 (function (EntryForApiContractSongTypeEnum) {
     EntryForApiContractSongTypeEnum["Unspecified"] = "Unspecified";
     EntryForApiContractSongTypeEnum["Original"] = "Original";
@@ -121,119 +124,119 @@ export var EntryForApiContractSongTypeEnum;
     EntryForApiContractSongTypeEnum["Live"] = "Live";
     EntryForApiContractSongTypeEnum["Illustration"] = "Illustration";
     EntryForApiContractSongTypeEnum["Other"] = "Other";
-})(EntryForApiContractSongTypeEnum || (EntryForApiContractSongTypeEnum = {}));
-export var EntryForApiContractStatusEnum;
+})(EntryForApiContractSongTypeEnum = exports.EntryForApiContractSongTypeEnum || (exports.EntryForApiContractSongTypeEnum = {}));
+var EntryForApiContractStatusEnum;
 (function (EntryForApiContractStatusEnum) {
     EntryForApiContractStatusEnum["Draft"] = "Draft";
     EntryForApiContractStatusEnum["Finished"] = "Finished";
     EntryForApiContractStatusEnum["Approved"] = "Approved";
     EntryForApiContractStatusEnum["Locked"] = "Locked";
-})(EntryForApiContractStatusEnum || (EntryForApiContractStatusEnum = {}));
+})(EntryForApiContractStatusEnum = exports.EntryForApiContractStatusEnum || (exports.EntryForApiContractStatusEnum = {}));
 var EntryForApiContract = /** @class */ (function (_super) {
     __extends(EntryForApiContract, _super);
     function EntryForApiContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activityDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activityDate" }),
         __metadata("design:type", Date)
     ], EntryForApiContract.prototype, "activityDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalNames" }),
         __metadata("design:type", String)
     ], EntryForApiContract.prototype, "additionalNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artistString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artistString" }),
         __metadata("design:type", String)
     ], EntryForApiContract.prototype, "artistString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artistType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artistType" }),
         __metadata("design:type", String)
     ], EntryForApiContract.prototype, "artistType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createDate" }),
         __metadata("design:type", Date)
     ], EntryForApiContract.prototype, "createDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultName" }),
         __metadata("design:type", String)
     ], EntryForApiContract.prototype, "defaultName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultNameLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultNameLanguage" }),
         __metadata("design:type", String)
     ], EntryForApiContract.prototype, "defaultNameLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], EntryForApiContract.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discType" }),
         __metadata("design:type", String)
     ], EntryForApiContract.prototype, "discType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entryType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entryType" }),
         __metadata("design:type", String)
     ], EntryForApiContract.prototype, "entryType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventCategory" }),
         __metadata("design:type", String)
     ], EntryForApiContract.prototype, "eventCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], EntryForApiContract.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mainPicture" }),
-        __metadata("design:type", EntryThumbForApiContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mainPicture" }),
+        __metadata("design:type", entrythumbforapicontract_1.EntryThumbForApiContract)
     ], EntryForApiContract.prototype, "mainPicture", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], EntryForApiContract.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=names", elemType: LocalizedStringContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=names", elemType: localizedstringcontract_1.LocalizedStringContract }),
         __metadata("design:type", Array)
     ], EntryForApiContract.prototype, "names", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pVs", elemType: PvContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pVs", elemType: pvcontract_1.PvContract }),
         __metadata("design:type", Array)
     ], EntryForApiContract.prototype, "pVs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=releaseEventSeriesName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=releaseEventSeriesName" }),
         __metadata("design:type", String)
     ], EntryForApiContract.prototype, "releaseEventSeriesName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=songListFeaturedCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=songListFeaturedCategory" }),
         __metadata("design:type", String)
     ], EntryForApiContract.prototype, "songListFeaturedCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=songType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=songType" }),
         __metadata("design:type", String)
     ], EntryForApiContract.prototype, "songType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], EntryForApiContract.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagCategoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagCategoryName" }),
         __metadata("design:type", String)
     ], EntryForApiContract.prototype, "tagCategoryName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: TagUsageForApiContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tagusageforapicontract_1.TagUsageForApiContract }),
         __metadata("design:type", Array)
     ], EntryForApiContract.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlSlug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlSlug" }),
         __metadata("design:type", String)
     ], EntryForApiContract.prototype, "urlSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], EntryForApiContract.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webLinks", elemType: ArchivedWebLinkContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webLinks", elemType: archivedweblinkcontract_1.ArchivedWebLinkContract }),
         __metadata("design:type", Array)
     ], EntryForApiContract.prototype, "webLinks", void 0);
     return EntryForApiContract;
-}(SpeakeasyBase));
-export { EntryForApiContract };
+}(utils_1.SpeakeasyBase));
+exports.EntryForApiContract = EntryForApiContract;

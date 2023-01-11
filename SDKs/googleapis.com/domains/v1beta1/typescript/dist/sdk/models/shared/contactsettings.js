@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Contact } from "./contact";
-export var ContactSettingsPrivacyEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContactSettings = exports.ContactSettingsPrivacyEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var contact_1 = require("./contact");
+var ContactSettingsPrivacyEnum;
 (function (ContactSettingsPrivacyEnum) {
     ContactSettingsPrivacyEnum["ContactPrivacyUnspecified"] = "CONTACT_PRIVACY_UNSPECIFIED";
     ContactSettingsPrivacyEnum["PublicContactData"] = "PUBLIC_CONTACT_DATA";
     ContactSettingsPrivacyEnum["PrivateContactData"] = "PRIVATE_CONTACT_DATA";
     ContactSettingsPrivacyEnum["RedactedContactData"] = "REDACTED_CONTACT_DATA";
-})(ContactSettingsPrivacyEnum || (ContactSettingsPrivacyEnum = {}));
+})(ContactSettingsPrivacyEnum = exports.ContactSettingsPrivacyEnum || (exports.ContactSettingsPrivacyEnum = {}));
 // ContactSettings
 /**
  * Defines the contact information associated with a `Registration`. [ICANN](https://icann.org/) requires all domain names to have associated contact information. The `registrant_contact` is considered the domain's legal owner, and often the other contacts are identical.
@@ -41,21 +44,21 @@ var ContactSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=adminContact" }),
-        __metadata("design:type", Contact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=adminContact" }),
+        __metadata("design:type", contact_1.Contact)
     ], ContactSettings.prototype, "adminContact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privacy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privacy" }),
         __metadata("design:type", String)
     ], ContactSettings.prototype, "privacy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registrantContact" }),
-        __metadata("design:type", Contact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registrantContact" }),
+        __metadata("design:type", contact_1.Contact)
     ], ContactSettings.prototype, "registrantContact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=technicalContact" }),
-        __metadata("design:type", Contact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=technicalContact" }),
+        __metadata("design:type", contact_1.Contact)
     ], ContactSettings.prototype, "technicalContact", void 0);
     return ContactSettings;
-}(SpeakeasyBase));
-export { ContactSettings };
+}(utils_1.SpeakeasyBase));
+exports.ContactSettings = ContactSettings;

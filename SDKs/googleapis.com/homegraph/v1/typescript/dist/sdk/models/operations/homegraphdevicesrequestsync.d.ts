@@ -24,6 +24,6 @@ export declare class HomegraphDevicesRequestSyncRequest extends SpeakeasyBase {
 }
 export declare class HomegraphDevicesRequestSyncResponse extends SpeakeasyBase {
     contentType: string;
-    requestSyncDevicesResponse?: Map<string, any>;
+    requestSyncDevicesResponse?: Record<string, any>;
     statusCode: number;
 }

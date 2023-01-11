@@ -8,7 +8,7 @@ export declare class TestnetGetTokenHoldersRequest extends SpeakeasyBase {
 }
 export declare class TestnetGetTokenHoldersResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     getTokenHoldersResponse?: shared.GetTokenHoldersResponse;
 }

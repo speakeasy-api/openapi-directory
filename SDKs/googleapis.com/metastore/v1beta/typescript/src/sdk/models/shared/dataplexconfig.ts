@@ -9,5 +9,5 @@ import { Lake } from "./lake";
 **/
 export class DataplexConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=lakeResources", elemType: Lake })
-  lakeResources?: Map<string, Lake>;
+  lakeResources?: Record<string, Lake>;
 }

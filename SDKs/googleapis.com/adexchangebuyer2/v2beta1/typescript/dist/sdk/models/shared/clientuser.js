@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ClientUserStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClientUser = exports.ClientUserStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ClientUserStatusEnum;
 (function (ClientUserStatusEnum) {
     ClientUserStatusEnum["UserStatusUnspecified"] = "USER_STATUS_UNSPECIFIED";
     ClientUserStatusEnum["Pending"] = "PENDING";
     ClientUserStatusEnum["Active"] = "ACTIVE";
     ClientUserStatusEnum["Disabled"] = "DISABLED";
-})(ClientUserStatusEnum || (ClientUserStatusEnum = {}));
+})(ClientUserStatusEnum = exports.ClientUserStatusEnum || (exports.ClientUserStatusEnum = {}));
 // ClientUser
 /**
  * A client user is created under a client buyer and has restricted access to the Marketplace and certain other sections of the Authorized Buyers UI based on the role granted to the associated client buyer. The only way a new client user can be created is through accepting an email invitation (see the accounts.clients.invitations.create method). All fields are required unless otherwise specified.
@@ -40,21 +43,21 @@ var ClientUser = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientAccountId" }),
         __metadata("design:type", String)
     ], ClientUser.prototype, "clientAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], ClientUser.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ClientUser.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userId" }),
         __metadata("design:type", String)
     ], ClientUser.prototype, "userId", void 0);
     return ClientUser;
-}(SpeakeasyBase));
-export { ClientUser };
+}(utils_1.SpeakeasyBase));
+exports.ClientUser = ClientUser;

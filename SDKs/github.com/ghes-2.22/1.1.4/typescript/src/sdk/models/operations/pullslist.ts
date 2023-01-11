@@ -11,31 +11,13 @@ export class PullsListPathParams extends SpeakeasyBase {
   repo: string;
 }
 
-export enum PullsListDirectionEnum {
-    Asc = "asc",
-    Desc = "desc"
-}
-
-export enum PullsListSortEnum {
-    Created = "created",
-    Updated = "updated",
-    Popularity = "popularity",
-    LongRunning = "long-running"
-}
-
-export enum PullsListStateEnum {
-    Open = "open",
-    Closed = "closed",
-    All = "all"
-}
-
 
 export class PullsListQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=base" })
   base?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
-  direction?: PullsListDirectionEnum;
+  direction?: shared.RepoEnum4;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=head" })
   head?: string;
@@ -47,10 +29,10 @@ export class PullsListQueryParams extends SpeakeasyBase {
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: PullsListSortEnum;
+  sort?: shared.RepoEnum5;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" })
-  state?: PullsListStateEnum;
+  state?: shared.RepoEnum2;
 }
 
 
@@ -68,7 +50,7 @@ export class PullsListResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var NodesCreateNodeAttributesCategoryEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodesCreateResponse = exports.NodesCreateRequest = exports.NodesCreateNodeInput = exports.NodesCreateNodeAttributesInput = exports.NodesCreateNodeAttributesCategoryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var NodesCreateNodeAttributesCategoryEnum;
 (function (NodesCreateNodeAttributesCategoryEnum) {
     NodesCreateNodeAttributesCategoryEnum["Analysis"] = "analysis";
     NodesCreateNodeAttributesCategoryEnum["Communication"] = "communication";
@@ -35,7 +38,7 @@ export var NodesCreateNodeAttributesCategoryEnum;
     NodesCreateNodeAttributesCategoryEnum["Project"] = "project";
     NodesCreateNodeAttributesCategoryEnum["Software"] = "software";
     NodesCreateNodeAttributesCategoryEnum["Other"] = "other";
-})(NodesCreateNodeAttributesCategoryEnum || (NodesCreateNodeAttributesCategoryEnum = {}));
+})(NodesCreateNodeAttributesCategoryEnum = exports.NodesCreateNodeAttributesCategoryEnum || (exports.NodesCreateNodeAttributesCategoryEnum = {}));
 // NodesCreateNodeAttributesInput
 /**
  * The properties of the node entity.
@@ -46,77 +49,77 @@ var NodesCreateNodeAttributesInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], NodesCreateNodeAttributesInput.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], NodesCreateNodeAttributesInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_license" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_license" }),
         __metadata("design:type", String)
     ], NodesCreateNodeAttributesInput.prototype, "nodeLicense", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public" }),
         __metadata("design:type", Boolean)
     ], NodesCreateNodeAttributesInput.prototype, "public", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], NodesCreateNodeAttributesInput.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=template_from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=template_from" }),
         __metadata("design:type", String)
     ], NodesCreateNodeAttributesInput.prototype, "templateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], NodesCreateNodeAttributesInput.prototype, "title", void 0);
     return NodesCreateNodeAttributesInput;
-}(SpeakeasyBase));
-export { NodesCreateNodeAttributesInput };
+}(utils_1.SpeakeasyBase));
+exports.NodesCreateNodeAttributesInput = NodesCreateNodeAttributesInput;
 var NodesCreateNodeInput = /** @class */ (function (_super) {
     __extends(NodesCreateNodeInput, _super);
     function NodesCreateNodeInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
         __metadata("design:type", NodesCreateNodeAttributesInput)
     ], NodesCreateNodeInput.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], NodesCreateNodeInput.prototype, "type", void 0);
     return NodesCreateNodeInput;
-}(SpeakeasyBase));
-export { NodesCreateNodeInput };
+}(utils_1.SpeakeasyBase));
+exports.NodesCreateNodeInput = NodesCreateNodeInput;
 var NodesCreateRequest = /** @class */ (function (_super) {
     __extends(NodesCreateRequest, _super);
     function NodesCreateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", NodesCreateNodeInput)
     ], NodesCreateRequest.prototype, "request", void 0);
     return NodesCreateRequest;
-}(SpeakeasyBase));
-export { NodesCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.NodesCreateRequest = NodesCreateRequest;
 var NodesCreateResponse = /** @class */ (function (_super) {
     __extends(NodesCreateResponse, _super);
     function NodesCreateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NodesCreateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], NodesCreateResponse.prototype, "statusCode", void 0);
     return NodesCreateResponse;
-}(SpeakeasyBase));
-export { NodesCreateResponse };
+}(utils_1.SpeakeasyBase));
+exports.NodesCreateResponse = NodesCreateResponse;

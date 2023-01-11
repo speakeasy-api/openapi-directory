@@ -11,14 +11,14 @@ export class S3Storage extends SpeakeasyBase {
   awsAccessKeyId?: string;
 
   @SpeakeasyMetadata()
-  bucket?: string;
+  bucket?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  prefix?: string;
+  prefix?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  uploadPolicy?: string;
+  uploadPolicy?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  uploadPolicySignature?: string;
+  uploadPolicySignature?: Record<string, any>;
 }

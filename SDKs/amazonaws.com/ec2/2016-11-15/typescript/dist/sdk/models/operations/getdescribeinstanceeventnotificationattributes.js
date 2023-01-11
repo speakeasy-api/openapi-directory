@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeInstanceEventNotificationAttributesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeInstanceEventNotificationAttributesResponse = exports.GetDescribeInstanceEventNotificationAttributesRequest = exports.GetDescribeInstanceEventNotificationAttributesHeaders = exports.GetDescribeInstanceEventNotificationAttributesQueryParams = exports.GetDescribeInstanceEventNotificationAttributesVersionEnum = exports.GetDescribeInstanceEventNotificationAttributesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeInstanceEventNotificationAttributesActionEnum;
 (function (GetDescribeInstanceEventNotificationAttributesActionEnum) {
     GetDescribeInstanceEventNotificationAttributesActionEnum["DescribeInstanceEventNotificationAttributes"] = "DescribeInstanceEventNotificationAttributes";
-})(GetDescribeInstanceEventNotificationAttributesActionEnum || (GetDescribeInstanceEventNotificationAttributesActionEnum = {}));
-export var GetDescribeInstanceEventNotificationAttributesVersionEnum;
+})(GetDescribeInstanceEventNotificationAttributesActionEnum = exports.GetDescribeInstanceEventNotificationAttributesActionEnum || (exports.GetDescribeInstanceEventNotificationAttributesActionEnum = {}));
+var GetDescribeInstanceEventNotificationAttributesVersionEnum;
 (function (GetDescribeInstanceEventNotificationAttributesVersionEnum) {
     GetDescribeInstanceEventNotificationAttributesVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDescribeInstanceEventNotificationAttributesVersionEnum || (GetDescribeInstanceEventNotificationAttributesVersionEnum = {}));
+})(GetDescribeInstanceEventNotificationAttributesVersionEnum = exports.GetDescribeInstanceEventNotificationAttributesVersionEnum || (exports.GetDescribeInstanceEventNotificationAttributesVersionEnum = {}));
 var GetDescribeInstanceEventNotificationAttributesQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeInstanceEventNotificationAttributesQueryParams, _super);
     function GetDescribeInstanceEventNotificationAttributesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeInstanceEventNotificationAttributesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDescribeInstanceEventNotificationAttributesQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeInstanceEventNotificationAttributesQueryParams.prototype, "version", void 0);
     return GetDescribeInstanceEventNotificationAttributesQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeInstanceEventNotificationAttributesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeInstanceEventNotificationAttributesQueryParams = GetDescribeInstanceEventNotificationAttributesQueryParams;
 var GetDescribeInstanceEventNotificationAttributesHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeInstanceEventNotificationAttributesHeaders, _super);
     function GetDescribeInstanceEventNotificationAttributesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeInstanceEventNotificationAttributesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeInstanceEventNotificationAttributesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeInstanceEventNotificationAttributesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeInstanceEventNotificationAttributesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeInstanceEventNotificationAttributesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeInstanceEventNotificationAttributesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeInstanceEventNotificationAttributesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeInstanceEventNotificationAttributesHeaders;
-}(SpeakeasyBase));
-export { GetDescribeInstanceEventNotificationAttributesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeInstanceEventNotificationAttributesHeaders = GetDescribeInstanceEventNotificationAttributesHeaders;
 var GetDescribeInstanceEventNotificationAttributesRequest = /** @class */ (function (_super) {
     __extends(GetDescribeInstanceEventNotificationAttributesRequest, _super);
     function GetDescribeInstanceEventNotificationAttributesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeInstanceEventNotificationAttributesQueryParams)
     ], GetDescribeInstanceEventNotificationAttributesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeInstanceEventNotificationAttributesHeaders)
     ], GetDescribeInstanceEventNotificationAttributesRequest.prototype, "headers", void 0);
     return GetDescribeInstanceEventNotificationAttributesRequest;
-}(SpeakeasyBase));
-export { GetDescribeInstanceEventNotificationAttributesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeInstanceEventNotificationAttributesRequest = GetDescribeInstanceEventNotificationAttributesRequest;
 var GetDescribeInstanceEventNotificationAttributesResponse = /** @class */ (function (_super) {
     __extends(GetDescribeInstanceEventNotificationAttributesResponse, _super);
     function GetDescribeInstanceEventNotificationAttributesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeInstanceEventNotificationAttributesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeInstanceEventNotificationAttributesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeInstanceEventNotificationAttributesResponse.prototype, "statusCode", void 0);
     return GetDescribeInstanceEventNotificationAttributesResponse;
-}(SpeakeasyBase));
-export { GetDescribeInstanceEventNotificationAttributesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeInstanceEventNotificationAttributesResponse = GetDescribeInstanceEventNotificationAttributesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChannelTypeEnum } from "./channeltypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Channel = exports.ChannelTo2 = exports.ChannelFrom5 = exports.ChannelFrom4 = exports.ChannelFrom4Headers = exports.ChannelFrom4ContentTypeEnum = exports.ChannelFrom3 = exports.ChannelFrom2 = exports.ChannelFrom1 = void 0;
+var utils_1 = require("../../../internal/utils");
+var channeltypeenum_1 = require("./channeltypeenum");
 // ChannelFrom1
 /**
  * Connect to an App User
@@ -34,16 +37,16 @@ var ChannelFrom1 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ChannelFrom1.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
         __metadata("design:type", String)
     ], ChannelFrom1.prototype, "user", void 0);
     return ChannelFrom1;
-}(SpeakeasyBase));
-export { ChannelFrom1 };
+}(utils_1.SpeakeasyBase));
+exports.ChannelFrom1 = ChannelFrom1;
 // ChannelFrom2
 /**
  * Connect to a Phone (PSTN) number
@@ -54,16 +57,16 @@ var ChannelFrom2 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number" }),
         __metadata("design:type", String)
     ], ChannelFrom2.prototype, "number", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ChannelFrom2.prototype, "type", void 0);
     return ChannelFrom2;
-}(SpeakeasyBase));
-export { ChannelFrom2 };
+}(utils_1.SpeakeasyBase));
+exports.ChannelFrom2 = ChannelFrom2;
 // ChannelFrom3
 /**
  * Connect to a SIP Endpoint
@@ -74,21 +77,21 @@ var ChannelFrom3 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ChannelFrom3.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], ChannelFrom3.prototype, "uri", void 0);
     return ChannelFrom3;
-}(SpeakeasyBase));
-export { ChannelFrom3 };
-export var ChannelFrom4ContentTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.ChannelFrom3 = ChannelFrom3;
+var ChannelFrom4ContentTypeEnum;
 (function (ChannelFrom4ContentTypeEnum) {
     ChannelFrom4ContentTypeEnum["AudioL16RateEqual8000"] = "audio/l16;rate=8000";
     ChannelFrom4ContentTypeEnum["AudioL16RateEqual16000"] = "audio/l16;rate=16000";
-})(ChannelFrom4ContentTypeEnum || (ChannelFrom4ContentTypeEnum = {}));
+})(ChannelFrom4ContentTypeEnum = exports.ChannelFrom4ContentTypeEnum || (exports.ChannelFrom4ContentTypeEnum = {}));
 // ChannelFrom4Headers
 /**
  * Details of the Websocket you want to connect to
@@ -99,12 +102,12 @@ var ChannelFrom4Headers = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customer_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customer_id" }),
         __metadata("design:type", String)
     ], ChannelFrom4Headers.prototype, "customerId", void 0);
     return ChannelFrom4Headers;
-}(SpeakeasyBase));
-export { ChannelFrom4Headers };
+}(utils_1.SpeakeasyBase));
+exports.ChannelFrom4Headers = ChannelFrom4Headers;
 // ChannelFrom4
 /**
  * Connect to a Websocket
@@ -115,24 +118,24 @@ var ChannelFrom4 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content-type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content-type" }),
         __metadata("design:type", String)
     ], ChannelFrom4.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
         __metadata("design:type", ChannelFrom4Headers)
     ], ChannelFrom4.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ChannelFrom4.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], ChannelFrom4.prototype, "uri", void 0);
     return ChannelFrom4;
-}(SpeakeasyBase));
-export { ChannelFrom4 };
+}(utils_1.SpeakeasyBase));
+exports.ChannelFrom4 = ChannelFrom4;
 // ChannelFrom5
 /**
  * Connect to a VBC extension
@@ -143,16 +146,16 @@ var ChannelFrom5 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extension" }),
         __metadata("design:type", String)
     ], ChannelFrom5.prototype, "extension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ChannelFrom5.prototype, "type", void 0);
     return ChannelFrom5;
-}(SpeakeasyBase));
-export { ChannelFrom5 };
+}(utils_1.SpeakeasyBase));
+exports.ChannelFrom5 = ChannelFrom5;
 // ChannelTo2
 /**
  * Connect to a Phone (PSTN) number
@@ -163,20 +166,20 @@ var ChannelTo2 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dtmfAnswer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dtmfAnswer" }),
         __metadata("design:type", String)
     ], ChannelTo2.prototype, "dtmfAnswer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number" }),
         __metadata("design:type", String)
     ], ChannelTo2.prototype, "number", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ChannelTo2.prototype, "type", void 0);
     return ChannelTo2;
-}(SpeakeasyBase));
-export { ChannelTo2 };
+}(utils_1.SpeakeasyBase));
+exports.ChannelTo2 = ChannelTo2;
 // Channel
 /**
  * A user who joins a conversation as a member can have one channel per membership type. Channels can be `app`, `phone`, `sip`, `websocket`, or `vbc`
@@ -187,25 +190,25 @@ var Channel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", Object)
     ], Channel.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=leg_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=leg_id" }),
         __metadata("design:type", String)
     ], Channel.prototype, "legId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=leg_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=leg_ids" }),
         __metadata("design:type", Array)
     ], Channel.prototype, "legIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to" }),
         __metadata("design:type", Object)
     ], Channel.prototype, "to", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Channel.prototype, "type", void 0);
     return Channel;
-}(SpeakeasyBase));
-export { Channel };
+}(utils_1.SpeakeasyBase));
+exports.Channel = Channel;

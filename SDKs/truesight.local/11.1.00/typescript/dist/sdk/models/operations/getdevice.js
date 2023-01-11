@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceResponse = exports.GetDeviceRequest = exports.GetDevicePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDevicePathParams = /** @class */ (function (_super) {
     __extends(GetDevicePathParams, _super);
     function GetDevicePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=deviceId" }),
         __metadata("design:type", Number)
     ], GetDevicePathParams.prototype, "deviceId", void 0);
     return GetDevicePathParams;
-}(SpeakeasyBase));
-export { GetDevicePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDevicePathParams = GetDevicePathParams;
 var GetDeviceRequest = /** @class */ (function (_super) {
     __extends(GetDeviceRequest, _super);
     function GetDeviceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDevicePathParams)
     ], GetDeviceRequest.prototype, "pathParams", void 0);
     return GetDeviceRequest;
-}(SpeakeasyBase));
-export { GetDeviceRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceRequest = GetDeviceRequest;
 var GetDeviceResponse = /** @class */ (function (_super) {
     __extends(GetDeviceResponse, _super);
     function GetDeviceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeviceResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceResponse.prototype, "statusCode", void 0);
     return GetDeviceResponse;
-}(SpeakeasyBase));
-export { GetDeviceResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceResponse = GetDeviceResponse;

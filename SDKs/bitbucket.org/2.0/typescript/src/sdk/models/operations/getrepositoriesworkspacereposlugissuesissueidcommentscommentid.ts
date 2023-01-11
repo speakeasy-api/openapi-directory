@@ -47,5 +47,5 @@ export class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRespo
   statusCode: number;
 
   @SpeakeasyMetadata()
-  issueComment?: Map<string, any>;
+  issueComment?: Record<string, any>;
 }

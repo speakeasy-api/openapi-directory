@@ -11,5 +11,5 @@ export class AddTagsToStreamInput extends SpeakeasyBase {
   streamName: string;
 
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags: Map<string, string>;
+  tags: Record<string, string>;
 }

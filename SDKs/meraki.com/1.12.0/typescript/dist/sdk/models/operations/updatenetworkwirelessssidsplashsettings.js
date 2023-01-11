@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkWirelessSsidSplashSettingsResponse = exports.UpdateNetworkWirelessSsidSplashSettingsRequest = exports.UpdateNetworkWirelessSsidSplashSettingsRequestBody = exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashPrepaidFront = exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashLogo = exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashImage = exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollment = exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentSystemsManagerNetwork = exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentStrengthEnum = exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodyGuestSponsorship = exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodyControllerDisconnectionBehaviorEnum = exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodyBilling = exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodyBillingFreeAccess = exports.UpdateNetworkWirelessSsidSplashSettingsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkWirelessSsidSplashSettingsPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidSplashSettingsPathParams, _super);
     function UpdateNetworkWirelessSsidSplashSettingsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidSplashSettingsPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=number" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidSplashSettingsPathParams.prototype, "number", void 0);
     return UpdateNetworkWirelessSsidSplashSettingsPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidSplashSettingsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidSplashSettingsPathParams = UpdateNetworkWirelessSsidSplashSettingsPathParams;
 // UpdateNetworkWirelessSsidSplashSettingsRequestBodyBillingFreeAccess
 /**
  * Details associated with a free access plan with limits.
@@ -49,16 +52,16 @@ var UpdateNetworkWirelessSsidSplashSettingsRequestBodyBillingFreeAccess = /** @c
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=durationInMinutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=durationInMinutes" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBodyBillingFreeAccess.prototype, "durationInMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBodyBillingFreeAccess.prototype, "enabled", void 0);
     return UpdateNetworkWirelessSsidSplashSettingsRequestBodyBillingFreeAccess;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidSplashSettingsRequestBodyBillingFreeAccess };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodyBillingFreeAccess = UpdateNetworkWirelessSsidSplashSettingsRequestBodyBillingFreeAccess;
 // UpdateNetworkWirelessSsidSplashSettingsRequestBodyBilling
 /**
  * Details associated with billing splash.
@@ -69,26 +72,26 @@ var UpdateNetworkWirelessSsidSplashSettingsRequestBodyBilling = /** @class */ (f
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeAccess" }),
         __metadata("design:type", UpdateNetworkWirelessSsidSplashSettingsRequestBodyBillingFreeAccess)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBodyBilling.prototype, "freeAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prepaidAccessFastLoginEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prepaidAccessFastLoginEnabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBodyBilling.prototype, "prepaidAccessFastLoginEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replyToEmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replyToEmailAddress" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBodyBilling.prototype, "replyToEmailAddress", void 0);
     return UpdateNetworkWirelessSsidSplashSettingsRequestBodyBilling;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidSplashSettingsRequestBodyBilling };
-export var UpdateNetworkWirelessSsidSplashSettingsRequestBodyControllerDisconnectionBehaviorEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodyBilling = UpdateNetworkWirelessSsidSplashSettingsRequestBodyBilling;
+var UpdateNetworkWirelessSsidSplashSettingsRequestBodyControllerDisconnectionBehaviorEnum;
 (function (UpdateNetworkWirelessSsidSplashSettingsRequestBodyControllerDisconnectionBehaviorEnum) {
     UpdateNetworkWirelessSsidSplashSettingsRequestBodyControllerDisconnectionBehaviorEnum["Open"] = "open";
     UpdateNetworkWirelessSsidSplashSettingsRequestBodyControllerDisconnectionBehaviorEnum["Restricted"] = "restricted";
     UpdateNetworkWirelessSsidSplashSettingsRequestBodyControllerDisconnectionBehaviorEnum["Default"] = "default";
-})(UpdateNetworkWirelessSsidSplashSettingsRequestBodyControllerDisconnectionBehaviorEnum || (UpdateNetworkWirelessSsidSplashSettingsRequestBodyControllerDisconnectionBehaviorEnum = {}));
+})(UpdateNetworkWirelessSsidSplashSettingsRequestBodyControllerDisconnectionBehaviorEnum = exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodyControllerDisconnectionBehaviorEnum || (exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodyControllerDisconnectionBehaviorEnum = {}));
 // UpdateNetworkWirelessSsidSplashSettingsRequestBodyGuestSponsorship
 /**
  * Details associated with guest sponsored splash.
@@ -99,22 +102,22 @@ var UpdateNetworkWirelessSsidSplashSettingsRequestBodyGuestSponsorship = /** @cl
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=durationInMinutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=durationInMinutes" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBodyGuestSponsorship.prototype, "durationInMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=guestCanRequestTimeframe" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=guestCanRequestTimeframe" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBodyGuestSponsorship.prototype, "guestCanRequestTimeframe", void 0);
     return UpdateNetworkWirelessSsidSplashSettingsRequestBodyGuestSponsorship;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidSplashSettingsRequestBodyGuestSponsorship };
-export var UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentStrengthEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodyGuestSponsorship = UpdateNetworkWirelessSsidSplashSettingsRequestBodyGuestSponsorship;
+var UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentStrengthEnum;
 (function (UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentStrengthEnum) {
     UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentStrengthEnum["Focused"] = "focused";
     UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentStrengthEnum["ClickThrough"] = "click-through";
     UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentStrengthEnum["Strict"] = "strict";
-})(UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentStrengthEnum || (UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentStrengthEnum = {}));
+})(UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentStrengthEnum = exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentStrengthEnum || (exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentStrengthEnum = {}));
 // UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentSystemsManagerNetwork
 /**
  * Systems Manager network targeted for sentry enrollment.
@@ -125,12 +128,12 @@ var UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentSystemsMan
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentSystemsManagerNetwork.prototype, "id", void 0);
     return UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentSystemsManagerNetwork;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentSystemsManagerNetwork };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentSystemsManagerNetwork = UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentSystemsManagerNetwork;
 // UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollment
 /**
  * Systems Manager sentry enrollment splash settings.
@@ -141,20 +144,20 @@ var UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollment = /** @cl
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enforcedSystems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enforcedSystems" }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollment.prototype, "enforcedSystems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=strength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=strength" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollment.prototype, "strength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=systemsManagerNetwork" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=systemsManagerNetwork" }),
         __metadata("design:type", UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollmentSystemsManagerNetwork)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollment.prototype, "systemsManagerNetwork", void 0);
     return UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollment;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollment };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollment = UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollment;
 // UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashImage
 /**
  * The image used in the splash page.
@@ -165,16 +168,16 @@ var UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashImage = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extension" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashImage.prototype, "extension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=md5" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=md5" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashImage.prototype, "md5", void 0);
     return UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashImage;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashImage };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashImage = UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashImage;
 // UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashLogo
 /**
  * The logo used in the splash page.
@@ -185,16 +188,16 @@ var UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashLogo = /** @class */
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extension" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashLogo.prototype, "extension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=md5" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=md5" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashLogo.prototype, "md5", void 0);
     return UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashLogo;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashLogo };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashLogo = UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashLogo;
 // UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashPrepaidFront
 /**
  * The prepaid front image used in the splash page.
@@ -205,117 +208,117 @@ var UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashPrepaidFront = /** @
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extension" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashPrepaidFront.prototype, "extension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=md5" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=md5" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashPrepaidFront.prototype, "md5", void 0);
     return UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashPrepaidFront;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashPrepaidFront };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashPrepaidFront = UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashPrepaidFront;
 var UpdateNetworkWirelessSsidSplashSettingsRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidSplashSettingsRequestBody, _super);
     function UpdateNetworkWirelessSsidSplashSettingsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowSimultaneousLogins" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowSimultaneousLogins" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBody.prototype, "allowSimultaneousLogins", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billing" }),
         __metadata("design:type", UpdateNetworkWirelessSsidSplashSettingsRequestBodyBilling)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBody.prototype, "billing", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blockAllTrafficBeforeSignOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blockAllTrafficBeforeSignOn" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBody.prototype, "blockAllTrafficBeforeSignOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=controllerDisconnectionBehavior" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=controllerDisconnectionBehavior" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBody.prototype, "controllerDisconnectionBehavior", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=guestSponsorship" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=guestSponsorship" }),
         __metadata("design:type", UpdateNetworkWirelessSsidSplashSettingsRequestBodyGuestSponsorship)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBody.prototype, "guestSponsorship", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=redirectUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=redirectUrl" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBody.prototype, "redirectUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sentryEnrollment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sentryEnrollment" }),
         __metadata("design:type", UpdateNetworkWirelessSsidSplashSettingsRequestBodySentryEnrollment)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBody.prototype, "sentryEnrollment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=splashImage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=splashImage" }),
         __metadata("design:type", UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashImage)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBody.prototype, "splashImage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=splashLogo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=splashLogo" }),
         __metadata("design:type", UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashLogo)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBody.prototype, "splashLogo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=splashPrepaidFront" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=splashPrepaidFront" }),
         __metadata("design:type", UpdateNetworkWirelessSsidSplashSettingsRequestBodySplashPrepaidFront)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBody.prototype, "splashPrepaidFront", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=splashTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=splashTimeout" }),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBody.prototype, "splashTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=splashUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=splashUrl" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBody.prototype, "splashUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useRedirectUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useRedirectUrl" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBody.prototype, "useRedirectUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useSplashUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useSplashUrl" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBody.prototype, "useSplashUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=welcomeMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=welcomeMessage" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidSplashSettingsRequestBody.prototype, "welcomeMessage", void 0);
     return UpdateNetworkWirelessSsidSplashSettingsRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidSplashSettingsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidSplashSettingsRequestBody = UpdateNetworkWirelessSsidSplashSettingsRequestBody;
 var UpdateNetworkWirelessSsidSplashSettingsRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidSplashSettingsRequest, _super);
     function UpdateNetworkWirelessSsidSplashSettingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkWirelessSsidSplashSettingsPathParams)
     ], UpdateNetworkWirelessSsidSplashSettingsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkWirelessSsidSplashSettingsRequestBody)
     ], UpdateNetworkWirelessSsidSplashSettingsRequest.prototype, "request", void 0);
     return UpdateNetworkWirelessSsidSplashSettingsRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidSplashSettingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidSplashSettingsRequest = UpdateNetworkWirelessSsidSplashSettingsRequest;
 var UpdateNetworkWirelessSsidSplashSettingsResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidSplashSettingsResponse, _super);
     function UpdateNetworkWirelessSsidSplashSettingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidSplashSettingsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidSplashSettingsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkWirelessSsidSplashSettingsResponse.prototype, "updateNetworkWirelessSsidSplashSettings200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkWirelessSsidSplashSettingsResponse.prototype, "updateNetworkWirelessSsidSplashSettings200ApplicationJSONObject", void 0);
     return UpdateNetworkWirelessSsidSplashSettingsResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidSplashSettingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidSplashSettingsResponse = UpdateNetworkWirelessSsidSplashSettingsResponse;

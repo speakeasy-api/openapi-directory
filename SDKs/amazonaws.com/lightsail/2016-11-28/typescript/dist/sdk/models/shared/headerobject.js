@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ForwardValuesEnum } from "./forwardvaluesenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HeaderObject = void 0;
+var utils_1 = require("../../../internal/utils");
+var forwardvaluesenum_1 = require("./forwardvaluesenum");
 // HeaderObject
 /**
  * <p>Describes the request headers that a Lightsail distribution bases caching on.</p> <p>For the headers that you specify, your distribution caches separate versions of the specified content based on the header values in viewer requests. For example, suppose viewer requests for <code>logo.jpg</code> contain a custom <code>product</code> header that has a value of either <code>acme</code> or <code>apex</code>, and you configure your distribution to cache your content based on values in the <code>product</code> header. Your distribution forwards the <code>product</code> header to the origin and caches the response from the origin once for each header value. </p>
@@ -34,13 +37,13 @@ var HeaderObject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headersAllowList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headersAllowList" }),
         __metadata("design:type", Array)
     ], HeaderObject.prototype, "headersAllowList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=option" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=option" }),
         __metadata("design:type", String)
     ], HeaderObject.prototype, "option", void 0);
     return HeaderObject;
-}(SpeakeasyBase));
-export { HeaderObject };
+}(utils_1.SpeakeasyBase));
+exports.HeaderObject = HeaderObject;

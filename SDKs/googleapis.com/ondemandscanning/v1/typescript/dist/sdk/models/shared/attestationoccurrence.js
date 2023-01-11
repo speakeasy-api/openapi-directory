@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Jwt } from "./jwt";
-import { Signature } from "./signature";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttestationOccurrence = void 0;
+var utils_1 = require("../../../internal/utils");
+var jwt_1 = require("./jwt");
+var signature_1 = require("./signature");
 // AttestationOccurrence
 /**
  * Occurrence that represents a single "attestation". The authenticity of an attestation can be verified using the attached signature. If the verifier trusts the public key of the signer, then verifying the signature is sufficient to establish trust. In this circumstance, the authority to which this attestation is attached is primarily useful for lookup (how to find this attestation if you already know the authority and artifact to be verified) and intent (for which authority this attestation was intended to sign.
@@ -35,17 +38,17 @@ var AttestationOccurrence = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jwts", elemType: Jwt }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jwts", elemType: jwt_1.Jwt }),
         __metadata("design:type", Array)
     ], AttestationOccurrence.prototype, "jwts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serializedPayload" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serializedPayload" }),
         __metadata("design:type", String)
     ], AttestationOccurrence.prototype, "serializedPayload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signatures", elemType: Signature }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signatures", elemType: signature_1.Signature }),
         __metadata("design:type", Array)
     ], AttestationOccurrence.prototype, "signatures", void 0);
     return AttestationOccurrence;
-}(SpeakeasyBase));
-export { AttestationOccurrence };
+}(utils_1.SpeakeasyBase));
+exports.AttestationOccurrence = AttestationOccurrence;

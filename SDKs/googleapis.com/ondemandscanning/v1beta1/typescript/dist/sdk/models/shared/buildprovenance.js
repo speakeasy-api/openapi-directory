@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Artifact } from "./artifact";
-import { Command } from "./command";
-import { Source } from "./source";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BuildProvenance = void 0;
+var utils_1 = require("../../../internal/utils");
+var artifact_1 = require("./artifact");
+var command_1 = require("./command");
+var source_1 = require("./source");
 // BuildProvenance
 /**
  * Provenance of a build. Contains all information needed to verify the full details about the build from source to completion.
@@ -36,57 +39,57 @@ var BuildProvenance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildOptions" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildOptions" }),
+        __metadata("design:type", Object)
     ], BuildProvenance.prototype, "buildOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=builderVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=builderVersion" }),
         __metadata("design:type", String)
     ], BuildProvenance.prototype, "builderVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=builtArtifacts", elemType: Artifact }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=builtArtifacts", elemType: artifact_1.Artifact }),
         __metadata("design:type", Array)
     ], BuildProvenance.prototype, "builtArtifacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commands", elemType: Command }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commands", elemType: command_1.Command }),
         __metadata("design:type", Array)
     ], BuildProvenance.prototype, "commands", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], BuildProvenance.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creator" }),
         __metadata("design:type", String)
     ], BuildProvenance.prototype, "creator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], BuildProvenance.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], BuildProvenance.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logsUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logsUri" }),
         __metadata("design:type", String)
     ], BuildProvenance.prototype, "logsUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
         __metadata("design:type", String)
     ], BuildProvenance.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceProvenance" }),
-        __metadata("design:type", Source)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceProvenance" }),
+        __metadata("design:type", source_1.Source)
     ], BuildProvenance.prototype, "sourceProvenance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], BuildProvenance.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=triggerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=triggerId" }),
         __metadata("design:type", String)
     ], BuildProvenance.prototype, "triggerId", void 0);
     return BuildProvenance;
-}(SpeakeasyBase));
-export { BuildProvenance };
+}(utils_1.SpeakeasyBase));
+exports.BuildProvenance = BuildProvenance;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccountStatusItemLevelIssue } from "./accountstatusitemlevelissue";
-import { AccountStatusStatistics } from "./accountstatusstatistics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountStatusProducts = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountstatusitemlevelissue_1 = require("./accountstatusitemlevelissue");
+var accountstatusstatistics_1 = require("./accountstatusstatistics");
 var AccountStatusProducts = /** @class */ (function (_super) {
     __extends(AccountStatusProducts, _super);
     function AccountStatusProducts() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channel" }),
         __metadata("design:type", String)
     ], AccountStatusProducts.prototype, "channel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], AccountStatusProducts.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], AccountStatusProducts.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemLevelIssues", elemType: AccountStatusItemLevelIssue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemLevelIssues", elemType: accountstatusitemlevelissue_1.AccountStatusItemLevelIssue }),
         __metadata("design:type", Array)
     ], AccountStatusProducts.prototype, "itemLevelIssues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statistics" }),
-        __metadata("design:type", AccountStatusStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statistics" }),
+        __metadata("design:type", accountstatusstatistics_1.AccountStatusStatistics)
     ], AccountStatusProducts.prototype, "statistics", void 0);
     return AccountStatusProducts;
-}(SpeakeasyBase));
-export { AccountStatusProducts };
+}(utils_1.SpeakeasyBase));
+exports.AccountStatusProducts = AccountStatusProducts;

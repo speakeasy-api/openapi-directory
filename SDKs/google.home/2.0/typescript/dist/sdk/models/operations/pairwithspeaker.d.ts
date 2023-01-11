@@ -4,7 +4,7 @@ export declare class PairwithSpeakerRequest extends SpeakeasyBase {
     request: shared.PairwithSpeakerRequest;
 }
 export declare class PairwithSpeakerResponse extends SpeakeasyBase {
-    body?: Uint8Array;
     contentType: string;
+    pairwithSpeaker200TextPlainObject?: string;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Answer } from "./answer";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FormResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var answer_1 = require("./answer");
 // FormResponse
 /**
  * A form response.
@@ -34,33 +37,33 @@ var FormResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=answers", elemType: Answer }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=answers", elemType: answer_1.Answer }),
+        __metadata("design:type", Object)
     ], FormResponse.prototype, "answers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], FormResponse.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formId" }),
         __metadata("design:type", String)
     ], FormResponse.prototype, "formId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastSubmittedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastSubmittedTime" }),
         __metadata("design:type", String)
     ], FormResponse.prototype, "lastSubmittedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=respondentEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=respondentEmail" }),
         __metadata("design:type", String)
     ], FormResponse.prototype, "respondentEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responseId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responseId" }),
         __metadata("design:type", String)
     ], FormResponse.prototype, "responseId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalScore" }),
         __metadata("design:type", Number)
     ], FormResponse.prototype, "totalScore", void 0);
     return FormResponse;
-}(SpeakeasyBase));
-export { FormResponse };
+}(utils_1.SpeakeasyBase));
+exports.FormResponse = FormResponse;

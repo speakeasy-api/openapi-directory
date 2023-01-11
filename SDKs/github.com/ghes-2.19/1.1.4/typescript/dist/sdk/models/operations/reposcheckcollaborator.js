@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReposCheckCollaboratorResponse = exports.ReposCheckCollaboratorRequest = exports.ReposCheckCollaboratorPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReposCheckCollaboratorPathParams = /** @class */ (function (_super) {
     __extends(ReposCheckCollaboratorPathParams, _super);
     function ReposCheckCollaboratorPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReposCheckCollaboratorPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReposCheckCollaboratorPathParams.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], ReposCheckCollaboratorPathParams.prototype, "username", void 0);
     return ReposCheckCollaboratorPathParams;
-}(SpeakeasyBase));
-export { ReposCheckCollaboratorPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReposCheckCollaboratorPathParams = ReposCheckCollaboratorPathParams;
 var ReposCheckCollaboratorRequest = /** @class */ (function (_super) {
     __extends(ReposCheckCollaboratorRequest, _super);
     function ReposCheckCollaboratorRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReposCheckCollaboratorPathParams)
     ], ReposCheckCollaboratorRequest.prototype, "pathParams", void 0);
     return ReposCheckCollaboratorRequest;
-}(SpeakeasyBase));
-export { ReposCheckCollaboratorRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReposCheckCollaboratorRequest = ReposCheckCollaboratorRequest;
 var ReposCheckCollaboratorResponse = /** @class */ (function (_super) {
     __extends(ReposCheckCollaboratorResponse, _super);
     function ReposCheckCollaboratorResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReposCheckCollaboratorResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReposCheckCollaboratorResponse.prototype, "statusCode", void 0);
     return ReposCheckCollaboratorResponse;
-}(SpeakeasyBase));
-export { ReposCheckCollaboratorResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReposCheckCollaboratorResponse = ReposCheckCollaboratorResponse;

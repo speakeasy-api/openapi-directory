@@ -75,7 +75,7 @@ export class SubmitFeedbackResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  submitFeedbackResponse?: Map<string, any>;
+  submitFeedbackResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   throttlingException?: any;

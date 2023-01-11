@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCancelSpotFleetRequestsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCancelSpotFleetRequestsResponse = exports.PostCancelSpotFleetRequestsRequest = exports.PostCancelSpotFleetRequestsHeaders = exports.PostCancelSpotFleetRequestsQueryParams = exports.PostCancelSpotFleetRequestsVersionEnum = exports.PostCancelSpotFleetRequestsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCancelSpotFleetRequestsActionEnum;
 (function (PostCancelSpotFleetRequestsActionEnum) {
     PostCancelSpotFleetRequestsActionEnum["CancelSpotFleetRequests"] = "CancelSpotFleetRequests";
-})(PostCancelSpotFleetRequestsActionEnum || (PostCancelSpotFleetRequestsActionEnum = {}));
-export var PostCancelSpotFleetRequestsVersionEnum;
+})(PostCancelSpotFleetRequestsActionEnum = exports.PostCancelSpotFleetRequestsActionEnum || (exports.PostCancelSpotFleetRequestsActionEnum = {}));
+var PostCancelSpotFleetRequestsVersionEnum;
 (function (PostCancelSpotFleetRequestsVersionEnum) {
     PostCancelSpotFleetRequestsVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostCancelSpotFleetRequestsVersionEnum || (PostCancelSpotFleetRequestsVersionEnum = {}));
+})(PostCancelSpotFleetRequestsVersionEnum = exports.PostCancelSpotFleetRequestsVersionEnum || (exports.PostCancelSpotFleetRequestsVersionEnum = {}));
 var PostCancelSpotFleetRequestsQueryParams = /** @class */ (function (_super) {
     __extends(PostCancelSpotFleetRequestsQueryParams, _super);
     function PostCancelSpotFleetRequestsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCancelSpotFleetRequestsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCancelSpotFleetRequestsQueryParams.prototype, "version", void 0);
     return PostCancelSpotFleetRequestsQueryParams;
-}(SpeakeasyBase));
-export { PostCancelSpotFleetRequestsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCancelSpotFleetRequestsQueryParams = PostCancelSpotFleetRequestsQueryParams;
 var PostCancelSpotFleetRequestsHeaders = /** @class */ (function (_super) {
     __extends(PostCancelSpotFleetRequestsHeaders, _super);
     function PostCancelSpotFleetRequestsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCancelSpotFleetRequestsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCancelSpotFleetRequestsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCancelSpotFleetRequestsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCancelSpotFleetRequestsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCancelSpotFleetRequestsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCancelSpotFleetRequestsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCancelSpotFleetRequestsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCancelSpotFleetRequestsHeaders;
-}(SpeakeasyBase));
-export { PostCancelSpotFleetRequestsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCancelSpotFleetRequestsHeaders = PostCancelSpotFleetRequestsHeaders;
 var PostCancelSpotFleetRequestsRequest = /** @class */ (function (_super) {
     __extends(PostCancelSpotFleetRequestsRequest, _super);
     function PostCancelSpotFleetRequestsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCancelSpotFleetRequestsQueryParams)
     ], PostCancelSpotFleetRequestsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCancelSpotFleetRequestsHeaders)
     ], PostCancelSpotFleetRequestsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCancelSpotFleetRequestsRequest.prototype, "request", void 0);
     return PostCancelSpotFleetRequestsRequest;
-}(SpeakeasyBase));
-export { PostCancelSpotFleetRequestsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCancelSpotFleetRequestsRequest = PostCancelSpotFleetRequestsRequest;
 var PostCancelSpotFleetRequestsResponse = /** @class */ (function (_super) {
     __extends(PostCancelSpotFleetRequestsResponse, _super);
     function PostCancelSpotFleetRequestsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCancelSpotFleetRequestsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCancelSpotFleetRequestsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCancelSpotFleetRequestsResponse.prototype, "statusCode", void 0);
     return PostCancelSpotFleetRequestsResponse;
-}(SpeakeasyBase));
-export { PostCancelSpotFleetRequestsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCancelSpotFleetRequestsResponse = PostCancelSpotFleetRequestsResponse;

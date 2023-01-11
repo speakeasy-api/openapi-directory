@@ -1,8 +1,8 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { Metadata } from "./metadata";
 import { Header } from "./header";
-import { Record } from "./record";
-import { Error } from "./error";
+import { RecordT } from "./record";
+import { ErrorT } from "./error";
 
 
 
@@ -23,12 +23,12 @@ export class Report extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=lastUpdatedDate" })
   lastUpdatedDate?: string;
 
-  @SpeakeasyMetadata({ data: "json, name=records", elemType: Record })
-  records?: Record[];
+  @SpeakeasyMetadata({ data: "json, name=records", elemType: RecordT })
+  records?: RecordT[];
 
   @SpeakeasyMetadata({ data: "json, name=startDate" })
   startDate?: string;
 
-  @SpeakeasyMetadata({ data: "json, name=warnings", elemType: Error })
-  warnings?: Error[];
+  @SpeakeasyMetadata({ data: "json, name=warnings", elemType: ErrorT })
+  warnings?: ErrorT[];
 }

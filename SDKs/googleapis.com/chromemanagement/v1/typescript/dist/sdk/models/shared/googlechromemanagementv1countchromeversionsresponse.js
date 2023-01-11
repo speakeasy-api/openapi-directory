@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleChromeManagementV1BrowserVersion } from "./googlechromemanagementv1browserversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1CountChromeVersionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlechromemanagementv1browserversion_1 = require("./googlechromemanagementv1browserversion");
 // GoogleChromeManagementV1CountChromeVersionsResponse
 /**
  * Response containing requested browser versions details and counts.
@@ -34,17 +37,17 @@ var GoogleChromeManagementV1CountChromeVersionsResponse = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=browserVersions", elemType: GoogleChromeManagementV1BrowserVersion }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=browserVersions", elemType: googlechromemanagementv1browserversion_1.GoogleChromeManagementV1BrowserVersion }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1CountChromeVersionsResponse.prototype, "browserVersions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1CountChromeVersionsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalSize" }),
         __metadata("design:type", Number)
     ], GoogleChromeManagementV1CountChromeVersionsResponse.prototype, "totalSize", void 0);
     return GoogleChromeManagementV1CountChromeVersionsResponse;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1CountChromeVersionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1CountChromeVersionsResponse = GoogleChromeManagementV1CountChromeVersionsResponse;

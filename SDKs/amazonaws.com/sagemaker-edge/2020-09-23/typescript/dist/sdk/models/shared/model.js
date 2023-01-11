@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EdgeMetric } from "./edgemetric";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Model = void 0;
+var utils_1 = require("../../../internal/utils");
+var edgemetric_1 = require("./edgemetric");
 // Model
 /**
  * Information about a model deployed on an edge device that is registered with SageMaker Edge Manager.
@@ -34,25 +37,25 @@ var Model = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LatestInference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LatestInference" }),
         __metadata("design:type", Date)
     ], Model.prototype, "latestInference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LatestSampleTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LatestSampleTime" }),
         __metadata("design:type", Date)
     ], Model.prototype, "latestSampleTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ModelMetrics", elemType: EdgeMetric }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ModelMetrics", elemType: edgemetric_1.EdgeMetric }),
         __metadata("design:type", Array)
     ], Model.prototype, "modelMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ModelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ModelName" }),
         __metadata("design:type", String)
     ], Model.prototype, "modelName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ModelVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ModelVersion" }),
         __metadata("design:type", String)
     ], Model.prototype, "modelVersion", void 0);
     return Model;
-}(SpeakeasyBase));
-export { Model };
+}(utils_1.SpeakeasyBase));
+exports.Model = Model;

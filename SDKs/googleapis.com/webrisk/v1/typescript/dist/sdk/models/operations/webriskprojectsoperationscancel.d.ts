@@ -19,10 +19,10 @@ export declare class WebriskProjectsOperationsCancelQueryParams extends Speakeas
 export declare class WebriskProjectsOperationsCancelRequest extends SpeakeasyBase {
     pathParams: WebriskProjectsOperationsCancelPathParams;
     queryParams: WebriskProjectsOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class WebriskProjectsOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    googleProtobufEmpty?: Map<string, any>;
+    googleProtobufEmpty?: Record<string, any>;
     statusCode: number;
 }

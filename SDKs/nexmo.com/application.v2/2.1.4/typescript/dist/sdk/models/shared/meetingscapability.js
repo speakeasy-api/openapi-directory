@@ -1,0 +1,142 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MeetingsCapability = exports.MeetingsCapabilityWebhooks = exports.MeetingsCapabilityWebhooksSessionChanged = exports.MeetingsCapabilityWebhooksSessionChangedHttpMethodEnum = exports.MeetingsCapabilityWebhooksRoomChanged = exports.MeetingsCapabilityWebhooksRoomChangedHttpMethodEnum = exports.MeetingsCapabilityWebhooksRecordingChanged = exports.MeetingsCapabilityWebhooksRecordingChangedHttpMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MeetingsCapabilityWebhooksRecordingChangedHttpMethodEnum;
+(function (MeetingsCapabilityWebhooksRecordingChangedHttpMethodEnum) {
+    MeetingsCapabilityWebhooksRecordingChangedHttpMethodEnum["Get"] = "GET";
+    MeetingsCapabilityWebhooksRecordingChangedHttpMethodEnum["Post"] = "POST";
+    MeetingsCapabilityWebhooksRecordingChangedHttpMethodEnum["Put"] = "PUT";
+})(MeetingsCapabilityWebhooksRecordingChangedHttpMethodEnum = exports.MeetingsCapabilityWebhooksRecordingChangedHttpMethodEnum || (exports.MeetingsCapabilityWebhooksRecordingChangedHttpMethodEnum = {}));
+// MeetingsCapabilityWebhooksRecordingChanged
+/**
+ * Vonage will send recording changed events to this URL
+**/
+var MeetingsCapabilityWebhooksRecordingChanged = /** @class */ (function (_super) {
+    __extends(MeetingsCapabilityWebhooksRecordingChanged, _super);
+    function MeetingsCapabilityWebhooksRecordingChanged() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", String)
+    ], MeetingsCapabilityWebhooksRecordingChanged.prototype, "address", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=http_method" }),
+        __metadata("design:type", String)
+    ], MeetingsCapabilityWebhooksRecordingChanged.prototype, "httpMethod", void 0);
+    return MeetingsCapabilityWebhooksRecordingChanged;
+}(utils_1.SpeakeasyBase));
+exports.MeetingsCapabilityWebhooksRecordingChanged = MeetingsCapabilityWebhooksRecordingChanged;
+var MeetingsCapabilityWebhooksRoomChangedHttpMethodEnum;
+(function (MeetingsCapabilityWebhooksRoomChangedHttpMethodEnum) {
+    MeetingsCapabilityWebhooksRoomChangedHttpMethodEnum["Get"] = "GET";
+    MeetingsCapabilityWebhooksRoomChangedHttpMethodEnum["Post"] = "POST";
+    MeetingsCapabilityWebhooksRoomChangedHttpMethodEnum["Put"] = "PUT";
+})(MeetingsCapabilityWebhooksRoomChangedHttpMethodEnum = exports.MeetingsCapabilityWebhooksRoomChangedHttpMethodEnum || (exports.MeetingsCapabilityWebhooksRoomChangedHttpMethodEnum = {}));
+// MeetingsCapabilityWebhooksRoomChanged
+/**
+ * Vonage will send call room changed events to this URL
+**/
+var MeetingsCapabilityWebhooksRoomChanged = /** @class */ (function (_super) {
+    __extends(MeetingsCapabilityWebhooksRoomChanged, _super);
+    function MeetingsCapabilityWebhooksRoomChanged() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", String)
+    ], MeetingsCapabilityWebhooksRoomChanged.prototype, "address", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=http_method" }),
+        __metadata("design:type", String)
+    ], MeetingsCapabilityWebhooksRoomChanged.prototype, "httpMethod", void 0);
+    return MeetingsCapabilityWebhooksRoomChanged;
+}(utils_1.SpeakeasyBase));
+exports.MeetingsCapabilityWebhooksRoomChanged = MeetingsCapabilityWebhooksRoomChanged;
+var MeetingsCapabilityWebhooksSessionChangedHttpMethodEnum;
+(function (MeetingsCapabilityWebhooksSessionChangedHttpMethodEnum) {
+    MeetingsCapabilityWebhooksSessionChangedHttpMethodEnum["Get"] = "GET";
+    MeetingsCapabilityWebhooksSessionChangedHttpMethodEnum["Post"] = "POST";
+    MeetingsCapabilityWebhooksSessionChangedHttpMethodEnum["Put"] = "PUT";
+})(MeetingsCapabilityWebhooksSessionChangedHttpMethodEnum = exports.MeetingsCapabilityWebhooksSessionChangedHttpMethodEnum || (exports.MeetingsCapabilityWebhooksSessionChangedHttpMethodEnum = {}));
+// MeetingsCapabilityWebhooksSessionChanged
+/**
+ * Vonage will send call session changed events to this URL
+**/
+var MeetingsCapabilityWebhooksSessionChanged = /** @class */ (function (_super) {
+    __extends(MeetingsCapabilityWebhooksSessionChanged, _super);
+    function MeetingsCapabilityWebhooksSessionChanged() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", String)
+    ], MeetingsCapabilityWebhooksSessionChanged.prototype, "address", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=http_method" }),
+        __metadata("design:type", String)
+    ], MeetingsCapabilityWebhooksSessionChanged.prototype, "httpMethod", void 0);
+    return MeetingsCapabilityWebhooksSessionChanged;
+}(utils_1.SpeakeasyBase));
+exports.MeetingsCapabilityWebhooksSessionChanged = MeetingsCapabilityWebhooksSessionChanged;
+var MeetingsCapabilityWebhooks = /** @class */ (function (_super) {
+    __extends(MeetingsCapabilityWebhooks, _super);
+    function MeetingsCapabilityWebhooks() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recording_changed" }),
+        __metadata("design:type", MeetingsCapabilityWebhooksRecordingChanged)
+    ], MeetingsCapabilityWebhooks.prototype, "recordingChanged", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=room_changed" }),
+        __metadata("design:type", MeetingsCapabilityWebhooksRoomChanged)
+    ], MeetingsCapabilityWebhooks.prototype, "roomChanged", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=session_changed" }),
+        __metadata("design:type", MeetingsCapabilityWebhooksSessionChanged)
+    ], MeetingsCapabilityWebhooks.prototype, "sessionChanged", void 0);
+    return MeetingsCapabilityWebhooks;
+}(utils_1.SpeakeasyBase));
+exports.MeetingsCapabilityWebhooks = MeetingsCapabilityWebhooks;
+// MeetingsCapability
+/**
+ * Meetings related configuration
+**/
+var MeetingsCapability = /** @class */ (function (_super) {
+    __extends(MeetingsCapability, _super);
+    function MeetingsCapability() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webhooks" }),
+        __metadata("design:type", MeetingsCapabilityWebhooks)
+    ], MeetingsCapability.prototype, "webhooks", void 0);
+    return MeetingsCapability;
+}(utils_1.SpeakeasyBase));
+exports.MeetingsCapability = MeetingsCapability;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContactTypeEnum } from "./contacttypeenum";
-import { CountryCodeEnum } from "./countrycodeenum";
-import { ExtraParam } from "./extraparam";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContactDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var contacttypeenum_1 = require("./contacttypeenum");
+var countrycodeenum_1 = require("./countrycodeenum");
+var extraparam_1 = require("./extraparam");
 // ContactDetail
 /**
  * ContactDetail includes the following elements.
@@ -36,61 +39,61 @@ var ContactDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AddressLine1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AddressLine1" }),
         __metadata("design:type", String)
     ], ContactDetail.prototype, "addressLine1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AddressLine2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AddressLine2" }),
         __metadata("design:type", String)
     ], ContactDetail.prototype, "addressLine2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=City" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=City" }),
         __metadata("design:type", String)
     ], ContactDetail.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContactType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContactType" }),
         __metadata("design:type", String)
     ], ContactDetail.prototype, "contactType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CountryCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CountryCode" }),
         __metadata("design:type", String)
     ], ContactDetail.prototype, "countryCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Email" }),
         __metadata("design:type", String)
     ], ContactDetail.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExtraParams", elemType: ExtraParam }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExtraParams", elemType: extraparam_1.ExtraParam }),
         __metadata("design:type", Array)
     ], ContactDetail.prototype, "extraParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Fax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Fax" }),
         __metadata("design:type", String)
     ], ContactDetail.prototype, "fax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirstName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirstName" }),
         __metadata("design:type", String)
     ], ContactDetail.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastName" }),
         __metadata("design:type", String)
     ], ContactDetail.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OrganizationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OrganizationName" }),
         __metadata("design:type", String)
     ], ContactDetail.prototype, "organizationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PhoneNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PhoneNumber" }),
         __metadata("design:type", String)
     ], ContactDetail.prototype, "phoneNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], ContactDetail.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ZipCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ZipCode" }),
         __metadata("design:type", String)
     ], ContactDetail.prototype, "zipCode", void 0);
     return ContactDetail;
-}(SpeakeasyBase));
-export { ContactDetail };
+}(utils_1.SpeakeasyBase));
+exports.ContactDetail = ContactDetail;

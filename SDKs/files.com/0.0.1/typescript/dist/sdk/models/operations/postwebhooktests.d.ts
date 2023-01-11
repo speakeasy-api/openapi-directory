@@ -2,11 +2,11 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class PostWebhookTestsRequestBody extends SpeakeasyBase {
     action?: string;
-    body?: Map<string, any>;
+    body?: Record<string, any>;
     encoding?: string;
     fileAsBody?: boolean;
     fileFormField?: string;
-    headers?: Map<string, any>;
+    headers?: Record<string, any>;
     method?: string;
     rawBody?: string;
     url: string;

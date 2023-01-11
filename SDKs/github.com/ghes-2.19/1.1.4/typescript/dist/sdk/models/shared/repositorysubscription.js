@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RepositorySubscription = void 0;
+var utils_1 = require("../../../internal/utils");
 // RepositorySubscription
 /**
  * Repository invitations let you manage who you collaborate with.
@@ -33,29 +36,29 @@ var RepositorySubscription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], RepositorySubscription.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ignored" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ignored" }),
         __metadata("design:type", Boolean)
     ], RepositorySubscription.prototype, "ignored", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], RepositorySubscription.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repository_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repository_url" }),
         __metadata("design:type", String)
     ], RepositorySubscription.prototype, "repositoryUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscribed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscribed" }),
         __metadata("design:type", Boolean)
     ], RepositorySubscription.prototype, "subscribed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], RepositorySubscription.prototype, "url", void 0);
     return RepositorySubscription;
-}(SpeakeasyBase));
-export { RepositorySubscription };
+}(utils_1.SpeakeasyBase));
+exports.RepositorySubscription = RepositorySubscription;

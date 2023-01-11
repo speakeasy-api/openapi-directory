@@ -8,5 +8,5 @@ export declare class GetNetworkCameraQualityRetentionProfilesRequest extends Spe
 export declare class GetNetworkCameraQualityRetentionProfilesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkCameraQualityRetentionProfiles200ApplicationJsonObject?: Map<string, any>;
+    getNetworkCameraQualityRetentionProfiles200ApplicationJSONObject?: Record<string, any>;
 }

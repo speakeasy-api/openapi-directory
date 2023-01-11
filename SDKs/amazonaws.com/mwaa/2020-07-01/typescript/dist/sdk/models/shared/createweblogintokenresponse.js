@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateWebLoginTokenResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateWebLoginTokenResponse = /** @class */ (function (_super) {
     __extends(CreateWebLoginTokenResponse, _super);
     function CreateWebLoginTokenResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WebServerHostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WebServerHostname" }),
         __metadata("design:type", String)
     ], CreateWebLoginTokenResponse.prototype, "webServerHostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WebToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WebToken" }),
         __metadata("design:type", String)
     ], CreateWebLoginTokenResponse.prototype, "webToken", void 0);
     return CreateWebLoginTokenResponse;
-}(SpeakeasyBase));
-export { CreateWebLoginTokenResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateWebLoginTokenResponse = CreateWebLoginTokenResponse;

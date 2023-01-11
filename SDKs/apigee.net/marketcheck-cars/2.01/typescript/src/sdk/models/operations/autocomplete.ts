@@ -2,37 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
-export enum AutoCompleteFieldEnum {
-    Ymm = "ymm",
-    Mm = "mm",
-    Make = "make",
-    Model = "model",
-    Trim = "trim",
-    BodyType = "body_type",
-    BodySubtype = "body_subtype",
-    VehicleType = "vehicle_type",
-    Transmission = "transmission",
-    Drivetrain = "drivetrain",
-    FuelType = "fuel_type",
-    ExteriorColor = "exterior_color",
-    InteriorColor = "interior_color",
-    Engine = "engine",
-    EngineSize = "engine_size",
-    EngineBlock = "engine_block",
-    State = "state",
-    City = "city"
-}
-
-export enum AutoCompleteIncludeNonVinListingsEnum {
-    True = "true",
-    False = "false"
-}
-
-export enum AutoCompleteSortByEnum {
-    Index = "index",
-    Count = "count"
-}
-
 
 export class AutoCompleteQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api_key" })
@@ -69,7 +38,7 @@ export class AutoCompleteQueryParams extends SpeakeasyBase {
   exteriorColor?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=field" })
-  field: AutoCompleteFieldEnum;
+  field: shared.ApiKeyEnum2;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fuel_type" })
   fuelType?: string;
@@ -78,7 +47,7 @@ export class AutoCompleteQueryParams extends SpeakeasyBase {
   ignoreCase?: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_non_vin_listings" })
-  includeNonVinListings?: AutoCompleteIncludeNonVinListingsEnum;
+  includeNonVinListings?: shared.CarTypeEnum1;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=input" })
   input: string;
@@ -93,7 +62,7 @@ export class AutoCompleteQueryParams extends SpeakeasyBase {
   model?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort_by" })
-  sortBy?: AutoCompleteSortByEnum;
+  sortBy?: shared.CarTypeEnum2;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" })
   state?: string;
@@ -126,7 +95,7 @@ export class AutoCompleteResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   searchAutoCompleteResponse?: shared.SearchAutoCompleteResponse;

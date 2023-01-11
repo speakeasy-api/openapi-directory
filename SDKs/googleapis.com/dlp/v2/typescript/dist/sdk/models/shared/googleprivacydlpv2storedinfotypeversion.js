@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2StoredInfoTypeConfig } from "./googleprivacydlpv2storedinfotypeconfig";
-import { GooglePrivacyDlpV2Error } from "./googleprivacydlpv2error";
-import { GooglePrivacyDlpV2StoredInfoTypeStats } from "./googleprivacydlpv2storedinfotypestats";
-export var GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2StoredInfoTypeVersion = exports.GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2storedinfotypeconfig_1 = require("./googleprivacydlpv2storedinfotypeconfig");
+var googleprivacydlpv2error_1 = require("./googleprivacydlpv2error");
+var googleprivacydlpv2storedinfotypestats_1 = require("./googleprivacydlpv2storedinfotypestats");
+var GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum;
 (function (GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum) {
     GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum["StoredInfoTypeStateUnspecified"] = "STORED_INFO_TYPE_STATE_UNSPECIFIED";
     GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum["Pending"] = "PENDING";
     GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum["Ready"] = "READY";
     GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum["Failed"] = "FAILED";
     GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum["Invalid"] = "INVALID";
-})(GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum || (GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum = {}));
+})(GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum = exports.GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum || (exports.GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum = {}));
 // GooglePrivacyDlpV2StoredInfoTypeVersion
 /**
  * Version of a StoredInfoType, including the configuration used to build it, create timestamp, and current state.
@@ -44,25 +47,25 @@ var GooglePrivacyDlpV2StoredInfoTypeVersion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
-        __metadata("design:type", GooglePrivacyDlpV2StoredInfoTypeConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
+        __metadata("design:type", googleprivacydlpv2storedinfotypeconfig_1.GooglePrivacyDlpV2StoredInfoTypeConfig)
     ], GooglePrivacyDlpV2StoredInfoTypeVersion.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2StoredInfoTypeVersion.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors", elemType: GooglePrivacyDlpV2Error }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors", elemType: googleprivacydlpv2error_1.GooglePrivacyDlpV2Error }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2StoredInfoTypeVersion.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2StoredInfoTypeVersion.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stats" }),
-        __metadata("design:type", GooglePrivacyDlpV2StoredInfoTypeStats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stats" }),
+        __metadata("design:type", googleprivacydlpv2storedinfotypestats_1.GooglePrivacyDlpV2StoredInfoTypeStats)
     ], GooglePrivacyDlpV2StoredInfoTypeVersion.prototype, "stats", void 0);
     return GooglePrivacyDlpV2StoredInfoTypeVersion;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2StoredInfoTypeVersion };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2StoredInfoTypeVersion = GooglePrivacyDlpV2StoredInfoTypeVersion;

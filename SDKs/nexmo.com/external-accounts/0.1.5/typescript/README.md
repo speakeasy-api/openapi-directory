@@ -16,34 +16,30 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { CreateMessengerAccountRequest, CreateMessengerAccountResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetAllAccountsRequest, GetAllAccountsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: CreateMessengerAccountRequest = {
+const req: GetAllAccountsRequest = {
   security: {
     bearerAuth: {
       authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
     },
   },
-  request: {
-    accessToken: "ut",
-    applications: [
-      "doloremque",
-    ],
-    externalId: "dicta",
-    name: "aut",
+  queryParams: {
+    pageNumber: 8717895732742165505,
+    pageSize: 2259404117704393152,
+    provider: "viber_service_msg",
   },
 };
 
-sdk.sdk.createMessengerAccount(req).then((res: CreateMessengerAccountResponse | AxiosError) => {
+sdk.account.getAllAccounts(req).then((res: GetAllAccountsResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -52,17 +48,29 @@ sdk.sdk.createMessengerAccount(req).then((res: CreateMessengerAccountResponse | 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Account
+
+* `getAllAccounts` - Retrieve all accounts you own
+
+### Application
+
+* `linkApplication` - Link application to an account
+* `unliWithoutApplicationnkApplication` - Unlink application from an account
+
+### Facebook Messenger
 
 * `createMessengerAccount` - Create a Messenger account
 * `deleteMessengerAccount` - Delete a Messenger account
-* `getAllAccounts` - Retrieve all accounts you own
 * `getMessengerAccount` - Retrieve a Messenger account
-* `getVsmAccount` - Retrieve a Viber Service Message account
-* `getWaAccount` - Retrieve a Whatsapp account
-* `linkApplication` - Link application to an account
-* `unliWithoutApplicationnkApplication` - Unlink application from an account
 * `updateMessengerAccount` - Update a Messenger account
+
+### Viber Service Message
+
+* `getVsmAccount` - Retrieve a Viber Service Message account
+
+### WhatsApp
+
+* `getWaAccount` - Retrieve a Whatsapp account
 
 <!-- End SDK Available Operations -->
 

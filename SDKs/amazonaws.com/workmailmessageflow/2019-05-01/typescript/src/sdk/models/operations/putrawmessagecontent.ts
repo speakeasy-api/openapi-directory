@@ -75,7 +75,7 @@ export class PutRawMessageContentResponse extends SpeakeasyBase {
   messageRejected?: any;
 
   @SpeakeasyMetadata()
-  putRawMessageContentResponse?: Map<string, any>;
+  putRawMessageContentResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   resourceNotFoundException?: any;

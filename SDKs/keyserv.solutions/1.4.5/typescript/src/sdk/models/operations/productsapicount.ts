@@ -13,7 +13,7 @@ export class ProductsApiCountResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  productsApiCount200ApplicationJsonOneOf?: any;
+  productsApiCount200ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

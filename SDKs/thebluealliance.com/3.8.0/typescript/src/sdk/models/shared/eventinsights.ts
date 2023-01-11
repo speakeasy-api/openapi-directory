@@ -8,8 +8,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class EventInsights extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=playoff" })
-  playoff?: Map<string, any>;
+  playoff?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=qual" })
-  qual?: Map<string, any>;
+  qual?: Record<string, any>;
 }

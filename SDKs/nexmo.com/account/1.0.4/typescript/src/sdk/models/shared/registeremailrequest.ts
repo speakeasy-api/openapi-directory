@@ -8,7 +8,7 @@ export enum RegisterEmailRequestProviderEnum {
 
 export class RegisterEmailRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=application_ids" })
-  applicationIds?: Map<string, any>;
+  applicationIds?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

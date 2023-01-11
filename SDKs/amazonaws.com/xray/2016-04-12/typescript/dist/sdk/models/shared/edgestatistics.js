@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ErrorStatistics } from "./errorstatistics";
-import { FaultStatistics } from "./faultstatistics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EdgeStatistics = void 0;
+var utils_1 = require("../../../internal/utils");
+var errorstatistics_1 = require("./errorstatistics");
+var faultstatistics_1 = require("./faultstatistics");
 // EdgeStatistics
 /**
  * Response statistics for an edge.
@@ -35,25 +38,25 @@ var EdgeStatistics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorStatistics" }),
-        __metadata("design:type", ErrorStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorStatistics" }),
+        __metadata("design:type", errorstatistics_1.ErrorStatistics)
     ], EdgeStatistics.prototype, "errorStatistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FaultStatistics" }),
-        __metadata("design:type", FaultStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FaultStatistics" }),
+        __metadata("design:type", faultstatistics_1.FaultStatistics)
     ], EdgeStatistics.prototype, "faultStatistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OkCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OkCount" }),
         __metadata("design:type", Number)
     ], EdgeStatistics.prototype, "okCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalCount" }),
         __metadata("design:type", Number)
     ], EdgeStatistics.prototype, "totalCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalResponseTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalResponseTime" }),
         __metadata("design:type", Number)
     ], EdgeStatistics.prototype, "totalResponseTime", void 0);
     return EdgeStatistics;
-}(SpeakeasyBase));
-export { EdgeStatistics };
+}(utils_1.SpeakeasyBase));
+exports.EdgeStatistics = EdgeStatistics;

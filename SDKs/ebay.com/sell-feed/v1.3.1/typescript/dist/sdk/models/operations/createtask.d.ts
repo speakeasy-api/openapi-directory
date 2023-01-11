@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class CreateTaskHeaders extends SpeakeasyBase {
-    xEbayCMarketplaceId?: string;
+    xEBAYCMARKETPLACEID?: string;
 }
 export declare class CreateTaskSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;

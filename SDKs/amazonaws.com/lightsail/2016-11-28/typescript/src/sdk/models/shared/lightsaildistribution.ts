@@ -61,7 +61,7 @@ export class LightsailDistribution extends SpeakeasyBase {
   origin?: Origin;
 
   @SpeakeasyMetadata({ data: "json, name=originPublicDNS" })
-  originPublicDns?: string;
+  originPublicDNS?: string;
 
   @SpeakeasyMetadata({ data: "json, name=resourceType" })
   resourceType?: ResourceTypeEnum;

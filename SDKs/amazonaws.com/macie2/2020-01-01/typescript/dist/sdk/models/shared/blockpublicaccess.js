@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BlockPublicAccess = void 0;
+var utils_1 = require("../../../internal/utils");
 // BlockPublicAccess
 /**
  * Provides information about the block public access settings for an S3 bucket. These settings can apply to a bucket at the account level or bucket level. For detailed information about each setting, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-block-public-access.html">Blocking public access to your Amazon S3 storage</a> in the <i>Amazon Simple Storage Service User Guide</i>.
@@ -33,21 +36,21 @@ var BlockPublicAccess = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blockPublicAcls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blockPublicAcls" }),
         __metadata("design:type", Boolean)
     ], BlockPublicAccess.prototype, "blockPublicAcls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blockPublicPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blockPublicPolicy" }),
         __metadata("design:type", Boolean)
     ], BlockPublicAccess.prototype, "blockPublicPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ignorePublicAcls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ignorePublicAcls" }),
         __metadata("design:type", Boolean)
     ], BlockPublicAccess.prototype, "ignorePublicAcls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restrictPublicBuckets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictPublicBuckets" }),
         __metadata("design:type", Boolean)
     ], BlockPublicAccess.prototype, "restrictPublicBuckets", void 0);
     return BlockPublicAccess;
-}(SpeakeasyBase));
-export { BlockPublicAccess };
+}(utils_1.SpeakeasyBase));
+exports.BlockPublicAccess = BlockPublicAccess;

@@ -7,5 +7,5 @@ export class AssociateWebAclRequest extends SpeakeasyBase {
   resourceArn: string;
 
   @SpeakeasyMetadata({ data: "json, name=WebACLId" })
-  webAclId: string;
+  webACLId: string;
 }

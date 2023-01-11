@@ -31,7 +31,7 @@ export class MembershipInput extends SpeakeasyBase {
   infrastructureType?: MembershipInfrastructureTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 }
 
 
@@ -62,7 +62,7 @@ export class Membership extends SpeakeasyBase {
   infrastructureType?: MembershipInfrastructureTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=lastConnectionTime" })
   lastConnectionTime?: string;

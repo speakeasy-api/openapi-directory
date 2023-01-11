@@ -11,5 +11,5 @@ export declare class AllMonitors200ApplicationJson extends SpeakeasyBase {
 export declare class AllMonitorsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    allMonitors200ApplicationJsonObject?: AllMonitors200ApplicationJson;
+    allMonitors200ApplicationJSONObject?: AllMonitors200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteLoginProfileActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteLoginProfileResponse = exports.GetDeleteLoginProfileRequest = exports.GetDeleteLoginProfileHeaders = exports.GetDeleteLoginProfileQueryParams = exports.GetDeleteLoginProfileVersionEnum = exports.GetDeleteLoginProfileActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteLoginProfileActionEnum;
 (function (GetDeleteLoginProfileActionEnum) {
     GetDeleteLoginProfileActionEnum["DeleteLoginProfile"] = "DeleteLoginProfile";
-})(GetDeleteLoginProfileActionEnum || (GetDeleteLoginProfileActionEnum = {}));
-export var GetDeleteLoginProfileVersionEnum;
+})(GetDeleteLoginProfileActionEnum = exports.GetDeleteLoginProfileActionEnum || (exports.GetDeleteLoginProfileActionEnum = {}));
+var GetDeleteLoginProfileVersionEnum;
 (function (GetDeleteLoginProfileVersionEnum) {
     GetDeleteLoginProfileVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetDeleteLoginProfileVersionEnum || (GetDeleteLoginProfileVersionEnum = {}));
+})(GetDeleteLoginProfileVersionEnum = exports.GetDeleteLoginProfileVersionEnum || (exports.GetDeleteLoginProfileVersionEnum = {}));
 var GetDeleteLoginProfileQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteLoginProfileQueryParams, _super);
     function GetDeleteLoginProfileQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteLoginProfileQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=UserName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=UserName" }),
         __metadata("design:type", String)
     ], GetDeleteLoginProfileQueryParams.prototype, "userName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteLoginProfileQueryParams.prototype, "version", void 0);
     return GetDeleteLoginProfileQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteLoginProfileQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteLoginProfileQueryParams = GetDeleteLoginProfileQueryParams;
 var GetDeleteLoginProfileHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteLoginProfileHeaders, _super);
     function GetDeleteLoginProfileHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteLoginProfileHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteLoginProfileHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteLoginProfileHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteLoginProfileHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteLoginProfileHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteLoginProfileHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteLoginProfileHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteLoginProfileHeaders;
-}(SpeakeasyBase));
-export { GetDeleteLoginProfileHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteLoginProfileHeaders = GetDeleteLoginProfileHeaders;
 var GetDeleteLoginProfileRequest = /** @class */ (function (_super) {
     __extends(GetDeleteLoginProfileRequest, _super);
     function GetDeleteLoginProfileRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteLoginProfileQueryParams)
     ], GetDeleteLoginProfileRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteLoginProfileHeaders)
     ], GetDeleteLoginProfileRequest.prototype, "headers", void 0);
     return GetDeleteLoginProfileRequest;
-}(SpeakeasyBase));
-export { GetDeleteLoginProfileRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteLoginProfileRequest = GetDeleteLoginProfileRequest;
 var GetDeleteLoginProfileResponse = /** @class */ (function (_super) {
     __extends(GetDeleteLoginProfileResponse, _super);
     function GetDeleteLoginProfileResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteLoginProfileResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteLoginProfileResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteLoginProfileResponse.prototype, "statusCode", void 0);
     return GetDeleteLoginProfileResponse;
-}(SpeakeasyBase));
-export { GetDeleteLoginProfileResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteLoginProfileResponse = GetDeleteLoginProfileResponse;

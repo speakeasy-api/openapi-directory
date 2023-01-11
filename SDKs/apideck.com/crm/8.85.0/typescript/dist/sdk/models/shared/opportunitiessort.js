@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SortDirectionEnum } from "./sortdirectionenum";
-export var OpportunitiesSortByEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OpportunitiesSort = exports.OpportunitiesSortByEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var sortdirectionenum_1 = require("./sortdirectionenum");
+var OpportunitiesSortByEnum;
 (function (OpportunitiesSortByEnum) {
     OpportunitiesSortByEnum["CreatedAt"] = "created_at";
     OpportunitiesSortByEnum["UpdatedAt"] = "updated_at";
@@ -32,20 +35,20 @@ export var OpportunitiesSortByEnum;
     OpportunitiesSortByEnum["WinProbability"] = "win_probability";
     OpportunitiesSortByEnum["MonetaryAmount"] = "monetary_amount";
     OpportunitiesSortByEnum["Status"] = "status";
-})(OpportunitiesSortByEnum || (OpportunitiesSortByEnum = {}));
+})(OpportunitiesSortByEnum = exports.OpportunitiesSortByEnum || (exports.OpportunitiesSortByEnum = {}));
 var OpportunitiesSort = /** @class */ (function (_super) {
     __extends(OpportunitiesSort, _super);
     function OpportunitiesSort() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=by" }),
         __metadata("design:type", String)
     ], OpportunitiesSort.prototype, "by", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=direction" }),
         __metadata("design:type", String)
     ], OpportunitiesSort.prototype, "direction", void 0);
     return OpportunitiesSort;
-}(SpeakeasyBase));
-export { OpportunitiesSort };
+}(utils_1.SpeakeasyBase));
+exports.OpportunitiesSort = OpportunitiesSort;

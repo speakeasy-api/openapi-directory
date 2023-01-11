@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PluginNameValueEnum } from "./pluginnamevalueenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostgreSqlSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var pluginnamevalueenum_1 = require("./pluginnamevalueenum");
 // PostgreSqlSettings
 /**
  * Provides information that defines a PostgreSQL endpoint.
@@ -34,77 +37,77 @@ var PostgreSqlSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AfterConnectScript" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AfterConnectScript" }),
         __metadata("design:type", String)
     ], PostgreSqlSettings.prototype, "afterConnectScript", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CaptureDdls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CaptureDdls" }),
         __metadata("design:type", Boolean)
     ], PostgreSqlSettings.prototype, "captureDdls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseName" }),
         __metadata("design:type", String)
     ], PostgreSqlSettings.prototype, "databaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DdlArtifactsSchema" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DdlArtifactsSchema" }),
         __metadata("design:type", String)
     ], PostgreSqlSettings.prototype, "ddlArtifactsSchema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExecuteTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExecuteTimeout" }),
         __metadata("design:type", Number)
     ], PostgreSqlSettings.prototype, "executeTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FailTasksOnLobTruncation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FailTasksOnLobTruncation" }),
         __metadata("design:type", Boolean)
     ], PostgreSqlSettings.prototype, "failTasksOnLobTruncation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HeartbeatEnable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HeartbeatEnable" }),
         __metadata("design:type", Boolean)
     ], PostgreSqlSettings.prototype, "heartbeatEnable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HeartbeatFrequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HeartbeatFrequency" }),
         __metadata("design:type", Number)
     ], PostgreSqlSettings.prototype, "heartbeatFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HeartbeatSchema" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HeartbeatSchema" }),
         __metadata("design:type", String)
     ], PostgreSqlSettings.prototype, "heartbeatSchema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxFileSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxFileSize" }),
         __metadata("design:type", Number)
     ], PostgreSqlSettings.prototype, "maxFileSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Password" }),
         __metadata("design:type", String)
     ], PostgreSqlSettings.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PluginName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PluginName" }),
         __metadata("design:type", String)
     ], PostgreSqlSettings.prototype, "pluginName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Port" }),
         __metadata("design:type", Number)
     ], PostgreSqlSettings.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretsManagerAccessRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretsManagerAccessRoleArn" }),
         __metadata("design:type", String)
     ], PostgreSqlSettings.prototype, "secretsManagerAccessRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretsManagerSecretId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretsManagerSecretId" }),
         __metadata("design:type", String)
     ], PostgreSqlSettings.prototype, "secretsManagerSecretId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServerName" }),
         __metadata("design:type", String)
     ], PostgreSqlSettings.prototype, "serverName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SlotName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SlotName" }),
         __metadata("design:type", String)
     ], PostgreSqlSettings.prototype, "slotName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Username" }),
         __metadata("design:type", String)
     ], PostgreSqlSettings.prototype, "username", void 0);
     return PostgreSqlSettings;
-}(SpeakeasyBase));
-export { PostgreSqlSettings };
+}(utils_1.SpeakeasyBase));
+exports.PostgreSqlSettings = PostgreSqlSettings;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SecretsManagerSecretConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
 // SecretsManagerSecretConfiguration
 /**
  * <p>The configuration for a Secrets Manager secret. For more information, see <a href="https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html">CreateSecret</a>.</p> <p>You can propose a configuration for a new secret or an existing secret that you own by specifying the secret policy and optional KMS encryption key. If the configuration is for an existing secret and you do not specify the secret policy, the access preview uses the existing policy for the secret. If the access preview is for a new resource and you do not specify the policy, the access preview assumes a secret without a policy. To propose deletion of an existing policy, you can specify an empty string. If the proposed configuration is for a new secret and you do not specify the KMS key ID, the access preview uses the default CMK of the Amazon Web Services account. If you specify an empty string for the KMS key ID, the access preview uses the default CMK of the Amazon Web Services account. For more information about secret policy limits, see <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_limits.html">Quotas for Secrets Manager.</a>.</p>
@@ -33,13 +36,13 @@ var SecretsManagerSecretConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsKeyId" }),
         __metadata("design:type", String)
     ], SecretsManagerSecretConfiguration.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secretPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secretPolicy" }),
         __metadata("design:type", String)
     ], SecretsManagerSecretConfiguration.prototype, "secretPolicy", void 0);
     return SecretsManagerSecretConfiguration;
-}(SpeakeasyBase));
-export { SecretsManagerSecretConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.SecretsManagerSecretConfiguration = SecretsManagerSecretConfiguration;

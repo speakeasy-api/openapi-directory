@@ -5,10 +5,10 @@ export declare class UpdateRepositoryPipelineConfigPathParams extends SpeakeasyB
 }
 export declare class UpdateRepositoryPipelineConfigRequest extends SpeakeasyBase {
     pathParams: UpdateRepositoryPipelineConfigPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class UpdateRepositoryPipelineConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    pipelinesConfig?: Map<string, any>;
+    pipelinesConfig?: Record<string, any>;
 }

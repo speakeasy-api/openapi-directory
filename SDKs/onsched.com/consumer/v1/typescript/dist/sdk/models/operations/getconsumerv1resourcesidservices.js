@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetConsumerV1ResourcesIdServicesResponse = exports.GetConsumerV1ResourcesIdServicesRequest = exports.GetConsumerV1ResourcesIdServicesQueryParams = exports.GetConsumerV1ResourcesIdServicesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetConsumerV1ResourcesIdServicesPathParams = /** @class */ (function (_super) {
     __extends(GetConsumerV1ResourcesIdServicesPathParams, _super);
     function GetConsumerV1ResourcesIdServicesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetConsumerV1ResourcesIdServicesPathParams.prototype, "id", void 0);
     return GetConsumerV1ResourcesIdServicesPathParams;
-}(SpeakeasyBase));
-export { GetConsumerV1ResourcesIdServicesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetConsumerV1ResourcesIdServicesPathParams = GetConsumerV1ResourcesIdServicesPathParams;
 var GetConsumerV1ResourcesIdServicesQueryParams = /** @class */ (function (_super) {
     __extends(GetConsumerV1ResourcesIdServicesQueryParams, _super);
     function GetConsumerV1ResourcesIdServicesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetConsumerV1ResourcesIdServicesQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], GetConsumerV1ResourcesIdServicesQueryParams.prototype, "offset", void 0);
     return GetConsumerV1ResourcesIdServicesQueryParams;
-}(SpeakeasyBase));
-export { GetConsumerV1ResourcesIdServicesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetConsumerV1ResourcesIdServicesQueryParams = GetConsumerV1ResourcesIdServicesQueryParams;
 var GetConsumerV1ResourcesIdServicesRequest = /** @class */ (function (_super) {
     __extends(GetConsumerV1ResourcesIdServicesRequest, _super);
     function GetConsumerV1ResourcesIdServicesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetConsumerV1ResourcesIdServicesPathParams)
     ], GetConsumerV1ResourcesIdServicesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetConsumerV1ResourcesIdServicesQueryParams)
     ], GetConsumerV1ResourcesIdServicesRequest.prototype, "queryParams", void 0);
     return GetConsumerV1ResourcesIdServicesRequest;
-}(SpeakeasyBase));
-export { GetConsumerV1ResourcesIdServicesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetConsumerV1ResourcesIdServicesRequest = GetConsumerV1ResourcesIdServicesRequest;
 var GetConsumerV1ResourcesIdServicesResponse = /** @class */ (function (_super) {
     __extends(GetConsumerV1ResourcesIdServicesResponse, _super);
     function GetConsumerV1ResourcesIdServicesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetConsumerV1ResourcesIdServicesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetConsumerV1ResourcesIdServicesResponse.prototype, "resourceServiceListViewModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetConsumerV1ResourcesIdServicesResponse.prototype, "statusCode", void 0);
     return GetConsumerV1ResourcesIdServicesResponse;
-}(SpeakeasyBase));
-export { GetConsumerV1ResourcesIdServicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetConsumerV1ResourcesIdServicesResponse = GetConsumerV1ResourcesIdServicesResponse;

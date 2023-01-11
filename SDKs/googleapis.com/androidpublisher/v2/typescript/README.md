@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AndroidpublisherEditsApklistingsDeleteRequest, AndroidpublisherEditsApklistingsDeleteResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,25 +30,25 @@ const req: AndroidpublisherEditsApklistingsDeleteRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    apkVersionCode: 3004786443331028729,
-    editId: "consequuntur",
-    language: "tenetur",
-    packageName: "eos",
+    apkVersionCode: 8717895732742165505,
+    editId: "voluptas",
+    language: "culpa",
+    packageName: "expedita",
   },
   queryParams: {
     alt: "json",
-    fields: "et",
-    key: "cumque",
-    oauthToken: "reprehenderit",
-    prettyPrint: false,
-    quotaUser: "ut",
-    userIp: "dicta",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    userIp: "nihil",
   },
 };
 

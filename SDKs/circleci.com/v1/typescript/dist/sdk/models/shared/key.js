@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var KeyTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Key = exports.KeyTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var KeyTypeEnum;
 (function (KeyTypeEnum) {
     KeyTypeEnum["DeployKey"] = "deploy-key";
     KeyTypeEnum["GithubUserKey"] = "github-user-key";
-})(KeyTypeEnum || (KeyTypeEnum = {}));
+})(KeyTypeEnum = exports.KeyTypeEnum || (exports.KeyTypeEnum = {}));
 var Key = /** @class */ (function (_super) {
     __extends(Key, _super);
     function Key() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fingerprint" }),
         __metadata("design:type", String)
     ], Key.prototype, "fingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferred" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferred" }),
         __metadata("design:type", Boolean)
     ], Key.prototype, "preferred", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public_key" }),
         __metadata("design:type", String)
     ], Key.prototype, "publicKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time" }),
         __metadata("design:type", Date)
     ], Key.prototype, "time", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Key.prototype, "type", void 0);
     return Key;
-}(SpeakeasyBase));
-export { Key };
+}(utils_1.SpeakeasyBase));
+exports.Key = Key;

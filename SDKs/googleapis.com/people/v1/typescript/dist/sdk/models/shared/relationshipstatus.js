@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FieldMetadata } from "./fieldmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelationshipStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var fieldmetadata_1 = require("./fieldmetadata");
 // RelationshipStatus
 /**
  * **DEPRECATED**: No data will be returned A person's relationship status.
@@ -34,17 +37,17 @@ var RelationshipStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formattedValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formattedValue" }),
         __metadata("design:type", String)
     ], RelationshipStatus.prototype, "formattedValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_1.FieldMetadata)
     ], RelationshipStatus.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], RelationshipStatus.prototype, "value", void 0);
     return RelationshipStatus;
-}(SpeakeasyBase));
-export { RelationshipStatus };
+}(utils_1.SpeakeasyBase));
+exports.RelationshipStatus = RelationshipStatus;

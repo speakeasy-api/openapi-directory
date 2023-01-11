@@ -191,23 +191,23 @@ export class OtcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  otcer400ApplicationJsonObject?: Otcer400ApplicationJson;
+  otcer400ApplicationJSONObject?: Otcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  otcer401ApplicationJsonObject?: Otcer401ApplicationJson;
+  otcer401ApplicationJSONObject?: Otcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  otcer404ApplicationJsonObject?: Otcer404ApplicationJson;
+  otcer404ApplicationJSONObject?: Otcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  otcer500ApplicationJsonObject?: Otcer500ApplicationJson;
+  otcer500ApplicationJSONObject?: Otcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  otcer502ApplicationJsonObject?: Otcer502ApplicationJson;
+  otcer502ApplicationJSONObject?: Otcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  otcer503ApplicationJsonObject?: Otcer503ApplicationJson;
+  otcer503ApplicationJSONObject?: Otcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  otcer504ApplicationJsonObject?: Otcer504ApplicationJson;
+  otcer504ApplicationJSONObject?: Otcer504ApplicationJson;
 }

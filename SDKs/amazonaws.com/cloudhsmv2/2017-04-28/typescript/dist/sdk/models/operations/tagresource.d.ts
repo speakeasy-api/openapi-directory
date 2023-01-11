@@ -26,5 +26,5 @@ export declare class TagResourceResponse extends SpeakeasyBase {
     cloudHsmTagException?: any;
     contentType: string;
     statusCode: number;
-    tagResourceResponse?: Map<string, any>;
+    tagResourceResponse?: Record<string, any>;
 }

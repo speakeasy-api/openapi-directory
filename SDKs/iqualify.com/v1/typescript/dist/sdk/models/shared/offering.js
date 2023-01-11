@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,121 +23,123 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BadgeExpiry } from "./badgeexpiry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Offering = exports.OfferingMetadata1 = exports.OfferingBadge = void 0;
+var utils_1 = require("../../../internal/utils");
+var badgeexpiry_1 = require("./badgeexpiry");
 var OfferingBadge = /** @class */ (function (_super) {
     __extends(OfferingBadge, _super);
     function OfferingBadge() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=badgeExpiry" }),
-        __metadata("design:type", BadgeExpiry)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=badgeExpiry" }),
+        __metadata("design:type", badgeexpiry_1.BadgeExpiry)
     ], OfferingBadge.prototype, "badgeExpiry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], OfferingBadge.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requiresApproval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requiresApproval" }),
         __metadata("design:type", Boolean)
     ], OfferingBadge.prototype, "requiresApproval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], OfferingBadge.prototype, "title", void 0);
     return OfferingBadge;
-}(SpeakeasyBase));
-export { OfferingBadge };
+}(utils_1.SpeakeasyBase));
+exports.OfferingBadge = OfferingBadge;
 var OfferingMetadata1 = /** @class */ (function (_super) {
     __extends(OfferingMetadata1, _super);
     function OfferingMetadata1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], OfferingMetadata1.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=level" }),
         __metadata("design:type", String)
     ], OfferingMetadata1.prototype, "level", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], OfferingMetadata1.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topic" }),
         __metadata("design:type", String)
     ], OfferingMetadata1.prototype, "topic", void 0);
     return OfferingMetadata1;
-}(SpeakeasyBase));
-export { OfferingMetadata1 };
+}(utils_1.SpeakeasyBase));
+exports.OfferingMetadata1 = OfferingMetadata1;
 var Offering = /** @class */ (function (_super) {
     __extends(Offering, _super);
     function Offering() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=badge" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=badge" }),
         __metadata("design:type", OfferingBadge)
     ], Offering.prototype, "badge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentId" }),
         __metadata("design:type", String)
     ], Offering.prototype, "contentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Offering.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=earlyCloseOffDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=earlyCloseOffDate" }),
         __metadata("design:type", Date)
     ], Offering.prototype, "earlyCloseOffDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end" }),
         __metadata("design:type", Date)
     ], Offering.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasEarlyCloseOff" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasEarlyCloseOff" }),
         __metadata("design:type", Boolean)
     ], Offering.prototype, "hasEarlyCloseOff", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identifier" }),
         __metadata("design:type", String)
     ], Offering.prototype, "identifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isReadonly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isReadonly" }),
         __metadata("design:type", Boolean)
     ], Offering.prototype, "isReadonly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
         __metadata("design:type", OfferingMetadata1)
     ], Offering.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Offering.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overview" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overview" }),
         __metadata("design:type", String)
     ], Offering.prototype, "overview", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rootContentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rootContentId" }),
         __metadata("design:type", String)
     ], Offering.prototype, "rootContentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
         __metadata("design:type", Date)
     ], Offering.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trailerVideoUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trailerVideoUrl" }),
         __metadata("design:type", String)
     ], Offering.prototype, "trailerVideoUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useRelativeDates" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useRelativeDates" }),
         __metadata("design:type", Boolean)
     ], Offering.prototype, "useRelativeDates", void 0);
     return Offering;
-}(SpeakeasyBase));
-export { Offering };
+}(utils_1.SpeakeasyBase));
+exports.Offering = Offering;

@@ -9,7 +9,7 @@ import { Tag } from "./tag";
 **/
 export class GetOpenIdConnectProviderResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  clientIdList?: string[];
+  clientIDList?: string[];
 
   @SpeakeasyMetadata()
   createDate?: Date;

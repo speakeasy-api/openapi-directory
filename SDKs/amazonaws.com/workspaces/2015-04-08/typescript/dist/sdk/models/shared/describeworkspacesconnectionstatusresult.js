@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkspaceConnectionStatus } from "./workspaceconnectionstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeWorkspacesConnectionStatusResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var workspaceconnectionstatus_1 = require("./workspaceconnectionstatus");
 var DescribeWorkspacesConnectionStatusResult = /** @class */ (function (_super) {
     __extends(DescribeWorkspacesConnectionStatusResult, _super);
     function DescribeWorkspacesConnectionStatusResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeWorkspacesConnectionStatusResult.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkspacesConnectionStatus", elemType: WorkspaceConnectionStatus }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkspacesConnectionStatus", elemType: workspaceconnectionstatus_1.WorkspaceConnectionStatus }),
         __metadata("design:type", Array)
     ], DescribeWorkspacesConnectionStatusResult.prototype, "workspacesConnectionStatus", void 0);
     return DescribeWorkspacesConnectionStatusResult;
-}(SpeakeasyBase));
-export { DescribeWorkspacesConnectionStatusResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeWorkspacesConnectionStatusResult = DescribeWorkspacesConnectionStatusResult;

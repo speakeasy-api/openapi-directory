@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSetupV1LocationsIdServicesResponse = exports.GetSetupV1LocationsIdServicesRequest = exports.GetSetupV1LocationsIdServicesQueryParams = exports.GetSetupV1LocationsIdServicesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSetupV1LocationsIdServicesPathParams = /** @class */ (function (_super) {
     __extends(GetSetupV1LocationsIdServicesPathParams, _super);
     function GetSetupV1LocationsIdServicesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetSetupV1LocationsIdServicesPathParams.prototype, "id", void 0);
     return GetSetupV1LocationsIdServicesPathParams;
-}(SpeakeasyBase));
-export { GetSetupV1LocationsIdServicesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1LocationsIdServicesPathParams = GetSetupV1LocationsIdServicesPathParams;
 var GetSetupV1LocationsIdServicesQueryParams = /** @class */ (function (_super) {
     __extends(GetSetupV1LocationsIdServicesQueryParams, _super);
     function GetSetupV1LocationsIdServicesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetSetupV1LocationsIdServicesQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], GetSetupV1LocationsIdServicesQueryParams.prototype, "offset", void 0);
     return GetSetupV1LocationsIdServicesQueryParams;
-}(SpeakeasyBase));
-export { GetSetupV1LocationsIdServicesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1LocationsIdServicesQueryParams = GetSetupV1LocationsIdServicesQueryParams;
 var GetSetupV1LocationsIdServicesRequest = /** @class */ (function (_super) {
     __extends(GetSetupV1LocationsIdServicesRequest, _super);
     function GetSetupV1LocationsIdServicesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetupV1LocationsIdServicesPathParams)
     ], GetSetupV1LocationsIdServicesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetupV1LocationsIdServicesQueryParams)
     ], GetSetupV1LocationsIdServicesRequest.prototype, "queryParams", void 0);
     return GetSetupV1LocationsIdServicesRequest;
-}(SpeakeasyBase));
-export { GetSetupV1LocationsIdServicesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1LocationsIdServicesRequest = GetSetupV1LocationsIdServicesRequest;
 var GetSetupV1LocationsIdServicesResponse = /** @class */ (function (_super) {
     __extends(GetSetupV1LocationsIdServicesResponse, _super);
     function GetSetupV1LocationsIdServicesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetSetupV1LocationsIdServicesResponse.prototype, "businessServiceListViewModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSetupV1LocationsIdServicesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSetupV1LocationsIdServicesResponse.prototype, "statusCode", void 0);
     return GetSetupV1LocationsIdServicesResponse;
-}(SpeakeasyBase));
-export { GetSetupV1LocationsIdServicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1LocationsIdServicesResponse = GetSetupV1LocationsIdServicesResponse;

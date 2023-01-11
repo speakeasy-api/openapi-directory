@@ -1,5 +1,8 @@
-export var LayerFailureCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LayerFailureCodeEnum = void 0;
+var LayerFailureCodeEnum;
 (function (LayerFailureCodeEnum) {
     LayerFailureCodeEnum["InvalidLayerDigest"] = "InvalidLayerDigest";
     LayerFailureCodeEnum["MissingLayerDigest"] = "MissingLayerDigest";
-})(LayerFailureCodeEnum || (LayerFailureCodeEnum = {}));
+})(LayerFailureCodeEnum = exports.LayerFailureCodeEnum || (exports.LayerFailureCodeEnum = {}));

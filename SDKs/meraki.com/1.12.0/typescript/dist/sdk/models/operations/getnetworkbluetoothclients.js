@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkBluetoothClientsResponse = exports.GetNetworkBluetoothClientsRequest = exports.GetNetworkBluetoothClientsQueryParams = exports.GetNetworkBluetoothClientsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkBluetoothClientsPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkBluetoothClientsPathParams, _super);
     function GetNetworkBluetoothClientsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkBluetoothClientsPathParams.prototype, "networkId", void 0);
     return GetNetworkBluetoothClientsPathParams;
-}(SpeakeasyBase));
-export { GetNetworkBluetoothClientsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkBluetoothClientsPathParams = GetNetworkBluetoothClientsPathParams;
 var GetNetworkBluetoothClientsQueryParams = /** @class */ (function (_super) {
     __extends(GetNetworkBluetoothClientsQueryParams, _super);
     function GetNetworkBluetoothClientsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
         __metadata("design:type", String)
     ], GetNetworkBluetoothClientsQueryParams.prototype, "endingBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includeConnectivityHistory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includeConnectivityHistory" }),
         __metadata("design:type", Boolean)
     ], GetNetworkBluetoothClientsQueryParams.prototype, "includeConnectivityHistory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=perPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=perPage" }),
         __metadata("design:type", Number)
     ], GetNetworkBluetoothClientsQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
         __metadata("design:type", String)
     ], GetNetworkBluetoothClientsQueryParams.prototype, "startingAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t0" }),
         __metadata("design:type", String)
     ], GetNetworkBluetoothClientsQueryParams.prototype, "t0", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timespan" }),
         __metadata("design:type", Number)
     ], GetNetworkBluetoothClientsQueryParams.prototype, "timespan", void 0);
     return GetNetworkBluetoothClientsQueryParams;
-}(SpeakeasyBase));
-export { GetNetworkBluetoothClientsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkBluetoothClientsQueryParams = GetNetworkBluetoothClientsQueryParams;
 var GetNetworkBluetoothClientsRequest = /** @class */ (function (_super) {
     __extends(GetNetworkBluetoothClientsRequest, _super);
     function GetNetworkBluetoothClientsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkBluetoothClientsPathParams)
     ], GetNetworkBluetoothClientsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkBluetoothClientsQueryParams)
     ], GetNetworkBluetoothClientsRequest.prototype, "queryParams", void 0);
     return GetNetworkBluetoothClientsRequest;
-}(SpeakeasyBase));
-export { GetNetworkBluetoothClientsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkBluetoothClientsRequest = GetNetworkBluetoothClientsRequest;
 var GetNetworkBluetoothClientsResponse = /** @class */ (function (_super) {
     __extends(GetNetworkBluetoothClientsResponse, _super);
     function GetNetworkBluetoothClientsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkBluetoothClientsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetNetworkBluetoothClientsResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkBluetoothClientsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkBluetoothClientsResponse.prototype, "getNetworkBluetoothClients200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkBluetoothClientsResponse.prototype, "getNetworkBluetoothClients200ApplicationJSONObject", void 0);
     return GetNetworkBluetoothClientsResponse;
-}(SpeakeasyBase));
-export { GetNetworkBluetoothClientsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkBluetoothClientsResponse = GetNetworkBluetoothClientsResponse;

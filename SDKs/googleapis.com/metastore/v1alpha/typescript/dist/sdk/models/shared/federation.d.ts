@@ -12,10 +12,10 @@ export declare enum FederationStateEnum {
  * Represents a federation of multiple backend metastores.
 **/
 export declare class Federation extends SpeakeasyBase {
-    backendMetastores?: Map<string, BackendMetastore>;
+    backendMetastores?: Record<string, BackendMetastore>;
     createTime?: string;
     endpointUri?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     state?: FederationStateEnum;
     stateMessage?: string;
@@ -27,8 +27,8 @@ export declare class Federation extends SpeakeasyBase {
  * Represents a federation of multiple backend metastores.
 **/
 export declare class FederationInput extends SpeakeasyBase {
-    backendMetastores?: Map<string, BackendMetastore>;
-    labels?: Map<string, string>;
+    backendMetastores?: Record<string, BackendMetastore>;
+    labels?: Record<string, string>;
     name?: string;
     version?: string;
 }

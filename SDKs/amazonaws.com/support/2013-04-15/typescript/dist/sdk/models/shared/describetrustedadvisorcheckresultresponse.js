@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TrustedAdvisorCheckResult } from "./trustedadvisorcheckresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeTrustedAdvisorCheckResultResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var trustedadvisorcheckresult_1 = require("./trustedadvisorcheckresult");
 // DescribeTrustedAdvisorCheckResultResponse
 /**
  * The result of the Trusted Advisor check returned by the <a>DescribeTrustedAdvisorCheckResult</a> operation.
@@ -34,9 +37,9 @@ var DescribeTrustedAdvisorCheckResultResponse = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
-        __metadata("design:type", TrustedAdvisorCheckResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
+        __metadata("design:type", trustedadvisorcheckresult_1.TrustedAdvisorCheckResult)
     ], DescribeTrustedAdvisorCheckResultResponse.prototype, "result", void 0);
     return DescribeTrustedAdvisorCheckResultResponse;
-}(SpeakeasyBase));
-export { DescribeTrustedAdvisorCheckResultResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeTrustedAdvisorCheckResultResponse = DescribeTrustedAdvisorCheckResultResponse;

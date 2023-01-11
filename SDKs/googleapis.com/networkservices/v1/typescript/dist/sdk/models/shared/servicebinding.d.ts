@@ -5,7 +5,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ServiceBinding extends SpeakeasyBase {
     createTime?: string;
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     service?: string;
     updateTime?: string;
@@ -15,7 +15,7 @@ export declare class ServiceBinding extends SpeakeasyBase {
 **/
 export declare class ServiceBindingInput extends SpeakeasyBase {
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     service?: string;
 }

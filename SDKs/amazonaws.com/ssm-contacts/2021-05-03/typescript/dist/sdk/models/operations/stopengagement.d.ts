@@ -23,7 +23,7 @@ export declare class StopEngagementResponse extends SpeakeasyBase {
     internalServerException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    stopEngagementResult?: Map<string, any>;
+    stopEngagementResult?: Record<string, any>;
     throttlingException?: any;
     validationException?: any;
 }

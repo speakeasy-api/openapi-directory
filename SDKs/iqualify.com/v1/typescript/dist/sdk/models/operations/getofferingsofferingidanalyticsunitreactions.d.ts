@@ -8,7 +8,7 @@ export declare class GetOfferingsOfferingIdAnalyticsUnitReactionsRequest extends
 }
 export declare class GetOfferingsOfferingIdAnalyticsUnitReactionsResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     unitReactionsAnalyticsResponses?: shared.UnitReactionsAnalyticsResponse[];
 }

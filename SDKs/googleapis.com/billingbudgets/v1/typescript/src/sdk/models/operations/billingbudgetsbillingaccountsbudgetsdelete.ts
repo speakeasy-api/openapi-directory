@@ -89,7 +89,7 @@ export class BillingbudgetsBillingAccountsBudgetsDeleteResponse extends Speakeas
   contentType: string;
 
   @SpeakeasyMetadata()
-  googleProtobufEmpty?: Map<string, any>;
+  googleProtobufEmpty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

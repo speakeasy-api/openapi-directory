@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,142 +14,167 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OpportunitiesUpdateResponse = exports.OpportunitiesUpdateRequest = exports.OpportunitiesUpdateSecurity = exports.OpportunitiesUpdateHeaders = exports.OpportunitiesUpdateQueryParams = exports.OpportunitiesUpdatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var OpportunitiesUpdatePathParams = /** @class */ (function (_super) {
     __extends(OpportunitiesUpdatePathParams, _super);
     function OpportunitiesUpdatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], OpportunitiesUpdatePathParams.prototype, "id", void 0);
     return OpportunitiesUpdatePathParams;
-}(SpeakeasyBase));
-export { OpportunitiesUpdatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.OpportunitiesUpdatePathParams = OpportunitiesUpdatePathParams;
 var OpportunitiesUpdateQueryParams = /** @class */ (function (_super) {
     __extends(OpportunitiesUpdateQueryParams, _super);
     function OpportunitiesUpdateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=raw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=raw" }),
         __metadata("design:type", Boolean)
     ], OpportunitiesUpdateQueryParams.prototype, "raw", void 0);
     return OpportunitiesUpdateQueryParams;
-}(SpeakeasyBase));
-export { OpportunitiesUpdateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.OpportunitiesUpdateQueryParams = OpportunitiesUpdateQueryParams;
 var OpportunitiesUpdateHeaders = /** @class */ (function (_super) {
     __extends(OpportunitiesUpdateHeaders, _super);
     function OpportunitiesUpdateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-apideck-app-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-app-id" }),
         __metadata("design:type", String)
     ], OpportunitiesUpdateHeaders.prototype, "xApideckAppId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-apideck-consumer-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-consumer-id" }),
         __metadata("design:type", String)
     ], OpportunitiesUpdateHeaders.prototype, "xApideckConsumerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-apideck-service-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-apideck-service-id" }),
         __metadata("design:type", String)
     ], OpportunitiesUpdateHeaders.prototype, "xApideckServiceId", void 0);
     return OpportunitiesUpdateHeaders;
-}(SpeakeasyBase));
-export { OpportunitiesUpdateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.OpportunitiesUpdateHeaders = OpportunitiesUpdateHeaders;
 var OpportunitiesUpdateSecurity = /** @class */ (function (_super) {
     __extends(OpportunitiesUpdateSecurity, _super);
     function OpportunitiesUpdateSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], OpportunitiesUpdateSecurity.prototype, "apiKey", void 0);
     return OpportunitiesUpdateSecurity;
-}(SpeakeasyBase));
-export { OpportunitiesUpdateSecurity };
+}(utils_1.SpeakeasyBase));
+exports.OpportunitiesUpdateSecurity = OpportunitiesUpdateSecurity;
 var OpportunitiesUpdateRequest = /** @class */ (function (_super) {
     __extends(OpportunitiesUpdateRequest, _super);
     function OpportunitiesUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OpportunitiesUpdatePathParams)
     ], OpportunitiesUpdateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OpportunitiesUpdateQueryParams)
     ], OpportunitiesUpdateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OpportunitiesUpdateHeaders)
     ], OpportunitiesUpdateRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.OpportunityInput)
     ], OpportunitiesUpdateRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OpportunitiesUpdateSecurity)
     ], OpportunitiesUpdateRequest.prototype, "security", void 0);
     return OpportunitiesUpdateRequest;
-}(SpeakeasyBase));
-export { OpportunitiesUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.OpportunitiesUpdateRequest = OpportunitiesUpdateRequest;
 var OpportunitiesUpdateResponse = /** @class */ (function (_super) {
     __extends(OpportunitiesUpdateResponse, _super);
     function OpportunitiesUpdateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BadRequestResponse)
     ], OpportunitiesUpdateResponse.prototype, "badRequestResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OpportunitiesUpdateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.NotFoundResponse)
     ], OpportunitiesUpdateResponse.prototype, "notFoundResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.PaymentRequiredResponse)
     ], OpportunitiesUpdateResponse.prototype, "paymentRequiredResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OpportunitiesUpdateResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UnauthorizedResponse)
     ], OpportunitiesUpdateResponse.prototype, "unauthorizedResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UnexpectedErrorResponse)
     ], OpportunitiesUpdateResponse.prototype, "unexpectedErrorResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UnprocessableResponse)
     ], OpportunitiesUpdateResponse.prototype, "unprocessableResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.UpdateOpportunityResponse)
     ], OpportunitiesUpdateResponse.prototype, "updateOpportunityResponse", void 0);
     return OpportunitiesUpdateResponse;
-}(SpeakeasyBase));
-export { OpportunitiesUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.OpportunitiesUpdateResponse = OpportunitiesUpdateResponse;

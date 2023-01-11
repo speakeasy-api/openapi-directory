@@ -86,5 +86,8 @@ export declare enum WebhookEventTypeEnum {
     HrisEmployeeDeleted = "hris.employee.deleted",
     HrisCompanyCreated = "hris.company.created",
     HrisCompanyUpdated = "hris.company.updated",
-    HrisCompanyDeleted = "hris.company.deleted"
+    HrisCompanyDeleted = "hris.company.deleted",
+    FileStorageFileCreated = "file-storage.file.created",
+    FileStorageFileUpdated = "file-storage.file.updated",
+    FileStorageFileDeleted = "file-storage.file.deleted"
 }

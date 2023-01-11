@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartEngagementRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var StartEngagementRequest = /** @class */ (function (_super) {
     __extends(StartEngagementRequest, _super);
     function StartEngagementRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContactId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContactId" }),
         __metadata("design:type", String)
     ], StartEngagementRequest.prototype, "contactId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Content" }),
         __metadata("design:type", String)
     ], StartEngagementRequest.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdempotencyToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdempotencyToken" }),
         __metadata("design:type", String)
     ], StartEngagementRequest.prototype, "idempotencyToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncidentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncidentId" }),
         __metadata("design:type", String)
     ], StartEngagementRequest.prototype, "incidentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PublicContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PublicContent" }),
         __metadata("design:type", String)
     ], StartEngagementRequest.prototype, "publicContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PublicSubject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PublicSubject" }),
         __metadata("design:type", String)
     ], StartEngagementRequest.prototype, "publicSubject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Sender" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Sender" }),
         __metadata("design:type", String)
     ], StartEngagementRequest.prototype, "sender", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Subject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Subject" }),
         __metadata("design:type", String)
     ], StartEngagementRequest.prototype, "subject", void 0);
     return StartEngagementRequest;
-}(SpeakeasyBase));
-export { StartEngagementRequest };
+}(utils_1.SpeakeasyBase));
+exports.StartEngagementRequest = StartEngagementRequest;

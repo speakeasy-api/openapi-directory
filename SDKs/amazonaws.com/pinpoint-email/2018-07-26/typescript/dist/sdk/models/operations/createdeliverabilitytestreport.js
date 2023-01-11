@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,53 +14,78 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDeliverabilityTestReportResponse = exports.CreateDeliverabilityTestReportRequest = exports.CreateDeliverabilityTestReportRequestBody = exports.CreateDeliverabilityTestReportRequestBodyContent = exports.CreateDeliverabilityTestReportHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var CreateDeliverabilityTestReportHeaders = /** @class */ (function (_super) {
     __extends(CreateDeliverabilityTestReportHeaders, _super);
     function CreateDeliverabilityTestReportHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], CreateDeliverabilityTestReportHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], CreateDeliverabilityTestReportHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], CreateDeliverabilityTestReportHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], CreateDeliverabilityTestReportHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], CreateDeliverabilityTestReportHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], CreateDeliverabilityTestReportHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], CreateDeliverabilityTestReportHeaders.prototype, "xAmzSignedHeaders", void 0);
     return CreateDeliverabilityTestReportHeaders;
-}(SpeakeasyBase));
-export { CreateDeliverabilityTestReportHeaders };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeliverabilityTestReportHeaders = CreateDeliverabilityTestReportHeaders;
 // CreateDeliverabilityTestReportRequestBodyContent
 /**
  * An object that defines the entire content of the email, including the message headers and the body content. You can create a simple email message, in which you specify the subject and the text and HTML versions of the message body. You can also create raw messages, in which you specify a complete MIME-formatted message. Raw messages can include attachments and custom headers.
@@ -70,113 +96,113 @@ var CreateDeliverabilityTestReportRequestBodyContent = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Raw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Raw" }),
         __metadata("design:type", shared.RawMessage)
     ], CreateDeliverabilityTestReportRequestBodyContent.prototype, "raw", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Simple" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Simple" }),
         __metadata("design:type", shared.Message)
     ], CreateDeliverabilityTestReportRequestBodyContent.prototype, "simple", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Template" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Template" }),
         __metadata("design:type", shared.Template)
     ], CreateDeliverabilityTestReportRequestBodyContent.prototype, "template", void 0);
     return CreateDeliverabilityTestReportRequestBodyContent;
-}(SpeakeasyBase));
-export { CreateDeliverabilityTestReportRequestBodyContent };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeliverabilityTestReportRequestBodyContent = CreateDeliverabilityTestReportRequestBodyContent;
 var CreateDeliverabilityTestReportRequestBody = /** @class */ (function (_super) {
     __extends(CreateDeliverabilityTestReportRequestBody, _super);
     function CreateDeliverabilityTestReportRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Content" }),
         __metadata("design:type", CreateDeliverabilityTestReportRequestBodyContent)
     ], CreateDeliverabilityTestReportRequestBody.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FromEmailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FromEmailAddress" }),
         __metadata("design:type", String)
     ], CreateDeliverabilityTestReportRequestBody.prototype, "fromEmailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReportName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReportName" }),
         __metadata("design:type", String)
     ], CreateDeliverabilityTestReportRequestBody.prototype, "reportName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: shared.Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: shared.Tag }),
         __metadata("design:type", Array)
     ], CreateDeliverabilityTestReportRequestBody.prototype, "tags", void 0);
     return CreateDeliverabilityTestReportRequestBody;
-}(SpeakeasyBase));
-export { CreateDeliverabilityTestReportRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeliverabilityTestReportRequestBody = CreateDeliverabilityTestReportRequestBody;
 var CreateDeliverabilityTestReportRequest = /** @class */ (function (_super) {
     __extends(CreateDeliverabilityTestReportRequest, _super);
     function CreateDeliverabilityTestReportRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateDeliverabilityTestReportHeaders)
     ], CreateDeliverabilityTestReportRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateDeliverabilityTestReportRequestBody)
     ], CreateDeliverabilityTestReportRequest.prototype, "request", void 0);
     return CreateDeliverabilityTestReportRequest;
-}(SpeakeasyBase));
-export { CreateDeliverabilityTestReportRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeliverabilityTestReportRequest = CreateDeliverabilityTestReportRequest;
 var CreateDeliverabilityTestReportResponse = /** @class */ (function (_super) {
     __extends(CreateDeliverabilityTestReportResponse, _super);
     function CreateDeliverabilityTestReportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateDeliverabilityTestReportResponse.prototype, "accountSuspendedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateDeliverabilityTestReportResponse.prototype, "badRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateDeliverabilityTestReportResponse.prototype, "concurrentModificationException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateDeliverabilityTestReportResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.CreateDeliverabilityTestReportResponse)
     ], CreateDeliverabilityTestReportResponse.prototype, "createDeliverabilityTestReportResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateDeliverabilityTestReportResponse.prototype, "limitExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateDeliverabilityTestReportResponse.prototype, "mailFromDomainNotVerifiedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateDeliverabilityTestReportResponse.prototype, "messageRejected", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateDeliverabilityTestReportResponse.prototype, "notFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateDeliverabilityTestReportResponse.prototype, "sendingPausedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateDeliverabilityTestReportResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreateDeliverabilityTestReportResponse.prototype, "tooManyRequestsException", void 0);
     return CreateDeliverabilityTestReportResponse;
-}(SpeakeasyBase));
-export { CreateDeliverabilityTestReportResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateDeliverabilityTestReportResponse = CreateDeliverabilityTestReportResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PagespeedVersion = void 0;
+var utils_1 = require("../../../internal/utils");
 // PagespeedVersion
 /**
  * The Pagespeed Version object.
@@ -33,13 +36,13 @@ var PagespeedVersion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=major" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=major" }),
         __metadata("design:type", String)
     ], PagespeedVersion.prototype, "major", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minor" }),
         __metadata("design:type", String)
     ], PagespeedVersion.prototype, "minor", void 0);
     return PagespeedVersion;
-}(SpeakeasyBase));
-export { PagespeedVersion };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedVersion = PagespeedVersion;

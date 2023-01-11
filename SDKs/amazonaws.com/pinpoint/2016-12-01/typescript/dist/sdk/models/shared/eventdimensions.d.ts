@@ -6,7 +6,7 @@ import { MetricDimension } from "./metricdimension";
  * Specifies the dimensions for an event filter that determines when a campaign is sent or a journey activity is performed.
 **/
 export declare class EventDimensions extends SpeakeasyBase {
-    attributes?: Map<string, AttributeDimension>;
+    attributes?: Record<string, AttributeDimension>;
     eventType?: SetDimension;
-    metrics?: Map<string, MetricDimension>;
+    metrics?: Record<string, MetricDimension>;
 }

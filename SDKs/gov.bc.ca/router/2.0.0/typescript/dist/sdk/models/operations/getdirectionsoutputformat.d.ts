@@ -21,7 +21,7 @@ export declare class GetDirectionsOutputFormatQueryParams extends SpeakeasyBase 
     departure?: Date;
     disable?: string;
     distanceUnit?: GetDirectionsOutputFormatDistanceUnitEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     points: string;
     roundTrip?: boolean;
     routeDescription?: string;

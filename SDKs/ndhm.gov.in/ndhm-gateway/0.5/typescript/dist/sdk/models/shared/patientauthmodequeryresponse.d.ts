@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { AuthenticationModeEnum } from "./authenticationmodeenum";
 import { PatientAuthPurposeEnum } from "./patientauthpurposeenum";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 import { RequestReference } from "./requestreference";
 export declare class PatientAuthModeQueryResponseAuth extends SpeakeasyBase {
     modes: AuthenticationModeEnum[];
@@ -9,7 +9,7 @@ export declare class PatientAuthModeQueryResponseAuth extends SpeakeasyBase {
 }
 export declare class PatientAuthModeQueryResponse extends SpeakeasyBase {
     auth?: PatientAuthModeQueryResponseAuth;
-    error?: Error;
+    error?: ErrorT;
     requestId: string;
     resp: RequestReference;
     timestamp: Date;

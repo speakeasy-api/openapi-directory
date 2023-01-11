@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PayoutSummaryAuditV3 } from "./payoutsummaryauditv3";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPayoutsResponseV3 = void 0;
+var utils_1 = require("../../../internal/utils");
+var payoutsummaryauditv3_1 = require("./payoutsummaryauditv3");
 // GetPayoutsResponseV3
 /**
  * List Payouts Response
@@ -34,17 +37,17 @@ var GetPayoutsResponseV3 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content", elemType: PayoutSummaryAuditV3 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content", elemType: payoutsummaryauditv3_1.PayoutSummaryAuditV3 }),
         __metadata("design:type", Array)
     ], GetPayoutsResponseV3.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
         __metadata("design:type", Array)
     ], GetPayoutsResponseV3.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", Object)
     ], GetPayoutsResponseV3.prototype, "page", void 0);
     return GetPayoutsResponseV3;
-}(SpeakeasyBase));
-export { GetPayoutsResponseV3 };
+}(utils_1.SpeakeasyBase));
+exports.GetPayoutsResponseV3 = GetPayoutsResponseV3;

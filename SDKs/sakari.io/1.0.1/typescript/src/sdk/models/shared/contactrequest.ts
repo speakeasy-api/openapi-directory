@@ -14,7 +14,7 @@ export class ContactRequestMobile extends SpeakeasyBase {
 
 export class ContactRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=attributes" })
-  attributes?: Map<string, any>;
+  attributes?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=email" })
   email?: string;

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetAddSourceIdentifierToSubscriptionRequest, GetAddSourceIdentifierToSubscriptionResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -35,22 +34,22 @@ const sdk = new SDK(WithSecurity(
 const req: GetAddSourceIdentifierToSubscriptionRequest = {
   queryParams: {
     action: "AddSourceIdentifierToSubscription",
-    sourceIdentifier: "commodi",
-    subscriptionName: "quidem",
+    sourceIdentifier: "voluptas",
+    subscriptionName: "culpa",
     version: "2013-01-10",
   },
   headers: {
-    xAmzAlgorithm: "voluptas",
-    xAmzContentSha256: "quasi",
-    xAmzCredential: "nostrum",
+    xAmzAlgorithm: "consequuntur",
+    xAmzContentSha256: "dolor",
+    xAmzCredential: "expedita",
     xAmzDate: "voluptas",
-    xAmzSecurityToken: "iusto",
-    xAmzSignature: "esse",
-    xAmzSignedHeaders: "architecto",
+    xAmzSecurityToken: "fugit",
+    xAmzSignature: "et",
+    xAmzSignedHeaders: "nihil",
   },
 };
 
-sdk.sdk.getAddSourceIdentifierToSubscription(req).then((res: GetAddSourceIdentifierToSubscriptionResponse | AxiosError) => {
+sdk.getAddSourceIdentifierToSubscription(req).then((res: GetAddSourceIdentifierToSubscriptionResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -64,13 +63,10 @@ sdk.sdk.getAddSourceIdentifierToSubscription(req).then((res: GetAddSourceIdentif
 * `getAddSourceIdentifierToSubscription`
 * `getAuthorizeDbSecurityGroupIngress`
 * `getCopyDbSnapshot`
-* `getCreateDbInstance`
 * `getCreateDbInstanceReadReplica`
 * `getCreateDbParameterGroup`
 * `getCreateDbSecurityGroup`
 * `getCreateDbSnapshot`
-* `getCreateDbSubnetGroup`
-* `getCreateEventSubscription`
 * `getCreateOptionGroup`
 * `getDeleteDbInstance`
 * `getDeleteDbParameterGroup`
@@ -89,16 +85,12 @@ sdk.sdk.getAddSourceIdentifierToSubscription(req).then((res: GetAddSourceIdentif
 * `getDescribeEngineDefaultParameters`
 * `getDescribeEventCategories`
 * `getDescribeEventSubscriptions`
-* `getDescribeEvents`
 * `getDescribeOptionGroupOptions`
 * `getDescribeOptionGroups`
 * `getDescribeOrderableDbInstanceOptions`
 * `getDescribeReservedDbInstances`
 * `getDescribeReservedDbInstancesOfferings`
 * `getListTagsForResource`
-* `getModifyDbInstance`
-* `getModifyDbSubnetGroup`
-* `getModifyEventSubscription`
 * `getPromoteReadReplica`
 * `getPurchaseReservedDbInstancesOffering`
 * `getRebootDbInstance`

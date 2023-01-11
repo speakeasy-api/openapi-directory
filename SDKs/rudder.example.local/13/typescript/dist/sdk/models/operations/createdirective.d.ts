@@ -21,5 +21,5 @@ export declare class CreateDirectiveRequest extends SpeakeasyBase {
 export declare class CreateDirectiveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createDirective200ApplicationJsonObject?: CreateDirective200ApplicationJson;
+    createDirective200ApplicationJSONObject?: CreateDirective200ApplicationJson;
 }

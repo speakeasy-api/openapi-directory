@@ -19,16 +19,12 @@ export enum GoogleCloudContactcenterinsightsV1EntityTypeEnum {
 }
 
 
-// GoogleCloudContactcenterinsightsV1Entity
-/** 
- * The data for an entity annotation. Represents a phrase in the conversation that is a known entity, such as a person, an organization, or location.
-**/
 export class GoogleCloudContactcenterinsightsV1Entity extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=displayName" })
   displayName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, string>;
+  metadata?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=salience" })
   salience?: number;

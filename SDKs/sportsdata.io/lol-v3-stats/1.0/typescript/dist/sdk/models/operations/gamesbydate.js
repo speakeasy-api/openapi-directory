@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GamesByDateFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GamesByDateResponse = exports.GamesByDateRequest = exports.GamesByDatePathParams = exports.GamesByDateFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GamesByDateFormatEnum;
 (function (GamesByDateFormatEnum) {
     GamesByDateFormatEnum["Xml"] = "xml";
     GamesByDateFormatEnum["Json"] = "json";
-})(GamesByDateFormatEnum || (GamesByDateFormatEnum = {}));
+})(GamesByDateFormatEnum = exports.GamesByDateFormatEnum || (exports.GamesByDateFormatEnum = {}));
 var GamesByDatePathParams = /** @class */ (function (_super) {
     __extends(GamesByDatePathParams, _super);
     function GamesByDatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=date" }),
         __metadata("design:type", String)
     ], GamesByDatePathParams.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], GamesByDatePathParams.prototype, "format", void 0);
     return GamesByDatePathParams;
-}(SpeakeasyBase));
-export { GamesByDatePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GamesByDatePathParams = GamesByDatePathParams;
 var GamesByDateRequest = /** @class */ (function (_super) {
     __extends(GamesByDateRequest, _super);
     function GamesByDateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GamesByDatePathParams)
     ], GamesByDateRequest.prototype, "pathParams", void 0);
     return GamesByDateRequest;
-}(SpeakeasyBase));
-export { GamesByDateRequest };
+}(utils_1.SpeakeasyBase));
+exports.GamesByDateRequest = GamesByDateRequest;
 var GamesByDateResponse = /** @class */ (function (_super) {
     __extends(GamesByDateResponse, _super);
     function GamesByDateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GamesByDateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], GamesByDateResponse.prototype, "games", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GamesByDateResponse.prototype, "statusCode", void 0);
     return GamesByDateResponse;
-}(SpeakeasyBase));
-export { GamesByDateResponse };
+}(utils_1.SpeakeasyBase));
+exports.GamesByDateResponse = GamesByDateResponse;

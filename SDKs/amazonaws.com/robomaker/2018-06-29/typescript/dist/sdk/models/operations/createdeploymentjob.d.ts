@@ -23,7 +23,7 @@ export declare class CreateDeploymentJobRequestBody extends SpeakeasyBase {
     deploymentApplicationConfigs: shared.DeploymentApplicationConfig[];
     deploymentConfig?: CreateDeploymentJobRequestBodyDeploymentConfig;
     fleet: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateDeploymentJobRequest extends SpeakeasyBase {
     headers: CreateDeploymentJobHeaders;

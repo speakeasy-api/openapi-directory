@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MaxAgeRule } from "./maxagerule";
-import { MaxCountRule } from "./maxcountrule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationVersionLifecycleConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var maxagerule_1 = require("./maxagerule");
+var maxcountrule_1 = require("./maxcountrule");
 // ApplicationVersionLifecycleConfig
 /**
  * <p>The application version lifecycle settings for an application. Defines the rules that Elastic Beanstalk applies to an application's versions in order to avoid hitting the per-region limit for application versions.</p> <p>When Elastic Beanstalk deletes an application version from its database, you can no longer deploy that version to an environment. The source bundle remains in S3 unless you configure the rule to delete it.</p>
@@ -35,13 +38,13 @@ var ApplicationVersionLifecycleConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", MaxAgeRule)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", maxagerule_1.MaxAgeRule)
     ], ApplicationVersionLifecycleConfig.prototype, "maxAgeRule", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", MaxCountRule)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", maxcountrule_1.MaxCountRule)
     ], ApplicationVersionLifecycleConfig.prototype, "maxCountRule", void 0);
     return ApplicationVersionLifecycleConfig;
-}(SpeakeasyBase));
-export { ApplicationVersionLifecycleConfig };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationVersionLifecycleConfig = ApplicationVersionLifecycleConfig;

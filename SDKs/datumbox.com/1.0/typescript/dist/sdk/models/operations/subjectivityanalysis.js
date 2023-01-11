@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubjectivityAnalysisResponse = exports.SubjectivityAnalysisRequest = exports.SubjectivityAnalysisRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var SubjectivityAnalysisRequestBody = /** @class */ (function (_super) {
     __extends(SubjectivityAnalysisRequestBody, _super);
     function SubjectivityAnalysisRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=api_key;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=api_key;" }),
         __metadata("design:type", String)
     ], SubjectivityAnalysisRequestBody.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=text;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=text;" }),
         __metadata("design:type", String)
     ], SubjectivityAnalysisRequestBody.prototype, "text", void 0);
     return SubjectivityAnalysisRequestBody;
-}(SpeakeasyBase));
-export { SubjectivityAnalysisRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.SubjectivityAnalysisRequestBody = SubjectivityAnalysisRequestBody;
 var SubjectivityAnalysisRequest = /** @class */ (function (_super) {
     __extends(SubjectivityAnalysisRequest, _super);
     function SubjectivityAnalysisRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", SubjectivityAnalysisRequestBody)
     ], SubjectivityAnalysisRequest.prototype, "request", void 0);
     return SubjectivityAnalysisRequest;
-}(SpeakeasyBase));
-export { SubjectivityAnalysisRequest };
+}(utils_1.SpeakeasyBase));
+exports.SubjectivityAnalysisRequest = SubjectivityAnalysisRequest;
 var SubjectivityAnalysisResponse = /** @class */ (function (_super) {
     __extends(SubjectivityAnalysisResponse, _super);
     function SubjectivityAnalysisResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SubjectivityAnalysisResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SubjectivityAnalysisResponse.prototype, "statusCode", void 0);
     return SubjectivityAnalysisResponse;
-}(SpeakeasyBase));
-export { SubjectivityAnalysisResponse };
+}(utils_1.SpeakeasyBase));
+exports.SubjectivityAnalysisResponse = SubjectivityAnalysisResponse;

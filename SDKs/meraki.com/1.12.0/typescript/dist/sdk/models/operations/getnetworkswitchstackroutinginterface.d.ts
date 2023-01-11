@@ -10,5 +10,5 @@ export declare class GetNetworkSwitchStackRoutingInterfaceRequest extends Speake
 export declare class GetNetworkSwitchStackRoutingInterfaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSwitchStackRoutingInterface200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSwitchStackRoutingInterface200ApplicationJSONObject?: Record<string, any>;
 }

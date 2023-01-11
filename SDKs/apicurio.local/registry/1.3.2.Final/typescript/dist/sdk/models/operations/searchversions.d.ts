@@ -13,7 +13,7 @@ export declare class SearchVersionsRequest extends SpeakeasyBase {
 }
 export declare class SearchVersionsResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     versionSearchResults?: shared.VersionSearchResults;
 }

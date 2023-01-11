@@ -25,7 +25,7 @@ export declare class DataprocProjectsRegionsClustersDiagnoseSecurity extends Spe
 export declare class DataprocProjectsRegionsClustersDiagnoseRequest extends SpeakeasyBase {
     pathParams: DataprocProjectsRegionsClustersDiagnosePathParams;
     queryParams: DataprocProjectsRegionsClustersDiagnoseQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: DataprocProjectsRegionsClustersDiagnoseSecurity;
 }
 export declare class DataprocProjectsRegionsClustersDiagnoseResponse extends SpeakeasyBase {

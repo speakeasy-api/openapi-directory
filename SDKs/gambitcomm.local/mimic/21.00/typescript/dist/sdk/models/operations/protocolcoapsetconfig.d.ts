@@ -10,5 +10,5 @@ export declare class ProtocolCoapSetConfigRequest extends SpeakeasyBase {
 export declare class ProtocolCoapSetConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolCoapSetConfig200ApplicationJsonString?: string;
+    protocolCoapSetConfig200ApplicationJSONString?: string;
 }

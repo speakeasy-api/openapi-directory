@@ -12,11 +12,11 @@ export declare class GetAdminMappings200ApplicationJsonMappingsRequestBasicAuthC
 }
 export declare class GetAdminMappings200ApplicationJsonMappingsRequest extends SpeakeasyBase {
     basicAuthCredentials?: GetAdminMappings200ApplicationJsonMappingsRequestBasicAuthCredentials;
-    bodyPatterns?: Map<string, any>[];
-    cookies?: Map<string, any>;
-    headers?: Map<string, any>;
+    bodyPatterns?: Record<string, any>[];
+    cookies?: Record<string, any>;
+    headers?: Record<string, any>;
     method?: string;
-    queryParameters?: Map<string, any>;
+    queryParameters?: Record<string, any>;
     url?: string;
     urlPath?: string;
     urlPathPattern?: string;
@@ -29,28 +29,28 @@ export declare enum GetAdminMappings200ApplicationJsonMappingsResponseFaultEnum 
     RandomDataThenClose = "RANDOM_DATA_THEN_CLOSE"
 }
 export declare class GetAdminMappings200ApplicationJsonMappingsResponse extends SpeakeasyBase {
-    additionalProxyRequestHeaders?: Map<string, any>;
+    additionalProxyRequestHeaders?: Record<string, any>;
     base64Body?: string;
     body?: string;
     bodyFileName?: string;
     fault?: GetAdminMappings200ApplicationJsonMappingsResponseFaultEnum;
     fixedDelayMilliseconds?: number;
     fromConfiguredStub?: boolean;
-    headers?: Map<string, any>;
-    jsonBody?: Map<string, any>;
+    headers?: Record<string, any>;
+    jsonBody?: Record<string, any>;
     proxyBaseUrl?: string;
     status?: number;
     statusMessage?: string;
-    transformerParameters?: Map<string, any>;
+    transformerParameters?: Record<string, any>;
     transformers?: string[];
 }
 export declare class GetAdminMappings200ApplicationJsonMappings extends SpeakeasyBase {
     id?: string;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     name?: string;
     newScenarioState?: string;
     persistent?: boolean;
-    postServeActions?: Map<string, any>;
+    postServeActions?: Record<string, any>;
     priority?: number;
     request?: GetAdminMappings200ApplicationJsonMappingsRequest;
     requiredScenarioState?: string;
@@ -70,6 +70,6 @@ export declare class GetAdminMappingsRequest extends SpeakeasyBase {
 }
 export declare class GetAdminMappingsResponse extends SpeakeasyBase {
     contentType: string;
-    getAdminMappings200ApplicationJsonObject?: GetAdminMappings200ApplicationJson;
     statusCode: number;
+    getAdminMappings200ApplicationJSONObject?: GetAdminMappings200ApplicationJson;
 }

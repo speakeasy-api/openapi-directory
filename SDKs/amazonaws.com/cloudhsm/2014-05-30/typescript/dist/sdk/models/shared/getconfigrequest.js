@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientVersionEnum } from "./clientversionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetConfigRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var clientversionenum_1 = require("./clientversionenum");
 var GetConfigRequest = /** @class */ (function (_super) {
     __extends(GetConfigRequest, _super);
     function GetConfigRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClientArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClientArn" }),
         __metadata("design:type", String)
     ], GetConfigRequest.prototype, "clientArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClientVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClientVersion" }),
         __metadata("design:type", String)
     ], GetConfigRequest.prototype, "clientVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HapgList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HapgList" }),
         __metadata("design:type", Array)
     ], GetConfigRequest.prototype, "hapgList", void 0);
     return GetConfigRequest;
-}(SpeakeasyBase));
-export { GetConfigRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetConfigRequest = GetConfigRequest;

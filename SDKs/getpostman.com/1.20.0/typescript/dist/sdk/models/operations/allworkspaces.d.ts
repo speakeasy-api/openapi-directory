@@ -10,5 +10,5 @@ export declare class AllWorkspaces200ApplicationJson extends SpeakeasyBase {
 export declare class AllWorkspacesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    allWorkspaces200ApplicationJsonObject?: AllWorkspaces200ApplicationJson;
+    allWorkspaces200ApplicationJSONObject?: AllWorkspaces200ApplicationJson;
 }

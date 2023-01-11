@@ -19,7 +19,7 @@ export declare class DeleteContactListResponse extends SpeakeasyBase {
     badRequestException?: any;
     concurrentModificationException?: any;
     contentType: string;
-    deleteContactListResponse?: Map<string, any>;
+    deleteContactListResponse?: Record<string, any>;
     notFoundException?: any;
     statusCode: number;
     tooManyRequestsException?: any;

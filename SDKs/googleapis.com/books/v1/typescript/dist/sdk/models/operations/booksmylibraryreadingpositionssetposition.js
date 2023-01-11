@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,30 +14,55 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BooksMylibraryReadingpositionsSetPositionResponse = exports.BooksMylibraryReadingpositionsSetPositionRequest = exports.BooksMylibraryReadingpositionsSetPositionSecurity = exports.BooksMylibraryReadingpositionsSetPositionQueryParams = exports.BooksMylibraryReadingpositionsSetPositionActionEnum = exports.BooksMylibraryReadingpositionsSetPositionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var BooksMylibraryReadingpositionsSetPositionPathParams = /** @class */ (function (_super) {
     __extends(BooksMylibraryReadingpositionsSetPositionPathParams, _super);
     function BooksMylibraryReadingpositionsSetPositionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=volumeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=volumeId" }),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionPathParams.prototype, "volumeId", void 0);
     return BooksMylibraryReadingpositionsSetPositionPathParams;
-}(SpeakeasyBase));
-export { BooksMylibraryReadingpositionsSetPositionPathParams };
-export var BooksMylibraryReadingpositionsSetPositionActionEnum;
+}(utils_1.SpeakeasyBase));
+exports.BooksMylibraryReadingpositionsSetPositionPathParams = BooksMylibraryReadingpositionsSetPositionPathParams;
+var BooksMylibraryReadingpositionsSetPositionActionEnum;
 (function (BooksMylibraryReadingpositionsSetPositionActionEnum) {
     BooksMylibraryReadingpositionsSetPositionActionEnum["ActionUndefined"] = "ACTION_UNDEFINED";
     BooksMylibraryReadingpositionsSetPositionActionEnum["Bookmark"] = "bookmark";
@@ -45,136 +71,136 @@ export var BooksMylibraryReadingpositionsSetPositionActionEnum;
     BooksMylibraryReadingpositionsSetPositionActionEnum["PrevPage"] = "prev-page";
     BooksMylibraryReadingpositionsSetPositionActionEnum["Scroll"] = "scroll";
     BooksMylibraryReadingpositionsSetPositionActionEnum["Search"] = "search";
-})(BooksMylibraryReadingpositionsSetPositionActionEnum || (BooksMylibraryReadingpositionsSetPositionActionEnum = {}));
+})(BooksMylibraryReadingpositionsSetPositionActionEnum = exports.BooksMylibraryReadingpositionsSetPositionActionEnum || (exports.BooksMylibraryReadingpositionsSetPositionActionEnum = {}));
 var BooksMylibraryReadingpositionsSetPositionQueryParams = /** @class */ (function (_super) {
     __extends(BooksMylibraryReadingpositionsSetPositionQueryParams, _super);
     function BooksMylibraryReadingpositionsSetPositionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=action" }),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=contentVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=contentVersion" }),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionQueryParams.prototype, "contentVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=deviceCookie" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=deviceCookie" }),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionQueryParams.prototype, "deviceCookie", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=position" }),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionQueryParams.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], BooksMylibraryReadingpositionsSetPositionQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=source" }),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionQueryParams.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timestamp" }),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionQueryParams.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionQueryParams.prototype, "uploadProtocol", void 0);
     return BooksMylibraryReadingpositionsSetPositionQueryParams;
-}(SpeakeasyBase));
-export { BooksMylibraryReadingpositionsSetPositionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.BooksMylibraryReadingpositionsSetPositionQueryParams = BooksMylibraryReadingpositionsSetPositionQueryParams;
 var BooksMylibraryReadingpositionsSetPositionSecurity = /** @class */ (function (_super) {
     __extends(BooksMylibraryReadingpositionsSetPositionSecurity, _super);
     function BooksMylibraryReadingpositionsSetPositionSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], BooksMylibraryReadingpositionsSetPositionSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], BooksMylibraryReadingpositionsSetPositionSecurity.prototype, "oauth2c", void 0);
     return BooksMylibraryReadingpositionsSetPositionSecurity;
-}(SpeakeasyBase));
-export { BooksMylibraryReadingpositionsSetPositionSecurity };
+}(utils_1.SpeakeasyBase));
+exports.BooksMylibraryReadingpositionsSetPositionSecurity = BooksMylibraryReadingpositionsSetPositionSecurity;
 var BooksMylibraryReadingpositionsSetPositionRequest = /** @class */ (function (_super) {
     __extends(BooksMylibraryReadingpositionsSetPositionRequest, _super);
     function BooksMylibraryReadingpositionsSetPositionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BooksMylibraryReadingpositionsSetPositionPathParams)
     ], BooksMylibraryReadingpositionsSetPositionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BooksMylibraryReadingpositionsSetPositionQueryParams)
     ], BooksMylibraryReadingpositionsSetPositionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BooksMylibraryReadingpositionsSetPositionSecurity)
     ], BooksMylibraryReadingpositionsSetPositionRequest.prototype, "security", void 0);
     return BooksMylibraryReadingpositionsSetPositionRequest;
-}(SpeakeasyBase));
-export { BooksMylibraryReadingpositionsSetPositionRequest };
+}(utils_1.SpeakeasyBase));
+exports.BooksMylibraryReadingpositionsSetPositionRequest = BooksMylibraryReadingpositionsSetPositionRequest;
 var BooksMylibraryReadingpositionsSetPositionResponse = /** @class */ (function (_super) {
     __extends(BooksMylibraryReadingpositionsSetPositionResponse, _super);
     function BooksMylibraryReadingpositionsSetPositionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BooksMylibraryReadingpositionsSetPositionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], BooksMylibraryReadingpositionsSetPositionResponse.prototype, "empty", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BooksMylibraryReadingpositionsSetPositionResponse.prototype, "statusCode", void 0);
     return BooksMylibraryReadingpositionsSetPositionResponse;
-}(SpeakeasyBase));
-export { BooksMylibraryReadingpositionsSetPositionResponse };
+}(utils_1.SpeakeasyBase));
+exports.BooksMylibraryReadingpositionsSetPositionResponse = BooksMylibraryReadingpositionsSetPositionResponse;

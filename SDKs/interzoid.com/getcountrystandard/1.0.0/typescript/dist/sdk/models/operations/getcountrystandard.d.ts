@@ -14,5 +14,5 @@ export declare class GetcountrystandardRequest extends SpeakeasyBase {
 export declare class GetcountrystandardResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getcountrystandard200ApplicationJsonObject?: Getcountrystandard200ApplicationJson;
+    getcountrystandard200ApplicationJSONObject?: Getcountrystandard200ApplicationJson;
 }

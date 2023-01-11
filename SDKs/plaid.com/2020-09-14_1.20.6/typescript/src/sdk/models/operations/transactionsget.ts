@@ -14,11 +14,11 @@ export class TransactionsGetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  transactionsGetResponse?: Map<string, any>;
+  transactionsGetResponse?: Record<string, any>;
 }

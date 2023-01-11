@@ -21,8 +21,8 @@ export declare enum UpdateAuthorizerRequestBodyAuthorizerTypeEnum {
  * Represents the configuration of a JWT authorizer. Required for the JWT authorizer type. Supported only for HTTP APIs.
 **/
 export declare class UpdateAuthorizerRequestBodyJwtConfiguration extends SpeakeasyBase {
-    audience?: string[];
-    issuer?: string;
+    audience?: Record<string, any>;
+    issuer?: Record<string, any>;
 }
 export declare class UpdateAuthorizerRequestBody extends SpeakeasyBase {
     authorizerCredentialsArn?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteRepositoryPipelineVariableResponse = exports.DeleteRepositoryPipelineVariableRequest = exports.DeleteRepositoryPipelineVariablePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteRepositoryPipelineVariablePathParams = /** @class */ (function (_super) {
     __extends(DeleteRepositoryPipelineVariablePathParams, _super);
     function DeleteRepositoryPipelineVariablePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], DeleteRepositoryPipelineVariablePathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=variable_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=variable_uuid" }),
         __metadata("design:type", String)
     ], DeleteRepositoryPipelineVariablePathParams.prototype, "variableUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], DeleteRepositoryPipelineVariablePathParams.prototype, "workspace", void 0);
     return DeleteRepositoryPipelineVariablePathParams;
-}(SpeakeasyBase));
-export { DeleteRepositoryPipelineVariablePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteRepositoryPipelineVariablePathParams = DeleteRepositoryPipelineVariablePathParams;
 var DeleteRepositoryPipelineVariableRequest = /** @class */ (function (_super) {
     __extends(DeleteRepositoryPipelineVariableRequest, _super);
     function DeleteRepositoryPipelineVariableRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteRepositoryPipelineVariablePathParams)
     ], DeleteRepositoryPipelineVariableRequest.prototype, "pathParams", void 0);
     return DeleteRepositoryPipelineVariableRequest;
-}(SpeakeasyBase));
-export { DeleteRepositoryPipelineVariableRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteRepositoryPipelineVariableRequest = DeleteRepositoryPipelineVariableRequest;
 var DeleteRepositoryPipelineVariableResponse = /** @class */ (function (_super) {
     __extends(DeleteRepositoryPipelineVariableResponse, _super);
     function DeleteRepositoryPipelineVariableResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteRepositoryPipelineVariableResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteRepositoryPipelineVariableResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeleteRepositoryPipelineVariableResponse.prototype, "error", void 0);
     return DeleteRepositoryPipelineVariableResponse;
-}(SpeakeasyBase));
-export { DeleteRepositoryPipelineVariableResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteRepositoryPipelineVariableResponse = DeleteRepositoryPipelineVariableResponse;

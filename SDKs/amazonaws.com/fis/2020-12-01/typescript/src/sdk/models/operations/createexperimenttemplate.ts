@@ -29,7 +29,7 @@ export class CreateExperimentTemplateHeaders extends SpeakeasyBase {
 
 export class CreateExperimentTemplateRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=actions", elemType: shared.CreateExperimentTemplateActionInput })
-  actions: Map<string, shared.CreateExperimentTemplateActionInput>;
+  actions: Record<string, shared.CreateExperimentTemplateActionInput>;
 
   @SpeakeasyMetadata({ data: "json, name=clientToken" })
   clientToken: string;
@@ -44,10 +44,10 @@ export class CreateExperimentTemplateRequestBody extends SpeakeasyBase {
   stopConditions: shared.CreateExperimentTemplateStopConditionInput[];
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=targets", elemType: shared.CreateExperimentTemplateTargetInput })
-  targets?: Map<string, shared.CreateExperimentTemplateTargetInput>;
+  targets?: Record<string, shared.CreateExperimentTemplateTargetInput>;
 }
 
 

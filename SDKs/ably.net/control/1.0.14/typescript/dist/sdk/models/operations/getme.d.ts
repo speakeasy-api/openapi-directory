@@ -9,6 +9,6 @@ export declare class GetMeRequest extends SpeakeasyBase {
 export declare class GetMeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     me?: shared.Me;
 }

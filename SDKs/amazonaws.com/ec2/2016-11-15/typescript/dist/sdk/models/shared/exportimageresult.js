@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DiskImageFormatEnum } from "./diskimageformatenum";
-import { ExportTaskS3Location } from "./exporttasks3location";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExportImageResult = exports.ExportImageResultS3ExportLocation = void 0;
+var utils_1 = require("../../../internal/utils");
+// ExportImageResultS3ExportLocation
+/**
+ * Information about the destination Amazon S3 bucket.
+**/
+var ExportImageResultS3ExportLocation = /** @class */ (function (_super) {
+    __extends(ExportImageResultS3ExportLocation, _super);
+    function ExportImageResultS3ExportLocation() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ExportImageResultS3ExportLocation.prototype, "s3Bucket", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ExportImageResultS3ExportLocation.prototype, "s3Prefix", void 0);
+    return ExportImageResultS3ExportLocation;
+}(utils_1.SpeakeasyBase));
+exports.ExportImageResultS3ExportLocation = ExportImageResultS3ExportLocation;
 var ExportImageResult = /** @class */ (function (_super) {
     __extends(ExportImageResult, _super);
     function ExportImageResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ExportImageResult.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ExportImageResult.prototype, "diskImageFormat", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ExportImageResult.prototype, "exportImageTaskId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ExportImageResult.prototype, "imageId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ExportImageResult.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ExportImageResult.prototype, "roleName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ExportTaskS3Location)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ExportImageResultS3ExportLocation)
     ], ExportImageResult.prototype, "s3ExportLocation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ExportImageResult.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ExportImageResult.prototype, "statusMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Tag }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ExportImageResult.prototype, "tags", void 0);
     return ExportImageResult;
-}(SpeakeasyBase));
-export { ExportImageResult };
+}(utils_1.SpeakeasyBase));
+exports.ExportImageResult = ExportImageResult;

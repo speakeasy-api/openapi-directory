@@ -1,0 +1,48 @@
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./deletedocumentsid"), exports);
+__exportStar(require("./deletetransactionrulestransactionruleid"), exports);
+__exportStar(require("./deletetransferinstrumentsid"), exports);
+__exportStar(require("./getaccountholdersid"), exports);
+__exportStar(require("./getaccountholdersidbalanceaccounts"), exports);
+__exportStar(require("./getbalanceaccountsid"), exports);
+__exportStar(require("./getbalanceaccountsidpaymentinstruments"), exports);
+__exportStar(require("./getbalanceplatformsid"), exports);
+__exportStar(require("./getbalanceplatformsidaccountholders"), exports);
+__exportStar(require("./getdocumentsid"), exports);
+__exportStar(require("./getlegalentitiesid"), exports);
+__exportStar(require("./getpaymentinstrumentgroupsid"), exports);
+__exportStar(require("./getpaymentinstrumentgroupsidtransactionrules"), exports);
+__exportStar(require("./getpaymentinstrumentsid"), exports);
+__exportStar(require("./getpaymentinstrumentsidtransactionrules"), exports);
+__exportStar(require("./gettransactionrulestransactionruleid"), exports);
+__exportStar(require("./gettransferinstrumentsid"), exports);
+__exportStar(require("./patchaccountholdersid"), exports);
+__exportStar(require("./patchbalanceaccountsid"), exports);
+__exportStar(require("./patchdocumentsid"), exports);
+__exportStar(require("./patchlegalentitiesid"), exports);
+__exportStar(require("./patchpaymentinstrumentsid"), exports);
+__exportStar(require("./patchtransactionrulestransactionruleid"), exports);
+__exportStar(require("./patchtransferinstrumentsid"), exports);
+__exportStar(require("./postaccountholders"), exports);
+__exportStar(require("./postbalanceaccounts"), exports);
+__exportStar(require("./postdocuments"), exports);
+__exportStar(require("./postlegalentities"), exports);
+__exportStar(require("./postpaymentinstrumentgroups"), exports);
+__exportStar(require("./postpaymentinstruments"), exports);
+__exportStar(require("./posttransactionrules"), exports);
+__exportStar(require("./posttransferinstruments"), exports);

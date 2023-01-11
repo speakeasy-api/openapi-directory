@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostGeomarksNewRequestBodyBufferCapEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostGeomarksNewResponse = exports.PostGeomarksNewRequest = exports.PostGeomarksNewRequestBody = exports.PostGeomarksNewRequestBodyResultFormatEnum = exports.PostGeomarksNewRequestBodyFormatEnum = exports.PostGeomarksNewRequestBodyBufferJoinEnum = exports.PostGeomarksNewRequestBodyBufferCapEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostGeomarksNewRequestBodyBufferCapEnum;
 (function (PostGeomarksNewRequestBodyBufferCapEnum) {
     PostGeomarksNewRequestBodyBufferCapEnum["Round"] = "ROUND";
     PostGeomarksNewRequestBodyBufferCapEnum["Square"] = "SQUARE";
     PostGeomarksNewRequestBodyBufferCapEnum["Flat"] = "FLAT";
-})(PostGeomarksNewRequestBodyBufferCapEnum || (PostGeomarksNewRequestBodyBufferCapEnum = {}));
-export var PostGeomarksNewRequestBodyBufferJoinEnum;
+})(PostGeomarksNewRequestBodyBufferCapEnum = exports.PostGeomarksNewRequestBodyBufferCapEnum || (exports.PostGeomarksNewRequestBodyBufferCapEnum = {}));
+var PostGeomarksNewRequestBodyBufferJoinEnum;
 (function (PostGeomarksNewRequestBodyBufferJoinEnum) {
     PostGeomarksNewRequestBodyBufferJoinEnum["Round"] = "ROUND";
     PostGeomarksNewRequestBodyBufferJoinEnum["Mitre"] = "MITRE";
     PostGeomarksNewRequestBodyBufferJoinEnum["Bevel"] = "BEVEL";
-})(PostGeomarksNewRequestBodyBufferJoinEnum || (PostGeomarksNewRequestBodyBufferJoinEnum = {}));
-export var PostGeomarksNewRequestBodyFormatEnum;
+})(PostGeomarksNewRequestBodyBufferJoinEnum = exports.PostGeomarksNewRequestBodyBufferJoinEnum || (exports.PostGeomarksNewRequestBodyBufferJoinEnum = {}));
+var PostGeomarksNewRequestBodyFormatEnum;
 (function (PostGeomarksNewRequestBodyFormatEnum) {
     PostGeomarksNewRequestBodyFormatEnum["Json"] = "json";
     PostGeomarksNewRequestBodyFormatEnum["Xml"] = "xml";
@@ -46,8 +49,8 @@ export var PostGeomarksNewRequestBodyFormatEnum;
     PostGeomarksNewRequestBodyFormatEnum["Geojson"] = "geojson";
     PostGeomarksNewRequestBodyFormatEnum["Gml"] = "gml";
     PostGeomarksNewRequestBodyFormatEnum["Wkt"] = "wkt";
-})(PostGeomarksNewRequestBodyFormatEnum || (PostGeomarksNewRequestBodyFormatEnum = {}));
-export var PostGeomarksNewRequestBodyResultFormatEnum;
+})(PostGeomarksNewRequestBodyFormatEnum = exports.PostGeomarksNewRequestBodyFormatEnum || (exports.PostGeomarksNewRequestBodyFormatEnum = {}));
+var PostGeomarksNewRequestBodyResultFormatEnum;
 (function (PostGeomarksNewRequestBodyResultFormatEnum) {
     PostGeomarksNewRequestBodyResultFormatEnum["Json"] = "json";
     PostGeomarksNewRequestBodyResultFormatEnum["Xml"] = "xml";
@@ -58,96 +61,96 @@ export var PostGeomarksNewRequestBodyResultFormatEnum;
     PostGeomarksNewRequestBodyResultFormatEnum["Geojson"] = "geojson";
     PostGeomarksNewRequestBodyResultFormatEnum["Gml"] = "gml";
     PostGeomarksNewRequestBodyResultFormatEnum["Wkt"] = "wkt";
-})(PostGeomarksNewRequestBodyResultFormatEnum || (PostGeomarksNewRequestBodyResultFormatEnum = {}));
+})(PostGeomarksNewRequestBodyResultFormatEnum = exports.PostGeomarksNewRequestBodyResultFormatEnum || (exports.PostGeomarksNewRequestBodyResultFormatEnum = {}));
 var PostGeomarksNewRequestBody = /** @class */ (function (_super) {
     __extends(PostGeomarksNewRequestBody, _super);
     function PostGeomarksNewRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=allowOverlap;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=allowOverlap;" }),
         __metadata("design:type", Boolean)
     ], PostGeomarksNewRequestBody.prototype, "allowOverlap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=body;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=body;" }),
         __metadata("design:type", String)
     ], PostGeomarksNewRequestBody.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=bufferCap;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=bufferCap;" }),
         __metadata("design:type", String)
     ], PostGeomarksNewRequestBody.prototype, "bufferCap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=bufferJoin;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=bufferJoin;" }),
         __metadata("design:type", String)
     ], PostGeomarksNewRequestBody.prototype, "bufferJoin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=bufferMetres;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=bufferMetres;" }),
         __metadata("design:type", Number)
     ], PostGeomarksNewRequestBody.prototype, "bufferMetres", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=bufferMitreLimit;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=bufferMitreLimit;" }),
         __metadata("design:type", Number)
     ], PostGeomarksNewRequestBody.prototype, "bufferMitreLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=bufferSegments;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=bufferSegments;" }),
         __metadata("design:type", Number)
     ], PostGeomarksNewRequestBody.prototype, "bufferSegments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=callback;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=callback;" }),
         __metadata("design:type", String)
     ], PostGeomarksNewRequestBody.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=failureRedirectUrl;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=failureRedirectUrl;" }),
         __metadata("design:type", String)
     ], PostGeomarksNewRequestBody.prototype, "failureRedirectUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=format;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=format;" }),
         __metadata("design:type", String)
     ], PostGeomarksNewRequestBody.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=multiple;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=multiple;" }),
         __metadata("design:type", Boolean)
     ], PostGeomarksNewRequestBody.prototype, "multiple", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=redirectUrl;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=redirectUrl;" }),
         __metadata("design:type", String)
     ], PostGeomarksNewRequestBody.prototype, "redirectUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=resultFormat;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=resultFormat;" }),
         __metadata("design:type", String)
     ], PostGeomarksNewRequestBody.prototype, "resultFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=srid;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=srid;" }),
         __metadata("design:type", Number)
     ], PostGeomarksNewRequestBody.prototype, "srid", void 0);
     return PostGeomarksNewRequestBody;
-}(SpeakeasyBase));
-export { PostGeomarksNewRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostGeomarksNewRequestBody = PostGeomarksNewRequestBody;
 var PostGeomarksNewRequest = /** @class */ (function (_super) {
     __extends(PostGeomarksNewRequest, _super);
     function PostGeomarksNewRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", PostGeomarksNewRequestBody)
     ], PostGeomarksNewRequest.prototype, "request", void 0);
     return PostGeomarksNewRequest;
-}(SpeakeasyBase));
-export { PostGeomarksNewRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostGeomarksNewRequest = PostGeomarksNewRequest;
 var PostGeomarksNewResponse = /** @class */ (function (_super) {
     __extends(PostGeomarksNewResponse, _super);
     function PostGeomarksNewResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostGeomarksNewResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostGeomarksNewResponse.prototype, "statusCode", void 0);
     return PostGeomarksNewResponse;
-}(SpeakeasyBase));
-export { PostGeomarksNewResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostGeomarksNewResponse = PostGeomarksNewResponse;

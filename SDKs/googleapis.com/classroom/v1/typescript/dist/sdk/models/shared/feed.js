@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CourseRosterChangesInfo } from "./courserosterchangesinfo";
-import { CourseWorkChangesInfo } from "./courseworkchangesinfo";
-export var FeedFeedTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Feed = exports.FeedFeedTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var courserosterchangesinfo_1 = require("./courserosterchangesinfo");
+var courseworkchangesinfo_1 = require("./courseworkchangesinfo");
+var FeedFeedTypeEnum;
 (function (FeedFeedTypeEnum) {
     FeedFeedTypeEnum["FeedTypeUnspecified"] = "FEED_TYPE_UNSPECIFIED";
     FeedFeedTypeEnum["DomainRosterChanges"] = "DOMAIN_ROSTER_CHANGES";
     FeedFeedTypeEnum["CourseRosterChanges"] = "COURSE_ROSTER_CHANGES";
     FeedFeedTypeEnum["CourseWorkChanges"] = "COURSE_WORK_CHANGES";
-})(FeedFeedTypeEnum || (FeedFeedTypeEnum = {}));
+})(FeedFeedTypeEnum = exports.FeedFeedTypeEnum || (exports.FeedFeedTypeEnum = {}));
 // Feed
 /**
  * A class of notifications that an application can register to receive. For example: "all roster changes for a domain".
@@ -42,17 +45,17 @@ var Feed = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=courseRosterChangesInfo" }),
-        __metadata("design:type", CourseRosterChangesInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=courseRosterChangesInfo" }),
+        __metadata("design:type", courserosterchangesinfo_1.CourseRosterChangesInfo)
     ], Feed.prototype, "courseRosterChangesInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=courseWorkChangesInfo" }),
-        __metadata("design:type", CourseWorkChangesInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=courseWorkChangesInfo" }),
+        __metadata("design:type", courseworkchangesinfo_1.CourseWorkChangesInfo)
     ], Feed.prototype, "courseWorkChangesInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feedType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feedType" }),
         __metadata("design:type", String)
     ], Feed.prototype, "feedType", void 0);
     return Feed;
-}(SpeakeasyBase));
-export { Feed };
+}(utils_1.SpeakeasyBase));
+exports.Feed = Feed;

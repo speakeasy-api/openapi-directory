@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetVariablesResponse = exports.GetVariablesRequest = exports.GetVariablesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetVariablesPathParams = /** @class */ (function (_super) {
     __extends(GetVariablesPathParams, _super);
     function GetVariablesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetVariablesPathParams.prototype, "id", void 0);
     return GetVariablesPathParams;
-}(SpeakeasyBase));
-export { GetVariablesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetVariablesPathParams = GetVariablesPathParams;
 var GetVariablesRequest = /** @class */ (function (_super) {
     __extends(GetVariablesRequest, _super);
     function GetVariablesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetVariablesPathParams)
     ], GetVariablesRequest.prototype, "pathParams", void 0);
     return GetVariablesRequest;
-}(SpeakeasyBase));
-export { GetVariablesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetVariablesRequest = GetVariablesRequest;
 var GetVariablesResponse = /** @class */ (function (_super) {
     __extends(GetVariablesResponse, _super);
     function GetVariablesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetVariablesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetVariablesResponse.prototype, "statusCode", void 0);
     return GetVariablesResponse;
-}(SpeakeasyBase));
-export { GetVariablesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetVariablesResponse = GetVariablesResponse;

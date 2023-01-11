@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class GetSelectedMultipleQueryParams extends SpeakeasyBase {
-    headers?: Map<string, string>;
+    headers?: Record<string, string>;
     js?: boolean;
     proxy?: shared.ProxyEnum;
     selectors?: string[];
@@ -13,7 +13,7 @@ export declare class GetSelectedMultipleRequest extends SpeakeasyBase {
 }
 export declare class GetSelectedMultipleResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     pageError?: shared.PageError;
     selectedAreas?: string[];
     statusCode: number;

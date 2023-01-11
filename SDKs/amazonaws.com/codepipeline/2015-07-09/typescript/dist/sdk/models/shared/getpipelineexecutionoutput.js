@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PipelineExecution } from "./pipelineexecution";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPipelineExecutionOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var pipelineexecution_1 = require("./pipelineexecution");
 // GetPipelineExecutionOutput
 /**
  * Represents the output of a <code>GetPipelineExecution</code> action.
@@ -34,9 +37,9 @@ var GetPipelineExecutionOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipelineExecution" }),
-        __metadata("design:type", PipelineExecution)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipelineExecution" }),
+        __metadata("design:type", pipelineexecution_1.PipelineExecution)
     ], GetPipelineExecutionOutput.prototype, "pipelineExecution", void 0);
     return GetPipelineExecutionOutput;
-}(SpeakeasyBase));
-export { GetPipelineExecutionOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetPipelineExecutionOutput = GetPipelineExecutionOutput;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostListTagsForResourceActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostListTagsForResourceResponse = exports.PostListTagsForResourceRequest = exports.PostListTagsForResourceHeaders = exports.PostListTagsForResourceQueryParams = exports.PostListTagsForResourceVersionEnum = exports.PostListTagsForResourceActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostListTagsForResourceActionEnum;
 (function (PostListTagsForResourceActionEnum) {
     PostListTagsForResourceActionEnum["ListTagsForResource"] = "ListTagsForResource";
-})(PostListTagsForResourceActionEnum || (PostListTagsForResourceActionEnum = {}));
-export var PostListTagsForResourceVersionEnum;
+})(PostListTagsForResourceActionEnum = exports.PostListTagsForResourceActionEnum || (exports.PostListTagsForResourceActionEnum = {}));
+var PostListTagsForResourceVersionEnum;
 (function (PostListTagsForResourceVersionEnum) {
     PostListTagsForResourceVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(PostListTagsForResourceVersionEnum || (PostListTagsForResourceVersionEnum = {}));
+})(PostListTagsForResourceVersionEnum = exports.PostListTagsForResourceVersionEnum || (exports.PostListTagsForResourceVersionEnum = {}));
 var PostListTagsForResourceQueryParams = /** @class */ (function (_super) {
     __extends(PostListTagsForResourceQueryParams, _super);
     function PostListTagsForResourceQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostListTagsForResourceQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostListTagsForResourceQueryParams.prototype, "version", void 0);
     return PostListTagsForResourceQueryParams;
-}(SpeakeasyBase));
-export { PostListTagsForResourceQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostListTagsForResourceQueryParams = PostListTagsForResourceQueryParams;
 var PostListTagsForResourceHeaders = /** @class */ (function (_super) {
     __extends(PostListTagsForResourceHeaders, _super);
     function PostListTagsForResourceHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostListTagsForResourceHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostListTagsForResourceHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostListTagsForResourceHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostListTagsForResourceHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostListTagsForResourceHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostListTagsForResourceHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostListTagsForResourceHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostListTagsForResourceHeaders;
-}(SpeakeasyBase));
-export { PostListTagsForResourceHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostListTagsForResourceHeaders = PostListTagsForResourceHeaders;
 var PostListTagsForResourceRequest = /** @class */ (function (_super) {
     __extends(PostListTagsForResourceRequest, _super);
     function PostListTagsForResourceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostListTagsForResourceQueryParams)
     ], PostListTagsForResourceRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostListTagsForResourceHeaders)
     ], PostListTagsForResourceRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostListTagsForResourceRequest.prototype, "request", void 0);
     return PostListTagsForResourceRequest;
-}(SpeakeasyBase));
-export { PostListTagsForResourceRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostListTagsForResourceRequest = PostListTagsForResourceRequest;
 var PostListTagsForResourceResponse = /** @class */ (function (_super) {
     __extends(PostListTagsForResourceResponse, _super);
     function PostListTagsForResourceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostListTagsForResourceResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostListTagsForResourceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostListTagsForResourceResponse.prototype, "statusCode", void 0);
     return PostListTagsForResourceResponse;
-}(SpeakeasyBase));
-export { PostListTagsForResourceResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostListTagsForResourceResponse = PostListTagsForResourceResponse;

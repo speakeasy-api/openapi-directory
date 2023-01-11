@@ -14,7 +14,7 @@ export declare class CreateProjectRequestBody extends SpeakeasyBase {
     portalId: string;
     projectDescription?: string;
     projectName: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateProjectRequest extends SpeakeasyBase {
     headers: CreateProjectHeaders;

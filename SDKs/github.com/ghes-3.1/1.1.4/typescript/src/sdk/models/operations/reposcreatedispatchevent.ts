@@ -14,7 +14,7 @@ export class ReposCreateDispatchEventPathParams extends SpeakeasyBase {
 
 export class ReposCreateDispatchEventRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=client_payload" })
-  clientPayload?: Map<string, any>;
+  clientPayload?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=event_type" })
   eventType: string;

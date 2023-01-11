@@ -15,7 +15,7 @@ export class BatchResponseSubscriptionResponse extends SpeakeasyBase {
   completedAt: Date;
 
   @SpeakeasyMetadata({ data: "json, name=links" })
-  links?: Map<string, string>;
+  links?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=requestedAt" })
   requestedAt?: Date;

@@ -58,7 +58,7 @@ export class OnedirectdebitsGetResponses200ContentApplication1jsonSchemaProperti
   directDebitUuid?: string;
 
   @SpeakeasyMetadata({ data: "json, name=isDDIC" })
-  isDdic?: boolean;
+  isDDIC?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=lastUpdated" })
   lastUpdated?: Date;

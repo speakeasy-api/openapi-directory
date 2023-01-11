@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleFactcheckingFactchecktoolsV1alpha1Claim } from "./googlefactcheckingfactchecktoolsv1alpha1claim";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlefactcheckingfactchecktoolsv1alpha1claim_1 = require("./googlefactcheckingfactchecktoolsv1alpha1claim");
 // GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse
 /**
  * Response from searching fact-checked claims.
@@ -34,13 +37,13 @@ var GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse = /**
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=claims", elemType: GoogleFactcheckingFactchecktoolsV1alpha1Claim }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=claims", elemType: googlefactcheckingfactchecktoolsv1alpha1claim_1.GoogleFactcheckingFactchecktoolsV1alpha1Claim }),
         __metadata("design:type", Array)
     ], GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse.prototype, "claims", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse.prototype, "nextPageToken", void 0);
     return GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse;
-}(SpeakeasyBase));
-export { GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse = GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse;

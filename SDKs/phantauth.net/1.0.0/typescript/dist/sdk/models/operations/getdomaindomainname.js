@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDomainDomainnameResponse = exports.GetDomainDomainnameRequest = exports.GetDomainDomainname200ApplicationJson = exports.GetDomainDomainnamePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDomainDomainnamePathParams = /** @class */ (function (_super) {
     __extends(GetDomainDomainnamePathParams, _super);
     function GetDomainDomainnamePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=domainname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=domainname" }),
         __metadata("design:type", String)
     ], GetDomainDomainnamePathParams.prototype, "domainname", void 0);
     return GetDomainDomainnamePathParams;
-}(SpeakeasyBase));
-export { GetDomainDomainnamePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainDomainnamePathParams = GetDomainDomainnamePathParams;
 var GetDomainDomainname200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetDomainDomainname200ApplicationJson, _super);
     function GetDomainDomainname200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@id" }),
         __metadata("design:type", String)
     ], GetDomainDomainname200ApplicationJson.prototype, "atId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logo" }),
         __metadata("design:type", String)
     ], GetDomainDomainname200ApplicationJson.prototype, "logo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members" }),
         __metadata("design:type", Array)
     ], GetDomainDomainname200ApplicationJson.prototype, "members", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetDomainDomainname200ApplicationJson.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile" }),
         __metadata("design:type", String)
     ], GetDomainDomainname200ApplicationJson.prototype, "profile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sub" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sub" }),
         __metadata("design:type", String)
     ], GetDomainDomainname200ApplicationJson.prototype, "sub", void 0);
     return GetDomainDomainname200ApplicationJson;
-}(SpeakeasyBase));
-export { GetDomainDomainname200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainDomainname200ApplicationJson = GetDomainDomainname200ApplicationJson;
 var GetDomainDomainnameRequest = /** @class */ (function (_super) {
     __extends(GetDomainDomainnameRequest, _super);
     function GetDomainDomainnameRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDomainDomainnamePathParams)
     ], GetDomainDomainnameRequest.prototype, "pathParams", void 0);
     return GetDomainDomainnameRequest;
-}(SpeakeasyBase));
-export { GetDomainDomainnameRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainDomainnameRequest = GetDomainDomainnameRequest;
 var GetDomainDomainnameResponse = /** @class */ (function (_super) {
     __extends(GetDomainDomainnameResponse, _super);
     function GetDomainDomainnameResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDomainDomainnameResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetDomainDomainname200ApplicationJson)
-    ], GetDomainDomainnameResponse.prototype, "getDomainDomainname200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDomainDomainnameResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetDomainDomainname200ApplicationJson)
+    ], GetDomainDomainnameResponse.prototype, "getDomainDomainname200ApplicationJSONObject", void 0);
     return GetDomainDomainnameResponse;
-}(SpeakeasyBase));
-export { GetDomainDomainnameResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainDomainnameResponse = GetDomainDomainnameResponse;

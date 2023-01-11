@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostQueryResponse = exports.PostQueryRequest = exports.PostQueryQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostQueryQueryParams = /** @class */ (function (_super) {
     __extends(PostQueryQueryParams, _super);
     function PostQueryQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=1_property" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=1_property" }),
         __metadata("design:type", String)
     ], PostQueryQueryParams.prototype, "oneProperty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=1_property.value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=1_property.value" }),
         __metadata("design:type", String)
     ], PostQueryQueryParams.prototype, "onePropertyValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=p.limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=p.limit" }),
         __metadata("design:type", Number)
     ], PostQueryQueryParams.prototype, "pLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=path" }),
         __metadata("design:type", String)
     ], PostQueryQueryParams.prototype, "path", void 0);
     return PostQueryQueryParams;
-}(SpeakeasyBase));
-export { PostQueryQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostQueryQueryParams = PostQueryQueryParams;
 var PostQueryRequest = /** @class */ (function (_super) {
     __extends(PostQueryRequest, _super);
     function PostQueryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostQueryQueryParams)
     ], PostQueryRequest.prototype, "queryParams", void 0);
     return PostQueryRequest;
-}(SpeakeasyBase));
-export { PostQueryRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostQueryRequest = PostQueryRequest;
 var PostQueryResponse = /** @class */ (function (_super) {
     __extends(PostQueryResponse, _super);
     function PostQueryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostQueryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostQueryResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], PostQueryResponse.prototype, "postQueryDefaultApplicationJsonString", void 0);
+    ], PostQueryResponse.prototype, "postQueryDefaultApplicationJSONString", void 0);
     return PostQueryResponse;
-}(SpeakeasyBase));
-export { PostQueryResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostQueryResponse = PostQueryResponse;

@@ -1,9 +1,10 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class DestroyKubernetesAssociatedResourcesSelectivePathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=cluster_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=cluster_id" })
   clusterId: string;
 }
 
@@ -13,51 +14,51 @@ export class DestroyKubernetesAssociatedResourcesSelectivePathParams extends Spe
  * An object containing the IDs of resources to be destroyed along with their associated with a Kubernetes cluster.
 **/
 export class DestroyKubernetesAssociatedResourcesSelectiveRequestBody extends SpeakeasyBase {
-  @Metadata({ data: "json, name=load_balancers" })
+  @SpeakeasyMetadata({ data: "json, name=load_balancers" })
   loadBalancers?: string[];
 
-  @Metadata({ data: "json, name=volume_snapshots" })
+  @SpeakeasyMetadata({ data: "json, name=volume_snapshots" })
   volumeSnapshots?: string[];
 
-  @Metadata({ data: "json, name=volumes" })
+  @SpeakeasyMetadata({ data: "json, name=volumes" })
   volumes?: string[];
 }
 
 
-export class DestroyKubernetesAssociatedResourcesSelectiveRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: DestroyKubernetesAssociatedResourcesSelectivePathParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request: DestroyKubernetesAssociatedResourcesSelectiveRequestBody;
-}
-
-
 export class DestroyKubernetesAssociatedResourcesSelective401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class DestroyKubernetesAssociatedResourcesSelectiveRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: DestroyKubernetesAssociatedResourcesSelectivePathParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: DestroyKubernetesAssociatedResourcesSelectiveRequestBody;
+}
+
+
 export class DestroyKubernetesAssociatedResourcesSelectiveResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  destroyKubernetesAssociatedResourcesSelective401ApplicationJsonObject?: DestroyKubernetesAssociatedResourcesSelective401ApplicationJson;
+  @SpeakeasyMetadata()
+  destroyKubernetesAssociatedResourcesSelective401ApplicationJSONObject?: DestroyKubernetesAssociatedResourcesSelective401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

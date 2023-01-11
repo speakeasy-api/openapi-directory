@@ -11,7 +11,7 @@ import { ConsentStatusEnum } from "./consentstatusenum";
 **/
 export class ConsentInformationResponse200Json extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=_links", elemType: HrefType })
-  links?: Map<string, HrefType>;
+  links?: Record<string, HrefType>;
 
   @SpeakeasyMetadata({ data: "json, name=access" })
   access: AccountAccess;

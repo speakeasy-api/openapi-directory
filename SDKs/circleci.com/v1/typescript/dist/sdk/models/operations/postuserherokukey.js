@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostUserHerokuKeyResponse = exports.PostUserHerokuKey403ApplicationJson = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostUserHerokuKey403ApplicationJson = /** @class */ (function (_super) {
     __extends(PostUserHerokuKey403ApplicationJson, _super);
     function PostUserHerokuKey403ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostUserHerokuKey403ApplicationJson.prototype, "message", void 0);
     return PostUserHerokuKey403ApplicationJson;
-}(SpeakeasyBase));
-export { PostUserHerokuKey403ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostUserHerokuKey403ApplicationJson = PostUserHerokuKey403ApplicationJson;
 var PostUserHerokuKeyResponse = /** @class */ (function (_super) {
     __extends(PostUserHerokuKeyResponse, _super);
     function PostUserHerokuKeyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostUserHerokuKeyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostUserHerokuKey403ApplicationJson)
-    ], PostUserHerokuKeyResponse.prototype, "postUserHerokuKey403ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostUserHerokuKeyResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostUserHerokuKey403ApplicationJson)
+    ], PostUserHerokuKeyResponse.prototype, "postUserHerokuKey403ApplicationJSONObject", void 0);
     return PostUserHerokuKeyResponse;
-}(SpeakeasyBase));
-export { PostUserHerokuKeyResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostUserHerokuKeyResponse = PostUserHerokuKeyResponse;

@@ -15,7 +15,7 @@ export declare class DownloadDefaultKeyPairHeaders extends SpeakeasyBase {
 }
 export declare class DownloadDefaultKeyPairRequest extends SpeakeasyBase {
     headers: DownloadDefaultKeyPairHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class DownloadDefaultKeyPairResponse extends SpeakeasyBase {
     accessDeniedException?: any;

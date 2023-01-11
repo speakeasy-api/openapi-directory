@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportCertificateMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var tag_1 = require("./tag");
 var ImportCertificateMessage = /** @class */ (function (_super) {
     __extends(ImportCertificateMessage, _super);
     function ImportCertificateMessage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CertificateIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CertificateIdentifier" }),
         __metadata("design:type", String)
     ], ImportCertificateMessage.prototype, "certificateIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CertificatePem" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CertificatePem" }),
         __metadata("design:type", String)
     ], ImportCertificateMessage.prototype, "certificatePem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CertificateWallet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CertificateWallet" }),
         __metadata("design:type", String)
     ], ImportCertificateMessage.prototype, "certificateWallet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], ImportCertificateMessage.prototype, "tags", void 0);
     return ImportCertificateMessage;
-}(SpeakeasyBase));
-export { ImportCertificateMessage };
+}(utils_1.SpeakeasyBase));
+exports.ImportCertificateMessage = ImportCertificateMessage;

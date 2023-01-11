@@ -62,7 +62,7 @@ export class PutConfigurationSetSuppressionOptionsResponse extends SpeakeasyBase
   notFoundException?: any;
 
   @SpeakeasyMetadata()
-  putConfigurationSetSuppressionOptionsResponse?: Map<string, any>;
+  putConfigurationSetSuppressionOptionsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

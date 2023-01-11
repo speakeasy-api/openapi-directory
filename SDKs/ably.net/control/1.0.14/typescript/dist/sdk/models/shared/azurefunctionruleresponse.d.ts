@@ -27,7 +27,7 @@ export declare class AzureFunctionRuleResponseTarget extends SpeakeasyBase {
     signingKeyId?: string;
 }
 export declare class AzureFunctionRuleResponse extends SpeakeasyBase {
-    links?: Map<string, any>;
+    links?: Record<string, any>;
     appId?: string;
     created?: number;
     id?: string;

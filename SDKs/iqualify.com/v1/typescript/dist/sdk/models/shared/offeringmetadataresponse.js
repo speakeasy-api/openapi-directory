@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,89 +23,91 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OfferingMetadata } from "./offeringmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OfferingMetadataResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var offeringmetadata_1 = require("./offeringmetadata");
 var OfferingMetadataResponse = /** @class */ (function (_super) {
     __extends(OfferingMetadataResponse, _super);
     function OfferingMetadataResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentId" }),
         __metadata("design:type", String)
     ], OfferingMetadataResponse.prototype, "contentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coverImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coverImageUrl" }),
         __metadata("design:type", String)
     ], OfferingMetadataResponse.prototype, "coverImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], OfferingMetadataResponse.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], OfferingMetadataResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=earlyCloseOffDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=earlyCloseOffDate" }),
         __metadata("design:type", Date)
     ], OfferingMetadataResponse.prototype, "earlyCloseOffDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end" }),
         __metadata("design:type", Date)
     ], OfferingMetadataResponse.prototype, "end", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enrollmentLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enrollmentLimit" }),
         __metadata("design:type", Number)
     ], OfferingMetadataResponse.prototype, "enrollmentLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasEarlyCloseOff" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasEarlyCloseOff" }),
         __metadata("design:type", Boolean)
     ], OfferingMetadataResponse.prototype, "hasEarlyCloseOff", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], OfferingMetadataResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identifier" }),
         __metadata("design:type", String)
     ], OfferingMetadataResponse.prototype, "identifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isReadonly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isReadonly" }),
         __metadata("design:type", Boolean)
     ], OfferingMetadataResponse.prototype, "isReadonly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", OfferingMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", offeringmetadata_1.OfferingMetadata)
     ], OfferingMetadataResponse.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], OfferingMetadataResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overview" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overview" }),
         __metadata("design:type", String)
     ], OfferingMetadataResponse.prototype, "overview", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price" }),
         __metadata("design:type", Number)
     ], OfferingMetadataResponse.prototype, "price", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
         __metadata("design:type", Date)
     ], OfferingMetadataResponse.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tasksEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tasksEnabled" }),
         __metadata("design:type", Boolean)
     ], OfferingMetadataResponse.prototype, "tasksEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trailerVideoUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trailerVideoUrl" }),
         __metadata("design:type", String)
     ], OfferingMetadataResponse.prototype, "trailerVideoUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useRelativeDates" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useRelativeDates" }),
         __metadata("design:type", Boolean)
     ], OfferingMetadataResponse.prototype, "useRelativeDates", void 0);
     return OfferingMetadataResponse;
-}(SpeakeasyBase));
-export { OfferingMetadataResponse };
+}(utils_1.SpeakeasyBase));
+exports.OfferingMetadataResponse = OfferingMetadataResponse;

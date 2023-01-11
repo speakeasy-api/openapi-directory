@@ -4,7 +4,7 @@ export declare class AssetReportRemoveRequest extends SpeakeasyBase {
     request: shared.AssetReportRemoveRequest;
 }
 export declare class AssetReportRemoveResponse extends SpeakeasyBase {
-    assetReportRemoveResponse?: Map<string, any>;
+    assetReportRemoveResponse?: Record<string, any>;
     contentType: string;
     statusCode: number;
 }

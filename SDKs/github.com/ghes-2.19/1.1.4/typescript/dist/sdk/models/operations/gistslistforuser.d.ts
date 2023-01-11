@@ -14,7 +14,7 @@ export declare class GistsListForUserRequest extends SpeakeasyBase {
 }
 export declare class GistsListForUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     baseGists?: shared.BaseGist[];
     validationError?: shared.ValidationError;

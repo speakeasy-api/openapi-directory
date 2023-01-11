@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,59 +23,61 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SuiteRunStatusEnum } from "./suiterunstatusenum";
-import { SuiteRunConfiguration } from "./suiterunconfiguration";
-import { TestResult } from "./testresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSuiteRunResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var suiterunstatusenum_1 = require("./suiterunstatusenum");
+var suiterunconfiguration_1 = require("./suiterunconfiguration");
+var testresult_1 = require("./testresult");
 var GetSuiteRunResponse = /** @class */ (function (_super) {
     __extends(GetSuiteRunResponse, _super);
     function GetSuiteRunResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Date)
     ], GetSuiteRunResponse.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorReason" }),
         __metadata("design:type", String)
     ], GetSuiteRunResponse.prototype, "errorReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], GetSuiteRunResponse.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetSuiteRunResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suiteDefinitionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suiteDefinitionId" }),
         __metadata("design:type", String)
     ], GetSuiteRunResponse.prototype, "suiteDefinitionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suiteDefinitionVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suiteDefinitionVersion" }),
         __metadata("design:type", String)
     ], GetSuiteRunResponse.prototype, "suiteDefinitionVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suiteRunArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suiteRunArn" }),
         __metadata("design:type", String)
     ], GetSuiteRunResponse.prototype, "suiteRunArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suiteRunConfiguration" }),
-        __metadata("design:type", SuiteRunConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suiteRunConfiguration" }),
+        __metadata("design:type", suiterunconfiguration_1.SuiteRunConfiguration)
     ], GetSuiteRunResponse.prototype, "suiteRunConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suiteRunId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suiteRunId" }),
         __metadata("design:type", String)
     ], GetSuiteRunResponse.prototype, "suiteRunId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], GetSuiteRunResponse.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testResult" }),
-        __metadata("design:type", TestResult)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testResult" }),
+        __metadata("design:type", testresult_1.TestResult)
     ], GetSuiteRunResponse.prototype, "testResult", void 0);
     return GetSuiteRunResponse;
-}(SpeakeasyBase));
-export { GetSuiteRunResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSuiteRunResponse = GetSuiteRunResponse;

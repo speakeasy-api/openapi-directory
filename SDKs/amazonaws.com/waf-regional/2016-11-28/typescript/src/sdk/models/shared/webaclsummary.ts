@@ -11,5 +11,5 @@ export class WebAclSummary extends SpeakeasyBase {
   name: string;
 
   @SpeakeasyMetadata({ data: "json, name=WebACLId" })
-  webAclId: string;
+  webACLId: string;
 }

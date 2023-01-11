@@ -1,11 +1,11 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 /**
  * This type defines the fields returned in an ad response.
 **/
 export declare class AdResponse extends SpeakeasyBase {
     adId?: string;
-    errors?: Error[];
+    errors?: ErrorT[];
     href?: string;
     listingId?: string;
     statusCode?: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SentenceDependencyOut } from "./sentencedependencyout";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SentenceDependenciesOut = void 0;
+var utils_1 = require("../../../internal/utils");
+var sentencedependencyout_1 = require("./sentencedependencyout");
 var SentenceDependenciesOut = /** @class */ (function (_super) {
     __extends(SentenceDependenciesOut, _super);
     function SentenceDependenciesOut() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sentence_dependencies", elemType: SentenceDependencyOut }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sentence_dependencies", elemType: sentencedependencyout_1.SentenceDependencyOut }),
         __metadata("design:type", Array)
     ], SentenceDependenciesOut.prototype, "sentenceDependencies", void 0);
     return SentenceDependenciesOut;
-}(SpeakeasyBase));
-export { SentenceDependenciesOut };
+}(utils_1.SpeakeasyBase));
+exports.SentenceDependenciesOut = SentenceDependenciesOut;

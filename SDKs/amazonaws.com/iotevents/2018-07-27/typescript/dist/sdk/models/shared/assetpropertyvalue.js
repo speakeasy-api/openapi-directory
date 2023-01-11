@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssetPropertyTimestamp } from "./assetpropertytimestamp";
-import { AssetPropertyVariant } from "./assetpropertyvariant";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssetPropertyValue = void 0;
+var utils_1 = require("../../../internal/utils");
+var assetpropertytimestamp_1 = require("./assetpropertytimestamp");
+var assetpropertyvariant_1 = require("./assetpropertyvariant");
 // AssetPropertyValue
 /**
  * <p>A structure that contains value information. For more information, see <a href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_AssetPropertyValue.html">AssetPropertyValue</a> in the <i>AWS IoT SiteWise API Reference</i>.</p> <p>You must use expressions for all parameters in <code>AssetPropertyValue</code>. The expressions accept literals, operators, functions, references, and substitution templates.</p> <p class="title"> <b>Examples</b> </p> <ul> <li> <p>For literal values, the expressions must contain single quotes. For example, the value for the <code>quality</code> parameter can be <code>'GOOD'</code>.</p> </li> <li> <p>For references, you must specify either variables or input values. For example, the value for the <code>quality</code> parameter can be <code>$input.TemperatureInput.sensorData.quality</code>.</p> </li> </ul> <p>For more information, see <a href="https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html">Expressions</a> in the <i>AWS IoT Events Developer Guide</i>.</p>
@@ -35,17 +38,17 @@ var AssetPropertyValue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quality" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quality" }),
         __metadata("design:type", String)
     ], AssetPropertyValue.prototype, "quality", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
-        __metadata("design:type", AssetPropertyTimestamp)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
+        __metadata("design:type", assetpropertytimestamp_1.AssetPropertyTimestamp)
     ], AssetPropertyValue.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", AssetPropertyVariant)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", assetpropertyvariant_1.AssetPropertyVariant)
     ], AssetPropertyValue.prototype, "value", void 0);
     return AssetPropertyValue;
-}(SpeakeasyBase));
-export { AssetPropertyValue };
+}(utils_1.SpeakeasyBase));
+exports.AssetPropertyValue = AssetPropertyValue;

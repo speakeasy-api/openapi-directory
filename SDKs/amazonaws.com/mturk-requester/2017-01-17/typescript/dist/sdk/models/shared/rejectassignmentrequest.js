@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RejectAssignmentRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var RejectAssignmentRequest = /** @class */ (function (_super) {
     __extends(RejectAssignmentRequest, _super);
     function RejectAssignmentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssignmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssignmentId" }),
         __metadata("design:type", String)
     ], RejectAssignmentRequest.prototype, "assignmentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RequesterFeedback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RequesterFeedback" }),
         __metadata("design:type", String)
     ], RejectAssignmentRequest.prototype, "requesterFeedback", void 0);
     return RejectAssignmentRequest;
-}(SpeakeasyBase));
-export { RejectAssignmentRequest };
+}(utils_1.SpeakeasyBase));
+exports.RejectAssignmentRequest = RejectAssignmentRequest;

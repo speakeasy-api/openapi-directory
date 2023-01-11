@@ -93,7 +93,7 @@ export declare class GetSearchCarFsboActiveRequest extends SpeakeasyBase {
 }
 export declare class GetSearchCarFsboActiveResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     searchResponse?: shared.SearchResponse;
     statusCode: number;
 }

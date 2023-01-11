@@ -18,7 +18,7 @@ export declare class ActionsListSelfHostedRunnersForRepoRequest extends Speakeas
 }
 export declare class ActionsListSelfHostedRunnersForRepoResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    actionsListSelfHostedRunnersForRepo200ApplicationJsonObject?: ActionsListSelfHostedRunnersForRepo200ApplicationJson;
+    actionsListSelfHostedRunnersForRepo200ApplicationJSONObject?: ActionsListSelfHostedRunnersForRepo200ApplicationJson;
 }

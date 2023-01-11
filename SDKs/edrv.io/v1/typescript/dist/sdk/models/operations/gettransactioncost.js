@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTransactionCostResponse = exports.GetTransactionCostRequest = exports.GetTransactionCostPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetTransactionCostPathParams = /** @class */ (function (_super) {
     __extends(GetTransactionCostPathParams, _super);
     function GetTransactionCostPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetTransactionCostPathParams.prototype, "id", void 0);
     return GetTransactionCostPathParams;
-}(SpeakeasyBase));
-export { GetTransactionCostPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionCostPathParams = GetTransactionCostPathParams;
 var GetTransactionCostRequest = /** @class */ (function (_super) {
     __extends(GetTransactionCostRequest, _super);
     function GetTransactionCostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetTransactionCostPathParams)
     ], GetTransactionCostRequest.prototype, "pathParams", void 0);
     return GetTransactionCostRequest;
-}(SpeakeasyBase));
-export { GetTransactionCostRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionCostRequest = GetTransactionCostRequest;
 var GetTransactionCostResponse = /** @class */ (function (_super) {
     __extends(GetTransactionCostResponse, _super);
     function GetTransactionCostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetTransactionCostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetTransactionCostResponse.prototype, "statusCode", void 0);
     return GetTransactionCostResponse;
-}(SpeakeasyBase));
-export { GetTransactionCostResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetTransactionCostResponse = GetTransactionCostResponse;

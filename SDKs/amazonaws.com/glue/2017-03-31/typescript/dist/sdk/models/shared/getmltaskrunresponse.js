@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,54 +23,56 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TaskRunProperties } from "./taskrunproperties";
-import { TaskStatusTypeEnum } from "./taskstatustypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMlTaskRunResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var taskrunproperties_1 = require("./taskrunproperties");
+var taskstatustypeenum_1 = require("./taskstatustypeenum");
 var GetMlTaskRunResponse = /** @class */ (function (_super) {
     __extends(GetMlTaskRunResponse, _super);
     function GetMlTaskRunResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CompletedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CompletedOn" }),
         __metadata("design:type", Date)
     ], GetMlTaskRunResponse.prototype, "completedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorString" }),
         __metadata("design:type", String)
     ], GetMlTaskRunResponse.prototype, "errorString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExecutionTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExecutionTime" }),
         __metadata("design:type", Number)
     ], GetMlTaskRunResponse.prototype, "executionTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedOn" }),
         __metadata("design:type", Date)
     ], GetMlTaskRunResponse.prototype, "lastModifiedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogGroupName" }),
         __metadata("design:type", String)
     ], GetMlTaskRunResponse.prototype, "logGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Properties" }),
-        __metadata("design:type", TaskRunProperties)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Properties" }),
+        __metadata("design:type", taskrunproperties_1.TaskRunProperties)
     ], GetMlTaskRunResponse.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartedOn" }),
         __metadata("design:type", Date)
     ], GetMlTaskRunResponse.prototype, "startedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], GetMlTaskRunResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TaskRunId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TaskRunId" }),
         __metadata("design:type", String)
     ], GetMlTaskRunResponse.prototype, "taskRunId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransformId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransformId" }),
         __metadata("design:type", String)
     ], GetMlTaskRunResponse.prototype, "transformId", void 0);
     return GetMlTaskRunResponse;
-}(SpeakeasyBase));
-export { GetMlTaskRunResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMlTaskRunResponse = GetMlTaskRunResponse;

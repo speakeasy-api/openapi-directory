@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkClientSplashAuthorizationStatusResponse = exports.UpdateNetworkClientSplashAuthorizationStatusRequest = exports.UpdateNetworkClientSplashAuthorizationStatusRequestBody = exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids = exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids9 = exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids8 = exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids7 = exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids6 = exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids5 = exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids4 = exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids3 = exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids2 = exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids14 = exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids13 = exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids12 = exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids11 = exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids10 = exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids1 = exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids0 = exports.UpdateNetworkClientSplashAuthorizationStatusPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkClientSplashAuthorizationStatusPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkClientSplashAuthorizationStatusPathParams, _super);
     function UpdateNetworkClientSplashAuthorizationStatusPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=clientId" }),
         __metadata("design:type", String)
     ], UpdateNetworkClientSplashAuthorizationStatusPathParams.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkClientSplashAuthorizationStatusPathParams.prototype, "networkId", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusPathParams = UpdateNetworkClientSplashAuthorizationStatusPathParams;
 // UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids0
 /**
  * Splash authorization for SSID 0
@@ -49,12 +52,12 @@ var UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids0 = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAuthorized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAuthorized" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids0.prototype, "isAuthorized", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids0;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids0 };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids0 = UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids0;
 // UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids1
 /**
  * Splash authorization for SSID 1
@@ -65,12 +68,12 @@ var UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids1 = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAuthorized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAuthorized" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids1.prototype, "isAuthorized", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids1;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids1 };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids1 = UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids1;
 // UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids10
 /**
  * Splash authorization for SSID 10
@@ -81,12 +84,12 @@ var UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids10 = /** @class 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAuthorized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAuthorized" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids10.prototype, "isAuthorized", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids10;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids10 };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids10 = UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids10;
 // UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids11
 /**
  * Splash authorization for SSID 11
@@ -97,12 +100,12 @@ var UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids11 = /** @class 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAuthorized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAuthorized" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids11.prototype, "isAuthorized", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids11;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids11 };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids11 = UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids11;
 // UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids12
 /**
  * Splash authorization for SSID 12
@@ -113,12 +116,12 @@ var UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids12 = /** @class 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAuthorized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAuthorized" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids12.prototype, "isAuthorized", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids12;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids12 };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids12 = UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids12;
 // UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids13
 /**
  * Splash authorization for SSID 13
@@ -129,12 +132,12 @@ var UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids13 = /** @class 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAuthorized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAuthorized" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids13.prototype, "isAuthorized", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids13;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids13 };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids13 = UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids13;
 // UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids14
 /**
  * Splash authorization for SSID 14
@@ -145,12 +148,12 @@ var UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids14 = /** @class 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAuthorized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAuthorized" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids14.prototype, "isAuthorized", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids14;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids14 };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids14 = UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids14;
 // UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids2
 /**
  * Splash authorization for SSID 2
@@ -161,12 +164,12 @@ var UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids2 = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAuthorized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAuthorized" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids2.prototype, "isAuthorized", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids2;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids2 };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids2 = UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids2;
 // UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids3
 /**
  * Splash authorization for SSID 3
@@ -177,12 +180,12 @@ var UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids3 = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAuthorized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAuthorized" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids3.prototype, "isAuthorized", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids3;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids3 };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids3 = UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids3;
 // UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids4
 /**
  * Splash authorization for SSID 4
@@ -193,12 +196,12 @@ var UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids4 = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAuthorized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAuthorized" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids4.prototype, "isAuthorized", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids4;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids4 };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids4 = UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids4;
 // UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids5
 /**
  * Splash authorization for SSID 5
@@ -209,12 +212,12 @@ var UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids5 = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAuthorized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAuthorized" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids5.prototype, "isAuthorized", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids5;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids5 };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids5 = UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids5;
 // UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids6
 /**
  * Splash authorization for SSID 6
@@ -225,12 +228,12 @@ var UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids6 = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAuthorized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAuthorized" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids6.prototype, "isAuthorized", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids6;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids6 };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids6 = UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids6;
 // UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids7
 /**
  * Splash authorization for SSID 7
@@ -241,12 +244,12 @@ var UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids7 = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAuthorized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAuthorized" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids7.prototype, "isAuthorized", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids7;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids7 };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids7 = UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids7;
 // UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids8
 /**
  * Splash authorization for SSID 8
@@ -257,12 +260,12 @@ var UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids8 = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAuthorized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAuthorized" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids8.prototype, "isAuthorized", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids8;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids8 };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids8 = UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids8;
 // UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids9
 /**
  * Splash authorization for SSID 9
@@ -273,12 +276,12 @@ var UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids9 = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAuthorized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAuthorized" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids9.prototype, "isAuthorized", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids9;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids9 };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids9 = UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids9;
 // UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids
 /**
  * The target SSIDs. Each SSID must be enabled and must have Click-through splash enabled. For each SSID where isAuthorized is true, the expiration time will automatically be set according to the SSID's splash frequency. Not all networks support configuring all SSIDs
@@ -289,113 +292,113 @@ var UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids = /** @class */
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=0" }),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids0)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids.prototype, "zero", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=1" }),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids1)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids.prototype, "one", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=10" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=10" }),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids10)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids.prototype, "ten", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=11" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=11" }),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids11)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids.prototype, "eleven", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=12" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=12" }),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids12)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids.prototype, "twelve", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=13" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=13" }),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids13)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids.prototype, "thirteen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=14" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=14" }),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids14)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids.prototype, "fourteen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=2" }),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids2)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids.prototype, "two", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=3" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=3" }),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids3)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids.prototype, "three", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=4" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=4" }),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids4)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids.prototype, "four", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=5" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=5" }),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids5)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids.prototype, "five", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=6" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=6" }),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids6)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids.prototype, "six", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=7" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=7" }),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids7)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids.prototype, "seven", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=8" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=8" }),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids8)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids.prototype, "eight", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=9" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=9" }),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids9)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids.prototype, "nine", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids = UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids;
 var UpdateNetworkClientSplashAuthorizationStatusRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkClientSplashAuthorizationStatusRequestBody, _super);
     function UpdateNetworkClientSplashAuthorizationStatusRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssids" }),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusRequestBodySsids)
     ], UpdateNetworkClientSplashAuthorizationStatusRequestBody.prototype, "ssids", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequestBody = UpdateNetworkClientSplashAuthorizationStatusRequestBody;
 var UpdateNetworkClientSplashAuthorizationStatusRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkClientSplashAuthorizationStatusRequest, _super);
     function UpdateNetworkClientSplashAuthorizationStatusRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusPathParams)
     ], UpdateNetworkClientSplashAuthorizationStatusRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkClientSplashAuthorizationStatusRequestBody)
     ], UpdateNetworkClientSplashAuthorizationStatusRequest.prototype, "request", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusRequest = UpdateNetworkClientSplashAuthorizationStatusRequest;
 var UpdateNetworkClientSplashAuthorizationStatusResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkClientSplashAuthorizationStatusResponse, _super);
     function UpdateNetworkClientSplashAuthorizationStatusResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkClientSplashAuthorizationStatusResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkClientSplashAuthorizationStatusResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkClientSplashAuthorizationStatusResponse.prototype, "updateNetworkClientSplashAuthorizationStatus200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkClientSplashAuthorizationStatusResponse.prototype, "updateNetworkClientSplashAuthorizationStatus200ApplicationJSONObject", void 0);
     return UpdateNetworkClientSplashAuthorizationStatusResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkClientSplashAuthorizationStatusResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkClientSplashAuthorizationStatusResponse = UpdateNetworkClientSplashAuthorizationStatusResponse;

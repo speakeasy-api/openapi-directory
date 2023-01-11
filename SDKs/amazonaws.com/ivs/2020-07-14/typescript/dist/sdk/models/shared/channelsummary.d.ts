@@ -9,5 +9,5 @@ export declare class ChannelSummary extends SpeakeasyBase {
     latencyMode?: ChannelLatencyModeEnum;
     name?: string;
     recordingConfigurationArn?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

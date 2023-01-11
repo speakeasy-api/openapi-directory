@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeStemmingOptionsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeStemmingOptionsResponse = exports.GetDescribeStemmingOptionsRequest = exports.GetDescribeStemmingOptionsHeaders = exports.GetDescribeStemmingOptionsQueryParams = exports.GetDescribeStemmingOptionsVersionEnum = exports.GetDescribeStemmingOptionsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeStemmingOptionsActionEnum;
 (function (GetDescribeStemmingOptionsActionEnum) {
     GetDescribeStemmingOptionsActionEnum["DescribeStemmingOptions"] = "DescribeStemmingOptions";
-})(GetDescribeStemmingOptionsActionEnum || (GetDescribeStemmingOptionsActionEnum = {}));
-export var GetDescribeStemmingOptionsVersionEnum;
+})(GetDescribeStemmingOptionsActionEnum = exports.GetDescribeStemmingOptionsActionEnum || (exports.GetDescribeStemmingOptionsActionEnum = {}));
+var GetDescribeStemmingOptionsVersionEnum;
 (function (GetDescribeStemmingOptionsVersionEnum) {
     GetDescribeStemmingOptionsVersionEnum["TwoThousandAndEleven0201"] = "2011-02-01";
-})(GetDescribeStemmingOptionsVersionEnum || (GetDescribeStemmingOptionsVersionEnum = {}));
+})(GetDescribeStemmingOptionsVersionEnum = exports.GetDescribeStemmingOptionsVersionEnum || (exports.GetDescribeStemmingOptionsVersionEnum = {}));
 var GetDescribeStemmingOptionsQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeStemmingOptionsQueryParams, _super);
     function GetDescribeStemmingOptionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeStemmingOptionsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DomainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DomainName" }),
         __metadata("design:type", String)
     ], GetDescribeStemmingOptionsQueryParams.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeStemmingOptionsQueryParams.prototype, "version", void 0);
     return GetDescribeStemmingOptionsQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeStemmingOptionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeStemmingOptionsQueryParams = GetDescribeStemmingOptionsQueryParams;
 var GetDescribeStemmingOptionsHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeStemmingOptionsHeaders, _super);
     function GetDescribeStemmingOptionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeStemmingOptionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeStemmingOptionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeStemmingOptionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeStemmingOptionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeStemmingOptionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeStemmingOptionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeStemmingOptionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeStemmingOptionsHeaders;
-}(SpeakeasyBase));
-export { GetDescribeStemmingOptionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeStemmingOptionsHeaders = GetDescribeStemmingOptionsHeaders;
 var GetDescribeStemmingOptionsRequest = /** @class */ (function (_super) {
     __extends(GetDescribeStemmingOptionsRequest, _super);
     function GetDescribeStemmingOptionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeStemmingOptionsQueryParams)
     ], GetDescribeStemmingOptionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeStemmingOptionsHeaders)
     ], GetDescribeStemmingOptionsRequest.prototype, "headers", void 0);
     return GetDescribeStemmingOptionsRequest;
-}(SpeakeasyBase));
-export { GetDescribeStemmingOptionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeStemmingOptionsRequest = GetDescribeStemmingOptionsRequest;
 var GetDescribeStemmingOptionsResponse = /** @class */ (function (_super) {
     __extends(GetDescribeStemmingOptionsResponse, _super);
     function GetDescribeStemmingOptionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeStemmingOptionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeStemmingOptionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeStemmingOptionsResponse.prototype, "statusCode", void 0);
     return GetDescribeStemmingOptionsResponse;
-}(SpeakeasyBase));
-export { GetDescribeStemmingOptionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeStemmingOptionsResponse = GetDescribeStemmingOptionsResponse;

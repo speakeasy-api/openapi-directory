@@ -32,10 +32,10 @@ export class ProductAvailabilityResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  productAvailability200ApplicationJsonAny?: any;
+  productAvailability200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  productAvailabilityDefaultApplicationJsonAny?: any;
+  productAvailabilityDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

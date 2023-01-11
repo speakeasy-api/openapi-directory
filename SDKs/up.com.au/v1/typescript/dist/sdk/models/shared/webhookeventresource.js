@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,127 +23,129 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebhookEventResource = exports.WebhookEventResourceRelationships = exports.WebhookEventResourceRelationshipsWebhook = exports.WebhookEventResourceRelationshipsWebhookLinks = exports.WebhookEventResourceRelationshipsWebhookData = exports.WebhookEventResourceRelationshipsTransaction = exports.WebhookEventResourceRelationshipsTransactionLinks = exports.WebhookEventResourceRelationshipsTransactionData = exports.WebhookEventResourceAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
 var WebhookEventResourceAttributes = /** @class */ (function (_super) {
     __extends(WebhookEventResourceAttributes, _super);
     function WebhookEventResourceAttributes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], WebhookEventResourceAttributes.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventType" }),
         __metadata("design:type", Object)
     ], WebhookEventResourceAttributes.prototype, "eventType", void 0);
     return WebhookEventResourceAttributes;
-}(SpeakeasyBase));
-export { WebhookEventResourceAttributes };
+}(utils_1.SpeakeasyBase));
+exports.WebhookEventResourceAttributes = WebhookEventResourceAttributes;
 var WebhookEventResourceRelationshipsTransactionData = /** @class */ (function (_super) {
     __extends(WebhookEventResourceRelationshipsTransactionData, _super);
     function WebhookEventResourceRelationshipsTransactionData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], WebhookEventResourceRelationshipsTransactionData.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], WebhookEventResourceRelationshipsTransactionData.prototype, "type", void 0);
     return WebhookEventResourceRelationshipsTransactionData;
-}(SpeakeasyBase));
-export { WebhookEventResourceRelationshipsTransactionData };
+}(utils_1.SpeakeasyBase));
+exports.WebhookEventResourceRelationshipsTransactionData = WebhookEventResourceRelationshipsTransactionData;
 var WebhookEventResourceRelationshipsTransactionLinks = /** @class */ (function (_super) {
     __extends(WebhookEventResourceRelationshipsTransactionLinks, _super);
     function WebhookEventResourceRelationshipsTransactionLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=related" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=related" }),
         __metadata("design:type", String)
     ], WebhookEventResourceRelationshipsTransactionLinks.prototype, "related", void 0);
     return WebhookEventResourceRelationshipsTransactionLinks;
-}(SpeakeasyBase));
-export { WebhookEventResourceRelationshipsTransactionLinks };
+}(utils_1.SpeakeasyBase));
+exports.WebhookEventResourceRelationshipsTransactionLinks = WebhookEventResourceRelationshipsTransactionLinks;
 var WebhookEventResourceRelationshipsTransaction = /** @class */ (function (_super) {
     __extends(WebhookEventResourceRelationshipsTransaction, _super);
     function WebhookEventResourceRelationshipsTransaction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", WebhookEventResourceRelationshipsTransactionData)
     ], WebhookEventResourceRelationshipsTransaction.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
         __metadata("design:type", WebhookEventResourceRelationshipsTransactionLinks)
     ], WebhookEventResourceRelationshipsTransaction.prototype, "links", void 0);
     return WebhookEventResourceRelationshipsTransaction;
-}(SpeakeasyBase));
-export { WebhookEventResourceRelationshipsTransaction };
+}(utils_1.SpeakeasyBase));
+exports.WebhookEventResourceRelationshipsTransaction = WebhookEventResourceRelationshipsTransaction;
 var WebhookEventResourceRelationshipsWebhookData = /** @class */ (function (_super) {
     __extends(WebhookEventResourceRelationshipsWebhookData, _super);
     function WebhookEventResourceRelationshipsWebhookData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], WebhookEventResourceRelationshipsWebhookData.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], WebhookEventResourceRelationshipsWebhookData.prototype, "type", void 0);
     return WebhookEventResourceRelationshipsWebhookData;
-}(SpeakeasyBase));
-export { WebhookEventResourceRelationshipsWebhookData };
+}(utils_1.SpeakeasyBase));
+exports.WebhookEventResourceRelationshipsWebhookData = WebhookEventResourceRelationshipsWebhookData;
 var WebhookEventResourceRelationshipsWebhookLinks = /** @class */ (function (_super) {
     __extends(WebhookEventResourceRelationshipsWebhookLinks, _super);
     function WebhookEventResourceRelationshipsWebhookLinks() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=related" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=related" }),
         __metadata("design:type", String)
     ], WebhookEventResourceRelationshipsWebhookLinks.prototype, "related", void 0);
     return WebhookEventResourceRelationshipsWebhookLinks;
-}(SpeakeasyBase));
-export { WebhookEventResourceRelationshipsWebhookLinks };
+}(utils_1.SpeakeasyBase));
+exports.WebhookEventResourceRelationshipsWebhookLinks = WebhookEventResourceRelationshipsWebhookLinks;
 var WebhookEventResourceRelationshipsWebhook = /** @class */ (function (_super) {
     __extends(WebhookEventResourceRelationshipsWebhook, _super);
     function WebhookEventResourceRelationshipsWebhook() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", WebhookEventResourceRelationshipsWebhookData)
     ], WebhookEventResourceRelationshipsWebhook.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
         __metadata("design:type", WebhookEventResourceRelationshipsWebhookLinks)
     ], WebhookEventResourceRelationshipsWebhook.prototype, "links", void 0);
     return WebhookEventResourceRelationshipsWebhook;
-}(SpeakeasyBase));
-export { WebhookEventResourceRelationshipsWebhook };
+}(utils_1.SpeakeasyBase));
+exports.WebhookEventResourceRelationshipsWebhook = WebhookEventResourceRelationshipsWebhook;
 var WebhookEventResourceRelationships = /** @class */ (function (_super) {
     __extends(WebhookEventResourceRelationships, _super);
     function WebhookEventResourceRelationships() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transaction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transaction" }),
         __metadata("design:type", WebhookEventResourceRelationshipsTransaction)
     ], WebhookEventResourceRelationships.prototype, "transaction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webhook" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webhook" }),
         __metadata("design:type", WebhookEventResourceRelationshipsWebhook)
     ], WebhookEventResourceRelationships.prototype, "webhook", void 0);
     return WebhookEventResourceRelationships;
-}(SpeakeasyBase));
-export { WebhookEventResourceRelationships };
+}(utils_1.SpeakeasyBase));
+exports.WebhookEventResourceRelationships = WebhookEventResourceRelationships;
 // WebhookEventResource
 /**
  * Provides the event data used in asynchronous webhook event callbacks to
@@ -156,21 +159,21 @@ var WebhookEventResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
         __metadata("design:type", WebhookEventResourceAttributes)
     ], WebhookEventResource.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], WebhookEventResource.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationships" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationships" }),
         __metadata("design:type", WebhookEventResourceRelationships)
     ], WebhookEventResource.prototype, "relationships", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], WebhookEventResource.prototype, "type", void 0);
     return WebhookEventResource;
-}(SpeakeasyBase));
-export { WebhookEventResource };
+}(utils_1.SpeakeasyBase));
+exports.WebhookEventResource = WebhookEventResource;

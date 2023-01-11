@@ -9,5 +9,5 @@ export declare class GetOrganizationInventoryDeviceRequest extends SpeakeasyBase
 export declare class GetOrganizationInventoryDeviceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationInventoryDevice200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationInventoryDevice200ApplicationJSONObject?: Record<string, any>;
 }

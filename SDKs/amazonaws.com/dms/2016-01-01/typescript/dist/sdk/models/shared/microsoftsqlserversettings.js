@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SafeguardPolicyEnum } from "./safeguardpolicyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MicrosoftSqlServerSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var safeguardpolicyenum_1 = require("./safeguardpolicyenum");
 // MicrosoftSqlServerSettings
 /**
  * Provides information that defines a Microsoft SQL Server endpoint.
@@ -34,61 +37,61 @@ var MicrosoftSqlServerSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BcpPacketSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BcpPacketSize" }),
         __metadata("design:type", Number)
     ], MicrosoftSqlServerSettings.prototype, "bcpPacketSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ControlTablesFileGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ControlTablesFileGroup" }),
         __metadata("design:type", String)
     ], MicrosoftSqlServerSettings.prototype, "controlTablesFileGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseName" }),
         __metadata("design:type", String)
     ], MicrosoftSqlServerSettings.prototype, "databaseName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Password" }),
         __metadata("design:type", String)
     ], MicrosoftSqlServerSettings.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Port" }),
         __metadata("design:type", Number)
     ], MicrosoftSqlServerSettings.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QuerySingleAlwaysOnNode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QuerySingleAlwaysOnNode" }),
         __metadata("design:type", Boolean)
     ], MicrosoftSqlServerSettings.prototype, "querySingleAlwaysOnNode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReadBackupOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReadBackupOnly" }),
         __metadata("design:type", Boolean)
     ], MicrosoftSqlServerSettings.prototype, "readBackupOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SafeguardPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SafeguardPolicy" }),
         __metadata("design:type", String)
     ], MicrosoftSqlServerSettings.prototype, "safeguardPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretsManagerAccessRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretsManagerAccessRoleArn" }),
         __metadata("design:type", String)
     ], MicrosoftSqlServerSettings.prototype, "secretsManagerAccessRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecretsManagerSecretId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecretsManagerSecretId" }),
         __metadata("design:type", String)
     ], MicrosoftSqlServerSettings.prototype, "secretsManagerSecretId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServerName" }),
         __metadata("design:type", String)
     ], MicrosoftSqlServerSettings.prototype, "serverName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UseBcpFullLoad" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UseBcpFullLoad" }),
         __metadata("design:type", Boolean)
     ], MicrosoftSqlServerSettings.prototype, "useBcpFullLoad", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UseThirdPartyBackupDevice" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UseThirdPartyBackupDevice" }),
         __metadata("design:type", Boolean)
     ], MicrosoftSqlServerSettings.prototype, "useThirdPartyBackupDevice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Username" }),
         __metadata("design:type", String)
     ], MicrosoftSqlServerSettings.prototype, "username", void 0);
     return MicrosoftSqlServerSettings;
-}(SpeakeasyBase));
-export { MicrosoftSqlServerSettings };
+}(utils_1.SpeakeasyBase));
+exports.MicrosoftSqlServerSettings = MicrosoftSqlServerSettings;

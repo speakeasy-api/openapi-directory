@@ -37,8 +37,8 @@ export class PostAssetsReturnsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postAssetsReturns200ApplicationJsonObject?: PostAssetsReturns200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postAssetsReturns200ApplicationJSONObject?: PostAssetsReturns200ApplicationJson;
 }

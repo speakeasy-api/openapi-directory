@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommandEnumCommandModeEnum = void 0;
+var CommandEnumCommandModeEnum;
+(function (CommandEnumCommandModeEnum) {
+    CommandEnumCommandModeEnum["Text"] = "text";
+    CommandEnumCommandModeEnum["Binary"] = "binary";
+})(CommandEnumCommandModeEnum = exports.CommandEnumCommandModeEnum || (exports.CommandEnumCommandModeEnum = {}));

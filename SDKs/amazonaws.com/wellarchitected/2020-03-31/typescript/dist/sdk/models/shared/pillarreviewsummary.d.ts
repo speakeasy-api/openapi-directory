@@ -6,5 +6,5 @@ export declare class PillarReviewSummary extends SpeakeasyBase {
     notes?: string;
     pillarId?: string;
     pillarName?: string;
-    riskCounts?: Map<string, number>;
+    riskCounts?: Record<string, number>;
 }

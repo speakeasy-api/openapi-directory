@@ -11,14 +11,14 @@ export declare enum PolicyGlobalPolicyEvaluationModeEnum {
 **/
 export declare class Policy extends SpeakeasyBase {
     admissionWhitelistPatterns?: AdmissionWhitelistPattern[];
-    clusterAdmissionRules?: Map<string, AdmissionRule>;
+    clusterAdmissionRules?: Record<string, AdmissionRule>;
     defaultAdmissionRule?: AdmissionRule;
     description?: string;
     etag?: string;
     globalPolicyEvaluationMode?: PolicyGlobalPolicyEvaluationModeEnum;
-    istioServiceIdentityAdmissionRules?: Map<string, AdmissionRule>;
-    kubernetesNamespaceAdmissionRules?: Map<string, AdmissionRule>;
-    kubernetesServiceAccountAdmissionRules?: Map<string, AdmissionRule>;
+    istioServiceIdentityAdmissionRules?: Record<string, AdmissionRule>;
+    kubernetesNamespaceAdmissionRules?: Record<string, AdmissionRule>;
+    kubernetesServiceAccountAdmissionRules?: Record<string, AdmissionRule>;
     name?: string;
     updateTime?: string;
 }

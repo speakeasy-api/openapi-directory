@@ -19,8 +19,8 @@ export declare class GetRecordsRecordIdJsonRequest extends SpeakeasyBase {
 export declare class GetRecordsRecordIdJsonResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    getRecordsRecordIdJson403ApplicationJsonObject?: Map<string, any>;
-    getRecordsRecordIdJson404ApplicationJsonObject?: Map<string, any>;
     statusCode: number;
-    record?: shared.Record;
+    getRecordsRecordIdJSON403ApplicationJSONObject?: Record<string, any>;
+    getRecordsRecordIdJSON404ApplicationJSONObject?: Record<string, any>;
+    record?: shared.RecordT;
 }

@@ -16,8 +16,8 @@ export declare class UpdateDomainNameHeaders extends SpeakeasyBase {
  * The mutual TLS authentication configuration for a custom domain name.
 **/
 export declare class UpdateDomainNameRequestBodyMutualTlsAuthentication extends SpeakeasyBase {
-    truststoreUri?: string;
-    truststoreVersion?: string;
+    truststoreUri?: Record<string, any>;
+    truststoreVersion?: Record<string, any>;
 }
 export declare class UpdateDomainNameRequestBody extends SpeakeasyBase {
     domainNameConfigurations?: shared.DomainNameConfiguration[];

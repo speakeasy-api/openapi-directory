@@ -9,5 +9,5 @@ import { IdentityNotificationAttributes } from "./identitynotificationattributes
 **/
 export class GetIdentityNotificationAttributesResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ elemType: IdentityNotificationAttributes })
-  notificationAttributes: Map<string, IdentityNotificationAttributes>;
+  notificationAttributes: Record<string, IdentityNotificationAttributes>;
 }

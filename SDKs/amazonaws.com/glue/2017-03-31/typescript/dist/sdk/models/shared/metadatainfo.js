@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OtherMetadataValueListItem } from "./othermetadatavaluelistitem";
-// MetadataInfo
-/**
- * A structure containing metadata information for a schema version.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetadataInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var othermetadatavaluelistitem_1 = require("./othermetadatavaluelistitem");
 var MetadataInfo = /** @class */ (function (_super) {
     __extends(MetadataInfo, _super);
     function MetadataInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedTime" }),
         __metadata("design:type", String)
     ], MetadataInfo.prototype, "createdTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MetadataValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MetadataValue" }),
         __metadata("design:type", String)
     ], MetadataInfo.prototype, "metadataValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OtherMetadataValueList", elemType: OtherMetadataValueListItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OtherMetadataValueList", elemType: othermetadatavaluelistitem_1.OtherMetadataValueListItem }),
         __metadata("design:type", Array)
     ], MetadataInfo.prototype, "otherMetadataValueList", void 0);
     return MetadataInfo;
-}(SpeakeasyBase));
-export { MetadataInfo };
+}(utils_1.SpeakeasyBase));
+exports.MetadataInfo = MetadataInfo;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Availability3ViewModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var Availability3ViewModel = /** @class */ (function (_super) {
     __extends(Availability3ViewModel, _super);
     function Availability3ViewModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessName" }),
         __metadata("design:type", String)
     ], Availability3ViewModel.prototype, "businessName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firstAvailableDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firstAvailableDate" }),
         __metadata("design:type", String)
     ], Availability3ViewModel.prototype, "firstAvailableDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectName" }),
         __metadata("design:type", String)
     ], Availability3ViewModel.prototype, "objectName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceDescription" }),
         __metadata("design:type", String)
     ], Availability3ViewModel.prototype, "resourceDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceId" }),
         __metadata("design:type", String)
     ], Availability3ViewModel.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceIds" }),
         __metadata("design:type", String)
     ], Availability3ViewModel.prototype, "resourceIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceName" }),
         __metadata("design:type", String)
     ], Availability3ViewModel.prototype, "resourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceDescription" }),
         __metadata("design:type", String)
     ], Availability3ViewModel.prototype, "serviceDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceDuration" }),
         __metadata("design:type", Number)
     ], Availability3ViewModel.prototype, "serviceDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceId" }),
         __metadata("design:type", String)
     ], Availability3ViewModel.prototype, "serviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceName" }),
         __metadata("design:type", String)
     ], Availability3ViewModel.prototype, "serviceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tzRequested" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tzRequested" }),
         __metadata("design:type", Number)
     ], Availability3ViewModel.prototype, "tzRequested", void 0);
     return Availability3ViewModel;
-}(SpeakeasyBase));
-export { Availability3ViewModel };
+}(utils_1.SpeakeasyBase));
+exports.Availability3ViewModel = Availability3ViewModel;

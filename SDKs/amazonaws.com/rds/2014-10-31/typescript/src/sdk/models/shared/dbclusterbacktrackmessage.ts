@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterBacktrack } from "./dbclusterbacktrack";
+import { DbClusterBacktrackList } from "./dbclusterbacktracklist";
 
 
 
@@ -8,8 +8,8 @@ import { DbClusterBacktrack } from "./dbclusterbacktrack";
  * Contains the result of a successful invocation of the <code>DescribeDBClusterBacktracks</code> action.
 **/
 export class DbClusterBacktrackMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: DbClusterBacktrack })
-  dbClusterBacktracks?: DbClusterBacktrack[];
+  @SpeakeasyMetadata({ elemType: DbClusterBacktrackList })
+  dbClusterBacktracks?: DbClusterBacktrackList[];
 
   @SpeakeasyMetadata()
   marker?: string;

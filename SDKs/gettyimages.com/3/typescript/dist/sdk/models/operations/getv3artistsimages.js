@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetV3ArtistsImagesResponse = exports.GetV3ArtistsImagesRequest = exports.GetV3ArtistsImagesHeaders = exports.GetV3ArtistsImagesQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetV3ArtistsImagesQueryParams = /** @class */ (function (_super) {
     __extends(GetV3ArtistsImagesQueryParams, _super);
     function GetV3ArtistsImagesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=artist_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=artist_name" }),
         __metadata("design:type", String)
     ], GetV3ArtistsImagesQueryParams.prototype, "artistName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=fields" }),
         __metadata("design:type", Array)
     ], GetV3ArtistsImagesQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetV3ArtistsImagesQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page_size" }),
         __metadata("design:type", Number)
     ], GetV3ArtistsImagesQueryParams.prototype, "pageSize", void 0);
     return GetV3ArtistsImagesQueryParams;
-}(SpeakeasyBase));
-export { GetV3ArtistsImagesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetV3ArtistsImagesQueryParams = GetV3ArtistsImagesQueryParams;
 var GetV3ArtistsImagesHeaders = /** @class */ (function (_super) {
     __extends(GetV3ArtistsImagesHeaders, _super);
     function GetV3ArtistsImagesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Accept-Language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Accept-Language" }),
         __metadata("design:type", String)
     ], GetV3ArtistsImagesHeaders.prototype, "acceptLanguage", void 0);
     return GetV3ArtistsImagesHeaders;
-}(SpeakeasyBase));
-export { GetV3ArtistsImagesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetV3ArtistsImagesHeaders = GetV3ArtistsImagesHeaders;
 var GetV3ArtistsImagesRequest = /** @class */ (function (_super) {
     __extends(GetV3ArtistsImagesRequest, _super);
     function GetV3ArtistsImagesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetV3ArtistsImagesQueryParams)
     ], GetV3ArtistsImagesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetV3ArtistsImagesHeaders)
     ], GetV3ArtistsImagesRequest.prototype, "headers", void 0);
     return GetV3ArtistsImagesRequest;
-}(SpeakeasyBase));
-export { GetV3ArtistsImagesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetV3ArtistsImagesRequest = GetV3ArtistsImagesRequest;
 var GetV3ArtistsImagesResponse = /** @class */ (function (_super) {
     __extends(GetV3ArtistsImagesResponse, _super);
     function GetV3ArtistsImagesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetV3ArtistsImagesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetV3ArtistsImagesResponse.prototype, "statusCode", void 0);
     return GetV3ArtistsImagesResponse;
-}(SpeakeasyBase));
-export { GetV3ArtistsImagesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetV3ArtistsImagesResponse = GetV3ArtistsImagesResponse;

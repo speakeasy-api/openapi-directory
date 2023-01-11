@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolSshSetConfigResponse = exports.ProtocolSshSetConfigRequest = exports.ProtocolSshSetConfigPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolSshSetConfigPathParams = /** @class */ (function (_super) {
     __extends(ProtocolSshSetConfigPathParams, _super);
     function ProtocolSshSetConfigPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolSshSetConfigPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=argument" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=argument" }),
         __metadata("design:type", String)
     ], ProtocolSshSetConfigPathParams.prototype, "argument", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=value" }),
         __metadata("design:type", String)
     ], ProtocolSshSetConfigPathParams.prototype, "value", void 0);
     return ProtocolSshSetConfigPathParams;
-}(SpeakeasyBase));
-export { ProtocolSshSetConfigPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSshSetConfigPathParams = ProtocolSshSetConfigPathParams;
 var ProtocolSshSetConfigRequest = /** @class */ (function (_super) {
     __extends(ProtocolSshSetConfigRequest, _super);
     function ProtocolSshSetConfigRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolSshSetConfigPathParams)
     ], ProtocolSshSetConfigRequest.prototype, "pathParams", void 0);
     return ProtocolSshSetConfigRequest;
-}(SpeakeasyBase));
-export { ProtocolSshSetConfigRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSshSetConfigRequest = ProtocolSshSetConfigRequest;
 var ProtocolSshSetConfigResponse = /** @class */ (function (_super) {
     __extends(ProtocolSshSetConfigResponse, _super);
     function ProtocolSshSetConfigResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolSshSetConfigResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolSshSetConfigResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolSshSetConfigResponse.prototype, "protocolSshSetConfig200ApplicationJsonString", void 0);
+    ], ProtocolSshSetConfigResponse.prototype, "protocolSshSetConfig200ApplicationJSONString", void 0);
     return ProtocolSshSetConfigResponse;
-}(SpeakeasyBase));
-export { ProtocolSshSetConfigResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSshSetConfigResponse = ProtocolSshSetConfigResponse;

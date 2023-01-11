@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,124 +23,126 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDailyReportAllCountriesDateFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDailyReportAllCountriesResponse = exports.GetDailyReportAllCountriesRequest = exports.GetDailyReportAllCountries200ApplicationJson = exports.GetDailyReportAllCountries200ApplicationJsonProvince = exports.GetDailyReportAllCountriesQueryParams = exports.GetDailyReportAllCountriesFormatEnum = exports.GetDailyReportAllCountriesDateFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDailyReportAllCountriesDateFormatEnum;
 (function (GetDailyReportAllCountriesDateFormatEnum) {
     GetDailyReportAllCountriesDateFormatEnum["YyyyMmDd"] = "YYYY-MM-DD";
     GetDailyReportAllCountriesDateFormatEnum["YyyyDdMm"] = "YYYY-DD-MM";
     GetDailyReportAllCountriesDateFormatEnum["DdMmYyyy"] = "DD-MM-YYYY";
     GetDailyReportAllCountriesDateFormatEnum["MmDdYyyy"] = "MM-DD-YYYY";
-})(GetDailyReportAllCountriesDateFormatEnum || (GetDailyReportAllCountriesDateFormatEnum = {}));
-export var GetDailyReportAllCountriesFormatEnum;
+})(GetDailyReportAllCountriesDateFormatEnum = exports.GetDailyReportAllCountriesDateFormatEnum || (exports.GetDailyReportAllCountriesDateFormatEnum = {}));
+var GetDailyReportAllCountriesFormatEnum;
 (function (GetDailyReportAllCountriesFormatEnum) {
     GetDailyReportAllCountriesFormatEnum["Json"] = "json";
     GetDailyReportAllCountriesFormatEnum["Xml"] = "xml";
-})(GetDailyReportAllCountriesFormatEnum || (GetDailyReportAllCountriesFormatEnum = {}));
+})(GetDailyReportAllCountriesFormatEnum = exports.GetDailyReportAllCountriesFormatEnum || (exports.GetDailyReportAllCountriesFormatEnum = {}));
 var GetDailyReportAllCountriesQueryParams = /** @class */ (function (_super) {
     __extends(GetDailyReportAllCountriesQueryParams, _super);
     function GetDailyReportAllCountriesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=date" }),
         __metadata("design:type", String)
     ], GetDailyReportAllCountriesQueryParams.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=date-format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=date-format" }),
         __metadata("design:type", String)
     ], GetDailyReportAllCountriesQueryParams.prototype, "dateFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetDailyReportAllCountriesQueryParams.prototype, "format", void 0);
     return GetDailyReportAllCountriesQueryParams;
-}(SpeakeasyBase));
-export { GetDailyReportAllCountriesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDailyReportAllCountriesQueryParams = GetDailyReportAllCountriesQueryParams;
 var GetDailyReportAllCountries200ApplicationJsonProvince = /** @class */ (function (_super) {
     __extends(GetDailyReportAllCountries200ApplicationJsonProvince, _super);
     function GetDailyReportAllCountries200ApplicationJsonProvince() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Number)
     ], GetDailyReportAllCountries200ApplicationJsonProvince.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confirmed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confirmed" }),
         __metadata("design:type", Number)
     ], GetDailyReportAllCountries200ApplicationJsonProvince.prototype, "confirmed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deaths" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deaths" }),
         __metadata("design:type", Number)
     ], GetDailyReportAllCountries200ApplicationJsonProvince.prototype, "deaths", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recovered" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recovered" }),
         __metadata("design:type", Number)
     ], GetDailyReportAllCountries200ApplicationJsonProvince.prototype, "recovered", void 0);
     return GetDailyReportAllCountries200ApplicationJsonProvince;
-}(SpeakeasyBase));
-export { GetDailyReportAllCountries200ApplicationJsonProvince };
+}(utils_1.SpeakeasyBase));
+exports.GetDailyReportAllCountries200ApplicationJsonProvince = GetDailyReportAllCountries200ApplicationJsonProvince;
 var GetDailyReportAllCountries200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetDailyReportAllCountries200ApplicationJson, _super);
     function GetDailyReportAllCountries200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], GetDailyReportAllCountries200ApplicationJson.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", String)
     ], GetDailyReportAllCountries200ApplicationJson.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], GetDailyReportAllCountries200ApplicationJson.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], GetDailyReportAllCountries200ApplicationJson.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=province", elemType: GetDailyReportAllCountries200ApplicationJsonProvince }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=province", elemType: GetDailyReportAllCountries200ApplicationJsonProvince }),
         __metadata("design:type", Array)
     ], GetDailyReportAllCountries200ApplicationJson.prototype, "province", void 0);
     return GetDailyReportAllCountries200ApplicationJson;
-}(SpeakeasyBase));
-export { GetDailyReportAllCountries200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetDailyReportAllCountries200ApplicationJson = GetDailyReportAllCountries200ApplicationJson;
 var GetDailyReportAllCountriesRequest = /** @class */ (function (_super) {
     __extends(GetDailyReportAllCountriesRequest, _super);
     function GetDailyReportAllCountriesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDailyReportAllCountriesQueryParams)
     ], GetDailyReportAllCountriesRequest.prototype, "queryParams", void 0);
     return GetDailyReportAllCountriesRequest;
-}(SpeakeasyBase));
-export { GetDailyReportAllCountriesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDailyReportAllCountriesRequest = GetDailyReportAllCountriesRequest;
 var GetDailyReportAllCountriesResponse = /** @class */ (function (_super) {
     __extends(GetDailyReportAllCountriesResponse, _super);
     function GetDailyReportAllCountriesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDailyReportAllCountriesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDailyReportAllCountriesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDailyReportAllCountriesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: GetDailyReportAllCountries200ApplicationJson }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: GetDailyReportAllCountries200ApplicationJson }),
         __metadata("design:type", Array)
-    ], GetDailyReportAllCountriesResponse.prototype, "getDailyReportAllCountries200ApplicationJsonObjects", void 0);
+    ], GetDailyReportAllCountriesResponse.prototype, "getDailyReportAllCountries200ApplicationJSONObjects", void 0);
     return GetDailyReportAllCountriesResponse;
-}(SpeakeasyBase));
-export { GetDailyReportAllCountriesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDailyReportAllCountriesResponse = GetDailyReportAllCountriesResponse;

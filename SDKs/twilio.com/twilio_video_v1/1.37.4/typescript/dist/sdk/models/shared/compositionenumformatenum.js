@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompositionEnumFormatEnum = void 0;
+var CompositionEnumFormatEnum;
+(function (CompositionEnumFormatEnum) {
+    CompositionEnumFormatEnum["Mp4"] = "mp4";
+    CompositionEnumFormatEnum["Webm"] = "webm";
+})(CompositionEnumFormatEnum = exports.CompositionEnumFormatEnum || (exports.CompositionEnumFormatEnum = {}));

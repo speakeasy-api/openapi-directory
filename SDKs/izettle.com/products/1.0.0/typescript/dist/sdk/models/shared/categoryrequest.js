@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CategoryDto } from "./categorydto";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CategoryRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var categorydto_1 = require("./categorydto");
 var CategoryRequest = /** @class */ (function (_super) {
     __extends(CategoryRequest, _super);
     function CategoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categories", elemType: CategoryDto }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categories", elemType: categorydto_1.CategoryDto }),
         __metadata("design:type", Array)
     ], CategoryRequest.prototype, "categories", void 0);
     return CategoryRequest;
-}(SpeakeasyBase));
-export { CategoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.CategoryRequest = CategoryRequest;

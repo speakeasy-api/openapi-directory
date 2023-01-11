@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DcimRackReservationsDeleteResponse = exports.DcimRackReservationsDeleteRequest = exports.DcimRackReservationsDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DcimRackReservationsDeletePathParams = /** @class */ (function (_super) {
     __extends(DcimRackReservationsDeletePathParams, _super);
     function DcimRackReservationsDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], DcimRackReservationsDeletePathParams.prototype, "id", void 0);
     return DcimRackReservationsDeletePathParams;
-}(SpeakeasyBase));
-export { DcimRackReservationsDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DcimRackReservationsDeletePathParams = DcimRackReservationsDeletePathParams;
 var DcimRackReservationsDeleteRequest = /** @class */ (function (_super) {
     __extends(DcimRackReservationsDeleteRequest, _super);
     function DcimRackReservationsDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DcimRackReservationsDeletePathParams)
     ], DcimRackReservationsDeleteRequest.prototype, "pathParams", void 0);
     return DcimRackReservationsDeleteRequest;
-}(SpeakeasyBase));
-export { DcimRackReservationsDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.DcimRackReservationsDeleteRequest = DcimRackReservationsDeleteRequest;
 var DcimRackReservationsDeleteResponse = /** @class */ (function (_super) {
     __extends(DcimRackReservationsDeleteResponse, _super);
     function DcimRackReservationsDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DcimRackReservationsDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DcimRackReservationsDeleteResponse.prototype, "statusCode", void 0);
     return DcimRackReservationsDeleteResponse;
-}(SpeakeasyBase));
-export { DcimRackReservationsDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.DcimRackReservationsDeleteResponse = DcimRackReservationsDeleteResponse;

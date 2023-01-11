@@ -11,7 +11,7 @@ export class GoogleRpcStatus extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=details" })
-  details?: Map<string, any>[];
+  details?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceOptionsUpdateModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var ServiceOptionsUpdateModel = /** @class */ (function (_super) {
     __extends(ServiceOptionsUpdateModel, _super);
     function ServiceOptionsUpdateModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consumerPadding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consumerPadding" }),
         __metadata("design:type", Boolean)
     ], ServiceOptionsUpdateModel.prototype, "consumerPadding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultService" }),
         __metadata("design:type", Boolean)
     ], ServiceOptionsUpdateModel.prototype, "defaultService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=durationInterval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=durationInterval" }),
         __metadata("design:type", Number)
     ], ServiceOptionsUpdateModel.prototype, "durationInterval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=durationMax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=durationMax" }),
         __metadata("design:type", Number)
     ], ServiceOptionsUpdateModel.prototype, "durationMax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=durationMin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=durationMin" }),
         __metadata("design:type", Number)
     ], ServiceOptionsUpdateModel.prototype, "durationMin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=durationSelect" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=durationSelect" }),
         __metadata("design:type", Boolean)
     ], ServiceOptionsUpdateModel.prototype, "durationSelect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=padding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=padding" }),
         __metadata("design:type", Number)
     ], ServiceOptionsUpdateModel.prototype, "padding", void 0);
     return ServiceOptionsUpdateModel;
-}(SpeakeasyBase));
-export { ServiceOptionsUpdateModel };
+}(utils_1.SpeakeasyBase));
+exports.ServiceOptionsUpdateModel = ServiceOptionsUpdateModel;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FailedIpn } from "./failedipn";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListFailedIpNs = void 0;
+var utils_1 = require("../../../internal/utils");
+var failedipn_1 = require("./failedipn");
 var ListFailedIpNs = /** @class */ (function (_super) {
     __extends(ListFailedIpNs, _super);
     function ListFailedIpNs() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failed_ipns", elemType: FailedIpn }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failed_ipns", elemType: failedipn_1.FailedIpn }),
         __metadata("design:type", Array)
     ], ListFailedIpNs.prototype, "failedIpns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ok" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ok" }),
         __metadata("design:type", Boolean)
     ], ListFailedIpNs.prototype, "ok", void 0);
     return ListFailedIpNs;
-}(SpeakeasyBase));
-export { ListFailedIpNs };
+}(utils_1.SpeakeasyBase));
+exports.ListFailedIpNs = ListFailedIpNs;

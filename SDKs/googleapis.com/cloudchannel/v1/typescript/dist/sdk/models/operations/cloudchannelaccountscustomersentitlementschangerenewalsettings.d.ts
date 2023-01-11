@@ -23,7 +23,7 @@ export declare class CloudchannelAccountsCustomersEntitlementsChangeRenewalSetti
 export declare class CloudchannelAccountsCustomersEntitlementsChangeRenewalSettingsRequest extends SpeakeasyBase {
     pathParams: CloudchannelAccountsCustomersEntitlementsChangeRenewalSettingsPathParams;
     queryParams: CloudchannelAccountsCustomersEntitlementsChangeRenewalSettingsQueryParams;
-    request?: shared.GoogleCloudChannelV1ChangeRenewalSettingsRequest;
+    request?: shared.GoogleCloudChannelV1ChangeRenewalSettingsRequestInput;
     security: CloudchannelAccountsCustomersEntitlementsChangeRenewalSettingsSecurity;
 }
 export declare class CloudchannelAccountsCustomersEntitlementsChangeRenewalSettingsResponse extends SpeakeasyBase {

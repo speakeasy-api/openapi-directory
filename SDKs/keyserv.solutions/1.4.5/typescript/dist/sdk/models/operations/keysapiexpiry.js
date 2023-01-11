@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeysApiExpiryResponse = exports.KeysApiExpiryRequest = exports.KeysApiExpiryPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var KeysApiExpiryPathParams = /** @class */ (function (_super) {
     __extends(KeysApiExpiryPathParams, _super);
     function KeysApiExpiryPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], KeysApiExpiryPathParams.prototype, "serial", void 0);
     return KeysApiExpiryPathParams;
-}(SpeakeasyBase));
-export { KeysApiExpiryPathParams };
+}(utils_1.SpeakeasyBase));
+exports.KeysApiExpiryPathParams = KeysApiExpiryPathParams;
 var KeysApiExpiryRequest = /** @class */ (function (_super) {
     __extends(KeysApiExpiryRequest, _super);
     function KeysApiExpiryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", KeysApiExpiryPathParams)
     ], KeysApiExpiryRequest.prototype, "pathParams", void 0);
     return KeysApiExpiryRequest;
-}(SpeakeasyBase));
-export { KeysApiExpiryRequest };
+}(utils_1.SpeakeasyBase));
+exports.KeysApiExpiryRequest = KeysApiExpiryRequest;
 var KeysApiExpiryResponse = /** @class */ (function (_super) {
     __extends(KeysApiExpiryResponse, _super);
     function KeysApiExpiryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], KeysApiExpiryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], KeysApiExpiryResponse.prototype, "keysApiExpiry200ApplicationJsonOneOf", void 0);
+    ], KeysApiExpiryResponse.prototype, "keysApiExpiry200ApplicationJSONOneOf", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], KeysApiExpiryResponse.prototype, "statusCode", void 0);
     return KeysApiExpiryResponse;
-}(SpeakeasyBase));
-export { KeysApiExpiryResponse };
+}(utils_1.SpeakeasyBase));
+exports.KeysApiExpiryResponse = KeysApiExpiryResponse;

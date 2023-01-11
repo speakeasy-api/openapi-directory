@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolTftpSessionStartResponse = exports.ProtocolTftpSessionStartRequest = exports.ProtocolTftpSessionStartPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolTftpSessionStartPathParams = /** @class */ (function (_super) {
     __extends(ProtocolTftpSessionStartPathParams, _super);
     function ProtocolTftpSessionStartPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolTftpSessionStartPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=sessionID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=sessionID" }),
         __metadata("design:type", String)
-    ], ProtocolTftpSessionStartPathParams.prototype, "sessionId", void 0);
+    ], ProtocolTftpSessionStartPathParams.prototype, "sessionID", void 0);
     return ProtocolTftpSessionStartPathParams;
-}(SpeakeasyBase));
-export { ProtocolTftpSessionStartPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTftpSessionStartPathParams = ProtocolTftpSessionStartPathParams;
 var ProtocolTftpSessionStartRequest = /** @class */ (function (_super) {
     __extends(ProtocolTftpSessionStartRequest, _super);
     function ProtocolTftpSessionStartRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolTftpSessionStartPathParams)
     ], ProtocolTftpSessionStartRequest.prototype, "pathParams", void 0);
     return ProtocolTftpSessionStartRequest;
-}(SpeakeasyBase));
-export { ProtocolTftpSessionStartRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTftpSessionStartRequest = ProtocolTftpSessionStartRequest;
 var ProtocolTftpSessionStartResponse = /** @class */ (function (_super) {
     __extends(ProtocolTftpSessionStartResponse, _super);
     function ProtocolTftpSessionStartResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolTftpSessionStartResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolTftpSessionStartResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolTftpSessionStartResponse.prototype, "protocolTftpSessionStart200ApplicationJsonString", void 0);
+    ], ProtocolTftpSessionStartResponse.prototype, "protocolTftpSessionStart200ApplicationJSONString", void 0);
     return ProtocolTftpSessionStartResponse;
-}(SpeakeasyBase));
-export { ProtocolTftpSessionStartResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolTftpSessionStartResponse = ProtocolTftpSessionStartResponse;

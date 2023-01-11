@@ -13,6 +13,6 @@ export declare class PostAssetsCovarianceMatrixSampleRequest extends SpeakeasyBa
 }
 export declare class PostAssetsCovarianceMatrixSampleResponse extends SpeakeasyBase {
     contentType: string;
-    postAssetsCovarianceMatrixSample200ApplicationJsonObject?: PostAssetsCovarianceMatrixSample200ApplicationJson;
     statusCode: number;
+    postAssetsCovarianceMatrixSample200ApplicationJSONObject?: PostAssetsCovarianceMatrixSample200ApplicationJson;
 }

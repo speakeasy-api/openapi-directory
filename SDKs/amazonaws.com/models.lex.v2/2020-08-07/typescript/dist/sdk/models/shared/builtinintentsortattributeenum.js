@@ -1,4 +1,7 @@
-export var BuiltInIntentSortAttributeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BuiltInIntentSortAttributeEnum = void 0;
+var BuiltInIntentSortAttributeEnum;
 (function (BuiltInIntentSortAttributeEnum) {
     BuiltInIntentSortAttributeEnum["IntentSignature"] = "IntentSignature";
-})(BuiltInIntentSortAttributeEnum || (BuiltInIntentSortAttributeEnum = {}));
+})(BuiltInIntentSortAttributeEnum = exports.BuiltInIntentSortAttributeEnum || (exports.BuiltInIntentSortAttributeEnum = {}));

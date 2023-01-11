@@ -44,5 +44,5 @@ export class GetSubgoalsForGoalResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getSubgoalsForGoal200ApplicationJsonObject?: GetSubgoalsForGoal200ApplicationJson;
+  getSubgoalsForGoal200ApplicationJSONObject?: GetSubgoalsForGoal200ApplicationJson;
 }

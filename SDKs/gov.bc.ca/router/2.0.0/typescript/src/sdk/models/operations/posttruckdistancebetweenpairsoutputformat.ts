@@ -46,7 +46,7 @@ export class PostTruckDistanceBetweenPairsOutputFormatQueryParams extends Speake
   maxPairs?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" })
-  outputSrs?: number;
+  outputSRS?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=routeDescription" })
   routeDescription?: string;

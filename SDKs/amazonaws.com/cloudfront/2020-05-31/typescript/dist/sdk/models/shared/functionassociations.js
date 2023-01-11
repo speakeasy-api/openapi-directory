@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FunctionAssociation } from "./functionassociation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FunctionAssociations = void 0;
+var utils_1 = require("../../../internal/utils");
+var functionassociationlist_1 = require("./functionassociationlist");
 // FunctionAssociations
 /**
  * A list of CloudFront functions that are associated with a cache behavior in a CloudFront distribution. CloudFront functions must be published to the <code>LIVE</code> stage to associate them with a cache behavior.
@@ -34,13 +37,13 @@ var FunctionAssociations = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: FunctionAssociation }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: functionassociationlist_1.FunctionAssociationList }),
         __metadata("design:type", Array)
     ], FunctionAssociations.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FunctionAssociations.prototype, "quantity", void 0);
     return FunctionAssociations;
-}(SpeakeasyBase));
-export { FunctionAssociations };
+}(utils_1.SpeakeasyBase));
+exports.FunctionAssociations = FunctionAssociations;

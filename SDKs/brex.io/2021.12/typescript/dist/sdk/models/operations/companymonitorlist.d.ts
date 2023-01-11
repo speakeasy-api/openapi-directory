@@ -7,8 +7,8 @@ export declare class CompanyMonitorListRequest extends SpeakeasyBase {
     security: CompanyMonitorListSecurity;
 }
 export declare class CompanyMonitorListResponse extends SpeakeasyBase {
-    companyMonitorList200ApplicationJsonAnies?: any[];
-    companyMonitorListDefaultApplicationJsonAny?: any;
+    companyMonitorList200ApplicationJSONAnies?: any[];
+    companyMonitorListDefaultApplicationJSONAny?: any;
     contentType: string;
     statusCode: number;
 }

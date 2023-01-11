@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BranchInfo } from "./branchinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteBranchOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var branchinfo_1 = require("./branchinfo");
 // DeleteBranchOutput
 /**
  * Represents the output of a delete branch operation.
@@ -34,9 +37,9 @@ var DeleteBranchOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deletedBranch" }),
-        __metadata("design:type", BranchInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deletedBranch" }),
+        __metadata("design:type", branchinfo_1.BranchInfo)
     ], DeleteBranchOutput.prototype, "deletedBranch", void 0);
     return DeleteBranchOutput;
-}(SpeakeasyBase));
-export { DeleteBranchOutput };
+}(utils_1.SpeakeasyBase));
+exports.DeleteBranchOutput = DeleteBranchOutput;

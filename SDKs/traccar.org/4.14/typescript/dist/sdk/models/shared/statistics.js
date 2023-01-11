@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Statistics = void 0;
+var utils_1 = require("../../../internal/utils");
 var Statistics = /** @class */ (function (_super) {
     __extends(Statistics, _super);
     function Statistics() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activeDevices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activeDevices" }),
         __metadata("design:type", Number)
     ], Statistics.prototype, "activeDevices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activeUsers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activeUsers" }),
         __metadata("design:type", Number)
     ], Statistics.prototype, "activeUsers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=captureTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=captureTime" }),
         __metadata("design:type", Date)
     ], Statistics.prototype, "captureTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messagesReceived" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messagesReceived" }),
         __metadata("design:type", Number)
     ], Statistics.prototype, "messagesReceived", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messagesStored" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messagesStored" }),
         __metadata("design:type", Number)
     ], Statistics.prototype, "messagesStored", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requests" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requests" }),
         __metadata("design:type", Number)
     ], Statistics.prototype, "requests", void 0);
     return Statistics;
-}(SpeakeasyBase));
-export { Statistics };
+}(utils_1.SpeakeasyBase));
+exports.Statistics = Statistics;

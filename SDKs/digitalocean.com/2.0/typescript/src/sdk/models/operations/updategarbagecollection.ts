@@ -1,100 +1,101 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class UpdateGarbageCollectionPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=garbage_collection_uuid" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=garbage_collection_uuid" })
   garbageCollectionUuid: string;
 
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=registry_name" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=registry_name" })
   registryName: string;
 }
 
 
 export class UpdateGarbageCollectionRequestBody extends SpeakeasyBase {
-  @Metadata({ data: "json, name=cancel" })
+  @SpeakeasyMetadata({ data: "json, name=cancel" })
   cancel?: boolean;
 }
 
-
-export class UpdateGarbageCollectionRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: UpdateGarbageCollectionPathParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request: UpdateGarbageCollectionRequestBody;
-}
-
 export enum UpdateGarbageCollection200ApplicationJsonGarbageCollectionStatusEnum {
-    Requested = "requested"
-,    WaitingForWriteJwTsToExpire = "waiting for write JWTs to expire"
-,    ScanningManifests = "scanning manifests"
-,    DeletingUnreferencedBlobs = "deleting unreferenced blobs"
-,    Cancelling = "cancelling"
-,    Failed = "failed"
-,    Succeeded = "succeeded"
-,    Cancelled = "cancelled"
+    Requested = "requested",
+    WaitingForWriteJwTsToExpire = "waiting for write JWTs to expire",
+    ScanningManifests = "scanning manifests",
+    DeletingUnreferencedBlobs = "deleting unreferenced blobs",
+    Cancelling = "cancelling",
+    Failed = "failed",
+    Succeeded = "succeeded",
+    Cancelled = "cancelled"
 }
 
 
 export class UpdateGarbageCollection200ApplicationJsonGarbageCollection extends SpeakeasyBase {
-  @Metadata({ data: "json, name=blobs_deleted" })
+  @SpeakeasyMetadata({ data: "json, name=blobs_deleted" })
   blobsDeleted?: number;
 
-  @Metadata({ data: "json, name=created_at" })
+  @SpeakeasyMetadata({ data: "json, name=created_at" })
   createdAt?: Date;
 
-  @Metadata({ data: "json, name=freed_bytes" })
+  @SpeakeasyMetadata({ data: "json, name=freed_bytes" })
   freedBytes?: number;
 
-  @Metadata({ data: "json, name=registry_name" })
+  @SpeakeasyMetadata({ data: "json, name=registry_name" })
   registryName?: string;
 
-  @Metadata({ data: "json, name=status" })
+  @SpeakeasyMetadata({ data: "json, name=status" })
   status?: UpdateGarbageCollection200ApplicationJsonGarbageCollectionStatusEnum;
 
-  @Metadata({ data: "json, name=updated_at" })
+  @SpeakeasyMetadata({ data: "json, name=updated_at" })
   updatedAt?: Date;
 
-  @Metadata({ data: "json, name=uuid" })
+  @SpeakeasyMetadata({ data: "json, name=uuid" })
   uuid?: string;
 }
 
 
 export class UpdateGarbageCollection200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=garbage_collection" })
+  @SpeakeasyMetadata({ data: "json, name=garbage_collection" })
   garbageCollection?: UpdateGarbageCollection200ApplicationJsonGarbageCollection;
 }
 
 
 export class UpdateGarbageCollection401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class UpdateGarbageCollectionRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: UpdateGarbageCollectionPathParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: UpdateGarbageCollectionRequestBody;
+}
+
+
 export class UpdateGarbageCollectionResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  updateGarbageCollection200ApplicationJsonObject?: UpdateGarbageCollection200ApplicationJson;
+  @SpeakeasyMetadata()
+  updateGarbageCollection200ApplicationJSONObject?: UpdateGarbageCollection200ApplicationJson;
 
-  @Metadata()
-  updateGarbageCollection401ApplicationJsonObject?: UpdateGarbageCollection401ApplicationJson;
+  @SpeakeasyMetadata()
+  updateGarbageCollection401ApplicationJSONObject?: UpdateGarbageCollection401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

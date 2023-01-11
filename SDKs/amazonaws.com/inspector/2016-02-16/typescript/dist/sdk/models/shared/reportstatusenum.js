@@ -1,6 +1,9 @@
-export var ReportStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportStatusEnum = void 0;
+var ReportStatusEnum;
 (function (ReportStatusEnum) {
     ReportStatusEnum["WorkInProgress"] = "WORK_IN_PROGRESS";
     ReportStatusEnum["Failed"] = "FAILED";
     ReportStatusEnum["Completed"] = "COMPLETED";
-})(ReportStatusEnum || (ReportStatusEnum = {}));
+})(ReportStatusEnum = exports.ReportStatusEnum || (exports.ReportStatusEnum = {}));

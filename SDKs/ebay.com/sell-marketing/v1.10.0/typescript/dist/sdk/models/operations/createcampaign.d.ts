@@ -9,7 +9,7 @@ export declare class CreateCampaignRequest extends SpeakeasyBase {
 }
 export declare class CreateCampaignResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    createCampaign201ApplicationJsonObject?: Map<string, any>;
+    createCampaign201ApplicationJSONObject?: Record<string, any>;
 }

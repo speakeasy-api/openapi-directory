@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CancelRotateSecretRequest, CancelRotateSecretResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,21 +33,21 @@ const sdk = new SDK(WithSecurity(
     
 const req: CancelRotateSecretRequest = {
   headers: {
-    xAmzAlgorithm: "dolorem",
-    xAmzContentSha256: "quos",
-    xAmzCredential: "deleniti",
-    xAmzDate: "commodi",
-    xAmzSecurityToken: "nobis",
-    xAmzSignature: "ea",
-    xAmzSignedHeaders: "aspernatur",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "secretsmanager.CancelRotateSecret",
   },
   request: {
-    secretId: "et",
+    secretId: "fugit",
   },
 };
 
-sdk.sdk.cancelRotateSecret(req).then((res: CancelRotateSecretResponse | AxiosError) => {
+sdk.cancelRotateSecret(req).then((res: CancelRotateSecretResponse | AxiosError) => {
    // handle response
 });
 ```

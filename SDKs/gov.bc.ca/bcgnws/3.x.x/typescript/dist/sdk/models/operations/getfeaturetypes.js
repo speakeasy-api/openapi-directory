@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetFeatureTypesOutputFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetFeatureTypesResponse = exports.GetFeatureTypesRequest = exports.GetFeatureTypesQueryParams = exports.GetFeatureTypesOutputFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetFeatureTypesOutputFormatEnum;
 (function (GetFeatureTypesOutputFormatEnum) {
     GetFeatureTypesOutputFormatEnum["Json"] = "json";
     GetFeatureTypesOutputFormatEnum["Xml"] = "xml";
-})(GetFeatureTypesOutputFormatEnum || (GetFeatureTypesOutputFormatEnum = {}));
+})(GetFeatureTypesOutputFormatEnum = exports.GetFeatureTypesOutputFormatEnum || (exports.GetFeatureTypesOutputFormatEnum = {}));
 var GetFeatureTypesQueryParams = /** @class */ (function (_super) {
     __extends(GetFeatureTypesQueryParams, _super);
     function GetFeatureTypesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputFormat" }),
         __metadata("design:type", String)
     ], GetFeatureTypesQueryParams.prototype, "outputFormat", void 0);
     return GetFeatureTypesQueryParams;
-}(SpeakeasyBase));
-export { GetFeatureTypesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetFeatureTypesQueryParams = GetFeatureTypesQueryParams;
 var GetFeatureTypesRequest = /** @class */ (function (_super) {
     __extends(GetFeatureTypesRequest, _super);
     function GetFeatureTypesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetFeatureTypesQueryParams)
     ], GetFeatureTypesRequest.prototype, "queryParams", void 0);
     return GetFeatureTypesRequest;
-}(SpeakeasyBase));
-export { GetFeatureTypesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetFeatureTypesRequest = GetFeatureTypesRequest;
 var GetFeatureTypesResponse = /** @class */ (function (_super) {
     __extends(GetFeatureTypesResponse, _super);
     function GetFeatureTypesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetFeatureTypesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetFeatureTypesResponse.prototype, "statusCode", void 0);
     return GetFeatureTypesResponse;
-}(SpeakeasyBase));
-export { GetFeatureTypesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetFeatureTypesResponse = GetFeatureTypesResponse;

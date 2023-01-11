@@ -57,7 +57,7 @@ export class RevokePermissionsResponse extends SpeakeasyBase {
   invalidInputException?: any;
 
   @SpeakeasyMetadata()
-  revokePermissionsResponse?: Map<string, any>;
+  revokePermissionsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

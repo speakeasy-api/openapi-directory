@@ -1,56 +1,53 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImportImageLicenseConfigurationResponse } from "./importimagelicenseconfigurationresponse";
-import { SnapshotDetail } from "./snapshotdetail";
-import { Tag } from "./tag";
 
 
 
 export class ImportImageResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  architecture?: string;
+  architecture?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  description?: string;
+  description?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  encrypted?: boolean;
+  encrypted?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  hypervisor?: string;
+  hypervisor?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  imageId?: string;
+  imageId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  importTaskId?: string;
+  importTaskId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  kmsKeyId?: string;
-
-  @SpeakeasyMetadata({ elemType: ImportImageLicenseConfigurationResponse })
-  licenseSpecifications?: ImportImageLicenseConfigurationResponse[];
+  kmsKeyId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  licenseType?: string;
+  licenseSpecifications?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  platform?: string;
+  licenseType?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  progress?: string;
-
-  @SpeakeasyMetadata({ elemType: SnapshotDetail })
-  snapshotDetails?: SnapshotDetail[];
+  platform?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  status?: string;
+  progress?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  statusMessage?: string;
-
-  @SpeakeasyMetadata({ elemType: Tag })
-  tags?: Tag[];
+  snapshotDetails?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  usageOperation?: string;
+  status?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  statusMessage?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  tags?: Record<string, any>;
+
+  @SpeakeasyMetadata()
+  usageOperation?: Record<string, any>;
 }

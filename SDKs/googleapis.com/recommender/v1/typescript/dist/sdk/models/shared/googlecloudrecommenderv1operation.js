@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecommenderV1ValueMatcher } from "./googlecloudrecommenderv1valuematcher";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommenderV1Operation = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecommenderv1valuematcher_1 = require("./googlecloudrecommenderv1valuematcher");
 // GoogleCloudRecommenderV1Operation
 /**
  * Contains an operation for a resource loosely based on the JSON-PATCH format with support for: * Custom filters for describing partial array patch. * Extended path values for describing nested arrays. * Custom fields for describing the resource for which the operation is being described. * Allows extension to custom operations not natively supported by RFC6902. See https://tools.ietf.org/html/rfc6902 for details on the original RFC.
@@ -34,45 +37,45 @@ var GoogleCloudRecommenderV1Operation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1Operation.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1Operation.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pathFilters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pathFilters" }),
+        __metadata("design:type", Object)
     ], GoogleCloudRecommenderV1Operation.prototype, "pathFilters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pathValueMatchers", elemType: GoogleCloudRecommenderV1ValueMatcher }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pathValueMatchers", elemType: googlecloudrecommenderv1valuematcher_1.GoogleCloudRecommenderV1ValueMatcher }),
+        __metadata("design:type", Object)
     ], GoogleCloudRecommenderV1Operation.prototype, "pathValueMatchers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1Operation.prototype, "resource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1Operation.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourcePath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourcePath" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1Operation.prototype, "sourcePath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceResource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceResource" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommenderV1Operation.prototype, "sourceResource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Object)
     ], GoogleCloudRecommenderV1Operation.prototype, "value", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueMatcher" }),
-        __metadata("design:type", GoogleCloudRecommenderV1ValueMatcher)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueMatcher" }),
+        __metadata("design:type", googlecloudrecommenderv1valuematcher_1.GoogleCloudRecommenderV1ValueMatcher)
     ], GoogleCloudRecommenderV1Operation.prototype, "valueMatcher", void 0);
     return GoogleCloudRecommenderV1Operation;
-}(SpeakeasyBase));
-export { GoogleCloudRecommenderV1Operation };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommenderV1Operation = GoogleCloudRecommenderV1Operation;

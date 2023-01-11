@@ -26,7 +26,6 @@ export declare class GetAccountsAccountIdStatementsRequest extends SpeakeasyBase
 }
 export declare class GetAccountsAccountIdStatementsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
     obErrorResponse1?: shared.ObErrorResponse1;
     obReadStatement2?: shared.ObReadStatement2;
     statusCode: number;

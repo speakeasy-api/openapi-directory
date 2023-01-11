@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScanforNetworksResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var ScanforNetworksResponse = /** @class */ (function (_super) {
     __extends(ScanforNetworksResponse, _super);
     function ScanforNetworksResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Uint8Array)
-    ], ScanforNetworksResponse.prototype, "body", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ScanforNetworksResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], ScanforNetworksResponse.prototype, "scanforNetworks200TextPlainObject", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ScanforNetworksResponse.prototype, "statusCode", void 0);
     return ScanforNetworksResponse;
-}(SpeakeasyBase));
-export { ScanforNetworksResponse };
+}(utils_1.SpeakeasyBase));
+exports.ScanforNetworksResponse = ScanforNetworksResponse;

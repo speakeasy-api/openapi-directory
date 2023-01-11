@@ -13,5 +13,5 @@ export declare class AllMocks200ApplicationJson extends SpeakeasyBase {
 export declare class AllMocksResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    allMocks200ApplicationJsonObject?: AllMocks200ApplicationJson;
+    allMocks200ApplicationJSONObject?: AllMocks200ApplicationJson;
 }

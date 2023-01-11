@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LighthouseResultV5 } from "./lighthouseresultv5";
-import { PagespeedApiLoadingExperienceV5 } from "./pagespeedapiloadingexperiencev5";
-import { PagespeedVersion } from "./pagespeedversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PagespeedApiPagespeedResponseV5 = void 0;
+var utils_1 = require("../../../internal/utils");
+var lighthouseresultv5_1 = require("./lighthouseresultv5");
+var pagespeedapiloadingexperiencev5_1 = require("./pagespeedapiloadingexperiencev5");
+var pagespeedversion_1 = require("./pagespeedversion");
 // PagespeedApiPagespeedResponseV5
 /**
  * The Pagespeed API response object.
@@ -36,37 +39,37 @@ var PagespeedApiPagespeedResponseV5 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analysisUTCTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analysisUTCTimestamp" }),
         __metadata("design:type", String)
-    ], PagespeedApiPagespeedResponseV5.prototype, "analysisUtcTimestamp", void 0);
+    ], PagespeedApiPagespeedResponseV5.prototype, "analysisUTCTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=captchaResult" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=captchaResult" }),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV5.prototype, "captchaResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV5.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], PagespeedApiPagespeedResponseV5.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lighthouseResult" }),
-        __metadata("design:type", LighthouseResultV5)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lighthouseResult" }),
+        __metadata("design:type", lighthouseresultv5_1.LighthouseResultV5)
     ], PagespeedApiPagespeedResponseV5.prototype, "lighthouseResult", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loadingExperience" }),
-        __metadata("design:type", PagespeedApiLoadingExperienceV5)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loadingExperience" }),
+        __metadata("design:type", pagespeedapiloadingexperiencev5_1.PagespeedApiLoadingExperienceV5)
     ], PagespeedApiPagespeedResponseV5.prototype, "loadingExperience", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originLoadingExperience" }),
-        __metadata("design:type", PagespeedApiLoadingExperienceV5)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originLoadingExperience" }),
+        __metadata("design:type", pagespeedapiloadingexperiencev5_1.PagespeedApiLoadingExperienceV5)
     ], PagespeedApiPagespeedResponseV5.prototype, "originLoadingExperience", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
-        __metadata("design:type", PagespeedVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
+        __metadata("design:type", pagespeedversion_1.PagespeedVersion)
     ], PagespeedApiPagespeedResponseV5.prototype, "version", void 0);
     return PagespeedApiPagespeedResponseV5;
-}(SpeakeasyBase));
-export { PagespeedApiPagespeedResponseV5 };
+}(utils_1.SpeakeasyBase));
+exports.PagespeedApiPagespeedResponseV5 = PagespeedApiPagespeedResponseV5;

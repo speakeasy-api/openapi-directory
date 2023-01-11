@@ -25,5 +25,5 @@ export class DeleteEventResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteEvent200ApplicationJsonObject?: Map<string, any>;
+  deleteEvent200ApplicationJSONObject?: Record<string, any>;
 }

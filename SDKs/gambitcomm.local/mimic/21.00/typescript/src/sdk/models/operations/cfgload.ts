@@ -31,5 +31,5 @@ export class CfgLoadResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cfgLoad200ApplicationJsonObject?: Map<string, number>;
+  cfgLoad200ApplicationJSONObject?: Record<string, number>;
 }

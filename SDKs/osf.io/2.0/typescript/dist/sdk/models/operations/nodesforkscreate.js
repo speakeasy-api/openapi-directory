@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodesForksCreateResponse = exports.NodesForksCreateRequest = exports.NodesForksCreateNodeInput = exports.NodesForksCreateNodeAttributesInput = exports.NodesForksCreateNodeAttributesCategoryEnum = exports.NodesForksCreatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var NodesForksCreatePathParams = /** @class */ (function (_super) {
     __extends(NodesForksCreatePathParams, _super);
     function NodesForksCreatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=node_id" }),
         __metadata("design:type", String)
     ], NodesForksCreatePathParams.prototype, "nodeId", void 0);
     return NodesForksCreatePathParams;
-}(SpeakeasyBase));
-export { NodesForksCreatePathParams };
-export var NodesForksCreateNodeAttributesCategoryEnum;
+}(utils_1.SpeakeasyBase));
+exports.NodesForksCreatePathParams = NodesForksCreatePathParams;
+var NodesForksCreateNodeAttributesCategoryEnum;
 (function (NodesForksCreateNodeAttributesCategoryEnum) {
     NodesForksCreateNodeAttributesCategoryEnum["Analysis"] = "analysis";
     NodesForksCreateNodeAttributesCategoryEnum["Communication"] = "communication";
@@ -47,7 +50,7 @@ export var NodesForksCreateNodeAttributesCategoryEnum;
     NodesForksCreateNodeAttributesCategoryEnum["Project"] = "project";
     NodesForksCreateNodeAttributesCategoryEnum["Software"] = "software";
     NodesForksCreateNodeAttributesCategoryEnum["Other"] = "other";
-})(NodesForksCreateNodeAttributesCategoryEnum || (NodesForksCreateNodeAttributesCategoryEnum = {}));
+})(NodesForksCreateNodeAttributesCategoryEnum = exports.NodesForksCreateNodeAttributesCategoryEnum || (exports.NodesForksCreateNodeAttributesCategoryEnum = {}));
 // NodesForksCreateNodeAttributesInput
 /**
  * The properties of the node entity.
@@ -58,81 +61,81 @@ var NodesForksCreateNodeAttributesInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], NodesForksCreateNodeAttributesInput.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], NodesForksCreateNodeAttributesInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_license" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_license" }),
         __metadata("design:type", String)
     ], NodesForksCreateNodeAttributesInput.prototype, "nodeLicense", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public" }),
         __metadata("design:type", Boolean)
     ], NodesForksCreateNodeAttributesInput.prototype, "public", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], NodesForksCreateNodeAttributesInput.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=template_from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=template_from" }),
         __metadata("design:type", String)
     ], NodesForksCreateNodeAttributesInput.prototype, "templateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], NodesForksCreateNodeAttributesInput.prototype, "title", void 0);
     return NodesForksCreateNodeAttributesInput;
-}(SpeakeasyBase));
-export { NodesForksCreateNodeAttributesInput };
+}(utils_1.SpeakeasyBase));
+exports.NodesForksCreateNodeAttributesInput = NodesForksCreateNodeAttributesInput;
 var NodesForksCreateNodeInput = /** @class */ (function (_super) {
     __extends(NodesForksCreateNodeInput, _super);
     function NodesForksCreateNodeInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
         __metadata("design:type", NodesForksCreateNodeAttributesInput)
     ], NodesForksCreateNodeInput.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], NodesForksCreateNodeInput.prototype, "type", void 0);
     return NodesForksCreateNodeInput;
-}(SpeakeasyBase));
-export { NodesForksCreateNodeInput };
+}(utils_1.SpeakeasyBase));
+exports.NodesForksCreateNodeInput = NodesForksCreateNodeInput;
 var NodesForksCreateRequest = /** @class */ (function (_super) {
     __extends(NodesForksCreateRequest, _super);
     function NodesForksCreateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NodesForksCreatePathParams)
     ], NodesForksCreateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", NodesForksCreateNodeInput)
     ], NodesForksCreateRequest.prototype, "request", void 0);
     return NodesForksCreateRequest;
-}(SpeakeasyBase));
-export { NodesForksCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.NodesForksCreateRequest = NodesForksCreateRequest;
 var NodesForksCreateResponse = /** @class */ (function (_super) {
     __extends(NodesForksCreateResponse, _super);
     function NodesForksCreateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NodesForksCreateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], NodesForksCreateResponse.prototype, "statusCode", void 0);
     return NodesForksCreateResponse;
-}(SpeakeasyBase));
-export { NodesForksCreateResponse };
+}(utils_1.SpeakeasyBase));
+exports.NodesForksCreateResponse = NodesForksCreateResponse;

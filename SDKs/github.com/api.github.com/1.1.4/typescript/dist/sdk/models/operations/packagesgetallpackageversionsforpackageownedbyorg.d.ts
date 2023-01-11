@@ -5,14 +5,10 @@ export declare class PackagesGetAllPackageVersionsForPackageOwnedByOrgPathParams
     packageName: string;
     packageType: shared.PackageTypeEnum;
 }
-export declare enum PackagesGetAllPackageVersionsForPackageOwnedByOrgStateEnum {
-    Active = "active",
-    Deleted = "deleted"
-}
 export declare class PackagesGetAllPackageVersionsForPackageOwnedByOrgQueryParams extends SpeakeasyBase {
     page?: number;
     perPage?: number;
-    state?: PackagesGetAllPackageVersionsForPackageOwnedByOrgStateEnum;
+    state?: shared.PerPageEnum;
 }
 export declare class PackagesGetAllPackageVersionsForPackageOwnedByOrgRequest extends SpeakeasyBase {
     pathParams: PackagesGetAllPackageVersionsForPackageOwnedByOrgPathParams;

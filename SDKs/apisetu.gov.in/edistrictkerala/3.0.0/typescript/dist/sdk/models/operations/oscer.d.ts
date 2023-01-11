@@ -107,11 +107,11 @@ export declare class OscerRequest extends SpeakeasyBase {
 export declare class OscerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    oscer400ApplicationJsonObject?: Oscer400ApplicationJson;
-    oscer401ApplicationJsonObject?: Oscer401ApplicationJson;
-    oscer404ApplicationJsonObject?: Oscer404ApplicationJson;
-    oscer500ApplicationJsonObject?: Oscer500ApplicationJson;
-    oscer502ApplicationJsonObject?: Oscer502ApplicationJson;
-    oscer503ApplicationJsonObject?: Oscer503ApplicationJson;
-    oscer504ApplicationJsonObject?: Oscer504ApplicationJson;
+    oscer400ApplicationJSONObject?: Oscer400ApplicationJson;
+    oscer401ApplicationJSONObject?: Oscer401ApplicationJson;
+    oscer404ApplicationJSONObject?: Oscer404ApplicationJson;
+    oscer500ApplicationJSONObject?: Oscer500ApplicationJson;
+    oscer502ApplicationJSONObject?: Oscer502ApplicationJson;
+    oscer503ApplicationJSONObject?: Oscer503ApplicationJson;
+    oscer504ApplicationJSONObject?: Oscer504ApplicationJson;
 }

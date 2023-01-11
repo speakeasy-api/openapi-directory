@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IntervalCollection } from "./intervalcollection";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IntervalCollectionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var intervalcollection_1 = require("./intervalcollection");
 var IntervalCollectionResponse = /** @class */ (function (_super) {
     __extends(IntervalCollectionResponse, _super);
     function IntervalCollectionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", IntervalCollection)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", intervalcollection_1.IntervalCollection)
     ], IntervalCollectionResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], IntervalCollectionResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedCurrency" }),
         __metadata("design:type", String)
     ], IntervalCollectionResponse.prototype, "requestedCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedSymbol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedSymbol" }),
         __metadata("design:type", String)
     ], IntervalCollectionResponse.prototype, "requestedSymbol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestedUnitOfMeasure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestedUnitOfMeasure" }),
         __metadata("design:type", String)
     ], IntervalCollectionResponse.prototype, "requestedUnitOfMeasure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], IntervalCollectionResponse.prototype, "success", void 0);
     return IntervalCollectionResponse;
-}(SpeakeasyBase));
-export { IntervalCollectionResponse };
+}(utils_1.SpeakeasyBase));
+exports.IntervalCollectionResponse = IntervalCollectionResponse;

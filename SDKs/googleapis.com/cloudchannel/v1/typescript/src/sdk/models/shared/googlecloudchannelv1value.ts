@@ -17,7 +17,7 @@ export class GoogleCloudChannelV1Value extends SpeakeasyBase {
   int64Value?: string;
 
   @SpeakeasyMetadata({ data: "json, name=protoValue" })
-  protoValue?: Map<string, any>;
+  protoValue?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=stringValue" })
   stringValue?: string;

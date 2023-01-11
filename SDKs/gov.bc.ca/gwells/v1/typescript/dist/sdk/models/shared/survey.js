@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SurveyPageEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Survey = exports.SurveyPageEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SurveyPageEnum;
 (function (SurveyPageEnum) {
     SurveyPageEnum["W"] = "w";
     SurveyPageEnum["R"] = "r";
     SurveyPageEnum["S"] = "s";
     SurveyPageEnum["A"] = "a";
-})(SurveyPageEnum || (SurveyPageEnum = {}));
+})(SurveyPageEnum = exports.SurveyPageEnum || (exports.SurveyPageEnum = {}));
 var Survey = /** @class */ (function (_super) {
     __extends(Survey, _super);
     function Survey() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=survey_guid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=survey_guid" }),
         __metadata("design:type", String)
     ], Survey.prototype, "surveyGuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=survey_introduction_text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=survey_introduction_text" }),
         __metadata("design:type", String)
     ], Survey.prototype, "surveyIntroductionText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=survey_link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=survey_link" }),
         __metadata("design:type", String)
     ], Survey.prototype, "surveyLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=survey_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=survey_page" }),
         __metadata("design:type", String)
     ], Survey.prototype, "surveyPage", void 0);
     return Survey;
-}(SpeakeasyBase));
-export { Survey };
+}(utils_1.SpeakeasyBase));
+exports.Survey = Survey;

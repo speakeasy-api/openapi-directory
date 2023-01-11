@@ -9,5 +9,5 @@ export declare class UnenrollNetworkSmDeviceRequest extends SpeakeasyBase {
 export declare class UnenrollNetworkSmDeviceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    unenrollNetworkSmDevice200ApplicationJsonObject?: Map<string, any>;
+    unenrollNetworkSmDevice200ApplicationJSONObject?: Record<string, any>;
 }

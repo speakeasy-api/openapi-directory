@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostImportInstallationMediaActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostImportInstallationMediaResponse = exports.PostImportInstallationMediaRequest = exports.PostImportInstallationMediaHeaders = exports.PostImportInstallationMediaQueryParams = exports.PostImportInstallationMediaVersionEnum = exports.PostImportInstallationMediaActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostImportInstallationMediaActionEnum;
 (function (PostImportInstallationMediaActionEnum) {
     PostImportInstallationMediaActionEnum["ImportInstallationMedia"] = "ImportInstallationMedia";
-})(PostImportInstallationMediaActionEnum || (PostImportInstallationMediaActionEnum = {}));
-export var PostImportInstallationMediaVersionEnum;
+})(PostImportInstallationMediaActionEnum = exports.PostImportInstallationMediaActionEnum || (exports.PostImportInstallationMediaActionEnum = {}));
+var PostImportInstallationMediaVersionEnum;
 (function (PostImportInstallationMediaVersionEnum) {
     PostImportInstallationMediaVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostImportInstallationMediaVersionEnum || (PostImportInstallationMediaVersionEnum = {}));
+})(PostImportInstallationMediaVersionEnum = exports.PostImportInstallationMediaVersionEnum || (exports.PostImportInstallationMediaVersionEnum = {}));
 var PostImportInstallationMediaQueryParams = /** @class */ (function (_super) {
     __extends(PostImportInstallationMediaQueryParams, _super);
     function PostImportInstallationMediaQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostImportInstallationMediaQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostImportInstallationMediaQueryParams.prototype, "version", void 0);
     return PostImportInstallationMediaQueryParams;
-}(SpeakeasyBase));
-export { PostImportInstallationMediaQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostImportInstallationMediaQueryParams = PostImportInstallationMediaQueryParams;
 var PostImportInstallationMediaHeaders = /** @class */ (function (_super) {
     __extends(PostImportInstallationMediaHeaders, _super);
     function PostImportInstallationMediaHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostImportInstallationMediaHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostImportInstallationMediaHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostImportInstallationMediaHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostImportInstallationMediaHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostImportInstallationMediaHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostImportInstallationMediaHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostImportInstallationMediaHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostImportInstallationMediaHeaders;
-}(SpeakeasyBase));
-export { PostImportInstallationMediaHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostImportInstallationMediaHeaders = PostImportInstallationMediaHeaders;
 var PostImportInstallationMediaRequest = /** @class */ (function (_super) {
     __extends(PostImportInstallationMediaRequest, _super);
     function PostImportInstallationMediaRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostImportInstallationMediaQueryParams)
     ], PostImportInstallationMediaRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostImportInstallationMediaHeaders)
     ], PostImportInstallationMediaRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostImportInstallationMediaRequest.prototype, "request", void 0);
     return PostImportInstallationMediaRequest;
-}(SpeakeasyBase));
-export { PostImportInstallationMediaRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostImportInstallationMediaRequest = PostImportInstallationMediaRequest;
 var PostImportInstallationMediaResponse = /** @class */ (function (_super) {
     __extends(PostImportInstallationMediaResponse, _super);
     function PostImportInstallationMediaResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostImportInstallationMediaResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostImportInstallationMediaResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostImportInstallationMediaResponse.prototype, "statusCode", void 0);
     return PostImportInstallationMediaResponse;
-}(SpeakeasyBase));
-export { PostImportInstallationMediaResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostImportInstallationMediaResponse = PostImportInstallationMediaResponse;

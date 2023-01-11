@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OriginApprovalRuleTemplate } from "./originapprovalruletemplate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApprovalRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var originapprovalruletemplate_1 = require("./originapprovalruletemplate");
 // ApprovalRule
 /**
  * Returns information about an approval rule.
@@ -34,37 +37,37 @@ var ApprovalRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvalRuleContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvalRuleContent" }),
         __metadata("design:type", String)
     ], ApprovalRule.prototype, "approvalRuleContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvalRuleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvalRuleId" }),
         __metadata("design:type", String)
     ], ApprovalRule.prototype, "approvalRuleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvalRuleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvalRuleName" }),
         __metadata("design:type", String)
     ], ApprovalRule.prototype, "approvalRuleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDate" }),
         __metadata("design:type", Date)
     ], ApprovalRule.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastModifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastModifiedDate" }),
         __metadata("design:type", Date)
     ], ApprovalRule.prototype, "lastModifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastModifiedUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastModifiedUser" }),
         __metadata("design:type", String)
     ], ApprovalRule.prototype, "lastModifiedUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originApprovalRuleTemplate" }),
-        __metadata("design:type", OriginApprovalRuleTemplate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originApprovalRuleTemplate" }),
+        __metadata("design:type", originapprovalruletemplate_1.OriginApprovalRuleTemplate)
     ], ApprovalRule.prototype, "originApprovalRuleTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleContentSha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleContentSha256" }),
         __metadata("design:type", String)
     ], ApprovalRule.prototype, "ruleContentSha256", void 0);
     return ApprovalRule;
-}(SpeakeasyBase));
-export { ApprovalRule };
+}(utils_1.SpeakeasyBase));
+exports.ApprovalRule = ApprovalRule;

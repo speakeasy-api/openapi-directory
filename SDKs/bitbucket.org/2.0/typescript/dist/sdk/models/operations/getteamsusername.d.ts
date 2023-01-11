@@ -15,6 +15,6 @@ export declare class GetTeamsUsernameRequest extends SpeakeasyBase {
 export declare class GetTeamsUsernameResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    team?: Map<string, any>;
+    error?: Record<string, any>;
+    team?: Record<string, any>;
 }

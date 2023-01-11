@@ -24,6 +24,6 @@ export declare class ImportExportedDataRequest extends SpeakeasyBase {
 export declare class ImportExportedDataResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    importExportedData200ApplicationJsonObject?: ImportExportedData200ApplicationJson;
-    importExportedData400ApplicationJsonObject?: ImportExportedData400ApplicationJson;
+    importExportedData200ApplicationJSONObject?: ImportExportedData200ApplicationJson;
+    importExportedData400ApplicationJSONObject?: ImportExportedData400ApplicationJson;
 }

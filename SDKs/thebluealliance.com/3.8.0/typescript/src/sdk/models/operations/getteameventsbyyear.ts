@@ -44,7 +44,7 @@ export class GetTeamEventsByYearResponse extends SpeakeasyBase {
   events?: shared.Event[];
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

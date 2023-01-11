@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ManagedDataIdentifierSummary } from "./manageddataidentifiersummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListManagedDataIdentifiersResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var manageddataidentifiersummary_1 = require("./manageddataidentifiersummary");
 var ListManagedDataIdentifiersResponse = /** @class */ (function (_super) {
     __extends(ListManagedDataIdentifiersResponse, _super);
     function ListManagedDataIdentifiersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: ManagedDataIdentifierSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: manageddataidentifiersummary_1.ManagedDataIdentifierSummary }),
         __metadata("design:type", Array)
     ], ListManagedDataIdentifiersResponse.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListManagedDataIdentifiersResponse.prototype, "nextToken", void 0);
     return ListManagedDataIdentifiersResponse;
-}(SpeakeasyBase));
-export { ListManagedDataIdentifiersResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListManagedDataIdentifiersResponse = ListManagedDataIdentifiersResponse;

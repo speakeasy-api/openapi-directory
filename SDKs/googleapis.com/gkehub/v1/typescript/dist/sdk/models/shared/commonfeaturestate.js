@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppDevExperienceFeatureState } from "./appdevexperiencefeaturestate";
-import { FeatureState } from "./featurestate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommonFeatureState = void 0;
+var utils_1 = require("../../../internal/utils");
+var appdevexperiencefeaturestate_1 = require("./appdevexperiencefeaturestate");
+var featurestate_1 = require("./featurestate");
 // CommonFeatureState
 /**
  * CommonFeatureState contains Hub-wide Feature status information.
@@ -35,17 +38,17 @@ var CommonFeatureState = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appdevexperience" }),
-        __metadata("design:type", AppDevExperienceFeatureState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appdevexperience" }),
+        __metadata("design:type", appdevexperiencefeaturestate_1.AppDevExperienceFeatureState)
     ], CommonFeatureState.prototype, "appdevexperience", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fleetobservability" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fleetobservability" }),
+        __metadata("design:type", Object)
     ], CommonFeatureState.prototype, "fleetobservability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
-        __metadata("design:type", FeatureState)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", featurestate_1.FeatureState)
     ], CommonFeatureState.prototype, "state", void 0);
     return CommonFeatureState;
-}(SpeakeasyBase));
-export { CommonFeatureState };
+}(utils_1.SpeakeasyBase));
+exports.CommonFeatureState = CommonFeatureState;

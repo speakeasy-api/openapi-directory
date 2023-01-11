@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProductStatus } from "./productstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductstatusesListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var productstatus_1 = require("./productstatus");
 var ProductstatusesListResponse = /** @class */ (function (_super) {
     __extends(ProductstatusesListResponse, _super);
     function ProductstatusesListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ProductstatusesListResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ProductstatusesListResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: ProductStatus }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: productstatus_1.ProductStatus }),
         __metadata("design:type", Array)
     ], ProductstatusesListResponse.prototype, "resources", void 0);
     return ProductstatusesListResponse;
-}(SpeakeasyBase));
-export { ProductstatusesListResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProductstatusesListResponse = ProductstatusesListResponse;

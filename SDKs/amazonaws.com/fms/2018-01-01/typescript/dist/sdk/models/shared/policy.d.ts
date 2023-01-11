@@ -5,10 +5,10 @@ import { SecurityServicePolicyData } from "./securityservicepolicydata";
  * An Firewall Manager policy.
 **/
 export declare class Policy extends SpeakeasyBase {
-    deleteUnusedFmManagedResources?: boolean;
-    excludeMap?: Map<string, string[]>;
+    deleteUnusedFMManagedResources?: boolean;
+    excludeMap?: Record<string, string[]>;
     excludeResourceTags: boolean;
-    includeMap?: Map<string, string[]>;
+    includeMap?: Record<string, string[]>;
     policyId?: string;
     policyName: string;
     policyUpdateToken?: string;

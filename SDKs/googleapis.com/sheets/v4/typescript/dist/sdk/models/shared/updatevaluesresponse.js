@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ValueRange } from "./valuerange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateValuesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var valuerange_1 = require("./valuerange");
 // UpdateValuesResponse
 /**
  * The response when updating a range of values in a spreadsheet.
@@ -34,29 +37,29 @@ var UpdateValuesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spreadsheetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spreadsheetId" }),
         __metadata("design:type", String)
     ], UpdateValuesResponse.prototype, "spreadsheetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedCells" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedCells" }),
         __metadata("design:type", Number)
     ], UpdateValuesResponse.prototype, "updatedCells", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedColumns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedColumns" }),
         __metadata("design:type", Number)
     ], UpdateValuesResponse.prototype, "updatedColumns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedData" }),
-        __metadata("design:type", ValueRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedData" }),
+        __metadata("design:type", valuerange_1.ValueRange)
     ], UpdateValuesResponse.prototype, "updatedData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedRange" }),
         __metadata("design:type", String)
     ], UpdateValuesResponse.prototype, "updatedRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedRows" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedRows" }),
         __metadata("design:type", Number)
     ], UpdateValuesResponse.prototype, "updatedRows", void 0);
     return UpdateValuesResponse;
-}(SpeakeasyBase));
-export { UpdateValuesResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateValuesResponse = UpdateValuesResponse;

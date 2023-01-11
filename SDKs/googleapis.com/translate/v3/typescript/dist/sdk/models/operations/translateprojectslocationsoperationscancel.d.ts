@@ -31,11 +31,11 @@ export declare class TranslateProjectsLocationsOperationsCancelSecurity extends 
 export declare class TranslateProjectsLocationsOperationsCancelRequest extends SpeakeasyBase {
     pathParams: TranslateProjectsLocationsOperationsCancelPathParams;
     queryParams: TranslateProjectsLocationsOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: TranslateProjectsLocationsOperationsCancelSecurity;
 }
 export declare class TranslateProjectsLocationsOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

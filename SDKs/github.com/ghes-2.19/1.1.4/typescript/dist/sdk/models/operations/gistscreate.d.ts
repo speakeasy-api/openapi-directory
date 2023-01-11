@@ -9,7 +9,7 @@ export declare enum GistsCreateRequestBodyPublic2Enum {
 }
 export declare class GistsCreateRequestBody extends SpeakeasyBase {
     description?: string;
-    files: Map<string, GistsCreateRequestBodyFiles>;
+    files: Record<string, GistsCreateRequestBodyFiles>;
     public?: any;
 }
 export declare class GistsCreateRequest extends SpeakeasyBase {
@@ -17,7 +17,7 @@ export declare class GistsCreateRequest extends SpeakeasyBase {
 }
 export declare class GistsCreateResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     gistSimple?: shared.GistSimple;

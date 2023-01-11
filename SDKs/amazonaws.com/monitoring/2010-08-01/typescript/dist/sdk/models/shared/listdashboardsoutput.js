@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DashboardEntry } from "./dashboardentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListDashboardsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var dashboardentry_1 = require("./dashboardentry");
 var ListDashboardsOutput = /** @class */ (function (_super) {
     __extends(ListDashboardsOutput, _super);
     function ListDashboardsOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: DashboardEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: dashboardentry_1.DashboardEntry }),
         __metadata("design:type", Array)
     ], ListDashboardsOutput.prototype, "dashboardEntries", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListDashboardsOutput.prototype, "nextToken", void 0);
     return ListDashboardsOutput;
-}(SpeakeasyBase));
-export { ListDashboardsOutput };
+}(utils_1.SpeakeasyBase));
+exports.ListDashboardsOutput = ListDashboardsOutput;

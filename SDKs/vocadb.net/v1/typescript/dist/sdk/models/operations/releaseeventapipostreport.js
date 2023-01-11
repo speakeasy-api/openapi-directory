@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,75 +23,77 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReleaseEventApiPostReportResponse = exports.ReleaseEventApiPostReportRequest = exports.ReleaseEventApiPostReportQueryParams = exports.ReleaseEventApiPostReportReportTypeEnum = exports.ReleaseEventApiPostReportPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReleaseEventApiPostReportPathParams = /** @class */ (function (_super) {
     __extends(ReleaseEventApiPostReportPathParams, _super);
     function ReleaseEventApiPostReportPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=eventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=eventId" }),
         __metadata("design:type", Number)
     ], ReleaseEventApiPostReportPathParams.prototype, "eventId", void 0);
     return ReleaseEventApiPostReportPathParams;
-}(SpeakeasyBase));
-export { ReleaseEventApiPostReportPathParams };
-export var ReleaseEventApiPostReportReportTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.ReleaseEventApiPostReportPathParams = ReleaseEventApiPostReportPathParams;
+var ReleaseEventApiPostReportReportTypeEnum;
 (function (ReleaseEventApiPostReportReportTypeEnum) {
     ReleaseEventApiPostReportReportTypeEnum["InvalidInfo"] = "InvalidInfo";
     ReleaseEventApiPostReportReportTypeEnum["Duplicate"] = "Duplicate";
     ReleaseEventApiPostReportReportTypeEnum["Inappropriate"] = "Inappropriate";
     ReleaseEventApiPostReportReportTypeEnum["Other"] = "Other";
-})(ReleaseEventApiPostReportReportTypeEnum || (ReleaseEventApiPostReportReportTypeEnum = {}));
+})(ReleaseEventApiPostReportReportTypeEnum = exports.ReleaseEventApiPostReportReportTypeEnum || (exports.ReleaseEventApiPostReportReportTypeEnum = {}));
 var ReleaseEventApiPostReportQueryParams = /** @class */ (function (_super) {
     __extends(ReleaseEventApiPostReportQueryParams, _super);
     function ReleaseEventApiPostReportQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=notes" }),
         __metadata("design:type", String)
     ], ReleaseEventApiPostReportQueryParams.prototype, "notes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=reportType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=reportType" }),
         __metadata("design:type", String)
     ], ReleaseEventApiPostReportQueryParams.prototype, "reportType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=versionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=versionNumber" }),
         __metadata("design:type", Number)
     ], ReleaseEventApiPostReportQueryParams.prototype, "versionNumber", void 0);
     return ReleaseEventApiPostReportQueryParams;
-}(SpeakeasyBase));
-export { ReleaseEventApiPostReportQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ReleaseEventApiPostReportQueryParams = ReleaseEventApiPostReportQueryParams;
 var ReleaseEventApiPostReportRequest = /** @class */ (function (_super) {
     __extends(ReleaseEventApiPostReportRequest, _super);
     function ReleaseEventApiPostReportRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReleaseEventApiPostReportPathParams)
     ], ReleaseEventApiPostReportRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReleaseEventApiPostReportQueryParams)
     ], ReleaseEventApiPostReportRequest.prototype, "queryParams", void 0);
     return ReleaseEventApiPostReportRequest;
-}(SpeakeasyBase));
-export { ReleaseEventApiPostReportRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReleaseEventApiPostReportRequest = ReleaseEventApiPostReportRequest;
 var ReleaseEventApiPostReportResponse = /** @class */ (function (_super) {
     __extends(ReleaseEventApiPostReportResponse, _super);
     function ReleaseEventApiPostReportResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReleaseEventApiPostReportResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReleaseEventApiPostReportResponse.prototype, "statusCode", void 0);
     return ReleaseEventApiPostReportResponse;
-}(SpeakeasyBase));
-export { ReleaseEventApiPostReportResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReleaseEventApiPostReportResponse = ReleaseEventApiPostReportResponse;

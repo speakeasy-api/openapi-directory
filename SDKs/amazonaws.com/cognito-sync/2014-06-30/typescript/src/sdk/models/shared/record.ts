@@ -2,11 +2,11 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
-// Record
+// RecordT
 /** 
  * The basic data structure of a dataset.
 **/
-export class Record extends SpeakeasyBase {
+export class RecordT extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=DeviceLastModifiedDate" })
   deviceLastModifiedDate?: Date;
 

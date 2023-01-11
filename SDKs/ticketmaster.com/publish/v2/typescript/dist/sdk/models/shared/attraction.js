@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Classification } from "./classification";
-import { Image } from "./image";
-import { Source } from "./source";
-export var AttractionTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Attraction = exports.AttractionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var classification_1 = require("./classification");
+var image_1 = require("./image");
+var source_1 = require("./source");
+var AttractionTypeEnum;
 (function (AttractionTypeEnum) {
     AttractionTypeEnum["Event"] = "event";
     AttractionTypeEnum["Venue"] = "venue";
     AttractionTypeEnum["Attraction"] = "attraction";
-})(AttractionTypeEnum || (AttractionTypeEnum = {}));
+})(AttractionTypeEnum = exports.AttractionTypeEnum || (exports.AttractionTypeEnum = {}));
 // Attraction
 /**
  * Attraction
@@ -42,61 +45,61 @@ var Attraction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], Attraction.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalInfos" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalInfos" }),
+        __metadata("design:type", Object)
     ], Attraction.prototype, "additionalInfos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=classifications", elemType: Classification }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=classifications", elemType: classification_1.Classification }),
         __metadata("design:type", Array)
     ], Attraction.prototype, "classifications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=descriptions" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=descriptions" }),
+        __metadata("design:type", Object)
     ], Attraction.prototype, "descriptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discoverable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discoverable" }),
         __metadata("design:type", Boolean)
     ], Attraction.prototype, "discoverable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=images", elemType: Image }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=images", elemType: image_1.Image }),
         __metadata("design:type", Array)
     ], Attraction.prototype, "images", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=names" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=names" }),
+        __metadata("design:type", Object)
     ], Attraction.prototype, "names", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=references" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=references" }),
+        __metadata("design:type", Object)
     ], Attraction.prototype, "references", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationships" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationships" }),
         __metadata("design:type", Array)
     ], Attraction.prototype, "relationships", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", Source)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", source_1.Source)
     ], Attraction.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=test" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=test" }),
         __metadata("design:type", Boolean)
     ], Attraction.prototype, "test", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Attraction.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Attraction.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], Attraction.prototype, "version", void 0);
     return Attraction;
-}(SpeakeasyBase));
-export { Attraction };
+}(utils_1.SpeakeasyBase));
+exports.Attraction = Attraction;

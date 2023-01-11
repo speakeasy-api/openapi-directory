@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GeoFacility } from "./geofacility";
-export var GeoFacilitiesResponseTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GeoFacilitiesResponse = exports.GeoFacilitiesResponseTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var geofacility_1 = require("./geofacility");
+var GeoFacilitiesResponseTypeEnum;
 (function (GeoFacilitiesResponseTypeEnum) {
     GeoFacilitiesResponseTypeEnum["FeatureCollection"] = "FeatureCollection";
-})(GeoFacilitiesResponseTypeEnum || (GeoFacilitiesResponseTypeEnum = {}));
+})(GeoFacilitiesResponseTypeEnum = exports.GeoFacilitiesResponseTypeEnum || (exports.GeoFacilitiesResponseTypeEnum = {}));
 var GeoFacilitiesResponse = /** @class */ (function (_super) {
     __extends(GeoFacilitiesResponse, _super);
     function GeoFacilitiesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=features", elemType: GeoFacility }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=features", elemType: geofacility_1.GeoFacility }),
         __metadata("design:type", Array)
     ], GeoFacilitiesResponse.prototype, "features", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GeoFacilitiesResponse.prototype, "type", void 0);
     return GeoFacilitiesResponse;
-}(SpeakeasyBase));
-export { GeoFacilitiesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GeoFacilitiesResponse = GeoFacilitiesResponse;

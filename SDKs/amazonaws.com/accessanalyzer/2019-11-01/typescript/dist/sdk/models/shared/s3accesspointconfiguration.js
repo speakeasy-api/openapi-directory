@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NetworkOriginConfiguration } from "./networkoriginconfiguration";
-import { S3PublicAccessBlockConfiguration } from "./s3publicaccessblockconfiguration";
-// S3AccessPointConfiguration
-/**
- * The configuration for an Amazon S3 access point or multi-region access point for the bucket. You can propose up to 10 access points or multi-region access points per bucket. If the proposed Amazon S3 access point configuration is for an existing bucket, the access preview uses the proposed access point configuration in place of the existing access points. To propose an access point without a policy, you can provide an empty string as the access point policy. For more information, see <a href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html">Creating access points</a>. For more information about access point policy limits, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-points-restrictions-limitations.html">Access points restrictions and limitations</a>.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3AccessPointConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var networkoriginconfiguration_1 = require("./networkoriginconfiguration");
+var s3publicaccessblockconfiguration_1 = require("./s3publicaccessblockconfiguration");
 var S3AccessPointConfiguration = /** @class */ (function (_super) {
     __extends(S3AccessPointConfiguration, _super);
     function S3AccessPointConfiguration() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessPointPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessPointPolicy" }),
         __metadata("design:type", String)
     ], S3AccessPointConfiguration.prototype, "accessPointPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkOrigin" }),
-        __metadata("design:type", NetworkOriginConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkOrigin" }),
+        __metadata("design:type", networkoriginconfiguration_1.NetworkOriginConfiguration)
     ], S3AccessPointConfiguration.prototype, "networkOrigin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicAccessBlock" }),
-        __metadata("design:type", S3PublicAccessBlockConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicAccessBlock" }),
+        __metadata("design:type", s3publicaccessblockconfiguration_1.S3PublicAccessBlockConfiguration)
     ], S3AccessPointConfiguration.prototype, "publicAccessBlock", void 0);
     return S3AccessPointConfiguration;
-}(SpeakeasyBase));
-export { S3AccessPointConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.S3AccessPointConfiguration = S3AccessPointConfiguration;

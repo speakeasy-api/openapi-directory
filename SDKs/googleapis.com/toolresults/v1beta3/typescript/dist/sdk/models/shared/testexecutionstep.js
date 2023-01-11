@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TestIssue } from "./testissue";
-import { TestSuiteOverview } from "./testsuiteoverview";
-import { TestTiming } from "./testtiming";
-import { ToolExecution } from "./toolexecution";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestExecutionStep = void 0;
+var utils_1 = require("../../../internal/utils");
+var testissue_1 = require("./testissue");
+var testsuiteoverview_1 = require("./testsuiteoverview");
+var testtiming_1 = require("./testtiming");
+var toolexecution_1 = require("./toolexecution");
 // TestExecutionStep
 /**
  * A step that represents running tests. It accepts ant-junit xml files which will be parsed into structured test results by the service. Xml file paths are updated in order to append more files, however they can't be deleted. Users can also add test results manually by using the test_result field.
@@ -37,21 +40,21 @@ var TestExecutionStep = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testIssues", elemType: TestIssue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testIssues", elemType: testissue_1.TestIssue }),
         __metadata("design:type", Array)
     ], TestExecutionStep.prototype, "testIssues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testSuiteOverviews", elemType: TestSuiteOverview }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testSuiteOverviews", elemType: testsuiteoverview_1.TestSuiteOverview }),
         __metadata("design:type", Array)
     ], TestExecutionStep.prototype, "testSuiteOverviews", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testTiming" }),
-        __metadata("design:type", TestTiming)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testTiming" }),
+        __metadata("design:type", testtiming_1.TestTiming)
     ], TestExecutionStep.prototype, "testTiming", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=toolExecution" }),
-        __metadata("design:type", ToolExecution)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=toolExecution" }),
+        __metadata("design:type", toolexecution_1.ToolExecution)
     ], TestExecutionStep.prototype, "toolExecution", void 0);
     return TestExecutionStep;
-}(SpeakeasyBase));
-export { TestExecutionStep };
+}(utils_1.SpeakeasyBase));
+exports.TestExecutionStep = TestExecutionStep;

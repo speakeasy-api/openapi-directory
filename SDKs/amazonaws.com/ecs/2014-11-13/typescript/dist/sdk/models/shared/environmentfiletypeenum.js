@@ -1,4 +1,7 @@
-export var EnvironmentFileTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentFileTypeEnum = void 0;
+var EnvironmentFileTypeEnum;
 (function (EnvironmentFileTypeEnum) {
     EnvironmentFileTypeEnum["S3"] = "s3";
-})(EnvironmentFileTypeEnum || (EnvironmentFileTypeEnum = {}));
+})(EnvironmentFileTypeEnum = exports.EnvironmentFileTypeEnum || (exports.EnvironmentFileTypeEnum = {}));

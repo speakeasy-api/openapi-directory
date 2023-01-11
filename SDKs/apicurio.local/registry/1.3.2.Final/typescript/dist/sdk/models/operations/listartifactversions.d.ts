@@ -8,7 +8,7 @@ export declare class ListArtifactVersionsRequest extends SpeakeasyBase {
 }
 export declare class ListArtifactVersionsResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
-    listArtifactVersions200ApplicationJsonInt64Integers?: number[];
+    listArtifactVersions200ApplicationJSONInt64Integers?: number[];
 }

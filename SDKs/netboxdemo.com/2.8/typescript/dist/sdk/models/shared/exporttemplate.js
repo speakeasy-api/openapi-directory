@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,70 +23,72 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ExportTemplateTemplateLanguageLabelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExportTemplate = exports.ExportTemplateTemplateLanguage = exports.ExportTemplateTemplateLanguageValueEnum = exports.ExportTemplateTemplateLanguageLabelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ExportTemplateTemplateLanguageLabelEnum;
 (function (ExportTemplateTemplateLanguageLabelEnum) {
     ExportTemplateTemplateLanguageLabelEnum["Django"] = "Django";
     ExportTemplateTemplateLanguageLabelEnum["Jinja2"] = "Jinja2";
-})(ExportTemplateTemplateLanguageLabelEnum || (ExportTemplateTemplateLanguageLabelEnum = {}));
-export var ExportTemplateTemplateLanguageValueEnum;
+})(ExportTemplateTemplateLanguageLabelEnum = exports.ExportTemplateTemplateLanguageLabelEnum || (exports.ExportTemplateTemplateLanguageLabelEnum = {}));
+var ExportTemplateTemplateLanguageValueEnum;
 (function (ExportTemplateTemplateLanguageValueEnum) {
     ExportTemplateTemplateLanguageValueEnum["Django"] = "django";
     ExportTemplateTemplateLanguageValueEnum["Jinja2"] = "jinja2";
-})(ExportTemplateTemplateLanguageValueEnum || (ExportTemplateTemplateLanguageValueEnum = {}));
+})(ExportTemplateTemplateLanguageValueEnum = exports.ExportTemplateTemplateLanguageValueEnum || (exports.ExportTemplateTemplateLanguageValueEnum = {}));
 var ExportTemplateTemplateLanguage = /** @class */ (function (_super) {
     __extends(ExportTemplateTemplateLanguage, _super);
     function ExportTemplateTemplateLanguage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], ExportTemplateTemplateLanguage.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], ExportTemplateTemplateLanguage.prototype, "value", void 0);
     return ExportTemplateTemplateLanguage;
-}(SpeakeasyBase));
-export { ExportTemplateTemplateLanguage };
+}(utils_1.SpeakeasyBase));
+exports.ExportTemplateTemplateLanguage = ExportTemplateTemplateLanguage;
 var ExportTemplate = /** @class */ (function (_super) {
     __extends(ExportTemplate, _super);
     function ExportTemplate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content_type" }),
         __metadata("design:type", String)
     ], ExportTemplate.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ExportTemplate.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=file_extension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=file_extension" }),
         __metadata("design:type", String)
     ], ExportTemplate.prototype, "fileExtension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ExportTemplate.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mime_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mime_type" }),
         __metadata("design:type", String)
     ], ExportTemplate.prototype, "mimeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ExportTemplate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=template_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=template_code" }),
         __metadata("design:type", String)
     ], ExportTemplate.prototype, "templateCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=template_language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=template_language" }),
         __metadata("design:type", ExportTemplateTemplateLanguage)
     ], ExportTemplate.prototype, "templateLanguage", void 0);
     return ExportTemplate;
-}(SpeakeasyBase));
-export { ExportTemplate };
+}(utils_1.SpeakeasyBase));
+exports.ExportTemplate = ExportTemplate;

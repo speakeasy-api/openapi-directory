@@ -18,5 +18,5 @@ export declare class CodeScanningGetAnalysisResponse extends SpeakeasyBase {
     statusCode: number;
     basicError?: shared.BasicError;
     codeScanningAnalysis?: shared.CodeScanningAnalysis;
-    codeScanningGetAnalysis503ApplicationJsonObject?: CodeScanningGetAnalysis503ApplicationJson;
+    codeScanningGetAnalysis503ApplicationJSONObject?: CodeScanningGetAnalysis503ApplicationJson;
 }

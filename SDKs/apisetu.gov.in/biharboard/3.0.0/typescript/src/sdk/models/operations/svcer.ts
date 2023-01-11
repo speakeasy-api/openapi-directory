@@ -14,7 +14,7 @@ export class SvcerRequestBodyCertificateParameters extends SpeakeasyBase {
   rroll: string;
 
   @SpeakeasyMetadata({ data: "json, name=RROLL_CODE" })
-  rrollCode: string;
+  rrollCODE: string;
 
   @SpeakeasyMetadata({ data: "json, name=year" })
   year: string;
@@ -197,23 +197,23 @@ export class SvcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  svcer400ApplicationJsonObject?: Svcer400ApplicationJson;
+  svcer400ApplicationJSONObject?: Svcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  svcer401ApplicationJsonObject?: Svcer401ApplicationJson;
+  svcer401ApplicationJSONObject?: Svcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  svcer404ApplicationJsonObject?: Svcer404ApplicationJson;
+  svcer404ApplicationJSONObject?: Svcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  svcer500ApplicationJsonObject?: Svcer500ApplicationJson;
+  svcer500ApplicationJSONObject?: Svcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  svcer502ApplicationJsonObject?: Svcer502ApplicationJson;
+  svcer502ApplicationJSONObject?: Svcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  svcer503ApplicationJsonObject?: Svcer503ApplicationJson;
+  svcer503ApplicationJSONObject?: Svcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  svcer504ApplicationJsonObject?: Svcer504ApplicationJson;
+  svcer504ApplicationJSONObject?: Svcer504ApplicationJson;
 }

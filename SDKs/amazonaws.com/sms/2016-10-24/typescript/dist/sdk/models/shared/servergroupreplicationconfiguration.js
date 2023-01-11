@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServerReplicationConfiguration } from "./serverreplicationconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServerGroupReplicationConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var serverreplicationconfiguration_1 = require("./serverreplicationconfiguration");
 // ServerGroupReplicationConfiguration
 /**
  * Replication configuration for a server group.
@@ -34,13 +37,13 @@ var ServerGroupReplicationConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverGroupId" }),
         __metadata("design:type", String)
     ], ServerGroupReplicationConfiguration.prototype, "serverGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverReplicationConfigurations", elemType: ServerReplicationConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverReplicationConfigurations", elemType: serverreplicationconfiguration_1.ServerReplicationConfiguration }),
         __metadata("design:type", Array)
     ], ServerGroupReplicationConfiguration.prototype, "serverReplicationConfigurations", void 0);
     return ServerGroupReplicationConfiguration;
-}(SpeakeasyBase));
-export { ServerGroupReplicationConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.ServerGroupReplicationConfiguration = ServerGroupReplicationConfiguration;

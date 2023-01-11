@@ -4,5 +4,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class ListQueuesResult extends SpeakeasyBase {
     nextToken?: string;
-    queueUrls?: string[];
+    queueUrls?: Record<string, any>[];
 }

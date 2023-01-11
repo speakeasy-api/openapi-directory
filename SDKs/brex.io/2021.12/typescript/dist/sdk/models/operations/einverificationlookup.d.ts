@@ -15,7 +15,7 @@ export declare class EinVerificationLookupRequest extends SpeakeasyBase {
 }
 export declare class EinVerificationLookupResponse extends SpeakeasyBase {
     contentType: string;
-    einVerificationLookup200ApplicationJsonAny?: any;
-    einVerificationLookupDefaultApplicationJsonAny?: any;
+    einVerificationLookup200ApplicationJSONAny?: any;
+    einVerificationLookupDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

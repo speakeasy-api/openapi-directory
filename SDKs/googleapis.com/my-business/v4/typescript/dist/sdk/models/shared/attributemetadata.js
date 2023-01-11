@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttributeValueMetadata } from "./attributevaluemetadata";
-export var AttributeMetadataValueTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AttributeMetadata = exports.AttributeMetadataValueTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var attributevaluemetadata_1 = require("./attributevaluemetadata");
+var AttributeMetadataValueTypeEnum;
 (function (AttributeMetadataValueTypeEnum) {
     AttributeMetadataValueTypeEnum["AttributeValueTypeUnspecified"] = "ATTRIBUTE_VALUE_TYPE_UNSPECIFIED";
     AttributeMetadataValueTypeEnum["Bool"] = "BOOL";
     AttributeMetadataValueTypeEnum["Enum"] = "ENUM";
     AttributeMetadataValueTypeEnum["Url"] = "URL";
     AttributeMetadataValueTypeEnum["RepeatedEnum"] = "REPEATED_ENUM";
-})(AttributeMetadataValueTypeEnum || (AttributeMetadataValueTypeEnum = {}));
+})(AttributeMetadataValueTypeEnum = exports.AttributeMetadataValueTypeEnum || (exports.AttributeMetadataValueTypeEnum = {}));
 // AttributeMetadata
 /**
  * Metadata for an attribute. Contains display information for the attribute, including a localized name and a heading for grouping related attributes together.
@@ -42,33 +45,33 @@ var AttributeMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributeId" }),
         __metadata("design:type", String)
     ], AttributeMetadata.prototype, "attributeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], AttributeMetadata.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupDisplayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupDisplayName" }),
         __metadata("design:type", String)
     ], AttributeMetadata.prototype, "groupDisplayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDeprecated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDeprecated" }),
         __metadata("design:type", Boolean)
     ], AttributeMetadata.prototype, "isDeprecated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isRepeatable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isRepeatable" }),
         __metadata("design:type", Boolean)
     ], AttributeMetadata.prototype, "isRepeatable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueMetadata", elemType: AttributeValueMetadata }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueMetadata", elemType: attributevaluemetadata_1.AttributeValueMetadata }),
         __metadata("design:type", Array)
     ], AttributeMetadata.prototype, "valueMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueType" }),
         __metadata("design:type", String)
     ], AttributeMetadata.prototype, "valueType", void 0);
     return AttributeMetadata;
-}(SpeakeasyBase));
-export { AttributeMetadata };
+}(utils_1.SpeakeasyBase));
+exports.AttributeMetadata = AttributeMetadata;

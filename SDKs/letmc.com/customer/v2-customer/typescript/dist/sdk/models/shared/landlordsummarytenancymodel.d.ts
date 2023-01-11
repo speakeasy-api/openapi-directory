@@ -4,7 +4,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class LandlordSummaryTenancyModel extends SpeakeasyBase {
     bond?: number;
-    branchId?: string;
+    branchID?: string;
     description?: string;
     globalReference?: string;
     id?: string;

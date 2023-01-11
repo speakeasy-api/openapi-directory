@@ -2,11 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
-export enum ProductVoucherOptionEnum {
-    VoucherPaperOnly = "VOUCHER_PAPER_ONLY",
-    VoucherE = "VOUCHER_E"
-}
-
 
 export class ProductQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=code" })
@@ -25,7 +20,7 @@ export class ProductQueryParams extends SpeakeasyBase {
   sortOrder?: shared.SortOrderReviewEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=voucherOption" })
-  voucherOption?: ProductVoucherOptionEnum;
+  voucherOption?: shared.SortOrderReviewEnum1;
 }
 
 
@@ -154,7 +149,7 @@ export class Product200ApplicationJsonDataProductPhotos extends SpeakeasyBase {
   caption?: string;
 
   @SpeakeasyMetadata({ data: "json, name=photoURL" })
-  photoUrl?: string;
+  photoURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=supplier" })
   supplier?: string;
@@ -181,7 +176,7 @@ export class Product200ApplicationJsonDataTourGrades extends SpeakeasyBase {
   gradeTitle?: string;
 
   @SpeakeasyMetadata({ data: "json, name=langServices" })
-  langServices?: Map<string, string>;
+  langServices?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=merchantNetPriceFrom" })
   merchantNetPriceFrom?: number;
@@ -284,7 +279,7 @@ export class Product200ApplicationJsonData extends SpeakeasyBase {
   location?: string;
 
   @SpeakeasyMetadata({ data: "json, name=mapURL" })
-  mapUrl?: string;
+  mapURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=maxTravellerCount" })
   maxTravellerCount?: number;
@@ -314,7 +309,7 @@ export class Product200ApplicationJsonData extends SpeakeasyBase {
   panoramaCount?: number;
 
   @SpeakeasyMetadata({ data: "json, name=pas" })
-  pas?: Map<string, any>;
+  pas?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=passengerAttributes", elemType: Product200ApplicationJsonDataPassengerAttributes })
   passengerAttributes?: Product200ApplicationJsonDataPassengerAttributes[];
@@ -410,10 +405,10 @@ export class Product200ApplicationJsonData extends SpeakeasyBase {
   supplierName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=thumbnailHiResURL" })
-  thumbnailHiResUrl?: string;
+  thumbnailHiResURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=thumbnailURL" })
-  thumbnailUrl?: string;
+  thumbnailURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=title" })
   title?: string;
@@ -443,7 +438,7 @@ export class Product200ApplicationJsonData extends SpeakeasyBase {
   voucherRequirements?: any;
 
   @SpeakeasyMetadata({ data: "json, name=webURL" })
-  webUrl?: string;
+  webURL?: string;
 }
 
 
@@ -473,10 +468,10 @@ export class Product200ApplicationJson extends SpeakeasyBase {
   errorType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraInfo" })
-  extraInfo?: Map<string, any>;
+  extraInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=extraObject" })
-  extraObject?: Map<string, any>;
+  extraObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=success" })
   success?: boolean;
@@ -506,5 +501,5 @@ export class ProductResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  product200ApplicationJsonObject?: Product200ApplicationJson;
+  product200ApplicationJSONObject?: Product200ApplicationJson;
 }

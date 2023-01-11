@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSitesSiteIdSubsitesOutputFormatResponse = exports.GetSitesSiteIdSubsitesOutputFormatRequest = exports.GetSitesSiteIdSubsitesOutputFormatQueryParams = exports.GetSitesSiteIdSubsitesOutputFormatLocationDescriptorEnum = exports.GetSitesSiteIdSubsitesOutputFormatPathParams = exports.GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum;
 (function (GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum) {
     GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum["Json"] = "json";
     GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum["Geojson"] = "geojson";
@@ -32,24 +35,24 @@ export var GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum;
     GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum["Gml"] = "gml";
     GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum["Csv"] = "csv";
     GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum["Shpz"] = "shpz";
-})(GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum || (GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum = {}));
+})(GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum = exports.GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum || (exports.GetSitesSiteIdSubsitesOutputFormatOutputFormatEnum = {}));
 var GetSitesSiteIdSubsitesOutputFormatPathParams = /** @class */ (function (_super) {
     __extends(GetSitesSiteIdSubsitesOutputFormatPathParams, _super);
     function GetSitesSiteIdSubsitesOutputFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
         __metadata("design:type", String)
     ], GetSitesSiteIdSubsitesOutputFormatPathParams.prototype, "outputFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=siteID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=siteID" }),
         __metadata("design:type", String)
-    ], GetSitesSiteIdSubsitesOutputFormatPathParams.prototype, "siteId", void 0);
+    ], GetSitesSiteIdSubsitesOutputFormatPathParams.prototype, "siteID", void 0);
     return GetSitesSiteIdSubsitesOutputFormatPathParams;
-}(SpeakeasyBase));
-export { GetSitesSiteIdSubsitesOutputFormatPathParams };
-export var GetSitesSiteIdSubsitesOutputFormatLocationDescriptorEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetSitesSiteIdSubsitesOutputFormatPathParams = GetSitesSiteIdSubsitesOutputFormatPathParams;
+var GetSitesSiteIdSubsitesOutputFormatLocationDescriptorEnum;
 (function (GetSitesSiteIdSubsitesOutputFormatLocationDescriptorEnum) {
     GetSitesSiteIdSubsitesOutputFormatLocationDescriptorEnum["Any"] = "any";
     GetSitesSiteIdSubsitesOutputFormatLocationDescriptorEnum["AccessPoint"] = "accessPoint";
@@ -57,60 +60,60 @@ export var GetSitesSiteIdSubsitesOutputFormatLocationDescriptorEnum;
     GetSitesSiteIdSubsitesOutputFormatLocationDescriptorEnum["ParcelPoint"] = "parcelPoint";
     GetSitesSiteIdSubsitesOutputFormatLocationDescriptorEnum["RooftopPoint"] = "rooftopPoint";
     GetSitesSiteIdSubsitesOutputFormatLocationDescriptorEnum["RoutingPoint"] = "routingPoint";
-})(GetSitesSiteIdSubsitesOutputFormatLocationDescriptorEnum || (GetSitesSiteIdSubsitesOutputFormatLocationDescriptorEnum = {}));
+})(GetSitesSiteIdSubsitesOutputFormatLocationDescriptorEnum = exports.GetSitesSiteIdSubsitesOutputFormatLocationDescriptorEnum || (exports.GetSitesSiteIdSubsitesOutputFormatLocationDescriptorEnum = {}));
 var GetSitesSiteIdSubsitesOutputFormatQueryParams = /** @class */ (function (_super) {
     __extends(GetSitesSiteIdSubsitesOutputFormatQueryParams, _super);
     function GetSitesSiteIdSubsitesOutputFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=brief" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=brief" }),
         __metadata("design:type", Boolean)
     ], GetSitesSiteIdSubsitesOutputFormatQueryParams.prototype, "brief", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=locationDescriptor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=locationDescriptor" }),
         __metadata("design:type", String)
     ], GetSitesSiteIdSubsitesOutputFormatQueryParams.prototype, "locationDescriptor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
         __metadata("design:type", Number)
-    ], GetSitesSiteIdSubsitesOutputFormatQueryParams.prototype, "outputSrs", void 0);
+    ], GetSitesSiteIdSubsitesOutputFormatQueryParams.prototype, "outputSRS", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=setBack" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=setBack" }),
         __metadata("design:type", Number)
     ], GetSitesSiteIdSubsitesOutputFormatQueryParams.prototype, "setBack", void 0);
     return GetSitesSiteIdSubsitesOutputFormatQueryParams;
-}(SpeakeasyBase));
-export { GetSitesSiteIdSubsitesOutputFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSitesSiteIdSubsitesOutputFormatQueryParams = GetSitesSiteIdSubsitesOutputFormatQueryParams;
 var GetSitesSiteIdSubsitesOutputFormatRequest = /** @class */ (function (_super) {
     __extends(GetSitesSiteIdSubsitesOutputFormatRequest, _super);
     function GetSitesSiteIdSubsitesOutputFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSitesSiteIdSubsitesOutputFormatPathParams)
     ], GetSitesSiteIdSubsitesOutputFormatRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSitesSiteIdSubsitesOutputFormatQueryParams)
     ], GetSitesSiteIdSubsitesOutputFormatRequest.prototype, "queryParams", void 0);
     return GetSitesSiteIdSubsitesOutputFormatRequest;
-}(SpeakeasyBase));
-export { GetSitesSiteIdSubsitesOutputFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSitesSiteIdSubsitesOutputFormatRequest = GetSitesSiteIdSubsitesOutputFormatRequest;
 var GetSitesSiteIdSubsitesOutputFormatResponse = /** @class */ (function (_super) {
     __extends(GetSitesSiteIdSubsitesOutputFormatResponse, _super);
     function GetSitesSiteIdSubsitesOutputFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSitesSiteIdSubsitesOutputFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSitesSiteIdSubsitesOutputFormatResponse.prototype, "statusCode", void 0);
     return GetSitesSiteIdSubsitesOutputFormatResponse;
-}(SpeakeasyBase));
-export { GetSitesSiteIdSubsitesOutputFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSitesSiteIdSubsitesOutputFormatResponse = GetSitesSiteIdSubsitesOutputFormatResponse;

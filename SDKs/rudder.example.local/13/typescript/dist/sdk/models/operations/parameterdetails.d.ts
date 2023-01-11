@@ -28,5 +28,5 @@ export declare class ParameterDetailsRequest extends SpeakeasyBase {
 export declare class ParameterDetailsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    parameterDetails200ApplicationJsonObject?: ParameterDetails200ApplicationJson;
+    parameterDetails200ApplicationJSONObject?: ParameterDetails200ApplicationJson;
 }

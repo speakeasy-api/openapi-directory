@@ -47,11 +47,11 @@ export class Trail extends SpeakeasyBase {
   s3KeyPrefix?: string;
 
   @SpeakeasyMetadata({ data: "json, name=SnsTopicARN" })
-  snsTopicArn?: string;
+  snsTopicARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=SnsTopicName" })
-  snsTopicName?: string;
+  snsTopicName?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=TrailARN" })
-  trailArn?: string;
+  trailARN?: string;
 }

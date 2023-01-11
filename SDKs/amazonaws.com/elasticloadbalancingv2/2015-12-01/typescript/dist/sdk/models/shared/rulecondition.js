@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HostHeaderConditionConfig } from "./hostheaderconditionconfig";
-import { HttpHeaderConditionConfig } from "./httpheaderconditionconfig";
-import { HttpRequestMethodConditionConfig } from "./httprequestmethodconditionconfig";
-import { PathPatternConditionConfig } from "./pathpatternconditionconfig";
-import { QueryStringConditionConfig } from "./querystringconditionconfig";
-import { SourceIpConditionConfig } from "./sourceipconditionconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuleCondition = void 0;
+var utils_1 = require("../../../internal/utils");
+var hostheaderconditionconfig_1 = require("./hostheaderconditionconfig");
+var httpheaderconditionconfig_1 = require("./httpheaderconditionconfig");
+var httprequestmethodconditionconfig_1 = require("./httprequestmethodconditionconfig");
+var pathpatternconditionconfig_1 = require("./pathpatternconditionconfig");
+var querystringconditionconfig_1 = require("./querystringconditionconfig");
+var sourceipconditionconfig_1 = require("./sourceipconditionconfig");
 // RuleCondition
 /**
  * <p>Information about a condition for a rule.</p> <p>Each rule can optionally include up to one of each of the following conditions: <code>http-request-method</code>, <code>host-header</code>, <code>path-pattern</code>, and <code>source-ip</code>. Each rule can also optionally include one or more of each of the following conditions: <code>http-header</code> and <code>query-string</code>.</p>
@@ -39,37 +42,37 @@ var RuleCondition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RuleCondition.prototype, "field", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", HostHeaderConditionConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", hostheaderconditionconfig_1.HostHeaderConditionConfig)
     ], RuleCondition.prototype, "hostHeaderConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", HttpHeaderConditionConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", httpheaderconditionconfig_1.HttpHeaderConditionConfig)
     ], RuleCondition.prototype, "httpHeaderConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", HttpRequestMethodConditionConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", httprequestmethodconditionconfig_1.HttpRequestMethodConditionConfig)
     ], RuleCondition.prototype, "httpRequestMethodConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PathPatternConditionConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", pathpatternconditionconfig_1.PathPatternConditionConfig)
     ], RuleCondition.prototype, "pathPatternConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", QueryStringConditionConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", querystringconditionconfig_1.QueryStringConditionConfig)
     ], RuleCondition.prototype, "queryStringConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", SourceIpConditionConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", sourceipconditionconfig_1.SourceIpConditionConfig)
     ], RuleCondition.prototype, "sourceIpConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], RuleCondition.prototype, "values", void 0);
     return RuleCondition;
-}(SpeakeasyBase));
-export { RuleCondition };
+}(utils_1.SpeakeasyBase));
+exports.RuleCondition = RuleCondition;

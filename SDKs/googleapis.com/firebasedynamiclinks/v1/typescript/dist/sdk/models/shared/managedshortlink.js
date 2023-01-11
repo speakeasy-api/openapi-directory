@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DynamicLinkInfo } from "./dynamiclinkinfo";
-export var ManagedShortLinkFlaggedAttributeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ManagedShortLink = exports.ManagedShortLinkVisibilityEnum = exports.ManagedShortLinkFlaggedAttributeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var dynamiclinkinfo_1 = require("./dynamiclinkinfo");
+var ManagedShortLinkFlaggedAttributeEnum;
 (function (ManagedShortLinkFlaggedAttributeEnum) {
     ManagedShortLinkFlaggedAttributeEnum["UnspecifiedAttribute"] = "UNSPECIFIED_ATTRIBUTE";
     ManagedShortLinkFlaggedAttributeEnum["Spam"] = "SPAM";
-})(ManagedShortLinkFlaggedAttributeEnum || (ManagedShortLinkFlaggedAttributeEnum = {}));
-export var ManagedShortLinkVisibilityEnum;
+})(ManagedShortLinkFlaggedAttributeEnum = exports.ManagedShortLinkFlaggedAttributeEnum || (exports.ManagedShortLinkFlaggedAttributeEnum = {}));
+var ManagedShortLinkVisibilityEnum;
 (function (ManagedShortLinkVisibilityEnum) {
     ManagedShortLinkVisibilityEnum["UnspecifiedVisibility"] = "UNSPECIFIED_VISIBILITY";
     ManagedShortLinkVisibilityEnum["Unarchived"] = "UNARCHIVED";
     ManagedShortLinkVisibilityEnum["Archived"] = "ARCHIVED";
     ManagedShortLinkVisibilityEnum["NeverShown"] = "NEVER_SHOWN";
-})(ManagedShortLinkVisibilityEnum || (ManagedShortLinkVisibilityEnum = {}));
+})(ManagedShortLinkVisibilityEnum = exports.ManagedShortLinkVisibilityEnum || (exports.ManagedShortLinkVisibilityEnum = {}));
 // ManagedShortLink
 /**
  * Managed Short Link.
@@ -46,29 +49,29 @@ var ManagedShortLink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationTime" }),
         __metadata("design:type", String)
     ], ManagedShortLink.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flaggedAttribute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flaggedAttribute" }),
         __metadata("design:type", Array)
     ], ManagedShortLink.prototype, "flaggedAttribute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=info" }),
-        __metadata("design:type", DynamicLinkInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=info" }),
+        __metadata("design:type", dynamiclinkinfo_1.DynamicLinkInfo)
     ], ManagedShortLink.prototype, "info", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], ManagedShortLink.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linkName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linkName" }),
         __metadata("design:type", String)
     ], ManagedShortLink.prototype, "linkName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visibility" }),
         __metadata("design:type", String)
     ], ManagedShortLink.prototype, "visibility", void 0);
     return ManagedShortLink;
-}(SpeakeasyBase));
-export { ManagedShortLink };
+}(utils_1.SpeakeasyBase));
+exports.ManagedShortLink = ManagedShortLink;

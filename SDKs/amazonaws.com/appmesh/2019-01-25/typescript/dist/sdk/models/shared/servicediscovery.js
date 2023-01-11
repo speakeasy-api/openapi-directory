@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AwsCloudMapServiceDiscovery } from "./awscloudmapservicediscovery";
-import { DnsServiceDiscovery } from "./dnsservicediscovery";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceDiscovery = void 0;
+var utils_1 = require("../../../internal/utils");
+var awscloudmapservicediscovery_1 = require("./awscloudmapservicediscovery");
+var dnsservicediscovery_1 = require("./dnsservicediscovery");
 // ServiceDiscovery
 /**
  * An object that represents the service discovery information for a virtual node.
@@ -35,13 +38,13 @@ var ServiceDiscovery = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awsCloudMap" }),
-        __metadata("design:type", AwsCloudMapServiceDiscovery)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awsCloudMap" }),
+        __metadata("design:type", awscloudmapservicediscovery_1.AwsCloudMapServiceDiscovery)
     ], ServiceDiscovery.prototype, "awsCloudMap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dns" }),
-        __metadata("design:type", DnsServiceDiscovery)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dns" }),
+        __metadata("design:type", dnsservicediscovery_1.DnsServiceDiscovery)
     ], ServiceDiscovery.prototype, "dns", void 0);
     return ServiceDiscovery;
-}(SpeakeasyBase));
-export { ServiceDiscovery };
+}(utils_1.SpeakeasyBase));
+exports.ServiceDiscovery = ServiceDiscovery;

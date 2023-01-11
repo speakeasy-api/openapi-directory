@@ -22,5 +22,5 @@ export declare class GetDeviceWirelessConnectionStatsRequest extends SpeakeasyBa
 export declare class GetDeviceWirelessConnectionStatsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceWirelessConnectionStats200ApplicationJsonObject?: Map<string, any>;
+    getDeviceWirelessConnectionStats200ApplicationJSONObject?: Record<string, any>;
 }

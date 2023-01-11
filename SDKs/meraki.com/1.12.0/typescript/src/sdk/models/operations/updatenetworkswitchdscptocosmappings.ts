@@ -43,5 +43,5 @@ export class UpdateNetworkSwitchDscpToCosMappingsResponse extends SpeakeasyBase 
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkSwitchDscpToCosMappings200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkSwitchDscpToCosMappings200ApplicationJSONObject?: Record<string, any>;
 }

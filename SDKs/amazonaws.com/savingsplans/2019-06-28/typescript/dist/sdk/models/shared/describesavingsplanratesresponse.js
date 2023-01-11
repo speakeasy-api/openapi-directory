@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SavingsPlanRate } from "./savingsplanrate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeSavingsPlanRatesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var savingsplanrate_1 = require("./savingsplanrate");
 var DescribeSavingsPlanRatesResponse = /** @class */ (function (_super) {
     __extends(DescribeSavingsPlanRatesResponse, _super);
     function DescribeSavingsPlanRatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], DescribeSavingsPlanRatesResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=savingsPlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=savingsPlanId" }),
         __metadata("design:type", String)
     ], DescribeSavingsPlanRatesResponse.prototype, "savingsPlanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=searchResults", elemType: SavingsPlanRate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=searchResults", elemType: savingsplanrate_1.SavingsPlanRate }),
         __metadata("design:type", Array)
     ], DescribeSavingsPlanRatesResponse.prototype, "searchResults", void 0);
     return DescribeSavingsPlanRatesResponse;
-}(SpeakeasyBase));
-export { DescribeSavingsPlanRatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeSavingsPlanRatesResponse = DescribeSavingsPlanRatesResponse;

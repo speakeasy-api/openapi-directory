@@ -8,5 +8,5 @@ export declare class ProtocolProxyPortListRequest extends SpeakeasyBase {
 export declare class ProtocolProxyPortListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolProxyPortList200ApplicationJsonInt32Integers?: number[];
+    protocolProxyPortList200ApplicationJSONInt32Integers?: number[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetStrainsByPositionUsingGetResponse = exports.GetStrainsByPositionUsingGetRequest = exports.GetStrainsByPositionUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetStrainsByPositionUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetStrainsByPositionUsingGetPathParams, _super);
     function GetStrainsByPositionUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=chr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=chr" }),
         __metadata("design:type", String)
     ], GetStrainsByPositionUsingGetPathParams.prototype, "chr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=mapKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=mapKey" }),
         __metadata("design:type", Number)
     ], GetStrainsByPositionUsingGetPathParams.prototype, "mapKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=start" }),
         __metadata("design:type", Number)
     ], GetStrainsByPositionUsingGetPathParams.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=stop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=stop" }),
         __metadata("design:type", Number)
     ], GetStrainsByPositionUsingGetPathParams.prototype, "stop", void 0);
     return GetStrainsByPositionUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetStrainsByPositionUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetStrainsByPositionUsingGetPathParams = GetStrainsByPositionUsingGetPathParams;
 var GetStrainsByPositionUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetStrainsByPositionUsingGetRequest, _super);
     function GetStrainsByPositionUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetStrainsByPositionUsingGetPathParams)
     ], GetStrainsByPositionUsingGetRequest.prototype, "pathParams", void 0);
     return GetStrainsByPositionUsingGetRequest;
-}(SpeakeasyBase));
-export { GetStrainsByPositionUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetStrainsByPositionUsingGetRequest = GetStrainsByPositionUsingGetRequest;
 var GetStrainsByPositionUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetStrainsByPositionUsingGetResponse, _super);
     function GetStrainsByPositionUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetStrainsByPositionUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetStrainsByPositionUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetStrainsByPositionUsingGetResponse.prototype, "statusCode", void 0);
     return GetStrainsByPositionUsingGetResponse;
-}(SpeakeasyBase));
-export { GetStrainsByPositionUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetStrainsByPositionUsingGetResponse = GetStrainsByPositionUsingGetResponse;

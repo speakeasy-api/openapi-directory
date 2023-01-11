@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3Target = void 0;
+var utils_1 = require("../../../internal/utils");
 // S3Target
 /**
  * Specifies a data store in Amazon Simple Storage Service (Amazon S3).
@@ -33,21 +36,21 @@ var S3Target = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConnectionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConnectionName" }),
         __metadata("design:type", String)
     ], S3Target.prototype, "connectionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Exclusions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Exclusions" }),
         __metadata("design:type", Array)
     ], S3Target.prototype, "exclusions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Path" }),
         __metadata("design:type", String)
     ], S3Target.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SampleSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SampleSize" }),
         __metadata("design:type", Number)
     ], S3Target.prototype, "sampleSize", void 0);
     return S3Target;
-}(SpeakeasyBase));
-export { S3Target };
+}(utils_1.SpeakeasyBase));
+exports.S3Target = S3Target;

@@ -37,5 +37,5 @@ export class CreateOrganizationInsightMonitoredMediaServerResponse extends Speak
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createOrganizationInsightMonitoredMediaServer201ApplicationJsonObject?: Map<string, any>;
+  createOrganizationInsightMonitoredMediaServer201ApplicationJSONObject?: Record<string, any>;
 }

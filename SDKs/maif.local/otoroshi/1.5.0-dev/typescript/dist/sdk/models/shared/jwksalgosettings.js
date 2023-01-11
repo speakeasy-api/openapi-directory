@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JwksAlgoSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 // JwksAlgoSettings
 /**
  * Settings for a JWK set
@@ -33,29 +36,29 @@ var JwksAlgoSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], JwksAlgoSettings.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kty" }),
         __metadata("design:type", String)
     ], JwksAlgoSettings.prototype, "kty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeout" }),
         __metadata("design:type", Number)
     ], JwksAlgoSettings.prototype, "timeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ttl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ttl" }),
         __metadata("design:type", Number)
     ], JwksAlgoSettings.prototype, "ttl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], JwksAlgoSettings.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], JwksAlgoSettings.prototype, "url", void 0);
     return JwksAlgoSettings;
-}(SpeakeasyBase));
-export { JwksAlgoSettings };
+}(utils_1.SpeakeasyBase));
+exports.JwksAlgoSettings = JwksAlgoSettings;

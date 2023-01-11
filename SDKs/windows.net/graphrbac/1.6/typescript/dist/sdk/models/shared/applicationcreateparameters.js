@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppRole } from "./approle";
-import { GroupMembershipClaimsEnum } from "./groupmembershipclaimsenum";
-import { InformationalUrl } from "./informationalurl";
-import { OAuth2Permission } from "./oauth2permission";
-import { OptionalClaims } from "./optionalclaims";
-import { PreAuthorizedApplication } from "./preauthorizedapplication";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationCreateParameters = void 0;
+var utils_1 = require("../../../internal/utils");
+var approle_1 = require("./approle");
+var groupmembershipclaimsenum_1 = require("./groupmembershipclaimsenum");
+var informationalurl_1 = require("./informationalurl");
+var oauth2permission_1 = require("./oauth2permission");
+var optionalclaims_1 = require("./optionalclaims");
+var preauthorizedapplication_1 = require("./preauthorizedapplication");
 // ApplicationCreateParameters
 /**
- * Request parameters for creating a new application.
+ * Active Directive Application common properties shared among GET, POST and PATCH
 **/
 var ApplicationCreateParameters = /** @class */ (function (_super) {
     __extends(ApplicationCreateParameters, _super);
@@ -39,129 +42,129 @@ var ApplicationCreateParameters = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowGuestsSignIn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowGuestsSignIn" }),
         __metadata("design:type", Boolean)
     ], ApplicationCreateParameters.prototype, "allowGuestsSignIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowPassthroughUsers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowPassthroughUsers" }),
         __metadata("design:type", Boolean)
     ], ApplicationCreateParameters.prototype, "allowPassthroughUsers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appLogoUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appLogoUrl" }),
         __metadata("design:type", String)
     ], ApplicationCreateParameters.prototype, "appLogoUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appPermissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appPermissions" }),
         __metadata("design:type", Array)
     ], ApplicationCreateParameters.prototype, "appPermissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appRoles", elemType: AppRole }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appRoles", elemType: approle_1.AppRole }),
         __metadata("design:type", Array)
     ], ApplicationCreateParameters.prototype, "appRoles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availableToOtherTenants" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availableToOtherTenants" }),
         __metadata("design:type", Boolean)
     ], ApplicationCreateParameters.prototype, "availableToOtherTenants", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], ApplicationCreateParameters.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorUrl" }),
         __metadata("design:type", String)
     ], ApplicationCreateParameters.prototype, "errorUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupMembershipClaims" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupMembershipClaims" }),
         __metadata("design:type", String)
     ], ApplicationCreateParameters.prototype, "groupMembershipClaims", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=homepage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=homepage" }),
         __metadata("design:type", String)
     ], ApplicationCreateParameters.prototype, "homepage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identifierUris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identifierUris" }),
         __metadata("design:type", Array)
     ], ApplicationCreateParameters.prototype, "identifierUris", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=informationalUrls" }),
-        __metadata("design:type", InformationalUrl)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=informationalUrls" }),
+        __metadata("design:type", informationalurl_1.InformationalUrl)
     ], ApplicationCreateParameters.prototype, "informationalUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDeviceOnlyAuthSupported" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDeviceOnlyAuthSupported" }),
         __metadata("design:type", Boolean)
     ], ApplicationCreateParameters.prototype, "isDeviceOnlyAuthSupported", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyCredentials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyCredentials" }),
         __metadata("design:type", Array)
     ], ApplicationCreateParameters.prototype, "keyCredentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=knownClientApplications" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=knownClientApplications" }),
         __metadata("design:type", Array)
     ], ApplicationCreateParameters.prototype, "knownClientApplications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logoutUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logoutUrl" }),
         __metadata("design:type", String)
     ], ApplicationCreateParameters.prototype, "logoutUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth2AllowImplicitFlow" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth2AllowImplicitFlow" }),
         __metadata("design:type", Boolean)
     ], ApplicationCreateParameters.prototype, "oauth2AllowImplicitFlow", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth2AllowUrlPathMatching" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth2AllowUrlPathMatching" }),
         __metadata("design:type", Boolean)
     ], ApplicationCreateParameters.prototype, "oauth2AllowUrlPathMatching", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth2Permissions", elemType: OAuth2Permission }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth2Permissions", elemType: oauth2permission_1.OAuth2Permission }),
         __metadata("design:type", Array)
     ], ApplicationCreateParameters.prototype, "oauth2Permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oauth2RequirePostResponse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oauth2RequirePostResponse" }),
         __metadata("design:type", Boolean)
     ], ApplicationCreateParameters.prototype, "oauth2RequirePostResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=optionalClaims" }),
-        __metadata("design:type", OptionalClaims)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=optionalClaims" }),
+        __metadata("design:type", optionalclaims_1.OptionalClaims)
     ], ApplicationCreateParameters.prototype, "optionalClaims", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orgRestrictions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orgRestrictions" }),
         __metadata("design:type", Array)
     ], ApplicationCreateParameters.prototype, "orgRestrictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passwordCredentials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passwordCredentials" }),
         __metadata("design:type", Array)
     ], ApplicationCreateParameters.prototype, "passwordCredentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preAuthorizedApplications", elemType: PreAuthorizedApplication }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preAuthorizedApplications", elemType: preauthorizedapplication_1.PreAuthorizedApplication }),
         __metadata("design:type", Array)
     ], ApplicationCreateParameters.prototype, "preAuthorizedApplications", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicClient" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicClient" }),
         __metadata("design:type", Boolean)
     ], ApplicationCreateParameters.prototype, "publicClient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisherDomain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisherDomain" }),
         __metadata("design:type", String)
     ], ApplicationCreateParameters.prototype, "publisherDomain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replyUrls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replyUrls" }),
         __metadata("design:type", Array)
     ], ApplicationCreateParameters.prototype, "replyUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requiredResourceAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requiredResourceAccess" }),
         __metadata("design:type", Array)
     ], ApplicationCreateParameters.prototype, "requiredResourceAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=samlMetadataUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=samlMetadataUrl" }),
         __metadata("design:type", String)
     ], ApplicationCreateParameters.prototype, "samlMetadataUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signInAudience" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signInAudience" }),
         __metadata("design:type", String)
     ], ApplicationCreateParameters.prototype, "signInAudience", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wwwHomepage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wwwHomepage" }),
         __metadata("design:type", String)
     ], ApplicationCreateParameters.prototype, "wwwHomepage", void 0);
     return ApplicationCreateParameters;
-}(SpeakeasyBase));
-export { ApplicationCreateParameters };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationCreateParameters = ApplicationCreateParameters;

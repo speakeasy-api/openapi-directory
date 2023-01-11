@@ -11,13 +11,13 @@ export class PostV05HealthInformationHiuOnRequestHeaders extends SpeakeasyBase {
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-HIU-ID" })
-  xHiuId: string;
+  xHIUID: string;
 }
 
 
 export class PostV05HealthInformationHiuOnRequestRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   hiuHealthInformationRequestResponse?: shared.HiuHealthInformationRequestResponse;
@@ -26,7 +26,7 @@ export class PostV05HealthInformationHiuOnRequestRequests extends SpeakeasyBase 
 
 export class PostV05HealthInformationHiuOnRequestRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   headers: PostV05HealthInformationHiuOnRequestHeaders;

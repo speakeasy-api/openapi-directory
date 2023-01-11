@@ -19,7 +19,7 @@ export declare class DeleteMlModelRequest extends SpeakeasyBase {
 }
 export declare class DeleteMlModelResponse extends SpeakeasyBase {
     contentType: string;
-    deleteMlModelOutput?: shared.DeleteMlModelOutput;
+    deleteMLModelOutput?: shared.DeleteMlModelOutput;
     internalServerException?: any;
     invalidInputException?: any;
     resourceNotFoundException?: any;

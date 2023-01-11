@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsDeleteRepoSecretResponse = exports.ActionsDeleteRepoSecretRequest = exports.ActionsDeleteRepoSecretPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsDeleteRepoSecretPathParams = /** @class */ (function (_super) {
     __extends(ActionsDeleteRepoSecretPathParams, _super);
     function ActionsDeleteRepoSecretPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ActionsDeleteRepoSecretPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ActionsDeleteRepoSecretPathParams.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=secret_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=secret_name" }),
         __metadata("design:type", String)
     ], ActionsDeleteRepoSecretPathParams.prototype, "secretName", void 0);
     return ActionsDeleteRepoSecretPathParams;
-}(SpeakeasyBase));
-export { ActionsDeleteRepoSecretPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDeleteRepoSecretPathParams = ActionsDeleteRepoSecretPathParams;
 var ActionsDeleteRepoSecretRequest = /** @class */ (function (_super) {
     __extends(ActionsDeleteRepoSecretRequest, _super);
     function ActionsDeleteRepoSecretRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsDeleteRepoSecretPathParams)
     ], ActionsDeleteRepoSecretRequest.prototype, "pathParams", void 0);
     return ActionsDeleteRepoSecretRequest;
-}(SpeakeasyBase));
-export { ActionsDeleteRepoSecretRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDeleteRepoSecretRequest = ActionsDeleteRepoSecretRequest;
 var ActionsDeleteRepoSecretResponse = /** @class */ (function (_super) {
     __extends(ActionsDeleteRepoSecretResponse, _super);
     function ActionsDeleteRepoSecretResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsDeleteRepoSecretResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsDeleteRepoSecretResponse.prototype, "statusCode", void 0);
     return ActionsDeleteRepoSecretResponse;
-}(SpeakeasyBase));
-export { ActionsDeleteRepoSecretResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDeleteRepoSecretResponse = ActionsDeleteRepoSecretResponse;

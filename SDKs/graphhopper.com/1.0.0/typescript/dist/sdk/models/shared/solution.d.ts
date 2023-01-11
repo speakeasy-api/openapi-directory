@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Route } from "./route";
 import { Detail } from "./detail";
+import { Route } from "./route";
 export declare class SolutionUnassigned extends SpeakeasyBase {
     breaks?: string[];
     details?: Detail[];

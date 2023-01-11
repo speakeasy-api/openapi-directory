@@ -20,7 +20,7 @@ export declare class DeleteUploadRequest extends SpeakeasyBase {
 export declare class DeleteUploadResponse extends SpeakeasyBase {
     argumentException?: any;
     contentType: string;
-    deleteUploadResult?: Map<string, any>;
+    deleteUploadResult?: Record<string, any>;
     limitExceededException?: any;
     notFoundException?: any;
     serviceAccountException?: any;

@@ -106,11 +106,11 @@ export declare class RelcsRequest extends SpeakeasyBase {
 export declare class RelcsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    relcs400ApplicationJsonObject?: Relcs400ApplicationJson;
-    relcs401ApplicationJsonObject?: Relcs401ApplicationJson;
-    relcs404ApplicationJsonObject?: Relcs404ApplicationJson;
-    relcs500ApplicationJsonObject?: Relcs500ApplicationJson;
-    relcs502ApplicationJsonObject?: Relcs502ApplicationJson;
-    relcs503ApplicationJsonObject?: Relcs503ApplicationJson;
-    relcs504ApplicationJsonObject?: Relcs504ApplicationJson;
+    relcs400ApplicationJSONObject?: Relcs400ApplicationJson;
+    relcs401ApplicationJSONObject?: Relcs401ApplicationJson;
+    relcs404ApplicationJSONObject?: Relcs404ApplicationJson;
+    relcs500ApplicationJSONObject?: Relcs500ApplicationJson;
+    relcs502ApplicationJSONObject?: Relcs502ApplicationJson;
+    relcs503ApplicationJSONObject?: Relcs503ApplicationJson;
+    relcs504ApplicationJSONObject?: Relcs504ApplicationJson;
 }

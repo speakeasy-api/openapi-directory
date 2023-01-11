@@ -50,5 +50,5 @@ export class CodeScanningGetAnalysisResponse extends SpeakeasyBase {
   codeScanningGetAnalysis200ApplicationJsonPlusSarifString?: string;
 
   @SpeakeasyMetadata()
-  codeScanningGetAnalysis503ApplicationJsonObject?: CodeScanningGetAnalysis503ApplicationJson;
+  codeScanningGetAnalysis503ApplicationJSONObject?: CodeScanningGetAnalysis503ApplicationJson;
 }

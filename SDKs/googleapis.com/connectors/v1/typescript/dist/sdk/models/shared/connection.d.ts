@@ -8,6 +8,22 @@ import { ConnectionStatus } from "./connectionstatus";
 /**
  * Connection represents an instance of connector.
 **/
+export declare class ConnectionInput extends SpeakeasyBase {
+    authConfig?: AuthConfig;
+    configVariables?: ConfigVariable[];
+    connectorVersion?: string;
+    description?: string;
+    destinationConfigs?: DestinationConfig[];
+    labels?: Record<string, string>;
+    lockConfig?: LockConfig;
+    nodeConfig?: NodeConfig;
+    serviceAccount?: string;
+    status?: ConnectionStatus;
+    suspended?: boolean;
+}
+/**
+ * Connection represents an instance of connector.
+**/
 export declare class Connection extends SpeakeasyBase {
     authConfig?: AuthConfig;
     configVariables?: ConfigVariable[];
@@ -17,7 +33,7 @@ export declare class Connection extends SpeakeasyBase {
     destinationConfigs?: DestinationConfig[];
     envoyImageLocation?: string;
     imageLocation?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     lockConfig?: LockConfig;
     name?: string;
     nodeConfig?: NodeConfig;
@@ -26,20 +42,4 @@ export declare class Connection extends SpeakeasyBase {
     status?: ConnectionStatus;
     suspended?: boolean;
     updateTime?: string;
-}
-/**
- * Connection represents an instance of connector.
-**/
-export declare class ConnectionInput extends SpeakeasyBase {
-    authConfig?: AuthConfig;
-    configVariables?: ConfigVariable[];
-    connectorVersion?: string;
-    description?: string;
-    destinationConfigs?: DestinationConfig[];
-    labels?: Map<string, string>;
-    lockConfig?: LockConfig;
-    nodeConfig?: NodeConfig;
-    serviceAccount?: string;
-    status?: ConnectionStatus;
-    suspended?: boolean;
 }

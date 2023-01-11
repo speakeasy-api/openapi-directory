@@ -20,7 +20,7 @@ export declare class GetOrganizationNetworksRequest extends SpeakeasyBase {
 }
 export declare class GetOrganizationNetworksResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getOrganizationNetworks200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationNetworks200ApplicationJSONObject?: Record<string, any>;
 }

@@ -4,10 +4,11 @@ import { Manifests } from "./manifests";
 import { Operations } from "./operations";
 import { Resources } from "./resources";
 import { Types } from "./types";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://deploymentmanager.googleapis.com/"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     deployments: Deployments;
     manifests: Manifests;
@@ -20,6 +21,5 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AlbumDiscPropertiesContractMediaTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AlbumDiscPropertiesContract = exports.AlbumDiscPropertiesContractMediaTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AlbumDiscPropertiesContractMediaTypeEnum;
 (function (AlbumDiscPropertiesContractMediaTypeEnum) {
     AlbumDiscPropertiesContractMediaTypeEnum["Audio"] = "Audio";
     AlbumDiscPropertiesContractMediaTypeEnum["Video"] = "Video";
-})(AlbumDiscPropertiesContractMediaTypeEnum || (AlbumDiscPropertiesContractMediaTypeEnum = {}));
+})(AlbumDiscPropertiesContractMediaTypeEnum = exports.AlbumDiscPropertiesContractMediaTypeEnum || (exports.AlbumDiscPropertiesContractMediaTypeEnum = {}));
 var AlbumDiscPropertiesContract = /** @class */ (function (_super) {
     __extends(AlbumDiscPropertiesContract, _super);
     function AlbumDiscPropertiesContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discNumber" }),
         __metadata("design:type", Number)
     ], AlbumDiscPropertiesContract.prototype, "discNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], AlbumDiscPropertiesContract.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mediaType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mediaType" }),
         __metadata("design:type", String)
     ], AlbumDiscPropertiesContract.prototype, "mediaType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AlbumDiscPropertiesContract.prototype, "name", void 0);
     return AlbumDiscPropertiesContract;
-}(SpeakeasyBase));
-export { AlbumDiscPropertiesContract };
+}(utils_1.SpeakeasyBase));
+exports.AlbumDiscPropertiesContract = AlbumDiscPropertiesContract;

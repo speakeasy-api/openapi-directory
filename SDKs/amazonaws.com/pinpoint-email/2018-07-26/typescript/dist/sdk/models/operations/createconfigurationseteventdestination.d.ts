@@ -36,7 +36,7 @@ export declare class CreateConfigurationSetEventDestinationResponse extends Spea
     alreadyExistsException?: any;
     badRequestException?: any;
     contentType: string;
-    createConfigurationSetEventDestinationResponse?: Map<string, any>;
+    createConfigurationSetEventDestinationResponse?: Record<string, any>;
     limitExceededException?: any;
     notFoundException?: any;
     statusCode: number;

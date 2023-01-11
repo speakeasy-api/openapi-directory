@@ -1,11 +1,27 @@
-export * from "./copytemplate";
-export * from "./createtemplate";
-export * from "./deletetemplate";
-export * from "./deleteworkspace";
-export * from "./geteditorurl";
-export * from "./gettemplate";
-export * from "./gettemplates";
-export * from "./getworkspace";
-export * from "./mergetemplate";
-export * from "./mergetemplates";
-export * from "./updatetemplate";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./copytemplate"), exports);
+__exportStar(require("./createtemplate"), exports);
+__exportStar(require("./deletetemplate"), exports);
+__exportStar(require("./deleteworkspace"), exports);
+__exportStar(require("./geteditorurl"), exports);
+__exportStar(require("./gettemplate"), exports);
+__exportStar(require("./gettemplates"), exports);
+__exportStar(require("./getworkspace"), exports);
+__exportStar(require("./mergetemplate"), exports);
+__exportStar(require("./mergetemplates"), exports);
+__exportStar(require("./updatetemplate"), exports);

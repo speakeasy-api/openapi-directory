@@ -24,7 +24,7 @@ export class StandardHl7Configuration extends SpeakeasyBase {
   defaultAoeToUnknown?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=includeAOE" })
-  includeAoe: boolean;
+  includeAOE: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=nameFormat" })
   nameFormat?: string;
@@ -36,13 +36,13 @@ export class StandardHl7Configuration extends SpeakeasyBase {
   receivingApplicationName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=receivingApplicationOID" })
-  receivingApplicationOid?: string;
+  receivingApplicationOID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=receivingFacilityName" })
   receivingFacilityName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=receivingFacilityOID" })
-  receivingFacilityOid?: string;
+  receivingFacilityOID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=receivingOrganization" })
   receivingOrganization?: string;
@@ -69,7 +69,7 @@ export class StandardHl7Configuration extends SpeakeasyBase {
   transport: any;
 
   @SpeakeasyMetadata({ data: "json, name=truncateHDNamespaceIds" })
-  truncateHdNamespaceIds?: boolean;
+  truncateHDNamespaceIds?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type: string;

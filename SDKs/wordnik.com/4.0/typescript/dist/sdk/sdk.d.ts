@@ -5,11 +5,12 @@ import { Word } from "./word";
 import { WordList } from "./wordlist";
 import { WordLists } from "./wordlists";
 import { Words } from "./words";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://api.wordnik.com/v4"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     account: Account;
     word: Word;
@@ -18,11 +19,9 @@ export declare class SDK {
     words: Words;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

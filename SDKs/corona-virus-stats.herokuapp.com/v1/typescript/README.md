@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CasesGeneralStatsListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     bearer: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -32,7 +31,7 @@ const sdk = new SDK(WithSecurity(
   }
 ));
 
-sdk.sdk.casesGeneralStatsList().then((res: CasesGeneralStatsListResponse | AxiosError) => {
+sdk.cases.casesGeneralStatsList().then((res: CasesGeneralStatsListResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -41,10 +40,13 @@ sdk.sdk.casesGeneralStatsList().then((res: CasesGeneralStatsListResponse | Axios
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### cases
 
 * `casesGeneralStatsList` - Get the general stats
 * `casesSearch` - search a country
+
+### docs
+
 * `docsList`
 
 <!-- End SDK Available Operations -->

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RevisionLocation } from "./revisionlocation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListApplicationRevisionsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var revisionlocation_1 = require("./revisionlocation");
 // ListApplicationRevisionsOutput
 /**
  * Represents the output of a <code>ListApplicationRevisions</code> operation.
@@ -34,13 +37,13 @@ var ListApplicationRevisionsOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListApplicationRevisionsOutput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisions", elemType: RevisionLocation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisions", elemType: revisionlocation_1.RevisionLocation }),
         __metadata("design:type", Array)
     ], ListApplicationRevisionsOutput.prototype, "revisions", void 0);
     return ListApplicationRevisionsOutput;
-}(SpeakeasyBase));
-export { ListApplicationRevisionsOutput };
+}(utils_1.SpeakeasyBase));
+exports.ListApplicationRevisionsOutput = ListApplicationRevisionsOutput;

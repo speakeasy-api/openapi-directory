@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RdsDatabaseCredentials } from "./rdsdatabasecredentials";
-import { RdsDatabase } from "./rdsdatabase";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RdsDataSpec = void 0;
+var utils_1 = require("../../../internal/utils");
+var rdsdatabasecredentials_1 = require("./rdsdatabasecredentials");
+var rdsdatabase_1 = require("./rdsdatabase");
 // RdsDataSpec
 /**
  * The data specification of an Amazon Relational Database Service (Amazon RDS) <code>DataSource</code>.
@@ -35,49 +38,49 @@ var RdsDataSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataRearrangement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataRearrangement" }),
         __metadata("design:type", String)
     ], RdsDataSpec.prototype, "dataRearrangement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataSchema" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataSchema" }),
         __metadata("design:type", String)
     ], RdsDataSpec.prototype, "dataSchema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataSchemaUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataSchemaUri" }),
         __metadata("design:type", String)
     ], RdsDataSpec.prototype, "dataSchemaUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseCredentials" }),
-        __metadata("design:type", RdsDatabaseCredentials)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseCredentials" }),
+        __metadata("design:type", rdsdatabasecredentials_1.RdsDatabaseCredentials)
     ], RdsDataSpec.prototype, "databaseCredentials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DatabaseInformation" }),
-        __metadata("design:type", RdsDatabase)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DatabaseInformation" }),
+        __metadata("design:type", rdsdatabase_1.RdsDatabase)
     ], RdsDataSpec.prototype, "databaseInformation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceRole" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceRole" }),
         __metadata("design:type", String)
     ], RdsDataSpec.prototype, "resourceRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3StagingLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3StagingLocation" }),
         __metadata("design:type", String)
     ], RdsDataSpec.prototype, "s3StagingLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityGroupIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityGroupIds" }),
         __metadata("design:type", Array)
     ], RdsDataSpec.prototype, "securityGroupIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SelectSqlQuery" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SelectSqlQuery" }),
         __metadata("design:type", String)
     ], RdsDataSpec.prototype, "selectSqlQuery", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceRole" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceRole" }),
         __metadata("design:type", String)
     ], RdsDataSpec.prototype, "serviceRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetId" }),
         __metadata("design:type", String)
     ], RdsDataSpec.prototype, "subnetId", void 0);
     return RdsDataSpec;
-}(SpeakeasyBase));
-export { RdsDataSpec };
+}(utils_1.SpeakeasyBase));
+exports.RdsDataSpec = RdsDataSpec;

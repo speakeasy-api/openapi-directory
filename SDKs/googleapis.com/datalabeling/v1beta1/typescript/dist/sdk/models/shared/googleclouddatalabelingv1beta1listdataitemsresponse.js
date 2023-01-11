@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1DataItem } from "./googleclouddatalabelingv1beta1dataitem";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1ListDataItemsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1dataitem_1 = require("./googleclouddatalabelingv1beta1dataitem");
 // GoogleCloudDatalabelingV1beta1ListDataItemsResponse
 /**
  * Results of listing data items in a dataset.
@@ -34,13 +37,13 @@ var GoogleCloudDatalabelingV1beta1ListDataItemsResponse = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataItems", elemType: GoogleCloudDatalabelingV1beta1DataItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataItems", elemType: googleclouddatalabelingv1beta1dataitem_1.GoogleCloudDatalabelingV1beta1DataItem }),
         __metadata("design:type", Array)
     ], GoogleCloudDatalabelingV1beta1ListDataItemsResponse.prototype, "dataItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1ListDataItemsResponse.prototype, "nextPageToken", void 0);
     return GoogleCloudDatalabelingV1beta1ListDataItemsResponse;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1ListDataItemsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1ListDataItemsResponse = GoogleCloudDatalabelingV1beta1ListDataItemsResponse;

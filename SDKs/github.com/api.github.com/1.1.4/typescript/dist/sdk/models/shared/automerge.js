@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimpleUser } from "./simpleuser";
-export var AutoMergeMergeMethodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AutoMerge = exports.AutoMergeMergeMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var simpleuser_1 = require("./simpleuser");
+var AutoMergeMergeMethodEnum;
 (function (AutoMergeMergeMethodEnum) {
     AutoMergeMergeMethodEnum["Merge"] = "merge";
     AutoMergeMergeMethodEnum["Squash"] = "squash";
     AutoMergeMergeMethodEnum["Rebase"] = "rebase";
-})(AutoMergeMergeMethodEnum || (AutoMergeMergeMethodEnum = {}));
+})(AutoMergeMergeMethodEnum = exports.AutoMergeMergeMethodEnum || (exports.AutoMergeMergeMethodEnum = {}));
 // AutoMerge
 /**
  * The status of auto merging a pull request.
@@ -40,21 +43,21 @@ var AutoMerge = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commit_message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commit_message" }),
         __metadata("design:type", String)
     ], AutoMerge.prototype, "commitMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commit_title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commit_title" }),
         __metadata("design:type", String)
     ], AutoMerge.prototype, "commitTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled_by" }),
-        __metadata("design:type", SimpleUser)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled_by" }),
+        __metadata("design:type", simpleuser_1.SimpleUser)
     ], AutoMerge.prototype, "enabledBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merge_method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merge_method" }),
         __metadata("design:type", String)
     ], AutoMerge.prototype, "mergeMethod", void 0);
     return AutoMerge;
-}(SpeakeasyBase));
-export { AutoMerge };
+}(utils_1.SpeakeasyBase));
+exports.AutoMerge = AutoMerge;

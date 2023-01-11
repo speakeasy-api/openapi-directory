@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadata } from "./googlecloudcontactcenterinsightsv1conversationtranscripttranscriptsegmentdialogflowsegmentmetadata";
-import { GoogleCloudContactcenterinsightsV1ConversationParticipant } from "./googlecloudcontactcenterinsightsv1conversationparticipant";
-import { GoogleCloudContactcenterinsightsV1SentimentData } from "./googlecloudcontactcenterinsightsv1sentimentdata";
-import { GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo } from "./googlecloudcontactcenterinsightsv1conversationtranscripttranscriptsegmentwordinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1conversationtranscripttranscriptsegmentdialogflowsegmentmetadata_1 = require("./googlecloudcontactcenterinsightsv1conversationtranscripttranscriptsegmentdialogflowsegmentmetadata");
+var googlecloudcontactcenterinsightsv1conversationparticipant_1 = require("./googlecloudcontactcenterinsightsv1conversationparticipant");
+var googlecloudcontactcenterinsightsv1sentimentdata_1 = require("./googlecloudcontactcenterinsightsv1sentimentdata");
+var googlecloudcontactcenterinsightsv1conversationtranscripttranscriptsegmentwordinfo_1 = require("./googlecloudcontactcenterinsightsv1conversationtranscripttranscriptsegmentwordinfo");
 // GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment
 /**
  * A segment of a full transcript.
@@ -37,41 +40,41 @@ var GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment = 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelTag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelTag" }),
         __metadata("design:type", Number)
     ], GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment.prototype, "channelTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confidence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confidence" }),
         __metadata("design:type", Number)
     ], GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment.prototype, "confidence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dialogflowSegmentMetadata" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dialogflowSegmentMetadata" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1conversationtranscripttranscriptsegmentdialogflowsegmentmetadata_1.GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadata)
     ], GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment.prototype, "dialogflowSegmentMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageTime" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment.prototype, "messageTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=segmentParticipant" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1ConversationParticipant)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=segmentParticipant" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1conversationparticipant_1.GoogleCloudContactcenterinsightsV1ConversationParticipant)
     ], GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment.prototype, "segmentParticipant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sentiment" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1SentimentData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sentiment" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1sentimentdata_1.GoogleCloudContactcenterinsightsV1SentimentData)
     ], GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment.prototype, "sentiment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=words", elemType: GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=words", elemType: googlecloudcontactcenterinsightsv1conversationtranscripttranscriptsegmentwordinfo_1.GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo }),
         __metadata("design:type", Array)
     ], GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment.prototype, "words", void 0);
     return GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment = GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment;

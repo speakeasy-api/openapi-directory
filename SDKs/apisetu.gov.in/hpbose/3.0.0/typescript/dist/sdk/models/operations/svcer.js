@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,322 +14,347 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SvcerResponse = exports.SvcerRequest = exports.Svcer504ApplicationJson = exports.Svcer504ApplicationJsonErrorDescriptionEnum = exports.Svcer504ApplicationJsonErrorEnum = exports.Svcer503ApplicationJson = exports.Svcer503ApplicationJsonErrorDescriptionEnum = exports.Svcer503ApplicationJsonErrorEnum = exports.Svcer502ApplicationJson = exports.Svcer502ApplicationJsonErrorDescriptionEnum = exports.Svcer502ApplicationJsonErrorEnum = exports.Svcer500ApplicationJson = exports.Svcer500ApplicationJsonErrorDescriptionEnum = exports.Svcer500ApplicationJsonErrorEnum = exports.Svcer404ApplicationJson = exports.Svcer404ApplicationJsonErrorDescriptionEnum = exports.Svcer404ApplicationJsonErrorEnum = exports.Svcer401ApplicationJson = exports.Svcer401ApplicationJsonErrorDescriptionEnum = exports.Svcer401ApplicationJsonErrorEnum = exports.Svcer400ApplicationJson = exports.Svcer400ApplicationJsonErrorDescriptionEnum = exports.Svcer400ApplicationJsonErrorEnum = exports.SvcerSecurity = exports.SvcerRequestBody = exports.SvcerRequestBodyFormatEnum = exports.SvcerRequestBodyCertificateParameters = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var SvcerRequestBodyCertificateParameters = /** @class */ (function (_super) {
     __extends(SvcerRequestBodyCertificateParameters, _super);
     function SvcerRequestBodyCertificateParameters() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DOB" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DOB" }),
         __metadata("design:type", String)
     ], SvcerRequestBodyCertificateParameters.prototype, "dob", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FullName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FullName" }),
         __metadata("design:type", String)
     ], SvcerRequestBodyCertificateParameters.prototype, "fullName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ROLL" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ROLL" }),
         __metadata("design:type", String)
     ], SvcerRequestBodyCertificateParameters.prototype, "roll", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=YOP" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=YOP" }),
         __metadata("design:type", String)
     ], SvcerRequestBodyCertificateParameters.prototype, "yop", void 0);
     return SvcerRequestBodyCertificateParameters;
-}(SpeakeasyBase));
-export { SvcerRequestBodyCertificateParameters };
-export var SvcerRequestBodyFormatEnum;
+}(utils_1.SpeakeasyBase));
+exports.SvcerRequestBodyCertificateParameters = SvcerRequestBodyCertificateParameters;
+var SvcerRequestBodyFormatEnum;
 (function (SvcerRequestBodyFormatEnum) {
     SvcerRequestBodyFormatEnum["Pdf"] = "pdf";
-})(SvcerRequestBodyFormatEnum || (SvcerRequestBodyFormatEnum = {}));
+})(SvcerRequestBodyFormatEnum = exports.SvcerRequestBodyFormatEnum || (exports.SvcerRequestBodyFormatEnum = {}));
 var SvcerRequestBody = /** @class */ (function (_super) {
     __extends(SvcerRequestBody, _super);
     function SvcerRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateParameters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateParameters" }),
         __metadata("design:type", SvcerRequestBodyCertificateParameters)
     ], SvcerRequestBody.prototype, "certificateParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consentArtifact" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consentArtifact" }),
         __metadata("design:type", Object)
     ], SvcerRequestBody.prototype, "consentArtifact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], SvcerRequestBody.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=txnId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=txnId" }),
         __metadata("design:type", String)
     ], SvcerRequestBody.prototype, "txnId", void 0);
     return SvcerRequestBody;
-}(SpeakeasyBase));
-export { SvcerRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.SvcerRequestBody = SvcerRequestBody;
 var SvcerSecurity = /** @class */ (function (_super) {
     __extends(SvcerSecurity, _super);
     function SvcerSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], SvcerSecurity.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeClientId)
     ], SvcerSecurity.prototype, "clientId", void 0);
     return SvcerSecurity;
-}(SpeakeasyBase));
-export { SvcerSecurity };
-export var Svcer400ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.SvcerSecurity = SvcerSecurity;
+var Svcer400ApplicationJsonErrorEnum;
 (function (Svcer400ApplicationJsonErrorEnum) {
     Svcer400ApplicationJsonErrorEnum["MissingParameter"] = "missing_parameter";
     Svcer400ApplicationJsonErrorEnum["InvalidParameter"] = "invalid_parameter";
     Svcer400ApplicationJsonErrorEnum["InvalidFormat"] = "invalid_format";
     Svcer400ApplicationJsonErrorEnum["InvalidTxnid"] = "invalid_txnid";
     Svcer400ApplicationJsonErrorEnum["InvalidConsentid"] = "invalid_consentid";
-})(Svcer400ApplicationJsonErrorEnum || (Svcer400ApplicationJsonErrorEnum = {}));
-export var Svcer400ApplicationJsonErrorDescriptionEnum;
+})(Svcer400ApplicationJsonErrorEnum = exports.Svcer400ApplicationJsonErrorEnum || (exports.Svcer400ApplicationJsonErrorEnum = {}));
+var Svcer400ApplicationJsonErrorDescriptionEnum;
 (function (Svcer400ApplicationJsonErrorDescriptionEnum) {
     Svcer400ApplicationJsonErrorDescriptionEnum["PleaseProvideAllMandatoryParameters"] = "Please provide all mandatory parameters";
     Svcer400ApplicationJsonErrorDescriptionEnum["BadRequest"] = "Bad request";
     Svcer400ApplicationJsonErrorDescriptionEnum["TheFormatParameterIsInvalid"] = "The format parameter is invalid";
     Svcer400ApplicationJsonErrorDescriptionEnum["TheTxnIdParameterMustBeInUuidFormat"] = "The txnId parameter must be in UUID format";
     Svcer400ApplicationJsonErrorDescriptionEnum["TheConsentIdParameterMustBeInUuidFormat"] = "The consentId parameter must be in UUID format";
-})(Svcer400ApplicationJsonErrorDescriptionEnum || (Svcer400ApplicationJsonErrorDescriptionEnum = {}));
+})(Svcer400ApplicationJsonErrorDescriptionEnum = exports.Svcer400ApplicationJsonErrorDescriptionEnum || (exports.Svcer400ApplicationJsonErrorDescriptionEnum = {}));
 var Svcer400ApplicationJson = /** @class */ (function (_super) {
     __extends(Svcer400ApplicationJson, _super);
     function Svcer400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Svcer400ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Svcer400ApplicationJson.prototype, "errorDescription", void 0);
     return Svcer400ApplicationJson;
-}(SpeakeasyBase));
-export { Svcer400ApplicationJson };
-export var Svcer401ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Svcer400ApplicationJson = Svcer400ApplicationJson;
+var Svcer401ApplicationJsonErrorEnum;
 (function (Svcer401ApplicationJsonErrorEnum) {
     Svcer401ApplicationJsonErrorEnum["InvalidAuthentication"] = "invalid_authentication";
     Svcer401ApplicationJsonErrorEnum["InvalidAuthorization"] = "invalid_authorization";
-})(Svcer401ApplicationJsonErrorEnum || (Svcer401ApplicationJsonErrorEnum = {}));
-export var Svcer401ApplicationJsonErrorDescriptionEnum;
+})(Svcer401ApplicationJsonErrorEnum = exports.Svcer401ApplicationJsonErrorEnum || (exports.Svcer401ApplicationJsonErrorEnum = {}));
+var Svcer401ApplicationJsonErrorDescriptionEnum;
 (function (Svcer401ApplicationJsonErrorDescriptionEnum) {
     Svcer401ApplicationJsonErrorDescriptionEnum["AuthenticationFailed"] = "Authentication failed";
     Svcer401ApplicationJsonErrorDescriptionEnum["YouAreNotAuthorizedToUseThisApi"] = "You are not authorized to use this API";
-})(Svcer401ApplicationJsonErrorDescriptionEnum || (Svcer401ApplicationJsonErrorDescriptionEnum = {}));
+})(Svcer401ApplicationJsonErrorDescriptionEnum = exports.Svcer401ApplicationJsonErrorDescriptionEnum || (exports.Svcer401ApplicationJsonErrorDescriptionEnum = {}));
 var Svcer401ApplicationJson = /** @class */ (function (_super) {
     __extends(Svcer401ApplicationJson, _super);
     function Svcer401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Svcer401ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Svcer401ApplicationJson.prototype, "errorDescription", void 0);
     return Svcer401ApplicationJson;
-}(SpeakeasyBase));
-export { Svcer401ApplicationJson };
-export var Svcer404ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Svcer401ApplicationJson = Svcer401ApplicationJson;
+var Svcer404ApplicationJsonErrorEnum;
 (function (Svcer404ApplicationJsonErrorEnum) {
     Svcer404ApplicationJsonErrorEnum["RecordNotFound"] = "record_not_found";
     Svcer404ApplicationJsonErrorEnum["UrlNotFound"] = "url_not_found";
-})(Svcer404ApplicationJsonErrorEnum || (Svcer404ApplicationJsonErrorEnum = {}));
-export var Svcer404ApplicationJsonErrorDescriptionEnum;
+})(Svcer404ApplicationJsonErrorEnum = exports.Svcer404ApplicationJsonErrorEnum || (exports.Svcer404ApplicationJsonErrorEnum = {}));
+var Svcer404ApplicationJsonErrorDescriptionEnum;
 (function (Svcer404ApplicationJsonErrorDescriptionEnum) {
     Svcer404ApplicationJsonErrorDescriptionEnum["NoRecordFound"] = "No record found";
     Svcer404ApplicationJsonErrorDescriptionEnum["YourApiUrlOrPathIsIncorrect"] = "Your API url or path is incorrect";
-})(Svcer404ApplicationJsonErrorDescriptionEnum || (Svcer404ApplicationJsonErrorDescriptionEnum = {}));
+})(Svcer404ApplicationJsonErrorDescriptionEnum = exports.Svcer404ApplicationJsonErrorDescriptionEnum || (exports.Svcer404ApplicationJsonErrorDescriptionEnum = {}));
 var Svcer404ApplicationJson = /** @class */ (function (_super) {
     __extends(Svcer404ApplicationJson, _super);
     function Svcer404ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Svcer404ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Svcer404ApplicationJson.prototype, "errorDescription", void 0);
     return Svcer404ApplicationJson;
-}(SpeakeasyBase));
-export { Svcer404ApplicationJson };
-export var Svcer500ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Svcer404ApplicationJson = Svcer404ApplicationJson;
+var Svcer500ApplicationJsonErrorEnum;
 (function (Svcer500ApplicationJsonErrorEnum) {
     Svcer500ApplicationJsonErrorEnum["InternalServerError"] = "internal_server_error";
-})(Svcer500ApplicationJsonErrorEnum || (Svcer500ApplicationJsonErrorEnum = {}));
-export var Svcer500ApplicationJsonErrorDescriptionEnum;
+})(Svcer500ApplicationJsonErrorEnum = exports.Svcer500ApplicationJsonErrorEnum || (exports.Svcer500ApplicationJsonErrorEnum = {}));
+var Svcer500ApplicationJsonErrorDescriptionEnum;
 (function (Svcer500ApplicationJsonErrorDescriptionEnum) {
     Svcer500ApplicationJsonErrorDescriptionEnum["InternalServerError"] = "Internal server error";
-})(Svcer500ApplicationJsonErrorDescriptionEnum || (Svcer500ApplicationJsonErrorDescriptionEnum = {}));
+})(Svcer500ApplicationJsonErrorDescriptionEnum = exports.Svcer500ApplicationJsonErrorDescriptionEnum || (exports.Svcer500ApplicationJsonErrorDescriptionEnum = {}));
 var Svcer500ApplicationJson = /** @class */ (function (_super) {
     __extends(Svcer500ApplicationJson, _super);
     function Svcer500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Svcer500ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Svcer500ApplicationJson.prototype, "errorDescription", void 0);
     return Svcer500ApplicationJson;
-}(SpeakeasyBase));
-export { Svcer500ApplicationJson };
-export var Svcer502ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Svcer500ApplicationJson = Svcer500ApplicationJson;
+var Svcer502ApplicationJsonErrorEnum;
 (function (Svcer502ApplicationJsonErrorEnum) {
     Svcer502ApplicationJsonErrorEnum["BadGatewy"] = "bad_gatewy";
-})(Svcer502ApplicationJsonErrorEnum || (Svcer502ApplicationJsonErrorEnum = {}));
-export var Svcer502ApplicationJsonErrorDescriptionEnum;
+})(Svcer502ApplicationJsonErrorEnum = exports.Svcer502ApplicationJsonErrorEnum || (exports.Svcer502ApplicationJsonErrorEnum = {}));
+var Svcer502ApplicationJsonErrorDescriptionEnum;
 (function (Svcer502ApplicationJsonErrorDescriptionEnum) {
     Svcer502ApplicationJsonErrorDescriptionEnum["PublisherServiceReturnedAnInvalidResponse"] = "Publisher service returned an invalid response";
-})(Svcer502ApplicationJsonErrorDescriptionEnum || (Svcer502ApplicationJsonErrorDescriptionEnum = {}));
+})(Svcer502ApplicationJsonErrorDescriptionEnum = exports.Svcer502ApplicationJsonErrorDescriptionEnum || (exports.Svcer502ApplicationJsonErrorDescriptionEnum = {}));
 var Svcer502ApplicationJson = /** @class */ (function (_super) {
     __extends(Svcer502ApplicationJson, _super);
     function Svcer502ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Svcer502ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Svcer502ApplicationJson.prototype, "errorDescription", void 0);
     return Svcer502ApplicationJson;
-}(SpeakeasyBase));
-export { Svcer502ApplicationJson };
-export var Svcer503ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Svcer502ApplicationJson = Svcer502ApplicationJson;
+var Svcer503ApplicationJsonErrorEnum;
 (function (Svcer503ApplicationJsonErrorEnum) {
     Svcer503ApplicationJsonErrorEnum["ServiceUnavailable"] = "service_unavailable";
-})(Svcer503ApplicationJsonErrorEnum || (Svcer503ApplicationJsonErrorEnum = {}));
-export var Svcer503ApplicationJsonErrorDescriptionEnum;
+})(Svcer503ApplicationJsonErrorEnum = exports.Svcer503ApplicationJsonErrorEnum || (exports.Svcer503ApplicationJsonErrorEnum = {}));
+var Svcer503ApplicationJsonErrorDescriptionEnum;
 (function (Svcer503ApplicationJsonErrorDescriptionEnum) {
     Svcer503ApplicationJsonErrorDescriptionEnum["PublisherServiceIsTemporarilyUnavailable"] = "Publisher service is temporarily unavailable";
-})(Svcer503ApplicationJsonErrorDescriptionEnum || (Svcer503ApplicationJsonErrorDescriptionEnum = {}));
+})(Svcer503ApplicationJsonErrorDescriptionEnum = exports.Svcer503ApplicationJsonErrorDescriptionEnum || (exports.Svcer503ApplicationJsonErrorDescriptionEnum = {}));
 var Svcer503ApplicationJson = /** @class */ (function (_super) {
     __extends(Svcer503ApplicationJson, _super);
     function Svcer503ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Svcer503ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Svcer503ApplicationJson.prototype, "errorDescription", void 0);
     return Svcer503ApplicationJson;
-}(SpeakeasyBase));
-export { Svcer503ApplicationJson };
-export var Svcer504ApplicationJsonErrorEnum;
+}(utils_1.SpeakeasyBase));
+exports.Svcer503ApplicationJson = Svcer503ApplicationJson;
+var Svcer504ApplicationJsonErrorEnum;
 (function (Svcer504ApplicationJsonErrorEnum) {
     Svcer504ApplicationJsonErrorEnum["GatewayTimeout"] = "gateway_timeout";
-})(Svcer504ApplicationJsonErrorEnum || (Svcer504ApplicationJsonErrorEnum = {}));
-export var Svcer504ApplicationJsonErrorDescriptionEnum;
+})(Svcer504ApplicationJsonErrorEnum = exports.Svcer504ApplicationJsonErrorEnum || (exports.Svcer504ApplicationJsonErrorEnum = {}));
+var Svcer504ApplicationJsonErrorDescriptionEnum;
 (function (Svcer504ApplicationJsonErrorDescriptionEnum) {
     Svcer504ApplicationJsonErrorDescriptionEnum["PublisherServiceDidNotRespondInTime"] = "Publisher service did not respond in time";
-})(Svcer504ApplicationJsonErrorDescriptionEnum || (Svcer504ApplicationJsonErrorDescriptionEnum = {}));
+})(Svcer504ApplicationJsonErrorDescriptionEnum = exports.Svcer504ApplicationJsonErrorDescriptionEnum || (exports.Svcer504ApplicationJsonErrorDescriptionEnum = {}));
 var Svcer504ApplicationJson = /** @class */ (function (_super) {
     __extends(Svcer504ApplicationJson, _super);
     function Svcer504ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", String)
     ], Svcer504ApplicationJson.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorDescription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorDescription" }),
         __metadata("design:type", String)
     ], Svcer504ApplicationJson.prototype, "errorDescription", void 0);
     return Svcer504ApplicationJson;
-}(SpeakeasyBase));
-export { Svcer504ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.Svcer504ApplicationJson = Svcer504ApplicationJson;
 var SvcerRequest = /** @class */ (function (_super) {
     __extends(SvcerRequest, _super);
     function SvcerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", SvcerRequestBody)
     ], SvcerRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SvcerSecurity)
     ], SvcerRequest.prototype, "security", void 0);
     return SvcerRequest;
-}(SpeakeasyBase));
-export { SvcerRequest };
+}(utils_1.SpeakeasyBase));
+exports.SvcerRequest = SvcerRequest;
 var SvcerResponse = /** @class */ (function (_super) {
     __extends(SvcerResponse, _super);
     function SvcerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SvcerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SvcerResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Svcer400ApplicationJson)
-    ], SvcerResponse.prototype, "svcer400ApplicationJsonObject", void 0);
+    ], SvcerResponse.prototype, "svcer400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Svcer401ApplicationJson)
-    ], SvcerResponse.prototype, "svcer401ApplicationJsonObject", void 0);
+    ], SvcerResponse.prototype, "svcer401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Svcer404ApplicationJson)
-    ], SvcerResponse.prototype, "svcer404ApplicationJsonObject", void 0);
+    ], SvcerResponse.prototype, "svcer404ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Svcer500ApplicationJson)
-    ], SvcerResponse.prototype, "svcer500ApplicationJsonObject", void 0);
+    ], SvcerResponse.prototype, "svcer500ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Svcer502ApplicationJson)
-    ], SvcerResponse.prototype, "svcer502ApplicationJsonObject", void 0);
+    ], SvcerResponse.prototype, "svcer502ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Svcer503ApplicationJson)
-    ], SvcerResponse.prototype, "svcer503ApplicationJsonObject", void 0);
+    ], SvcerResponse.prototype, "svcer503ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Svcer504ApplicationJson)
-    ], SvcerResponse.prototype, "svcer504ApplicationJsonObject", void 0);
+    ], SvcerResponse.prototype, "svcer504ApplicationJSONObject", void 0);
     return SvcerResponse;
-}(SpeakeasyBase));
-export { SvcerResponse };
+}(utils_1.SpeakeasyBase));
+exports.SvcerResponse = SvcerResponse;

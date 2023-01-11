@@ -31,5 +31,5 @@ export declare class DeleteNodeRequest extends SpeakeasyBase {
 export declare class DeleteNodeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteNode200ApplicationJsonObject?: DeleteNode200ApplicationJson;
+    deleteNode200ApplicationJSONObject?: DeleteNode200ApplicationJson;
 }

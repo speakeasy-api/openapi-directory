@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { FacetsRequest, FacetsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,15 +28,15 @@ const sdk = new SDK();
     
 const req: FacetsRequest = {
   queryParams: {
-    count: 4235475187788933053,
-    endDate: "2001-05-23",
-    facetFilters: "et",
-    searchTerms: "omnis",
-    sortKeys: "score,,desc",
-    source: "ADE",
-    spatial: "cupiditate",
-    startDate: "2021-07-14",
-    startIndex: 985406917587383961,
+    count: 8717895732742165505,
+    endDate: "2006-05-01",
+    facetFilters: "culpa",
+    searchTerms: "expedita",
+    sortKeys: "updated,,desc",
+    source: "NSIDC",
+    spatial: "expedita",
+    startDate: "1978-05-28",
+    startIndex: 8274930044578894929,
   },
 };
 

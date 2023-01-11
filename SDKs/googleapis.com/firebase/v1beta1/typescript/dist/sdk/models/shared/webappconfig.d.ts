@@ -6,7 +6,7 @@ export declare class WebAppConfig extends SpeakeasyBase {
     apiKey?: string;
     appId?: string;
     authDomain?: string;
-    databaseUrl?: string;
+    databaseURL?: string;
     locationId?: string;
     measurementId?: string;
     messagingSenderId?: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PropertyValueSourceEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PropertyValue = exports.PropertyValueSourceEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PropertyValueSourceEnum;
 (function (PropertyValueSourceEnum) {
     PropertyValueSourceEnum["Import"] = "IMPORT";
     PropertyValueSourceEnum["Api"] = "API";
@@ -104,60 +107,60 @@ export var PropertyValueSourceEnum;
     PropertyValueSourceEnum["SlackIntegration"] = "SLACK_INTEGRATION";
     PropertyValueSourceEnum["CrmUiBulkAction"] = "CRM_UI_BULK_ACTION";
     PropertyValueSourceEnum["WorkflowContactDeleteAction"] = "WORKFLOW_CONTACT_DELETE_ACTION";
-})(PropertyValueSourceEnum || (PropertyValueSourceEnum = {}));
+})(PropertyValueSourceEnum = exports.PropertyValueSourceEnum || (exports.PropertyValueSourceEnum = {}));
 var PropertyValue = /** @class */ (function (_super) {
     __extends(PropertyValue, _super);
     function PropertyValue() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PropertyValue.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], PropertyValue.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectedByUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectedByUser" }),
         __metadata("design:type", Boolean)
     ], PropertyValue.prototype, "selectedByUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectedByUserTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectedByUserTimestamp" }),
         __metadata("design:type", Number)
     ], PropertyValue.prototype, "selectedByUserTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], PropertyValue.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceId" }),
         __metadata("design:type", String)
     ], PropertyValue.prototype, "sourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceLabel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceLabel" }),
         __metadata("design:type", String)
     ], PropertyValue.prototype, "sourceLabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceMetadata" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceMetadata" }),
         __metadata("design:type", String)
     ], PropertyValue.prototype, "sourceMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceVid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceVid" }),
         __metadata("design:type", Array)
     ], PropertyValue.prototype, "sourceVid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Number)
     ], PropertyValue.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedByUserId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedByUserId" }),
         __metadata("design:type", Number)
     ], PropertyValue.prototype, "updatedByUserId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], PropertyValue.prototype, "value", void 0);
     return PropertyValue;
-}(SpeakeasyBase));
-export { PropertyValue };
+}(utils_1.SpeakeasyBase));
+exports.PropertyValue = PropertyValue;

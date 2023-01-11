@@ -9,6 +9,6 @@ export declare class PostMakePdfRequest extends SpeakeasyBase {
 }
 export declare class PostMakePdfResponse extends SpeakeasyBase {
     contentType: string;
-    postMakePdf200ApplicationPdfBinaryString?: Uint8Array;
     statusCode: number;
+    postMakePdf200ApplicationPdfBinaryString?: Uint8Array;
 }

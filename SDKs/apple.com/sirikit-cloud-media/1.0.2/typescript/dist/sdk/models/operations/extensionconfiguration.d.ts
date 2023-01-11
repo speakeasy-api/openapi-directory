@@ -14,6 +14,6 @@ export declare class ExtensionConfigurationRequest extends SpeakeasyBase {
 export declare class ExtensionConfigurationResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

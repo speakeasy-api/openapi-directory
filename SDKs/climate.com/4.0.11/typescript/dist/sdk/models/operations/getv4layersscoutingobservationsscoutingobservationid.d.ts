@@ -13,8 +13,8 @@ export declare class GetV4LayersScoutingObservationsScoutingObservationIdRequest
 }
 export declare class GetV4LayersScoutingObservationsScoutingObservationIdResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
-    headers: Map<string, string[]>;
+    error?: shared.ErrorT;
+    headers: Record<string, string[]>;
     scoutingObservation?: shared.ScoutingObservation;
     statusCode: number;
 }

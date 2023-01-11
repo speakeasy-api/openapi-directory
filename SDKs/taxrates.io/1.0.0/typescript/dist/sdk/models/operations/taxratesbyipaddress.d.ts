@@ -27,6 +27,6 @@ export declare class TaxRatesByIpAddressRequest extends SpeakeasyBase {
 export declare class TaxRatesByIpAddressResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    taxRatesByIpAddress200ApplicationJsonObjects?: TaxRatesByIpAddress200ApplicationJson[];
-    taxRatesByIpAddress500ApplicationJsonObject?: TaxRatesByIpAddress500ApplicationJson;
+    taxRatesByIpAddress200ApplicationJSONObjects?: TaxRatesByIpAddress200ApplicationJson[];
+    taxRatesByIpAddress500ApplicationJSONObject?: TaxRatesByIpAddress500ApplicationJson;
 }

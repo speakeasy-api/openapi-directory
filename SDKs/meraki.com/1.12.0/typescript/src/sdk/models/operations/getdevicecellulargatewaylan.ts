@@ -22,5 +22,5 @@ export class GetDeviceCellularGatewayLanResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceCellularGatewayLan200ApplicationJsonObject?: Map<string, any>;
+  getDeviceCellularGatewayLan200ApplicationJSONObject?: Record<string, any>;
 }

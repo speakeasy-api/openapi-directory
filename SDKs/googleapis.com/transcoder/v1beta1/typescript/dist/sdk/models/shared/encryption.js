@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Aes128Encryption } from "./aes128encryption";
-import { MpegCommonEncryption } from "./mpegcommonencryption";
-import { SampleAesEncryption } from "./sampleaesencryption";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Encryption = void 0;
+var utils_1 = require("../../../internal/utils");
+var aes128encryption_1 = require("./aes128encryption");
+var mpegcommonencryption_1 = require("./mpegcommonencryption");
+var sampleaesencryption_1 = require("./sampleaesencryption");
 // Encryption
 /**
  * Encryption settings.
@@ -36,25 +39,25 @@ var Encryption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aes128" }),
-        __metadata("design:type", Aes128Encryption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aes128" }),
+        __metadata("design:type", aes128encryption_1.Aes128Encryption)
     ], Encryption.prototype, "aes128", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iv" }),
         __metadata("design:type", String)
     ], Encryption.prototype, "iv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], Encryption.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mpegCenc" }),
-        __metadata("design:type", MpegCommonEncryption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mpegCenc" }),
+        __metadata("design:type", mpegcommonencryption_1.MpegCommonEncryption)
     ], Encryption.prototype, "mpegCenc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleAes" }),
-        __metadata("design:type", SampleAesEncryption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleAes" }),
+        __metadata("design:type", sampleaesencryption_1.SampleAesEncryption)
     ], Encryption.prototype, "sampleAes", void 0);
     return Encryption;
-}(SpeakeasyBase));
-export { Encryption };
+}(utils_1.SpeakeasyBase));
+exports.Encryption = Encryption;

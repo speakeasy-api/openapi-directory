@@ -17,5 +17,5 @@ export declare class GetNetworkPiiSmOwnersForKeyRequest extends SpeakeasyBase {
 export declare class GetNetworkPiiSmOwnersForKeyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkPiiSmOwnersForKey200ApplicationJsonObject?: Map<string, any>;
+    getNetworkPiiSmOwnersForKey200ApplicationJSONObject?: Record<string, any>;
 }

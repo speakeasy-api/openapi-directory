@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VirtualMachineConfigInput } from "./virtualmachineconfig";
-import { VirtualMachineConfig } from "./virtualmachineconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VirtualMachine = exports.VirtualMachineInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var virtualmachineconfig_1 = require("./virtualmachineconfig");
+var virtualmachineconfig_2 = require("./virtualmachineconfig");
 // VirtualMachineInput
 /**
  * Runtime using Virtual Machine for computing.
@@ -35,12 +38,12 @@ var VirtualMachineInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualMachineConfig" }),
-        __metadata("design:type", VirtualMachineConfigInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualMachineConfig" }),
+        __metadata("design:type", virtualmachineconfig_1.VirtualMachineConfigInput)
     ], VirtualMachineInput.prototype, "virtualMachineConfig", void 0);
     return VirtualMachineInput;
-}(SpeakeasyBase));
-export { VirtualMachineInput };
+}(utils_1.SpeakeasyBase));
+exports.VirtualMachineInput = VirtualMachineInput;
 // VirtualMachine
 /**
  * Runtime using Virtual Machine for computing.
@@ -51,17 +54,17 @@ var VirtualMachine = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceId" }),
         __metadata("design:type", String)
     ], VirtualMachine.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceName" }),
         __metadata("design:type", String)
     ], VirtualMachine.prototype, "instanceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualMachineConfig" }),
-        __metadata("design:type", VirtualMachineConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualMachineConfig" }),
+        __metadata("design:type", virtualmachineconfig_2.VirtualMachineConfig)
     ], VirtualMachine.prototype, "virtualMachineConfig", void 0);
     return VirtualMachine;
-}(SpeakeasyBase));
-export { VirtualMachine };
+}(utils_1.SpeakeasyBase));
+exports.VirtualMachine = VirtualMachine;

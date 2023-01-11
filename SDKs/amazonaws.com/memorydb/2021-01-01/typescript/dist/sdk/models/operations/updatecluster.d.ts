@@ -22,13 +22,13 @@ export declare class UpdateClusterResponse extends SpeakeasyBase {
     clusterNotFoundFault?: any;
     clusterQuotaForCustomerExceededFault?: any;
     contentType: string;
-    invalidAclStateFault?: any;
+    invalidACLStateFault?: any;
     invalidClusterStateFault?: any;
-    invalidKmsKeyFault?: any;
+    invalidKMSKeyFault?: any;
     invalidNodeStateFault?: any;
     invalidParameterCombinationException?: any;
     invalidParameterValueException?: any;
-    invalidVpcNetworkStateFault?: any;
+    invalidVPCNetworkStateFault?: any;
     noOperationFault?: any;
     nodeQuotaForClusterExceededFault?: any;
     nodeQuotaForCustomerExceededFault?: any;

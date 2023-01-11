@@ -23,14 +23,14 @@ export class GetBeGreetingResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getBeGreeting200ApplicationJsonAny?: any;
+  getBEGreeting200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getBeGreeting403ApplicationJsonAny?: any;
+  getBEGreeting403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getBeGreeting429ApplicationJsonAny?: any;
+  getBEGreeting429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getBeGreeting500ApplicationJsonAny?: any;
+  getBEGreeting500ApplicationJSONAny?: any;
 }

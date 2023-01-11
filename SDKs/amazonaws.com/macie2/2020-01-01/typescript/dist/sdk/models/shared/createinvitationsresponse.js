@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UnprocessedAccount } from "./unprocessedaccount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateInvitationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var unprocessedaccount_1 = require("./unprocessedaccount");
 var CreateInvitationsResponse = /** @class */ (function (_super) {
     __extends(CreateInvitationsResponse, _super);
     function CreateInvitationsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unprocessedAccounts", elemType: UnprocessedAccount }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unprocessedAccounts", elemType: unprocessedaccount_1.UnprocessedAccount }),
         __metadata("design:type", Array)
     ], CreateInvitationsResponse.prototype, "unprocessedAccounts", void 0);
     return CreateInvitationsResponse;
-}(SpeakeasyBase));
-export { CreateInvitationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateInvitationsResponse = CreateInvitationsResponse;

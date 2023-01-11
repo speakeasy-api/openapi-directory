@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RvBuild = void 0;
+var utils_1 = require("../../../internal/utils");
 // RvBuild
 /**
  * Describes the RV specification
@@ -33,57 +36,57 @@ var RvBuild = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=area" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=area" }),
         __metadata("design:type", String)
     ], RvBuild.prototype, "area", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=class" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=class" }),
         __metadata("design:type", String)
     ], RvBuild.prototype, "class", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=engine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=engine" }),
         __metadata("design:type", String)
     ], RvBuild.prototype, "engine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fuel_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fuel_type" }),
         __metadata("design:type", String)
     ], RvBuild.prototype, "fuelType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gvwr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gvwr" }),
         __metadata("design:type", String)
     ], RvBuild.prototype, "gvwr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=length" }),
         __metadata("design:type", String)
     ], RvBuild.prototype, "length", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=made_in" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=made_in" }),
         __metadata("design:type", String)
     ], RvBuild.prototype, "madeIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=make" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=make" }),
         __metadata("design:type", String)
     ], RvBuild.prototype, "make", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=model" }),
         __metadata("design:type", String)
     ], RvBuild.prototype, "model", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sleeps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sleeps" }),
         __metadata("design:type", String)
     ], RvBuild.prototype, "sleeps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slideouts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slideouts" }),
         __metadata("design:type", String)
     ], RvBuild.prototype, "slideouts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transmission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transmission" }),
         __metadata("design:type", String)
     ], RvBuild.prototype, "transmission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=year" }),
         __metadata("design:type", Number)
     ], RvBuild.prototype, "year", void 0);
     return RvBuild;
-}(SpeakeasyBase));
-export { RvBuild };
+}(utils_1.SpeakeasyBase));
+exports.RvBuild = RvBuild;

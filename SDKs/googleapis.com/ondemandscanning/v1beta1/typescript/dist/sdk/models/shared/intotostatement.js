@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InTotoProvenance } from "./intotoprovenance";
-import { SlsaProvenance } from "./slsaprovenance";
-import { SlsaProvenanceZeroTwo } from "./slsaprovenancezerotwo";
-import { Subject } from "./subject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InTotoStatement = void 0;
+var utils_1 = require("../../../internal/utils");
+var intotoprovenance_1 = require("./intotoprovenance");
+var slsaprovenance_1 = require("./slsaprovenance");
+var slsaprovenancezerotwo_1 = require("./slsaprovenancezerotwo");
+var subject_1 = require("./subject");
 // InTotoStatement
 /**
  * Spec defined at https://github.com/in-toto/attestation/tree/main/spec#statement The serialized InTotoStatement will be stored as Envelope.payload. Envelope.payloadType is always "application/vnd.in-toto+json".
@@ -37,29 +40,29 @@ var InTotoStatement = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_type" }),
         __metadata("design:type", String)
     ], InTotoStatement.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=predicateType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=predicateType" }),
         __metadata("design:type", String)
     ], InTotoStatement.prototype, "predicateType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provenance" }),
-        __metadata("design:type", InTotoProvenance)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provenance" }),
+        __metadata("design:type", intotoprovenance_1.InTotoProvenance)
     ], InTotoStatement.prototype, "provenance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slsaProvenance" }),
-        __metadata("design:type", SlsaProvenance)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slsaProvenance" }),
+        __metadata("design:type", slsaprovenance_1.SlsaProvenance)
     ], InTotoStatement.prototype, "slsaProvenance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slsaProvenanceZeroTwo" }),
-        __metadata("design:type", SlsaProvenanceZeroTwo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slsaProvenanceZeroTwo" }),
+        __metadata("design:type", slsaprovenancezerotwo_1.SlsaProvenanceZeroTwo)
     ], InTotoStatement.prototype, "slsaProvenanceZeroTwo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subject", elemType: Subject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subject", elemType: subject_1.Subject }),
         __metadata("design:type", Array)
     ], InTotoStatement.prototype, "subject", void 0);
     return InTotoStatement;
-}(SpeakeasyBase));
-export { InTotoStatement };
+}(utils_1.SpeakeasyBase));
+exports.InTotoStatement = InTotoStatement;

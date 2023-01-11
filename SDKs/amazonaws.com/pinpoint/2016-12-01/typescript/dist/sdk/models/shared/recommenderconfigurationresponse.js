@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecommenderConfigurationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 // RecommenderConfigurationResponse
 /**
  * Provides information about Amazon Pinpoint configuration settings for retrieving and processing data from a recommender model.
@@ -33,53 +36,53 @@ var RecommenderConfigurationResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Attributes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Attributes" }),
+        __metadata("design:type", Object)
     ], RecommenderConfigurationResponse.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDate" }),
         __metadata("design:type", String)
     ], RecommenderConfigurationResponse.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], RecommenderConfigurationResponse.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], RecommenderConfigurationResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedDate" }),
         __metadata("design:type", String)
     ], RecommenderConfigurationResponse.prototype, "lastModifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], RecommenderConfigurationResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecommendationProviderIdType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecommendationProviderIdType" }),
         __metadata("design:type", String)
     ], RecommenderConfigurationResponse.prototype, "recommendationProviderIdType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecommendationProviderRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecommendationProviderRoleArn" }),
         __metadata("design:type", String)
     ], RecommenderConfigurationResponse.prototype, "recommendationProviderRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecommendationProviderUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecommendationProviderUri" }),
         __metadata("design:type", String)
     ], RecommenderConfigurationResponse.prototype, "recommendationProviderUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecommendationTransformerUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecommendationTransformerUri" }),
         __metadata("design:type", String)
     ], RecommenderConfigurationResponse.prototype, "recommendationTransformerUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecommendationsDisplayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecommendationsDisplayName" }),
         __metadata("design:type", String)
     ], RecommenderConfigurationResponse.prototype, "recommendationsDisplayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecommendationsPerMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecommendationsPerMessage" }),
         __metadata("design:type", Number)
     ], RecommenderConfigurationResponse.prototype, "recommendationsPerMessage", void 0);
     return RecommenderConfigurationResponse;
-}(SpeakeasyBase));
-export { RecommenderConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.RecommenderConfigurationResponse = RecommenderConfigurationResponse;

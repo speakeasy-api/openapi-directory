@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 // StoryOutlineHistory
 /** 
- * A revision repository for story outlines
+ * Base model for all types
 **/
 export class StoryOutlineHistory extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=collaborator_user_id" })

@@ -5,5 +5,5 @@ import { UniqueProblem } from "./uniqueproblem";
 **/
 export declare class ListUniqueProblemsResult extends SpeakeasyBase {
     nextToken?: string;
-    uniqueProblems?: Map<string, UniqueProblem[]>;
+    uniqueProblems?: Record<string, UniqueProblem[]>;
 }

@@ -12,7 +12,7 @@ import { ExperimentTarget } from "./experimenttarget";
 **/
 export class Experiment extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=actions", elemType: ExperimentAction })
-  actions?: Map<string, ExperimentAction>;
+  actions?: Record<string, ExperimentAction>;
 
   @SpeakeasyMetadata({ data: "json, name=creationTime" })
   creationTime?: Date;
@@ -39,8 +39,8 @@ export class Experiment extends SpeakeasyBase {
   stopConditions?: ExperimentStopCondition[];
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=targets", elemType: ExperimentTarget })
-  targets?: Map<string, ExperimentTarget>;
+  targets?: Record<string, ExperimentTarget>;
 }

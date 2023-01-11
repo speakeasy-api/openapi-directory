@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistryDeleteArtifactResponse = exports.RegistryDeleteArtifactRequest = exports.RegistryDeleteArtifactPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RegistryDeleteArtifactPathParams = /** @class */ (function (_super) {
     __extends(RegistryDeleteArtifactPathParams, _super);
     function RegistryDeleteArtifactPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=artifact" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=artifact" }),
         __metadata("design:type", String)
     ], RegistryDeleteArtifactPathParams.prototype, "artifact", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], RegistryDeleteArtifactPathParams.prototype, "project", void 0);
     return RegistryDeleteArtifactPathParams;
-}(SpeakeasyBase));
-export { RegistryDeleteArtifactPathParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistryDeleteArtifactPathParams = RegistryDeleteArtifactPathParams;
 var RegistryDeleteArtifactRequest = /** @class */ (function (_super) {
     __extends(RegistryDeleteArtifactRequest, _super);
     function RegistryDeleteArtifactRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistryDeleteArtifactPathParams)
     ], RegistryDeleteArtifactRequest.prototype, "pathParams", void 0);
     return RegistryDeleteArtifactRequest;
-}(SpeakeasyBase));
-export { RegistryDeleteArtifactRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegistryDeleteArtifactRequest = RegistryDeleteArtifactRequest;
 var RegistryDeleteArtifactResponse = /** @class */ (function (_super) {
     __extends(RegistryDeleteArtifactResponse, _super);
     function RegistryDeleteArtifactResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RegistryDeleteArtifactResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RegistryDeleteArtifactResponse.prototype, "statusCode", void 0);
     return RegistryDeleteArtifactResponse;
-}(SpeakeasyBase));
-export { RegistryDeleteArtifactResponse };
+}(utils_1.SpeakeasyBase));
+exports.RegistryDeleteArtifactResponse = RegistryDeleteArtifactResponse;

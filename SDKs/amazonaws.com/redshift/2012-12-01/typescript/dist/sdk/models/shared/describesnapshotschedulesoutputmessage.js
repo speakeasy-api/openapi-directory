@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SnapshotSchedule } from "./snapshotschedule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeSnapshotSchedulesOutputMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var snapshotschedulelist_1 = require("./snapshotschedulelist");
 var DescribeSnapshotSchedulesOutputMessage = /** @class */ (function (_super) {
     __extends(DescribeSnapshotSchedulesOutputMessage, _super);
     function DescribeSnapshotSchedulesOutputMessage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DescribeSnapshotSchedulesOutputMessage.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: SnapshotSchedule }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: snapshotschedulelist_1.SnapshotScheduleList }),
         __metadata("design:type", Array)
     ], DescribeSnapshotSchedulesOutputMessage.prototype, "snapshotSchedules", void 0);
     return DescribeSnapshotSchedulesOutputMessage;
-}(SpeakeasyBase));
-export { DescribeSnapshotSchedulesOutputMessage };
+}(utils_1.SpeakeasyBase));
+exports.DescribeSnapshotSchedulesOutputMessage = DescribeSnapshotSchedulesOutputMessage;

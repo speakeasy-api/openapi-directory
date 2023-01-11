@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteTokenResponse = exports.DeleteTokenRequest = exports.DeleteTokenPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteTokenPathParams = /** @class */ (function (_super) {
     __extends(DeleteTokenPathParams, _super);
     function DeleteTokenPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], DeleteTokenPathParams.prototype, "id", void 0);
     return DeleteTokenPathParams;
-}(SpeakeasyBase));
-export { DeleteTokenPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteTokenPathParams = DeleteTokenPathParams;
 var DeleteTokenRequest = /** @class */ (function (_super) {
     __extends(DeleteTokenRequest, _super);
     function DeleteTokenRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteTokenPathParams)
     ], DeleteTokenRequest.prototype, "pathParams", void 0);
     return DeleteTokenRequest;
-}(SpeakeasyBase));
-export { DeleteTokenRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteTokenRequest = DeleteTokenRequest;
 var DeleteTokenResponse = /** @class */ (function (_super) {
     __extends(DeleteTokenResponse, _super);
     function DeleteTokenResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteTokenResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteTokenResponse.prototype, "statusCode", void 0);
     return DeleteTokenResponse;
-}(SpeakeasyBase));
-export { DeleteTokenResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteTokenResponse = DeleteTokenResponse;

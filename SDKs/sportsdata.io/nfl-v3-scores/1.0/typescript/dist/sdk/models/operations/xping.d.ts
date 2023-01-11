@@ -13,5 +13,5 @@ export declare class XPingRequest extends SpeakeasyBase {
 export declare class XPingResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    xPing200ApplicationJsonAny?: any;
+    xPing200ApplicationJSONAny?: any;
 }

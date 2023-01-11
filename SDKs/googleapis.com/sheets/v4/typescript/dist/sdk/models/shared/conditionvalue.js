@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ConditionValueRelativeDateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConditionValue = exports.ConditionValueRelativeDateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ConditionValueRelativeDateEnum;
 (function (ConditionValueRelativeDateEnum) {
     ConditionValueRelativeDateEnum["RelativeDateUnspecified"] = "RELATIVE_DATE_UNSPECIFIED";
     ConditionValueRelativeDateEnum["PastYear"] = "PAST_YEAR";
@@ -32,7 +35,7 @@ export var ConditionValueRelativeDateEnum;
     ConditionValueRelativeDateEnum["Yesterday"] = "YESTERDAY";
     ConditionValueRelativeDateEnum["Today"] = "TODAY";
     ConditionValueRelativeDateEnum["Tomorrow"] = "TOMORROW";
-})(ConditionValueRelativeDateEnum || (ConditionValueRelativeDateEnum = {}));
+})(ConditionValueRelativeDateEnum = exports.ConditionValueRelativeDateEnum || (exports.ConditionValueRelativeDateEnum = {}));
 // ConditionValue
 /**
  * The value of the condition.
@@ -43,13 +46,13 @@ var ConditionValue = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relativeDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relativeDate" }),
         __metadata("design:type", String)
     ], ConditionValue.prototype, "relativeDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userEnteredValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userEnteredValue" }),
         __metadata("design:type", String)
     ], ConditionValue.prototype, "userEnteredValue", void 0);
     return ConditionValue;
-}(SpeakeasyBase));
-export { ConditionValue };
+}(utils_1.SpeakeasyBase));
+exports.ConditionValue = ConditionValue;

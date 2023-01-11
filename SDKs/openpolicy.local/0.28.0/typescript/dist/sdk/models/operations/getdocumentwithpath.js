@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,121 +14,146 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDocumentWithPathResponse = exports.GetDocumentWithPathRequest = exports.GetDocumentWithPath200ApplicationJson = exports.GetDocumentWithPath200ApplicationJsonProvenance = exports.GetDocumentWithPath200ApplicationJsonMetrics = exports.GetDocumentWithPath200ApplicationJsonExplanation = exports.GetDocumentWithPath200ApplicationJsonExplanationTypeEnum = exports.GetDocumentWithPath200ApplicationJsonExplanationOpEnum = exports.GetDocumentWithPath200ApplicationJsonExplanationNode = exports.GetDocumentWithPath200ApplicationJsonExplanationNodeTerms = exports.GetDocumentWithPath200ApplicationJsonExplanationLocals = exports.GetDocumentWithPath200ApplicationJsonExplanationLocalsValue = exports.GetDocumentWithPath200ApplicationJsonExplanationLocalsKey = exports.GetDocumentWithPathQueryParams = exports.GetDocumentWithPathPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetDocumentWithPathPathParams = /** @class */ (function (_super) {
     __extends(GetDocumentWithPathPathParams, _super);
     function GetDocumentWithPathPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=path" }),
         __metadata("design:type", String)
     ], GetDocumentWithPathPathParams.prototype, "path", void 0);
     return GetDocumentWithPathPathParams;
-}(SpeakeasyBase));
-export { GetDocumentWithPathPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentWithPathPathParams = GetDocumentWithPathPathParams;
 var GetDocumentWithPathQueryParams = /** @class */ (function (_super) {
     __extends(GetDocumentWithPathQueryParams, _super);
     function GetDocumentWithPathQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=explain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=explain" }),
         __metadata("design:type", String)
     ], GetDocumentWithPathQueryParams.prototype, "explain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=instrument" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=instrument" }),
         __metadata("design:type", Boolean)
     ], GetDocumentWithPathQueryParams.prototype, "instrument", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=metrics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=metrics" }),
         __metadata("design:type", Boolean)
     ], GetDocumentWithPathQueryParams.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pretty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pretty" }),
         __metadata("design:type", Boolean)
     ], GetDocumentWithPathQueryParams.prototype, "pretty", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=provenance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=provenance" }),
         __metadata("design:type", Boolean)
     ], GetDocumentWithPathQueryParams.prototype, "provenance", void 0);
     return GetDocumentWithPathQueryParams;
-}(SpeakeasyBase));
-export { GetDocumentWithPathQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentWithPathQueryParams = GetDocumentWithPathQueryParams;
 var GetDocumentWithPath200ApplicationJsonExplanationLocalsKey = /** @class */ (function (_super) {
     __extends(GetDocumentWithPath200ApplicationJsonExplanationLocalsKey, _super);
     function GetDocumentWithPath200ApplicationJsonExplanationLocalsKey() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetDocumentWithPath200ApplicationJsonExplanationLocalsKey.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], GetDocumentWithPath200ApplicationJsonExplanationLocalsKey.prototype, "value", void 0);
     return GetDocumentWithPath200ApplicationJsonExplanationLocalsKey;
-}(SpeakeasyBase));
-export { GetDocumentWithPath200ApplicationJsonExplanationLocalsKey };
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentWithPath200ApplicationJsonExplanationLocalsKey = GetDocumentWithPath200ApplicationJsonExplanationLocalsKey;
 var GetDocumentWithPath200ApplicationJsonExplanationLocalsValue = /** @class */ (function (_super) {
     __extends(GetDocumentWithPath200ApplicationJsonExplanationLocalsValue, _super);
     function GetDocumentWithPath200ApplicationJsonExplanationLocalsValue() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetDocumentWithPath200ApplicationJsonExplanationLocalsValue.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], GetDocumentWithPath200ApplicationJsonExplanationLocalsValue.prototype, "value", void 0);
     return GetDocumentWithPath200ApplicationJsonExplanationLocalsValue;
-}(SpeakeasyBase));
-export { GetDocumentWithPath200ApplicationJsonExplanationLocalsValue };
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentWithPath200ApplicationJsonExplanationLocalsValue = GetDocumentWithPath200ApplicationJsonExplanationLocalsValue;
 var GetDocumentWithPath200ApplicationJsonExplanationLocals = /** @class */ (function (_super) {
     __extends(GetDocumentWithPath200ApplicationJsonExplanationLocals, _super);
     function GetDocumentWithPath200ApplicationJsonExplanationLocals() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", GetDocumentWithPath200ApplicationJsonExplanationLocalsKey)
     ], GetDocumentWithPath200ApplicationJsonExplanationLocals.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", GetDocumentWithPath200ApplicationJsonExplanationLocalsValue)
     ], GetDocumentWithPath200ApplicationJsonExplanationLocals.prototype, "value", void 0);
     return GetDocumentWithPath200ApplicationJsonExplanationLocals;
-}(SpeakeasyBase));
-export { GetDocumentWithPath200ApplicationJsonExplanationLocals };
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentWithPath200ApplicationJsonExplanationLocals = GetDocumentWithPath200ApplicationJsonExplanationLocals;
 var GetDocumentWithPath200ApplicationJsonExplanationNodeTerms = /** @class */ (function (_super) {
     __extends(GetDocumentWithPath200ApplicationJsonExplanationNodeTerms, _super);
     function GetDocumentWithPath200ApplicationJsonExplanationNodeTerms() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetDocumentWithPath200ApplicationJsonExplanationNodeTerms.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], GetDocumentWithPath200ApplicationJsonExplanationNodeTerms.prototype, "value", void 0);
     return GetDocumentWithPath200ApplicationJsonExplanationNodeTerms;
-}(SpeakeasyBase));
-export { GetDocumentWithPath200ApplicationJsonExplanationNodeTerms };
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentWithPath200ApplicationJsonExplanationNodeTerms = GetDocumentWithPath200ApplicationJsonExplanationNodeTerms;
 // GetDocumentWithPath200ApplicationJsonExplanationNode
 /**
  * The AST element associated with the evaluation step.
@@ -139,247 +165,247 @@ var GetDocumentWithPath200ApplicationJsonExplanationNode = /** @class */ (functi
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=index" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=index" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonExplanationNode.prototype, "index", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=terms", elemType: GetDocumentWithPath200ApplicationJsonExplanationNodeTerms }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=terms", elemType: GetDocumentWithPath200ApplicationJsonExplanationNodeTerms }),
         __metadata("design:type", Array)
     ], GetDocumentWithPath200ApplicationJsonExplanationNode.prototype, "terms", void 0);
     return GetDocumentWithPath200ApplicationJsonExplanationNode;
-}(SpeakeasyBase));
-export { GetDocumentWithPath200ApplicationJsonExplanationNode };
-export var GetDocumentWithPath200ApplicationJsonExplanationOpEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentWithPath200ApplicationJsonExplanationNode = GetDocumentWithPath200ApplicationJsonExplanationNode;
+var GetDocumentWithPath200ApplicationJsonExplanationOpEnum;
 (function (GetDocumentWithPath200ApplicationJsonExplanationOpEnum) {
     GetDocumentWithPath200ApplicationJsonExplanationOpEnum["Enter"] = "enter";
     GetDocumentWithPath200ApplicationJsonExplanationOpEnum["Exit"] = "exit";
     GetDocumentWithPath200ApplicationJsonExplanationOpEnum["Eval"] = "eval";
     GetDocumentWithPath200ApplicationJsonExplanationOpEnum["Fail"] = "fail";
     GetDocumentWithPath200ApplicationJsonExplanationOpEnum["Redo"] = "redo";
-})(GetDocumentWithPath200ApplicationJsonExplanationOpEnum || (GetDocumentWithPath200ApplicationJsonExplanationOpEnum = {}));
-export var GetDocumentWithPath200ApplicationJsonExplanationTypeEnum;
+})(GetDocumentWithPath200ApplicationJsonExplanationOpEnum = exports.GetDocumentWithPath200ApplicationJsonExplanationOpEnum || (exports.GetDocumentWithPath200ApplicationJsonExplanationOpEnum = {}));
+var GetDocumentWithPath200ApplicationJsonExplanationTypeEnum;
 (function (GetDocumentWithPath200ApplicationJsonExplanationTypeEnum) {
     GetDocumentWithPath200ApplicationJsonExplanationTypeEnum["Expr"] = "expr";
     GetDocumentWithPath200ApplicationJsonExplanationTypeEnum["Rule"] = "rule";
     GetDocumentWithPath200ApplicationJsonExplanationTypeEnum["Body"] = "body";
-})(GetDocumentWithPath200ApplicationJsonExplanationTypeEnum || (GetDocumentWithPath200ApplicationJsonExplanationTypeEnum = {}));
+})(GetDocumentWithPath200ApplicationJsonExplanationTypeEnum = exports.GetDocumentWithPath200ApplicationJsonExplanationTypeEnum || (exports.GetDocumentWithPath200ApplicationJsonExplanationTypeEnum = {}));
 var GetDocumentWithPath200ApplicationJsonExplanation = /** @class */ (function (_super) {
     __extends(GetDocumentWithPath200ApplicationJsonExplanation, _super);
     function GetDocumentWithPath200ApplicationJsonExplanation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locals", elemType: GetDocumentWithPath200ApplicationJsonExplanationLocals }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locals", elemType: GetDocumentWithPath200ApplicationJsonExplanationLocals }),
         __metadata("design:type", Array)
     ], GetDocumentWithPath200ApplicationJsonExplanation.prototype, "locals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node" }),
         __metadata("design:type", GetDocumentWithPath200ApplicationJsonExplanationNode)
     ], GetDocumentWithPath200ApplicationJsonExplanation.prototype, "node", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=op" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=op" }),
         __metadata("design:type", String)
     ], GetDocumentWithPath200ApplicationJsonExplanation.prototype, "op", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent_id" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonExplanation.prototype, "parentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query_id" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonExplanation.prototype, "queryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetDocumentWithPath200ApplicationJsonExplanation.prototype, "type", void 0);
     return GetDocumentWithPath200ApplicationJsonExplanation;
-}(SpeakeasyBase));
-export { GetDocumentWithPath200ApplicationJsonExplanation };
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentWithPath200ApplicationJsonExplanation = GetDocumentWithPath200ApplicationJsonExplanation;
 var GetDocumentWithPath200ApplicationJsonMetrics = /** @class */ (function (_super) {
     __extends(GetDocumentWithPath200ApplicationJsonMetrics, _super);
     function GetDocumentWithPath200ApplicationJsonMetrics() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=counter_server_query_cache_hit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=counter_server_query_cache_hit" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "counterServerQueryCacheHit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_query_compile_stage_build_comprehension_index_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_query_compile_stage_build_comprehension_index_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerQueryCompileStageBuildComprehensionIndexNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_query_compile_stage_check_safety_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_query_compile_stage_check_safety_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerQueryCompileStageCheckSafetyNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_query_compile_stage_check_types_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_query_compile_stage_check_types_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerQueryCompileStageCheckTypesNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_query_compile_stage_check_undefined_funcs_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_query_compile_stage_check_undefined_funcs_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerQueryCompileStageCheckUndefinedFuncsNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_query_compile_stage_check_unsafe_builtins_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_query_compile_stage_check_unsafe_builtins_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerQueryCompileStageCheckUnsafeBuiltinsNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_query_compile_stage_resolve_refs_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_query_compile_stage_resolve_refs_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerQueryCompileStageResolveRefsNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_query_compile_stage_rewrite_comprehension_terms_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_query_compile_stage_rewrite_comprehension_terms_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerQueryCompileStageRewriteComprehensionTermsNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_query_compile_stage_rewrite_dynamic_terms_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_query_compile_stage_rewrite_dynamic_terms_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerQueryCompileStageRewriteDynamicTermsNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_query_compile_stage_rewrite_expr_terms_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_query_compile_stage_rewrite_expr_terms_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerQueryCompileStageRewriteExprTermsNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_query_compile_stage_rewrite_local_vars_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_query_compile_stage_rewrite_local_vars_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerQueryCompileStageRewriteLocalVarsNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_query_compile_stage_rewrite_to_capture_value_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_query_compile_stage_rewrite_to_capture_value_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerQueryCompileStageRewriteToCaptureValueNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_query_compile_stage_rewrite_with_values_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_query_compile_stage_rewrite_with_values_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerQueryCompileStageRewriteWithValuesNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_rego_input_parse_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_rego_input_parse_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerRegoInputParseNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_rego_module_compile_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_rego_module_compile_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerRegoModuleCompileNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_rego_module_parse_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_rego_module_parse_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerRegoModuleParseNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_rego_query_compile_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_rego_query_compile_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerRegoQueryCompileNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_rego_query_eval_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_rego_query_eval_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerRegoQueryEvalNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_rego_query_parse_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_rego_query_parse_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerRegoQueryParseNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_server_handler_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_server_handler_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerServerHandlerNs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timer_server_read_bytes_ns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timer_server_read_bytes_ns" }),
         __metadata("design:type", Number)
     ], GetDocumentWithPath200ApplicationJsonMetrics.prototype, "timerServerReadBytesNs", void 0);
     return GetDocumentWithPath200ApplicationJsonMetrics;
-}(SpeakeasyBase));
-export { GetDocumentWithPath200ApplicationJsonMetrics };
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentWithPath200ApplicationJsonMetrics = GetDocumentWithPath200ApplicationJsonMetrics;
 var GetDocumentWithPath200ApplicationJsonProvenance = /** @class */ (function (_super) {
     __extends(GetDocumentWithPath200ApplicationJsonProvenance, _super);
     function GetDocumentWithPath200ApplicationJsonProvenance() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=build_commit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=build_commit" }),
         __metadata("design:type", String)
     ], GetDocumentWithPath200ApplicationJsonProvenance.prototype, "buildCommit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=build_hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=build_hostname" }),
         __metadata("design:type", String)
     ], GetDocumentWithPath200ApplicationJsonProvenance.prototype, "buildHostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=build_timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=build_timestamp" }),
         __metadata("design:type", String)
     ], GetDocumentWithPath200ApplicationJsonProvenance.prototype, "buildTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundles" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundles" }),
+        __metadata("design:type", Object)
     ], GetDocumentWithPath200ApplicationJsonProvenance.prototype, "bundles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], GetDocumentWithPath200ApplicationJsonProvenance.prototype, "version", void 0);
     return GetDocumentWithPath200ApplicationJsonProvenance;
-}(SpeakeasyBase));
-export { GetDocumentWithPath200ApplicationJsonProvenance };
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentWithPath200ApplicationJsonProvenance = GetDocumentWithPath200ApplicationJsonProvenance;
 var GetDocumentWithPath200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetDocumentWithPath200ApplicationJson, _super);
     function GetDocumentWithPath200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=explanation", elemType: GetDocumentWithPath200ApplicationJsonExplanation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=explanation", elemType: GetDocumentWithPath200ApplicationJsonExplanation }),
         __metadata("design:type", Array)
     ], GetDocumentWithPath200ApplicationJson.prototype, "explanation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics" }),
         __metadata("design:type", GetDocumentWithPath200ApplicationJsonMetrics)
     ], GetDocumentWithPath200ApplicationJson.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provenance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provenance" }),
         __metadata("design:type", GetDocumentWithPath200ApplicationJsonProvenance)
     ], GetDocumentWithPath200ApplicationJson.prototype, "provenance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", Array)
     ], GetDocumentWithPath200ApplicationJson.prototype, "result", void 0);
     return GetDocumentWithPath200ApplicationJson;
-}(SpeakeasyBase));
-export { GetDocumentWithPath200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentWithPath200ApplicationJson = GetDocumentWithPath200ApplicationJson;
 var GetDocumentWithPathRequest = /** @class */ (function (_super) {
     __extends(GetDocumentWithPathRequest, _super);
     function GetDocumentWithPathRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDocumentWithPathPathParams)
     ], GetDocumentWithPathRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDocumentWithPathQueryParams)
     ], GetDocumentWithPathRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-yaml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-yaml" }),
         __metadata("design:type", Uint8Array)
     ], GetDocumentWithPathRequest.prototype, "request", void 0);
     return GetDocumentWithPathRequest;
-}(SpeakeasyBase));
-export { GetDocumentWithPathRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentWithPathRequest = GetDocumentWithPathRequest;
 var GetDocumentWithPathResponse = /** @class */ (function (_super) {
     __extends(GetDocumentWithPathResponse, _super);
     function GetDocumentWithPathResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.FourHundred)
     ], GetDocumentWithPathResponse.prototype, "fourHundred", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDocumentWithPathResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDocumentWithPathResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDocumentWithPath200ApplicationJson)
-    ], GetDocumentWithPathResponse.prototype, "getDocumentWithPath200ApplicationJsonObject", void 0);
+    ], GetDocumentWithPathResponse.prototype, "getDocumentWithPath200ApplicationJSONObject", void 0);
     return GetDocumentWithPathResponse;
-}(SpeakeasyBase));
-export { GetDocumentWithPathResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDocumentWithPathResponse = GetDocumentWithPathResponse;

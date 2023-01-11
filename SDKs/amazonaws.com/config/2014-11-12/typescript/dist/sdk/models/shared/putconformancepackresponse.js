@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutConformancePackResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var PutConformancePackResponse = /** @class */ (function (_super) {
     __extends(PutConformancePackResponse, _super);
     function PutConformancePackResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConformancePackArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConformancePackArn" }),
         __metadata("design:type", String)
     ], PutConformancePackResponse.prototype, "conformancePackArn", void 0);
     return PutConformancePackResponse;
-}(SpeakeasyBase));
-export { PutConformancePackResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutConformancePackResponse = PutConformancePackResponse;

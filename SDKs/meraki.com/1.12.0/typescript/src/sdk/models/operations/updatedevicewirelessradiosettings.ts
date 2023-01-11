@@ -66,5 +66,5 @@ export class UpdateDeviceWirelessRadioSettingsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateDeviceWirelessRadioSettings200ApplicationJsonObject?: Map<string, any>;
+  updateDeviceWirelessRadioSettings200ApplicationJSONObject?: Record<string, any>;
 }

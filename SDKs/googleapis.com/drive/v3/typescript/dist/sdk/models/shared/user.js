@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.User = void 0;
+var utils_1 = require("../../../internal/utils");
 // User
 /**
  * Information about a Drive user.
@@ -33,29 +36,29 @@ var User = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], User.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emailAddress" }),
         __metadata("design:type", String)
     ], User.prototype, "emailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], User.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=me" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=me" }),
         __metadata("design:type", Boolean)
     ], User.prototype, "me", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissionId" }),
         __metadata("design:type", String)
     ], User.prototype, "permissionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=photoLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=photoLink" }),
         __metadata("design:type", String)
     ], User.prototype, "photoLink", void 0);
     return User;
-}(SpeakeasyBase));
-export { User };
+}(utils_1.SpeakeasyBase));
+exports.User = User;

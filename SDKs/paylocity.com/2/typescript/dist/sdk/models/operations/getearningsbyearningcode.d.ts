@@ -16,5 +16,5 @@ export declare class GetEarningsByEarningCodeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     earnings?: shared.Earning[];
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }

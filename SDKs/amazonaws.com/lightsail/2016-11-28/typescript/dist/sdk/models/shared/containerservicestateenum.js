@@ -1,4 +1,7 @@
-export var ContainerServiceStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContainerServiceStateEnum = void 0;
+var ContainerServiceStateEnum;
 (function (ContainerServiceStateEnum) {
     ContainerServiceStateEnum["Pending"] = "PENDING";
     ContainerServiceStateEnum["Ready"] = "READY";
@@ -7,4 +10,4 @@ export var ContainerServiceStateEnum;
     ContainerServiceStateEnum["Deleting"] = "DELETING";
     ContainerServiceStateEnum["Disabled"] = "DISABLED";
     ContainerServiceStateEnum["Deploying"] = "DEPLOYING";
-})(ContainerServiceStateEnum || (ContainerServiceStateEnum = {}));
+})(ContainerServiceStateEnum = exports.ContainerServiceStateEnum || (exports.ContainerServiceStateEnum = {}));

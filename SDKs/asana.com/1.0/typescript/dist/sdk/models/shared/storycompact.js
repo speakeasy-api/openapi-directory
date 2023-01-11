@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserCompact } from "./usercompact";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StoryCompact = void 0;
+var utils_1 = require("../../../internal/utils");
+var usercompact_1 = require("./usercompact");
+// StoryCompact
+/**
+ * A story represents an activity associated with an object in the Asana system.
+**/
 var StoryCompact = /** @class */ (function (_super) {
     __extends(StoryCompact, _super);
     function StoryCompact() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], StoryCompact.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_by" }),
-        __metadata("design:type", UserCompact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
+        __metadata("design:type", usercompact_1.UserCompact)
     ], StoryCompact.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], StoryCompact.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_subtype" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_subtype" }),
         __metadata("design:type", String)
     ], StoryCompact.prototype, "resourceSubtype", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], StoryCompact.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], StoryCompact.prototype, "text", void 0);
     return StoryCompact;
-}(SpeakeasyBase));
-export { StoryCompact };
+}(utils_1.SpeakeasyBase));
+exports.StoryCompact = StoryCompact;

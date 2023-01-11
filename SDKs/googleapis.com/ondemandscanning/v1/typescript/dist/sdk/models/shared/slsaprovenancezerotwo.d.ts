@@ -7,7 +7,7 @@ import { GrafeasV1SlsaProvenanceZeroTwoSlsaMetadata } from "./grafeasv1slsaprove
  * See full explanation of fields at slsa.dev/provenance/v0.2.
 **/
 export declare class SlsaProvenanceZeroTwo extends SpeakeasyBase {
-    buildConfig?: Map<string, any>;
+    buildConfig?: Record<string, any>;
     buildType?: string;
     builder?: GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder;
     invocation?: GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation;

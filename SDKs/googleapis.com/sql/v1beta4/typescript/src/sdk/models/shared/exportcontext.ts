@@ -2,6 +2,19 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
+// ExportContextBakExportOptions
+/** 
+ * Options for exporting BAK files (SQL Server-only)
+**/
+export class ExportContextBakExportOptions extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=stripeCount" })
+  stripeCount?: number;
+
+  @SpeakeasyMetadata({ data: "json, name=striped" })
+  striped?: boolean;
+}
+
+
 // ExportContextCsvExportOptions
 /** 
  * Options for exporting data as CSV. `MySQL` and `PostgreSQL` instances only.
@@ -62,6 +75,9 @@ export class ExportContextSqlExportOptions extends SpeakeasyBase {
  * Database instance export context.
 **/
 export class ExportContext extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=bakExportOptions" })
+  bakExportOptions?: ExportContextBakExportOptions;
+
   @SpeakeasyMetadata({ data: "json, name=csvExportOptions" })
   csvExportOptions?: ExportContextCsvExportOptions;
 

@@ -1,6 +1,9 @@
-export var TransferOptionEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransferOptionEnum = void 0;
+var TransferOptionEnum;
 (function (TransferOptionEnum) {
     TransferOptionEnum["Import"] = "IMPORT";
     TransferOptionEnum["Export"] = "EXPORT";
     TransferOptionEnum["LocalUse"] = "LOCAL_USE";
-})(TransferOptionEnum || (TransferOptionEnum = {}));
+})(TransferOptionEnum = exports.TransferOptionEnum || (exports.TransferOptionEnum = {}));

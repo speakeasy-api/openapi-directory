@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,160 +14,185 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UploadVideoAlt1Response = exports.UploadVideoAlt1Request = exports.UploadVideoAlt1RequestBody = exports.UploadVideoAlt1RequestBodyUpload = exports.UploadVideoAlt1RequestBodyUploadApproachEnum = exports.UploadVideoAlt1RequestBodySpatial = exports.UploadVideoAlt1RequestBodySpatialStereoFormatEnum = exports.UploadVideoAlt1RequestBodySpatialProjectionEnum = exports.UploadVideoAlt1RequestBodySpatialDirectorTimeline = exports.UploadVideoAlt1RequestBodyReviewPage = exports.UploadVideoAlt1RequestBodyRatings = exports.UploadVideoAlt1RequestBodyRatingsTv = exports.UploadVideoAlt1RequestBodyRatingsTvReasonEnum = exports.UploadVideoAlt1RequestBodyRatingsMpaa = exports.UploadVideoAlt1RequestBodyRatingsMpaaReasonEnum = exports.UploadVideoAlt1RequestBodyPrivacy = exports.UploadVideoAlt1RequestBodyPrivacyViewEnum = exports.UploadVideoAlt1RequestBodyPrivacyEmbedEnum = exports.UploadVideoAlt1RequestBodyPrivacyCommentsEnum = exports.UploadVideoAlt1RequestBodyLicenseEnum = exports.UploadVideoAlt1RequestBodyEmbed = exports.UploadVideoAlt1RequestBodyEmbedTitle = exports.UploadVideoAlt1RequestBodyEmbedTitlePortraitEnum = exports.UploadVideoAlt1RequestBodyEmbedTitleOwnerEnum = exports.UploadVideoAlt1RequestBodyEmbedTitleNameEnum = exports.UploadVideoAlt1RequestBodyEmbedLogos = exports.UploadVideoAlt1RequestBodyEmbedLogosCustom = exports.UploadVideoAlt1RequestBodyEmbedButtons = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var UploadVideoAlt1RequestBodyEmbedButtons = /** @class */ (function (_super) {
     __extends(UploadVideoAlt1RequestBodyEmbedButtons, _super);
     function UploadVideoAlt1RequestBodyEmbedButtons() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=embed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=embed" }),
         __metadata("design:type", Boolean)
     ], UploadVideoAlt1RequestBodyEmbedButtons.prototype, "embed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fullscreen" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fullscreen" }),
         __metadata("design:type", Boolean)
     ], UploadVideoAlt1RequestBodyEmbedButtons.prototype, "fullscreen", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hd" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hd" }),
         __metadata("design:type", Boolean)
     ], UploadVideoAlt1RequestBodyEmbedButtons.prototype, "hd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=like" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=like" }),
         __metadata("design:type", Boolean)
     ], UploadVideoAlt1RequestBodyEmbedButtons.prototype, "like", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scaling" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scaling" }),
         __metadata("design:type", Boolean)
     ], UploadVideoAlt1RequestBodyEmbedButtons.prototype, "scaling", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=share" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=share" }),
         __metadata("design:type", Boolean)
     ], UploadVideoAlt1RequestBodyEmbedButtons.prototype, "share", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=watchlater" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=watchlater" }),
         __metadata("design:type", Boolean)
     ], UploadVideoAlt1RequestBodyEmbedButtons.prototype, "watchlater", void 0);
     return UploadVideoAlt1RequestBodyEmbedButtons;
-}(SpeakeasyBase));
-export { UploadVideoAlt1RequestBodyEmbedButtons };
+}(utils_1.SpeakeasyBase));
+exports.UploadVideoAlt1RequestBodyEmbedButtons = UploadVideoAlt1RequestBodyEmbedButtons;
 var UploadVideoAlt1RequestBodyEmbedLogosCustom = /** @class */ (function (_super) {
     __extends(UploadVideoAlt1RequestBodyEmbedLogosCustom, _super);
     function UploadVideoAlt1RequestBodyEmbedLogosCustom() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], UploadVideoAlt1RequestBodyEmbedLogosCustom.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBodyEmbedLogosCustom.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sticky" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sticky" }),
         __metadata("design:type", Boolean)
     ], UploadVideoAlt1RequestBodyEmbedLogosCustom.prototype, "sticky", void 0);
     return UploadVideoAlt1RequestBodyEmbedLogosCustom;
-}(SpeakeasyBase));
-export { UploadVideoAlt1RequestBodyEmbedLogosCustom };
+}(utils_1.SpeakeasyBase));
+exports.UploadVideoAlt1RequestBodyEmbedLogosCustom = UploadVideoAlt1RequestBodyEmbedLogosCustom;
 var UploadVideoAlt1RequestBodyEmbedLogos = /** @class */ (function (_super) {
     __extends(UploadVideoAlt1RequestBodyEmbedLogos, _super);
     function UploadVideoAlt1RequestBodyEmbedLogos() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom" }),
         __metadata("design:type", UploadVideoAlt1RequestBodyEmbedLogosCustom)
     ], UploadVideoAlt1RequestBodyEmbedLogos.prototype, "custom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vimeo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vimeo" }),
         __metadata("design:type", Boolean)
     ], UploadVideoAlt1RequestBodyEmbedLogos.prototype, "vimeo", void 0);
     return UploadVideoAlt1RequestBodyEmbedLogos;
-}(SpeakeasyBase));
-export { UploadVideoAlt1RequestBodyEmbedLogos };
-export var UploadVideoAlt1RequestBodyEmbedTitleNameEnum;
+}(utils_1.SpeakeasyBase));
+exports.UploadVideoAlt1RequestBodyEmbedLogos = UploadVideoAlt1RequestBodyEmbedLogos;
+var UploadVideoAlt1RequestBodyEmbedTitleNameEnum;
 (function (UploadVideoAlt1RequestBodyEmbedTitleNameEnum) {
     UploadVideoAlt1RequestBodyEmbedTitleNameEnum["Hide"] = "hide";
     UploadVideoAlt1RequestBodyEmbedTitleNameEnum["Show"] = "show";
     UploadVideoAlt1RequestBodyEmbedTitleNameEnum["User"] = "user";
-})(UploadVideoAlt1RequestBodyEmbedTitleNameEnum || (UploadVideoAlt1RequestBodyEmbedTitleNameEnum = {}));
-export var UploadVideoAlt1RequestBodyEmbedTitleOwnerEnum;
+})(UploadVideoAlt1RequestBodyEmbedTitleNameEnum = exports.UploadVideoAlt1RequestBodyEmbedTitleNameEnum || (exports.UploadVideoAlt1RequestBodyEmbedTitleNameEnum = {}));
+var UploadVideoAlt1RequestBodyEmbedTitleOwnerEnum;
 (function (UploadVideoAlt1RequestBodyEmbedTitleOwnerEnum) {
     UploadVideoAlt1RequestBodyEmbedTitleOwnerEnum["Hide"] = "hide";
     UploadVideoAlt1RequestBodyEmbedTitleOwnerEnum["Show"] = "show";
     UploadVideoAlt1RequestBodyEmbedTitleOwnerEnum["User"] = "user";
-})(UploadVideoAlt1RequestBodyEmbedTitleOwnerEnum || (UploadVideoAlt1RequestBodyEmbedTitleOwnerEnum = {}));
-export var UploadVideoAlt1RequestBodyEmbedTitlePortraitEnum;
+})(UploadVideoAlt1RequestBodyEmbedTitleOwnerEnum = exports.UploadVideoAlt1RequestBodyEmbedTitleOwnerEnum || (exports.UploadVideoAlt1RequestBodyEmbedTitleOwnerEnum = {}));
+var UploadVideoAlt1RequestBodyEmbedTitlePortraitEnum;
 (function (UploadVideoAlt1RequestBodyEmbedTitlePortraitEnum) {
     UploadVideoAlt1RequestBodyEmbedTitlePortraitEnum["Hide"] = "hide";
     UploadVideoAlt1RequestBodyEmbedTitlePortraitEnum["Show"] = "show";
     UploadVideoAlt1RequestBodyEmbedTitlePortraitEnum["User"] = "user";
-})(UploadVideoAlt1RequestBodyEmbedTitlePortraitEnum || (UploadVideoAlt1RequestBodyEmbedTitlePortraitEnum = {}));
+})(UploadVideoAlt1RequestBodyEmbedTitlePortraitEnum = exports.UploadVideoAlt1RequestBodyEmbedTitlePortraitEnum || (exports.UploadVideoAlt1RequestBodyEmbedTitlePortraitEnum = {}));
 var UploadVideoAlt1RequestBodyEmbedTitle = /** @class */ (function (_super) {
     __extends(UploadVideoAlt1RequestBodyEmbedTitle, _super);
     function UploadVideoAlt1RequestBodyEmbedTitle() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBodyEmbedTitle.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBodyEmbedTitle.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portrait" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portrait" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBodyEmbedTitle.prototype, "portrait", void 0);
     return UploadVideoAlt1RequestBodyEmbedTitle;
-}(SpeakeasyBase));
-export { UploadVideoAlt1RequestBodyEmbedTitle };
+}(utils_1.SpeakeasyBase));
+exports.UploadVideoAlt1RequestBodyEmbedTitle = UploadVideoAlt1RequestBodyEmbedTitle;
 var UploadVideoAlt1RequestBodyEmbed = /** @class */ (function (_super) {
     __extends(UploadVideoAlt1RequestBodyEmbed, _super);
     function UploadVideoAlt1RequestBodyEmbed() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buttons" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buttons" }),
         __metadata("design:type", UploadVideoAlt1RequestBodyEmbedButtons)
     ], UploadVideoAlt1RequestBodyEmbed.prototype, "buttons", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBodyEmbed.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logos" }),
         __metadata("design:type", UploadVideoAlt1RequestBodyEmbedLogos)
     ], UploadVideoAlt1RequestBodyEmbed.prototype, "logos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=playbar" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=playbar" }),
         __metadata("design:type", Boolean)
     ], UploadVideoAlt1RequestBodyEmbed.prototype, "playbar", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", UploadVideoAlt1RequestBodyEmbedTitle)
     ], UploadVideoAlt1RequestBodyEmbed.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volume" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volume" }),
         __metadata("design:type", Boolean)
     ], UploadVideoAlt1RequestBodyEmbed.prototype, "volume", void 0);
     return UploadVideoAlt1RequestBodyEmbed;
-}(SpeakeasyBase));
-export { UploadVideoAlt1RequestBodyEmbed };
-export var UploadVideoAlt1RequestBodyLicenseEnum;
+}(utils_1.SpeakeasyBase));
+exports.UploadVideoAlt1RequestBodyEmbed = UploadVideoAlt1RequestBodyEmbed;
+var UploadVideoAlt1RequestBodyLicenseEnum;
 (function (UploadVideoAlt1RequestBodyLicenseEnum) {
     UploadVideoAlt1RequestBodyLicenseEnum["By"] = "by";
     UploadVideoAlt1RequestBodyLicenseEnum["ByNc"] = "by-nc";
@@ -175,20 +201,20 @@ export var UploadVideoAlt1RequestBodyLicenseEnum;
     UploadVideoAlt1RequestBodyLicenseEnum["ByNd"] = "by-nd";
     UploadVideoAlt1RequestBodyLicenseEnum["BySa"] = "by-sa";
     UploadVideoAlt1RequestBodyLicenseEnum["Cc0"] = "cc0";
-})(UploadVideoAlt1RequestBodyLicenseEnum || (UploadVideoAlt1RequestBodyLicenseEnum = {}));
-export var UploadVideoAlt1RequestBodyPrivacyCommentsEnum;
+})(UploadVideoAlt1RequestBodyLicenseEnum = exports.UploadVideoAlt1RequestBodyLicenseEnum || (exports.UploadVideoAlt1RequestBodyLicenseEnum = {}));
+var UploadVideoAlt1RequestBodyPrivacyCommentsEnum;
 (function (UploadVideoAlt1RequestBodyPrivacyCommentsEnum) {
     UploadVideoAlt1RequestBodyPrivacyCommentsEnum["Anybody"] = "anybody";
     UploadVideoAlt1RequestBodyPrivacyCommentsEnum["Contacts"] = "contacts";
     UploadVideoAlt1RequestBodyPrivacyCommentsEnum["Nobody"] = "nobody";
-})(UploadVideoAlt1RequestBodyPrivacyCommentsEnum || (UploadVideoAlt1RequestBodyPrivacyCommentsEnum = {}));
-export var UploadVideoAlt1RequestBodyPrivacyEmbedEnum;
+})(UploadVideoAlt1RequestBodyPrivacyCommentsEnum = exports.UploadVideoAlt1RequestBodyPrivacyCommentsEnum || (exports.UploadVideoAlt1RequestBodyPrivacyCommentsEnum = {}));
+var UploadVideoAlt1RequestBodyPrivacyEmbedEnum;
 (function (UploadVideoAlt1RequestBodyPrivacyEmbedEnum) {
     UploadVideoAlt1RequestBodyPrivacyEmbedEnum["Private"] = "private";
     UploadVideoAlt1RequestBodyPrivacyEmbedEnum["Public"] = "public";
     UploadVideoAlt1RequestBodyPrivacyEmbedEnum["Whitelist"] = "whitelist";
-})(UploadVideoAlt1RequestBodyPrivacyEmbedEnum || (UploadVideoAlt1RequestBodyPrivacyEmbedEnum = {}));
-export var UploadVideoAlt1RequestBodyPrivacyViewEnum;
+})(UploadVideoAlt1RequestBodyPrivacyEmbedEnum = exports.UploadVideoAlt1RequestBodyPrivacyEmbedEnum || (exports.UploadVideoAlt1RequestBodyPrivacyEmbedEnum = {}));
+var UploadVideoAlt1RequestBodyPrivacyViewEnum;
 (function (UploadVideoAlt1RequestBodyPrivacyViewEnum) {
     UploadVideoAlt1RequestBodyPrivacyViewEnum["Anybody"] = "anybody";
     UploadVideoAlt1RequestBodyPrivacyViewEnum["Contacts"] = "contacts";
@@ -197,36 +223,36 @@ export var UploadVideoAlt1RequestBodyPrivacyViewEnum;
     UploadVideoAlt1RequestBodyPrivacyViewEnum["Password"] = "password";
     UploadVideoAlt1RequestBodyPrivacyViewEnum["Unlisted"] = "unlisted";
     UploadVideoAlt1RequestBodyPrivacyViewEnum["Users"] = "users";
-})(UploadVideoAlt1RequestBodyPrivacyViewEnum || (UploadVideoAlt1RequestBodyPrivacyViewEnum = {}));
+})(UploadVideoAlt1RequestBodyPrivacyViewEnum = exports.UploadVideoAlt1RequestBodyPrivacyViewEnum || (exports.UploadVideoAlt1RequestBodyPrivacyViewEnum = {}));
 var UploadVideoAlt1RequestBodyPrivacy = /** @class */ (function (_super) {
     __extends(UploadVideoAlt1RequestBodyPrivacy, _super);
     function UploadVideoAlt1RequestBodyPrivacy() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=add" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=add" }),
         __metadata("design:type", Boolean)
     ], UploadVideoAlt1RequestBodyPrivacy.prototype, "add", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBodyPrivacy.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download" }),
         __metadata("design:type", Boolean)
     ], UploadVideoAlt1RequestBodyPrivacy.prototype, "download", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=embed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=embed" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBodyPrivacy.prototype, "embed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=view" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=view" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBodyPrivacy.prototype, "view", void 0);
     return UploadVideoAlt1RequestBodyPrivacy;
-}(SpeakeasyBase));
-export { UploadVideoAlt1RequestBodyPrivacy };
-export var UploadVideoAlt1RequestBodyRatingsMpaaReasonEnum;
+}(utils_1.SpeakeasyBase));
+exports.UploadVideoAlt1RequestBodyPrivacy = UploadVideoAlt1RequestBodyPrivacy;
+var UploadVideoAlt1RequestBodyRatingsMpaaReasonEnum;
 (function (UploadVideoAlt1RequestBodyRatingsMpaaReasonEnum) {
     UploadVideoAlt1RequestBodyRatingsMpaaReasonEnum["At"] = "at";
     UploadVideoAlt1RequestBodyRatingsMpaaReasonEnum["Bn"] = "bn";
@@ -234,249 +260,249 @@ export var UploadVideoAlt1RequestBodyRatingsMpaaReasonEnum;
     UploadVideoAlt1RequestBodyRatingsMpaaReasonEnum["Sl"] = "sl";
     UploadVideoAlt1RequestBodyRatingsMpaaReasonEnum["Ss"] = "ss";
     UploadVideoAlt1RequestBodyRatingsMpaaReasonEnum["V"] = "v";
-})(UploadVideoAlt1RequestBodyRatingsMpaaReasonEnum || (UploadVideoAlt1RequestBodyRatingsMpaaReasonEnum = {}));
+})(UploadVideoAlt1RequestBodyRatingsMpaaReasonEnum = exports.UploadVideoAlt1RequestBodyRatingsMpaaReasonEnum || (exports.UploadVideoAlt1RequestBodyRatingsMpaaReasonEnum = {}));
 var UploadVideoAlt1RequestBodyRatingsMpaa = /** @class */ (function (_super) {
     __extends(UploadVideoAlt1RequestBodyRatingsMpaa, _super);
     function UploadVideoAlt1RequestBodyRatingsMpaa() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBodyRatingsMpaa.prototype, "reason", void 0);
     return UploadVideoAlt1RequestBodyRatingsMpaa;
-}(SpeakeasyBase));
-export { UploadVideoAlt1RequestBodyRatingsMpaa };
-export var UploadVideoAlt1RequestBodyRatingsTvReasonEnum;
+}(utils_1.SpeakeasyBase));
+exports.UploadVideoAlt1RequestBodyRatingsMpaa = UploadVideoAlt1RequestBodyRatingsMpaa;
+var UploadVideoAlt1RequestBodyRatingsTvReasonEnum;
 (function (UploadVideoAlt1RequestBodyRatingsTvReasonEnum) {
     UploadVideoAlt1RequestBodyRatingsTvReasonEnum["D"] = "d";
     UploadVideoAlt1RequestBodyRatingsTvReasonEnum["Fv"] = "fv";
     UploadVideoAlt1RequestBodyRatingsTvReasonEnum["L"] = "l";
     UploadVideoAlt1RequestBodyRatingsTvReasonEnum["Ss"] = "ss";
     UploadVideoAlt1RequestBodyRatingsTvReasonEnum["V"] = "v";
-})(UploadVideoAlt1RequestBodyRatingsTvReasonEnum || (UploadVideoAlt1RequestBodyRatingsTvReasonEnum = {}));
+})(UploadVideoAlt1RequestBodyRatingsTvReasonEnum = exports.UploadVideoAlt1RequestBodyRatingsTvReasonEnum || (exports.UploadVideoAlt1RequestBodyRatingsTvReasonEnum = {}));
 var UploadVideoAlt1RequestBodyRatingsTv = /** @class */ (function (_super) {
     __extends(UploadVideoAlt1RequestBodyRatingsTv, _super);
     function UploadVideoAlt1RequestBodyRatingsTv() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBodyRatingsTv.prototype, "reason", void 0);
     return UploadVideoAlt1RequestBodyRatingsTv;
-}(SpeakeasyBase));
-export { UploadVideoAlt1RequestBodyRatingsTv };
+}(utils_1.SpeakeasyBase));
+exports.UploadVideoAlt1RequestBodyRatingsTv = UploadVideoAlt1RequestBodyRatingsTv;
 var UploadVideoAlt1RequestBodyRatings = /** @class */ (function (_super) {
     __extends(UploadVideoAlt1RequestBodyRatings, _super);
     function UploadVideoAlt1RequestBodyRatings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mpaa" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mpaa" }),
         __metadata("design:type", UploadVideoAlt1RequestBodyRatingsMpaa)
     ], UploadVideoAlt1RequestBodyRatings.prototype, "mpaa", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tv" }),
         __metadata("design:type", UploadVideoAlt1RequestBodyRatingsTv)
     ], UploadVideoAlt1RequestBodyRatings.prototype, "tv", void 0);
     return UploadVideoAlt1RequestBodyRatings;
-}(SpeakeasyBase));
-export { UploadVideoAlt1RequestBodyRatings };
+}(utils_1.SpeakeasyBase));
+exports.UploadVideoAlt1RequestBodyRatings = UploadVideoAlt1RequestBodyRatings;
 var UploadVideoAlt1RequestBodyReviewPage = /** @class */ (function (_super) {
     __extends(UploadVideoAlt1RequestBodyReviewPage, _super);
     function UploadVideoAlt1RequestBodyReviewPage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], UploadVideoAlt1RequestBodyReviewPage.prototype, "active", void 0);
     return UploadVideoAlt1RequestBodyReviewPage;
-}(SpeakeasyBase));
-export { UploadVideoAlt1RequestBodyReviewPage };
+}(utils_1.SpeakeasyBase));
+exports.UploadVideoAlt1RequestBodyReviewPage = UploadVideoAlt1RequestBodyReviewPage;
 var UploadVideoAlt1RequestBodySpatialDirectorTimeline = /** @class */ (function (_super) {
     __extends(UploadVideoAlt1RequestBodySpatialDirectorTimeline, _super);
     function UploadVideoAlt1RequestBodySpatialDirectorTimeline() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pitch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pitch" }),
         __metadata("design:type", Number)
     ], UploadVideoAlt1RequestBodySpatialDirectorTimeline.prototype, "pitch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roll" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roll" }),
         __metadata("design:type", Number)
     ], UploadVideoAlt1RequestBodySpatialDirectorTimeline.prototype, "roll", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_code" }),
         __metadata("design:type", Number)
     ], UploadVideoAlt1RequestBodySpatialDirectorTimeline.prototype, "timeCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=yaw" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=yaw" }),
         __metadata("design:type", Number)
     ], UploadVideoAlt1RequestBodySpatialDirectorTimeline.prototype, "yaw", void 0);
     return UploadVideoAlt1RequestBodySpatialDirectorTimeline;
-}(SpeakeasyBase));
-export { UploadVideoAlt1RequestBodySpatialDirectorTimeline };
-export var UploadVideoAlt1RequestBodySpatialProjectionEnum;
+}(utils_1.SpeakeasyBase));
+exports.UploadVideoAlt1RequestBodySpatialDirectorTimeline = UploadVideoAlt1RequestBodySpatialDirectorTimeline;
+var UploadVideoAlt1RequestBodySpatialProjectionEnum;
 (function (UploadVideoAlt1RequestBodySpatialProjectionEnum) {
     UploadVideoAlt1RequestBodySpatialProjectionEnum["Cubical"] = "cubical";
     UploadVideoAlt1RequestBodySpatialProjectionEnum["Cylindrical"] = "cylindrical";
     UploadVideoAlt1RequestBodySpatialProjectionEnum["Dome"] = "dome";
     UploadVideoAlt1RequestBodySpatialProjectionEnum["Equirectangular"] = "equirectangular";
     UploadVideoAlt1RequestBodySpatialProjectionEnum["Pyramid"] = "pyramid";
-})(UploadVideoAlt1RequestBodySpatialProjectionEnum || (UploadVideoAlt1RequestBodySpatialProjectionEnum = {}));
-export var UploadVideoAlt1RequestBodySpatialStereoFormatEnum;
+})(UploadVideoAlt1RequestBodySpatialProjectionEnum = exports.UploadVideoAlt1RequestBodySpatialProjectionEnum || (exports.UploadVideoAlt1RequestBodySpatialProjectionEnum = {}));
+var UploadVideoAlt1RequestBodySpatialStereoFormatEnum;
 (function (UploadVideoAlt1RequestBodySpatialStereoFormatEnum) {
     UploadVideoAlt1RequestBodySpatialStereoFormatEnum["LeftRight"] = "left-right";
     UploadVideoAlt1RequestBodySpatialStereoFormatEnum["Mono"] = "mono";
     UploadVideoAlt1RequestBodySpatialStereoFormatEnum["TopBottom"] = "top-bottom";
-})(UploadVideoAlt1RequestBodySpatialStereoFormatEnum || (UploadVideoAlt1RequestBodySpatialStereoFormatEnum = {}));
+})(UploadVideoAlt1RequestBodySpatialStereoFormatEnum = exports.UploadVideoAlt1RequestBodySpatialStereoFormatEnum || (exports.UploadVideoAlt1RequestBodySpatialStereoFormatEnum = {}));
 var UploadVideoAlt1RequestBodySpatial = /** @class */ (function (_super) {
     __extends(UploadVideoAlt1RequestBodySpatial, _super);
     function UploadVideoAlt1RequestBodySpatial() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=director_timeline", elemType: UploadVideoAlt1RequestBodySpatialDirectorTimeline }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=director_timeline", elemType: UploadVideoAlt1RequestBodySpatialDirectorTimeline }),
         __metadata("design:type", Array)
     ], UploadVideoAlt1RequestBodySpatial.prototype, "directorTimeline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=field_of_view" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=field_of_view" }),
         __metadata("design:type", Number)
     ], UploadVideoAlt1RequestBodySpatial.prototype, "fieldOfView", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projection" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBodySpatial.prototype, "projection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stereo_format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stereo_format" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBodySpatial.prototype, "stereoFormat", void 0);
     return UploadVideoAlt1RequestBodySpatial;
-}(SpeakeasyBase));
-export { UploadVideoAlt1RequestBodySpatial };
-export var UploadVideoAlt1RequestBodyUploadApproachEnum;
+}(utils_1.SpeakeasyBase));
+exports.UploadVideoAlt1RequestBodySpatial = UploadVideoAlt1RequestBodySpatial;
+var UploadVideoAlt1RequestBodyUploadApproachEnum;
 (function (UploadVideoAlt1RequestBodyUploadApproachEnum) {
     UploadVideoAlt1RequestBodyUploadApproachEnum["Post"] = "post";
     UploadVideoAlt1RequestBodyUploadApproachEnum["Pull"] = "pull";
     UploadVideoAlt1RequestBodyUploadApproachEnum["Streaming"] = "streaming";
     UploadVideoAlt1RequestBodyUploadApproachEnum["Tus"] = "tus";
-})(UploadVideoAlt1RequestBodyUploadApproachEnum || (UploadVideoAlt1RequestBodyUploadApproachEnum = {}));
+})(UploadVideoAlt1RequestBodyUploadApproachEnum = exports.UploadVideoAlt1RequestBodyUploadApproachEnum || (exports.UploadVideoAlt1RequestBodyUploadApproachEnum = {}));
 var UploadVideoAlt1RequestBodyUpload = /** @class */ (function (_super) {
     __extends(UploadVideoAlt1RequestBodyUpload, _super);
     function UploadVideoAlt1RequestBodyUpload() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approach" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approach" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBodyUpload.prototype, "approach", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=link" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBodyUpload.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=redirect_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=redirect_url" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBodyUpload.prototype, "redirectUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBodyUpload.prototype, "size", void 0);
     return UploadVideoAlt1RequestBodyUpload;
-}(SpeakeasyBase));
-export { UploadVideoAlt1RequestBodyUpload };
+}(utils_1.SpeakeasyBase));
+exports.UploadVideoAlt1RequestBodyUpload = UploadVideoAlt1RequestBodyUpload;
 var UploadVideoAlt1RequestBody = /** @class */ (function (_super) {
     __extends(UploadVideoAlt1RequestBody, _super);
     function UploadVideoAlt1RequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content_rating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content_rating" }),
         __metadata("design:type", Array)
     ], UploadVideoAlt1RequestBody.prototype, "contentRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBody.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=embed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=embed" }),
         __metadata("design:type", UploadVideoAlt1RequestBodyEmbed)
     ], UploadVideoAlt1RequestBody.prototype, "embed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=license" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=license" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBody.prototype, "license", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locale" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBody.prototype, "locale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], UploadVideoAlt1RequestBody.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privacy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privacy" }),
         __metadata("design:type", UploadVideoAlt1RequestBodyPrivacy)
     ], UploadVideoAlt1RequestBody.prototype, "privacy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ratings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ratings" }),
         __metadata("design:type", UploadVideoAlt1RequestBodyRatings)
     ], UploadVideoAlt1RequestBody.prototype, "ratings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=review_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=review_page" }),
         __metadata("design:type", UploadVideoAlt1RequestBodyReviewPage)
     ], UploadVideoAlt1RequestBody.prototype, "reviewPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spatial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spatial" }),
         __metadata("design:type", UploadVideoAlt1RequestBodySpatial)
     ], UploadVideoAlt1RequestBody.prototype, "spatial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=upload" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=upload" }),
         __metadata("design:type", UploadVideoAlt1RequestBodyUpload)
     ], UploadVideoAlt1RequestBody.prototype, "upload", void 0);
     return UploadVideoAlt1RequestBody;
-}(SpeakeasyBase));
-export { UploadVideoAlt1RequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UploadVideoAlt1RequestBody = UploadVideoAlt1RequestBody;
 var UploadVideoAlt1Request = /** @class */ (function (_super) {
     __extends(UploadVideoAlt1Request, _super);
     function UploadVideoAlt1Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/vnd.vimeo.video+json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/vnd.vimeo.video+json" }),
         __metadata("design:type", UploadVideoAlt1RequestBody)
     ], UploadVideoAlt1Request.prototype, "request", void 0);
     return UploadVideoAlt1Request;
-}(SpeakeasyBase));
-export { UploadVideoAlt1Request };
+}(utils_1.SpeakeasyBase));
+exports.UploadVideoAlt1Request = UploadVideoAlt1Request;
 var UploadVideoAlt1Response = /** @class */ (function (_super) {
     __extends(UploadVideoAlt1Response, _super);
     function UploadVideoAlt1Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UploadVideoAlt1Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UploadVideoAlt1Response.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", shared.Error)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.ErrorT)
     ], UploadVideoAlt1Response.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Video)
     ], UploadVideoAlt1Response.prototype, "video", void 0);
     return UploadVideoAlt1Response;
-}(SpeakeasyBase));
-export { UploadVideoAlt1Response };
+}(utils_1.SpeakeasyBase));
+exports.UploadVideoAlt1Response = UploadVideoAlt1Response;

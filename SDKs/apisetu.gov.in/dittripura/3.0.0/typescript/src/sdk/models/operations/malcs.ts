@@ -188,23 +188,23 @@ export class MalcsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  malcs400ApplicationJsonObject?: Malcs400ApplicationJson;
+  malcs400ApplicationJSONObject?: Malcs400ApplicationJson;
 
   @SpeakeasyMetadata()
-  malcs401ApplicationJsonObject?: Malcs401ApplicationJson;
+  malcs401ApplicationJSONObject?: Malcs401ApplicationJson;
 
   @SpeakeasyMetadata()
-  malcs404ApplicationJsonObject?: Malcs404ApplicationJson;
+  malcs404ApplicationJSONObject?: Malcs404ApplicationJson;
 
   @SpeakeasyMetadata()
-  malcs500ApplicationJsonObject?: Malcs500ApplicationJson;
+  malcs500ApplicationJSONObject?: Malcs500ApplicationJson;
 
   @SpeakeasyMetadata()
-  malcs502ApplicationJsonObject?: Malcs502ApplicationJson;
+  malcs502ApplicationJSONObject?: Malcs502ApplicationJson;
 
   @SpeakeasyMetadata()
-  malcs503ApplicationJsonObject?: Malcs503ApplicationJson;
+  malcs503ApplicationJSONObject?: Malcs503ApplicationJson;
 
   @SpeakeasyMetadata()
-  malcs504ApplicationJsonObject?: Malcs504ApplicationJson;
+  malcs504ApplicationJSONObject?: Malcs504ApplicationJson;
 }

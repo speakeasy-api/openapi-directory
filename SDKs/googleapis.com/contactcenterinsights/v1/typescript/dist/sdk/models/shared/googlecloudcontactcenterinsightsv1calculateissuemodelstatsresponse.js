@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1IssueModelLabelStats } from "./googlecloudcontactcenterinsightsv1issuemodellabelstats";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1issuemodellabelstats_1 = require("./googlecloudcontactcenterinsightsv1issuemodellabelstats");
 // GoogleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse
 /**
  * Response of querying an issue model's statistics.
@@ -34,9 +37,9 @@ var GoogleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse = /** @cl
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currentStats" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1IssueModelLabelStats)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currentStats" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1issuemodellabelstats_1.GoogleCloudContactcenterinsightsV1IssueModelLabelStats)
     ], GoogleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse.prototype, "currentStats", void 0);
     return GoogleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse = GoogleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse;

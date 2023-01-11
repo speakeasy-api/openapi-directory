@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LocalTime } from "./localtime";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartDates = void 0;
+var utils_1 = require("../../../internal/utils");
+var localtime_1 = require("./localtime");
 // StartDates
 /**
  * Event's Start Dates
@@ -34,33 +37,33 @@ var StartDates = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateTBA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateTBA" }),
         __metadata("design:type", Boolean)
-    ], StartDates.prototype, "dateTba", void 0);
+    ], StartDates.prototype, "dateTBA", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateTBD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateTBD" }),
         __metadata("design:type", Boolean)
-    ], StartDates.prototype, "dateTbd", void 0);
+    ], StartDates.prototype, "dateTBD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateTime" }),
         __metadata("design:type", Date)
     ], StartDates.prototype, "dateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localDate" }),
         __metadata("design:type", Date)
     ], StartDates.prototype, "localDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localTime" }),
-        __metadata("design:type", LocalTime)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localTime" }),
+        __metadata("design:type", localtime_1.LocalTime)
     ], StartDates.prototype, "localTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noSpecificTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noSpecificTime" }),
         __metadata("design:type", Boolean)
     ], StartDates.prototype, "noSpecificTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeTBA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeTBA" }),
         __metadata("design:type", Boolean)
-    ], StartDates.prototype, "timeTba", void 0);
+    ], StartDates.prototype, "timeTBA", void 0);
     return StartDates;
-}(SpeakeasyBase));
-export { StartDates };
+}(utils_1.SpeakeasyBase));
+exports.StartDates = StartDates;

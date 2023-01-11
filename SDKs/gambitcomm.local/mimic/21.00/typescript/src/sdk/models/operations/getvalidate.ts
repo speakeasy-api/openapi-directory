@@ -22,5 +22,5 @@ export class GetValidateResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getValidate200ApplicationJsonInt32Integer?: number;
+  getValidate200ApplicationJSONInt32Integer?: number;
 }

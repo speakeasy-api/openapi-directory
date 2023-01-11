@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // MetricInfo
 /**
  * Information about the CloudWatch metric that reflects quota usage.
@@ -33,21 +36,21 @@ var MetricInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MetricDimensions" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MetricDimensions" }),
+        __metadata("design:type", Object)
     ], MetricInfo.prototype, "metricDimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MetricName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MetricName" }),
         __metadata("design:type", String)
     ], MetricInfo.prototype, "metricName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MetricNamespace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MetricNamespace" }),
         __metadata("design:type", String)
     ], MetricInfo.prototype, "metricNamespace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MetricStatisticRecommendation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MetricStatisticRecommendation" }),
         __metadata("design:type", String)
     ], MetricInfo.prototype, "metricStatisticRecommendation", void 0);
     return MetricInfo;
-}(SpeakeasyBase));
-export { MetricInfo };
+}(utils_1.SpeakeasyBase));
+exports.MetricInfo = MetricInfo;

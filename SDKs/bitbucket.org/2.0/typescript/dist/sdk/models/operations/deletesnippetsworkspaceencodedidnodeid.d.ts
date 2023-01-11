@@ -17,5 +17,5 @@ export declare class DeleteSnippetsWorkspaceEncodedIdNodeIdRequest extends Speak
 export declare class DeleteSnippetsWorkspaceEncodedIdNodeIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

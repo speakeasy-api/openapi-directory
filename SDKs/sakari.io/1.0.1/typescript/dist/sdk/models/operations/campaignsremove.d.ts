@@ -17,5 +17,5 @@ export declare class CampaignsRemoveRequest extends SpeakeasyBase {
 export declare class CampaignsRemoveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    campaignsRemove200ApplicationJsonObject?: CampaignsRemove200ApplicationJson;
+    campaignsRemove200ApplicationJSONObject?: CampaignsRemove200ApplicationJson;
 }

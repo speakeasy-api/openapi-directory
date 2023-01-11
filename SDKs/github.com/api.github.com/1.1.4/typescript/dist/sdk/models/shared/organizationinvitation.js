@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimpleUser } from "./simpleuser";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrganizationInvitation = void 0;
+var utils_1 = require("../../../internal/utils");
+var simpleuser_1 = require("./simpleuser");
 // OrganizationInvitation
 /**
  * Organization Invitation
@@ -34,53 +37,53 @@ var OrganizationInvitation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", String)
     ], OrganizationInvitation.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], OrganizationInvitation.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failed_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failed_at" }),
         __metadata("design:type", String)
     ], OrganizationInvitation.prototype, "failedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failed_reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failed_reason" }),
         __metadata("design:type", String)
     ], OrganizationInvitation.prototype, "failedReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], OrganizationInvitation.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invitation_team_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invitation_team_url" }),
         __metadata("design:type", String)
     ], OrganizationInvitation.prototype, "invitationTeamUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invitation_teams_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invitation_teams_url" }),
         __metadata("design:type", String)
     ], OrganizationInvitation.prototype, "invitationTeamsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inviter" }),
-        __metadata("design:type", SimpleUser)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inviter" }),
+        __metadata("design:type", simpleuser_1.SimpleUser)
     ], OrganizationInvitation.prototype, "inviter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=login" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=login" }),
         __metadata("design:type", String)
     ], OrganizationInvitation.prototype, "login", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], OrganizationInvitation.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=role" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=role" }),
         __metadata("design:type", String)
     ], OrganizationInvitation.prototype, "role", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team_count" }),
         __metadata("design:type", Number)
     ], OrganizationInvitation.prototype, "teamCount", void 0);
     return OrganizationInvitation;
-}(SpeakeasyBase));
-export { OrganizationInvitation };
+}(utils_1.SpeakeasyBase));
+exports.OrganizationInvitation = OrganizationInvitation;

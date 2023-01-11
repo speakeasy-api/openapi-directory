@@ -16,6 +16,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugDeployKeysRequest extends S
 export declare class GetRepositoriesWorkspaceRepoSlugDeployKeysResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedDeployKeys?: shared.PaginatedDeployKeys;
 }

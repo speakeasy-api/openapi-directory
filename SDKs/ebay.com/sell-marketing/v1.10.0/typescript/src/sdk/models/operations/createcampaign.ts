@@ -23,11 +23,11 @@ export class CreateCampaignResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createCampaign201ApplicationJsonObject?: Map<string, any>;
+  createCampaign201ApplicationJSONObject?: Record<string, any>;
 }

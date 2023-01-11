@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolWebPortAddResponse = exports.ProtocolWebPortAddRequest = exports.ProtocolWebPortAddPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolWebPortAddPathParams = /** @class */ (function (_super) {
     __extends(ProtocolWebPortAddPathParams, _super);
     function ProtocolWebPortAddPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolWebPortAddPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=port" }),
         __metadata("design:type", Number)
     ], ProtocolWebPortAddPathParams.prototype, "port", void 0);
     return ProtocolWebPortAddPathParams;
-}(SpeakeasyBase));
-export { ProtocolWebPortAddPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolWebPortAddPathParams = ProtocolWebPortAddPathParams;
 var ProtocolWebPortAddRequest = /** @class */ (function (_super) {
     __extends(ProtocolWebPortAddRequest, _super);
     function ProtocolWebPortAddRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolWebPortAddPathParams)
     ], ProtocolWebPortAddRequest.prototype, "pathParams", void 0);
     return ProtocolWebPortAddRequest;
-}(SpeakeasyBase));
-export { ProtocolWebPortAddRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolWebPortAddRequest = ProtocolWebPortAddRequest;
 var ProtocolWebPortAddResponse = /** @class */ (function (_super) {
     __extends(ProtocolWebPortAddResponse, _super);
     function ProtocolWebPortAddResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolWebPortAddResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolWebPortAddResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolWebPortAddResponse.prototype, "protocolWebPortAdd200ApplicationJsonString", void 0);
+    ], ProtocolWebPortAddResponse.prototype, "protocolWebPortAdd200ApplicationJSONString", void 0);
     return ProtocolWebPortAddResponse;
-}(SpeakeasyBase));
-export { ProtocolWebPortAddResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolWebPortAddResponse = ProtocolWebPortAddResponse;

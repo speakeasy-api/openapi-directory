@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ScheduleRunConfiguration } from "./schedulerunconfiguration";
-import { ScheduleRunTest } from "./scheduleruntest";
-import { TestTypeEnum } from "./testtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDevicePoolCompatibilityRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var schedulerunconfiguration_1 = require("./schedulerunconfiguration");
+var scheduleruntest_1 = require("./scheduleruntest");
+var testtypeenum_1 = require("./testtypeenum");
 // GetDevicePoolCompatibilityRequest
 /**
  * Represents a request to the get device pool compatibility operation.
@@ -36,25 +39,25 @@ var GetDevicePoolCompatibilityRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appArn" }),
         __metadata("design:type", String)
     ], GetDevicePoolCompatibilityRequest.prototype, "appArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configuration" }),
-        __metadata("design:type", ScheduleRunConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configuration" }),
+        __metadata("design:type", schedulerunconfiguration_1.ScheduleRunConfiguration)
     ], GetDevicePoolCompatibilityRequest.prototype, "configuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=devicePoolArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=devicePoolArn" }),
         __metadata("design:type", String)
     ], GetDevicePoolCompatibilityRequest.prototype, "devicePoolArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=test" }),
-        __metadata("design:type", ScheduleRunTest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=test" }),
+        __metadata("design:type", scheduleruntest_1.ScheduleRunTest)
     ], GetDevicePoolCompatibilityRequest.prototype, "test", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testType" }),
         __metadata("design:type", String)
     ], GetDevicePoolCompatibilityRequest.prototype, "testType", void 0);
     return GetDevicePoolCompatibilityRequest;
-}(SpeakeasyBase));
-export { GetDevicePoolCompatibilityRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDevicePoolCompatibilityRequest = GetDevicePoolCompatibilityRequest;

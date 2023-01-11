@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetLoginFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLoginResponse = exports.GetLoginRequest = exports.GetLoginQueryParams = exports.GetLoginFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetLoginFormatEnum;
 (function (GetLoginFormatEnum) {
     GetLoginFormatEnum["Json"] = "json";
     GetLoginFormatEnum["Xml"] = "xml";
@@ -31,52 +34,52 @@ export var GetLoginFormatEnum;
     GetLoginFormatEnum["Dump"] = "dump";
     GetLoginFormatEnum["Jpg"] = "jpg";
     GetLoginFormatEnum["Pdf"] = "pdf";
-})(GetLoginFormatEnum || (GetLoginFormatEnum = {}));
+})(GetLoginFormatEnum = exports.GetLoginFormatEnum || (exports.GetLoginFormatEnum = {}));
 var GetLoginQueryParams = /** @class */ (function (_super) {
     __extends(GetLoginQueryParams, _super);
     function GetLoginQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetLoginQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], GetLoginQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pass" }),
         __metadata("design:type", String)
     ], GetLoginQueryParams.prototype, "pass", void 0);
     return GetLoginQueryParams;
-}(SpeakeasyBase));
-export { GetLoginQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetLoginQueryParams = GetLoginQueryParams;
 var GetLoginRequest = /** @class */ (function (_super) {
     __extends(GetLoginRequest, _super);
     function GetLoginRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLoginQueryParams)
     ], GetLoginRequest.prototype, "queryParams", void 0);
     return GetLoginRequest;
-}(SpeakeasyBase));
-export { GetLoginRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetLoginRequest = GetLoginRequest;
 var GetLoginResponse = /** @class */ (function (_super) {
     __extends(GetLoginResponse, _super);
     function GetLoginResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetLoginResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetLoginResponse.prototype, "statusCode", void 0);
     return GetLoginResponse;
-}(SpeakeasyBase));
-export { GetLoginResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetLoginResponse = GetLoginResponse;

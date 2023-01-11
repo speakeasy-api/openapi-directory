@@ -1,10 +1,10 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Address } from "./address";
 import { CurrencyEnum } from "./currencyenum";
 import { PaymentUnitEnum } from "./paymentunitenum";
+import { Address } from "./address";
+import { GenderEnum } from "./genderenum";
 import { CustomField } from "./customfield";
 import { Email } from "./email";
-import { GenderEnum } from "./genderenum";
 import { PhoneNumber } from "./phonenumber";
 
 
@@ -325,6 +325,9 @@ export class Employee extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=division" })
   division?: string;
 
+  @SpeakeasyMetadata({ data: "json, name=division_id" })
+  divisionId?: string;
+
   @SpeakeasyMetadata({ data: "json, name=emails", elemType: Email })
   emails?: Email[];
 
@@ -495,6 +498,9 @@ export class EmployeeInput extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=division" })
   division?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=division_id" })
+  divisionId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=emails", elemType: Email })
   emails?: Email[];

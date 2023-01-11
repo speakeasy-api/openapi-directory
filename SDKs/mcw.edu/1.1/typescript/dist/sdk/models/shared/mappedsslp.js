@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Sslp } from "./sslp";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MappedSslp = void 0;
+var utils_1 = require("../../../internal/utils");
+var sslp_1 = require("./sslp");
 var MappedSslp = /** @class */ (function (_super) {
     __extends(MappedSslp, _super);
     function MappedSslp() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MappedSslp.prototype, "chromosome", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MappedSslp.prototype, "mapKey", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Sslp)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", sslp_1.Sslp)
     ], MappedSslp.prototype, "sslp", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MappedSslp.prototype, "start", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MappedSslp.prototype, "stop", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MappedSslp.prototype, "strand", void 0);
     return MappedSslp;
-}(SpeakeasyBase));
-export { MappedSslp };
+}(utils_1.SpeakeasyBase));
+exports.MappedSslp = MappedSslp;

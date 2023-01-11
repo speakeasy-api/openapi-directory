@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,102 +23,104 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetRandomWordsSortByEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRandomWordsResponse = exports.GetRandomWordsRequest = exports.GetRandomWordsQueryParams = exports.GetRandomWordsSortOrderEnum = exports.GetRandomWordsSortByEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetRandomWordsSortByEnum;
 (function (GetRandomWordsSortByEnum) {
     GetRandomWordsSortByEnum["Alpha"] = "alpha";
     GetRandomWordsSortByEnum["Count"] = "count";
-})(GetRandomWordsSortByEnum || (GetRandomWordsSortByEnum = {}));
-export var GetRandomWordsSortOrderEnum;
+})(GetRandomWordsSortByEnum = exports.GetRandomWordsSortByEnum || (exports.GetRandomWordsSortByEnum = {}));
+var GetRandomWordsSortOrderEnum;
 (function (GetRandomWordsSortOrderEnum) {
     GetRandomWordsSortOrderEnum["Asc"] = "asc";
     GetRandomWordsSortOrderEnum["Desc"] = "desc";
-})(GetRandomWordsSortOrderEnum || (GetRandomWordsSortOrderEnum = {}));
+})(GetRandomWordsSortOrderEnum = exports.GetRandomWordsSortOrderEnum || (exports.GetRandomWordsSortOrderEnum = {}));
 var GetRandomWordsQueryParams = /** @class */ (function (_super) {
     __extends(GetRandomWordsQueryParams, _super);
     function GetRandomWordsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=excludePartOfSpeech" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=excludePartOfSpeech" }),
         __metadata("design:type", String)
     ], GetRandomWordsQueryParams.prototype, "excludePartOfSpeech", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=hasDictionaryDef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=hasDictionaryDef" }),
         __metadata("design:type", String)
     ], GetRandomWordsQueryParams.prototype, "hasDictionaryDef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includePartOfSpeech" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includePartOfSpeech" }),
         __metadata("design:type", String)
     ], GetRandomWordsQueryParams.prototype, "includePartOfSpeech", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetRandomWordsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxCorpusCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxCorpusCount" }),
         __metadata("design:type", Number)
     ], GetRandomWordsQueryParams.prototype, "maxCorpusCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxDictionaryCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxDictionaryCount" }),
         __metadata("design:type", Number)
     ], GetRandomWordsQueryParams.prototype, "maxDictionaryCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxLength" }),
         __metadata("design:type", Number)
     ], GetRandomWordsQueryParams.prototype, "maxLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minCorpusCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minCorpusCount" }),
         __metadata("design:type", Number)
     ], GetRandomWordsQueryParams.prototype, "minCorpusCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minDictionaryCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minDictionaryCount" }),
         __metadata("design:type", Number)
     ], GetRandomWordsQueryParams.prototype, "minDictionaryCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minLength" }),
         __metadata("design:type", Number)
     ], GetRandomWordsQueryParams.prototype, "minLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sortBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sortBy" }),
         __metadata("design:type", String)
     ], GetRandomWordsQueryParams.prototype, "sortBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sortOrder" }),
         __metadata("design:type", String)
     ], GetRandomWordsQueryParams.prototype, "sortOrder", void 0);
     return GetRandomWordsQueryParams;
-}(SpeakeasyBase));
-export { GetRandomWordsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRandomWordsQueryParams = GetRandomWordsQueryParams;
 var GetRandomWordsRequest = /** @class */ (function (_super) {
     __extends(GetRandomWordsRequest, _super);
     function GetRandomWordsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRandomWordsQueryParams)
     ], GetRandomWordsRequest.prototype, "queryParams", void 0);
     return GetRandomWordsRequest;
-}(SpeakeasyBase));
-export { GetRandomWordsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRandomWordsRequest = GetRandomWordsRequest;
 var GetRandomWordsResponse = /** @class */ (function (_super) {
     __extends(GetRandomWordsResponse, _super);
     function GetRandomWordsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetRandomWordsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRandomWordsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRandomWordsResponse.prototype, "statusCode", void 0);
     return GetRandomWordsResponse;
-}(SpeakeasyBase));
-export { GetRandomWordsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRandomWordsResponse = GetRandomWordsResponse;

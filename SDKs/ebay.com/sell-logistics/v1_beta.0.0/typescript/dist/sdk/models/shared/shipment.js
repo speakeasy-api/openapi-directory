@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ShipmentCancellation } from "./shipmentcancellation";
-import { Order } from "./order";
-import { PackageSpecification } from "./packagespecification";
-import { PurchasedRate } from "./purchasedrate";
-import { Contact } from "./contact";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Shipment = void 0;
+var utils_1 = require("../../../internal/utils");
+var shipmentcancellation_1 = require("./shipmentcancellation");
+var order_1 = require("./order");
+var packagespecification_1 = require("./packagespecification");
+var purchasedrate_1 = require("./purchasedrate");
+var contact_1 = require("./contact");
 // Shipment
 /**
  * This complex type defines a shipment for a specific package (for example, a box or letter). Shipments are always linked to a purchased shipping label.
@@ -38,57 +41,57 @@ var Shipment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancellation" }),
-        __metadata("design:type", ShipmentCancellation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancellation" }),
+        __metadata("design:type", shipmentcancellation_1.ShipmentCancellation)
     ], Shipment.prototype, "cancellation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creationDate" }),
         __metadata("design:type", String)
     ], Shipment.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelCustomMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelCustomMessage" }),
         __metadata("design:type", String)
     ], Shipment.prototype, "labelCustomMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelDownloadUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelDownloadUrl" }),
         __metadata("design:type", String)
     ], Shipment.prototype, "labelDownloadUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelSize" }),
         __metadata("design:type", String)
     ], Shipment.prototype, "labelSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orders", elemType: Order }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orders", elemType: order_1.Order }),
         __metadata("design:type", Array)
     ], Shipment.prototype, "orders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=packageSpecification" }),
-        __metadata("design:type", PackageSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=packageSpecification" }),
+        __metadata("design:type", packagespecification_1.PackageSpecification)
     ], Shipment.prototype, "packageSpecification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rate" }),
-        __metadata("design:type", PurchasedRate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rate" }),
+        __metadata("design:type", purchasedrate_1.PurchasedRate)
     ], Shipment.prototype, "rate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=returnTo" }),
-        __metadata("design:type", Contact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=returnTo" }),
+        __metadata("design:type", contact_1.Contact)
     ], Shipment.prototype, "returnTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipFrom" }),
-        __metadata("design:type", Contact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipFrom" }),
+        __metadata("design:type", contact_1.Contact)
     ], Shipment.prototype, "shipFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipTo" }),
-        __metadata("design:type", Contact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipTo" }),
+        __metadata("design:type", contact_1.Contact)
     ], Shipment.prototype, "shipTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipmentId" }),
         __metadata("design:type", String)
     ], Shipment.prototype, "shipmentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipmentTrackingNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipmentTrackingNumber" }),
         __metadata("design:type", String)
     ], Shipment.prototype, "shipmentTrackingNumber", void 0);
     return Shipment;
-}(SpeakeasyBase));
-export { Shipment };
+}(utils_1.SpeakeasyBase));
+exports.Shipment = Shipment;

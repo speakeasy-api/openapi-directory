@@ -51,7 +51,7 @@ export class CreateSmsTemplateRequestBodySmsTemplateRequest extends SpeakeasyBas
   templateDescription?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

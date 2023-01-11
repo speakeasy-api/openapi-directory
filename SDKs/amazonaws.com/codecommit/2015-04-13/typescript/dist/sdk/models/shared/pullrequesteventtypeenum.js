@@ -1,4 +1,7 @@
-export var PullRequestEventTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PullRequestEventTypeEnum = void 0;
+var PullRequestEventTypeEnum;
 (function (PullRequestEventTypeEnum) {
     PullRequestEventTypeEnum["PullRequestCreated"] = "PULL_REQUEST_CREATED";
     PullRequestEventTypeEnum["PullRequestStatusChanged"] = "PULL_REQUEST_STATUS_CHANGED";
@@ -9,4 +12,4 @@ export var PullRequestEventTypeEnum;
     PullRequestEventTypeEnum["PullRequestApprovalRuleDeleted"] = "PULL_REQUEST_APPROVAL_RULE_DELETED";
     PullRequestEventTypeEnum["PullRequestApprovalRuleOverridden"] = "PULL_REQUEST_APPROVAL_RULE_OVERRIDDEN";
     PullRequestEventTypeEnum["PullRequestApprovalStateChanged"] = "PULL_REQUEST_APPROVAL_STATE_CHANGED";
-})(PullRequestEventTypeEnum || (PullRequestEventTypeEnum = {}));
+})(PullRequestEventTypeEnum = exports.PullRequestEventTypeEnum || (exports.PullRequestEventTypeEnum = {}));

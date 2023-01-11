@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VoiceChannelResponse } from "./voicechannelresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetVoiceChannelResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var voicechannelresponse_1 = require("./voicechannelresponse");
 var GetVoiceChannelResponse = /** @class */ (function (_super) {
     __extends(GetVoiceChannelResponse, _super);
     function GetVoiceChannelResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VoiceChannelResponse" }),
-        __metadata("design:type", VoiceChannelResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VoiceChannelResponse" }),
+        __metadata("design:type", voicechannelresponse_1.VoiceChannelResponse)
     ], GetVoiceChannelResponse.prototype, "voiceChannelResponse", void 0);
     return GetVoiceChannelResponse;
-}(SpeakeasyBase));
-export { GetVoiceChannelResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetVoiceChannelResponse = GetVoiceChannelResponse;

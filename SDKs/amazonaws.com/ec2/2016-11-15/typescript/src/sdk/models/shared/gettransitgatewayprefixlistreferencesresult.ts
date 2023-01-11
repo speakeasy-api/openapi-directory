@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayPrefixListReference } from "./transitgatewayprefixlistreference";
 
 
 
 export class GetTransitGatewayPrefixListReferencesResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: TransitGatewayPrefixListReference })
-  transitGatewayPrefixListReferences?: TransitGatewayPrefixListReference[];
+  @SpeakeasyMetadata()
+  transitGatewayPrefixListReferences?: Record<string, any>;
 }

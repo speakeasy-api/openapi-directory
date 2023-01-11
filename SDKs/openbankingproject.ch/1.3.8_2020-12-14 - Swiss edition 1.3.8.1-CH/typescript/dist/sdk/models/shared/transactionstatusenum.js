@@ -1,4 +1,7 @@
-export var TransactionStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionStatusEnum = void 0;
+var TransactionStatusEnum;
 (function (TransactionStatusEnum) {
     TransactionStatusEnum["Accc"] = "ACCC";
     TransactionStatusEnum["Accp"] = "ACCP";
@@ -14,4 +17,4 @@ export var TransactionStatusEnum;
     TransactionStatusEnum["Acfc"] = "ACFC";
     TransactionStatusEnum["Patc"] = "PATC";
     TransactionStatusEnum["Part"] = "PART";
-})(TransactionStatusEnum || (TransactionStatusEnum = {}));
+})(TransactionStatusEnum = exports.TransactionStatusEnum || (exports.TransactionStatusEnum = {}));

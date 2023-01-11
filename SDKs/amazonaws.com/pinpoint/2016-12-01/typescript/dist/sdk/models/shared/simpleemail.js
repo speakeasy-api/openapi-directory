@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimpleEmailPart } from "./simpleemailpart";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SimpleEmail = void 0;
+var utils_1 = require("../../../internal/utils");
+var simpleemailpart_1 = require("./simpleemailpart");
 // SimpleEmail
 /**
  * Specifies the contents of an email message, composed of a subject, a text part, and an HTML part.
@@ -34,17 +37,17 @@ var SimpleEmail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HtmlPart" }),
-        __metadata("design:type", SimpleEmailPart)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HtmlPart" }),
+        __metadata("design:type", simpleemailpart_1.SimpleEmailPart)
     ], SimpleEmail.prototype, "htmlPart", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Subject" }),
-        __metadata("design:type", SimpleEmailPart)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Subject" }),
+        __metadata("design:type", simpleemailpart_1.SimpleEmailPart)
     ], SimpleEmail.prototype, "subject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TextPart" }),
-        __metadata("design:type", SimpleEmailPart)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TextPart" }),
+        __metadata("design:type", simpleemailpart_1.SimpleEmailPart)
     ], SimpleEmail.prototype, "textPart", void 0);
     return SimpleEmail;
-}(SpeakeasyBase));
-export { SimpleEmail };
+}(utils_1.SpeakeasyBase));
+exports.SimpleEmail = SimpleEmail;

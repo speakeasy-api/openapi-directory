@@ -13,6 +13,6 @@ export declare class RedactMessageResponse extends SpeakeasyBase {
     errorThrottled?: shared.ErrorThrottled;
     errorUnauthorized?: shared.ErrorUnauthorized;
     statusCode: number;
-    redactMessage403ApplicationJsonOneOf?: any;
-    redactMessage422ApplicationJsonOneOf?: any;
+    redactMessage403ApplicationJSONOneOf?: any;
+    redactMessage422ApplicationJSONOneOf?: any;
 }

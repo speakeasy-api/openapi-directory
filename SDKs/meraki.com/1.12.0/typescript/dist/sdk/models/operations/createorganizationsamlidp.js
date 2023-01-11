@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateOrganizationSamlIdpResponse = exports.CreateOrganizationSamlIdpRequest = exports.CreateOrganizationSamlIdpRequestBody = exports.CreateOrganizationSamlIdpPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateOrganizationSamlIdpPathParams = /** @class */ (function (_super) {
     __extends(CreateOrganizationSamlIdpPathParams, _super);
     function CreateOrganizationSamlIdpPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], CreateOrganizationSamlIdpPathParams.prototype, "organizationId", void 0);
     return CreateOrganizationSamlIdpPathParams;
-}(SpeakeasyBase));
-export { CreateOrganizationSamlIdpPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrganizationSamlIdpPathParams = CreateOrganizationSamlIdpPathParams;
 var CreateOrganizationSamlIdpRequestBody = /** @class */ (function (_super) {
     __extends(CreateOrganizationSamlIdpRequestBody, _super);
     function CreateOrganizationSamlIdpRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sloLogoutUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sloLogoutUrl" }),
         __metadata("design:type", String)
     ], CreateOrganizationSamlIdpRequestBody.prototype, "sloLogoutUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=x509certSha1Fingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=x509certSha1Fingerprint" }),
         __metadata("design:type", String)
     ], CreateOrganizationSamlIdpRequestBody.prototype, "x509certSha1Fingerprint", void 0);
     return CreateOrganizationSamlIdpRequestBody;
-}(SpeakeasyBase));
-export { CreateOrganizationSamlIdpRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrganizationSamlIdpRequestBody = CreateOrganizationSamlIdpRequestBody;
 var CreateOrganizationSamlIdpRequest = /** @class */ (function (_super) {
     __extends(CreateOrganizationSamlIdpRequest, _super);
     function CreateOrganizationSamlIdpRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateOrganizationSamlIdpPathParams)
     ], CreateOrganizationSamlIdpRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateOrganizationSamlIdpRequestBody)
     ], CreateOrganizationSamlIdpRequest.prototype, "request", void 0);
     return CreateOrganizationSamlIdpRequest;
-}(SpeakeasyBase));
-export { CreateOrganizationSamlIdpRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrganizationSamlIdpRequest = CreateOrganizationSamlIdpRequest;
 var CreateOrganizationSamlIdpResponse = /** @class */ (function (_super) {
     __extends(CreateOrganizationSamlIdpResponse, _super);
     function CreateOrganizationSamlIdpResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateOrganizationSamlIdpResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateOrganizationSamlIdpResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], CreateOrganizationSamlIdpResponse.prototype, "createOrganizationSamlIdp201ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateOrganizationSamlIdpResponse.prototype, "createOrganizationSamlIdp201ApplicationJSONObject", void 0);
     return CreateOrganizationSamlIdpResponse;
-}(SpeakeasyBase));
-export { CreateOrganizationSamlIdpResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateOrganizationSamlIdpResponse = CreateOrganizationSamlIdpResponse;

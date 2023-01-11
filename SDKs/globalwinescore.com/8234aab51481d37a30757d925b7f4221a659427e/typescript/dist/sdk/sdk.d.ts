@@ -1,31 +1,19 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
-import * as operations from "./models/operations";
+import { AxiosInstance } from "axios";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
+import { GlobalWineScore } from "./globalwinescore";
 export declare const ServerList: readonly ["https://api.globalwinescore.com"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
+    globalWineScore: GlobalWineScore;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
-    /**
-     * getGlobalwinescoresLatest - List all latest GWS
-     *
-     * Returns the latest GWS available per wine/vintage.
-    **/
-    getGlobalwinescoresLatest(req: operations.GetGlobalwinescoresLatestRequest, config?: AxiosRequestConfig): Promise<operations.GetGlobalwinescoresLatestResponse>;
-    /**
-     * listHistoricalGws - List all historical GWS
-     *
-     * Returns all available GWS
-    **/
-    listHistoricalGws(req: operations.ListHistoricalGwsRequest, config?: AxiosRequestConfig): Promise<operations.ListHistoricalGwsResponse>;
+    constructor(props: SDKProps);
 }
-export {};

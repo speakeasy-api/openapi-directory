@@ -1,5 +1,8 @@
-export var FeedbackTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FeedbackTypeEnum = void 0;
+var FeedbackTypeEnum;
 (function (FeedbackTypeEnum) {
     FeedbackTypeEnum["Positive"] = "Positive";
     FeedbackTypeEnum["Negative"] = "Negative";
-})(FeedbackTypeEnum || (FeedbackTypeEnum = {}));
+})(FeedbackTypeEnum = exports.FeedbackTypeEnum || (exports.FeedbackTypeEnum = {}));

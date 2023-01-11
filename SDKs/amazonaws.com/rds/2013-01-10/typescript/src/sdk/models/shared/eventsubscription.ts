@@ -13,7 +13,7 @@ export class EventSubscription extends SpeakeasyBase {
   enabled?: boolean;
 
   @SpeakeasyMetadata()
-  eventCategoriesList?: string[];
+  eventCategoriesList?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   id?: string;
@@ -22,7 +22,7 @@ export class EventSubscription extends SpeakeasyBase {
   snsTopicArn?: string;
 
   @SpeakeasyMetadata()
-  sourceIdsList?: string[];
+  sourceIdsList?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   sourceType?: string;

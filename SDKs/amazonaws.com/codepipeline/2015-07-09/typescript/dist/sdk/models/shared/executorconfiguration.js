@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { JobWorkerExecutorConfiguration } from "./jobworkerexecutorconfiguration";
-import { LambdaExecutorConfiguration } from "./lambdaexecutorconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExecutorConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var jobworkerexecutorconfiguration_1 = require("./jobworkerexecutorconfiguration");
+var lambdaexecutorconfiguration_1 = require("./lambdaexecutorconfiguration");
 // ExecutorConfiguration
 /**
  * The action engine, or executor, related to the supported integration model used to create and update the action type. The available executor types are <code>Lambda</code> and <code>JobWorker</code>.
@@ -35,13 +38,13 @@ var ExecutorConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobWorkerExecutorConfiguration" }),
-        __metadata("design:type", JobWorkerExecutorConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobWorkerExecutorConfiguration" }),
+        __metadata("design:type", jobworkerexecutorconfiguration_1.JobWorkerExecutorConfiguration)
     ], ExecutorConfiguration.prototype, "jobWorkerExecutorConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lambdaExecutorConfiguration" }),
-        __metadata("design:type", LambdaExecutorConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lambdaExecutorConfiguration" }),
+        __metadata("design:type", lambdaexecutorconfiguration_1.LambdaExecutorConfiguration)
     ], ExecutorConfiguration.prototype, "lambdaExecutorConfiguration", void 0);
     return ExecutorConfiguration;
-}(SpeakeasyBase));
-export { ExecutorConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.ExecutorConfiguration = ExecutorConfiguration;

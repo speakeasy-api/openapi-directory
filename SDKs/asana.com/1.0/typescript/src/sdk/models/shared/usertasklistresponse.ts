@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 // UserTaskListResponseOwner
 /** 
- * The owner of the user task list, i.e. the person whose My Tasks is represented by this resource.
+ * A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.
 **/
 export class UserTaskListResponseOwner extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=gid" })
@@ -20,7 +20,7 @@ export class UserTaskListResponseOwner extends SpeakeasyBase {
 
 // UserTaskListResponseWorkspace
 /** 
- * The workspace in which the user task list is located.
+ * A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.
 **/
 export class UserTaskListResponseWorkspace extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=gid" })
@@ -34,6 +34,10 @@ export class UserTaskListResponseWorkspace extends SpeakeasyBase {
 }
 
 
+// UserTaskListResponse
+/** 
+ * A user task list represents the tasks assigned to a particular user. It provides API access to a user’s “My Tasks” view in Asana.
+**/
 export class UserTaskListResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=gid" })
   gid?: string;

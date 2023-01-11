@@ -18,5 +18,5 @@ export declare class GetWorkspaceMembershipResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getWorkspaceMembership200ApplicationJsonObject?: GetWorkspaceMembership200ApplicationJson;
+    getWorkspaceMembership200ApplicationJSONObject?: GetWorkspaceMembership200ApplicationJson;
 }

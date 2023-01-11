@@ -19,7 +19,7 @@ export class TaskSpec extends SpeakeasyBase {
   environment?: Environment;
 
   @SpeakeasyMetadata({ data: "json, name=environments" })
-  environments?: Map<string, string>;
+  environments?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=lifecyclePolicies", elemType: LifecyclePolicy })
   lifecyclePolicies?: LifecyclePolicy[];

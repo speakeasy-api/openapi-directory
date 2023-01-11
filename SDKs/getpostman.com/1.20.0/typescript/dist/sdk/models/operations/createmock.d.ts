@@ -23,5 +23,5 @@ export declare class CreateMockRequest extends SpeakeasyBase {
 export declare class CreateMockResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createMock200ApplicationJsonObject?: CreateMock200ApplicationJson;
+    createMock200ApplicationJSONObject?: CreateMock200ApplicationJson;
 }

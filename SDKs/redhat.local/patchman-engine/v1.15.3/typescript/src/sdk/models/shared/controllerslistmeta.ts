@@ -5,7 +5,7 @@ import { ControllersFilterData } from "./controllersfilterdata";
 
 export class ControllersListMeta extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=filter", elemType: ControllersFilterData })
-  filter?: Map<string, ControllersFilterData>;
+  filter?: Record<string, ControllersFilterData>;
 
   @SpeakeasyMetadata({ data: "json, name=limit" })
   limit?: number;
@@ -20,7 +20,7 @@ export class ControllersListMeta extends SpeakeasyBase {
   sort?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=subtotals" })
-  subtotals?: Map<string, number>;
+  subtotals?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=total_items" })
   totalItems?: number;

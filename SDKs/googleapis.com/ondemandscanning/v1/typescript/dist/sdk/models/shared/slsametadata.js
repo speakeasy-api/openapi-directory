@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SlsaCompleteness } from "./slsacompleteness";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SlsaMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
+var slsacompleteness_1 = require("./slsacompleteness");
 // SlsaMetadata
 /**
  * Other properties of the build.
@@ -34,25 +37,25 @@ var SlsaMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildFinishedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildFinishedOn" }),
         __metadata("design:type", String)
     ], SlsaMetadata.prototype, "buildFinishedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildInvocationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildInvocationId" }),
         __metadata("design:type", String)
     ], SlsaMetadata.prototype, "buildInvocationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildStartedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildStartedOn" }),
         __metadata("design:type", String)
     ], SlsaMetadata.prototype, "buildStartedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=completeness" }),
-        __metadata("design:type", SlsaCompleteness)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=completeness" }),
+        __metadata("design:type", slsacompleteness_1.SlsaCompleteness)
     ], SlsaMetadata.prototype, "completeness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reproducible" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reproducible" }),
         __metadata("design:type", Boolean)
     ], SlsaMetadata.prototype, "reproducible", void 0);
     return SlsaMetadata;
-}(SpeakeasyBase));
-export { SlsaMetadata };
+}(utils_1.SpeakeasyBase));
+exports.SlsaMetadata = SlsaMetadata;

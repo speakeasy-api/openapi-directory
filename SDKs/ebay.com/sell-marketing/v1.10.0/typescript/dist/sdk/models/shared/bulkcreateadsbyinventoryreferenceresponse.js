@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CreateAdsByInventoryReferenceResponse } from "./createadsbyinventoryreferenceresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BulkCreateAdsByInventoryReferenceResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var createadsbyinventoryreferenceresponse_1 = require("./createadsbyinventoryreferenceresponse");
 // BulkCreateAdsByInventoryReferenceResponse
 /**
  * This type defines the response fields used by the bulkCreateAdsByInventoryReference method.
@@ -34,9 +37,9 @@ var BulkCreateAdsByInventoryReferenceResponse = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responses", elemType: CreateAdsByInventoryReferenceResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responses", elemType: createadsbyinventoryreferenceresponse_1.CreateAdsByInventoryReferenceResponse }),
         __metadata("design:type", Array)
     ], BulkCreateAdsByInventoryReferenceResponse.prototype, "responses", void 0);
     return BulkCreateAdsByInventoryReferenceResponse;
-}(SpeakeasyBase));
-export { BulkCreateAdsByInventoryReferenceResponse };
+}(utils_1.SpeakeasyBase));
+exports.BulkCreateAdsByInventoryReferenceResponse = BulkCreateAdsByInventoryReferenceResponse;

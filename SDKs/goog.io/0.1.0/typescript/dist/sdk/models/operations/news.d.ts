@@ -43,6 +43,6 @@ export declare class NewsRequest extends SpeakeasyBase {
 export declare class NewsResponse extends SpeakeasyBase {
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
-    news200ApplicationJsonObject?: News200ApplicationJson;
+    news200ApplicationJSONObject?: News200ApplicationJson;
     statusCode: number;
 }

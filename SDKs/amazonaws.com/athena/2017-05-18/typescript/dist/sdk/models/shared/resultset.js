@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResultSetMetadata } from "./resultsetmetadata";
-import { Row } from "./row";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResultSet = void 0;
+var utils_1 = require("../../../internal/utils");
+var resultsetmetadata_1 = require("./resultsetmetadata");
+var row_1 = require("./row");
 // ResultSet
 /**
  * The metadata and rows that comprise a query result set. The metadata describes the column structure and data types. To return a <code>ResultSet</code> object, use <a>GetQueryResults</a>.
@@ -35,13 +38,13 @@ var ResultSet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResultSetMetadata" }),
-        __metadata("design:type", ResultSetMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResultSetMetadata" }),
+        __metadata("design:type", resultsetmetadata_1.ResultSetMetadata)
     ], ResultSet.prototype, "resultSetMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Rows", elemType: Row }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Rows", elemType: row_1.Row }),
         __metadata("design:type", Array)
     ], ResultSet.prototype, "rows", void 0);
     return ResultSet;
-}(SpeakeasyBase));
-export { ResultSet };
+}(utils_1.SpeakeasyBase));
+exports.ResultSet = ResultSet;

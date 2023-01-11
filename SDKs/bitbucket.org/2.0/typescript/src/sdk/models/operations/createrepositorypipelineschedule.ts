@@ -16,7 +16,7 @@ export class CreateRepositoryPipelineScheduleRequest extends SpeakeasyBase {
   pathParams: CreateRepositoryPipelineSchedulePathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -28,8 +28,8 @@ export class CreateRepositoryPipelineScheduleResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  pipelineSchedule?: Map<string, any>;
+  pipelineSchedule?: Record<string, any>;
 }

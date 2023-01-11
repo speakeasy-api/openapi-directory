@@ -46,7 +46,7 @@ export class BaseConfigurationItem extends SpeakeasyBase {
   resourceType?: ResourceTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=supplementaryConfiguration" })
-  supplementaryConfiguration?: Map<string, string>;
+  supplementaryConfiguration?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=version" })
   version?: string;

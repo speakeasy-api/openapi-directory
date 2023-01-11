@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Preview = void 0;
+var utils_1 = require("../../../internal/utils");
 // Preview
 /**
  * A collection of rich text that will be displayed as a preview to another app.
@@ -35,37 +38,37 @@ var Preview = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fallback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fallback" }),
         __metadata("design:type", String)
     ], Preview.prototype, "fallback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=footer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=footer" }),
         __metadata("design:type", String)
     ], Preview.prototype, "footer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=header" }),
         __metadata("design:type", String)
     ], Preview.prototype, "header", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=header_link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=header_link" }),
         __metadata("design:type", String)
     ], Preview.prototype, "headerLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_text" }),
         __metadata("design:type", String)
     ], Preview.prototype, "htmlText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], Preview.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Preview.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title_link" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title_link" }),
         __metadata("design:type", String)
     ], Preview.prototype, "titleLink", void 0);
     return Preview;
-}(SpeakeasyBase));
-export { Preview };
+}(utils_1.SpeakeasyBase));
+exports.Preview = Preview;

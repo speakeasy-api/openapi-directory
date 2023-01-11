@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SasPortalNrqzValidation } from "./sasportalnrqzvalidation";
-// SasPortalDeviceMetadata
-/**
- * Device data overridable by both SAS Portal and registration requests.
-**/
-var SasPortalDeviceMetadata = /** @class */ (function (_super) {
-    __extends(SasPortalDeviceMetadata, _super);
-    function SasPortalDeviceMetadata() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=antennaModel" }),
-        __metadata("design:type", String)
-    ], SasPortalDeviceMetadata.prototype, "antennaModel", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=commonChannelGroup" }),
-        __metadata("design:type", String)
-    ], SasPortalDeviceMetadata.prototype, "commonChannelGroup", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=interferenceCoordinationGroup" }),
-        __metadata("design:type", String)
-    ], SasPortalDeviceMetadata.prototype, "interferenceCoordinationGroup", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=nrqzValidated" }),
-        __metadata("design:type", Boolean)
-    ], SasPortalDeviceMetadata.prototype, "nrqzValidated", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=nrqzValidation" }),
-        __metadata("design:type", SasPortalNrqzValidation)
-    ], SasPortalDeviceMetadata.prototype, "nrqzValidation", void 0);
-    return SasPortalDeviceMetadata;
-}(SpeakeasyBase));
-export { SasPortalDeviceMetadata };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SasPortalDeviceMetadata = exports.SasPortalDeviceMetadataInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var sasportalnrqzvalidation_1 = require("./sasportalnrqzvalidation");
 // SasPortalDeviceMetadataInput
 /**
  * Device data overridable by both SAS Portal and registration requests.
@@ -66,21 +37,53 @@ var SasPortalDeviceMetadataInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=antennaModel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=antennaModel" }),
         __metadata("design:type", String)
     ], SasPortalDeviceMetadataInput.prototype, "antennaModel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commonChannelGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commonChannelGroup" }),
         __metadata("design:type", String)
     ], SasPortalDeviceMetadataInput.prototype, "commonChannelGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interferenceCoordinationGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interferenceCoordinationGroup" }),
         __metadata("design:type", String)
     ], SasPortalDeviceMetadataInput.prototype, "interferenceCoordinationGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nrqzValidation" }),
-        __metadata("design:type", SasPortalNrqzValidation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nrqzValidation" }),
+        __metadata("design:type", sasportalnrqzvalidation_1.SasPortalNrqzValidation)
     ], SasPortalDeviceMetadataInput.prototype, "nrqzValidation", void 0);
     return SasPortalDeviceMetadataInput;
-}(SpeakeasyBase));
-export { SasPortalDeviceMetadataInput };
+}(utils_1.SpeakeasyBase));
+exports.SasPortalDeviceMetadataInput = SasPortalDeviceMetadataInput;
+// SasPortalDeviceMetadata
+/**
+ * Device data overridable by both SAS Portal and registration requests.
+**/
+var SasPortalDeviceMetadata = /** @class */ (function (_super) {
+    __extends(SasPortalDeviceMetadata, _super);
+    function SasPortalDeviceMetadata() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=antennaModel" }),
+        __metadata("design:type", String)
+    ], SasPortalDeviceMetadata.prototype, "antennaModel", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commonChannelGroup" }),
+        __metadata("design:type", String)
+    ], SasPortalDeviceMetadata.prototype, "commonChannelGroup", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interferenceCoordinationGroup" }),
+        __metadata("design:type", String)
+    ], SasPortalDeviceMetadata.prototype, "interferenceCoordinationGroup", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nrqzValidated" }),
+        __metadata("design:type", Boolean)
+    ], SasPortalDeviceMetadata.prototype, "nrqzValidated", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nrqzValidation" }),
+        __metadata("design:type", sasportalnrqzvalidation_1.SasPortalNrqzValidation)
+    ], SasPortalDeviceMetadata.prototype, "nrqzValidation", void 0);
+    return SasPortalDeviceMetadata;
+}(utils_1.SpeakeasyBase));
+exports.SasPortalDeviceMetadata = SasPortalDeviceMetadata;

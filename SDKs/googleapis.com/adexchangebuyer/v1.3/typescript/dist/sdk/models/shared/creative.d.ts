@@ -89,6 +89,6 @@ export declare class Creative extends SpeakeasyBase {
     status?: string;
     vendorType?: number[];
     version?: number;
-    videoUrl?: string;
+    videoURL?: string;
     width?: number;
 }

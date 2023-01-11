@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,110 +23,112 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSource } from "./rulesource";
-export var AmqpRuleResponseRequestModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AmqpRuleResponse = exports.AmqpRuleResponseTarget = exports.AmqpRuleResponseTargetHeaders = exports.AmqpRuleResponseStatusEnum = exports.AmqpRuleResponseRuleTypeEnum = exports.AmqpRuleResponseRequestModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulesource_1 = require("./rulesource");
+var AmqpRuleResponseRequestModeEnum;
 (function (AmqpRuleResponseRequestModeEnum) {
     AmqpRuleResponseRequestModeEnum["Single"] = "single";
-})(AmqpRuleResponseRequestModeEnum || (AmqpRuleResponseRequestModeEnum = {}));
-export var AmqpRuleResponseRuleTypeEnum;
+})(AmqpRuleResponseRequestModeEnum = exports.AmqpRuleResponseRequestModeEnum || (exports.AmqpRuleResponseRequestModeEnum = {}));
+var AmqpRuleResponseRuleTypeEnum;
 (function (AmqpRuleResponseRuleTypeEnum) {
     AmqpRuleResponseRuleTypeEnum["Amqp"] = "amqp";
-})(AmqpRuleResponseRuleTypeEnum || (AmqpRuleResponseRuleTypeEnum = {}));
-export var AmqpRuleResponseStatusEnum;
+})(AmqpRuleResponseRuleTypeEnum = exports.AmqpRuleResponseRuleTypeEnum || (exports.AmqpRuleResponseRuleTypeEnum = {}));
+var AmqpRuleResponseStatusEnum;
 (function (AmqpRuleResponseStatusEnum) {
     AmqpRuleResponseStatusEnum["Enabled"] = "enabled";
     AmqpRuleResponseStatusEnum["Disabled"] = "disabled";
-})(AmqpRuleResponseStatusEnum || (AmqpRuleResponseStatusEnum = {}));
+})(AmqpRuleResponseStatusEnum = exports.AmqpRuleResponseStatusEnum || (exports.AmqpRuleResponseStatusEnum = {}));
 var AmqpRuleResponseTargetHeaders = /** @class */ (function (_super) {
     __extends(AmqpRuleResponseTargetHeaders, _super);
     function AmqpRuleResponseTargetHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AmqpRuleResponseTargetHeaders.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], AmqpRuleResponseTargetHeaders.prototype, "value", void 0);
     return AmqpRuleResponseTargetHeaders;
-}(SpeakeasyBase));
-export { AmqpRuleResponseTargetHeaders };
+}(utils_1.SpeakeasyBase));
+exports.AmqpRuleResponseTargetHeaders = AmqpRuleResponseTargetHeaders;
 var AmqpRuleResponseTarget = /** @class */ (function (_super) {
     __extends(AmqpRuleResponseTarget, _super);
     function AmqpRuleResponseTarget() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enveloped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enveloped" }),
         __metadata("design:type", Boolean)
     ], AmqpRuleResponseTarget.prototype, "enveloped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], AmqpRuleResponseTarget.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers", elemType: AmqpRuleResponseTargetHeaders }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers", elemType: AmqpRuleResponseTargetHeaders }),
         __metadata("design:type", Array)
     ], AmqpRuleResponseTarget.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queueId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queueId" }),
         __metadata("design:type", String)
     ], AmqpRuleResponseTarget.prototype, "queueId", void 0);
     return AmqpRuleResponseTarget;
-}(SpeakeasyBase));
-export { AmqpRuleResponseTarget };
+}(utils_1.SpeakeasyBase));
+exports.AmqpRuleResponseTarget = AmqpRuleResponseTarget;
 var AmqpRuleResponse = /** @class */ (function (_super) {
     __extends(AmqpRuleResponse, _super);
     function AmqpRuleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
+        __metadata("design:type", Object)
     ], AmqpRuleResponse.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appId" }),
         __metadata("design:type", String)
     ], AmqpRuleResponse.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Number)
     ], AmqpRuleResponse.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AmqpRuleResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modified" }),
         __metadata("design:type", Number)
     ], AmqpRuleResponse.prototype, "modified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMode" }),
         __metadata("design:type", String)
     ], AmqpRuleResponse.prototype, "requestMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleType" }),
         __metadata("design:type", String)
     ], AmqpRuleResponse.prototype, "ruleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", RuleSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", rulesource_1.RuleSource)
     ], AmqpRuleResponse.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AmqpRuleResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", AmqpRuleResponseTarget)
     ], AmqpRuleResponse.prototype, "target", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], AmqpRuleResponse.prototype, "version", void 0);
     return AmqpRuleResponse;
-}(SpeakeasyBase));
-export { AmqpRuleResponse };
+}(utils_1.SpeakeasyBase));
+exports.AmqpRuleResponse = AmqpRuleResponse;

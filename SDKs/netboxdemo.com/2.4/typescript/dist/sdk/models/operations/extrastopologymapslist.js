@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,102 +14,127 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExtrasTopologyMapsListResponse = exports.ExtrasTopologyMapsListRequest = exports.ExtrasTopologyMapsList200ApplicationJson = exports.ExtrasTopologyMapsListQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ExtrasTopologyMapsListQueryParams = /** @class */ (function (_super) {
     __extends(ExtrasTopologyMapsListQueryParams, _super);
     function ExtrasTopologyMapsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], ExtrasTopologyMapsListQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], ExtrasTopologyMapsListQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], ExtrasTopologyMapsListQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], ExtrasTopologyMapsListQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site_id" }),
         __metadata("design:type", String)
     ], ExtrasTopologyMapsListQueryParams.prototype, "siteId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=slug" }),
         __metadata("design:type", String)
     ], ExtrasTopologyMapsListQueryParams.prototype, "slug", void 0);
     return ExtrasTopologyMapsListQueryParams;
-}(SpeakeasyBase));
-export { ExtrasTopologyMapsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ExtrasTopologyMapsListQueryParams = ExtrasTopologyMapsListQueryParams;
 var ExtrasTopologyMapsList200ApplicationJson = /** @class */ (function (_super) {
     __extends(ExtrasTopologyMapsList200ApplicationJson, _super);
     function ExtrasTopologyMapsList200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], ExtrasTopologyMapsList200ApplicationJson.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], ExtrasTopologyMapsList200ApplicationJson.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], ExtrasTopologyMapsList200ApplicationJson.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: shared.TopologyMap }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: shared.TopologyMap }),
         __metadata("design:type", Array)
     ], ExtrasTopologyMapsList200ApplicationJson.prototype, "results", void 0);
     return ExtrasTopologyMapsList200ApplicationJson;
-}(SpeakeasyBase));
-export { ExtrasTopologyMapsList200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ExtrasTopologyMapsList200ApplicationJson = ExtrasTopologyMapsList200ApplicationJson;
 var ExtrasTopologyMapsListRequest = /** @class */ (function (_super) {
     __extends(ExtrasTopologyMapsListRequest, _super);
     function ExtrasTopologyMapsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ExtrasTopologyMapsListQueryParams)
     ], ExtrasTopologyMapsListRequest.prototype, "queryParams", void 0);
     return ExtrasTopologyMapsListRequest;
-}(SpeakeasyBase));
-export { ExtrasTopologyMapsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.ExtrasTopologyMapsListRequest = ExtrasTopologyMapsListRequest;
 var ExtrasTopologyMapsListResponse = /** @class */ (function (_super) {
     __extends(ExtrasTopologyMapsListResponse, _super);
     function ExtrasTopologyMapsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ExtrasTopologyMapsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ExtrasTopologyMapsListResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ExtrasTopologyMapsList200ApplicationJson)
-    ], ExtrasTopologyMapsListResponse.prototype, "extrasTopologyMapsList200ApplicationJsonObject", void 0);
+    ], ExtrasTopologyMapsListResponse.prototype, "extrasTopologyMapsList200ApplicationJSONObject", void 0);
     return ExtrasTopologyMapsListResponse;
-}(SpeakeasyBase));
-export { ExtrasTopologyMapsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.ExtrasTopologyMapsListResponse = ExtrasTopologyMapsListResponse;

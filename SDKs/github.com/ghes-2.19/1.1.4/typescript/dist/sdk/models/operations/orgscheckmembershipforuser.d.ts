@@ -8,6 +8,6 @@ export declare class OrgsCheckMembershipForUserRequest extends SpeakeasyBase {
 }
 export declare class OrgsCheckMembershipForUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateRequest, RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,116 +30,105 @@ const req: RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateReques
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "aut",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "nobis",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "est",
-    fields: "magnam",
-    key: "consequuntur",
-    oauthToken: "ut",
-    prettyPrint: false,
-    quotaUser: "earum",
-    uploadType: "porro",
-    uploadProtocol: "dolorem",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     categoryHierarchies: [
       {
         categories: [
-          "aut",
+          "voluptatum",
         ],
       },
       {
         categories: [
-          "odit",
-          "quis",
+          "ut",
+        ],
+      },
+      {
+        categories: [
+          "et",
+          "voluptate",
+          "iste",
         ],
       },
     ],
-    description: "maiores",
-    id: "cumque",
+    description: "vitae",
+    id: "totam",
     itemAttributes: {
       categoricalFeatures: {
-        "labore": {
+        "illum": {
           value: [
-            "sint",
-          ],
-        },
-        "nihil": {
-          value: [
-            "sint",
-            "est",
+            "vel",
           ],
         },
       },
       numericalFeatures: {
-        "officiis": {
+        "dolore": {
           value: [
-            11.100000,
-            8.200000,
-            97.099998,
-          ],
-        },
-        "voluptatem": {
-          value: [
-            8.200000,
+            57.099998,
+            45.099998,
           ],
         },
       },
     },
-    itemGroupId: "dolorum",
-    languageCode: "harum",
+    itemGroupId: "quis",
+    languageCode: "est",
     productMetadata: {
-      availableQuantity: "officiis",
-      canonicalProductUri: "corrupti",
+      availableQuantity: "aut",
+      canonicalProductUri: "odit",
       costs: {
-        "sunt": 90.199997,
-        "voluptate": 37.200001,
-        "ea": 90.199997,
+        "voluptas": 87.099998,
+        "illo": 78.199997,
+        "autem": 68.099998,
       },
-      currencyCode: "explicabo",
+      currencyCode: "odio",
       exactPrice: {
-        displayPrice: 25.200001,
-        originalPrice: 99.199997,
+        displayPrice: 77.099998,
+        originalPrice: 88.099998,
       },
       images: [
         {
-          height: 7746893585940478322,
-          uri: "atque",
-          width: 5348356178737988486,
+          height: 303089054982227392,
+          uri: "sint",
+          width: 5392504858645185670,
         },
         {
-          height: 401863722195270076,
-          uri: "et",
-          width: 6249467380623826659,
-        },
-        {
-          height: 5112485330184857086,
-          uri: "ipsum",
-          width: 4962516065621625535,
+          height: 7847956203786849690,
+          uri: "exercitationem",
+          width: 4756106358532488297,
         },
       ],
       priceRange: {
-        max: 57.099998,
-        min: 16.200001,
+        max: 30.200001,
+        min: 97.099998,
       },
-      stockState: "PREORDER",
+      stockState: "BACKORDER",
     },
     tags: [
-      "deserunt",
-      "expedita",
-      "illum",
+      "veritatis",
+      "in",
+      "et",
     ],
-    title: "vitae",
+    title: "omnis",
   },
 };
 

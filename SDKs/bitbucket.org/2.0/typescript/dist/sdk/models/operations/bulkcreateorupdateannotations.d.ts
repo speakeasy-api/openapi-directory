@@ -7,10 +7,10 @@ export declare class BulkCreateOrUpdateAnnotationsPathParams extends SpeakeasyBa
 }
 export declare class BulkCreateOrUpdateAnnotationsRequest extends SpeakeasyBase {
     pathParams: BulkCreateOrUpdateAnnotationsPathParams;
-    request: Map<string, any>[];
+    request: Record<string, any>[];
 }
 export declare class BulkCreateOrUpdateAnnotationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    reportAnnotations?: Map<string, any>[];
+    reportAnnotations?: Record<string, any>[];
 }

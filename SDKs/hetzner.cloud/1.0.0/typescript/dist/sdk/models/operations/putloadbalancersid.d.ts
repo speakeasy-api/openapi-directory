@@ -3,7 +3,7 @@ export declare class PutLoadBalancersIdPathParams extends SpeakeasyBase {
     id: number;
 }
 export declare class PutLoadBalancersIdRequestBody extends SpeakeasyBase {
-    labels?: Map<string, any>;
+    labels?: Record<string, any>;
     name?: string;
 }
 export declare enum PutLoadBalancersId200ApplicationJsonLoadBalancerAlgorithmTypeEnum {
@@ -191,7 +191,7 @@ export declare class PutLoadBalancersId200ApplicationJsonLoadBalancer extends Sp
     id: number;
     includedTraffic: number;
     ingoingTraffic: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     loadBalancerType: PutLoadBalancersId200ApplicationJsonLoadBalancerLoadBalancerType;
     location: PutLoadBalancersId200ApplicationJsonLoadBalancerLocation;
     name: string;
@@ -211,6 +211,6 @@ export declare class PutLoadBalancersIdRequest extends SpeakeasyBase {
 }
 export declare class PutLoadBalancersIdResponse extends SpeakeasyBase {
     contentType: string;
-    putLoadBalancersId200ApplicationJsonObject?: PutLoadBalancersId200ApplicationJson;
     statusCode: number;
+    putLoadBalancersId200ApplicationJSONObject?: PutLoadBalancersId200ApplicationJson;
 }

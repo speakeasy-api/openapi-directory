@@ -23,7 +23,7 @@ export declare class GetOccupantsNearestOutputFormatQueryParams extends Speakeas
     brief?: boolean;
     locationDescriptor?: GetOccupantsNearestOutputFormatLocationDescriptorEnum;
     maxDistance?: number;
-    outputSrs?: number;
+    outputSRS?: number;
     point: string;
     setBack?: number;
     tags?: string;

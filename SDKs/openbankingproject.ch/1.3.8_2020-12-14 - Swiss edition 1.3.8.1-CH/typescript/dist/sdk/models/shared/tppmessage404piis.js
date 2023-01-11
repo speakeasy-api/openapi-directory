@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TppMessageCategoryEnum } from "./tppmessagecategoryenum";
-import { MessageCode404PiisEnum } from "./messagecode404piisenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TppMessage404Piis = void 0;
+var utils_1 = require("../../../internal/utils");
+var tppmessagecategoryenum_1 = require("./tppmessagecategoryenum");
+var messagecode404piisenum_1 = require("./messagecode404piisenum");
 var TppMessage404Piis = /** @class */ (function (_super) {
     __extends(TppMessage404Piis, _super);
     function TppMessage404Piis() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category" }),
         __metadata("design:type", String)
     ], TppMessage404Piis.prototype, "category", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], TppMessage404Piis.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], TppMessage404Piis.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], TppMessage404Piis.prototype, "text", void 0);
     return TppMessage404Piis;
-}(SpeakeasyBase));
-export { TppMessage404Piis };
+}(utils_1.SpeakeasyBase));
+exports.TppMessage404Piis = TppMessage404Piis;

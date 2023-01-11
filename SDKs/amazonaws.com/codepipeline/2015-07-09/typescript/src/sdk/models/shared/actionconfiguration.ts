@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class ActionConfiguration extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=configuration" })
-  configuration?: Map<string, string>;
+  configuration?: Record<string, string>;
 }

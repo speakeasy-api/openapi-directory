@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RelationshipStatusEnum } from "./relationshipstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Member = void 0;
+var utils_1 = require("../../../internal/utils");
+var relationshipstatusenum_1 = require("./relationshipstatusenum");
 // Member
 /**
  * Provides information about an account that's associated with an Amazon Macie administrator account.
@@ -34,41 +37,41 @@ var Member = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], Member.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=administratorAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=administratorAccountId" }),
         __metadata("design:type", String)
     ], Member.prototype, "administratorAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], Member.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], Member.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invitedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invitedAt" }),
         __metadata("design:type", Date)
     ], Member.prototype, "invitedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=masterAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=masterAccountId" }),
         __metadata("design:type", String)
     ], Member.prototype, "masterAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationshipStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationshipStatus" }),
         __metadata("design:type", String)
     ], Member.prototype, "relationshipStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], Member.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], Member.prototype, "updatedAt", void 0);
     return Member;
-}(SpeakeasyBase));
-export { Member };
+}(utils_1.SpeakeasyBase));
+exports.Member = Member;

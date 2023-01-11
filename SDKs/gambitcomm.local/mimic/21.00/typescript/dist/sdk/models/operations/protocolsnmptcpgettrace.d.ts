@@ -7,7 +7,7 @@ export declare class ProtocolSnmptcpGetTraceRequest extends SpeakeasyBase {
     pathParams: ProtocolSnmptcpGetTracePathParams;
 }
 export declare class ProtocolSnmptcpGetTraceResponse extends SpeakeasyBase {
-    configSnmptcp?: shared.ConfigSnmptcp;
+    configSNMPTCP?: shared.ConfigSnmptcp;
     contentType: string;
     statusCode: number;
 }

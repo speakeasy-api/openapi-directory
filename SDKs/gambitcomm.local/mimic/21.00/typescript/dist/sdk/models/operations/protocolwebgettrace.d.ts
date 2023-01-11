@@ -7,7 +7,7 @@ export declare class ProtocolWebGetTraceRequest extends SpeakeasyBase {
     pathParams: ProtocolWebGetTracePathParams;
 }
 export declare class ProtocolWebGetTraceResponse extends SpeakeasyBase {
-    configWeb?: shared.ConfigWeb;
+    configWEB?: shared.ConfigWeb;
     contentType: string;
     statusCode: number;
 }

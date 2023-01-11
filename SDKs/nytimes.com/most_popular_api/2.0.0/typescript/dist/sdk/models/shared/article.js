@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Article = void 0;
+var utils_1 = require("../../../internal/utils");
 var Article = /** @class */ (function (_super) {
     __extends(Article, _super);
     function Article() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=abstract" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=abstract" }),
         __metadata("design:type", String)
     ], Article.prototype, "abstract", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=byline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=byline" }),
         __metadata("design:type", String)
     ], Article.prototype, "byline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=column" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=column" }),
         __metadata("design:type", String)
     ], Article.prototype, "column", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=des_facet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=des_facet" }),
         __metadata("design:type", Object)
     ], Article.prototype, "desFacet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=geo_facet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=geo_facet" }),
         __metadata("design:type", Object)
     ], Article.prototype, "geoFacet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=media" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=media" }),
         __metadata("design:type", Object)
     ], Article.prototype, "media", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=org_facet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=org_facet" }),
         __metadata("design:type", Array)
     ], Article.prototype, "orgFacet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=per_facet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=per_facet" }),
         __metadata("design:type", Array)
     ], Article.prototype, "perFacet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=published_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=published_date" }),
         __metadata("design:type", String)
     ], Article.prototype, "publishedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=section" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=section" }),
         __metadata("design:type", String)
     ], Article.prototype, "section", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], Article.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Article.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Article.prototype, "url", void 0);
     return Article;
-}(SpeakeasyBase));
-export { Article };
+}(utils_1.SpeakeasyBase));
+exports.Article = Article;

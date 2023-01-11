@@ -188,23 +188,23 @@ export class DelcsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  delcs400ApplicationJsonObject?: Delcs400ApplicationJson;
+  delcs400ApplicationJSONObject?: Delcs400ApplicationJson;
 
   @SpeakeasyMetadata()
-  delcs401ApplicationJsonObject?: Delcs401ApplicationJson;
+  delcs401ApplicationJSONObject?: Delcs401ApplicationJson;
 
   @SpeakeasyMetadata()
-  delcs404ApplicationJsonObject?: Delcs404ApplicationJson;
+  delcs404ApplicationJSONObject?: Delcs404ApplicationJson;
 
   @SpeakeasyMetadata()
-  delcs500ApplicationJsonObject?: Delcs500ApplicationJson;
+  delcs500ApplicationJSONObject?: Delcs500ApplicationJson;
 
   @SpeakeasyMetadata()
-  delcs502ApplicationJsonObject?: Delcs502ApplicationJson;
+  delcs502ApplicationJSONObject?: Delcs502ApplicationJson;
 
   @SpeakeasyMetadata()
-  delcs503ApplicationJsonObject?: Delcs503ApplicationJson;
+  delcs503ApplicationJSONObject?: Delcs503ApplicationJson;
 
   @SpeakeasyMetadata()
-  delcs504ApplicationJsonObject?: Delcs504ApplicationJson;
+  delcs504ApplicationJSONObject?: Delcs504ApplicationJson;
 }

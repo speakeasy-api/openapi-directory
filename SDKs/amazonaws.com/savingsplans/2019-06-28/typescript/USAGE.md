@@ -1,0 +1,43 @@
+<!-- Start SDK Example Usage -->
+```typescript
+import { SDK, withSecurity} from "openapi";
+import { CreateSavingsPlanRequest, CreateSavingsPlanResponse } from "openapi/src/sdk/models/operations";
+import { AxiosError } from "axios";
+
+const sdk = new SDK(withSecurity(
+  security: {
+    hmac: {
+      apiKey: "YOUR_API_KEY_HERE",
+    },
+  }
+));
+    
+const req: CreateSavingsPlanRequest = {
+  headers: {
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
+  },
+  request: {
+    clientToken: "voluptas",
+    commitment: "fugit",
+    purchaseTime: "2011-08-12T10:11:12Z",
+    savingsPlanOfferingId: "nihil",
+    tags: {
+      "dicta": "debitis",
+      "voluptatum": "et",
+      "ut": "dolorem",
+    },
+    upfrontPaymentAmount: "et",
+  },
+};
+
+sdk.createSavingsPlan(req).then((res: CreateSavingsPlanResponse | AxiosError) => {
+   // handle response
+});
+```
+<!-- End SDK Example Usage -->

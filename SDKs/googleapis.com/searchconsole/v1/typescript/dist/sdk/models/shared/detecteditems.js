@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Item } from "./item";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DetectedItems = void 0;
+var utils_1 = require("../../../internal/utils");
+var item_1 = require("./item");
 // DetectedItems
 /**
  * Rich Results items grouped by type.
@@ -34,13 +37,13 @@ var DetectedItems = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: Item }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: item_1.Item }),
         __metadata("design:type", Array)
     ], DetectedItems.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=richResultType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=richResultType" }),
         __metadata("design:type", String)
     ], DetectedItems.prototype, "richResultType", void 0);
     return DetectedItems;
-}(SpeakeasyBase));
-export { DetectedItems };
+}(utils_1.SpeakeasyBase));
+exports.DetectedItems = DetectedItems;

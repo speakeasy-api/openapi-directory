@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExecutionTimeFilter = void 0;
+var utils_1 = require("../../../internal/utils");
 // ExecutionTimeFilter
 /**
  * Used to filter the workflow executions in visibility APIs by various time-based rules. Each parameter, if specified, defines a rule that must be satisfied by each returned query result. The parameter values are in the <a href="https://en.wikipedia.org/wiki/Unix_time">Unix Time format</a>. For example: <code>"oldestDate": 1325376070.</code>
@@ -33,13 +36,13 @@ var ExecutionTimeFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestDate" }),
         __metadata("design:type", Date)
     ], ExecutionTimeFilter.prototype, "latestDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oldestDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oldestDate" }),
         __metadata("design:type", Date)
     ], ExecutionTimeFilter.prototype, "oldestDate", void 0);
     return ExecutionTimeFilter;
-}(SpeakeasyBase));
-export { ExecutionTimeFilter };
+}(utils_1.SpeakeasyBase));
+exports.ExecutionTimeFilter = ExecutionTimeFilter;

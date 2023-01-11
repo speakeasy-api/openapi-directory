@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var OperationalDisconnectProblemDisconnectTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OperationalDisconnectProblem = exports.OperationalDisconnectProblemDisconnectTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var OperationalDisconnectProblemDisconnectTypeEnum;
 (function (OperationalDisconnectProblemDisconnectTypeEnum) {
     OperationalDisconnectProblemDisconnectTypeEnum["OperationalDisconnect"] = "OperationalDisconnect";
     OperationalDisconnectProblemDisconnectTypeEnum["UpstreamOperationalDisconnect"] = "UpstreamOperationalDisconnect";
@@ -34,7 +37,7 @@ export var OperationalDisconnectProblemDisconnectTypeEnum;
     OperationalDisconnectProblemDisconnectTypeEnum["PackageUpgraded"] = "PackageUpgraded";
     OperationalDisconnectProblemDisconnectTypeEnum["PackageDowngraded"] = "PackageDowngraded";
     OperationalDisconnectProblemDisconnectTypeEnum["ClientApplicationStateDegraded"] = "ClientApplicationStateDegraded";
-})(OperationalDisconnectProblemDisconnectTypeEnum || (OperationalDisconnectProblemDisconnectTypeEnum = {}));
+})(OperationalDisconnectProblemDisconnectTypeEnum = exports.OperationalDisconnectProblemDisconnectTypeEnum || (exports.OperationalDisconnectProblemDisconnectTypeEnum = {}));
 // OperationalDisconnectProblem
 /**
  * You have been disconnected for operational reasons.
@@ -45,21 +48,21 @@ var OperationalDisconnectProblem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
         __metadata("design:type", String)
     ], OperationalDisconnectProblem.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disconnect_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disconnect_type" }),
         __metadata("design:type", String)
     ], OperationalDisconnectProblem.prototype, "disconnectType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], OperationalDisconnectProblem.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], OperationalDisconnectProblem.prototype, "type", void 0);
     return OperationalDisconnectProblem;
-}(SpeakeasyBase));
-export { OperationalDisconnectProblem };
+}(utils_1.SpeakeasyBase));
+exports.OperationalDisconnectProblem = OperationalDisconnectProblem;

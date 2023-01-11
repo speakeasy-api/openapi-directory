@@ -25,7 +25,7 @@ export class CalendarEventsWatchQueryParams extends SpeakeasyBase {
   fields?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=iCalUID" })
-  iCalUid?: string;
+  iCalUID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" })
   key?: string;

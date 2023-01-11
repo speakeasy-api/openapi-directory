@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IntentSummary } from "./intentsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListIntentsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var intentsummary_1 = require("./intentsummary");
 var ListIntentsResponse = /** @class */ (function (_super) {
     __extends(ListIntentsResponse, _super);
     function ListIntentsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botId" }),
         __metadata("design:type", String)
     ], ListIntentsResponse.prototype, "botId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botVersion" }),
         __metadata("design:type", String)
     ], ListIntentsResponse.prototype, "botVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intentSummaries", elemType: IntentSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intentSummaries", elemType: intentsummary_1.IntentSummary }),
         __metadata("design:type", Array)
     ], ListIntentsResponse.prototype, "intentSummaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localeId" }),
         __metadata("design:type", String)
     ], ListIntentsResponse.prototype, "localeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListIntentsResponse.prototype, "nextToken", void 0);
     return ListIntentsResponse;
-}(SpeakeasyBase));
-export { ListIntentsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListIntentsResponse = ListIntentsResponse;

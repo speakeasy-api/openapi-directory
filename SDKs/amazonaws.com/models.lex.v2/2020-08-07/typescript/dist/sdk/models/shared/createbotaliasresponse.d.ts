@@ -5,7 +5,7 @@ import { ConversationLogSettings } from "./conversationlogsettings";
 import { SentimentAnalysisSettings } from "./sentimentanalysissettings";
 export declare class CreateBotAliasResponse extends SpeakeasyBase {
     botAliasId?: string;
-    botAliasLocaleSettings?: Map<string, BotAliasLocaleSettings>;
+    botAliasLocaleSettings?: Record<string, BotAliasLocaleSettings>;
     botAliasName?: string;
     botAliasStatus?: BotAliasStatusEnum;
     botId?: string;
@@ -14,5 +14,5 @@ export declare class CreateBotAliasResponse extends SpeakeasyBase {
     creationDateTime?: Date;
     description?: string;
     sentimentAnalysisSettings?: SentimentAnalysisSettings;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

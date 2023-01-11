@@ -4,11 +4,11 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class AssignIpv6AddressesResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  assignedIpv6Addresses?: string[];
+  assignedIpv6Addresses?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  assignedIpv6Prefixes?: string[];
+  assignedIpv6Prefixes?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  networkInterfaceId?: string;
+  networkInterfaceId?: Record<string, any>;
 }

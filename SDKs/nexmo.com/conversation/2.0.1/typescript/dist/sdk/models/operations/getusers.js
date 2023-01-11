@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetUsersResponse = exports.GetUsers200ApplicationJson = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetUsers200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetUsers200ApplicationJson, _super);
     function GetUsers200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], GetUsers200ApplicationJson.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GetUsers200ApplicationJson.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetUsers200ApplicationJson.prototype, "name", void 0);
     return GetUsers200ApplicationJson;
-}(SpeakeasyBase));
-export { GetUsers200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetUsers200ApplicationJson = GetUsers200ApplicationJson;
 var GetUsersResponse = /** @class */ (function (_super) {
     __extends(GetUsersResponse, _super);
     function GetUsersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetUsersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetUsersResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: GetUsers200ApplicationJson }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: GetUsers200ApplicationJson }),
         __metadata("design:type", Array)
-    ], GetUsersResponse.prototype, "getUsers200ApplicationJsonObjects", void 0);
+    ], GetUsersResponse.prototype, "getUsers200ApplicationJSONObjects", void 0);
     return GetUsersResponse;
-}(SpeakeasyBase));
-export { GetUsersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetUsersResponse = GetUsersResponse;

@@ -9,6 +9,6 @@ export declare class GetConsumerV1CustomersSubscriptionsRequest extends Speakeas
 }
 export declare class GetConsumerV1CustomersSubscriptionsResponse extends SpeakeasyBase {
     contentType: string;
-    customerSubscriptionListViewModel?: Map<string, any>;
+    customerSubscriptionListViewModel?: Record<string, any>;
     statusCode: number;
 }

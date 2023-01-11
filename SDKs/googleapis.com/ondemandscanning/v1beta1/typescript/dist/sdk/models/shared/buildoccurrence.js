@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InTotoProvenance } from "./intotoprovenance";
-import { InTotoStatement } from "./intotostatement";
-import { BuildProvenance } from "./buildprovenance";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BuildOccurrence = void 0;
+var utils_1 = require("../../../internal/utils");
+var intotoprovenance_1 = require("./intotoprovenance");
+var intotostatement_1 = require("./intotostatement");
+var buildprovenance_1 = require("./buildprovenance");
 // BuildOccurrence
 /**
  * Details of a build occurrence.
@@ -36,21 +39,21 @@ var BuildOccurrence = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intotoProvenance" }),
-        __metadata("design:type", InTotoProvenance)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intotoProvenance" }),
+        __metadata("design:type", intotoprovenance_1.InTotoProvenance)
     ], BuildOccurrence.prototype, "intotoProvenance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intotoStatement" }),
-        __metadata("design:type", InTotoStatement)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intotoStatement" }),
+        __metadata("design:type", intotostatement_1.InTotoStatement)
     ], BuildOccurrence.prototype, "intotoStatement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provenance" }),
-        __metadata("design:type", BuildProvenance)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provenance" }),
+        __metadata("design:type", buildprovenance_1.BuildProvenance)
     ], BuildOccurrence.prototype, "provenance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=provenanceBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=provenanceBytes" }),
         __metadata("design:type", String)
     ], BuildOccurrence.prototype, "provenanceBytes", void 0);
     return BuildOccurrence;
-}(SpeakeasyBase));
-export { BuildOccurrence };
+}(utils_1.SpeakeasyBase));
+exports.BuildOccurrence = BuildOccurrence;

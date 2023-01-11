@@ -6,7 +6,7 @@ import { StageDeclaration } from "./stagedeclaration";
 **/
 export declare class PipelineDeclaration extends SpeakeasyBase {
     artifactStore?: ArtifactStore;
-    artifactStores?: Map<string, ArtifactStore>;
+    artifactStores?: Record<string, ArtifactStore>;
     name: string;
     roleArn: string;
     stages: StageDeclaration[];

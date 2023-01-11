@@ -6,6 +6,6 @@ import { GoogleHomeEnterpriseSdmV1ParentRelation } from "./googlehomeenterprises
 export declare class GoogleHomeEnterpriseSdmV1Device extends SpeakeasyBase {
     name?: string;
     parentRelations?: GoogleHomeEnterpriseSdmV1ParentRelation[];
-    traits?: Map<string, any>;
+    traits?: Record<string, any>;
     type?: string;
 }

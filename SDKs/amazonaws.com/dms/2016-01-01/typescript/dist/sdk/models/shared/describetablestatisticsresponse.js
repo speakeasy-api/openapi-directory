@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TableStatistics } from "./tablestatistics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeTableStatisticsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var tablestatistics_1 = require("./tablestatistics");
 // DescribeTableStatisticsResponse
 /**
  * <p/>
@@ -34,17 +37,17 @@ var DescribeTableStatisticsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Marker" }),
         __metadata("design:type", String)
     ], DescribeTableStatisticsResponse.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReplicationTaskArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReplicationTaskArn" }),
         __metadata("design:type", String)
     ], DescribeTableStatisticsResponse.prototype, "replicationTaskArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableStatistics", elemType: TableStatistics }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableStatistics", elemType: tablestatistics_1.TableStatistics }),
         __metadata("design:type", Array)
     ], DescribeTableStatisticsResponse.prototype, "tableStatistics", void 0);
     return DescribeTableStatisticsResponse;
-}(SpeakeasyBase));
-export { DescribeTableStatisticsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeTableStatisticsResponse = DescribeTableStatisticsResponse;

@@ -88,10 +88,10 @@ export class MerchantCancellation200ApplicationJson extends SpeakeasyBase {
   errorType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraInfo" })
-  extraInfo?: Map<string, any>;
+  extraInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=extraObject" })
-  extraObject?: Map<string, any>;
+  extraObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=success" })
   success?: boolean;
@@ -145,10 +145,10 @@ export class MerchantCancellation400ApplicationJson extends SpeakeasyBase {
   errorType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraInfo" })
-  extraInfo?: Map<string, any>;
+  extraInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=extraObject" })
-  extraObject?: Map<string, any>;
+  extraObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=success" })
   success?: boolean;
@@ -178,8 +178,8 @@ export class MerchantCancellationResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  merchantCancellation200ApplicationJsonObject?: MerchantCancellation200ApplicationJson;
+  merchantCancellation200ApplicationJSONObject?: MerchantCancellation200ApplicationJson;
 
   @SpeakeasyMetadata()
-  merchantCancellation400ApplicationJsonObject?: MerchantCancellation400ApplicationJson;
+  merchantCancellation400ApplicationJSONObject?: MerchantCancellation400ApplicationJson;
 }

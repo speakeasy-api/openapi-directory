@@ -2,25 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
-export enum GetSearchRvAutoCompleteFieldEnum {
-    Make = "make",
-    Model = "model",
-    Trim = "trim",
-    Class = "class",
-    Transmission = "transmission",
-    FuelType = "fuel_type",
-    ExteriorColor = "exterior_color",
-    InteriorColor = "interior_color",
-    Engine = "engine",
-    State = "state",
-    City = "city"
-}
-
-export enum GetSearchRvAutoCompleteSortByEnum {
-    Index = "index",
-    Count = "count"
-}
-
 
 export class GetSearchRvAutoCompleteQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api_key" })
@@ -42,7 +23,7 @@ export class GetSearchRvAutoCompleteQueryParams extends SpeakeasyBase {
   engine?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=field" })
-  field: GetSearchRvAutoCompleteFieldEnum;
+  field: shared.ApiKeyEnum6;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fuel_type" })
   fuelType?: string;
@@ -63,7 +44,7 @@ export class GetSearchRvAutoCompleteQueryParams extends SpeakeasyBase {
   model?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort_by" })
-  sortBy?: GetSearchRvAutoCompleteSortByEnum;
+  sortBy?: shared.InventoryTypeEnum1;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" })
   state?: string;
@@ -96,7 +77,7 @@ export class GetSearchRvAutoCompleteResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   searchAutoCompleteResponse?: shared.SearchAutoCompleteResponse;

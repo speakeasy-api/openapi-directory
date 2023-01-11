@@ -8,7 +8,7 @@ export class PostV05ConsentsHiuOnNotifyHeaders extends SpeakeasyBase {
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-CM-ID" })
-  xCmId: string;
+  xCMID: string;
 }
 
 

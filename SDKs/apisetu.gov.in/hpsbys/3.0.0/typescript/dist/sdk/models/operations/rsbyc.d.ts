@@ -105,11 +105,11 @@ export declare class RsbycRequest extends SpeakeasyBase {
 export declare class RsbycResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    rsbyc400ApplicationJsonObject?: Rsbyc400ApplicationJson;
-    rsbyc401ApplicationJsonObject?: Rsbyc401ApplicationJson;
-    rsbyc404ApplicationJsonObject?: Rsbyc404ApplicationJson;
-    rsbyc500ApplicationJsonObject?: Rsbyc500ApplicationJson;
-    rsbyc502ApplicationJsonObject?: Rsbyc502ApplicationJson;
-    rsbyc503ApplicationJsonObject?: Rsbyc503ApplicationJson;
-    rsbyc504ApplicationJsonObject?: Rsbyc504ApplicationJson;
+    rsbyc400ApplicationJSONObject?: Rsbyc400ApplicationJson;
+    rsbyc401ApplicationJSONObject?: Rsbyc401ApplicationJson;
+    rsbyc404ApplicationJSONObject?: Rsbyc404ApplicationJson;
+    rsbyc500ApplicationJSONObject?: Rsbyc500ApplicationJson;
+    rsbyc502ApplicationJSONObject?: Rsbyc502ApplicationJson;
+    rsbyc503ApplicationJSONObject?: Rsbyc503ApplicationJson;
+    rsbyc504ApplicationJSONObject?: Rsbyc504ApplicationJson;
 }

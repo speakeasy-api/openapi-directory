@@ -24,5 +24,5 @@ export declare class IpamVrfsListRequest extends SpeakeasyBase {
 export declare class IpamVrfsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ipamVrfsList200ApplicationJsonObject?: IpamVrfsList200ApplicationJson;
+    ipamVrfsList200ApplicationJSONObject?: IpamVrfsList200ApplicationJson;
 }

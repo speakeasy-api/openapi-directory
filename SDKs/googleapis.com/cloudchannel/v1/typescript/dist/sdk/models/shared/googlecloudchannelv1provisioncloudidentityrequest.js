@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1CloudIdentityInfoInput } from "./googlecloudchannelv1cloudidentityinfo";
-import { GoogleCloudChannelV1AdminUser } from "./googlecloudchannelv1adminuser";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1ProvisionCloudIdentityRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1cloudidentityinfo_1 = require("./googlecloudchannelv1cloudidentityinfo");
+var googlecloudchannelv1adminuser_1 = require("./googlecloudchannelv1adminuser");
 // GoogleCloudChannelV1ProvisionCloudIdentityRequestInput
 /**
  * Request message for CloudChannelService.ProvisionCloudIdentity
@@ -35,17 +38,17 @@ var GoogleCloudChannelV1ProvisionCloudIdentityRequestInput = /** @class */ (func
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudIdentityInfo" }),
-        __metadata("design:type", GoogleCloudChannelV1CloudIdentityInfoInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudIdentityInfo" }),
+        __metadata("design:type", googlecloudchannelv1cloudidentityinfo_1.GoogleCloudChannelV1CloudIdentityInfoInput)
     ], GoogleCloudChannelV1ProvisionCloudIdentityRequestInput.prototype, "cloudIdentityInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", GoogleCloudChannelV1AdminUser)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", googlecloudchannelv1adminuser_1.GoogleCloudChannelV1AdminUser)
     ], GoogleCloudChannelV1ProvisionCloudIdentityRequestInput.prototype, "user", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validateOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validateOnly" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudChannelV1ProvisionCloudIdentityRequestInput.prototype, "validateOnly", void 0);
     return GoogleCloudChannelV1ProvisionCloudIdentityRequestInput;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1ProvisionCloudIdentityRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1ProvisionCloudIdentityRequestInput = GoogleCloudChannelV1ProvisionCloudIdentityRequestInput;

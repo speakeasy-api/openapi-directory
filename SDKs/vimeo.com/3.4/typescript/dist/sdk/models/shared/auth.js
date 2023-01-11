@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApiApp } from "./apiapp";
-import { User } from "./user";
-export var AuthTokenTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Auth = exports.AuthTokenTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var apiapp_1 = require("./apiapp");
+var user_1 = require("./user");
+var AuthTokenTypeEnum;
 (function (AuthTokenTypeEnum) {
     AuthTokenTypeEnum["Bearer"] = "bearer";
-})(AuthTokenTypeEnum || (AuthTokenTypeEnum = {}));
+})(AuthTokenTypeEnum = exports.AuthTokenTypeEnum || (exports.AuthTokenTypeEnum = {}));
 var Auth = /** @class */ (function (_super) {
     __extends(Auth, _super);
     function Auth() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access_token" }),
         __metadata("design:type", String)
     ], Auth.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=app" }),
-        __metadata("design:type", ApiApp)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=app" }),
+        __metadata("design:type", apiapp_1.ApiApp)
     ], Auth.prototype, "app", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires_on" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires_on" }),
         __metadata("design:type", String)
     ], Auth.prototype, "expiresOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refresh_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refresh_token" }),
         __metadata("design:type", String)
     ], Auth.prototype, "refreshToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", String)
     ], Auth.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token_type" }),
         __metadata("design:type", String)
     ], Auth.prototype, "tokenType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", User)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", user_1.User)
     ], Auth.prototype, "user", void 0);
     return Auth;
-}(SpeakeasyBase));
-export { Auth };
+}(utils_1.SpeakeasyBase));
+exports.Auth = Auth;

@@ -76,10 +76,10 @@ export class SearchIssuesAndPullRequestsResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  searchIssuesAndPullRequests200ApplicationJsonObject?: SearchIssuesAndPullRequests200ApplicationJson;
+  searchIssuesAndPullRequests200ApplicationJSONObject?: SearchIssuesAndPullRequests200ApplicationJson;
 
   @SpeakeasyMetadata()
-  searchIssuesAndPullRequests503ApplicationJsonObject?: SearchIssuesAndPullRequests503ApplicationJson;
+  searchIssuesAndPullRequests503ApplicationJSONObject?: SearchIssuesAndPullRequests503ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

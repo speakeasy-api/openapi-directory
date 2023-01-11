@@ -17,7 +17,7 @@ export class ProtocolSnmptcpGetConfigRequest extends SpeakeasyBase {
 
 export class ProtocolSnmptcpGetConfigResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configSnmptcp?: shared.ConfigSnmptcp;
+  configSNMPTCP?: shared.ConfigSnmptcp;
 
   @SpeakeasyMetadata()
   contentType: string;

@@ -8,5 +8,5 @@ export declare class GetNetworkTrafficShapingDscpTaggingOptionsRequest extends S
 export declare class GetNetworkTrafficShapingDscpTaggingOptionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkTrafficShapingDscpTaggingOptions200ApplicationJsonObject?: Map<string, any>;
+    getNetworkTrafficShapingDscpTaggingOptions200ApplicationJSONObject?: Record<string, any>;
 }

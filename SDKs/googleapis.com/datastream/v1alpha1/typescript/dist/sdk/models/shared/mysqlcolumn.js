@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MysqlColumn = void 0;
+var utils_1 = require("../../../internal/utils");
 // MysqlColumn
 /**
  * MySQL Column.
@@ -33,33 +36,33 @@ var MysqlColumn = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collation" }),
         __metadata("design:type", String)
     ], MysqlColumn.prototype, "collation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnName" }),
         __metadata("design:type", String)
     ], MysqlColumn.prototype, "columnName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataType" }),
         __metadata("design:type", String)
     ], MysqlColumn.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=length" }),
         __metadata("design:type", Number)
     ], MysqlColumn.prototype, "length", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nullable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nullable" }),
         __metadata("design:type", Boolean)
     ], MysqlColumn.prototype, "nullable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ordinalPosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ordinalPosition" }),
         __metadata("design:type", Number)
     ], MysqlColumn.prototype, "ordinalPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryKey" }),
         __metadata("design:type", Boolean)
     ], MysqlColumn.prototype, "primaryKey", void 0);
     return MysqlColumn;
-}(SpeakeasyBase));
-export { MysqlColumn };
+}(utils_1.SpeakeasyBase));
+exports.MysqlColumn = MysqlColumn;

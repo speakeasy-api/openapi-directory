@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,98 +14,123 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServicePrincipalsUpdatePasswordCredentialsResponse = exports.ServicePrincipalsUpdatePasswordCredentialsRequest = exports.ServicePrincipalsUpdatePasswordCredentialsRequests = exports.ServicePrincipalsUpdatePasswordCredentialsQueryParams = exports.ServicePrincipalsUpdatePasswordCredentialsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ServicePrincipalsUpdatePasswordCredentialsPathParams = /** @class */ (function (_super) {
     __extends(ServicePrincipalsUpdatePasswordCredentialsPathParams, _super);
     function ServicePrincipalsUpdatePasswordCredentialsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=objectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=objectId" }),
         __metadata("design:type", String)
     ], ServicePrincipalsUpdatePasswordCredentialsPathParams.prototype, "objectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=tenantID" }),
         __metadata("design:type", String)
-    ], ServicePrincipalsUpdatePasswordCredentialsPathParams.prototype, "tenantId", void 0);
+    ], ServicePrincipalsUpdatePasswordCredentialsPathParams.prototype, "tenantID", void 0);
     return ServicePrincipalsUpdatePasswordCredentialsPathParams;
-}(SpeakeasyBase));
-export { ServicePrincipalsUpdatePasswordCredentialsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ServicePrincipalsUpdatePasswordCredentialsPathParams = ServicePrincipalsUpdatePasswordCredentialsPathParams;
 var ServicePrincipalsUpdatePasswordCredentialsQueryParams = /** @class */ (function (_super) {
     __extends(ServicePrincipalsUpdatePasswordCredentialsQueryParams, _super);
     function ServicePrincipalsUpdatePasswordCredentialsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], ServicePrincipalsUpdatePasswordCredentialsQueryParams.prototype, "apiVersion", void 0);
     return ServicePrincipalsUpdatePasswordCredentialsQueryParams;
-}(SpeakeasyBase));
-export { ServicePrincipalsUpdatePasswordCredentialsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ServicePrincipalsUpdatePasswordCredentialsQueryParams = ServicePrincipalsUpdatePasswordCredentialsQueryParams;
 var ServicePrincipalsUpdatePasswordCredentialsRequests = /** @class */ (function (_super) {
     __extends(ServicePrincipalsUpdatePasswordCredentialsRequests, _super);
     function ServicePrincipalsUpdatePasswordCredentialsRequests() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.PasswordCredentialsUpdateParameters)
     ], ServicePrincipalsUpdatePasswordCredentialsRequests.prototype, "passwordCredentialsUpdateParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/json" }),
         __metadata("design:type", shared.PasswordCredentialsUpdateParameters)
     ], ServicePrincipalsUpdatePasswordCredentialsRequests.prototype, "passwordCredentialsUpdateParameters1", void 0);
     return ServicePrincipalsUpdatePasswordCredentialsRequests;
-}(SpeakeasyBase));
-export { ServicePrincipalsUpdatePasswordCredentialsRequests };
+}(utils_1.SpeakeasyBase));
+exports.ServicePrincipalsUpdatePasswordCredentialsRequests = ServicePrincipalsUpdatePasswordCredentialsRequests;
 var ServicePrincipalsUpdatePasswordCredentialsRequest = /** @class */ (function (_super) {
     __extends(ServicePrincipalsUpdatePasswordCredentialsRequest, _super);
     function ServicePrincipalsUpdatePasswordCredentialsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ServicePrincipalsUpdatePasswordCredentialsPathParams)
     ], ServicePrincipalsUpdatePasswordCredentialsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ServicePrincipalsUpdatePasswordCredentialsQueryParams)
     ], ServicePrincipalsUpdatePasswordCredentialsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ServicePrincipalsUpdatePasswordCredentialsRequests)
     ], ServicePrincipalsUpdatePasswordCredentialsRequest.prototype, "request", void 0);
     return ServicePrincipalsUpdatePasswordCredentialsRequest;
-}(SpeakeasyBase));
-export { ServicePrincipalsUpdatePasswordCredentialsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ServicePrincipalsUpdatePasswordCredentialsRequest = ServicePrincipalsUpdatePasswordCredentialsRequest;
 var ServicePrincipalsUpdatePasswordCredentialsResponse = /** @class */ (function (_super) {
     __extends(ServicePrincipalsUpdatePasswordCredentialsResponse, _super);
     function ServicePrincipalsUpdatePasswordCredentialsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ServicePrincipalsUpdatePasswordCredentialsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.GraphError)
     ], ServicePrincipalsUpdatePasswordCredentialsResponse.prototype, "graphError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ServicePrincipalsUpdatePasswordCredentialsResponse.prototype, "statusCode", void 0);
     return ServicePrincipalsUpdatePasswordCredentialsResponse;
-}(SpeakeasyBase));
-export { ServicePrincipalsUpdatePasswordCredentialsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ServicePrincipalsUpdatePasswordCredentialsResponse = ServicePrincipalsUpdatePasswordCredentialsResponse;

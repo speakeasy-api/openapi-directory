@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudPaymentsResellerSubscriptionV1DurationUnitEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPaymentsResellerSubscriptionV1Duration = exports.GoogleCloudPaymentsResellerSubscriptionV1DurationUnitEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudPaymentsResellerSubscriptionV1DurationUnitEnum;
 (function (GoogleCloudPaymentsResellerSubscriptionV1DurationUnitEnum) {
     GoogleCloudPaymentsResellerSubscriptionV1DurationUnitEnum["UnitUnspecified"] = "UNIT_UNSPECIFIED";
     GoogleCloudPaymentsResellerSubscriptionV1DurationUnitEnum["Month"] = "MONTH";
     GoogleCloudPaymentsResellerSubscriptionV1DurationUnitEnum["Day"] = "DAY";
-})(GoogleCloudPaymentsResellerSubscriptionV1DurationUnitEnum || (GoogleCloudPaymentsResellerSubscriptionV1DurationUnitEnum = {}));
+})(GoogleCloudPaymentsResellerSubscriptionV1DurationUnitEnum = exports.GoogleCloudPaymentsResellerSubscriptionV1DurationUnitEnum || (exports.GoogleCloudPaymentsResellerSubscriptionV1DurationUnitEnum = {}));
 // GoogleCloudPaymentsResellerSubscriptionV1Duration
 /**
  * Describes the length of a period of a time.
@@ -39,13 +42,13 @@ var GoogleCloudPaymentsResellerSubscriptionV1Duration = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], GoogleCloudPaymentsResellerSubscriptionV1Duration.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unit" }),
         __metadata("design:type", String)
     ], GoogleCloudPaymentsResellerSubscriptionV1Duration.prototype, "unit", void 0);
     return GoogleCloudPaymentsResellerSubscriptionV1Duration;
-}(SpeakeasyBase));
-export { GoogleCloudPaymentsResellerSubscriptionV1Duration };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPaymentsResellerSubscriptionV1Duration = GoogleCloudPaymentsResellerSubscriptionV1Duration;

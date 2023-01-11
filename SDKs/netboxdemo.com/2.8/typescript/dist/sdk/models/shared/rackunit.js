@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,55 +23,57 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedDevice } from "./nesteddevice";
-export var RackUnitFaceLabelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RackUnit = exports.RackUnitFace = exports.RackUnitFaceValueEnum = exports.RackUnitFaceLabelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var nesteddevice_1 = require("./nesteddevice");
+var RackUnitFaceLabelEnum;
 (function (RackUnitFaceLabelEnum) {
     RackUnitFaceLabelEnum["Front"] = "Front";
     RackUnitFaceLabelEnum["Rear"] = "Rear";
-})(RackUnitFaceLabelEnum || (RackUnitFaceLabelEnum = {}));
-export var RackUnitFaceValueEnum;
+})(RackUnitFaceLabelEnum = exports.RackUnitFaceLabelEnum || (exports.RackUnitFaceLabelEnum = {}));
+var RackUnitFaceValueEnum;
 (function (RackUnitFaceValueEnum) {
     RackUnitFaceValueEnum["Front"] = "front";
     RackUnitFaceValueEnum["Rear"] = "rear";
-})(RackUnitFaceValueEnum || (RackUnitFaceValueEnum = {}));
+})(RackUnitFaceValueEnum = exports.RackUnitFaceValueEnum || (exports.RackUnitFaceValueEnum = {}));
 var RackUnitFace = /** @class */ (function (_super) {
     __extends(RackUnitFace, _super);
     function RackUnitFace() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], RackUnitFace.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], RackUnitFace.prototype, "value", void 0);
     return RackUnitFace;
-}(SpeakeasyBase));
-export { RackUnitFace };
+}(utils_1.SpeakeasyBase));
+exports.RackUnitFace = RackUnitFace;
 var RackUnit = /** @class */ (function (_super) {
     __extends(RackUnit, _super);
     function RackUnit() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device" }),
-        __metadata("design:type", NestedDevice)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device" }),
+        __metadata("design:type", nesteddevice_1.NestedDevice)
     ], RackUnit.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=face" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=face" }),
         __metadata("design:type", RackUnitFace)
     ], RackUnit.prototype, "face", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], RackUnit.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RackUnit.prototype, "name", void 0);
     return RackUnit;
-}(SpeakeasyBase));
-export { RackUnit };
+}(utils_1.SpeakeasyBase));
+exports.RackUnit = RackUnit;

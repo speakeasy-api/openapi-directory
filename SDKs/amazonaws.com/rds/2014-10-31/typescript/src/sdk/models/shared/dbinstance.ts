@@ -1,20 +1,20 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { ActivityStreamModeEnum } from "./activitystreammodeenum";
 import { ActivityStreamStatusEnum } from "./activitystreamstatusenum";
-import { DbInstanceRole } from "./dbinstancerole";
-import { DbInstanceAutomatedBackupsReplication } from "./dbinstanceautomatedbackupsreplication";
-import { DbParameterGroupStatus } from "./dbparametergroupstatus";
-import { DbSecurityGroupMembership } from "./dbsecuritygroupmembership";
+import { DbInstanceRoles } from "./dbinstanceroles";
+import { DbInstanceAutomatedBackupsReplicationList } from "./dbinstanceautomatedbackupsreplicationlist";
+import { DbParameterGroupStatusList } from "./dbparametergroupstatuslist";
+import { DbSecurityGroupMembershipList } from "./dbsecuritygroupmembershiplist";
 import { DbSubnetGroup } from "./dbsubnetgroup";
-import { DomainMembership } from "./domainmembership";
+import { DomainMembershipList } from "./domainmembershiplist";
 import { Endpoint } from "./endpoint";
-import { OptionGroupMembership } from "./optiongroupmembership";
+import { OptionGroupMembershipList } from "./optiongroupmembershiplist";
 import { PendingModifiedValues } from "./pendingmodifiedvalues";
-import { ProcessorFeature } from "./processorfeature";
+import { ProcessorFeatureList } from "./processorfeaturelist";
 import { ReplicaModeEnum } from "./replicamodeenum";
-import { DbInstanceStatusInfo } from "./dbinstancestatusinfo";
-import { Tag } from "./tag";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+import { DbInstanceStatusInfoList } from "./dbinstancestatusinfolist";
+import { TagList } from "./taglist";
+import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 
 
 
@@ -41,8 +41,8 @@ export class DbInstance extends SpeakeasyBase {
   @SpeakeasyMetadata()
   allocatedStorage?: number;
 
-  @SpeakeasyMetadata({ elemType: DbInstanceRole })
-  associatedRoles?: DbInstanceRole[];
+  @SpeakeasyMetadata({ elemType: DbInstanceRoles })
+  associatedRoles?: DbInstanceRoles[];
 
   @SpeakeasyMetadata()
   autoMinorVersionUpgrade?: boolean;
@@ -77,8 +77,8 @@ export class DbInstance extends SpeakeasyBase {
   @SpeakeasyMetadata()
   dbInstanceArn?: string;
 
-  @SpeakeasyMetadata({ elemType: DbInstanceAutomatedBackupsReplication })
-  dbInstanceAutomatedBackupsReplications?: DbInstanceAutomatedBackupsReplication[];
+  @SpeakeasyMetadata({ elemType: DbInstanceAutomatedBackupsReplicationList })
+  dbInstanceAutomatedBackupsReplications?: DbInstanceAutomatedBackupsReplicationList[];
 
   @SpeakeasyMetadata()
   dbInstanceClass?: string;
@@ -92,11 +92,11 @@ export class DbInstance extends SpeakeasyBase {
   @SpeakeasyMetadata()
   dbName?: string;
 
-  @SpeakeasyMetadata({ elemType: DbParameterGroupStatus })
-  dbParameterGroups?: DbParameterGroupStatus[];
+  @SpeakeasyMetadata({ elemType: DbParameterGroupStatusList })
+  dbParameterGroups?: DbParameterGroupStatusList[];
 
-  @SpeakeasyMetadata({ elemType: DbSecurityGroupMembership })
-  dbSecurityGroups?: DbSecurityGroupMembership[];
+  @SpeakeasyMetadata({ elemType: DbSecurityGroupMembershipList })
+  dbSecurityGroups?: DbSecurityGroupMembershipList[];
 
   @SpeakeasyMetadata()
   dbSubnetGroup?: DbSubnetGroup;
@@ -110,8 +110,8 @@ export class DbInstance extends SpeakeasyBase {
   @SpeakeasyMetadata()
   deletionProtection?: boolean;
 
-  @SpeakeasyMetadata({ elemType: DomainMembership })
-  domainMemberships?: DomainMembership[];
+  @SpeakeasyMetadata({ elemType: DomainMembershipList })
+  domainMemberships?: DomainMembershipList[];
 
   @SpeakeasyMetadata()
   enabledCloudwatchLogsExports?: string[];
@@ -162,13 +162,13 @@ export class DbInstance extends SpeakeasyBase {
   monitoringRoleArn?: string;
 
   @SpeakeasyMetadata()
-  multiAz?: boolean;
+  multiAZ?: boolean;
 
   @SpeakeasyMetadata()
   ncharCharacterSetName?: string;
 
-  @SpeakeasyMetadata({ elemType: OptionGroupMembership })
-  optionGroupMemberships?: OptionGroupMembership[];
+  @SpeakeasyMetadata({ elemType: OptionGroupMembershipList })
+  optionGroupMemberships?: OptionGroupMembershipList[];
 
   @SpeakeasyMetadata()
   pendingModifiedValues?: PendingModifiedValues;
@@ -177,7 +177,7 @@ export class DbInstance extends SpeakeasyBase {
   performanceInsightsEnabled?: boolean;
 
   @SpeakeasyMetadata()
-  performanceInsightsKmsKeyId?: string;
+  performanceInsightsKMSKeyId?: string;
 
   @SpeakeasyMetadata()
   performanceInsightsRetentionPeriod?: number;
@@ -188,8 +188,8 @@ export class DbInstance extends SpeakeasyBase {
   @SpeakeasyMetadata()
   preferredMaintenanceWindow?: string;
 
-  @SpeakeasyMetadata({ elemType: ProcessorFeature })
-  processorFeatures?: ProcessorFeature[];
+  @SpeakeasyMetadata({ elemType: ProcessorFeatureList })
+  processorFeatures?: ProcessorFeatureList[];
 
   @SpeakeasyMetadata()
   promotionTier?: number;
@@ -198,13 +198,13 @@ export class DbInstance extends SpeakeasyBase {
   publiclyAccessible?: boolean;
 
   @SpeakeasyMetadata()
-  readReplicaDbClusterIdentifiers?: string[];
+  readReplicaDBClusterIdentifiers?: Record<string, any>[];
 
   @SpeakeasyMetadata()
-  readReplicaDbInstanceIdentifiers?: string[];
+  readReplicaDBInstanceIdentifiers?: Record<string, any>[];
 
   @SpeakeasyMetadata()
-  readReplicaSourceDbInstanceIdentifier?: string;
+  readReplicaSourceDBInstanceIdentifier?: string;
 
   @SpeakeasyMetadata()
   replicaMode?: ReplicaModeEnum;
@@ -212,8 +212,8 @@ export class DbInstance extends SpeakeasyBase {
   @SpeakeasyMetadata()
   secondaryAvailabilityZone?: string;
 
-  @SpeakeasyMetadata({ elemType: DbInstanceStatusInfo })
-  statusInfos?: DbInstanceStatusInfo[];
+  @SpeakeasyMetadata({ elemType: DbInstanceStatusInfoList })
+  statusInfos?: DbInstanceStatusInfoList[];
 
   @SpeakeasyMetadata()
   storageEncrypted?: boolean;
@@ -221,8 +221,8 @@ export class DbInstance extends SpeakeasyBase {
   @SpeakeasyMetadata()
   storageType?: string;
 
-  @SpeakeasyMetadata({ elemType: Tag })
-  tagList?: Tag[];
+  @SpeakeasyMetadata({ elemType: TagList })
+  tagList?: TagList[];
 
   @SpeakeasyMetadata()
   tdeCredentialArn?: string;
@@ -230,6 +230,6 @@ export class DbInstance extends SpeakeasyBase {
   @SpeakeasyMetadata()
   timezone?: string;
 
-  @SpeakeasyMetadata({ elemType: VpcSecurityGroupMembership })
-  vpcSecurityGroups?: VpcSecurityGroupMembership[];
+  @SpeakeasyMetadata({ elemType: VpcSecurityGroupMembershipList })
+  vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

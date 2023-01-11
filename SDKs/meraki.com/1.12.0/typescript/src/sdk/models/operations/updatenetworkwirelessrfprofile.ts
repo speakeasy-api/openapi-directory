@@ -131,5 +131,5 @@ export class UpdateNetworkWirelessRfProfileResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkWirelessRfProfile200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkWirelessRfProfile200ApplicationJSONObject?: Record<string, any>;
 }

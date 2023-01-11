@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ResourceUnauthorizedProblemResourceTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceUnauthorizedProblem = exports.ResourceUnauthorizedProblemSectionEnum = exports.ResourceUnauthorizedProblemResourceTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ResourceUnauthorizedProblemResourceTypeEnum;
 (function (ResourceUnauthorizedProblemResourceTypeEnum) {
     ResourceUnauthorizedProblemResourceTypeEnum["Tweet"] = "tweet";
     ResourceUnauthorizedProblemResourceTypeEnum["User"] = "user";
     ResourceUnauthorizedProblemResourceTypeEnum["Media"] = "media";
-})(ResourceUnauthorizedProblemResourceTypeEnum || (ResourceUnauthorizedProblemResourceTypeEnum = {}));
-export var ResourceUnauthorizedProblemSectionEnum;
+})(ResourceUnauthorizedProblemResourceTypeEnum = exports.ResourceUnauthorizedProblemResourceTypeEnum || (exports.ResourceUnauthorizedProblemResourceTypeEnum = {}));
+var ResourceUnauthorizedProblemSectionEnum;
 (function (ResourceUnauthorizedProblemSectionEnum) {
     ResourceUnauthorizedProblemSectionEnum["Data"] = "data";
     ResourceUnauthorizedProblemSectionEnum["Includes"] = "includes";
-})(ResourceUnauthorizedProblemSectionEnum || (ResourceUnauthorizedProblemSectionEnum = {}));
+})(ResourceUnauthorizedProblemSectionEnum = exports.ResourceUnauthorizedProblemSectionEnum || (exports.ResourceUnauthorizedProblemSectionEnum = {}));
 // ResourceUnauthorizedProblem
 /**
  * A problem that indicates you are not allowed to see a particular Tweet, User, etc.
@@ -44,29 +47,29 @@ var ResourceUnauthorizedProblem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
         __metadata("design:type", String)
     ], ResourceUnauthorizedProblem.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_id" }),
         __metadata("design:type", String)
     ], ResourceUnauthorizedProblem.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], ResourceUnauthorizedProblem.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=section" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=section" }),
         __metadata("design:type", String)
     ], ResourceUnauthorizedProblem.prototype, "section", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], ResourceUnauthorizedProblem.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ResourceUnauthorizedProblem.prototype, "type", void 0);
     return ResourceUnauthorizedProblem;
-}(SpeakeasyBase));
-export { ResourceUnauthorizedProblem };
+}(utils_1.SpeakeasyBase));
+exports.ResourceUnauthorizedProblem = ResourceUnauthorizedProblem;

@@ -22,5 +22,5 @@ export declare class UpdateAgentResponse extends SpeakeasyBase {
     internalException?: any;
     invalidRequestException?: any;
     statusCode: number;
-    updateAgentResponse?: Map<string, any>;
+    updateAgentResponse?: Record<string, any>;
 }

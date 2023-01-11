@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,139 +23,141 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetModifyInstanceMetadataOptionsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetModifyInstanceMetadataOptionsResponse = exports.GetModifyInstanceMetadataOptionsRequest = exports.GetModifyInstanceMetadataOptionsHeaders = exports.GetModifyInstanceMetadataOptionsQueryParams = exports.GetModifyInstanceMetadataOptionsVersionEnum = exports.GetModifyInstanceMetadataOptionsHttpTokensEnum = exports.GetModifyInstanceMetadataOptionsHttpProtocolIpv6Enum = exports.GetModifyInstanceMetadataOptionsHttpEndpointEnum = exports.GetModifyInstanceMetadataOptionsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetModifyInstanceMetadataOptionsActionEnum;
 (function (GetModifyInstanceMetadataOptionsActionEnum) {
     GetModifyInstanceMetadataOptionsActionEnum["ModifyInstanceMetadataOptions"] = "ModifyInstanceMetadataOptions";
-})(GetModifyInstanceMetadataOptionsActionEnum || (GetModifyInstanceMetadataOptionsActionEnum = {}));
-export var GetModifyInstanceMetadataOptionsHttpEndpointEnum;
+})(GetModifyInstanceMetadataOptionsActionEnum = exports.GetModifyInstanceMetadataOptionsActionEnum || (exports.GetModifyInstanceMetadataOptionsActionEnum = {}));
+var GetModifyInstanceMetadataOptionsHttpEndpointEnum;
 (function (GetModifyInstanceMetadataOptionsHttpEndpointEnum) {
     GetModifyInstanceMetadataOptionsHttpEndpointEnum["Disabled"] = "disabled";
     GetModifyInstanceMetadataOptionsHttpEndpointEnum["Enabled"] = "enabled";
-})(GetModifyInstanceMetadataOptionsHttpEndpointEnum || (GetModifyInstanceMetadataOptionsHttpEndpointEnum = {}));
-export var GetModifyInstanceMetadataOptionsHttpProtocolIpv6Enum;
+})(GetModifyInstanceMetadataOptionsHttpEndpointEnum = exports.GetModifyInstanceMetadataOptionsHttpEndpointEnum || (exports.GetModifyInstanceMetadataOptionsHttpEndpointEnum = {}));
+var GetModifyInstanceMetadataOptionsHttpProtocolIpv6Enum;
 (function (GetModifyInstanceMetadataOptionsHttpProtocolIpv6Enum) {
     GetModifyInstanceMetadataOptionsHttpProtocolIpv6Enum["Disabled"] = "disabled";
     GetModifyInstanceMetadataOptionsHttpProtocolIpv6Enum["Enabled"] = "enabled";
-})(GetModifyInstanceMetadataOptionsHttpProtocolIpv6Enum || (GetModifyInstanceMetadataOptionsHttpProtocolIpv6Enum = {}));
-export var GetModifyInstanceMetadataOptionsHttpTokensEnum;
+})(GetModifyInstanceMetadataOptionsHttpProtocolIpv6Enum = exports.GetModifyInstanceMetadataOptionsHttpProtocolIpv6Enum || (exports.GetModifyInstanceMetadataOptionsHttpProtocolIpv6Enum = {}));
+var GetModifyInstanceMetadataOptionsHttpTokensEnum;
 (function (GetModifyInstanceMetadataOptionsHttpTokensEnum) {
     GetModifyInstanceMetadataOptionsHttpTokensEnum["Optional"] = "optional";
     GetModifyInstanceMetadataOptionsHttpTokensEnum["Required"] = "required";
-})(GetModifyInstanceMetadataOptionsHttpTokensEnum || (GetModifyInstanceMetadataOptionsHttpTokensEnum = {}));
-export var GetModifyInstanceMetadataOptionsVersionEnum;
+})(GetModifyInstanceMetadataOptionsHttpTokensEnum = exports.GetModifyInstanceMetadataOptionsHttpTokensEnum || (exports.GetModifyInstanceMetadataOptionsHttpTokensEnum = {}));
+var GetModifyInstanceMetadataOptionsVersionEnum;
 (function (GetModifyInstanceMetadataOptionsVersionEnum) {
     GetModifyInstanceMetadataOptionsVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetModifyInstanceMetadataOptionsVersionEnum || (GetModifyInstanceMetadataOptionsVersionEnum = {}));
+})(GetModifyInstanceMetadataOptionsVersionEnum = exports.GetModifyInstanceMetadataOptionsVersionEnum || (exports.GetModifyInstanceMetadataOptionsVersionEnum = {}));
 var GetModifyInstanceMetadataOptionsQueryParams = /** @class */ (function (_super) {
     __extends(GetModifyInstanceMetadataOptionsQueryParams, _super);
     function GetModifyInstanceMetadataOptionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetModifyInstanceMetadataOptionsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetModifyInstanceMetadataOptionsQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=HttpEndpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=HttpEndpoint" }),
         __metadata("design:type", String)
     ], GetModifyInstanceMetadataOptionsQueryParams.prototype, "httpEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=HttpProtocolIpv6" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=HttpProtocolIpv6" }),
         __metadata("design:type", String)
     ], GetModifyInstanceMetadataOptionsQueryParams.prototype, "httpProtocolIpv6", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=HttpPutResponseHopLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=HttpPutResponseHopLimit" }),
         __metadata("design:type", Number)
     ], GetModifyInstanceMetadataOptionsQueryParams.prototype, "httpPutResponseHopLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=HttpTokens" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=HttpTokens" }),
         __metadata("design:type", String)
     ], GetModifyInstanceMetadataOptionsQueryParams.prototype, "httpTokens", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=InstanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=InstanceId" }),
         __metadata("design:type", String)
     ], GetModifyInstanceMetadataOptionsQueryParams.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetModifyInstanceMetadataOptionsQueryParams.prototype, "version", void 0);
     return GetModifyInstanceMetadataOptionsQueryParams;
-}(SpeakeasyBase));
-export { GetModifyInstanceMetadataOptionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyInstanceMetadataOptionsQueryParams = GetModifyInstanceMetadataOptionsQueryParams;
 var GetModifyInstanceMetadataOptionsHeaders = /** @class */ (function (_super) {
     __extends(GetModifyInstanceMetadataOptionsHeaders, _super);
     function GetModifyInstanceMetadataOptionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetModifyInstanceMetadataOptionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetModifyInstanceMetadataOptionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetModifyInstanceMetadataOptionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetModifyInstanceMetadataOptionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetModifyInstanceMetadataOptionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetModifyInstanceMetadataOptionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetModifyInstanceMetadataOptionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetModifyInstanceMetadataOptionsHeaders;
-}(SpeakeasyBase));
-export { GetModifyInstanceMetadataOptionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyInstanceMetadataOptionsHeaders = GetModifyInstanceMetadataOptionsHeaders;
 var GetModifyInstanceMetadataOptionsRequest = /** @class */ (function (_super) {
     __extends(GetModifyInstanceMetadataOptionsRequest, _super);
     function GetModifyInstanceMetadataOptionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyInstanceMetadataOptionsQueryParams)
     ], GetModifyInstanceMetadataOptionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetModifyInstanceMetadataOptionsHeaders)
     ], GetModifyInstanceMetadataOptionsRequest.prototype, "headers", void 0);
     return GetModifyInstanceMetadataOptionsRequest;
-}(SpeakeasyBase));
-export { GetModifyInstanceMetadataOptionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyInstanceMetadataOptionsRequest = GetModifyInstanceMetadataOptionsRequest;
 var GetModifyInstanceMetadataOptionsResponse = /** @class */ (function (_super) {
     __extends(GetModifyInstanceMetadataOptionsResponse, _super);
     function GetModifyInstanceMetadataOptionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetModifyInstanceMetadataOptionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetModifyInstanceMetadataOptionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetModifyInstanceMetadataOptionsResponse.prototype, "statusCode", void 0);
     return GetModifyInstanceMetadataOptionsResponse;
-}(SpeakeasyBase));
-export { GetModifyInstanceMetadataOptionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetModifyInstanceMetadataOptionsResponse = GetModifyInstanceMetadataOptionsResponse;

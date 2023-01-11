@@ -12,12 +12,12 @@ export declare class PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdSecurit
 }
 export declare class PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest extends SpeakeasyBase {
     pathParams: PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
     security: PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdSecurity;
 }
 export declare class PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    branchrestriction?: Map<string, any>;
-    error?: Map<string, any>;
+    branchrestriction?: Record<string, any>;
+    error?: Record<string, any>;
 }

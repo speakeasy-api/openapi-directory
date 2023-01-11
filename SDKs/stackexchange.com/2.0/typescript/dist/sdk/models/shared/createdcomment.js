@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,184 +23,186 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatedComment = exports.CreatedCommentReplyToUser = exports.CreatedCommentReplyToUserBadgeCounts = exports.CreatedCommentOwner = exports.CreatedCommentOwnerBadgeCounts = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreatedCommentOwnerBadgeCounts = /** @class */ (function (_super) {
     __extends(CreatedCommentOwnerBadgeCounts, _super);
     function CreatedCommentOwnerBadgeCounts() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatedCommentOwnerBadgeCounts.prototype, "bronze", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatedCommentOwnerBadgeCounts.prototype, "gold", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatedCommentOwnerBadgeCounts.prototype, "silver", void 0);
     return CreatedCommentOwnerBadgeCounts;
-}(SpeakeasyBase));
-export { CreatedCommentOwnerBadgeCounts };
+}(utils_1.SpeakeasyBase));
+exports.CreatedCommentOwnerBadgeCounts = CreatedCommentOwnerBadgeCounts;
 var CreatedCommentOwner = /** @class */ (function (_super) {
     __extends(CreatedCommentOwner, _super);
     function CreatedCommentOwner() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatedCommentOwner.prototype, "acceptRate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreatedCommentOwnerBadgeCounts)
     ], CreatedCommentOwner.prototype, "badgeCounts", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreatedCommentOwner.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreatedCommentOwner.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreatedCommentOwner.prototype, "profileImage", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatedCommentOwner.prototype, "reputation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatedCommentOwner.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreatedCommentOwner.prototype, "userType", void 0);
     return CreatedCommentOwner;
-}(SpeakeasyBase));
-export { CreatedCommentOwner };
+}(utils_1.SpeakeasyBase));
+exports.CreatedCommentOwner = CreatedCommentOwner;
 var CreatedCommentReplyToUserBadgeCounts = /** @class */ (function (_super) {
     __extends(CreatedCommentReplyToUserBadgeCounts, _super);
     function CreatedCommentReplyToUserBadgeCounts() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatedCommentReplyToUserBadgeCounts.prototype, "bronze", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatedCommentReplyToUserBadgeCounts.prototype, "gold", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatedCommentReplyToUserBadgeCounts.prototype, "silver", void 0);
     return CreatedCommentReplyToUserBadgeCounts;
-}(SpeakeasyBase));
-export { CreatedCommentReplyToUserBadgeCounts };
+}(utils_1.SpeakeasyBase));
+exports.CreatedCommentReplyToUserBadgeCounts = CreatedCommentReplyToUserBadgeCounts;
 var CreatedCommentReplyToUser = /** @class */ (function (_super) {
     __extends(CreatedCommentReplyToUser, _super);
     function CreatedCommentReplyToUser() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatedCommentReplyToUser.prototype, "acceptRate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreatedCommentReplyToUserBadgeCounts)
     ], CreatedCommentReplyToUser.prototype, "badgeCounts", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreatedCommentReplyToUser.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreatedCommentReplyToUser.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreatedCommentReplyToUser.prototype, "profileImage", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatedCommentReplyToUser.prototype, "reputation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatedCommentReplyToUser.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreatedCommentReplyToUser.prototype, "userType", void 0);
     return CreatedCommentReplyToUser;
-}(SpeakeasyBase));
-export { CreatedCommentReplyToUser };
+}(utils_1.SpeakeasyBase));
+exports.CreatedCommentReplyToUser = CreatedCommentReplyToUser;
 var CreatedComment = /** @class */ (function (_super) {
     __extends(CreatedComment, _super);
     function CreatedComment() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreatedComment.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreatedComment.prototype, "bodyMarkdown", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], CreatedComment.prototype, "canFlag", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatedComment.prototype, "commentId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatedComment.prototype, "creationDate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], CreatedComment.prototype, "edited", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreatedComment.prototype, "link", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreatedCommentOwner)
     ], CreatedComment.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatedComment.prototype, "postId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreatedComment.prototype, "postType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreatedCommentReplyToUser)
     ], CreatedComment.prototype, "replyToUser", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatedComment.prototype, "score", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], CreatedComment.prototype, "upvoted", void 0);
     return CreatedComment;
-}(SpeakeasyBase));
-export { CreatedComment };
+}(utils_1.SpeakeasyBase));
+exports.CreatedComment = CreatedComment;

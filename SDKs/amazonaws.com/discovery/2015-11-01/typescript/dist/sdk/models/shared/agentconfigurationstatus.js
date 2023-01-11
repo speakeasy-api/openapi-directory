@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgentConfigurationStatus = void 0;
+var utils_1 = require("../../../internal/utils");
 // AgentConfigurationStatus
 /**
  * Information about agents or connectors that were instructed to start collecting data. Information includes the agent/connector ID, a description of the operation, and whether the agent/connector configuration was updated.
@@ -33,17 +36,17 @@ var AgentConfigurationStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agentId" }),
         __metadata("design:type", String)
     ], AgentConfigurationStatus.prototype, "agentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], AgentConfigurationStatus.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operationSucceeded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operationSucceeded" }),
         __metadata("design:type", Boolean)
     ], AgentConfigurationStatus.prototype, "operationSucceeded", void 0);
     return AgentConfigurationStatus;
-}(SpeakeasyBase));
-export { AgentConfigurationStatus };
+}(utils_1.SpeakeasyBase));
+exports.AgentConfigurationStatus = AgentConfigurationStatus;

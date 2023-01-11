@@ -9,7 +9,7 @@ export class DescribeDimensionKeysRequest extends SpeakeasyBase {
   endTime: Date;
 
   @SpeakeasyMetadata({ data: "json, name=Filter" })
-  filter?: Map<string, string>;
+  filter?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=GroupBy" })
   groupBy: DimensionGroup;

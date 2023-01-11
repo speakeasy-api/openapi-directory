@@ -8,5 +8,5 @@ export class CreateWebAclResponse extends SpeakeasyBase {
   changeToken?: string;
 
   @SpeakeasyMetadata({ data: "json, name=WebACL" })
-  webAcl?: WebAcl;
+  webACL?: WebAcl;
 }

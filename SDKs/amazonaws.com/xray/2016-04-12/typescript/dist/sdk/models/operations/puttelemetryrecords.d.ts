@@ -12,7 +12,7 @@ export declare class PutTelemetryRecordsHeaders extends SpeakeasyBase {
 export declare class PutTelemetryRecordsRequestBody extends SpeakeasyBase {
     ec2InstanceId?: string;
     hostname?: string;
-    resourceArn?: string;
+    resourceARN?: string;
     telemetryRecords: shared.TelemetryRecord[];
 }
 export declare class PutTelemetryRecordsRequest extends SpeakeasyBase {
@@ -22,7 +22,7 @@ export declare class PutTelemetryRecordsRequest extends SpeakeasyBase {
 export declare class PutTelemetryRecordsResponse extends SpeakeasyBase {
     contentType: string;
     invalidRequestException?: any;
-    putTelemetryRecordsResult?: Map<string, any>;
+    putTelemetryRecordsResult?: Record<string, any>;
     statusCode: number;
     throttledException?: any;
 }

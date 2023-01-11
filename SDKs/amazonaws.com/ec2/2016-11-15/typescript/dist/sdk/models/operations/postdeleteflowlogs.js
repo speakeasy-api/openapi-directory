@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteFlowLogsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteFlowLogsResponse = exports.PostDeleteFlowLogsRequest = exports.PostDeleteFlowLogsHeaders = exports.PostDeleteFlowLogsQueryParams = exports.PostDeleteFlowLogsVersionEnum = exports.PostDeleteFlowLogsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteFlowLogsActionEnum;
 (function (PostDeleteFlowLogsActionEnum) {
     PostDeleteFlowLogsActionEnum["DeleteFlowLogs"] = "DeleteFlowLogs";
-})(PostDeleteFlowLogsActionEnum || (PostDeleteFlowLogsActionEnum = {}));
-export var PostDeleteFlowLogsVersionEnum;
+})(PostDeleteFlowLogsActionEnum = exports.PostDeleteFlowLogsActionEnum || (exports.PostDeleteFlowLogsActionEnum = {}));
+var PostDeleteFlowLogsVersionEnum;
 (function (PostDeleteFlowLogsVersionEnum) {
     PostDeleteFlowLogsVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostDeleteFlowLogsVersionEnum || (PostDeleteFlowLogsVersionEnum = {}));
+})(PostDeleteFlowLogsVersionEnum = exports.PostDeleteFlowLogsVersionEnum || (exports.PostDeleteFlowLogsVersionEnum = {}));
 var PostDeleteFlowLogsQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteFlowLogsQueryParams, _super);
     function PostDeleteFlowLogsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteFlowLogsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteFlowLogsQueryParams.prototype, "version", void 0);
     return PostDeleteFlowLogsQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteFlowLogsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteFlowLogsQueryParams = PostDeleteFlowLogsQueryParams;
 var PostDeleteFlowLogsHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteFlowLogsHeaders, _super);
     function PostDeleteFlowLogsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteFlowLogsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteFlowLogsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteFlowLogsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteFlowLogsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteFlowLogsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteFlowLogsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteFlowLogsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteFlowLogsHeaders;
-}(SpeakeasyBase));
-export { PostDeleteFlowLogsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteFlowLogsHeaders = PostDeleteFlowLogsHeaders;
 var PostDeleteFlowLogsRequest = /** @class */ (function (_super) {
     __extends(PostDeleteFlowLogsRequest, _super);
     function PostDeleteFlowLogsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteFlowLogsQueryParams)
     ], PostDeleteFlowLogsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteFlowLogsHeaders)
     ], PostDeleteFlowLogsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteFlowLogsRequest.prototype, "request", void 0);
     return PostDeleteFlowLogsRequest;
-}(SpeakeasyBase));
-export { PostDeleteFlowLogsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteFlowLogsRequest = PostDeleteFlowLogsRequest;
 var PostDeleteFlowLogsResponse = /** @class */ (function (_super) {
     __extends(PostDeleteFlowLogsResponse, _super);
     function PostDeleteFlowLogsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteFlowLogsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteFlowLogsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteFlowLogsResponse.prototype, "statusCode", void 0);
     return PostDeleteFlowLogsResponse;
-}(SpeakeasyBase));
-export { PostDeleteFlowLogsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteFlowLogsResponse = PostDeleteFlowLogsResponse;

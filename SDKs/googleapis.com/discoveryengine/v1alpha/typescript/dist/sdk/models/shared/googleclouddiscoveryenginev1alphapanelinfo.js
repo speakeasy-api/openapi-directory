@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDiscoveryengineV1alphaPanelInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudDiscoveryengineV1alphaPanelInfo
 /**
  * Detailed panel information associated with a user event.
@@ -33,21 +36,21 @@ var GoogleCloudDiscoveryengineV1alphaPanelInfo = /** @class */ (function (_super
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1alphaPanelInfo.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=panelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=panelId" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1alphaPanelInfo.prototype, "panelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=panelPosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=panelPosition" }),
         __metadata("design:type", Number)
     ], GoogleCloudDiscoveryengineV1alphaPanelInfo.prototype, "panelPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalPanels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalPanels" }),
         __metadata("design:type", Number)
     ], GoogleCloudDiscoveryengineV1alphaPanelInfo.prototype, "totalPanels", void 0);
     return GoogleCloudDiscoveryengineV1alphaPanelInfo;
-}(SpeakeasyBase));
-export { GoogleCloudDiscoveryengineV1alphaPanelInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDiscoveryengineV1alphaPanelInfo = GoogleCloudDiscoveryengineV1alphaPanelInfo;

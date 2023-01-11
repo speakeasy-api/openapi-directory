@@ -6,8 +6,8 @@ import { GoogleCloudRecommenderV1ValueMatcher } from "./googlecloudrecommenderv1
 export declare class GoogleCloudRecommenderV1Operation extends SpeakeasyBase {
     action?: string;
     path?: string;
-    pathFilters?: Map<string, any>;
-    pathValueMatchers?: Map<string, GoogleCloudRecommenderV1ValueMatcher>;
+    pathFilters?: Record<string, any>;
+    pathValueMatchers?: Record<string, GoogleCloudRecommenderV1ValueMatcher>;
     resource?: string;
     resourceType?: string;
     sourcePath?: string;

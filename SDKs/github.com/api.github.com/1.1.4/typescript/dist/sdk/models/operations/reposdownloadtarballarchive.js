@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReposDownloadTarballArchiveResponse = exports.ReposDownloadTarballArchiveRequest = exports.ReposDownloadTarballArchivePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ReposDownloadTarballArchivePathParams = /** @class */ (function (_super) {
     __extends(ReposDownloadTarballArchivePathParams, _super);
     function ReposDownloadTarballArchivePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ReposDownloadTarballArchivePathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ref" }),
         __metadata("design:type", String)
     ], ReposDownloadTarballArchivePathParams.prototype, "ref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ReposDownloadTarballArchivePathParams.prototype, "repo", void 0);
     return ReposDownloadTarballArchivePathParams;
-}(SpeakeasyBase));
-export { ReposDownloadTarballArchivePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ReposDownloadTarballArchivePathParams = ReposDownloadTarballArchivePathParams;
 var ReposDownloadTarballArchiveRequest = /** @class */ (function (_super) {
     __extends(ReposDownloadTarballArchiveRequest, _super);
     function ReposDownloadTarballArchiveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReposDownloadTarballArchivePathParams)
     ], ReposDownloadTarballArchiveRequest.prototype, "pathParams", void 0);
     return ReposDownloadTarballArchiveRequest;
-}(SpeakeasyBase));
-export { ReposDownloadTarballArchiveRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReposDownloadTarballArchiveRequest = ReposDownloadTarballArchiveRequest;
 var ReposDownloadTarballArchiveResponse = /** @class */ (function (_super) {
     __extends(ReposDownloadTarballArchiveResponse, _super);
     function ReposDownloadTarballArchiveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReposDownloadTarballArchiveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ReposDownloadTarballArchiveResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReposDownloadTarballArchiveResponse.prototype, "statusCode", void 0);
     return ReposDownloadTarballArchiveResponse;
-}(SpeakeasyBase));
-export { ReposDownloadTarballArchiveResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReposDownloadTarballArchiveResponse = ReposDownloadTarballArchiveResponse;

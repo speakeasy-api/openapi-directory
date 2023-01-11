@@ -9,10 +9,10 @@ import { StorageClassEnum } from "./storageclassenum";
 export declare class S3Location extends SpeakeasyBase {
     accessControlList?: Grant[];
     bucketName?: string;
-    cannedAcl?: CannedAclEnum;
+    cannedACL?: CannedAclEnum;
     encryption?: Encryption;
     prefix?: string;
     storageClass?: StorageClassEnum;
-    tagging?: Map<string, string>;
-    userMetadata?: Map<string, string>;
+    tagging?: Record<string, string>;
+    userMetadata?: Record<string, string>;
 }

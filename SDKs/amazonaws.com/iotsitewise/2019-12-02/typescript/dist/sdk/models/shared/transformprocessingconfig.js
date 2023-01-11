@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComputeLocationEnum } from "./computelocationenum";
-import { ForwardingConfig } from "./forwardingconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransformProcessingConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var computelocationenum_1 = require("./computelocationenum");
+var forwardingconfig_1 = require("./forwardingconfig");
 // TransformProcessingConfig
 /**
  * The processing configuration for the given transform property. You can configure transforms to be kept at the edge or forwarded to the Amazon Web Services Cloud. You can also configure transforms to be computed at the edge or in the cloud.
@@ -35,13 +38,13 @@ var TransformProcessingConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeLocation" }),
         __metadata("design:type", String)
     ], TransformProcessingConfig.prototype, "computeLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=forwardingConfig" }),
-        __metadata("design:type", ForwardingConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=forwardingConfig" }),
+        __metadata("design:type", forwardingconfig_1.ForwardingConfig)
     ], TransformProcessingConfig.prototype, "forwardingConfig", void 0);
     return TransformProcessingConfig;
-}(SpeakeasyBase));
-export { TransformProcessingConfig };
+}(utils_1.SpeakeasyBase));
+exports.TransformProcessingConfig = TransformProcessingConfig;

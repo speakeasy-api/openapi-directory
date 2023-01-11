@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,114 +14,139 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPlaylistByIdResponse = exports.GetPlaylistByIdRequest = exports.GetPlaylistByIdHeaders = exports.GetPlaylistByIdQueryParams = exports.GetPlaylistByIdTypeEnum = exports.GetPlaylistByIdSortEnum = exports.GetPlaylistByIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetPlaylistByIdPathParams = /** @class */ (function (_super) {
     __extends(GetPlaylistByIdPathParams, _super);
     function GetPlaylistByIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetPlaylistByIdPathParams.prototype, "id", void 0);
     return GetPlaylistByIdPathParams;
-}(SpeakeasyBase));
-export { GetPlaylistByIdPathParams };
-export var GetPlaylistByIdSortEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetPlaylistByIdPathParams = GetPlaylistByIdPathParams;
+var GetPlaylistByIdSortEnum;
 (function (GetPlaylistByIdSortEnum) {
     GetPlaylistByIdSortEnum["RecentAddedFirst"] = "recent_added_first";
     GetPlaylistByIdSortEnum["OldestAddedFirst"] = "oldest_added_first";
     GetPlaylistByIdSortEnum["RecentPublishedFirst"] = "recent_published_first";
     GetPlaylistByIdSortEnum["OldestPublishedFirst"] = "oldest_published_first";
-})(GetPlaylistByIdSortEnum || (GetPlaylistByIdSortEnum = {}));
-export var GetPlaylistByIdTypeEnum;
+})(GetPlaylistByIdSortEnum = exports.GetPlaylistByIdSortEnum || (exports.GetPlaylistByIdSortEnum = {}));
+var GetPlaylistByIdTypeEnum;
 (function (GetPlaylistByIdTypeEnum) {
     GetPlaylistByIdTypeEnum["EpisodeList"] = "episode_list";
     GetPlaylistByIdTypeEnum["PodcastList"] = "podcast_list";
-})(GetPlaylistByIdTypeEnum || (GetPlaylistByIdTypeEnum = {}));
+})(GetPlaylistByIdTypeEnum = exports.GetPlaylistByIdTypeEnum || (exports.GetPlaylistByIdTypeEnum = {}));
 var GetPlaylistByIdQueryParams = /** @class */ (function (_super) {
     __extends(GetPlaylistByIdQueryParams, _super);
     function GetPlaylistByIdQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=last_timestamp_ms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=last_timestamp_ms" }),
         __metadata("design:type", Number)
     ], GetPlaylistByIdQueryParams.prototype, "lastTimestampMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetPlaylistByIdQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=type" }),
         __metadata("design:type", String)
     ], GetPlaylistByIdQueryParams.prototype, "type", void 0);
     return GetPlaylistByIdQueryParams;
-}(SpeakeasyBase));
-export { GetPlaylistByIdQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPlaylistByIdQueryParams = GetPlaylistByIdQueryParams;
 var GetPlaylistByIdHeaders = /** @class */ (function (_super) {
     __extends(GetPlaylistByIdHeaders, _super);
     function GetPlaylistByIdHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-ListenAPI-Key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-ListenAPI-Key" }),
         __metadata("design:type", String)
-    ], GetPlaylistByIdHeaders.prototype, "xListenApiKey", void 0);
+    ], GetPlaylistByIdHeaders.prototype, "xListenAPIKey", void 0);
     return GetPlaylistByIdHeaders;
-}(SpeakeasyBase));
-export { GetPlaylistByIdHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetPlaylistByIdHeaders = GetPlaylistByIdHeaders;
 var GetPlaylistByIdRequest = /** @class */ (function (_super) {
     __extends(GetPlaylistByIdRequest, _super);
     function GetPlaylistByIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPlaylistByIdPathParams)
     ], GetPlaylistByIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPlaylistByIdQueryParams)
     ], GetPlaylistByIdRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPlaylistByIdHeaders)
     ], GetPlaylistByIdRequest.prototype, "headers", void 0);
     return GetPlaylistByIdRequest;
-}(SpeakeasyBase));
-export { GetPlaylistByIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPlaylistByIdRequest = GetPlaylistByIdRequest;
 var GetPlaylistByIdResponse = /** @class */ (function (_super) {
     __extends(GetPlaylistByIdResponse, _super);
     function GetPlaylistByIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPlaylistByIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetPlaylistByIdResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.PlaylistResponse)
     ], GetPlaylistByIdResponse.prototype, "playlistResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPlaylistByIdResponse.prototype, "statusCode", void 0);
     return GetPlaylistByIdResponse;
-}(SpeakeasyBase));
-export { GetPlaylistByIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPlaylistByIdResponse = GetPlaylistByIdResponse;

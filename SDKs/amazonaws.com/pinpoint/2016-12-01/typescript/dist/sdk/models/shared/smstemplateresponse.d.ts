@@ -14,5 +14,5 @@ export declare class SmsTemplateResponse extends SpeakeasyBase {
     templateName: string;
     templateType: TemplateTypeEnum;
     version?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

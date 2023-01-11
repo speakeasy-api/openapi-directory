@@ -19,5 +19,5 @@ export declare class ListInflectedFormsRequest extends SpeakeasyBase {
 export declare class ListInflectedFormsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listInflectedForms200ApplicationJsonObjects?: ListInflectedForms200ApplicationJson[];
+    listInflectedForms200ApplicationJSONObjects?: ListInflectedForms200ApplicationJson[];
 }

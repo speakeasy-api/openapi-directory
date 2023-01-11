@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetConsoleOutputActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetConsoleOutputResponse = exports.GetGetConsoleOutputRequest = exports.GetGetConsoleOutputHeaders = exports.GetGetConsoleOutputQueryParams = exports.GetGetConsoleOutputVersionEnum = exports.GetGetConsoleOutputActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetConsoleOutputActionEnum;
 (function (GetGetConsoleOutputActionEnum) {
     GetGetConsoleOutputActionEnum["GetConsoleOutput"] = "GetConsoleOutput";
-})(GetGetConsoleOutputActionEnum || (GetGetConsoleOutputActionEnum = {}));
-export var GetGetConsoleOutputVersionEnum;
+})(GetGetConsoleOutputActionEnum = exports.GetGetConsoleOutputActionEnum || (exports.GetGetConsoleOutputActionEnum = {}));
+var GetGetConsoleOutputVersionEnum;
 (function (GetGetConsoleOutputVersionEnum) {
     GetGetConsoleOutputVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetGetConsoleOutputVersionEnum || (GetGetConsoleOutputVersionEnum = {}));
+})(GetGetConsoleOutputVersionEnum = exports.GetGetConsoleOutputVersionEnum || (exports.GetGetConsoleOutputVersionEnum = {}));
 var GetGetConsoleOutputQueryParams = /** @class */ (function (_super) {
     __extends(GetGetConsoleOutputQueryParams, _super);
     function GetGetConsoleOutputQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetGetConsoleOutputQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetGetConsoleOutputQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=InstanceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=InstanceId" }),
         __metadata("design:type", String)
     ], GetGetConsoleOutputQueryParams.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Latest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Latest" }),
         __metadata("design:type", Boolean)
     ], GetGetConsoleOutputQueryParams.prototype, "latest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetGetConsoleOutputQueryParams.prototype, "version", void 0);
     return GetGetConsoleOutputQueryParams;
-}(SpeakeasyBase));
-export { GetGetConsoleOutputQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetConsoleOutputQueryParams = GetGetConsoleOutputQueryParams;
 var GetGetConsoleOutputHeaders = /** @class */ (function (_super) {
     __extends(GetGetConsoleOutputHeaders, _super);
     function GetGetConsoleOutputHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetGetConsoleOutputHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetGetConsoleOutputHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetGetConsoleOutputHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetGetConsoleOutputHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetGetConsoleOutputHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetGetConsoleOutputHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetGetConsoleOutputHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetGetConsoleOutputHeaders;
-}(SpeakeasyBase));
-export { GetGetConsoleOutputHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetGetConsoleOutputHeaders = GetGetConsoleOutputHeaders;
 var GetGetConsoleOutputRequest = /** @class */ (function (_super) {
     __extends(GetGetConsoleOutputRequest, _super);
     function GetGetConsoleOutputRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetConsoleOutputQueryParams)
     ], GetGetConsoleOutputRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetConsoleOutputHeaders)
     ], GetGetConsoleOutputRequest.prototype, "headers", void 0);
     return GetGetConsoleOutputRequest;
-}(SpeakeasyBase));
-export { GetGetConsoleOutputRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetConsoleOutputRequest = GetGetConsoleOutputRequest;
 var GetGetConsoleOutputResponse = /** @class */ (function (_super) {
     __extends(GetGetConsoleOutputResponse, _super);
     function GetGetConsoleOutputResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGetConsoleOutputResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetConsoleOutputResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetConsoleOutputResponse.prototype, "statusCode", void 0);
     return GetGetConsoleOutputResponse;
-}(SpeakeasyBase));
-export { GetGetConsoleOutputResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetConsoleOutputResponse = GetGetConsoleOutputResponse;

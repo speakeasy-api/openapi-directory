@@ -23,7 +23,7 @@ export declare class WebsecurityscannerProjectsScanConfigsStartSecurity extends 
 export declare class WebsecurityscannerProjectsScanConfigsStartRequest extends SpeakeasyBase {
     pathParams: WebsecurityscannerProjectsScanConfigsStartPathParams;
     queryParams: WebsecurityscannerProjectsScanConfigsStartQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: WebsecurityscannerProjectsScanConfigsStartSecurity;
 }
 export declare class WebsecurityscannerProjectsScanConfigsStartResponse extends SpeakeasyBase {

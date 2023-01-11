@@ -23,7 +23,7 @@ export declare class StartReportCreationResponse extends SpeakeasyBase {
     contentType: string;
     internalServiceException?: any;
     invalidParameterException?: any;
-    startReportCreationOutput?: Map<string, any>;
+    startReportCreationOutput?: Record<string, any>;
     statusCode: number;
     throttledException?: any;
 }

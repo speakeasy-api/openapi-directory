@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EngineVersion } from "./engineversion";
-import { WorkGroupStateEnum } from "./workgroupstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkGroupSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var engineversion_1 = require("./engineversion");
+var workgroupstateenum_1 = require("./workgroupstateenum");
 // WorkGroupSummary
 /**
  * The summary information for the workgroup, which includes its name, state, description, and the date and time it was created.
@@ -35,25 +38,25 @@ var WorkGroupSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationTime" }),
         __metadata("design:type", Date)
     ], WorkGroupSummary.prototype, "creationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], WorkGroupSummary.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EngineVersion" }),
-        __metadata("design:type", EngineVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EngineVersion" }),
+        __metadata("design:type", engineversion_1.EngineVersion)
     ], WorkGroupSummary.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], WorkGroupSummary.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], WorkGroupSummary.prototype, "state", void 0);
     return WorkGroupSummary;
-}(SpeakeasyBase));
-export { WorkGroupSummary };
+}(utils_1.SpeakeasyBase));
+exports.WorkGroupSummary = WorkGroupSummary;

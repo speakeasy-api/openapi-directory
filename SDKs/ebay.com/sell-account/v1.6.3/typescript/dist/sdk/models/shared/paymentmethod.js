@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecipientAccountReference } from "./recipientaccountreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentMethod = void 0;
+var utils_1 = require("../../../internal/utils");
+var recipientaccountreference_1 = require("./recipientaccountreference");
 // PaymentMethod
 /**
  * Container specifying a payment method that is accepted by the seller. Specify multiple payment methods by repeating this container. For more on payment methods, see Accepted payments policy. Note that payment methods are not applicable to classified ad listings &ndash; all classified ad payments are handled off of the eBay platform.
@@ -34,17 +37,17 @@ var PaymentMethod = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=brands" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=brands" }),
         __metadata("design:type", Array)
     ], PaymentMethod.prototype, "brands", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentMethodType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentMethodType" }),
         __metadata("design:type", String)
     ], PaymentMethod.prototype, "paymentMethodType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recipientAccountReference" }),
-        __metadata("design:type", RecipientAccountReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recipientAccountReference" }),
+        __metadata("design:type", recipientaccountreference_1.RecipientAccountReference)
     ], PaymentMethod.prototype, "recipientAccountReference", void 0);
     return PaymentMethod;
-}(SpeakeasyBase));
-export { PaymentMethod };
+}(utils_1.SpeakeasyBase));
+exports.PaymentMethod = PaymentMethod;

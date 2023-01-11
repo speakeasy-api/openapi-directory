@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ZoneStatistics } from "./zonestatistics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ZoneStats = void 0;
+var utils_1 = require("../../../internal/utils");
+var zonestatistics_1 = require("./zonestatistics");
 var ZoneStats = /** @class */ (function (_super) {
     __extends(ZoneStats, _super);
     function ZoneStats() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_page" }),
         __metadata("design:type", String)
     ], ZoneStats.prototype, "nextPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statistics", elemType: ZoneStatistics }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statistics", elemType: zonestatistics_1.ZoneStatistics }),
         __metadata("design:type", Array)
     ], ZoneStats.prototype, "statistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time" }),
         __metadata("design:type", String)
     ], ZoneStats.prototype, "time", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], ZoneStats.prototype, "total", void 0);
     return ZoneStats;
-}(SpeakeasyBase));
-export { ZoneStats };
+}(utils_1.SpeakeasyBase));
+exports.ZoneStats = ZoneStats;

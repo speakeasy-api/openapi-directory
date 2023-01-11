@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LoggingConfiguration } from "./loggingconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLoggingConfigurationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var loggingconfiguration_1 = require("./loggingconfiguration");
 var GetLoggingConfigurationResponse = /** @class */ (function (_super) {
     __extends(GetLoggingConfigurationResponse, _super);
     function GetLoggingConfigurationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LoggingConfiguration" }),
-        __metadata("design:type", LoggingConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LoggingConfiguration" }),
+        __metadata("design:type", loggingconfiguration_1.LoggingConfiguration)
     ], GetLoggingConfigurationResponse.prototype, "loggingConfiguration", void 0);
     return GetLoggingConfigurationResponse;
-}(SpeakeasyBase));
-export { GetLoggingConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetLoggingConfigurationResponse = GetLoggingConfigurationResponse;

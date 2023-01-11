@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PolicyControllerMonitoringConfig } from "./policycontrollermonitoringconfig";
-import { PolicyControllerTemplateLibraryConfig } from "./policycontrollertemplatelibraryconfig";
-export var PolicyControllerHubConfigInstallSpecEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PolicyControllerHubConfig = exports.PolicyControllerHubConfigInstallSpecEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var policycontrollermonitoringconfig_1 = require("./policycontrollermonitoringconfig");
+var policycontrollertemplatelibraryconfig_1 = require("./policycontrollertemplatelibraryconfig");
+var PolicyControllerHubConfigInstallSpecEnum;
 (function (PolicyControllerHubConfigInstallSpecEnum) {
     PolicyControllerHubConfigInstallSpecEnum["InstallSpecUnspecified"] = "INSTALL_SPEC_UNSPECIFIED";
     PolicyControllerHubConfigInstallSpecEnum["InstallSpecNotInstalled"] = "INSTALL_SPEC_NOT_INSTALLED";
     PolicyControllerHubConfigInstallSpecEnum["InstallSpecEnabled"] = "INSTALL_SPEC_ENABLED";
     PolicyControllerHubConfigInstallSpecEnum["InstallSpecSuspended"] = "INSTALL_SPEC_SUSPENDED";
-})(PolicyControllerHubConfigInstallSpecEnum || (PolicyControllerHubConfigInstallSpecEnum = {}));
+})(PolicyControllerHubConfigInstallSpecEnum = exports.PolicyControllerHubConfigInstallSpecEnum || (exports.PolicyControllerHubConfigInstallSpecEnum = {}));
 // PolicyControllerHubConfig
 /**
  * Configuration for Policy Controller
@@ -42,37 +45,37 @@ var PolicyControllerHubConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auditIntervalSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auditIntervalSeconds" }),
         __metadata("design:type", String)
     ], PolicyControllerHubConfig.prototype, "auditIntervalSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exemptableNamespaces" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exemptableNamespaces" }),
         __metadata("design:type", Array)
     ], PolicyControllerHubConfig.prototype, "exemptableNamespaces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=installSpec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=installSpec" }),
         __metadata("design:type", String)
     ], PolicyControllerHubConfig.prototype, "installSpec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logDeniesEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logDeniesEnabled" }),
         __metadata("design:type", Boolean)
     ], PolicyControllerHubConfig.prototype, "logDeniesEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monitoring" }),
-        __metadata("design:type", PolicyControllerMonitoringConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monitoring" }),
+        __metadata("design:type", policycontrollermonitoringconfig_1.PolicyControllerMonitoringConfig)
     ], PolicyControllerHubConfig.prototype, "monitoring", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mutationEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mutationEnabled" }),
         __metadata("design:type", Boolean)
     ], PolicyControllerHubConfig.prototype, "mutationEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referentialRulesEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referentialRulesEnabled" }),
         __metadata("design:type", Boolean)
     ], PolicyControllerHubConfig.prototype, "referentialRulesEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=templateLibraryConfig" }),
-        __metadata("design:type", PolicyControllerTemplateLibraryConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=templateLibraryConfig" }),
+        __metadata("design:type", policycontrollertemplatelibraryconfig_1.PolicyControllerTemplateLibraryConfig)
     ], PolicyControllerHubConfig.prototype, "templateLibraryConfig", void 0);
     return PolicyControllerHubConfig;
-}(SpeakeasyBase));
-export { PolicyControllerHubConfig };
+}(utils_1.SpeakeasyBase));
+exports.PolicyControllerHubConfig = PolicyControllerHubConfig;

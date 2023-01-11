@@ -24,7 +24,7 @@ export declare class GetOccupantsNearOutputFormatQueryParams extends SpeakeasyBa
     locationDescriptor?: GetOccupantsNearOutputFormatLocationDescriptorEnum;
     maxDistance?: number;
     maxResults?: number;
-    outputSrs?: number;
+    outputSRS?: number;
     point: string;
     setBack?: number;
     tags?: string;

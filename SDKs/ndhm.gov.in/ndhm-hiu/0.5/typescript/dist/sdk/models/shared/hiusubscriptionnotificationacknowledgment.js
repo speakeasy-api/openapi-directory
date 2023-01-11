@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,54 +23,56 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Error } from "./error";
-import { RequestReference } from "./requestreference";
-export var HiuSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HiuSubscriptionNotificationAcknowledgment = exports.HiuSubscriptionNotificationAcknowledgmentAcknowledgement = exports.HiuSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var error_1 = require("./error");
+var requestreference_1 = require("./requestreference");
+var HiuSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnum;
 (function (HiuSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnum) {
     HiuSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnum["Ok"] = "OK";
-})(HiuSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnum || (HiuSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnum = {}));
+})(HiuSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnum = exports.HiuSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnum || (exports.HiuSubscriptionNotificationAcknowledgmentAcknowledgementStatusEnum = {}));
 var HiuSubscriptionNotificationAcknowledgmentAcknowledgement = /** @class */ (function (_super) {
     __extends(HiuSubscriptionNotificationAcknowledgmentAcknowledgement, _super);
     function HiuSubscriptionNotificationAcknowledgmentAcknowledgement() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventId" }),
         __metadata("design:type", String)
     ], HiuSubscriptionNotificationAcknowledgmentAcknowledgement.prototype, "eventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], HiuSubscriptionNotificationAcknowledgmentAcknowledgement.prototype, "status", void 0);
     return HiuSubscriptionNotificationAcknowledgmentAcknowledgement;
-}(SpeakeasyBase));
-export { HiuSubscriptionNotificationAcknowledgmentAcknowledgement };
+}(utils_1.SpeakeasyBase));
+exports.HiuSubscriptionNotificationAcknowledgmentAcknowledgement = HiuSubscriptionNotificationAcknowledgmentAcknowledgement;
 var HiuSubscriptionNotificationAcknowledgment = /** @class */ (function (_super) {
     __extends(HiuSubscriptionNotificationAcknowledgment, _super);
     function HiuSubscriptionNotificationAcknowledgment() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acknowledgement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acknowledgement" }),
         __metadata("design:type", HiuSubscriptionNotificationAcknowledgmentAcknowledgement)
     ], HiuSubscriptionNotificationAcknowledgment.prototype, "acknowledgement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Error)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", error_1.ErrorT)
     ], HiuSubscriptionNotificationAcknowledgment.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], HiuSubscriptionNotificationAcknowledgment.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resp" }),
-        __metadata("design:type", RequestReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resp" }),
+        __metadata("design:type", requestreference_1.RequestReference)
     ], HiuSubscriptionNotificationAcknowledgment.prototype, "resp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], HiuSubscriptionNotificationAcknowledgment.prototype, "timestamp", void 0);
     return HiuSubscriptionNotificationAcknowledgment;
-}(SpeakeasyBase));
-export { HiuSubscriptionNotificationAcknowledgment };
+}(utils_1.SpeakeasyBase));
+exports.HiuSubscriptionNotificationAcknowledgment = HiuSubscriptionNotificationAcknowledgment;

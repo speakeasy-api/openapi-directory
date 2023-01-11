@@ -51,7 +51,7 @@ export class DisassociateConnectionAliasResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  disassociateConnectionAliasResult?: Map<string, any>;
+  disassociateConnectionAliasResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidParameterValuesException?: any;

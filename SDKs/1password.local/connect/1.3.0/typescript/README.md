@@ -16,110 +16,29 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { CreateVaultItemRequest, CreateVaultItemResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetApiActivityRequest, GetApiActivityResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
 
 const sdk = new SDK();
     
-const req: CreateVaultItemRequest = {
+const req: GetApiActivityRequest = {
   security: {
     connectToken: {
       authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
     },
   },
-  pathParams: {
-    vaultUuid: "sit",
-  },
-  request: {
-    category: "IDENTITY",
-    favorite: true,
-    fields: [
-      {
-        generate: true,
-        id: "dolor",
-        label: "expedita",
-        purpose: "USERNAME",
-        recipe: {
-          characterSets: [
-            "LETTERS",
-          ],
-          length: 2661732831099943416,
-        },
-        section: {
-          id: "rerum",
-        },
-        type: "URL",
-        value: "debitis",
-      },
-      {
-        generate: true,
-        id: "et",
-        label: "ut",
-        purpose: "PASSWORD",
-        recipe: {
-          characterSets: [
-            "LETTERS",
-            "SYMBOLS",
-          ],
-          length: 3930927879439176946,
-        },
-        section: {
-          id: "totam",
-        },
-        type: "TOTP",
-        value: "illum",
-      },
-    ],
-    files: [
-      {
-        content: "vel",
-        id: "odio",
-        name: "dolore",
-        section: {
-          id: "id",
-        },
-        size: 959367522974354090,
-      },
-    ],
-    id: "accusantium",
-    sections: [
-      {
-        id: "commodi",
-        label: "quis",
-      },
-      {
-        id: "est",
-        label: "aut",
-      },
-      {
-        id: "odit",
-        label: "non",
-      },
-    ],
-    tags: [
-      "omnis",
-    ],
-    title: "aut",
-    urls: [
-      {
-        href: "sed",
-        primary: false,
-      },
-    ],
-    vault: {
-      id: "autem",
-    },
-    version: 8514850266767180993,
+  queryParams: {
+    limit: 8717895732742165505,
+    offset: 2259404117704393152,
   },
 };
 
-sdk.sdk.createVaultItem(req).then((res: CreateVaultItemResponse | AxiosError) => {
+sdk.activity.getApiActivity(req).then((res: GetApiActivityResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -128,23 +47,38 @@ sdk.sdk.createVaultItem(req).then((res: CreateVaultItemResponse | AxiosError) =>
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Activity
+
+* `getApiActivity` - Retrieve a list of API Requests that have been made.
+
+### Files
+
+* `downloadFileById` - Get the content of a File
+* `getDetailsOfFileById` - Get the details of a File
+* `getItemFiles` - Get all the files inside an Item
+
+### Health
+
+* `getHeartbeat` - Ping the server for liveness
+* `getServerHealth` - Get state of the server and its dependencies.
+
+### Items
 
 * `createVaultItem` - Create a new Item
 * `deleteVaultItem` - Delete an Item
-* `downloadFileById` - Get the content of a File
-* `getApiActivity` - Retrieve a list of API Requests that have been made.
-* `getDetailsOfFileById` - Get the details of a File
-* `getHeartbeat` - Ping the server for liveness
-* `getItemFiles` - Get all the files inside an Item
-* `getPrometheusMetrics` - Query server for exposed Prometheus metrics
-* `getServerHealth` - Get state of the server and its dependencies.
-* `getVaultById` - Get Vault details and metadata
 * `getVaultItemById` - Get the details of an Item
 * `getVaultItems` - Get all items for inside a Vault
-* `getVaults` - Get all Vaults
 * `patchVaultItem` - Update a subset of Item attributes
 * `updateVaultItem` - Update an Item
+
+### Metrics
+
+* `getPrometheusMetrics` - Query server for exposed Prometheus metrics
+
+### Vaults
+
+* `getVaultById` - Get Vault details and metadata
+* `getVaults` - Get all Vaults
 
 <!-- End SDK Available Operations -->
 

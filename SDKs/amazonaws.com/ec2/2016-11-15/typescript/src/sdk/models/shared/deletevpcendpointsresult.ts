@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UnsuccessfulItem } from "./unsuccessfulitem";
 
 
 
@@ -8,6 +7,6 @@ import { UnsuccessfulItem } from "./unsuccessfulitem";
  * Contains the output of DeleteVpcEndpoints.
 **/
 export class DeleteVpcEndpointsResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: UnsuccessfulItem })
-  unsuccessful?: UnsuccessfulItem[];
+  @SpeakeasyMetadata()
+  unsuccessful?: Record<string, any>;
 }

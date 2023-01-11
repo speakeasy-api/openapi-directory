@@ -9,7 +9,7 @@ import { ApplicationStatusEnum } from "./applicationstatusenum";
 **/
 export class ApplicationSummary extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ApplicationARN" })
-  applicationArn: string;
+  applicationARN: string;
 
   @SpeakeasyMetadata({ data: "json, name=ApplicationName" })
   applicationName: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsDownloadWorkflowRunLogsResponse = exports.ActionsDownloadWorkflowRunLogsRequest = exports.ActionsDownloadWorkflowRunLogsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsDownloadWorkflowRunLogsPathParams = /** @class */ (function (_super) {
     __extends(ActionsDownloadWorkflowRunLogsPathParams, _super);
     function ActionsDownloadWorkflowRunLogsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], ActionsDownloadWorkflowRunLogsPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], ActionsDownloadWorkflowRunLogsPathParams.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=run_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=run_id" }),
         __metadata("design:type", Number)
     ], ActionsDownloadWorkflowRunLogsPathParams.prototype, "runId", void 0);
     return ActionsDownloadWorkflowRunLogsPathParams;
-}(SpeakeasyBase));
-export { ActionsDownloadWorkflowRunLogsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDownloadWorkflowRunLogsPathParams = ActionsDownloadWorkflowRunLogsPathParams;
 var ActionsDownloadWorkflowRunLogsRequest = /** @class */ (function (_super) {
     __extends(ActionsDownloadWorkflowRunLogsRequest, _super);
     function ActionsDownloadWorkflowRunLogsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsDownloadWorkflowRunLogsPathParams)
     ], ActionsDownloadWorkflowRunLogsRequest.prototype, "pathParams", void 0);
     return ActionsDownloadWorkflowRunLogsRequest;
-}(SpeakeasyBase));
-export { ActionsDownloadWorkflowRunLogsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDownloadWorkflowRunLogsRequest = ActionsDownloadWorkflowRunLogsRequest;
 var ActionsDownloadWorkflowRunLogsResponse = /** @class */ (function (_super) {
     __extends(ActionsDownloadWorkflowRunLogsResponse, _super);
     function ActionsDownloadWorkflowRunLogsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsDownloadWorkflowRunLogsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ActionsDownloadWorkflowRunLogsResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsDownloadWorkflowRunLogsResponse.prototype, "statusCode", void 0);
     return ActionsDownloadWorkflowRunLogsResponse;
-}(SpeakeasyBase));
-export { ActionsDownloadWorkflowRunLogsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsDownloadWorkflowRunLogsResponse = ActionsDownloadWorkflowRunLogsResponse;

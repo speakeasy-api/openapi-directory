@@ -8,5 +8,5 @@ export declare class ProtocolSnmpv3GetEnginetimeRequest extends SpeakeasyBase {
 export declare class ProtocolSnmpv3GetEnginetimeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSnmpv3GetEnginetime200ApplicationJsonInt32Integer?: number;
+    protocolSnmpv3GetEnginetime200ApplicationJSONInt32Integer?: number;
 }

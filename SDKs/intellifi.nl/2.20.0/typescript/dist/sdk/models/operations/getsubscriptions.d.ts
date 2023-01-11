@@ -40,5 +40,5 @@ export declare class GetSubscriptionsRequest extends SpeakeasyBase {
 export declare class GetSubscriptionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getSubscriptions200ApplicationJsonObject?: GetSubscriptions200ApplicationJson;
+    getSubscriptions200ApplicationJSONObject?: GetSubscriptions200ApplicationJson;
 }

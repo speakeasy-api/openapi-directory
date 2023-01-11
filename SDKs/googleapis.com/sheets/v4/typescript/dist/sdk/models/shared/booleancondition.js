@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConditionValue } from "./conditionvalue";
-export var BooleanConditionTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BooleanCondition = exports.BooleanConditionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var conditionvalue_1 = require("./conditionvalue");
+var BooleanConditionTypeEnum;
 (function (BooleanConditionTypeEnum) {
     BooleanConditionTypeEnum["ConditionTypeUnspecified"] = "CONDITION_TYPE_UNSPECIFIED";
     BooleanConditionTypeEnum["NumberGreater"] = "NUMBER_GREATER";
@@ -58,7 +61,7 @@ export var BooleanConditionTypeEnum;
     BooleanConditionTypeEnum["Boolean"] = "BOOLEAN";
     BooleanConditionTypeEnum["TextNotEq"] = "TEXT_NOT_EQ";
     BooleanConditionTypeEnum["DateNotEq"] = "DATE_NOT_EQ";
-})(BooleanConditionTypeEnum || (BooleanConditionTypeEnum = {}));
+})(BooleanConditionTypeEnum = exports.BooleanConditionTypeEnum || (exports.BooleanConditionTypeEnum = {}));
 // BooleanCondition
 /**
  * A condition that can evaluate to true or false. BooleanConditions are used by conditional formatting, data validation, and the criteria in filters.
@@ -69,13 +72,13 @@ var BooleanCondition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], BooleanCondition.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values", elemType: ConditionValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values", elemType: conditionvalue_1.ConditionValue }),
         __metadata("design:type", Array)
     ], BooleanCondition.prototype, "values", void 0);
     return BooleanCondition;
-}(SpeakeasyBase));
-export { BooleanCondition };
+}(utils_1.SpeakeasyBase));
+exports.BooleanCondition = BooleanCondition;

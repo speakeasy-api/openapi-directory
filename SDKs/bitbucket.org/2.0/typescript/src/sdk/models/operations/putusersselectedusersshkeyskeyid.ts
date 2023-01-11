@@ -29,7 +29,7 @@ export class PutUsersSelectedUserSshKeysKeyIdRequest extends SpeakeasyBase {
   pathParams: PutUsersSelectedUserSshKeysKeyIdPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: PutUsersSelectedUserSshKeysKeyIdSecurity;
@@ -44,8 +44,8 @@ export class PutUsersSelectedUserSshKeysKeyIdResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  sshAccountKey?: Map<string, any>;
+  sshAccountKey?: Record<string, any>;
 }

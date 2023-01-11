@@ -8,7 +8,7 @@ export declare class ServerTlsPolicy extends SpeakeasyBase {
     allowOpen?: boolean;
     createTime?: string;
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     mtlsPolicy?: MtlsPolicy;
     name?: string;
     serverCertificate?: GoogleCloudNetworksecurityV1CertificateProvider;
@@ -20,7 +20,7 @@ export declare class ServerTlsPolicy extends SpeakeasyBase {
 export declare class ServerTlsPolicyInput extends SpeakeasyBase {
     allowOpen?: boolean;
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     mtlsPolicy?: MtlsPolicy;
     name?: string;
     serverCertificate?: GoogleCloudNetworksecurityV1CertificateProvider;

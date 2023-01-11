@@ -1,4 +1,7 @@
-export var SourceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SourceTypeEnum = void 0;
+var SourceTypeEnum;
 (function (SourceTypeEnum) {
     SourceTypeEnum["DbInstance"] = "db-instance";
     SourceTypeEnum["DbParameterGroup"] = "db-parameter-group";
@@ -6,4 +9,4 @@ export var SourceTypeEnum;
     SourceTypeEnum["DbSnapshot"] = "db-snapshot";
     SourceTypeEnum["DbCluster"] = "db-cluster";
     SourceTypeEnum["DbClusterSnapshot"] = "db-cluster-snapshot";
-})(SourceTypeEnum || (SourceTypeEnum = {}));
+})(SourceTypeEnum = exports.SourceTypeEnum || (exports.SourceTypeEnum = {}));

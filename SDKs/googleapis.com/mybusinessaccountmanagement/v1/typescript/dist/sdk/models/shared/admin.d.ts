@@ -9,19 +9,19 @@ export declare enum AdminRoleEnum {
 /**
  * An administrator of an Account or a location.
 **/
-export declare class Admin extends SpeakeasyBase {
+export declare class AdminInput extends SpeakeasyBase {
     account?: string;
     admin?: string;
     name?: string;
-    pendingInvitation?: boolean;
     role?: AdminRoleEnum;
 }
 /**
  * An administrator of an Account or a location.
 **/
-export declare class AdminInput extends SpeakeasyBase {
+export declare class Admin extends SpeakeasyBase {
     account?: string;
     admin?: string;
     name?: string;
+    pendingInvitation?: boolean;
     role?: AdminRoleEnum;
 }

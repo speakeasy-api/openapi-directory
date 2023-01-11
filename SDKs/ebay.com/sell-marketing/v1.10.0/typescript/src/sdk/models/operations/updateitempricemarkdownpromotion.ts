@@ -35,5 +35,5 @@ export class UpdateItemPriceMarkdownPromotionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateItemPriceMarkdownPromotion200ApplicationJsonObject?: Map<string, any>;
+  updateItemPriceMarkdownPromotion200ApplicationJSONObject?: Record<string, any>;
 }

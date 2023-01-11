@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateNetworkCameraWirelessProfileResponse = exports.CreateNetworkCameraWirelessProfileRequest = exports.CreateNetworkCameraWirelessProfileRequestBody = exports.CreateNetworkCameraWirelessProfileRequestBodySsid = exports.CreateNetworkCameraWirelessProfileRequestBodySsidAuthModeEnum = exports.CreateNetworkCameraWirelessProfileRequestBodyIdentity = exports.CreateNetworkCameraWirelessProfilePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateNetworkCameraWirelessProfilePathParams = /** @class */ (function (_super) {
     __extends(CreateNetworkCameraWirelessProfilePathParams, _super);
     function CreateNetworkCameraWirelessProfilePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraWirelessProfilePathParams.prototype, "networkId", void 0);
     return CreateNetworkCameraWirelessProfilePathParams;
-}(SpeakeasyBase));
-export { CreateNetworkCameraWirelessProfilePathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkCameraWirelessProfilePathParams = CreateNetworkCameraWirelessProfilePathParams;
 // CreateNetworkCameraWirelessProfileRequestBodyIdentity
 /**
  * The identity of the wireless profile. Required for creating wireless profiles in 8021x-radius auth mode.
@@ -45,21 +48,21 @@ var CreateNetworkCameraWirelessProfileRequestBodyIdentity = /** @class */ (funct
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraWirelessProfileRequestBodyIdentity.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraWirelessProfileRequestBodyIdentity.prototype, "username", void 0);
     return CreateNetworkCameraWirelessProfileRequestBodyIdentity;
-}(SpeakeasyBase));
-export { CreateNetworkCameraWirelessProfileRequestBodyIdentity };
-export var CreateNetworkCameraWirelessProfileRequestBodySsidAuthModeEnum;
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkCameraWirelessProfileRequestBodyIdentity = CreateNetworkCameraWirelessProfileRequestBodyIdentity;
+var CreateNetworkCameraWirelessProfileRequestBodySsidAuthModeEnum;
 (function (CreateNetworkCameraWirelessProfileRequestBodySsidAuthModeEnum) {
     CreateNetworkCameraWirelessProfileRequestBodySsidAuthModeEnum["Psk"] = "psk";
     CreateNetworkCameraWirelessProfileRequestBodySsidAuthModeEnum["EightThousandAndTwentyOnexRadius"] = "8021x-radius";
-})(CreateNetworkCameraWirelessProfileRequestBodySsidAuthModeEnum || (CreateNetworkCameraWirelessProfileRequestBodySsidAuthModeEnum = {}));
+})(CreateNetworkCameraWirelessProfileRequestBodySsidAuthModeEnum = exports.CreateNetworkCameraWirelessProfileRequestBodySsidAuthModeEnum || (exports.CreateNetworkCameraWirelessProfileRequestBodySsidAuthModeEnum = {}));
 // CreateNetworkCameraWirelessProfileRequestBodySsid
 /**
  * The details of the SSID config.
@@ -70,77 +73,77 @@ var CreateNetworkCameraWirelessProfileRequestBodySsid = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authMode" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraWirelessProfileRequestBodySsid.prototype, "authMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionMode" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraWirelessProfileRequestBodySsid.prototype, "encryptionMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraWirelessProfileRequestBodySsid.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=psk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=psk" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraWirelessProfileRequestBodySsid.prototype, "psk", void 0);
     return CreateNetworkCameraWirelessProfileRequestBodySsid;
-}(SpeakeasyBase));
-export { CreateNetworkCameraWirelessProfileRequestBodySsid };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkCameraWirelessProfileRequestBodySsid = CreateNetworkCameraWirelessProfileRequestBodySsid;
 var CreateNetworkCameraWirelessProfileRequestBody = /** @class */ (function (_super) {
     __extends(CreateNetworkCameraWirelessProfileRequestBody, _super);
     function CreateNetworkCameraWirelessProfileRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identity" }),
         __metadata("design:type", CreateNetworkCameraWirelessProfileRequestBodyIdentity)
     ], CreateNetworkCameraWirelessProfileRequestBody.prototype, "identity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CreateNetworkCameraWirelessProfileRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssid" }),
         __metadata("design:type", CreateNetworkCameraWirelessProfileRequestBodySsid)
     ], CreateNetworkCameraWirelessProfileRequestBody.prototype, "ssid", void 0);
     return CreateNetworkCameraWirelessProfileRequestBody;
-}(SpeakeasyBase));
-export { CreateNetworkCameraWirelessProfileRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkCameraWirelessProfileRequestBody = CreateNetworkCameraWirelessProfileRequestBody;
 var CreateNetworkCameraWirelessProfileRequest = /** @class */ (function (_super) {
     __extends(CreateNetworkCameraWirelessProfileRequest, _super);
     function CreateNetworkCameraWirelessProfileRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreateNetworkCameraWirelessProfilePathParams)
     ], CreateNetworkCameraWirelessProfileRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CreateNetworkCameraWirelessProfileRequestBody)
     ], CreateNetworkCameraWirelessProfileRequest.prototype, "request", void 0);
     return CreateNetworkCameraWirelessProfileRequest;
-}(SpeakeasyBase));
-export { CreateNetworkCameraWirelessProfileRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkCameraWirelessProfileRequest = CreateNetworkCameraWirelessProfileRequest;
 var CreateNetworkCameraWirelessProfileResponse = /** @class */ (function (_super) {
     __extends(CreateNetworkCameraWirelessProfileResponse, _super);
     function CreateNetworkCameraWirelessProfileResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreateNetworkCameraWirelessProfileResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreateNetworkCameraWirelessProfileResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], CreateNetworkCameraWirelessProfileResponse.prototype, "createNetworkCameraWirelessProfile200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNetworkCameraWirelessProfileResponse.prototype, "createNetworkCameraWirelessProfile200ApplicationJSONObject", void 0);
     return CreateNetworkCameraWirelessProfileResponse;
-}(SpeakeasyBase));
-export { CreateNetworkCameraWirelessProfileResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateNetworkCameraWirelessProfileResponse = CreateNetworkCameraWirelessProfileResponse;

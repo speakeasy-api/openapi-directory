@@ -1,6 +1,9 @@
-export var CrawlerStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CrawlerStateEnum = void 0;
+var CrawlerStateEnum;
 (function (CrawlerStateEnum) {
     CrawlerStateEnum["Ready"] = "READY";
     CrawlerStateEnum["Running"] = "RUNNING";
     CrawlerStateEnum["Stopping"] = "STOPPING";
-})(CrawlerStateEnum || (CrawlerStateEnum = {}));
+})(CrawlerStateEnum = exports.CrawlerStateEnum || (exports.CrawlerStateEnum = {}));

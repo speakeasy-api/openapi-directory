@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudPolicyanalyzerV1beta1Activity } from "./googlecloudpolicyanalyzerv1beta1activity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPolicyanalyzerV1beta1QueryActivityResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudpolicyanalyzerv1beta1activity_1 = require("./googlecloudpolicyanalyzerv1beta1activity");
 // GoogleCloudPolicyanalyzerV1beta1QueryActivityResponse
 /**
  * Response to the `QueryActivity` method.
@@ -34,13 +37,13 @@ var GoogleCloudPolicyanalyzerV1beta1QueryActivityResponse = /** @class */ (funct
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activities", elemType: GoogleCloudPolicyanalyzerV1beta1Activity }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activities", elemType: googlecloudpolicyanalyzerv1beta1activity_1.GoogleCloudPolicyanalyzerV1beta1Activity }),
         __metadata("design:type", Array)
     ], GoogleCloudPolicyanalyzerV1beta1QueryActivityResponse.prototype, "activities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleCloudPolicyanalyzerV1beta1QueryActivityResponse.prototype, "nextPageToken", void 0);
     return GoogleCloudPolicyanalyzerV1beta1QueryActivityResponse;
-}(SpeakeasyBase));
-export { GoogleCloudPolicyanalyzerV1beta1QueryActivityResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPolicyanalyzerV1beta1QueryActivityResponse = GoogleCloudPolicyanalyzerV1beta1QueryActivityResponse;

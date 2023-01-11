@@ -5,8 +5,8 @@ import { ReplicatingStep } from "./replicatingstep";
 **/
 export declare class CycleStep extends SpeakeasyBase {
     endTime?: string;
-    initializingReplication?: Map<string, any>;
-    postProcessing?: Map<string, any>;
+    initializingReplication?: Record<string, any>;
+    postProcessing?: Record<string, any>;
     replicating?: ReplicatingStep;
     startTime?: string;
 }

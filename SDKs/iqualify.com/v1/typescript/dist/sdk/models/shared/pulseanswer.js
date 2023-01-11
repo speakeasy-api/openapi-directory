@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PulseMcqOption } from "./pulsemcqoption";
-import { PulseSpatialOption } from "./pulsespatialoption";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PulseAnswer = void 0;
+var utils_1 = require("../../../internal/utils");
+var pulsemcqoption_1 = require("./pulsemcqoption");
+var pulsespatialoption_1 = require("./pulsespatialoption");
 var PulseAnswer = /** @class */ (function (_super) {
     __extends(PulseAnswer, _super);
     function PulseAnswer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=multiChoiceAnswer", elemType: PulseMcqOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=multiChoiceAnswer", elemType: pulsemcqoption_1.PulseMcqOption }),
         __metadata("design:type", Array)
     ], PulseAnswer.prototype, "multiChoiceAnswer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spatialAnswer", elemType: PulseSpatialOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spatialAnswer", elemType: pulsespatialoption_1.PulseSpatialOption }),
         __metadata("design:type", Array)
     ], PulseAnswer.prototype, "spatialAnswer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textAnswer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textAnswer" }),
         __metadata("design:type", String)
     ], PulseAnswer.prototype, "textAnswer", void 0);
     return PulseAnswer;
-}(SpeakeasyBase));
-export { PulseAnswer };
+}(utils_1.SpeakeasyBase));
+exports.PulseAnswer = PulseAnswer;

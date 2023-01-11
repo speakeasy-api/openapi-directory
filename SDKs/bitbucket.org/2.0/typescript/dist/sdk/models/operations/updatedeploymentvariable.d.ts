@@ -7,11 +7,11 @@ export declare class UpdateDeploymentVariablePathParams extends SpeakeasyBase {
 }
 export declare class UpdateDeploymentVariableRequest extends SpeakeasyBase {
     pathParams: UpdateDeploymentVariablePathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class UpdateDeploymentVariableResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deploymentVariable?: Map<string, any>;
-    error?: Map<string, any>;
+    deploymentVariable?: Record<string, any>;
+    error?: Record<string, any>;
 }

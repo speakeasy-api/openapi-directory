@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ThirdPartyJobInstruction = exports.ThirdPartyJobInstructionThirdPartyJobInstruction = exports.ThirdPartyJobInstructionThirdPartyJobInstructionEmployer = void 0;
+var utils_1 = require("../../../internal/utils");
 // ThirdPartyJobInstructionThirdPartyJobInstructionEmployer
 /**
  * The third party job instructions' employer
@@ -33,69 +36,69 @@ var ThirdPartyJobInstructionThirdPartyJobInstructionEmployer = /** @class */ (fu
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@href" }),
         __metadata("design:type", String)
     ], ThirdPartyJobInstructionThirdPartyJobInstructionEmployer.prototype, "atHref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@rel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@rel" }),
         __metadata("design:type", String)
     ], ThirdPartyJobInstructionThirdPartyJobInstructionEmployer.prototype, "atRel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@title" }),
         __metadata("design:type", String)
     ], ThirdPartyJobInstructionThirdPartyJobInstructionEmployer.prototype, "atTitle", void 0);
     return ThirdPartyJobInstructionThirdPartyJobInstructionEmployer;
-}(SpeakeasyBase));
-export { ThirdPartyJobInstructionThirdPartyJobInstructionEmployer };
+}(utils_1.SpeakeasyBase));
+exports.ThirdPartyJobInstructionThirdPartyJobInstructionEmployer = ThirdPartyJobInstructionThirdPartyJobInstructionEmployer;
 var ThirdPartyJobInstructionThirdPartyJobInstruction = /** @class */ (function (_super) {
     __extends(ThirdPartyJobInstructionThirdPartyJobInstruction, _super);
     function ThirdPartyJobInstructionThirdPartyJobInstruction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClientIdUniqueKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClientIdUniqueKey" }),
         __metadata("design:type", String)
     ], ThirdPartyJobInstructionThirdPartyJobInstruction.prototype, "clientIdUniqueKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClientSecretUniqueKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClientSecretUniqueKey" }),
         __metadata("design:type", String)
     ], ThirdPartyJobInstructionThirdPartyJobInstruction.prototype, "clientSecretUniqueKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Employer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Employer" }),
         __metadata("design:type", ThirdPartyJobInstructionThirdPartyJobInstructionEmployer)
     ], ThirdPartyJobInstructionThirdPartyJobInstruction.prototype, "employer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HoldingDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HoldingDate" }),
         __metadata("design:type", Date)
     ], ThirdPartyJobInstructionThirdPartyJobInstruction.prototype, "holdingDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InstructionTypeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InstructionTypeName" }),
         __metadata("design:type", String)
     ], ThirdPartyJobInstructionThirdPartyJobInstruction.prototype, "instructionTypeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PayScheduleUniqueKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PayScheduleUniqueKey" }),
         __metadata("design:type", String)
     ], ThirdPartyJobInstructionThirdPartyJobInstruction.prototype, "payScheduleUniqueKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PaymentDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PaymentDate" }),
         __metadata("design:type", Date)
     ], ThirdPartyJobInstructionThirdPartyJobInstruction.prototype, "paymentDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RemoteEndpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RemoteEndpoint" }),
         __metadata("design:type", String)
     ], ThirdPartyJobInstructionThirdPartyJobInstruction.prototype, "remoteEndpoint", void 0);
     return ThirdPartyJobInstructionThirdPartyJobInstruction;
-}(SpeakeasyBase));
-export { ThirdPartyJobInstructionThirdPartyJobInstruction };
+}(utils_1.SpeakeasyBase));
+exports.ThirdPartyJobInstructionThirdPartyJobInstruction = ThirdPartyJobInstructionThirdPartyJobInstruction;
 var ThirdPartyJobInstruction = /** @class */ (function (_super) {
     __extends(ThirdPartyJobInstruction, _super);
     function ThirdPartyJobInstruction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ThirdPartyJobInstruction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ThirdPartyJobInstruction" }),
         __metadata("design:type", ThirdPartyJobInstructionThirdPartyJobInstruction)
     ], ThirdPartyJobInstruction.prototype, "thirdPartyJobInstruction", void 0);
     return ThirdPartyJobInstruction;
-}(SpeakeasyBase));
-export { ThirdPartyJobInstruction };
+}(utils_1.SpeakeasyBase));
+exports.ThirdPartyJobInstruction = ThirdPartyJobInstruction;

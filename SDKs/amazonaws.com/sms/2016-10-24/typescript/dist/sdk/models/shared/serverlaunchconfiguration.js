@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { S3Location } from "./s3location";
-import { ScriptTypeEnum } from "./scripttypeenum";
-import { Server } from "./server";
-import { UserData } from "./userdata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServerLaunchConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var s3location_1 = require("./s3location");
+var scripttypeenum_1 = require("./scripttypeenum");
+var server_1 = require("./server");
+var userdata_1 = require("./userdata");
 // ServerLaunchConfiguration
 /**
  * Launch configuration for a server.
@@ -37,53 +40,53 @@ var ServerLaunchConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=associatePublicIpAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=associatePublicIpAddress" }),
         __metadata("design:type", Boolean)
     ], ServerLaunchConfiguration.prototype, "associatePublicIpAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configureScript" }),
-        __metadata("design:type", S3Location)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configureScript" }),
+        __metadata("design:type", s3location_1.S3Location)
     ], ServerLaunchConfiguration.prototype, "configureScript", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configureScriptType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configureScriptType" }),
         __metadata("design:type", String)
     ], ServerLaunchConfiguration.prototype, "configureScriptType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ec2KeyName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ec2KeyName" }),
         __metadata("design:type", String)
     ], ServerLaunchConfiguration.prototype, "ec2KeyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iamInstanceProfileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iamInstanceProfileName" }),
         __metadata("design:type", String)
     ], ServerLaunchConfiguration.prototype, "iamInstanceProfileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceType" }),
         __metadata("design:type", String)
     ], ServerLaunchConfiguration.prototype, "instanceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logicalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logicalId" }),
         __metadata("design:type", String)
     ], ServerLaunchConfiguration.prototype, "logicalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=securityGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=securityGroup" }),
         __metadata("design:type", String)
     ], ServerLaunchConfiguration.prototype, "securityGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server" }),
-        __metadata("design:type", Server)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server" }),
+        __metadata("design:type", server_1.Server)
     ], ServerLaunchConfiguration.prototype, "server", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subnet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subnet" }),
         __metadata("design:type", String)
     ], ServerLaunchConfiguration.prototype, "subnet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userData" }),
-        __metadata("design:type", UserData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userData" }),
+        __metadata("design:type", userdata_1.UserData)
     ], ServerLaunchConfiguration.prototype, "userData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpc" }),
         __metadata("design:type", String)
     ], ServerLaunchConfiguration.prototype, "vpc", void 0);
     return ServerLaunchConfiguration;
-}(SpeakeasyBase));
-export { ServerLaunchConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.ServerLaunchConfiguration = ServerLaunchConfiguration;

@@ -24,6 +24,6 @@ export declare class GetSpinsRequest extends SpeakeasyBase {
 export declare class GetSpinsResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    getSpins200ApplicationJsonObject?: GetSpins200ApplicationJson;
     statusCode: number;
+    getSpins200ApplicationJSONObject?: GetSpins200ApplicationJson;
 }

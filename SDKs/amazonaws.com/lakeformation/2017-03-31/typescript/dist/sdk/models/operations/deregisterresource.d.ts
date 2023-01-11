@@ -19,7 +19,7 @@ export declare class DeregisterResourceRequest extends SpeakeasyBase {
 }
 export declare class DeregisterResourceResponse extends SpeakeasyBase {
     contentType: string;
-    deregisterResourceResponse?: Map<string, any>;
+    deregisterResourceResponse?: Record<string, any>;
     entityNotFoundException?: any;
     internalServiceException?: any;
     invalidInputException?: any;

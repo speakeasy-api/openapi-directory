@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,90 +14,115 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindTweetsByIdResponse = exports.FindTweetsByIdRequest = exports.FindTweetsByIdQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var FindTweetsByIdQueryParams = /** @class */ (function (_super) {
     __extends(FindTweetsByIdQueryParams, _super);
     function FindTweetsByIdQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=expansions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=expansions" }),
         __metadata("design:type", Array)
     ], FindTweetsByIdQueryParams.prototype, "expansions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=ids" }),
         __metadata("design:type", Array)
     ], FindTweetsByIdQueryParams.prototype, "ids", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=media.fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=media.fields" }),
         __metadata("design:type", Array)
     ], FindTweetsByIdQueryParams.prototype, "mediaFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=place.fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=place.fields" }),
         __metadata("design:type", Array)
     ], FindTweetsByIdQueryParams.prototype, "placeFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=poll.fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=poll.fields" }),
         __metadata("design:type", Array)
     ], FindTweetsByIdQueryParams.prototype, "pollFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=tweet.fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=tweet.fields" }),
         __metadata("design:type", Array)
     ], FindTweetsByIdQueryParams.prototype, "tweetFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=user.fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=user.fields" }),
         __metadata("design:type", Array)
     ], FindTweetsByIdQueryParams.prototype, "userFields", void 0);
     return FindTweetsByIdQueryParams;
-}(SpeakeasyBase));
-export { FindTweetsByIdQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.FindTweetsByIdQueryParams = FindTweetsByIdQueryParams;
 var FindTweetsByIdRequest = /** @class */ (function (_super) {
     __extends(FindTweetsByIdRequest, _super);
     function FindTweetsByIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FindTweetsByIdQueryParams)
     ], FindTweetsByIdRequest.prototype, "queryParams", void 0);
     return FindTweetsByIdRequest;
-}(SpeakeasyBase));
-export { FindTweetsByIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.FindTweetsByIdRequest = FindTweetsByIdRequest;
 var FindTweetsByIdResponse = /** @class */ (function (_super) {
     __extends(FindTweetsByIdResponse, _super);
     function FindTweetsByIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FindTweetsByIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], FindTweetsByIdResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], FindTweetsByIdResponse.prototype, "problem", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FindTweetsByIdResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.TweetLookupResponse)
     ], FindTweetsByIdResponse.prototype, "tweetLookupResponse", void 0);
     return FindTweetsByIdResponse;
-}(SpeakeasyBase));
-export { FindTweetsByIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.FindTweetsByIdResponse = FindTweetsByIdResponse;

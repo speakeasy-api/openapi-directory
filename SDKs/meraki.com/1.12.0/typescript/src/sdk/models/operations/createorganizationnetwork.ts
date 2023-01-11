@@ -57,5 +57,5 @@ export class CreateOrganizationNetworkResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createOrganizationNetwork201ApplicationJsonObject?: Map<string, any>;
+  createOrganizationNetwork201ApplicationJSONObject?: Record<string, any>;
 }

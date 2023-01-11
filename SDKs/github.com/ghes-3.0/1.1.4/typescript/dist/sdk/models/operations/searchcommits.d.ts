@@ -26,6 +26,6 @@ export declare class SearchCommitsRequest extends SpeakeasyBase {
 export declare class SearchCommitsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    searchCommits200ApplicationJsonObject?: SearchCommits200ApplicationJson;
-    searchCommits415ApplicationJsonObject?: SearchCommits415ApplicationJson;
+    searchCommits200ApplicationJSONObject?: SearchCommits200ApplicationJson;
+    searchCommits415ApplicationJSONObject?: SearchCommits415ApplicationJson;
 }

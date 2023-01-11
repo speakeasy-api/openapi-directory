@@ -20,7 +20,7 @@ export declare class DeleteDevicePoolRequest extends SpeakeasyBase {
 export declare class DeleteDevicePoolResponse extends SpeakeasyBase {
     argumentException?: any;
     contentType: string;
-    deleteDevicePoolResult?: Map<string, any>;
+    deleteDevicePoolResult?: Record<string, any>;
     limitExceededException?: any;
     notFoundException?: any;
     serviceAccountException?: any;

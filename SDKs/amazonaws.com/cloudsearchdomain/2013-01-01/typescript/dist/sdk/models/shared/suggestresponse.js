@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SuggestStatus } from "./suggeststatus";
-import { SuggestModel } from "./suggestmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SuggestResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var suggeststatus_1 = require("./suggeststatus");
+var suggestmodel_1 = require("./suggestmodel");
 // SuggestResponse
 /**
  * Contains the response to a <code>Suggest</code> request.
@@ -35,13 +38,13 @@ var SuggestResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", SuggestStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", suggeststatus_1.SuggestStatus)
     ], SuggestResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suggest" }),
-        __metadata("design:type", SuggestModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suggest" }),
+        __metadata("design:type", suggestmodel_1.SuggestModel)
     ], SuggestResponse.prototype, "suggest", void 0);
     return SuggestResponse;
-}(SpeakeasyBase));
-export { SuggestResponse };
+}(utils_1.SpeakeasyBase));
+exports.SuggestResponse = SuggestResponse;

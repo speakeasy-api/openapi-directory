@@ -4,7 +4,7 @@ export declare class GetEventPathParams extends SpeakeasyBase {
     eventId: string;
 }
 export declare class GetEventHeaders extends SpeakeasyBase {
-    xEbayCMarketplaceId: string;
+    xEBAYCMARKETPLACEID: string;
 }
 export declare class GetEventSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;

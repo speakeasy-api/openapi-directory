@@ -25,7 +25,7 @@ export declare class DeleteObjectRequest extends SpeakeasyBase {
 export declare class DeleteObjectResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     contentType: string;
-    deleteObjectResponse?: Map<string, any>;
+    deleteObjectResponse?: Record<string, any>;
     directoryNotEnabledException?: any;
     internalServiceException?: any;
     invalidArnException?: any;

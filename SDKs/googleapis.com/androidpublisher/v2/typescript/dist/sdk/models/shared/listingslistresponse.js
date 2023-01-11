@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Listing } from "./listing";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListingsListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var listing_1 = require("./listing");
 var ListingsListResponse = /** @class */ (function (_super) {
     __extends(ListingsListResponse, _super);
     function ListingsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListingsListResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Listing }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: listing_1.Listing }),
         __metadata("design:type", Array)
     ], ListingsListResponse.prototype, "listings", void 0);
     return ListingsListResponse;
-}(SpeakeasyBase));
-export { ListingsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListingsListResponse = ListingsListResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DisassociateFromAdministratorAccountResponse = exports.DisassociateFromAdministratorAccountRequest = exports.DisassociateFromAdministratorAccountHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var DisassociateFromAdministratorAccountHeaders = /** @class */ (function (_super) {
     __extends(DisassociateFromAdministratorAccountHeaders, _super);
     function DisassociateFromAdministratorAccountHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DisassociateFromAdministratorAccountHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DisassociateFromAdministratorAccountHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DisassociateFromAdministratorAccountHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DisassociateFromAdministratorAccountHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DisassociateFromAdministratorAccountHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DisassociateFromAdministratorAccountHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DisassociateFromAdministratorAccountHeaders.prototype, "xAmzSignedHeaders", void 0);
     return DisassociateFromAdministratorAccountHeaders;
-}(SpeakeasyBase));
-export { DisassociateFromAdministratorAccountHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DisassociateFromAdministratorAccountHeaders = DisassociateFromAdministratorAccountHeaders;
 var DisassociateFromAdministratorAccountRequest = /** @class */ (function (_super) {
     __extends(DisassociateFromAdministratorAccountRequest, _super);
     function DisassociateFromAdministratorAccountRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DisassociateFromAdministratorAccountHeaders)
     ], DisassociateFromAdministratorAccountRequest.prototype, "headers", void 0);
     return DisassociateFromAdministratorAccountRequest;
-}(SpeakeasyBase));
-export { DisassociateFromAdministratorAccountRequest };
+}(utils_1.SpeakeasyBase));
+exports.DisassociateFromAdministratorAccountRequest = DisassociateFromAdministratorAccountRequest;
 var DisassociateFromAdministratorAccountResponse = /** @class */ (function (_super) {
     __extends(DisassociateFromAdministratorAccountResponse, _super);
     function DisassociateFromAdministratorAccountResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DisassociateFromAdministratorAccountResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DisassociateFromAdministratorAccountResponse.prototype, "conflictException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DisassociateFromAdministratorAccountResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DisassociateFromAdministratorAccountResponse.prototype, "disassociateFromAdministratorAccountResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DisassociateFromAdministratorAccountResponse.prototype, "internalServerException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DisassociateFromAdministratorAccountResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DisassociateFromAdministratorAccountResponse.prototype, "serviceQuotaExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DisassociateFromAdministratorAccountResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DisassociateFromAdministratorAccountResponse.prototype, "throttlingException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DisassociateFromAdministratorAccountResponse.prototype, "validationException", void 0);
     return DisassociateFromAdministratorAccountResponse;
-}(SpeakeasyBase));
-export { DisassociateFromAdministratorAccountResponse };
+}(utils_1.SpeakeasyBase));
+exports.DisassociateFromAdministratorAccountResponse = DisassociateFromAdministratorAccountResponse;

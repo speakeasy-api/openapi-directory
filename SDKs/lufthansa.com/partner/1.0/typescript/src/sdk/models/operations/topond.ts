@@ -44,5 +44,5 @@ export class TopOndResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  topOnd200ApplicationJsonString?: string;
+  topOND200ApplicationJSONString?: string;
 }

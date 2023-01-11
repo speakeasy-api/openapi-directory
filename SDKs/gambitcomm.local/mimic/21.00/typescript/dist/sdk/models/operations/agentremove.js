@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgentRemoveResponse = exports.AgentRemoveRequest = exports.AgentRemovePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AgentRemovePathParams = /** @class */ (function (_super) {
     __extends(AgentRemovePathParams, _super);
     function AgentRemovePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], AgentRemovePathParams.prototype, "agentNum", void 0);
     return AgentRemovePathParams;
-}(SpeakeasyBase));
-export { AgentRemovePathParams };
+}(utils_1.SpeakeasyBase));
+exports.AgentRemovePathParams = AgentRemovePathParams;
 var AgentRemoveRequest = /** @class */ (function (_super) {
     __extends(AgentRemoveRequest, _super);
     function AgentRemoveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AgentRemovePathParams)
     ], AgentRemoveRequest.prototype, "pathParams", void 0);
     return AgentRemoveRequest;
-}(SpeakeasyBase));
-export { AgentRemoveRequest };
+}(utils_1.SpeakeasyBase));
+exports.AgentRemoveRequest = AgentRemoveRequest;
 var AgentRemoveResponse = /** @class */ (function (_super) {
     __extends(AgentRemoveResponse, _super);
     function AgentRemoveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AgentRemoveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AgentRemoveResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], AgentRemoveResponse.prototype, "agentRemove200ApplicationJsonString", void 0);
+    ], AgentRemoveResponse.prototype, "agentRemove200ApplicationJSONString", void 0);
     return AgentRemoveResponse;
-}(SpeakeasyBase));
-export { AgentRemoveResponse };
+}(utils_1.SpeakeasyBase));
+exports.AgentRemoveResponse = AgentRemoveResponse;

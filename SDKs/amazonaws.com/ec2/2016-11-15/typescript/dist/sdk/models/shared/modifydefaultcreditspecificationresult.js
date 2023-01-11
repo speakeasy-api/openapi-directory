@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceFamilyCreditSpecification } from "./instancefamilycreditspecification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyDefaultCreditSpecificationResult = exports.ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecification = void 0;
+var utils_1 = require("../../../internal/utils");
+// ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecification
+/**
+ * The default credit option for CPU usage of the instance family.
+**/
+var ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecification = /** @class */ (function (_super) {
+    __extends(ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecification, _super);
+    function ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecification() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecification.prototype, "cpuCredits", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecification.prototype, "instanceFamily", void 0);
+    return ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecification;
+}(utils_1.SpeakeasyBase));
+exports.ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecification = ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecification;
 var ModifyDefaultCreditSpecificationResult = /** @class */ (function (_super) {
     __extends(ModifyDefaultCreditSpecificationResult, _super);
     function ModifyDefaultCreditSpecificationResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", InstanceFamilyCreditSpecification)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecification)
     ], ModifyDefaultCreditSpecificationResult.prototype, "instanceFamilyCreditSpecification", void 0);
     return ModifyDefaultCreditSpecificationResult;
-}(SpeakeasyBase));
-export { ModifyDefaultCreditSpecificationResult };
+}(utils_1.SpeakeasyBase));
+exports.ModifyDefaultCreditSpecificationResult = ModifyDefaultCreditSpecificationResult;

@@ -53,5 +53,5 @@ export class UpdateNetworkSmDevicesFieldsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkSmDevicesFields200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkSmDevicesFields200ApplicationJSONObject?: Record<string, any>;
 }

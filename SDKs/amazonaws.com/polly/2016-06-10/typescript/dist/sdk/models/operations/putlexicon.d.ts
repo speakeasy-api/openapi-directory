@@ -25,7 +25,7 @@ export declare class PutLexiconResponse extends SpeakeasyBase {
     lexiconSizeExceededException?: any;
     maxLexemeLengthExceededException?: any;
     maxLexiconsNumberExceededException?: any;
-    putLexiconOutput?: Map<string, any>;
+    putLexiconOutput?: Record<string, any>;
     serviceFailureException?: any;
     statusCode: number;
     unsupportedPlsAlphabetException?: any;

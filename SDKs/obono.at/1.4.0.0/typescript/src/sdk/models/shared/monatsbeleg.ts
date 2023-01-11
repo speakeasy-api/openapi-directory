@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class Monatsbeleg extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Beleg-UUID" })
-  belegUuid?: string;
+  belegUUID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=FON-Geprueft-Datum-Uhrzeit" })
   fonGeprueftDatumUhrzeit?: string;

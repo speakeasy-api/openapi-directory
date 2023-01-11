@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AwsEc2NetworkInterfaceViolation } from "./awsec2networkinterfaceviolation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AwsEc2InstanceViolation = void 0;
+var utils_1 = require("../../../internal/utils");
+var awsec2networkinterfaceviolation_1 = require("./awsec2networkinterfaceviolation");
 // AwsEc2InstanceViolation
 /**
  * Violation detail for an EC2 instance resource.
@@ -34,13 +37,13 @@ var AwsEc2InstanceViolation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AwsEc2NetworkInterfaceViolations", elemType: AwsEc2NetworkInterfaceViolation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AwsEc2NetworkInterfaceViolations", elemType: awsec2networkinterfaceviolation_1.AwsEc2NetworkInterfaceViolation }),
         __metadata("design:type", Array)
     ], AwsEc2InstanceViolation.prototype, "awsEc2NetworkInterfaceViolations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ViolationTarget" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ViolationTarget" }),
         __metadata("design:type", String)
     ], AwsEc2InstanceViolation.prototype, "violationTarget", void 0);
     return AwsEc2InstanceViolation;
-}(SpeakeasyBase));
-export { AwsEc2InstanceViolation };
+}(utils_1.SpeakeasyBase));
+exports.AwsEc2InstanceViolation = AwsEc2InstanceViolation;

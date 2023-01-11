@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AssociateServiceQuotaTemplateRequest, AssociateServiceQuotaTemplateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,23 +33,21 @@ const sdk = new SDK(WithSecurity(
     
 const req: AssociateServiceQuotaTemplateRequest = {
   headers: {
-    xAmzAlgorithm: "ut",
-    xAmzContentSha256: "et",
-    xAmzCredential: "est",
-    xAmzDate: "consectetur",
-    xAmzSecurityToken: "dignissimos",
-    xAmzSignature: "ut",
-    xAmzSignedHeaders: "et",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "ServiceQuotasV20190624.AssociateServiceQuotaTemplate",
   },
   request: {
-    "veritatis": "molestiae",
-    "ad": "aut",
-    "esse": "rerum",
+    "et": "nihil",
   },
 };
 
-sdk.sdk.associateServiceQuotaTemplate(req).then((res: AssociateServiceQuotaTemplateResponse | AxiosError) => {
+sdk.associateServiceQuotaTemplate(req).then((res: AssociateServiceQuotaTemplateResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteDetectorModelResponse = exports.DeleteDetectorModelRequest = exports.DeleteDetectorModelHeaders = exports.DeleteDetectorModelPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteDetectorModelPathParams = /** @class */ (function (_super) {
     __extends(DeleteDetectorModelPathParams, _super);
     function DeleteDetectorModelPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=detectorModelName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=detectorModelName" }),
         __metadata("design:type", String)
     ], DeleteDetectorModelPathParams.prototype, "detectorModelName", void 0);
     return DeleteDetectorModelPathParams;
-}(SpeakeasyBase));
-export { DeleteDetectorModelPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDetectorModelPathParams = DeleteDetectorModelPathParams;
 var DeleteDetectorModelHeaders = /** @class */ (function (_super) {
     __extends(DeleteDetectorModelHeaders, _super);
     function DeleteDetectorModelHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DeleteDetectorModelHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DeleteDetectorModelHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DeleteDetectorModelHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DeleteDetectorModelHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DeleteDetectorModelHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DeleteDetectorModelHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DeleteDetectorModelHeaders.prototype, "xAmzSignedHeaders", void 0);
     return DeleteDetectorModelHeaders;
-}(SpeakeasyBase));
-export { DeleteDetectorModelHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDetectorModelHeaders = DeleteDetectorModelHeaders;
 var DeleteDetectorModelRequest = /** @class */ (function (_super) {
     __extends(DeleteDetectorModelRequest, _super);
     function DeleteDetectorModelRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteDetectorModelPathParams)
     ], DeleteDetectorModelRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteDetectorModelHeaders)
     ], DeleteDetectorModelRequest.prototype, "headers", void 0);
     return DeleteDetectorModelRequest;
-}(SpeakeasyBase));
-export { DeleteDetectorModelRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDetectorModelRequest = DeleteDetectorModelRequest;
 var DeleteDetectorModelResponse = /** @class */ (function (_super) {
     __extends(DeleteDetectorModelResponse, _super);
     function DeleteDetectorModelResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteDetectorModelResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], DeleteDetectorModelResponse.prototype, "deleteDetectorModelResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteDetectorModelResponse.prototype, "internalFailureException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteDetectorModelResponse.prototype, "invalidRequestException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteDetectorModelResponse.prototype, "resourceInUseException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteDetectorModelResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteDetectorModelResponse.prototype, "serviceUnavailableException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteDetectorModelResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteDetectorModelResponse.prototype, "throttlingException", void 0);
     return DeleteDetectorModelResponse;
-}(SpeakeasyBase));
-export { DeleteDetectorModelResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteDetectorModelResponse = DeleteDetectorModelResponse;

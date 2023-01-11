@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Workflow } from "./workflow";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListWorkflowsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var workflow_1 = require("./workflow");
 // ListWorkflowsResponse
 /**
  * Response for the ListWorkflows method.
@@ -34,17 +37,17 @@ var ListWorkflowsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListWorkflowsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unreachable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unreachable" }),
         __metadata("design:type", Array)
     ], ListWorkflowsResponse.prototype, "unreachable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workflows", elemType: Workflow }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workflows", elemType: workflow_1.Workflow }),
         __metadata("design:type", Array)
     ], ListWorkflowsResponse.prototype, "workflows", void 0);
     return ListWorkflowsResponse;
-}(SpeakeasyBase));
-export { ListWorkflowsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListWorkflowsResponse = ListWorkflowsResponse;

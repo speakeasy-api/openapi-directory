@@ -23,7 +23,7 @@ export declare class BaremetalsolutionProjectsLocationsInstancesResetSecurity ex
 export declare class BaremetalsolutionProjectsLocationsInstancesResetRequest extends SpeakeasyBase {
     pathParams: BaremetalsolutionProjectsLocationsInstancesResetPathParams;
     queryParams: BaremetalsolutionProjectsLocationsInstancesResetQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: BaremetalsolutionProjectsLocationsInstancesResetSecurity;
 }
 export declare class BaremetalsolutionProjectsLocationsInstancesResetResponse extends SpeakeasyBase {

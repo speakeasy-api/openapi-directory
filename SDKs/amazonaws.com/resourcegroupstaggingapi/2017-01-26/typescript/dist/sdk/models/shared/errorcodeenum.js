@@ -1,5 +1,8 @@
-export var ErrorCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorCodeEnum = void 0;
+var ErrorCodeEnum;
 (function (ErrorCodeEnum) {
     ErrorCodeEnum["InternalServiceException"] = "InternalServiceException";
     ErrorCodeEnum["InvalidParameterException"] = "InvalidParameterException";
-})(ErrorCodeEnum || (ErrorCodeEnum = {}));
+})(ErrorCodeEnum = exports.ErrorCodeEnum || (exports.ErrorCodeEnum = {}));

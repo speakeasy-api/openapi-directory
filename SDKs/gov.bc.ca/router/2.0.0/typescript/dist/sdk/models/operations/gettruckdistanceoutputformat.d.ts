@@ -21,7 +21,7 @@ export declare class GetTruckDistanceOutputFormatQueryParams extends SpeakeasyBa
     departure?: Date;
     disable?: string;
     distanceUnit?: GetTruckDistanceOutputFormatDistanceUnitEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     points: string;
     roundTrip?: boolean;
     routeDescription?: string;

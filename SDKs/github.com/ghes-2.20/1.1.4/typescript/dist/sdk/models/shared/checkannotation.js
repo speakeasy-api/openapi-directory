@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CheckAnnotation = void 0;
+var utils_1 = require("../../../internal/utils");
 // CheckAnnotation
 /**
  * Check Annotation
@@ -33,45 +36,45 @@ var CheckAnnotation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotation_level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotation_level" }),
         __metadata("design:type", String)
     ], CheckAnnotation.prototype, "annotationLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blob_href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blob_href" }),
         __metadata("design:type", String)
     ], CheckAnnotation.prototype, "blobHref", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_column" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_column" }),
         __metadata("design:type", Number)
     ], CheckAnnotation.prototype, "endColumn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=end_line" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=end_line" }),
         __metadata("design:type", Number)
     ], CheckAnnotation.prototype, "endLine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], CheckAnnotation.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], CheckAnnotation.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=raw_details" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=raw_details" }),
         __metadata("design:type", String)
     ], CheckAnnotation.prototype, "rawDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_column" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_column" }),
         __metadata("design:type", Number)
     ], CheckAnnotation.prototype, "startColumn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start_line" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start_line" }),
         __metadata("design:type", Number)
     ], CheckAnnotation.prototype, "startLine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], CheckAnnotation.prototype, "title", void 0);
     return CheckAnnotation;
-}(SpeakeasyBase));
-export { CheckAnnotation };
+}(utils_1.SpeakeasyBase));
+exports.CheckAnnotation = CheckAnnotation;

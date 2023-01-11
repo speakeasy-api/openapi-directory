@@ -22,5 +22,5 @@ export class ProtocolDhcpGetStatisticsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolDhcpGetStatistics200ApplicationJsonInt32Integers?: number[];
+  protocolDhcpGetStatistics200ApplicationJSONInt32Integers?: number[];
 }

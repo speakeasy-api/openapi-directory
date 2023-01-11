@@ -24,7 +24,7 @@ export declare class ResultFormattedResultsRuleResults extends SpeakeasyBase {
 **/
 export declare class ResultFormattedResults extends SpeakeasyBase {
     locale?: string;
-    ruleResults?: Map<string, ResultFormattedResultsRuleResults>;
+    ruleResults?: Record<string, ResultFormattedResultsRuleResults>;
 }
 /**
  * Summary statistics for the page, such as number of JavaScript bytes, number of HTML bytes, etc.
@@ -65,7 +65,7 @@ export declare class Result extends SpeakeasyBase {
     kind?: string;
     pageStats?: ResultPageStats;
     responseCode?: number;
-    ruleGroups?: Map<string, ResultRuleGroups>;
+    ruleGroups?: Record<string, ResultRuleGroups>;
     screenshot?: PagespeedApiImageV2;
     title?: string;
     version?: ResultVersion;

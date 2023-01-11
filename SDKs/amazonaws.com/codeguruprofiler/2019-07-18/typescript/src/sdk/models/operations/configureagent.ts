@@ -38,7 +38,7 @@ export class ConfigureAgentRequestBody extends SpeakeasyBase {
   fleetInstanceId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, string>;
+  metadata?: Record<string, string>;
 }
 
 

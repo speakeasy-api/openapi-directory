@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChaosConfig } from "./chaosconfig";
-import { OutageStrategyEnum } from "./outagestrategyenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SnowMonkeyConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var chaosconfig_1 = require("./chaosconfig");
+var outagestrategyenum_1 = require("./outagestrategyenum");
 // SnowMonkeyConfig
 /**
  * Configuration for the faults that can be injected in requests. The name Snow Monkey is an hommage to Netflix's Chaos Monkey 😉
@@ -35,49 +38,49 @@ var SnowMonkeyConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=chaosConfig" }),
-        __metadata("design:type", ChaosConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=chaosConfig" }),
+        __metadata("design:type", chaosconfig_1.ChaosConfig)
     ], SnowMonkeyConfig.prototype, "chaosConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dryRun" }),
         __metadata("design:type", Boolean)
     ], SnowMonkeyConfig.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], SnowMonkeyConfig.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeUserFacingDescriptors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeUserFacingDescriptors" }),
         __metadata("design:type", Boolean)
     ], SnowMonkeyConfig.prototype, "includeUserFacingDescriptors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outageDurationFrom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outageDurationFrom" }),
         __metadata("design:type", Number)
     ], SnowMonkeyConfig.prototype, "outageDurationFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outageDurationTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outageDurationTo" }),
         __metadata("design:type", Number)
     ], SnowMonkeyConfig.prototype, "outageDurationTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outageStrategy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outageStrategy" }),
         __metadata("design:type", String)
     ], SnowMonkeyConfig.prototype, "outageStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], SnowMonkeyConfig.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stopTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stopTime" }),
         __metadata("design:type", String)
     ], SnowMonkeyConfig.prototype, "stopTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetGroups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetGroups" }),
         __metadata("design:type", Array)
     ], SnowMonkeyConfig.prototype, "targetGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timesPerDay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timesPerDay" }),
         __metadata("design:type", Number)
     ], SnowMonkeyConfig.prototype, "timesPerDay", void 0);
     return SnowMonkeyConfig;
-}(SpeakeasyBase));
-export { SnowMonkeyConfig };
+}(utils_1.SpeakeasyBase));
+exports.SnowMonkeyConfig = SnowMonkeyConfig;

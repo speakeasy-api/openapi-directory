@@ -15,6 +15,6 @@ export declare class GetUsersSelectedUserSearchCodeRequest extends SpeakeasyBase
 export declare class GetUsersSelectedUserSearchCodeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     searchResultPage?: shared.SearchResultPage;
 }

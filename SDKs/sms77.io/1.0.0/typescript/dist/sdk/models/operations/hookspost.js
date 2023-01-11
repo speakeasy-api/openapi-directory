@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,98 +23,100 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var HooksPostActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HooksPostResponse = exports.HooksPostRequest = exports.HooksPost200ApplicationJson = exports.HooksPostQueryParams = exports.HooksPostRequestMethodEnum = exports.HooksPostEventTypeEnum = exports.HooksPostActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var HooksPostActionEnum;
 (function (HooksPostActionEnum) {
     HooksPostActionEnum["Subscribe"] = "subscribe";
     HooksPostActionEnum["Unsubscribe"] = "unsubscribe";
-})(HooksPostActionEnum || (HooksPostActionEnum = {}));
-export var HooksPostEventTypeEnum;
+})(HooksPostActionEnum = exports.HooksPostActionEnum || (exports.HooksPostActionEnum = {}));
+var HooksPostEventTypeEnum;
 (function (HooksPostEventTypeEnum) {
     HooksPostEventTypeEnum["All"] = "all";
     HooksPostEventTypeEnum["SmsMo"] = "sms_mo";
     HooksPostEventTypeEnum["Dlr"] = "dlr";
     HooksPostEventTypeEnum["VoiceStatus"] = "voice_status";
-})(HooksPostEventTypeEnum || (HooksPostEventTypeEnum = {}));
-export var HooksPostRequestMethodEnum;
+})(HooksPostEventTypeEnum = exports.HooksPostEventTypeEnum || (exports.HooksPostEventTypeEnum = {}));
+var HooksPostRequestMethodEnum;
 (function (HooksPostRequestMethodEnum) {
     HooksPostRequestMethodEnum["Post"] = "POST";
     HooksPostRequestMethodEnum["Json"] = "JSON";
     HooksPostRequestMethodEnum["Get"] = "GET";
-})(HooksPostRequestMethodEnum || (HooksPostRequestMethodEnum = {}));
+})(HooksPostRequestMethodEnum = exports.HooksPostRequestMethodEnum || (exports.HooksPostRequestMethodEnum = {}));
 var HooksPostQueryParams = /** @class */ (function (_super) {
     __extends(HooksPostQueryParams, _super);
     function HooksPostQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=action" }),
         __metadata("design:type", String)
     ], HooksPostQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=event_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=event_type" }),
         __metadata("design:type", String)
     ], HooksPostQueryParams.prototype, "eventType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=id" }),
         __metadata("design:type", Number)
     ], HooksPostQueryParams.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=request_method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=request_method" }),
         __metadata("design:type", String)
     ], HooksPostQueryParams.prototype, "requestMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=target_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=target_url" }),
         __metadata("design:type", String)
     ], HooksPostQueryParams.prototype, "targetUrl", void 0);
     return HooksPostQueryParams;
-}(SpeakeasyBase));
-export { HooksPostQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.HooksPostQueryParams = HooksPostQueryParams;
 var HooksPost200ApplicationJson = /** @class */ (function (_super) {
     __extends(HooksPost200ApplicationJson, _super);
     function HooksPost200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], HooksPost200ApplicationJson.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=success" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=success" }),
         __metadata("design:type", Boolean)
     ], HooksPost200ApplicationJson.prototype, "success", void 0);
     return HooksPost200ApplicationJson;
-}(SpeakeasyBase));
-export { HooksPost200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.HooksPost200ApplicationJson = HooksPost200ApplicationJson;
 var HooksPostRequest = /** @class */ (function (_super) {
     __extends(HooksPostRequest, _super);
     function HooksPostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", HooksPostQueryParams)
     ], HooksPostRequest.prototype, "queryParams", void 0);
     return HooksPostRequest;
-}(SpeakeasyBase));
-export { HooksPostRequest };
+}(utils_1.SpeakeasyBase));
+exports.HooksPostRequest = HooksPostRequest;
 var HooksPostResponse = /** @class */ (function (_super) {
     __extends(HooksPostResponse, _super);
     function HooksPostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], HooksPostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", HooksPost200ApplicationJson)
-    ], HooksPostResponse.prototype, "hooksPost200ApplicationJsonObject", void 0);
+    ], HooksPostResponse.prototype, "hooksPOST200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], HooksPostResponse.prototype, "statusCode", void 0);
     return HooksPostResponse;
-}(SpeakeasyBase));
-export { HooksPostResponse };
+}(utils_1.SpeakeasyBase));
+exports.HooksPostResponse = HooksPostResponse;

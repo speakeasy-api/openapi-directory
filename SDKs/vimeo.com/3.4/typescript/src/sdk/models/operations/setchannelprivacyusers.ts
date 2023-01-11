@@ -41,7 +41,7 @@ export class SetChannelPrivacyUsersResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.User })
   users?: shared.User[];

@@ -8,5 +8,5 @@ export declare class ProtocolMqttClientRuntimeAbortRequest extends SpeakeasyBase
 export declare class ProtocolMqttClientRuntimeAbortResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolMqttClientRuntimeAbort200ApplicationJsonStrings?: string[];
+    protocolMqttClientRuntimeAbort200ApplicationJSONStrings?: string[];
 }

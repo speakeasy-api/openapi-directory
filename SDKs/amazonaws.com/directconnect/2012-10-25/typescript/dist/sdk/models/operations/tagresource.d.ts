@@ -23,6 +23,6 @@ export declare class TagResourceResponse extends SpeakeasyBase {
     directConnectServerException?: any;
     duplicateTagKeysException?: any;
     statusCode: number;
-    tagResourceResponse?: Map<string, any>;
+    tagResourceResponse?: Record<string, any>;
     tooManyTagsException?: any;
 }

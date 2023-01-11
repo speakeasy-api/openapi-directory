@@ -87,5 +87,5 @@ export class EndpointGetAShowsEpisodesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  endpointGetAShowsEpisodes200ApplicationJsonObject?: EndpointGetAShowsEpisodes200ApplicationJson;
+  endpointGetAShowsEpisodes200ApplicationJSONObject?: EndpointGetAShowsEpisodes200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetBlueprintRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetBlueprintRequest = /** @class */ (function (_super) {
     __extends(GetBlueprintRequest, _super);
     function GetBlueprintRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncludeBlueprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludeBlueprint" }),
         __metadata("design:type", Boolean)
     ], GetBlueprintRequest.prototype, "includeBlueprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IncludeParameterSpec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IncludeParameterSpec" }),
         __metadata("design:type", Boolean)
     ], GetBlueprintRequest.prototype, "includeParameterSpec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GetBlueprintRequest.prototype, "name", void 0);
     return GetBlueprintRequest;
-}(SpeakeasyBase));
-export { GetBlueprintRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetBlueprintRequest = GetBlueprintRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
 // DeviceMetadata
 /**
  * Characteristics of the user's device.
@@ -33,49 +36,49 @@ var DeviceMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuMake" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuMake" }),
         __metadata("design:type", String)
     ], DeviceMetadata.prototype, "cpuMake", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpuModel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpuModel" }),
         __metadata("design:type", String)
     ], DeviceMetadata.prototype, "cpuModel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceClass" }),
         __metadata("design:type", String)
     ], DeviceMetadata.prototype, "deviceClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=glEsVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=glEsVersion" }),
         __metadata("design:type", Number)
     ], DeviceMetadata.prototype, "glEsVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manufacturer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manufacturer" }),
         __metadata("design:type", String)
     ], DeviceMetadata.prototype, "manufacturer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nativePlatform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nativePlatform" }),
         __metadata("design:type", String)
     ], DeviceMetadata.prototype, "nativePlatform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productName" }),
         __metadata("design:type", String)
     ], DeviceMetadata.prototype, "productName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ramMb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ramMb" }),
         __metadata("design:type", Number)
     ], DeviceMetadata.prototype, "ramMb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenDensityDpi" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenDensityDpi" }),
         __metadata("design:type", Number)
     ], DeviceMetadata.prototype, "screenDensityDpi", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenHeightPx" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenHeightPx" }),
         __metadata("design:type", Number)
     ], DeviceMetadata.prototype, "screenHeightPx", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenWidthPx" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenWidthPx" }),
         __metadata("design:type", Number)
     ], DeviceMetadata.prototype, "screenWidthPx", void 0);
     return DeviceMetadata;
-}(SpeakeasyBase));
-export { DeviceMetadata };
+}(utils_1.SpeakeasyBase));
+exports.DeviceMetadata = DeviceMetadata;

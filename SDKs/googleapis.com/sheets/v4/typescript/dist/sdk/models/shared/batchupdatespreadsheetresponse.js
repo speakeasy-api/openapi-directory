@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Response } from "./response";
-import { Spreadsheet } from "./spreadsheet";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchUpdateSpreadsheetResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var response_1 = require("./response");
+var spreadsheet_1 = require("./spreadsheet");
 // BatchUpdateSpreadsheetResponse
 /**
  * The reply for batch updating a spreadsheet.
@@ -35,17 +38,17 @@ var BatchUpdateSpreadsheetResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=replies", elemType: Response }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=replies", elemType: response_1.Response }),
         __metadata("design:type", Array)
     ], BatchUpdateSpreadsheetResponse.prototype, "replies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spreadsheetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spreadsheetId" }),
         __metadata("design:type", String)
     ], BatchUpdateSpreadsheetResponse.prototype, "spreadsheetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedSpreadsheet" }),
-        __metadata("design:type", Spreadsheet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedSpreadsheet" }),
+        __metadata("design:type", spreadsheet_1.Spreadsheet)
     ], BatchUpdateSpreadsheetResponse.prototype, "updatedSpreadsheet", void 0);
     return BatchUpdateSpreadsheetResponse;
-}(SpeakeasyBase));
-export { BatchUpdateSpreadsheetResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchUpdateSpreadsheetResponse = BatchUpdateSpreadsheetResponse;

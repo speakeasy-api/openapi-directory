@@ -19,6 +19,9 @@ export declare class AuthorizationScopedInstallation extends SpeakeasyBase {
     singleFileName: string;
     singleFilePaths?: string[];
 }
+/**
+ * Simple User
+**/
 export declare class AuthorizationSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

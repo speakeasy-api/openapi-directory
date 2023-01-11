@@ -1,7 +1,10 @@
-export var StreamStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreamStatusEnum = void 0;
+var StreamStatusEnum;
 (function (StreamStatusEnum) {
     StreamStatusEnum["Creating"] = "CREATING";
     StreamStatusEnum["Deleting"] = "DELETING";
     StreamStatusEnum["Active"] = "ACTIVE";
     StreamStatusEnum["Updating"] = "UPDATING";
-})(StreamStatusEnum || (StreamStatusEnum = {}));
+})(StreamStatusEnum = exports.StreamStatusEnum || (exports.StreamStatusEnum = {}));

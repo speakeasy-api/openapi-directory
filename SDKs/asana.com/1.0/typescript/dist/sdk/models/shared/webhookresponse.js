@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,77 +23,87 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AsanaNamedResource } from "./asananamedresource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebhookResponse = exports.WebhookResponseFilters = void 0;
+var utils_1 = require("../../../internal/utils");
+var asananamedresource_1 = require("./asananamedresource");
+// WebhookResponseFilters
+/**
+ * A set of filters to specify a whitelist for what types of events will be delivered.
+**/
 var WebhookResponseFilters = /** @class */ (function (_super) {
     __extends(WebhookResponseFilters, _super);
     function WebhookResponseFilters() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], WebhookResponseFilters.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields" }),
         __metadata("design:type", Array)
     ], WebhookResponseFilters.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_subtype" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_subtype" }),
         __metadata("design:type", String)
     ], WebhookResponseFilters.prototype, "resourceSubtype", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], WebhookResponseFilters.prototype, "resourceType", void 0);
     return WebhookResponseFilters;
-}(SpeakeasyBase));
-export { WebhookResponseFilters };
+}(utils_1.SpeakeasyBase));
+exports.WebhookResponseFilters = WebhookResponseFilters;
+// WebhookResponse
+/**
+ * Webhook objects represent the state of an active subscription for a server to be updated with information from Asana. This schema represents the subscription itself, not the objects that are sent to the server. For information on those please refer to the [Event](/docs/tocS_Event) schema.
+**/
 var WebhookResponse = /** @class */ (function (_super) {
     __extends(WebhookResponse, _super);
     function WebhookResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], WebhookResponse.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], WebhookResponse.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filters", elemType: WebhookResponseFilters }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filters", elemType: WebhookResponseFilters }),
         __metadata("design:type", Array)
     ], WebhookResponse.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gid" }),
         __metadata("design:type", String)
     ], WebhookResponse.prototype, "gid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_failure_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_failure_at" }),
         __metadata("design:type", Date)
     ], WebhookResponse.prototype, "lastFailureAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_failure_content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_failure_content" }),
         __metadata("design:type", String)
     ], WebhookResponse.prototype, "lastFailureContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_success_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_success_at" }),
         __metadata("design:type", Date)
     ], WebhookResponse.prototype, "lastSuccessAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource" }),
-        __metadata("design:type", AsanaNamedResource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource" }),
+        __metadata("design:type", asananamedresource_1.AsanaNamedResource)
     ], WebhookResponse.prototype, "resource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resource_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resource_type" }),
         __metadata("design:type", String)
     ], WebhookResponse.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", String)
     ], WebhookResponse.prototype, "target", void 0);
     return WebhookResponse;
-}(SpeakeasyBase));
-export { WebhookResponse };
+}(utils_1.SpeakeasyBase));
+exports.WebhookResponse = WebhookResponse;

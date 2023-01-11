@@ -58,7 +58,7 @@ export class StopSuiteRunResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  stopSuiteRunResponse?: Map<string, any>;
+  stopSuiteRunResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

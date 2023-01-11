@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiskConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // DiskConfig
 /**
  * Specifies the config of disk options for a group of VM instances.
@@ -33,21 +36,21 @@ var DiskConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootDiskSizeGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootDiskSizeGb" }),
         __metadata("design:type", Number)
     ], DiskConfig.prototype, "bootDiskSizeGb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootDiskType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootDiskType" }),
         __metadata("design:type", String)
     ], DiskConfig.prototype, "bootDiskType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localSsdInterface" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localSsdInterface" }),
         __metadata("design:type", String)
     ], DiskConfig.prototype, "localSsdInterface", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numLocalSsds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numLocalSsds" }),
         __metadata("design:type", Number)
     ], DiskConfig.prototype, "numLocalSsds", void 0);
     return DiskConfig;
-}(SpeakeasyBase));
-export { DiskConfig };
+}(utils_1.SpeakeasyBase));
+exports.DiskConfig = DiskConfig;

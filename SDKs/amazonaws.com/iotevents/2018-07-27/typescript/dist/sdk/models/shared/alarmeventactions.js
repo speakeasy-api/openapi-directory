@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AlarmAction } from "./alarmaction";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AlarmEventActions = void 0;
+var utils_1 = require("../../../internal/utils");
+var alarmaction_1 = require("./alarmaction");
 // AlarmEventActions
 /**
  * Contains information about one or more alarm actions.
@@ -34,9 +37,9 @@ var AlarmEventActions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmActions", elemType: AlarmAction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmActions", elemType: alarmaction_1.AlarmAction }),
         __metadata("design:type", Array)
     ], AlarmEventActions.prototype, "alarmActions", void 0);
     return AlarmEventActions;
-}(SpeakeasyBase));
-export { AlarmEventActions };
+}(utils_1.SpeakeasyBase));
+exports.AlarmEventActions = AlarmEventActions;

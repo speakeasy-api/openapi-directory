@@ -51,7 +51,7 @@ export class UntagResourceResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  invalidArnFault?: any;
+  invalidARNFault?: any;
 
   @SpeakeasyMetadata()
   invalidClusterStateFault?: any;

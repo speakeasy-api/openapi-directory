@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { Area120tablesTablesListRequest, Area120tablesTablesListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,27 +31,27 @@ const req: Area120tablesTablesListRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "fuga",
-    alt: "proto",
-    callback: "provident",
-    fields: "velit",
-    key: "illo",
-    oauthToken: "ut",
-    orderBy: "sed",
-    pageSize: 2581808292385944413,
-    pageToken: "expedita",
-    prettyPrint: false,
-    quotaUser: "quae",
-    uploadType: "et",
-    uploadProtocol: "et",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
+    orderBy: "voluptas",
+    pageSize: 8274930044578894929,
+    pageToken: "et",
+    prettyPrint: true,
+    quotaUser: "rerum",
+    uploadType: "dicta",
+    uploadProtocol: "debitis",
   },
 };
 

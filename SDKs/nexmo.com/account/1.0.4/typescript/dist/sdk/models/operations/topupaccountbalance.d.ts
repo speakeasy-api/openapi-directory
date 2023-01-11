@@ -6,7 +6,7 @@ export declare class TopUpAccountBalanceQueryParams extends SpeakeasyBase {
     apiSecret: string;
 }
 export declare class TopUpAccountBalanceRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     queryParams: TopUpAccountBalanceQueryParams;
     request: shared.TopupRequest;
 }
@@ -15,5 +15,5 @@ export declare class TopUpAccountBalanceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     success?: shared.Success;
-    topUpAccountBalance401ApplicationJsonOneOf?: any;
+    topUpAccountBalance401ApplicationJSONOneOf?: any;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MaintenanceWindowUpdateTrackEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MaintenanceWindow = exports.MaintenanceWindowUpdateTrackEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MaintenanceWindowUpdateTrackEnum;
 (function (MaintenanceWindowUpdateTrackEnum) {
     MaintenanceWindowUpdateTrackEnum["SqlUpdateTrackUnspecified"] = "SQL_UPDATE_TRACK_UNSPECIFIED";
     MaintenanceWindowUpdateTrackEnum["Canary"] = "canary";
     MaintenanceWindowUpdateTrackEnum["Stable"] = "stable";
-})(MaintenanceWindowUpdateTrackEnum || (MaintenanceWindowUpdateTrackEnum = {}));
+})(MaintenanceWindowUpdateTrackEnum = exports.MaintenanceWindowUpdateTrackEnum || (exports.MaintenanceWindowUpdateTrackEnum = {}));
 // MaintenanceWindow
 /**
  * Maintenance window. This specifies when a Cloud SQL instance is restarted for system maintenance purposes.
@@ -39,21 +42,21 @@ var MaintenanceWindow = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=day" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=day" }),
         __metadata("design:type", Number)
     ], MaintenanceWindow.prototype, "day", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hour" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hour" }),
         __metadata("design:type", Number)
     ], MaintenanceWindow.prototype, "hour", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], MaintenanceWindow.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTrack" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTrack" }),
         __metadata("design:type", String)
     ], MaintenanceWindow.prototype, "updateTrack", void 0);
     return MaintenanceWindow;
-}(SpeakeasyBase));
-export { MaintenanceWindow };
+}(utils_1.SpeakeasyBase));
+exports.MaintenanceWindow = MaintenanceWindow;

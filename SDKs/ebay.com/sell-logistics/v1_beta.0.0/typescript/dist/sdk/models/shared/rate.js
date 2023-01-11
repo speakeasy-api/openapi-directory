@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AdditionalOption } from "./additionaloption";
-import { Amount } from "./amount";
-import { PickupSlot } from "./pickupslot";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Rate = void 0;
+var utils_1 = require("../../../internal/utils");
+var additionaloption_1 = require("./additionaloption");
+var amount_1 = require("./amount");
+var pickupslot_1 = require("./pickupslot");
 // Rate
 /**
  * This complex type contains live quote information about a shipping service that's available for a given shipping quote request, including the shipping carrier and service, delivery window, shipping cost, and additional shipping options.
@@ -36,61 +39,61 @@ var Rate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalOptions", elemType: AdditionalOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalOptions", elemType: additionaloption_1.AdditionalOption }),
         __metadata("design:type", Array)
     ], Rate.prototype, "additionalOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseShippingCost" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseShippingCost" }),
+        __metadata("design:type", amount_1.Amount)
     ], Rate.prototype, "baseShippingCost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinationTimeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinationTimeZone" }),
         __metadata("design:type", String)
     ], Rate.prototype, "destinationTimeZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxEstimatedDeliveryDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxEstimatedDeliveryDate" }),
         __metadata("design:type", String)
     ], Rate.prototype, "maxEstimatedDeliveryDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minEstimatedDeliveryDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minEstimatedDeliveryDate" }),
         __metadata("design:type", String)
     ], Rate.prototype, "minEstimatedDeliveryDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pickupNetworks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pickupNetworks" }),
         __metadata("design:type", Array)
     ], Rate.prototype, "pickupNetworks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pickupSlots", elemType: PickupSlot }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pickupSlots", elemType: pickupslot_1.PickupSlot }),
         __metadata("design:type", Array)
     ], Rate.prototype, "pickupSlots", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pickupType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pickupType" }),
         __metadata("design:type", String)
     ], Rate.prototype, "pickupType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rateId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rateId" }),
         __metadata("design:type", String)
     ], Rate.prototype, "rateId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rateRecommendation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rateRecommendation" }),
         __metadata("design:type", Array)
     ], Rate.prototype, "rateRecommendation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingCarrierCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingCarrierCode" }),
         __metadata("design:type", String)
     ], Rate.prototype, "shippingCarrierCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingCarrierName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingCarrierName" }),
         __metadata("design:type", String)
     ], Rate.prototype, "shippingCarrierName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingServiceCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingServiceCode" }),
         __metadata("design:type", String)
     ], Rate.prototype, "shippingServiceCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingServiceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingServiceName" }),
         __metadata("design:type", String)
     ], Rate.prototype, "shippingServiceName", void 0);
     return Rate;
-}(SpeakeasyBase));
-export { Rate };
+}(utils_1.SpeakeasyBase));
+exports.Rate = Rate;

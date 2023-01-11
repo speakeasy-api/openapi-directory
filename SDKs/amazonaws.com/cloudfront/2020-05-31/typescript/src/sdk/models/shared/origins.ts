@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Origin } from "./origin";
+import { OriginList } from "./originlist";
 
 
 
@@ -8,8 +8,8 @@ import { Origin } from "./origin";
  * Contains information about the origins for this distribution.
 **/
 export class Origins extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: Origin })
-  items: Origin[];
+  @SpeakeasyMetadata({ elemType: OriginList })
+  items: OriginList[];
 
   @SpeakeasyMetadata()
   quantity: number;

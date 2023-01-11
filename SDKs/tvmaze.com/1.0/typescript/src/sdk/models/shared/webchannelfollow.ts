@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class WebchannelFollowEmbedded extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=webchannel" })
-  webchannel?: Map<string, any>;
+  webchannel?: Record<string, any>;
 }
 
 

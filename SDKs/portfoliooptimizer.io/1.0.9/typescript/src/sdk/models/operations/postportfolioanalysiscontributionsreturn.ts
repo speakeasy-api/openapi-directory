@@ -49,8 +49,8 @@ export class PostPortfolioAnalysisContributionsReturnResponse extends SpeakeasyB
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioAnalysisContributionsReturn200ApplicationJsonObject?: PostPortfolioAnalysisContributionsReturn200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioAnalysisContributionsReturn200ApplicationJSONObject?: PostPortfolioAnalysisContributionsReturn200ApplicationJson;
 }

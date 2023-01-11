@@ -14,7 +14,7 @@ export class ItemImportResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  itemImportResponse?: Map<string, any>;
+  itemImportResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

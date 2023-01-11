@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistryListProjectsResponse = exports.RegistryListProjectsRequest = exports.RegistryListProjectsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RegistryListProjectsQueryParams = /** @class */ (function (_super) {
     __extends(RegistryListProjectsQueryParams, _super);
     function RegistryListProjectsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], RegistryListProjectsQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page_size" }),
         __metadata("design:type", String)
     ], RegistryListProjectsQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page_token" }),
         __metadata("design:type", String)
     ], RegistryListProjectsQueryParams.prototype, "pageToken", void 0);
     return RegistryListProjectsQueryParams;
-}(SpeakeasyBase));
-export { RegistryListProjectsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.RegistryListProjectsQueryParams = RegistryListProjectsQueryParams;
 var RegistryListProjectsRequest = /** @class */ (function (_super) {
     __extends(RegistryListProjectsRequest, _super);
     function RegistryListProjectsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RegistryListProjectsQueryParams)
     ], RegistryListProjectsRequest.prototype, "queryParams", void 0);
     return RegistryListProjectsRequest;
-}(SpeakeasyBase));
-export { RegistryListProjectsRequest };
+}(utils_1.SpeakeasyBase));
+exports.RegistryListProjectsRequest = RegistryListProjectsRequest;
 var RegistryListProjectsResponse = /** @class */ (function (_super) {
     __extends(RegistryListProjectsResponse, _super);
     function RegistryListProjectsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RegistryListProjectsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], RegistryListProjectsResponse.prototype, "listProjectsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RegistryListProjectsResponse.prototype, "statusCode", void 0);
     return RegistryListProjectsResponse;
-}(SpeakeasyBase));
-export { RegistryListProjectsResponse };
+}(utils_1.SpeakeasyBase));
+exports.RegistryListProjectsResponse = RegistryListProjectsResponse;

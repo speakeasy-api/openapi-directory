@@ -22,5 +22,5 @@ export class GetNetworkCameraQualityRetentionProfilesResponse extends SpeakeasyB
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkCameraQualityRetentionProfiles200ApplicationJsonObject?: Map<string, any>;
+  getNetworkCameraQualityRetentionProfiles200ApplicationJSONObject?: Record<string, any>;
 }

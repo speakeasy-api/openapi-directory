@@ -17,5 +17,5 @@ export class InstitutionsSearchRequestOptions extends SpeakeasyBase {
   oauth?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=payment_initiation" })
-  paymentInitiation?: Map<string, any>;
+  paymentInitiation?: Record<string, any>;
 }

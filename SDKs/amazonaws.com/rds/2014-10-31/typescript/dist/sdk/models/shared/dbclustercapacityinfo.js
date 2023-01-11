@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DbClusterCapacityInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 var DbClusterCapacityInfo = /** @class */ (function (_super) {
     __extends(DbClusterCapacityInfo, _super);
     function DbClusterCapacityInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DbClusterCapacityInfo.prototype, "currentCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbClusterCapacityInfo.prototype, "dbClusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DbClusterCapacityInfo.prototype, "pendingCapacity", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DbClusterCapacityInfo.prototype, "secondsBeforeTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DbClusterCapacityInfo.prototype, "timeoutAction", void 0);
     return DbClusterCapacityInfo;
-}(SpeakeasyBase));
-export { DbClusterCapacityInfo };
+}(utils_1.SpeakeasyBase));
+exports.DbClusterCapacityInfo = DbClusterCapacityInfo;

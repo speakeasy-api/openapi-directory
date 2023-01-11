@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CommunicationRequest, CommunicationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     apiKeyHeader: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,23 +33,18 @@ const sdk = new SDK(WithSecurity(
     
 const req: CommunicationRequest = {
   queryParams: {
-    all: true,
+    all: false,
   },
   request: [
     {
-      id: "ducimus",
-      language: "provident",
-      text: "illo",
-    },
-    {
-      id: "voluptate",
-      language: "quas",
-      text: "et",
+      id: "culpa",
+      language: "expedita",
+      text: "consequuntur",
     },
   ],
 };
 
-sdk.sdk.communication(req).then((res: CommunicationResponse | AxiosError) => {
+sdk.textAnalysis.communication(req).then((res: CommunicationResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -59,7 +53,7 @@ sdk.sdk.communication(req).then((res: CommunicationResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Text Analysis
 
 * `communication` - Communication & Tonality
 * `ekmanEmotion` - Emotion Analysis

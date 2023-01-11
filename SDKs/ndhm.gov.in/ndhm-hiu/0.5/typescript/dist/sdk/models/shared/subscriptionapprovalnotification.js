@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SubscriptionStatusEnum } from "./subscriptionstatusenum";
-import { HiuSubscription } from "./hiusubscription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionApprovalNotification = exports.SubscriptionApprovalNotificationNotification = void 0;
+var utils_1 = require("../../../internal/utils");
+var subscriptionstatusenum_1 = require("./subscriptionstatusenum");
+var hiusubscription_1 = require("./hiusubscription");
 var SubscriptionApprovalNotificationNotification = /** @class */ (function (_super) {
     __extends(SubscriptionApprovalNotificationNotification, _super);
     function SubscriptionApprovalNotificationNotification() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], SubscriptionApprovalNotificationNotification.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscription" }),
-        __metadata("design:type", HiuSubscription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscription" }),
+        __metadata("design:type", hiusubscription_1.HiuSubscription)
     ], SubscriptionApprovalNotificationNotification.prototype, "subscription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscriptionRequestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscriptionRequestId" }),
         __metadata("design:type", String)
     ], SubscriptionApprovalNotificationNotification.prototype, "subscriptionRequestId", void 0);
     return SubscriptionApprovalNotificationNotification;
-}(SpeakeasyBase));
-export { SubscriptionApprovalNotificationNotification };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionApprovalNotificationNotification = SubscriptionApprovalNotificationNotification;
 var SubscriptionApprovalNotification = /** @class */ (function (_super) {
     __extends(SubscriptionApprovalNotification, _super);
     function SubscriptionApprovalNotification() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notification" }),
         __metadata("design:type", SubscriptionApprovalNotificationNotification)
     ], SubscriptionApprovalNotification.prototype, "notification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], SubscriptionApprovalNotification.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], SubscriptionApprovalNotification.prototype, "timestamp", void 0);
     return SubscriptionApprovalNotification;
-}(SpeakeasyBase));
-export { SubscriptionApprovalNotification };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionApprovalNotification = SubscriptionApprovalNotification;

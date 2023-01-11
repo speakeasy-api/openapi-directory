@@ -11,6 +11,6 @@ export declare class GetPipelineStepForRepositoryRequest extends SpeakeasyBase {
 export declare class GetPipelineStepForRepositoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pipelineStep?: Map<string, any>;
+    error?: Record<string, any>;
+    pipelineStep?: Record<string, any>;
 }

@@ -44,5 +44,5 @@ export class EndpointCheckUsersSavedTracksResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  endpointCheckUsersSavedTracks200ApplicationJsonBooleans?: boolean[];
+  endpointCheckUsersSavedTracks200ApplicationJSONBooleans?: boolean[];
 }

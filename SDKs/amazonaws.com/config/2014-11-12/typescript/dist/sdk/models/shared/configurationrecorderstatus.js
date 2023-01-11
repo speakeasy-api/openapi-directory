@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecorderStatusEnum } from "./recorderstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigurationRecorderStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var recorderstatusenum_1 = require("./recorderstatusenum");
 // ConfigurationRecorderStatus
 /**
  * The current status of the configuration recorder.
@@ -34,37 +37,37 @@ var ConfigurationRecorderStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastErrorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastErrorCode" }),
         __metadata("design:type", String)
     ], ConfigurationRecorderStatus.prototype, "lastErrorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastErrorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastErrorMessage" }),
         __metadata("design:type", String)
     ], ConfigurationRecorderStatus.prototype, "lastErrorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastStartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastStartTime" }),
         __metadata("design:type", Date)
     ], ConfigurationRecorderStatus.prototype, "lastStartTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastStatus" }),
         __metadata("design:type", String)
     ], ConfigurationRecorderStatus.prototype, "lastStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastStatusChangeTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastStatusChangeTime" }),
         __metadata("design:type", Date)
     ], ConfigurationRecorderStatus.prototype, "lastStatusChangeTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastStopTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastStopTime" }),
         __metadata("design:type", Date)
     ], ConfigurationRecorderStatus.prototype, "lastStopTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ConfigurationRecorderStatus.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recording" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recording" }),
         __metadata("design:type", Boolean)
     ], ConfigurationRecorderStatus.prototype, "recording", void 0);
     return ConfigurationRecorderStatus;
-}(SpeakeasyBase));
-export { ConfigurationRecorderStatus };
+}(utils_1.SpeakeasyBase));
+exports.ConfigurationRecorderStatus = ConfigurationRecorderStatus;

@@ -11,7 +11,7 @@ export class UserApiPostReportPathParams extends SpeakeasyBase {
 
 export class UserApiPostReportRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   createReportModel?: shared.CreateReportModel;
@@ -23,7 +23,7 @@ export class UserApiPostReportRequests extends SpeakeasyBase {
   createReportModel2?: shared.CreateReportModel;
 
   @SpeakeasyMetadata({ data: "request, media_type=text/xml" })
-  textXml: Uint8Array;
+  textXML: Uint8Array;
 }
 
 
@@ -47,11 +47,11 @@ export class UserApiPostReportResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  userApiPostReport200ApplicationJsonBoolean?: boolean;
+  userApiPostReport200ApplicationJSONBoolean?: boolean;
 
   @SpeakeasyMetadata()
   userApiPostReport200ApplicationJsonpBoolean?: boolean;
 
   @SpeakeasyMetadata()
-  userApiPostReport200TextJsonBoolean?: boolean;
+  userApiPostReport200TextJSONBoolean?: boolean;
 }

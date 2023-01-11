@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MailExportOptionsExportFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MailExportOptions = exports.MailExportOptionsExportFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MailExportOptionsExportFormatEnum;
 (function (MailExportOptionsExportFormatEnum) {
     MailExportOptionsExportFormatEnum["ExportFormatUnspecified"] = "EXPORT_FORMAT_UNSPECIFIED";
     MailExportOptionsExportFormatEnum["Mbox"] = "MBOX";
     MailExportOptionsExportFormatEnum["Pst"] = "PST";
-})(MailExportOptionsExportFormatEnum || (MailExportOptionsExportFormatEnum = {}));
+})(MailExportOptionsExportFormatEnum = exports.MailExportOptionsExportFormatEnum || (exports.MailExportOptionsExportFormatEnum = {}));
 // MailExportOptions
 /**
  * Options for Gmail exports.
@@ -39,17 +42,17 @@ var MailExportOptions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exportFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exportFormat" }),
         __metadata("design:type", String)
     ], MailExportOptions.prototype, "exportFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=showConfidentialModeContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=showConfidentialModeContent" }),
         __metadata("design:type", Boolean)
     ], MailExportOptions.prototype, "showConfidentialModeContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useNewExport" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useNewExport" }),
         __metadata("design:type", Boolean)
     ], MailExportOptions.prototype, "useNewExport", void 0);
     return MailExportOptions;
-}(SpeakeasyBase));
-export { MailExportOptions };
+}(utils_1.SpeakeasyBase));
+exports.MailExportOptions = MailExportOptions;

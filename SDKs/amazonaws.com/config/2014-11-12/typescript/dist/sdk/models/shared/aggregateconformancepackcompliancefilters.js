@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConformancePackComplianceTypeEnum } from "./conformancepackcompliancetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AggregateConformancePackComplianceFilters = void 0;
+var utils_1 = require("../../../internal/utils");
+var conformancepackcompliancetypeenum_1 = require("./conformancepackcompliancetypeenum");
 // AggregateConformancePackComplianceFilters
 /**
  * Filters the conformance packs based on an account ID, region, compliance type, and the name of the conformance pack.
@@ -34,21 +37,21 @@ var AggregateConformancePackComplianceFilters = /** @class */ (function (_super)
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountId" }),
         __metadata("design:type", String)
     ], AggregateConformancePackComplianceFilters.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AwsRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AwsRegion" }),
         __metadata("design:type", String)
     ], AggregateConformancePackComplianceFilters.prototype, "awsRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComplianceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComplianceType" }),
         __metadata("design:type", String)
     ], AggregateConformancePackComplianceFilters.prototype, "complianceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConformancePackName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConformancePackName" }),
         __metadata("design:type", String)
     ], AggregateConformancePackComplianceFilters.prototype, "conformancePackName", void 0);
     return AggregateConformancePackComplianceFilters;
-}(SpeakeasyBase));
-export { AggregateConformancePackComplianceFilters };
+}(utils_1.SpeakeasyBase));
+exports.AggregateConformancePackComplianceFilters = AggregateConformancePackComplianceFilters;

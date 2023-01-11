@@ -28,7 +28,7 @@ export declare class BookingAvailabilityTourgrades200ApplicationJsonData extends
     gradeDepartureTime?: string;
     gradeDescription?: string;
     gradeTitle?: string;
-    langServices?: Map<string, any>;
+    langServices?: Record<string, any>;
     merchantNetPrice?: number;
     merchantNetPriceFormatted?: string;
     retailPrice?: number;
@@ -45,8 +45,8 @@ export declare class BookingAvailabilityTourgrades200ApplicationJson extends Spe
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -58,5 +58,5 @@ export declare class BookingAvailabilityTourgradesRequest extends SpeakeasyBase 
 export declare class BookingAvailabilityTourgradesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    bookingAvailabilityTourgrades200ApplicationJsonObject?: BookingAvailabilityTourgrades200ApplicationJson;
+    bookingAvailabilityTourgrades200ApplicationJSONObject?: BookingAvailabilityTourgrades200ApplicationJson;
 }

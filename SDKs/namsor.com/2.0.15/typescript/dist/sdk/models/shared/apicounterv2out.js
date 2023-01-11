@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApiKeyOut } from "./apikeyout";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiCounterV2Out = void 0;
+var utils_1 = require("../../../internal/utils");
+var apikeyout_1 = require("./apikeyout");
 // ApiCounterV2Out
 /**
  * Detailed usage as reported by the deduplicating API counter.
@@ -34,33 +37,33 @@ var ApiCounterV2Out = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiKey" }),
-        __metadata("design:type", ApiKeyOut)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiKey" }),
+        __metadata("design:type", apikeyout_1.ApiKeyOut)
     ], ApiCounterV2Out.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiService" }),
         __metadata("design:type", String)
     ], ApiCounterV2Out.prototype, "apiService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdDateTime" }),
         __metadata("design:type", Number)
     ], ApiCounterV2Out.prototype, "createdDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastFlushedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastFlushedDateTime" }),
         __metadata("design:type", Number)
     ], ApiCounterV2Out.prototype, "lastFlushedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUsedDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUsedDateTime" }),
         __metadata("design:type", Number)
     ], ApiCounterV2Out.prototype, "lastUsedDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceFeaturesUsage" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceFeaturesUsage" }),
+        __metadata("design:type", Object)
     ], ApiCounterV2Out.prototype, "serviceFeaturesUsage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalUsage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalUsage" }),
         __metadata("design:type", Number)
     ], ApiCounterV2Out.prototype, "totalUsage", void 0);
     return ApiCounterV2Out;
-}(SpeakeasyBase));
-export { ApiCounterV2Out };
+}(utils_1.SpeakeasyBase));
+exports.ApiCounterV2Out = ApiCounterV2Out;

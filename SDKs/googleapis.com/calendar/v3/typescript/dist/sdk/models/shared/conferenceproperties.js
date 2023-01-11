@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConferenceProperties = void 0;
+var utils_1 = require("../../../internal/utils");
 var ConferenceProperties = /** @class */ (function (_super) {
     __extends(ConferenceProperties, _super);
     function ConferenceProperties() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedConferenceSolutionTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedConferenceSolutionTypes" }),
         __metadata("design:type", Array)
     ], ConferenceProperties.prototype, "allowedConferenceSolutionTypes", void 0);
     return ConferenceProperties;
-}(SpeakeasyBase));
-export { ConferenceProperties };
+}(utils_1.SpeakeasyBase));
+exports.ConferenceProperties = ConferenceProperties;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetProtectionStatusRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetProtectionStatusRequest = /** @class */ (function (_super) {
     __extends(GetProtectionStatusRequest, _super);
     function GetProtectionStatusRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndTime" }),
         __metadata("design:type", Date)
     ], GetProtectionStatusRequest.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], GetProtectionStatusRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MemberAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MemberAccountId" }),
         __metadata("design:type", String)
     ], GetProtectionStatusRequest.prototype, "memberAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetProtectionStatusRequest.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyId" }),
         __metadata("design:type", String)
     ], GetProtectionStatusRequest.prototype, "policyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartTime" }),
         __metadata("design:type", Date)
     ], GetProtectionStatusRequest.prototype, "startTime", void 0);
     return GetProtectionStatusRequest;
-}(SpeakeasyBase));
-export { GetProtectionStatusRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetProtectionStatusRequest = GetProtectionStatusRequest;

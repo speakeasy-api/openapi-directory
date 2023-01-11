@@ -9,8 +9,8 @@ export declare class ReleaseEventApiGetNamesRequest extends SpeakeasyBase {
 export declare class ReleaseEventApiGetNamesResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    releaseEventApiGetNames200ApplicationJsonStrings?: string[];
+    releaseEventApiGetNames200ApplicationJSONStrings?: string[];
     releaseEventApiGetNames200ApplicationJsonpStrings?: string[];
-    releaseEventApiGetNames200TextJsonStrings?: string[];
+    releaseEventApiGetNames200TextJSONStrings?: string[];
     statusCode: number;
 }

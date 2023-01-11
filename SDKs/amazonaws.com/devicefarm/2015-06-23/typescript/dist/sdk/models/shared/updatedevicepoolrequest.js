@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Rule } from "./rule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDevicePoolRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var rule_1 = require("./rule");
 // UpdateDevicePoolRequest
 /**
  * Represents a request to the update device pool operation.
@@ -34,29 +37,29 @@ var UpdateDevicePoolRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], UpdateDevicePoolRequest.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clearMaxDevices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clearMaxDevices" }),
         __metadata("design:type", Boolean)
     ], UpdateDevicePoolRequest.prototype, "clearMaxDevices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], UpdateDevicePoolRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxDevices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxDevices" }),
         __metadata("design:type", Number)
     ], UpdateDevicePoolRequest.prototype, "maxDevices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateDevicePoolRequest.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: Rule }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: rule_1.Rule }),
         __metadata("design:type", Array)
     ], UpdateDevicePoolRequest.prototype, "rules", void 0);
     return UpdateDevicePoolRequest;
-}(SpeakeasyBase));
-export { UpdateDevicePoolRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDevicePoolRequest = UpdateDevicePoolRequest;

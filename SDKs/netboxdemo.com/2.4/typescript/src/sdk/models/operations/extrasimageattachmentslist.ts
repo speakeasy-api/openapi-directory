@@ -41,5 +41,5 @@ export class ExtrasImageAttachmentsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  extrasImageAttachmentsList200ApplicationJsonObject?: ExtrasImageAttachmentsList200ApplicationJson;
+  extrasImageAttachmentsList200ApplicationJSONObject?: ExtrasImageAttachmentsList200ApplicationJson;
 }

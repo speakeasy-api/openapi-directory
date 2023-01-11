@@ -9,5 +9,5 @@ export declare class GetNetworkClientPolicyRequest extends SpeakeasyBase {
 export declare class GetNetworkClientPolicyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkClientPolicy200ApplicationJsonObject?: Map<string, any>;
+    getNetworkClientPolicy200ApplicationJSONObject?: Record<string, any>;
 }

@@ -6,6 +6,7 @@ import { AclEntry } from "./aclentry";
 export declare class IpConfiguration extends SpeakeasyBase {
     allocatedIpRange?: string;
     authorizedNetworks?: AclEntry[];
+    enablePrivatePathForGoogleCloudServices?: boolean;
     ipv4Enabled?: boolean;
     privateNetwork?: string;
     requireSsl?: boolean;

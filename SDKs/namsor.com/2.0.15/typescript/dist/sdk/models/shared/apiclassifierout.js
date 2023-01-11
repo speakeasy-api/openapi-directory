@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiClassifierOut = void 0;
+var utils_1 = require("../../../internal/utils");
 // ApiClassifierOut
 /**
  * The list of classifiers and versions.
@@ -33,25 +36,25 @@ var ApiClassifierOut = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=classifierName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=classifierName" }),
         __metadata("design:type", String)
     ], ApiClassifierOut.prototype, "classifierName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=learning" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=learning" }),
         __metadata("design:type", Boolean)
     ], ApiClassifierOut.prototype, "learning", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=probabilityCalibrated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=probabilityCalibrated" }),
         __metadata("design:type", Boolean)
     ], ApiClassifierOut.prototype, "probabilityCalibrated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serving" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serving" }),
         __metadata("design:type", Boolean)
     ], ApiClassifierOut.prototype, "serving", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shuttingDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shuttingDown" }),
         __metadata("design:type", Boolean)
     ], ApiClassifierOut.prototype, "shuttingDown", void 0);
     return ApiClassifierOut;
-}(SpeakeasyBase));
-export { ApiClassifierOut };
+}(utils_1.SpeakeasyBase));
+exports.ApiClassifierOut = ApiClassifierOut;

@@ -9,7 +9,7 @@ import { OptimizationMetricEnum } from "./optimizationmetricenum";
 import { Tag } from "./tag";
 export declare class CreatePredictorRequest extends SpeakeasyBase {
     algorithmArn?: string;
-    autoMlOverrideStrategy?: AutoMlOverrideStrategyEnum;
+    autoMLOverrideStrategy?: AutoMlOverrideStrategyEnum;
     encryptionConfig?: EncryptionConfig;
     evaluationParameters?: EvaluationParameters;
     featurizationConfig: FeaturizationConfig;
@@ -18,9 +18,9 @@ export declare class CreatePredictorRequest extends SpeakeasyBase {
     hpoConfig?: HyperParameterTuningJobConfig;
     inputDataConfig: InputDataConfig;
     optimizationMetric?: OptimizationMetricEnum;
-    performAutoMl?: boolean;
-    performHpo?: boolean;
+    performAutoML?: boolean;
+    performHPO?: boolean;
     predictorName: string;
     tags?: Tag[];
-    trainingParameters?: Map<string, string>;
+    trainingParameters?: Record<string, string>;
 }

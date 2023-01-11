@@ -13,16 +13,16 @@ export class UpdateMultiNodeInventoryHeaders extends SpeakeasyBase {
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_CONSUMER.CHANNEL.TYPE" })
-  wmConsumerChannelType: string;
+  wmCONSUMERCHANNELTYPE: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_QOS.CORRELATION_ID" })
-  wmQosCorrelationId: string;
+  wmQOSCORRELATIONID: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SEC.ACCESS_TOKEN" })
-  wmSecAccessToken: string;
+  wmSECACCESSTOKEN: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SVC.NAME" })
-  wmSvcName: string;
+  wmSVCNAME: string;
 }
 
 export enum UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum {
@@ -106,7 +106,7 @@ export class UpdateMultiNodeInventory200ApplicationJsonNodesErrors extends Speak
   description?: string;
 
   @SpeakeasyMetadata({ data: "json, name=errorIdentifiers" })
-  errorIdentifiers?: Map<string, Map<string, any>>;
+  errorIdentifiers?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata({ data: "json, name=field" })
   field?: string;
@@ -160,5 +160,5 @@ export class UpdateMultiNodeInventoryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateMultiNodeInventory200ApplicationJsonObject?: UpdateMultiNodeInventory200ApplicationJson;
+  updateMultiNodeInventory200ApplicationJSONObject?: UpdateMultiNodeInventory200ApplicationJson;
 }

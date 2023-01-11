@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoStream = void 0;
+var utils_1 = require("../../../internal/utils");
 // VideoStream
 /**
  * Video stream resource.
@@ -33,89 +36,89 @@ var VideoStream = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowOpenGop" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowOpenGop" }),
         __metadata("design:type", Boolean)
     ], VideoStream.prototype, "allowOpenGop", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aqStrength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aqStrength" }),
         __metadata("design:type", Number)
     ], VideoStream.prototype, "aqStrength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bFrameCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bFrameCount" }),
         __metadata("design:type", Number)
     ], VideoStream.prototype, "bFrameCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bPyramid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bPyramid" }),
         __metadata("design:type", Boolean)
     ], VideoStream.prototype, "bPyramid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bitrateBps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bitrateBps" }),
         __metadata("design:type", Number)
     ], VideoStream.prototype, "bitrateBps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=codec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=codec" }),
         __metadata("design:type", String)
     ], VideoStream.prototype, "codec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crfLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crfLevel" }),
         __metadata("design:type", Number)
     ], VideoStream.prototype, "crfLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableTwoPass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableTwoPass" }),
         __metadata("design:type", Boolean)
     ], VideoStream.prototype, "enableTwoPass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entropyCoder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entropyCoder" }),
         __metadata("design:type", String)
     ], VideoStream.prototype, "entropyCoder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frameRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frameRate" }),
         __metadata("design:type", Number)
     ], VideoStream.prototype, "frameRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gopDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gopDuration" }),
         __metadata("design:type", String)
     ], VideoStream.prototype, "gopDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gopFrameCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gopFrameCount" }),
         __metadata("design:type", Number)
     ], VideoStream.prototype, "gopFrameCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=heightPixels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=heightPixels" }),
         __metadata("design:type", Number)
     ], VideoStream.prototype, "heightPixels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pixelFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pixelFormat" }),
         __metadata("design:type", String)
     ], VideoStream.prototype, "pixelFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preset" }),
         __metadata("design:type", String)
     ], VideoStream.prototype, "preset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile" }),
         __metadata("design:type", String)
     ], VideoStream.prototype, "profile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rateControlMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rateControlMode" }),
         __metadata("design:type", String)
     ], VideoStream.prototype, "rateControlMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tune" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tune" }),
         __metadata("design:type", String)
     ], VideoStream.prototype, "tune", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vbvFullnessBits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vbvFullnessBits" }),
         __metadata("design:type", Number)
     ], VideoStream.prototype, "vbvFullnessBits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vbvSizeBits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vbvSizeBits" }),
         __metadata("design:type", Number)
     ], VideoStream.prototype, "vbvSizeBits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=widthPixels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=widthPixels" }),
         __metadata("design:type", Number)
     ], VideoStream.prototype, "widthPixels", void 0);
     return VideoStream;
-}(SpeakeasyBase));
-export { VideoStream };
+}(utils_1.SpeakeasyBase));
+exports.VideoStream = VideoStream;

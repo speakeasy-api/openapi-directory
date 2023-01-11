@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BillingInfo } from "./billinginfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BillingInfoList = void 0;
+var utils_1 = require("../../../internal/utils");
+var billinginfo_1 = require("./billinginfo");
 // BillingInfoList
 /**
  * A billing info feed lists Billing Info the Ad Exchange buyer account has access to. Each entry in the feed corresponds to a single billing info.
@@ -34,13 +37,13 @@ var BillingInfoList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: BillingInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: billinginfo_1.BillingInfo }),
         __metadata("design:type", Array)
     ], BillingInfoList.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], BillingInfoList.prototype, "kind", void 0);
     return BillingInfoList;
-}(SpeakeasyBase));
-export { BillingInfoList };
+}(utils_1.SpeakeasyBase));
+exports.BillingInfoList = BillingInfoList;

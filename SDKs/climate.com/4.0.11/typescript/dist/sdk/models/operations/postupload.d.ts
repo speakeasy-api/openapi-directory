@@ -15,7 +15,7 @@ export declare class PostUploadRequest extends SpeakeasyBase {
 export declare class PostUploadResponse extends SpeakeasyBase {
     contentType: string;
     createdUpload?: string;
-    error?: shared.Error;
-    headers: Map<string, string[]>;
+    error?: shared.ErrorT;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

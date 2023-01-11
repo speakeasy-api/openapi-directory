@@ -8,5 +8,5 @@ export declare class GetLogsResponse extends SpeakeasyBase {
     invalidInputExceptionInfo?: shared.InvalidInputExceptionInfo;
     notFoundKnownExceptionInfo?: shared.NotFoundKnownExceptionInfo;
     statusCode: number;
-    getLogs200TextPlainBinaryString?: Uint8Array;
+    getLogs200TextPlainBinaryString?: string;
 }

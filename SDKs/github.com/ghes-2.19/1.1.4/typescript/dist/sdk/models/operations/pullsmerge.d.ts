@@ -33,7 +33,7 @@ export declare class PullsMergeResponse extends SpeakeasyBase {
     statusCode: number;
     basicError?: shared.BasicError;
     pullRequestMergeResult?: shared.PullRequestMergeResult;
-    pullsMerge405ApplicationJsonObject?: PullsMerge405ApplicationJson;
-    pullsMerge409ApplicationJsonObject?: PullsMerge409ApplicationJson;
+    pullsMerge405ApplicationJSONObject?: PullsMerge405ApplicationJson;
+    pullsMerge409ApplicationJSONObject?: PullsMerge409ApplicationJson;
     validationError?: shared.ValidationError;
 }

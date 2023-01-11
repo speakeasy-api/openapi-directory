@@ -14,6 +14,5 @@ export declare class DeleteSandboxSandboxIdRequest extends SpeakeasyBase {
 export declare class DeleteSandboxSandboxIdResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
-    headers: Map<string, string[]>;
     statusCode: number;
 }

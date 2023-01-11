@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HealthStatusEnum } from "./healthstatusenum";
-import { ManagedAgent } from "./managedagent";
-import { NetworkBinding } from "./networkbinding";
-import { NetworkInterface } from "./networkinterface";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Container = void 0;
+var utils_1 = require("../../../internal/utils");
+var healthstatusenum_1 = require("./healthstatusenum");
+var managedagent_1 = require("./managedagent");
+var networkbinding_1 = require("./networkbinding");
+var networkinterface_1 = require("./networkinterface");
 // Container
 /**
  * A Docker container that is part of a task.
@@ -37,73 +40,73 @@ var Container = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerArn" }),
         __metadata("design:type", String)
     ], Container.prototype, "containerArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpu" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpu" }),
         __metadata("design:type", String)
     ], Container.prototype, "cpu", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exitCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exitCode" }),
         __metadata("design:type", Number)
     ], Container.prototype, "exitCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gpuIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gpuIds" }),
         __metadata("design:type", Array)
     ], Container.prototype, "gpuIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=healthStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=healthStatus" }),
         __metadata("design:type", String)
     ], Container.prototype, "healthStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", String)
     ], Container.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageDigest" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageDigest" }),
         __metadata("design:type", String)
     ], Container.prototype, "imageDigest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastStatus" }),
         __metadata("design:type", String)
     ], Container.prototype, "lastStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managedAgents", elemType: ManagedAgent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managedAgents", elemType: managedagent_1.ManagedAgent }),
         __metadata("design:type", Array)
     ], Container.prototype, "managedAgents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memory" }),
         __metadata("design:type", String)
     ], Container.prototype, "memory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memoryReservation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memoryReservation" }),
         __metadata("design:type", String)
     ], Container.prototype, "memoryReservation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Container.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkBindings", elemType: NetworkBinding }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkBindings", elemType: networkbinding_1.NetworkBinding }),
         __metadata("design:type", Array)
     ], Container.prototype, "networkBindings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkInterfaces", elemType: NetworkInterface }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkInterfaces", elemType: networkinterface_1.NetworkInterface }),
         __metadata("design:type", Array)
     ], Container.prototype, "networkInterfaces", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], Container.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runtimeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runtimeId" }),
         __metadata("design:type", String)
     ], Container.prototype, "runtimeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskArn" }),
         __metadata("design:type", String)
     ], Container.prototype, "taskArn", void 0);
     return Container;
-}(SpeakeasyBase));
-export { Container };
+}(utils_1.SpeakeasyBase));
+exports.Container = Container;

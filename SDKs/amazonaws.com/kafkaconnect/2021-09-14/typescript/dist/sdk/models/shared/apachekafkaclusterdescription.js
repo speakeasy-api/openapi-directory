@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VpcDescription } from "./vpcdescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApacheKafkaClusterDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var vpcdescription_1 = require("./vpcdescription");
 // ApacheKafkaClusterDescription
 /**
  * The description of the Apache Kafka cluster to which the connector is connected.
@@ -34,13 +37,13 @@ var ApacheKafkaClusterDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bootstrapServers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bootstrapServers" }),
         __metadata("design:type", String)
     ], ApacheKafkaClusterDescription.prototype, "bootstrapServers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpc" }),
-        __metadata("design:type", VpcDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpc" }),
+        __metadata("design:type", vpcdescription_1.VpcDescription)
     ], ApacheKafkaClusterDescription.prototype, "vpc", void 0);
     return ApacheKafkaClusterDescription;
-}(SpeakeasyBase));
-export { ApacheKafkaClusterDescription };
+}(utils_1.SpeakeasyBase));
+exports.ApacheKafkaClusterDescription = ApacheKafkaClusterDescription;

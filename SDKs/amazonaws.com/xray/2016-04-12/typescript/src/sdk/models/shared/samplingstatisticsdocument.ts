@@ -11,7 +11,7 @@ export class SamplingStatisticsDocument extends SpeakeasyBase {
   borrowCount?: number;
 
   @SpeakeasyMetadata({ data: "json, name=ClientID" })
-  clientId: string;
+  clientID: string;
 
   @SpeakeasyMetadata({ data: "json, name=RequestCount" })
   requestCount: number;

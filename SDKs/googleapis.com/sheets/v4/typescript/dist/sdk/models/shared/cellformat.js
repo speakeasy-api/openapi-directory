@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Color } from "./color";
-import { ColorStyle } from "./colorstyle";
-import { Borders } from "./borders";
-import { NumberFormat } from "./numberformat";
-import { Padding } from "./padding";
-import { TextFormat } from "./textformat";
-import { TextRotation } from "./textrotation";
-export var CellFormatHorizontalAlignmentEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CellFormat = exports.CellFormatWrapStrategyEnum = exports.CellFormatVerticalAlignmentEnum = exports.CellFormatTextDirectionEnum = exports.CellFormatHyperlinkDisplayTypeEnum = exports.CellFormatHorizontalAlignmentEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var color_1 = require("./color");
+var colorstyle_1 = require("./colorstyle");
+var borders_1 = require("./borders");
+var numberformat_1 = require("./numberformat");
+var padding_1 = require("./padding");
+var textformat_1 = require("./textformat");
+var textrotation_1 = require("./textrotation");
+var CellFormatHorizontalAlignmentEnum;
 (function (CellFormatHorizontalAlignmentEnum) {
     CellFormatHorizontalAlignmentEnum["HorizontalAlignUnspecified"] = "HORIZONTAL_ALIGN_UNSPECIFIED";
     CellFormatHorizontalAlignmentEnum["Left"] = "LEFT";
     CellFormatHorizontalAlignmentEnum["Center"] = "CENTER";
     CellFormatHorizontalAlignmentEnum["Right"] = "RIGHT";
-})(CellFormatHorizontalAlignmentEnum || (CellFormatHorizontalAlignmentEnum = {}));
-export var CellFormatHyperlinkDisplayTypeEnum;
+})(CellFormatHorizontalAlignmentEnum = exports.CellFormatHorizontalAlignmentEnum || (exports.CellFormatHorizontalAlignmentEnum = {}));
+var CellFormatHyperlinkDisplayTypeEnum;
 (function (CellFormatHyperlinkDisplayTypeEnum) {
     CellFormatHyperlinkDisplayTypeEnum["HyperlinkDisplayTypeUnspecified"] = "HYPERLINK_DISPLAY_TYPE_UNSPECIFIED";
     CellFormatHyperlinkDisplayTypeEnum["Linked"] = "LINKED";
     CellFormatHyperlinkDisplayTypeEnum["PlainText"] = "PLAIN_TEXT";
-})(CellFormatHyperlinkDisplayTypeEnum || (CellFormatHyperlinkDisplayTypeEnum = {}));
-export var CellFormatTextDirectionEnum;
+})(CellFormatHyperlinkDisplayTypeEnum = exports.CellFormatHyperlinkDisplayTypeEnum || (exports.CellFormatHyperlinkDisplayTypeEnum = {}));
+var CellFormatTextDirectionEnum;
 (function (CellFormatTextDirectionEnum) {
     CellFormatTextDirectionEnum["TextDirectionUnspecified"] = "TEXT_DIRECTION_UNSPECIFIED";
     CellFormatTextDirectionEnum["LeftToRight"] = "LEFT_TO_RIGHT";
     CellFormatTextDirectionEnum["RightToLeft"] = "RIGHT_TO_LEFT";
-})(CellFormatTextDirectionEnum || (CellFormatTextDirectionEnum = {}));
-export var CellFormatVerticalAlignmentEnum;
+})(CellFormatTextDirectionEnum = exports.CellFormatTextDirectionEnum || (exports.CellFormatTextDirectionEnum = {}));
+var CellFormatVerticalAlignmentEnum;
 (function (CellFormatVerticalAlignmentEnum) {
     CellFormatVerticalAlignmentEnum["VerticalAlignUnspecified"] = "VERTICAL_ALIGN_UNSPECIFIED";
     CellFormatVerticalAlignmentEnum["Top"] = "TOP";
     CellFormatVerticalAlignmentEnum["Middle"] = "MIDDLE";
     CellFormatVerticalAlignmentEnum["Bottom"] = "BOTTOM";
-})(CellFormatVerticalAlignmentEnum || (CellFormatVerticalAlignmentEnum = {}));
-export var CellFormatWrapStrategyEnum;
+})(CellFormatVerticalAlignmentEnum = exports.CellFormatVerticalAlignmentEnum || (exports.CellFormatVerticalAlignmentEnum = {}));
+var CellFormatWrapStrategyEnum;
 (function (CellFormatWrapStrategyEnum) {
     CellFormatWrapStrategyEnum["WrapStrategyUnspecified"] = "WRAP_STRATEGY_UNSPECIFIED";
     CellFormatWrapStrategyEnum["OverflowCell"] = "OVERFLOW_CELL";
     CellFormatWrapStrategyEnum["LegacyWrap"] = "LEGACY_WRAP";
     CellFormatWrapStrategyEnum["Clip"] = "CLIP";
     CellFormatWrapStrategyEnum["Wrap"] = "WRAP";
-})(CellFormatWrapStrategyEnum || (CellFormatWrapStrategyEnum = {}));
+})(CellFormatWrapStrategyEnum = exports.CellFormatWrapStrategyEnum || (exports.CellFormatWrapStrategyEnum = {}));
 // CellFormat
 /**
  * The format of a cell.
@@ -74,53 +77,53 @@ var CellFormat = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backgroundColor" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backgroundColor" }),
+        __metadata("design:type", color_1.Color)
     ], CellFormat.prototype, "backgroundColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backgroundColorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backgroundColorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], CellFormat.prototype, "backgroundColorStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=borders" }),
-        __metadata("design:type", Borders)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=borders" }),
+        __metadata("design:type", borders_1.Borders)
     ], CellFormat.prototype, "borders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=horizontalAlignment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=horizontalAlignment" }),
         __metadata("design:type", String)
     ], CellFormat.prototype, "horizontalAlignment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hyperlinkDisplayType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hyperlinkDisplayType" }),
         __metadata("design:type", String)
     ], CellFormat.prototype, "hyperlinkDisplayType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberFormat" }),
-        __metadata("design:type", NumberFormat)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberFormat" }),
+        __metadata("design:type", numberformat_1.NumberFormat)
     ], CellFormat.prototype, "numberFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=padding" }),
-        __metadata("design:type", Padding)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=padding" }),
+        __metadata("design:type", padding_1.Padding)
     ], CellFormat.prototype, "padding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textDirection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textDirection" }),
         __metadata("design:type", String)
     ], CellFormat.prototype, "textDirection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textFormat" }),
-        __metadata("design:type", TextFormat)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textFormat" }),
+        __metadata("design:type", textformat_1.TextFormat)
     ], CellFormat.prototype, "textFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textRotation" }),
-        __metadata("design:type", TextRotation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textRotation" }),
+        __metadata("design:type", textrotation_1.TextRotation)
     ], CellFormat.prototype, "textRotation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verticalAlignment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verticalAlignment" }),
         __metadata("design:type", String)
     ], CellFormat.prototype, "verticalAlignment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wrapStrategy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wrapStrategy" }),
         __metadata("design:type", String)
     ], CellFormat.prototype, "wrapStrategy", void 0);
     return CellFormat;
-}(SpeakeasyBase));
-export { CellFormat };
+}(utils_1.SpeakeasyBase));
+exports.CellFormat = CellFormat;

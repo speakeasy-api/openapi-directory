@@ -19,7 +19,7 @@ export declare class RejectQualificationRequestRequest extends SpeakeasyBase {
 }
 export declare class RejectQualificationRequestResponse extends SpeakeasyBase {
     contentType: string;
-    rejectQualificationRequestResponse?: Map<string, any>;
+    rejectQualificationRequestResponse?: Record<string, any>;
     requestError?: any;
     serviceFault?: any;
     statusCode: number;

@@ -47,7 +47,7 @@ export class GetHolidayBalanceReportOutputResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getHolidayBalanceReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+  getHolidayBalanceReportOutput200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

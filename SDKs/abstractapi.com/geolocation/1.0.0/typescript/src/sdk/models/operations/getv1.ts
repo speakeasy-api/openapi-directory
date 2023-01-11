@@ -20,7 +20,7 @@ export class GetV1QueryParams extends SpeakeasyBase {
 
 export class GetV1Request extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   queryParams: GetV1QueryParams;

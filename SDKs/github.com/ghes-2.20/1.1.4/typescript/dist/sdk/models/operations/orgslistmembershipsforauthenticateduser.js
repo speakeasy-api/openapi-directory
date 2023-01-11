@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,83 +14,108 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var OrgsListMembershipsForAuthenticatedUserStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrgsListMembershipsForAuthenticatedUserResponse = exports.OrgsListMembershipsForAuthenticatedUserRequest = exports.OrgsListMembershipsForAuthenticatedUserQueryParams = exports.OrgsListMembershipsForAuthenticatedUserStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var OrgsListMembershipsForAuthenticatedUserStateEnum;
 (function (OrgsListMembershipsForAuthenticatedUserStateEnum) {
     OrgsListMembershipsForAuthenticatedUserStateEnum["Active"] = "active";
     OrgsListMembershipsForAuthenticatedUserStateEnum["Pending"] = "pending";
-})(OrgsListMembershipsForAuthenticatedUserStateEnum || (OrgsListMembershipsForAuthenticatedUserStateEnum = {}));
+})(OrgsListMembershipsForAuthenticatedUserStateEnum = exports.OrgsListMembershipsForAuthenticatedUserStateEnum || (exports.OrgsListMembershipsForAuthenticatedUserStateEnum = {}));
 var OrgsListMembershipsForAuthenticatedUserQueryParams = /** @class */ (function (_super) {
     __extends(OrgsListMembershipsForAuthenticatedUserQueryParams, _super);
     function OrgsListMembershipsForAuthenticatedUserQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], OrgsListMembershipsForAuthenticatedUserQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=per_page" }),
         __metadata("design:type", Number)
     ], OrgsListMembershipsForAuthenticatedUserQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=state" }),
         __metadata("design:type", String)
     ], OrgsListMembershipsForAuthenticatedUserQueryParams.prototype, "state", void 0);
     return OrgsListMembershipsForAuthenticatedUserQueryParams;
-}(SpeakeasyBase));
-export { OrgsListMembershipsForAuthenticatedUserQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.OrgsListMembershipsForAuthenticatedUserQueryParams = OrgsListMembershipsForAuthenticatedUserQueryParams;
 var OrgsListMembershipsForAuthenticatedUserRequest = /** @class */ (function (_super) {
     __extends(OrgsListMembershipsForAuthenticatedUserRequest, _super);
     function OrgsListMembershipsForAuthenticatedUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", OrgsListMembershipsForAuthenticatedUserQueryParams)
     ], OrgsListMembershipsForAuthenticatedUserRequest.prototype, "queryParams", void 0);
     return OrgsListMembershipsForAuthenticatedUserRequest;
-}(SpeakeasyBase));
-export { OrgsListMembershipsForAuthenticatedUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.OrgsListMembershipsForAuthenticatedUserRequest = OrgsListMembershipsForAuthenticatedUserRequest;
 var OrgsListMembershipsForAuthenticatedUserResponse = /** @class */ (function (_super) {
     __extends(OrgsListMembershipsForAuthenticatedUserResponse, _super);
     function OrgsListMembershipsForAuthenticatedUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], OrgsListMembershipsForAuthenticatedUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], OrgsListMembershipsForAuthenticatedUserResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], OrgsListMembershipsForAuthenticatedUserResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.BasicError)
     ], OrgsListMembershipsForAuthenticatedUserResponse.prototype, "basicError", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.OrgMembership }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.OrgMembership }),
         __metadata("design:type", Array)
     ], OrgsListMembershipsForAuthenticatedUserResponse.prototype, "orgMemberships", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ValidationError)
     ], OrgsListMembershipsForAuthenticatedUserResponse.prototype, "validationError", void 0);
     return OrgsListMembershipsForAuthenticatedUserResponse;
-}(SpeakeasyBase));
-export { OrgsListMembershipsForAuthenticatedUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.OrgsListMembershipsForAuthenticatedUserResponse = OrgsListMembershipsForAuthenticatedUserResponse;

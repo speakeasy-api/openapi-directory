@@ -19,30 +19,12 @@ export declare enum CloudSqlSettingsDatabaseVersionEnum {
 /**
  * Settings for creating a Cloud SQL database instance.
 **/
-export declare class CloudSqlSettingsInput extends SpeakeasyBase {
-    activationPolicy?: CloudSqlSettingsActivationPolicyEnum;
-    autoStorageIncrease?: boolean;
-    dataDiskSizeGb?: string;
-    dataDiskType?: CloudSqlSettingsDataDiskTypeEnum;
-    databaseFlags?: Map<string, string>;
-    databaseVersion?: CloudSqlSettingsDatabaseVersionEnum;
-    ipConfig?: SqlIpConfig;
-    rootPassword?: string;
-    sourceId?: string;
-    storageAutoResizeLimit?: string;
-    tier?: string;
-    userLabels?: Map<string, string>;
-    zone?: string;
-}
-/**
- * Settings for creating a Cloud SQL database instance.
-**/
 export declare class CloudSqlSettings extends SpeakeasyBase {
     activationPolicy?: CloudSqlSettingsActivationPolicyEnum;
     autoStorageIncrease?: boolean;
     dataDiskSizeGb?: string;
     dataDiskType?: CloudSqlSettingsDataDiskTypeEnum;
-    databaseFlags?: Map<string, string>;
+    databaseFlags?: Record<string, string>;
     databaseVersion?: CloudSqlSettingsDatabaseVersionEnum;
     ipConfig?: SqlIpConfig;
     rootPassword?: string;
@@ -50,6 +32,24 @@ export declare class CloudSqlSettings extends SpeakeasyBase {
     sourceId?: string;
     storageAutoResizeLimit?: string;
     tier?: string;
-    userLabels?: Map<string, string>;
+    userLabels?: Record<string, string>;
+    zone?: string;
+}
+/**
+ * Settings for creating a Cloud SQL database instance.
+**/
+export declare class CloudSqlSettingsInput extends SpeakeasyBase {
+    activationPolicy?: CloudSqlSettingsActivationPolicyEnum;
+    autoStorageIncrease?: boolean;
+    dataDiskSizeGb?: string;
+    dataDiskType?: CloudSqlSettingsDataDiskTypeEnum;
+    databaseFlags?: Record<string, string>;
+    databaseVersion?: CloudSqlSettingsDatabaseVersionEnum;
+    ipConfig?: SqlIpConfig;
+    rootPassword?: string;
+    sourceId?: string;
+    storageAutoResizeLimit?: string;
+    tier?: string;
+    userLabels?: Record<string, string>;
     zone?: string;
 }

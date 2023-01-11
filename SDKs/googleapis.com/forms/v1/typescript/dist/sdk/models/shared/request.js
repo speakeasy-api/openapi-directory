@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CreateItemRequestInput } from "./createitemrequest";
-import { DeleteItemRequest } from "./deleteitemrequest";
-import { MoveItemRequest } from "./moveitemrequest";
-import { UpdateFormInfoRequestInput } from "./updateforminforequest";
-import { UpdateItemRequestInput } from "./updateitemrequest";
-import { UpdateSettingsRequest } from "./updatesettingsrequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var createitemrequest_1 = require("./createitemrequest");
+var deleteitemrequest_1 = require("./deleteitemrequest");
+var moveitemrequest_1 = require("./moveitemrequest");
+var updateforminforequest_1 = require("./updateforminforequest");
+var updateitemrequest_1 = require("./updateitemrequest");
+var updatesettingsrequest_1 = require("./updatesettingsrequest");
 // RequestInput
 /**
  * The kinds of update requests that can be made.
@@ -39,29 +42,29 @@ var RequestInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createItem" }),
-        __metadata("design:type", CreateItemRequestInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createItem" }),
+        __metadata("design:type", createitemrequest_1.CreateItemRequestInput)
     ], RequestInput.prototype, "createItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleteItem" }),
-        __metadata("design:type", DeleteItemRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleteItem" }),
+        __metadata("design:type", deleteitemrequest_1.DeleteItemRequest)
     ], RequestInput.prototype, "deleteItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=moveItem" }),
-        __metadata("design:type", MoveItemRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=moveItem" }),
+        __metadata("design:type", moveitemrequest_1.MoveItemRequest)
     ], RequestInput.prototype, "moveItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateFormInfo" }),
-        __metadata("design:type", UpdateFormInfoRequestInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateFormInfo" }),
+        __metadata("design:type", updateforminforequest_1.UpdateFormInfoRequestInput)
     ], RequestInput.prototype, "updateFormInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateItem" }),
-        __metadata("design:type", UpdateItemRequestInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateItem" }),
+        __metadata("design:type", updateitemrequest_1.UpdateItemRequestInput)
     ], RequestInput.prototype, "updateItem", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateSettings" }),
-        __metadata("design:type", UpdateSettingsRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateSettings" }),
+        __metadata("design:type", updatesettingsrequest_1.UpdateSettingsRequest)
     ], RequestInput.prototype, "updateSettings", void 0);
     return RequestInput;
-}(SpeakeasyBase));
-export { RequestInput };
+}(utils_1.SpeakeasyBase));
+exports.RequestInput = RequestInput;

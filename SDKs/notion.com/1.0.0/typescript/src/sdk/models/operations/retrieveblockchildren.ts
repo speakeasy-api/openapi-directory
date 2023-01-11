@@ -34,7 +34,7 @@ export class RetrieveBlockChildren200ApplicationJsonResults extends SpeakeasyBas
   type?: string;
 
   @SpeakeasyMetadata({ data: "json, name=unsupported" })
-  unsupported?: Map<string, any>;
+  unsupported?: Record<string, any>;
 }
 
 
@@ -67,11 +67,11 @@ export class RetrieveBlockChildrenResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  retrieveBlockChildren200ApplicationJsonObject?: RetrieveBlockChildren200ApplicationJson;
+  retrieveBlockChildren200ApplicationJSONObject?: RetrieveBlockChildren200ApplicationJson;
 }

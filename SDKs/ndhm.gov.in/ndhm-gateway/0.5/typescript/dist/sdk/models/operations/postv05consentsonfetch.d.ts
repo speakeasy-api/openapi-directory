@@ -2,10 +2,10 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class PostV05ConsentsOnFetchHeaders extends SpeakeasyBase {
     authorization: string;
-    xHiuId: string;
+    xHIUID: string;
 }
 export declare class PostV05ConsentsOnFetchRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     consentArtefactResponse?: shared.ConsentArtefactResponse;
 }
 export declare class PostV05ConsentsOnFetchRequest extends SpeakeasyBase {

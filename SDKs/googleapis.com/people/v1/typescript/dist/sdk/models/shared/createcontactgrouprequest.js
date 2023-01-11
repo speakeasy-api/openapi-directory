@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContactGroupInput } from "./contactgroup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateContactGroupRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var contactgroup_1 = require("./contactgroup");
 // CreateContactGroupRequestInput
 /**
  * A request to create a new contact group.
@@ -34,13 +37,13 @@ var CreateContactGroupRequestInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contactGroup" }),
-        __metadata("design:type", ContactGroupInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contactGroup" }),
+        __metadata("design:type", contactgroup_1.ContactGroupInput)
     ], CreateContactGroupRequestInput.prototype, "contactGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readGroupFields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readGroupFields" }),
         __metadata("design:type", String)
     ], CreateContactGroupRequestInput.prototype, "readGroupFields", void 0);
     return CreateContactGroupRequestInput;
-}(SpeakeasyBase));
-export { CreateContactGroupRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateContactGroupRequestInput = CreateContactGroupRequestInput;

@@ -19,7 +19,7 @@ export declare class DeletePreparedStatementRequest extends SpeakeasyBase {
 }
 export declare class DeletePreparedStatementResponse extends SpeakeasyBase {
     contentType: string;
-    deletePreparedStatementOutput?: Map<string, any>;
+    deletePreparedStatementOutput?: Record<string, any>;
     internalServerException?: any;
     invalidRequestException?: any;
     resourceNotFoundException?: any;

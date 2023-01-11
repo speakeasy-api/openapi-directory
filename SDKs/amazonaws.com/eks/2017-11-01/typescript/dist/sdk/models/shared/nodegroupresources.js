@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoScalingGroup } from "./autoscalinggroup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodegroupResources = void 0;
+var utils_1 = require("../../../internal/utils");
+var autoscalinggroup_1 = require("./autoscalinggroup");
 // NodegroupResources
 /**
  * An object representing the resources associated with the node group, such as Auto Scaling groups and security groups for remote access.
@@ -34,13 +37,13 @@ var NodegroupResources = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoScalingGroups", elemType: AutoScalingGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoScalingGroups", elemType: autoscalinggroup_1.AutoScalingGroup }),
         __metadata("design:type", Array)
     ], NodegroupResources.prototype, "autoScalingGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remoteAccessSecurityGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remoteAccessSecurityGroup" }),
         __metadata("design:type", String)
     ], NodegroupResources.prototype, "remoteAccessSecurityGroup", void 0);
     return NodegroupResources;
-}(SpeakeasyBase));
-export { NodegroupResources };
+}(utils_1.SpeakeasyBase));
+exports.NodegroupResources = NodegroupResources;

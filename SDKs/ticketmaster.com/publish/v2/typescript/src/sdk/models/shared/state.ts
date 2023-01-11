@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class State extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=names" })
-  names?: Map<string, string>;
+  names?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=stateCode" })
   stateCode?: string;

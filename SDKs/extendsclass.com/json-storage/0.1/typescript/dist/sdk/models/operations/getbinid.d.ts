@@ -8,6 +8,6 @@ export declare class GetBinIdRequest extends SpeakeasyBase {
 export declare class GetBinIdResponse extends SpeakeasyBase {
     contentType: string;
     error?: any;
-    getBinId200ApplicationJsonObject?: Map<string, any>;
     statusCode: number;
+    getBinId200ApplicationJSONObject?: Record<string, any>;
 }

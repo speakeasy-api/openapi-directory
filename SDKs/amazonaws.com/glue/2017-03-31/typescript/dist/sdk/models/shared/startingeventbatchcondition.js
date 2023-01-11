@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartingEventBatchCondition = void 0;
+var utils_1 = require("../../../internal/utils");
 // StartingEventBatchCondition
 /**
  * The batch condition that started the workflow run. Either the number of events in the batch size arrived, in which case the BatchSize member is non-zero, or the batch window expired, in which case the BatchWindow member is non-zero.
@@ -33,13 +36,13 @@ var StartingEventBatchCondition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BatchSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BatchSize" }),
         __metadata("design:type", Number)
     ], StartingEventBatchCondition.prototype, "batchSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BatchWindow" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BatchWindow" }),
         __metadata("design:type", Number)
     ], StartingEventBatchCondition.prototype, "batchWindow", void 0);
     return StartingEventBatchCondition;
-}(SpeakeasyBase));
-export { StartingEventBatchCondition };
+}(utils_1.SpeakeasyBase));
+exports.StartingEventBatchCondition = StartingEventBatchCondition;

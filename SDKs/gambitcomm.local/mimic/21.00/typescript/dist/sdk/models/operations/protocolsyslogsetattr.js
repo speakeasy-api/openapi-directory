@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolSyslogSetAttrResponse = exports.ProtocolSyslogSetAttrRequest = exports.ProtocolSyslogSetAttrPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolSyslogSetAttrPathParams = /** @class */ (function (_super) {
     __extends(ProtocolSyslogSetAttrPathParams, _super);
     function ProtocolSyslogSetAttrPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolSyslogSetAttrPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=attr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=attr" }),
         __metadata("design:type", String)
     ], ProtocolSyslogSetAttrPathParams.prototype, "attr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=value" }),
         __metadata("design:type", String)
     ], ProtocolSyslogSetAttrPathParams.prototype, "value", void 0);
     return ProtocolSyslogSetAttrPathParams;
-}(SpeakeasyBase));
-export { ProtocolSyslogSetAttrPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSyslogSetAttrPathParams = ProtocolSyslogSetAttrPathParams;
 var ProtocolSyslogSetAttrRequest = /** @class */ (function (_super) {
     __extends(ProtocolSyslogSetAttrRequest, _super);
     function ProtocolSyslogSetAttrRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolSyslogSetAttrPathParams)
     ], ProtocolSyslogSetAttrRequest.prototype, "pathParams", void 0);
     return ProtocolSyslogSetAttrRequest;
-}(SpeakeasyBase));
-export { ProtocolSyslogSetAttrRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSyslogSetAttrRequest = ProtocolSyslogSetAttrRequest;
 var ProtocolSyslogSetAttrResponse = /** @class */ (function (_super) {
     __extends(ProtocolSyslogSetAttrResponse, _super);
     function ProtocolSyslogSetAttrResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolSyslogSetAttrResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolSyslogSetAttrResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolSyslogSetAttrResponse.prototype, "protocolSyslogSetAttr200ApplicationJsonString", void 0);
+    ], ProtocolSyslogSetAttrResponse.prototype, "protocolSyslogSetAttr200ApplicationJSONString", void 0);
     return ProtocolSyslogSetAttrResponse;
-}(SpeakeasyBase));
-export { ProtocolSyslogSetAttrResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSyslogSetAttrResponse = ProtocolSyslogSetAttrResponse;

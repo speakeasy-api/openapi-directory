@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateApiMappingResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateApiMappingResponse = /** @class */ (function (_super) {
     __extends(CreateApiMappingResponse, _super);
     function CreateApiMappingResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApiId" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApiId" }),
+        __metadata("design:type", Object)
     ], CreateApiMappingResponse.prototype, "apiId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApiMappingId" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApiMappingId" }),
+        __metadata("design:type", Object)
     ], CreateApiMappingResponse.prototype, "apiMappingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApiMappingKey" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApiMappingKey" }),
+        __metadata("design:type", Object)
     ], CreateApiMappingResponse.prototype, "apiMappingKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Stage" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Stage" }),
+        __metadata("design:type", Object)
     ], CreateApiMappingResponse.prototype, "stage", void 0);
     return CreateApiMappingResponse;
-}(SpeakeasyBase));
-export { CreateApiMappingResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateApiMappingResponse = CreateApiMappingResponse;

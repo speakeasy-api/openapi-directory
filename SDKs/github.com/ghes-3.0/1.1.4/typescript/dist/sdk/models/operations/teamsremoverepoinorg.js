@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsRemoveRepoInOrgResponse = exports.TeamsRemoveRepoInOrgRequest = exports.TeamsRemoveRepoInOrgPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamsRemoveRepoInOrgPathParams = /** @class */ (function (_super) {
     __extends(TeamsRemoveRepoInOrgPathParams, _super);
     function TeamsRemoveRepoInOrgPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], TeamsRemoveRepoInOrgPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=owner" }),
         __metadata("design:type", String)
     ], TeamsRemoveRepoInOrgPathParams.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo" }),
         __metadata("design:type", String)
     ], TeamsRemoveRepoInOrgPathParams.prototype, "repo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_slug" }),
         __metadata("design:type", String)
     ], TeamsRemoveRepoInOrgPathParams.prototype, "teamSlug", void 0);
     return TeamsRemoveRepoInOrgPathParams;
-}(SpeakeasyBase));
-export { TeamsRemoveRepoInOrgPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveRepoInOrgPathParams = TeamsRemoveRepoInOrgPathParams;
 var TeamsRemoveRepoInOrgRequest = /** @class */ (function (_super) {
     __extends(TeamsRemoveRepoInOrgRequest, _super);
     function TeamsRemoveRepoInOrgRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsRemoveRepoInOrgPathParams)
     ], TeamsRemoveRepoInOrgRequest.prototype, "pathParams", void 0);
     return TeamsRemoveRepoInOrgRequest;
-}(SpeakeasyBase));
-export { TeamsRemoveRepoInOrgRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveRepoInOrgRequest = TeamsRemoveRepoInOrgRequest;
 var TeamsRemoveRepoInOrgResponse = /** @class */ (function (_super) {
     __extends(TeamsRemoveRepoInOrgResponse, _super);
     function TeamsRemoveRepoInOrgResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsRemoveRepoInOrgResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsRemoveRepoInOrgResponse.prototype, "statusCode", void 0);
     return TeamsRemoveRepoInOrgResponse;
-}(SpeakeasyBase));
-export { TeamsRemoveRepoInOrgResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveRepoInOrgResponse = TeamsRemoveRepoInOrgResponse;

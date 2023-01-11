@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationCategory = void 0;
+var utils_1 = require("../../../internal/utils");
 // ApplicationCategory
 /**
  * An application category object.
@@ -33,17 +36,17 @@ var ApplicationCategory = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], ApplicationCategory.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary" }),
         __metadata("design:type", String)
     ], ApplicationCategory.prototype, "primary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondary" }),
         __metadata("design:type", String)
     ], ApplicationCategory.prototype, "secondary", void 0);
     return ApplicationCategory;
-}(SpeakeasyBase));
-export { ApplicationCategory };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationCategory = ApplicationCategory;

@@ -24,7 +24,7 @@ export class ApiCounterV2Out extends SpeakeasyBase {
   lastUsedDateTime?: number;
 
   @SpeakeasyMetadata({ data: "json, name=serviceFeaturesUsage" })
-  serviceFeaturesUsage?: Map<string, number>;
+  serviceFeaturesUsage?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=totalUsage" })
   totalUsage?: number;

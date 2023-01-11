@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteNetworkPiiRequestResponse = exports.DeleteNetworkPiiRequestRequest = exports.DeleteNetworkPiiRequestPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteNetworkPiiRequestPathParams = /** @class */ (function (_super) {
     __extends(DeleteNetworkPiiRequestPathParams, _super);
     function DeleteNetworkPiiRequestPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], DeleteNetworkPiiRequestPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=requestId" }),
         __metadata("design:type", String)
     ], DeleteNetworkPiiRequestPathParams.prototype, "requestId", void 0);
     return DeleteNetworkPiiRequestPathParams;
-}(SpeakeasyBase));
-export { DeleteNetworkPiiRequestPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkPiiRequestPathParams = DeleteNetworkPiiRequestPathParams;
 var DeleteNetworkPiiRequestRequest = /** @class */ (function (_super) {
     __extends(DeleteNetworkPiiRequestRequest, _super);
     function DeleteNetworkPiiRequestRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteNetworkPiiRequestPathParams)
     ], DeleteNetworkPiiRequestRequest.prototype, "pathParams", void 0);
     return DeleteNetworkPiiRequestRequest;
-}(SpeakeasyBase));
-export { DeleteNetworkPiiRequestRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkPiiRequestRequest = DeleteNetworkPiiRequestRequest;
 var DeleteNetworkPiiRequestResponse = /** @class */ (function (_super) {
     __extends(DeleteNetworkPiiRequestResponse, _super);
     function DeleteNetworkPiiRequestResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteNetworkPiiRequestResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteNetworkPiiRequestResponse.prototype, "statusCode", void 0);
     return DeleteNetworkPiiRequestResponse;
-}(SpeakeasyBase));
-export { DeleteNetworkPiiRequestResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkPiiRequestResponse = DeleteNetworkPiiRequestResponse;

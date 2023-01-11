@@ -17,11 +17,11 @@ export class LocalTax extends SpeakeasyBase {
   filingStatus?: string;
 
   @SpeakeasyMetadata({ data: "json, name=residentPSD" })
-  residentPsd?: string;
+  residentPSD?: string;
 
   @SpeakeasyMetadata({ data: "json, name=taxCode" })
   taxCode?: string;
 
   @SpeakeasyMetadata({ data: "json, name=workPSD" })
-  workPsd?: string;
+  workPSD?: string;
 }

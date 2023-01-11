@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MetaCommunicationMediumEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Meta = exports.MetaCommunicationMediumEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MetaCommunicationMediumEnum;
 (function (MetaCommunicationMediumEnum) {
     MetaCommunicationMediumEnum["Mobile"] = "MOBILE";
     MetaCommunicationMediumEnum["Email"] = "EMAIL";
-})(MetaCommunicationMediumEnum || (MetaCommunicationMediumEnum = {}));
+})(MetaCommunicationMediumEnum = exports.MetaCommunicationMediumEnum || (exports.MetaCommunicationMediumEnum = {}));
 var Meta = /** @class */ (function (_super) {
     __extends(Meta, _super);
     function Meta() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=communicationExpiry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=communicationExpiry" }),
         __metadata("design:type", String)
     ], Meta.prototype, "communicationExpiry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=communicationHint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=communicationHint" }),
         __metadata("design:type", String)
     ], Meta.prototype, "communicationHint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=communicationMedium" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=communicationMedium" }),
         __metadata("design:type", String)
     ], Meta.prototype, "communicationMedium", void 0);
     return Meta;
-}(SpeakeasyBase));
-export { Meta };
+}(utils_1.SpeakeasyBase));
+exports.Meta = Meta;

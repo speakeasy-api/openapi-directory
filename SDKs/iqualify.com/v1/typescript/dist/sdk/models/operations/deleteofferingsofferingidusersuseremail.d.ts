@@ -9,6 +9,6 @@ export declare class DeleteOfferingsOfferingIdUsersUserEmailRequest extends Spea
 }
 export declare class DeleteOfferingsOfferingIdUsersUserEmailResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

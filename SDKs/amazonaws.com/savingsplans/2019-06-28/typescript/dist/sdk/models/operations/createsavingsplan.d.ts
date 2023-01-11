@@ -14,7 +14,7 @@ export declare class CreateSavingsPlanRequestBody extends SpeakeasyBase {
     commitment: string;
     purchaseTime?: Date;
     savingsPlanOfferingId: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     upfrontPaymentAmount?: string;
 }
 export declare class CreateSavingsPlanRequest extends SpeakeasyBase {

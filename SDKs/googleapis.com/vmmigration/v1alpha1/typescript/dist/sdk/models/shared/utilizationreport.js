@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Status } from "./status";
-import { VmUtilizationInfo } from "./vmutilizationinfo";
-import { VmUtilizationInfoInput } from "./vmutilizationinfo";
-export var UtilizationReportStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UtilizationReportInput = exports.UtilizationReport = exports.UtilizationReportTimeFrameEnum = exports.UtilizationReportStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var status_1 = require("./status");
+var vmutilizationinfo_1 = require("./vmutilizationinfo");
+var vmutilizationinfo_2 = require("./vmutilizationinfo");
+var UtilizationReportStateEnum;
 (function (UtilizationReportStateEnum) {
     UtilizationReportStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     UtilizationReportStateEnum["Creating"] = "CREATING";
     UtilizationReportStateEnum["Succeeded"] = "SUCCEEDED";
     UtilizationReportStateEnum["Failed"] = "FAILED";
-})(UtilizationReportStateEnum || (UtilizationReportStateEnum = {}));
-export var UtilizationReportTimeFrameEnum;
+})(UtilizationReportStateEnum = exports.UtilizationReportStateEnum || (exports.UtilizationReportStateEnum = {}));
+var UtilizationReportTimeFrameEnum;
 (function (UtilizationReportTimeFrameEnum) {
     UtilizationReportTimeFrameEnum["TimeFrameUnspecified"] = "TIME_FRAME_UNSPECIFIED";
     UtilizationReportTimeFrameEnum["Week"] = "WEEK";
     UtilizationReportTimeFrameEnum["Month"] = "MONTH";
     UtilizationReportTimeFrameEnum["Year"] = "YEAR";
-})(UtilizationReportTimeFrameEnum || (UtilizationReportTimeFrameEnum = {}));
+})(UtilizationReportTimeFrameEnum = exports.UtilizationReportTimeFrameEnum || (exports.UtilizationReportTimeFrameEnum = {}));
 // UtilizationReport
 /**
  * Utilization report details the utilization (CPU, memory, etc.) of selected source VMs.
@@ -50,52 +53,52 @@ var UtilizationReport = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], UtilizationReport.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], UtilizationReport.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
     ], UtilizationReport.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frameEndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frameEndTime" }),
         __metadata("design:type", String)
     ], UtilizationReport.prototype, "frameEndTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UtilizationReport.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], UtilizationReport.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stateTime" }),
         __metadata("design:type", String)
     ], UtilizationReport.prototype, "stateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeFrame" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeFrame" }),
         __metadata("design:type", String)
     ], UtilizationReport.prototype, "timeFrame", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmCount" }),
         __metadata("design:type", Number)
     ], UtilizationReport.prototype, "vmCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vms", elemType: VmUtilizationInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vms", elemType: vmutilizationinfo_1.VmUtilizationInfo }),
         __metadata("design:type", Array)
     ], UtilizationReport.prototype, "vms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmsCount" }),
         __metadata("design:type", Number)
     ], UtilizationReport.prototype, "vmsCount", void 0);
     return UtilizationReport;
-}(SpeakeasyBase));
-export { UtilizationReport };
+}(utils_1.SpeakeasyBase));
+exports.UtilizationReport = UtilizationReport;
 // UtilizationReportInput
 /**
  * Utilization report details the utilization (CPU, memory, etc.) of selected source VMs.
@@ -106,21 +109,21 @@ var UtilizationReportInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], UtilizationReportInput.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", status_1.Status)
     ], UtilizationReportInput.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeFrame" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeFrame" }),
         __metadata("design:type", String)
     ], UtilizationReportInput.prototype, "timeFrame", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vms", elemType: VmUtilizationInfoInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vms", elemType: vmutilizationinfo_2.VmUtilizationInfoInput }),
         __metadata("design:type", Array)
     ], UtilizationReportInput.prototype, "vms", void 0);
     return UtilizationReportInput;
-}(SpeakeasyBase));
-export { UtilizationReportInput };
+}(utils_1.SpeakeasyBase));
+exports.UtilizationReportInput = UtilizationReportInput;

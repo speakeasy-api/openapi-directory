@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OrganizationRepresentation } from "./organizationrepresentation";
-import { ConsentManagerPatientId } from "./consentmanagerpatientid";
-import { SubscriptionPeriod } from "./subscriptionperiod";
-import { UsePurpose } from "./usepurpose";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionRequest = exports.SubscriptionRequestSubscription = void 0;
+var utils_1 = require("../../../internal/utils");
+var organizationrepresentation_1 = require("./organizationrepresentation");
+var consentmanagerpatientid_1 = require("./consentmanagerpatientid");
+var subscriptionperiod_1 = require("./subscriptionperiod");
+var usepurpose_1 = require("./usepurpose");
 var SubscriptionRequestSubscription = /** @class */ (function (_super) {
     __extends(SubscriptionRequestSubscription, _super);
     function SubscriptionRequestSubscription() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categories" }),
         __metadata("design:type", Array)
     ], SubscriptionRequestSubscription.prototype, "categories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hips", elemType: OrganizationRepresentation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hips", elemType: organizationrepresentation_1.OrganizationRepresentation }),
         __metadata("design:type", Array)
     ], SubscriptionRequestSubscription.prototype, "hips", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hiu" }),
-        __metadata("design:type", OrganizationRepresentation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hiu" }),
+        __metadata("design:type", organizationrepresentation_1.OrganizationRepresentation)
     ], SubscriptionRequestSubscription.prototype, "hiu", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=patient" }),
-        __metadata("design:type", ConsentManagerPatientId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patient" }),
+        __metadata("design:type", consentmanagerpatientid_1.ConsentManagerPatientId)
     ], SubscriptionRequestSubscription.prototype, "patient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=period" }),
-        __metadata("design:type", SubscriptionPeriod)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=period" }),
+        __metadata("design:type", subscriptionperiod_1.SubscriptionPeriod)
     ], SubscriptionRequestSubscription.prototype, "period", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=purpose" }),
-        __metadata("design:type", UsePurpose)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=purpose" }),
+        __metadata("design:type", usepurpose_1.UsePurpose)
     ], SubscriptionRequestSubscription.prototype, "purpose", void 0);
     return SubscriptionRequestSubscription;
-}(SpeakeasyBase));
-export { SubscriptionRequestSubscription };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionRequestSubscription = SubscriptionRequestSubscription;
 var SubscriptionRequest = /** @class */ (function (_super) {
     __extends(SubscriptionRequest, _super);
     function SubscriptionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], SubscriptionRequest.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subscription" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subscription" }),
         __metadata("design:type", SubscriptionRequestSubscription)
     ], SubscriptionRequest.prototype, "subscription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timestamp" }),
         __metadata("design:type", Date)
     ], SubscriptionRequest.prototype, "timestamp", void 0);
     return SubscriptionRequest;
-}(SpeakeasyBase));
-export { SubscriptionRequest };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionRequest = SubscriptionRequest;

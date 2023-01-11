@@ -15,7 +15,7 @@ export class GetUntagResourceQueryParams extends SpeakeasyBase {
   action: GetUntagResourceActionEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ResourceARN" })
-  resourceArn: string;
+  resourceARN: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TagKeys" })
   tagKeys: string[];

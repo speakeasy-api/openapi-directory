@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 var OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails = /** @class */ (function (_super) {
     __extends(OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails, _super);
     function OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment1" }),
         __metadata("design:type", String)
     ], OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails.prototype, "comment1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment2" }),
         __metadata("design:type", String)
     ], OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails.prototype, "comment2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerNumber" }),
         __metadata("design:type", String)
     ], OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails.prototype, "customerNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryAddressLine1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryAddressLine1" }),
         __metadata("design:type", String)
     ], OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails.prototype, "deliveryAddressLine1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryAddressLine2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryAddressLine2" }),
         __metadata("design:type", String)
     ], OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails.prototype, "deliveryAddressLine2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryCity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryCity" }),
         __metadata("design:type", String)
     ], OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails.prototype, "deliveryCity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryCountry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryCountry" }),
         __metadata("design:type", String)
     ], OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails.prototype, "deliveryCountry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryPostCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryPostCode" }),
         __metadata("design:type", String)
     ], OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails.prototype, "deliveryPostCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantCustomerIdentification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantCustomerIdentification" }),
         __metadata("design:type", String)
     ], OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails.prototype, "merchantCustomerIdentification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantNumber" }),
         __metadata("design:type", String)
     ], OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails.prototype, "merchantNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orderId" }),
         __metadata("design:type", String)
     ], OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails.prototype, "orderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productId" }),
         __metadata("design:type", String)
     ], OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails.prototype, "productId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=variableReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=variableReference" }),
         __metadata("design:type", String)
     ], OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails.prototype, "variableReference", void 0);
     return OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails;
-}(SpeakeasyBase));
-export { OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails };
+}(utils_1.SpeakeasyBase));
+exports.OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails = OnepaymentrequestsPostRequestBodyContentApplication1jsonSchemaPropertiesOrderDetails;

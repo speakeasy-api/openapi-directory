@@ -21,7 +21,7 @@ export declare class Cluster extends SpeakeasyBase {
     sourceBackupId?: string;
     state?: ClusterStateEnum;
     stateMessage?: string;
-    subnetMapping?: Map<string, string>;
+    subnetMapping?: Record<string, string>;
     tagList?: Tag[];
     vpcId?: string;
 }

@@ -35,7 +35,7 @@ export class FinalizeDeviceClaimHeaders extends SpeakeasyBase {
 
 export class FinalizeDeviceClaimRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

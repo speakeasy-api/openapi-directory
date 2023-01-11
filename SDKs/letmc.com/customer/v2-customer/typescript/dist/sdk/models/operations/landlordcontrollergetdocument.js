@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LandlordControllerGetDocumentResponse = exports.LandlordControllerGetDocumentRequest = exports.LandlordControllerGetDocumentQueryParams = exports.LandlordControllerGetDocumentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var LandlordControllerGetDocumentPathParams = /** @class */ (function (_super) {
     __extends(LandlordControllerGetDocumentPathParams, _super);
     function LandlordControllerGetDocumentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=shortName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=shortName" }),
         __metadata("design:type", String)
     ], LandlordControllerGetDocumentPathParams.prototype, "shortName", void 0);
     return LandlordControllerGetDocumentPathParams;
-}(SpeakeasyBase));
-export { LandlordControllerGetDocumentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetDocumentPathParams = LandlordControllerGetDocumentPathParams;
 var LandlordControllerGetDocumentQueryParams = /** @class */ (function (_super) {
     __extends(LandlordControllerGetDocumentQueryParams, _super);
     function LandlordControllerGetDocumentQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ID" }),
         __metadata("design:type", String)
     ], LandlordControllerGetDocumentQueryParams.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=token" }),
         __metadata("design:type", String)
     ], LandlordControllerGetDocumentQueryParams.prototype, "token", void 0);
     return LandlordControllerGetDocumentQueryParams;
-}(SpeakeasyBase));
-export { LandlordControllerGetDocumentQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetDocumentQueryParams = LandlordControllerGetDocumentQueryParams;
 var LandlordControllerGetDocumentRequest = /** @class */ (function (_super) {
     __extends(LandlordControllerGetDocumentRequest, _super);
     function LandlordControllerGetDocumentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LandlordControllerGetDocumentPathParams)
     ], LandlordControllerGetDocumentRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LandlordControllerGetDocumentQueryParams)
     ], LandlordControllerGetDocumentRequest.prototype, "queryParams", void 0);
     return LandlordControllerGetDocumentRequest;
-}(SpeakeasyBase));
-export { LandlordControllerGetDocumentRequest };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetDocumentRequest = LandlordControllerGetDocumentRequest;
 var LandlordControllerGetDocumentResponse = /** @class */ (function (_super) {
     __extends(LandlordControllerGetDocumentResponse, _super);
     function LandlordControllerGetDocumentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], LandlordControllerGetDocumentResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LandlordControllerGetDocumentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], LandlordControllerGetDocumentResponse.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LandlordControllerGetDocumentResponse.prototype, "statusCode", void 0);
     return LandlordControllerGetDocumentResponse;
-}(SpeakeasyBase));
-export { LandlordControllerGetDocumentResponse };
+}(utils_1.SpeakeasyBase));
+exports.LandlordControllerGetDocumentResponse = LandlordControllerGetDocumentResponse;

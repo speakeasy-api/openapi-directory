@@ -28,8 +28,8 @@ export class DeleteProjectUsernameProjectBuildCacheResponse extends SpeakeasyBas
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteProjectUsernameProjectBuildCache200ApplicationJsonObject?: DeleteProjectUsernameProjectBuildCache200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  deleteProjectUsernameProjectBuildCache200ApplicationJSONObject?: DeleteProjectUsernameProjectBuildCache200ApplicationJson;
 }

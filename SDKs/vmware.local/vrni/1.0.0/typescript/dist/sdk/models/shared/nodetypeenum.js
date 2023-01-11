@@ -1,4 +1,7 @@
-export var NodeTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodeTypeEnum = void 0;
+var NodeTypeEnum;
 (function (NodeTypeEnum) {
     NodeTypeEnum["Node"] = "Node";
-})(NodeTypeEnum || (NodeTypeEnum = {}));
+})(NodeTypeEnum = exports.NodeTypeEnum || (exports.NodeTypeEnum = {}));

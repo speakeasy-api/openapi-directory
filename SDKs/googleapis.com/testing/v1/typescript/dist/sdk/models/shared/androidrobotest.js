@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileReference } from "./filereference";
-import { AppBundle } from "./appbundle";
-import { RoboDirective } from "./robodirective";
-import { RoboStartingIntent } from "./robostartingintent";
-export var AndroidRoboTestRoboModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AndroidRoboTest = exports.AndroidRoboTestRoboModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var filereference_1 = require("./filereference");
+var appbundle_1 = require("./appbundle");
+var robodirective_1 = require("./robodirective");
+var robostartingintent_1 = require("./robostartingintent");
+var AndroidRoboTestRoboModeEnum;
 (function (AndroidRoboTestRoboModeEnum) {
     AndroidRoboTestRoboModeEnum["RoboModeUnspecified"] = "ROBO_MODE_UNSPECIFIED";
     AndroidRoboTestRoboModeEnum["RoboVersion1"] = "ROBO_VERSION_1";
     AndroidRoboTestRoboModeEnum["RoboVersion2"] = "ROBO_VERSION_2";
-})(AndroidRoboTestRoboModeEnum || (AndroidRoboTestRoboModeEnum = {}));
+})(AndroidRoboTestRoboModeEnum = exports.AndroidRoboTestRoboModeEnum || (exports.AndroidRoboTestRoboModeEnum = {}));
 // AndroidRoboTest
 /**
  * A test of an android application that explores the application on a virtual or physical Android Device, finding culprits and crashes as it goes.
@@ -43,45 +46,45 @@ var AndroidRoboTest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appApk" }),
-        __metadata("design:type", FileReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appApk" }),
+        __metadata("design:type", filereference_1.FileReference)
     ], AndroidRoboTest.prototype, "appApk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appBundle" }),
-        __metadata("design:type", AppBundle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appBundle" }),
+        __metadata("design:type", appbundle_1.AppBundle)
     ], AndroidRoboTest.prototype, "appBundle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appInitialActivity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appInitialActivity" }),
         __metadata("design:type", String)
     ], AndroidRoboTest.prototype, "appInitialActivity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appPackageId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appPackageId" }),
         __metadata("design:type", String)
     ], AndroidRoboTest.prototype, "appPackageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxDepth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxDepth" }),
         __metadata("design:type", Number)
     ], AndroidRoboTest.prototype, "maxDepth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxSteps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxSteps" }),
         __metadata("design:type", Number)
     ], AndroidRoboTest.prototype, "maxSteps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roboDirectives", elemType: RoboDirective }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roboDirectives", elemType: robodirective_1.RoboDirective }),
         __metadata("design:type", Array)
     ], AndroidRoboTest.prototype, "roboDirectives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roboMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roboMode" }),
         __metadata("design:type", String)
     ], AndroidRoboTest.prototype, "roboMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roboScript" }),
-        __metadata("design:type", FileReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roboScript" }),
+        __metadata("design:type", filereference_1.FileReference)
     ], AndroidRoboTest.prototype, "roboScript", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startingIntents", elemType: RoboStartingIntent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startingIntents", elemType: robostartingintent_1.RoboStartingIntent }),
         __metadata("design:type", Array)
     ], AndroidRoboTest.prototype, "startingIntents", void 0);
     return AndroidRoboTest;
-}(SpeakeasyBase));
-export { AndroidRoboTest };
+}(utils_1.SpeakeasyBase));
+exports.AndroidRoboTest = AndroidRoboTest;

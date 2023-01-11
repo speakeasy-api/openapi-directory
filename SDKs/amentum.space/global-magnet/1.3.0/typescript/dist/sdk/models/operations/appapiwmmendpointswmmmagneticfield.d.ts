@@ -49,5 +49,5 @@ export declare class AppApiWmmEndpointsWmmMagneticFieldRequest extends Speakeasy
 export declare class AppApiWmmEndpointsWmmMagneticFieldResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    appApiWmmEndpointsWmmMagneticField200ApplicationJsonObject?: AppApiWmmEndpointsWmmMagneticField200ApplicationJson;
+    appApiWMMEndpointsWMMMagneticField200ApplicationJSONObject?: AppApiWmmEndpointsWmmMagneticField200ApplicationJson;
 }

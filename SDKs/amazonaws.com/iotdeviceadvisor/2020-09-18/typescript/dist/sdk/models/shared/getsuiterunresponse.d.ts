@@ -12,6 +12,6 @@ export declare class GetSuiteRunResponse extends SpeakeasyBase {
     suiteRunArn?: string;
     suiteRunConfiguration?: SuiteRunConfiguration;
     suiteRunId?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     testResult?: TestResult;
 }

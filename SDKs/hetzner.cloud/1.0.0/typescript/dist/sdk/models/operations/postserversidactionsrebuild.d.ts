@@ -41,6 +41,6 @@ export declare class PostServersIdActionsRebuildRequest extends SpeakeasyBase {
 }
 export declare class PostServersIdActionsRebuildResponse extends SpeakeasyBase {
     contentType: string;
-    postServersIdActionsRebuild201ApplicationJsonObject?: PostServersIdActionsRebuild201ApplicationJson;
     statusCode: number;
+    postServersIdActionsRebuild201ApplicationJSONObject?: PostServersIdActionsRebuild201ApplicationJson;
 }

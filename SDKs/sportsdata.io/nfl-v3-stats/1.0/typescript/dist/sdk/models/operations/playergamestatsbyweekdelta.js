@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlayerGameStatsByWeekDeltaFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayerGameStatsByWeekDeltaResponse = exports.PlayerGameStatsByWeekDeltaRequest = exports.PlayerGameStatsByWeekDeltaPathParams = exports.PlayerGameStatsByWeekDeltaFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlayerGameStatsByWeekDeltaFormatEnum;
 (function (PlayerGameStatsByWeekDeltaFormatEnum) {
     PlayerGameStatsByWeekDeltaFormatEnum["Xml"] = "XML";
     PlayerGameStatsByWeekDeltaFormatEnum["Json"] = "JSON";
-})(PlayerGameStatsByWeekDeltaFormatEnum || (PlayerGameStatsByWeekDeltaFormatEnum = {}));
+})(PlayerGameStatsByWeekDeltaFormatEnum = exports.PlayerGameStatsByWeekDeltaFormatEnum || (exports.PlayerGameStatsByWeekDeltaFormatEnum = {}));
 var PlayerGameStatsByWeekDeltaPathParams = /** @class */ (function (_super) {
     __extends(PlayerGameStatsByWeekDeltaPathParams, _super);
     function PlayerGameStatsByWeekDeltaPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], PlayerGameStatsByWeekDeltaPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=minutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=minutes" }),
         __metadata("design:type", String)
     ], PlayerGameStatsByWeekDeltaPathParams.prototype, "minutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], PlayerGameStatsByWeekDeltaPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=week" }),
         __metadata("design:type", String)
     ], PlayerGameStatsByWeekDeltaPathParams.prototype, "week", void 0);
     return PlayerGameStatsByWeekDeltaPathParams;
-}(SpeakeasyBase));
-export { PlayerGameStatsByWeekDeltaPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlayerGameStatsByWeekDeltaPathParams = PlayerGameStatsByWeekDeltaPathParams;
 var PlayerGameStatsByWeekDeltaRequest = /** @class */ (function (_super) {
     __extends(PlayerGameStatsByWeekDeltaRequest, _super);
     function PlayerGameStatsByWeekDeltaRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlayerGameStatsByWeekDeltaPathParams)
     ], PlayerGameStatsByWeekDeltaRequest.prototype, "pathParams", void 0);
     return PlayerGameStatsByWeekDeltaRequest;
-}(SpeakeasyBase));
-export { PlayerGameStatsByWeekDeltaRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlayerGameStatsByWeekDeltaRequest = PlayerGameStatsByWeekDeltaRequest;
 var PlayerGameStatsByWeekDeltaResponse = /** @class */ (function (_super) {
     __extends(PlayerGameStatsByWeekDeltaResponse, _super);
     function PlayerGameStatsByWeekDeltaResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlayerGameStatsByWeekDeltaResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], PlayerGameStatsByWeekDeltaResponse.prototype, "playerGames", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlayerGameStatsByWeekDeltaResponse.prototype, "statusCode", void 0);
     return PlayerGameStatsByWeekDeltaResponse;
-}(SpeakeasyBase));
-export { PlayerGameStatsByWeekDeltaResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlayerGameStatsByWeekDeltaResponse = PlayerGameStatsByWeekDeltaResponse;

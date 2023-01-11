@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TestGridSession } from "./testgridsession";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetTestGridSessionResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var testgridsession_1 = require("./testgridsession");
 var GetTestGridSessionResult = /** @class */ (function (_super) {
     __extends(GetTestGridSessionResult, _super);
     function GetTestGridSessionResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=testGridSession" }),
-        __metadata("design:type", TestGridSession)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=testGridSession" }),
+        __metadata("design:type", testgridsession_1.TestGridSession)
     ], GetTestGridSessionResult.prototype, "testGridSession", void 0);
     return GetTestGridSessionResult;
-}(SpeakeasyBase));
-export { GetTestGridSessionResult };
+}(utils_1.SpeakeasyBase));
+exports.GetTestGridSessionResult = GetTestGridSessionResult;

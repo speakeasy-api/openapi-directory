@@ -32,7 +32,7 @@ export class GetAppsAppIdKeysResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.KeyResponse })
   keyResponses?: shared.KeyResponse[];

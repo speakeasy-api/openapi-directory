@@ -11,21 +11,10 @@ export class PullsListReviewCommentsForRepoPathParams extends SpeakeasyBase {
   repo: string;
 }
 
-export enum PullsListReviewCommentsForRepoDirectionEnum {
-    Asc = "asc",
-    Desc = "desc"
-}
-
-export enum PullsListReviewCommentsForRepoSortEnum {
-    Created = "created",
-    Updated = "updated",
-    CreatedAt = "created_at"
-}
-
 
 export class PullsListReviewCommentsForRepoQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=direction" })
-  direction?: PullsListReviewCommentsForRepoDirectionEnum;
+  direction?: shared.RepoEnum4;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -37,7 +26,7 @@ export class PullsListReviewCommentsForRepoQueryParams extends SpeakeasyBase {
   since?: Date;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: PullsListReviewCommentsForRepoSortEnum;
+  sort?: shared.RepoEnum6;
 }
 
 
@@ -55,7 +44,7 @@ export class PullsListReviewCommentsForRepoResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

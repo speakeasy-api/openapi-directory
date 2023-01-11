@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiKeyOwnerResponse = exports.ApiKeyOwner200ApplicationJson = exports.ApiKeyOwner200ApplicationJsonUser = exports.ApiKeyOwner200ApplicationJsonOperations = void 0;
+var utils_1 = require("../../../internal/utils");
 var ApiKeyOwner200ApplicationJsonOperations = /** @class */ (function (_super) {
     __extends(ApiKeyOwner200ApplicationJsonOperations, _super);
     function ApiKeyOwner200ApplicationJsonOperations() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], ApiKeyOwner200ApplicationJsonOperations.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ApiKeyOwner200ApplicationJsonOperations.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overage" }),
         __metadata("design:type", Number)
     ], ApiKeyOwner200ApplicationJsonOperations.prototype, "overage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usage" }),
         __metadata("design:type", Number)
     ], ApiKeyOwner200ApplicationJsonOperations.prototype, "usage", void 0);
     return ApiKeyOwner200ApplicationJsonOperations;
-}(SpeakeasyBase));
-export { ApiKeyOwner200ApplicationJsonOperations };
+}(utils_1.SpeakeasyBase));
+exports.ApiKeyOwner200ApplicationJsonOperations = ApiKeyOwner200ApplicationJsonOperations;
 var ApiKeyOwner200ApplicationJsonUser = /** @class */ (function (_super) {
     __extends(ApiKeyOwner200ApplicationJsonUser, _super);
     function ApiKeyOwner200ApplicationJsonUser() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=avatar" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=avatar" }),
         __metadata("design:type", String)
     ], ApiKeyOwner200ApplicationJsonUser.prototype, "avatar", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], ApiKeyOwner200ApplicationJsonUser.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fullName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fullName" }),
         __metadata("design:type", String)
     ], ApiKeyOwner200ApplicationJsonUser.prototype, "fullName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ApiKeyOwner200ApplicationJsonUser.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isPublic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isPublic" }),
         __metadata("design:type", Boolean)
     ], ApiKeyOwner200ApplicationJsonUser.prototype, "isPublic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], ApiKeyOwner200ApplicationJsonUser.prototype, "username", void 0);
     return ApiKeyOwner200ApplicationJsonUser;
-}(SpeakeasyBase));
-export { ApiKeyOwner200ApplicationJsonUser };
+}(utils_1.SpeakeasyBase));
+exports.ApiKeyOwner200ApplicationJsonUser = ApiKeyOwner200ApplicationJsonUser;
 var ApiKeyOwner200ApplicationJson = /** @class */ (function (_super) {
     __extends(ApiKeyOwner200ApplicationJson, _super);
     function ApiKeyOwner200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operations", elemType: ApiKeyOwner200ApplicationJsonOperations }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operations", elemType: ApiKeyOwner200ApplicationJsonOperations }),
         __metadata("design:type", Array)
     ], ApiKeyOwner200ApplicationJson.prototype, "operations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
         __metadata("design:type", ApiKeyOwner200ApplicationJsonUser)
     ], ApiKeyOwner200ApplicationJson.prototype, "user", void 0);
     return ApiKeyOwner200ApplicationJson;
-}(SpeakeasyBase));
-export { ApiKeyOwner200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ApiKeyOwner200ApplicationJson = ApiKeyOwner200ApplicationJson;
 var ApiKeyOwnerResponse = /** @class */ (function (_super) {
     __extends(ApiKeyOwnerResponse, _super);
     function ApiKeyOwnerResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ApiKeyOwnerResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ApiKeyOwnerResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ApiKeyOwner200ApplicationJson)
-    ], ApiKeyOwnerResponse.prototype, "apiKeyOwner200ApplicationJsonObject", void 0);
+    ], ApiKeyOwnerResponse.prototype, "apiKeyOwner200ApplicationJSONObject", void 0);
     return ApiKeyOwnerResponse;
-}(SpeakeasyBase));
-export { ApiKeyOwnerResponse };
+}(utils_1.SpeakeasyBase));
+exports.ApiKeyOwnerResponse = ApiKeyOwnerResponse;

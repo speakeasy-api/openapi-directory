@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostUpdateAccountPasswordPolicyActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostUpdateAccountPasswordPolicyResponse = exports.PostUpdateAccountPasswordPolicyRequest = exports.PostUpdateAccountPasswordPolicyHeaders = exports.PostUpdateAccountPasswordPolicyQueryParams = exports.PostUpdateAccountPasswordPolicyVersionEnum = exports.PostUpdateAccountPasswordPolicyActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostUpdateAccountPasswordPolicyActionEnum;
 (function (PostUpdateAccountPasswordPolicyActionEnum) {
     PostUpdateAccountPasswordPolicyActionEnum["UpdateAccountPasswordPolicy"] = "UpdateAccountPasswordPolicy";
-})(PostUpdateAccountPasswordPolicyActionEnum || (PostUpdateAccountPasswordPolicyActionEnum = {}));
-export var PostUpdateAccountPasswordPolicyVersionEnum;
+})(PostUpdateAccountPasswordPolicyActionEnum = exports.PostUpdateAccountPasswordPolicyActionEnum || (exports.PostUpdateAccountPasswordPolicyActionEnum = {}));
+var PostUpdateAccountPasswordPolicyVersionEnum;
 (function (PostUpdateAccountPasswordPolicyVersionEnum) {
     PostUpdateAccountPasswordPolicyVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostUpdateAccountPasswordPolicyVersionEnum || (PostUpdateAccountPasswordPolicyVersionEnum = {}));
+})(PostUpdateAccountPasswordPolicyVersionEnum = exports.PostUpdateAccountPasswordPolicyVersionEnum || (exports.PostUpdateAccountPasswordPolicyVersionEnum = {}));
 var PostUpdateAccountPasswordPolicyQueryParams = /** @class */ (function (_super) {
     __extends(PostUpdateAccountPasswordPolicyQueryParams, _super);
     function PostUpdateAccountPasswordPolicyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostUpdateAccountPasswordPolicyQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostUpdateAccountPasswordPolicyQueryParams.prototype, "version", void 0);
     return PostUpdateAccountPasswordPolicyQueryParams;
-}(SpeakeasyBase));
-export { PostUpdateAccountPasswordPolicyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateAccountPasswordPolicyQueryParams = PostUpdateAccountPasswordPolicyQueryParams;
 var PostUpdateAccountPasswordPolicyHeaders = /** @class */ (function (_super) {
     __extends(PostUpdateAccountPasswordPolicyHeaders, _super);
     function PostUpdateAccountPasswordPolicyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostUpdateAccountPasswordPolicyHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostUpdateAccountPasswordPolicyHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostUpdateAccountPasswordPolicyHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostUpdateAccountPasswordPolicyHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostUpdateAccountPasswordPolicyHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostUpdateAccountPasswordPolicyHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostUpdateAccountPasswordPolicyHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostUpdateAccountPasswordPolicyHeaders;
-}(SpeakeasyBase));
-export { PostUpdateAccountPasswordPolicyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateAccountPasswordPolicyHeaders = PostUpdateAccountPasswordPolicyHeaders;
 var PostUpdateAccountPasswordPolicyRequest = /** @class */ (function (_super) {
     __extends(PostUpdateAccountPasswordPolicyRequest, _super);
     function PostUpdateAccountPasswordPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostUpdateAccountPasswordPolicyQueryParams)
     ], PostUpdateAccountPasswordPolicyRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostUpdateAccountPasswordPolicyHeaders)
     ], PostUpdateAccountPasswordPolicyRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostUpdateAccountPasswordPolicyRequest.prototype, "request", void 0);
     return PostUpdateAccountPasswordPolicyRequest;
-}(SpeakeasyBase));
-export { PostUpdateAccountPasswordPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateAccountPasswordPolicyRequest = PostUpdateAccountPasswordPolicyRequest;
 var PostUpdateAccountPasswordPolicyResponse = /** @class */ (function (_super) {
     __extends(PostUpdateAccountPasswordPolicyResponse, _super);
     function PostUpdateAccountPasswordPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostUpdateAccountPasswordPolicyResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostUpdateAccountPasswordPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostUpdateAccountPasswordPolicyResponse.prototype, "statusCode", void 0);
     return PostUpdateAccountPasswordPolicyResponse;
-}(SpeakeasyBase));
-export { PostUpdateAccountPasswordPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostUpdateAccountPasswordPolicyResponse = PostUpdateAccountPasswordPolicyResponse;

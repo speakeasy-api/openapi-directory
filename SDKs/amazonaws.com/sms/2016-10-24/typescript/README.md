@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CreateAppRequest, CreateAppResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,54 +33,114 @@ const sdk = new SDK(WithSecurity(
     
 const req: CreateAppRequest = {
   headers: {
-    xAmzAlgorithm: "id",
-    xAmzContentSha256: "in",
-    xAmzCredential: "doloribus",
-    xAmzDate: "facilis",
-    xAmzSecurityToken: "occaecati",
-    xAmzSignature: "iste",
-    xAmzSignedHeaders: "asperiores",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AWSServerMigrationService_V2016_10_24.CreateApp",
   },
   request: {
-    clientToken: "tenetur",
-    description: "mollitia",
-    name: "veniam",
-    roleName: "eum",
+    clientToken: "fugit",
+    description: "et",
+    name: "nihil",
+    roleName: "rerum",
     serverGroups: [
       {
-        name: "et",
-        serverGroupId: "consequatur",
+        name: "debitis",
+        serverGroupId: "voluptatum",
         serverList: [
           {
-            replicationJobId: "quod",
+            replicationJobId: "ut",
             replicationJobTerminated: true,
-            serverId: "dignissimos",
+            serverId: "et",
             serverType: "VIRTUAL_MACHINE",
             vmServer: {
-              vmManagerName: "saepe",
+              vmManagerName: "iste",
               vmManagerType: "VSPHERE",
-              vmName: "ea",
-              vmPath: "corrupti",
+              vmName: "totam",
+              vmPath: "dolores",
               vmServerAddress: {
-                vmId: "dolor",
-                vmManagerId: "itaque",
+                vmId: "illum",
+                vmManagerId: "debitis",
+              },
+            },
+          },
+        ],
+      },
+      {
+        name: "vel",
+        serverGroupId: "odio",
+        serverList: [
+          {
+            replicationJobId: "id",
+            replicationJobTerminated: true,
+            serverId: "accusantium",
+            serverType: "VIRTUAL_MACHINE",
+            vmServer: {
+              vmManagerName: "commodi",
+              vmManagerType: "HYPERV-MANAGER",
+              vmName: "est",
+              vmPath: "aut",
+              vmServerAddress: {
+                vmId: "odit",
+                vmManagerId: "non",
               },
             },
           },
           {
-            replicationJobId: "rem",
-            replicationJobTerminated: false,
-            serverId: "sint",
+            replicationJobId: "voluptas",
+            replicationJobTerminated: true,
+            serverId: "aut",
             serverType: "VIRTUAL_MACHINE",
             vmServer: {
-              vmManagerName: "adipisci",
+              vmManagerName: "sed",
+              vmManagerType: "SCVMM",
+              vmName: "autem",
+              vmPath: "consectetur",
+              vmServerAddress: {
+                vmId: "nobis",
+                vmManagerId: "odio",
+              },
+            },
+          },
+        ],
+      },
+      {
+        name: "qui",
+        serverGroupId: "recusandae",
+        serverList: [
+          {
+            replicationJobId: "ipsum",
+            replicationJobTerminated: true,
+            serverId: "modi",
+            serverType: "VIRTUAL_MACHINE",
+            vmServer: {
+              vmManagerName: "inventore",
+              vmManagerType: "HYPERV-MANAGER",
+              vmName: "exercitationem",
+              vmPath: "aut",
+              vmServerAddress: {
+                vmId: "reprehenderit",
+                vmManagerId: "tempore",
+              },
+            },
+          },
+          {
+            replicationJobId: "maiores",
+            replicationJobTerminated: false,
+            serverId: "dolor",
+            serverType: "VIRTUAL_MACHINE",
+            vmServer: {
+              vmManagerName: "veritatis",
               vmManagerType: "HYPERV-MANAGER",
               vmName: "et",
-              vmPath: "expedita",
+              vmPath: "omnis",
               vmServerAddress: {
-                vmId: "doloribus",
-                vmManagerId: "iste",
+                vmId: "ipsum",
+                vmManagerId: "ex",
               },
             },
           },
@@ -90,14 +149,22 @@ const req: CreateAppRequest = {
     ],
     tags: [
       {
-        key: "doloremque",
-        value: "placeat",
+        key: "placeat",
+        value: "vel",
+      },
+      {
+        key: "rerum",
+        value: "mollitia",
+      },
+      {
+        key: "voluptas",
+        value: "quam",
       },
     ],
   },
 };
 
-sdk.sdk.createApp(req).then((res: CreateAppResponse | AxiosError) => {
+sdk.createApp(req).then((res: CreateAppResponse | AxiosError) => {
    // handle response
 });
 ```

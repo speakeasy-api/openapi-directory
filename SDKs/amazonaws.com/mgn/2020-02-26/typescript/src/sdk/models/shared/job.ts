@@ -24,7 +24,7 @@ export class Job extends SpeakeasyBase {
   initiatedBy?: InitiatedByEnum;
 
   @SpeakeasyMetadata({ data: "json, name=jobID" })
-  jobId: string;
+  jobID: string;
 
   @SpeakeasyMetadata({ data: "json, name=participatingServers", elemType: ParticipatingServer })
   participatingServers?: ParticipatingServer[];
@@ -33,7 +33,7 @@ export class Job extends SpeakeasyBase {
   status?: JobStatusEnum;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=type" })
   type?: JobTypeEnum;

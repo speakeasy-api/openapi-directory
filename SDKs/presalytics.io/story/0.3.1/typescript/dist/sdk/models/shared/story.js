@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StoryCollaborator } from "./storycollaborator";
-import { OoxmlDocument } from "./ooxmldocument";
-import { StoryOutlineHistory } from "./storyoutlinehistory";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Story = void 0;
+var utils_1 = require("../../../internal/utils");
+var storycollaborator_1 = require("./storycollaborator");
+var ooxmldocument_1 = require("./ooxmldocument");
+var storyoutlinehistory_1 = require("./storyoutlinehistory");
 // Story
 /**
- * Model for story objects
+ * Base model for all types
 **/
 var Story = /** @class */ (function (_super) {
     __extends(Story, _super);
@@ -36,53 +39,53 @@ var Story = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collaborators", elemType: StoryCollaborator }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collaborators", elemType: storycollaborator_1.StoryCollaborator }),
         __metadata("design:type", Array)
     ], Story.prototype, "collaborators", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], Story.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
         __metadata("design:type", String)
     ], Story.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Story.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_public" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_public" }),
         __metadata("design:type", Boolean)
     ], Story.prototype, "isPublic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ooxml_documents", elemType: OoxmlDocument }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ooxml_documents", elemType: ooxmldocument_1.OoxmlDocument }),
         __metadata("design:type", Array)
     ], Story.prototype, "ooxmlDocuments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outline" }),
         __metadata("design:type", String)
     ], Story.prototype, "outline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outline_history", elemType: StoryOutlineHistory }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outline_history", elemType: storyoutlinehistory_1.StoryOutlineHistory }),
         __metadata("design:type", Array)
     ], Story.prototype, "outlineHistory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revision" }),
         __metadata("design:type", Number)
     ], Story.prototype, "revision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Story.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], Story.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_by" }),
         __metadata("design:type", String)
     ], Story.prototype, "updatedBy", void 0);
     return Story;
-}(SpeakeasyBase));
-export { Story };
+}(utils_1.SpeakeasyBase));
+exports.Story = Story;

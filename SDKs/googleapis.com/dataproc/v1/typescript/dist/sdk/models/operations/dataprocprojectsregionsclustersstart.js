@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,146 +14,171 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataprocProjectsRegionsClustersStartResponse = exports.DataprocProjectsRegionsClustersStartRequest = exports.DataprocProjectsRegionsClustersStartSecurity = exports.DataprocProjectsRegionsClustersStartQueryParams = exports.DataprocProjectsRegionsClustersStartPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DataprocProjectsRegionsClustersStartPathParams = /** @class */ (function (_super) {
     __extends(DataprocProjectsRegionsClustersStartPathParams, _super);
     function DataprocProjectsRegionsClustersStartPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=clusterName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=clusterName" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersStartPathParams.prototype, "clusterName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=projectId" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersStartPathParams.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=region" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersStartPathParams.prototype, "region", void 0);
     return DataprocProjectsRegionsClustersStartPathParams;
-}(SpeakeasyBase));
-export { DataprocProjectsRegionsClustersStartPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DataprocProjectsRegionsClustersStartPathParams = DataprocProjectsRegionsClustersStartPathParams;
 var DataprocProjectsRegionsClustersStartQueryParams = /** @class */ (function (_super) {
     __extends(DataprocProjectsRegionsClustersStartQueryParams, _super);
     function DataprocProjectsRegionsClustersStartQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersStartQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersStartQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersStartQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersStartQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersStartQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersStartQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersStartQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], DataprocProjectsRegionsClustersStartQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersStartQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersStartQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersStartQueryParams.prototype, "uploadProtocol", void 0);
     return DataprocProjectsRegionsClustersStartQueryParams;
-}(SpeakeasyBase));
-export { DataprocProjectsRegionsClustersStartQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DataprocProjectsRegionsClustersStartQueryParams = DataprocProjectsRegionsClustersStartQueryParams;
 var DataprocProjectsRegionsClustersStartSecurity = /** @class */ (function (_super) {
     __extends(DataprocProjectsRegionsClustersStartSecurity, _super);
     function DataprocProjectsRegionsClustersStartSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], DataprocProjectsRegionsClustersStartSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], DataprocProjectsRegionsClustersStartSecurity.prototype, "oauth2c", void 0);
     return DataprocProjectsRegionsClustersStartSecurity;
-}(SpeakeasyBase));
-export { DataprocProjectsRegionsClustersStartSecurity };
+}(utils_1.SpeakeasyBase));
+exports.DataprocProjectsRegionsClustersStartSecurity = DataprocProjectsRegionsClustersStartSecurity;
 var DataprocProjectsRegionsClustersStartRequest = /** @class */ (function (_super) {
     __extends(DataprocProjectsRegionsClustersStartRequest, _super);
     function DataprocProjectsRegionsClustersStartRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DataprocProjectsRegionsClustersStartPathParams)
     ], DataprocProjectsRegionsClustersStartRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DataprocProjectsRegionsClustersStartQueryParams)
     ], DataprocProjectsRegionsClustersStartRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.StartClusterRequest)
     ], DataprocProjectsRegionsClustersStartRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DataprocProjectsRegionsClustersStartSecurity)
     ], DataprocProjectsRegionsClustersStartRequest.prototype, "security", void 0);
     return DataprocProjectsRegionsClustersStartRequest;
-}(SpeakeasyBase));
-export { DataprocProjectsRegionsClustersStartRequest };
+}(utils_1.SpeakeasyBase));
+exports.DataprocProjectsRegionsClustersStartRequest = DataprocProjectsRegionsClustersStartRequest;
 var DataprocProjectsRegionsClustersStartResponse = /** @class */ (function (_super) {
     __extends(DataprocProjectsRegionsClustersStartResponse, _super);
     function DataprocProjectsRegionsClustersStartResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DataprocProjectsRegionsClustersStartResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.Operation)
     ], DataprocProjectsRegionsClustersStartResponse.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DataprocProjectsRegionsClustersStartResponse.prototype, "statusCode", void 0);
     return DataprocProjectsRegionsClustersStartResponse;
-}(SpeakeasyBase));
-export { DataprocProjectsRegionsClustersStartResponse };
+}(utils_1.SpeakeasyBase));
+exports.DataprocProjectsRegionsClustersStartResponse = DataprocProjectsRegionsClustersStartResponse;

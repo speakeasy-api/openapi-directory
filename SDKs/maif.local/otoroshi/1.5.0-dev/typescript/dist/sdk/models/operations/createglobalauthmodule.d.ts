@@ -10,5 +10,5 @@ export declare class CreateGlobalAuthModuleRequest extends SpeakeasyBase {
 export declare class CreateGlobalAuthModuleResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createGlobalAuthModule200ApplicationJsonOneOf?: any;
+    createGlobalAuthModule200ApplicationJSONOneOf?: any;
 }

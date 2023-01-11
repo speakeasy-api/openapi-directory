@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostJmxRepositoryResponse = exports.PostJmxRepositoryRequest = exports.PostJmxRepositoryPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostJmxRepositoryPathParams = /** @class */ (function (_super) {
     __extends(PostJmxRepositoryPathParams, _super);
     function PostJmxRepositoryPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=action" }),
         __metadata("design:type", String)
     ], PostJmxRepositoryPathParams.prototype, "action", void 0);
     return PostJmxRepositoryPathParams;
-}(SpeakeasyBase));
-export { PostJmxRepositoryPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostJmxRepositoryPathParams = PostJmxRepositoryPathParams;
 var PostJmxRepositoryRequest = /** @class */ (function (_super) {
     __extends(PostJmxRepositoryRequest, _super);
     function PostJmxRepositoryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostJmxRepositoryPathParams)
     ], PostJmxRepositoryRequest.prototype, "pathParams", void 0);
     return PostJmxRepositoryRequest;
-}(SpeakeasyBase));
-export { PostJmxRepositoryRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostJmxRepositoryRequest = PostJmxRepositoryRequest;
 var PostJmxRepositoryResponse = /** @class */ (function (_super) {
     __extends(PostJmxRepositoryResponse, _super);
     function PostJmxRepositoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostJmxRepositoryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostJmxRepositoryResponse.prototype, "statusCode", void 0);
     return PostJmxRepositoryResponse;
-}(SpeakeasyBase));
-export { PostJmxRepositoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostJmxRepositoryResponse = PostJmxRepositoryResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PlaceActionLinkPlaceActionTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlaceActionLinkInput = exports.PlaceActionLink = exports.PlaceActionLinkProviderTypeEnum = exports.PlaceActionLinkPlaceActionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PlaceActionLinkPlaceActionTypeEnum;
 (function (PlaceActionLinkPlaceActionTypeEnum) {
     PlaceActionLinkPlaceActionTypeEnum["PlaceActionTypeUnspecified"] = "PLACE_ACTION_TYPE_UNSPECIFIED";
     PlaceActionLinkPlaceActionTypeEnum["Appointment"] = "APPOINTMENT";
@@ -33,41 +36,13 @@ export var PlaceActionLinkPlaceActionTypeEnum;
     PlaceActionLinkPlaceActionTypeEnum["FoodDelivery"] = "FOOD_DELIVERY";
     PlaceActionLinkPlaceActionTypeEnum["FoodTakeout"] = "FOOD_TAKEOUT";
     PlaceActionLinkPlaceActionTypeEnum["ShopOnline"] = "SHOP_ONLINE";
-})(PlaceActionLinkPlaceActionTypeEnum || (PlaceActionLinkPlaceActionTypeEnum = {}));
-export var PlaceActionLinkProviderTypeEnum;
+})(PlaceActionLinkPlaceActionTypeEnum = exports.PlaceActionLinkPlaceActionTypeEnum || (exports.PlaceActionLinkPlaceActionTypeEnum = {}));
+var PlaceActionLinkProviderTypeEnum;
 (function (PlaceActionLinkProviderTypeEnum) {
     PlaceActionLinkProviderTypeEnum["ProviderTypeUnspecified"] = "PROVIDER_TYPE_UNSPECIFIED";
     PlaceActionLinkProviderTypeEnum["Merchant"] = "MERCHANT";
     PlaceActionLinkProviderTypeEnum["Aggregator3P"] = "AGGREGATOR_3P";
-})(PlaceActionLinkProviderTypeEnum || (PlaceActionLinkProviderTypeEnum = {}));
-// PlaceActionLinkInput
-/**
- * Represents a place action link and its attributes.
-**/
-var PlaceActionLinkInput = /** @class */ (function (_super) {
-    __extends(PlaceActionLinkInput, _super);
-    function PlaceActionLinkInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=isPreferred" }),
-        __metadata("design:type", Boolean)
-    ], PlaceActionLinkInput.prototype, "isPreferred", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], PlaceActionLinkInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=placeActionType" }),
-        __metadata("design:type", String)
-    ], PlaceActionLinkInput.prototype, "placeActionType", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
-        __metadata("design:type", String)
-    ], PlaceActionLinkInput.prototype, "uri", void 0);
-    return PlaceActionLinkInput;
-}(SpeakeasyBase));
-export { PlaceActionLinkInput };
+})(PlaceActionLinkProviderTypeEnum = exports.PlaceActionLinkProviderTypeEnum || (exports.PlaceActionLinkProviderTypeEnum = {}));
 // PlaceActionLink
 /**
  * Represents a place action link and its attributes.
@@ -78,37 +53,65 @@ var PlaceActionLink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], PlaceActionLink.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isEditable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isEditable" }),
         __metadata("design:type", Boolean)
     ], PlaceActionLink.prototype, "isEditable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isPreferred" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isPreferred" }),
         __metadata("design:type", Boolean)
     ], PlaceActionLink.prototype, "isPreferred", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PlaceActionLink.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placeActionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placeActionType" }),
         __metadata("design:type", String)
     ], PlaceActionLink.prototype, "placeActionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=providerType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=providerType" }),
         __metadata("design:type", String)
     ], PlaceActionLink.prototype, "providerType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], PlaceActionLink.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], PlaceActionLink.prototype, "uri", void 0);
     return PlaceActionLink;
-}(SpeakeasyBase));
-export { PlaceActionLink };
+}(utils_1.SpeakeasyBase));
+exports.PlaceActionLink = PlaceActionLink;
+// PlaceActionLinkInput
+/**
+ * Represents a place action link and its attributes.
+**/
+var PlaceActionLinkInput = /** @class */ (function (_super) {
+    __extends(PlaceActionLinkInput, _super);
+    function PlaceActionLinkInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isPreferred" }),
+        __metadata("design:type", Boolean)
+    ], PlaceActionLinkInput.prototype, "isPreferred", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], PlaceActionLinkInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placeActionType" }),
+        __metadata("design:type", String)
+    ], PlaceActionLinkInput.prototype, "placeActionType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
+        __metadata("design:type", String)
+    ], PlaceActionLinkInput.prototype, "uri", void 0);
+    return PlaceActionLinkInput;
+}(utils_1.SpeakeasyBase));
+exports.PlaceActionLinkInput = PlaceActionLinkInput;

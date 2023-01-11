@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,62 +23,64 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Criteria } from "./criteria";
-import { OpenBadgeClass } from "./openbadgeclass";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserBadge = exports.UserBadgeBadgeExpiry = void 0;
+var utils_1 = require("../../../internal/utils");
+var criteria_1 = require("./criteria");
+var openbadgeclass_1 = require("./openbadgeclass");
 var UserBadgeBadgeExpiry = /** @class */ (function (_super) {
     __extends(UserBadgeBadgeExpiry, _super);
     function UserBadgeBadgeExpiry() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expirationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expirationDate" }),
         __metadata("design:type", Date)
     ], UserBadgeBadgeExpiry.prototype, "expirationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires" }),
         __metadata("design:type", Boolean)
     ], UserBadgeBadgeExpiry.prototype, "expires", void 0);
     return UserBadgeBadgeExpiry;
-}(SpeakeasyBase));
-export { UserBadgeBadgeExpiry };
+}(utils_1.SpeakeasyBase));
+exports.UserBadgeBadgeExpiry = UserBadgeBadgeExpiry;
 var UserBadge = /** @class */ (function (_super) {
     __extends(UserBadge, _super);
     function UserBadge() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awardedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awardedAt" }),
         __metadata("design:type", Date)
     ], UserBadge.prototype, "awardedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=badgeExpiry" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=badgeExpiry" }),
         __metadata("design:type", UserBadgeBadgeExpiry)
     ], UserBadge.prototype, "badgeExpiry", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=badgeUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=badgeUrl" }),
         __metadata("design:type", String)
     ], UserBadge.prototype, "badgeUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=criterias" }),
-        __metadata("design:type", Criteria)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=criterias" }),
+        __metadata("design:type", criteria_1.Criteria)
     ], UserBadge.prototype, "criterias", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], UserBadge.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offeringId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offeringId" }),
         __metadata("design:type", String)
     ], UserBadge.prototype, "offeringId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=openBadge" }),
-        __metadata("design:type", OpenBadgeClass)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=openBadge" }),
+        __metadata("design:type", openbadgeclass_1.OpenBadgeClass)
     ], UserBadge.prototype, "openBadge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], UserBadge.prototype, "title", void 0);
     return UserBadge;
-}(SpeakeasyBase));
-export { UserBadge };
+}(utils_1.SpeakeasyBase));
+exports.UserBadge = UserBadge;

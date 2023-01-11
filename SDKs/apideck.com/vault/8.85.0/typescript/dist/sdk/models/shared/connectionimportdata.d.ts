@@ -7,6 +7,6 @@ export declare class ConnectionImportDataCredentials extends SpeakeasyBase {
 }
 export declare class ConnectionImportData extends SpeakeasyBase {
     credentials?: ConnectionImportDataCredentials;
-    metadata?: Map<string, any>;
-    settings?: Map<string, any>;
+    metadata?: Record<string, any>;
+    settings?: Record<string, any>;
 }

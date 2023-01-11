@@ -9,7 +9,7 @@ export declare class GetOfferingsOfferingIdAnalyticsChannelsChannelIdPostsReques
 }
 export declare class GetOfferingsOfferingIdAnalyticsChannelsChannelIdPostsResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     httpPosts?: shared.HttpPost[];
 }

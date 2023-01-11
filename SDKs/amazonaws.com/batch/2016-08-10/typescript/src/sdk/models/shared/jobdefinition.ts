@@ -25,7 +25,7 @@ export class JobDefinition extends SpeakeasyBase {
   nodeProperties?: NodeProperties;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
-  parameters?: Map<string, string>;
+  parameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=platformCapabilities" })
   platformCapabilities?: PlatformCapabilityEnum[];
@@ -43,7 +43,7 @@ export class JobDefinition extends SpeakeasyBase {
   status?: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=timeout" })
   timeout?: JobTimeout;

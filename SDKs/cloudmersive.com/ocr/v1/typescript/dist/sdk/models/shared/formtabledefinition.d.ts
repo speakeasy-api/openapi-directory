@@ -5,7 +5,7 @@ import { FormTableColumnDefinition } from "./formtablecolumndefinition";
 **/
 export declare class FormTableDefinition extends SpeakeasyBase {
     columnDefinitions?: FormTableColumnDefinition[];
-    tableId?: string;
+    tableID?: string;
     targetRowHeightRelative?: number;
     targetTableHeightRelative?: number;
 }

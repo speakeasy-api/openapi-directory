@@ -194,23 +194,23 @@ export class CfltrResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  cfltr400ApplicationJsonObject?: Cfltr400ApplicationJson;
+  cfltr400ApplicationJSONObject?: Cfltr400ApplicationJson;
 
   @SpeakeasyMetadata()
-  cfltr401ApplicationJsonObject?: Cfltr401ApplicationJson;
+  cfltr401ApplicationJSONObject?: Cfltr401ApplicationJson;
 
   @SpeakeasyMetadata()
-  cfltr404ApplicationJsonObject?: Cfltr404ApplicationJson;
+  cfltr404ApplicationJSONObject?: Cfltr404ApplicationJson;
 
   @SpeakeasyMetadata()
-  cfltr500ApplicationJsonObject?: Cfltr500ApplicationJson;
+  cfltr500ApplicationJSONObject?: Cfltr500ApplicationJson;
 
   @SpeakeasyMetadata()
-  cfltr502ApplicationJsonObject?: Cfltr502ApplicationJson;
+  cfltr502ApplicationJSONObject?: Cfltr502ApplicationJson;
 
   @SpeakeasyMetadata()
-  cfltr503ApplicationJsonObject?: Cfltr503ApplicationJson;
+  cfltr503ApplicationJSONObject?: Cfltr503ApplicationJson;
 
   @SpeakeasyMetadata()
-  cfltr504ApplicationJsonObject?: Cfltr504ApplicationJson;
+  cfltr504ApplicationJSONObject?: Cfltr504ApplicationJson;
 }

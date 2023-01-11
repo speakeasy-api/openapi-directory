@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TagDescription } from "./tagdescription";
 
 
 
 export class DescribeTagsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: TagDescription })
-  tags?: TagDescription[];
+  @SpeakeasyMetadata()
+  tags?: Record<string, any>;
 }

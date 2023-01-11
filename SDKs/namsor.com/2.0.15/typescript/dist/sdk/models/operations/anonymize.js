@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnonymizeResponse = exports.AnonymizeRequest = exports.AnonymizePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AnonymizePathParams = /** @class */ (function (_super) {
     __extends(AnonymizePathParams, _super);
     function AnonymizePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=anonymized" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=anonymized" }),
         __metadata("design:type", Boolean)
     ], AnonymizePathParams.prototype, "anonymized", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=source" }),
         __metadata("design:type", String)
     ], AnonymizePathParams.prototype, "source", void 0);
     return AnonymizePathParams;
-}(SpeakeasyBase));
-export { AnonymizePathParams };
+}(utils_1.SpeakeasyBase));
+exports.AnonymizePathParams = AnonymizePathParams;
 var AnonymizeRequest = /** @class */ (function (_super) {
     __extends(AnonymizeRequest, _super);
     function AnonymizeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AnonymizePathParams)
     ], AnonymizeRequest.prototype, "pathParams", void 0);
     return AnonymizeRequest;
-}(SpeakeasyBase));
-export { AnonymizeRequest };
+}(utils_1.SpeakeasyBase));
+exports.AnonymizeRequest = AnonymizeRequest;
 var AnonymizeResponse = /** @class */ (function (_super) {
     __extends(AnonymizeResponse, _super);
     function AnonymizeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AnonymizeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AnonymizeResponse.prototype, "statusCode", void 0);
     return AnonymizeResponse;
-}(SpeakeasyBase));
-export { AnonymizeResponse };
+}(utils_1.SpeakeasyBase));
+exports.AnonymizeResponse = AnonymizeResponse;

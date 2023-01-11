@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AcceleratorAcceleratorTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Accelerator = exports.AcceleratorStateEnum = exports.AcceleratorAcceleratorTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AcceleratorAcceleratorTypeEnum;
 (function (AcceleratorAcceleratorTypeEnum) {
     AcceleratorAcceleratorTypeEnum["AcceleratorTypeUnspecified"] = "ACCELERATOR_TYPE_UNSPECIFIED";
     AcceleratorAcceleratorTypeEnum["Cdc"] = "CDC";
     AcceleratorAcceleratorTypeEnum["Healthcare"] = "HEALTHCARE";
     AcceleratorAcceleratorTypeEnum["CcaiInsights"] = "CCAI_INSIGHTS";
-})(AcceleratorAcceleratorTypeEnum || (AcceleratorAcceleratorTypeEnum = {}));
-export var AcceleratorStateEnum;
+})(AcceleratorAcceleratorTypeEnum = exports.AcceleratorAcceleratorTypeEnum || (exports.AcceleratorAcceleratorTypeEnum = {}));
+var AcceleratorStateEnum;
 (function (AcceleratorStateEnum) {
     AcceleratorStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     AcceleratorStateEnum["Enabled"] = "ENABLED";
     AcceleratorStateEnum["Disabled"] = "DISABLED";
     AcceleratorStateEnum["Unknown"] = "UNKNOWN";
-})(AcceleratorStateEnum || (AcceleratorStateEnum = {}));
+})(AcceleratorStateEnum = exports.AcceleratorStateEnum || (exports.AcceleratorStateEnum = {}));
 // Accelerator
 /**
  * Identifies Data Fusion accelerators for an instance.
@@ -47,13 +50,13 @@ var Accelerator = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acceleratorType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acceleratorType" }),
         __metadata("design:type", String)
     ], Accelerator.prototype, "acceleratorType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Accelerator.prototype, "state", void 0);
     return Accelerator;
-}(SpeakeasyBase));
-export { Accelerator };
+}(utils_1.SpeakeasyBase));
+exports.Accelerator = Accelerator;

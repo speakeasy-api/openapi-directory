@@ -1,4 +1,7 @@
-export var ContainerServiceStateDetailCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContainerServiceStateDetailCodeEnum = void 0;
+var ContainerServiceStateDetailCodeEnum;
 (function (ContainerServiceStateDetailCodeEnum) {
     ContainerServiceStateDetailCodeEnum["CreatingSystemResources"] = "CREATING_SYSTEM_RESOURCES";
     ContainerServiceStateDetailCodeEnum["CreatingNetworkInfrastructure"] = "CREATING_NETWORK_INFRASTRUCTURE";
@@ -9,4 +12,4 @@ export var ContainerServiceStateDetailCodeEnum;
     ContainerServiceStateDetailCodeEnum["ActivatingDeployment"] = "ACTIVATING_DEPLOYMENT";
     ContainerServiceStateDetailCodeEnum["CertificateLimitExceeded"] = "CERTIFICATE_LIMIT_EXCEEDED";
     ContainerServiceStateDetailCodeEnum["UnknownError"] = "UNKNOWN_ERROR";
-})(ContainerServiceStateDetailCodeEnum || (ContainerServiceStateDetailCodeEnum = {}));
+})(ContainerServiceStateDetailCodeEnum = exports.ContainerServiceStateDetailCodeEnum || (exports.ContainerServiceStateDetailCodeEnum = {}));

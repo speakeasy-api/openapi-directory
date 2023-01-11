@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShippingOption = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
 // ShippingOption
 /**
  * The details provided for the shipping provider, such as shipping cost and type.
@@ -34,13 +37,13 @@ var ShippingOption = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingCost" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingCost" }),
+        __metadata("design:type", amount_1.Amount)
     ], ShippingOption.prototype, "shippingCost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingCostType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingCostType" }),
         __metadata("design:type", String)
     ], ShippingOption.prototype, "shippingCostType", void 0);
     return ShippingOption;
-}(SpeakeasyBase));
-export { ShippingOption };
+}(utils_1.SpeakeasyBase));
+exports.ShippingOption = ShippingOption;

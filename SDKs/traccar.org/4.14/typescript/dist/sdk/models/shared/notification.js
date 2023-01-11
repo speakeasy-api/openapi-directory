@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Notification = void 0;
+var utils_1 = require("../../../internal/utils");
 var Notification = /** @class */ (function (_super) {
     __extends(Notification, _super);
     function Notification() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=always" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=always" }),
         __metadata("design:type", Boolean)
     ], Notification.prototype, "always", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
+        __metadata("design:type", Object)
     ], Notification.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=calendarId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=calendarId" }),
         __metadata("design:type", Number)
     ], Notification.prototype, "calendarId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Notification.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mail" }),
         __metadata("design:type", Boolean)
     ], Notification.prototype, "mail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sms" }),
         __metadata("design:type", Boolean)
     ], Notification.prototype, "sms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Notification.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=web" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=web" }),
         __metadata("design:type", Boolean)
     ], Notification.prototype, "web", void 0);
     return Notification;
-}(SpeakeasyBase));
-export { Notification };
+}(utils_1.SpeakeasyBase));
+exports.Notification = Notification;

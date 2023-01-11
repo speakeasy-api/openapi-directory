@@ -23,7 +23,7 @@ export class CreatePaymentPolicyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   setPaymentPolicyResponse?: shared.SetPaymentPolicyResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// MessageAttributeValue
-/**
- * <p>The user-specified message attribute value. For string data types, the <code>Value</code> attribute has the same restrictions on the content as the message body. For more information, see <code> <a>SendMessage</a>.</code> </p> <p> <code>Name</code>, <code>type</code>, <code>value</code> and the message body must not be empty or null. All parts of the message attribute, including <code>Name</code>, <code>Type</code>, and <code>Value</code>, are part of the message size restriction (256 KB or 262,144 bytes).</p>
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MessageAttributeValue = void 0;
+var utils_1 = require("../../../internal/utils");
 var MessageAttributeValue = /** @class */ (function (_super) {
     __extends(MessageAttributeValue, _super);
     function MessageAttributeValue() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], MessageAttributeValue.prototype, "binaryListValues", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MessageAttributeValue.prototype, "binaryValue", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MessageAttributeValue.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], MessageAttributeValue.prototype, "stringListValues", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MessageAttributeValue.prototype, "stringValue", void 0);
     return MessageAttributeValue;
-}(SpeakeasyBase));
-export { MessageAttributeValue };
+}(utils_1.SpeakeasyBase));
+exports.MessageAttributeValue = MessageAttributeValue;

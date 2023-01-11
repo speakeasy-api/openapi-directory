@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContactUpdateModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var ContactUpdateModel = /** @class */ (function (_super) {
     __extends(ContactUpdateModel, _super);
     function ContactUpdateModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessPhone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessPhone" }),
         __metadata("design:type", String)
     ], ContactUpdateModel.prototype, "businessPhone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessPhoneExt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessPhoneExt" }),
         __metadata("design:type", String)
     ], ContactUpdateModel.prototype, "businessPhoneExt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=conferenceInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=conferenceInfo" }),
         __metadata("design:type", String)
     ], ContactUpdateModel.prototype, "conferenceInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=homePhone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=homePhone" }),
         __metadata("design:type", String)
     ], ContactUpdateModel.prototype, "homePhone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobilePhone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobilePhone" }),
         __metadata("design:type", String)
     ], ContactUpdateModel.prototype, "mobilePhone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferredPhoneType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferredPhoneType" }),
         __metadata("design:type", String)
     ], ContactUpdateModel.prototype, "preferredPhoneType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skypeUsername" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skypeUsername" }),
         __metadata("design:type", String)
     ], ContactUpdateModel.prototype, "skypeUsername", void 0);
     return ContactUpdateModel;
-}(SpeakeasyBase));
-export { ContactUpdateModel };
+}(utils_1.SpeakeasyBase));
+exports.ContactUpdateModel = ContactUpdateModel;

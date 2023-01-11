@@ -3,27 +3,12 @@ import * as shared from "../shared";
 export declare class ReposListForUserPathParams extends SpeakeasyBase {
     username: string;
 }
-export declare enum ReposListForUserDirectionEnum {
-    Asc = "asc",
-    Desc = "desc"
-}
-export declare enum ReposListForUserSortEnum {
-    Created = "created",
-    Updated = "updated",
-    Pushed = "pushed",
-    FullName = "full_name"
-}
-export declare enum ReposListForUserTypeEnum {
-    All = "all",
-    Owner = "owner",
-    Member = "member"
-}
 export declare class ReposListForUserQueryParams extends SpeakeasyBase {
-    direction?: ReposListForUserDirectionEnum;
+    direction?: shared.UsernameEnum4;
     page?: number;
     perPage?: number;
-    sort?: ReposListForUserSortEnum;
-    type?: ReposListForUserTypeEnum;
+    sort?: shared.UsernameEnum3;
+    type?: shared.UsernameEnum2;
 }
 export declare class ReposListForUserRequest extends SpeakeasyBase {
     pathParams: ReposListForUserPathParams;
@@ -31,7 +16,7 @@ export declare class ReposListForUserRequest extends SpeakeasyBase {
 }
 export declare class ReposListForUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     minimalRepositories?: shared.MinimalRepository[];
 }

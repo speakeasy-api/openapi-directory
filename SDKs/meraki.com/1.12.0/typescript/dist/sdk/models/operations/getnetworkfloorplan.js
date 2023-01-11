@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkFloorPlanResponse = exports.GetNetworkFloorPlanRequest = exports.GetNetworkFloorPlanPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkFloorPlanPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkFloorPlanPathParams, _super);
     function GetNetworkFloorPlanPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=floorPlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=floorPlanId" }),
         __metadata("design:type", String)
     ], GetNetworkFloorPlanPathParams.prototype, "floorPlanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkFloorPlanPathParams.prototype, "networkId", void 0);
     return GetNetworkFloorPlanPathParams;
-}(SpeakeasyBase));
-export { GetNetworkFloorPlanPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkFloorPlanPathParams = GetNetworkFloorPlanPathParams;
 var GetNetworkFloorPlanRequest = /** @class */ (function (_super) {
     __extends(GetNetworkFloorPlanRequest, _super);
     function GetNetworkFloorPlanRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkFloorPlanPathParams)
     ], GetNetworkFloorPlanRequest.prototype, "pathParams", void 0);
     return GetNetworkFloorPlanRequest;
-}(SpeakeasyBase));
-export { GetNetworkFloorPlanRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkFloorPlanRequest = GetNetworkFloorPlanRequest;
 var GetNetworkFloorPlanResponse = /** @class */ (function (_super) {
     __extends(GetNetworkFloorPlanResponse, _super);
     function GetNetworkFloorPlanResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkFloorPlanResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkFloorPlanResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkFloorPlanResponse.prototype, "getNetworkFloorPlan200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkFloorPlanResponse.prototype, "getNetworkFloorPlan200ApplicationJSONObject", void 0);
     return GetNetworkFloorPlanResponse;
-}(SpeakeasyBase));
-export { GetNetworkFloorPlanResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkFloorPlanResponse = GetNetworkFloorPlanResponse;

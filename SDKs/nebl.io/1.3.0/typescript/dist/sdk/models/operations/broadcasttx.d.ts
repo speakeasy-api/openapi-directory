@@ -5,7 +5,7 @@ export declare class BroadcastTxRequest extends SpeakeasyBase {
 }
 export declare class BroadcastTxResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     broadcastTxResponse?: shared.BroadcastTxResponse;
 }

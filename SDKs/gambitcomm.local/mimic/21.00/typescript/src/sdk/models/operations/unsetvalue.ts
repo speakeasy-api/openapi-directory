@@ -31,5 +31,5 @@ export class UnsetValueResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  unsetValue200ApplicationJsonString?: string;
+  unsetValue200ApplicationJSONString?: string;
 }

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { VideointelligenceVideosAnnotateRequest, VideointelligenceVideosAnnotateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,108 +30,107 @@ const req: VideointelligenceVideosAnnotateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "quisquam",
-    alt: "json",
-    callback: "aut",
-    fields: "qui",
-    key: "voluptas",
-    oauthToken: "rerum",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
     prettyPrint: true,
-    quotaUser: "quaerat",
-    uploadType: "aut",
-    uploadProtocol: "minima",
+    quotaUser: "fugit",
+    uploadType: "et",
+    uploadProtocol: "nihil",
   },
   request: {
     features: [
-      "TEXT_DETECTION",
+      "PERSON_DETECTION",
+      "LOGO_RECOGNITION",
+      "SHOT_CHANGE_DETECTION",
     ],
-    inputContent: "debitis",
-    inputUri: "voluptatem",
-    locationId: "cumque",
-    outputUri: "dolor",
+    inputContent: "et",
+    inputUri: "ut",
+    locationId: "dolorem",
+    outputUri: "et",
     videoContext: {
       explicitContentDetectionConfig: {
-        model: "laudantium",
+        model: "voluptate",
       },
       faceDetectionConfig: {
-        includeAttributes: false,
-        includeBoundingBoxes: false,
-        model: "ab",
+        includeAttributes: true,
+        includeBoundingBoxes: true,
+        model: "totam",
       },
       labelDetectionConfig: {
-        frameConfidenceThreshold: 63.200001,
-        labelDetectionMode: "LABEL_DETECTION_MODE_UNSPECIFIED",
-        model: "perferendis",
-        stationaryCamera: true,
-        videoConfidenceThreshold: 69.099998,
+        frameConfidenceThreshold: 80.199997,
+        labelDetectionMode: "FRAME_MODE",
+        model: "vel",
+        stationaryCamera: false,
+        videoConfidenceThreshold: 91.099998,
       },
       objectTrackingConfig: {
-        model: "est",
+        model: "aspernatur",
       },
       personDetectionConfig: {
-        includeAttributes: false,
-        includeBoundingBoxes: true,
-        includePoseLandmarks: true,
+        includeAttributes: true,
+        includeBoundingBoxes: false,
+        includePoseLandmarks: false,
       },
       segments: [
         {
-          endTimeOffset: "eum",
-          startTimeOffset: "sint",
+          endTimeOffset: "est",
+          startTimeOffset: "aut",
         },
         {
-          endTimeOffset: "et",
-          startTimeOffset: "totam",
+          endTimeOffset: "odit",
+          startTimeOffset: "non",
+        },
+        {
+          endTimeOffset: "voluptas",
+          startTimeOffset: "omnis",
         },
       ],
       shotChangeDetectionConfig: {
-        model: "voluptatum",
+        model: "aut",
       },
       speechTranscriptionConfig: {
         audioTracks: [
-          9061832994296693596,
-          2724327517837439364,
+          5558237345453186302,
         ],
-        diarizationSpeakerCount: 2602192978294191992,
+        diarizationSpeakerCount: 7845762441295307478,
         enableAutomaticPunctuation: true,
         enableSpeakerDiarization: true,
-        enableWordConfidence: true,
+        enableWordConfidence: false,
         filterProfanity: false,
-        languageCode: "doloribus",
-        maxAlternatives: 6273747709307585794,
+        languageCode: "qui",
+        maxAlternatives: 388440063886460141,
         speechContexts: [
           {
             phrases: [
-              "similique",
-              "facere",
+              "eveniet",
             ],
           },
           {
             phrases: [
-              "sequi",
-              "ut",
-            ],
-          },
-          {
-            phrases: [
-              "dolorum",
-              "rerum",
-              "officia",
+              "sint",
+              "inventore",
             ],
           },
         ],
       },
       textDetectionConfig: {
         languageHints: [
-          "neque",
+          "exercitationem",
+          "aut",
+          "reprehenderit",
         ],
-        model: "ut",
+        model: "tempore",
       },
     },
   },

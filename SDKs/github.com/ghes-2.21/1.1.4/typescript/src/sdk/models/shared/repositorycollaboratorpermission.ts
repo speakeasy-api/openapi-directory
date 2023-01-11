@@ -2,6 +2,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
+// RepositoryCollaboratorPermissionSimpleUser
+/** 
+ * Simple User
+**/
 export class RepositoryCollaboratorPermissionSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

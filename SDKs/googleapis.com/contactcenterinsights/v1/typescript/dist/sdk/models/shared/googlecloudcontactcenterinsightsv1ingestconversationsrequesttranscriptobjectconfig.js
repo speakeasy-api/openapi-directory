@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfig = exports.GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum;
 (function (GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum) {
     GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum["MediumUnspecified"] = "MEDIUM_UNSPECIFIED";
     GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum["PhoneCall"] = "PHONE_CALL";
     GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum["Chat"] = "CHAT";
-})(GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum || (GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum = {}));
+})(GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum = exports.GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum || (exports.GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfigMediumEnum = {}));
 // GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfig
 /**
  * Configuration for processing transcript objects.
@@ -39,9 +42,9 @@ var GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObject
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=medium" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=medium" }),
         __metadata("design:type", String)
     ], GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfig.prototype, "medium", void 0);
     return GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfig;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfig = GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfig;

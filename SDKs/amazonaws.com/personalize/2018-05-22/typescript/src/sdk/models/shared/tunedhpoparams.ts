@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class TunedHpoParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=algorithmHyperParameters" })
-  algorithmHyperParameters?: Map<string, string>;
+  algorithmHyperParameters?: Record<string, string>;
 }

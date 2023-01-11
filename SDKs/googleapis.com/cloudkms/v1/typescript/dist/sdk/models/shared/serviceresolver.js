@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Certificate } from "./certificate";
-import { CertificateInput } from "./certificate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceResolverInput = exports.ServiceResolver = void 0;
+var utils_1 = require("../../../internal/utils");
+var certificate_1 = require("./certificate");
+var certificate_2 = require("./certificate");
 // ServiceResolver
 /**
  * A ServiceResolver represents an EKM replica that can be reached within an EkmConnection.
@@ -35,24 +38,24 @@ var ServiceResolver = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpointFilter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpointFilter" }),
         __metadata("design:type", String)
     ], ServiceResolver.prototype, "endpointFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostname" }),
         __metadata("design:type", String)
     ], ServiceResolver.prototype, "hostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverCertificates", elemType: Certificate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverCertificates", elemType: certificate_1.Certificate }),
         __metadata("design:type", Array)
     ], ServiceResolver.prototype, "serverCertificates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceDirectoryService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceDirectoryService" }),
         __metadata("design:type", String)
     ], ServiceResolver.prototype, "serviceDirectoryService", void 0);
     return ServiceResolver;
-}(SpeakeasyBase));
-export { ServiceResolver };
+}(utils_1.SpeakeasyBase));
+exports.ServiceResolver = ServiceResolver;
 // ServiceResolverInput
 /**
  * A ServiceResolver represents an EKM replica that can be reached within an EkmConnection.
@@ -63,21 +66,21 @@ var ServiceResolverInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpointFilter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpointFilter" }),
         __metadata("design:type", String)
     ], ServiceResolverInput.prototype, "endpointFilter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostname" }),
         __metadata("design:type", String)
     ], ServiceResolverInput.prototype, "hostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverCertificates", elemType: CertificateInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverCertificates", elemType: certificate_2.CertificateInput }),
         __metadata("design:type", Array)
     ], ServiceResolverInput.prototype, "serverCertificates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceDirectoryService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceDirectoryService" }),
         __metadata("design:type", String)
     ], ServiceResolverInput.prototype, "serviceDirectoryService", void 0);
     return ServiceResolverInput;
-}(SpeakeasyBase));
-export { ServiceResolverInput };
+}(utils_1.SpeakeasyBase));
+exports.ServiceResolverInput = ServiceResolverInput;

@@ -30,6 +30,6 @@ export declare class HooksPostRequest extends SpeakeasyBase {
 }
 export declare class HooksPostResponse extends SpeakeasyBase {
     contentType: string;
-    hooksPost200ApplicationJsonObject?: HooksPost200ApplicationJson;
+    hooksPOST200ApplicationJSONObject?: HooksPost200ApplicationJson;
     statusCode: number;
 }

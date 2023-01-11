@@ -17,34 +17,6 @@ export enum GoogleCloudContactcenterinsightsV1PhraseMatcherTypeEnum {
 }
 
 
-// GoogleCloudContactcenterinsightsV1PhraseMatcherInput
-/** 
- * The phrase matcher resource.
-**/
-export class GoogleCloudContactcenterinsightsV1PhraseMatcherInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=active" })
-  active?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=displayName" })
-  displayName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=phraseMatchRuleGroups", elemType: GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup })
-  phraseMatchRuleGroups?: GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup[];
-
-  @SpeakeasyMetadata({ data: "json, name=roleMatch" })
-  roleMatch?: GoogleCloudContactcenterinsightsV1PhraseMatcherRoleMatchEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=type" })
-  type?: GoogleCloudContactcenterinsightsV1PhraseMatcherTypeEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=versionTag" })
-  versionTag?: string;
-}
-
-
 // GoogleCloudContactcenterinsightsV1PhraseMatcher
 /** 
  * The phrase matcher resource.
@@ -79,6 +51,34 @@ export class GoogleCloudContactcenterinsightsV1PhraseMatcher extends SpeakeasyBa
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=versionTag" })
+  versionTag?: string;
+}
+
+
+// GoogleCloudContactcenterinsightsV1PhraseMatcherInput
+/** 
+ * The phrase matcher resource.
+**/
+export class GoogleCloudContactcenterinsightsV1PhraseMatcherInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=active" })
+  active?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=displayName" })
+  displayName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=phraseMatchRuleGroups", elemType: GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup })
+  phraseMatchRuleGroups?: GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup[];
+
+  @SpeakeasyMetadata({ data: "json, name=roleMatch" })
+  roleMatch?: GoogleCloudContactcenterinsightsV1PhraseMatcherRoleMatchEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=type" })
+  type?: GoogleCloudContactcenterinsightsV1PhraseMatcherTypeEnum;
 
   @SpeakeasyMetadata({ data: "json, name=versionTag" })
   versionTag?: string;

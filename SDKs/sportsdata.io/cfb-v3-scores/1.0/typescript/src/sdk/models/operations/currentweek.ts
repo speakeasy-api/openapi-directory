@@ -24,7 +24,7 @@ export class CurrentWeekResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  currentWeek200ApplicationJsonInteger?: number;
+  currentWeek200ApplicationJSONInteger?: number;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSourceColumnReference } from "./datasourcecolumnreference";
-import { FilterCriteria } from "./filtercriteria";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FilterSpec = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasourcecolumnreference_1 = require("./datasourcecolumnreference");
+var filtercriteria_1 = require("./filtercriteria");
 // FilterSpec
 /**
  * The filter criteria associated with a specific column.
@@ -35,17 +38,17 @@ var FilterSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnIndex" }),
         __metadata("design:type", Number)
     ], FilterSpec.prototype, "columnIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceColumnReference" }),
-        __metadata("design:type", DataSourceColumnReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceColumnReference" }),
+        __metadata("design:type", datasourcecolumnreference_1.DataSourceColumnReference)
     ], FilterSpec.prototype, "dataSourceColumnReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filterCriteria" }),
-        __metadata("design:type", FilterCriteria)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filterCriteria" }),
+        __metadata("design:type", filtercriteria_1.FilterCriteria)
     ], FilterSpec.prototype, "filterCriteria", void 0);
     return FilterSpec;
-}(SpeakeasyBase));
-export { FilterSpec };
+}(utils_1.SpeakeasyBase));
+exports.FilterSpec = FilterSpec;

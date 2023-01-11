@@ -13,7 +13,7 @@ export declare class CreateVpcLinkRequestBody extends SpeakeasyBase {
     name: string;
     securityGroupIds?: string[];
     subnetIds: string[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateVpcLinkRequest extends SpeakeasyBase {
     headers: CreateVpcLinkHeaders;

@@ -25,5 +25,5 @@ export declare class UpdateRulesOfIpGroupResponse extends SpeakeasyBase {
     resourceLimitExceededException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    updateRulesOfIpGroupResult?: Map<string, any>;
+    updateRulesOfIpGroupResult?: Record<string, any>;
 }

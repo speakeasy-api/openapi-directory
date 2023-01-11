@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FieldMetadata } from "./fieldmetadata";
-import { FieldMetadataInput } from "./fieldmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocationInput = exports.Location = void 0;
+var utils_1 = require("../../../internal/utils");
+var fieldmetadata_1 = require("./fieldmetadata");
+var fieldmetadata_2 = require("./fieldmetadata");
 // Location
 /**
  * A person's location.
@@ -35,40 +38,40 @@ var Location = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildingId" }),
         __metadata("design:type", String)
     ], Location.prototype, "buildingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current" }),
         __metadata("design:type", Boolean)
     ], Location.prototype, "current", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deskCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deskCode" }),
         __metadata("design:type", String)
     ], Location.prototype, "deskCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=floor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=floor" }),
         __metadata("design:type", String)
     ], Location.prototype, "floor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=floorSection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=floorSection" }),
         __metadata("design:type", String)
     ], Location.prototype, "floorSection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_1.FieldMetadata)
     ], Location.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Location.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], Location.prototype, "value", void 0);
     return Location;
-}(SpeakeasyBase));
-export { Location };
+}(utils_1.SpeakeasyBase));
+exports.Location = Location;
 // LocationInput
 /**
  * A person's location.
@@ -79,37 +82,37 @@ var LocationInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildingId" }),
         __metadata("design:type", String)
     ], LocationInput.prototype, "buildingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current" }),
         __metadata("design:type", Boolean)
     ], LocationInput.prototype, "current", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deskCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deskCode" }),
         __metadata("design:type", String)
     ], LocationInput.prototype, "deskCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=floor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=floor" }),
         __metadata("design:type", String)
     ], LocationInput.prototype, "floor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=floorSection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=floorSection" }),
         __metadata("design:type", String)
     ], LocationInput.prototype, "floorSection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", FieldMetadataInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", fieldmetadata_2.FieldMetadataInput)
     ], LocationInput.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], LocationInput.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], LocationInput.prototype, "value", void 0);
     return LocationInput;
-}(SpeakeasyBase));
-export { LocationInput };
+}(utils_1.SpeakeasyBase));
+exports.LocationInput = LocationInput;

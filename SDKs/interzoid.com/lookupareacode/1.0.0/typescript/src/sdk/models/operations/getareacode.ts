@@ -46,5 +46,5 @@ export class GetareacodeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getareacode200ApplicationJsonObject?: Getareacode200ApplicationJson;
+  getareacode200ApplicationJSONObject?: Getareacode200ApplicationJson;
 }

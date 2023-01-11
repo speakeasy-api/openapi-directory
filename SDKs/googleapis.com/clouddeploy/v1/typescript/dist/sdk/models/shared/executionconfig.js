@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DefaultPool } from "./defaultpool";
-import { PrivatePool } from "./privatepool";
-export var ExecutionConfigUsagesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExecutionConfig = exports.ExecutionConfigUsagesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var defaultpool_1 = require("./defaultpool");
+var privatepool_1 = require("./privatepool");
+var ExecutionConfigUsagesEnum;
 (function (ExecutionConfigUsagesEnum) {
     ExecutionConfigUsagesEnum["ExecutionEnvironmentUsageUnspecified"] = "EXECUTION_ENVIRONMENT_USAGE_UNSPECIFIED";
     ExecutionConfigUsagesEnum["Render"] = "RENDER";
     ExecutionConfigUsagesEnum["Deploy"] = "DEPLOY";
     ExecutionConfigUsagesEnum["Verify"] = "VERIFY";
-})(ExecutionConfigUsagesEnum || (ExecutionConfigUsagesEnum = {}));
+})(ExecutionConfigUsagesEnum = exports.ExecutionConfigUsagesEnum || (exports.ExecutionConfigUsagesEnum = {}));
 // ExecutionConfig
 /**
  * Configuration of the environment to use when calling Skaffold.
@@ -42,33 +45,33 @@ var ExecutionConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artifactStorage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artifactStorage" }),
         __metadata("design:type", String)
     ], ExecutionConfig.prototype, "artifactStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultPool" }),
-        __metadata("design:type", DefaultPool)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultPool" }),
+        __metadata("design:type", defaultpool_1.DefaultPool)
     ], ExecutionConfig.prototype, "defaultPool", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionTimeout" }),
         __metadata("design:type", String)
     ], ExecutionConfig.prototype, "executionTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privatePool" }),
-        __metadata("design:type", PrivatePool)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privatePool" }),
+        __metadata("design:type", privatepool_1.PrivatePool)
     ], ExecutionConfig.prototype, "privatePool", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccount" }),
         __metadata("design:type", String)
     ], ExecutionConfig.prototype, "serviceAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usages" }),
         __metadata("design:type", Array)
     ], ExecutionConfig.prototype, "usages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workerPool" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workerPool" }),
         __metadata("design:type", String)
     ], ExecutionConfig.prototype, "workerPool", void 0);
     return ExecutionConfig;
-}(SpeakeasyBase));
-export { ExecutionConfig };
+}(utils_1.SpeakeasyBase));
+exports.ExecutionConfig = ExecutionConfig;

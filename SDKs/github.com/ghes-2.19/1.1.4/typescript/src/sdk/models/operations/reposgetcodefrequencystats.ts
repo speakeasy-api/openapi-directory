@@ -28,5 +28,5 @@ export class ReposGetCodeFrequencyStatsResponse extends SpeakeasyBase {
   codeFrequencyStats?: number[][];
 
   @SpeakeasyMetadata()
-  reposGetCodeFrequencyStats202ApplicationJsonObject?: Map<string, any>;
+  reposGetCodeFrequencyStats202ApplicationJSONObject?: Record<string, any>;
 }

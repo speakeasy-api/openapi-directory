@@ -61,5 +61,5 @@ export class UpdateNetworkApplianceVpnSiteToSiteVpnResponse extends SpeakeasyBas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkApplianceVpnSiteToSiteVpn200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkApplianceVpnSiteToSiteVpn200ApplicationJSONObject?: Record<string, any>;
 }

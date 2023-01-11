@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TeamSeasonStatsStandingsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamSeasonStatsStandingsResponse = exports.TeamSeasonStatsStandingsRequest = exports.TeamSeasonStatsStandingsPathParams = exports.TeamSeasonStatsStandingsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TeamSeasonStatsStandingsFormatEnum;
 (function (TeamSeasonStatsStandingsFormatEnum) {
     TeamSeasonStatsStandingsFormatEnum["Xml"] = "XML";
     TeamSeasonStatsStandingsFormatEnum["Json"] = "JSON";
-})(TeamSeasonStatsStandingsFormatEnum || (TeamSeasonStatsStandingsFormatEnum = {}));
+})(TeamSeasonStatsStandingsFormatEnum = exports.TeamSeasonStatsStandingsFormatEnum || (exports.TeamSeasonStatsStandingsFormatEnum = {}));
 var TeamSeasonStatsStandingsPathParams = /** @class */ (function (_super) {
     __extends(TeamSeasonStatsStandingsPathParams, _super);
     function TeamSeasonStatsStandingsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], TeamSeasonStatsStandingsPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], TeamSeasonStatsStandingsPathParams.prototype, "season", void 0);
     return TeamSeasonStatsStandingsPathParams;
-}(SpeakeasyBase));
-export { TeamSeasonStatsStandingsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamSeasonStatsStandingsPathParams = TeamSeasonStatsStandingsPathParams;
 var TeamSeasonStatsStandingsRequest = /** @class */ (function (_super) {
     __extends(TeamSeasonStatsStandingsRequest, _super);
     function TeamSeasonStatsStandingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamSeasonStatsStandingsPathParams)
     ], TeamSeasonStatsStandingsRequest.prototype, "pathParams", void 0);
     return TeamSeasonStatsStandingsRequest;
-}(SpeakeasyBase));
-export { TeamSeasonStatsStandingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamSeasonStatsStandingsRequest = TeamSeasonStatsStandingsRequest;
 var TeamSeasonStatsStandingsResponse = /** @class */ (function (_super) {
     __extends(TeamSeasonStatsStandingsResponse, _super);
     function TeamSeasonStatsStandingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamSeasonStatsStandingsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamSeasonStatsStandingsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], TeamSeasonStatsStandingsResponse.prototype, "teamSeasons", void 0);
     return TeamSeasonStatsStandingsResponse;
-}(SpeakeasyBase));
-export { TeamSeasonStatsStandingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamSeasonStatsStandingsResponse = TeamSeasonStatsStandingsResponse;

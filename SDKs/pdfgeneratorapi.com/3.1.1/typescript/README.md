@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { CopyTemplateRequest, CopyTemplateResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { MergeTemplateRequest, MergeTemplateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     jsonWebTokenAuth: {
       authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
@@ -32,14 +31,20 @@ const sdk = new SDK(WithSecurity(
   }
 ));
     
-const req: CopyTemplateRequest = {
+const req: MergeTemplateRequest = {
   queryParams: {
-    name: "consequatur",
-    templateId: 9220811630772968327,
+    format: "zip",
+    name: "voluptas",
+    output: "url",
+    templateId: 501233450539197794,
+  },
+  request: {
+    id: 3390393562759376202,
+    name: "dolor",
   },
 };
 
-sdk.sdk.copyTemplate(req).then((res: CopyTemplateResponse | AxiosError) => {
+sdk.documents.mergeTemplate(req).then((res: MergeTemplateResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -48,19 +53,25 @@ sdk.sdk.copyTemplate(req).then((res: CopyTemplateResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Documents
+
+* `mergeTemplate` - Generate document
+* `mergeTemplates` - Generate document (multiple templates)
+
+### Templates
 
 * `copyTemplate` - Copy template
 * `createTemplate` - Create template
 * `deleteTemplate` - Delete template
-* `deleteWorkspace` - Delete workspace
 * `getEditorUrl` - Open editor
 * `getTemplate` - Get template
 * `getTemplates` - Get templates
-* `getWorkspace` - Get workspace
-* `mergeTemplate` - Generate document
-* `mergeTemplates` - Generate document (multiple templates)
 * `updateTemplate` - Update template
+
+### Workspaces
+
+* `deleteWorkspace` - Delete workspace
+* `getWorkspace` - Get workspace
 
 <!-- End SDK Available Operations -->
 

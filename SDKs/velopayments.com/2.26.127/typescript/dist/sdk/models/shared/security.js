@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SchemeOAuthVeloBackOffice = exports.SchemeBasicAuth = exports.Security = exports.SchemeOAuth2 = void 0;
+var utils_1 = require("../../../internal/utils");
 var SchemeOAuth2 = /** @class */ (function (_super) {
     __extends(SchemeOAuth2, _super);
     function SchemeOAuth2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, name=Authorization" }),
         __metadata("design:type", String)
     ], SchemeOAuth2.prototype, "authorization", void 0);
     return SchemeOAuth2;
-}(SpeakeasyBase));
-export { SchemeOAuth2 };
+}(utils_1.SpeakeasyBase));
+exports.SchemeOAuth2 = SchemeOAuth2;
 var Security = /** @class */ (function (_super) {
     __extends(Security, _super);
     function Security() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", SchemeOAuth2)
     ], Security.prototype, "oAuth2", void 0);
     return Security;
-}(SpeakeasyBase));
-export { Security };
+}(utils_1.SpeakeasyBase));
+exports.Security = Security;
 var SchemeBasicAuth = /** @class */ (function (_super) {
     __extends(SchemeBasicAuth, _super);
     function SchemeBasicAuth() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, name=password" }),
         __metadata("design:type", String)
     ], SchemeBasicAuth.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, name=username" }),
         __metadata("design:type", String)
     ], SchemeBasicAuth.prototype, "username", void 0);
     return SchemeBasicAuth;
-}(SpeakeasyBase));
-export { SchemeBasicAuth };
+}(utils_1.SpeakeasyBase));
+exports.SchemeBasicAuth = SchemeBasicAuth;
 var SchemeOAuthVeloBackOffice = /** @class */ (function (_super) {
     __extends(SchemeOAuthVeloBackOffice, _super);
     function SchemeOAuthVeloBackOffice() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, name=Authorization" }),
         __metadata("design:type", String)
     ], SchemeOAuthVeloBackOffice.prototype, "authorization", void 0);
     return SchemeOAuthVeloBackOffice;
-}(SpeakeasyBase));
-export { SchemeOAuthVeloBackOffice };
+}(utils_1.SpeakeasyBase));
+exports.SchemeOAuthVeloBackOffice = SchemeOAuthVeloBackOffice;

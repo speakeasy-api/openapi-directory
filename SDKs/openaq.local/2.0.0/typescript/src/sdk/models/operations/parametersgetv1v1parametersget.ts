@@ -17,7 +17,7 @@ export class ParametersGetv1V1ParametersGetQueryParams extends SpeakeasyBase {
   page?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: shared.SortEnum;
+  sort?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sourceId" })
   sourceId?: number[];
@@ -44,7 +44,7 @@ export class ParametersGetv1V1ParametersGetResponse extends SpeakeasyBase {
   httpValidationError?: shared.HttpValidationError;
 
   @SpeakeasyMetadata()
-  openAqParametersResult?: shared.OpenAqParametersResult;
+  openAQParametersResult?: shared.OpenAqParametersResult;
 
   @SpeakeasyMetadata()
   statusCode: number;

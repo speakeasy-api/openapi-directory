@@ -1,7 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { SubnetCidrReservation } from "./subnetcidrreservation";
 export declare class GetSubnetCidrReservationsResult extends SpeakeasyBase {
-    nextToken?: string;
-    subnetIpv4CidrReservations?: SubnetCidrReservation[];
-    subnetIpv6CidrReservations?: SubnetCidrReservation[];
+    nextToken?: Record<string, any>;
+    subnetIpv4CidrReservations?: Record<string, any>;
+    subnetIpv6CidrReservations?: Record<string, any>;
 }

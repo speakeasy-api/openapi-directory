@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,82 +14,107 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteLocalTaxByTaxCodeResponse = exports.DeleteLocalTaxByTaxCodeRequest = exports.DeleteLocalTaxByTaxCodeSecurity = exports.DeleteLocalTaxByTaxCodePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var DeleteLocalTaxByTaxCodePathParams = /** @class */ (function (_super) {
     __extends(DeleteLocalTaxByTaxCodePathParams, _super);
     function DeleteLocalTaxByTaxCodePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=companyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=companyId" }),
         __metadata("design:type", String)
     ], DeleteLocalTaxByTaxCodePathParams.prototype, "companyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=employeeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=employeeId" }),
         __metadata("design:type", String)
     ], DeleteLocalTaxByTaxCodePathParams.prototype, "employeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=taxCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=taxCode" }),
         __metadata("design:type", String)
     ], DeleteLocalTaxByTaxCodePathParams.prototype, "taxCode", void 0);
     return DeleteLocalTaxByTaxCodePathParams;
-}(SpeakeasyBase));
-export { DeleteLocalTaxByTaxCodePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteLocalTaxByTaxCodePathParams = DeleteLocalTaxByTaxCodePathParams;
 var DeleteLocalTaxByTaxCodeSecurity = /** @class */ (function (_super) {
     __extends(DeleteLocalTaxByTaxCodeSecurity, _super);
     function DeleteLocalTaxByTaxCodeSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemePaylocityAuth)
     ], DeleteLocalTaxByTaxCodeSecurity.prototype, "paylocityAuth", void 0);
     return DeleteLocalTaxByTaxCodeSecurity;
-}(SpeakeasyBase));
-export { DeleteLocalTaxByTaxCodeSecurity };
+}(utils_1.SpeakeasyBase));
+exports.DeleteLocalTaxByTaxCodeSecurity = DeleteLocalTaxByTaxCodeSecurity;
 var DeleteLocalTaxByTaxCodeRequest = /** @class */ (function (_super) {
     __extends(DeleteLocalTaxByTaxCodeRequest, _super);
     function DeleteLocalTaxByTaxCodeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteLocalTaxByTaxCodePathParams)
     ], DeleteLocalTaxByTaxCodeRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteLocalTaxByTaxCodeSecurity)
     ], DeleteLocalTaxByTaxCodeRequest.prototype, "security", void 0);
     return DeleteLocalTaxByTaxCodeRequest;
-}(SpeakeasyBase));
-export { DeleteLocalTaxByTaxCodeRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteLocalTaxByTaxCodeRequest = DeleteLocalTaxByTaxCodeRequest;
 var DeleteLocalTaxByTaxCodeResponse = /** @class */ (function (_super) {
     __extends(DeleteLocalTaxByTaxCodeResponse, _super);
     function DeleteLocalTaxByTaxCodeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteLocalTaxByTaxCodeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteLocalTaxByTaxCodeResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.Error }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.ErrorT }),
         __metadata("design:type", Array)
     ], DeleteLocalTaxByTaxCodeResponse.prototype, "errors", void 0);
     return DeleteLocalTaxByTaxCodeResponse;
-}(SpeakeasyBase));
-export { DeleteLocalTaxByTaxCodeResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteLocalTaxByTaxCodeResponse = DeleteLocalTaxByTaxCodeResponse;

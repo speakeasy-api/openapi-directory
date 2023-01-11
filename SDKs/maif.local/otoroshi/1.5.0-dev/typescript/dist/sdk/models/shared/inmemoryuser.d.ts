@@ -4,7 +4,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class InMemoryUser extends SpeakeasyBase {
     email: string;
-    metadata: Map<string, string>;
+    metadata: Record<string, string>;
     name: string;
     password: string;
 }

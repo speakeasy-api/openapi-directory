@@ -21,6 +21,6 @@ export declare class StopSuiteRunResponse extends SpeakeasyBase {
     internalServerException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    stopSuiteRunResponse?: Map<string, any>;
+    stopSuiteRunResponse?: Record<string, any>;
     validationException?: any;
 }

@@ -49,7 +49,7 @@ export class DeletePlaybackKeyPairResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deletePlaybackKeyPairResponse?: Map<string, any>;
+  deletePlaybackKeyPairResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   pendingVerification?: any;

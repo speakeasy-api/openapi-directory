@@ -26,5 +26,5 @@ export declare class RegisterDomainResponse extends SpeakeasyBase {
     registerDomainResponse?: shared.RegisterDomainResponse;
     statusCode: number;
     tldRulesViolation?: any;
-    unsupportedTld?: any;
+    unsupportedTLD?: any;
 }

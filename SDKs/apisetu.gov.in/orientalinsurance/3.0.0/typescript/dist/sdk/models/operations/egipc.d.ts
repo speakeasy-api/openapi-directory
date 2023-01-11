@@ -107,11 +107,11 @@ export declare class EgipcRequest extends SpeakeasyBase {
 export declare class EgipcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    egipc400ApplicationJsonObject?: Egipc400ApplicationJson;
-    egipc401ApplicationJsonObject?: Egipc401ApplicationJson;
-    egipc404ApplicationJsonObject?: Egipc404ApplicationJson;
-    egipc500ApplicationJsonObject?: Egipc500ApplicationJson;
-    egipc502ApplicationJsonObject?: Egipc502ApplicationJson;
-    egipc503ApplicationJsonObject?: Egipc503ApplicationJson;
-    egipc504ApplicationJsonObject?: Egipc504ApplicationJson;
+    egipc400ApplicationJSONObject?: Egipc400ApplicationJson;
+    egipc401ApplicationJSONObject?: Egipc401ApplicationJson;
+    egipc404ApplicationJSONObject?: Egipc404ApplicationJson;
+    egipc500ApplicationJSONObject?: Egipc500ApplicationJson;
+    egipc502ApplicationJSONObject?: Egipc502ApplicationJson;
+    egipc503ApplicationJSONObject?: Egipc503ApplicationJson;
+    egipc504ApplicationJSONObject?: Egipc504ApplicationJson;
 }

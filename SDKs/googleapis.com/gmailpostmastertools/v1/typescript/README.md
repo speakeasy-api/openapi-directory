@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GmailpostmastertoolsDomainsListRequest, GmailpostmastertoolsDomainsListResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,25 +30,25 @@ const req: GmailpostmastertoolsDomainsListRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "alias",
-    alt: "json",
-    callback: "amet",
-    fields: "non",
-    key: "sint",
-    oauthToken: "est",
-    pageSize: 3170504167765740907,
-    pageToken: "dolorem",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
+    pageSize: 6044372234677422456,
+    pageToken: "fugit",
     prettyPrint: false,
-    quotaUser: "iusto",
-    uploadType: "tempora",
-    uploadProtocol: "consequuntur",
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
 };
 

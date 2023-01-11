@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,246 +14,271 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FormsFormsWatchesListResponse = exports.FormsFormsWatchesListRequest = exports.FormsFormsWatchesListSecurity = exports.FormsFormsWatchesListSecurityOption6 = exports.FormsFormsWatchesListSecurityOption5 = exports.FormsFormsWatchesListSecurityOption4 = exports.FormsFormsWatchesListSecurityOption3 = exports.FormsFormsWatchesListSecurityOption2 = exports.FormsFormsWatchesListSecurityOption1 = exports.FormsFormsWatchesListQueryParams = exports.FormsFormsWatchesListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var FormsFormsWatchesListPathParams = /** @class */ (function (_super) {
     __extends(FormsFormsWatchesListPathParams, _super);
     function FormsFormsWatchesListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=formId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=formId" }),
         __metadata("design:type", String)
     ], FormsFormsWatchesListPathParams.prototype, "formId", void 0);
     return FormsFormsWatchesListPathParams;
-}(SpeakeasyBase));
-export { FormsFormsWatchesListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsWatchesListPathParams = FormsFormsWatchesListPathParams;
 var FormsFormsWatchesListQueryParams = /** @class */ (function (_super) {
     __extends(FormsFormsWatchesListQueryParams, _super);
     function FormsFormsWatchesListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], FormsFormsWatchesListQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], FormsFormsWatchesListQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], FormsFormsWatchesListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], FormsFormsWatchesListQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], FormsFormsWatchesListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], FormsFormsWatchesListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], FormsFormsWatchesListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], FormsFormsWatchesListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], FormsFormsWatchesListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], FormsFormsWatchesListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], FormsFormsWatchesListQueryParams.prototype, "uploadProtocol", void 0);
     return FormsFormsWatchesListQueryParams;
-}(SpeakeasyBase));
-export { FormsFormsWatchesListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsWatchesListQueryParams = FormsFormsWatchesListQueryParams;
 var FormsFormsWatchesListSecurityOption1 = /** @class */ (function (_super) {
     __extends(FormsFormsWatchesListSecurityOption1, _super);
     function FormsFormsWatchesListSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FormsFormsWatchesListSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FormsFormsWatchesListSecurityOption1.prototype, "oauth2c", void 0);
     return FormsFormsWatchesListSecurityOption1;
-}(SpeakeasyBase));
-export { FormsFormsWatchesListSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsWatchesListSecurityOption1 = FormsFormsWatchesListSecurityOption1;
 var FormsFormsWatchesListSecurityOption2 = /** @class */ (function (_super) {
     __extends(FormsFormsWatchesListSecurityOption2, _super);
     function FormsFormsWatchesListSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FormsFormsWatchesListSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FormsFormsWatchesListSecurityOption2.prototype, "oauth2c", void 0);
     return FormsFormsWatchesListSecurityOption2;
-}(SpeakeasyBase));
-export { FormsFormsWatchesListSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsWatchesListSecurityOption2 = FormsFormsWatchesListSecurityOption2;
 var FormsFormsWatchesListSecurityOption3 = /** @class */ (function (_super) {
     __extends(FormsFormsWatchesListSecurityOption3, _super);
     function FormsFormsWatchesListSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FormsFormsWatchesListSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FormsFormsWatchesListSecurityOption3.prototype, "oauth2c", void 0);
     return FormsFormsWatchesListSecurityOption3;
-}(SpeakeasyBase));
-export { FormsFormsWatchesListSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsWatchesListSecurityOption3 = FormsFormsWatchesListSecurityOption3;
 var FormsFormsWatchesListSecurityOption4 = /** @class */ (function (_super) {
     __extends(FormsFormsWatchesListSecurityOption4, _super);
     function FormsFormsWatchesListSecurityOption4() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FormsFormsWatchesListSecurityOption4.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FormsFormsWatchesListSecurityOption4.prototype, "oauth2c", void 0);
     return FormsFormsWatchesListSecurityOption4;
-}(SpeakeasyBase));
-export { FormsFormsWatchesListSecurityOption4 };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsWatchesListSecurityOption4 = FormsFormsWatchesListSecurityOption4;
 var FormsFormsWatchesListSecurityOption5 = /** @class */ (function (_super) {
     __extends(FormsFormsWatchesListSecurityOption5, _super);
     function FormsFormsWatchesListSecurityOption5() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FormsFormsWatchesListSecurityOption5.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FormsFormsWatchesListSecurityOption5.prototype, "oauth2c", void 0);
     return FormsFormsWatchesListSecurityOption5;
-}(SpeakeasyBase));
-export { FormsFormsWatchesListSecurityOption5 };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsWatchesListSecurityOption5 = FormsFormsWatchesListSecurityOption5;
 var FormsFormsWatchesListSecurityOption6 = /** @class */ (function (_super) {
     __extends(FormsFormsWatchesListSecurityOption6, _super);
     function FormsFormsWatchesListSecurityOption6() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], FormsFormsWatchesListSecurityOption6.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], FormsFormsWatchesListSecurityOption6.prototype, "oauth2c", void 0);
     return FormsFormsWatchesListSecurityOption6;
-}(SpeakeasyBase));
-export { FormsFormsWatchesListSecurityOption6 };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsWatchesListSecurityOption6 = FormsFormsWatchesListSecurityOption6;
 var FormsFormsWatchesListSecurity = /** @class */ (function (_super) {
     __extends(FormsFormsWatchesListSecurity, _super);
     function FormsFormsWatchesListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FormsFormsWatchesListSecurityOption1)
     ], FormsFormsWatchesListSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FormsFormsWatchesListSecurityOption2)
     ], FormsFormsWatchesListSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FormsFormsWatchesListSecurityOption3)
     ], FormsFormsWatchesListSecurity.prototype, "option3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FormsFormsWatchesListSecurityOption4)
     ], FormsFormsWatchesListSecurity.prototype, "option4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FormsFormsWatchesListSecurityOption5)
     ], FormsFormsWatchesListSecurity.prototype, "option5", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", FormsFormsWatchesListSecurityOption6)
     ], FormsFormsWatchesListSecurity.prototype, "option6", void 0);
     return FormsFormsWatchesListSecurity;
-}(SpeakeasyBase));
-export { FormsFormsWatchesListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsWatchesListSecurity = FormsFormsWatchesListSecurity;
 var FormsFormsWatchesListRequest = /** @class */ (function (_super) {
     __extends(FormsFormsWatchesListRequest, _super);
     function FormsFormsWatchesListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FormsFormsWatchesListPathParams)
     ], FormsFormsWatchesListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FormsFormsWatchesListQueryParams)
     ], FormsFormsWatchesListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FormsFormsWatchesListSecurity)
     ], FormsFormsWatchesListRequest.prototype, "security", void 0);
     return FormsFormsWatchesListRequest;
-}(SpeakeasyBase));
-export { FormsFormsWatchesListRequest };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsWatchesListRequest = FormsFormsWatchesListRequest;
 var FormsFormsWatchesListResponse = /** @class */ (function (_super) {
     __extends(FormsFormsWatchesListResponse, _super);
     function FormsFormsWatchesListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FormsFormsWatchesListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ListWatchesResponse)
     ], FormsFormsWatchesListResponse.prototype, "listWatchesResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FormsFormsWatchesListResponse.prototype, "statusCode", void 0);
     return FormsFormsWatchesListResponse;
-}(SpeakeasyBase));
-export { FormsFormsWatchesListResponse };
+}(utils_1.SpeakeasyBase));
+exports.FormsFormsWatchesListResponse = FormsFormsWatchesListResponse;

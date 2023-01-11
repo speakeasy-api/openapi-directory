@@ -9,7 +9,7 @@ export declare class RemovePagesV1RequestBody extends SpeakeasyBase {
     lastPage?: number;
 }
 export declare class RemovePagesV14XxApplicationProblemPlusJson extends SpeakeasyBase {
-    errors?: Map<string, any>;
+    errors?: Record<string, any>;
     status?: number;
     title?: string;
     type?: string;
@@ -21,5 +21,5 @@ export declare class RemovePagesV1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     removePagesV1200ApplicationPdfBinaryString?: Uint8Array;
-    removePagesV14XxApplicationProblemPlusJsonObject?: RemovePagesV14XxApplicationProblemPlusJson;
+    removePagesV14XXApplicationProblemPlusJsonObject?: RemovePagesV14XxApplicationProblemPlusJson;
 }

@@ -8,7 +8,7 @@ import { VolumeConfiguration } from "./volumeconfiguration";
 
 export class UpdateLayerRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Attributes" })
-  attributes?: Map<string, string>;
+  attributes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=AutoAssignElasticIps" })
   autoAssignElasticIps?: boolean;

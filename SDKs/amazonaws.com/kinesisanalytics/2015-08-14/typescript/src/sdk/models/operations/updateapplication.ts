@@ -69,5 +69,5 @@ export class UpdateApplicationResponse extends SpeakeasyBase {
   unsupportedOperationException?: any;
 
   @SpeakeasyMetadata()
-  updateApplicationResponse?: Map<string, any>;
+  updateApplicationResponse?: Record<string, any>;
 }

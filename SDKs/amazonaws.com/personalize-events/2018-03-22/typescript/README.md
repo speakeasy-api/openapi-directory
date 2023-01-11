@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PutEventsRequest, PutEventsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,36 +33,63 @@ const sdk = new SDK(WithSecurity(
     
 const req: PutEventsRequest = {
   headers: {
-    xAmzAlgorithm: "soluta",
-    xAmzContentSha256: "vel",
-    xAmzCredential: "fuga",
-    xAmzDate: "ut",
-    xAmzSecurityToken: "non",
-    xAmzSignature: "nulla",
-    xAmzSignedHeaders: "numquam",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
     eventList: [
       {
-        eventId: "fugiat",
-        eventType: "laboriosam",
-        eventValue: 3.200000,
+        eventId: "fugit",
+        eventType: "et",
+        eventValue: 68.199997,
         impression: [
-          "recusandae",
+          "debitis",
+          "voluptatum",
+          "et",
         ],
-        itemId: "incidunt",
-        properties: "delectus",
-        recommendationId: "qui",
-        sentAt: "1997-07-06T13:25:09Z",
+        itemId: "ut",
+        properties: "dolorem",
+        recommendationId: "et",
+        sentAt: "1998-09-30T11:01:25Z",
+      },
+      {
+        eventId: "vitae",
+        eventType: "totam",
+        eventValue: 80.199997,
+        impression: [
+          "vel",
+        ],
+        itemId: "odio",
+        properties: "dolore",
+        recommendationId: "id",
+        sentAt: "2015-12-03T16:44:03Z",
+      },
+      {
+        eventId: "accusantium",
+        eventType: "totam",
+        eventValue: 64.099998,
+        impression: [
+          "aut",
+          "odit",
+        ],
+        itemId: "non",
+        properties: "voluptas",
+        recommendationId: "omnis",
+        sentAt: "2015-03-08T17:52:36Z",
       },
     ],
-    sessionId: "fuga",
-    trackingId: "at",
-    userId: "ex",
+    sessionId: "illo",
+    trackingId: "sed",
+    userId: "officiis",
   },
 };
 
-sdk.sdk.putEvents(req).then((res: PutEventsResponse | AxiosError) => {
+sdk.putEvents(req).then((res: PutEventsResponse | AxiosError) => {
    // handle response
 });
 ```

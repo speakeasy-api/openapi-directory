@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceAndroidDetails } from "./instanceandroiddetails";
-import { InstanceIosDetails } from "./instanceiosdetails";
-import { InstanceWebDetails } from "./instancewebdetails";
-export var InstancePlatformTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Instance = exports.InstancePlatformTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var instanceandroiddetails_1 = require("./instanceandroiddetails");
+var instanceiosdetails_1 = require("./instanceiosdetails");
+var instancewebdetails_1 = require("./instancewebdetails");
+var InstancePlatformTypeEnum;
 (function (InstancePlatformTypeEnum) {
     InstancePlatformTypeEnum["PlatformTypeUnspecified"] = "PLATFORM_TYPE_UNSPECIFIED";
     InstancePlatformTypeEnum["Android"] = "ANDROID";
     InstancePlatformTypeEnum["Ios"] = "IOS";
     InstancePlatformTypeEnum["WebApp"] = "WEB_APP";
-})(InstancePlatformTypeEnum || (InstancePlatformTypeEnum = {}));
+})(InstancePlatformTypeEnum = exports.InstancePlatformTypeEnum || (exports.InstancePlatformTypeEnum = {}));
 // Instance
 /**
  * The Instance resource.
@@ -43,41 +46,41 @@ var Instance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acquisitionUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acquisitionUri" }),
         __metadata("design:type", String)
     ], Instance.prototype, "acquisitionUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidInstance" }),
-        __metadata("design:type", InstanceAndroidDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidInstance" }),
+        __metadata("design:type", instanceandroiddetails_1.InstanceAndroidDetails)
     ], Instance.prototype, "androidInstance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosInstance" }),
-        __metadata("design:type", InstanceIosDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosInstance" }),
+        __metadata("design:type", instanceiosdetails_1.InstanceIosDetails)
     ], Instance.prototype, "iosInstance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Instance.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Instance.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platformType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platformType" }),
         __metadata("design:type", String)
     ], Instance.prototype, "platformType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=realtimePlay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=realtimePlay" }),
         __metadata("design:type", Boolean)
     ], Instance.prototype, "realtimePlay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=turnBasedPlay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=turnBasedPlay" }),
         __metadata("design:type", Boolean)
     ], Instance.prototype, "turnBasedPlay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webInstance" }),
-        __metadata("design:type", InstanceWebDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webInstance" }),
+        __metadata("design:type", instancewebdetails_1.InstanceWebDetails)
     ], Instance.prototype, "webInstance", void 0);
     return Instance;
-}(SpeakeasyBase));
-export { Instance };
+}(utils_1.SpeakeasyBase));
+exports.Instance = Instance;

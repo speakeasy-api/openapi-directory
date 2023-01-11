@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateAdditionalAssignmentsForHitRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateAdditionalAssignmentsForHitRequest = /** @class */ (function (_super) {
     __extends(CreateAdditionalAssignmentsForHitRequest, _super);
     function CreateAdditionalAssignmentsForHitRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HITId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HITId" }),
         __metadata("design:type", String)
     ], CreateAdditionalAssignmentsForHitRequest.prototype, "hitId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfAdditionalAssignments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfAdditionalAssignments" }),
         __metadata("design:type", Number)
     ], CreateAdditionalAssignmentsForHitRequest.prototype, "numberOfAdditionalAssignments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UniqueRequestToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UniqueRequestToken" }),
         __metadata("design:type", String)
     ], CreateAdditionalAssignmentsForHitRequest.prototype, "uniqueRequestToken", void 0);
     return CreateAdditionalAssignmentsForHitRequest;
-}(SpeakeasyBase));
-export { CreateAdditionalAssignmentsForHitRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateAdditionalAssignmentsForHitRequest = CreateAdditionalAssignmentsForHitRequest;

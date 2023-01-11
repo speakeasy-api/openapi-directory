@@ -28,6 +28,10 @@ export class UserResponsePhoto extends SpeakeasyBase {
 }
 
 
+// UserResponse
+/** 
+ * A *user* object represents an account in Asana that can be given access to various workspaces, projects, and tasks.
+**/
 export class UserResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=email" })
   email?: string;

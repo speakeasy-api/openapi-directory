@@ -35,5 +35,5 @@ export declare class ChangePendingNodeStatusRequest extends SpeakeasyBase {
 export declare class ChangePendingNodeStatusResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    changePendingNodeStatus200ApplicationJsonObject?: ChangePendingNodeStatus200ApplicationJson;
+    changePendingNodeStatus200ApplicationJSONObject?: ChangePendingNodeStatus200ApplicationJson;
 }

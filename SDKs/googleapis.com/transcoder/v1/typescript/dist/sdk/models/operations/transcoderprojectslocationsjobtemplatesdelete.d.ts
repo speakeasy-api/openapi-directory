@@ -28,6 +28,6 @@ export declare class TranscoderProjectsLocationsJobTemplatesDeleteRequest extend
 }
 export declare class TranscoderProjectsLocationsJobTemplatesDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

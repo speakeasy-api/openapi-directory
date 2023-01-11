@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,82 +14,107 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LockListForPathResponse = exports.LockListForPathRequest = exports.LockListForPathQueryParams = exports.LockListForPathPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var LockListForPathPathParams = /** @class */ (function (_super) {
     __extends(LockListForPathPathParams, _super);
     function LockListForPathPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=path" }),
         __metadata("design:type", String)
     ], LockListForPathPathParams.prototype, "path", void 0);
     return LockListForPathPathParams;
-}(SpeakeasyBase));
-export { LockListForPathPathParams };
+}(utils_1.SpeakeasyBase));
+exports.LockListForPathPathParams = LockListForPathPathParams;
 var LockListForPathQueryParams = /** @class */ (function (_super) {
     __extends(LockListForPathQueryParams, _super);
     function LockListForPathQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=cursor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=cursor" }),
         __metadata("design:type", String)
     ], LockListForPathQueryParams.prototype, "cursor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include_children" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include_children" }),
         __metadata("design:type", Boolean)
     ], LockListForPathQueryParams.prototype, "includeChildren", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=per_page" }),
         __metadata("design:type", Number)
     ], LockListForPathQueryParams.prototype, "perPage", void 0);
     return LockListForPathQueryParams;
-}(SpeakeasyBase));
-export { LockListForPathQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.LockListForPathQueryParams = LockListForPathQueryParams;
 var LockListForPathRequest = /** @class */ (function (_super) {
     __extends(LockListForPathRequest, _super);
     function LockListForPathRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LockListForPathPathParams)
     ], LockListForPathRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LockListForPathQueryParams)
     ], LockListForPathRequest.prototype, "queryParams", void 0);
     return LockListForPathRequest;
-}(SpeakeasyBase));
-export { LockListForPathRequest };
+}(utils_1.SpeakeasyBase));
+exports.LockListForPathRequest = LockListForPathRequest;
 var LockListForPathResponse = /** @class */ (function (_super) {
     __extends(LockListForPathResponse, _super);
     function LockListForPathResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LockListForPathResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.LockEntity }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.LockEntity }),
         __metadata("design:type", Array)
     ], LockListForPathResponse.prototype, "lockEntities", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LockListForPathResponse.prototype, "statusCode", void 0);
     return LockListForPathResponse;
-}(SpeakeasyBase));
-export { LockListForPathResponse };
+}(utils_1.SpeakeasyBase));
+exports.LockListForPathResponse = LockListForPathResponse;

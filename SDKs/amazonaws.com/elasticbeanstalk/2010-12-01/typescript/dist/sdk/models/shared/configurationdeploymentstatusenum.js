@@ -1,6 +1,9 @@
-export var ConfigurationDeploymentStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigurationDeploymentStatusEnum = void 0;
+var ConfigurationDeploymentStatusEnum;
 (function (ConfigurationDeploymentStatusEnum) {
     ConfigurationDeploymentStatusEnum["Deployed"] = "deployed";
     ConfigurationDeploymentStatusEnum["Pending"] = "pending";
     ConfigurationDeploymentStatusEnum["Failed"] = "failed";
-})(ConfigurationDeploymentStatusEnum || (ConfigurationDeploymentStatusEnum = {}));
+})(ConfigurationDeploymentStatusEnum = exports.ConfigurationDeploymentStatusEnum || (exports.ConfigurationDeploymentStatusEnum = {}));

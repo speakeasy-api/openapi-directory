@@ -162,7 +162,7 @@ export class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
   benefitDescription?: string;
 
   @SpeakeasyMetadata({ data: "json, name=BenefitID" })
-  benefitId?: string;
+  benefitID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=BenefitName" })
   benefitName?: string;
@@ -1080,10 +1080,10 @@ export enum GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonD
 **/
 export class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=TrademarkID" })
-  trademarkId: string;
+  trademarkID: string;
 
   @SpeakeasyMetadata({ data: "json, name=TrademarkIPOCode" })
-  trademarkIpoCode: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum;
+  trademarkIPOCode: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum;
 }
 
 
@@ -1205,7 +1205,7 @@ export class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
   productTypeName: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeNameEnum;
 
   @SpeakeasyMetadata({ data: "json, name=ProductURL" })
-  productUrl: string[];
+  productURL: string[];
 
   @SpeakeasyMetadata({ data: "json, name=TsandCs" })
   tsandCs: string[];
@@ -1280,11 +1280,11 @@ export class GetUnsecuredSmeLoansResponse extends SpeakeasyBase {
   errorObject?: GetUnsecuredSmeLoansErrorObject;
 
   @SpeakeasyMetadata()
-  getUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson;
-
-  @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
+
+  @SpeakeasyMetadata()
+  getUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson;
 }

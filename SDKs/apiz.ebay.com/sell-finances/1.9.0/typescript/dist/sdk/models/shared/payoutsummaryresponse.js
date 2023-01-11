@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Amount } from "./amount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayoutSummaryResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var amount_1 = require("./amount");
 // PayoutSummaryResponse
 /**
  * This type is the base response type of the getPayoutSummary method, and contains the total count of seller payouts (that match the input criteria), the total count of monetary transactions (order payment, buyer refunds, or seller credits) associated with those payouts, and the total value of those seller payouts.
@@ -34,17 +37,17 @@ var PayoutSummaryResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
-        __metadata("design:type", Amount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", amount_1.Amount)
     ], PayoutSummaryResponse.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payoutCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payoutCount" }),
         __metadata("design:type", Number)
     ], PayoutSummaryResponse.prototype, "payoutCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactionCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactionCount" }),
         __metadata("design:type", Number)
     ], PayoutSummaryResponse.prototype, "transactionCount", void 0);
     return PayoutSummaryResponse;
-}(SpeakeasyBase));
-export { PayoutSummaryResponse };
+}(utils_1.SpeakeasyBase));
+exports.PayoutSummaryResponse = PayoutSummaryResponse;

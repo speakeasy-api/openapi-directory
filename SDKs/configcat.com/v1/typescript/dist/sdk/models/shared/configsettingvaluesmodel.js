@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigModel } from "./configmodel";
-import { EnvironmentModel } from "./environmentmodel";
-import { ConfigSettingValueModel } from "./configsettingvaluemodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigSettingValuesModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var configmodel_1 = require("./configmodel");
+var environmentmodel_1 = require("./environmentmodel");
+var configsettingvaluemodel_1 = require("./configsettingvaluemodel");
 var ConfigSettingValuesModel = /** @class */ (function (_super) {
     __extends(ConfigSettingValuesModel, _super);
     function ConfigSettingValuesModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
-        __metadata("design:type", ConfigModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
+        __metadata("design:type", configmodel_1.ConfigModel)
     ], ConfigSettingValuesModel.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
-        __metadata("design:type", EnvironmentModel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
+        __metadata("design:type", environmentmodel_1.EnvironmentModel)
     ], ConfigSettingValuesModel.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readOnly" }),
         __metadata("design:type", Boolean)
     ], ConfigSettingValuesModel.prototype, "readOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settingValues", elemType: ConfigSettingValueModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settingValues", elemType: configsettingvaluemodel_1.ConfigSettingValueModel }),
         __metadata("design:type", Array)
     ], ConfigSettingValuesModel.prototype, "settingValues", void 0);
     return ConfigSettingValuesModel;
-}(SpeakeasyBase));
-export { ConfigSettingValuesModel };
+}(utils_1.SpeakeasyBase));
+exports.ConfigSettingValuesModel = ConfigSettingValuesModel;

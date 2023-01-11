@@ -1,27 +1,27 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class CopyPadUsingGetQueryParams extends SpeakeasyBase {
-    destinationId?: string;
+    destinationID?: string;
     force?: string;
-    sourceId?: string;
+    sourceID?: string;
 }
 export declare class CopyPadUsingGet200ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CopyPadUsingGet400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CopyPadUsingGet401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CopyPadUsingGet500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CopyPadUsingGetRequest extends SpeakeasyBase {
@@ -30,8 +30,8 @@ export declare class CopyPadUsingGetRequest extends SpeakeasyBase {
 export declare class CopyPadUsingGetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    copyPadUsingGet200ApplicationJsonObject?: CopyPadUsingGet200ApplicationJson;
-    copyPadUsingGet400ApplicationJsonObject?: CopyPadUsingGet400ApplicationJson;
-    copyPadUsingGet401ApplicationJsonObject?: CopyPadUsingGet401ApplicationJson;
-    copyPadUsingGet500ApplicationJsonObject?: CopyPadUsingGet500ApplicationJson;
+    copyPadUsingGET200ApplicationJSONObject?: CopyPadUsingGet200ApplicationJson;
+    copyPadUsingGET400ApplicationJSONObject?: CopyPadUsingGet400ApplicationJson;
+    copyPadUsingGET401ApplicationJSONObject?: CopyPadUsingGet401ApplicationJson;
+    copyPadUsingGET500ApplicationJSONObject?: CopyPadUsingGet500ApplicationJson;
 }

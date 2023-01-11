@@ -43,7 +43,7 @@ export declare class Service extends SpeakeasyBase {
     encryptionConfig?: EncryptionConfig;
     endpointUri?: string;
     hiveMetastoreConfig?: HiveMetastoreConfig;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     maintenanceWindow?: MaintenanceWindow;
     metadataIntegration?: MetadataIntegration;
     metadataManagementActivity?: MetadataManagementActivity;
@@ -66,7 +66,7 @@ export declare class ServiceInput extends SpeakeasyBase {
     databaseType?: ServiceDatabaseTypeEnum;
     encryptionConfig?: EncryptionConfig;
     hiveMetastoreConfig?: HiveMetastoreConfigInput;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     maintenanceWindow?: MaintenanceWindow;
     metadataIntegration?: MetadataIntegration;
     name?: string;

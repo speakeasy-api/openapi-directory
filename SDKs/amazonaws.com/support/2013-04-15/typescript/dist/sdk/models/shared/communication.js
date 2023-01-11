@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttachmentDetails } from "./attachmentdetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Communication = void 0;
+var utils_1 = require("../../../internal/utils");
+var attachmentdetails_1 = require("./attachmentdetails");
 // Communication
 /**
  * A communication associated with a support case. The communication consists of the case ID, the message body, attachment information, the submitter of the communication, and the date and time of the communication.
@@ -34,25 +37,25 @@ var Communication = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attachmentSet", elemType: AttachmentDetails }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attachmentSet", elemType: attachmentdetails_1.AttachmentDetails }),
         __metadata("design:type", Array)
     ], Communication.prototype, "attachmentSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], Communication.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caseId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caseId" }),
         __metadata("design:type", String)
     ], Communication.prototype, "caseId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=submittedBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=submittedBy" }),
         __metadata("design:type", String)
     ], Communication.prototype, "submittedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeCreated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeCreated" }),
         __metadata("design:type", String)
     ], Communication.prototype, "timeCreated", void 0);
     return Communication;
-}(SpeakeasyBase));
-export { Communication };
+}(utils_1.SpeakeasyBase));
+exports.Communication = Communication;

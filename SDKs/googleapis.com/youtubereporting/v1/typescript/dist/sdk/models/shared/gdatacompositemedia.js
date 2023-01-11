@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GdataBlobstore2Info } from "./gdatablobstore2info";
-import { GdataObjectId } from "./gdataobjectid";
-export var GdataCompositeMediaReferenceTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GdataCompositeMedia = exports.GdataCompositeMediaReferenceTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var gdatablobstore2info_1 = require("./gdatablobstore2info");
+var gdataobjectid_1 = require("./gdataobjectid");
+var GdataCompositeMediaReferenceTypeEnum;
 (function (GdataCompositeMediaReferenceTypeEnum) {
     GdataCompositeMediaReferenceTypeEnum["Path"] = "PATH";
     GdataCompositeMediaReferenceTypeEnum["BlobRef"] = "BLOB_REF";
     GdataCompositeMediaReferenceTypeEnum["Inline"] = "INLINE";
     GdataCompositeMediaReferenceTypeEnum["BigstoreRef"] = "BIGSTORE_REF";
     GdataCompositeMediaReferenceTypeEnum["CosmoBinaryReference"] = "COSMO_BINARY_REFERENCE";
-})(GdataCompositeMediaReferenceTypeEnum || (GdataCompositeMediaReferenceTypeEnum = {}));
+})(GdataCompositeMediaReferenceTypeEnum = exports.GdataCompositeMediaReferenceTypeEnum || (exports.GdataCompositeMediaReferenceTypeEnum = {}));
 // GdataCompositeMedia
 /**
  * gdata
@@ -43,49 +46,49 @@ var GdataCompositeMedia = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blobRef" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blobRef" }),
         __metadata("design:type", String)
     ], GdataCompositeMedia.prototype, "blobRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blobstore2Info" }),
-        __metadata("design:type", GdataBlobstore2Info)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blobstore2Info" }),
+        __metadata("design:type", gdatablobstore2info_1.GdataBlobstore2Info)
     ], GdataCompositeMedia.prototype, "blobstore2Info", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cosmoBinaryReference" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cosmoBinaryReference" }),
         __metadata("design:type", String)
     ], GdataCompositeMedia.prototype, "cosmoBinaryReference", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=crc32cHash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=crc32cHash" }),
         __metadata("design:type", Number)
     ], GdataCompositeMedia.prototype, "crc32cHash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inline" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inline" }),
         __metadata("design:type", String)
     ], GdataCompositeMedia.prototype, "inline", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=length" }),
         __metadata("design:type", String)
     ], GdataCompositeMedia.prototype, "length", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=md5Hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=md5Hash" }),
         __metadata("design:type", String)
     ], GdataCompositeMedia.prototype, "md5Hash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectId" }),
-        __metadata("design:type", GdataObjectId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectId" }),
+        __metadata("design:type", gdataobjectid_1.GdataObjectId)
     ], GdataCompositeMedia.prototype, "objectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], GdataCompositeMedia.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referenceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referenceType" }),
         __metadata("design:type", String)
     ], GdataCompositeMedia.prototype, "referenceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha1Hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha1Hash" }),
         __metadata("design:type", String)
     ], GdataCompositeMedia.prototype, "sha1Hash", void 0);
     return GdataCompositeMedia;
-}(SpeakeasyBase));
-export { GdataCompositeMedia };
+}(utils_1.SpeakeasyBase));
+exports.GdataCompositeMedia = GdataCompositeMedia;

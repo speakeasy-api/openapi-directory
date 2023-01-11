@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var IFrameActionBodyTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IFrameActionBody = exports.IFrameActionBodyTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var IFrameActionBodyTypeEnum;
 (function (IFrameActionBodyTypeEnum) {
     IFrameActionBodyTypeEnum["Iframe"] = "IFRAME";
-})(IFrameActionBodyTypeEnum || (IFrameActionBodyTypeEnum = {}));
+})(IFrameActionBodyTypeEnum = exports.IFrameActionBodyTypeEnum || (exports.IFrameActionBodyTypeEnum = {}));
 var IFrameActionBody = /** @class */ (function (_super) {
     __extends(IFrameActionBody, _super);
     function IFrameActionBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], IFrameActionBody.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], IFrameActionBody.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=propertyNamesIncluded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=propertyNamesIncluded" }),
         __metadata("design:type", Array)
     ], IFrameActionBody.prototype, "propertyNamesIncluded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], IFrameActionBody.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], IFrameActionBody.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], IFrameActionBody.prototype, "width", void 0);
     return IFrameActionBody;
-}(SpeakeasyBase));
-export { IFrameActionBody };
+}(utils_1.SpeakeasyBase));
+exports.IFrameActionBody = IFrameActionBody;

@@ -5,6 +5,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class Column extends SpeakeasyBase {
     comment?: string;
     name: string;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
     type?: string;
 }

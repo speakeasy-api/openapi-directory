@@ -41,20 +41,20 @@ export class GetPotResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getPot200ApplicationJsonAny?: any;
+  getPot200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPot401ApplicationJsonAny?: any;
+  getPot401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPot403ApplicationJsonAny?: any;
+  getPot403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPot404ApplicationJsonAny?: any;
+  getPot404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPot429ApplicationJsonAny?: any;
+  getPot429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getPot500ApplicationJsonAny?: any;
+  getPot500ApplicationJSONAny?: any;
 }

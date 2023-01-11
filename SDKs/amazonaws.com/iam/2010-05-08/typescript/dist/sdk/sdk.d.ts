@@ -1,20 +1,20 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://iam.amazonaws.com", "http://iam.us-gov.amazonaws.com", "https://iam.us-gov.amazonaws.com", "http://iam.cn-north-1.amazonaws.com.cn", "https://iam.cn-north-1.amazonaws.com.cn"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * getAddClientIdToOpenIdConnectProvider - <p>Adds a new client ID (also known as audience) to the list of client IDs already registered for the specified IAM OpenID Connect (OIDC) provider resource.</p> <p>This operation is idempotent; it does not fail or return an error if you add an existing client ID to the provider.</p>
     **/
@@ -1208,4 +1208,3 @@ export declare class SDK {
     **/
     postUploadSigningCertificate(req: operations.PostUploadSigningCertificateRequest, config?: AxiosRequestConfig): Promise<operations.PostUploadSigningCertificateResponse>;
 }
-export {};

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlayMediaControlCommandSet = void 0;
+var utils_1 = require("../../../internal/utils");
 var PlayMediaControlCommandSet = /** @class */ (function (_super) {
     __extends(PlayMediaControlCommandSet, _super);
     function PlayMediaControlCommandSet() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookmarkTrack" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookmarkTrack" }),
         __metadata("design:type", Boolean)
     ], PlayMediaControlCommandSet.prototype, "bookmarkTrack", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dislikeTrack" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dislikeTrack" }),
         __metadata("design:type", Boolean)
     ], PlayMediaControlCommandSet.prototype, "dislikeTrack", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=likeTrack" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=likeTrack" }),
         __metadata("design:type", Boolean)
     ], PlayMediaControlCommandSet.prototype, "likeTrack", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextTrack" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextTrack" }),
         __metadata("design:type", Boolean)
     ], PlayMediaControlCommandSet.prototype, "nextTrack", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferSkipBackward" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferSkipBackward" }),
         __metadata("design:type", Boolean)
     ], PlayMediaControlCommandSet.prototype, "preferSkipBackward", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=preferSkipForward" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=preferSkipForward" }),
         __metadata("design:type", Boolean)
     ], PlayMediaControlCommandSet.prototype, "preferSkipForward", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previousTrack" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previousTrack" }),
         __metadata("design:type", Boolean)
     ], PlayMediaControlCommandSet.prototype, "previousTrack", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seekToPlaybackPosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seekToPlaybackPosition" }),
         __metadata("design:type", Boolean)
     ], PlayMediaControlCommandSet.prototype, "seekToPlaybackPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skipBackward" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skipBackward" }),
         __metadata("design:type", Boolean)
     ], PlayMediaControlCommandSet.prototype, "skipBackward", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=skipForward" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skipForward" }),
         __metadata("design:type", Boolean)
     ], PlayMediaControlCommandSet.prototype, "skipForward", void 0);
     return PlayMediaControlCommandSet;
-}(SpeakeasyBase));
-export { PlayMediaControlCommandSet };
+}(utils_1.SpeakeasyBase));
+exports.PlayMediaControlCommandSet = PlayMediaControlCommandSet;

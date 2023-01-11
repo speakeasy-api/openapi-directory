@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IamRoleConfiguration } from "./iamroleconfiguration";
-import { KmsKeyConfiguration } from "./kmskeyconfiguration";
-import { S3BucketConfiguration } from "./s3bucketconfiguration";
-import { SecretsManagerSecretConfiguration } from "./secretsmanagersecretconfiguration";
-import { SqsQueueConfiguration } from "./sqsqueueconfiguration";
-// Configuration
-/**
- * Access control configuration structures for your resource. You specify the configuration as a type-value pair. You can specify only one type of access control configuration.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Configuration = void 0;
+var utils_1 = require("../../../internal/utils");
+var iamroleconfiguration_1 = require("./iamroleconfiguration");
+var kmskeyconfiguration_1 = require("./kmskeyconfiguration");
+var s3bucketconfiguration_1 = require("./s3bucketconfiguration");
+var secretsmanagersecretconfiguration_1 = require("./secretsmanagersecretconfiguration");
+var sqsqueueconfiguration_1 = require("./sqsqueueconfiguration");
 var Configuration = /** @class */ (function (_super) {
     __extends(Configuration, _super);
     function Configuration() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iamRole" }),
-        __metadata("design:type", IamRoleConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iamRole" }),
+        __metadata("design:type", iamroleconfiguration_1.IamRoleConfiguration)
     ], Configuration.prototype, "iamRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsKey" }),
-        __metadata("design:type", KmsKeyConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsKey" }),
+        __metadata("design:type", kmskeyconfiguration_1.KmsKeyConfiguration)
     ], Configuration.prototype, "kmsKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=s3Bucket" }),
-        __metadata("design:type", S3BucketConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=s3Bucket" }),
+        __metadata("design:type", s3bucketconfiguration_1.S3BucketConfiguration)
     ], Configuration.prototype, "s3Bucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secretsManagerSecret" }),
-        __metadata("design:type", SecretsManagerSecretConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secretsManagerSecret" }),
+        __metadata("design:type", secretsmanagersecretconfiguration_1.SecretsManagerSecretConfiguration)
     ], Configuration.prototype, "secretsManagerSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sqsQueue" }),
-        __metadata("design:type", SqsQueueConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sqsQueue" }),
+        __metadata("design:type", sqsqueueconfiguration_1.SqsQueueConfiguration)
     ], Configuration.prototype, "sqsQueue", void 0);
     return Configuration;
-}(SpeakeasyBase));
-export { Configuration };
+}(utils_1.SpeakeasyBase));
+exports.Configuration = Configuration;

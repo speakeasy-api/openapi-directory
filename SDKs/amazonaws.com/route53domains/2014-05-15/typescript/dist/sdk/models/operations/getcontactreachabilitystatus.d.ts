@@ -23,5 +23,5 @@ export declare class GetContactReachabilityStatusResponse extends SpeakeasyBase 
     invalidInput?: any;
     operationLimitExceeded?: any;
     statusCode: number;
-    unsupportedTld?: any;
+    unsupportedTLD?: any;
 }

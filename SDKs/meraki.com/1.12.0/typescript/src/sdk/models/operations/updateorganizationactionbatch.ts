@@ -37,5 +37,5 @@ export class UpdateOrganizationActionBatchResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateOrganizationActionBatch200ApplicationJsonObject?: Map<string, any>;
+  updateOrganizationActionBatch200ApplicationJSONObject?: Record<string, any>;
 }

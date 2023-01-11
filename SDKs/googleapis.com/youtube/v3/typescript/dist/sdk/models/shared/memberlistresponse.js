@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,46 +23,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Member } from "./member";
-import { PageInfo } from "./pageinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MemberListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var member_1 = require("./member");
+var pageinfo_1 = require("./pageinfo");
 var MemberListResponse = /** @class */ (function (_super) {
     __extends(MemberListResponse, _super);
     function MemberListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], MemberListResponse.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eventId" }),
         __metadata("design:type", String)
     ], MemberListResponse.prototype, "eventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: Member }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: member_1.Member }),
         __metadata("design:type", Array)
     ], MemberListResponse.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], MemberListResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], MemberListResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageInfo" }),
-        __metadata("design:type", PageInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageInfo" }),
+        __metadata("design:type", pageinfo_1.PageInfo)
     ], MemberListResponse.prototype, "pageInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tokenPagination" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tokenPagination" }),
+        __metadata("design:type", Object)
     ], MemberListResponse.prototype, "tokenPagination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visitorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visitorId" }),
         __metadata("design:type", String)
     ], MemberListResponse.prototype, "visitorId", void 0);
     return MemberListResponse;
-}(SpeakeasyBase));
-export { MemberListResponse };
+}(utils_1.SpeakeasyBase));
+exports.MemberListResponse = MemberListResponse;

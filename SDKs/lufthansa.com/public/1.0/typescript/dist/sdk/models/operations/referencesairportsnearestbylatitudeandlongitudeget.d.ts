@@ -21,6 +21,6 @@ export declare class ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest e
 }
 export declare class ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse extends SpeakeasyBase {
     contentType: string;
-    referencesAirportsNearestByLatitudeAndLongitudeGet200ApplicationJsonObject?: Map<string, any>;
+    referencesAirportsNearestByLatitudeAndLongitudeGet200ApplicationJSONObject?: Record<string, any>;
     statusCode: number;
 }

@@ -53,7 +53,7 @@ export class CreateSampleFindingsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createSampleFindingsResponse?: Map<string, any>;
+  createSampleFindingsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

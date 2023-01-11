@@ -14,5 +14,5 @@ export declare class ReposGetAllEnvironmentsRequest extends SpeakeasyBase {
 export declare class ReposGetAllEnvironmentsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    reposGetAllEnvironments200ApplicationJsonObject?: ReposGetAllEnvironments200ApplicationJson;
+    reposGetAllEnvironments200ApplicationJSONObject?: ReposGetAllEnvironments200ApplicationJson;
 }

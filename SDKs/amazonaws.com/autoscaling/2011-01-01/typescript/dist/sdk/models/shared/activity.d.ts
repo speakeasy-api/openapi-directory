@@ -5,7 +5,7 @@ import { ScalingActivityStatusCodeEnum } from "./scalingactivitystatuscodeenum";
 **/
 export declare class Activity extends SpeakeasyBase {
     activityId: string;
-    autoScalingGroupArn?: string;
+    autoScalingGroupARN?: string;
     autoScalingGroupName: string;
     autoScalingGroupState?: string;
     cause: string;

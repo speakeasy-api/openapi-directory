@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Record } from "./record";
+import { RecordT } from "./record";
 /**
  * Returned for a successful ListRecordsRequest.
 **/
@@ -11,6 +11,6 @@ export declare class ListRecordsResponse extends SpeakeasyBase {
     lastModifiedBy?: string;
     mergedDatasetNames?: string[];
     nextToken?: string;
-    records?: Record[];
+    records?: RecordT[];
     syncSessionToken?: string;
 }

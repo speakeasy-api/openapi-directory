@@ -26,7 +26,7 @@ export class DeleteTagQueryParams extends SpeakeasyBase {
 
 export class DeleteTag200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -50,5 +50,5 @@ export class DeleteTagResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteTag200ApplicationJsonObject?: DeleteTag200ApplicationJson;
+  deleteTag200ApplicationJSONObject?: DeleteTag200ApplicationJson;
 }

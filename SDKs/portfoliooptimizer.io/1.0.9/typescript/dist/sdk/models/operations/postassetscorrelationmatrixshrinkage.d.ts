@@ -24,6 +24,6 @@ export declare class PostAssetsCorrelationMatrixShrinkageRequest extends Speakea
 }
 export declare class PostAssetsCorrelationMatrixShrinkageResponse extends SpeakeasyBase {
     contentType: string;
-    postAssetsCorrelationMatrixShrinkage200ApplicationJsonObject?: PostAssetsCorrelationMatrixShrinkage200ApplicationJson;
     statusCode: number;
+    postAssetsCorrelationMatrixShrinkage200ApplicationJSONObject?: PostAssetsCorrelationMatrixShrinkage200ApplicationJson;
 }

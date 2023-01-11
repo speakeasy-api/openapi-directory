@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteSetupV1LocationsIdDeleteallimagesResponse = exports.DeleteSetupV1LocationsIdDeleteallimagesRequest = exports.DeleteSetupV1LocationsIdDeleteallimagesQueryParams = exports.DeleteSetupV1LocationsIdDeleteallimagesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteSetupV1LocationsIdDeleteallimagesPathParams = /** @class */ (function (_super) {
     __extends(DeleteSetupV1LocationsIdDeleteallimagesPathParams, _super);
     function DeleteSetupV1LocationsIdDeleteallimagesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], DeleteSetupV1LocationsIdDeleteallimagesPathParams.prototype, "id", void 0);
     return DeleteSetupV1LocationsIdDeleteallimagesPathParams;
-}(SpeakeasyBase));
-export { DeleteSetupV1LocationsIdDeleteallimagesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSetupV1LocationsIdDeleteallimagesPathParams = DeleteSetupV1LocationsIdDeleteallimagesPathParams;
 var DeleteSetupV1LocationsIdDeleteallimagesQueryParams = /** @class */ (function (_super) {
     __extends(DeleteSetupV1LocationsIdDeleteallimagesQueryParams, _super);
     function DeleteSetupV1LocationsIdDeleteallimagesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uppercase" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uppercase" }),
         __metadata("design:type", Boolean)
     ], DeleteSetupV1LocationsIdDeleteallimagesQueryParams.prototype, "uppercase", void 0);
     return DeleteSetupV1LocationsIdDeleteallimagesQueryParams;
-}(SpeakeasyBase));
-export { DeleteSetupV1LocationsIdDeleteallimagesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSetupV1LocationsIdDeleteallimagesQueryParams = DeleteSetupV1LocationsIdDeleteallimagesQueryParams;
 var DeleteSetupV1LocationsIdDeleteallimagesRequest = /** @class */ (function (_super) {
     __extends(DeleteSetupV1LocationsIdDeleteallimagesRequest, _super);
     function DeleteSetupV1LocationsIdDeleteallimagesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteSetupV1LocationsIdDeleteallimagesPathParams)
     ], DeleteSetupV1LocationsIdDeleteallimagesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteSetupV1LocationsIdDeleteallimagesQueryParams)
     ], DeleteSetupV1LocationsIdDeleteallimagesRequest.prototype, "queryParams", void 0);
     return DeleteSetupV1LocationsIdDeleteallimagesRequest;
-}(SpeakeasyBase));
-export { DeleteSetupV1LocationsIdDeleteallimagesRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSetupV1LocationsIdDeleteallimagesRequest = DeleteSetupV1LocationsIdDeleteallimagesRequest;
 var DeleteSetupV1LocationsIdDeleteallimagesResponse = /** @class */ (function (_super) {
     __extends(DeleteSetupV1LocationsIdDeleteallimagesResponse, _super);
     function DeleteSetupV1LocationsIdDeleteallimagesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteSetupV1LocationsIdDeleteallimagesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Boolean)
-    ], DeleteSetupV1LocationsIdDeleteallimagesResponse.prototype, "deleteSetupV1LocationsIdDeleteallimages200ApplicationJsonBoolean", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteSetupV1LocationsIdDeleteallimagesResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Boolean)
+    ], DeleteSetupV1LocationsIdDeleteallimagesResponse.prototype, "deleteSetupV1LocationsIdDeleteallimages200ApplicationJSONBoolean", void 0);
     return DeleteSetupV1LocationsIdDeleteallimagesResponse;
-}(SpeakeasyBase));
-export { DeleteSetupV1LocationsIdDeleteallimagesResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteSetupV1LocationsIdDeleteallimagesResponse = DeleteSetupV1LocationsIdDeleteallimagesResponse;

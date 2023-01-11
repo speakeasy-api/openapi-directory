@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssetAttributes } from "./assetattributes";
-import { AssetTypeEnum } from "./assettypeenum";
-import { Attribute } from "./attribute";
-import { InspectorServiceAttributes } from "./inspectorserviceattributes";
-import { SeverityEnum } from "./severityenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Finding = void 0;
+var utils_1 = require("../../../internal/utils");
+var assetattributes_1 = require("./assetattributes");
+var assettypeenum_1 = require("./assettypeenum");
+var attribute_1 = require("./attribute");
+var inspectorserviceattributes_1 = require("./inspectorserviceattributes");
+var severityenum_1 = require("./severityenum");
 // Finding
 /**
  * Contains information about an Amazon Inspector finding. This data type is used as the response element in the <a>DescribeFindings</a> action.
@@ -38,77 +41,77 @@ var Finding = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], Finding.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetAttributes" }),
-        __metadata("design:type", AssetAttributes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetAttributes" }),
+        __metadata("design:type", assetattributes_1.AssetAttributes)
     ], Finding.prototype, "assetAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetType" }),
         __metadata("design:type", String)
     ], Finding.prototype, "assetType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes", elemType: Attribute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes", elemType: attribute_1.Attribute }),
         __metadata("design:type", Array)
     ], Finding.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confidence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confidence" }),
         __metadata("design:type", Number)
     ], Finding.prototype, "confidence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], Finding.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Finding.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Finding.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=indicatorOfCompromise" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=indicatorOfCompromise" }),
         __metadata("design:type", Boolean)
     ], Finding.prototype, "indicatorOfCompromise", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numericSeverity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numericSeverity" }),
         __metadata("design:type", Number)
     ], Finding.prototype, "numericSeverity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recommendation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recommendation" }),
         __metadata("design:type", String)
     ], Finding.prototype, "recommendation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemaVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemaVersion" }),
         __metadata("design:type", Number)
     ], Finding.prototype, "schemaVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service" }),
         __metadata("design:type", String)
     ], Finding.prototype, "service", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAttributes" }),
-        __metadata("design:type", InspectorServiceAttributes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAttributes" }),
+        __metadata("design:type", inspectorserviceattributes_1.InspectorServiceAttributes)
     ], Finding.prototype, "serviceAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=severity" }),
         __metadata("design:type", String)
     ], Finding.prototype, "severity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Finding.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], Finding.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userAttributes", elemType: Attribute }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userAttributes", elemType: attribute_1.Attribute }),
         __metadata("design:type", Array)
     ], Finding.prototype, "userAttributes", void 0);
     return Finding;
-}(SpeakeasyBase));
-export { Finding };
+}(utils_1.SpeakeasyBase));
+exports.Finding = Finding;

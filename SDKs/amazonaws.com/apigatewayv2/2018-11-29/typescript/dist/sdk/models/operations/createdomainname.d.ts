@@ -13,14 +13,14 @@ export declare class CreateDomainNameHeaders extends SpeakeasyBase {
  * The mutual TLS authentication configuration for a custom domain name.
 **/
 export declare class CreateDomainNameRequestBodyMutualTlsAuthentication extends SpeakeasyBase {
-    truststoreUri?: string;
-    truststoreVersion?: string;
+    truststoreUri?: Record<string, any>;
+    truststoreVersion?: Record<string, any>;
 }
 export declare class CreateDomainNameRequestBody extends SpeakeasyBase {
     domainName: string;
     domainNameConfigurations?: shared.DomainNameConfiguration[];
     mutualTlsAuthentication?: CreateDomainNameRequestBodyMutualTlsAuthentication;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateDomainNameRequest extends SpeakeasyBase {
     headers: CreateDomainNameHeaders;

@@ -28,7 +28,7 @@ export class GetConsumerV1CustomersIdPlanlimitsServiceIdResourceIdDateTimeTzResp
   contentType: string;
 
   @SpeakeasyMetadata()
-  planLimitListViewModel?: Map<string, any>;
+  planLimitListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

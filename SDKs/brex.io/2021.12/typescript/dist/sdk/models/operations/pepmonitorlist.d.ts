@@ -8,7 +8,7 @@ export declare class PepMonitorListRequest extends SpeakeasyBase {
 }
 export declare class PepMonitorListResponse extends SpeakeasyBase {
     contentType: string;
-    pepMonitorList200ApplicationJsonAnies?: any[];
-    pepMonitorListDefaultApplicationJsonAny?: any;
+    pepMonitorList200ApplicationJSONAnies?: any[];
+    pepMonitorListDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

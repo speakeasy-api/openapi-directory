@@ -25,6 +25,10 @@ export declare class Projects {
     **/
     metastoreProjectsLocationsOperationsList(req: operations.MetastoreProjectsLocationsOperationsListRequest, config?: AxiosRequestConfig): Promise<operations.MetastoreProjectsLocationsOperationsListResponse>;
     /**
+     * metastoreProjectsLocationsServicesAlterLocation - Alter metadata resource location. The metadata resource can be a database, table, or partition. This functionality only updates the parent directory for the respective metadata resource and does not transfer any existing data to the new location.
+    **/
+    metastoreProjectsLocationsServicesAlterLocation(req: operations.MetastoreProjectsLocationsServicesAlterLocationRequest, config?: AxiosRequestConfig): Promise<operations.MetastoreProjectsLocationsServicesAlterLocationResponse>;
+    /**
      * metastoreProjectsLocationsServicesBackupsCreate - Creates a new backup in a given project and location.
     **/
     metastoreProjectsLocationsServicesBackupsCreate(req: operations.MetastoreProjectsLocationsServicesBackupsCreateRequest, config?: AxiosRequestConfig): Promise<operations.MetastoreProjectsLocationsServicesBackupsCreateResponse>;
@@ -76,6 +80,14 @@ export declare class Projects {
      * metastoreProjectsLocationsServicesMetadataImportsPatch - Updates a single import. Only the description field of MetadataImport is supported to be updated.
     **/
     metastoreProjectsLocationsServicesMetadataImportsPatch(req: operations.MetastoreProjectsLocationsServicesMetadataImportsPatchRequest, config?: AxiosRequestConfig): Promise<operations.MetastoreProjectsLocationsServicesMetadataImportsPatchResponse>;
+    /**
+     * metastoreProjectsLocationsServicesMoveTableToDatabase - Move a table to another database.
+    **/
+    metastoreProjectsLocationsServicesMoveTableToDatabase(req: operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseRequest, config?: AxiosRequestConfig): Promise<operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse>;
+    /**
+     * metastoreProjectsLocationsServicesQueryMetadata - Query DPMS metadata.
+    **/
+    metastoreProjectsLocationsServicesQueryMetadata(req: operations.MetastoreProjectsLocationsServicesQueryMetadataRequest, config?: AxiosRequestConfig): Promise<operations.MetastoreProjectsLocationsServicesQueryMetadataResponse>;
     /**
      * metastoreProjectsLocationsServicesRemoveIamPolicy - Removes the attached IAM policies for a resource
     **/

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PromotionReportDetail } from "./promotionreportdetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PromotionsReportPagedCollection = void 0;
+var utils_1 = require("../../../internal/utils");
+var promotionreportdetail_1 = require("./promotionreportdetail");
 // PromotionsReportPagedCollection
 /**
  * This type defines the fields in a paginated result set of promotion-level reports. The response consists of 0 or more sequenced pages that are returned from the complete result set, where each page consists of 0 or more items.
@@ -34,33 +37,33 @@ var PromotionsReportPagedCollection = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], PromotionsReportPagedCollection.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], PromotionsReportPagedCollection.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], PromotionsReportPagedCollection.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], PromotionsReportPagedCollection.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prev" }),
         __metadata("design:type", String)
     ], PromotionsReportPagedCollection.prototype, "prev", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotionReports", elemType: PromotionReportDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotionReports", elemType: promotionreportdetail_1.PromotionReportDetail }),
         __metadata("design:type", Array)
     ], PromotionsReportPagedCollection.prototype, "promotionReports", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], PromotionsReportPagedCollection.prototype, "total", void 0);
     return PromotionsReportPagedCollection;
-}(SpeakeasyBase));
-export { PromotionsReportPagedCollection };
+}(utils_1.SpeakeasyBase));
+exports.PromotionsReportPagedCollection = PromotionsReportPagedCollection;

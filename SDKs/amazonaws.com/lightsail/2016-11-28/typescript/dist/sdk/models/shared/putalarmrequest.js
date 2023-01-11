@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,59 +23,61 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ComparisonOperatorEnum } from "./comparisonoperatorenum";
-import { MetricNameEnum } from "./metricnameenum";
-import { TreatMissingDataEnum } from "./treatmissingdataenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutAlarmRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var comparisonoperatorenum_1 = require("./comparisonoperatorenum");
+var metricnameenum_1 = require("./metricnameenum");
+var treatmissingdataenum_1 = require("./treatmissingdataenum");
 var PutAlarmRequest = /** @class */ (function (_super) {
     __extends(PutAlarmRequest, _super);
     function PutAlarmRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alarmName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alarmName" }),
         __metadata("design:type", String)
     ], PutAlarmRequest.prototype, "alarmName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparisonOperator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparisonOperator" }),
         __metadata("design:type", String)
     ], PutAlarmRequest.prototype, "comparisonOperator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contactProtocols" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contactProtocols" }),
         __metadata("design:type", Array)
     ], PutAlarmRequest.prototype, "contactProtocols", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datapointsToAlarm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datapointsToAlarm" }),
         __metadata("design:type", Number)
     ], PutAlarmRequest.prototype, "datapointsToAlarm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evaluationPeriods" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evaluationPeriods" }),
         __metadata("design:type", Number)
     ], PutAlarmRequest.prototype, "evaluationPeriods", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricName" }),
         __metadata("design:type", String)
     ], PutAlarmRequest.prototype, "metricName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monitoredResourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monitoredResourceName" }),
         __metadata("design:type", String)
     ], PutAlarmRequest.prototype, "monitoredResourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationEnabled" }),
         __metadata("design:type", Boolean)
     ], PutAlarmRequest.prototype, "notificationEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationTriggers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationTriggers" }),
         __metadata("design:type", Array)
     ], PutAlarmRequest.prototype, "notificationTriggers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=threshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=threshold" }),
         __metadata("design:type", Number)
     ], PutAlarmRequest.prototype, "threshold", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=treatMissingData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=treatMissingData" }),
         __metadata("design:type", String)
     ], PutAlarmRequest.prototype, "treatMissingData", void 0);
     return PutAlarmRequest;
-}(SpeakeasyBase));
-export { PutAlarmRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutAlarmRequest = PutAlarmRequest;

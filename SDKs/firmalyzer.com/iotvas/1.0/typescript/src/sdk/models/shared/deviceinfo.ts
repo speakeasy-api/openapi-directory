@@ -1,7 +1,24 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { Vulnerability } from "./vulnerability";
-import { FirmwareInfo } from "./firmwareinfo";
 
+
+
+export class DeviceInfoFirmwareInfo extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=download_url" })
+  downloadUrl?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=release_date" })
+  releaseDate?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=sha2" })
+  sha2?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=version" })
+  version?: string;
+}
 
 
 export class DeviceInfo extends SpeakeasyBase {
@@ -12,7 +29,7 @@ export class DeviceInfo extends SpeakeasyBase {
   deviceType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=firmware_info" })
-  firmwareInfo?: FirmwareInfo;
+  firmwareInfo?: DeviceInfoFirmwareInfo;
 
   @SpeakeasyMetadata({ data: "json, name=firmware_version" })
   firmwareVersion?: string;
@@ -21,7 +38,7 @@ export class DeviceInfo extends SpeakeasyBase {
   isDiscontinued?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=latest_firmware_info" })
-  latestFirmwareInfo?: FirmwareInfo;
+  latestFirmwareInfo?: DeviceInfoFirmwareInfo;
 
   @SpeakeasyMetadata({ data: "json, name=manufacturer" })
   manufacturer?: string;

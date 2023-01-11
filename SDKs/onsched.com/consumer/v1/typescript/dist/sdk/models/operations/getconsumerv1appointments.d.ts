@@ -20,7 +20,7 @@ export declare class GetConsumerV1AppointmentsRequest extends SpeakeasyBase {
     queryParams: GetConsumerV1AppointmentsQueryParams;
 }
 export declare class GetConsumerV1AppointmentsResponse extends SpeakeasyBase {
-    appointmentListViewModel?: Map<string, any>;
+    appointmentListViewModel?: Record<string, any>;
     contentType: string;
     statusCode: number;
 }

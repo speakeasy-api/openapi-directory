@@ -18,7 +18,7 @@ export declare class DeleteEmailTemplateRequest extends SpeakeasyBase {
 export declare class DeleteEmailTemplateResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
-    deleteEmailTemplateResponse?: Map<string, any>;
+    deleteEmailTemplateResponse?: Record<string, any>;
     notFoundException?: any;
     statusCode: number;
     tooManyRequestsException?: any;

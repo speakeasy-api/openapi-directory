@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
+import { TagList } from "./taglist";
 
 
 
@@ -12,7 +12,7 @@ export class DbClusterSnapshot extends SpeakeasyBase {
   allocatedStorage?: number;
 
   @SpeakeasyMetadata()
-  availabilityZones?: string[];
+  availabilityZones?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   clusterCreateTime?: Date;
@@ -60,7 +60,7 @@ export class DbClusterSnapshot extends SpeakeasyBase {
   snapshotType?: string;
 
   @SpeakeasyMetadata()
-  sourceDbClusterSnapshotArn?: string;
+  sourceDBClusterSnapshotArn?: string;
 
   @SpeakeasyMetadata()
   status?: string;
@@ -68,8 +68,8 @@ export class DbClusterSnapshot extends SpeakeasyBase {
   @SpeakeasyMetadata()
   storageEncrypted?: boolean;
 
-  @SpeakeasyMetadata({ elemType: Tag })
-  tagList?: Tag[];
+  @SpeakeasyMetadata({ elemType: TagList })
+  tagList?: TagList[];
 
   @SpeakeasyMetadata()
   vpcId?: string;

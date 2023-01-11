@@ -12,7 +12,7 @@ export declare class AnalyzeCommentRequest extends SpeakeasyBase {
     context?: Context;
     doNotStore?: boolean;
     languages?: string[];
-    requestedAttributes?: Map<string, AttributeParameters>;
+    requestedAttributes?: Record<string, AttributeParameters>;
     sessionId?: string;
     spanAnnotations?: boolean;
 }

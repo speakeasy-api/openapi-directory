@@ -85,5 +85,5 @@ export declare class DcimInterfacesListRequest extends SpeakeasyBase {
 export declare class DcimInterfacesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimInterfacesList200ApplicationJsonObject?: DcimInterfacesList200ApplicationJson;
+    dcimInterfacesList200ApplicationJSONObject?: DcimInterfacesList200ApplicationJson;
 }

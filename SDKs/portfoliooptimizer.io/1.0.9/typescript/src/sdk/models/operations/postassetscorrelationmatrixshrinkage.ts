@@ -55,8 +55,8 @@ export class PostAssetsCorrelationMatrixShrinkageResponse extends SpeakeasyBase 
   contentType: string;
 
   @SpeakeasyMetadata()
-  postAssetsCorrelationMatrixShrinkage200ApplicationJsonObject?: PostAssetsCorrelationMatrixShrinkage200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postAssetsCorrelationMatrixShrinkage200ApplicationJSONObject?: PostAssetsCorrelationMatrixShrinkage200ApplicationJson;
 }

@@ -79,7 +79,7 @@ export class SingleMonitor200ApplicationJsonMonitorOptions extends SpeakeasyBase
   requestTimeout?: number;
 
   @SpeakeasyMetadata({ data: "json, name=strictSSL" })
-  strictSsl?: boolean;
+  strictSSL?: boolean;
 }
 
 
@@ -166,8 +166,8 @@ export class SingleMonitorResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  singleMonitor200ApplicationJsonObject?: SingleMonitor200ApplicationJson;
+  singleMonitor200ApplicationJSONObject?: SingleMonitor200ApplicationJson;
 
   @SpeakeasyMetadata()
-  singleMonitor404ApplicationJsonObject?: SingleMonitor404ApplicationJson;
+  singleMonitor404ApplicationJSONObject?: SingleMonitor404ApplicationJson;
 }

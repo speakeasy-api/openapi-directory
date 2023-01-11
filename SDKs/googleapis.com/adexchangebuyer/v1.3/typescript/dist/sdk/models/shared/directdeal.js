@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DirectDeal = void 0;
+var utils_1 = require("../../../internal/utils");
 // DirectDeal
 /**
  * The configuration data for an Ad Exchange direct deal.
@@ -33,65 +36,65 @@ var DirectDeal = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", Number)
     ], DirectDeal.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=advertiser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=advertiser" }),
         __metadata("design:type", String)
     ], DirectDeal.prototype, "advertiser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowsAlcohol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowsAlcohol" }),
         __metadata("design:type", Boolean)
     ], DirectDeal.prototype, "allowsAlcohol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buyerAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buyerAccountId" }),
         __metadata("design:type", String)
     ], DirectDeal.prototype, "buyerAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currencyCode" }),
         __metadata("design:type", String)
     ], DirectDeal.prototype, "currencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dealTier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dealTier" }),
         __metadata("design:type", String)
     ], DirectDeal.prototype, "dealTier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], DirectDeal.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fixedCpm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fixedCpm" }),
         __metadata("design:type", String)
     ], DirectDeal.prototype, "fixedCpm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], DirectDeal.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], DirectDeal.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DirectDeal.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateExchangeMinCpm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateExchangeMinCpm" }),
         __metadata("design:type", String)
     ], DirectDeal.prototype, "privateExchangeMinCpm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publisherBlocksOverriden" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publisherBlocksOverriden" }),
         __metadata("design:type", Boolean)
     ], DirectDeal.prototype, "publisherBlocksOverriden", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sellerNetwork" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sellerNetwork" }),
         __metadata("design:type", String)
     ], DirectDeal.prototype, "sellerNetwork", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", String)
     ], DirectDeal.prototype, "startTime", void 0);
     return DirectDeal;
-}(SpeakeasyBase));
-export { DirectDeal };
+}(utils_1.SpeakeasyBase));
+exports.DirectDeal = DirectDeal;

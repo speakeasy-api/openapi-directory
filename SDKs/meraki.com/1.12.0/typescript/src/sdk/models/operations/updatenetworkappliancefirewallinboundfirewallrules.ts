@@ -73,5 +73,5 @@ export class UpdateNetworkApplianceFirewallInboundFirewallRulesResponse extends 
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkApplianceFirewallInboundFirewallRules200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkApplianceFirewallInboundFirewallRules200ApplicationJSONObject?: Record<string, any>;
 }

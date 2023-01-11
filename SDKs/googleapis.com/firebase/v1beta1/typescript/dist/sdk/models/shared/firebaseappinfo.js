@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var FirebaseAppInfoPlatformEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FirebaseAppInfo = exports.FirebaseAppInfoStateEnum = exports.FirebaseAppInfoPlatformEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var FirebaseAppInfoPlatformEnum;
 (function (FirebaseAppInfoPlatformEnum) {
     FirebaseAppInfoPlatformEnum["PlatformUnspecified"] = "PLATFORM_UNSPECIFIED";
     FirebaseAppInfoPlatformEnum["Ios"] = "IOS";
     FirebaseAppInfoPlatformEnum["Android"] = "ANDROID";
     FirebaseAppInfoPlatformEnum["Web"] = "WEB";
-})(FirebaseAppInfoPlatformEnum || (FirebaseAppInfoPlatformEnum = {}));
-export var FirebaseAppInfoStateEnum;
+})(FirebaseAppInfoPlatformEnum = exports.FirebaseAppInfoPlatformEnum || (exports.FirebaseAppInfoPlatformEnum = {}));
+var FirebaseAppInfoStateEnum;
 (function (FirebaseAppInfoStateEnum) {
     FirebaseAppInfoStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     FirebaseAppInfoStateEnum["Active"] = "ACTIVE";
     FirebaseAppInfoStateEnum["Deleted"] = "DELETED";
-})(FirebaseAppInfoStateEnum || (FirebaseAppInfoStateEnum = {}));
+})(FirebaseAppInfoStateEnum = exports.FirebaseAppInfoStateEnum || (exports.FirebaseAppInfoStateEnum = {}));
 // FirebaseAppInfo
 /**
  * A high-level summary of an App.
@@ -46,33 +49,33 @@ var FirebaseAppInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiKeyId" }),
         __metadata("design:type", String)
     ], FirebaseAppInfo.prototype, "apiKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appId" }),
         __metadata("design:type", String)
     ], FirebaseAppInfo.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], FirebaseAppInfo.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], FirebaseAppInfo.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=namespace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=namespace" }),
         __metadata("design:type", String)
     ], FirebaseAppInfo.prototype, "namespace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
         __metadata("design:type", String)
     ], FirebaseAppInfo.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], FirebaseAppInfo.prototype, "state", void 0);
     return FirebaseAppInfo;
-}(SpeakeasyBase));
-export { FirebaseAppInfo };
+}(utils_1.SpeakeasyBase));
+exports.FirebaseAppInfo = FirebaseAppInfo;

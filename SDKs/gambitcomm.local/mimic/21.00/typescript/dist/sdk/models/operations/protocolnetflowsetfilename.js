@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolNetflowSetFileNameResponse = exports.ProtocolNetflowSetFileNameRequest = exports.ProtocolNetflowSetFileNamePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolNetflowSetFileNamePathParams = /** @class */ (function (_super) {
     __extends(ProtocolNetflowSetFileNamePathParams, _super);
     function ProtocolNetflowSetFileNamePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolNetflowSetFileNamePathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=fileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=fileName" }),
         __metadata("design:type", String)
     ], ProtocolNetflowSetFileNamePathParams.prototype, "fileName", void 0);
     return ProtocolNetflowSetFileNamePathParams;
-}(SpeakeasyBase));
-export { ProtocolNetflowSetFileNamePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowSetFileNamePathParams = ProtocolNetflowSetFileNamePathParams;
 var ProtocolNetflowSetFileNameRequest = /** @class */ (function (_super) {
     __extends(ProtocolNetflowSetFileNameRequest, _super);
     function ProtocolNetflowSetFileNameRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolNetflowSetFileNamePathParams)
     ], ProtocolNetflowSetFileNameRequest.prototype, "pathParams", void 0);
     return ProtocolNetflowSetFileNameRequest;
-}(SpeakeasyBase));
-export { ProtocolNetflowSetFileNameRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowSetFileNameRequest = ProtocolNetflowSetFileNameRequest;
 var ProtocolNetflowSetFileNameResponse = /** @class */ (function (_super) {
     __extends(ProtocolNetflowSetFileNameResponse, _super);
     function ProtocolNetflowSetFileNameResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolNetflowSetFileNameResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolNetflowSetFileNameResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolNetflowSetFileNameResponse.prototype, "protocolNetflowSetFileName200ApplicationJsonString", void 0);
+    ], ProtocolNetflowSetFileNameResponse.prototype, "protocolNetflowSetFileName200ApplicationJSONString", void 0);
     return ProtocolNetflowSetFileNameResponse;
-}(SpeakeasyBase));
-export { ProtocolNetflowSetFileNameResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowSetFileNameResponse = ProtocolNetflowSetFileNameResponse;

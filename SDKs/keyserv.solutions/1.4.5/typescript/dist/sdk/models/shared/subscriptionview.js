@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KeyView } from "./keyview";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionView = void 0;
+var utils_1 = require("../../../internal/utils");
+var keyview_1 = require("./keyview");
 var SubscriptionView = /** @class */ (function (_super) {
     __extends(SubscriptionView, _super);
     function SubscriptionView() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], SubscriptionView.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callbackOnModify" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callbackOnModify" }),
         __metadata("design:type", Boolean)
     ], SubscriptionView.prototype, "callbackOnModify", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callbackUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callbackUrl" }),
         __metadata("design:type", String)
     ], SubscriptionView.prototype, "callbackUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commenced" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commenced" }),
         __metadata("design:type", Date)
     ], SubscriptionView.prototype, "commenced", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], SubscriptionView.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom" }),
         __metadata("design:type", Object)
     ], SubscriptionView.prototype, "custom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequency" }),
         __metadata("design:type", String)
     ], SubscriptionView.prototype, "frequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keys", elemType: KeyView }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keys", elemType: keyview_1.KeyView }),
         __metadata("design:type", Array)
     ], SubscriptionView.prototype, "keys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SubscriptionView.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", Date)
     ], SubscriptionView.prototype, "updated", void 0);
     return SubscriptionView;
-}(SpeakeasyBase));
-export { SubscriptionView };
+}(utils_1.SpeakeasyBase));
+exports.SubscriptionView = SubscriptionView;

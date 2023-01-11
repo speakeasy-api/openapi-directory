@@ -9,5 +9,5 @@ import { ItemResponse } from "./itemresponse";
 **/
 export class EventsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Results", elemType: ItemResponse })
-  results?: Map<string, ItemResponse>;
+  results?: Record<string, ItemResponse>;
 }

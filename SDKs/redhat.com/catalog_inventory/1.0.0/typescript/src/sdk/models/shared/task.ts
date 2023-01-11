@@ -17,36 +17,6 @@ export enum TaskStatusEnum {
 }
 
 
-export class TaskInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=completed_at" })
-  completedAt?: Date;
-
-  @SpeakeasyMetadata({ data: "json, name=message" })
-  message?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=output" })
-  output?: Map<string, any>;
-
-  @SpeakeasyMetadata({ data: "json, name=state" })
-  state?: TaskStateEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=status" })
-  status?: TaskStatusEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=target_source_ref" })
-  targetSourceRef?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=target_type" })
-  targetType?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=type" })
-  type?: string;
-}
-
-
 export class Task extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=archived_at" })
   archivedAt?: Date;
@@ -67,7 +37,7 @@ export class Task extends SpeakeasyBase {
   id?: string;
 
   @SpeakeasyMetadata({ data: "json, name=input" })
-  input?: Map<string, any>;
+  input?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,7 +46,7 @@ export class Task extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=output" })
-  output?: Map<string, any>;
+  output?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=owner" })
   owner?: string;
@@ -101,4 +71,34 @@ export class Task extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updated_at" })
   updatedAt?: Date;
+}
+
+
+export class TaskInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=completed_at" })
+  completedAt?: Date;
+
+  @SpeakeasyMetadata({ data: "json, name=message" })
+  message?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=output" })
+  output?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=state" })
+  state?: TaskStateEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=status" })
+  status?: TaskStatusEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=target_source_ref" })
+  targetSourceRef?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=target_type" })
+  targetType?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=type" })
+  type?: string;
 }

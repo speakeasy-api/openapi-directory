@@ -60,7 +60,7 @@ export class UpdateClassifierResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateClassifierResponse?: Map<string, any>;
+  updateClassifierResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   versionMismatchException?: any;

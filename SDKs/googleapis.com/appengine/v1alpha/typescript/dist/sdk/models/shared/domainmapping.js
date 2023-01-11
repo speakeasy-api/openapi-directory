@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceRecord } from "./resourcerecord";
-import { SslSettings } from "./sslsettings";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DomainMapping = void 0;
+var utils_1 = require("../../../internal/utils");
+var resourcerecord_1 = require("./resourcerecord");
+var sslsettings_1 = require("./sslsettings");
 // DomainMapping
 /**
  * A domain serving an App Engine application.
@@ -35,21 +38,21 @@ var DomainMapping = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], DomainMapping.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DomainMapping.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceRecords", elemType: ResourceRecord }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceRecords", elemType: resourcerecord_1.ResourceRecord }),
         __metadata("design:type", Array)
     ], DomainMapping.prototype, "resourceRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sslSettings" }),
-        __metadata("design:type", SslSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sslSettings" }),
+        __metadata("design:type", sslsettings_1.SslSettings)
     ], DomainMapping.prototype, "sslSettings", void 0);
     return DomainMapping;
-}(SpeakeasyBase));
-export { DomainMapping };
+}(utils_1.SpeakeasyBase));
+exports.DomainMapping = DomainMapping;

@@ -28,5 +28,5 @@ export declare class UpdateMonitorRequest extends SpeakeasyBase {
 export declare class UpdateMonitorResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateMonitor200ApplicationJsonObject?: UpdateMonitor200ApplicationJson;
+    updateMonitor200ApplicationJSONObject?: UpdateMonitor200ApplicationJson;
 }

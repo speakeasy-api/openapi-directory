@@ -38,5 +38,5 @@ export class CodesOfConductGetConductCodeResponse extends SpeakeasyBase {
   codeOfConduct?: shared.CodeOfConduct;
 
   @SpeakeasyMetadata()
-  codesOfConductGetConductCode415ApplicationJsonObject?: CodesOfConductGetConductCode415ApplicationJson;
+  codesOfConductGetConductCode415ApplicationJSONObject?: CodesOfConductGetConductCode415ApplicationJson;
 }

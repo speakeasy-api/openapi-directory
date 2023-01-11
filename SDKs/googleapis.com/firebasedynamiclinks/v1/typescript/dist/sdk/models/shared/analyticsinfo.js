@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePlayAnalytics } from "./googleplayanalytics";
-import { ITunesConnectAnalytics } from "./itunesconnectanalytics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnalyticsInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleplayanalytics_1 = require("./googleplayanalytics");
+var itunesconnectanalytics_1 = require("./itunesconnectanalytics");
 // AnalyticsInfo
 /**
  * Tracking parameters supported by Dynamic Link.
@@ -35,13 +38,13 @@ var AnalyticsInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googlePlayAnalytics" }),
-        __metadata("design:type", GooglePlayAnalytics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googlePlayAnalytics" }),
+        __metadata("design:type", googleplayanalytics_1.GooglePlayAnalytics)
     ], AnalyticsInfo.prototype, "googlePlayAnalytics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itunesConnectAnalytics" }),
-        __metadata("design:type", ITunesConnectAnalytics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itunesConnectAnalytics" }),
+        __metadata("design:type", itunesconnectanalytics_1.ITunesConnectAnalytics)
     ], AnalyticsInfo.prototype, "itunesConnectAnalytics", void 0);
     return AnalyticsInfo;
-}(SpeakeasyBase));
-export { AnalyticsInfo };
+}(utils_1.SpeakeasyBase));
+exports.AnalyticsInfo = AnalyticsInfo;

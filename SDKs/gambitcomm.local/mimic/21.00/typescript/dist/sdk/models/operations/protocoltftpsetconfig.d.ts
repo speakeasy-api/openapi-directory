@@ -10,5 +10,5 @@ export declare class ProtocolTftpSetConfigRequest extends SpeakeasyBase {
 export declare class ProtocolTftpSetConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolTftpSetConfig200ApplicationJsonString?: string;
+    protocolTftpSetConfig200ApplicationJSONString?: string;
 }

@@ -52,7 +52,7 @@ export class DisableOrganizationAdminAccountResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  disableOrganizationAdminAccountResponse?: Map<string, any>;
+  disableOrganizationAdminAccountResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

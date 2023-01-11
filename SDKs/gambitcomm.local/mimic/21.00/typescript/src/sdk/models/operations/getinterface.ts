@@ -22,5 +22,5 @@ export class GetInterfaceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getInterface200ApplicationJsonString?: string;
+  getInterface200ApplicationJSONString?: string;
 }

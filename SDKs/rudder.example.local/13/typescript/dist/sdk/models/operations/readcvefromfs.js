@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ReadCvEfromFs200ApplicationJsonActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReadCvEfromFsResponse = exports.ReadCvEfromFs200ApplicationJson = exports.ReadCvEfromFs200ApplicationJsonResultEnum = exports.ReadCvEfromFs200ApplicationJsonData = exports.ReadCvEfromFs200ApplicationJsonActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ReadCvEfromFs200ApplicationJsonActionEnum;
 (function (ReadCvEfromFs200ApplicationJsonActionEnum) {
     ReadCvEfromFs200ApplicationJsonActionEnum["ReadCvEfromFs"] = "readCVEfromFS";
-})(ReadCvEfromFs200ApplicationJsonActionEnum || (ReadCvEfromFs200ApplicationJsonActionEnum = {}));
+})(ReadCvEfromFs200ApplicationJsonActionEnum = exports.ReadCvEfromFs200ApplicationJsonActionEnum || (exports.ReadCvEfromFs200ApplicationJsonActionEnum = {}));
 var ReadCvEfromFs200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(ReadCvEfromFs200ApplicationJsonData, _super);
     function ReadCvEfromFs200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CVEs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CVEs" }),
         __metadata("design:type", Number)
     ], ReadCvEfromFs200ApplicationJsonData.prototype, "cvEs", void 0);
     return ReadCvEfromFs200ApplicationJsonData;
-}(SpeakeasyBase));
-export { ReadCvEfromFs200ApplicationJsonData };
-export var ReadCvEfromFs200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.ReadCvEfromFs200ApplicationJsonData = ReadCvEfromFs200ApplicationJsonData;
+var ReadCvEfromFs200ApplicationJsonResultEnum;
 (function (ReadCvEfromFs200ApplicationJsonResultEnum) {
     ReadCvEfromFs200ApplicationJsonResultEnum["Success"] = "success";
     ReadCvEfromFs200ApplicationJsonResultEnum["Error"] = "error";
-})(ReadCvEfromFs200ApplicationJsonResultEnum || (ReadCvEfromFs200ApplicationJsonResultEnum = {}));
+})(ReadCvEfromFs200ApplicationJsonResultEnum = exports.ReadCvEfromFs200ApplicationJsonResultEnum || (exports.ReadCvEfromFs200ApplicationJsonResultEnum = {}));
 var ReadCvEfromFs200ApplicationJson = /** @class */ (function (_super) {
     __extends(ReadCvEfromFs200ApplicationJson, _super);
     function ReadCvEfromFs200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], ReadCvEfromFs200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", ReadCvEfromFs200ApplicationJsonData)
     ], ReadCvEfromFs200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], ReadCvEfromFs200ApplicationJson.prototype, "result", void 0);
     return ReadCvEfromFs200ApplicationJson;
-}(SpeakeasyBase));
-export { ReadCvEfromFs200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ReadCvEfromFs200ApplicationJson = ReadCvEfromFs200ApplicationJson;
 var ReadCvEfromFsResponse = /** @class */ (function (_super) {
     __extends(ReadCvEfromFsResponse, _super);
     function ReadCvEfromFsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReadCvEfromFsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReadCvEfromFsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReadCvEfromFs200ApplicationJson)
-    ], ReadCvEfromFsResponse.prototype, "readCvEfromFs200ApplicationJsonObject", void 0);
+    ], ReadCvEfromFsResponse.prototype, "readCVEfromFS200ApplicationJSONObject", void 0);
     return ReadCvEfromFsResponse;
-}(SpeakeasyBase));
-export { ReadCvEfromFsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReadCvEfromFsResponse = ReadCvEfromFsResponse;

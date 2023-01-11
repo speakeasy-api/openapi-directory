@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NatGateway } from "./natgateway";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateNatGatewayResult = exports.CreateNatGatewayResultNatGateway = exports.CreateNatGatewayResultNatGatewayProvisionedBandwidth = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateNatGatewayResultNatGatewayProvisionedBandwidth
+/**
+ * Reserved. If you need to sustain traffic greater than the <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html">documented limits</a>, contact us through the <a href="https://console.aws.amazon.com/support/home?">Support Center</a>.
+**/
+var CreateNatGatewayResultNatGatewayProvisionedBandwidth = /** @class */ (function (_super) {
+    __extends(CreateNatGatewayResultNatGatewayProvisionedBandwidth, _super);
+    function CreateNatGatewayResultNatGatewayProvisionedBandwidth() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNatGatewayResultNatGatewayProvisionedBandwidth.prototype, "provisionTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNatGatewayResultNatGatewayProvisionedBandwidth.prototype, "provisioned", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNatGatewayResultNatGatewayProvisionedBandwidth.prototype, "requestTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNatGatewayResultNatGatewayProvisionedBandwidth.prototype, "requested", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNatGatewayResultNatGatewayProvisionedBandwidth.prototype, "status", void 0);
+    return CreateNatGatewayResultNatGatewayProvisionedBandwidth;
+}(utils_1.SpeakeasyBase));
+exports.CreateNatGatewayResultNatGatewayProvisionedBandwidth = CreateNatGatewayResultNatGatewayProvisionedBandwidth;
+// CreateNatGatewayResultNatGateway
+/**
+ * Information about the NAT gateway.
+**/
+var CreateNatGatewayResultNatGateway = /** @class */ (function (_super) {
+    __extends(CreateNatGatewayResultNatGateway, _super);
+    function CreateNatGatewayResultNatGateway() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNatGatewayResultNatGateway.prototype, "connectivityType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNatGatewayResultNatGateway.prototype, "createTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNatGatewayResultNatGateway.prototype, "deleteTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNatGatewayResultNatGateway.prototype, "failureCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNatGatewayResultNatGateway.prototype, "failureMessage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNatGatewayResultNatGateway.prototype, "natGatewayAddresses", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNatGatewayResultNatGateway.prototype, "natGatewayId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateNatGatewayResultNatGatewayProvisionedBandwidth)
+    ], CreateNatGatewayResultNatGateway.prototype, "provisionedBandwidth", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNatGatewayResultNatGateway.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNatGatewayResultNatGateway.prototype, "subnetId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNatGatewayResultNatGateway.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateNatGatewayResultNatGateway.prototype, "vpcId", void 0);
+    return CreateNatGatewayResultNatGateway;
+}(utils_1.SpeakeasyBase));
+exports.CreateNatGatewayResultNatGateway = CreateNatGatewayResultNatGateway;
 var CreateNatGatewayResult = /** @class */ (function (_super) {
     __extends(CreateNatGatewayResult, _super);
     function CreateNatGatewayResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], CreateNatGatewayResult.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", NatGateway)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateNatGatewayResultNatGateway)
     ], CreateNatGatewayResult.prototype, "natGateway", void 0);
     return CreateNatGatewayResult;
-}(SpeakeasyBase));
-export { CreateNatGatewayResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateNatGatewayResult = CreateNatGatewayResult;

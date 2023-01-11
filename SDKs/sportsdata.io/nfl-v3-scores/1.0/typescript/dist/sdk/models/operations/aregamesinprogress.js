@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AreGamesInProgressFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AreGamesInProgressResponse = exports.AreGamesInProgressRequest = exports.AreGamesInProgressPathParams = exports.AreGamesInProgressFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AreGamesInProgressFormatEnum;
 (function (AreGamesInProgressFormatEnum) {
     AreGamesInProgressFormatEnum["Xml"] = "XML";
     AreGamesInProgressFormatEnum["Json"] = "JSON";
-})(AreGamesInProgressFormatEnum || (AreGamesInProgressFormatEnum = {}));
+})(AreGamesInProgressFormatEnum = exports.AreGamesInProgressFormatEnum || (exports.AreGamesInProgressFormatEnum = {}));
 var AreGamesInProgressPathParams = /** @class */ (function (_super) {
     __extends(AreGamesInProgressPathParams, _super);
     function AreGamesInProgressPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], AreGamesInProgressPathParams.prototype, "format", void 0);
     return AreGamesInProgressPathParams;
-}(SpeakeasyBase));
-export { AreGamesInProgressPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AreGamesInProgressPathParams = AreGamesInProgressPathParams;
 var AreGamesInProgressRequest = /** @class */ (function (_super) {
     __extends(AreGamesInProgressRequest, _super);
     function AreGamesInProgressRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AreGamesInProgressPathParams)
     ], AreGamesInProgressRequest.prototype, "pathParams", void 0);
     return AreGamesInProgressRequest;
-}(SpeakeasyBase));
-export { AreGamesInProgressRequest };
+}(utils_1.SpeakeasyBase));
+exports.AreGamesInProgressRequest = AreGamesInProgressRequest;
 var AreGamesInProgressResponse = /** @class */ (function (_super) {
     __extends(AreGamesInProgressResponse, _super);
     function AreGamesInProgressResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
-    ], AreGamesInProgressResponse.prototype, "areGamesInProgress200ApplicationJsonBoolean", void 0);
+    ], AreGamesInProgressResponse.prototype, "areGamesInProgress200ApplicationJSONBoolean", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AreGamesInProgressResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AreGamesInProgressResponse.prototype, "statusCode", void 0);
     return AreGamesInProgressResponse;
-}(SpeakeasyBase));
-export { AreGamesInProgressResponse };
+}(utils_1.SpeakeasyBase));
+exports.AreGamesInProgressResponse = AreGamesInProgressResponse;

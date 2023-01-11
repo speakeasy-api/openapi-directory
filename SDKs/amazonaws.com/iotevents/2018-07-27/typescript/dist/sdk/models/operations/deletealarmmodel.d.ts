@@ -17,7 +17,7 @@ export declare class DeleteAlarmModelRequest extends SpeakeasyBase {
 }
 export declare class DeleteAlarmModelResponse extends SpeakeasyBase {
     contentType: string;
-    deleteAlarmModelResponse?: Map<string, any>;
+    deleteAlarmModelResponse?: Record<string, any>;
     internalFailureException?: any;
     invalidRequestException?: any;
     resourceInUseException?: any;

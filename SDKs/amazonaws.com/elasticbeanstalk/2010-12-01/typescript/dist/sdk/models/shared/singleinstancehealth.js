@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApplicationMetrics } from "./applicationmetrics";
-import { Deployment } from "./deployment";
-import { SystemStatus } from "./systemstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SingleInstanceHealth = void 0;
+var utils_1 = require("../../../internal/utils");
+var applicationmetrics_1 = require("./applicationmetrics");
+var deployment_1 = require("./deployment");
+var systemstatus_1 = require("./systemstatus");
 // SingleInstanceHealth
 /**
  * Detailed health information about an Amazon EC2 instance in your Elastic Beanstalk environment.
@@ -36,45 +39,45 @@ var SingleInstanceHealth = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ApplicationMetrics)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", applicationmetrics_1.ApplicationMetrics)
     ], SingleInstanceHealth.prototype, "applicationMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SingleInstanceHealth.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], SingleInstanceHealth.prototype, "causes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SingleInstanceHealth.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Deployment)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", deployment_1.Deployment)
     ], SingleInstanceHealth.prototype, "deployment", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SingleInstanceHealth.prototype, "healthStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SingleInstanceHealth.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SingleInstanceHealth.prototype, "instanceType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], SingleInstanceHealth.prototype, "launchedAt", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", SystemStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", systemstatus_1.SystemStatus)
     ], SingleInstanceHealth.prototype, "system", void 0);
     return SingleInstanceHealth;
-}(SpeakeasyBase));
-export { SingleInstanceHealth };
+}(utils_1.SpeakeasyBase));
+exports.SingleInstanceHealth = SingleInstanceHealth;

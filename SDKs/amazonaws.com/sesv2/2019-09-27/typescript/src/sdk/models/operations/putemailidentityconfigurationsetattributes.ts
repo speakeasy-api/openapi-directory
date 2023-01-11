@@ -61,7 +61,7 @@ export class PutEmailIdentityConfigurationSetAttributesResponse extends Speakeas
   notFoundException?: any;
 
   @SpeakeasyMetadata()
-  putEmailIdentityConfigurationSetAttributesResponse?: Map<string, any>;
+  putEmailIdentityConfigurationSetAttributesResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

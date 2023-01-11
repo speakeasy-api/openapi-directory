@@ -27,7 +27,7 @@ export declare class UserApiGetSongRatingForCurrentResponse extends SpeakeasyBas
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    userApiGetSongRatingForCurrent200ApplicationJsonStringEnum?: UserApiGetSongRatingForCurrent200ApplicationJsonEnum;
+    userApiGetSongRatingForCurrent200ApplicationJSONStringEnum?: UserApiGetSongRatingForCurrent200ApplicationJsonEnum;
     userApiGetSongRatingForCurrent200ApplicationJsonpStringEnum?: UserApiGetSongRatingForCurrent200ApplicationJsonpEnum;
-    userApiGetSongRatingForCurrent200TextJsonStringEnum?: UserApiGetSongRatingForCurrent200TextJsonEnum;
+    userApiGetSongRatingForCurrent200TextJSONStringEnum?: UserApiGetSongRatingForCurrent200TextJsonEnum;
 }

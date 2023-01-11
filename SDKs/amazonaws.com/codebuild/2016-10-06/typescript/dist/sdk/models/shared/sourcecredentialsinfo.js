@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AuthTypeEnum } from "./authtypeenum";
-import { ServerTypeEnum } from "./servertypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SourceCredentialsInfo = void 0;
+var utils_1 = require("../../../internal/utils");
+var authtypeenum_1 = require("./authtypeenum");
+var servertypeenum_1 = require("./servertypeenum");
 // SourceCredentialsInfo
 /**
  *  Information about the credentials for a GitHub, GitHub Enterprise, or Bitbucket repository.
@@ -35,17 +38,17 @@ var SourceCredentialsInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], SourceCredentialsInfo.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authType" }),
         __metadata("design:type", String)
     ], SourceCredentialsInfo.prototype, "authType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverType" }),
         __metadata("design:type", String)
     ], SourceCredentialsInfo.prototype, "serverType", void 0);
     return SourceCredentialsInfo;
-}(SpeakeasyBase));
-export { SourceCredentialsInfo };
+}(utils_1.SpeakeasyBase));
+exports.SourceCredentialsInfo = SourceCredentialsInfo;

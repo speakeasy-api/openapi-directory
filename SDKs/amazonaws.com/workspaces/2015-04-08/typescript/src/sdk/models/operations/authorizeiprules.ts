@@ -48,7 +48,7 @@ export class AuthorizeIpRulesResponse extends SpeakeasyBase {
   accessDeniedException?: any;
 
   @SpeakeasyMetadata()
-  authorizeIpRulesResult?: Map<string, any>;
+  authorizeIpRulesResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

@@ -97,7 +97,7 @@ export declare class GetSearchCarRecentsRequest extends SpeakeasyBase {
 }
 export declare class GetSearchCarRecentsResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     searchResponse?: shared.SearchResponse;
     statusCode: number;
 }

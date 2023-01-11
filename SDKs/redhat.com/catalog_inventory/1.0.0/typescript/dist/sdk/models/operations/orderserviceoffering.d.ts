@@ -13,5 +13,5 @@ export declare class OrderServiceOfferingRequest extends SpeakeasyBase {
 export declare class OrderServiceOfferingResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    orderServiceOffering200ApplicationJsonObject?: OrderServiceOffering200ApplicationJson;
+    orderServiceOffering200ApplicationJSONObject?: OrderServiceOffering200ApplicationJson;
 }

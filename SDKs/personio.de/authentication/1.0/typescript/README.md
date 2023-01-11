@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PostAuthRequest, PostAuthResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: PostAuthRequest = {
   queryParams: {
-    clientId: "magnam",
-    clientSecret: "ducimus",
+    clientId: "sit",
+    clientSecret: "voluptas",
   },
 };
 
-sdk.sdk.postAuth(req).then((res: PostAuthResponse | AxiosError) => {
+sdk.postAuth(req).then((res: PostAuthResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NamedRankExpression } from "./namedrankexpression";
-import { OptionStatus } from "./optionstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RankExpressionStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var namedrankexpression_1 = require("./namedrankexpression");
+var optionstatus_1 = require("./optionstatus");
 // RankExpressionStatus
 /**
  * The value of a <code>RankExpression</code> and its current status.
@@ -35,13 +38,13 @@ var RankExpressionStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", NamedRankExpression)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", namedrankexpression_1.NamedRankExpression)
     ], RankExpressionStatus.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", OptionStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", optionstatus_1.OptionStatus)
     ], RankExpressionStatus.prototype, "status", void 0);
     return RankExpressionStatus;
-}(SpeakeasyBase));
-export { RankExpressionStatus };
+}(utils_1.SpeakeasyBase));
+exports.RankExpressionStatus = RankExpressionStatus;

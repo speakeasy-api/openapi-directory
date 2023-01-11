@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GeneratedAssetPackSlice } from "./generatedassetpackslice";
-import { GeneratedSplitApk } from "./generatedsplitapk";
-import { GeneratedStandaloneApk } from "./generatedstandaloneapk";
-import { GeneratedUniversalApk } from "./generateduniversalapk";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GeneratedApksPerSigningKey = void 0;
+var utils_1 = require("../../../internal/utils");
+var generatedassetpackslice_1 = require("./generatedassetpackslice");
+var generatedsplitapk_1 = require("./generatedsplitapk");
+var generatedstandaloneapk_1 = require("./generatedstandaloneapk");
+var generateduniversalapk_1 = require("./generateduniversalapk");
 // GeneratedApksPerSigningKey
 /**
  * Download metadata for split, standalone and universal APKs, as well as asset pack slices, signed with a given key.
@@ -37,25 +40,25 @@ var GeneratedApksPerSigningKey = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateSha256Hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateSha256Hash" }),
         __metadata("design:type", String)
     ], GeneratedApksPerSigningKey.prototype, "certificateSha256Hash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=generatedAssetPackSlices", elemType: GeneratedAssetPackSlice }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=generatedAssetPackSlices", elemType: generatedassetpackslice_1.GeneratedAssetPackSlice }),
         __metadata("design:type", Array)
     ], GeneratedApksPerSigningKey.prototype, "generatedAssetPackSlices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=generatedSplitApks", elemType: GeneratedSplitApk }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=generatedSplitApks", elemType: generatedsplitapk_1.GeneratedSplitApk }),
         __metadata("design:type", Array)
     ], GeneratedApksPerSigningKey.prototype, "generatedSplitApks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=generatedStandaloneApks", elemType: GeneratedStandaloneApk }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=generatedStandaloneApks", elemType: generatedstandaloneapk_1.GeneratedStandaloneApk }),
         __metadata("design:type", Array)
     ], GeneratedApksPerSigningKey.prototype, "generatedStandaloneApks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=generatedUniversalApk" }),
-        __metadata("design:type", GeneratedUniversalApk)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=generatedUniversalApk" }),
+        __metadata("design:type", generateduniversalapk_1.GeneratedUniversalApk)
     ], GeneratedApksPerSigningKey.prototype, "generatedUniversalApk", void 0);
     return GeneratedApksPerSigningKey;
-}(SpeakeasyBase));
-export { GeneratedApksPerSigningKey };
+}(utils_1.SpeakeasyBase));
+exports.GeneratedApksPerSigningKey = GeneratedApksPerSigningKey;

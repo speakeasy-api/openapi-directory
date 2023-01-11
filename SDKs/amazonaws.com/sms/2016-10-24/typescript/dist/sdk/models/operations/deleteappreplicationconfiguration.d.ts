@@ -19,7 +19,7 @@ export declare class DeleteAppReplicationConfigurationRequest extends SpeakeasyB
 }
 export declare class DeleteAppReplicationConfigurationResponse extends SpeakeasyBase {
     contentType: string;
-    deleteAppReplicationConfigurationResponse?: Map<string, any>;
+    deleteAppReplicationConfigurationResponse?: Record<string, any>;
     internalError?: any;
     invalidParameterException?: any;
     missingRequiredParameterException?: any;

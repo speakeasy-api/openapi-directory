@@ -66,5 +66,5 @@ export class ListAcceptedNodesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listAcceptedNodes200ApplicationJsonObject?: ListAcceptedNodes200ApplicationJson;
+  listAcceptedNodes200ApplicationJSONObject?: ListAcceptedNodes200ApplicationJson;
 }

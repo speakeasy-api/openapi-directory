@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DepositSwitchCreateRequestOptions } from "./depositswitchcreaterequestoptions";
-export var DepositSwitchAltCreateRequestCountryCodeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DepositSwitchAltCreateRequest = exports.DepositSwitchAltCreateRequestCountryCodeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var depositswitchcreaterequestoptions_1 = require("./depositswitchcreaterequestoptions");
+var DepositSwitchAltCreateRequestCountryCodeEnum;
 (function (DepositSwitchAltCreateRequestCountryCodeEnum) {
     DepositSwitchAltCreateRequestCountryCodeEnum["Us"] = "US";
     DepositSwitchAltCreateRequestCountryCodeEnum["Ca"] = "CA";
-})(DepositSwitchAltCreateRequestCountryCodeEnum || (DepositSwitchAltCreateRequestCountryCodeEnum = {}));
+})(DepositSwitchAltCreateRequestCountryCodeEnum = exports.DepositSwitchAltCreateRequestCountryCodeEnum || (exports.DepositSwitchAltCreateRequestCountryCodeEnum = {}));
 // DepositSwitchAltCreateRequest
 /**
  * DepositSwitchAltCreateRequest defines the request schema for `/deposit_switch/alt/create`
@@ -39,29 +42,29 @@ var DepositSwitchAltCreateRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], DepositSwitchAltCreateRequest.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country_code" }),
         __metadata("design:type", String)
     ], DepositSwitchAltCreateRequest.prototype, "countryCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
-        __metadata("design:type", DepositSwitchCreateRequestOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
+        __metadata("design:type", depositswitchcreaterequestoptions_1.DepositSwitchCreateRequestOptions)
     ], DepositSwitchAltCreateRequest.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], DepositSwitchAltCreateRequest.prototype, "secret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_account" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_account" }),
+        __metadata("design:type", Object)
     ], DepositSwitchAltCreateRequest.prototype, "targetAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target_user" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target_user" }),
+        __metadata("design:type", Object)
     ], DepositSwitchAltCreateRequest.prototype, "targetUser", void 0);
     return DepositSwitchAltCreateRequest;
-}(SpeakeasyBase));
-export { DepositSwitchAltCreateRequest };
+}(utils_1.SpeakeasyBase));
+exports.DepositSwitchAltCreateRequest = DepositSwitchAltCreateRequest;

@@ -23,11 +23,11 @@ export declare class PrivatecaProjectsLocationsOperationsCancelSecurity extends 
 export declare class PrivatecaProjectsLocationsOperationsCancelRequest extends SpeakeasyBase {
     pathParams: PrivatecaProjectsLocationsOperationsCancelPathParams;
     queryParams: PrivatecaProjectsLocationsOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: PrivatecaProjectsLocationsOperationsCancelSecurity;
 }
 export declare class PrivatecaProjectsLocationsOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

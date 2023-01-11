@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConnectionTypeEnum } from "./connectiontypeenum";
-import { EnvironmentLifecycle } from "./environmentlifecycle";
-import { ManagedCredentialsStatusEnum } from "./managedcredentialsstatusenum";
-import { EnvironmentTypeEnum } from "./environmenttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Environment = void 0;
+var utils_1 = require("../../../internal/utils");
+var connectiontypeenum_1 = require("./connectiontypeenum");
+var environmentlifecycle_1 = require("./environmentlifecycle");
+var managedcredentialsstatusenum_1 = require("./managedcredentialsstatusenum");
+var environmenttypeenum_1 = require("./environmenttypeenum");
 // Environment
 /**
  * Information about an Cloud9 development environment.
@@ -37,41 +40,41 @@ var Environment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], Environment.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionType" }),
         __metadata("design:type", String)
     ], Environment.prototype, "connectionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Environment.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Environment.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lifecycle" }),
-        __metadata("design:type", EnvironmentLifecycle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lifecycle" }),
+        __metadata("design:type", environmentlifecycle_1.EnvironmentLifecycle)
     ], Environment.prototype, "lifecycle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=managedCredentialsStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=managedCredentialsStatus" }),
         __metadata("design:type", String)
     ], Environment.prototype, "managedCredentialsStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Environment.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerArn" }),
         __metadata("design:type", String)
     ], Environment.prototype, "ownerArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Environment.prototype, "type", void 0);
     return Environment;
-}(SpeakeasyBase));
-export { Environment };
+}(utils_1.SpeakeasyBase));
+exports.Environment = Environment;

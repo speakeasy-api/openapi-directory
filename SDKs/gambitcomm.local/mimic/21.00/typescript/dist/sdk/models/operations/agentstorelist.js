@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgentStoreListResponse = exports.AgentStoreListRequest = exports.AgentStoreListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AgentStoreListPathParams = /** @class */ (function (_super) {
     __extends(AgentStoreListPathParams, _super);
     function AgentStoreListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], AgentStoreListPathParams.prototype, "agentNum", void 0);
     return AgentStoreListPathParams;
-}(SpeakeasyBase));
-export { AgentStoreListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AgentStoreListPathParams = AgentStoreListPathParams;
 var AgentStoreListRequest = /** @class */ (function (_super) {
     __extends(AgentStoreListRequest, _super);
     function AgentStoreListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AgentStoreListPathParams)
     ], AgentStoreListRequest.prototype, "pathParams", void 0);
     return AgentStoreListRequest;
-}(SpeakeasyBase));
-export { AgentStoreListRequest };
+}(utils_1.SpeakeasyBase));
+exports.AgentStoreListRequest = AgentStoreListRequest;
 var AgentStoreListResponse = /** @class */ (function (_super) {
     __extends(AgentStoreListResponse, _super);
     function AgentStoreListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AgentStoreListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AgentStoreListResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], AgentStoreListResponse.prototype, "agentStoreList200ApplicationJsonStrings", void 0);
+    ], AgentStoreListResponse.prototype, "agentStoreList200ApplicationJSONStrings", void 0);
     return AgentStoreListResponse;
-}(SpeakeasyBase));
-export { AgentStoreListResponse };
+}(utils_1.SpeakeasyBase));
+exports.AgentStoreListResponse = AgentStoreListResponse;

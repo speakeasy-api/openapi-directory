@@ -28,5 +28,5 @@ export class ProtocolSnmptcpIpaliasEnableResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolSnmptcpIpaliasEnable200ApplicationJsonString?: string;
+  protocolSnmptcpIpaliasEnable200ApplicationJSONString?: string;
 }

@@ -5,13 +5,13 @@ import * as shared from "../shared";
 
 export class RevokeSubUserKeyRevokeSubUserKeyPutQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=apiID" })
-  apiId: string;
+  apiID: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=apiKey" })
   apiKey: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=subUserKeyUUID" })
-  subUserKeyUuid: string;
+  subUserKeyUUID: string;
 }
 
 

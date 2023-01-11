@@ -25,10 +25,10 @@ export declare class GetCertificateDataInXmlFormatFromUriIdRequest extends Speak
 export declare class GetCertificateDataInXmlFormatFromUriIdResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    getCertificateDataInXmlFormatFromUriId400ApplicationJsonObject?: GetCertificateDataInXmlFormatFromUriId400ApplicationJson;
-    getCertificateDataInXmlFormatFromUriId401ApplicationJsonObject?: GetCertificateDataInXmlFormatFromUriId401ApplicationJson;
-    getCertificateDataInXmlFormatFromUriId404ApplicationJsonObject?: GetCertificateDataInXmlFormatFromUriId404ApplicationJson;
-    getCertificateDataInXmlFormatFromUriId500ApplicationJsonOneOf?: any;
-    getCertificateDataInXmlFormatFromUriId503ApplicationJsonOneOf?: any;
+    getCertificateDataInXMLFormatFromURIId400ApplicationJSONObject?: GetCertificateDataInXmlFormatFromUriId400ApplicationJson;
+    getCertificateDataInXMLFormatFromURIId401ApplicationJSONObject?: GetCertificateDataInXmlFormatFromUriId401ApplicationJson;
+    getCertificateDataInXMLFormatFromURIId404ApplicationJSONObject?: GetCertificateDataInXmlFormatFromUriId404ApplicationJson;
+    getCertificateDataInXMLFormatFromURIId500ApplicationJSONOneOf?: any;
+    getCertificateDataInXMLFormatFromURIId503ApplicationJSONOneOf?: any;
     statusCode: number;
 }

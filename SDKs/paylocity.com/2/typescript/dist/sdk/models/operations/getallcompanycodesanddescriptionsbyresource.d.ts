@@ -15,5 +15,5 @@ export declare class GetAllCompanyCodesAndDescriptionsByResourceResponse extends
     contentType: string;
     statusCode: number;
     companyCodes?: shared.CompanyCodes[];
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }

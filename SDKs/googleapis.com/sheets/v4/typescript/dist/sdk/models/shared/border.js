@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Color } from "./color";
-import { ColorStyle } from "./colorstyle";
-export var BorderStyleEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Border = exports.BorderStyleEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var color_1 = require("./color");
+var colorstyle_1 = require("./colorstyle");
+var BorderStyleEnum;
 (function (BorderStyleEnum) {
     BorderStyleEnum["StyleUnspecified"] = "STYLE_UNSPECIFIED";
     BorderStyleEnum["Dotted"] = "DOTTED";
@@ -35,7 +38,7 @@ export var BorderStyleEnum;
     BorderStyleEnum["SolidThick"] = "SOLID_THICK";
     BorderStyleEnum["None"] = "NONE";
     BorderStyleEnum["Double"] = "DOUBLE";
-})(BorderStyleEnum || (BorderStyleEnum = {}));
+})(BorderStyleEnum = exports.BorderStyleEnum || (exports.BorderStyleEnum = {}));
 // Border
 /**
  * A border along a cell.
@@ -46,21 +49,21 @@ var Border = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
-        __metadata("design:type", Color)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
+        __metadata("design:type", color_1.Color)
     ], Border.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=colorStyle" }),
-        __metadata("design:type", ColorStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=colorStyle" }),
+        __metadata("design:type", colorstyle_1.ColorStyle)
     ], Border.prototype, "colorStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=style" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=style" }),
         __metadata("design:type", String)
     ], Border.prototype, "style", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], Border.prototype, "width", void 0);
     return Border;
-}(SpeakeasyBase));
-export { Border };
+}(utils_1.SpeakeasyBase));
+exports.Border = Border;

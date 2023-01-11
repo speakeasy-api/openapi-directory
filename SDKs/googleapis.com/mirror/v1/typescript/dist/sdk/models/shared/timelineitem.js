@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Attachment } from "./attachment";
-import { Contact } from "./contact";
-import { Location } from "./location";
-import { MenuItem } from "./menuitem";
-import { NotificationConfig } from "./notificationconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TimelineItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var attachment_1 = require("./attachment");
+var contact_1 = require("./contact");
+var location_1 = require("./location");
+var menuitem_1 = require("./menuitem");
+var notificationconfig_1 = require("./notificationconfig");
 // TimelineItem
 /**
  * Each item in the user's timeline is represented as a TimelineItem JSON structure, described below.
@@ -38,109 +41,109 @@ var TimelineItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attachments", elemType: Attachment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attachments", elemType: attachment_1.Attachment }),
         __metadata("design:type", Array)
     ], TimelineItem.prototype, "attachments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundleId" }),
         __metadata("design:type", String)
     ], TimelineItem.prototype, "bundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canonicalUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canonicalUrl" }),
         __metadata("design:type", String)
     ], TimelineItem.prototype, "canonicalUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], TimelineItem.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creator" }),
-        __metadata("design:type", Contact)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creator" }),
+        __metadata("design:type", contact_1.Contact)
     ], TimelineItem.prototype, "creator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayTime" }),
         __metadata("design:type", Date)
     ], TimelineItem.prototype, "displayTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], TimelineItem.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html" }),
         __metadata("design:type", String)
     ], TimelineItem.prototype, "html", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], TimelineItem.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inReplyTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inReplyTo" }),
         __metadata("design:type", String)
     ], TimelineItem.prototype, "inReplyTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isBundleCover" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isBundleCover" }),
         __metadata("design:type", Boolean)
     ], TimelineItem.prototype, "isBundleCover", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isDeleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isDeleted" }),
         __metadata("design:type", Boolean)
     ], TimelineItem.prototype, "isDeleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isPinned" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isPinned" }),
         __metadata("design:type", Boolean)
     ], TimelineItem.prototype, "isPinned", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], TimelineItem.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", Location)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", location_1.Location)
     ], TimelineItem.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=menuItems", elemType: MenuItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=menuItems", elemType: menuitem_1.MenuItem }),
         __metadata("design:type", Array)
     ], TimelineItem.prototype, "menuItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notification" }),
-        __metadata("design:type", NotificationConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notification" }),
+        __metadata("design:type", notificationconfig_1.NotificationConfig)
     ], TimelineItem.prototype, "notification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pinScore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pinScore" }),
         __metadata("design:type", Number)
     ], TimelineItem.prototype, "pinScore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recipients", elemType: Contact }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recipients", elemType: contact_1.Contact }),
         __metadata("design:type", Array)
     ], TimelineItem.prototype, "recipients", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], TimelineItem.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceItemId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceItemId" }),
         __metadata("design:type", String)
     ], TimelineItem.prototype, "sourceItemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=speakableText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=speakableText" }),
         __metadata("design:type", String)
     ], TimelineItem.prototype, "speakableText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=speakableType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=speakableType" }),
         __metadata("design:type", String)
     ], TimelineItem.prototype, "speakableType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text" }),
         __metadata("design:type", String)
     ], TimelineItem.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], TimelineItem.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", Date)
     ], TimelineItem.prototype, "updated", void 0);
     return TimelineItem;
-}(SpeakeasyBase));
-export { TimelineItem };
+}(utils_1.SpeakeasyBase));
+exports.TimelineItem = TimelineItem;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayMulticastDomain } from "./transitgatewaymulticastdomain";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateTransitGatewayMulticastDomainResult = exports.CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain = exports.CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions
+/**
+ * The options for the transit gateway multicast domain.
+**/
+var CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions = /** @class */ (function (_super) {
+    __extends(CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions, _super);
+    function CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions.prototype, "autoAcceptSharedAssociations", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions.prototype, "igmpv2Support", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions.prototype, "staticSourcesSupport", void 0);
+    return CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions;
+}(utils_1.SpeakeasyBase));
+exports.CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions = CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions;
+// CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain
+/**
+ * Information about the transit gateway multicast domain.
+**/
+var CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain = /** @class */ (function (_super) {
+    __extends(CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain, _super);
+    function CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain.prototype, "creationTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions)
+    ], CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain.prototype, "options", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain.prototype, "ownerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain.prototype, "transitGatewayId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain.prototype, "transitGatewayMulticastDomainArn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain.prototype, "transitGatewayMulticastDomainId", void 0);
+    return CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain;
+}(utils_1.SpeakeasyBase));
+exports.CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain = CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain;
 var CreateTransitGatewayMulticastDomainResult = /** @class */ (function (_super) {
     __extends(CreateTransitGatewayMulticastDomainResult, _super);
     function CreateTransitGatewayMulticastDomainResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TransitGatewayMulticastDomain)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain)
     ], CreateTransitGatewayMulticastDomainResult.prototype, "transitGatewayMulticastDomain", void 0);
     return CreateTransitGatewayMulticastDomainResult;
-}(SpeakeasyBase));
-export { CreateTransitGatewayMulticastDomainResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateTransitGatewayMulticastDomainResult = CreateTransitGatewayMulticastDomainResult;

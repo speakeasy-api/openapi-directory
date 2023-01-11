@@ -5,7 +5,7 @@ import { QueuePlayPointer } from "./queueplaypointer";
 export declare class Queue extends SpeakeasyBase {
     content: Content[];
     contentItemsCount?: number;
-    controls?: Map<string, PlayMediaControl>;
+    controls?: Record<string, PlayMediaControl>;
     identifier: string;
     insertPointer?: any;
     nextContentUrl?: string;

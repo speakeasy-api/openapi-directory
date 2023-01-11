@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteClusterParameterGroupActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteClusterParameterGroupResponse = exports.PostDeleteClusterParameterGroupRequest = exports.PostDeleteClusterParameterGroupHeaders = exports.PostDeleteClusterParameterGroupQueryParams = exports.PostDeleteClusterParameterGroupVersionEnum = exports.PostDeleteClusterParameterGroupActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteClusterParameterGroupActionEnum;
 (function (PostDeleteClusterParameterGroupActionEnum) {
     PostDeleteClusterParameterGroupActionEnum["DeleteClusterParameterGroup"] = "DeleteClusterParameterGroup";
-})(PostDeleteClusterParameterGroupActionEnum || (PostDeleteClusterParameterGroupActionEnum = {}));
-export var PostDeleteClusterParameterGroupVersionEnum;
+})(PostDeleteClusterParameterGroupActionEnum = exports.PostDeleteClusterParameterGroupActionEnum || (exports.PostDeleteClusterParameterGroupActionEnum = {}));
+var PostDeleteClusterParameterGroupVersionEnum;
 (function (PostDeleteClusterParameterGroupVersionEnum) {
     PostDeleteClusterParameterGroupVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(PostDeleteClusterParameterGroupVersionEnum || (PostDeleteClusterParameterGroupVersionEnum = {}));
+})(PostDeleteClusterParameterGroupVersionEnum = exports.PostDeleteClusterParameterGroupVersionEnum || (exports.PostDeleteClusterParameterGroupVersionEnum = {}));
 var PostDeleteClusterParameterGroupQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteClusterParameterGroupQueryParams, _super);
     function PostDeleteClusterParameterGroupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteClusterParameterGroupQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteClusterParameterGroupQueryParams.prototype, "version", void 0);
     return PostDeleteClusterParameterGroupQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteClusterParameterGroupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteClusterParameterGroupQueryParams = PostDeleteClusterParameterGroupQueryParams;
 var PostDeleteClusterParameterGroupHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteClusterParameterGroupHeaders, _super);
     function PostDeleteClusterParameterGroupHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteClusterParameterGroupHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteClusterParameterGroupHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteClusterParameterGroupHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteClusterParameterGroupHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteClusterParameterGroupHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteClusterParameterGroupHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteClusterParameterGroupHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteClusterParameterGroupHeaders;
-}(SpeakeasyBase));
-export { PostDeleteClusterParameterGroupHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteClusterParameterGroupHeaders = PostDeleteClusterParameterGroupHeaders;
 var PostDeleteClusterParameterGroupRequest = /** @class */ (function (_super) {
     __extends(PostDeleteClusterParameterGroupRequest, _super);
     function PostDeleteClusterParameterGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteClusterParameterGroupQueryParams)
     ], PostDeleteClusterParameterGroupRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteClusterParameterGroupHeaders)
     ], PostDeleteClusterParameterGroupRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteClusterParameterGroupRequest.prototype, "request", void 0);
     return PostDeleteClusterParameterGroupRequest;
-}(SpeakeasyBase));
-export { PostDeleteClusterParameterGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteClusterParameterGroupRequest = PostDeleteClusterParameterGroupRequest;
 var PostDeleteClusterParameterGroupResponse = /** @class */ (function (_super) {
     __extends(PostDeleteClusterParameterGroupResponse, _super);
     function PostDeleteClusterParameterGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteClusterParameterGroupResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteClusterParameterGroupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteClusterParameterGroupResponse.prototype, "statusCode", void 0);
     return PostDeleteClusterParameterGroupResponse;
-}(SpeakeasyBase));
-export { PostDeleteClusterParameterGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteClusterParameterGroupResponse = PostDeleteClusterParameterGroupResponse;

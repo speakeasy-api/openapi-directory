@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExpressionStatus } from "./expressionstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeExpressionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var expressionstatus_1 = require("./expressionstatus");
 // DescribeExpressionsResponse
 /**
  * The result of a <code>DescribeExpressions</code> request. Contains the expressions configured for the domain specified in the request.
@@ -34,9 +37,9 @@ var DescribeExpressionsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: ExpressionStatus }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: expressionstatus_1.ExpressionStatus }),
         __metadata("design:type", Array)
     ], DescribeExpressionsResponse.prototype, "expressions", void 0);
     return DescribeExpressionsResponse;
-}(SpeakeasyBase));
-export { DescribeExpressionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeExpressionsResponse = DescribeExpressionsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,128 +23,130 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeDbEngineVersionsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeDbEngineVersionsResponse = exports.GetDescribeDbEngineVersionsRequest = exports.GetDescribeDbEngineVersionsHeaders = exports.GetDescribeDbEngineVersionsQueryParams = exports.GetDescribeDbEngineVersionsVersionEnum = exports.GetDescribeDbEngineVersionsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeDbEngineVersionsActionEnum;
 (function (GetDescribeDbEngineVersionsActionEnum) {
     GetDescribeDbEngineVersionsActionEnum["DescribeDbEngineVersions"] = "DescribeDBEngineVersions";
-})(GetDescribeDbEngineVersionsActionEnum || (GetDescribeDbEngineVersionsActionEnum = {}));
-export var GetDescribeDbEngineVersionsVersionEnum;
+})(GetDescribeDbEngineVersionsActionEnum = exports.GetDescribeDbEngineVersionsActionEnum || (exports.GetDescribeDbEngineVersionsActionEnum = {}));
+var GetDescribeDbEngineVersionsVersionEnum;
 (function (GetDescribeDbEngineVersionsVersionEnum) {
     GetDescribeDbEngineVersionsVersionEnum["TwoThousandAndThirteen0212"] = "2013-02-12";
-})(GetDescribeDbEngineVersionsVersionEnum || (GetDescribeDbEngineVersionsVersionEnum = {}));
+})(GetDescribeDbEngineVersionsVersionEnum = exports.GetDescribeDbEngineVersionsVersionEnum || (exports.GetDescribeDbEngineVersionsVersionEnum = {}));
 var GetDescribeDbEngineVersionsQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeDbEngineVersionsQueryParams, _super);
     function GetDescribeDbEngineVersionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeDbEngineVersionsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DBParameterGroupFamily" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DBParameterGroupFamily" }),
         __metadata("design:type", String)
     ], GetDescribeDbEngineVersionsQueryParams.prototype, "dbParameterGroupFamily", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DefaultOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DefaultOnly" }),
         __metadata("design:type", Boolean)
     ], GetDescribeDbEngineVersionsQueryParams.prototype, "defaultOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Engine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Engine" }),
         __metadata("design:type", String)
     ], GetDescribeDbEngineVersionsQueryParams.prototype, "engine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=EngineVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=EngineVersion" }),
         __metadata("design:type", String)
     ], GetDescribeDbEngineVersionsQueryParams.prototype, "engineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ListSupportedCharacterSets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ListSupportedCharacterSets" }),
         __metadata("design:type", Boolean)
     ], GetDescribeDbEngineVersionsQueryParams.prototype, "listSupportedCharacterSets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetDescribeDbEngineVersionsQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", Number)
     ], GetDescribeDbEngineVersionsQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeDbEngineVersionsQueryParams.prototype, "version", void 0);
     return GetDescribeDbEngineVersionsQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeDbEngineVersionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeDbEngineVersionsQueryParams = GetDescribeDbEngineVersionsQueryParams;
 var GetDescribeDbEngineVersionsHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeDbEngineVersionsHeaders, _super);
     function GetDescribeDbEngineVersionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeDbEngineVersionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeDbEngineVersionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeDbEngineVersionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeDbEngineVersionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeDbEngineVersionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeDbEngineVersionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeDbEngineVersionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeDbEngineVersionsHeaders;
-}(SpeakeasyBase));
-export { GetDescribeDbEngineVersionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeDbEngineVersionsHeaders = GetDescribeDbEngineVersionsHeaders;
 var GetDescribeDbEngineVersionsRequest = /** @class */ (function (_super) {
     __extends(GetDescribeDbEngineVersionsRequest, _super);
     function GetDescribeDbEngineVersionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeDbEngineVersionsQueryParams)
     ], GetDescribeDbEngineVersionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeDbEngineVersionsHeaders)
     ], GetDescribeDbEngineVersionsRequest.prototype, "headers", void 0);
     return GetDescribeDbEngineVersionsRequest;
-}(SpeakeasyBase));
-export { GetDescribeDbEngineVersionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeDbEngineVersionsRequest = GetDescribeDbEngineVersionsRequest;
 var GetDescribeDbEngineVersionsResponse = /** @class */ (function (_super) {
     __extends(GetDescribeDbEngineVersionsResponse, _super);
     function GetDescribeDbEngineVersionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeDbEngineVersionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeDbEngineVersionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeDbEngineVersionsResponse.prototype, "statusCode", void 0);
     return GetDescribeDbEngineVersionsResponse;
-}(SpeakeasyBase));
-export { GetDescribeDbEngineVersionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeDbEngineVersionsResponse = GetDescribeDbEngineVersionsResponse;

@@ -8,5 +8,5 @@ export declare class DeleteUserRequest extends SpeakeasyBase {
 export declare class DeleteUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteUser200ApplicationJsonObject?: Map<string, any>;
+    deleteUser200ApplicationJSONObject?: Record<string, any>;
 }

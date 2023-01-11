@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,92 +23,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetResourcesMediaIdEmbedJsonResponse = exports.GetResourcesMediaIdEmbedJsonRequest = exports.GetResourcesMediaIdEmbedJsonQueryParams = exports.GetResourcesMediaIdEmbedJsonPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetResourcesMediaIdEmbedJsonPathParams = /** @class */ (function (_super) {
     __extends(GetResourcesMediaIdEmbedJsonPathParams, _super);
     function GetResourcesMediaIdEmbedJsonPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetResourcesMediaIdEmbedJsonPathParams.prototype, "id", void 0);
     return GetResourcesMediaIdEmbedJsonPathParams;
-}(SpeakeasyBase));
-export { GetResourcesMediaIdEmbedJsonPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesMediaIdEmbedJsonPathParams = GetResourcesMediaIdEmbedJsonPathParams;
 var GetResourcesMediaIdEmbedJsonQueryParams = /** @class */ (function (_super) {
     __extends(GetResourcesMediaIdEmbedJsonQueryParams, _super);
     function GetResourcesMediaIdEmbedJsonQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=displayMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=displayMethod" }),
         __metadata("design:type", String)
     ], GetResourcesMediaIdEmbedJsonQueryParams.prototype, "displayMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=divId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=divId" }),
         __metadata("design:type", String)
     ], GetResourcesMediaIdEmbedJsonQueryParams.prototype, "divId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=excludeDiv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=excludeDiv" }),
         __metadata("design:type", Boolean)
     ], GetResourcesMediaIdEmbedJsonQueryParams.prototype, "excludeDiv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=excludeJquery" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=excludeJquery" }),
         __metadata("design:type", Boolean)
     ], GetResourcesMediaIdEmbedJsonQueryParams.prototype, "excludeJquery", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=flavor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=flavor" }),
         __metadata("design:type", String)
     ], GetResourcesMediaIdEmbedJsonQueryParams.prototype, "flavor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=height" }),
         __metadata("design:type", Number)
     ], GetResourcesMediaIdEmbedJsonQueryParams.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=iframeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=iframeName" }),
         __metadata("design:type", String)
     ], GetResourcesMediaIdEmbedJsonQueryParams.prototype, "iframeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=width" }),
         __metadata("design:type", Number)
     ], GetResourcesMediaIdEmbedJsonQueryParams.prototype, "width", void 0);
     return GetResourcesMediaIdEmbedJsonQueryParams;
-}(SpeakeasyBase));
-export { GetResourcesMediaIdEmbedJsonQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesMediaIdEmbedJsonQueryParams = GetResourcesMediaIdEmbedJsonQueryParams;
 var GetResourcesMediaIdEmbedJsonRequest = /** @class */ (function (_super) {
     __extends(GetResourcesMediaIdEmbedJsonRequest, _super);
     function GetResourcesMediaIdEmbedJsonRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetResourcesMediaIdEmbedJsonPathParams)
     ], GetResourcesMediaIdEmbedJsonRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetResourcesMediaIdEmbedJsonQueryParams)
     ], GetResourcesMediaIdEmbedJsonRequest.prototype, "queryParams", void 0);
     return GetResourcesMediaIdEmbedJsonRequest;
-}(SpeakeasyBase));
-export { GetResourcesMediaIdEmbedJsonRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesMediaIdEmbedJsonRequest = GetResourcesMediaIdEmbedJsonRequest;
 var GetResourcesMediaIdEmbedJsonResponse = /** @class */ (function (_super) {
     __extends(GetResourcesMediaIdEmbedJsonResponse, _super);
     function GetResourcesMediaIdEmbedJsonResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetResourcesMediaIdEmbedJsonResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
-    ], GetResourcesMediaIdEmbedJsonResponse.prototype, "getResourcesMediaIdEmbedJson200ApplicationJsonString", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetResourcesMediaIdEmbedJsonResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], GetResourcesMediaIdEmbedJsonResponse.prototype, "getResourcesMediaIdEmbedJSON200ApplicationJSONString", void 0);
     return GetResourcesMediaIdEmbedJsonResponse;
-}(SpeakeasyBase));
-export { GetResourcesMediaIdEmbedJsonResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesMediaIdEmbedJsonResponse = GetResourcesMediaIdEmbedJsonResponse;

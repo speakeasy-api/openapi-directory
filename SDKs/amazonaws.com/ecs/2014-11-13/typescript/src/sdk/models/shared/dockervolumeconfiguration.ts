@@ -15,10 +15,10 @@ export class DockerVolumeConfiguration extends SpeakeasyBase {
   driver?: string;
 
   @SpeakeasyMetadata({ data: "json, name=driverOpts" })
-  driverOpts?: Map<string, string>;
+  driverOpts?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=scope" })
   scope?: ScopeEnum;

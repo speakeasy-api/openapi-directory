@@ -58,13 +58,13 @@ export class Workload extends SpeakeasyBase {
   reviewRestrictionDate?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=RiskCounts" })
-  riskCounts?: Map<string, number>;
+  riskCounts?: Record<string, number>;
 
   @SpeakeasyMetadata({ data: "json, name=ShareInvitationId" })
   shareInvitationId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=UpdatedAt" })
   updatedAt?: Date;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FieldLevelEncryptionProfileConfig } from "./fieldlevelencryptionprofileconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FieldLevelEncryptionProfile = void 0;
+var utils_1 = require("../../../internal/utils");
+var fieldlevelencryptionprofileconfig_1 = require("./fieldlevelencryptionprofileconfig");
 // FieldLevelEncryptionProfile
 /**
  * A complex data type for field-level encryption profiles.
@@ -34,17 +37,17 @@ var FieldLevelEncryptionProfile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", FieldLevelEncryptionProfileConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", fieldlevelencryptionprofileconfig_1.FieldLevelEncryptionProfileConfig)
     ], FieldLevelEncryptionProfile.prototype, "fieldLevelEncryptionProfileConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FieldLevelEncryptionProfile.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], FieldLevelEncryptionProfile.prototype, "lastModifiedTime", void 0);
     return FieldLevelEncryptionProfile;
-}(SpeakeasyBase));
-export { FieldLevelEncryptionProfile };
+}(utils_1.SpeakeasyBase));
+exports.FieldLevelEncryptionProfile = FieldLevelEncryptionProfile;

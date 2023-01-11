@@ -25,5 +25,5 @@ export class ProtocolGetConfigResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolGetConfig200ApplicationJsonObject?: Map<string, any>;
+  protocolGetConfig200ApplicationJSONObject?: Record<string, any>;
 }

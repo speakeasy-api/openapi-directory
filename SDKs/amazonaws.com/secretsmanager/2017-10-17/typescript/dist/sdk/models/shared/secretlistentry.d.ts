@@ -17,8 +17,8 @@ export declare class SecretListEntry extends SpeakeasyBase {
     owningService?: string;
     primaryRegion?: string;
     rotationEnabled?: boolean;
-    rotationLambdaArn?: string;
+    rotationLambdaARN?: string;
     rotationRules?: RotationRulesType;
-    secretVersionsToStages?: Map<string, string[]>;
+    secretVersionsToStages?: Record<string, string[]>;
     tags?: Tag[];
 }

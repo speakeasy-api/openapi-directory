@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DirectoryStateEnum } from "./directorystateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Directory = void 0;
+var utils_1 = require("../../../internal/utils");
+var directorystateenum_1 = require("./directorystateenum");
 // Directory
 /**
  * Directory structure that includes the directory name and directory ARN.
@@ -34,21 +37,21 @@ var Directory = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreationDateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreationDateTime" }),
         __metadata("design:type", Date)
     ], Directory.prototype, "creationDateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DirectoryArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DirectoryArn" }),
         __metadata("design:type", String)
     ], Directory.prototype, "directoryArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Directory.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], Directory.prototype, "state", void 0);
     return Directory;
-}(SpeakeasyBase));
-export { Directory };
+}(utils_1.SpeakeasyBase));
+exports.Directory = Directory;

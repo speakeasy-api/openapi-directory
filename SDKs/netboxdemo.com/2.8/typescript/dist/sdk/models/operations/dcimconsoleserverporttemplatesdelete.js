@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DcimConsoleServerPortTemplatesDeleteResponse = exports.DcimConsoleServerPortTemplatesDeleteRequest = exports.DcimConsoleServerPortTemplatesDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DcimConsoleServerPortTemplatesDeletePathParams = /** @class */ (function (_super) {
     __extends(DcimConsoleServerPortTemplatesDeletePathParams, _super);
     function DcimConsoleServerPortTemplatesDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], DcimConsoleServerPortTemplatesDeletePathParams.prototype, "id", void 0);
     return DcimConsoleServerPortTemplatesDeletePathParams;
-}(SpeakeasyBase));
-export { DcimConsoleServerPortTemplatesDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DcimConsoleServerPortTemplatesDeletePathParams = DcimConsoleServerPortTemplatesDeletePathParams;
 var DcimConsoleServerPortTemplatesDeleteRequest = /** @class */ (function (_super) {
     __extends(DcimConsoleServerPortTemplatesDeleteRequest, _super);
     function DcimConsoleServerPortTemplatesDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DcimConsoleServerPortTemplatesDeletePathParams)
     ], DcimConsoleServerPortTemplatesDeleteRequest.prototype, "pathParams", void 0);
     return DcimConsoleServerPortTemplatesDeleteRequest;
-}(SpeakeasyBase));
-export { DcimConsoleServerPortTemplatesDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.DcimConsoleServerPortTemplatesDeleteRequest = DcimConsoleServerPortTemplatesDeleteRequest;
 var DcimConsoleServerPortTemplatesDeleteResponse = /** @class */ (function (_super) {
     __extends(DcimConsoleServerPortTemplatesDeleteResponse, _super);
     function DcimConsoleServerPortTemplatesDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DcimConsoleServerPortTemplatesDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DcimConsoleServerPortTemplatesDeleteResponse.prototype, "statusCode", void 0);
     return DcimConsoleServerPortTemplatesDeleteResponse;
-}(SpeakeasyBase));
-export { DcimConsoleServerPortTemplatesDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.DcimConsoleServerPortTemplatesDeleteResponse = DcimConsoleServerPortTemplatesDeleteResponse;

@@ -7,7 +7,7 @@ export declare class GetV1QueryParams extends SpeakeasyBase {
     ipAddress?: string;
 }
 export declare class GetV1Request extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     queryParams: GetV1QueryParams;
 }
 export declare class GetV1Response extends SpeakeasyBase {

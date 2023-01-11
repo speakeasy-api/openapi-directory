@@ -8,5 +8,5 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class GetIdentityPoliciesResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  policies: Map<string, string>;
+  policies: Record<string, string>;
 }

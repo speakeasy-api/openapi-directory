@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteBatchPredictionOutput = void 0;
+var utils_1 = require("../../../internal/utils");
 // DeleteBatchPredictionOutput
 /**
  * <p> Represents the output of a <code>DeleteBatchPrediction</code> operation.</p> <p>You can use the <code>GetBatchPrediction</code> operation and check the value of the <code>Status</code> parameter to see whether a <code>BatchPrediction</code> is marked as <code>DELETED</code>.</p>
@@ -33,9 +36,9 @@ var DeleteBatchPredictionOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BatchPredictionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BatchPredictionId" }),
         __metadata("design:type", String)
     ], DeleteBatchPredictionOutput.prototype, "batchPredictionId", void 0);
     return DeleteBatchPredictionOutput;
-}(SpeakeasyBase));
-export { DeleteBatchPredictionOutput };
+}(utils_1.SpeakeasyBase));
+exports.DeleteBatchPredictionOutput = DeleteBatchPredictionOutput;

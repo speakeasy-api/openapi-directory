@@ -23,5 +23,5 @@ export declare class UpdateDatasetGroupResponse extends SpeakeasyBase {
     resourceInUseException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    updateDatasetGroupResponse?: Map<string, any>;
+    updateDatasetGroupResponse?: Record<string, any>;
 }

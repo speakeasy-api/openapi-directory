@@ -54,7 +54,7 @@ export class DeleteEnvironmentMembershipResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteEnvironmentMembershipResult?: Map<string, any>;
+  deleteEnvironmentMembershipResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   forbiddenException?: any;

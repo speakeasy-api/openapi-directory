@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Service } from "./service";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeServicesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var service_1 = require("./service");
 // DescribeServicesResponse
 /**
  * The list of AWS services returned by the <a>DescribeServices</a> operation.
@@ -34,9 +37,9 @@ var DescribeServicesResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=services", elemType: Service }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=services", elemType: service_1.Service }),
         __metadata("design:type", Array)
     ], DescribeServicesResponse.prototype, "services", void 0);
     return DescribeServicesResponse;
-}(SpeakeasyBase));
-export { DescribeServicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeServicesResponse = DescribeServicesResponse;

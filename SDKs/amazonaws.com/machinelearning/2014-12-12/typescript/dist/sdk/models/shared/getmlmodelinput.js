@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMlModelInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetMlModelInput = /** @class */ (function (_super) {
     __extends(GetMlModelInput, _super);
     function GetMlModelInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MLModelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MLModelId" }),
         __metadata("design:type", String)
     ], GetMlModelInput.prototype, "mlModelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Verbose" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Verbose" }),
         __metadata("design:type", Boolean)
     ], GetMlModelInput.prototype, "verbose", void 0);
     return GetMlModelInput;
-}(SpeakeasyBase));
-export { GetMlModelInput };
+}(utils_1.SpeakeasyBase));
+exports.GetMlModelInput = GetMlModelInput;

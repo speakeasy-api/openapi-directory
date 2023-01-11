@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RequestInput } from "./request";
-import { WriteControl } from "./writecontrol";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchUpdateFormRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var request_1 = require("./request");
+var writecontrol_1 = require("./writecontrol");
 // BatchUpdateFormRequestInput
 /**
  * A batch of updates to perform on a form. All the specified updates are made or none of them are.
@@ -35,17 +38,17 @@ var BatchUpdateFormRequestInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeFormInResponse" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeFormInResponse" }),
         __metadata("design:type", Boolean)
     ], BatchUpdateFormRequestInput.prototype, "includeFormInResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requests", elemType: RequestInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requests", elemType: request_1.RequestInput }),
         __metadata("design:type", Array)
     ], BatchUpdateFormRequestInput.prototype, "requests", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=writeControl" }),
-        __metadata("design:type", WriteControl)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=writeControl" }),
+        __metadata("design:type", writecontrol_1.WriteControl)
     ], BatchUpdateFormRequestInput.prototype, "writeControl", void 0);
     return BatchUpdateFormRequestInput;
-}(SpeakeasyBase));
-export { BatchUpdateFormRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.BatchUpdateFormRequestInput = BatchUpdateFormRequestInput;

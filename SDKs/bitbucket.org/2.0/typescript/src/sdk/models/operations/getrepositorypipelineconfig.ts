@@ -25,5 +25,5 @@ export class GetRepositoryPipelineConfigResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  pipelinesConfig?: Map<string, any>;
+  pipelinesConfig?: Record<string, any>;
 }

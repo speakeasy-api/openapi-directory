@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetzipcodeinfoRequest, GetzipcodeinfoResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: GetzipcodeinfoRequest = {
   queryParams: {
-    license: "et",
-    zip: "suscipit",
+    license: "sit",
+    zip: "voluptas",
   },
 };
 
-sdk.sdk.getzipcodeinfo(req).then((res: GetzipcodeinfoResponse | AxiosError) => {
+sdk.detailedZipCodeInformation.getzipcodeinfo(req).then((res: GetzipcodeinfoResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -43,7 +42,7 @@ sdk.sdk.getzipcodeinfo(req).then((res: GetzipcodeinfoResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Detailed Zip Code Information
 
 * `getzipcodeinfo` - Gets detailed zip code information
 

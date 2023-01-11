@@ -1,17 +1,8 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
-export declare enum GetAvailableNumbersFeaturesEnum {
-    Sms = "SMS",
-    Voice = "VOICE",
-    SmsVoice = "SMS,VOICE",
-    Mms = "MMS",
-    SmsMms = "SMS,MMS",
-    VoiceMms = "VOICE,MMS",
-    SmsMmsVoice = "SMS,MMS,VOICE"
-}
 export declare class GetAvailableNumbersQueryParams extends SpeakeasyBase {
     country: string;
-    features?: GetAvailableNumbersFeaturesEnum;
+    features?: shared.SearchPatternEnum;
     index?: number;
     pattern?: string;
     searchPattern?: number;

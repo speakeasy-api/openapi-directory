@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GeneratedRulesTypeEnum } from "./generatedrulestypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RulesSourceList = void 0;
+var utils_1 = require("../../../internal/utils");
+var generatedrulestypeenum_1 = require("./generatedrulestypeenum");
 // RulesSourceList
 /**
  * <p>Stateful inspection criteria for a domain list rule group. </p> <p>For HTTPS traffic, domain filtering is SNI-based. It uses the server name indicator extension of the TLS handshake.</p> <p>By default, Network Firewall domain list inspection only includes traffic coming from the VPC where you deploy the firewall. To inspect traffic from IP addresses outside of the deployment VPC, you set the <code>HOME_NET</code> rule variable to include the CIDR range of the deployment VPC plus the other CIDR ranges. For more information, see <a>RuleVariables</a> in this guide and <a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/stateful-rule-groups-domain-names.html">Stateful domain list rule groups in AWS Network Firewall</a> in the <i>Network Firewall Developer Guide</i> </p>
@@ -34,17 +37,17 @@ var RulesSourceList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GeneratedRulesType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GeneratedRulesType" }),
         __metadata("design:type", String)
     ], RulesSourceList.prototype, "generatedRulesType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetTypes" }),
         __metadata("design:type", Array)
     ], RulesSourceList.prototype, "targetTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Targets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Targets" }),
         __metadata("design:type", Array)
     ], RulesSourceList.prototype, "targets", void 0);
     return RulesSourceList;
-}(SpeakeasyBase));
-export { RulesSourceList };
+}(utils_1.SpeakeasyBase));
+exports.RulesSourceList = RulesSourceList;

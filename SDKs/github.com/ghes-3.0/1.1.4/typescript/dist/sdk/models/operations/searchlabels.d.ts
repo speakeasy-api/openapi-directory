@@ -22,6 +22,6 @@ export declare class SearchLabelsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    searchLabels200ApplicationJsonObject?: SearchLabels200ApplicationJson;
+    searchLabels200ApplicationJSONObject?: SearchLabels200ApplicationJson;
     validationError?: shared.ValidationError;
 }

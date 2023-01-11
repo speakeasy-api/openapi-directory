@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PancrRequest, PancrResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,27 +30,27 @@ const req: PancrRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      dob: "cumque",
-      fullName: "dicta",
-      gender: "id",
-      panFullName: "vitae",
-      uid: "atque",
-      panno: "sit",
+      dob: "sit",
+      fullName: "voluptas",
+      gender: "culpa",
+      panFullName: "expedita",
+      uid: "consequuntur",
+      panno: "dolor",
     },
-    consentArtifact: "fugiat",
+    consentArtifact: "expedita",
     format: "pdf",
-    txnId: "nesciunt",
+    txnId: "fugit",
   },
 };
 
-sdk.sdk.pancr(req).then((res: PancrResponse | AxiosError) => {
+sdk.apIs.pancr(req).then((res: PancrResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -60,7 +59,7 @@ sdk.sdk.pancr(req).then((res: PancrResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `pancr` - PAN Verification Record
 

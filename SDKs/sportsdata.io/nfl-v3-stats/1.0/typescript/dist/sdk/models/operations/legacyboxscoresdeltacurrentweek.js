@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,57 +23,59 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var LegacyBoxScoresDeltaCurrentWeekFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LegacyBoxScoresDeltaCurrentWeekResponse = exports.LegacyBoxScoresDeltaCurrentWeekRequest = exports.LegacyBoxScoresDeltaCurrentWeekPathParams = exports.LegacyBoxScoresDeltaCurrentWeekFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var LegacyBoxScoresDeltaCurrentWeekFormatEnum;
 (function (LegacyBoxScoresDeltaCurrentWeekFormatEnum) {
     LegacyBoxScoresDeltaCurrentWeekFormatEnum["Xml"] = "XML";
     LegacyBoxScoresDeltaCurrentWeekFormatEnum["Json"] = "JSON";
-})(LegacyBoxScoresDeltaCurrentWeekFormatEnum || (LegacyBoxScoresDeltaCurrentWeekFormatEnum = {}));
+})(LegacyBoxScoresDeltaCurrentWeekFormatEnum = exports.LegacyBoxScoresDeltaCurrentWeekFormatEnum || (exports.LegacyBoxScoresDeltaCurrentWeekFormatEnum = {}));
 var LegacyBoxScoresDeltaCurrentWeekPathParams = /** @class */ (function (_super) {
     __extends(LegacyBoxScoresDeltaCurrentWeekPathParams, _super);
     function LegacyBoxScoresDeltaCurrentWeekPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], LegacyBoxScoresDeltaCurrentWeekPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=minutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=minutes" }),
         __metadata("design:type", String)
     ], LegacyBoxScoresDeltaCurrentWeekPathParams.prototype, "minutes", void 0);
     return LegacyBoxScoresDeltaCurrentWeekPathParams;
-}(SpeakeasyBase));
-export { LegacyBoxScoresDeltaCurrentWeekPathParams };
+}(utils_1.SpeakeasyBase));
+exports.LegacyBoxScoresDeltaCurrentWeekPathParams = LegacyBoxScoresDeltaCurrentWeekPathParams;
 var LegacyBoxScoresDeltaCurrentWeekRequest = /** @class */ (function (_super) {
     __extends(LegacyBoxScoresDeltaCurrentWeekRequest, _super);
     function LegacyBoxScoresDeltaCurrentWeekRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LegacyBoxScoresDeltaCurrentWeekPathParams)
     ], LegacyBoxScoresDeltaCurrentWeekRequest.prototype, "pathParams", void 0);
     return LegacyBoxScoresDeltaCurrentWeekRequest;
-}(SpeakeasyBase));
-export { LegacyBoxScoresDeltaCurrentWeekRequest };
+}(utils_1.SpeakeasyBase));
+exports.LegacyBoxScoresDeltaCurrentWeekRequest = LegacyBoxScoresDeltaCurrentWeekRequest;
 var LegacyBoxScoresDeltaCurrentWeekResponse = /** @class */ (function (_super) {
     __extends(LegacyBoxScoresDeltaCurrentWeekResponse, _super);
     function LegacyBoxScoresDeltaCurrentWeekResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], LegacyBoxScoresDeltaCurrentWeekResponse.prototype, "boxScores", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LegacyBoxScoresDeltaCurrentWeekResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LegacyBoxScoresDeltaCurrentWeekResponse.prototype, "statusCode", void 0);
     return LegacyBoxScoresDeltaCurrentWeekResponse;
-}(SpeakeasyBase));
-export { LegacyBoxScoresDeltaCurrentWeekResponse };
+}(utils_1.SpeakeasyBase));
+exports.LegacyBoxScoresDeltaCurrentWeekResponse = LegacyBoxScoresDeltaCurrentWeekResponse;

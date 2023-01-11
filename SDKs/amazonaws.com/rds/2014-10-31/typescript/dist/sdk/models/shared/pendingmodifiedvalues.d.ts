@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { PendingCloudwatchLogsExports } from "./pendingcloudwatchlogsexports";
-import { ProcessorFeature } from "./processorfeature";
+import { ProcessorFeatureList } from "./processorfeaturelist";
 /**
  *  This data type is used as a response element in the <code>ModifyDBInstance</code> operation and contains changes that will be applied during the next maintenance window.
 **/
@@ -16,9 +16,9 @@ export declare class PendingModifiedValues extends SpeakeasyBase {
     iops?: number;
     licenseModel?: string;
     masterUserPassword?: string;
-    multiAz?: boolean;
+    multiAZ?: boolean;
     pendingCloudwatchLogsExports?: PendingCloudwatchLogsExports;
     port?: number;
-    processorFeatures?: ProcessorFeature[];
+    processorFeatures?: ProcessorFeatureList[];
     storageType?: string;
 }

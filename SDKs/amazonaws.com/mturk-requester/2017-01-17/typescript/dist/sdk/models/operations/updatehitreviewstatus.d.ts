@@ -22,5 +22,5 @@ export declare class UpdateHitReviewStatusResponse extends SpeakeasyBase {
     requestError?: any;
     serviceFault?: any;
     statusCode: number;
-    updateHitReviewStatusResponse?: Map<string, any>;
+    updateHITReviewStatusResponse?: Record<string, any>;
 }

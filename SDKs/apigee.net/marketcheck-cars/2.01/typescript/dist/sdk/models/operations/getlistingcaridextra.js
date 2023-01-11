@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,78 +14,103 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetListingCarIdExtraResponse = exports.GetListingCarIdExtraRequest = exports.GetListingCarIdExtraQueryParams = exports.GetListingCarIdExtraPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetListingCarIdExtraPathParams = /** @class */ (function (_super) {
     __extends(GetListingCarIdExtraPathParams, _super);
     function GetListingCarIdExtraPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], GetListingCarIdExtraPathParams.prototype, "id", void 0);
     return GetListingCarIdExtraPathParams;
-}(SpeakeasyBase));
-export { GetListingCarIdExtraPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetListingCarIdExtraPathParams = GetListingCarIdExtraPathParams;
 var GetListingCarIdExtraQueryParams = /** @class */ (function (_super) {
     __extends(GetListingCarIdExtraQueryParams, _super);
     function GetListingCarIdExtraQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api_key" }),
         __metadata("design:type", String)
     ], GetListingCarIdExtraQueryParams.prototype, "apiKey", void 0);
     return GetListingCarIdExtraQueryParams;
-}(SpeakeasyBase));
-export { GetListingCarIdExtraQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetListingCarIdExtraQueryParams = GetListingCarIdExtraQueryParams;
 var GetListingCarIdExtraRequest = /** @class */ (function (_super) {
     __extends(GetListingCarIdExtraRequest, _super);
     function GetListingCarIdExtraRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListingCarIdExtraPathParams)
     ], GetListingCarIdExtraRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListingCarIdExtraQueryParams)
     ], GetListingCarIdExtraRequest.prototype, "queryParams", void 0);
     return GetListingCarIdExtraRequest;
-}(SpeakeasyBase));
-export { GetListingCarIdExtraRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetListingCarIdExtraRequest = GetListingCarIdExtraRequest;
 var GetListingCarIdExtraResponse = /** @class */ (function (_super) {
     __extends(GetListingCarIdExtraResponse, _super);
     function GetListingCarIdExtraResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetListingCarIdExtraResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", shared.Error)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.ErrorT)
     ], GetListingCarIdExtraResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ListingExtraAttributes)
     ], GetListingCarIdExtraResponse.prototype, "listingExtraAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetListingCarIdExtraResponse.prototype, "statusCode", void 0);
     return GetListingCarIdExtraResponse;
-}(SpeakeasyBase));
-export { GetListingCarIdExtraResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetListingCarIdExtraResponse = GetListingCarIdExtraResponse;

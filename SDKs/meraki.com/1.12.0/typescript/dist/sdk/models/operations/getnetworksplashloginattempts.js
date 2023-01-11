@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkSplashLoginAttemptsResponse = exports.GetNetworkSplashLoginAttemptsRequest = exports.GetNetworkSplashLoginAttemptsQueryParams = exports.GetNetworkSplashLoginAttemptsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkSplashLoginAttemptsPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkSplashLoginAttemptsPathParams, _super);
     function GetNetworkSplashLoginAttemptsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkSplashLoginAttemptsPathParams.prototype, "networkId", void 0);
     return GetNetworkSplashLoginAttemptsPathParams;
-}(SpeakeasyBase));
-export { GetNetworkSplashLoginAttemptsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSplashLoginAttemptsPathParams = GetNetworkSplashLoginAttemptsPathParams;
 var GetNetworkSplashLoginAttemptsQueryParams = /** @class */ (function (_super) {
     __extends(GetNetworkSplashLoginAttemptsQueryParams, _super);
     function GetNetworkSplashLoginAttemptsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=loginIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=loginIdentifier" }),
         __metadata("design:type", String)
     ], GetNetworkSplashLoginAttemptsQueryParams.prototype, "loginIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ssidNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ssidNumber" }),
         __metadata("design:type", Number)
     ], GetNetworkSplashLoginAttemptsQueryParams.prototype, "ssidNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timespan" }),
         __metadata("design:type", Number)
     ], GetNetworkSplashLoginAttemptsQueryParams.prototype, "timespan", void 0);
     return GetNetworkSplashLoginAttemptsQueryParams;
-}(SpeakeasyBase));
-export { GetNetworkSplashLoginAttemptsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSplashLoginAttemptsQueryParams = GetNetworkSplashLoginAttemptsQueryParams;
 var GetNetworkSplashLoginAttemptsRequest = /** @class */ (function (_super) {
     __extends(GetNetworkSplashLoginAttemptsRequest, _super);
     function GetNetworkSplashLoginAttemptsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkSplashLoginAttemptsPathParams)
     ], GetNetworkSplashLoginAttemptsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkSplashLoginAttemptsQueryParams)
     ], GetNetworkSplashLoginAttemptsRequest.prototype, "queryParams", void 0);
     return GetNetworkSplashLoginAttemptsRequest;
-}(SpeakeasyBase));
-export { GetNetworkSplashLoginAttemptsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSplashLoginAttemptsRequest = GetNetworkSplashLoginAttemptsRequest;
 var GetNetworkSplashLoginAttemptsResponse = /** @class */ (function (_super) {
     __extends(GetNetworkSplashLoginAttemptsResponse, _super);
     function GetNetworkSplashLoginAttemptsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkSplashLoginAttemptsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkSplashLoginAttemptsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkSplashLoginAttemptsResponse.prototype, "getNetworkSplashLoginAttempts200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkSplashLoginAttemptsResponse.prototype, "getNetworkSplashLoginAttempts200ApplicationJSONObject", void 0);
     return GetNetworkSplashLoginAttemptsResponse;
-}(SpeakeasyBase));
-export { GetNetworkSplashLoginAttemptsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSplashLoginAttemptsResponse = GetNetworkSplashLoginAttemptsResponse;

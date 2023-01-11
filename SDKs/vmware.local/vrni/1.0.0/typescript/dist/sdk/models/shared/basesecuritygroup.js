@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,67 +23,69 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSet } from "./ruleset";
-import { Reference } from "./reference";
-import { EntityTypeEnum } from "./entitytypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BaseSecurityGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var ruleset_1 = require("./ruleset");
+var reference_1 = require("./reference");
+var entitytypeenum_1 = require("./entitytypeenum");
 var BaseSecurityGroup = /** @class */ (function (_super) {
     __extends(BaseSecurityGroup, _super);
     function BaseSecurityGroup() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=direct_destination_rules", elemType: RuleSet }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=direct_destination_rules", elemType: ruleset_1.RuleSet }),
         __metadata("design:type", Array)
     ], BaseSecurityGroup.prototype, "directDestinationRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=direct_members", elemType: Reference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=direct_members", elemType: reference_1.Reference }),
         __metadata("design:type", Array)
     ], BaseSecurityGroup.prototype, "directMembers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=direct_source_rules", elemType: RuleSet }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=direct_source_rules", elemType: ruleset_1.RuleSet }),
         __metadata("design:type", Array)
     ], BaseSecurityGroup.prototype, "directSourceRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity_id" }),
         __metadata("design:type", String)
     ], BaseSecurityGroup.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity_type" }),
         __metadata("design:type", String)
     ], BaseSecurityGroup.prototype, "entityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excluded_members", elemType: Reference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excluded_members", elemType: reference_1.Reference }),
         __metadata("design:type", Array)
     ], BaseSecurityGroup.prototype, "excludedMembers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=indirect_destination_rules", elemType: RuleSet }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=indirect_destination_rules", elemType: ruleset_1.RuleSet }),
         __metadata("design:type", Array)
     ], BaseSecurityGroup.prototype, "indirectDestinationRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=indirect_source_rules", elemType: RuleSet }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=indirect_source_rules", elemType: ruleset_1.RuleSet }),
         __metadata("design:type", Array)
     ], BaseSecurityGroup.prototype, "indirectSourceRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members", elemType: Reference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members", elemType: reference_1.Reference }),
         __metadata("design:type", Array)
     ], BaseSecurityGroup.prototype, "members", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], BaseSecurityGroup.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parents", elemType: Reference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parents", elemType: reference_1.Reference }),
         __metadata("design:type", Array)
     ], BaseSecurityGroup.prototype, "parents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=translated_vm_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=translated_vm_count" }),
         __metadata("design:type", Number)
     ], BaseSecurityGroup.prototype, "translatedVmCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vendor_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vendor_id" }),
         __metadata("design:type", String)
     ], BaseSecurityGroup.prototype, "vendorId", void 0);
     return BaseSecurityGroup;
-}(SpeakeasyBase));
-export { BaseSecurityGroup };
+}(utils_1.SpeakeasyBase));
+exports.BaseSecurityGroup = BaseSecurityGroup;

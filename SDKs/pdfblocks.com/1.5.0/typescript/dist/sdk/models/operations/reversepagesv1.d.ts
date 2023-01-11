@@ -7,7 +7,7 @@ export declare class ReversePagesV1RequestBody extends SpeakeasyBase {
     file: ReversePagesV1RequestBodyFile;
 }
 export declare class ReversePagesV14XxApplicationProblemPlusJson extends SpeakeasyBase {
-    errors?: Map<string, any>;
+    errors?: Record<string, any>;
     status?: number;
     title?: string;
     type?: string;
@@ -19,5 +19,5 @@ export declare class ReversePagesV1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     reversePagesV1200ApplicationPdfBinaryString?: Uint8Array;
-    reversePagesV14XxApplicationProblemPlusJsonObject?: ReversePagesV14XxApplicationProblemPlusJson;
+    reversePagesV14XXApplicationProblemPlusJsonObject?: ReversePagesV14XxApplicationProblemPlusJson;
 }

@@ -5,7 +5,7 @@ import { InsightsConfiguration } from "./insightsconfiguration";
 **/
 export declare class GroupSummary extends SpeakeasyBase {
     filterExpression?: string;
-    groupArn?: string;
+    groupARN?: string;
     groupName?: string;
     insightsConfiguration?: InsightsConfiguration;
 }

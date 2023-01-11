@@ -4,10 +4,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class ScanforNetworksResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  body?: Uint8Array;
+  contentType: string;
 
   @SpeakeasyMetadata()
-  contentType: string;
+  scanforNetworks200TextPlainObject?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

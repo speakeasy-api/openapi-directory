@@ -35,8 +35,8 @@ export class ConvertResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  convert200ApplicationJsonAny?: any;
+  convert200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  convert400ApplicationJsonAny?: any;
+  convert400ApplicationJSONAny?: any;
 }

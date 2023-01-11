@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NestedCluster } from "./nestedcluster";
-import { NestedDeviceRole } from "./nesteddevicerole";
-import { NestedDeviceType } from "./nesteddevicetype";
-import { NestedDevice } from "./nesteddevice";
-import { NestedPlatform } from "./nestedplatform";
-import { NestedIpAddress } from "./nestedipaddress";
-import { NestedRack } from "./nestedrack";
-import { NestedSite } from "./nestedsite";
-import { NestedTenant } from "./nestedtenant";
-import { NestedVirtualChassis } from "./nestedvirtualchassis";
-export var DeviceWithConfigContextFaceLabelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceWithConfigContext = exports.DeviceWithConfigContextStatus = exports.DeviceWithConfigContextStatusValueEnum = exports.DeviceWithConfigContextStatusLabelEnum = exports.DeviceWithConfigContextFace = exports.DeviceWithConfigContextFaceValueEnum = exports.DeviceWithConfigContextFaceLabelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var nestedcluster_1 = require("./nestedcluster");
+var nesteddevicerole_1 = require("./nesteddevicerole");
+var nesteddevicetype_1 = require("./nesteddevicetype");
+var nesteddevice_1 = require("./nesteddevice");
+var nestedplatform_1 = require("./nestedplatform");
+var nestedipaddress_1 = require("./nestedipaddress");
+var nestedrack_1 = require("./nestedrack");
+var nestedsite_1 = require("./nestedsite");
+var nestedtenant_1 = require("./nestedtenant");
+var nestedvirtualchassis_1 = require("./nestedvirtualchassis");
+var DeviceWithConfigContextFaceLabelEnum;
 (function (DeviceWithConfigContextFaceLabelEnum) {
     DeviceWithConfigContextFaceLabelEnum["Front"] = "Front";
     DeviceWithConfigContextFaceLabelEnum["Rear"] = "Rear";
-})(DeviceWithConfigContextFaceLabelEnum || (DeviceWithConfigContextFaceLabelEnum = {}));
-export var DeviceWithConfigContextFaceValueEnum;
+})(DeviceWithConfigContextFaceLabelEnum = exports.DeviceWithConfigContextFaceLabelEnum || (exports.DeviceWithConfigContextFaceLabelEnum = {}));
+var DeviceWithConfigContextFaceValueEnum;
 (function (DeviceWithConfigContextFaceValueEnum) {
     DeviceWithConfigContextFaceValueEnum["Front"] = "front";
     DeviceWithConfigContextFaceValueEnum["Rear"] = "rear";
-})(DeviceWithConfigContextFaceValueEnum || (DeviceWithConfigContextFaceValueEnum = {}));
+})(DeviceWithConfigContextFaceValueEnum = exports.DeviceWithConfigContextFaceValueEnum || (exports.DeviceWithConfigContextFaceValueEnum = {}));
 var DeviceWithConfigContextFace = /** @class */ (function (_super) {
     __extends(DeviceWithConfigContextFace, _super);
     function DeviceWithConfigContextFace() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], DeviceWithConfigContextFace.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], DeviceWithConfigContextFace.prototype, "value", void 0);
     return DeviceWithConfigContextFace;
-}(SpeakeasyBase));
-export { DeviceWithConfigContextFace };
-export var DeviceWithConfigContextStatusLabelEnum;
+}(utils_1.SpeakeasyBase));
+exports.DeviceWithConfigContextFace = DeviceWithConfigContextFace;
+var DeviceWithConfigContextStatusLabelEnum;
 (function (DeviceWithConfigContextStatusLabelEnum) {
     DeviceWithConfigContextStatusLabelEnum["Offline"] = "Offline";
     DeviceWithConfigContextStatusLabelEnum["Active"] = "Active";
@@ -68,8 +71,8 @@ export var DeviceWithConfigContextStatusLabelEnum;
     DeviceWithConfigContextStatusLabelEnum["Failed"] = "Failed";
     DeviceWithConfigContextStatusLabelEnum["Inventory"] = "Inventory";
     DeviceWithConfigContextStatusLabelEnum["Decommissioning"] = "Decommissioning";
-})(DeviceWithConfigContextStatusLabelEnum || (DeviceWithConfigContextStatusLabelEnum = {}));
-export var DeviceWithConfigContextStatusValueEnum;
+})(DeviceWithConfigContextStatusLabelEnum = exports.DeviceWithConfigContextStatusLabelEnum || (exports.DeviceWithConfigContextStatusLabelEnum = {}));
+var DeviceWithConfigContextStatusValueEnum;
 (function (DeviceWithConfigContextStatusValueEnum) {
     DeviceWithConfigContextStatusValueEnum["Offline"] = "offline";
     DeviceWithConfigContextStatusValueEnum["Active"] = "active";
@@ -78,144 +81,144 @@ export var DeviceWithConfigContextStatusValueEnum;
     DeviceWithConfigContextStatusValueEnum["Failed"] = "failed";
     DeviceWithConfigContextStatusValueEnum["Inventory"] = "inventory";
     DeviceWithConfigContextStatusValueEnum["Decommissioning"] = "decommissioning";
-})(DeviceWithConfigContextStatusValueEnum || (DeviceWithConfigContextStatusValueEnum = {}));
+})(DeviceWithConfigContextStatusValueEnum = exports.DeviceWithConfigContextStatusValueEnum || (exports.DeviceWithConfigContextStatusValueEnum = {}));
 var DeviceWithConfigContextStatus = /** @class */ (function (_super) {
     __extends(DeviceWithConfigContextStatus, _super);
     function DeviceWithConfigContextStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], DeviceWithConfigContextStatus.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], DeviceWithConfigContextStatus.prototype, "value", void 0);
     return DeviceWithConfigContextStatus;
-}(SpeakeasyBase));
-export { DeviceWithConfigContextStatus };
+}(utils_1.SpeakeasyBase));
+exports.DeviceWithConfigContextStatus = DeviceWithConfigContextStatus;
 var DeviceWithConfigContext = /** @class */ (function (_super) {
     __extends(DeviceWithConfigContext, _super);
     function DeviceWithConfigContext() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asset_tag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asset_tag" }),
         __metadata("design:type", String)
     ], DeviceWithConfigContext.prototype, "assetTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster" }),
-        __metadata("design:type", NestedCluster)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster" }),
+        __metadata("design:type", nestedcluster_1.NestedCluster)
     ], DeviceWithConfigContext.prototype, "cluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comments" }),
         __metadata("design:type", String)
     ], DeviceWithConfigContext.prototype, "comments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config_context" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config_context" }),
+        __metadata("design:type", Object)
     ], DeviceWithConfigContext.prototype, "configContext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], DeviceWithConfigContext.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields" }),
+        __metadata("design:type", Object)
     ], DeviceWithConfigContext.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_role" }),
-        __metadata("design:type", NestedDeviceRole)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_role" }),
+        __metadata("design:type", nesteddevicerole_1.NestedDeviceRole)
     ], DeviceWithConfigContext.prototype, "deviceRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device_type" }),
-        __metadata("design:type", NestedDeviceType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device_type" }),
+        __metadata("design:type", nesteddevicetype_1.NestedDeviceType)
     ], DeviceWithConfigContext.prototype, "deviceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_name" }),
         __metadata("design:type", String)
     ], DeviceWithConfigContext.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=face" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=face" }),
         __metadata("design:type", DeviceWithConfigContextFace)
     ], DeviceWithConfigContext.prototype, "face", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], DeviceWithConfigContext.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_updated" }),
         __metadata("design:type", Date)
     ], DeviceWithConfigContext.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=local_context_data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=local_context_data" }),
         __metadata("design:type", String)
     ], DeviceWithConfigContext.prototype, "localContextData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], DeviceWithConfigContext.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent_device" }),
-        __metadata("design:type", NestedDevice)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent_device" }),
+        __metadata("design:type", nesteddevice_1.NestedDevice)
     ], DeviceWithConfigContext.prototype, "parentDevice", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform" }),
-        __metadata("design:type", NestedPlatform)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
+        __metadata("design:type", nestedplatform_1.NestedPlatform)
     ], DeviceWithConfigContext.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=position" }),
         __metadata("design:type", Number)
     ], DeviceWithConfigContext.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_ip" }),
-        __metadata("design:type", NestedIpAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_ip" }),
+        __metadata("design:type", nestedipaddress_1.NestedIpAddress)
     ], DeviceWithConfigContext.prototype, "primaryIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_ip4" }),
-        __metadata("design:type", NestedIpAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_ip4" }),
+        __metadata("design:type", nestedipaddress_1.NestedIpAddress)
     ], DeviceWithConfigContext.prototype, "primaryIp4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_ip6" }),
-        __metadata("design:type", NestedIpAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_ip6" }),
+        __metadata("design:type", nestedipaddress_1.NestedIpAddress)
     ], DeviceWithConfigContext.prototype, "primaryIp6", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rack" }),
-        __metadata("design:type", NestedRack)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rack" }),
+        __metadata("design:type", nestedrack_1.NestedRack)
     ], DeviceWithConfigContext.prototype, "rack", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serial" }),
         __metadata("design:type", String)
     ], DeviceWithConfigContext.prototype, "serial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=site" }),
-        __metadata("design:type", NestedSite)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=site" }),
+        __metadata("design:type", nestedsite_1.NestedSite)
     ], DeviceWithConfigContext.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", DeviceWithConfigContextStatus)
     ], DeviceWithConfigContext.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], DeviceWithConfigContext.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tenant" }),
-        __metadata("design:type", NestedTenant)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tenant" }),
+        __metadata("design:type", nestedtenant_1.NestedTenant)
     ], DeviceWithConfigContext.prototype, "tenant", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vc_position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vc_position" }),
         __metadata("design:type", Number)
     ], DeviceWithConfigContext.prototype, "vcPosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vc_priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vc_priority" }),
         __metadata("design:type", Number)
     ], DeviceWithConfigContext.prototype, "vcPriority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtual_chassis" }),
-        __metadata("design:type", NestedVirtualChassis)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtual_chassis" }),
+        __metadata("design:type", nestedvirtualchassis_1.NestedVirtualChassis)
     ], DeviceWithConfigContext.prototype, "virtualChassis", void 0);
     return DeviceWithConfigContext;
-}(SpeakeasyBase));
-export { DeviceWithConfigContext };
+}(utils_1.SpeakeasyBase));
+exports.DeviceWithConfigContext = DeviceWithConfigContext;

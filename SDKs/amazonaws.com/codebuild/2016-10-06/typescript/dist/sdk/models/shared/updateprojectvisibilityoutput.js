@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProjectVisibilityTypeEnum } from "./projectvisibilitytypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateProjectVisibilityOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var projectvisibilitytypeenum_1 = require("./projectvisibilitytypeenum");
 var UpdateProjectVisibilityOutput = /** @class */ (function (_super) {
     __extends(UpdateProjectVisibilityOutput, _super);
     function UpdateProjectVisibilityOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectArn" }),
         __metadata("design:type", String)
     ], UpdateProjectVisibilityOutput.prototype, "projectArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectVisibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectVisibility" }),
         __metadata("design:type", String)
     ], UpdateProjectVisibilityOutput.prototype, "projectVisibility", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicProjectAlias" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicProjectAlias" }),
         __metadata("design:type", String)
     ], UpdateProjectVisibilityOutput.prototype, "publicProjectAlias", void 0);
     return UpdateProjectVisibilityOutput;
-}(SpeakeasyBase));
-export { UpdateProjectVisibilityOutput };
+}(utils_1.SpeakeasyBase));
+exports.UpdateProjectVisibilityOutput = UpdateProjectVisibilityOutput;

@@ -20,5 +20,5 @@ export declare class LoadServiceResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
     statusCode: number;
-    loadService200ApplicationJsonObject?: LoadService200ApplicationJson;
+    loadService200ApplicationJSONObject?: LoadService200ApplicationJson;
 }

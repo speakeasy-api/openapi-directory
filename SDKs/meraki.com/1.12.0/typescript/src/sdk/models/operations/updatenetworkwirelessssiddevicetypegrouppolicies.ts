@@ -69,5 +69,5 @@ export class UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesResponse extends Sp
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNetworkWirelessSsidDeviceTypeGroupPolicies200ApplicationJsonObject?: Map<string, any>;
+  updateNetworkWirelessSsidDeviceTypeGroupPolicies200ApplicationJSONObject?: Record<string, any>;
 }

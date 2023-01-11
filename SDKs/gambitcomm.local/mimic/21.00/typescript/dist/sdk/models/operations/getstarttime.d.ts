@@ -8,5 +8,5 @@ export declare class GetStarttimeRequest extends SpeakeasyBase {
 export declare class GetStarttimeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getStarttime200ApplicationJsonString?: string;
+    getStarttime200ApplicationJSONString?: string;
 }

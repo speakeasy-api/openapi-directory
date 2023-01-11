@@ -1,4 +1,7 @@
-export var LaunchProfileStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LaunchProfileStateEnum = void 0;
+var LaunchProfileStateEnum;
 (function (LaunchProfileStateEnum) {
     LaunchProfileStateEnum["CreateInProgress"] = "CREATE_IN_PROGRESS";
     LaunchProfileStateEnum["Ready"] = "READY";
@@ -8,4 +11,4 @@ export var LaunchProfileStateEnum;
     LaunchProfileStateEnum["DeleteFailed"] = "DELETE_FAILED";
     LaunchProfileStateEnum["CreateFailed"] = "CREATE_FAILED";
     LaunchProfileStateEnum["UpdateFailed"] = "UPDATE_FAILED";
-})(LaunchProfileStateEnum || (LaunchProfileStateEnum = {}));
+})(LaunchProfileStateEnum = exports.LaunchProfileStateEnum || (exports.LaunchProfileStateEnum = {}));

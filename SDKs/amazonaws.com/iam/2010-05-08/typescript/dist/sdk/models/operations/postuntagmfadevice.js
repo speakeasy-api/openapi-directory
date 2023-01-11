@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostUntagMfaDeviceActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostUntagMfaDeviceResponse = exports.PostUntagMfaDeviceRequest = exports.PostUntagMfaDeviceHeaders = exports.PostUntagMfaDeviceQueryParams = exports.PostUntagMfaDeviceVersionEnum = exports.PostUntagMfaDeviceActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostUntagMfaDeviceActionEnum;
 (function (PostUntagMfaDeviceActionEnum) {
     PostUntagMfaDeviceActionEnum["UntagMfaDevice"] = "UntagMFADevice";
-})(PostUntagMfaDeviceActionEnum || (PostUntagMfaDeviceActionEnum = {}));
-export var PostUntagMfaDeviceVersionEnum;
+})(PostUntagMfaDeviceActionEnum = exports.PostUntagMfaDeviceActionEnum || (exports.PostUntagMfaDeviceActionEnum = {}));
+var PostUntagMfaDeviceVersionEnum;
 (function (PostUntagMfaDeviceVersionEnum) {
     PostUntagMfaDeviceVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostUntagMfaDeviceVersionEnum || (PostUntagMfaDeviceVersionEnum = {}));
+})(PostUntagMfaDeviceVersionEnum = exports.PostUntagMfaDeviceVersionEnum || (exports.PostUntagMfaDeviceVersionEnum = {}));
 var PostUntagMfaDeviceQueryParams = /** @class */ (function (_super) {
     __extends(PostUntagMfaDeviceQueryParams, _super);
     function PostUntagMfaDeviceQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostUntagMfaDeviceQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostUntagMfaDeviceQueryParams.prototype, "version", void 0);
     return PostUntagMfaDeviceQueryParams;
-}(SpeakeasyBase));
-export { PostUntagMfaDeviceQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostUntagMfaDeviceQueryParams = PostUntagMfaDeviceQueryParams;
 var PostUntagMfaDeviceHeaders = /** @class */ (function (_super) {
     __extends(PostUntagMfaDeviceHeaders, _super);
     function PostUntagMfaDeviceHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostUntagMfaDeviceHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostUntagMfaDeviceHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostUntagMfaDeviceHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostUntagMfaDeviceHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostUntagMfaDeviceHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostUntagMfaDeviceHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostUntagMfaDeviceHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostUntagMfaDeviceHeaders;
-}(SpeakeasyBase));
-export { PostUntagMfaDeviceHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostUntagMfaDeviceHeaders = PostUntagMfaDeviceHeaders;
 var PostUntagMfaDeviceRequest = /** @class */ (function (_super) {
     __extends(PostUntagMfaDeviceRequest, _super);
     function PostUntagMfaDeviceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostUntagMfaDeviceQueryParams)
     ], PostUntagMfaDeviceRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostUntagMfaDeviceHeaders)
     ], PostUntagMfaDeviceRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostUntagMfaDeviceRequest.prototype, "request", void 0);
     return PostUntagMfaDeviceRequest;
-}(SpeakeasyBase));
-export { PostUntagMfaDeviceRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostUntagMfaDeviceRequest = PostUntagMfaDeviceRequest;
 var PostUntagMfaDeviceResponse = /** @class */ (function (_super) {
     __extends(PostUntagMfaDeviceResponse, _super);
     function PostUntagMfaDeviceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostUntagMfaDeviceResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostUntagMfaDeviceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostUntagMfaDeviceResponse.prototype, "statusCode", void 0);
     return PostUntagMfaDeviceResponse;
-}(SpeakeasyBase));
-export { PostUntagMfaDeviceResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostUntagMfaDeviceResponse = PostUntagMfaDeviceResponse;

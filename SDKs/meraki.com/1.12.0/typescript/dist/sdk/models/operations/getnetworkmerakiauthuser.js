@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkMerakiAuthUserResponse = exports.GetNetworkMerakiAuthUserRequest = exports.GetNetworkMerakiAuthUserPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkMerakiAuthUserPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkMerakiAuthUserPathParams, _super);
     function GetNetworkMerakiAuthUserPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=merakiAuthUserId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=merakiAuthUserId" }),
         __metadata("design:type", String)
     ], GetNetworkMerakiAuthUserPathParams.prototype, "merakiAuthUserId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkMerakiAuthUserPathParams.prototype, "networkId", void 0);
     return GetNetworkMerakiAuthUserPathParams;
-}(SpeakeasyBase));
-export { GetNetworkMerakiAuthUserPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkMerakiAuthUserPathParams = GetNetworkMerakiAuthUserPathParams;
 var GetNetworkMerakiAuthUserRequest = /** @class */ (function (_super) {
     __extends(GetNetworkMerakiAuthUserRequest, _super);
     function GetNetworkMerakiAuthUserRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkMerakiAuthUserPathParams)
     ], GetNetworkMerakiAuthUserRequest.prototype, "pathParams", void 0);
     return GetNetworkMerakiAuthUserRequest;
-}(SpeakeasyBase));
-export { GetNetworkMerakiAuthUserRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkMerakiAuthUserRequest = GetNetworkMerakiAuthUserRequest;
 var GetNetworkMerakiAuthUserResponse = /** @class */ (function (_super) {
     __extends(GetNetworkMerakiAuthUserResponse, _super);
     function GetNetworkMerakiAuthUserResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkMerakiAuthUserResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkMerakiAuthUserResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkMerakiAuthUserResponse.prototype, "getNetworkMerakiAuthUser200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkMerakiAuthUserResponse.prototype, "getNetworkMerakiAuthUser200ApplicationJSONObject", void 0);
     return GetNetworkMerakiAuthUserResponse;
-}(SpeakeasyBase));
-export { GetNetworkMerakiAuthUserResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkMerakiAuthUserResponse = GetNetworkMerakiAuthUserResponse;

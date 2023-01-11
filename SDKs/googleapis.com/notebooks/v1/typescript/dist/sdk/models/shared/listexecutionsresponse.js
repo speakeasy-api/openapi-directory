@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Execution } from "./execution";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListExecutionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var execution_1 = require("./execution");
 // ListExecutionsResponse
 /**
  * Response for listing scheduled notebook executions
@@ -34,17 +37,17 @@ var ListExecutionsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executions", elemType: Execution }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executions", elemType: execution_1.Execution }),
         __metadata("design:type", Array)
     ], ListExecutionsResponse.prototype, "executions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListExecutionsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unreachable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unreachable" }),
         __metadata("design:type", Array)
     ], ListExecutionsResponse.prototype, "unreachable", void 0);
     return ListExecutionsResponse;
-}(SpeakeasyBase));
-export { ListExecutionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListExecutionsResponse = ListExecutionsResponse;

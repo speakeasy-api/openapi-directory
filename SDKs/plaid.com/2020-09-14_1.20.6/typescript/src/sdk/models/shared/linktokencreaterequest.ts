@@ -19,7 +19,7 @@ export class LinkTokenCreateRequest extends SpeakeasyBase {
   accessToken?: string;
 
   @SpeakeasyMetadata({ data: "json, name=account_filters" })
-  accountFilters?: Map<string, any>;
+  accountFilters?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=android_package_name" })
   androidPackageName?: string;

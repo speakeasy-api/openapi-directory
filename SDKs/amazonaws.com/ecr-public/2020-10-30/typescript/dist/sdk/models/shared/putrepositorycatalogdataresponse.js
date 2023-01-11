@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RepositoryCatalogData } from "./repositorycatalogdata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutRepositoryCatalogDataResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var repositorycatalogdata_1 = require("./repositorycatalogdata");
 var PutRepositoryCatalogDataResponse = /** @class */ (function (_super) {
     __extends(PutRepositoryCatalogDataResponse, _super);
     function PutRepositoryCatalogDataResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=catalogData" }),
-        __metadata("design:type", RepositoryCatalogData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=catalogData" }),
+        __metadata("design:type", repositorycatalogdata_1.RepositoryCatalogData)
     ], PutRepositoryCatalogDataResponse.prototype, "catalogData", void 0);
     return PutRepositoryCatalogDataResponse;
-}(SpeakeasyBase));
-export { PutRepositoryCatalogDataResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutRepositoryCatalogDataResponse = PutRepositoryCatalogDataResponse;

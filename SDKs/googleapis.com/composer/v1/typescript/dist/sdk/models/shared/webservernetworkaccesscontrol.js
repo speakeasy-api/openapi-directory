@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AllowedIpRange } from "./allowediprange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebServerNetworkAccessControl = void 0;
+var utils_1 = require("../../../internal/utils");
+var allowediprange_1 = require("./allowediprange");
 // WebServerNetworkAccessControl
 /**
  * Network-level access control policy for the Airflow web server.
@@ -34,9 +37,9 @@ var WebServerNetworkAccessControl = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedIpRanges", elemType: AllowedIpRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedIpRanges", elemType: allowediprange_1.AllowedIpRange }),
         __metadata("design:type", Array)
     ], WebServerNetworkAccessControl.prototype, "allowedIpRanges", void 0);
     return WebServerNetworkAccessControl;
-}(SpeakeasyBase));
-export { WebServerNetworkAccessControl };
+}(utils_1.SpeakeasyBase));
+exports.WebServerNetworkAccessControl = WebServerNetworkAccessControl;

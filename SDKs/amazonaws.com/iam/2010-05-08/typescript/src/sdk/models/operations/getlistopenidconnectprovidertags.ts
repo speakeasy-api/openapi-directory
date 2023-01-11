@@ -21,7 +21,7 @@ export class GetListOpenIdConnectProviderTagsQueryParams extends SpeakeasyBase {
   maxItems?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=OpenIDConnectProviderArn" })
-  openIdConnectProviderArn: string;
+  openIDConnectProviderArn: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetListOpenIdConnectProviderTagsVersionEnum;

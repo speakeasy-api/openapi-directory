@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CapabilitySyncStatusEnum } from "./capabilitysyncstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeGatewayCapabilityConfigurationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var capabilitysyncstatusenum_1 = require("./capabilitysyncstatusenum");
 var DescribeGatewayCapabilityConfigurationResponse = /** @class */ (function (_super) {
     __extends(DescribeGatewayCapabilityConfigurationResponse, _super);
     function DescribeGatewayCapabilityConfigurationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capabilityConfiguration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capabilityConfiguration" }),
         __metadata("design:type", String)
     ], DescribeGatewayCapabilityConfigurationResponse.prototype, "capabilityConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capabilityNamespace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capabilityNamespace" }),
         __metadata("design:type", String)
     ], DescribeGatewayCapabilityConfigurationResponse.prototype, "capabilityNamespace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capabilitySyncStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capabilitySyncStatus" }),
         __metadata("design:type", String)
     ], DescribeGatewayCapabilityConfigurationResponse.prototype, "capabilitySyncStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gatewayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gatewayId" }),
         __metadata("design:type", String)
     ], DescribeGatewayCapabilityConfigurationResponse.prototype, "gatewayId", void 0);
     return DescribeGatewayCapabilityConfigurationResponse;
-}(SpeakeasyBase));
-export { DescribeGatewayCapabilityConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeGatewayCapabilityConfigurationResponse = DescribeGatewayCapabilityConfigurationResponse;

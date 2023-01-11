@@ -185,23 +185,23 @@ export class AlimwResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  alimw400ApplicationJsonObject?: Alimw400ApplicationJson;
+  alimw400ApplicationJSONObject?: Alimw400ApplicationJson;
 
   @SpeakeasyMetadata()
-  alimw401ApplicationJsonObject?: Alimw401ApplicationJson;
+  alimw401ApplicationJSONObject?: Alimw401ApplicationJson;
 
   @SpeakeasyMetadata()
-  alimw404ApplicationJsonObject?: Alimw404ApplicationJson;
+  alimw404ApplicationJSONObject?: Alimw404ApplicationJson;
 
   @SpeakeasyMetadata()
-  alimw500ApplicationJsonObject?: Alimw500ApplicationJson;
+  alimw500ApplicationJSONObject?: Alimw500ApplicationJson;
 
   @SpeakeasyMetadata()
-  alimw502ApplicationJsonObject?: Alimw502ApplicationJson;
+  alimw502ApplicationJSONObject?: Alimw502ApplicationJson;
 
   @SpeakeasyMetadata()
-  alimw503ApplicationJsonObject?: Alimw503ApplicationJson;
+  alimw503ApplicationJSONObject?: Alimw503ApplicationJson;
 
   @SpeakeasyMetadata()
-  alimw504ApplicationJsonObject?: Alimw504ApplicationJson;
+  alimw504ApplicationJSONObject?: Alimw504ApplicationJson;
 }

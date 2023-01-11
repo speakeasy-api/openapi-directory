@@ -9,5 +9,5 @@ export declare class EventIntegration extends SpeakeasyBase {
     eventFilter?: EventFilter;
     eventIntegrationArn?: string;
     name?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

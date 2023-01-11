@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse = exports.DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest = exports.DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJson = exports.DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJsonMessageEnum = exports.DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams = /** @class */ (function (_super) {
     __extends(DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams, _super);
     function DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=fingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=fingerprint" }),
         __metadata("design:type", String)
     ], DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams.prototype, "fingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams.prototype, "project", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=username" }),
         __metadata("design:type", String)
     ], DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams.prototype, "username", void 0);
     return DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams;
-}(SpeakeasyBase));
-export { DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams };
-export var DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJsonMessageEnum;
+}(utils_1.SpeakeasyBase));
+exports.DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams = DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams;
+var DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJsonMessageEnum;
 (function (DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJsonMessageEnum) {
     DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJsonMessageEnum["Ok"] = "OK";
-})(DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJsonMessageEnum || (DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJsonMessageEnum = {}));
+})(DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJsonMessageEnum = exports.DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJsonMessageEnum || (exports.DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJsonMessageEnum = {}));
 var DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJson = /** @class */ (function (_super) {
     __extends(DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJson, _super);
     function DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJson.prototype, "message", void 0);
     return DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJson;
-}(SpeakeasyBase));
-export { DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJson = DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJson;
 var DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest = /** @class */ (function (_super) {
     __extends(DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest, _super);
     function DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams)
     ], DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest.prototype, "pathParams", void 0);
     return DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest;
-}(SpeakeasyBase));
-export { DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest = DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest;
 var DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse = /** @class */ (function (_super) {
     __extends(DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse, _super);
     function DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJson)
-    ], DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse.prototype, "deleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJson)
+    ], DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse.prototype, "deleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONObject", void 0);
     return DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse;
-}(SpeakeasyBase));
-export { DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse = DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse;

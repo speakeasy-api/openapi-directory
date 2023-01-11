@@ -13,5 +13,5 @@ export class EditableMetaData extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=properties" })
-  properties?: Map<string, string>;
+  properties?: Record<string, string>;
 }

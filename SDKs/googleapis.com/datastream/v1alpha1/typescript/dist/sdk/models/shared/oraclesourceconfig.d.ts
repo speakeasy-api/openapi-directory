@@ -5,6 +5,6 @@ import { OracleRdbms } from "./oraclerdbms";
 **/
 export declare class OracleSourceConfig extends SpeakeasyBase {
     allowlist?: OracleRdbms;
-    dropLargeObjects?: Map<string, any>;
+    dropLargeObjects?: Record<string, any>;
     rejectlist?: OracleRdbms;
 }

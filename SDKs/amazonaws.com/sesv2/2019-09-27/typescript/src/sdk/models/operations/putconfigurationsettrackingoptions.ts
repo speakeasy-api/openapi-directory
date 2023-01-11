@@ -61,7 +61,7 @@ export class PutConfigurationSetTrackingOptionsResponse extends SpeakeasyBase {
   notFoundException?: any;
 
   @SpeakeasyMetadata()
-  putConfigurationSetTrackingOptionsResponse?: Map<string, any>;
+  putConfigurationSetTrackingOptionsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

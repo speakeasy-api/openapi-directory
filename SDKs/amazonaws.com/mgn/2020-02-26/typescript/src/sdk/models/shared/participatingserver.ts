@@ -12,5 +12,5 @@ export class ParticipatingServer extends SpeakeasyBase {
   launchStatus?: LaunchStatusEnum;
 
   @SpeakeasyMetadata({ data: "json, name=sourceServerID" })
-  sourceServerId?: string;
+  sourceServerID?: string;
 }

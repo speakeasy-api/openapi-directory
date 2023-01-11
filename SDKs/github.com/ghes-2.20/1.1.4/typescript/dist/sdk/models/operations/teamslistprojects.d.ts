@@ -17,7 +17,7 @@ export declare class TeamsListProjectsRequest extends SpeakeasyBase {
 }
 export declare class TeamsListProjectsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     teamProjects?: shared.TeamProject[];
 }

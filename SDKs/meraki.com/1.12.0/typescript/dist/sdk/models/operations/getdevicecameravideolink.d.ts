@@ -12,5 +12,5 @@ export declare class GetDeviceCameraVideoLinkRequest extends SpeakeasyBase {
 export declare class GetDeviceCameraVideoLinkResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceCameraVideoLink200ApplicationJsonObject?: Map<string, any>;
+    getDeviceCameraVideoLink200ApplicationJSONObject?: Record<string, any>;
 }

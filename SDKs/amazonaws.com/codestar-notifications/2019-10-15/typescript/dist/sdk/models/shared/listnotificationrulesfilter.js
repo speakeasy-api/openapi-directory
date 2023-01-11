@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ListNotificationRulesFilterNameEnum } from "./listnotificationrulesfilternameenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListNotificationRulesFilter = void 0;
+var utils_1 = require("../../../internal/utils");
+var listnotificationrulesfilternameenum_1 = require("./listnotificationrulesfilternameenum");
 // ListNotificationRulesFilter
 /**
  * Information about a filter to apply to the list of returned notification rules. You can filter by event type, owner, resource, or target.
@@ -34,13 +37,13 @@ var ListNotificationRulesFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], ListNotificationRulesFilter.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Value" }),
         __metadata("design:type", String)
     ], ListNotificationRulesFilter.prototype, "value", void 0);
     return ListNotificationRulesFilter;
-}(SpeakeasyBase));
-export { ListNotificationRulesFilter };
+}(utils_1.SpeakeasyBase));
+exports.ListNotificationRulesFilter = ListNotificationRulesFilter;

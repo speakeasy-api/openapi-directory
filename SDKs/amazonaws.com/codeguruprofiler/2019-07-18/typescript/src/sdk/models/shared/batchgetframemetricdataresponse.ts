@@ -26,5 +26,5 @@ export class BatchGetFrameMetricDataResponse extends SpeakeasyBase {
   startTime: Date;
 
   @SpeakeasyMetadata({ data: "json, name=unprocessedEndTimes", elemType: TimestampStructure, elemDepth: 2 })
-  unprocessedEndTimes: Map<string, TimestampStructure[]>;
+  unprocessedEndTimes: Record<string, TimestampStructure[]>;
 }

@@ -20,7 +20,7 @@ export class AppsCreateFromManifestResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  gitHubApp?: Map<string, any>;
+  gitHubApp?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

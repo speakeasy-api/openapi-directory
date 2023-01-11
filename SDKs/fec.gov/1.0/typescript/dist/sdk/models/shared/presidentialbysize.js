@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PresidentialBySize = void 0;
+var utils_1 = require("../../../internal/utils");
 var PresidentialBySize = /** @class */ (function (_super) {
     __extends(PresidentialBySize, _super);
     function PresidentialBySize() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=candidate_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=candidate_id" }),
         __metadata("design:type", String)
     ], PresidentialBySize.prototype, "candidateId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contribution_receipt_amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contribution_receipt_amount" }),
         __metadata("design:type", Number)
     ], PresidentialBySize.prototype, "contributionReceiptAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=election_year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=election_year" }),
         __metadata("design:type", Number)
     ], PresidentialBySize.prototype, "electionYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], PresidentialBySize.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size_range_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size_range_id" }),
         __metadata("design:type", Number)
     ], PresidentialBySize.prototype, "sizeRangeId", void 0);
     return PresidentialBySize;
-}(SpeakeasyBase));
-export { PresidentialBySize };
+}(utils_1.SpeakeasyBase));
+exports.PresidentialBySize = PresidentialBySize;

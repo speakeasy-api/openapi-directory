@@ -26,6 +26,6 @@ export declare class PoolGetResponse extends SpeakeasyBase {
     batchError?: any;
     cloudPool?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

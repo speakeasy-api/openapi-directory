@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionsRemoveSelectedRepoFromOrgSecretResponse = exports.ActionsRemoveSelectedRepoFromOrgSecretRequest = exports.ActionsRemoveSelectedRepoFromOrgSecretPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ActionsRemoveSelectedRepoFromOrgSecretPathParams = /** @class */ (function (_super) {
     __extends(ActionsRemoveSelectedRepoFromOrgSecretPathParams, _super);
     function ActionsRemoveSelectedRepoFromOrgSecretPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], ActionsRemoveSelectedRepoFromOrgSecretPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repository_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repository_id" }),
         __metadata("design:type", Number)
     ], ActionsRemoveSelectedRepoFromOrgSecretPathParams.prototype, "repositoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=secret_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=secret_name" }),
         __metadata("design:type", String)
     ], ActionsRemoveSelectedRepoFromOrgSecretPathParams.prototype, "secretName", void 0);
     return ActionsRemoveSelectedRepoFromOrgSecretPathParams;
-}(SpeakeasyBase));
-export { ActionsRemoveSelectedRepoFromOrgSecretPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ActionsRemoveSelectedRepoFromOrgSecretPathParams = ActionsRemoveSelectedRepoFromOrgSecretPathParams;
 var ActionsRemoveSelectedRepoFromOrgSecretRequest = /** @class */ (function (_super) {
     __extends(ActionsRemoveSelectedRepoFromOrgSecretRequest, _super);
     function ActionsRemoveSelectedRepoFromOrgSecretRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ActionsRemoveSelectedRepoFromOrgSecretPathParams)
     ], ActionsRemoveSelectedRepoFromOrgSecretRequest.prototype, "pathParams", void 0);
     return ActionsRemoveSelectedRepoFromOrgSecretRequest;
-}(SpeakeasyBase));
-export { ActionsRemoveSelectedRepoFromOrgSecretRequest };
+}(utils_1.SpeakeasyBase));
+exports.ActionsRemoveSelectedRepoFromOrgSecretRequest = ActionsRemoveSelectedRepoFromOrgSecretRequest;
 var ActionsRemoveSelectedRepoFromOrgSecretResponse = /** @class */ (function (_super) {
     __extends(ActionsRemoveSelectedRepoFromOrgSecretResponse, _super);
     function ActionsRemoveSelectedRepoFromOrgSecretResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ActionsRemoveSelectedRepoFromOrgSecretResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ActionsRemoveSelectedRepoFromOrgSecretResponse.prototype, "statusCode", void 0);
     return ActionsRemoveSelectedRepoFromOrgSecretResponse;
-}(SpeakeasyBase));
-export { ActionsRemoveSelectedRepoFromOrgSecretResponse };
+}(utils_1.SpeakeasyBase));
+exports.ActionsRemoveSelectedRepoFromOrgSecretResponse = ActionsRemoveSelectedRepoFromOrgSecretResponse;

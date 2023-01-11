@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientAffinityEnum } from "./clientaffinityenum";
-import { PortRange } from "./portrange";
-import { ProtocolEnum } from "./protocolenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateListenerRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var clientaffinityenum_1 = require("./clientaffinityenum");
+var portrange_1 = require("./portrange");
+var protocolenum_1 = require("./protocolenum");
 var CreateListenerRequest = /** @class */ (function (_super) {
     __extends(CreateListenerRequest, _super);
     function CreateListenerRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AcceleratorArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AcceleratorArn" }),
         __metadata("design:type", String)
     ], CreateListenerRequest.prototype, "acceleratorArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClientAffinity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClientAffinity" }),
         __metadata("design:type", String)
     ], CreateListenerRequest.prototype, "clientAffinity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdempotencyToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdempotencyToken" }),
         __metadata("design:type", String)
     ], CreateListenerRequest.prototype, "idempotencyToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PortRanges", elemType: PortRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PortRanges", elemType: portrange_1.PortRange }),
         __metadata("design:type", Array)
     ], CreateListenerRequest.prototype, "portRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Protocol" }),
         __metadata("design:type", String)
     ], CreateListenerRequest.prototype, "protocol", void 0);
     return CreateListenerRequest;
-}(SpeakeasyBase));
-export { CreateListenerRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateListenerRequest = CreateListenerRequest;

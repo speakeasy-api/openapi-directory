@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DefaultResources } from "./defaultresources";
-export var FirebaseProjectStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FirebaseProject = exports.FirebaseProjectStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var defaultresources_1 = require("./defaultresources");
+var FirebaseProjectStateEnum;
 (function (FirebaseProjectStateEnum) {
     FirebaseProjectStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     FirebaseProjectStateEnum["Active"] = "ACTIVE";
     FirebaseProjectStateEnum["Deleted"] = "DELETED";
-})(FirebaseProjectStateEnum || (FirebaseProjectStateEnum = {}));
+})(FirebaseProjectStateEnum = exports.FirebaseProjectStateEnum || (exports.FirebaseProjectStateEnum = {}));
 // FirebaseProject
 /**
  * A `FirebaseProject` is the top-level Firebase entity. It is the container for Firebase Apps, Firebase Hosting sites, storage systems (Firebase Realtime Database, Cloud Firestore, Cloud Storage buckets), and other Firebase and Google Cloud Platform (GCP) resources. You create a `FirebaseProject` by calling AddFirebase and specifying an *existing* [GCP `Project`](https://cloud.google.com/resource-manager/reference/rest/v1/projects). This adds Firebase resources to the existing GCP `Project`. Since a FirebaseProject is actually also a GCP `Project`, a `FirebaseProject` has the same underlying GCP identifiers (`projectNumber` and `projectId`). This allows for easy interop with Google APIs.
@@ -40,37 +43,37 @@ var FirebaseProject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotations" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotations" }),
+        __metadata("design:type", Object)
     ], FirebaseProject.prototype, "annotations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], FirebaseProject.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], FirebaseProject.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], FirebaseProject.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
         __metadata("design:type", String)
     ], FirebaseProject.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectNumber" }),
         __metadata("design:type", String)
     ], FirebaseProject.prototype, "projectNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources" }),
-        __metadata("design:type", DefaultResources)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources" }),
+        __metadata("design:type", defaultresources_1.DefaultResources)
     ], FirebaseProject.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], FirebaseProject.prototype, "state", void 0);
     return FirebaseProject;
-}(SpeakeasyBase));
-export { FirebaseProject };
+}(utils_1.SpeakeasyBase));
+exports.FirebaseProject = FirebaseProject;

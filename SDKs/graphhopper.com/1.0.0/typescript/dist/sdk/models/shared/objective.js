@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ObjectiveTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Objective = exports.ObjectiveValueEnum = exports.ObjectiveTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ObjectiveTypeEnum;
 (function (ObjectiveTypeEnum) {
     ObjectiveTypeEnum["Min"] = "min";
     ObjectiveTypeEnum["MinMax"] = "min-max";
-})(ObjectiveTypeEnum || (ObjectiveTypeEnum = {}));
-export var ObjectiveValueEnum;
+})(ObjectiveTypeEnum = exports.ObjectiveTypeEnum || (exports.ObjectiveTypeEnum = {}));
+var ObjectiveValueEnum;
 (function (ObjectiveValueEnum) {
     ObjectiveValueEnum["CompletionTime"] = "completion_time";
     ObjectiveValueEnum["TransportTime"] = "transport_time";
     ObjectiveValueEnum["Vehicles"] = "vehicles";
     ObjectiveValueEnum["Activities"] = "activities";
-})(ObjectiveValueEnum || (ObjectiveValueEnum = {}));
+})(ObjectiveValueEnum = exports.ObjectiveValueEnum || (exports.ObjectiveValueEnum = {}));
 var Objective = /** @class */ (function (_super) {
     __extends(Objective, _super);
     function Objective() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Objective.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], Objective.prototype, "value", void 0);
     return Objective;
-}(SpeakeasyBase));
-export { Objective };
+}(utils_1.SpeakeasyBase));
+exports.Objective = Objective;

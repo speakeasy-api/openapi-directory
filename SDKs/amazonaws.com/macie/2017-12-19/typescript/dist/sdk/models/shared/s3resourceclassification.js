@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClassificationType } from "./classificationtype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3ResourceClassification = void 0;
+var utils_1 = require("../../../internal/utils");
+var classificationtype_1 = require("./classificationtype");
 // S3ResourceClassification
 /**
  * The S3 resources that you want to associate with Amazon Macie Classic for monitoring and data classification. This data type is used as a request parameter in the AssociateS3Resources action and a response parameter in the ListS3Resources action.
@@ -34,17 +37,17 @@ var S3ResourceClassification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketName" }),
         __metadata("design:type", String)
     ], S3ResourceClassification.prototype, "bucketName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=classificationType" }),
-        __metadata("design:type", ClassificationType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=classificationType" }),
+        __metadata("design:type", classificationtype_1.ClassificationType)
     ], S3ResourceClassification.prototype, "classificationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prefix" }),
         __metadata("design:type", String)
     ], S3ResourceClassification.prototype, "prefix", void 0);
     return S3ResourceClassification;
-}(SpeakeasyBase));
-export { S3ResourceClassification };
+}(utils_1.SpeakeasyBase));
+exports.S3ResourceClassification = S3ResourceClassification;

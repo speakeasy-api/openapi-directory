@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Account } from "./account";
-import { Profile } from "./profile";
-import { Webproperty } from "./webproperty";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountTreeResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var account_1 = require("./account");
+var profile_1 = require("./profile");
+var webproperty_1 = require("./webproperty");
 // AccountTreeResponse
 /**
  * JSON template for an Analytics account tree response. The account tree response is used in the provisioning api to return the result of creating an account, property, and view (profile).
@@ -36,21 +39,21 @@ var AccountTreeResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account" }),
-        __metadata("design:type", Account)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account" }),
+        __metadata("design:type", account_1.Account)
     ], AccountTreeResponse.prototype, "account", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], AccountTreeResponse.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profile" }),
-        __metadata("design:type", Profile)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile" }),
+        __metadata("design:type", profile_1.Profile)
     ], AccountTreeResponse.prototype, "profile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webproperty" }),
-        __metadata("design:type", Webproperty)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webproperty" }),
+        __metadata("design:type", webproperty_1.Webproperty)
     ], AccountTreeResponse.prototype, "webproperty", void 0);
     return AccountTreeResponse;
-}(SpeakeasyBase));
-export { AccountTreeResponse };
+}(utils_1.SpeakeasyBase));
+exports.AccountTreeResponse = AccountTreeResponse;

@@ -4,7 +4,7 @@ export declare class LandlordControllerGetTenancyPathParams extends SpeakeasyBas
     shortName: string;
 }
 export declare class LandlordControllerGetTenancyQueryParams extends SpeakeasyBase {
-    tenancyId: string;
+    tenancyID: string;
     token: string;
 }
 export declare class LandlordControllerGetTenancyRequest extends SpeakeasyBase {

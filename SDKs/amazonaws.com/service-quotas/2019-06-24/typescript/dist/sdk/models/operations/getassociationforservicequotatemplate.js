@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,126 +14,151 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var GetAssociationForServiceQuotaTemplateXAmzTargetEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAssociationForServiceQuotaTemplateResponse = exports.GetAssociationForServiceQuotaTemplateRequest = exports.GetAssociationForServiceQuotaTemplateHeaders = exports.GetAssociationForServiceQuotaTemplateXAmzTargetEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var GetAssociationForServiceQuotaTemplateXAmzTargetEnum;
 (function (GetAssociationForServiceQuotaTemplateXAmzTargetEnum) {
     GetAssociationForServiceQuotaTemplateXAmzTargetEnum["ServiceQuotasV20190624GetAssociationForServiceQuotaTemplate"] = "ServiceQuotasV20190624.GetAssociationForServiceQuotaTemplate";
-})(GetAssociationForServiceQuotaTemplateXAmzTargetEnum || (GetAssociationForServiceQuotaTemplateXAmzTargetEnum = {}));
+})(GetAssociationForServiceQuotaTemplateXAmzTargetEnum = exports.GetAssociationForServiceQuotaTemplateXAmzTargetEnum || (exports.GetAssociationForServiceQuotaTemplateXAmzTargetEnum = {}));
 var GetAssociationForServiceQuotaTemplateHeaders = /** @class */ (function (_super) {
     __extends(GetAssociationForServiceQuotaTemplateHeaders, _super);
     function GetAssociationForServiceQuotaTemplateHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetAssociationForServiceQuotaTemplateHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetAssociationForServiceQuotaTemplateHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetAssociationForServiceQuotaTemplateHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetAssociationForServiceQuotaTemplateHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetAssociationForServiceQuotaTemplateHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetAssociationForServiceQuotaTemplateHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetAssociationForServiceQuotaTemplateHeaders.prototype, "xAmzSignedHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Target" }),
         __metadata("design:type", String)
     ], GetAssociationForServiceQuotaTemplateHeaders.prototype, "xAmzTarget", void 0);
     return GetAssociationForServiceQuotaTemplateHeaders;
-}(SpeakeasyBase));
-export { GetAssociationForServiceQuotaTemplateHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociationForServiceQuotaTemplateHeaders = GetAssociationForServiceQuotaTemplateHeaders;
 var GetAssociationForServiceQuotaTemplateRequest = /** @class */ (function (_super) {
     __extends(GetAssociationForServiceQuotaTemplateRequest, _super);
     function GetAssociationForServiceQuotaTemplateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAssociationForServiceQuotaTemplateHeaders)
     ], GetAssociationForServiceQuotaTemplateRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], GetAssociationForServiceQuotaTemplateRequest.prototype, "request", void 0);
     return GetAssociationForServiceQuotaTemplateRequest;
-}(SpeakeasyBase));
-export { GetAssociationForServiceQuotaTemplateRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociationForServiceQuotaTemplateRequest = GetAssociationForServiceQuotaTemplateRequest;
 var GetAssociationForServiceQuotaTemplateResponse = /** @class */ (function (_super) {
     __extends(GetAssociationForServiceQuotaTemplateResponse, _super);
     function GetAssociationForServiceQuotaTemplateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetAssociationForServiceQuotaTemplateResponse.prototype, "awsServiceAccessNotEnabledException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetAssociationForServiceQuotaTemplateResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAssociationForServiceQuotaTemplateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetAssociationForServiceQuotaTemplateResponse.prototype, "dependencyAccessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.GetAssociationForServiceQuotaTemplateResponse)
     ], GetAssociationForServiceQuotaTemplateResponse.prototype, "getAssociationForServiceQuotaTemplateResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetAssociationForServiceQuotaTemplateResponse.prototype, "noAvailableOrganizationException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetAssociationForServiceQuotaTemplateResponse.prototype, "serviceException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetAssociationForServiceQuotaTemplateResponse.prototype, "serviceQuotaTemplateNotInUseException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAssociationForServiceQuotaTemplateResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetAssociationForServiceQuotaTemplateResponse.prototype, "templatesNotAvailableInRegionException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetAssociationForServiceQuotaTemplateResponse.prototype, "tooManyRequestsException", void 0);
     return GetAssociationForServiceQuotaTemplateResponse;
-}(SpeakeasyBase));
-export { GetAssociationForServiceQuotaTemplateResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAssociationForServiceQuotaTemplateResponse = GetAssociationForServiceQuotaTemplateResponse;

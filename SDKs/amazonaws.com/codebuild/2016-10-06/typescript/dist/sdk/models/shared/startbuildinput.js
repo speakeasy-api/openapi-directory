@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,146 +23,148 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProjectArtifacts } from "./projectartifacts";
-import { BuildStatusConfig } from "./buildstatusconfig";
-import { ProjectCache } from "./projectcache";
-import { ComputeTypeEnum } from "./computetypeenum";
-import { EnvironmentTypeEnum } from "./environmenttypeenum";
-import { EnvironmentVariable } from "./environmentvariable";
-import { GitSubmodulesConfig } from "./gitsubmodulesconfig";
-import { ImagePullCredentialsTypeEnum } from "./imagepullcredentialstypeenum";
-import { LogsConfig } from "./logsconfig";
-import { RegistryCredential } from "./registrycredential";
-import { ProjectSource } from "./projectsource";
-import { ProjectSourceVersion } from "./projectsourceversion";
-import { SourceAuth } from "./sourceauth";
-import { SourceTypeEnum } from "./sourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartBuildInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var projectartifacts_1 = require("./projectartifacts");
+var buildstatusconfig_1 = require("./buildstatusconfig");
+var projectcache_1 = require("./projectcache");
+var computetypeenum_1 = require("./computetypeenum");
+var environmenttypeenum_1 = require("./environmenttypeenum");
+var environmentvariable_1 = require("./environmentvariable");
+var gitsubmodulesconfig_1 = require("./gitsubmodulesconfig");
+var imagepullcredentialstypeenum_1 = require("./imagepullcredentialstypeenum");
+var logsconfig_1 = require("./logsconfig");
+var registrycredential_1 = require("./registrycredential");
+var projectsource_1 = require("./projectsource");
+var projectsourceversion_1 = require("./projectsourceversion");
+var sourceauth_1 = require("./sourceauth");
+var sourcetypeenum_1 = require("./sourcetypeenum");
 var StartBuildInput = /** @class */ (function (_super) {
     __extends(StartBuildInput, _super);
     function StartBuildInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artifactsOverride" }),
-        __metadata("design:type", ProjectArtifacts)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artifactsOverride" }),
+        __metadata("design:type", projectartifacts_1.ProjectArtifacts)
     ], StartBuildInput.prototype, "artifactsOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildStatusConfigOverride" }),
-        __metadata("design:type", BuildStatusConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildStatusConfigOverride" }),
+        __metadata("design:type", buildstatusconfig_1.BuildStatusConfig)
     ], StartBuildInput.prototype, "buildStatusConfigOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildspecOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildspecOverride" }),
         __metadata("design:type", String)
     ], StartBuildInput.prototype, "buildspecOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cacheOverride" }),
-        __metadata("design:type", ProjectCache)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cacheOverride" }),
+        __metadata("design:type", projectcache_1.ProjectCache)
     ], StartBuildInput.prototype, "cacheOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificateOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificateOverride" }),
         __metadata("design:type", String)
     ], StartBuildInput.prototype, "certificateOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=computeTypeOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=computeTypeOverride" }),
         __metadata("design:type", String)
     ], StartBuildInput.prototype, "computeTypeOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=debugSessionEnabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=debugSessionEnabled" }),
         __metadata("design:type", Boolean)
     ], StartBuildInput.prototype, "debugSessionEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryptionKeyOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionKeyOverride" }),
         __metadata("design:type", String)
     ], StartBuildInput.prototype, "encryptionKeyOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environmentTypeOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environmentTypeOverride" }),
         __metadata("design:type", String)
     ], StartBuildInput.prototype, "environmentTypeOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environmentVariablesOverride", elemType: EnvironmentVariable }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environmentVariablesOverride", elemType: environmentvariable_1.EnvironmentVariable }),
         __metadata("design:type", Array)
     ], StartBuildInput.prototype, "environmentVariablesOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gitCloneDepthOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gitCloneDepthOverride" }),
         __metadata("design:type", Number)
     ], StartBuildInput.prototype, "gitCloneDepthOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gitSubmodulesConfigOverride" }),
-        __metadata("design:type", GitSubmodulesConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gitSubmodulesConfigOverride" }),
+        __metadata("design:type", gitsubmodulesconfig_1.GitSubmodulesConfig)
     ], StartBuildInput.prototype, "gitSubmodulesConfigOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageOverride" }),
         __metadata("design:type", String)
     ], StartBuildInput.prototype, "imageOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imagePullCredentialsTypeOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imagePullCredentialsTypeOverride" }),
         __metadata("design:type", String)
     ], StartBuildInput.prototype, "imagePullCredentialsTypeOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insecureSslOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insecureSslOverride" }),
         __metadata("design:type", Boolean)
     ], StartBuildInput.prototype, "insecureSslOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logsConfigOverride" }),
-        __metadata("design:type", LogsConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logsConfigOverride" }),
+        __metadata("design:type", logsconfig_1.LogsConfig)
     ], StartBuildInput.prototype, "logsConfigOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privilegedModeOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privilegedModeOverride" }),
         __metadata("design:type", Boolean)
     ], StartBuildInput.prototype, "privilegedModeOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectName" }),
         __metadata("design:type", String)
     ], StartBuildInput.prototype, "projectName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queuedTimeoutInMinutesOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queuedTimeoutInMinutesOverride" }),
         __metadata("design:type", Number)
     ], StartBuildInput.prototype, "queuedTimeoutInMinutesOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registryCredentialOverride" }),
-        __metadata("design:type", RegistryCredential)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registryCredentialOverride" }),
+        __metadata("design:type", registrycredential_1.RegistryCredential)
     ], StartBuildInput.prototype, "registryCredentialOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportBuildStatusOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportBuildStatusOverride" }),
         __metadata("design:type", Boolean)
     ], StartBuildInput.prototype, "reportBuildStatusOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondaryArtifactsOverride", elemType: ProjectArtifacts }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondaryArtifactsOverride", elemType: projectartifacts_1.ProjectArtifacts }),
         __metadata("design:type", Array)
     ], StartBuildInput.prototype, "secondaryArtifactsOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondarySourcesOverride", elemType: ProjectSource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondarySourcesOverride", elemType: projectsource_1.ProjectSource }),
         __metadata("design:type", Array)
     ], StartBuildInput.prototype, "secondarySourcesOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondarySourcesVersionOverride", elemType: ProjectSourceVersion }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondarySourcesVersionOverride", elemType: projectsourceversion_1.ProjectSourceVersion }),
         __metadata("design:type", Array)
     ], StartBuildInput.prototype, "secondarySourcesVersionOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceRoleOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceRoleOverride" }),
         __metadata("design:type", String)
     ], StartBuildInput.prototype, "serviceRoleOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceAuthOverride" }),
-        __metadata("design:type", SourceAuth)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceAuthOverride" }),
+        __metadata("design:type", sourceauth_1.SourceAuth)
     ], StartBuildInput.prototype, "sourceAuthOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceLocationOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceLocationOverride" }),
         __metadata("design:type", String)
     ], StartBuildInput.prototype, "sourceLocationOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceTypeOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceTypeOverride" }),
         __metadata("design:type", String)
     ], StartBuildInput.prototype, "sourceTypeOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceVersion" }),
         __metadata("design:type", String)
     ], StartBuildInput.prototype, "sourceVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeoutInMinutesOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeoutInMinutesOverride" }),
         __metadata("design:type", Number)
     ], StartBuildInput.prototype, "timeoutInMinutesOverride", void 0);
     return StartBuildInput;
-}(SpeakeasyBase));
-export { StartBuildInput };
+}(utils_1.SpeakeasyBase));
+exports.StartBuildInput = StartBuildInput;

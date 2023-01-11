@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Device = void 0;
+var utils_1 = require("../../../internal/utils");
 // Device
 /**
  * <p>An object representing a container instance host device.</p> <note> <p>This object isn't applicable to jobs that are running on Fargate resources and shouldn't be provided.</p> </note>
@@ -33,17 +36,17 @@ var Device = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerPath" }),
         __metadata("design:type", String)
     ], Device.prototype, "containerPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hostPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hostPath" }),
         __metadata("design:type", String)
     ], Device.prototype, "hostPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions" }),
         __metadata("design:type", Array)
     ], Device.prototype, "permissions", void 0);
     return Device;
-}(SpeakeasyBase));
-export { Device };
+}(utils_1.SpeakeasyBase));
+exports.Device = Device;

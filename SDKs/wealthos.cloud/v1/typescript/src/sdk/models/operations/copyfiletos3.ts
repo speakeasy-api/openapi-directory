@@ -35,23 +35,23 @@ export class CopyFileToS3Response extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  copyFileToS3200ApplicationJsonAny?: any;
+  copyFileToS3200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  copyFileToS3400ApplicationJsonAny?: any;
+  copyFileToS3400ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  copyFileToS3401ApplicationJsonAny?: any;
+  copyFileToS3401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  copyFileToS3403ApplicationJsonAny?: any;
+  copyFileToS3403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  copyFileToS3404ApplicationJsonAny?: any;
+  copyFileToS3404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  copyFileToS3429ApplicationJsonAny?: any;
+  copyFileToS3429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  copyFileToS3500ApplicationJsonAny?: any;
+  copyFileToS3500ApplicationJSONAny?: any;
 }

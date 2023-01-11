@@ -19,8 +19,8 @@ export class GetAddressResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getAddress200ApplicationJsonAny?: any;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getAddress200ApplicationJSONAny?: any;
 }

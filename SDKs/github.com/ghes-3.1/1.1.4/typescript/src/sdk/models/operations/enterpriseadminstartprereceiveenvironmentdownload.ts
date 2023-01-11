@@ -44,7 +44,7 @@ export class EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse extends S
   statusCode: number;
 
   @SpeakeasyMetadata()
-  enterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJsonObject?: EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJson;
+  enterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJSONObject?: EnterpriseAdminStartPreReceiveEnvironmentDownload422ApplicationJson;
 
   @SpeakeasyMetadata()
   preReceiveEnvironmentDownloadStatus?: shared.PreReceiveEnvironmentDownloadStatus;

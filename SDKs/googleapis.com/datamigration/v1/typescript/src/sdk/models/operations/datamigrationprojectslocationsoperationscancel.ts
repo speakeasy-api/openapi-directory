@@ -62,7 +62,7 @@ export class DatamigrationProjectsLocationsOperationsCancelRequest extends Speak
   queryParams: DatamigrationProjectsLocationsOperationsCancelQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: DatamigrationProjectsLocationsOperationsCancelSecurity;
@@ -74,7 +74,7 @@ export class DatamigrationProjectsLocationsOperationsCancelResponse extends Spea
   contentType: string;
 
   @SpeakeasyMetadata()
-  empty?: Map<string, any>;
+  empty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

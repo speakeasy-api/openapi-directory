@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkApplianceStaticRoutesResponse = exports.GetNetworkApplianceStaticRoutesRequest = exports.GetNetworkApplianceStaticRoutesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkApplianceStaticRoutesPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceStaticRoutesPathParams, _super);
     function GetNetworkApplianceStaticRoutesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceStaticRoutesPathParams.prototype, "networkId", void 0);
     return GetNetworkApplianceStaticRoutesPathParams;
-}(SpeakeasyBase));
-export { GetNetworkApplianceStaticRoutesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceStaticRoutesPathParams = GetNetworkApplianceStaticRoutesPathParams;
 var GetNetworkApplianceStaticRoutesRequest = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceStaticRoutesRequest, _super);
     function GetNetworkApplianceStaticRoutesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkApplianceStaticRoutesPathParams)
     ], GetNetworkApplianceStaticRoutesRequest.prototype, "pathParams", void 0);
     return GetNetworkApplianceStaticRoutesRequest;
-}(SpeakeasyBase));
-export { GetNetworkApplianceStaticRoutesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceStaticRoutesRequest = GetNetworkApplianceStaticRoutesRequest;
 var GetNetworkApplianceStaticRoutesResponse = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceStaticRoutesResponse, _super);
     function GetNetworkApplianceStaticRoutesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkApplianceStaticRoutesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkApplianceStaticRoutesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkApplianceStaticRoutesResponse.prototype, "getNetworkApplianceStaticRoutes200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkApplianceStaticRoutesResponse.prototype, "getNetworkApplianceStaticRoutes200ApplicationJSONObject", void 0);
     return GetNetworkApplianceStaticRoutesResponse;
-}(SpeakeasyBase));
-export { GetNetworkApplianceStaticRoutesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceStaticRoutesResponse = GetNetworkApplianceStaticRoutesResponse;

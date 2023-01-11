@@ -25,7 +25,7 @@ export class RemovePagesV1RequestBody extends SpeakeasyBase {
 
 export class RemovePagesV14XxApplicationProblemPlusJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
-  errors?: Map<string, any>;
+  errors?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: number;
@@ -55,5 +55,5 @@ export class RemovePagesV1Response extends SpeakeasyBase {
   removePagesV1200ApplicationPdfBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
-  removePagesV14XxApplicationProblemPlusJsonObject?: RemovePagesV14XxApplicationProblemPlusJson;
+  removePagesV14XXApplicationProblemPlusJsonObject?: RemovePagesV14XxApplicationProblemPlusJson;
 }

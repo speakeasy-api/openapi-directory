@@ -45,7 +45,7 @@ export class AddApplicationInputRequest extends SpeakeasyBase {
 
 export class AddApplicationInputResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  addApplicationInputResponse?: Map<string, any>;
+  addApplicationInputResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   codeValidationException?: any;

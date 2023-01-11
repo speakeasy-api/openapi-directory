@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LanguageCodeEnum } from "./languagecodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LexiconAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
+var languagecodeenum_1 = require("./languagecodeenum");
 // LexiconAttributes
 /**
  * Contains metadata describing the lexicon such as the number of lexemes, language code, and so on. For more information, see <a href="https://docs.aws.amazon.com/polly/latest/dg/managing-lexicons.html">Managing Lexicons</a>.
@@ -34,29 +37,29 @@ var LexiconAttributes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Alphabet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Alphabet" }),
         __metadata("design:type", String)
     ], LexiconAttributes.prototype, "alphabet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LanguageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LanguageCode" }),
         __metadata("design:type", String)
     ], LexiconAttributes.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModified" }),
         __metadata("design:type", Date)
     ], LexiconAttributes.prototype, "lastModified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LexemesCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LexemesCount" }),
         __metadata("design:type", Number)
     ], LexiconAttributes.prototype, "lexemesCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LexiconArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LexiconArn" }),
         __metadata("design:type", String)
     ], LexiconAttributes.prototype, "lexiconArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Size" }),
         __metadata("design:type", Number)
     ], LexiconAttributes.prototype, "size", void 0);
     return LexiconAttributes;
-}(SpeakeasyBase));
-export { LexiconAttributes };
+}(utils_1.SpeakeasyBase));
+exports.LexiconAttributes = LexiconAttributes;

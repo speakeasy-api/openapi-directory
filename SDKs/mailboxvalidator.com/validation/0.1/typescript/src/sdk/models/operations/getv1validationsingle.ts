@@ -30,8 +30,8 @@ export class GetV1ValidationSingleResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getV1ValidationSingle200ApplicationJsonString?: string;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getV1ValidationSingle200ApplicationJSONString?: string;
 }

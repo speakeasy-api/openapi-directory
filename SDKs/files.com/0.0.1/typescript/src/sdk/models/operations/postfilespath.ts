@@ -13,10 +13,10 @@ export class PostFilesPathRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "multipart_form, name=action" })
   action?: string;
 
-  @SpeakeasyMetadata({ data: "multipart_form, name=etags[etag]" })
+  @SpeakeasyMetadata({ data: "multipart_form, name=etags[etag];json=true" })
   etagsEtag: string[];
 
-  @SpeakeasyMetadata({ data: "multipart_form, name=etags[part]" })
+  @SpeakeasyMetadata({ data: "multipart_form, name=etags[part];json=true" })
   etagsPart: number[];
 
   @SpeakeasyMetadata({ data: "multipart_form, name=length" })

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecordMarkerFailedCauseEnum } from "./recordmarkerfailedcauseenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecordMarkerFailedEventAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
+var recordmarkerfailedcauseenum_1 = require("./recordmarkerfailedcauseenum");
 // RecordMarkerFailedEventAttributes
 /**
  * Provides the details of the <code>RecordMarkerFailed</code> event.
@@ -34,17 +37,17 @@ var RecordMarkerFailedEventAttributes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cause" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cause" }),
         __metadata("design:type", String)
     ], RecordMarkerFailedEventAttributes.prototype, "cause", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=decisionTaskCompletedEventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=decisionTaskCompletedEventId" }),
         __metadata("design:type", Number)
     ], RecordMarkerFailedEventAttributes.prototype, "decisionTaskCompletedEventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=markerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=markerName" }),
         __metadata("design:type", String)
     ], RecordMarkerFailedEventAttributes.prototype, "markerName", void 0);
     return RecordMarkerFailedEventAttributes;
-}(SpeakeasyBase));
-export { RecordMarkerFailedEventAttributes };
+}(utils_1.SpeakeasyBase));
+exports.RecordMarkerFailedEventAttributes = RecordMarkerFailedEventAttributes;

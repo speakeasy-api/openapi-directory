@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostRemoveRoleFromDbInstanceActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostRemoveRoleFromDbInstanceResponse = exports.PostRemoveRoleFromDbInstanceRequest = exports.PostRemoveRoleFromDbInstanceHeaders = exports.PostRemoveRoleFromDbInstanceQueryParams = exports.PostRemoveRoleFromDbInstanceVersionEnum = exports.PostRemoveRoleFromDbInstanceActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostRemoveRoleFromDbInstanceActionEnum;
 (function (PostRemoveRoleFromDbInstanceActionEnum) {
     PostRemoveRoleFromDbInstanceActionEnum["RemoveRoleFromDbInstance"] = "RemoveRoleFromDBInstance";
-})(PostRemoveRoleFromDbInstanceActionEnum || (PostRemoveRoleFromDbInstanceActionEnum = {}));
-export var PostRemoveRoleFromDbInstanceVersionEnum;
+})(PostRemoveRoleFromDbInstanceActionEnum = exports.PostRemoveRoleFromDbInstanceActionEnum || (exports.PostRemoveRoleFromDbInstanceActionEnum = {}));
+var PostRemoveRoleFromDbInstanceVersionEnum;
 (function (PostRemoveRoleFromDbInstanceVersionEnum) {
     PostRemoveRoleFromDbInstanceVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostRemoveRoleFromDbInstanceVersionEnum || (PostRemoveRoleFromDbInstanceVersionEnum = {}));
+})(PostRemoveRoleFromDbInstanceVersionEnum = exports.PostRemoveRoleFromDbInstanceVersionEnum || (exports.PostRemoveRoleFromDbInstanceVersionEnum = {}));
 var PostRemoveRoleFromDbInstanceQueryParams = /** @class */ (function (_super) {
     __extends(PostRemoveRoleFromDbInstanceQueryParams, _super);
     function PostRemoveRoleFromDbInstanceQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostRemoveRoleFromDbInstanceQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostRemoveRoleFromDbInstanceQueryParams.prototype, "version", void 0);
     return PostRemoveRoleFromDbInstanceQueryParams;
-}(SpeakeasyBase));
-export { PostRemoveRoleFromDbInstanceQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostRemoveRoleFromDbInstanceQueryParams = PostRemoveRoleFromDbInstanceQueryParams;
 var PostRemoveRoleFromDbInstanceHeaders = /** @class */ (function (_super) {
     __extends(PostRemoveRoleFromDbInstanceHeaders, _super);
     function PostRemoveRoleFromDbInstanceHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostRemoveRoleFromDbInstanceHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostRemoveRoleFromDbInstanceHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostRemoveRoleFromDbInstanceHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostRemoveRoleFromDbInstanceHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostRemoveRoleFromDbInstanceHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostRemoveRoleFromDbInstanceHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostRemoveRoleFromDbInstanceHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostRemoveRoleFromDbInstanceHeaders;
-}(SpeakeasyBase));
-export { PostRemoveRoleFromDbInstanceHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostRemoveRoleFromDbInstanceHeaders = PostRemoveRoleFromDbInstanceHeaders;
 var PostRemoveRoleFromDbInstanceRequest = /** @class */ (function (_super) {
     __extends(PostRemoveRoleFromDbInstanceRequest, _super);
     function PostRemoveRoleFromDbInstanceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRemoveRoleFromDbInstanceQueryParams)
     ], PostRemoveRoleFromDbInstanceRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRemoveRoleFromDbInstanceHeaders)
     ], PostRemoveRoleFromDbInstanceRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostRemoveRoleFromDbInstanceRequest.prototype, "request", void 0);
     return PostRemoveRoleFromDbInstanceRequest;
-}(SpeakeasyBase));
-export { PostRemoveRoleFromDbInstanceRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostRemoveRoleFromDbInstanceRequest = PostRemoveRoleFromDbInstanceRequest;
 var PostRemoveRoleFromDbInstanceResponse = /** @class */ (function (_super) {
     __extends(PostRemoveRoleFromDbInstanceResponse, _super);
     function PostRemoveRoleFromDbInstanceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostRemoveRoleFromDbInstanceResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostRemoveRoleFromDbInstanceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostRemoveRoleFromDbInstanceResponse.prototype, "statusCode", void 0);
     return PostRemoveRoleFromDbInstanceResponse;
-}(SpeakeasyBase));
-export { PostRemoveRoleFromDbInstanceResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostRemoveRoleFromDbInstanceResponse = PostRemoveRoleFromDbInstanceResponse;

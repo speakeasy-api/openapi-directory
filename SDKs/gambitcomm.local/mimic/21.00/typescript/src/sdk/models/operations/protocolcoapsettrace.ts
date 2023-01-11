@@ -25,5 +25,5 @@ export class ProtocolCoapSetTraceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolCoapSetTrace200ApplicationJsonString?: string;
+  protocolCoapSetTrace200ApplicationJSONString?: string;
 }

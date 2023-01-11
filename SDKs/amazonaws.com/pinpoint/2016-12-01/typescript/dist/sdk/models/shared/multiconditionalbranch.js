@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimpleCondition } from "./simplecondition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MultiConditionalBranch = void 0;
+var utils_1 = require("../../../internal/utils");
+var simplecondition_1 = require("./simplecondition");
 // MultiConditionalBranch
 /**
  * Specifies a condition to evaluate for an activity path in a journey.
@@ -34,13 +37,13 @@ var MultiConditionalBranch = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Condition" }),
-        __metadata("design:type", SimpleCondition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Condition" }),
+        __metadata("design:type", simplecondition_1.SimpleCondition)
     ], MultiConditionalBranch.prototype, "condition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextActivity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextActivity" }),
         __metadata("design:type", String)
     ], MultiConditionalBranch.prototype, "nextActivity", void 0);
     return MultiConditionalBranch;
-}(SpeakeasyBase));
-export { MultiConditionalBranch };
+}(utils_1.SpeakeasyBase));
+exports.MultiConditionalBranch = MultiConditionalBranch;

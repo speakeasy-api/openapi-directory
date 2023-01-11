@@ -19,7 +19,7 @@ export declare class DisassociateQualificationFromWorkerRequest extends Speakeas
 }
 export declare class DisassociateQualificationFromWorkerResponse extends SpeakeasyBase {
     contentType: string;
-    disassociateQualificationFromWorkerResponse?: Map<string, any>;
+    disassociateQualificationFromWorkerResponse?: Record<string, any>;
     requestError?: any;
     serviceFault?: any;
     statusCode: number;

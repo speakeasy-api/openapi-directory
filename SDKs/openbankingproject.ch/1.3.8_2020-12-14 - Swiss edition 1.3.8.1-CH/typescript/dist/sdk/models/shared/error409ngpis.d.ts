@@ -6,6 +6,6 @@ import { TppMessage409Pis } from "./tppmessage409pis";
  *
 **/
 export declare class Error409NgPis extends SpeakeasyBase {
-    links?: Map<string, HrefType>;
+    links?: Record<string, HrefType>;
     tppMessages?: TppMessage409Pis[];
 }

@@ -107,7 +107,7 @@ export class ResultFormattedResults extends SpeakeasyBase {
   locale?: string;
 
   @SpeakeasyMetadata({ elemType: ResultFormattedResultsRuleResults })
-  ruleResults?: Map<string, ResultFormattedResultsRuleResults>;
+  ruleResults?: Record<string, ResultFormattedResultsRuleResults>;
 }
 
 

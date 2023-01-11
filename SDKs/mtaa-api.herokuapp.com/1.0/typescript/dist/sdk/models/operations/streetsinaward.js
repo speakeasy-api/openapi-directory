@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreetsInAWardResponse = exports.StreetsInAWardRequest = exports.StreetsInAWardPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var StreetsInAWardPathParams = /** @class */ (function (_super) {
     __extends(StreetsInAWardPathParams, _super);
     function StreetsInAWardPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=country" }),
         __metadata("design:type", String)
     ], StreetsInAWardPathParams.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=district" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=district" }),
         __metadata("design:type", String)
     ], StreetsInAWardPathParams.prototype, "district", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=region" }),
         __metadata("design:type", String)
     ], StreetsInAWardPathParams.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ward" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ward" }),
         __metadata("design:type", String)
     ], StreetsInAWardPathParams.prototype, "ward", void 0);
     return StreetsInAWardPathParams;
-}(SpeakeasyBase));
-export { StreetsInAWardPathParams };
+}(utils_1.SpeakeasyBase));
+exports.StreetsInAWardPathParams = StreetsInAWardPathParams;
 var StreetsInAWardRequest = /** @class */ (function (_super) {
     __extends(StreetsInAWardRequest, _super);
     function StreetsInAWardRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StreetsInAWardPathParams)
     ], StreetsInAWardRequest.prototype, "pathParams", void 0);
     return StreetsInAWardRequest;
-}(SpeakeasyBase));
-export { StreetsInAWardRequest };
+}(utils_1.SpeakeasyBase));
+exports.StreetsInAWardRequest = StreetsInAWardRequest;
 var StreetsInAWardResponse = /** @class */ (function (_super) {
     __extends(StreetsInAWardResponse, _super);
     function StreetsInAWardResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StreetsInAWardResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StreetsInAWardResponse.prototype, "statusCode", void 0);
     return StreetsInAWardResponse;
-}(SpeakeasyBase));
-export { StreetsInAWardResponse };
+}(utils_1.SpeakeasyBase));
+exports.StreetsInAWardResponse = StreetsInAWardResponse;

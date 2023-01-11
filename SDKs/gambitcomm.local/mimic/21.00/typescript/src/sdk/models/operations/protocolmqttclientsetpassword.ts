@@ -25,5 +25,5 @@ export class ProtocolMqttClientSetPasswordResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolMqttClientSetPassword200ApplicationJsonInt32Integers?: number[];
+  protocolMqttClientSetPassword200ApplicationJSONInt32Integers?: number[];
 }

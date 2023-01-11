@@ -7,7 +7,7 @@ export class User extends SpeakeasyBase {
   administrator?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=attributes" })
-  attributes?: Map<string, any>;
+  attributes?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=coordinateFormat" })
   coordinateFormat?: string;

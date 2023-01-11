@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostPortfolioAnalysisContributionsRiskResponse = exports.PostPortfolioAnalysisContributionsRiskRequest = exports.PostPortfolioAnalysisContributionsRisk200ApplicationJson = exports.PostPortfolioAnalysisContributionsRisk200ApplicationJsonPortfolios = exports.PostPortfolioAnalysisContributionsRiskRequestBody = exports.PostPortfolioAnalysisContributionsRiskRequestBodyPortfolios = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostPortfolioAnalysisContributionsRiskRequestBodyPortfolios = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisContributionsRiskRequestBodyPortfolios, _super);
     function PostPortfolioAnalysisContributionsRiskRequestBodyPortfolios() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsWeights" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsWeights" }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisContributionsRiskRequestBodyPortfolios.prototype, "assetsWeights", void 0);
     return PostPortfolioAnalysisContributionsRiskRequestBodyPortfolios;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisContributionsRiskRequestBodyPortfolios };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisContributionsRiskRequestBodyPortfolios = PostPortfolioAnalysisContributionsRiskRequestBodyPortfolios;
 var PostPortfolioAnalysisContributionsRiskRequestBody = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisContributionsRiskRequestBody, _super);
     function PostPortfolioAnalysisContributionsRiskRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets" }),
         __metadata("design:type", Number)
     ], PostPortfolioAnalysisContributionsRiskRequestBody.prototype, "assets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsCovarianceMatrix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsCovarianceMatrix" }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisContributionsRiskRequestBody.prototype, "assetsCovarianceMatrix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsGroups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsGroups" }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisContributionsRiskRequestBody.prototype, "assetsGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolios", elemType: PostPortfolioAnalysisContributionsRiskRequestBodyPortfolios }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolios", elemType: PostPortfolioAnalysisContributionsRiskRequestBodyPortfolios }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisContributionsRiskRequestBody.prototype, "portfolios", void 0);
     return PostPortfolioAnalysisContributionsRiskRequestBody;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisContributionsRiskRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisContributionsRiskRequestBody = PostPortfolioAnalysisContributionsRiskRequestBody;
 var PostPortfolioAnalysisContributionsRisk200ApplicationJsonPortfolios = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisContributionsRisk200ApplicationJsonPortfolios, _super);
     function PostPortfolioAnalysisContributionsRisk200ApplicationJsonPortfolios() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsGroupsRiskContributions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsGroupsRiskContributions" }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisContributionsRisk200ApplicationJsonPortfolios.prototype, "assetsGroupsRiskContributions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetsRiskContributions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetsRiskContributions" }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisContributionsRisk200ApplicationJsonPortfolios.prototype, "assetsRiskContributions", void 0);
     return PostPortfolioAnalysisContributionsRisk200ApplicationJsonPortfolios;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisContributionsRisk200ApplicationJsonPortfolios };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisContributionsRisk200ApplicationJsonPortfolios = PostPortfolioAnalysisContributionsRisk200ApplicationJsonPortfolios;
 var PostPortfolioAnalysisContributionsRisk200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisContributionsRisk200ApplicationJson, _super);
     function PostPortfolioAnalysisContributionsRisk200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portfolios", elemType: PostPortfolioAnalysisContributionsRisk200ApplicationJsonPortfolios }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portfolios", elemType: PostPortfolioAnalysisContributionsRisk200ApplicationJsonPortfolios }),
         __metadata("design:type", Array)
     ], PostPortfolioAnalysisContributionsRisk200ApplicationJson.prototype, "portfolios", void 0);
     return PostPortfolioAnalysisContributionsRisk200ApplicationJson;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisContributionsRisk200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisContributionsRisk200ApplicationJson = PostPortfolioAnalysisContributionsRisk200ApplicationJson;
 var PostPortfolioAnalysisContributionsRiskRequest = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisContributionsRiskRequest, _super);
     function PostPortfolioAnalysisContributionsRiskRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostPortfolioAnalysisContributionsRiskRequestBody)
     ], PostPortfolioAnalysisContributionsRiskRequest.prototype, "request", void 0);
     return PostPortfolioAnalysisContributionsRiskRequest;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisContributionsRiskRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisContributionsRiskRequest = PostPortfolioAnalysisContributionsRiskRequest;
 var PostPortfolioAnalysisContributionsRiskResponse = /** @class */ (function (_super) {
     __extends(PostPortfolioAnalysisContributionsRiskResponse, _super);
     function PostPortfolioAnalysisContributionsRiskResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostPortfolioAnalysisContributionsRiskResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostPortfolioAnalysisContributionsRisk200ApplicationJson)
-    ], PostPortfolioAnalysisContributionsRiskResponse.prototype, "postPortfolioAnalysisContributionsRisk200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostPortfolioAnalysisContributionsRiskResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostPortfolioAnalysisContributionsRisk200ApplicationJson)
+    ], PostPortfolioAnalysisContributionsRiskResponse.prototype, "postPortfolioAnalysisContributionsRisk200ApplicationJSONObject", void 0);
     return PostPortfolioAnalysisContributionsRiskResponse;
-}(SpeakeasyBase));
-export { PostPortfolioAnalysisContributionsRiskResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostPortfolioAnalysisContributionsRiskResponse = PostPortfolioAnalysisContributionsRiskResponse;

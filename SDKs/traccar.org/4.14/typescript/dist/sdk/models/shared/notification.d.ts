@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class Notification extends SpeakeasyBase {
     always?: boolean;
-    attributes?: Map<string, any>;
+    attributes?: Record<string, any>;
     calendarId?: number;
     id?: number;
     mail?: boolean;

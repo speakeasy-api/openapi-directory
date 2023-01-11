@@ -21,7 +21,7 @@ export declare class CreateDatabaseResponse extends SpeakeasyBase {
     alreadyExistsException?: any;
     concurrentModificationException?: any;
     contentType: string;
-    createDatabaseResponse?: Map<string, any>;
+    createDatabaseResponse?: Record<string, any>;
     glueEncryptionException?: any;
     internalServiceException?: any;
     invalidInputException?: any;

@@ -13,6 +13,9 @@ export declare enum InstallationRepositorySelectionEnum {
     All = "all",
     Selected = "selected"
 }
+/**
+ * Simple User
+**/
 export declare class InstallationSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

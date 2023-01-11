@@ -10,5 +10,5 @@ export declare class ActionsCancelWorkflowRunRequest extends SpeakeasyBase {
 export declare class ActionsCancelWorkflowRunResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    actionsCancelWorkflowRun202ApplicationJsonObject?: Map<string, any>;
+    actionsCancelWorkflowRun202ApplicationJSONObject?: Record<string, any>;
 }

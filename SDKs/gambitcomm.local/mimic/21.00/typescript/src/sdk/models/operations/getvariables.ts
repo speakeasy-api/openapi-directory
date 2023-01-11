@@ -28,5 +28,5 @@ export class GetVariablesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getVariables200ApplicationJsonStrings?: string[];
+  getVariables200ApplicationJSONStrings?: string[];
 }

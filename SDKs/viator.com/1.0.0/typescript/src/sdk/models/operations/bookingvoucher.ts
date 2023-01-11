@@ -7,7 +7,7 @@ export class BookingVoucherQueryParams extends SpeakeasyBase {
   embeddedResources?: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fullHTML" })
-  fullHtml?: boolean;
+  fullHTML?: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=itemId" })
   itemId?: number;
@@ -55,10 +55,10 @@ export class BookingVoucher200ApplicationJson extends SpeakeasyBase {
   errorType?: string;
 
   @SpeakeasyMetadata({ data: "json, name=extraInfo" })
-  extraInfo?: Map<string, any>;
+  extraInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=extraObject" })
-  extraObject?: Map<string, any>;
+  extraObject?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=success" })
   success?: boolean;
@@ -88,5 +88,5 @@ export class BookingVoucherResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  bookingVoucher200ApplicationJsonObject?: BookingVoucher200ApplicationJson;
+  bookingVoucher200ApplicationJSONObject?: BookingVoucher200ApplicationJson;
 }

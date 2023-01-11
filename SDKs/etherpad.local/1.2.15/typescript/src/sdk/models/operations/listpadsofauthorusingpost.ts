@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class ListPadsOfAuthorUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=authorID" })
-  authorId?: string;
+  authorID?: string;
 }
 
 
@@ -31,7 +31,7 @@ export class ListPadsOfAuthorUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class ListPadsOfAuthorUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class ListPadsOfAuthorUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class ListPadsOfAuthorUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listPadsOfAuthorUsingPost200ApplicationJsonObject?: ListPadsOfAuthorUsingPost200ApplicationJson;
+  listPadsOfAuthorUsingPOST200ApplicationJSONObject?: ListPadsOfAuthorUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  listPadsOfAuthorUsingPost400ApplicationJsonObject?: ListPadsOfAuthorUsingPost400ApplicationJson;
+  listPadsOfAuthorUsingPOST400ApplicationJSONObject?: ListPadsOfAuthorUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  listPadsOfAuthorUsingPost401ApplicationJsonObject?: ListPadsOfAuthorUsingPost401ApplicationJson;
+  listPadsOfAuthorUsingPOST401ApplicationJSONObject?: ListPadsOfAuthorUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  listPadsOfAuthorUsingPost500ApplicationJsonObject?: ListPadsOfAuthorUsingPost500ApplicationJson;
+  listPadsOfAuthorUsingPOST500ApplicationJSONObject?: ListPadsOfAuthorUsingPost500ApplicationJson;
 }

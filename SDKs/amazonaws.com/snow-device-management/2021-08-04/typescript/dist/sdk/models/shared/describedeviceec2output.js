@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceSummary } from "./instancesummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeDeviceEc2Output = void 0;
+var utils_1 = require("../../../internal/utils");
+var instancesummary_1 = require("./instancesummary");
 var DescribeDeviceEc2Output = /** @class */ (function (_super) {
     __extends(DescribeDeviceEc2Output, _super);
     function DescribeDeviceEc2Output() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instances", elemType: InstanceSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instances", elemType: instancesummary_1.InstanceSummary }),
         __metadata("design:type", Array)
     ], DescribeDeviceEc2Output.prototype, "instances", void 0);
     return DescribeDeviceEc2Output;
-}(SpeakeasyBase));
-export { DescribeDeviceEc2Output };
+}(utils_1.SpeakeasyBase));
+exports.DescribeDeviceEc2Output = DescribeDeviceEc2Output;

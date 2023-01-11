@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleLongrunningOperation } from "./googlelongrunningoperation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleLongrunningListOperationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlelongrunningoperation_1 = require("./googlelongrunningoperation");
 // GoogleLongrunningListOperationsResponse
 /**
  * The response message for Operations.ListOperations.
@@ -34,13 +37,13 @@ var GoogleLongrunningListOperationsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GoogleLongrunningListOperationsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: GoogleLongrunningOperation }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: googlelongrunningoperation_1.GoogleLongrunningOperation }),
         __metadata("design:type", Array)
     ], GoogleLongrunningListOperationsResponse.prototype, "operations", void 0);
     return GoogleLongrunningListOperationsResponse;
-}(SpeakeasyBase));
-export { GoogleLongrunningListOperationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleLongrunningListOperationsResponse = GoogleLongrunningListOperationsResponse;

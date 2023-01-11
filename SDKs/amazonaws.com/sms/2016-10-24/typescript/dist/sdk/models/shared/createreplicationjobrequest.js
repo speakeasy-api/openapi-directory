@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LicenseTypeEnum } from "./licensetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateReplicationJobRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var licensetypeenum_1 = require("./licensetypeenum");
 var CreateReplicationJobRequest = /** @class */ (function (_super) {
     __extends(CreateReplicationJobRequest, _super);
     function CreateReplicationJobRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], CreateReplicationJobRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encrypted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encrypted" }),
         __metadata("design:type", Boolean)
     ], CreateReplicationJobRequest.prototype, "encrypted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequency" }),
         __metadata("design:type", Number)
     ], CreateReplicationJobRequest.prototype, "frequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsKeyId" }),
         __metadata("design:type", String)
     ], CreateReplicationJobRequest.prototype, "kmsKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=licenseType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=licenseType" }),
         __metadata("design:type", String)
     ], CreateReplicationJobRequest.prototype, "licenseType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=numberOfRecentAmisToKeep" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=numberOfRecentAmisToKeep" }),
         __metadata("design:type", Number)
     ], CreateReplicationJobRequest.prototype, "numberOfRecentAmisToKeep", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleName" }),
         __metadata("design:type", String)
     ], CreateReplicationJobRequest.prototype, "roleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runOnce" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runOnce" }),
         __metadata("design:type", Boolean)
     ], CreateReplicationJobRequest.prototype, "runOnce", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seedReplicationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seedReplicationTime" }),
         __metadata("design:type", Date)
     ], CreateReplicationJobRequest.prototype, "seedReplicationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverId" }),
         __metadata("design:type", String)
     ], CreateReplicationJobRequest.prototype, "serverId", void 0);
     return CreateReplicationJobRequest;
-}(SpeakeasyBase));
-export { CreateReplicationJobRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateReplicationJobRequest = CreateReplicationJobRequest;

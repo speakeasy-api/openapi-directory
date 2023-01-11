@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServerGroupLaunchConfiguration } from "./servergrouplaunchconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAppLaunchConfigurationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var servergrouplaunchconfiguration_1 = require("./servergrouplaunchconfiguration");
 var GetAppLaunchConfigurationResponse = /** @class */ (function (_super) {
     __extends(GetAppLaunchConfigurationResponse, _super);
     function GetAppLaunchConfigurationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appId" }),
         __metadata("design:type", String)
     ], GetAppLaunchConfigurationResponse.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoLaunch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoLaunch" }),
         __metadata("design:type", Boolean)
     ], GetAppLaunchConfigurationResponse.prototype, "autoLaunch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleName" }),
         __metadata("design:type", String)
     ], GetAppLaunchConfigurationResponse.prototype, "roleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverGroupLaunchConfigurations", elemType: ServerGroupLaunchConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverGroupLaunchConfigurations", elemType: servergrouplaunchconfiguration_1.ServerGroupLaunchConfiguration }),
         __metadata("design:type", Array)
     ], GetAppLaunchConfigurationResponse.prototype, "serverGroupLaunchConfigurations", void 0);
     return GetAppLaunchConfigurationResponse;
-}(SpeakeasyBase));
-export { GetAppLaunchConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAppLaunchConfigurationResponse = GetAppLaunchConfigurationResponse;

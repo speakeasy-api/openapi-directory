@@ -50,5 +50,5 @@ export class DeleteGroupResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteGroup200ApplicationJsonObject?: DeleteGroup200ApplicationJson;
+  deleteGroup200ApplicationJSONObject?: DeleteGroup200ApplicationJson;
 }

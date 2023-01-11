@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { VmmigrationProjectsLocationsGroupsAddGroupMigrationRequest, VmmigrationProjectsLocationsGroupsAddGroupMigrationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,29 +30,29 @@ const req: VmmigrationProjectsLocationsGroupsAddGroupMigrationRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    group: "quas",
+    group: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "maiores",
-    alt: "proto",
-    callback: "rerum",
-    fields: "non",
-    key: "laboriosam",
-    oauthToken: "labore",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "beatae",
-    uploadType: "hic",
-    uploadProtocol: "et",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    migratingVm: "qui",
+    migratingVm: "dicta",
   },
 };
 

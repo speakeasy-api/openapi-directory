@@ -7,7 +7,6 @@ export declare class DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiv
     externalAccountId: string;
 }
 export declare class DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveSecurity extends SpeakeasyBase {
-    hapikey?: shared.SchemeHapikey;
     privateAppsLegacy?: shared.SchemePrivateAppsLegacy;
     oauth2Legacy?: shared.SchemeOauth2Legacy;
 }

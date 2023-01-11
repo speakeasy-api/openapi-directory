@@ -1,0 +1,31 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class GetAmendmentType extends SpeakeasyBase {
+    autoRenew?: boolean;
+    baseRatePlanId?: string;
+    baseSubscriptionId?: string;
+    code?: string;
+    contractEffectiveDate?: Date;
+    currentTerm?: number;
+    currentTermPeriodType?: string;
+    customerAcceptanceDate?: Date;
+    description?: string;
+    destinationAccountId?: string;
+    destinationInvoiceOwnerId?: string;
+    effectiveDate?: Date;
+    id?: string;
+    name?: string;
+    newRatePlanId?: string;
+    newSubscriptionId?: string;
+    renewalSetting?: string;
+    renewalTerm?: number;
+    renewalTermPeriodType?: string;
+    resumeDate?: Date;
+    serviceActivationDate?: Date;
+    specificUpdateDate?: Date;
+    status?: string;
+    success?: boolean;
+    suspendDate?: Date;
+    termStartDate?: Date;
+    termType?: string;
+    type?: string;
+}

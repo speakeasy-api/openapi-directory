@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InstanceEventWindow } from "./instanceeventwindow";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ModifyInstanceEventWindowResult = exports.ModifyInstanceEventWindowResultInstanceEventWindow = exports.ModifyInstanceEventWindowResultInstanceEventWindowAssociationTarget = void 0;
+var utils_1 = require("../../../internal/utils");
+// ModifyInstanceEventWindowResultInstanceEventWindowAssociationTarget
+/**
+ * One or more targets associated with the event window.
+**/
+var ModifyInstanceEventWindowResultInstanceEventWindowAssociationTarget = /** @class */ (function (_super) {
+    __extends(ModifyInstanceEventWindowResultInstanceEventWindowAssociationTarget, _super);
+    function ModifyInstanceEventWindowResultInstanceEventWindowAssociationTarget() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceEventWindowResultInstanceEventWindowAssociationTarget.prototype, "dedicatedHostIds", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceEventWindowResultInstanceEventWindowAssociationTarget.prototype, "instanceIds", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceEventWindowResultInstanceEventWindowAssociationTarget.prototype, "tags", void 0);
+    return ModifyInstanceEventWindowResultInstanceEventWindowAssociationTarget;
+}(utils_1.SpeakeasyBase));
+exports.ModifyInstanceEventWindowResultInstanceEventWindowAssociationTarget = ModifyInstanceEventWindowResultInstanceEventWindowAssociationTarget;
+// ModifyInstanceEventWindowResultInstanceEventWindow
+/**
+ * Information about the event window.
+**/
+var ModifyInstanceEventWindowResultInstanceEventWindow = /** @class */ (function (_super) {
+    __extends(ModifyInstanceEventWindowResultInstanceEventWindow, _super);
+    function ModifyInstanceEventWindowResultInstanceEventWindow() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ModifyInstanceEventWindowResultInstanceEventWindowAssociationTarget)
+    ], ModifyInstanceEventWindowResultInstanceEventWindow.prototype, "associationTarget", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceEventWindowResultInstanceEventWindow.prototype, "cronExpression", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceEventWindowResultInstanceEventWindow.prototype, "instanceEventWindowId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceEventWindowResultInstanceEventWindow.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceEventWindowResultInstanceEventWindow.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceEventWindowResultInstanceEventWindow.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ModifyInstanceEventWindowResultInstanceEventWindow.prototype, "timeRanges", void 0);
+    return ModifyInstanceEventWindowResultInstanceEventWindow;
+}(utils_1.SpeakeasyBase));
+exports.ModifyInstanceEventWindowResultInstanceEventWindow = ModifyInstanceEventWindowResultInstanceEventWindow;
 var ModifyInstanceEventWindowResult = /** @class */ (function (_super) {
     __extends(ModifyInstanceEventWindowResult, _super);
     function ModifyInstanceEventWindowResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", InstanceEventWindow)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ModifyInstanceEventWindowResultInstanceEventWindow)
     ], ModifyInstanceEventWindowResult.prototype, "instanceEventWindow", void 0);
     return ModifyInstanceEventWindowResult;
-}(SpeakeasyBase));
-export { ModifyInstanceEventWindowResult };
+}(utils_1.SpeakeasyBase));
+exports.ModifyInstanceEventWindowResult = ModifyInstanceEventWindowResult;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IntentConfidence } from "./intentconfidence";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PredictedIntent = void 0;
+var utils_1 = require("../../../internal/utils");
+var intentconfidence_1 = require("./intentconfidence");
 // PredictedIntent
 /**
  * An intent that Amazon Lex suggests satisfies the user's intent. Includes the name of the intent, the confidence that Amazon Lex has that the user's intent is satisfied, and the slots defined for the intent.
@@ -34,17 +37,17 @@ var PredictedIntent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intentName" }),
         __metadata("design:type", String)
     ], PredictedIntent.prototype, "intentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nluIntentConfidence" }),
-        __metadata("design:type", IntentConfidence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nluIntentConfidence" }),
+        __metadata("design:type", intentconfidence_1.IntentConfidence)
     ], PredictedIntent.prototype, "nluIntentConfidence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slots" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slots" }),
+        __metadata("design:type", Object)
     ], PredictedIntent.prototype, "slots", void 0);
     return PredictedIntent;
-}(SpeakeasyBase));
-export { PredictedIntent };
+}(utils_1.SpeakeasyBase));
+exports.PredictedIntent = PredictedIntent;

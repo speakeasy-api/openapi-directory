@@ -4,6 +4,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class LandlordAccountingInvoiceModel extends SpeakeasyBase {
     date?: Date;
-    invoiceId?: string;
+    invoiceID?: string;
     isMaintenanceInvoice?: boolean;
 }

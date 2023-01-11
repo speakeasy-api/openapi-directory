@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LaunchTemplateSpecification } from "./launchtemplatespecification";
-import { LifecycleStateEnum } from "./lifecyclestateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Instance = void 0;
+var utils_1 = require("../../../internal/utils");
+var launchtemplatespecification_1 = require("./launchtemplatespecification");
+var lifecyclestateenum_1 = require("./lifecyclestateenum");
 // Instance
 /**
  * Describes an EC2 instance.
@@ -35,41 +38,41 @@ var Instance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Instance.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Instance.prototype, "healthStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Instance.prototype, "instanceId", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Instance.prototype, "instanceType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Instance.prototype, "launchConfigurationName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", LaunchTemplateSpecification)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", launchtemplatespecification_1.LaunchTemplateSpecification)
     ], Instance.prototype, "launchTemplate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Instance.prototype, "lifecycleState", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], Instance.prototype, "protectedFromScaleIn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], Instance.prototype, "weightedCapacity", void 0);
     return Instance;
-}(SpeakeasyBase));
-export { Instance };
+}(utils_1.SpeakeasyBase));
+exports.Instance = Instance;

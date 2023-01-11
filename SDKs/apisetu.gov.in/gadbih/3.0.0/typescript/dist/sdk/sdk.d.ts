@@ -1,40 +1,17 @@
-import { AxiosInstance, AxiosRequestConfig } from "axios";
-import * as operations from "./models/operations";
-type OptsFunc = (sdk: SDK) => void;
+import { AxiosInstance } from "axios";
+import { ApIs } from "./apis";
 export declare const ServerList: readonly ["https://apisetu.gov.in/gadbih/v3"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
+    apIs: ApIs;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
-    /**
-     * ctcer - Caste Certificate
-     *
-     * API to verify Caste Certificate.
-    **/
-    ctcer(req: operations.CtcerRequest, config?: AxiosRequestConfig): Promise<operations.CtcerResponse>;
-    /**
-     * ewcer - Economically Weaker Section Certificate
-     *
-     * API to verify Economically Weaker Section Certificate.
-    **/
-    ewcer(req: operations.EwcerRequest, config?: AxiosRequestConfig): Promise<operations.EwcerResponse>;
-    /**
-     * incer - Income Certificate
-     *
-     * API to verify Income Certificate.
-    **/
-    incer(req: operations.IncerRequest, config?: AxiosRequestConfig): Promise<operations.IncerResponse>;
-    /**
-     * rscer - Residence Certificate
-     *
-     * API to verify Residence Certificate.
-    **/
-    rscer(req: operations.RscerRequest, config?: AxiosRequestConfig): Promise<operations.RscerResponse>;
+    constructor(props: SDKProps);
 }
-export {};

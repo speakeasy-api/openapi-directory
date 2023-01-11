@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WaitTime = void 0;
+var utils_1 = require("../../../internal/utils");
 // WaitTime
 /**
  * Specifies a duration or a date and time that indicates when Amazon Pinpoint determines whether an activity's conditions have been met or an activity moves participants to the next activity in a journey.
@@ -33,13 +36,13 @@ var WaitTime = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WaitFor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WaitFor" }),
         __metadata("design:type", String)
     ], WaitTime.prototype, "waitFor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WaitUntil" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WaitUntil" }),
         __metadata("design:type", String)
     ], WaitTime.prototype, "waitUntil", void 0);
     return WaitTime;
-}(SpeakeasyBase));
-export { WaitTime };
+}(utils_1.SpeakeasyBase));
+exports.WaitTime = WaitTime;

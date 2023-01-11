@@ -6,6 +6,6 @@ import { MappingRuleMatchTypeEnum } from "./mappingrulematchtypeenum";
 export declare class MappingRule extends SpeakeasyBase {
     claim: string;
     matchType: MappingRuleMatchTypeEnum;
-    roleArn: string;
+    roleARN: string;
     value: string;
 }

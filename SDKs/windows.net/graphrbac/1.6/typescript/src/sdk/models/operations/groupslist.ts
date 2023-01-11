@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class GroupsListPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" })
-  tenantId: string;
+  tenantID: string;
 }
 
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LoadBalancerTlsCertificateDomainStatusEnum } from "./loadbalancertlscertificatedomainstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadBalancerTlsCertificateDomainValidationRecord = void 0;
+var utils_1 = require("../../../internal/utils");
+var loadbalancertlscertificatedomainstatusenum_1 = require("./loadbalancertlscertificatedomainstatusenum");
 // LoadBalancerTlsCertificateDomainValidationRecord
 /**
  * Describes the validation record of each domain name in the SSL/TLS certificate.
@@ -34,25 +37,25 @@ var LoadBalancerTlsCertificateDomainValidationRecord = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainName" }),
         __metadata("design:type", String)
     ], LoadBalancerTlsCertificateDomainValidationRecord.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], LoadBalancerTlsCertificateDomainValidationRecord.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], LoadBalancerTlsCertificateDomainValidationRecord.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validationStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validationStatus" }),
         __metadata("design:type", String)
     ], LoadBalancerTlsCertificateDomainValidationRecord.prototype, "validationStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], LoadBalancerTlsCertificateDomainValidationRecord.prototype, "value", void 0);
     return LoadBalancerTlsCertificateDomainValidationRecord;
-}(SpeakeasyBase));
-export { LoadBalancerTlsCertificateDomainValidationRecord };
+}(utils_1.SpeakeasyBase));
+exports.LoadBalancerTlsCertificateDomainValidationRecord = LoadBalancerTlsCertificateDomainValidationRecord;

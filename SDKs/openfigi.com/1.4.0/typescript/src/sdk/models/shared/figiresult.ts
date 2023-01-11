@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class FigiResult extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=compositeFIGI" })
-  compositeFigi?: string;
+  compositeFIGI?: string;
 
   @SpeakeasyMetadata({ data: "json, name=exchCode" })
   exchCode?: string;
@@ -31,7 +31,7 @@ export class FigiResult extends SpeakeasyBase {
   securityType2?: string;
 
   @SpeakeasyMetadata({ data: "json, name=shareClassFIGI" })
-  shareClassFigi?: string;
+  shareClassFIGI?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ticker" })
   ticker?: string;

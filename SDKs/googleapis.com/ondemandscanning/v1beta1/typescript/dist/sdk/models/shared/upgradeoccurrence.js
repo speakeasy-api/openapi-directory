@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UpgradeDistribution } from "./upgradedistribution";
-import { Version } from "./version";
-import { WindowsUpdate } from "./windowsupdate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpgradeOccurrence = void 0;
+var utils_1 = require("../../../internal/utils");
+var upgradedistribution_1 = require("./upgradedistribution");
+var version_1 = require("./version");
+var windowsupdate_1 = require("./windowsupdate");
 // UpgradeOccurrence
 /**
  * An Upgrade Occurrence represents that a specific resource_url could install a specific upgrade. This presence is supplied via local sources (i.e. it is present in the mirror and the running system has noticed its availability). For Windows, both distribution and windows_update contain information for the Windows update.
@@ -36,21 +39,21 @@ var UpgradeOccurrence = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distribution" }),
-        __metadata("design:type", UpgradeDistribution)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distribution" }),
+        __metadata("design:type", upgradedistribution_1.UpgradeDistribution)
     ], UpgradeOccurrence.prototype, "distribution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=package" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=package" }),
         __metadata("design:type", String)
     ], UpgradeOccurrence.prototype, "package", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parsedVersion" }),
-        __metadata("design:type", Version)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parsedVersion" }),
+        __metadata("design:type", version_1.Version)
     ], UpgradeOccurrence.prototype, "parsedVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=windowsUpdate" }),
-        __metadata("design:type", WindowsUpdate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=windowsUpdate" }),
+        __metadata("design:type", windowsupdate_1.WindowsUpdate)
     ], UpgradeOccurrence.prototype, "windowsUpdate", void 0);
     return UpgradeOccurrence;
-}(SpeakeasyBase));
-export { UpgradeOccurrence };
+}(utils_1.SpeakeasyBase));
+exports.UpgradeOccurrence = UpgradeOccurrence;

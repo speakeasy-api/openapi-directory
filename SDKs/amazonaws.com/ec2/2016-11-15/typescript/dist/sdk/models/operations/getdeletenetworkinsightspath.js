@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteNetworkInsightsPathActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteNetworkInsightsPathResponse = exports.GetDeleteNetworkInsightsPathRequest = exports.GetDeleteNetworkInsightsPathHeaders = exports.GetDeleteNetworkInsightsPathQueryParams = exports.GetDeleteNetworkInsightsPathVersionEnum = exports.GetDeleteNetworkInsightsPathActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteNetworkInsightsPathActionEnum;
 (function (GetDeleteNetworkInsightsPathActionEnum) {
     GetDeleteNetworkInsightsPathActionEnum["DeleteNetworkInsightsPath"] = "DeleteNetworkInsightsPath";
-})(GetDeleteNetworkInsightsPathActionEnum || (GetDeleteNetworkInsightsPathActionEnum = {}));
-export var GetDeleteNetworkInsightsPathVersionEnum;
+})(GetDeleteNetworkInsightsPathActionEnum = exports.GetDeleteNetworkInsightsPathActionEnum || (exports.GetDeleteNetworkInsightsPathActionEnum = {}));
+var GetDeleteNetworkInsightsPathVersionEnum;
 (function (GetDeleteNetworkInsightsPathVersionEnum) {
     GetDeleteNetworkInsightsPathVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDeleteNetworkInsightsPathVersionEnum || (GetDeleteNetworkInsightsPathVersionEnum = {}));
+})(GetDeleteNetworkInsightsPathVersionEnum = exports.GetDeleteNetworkInsightsPathVersionEnum || (exports.GetDeleteNetworkInsightsPathVersionEnum = {}));
 var GetDeleteNetworkInsightsPathQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteNetworkInsightsPathQueryParams, _super);
     function GetDeleteNetworkInsightsPathQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkInsightsPathQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDeleteNetworkInsightsPathQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NetworkInsightsPathId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NetworkInsightsPathId" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkInsightsPathQueryParams.prototype, "networkInsightsPathId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkInsightsPathQueryParams.prototype, "version", void 0);
     return GetDeleteNetworkInsightsPathQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteNetworkInsightsPathQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteNetworkInsightsPathQueryParams = GetDeleteNetworkInsightsPathQueryParams;
 var GetDeleteNetworkInsightsPathHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteNetworkInsightsPathHeaders, _super);
     function GetDeleteNetworkInsightsPathHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkInsightsPathHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkInsightsPathHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkInsightsPathHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkInsightsPathHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkInsightsPathHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkInsightsPathHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteNetworkInsightsPathHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteNetworkInsightsPathHeaders;
-}(SpeakeasyBase));
-export { GetDeleteNetworkInsightsPathHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteNetworkInsightsPathHeaders = GetDeleteNetworkInsightsPathHeaders;
 var GetDeleteNetworkInsightsPathRequest = /** @class */ (function (_super) {
     __extends(GetDeleteNetworkInsightsPathRequest, _super);
     function GetDeleteNetworkInsightsPathRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteNetworkInsightsPathQueryParams)
     ], GetDeleteNetworkInsightsPathRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteNetworkInsightsPathHeaders)
     ], GetDeleteNetworkInsightsPathRequest.prototype, "headers", void 0);
     return GetDeleteNetworkInsightsPathRequest;
-}(SpeakeasyBase));
-export { GetDeleteNetworkInsightsPathRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteNetworkInsightsPathRequest = GetDeleteNetworkInsightsPathRequest;
 var GetDeleteNetworkInsightsPathResponse = /** @class */ (function (_super) {
     __extends(GetDeleteNetworkInsightsPathResponse, _super);
     function GetDeleteNetworkInsightsPathResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteNetworkInsightsPathResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteNetworkInsightsPathResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteNetworkInsightsPathResponse.prototype, "statusCode", void 0);
     return GetDeleteNetworkInsightsPathResponse;
-}(SpeakeasyBase));
-export { GetDeleteNetworkInsightsPathResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteNetworkInsightsPathResponse = GetDeleteNetworkInsightsPathResponse;

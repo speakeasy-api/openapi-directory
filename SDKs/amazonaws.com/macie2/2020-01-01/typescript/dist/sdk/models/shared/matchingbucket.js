@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { JobDetails } from "./jobdetails";
-import { ObjectCountByEncryptionType } from "./objectcountbyencryptiontype";
-import { ObjectLevelStatistics } from "./objectlevelstatistics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MatchingBucket = void 0;
+var utils_1 = require("../../../internal/utils");
+var jobdetails_1 = require("./jobdetails");
+var objectcountbyencryptiontype_1 = require("./objectcountbyencryptiontype");
+var objectlevelstatistics_1 = require("./objectlevelstatistics");
 // MatchingBucket
 /**
  * Provides statistical data and other information about an S3 bucket that Amazon Macie monitors and analyzes.
@@ -36,49 +39,49 @@ var MatchingBucket = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], MatchingBucket.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketName" }),
         __metadata("design:type", String)
     ], MatchingBucket.prototype, "bucketName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=classifiableObjectCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=classifiableObjectCount" }),
         __metadata("design:type", Number)
     ], MatchingBucket.prototype, "classifiableObjectCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=classifiableSizeInBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=classifiableSizeInBytes" }),
         __metadata("design:type", Number)
     ], MatchingBucket.prototype, "classifiableSizeInBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobDetails" }),
-        __metadata("design:type", JobDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobDetails" }),
+        __metadata("design:type", jobdetails_1.JobDetails)
     ], MatchingBucket.prototype, "jobDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectCount" }),
         __metadata("design:type", Number)
     ], MatchingBucket.prototype, "objectCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectCountByEncryptionType" }),
-        __metadata("design:type", ObjectCountByEncryptionType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectCountByEncryptionType" }),
+        __metadata("design:type", objectcountbyencryptiontype_1.ObjectCountByEncryptionType)
     ], MatchingBucket.prototype, "objectCountByEncryptionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeInBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeInBytes" }),
         __metadata("design:type", Number)
     ], MatchingBucket.prototype, "sizeInBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeInBytesCompressed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeInBytesCompressed" }),
         __metadata("design:type", Number)
     ], MatchingBucket.prototype, "sizeInBytesCompressed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unclassifiableObjectCount" }),
-        __metadata("design:type", ObjectLevelStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unclassifiableObjectCount" }),
+        __metadata("design:type", objectlevelstatistics_1.ObjectLevelStatistics)
     ], MatchingBucket.prototype, "unclassifiableObjectCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unclassifiableObjectSizeInBytes" }),
-        __metadata("design:type", ObjectLevelStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unclassifiableObjectSizeInBytes" }),
+        __metadata("design:type", objectlevelstatistics_1.ObjectLevelStatistics)
     ], MatchingBucket.prototype, "unclassifiableObjectSizeInBytes", void 0);
     return MatchingBucket;
-}(SpeakeasyBase));
-export { MatchingBucket };
+}(utils_1.SpeakeasyBase));
+exports.MatchingBucket = MatchingBucket;

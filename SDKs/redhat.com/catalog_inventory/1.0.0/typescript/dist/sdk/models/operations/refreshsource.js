@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RefreshSourceResponse = exports.RefreshSourceRequest = exports.RefreshSourcePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var RefreshSourcePathParams = /** @class */ (function (_super) {
     __extends(RefreshSourcePathParams, _super);
     function RefreshSourcePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], RefreshSourcePathParams.prototype, "id", void 0);
     return RefreshSourcePathParams;
-}(SpeakeasyBase));
-export { RefreshSourcePathParams };
+}(utils_1.SpeakeasyBase));
+exports.RefreshSourcePathParams = RefreshSourcePathParams;
 var RefreshSourceRequest = /** @class */ (function (_super) {
     __extends(RefreshSourceRequest, _super);
     function RefreshSourceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RefreshSourcePathParams)
     ], RefreshSourceRequest.prototype, "pathParams", void 0);
     return RefreshSourceRequest;
-}(SpeakeasyBase));
-export { RefreshSourceRequest };
+}(utils_1.SpeakeasyBase));
+exports.RefreshSourceRequest = RefreshSourceRequest;
 var RefreshSourceResponse = /** @class */ (function (_super) {
     __extends(RefreshSourceResponse, _super);
     function RefreshSourceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RefreshSourceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RefreshSourceResponse.prototype, "statusCode", void 0);
     return RefreshSourceResponse;
-}(SpeakeasyBase));
-export { RefreshSourceResponse };
+}(utils_1.SpeakeasyBase));
+exports.RefreshSourceResponse = RefreshSourceResponse;

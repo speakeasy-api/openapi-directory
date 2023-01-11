@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,58 +23,60 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSourceFilterVariableEnum } from "./datasourcefiltervariableenum";
-import { SortOrderEnum } from "./sortorderenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeDataSourcesInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasourcefiltervariableenum_1 = require("./datasourcefiltervariableenum");
+var sortorderenum_1 = require("./sortorderenum");
 var DescribeDataSourcesInput = /** @class */ (function (_super) {
     __extends(DescribeDataSourcesInput, _super);
     function DescribeDataSourcesInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EQ" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EQ" }),
         __metadata("design:type", String)
     ], DescribeDataSourcesInput.prototype, "eq", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FilterVariable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FilterVariable" }),
         __metadata("design:type", String)
     ], DescribeDataSourcesInput.prototype, "filterVariable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GE" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GE" }),
         __metadata("design:type", String)
     ], DescribeDataSourcesInput.prototype, "ge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GT" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GT" }),
         __metadata("design:type", String)
     ], DescribeDataSourcesInput.prototype, "gt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LE" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LE" }),
         __metadata("design:type", String)
     ], DescribeDataSourcesInput.prototype, "le", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LT" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LT" }),
         __metadata("design:type", String)
     ], DescribeDataSourcesInput.prototype, "lt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Limit" }),
         __metadata("design:type", Number)
     ], DescribeDataSourcesInput.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NE" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NE" }),
         __metadata("design:type", String)
     ], DescribeDataSourcesInput.prototype, "ne", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], DescribeDataSourcesInput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Prefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Prefix" }),
         __metadata("design:type", String)
     ], DescribeDataSourcesInput.prototype, "prefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SortOrder" }),
         __metadata("design:type", String)
     ], DescribeDataSourcesInput.prototype, "sortOrder", void 0);
     return DescribeDataSourcesInput;
-}(SpeakeasyBase));
-export { DescribeDataSourcesInput };
+}(utils_1.SpeakeasyBase));
+exports.DescribeDataSourcesInput = DescribeDataSourcesInput;

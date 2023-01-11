@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AutoMlOverrideStrategyEnum } from "./automloverridestrategyenum";
-import { EncryptionConfig } from "./encryptionconfig";
-import { EvaluationParameters } from "./evaluationparameters";
-import { FeaturizationConfig } from "./featurizationconfig";
-import { HyperParameterTuningJobConfig } from "./hyperparametertuningjobconfig";
-import { InputDataConfig } from "./inputdataconfig";
-import { OptimizationMetricEnum } from "./optimizationmetricenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePredictorRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var automloverridestrategyenum_1 = require("./automloverridestrategyenum");
+var encryptionconfig_1 = require("./encryptionconfig");
+var evaluationparameters_1 = require("./evaluationparameters");
+var featurizationconfig_1 = require("./featurizationconfig");
+var hyperparametertuningjobconfig_1 = require("./hyperparametertuningjobconfig");
+var inputdataconfig_1 = require("./inputdataconfig");
+var optimizationmetricenum_1 = require("./optimizationmetricenum");
+var tag_1 = require("./tag");
 var CreatePredictorRequest = /** @class */ (function (_super) {
     __extends(CreatePredictorRequest, _super);
     function CreatePredictorRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AlgorithmArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AlgorithmArn" }),
         __metadata("design:type", String)
     ], CreatePredictorRequest.prototype, "algorithmArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AutoMLOverrideStrategy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AutoMLOverrideStrategy" }),
         __metadata("design:type", String)
-    ], CreatePredictorRequest.prototype, "autoMlOverrideStrategy", void 0);
+    ], CreatePredictorRequest.prototype, "autoMLOverrideStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EncryptionConfig" }),
-        __metadata("design:type", EncryptionConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EncryptionConfig" }),
+        __metadata("design:type", encryptionconfig_1.EncryptionConfig)
     ], CreatePredictorRequest.prototype, "encryptionConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EvaluationParameters" }),
-        __metadata("design:type", EvaluationParameters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EvaluationParameters" }),
+        __metadata("design:type", evaluationparameters_1.EvaluationParameters)
     ], CreatePredictorRequest.prototype, "evaluationParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FeaturizationConfig" }),
-        __metadata("design:type", FeaturizationConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FeaturizationConfig" }),
+        __metadata("design:type", featurizationconfig_1.FeaturizationConfig)
     ], CreatePredictorRequest.prototype, "featurizationConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ForecastHorizon" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ForecastHorizon" }),
         __metadata("design:type", Number)
     ], CreatePredictorRequest.prototype, "forecastHorizon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ForecastTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ForecastTypes" }),
         __metadata("design:type", Array)
     ], CreatePredictorRequest.prototype, "forecastTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HPOConfig" }),
-        __metadata("design:type", HyperParameterTuningJobConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HPOConfig" }),
+        __metadata("design:type", hyperparametertuningjobconfig_1.HyperParameterTuningJobConfig)
     ], CreatePredictorRequest.prototype, "hpoConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InputDataConfig" }),
-        __metadata("design:type", InputDataConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InputDataConfig" }),
+        __metadata("design:type", inputdataconfig_1.InputDataConfig)
     ], CreatePredictorRequest.prototype, "inputDataConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OptimizationMetric" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OptimizationMetric" }),
         __metadata("design:type", String)
     ], CreatePredictorRequest.prototype, "optimizationMetric", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PerformAutoML" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PerformAutoML" }),
         __metadata("design:type", Boolean)
-    ], CreatePredictorRequest.prototype, "performAutoMl", void 0);
+    ], CreatePredictorRequest.prototype, "performAutoML", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PerformHPO" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PerformHPO" }),
         __metadata("design:type", Boolean)
-    ], CreatePredictorRequest.prototype, "performHpo", void 0);
+    ], CreatePredictorRequest.prototype, "performHPO", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PredictorName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PredictorName" }),
         __metadata("design:type", String)
     ], CreatePredictorRequest.prototype, "predictorName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreatePredictorRequest.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrainingParameters" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrainingParameters" }),
+        __metadata("design:type", Object)
     ], CreatePredictorRequest.prototype, "trainingParameters", void 0);
     return CreatePredictorRequest;
-}(SpeakeasyBase));
-export { CreatePredictorRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreatePredictorRequest = CreatePredictorRequest;

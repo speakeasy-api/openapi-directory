@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteCustomerGatewayActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteCustomerGatewayResponse = exports.GetDeleteCustomerGatewayRequest = exports.GetDeleteCustomerGatewayHeaders = exports.GetDeleteCustomerGatewayQueryParams = exports.GetDeleteCustomerGatewayVersionEnum = exports.GetDeleteCustomerGatewayActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteCustomerGatewayActionEnum;
 (function (GetDeleteCustomerGatewayActionEnum) {
     GetDeleteCustomerGatewayActionEnum["DeleteCustomerGateway"] = "DeleteCustomerGateway";
-})(GetDeleteCustomerGatewayActionEnum || (GetDeleteCustomerGatewayActionEnum = {}));
-export var GetDeleteCustomerGatewayVersionEnum;
+})(GetDeleteCustomerGatewayActionEnum = exports.GetDeleteCustomerGatewayActionEnum || (exports.GetDeleteCustomerGatewayActionEnum = {}));
+var GetDeleteCustomerGatewayVersionEnum;
 (function (GetDeleteCustomerGatewayVersionEnum) {
     GetDeleteCustomerGatewayVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetDeleteCustomerGatewayVersionEnum || (GetDeleteCustomerGatewayVersionEnum = {}));
+})(GetDeleteCustomerGatewayVersionEnum = exports.GetDeleteCustomerGatewayVersionEnum || (exports.GetDeleteCustomerGatewayVersionEnum = {}));
 var GetDeleteCustomerGatewayQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteCustomerGatewayQueryParams, _super);
     function GetDeleteCustomerGatewayQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteCustomerGatewayQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=CustomerGatewayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=CustomerGatewayId" }),
         __metadata("design:type", String)
     ], GetDeleteCustomerGatewayQueryParams.prototype, "customerGatewayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetDeleteCustomerGatewayQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteCustomerGatewayQueryParams.prototype, "version", void 0);
     return GetDeleteCustomerGatewayQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteCustomerGatewayQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteCustomerGatewayQueryParams = GetDeleteCustomerGatewayQueryParams;
 var GetDeleteCustomerGatewayHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteCustomerGatewayHeaders, _super);
     function GetDeleteCustomerGatewayHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteCustomerGatewayHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteCustomerGatewayHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteCustomerGatewayHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteCustomerGatewayHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteCustomerGatewayHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteCustomerGatewayHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteCustomerGatewayHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteCustomerGatewayHeaders;
-}(SpeakeasyBase));
-export { GetDeleteCustomerGatewayHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteCustomerGatewayHeaders = GetDeleteCustomerGatewayHeaders;
 var GetDeleteCustomerGatewayRequest = /** @class */ (function (_super) {
     __extends(GetDeleteCustomerGatewayRequest, _super);
     function GetDeleteCustomerGatewayRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteCustomerGatewayQueryParams)
     ], GetDeleteCustomerGatewayRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteCustomerGatewayHeaders)
     ], GetDeleteCustomerGatewayRequest.prototype, "headers", void 0);
     return GetDeleteCustomerGatewayRequest;
-}(SpeakeasyBase));
-export { GetDeleteCustomerGatewayRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteCustomerGatewayRequest = GetDeleteCustomerGatewayRequest;
 var GetDeleteCustomerGatewayResponse = /** @class */ (function (_super) {
     __extends(GetDeleteCustomerGatewayResponse, _super);
     function GetDeleteCustomerGatewayResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteCustomerGatewayResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteCustomerGatewayResponse.prototype, "statusCode", void 0);
     return GetDeleteCustomerGatewayResponse;
-}(SpeakeasyBase));
-export { GetDeleteCustomerGatewayResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteCustomerGatewayResponse = GetDeleteCustomerGatewayResponse;

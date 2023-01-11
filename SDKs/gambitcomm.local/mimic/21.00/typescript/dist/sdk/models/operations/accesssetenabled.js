@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccessSetEnabledResponse = exports.AccessSetEnabledRequest = exports.AccessSetEnabledPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AccessSetEnabledPathParams = /** @class */ (function (_super) {
     __extends(AccessSetEnabledPathParams, _super);
     function AccessSetEnabledPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=enabledOrNot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=enabledOrNot" }),
         __metadata("design:type", String)
     ], AccessSetEnabledPathParams.prototype, "enabledOrNot", void 0);
     return AccessSetEnabledPathParams;
-}(SpeakeasyBase));
-export { AccessSetEnabledPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AccessSetEnabledPathParams = AccessSetEnabledPathParams;
 var AccessSetEnabledRequest = /** @class */ (function (_super) {
     __extends(AccessSetEnabledRequest, _super);
     function AccessSetEnabledRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AccessSetEnabledPathParams)
     ], AccessSetEnabledRequest.prototype, "pathParams", void 0);
     return AccessSetEnabledRequest;
-}(SpeakeasyBase));
-export { AccessSetEnabledRequest };
+}(utils_1.SpeakeasyBase));
+exports.AccessSetEnabledRequest = AccessSetEnabledRequest;
 var AccessSetEnabledResponse = /** @class */ (function (_super) {
     __extends(AccessSetEnabledResponse, _super);
     function AccessSetEnabledResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AccessSetEnabledResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AccessSetEnabledResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], AccessSetEnabledResponse.prototype, "accessSetEnabled200ApplicationJsonString", void 0);
+    ], AccessSetEnabledResponse.prototype, "accessSetEnabled200ApplicationJSONString", void 0);
     return AccessSetEnabledResponse;
-}(SpeakeasyBase));
-export { AccessSetEnabledResponse };
+}(utils_1.SpeakeasyBase));
+exports.AccessSetEnabledResponse = AccessSetEnabledResponse;

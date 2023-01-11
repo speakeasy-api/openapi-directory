@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HolidayCutoff = void 0;
+var utils_1 = require("../../../internal/utils");
 var HolidayCutoff = /** @class */ (function (_super) {
     __extends(HolidayCutoff, _super);
     function HolidayCutoff() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deadlineDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deadlineDate" }),
         __metadata("design:type", String)
     ], HolidayCutoff.prototype, "deadlineDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deadlineHour" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deadlineHour" }),
         __metadata("design:type", Number)
     ], HolidayCutoff.prototype, "deadlineHour", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deadlineTimezone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deadlineTimezone" }),
         __metadata("design:type", String)
     ], HolidayCutoff.prototype, "deadlineTimezone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=holidayId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=holidayId" }),
         __metadata("design:type", String)
     ], HolidayCutoff.prototype, "holidayId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visibleFromDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visibleFromDate" }),
         __metadata("design:type", String)
     ], HolidayCutoff.prototype, "visibleFromDate", void 0);
     return HolidayCutoff;
-}(SpeakeasyBase));
-export { HolidayCutoff };
+}(utils_1.SpeakeasyBase));
+exports.HolidayCutoff = HolidayCutoff;

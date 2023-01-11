@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Type } from "./type";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TypesListResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var type_1 = require("./type");
 // TypesListResponse
 /**
  * A response that returns all Types supported by Deployment Manager
@@ -34,13 +37,13 @@ var TypesListResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], TypesListResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=types", elemType: Type }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=types", elemType: type_1.Type }),
         __metadata("design:type", Array)
     ], TypesListResponse.prototype, "types", void 0);
     return TypesListResponse;
-}(SpeakeasyBase));
-export { TypesListResponse };
+}(utils_1.SpeakeasyBase));
+exports.TypesListResponse = TypesListResponse;

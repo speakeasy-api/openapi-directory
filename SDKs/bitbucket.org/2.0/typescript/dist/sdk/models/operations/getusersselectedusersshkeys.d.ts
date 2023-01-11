@@ -15,6 +15,6 @@ export declare class GetUsersSelectedUserSshKeysRequest extends SpeakeasyBase {
 export declare class GetUsersSelectedUserSshKeysResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedSshUserKeys?: shared.PaginatedSshUserKeys;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Occurrences } from "./occurrences";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DefaultDetection = void 0;
+var utils_1 = require("../../../internal/utils");
+var occurrences_1 = require("./occurrences");
 // DefaultDetection
 /**
  * Provides information about a type of sensitive data that was detected by a managed data identifier and produced a sensitive data finding.
@@ -34,17 +37,17 @@ var DefaultDetection = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], DefaultDetection.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=occurrences" }),
-        __metadata("design:type", Occurrences)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=occurrences" }),
+        __metadata("design:type", occurrences_1.Occurrences)
     ], DefaultDetection.prototype, "occurrences", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], DefaultDetection.prototype, "type", void 0);
     return DefaultDetection;
-}(SpeakeasyBase));
-export { DefaultDetection };
+}(utils_1.SpeakeasyBase));
+exports.DefaultDetection = DefaultDetection;

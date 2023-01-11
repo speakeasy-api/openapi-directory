@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AcceptedPaymentV3 } from "./acceptedpaymentv3";
-import { SourceAccountV3 } from "./sourceaccountv3";
-import { QuoteFxSummaryV3 } from "./quotefxsummaryv3";
-import { RejectedPaymentV3 } from "./rejectedpaymentv3";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayoutSummaryResponseV3 = void 0;
+var utils_1 = require("../../../internal/utils");
+var acceptedpaymentv3_1 = require("./acceptedpaymentv3");
+var sourceaccountv3_1 = require("./sourceaccountv3");
+var quotefxsummaryv3_1 = require("./quotefxsummaryv3");
+var rejectedpaymentv3_1 = require("./rejectedpaymentv3");
 var PayoutSummaryResponseV3 = /** @class */ (function (_super) {
     __extends(PayoutSummaryResponseV3, _super);
     function PayoutSummaryResponseV3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acceptedPayments", elemType: AcceptedPaymentV3 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acceptedPayments", elemType: acceptedpaymentv3_1.AcceptedPaymentV3 }),
         __metadata("design:type", Array)
     ], PayoutSummaryResponseV3.prototype, "acceptedPayments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accounts", elemType: SourceAccountV3 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accounts", elemType: sourceaccountv3_1.SourceAccountV3 }),
         __metadata("design:type", Array)
     ], PayoutSummaryResponseV3.prototype, "accounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fxSummaries", elemType: QuoteFxSummaryV3 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fxSummaries", elemType: quotefxsummaryv3_1.QuoteFxSummaryV3 }),
         __metadata("design:type", Array)
     ], PayoutSummaryResponseV3.prototype, "fxSummaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentsAccepted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentsAccepted" }),
         __metadata("design:type", Number)
     ], PayoutSummaryResponseV3.prototype, "paymentsAccepted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentsRejected" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentsRejected" }),
         __metadata("design:type", Number)
     ], PayoutSummaryResponseV3.prototype, "paymentsRejected", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentsSubmitted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentsSubmitted" }),
         __metadata("design:type", Number)
     ], PayoutSummaryResponseV3.prototype, "paymentsSubmitted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentsWithdrawn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentsWithdrawn" }),
         __metadata("design:type", Number)
     ], PayoutSummaryResponseV3.prototype, "paymentsWithdrawn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payoutId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payoutId" }),
         __metadata("design:type", String)
     ], PayoutSummaryResponseV3.prototype, "payoutId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rejectedPayments", elemType: RejectedPaymentV3 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rejectedPayments", elemType: rejectedpaymentv3_1.RejectedPaymentV3 }),
         __metadata("design:type", Array)
     ], PayoutSummaryResponseV3.prototype, "rejectedPayments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PayoutSummaryResponseV3.prototype, "status", void 0);
     return PayoutSummaryResponseV3;
-}(SpeakeasyBase));
-export { PayoutSummaryResponseV3 };
+}(utils_1.SpeakeasyBase));
+exports.PayoutSummaryResponseV3 = PayoutSummaryResponseV3;

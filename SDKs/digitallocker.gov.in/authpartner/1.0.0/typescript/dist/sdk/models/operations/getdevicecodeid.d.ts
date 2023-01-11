@@ -14,8 +14,8 @@ export declare class GetDeviceCodeIdRequest extends SpeakeasyBase {
 export declare class GetDeviceCodeIdResponse extends SpeakeasyBase {
     contentType: string;
     deviceAuthorizationCodeResponse?: shared.DeviceAuthorizationCodeResponse;
-    getDeviceCodeId400ApplicationJsonOneOf?: any;
-    getDeviceCodeId401ApplicationJsonObject?: GetDeviceCodeId401ApplicationJson;
-    getDeviceCodeId500ApplicationJsonOneOf?: any;
+    getDeviceCodeId400ApplicationJSONOneOf?: any;
+    getDeviceCodeId401ApplicationJSONObject?: GetDeviceCodeId401ApplicationJson;
+    getDeviceCodeId500ApplicationJSONOneOf?: any;
     statusCode: number;
 }

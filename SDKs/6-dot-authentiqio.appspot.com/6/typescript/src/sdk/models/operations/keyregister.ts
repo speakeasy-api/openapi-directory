@@ -31,5 +31,5 @@ export class KeyRegisterResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  keyRegister201ApplicationJsonObject?: KeyRegister201ApplicationJson;
+  keyRegister201ApplicationJSONObject?: KeyRegister201ApplicationJson;
 }

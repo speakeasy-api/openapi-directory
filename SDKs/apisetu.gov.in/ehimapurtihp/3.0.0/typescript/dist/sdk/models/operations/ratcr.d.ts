@@ -105,11 +105,11 @@ export declare class RatcrRequest extends SpeakeasyBase {
 export declare class RatcrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ratcr400ApplicationJsonObject?: Ratcr400ApplicationJson;
-    ratcr401ApplicationJsonObject?: Ratcr401ApplicationJson;
-    ratcr404ApplicationJsonObject?: Ratcr404ApplicationJson;
-    ratcr500ApplicationJsonObject?: Ratcr500ApplicationJson;
-    ratcr502ApplicationJsonObject?: Ratcr502ApplicationJson;
-    ratcr503ApplicationJsonObject?: Ratcr503ApplicationJson;
-    ratcr504ApplicationJsonObject?: Ratcr504ApplicationJson;
+    ratcr400ApplicationJSONObject?: Ratcr400ApplicationJson;
+    ratcr401ApplicationJSONObject?: Ratcr401ApplicationJson;
+    ratcr404ApplicationJSONObject?: Ratcr404ApplicationJson;
+    ratcr500ApplicationJSONObject?: Ratcr500ApplicationJson;
+    ratcr502ApplicationJSONObject?: Ratcr502ApplicationJson;
+    ratcr503ApplicationJSONObject?: Ratcr503ApplicationJson;
+    ratcr504ApplicationJSONObject?: Ratcr504ApplicationJson;
 }

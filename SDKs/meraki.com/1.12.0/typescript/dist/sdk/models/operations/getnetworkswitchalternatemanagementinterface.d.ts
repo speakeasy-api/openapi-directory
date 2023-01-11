@@ -8,5 +8,5 @@ export declare class GetNetworkSwitchAlternateManagementInterfaceRequest extends
 export declare class GetNetworkSwitchAlternateManagementInterfaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSwitchAlternateManagementInterface200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSwitchAlternateManagementInterface200ApplicationJSONObject?: Record<string, any>;
 }

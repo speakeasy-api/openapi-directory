@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TimestampStructure } from "./timestampstructure";
-import { FrameMetricDatum } from "./framemetricdatum";
-import { AggregationPeriodEnum } from "./aggregationperiodenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetFrameMetricDataResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var timestampstructure_1 = require("./timestampstructure");
+var framemetricdatum_1 = require("./framemetricdatum");
+var aggregationperiodenum_1 = require("./aggregationperiodenum");
 // BatchGetFrameMetricDataResponse
 /**
  * The structure representing the BatchGetFrameMetricDataResponse.
@@ -36,29 +39,29 @@ var BatchGetFrameMetricDataResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", Date)
     ], BatchGetFrameMetricDataResponse.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTimes", elemType: TimestampStructure }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTimes", elemType: timestampstructure_1.TimestampStructure }),
         __metadata("design:type", Array)
     ], BatchGetFrameMetricDataResponse.prototype, "endTimes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frameMetricData", elemType: FrameMetricDatum }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frameMetricData", elemType: framemetricdatum_1.FrameMetricDatum }),
         __metadata("design:type", Array)
     ], BatchGetFrameMetricDataResponse.prototype, "frameMetricData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolution" }),
         __metadata("design:type", String)
     ], BatchGetFrameMetricDataResponse.prototype, "resolution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], BatchGetFrameMetricDataResponse.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unprocessedEndTimes", elemType: TimestampStructure, elemDepth: 2 }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unprocessedEndTimes", elemType: timestampstructure_1.TimestampStructure, elemDepth: 2 }),
+        __metadata("design:type", Object)
     ], BatchGetFrameMetricDataResponse.prototype, "unprocessedEndTimes", void 0);
     return BatchGetFrameMetricDataResponse;
-}(SpeakeasyBase));
-export { BatchGetFrameMetricDataResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetFrameMetricDataResponse = BatchGetFrameMetricDataResponse;

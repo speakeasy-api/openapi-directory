@@ -17,5 +17,5 @@ export class CreateDataSourceFromRdsInput extends SpeakeasyBase {
   rdsData: RdsDataSpec;
 
   @SpeakeasyMetadata({ data: "json, name=RoleARN" })
-  roleArn: string;
+  roleARN: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSearchV1FieldsResponse = exports.GetSearchV1FieldsRequest = exports.GetSearchV1FieldsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSearchV1FieldsQueryParams = /** @class */ (function (_super) {
     __extends(GetSearchV1FieldsQueryParams, _super);
     function GetSearchV1FieldsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetSearchV1FieldsQueryParams.prototype, "callback", void 0);
     return GetSearchV1FieldsQueryParams;
-}(SpeakeasyBase));
-export { GetSearchV1FieldsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSearchV1FieldsQueryParams = GetSearchV1FieldsQueryParams;
 var GetSearchV1FieldsRequest = /** @class */ (function (_super) {
     __extends(GetSearchV1FieldsRequest, _super);
     function GetSearchV1FieldsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSearchV1FieldsQueryParams)
     ], GetSearchV1FieldsRequest.prototype, "queryParams", void 0);
     return GetSearchV1FieldsRequest;
-}(SpeakeasyBase));
-export { GetSearchV1FieldsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSearchV1FieldsRequest = GetSearchV1FieldsRequest;
 var GetSearchV1FieldsResponse = /** @class */ (function (_super) {
     __extends(GetSearchV1FieldsResponse, _super);
     function GetSearchV1FieldsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetSearchV1FieldsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSearchV1FieldsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], GetSearchV1FieldsResponse.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSearchV1FieldsResponse.prototype, "statusCode", void 0);
     return GetSearchV1FieldsResponse;
-}(SpeakeasyBase));
-export { GetSearchV1FieldsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSearchV1FieldsResponse = GetSearchV1FieldsResponse;

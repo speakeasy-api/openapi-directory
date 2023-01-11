@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class WritableIpAddressInput extends SpeakeasyBase {
     address: string;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     interface?: number;
     natInside?: number;

@@ -8,5 +8,5 @@ export declare class GetNetworkCameraWirelessProfilesRequest extends SpeakeasyBa
 export declare class GetNetworkCameraWirelessProfilesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkCameraWirelessProfiles200ApplicationJsonObject?: Map<string, any>;
+    getNetworkCameraWirelessProfiles200ApplicationJSONObject?: Record<string, any>;
 }

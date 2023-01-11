@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteMessagesIdResponse = exports.DeleteMessagesIdRequest = exports.DeleteMessagesIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteMessagesIdPathParams = /** @class */ (function (_super) {
     __extends(DeleteMessagesIdPathParams, _super);
     function DeleteMessagesIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], DeleteMessagesIdPathParams.prototype, "id", void 0);
     return DeleteMessagesIdPathParams;
-}(SpeakeasyBase));
-export { DeleteMessagesIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteMessagesIdPathParams = DeleteMessagesIdPathParams;
 var DeleteMessagesIdRequest = /** @class */ (function (_super) {
     __extends(DeleteMessagesIdRequest, _super);
     function DeleteMessagesIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteMessagesIdPathParams)
     ], DeleteMessagesIdRequest.prototype, "pathParams", void 0);
     return DeleteMessagesIdRequest;
-}(SpeakeasyBase));
-export { DeleteMessagesIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteMessagesIdRequest = DeleteMessagesIdRequest;
 var DeleteMessagesIdResponse = /** @class */ (function (_super) {
     __extends(DeleteMessagesIdResponse, _super);
     function DeleteMessagesIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteMessagesIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteMessagesIdResponse.prototype, "statusCode", void 0);
     return DeleteMessagesIdResponse;
-}(SpeakeasyBase));
-export { DeleteMessagesIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteMessagesIdResponse = DeleteMessagesIdResponse;

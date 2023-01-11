@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMeAssociatedResponse = exports.GetMeAssociatedRequest = exports.GetMeAssociatedQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetMeAssociatedQueryParams = /** @class */ (function (_super) {
     __extends(GetMeAssociatedQueryParams, _super);
     function GetMeAssociatedQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetMeAssociatedQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetMeAssociatedQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetMeAssociatedQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetMeAssociatedQueryParams.prototype, "pagesize", void 0);
     return GetMeAssociatedQueryParams;
-}(SpeakeasyBase));
-export { GetMeAssociatedQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMeAssociatedQueryParams = GetMeAssociatedQueryParams;
 var GetMeAssociatedRequest = /** @class */ (function (_super) {
     __extends(GetMeAssociatedRequest, _super);
     function GetMeAssociatedRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMeAssociatedQueryParams)
     ], GetMeAssociatedRequest.prototype, "queryParams", void 0);
     return GetMeAssociatedRequest;
-}(SpeakeasyBase));
-export { GetMeAssociatedRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMeAssociatedRequest = GetMeAssociatedRequest;
 var GetMeAssociatedResponse = /** @class */ (function (_super) {
     __extends(GetMeAssociatedResponse, _super);
     function GetMeAssociatedResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetMeAssociatedResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMeAssociatedResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMeAssociatedResponse.prototype, "statusCode", void 0);
     return GetMeAssociatedResponse;
-}(SpeakeasyBase));
-export { GetMeAssociatedResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMeAssociatedResponse = GetMeAssociatedResponse;

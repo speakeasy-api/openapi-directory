@@ -16,7 +16,7 @@ export class UpdateRepositoryPipelineConfigRequest extends SpeakeasyBase {
   pathParams: UpdateRepositoryPipelineConfigPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -28,5 +28,5 @@ export class UpdateRepositoryPipelineConfigResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  pipelinesConfig?: Map<string, any>;
+  pipelinesConfig?: Record<string, any>;
 }

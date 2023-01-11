@@ -1,347 +1,321 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class CreateDomainRecordPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=domain_name" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=domain_name" })
   domainName: string;
 }
 
 
-export class CreateDomainRecordRequestBody1 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=data" })
+export class CreateDomainRecordRequestBody1Input extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=data" })
   data: string;
 
-  @Metadata({ data: "json, name=flags" })
+  @SpeakeasyMetadata({ data: "json, name=flags" })
   flags?: number;
 
-  @Metadata({ data: "json, name=id" })
-  id?: number;
-
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=port" })
+  @SpeakeasyMetadata({ data: "json, name=port" })
   port?: number;
 
-  @Metadata({ data: "json, name=priority" })
+  @SpeakeasyMetadata({ data: "json, name=priority" })
   priority?: number;
 
-  @Metadata({ data: "json, name=tag" })
+  @SpeakeasyMetadata({ data: "json, name=tag" })
   tag?: string;
 
-  @Metadata({ data: "json, name=ttl" })
+  @SpeakeasyMetadata({ data: "json, name=ttl" })
   ttl?: number;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type: string;
 
-  @Metadata({ data: "json, name=weight" })
+  @SpeakeasyMetadata({ data: "json, name=weight" })
   weight?: number;
 }
 
 
-export class CreateDomainRecordRequestBody2 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=data" })
+export class CreateDomainRecordRequestBody2Input extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=data" })
   data: string;
 
-  @Metadata({ data: "json, name=flags" })
+  @SpeakeasyMetadata({ data: "json, name=flags" })
   flags?: number;
 
-  @Metadata({ data: "json, name=id" })
-  id?: number;
-
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=port" })
+  @SpeakeasyMetadata({ data: "json, name=port" })
   port?: number;
 
-  @Metadata({ data: "json, name=priority" })
+  @SpeakeasyMetadata({ data: "json, name=priority" })
   priority?: number;
 
-  @Metadata({ data: "json, name=tag" })
+  @SpeakeasyMetadata({ data: "json, name=tag" })
   tag?: string;
 
-  @Metadata({ data: "json, name=ttl" })
+  @SpeakeasyMetadata({ data: "json, name=ttl" })
   ttl?: number;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type: string;
 
-  @Metadata({ data: "json, name=weight" })
+  @SpeakeasyMetadata({ data: "json, name=weight" })
   weight?: number;
 }
 
 
-export class CreateDomainRecordRequestBody3 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=data" })
+export class CreateDomainRecordRequestBody3Input extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=data" })
   data: string;
 
-  @Metadata({ data: "json, name=flags" })
+  @SpeakeasyMetadata({ data: "json, name=flags" })
   flags: number;
 
-  @Metadata({ data: "json, name=id" })
-  id?: number;
-
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=port" })
+  @SpeakeasyMetadata({ data: "json, name=port" })
   port?: number;
 
-  @Metadata({ data: "json, name=priority" })
+  @SpeakeasyMetadata({ data: "json, name=priority" })
   priority?: number;
 
-  @Metadata({ data: "json, name=tag" })
+  @SpeakeasyMetadata({ data: "json, name=tag" })
   tag: string;
 
-  @Metadata({ data: "json, name=ttl" })
+  @SpeakeasyMetadata({ data: "json, name=ttl" })
   ttl?: number;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type: string;
 
-  @Metadata({ data: "json, name=weight" })
+  @SpeakeasyMetadata({ data: "json, name=weight" })
   weight?: number;
 }
 
 
-export class CreateDomainRecordRequestBody4 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=data" })
+export class CreateDomainRecordRequestBody4Input extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=data" })
   data: string;
 
-  @Metadata({ data: "json, name=flags" })
+  @SpeakeasyMetadata({ data: "json, name=flags" })
   flags?: number;
 
-  @Metadata({ data: "json, name=id" })
-  id?: number;
-
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=port" })
+  @SpeakeasyMetadata({ data: "json, name=port" })
   port?: number;
 
-  @Metadata({ data: "json, name=priority" })
+  @SpeakeasyMetadata({ data: "json, name=priority" })
   priority?: number;
 
-  @Metadata({ data: "json, name=tag" })
+  @SpeakeasyMetadata({ data: "json, name=tag" })
   tag?: string;
 
-  @Metadata({ data: "json, name=ttl" })
+  @SpeakeasyMetadata({ data: "json, name=ttl" })
   ttl?: number;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type: string;
 
-  @Metadata({ data: "json, name=weight" })
+  @SpeakeasyMetadata({ data: "json, name=weight" })
   weight?: number;
 }
 
 
-export class CreateDomainRecordRequestBody5 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=data" })
+export class CreateDomainRecordRequestBody5Input extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=data" })
   data: string;
 
-  @Metadata({ data: "json, name=flags" })
+  @SpeakeasyMetadata({ data: "json, name=flags" })
   flags?: number;
 
-  @Metadata({ data: "json, name=id" })
-  id?: number;
-
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 
-  @Metadata({ data: "json, name=port" })
+  @SpeakeasyMetadata({ data: "json, name=port" })
   port?: number;
 
-  @Metadata({ data: "json, name=priority" })
+  @SpeakeasyMetadata({ data: "json, name=priority" })
   priority: number;
 
-  @Metadata({ data: "json, name=tag" })
+  @SpeakeasyMetadata({ data: "json, name=tag" })
   tag?: string;
 
-  @Metadata({ data: "json, name=ttl" })
+  @SpeakeasyMetadata({ data: "json, name=ttl" })
   ttl?: number;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type: string;
 
-  @Metadata({ data: "json, name=weight" })
+  @SpeakeasyMetadata({ data: "json, name=weight" })
   weight?: number;
 }
 
 
-export class CreateDomainRecordRequestBody6 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=data" })
+export class CreateDomainRecordRequestBody6Input extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=data" })
   data: string;
 
-  @Metadata({ data: "json, name=flags" })
+  @SpeakeasyMetadata({ data: "json, name=flags" })
   flags: number;
 
-  @Metadata({ data: "json, name=id" })
-  id?: number;
-
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=port" })
+  @SpeakeasyMetadata({ data: "json, name=port" })
   port?: number;
 
-  @Metadata({ data: "json, name=priority" })
+  @SpeakeasyMetadata({ data: "json, name=priority" })
   priority?: number;
 
-  @Metadata({ data: "json, name=tag" })
+  @SpeakeasyMetadata({ data: "json, name=tag" })
   tag: string;
 
-  @Metadata({ data: "json, name=ttl" })
+  @SpeakeasyMetadata({ data: "json, name=ttl" })
   ttl?: number;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type: string;
 
-  @Metadata({ data: "json, name=weight" })
+  @SpeakeasyMetadata({ data: "json, name=weight" })
   weight?: number;
 }
 
 
-export class CreateDomainRecordRequestBody7 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=data" })
+export class CreateDomainRecordRequestBody7Input extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=data" })
   data?: string;
 
-  @Metadata({ data: "json, name=flags" })
+  @SpeakeasyMetadata({ data: "json, name=flags" })
   flags?: number;
 
-  @Metadata({ data: "json, name=id" })
-  id?: number;
-
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 
-  @Metadata({ data: "json, name=port" })
+  @SpeakeasyMetadata({ data: "json, name=port" })
   port?: number;
 
-  @Metadata({ data: "json, name=priority" })
+  @SpeakeasyMetadata({ data: "json, name=priority" })
   priority?: number;
 
-  @Metadata({ data: "json, name=tag" })
+  @SpeakeasyMetadata({ data: "json, name=tag" })
   tag?: string;
 
-  @Metadata({ data: "json, name=ttl" })
+  @SpeakeasyMetadata({ data: "json, name=ttl" })
   ttl: number;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type: string;
 
-  @Metadata({ data: "json, name=weight" })
+  @SpeakeasyMetadata({ data: "json, name=weight" })
   weight?: number;
 }
 
 
-export class CreateDomainRecordRequestBody8 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=data" })
+export class CreateDomainRecordRequestBody8Input extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=data" })
   data: string;
 
-  @Metadata({ data: "json, name=flags" })
+  @SpeakeasyMetadata({ data: "json, name=flags" })
   flags: number;
 
-  @Metadata({ data: "json, name=id" })
-  id?: number;
-
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=port" })
+  @SpeakeasyMetadata({ data: "json, name=port" })
   port: number;
 
-  @Metadata({ data: "json, name=priority" })
+  @SpeakeasyMetadata({ data: "json, name=priority" })
   priority: number;
 
-  @Metadata({ data: "json, name=tag" })
+  @SpeakeasyMetadata({ data: "json, name=tag" })
   tag: string;
 
-  @Metadata({ data: "json, name=ttl" })
+  @SpeakeasyMetadata({ data: "json, name=ttl" })
   ttl?: number;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type: string;
 
-  @Metadata({ data: "json, name=weight" })
+  @SpeakeasyMetadata({ data: "json, name=weight" })
   weight?: number;
 }
 
 
-export class CreateDomainRecordRequestBody9 extends SpeakeasyBase {
-  @Metadata({ data: "json, name=data" })
+export class CreateDomainRecordRequestBody9Input extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=data" })
   data: string;
 
-  @Metadata({ data: "json, name=flags" })
+  @SpeakeasyMetadata({ data: "json, name=flags" })
   flags: number;
 
-  @Metadata({ data: "json, name=id" })
-  id?: number;
-
-  @Metadata({ data: "json, name=name" })
+  @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
 
-  @Metadata({ data: "json, name=port" })
+  @SpeakeasyMetadata({ data: "json, name=port" })
   port?: number;
 
-  @Metadata({ data: "json, name=priority" })
+  @SpeakeasyMetadata({ data: "json, name=priority" })
   priority?: number;
 
-  @Metadata({ data: "json, name=tag" })
+  @SpeakeasyMetadata({ data: "json, name=tag" })
   tag: string;
 
-  @Metadata({ data: "json, name=ttl" })
+  @SpeakeasyMetadata({ data: "json, name=ttl" })
   ttl?: number;
 
-  @Metadata({ data: "json, name=type" })
+  @SpeakeasyMetadata({ data: "json, name=type" })
   type: string;
 
-  @Metadata({ data: "json, name=weight" })
+  @SpeakeasyMetadata({ data: "json, name=weight" })
   weight?: number;
-}
-
-
-export class CreateDomainRecordRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: CreateDomainRecordPathParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request?: any;
 }
 
 
 export class CreateDomainRecord401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class CreateDomainRecordRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: CreateDomainRecordPathParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request?: any;
+}
+
+
 export class CreateDomainRecordResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  createDomainRecord201ApplicationJsonAny?: any;
+  @SpeakeasyMetadata()
+  createDomainRecord201ApplicationJSONAny?: any;
 
-  @Metadata()
-  createDomainRecord401ApplicationJsonObject?: CreateDomainRecord401ApplicationJson;
+  @SpeakeasyMetadata()
+  createDomainRecord401ApplicationJSONObject?: CreateDomainRecord401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

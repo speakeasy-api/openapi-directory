@@ -26,7 +26,7 @@ export class CheckIfChannelHasTagResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   legacyError?: shared.LegacyError;

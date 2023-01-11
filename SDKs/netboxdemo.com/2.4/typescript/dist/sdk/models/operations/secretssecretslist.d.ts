@@ -24,5 +24,5 @@ export declare class SecretsSecretsListRequest extends SpeakeasyBase {
 export declare class SecretsSecretsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    secretsSecretsList200ApplicationJsonObject?: SecretsSecretsList200ApplicationJson;
+    secretsSecretsList200ApplicationJSONObject?: SecretsSecretsList200ApplicationJson;
 }

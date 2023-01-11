@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkWirelessSsidSplashSettingsResponse = exports.GetNetworkWirelessSsidSplashSettingsRequest = exports.GetNetworkWirelessSsidSplashSettingsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkWirelessSsidSplashSettingsPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidSplashSettingsPathParams, _super);
     function GetNetworkWirelessSsidSplashSettingsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidSplashSettingsPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=number" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidSplashSettingsPathParams.prototype, "number", void 0);
     return GetNetworkWirelessSsidSplashSettingsPathParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidSplashSettingsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidSplashSettingsPathParams = GetNetworkWirelessSsidSplashSettingsPathParams;
 var GetNetworkWirelessSsidSplashSettingsRequest = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidSplashSettingsRequest, _super);
     function GetNetworkWirelessSsidSplashSettingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessSsidSplashSettingsPathParams)
     ], GetNetworkWirelessSsidSplashSettingsRequest.prototype, "pathParams", void 0);
     return GetNetworkWirelessSsidSplashSettingsRequest;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidSplashSettingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidSplashSettingsRequest = GetNetworkWirelessSsidSplashSettingsRequest;
 var GetNetworkWirelessSsidSplashSettingsResponse = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidSplashSettingsResponse, _super);
     function GetNetworkWirelessSsidSplashSettingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidSplashSettingsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkWirelessSsidSplashSettingsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkWirelessSsidSplashSettingsResponse.prototype, "getNetworkWirelessSsidSplashSettings200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkWirelessSsidSplashSettingsResponse.prototype, "getNetworkWirelessSsidSplashSettings200ApplicationJSONObject", void 0);
     return GetNetworkWirelessSsidSplashSettingsResponse;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidSplashSettingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidSplashSettingsResponse = GetNetworkWirelessSsidSplashSettingsResponse;

@@ -6,10 +6,10 @@ export declare class PostPortfolioAnalysisAlpha200ApplicationJson extends Speake
     portfolios: PostPortfolioAnalysisAlpha200ApplicationJsonPortfolios[];
 }
 export declare class PostPortfolioAnalysisAlphaRequest extends SpeakeasyBase {
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class PostPortfolioAnalysisAlphaResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioAnalysisAlpha200ApplicationJsonObject?: PostPortfolioAnalysisAlpha200ApplicationJson;
     statusCode: number;
+    postPortfolioAnalysisAlpha200ApplicationJSONObject?: PostPortfolioAnalysisAlpha200ApplicationJson;
 }

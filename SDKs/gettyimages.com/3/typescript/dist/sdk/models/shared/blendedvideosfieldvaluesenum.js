@@ -1,4 +1,7 @@
-export var BlendedVideosFieldValuesEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BlendedVideosFieldValuesEnum = void 0;
+var BlendedVideosFieldValuesEnum;
 (function (BlendedVideosFieldValuesEnum) {
     BlendedVideosFieldValuesEnum["AllowedUse"] = "allowed_use";
     BlendedVideosFieldValuesEnum["Artist"] = "artist";
@@ -42,4 +45,4 @@ export var BlendedVideosFieldValuesEnum;
     BlendedVideosFieldValuesEnum["Thumb"] = "thumb";
     BlendedVideosFieldValuesEnum["Title"] = "title";
     BlendedVideosFieldValuesEnum["IstockLicenses"] = "istock_licenses";
-})(BlendedVideosFieldValuesEnum || (BlendedVideosFieldValuesEnum = {}));
+})(BlendedVideosFieldValuesEnum = exports.BlendedVideosFieldValuesEnum || (exports.BlendedVideosFieldValuesEnum = {}));

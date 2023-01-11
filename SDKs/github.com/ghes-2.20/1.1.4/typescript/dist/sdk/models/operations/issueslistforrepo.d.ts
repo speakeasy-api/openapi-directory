@@ -4,16 +4,6 @@ export declare class IssuesListForRepoPathParams extends SpeakeasyBase {
     owner: string;
     repo: string;
 }
-export declare enum IssuesListForRepoSortEnum {
-    Created = "created",
-    Updated = "updated",
-    Comments = "comments"
-}
-export declare enum IssuesListForRepoStateEnum {
-    Open = "open",
-    Closed = "closed",
-    All = "all"
-}
 export declare class IssuesListForRepoQueryParams extends SpeakeasyBase {
     assignee?: string;
     creator?: string;
@@ -24,8 +14,8 @@ export declare class IssuesListForRepoQueryParams extends SpeakeasyBase {
     page?: number;
     perPage?: number;
     since?: Date;
-    sort?: IssuesListForRepoSortEnum;
-    state?: IssuesListForRepoStateEnum;
+    sort?: shared.LabelsEnum;
+    state?: shared.RepoEnum2;
 }
 export declare class IssuesListForRepoRequest extends SpeakeasyBase {
     pathParams: IssuesListForRepoPathParams;
@@ -33,7 +23,7 @@ export declare class IssuesListForRepoRequest extends SpeakeasyBase {
 }
 export declare class IssuesListForRepoResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     issueSimples?: shared.IssueSimple[];

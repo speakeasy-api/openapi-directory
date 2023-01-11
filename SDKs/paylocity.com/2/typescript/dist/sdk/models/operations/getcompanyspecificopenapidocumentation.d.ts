@@ -17,5 +17,5 @@ export declare class GetCompanySpecificOpenApiDocumentationRequest extends Speak
 export declare class GetCompanySpecificOpenApiDocumentationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }

@@ -22,5 +22,5 @@ export class GetNetworkApplianceConnectivityMonitoringDestinationsResponse exten
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkApplianceConnectivityMonitoringDestinations200ApplicationJsonObject?: Map<string, any>;
+  getNetworkApplianceConnectivityMonitoringDestinations200ApplicationJSONObject?: Record<string, any>;
 }

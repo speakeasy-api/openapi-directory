@@ -10,5 +10,5 @@ export class GetStatCategoriesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getStatCategories200ApplicationJsonStrings?: string[];
+  getStatCategories200ApplicationJSONStrings?: string[];
 }

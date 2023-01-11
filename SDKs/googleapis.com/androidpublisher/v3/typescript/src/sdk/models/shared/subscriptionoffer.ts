@@ -14,40 +14,6 @@ export enum SubscriptionOfferStateEnum {
 }
 
 
-// SubscriptionOfferInput
-/** 
- * A single, temporary offer
-**/
-export class SubscriptionOfferInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=basePlanId" })
-  basePlanId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=offerId" })
-  offerId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=offerTags", elemType: OfferTag })
-  offerTags?: OfferTag[];
-
-  @SpeakeasyMetadata({ data: "json, name=otherRegionsConfig" })
-  otherRegionsConfig?: OtherRegionsSubscriptionOfferConfig;
-
-  @SpeakeasyMetadata({ data: "json, name=packageName" })
-  packageName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=phases", elemType: SubscriptionOfferPhase })
-  phases?: SubscriptionOfferPhase[];
-
-  @SpeakeasyMetadata({ data: "json, name=productId" })
-  productId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=regionalConfigs", elemType: RegionalSubscriptionOfferConfig })
-  regionalConfigs?: RegionalSubscriptionOfferConfig[];
-
-  @SpeakeasyMetadata({ data: "json, name=targeting" })
-  targeting?: SubscriptionOfferTargeting;
-}
-
-
 // SubscriptionOffer
 /** 
  * A single, temporary offer
@@ -79,6 +45,40 @@ export class SubscriptionOffer extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=state" })
   state?: SubscriptionOfferStateEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=targeting" })
+  targeting?: SubscriptionOfferTargeting;
+}
+
+
+// SubscriptionOfferInput
+/** 
+ * A single, temporary offer
+**/
+export class SubscriptionOfferInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=basePlanId" })
+  basePlanId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=offerId" })
+  offerId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=offerTags", elemType: OfferTag })
+  offerTags?: OfferTag[];
+
+  @SpeakeasyMetadata({ data: "json, name=otherRegionsConfig" })
+  otherRegionsConfig?: OtherRegionsSubscriptionOfferConfig;
+
+  @SpeakeasyMetadata({ data: "json, name=packageName" })
+  packageName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=phases", elemType: SubscriptionOfferPhase })
+  phases?: SubscriptionOfferPhase[];
+
+  @SpeakeasyMetadata({ data: "json, name=productId" })
+  productId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=regionalConfigs", elemType: RegionalSubscriptionOfferConfig })
+  regionalConfigs?: RegionalSubscriptionOfferConfig[];
 
   @SpeakeasyMetadata({ data: "json, name=targeting" })
   targeting?: SubscriptionOfferTargeting;

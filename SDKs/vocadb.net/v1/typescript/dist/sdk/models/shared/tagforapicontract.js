@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,107 +23,109 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TagBaseContract } from "./tagbasecontract";
-import { EntryThumbForApiContract } from "./entrythumbforapicontract";
-import { LocalizedStringWithIdContract } from "./localizedstringwithidcontract";
-import { EnglishTranslatedStringContract } from "./englishtranslatedstringcontract";
-import { WebLinkForApiContract } from "./weblinkforapicontract";
-export var TagForApiContractDefaultNameLanguageEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagForApiContract = exports.TagForApiContractStatusEnum = exports.TagForApiContractDefaultNameLanguageEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var tagbasecontract_1 = require("./tagbasecontract");
+var entrythumbforapicontract_1 = require("./entrythumbforapicontract");
+var localizedstringwithidcontract_1 = require("./localizedstringwithidcontract");
+var englishtranslatedstringcontract_1 = require("./englishtranslatedstringcontract");
+var weblinkforapicontract_1 = require("./weblinkforapicontract");
+var TagForApiContractDefaultNameLanguageEnum;
 (function (TagForApiContractDefaultNameLanguageEnum) {
     TagForApiContractDefaultNameLanguageEnum["Unspecified"] = "Unspecified";
     TagForApiContractDefaultNameLanguageEnum["Japanese"] = "Japanese";
     TagForApiContractDefaultNameLanguageEnum["Romaji"] = "Romaji";
     TagForApiContractDefaultNameLanguageEnum["English"] = "English";
-})(TagForApiContractDefaultNameLanguageEnum || (TagForApiContractDefaultNameLanguageEnum = {}));
-export var TagForApiContractStatusEnum;
+})(TagForApiContractDefaultNameLanguageEnum = exports.TagForApiContractDefaultNameLanguageEnum || (exports.TagForApiContractDefaultNameLanguageEnum = {}));
+var TagForApiContractStatusEnum;
 (function (TagForApiContractStatusEnum) {
     TagForApiContractStatusEnum["Draft"] = "Draft";
     TagForApiContractStatusEnum["Finished"] = "Finished";
     TagForApiContractStatusEnum["Approved"] = "Approved";
     TagForApiContractStatusEnum["Locked"] = "Locked";
-})(TagForApiContractStatusEnum || (TagForApiContractStatusEnum = {}));
+})(TagForApiContractStatusEnum = exports.TagForApiContractStatusEnum || (exports.TagForApiContractStatusEnum = {}));
 var TagForApiContract = /** @class */ (function (_super) {
     __extends(TagForApiContract, _super);
     function TagForApiContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalNames" }),
         __metadata("design:type", String)
     ], TagForApiContract.prototype, "additionalNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aliasedTo" }),
-        __metadata("design:type", TagBaseContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aliasedTo" }),
+        __metadata("design:type", tagbasecontract_1.TagBaseContract)
     ], TagForApiContract.prototype, "aliasedTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryName" }),
         __metadata("design:type", String)
     ], TagForApiContract.prototype, "categoryName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createDate" }),
         __metadata("design:type", Date)
     ], TagForApiContract.prototype, "createDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultNameLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultNameLanguage" }),
         __metadata("design:type", String)
     ], TagForApiContract.prototype, "defaultNameLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], TagForApiContract.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], TagForApiContract.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mainPicture" }),
-        __metadata("design:type", EntryThumbForApiContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mainPicture" }),
+        __metadata("design:type", entrythumbforapicontract_1.EntryThumbForApiContract)
     ], TagForApiContract.prototype, "mainPicture", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TagForApiContract.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=names", elemType: LocalizedStringWithIdContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=names", elemType: localizedstringwithidcontract_1.LocalizedStringWithIdContract }),
         __metadata("design:type", Array)
     ], TagForApiContract.prototype, "names", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent" }),
-        __metadata("design:type", TagBaseContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent" }),
+        __metadata("design:type", tagbasecontract_1.TagBaseContract)
     ], TagForApiContract.prototype, "parent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relatedTags", elemType: TagBaseContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relatedTags", elemType: tagbasecontract_1.TagBaseContract }),
         __metadata("design:type", Array)
     ], TagForApiContract.prototype, "relatedTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], TagForApiContract.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targets" }),
         __metadata("design:type", Number)
     ], TagForApiContract.prototype, "targets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=translatedDescription" }),
-        __metadata("design:type", EnglishTranslatedStringContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=translatedDescription" }),
+        __metadata("design:type", englishtranslatedstringcontract_1.EnglishTranslatedStringContract)
     ], TagForApiContract.prototype, "translatedDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlSlug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlSlug" }),
         __metadata("design:type", String)
     ], TagForApiContract.prototype, "urlSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usageCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usageCount" }),
         __metadata("design:type", Number)
     ], TagForApiContract.prototype, "usageCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], TagForApiContract.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webLinks", elemType: WebLinkForApiContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webLinks", elemType: weblinkforapicontract_1.WebLinkForApiContract }),
         __metadata("design:type", Array)
     ], TagForApiContract.prototype, "webLinks", void 0);
     return TagForApiContract;
-}(SpeakeasyBase));
-export { TagForApiContract };
+}(utils_1.SpeakeasyBase));
+exports.TagForApiContract = TagForApiContract;

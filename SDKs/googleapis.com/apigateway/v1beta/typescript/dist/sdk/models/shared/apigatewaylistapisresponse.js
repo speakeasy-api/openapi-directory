@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApigatewayApi } from "./apigatewayapi";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApigatewayListApisResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var apigatewayapi_1 = require("./apigatewayapi");
 // ApigatewayListApisResponse
 /**
  * Response message for ApiGatewayService.ListApis
@@ -34,17 +37,17 @@ var ApigatewayListApisResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apis", elemType: ApigatewayApi }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apis", elemType: apigatewayapi_1.ApigatewayApi }),
         __metadata("design:type", Array)
     ], ApigatewayListApisResponse.prototype, "apis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ApigatewayListApisResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unreachableLocations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unreachableLocations" }),
         __metadata("design:type", Array)
     ], ApigatewayListApisResponse.prototype, "unreachableLocations", void 0);
     return ApigatewayListApisResponse;
-}(SpeakeasyBase));
-export { ApigatewayListApisResponse };
+}(utils_1.SpeakeasyBase));
+exports.ApigatewayListApisResponse = ApigatewayListApisResponse;

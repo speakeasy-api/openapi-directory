@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Cluster } from "./cluster";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DecreaseReplicationFactorResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var cluster_1 = require("./cluster");
 var DecreaseReplicationFactorResponse = /** @class */ (function (_super) {
     __extends(DecreaseReplicationFactorResponse, _super);
     function DecreaseReplicationFactorResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Cluster" }),
-        __metadata("design:type", Cluster)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Cluster" }),
+        __metadata("design:type", cluster_1.Cluster)
     ], DecreaseReplicationFactorResponse.prototype, "cluster", void 0);
     return DecreaseReplicationFactorResponse;
-}(SpeakeasyBase));
-export { DecreaseReplicationFactorResponse };
+}(utils_1.SpeakeasyBase));
+exports.DecreaseReplicationFactorResponse = DecreaseReplicationFactorResponse;

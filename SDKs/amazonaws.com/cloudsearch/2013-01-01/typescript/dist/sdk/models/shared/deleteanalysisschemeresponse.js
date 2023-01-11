@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AnalysisSchemeStatus } from "./analysisschemestatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteAnalysisSchemeResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var analysisschemestatus_1 = require("./analysisschemestatus");
 // DeleteAnalysisSchemeResponse
 /**
  * The result of a <code>DeleteAnalysisScheme</code> request. Contains the status of the deleted analysis scheme.
@@ -34,9 +37,9 @@ var DeleteAnalysisSchemeResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", AnalysisSchemeStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", analysisschemestatus_1.AnalysisSchemeStatus)
     ], DeleteAnalysisSchemeResponse.prototype, "analysisScheme", void 0);
     return DeleteAnalysisSchemeResponse;
-}(SpeakeasyBase));
-export { DeleteAnalysisSchemeResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteAnalysisSchemeResponse = DeleteAnalysisSchemeResponse;

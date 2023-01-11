@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Fingerprint = void 0;
+var utils_1 = require("../../../internal/utils");
 // Fingerprint
 /**
  * A set of properties that uniquely identify a given Docker image.
@@ -33,17 +36,17 @@ var Fingerprint = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=v1Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=v1Name" }),
         __metadata("design:type", String)
     ], Fingerprint.prototype, "v1Name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=v2Blob" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=v2Blob" }),
         __metadata("design:type", Array)
     ], Fingerprint.prototype, "v2Blob", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=v2Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=v2Name" }),
         __metadata("design:type", String)
     ], Fingerprint.prototype, "v2Name", void 0);
     return Fingerprint;
-}(SpeakeasyBase));
-export { Fingerprint };
+}(utils_1.SpeakeasyBase));
+exports.Fingerprint = Fingerprint;

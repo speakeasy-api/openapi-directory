@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SvgconvertResponse = exports.SvgconvertRequest = exports.SvgconvertFileUrl = exports.SvgconvertFileToConvert = exports.SvgconvertFileToConvertFile = void 0;
+var utils_1 = require("../../../internal/utils");
 var SvgconvertFileToConvertFile = /** @class */ (function (_super) {
     __extends(SvgconvertFileToConvertFile, _super);
     function SvgconvertFileToConvertFile() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, content=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
         __metadata("design:type", Uint8Array)
     ], SvgconvertFileToConvertFile.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=file" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=file" }),
         __metadata("design:type", String)
     ], SvgconvertFileToConvertFile.prototype, "file", void 0);
     return SvgconvertFileToConvertFile;
-}(SpeakeasyBase));
-export { SvgconvertFileToConvertFile };
+}(utils_1.SpeakeasyBase));
+exports.SvgconvertFileToConvertFile = SvgconvertFileToConvertFile;
 var SvgconvertFileToConvert = /** @class */ (function (_super) {
     __extends(SvgconvertFileToConvert, _super);
     function SvgconvertFileToConvert() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, file=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
         __metadata("design:type", SvgconvertFileToConvertFile)
     ], SvgconvertFileToConvert.prototype, "file", void 0);
     return SvgconvertFileToConvert;
-}(SpeakeasyBase));
-export { SvgconvertFileToConvert };
+}(utils_1.SpeakeasyBase));
+exports.SvgconvertFileToConvert = SvgconvertFileToConvert;
 var SvgconvertFileUrl = /** @class */ (function (_super) {
     __extends(SvgconvertFileUrl, _super);
     function SvgconvertFileUrl() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blob_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blob_name" }),
         __metadata("design:type", String)
     ], SvgconvertFileUrl.prototype, "blobName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blob_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blob_url" }),
         __metadata("design:type", String)
     ], SvgconvertFileUrl.prototype, "blobUrl", void 0);
     return SvgconvertFileUrl;
-}(SpeakeasyBase));
-export { SvgconvertFileUrl };
+}(utils_1.SpeakeasyBase));
+exports.SvgconvertFileUrl = SvgconvertFileUrl;
 var SvgconvertRequest = /** @class */ (function (_super) {
     __extends(SvgconvertRequest, _super);
     function SvgconvertRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", SvgconvertFileToConvert)
     ], SvgconvertRequest.prototype, "request", void 0);
     return SvgconvertRequest;
-}(SpeakeasyBase));
-export { SvgconvertRequest };
+}(utils_1.SpeakeasyBase));
+exports.SvgconvertRequest = SvgconvertRequest;
 var SvgconvertResponse = /** @class */ (function (_super) {
     __extends(SvgconvertResponse, _super);
     function SvgconvertResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SvgconvertResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SvgconvertFileUrl)
     ], SvgconvertResponse.prototype, "fileUrl", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SvgconvertResponse.prototype, "statusCode", void 0);
     return SvgconvertResponse;
-}(SpeakeasyBase));
-export { SvgconvertResponse };
+}(utils_1.SpeakeasyBase));
+exports.SvgconvertResponse = SvgconvertResponse;

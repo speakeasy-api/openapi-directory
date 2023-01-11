@@ -14,7 +14,7 @@ export declare class TeamsListPendingInvitationsInOrgRequest extends SpeakeasyBa
 }
 export declare class TeamsListPendingInvitationsInOrgResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     organizationInvitations?: shared.OrganizationInvitation[];
 }

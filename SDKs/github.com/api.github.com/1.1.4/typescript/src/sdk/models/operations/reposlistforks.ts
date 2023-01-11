@@ -11,13 +11,6 @@ export class ReposListForksPathParams extends SpeakeasyBase {
   repo: string;
 }
 
-export enum ReposListForksSortEnum {
-    Newest = "newest",
-    Oldest = "oldest",
-    Stargazers = "stargazers",
-    Watchers = "watchers"
-}
-
 
 export class ReposListForksQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=org" })
@@ -33,7 +26,7 @@ export class ReposListForksQueryParams extends SpeakeasyBase {
   perPage?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" })
-  sort?: ReposListForksSortEnum;
+  sort?: shared.RepoEnum1;
 }
 
 
@@ -51,7 +44,7 @@ export class ReposListForksResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

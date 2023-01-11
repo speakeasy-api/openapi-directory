@@ -9,5 +9,5 @@ export declare class ConvertUrlResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
     statusCode: number;
-    convertUrl200ApplicationJsonAny?: any;
+    convertUrl200ApplicationJSONAny?: any;
 }

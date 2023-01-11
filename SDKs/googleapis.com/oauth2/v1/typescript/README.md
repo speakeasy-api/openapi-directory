@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { Oauth2TokeninfoRequest, Oauth2TokeninfoResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,19 +28,19 @@ const sdk = new SDK();
     
 const req: Oauth2TokeninfoRequest = {
   queryParams: {
-    accessToken: "ducimus",
+    accessToken: "sit",
     alt: "json",
-    fields: "delectus",
-    idToken: "non",
-    key: "voluptatem",
-    oauthToken: "dolorem",
+    fields: "culpa",
+    idToken: "expedita",
+    key: "consequuntur",
+    oauthToken: "dolor",
     prettyPrint: true,
-    quotaUser: "quae",
-    userIp: "quia",
+    quotaUser: "voluptas",
+    userIp: "fugit",
   },
 };
 
-sdk.sdk.oauth2Tokeninfo(req).then((res: Oauth2TokeninfoResponse | AxiosError) => {
+sdk.oauth2Tokeninfo(req).then((res: Oauth2TokeninfoResponse | AxiosError) => {
    // handle response
 });
 ```

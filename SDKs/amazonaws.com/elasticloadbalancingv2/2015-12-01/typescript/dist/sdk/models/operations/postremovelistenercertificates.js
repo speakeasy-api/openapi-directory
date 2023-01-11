@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostRemoveListenerCertificatesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostRemoveListenerCertificatesResponse = exports.PostRemoveListenerCertificatesRequest = exports.PostRemoveListenerCertificatesHeaders = exports.PostRemoveListenerCertificatesQueryParams = exports.PostRemoveListenerCertificatesVersionEnum = exports.PostRemoveListenerCertificatesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostRemoveListenerCertificatesActionEnum;
 (function (PostRemoveListenerCertificatesActionEnum) {
     PostRemoveListenerCertificatesActionEnum["RemoveListenerCertificates"] = "RemoveListenerCertificates";
-})(PostRemoveListenerCertificatesActionEnum || (PostRemoveListenerCertificatesActionEnum = {}));
-export var PostRemoveListenerCertificatesVersionEnum;
+})(PostRemoveListenerCertificatesActionEnum = exports.PostRemoveListenerCertificatesActionEnum || (exports.PostRemoveListenerCertificatesActionEnum = {}));
+var PostRemoveListenerCertificatesVersionEnum;
 (function (PostRemoveListenerCertificatesVersionEnum) {
     PostRemoveListenerCertificatesVersionEnum["TwoThousandAndFifteen1201"] = "2015-12-01";
-})(PostRemoveListenerCertificatesVersionEnum || (PostRemoveListenerCertificatesVersionEnum = {}));
+})(PostRemoveListenerCertificatesVersionEnum = exports.PostRemoveListenerCertificatesVersionEnum || (exports.PostRemoveListenerCertificatesVersionEnum = {}));
 var PostRemoveListenerCertificatesQueryParams = /** @class */ (function (_super) {
     __extends(PostRemoveListenerCertificatesQueryParams, _super);
     function PostRemoveListenerCertificatesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostRemoveListenerCertificatesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostRemoveListenerCertificatesQueryParams.prototype, "version", void 0);
     return PostRemoveListenerCertificatesQueryParams;
-}(SpeakeasyBase));
-export { PostRemoveListenerCertificatesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostRemoveListenerCertificatesQueryParams = PostRemoveListenerCertificatesQueryParams;
 var PostRemoveListenerCertificatesHeaders = /** @class */ (function (_super) {
     __extends(PostRemoveListenerCertificatesHeaders, _super);
     function PostRemoveListenerCertificatesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostRemoveListenerCertificatesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostRemoveListenerCertificatesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostRemoveListenerCertificatesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostRemoveListenerCertificatesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostRemoveListenerCertificatesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostRemoveListenerCertificatesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostRemoveListenerCertificatesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostRemoveListenerCertificatesHeaders;
-}(SpeakeasyBase));
-export { PostRemoveListenerCertificatesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostRemoveListenerCertificatesHeaders = PostRemoveListenerCertificatesHeaders;
 var PostRemoveListenerCertificatesRequest = /** @class */ (function (_super) {
     __extends(PostRemoveListenerCertificatesRequest, _super);
     function PostRemoveListenerCertificatesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRemoveListenerCertificatesQueryParams)
     ], PostRemoveListenerCertificatesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRemoveListenerCertificatesHeaders)
     ], PostRemoveListenerCertificatesRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostRemoveListenerCertificatesRequest.prototype, "request", void 0);
     return PostRemoveListenerCertificatesRequest;
-}(SpeakeasyBase));
-export { PostRemoveListenerCertificatesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostRemoveListenerCertificatesRequest = PostRemoveListenerCertificatesRequest;
 var PostRemoveListenerCertificatesResponse = /** @class */ (function (_super) {
     __extends(PostRemoveListenerCertificatesResponse, _super);
     function PostRemoveListenerCertificatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostRemoveListenerCertificatesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostRemoveListenerCertificatesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostRemoveListenerCertificatesResponse.prototype, "statusCode", void 0);
     return PostRemoveListenerCertificatesResponse;
-}(SpeakeasyBase));
-export { PostRemoveListenerCertificatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostRemoveListenerCertificatesResponse = PostRemoveListenerCertificatesResponse;

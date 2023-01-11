@@ -20,7 +20,7 @@ export declare class GetMediaRequestBodyStartSelector extends SpeakeasyBase {
 }
 export declare class GetMediaRequestBody extends SpeakeasyBase {
     startSelector: GetMediaRequestBodyStartSelector;
-    streamArn?: string;
+    streamARN?: string;
     streamName?: string;
 }
 export declare class GetMediaRequest extends SpeakeasyBase {

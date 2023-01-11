@@ -8,7 +8,7 @@ export class DtcerRequestBodyCertificateParameters extends SpeakeasyBase {
   dob: string;
 
   @SpeakeasyMetadata({ data: "json, name=RegistrationID" })
-  registrationId: string;
+  registrationID: string;
 }
 
 export enum DtcerRequestBodyFormatEnum {
@@ -188,23 +188,23 @@ export class DtcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dtcer400ApplicationJsonObject?: Dtcer400ApplicationJson;
+  dtcer400ApplicationJSONObject?: Dtcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  dtcer401ApplicationJsonObject?: Dtcer401ApplicationJson;
+  dtcer401ApplicationJSONObject?: Dtcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  dtcer404ApplicationJsonObject?: Dtcer404ApplicationJson;
+  dtcer404ApplicationJSONObject?: Dtcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  dtcer500ApplicationJsonObject?: Dtcer500ApplicationJson;
+  dtcer500ApplicationJSONObject?: Dtcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  dtcer502ApplicationJsonObject?: Dtcer502ApplicationJson;
+  dtcer502ApplicationJSONObject?: Dtcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  dtcer503ApplicationJsonObject?: Dtcer503ApplicationJson;
+  dtcer503ApplicationJSONObject?: Dtcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  dtcer504ApplicationJsonObject?: Dtcer504ApplicationJson;
+  dtcer504ApplicationJSONObject?: Dtcer504ApplicationJson;
 }

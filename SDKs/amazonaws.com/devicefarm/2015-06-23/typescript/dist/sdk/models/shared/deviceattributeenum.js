@@ -1,4 +1,7 @@
-export var DeviceAttributeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceAttributeEnum = void 0;
+var DeviceAttributeEnum;
 (function (DeviceAttributeEnum) {
     DeviceAttributeEnum["Arn"] = "ARN";
     DeviceAttributeEnum["Platform"] = "PLATFORM";
@@ -13,4 +16,4 @@ export var DeviceAttributeEnum;
     DeviceAttributeEnum["OsVersion"] = "OS_VERSION";
     DeviceAttributeEnum["Model"] = "MODEL";
     DeviceAttributeEnum["Availability"] = "AVAILABILITY";
-})(DeviceAttributeEnum || (DeviceAttributeEnum = {}));
+})(DeviceAttributeEnum = exports.DeviceAttributeEnum || (exports.DeviceAttributeEnum = {}));

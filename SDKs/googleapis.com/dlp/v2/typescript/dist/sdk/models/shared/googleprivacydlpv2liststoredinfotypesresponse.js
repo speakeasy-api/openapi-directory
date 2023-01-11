@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2StoredInfoType } from "./googleprivacydlpv2storedinfotype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2ListStoredInfoTypesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2storedinfotype_1 = require("./googleprivacydlpv2storedinfotype");
 // GooglePrivacyDlpV2ListStoredInfoTypesResponse
 /**
  * Response message for ListStoredInfoTypes.
@@ -34,13 +37,13 @@ var GooglePrivacyDlpV2ListStoredInfoTypesResponse = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2ListStoredInfoTypesResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storedInfoTypes", elemType: GooglePrivacyDlpV2StoredInfoType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storedInfoTypes", elemType: googleprivacydlpv2storedinfotype_1.GooglePrivacyDlpV2StoredInfoType }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2ListStoredInfoTypesResponse.prototype, "storedInfoTypes", void 0);
     return GooglePrivacyDlpV2ListStoredInfoTypesResponse;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2ListStoredInfoTypesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2ListStoredInfoTypesResponse = GooglePrivacyDlpV2ListStoredInfoTypesResponse;

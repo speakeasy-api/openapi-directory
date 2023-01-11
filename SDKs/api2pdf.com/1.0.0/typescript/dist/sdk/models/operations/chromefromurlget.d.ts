@@ -16,5 +16,5 @@ export declare class ChromeFromUrlGetResponse extends SpeakeasyBase {
     apiResponseSuccess?: shared.ApiResponseSuccess;
     contentType: string;
     statusCode: number;
-    chromeFromUrlGet200ApplicationPdfBinaryString?: Uint8Array;
+    chromeFromUrlGET200ApplicationPdfBinaryString?: Uint8Array;
 }

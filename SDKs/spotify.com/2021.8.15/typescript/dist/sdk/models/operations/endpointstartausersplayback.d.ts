@@ -8,7 +8,7 @@ export declare class EndpointStartAUsersPlaybackHeaders extends SpeakeasyBase {
 }
 export declare class EndpointStartAUsersPlaybackRequestBody extends SpeakeasyBase {
     contextUri?: string;
-    offset?: Map<string, any>;
+    offset?: Record<string, any>;
     positionMs?: number;
     uris?: string[];
 }

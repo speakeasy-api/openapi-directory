@@ -7,7 +7,7 @@ export declare class CertificateMap extends SpeakeasyBase {
     createTime?: string;
     description?: string;
     gclbTargets?: GclbTarget[];
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     updateTime?: string;
 }
@@ -16,6 +16,6 @@ export declare class CertificateMap extends SpeakeasyBase {
 **/
 export declare class CertificateMapInput extends SpeakeasyBase {
     description?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
 }

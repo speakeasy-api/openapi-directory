@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { ActiveTrustedSigners } from "./activetrustedsigners";
-import { AliasIcpRecordal } from "./aliasicprecordal";
+import { AliasIcpRecordals } from "./aliasicprecordals";
 import { DistributionConfig } from "./distributionconfig";
 
 
@@ -16,8 +16,8 @@ export class Distribution extends SpeakeasyBase {
   @SpeakeasyMetadata()
   activeTrustedSigners: ActiveTrustedSigners;
 
-  @SpeakeasyMetadata({ elemType: AliasIcpRecordal })
-  aliasIcpRecordals?: AliasIcpRecordal[];
+  @SpeakeasyMetadata({ elemType: AliasIcpRecordals })
+  aliasICPRecordals?: AliasIcpRecordals[];
 
   @SpeakeasyMetadata()
   distributionConfig: DistributionConfig;

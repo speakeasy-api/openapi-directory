@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { HrefType } from "./hreftype";
 import { MessageCode403PisEnum } from "./messagecode403pisenum";
+import { HrefType } from "./hreftype";
 /**
  * This is a data element to support the declaration of additional errors in the context of [RFC7807].
 **/
@@ -15,7 +15,7 @@ export declare class Error403PisAdditionalErrors extends SpeakeasyBase {
  *
 **/
 export declare class Error403Pis extends SpeakeasyBase {
-    links?: Map<string, HrefType>;
+    links?: Record<string, HrefType>;
     additionalErrors?: Error403PisAdditionalErrors[];
     code: MessageCode403PisEnum;
     detail?: string;

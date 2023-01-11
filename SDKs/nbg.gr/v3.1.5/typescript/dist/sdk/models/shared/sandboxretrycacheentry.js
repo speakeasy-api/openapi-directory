@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SandboxRetryCacheEntry = void 0;
+var utils_1 = require("../../../internal/utils");
 // SandboxRetryCacheEntry
 /**
  * Keeps the number of calls without x-fapi-customer-ip-address header present
@@ -33,17 +36,17 @@ var SandboxRetryCacheEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cacheKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cacheKey" }),
         __metadata("design:type", String)
     ], SandboxRetryCacheEntry.prototype, "cacheKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=count" }),
         __metadata("design:type", Number)
     ], SandboxRetryCacheEntry.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expirationTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expirationTimestamp" }),
         __metadata("design:type", Date)
     ], SandboxRetryCacheEntry.prototype, "expirationTimestamp", void 0);
     return SandboxRetryCacheEntry;
-}(SpeakeasyBase));
-export { SandboxRetryCacheEntry };
+}(utils_1.SpeakeasyBase));
+exports.SandboxRetryCacheEntry = SandboxRetryCacheEntry;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest
 /**
  * Request message for SmartDeviceManagementService.ExecuteDeviceCommand
@@ -33,13 +36,13 @@ var GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest = /** @class */ (functi
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=params" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=params" }),
+        __metadata("design:type", Object)
     ], GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest.prototype, "params", void 0);
     return GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest;
-}(SpeakeasyBase));
-export { GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest = GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest;

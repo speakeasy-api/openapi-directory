@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StoredQueryMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
 // StoredQueryMetadata
 /**
  * Returns details of a specific query.
@@ -33,21 +36,21 @@ var StoredQueryMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], StoredQueryMetadata.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QueryArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QueryArn" }),
         __metadata("design:type", String)
     ], StoredQueryMetadata.prototype, "queryArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QueryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QueryId" }),
         __metadata("design:type", String)
     ], StoredQueryMetadata.prototype, "queryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QueryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QueryName" }),
         __metadata("design:type", String)
     ], StoredQueryMetadata.prototype, "queryName", void 0);
     return StoredQueryMetadata;
-}(SpeakeasyBase));
-export { StoredQueryMetadata };
+}(utils_1.SpeakeasyBase));
+exports.StoredQueryMetadata = StoredQueryMetadata;

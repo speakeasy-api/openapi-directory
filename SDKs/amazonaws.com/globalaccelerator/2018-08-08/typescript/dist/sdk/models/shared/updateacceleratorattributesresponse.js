@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AcceleratorAttributes } from "./acceleratorattributes";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateAcceleratorAttributesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var acceleratorattributes_1 = require("./acceleratorattributes");
 var UpdateAcceleratorAttributesResponse = /** @class */ (function (_super) {
     __extends(UpdateAcceleratorAttributesResponse, _super);
     function UpdateAcceleratorAttributesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AcceleratorAttributes" }),
-        __metadata("design:type", AcceleratorAttributes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AcceleratorAttributes" }),
+        __metadata("design:type", acceleratorattributes_1.AcceleratorAttributes)
     ], UpdateAcceleratorAttributesResponse.prototype, "acceleratorAttributes", void 0);
     return UpdateAcceleratorAttributesResponse;
-}(SpeakeasyBase));
-export { UpdateAcceleratorAttributesResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateAcceleratorAttributesResponse = UpdateAcceleratorAttributesResponse;

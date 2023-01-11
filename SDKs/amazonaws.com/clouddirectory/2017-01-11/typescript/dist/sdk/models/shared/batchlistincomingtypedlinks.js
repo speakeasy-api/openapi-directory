@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TypedLinkAttributeRange } from "./typedlinkattributerange";
-import { TypedLinkSchemaAndFacetName } from "./typedlinkschemaandfacetname";
-import { ObjectReference } from "./objectreference";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchListIncomingTypedLinks = void 0;
+var utils_1 = require("../../../internal/utils");
+var typedlinkattributerange_1 = require("./typedlinkattributerange");
+var typedlinkschemaandfacetname_1 = require("./typedlinkschemaandfacetname");
+var objectreference_1 = require("./objectreference");
 // BatchListIncomingTypedLinks
 /**
  * Returns a paginated list of all the incoming <a>TypedLinkSpecifier</a> information for an object inside a <a>BatchRead</a> operation. For more information, see <a>ListIncomingTypedLinks</a> and <a>BatchReadRequest$Operations</a>.
@@ -36,25 +39,25 @@ var BatchListIncomingTypedLinks = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FilterAttributeRanges", elemType: TypedLinkAttributeRange }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FilterAttributeRanges", elemType: typedlinkattributerange_1.TypedLinkAttributeRange }),
         __metadata("design:type", Array)
     ], BatchListIncomingTypedLinks.prototype, "filterAttributeRanges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FilterTypedLink" }),
-        __metadata("design:type", TypedLinkSchemaAndFacetName)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FilterTypedLink" }),
+        __metadata("design:type", typedlinkschemaandfacetname_1.TypedLinkSchemaAndFacetName)
     ], BatchListIncomingTypedLinks.prototype, "filterTypedLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], BatchListIncomingTypedLinks.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], BatchListIncomingTypedLinks.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ObjectReference" }),
-        __metadata("design:type", ObjectReference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ObjectReference" }),
+        __metadata("design:type", objectreference_1.ObjectReference)
     ], BatchListIncomingTypedLinks.prototype, "objectReference", void 0);
     return BatchListIncomingTypedLinks;
-}(SpeakeasyBase));
-export { BatchListIncomingTypedLinks };
+}(utils_1.SpeakeasyBase));
+exports.BatchListIncomingTypedLinks = BatchListIncomingTypedLinks;

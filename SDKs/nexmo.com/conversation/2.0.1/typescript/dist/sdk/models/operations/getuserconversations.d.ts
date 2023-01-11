@@ -23,5 +23,5 @@ export declare class GetuserConversationsRequest extends SpeakeasyBase {
 export declare class GetuserConversationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getuserConversations200ApplicationJsonObjects?: GetuserConversations200ApplicationJson[];
+    getuserConversations200ApplicationJSONObjects?: GetuserConversations200ApplicationJson[];
 }

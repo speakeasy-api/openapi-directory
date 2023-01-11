@@ -5,11 +5,11 @@ export declare class PostV05HealthInformationTransferHeaders extends SpeakeasyBa
     authorization: string;
 }
 export declare class PostV05HealthInformationTransferRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     dataNotification?: shared.DataNotification;
 }
 export declare class PostV05HealthInformationTransferRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     headers: PostV05HealthInformationTransferHeaders;
     request: PostV05HealthInformationTransferRequests;
 }

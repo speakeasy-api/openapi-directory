@@ -68,5 +68,5 @@ export class CodeScanningUploadSarifResponse extends SpeakeasyBase {
   codeScanningSarifsReceipt?: shared.CodeScanningSarifsReceipt;
 
   @SpeakeasyMetadata()
-  codeScanningUploadSarif503ApplicationJsonObject?: CodeScanningUploadSarif503ApplicationJson;
+  codeScanningUploadSarif503ApplicationJSONObject?: CodeScanningUploadSarif503ApplicationJson;
 }

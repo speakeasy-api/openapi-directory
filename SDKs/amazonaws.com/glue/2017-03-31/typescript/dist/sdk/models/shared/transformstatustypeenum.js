@@ -1,6 +1,9 @@
-export var TransformStatusTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransformStatusTypeEnum = void 0;
+var TransformStatusTypeEnum;
 (function (TransformStatusTypeEnum) {
     TransformStatusTypeEnum["NotReady"] = "NOT_READY";
     TransformStatusTypeEnum["Ready"] = "READY";
     TransformStatusTypeEnum["Deleting"] = "DELETING";
-})(TransformStatusTypeEnum || (TransformStatusTypeEnum = {}));
+})(TransformStatusTypeEnum = exports.TransformStatusTypeEnum || (exports.TransformStatusTypeEnum = {}));

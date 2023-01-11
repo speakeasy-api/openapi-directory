@@ -4,12 +4,14 @@ import { BankTransferEventTypeEnum } from "./banktransfereventtypeenum";
 
 export enum BankTransferEventListRequestBankTransferTypeEnum {
     Debit = "debit",
-    Credit = "credit"
+    Credit = "credit",
+    Null = "null"
 }
 
 export enum BankTransferEventListRequestBankTransferDirectionEnum {
     Inbound = "inbound",
-    Outbound = "outbound"
+    Outbound = "outbound",
+    Null = "null"
 }
 
 

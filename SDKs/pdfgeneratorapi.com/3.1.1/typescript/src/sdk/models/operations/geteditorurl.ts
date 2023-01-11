@@ -105,7 +105,7 @@ export class GetEditorUrlRequest extends SpeakeasyBase {
   queryParams: GetEditorUrlQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -117,20 +117,20 @@ export class GetEditorUrlResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getEditorUrl200ApplicationJsonObject?: GetEditorUrl200ApplicationJson;
+  getEditorUrl200ApplicationJSONObject?: GetEditorUrl200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getEditorUrl401ApplicationJsonObject?: GetEditorUrl401ApplicationJson;
+  getEditorUrl401ApplicationJSONObject?: GetEditorUrl401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getEditorUrl403ApplicationJsonObject?: GetEditorUrl403ApplicationJson;
+  getEditorUrl403ApplicationJSONObject?: GetEditorUrl403ApplicationJson;
 
   @SpeakeasyMetadata()
-  getEditorUrl404ApplicationJsonObject?: GetEditorUrl404ApplicationJson;
+  getEditorUrl404ApplicationJSONObject?: GetEditorUrl404ApplicationJson;
 
   @SpeakeasyMetadata()
-  getEditorUrl422ApplicationJsonObject?: GetEditorUrl422ApplicationJson;
+  getEditorUrl422ApplicationJSONObject?: GetEditorUrl422ApplicationJson;
 
   @SpeakeasyMetadata()
-  getEditorUrl500ApplicationJsonObject?: GetEditorUrl500ApplicationJson;
+  getEditorUrl500ApplicationJSONObject?: GetEditorUrl500ApplicationJson;
 }

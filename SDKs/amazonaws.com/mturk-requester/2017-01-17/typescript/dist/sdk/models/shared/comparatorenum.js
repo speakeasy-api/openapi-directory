@@ -1,4 +1,7 @@
-export var ComparatorEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ComparatorEnum = void 0;
+var ComparatorEnum;
 (function (ComparatorEnum) {
     ComparatorEnum["LessThan"] = "LessThan";
     ComparatorEnum["LessThanOrEqualTo"] = "LessThanOrEqualTo";
@@ -10,4 +13,4 @@ export var ComparatorEnum;
     ComparatorEnum["DoesNotExist"] = "DoesNotExist";
     ComparatorEnum["In"] = "In";
     ComparatorEnum["NotIn"] = "NotIn";
-})(ComparatorEnum || (ComparatorEnum = {}));
+})(ComparatorEnum = exports.ComparatorEnum || (exports.ComparatorEnum = {}));

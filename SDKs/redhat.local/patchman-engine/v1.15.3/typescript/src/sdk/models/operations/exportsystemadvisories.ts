@@ -62,5 +62,5 @@ export class ExportSystemAdvisoriesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: shared.ControllersSystemAdvisoriesDbLookup })
-  controllersSystemAdvisoriesDbLookups?: shared.ControllersSystemAdvisoriesDbLookup[];
+  controllersSystemAdvisoriesDBLookups?: shared.ControllersSystemAdvisoriesDbLookup[];
 }

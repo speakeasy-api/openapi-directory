@@ -9,5 +9,5 @@ export declare class GetNetworkSwitchStackRequest extends SpeakeasyBase {
 export declare class GetNetworkSwitchStackResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSwitchStack200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSwitchStack200ApplicationJSONObject?: Record<string, any>;
 }

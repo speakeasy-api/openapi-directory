@@ -17,6 +17,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugVersionsVersionIdRequest ex
 export declare class GetRepositoriesWorkspaceRepoSlugVersionsVersionIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    version?: Map<string, any>;
+    error?: Record<string, any>;
+    version?: Record<string, any>;
 }

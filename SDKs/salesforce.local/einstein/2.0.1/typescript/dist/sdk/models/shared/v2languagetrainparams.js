@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V2LanguageTrainParams = void 0;
+var utils_1 = require("../../../internal/utils");
 // V2LanguageTrainParams
 /**
  * JSON that contains parameters that specify how the model is created
@@ -33,17 +36,17 @@ var V2LanguageTrainParams = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trainSplitRatio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trainSplitRatio" }),
         __metadata("design:type", Number)
     ], V2LanguageTrainParams.prototype, "trainSplitRatio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=withFeedback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=withFeedback" }),
         __metadata("design:type", Boolean)
     ], V2LanguageTrainParams.prototype, "withFeedback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=withGlobalDatasetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=withGlobalDatasetId" }),
         __metadata("design:type", Number)
     ], V2LanguageTrainParams.prototype, "withGlobalDatasetId", void 0);
     return V2LanguageTrainParams;
-}(SpeakeasyBase));
-export { V2LanguageTrainParams };
+}(utils_1.SpeakeasyBase));
+exports.V2LanguageTrainParams = V2LanguageTrainParams;

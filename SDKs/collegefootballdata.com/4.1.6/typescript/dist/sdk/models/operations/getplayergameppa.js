@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,86 +14,111 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPlayerGamePpaResponse = exports.GetPlayerGamePpaRequest = exports.GetPlayerGamePpaQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetPlayerGamePpaQueryParams = /** @class */ (function (_super) {
     __extends(GetPlayerGamePpaQueryParams, _super);
     function GetPlayerGamePpaQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=excludeGarbageTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=excludeGarbageTime" }),
         __metadata("design:type", Boolean)
     ], GetPlayerGamePpaQueryParams.prototype, "excludeGarbageTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=playerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=playerId" }),
         __metadata("design:type", Number)
     ], GetPlayerGamePpaQueryParams.prototype, "playerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=position" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=position" }),
         __metadata("design:type", String)
     ], GetPlayerGamePpaQueryParams.prototype, "position", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=seasonType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=seasonType" }),
         __metadata("design:type", String)
     ], GetPlayerGamePpaQueryParams.prototype, "seasonType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=team" }),
         __metadata("design:type", String)
     ], GetPlayerGamePpaQueryParams.prototype, "team", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=threshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=threshold" }),
         __metadata("design:type", String)
     ], GetPlayerGamePpaQueryParams.prototype, "threshold", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=week" }),
         __metadata("design:type", Number)
     ], GetPlayerGamePpaQueryParams.prototype, "week", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=year" }),
         __metadata("design:type", Number)
     ], GetPlayerGamePpaQueryParams.prototype, "year", void 0);
     return GetPlayerGamePpaQueryParams;
-}(SpeakeasyBase));
-export { GetPlayerGamePpaQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPlayerGamePpaQueryParams = GetPlayerGamePpaQueryParams;
 var GetPlayerGamePpaRequest = /** @class */ (function (_super) {
     __extends(GetPlayerGamePpaRequest, _super);
     function GetPlayerGamePpaRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPlayerGamePpaQueryParams)
     ], GetPlayerGamePpaRequest.prototype, "queryParams", void 0);
     return GetPlayerGamePpaRequest;
-}(SpeakeasyBase));
-export { GetPlayerGamePpaRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPlayerGamePpaRequest = GetPlayerGamePpaRequest;
 var GetPlayerGamePpaResponse = /** @class */ (function (_super) {
     __extends(GetPlayerGamePpaResponse, _super);
     function GetPlayerGamePpaResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPlayerGamePpaResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.PlayerGamePpa }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.PlayerGamePpa }),
         __metadata("design:type", Array)
-    ], GetPlayerGamePpaResponse.prototype, "playerGamePpas", void 0);
+    ], GetPlayerGamePpaResponse.prototype, "playerGamePPAS", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPlayerGamePpaResponse.prototype, "statusCode", void 0);
     return GetPlayerGamePpaResponse;
-}(SpeakeasyBase));
-export { GetPlayerGamePpaResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPlayerGamePpaResponse = GetPlayerGamePpaResponse;

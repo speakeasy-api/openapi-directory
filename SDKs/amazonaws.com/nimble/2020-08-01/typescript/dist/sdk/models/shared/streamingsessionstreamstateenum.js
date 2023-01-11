@@ -1,4 +1,7 @@
-export var StreamingSessionStreamStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreamingSessionStreamStateEnum = void 0;
+var StreamingSessionStreamStateEnum;
 (function (StreamingSessionStreamStateEnum) {
     StreamingSessionStreamStateEnum["Ready"] = "READY";
     StreamingSessionStreamStateEnum["CreateInProgress"] = "CREATE_IN_PROGRESS";
@@ -6,4 +9,4 @@ export var StreamingSessionStreamStateEnum;
     StreamingSessionStreamStateEnum["Deleted"] = "DELETED";
     StreamingSessionStreamStateEnum["CreateFailed"] = "CREATE_FAILED";
     StreamingSessionStreamStateEnum["DeleteFailed"] = "DELETE_FAILED";
-})(StreamingSessionStreamStateEnum || (StreamingSessionStreamStateEnum = {}));
+})(StreamingSessionStreamStateEnum = exports.StreamingSessionStreamStateEnum || (exports.StreamingSessionStreamStateEnum = {}));

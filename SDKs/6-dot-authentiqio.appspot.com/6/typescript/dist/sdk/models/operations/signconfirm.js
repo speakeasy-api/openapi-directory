@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SignConfirmResponse = exports.SignConfirmRequest = exports.SignConfirm202ApplicationJson = exports.SignConfirmPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SignConfirmPathParams = /** @class */ (function (_super) {
     __extends(SignConfirmPathParams, _super);
     function SignConfirmPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=job" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=job" }),
         __metadata("design:type", String)
     ], SignConfirmPathParams.prototype, "job", void 0);
     return SignConfirmPathParams;
-}(SpeakeasyBase));
-export { SignConfirmPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SignConfirmPathParams = SignConfirmPathParams;
 var SignConfirm202ApplicationJson = /** @class */ (function (_super) {
     __extends(SignConfirm202ApplicationJson, _super);
     function SignConfirm202ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], SignConfirm202ApplicationJson.prototype, "status", void 0);
     return SignConfirm202ApplicationJson;
-}(SpeakeasyBase));
-export { SignConfirm202ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.SignConfirm202ApplicationJson = SignConfirm202ApplicationJson;
 var SignConfirmRequest = /** @class */ (function (_super) {
     __extends(SignConfirmRequest, _super);
     function SignConfirmRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SignConfirmPathParams)
     ], SignConfirmRequest.prototype, "pathParams", void 0);
     return SignConfirmRequest;
-}(SpeakeasyBase));
-export { SignConfirmRequest };
+}(utils_1.SpeakeasyBase));
+exports.SignConfirmRequest = SignConfirmRequest;
 var SignConfirmResponse = /** @class */ (function (_super) {
     __extends(SignConfirmResponse, _super);
     function SignConfirmResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], SignConfirmResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SignConfirmResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SignConfirmResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SignConfirmResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SignConfirm202ApplicationJson)
-    ], SignConfirmResponse.prototype, "signConfirm202ApplicationJsonObject", void 0);
+    ], SignConfirmResponse.prototype, "signConfirm202ApplicationJSONObject", void 0);
     return SignConfirmResponse;
-}(SpeakeasyBase));
-export { SignConfirmResponse };
+}(utils_1.SpeakeasyBase));
+exports.SignConfirmResponse = SignConfirmResponse;

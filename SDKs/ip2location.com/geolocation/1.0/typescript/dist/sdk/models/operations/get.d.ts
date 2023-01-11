@@ -76,6 +76,6 @@ export declare class GetRequest extends SpeakeasyBase {
 }
 export declare class GetResponse extends SpeakeasyBase {
     contentType: string;
-    get200ApplicationJsonString?: string;
     statusCode: number;
+    get200ApplicationJSONString?: string;
 }

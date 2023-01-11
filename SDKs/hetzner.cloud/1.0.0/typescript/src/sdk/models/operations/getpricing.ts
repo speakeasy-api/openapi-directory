@@ -268,8 +268,8 @@ export class GetPricingResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getPricing200ApplicationJsonObject?: GetPricing200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getPricing200ApplicationJSONObject?: GetPricing200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,77 +23,79 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkSwitchDhcpServerPolicyResponse = exports.UpdateNetworkSwitchDhcpServerPolicyRequest = exports.UpdateNetworkSwitchDhcpServerPolicyRequestBody = exports.UpdateNetworkSwitchDhcpServerPolicyRequestBodyDefaultPolicyEnum = exports.UpdateNetworkSwitchDhcpServerPolicyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkSwitchDhcpServerPolicyPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchDhcpServerPolicyPathParams, _super);
     function UpdateNetworkSwitchDhcpServerPolicyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchDhcpServerPolicyPathParams.prototype, "networkId", void 0);
     return UpdateNetworkSwitchDhcpServerPolicyPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchDhcpServerPolicyPathParams };
-export var UpdateNetworkSwitchDhcpServerPolicyRequestBodyDefaultPolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchDhcpServerPolicyPathParams = UpdateNetworkSwitchDhcpServerPolicyPathParams;
+var UpdateNetworkSwitchDhcpServerPolicyRequestBodyDefaultPolicyEnum;
 (function (UpdateNetworkSwitchDhcpServerPolicyRequestBodyDefaultPolicyEnum) {
     UpdateNetworkSwitchDhcpServerPolicyRequestBodyDefaultPolicyEnum["Allow"] = "allow";
     UpdateNetworkSwitchDhcpServerPolicyRequestBodyDefaultPolicyEnum["Block"] = "block";
-})(UpdateNetworkSwitchDhcpServerPolicyRequestBodyDefaultPolicyEnum || (UpdateNetworkSwitchDhcpServerPolicyRequestBodyDefaultPolicyEnum = {}));
+})(UpdateNetworkSwitchDhcpServerPolicyRequestBodyDefaultPolicyEnum = exports.UpdateNetworkSwitchDhcpServerPolicyRequestBodyDefaultPolicyEnum || (exports.UpdateNetworkSwitchDhcpServerPolicyRequestBodyDefaultPolicyEnum = {}));
 var UpdateNetworkSwitchDhcpServerPolicyRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchDhcpServerPolicyRequestBody, _super);
     function UpdateNetworkSwitchDhcpServerPolicyRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedServers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedServers" }),
         __metadata("design:type", Array)
     ], UpdateNetworkSwitchDhcpServerPolicyRequestBody.prototype, "allowedServers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blockedServers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blockedServers" }),
         __metadata("design:type", Array)
     ], UpdateNetworkSwitchDhcpServerPolicyRequestBody.prototype, "blockedServers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultPolicy" }),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchDhcpServerPolicyRequestBody.prototype, "defaultPolicy", void 0);
     return UpdateNetworkSwitchDhcpServerPolicyRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchDhcpServerPolicyRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchDhcpServerPolicyRequestBody = UpdateNetworkSwitchDhcpServerPolicyRequestBody;
 var UpdateNetworkSwitchDhcpServerPolicyRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchDhcpServerPolicyRequest, _super);
     function UpdateNetworkSwitchDhcpServerPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkSwitchDhcpServerPolicyPathParams)
     ], UpdateNetworkSwitchDhcpServerPolicyRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkSwitchDhcpServerPolicyRequestBody)
     ], UpdateNetworkSwitchDhcpServerPolicyRequest.prototype, "request", void 0);
     return UpdateNetworkSwitchDhcpServerPolicyRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchDhcpServerPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchDhcpServerPolicyRequest = UpdateNetworkSwitchDhcpServerPolicyRequest;
 var UpdateNetworkSwitchDhcpServerPolicyResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkSwitchDhcpServerPolicyResponse, _super);
     function UpdateNetworkSwitchDhcpServerPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkSwitchDhcpServerPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkSwitchDhcpServerPolicyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkSwitchDhcpServerPolicyResponse.prototype, "updateNetworkSwitchDhcpServerPolicy200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkSwitchDhcpServerPolicyResponse.prototype, "updateNetworkSwitchDhcpServerPolicy200ApplicationJSONObject", void 0);
     return UpdateNetworkSwitchDhcpServerPolicyResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkSwitchDhcpServerPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkSwitchDhcpServerPolicyResponse = UpdateNetworkSwitchDhcpServerPolicyResponse;

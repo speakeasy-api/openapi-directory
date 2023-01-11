@@ -23,7 +23,7 @@ export declare class MetastoreProjectsLocationsServicesRemoveIamPolicySecurity e
 export declare class MetastoreProjectsLocationsServicesRemoveIamPolicyRequest extends SpeakeasyBase {
     pathParams: MetastoreProjectsLocationsServicesRemoveIamPolicyPathParams;
     queryParams: MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: MetastoreProjectsLocationsServicesRemoveIamPolicySecurity;
 }
 export declare class MetastoreProjectsLocationsServicesRemoveIamPolicyResponse extends SpeakeasyBase {

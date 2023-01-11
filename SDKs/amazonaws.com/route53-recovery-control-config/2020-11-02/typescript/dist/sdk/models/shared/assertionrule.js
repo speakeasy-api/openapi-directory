@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleConfig } from "./ruleconfig";
-import { StatusEnum } from "./statusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssertionRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var ruleconfig_1 = require("./ruleconfig");
+var statusenum_1 = require("./statusenum");
 // AssertionRule
 /**
  * An assertion rule enforces that, when a routing control state is changed, the criteria set by the rule configuration is met. Otherwise, the change to the routing control is not accepted.
@@ -35,33 +38,33 @@ var AssertionRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssertedControls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssertedControls" }),
         __metadata("design:type", Array)
     ], AssertionRule.prototype, "assertedControls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ControlPanelArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ControlPanelArn" }),
         __metadata("design:type", String)
     ], AssertionRule.prototype, "controlPanelArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], AssertionRule.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleConfig" }),
-        __metadata("design:type", RuleConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleConfig" }),
+        __metadata("design:type", ruleconfig_1.RuleConfig)
     ], AssertionRule.prototype, "ruleConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SafetyRuleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SafetyRuleArn" }),
         __metadata("design:type", String)
     ], AssertionRule.prototype, "safetyRuleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], AssertionRule.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WaitPeriodMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WaitPeriodMs" }),
         __metadata("design:type", Number)
     ], AssertionRule.prototype, "waitPeriodMs", void 0);
     return AssertionRule;
-}(SpeakeasyBase));
-export { AssertionRule };
+}(utils_1.SpeakeasyBase));
+exports.AssertionRule = AssertionRule;

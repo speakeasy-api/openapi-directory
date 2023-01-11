@@ -19,9 +19,9 @@ export declare class IssuesListEventsForTimelineRequest extends SpeakeasyBase {
 }
 export declare class IssuesListEventsForTimelineResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     issueEventForIssues?: shared.IssueEventForIssue[];
-    issuesListEventsForTimeline415ApplicationJsonObject?: IssuesListEventsForTimeline415ApplicationJson;
+    issuesListEventsForTimeline415ApplicationJSONObject?: IssuesListEventsForTimeline415ApplicationJson;
 }

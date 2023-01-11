@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,51 +23,53 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Key } from "./key";
-import { AttributeValue } from "./attributevalue";
-import { Condition } from "./condition";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var key_1 = require("./key");
+var attributevalue_1 = require("./attributevalue");
+var condition_1 = require("./condition");
 var QueryInput = /** @class */ (function (_super) {
     __extends(QueryInput, _super);
     function QueryInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AttributesToGet" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AttributesToGet" }),
         __metadata("design:type", Array)
     ], QueryInput.prototype, "attributesToGet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConsistentRead" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConsistentRead" }),
         __metadata("design:type", Boolean)
     ], QueryInput.prototype, "consistentRead", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Count" }),
         __metadata("design:type", Boolean)
     ], QueryInput.prototype, "count", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExclusiveStartKey" }),
-        __metadata("design:type", Key)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExclusiveStartKey" }),
+        __metadata("design:type", key_1.Key)
     ], QueryInput.prototype, "exclusiveStartKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HashKeyValue" }),
-        __metadata("design:type", AttributeValue)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HashKeyValue" }),
+        __metadata("design:type", attributevalue_1.AttributeValue)
     ], QueryInput.prototype, "hashKeyValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Limit" }),
         __metadata("design:type", Number)
     ], QueryInput.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RangeKeyCondition" }),
-        __metadata("design:type", Condition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RangeKeyCondition" }),
+        __metadata("design:type", condition_1.Condition)
     ], QueryInput.prototype, "rangeKeyCondition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ScanIndexForward" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ScanIndexForward" }),
         __metadata("design:type", Boolean)
     ], QueryInput.prototype, "scanIndexForward", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableName" }),
         __metadata("design:type", String)
     ], QueryInput.prototype, "tableName", void 0);
     return QueryInput;
-}(SpeakeasyBase));
-export { QueryInput };
+}(utils_1.SpeakeasyBase));
+exports.QueryInput = QueryInput;

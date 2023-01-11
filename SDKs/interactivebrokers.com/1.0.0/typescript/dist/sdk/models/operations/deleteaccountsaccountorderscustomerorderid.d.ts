@@ -19,6 +19,6 @@ export declare class DeleteAccountsAccountOrdersCustomerOrderIdRequest extends S
 }
 export declare class DeleteAccountsAccountOrdersCustomerOrderIdResponse extends SpeakeasyBase {
     contentType: string;
-    deleteAccountsAccountOrdersCustomerOrderId200ApplicationJsonObjects?: DeleteAccountsAccountOrdersCustomerOrderId200ApplicationJson[];
     statusCode: number;
+    deleteAccountsAccountOrdersCustomerOrderId200ApplicationJSONObjects?: DeleteAccountsAccountOrdersCustomerOrderId200ApplicationJson[];
 }

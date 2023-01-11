@@ -12,7 +12,7 @@ export class ActiveContext extends SpeakeasyBase {
   name: string;
 
   @SpeakeasyMetadata({ data: "json, name=parameters" })
-  parameters: Map<string, string>;
+  parameters: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=timeToLive" })
   timeToLive: ActiveContextTimeToLive;

@@ -1,0 +1,18 @@
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import * as shared from "../shared";
+
+
+
+export class GetAccountResponse extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  account?: shared.Account;
+
+  @SpeakeasyMetadata()
+  contentType: string;
+
+  @SpeakeasyMetadata()
+  getAccount401ApplicationProblemPlusJsonAny?: any;
+
+  @SpeakeasyMetadata()
+  statusCode: number;
+}

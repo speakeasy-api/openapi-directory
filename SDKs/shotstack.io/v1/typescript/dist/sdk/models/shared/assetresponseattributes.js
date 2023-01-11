@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AssetResponseAttributesStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssetResponseAttributes = exports.AssetResponseAttributesStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AssetResponseAttributesStatusEnum;
 (function (AssetResponseAttributesStatusEnum) {
     AssetResponseAttributesStatusEnum["Importing"] = "importing";
     AssetResponseAttributesStatusEnum["Ready"] = "ready";
     AssetResponseAttributesStatusEnum["Failed"] = "failed";
     AssetResponseAttributesStatusEnum["Deleted"] = "deleted";
-})(AssetResponseAttributesStatusEnum || (AssetResponseAttributesStatusEnum = {}));
+})(AssetResponseAttributesStatusEnum = exports.AssetResponseAttributesStatusEnum || (exports.AssetResponseAttributesStatusEnum = {}));
 // AssetResponseAttributes
 /**
  * The list of asset attributes and their values.
@@ -40,41 +43,41 @@ var AssetResponseAttributes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], AssetResponseAttributes.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filename" }),
         __metadata("design:type", String)
     ], AssetResponseAttributes.prototype, "filename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AssetResponseAttributes.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
         __metadata("design:type", String)
     ], AssetResponseAttributes.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], AssetResponseAttributes.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=renderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=renderId" }),
         __metadata("design:type", String)
     ], AssetResponseAttributes.prototype, "renderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AssetResponseAttributes.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", String)
     ], AssetResponseAttributes.prototype, "updated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], AssetResponseAttributes.prototype, "url", void 0);
     return AssetResponseAttributes;
-}(SpeakeasyBase));
-export { AssetResponseAttributes };
+}(utils_1.SpeakeasyBase));
+exports.AssetResponseAttributes = AssetResponseAttributes;

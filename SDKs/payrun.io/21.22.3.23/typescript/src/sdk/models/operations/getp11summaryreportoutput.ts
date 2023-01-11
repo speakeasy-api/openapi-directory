@@ -47,7 +47,7 @@ export class GetP11SummaryReportOutputResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getP11SummaryReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+  getP11SummaryReportOutput200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

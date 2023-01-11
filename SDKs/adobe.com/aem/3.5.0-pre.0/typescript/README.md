@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
-import { DeleteAgentRequest, DeleteAgentResponse } from "openapi/src/sdk/models/operations";
+import { SDK, withSecurity} from "openapi";
+import { GetAemProductInfoResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     aemAuth: {
       password: "YOUR_PASSWORD_HERE",
@@ -32,15 +31,8 @@ const sdk = new SDK(WithSecurity(
     },
   }
 ));
-    
-const req: DeleteAgentRequest = {
-  pathParams: {
-    name: "eveniet",
-    runmode: "modi",
-  },
-};
 
-sdk.sdk.deleteAgent(req).then((res: DeleteAgentResponse | AxiosError) => {
+sdk.console.getAemProductInfo().then((res: GetAemProductInfoResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -49,55 +41,70 @@ sdk.sdk.deleteAgent(req).then((res: DeleteAgentResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### console
+
+* `getAemProductInfo`
+* `getConfigMgr`
+* `postBundle`
+* `postJmxRepository`
+* `postSamlConfiguration`
+
+### cq
+
+* `getLoginPage`
+* `postCqActions`
+
+### crx
+
+* `getCrxdeStatus`
+* `getInstallStatus`
+* `getPackageManagerServlet`
+* `postPackageService`
+* `postPackageServiceJson`
+* `postPackageUpdate`
+* `postSetPassword`
+
+### custom
+
+* `getAemHealthCheck`
+* `postConfigAemHealthCheckServlet`
+* `postConfigAemPasswordReset`
+
+### granite
+
+* `sslSetup`
+
+### sling
 
 * `deleteAgent`
 * `deleteNode`
-* `getAemHealthCheck`
-* `getAemProductInfo`
 * `getAgent`
 * `getAgents`
 * `getAuthorizableKeystore`
-* `getConfigMgr`
-* `getCrxdeStatus`
-* `getInstallStatus`
 * `getKeystore`
-* `getLoginPage`
 * `getNode`
 * `getPackage`
 * `getPackageFilter`
-* `getPackageManagerServlet`
 * `getQuery`
 * `getTruststore`
 * `getTruststoreInfo`
 * `postAgent`
 * `postAuthorizableKeystore`
 * `postAuthorizables`
-* `postBundle`
 * `postConfigAdobeGraniteSamlAuthenticationHandler`
-* `postConfigAemHealthCheckServlet`
-* `postConfigAemPasswordReset`
 * `postConfigApacheFelixJettyBasedHttpService`
 * `postConfigApacheHttpComponentsProxyConfiguration`
 * `postConfigApacheSlingDavExServlet`
 * `postConfigApacheSlingGetServlet`
 * `postConfigApacheSlingReferrerFilter`
 * `postConfigProperty`
-* `postCqActions`
-* `postJmxRepository`
 * `postNode`
 * `postNodeRw`
-* `postPackageService`
-* `postPackageServiceJson`
-* `postPackageUpdate`
 * `postPath`
 * `postQuery`
-* `postSamlConfiguration`
-* `postSetPassword`
 * `postTreeActivation`
 * `postTruststore`
 * `postTruststorePkcs12`
-* `sslSetup`
 
 <!-- End SDK Available Operations -->
 

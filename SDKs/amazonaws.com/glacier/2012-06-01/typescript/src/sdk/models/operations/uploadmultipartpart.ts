@@ -85,5 +85,5 @@ export class UploadMultipartPartResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  uploadMultipartPartOutput?: Map<string, any>;
+  uploadMultipartPartOutput?: Record<string, any>;
 }

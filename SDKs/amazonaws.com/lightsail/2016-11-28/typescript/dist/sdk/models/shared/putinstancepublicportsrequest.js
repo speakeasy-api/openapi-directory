@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PortInfo } from "./portinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutInstancePublicPortsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var portinfo_1 = require("./portinfo");
 var PutInstancePublicPortsRequest = /** @class */ (function (_super) {
     __extends(PutInstancePublicPortsRequest, _super);
     function PutInstancePublicPortsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceName" }),
         __metadata("design:type", String)
     ], PutInstancePublicPortsRequest.prototype, "instanceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portInfos", elemType: PortInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portInfos", elemType: portinfo_1.PortInfo }),
         __metadata("design:type", Array)
     ], PutInstancePublicPortsRequest.prototype, "portInfos", void 0);
     return PutInstancePublicPortsRequest;
-}(SpeakeasyBase));
-export { PutInstancePublicPortsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutInstancePublicPortsRequest = PutInstancePublicPortsRequest;

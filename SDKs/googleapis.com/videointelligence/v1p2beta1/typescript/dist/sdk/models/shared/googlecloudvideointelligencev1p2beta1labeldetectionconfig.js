@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfigLabelDetectionModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig = exports.GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfigLabelDetectionModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfigLabelDetectionModeEnum;
 (function (GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfigLabelDetectionModeEnum) {
     GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfigLabelDetectionModeEnum["LabelDetectionModeUnspecified"] = "LABEL_DETECTION_MODE_UNSPECIFIED";
     GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfigLabelDetectionModeEnum["ShotMode"] = "SHOT_MODE";
     GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfigLabelDetectionModeEnum["FrameMode"] = "FRAME_MODE";
     GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfigLabelDetectionModeEnum["ShotAndFrameMode"] = "SHOT_AND_FRAME_MODE";
-})(GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfigLabelDetectionModeEnum || (GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfigLabelDetectionModeEnum = {}));
+})(GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfigLabelDetectionModeEnum = exports.GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfigLabelDetectionModeEnum || (exports.GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfigLabelDetectionModeEnum = {}));
 // GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig
 /**
  * Config for LABEL_DETECTION.
@@ -40,25 +43,25 @@ var GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig = /** @class */ (f
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frameConfidenceThreshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frameConfidenceThreshold" }),
         __metadata("design:type", Number)
     ], GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig.prototype, "frameConfidenceThreshold", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labelDetectionMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labelDetectionMode" }),
         __metadata("design:type", String)
     ], GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig.prototype, "labelDetectionMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=model" }),
         __metadata("design:type", String)
     ], GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig.prototype, "model", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stationaryCamera" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stationaryCamera" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig.prototype, "stationaryCamera", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoConfidenceThreshold" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoConfidenceThreshold" }),
         __metadata("design:type", Number)
     ], GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig.prototype, "videoConfidenceThreshold", void 0);
     return GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig;
-}(SpeakeasyBase));
-export { GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig = GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppEngineHttpRequest } from "./appenginehttprequest";
-import { HttpRequest } from "./httprequest";
-import { PullMessage } from "./pullmessage";
-import { TaskStatus } from "./taskstatus";
-export var TaskViewEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Task = exports.TaskViewEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var appenginehttprequest_1 = require("./appenginehttprequest");
+var httprequest_1 = require("./httprequest");
+var pullmessage_1 = require("./pullmessage");
+var taskstatus_1 = require("./taskstatus");
+var TaskViewEnum;
 (function (TaskViewEnum) {
     TaskViewEnum["ViewUnspecified"] = "VIEW_UNSPECIFIED";
     TaskViewEnum["Basic"] = "BASIC";
     TaskViewEnum["Full"] = "FULL";
-})(TaskViewEnum || (TaskViewEnum = {}));
+})(TaskViewEnum = exports.TaskViewEnum || (exports.TaskViewEnum = {}));
 // Task
 /**
  * A unit of scheduled work.
@@ -43,37 +46,37 @@ var Task = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appEngineHttpRequest" }),
-        __metadata("design:type", AppEngineHttpRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appEngineHttpRequest" }),
+        __metadata("design:type", appenginehttprequest_1.AppEngineHttpRequest)
     ], Task.prototype, "appEngineHttpRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Task.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpRequest" }),
-        __metadata("design:type", HttpRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpRequest" }),
+        __metadata("design:type", httprequest_1.HttpRequest)
     ], Task.prototype, "httpRequest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Task.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pullMessage" }),
-        __metadata("design:type", PullMessage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pullMessage" }),
+        __metadata("design:type", pullmessage_1.PullMessage)
     ], Task.prototype, "pullMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduleTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduleTime" }),
         __metadata("design:type", String)
     ], Task.prototype, "scheduleTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", TaskStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", taskstatus_1.TaskStatus)
     ], Task.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=view" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=view" }),
         __metadata("design:type", String)
     ], Task.prototype, "view", void 0);
     return Task;
-}(SpeakeasyBase));
-export { Task };
+}(utils_1.SpeakeasyBase));
+exports.Task = Task;

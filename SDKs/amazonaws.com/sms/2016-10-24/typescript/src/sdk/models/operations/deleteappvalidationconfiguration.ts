@@ -48,7 +48,7 @@ export class DeleteAppValidationConfigurationResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteAppValidationConfigurationResponse?: Map<string, any>;
+  deleteAppValidationConfigurationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalError?: any;

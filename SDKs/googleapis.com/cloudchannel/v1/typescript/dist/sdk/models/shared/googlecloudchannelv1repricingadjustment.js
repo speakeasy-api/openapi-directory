@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1PercentageAdjustment } from "./googlecloudchannelv1percentageadjustment";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1RepricingAdjustment = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1percentageadjustment_1 = require("./googlecloudchannelv1percentageadjustment");
 // GoogleCloudChannelV1RepricingAdjustment
 /**
  * A type that represents the various adjustments you can apply to a bill.
@@ -34,9 +37,9 @@ var GoogleCloudChannelV1RepricingAdjustment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=percentageAdjustment" }),
-        __metadata("design:type", GoogleCloudChannelV1PercentageAdjustment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=percentageAdjustment" }),
+        __metadata("design:type", googlecloudchannelv1percentageadjustment_1.GoogleCloudChannelV1PercentageAdjustment)
     ], GoogleCloudChannelV1RepricingAdjustment.prototype, "percentageAdjustment", void 0);
     return GoogleCloudChannelV1RepricingAdjustment;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1RepricingAdjustment };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1RepricingAdjustment = GoogleCloudChannelV1RepricingAdjustment;

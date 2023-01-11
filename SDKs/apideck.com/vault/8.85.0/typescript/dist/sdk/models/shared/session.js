@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,113 +23,115 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConsumerMetadata } from "./consumermetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Session = exports.SessionTheme = exports.SessionSettings = void 0;
+var utils_1 = require("../../../internal/utils");
+var consumermetadata_1 = require("./consumermetadata");
 var SessionSettings = /** @class */ (function (_super) {
     __extends(SessionSettings, _super);
     function SessionSettings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auto_redirect" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auto_redirect" }),
         __metadata("design:type", Boolean)
     ], SessionSettings.prototype, "autoRedirect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hide_resource_settings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hide_resource_settings" }),
         __metadata("design:type", Boolean)
     ], SessionSettings.prototype, "hideResourceSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isolation_mode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isolation_mode" }),
         __metadata("design:type", Boolean)
     ], SessionSettings.prototype, "isolationMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sandbox_mode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sandbox_mode" }),
         __metadata("design:type", Boolean)
     ], SessionSettings.prototype, "sandboxMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=session_length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=session_length" }),
         __metadata("design:type", String)
     ], SessionSettings.prototype, "sessionLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=show_logs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=show_logs" }),
         __metadata("design:type", Boolean)
     ], SessionSettings.prototype, "showLogs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=show_sidebar" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=show_sidebar" }),
         __metadata("design:type", Boolean)
     ], SessionSettings.prototype, "showSidebar", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=show_suggestions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=show_suggestions" }),
         __metadata("design:type", Boolean)
     ], SessionSettings.prototype, "showSuggestions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unified_apis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unified_apis" }),
         __metadata("design:type", Array)
     ], SessionSettings.prototype, "unifiedApis", void 0);
     return SessionSettings;
-}(SpeakeasyBase));
-export { SessionSettings };
+}(utils_1.SpeakeasyBase));
+exports.SessionSettings = SessionSettings;
 var SessionTheme = /** @class */ (function (_super) {
     __extends(SessionTheme, _super);
     function SessionTheme() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=favicon" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=favicon" }),
         __metadata("design:type", String)
     ], SessionTheme.prototype, "favicon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_color" }),
         __metadata("design:type", String)
     ], SessionTheme.prototype, "primaryColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privacy_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privacy_url" }),
         __metadata("design:type", String)
     ], SessionTheme.prototype, "privacyUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sidepanel_background_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sidepanel_background_color" }),
         __metadata("design:type", String)
     ], SessionTheme.prototype, "sidepanelBackgroundColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sidepanel_text_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sidepanel_text_color" }),
         __metadata("design:type", String)
     ], SessionTheme.prototype, "sidepanelTextColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=terms_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=terms_url" }),
         __metadata("design:type", String)
     ], SessionTheme.prototype, "termsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vault_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vault_name" }),
         __metadata("design:type", String)
     ], SessionTheme.prototype, "vaultName", void 0);
     return SessionTheme;
-}(SpeakeasyBase));
-export { SessionTheme };
+}(utils_1.SpeakeasyBase));
+exports.SessionTheme = SessionTheme;
 var Session = /** @class */ (function (_super) {
     __extends(Session, _super);
     function Session() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=consumer_metadata" }),
-        __metadata("design:type", ConsumerMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=consumer_metadata" }),
+        __metadata("design:type", consumermetadata_1.ConsumerMetadata)
     ], Session.prototype, "consumerMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_consumer_settings" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_consumer_settings" }),
+        __metadata("design:type", Object)
     ], Session.prototype, "customConsumerSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=redirect_uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=redirect_uri" }),
         __metadata("design:type", String)
     ], Session.prototype, "redirectUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
         __metadata("design:type", SessionSettings)
     ], Session.prototype, "settings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=theme" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=theme" }),
         __metadata("design:type", SessionTheme)
     ], Session.prototype, "theme", void 0);
     return Session;
-}(SpeakeasyBase));
-export { Session };
+}(utils_1.SpeakeasyBase));
+exports.Session = Session;

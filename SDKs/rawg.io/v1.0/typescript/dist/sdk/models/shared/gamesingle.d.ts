@@ -38,7 +38,7 @@ export declare class GameSinglePlatforms extends SpeakeasyBase {
 export declare class GameSingle extends SpeakeasyBase {
     achievementsCount?: number;
     added?: number;
-    addedByStatus?: Map<string, any>;
+    addedByStatus?: Record<string, any>;
     additionsCount?: number;
     alternativeNames?: string[];
     backgroundImage?: string;
@@ -60,9 +60,9 @@ export declare class GameSingle extends SpeakeasyBase {
     playtime?: number;
     rating: number;
     ratingTop?: number;
-    ratings?: Map<string, any>;
+    ratings?: Record<string, any>;
     ratingsCount?: number;
-    reactions?: Map<string, any>;
+    reactions?: Record<string, any>;
     redditCount?: number;
     redditDescription?: string;
     redditLogo?: string;

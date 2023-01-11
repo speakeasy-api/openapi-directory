@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDefineExpressionActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDefineExpressionResponse = exports.GetDefineExpressionRequest = exports.GetDefineExpressionHeaders = exports.GetDefineExpressionQueryParams = exports.GetDefineExpressionVersionEnum = exports.GetDefineExpressionExpression = exports.GetDefineExpressionActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDefineExpressionActionEnum;
 (function (GetDefineExpressionActionEnum) {
     GetDefineExpressionActionEnum["DefineExpression"] = "DefineExpression";
-})(GetDefineExpressionActionEnum || (GetDefineExpressionActionEnum = {}));
+})(GetDefineExpressionActionEnum = exports.GetDefineExpressionActionEnum || (exports.GetDefineExpressionActionEnum = {}));
 // GetDefineExpressionExpression
 /**
  * A named expression that can be evaluated at search time. Can be used to sort the search results, define other expressions, or return computed information in the search results.
@@ -37,113 +40,113 @@ var GetDefineExpressionExpression = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=ExpressionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=ExpressionName" }),
         __metadata("design:type", String)
     ], GetDefineExpressionExpression.prototype, "expressionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, name=ExpressionValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, name=ExpressionValue" }),
         __metadata("design:type", String)
     ], GetDefineExpressionExpression.prototype, "expressionValue", void 0);
     return GetDefineExpressionExpression;
-}(SpeakeasyBase));
-export { GetDefineExpressionExpression };
-export var GetDefineExpressionVersionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetDefineExpressionExpression = GetDefineExpressionExpression;
+var GetDefineExpressionVersionEnum;
 (function (GetDefineExpressionVersionEnum) {
     GetDefineExpressionVersionEnum["TwoThousandAndThirteen0101"] = "2013-01-01";
-})(GetDefineExpressionVersionEnum || (GetDefineExpressionVersionEnum = {}));
+})(GetDefineExpressionVersionEnum = exports.GetDefineExpressionVersionEnum || (exports.GetDefineExpressionVersionEnum = {}));
 var GetDefineExpressionQueryParams = /** @class */ (function (_super) {
     __extends(GetDefineExpressionQueryParams, _super);
     function GetDefineExpressionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDefineExpressionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DomainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DomainName" }),
         __metadata("design:type", String)
     ], GetDefineExpressionQueryParams.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Expression" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Expression" }),
         __metadata("design:type", GetDefineExpressionExpression)
     ], GetDefineExpressionQueryParams.prototype, "expression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDefineExpressionQueryParams.prototype, "version", void 0);
     return GetDefineExpressionQueryParams;
-}(SpeakeasyBase));
-export { GetDefineExpressionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDefineExpressionQueryParams = GetDefineExpressionQueryParams;
 var GetDefineExpressionHeaders = /** @class */ (function (_super) {
     __extends(GetDefineExpressionHeaders, _super);
     function GetDefineExpressionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDefineExpressionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDefineExpressionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDefineExpressionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDefineExpressionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDefineExpressionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDefineExpressionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDefineExpressionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDefineExpressionHeaders;
-}(SpeakeasyBase));
-export { GetDefineExpressionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDefineExpressionHeaders = GetDefineExpressionHeaders;
 var GetDefineExpressionRequest = /** @class */ (function (_super) {
     __extends(GetDefineExpressionRequest, _super);
     function GetDefineExpressionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDefineExpressionQueryParams)
     ], GetDefineExpressionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDefineExpressionHeaders)
     ], GetDefineExpressionRequest.prototype, "headers", void 0);
     return GetDefineExpressionRequest;
-}(SpeakeasyBase));
-export { GetDefineExpressionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDefineExpressionRequest = GetDefineExpressionRequest;
 var GetDefineExpressionResponse = /** @class */ (function (_super) {
     __extends(GetDefineExpressionResponse, _super);
     function GetDefineExpressionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDefineExpressionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDefineExpressionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDefineExpressionResponse.prototype, "statusCode", void 0);
     return GetDefineExpressionResponse;
-}(SpeakeasyBase));
-export { GetDefineExpressionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDefineExpressionResponse = GetDefineExpressionResponse;

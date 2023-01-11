@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AnalysisCompleted } from "./analysiscompleted";
-import { Status } from "./status";
-export var DiscoveryOccurrenceAnalysisStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiscoveryOccurrence = exports.DiscoveryOccurrenceContinuousAnalysisEnum = exports.DiscoveryOccurrenceAnalysisStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var analysiscompleted_1 = require("./analysiscompleted");
+var status_1 = require("./status");
+var DiscoveryOccurrenceAnalysisStatusEnum;
 (function (DiscoveryOccurrenceAnalysisStatusEnum) {
     DiscoveryOccurrenceAnalysisStatusEnum["AnalysisStatusUnspecified"] = "ANALYSIS_STATUS_UNSPECIFIED";
     DiscoveryOccurrenceAnalysisStatusEnum["Pending"] = "PENDING";
@@ -34,13 +37,13 @@ export var DiscoveryOccurrenceAnalysisStatusEnum;
     DiscoveryOccurrenceAnalysisStatusEnum["Complete"] = "COMPLETE";
     DiscoveryOccurrenceAnalysisStatusEnum["FinishedFailed"] = "FINISHED_FAILED";
     DiscoveryOccurrenceAnalysisStatusEnum["FinishedUnsupported"] = "FINISHED_UNSUPPORTED";
-})(DiscoveryOccurrenceAnalysisStatusEnum || (DiscoveryOccurrenceAnalysisStatusEnum = {}));
-export var DiscoveryOccurrenceContinuousAnalysisEnum;
+})(DiscoveryOccurrenceAnalysisStatusEnum = exports.DiscoveryOccurrenceAnalysisStatusEnum || (exports.DiscoveryOccurrenceAnalysisStatusEnum = {}));
+var DiscoveryOccurrenceContinuousAnalysisEnum;
 (function (DiscoveryOccurrenceContinuousAnalysisEnum) {
     DiscoveryOccurrenceContinuousAnalysisEnum["ContinuousAnalysisUnspecified"] = "CONTINUOUS_ANALYSIS_UNSPECIFIED";
     DiscoveryOccurrenceContinuousAnalysisEnum["Active"] = "ACTIVE";
     DiscoveryOccurrenceContinuousAnalysisEnum["Inactive"] = "INACTIVE";
-})(DiscoveryOccurrenceContinuousAnalysisEnum || (DiscoveryOccurrenceContinuousAnalysisEnum = {}));
+})(DiscoveryOccurrenceContinuousAnalysisEnum = exports.DiscoveryOccurrenceContinuousAnalysisEnum || (exports.DiscoveryOccurrenceContinuousAnalysisEnum = {}));
 // DiscoveryOccurrence
 /**
  * Provides information about the analysis status of a discovered resource.
@@ -51,37 +54,37 @@ var DiscoveryOccurrence = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analysisCompleted" }),
-        __metadata("design:type", AnalysisCompleted)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analysisCompleted" }),
+        __metadata("design:type", analysiscompleted_1.AnalysisCompleted)
     ], DiscoveryOccurrence.prototype, "analysisCompleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analysisError", elemType: Status }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analysisError", elemType: status_1.Status }),
         __metadata("design:type", Array)
     ], DiscoveryOccurrence.prototype, "analysisError", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analysisStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analysisStatus" }),
         __metadata("design:type", String)
     ], DiscoveryOccurrence.prototype, "analysisStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analysisStatusError" }),
-        __metadata("design:type", Status)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analysisStatusError" }),
+        __metadata("design:type", status_1.Status)
     ], DiscoveryOccurrence.prototype, "analysisStatusError", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=archiveTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=archiveTime" }),
         __metadata("design:type", String)
     ], DiscoveryOccurrence.prototype, "archiveTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=continuousAnalysis" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=continuousAnalysis" }),
         __metadata("design:type", String)
     ], DiscoveryOccurrence.prototype, "continuousAnalysis", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpe" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpe" }),
         __metadata("design:type", String)
     ], DiscoveryOccurrence.prototype, "cpe", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastScanTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastScanTime" }),
         __metadata("design:type", String)
     ], DiscoveryOccurrence.prototype, "lastScanTime", void 0);
     return DiscoveryOccurrence;
-}(SpeakeasyBase));
-export { DiscoveryOccurrence };
+}(utils_1.SpeakeasyBase));
+exports.DiscoveryOccurrence = DiscoveryOccurrence;

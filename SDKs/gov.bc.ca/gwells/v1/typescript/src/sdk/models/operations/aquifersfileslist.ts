@@ -49,5 +49,5 @@ export class AquifersFilesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  aquifersFilesList200ApplicationJsonObject?: AquifersFilesList200ApplicationJson;
+  aquifersFilesList200ApplicationJSONObject?: AquifersFilesList200ApplicationJson;
 }

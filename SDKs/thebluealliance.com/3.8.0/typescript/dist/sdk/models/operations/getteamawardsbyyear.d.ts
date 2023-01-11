@@ -18,6 +18,6 @@ export declare class GetTeamAwardsByYearRequest extends SpeakeasyBase {
 export declare class GetTeamAwardsByYearResponse extends SpeakeasyBase {
     awards?: shared.Award[];
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

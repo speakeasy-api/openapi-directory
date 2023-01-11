@@ -29,5 +29,5 @@ export declare class CreateApiRequest extends SpeakeasyBase {
 export declare class CreateApiResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createApi200ApplicationJsonObject?: CreateApi200ApplicationJson;
+    createApi200ApplicationJSONObject?: CreateApi200ApplicationJson;
 }

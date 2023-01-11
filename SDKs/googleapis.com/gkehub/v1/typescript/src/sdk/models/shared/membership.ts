@@ -1,10 +1,29 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import { AuthorityInput } from "./authority";
+import { MembershipEndpointInput } from "./membershipendpoint";
 import { Authority } from "./authority";
 import { MembershipEndpoint } from "./membershipendpoint";
 import { MembershipState } from "./membershipstate";
-import { AuthorityInput } from "./authority";
-import { MembershipEndpointInput } from "./membershipendpoint";
 
+
+
+// MembershipInput
+/** 
+ * Membership contains information about a member cluster.
+**/
+export class MembershipInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=authority" })
+  authority?: AuthorityInput;
+
+  @SpeakeasyMetadata({ data: "json, name=endpoint" })
+  endpoint?: MembershipEndpointInput;
+
+  @SpeakeasyMetadata({ data: "json, name=externalId" })
+  externalId?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+}
 
 
 // Membership
@@ -31,7 +50,7 @@ export class Membership extends SpeakeasyBase {
   externalId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=lastConnectionTime" })
   lastConnectionTime?: string;
@@ -47,23 +66,4 @@ export class Membership extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=updateTime" })
   updateTime?: string;
-}
-
-
-// MembershipInput
-/** 
- * Membership contains information about a member cluster.
-**/
-export class MembershipInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=authority" })
-  authority?: AuthorityInput;
-
-  @SpeakeasyMetadata({ data: "json, name=endpoint" })
-  endpoint?: MembershipEndpointInput;
-
-  @SpeakeasyMetadata({ data: "json, name=externalId" })
-  externalId?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Weight } from "./weight";
-export var ShippingShippingPricingModelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Shipping = exports.ShippingShippingPricingModelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var weight_1 = require("./weight");
+var ShippingShippingPricingModelEnum;
 (function (ShippingShippingPricingModelEnum) {
     ShippingShippingPricingModelEnum["Free"] = "FREE";
     ShippingShippingPricingModelEnum["Standard"] = "STANDARD";
-})(ShippingShippingPricingModelEnum || (ShippingShippingPricingModelEnum = {}));
+})(ShippingShippingPricingModelEnum = exports.ShippingShippingPricingModelEnum || (exports.ShippingShippingPricingModelEnum = {}));
 var Shipping = /** @class */ (function (_super) {
     __extends(Shipping, _super);
     function Shipping() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shippingPricingModel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shippingPricingModel" }),
         __metadata("design:type", String)
     ], Shipping.prototype, "shippingPricingModel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weight" }),
-        __metadata("design:type", Weight)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weight" }),
+        __metadata("design:type", weight_1.Weight)
     ], Shipping.prototype, "weight", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weightInGrams" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weightInGrams" }),
         __metadata("design:type", Number)
     ], Shipping.prototype, "weightInGrams", void 0);
     return Shipping;
-}(SpeakeasyBase));
-export { Shipping };
+}(utils_1.SpeakeasyBase));
+exports.Shipping = Shipping;

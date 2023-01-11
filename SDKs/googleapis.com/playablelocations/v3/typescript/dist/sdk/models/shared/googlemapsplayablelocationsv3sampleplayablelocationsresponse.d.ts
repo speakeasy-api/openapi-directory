@@ -4,6 +4,6 @@ import { GoogleMapsPlayablelocationsV3SamplePlayableLocationList } from "./googl
  *  Response for the SamplePlayableLocations method.
 **/
 export declare class GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse extends SpeakeasyBase {
-    locationsPerGameObjectType?: Map<string, GoogleMapsPlayablelocationsV3SamplePlayableLocationList>;
+    locationsPerGameObjectType?: Record<string, GoogleMapsPlayablelocationsV3SamplePlayableLocationList>;
     ttl?: string;
 }

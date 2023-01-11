@@ -185,23 +185,23 @@ export class MnrgaResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  mnrga400ApplicationJsonObject?: Mnrga400ApplicationJson;
+  mnrga400ApplicationJSONObject?: Mnrga400ApplicationJson;
 
   @SpeakeasyMetadata()
-  mnrga401ApplicationJsonObject?: Mnrga401ApplicationJson;
+  mnrga401ApplicationJSONObject?: Mnrga401ApplicationJson;
 
   @SpeakeasyMetadata()
-  mnrga404ApplicationJsonObject?: Mnrga404ApplicationJson;
+  mnrga404ApplicationJSONObject?: Mnrga404ApplicationJson;
 
   @SpeakeasyMetadata()
-  mnrga500ApplicationJsonObject?: Mnrga500ApplicationJson;
+  mnrga500ApplicationJSONObject?: Mnrga500ApplicationJson;
 
   @SpeakeasyMetadata()
-  mnrga502ApplicationJsonObject?: Mnrga502ApplicationJson;
+  mnrga502ApplicationJSONObject?: Mnrga502ApplicationJson;
 
   @SpeakeasyMetadata()
-  mnrga503ApplicationJsonObject?: Mnrga503ApplicationJson;
+  mnrga503ApplicationJSONObject?: Mnrga503ApplicationJson;
 
   @SpeakeasyMetadata()
-  mnrga504ApplicationJsonObject?: Mnrga504ApplicationJson;
+  mnrga504ApplicationJSONObject?: Mnrga504ApplicationJson;
 }

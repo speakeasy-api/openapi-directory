@@ -10,7 +10,7 @@ export declare class GistsListStarredRequest extends SpeakeasyBase {
 }
 export declare class GistsListStarredResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     baseGists?: shared.BaseGist[];
     basicError?: shared.BasicError;

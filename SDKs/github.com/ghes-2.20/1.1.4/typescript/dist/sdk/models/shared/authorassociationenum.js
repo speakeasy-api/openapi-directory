@@ -1,4 +1,7 @@
-export var AuthorAssociationEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuthorAssociationEnum = void 0;
+var AuthorAssociationEnum;
 (function (AuthorAssociationEnum) {
     AuthorAssociationEnum["Collaborator"] = "COLLABORATOR";
     AuthorAssociationEnum["Contributor"] = "CONTRIBUTOR";
@@ -8,4 +11,4 @@ export var AuthorAssociationEnum;
     AuthorAssociationEnum["Member"] = "MEMBER";
     AuthorAssociationEnum["None"] = "NONE";
     AuthorAssociationEnum["Owner"] = "OWNER";
-})(AuthorAssociationEnum || (AuthorAssociationEnum = {}));
+})(AuthorAssociationEnum = exports.AuthorAssociationEnum || (exports.AuthorAssociationEnum = {}));

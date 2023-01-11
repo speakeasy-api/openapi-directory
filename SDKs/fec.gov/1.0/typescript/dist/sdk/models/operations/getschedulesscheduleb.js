@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,18 +14,43 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var GetSchedulesScheduleBSpenderCommitteeDesignationEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSchedulesScheduleBResponse = exports.GetSchedulesScheduleBRequest = exports.GetSchedulesScheduleBQueryParams = exports.GetSchedulesScheduleBSpenderCommitteeTypeEnum = exports.GetSchedulesScheduleBSpenderCommitteeOrgTypeEnum = exports.GetSchedulesScheduleBSpenderCommitteeDesignationEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var GetSchedulesScheduleBSpenderCommitteeDesignationEnum;
 (function (GetSchedulesScheduleBSpenderCommitteeDesignationEnum) {
     GetSchedulesScheduleBSpenderCommitteeDesignationEnum["Unknown"] = "";
     GetSchedulesScheduleBSpenderCommitteeDesignationEnum["A"] = "A";
@@ -33,8 +59,8 @@ export var GetSchedulesScheduleBSpenderCommitteeDesignationEnum;
     GetSchedulesScheduleBSpenderCommitteeDesignationEnum["U"] = "U";
     GetSchedulesScheduleBSpenderCommitteeDesignationEnum["B"] = "B";
     GetSchedulesScheduleBSpenderCommitteeDesignationEnum["D"] = "D";
-})(GetSchedulesScheduleBSpenderCommitteeDesignationEnum || (GetSchedulesScheduleBSpenderCommitteeDesignationEnum = {}));
-export var GetSchedulesScheduleBSpenderCommitteeOrgTypeEnum;
+})(GetSchedulesScheduleBSpenderCommitteeDesignationEnum = exports.GetSchedulesScheduleBSpenderCommitteeDesignationEnum || (exports.GetSchedulesScheduleBSpenderCommitteeDesignationEnum = {}));
+var GetSchedulesScheduleBSpenderCommitteeOrgTypeEnum;
 (function (GetSchedulesScheduleBSpenderCommitteeOrgTypeEnum) {
     GetSchedulesScheduleBSpenderCommitteeOrgTypeEnum["Unknown"] = "";
     GetSchedulesScheduleBSpenderCommitteeOrgTypeEnum["C"] = "C";
@@ -43,8 +69,8 @@ export var GetSchedulesScheduleBSpenderCommitteeOrgTypeEnum;
     GetSchedulesScheduleBSpenderCommitteeOrgTypeEnum["T"] = "T";
     GetSchedulesScheduleBSpenderCommitteeOrgTypeEnum["V"] = "V";
     GetSchedulesScheduleBSpenderCommitteeOrgTypeEnum["W"] = "W";
-})(GetSchedulesScheduleBSpenderCommitteeOrgTypeEnum || (GetSchedulesScheduleBSpenderCommitteeOrgTypeEnum = {}));
-export var GetSchedulesScheduleBSpenderCommitteeTypeEnum;
+})(GetSchedulesScheduleBSpenderCommitteeOrgTypeEnum = exports.GetSchedulesScheduleBSpenderCommitteeOrgTypeEnum || (exports.GetSchedulesScheduleBSpenderCommitteeOrgTypeEnum = {}));
+var GetSchedulesScheduleBSpenderCommitteeTypeEnum;
 (function (GetSchedulesScheduleBSpenderCommitteeTypeEnum) {
     GetSchedulesScheduleBSpenderCommitteeTypeEnum["Unknown"] = "";
     GetSchedulesScheduleBSpenderCommitteeTypeEnum["C"] = "C";
@@ -63,152 +89,152 @@ export var GetSchedulesScheduleBSpenderCommitteeTypeEnum;
     GetSchedulesScheduleBSpenderCommitteeTypeEnum["X"] = "X";
     GetSchedulesScheduleBSpenderCommitteeTypeEnum["Y"] = "Y";
     GetSchedulesScheduleBSpenderCommitteeTypeEnum["Z"] = "Z";
-})(GetSchedulesScheduleBSpenderCommitteeTypeEnum || (GetSchedulesScheduleBSpenderCommitteeTypeEnum = {}));
+})(GetSchedulesScheduleBSpenderCommitteeTypeEnum = exports.GetSchedulesScheduleBSpenderCommitteeTypeEnum || (exports.GetSchedulesScheduleBSpenderCommitteeTypeEnum = {}));
 var GetSchedulesScheduleBQueryParams = /** @class */ (function (_super) {
     __extends(GetSchedulesScheduleBQueryParams, _super);
     function GetSchedulesScheduleBQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api_key" }),
         __metadata("design:type", String)
     ], GetSchedulesScheduleBQueryParams.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=committee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=committee_id" }),
         __metadata("design:type", Array)
     ], GetSchedulesScheduleBQueryParams.prototype, "committeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=disbursement_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=disbursement_description" }),
         __metadata("design:type", Array)
     ], GetSchedulesScheduleBQueryParams.prototype, "disbursementDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=disbursement_purpose_category" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=disbursement_purpose_category" }),
         __metadata("design:type", Array)
     ], GetSchedulesScheduleBQueryParams.prototype, "disbursementPurposeCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=image_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=image_number" }),
         __metadata("design:type", Array)
     ], GetSchedulesScheduleBQueryParams.prototype, "imageNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=last_disbursement_amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=last_disbursement_amount" }),
         __metadata("design:type", Number)
     ], GetSchedulesScheduleBQueryParams.prototype, "lastDisbursementAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=last_disbursement_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=last_disbursement_date" }),
         __metadata("design:type", Date)
     ], GetSchedulesScheduleBQueryParams.prototype, "lastDisbursementDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=last_index" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=last_index" }),
         __metadata("design:type", Number)
     ], GetSchedulesScheduleBQueryParams.prototype, "lastIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=line_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=line_number" }),
         __metadata("design:type", String)
     ], GetSchedulesScheduleBQueryParams.prototype, "lineNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max_amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max_amount" }),
         __metadata("design:type", String)
     ], GetSchedulesScheduleBQueryParams.prototype, "maxAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max_date" }),
         __metadata("design:type", Date)
     ], GetSchedulesScheduleBQueryParams.prototype, "maxDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max_image_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max_image_number" }),
         __metadata("design:type", String)
     ], GetSchedulesScheduleBQueryParams.prototype, "maxImageNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=min_amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=min_amount" }),
         __metadata("design:type", String)
     ], GetSchedulesScheduleBQueryParams.prototype, "minAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=min_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=min_date" }),
         __metadata("design:type", Date)
     ], GetSchedulesScheduleBQueryParams.prototype, "minDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=min_image_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=min_image_number" }),
         __metadata("design:type", String)
     ], GetSchedulesScheduleBQueryParams.prototype, "minImageNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=per_page" }),
         __metadata("design:type", Number)
     ], GetSchedulesScheduleBQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=recipient_city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=recipient_city" }),
         __metadata("design:type", Array)
     ], GetSchedulesScheduleBQueryParams.prototype, "recipientCity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=recipient_committee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=recipient_committee_id" }),
         __metadata("design:type", Array)
     ], GetSchedulesScheduleBQueryParams.prototype, "recipientCommitteeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=recipient_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=recipient_name" }),
         __metadata("design:type", Array)
     ], GetSchedulesScheduleBQueryParams.prototype, "recipientName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=recipient_state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=recipient_state" }),
         __metadata("design:type", Array)
     ], GetSchedulesScheduleBQueryParams.prototype, "recipientState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetSchedulesScheduleBQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort_hide_null" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort_hide_null" }),
         __metadata("design:type", Boolean)
     ], GetSchedulesScheduleBQueryParams.prototype, "sortHideNull", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort_null_only" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort_null_only" }),
         __metadata("design:type", Boolean)
     ], GetSchedulesScheduleBQueryParams.prototype, "sortNullOnly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=spender_committee_designation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=spender_committee_designation" }),
         __metadata("design:type", Array)
     ], GetSchedulesScheduleBQueryParams.prototype, "spenderCommitteeDesignation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=spender_committee_org_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=spender_committee_org_type" }),
         __metadata("design:type", Array)
     ], GetSchedulesScheduleBQueryParams.prototype, "spenderCommitteeOrgType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=spender_committee_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=spender_committee_type" }),
         __metadata("design:type", Array)
     ], GetSchedulesScheduleBQueryParams.prototype, "spenderCommitteeType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=two_year_transaction_period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=two_year_transaction_period" }),
         __metadata("design:type", Array)
     ], GetSchedulesScheduleBQueryParams.prototype, "twoYearTransactionPeriod", void 0);
     return GetSchedulesScheduleBQueryParams;
-}(SpeakeasyBase));
-export { GetSchedulesScheduleBQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSchedulesScheduleBQueryParams = GetSchedulesScheduleBQueryParams;
 var GetSchedulesScheduleBRequest = /** @class */ (function (_super) {
     __extends(GetSchedulesScheduleBRequest, _super);
     function GetSchedulesScheduleBRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSchedulesScheduleBQueryParams)
     ], GetSchedulesScheduleBRequest.prototype, "queryParams", void 0);
     return GetSchedulesScheduleBRequest;
-}(SpeakeasyBase));
-export { GetSchedulesScheduleBRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSchedulesScheduleBRequest = GetSchedulesScheduleBRequest;
 var GetSchedulesScheduleBResponse = /** @class */ (function (_super) {
     __extends(GetSchedulesScheduleBResponse, _super);
     function GetSchedulesScheduleBResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSchedulesScheduleBResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ScheduleBPage)
     ], GetSchedulesScheduleBResponse.prototype, "scheduleBPage", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSchedulesScheduleBResponse.prototype, "statusCode", void 0);
     return GetSchedulesScheduleBResponse;
-}(SpeakeasyBase));
-export { GetSchedulesScheduleBResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSchedulesScheduleBResponse = GetSchedulesScheduleBResponse;

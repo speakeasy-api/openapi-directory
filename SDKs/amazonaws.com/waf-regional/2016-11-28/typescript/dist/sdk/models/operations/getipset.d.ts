@@ -19,7 +19,7 @@ export declare class GetIpSetRequest extends SpeakeasyBase {
 }
 export declare class GetIpSetResponse extends SpeakeasyBase {
     contentType: string;
-    getIpSetResponse?: shared.GetIpSetResponse;
+    getIPSetResponse?: shared.GetIpSetResponse;
     statusCode: number;
     wafInternalErrorException?: any;
     wafInvalidAccountException?: any;

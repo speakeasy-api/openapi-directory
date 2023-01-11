@@ -33,5 +33,5 @@ export declare class CreateArchiveRequest extends SpeakeasyBase {
 export declare class CreateArchiveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createArchive200ApplicationJsonObject?: CreateArchive200ApplicationJson;
+    createArchive200ApplicationJSONObject?: CreateArchive200ApplicationJson;
 }

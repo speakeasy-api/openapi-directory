@@ -73,5 +73,5 @@ export declare class IpamVlansListRequest extends SpeakeasyBase {
 export declare class IpamVlansListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ipamVlansList200ApplicationJsonObject?: IpamVlansList200ApplicationJson;
+    ipamVlansList200ApplicationJSONObject?: IpamVlansList200ApplicationJson;
 }

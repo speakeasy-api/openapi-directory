@@ -10,5 +10,5 @@ export declare class DeleteRepositoryPipelineScheduleRequest extends SpeakeasyBa
 export declare class DeleteRepositoryPipelineScheduleResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

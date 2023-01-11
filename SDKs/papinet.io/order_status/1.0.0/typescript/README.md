@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetOrdersRequest, GetOrdersResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,13 +28,13 @@ const sdk = new SDK();
     
 const req: GetOrdersRequest = {
   queryParams: {
-    limit: "adipisci",
-    offset: "illo",
-    orderStatus: "Completed",
+    limit: "sit",
+    offset: "voluptas",
+    orderStatus: "Cancelled",
   },
 };
 
-sdk.sdk.getOrders(req).then((res: GetOrdersResponse | AxiosError) => {
+sdk.getOrders(req).then((res: GetOrdersResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-// EndpointConfigInput
-/**
- * Endpoint config for this cluster
-**/
-var EndpointConfigInput = /** @class */ (function (_super) {
-    __extends(EndpointConfigInput, _super);
-    function EndpointConfigInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableHttpPortAccess" }),
-        __metadata("design:type", Boolean)
-    ], EndpointConfigInput.prototype, "enableHttpPortAccess", void 0);
-    return EndpointConfigInput;
-}(SpeakeasyBase));
-export { EndpointConfigInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointConfigInput = exports.EndpointConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // EndpointConfig
 /**
  * Endpoint config for this cluster
@@ -49,13 +36,29 @@ var EndpointConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableHttpPortAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableHttpPortAccess" }),
         __metadata("design:type", Boolean)
     ], EndpointConfig.prototype, "enableHttpPortAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=httpPorts" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=httpPorts" }),
+        __metadata("design:type", Object)
     ], EndpointConfig.prototype, "httpPorts", void 0);
     return EndpointConfig;
-}(SpeakeasyBase));
-export { EndpointConfig };
+}(utils_1.SpeakeasyBase));
+exports.EndpointConfig = EndpointConfig;
+// EndpointConfigInput
+/**
+ * Endpoint config for this cluster
+**/
+var EndpointConfigInput = /** @class */ (function (_super) {
+    __extends(EndpointConfigInput, _super);
+    function EndpointConfigInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableHttpPortAccess" }),
+        __metadata("design:type", Boolean)
+    ], EndpointConfigInput.prototype, "enableHttpPortAccess", void 0);
+    return EndpointConfigInput;
+}(utils_1.SpeakeasyBase));
+exports.EndpointConfigInput = EndpointConfigInput;

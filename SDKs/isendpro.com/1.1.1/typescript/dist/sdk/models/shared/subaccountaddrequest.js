@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SubaccountAddRequestSubAccountEditEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubaccountAddRequest = exports.SubaccountAddRequestSubAccountEditEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SubaccountAddRequestSubAccountEditEnum;
 (function (SubaccountAddRequestSubAccountEditEnum) {
     SubaccountAddRequestSubAccountEditEnum["AddAccount"] = "addAccount";
-})(SubaccountAddRequestSubAccountEditEnum || (SubaccountAddRequestSubAccountEditEnum = {}));
+})(SubaccountAddRequestSubAccountEditEnum = exports.SubaccountAddRequestSubAccountEditEnum || (exports.SubaccountAddRequestSubAccountEditEnum = {}));
 var SubaccountAddRequest = /** @class */ (function (_super) {
     __extends(SubaccountAddRequest, _super);
     function SubaccountAddRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyid" }),
         __metadata("design:type", String)
     ], SubaccountAddRequest.prototype, "keyid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subAccountEdit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subAccountEdit" }),
         __metadata("design:type", String)
     ], SubaccountAddRequest.prototype, "subAccountEdit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subAccountLogin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subAccountLogin" }),
         __metadata("design:type", String)
     ], SubaccountAddRequest.prototype, "subAccountLogin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subAccountPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subAccountPassword" }),
         __metadata("design:type", String)
     ], SubaccountAddRequest.prototype, "subAccountPassword", void 0);
     return SubaccountAddRequest;
-}(SpeakeasyBase));
-export { SubaccountAddRequest };
+}(utils_1.SpeakeasyBase));
+exports.SubaccountAddRequest = SubaccountAddRequest;

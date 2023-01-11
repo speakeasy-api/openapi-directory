@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Hit } from "./hit";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Hits = void 0;
+var utils_1 = require("../../../internal/utils");
+var hit_1 = require("./hit");
 // Hits
 /**
  * The collection of documents that match the search request.
@@ -34,21 +37,21 @@ var Hits = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cursor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cursor" }),
         __metadata("design:type", String)
     ], Hits.prototype, "cursor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=found" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=found" }),
         __metadata("design:type", Number)
     ], Hits.prototype, "found", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hit", elemType: Hit }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hit", elemType: hit_1.Hit }),
         __metadata("design:type", Array)
     ], Hits.prototype, "hit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=start" }),
         __metadata("design:type", Number)
     ], Hits.prototype, "start", void 0);
     return Hits;
-}(SpeakeasyBase));
-export { Hits };
+}(utils_1.SpeakeasyBase));
+exports.Hits = Hits;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PageMetaData = void 0;
+var utils_1 = require("../../../internal/utils");
 var PageMetaData = /** @class */ (function (_super) {
     __extends(PageMetaData, _super);
     function PageMetaData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number" }),
         __metadata("design:type", Number)
     ], PageMetaData.prototype, "number", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], PageMetaData.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_elements" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_elements" }),
         __metadata("design:type", Number)
     ], PageMetaData.prototype, "totalElements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_pages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_pages" }),
         __metadata("design:type", Number)
     ], PageMetaData.prototype, "totalPages", void 0);
     return PageMetaData;
-}(SpeakeasyBase));
-export { PageMetaData };
+}(utils_1.SpeakeasyBase));
+exports.PageMetaData = PageMetaData;

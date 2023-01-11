@@ -4,7 +4,7 @@ export declare class GetCuratedPodcastByIdPathParams extends SpeakeasyBase {
     id: string;
 }
 export declare class GetCuratedPodcastByIdHeaders extends SpeakeasyBase {
-    xListenApiKey: string;
+    xListenAPIKey: string;
 }
 export declare class GetCuratedPodcastByIdRequest extends SpeakeasyBase {
     pathParams: GetCuratedPodcastByIdPathParams;
@@ -13,6 +13,6 @@ export declare class GetCuratedPodcastByIdRequest extends SpeakeasyBase {
 export declare class GetCuratedPodcastByIdResponse extends SpeakeasyBase {
     contentType: string;
     curatedListFull?: shared.CuratedListFull;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

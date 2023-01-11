@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AudioConfigAudioEncodingEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AudioConfig = exports.AudioConfigAudioEncodingEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AudioConfigAudioEncodingEnum;
 (function (AudioConfigAudioEncodingEnum) {
     AudioConfigAudioEncodingEnum["AudioEncodingUnspecified"] = "AUDIO_ENCODING_UNSPECIFIED";
     AudioConfigAudioEncodingEnum["Linear16"] = "LINEAR16";
@@ -31,7 +34,7 @@ export var AudioConfigAudioEncodingEnum;
     AudioConfigAudioEncodingEnum["OggOpus"] = "OGG_OPUS";
     AudioConfigAudioEncodingEnum["Mulaw"] = "MULAW";
     AudioConfigAudioEncodingEnum["Alaw"] = "ALAW";
-})(AudioConfigAudioEncodingEnum || (AudioConfigAudioEncodingEnum = {}));
+})(AudioConfigAudioEncodingEnum = exports.AudioConfigAudioEncodingEnum || (exports.AudioConfigAudioEncodingEnum = {}));
 // AudioConfig
 /**
  * Description of audio data to be synthesized.
@@ -42,29 +45,29 @@ var AudioConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=audioEncoding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=audioEncoding" }),
         __metadata("design:type", String)
     ], AudioConfig.prototype, "audioEncoding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effectsProfileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effectsProfileId" }),
         __metadata("design:type", Array)
     ], AudioConfig.prototype, "effectsProfileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pitch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pitch" }),
         __metadata("design:type", Number)
     ], AudioConfig.prototype, "pitch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleRateHertz" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleRateHertz" }),
         __metadata("design:type", Number)
     ], AudioConfig.prototype, "sampleRateHertz", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=speakingRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=speakingRate" }),
         __metadata("design:type", Number)
     ], AudioConfig.prototype, "speakingRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumeGainDb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumeGainDb" }),
         __metadata("design:type", Number)
     ], AudioConfig.prototype, "volumeGainDb", void 0);
     return AudioConfig;
-}(SpeakeasyBase));
-export { AudioConfig };
+}(utils_1.SpeakeasyBase));
+exports.AudioConfig = AudioConfig;

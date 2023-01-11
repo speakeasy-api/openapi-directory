@@ -14,6 +14,6 @@ export declare class GetEmployerJobsRequest extends SpeakeasyBase {
 export declare class GetEmployerJobsResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getEmployerJobs200ApplicationJsonBinaryString?: Uint8Array;
+    getEmployerJobs200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

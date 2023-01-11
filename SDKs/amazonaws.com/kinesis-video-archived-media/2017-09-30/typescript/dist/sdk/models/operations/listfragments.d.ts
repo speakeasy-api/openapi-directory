@@ -24,7 +24,7 @@ export declare class ListFragmentsRequestBody extends SpeakeasyBase {
     fragmentSelector?: ListFragmentsRequestBodyFragmentSelector;
     maxResults?: number;
     nextToken?: string;
-    streamArn?: string;
+    streamARN?: string;
     streamName?: string;
 }
 export declare class ListFragmentsRequest extends SpeakeasyBase {

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListExclusionsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListExclusionsRequest = /** @class */ (function (_super) {
     __extends(ListExclusionsRequest, _super);
     function ListExclusionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assessmentRunArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assessmentRunArn" }),
         __metadata("design:type", String)
     ], ListExclusionsRequest.prototype, "assessmentRunArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxResults" }),
         __metadata("design:type", Number)
     ], ListExclusionsRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListExclusionsRequest.prototype, "nextToken", void 0);
     return ListExclusionsRequest;
-}(SpeakeasyBase));
-export { ListExclusionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListExclusionsRequest = ListExclusionsRequest;

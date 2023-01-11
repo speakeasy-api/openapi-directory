@@ -62,7 +62,7 @@ export class IdsProjectsLocationsOperationsCancelRequest extends SpeakeasyBase {
   queryParams: IdsProjectsLocationsOperationsCancelQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: IdsProjectsLocationsOperationsCancelSecurity;
@@ -74,7 +74,7 @@ export class IdsProjectsLocationsOperationsCancelResponse extends SpeakeasyBase 
   contentType: string;
 
   @SpeakeasyMetadata()
-  empty?: Map<string, any>;
+  empty?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

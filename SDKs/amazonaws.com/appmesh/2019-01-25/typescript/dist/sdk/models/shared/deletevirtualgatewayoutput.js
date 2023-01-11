@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VirtualGatewayData } from "./virtualgatewaydata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteVirtualGatewayOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var virtualgatewaydata_1 = require("./virtualgatewaydata");
 var DeleteVirtualGatewayOutput = /** @class */ (function (_super) {
     __extends(DeleteVirtualGatewayOutput, _super);
     function DeleteVirtualGatewayOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtualGateway" }),
-        __metadata("design:type", VirtualGatewayData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtualGateway" }),
+        __metadata("design:type", virtualgatewaydata_1.VirtualGatewayData)
     ], DeleteVirtualGatewayOutput.prototype, "virtualGateway", void 0);
     return DeleteVirtualGatewayOutput;
-}(SpeakeasyBase));
-export { DeleteVirtualGatewayOutput };
+}(utils_1.SpeakeasyBase));
+exports.DeleteVirtualGatewayOutput = DeleteVirtualGatewayOutput;

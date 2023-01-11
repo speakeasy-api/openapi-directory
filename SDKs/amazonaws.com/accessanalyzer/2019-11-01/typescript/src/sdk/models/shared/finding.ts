@@ -17,7 +17,7 @@ export class Finding extends SpeakeasyBase {
   analyzedAt: Date;
 
   @SpeakeasyMetadata({ data: "json, name=condition" })
-  condition: Map<string, string>;
+  condition: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=createdAt" })
   createdAt: Date;
@@ -32,7 +32,7 @@ export class Finding extends SpeakeasyBase {
   isPublic?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=principal" })
-  principal?: Map<string, string>;
+  principal?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=resource" })
   resource?: string;

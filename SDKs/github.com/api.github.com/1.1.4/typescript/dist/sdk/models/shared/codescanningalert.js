@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimpleUser } from "./simpleuser";
-import { CodeScanningAlertInstance } from "./codescanningalertinstance";
-import { CodeScanningAlertRule } from "./codescanningalertrule";
-import { CodeScanningAlertStateEnum } from "./codescanningalertstateenum";
-import { CodeScanningAnalysisTool } from "./codescanninganalysistool";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CodeScanningAlert = void 0;
+var utils_1 = require("../../../internal/utils");
+var simpleuser_1 = require("./simpleuser");
+var codescanningalertinstance_1 = require("./codescanningalertinstance");
+var codescanningalertrule_1 = require("./codescanningalertrule");
+var codescanningalertstateenum_1 = require("./codescanningalertstateenum");
+var codescanninganalysistool_1 = require("./codescanninganalysistool");
 var CodeScanningAlert = /** @class */ (function (_super) {
     __extends(CodeScanningAlert, _super);
     function CodeScanningAlert() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], CodeScanningAlert.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dismissed_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dismissed_at" }),
         __metadata("design:type", Date)
     ], CodeScanningAlert.prototype, "dismissedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dismissed_by" }),
-        __metadata("design:type", SimpleUser)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dismissed_by" }),
+        __metadata("design:type", simpleuser_1.SimpleUser)
     ], CodeScanningAlert.prototype, "dismissedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dismissed_reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dismissed_reason" }),
         __metadata("design:type", String)
     ], CodeScanningAlert.prototype, "dismissedReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], CodeScanningAlert.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instances_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instances_url" }),
         __metadata("design:type", String)
     ], CodeScanningAlert.prototype, "instancesUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=most_recent_instance" }),
-        __metadata("design:type", CodeScanningAlertInstance)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=most_recent_instance" }),
+        __metadata("design:type", codescanningalertinstance_1.CodeScanningAlertInstance)
     ], CodeScanningAlert.prototype, "mostRecentInstance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number" }),
         __metadata("design:type", Number)
     ], CodeScanningAlert.prototype, "number", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rule" }),
-        __metadata("design:type", CodeScanningAlertRule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rule" }),
+        __metadata("design:type", codescanningalertrule_1.CodeScanningAlertRule)
     ], CodeScanningAlert.prototype, "rule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], CodeScanningAlert.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tool" }),
-        __metadata("design:type", CodeScanningAnalysisTool)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tool" }),
+        __metadata("design:type", codescanninganalysistool_1.CodeScanningAnalysisTool)
     ], CodeScanningAlert.prototype, "tool", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], CodeScanningAlert.prototype, "url", void 0);
     return CodeScanningAlert;
-}(SpeakeasyBase));
-export { CodeScanningAlert };
+}(utils_1.SpeakeasyBase));
+exports.CodeScanningAlert = CodeScanningAlert;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,69 +23,71 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEtymologiesResponse = exports.GetEtymologiesRequest = exports.GetEtymologiesQueryParams = exports.GetEtymologiesUseCanonicalEnum = exports.GetEtymologiesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetEtymologiesPathParams = /** @class */ (function (_super) {
     __extends(GetEtymologiesPathParams, _super);
     function GetEtymologiesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=word" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=word" }),
         __metadata("design:type", String)
     ], GetEtymologiesPathParams.prototype, "word", void 0);
     return GetEtymologiesPathParams;
-}(SpeakeasyBase));
-export { GetEtymologiesPathParams };
-export var GetEtymologiesUseCanonicalEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetEtymologiesPathParams = GetEtymologiesPathParams;
+var GetEtymologiesUseCanonicalEnum;
 (function (GetEtymologiesUseCanonicalEnum) {
     GetEtymologiesUseCanonicalEnum["False"] = "false";
     GetEtymologiesUseCanonicalEnum["True"] = "true";
-})(GetEtymologiesUseCanonicalEnum || (GetEtymologiesUseCanonicalEnum = {}));
+})(GetEtymologiesUseCanonicalEnum = exports.GetEtymologiesUseCanonicalEnum || (exports.GetEtymologiesUseCanonicalEnum = {}));
 var GetEtymologiesQueryParams = /** @class */ (function (_super) {
     __extends(GetEtymologiesQueryParams, _super);
     function GetEtymologiesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=useCanonical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=useCanonical" }),
         __metadata("design:type", String)
     ], GetEtymologiesQueryParams.prototype, "useCanonical", void 0);
     return GetEtymologiesQueryParams;
-}(SpeakeasyBase));
-export { GetEtymologiesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetEtymologiesQueryParams = GetEtymologiesQueryParams;
 var GetEtymologiesRequest = /** @class */ (function (_super) {
     __extends(GetEtymologiesRequest, _super);
     function GetEtymologiesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEtymologiesPathParams)
     ], GetEtymologiesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEtymologiesQueryParams)
     ], GetEtymologiesRequest.prototype, "queryParams", void 0);
     return GetEtymologiesRequest;
-}(SpeakeasyBase));
-export { GetEtymologiesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetEtymologiesRequest = GetEtymologiesRequest;
 var GetEtymologiesResponse = /** @class */ (function (_super) {
     __extends(GetEtymologiesResponse, _super);
     function GetEtymologiesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetEtymologiesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetEtymologiesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetEtymologiesResponse.prototype, "statusCode", void 0);
     return GetEtymologiesResponse;
-}(SpeakeasyBase));
-export { GetEtymologiesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetEtymologiesResponse = GetEtymologiesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CompressionFormatEnum } from "./compressionformatenum";
-import { ReportFormatEnum } from "./reportformatenum";
-import { ReportVersioningEnum } from "./reportversioningenum";
-import { AwsRegionEnum } from "./awsregionenum";
-import { TimeUnitEnum } from "./timeunitenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportDefinition = void 0;
+var utils_1 = require("../../../internal/utils");
+var compressionformatenum_1 = require("./compressionformatenum");
+var reportformatenum_1 = require("./reportformatenum");
+var reportversioningenum_1 = require("./reportversioningenum");
+var awsregionenum_1 = require("./awsregionenum");
+var timeunitenum_1 = require("./timeunitenum");
 // ReportDefinition
 /**
  * The definition of AWS Cost and Usage Report. You can specify the report name, time unit, report format, compression format, S3 bucket, additional artifacts, and schema elements in the definition.
@@ -38,53 +41,53 @@ var ReportDefinition = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AdditionalArtifacts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AdditionalArtifacts" }),
         __metadata("design:type", Array)
     ], ReportDefinition.prototype, "additionalArtifacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AdditionalSchemaElements" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AdditionalSchemaElements" }),
         __metadata("design:type", Array)
     ], ReportDefinition.prototype, "additionalSchemaElements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BillingViewArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BillingViewArn" }),
         __metadata("design:type", String)
     ], ReportDefinition.prototype, "billingViewArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Compression" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Compression" }),
         __metadata("design:type", String)
     ], ReportDefinition.prototype, "compression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Format" }),
         __metadata("design:type", String)
     ], ReportDefinition.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RefreshClosedReports" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RefreshClosedReports" }),
         __metadata("design:type", Boolean)
     ], ReportDefinition.prototype, "refreshClosedReports", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReportName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReportName" }),
         __metadata("design:type", String)
     ], ReportDefinition.prototype, "reportName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReportVersioning" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReportVersioning" }),
         __metadata("design:type", String)
     ], ReportDefinition.prototype, "reportVersioning", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3Bucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3Bucket" }),
         __metadata("design:type", String)
     ], ReportDefinition.prototype, "s3Bucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3Prefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3Prefix" }),
         __metadata("design:type", String)
     ], ReportDefinition.prototype, "s3Prefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3Region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3Region" }),
         __metadata("design:type", String)
     ], ReportDefinition.prototype, "s3Region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimeUnit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimeUnit" }),
         __metadata("design:type", String)
     ], ReportDefinition.prototype, "timeUnit", void 0);
     return ReportDefinition;
-}(SpeakeasyBase));
-export { ReportDefinition };
+}(utils_1.SpeakeasyBase));
+exports.ReportDefinition = ReportDefinition;

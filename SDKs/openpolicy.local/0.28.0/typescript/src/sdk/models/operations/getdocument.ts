@@ -14,7 +14,7 @@ export class GetDocumentQueryParams extends SpeakeasyBase {
   explain?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=input" })
-  input?: Map<string, any>;
+  input?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=instrument" })
   instrument?: boolean;
@@ -192,7 +192,7 @@ export class GetDocument200ApplicationJsonProvenance extends SpeakeasyBase {
   buildTimestamp?: string;
 
   @SpeakeasyMetadata({ data: "json, name=bundles" })
-  bundles?: Map<string, any>;
+  bundles?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=version" })
   version?: string;
@@ -234,5 +234,5 @@ export class GetDocumentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDocument200ApplicationJsonObject?: GetDocument200ApplicationJson;
+  getDocument200ApplicationJSONObject?: GetDocument200ApplicationJson;
 }

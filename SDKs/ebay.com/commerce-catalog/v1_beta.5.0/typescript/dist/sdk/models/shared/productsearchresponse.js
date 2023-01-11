@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProductSummary } from "./productsummary";
-import { Refinement } from "./refinement";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductSearchResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var productsummary_1 = require("./productsummary");
+var refinement_1 = require("./refinement");
 // ProductSearchResponse
 /**
  * This type contains the specifications for the collection of products that match the search or filter criteria of a search call. A maximum of 200 product summaries is returned (the result set), fewer if you include the limit query parameter in the request.
@@ -35,37 +38,37 @@ var ProductSearchResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], ProductSearchResponse.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], ProductSearchResponse.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], ProductSearchResponse.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], ProductSearchResponse.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prev" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prev" }),
         __metadata("design:type", String)
     ], ProductSearchResponse.prototype, "prev", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productSummaries", elemType: ProductSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productSummaries", elemType: productsummary_1.ProductSummary }),
         __metadata("design:type", Array)
     ], ProductSearchResponse.prototype, "productSummaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refinement" }),
-        __metadata("design:type", Refinement)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refinement" }),
+        __metadata("design:type", refinement_1.Refinement)
     ], ProductSearchResponse.prototype, "refinement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], ProductSearchResponse.prototype, "total", void 0);
     return ProductSearchResponse;
-}(SpeakeasyBase));
-export { ProductSearchResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProductSearchResponse = ProductSearchResponse;

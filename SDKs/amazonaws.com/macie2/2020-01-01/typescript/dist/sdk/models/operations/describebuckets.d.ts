@@ -21,7 +21,7 @@ export declare class DescribeBucketsRequestBodySortCriteria extends SpeakeasyBas
     orderBy?: shared.OrderByEnum;
 }
 export declare class DescribeBucketsRequestBody extends SpeakeasyBase {
-    criteria?: Map<string, shared.BucketCriteriaAdditionalProperties>;
+    criteria?: Record<string, shared.BucketCriteriaAdditionalProperties>;
     maxResults?: number;
     nextToken?: string;
     sortCriteria?: DescribeBucketsRequestBodySortCriteria;

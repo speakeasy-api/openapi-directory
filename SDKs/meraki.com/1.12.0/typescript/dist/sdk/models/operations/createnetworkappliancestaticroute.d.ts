@@ -14,5 +14,5 @@ export declare class CreateNetworkApplianceStaticRouteRequest extends SpeakeasyB
 export declare class CreateNetworkApplianceStaticRouteResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createNetworkApplianceStaticRoute201ApplicationJsonObject?: Map<string, any>;
+    createNetworkApplianceStaticRoute201ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConnectivityTest } from "./connectivitytest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListConnectivityTestsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var connectivitytest_1 = require("./connectivitytest");
 // ListConnectivityTestsResponse
 /**
  * Response for the `ListConnectivityTests` method.
@@ -34,17 +37,17 @@ var ListConnectivityTestsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListConnectivityTestsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: ConnectivityTest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: connectivitytest_1.ConnectivityTest }),
         __metadata("design:type", Array)
     ], ListConnectivityTestsResponse.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unreachable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unreachable" }),
         __metadata("design:type", Array)
     ], ListConnectivityTestsResponse.prototype, "unreachable", void 0);
     return ListConnectivityTestsResponse;
-}(SpeakeasyBase));
-export { ListConnectivityTestsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListConnectivityTestsResponse = ListConnectivityTestsResponse;

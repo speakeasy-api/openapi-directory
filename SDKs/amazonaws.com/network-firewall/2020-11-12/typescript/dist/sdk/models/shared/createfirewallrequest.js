@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,50 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SubnetMapping } from "./subnetmapping";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateFirewallRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var subnetmapping_1 = require("./subnetmapping");
+var tag_1 = require("./tag");
 var CreateFirewallRequest = /** @class */ (function (_super) {
     __extends(CreateFirewallRequest, _super);
     function CreateFirewallRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeleteProtection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeleteProtection" }),
         __metadata("design:type", Boolean)
     ], CreateFirewallRequest.prototype, "deleteProtection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], CreateFirewallRequest.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirewallName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirewallName" }),
         __metadata("design:type", String)
     ], CreateFirewallRequest.prototype, "firewallName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirewallPolicyArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirewallPolicyArn" }),
         __metadata("design:type", String)
     ], CreateFirewallRequest.prototype, "firewallPolicyArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirewallPolicyChangeProtection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirewallPolicyChangeProtection" }),
         __metadata("design:type", Boolean)
     ], CreateFirewallRequest.prototype, "firewallPolicyChangeProtection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetChangeProtection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetChangeProtection" }),
         __metadata("design:type", Boolean)
     ], CreateFirewallRequest.prototype, "subnetChangeProtection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetMappings", elemType: SubnetMapping }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetMappings", elemType: subnetmapping_1.SubnetMapping }),
         __metadata("design:type", Array)
     ], CreateFirewallRequest.prototype, "subnetMappings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateFirewallRequest.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VpcId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VpcId" }),
         __metadata("design:type", String)
     ], CreateFirewallRequest.prototype, "vpcId", void 0);
     return CreateFirewallRequest;
-}(SpeakeasyBase));
-export { CreateFirewallRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateFirewallRequest = CreateFirewallRequest;

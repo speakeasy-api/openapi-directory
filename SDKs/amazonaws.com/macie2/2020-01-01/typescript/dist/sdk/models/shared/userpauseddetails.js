@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserPausedDetails = void 0;
+var utils_1 = require("../../../internal/utils");
 // UserPausedDetails
 /**
  * Provides information about when a classification job was paused. For a one-time job, this object also specifies when the job will expire and be cancelled if it isn't resumed. For a recurring job, this object also specifies when the paused job run will expire and be cancelled if it isn't resumed. This object is present only if a job's current status (jobStatus) is USER_PAUSED. The information in this object applies only to a job that was paused while it had a status of RUNNING.
@@ -33,17 +36,17 @@ var UserPausedDetails = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobExpiresAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobExpiresAt" }),
         __metadata("design:type", Date)
     ], UserPausedDetails.prototype, "jobExpiresAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobImminentExpirationHealthEventArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobImminentExpirationHealthEventArn" }),
         __metadata("design:type", String)
     ], UserPausedDetails.prototype, "jobImminentExpirationHealthEventArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jobPausedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jobPausedAt" }),
         __metadata("design:type", Date)
     ], UserPausedDetails.prototype, "jobPausedAt", void 0);
     return UserPausedDetails;
-}(SpeakeasyBase));
-export { UserPausedDetails };
+}(utils_1.SpeakeasyBase));
+exports.UserPausedDetails = UserPausedDetails;

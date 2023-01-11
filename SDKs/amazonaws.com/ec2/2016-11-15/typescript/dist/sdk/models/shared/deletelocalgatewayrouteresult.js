@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LocalGatewayRoute } from "./localgatewayroute";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteLocalGatewayRouteResult = exports.DeleteLocalGatewayRouteResultRoute = void 0;
+var utils_1 = require("../../../internal/utils");
+// DeleteLocalGatewayRouteResultRoute
+/**
+ * Information about the route.
+**/
+var DeleteLocalGatewayRouteResultRoute = /** @class */ (function (_super) {
+    __extends(DeleteLocalGatewayRouteResultRoute, _super);
+    function DeleteLocalGatewayRouteResultRoute() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteLocalGatewayRouteResultRoute.prototype, "destinationCidrBlock", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteLocalGatewayRouteResultRoute.prototype, "localGatewayRouteTableArn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteLocalGatewayRouteResultRoute.prototype, "localGatewayRouteTableId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteLocalGatewayRouteResultRoute.prototype, "localGatewayVirtualInterfaceGroupId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteLocalGatewayRouteResultRoute.prototype, "ownerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteLocalGatewayRouteResultRoute.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteLocalGatewayRouteResultRoute.prototype, "type", void 0);
+    return DeleteLocalGatewayRouteResultRoute;
+}(utils_1.SpeakeasyBase));
+exports.DeleteLocalGatewayRouteResultRoute = DeleteLocalGatewayRouteResultRoute;
 var DeleteLocalGatewayRouteResult = /** @class */ (function (_super) {
     __extends(DeleteLocalGatewayRouteResult, _super);
     function DeleteLocalGatewayRouteResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", LocalGatewayRoute)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DeleteLocalGatewayRouteResultRoute)
     ], DeleteLocalGatewayRouteResult.prototype, "route", void 0);
     return DeleteLocalGatewayRouteResult;
-}(SpeakeasyBase));
-export { DeleteLocalGatewayRouteResult };
+}(utils_1.SpeakeasyBase));
+exports.DeleteLocalGatewayRouteResult = DeleteLocalGatewayRouteResult;

@@ -3,7 +3,7 @@ export declare class CreateGroupIfNotExistsForUsingPostQueryParams extends Speak
     groupMapper?: string;
 }
 export declare class CreateGroupIfNotExistsForUsingPost200ApplicationJsonData extends SpeakeasyBase {
-    groupId?: string;
+    groupID?: string;
 }
 export declare class CreateGroupIfNotExistsForUsingPost200ApplicationJson extends SpeakeasyBase {
     code?: number;
@@ -12,17 +12,17 @@ export declare class CreateGroupIfNotExistsForUsingPost200ApplicationJson extend
 }
 export declare class CreateGroupIfNotExistsForUsingPost400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateGroupIfNotExistsForUsingPost401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateGroupIfNotExistsForUsingPost500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class CreateGroupIfNotExistsForUsingPostRequest extends SpeakeasyBase {
@@ -31,8 +31,8 @@ export declare class CreateGroupIfNotExistsForUsingPostRequest extends Speakeasy
 export declare class CreateGroupIfNotExistsForUsingPostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createGroupIfNotExistsForUsingPost200ApplicationJsonObject?: CreateGroupIfNotExistsForUsingPost200ApplicationJson;
-    createGroupIfNotExistsForUsingPost400ApplicationJsonObject?: CreateGroupIfNotExistsForUsingPost400ApplicationJson;
-    createGroupIfNotExistsForUsingPost401ApplicationJsonObject?: CreateGroupIfNotExistsForUsingPost401ApplicationJson;
-    createGroupIfNotExistsForUsingPost500ApplicationJsonObject?: CreateGroupIfNotExistsForUsingPost500ApplicationJson;
+    createGroupIfNotExistsForUsingPOST200ApplicationJSONObject?: CreateGroupIfNotExistsForUsingPost200ApplicationJson;
+    createGroupIfNotExistsForUsingPOST400ApplicationJSONObject?: CreateGroupIfNotExistsForUsingPost400ApplicationJson;
+    createGroupIfNotExistsForUsingPOST401ApplicationJSONObject?: CreateGroupIfNotExistsForUsingPost401ApplicationJson;
+    createGroupIfNotExistsForUsingPOST500ApplicationJSONObject?: CreateGroupIfNotExistsForUsingPost500ApplicationJson;
 }

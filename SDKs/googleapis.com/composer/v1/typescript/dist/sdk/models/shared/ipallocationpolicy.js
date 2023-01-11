@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IpAllocationPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
 // IpAllocationPolicy
 /**
  * Configuration for controlling how IPs are allocated in the GKE cluster running the Apache Airflow software.
@@ -33,25 +36,25 @@ var IpAllocationPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterIpv4CidrBlock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterIpv4CidrBlock" }),
         __metadata("design:type", String)
     ], IpAllocationPolicy.prototype, "clusterIpv4CidrBlock", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterSecondaryRangeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterSecondaryRangeName" }),
         __metadata("design:type", String)
     ], IpAllocationPolicy.prototype, "clusterSecondaryRangeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servicesIpv4CidrBlock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servicesIpv4CidrBlock" }),
         __metadata("design:type", String)
     ], IpAllocationPolicy.prototype, "servicesIpv4CidrBlock", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servicesSecondaryRangeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servicesSecondaryRangeName" }),
         __metadata("design:type", String)
     ], IpAllocationPolicy.prototype, "servicesSecondaryRangeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useIpAliases" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useIpAliases" }),
         __metadata("design:type", Boolean)
     ], IpAllocationPolicy.prototype, "useIpAliases", void 0);
     return IpAllocationPolicy;
-}(SpeakeasyBase));
-export { IpAllocationPolicy };
+}(utils_1.SpeakeasyBase));
+exports.IpAllocationPolicy = IpAllocationPolicy;

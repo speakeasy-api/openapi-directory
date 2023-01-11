@@ -25,7 +25,7 @@ export class ExtractPagesV1RequestBody extends SpeakeasyBase {
 
 export class ExtractPagesV14XxApplicationProblemPlusJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
-  errors?: Map<string, any>;
+  errors?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: number;
@@ -55,5 +55,5 @@ export class ExtractPagesV1Response extends SpeakeasyBase {
   extractPagesV1200ApplicationPdfBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
-  extractPagesV14XxApplicationProblemPlusJsonObject?: ExtractPagesV14XxApplicationProblemPlusJson;
+  extractPagesV14XXApplicationProblemPlusJsonObject?: ExtractPagesV14XxApplicationProblemPlusJson;
 }

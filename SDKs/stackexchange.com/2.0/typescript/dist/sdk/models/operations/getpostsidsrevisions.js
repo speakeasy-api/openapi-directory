@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPostsIdsRevisionsResponse = exports.GetPostsIdsRevisionsRequest = exports.GetPostsIdsRevisionsQueryParams = exports.GetPostsIdsRevisionsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetPostsIdsRevisionsPathParams = /** @class */ (function (_super) {
     __extends(GetPostsIdsRevisionsPathParams, _super);
     function GetPostsIdsRevisionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=ids" }),
         __metadata("design:type", String)
     ], GetPostsIdsRevisionsPathParams.prototype, "ids", void 0);
     return GetPostsIdsRevisionsPathParams;
-}(SpeakeasyBase));
-export { GetPostsIdsRevisionsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPostsIdsRevisionsPathParams = GetPostsIdsRevisionsPathParams;
 var GetPostsIdsRevisionsQueryParams = /** @class */ (function (_super) {
     __extends(GetPostsIdsRevisionsQueryParams, _super);
     function GetPostsIdsRevisionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], GetPostsIdsRevisionsQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], GetPostsIdsRevisionsQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Number)
     ], GetPostsIdsRevisionsQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], GetPostsIdsRevisionsQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pagesize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pagesize" }),
         __metadata("design:type", Number)
     ], GetPostsIdsRevisionsQueryParams.prototype, "pagesize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=site" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=site" }),
         __metadata("design:type", String)
     ], GetPostsIdsRevisionsQueryParams.prototype, "site", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Number)
     ], GetPostsIdsRevisionsQueryParams.prototype, "todate", void 0);
     return GetPostsIdsRevisionsQueryParams;
-}(SpeakeasyBase));
-export { GetPostsIdsRevisionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetPostsIdsRevisionsQueryParams = GetPostsIdsRevisionsQueryParams;
 var GetPostsIdsRevisionsRequest = /** @class */ (function (_super) {
     __extends(GetPostsIdsRevisionsRequest, _super);
     function GetPostsIdsRevisionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPostsIdsRevisionsPathParams)
     ], GetPostsIdsRevisionsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetPostsIdsRevisionsQueryParams)
     ], GetPostsIdsRevisionsRequest.prototype, "queryParams", void 0);
     return GetPostsIdsRevisionsRequest;
-}(SpeakeasyBase));
-export { GetPostsIdsRevisionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPostsIdsRevisionsRequest = GetPostsIdsRevisionsRequest;
 var GetPostsIdsRevisionsResponse = /** @class */ (function (_super) {
     __extends(GetPostsIdsRevisionsResponse, _super);
     function GetPostsIdsRevisionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetPostsIdsRevisionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetPostsIdsRevisionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetPostsIdsRevisionsResponse.prototype, "statusCode", void 0);
     return GetPostsIdsRevisionsResponse;
-}(SpeakeasyBase));
-export { GetPostsIdsRevisionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPostsIdsRevisionsResponse = GetPostsIdsRevisionsResponse;

@@ -24,6 +24,6 @@ export declare class PoolUpgradeOsRequest extends SpeakeasyBase {
 export declare class PoolUpgradeOsResponse extends SpeakeasyBase {
     batchError?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

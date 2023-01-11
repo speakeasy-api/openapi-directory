@@ -23,6 +23,6 @@ export declare class ComputeNodeListResponse extends SpeakeasyBase {
     batchError?: any;
     computeNodeListResult?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

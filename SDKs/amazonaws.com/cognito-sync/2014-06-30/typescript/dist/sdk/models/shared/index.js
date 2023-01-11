@@ -1,25 +1,41 @@
-export * from "./bulkpublishresponse";
-export * from "./bulkpublishstatusenum";
-export * from "./cognitostreams";
-export * from "./dataset";
-export * from "./deletedatasetresponse";
-export * from "./describedatasetresponse";
-export * from "./describeidentitypoolusageresponse";
-export * from "./describeidentityusageresponse";
-export * from "./getbulkpublishdetailsresponse";
-export * from "./getcognitoeventsresponse";
-export * from "./getidentitypoolconfigurationresponse";
-export * from "./identitypoolusage";
-export * from "./identityusage";
-export * from "./listdatasetsresponse";
-export * from "./listidentitypoolusageresponse";
-export * from "./listrecordsresponse";
-export * from "./operationenum";
-export * from "./pushsync";
-export * from "./record";
-export * from "./recordpatch";
-export * from "./registerdeviceresponse";
-export * from "./security";
-export * from "./setidentitypoolconfigurationresponse";
-export * from "./streamingstatusenum";
-export * from "./updaterecordsresponse";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./bulkpublishresponse"), exports);
+__exportStar(require("./bulkpublishstatusenum"), exports);
+__exportStar(require("./cognitostreams"), exports);
+__exportStar(require("./dataset"), exports);
+__exportStar(require("./deletedatasetresponse"), exports);
+__exportStar(require("./describedatasetresponse"), exports);
+__exportStar(require("./describeidentitypoolusageresponse"), exports);
+__exportStar(require("./describeidentityusageresponse"), exports);
+__exportStar(require("./getbulkpublishdetailsresponse"), exports);
+__exportStar(require("./getcognitoeventsresponse"), exports);
+__exportStar(require("./getidentitypoolconfigurationresponse"), exports);
+__exportStar(require("./identitypoolusage"), exports);
+__exportStar(require("./identityusage"), exports);
+__exportStar(require("./listdatasetsresponse"), exports);
+__exportStar(require("./listidentitypoolusageresponse"), exports);
+__exportStar(require("./listrecordsresponse"), exports);
+__exportStar(require("./operationenum"), exports);
+__exportStar(require("./pushsync"), exports);
+__exportStar(require("./record"), exports);
+__exportStar(require("./recordpatch"), exports);
+__exportStar(require("./registerdeviceresponse"), exports);
+__exportStar(require("./security"), exports);
+__exportStar(require("./setidentitypoolconfigurationresponse"), exports);
+__exportStar(require("./streamingstatusenum"), exports);
+__exportStar(require("./updaterecordsresponse"), exports);

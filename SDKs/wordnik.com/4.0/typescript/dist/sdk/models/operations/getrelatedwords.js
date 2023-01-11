@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRelatedWordsResponse = exports.GetRelatedWordsRequest = exports.GetRelatedWordsQueryParams = exports.GetRelatedWordsUseCanonicalEnum = exports.GetRelatedWordsRelationshipTypesEnum = exports.GetRelatedWordsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetRelatedWordsPathParams = /** @class */ (function (_super) {
     __extends(GetRelatedWordsPathParams, _super);
     function GetRelatedWordsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=word" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=word" }),
         __metadata("design:type", String)
     ], GetRelatedWordsPathParams.prototype, "word", void 0);
     return GetRelatedWordsPathParams;
-}(SpeakeasyBase));
-export { GetRelatedWordsPathParams };
-export var GetRelatedWordsRelationshipTypesEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetRelatedWordsPathParams = GetRelatedWordsPathParams;
+var GetRelatedWordsRelationshipTypesEnum;
 (function (GetRelatedWordsRelationshipTypesEnum) {
     GetRelatedWordsRelationshipTypesEnum["Synonym"] = "synonym";
     GetRelatedWordsRelationshipTypesEnum["Antonym"] = "antonym";
@@ -54,65 +57,65 @@ export var GetRelatedWordsRelationshipTypesEnum;
     GetRelatedWordsRelationshipTypesEnum["VerbForm"] = "verb-form";
     GetRelatedWordsRelationshipTypesEnum["VerbStem"] = "verb-stem";
     GetRelatedWordsRelationshipTypesEnum["HasTopic"] = "has_topic";
-})(GetRelatedWordsRelationshipTypesEnum || (GetRelatedWordsRelationshipTypesEnum = {}));
-export var GetRelatedWordsUseCanonicalEnum;
+})(GetRelatedWordsRelationshipTypesEnum = exports.GetRelatedWordsRelationshipTypesEnum || (exports.GetRelatedWordsRelationshipTypesEnum = {}));
+var GetRelatedWordsUseCanonicalEnum;
 (function (GetRelatedWordsUseCanonicalEnum) {
     GetRelatedWordsUseCanonicalEnum["False"] = "false";
     GetRelatedWordsUseCanonicalEnum["True"] = "true";
-})(GetRelatedWordsUseCanonicalEnum || (GetRelatedWordsUseCanonicalEnum = {}));
+})(GetRelatedWordsUseCanonicalEnum = exports.GetRelatedWordsUseCanonicalEnum || (exports.GetRelatedWordsUseCanonicalEnum = {}));
 var GetRelatedWordsQueryParams = /** @class */ (function (_super) {
     __extends(GetRelatedWordsQueryParams, _super);
     function GetRelatedWordsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limitPerRelationshipType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limitPerRelationshipType" }),
         __metadata("design:type", Number)
     ], GetRelatedWordsQueryParams.prototype, "limitPerRelationshipType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=relationshipTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=relationshipTypes" }),
         __metadata("design:type", String)
     ], GetRelatedWordsQueryParams.prototype, "relationshipTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=useCanonical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=useCanonical" }),
         __metadata("design:type", String)
     ], GetRelatedWordsQueryParams.prototype, "useCanonical", void 0);
     return GetRelatedWordsQueryParams;
-}(SpeakeasyBase));
-export { GetRelatedWordsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetRelatedWordsQueryParams = GetRelatedWordsQueryParams;
 var GetRelatedWordsRequest = /** @class */ (function (_super) {
     __extends(GetRelatedWordsRequest, _super);
     function GetRelatedWordsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRelatedWordsPathParams)
     ], GetRelatedWordsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetRelatedWordsQueryParams)
     ], GetRelatedWordsRequest.prototype, "queryParams", void 0);
     return GetRelatedWordsRequest;
-}(SpeakeasyBase));
-export { GetRelatedWordsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetRelatedWordsRequest = GetRelatedWordsRequest;
 var GetRelatedWordsResponse = /** @class */ (function (_super) {
     __extends(GetRelatedWordsResponse, _super);
     function GetRelatedWordsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetRelatedWordsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetRelatedWordsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetRelatedWordsResponse.prototype, "statusCode", void 0);
     return GetRelatedWordsResponse;
-}(SpeakeasyBase));
-export { GetRelatedWordsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetRelatedWordsResponse = GetRelatedWordsResponse;

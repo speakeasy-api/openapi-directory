@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Oidc } from "./oidc";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Identity = void 0;
+var utils_1 = require("../../../internal/utils");
+var oidc_1 = require("./oidc");
 // Identity
 /**
  * An object representing an identity provider.
@@ -34,9 +37,9 @@ var Identity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oidc" }),
-        __metadata("design:type", Oidc)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oidc" }),
+        __metadata("design:type", oidc_1.Oidc)
     ], Identity.prototype, "oidc", void 0);
     return Identity;
-}(SpeakeasyBase));
-export { Identity };
+}(utils_1.SpeakeasyBase));
+exports.Identity = Identity;

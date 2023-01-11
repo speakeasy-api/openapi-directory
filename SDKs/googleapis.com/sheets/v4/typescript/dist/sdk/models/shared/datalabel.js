@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChartData } from "./chartdata";
-import { TextFormat } from "./textformat";
-export var DataLabelPlacementEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataLabel = exports.DataLabelTypeEnum = exports.DataLabelPlacementEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var chartdata_1 = require("./chartdata");
+var textformat_1 = require("./textformat");
+var DataLabelPlacementEnum;
 (function (DataLabelPlacementEnum) {
     DataLabelPlacementEnum["DataLabelPlacementUnspecified"] = "DATA_LABEL_PLACEMENT_UNSPECIFIED";
     DataLabelPlacementEnum["Center"] = "CENTER";
@@ -36,14 +39,14 @@ export var DataLabelPlacementEnum;
     DataLabelPlacementEnum["InsideEnd"] = "INSIDE_END";
     DataLabelPlacementEnum["InsideBase"] = "INSIDE_BASE";
     DataLabelPlacementEnum["OutsideEnd"] = "OUTSIDE_END";
-})(DataLabelPlacementEnum || (DataLabelPlacementEnum = {}));
-export var DataLabelTypeEnum;
+})(DataLabelPlacementEnum = exports.DataLabelPlacementEnum || (exports.DataLabelPlacementEnum = {}));
+var DataLabelTypeEnum;
 (function (DataLabelTypeEnum) {
     DataLabelTypeEnum["DataLabelTypeUnspecified"] = "DATA_LABEL_TYPE_UNSPECIFIED";
     DataLabelTypeEnum["None"] = "NONE";
     DataLabelTypeEnum["Data"] = "DATA";
     DataLabelTypeEnum["Custom"] = "CUSTOM";
-})(DataLabelTypeEnum || (DataLabelTypeEnum = {}));
+})(DataLabelTypeEnum = exports.DataLabelTypeEnum || (exports.DataLabelTypeEnum = {}));
 // DataLabel
 /**
  * Settings for one set of data labels. Data labels are annotations that appear next to a set of data, such as the points on a line chart, and provide additional information about what the data represents, such as a text representation of the value behind that point on the graph.
@@ -54,21 +57,21 @@ var DataLabel = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customLabelData" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customLabelData" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], DataLabel.prototype, "customLabelData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placement" }),
         __metadata("design:type", String)
     ], DataLabel.prototype, "placement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textFormat" }),
-        __metadata("design:type", TextFormat)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textFormat" }),
+        __metadata("design:type", textformat_1.TextFormat)
     ], DataLabel.prototype, "textFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], DataLabel.prototype, "type", void 0);
     return DataLabel;
-}(SpeakeasyBase));
-export { DataLabel };
+}(utils_1.SpeakeasyBase));
+exports.DataLabel = DataLabel;

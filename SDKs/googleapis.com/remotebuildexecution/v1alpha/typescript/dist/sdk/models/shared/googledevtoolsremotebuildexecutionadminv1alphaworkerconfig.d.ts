@@ -7,7 +7,7 @@ export declare class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfig 
     accelerator?: GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfig;
     diskSizeGb?: string;
     diskType?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     machineType?: string;
     maxConcurrentActions?: string;
     minCpuPlatform?: string;

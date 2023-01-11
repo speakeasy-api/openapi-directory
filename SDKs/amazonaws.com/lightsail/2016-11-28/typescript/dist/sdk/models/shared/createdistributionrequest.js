@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,50 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CacheSettings } from "./cachesettings";
-import { CacheBehaviorPerPath } from "./cachebehaviorperpath";
-import { CacheBehavior } from "./cachebehavior";
-import { IpAddressTypeEnum } from "./ipaddresstypeenum";
-import { InputOrigin } from "./inputorigin";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDistributionRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var cachesettings_1 = require("./cachesettings");
+var cachebehaviorperpath_1 = require("./cachebehaviorperpath");
+var cachebehavior_1 = require("./cachebehavior");
+var ipaddresstypeenum_1 = require("./ipaddresstypeenum");
+var inputorigin_1 = require("./inputorigin");
+var tag_1 = require("./tag");
 var CreateDistributionRequest = /** @class */ (function (_super) {
     __extends(CreateDistributionRequest, _super);
     function CreateDistributionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bundleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bundleId" }),
         __metadata("design:type", String)
     ], CreateDistributionRequest.prototype, "bundleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cacheBehaviorSettings" }),
-        __metadata("design:type", CacheSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cacheBehaviorSettings" }),
+        __metadata("design:type", cachesettings_1.CacheSettings)
     ], CreateDistributionRequest.prototype, "cacheBehaviorSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cacheBehaviors", elemType: CacheBehaviorPerPath }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cacheBehaviors", elemType: cachebehaviorperpath_1.CacheBehaviorPerPath }),
         __metadata("design:type", Array)
     ], CreateDistributionRequest.prototype, "cacheBehaviors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultCacheBehavior" }),
-        __metadata("design:type", CacheBehavior)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultCacheBehavior" }),
+        __metadata("design:type", cachebehavior_1.CacheBehavior)
     ], CreateDistributionRequest.prototype, "defaultCacheBehavior", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distributionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distributionName" }),
         __metadata("design:type", String)
     ], CreateDistributionRequest.prototype, "distributionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipAddressType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipAddressType" }),
         __metadata("design:type", String)
     ], CreateDistributionRequest.prototype, "ipAddressType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=origin" }),
-        __metadata("design:type", InputOrigin)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=origin" }),
+        __metadata("design:type", inputorigin_1.InputOrigin)
     ], CreateDistributionRequest.prototype, "origin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateDistributionRequest.prototype, "tags", void 0);
     return CreateDistributionRequest;
-}(SpeakeasyBase));
-export { CreateDistributionRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateDistributionRequest = CreateDistributionRequest;

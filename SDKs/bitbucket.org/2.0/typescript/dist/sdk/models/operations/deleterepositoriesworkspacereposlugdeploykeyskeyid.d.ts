@@ -17,5 +17,5 @@ export declare class DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest e
 export declare class DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

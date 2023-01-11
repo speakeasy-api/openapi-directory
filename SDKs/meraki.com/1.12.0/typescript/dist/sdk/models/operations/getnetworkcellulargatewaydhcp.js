@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkCellularGatewayDhcpResponse = exports.GetNetworkCellularGatewayDhcpRequest = exports.GetNetworkCellularGatewayDhcpPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkCellularGatewayDhcpPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkCellularGatewayDhcpPathParams, _super);
     function GetNetworkCellularGatewayDhcpPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkCellularGatewayDhcpPathParams.prototype, "networkId", void 0);
     return GetNetworkCellularGatewayDhcpPathParams;
-}(SpeakeasyBase));
-export { GetNetworkCellularGatewayDhcpPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkCellularGatewayDhcpPathParams = GetNetworkCellularGatewayDhcpPathParams;
 var GetNetworkCellularGatewayDhcpRequest = /** @class */ (function (_super) {
     __extends(GetNetworkCellularGatewayDhcpRequest, _super);
     function GetNetworkCellularGatewayDhcpRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkCellularGatewayDhcpPathParams)
     ], GetNetworkCellularGatewayDhcpRequest.prototype, "pathParams", void 0);
     return GetNetworkCellularGatewayDhcpRequest;
-}(SpeakeasyBase));
-export { GetNetworkCellularGatewayDhcpRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkCellularGatewayDhcpRequest = GetNetworkCellularGatewayDhcpRequest;
 var GetNetworkCellularGatewayDhcpResponse = /** @class */ (function (_super) {
     __extends(GetNetworkCellularGatewayDhcpResponse, _super);
     function GetNetworkCellularGatewayDhcpResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkCellularGatewayDhcpResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkCellularGatewayDhcpResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkCellularGatewayDhcpResponse.prototype, "getNetworkCellularGatewayDhcp200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkCellularGatewayDhcpResponse.prototype, "getNetworkCellularGatewayDhcp200ApplicationJSONObject", void 0);
     return GetNetworkCellularGatewayDhcpResponse;
-}(SpeakeasyBase));
-export { GetNetworkCellularGatewayDhcpResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkCellularGatewayDhcpResponse = GetNetworkCellularGatewayDhcpResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkWirelessSsidTrafficShapingRulesResponse = exports.GetNetworkWirelessSsidTrafficShapingRulesRequest = exports.GetNetworkWirelessSsidTrafficShapingRulesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkWirelessSsidTrafficShapingRulesPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidTrafficShapingRulesPathParams, _super);
     function GetNetworkWirelessSsidTrafficShapingRulesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidTrafficShapingRulesPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=number" }),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidTrafficShapingRulesPathParams.prototype, "number", void 0);
     return GetNetworkWirelessSsidTrafficShapingRulesPathParams;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidTrafficShapingRulesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidTrafficShapingRulesPathParams = GetNetworkWirelessSsidTrafficShapingRulesPathParams;
 var GetNetworkWirelessSsidTrafficShapingRulesRequest = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidTrafficShapingRulesRequest, _super);
     function GetNetworkWirelessSsidTrafficShapingRulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkWirelessSsidTrafficShapingRulesPathParams)
     ], GetNetworkWirelessSsidTrafficShapingRulesRequest.prototype, "pathParams", void 0);
     return GetNetworkWirelessSsidTrafficShapingRulesRequest;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidTrafficShapingRulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidTrafficShapingRulesRequest = GetNetworkWirelessSsidTrafficShapingRulesRequest;
 var GetNetworkWirelessSsidTrafficShapingRulesResponse = /** @class */ (function (_super) {
     __extends(GetNetworkWirelessSsidTrafficShapingRulesResponse, _super);
     function GetNetworkWirelessSsidTrafficShapingRulesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkWirelessSsidTrafficShapingRulesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkWirelessSsidTrafficShapingRulesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkWirelessSsidTrafficShapingRulesResponse.prototype, "getNetworkWirelessSsidTrafficShapingRules200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkWirelessSsidTrafficShapingRulesResponse.prototype, "getNetworkWirelessSsidTrafficShapingRules200ApplicationJSONObject", void 0);
     return GetNetworkWirelessSsidTrafficShapingRulesResponse;
-}(SpeakeasyBase));
-export { GetNetworkWirelessSsidTrafficShapingRulesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkWirelessSsidTrafficShapingRulesResponse = GetNetworkWirelessSsidTrafficShapingRulesResponse;

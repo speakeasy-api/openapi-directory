@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EncryptionConfiguration } from "./encryptionconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResultConfigurationUpdates = void 0;
+var utils_1 = require("../../../internal/utils");
+var encryptionconfiguration_1 = require("./encryptionconfiguration");
 // ResultConfigurationUpdates
 /**
  * The information about the updates in the query results, such as output location and encryption configuration for the query results.
@@ -34,21 +37,21 @@ var ResultConfigurationUpdates = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EncryptionConfiguration" }),
-        __metadata("design:type", EncryptionConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EncryptionConfiguration" }),
+        __metadata("design:type", encryptionconfiguration_1.EncryptionConfiguration)
     ], ResultConfigurationUpdates.prototype, "encryptionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OutputLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OutputLocation" }),
         __metadata("design:type", String)
     ], ResultConfigurationUpdates.prototype, "outputLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RemoveEncryptionConfiguration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RemoveEncryptionConfiguration" }),
         __metadata("design:type", Boolean)
     ], ResultConfigurationUpdates.prototype, "removeEncryptionConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RemoveOutputLocation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RemoveOutputLocation" }),
         __metadata("design:type", Boolean)
     ], ResultConfigurationUpdates.prototype, "removeOutputLocation", void 0);
     return ResultConfigurationUpdates;
-}(SpeakeasyBase));
-export { ResultConfigurationUpdates };
+}(utils_1.SpeakeasyBase));
+exports.ResultConfigurationUpdates = ResultConfigurationUpdates;

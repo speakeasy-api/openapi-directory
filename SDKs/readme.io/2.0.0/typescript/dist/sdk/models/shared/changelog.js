@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ChangelogTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Changelog = exports.ChangelogTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ChangelogTypeEnum;
 (function (ChangelogTypeEnum) {
     ChangelogTypeEnum["Unknown"] = "";
     ChangelogTypeEnum["Added"] = "added";
@@ -31,28 +34,28 @@ export var ChangelogTypeEnum;
     ChangelogTypeEnum["Improved"] = "improved";
     ChangelogTypeEnum["Deprecated"] = "deprecated";
     ChangelogTypeEnum["Removed"] = "removed";
-})(ChangelogTypeEnum || (ChangelogTypeEnum = {}));
+})(ChangelogTypeEnum = exports.ChangelogTypeEnum || (exports.ChangelogTypeEnum = {}));
 var Changelog = /** @class */ (function (_super) {
     __extends(Changelog, _super);
     function Changelog() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], Changelog.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hidden" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hidden" }),
         __metadata("design:type", Boolean)
     ], Changelog.prototype, "hidden", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Changelog.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Changelog.prototype, "type", void 0);
     return Changelog;
-}(SpeakeasyBase));
-export { Changelog };
+}(utils_1.SpeakeasyBase));
+exports.Changelog = Changelog;

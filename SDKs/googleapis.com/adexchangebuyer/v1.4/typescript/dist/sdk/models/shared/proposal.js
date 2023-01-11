@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Buyer } from "./buyer";
-import { ContactInformation } from "./contactinformation";
-import { PrivateData } from "./privatedata";
-import { MarketplaceLabel } from "./marketplacelabel";
-import { Seller } from "./seller";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Proposal = void 0;
+var utils_1 = require("../../../internal/utils");
+var buyer_1 = require("./buyer");
+var contactinformation_1 = require("./contactinformation");
+var privatedata_1 = require("./privatedata");
+var marketplacelabel_1 = require("./marketplacelabel");
+var seller_1 = require("./seller");
 // Proposal
 /**
  * Represents a proposal in the marketplace. A proposal is the unit of negotiation between a seller and a buyer and contains deals which are served. Each field in a proposal can have one of the following setting:
@@ -40,97 +43,97 @@ var Proposal = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=billedBuyer" }),
-        __metadata("design:type", Buyer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=billedBuyer" }),
+        __metadata("design:type", buyer_1.Buyer)
     ], Proposal.prototype, "billedBuyer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buyer" }),
-        __metadata("design:type", Buyer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buyer" }),
+        __metadata("design:type", buyer_1.Buyer)
     ], Proposal.prototype, "buyer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buyerContacts", elemType: ContactInformation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buyerContacts", elemType: contactinformation_1.ContactInformation }),
         __metadata("design:type", Array)
     ], Proposal.prototype, "buyerContacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buyerPrivateData" }),
-        __metadata("design:type", PrivateData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buyerPrivateData" }),
+        __metadata("design:type", privatedata_1.PrivateData)
     ], Proposal.prototype, "buyerPrivateData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dbmAdvertiserIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dbmAdvertiserIds" }),
         __metadata("design:type", Array)
     ], Proposal.prototype, "dbmAdvertiserIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasBuyerSignedOff" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasBuyerSignedOff" }),
         __metadata("design:type", Boolean)
     ], Proposal.prototype, "hasBuyerSignedOff", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasSellerSignedOff" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasSellerSignedOff" }),
         __metadata("design:type", Boolean)
     ], Proposal.prototype, "hasSellerSignedOff", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inventorySource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inventorySource" }),
         __metadata("design:type", String)
     ], Proposal.prototype, "inventorySource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isRenegotiating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isRenegotiating" }),
         __metadata("design:type", Boolean)
     ], Proposal.prototype, "isRenegotiating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isSetupComplete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isSetupComplete" }),
         __metadata("design:type", Boolean)
     ], Proposal.prototype, "isSetupComplete", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Proposal.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels", elemType: MarketplaceLabel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels", elemType: marketplacelabel_1.MarketplaceLabel }),
         __metadata("design:type", Array)
     ], Proposal.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdaterOrCommentorRole" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdaterOrCommentorRole" }),
         __metadata("design:type", String)
     ], Proposal.prototype, "lastUpdaterOrCommentorRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Proposal.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=negotiationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=negotiationId" }),
         __metadata("design:type", String)
     ], Proposal.prototype, "negotiationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=originatorRole" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=originatorRole" }),
         __metadata("design:type", String)
     ], Proposal.prototype, "originatorRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateAuctionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateAuctionId" }),
         __metadata("design:type", String)
     ], Proposal.prototype, "privateAuctionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proposalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proposalId" }),
         __metadata("design:type", String)
     ], Proposal.prototype, "proposalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=proposalState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=proposalState" }),
         __metadata("design:type", String)
     ], Proposal.prototype, "proposalState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionNumber" }),
         __metadata("design:type", String)
     ], Proposal.prototype, "revisionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=revisionTimeMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=revisionTimeMs" }),
         __metadata("design:type", String)
     ], Proposal.prototype, "revisionTimeMs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seller" }),
-        __metadata("design:type", Seller)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seller" }),
+        __metadata("design:type", seller_1.Seller)
     ], Proposal.prototype, "seller", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sellerContacts", elemType: ContactInformation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sellerContacts", elemType: contactinformation_1.ContactInformation }),
         __metadata("design:type", Array)
     ], Proposal.prototype, "sellerContacts", void 0);
     return Proposal;
-}(SpeakeasyBase));
-export { Proposal };
+}(utils_1.SpeakeasyBase));
+exports.Proposal = Proposal;

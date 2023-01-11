@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiDimensionFilter = void 0;
+var utils_1 = require("../../../internal/utils");
 var ApiDimensionFilter = /** @class */ (function (_super) {
     __extends(ApiDimensionFilter, _super);
     function ApiDimensionFilter() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimension" }),
         __metadata("design:type", String)
     ], ApiDimensionFilter.prototype, "dimension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expression" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expression" }),
         __metadata("design:type", String)
     ], ApiDimensionFilter.prototype, "expression", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operator" }),
         __metadata("design:type", String)
     ], ApiDimensionFilter.prototype, "operator", void 0);
     return ApiDimensionFilter;
-}(SpeakeasyBase));
-export { ApiDimensionFilter };
+}(utils_1.SpeakeasyBase));
+exports.ApiDimensionFilter = ApiDimensionFilter;

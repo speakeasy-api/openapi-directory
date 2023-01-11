@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1EvaluationConfig } from "./googleclouddatalabelingv1beta1evaluationconfig";
-import { GoogleCloudDatalabelingV1beta1EvaluationMetrics } from "./googleclouddatalabelingv1beta1evaluationmetrics";
-export var GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1Evaluation = exports.GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1evaluationconfig_1 = require("./googleclouddatalabelingv1beta1evaluationconfig");
+var googleclouddatalabelingv1beta1evaluationmetrics_1 = require("./googleclouddatalabelingv1beta1evaluationmetrics");
+var GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum;
 (function (GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum) {
     GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum["AnnotationTypeUnspecified"] = "ANNOTATION_TYPE_UNSPECIFIED";
     GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum["ImageClassificationAnnotation"] = "IMAGE_CLASSIFICATION_ANNOTATION";
@@ -41,7 +44,7 @@ export var GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum;
     GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum["TextClassificationAnnotation"] = "TEXT_CLASSIFICATION_ANNOTATION";
     GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum["TextEntityExtractionAnnotation"] = "TEXT_ENTITY_EXTRACTION_ANNOTATION";
     GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum["GeneralClassificationAnnotation"] = "GENERAL_CLASSIFICATION_ANNOTATION";
-})(GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum || (GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum = {}));
+})(GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum = exports.GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum || (exports.GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum = {}));
 // GoogleCloudDatalabelingV1beta1Evaluation
 /**
  * Describes an evaluation between a machine learning model's predictions and ground truth labels. Created when an EvaluationJob runs successfully.
@@ -52,33 +55,33 @@ var GoogleCloudDatalabelingV1beta1Evaluation = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotationType" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1Evaluation.prototype, "annotationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1EvaluationConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1evaluationconfig_1.GoogleCloudDatalabelingV1beta1EvaluationConfig)
     ], GoogleCloudDatalabelingV1beta1Evaluation.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1Evaluation.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evaluatedItemCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evaluatedItemCount" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1Evaluation.prototype, "evaluatedItemCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evaluationJobRunTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evaluationJobRunTime" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1Evaluation.prototype, "evaluationJobRunTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evaluationMetrics" }),
-        __metadata("design:type", GoogleCloudDatalabelingV1beta1EvaluationMetrics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evaluationMetrics" }),
+        __metadata("design:type", googleclouddatalabelingv1beta1evaluationmetrics_1.GoogleCloudDatalabelingV1beta1EvaluationMetrics)
     ], GoogleCloudDatalabelingV1beta1Evaluation.prototype, "evaluationMetrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1Evaluation.prototype, "name", void 0);
     return GoogleCloudDatalabelingV1beta1Evaluation;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1Evaluation };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1Evaluation = GoogleCloudDatalabelingV1beta1Evaluation;

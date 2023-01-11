@@ -16,7 +16,7 @@ export declare class CancelDeploymentJobRequest extends SpeakeasyBase {
     request: CancelDeploymentJobRequestBody;
 }
 export declare class CancelDeploymentJobResponse extends SpeakeasyBase {
-    cancelDeploymentJobResponse?: Map<string, any>;
+    cancelDeploymentJobResponse?: Record<string, any>;
     contentType: string;
     internalServerException?: any;
     invalidParameterException?: any;

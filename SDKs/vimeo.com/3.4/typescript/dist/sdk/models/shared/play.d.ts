@@ -11,7 +11,7 @@ export declare class PlayProgressive extends SpeakeasyBase {
     height: number;
     link: string;
     linkExpirationTime: string;
-    log?: Map<string, any>;
+    log?: Record<string, any>;
     md5: string;
     size: number;
     type: PlayProgressiveTypeEnum;

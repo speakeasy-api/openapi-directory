@@ -28,6 +28,6 @@ export declare class IdsProjectsLocationsOperationsDeleteRequest extends Speakea
 }
 export declare class IdsProjectsLocationsOperationsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

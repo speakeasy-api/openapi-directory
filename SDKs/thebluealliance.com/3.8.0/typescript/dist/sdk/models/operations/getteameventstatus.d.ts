@@ -17,7 +17,7 @@ export declare class GetTeamEventStatusRequest extends SpeakeasyBase {
 }
 export declare class GetTeamEventStatusResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     teamEventStatus?: shared.TeamEventStatus;
 }

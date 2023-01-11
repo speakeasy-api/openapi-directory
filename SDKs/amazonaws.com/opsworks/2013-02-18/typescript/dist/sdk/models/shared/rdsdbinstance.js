@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RdsDbInstance = void 0;
+var utils_1 = require("../../../internal/utils");
 // RdsDbInstance
 /**
  * Describes an Amazon RDS instance.
@@ -33,41 +36,41 @@ var RdsDbInstance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Address" }),
         __metadata("design:type", String)
     ], RdsDbInstance.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DbInstanceIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DbInstanceIdentifier" }),
         __metadata("design:type", String)
     ], RdsDbInstance.prototype, "dbInstanceIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DbPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DbPassword" }),
         __metadata("design:type", String)
     ], RdsDbInstance.prototype, "dbPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DbUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DbUser" }),
         __metadata("design:type", String)
     ], RdsDbInstance.prototype, "dbUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Engine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Engine" }),
         __metadata("design:type", String)
     ], RdsDbInstance.prototype, "engine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MissingOnRds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MissingOnRds" }),
         __metadata("design:type", Boolean)
     ], RdsDbInstance.prototype, "missingOnRds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RdsDbInstanceArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RdsDbInstanceArn" }),
         __metadata("design:type", String)
     ], RdsDbInstance.prototype, "rdsDbInstanceArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Region" }),
         __metadata("design:type", String)
     ], RdsDbInstance.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StackId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StackId" }),
         __metadata("design:type", String)
     ], RdsDbInstance.prototype, "stackId", void 0);
     return RdsDbInstance;
-}(SpeakeasyBase));
-export { RdsDbInstance };
+}(utils_1.SpeakeasyBase));
+exports.RdsDbInstance = RdsDbInstance;

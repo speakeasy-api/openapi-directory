@@ -1,4 +1,7 @@
-export var PayoutStatusV3Enum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayoutStatusV3Enum = void 0;
+var PayoutStatusV3Enum;
 (function (PayoutStatusV3Enum) {
     PayoutStatusV3Enum["Accepted"] = "ACCEPTED";
     PayoutStatusV3Enum["Rejected"] = "REJECTED";
@@ -9,4 +12,4 @@ export var PayoutStatusV3Enum;
     PayoutStatusV3Enum["Incomplete"] = "INCOMPLETE";
     PayoutStatusV3Enum["Confirmed"] = "CONFIRMED";
     PayoutStatusV3Enum["Withdrawn"] = "WITHDRAWN";
-})(PayoutStatusV3Enum || (PayoutStatusV3Enum = {}));
+})(PayoutStatusV3Enum = exports.PayoutStatusV3Enum || (exports.PayoutStatusV3Enum = {}));

@@ -11,5 +11,5 @@ export class TilejsonV2LocationsTilesTilesJsonGetResponse extends SpeakeasyBase 
   statusCode: number;
 
   @SpeakeasyMetadata()
-  tileJson?: shared.TileJson;
+  tileJSON?: shared.TileJson;
 }

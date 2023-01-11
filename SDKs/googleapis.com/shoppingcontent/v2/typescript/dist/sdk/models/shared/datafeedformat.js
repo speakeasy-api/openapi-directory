@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DatafeedFormat = void 0;
+var utils_1 = require("../../../internal/utils");
 var DatafeedFormat = /** @class */ (function (_super) {
     __extends(DatafeedFormat, _super);
     function DatafeedFormat() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnDelimiter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnDelimiter" }),
         __metadata("design:type", String)
     ], DatafeedFormat.prototype, "columnDelimiter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileEncoding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileEncoding" }),
         __metadata("design:type", String)
     ], DatafeedFormat.prototype, "fileEncoding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quotingMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quotingMode" }),
         __metadata("design:type", String)
     ], DatafeedFormat.prototype, "quotingMode", void 0);
     return DatafeedFormat;
-}(SpeakeasyBase));
-export { DatafeedFormat };
+}(utils_1.SpeakeasyBase));
+exports.DatafeedFormat = DatafeedFormat;

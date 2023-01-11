@@ -9,7 +9,7 @@ import { LabelField } from "./labelfield";
 **/
 export class Label extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=fields", elemType: LabelField })
-  fields?: Map<string, LabelField>;
+  fields?: Record<string, LabelField>;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;

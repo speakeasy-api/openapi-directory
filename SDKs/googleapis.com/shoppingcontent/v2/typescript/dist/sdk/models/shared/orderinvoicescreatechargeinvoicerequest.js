@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InvoiceSummary } from "./invoicesummary";
-import { ShipmentInvoiceLineItemInvoice } from "./shipmentinvoicelineiteminvoice";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderinvoicesCreateChargeInvoiceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var invoicesummary_1 = require("./invoicesummary");
+var shipmentinvoicelineiteminvoice_1 = require("./shipmentinvoicelineiteminvoice");
 var OrderinvoicesCreateChargeInvoiceRequest = /** @class */ (function (_super) {
     __extends(OrderinvoicesCreateChargeInvoiceRequest, _super);
     function OrderinvoicesCreateChargeInvoiceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invoiceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoiceId" }),
         __metadata("design:type", String)
     ], OrderinvoicesCreateChargeInvoiceRequest.prototype, "invoiceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=invoiceSummary" }),
-        __metadata("design:type", InvoiceSummary)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=invoiceSummary" }),
+        __metadata("design:type", invoicesummary_1.InvoiceSummary)
     ], OrderinvoicesCreateChargeInvoiceRequest.prototype, "invoiceSummary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineItemInvoices", elemType: ShipmentInvoiceLineItemInvoice }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineItemInvoices", elemType: shipmentinvoicelineiteminvoice_1.ShipmentInvoiceLineItemInvoice }),
         __metadata("design:type", Array)
     ], OrderinvoicesCreateChargeInvoiceRequest.prototype, "lineItemInvoices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operationId" }),
         __metadata("design:type", String)
     ], OrderinvoicesCreateChargeInvoiceRequest.prototype, "operationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipmentGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipmentGroupId" }),
         __metadata("design:type", String)
     ], OrderinvoicesCreateChargeInvoiceRequest.prototype, "shipmentGroupId", void 0);
     return OrderinvoicesCreateChargeInvoiceRequest;
-}(SpeakeasyBase));
-export { OrderinvoicesCreateChargeInvoiceRequest };
+}(utils_1.SpeakeasyBase));
+exports.OrderinvoicesCreateChargeInvoiceRequest = OrderinvoicesCreateChargeInvoiceRequest;

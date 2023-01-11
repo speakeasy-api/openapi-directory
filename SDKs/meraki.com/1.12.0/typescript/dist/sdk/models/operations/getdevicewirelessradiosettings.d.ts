@@ -8,5 +8,5 @@ export declare class GetDeviceWirelessRadioSettingsRequest extends SpeakeasyBase
 export declare class GetDeviceWirelessRadioSettingsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getDeviceWirelessRadioSettings200ApplicationJsonObject?: Map<string, any>;
+    getDeviceWirelessRadioSettings200ApplicationJSONObject?: Record<string, any>;
 }

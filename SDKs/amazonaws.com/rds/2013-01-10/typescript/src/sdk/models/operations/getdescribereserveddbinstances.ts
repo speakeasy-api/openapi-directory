@@ -27,7 +27,7 @@ export class GetDescribeReservedDbInstancesQueryParams extends SpeakeasyBase {
   maxRecords?: number;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MultiAZ" })
-  multiAz?: boolean;
+  multiAZ?: boolean;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=OfferingType" })
   offeringType?: string;
@@ -36,10 +36,10 @@ export class GetDescribeReservedDbInstancesQueryParams extends SpeakeasyBase {
   productDescription?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ReservedDBInstanceId" })
-  reservedDbInstanceId?: string;
+  reservedDBInstanceId?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ReservedDBInstancesOfferingId" })
-  reservedDbInstancesOfferingId?: string;
+  reservedDBInstancesOfferingId?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetDescribeReservedDbInstancesVersionEnum;

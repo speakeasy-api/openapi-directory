@@ -21,7 +21,7 @@ export declare class PostDistanceOutputFormatQueryParams extends SpeakeasyBase {
     departure?: Date;
     disable?: string;
     distanceUnit?: PostDistanceOutputFormatDistanceUnitEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     points: string;
     roundTrip?: boolean;
     routeDescription?: string;

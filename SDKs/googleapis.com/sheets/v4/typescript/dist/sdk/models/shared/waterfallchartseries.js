@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WaterfallChartCustomSubtotal } from "./waterfallchartcustomsubtotal";
-import { ChartData } from "./chartdata";
-import { DataLabel } from "./datalabel";
-import { WaterfallChartColumnStyle } from "./waterfallchartcolumnstyle";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WaterfallChartSeries = void 0;
+var utils_1 = require("../../../internal/utils");
+var waterfallchartcustomsubtotal_1 = require("./waterfallchartcustomsubtotal");
+var chartdata_1 = require("./chartdata");
+var datalabel_1 = require("./datalabel");
+var waterfallchartcolumnstyle_1 = require("./waterfallchartcolumnstyle");
 // WaterfallChartSeries
 /**
  * A single series of data for a waterfall chart.
@@ -37,33 +40,33 @@ var WaterfallChartSeries = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customSubtotals", elemType: WaterfallChartCustomSubtotal }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customSubtotals", elemType: waterfallchartcustomsubtotal_1.WaterfallChartCustomSubtotal }),
         __metadata("design:type", Array)
     ], WaterfallChartSeries.prototype, "customSubtotals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", ChartData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", chartdata_1.ChartData)
     ], WaterfallChartSeries.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataLabel" }),
-        __metadata("design:type", DataLabel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataLabel" }),
+        __metadata("design:type", datalabel_1.DataLabel)
     ], WaterfallChartSeries.prototype, "dataLabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hideTrailingSubtotal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hideTrailingSubtotal" }),
         __metadata("design:type", Boolean)
     ], WaterfallChartSeries.prototype, "hideTrailingSubtotal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=negativeColumnsStyle" }),
-        __metadata("design:type", WaterfallChartColumnStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=negativeColumnsStyle" }),
+        __metadata("design:type", waterfallchartcolumnstyle_1.WaterfallChartColumnStyle)
     ], WaterfallChartSeries.prototype, "negativeColumnsStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=positiveColumnsStyle" }),
-        __metadata("design:type", WaterfallChartColumnStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=positiveColumnsStyle" }),
+        __metadata("design:type", waterfallchartcolumnstyle_1.WaterfallChartColumnStyle)
     ], WaterfallChartSeries.prototype, "positiveColumnsStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subtotalColumnsStyle" }),
-        __metadata("design:type", WaterfallChartColumnStyle)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subtotalColumnsStyle" }),
+        __metadata("design:type", waterfallchartcolumnstyle_1.WaterfallChartColumnStyle)
     ], WaterfallChartSeries.prototype, "subtotalColumnsStyle", void 0);
     return WaterfallChartSeries;
-}(SpeakeasyBase));
-export { WaterfallChartSeries };
+}(utils_1.SpeakeasyBase));
+exports.WaterfallChartSeries = WaterfallChartSeries;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CellLocation } from "./celllocation";
-import { EntityObject } from "./entityobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Attributes = void 0;
+var utils_1 = require("../../../internal/utils");
+var celllocation_1 = require("./celllocation");
+var entityobject_1 = require("./entityobject");
 // Attributes
 /**
  * Contains additional attributes related to the task parameter. If the task parameter is table, the row and column IDs for the detected text are returned. If the task parameter is contact, the detected entity tags will be returned.
@@ -35,25 +38,25 @@ var Attributes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cellLocation" }),
-        __metadata("design:type", CellLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cellLocation" }),
+        __metadata("design:type", celllocation_1.CellLocation)
     ], Attributes.prototype, "cellLocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], Attributes.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pageNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pageNumber" }),
         __metadata("design:type", String)
     ], Attributes.prototype, "pageNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tag" }),
         __metadata("design:type", String)
     ], Attributes.prototype, "tag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
-        __metadata("design:type", EntityObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
+        __metadata("design:type", entityobject_1.EntityObject)
     ], Attributes.prototype, "value", void 0);
     return Attributes;
-}(SpeakeasyBase));
-export { Attributes };
+}(utils_1.SpeakeasyBase));
+exports.Attributes = Attributes;

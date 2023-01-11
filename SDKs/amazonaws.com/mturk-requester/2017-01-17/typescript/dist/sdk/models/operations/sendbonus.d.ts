@@ -20,7 +20,7 @@ export declare class SendBonusRequest extends SpeakeasyBase {
 export declare class SendBonusResponse extends SpeakeasyBase {
     contentType: string;
     requestError?: any;
-    sendBonusResponse?: Map<string, any>;
+    sendBonusResponse?: Record<string, any>;
     serviceFault?: any;
     statusCode: number;
 }

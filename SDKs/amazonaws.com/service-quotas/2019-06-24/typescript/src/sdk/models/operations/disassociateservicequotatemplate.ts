@@ -38,7 +38,7 @@ export class DisassociateServiceQuotaTemplateRequest extends SpeakeasyBase {
   headers: DisassociateServiceQuotaTemplateHeaders;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -56,7 +56,7 @@ export class DisassociateServiceQuotaTemplateResponse extends SpeakeasyBase {
   dependencyAccessDeniedException?: any;
 
   @SpeakeasyMetadata()
-  disassociateServiceQuotaTemplateResponse?: Map<string, any>;
+  disassociateServiceQuotaTemplateResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   noAvailableOrganizationException?: any;

@@ -11,10 +11,10 @@ export class ForgetWiFiNetworkRequest extends SpeakeasyBase {
 
 export class ForgetWiFiNetworkResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  body?: Uint8Array;
+  contentType: string;
 
   @SpeakeasyMetadata()
-  contentType: string;
+  forgetWiFiNetwork200TextPlainObject?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

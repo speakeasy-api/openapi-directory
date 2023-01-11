@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomRoutingEndpointConfiguration } from "./customroutingendpointconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddCustomRoutingEndpointsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var customroutingendpointconfiguration_1 = require("./customroutingendpointconfiguration");
 var AddCustomRoutingEndpointsRequest = /** @class */ (function (_super) {
     __extends(AddCustomRoutingEndpointsRequest, _super);
     function AddCustomRoutingEndpointsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointConfigurations", elemType: CustomRoutingEndpointConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointConfigurations", elemType: customroutingendpointconfiguration_1.CustomRoutingEndpointConfiguration }),
         __metadata("design:type", Array)
     ], AddCustomRoutingEndpointsRequest.prototype, "endpointConfigurations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointGroupArn" }),
         __metadata("design:type", String)
     ], AddCustomRoutingEndpointsRequest.prototype, "endpointGroupArn", void 0);
     return AddCustomRoutingEndpointsRequest;
-}(SpeakeasyBase));
-export { AddCustomRoutingEndpointsRequest };
+}(utils_1.SpeakeasyBase));
+exports.AddCustomRoutingEndpointsRequest = AddCustomRoutingEndpointsRequest;

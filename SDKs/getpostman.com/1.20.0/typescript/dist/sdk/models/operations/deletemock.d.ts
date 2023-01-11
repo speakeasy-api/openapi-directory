@@ -15,5 +15,5 @@ export declare class DeleteMockRequest extends SpeakeasyBase {
 export declare class DeleteMockResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteMock200ApplicationJsonObject?: DeleteMock200ApplicationJson;
+    deleteMock200ApplicationJSONObject?: DeleteMock200ApplicationJson;
 }

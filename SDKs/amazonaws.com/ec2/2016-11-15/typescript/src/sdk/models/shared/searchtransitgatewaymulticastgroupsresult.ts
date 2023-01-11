@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayMulticastGroup } from "./transitgatewaymulticastgroup";
 
 
 
 export class SearchTransitGatewayMulticastGroupsResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: TransitGatewayMulticastGroup })
-  multicastGroups?: TransitGatewayMulticastGroup[];
+  @SpeakeasyMetadata()
+  multicastGroups?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 }

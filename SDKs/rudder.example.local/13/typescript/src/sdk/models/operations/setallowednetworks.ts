@@ -10,7 +10,7 @@ export class SetAllowedNetworksPathParams extends SpeakeasyBase {
 
 export class SetAllowedNetworksRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=value" })
-  value?: Map<string, any>;
+  value?: Record<string, any>;
 }
 
 export enum SetAllowedNetworks200ApplicationJsonActionEnum {
@@ -65,5 +65,5 @@ export class SetAllowedNetworksResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setAllowedNetworks200ApplicationJsonObject?: SetAllowedNetworks200ApplicationJson;
+  setAllowedNetworks200ApplicationJSONObject?: SetAllowedNetworks200ApplicationJson;
 }

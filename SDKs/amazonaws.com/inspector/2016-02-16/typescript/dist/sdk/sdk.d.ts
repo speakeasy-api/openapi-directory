@@ -1,20 +1,20 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://inspector.{region}.amazonaws.com", "https://inspector.{region}.amazonaws.com", "http://inspector.{region}.amazonaws.com.cn", "https://inspector.{region}.amazonaws.com.cn"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * addAttributesToFindings - Assigns attributes (key and value pairs) to the findings that are specified by the ARNs of the findings.
     **/
@@ -164,4 +164,3 @@ export declare class SDK {
     **/
     updateAssessmentTarget(req: operations.UpdateAssessmentTargetRequest, config?: AxiosRequestConfig): Promise<operations.UpdateAssessmentTargetResponse>;
 }
-export {};

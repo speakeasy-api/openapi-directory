@@ -106,11 +106,11 @@ export declare class MpkbyRequest extends SpeakeasyBase {
 export declare class MpkbyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    mpkby400ApplicationJsonObject?: Mpkby400ApplicationJson;
-    mpkby401ApplicationJsonObject?: Mpkby401ApplicationJson;
-    mpkby404ApplicationJsonObject?: Mpkby404ApplicationJson;
-    mpkby500ApplicationJsonObject?: Mpkby500ApplicationJson;
-    mpkby502ApplicationJsonObject?: Mpkby502ApplicationJson;
-    mpkby503ApplicationJsonObject?: Mpkby503ApplicationJson;
-    mpkby504ApplicationJsonObject?: Mpkby504ApplicationJson;
+    mpkby400ApplicationJSONObject?: Mpkby400ApplicationJson;
+    mpkby401ApplicationJSONObject?: Mpkby401ApplicationJson;
+    mpkby404ApplicationJSONObject?: Mpkby404ApplicationJson;
+    mpkby500ApplicationJSONObject?: Mpkby500ApplicationJson;
+    mpkby502ApplicationJSONObject?: Mpkby502ApplicationJson;
+    mpkby503ApplicationJSONObject?: Mpkby503ApplicationJson;
+    mpkby504ApplicationJSONObject?: Mpkby504ApplicationJson;
 }

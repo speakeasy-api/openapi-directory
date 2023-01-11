@@ -50,7 +50,7 @@ export class GetP60ReportOutputResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getP60ReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+  getP60ReportOutput200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

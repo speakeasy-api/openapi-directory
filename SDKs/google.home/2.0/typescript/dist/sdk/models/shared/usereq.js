@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HighShelf } from "./highshelf";
-import { LowShelf } from "./lowshelf";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserEq = void 0;
+var utils_1 = require("../../../internal/utils");
+var highshelf_1 = require("./highshelf");
+var lowshelf_1 = require("./lowshelf");
 var UserEq = /** @class */ (function (_super) {
     __extends(UserEq, _super);
     function UserEq() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=high_shelf" }),
-        __metadata("design:type", HighShelf)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=high_shelf" }),
+        __metadata("design:type", highshelf_1.HighShelf)
     ], UserEq.prototype, "highShelf", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=low_shelf" }),
-        __metadata("design:type", LowShelf)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=low_shelf" }),
+        __metadata("design:type", lowshelf_1.LowShelf)
     ], UserEq.prototype, "lowShelf", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max_peaking_eqs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max_peaking_eqs" }),
         __metadata("design:type", Number)
     ], UserEq.prototype, "maxPeakingEqs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=peaking_eqs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=peaking_eqs" }),
         __metadata("design:type", Array)
     ], UserEq.prototype, "peakingEqs", void 0);
     return UserEq;
-}(SpeakeasyBase));
-export { UserEq };
+}(utils_1.SpeakeasyBase));
+exports.UserEq = UserEq;

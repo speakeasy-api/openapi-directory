@@ -4,13 +4,13 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class MovePadUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=destinationID" })
-  destinationId?: string;
+  destinationID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=force" })
   force?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sourceID" })
-  sourceId?: string;
+  sourceID?: string;
 }
 
 
@@ -19,7 +19,7 @@ export class MovePadUsingGet200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -31,7 +31,7 @@ export class MovePadUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class MovePadUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class MovePadUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class MovePadUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  movePadUsingGet200ApplicationJsonObject?: MovePadUsingGet200ApplicationJson;
+  movePadUsingGET200ApplicationJSONObject?: MovePadUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  movePadUsingGet400ApplicationJsonObject?: MovePadUsingGet400ApplicationJson;
+  movePadUsingGET400ApplicationJSONObject?: MovePadUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  movePadUsingGet401ApplicationJsonObject?: MovePadUsingGet401ApplicationJson;
+  movePadUsingGET401ApplicationJSONObject?: MovePadUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  movePadUsingGet500ApplicationJsonObject?: MovePadUsingGet500ApplicationJson;
+  movePadUsingGET500ApplicationJSONObject?: MovePadUsingGet500ApplicationJson;
 }

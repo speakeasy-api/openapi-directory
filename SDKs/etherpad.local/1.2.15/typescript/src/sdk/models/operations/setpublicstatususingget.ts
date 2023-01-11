@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class SetPublicStatusUsingGetQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=publicStatus" })
   publicStatus?: string;
@@ -16,7 +16,7 @@ export class SetPublicStatusUsingGet200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -28,7 +28,7 @@ export class SetPublicStatusUsingGet400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -40,7 +40,7 @@ export class SetPublicStatusUsingGet401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -52,7 +52,7 @@ export class SetPublicStatusUsingGet500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -73,14 +73,14 @@ export class SetPublicStatusUsingGetResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setPublicStatusUsingGet200ApplicationJsonObject?: SetPublicStatusUsingGet200ApplicationJson;
+  setPublicStatusUsingGET200ApplicationJSONObject?: SetPublicStatusUsingGet200ApplicationJson;
 
   @SpeakeasyMetadata()
-  setPublicStatusUsingGet400ApplicationJsonObject?: SetPublicStatusUsingGet400ApplicationJson;
+  setPublicStatusUsingGET400ApplicationJSONObject?: SetPublicStatusUsingGet400ApplicationJson;
 
   @SpeakeasyMetadata()
-  setPublicStatusUsingGet401ApplicationJsonObject?: SetPublicStatusUsingGet401ApplicationJson;
+  setPublicStatusUsingGET401ApplicationJSONObject?: SetPublicStatusUsingGet401ApplicationJson;
 
   @SpeakeasyMetadata()
-  setPublicStatusUsingGet500ApplicationJsonObject?: SetPublicStatusUsingGet500ApplicationJson;
+  setPublicStatusUsingGET500ApplicationJSONObject?: SetPublicStatusUsingGet500ApplicationJson;
 }

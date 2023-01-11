@@ -1,55 +1,78 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Cors } from "./cors";
-import { ProtocolTypeEnum } from "./protocoltypeenum";
 
+
+
+// ImportApiResponseCorsConfiguration
+/** 
+ * A CORS configuration. Supported only for HTTP APIs.
+**/
+export class ImportApiResponseCorsConfiguration extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=AllowCredentials" })
+  allowCredentials?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=AllowHeaders" })
+  allowHeaders?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=AllowMethods" })
+  allowMethods?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=AllowOrigins" })
+  allowOrigins?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=ExposeHeaders" })
+  exposeHeaders?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=MaxAge" })
+  maxAge?: Record<string, any>;
+}
 
 
 export class ImportApiResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ApiEndpoint" })
-  apiEndpoint?: string;
+  apiEndpoint?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ApiGatewayManaged" })
-  apiGatewayManaged?: boolean;
+  apiGatewayManaged?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ApiId" })
-  apiId?: string;
+  apiId?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ApiKeySelectionExpression" })
-  apiKeySelectionExpression?: string;
+  apiKeySelectionExpression?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=CorsConfiguration" })
-  corsConfiguration?: Cors;
+  corsConfiguration?: ImportApiResponseCorsConfiguration;
 
   @SpeakeasyMetadata({ data: "json, name=CreatedDate" })
-  createdDate?: Date;
+  createdDate?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Description" })
-  description?: string;
+  description?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=DisableExecuteApiEndpoint" })
-  disableExecuteApiEndpoint?: boolean;
+  disableExecuteApiEndpoint?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=DisableSchemaValidation" })
-  disableSchemaValidation?: boolean;
+  disableSchemaValidation?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ImportInfo" })
-  importInfo?: string[];
+  importInfo?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Name" })
-  name?: string;
+  name?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ProtocolType" })
-  protocolType?: ProtocolTypeEnum;
+  protocolType?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=RouteSelectionExpression" })
-  routeSelectionExpression?: string;
+  routeSelectionExpression?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Version" })
-  version?: string;
+  version?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=Warnings" })
-  warnings?: string[];
+  warnings?: Record<string, any>;
 }

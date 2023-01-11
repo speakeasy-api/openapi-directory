@@ -17,7 +17,7 @@ export class ProtocolMqttGetConfigRequest extends SpeakeasyBase {
 
 export class ProtocolMqttGetConfigResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configMqtt?: shared.ConfigMqtt;
+  configMQTT?: shared.ConfigMqtt;
 
   @SpeakeasyMetadata()
   contentType: string;

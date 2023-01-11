@@ -56,31 +56,31 @@ export class GetFileFromUriIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getFileFromUriId200ApplicationPdfString?: string;
+  getFileFromURIId200ApplicationPdfString?: string;
 
   @SpeakeasyMetadata()
-  getFileFromUriId200ImageJpegString?: string;
+  getFileFromURIId200ImageJpegString?: string;
 
   @SpeakeasyMetadata()
-  getFileFromUriId200ImageJpgString?: string;
+  getFileFromURIId200ImageJpgString?: string;
 
   @SpeakeasyMetadata()
-  getFileFromUriId200ImagePngString?: string;
+  getFileFromURIId200ImagePngString?: string;
 
   @SpeakeasyMetadata()
-  getFileFromUriId400ApplicationJsonObject?: GetFileFromUriId400ApplicationJson;
+  getFileFromURIId400ApplicationJSONObject?: GetFileFromUriId400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getFileFromUriId401ApplicationJsonObject?: GetFileFromUriId401ApplicationJson;
+  getFileFromURIId401ApplicationJSONObject?: GetFileFromUriId401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getFileFromUriId404ApplicationJsonObject?: GetFileFromUriId404ApplicationJson;
+  getFileFromURIId404ApplicationJSONObject?: GetFileFromUriId404ApplicationJson;
 
   @SpeakeasyMetadata()
-  getFileFromUriId500ApplicationJsonOneOf?: any;
+  getFileFromURIId500ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
-  getFileFromUriId503ApplicationJsonOneOf?: any;
+  getFileFromURIId503ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExpressionStatus } from "./expressionstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteExpressionResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var expressionstatus_1 = require("./expressionstatus");
 // DeleteExpressionResponse
 /**
  * The result of a <code><a>DeleteExpression</a></code> request. Specifies the expression being deleted.
@@ -34,9 +37,9 @@ var DeleteExpressionResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ExpressionStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", expressionstatus_1.ExpressionStatus)
     ], DeleteExpressionResponse.prototype, "expression", void 0);
     return DeleteExpressionResponse;
-}(SpeakeasyBase));
-export { DeleteExpressionResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteExpressionResponse = DeleteExpressionResponse;

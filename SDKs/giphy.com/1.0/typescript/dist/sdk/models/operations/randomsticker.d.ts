@@ -14,5 +14,5 @@ export declare class RandomStickerRequest extends SpeakeasyBase {
 export declare class RandomStickerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    randomSticker200ApplicationJsonObject?: RandomSticker200ApplicationJson;
+    randomSticker200ApplicationJSONObject?: RandomSticker200ApplicationJson;
 }

@@ -72,7 +72,7 @@ export class UpdateServiceIntegrationResponse extends SpeakeasyBase {
   throttlingException?: any;
 
   @SpeakeasyMetadata()
-  updateServiceIntegrationResponse?: Map<string, any>;
+  updateServiceIntegrationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

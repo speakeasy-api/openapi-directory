@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSourceColumnReference } from "./datasourcecolumnreference";
-import { DataExecutionStatus } from "./dataexecutionstatus";
-import { FilterSpec } from "./filterspec";
-import { SortSpec } from "./sortspec";
-export var DataSourceTableColumnSelectionTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataSourceTable = exports.DataSourceTableColumnSelectionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasourcecolumnreference_1 = require("./datasourcecolumnreference");
+var dataexecutionstatus_1 = require("./dataexecutionstatus");
+var filterspec_1 = require("./filterspec");
+var sortspec_1 = require("./sortspec");
+var DataSourceTableColumnSelectionTypeEnum;
 (function (DataSourceTableColumnSelectionTypeEnum) {
     DataSourceTableColumnSelectionTypeEnum["DataSourceTableColumnSelectionTypeUnspecified"] = "DATA_SOURCE_TABLE_COLUMN_SELECTION_TYPE_UNSPECIFIED";
     DataSourceTableColumnSelectionTypeEnum["Selected"] = "SELECTED";
     DataSourceTableColumnSelectionTypeEnum["SyncAll"] = "SYNC_ALL";
-})(DataSourceTableColumnSelectionTypeEnum || (DataSourceTableColumnSelectionTypeEnum = {}));
+})(DataSourceTableColumnSelectionTypeEnum = exports.DataSourceTableColumnSelectionTypeEnum || (exports.DataSourceTableColumnSelectionTypeEnum = {}));
 // DataSourceTable
 /**
  * A data source table, which allows the user to import a static table of data from the DataSource into Sheets. This is also known as "Extract" in the Sheets editor.
@@ -43,33 +46,33 @@ var DataSourceTable = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnSelectionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnSelectionType" }),
         __metadata("design:type", String)
     ], DataSourceTable.prototype, "columnSelectionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columns", elemType: DataSourceColumnReference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columns", elemType: datasourcecolumnreference_1.DataSourceColumnReference }),
         __metadata("design:type", Array)
     ], DataSourceTable.prototype, "columns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataExecutionStatus" }),
-        __metadata("design:type", DataExecutionStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataExecutionStatus" }),
+        __metadata("design:type", dataexecutionstatus_1.DataExecutionStatus)
     ], DataSourceTable.prototype, "dataExecutionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceId" }),
         __metadata("design:type", String)
     ], DataSourceTable.prototype, "dataSourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filterSpecs", elemType: FilterSpec }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filterSpecs", elemType: filterspec_1.FilterSpec }),
         __metadata("design:type", Array)
     ], DataSourceTable.prototype, "filterSpecs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rowLimit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rowLimit" }),
         __metadata("design:type", Number)
     ], DataSourceTable.prototype, "rowLimit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortSpecs", elemType: SortSpec }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortSpecs", elemType: sortspec_1.SortSpec }),
         __metadata("design:type", Array)
     ], DataSourceTable.prototype, "sortSpecs", void 0);
     return DataSourceTable;
-}(SpeakeasyBase));
-export { DataSourceTable };
+}(utils_1.SpeakeasyBase));
+exports.DataSourceTable = DataSourceTable;

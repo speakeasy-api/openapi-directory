@@ -1,0 +1,138 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubmitJobMediaUrlOptions = exports.SubmitJobMediaUrlOptionsLanguageEnum = exports.SubmitJobMediaUrlOptionsCustomVocabularies = void 0;
+var utils_1 = require("../../../internal/utils");
+// SubmitJobMediaUrlOptionsCustomVocabularies
+/**
+ * Contains a collection of phrases. Custom vocabulary informs and biases the speech recognition to find those phrases (at the cost of slightly slower transcription).
+**/
+var SubmitJobMediaUrlOptionsCustomVocabularies = /** @class */ (function (_super) {
+    __extends(SubmitJobMediaUrlOptionsCustomVocabularies, _super);
+    function SubmitJobMediaUrlOptionsCustomVocabularies() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=phrases" }),
+        __metadata("design:type", Array)
+    ], SubmitJobMediaUrlOptionsCustomVocabularies.prototype, "phrases", void 0);
+    return SubmitJobMediaUrlOptionsCustomVocabularies;
+}(utils_1.SpeakeasyBase));
+exports.SubmitJobMediaUrlOptionsCustomVocabularies = SubmitJobMediaUrlOptionsCustomVocabularies;
+var SubmitJobMediaUrlOptionsLanguageEnum;
+(function (SubmitJobMediaUrlOptionsLanguageEnum) {
+    SubmitJobMediaUrlOptionsLanguageEnum["En"] = "en";
+    SubmitJobMediaUrlOptionsLanguageEnum["Ar"] = "ar";
+    SubmitJobMediaUrlOptionsLanguageEnum["Bg"] = "bg";
+    SubmitJobMediaUrlOptionsLanguageEnum["Ca"] = "ca";
+    SubmitJobMediaUrlOptionsLanguageEnum["Cmn"] = "cmn";
+    SubmitJobMediaUrlOptionsLanguageEnum["Cs"] = "cs";
+    SubmitJobMediaUrlOptionsLanguageEnum["Da"] = "da";
+    SubmitJobMediaUrlOptionsLanguageEnum["De"] = "de";
+    SubmitJobMediaUrlOptionsLanguageEnum["El"] = "el";
+    SubmitJobMediaUrlOptionsLanguageEnum["Es"] = "es";
+    SubmitJobMediaUrlOptionsLanguageEnum["Fi"] = "fi";
+    SubmitJobMediaUrlOptionsLanguageEnum["Fr"] = "fr";
+    SubmitJobMediaUrlOptionsLanguageEnum["Hi"] = "hi";
+    SubmitJobMediaUrlOptionsLanguageEnum["Hr"] = "hr";
+    SubmitJobMediaUrlOptionsLanguageEnum["Hu"] = "hu";
+    SubmitJobMediaUrlOptionsLanguageEnum["It"] = "it";
+    SubmitJobMediaUrlOptionsLanguageEnum["Ja"] = "ja";
+    SubmitJobMediaUrlOptionsLanguageEnum["Ko"] = "ko";
+    SubmitJobMediaUrlOptionsLanguageEnum["Lt"] = "lt";
+    SubmitJobMediaUrlOptionsLanguageEnum["Lv"] = "lv";
+    SubmitJobMediaUrlOptionsLanguageEnum["Ms"] = "ms";
+    SubmitJobMediaUrlOptionsLanguageEnum["Nl"] = "nl";
+    SubmitJobMediaUrlOptionsLanguageEnum["No"] = "no";
+    SubmitJobMediaUrlOptionsLanguageEnum["Pl"] = "pl";
+    SubmitJobMediaUrlOptionsLanguageEnum["Pt"] = "pt";
+    SubmitJobMediaUrlOptionsLanguageEnum["Ro"] = "ro";
+    SubmitJobMediaUrlOptionsLanguageEnum["Ru"] = "ru";
+    SubmitJobMediaUrlOptionsLanguageEnum["Sk"] = "sk";
+    SubmitJobMediaUrlOptionsLanguageEnum["Sl"] = "sl";
+    SubmitJobMediaUrlOptionsLanguageEnum["Sv"] = "sv";
+    SubmitJobMediaUrlOptionsLanguageEnum["Tr"] = "tr";
+})(SubmitJobMediaUrlOptionsLanguageEnum = exports.SubmitJobMediaUrlOptionsLanguageEnum || (exports.SubmitJobMediaUrlOptionsLanguageEnum = {}));
+// SubmitJobMediaUrlOptions
+/**
+ * Rev.ai Job Options Object Model
+**/
+var SubmitJobMediaUrlOptions = /** @class */ (function (_super) {
+    __extends(SubmitJobMediaUrlOptions, _super);
+    function SubmitJobMediaUrlOptions() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callback_url" }),
+        __metadata("design:type", String)
+    ], SubmitJobMediaUrlOptions.prototype, "callbackUrl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_vocabularies", elemType: SubmitJobMediaUrlOptionsCustomVocabularies }),
+        __metadata("design:type", Array)
+    ], SubmitJobMediaUrlOptions.prototype, "customVocabularies", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_vocabulary_id" }),
+        __metadata("design:type", String)
+    ], SubmitJobMediaUrlOptions.prototype, "customVocabularyId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delete_after_seconds" }),
+        __metadata("design:type", Number)
+    ], SubmitJobMediaUrlOptions.prototype, "deleteAfterSeconds", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter_profanity" }),
+        __metadata("design:type", Boolean)
+    ], SubmitJobMediaUrlOptions.prototype, "filterProfanity", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
+        __metadata("design:type", String)
+    ], SubmitJobMediaUrlOptions.prototype, "language", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=media_url" }),
+        __metadata("design:type", String)
+    ], SubmitJobMediaUrlOptions.prototype, "mediaUrl", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", String)
+    ], SubmitJobMediaUrlOptions.prototype, "metadata", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remove_disfluencies" }),
+        __metadata("design:type", Boolean)
+    ], SubmitJobMediaUrlOptions.prototype, "removeDisfluencies", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skip_diarization" }),
+        __metadata("design:type", Boolean)
+    ], SubmitJobMediaUrlOptions.prototype, "skipDiarization", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=skip_punctuation" }),
+        __metadata("design:type", Boolean)
+    ], SubmitJobMediaUrlOptions.prototype, "skipPunctuation", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=speaker_channels_count" }),
+        __metadata("design:type", Number)
+    ], SubmitJobMediaUrlOptions.prototype, "speakerChannelsCount", void 0);
+    return SubmitJobMediaUrlOptions;
+}(utils_1.SpeakeasyBase));
+exports.SubmitJobMediaUrlOptions = SubmitJobMediaUrlOptions;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDefinitionsResponse = exports.GetDefinitionsRequest = exports.GetDefinitionsQueryParams = exports.GetDefinitionsUseCanonicalEnum = exports.GetDefinitionsPartOfSpeechEnum = exports.GetDefinitionsIncludeTagsEnum = exports.GetDefinitionsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDefinitionsPathParams = /** @class */ (function (_super) {
     __extends(GetDefinitionsPathParams, _super);
     function GetDefinitionsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=word" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=word" }),
         __metadata("design:type", String)
     ], GetDefinitionsPathParams.prototype, "word", void 0);
     return GetDefinitionsPathParams;
-}(SpeakeasyBase));
-export { GetDefinitionsPathParams };
-export var GetDefinitionsIncludeTagsEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetDefinitionsPathParams = GetDefinitionsPathParams;
+var GetDefinitionsIncludeTagsEnum;
 (function (GetDefinitionsIncludeTagsEnum) {
     GetDefinitionsIncludeTagsEnum["False"] = "false";
     GetDefinitionsIncludeTagsEnum["True"] = "true";
-})(GetDefinitionsIncludeTagsEnum || (GetDefinitionsIncludeTagsEnum = {}));
-export var GetDefinitionsPartOfSpeechEnum;
+})(GetDefinitionsIncludeTagsEnum = exports.GetDefinitionsIncludeTagsEnum || (exports.GetDefinitionsIncludeTagsEnum = {}));
+var GetDefinitionsPartOfSpeechEnum;
 (function (GetDefinitionsPartOfSpeechEnum) {
     GetDefinitionsPartOfSpeechEnum["Noun"] = "noun";
     GetDefinitionsPartOfSpeechEnum["Adjective"] = "adjective";
@@ -69,77 +72,77 @@ export var GetDefinitionsPartOfSpeechEnum;
     GetDefinitionsPartOfSpeechEnum["Suffix"] = "suffix";
     GetDefinitionsPartOfSpeechEnum["VerbIntransitive"] = "verb-intransitive";
     GetDefinitionsPartOfSpeechEnum["VerbTransitive"] = "verb-transitive";
-})(GetDefinitionsPartOfSpeechEnum || (GetDefinitionsPartOfSpeechEnum = {}));
-export var GetDefinitionsUseCanonicalEnum;
+})(GetDefinitionsPartOfSpeechEnum = exports.GetDefinitionsPartOfSpeechEnum || (exports.GetDefinitionsPartOfSpeechEnum = {}));
+var GetDefinitionsUseCanonicalEnum;
 (function (GetDefinitionsUseCanonicalEnum) {
     GetDefinitionsUseCanonicalEnum["False"] = "false";
     GetDefinitionsUseCanonicalEnum["True"] = "true";
-})(GetDefinitionsUseCanonicalEnum || (GetDefinitionsUseCanonicalEnum = {}));
+})(GetDefinitionsUseCanonicalEnum = exports.GetDefinitionsUseCanonicalEnum || (exports.GetDefinitionsUseCanonicalEnum = {}));
 var GetDefinitionsQueryParams = /** @class */ (function (_super) {
     __extends(GetDefinitionsQueryParams, _super);
     function GetDefinitionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includeRelated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includeRelated" }),
         __metadata("design:type", String)
     ], GetDefinitionsQueryParams.prototype, "includeRelated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includeTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includeTags" }),
         __metadata("design:type", String)
     ], GetDefinitionsQueryParams.prototype, "includeTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetDefinitionsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=partOfSpeech" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=partOfSpeech" }),
         __metadata("design:type", String)
     ], GetDefinitionsQueryParams.prototype, "partOfSpeech", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=sourceDictionaries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=sourceDictionaries" }),
         __metadata("design:type", Array)
     ], GetDefinitionsQueryParams.prototype, "sourceDictionaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=useCanonical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=useCanonical" }),
         __metadata("design:type", String)
     ], GetDefinitionsQueryParams.prototype, "useCanonical", void 0);
     return GetDefinitionsQueryParams;
-}(SpeakeasyBase));
-export { GetDefinitionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDefinitionsQueryParams = GetDefinitionsQueryParams;
 var GetDefinitionsRequest = /** @class */ (function (_super) {
     __extends(GetDefinitionsRequest, _super);
     function GetDefinitionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDefinitionsPathParams)
     ], GetDefinitionsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDefinitionsQueryParams)
     ], GetDefinitionsRequest.prototype, "queryParams", void 0);
     return GetDefinitionsRequest;
-}(SpeakeasyBase));
-export { GetDefinitionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDefinitionsRequest = GetDefinitionsRequest;
 var GetDefinitionsResponse = /** @class */ (function (_super) {
     __extends(GetDefinitionsResponse, _super);
     function GetDefinitionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDefinitionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDefinitionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDefinitionsResponse.prototype, "statusCode", void 0);
     return GetDefinitionsResponse;
-}(SpeakeasyBase));
-export { GetDefinitionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDefinitionsResponse = GetDefinitionsResponse;

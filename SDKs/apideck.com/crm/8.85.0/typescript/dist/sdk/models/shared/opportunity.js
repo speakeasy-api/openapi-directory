@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,286 +23,288 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CurrencyEnum } from "./currencyenum";
-import { CustomField } from "./customfield";
-var OpportunityInput = /** @class */ (function (_super) {
-    __extends(OpportunityInput, _super);
-    function OpportunityInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=close_date" }),
-        __metadata("design:type", Date)
-    ], OpportunityInput.prototype, "closeDate", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=company_id" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "companyId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=company_name" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "companyName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=contact_id" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "contactId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "currency", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields", elemType: CustomField }),
-        __metadata("design:type", Array)
-    ], OpportunityInput.prototype, "customFields", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=lead_id" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "leadId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=lead_source" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "leadSource", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=loss_reason" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "lossReason", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=loss_reason_id" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "lossReasonId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=monetary_amount" }),
-        __metadata("design:type", Number)
-    ], OpportunityInput.prototype, "monetaryAmount", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner_id" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "ownerId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipeline_id" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "pipelineId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipeline_stage_id" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "pipelineStageId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_contact_id" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "primaryContactId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "priority", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=source_id" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "sourceId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=stage_last_changed_at" }),
-        __metadata("design:type", Date)
-    ], OpportunityInput.prototype, "stageLastChangedAt", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "status", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=status_id" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "statusId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Array)
-    ], OpportunityInput.prototype, "tags", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "title", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "type", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=win_probability" }),
-        __metadata("design:type", Number)
-    ], OpportunityInput.prototype, "winProbability", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=won_reason" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "wonReason", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=won_reason_id" }),
-        __metadata("design:type", String)
-    ], OpportunityInput.prototype, "wonReasonId", void 0);
-    return OpportunityInput;
-}(SpeakeasyBase));
-export { OpportunityInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OpportunityInput = exports.Opportunity = void 0;
+var utils_1 = require("../../../internal/utils");
+var currencyenum_1 = require("./currencyenum");
+var customfield_1 = require("./customfield");
 var Opportunity = /** @class */ (function (_super) {
     __extends(Opportunity, _super);
     function Opportunity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=close_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=close_date" }),
         __metadata("design:type", Date)
     ], Opportunity.prototype, "closeDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=company_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company_id" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "companyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=company_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company_name" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "companyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contact_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contact_id" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "contactId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], Opportunity.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=custom_fields", elemType: CustomField }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields", elemType: customfield_1.CustomField }),
         __metadata("design:type", Array)
     ], Opportunity.prototype, "customFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_last_contacted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_last_contacted" }),
         __metadata("design:type", Date)
     ], Opportunity.prototype, "dateLastContacted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_lead_created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_lead_created" }),
         __metadata("design:type", Date)
     ], Opportunity.prototype, "dateLeadCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_stage_changed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_stage_changed" }),
         __metadata("design:type", Date)
     ], Opportunity.prototype, "dateStageChanged", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], Opportunity.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expected_revenue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expected_revenue" }),
         __metadata("design:type", Number)
     ], Opportunity.prototype, "expectedRevenue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=interaction_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=interaction_count" }),
         __metadata("design:type", Number)
     ], Opportunity.prototype, "interactionCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_activity_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_activity_at" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "lastActivityAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lead_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lead_id" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "leadId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lead_source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lead_source" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "leadSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loss_reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loss_reason" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "lossReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loss_reason_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loss_reason_id" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "lossReasonId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monetary_amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monetary_amount" }),
         __metadata("design:type", Number)
     ], Opportunity.prototype, "monetaryAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner_id" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "ownerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipeline_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipeline_id" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "pipelineId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipeline_stage_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipeline_stage_id" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "pipelineStageId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_contact_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_contact_id" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "primaryContactId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_id" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "sourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stage_last_changed_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stage_last_changed_at" }),
         __metadata("design:type", Date)
     ], Opportunity.prototype, "stageLastChangedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status_id" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "statusId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], Opportunity.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], Opportunity.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_by" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "updatedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=win_probability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=win_probability" }),
         __metadata("design:type", Number)
     ], Opportunity.prototype, "winProbability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=won_reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=won_reason" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "wonReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=won_reason_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=won_reason_id" }),
         __metadata("design:type", String)
     ], Opportunity.prototype, "wonReasonId", void 0);
     return Opportunity;
-}(SpeakeasyBase));
-export { Opportunity };
+}(utils_1.SpeakeasyBase));
+exports.Opportunity = Opportunity;
+var OpportunityInput = /** @class */ (function (_super) {
+    __extends(OpportunityInput, _super);
+    function OpportunityInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=close_date" }),
+        __metadata("design:type", Date)
+    ], OpportunityInput.prototype, "closeDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company_id" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "companyId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company_name" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "companyName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contact_id" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "contactId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "currency", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=custom_fields", elemType: customfield_1.CustomField }),
+        __metadata("design:type", Array)
+    ], OpportunityInput.prototype, "customFields", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lead_id" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "leadId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lead_source" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "leadSource", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loss_reason" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "lossReason", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loss_reason_id" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "lossReasonId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monetary_amount" }),
+        __metadata("design:type", Number)
+    ], OpportunityInput.prototype, "monetaryAmount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner_id" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "ownerId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipeline_id" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "pipelineId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipeline_stage_id" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "pipelineStageId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_contact_id" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "primaryContactId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "priority", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_id" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "sourceId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stage_last_changed_at" }),
+        __metadata("design:type", Date)
+    ], OpportunityInput.prototype, "stageLastChangedAt", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status_id" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "statusId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Array)
+    ], OpportunityInput.prototype, "tags", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "title", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "type", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=win_probability" }),
+        __metadata("design:type", Number)
+    ], OpportunityInput.prototype, "winProbability", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=won_reason" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "wonReason", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=won_reason_id" }),
+        __metadata("design:type", String)
+    ], OpportunityInput.prototype, "wonReasonId", void 0);
+    return OpportunityInput;
+}(utils_1.SpeakeasyBase));
+exports.OpportunityInput = OpportunityInput;

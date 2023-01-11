@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GkeClusterConfig } from "./gkeclusterconfig";
-import { KubernetesSoftwareConfig } from "./kubernetessoftwareconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KubernetesClusterConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var gkeclusterconfig_1 = require("./gkeclusterconfig");
+var kubernetessoftwareconfig_1 = require("./kubernetessoftwareconfig");
 // KubernetesClusterConfig
 /**
  * The configuration for running the Dataproc cluster on Kubernetes.
@@ -35,17 +38,17 @@ var KubernetesClusterConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gkeClusterConfig" }),
-        __metadata("design:type", GkeClusterConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gkeClusterConfig" }),
+        __metadata("design:type", gkeclusterconfig_1.GkeClusterConfig)
     ], KubernetesClusterConfig.prototype, "gkeClusterConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kubernetesNamespace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kubernetesNamespace" }),
         __metadata("design:type", String)
     ], KubernetesClusterConfig.prototype, "kubernetesNamespace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kubernetesSoftwareConfig" }),
-        __metadata("design:type", KubernetesSoftwareConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kubernetesSoftwareConfig" }),
+        __metadata("design:type", kubernetessoftwareconfig_1.KubernetesSoftwareConfig)
     ], KubernetesClusterConfig.prototype, "kubernetesSoftwareConfig", void 0);
     return KubernetesClusterConfig;
-}(SpeakeasyBase));
-export { KubernetesClusterConfig };
+}(utils_1.SpeakeasyBase));
+exports.KubernetesClusterConfig = KubernetesClusterConfig;

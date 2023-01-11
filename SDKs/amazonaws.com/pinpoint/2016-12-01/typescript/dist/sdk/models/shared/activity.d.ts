@@ -8,9 +8,6 @@ import { PushMessageActivity } from "./pushmessageactivity";
 import { RandomSplitActivity } from "./randomsplitactivity";
 import { SmsMessageActivity } from "./smsmessageactivity";
 import { WaitActivity } from "./waitactivity";
-/**
- * Specifies the configuration and other settings for an activity in a journey.
-**/
 export declare class Activity extends SpeakeasyBase {
     custom?: CustomMessageActivity;
     conditionalSplit?: ConditionalSplitActivity;

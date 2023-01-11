@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PullRequestEvent } from "./pullrequestevent";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribePullRequestEventsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var pullrequestevent_1 = require("./pullrequestevent");
 var DescribePullRequestEventsOutput = /** @class */ (function (_super) {
     __extends(DescribePullRequestEventsOutput, _super);
     function DescribePullRequestEventsOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], DescribePullRequestEventsOutput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pullRequestEvents", elemType: PullRequestEvent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pullRequestEvents", elemType: pullrequestevent_1.PullRequestEvent }),
         __metadata("design:type", Array)
     ], DescribePullRequestEventsOutput.prototype, "pullRequestEvents", void 0);
     return DescribePullRequestEventsOutput;
-}(SpeakeasyBase));
-export { DescribePullRequestEventsOutput };
+}(utils_1.SpeakeasyBase));
+exports.DescribePullRequestEventsOutput = DescribePullRequestEventsOutput;

@@ -22,6 +22,6 @@ export declare class PutDataCatalogEncryptionSettingsResponse extends SpeakeasyB
     internalServiceException?: any;
     invalidInputException?: any;
     operationTimeoutException?: any;
-    putDataCatalogEncryptionSettingsResponse?: Map<string, any>;
+    putDataCatalogEncryptionSettingsResponse?: Record<string, any>;
     statusCode: number;
 }

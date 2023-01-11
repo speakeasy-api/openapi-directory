@@ -25,5 +25,5 @@ export class GetNetworkSmDeviceRestrictionsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkSmDeviceRestrictions200ApplicationJsonObject?: Map<string, any>;
+  getNetworkSmDeviceRestrictions200ApplicationJSONObject?: Record<string, any>;
 }

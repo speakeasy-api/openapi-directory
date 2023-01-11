@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,82 +14,107 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCommunicationPreferencesV3SubscribeSubscribeResponse = exports.PostCommunicationPreferencesV3SubscribeSubscribeRequest = exports.PostCommunicationPreferencesV3SubscribeSubscribeSecurity = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var PostCommunicationPreferencesV3SubscribeSubscribeSecurity = /** @class */ (function (_super) {
     __extends(PostCommunicationPreferencesV3SubscribeSubscribeSecurity, _super);
     function PostCommunicationPreferencesV3SubscribeSubscribeSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2Legacy)
     ], PostCommunicationPreferencesV3SubscribeSubscribeSecurity.prototype, "oauth2Legacy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=query" }),
         __metadata("design:type", shared.SchemeHapikey)
     ], PostCommunicationPreferencesV3SubscribeSubscribeSecurity.prototype, "hapikey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2Legacy)
     ], PostCommunicationPreferencesV3SubscribeSubscribeSecurity.prototype, "oauth2Legacy1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemePrivateAppsLegacy)
     ], PostCommunicationPreferencesV3SubscribeSubscribeSecurity.prototype, "privateAppsLegacy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemePrivateAppsLegacy)
     ], PostCommunicationPreferencesV3SubscribeSubscribeSecurity.prototype, "privateAppsLegacy1", void 0);
     return PostCommunicationPreferencesV3SubscribeSubscribeSecurity;
-}(SpeakeasyBase));
-export { PostCommunicationPreferencesV3SubscribeSubscribeSecurity };
+}(utils_1.SpeakeasyBase));
+exports.PostCommunicationPreferencesV3SubscribeSubscribeSecurity = PostCommunicationPreferencesV3SubscribeSubscribeSecurity;
 var PostCommunicationPreferencesV3SubscribeSubscribeRequest = /** @class */ (function (_super) {
     __extends(PostCommunicationPreferencesV3SubscribeSubscribeRequest, _super);
     function PostCommunicationPreferencesV3SubscribeSubscribeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.PublicUpdateSubscriptionStatusRequest)
     ], PostCommunicationPreferencesV3SubscribeSubscribeRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCommunicationPreferencesV3SubscribeSubscribeSecurity)
     ], PostCommunicationPreferencesV3SubscribeSubscribeRequest.prototype, "security", void 0);
     return PostCommunicationPreferencesV3SubscribeSubscribeRequest;
-}(SpeakeasyBase));
-export { PostCommunicationPreferencesV3SubscribeSubscribeRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCommunicationPreferencesV3SubscribeSubscribeRequest = PostCommunicationPreferencesV3SubscribeSubscribeRequest;
 var PostCommunicationPreferencesV3SubscribeSubscribeResponse = /** @class */ (function (_super) {
     __extends(PostCommunicationPreferencesV3SubscribeSubscribeResponse, _super);
     function PostCommunicationPreferencesV3SubscribeSubscribeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCommunicationPreferencesV3SubscribeSubscribeResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCommunicationPreferencesV3SubscribeSubscribeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.PublicSubscriptionStatus)
     ], PostCommunicationPreferencesV3SubscribeSubscribeResponse.prototype, "publicSubscriptionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCommunicationPreferencesV3SubscribeSubscribeResponse.prototype, "statusCode", void 0);
     return PostCommunicationPreferencesV3SubscribeSubscribeResponse;
-}(SpeakeasyBase));
-export { PostCommunicationPreferencesV3SubscribeSubscribeResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCommunicationPreferencesV3SubscribeSubscribeResponse = PostCommunicationPreferencesV3SubscribeSubscribeResponse;

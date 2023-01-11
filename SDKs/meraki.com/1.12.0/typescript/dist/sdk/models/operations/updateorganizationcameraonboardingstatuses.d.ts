@@ -13,5 +13,5 @@ export declare class UpdateOrganizationCameraOnboardingStatusesRequest extends S
 export declare class UpdateOrganizationCameraOnboardingStatusesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateOrganizationCameraOnboardingStatuses200ApplicationJsonObject?: Map<string, any>;
+    updateOrganizationCameraOnboardingStatuses200ApplicationJSONObject?: Record<string, any>;
 }

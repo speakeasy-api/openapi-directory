@@ -14,7 +14,7 @@ export declare class DisassociateAdminAccountHeaders extends SpeakeasyBase {
 }
 export declare class DisassociateAdminAccountRequest extends SpeakeasyBase {
     headers: DisassociateAdminAccountHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class DisassociateAdminAccountResponse extends SpeakeasyBase {
     contentType: string;

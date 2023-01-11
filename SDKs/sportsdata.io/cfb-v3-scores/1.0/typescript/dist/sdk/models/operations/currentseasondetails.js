@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CurrentSeasonDetailsFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CurrentSeasonDetailsResponse = exports.CurrentSeasonDetailsRequest = exports.CurrentSeasonDetailsPathParams = exports.CurrentSeasonDetailsFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CurrentSeasonDetailsFormatEnum;
 (function (CurrentSeasonDetailsFormatEnum) {
     CurrentSeasonDetailsFormatEnum["Xml"] = "XML";
     CurrentSeasonDetailsFormatEnum["Json"] = "JSON";
-})(CurrentSeasonDetailsFormatEnum || (CurrentSeasonDetailsFormatEnum = {}));
+})(CurrentSeasonDetailsFormatEnum = exports.CurrentSeasonDetailsFormatEnum || (exports.CurrentSeasonDetailsFormatEnum = {}));
 var CurrentSeasonDetailsPathParams = /** @class */ (function (_super) {
     __extends(CurrentSeasonDetailsPathParams, _super);
     function CurrentSeasonDetailsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], CurrentSeasonDetailsPathParams.prototype, "format", void 0);
     return CurrentSeasonDetailsPathParams;
-}(SpeakeasyBase));
-export { CurrentSeasonDetailsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CurrentSeasonDetailsPathParams = CurrentSeasonDetailsPathParams;
 var CurrentSeasonDetailsRequest = /** @class */ (function (_super) {
     __extends(CurrentSeasonDetailsRequest, _super);
     function CurrentSeasonDetailsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CurrentSeasonDetailsPathParams)
     ], CurrentSeasonDetailsRequest.prototype, "pathParams", void 0);
     return CurrentSeasonDetailsRequest;
-}(SpeakeasyBase));
-export { CurrentSeasonDetailsRequest };
+}(utils_1.SpeakeasyBase));
+exports.CurrentSeasonDetailsRequest = CurrentSeasonDetailsRequest;
 var CurrentSeasonDetailsResponse = /** @class */ (function (_super) {
     __extends(CurrentSeasonDetailsResponse, _super);
     function CurrentSeasonDetailsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CurrentSeasonDetailsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CurrentSeasonDetailsResponse.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CurrentSeasonDetailsResponse.prototype, "statusCode", void 0);
     return CurrentSeasonDetailsResponse;
-}(SpeakeasyBase));
-export { CurrentSeasonDetailsResponse };
+}(utils_1.SpeakeasyBase));
+exports.CurrentSeasonDetailsResponse = CurrentSeasonDetailsResponse;

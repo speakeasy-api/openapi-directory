@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueueResponse = exports.QueueResponseStomp = exports.QueueResponseStats = exports.QueueResponseMessages = exports.QueueResponseAmqp = void 0;
+var utils_1 = require("../../../internal/utils");
 var QueueResponseAmqp = /** @class */ (function (_super) {
     __extends(QueueResponseAmqp, _super);
     function QueueResponseAmqp() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queueName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queueName" }),
         __metadata("design:type", String)
     ], QueueResponseAmqp.prototype, "queueName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], QueueResponseAmqp.prototype, "uri", void 0);
     return QueueResponseAmqp;
-}(SpeakeasyBase));
-export { QueueResponseAmqp };
+}(utils_1.SpeakeasyBase));
+exports.QueueResponseAmqp = QueueResponseAmqp;
 // QueueResponseMessages
 /**
  * Details of messages in the queue.
@@ -49,117 +52,117 @@ var QueueResponseMessages = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ready" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ready" }),
         __metadata("design:type", Number)
     ], QueueResponseMessages.prototype, "ready", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], QueueResponseMessages.prototype, "total", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unacknowledged" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unacknowledged" }),
         __metadata("design:type", Number)
     ], QueueResponseMessages.prototype, "unacknowledged", void 0);
     return QueueResponseMessages;
-}(SpeakeasyBase));
-export { QueueResponseMessages };
+}(utils_1.SpeakeasyBase));
+exports.QueueResponseMessages = QueueResponseMessages;
 var QueueResponseStats = /** @class */ (function (_super) {
     __extends(QueueResponseStats, _super);
     function QueueResponseStats() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acknowledgementRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acknowledgementRate" }),
         __metadata("design:type", Number)
     ], QueueResponseStats.prototype, "acknowledgementRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deliveryRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deliveryRate" }),
         __metadata("design:type", Number)
     ], QueueResponseStats.prototype, "deliveryRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishRate" }),
         __metadata("design:type", Number)
     ], QueueResponseStats.prototype, "publishRate", void 0);
     return QueueResponseStats;
-}(SpeakeasyBase));
-export { QueueResponseStats };
+}(utils_1.SpeakeasyBase));
+exports.QueueResponseStats = QueueResponseStats;
 var QueueResponseStomp = /** @class */ (function (_super) {
     __extends(QueueResponseStomp, _super);
     function QueueResponseStomp() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], QueueResponseStomp.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", String)
     ], QueueResponseStomp.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], QueueResponseStomp.prototype, "uri", void 0);
     return QueueResponseStomp;
-}(SpeakeasyBase));
-export { QueueResponseStomp };
+}(utils_1.SpeakeasyBase));
+exports.QueueResponseStomp = QueueResponseStomp;
 var QueueResponse = /** @class */ (function (_super) {
     __extends(QueueResponse, _super);
     function QueueResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amqp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amqp" }),
         __metadata("design:type", QueueResponseAmqp)
     ], QueueResponse.prototype, "amqp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appId" }),
         __metadata("design:type", String)
     ], QueueResponse.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deadletter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deadletter" }),
         __metadata("design:type", Boolean)
     ], QueueResponse.prototype, "deadletter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deadletterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deadletterId" }),
         __metadata("design:type", String)
     ], QueueResponse.prototype, "deadletterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], QueueResponse.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxLength" }),
         __metadata("design:type", Number)
     ], QueueResponse.prototype, "maxLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messages" }),
         __metadata("design:type", QueueResponseMessages)
     ], QueueResponse.prototype, "messages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], QueueResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], QueueResponse.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], QueueResponse.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stats" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stats" }),
         __metadata("design:type", QueueResponseStats)
     ], QueueResponse.prototype, "stats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stomp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stomp" }),
         __metadata("design:type", QueueResponseStomp)
     ], QueueResponse.prototype, "stomp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ttl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ttl" }),
         __metadata("design:type", Number)
     ], QueueResponse.prototype, "ttl", void 0);
     return QueueResponse;
-}(SpeakeasyBase));
-export { QueueResponse };
+}(utils_1.SpeakeasyBase));
+exports.QueueResponse = QueueResponse;

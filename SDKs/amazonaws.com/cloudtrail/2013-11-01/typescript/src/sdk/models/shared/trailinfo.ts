@@ -14,5 +14,5 @@ export class TrailInfo extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=TrailARN" })
-  trailArn?: string;
+  trailARN?: string;
 }

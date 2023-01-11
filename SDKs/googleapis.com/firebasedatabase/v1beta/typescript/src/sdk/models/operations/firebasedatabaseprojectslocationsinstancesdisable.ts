@@ -80,7 +80,7 @@ export class FirebasedatabaseProjectsLocationsInstancesDisableRequest extends Sp
   queryParams: FirebasedatabaseProjectsLocationsInstancesDisableQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: FirebasedatabaseProjectsLocationsInstancesDisableSecurity;

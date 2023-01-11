@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EnvelopeSignature } from "./envelopesignature";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Envelope = void 0;
+var utils_1 = require("../../../internal/utils");
+var envelopesignature_1 = require("./envelopesignature");
 // Envelope
 /**
  * MUST match https://github.com/secure-systems-lab/dsse/blob/master/envelope.proto. An authenticated message of arbitrary type.
@@ -34,17 +37,17 @@ var Envelope = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payload" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payload" }),
         __metadata("design:type", String)
     ], Envelope.prototype, "payload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payloadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payloadType" }),
         __metadata("design:type", String)
     ], Envelope.prototype, "payloadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signatures", elemType: EnvelopeSignature }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signatures", elemType: envelopesignature_1.EnvelopeSignature }),
         __metadata("design:type", Array)
     ], Envelope.prototype, "signatures", void 0);
     return Envelope;
-}(SpeakeasyBase));
-export { Envelope };
+}(utils_1.SpeakeasyBase));
+exports.Envelope = Envelope;

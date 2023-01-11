@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,118 +23,120 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ActivityAttendeeStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActivityAttendeeInput = exports.ActivityAttendee = exports.ActivityAttendeeStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ActivityAttendeeStatusEnum;
 (function (ActivityAttendeeStatusEnum) {
     ActivityAttendeeStatusEnum["Accepted"] = "accepted";
     ActivityAttendeeStatusEnum["Tentative"] = "tentative";
     ActivityAttendeeStatusEnum["Declined"] = "declined";
-})(ActivityAttendeeStatusEnum || (ActivityAttendeeStatusEnum = {}));
-var ActivityAttendeeInput = /** @class */ (function (_super) {
-    __extends(ActivityAttendeeInput, _super);
-    function ActivityAttendeeInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=email_address" }),
-        __metadata("design:type", String)
-    ], ActivityAttendeeInput.prototype, "emailAddress", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=first_name" }),
-        __metadata("design:type", String)
-    ], ActivityAttendeeInput.prototype, "firstName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_organizer" }),
-        __metadata("design:type", Boolean)
-    ], ActivityAttendeeInput.prototype, "isOrganizer", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_name" }),
-        __metadata("design:type", String)
-    ], ActivityAttendeeInput.prototype, "lastName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=middle_name" }),
-        __metadata("design:type", String)
-    ], ActivityAttendeeInput.prototype, "middleName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], ActivityAttendeeInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=prefix" }),
-        __metadata("design:type", String)
-    ], ActivityAttendeeInput.prototype, "prefix", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", String)
-    ], ActivityAttendeeInput.prototype, "status", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=suffix" }),
-        __metadata("design:type", String)
-    ], ActivityAttendeeInput.prototype, "suffix", void 0);
-    return ActivityAttendeeInput;
-}(SpeakeasyBase));
-export { ActivityAttendeeInput };
+})(ActivityAttendeeStatusEnum = exports.ActivityAttendeeStatusEnum || (exports.ActivityAttendeeStatusEnum = {}));
 var ActivityAttendee = /** @class */ (function (_super) {
     __extends(ActivityAttendee, _super);
     function ActivityAttendee() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contact_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contact_id" }),
         __metadata("design:type", String)
     ], ActivityAttendee.prototype, "contactId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], ActivityAttendee.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email_address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email_address" }),
         __metadata("design:type", String)
     ], ActivityAttendee.prototype, "emailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=first_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_name" }),
         __metadata("design:type", String)
     ], ActivityAttendee.prototype, "firstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ActivityAttendee.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_organizer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_organizer" }),
         __metadata("design:type", Boolean)
     ], ActivityAttendee.prototype, "isOrganizer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_name" }),
         __metadata("design:type", String)
     ], ActivityAttendee.prototype, "lastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=middle_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=middle_name" }),
         __metadata("design:type", String)
     ], ActivityAttendee.prototype, "middleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ActivityAttendee.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prefix" }),
         __metadata("design:type", String)
     ], ActivityAttendee.prototype, "prefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ActivityAttendee.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=suffix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suffix" }),
         __metadata("design:type", String)
     ], ActivityAttendee.prototype, "suffix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], ActivityAttendee.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_id" }),
         __metadata("design:type", String)
     ], ActivityAttendee.prototype, "userId", void 0);
     return ActivityAttendee;
-}(SpeakeasyBase));
-export { ActivityAttendee };
+}(utils_1.SpeakeasyBase));
+exports.ActivityAttendee = ActivityAttendee;
+var ActivityAttendeeInput = /** @class */ (function (_super) {
+    __extends(ActivityAttendeeInput, _super);
+    function ActivityAttendeeInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email_address" }),
+        __metadata("design:type", String)
+    ], ActivityAttendeeInput.prototype, "emailAddress", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=first_name" }),
+        __metadata("design:type", String)
+    ], ActivityAttendeeInput.prototype, "firstName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_organizer" }),
+        __metadata("design:type", Boolean)
+    ], ActivityAttendeeInput.prototype, "isOrganizer", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_name" }),
+        __metadata("design:type", String)
+    ], ActivityAttendeeInput.prototype, "lastName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=middle_name" }),
+        __metadata("design:type", String)
+    ], ActivityAttendeeInput.prototype, "middleName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], ActivityAttendeeInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prefix" }),
+        __metadata("design:type", String)
+    ], ActivityAttendeeInput.prototype, "prefix", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", String)
+    ], ActivityAttendeeInput.prototype, "status", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=suffix" }),
+        __metadata("design:type", String)
+    ], ActivityAttendeeInput.prototype, "suffix", void 0);
+    return ActivityAttendeeInput;
+}(utils_1.SpeakeasyBase));
+exports.ActivityAttendeeInput = ActivityAttendeeInput;

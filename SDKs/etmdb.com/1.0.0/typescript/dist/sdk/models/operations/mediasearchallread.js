@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MediaSearchallReadResponse = exports.MediaSearchallReadRequest = exports.MediaSearchallReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var MediaSearchallReadPathParams = /** @class */ (function (_super) {
     __extends(MediaSearchallReadPathParams, _super);
     function MediaSearchallReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=user" }),
         __metadata("design:type", String)
     ], MediaSearchallReadPathParams.prototype, "user", void 0);
     return MediaSearchallReadPathParams;
-}(SpeakeasyBase));
-export { MediaSearchallReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.MediaSearchallReadPathParams = MediaSearchallReadPathParams;
 var MediaSearchallReadRequest = /** @class */ (function (_super) {
     __extends(MediaSearchallReadRequest, _super);
     function MediaSearchallReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MediaSearchallReadPathParams)
     ], MediaSearchallReadRequest.prototype, "pathParams", void 0);
     return MediaSearchallReadRequest;
-}(SpeakeasyBase));
-export { MediaSearchallReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.MediaSearchallReadRequest = MediaSearchallReadRequest;
 var MediaSearchallReadResponse = /** @class */ (function (_super) {
     __extends(MediaSearchallReadResponse, _super);
     function MediaSearchallReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MediaSearchallReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MediaSearchallReadResponse.prototype, "statusCode", void 0);
     return MediaSearchallReadResponse;
-}(SpeakeasyBase));
-export { MediaSearchallReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.MediaSearchallReadResponse = MediaSearchallReadResponse;

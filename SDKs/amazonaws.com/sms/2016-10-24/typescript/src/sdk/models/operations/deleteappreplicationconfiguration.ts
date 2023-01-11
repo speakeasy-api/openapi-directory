@@ -48,7 +48,7 @@ export class DeleteAppReplicationConfigurationResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteAppReplicationConfigurationResponse?: Map<string, any>;
+  deleteAppReplicationConfigurationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalError?: any;

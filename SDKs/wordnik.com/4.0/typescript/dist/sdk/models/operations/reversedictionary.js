@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ReverseDictionaryExcludeSourceDictionariesEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReverseDictionaryResponse = exports.ReverseDictionaryRequest = exports.ReverseDictionaryQueryParams = exports.ReverseDictionarySortOrderEnum = exports.ReverseDictionarySortByEnum = exports.ReverseDictionaryIncludeTagsEnum = exports.ReverseDictionaryIncludeSourceDictionariesEnum = exports.ReverseDictionaryExcludeSourceDictionariesEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ReverseDictionaryExcludeSourceDictionariesEnum;
 (function (ReverseDictionaryExcludeSourceDictionariesEnum) {
     ReverseDictionaryExcludeSourceDictionariesEnum["Ahd"] = "ahd";
     ReverseDictionaryExcludeSourceDictionariesEnum["Century"] = "century";
@@ -32,8 +35,8 @@ export var ReverseDictionaryExcludeSourceDictionariesEnum;
     ReverseDictionaryExcludeSourceDictionariesEnum["Wiktionary"] = "wiktionary";
     ReverseDictionaryExcludeSourceDictionariesEnum["Webster"] = "webster";
     ReverseDictionaryExcludeSourceDictionariesEnum["Wordnet"] = "wordnet";
-})(ReverseDictionaryExcludeSourceDictionariesEnum || (ReverseDictionaryExcludeSourceDictionariesEnum = {}));
-export var ReverseDictionaryIncludeSourceDictionariesEnum;
+})(ReverseDictionaryExcludeSourceDictionariesEnum = exports.ReverseDictionaryExcludeSourceDictionariesEnum || (exports.ReverseDictionaryExcludeSourceDictionariesEnum = {}));
+var ReverseDictionaryIncludeSourceDictionariesEnum;
 (function (ReverseDictionaryIncludeSourceDictionariesEnum) {
     ReverseDictionaryIncludeSourceDictionariesEnum["Ahd"] = "ahd";
     ReverseDictionaryIncludeSourceDictionariesEnum["Century"] = "century";
@@ -42,123 +45,123 @@ export var ReverseDictionaryIncludeSourceDictionariesEnum;
     ReverseDictionaryIncludeSourceDictionariesEnum["Wiktionary"] = "wiktionary";
     ReverseDictionaryIncludeSourceDictionariesEnum["Webster"] = "webster";
     ReverseDictionaryIncludeSourceDictionariesEnum["Wordnet"] = "wordnet";
-})(ReverseDictionaryIncludeSourceDictionariesEnum || (ReverseDictionaryIncludeSourceDictionariesEnum = {}));
-export var ReverseDictionaryIncludeTagsEnum;
+})(ReverseDictionaryIncludeSourceDictionariesEnum = exports.ReverseDictionaryIncludeSourceDictionariesEnum || (exports.ReverseDictionaryIncludeSourceDictionariesEnum = {}));
+var ReverseDictionaryIncludeTagsEnum;
 (function (ReverseDictionaryIncludeTagsEnum) {
     ReverseDictionaryIncludeTagsEnum["False"] = "false";
     ReverseDictionaryIncludeTagsEnum["True"] = "true";
-})(ReverseDictionaryIncludeTagsEnum || (ReverseDictionaryIncludeTagsEnum = {}));
-export var ReverseDictionarySortByEnum;
+})(ReverseDictionaryIncludeTagsEnum = exports.ReverseDictionaryIncludeTagsEnum || (exports.ReverseDictionaryIncludeTagsEnum = {}));
+var ReverseDictionarySortByEnum;
 (function (ReverseDictionarySortByEnum) {
     ReverseDictionarySortByEnum["Alpha"] = "alpha";
     ReverseDictionarySortByEnum["Count"] = "count";
-})(ReverseDictionarySortByEnum || (ReverseDictionarySortByEnum = {}));
-export var ReverseDictionarySortOrderEnum;
+})(ReverseDictionarySortByEnum = exports.ReverseDictionarySortByEnum || (exports.ReverseDictionarySortByEnum = {}));
+var ReverseDictionarySortOrderEnum;
 (function (ReverseDictionarySortOrderEnum) {
     ReverseDictionarySortOrderEnum["Asc"] = "asc";
     ReverseDictionarySortOrderEnum["Desc"] = "desc";
-})(ReverseDictionarySortOrderEnum || (ReverseDictionarySortOrderEnum = {}));
+})(ReverseDictionarySortOrderEnum = exports.ReverseDictionarySortOrderEnum || (exports.ReverseDictionarySortOrderEnum = {}));
 var ReverseDictionaryQueryParams = /** @class */ (function (_super) {
     __extends(ReverseDictionaryQueryParams, _super);
     function ReverseDictionaryQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=excludePartOfSpeech" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=excludePartOfSpeech" }),
         __metadata("design:type", String)
     ], ReverseDictionaryQueryParams.prototype, "excludePartOfSpeech", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=excludeSourceDictionaries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=excludeSourceDictionaries" }),
         __metadata("design:type", String)
     ], ReverseDictionaryQueryParams.prototype, "excludeSourceDictionaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=expandTerms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=expandTerms" }),
         __metadata("design:type", String)
     ], ReverseDictionaryQueryParams.prototype, "expandTerms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=findSenseForWord" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=findSenseForWord" }),
         __metadata("design:type", String)
     ], ReverseDictionaryQueryParams.prototype, "findSenseForWord", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includePartOfSpeech" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includePartOfSpeech" }),
         __metadata("design:type", String)
     ], ReverseDictionaryQueryParams.prototype, "includePartOfSpeech", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includeSourceDictionaries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includeSourceDictionaries" }),
         __metadata("design:type", String)
     ], ReverseDictionaryQueryParams.prototype, "includeSourceDictionaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=includeTags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=includeTags" }),
         __metadata("design:type", String)
     ], ReverseDictionaryQueryParams.prototype, "includeTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], ReverseDictionaryQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxCorpusCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxCorpusCount" }),
         __metadata("design:type", Number)
     ], ReverseDictionaryQueryParams.prototype, "maxCorpusCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxLength" }),
         __metadata("design:type", Number)
     ], ReverseDictionaryQueryParams.prototype, "maxLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minCorpusCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minCorpusCount" }),
         __metadata("design:type", Number)
     ], ReverseDictionaryQueryParams.prototype, "minCorpusCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minLength" }),
         __metadata("design:type", Number)
     ], ReverseDictionaryQueryParams.prototype, "minLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], ReverseDictionaryQueryParams.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=skip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=skip" }),
         __metadata("design:type", String)
     ], ReverseDictionaryQueryParams.prototype, "skip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sortBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sortBy" }),
         __metadata("design:type", String)
     ], ReverseDictionaryQueryParams.prototype, "sortBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sortOrder" }),
         __metadata("design:type", String)
     ], ReverseDictionaryQueryParams.prototype, "sortOrder", void 0);
     return ReverseDictionaryQueryParams;
-}(SpeakeasyBase));
-export { ReverseDictionaryQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ReverseDictionaryQueryParams = ReverseDictionaryQueryParams;
 var ReverseDictionaryRequest = /** @class */ (function (_super) {
     __extends(ReverseDictionaryRequest, _super);
     function ReverseDictionaryRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ReverseDictionaryQueryParams)
     ], ReverseDictionaryRequest.prototype, "queryParams", void 0);
     return ReverseDictionaryRequest;
-}(SpeakeasyBase));
-export { ReverseDictionaryRequest };
+}(utils_1.SpeakeasyBase));
+exports.ReverseDictionaryRequest = ReverseDictionaryRequest;
 var ReverseDictionaryResponse = /** @class */ (function (_super) {
     __extends(ReverseDictionaryResponse, _super);
     function ReverseDictionaryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], ReverseDictionaryResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ReverseDictionaryResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ReverseDictionaryResponse.prototype, "statusCode", void 0);
     return ReverseDictionaryResponse;
-}(SpeakeasyBase));
-export { ReverseDictionaryResponse };
+}(utils_1.SpeakeasyBase));
+exports.ReverseDictionaryResponse = ReverseDictionaryResponse;

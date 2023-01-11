@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDeviceInstanceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateDeviceInstanceRequest = /** @class */ (function (_super) {
     __extends(UpdateDeviceInstanceRequest, _super);
     function UpdateDeviceInstanceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], UpdateDeviceInstanceRequest.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
         __metadata("design:type", Array)
     ], UpdateDeviceInstanceRequest.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileArn" }),
         __metadata("design:type", String)
     ], UpdateDeviceInstanceRequest.prototype, "profileArn", void 0);
     return UpdateDeviceInstanceRequest;
-}(SpeakeasyBase));
-export { UpdateDeviceInstanceRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceInstanceRequest = UpdateDeviceInstanceRequest;

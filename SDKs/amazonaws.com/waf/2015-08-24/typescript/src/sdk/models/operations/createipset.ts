@@ -48,7 +48,7 @@ export class CreateIpSetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createIpSetResponse?: shared.CreateIpSetResponse;
+  createIPSetResponse?: shared.CreateIpSetResponse;
 
   @SpeakeasyMetadata()
   statusCode: number;

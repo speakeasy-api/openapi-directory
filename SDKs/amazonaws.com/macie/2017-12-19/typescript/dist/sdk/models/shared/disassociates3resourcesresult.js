@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FailedS3Resource } from "./faileds3resource";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DisassociateS3ResourcesResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var faileds3resource_1 = require("./faileds3resource");
 var DisassociateS3ResourcesResult = /** @class */ (function (_super) {
     __extends(DisassociateS3ResourcesResult, _super);
     function DisassociateS3ResourcesResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failedS3Resources", elemType: FailedS3Resource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failedS3Resources", elemType: faileds3resource_1.FailedS3Resource }),
         __metadata("design:type", Array)
     ], DisassociateS3ResourcesResult.prototype, "failedS3Resources", void 0);
     return DisassociateS3ResourcesResult;
-}(SpeakeasyBase));
-export { DisassociateS3ResourcesResult };
+}(utils_1.SpeakeasyBase));
+exports.DisassociateS3ResourcesResult = DisassociateS3ResourcesResult;

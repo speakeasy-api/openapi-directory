@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OperatorDbt } from "./operatordbt";
-import { OperatorNormalization } from "./operatornormalization";
-import { OperatorTypeEnum } from "./operatortypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OperatorConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var operatordbt_1 = require("./operatordbt");
+var operatornormalization_1 = require("./operatornormalization");
+var operatortypeenum_1 = require("./operatortypeenum");
 var OperatorConfiguration = /** @class */ (function (_super) {
     __extends(OperatorConfiguration, _super);
     function OperatorConfiguration() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dbt" }),
-        __metadata("design:type", OperatorDbt)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dbt" }),
+        __metadata("design:type", operatordbt_1.OperatorDbt)
     ], OperatorConfiguration.prototype, "dbt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=normalization" }),
-        __metadata("design:type", OperatorNormalization)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=normalization" }),
+        __metadata("design:type", operatornormalization_1.OperatorNormalization)
     ], OperatorConfiguration.prototype, "normalization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operatorType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operatorType" }),
         __metadata("design:type", String)
     ], OperatorConfiguration.prototype, "operatorType", void 0);
     return OperatorConfiguration;
-}(SpeakeasyBase));
-export { OperatorConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.OperatorConfiguration = OperatorConfiguration;

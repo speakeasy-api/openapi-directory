@@ -58,7 +58,7 @@ export class CertificateAuthority extends SpeakeasyBase {
   keySpec?: KeyVersionSpec;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=lifetime" })
   lifetime?: string;
@@ -104,7 +104,7 @@ export class CertificateAuthorityInput extends SpeakeasyBase {
   keySpec?: KeyVersionSpec;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=lifetime" })
   lifetime?: string;

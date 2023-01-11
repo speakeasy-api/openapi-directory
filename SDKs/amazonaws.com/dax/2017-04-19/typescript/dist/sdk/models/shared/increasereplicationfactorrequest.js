@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IncreaseReplicationFactorRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var IncreaseReplicationFactorRequest = /** @class */ (function (_super) {
     __extends(IncreaseReplicationFactorRequest, _super);
     function IncreaseReplicationFactorRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AvailabilityZones" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AvailabilityZones" }),
         __metadata("design:type", Array)
     ], IncreaseReplicationFactorRequest.prototype, "availabilityZones", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClusterName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClusterName" }),
         __metadata("design:type", String)
     ], IncreaseReplicationFactorRequest.prototype, "clusterName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NewReplicationFactor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NewReplicationFactor" }),
         __metadata("design:type", Number)
     ], IncreaseReplicationFactorRequest.prototype, "newReplicationFactor", void 0);
     return IncreaseReplicationFactorRequest;
-}(SpeakeasyBase));
-export { IncreaseReplicationFactorRequest };
+}(utils_1.SpeakeasyBase));
+exports.IncreaseReplicationFactorRequest = IncreaseReplicationFactorRequest;

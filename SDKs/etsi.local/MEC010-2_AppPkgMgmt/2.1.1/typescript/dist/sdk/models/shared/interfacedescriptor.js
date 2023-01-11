@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InterfaceTypeEnum } from "./interfacetypeenum";
-import { TunnelInfo } from "./tunnelinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InterfaceDescriptor = void 0;
+var utils_1 = require("../../../internal/utils");
+var interfacetypeenum_1 = require("./interfacetypeenum");
+var tunnelinfo_1 = require("./tunnelinfo");
 var InterfaceDescriptor = /** @class */ (function (_super) {
     __extends(InterfaceDescriptor, _super);
     function InterfaceDescriptor() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], InterfaceDescriptor.prototype, "dstIpAddress", void 0);
+    ], InterfaceDescriptor.prototype, "dstIPAddress", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], InterfaceDescriptor.prototype, "dstMacAddress", void 0);
+    ], InterfaceDescriptor.prototype, "dstMACAddress", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], InterfaceDescriptor.prototype, "interfaceType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], InterfaceDescriptor.prototype, "srcMacAddress", void 0);
+    ], InterfaceDescriptor.prototype, "srcMACAddress", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TunnelInfo)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", tunnelinfo_1.TunnelInfo)
     ], InterfaceDescriptor.prototype, "tunnelInfo", void 0);
     return InterfaceDescriptor;
-}(SpeakeasyBase));
-export { InterfaceDescriptor };
+}(utils_1.SpeakeasyBase));
+exports.InterfaceDescriptor = InterfaceDescriptor;

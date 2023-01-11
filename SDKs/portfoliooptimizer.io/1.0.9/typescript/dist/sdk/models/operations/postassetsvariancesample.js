@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,84 +23,86 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAssetsVarianceSampleResponse = exports.PostAssetsVarianceSampleRequest = exports.PostAssetsVarianceSample200ApplicationJson = exports.PostAssetsVarianceSample200ApplicationJsonAssets = exports.PostAssetsVarianceSampleRequestBody = exports.PostAssetsVarianceSampleRequestBodyAssets = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAssetsVarianceSampleRequestBodyAssets = /** @class */ (function (_super) {
     __extends(PostAssetsVarianceSampleRequestBodyAssets, _super);
     function PostAssetsVarianceSampleRequestBodyAssets() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetReturns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetReturns" }),
         __metadata("design:type", Array)
     ], PostAssetsVarianceSampleRequestBodyAssets.prototype, "assetReturns", void 0);
     return PostAssetsVarianceSampleRequestBodyAssets;
-}(SpeakeasyBase));
-export { PostAssetsVarianceSampleRequestBodyAssets };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsVarianceSampleRequestBodyAssets = PostAssetsVarianceSampleRequestBodyAssets;
 var PostAssetsVarianceSampleRequestBody = /** @class */ (function (_super) {
     __extends(PostAssetsVarianceSampleRequestBody, _super);
     function PostAssetsVarianceSampleRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets", elemType: PostAssetsVarianceSampleRequestBodyAssets }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets", elemType: PostAssetsVarianceSampleRequestBodyAssets }),
         __metadata("design:type", Array)
     ], PostAssetsVarianceSampleRequestBody.prototype, "assets", void 0);
     return PostAssetsVarianceSampleRequestBody;
-}(SpeakeasyBase));
-export { PostAssetsVarianceSampleRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsVarianceSampleRequestBody = PostAssetsVarianceSampleRequestBody;
 var PostAssetsVarianceSample200ApplicationJsonAssets = /** @class */ (function (_super) {
     __extends(PostAssetsVarianceSample200ApplicationJsonAssets, _super);
     function PostAssetsVarianceSample200ApplicationJsonAssets() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetVariance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetVariance" }),
         __metadata("design:type", Number)
     ], PostAssetsVarianceSample200ApplicationJsonAssets.prototype, "assetVariance", void 0);
     return PostAssetsVarianceSample200ApplicationJsonAssets;
-}(SpeakeasyBase));
-export { PostAssetsVarianceSample200ApplicationJsonAssets };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsVarianceSample200ApplicationJsonAssets = PostAssetsVarianceSample200ApplicationJsonAssets;
 var PostAssetsVarianceSample200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostAssetsVarianceSample200ApplicationJson, _super);
     function PostAssetsVarianceSample200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets", elemType: PostAssetsVarianceSample200ApplicationJsonAssets }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets", elemType: PostAssetsVarianceSample200ApplicationJsonAssets }),
         __metadata("design:type", Array)
     ], PostAssetsVarianceSample200ApplicationJson.prototype, "assets", void 0);
     return PostAssetsVarianceSample200ApplicationJson;
-}(SpeakeasyBase));
-export { PostAssetsVarianceSample200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsVarianceSample200ApplicationJson = PostAssetsVarianceSample200ApplicationJson;
 var PostAssetsVarianceSampleRequest = /** @class */ (function (_super) {
     __extends(PostAssetsVarianceSampleRequest, _super);
     function PostAssetsVarianceSampleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostAssetsVarianceSampleRequestBody)
     ], PostAssetsVarianceSampleRequest.prototype, "request", void 0);
     return PostAssetsVarianceSampleRequest;
-}(SpeakeasyBase));
-export { PostAssetsVarianceSampleRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsVarianceSampleRequest = PostAssetsVarianceSampleRequest;
 var PostAssetsVarianceSampleResponse = /** @class */ (function (_super) {
     __extends(PostAssetsVarianceSampleResponse, _super);
     function PostAssetsVarianceSampleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAssetsVarianceSampleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostAssetsVarianceSample200ApplicationJson)
-    ], PostAssetsVarianceSampleResponse.prototype, "postAssetsVarianceSample200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAssetsVarianceSampleResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostAssetsVarianceSample200ApplicationJson)
+    ], PostAssetsVarianceSampleResponse.prototype, "postAssetsVarianceSample200ApplicationJSONObject", void 0);
     return PostAssetsVarianceSampleResponse;
-}(SpeakeasyBase));
-export { PostAssetsVarianceSampleResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAssetsVarianceSampleResponse = PostAssetsVarianceSampleResponse;

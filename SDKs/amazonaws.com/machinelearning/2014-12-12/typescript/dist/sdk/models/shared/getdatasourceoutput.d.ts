@@ -23,7 +23,7 @@ export declare class GetDataSourceOutput extends SpeakeasyBase {
     numberOfFiles?: number;
     rdsMetadata?: RdsMetadata;
     redshiftMetadata?: RedshiftMetadata;
-    roleArn?: string;
+    roleARN?: string;
     startedAt?: Date;
     status?: EntityStatusEnum;
 }

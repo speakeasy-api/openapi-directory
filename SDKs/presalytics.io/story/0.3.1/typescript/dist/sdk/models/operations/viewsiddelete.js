@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ViewsIdDeleteResponse = exports.ViewsIdDeleteRequest = exports.ViewsIdDeletePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ViewsIdDeletePathParams = /** @class */ (function (_super) {
     __extends(ViewsIdDeletePathParams, _super);
     function ViewsIdDeletePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=view_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=view_id" }),
         __metadata("design:type", String)
     ], ViewsIdDeletePathParams.prototype, "viewId", void 0);
     return ViewsIdDeletePathParams;
-}(SpeakeasyBase));
-export { ViewsIdDeletePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ViewsIdDeletePathParams = ViewsIdDeletePathParams;
 var ViewsIdDeleteRequest = /** @class */ (function (_super) {
     __extends(ViewsIdDeleteRequest, _super);
     function ViewsIdDeleteRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ViewsIdDeletePathParams)
     ], ViewsIdDeleteRequest.prototype, "pathParams", void 0);
     return ViewsIdDeleteRequest;
-}(SpeakeasyBase));
-export { ViewsIdDeleteRequest };
+}(utils_1.SpeakeasyBase));
+exports.ViewsIdDeleteRequest = ViewsIdDeleteRequest;
 var ViewsIdDeleteResponse = /** @class */ (function (_super) {
     __extends(ViewsIdDeleteResponse, _super);
     function ViewsIdDeleteResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ViewsIdDeleteResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ViewsIdDeleteResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], ViewsIdDeleteResponse.prototype, "problemDetail", void 0);
     return ViewsIdDeleteResponse;
-}(SpeakeasyBase));
-export { ViewsIdDeleteResponse };
+}(utils_1.SpeakeasyBase));
+exports.ViewsIdDeleteResponse = ViewsIdDeleteResponse;

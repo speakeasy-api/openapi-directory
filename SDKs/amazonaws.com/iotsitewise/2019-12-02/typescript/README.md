@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AssociateAssetsRequest, AssociateAssetsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,25 +33,25 @@ const sdk = new SDK(WithSecurity(
     
 const req: AssociateAssetsRequest = {
   pathParams: {
-    assetId: "quis",
+    assetId: "sit",
   },
   headers: {
-    xAmzAlgorithm: "dolor",
-    xAmzContentSha256: "esse",
-    xAmzCredential: "doloremque",
-    xAmzDate: "omnis",
-    xAmzSecurityToken: "et",
-    xAmzSignature: "dolores",
-    xAmzSignedHeaders: "voluptatem",
+    xAmzAlgorithm: "voluptas",
+    xAmzContentSha256: "culpa",
+    xAmzCredential: "expedita",
+    xAmzDate: "consequuntur",
+    xAmzSecurityToken: "dolor",
+    xAmzSignature: "expedita",
+    xAmzSignedHeaders: "voluptas",
   },
   request: {
-    childAssetId: "consectetur",
-    clientToken: "est",
-    hierarchyId: "ducimus",
+    childAssetId: "fugit",
+    clientToken: "et",
+    hierarchyId: "nihil",
   },
 };
 
-sdk.sdk.associateAssets(req).then((res: AssociateAssetsResponse | AxiosError) => {
+sdk.associateAssets(req).then((res: AssociateAssetsResponse | AxiosError) => {
    // handle response
 });
 ```

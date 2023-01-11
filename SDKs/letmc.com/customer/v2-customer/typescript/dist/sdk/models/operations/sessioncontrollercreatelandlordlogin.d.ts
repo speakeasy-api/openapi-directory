@@ -3,7 +3,7 @@ export declare class SessionControllerCreateLandlordLoginPathParams extends Spea
     shortName: string;
 }
 export declare class SessionControllerCreateLandlordLoginQueryParams extends SpeakeasyBase {
-    branchId?: string;
+    branchID?: string;
     contactDetails: string;
     email: string;
     forename: string;

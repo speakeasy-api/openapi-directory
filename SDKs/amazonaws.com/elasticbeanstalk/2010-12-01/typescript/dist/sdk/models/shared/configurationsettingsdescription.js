@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigurationDeploymentStatusEnum } from "./configurationdeploymentstatusenum";
-import { ConfigurationOptionSetting } from "./configurationoptionsetting";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigurationSettingsDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var configurationdeploymentstatusenum_1 = require("./configurationdeploymentstatusenum");
+var configurationoptionsetting_1 = require("./configurationoptionsetting");
 // ConfigurationSettingsDescription
 /**
  * Describes the settings for a configuration set.
@@ -35,45 +38,45 @@ var ConfigurationSettingsDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConfigurationSettingsDescription.prototype, "applicationName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], ConfigurationSettingsDescription.prototype, "dateCreated", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Date)
     ], ConfigurationSettingsDescription.prototype, "dateUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConfigurationSettingsDescription.prototype, "deploymentStatus", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConfigurationSettingsDescription.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConfigurationSettingsDescription.prototype, "environmentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: ConfigurationOptionSetting }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: configurationoptionsetting_1.ConfigurationOptionSetting }),
         __metadata("design:type", Array)
     ], ConfigurationSettingsDescription.prototype, "optionSettings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConfigurationSettingsDescription.prototype, "platformArn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConfigurationSettingsDescription.prototype, "solutionStackName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConfigurationSettingsDescription.prototype, "templateName", void 0);
     return ConfigurationSettingsDescription;
-}(SpeakeasyBase));
-export { ConfigurationSettingsDescription };
+}(utils_1.SpeakeasyBase));
+exports.ConfigurationSettingsDescription = ConfigurationSettingsDescription;

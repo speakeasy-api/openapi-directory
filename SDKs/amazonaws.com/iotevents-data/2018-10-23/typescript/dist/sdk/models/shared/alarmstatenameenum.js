@@ -1,4 +1,7 @@
-export var AlarmStateNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AlarmStateNameEnum = void 0;
+var AlarmStateNameEnum;
 (function (AlarmStateNameEnum) {
     AlarmStateNameEnum["Disabled"] = "DISABLED";
     AlarmStateNameEnum["Normal"] = "NORMAL";
@@ -6,4 +9,4 @@ export var AlarmStateNameEnum;
     AlarmStateNameEnum["Acknowledged"] = "ACKNOWLEDGED";
     AlarmStateNameEnum["SnoozeDisabled"] = "SNOOZE_DISABLED";
     AlarmStateNameEnum["Latched"] = "LATCHED";
-})(AlarmStateNameEnum || (AlarmStateNameEnum = {}));
+})(AlarmStateNameEnum = exports.AlarmStateNameEnum || (exports.AlarmStateNameEnum = {}));

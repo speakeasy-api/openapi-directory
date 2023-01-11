@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObReadDataScheduledPayment3 } from "./obreaddatascheduledpayment3";
-import { Links } from "./links";
-import { Meta } from "./meta";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObReadScheduledPayment3 = void 0;
+var utils_1 = require("../../../internal/utils");
+var obreaddatascheduledpayment3_1 = require("./obreaddatascheduledpayment3");
+var links_1 = require("./links");
+var meta_1 = require("./meta");
 var ObReadScheduledPayment3 = /** @class */ (function (_super) {
     __extends(ObReadScheduledPayment3, _super);
     function ObReadScheduledPayment3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Data" }),
-        __metadata("design:type", ObReadDataScheduledPayment3)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Data" }),
+        __metadata("design:type", obreaddatascheduledpayment3_1.ObReadDataScheduledPayment3)
     ], ObReadScheduledPayment3.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Links" }),
-        __metadata("design:type", Links)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Links" }),
+        __metadata("design:type", links_1.Links)
     ], ObReadScheduledPayment3.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Meta" }),
-        __metadata("design:type", Meta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Meta" }),
+        __metadata("design:type", meta_1.Meta)
     ], ObReadScheduledPayment3.prototype, "meta", void 0);
     return ObReadScheduledPayment3;
-}(SpeakeasyBase));
-export { ObReadScheduledPayment3 };
+}(utils_1.SpeakeasyBase));
+exports.ObReadScheduledPayment3 = ObReadScheduledPayment3;

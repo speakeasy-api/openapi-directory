@@ -14,10 +14,10 @@ export class SandboxOauthSelectAccountsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  sandboxOauthSelectAccountsResponse?: Map<string, any>;
+  sandboxOauthSelectAccountsResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

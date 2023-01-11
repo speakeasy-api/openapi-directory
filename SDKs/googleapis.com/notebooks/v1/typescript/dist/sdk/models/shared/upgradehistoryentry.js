@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var UpgradeHistoryEntryActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpgradeHistoryEntry = exports.UpgradeHistoryEntryStateEnum = exports.UpgradeHistoryEntryActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var UpgradeHistoryEntryActionEnum;
 (function (UpgradeHistoryEntryActionEnum) {
     UpgradeHistoryEntryActionEnum["ActionUnspecified"] = "ACTION_UNSPECIFIED";
     UpgradeHistoryEntryActionEnum["Upgrade"] = "UPGRADE";
     UpgradeHistoryEntryActionEnum["Rollback"] = "ROLLBACK";
-})(UpgradeHistoryEntryActionEnum || (UpgradeHistoryEntryActionEnum = {}));
-export var UpgradeHistoryEntryStateEnum;
+})(UpgradeHistoryEntryActionEnum = exports.UpgradeHistoryEntryActionEnum || (exports.UpgradeHistoryEntryActionEnum = {}));
+var UpgradeHistoryEntryStateEnum;
 (function (UpgradeHistoryEntryStateEnum) {
     UpgradeHistoryEntryStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     UpgradeHistoryEntryStateEnum["Started"] = "STARTED";
     UpgradeHistoryEntryStateEnum["Succeeded"] = "SUCCEEDED";
     UpgradeHistoryEntryStateEnum["Failed"] = "FAILED";
-})(UpgradeHistoryEntryStateEnum || (UpgradeHistoryEntryStateEnum = {}));
+})(UpgradeHistoryEntryStateEnum = exports.UpgradeHistoryEntryStateEnum || (exports.UpgradeHistoryEntryStateEnum = {}));
 // UpgradeHistoryEntry
 /**
  * The entry of VM image upgrade history.
@@ -46,45 +49,45 @@ var UpgradeHistoryEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], UpgradeHistoryEntry.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerImage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerImage" }),
         __metadata("design:type", String)
     ], UpgradeHistoryEntry.prototype, "containerImage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], UpgradeHistoryEntry.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=framework" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=framework" }),
         __metadata("design:type", String)
     ], UpgradeHistoryEntry.prototype, "framework", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snapshot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snapshot" }),
         __metadata("design:type", String)
     ], UpgradeHistoryEntry.prototype, "snapshot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], UpgradeHistoryEntry.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetImage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetImage" }),
         __metadata("design:type", String)
     ], UpgradeHistoryEntry.prototype, "targetImage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetVersion" }),
         __metadata("design:type", String)
     ], UpgradeHistoryEntry.prototype, "targetVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], UpgradeHistoryEntry.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmImage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmImage" }),
         __metadata("design:type", String)
     ], UpgradeHistoryEntry.prototype, "vmImage", void 0);
     return UpgradeHistoryEntry;
-}(SpeakeasyBase));
-export { UpgradeHistoryEntry };
+}(utils_1.SpeakeasyBase));
+exports.UpgradeHistoryEntry = UpgradeHistoryEntry;

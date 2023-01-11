@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Name } from "./name";
-import { GlobalPermission } from "./globalpermission";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserProfile = void 0;
+var utils_1 = require("../../../internal/utils");
+var name_1 = require("./name");
+var globalpermission_1 = require("./globalpermission");
 // UserProfile
 /**
  * Global information for a user.
@@ -35,29 +38,29 @@ var UserProfile = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emailAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emailAddress" }),
         __metadata("design:type", String)
     ], UserProfile.prototype, "emailAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], UserProfile.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", Name)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", name_1.Name)
     ], UserProfile.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions", elemType: GlobalPermission }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions", elemType: globalpermission_1.GlobalPermission }),
         __metadata("design:type", Array)
     ], UserProfile.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=photoUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=photoUrl" }),
         __metadata("design:type", String)
     ], UserProfile.prototype, "photoUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verifiedTeacher" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verifiedTeacher" }),
         __metadata("design:type", Boolean)
     ], UserProfile.prototype, "verifiedTeacher", void 0);
     return UserProfile;
-}(SpeakeasyBase));
-export { UserProfile };
+}(utils_1.SpeakeasyBase));
+exports.UserProfile = UserProfile;

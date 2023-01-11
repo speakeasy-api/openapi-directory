@@ -9,6 +9,9 @@ export declare enum ReactionContentEnum {
     Rocket = "rocket",
     Eyes = "eyes"
 }
+/**
+ * Simple User
+**/
 export declare class ReactionSimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;

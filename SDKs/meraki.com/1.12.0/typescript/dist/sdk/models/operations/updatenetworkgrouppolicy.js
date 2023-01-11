@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkGroupPolicyResponse = exports.UpdateNetworkGroupPolicyRequest = exports.UpdateNetworkGroupPolicyRequestBody = exports.UpdateNetworkGroupPolicyRequestBodyVlanTagging = exports.UpdateNetworkGroupPolicyRequestBodyVlanTaggingSettingsEnum = exports.UpdateNetworkGroupPolicyRequestBodySplashAuthSettingsEnum = exports.UpdateNetworkGroupPolicyRequestBodyScheduling = exports.UpdateNetworkGroupPolicyRequestBodySchedulingWednesday = exports.UpdateNetworkGroupPolicyRequestBodySchedulingTuesday = exports.UpdateNetworkGroupPolicyRequestBodySchedulingThursday = exports.UpdateNetworkGroupPolicyRequestBodySchedulingSunday = exports.UpdateNetworkGroupPolicyRequestBodySchedulingSaturday = exports.UpdateNetworkGroupPolicyRequestBodySchedulingMonday = exports.UpdateNetworkGroupPolicyRequestBodySchedulingFriday = exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShaping = exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRules = exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimits = exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimitsBandwidthLimits = exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitions = exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitionsTypeEnum = exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingSettingsEnum = exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRules = exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesTypeEnum = exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesPolicyEnum = exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL3FirewallRules = exports.UpdateNetworkGroupPolicyRequestBodyContentFiltering = exports.UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatterns = exports.UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatternsSettingsEnum = exports.UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategories = exports.UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategoriesSettingsEnum = exports.UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatterns = exports.UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatternsSettingsEnum = exports.UpdateNetworkGroupPolicyRequestBodyBonjourForwarding = exports.UpdateNetworkGroupPolicyRequestBodyBonjourForwardingSettingsEnum = exports.UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRules = exports.UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRulesServicesEnum = exports.UpdateNetworkGroupPolicyRequestBodyBandwidth = exports.UpdateNetworkGroupPolicyRequestBodyBandwidthSettingsEnum = exports.UpdateNetworkGroupPolicyRequestBodyBandwidthBandwidthLimits = exports.UpdateNetworkGroupPolicyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkGroupPolicyPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkGroupPolicyPathParams, _super);
     function UpdateNetworkGroupPolicyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=groupPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=groupPolicyId" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyPathParams.prototype, "groupPolicyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyPathParams.prototype, "networkId", void 0);
     return UpdateNetworkGroupPolicyPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyPathParams = UpdateNetworkGroupPolicyPathParams;
 // UpdateNetworkGroupPolicyRequestBodyBandwidthBandwidthLimits
 /**
  * The bandwidth limits object, specifying upload and download speed for clients bound to the group policy. These are only enforced if 'settings' is set to 'custom'.
@@ -49,22 +52,22 @@ var UpdateNetworkGroupPolicyRequestBodyBandwidthBandwidthLimits = /** @class */ 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limitDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limitDown" }),
         __metadata("design:type", Number)
     ], UpdateNetworkGroupPolicyRequestBodyBandwidthBandwidthLimits.prototype, "limitDown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limitUp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limitUp" }),
         __metadata("design:type", Number)
     ], UpdateNetworkGroupPolicyRequestBodyBandwidthBandwidthLimits.prototype, "limitUp", void 0);
     return UpdateNetworkGroupPolicyRequestBodyBandwidthBandwidthLimits;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodyBandwidthBandwidthLimits };
-export var UpdateNetworkGroupPolicyRequestBodyBandwidthSettingsEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodyBandwidthBandwidthLimits = UpdateNetworkGroupPolicyRequestBodyBandwidthBandwidthLimits;
+var UpdateNetworkGroupPolicyRequestBodyBandwidthSettingsEnum;
 (function (UpdateNetworkGroupPolicyRequestBodyBandwidthSettingsEnum) {
     UpdateNetworkGroupPolicyRequestBodyBandwidthSettingsEnum["NetworkDefault"] = "network default";
     UpdateNetworkGroupPolicyRequestBodyBandwidthSettingsEnum["Ignore"] = "ignore";
     UpdateNetworkGroupPolicyRequestBodyBandwidthSettingsEnum["Custom"] = "custom";
-})(UpdateNetworkGroupPolicyRequestBodyBandwidthSettingsEnum || (UpdateNetworkGroupPolicyRequestBodyBandwidthSettingsEnum = {}));
+})(UpdateNetworkGroupPolicyRequestBodyBandwidthSettingsEnum = exports.UpdateNetworkGroupPolicyRequestBodyBandwidthSettingsEnum || (exports.UpdateNetworkGroupPolicyRequestBodyBandwidthSettingsEnum = {}));
 // UpdateNetworkGroupPolicyRequestBodyBandwidth
 /**
  *     The bandwidth settings for clients bound to your group policy.
@@ -76,17 +79,17 @@ var UpdateNetworkGroupPolicyRequestBodyBandwidth = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bandwidthLimits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bandwidthLimits" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodyBandwidthBandwidthLimits)
     ], UpdateNetworkGroupPolicyRequestBodyBandwidth.prototype, "bandwidthLimits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyBandwidth.prototype, "settings", void 0);
     return UpdateNetworkGroupPolicyRequestBodyBandwidth;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodyBandwidth };
-export var UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRulesServicesEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodyBandwidth = UpdateNetworkGroupPolicyRequestBodyBandwidth;
+var UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRulesServicesEnum;
 (function (UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRulesServicesEnum) {
     UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRulesServicesEnum["AllServices"] = "All Services";
     UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRulesServicesEnum["AirPlay"] = "AirPlay";
@@ -99,33 +102,33 @@ export var UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRulesServicesEnum
     UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRulesServicesEnum["Samba"] = "Samba";
     UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRulesServicesEnum["Scanners"] = "Scanners";
     UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRulesServicesEnum["Ssh"] = "SSH";
-})(UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRulesServicesEnum || (UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRulesServicesEnum = {}));
+})(UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRulesServicesEnum = exports.UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRulesServicesEnum || (exports.UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRulesServicesEnum = {}));
 var UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRules = /** @class */ (function (_super) {
     __extends(UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRules, _super);
     function UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRules() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRules.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=services" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=services" }),
         __metadata("design:type", Array)
     ], UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRules.prototype, "services", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlanId" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRules.prototype, "vlanId", void 0);
     return UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRules;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRules };
-export var UpdateNetworkGroupPolicyRequestBodyBonjourForwardingSettingsEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRules = UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRules;
+var UpdateNetworkGroupPolicyRequestBodyBonjourForwardingSettingsEnum;
 (function (UpdateNetworkGroupPolicyRequestBodyBonjourForwardingSettingsEnum) {
     UpdateNetworkGroupPolicyRequestBodyBonjourForwardingSettingsEnum["NetworkDefault"] = "network default";
     UpdateNetworkGroupPolicyRequestBodyBonjourForwardingSettingsEnum["Ignore"] = "ignore";
     UpdateNetworkGroupPolicyRequestBodyBonjourForwardingSettingsEnum["Custom"] = "custom";
-})(UpdateNetworkGroupPolicyRequestBodyBonjourForwardingSettingsEnum || (UpdateNetworkGroupPolicyRequestBodyBonjourForwardingSettingsEnum = {}));
+})(UpdateNetworkGroupPolicyRequestBodyBonjourForwardingSettingsEnum = exports.UpdateNetworkGroupPolicyRequestBodyBonjourForwardingSettingsEnum || (exports.UpdateNetworkGroupPolicyRequestBodyBonjourForwardingSettingsEnum = {}));
 // UpdateNetworkGroupPolicyRequestBodyBonjourForwarding
 /**
  * The Bonjour settings for your group policy. Only valid if your network has a wireless configuration.
@@ -136,22 +139,22 @@ var UpdateNetworkGroupPolicyRequestBodyBonjourForwarding = /** @class */ (functi
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRules }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: UpdateNetworkGroupPolicyRequestBodyBonjourForwardingRules }),
         __metadata("design:type", Array)
     ], UpdateNetworkGroupPolicyRequestBodyBonjourForwarding.prototype, "rules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyBonjourForwarding.prototype, "settings", void 0);
     return UpdateNetworkGroupPolicyRequestBodyBonjourForwarding;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodyBonjourForwarding };
-export var UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatternsSettingsEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodyBonjourForwarding = UpdateNetworkGroupPolicyRequestBodyBonjourForwarding;
+var UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatternsSettingsEnum;
 (function (UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatternsSettingsEnum) {
     UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatternsSettingsEnum["NetworkDefault"] = "network default";
     UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatternsSettingsEnum["Append"] = "append";
     UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatternsSettingsEnum["Override"] = "override";
-})(UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatternsSettingsEnum || (UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatternsSettingsEnum = {}));
+})(UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatternsSettingsEnum = exports.UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatternsSettingsEnum || (exports.UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatternsSettingsEnum = {}));
 // UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatterns
 /**
  * Settings for allowed URL patterns
@@ -162,22 +165,22 @@ var UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatterns = /** 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=patterns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patterns" }),
         __metadata("design:type", Array)
     ], UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatterns.prototype, "patterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatterns.prototype, "settings", void 0);
     return UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatterns;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatterns };
-export var UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategoriesSettingsEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatterns = UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatterns;
+var UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategoriesSettingsEnum;
 (function (UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategoriesSettingsEnum) {
     UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategoriesSettingsEnum["NetworkDefault"] = "network default";
     UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategoriesSettingsEnum["Append"] = "append";
     UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategoriesSettingsEnum["Override"] = "override";
-})(UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategoriesSettingsEnum || (UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategoriesSettingsEnum = {}));
+})(UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategoriesSettingsEnum = exports.UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategoriesSettingsEnum || (exports.UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategoriesSettingsEnum = {}));
 // UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategories
 /**
  * Settings for blocked URL categories
@@ -188,22 +191,22 @@ var UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategories = /*
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categories" }),
         __metadata("design:type", Array)
     ], UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategories.prototype, "categories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategories.prototype, "settings", void 0);
     return UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategories;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategories };
-export var UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatternsSettingsEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategories = UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategories;
+var UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatternsSettingsEnum;
 (function (UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatternsSettingsEnum) {
     UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatternsSettingsEnum["NetworkDefault"] = "network default";
     UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatternsSettingsEnum["Append"] = "append";
     UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatternsSettingsEnum["Override"] = "override";
-})(UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatternsSettingsEnum || (UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatternsSettingsEnum = {}));
+})(UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatternsSettingsEnum = exports.UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatternsSettingsEnum || (exports.UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatternsSettingsEnum = {}));
 // UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatterns
 /**
  * Settings for blocked URL patterns
@@ -214,16 +217,16 @@ var UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatterns = /** 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=patterns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patterns" }),
         __metadata("design:type", Array)
     ], UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatterns.prototype, "patterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatterns.prototype, "settings", void 0);
     return UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatterns;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatterns };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatterns = UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatterns;
 // UpdateNetworkGroupPolicyRequestBodyContentFiltering
 /**
  * The content filtering settings for your group policy
@@ -234,87 +237,87 @@ var UpdateNetworkGroupPolicyRequestBodyContentFiltering = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedUrlPatterns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedUrlPatterns" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodyContentFilteringAllowedUrlPatterns)
     ], UpdateNetworkGroupPolicyRequestBodyContentFiltering.prototype, "allowedUrlPatterns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blockedUrlCategories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blockedUrlCategories" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlCategories)
     ], UpdateNetworkGroupPolicyRequestBodyContentFiltering.prototype, "blockedUrlCategories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blockedUrlPatterns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blockedUrlPatterns" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodyContentFilteringBlockedUrlPatterns)
     ], UpdateNetworkGroupPolicyRequestBodyContentFiltering.prototype, "blockedUrlPatterns", void 0);
     return UpdateNetworkGroupPolicyRequestBodyContentFiltering;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodyContentFiltering };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodyContentFiltering = UpdateNetworkGroupPolicyRequestBodyContentFiltering;
 var UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL3FirewallRules = /** @class */ (function (_super) {
     __extends(UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL3FirewallRules, _super);
     function UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL3FirewallRules() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comment" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL3FirewallRules.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destCidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destCidr" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL3FirewallRules.prototype, "destCidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destPort" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL3FirewallRules.prototype, "destPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policy" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL3FirewallRules.prototype, "policy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL3FirewallRules.prototype, "protocol", void 0);
     return UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL3FirewallRules;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL3FirewallRules };
-export var UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesPolicyEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL3FirewallRules = UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL3FirewallRules;
+var UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesPolicyEnum;
 (function (UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesPolicyEnum) {
     UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesPolicyEnum["Deny"] = "deny";
-})(UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesPolicyEnum || (UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesPolicyEnum = {}));
-export var UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesTypeEnum;
+})(UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesPolicyEnum = exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesPolicyEnum || (exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesPolicyEnum = {}));
+var UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesTypeEnum;
 (function (UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesTypeEnum) {
     UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesTypeEnum["Application"] = "application";
     UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesTypeEnum["ApplicationCategory"] = "applicationCategory";
     UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesTypeEnum["Host"] = "host";
     UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesTypeEnum["Port"] = "port";
     UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesTypeEnum["IpRange"] = "ipRange";
-})(UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesTypeEnum || (UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesTypeEnum = {}));
+})(UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesTypeEnum = exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesTypeEnum || (exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRulesTypeEnum = {}));
 var UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRules = /** @class */ (function (_super) {
     __extends(UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRules, _super);
     function UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRules() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policy" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRules.prototype, "policy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRules.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRules.prototype, "value", void 0);
     return UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRules;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRules };
-export var UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingSettingsEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRules = UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRules;
+var UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingSettingsEnum;
 (function (UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingSettingsEnum) {
     UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingSettingsEnum["NetworkDefault"] = "network default";
     UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingSettingsEnum["Ignore"] = "ignore";
     UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingSettingsEnum["Custom"] = "custom";
-})(UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingSettingsEnum || (UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingSettingsEnum = {}));
-export var UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitionsTypeEnum;
+})(UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingSettingsEnum = exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingSettingsEnum || (exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingSettingsEnum = {}));
+var UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitionsTypeEnum;
 (function (UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitionsTypeEnum) {
     UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitionsTypeEnum["Application"] = "application";
     UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitionsTypeEnum["ApplicationCategory"] = "applicationCategory";
@@ -322,23 +325,23 @@ export var UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficSh
     UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitionsTypeEnum["Port"] = "port";
     UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitionsTypeEnum["IpRange"] = "ipRange";
     UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitionsTypeEnum["LocalNet"] = "localNet";
-})(UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitionsTypeEnum || (UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitionsTypeEnum = {}));
+})(UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitionsTypeEnum = exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitionsTypeEnum || (exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitionsTypeEnum = {}));
 var UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitions = /** @class */ (function (_super) {
     __extends(UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitions, _super);
     function UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitions.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitions.prototype, "value", void 0);
     return UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitions;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitions };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitions = UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitions;
 // UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimitsBandwidthLimits
 /**
  * The bandwidth limits object, specifying the upload ('limitUp') and download ('limitDown') speed in Kbps. These are only enforced if 'settings' is set to 'custom'.
@@ -349,16 +352,16 @@ var UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRu
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limitDown" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limitDown" }),
         __metadata("design:type", Number)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimitsBandwidthLimits.prototype, "limitDown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limitUp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limitUp" }),
         __metadata("design:type", Number)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimitsBandwidthLimits.prototype, "limitUp", void 0);
     return UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimitsBandwidthLimits;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimitsBandwidthLimits };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimitsBandwidthLimits = UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimitsBandwidthLimits;
 // UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimits
 /**
  *     An object describing the bandwidth settings for your rule.
@@ -370,44 +373,44 @@ var UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRu
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bandwidthLimits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bandwidthLimits" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimitsBandwidthLimits)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimits.prototype, "bandwidthLimits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimits.prototype, "settings", void 0);
     return UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimits;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimits };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimits = UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimits;
 var UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRules = /** @class */ (function (_super) {
     __extends(UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRules, _super);
     function UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRules() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=definitions", elemType: UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=definitions", elemType: UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesDefinitions }),
         __metadata("design:type", Array)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRules.prototype, "definitions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dscpTagValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dscpTagValue" }),
         __metadata("design:type", Number)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRules.prototype, "dscpTagValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pcpTagValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pcpTagValue" }),
         __metadata("design:type", Number)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRules.prototype, "pcpTagValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=perClientBandwidthLimits" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=perClientBandwidthLimits" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRulesPerClientBandwidthLimits)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRules.prototype, "perClientBandwidthLimits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=priority" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRules.prototype, "priority", void 0);
     return UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRules;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRules };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRules = UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRules;
 // UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShaping
 /**
  *     The firewall and traffic shaping rules and settings for your policy.
@@ -419,24 +422,24 @@ var UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShaping = /** @class */
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=l3FirewallRules", elemType: UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL3FirewallRules }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=l3FirewallRules", elemType: UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL3FirewallRules }),
         __metadata("design:type", Array)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShaping.prototype, "l3FirewallRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=l7FirewallRules", elemType: UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRules }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=l7FirewallRules", elemType: UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingL7FirewallRules }),
         __metadata("design:type", Array)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShaping.prototype, "l7FirewallRules", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShaping.prototype, "settings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trafficShapingRules", elemType: UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRules }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trafficShapingRules", elemType: UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShapingTrafficShapingRules }),
         __metadata("design:type", Array)
     ], UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShaping.prototype, "trafficShapingRules", void 0);
     return UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShaping;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShaping };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShaping = UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShaping;
 // UpdateNetworkGroupPolicyRequestBodySchedulingFriday
 /**
  * The schedule object for Friday.
@@ -447,20 +450,20 @@ var UpdateNetworkGroupPolicyRequestBodySchedulingFriday = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingFriday.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingFriday.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingFriday.prototype, "to", void 0);
     return UpdateNetworkGroupPolicyRequestBodySchedulingFriday;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodySchedulingFriday };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodySchedulingFriday = UpdateNetworkGroupPolicyRequestBodySchedulingFriday;
 // UpdateNetworkGroupPolicyRequestBodySchedulingMonday
 /**
  * The schedule object for Monday.
@@ -471,20 +474,20 @@ var UpdateNetworkGroupPolicyRequestBodySchedulingMonday = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingMonday.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingMonday.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingMonday.prototype, "to", void 0);
     return UpdateNetworkGroupPolicyRequestBodySchedulingMonday;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodySchedulingMonday };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodySchedulingMonday = UpdateNetworkGroupPolicyRequestBodySchedulingMonday;
 // UpdateNetworkGroupPolicyRequestBodySchedulingSaturday
 /**
  * The schedule object for Saturday.
@@ -495,20 +498,20 @@ var UpdateNetworkGroupPolicyRequestBodySchedulingSaturday = /** @class */ (funct
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingSaturday.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingSaturday.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingSaturday.prototype, "to", void 0);
     return UpdateNetworkGroupPolicyRequestBodySchedulingSaturday;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodySchedulingSaturday };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodySchedulingSaturday = UpdateNetworkGroupPolicyRequestBodySchedulingSaturday;
 // UpdateNetworkGroupPolicyRequestBodySchedulingSunday
 /**
  * The schedule object for Sunday.
@@ -519,20 +522,20 @@ var UpdateNetworkGroupPolicyRequestBodySchedulingSunday = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingSunday.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingSunday.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingSunday.prototype, "to", void 0);
     return UpdateNetworkGroupPolicyRequestBodySchedulingSunday;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodySchedulingSunday };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodySchedulingSunday = UpdateNetworkGroupPolicyRequestBodySchedulingSunday;
 // UpdateNetworkGroupPolicyRequestBodySchedulingThursday
 /**
  * The schedule object for Thursday.
@@ -543,20 +546,20 @@ var UpdateNetworkGroupPolicyRequestBodySchedulingThursday = /** @class */ (funct
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingThursday.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingThursday.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingThursday.prototype, "to", void 0);
     return UpdateNetworkGroupPolicyRequestBodySchedulingThursday;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodySchedulingThursday };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodySchedulingThursday = UpdateNetworkGroupPolicyRequestBodySchedulingThursday;
 // UpdateNetworkGroupPolicyRequestBodySchedulingTuesday
 /**
  * The schedule object for Tuesday.
@@ -567,20 +570,20 @@ var UpdateNetworkGroupPolicyRequestBodySchedulingTuesday = /** @class */ (functi
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingTuesday.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingTuesday.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingTuesday.prototype, "to", void 0);
     return UpdateNetworkGroupPolicyRequestBodySchedulingTuesday;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodySchedulingTuesday };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodySchedulingTuesday = UpdateNetworkGroupPolicyRequestBodySchedulingTuesday;
 // UpdateNetworkGroupPolicyRequestBodySchedulingWednesday
 /**
  * The schedule object for Wednesday.
@@ -591,20 +594,20 @@ var UpdateNetworkGroupPolicyRequestBodySchedulingWednesday = /** @class */ (func
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingWednesday.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=from" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingWednesday.prototype, "from", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=to" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodySchedulingWednesday.prototype, "to", void 0);
     return UpdateNetworkGroupPolicyRequestBodySchedulingWednesday;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodySchedulingWednesday };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodySchedulingWednesday = UpdateNetworkGroupPolicyRequestBodySchedulingWednesday;
 // UpdateNetworkGroupPolicyRequestBodyScheduling
 /**
  *     The schedule for the group policy. Schedules are applied to days of the week.
@@ -616,51 +619,51 @@ var UpdateNetworkGroupPolicyRequestBodyScheduling = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkGroupPolicyRequestBodyScheduling.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=friday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=friday" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodySchedulingFriday)
     ], UpdateNetworkGroupPolicyRequestBodyScheduling.prototype, "friday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monday" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodySchedulingMonday)
     ], UpdateNetworkGroupPolicyRequestBodyScheduling.prototype, "monday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=saturday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=saturday" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodySchedulingSaturday)
     ], UpdateNetworkGroupPolicyRequestBodyScheduling.prototype, "saturday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sunday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sunday" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodySchedulingSunday)
     ], UpdateNetworkGroupPolicyRequestBodyScheduling.prototype, "sunday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thursday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thursday" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodySchedulingThursday)
     ], UpdateNetworkGroupPolicyRequestBodyScheduling.prototype, "thursday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tuesday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tuesday" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodySchedulingTuesday)
     ], UpdateNetworkGroupPolicyRequestBodyScheduling.prototype, "tuesday", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wednesday" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wednesday" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodySchedulingWednesday)
     ], UpdateNetworkGroupPolicyRequestBodyScheduling.prototype, "wednesday", void 0);
     return UpdateNetworkGroupPolicyRequestBodyScheduling;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodyScheduling };
-export var UpdateNetworkGroupPolicyRequestBodySplashAuthSettingsEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodyScheduling = UpdateNetworkGroupPolicyRequestBodyScheduling;
+var UpdateNetworkGroupPolicyRequestBodySplashAuthSettingsEnum;
 (function (UpdateNetworkGroupPolicyRequestBodySplashAuthSettingsEnum) {
     UpdateNetworkGroupPolicyRequestBodySplashAuthSettingsEnum["NetworkDefault"] = "network default";
     UpdateNetworkGroupPolicyRequestBodySplashAuthSettingsEnum["Bypass"] = "bypass";
-})(UpdateNetworkGroupPolicyRequestBodySplashAuthSettingsEnum || (UpdateNetworkGroupPolicyRequestBodySplashAuthSettingsEnum = {}));
-export var UpdateNetworkGroupPolicyRequestBodyVlanTaggingSettingsEnum;
+})(UpdateNetworkGroupPolicyRequestBodySplashAuthSettingsEnum = exports.UpdateNetworkGroupPolicyRequestBodySplashAuthSettingsEnum || (exports.UpdateNetworkGroupPolicyRequestBodySplashAuthSettingsEnum = {}));
+var UpdateNetworkGroupPolicyRequestBodyVlanTaggingSettingsEnum;
 (function (UpdateNetworkGroupPolicyRequestBodyVlanTaggingSettingsEnum) {
     UpdateNetworkGroupPolicyRequestBodyVlanTaggingSettingsEnum["NetworkDefault"] = "network default";
     UpdateNetworkGroupPolicyRequestBodyVlanTaggingSettingsEnum["Ignore"] = "ignore";
     UpdateNetworkGroupPolicyRequestBodyVlanTaggingSettingsEnum["Custom"] = "custom";
-})(UpdateNetworkGroupPolicyRequestBodyVlanTaggingSettingsEnum || (UpdateNetworkGroupPolicyRequestBodyVlanTaggingSettingsEnum = {}));
+})(UpdateNetworkGroupPolicyRequestBodyVlanTaggingSettingsEnum = exports.UpdateNetworkGroupPolicyRequestBodyVlanTaggingSettingsEnum || (exports.UpdateNetworkGroupPolicyRequestBodyVlanTaggingSettingsEnum = {}));
 // UpdateNetworkGroupPolicyRequestBodyVlanTagging
 /**
  * The VLAN tagging settings for your group policy. Only available if your network has a wireless configuration.
@@ -671,89 +674,89 @@ var UpdateNetworkGroupPolicyRequestBodyVlanTagging = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyVlanTagging.prototype, "settings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlanId" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBodyVlanTagging.prototype, "vlanId", void 0);
     return UpdateNetworkGroupPolicyRequestBodyVlanTagging;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBodyVlanTagging };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBodyVlanTagging = UpdateNetworkGroupPolicyRequestBodyVlanTagging;
 var UpdateNetworkGroupPolicyRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkGroupPolicyRequestBody, _super);
     function UpdateNetworkGroupPolicyRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bandwidth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bandwidth" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodyBandwidth)
     ], UpdateNetworkGroupPolicyRequestBody.prototype, "bandwidth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bonjourForwarding" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bonjourForwarding" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodyBonjourForwarding)
     ], UpdateNetworkGroupPolicyRequestBody.prototype, "bonjourForwarding", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contentFiltering" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contentFiltering" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodyContentFiltering)
     ], UpdateNetworkGroupPolicyRequestBody.prototype, "contentFiltering", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firewallAndTrafficShaping" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firewallAndTrafficShaping" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodyFirewallAndTrafficShaping)
     ], UpdateNetworkGroupPolicyRequestBody.prototype, "firewallAndTrafficShaping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduling" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduling" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodyScheduling)
     ], UpdateNetworkGroupPolicyRequestBody.prototype, "scheduling", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=splashAuthSettings" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=splashAuthSettings" }),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyRequestBody.prototype, "splashAuthSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlanTagging" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlanTagging" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBodyVlanTagging)
     ], UpdateNetworkGroupPolicyRequestBody.prototype, "vlanTagging", void 0);
     return UpdateNetworkGroupPolicyRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequestBody = UpdateNetworkGroupPolicyRequestBody;
 var UpdateNetworkGroupPolicyRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkGroupPolicyRequest, _super);
     function UpdateNetworkGroupPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkGroupPolicyPathParams)
     ], UpdateNetworkGroupPolicyRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkGroupPolicyRequestBody)
     ], UpdateNetworkGroupPolicyRequest.prototype, "request", void 0);
     return UpdateNetworkGroupPolicyRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyRequest = UpdateNetworkGroupPolicyRequest;
 var UpdateNetworkGroupPolicyResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkGroupPolicyResponse, _super);
     function UpdateNetworkGroupPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkGroupPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkGroupPolicyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkGroupPolicyResponse.prototype, "updateNetworkGroupPolicy200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkGroupPolicyResponse.prototype, "updateNetworkGroupPolicy200ApplicationJSONObject", void 0);
     return UpdateNetworkGroupPolicyResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkGroupPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkGroupPolicyResponse = UpdateNetworkGroupPolicyResponse;

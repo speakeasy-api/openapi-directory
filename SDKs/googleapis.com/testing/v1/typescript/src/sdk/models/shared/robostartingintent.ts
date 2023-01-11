@@ -9,7 +9,7 @@ import { StartActivityIntent } from "./startactivityintent";
 **/
 export class RoboStartingIntent extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=launcherActivity" })
-  launcherActivity?: Map<string, any>;
+  launcherActivity?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=startActivity" })
   startActivity?: StartActivityIntent;

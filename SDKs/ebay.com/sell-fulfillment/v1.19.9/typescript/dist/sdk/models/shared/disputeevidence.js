@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileInfo } from "./fileinfo";
-import { OrderLineItems } from "./orderlineitems";
-import { TrackingInfo } from "./trackinginfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DisputeEvidence = void 0;
+var utils_1 = require("../../../internal/utils");
+var fileinfo_1 = require("./fileinfo");
+var orderlineitems_1 = require("./orderlineitems");
+var trackinginfo_1 = require("./trackinginfo");
 // DisputeEvidence
 /**
  * This type is used by the evidence array that is returned in the getPaymentDispute response if one or more evidential documents are associated with the payment dispute.
@@ -36,37 +39,37 @@ var DisputeEvidence = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evidenceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evidenceId" }),
         __metadata("design:type", String)
     ], DisputeEvidence.prototype, "evidenceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evidenceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evidenceType" }),
         __metadata("design:type", String)
     ], DisputeEvidence.prototype, "evidenceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=files", elemType: FileInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=files", elemType: fileinfo_1.FileInfo }),
         __metadata("design:type", Array)
     ], DisputeEvidence.prototype, "files", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineItems", elemType: OrderLineItems }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineItems", elemType: orderlineitems_1.OrderLineItems }),
         __metadata("design:type", Array)
     ], DisputeEvidence.prototype, "lineItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=providedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=providedDate" }),
         __metadata("design:type", String)
     ], DisputeEvidence.prototype, "providedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestDate" }),
         __metadata("design:type", String)
     ], DisputeEvidence.prototype, "requestDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=respondByDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=respondByDate" }),
         __metadata("design:type", String)
     ], DisputeEvidence.prototype, "respondByDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shipmentTracking", elemType: TrackingInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shipmentTracking", elemType: trackinginfo_1.TrackingInfo }),
         __metadata("design:type", Array)
     ], DisputeEvidence.prototype, "shipmentTracking", void 0);
     return DisputeEvidence;
-}(SpeakeasyBase));
-export { DisputeEvidence };
+}(utils_1.SpeakeasyBase));
+exports.DisputeEvidence = DisputeEvidence;

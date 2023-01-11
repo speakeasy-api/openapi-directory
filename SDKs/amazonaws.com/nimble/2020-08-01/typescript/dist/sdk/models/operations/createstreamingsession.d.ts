@@ -26,7 +26,7 @@ export declare class CreateStreamingSessionRequestBody extends SpeakeasyBase {
     launchProfileId?: string;
     ownedBy?: string;
     streamingImageId?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }
 export declare class CreateStreamingSessionRequest extends SpeakeasyBase {
     pathParams: CreateStreamingSessionPathParams;

@@ -35,7 +35,7 @@ export class GetEmployerJobsResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getEmployerJobs200ApplicationJsonBinaryString?: Uint8Array;
+  getEmployerJobs200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

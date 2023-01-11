@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AccessPreviewFinding } from "./accesspreviewfinding";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListAccessPreviewFindingsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var accesspreviewfinding_1 = require("./accesspreviewfinding");
 var ListAccessPreviewFindingsResponse = /** @class */ (function (_super) {
     __extends(ListAccessPreviewFindingsResponse, _super);
     function ListAccessPreviewFindingsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=findings", elemType: AccessPreviewFinding }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=findings", elemType: accesspreviewfinding_1.AccessPreviewFinding }),
         __metadata("design:type", Array)
     ], ListAccessPreviewFindingsResponse.prototype, "findings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListAccessPreviewFindingsResponse.prototype, "nextToken", void 0);
     return ListAccessPreviewFindingsResponse;
-}(SpeakeasyBase));
-export { ListAccessPreviewFindingsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListAccessPreviewFindingsResponse = ListAccessPreviewFindingsResponse;

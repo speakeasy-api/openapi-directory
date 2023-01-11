@@ -8,5 +8,5 @@ export declare class GetNetworkFloorPlansRequest extends SpeakeasyBase {
 export declare class GetNetworkFloorPlansResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkFloorPlans200ApplicationJsonObject?: Map<string, any>;
+    getNetworkFloorPlans200ApplicationJSONObject?: Record<string, any>;
 }

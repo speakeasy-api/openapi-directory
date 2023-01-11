@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActionTypeDeclaration } from "./actiontypedeclaration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateActionTypeInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var actiontypedeclaration_1 = require("./actiontypedeclaration");
 var UpdateActionTypeInput = /** @class */ (function (_super) {
     __extends(UpdateActionTypeInput, _super);
     function UpdateActionTypeInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionType" }),
-        __metadata("design:type", ActionTypeDeclaration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionType" }),
+        __metadata("design:type", actiontypedeclaration_1.ActionTypeDeclaration)
     ], UpdateActionTypeInput.prototype, "actionType", void 0);
     return UpdateActionTypeInput;
-}(SpeakeasyBase));
-export { UpdateActionTypeInput };
+}(utils_1.SpeakeasyBase));
+exports.UpdateActionTypeInput = UpdateActionTypeInput;

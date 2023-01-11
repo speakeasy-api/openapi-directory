@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2TransformationConfig } from "./googleprivacydlpv2transformationconfig";
-import { GooglePrivacyDlpV2TransformationDetailsStorageConfig } from "./googleprivacydlpv2transformationdetailsstorageconfig";
-export var GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2Deidentify = exports.GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2transformationconfig_1 = require("./googleprivacydlpv2transformationconfig");
+var googleprivacydlpv2transformationdetailsstorageconfig_1 = require("./googleprivacydlpv2transformationdetailsstorageconfig");
+var GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum;
 (function (GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum) {
     GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum["FileTypeUnspecified"] = "FILE_TYPE_UNSPECIFIED";
     GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum["BinaryFile"] = "BINARY_FILE";
@@ -38,7 +41,7 @@ export var GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum;
     GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum["Tsv"] = "TSV";
     GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum["Powerpoint"] = "POWERPOINT";
     GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum["Excel"] = "EXCEL";
-})(GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum || (GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum = {}));
+})(GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum = exports.GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum || (exports.GooglePrivacyDlpV2DeidentifyFileTypesToTransformEnum = {}));
 // GooglePrivacyDlpV2Deidentify
 /**
  * Create a de-identified copy of the requested table or files. A TransformationDetail will be created for each transformation. If any rows in BigQuery are skipped during de-identification (transformation errors or row size exceeds BigQuery insert API limits) they are placed in the failure output table. If the original row exceeds the BigQuery insert API limit it will be truncated when written to the failure output table. The failure output table can be set in the action.deidentify.output.big_query_output.deidentified_failure_output_table field, if no table is set, a table will be automatically created in the same project and dataset as the original table. Compatible with: Inspect
@@ -49,21 +52,21 @@ var GooglePrivacyDlpV2Deidentify = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudStorageOutput" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudStorageOutput" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2Deidentify.prototype, "cloudStorageOutput", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileTypesToTransform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileTypesToTransform" }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2Deidentify.prototype, "fileTypesToTransform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transformationConfig" }),
-        __metadata("design:type", GooglePrivacyDlpV2TransformationConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transformationConfig" }),
+        __metadata("design:type", googleprivacydlpv2transformationconfig_1.GooglePrivacyDlpV2TransformationConfig)
     ], GooglePrivacyDlpV2Deidentify.prototype, "transformationConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transformationDetailsStorageConfig" }),
-        __metadata("design:type", GooglePrivacyDlpV2TransformationDetailsStorageConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transformationDetailsStorageConfig" }),
+        __metadata("design:type", googleprivacydlpv2transformationdetailsstorageconfig_1.GooglePrivacyDlpV2TransformationDetailsStorageConfig)
     ], GooglePrivacyDlpV2Deidentify.prototype, "transformationDetailsStorageConfig", void 0);
     return GooglePrivacyDlpV2Deidentify;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2Deidentify };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2Deidentify = GooglePrivacyDlpV2Deidentify;

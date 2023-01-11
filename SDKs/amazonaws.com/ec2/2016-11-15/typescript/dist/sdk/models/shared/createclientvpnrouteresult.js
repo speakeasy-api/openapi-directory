@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientVpnRouteStatus } from "./clientvpnroutestatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateClientVpnRouteResult = exports.CreateClientVpnRouteResultStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+// CreateClientVpnRouteResultStatus
+/**
+ * The current state of the route.
+**/
+var CreateClientVpnRouteResultStatus = /** @class */ (function (_super) {
+    __extends(CreateClientVpnRouteResultStatus, _super);
+    function CreateClientVpnRouteResultStatus() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateClientVpnRouteResultStatus.prototype, "code", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CreateClientVpnRouteResultStatus.prototype, "message", void 0);
+    return CreateClientVpnRouteResultStatus;
+}(utils_1.SpeakeasyBase));
+exports.CreateClientVpnRouteResultStatus = CreateClientVpnRouteResultStatus;
 var CreateClientVpnRouteResult = /** @class */ (function (_super) {
     __extends(CreateClientVpnRouteResult, _super);
     function CreateClientVpnRouteResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ClientVpnRouteStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", CreateClientVpnRouteResultStatus)
     ], CreateClientVpnRouteResult.prototype, "status", void 0);
     return CreateClientVpnRouteResult;
-}(SpeakeasyBase));
-export { CreateClientVpnRouteResult };
+}(utils_1.SpeakeasyBase));
+exports.CreateClientVpnRouteResult = CreateClientVpnRouteResult;

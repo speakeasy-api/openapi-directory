@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetXdbsDiffUsingGetResponse = exports.GetXdbsDiffUsingGetRequest = exports.GetXdbsDiffUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetXdbsDiffUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetXdbsDiffUsingGetPathParams, _super);
     function GetXdbsDiffUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateFromYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateFromYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetXdbsDiffUsingGetPathParams.prototype, "dateFromYyyymmdd", void 0);
+    ], GetXdbsDiffUsingGetPathParams.prototype, "dateFromYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateToYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateToYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetXdbsDiffUsingGetPathParams.prototype, "dateToYyyymmdd", void 0);
+    ], GetXdbsDiffUsingGetPathParams.prototype, "dateToYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
         __metadata("design:type", Number)
     ], GetXdbsDiffUsingGetPathParams.prototype, "speciesTypeKey", void 0);
     return GetXdbsDiffUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetXdbsDiffUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetXdbsDiffUsingGetPathParams = GetXdbsDiffUsingGetPathParams;
 var GetXdbsDiffUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetXdbsDiffUsingGetRequest, _super);
     function GetXdbsDiffUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetXdbsDiffUsingGetPathParams)
     ], GetXdbsDiffUsingGetRequest.prototype, "pathParams", void 0);
     return GetXdbsDiffUsingGetRequest;
-}(SpeakeasyBase));
-export { GetXdbsDiffUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetXdbsDiffUsingGetRequest = GetXdbsDiffUsingGetRequest;
 var GetXdbsDiffUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetXdbsDiffUsingGetResponse, _super);
     function GetXdbsDiffUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetXdbsDiffUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetXdbsDiffUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetXdbsDiffUsingGetResponse.prototype, "statusCode", void 0);
     return GetXdbsDiffUsingGetResponse;
-}(SpeakeasyBase));
-export { GetXdbsDiffUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetXdbsDiffUsingGetResponse = GetXdbsDiffUsingGetResponse;

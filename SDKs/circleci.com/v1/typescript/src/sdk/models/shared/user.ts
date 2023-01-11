@@ -61,7 +61,7 @@ export class User extends SpeakeasyBase {
   name?: string;
 
   @SpeakeasyMetadata({ data: "json, name=organization_prefs" })
-  organizationPrefs?: Map<string, any>;
+  organizationPrefs?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=parallelism" })
   parallelism?: number;
@@ -70,7 +70,7 @@ export class User extends SpeakeasyBase {
   plan?: string;
 
   @SpeakeasyMetadata({ data: "json, name=projects" })
-  projects?: Map<string, any>;
+  projects?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=pusher_id" })
   pusherId?: string;

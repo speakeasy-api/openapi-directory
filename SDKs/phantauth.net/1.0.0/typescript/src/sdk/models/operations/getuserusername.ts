@@ -122,8 +122,8 @@ export class GetUserUsernameResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getUserUsername200ApplicationJsonObject?: GetUserUsername200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getUserUsername200ApplicationJSONObject?: GetUserUsername200ApplicationJson;
 }

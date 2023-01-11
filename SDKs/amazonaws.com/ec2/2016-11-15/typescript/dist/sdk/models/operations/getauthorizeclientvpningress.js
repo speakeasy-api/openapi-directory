@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,128 +23,130 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetAuthorizeClientVpnIngressActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAuthorizeClientVpnIngressResponse = exports.GetAuthorizeClientVpnIngressRequest = exports.GetAuthorizeClientVpnIngressHeaders = exports.GetAuthorizeClientVpnIngressQueryParams = exports.GetAuthorizeClientVpnIngressVersionEnum = exports.GetAuthorizeClientVpnIngressActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetAuthorizeClientVpnIngressActionEnum;
 (function (GetAuthorizeClientVpnIngressActionEnum) {
     GetAuthorizeClientVpnIngressActionEnum["AuthorizeClientVpnIngress"] = "AuthorizeClientVpnIngress";
-})(GetAuthorizeClientVpnIngressActionEnum || (GetAuthorizeClientVpnIngressActionEnum = {}));
-export var GetAuthorizeClientVpnIngressVersionEnum;
+})(GetAuthorizeClientVpnIngressActionEnum = exports.GetAuthorizeClientVpnIngressActionEnum || (exports.GetAuthorizeClientVpnIngressActionEnum = {}));
+var GetAuthorizeClientVpnIngressVersionEnum;
 (function (GetAuthorizeClientVpnIngressVersionEnum) {
     GetAuthorizeClientVpnIngressVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetAuthorizeClientVpnIngressVersionEnum || (GetAuthorizeClientVpnIngressVersionEnum = {}));
+})(GetAuthorizeClientVpnIngressVersionEnum = exports.GetAuthorizeClientVpnIngressVersionEnum || (exports.GetAuthorizeClientVpnIngressVersionEnum = {}));
 var GetAuthorizeClientVpnIngressQueryParams = /** @class */ (function (_super) {
     __extends(GetAuthorizeClientVpnIngressQueryParams, _super);
     function GetAuthorizeClientVpnIngressQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AccessGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AccessGroupId" }),
         __metadata("design:type", String)
     ], GetAuthorizeClientVpnIngressQueryParams.prototype, "accessGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetAuthorizeClientVpnIngressQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AuthorizeAllGroups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AuthorizeAllGroups" }),
         __metadata("design:type", Boolean)
     ], GetAuthorizeClientVpnIngressQueryParams.prototype, "authorizeAllGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ClientToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ClientToken" }),
         __metadata("design:type", String)
     ], GetAuthorizeClientVpnIngressQueryParams.prototype, "clientToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ClientVpnEndpointId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ClientVpnEndpointId" }),
         __metadata("design:type", String)
     ], GetAuthorizeClientVpnIngressQueryParams.prototype, "clientVpnEndpointId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Description" }),
         __metadata("design:type", String)
     ], GetAuthorizeClientVpnIngressQueryParams.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetAuthorizeClientVpnIngressQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=TargetNetworkCidr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=TargetNetworkCidr" }),
         __metadata("design:type", String)
     ], GetAuthorizeClientVpnIngressQueryParams.prototype, "targetNetworkCidr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetAuthorizeClientVpnIngressQueryParams.prototype, "version", void 0);
     return GetAuthorizeClientVpnIngressQueryParams;
-}(SpeakeasyBase));
-export { GetAuthorizeClientVpnIngressQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAuthorizeClientVpnIngressQueryParams = GetAuthorizeClientVpnIngressQueryParams;
 var GetAuthorizeClientVpnIngressHeaders = /** @class */ (function (_super) {
     __extends(GetAuthorizeClientVpnIngressHeaders, _super);
     function GetAuthorizeClientVpnIngressHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetAuthorizeClientVpnIngressHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetAuthorizeClientVpnIngressHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetAuthorizeClientVpnIngressHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetAuthorizeClientVpnIngressHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetAuthorizeClientVpnIngressHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetAuthorizeClientVpnIngressHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetAuthorizeClientVpnIngressHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetAuthorizeClientVpnIngressHeaders;
-}(SpeakeasyBase));
-export { GetAuthorizeClientVpnIngressHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetAuthorizeClientVpnIngressHeaders = GetAuthorizeClientVpnIngressHeaders;
 var GetAuthorizeClientVpnIngressRequest = /** @class */ (function (_super) {
     __extends(GetAuthorizeClientVpnIngressRequest, _super);
     function GetAuthorizeClientVpnIngressRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAuthorizeClientVpnIngressQueryParams)
     ], GetAuthorizeClientVpnIngressRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAuthorizeClientVpnIngressHeaders)
     ], GetAuthorizeClientVpnIngressRequest.prototype, "headers", void 0);
     return GetAuthorizeClientVpnIngressRequest;
-}(SpeakeasyBase));
-export { GetAuthorizeClientVpnIngressRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAuthorizeClientVpnIngressRequest = GetAuthorizeClientVpnIngressRequest;
 var GetAuthorizeClientVpnIngressResponse = /** @class */ (function (_super) {
     __extends(GetAuthorizeClientVpnIngressResponse, _super);
     function GetAuthorizeClientVpnIngressResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetAuthorizeClientVpnIngressResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAuthorizeClientVpnIngressResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAuthorizeClientVpnIngressResponse.prototype, "statusCode", void 0);
     return GetAuthorizeClientVpnIngressResponse;
-}(SpeakeasyBase));
-export { GetAuthorizeClientVpnIngressResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAuthorizeClientVpnIngressResponse = GetAuthorizeClientVpnIngressResponse;

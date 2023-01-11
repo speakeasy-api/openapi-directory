@@ -18,7 +18,7 @@ export declare class AcceptPageRequest extends SpeakeasyBase {
     request: shared.AcceptPageRequest;
 }
 export declare class AcceptPageResponse extends SpeakeasyBase {
-    acceptPageResult?: Map<string, any>;
+    acceptPageResult?: Record<string, any>;
     accessDeniedException?: any;
     contentType: string;
     internalServerException?: any;

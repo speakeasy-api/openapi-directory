@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var CancelBookingResponseReasonEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CancelBookingResponse = exports.CancelBookingResponseStatusEnum = exports.CancelBookingResponseReasonEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CancelBookingResponseReasonEnum;
 (function (CancelBookingResponseReasonEnum) {
     CancelBookingResponseReasonEnum["AlreadyCancelled"] = "ALREADY_CANCELLED";
     CancelBookingResponseReasonEnum["NotCancellable"] = "NOT_CANCELLABLE";
-})(CancelBookingResponseReasonEnum || (CancelBookingResponseReasonEnum = {}));
-export var CancelBookingResponseStatusEnum;
+})(CancelBookingResponseReasonEnum = exports.CancelBookingResponseReasonEnum || (exports.CancelBookingResponseReasonEnum = {}));
+var CancelBookingResponseStatusEnum;
 (function (CancelBookingResponseStatusEnum) {
     CancelBookingResponseStatusEnum["Accepted"] = "ACCEPTED";
     CancelBookingResponseStatusEnum["Declined"] = "DECLINED";
-})(CancelBookingResponseStatusEnum || (CancelBookingResponseStatusEnum = {}));
+})(CancelBookingResponseStatusEnum = exports.CancelBookingResponseStatusEnum || (exports.CancelBookingResponseStatusEnum = {}));
 var CancelBookingResponse = /** @class */ (function (_super) {
     __extends(CancelBookingResponse, _super);
     function CancelBookingResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingId" }),
         __metadata("design:type", String)
     ], CancelBookingResponse.prototype, "bookingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], CancelBookingResponse.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], CancelBookingResponse.prototype, "status", void 0);
     return CancelBookingResponse;
-}(SpeakeasyBase));
-export { CancelBookingResponse };
+}(utils_1.SpeakeasyBase));
+exports.CancelBookingResponse = CancelBookingResponse;

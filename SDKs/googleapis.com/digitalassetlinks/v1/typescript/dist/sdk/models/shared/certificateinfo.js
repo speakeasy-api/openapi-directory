@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CertificateInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // CertificateInfo
 /**
  * Describes an X509 certificate.
@@ -33,9 +36,9 @@ var CertificateInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha256Fingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha256Fingerprint" }),
         __metadata("design:type", String)
     ], CertificateInfo.prototype, "sha256Fingerprint", void 0);
     return CertificateInfo;
-}(SpeakeasyBase));
-export { CertificateInfo };
+}(utils_1.SpeakeasyBase));
+exports.CertificateInfo = CertificateInfo;

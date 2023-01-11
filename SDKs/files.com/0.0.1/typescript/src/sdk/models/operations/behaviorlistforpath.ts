@@ -17,22 +17,22 @@ export class BehaviorListForPathQueryParams extends SpeakeasyBase {
   cursor?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" })
-  filter?: Map<string, any>;
+  filter?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter_gt" })
-  filterGt?: Map<string, any>;
+  filterGt?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter_gteq" })
-  filterGteq?: Map<string, any>;
+  filterGteq?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter_like" })
-  filterLike?: Map<string, any>;
+  filterLike?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter_lt" })
-  filterLt?: Map<string, any>;
+  filterLt?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter_lteq" })
-  filterLteq?: Map<string, any>;
+  filterLteq?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" })
   perPage?: number;
@@ -41,7 +41,7 @@ export class BehaviorListForPathQueryParams extends SpeakeasyBase {
   recursive?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort_by" })
-  sortBy?: Map<string, any>;
+  sortBy?: Record<string, any>;
 }
 
 

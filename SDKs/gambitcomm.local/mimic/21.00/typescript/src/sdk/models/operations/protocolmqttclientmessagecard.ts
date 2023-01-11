@@ -22,5 +22,5 @@ export class ProtocolMqttClientMessageCardResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolMqttClientMessageCard200ApplicationJsonInt32Integers?: number[];
+  protocolMqttClientMessageCard200ApplicationJSONInt32Integers?: number[];
 }

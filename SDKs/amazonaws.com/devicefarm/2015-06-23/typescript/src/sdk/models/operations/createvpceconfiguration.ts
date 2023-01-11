@@ -51,7 +51,7 @@ export class CreateVpceConfigurationResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createVpceConfigurationResult?: shared.CreateVpceConfigurationResult;
+  createVPCEConfigurationResult?: shared.CreateVpceConfigurationResult;
 
   @SpeakeasyMetadata()
   limitExceededException?: any;

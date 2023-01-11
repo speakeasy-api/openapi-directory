@@ -34,7 +34,7 @@ export class StorageDescriptor extends SpeakeasyBase {
   outputFormat?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Parameters" })
-  parameters?: Map<string, string>;
+  parameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=SchemaReference" })
   schemaReference?: SchemaReference;

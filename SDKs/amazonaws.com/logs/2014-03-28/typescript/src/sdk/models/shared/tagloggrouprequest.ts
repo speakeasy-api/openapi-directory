@@ -7,5 +7,5 @@ export class TagLogGroupRequest extends SpeakeasyBase {
   logGroupName: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags: Map<string, string>;
+  tags: Record<string, string>;
 }

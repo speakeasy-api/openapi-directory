@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AppEntityAppTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppEntity = exports.AppEntitySsoStrategyTypeEnum = exports.AppEntityRemoteServerTypeEnum = exports.AppEntityFolderBehaviorTypeEnum = exports.AppEntityAppTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AppEntityAppTypeEnum;
 (function (AppEntityAppTypeEnum) {
     AppEntityAppTypeEnum["Sdk"] = "sdk";
     AppEntityAppTypeEnum["Sso"] = "sso";
@@ -31,8 +34,8 @@ export var AppEntityAppTypeEnum;
     AppEntityAppTypeEnum["FolderBehavior"] = "folder_behavior";
     AppEntityAppTypeEnum["ClientApp"] = "client_app";
     AppEntityAppTypeEnum["AppIntegration"] = "app_integration";
-})(AppEntityAppTypeEnum || (AppEntityAppTypeEnum = {}));
-export var AppEntityFolderBehaviorTypeEnum;
+})(AppEntityAppTypeEnum = exports.AppEntityAppTypeEnum || (exports.AppEntityAppTypeEnum = {}));
+var AppEntityFolderBehaviorTypeEnum;
 (function (AppEntityFolderBehaviorTypeEnum) {
     AppEntityFolderBehaviorTypeEnum["Webhook"] = "webhook";
     AppEntityFolderBehaviorTypeEnum["FileExpiration"] = "file_expiration";
@@ -50,8 +53,8 @@ export var AppEntityFolderBehaviorTypeEnum;
     AppEntityFolderBehaviorTypeEnum["Watermark"] = "watermark";
     AppEntityFolderBehaviorTypeEnum["RemoteServerMount"] = "remote_server_mount";
     AppEntityFolderBehaviorTypeEnum["SlackWebhook"] = "slack_webhook";
-})(AppEntityFolderBehaviorTypeEnum || (AppEntityFolderBehaviorTypeEnum = {}));
-export var AppEntityRemoteServerTypeEnum;
+})(AppEntityFolderBehaviorTypeEnum = exports.AppEntityFolderBehaviorTypeEnum || (exports.AppEntityFolderBehaviorTypeEnum = {}));
+var AppEntityRemoteServerTypeEnum;
 (function (AppEntityRemoteServerTypeEnum) {
     AppEntityRemoteServerTypeEnum["Ftp"] = "ftp";
     AppEntityRemoteServerTypeEnum["Sftp"] = "sftp";
@@ -68,8 +71,8 @@ export var AppEntityRemoteServerTypeEnum;
     AppEntityRemoteServerTypeEnum["Azure"] = "azure";
     AppEntityRemoteServerTypeEnum["Sharepoint"] = "sharepoint";
     AppEntityRemoteServerTypeEnum["S3Compatible"] = "s3_compatible";
-})(AppEntityRemoteServerTypeEnum || (AppEntityRemoteServerTypeEnum = {}));
-export var AppEntitySsoStrategyTypeEnum;
+})(AppEntityRemoteServerTypeEnum = exports.AppEntityRemoteServerTypeEnum || (exports.AppEntityRemoteServerTypeEnum = {}));
+var AppEntitySsoStrategyTypeEnum;
 (function (AppEntitySsoStrategyTypeEnum) {
     AppEntitySsoStrategyTypeEnum["Google"] = "google";
     AppEntitySsoStrategyTypeEnum["Auth0"] = "auth0";
@@ -85,7 +88,7 @@ export var AppEntitySsoStrategyTypeEnum;
     AppEntitySsoStrategyTypeEnum["Idaptive"] = "idaptive";
     AppEntitySsoStrategyTypeEnum["Ldap"] = "ldap";
     AppEntitySsoStrategyTypeEnum["Scim"] = "scim";
-})(AppEntitySsoStrategyTypeEnum || (AppEntitySsoStrategyTypeEnum = {}));
+})(AppEntitySsoStrategyTypeEnum = exports.AppEntitySsoStrategyTypeEnum || (exports.AppEntitySsoStrategyTypeEnum = {}));
 // AppEntity
 /**
  * List Apps
@@ -96,69 +99,69 @@ var AppEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=app_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=app_type" }),
         __metadata("design:type", String)
     ], AppEntity.prototype, "appType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=documentation_links" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=documentation_links" }),
         __metadata("design:type", String)
     ], AppEntity.prototype, "documentationLinks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extended_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extended_description" }),
         __metadata("design:type", String)
     ], AppEntity.prototype, "extendedDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=external_homepage_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=external_homepage_url" }),
         __metadata("design:type", String)
     ], AppEntity.prototype, "externalHomepageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=featured" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=featured" }),
         __metadata("design:type", Boolean)
     ], AppEntity.prototype, "featured", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=folder_behavior_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=folder_behavior_type" }),
         __metadata("design:type", String)
     ], AppEntity.prototype, "folderBehaviorType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=icon_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=icon_url" }),
         __metadata("design:type", String)
     ], AppEntity.prototype, "iconUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logo_thumbnail_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logo_thumbnail_url" }),
         __metadata("design:type", String)
     ], AppEntity.prototype, "logoThumbnailUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logo_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logo_url" }),
         __metadata("design:type", String)
     ], AppEntity.prototype, "logoUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marketing_youtube_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketing_youtube_url" }),
         __metadata("design:type", String)
     ], AppEntity.prototype, "marketingYoutubeUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AppEntity.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remote_server_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remote_server_type" }),
         __metadata("design:type", String)
     ], AppEntity.prototype, "remoteServerType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenshot_list_urls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenshot_list_urls" }),
         __metadata("design:type", String)
     ], AppEntity.prototype, "screenshotListUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=short_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=short_description" }),
         __metadata("design:type", String)
     ], AppEntity.prototype, "shortDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sso_strategy_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sso_strategy_type" }),
         __metadata("design:type", String)
     ], AppEntity.prototype, "ssoStrategyType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tutorial_youtube_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tutorial_youtube_url" }),
         __metadata("design:type", String)
     ], AppEntity.prototype, "tutorialYoutubeUrl", void 0);
     return AppEntity;
-}(SpeakeasyBase));
-export { AppEntity };
+}(utils_1.SpeakeasyBase));
+exports.AppEntity = AppEntity;

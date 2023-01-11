@@ -17,6 +17,6 @@ export declare class GetDistrictEventsSimpleRequest extends SpeakeasyBase {
 export declare class GetDistrictEventsSimpleResponse extends SpeakeasyBase {
     contentType: string;
     eventSimples?: shared.EventSimple[];
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

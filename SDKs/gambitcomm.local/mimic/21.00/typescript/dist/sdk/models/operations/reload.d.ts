@@ -8,5 +8,5 @@ export declare class ReloadRequest extends SpeakeasyBase {
 export declare class ReloadResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    reload200ApplicationJsonString?: string;
+    reload200ApplicationJSONString?: string;
 }

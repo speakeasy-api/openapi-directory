@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,38 +23,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LocationsEmbeddedObject } from "./locationsembeddedobject";
-import { Links } from "./links";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocationsHalResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var locationsembeddedobject_1 = require("./locationsembeddedobject");
+var links_1 = require("./links");
 var LocationsHalResponse = /** @class */ (function (_super) {
     __extends(LocationsHalResponse, _super);
     function LocationsHalResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_embedded" }),
-        __metadata("design:type", LocationsEmbeddedObject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_embedded" }),
+        __metadata("design:type", locationsembeddedobject_1.LocationsEmbeddedObject)
     ], LocationsHalResponse.prototype, "embedded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_links" }),
-        __metadata("design:type", Links)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_links" }),
+        __metadata("design:type", links_1.Links)
     ], LocationsHalResponse.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", Number)
     ], LocationsHalResponse.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page_size" }),
         __metadata("design:type", Number)
     ], LocationsHalResponse.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_items" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_items" }),
         __metadata("design:type", Number)
     ], LocationsHalResponse.prototype, "totalItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_pages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_pages" }),
         __metadata("design:type", Number)
     ], LocationsHalResponse.prototype, "totalPages", void 0);
     return LocationsHalResponse;
-}(SpeakeasyBase));
-export { LocationsHalResponse };
+}(utils_1.SpeakeasyBase));
+exports.LocationsHalResponse = LocationsHalResponse;

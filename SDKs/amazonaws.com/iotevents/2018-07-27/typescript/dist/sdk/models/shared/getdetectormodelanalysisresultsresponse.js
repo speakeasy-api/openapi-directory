@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AnalysisResult } from "./analysisresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDetectorModelAnalysisResultsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var analysisresult_1 = require("./analysisresult");
 var GetDetectorModelAnalysisResultsResponse = /** @class */ (function (_super) {
     __extends(GetDetectorModelAnalysisResultsResponse, _super);
     function GetDetectorModelAnalysisResultsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=analysisResults", elemType: AnalysisResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=analysisResults", elemType: analysisresult_1.AnalysisResult }),
         __metadata("design:type", Array)
     ], GetDetectorModelAnalysisResultsResponse.prototype, "analysisResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], GetDetectorModelAnalysisResultsResponse.prototype, "nextToken", void 0);
     return GetDetectorModelAnalysisResultsResponse;
-}(SpeakeasyBase));
-export { GetDetectorModelAnalysisResultsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDetectorModelAnalysisResultsResponse = GetDetectorModelAnalysisResultsResponse;

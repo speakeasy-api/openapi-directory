@@ -20,19 +20,19 @@ export class PostAdminRequestsCountRequestBody extends SpeakeasyBase {
   basicAuthCredentials?: PostAdminRequestsCountRequestBodyBasicAuthCredentials;
 
   @SpeakeasyMetadata({ data: "json, name=bodyPatterns" })
-  bodyPatterns?: Map<string, any>[];
+  bodyPatterns?: Record<string, any>[];
 
   @SpeakeasyMetadata({ data: "json, name=cookies" })
-  cookies?: Map<string, any>;
+  cookies?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=headers" })
-  headers?: Map<string, any>;
+  headers?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=method" })
   method?: string;
 
   @SpeakeasyMetadata({ data: "json, name=queryParameters" })
-  queryParameters?: Map<string, any>;
+  queryParameters?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=url" })
   url?: string;
@@ -65,8 +65,8 @@ export class PostAdminRequestsCountResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postAdminRequestsCount200ApplicationJsonObject?: PostAdminRequestsCount200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postAdminRequestsCount200ApplicationJSONObject?: PostAdminRequestsCount200ApplicationJson;
 }

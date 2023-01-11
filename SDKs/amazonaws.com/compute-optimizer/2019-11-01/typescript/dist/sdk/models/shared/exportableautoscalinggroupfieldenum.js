@@ -1,4 +1,7 @@
-export var ExportableAutoScalingGroupFieldEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExportableAutoScalingGroupFieldEnum = void 0;
+var ExportableAutoScalingGroupFieldEnum;
 (function (ExportableAutoScalingGroupFieldEnum) {
     ExportableAutoScalingGroupFieldEnum["AccountId"] = "AccountId";
     ExportableAutoScalingGroupFieldEnum["AutoScalingGroupArn"] = "AutoScalingGroupArn";
@@ -45,4 +48,4 @@ export var ExportableAutoScalingGroupFieldEnum;
     ExportableAutoScalingGroupFieldEnum["RecommendationOptionsStorage"] = "RecommendationOptionsStorage";
     ExportableAutoScalingGroupFieldEnum["RecommendationOptionsNetwork"] = "RecommendationOptionsNetwork";
     ExportableAutoScalingGroupFieldEnum["LastRefreshTimestamp"] = "LastRefreshTimestamp";
-})(ExportableAutoScalingGroupFieldEnum || (ExportableAutoScalingGroupFieldEnum = {}));
+})(ExportableAutoScalingGroupFieldEnum = exports.ExportableAutoScalingGroupFieldEnum || (exports.ExportableAutoScalingGroupFieldEnum = {}));

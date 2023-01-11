@@ -9,5 +9,5 @@ export declare class GetRepositoryPipelineConfigRequest extends SpeakeasyBase {
 export declare class GetRepositoryPipelineConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    pipelinesConfig?: Map<string, any>;
+    pipelinesConfig?: Record<string, any>;
 }

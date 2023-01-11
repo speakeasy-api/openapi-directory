@@ -1,4 +1,7 @@
-export var IndexFieldTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IndexFieldTypeEnum = void 0;
+var IndexFieldTypeEnum;
 (function (IndexFieldTypeEnum) {
     IndexFieldTypeEnum["Int"] = "int";
     IndexFieldTypeEnum["Double"] = "double";
@@ -11,4 +14,4 @@ export var IndexFieldTypeEnum;
     IndexFieldTypeEnum["LiteralArray"] = "literal-array";
     IndexFieldTypeEnum["TextArray"] = "text-array";
     IndexFieldTypeEnum["DateArray"] = "date-array";
-})(IndexFieldTypeEnum || (IndexFieldTypeEnum = {}));
+})(IndexFieldTypeEnum = exports.IndexFieldTypeEnum || (exports.IndexFieldTypeEnum = {}));

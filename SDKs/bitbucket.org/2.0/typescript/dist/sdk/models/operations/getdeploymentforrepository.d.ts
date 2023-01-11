@@ -10,6 +10,6 @@ export declare class GetDeploymentForRepositoryRequest extends SpeakeasyBase {
 export declare class GetDeploymentForRepositoryResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deployment?: Map<string, any>;
-    error?: Map<string, any>;
+    deployment?: Record<string, any>;
+    error?: Record<string, any>;
 }

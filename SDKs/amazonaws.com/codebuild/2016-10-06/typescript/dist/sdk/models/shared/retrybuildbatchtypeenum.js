@@ -1,5 +1,8 @@
-export var RetryBuildBatchTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RetryBuildBatchTypeEnum = void 0;
+var RetryBuildBatchTypeEnum;
 (function (RetryBuildBatchTypeEnum) {
     RetryBuildBatchTypeEnum["RetryAllBuilds"] = "RETRY_ALL_BUILDS";
     RetryBuildBatchTypeEnum["RetryFailedBuilds"] = "RETRY_FAILED_BUILDS";
-})(RetryBuildBatchTypeEnum || (RetryBuildBatchTypeEnum = {}));
+})(RetryBuildBatchTypeEnum = exports.RetryBuildBatchTypeEnum || (exports.RetryBuildBatchTypeEnum = {}));

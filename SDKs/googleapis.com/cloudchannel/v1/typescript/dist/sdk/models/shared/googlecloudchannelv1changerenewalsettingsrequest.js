@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1RenewalSettings } from "./googlecloudchannelv1renewalsettings";
-// GoogleCloudChannelV1ChangeRenewalSettingsRequest
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1ChangeRenewalSettingsRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1renewalsettings_1 = require("./googlecloudchannelv1renewalsettings");
+// GoogleCloudChannelV1ChangeRenewalSettingsRequestInput
 /**
  * Request message for CloudChannelService.ChangeRenewalSettings.
 **/
-var GoogleCloudChannelV1ChangeRenewalSettingsRequest = /** @class */ (function (_super) {
-    __extends(GoogleCloudChannelV1ChangeRenewalSettingsRequest, _super);
-    function GoogleCloudChannelV1ChangeRenewalSettingsRequest() {
+var GoogleCloudChannelV1ChangeRenewalSettingsRequestInput = /** @class */ (function (_super) {
+    __extends(GoogleCloudChannelV1ChangeRenewalSettingsRequestInput, _super);
+    function GoogleCloudChannelV1ChangeRenewalSettingsRequestInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=renewalSettings" }),
-        __metadata("design:type", GoogleCloudChannelV1RenewalSettings)
-    ], GoogleCloudChannelV1ChangeRenewalSettingsRequest.prototype, "renewalSettings", void 0);
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=renewalSettings" }),
+        __metadata("design:type", googlecloudchannelv1renewalsettings_1.GoogleCloudChannelV1RenewalSettingsInput)
+    ], GoogleCloudChannelV1ChangeRenewalSettingsRequestInput.prototype, "renewalSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
-    ], GoogleCloudChannelV1ChangeRenewalSettingsRequest.prototype, "requestId", void 0);
-    return GoogleCloudChannelV1ChangeRenewalSettingsRequest;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1ChangeRenewalSettingsRequest };
+    ], GoogleCloudChannelV1ChangeRenewalSettingsRequestInput.prototype, "requestId", void 0);
+    return GoogleCloudChannelV1ChangeRenewalSettingsRequestInput;
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1ChangeRenewalSettingsRequestInput = GoogleCloudChannelV1ChangeRenewalSettingsRequestInput;

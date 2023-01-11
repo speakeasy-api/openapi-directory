@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,75 +23,77 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActiveContext } from "./activecontext";
-import { PredictedIntent } from "./predictedintent";
-import { DialogStateEnum } from "./dialogstateenum";
-import { MessageFormatTypeEnum } from "./messageformattypeenum";
-import { IntentConfidence } from "./intentconfidence";
-import { ResponseCard } from "./responsecard";
-import { SentimentResponse } from "./sentimentresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostTextResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var activecontext_1 = require("./activecontext");
+var predictedintent_1 = require("./predictedintent");
+var dialogstateenum_1 = require("./dialogstateenum");
+var messageformattypeenum_1 = require("./messageformattypeenum");
+var intentconfidence_1 = require("./intentconfidence");
+var responsecard_1 = require("./responsecard");
+var sentimentresponse_1 = require("./sentimentresponse");
 var PostTextResponse = /** @class */ (function (_super) {
     __extends(PostTextResponse, _super);
     function PostTextResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activeContexts", elemType: ActiveContext }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activeContexts", elemType: activecontext_1.ActiveContext }),
         __metadata("design:type", Array)
     ], PostTextResponse.prototype, "activeContexts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alternativeIntents", elemType: PredictedIntent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alternativeIntents", elemType: predictedintent_1.PredictedIntent }),
         __metadata("design:type", Array)
     ], PostTextResponse.prototype, "alternativeIntents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=botVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=botVersion" }),
         __metadata("design:type", String)
     ], PostTextResponse.prototype, "botVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dialogState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dialogState" }),
         __metadata("design:type", String)
     ], PostTextResponse.prototype, "dialogState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intentName" }),
         __metadata("design:type", String)
     ], PostTextResponse.prototype, "intentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostTextResponse.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageFormat" }),
         __metadata("design:type", String)
     ], PostTextResponse.prototype, "messageFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nluIntentConfidence" }),
-        __metadata("design:type", IntentConfidence)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nluIntentConfidence" }),
+        __metadata("design:type", intentconfidence_1.IntentConfidence)
     ], PostTextResponse.prototype, "nluIntentConfidence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responseCard" }),
-        __metadata("design:type", ResponseCard)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responseCard" }),
+        __metadata("design:type", responsecard_1.ResponseCard)
     ], PostTextResponse.prototype, "responseCard", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sentimentResponse" }),
-        __metadata("design:type", SentimentResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sentimentResponse" }),
+        __metadata("design:type", sentimentresponse_1.SentimentResponse)
     ], PostTextResponse.prototype, "sentimentResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessionAttributes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessionAttributes" }),
+        __metadata("design:type", Object)
     ], PostTextResponse.prototype, "sessionAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessionId" }),
         __metadata("design:type", String)
     ], PostTextResponse.prototype, "sessionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slotToElicit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slotToElicit" }),
         __metadata("design:type", String)
     ], PostTextResponse.prototype, "slotToElicit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slots" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slots" }),
+        __metadata("design:type", Object)
     ], PostTextResponse.prototype, "slots", void 0);
     return PostTextResponse;
-}(SpeakeasyBase));
-export { PostTextResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostTextResponse = PostTextResponse;

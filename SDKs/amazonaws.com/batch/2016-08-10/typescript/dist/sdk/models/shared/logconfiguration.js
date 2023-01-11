@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LogDriverEnum } from "./logdriverenum";
-import { Secret } from "./secret";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LogConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var logdriverenum_1 = require("./logdriverenum");
+var secret_1 = require("./secret");
 // LogConfiguration
 /**
  * Log configuration options to send to a custom log driver for the container.
@@ -35,17 +38,17 @@ var LogConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logDriver" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logDriver" }),
         __metadata("design:type", String)
     ], LogConfiguration.prototype, "logDriver", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
+        __metadata("design:type", Object)
     ], LogConfiguration.prototype, "options", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secretOptions", elemType: Secret }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secretOptions", elemType: secret_1.Secret }),
         __metadata("design:type", Array)
     ], LogConfiguration.prototype, "secretOptions", void 0);
     return LogConfiguration;
-}(SpeakeasyBase));
-export { LogConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.LogConfiguration = LogConfiguration;

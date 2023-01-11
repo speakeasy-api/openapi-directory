@@ -14,15 +14,10 @@ export class ActionsListJobsForWorkflowRunPathParams extends SpeakeasyBase {
   runId: number;
 }
 
-export enum ActionsListJobsForWorkflowRunFilterEnum {
-    Latest = "latest",
-    All = "all"
-}
-
 
 export class ActionsListJobsForWorkflowRunQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" })
-  filter?: ActionsListJobsForWorkflowRunFilterEnum;
+  filter?: shared.RunIdEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -55,11 +50,11 @@ export class ActionsListJobsForWorkflowRunResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  actionsListJobsForWorkflowRun200ApplicationJsonObject?: ActionsListJobsForWorkflowRun200ApplicationJson;
+  actionsListJobsForWorkflowRun200ApplicationJSONObject?: ActionsListJobsForWorkflowRun200ApplicationJson;
 }

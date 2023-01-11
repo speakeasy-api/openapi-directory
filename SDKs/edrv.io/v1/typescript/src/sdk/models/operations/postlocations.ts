@@ -52,7 +52,7 @@ export class PostLocations200ApplicationJson extends SpeakeasyBase {
   ok?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=result" })
-  result?: Map<string, any>;
+  result?: Record<string, any>;
 }
 
 
@@ -70,5 +70,5 @@ export class PostLocationsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  postLocations200ApplicationJsonObject?: PostLocations200ApplicationJson;
+  postLocations200ApplicationJSONObject?: PostLocations200ApplicationJson;
 }

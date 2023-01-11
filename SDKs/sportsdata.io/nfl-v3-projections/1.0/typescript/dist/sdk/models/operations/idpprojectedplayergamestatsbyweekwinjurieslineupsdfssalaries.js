@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,61 +23,63 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse = exports.IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest = exports.IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesPathParams = exports.IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesFormatEnum;
 (function (IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesFormatEnum) {
     IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesFormatEnum["Xml"] = "XML";
     IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesFormatEnum["Json"] = "JSON";
-})(IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesFormatEnum || (IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesFormatEnum = {}));
+})(IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesFormatEnum = exports.IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesFormatEnum || (exports.IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesFormatEnum = {}));
 var IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesPathParams = /** @class */ (function (_super) {
     __extends(IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesPathParams, _super);
     function IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=season" }),
         __metadata("design:type", String)
     ], IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesPathParams.prototype, "season", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=week" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=week" }),
         __metadata("design:type", String)
     ], IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesPathParams.prototype, "week", void 0);
     return IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesPathParams;
-}(SpeakeasyBase));
-export { IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesPathParams = IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesPathParams;
 var IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest = /** @class */ (function (_super) {
     __extends(IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest, _super);
     function IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesPathParams)
     ], IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest.prototype, "pathParams", void 0);
     return IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest;
-}(SpeakeasyBase));
-export { IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest };
+}(utils_1.SpeakeasyBase));
+exports.IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest = IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest;
 var IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse = /** @class */ (function (_super) {
     __extends(IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse, _super);
     function IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse.prototype, "playerGameProjections", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse.prototype, "statusCode", void 0);
     return IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse;
-}(SpeakeasyBase));
-export { IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse };
+}(utils_1.SpeakeasyBase));
+exports.IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse = IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse;

@@ -102,11 +102,11 @@ export class CreateSubAccountResponse extends SpeakeasyBase {
   unprovisionedErrorResponse?: shared.UnprovisionedErrorResponse;
 
   @SpeakeasyMetadata()
-  createSubAccount401ApplicationJsonObject?: CreateSubAccount401ApplicationJson;
+  createSubAccount401ApplicationJSONObject?: CreateSubAccount401ApplicationJson;
 
   @SpeakeasyMetadata()
-  createSubAccount404ApplicationJsonObject?: CreateSubAccount404ApplicationJson;
+  createSubAccount404ApplicationJSONObject?: CreateSubAccount404ApplicationJson;
 
   @SpeakeasyMetadata()
-  createSubAccount422ApplicationJsonObject?: CreateSubAccount422ApplicationJson;
+  createSubAccount422ApplicationJSONObject?: CreateSubAccount422ApplicationJson;
 }

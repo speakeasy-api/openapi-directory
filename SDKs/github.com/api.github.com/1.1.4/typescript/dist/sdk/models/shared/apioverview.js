@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiOverview = exports.ApiOverviewSshKeyFingerprints = void 0;
+var utils_1 = require("../../../internal/utils");
 var ApiOverviewSshKeyFingerprints = /** @class */ (function (_super) {
     __extends(ApiOverviewSshKeyFingerprints, _super);
     function ApiOverviewSshKeyFingerprints() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SHA256_DSA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SHA256_DSA" }),
         __metadata("design:type", String)
-    ], ApiOverviewSshKeyFingerprints.prototype, "sha256Dsa", void 0);
+    ], ApiOverviewSshKeyFingerprints.prototype, "sha256DSA", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SHA256_RSA" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SHA256_RSA" }),
         __metadata("design:type", String)
-    ], ApiOverviewSshKeyFingerprints.prototype, "sha256Rsa", void 0);
+    ], ApiOverviewSshKeyFingerprints.prototype, "sha256RSA", void 0);
     return ApiOverviewSshKeyFingerprints;
-}(SpeakeasyBase));
-export { ApiOverviewSshKeyFingerprints };
+}(utils_1.SpeakeasyBase));
+exports.ApiOverviewSshKeyFingerprints = ApiOverviewSshKeyFingerprints;
 // ApiOverview
 /**
  * Api Overview
@@ -49,41 +52,41 @@ var ApiOverview = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actions" }),
         __metadata("design:type", Array)
     ], ApiOverview.prototype, "actions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=api" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=api" }),
         __metadata("design:type", Array)
     ], ApiOverview.prototype, "api", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=git" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=git" }),
         __metadata("design:type", Array)
     ], ApiOverview.prototype, "git", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hooks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hooks" }),
         __metadata("design:type", Array)
     ], ApiOverview.prototype, "hooks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importer" }),
         __metadata("design:type", Array)
     ], ApiOverview.prototype, "importer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pages" }),
         __metadata("design:type", Array)
     ], ApiOverview.prototype, "pages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssh_key_fingerprints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssh_key_fingerprints" }),
         __metadata("design:type", ApiOverviewSshKeyFingerprints)
     ], ApiOverview.prototype, "sshKeyFingerprints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verifiable_password_authentication" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verifiable_password_authentication" }),
         __metadata("design:type", Boolean)
     ], ApiOverview.prototype, "verifiablePasswordAuthentication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=web" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=web" }),
         __metadata("design:type", Array)
     ], ApiOverview.prototype, "web", void 0);
     return ApiOverview;
-}(SpeakeasyBase));
-export { ApiOverview };
+}(utils_1.SpeakeasyBase));
+exports.ApiOverview = ApiOverview;

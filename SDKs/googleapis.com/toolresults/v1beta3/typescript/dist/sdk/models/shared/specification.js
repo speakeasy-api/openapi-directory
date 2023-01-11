@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AndroidTest } from "./androidtest";
-import { IosTest } from "./iostest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Specification = void 0;
+var utils_1 = require("../../../internal/utils");
+var androidtest_1 = require("./androidtest");
+var iostest_1 = require("./iostest");
 // Specification
 /**
  * The details about how to run the execution.
@@ -35,13 +38,13 @@ var Specification = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidTest" }),
-        __metadata("design:type", AndroidTest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidTest" }),
+        __metadata("design:type", androidtest_1.AndroidTest)
     ], Specification.prototype, "androidTest", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosTest" }),
-        __metadata("design:type", IosTest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosTest" }),
+        __metadata("design:type", iostest_1.IosTest)
     ], Specification.prototype, "iosTest", void 0);
     return Specification;
-}(SpeakeasyBase));
-export { Specification };
+}(utils_1.SpeakeasyBase));
+exports.Specification = Specification;

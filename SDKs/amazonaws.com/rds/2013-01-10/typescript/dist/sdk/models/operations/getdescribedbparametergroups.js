@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeDbParameterGroupsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeDbParameterGroupsResponse = exports.GetDescribeDbParameterGroupsRequest = exports.GetDescribeDbParameterGroupsHeaders = exports.GetDescribeDbParameterGroupsQueryParams = exports.GetDescribeDbParameterGroupsVersionEnum = exports.GetDescribeDbParameterGroupsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeDbParameterGroupsActionEnum;
 (function (GetDescribeDbParameterGroupsActionEnum) {
     GetDescribeDbParameterGroupsActionEnum["DescribeDbParameterGroups"] = "DescribeDBParameterGroups";
-})(GetDescribeDbParameterGroupsActionEnum || (GetDescribeDbParameterGroupsActionEnum = {}));
-export var GetDescribeDbParameterGroupsVersionEnum;
+})(GetDescribeDbParameterGroupsActionEnum = exports.GetDescribeDbParameterGroupsActionEnum || (exports.GetDescribeDbParameterGroupsActionEnum = {}));
+var GetDescribeDbParameterGroupsVersionEnum;
 (function (GetDescribeDbParameterGroupsVersionEnum) {
     GetDescribeDbParameterGroupsVersionEnum["TwoThousandAndThirteen0110"] = "2013-01-10";
-})(GetDescribeDbParameterGroupsVersionEnum || (GetDescribeDbParameterGroupsVersionEnum = {}));
+})(GetDescribeDbParameterGroupsVersionEnum = exports.GetDescribeDbParameterGroupsVersionEnum || (exports.GetDescribeDbParameterGroupsVersionEnum = {}));
 var GetDescribeDbParameterGroupsQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeDbParameterGroupsQueryParams, _super);
     function GetDescribeDbParameterGroupsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeDbParameterGroupsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DBParameterGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DBParameterGroupName" }),
         __metadata("design:type", String)
     ], GetDescribeDbParameterGroupsQueryParams.prototype, "dbParameterGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetDescribeDbParameterGroupsQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", Number)
     ], GetDescribeDbParameterGroupsQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeDbParameterGroupsQueryParams.prototype, "version", void 0);
     return GetDescribeDbParameterGroupsQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeDbParameterGroupsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeDbParameterGroupsQueryParams = GetDescribeDbParameterGroupsQueryParams;
 var GetDescribeDbParameterGroupsHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeDbParameterGroupsHeaders, _super);
     function GetDescribeDbParameterGroupsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeDbParameterGroupsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeDbParameterGroupsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeDbParameterGroupsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeDbParameterGroupsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeDbParameterGroupsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeDbParameterGroupsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeDbParameterGroupsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeDbParameterGroupsHeaders;
-}(SpeakeasyBase));
-export { GetDescribeDbParameterGroupsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeDbParameterGroupsHeaders = GetDescribeDbParameterGroupsHeaders;
 var GetDescribeDbParameterGroupsRequest = /** @class */ (function (_super) {
     __extends(GetDescribeDbParameterGroupsRequest, _super);
     function GetDescribeDbParameterGroupsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeDbParameterGroupsQueryParams)
     ], GetDescribeDbParameterGroupsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeDbParameterGroupsHeaders)
     ], GetDescribeDbParameterGroupsRequest.prototype, "headers", void 0);
     return GetDescribeDbParameterGroupsRequest;
-}(SpeakeasyBase));
-export { GetDescribeDbParameterGroupsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeDbParameterGroupsRequest = GetDescribeDbParameterGroupsRequest;
 var GetDescribeDbParameterGroupsResponse = /** @class */ (function (_super) {
     __extends(GetDescribeDbParameterGroupsResponse, _super);
     function GetDescribeDbParameterGroupsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeDbParameterGroupsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeDbParameterGroupsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeDbParameterGroupsResponse.prototype, "statusCode", void 0);
     return GetDescribeDbParameterGroupsResponse;
-}(SpeakeasyBase));
-export { GetDescribeDbParameterGroupsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeDbParameterGroupsResponse = GetDescribeDbParameterGroupsResponse;

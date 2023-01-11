@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateCampaignIdentificationRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // UpdateCampaignIdentificationRequest
 /**
  * This type specifies the updated name, and start and end dates for an update-campaign request.
@@ -33,17 +36,17 @@ var UpdateCampaignIdentificationRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=campaignName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=campaignName" }),
         __metadata("design:type", String)
     ], UpdateCampaignIdentificationRequest.prototype, "campaignName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", String)
     ], UpdateCampaignIdentificationRequest.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", String)
     ], UpdateCampaignIdentificationRequest.prototype, "startDate", void 0);
     return UpdateCampaignIdentificationRequest;
-}(SpeakeasyBase));
-export { UpdateCampaignIdentificationRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateCampaignIdentificationRequest = UpdateCampaignIdentificationRequest;

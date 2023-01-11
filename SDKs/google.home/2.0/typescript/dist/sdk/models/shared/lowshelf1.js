@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LowShelf1 = void 0;
+var utils_1 = require("../../../internal/utils");
 var LowShelf1 = /** @class */ (function (_super) {
     __extends(LowShelf1, _super);
     function LowShelf1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gain_db" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gain_db" }),
         __metadata("design:type", Number)
     ], LowShelf1.prototype, "gainDb", void 0);
     return LowShelf1;
-}(SpeakeasyBase));
-export { LowShelf1 };
+}(utils_1.SpeakeasyBase));
+exports.LowShelf1 = LowShelf1;

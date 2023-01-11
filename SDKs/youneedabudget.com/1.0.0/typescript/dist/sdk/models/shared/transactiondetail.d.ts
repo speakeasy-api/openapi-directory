@@ -11,7 +11,8 @@ export declare enum TransactionDetailFlagColorEnum {
     Yellow = "yellow",
     Green = "green",
     Blue = "blue",
-    Purple = "purple"
+    Purple = "purple",
+    Null = "null"
 }
 export declare class TransactionDetail extends SpeakeasyBase {
     accountId: string;

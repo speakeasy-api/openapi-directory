@@ -50,7 +50,7 @@ export class GetApiVVersionMetalsSpotPerformanceAnnualResponse extends Speakeasy
   intervalCollectionResponses?: shared.IntervalCollectionResponse[];
 
   @SpeakeasyMetadata()
-  problemDetails?: Map<string, any>;
+  problemDetails?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

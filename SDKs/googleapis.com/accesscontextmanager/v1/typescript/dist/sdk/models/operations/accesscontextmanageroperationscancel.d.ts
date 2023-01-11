@@ -23,11 +23,11 @@ export declare class AccesscontextmanagerOperationsCancelSecurity extends Speake
 export declare class AccesscontextmanagerOperationsCancelRequest extends SpeakeasyBase {
     pathParams: AccesscontextmanagerOperationsCancelPathParams;
     queryParams: AccesscontextmanagerOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: AccesscontextmanagerOperationsCancelSecurity;
 }
 export declare class AccesscontextmanagerOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostListJobsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostListJobsResponse = exports.PostListJobsRequest = exports.PostListJobsQueryParams = exports.PostListJobsVersionEnum = exports.PostListJobsOperationEnum = exports.PostListJobsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostListJobsActionEnum;
 (function (PostListJobsActionEnum) {
     PostListJobsActionEnum["ListJobs"] = "ListJobs";
-})(PostListJobsActionEnum || (PostListJobsActionEnum = {}));
-export var PostListJobsOperationEnum;
+})(PostListJobsActionEnum = exports.PostListJobsActionEnum || (exports.PostListJobsActionEnum = {}));
+var PostListJobsOperationEnum;
 (function (PostListJobsOperationEnum) {
     PostListJobsOperationEnum["ListJobs"] = "ListJobs";
-})(PostListJobsOperationEnum || (PostListJobsOperationEnum = {}));
-export var PostListJobsVersionEnum;
+})(PostListJobsOperationEnum = exports.PostListJobsOperationEnum || (exports.PostListJobsOperationEnum = {}));
+var PostListJobsVersionEnum;
 (function (PostListJobsVersionEnum) {
     PostListJobsVersionEnum["TwoThousandAndTen0601"] = "2010-06-01";
-})(PostListJobsVersionEnum || (PostListJobsVersionEnum = {}));
+})(PostListJobsVersionEnum = exports.PostListJobsVersionEnum || (exports.PostListJobsVersionEnum = {}));
 var PostListJobsQueryParams = /** @class */ (function (_super) {
     __extends(PostListJobsQueryParams, _super);
     function PostListJobsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=AWSAccessKeyId" }),
         __metadata("design:type", String)
     ], PostListJobsQueryParams.prototype, "awsAccessKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostListJobsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], PostListJobsQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxJobs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxJobs" }),
         __metadata("design:type", String)
     ], PostListJobsQueryParams.prototype, "maxJobs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Operation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Operation" }),
         __metadata("design:type", String)
     ], PostListJobsQueryParams.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Signature" }),
         __metadata("design:type", String)
     ], PostListJobsQueryParams.prototype, "signature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureMethod" }),
         __metadata("design:type", String)
     ], PostListJobsQueryParams.prototype, "signatureMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SignatureVersion" }),
         __metadata("design:type", String)
     ], PostListJobsQueryParams.prototype, "signatureVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Timestamp" }),
         __metadata("design:type", String)
     ], PostListJobsQueryParams.prototype, "timestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostListJobsQueryParams.prototype, "version", void 0);
     return PostListJobsQueryParams;
-}(SpeakeasyBase));
-export { PostListJobsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostListJobsQueryParams = PostListJobsQueryParams;
 var PostListJobsRequest = /** @class */ (function (_super) {
     __extends(PostListJobsRequest, _super);
     function PostListJobsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostListJobsQueryParams)
     ], PostListJobsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostListJobsRequest.prototype, "request", void 0);
     return PostListJobsRequest;
-}(SpeakeasyBase));
-export { PostListJobsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostListJobsRequest = PostListJobsRequest;
 var PostListJobsResponse = /** @class */ (function (_super) {
     __extends(PostListJobsResponse, _super);
     function PostListJobsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostListJobsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostListJobsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostListJobsResponse.prototype, "statusCode", void 0);
     return PostListJobsResponse;
-}(SpeakeasyBase));
-export { PostListJobsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostListJobsResponse = PostListJobsResponse;

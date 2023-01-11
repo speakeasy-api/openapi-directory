@@ -16,6 +16,6 @@ export declare class PostAssetsReturnsRequest extends SpeakeasyBase {
 }
 export declare class PostAssetsReturnsResponse extends SpeakeasyBase {
     contentType: string;
-    postAssetsReturns200ApplicationJsonObject?: PostAssetsReturns200ApplicationJson;
     statusCode: number;
+    postAssetsReturns200ApplicationJSONObject?: PostAssetsReturns200ApplicationJson;
 }

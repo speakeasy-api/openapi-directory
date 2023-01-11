@@ -19,7 +19,7 @@ export declare class PaymentsresellersubscriptionPartnersSubscriptionsUndoCancel
 export declare class PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelRequest extends SpeakeasyBase {
     pathParams: PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelPathParams;
     queryParams: PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelResponse extends SpeakeasyBase {
     contentType: string;

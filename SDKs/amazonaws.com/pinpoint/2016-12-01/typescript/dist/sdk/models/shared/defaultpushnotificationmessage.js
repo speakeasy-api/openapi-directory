@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActionEnum } from "./actionenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DefaultPushNotificationMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var actionenum_1 = require("./actionenum");
 // DefaultPushNotificationMessage
 /**
  * Specifies the default settings and content for a push notification that's sent directly to an endpoint.
@@ -34,33 +37,33 @@ var DefaultPushNotificationMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Action" }),
         __metadata("design:type", String)
     ], DefaultPushNotificationMessage.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Body" }),
         __metadata("design:type", String)
     ], DefaultPushNotificationMessage.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Data" }),
+        __metadata("design:type", Object)
     ], DefaultPushNotificationMessage.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SilentPush" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SilentPush" }),
         __metadata("design:type", Boolean)
     ], DefaultPushNotificationMessage.prototype, "silentPush", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Substitutions" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Substitutions" }),
+        __metadata("design:type", Object)
     ], DefaultPushNotificationMessage.prototype, "substitutions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Title" }),
         __metadata("design:type", String)
     ], DefaultPushNotificationMessage.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Url" }),
         __metadata("design:type", String)
     ], DefaultPushNotificationMessage.prototype, "url", void 0);
     return DefaultPushNotificationMessage;
-}(SpeakeasyBase));
-export { DefaultPushNotificationMessage };
+}(utils_1.SpeakeasyBase));
+exports.DefaultPushNotificationMessage = DefaultPushNotificationMessage;

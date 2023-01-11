@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SourceSchema } from "./sourceschema";
-import { S3ReferenceDataSourceUpdate } from "./s3referencedatasourceupdate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReferenceDataSourceUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
+var sourceschema_1 = require("./sourceschema");
+var s3referencedatasourceupdate_1 = require("./s3referencedatasourceupdate");
 // ReferenceDataSourceUpdate
 /**
  * When you update a reference data source configuration for an application, this object provides all the updated values (such as the source bucket name and object key name), the in-application table name that is created, and updated mapping information that maps the data in the Amazon S3 object to the in-application reference table that is created.
@@ -35,21 +38,21 @@ var ReferenceDataSourceUpdate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReferenceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReferenceId" }),
         __metadata("design:type", String)
     ], ReferenceDataSourceUpdate.prototype, "referenceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReferenceSchemaUpdate" }),
-        __metadata("design:type", SourceSchema)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReferenceSchemaUpdate" }),
+        __metadata("design:type", sourceschema_1.SourceSchema)
     ], ReferenceDataSourceUpdate.prototype, "referenceSchemaUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3ReferenceDataSourceUpdate" }),
-        __metadata("design:type", S3ReferenceDataSourceUpdate)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3ReferenceDataSourceUpdate" }),
+        __metadata("design:type", s3referencedatasourceupdate_1.S3ReferenceDataSourceUpdate)
     ], ReferenceDataSourceUpdate.prototype, "s3ReferenceDataSourceUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TableNameUpdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TableNameUpdate" }),
         __metadata("design:type", String)
     ], ReferenceDataSourceUpdate.prototype, "tableNameUpdate", void 0);
     return ReferenceDataSourceUpdate;
-}(SpeakeasyBase));
-export { ReferenceDataSourceUpdate };
+}(utils_1.SpeakeasyBase));
+exports.ReferenceDataSourceUpdate = ReferenceDataSourceUpdate;

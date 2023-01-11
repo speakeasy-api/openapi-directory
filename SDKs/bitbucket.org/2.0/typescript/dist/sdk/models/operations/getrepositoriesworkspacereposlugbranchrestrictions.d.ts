@@ -21,6 +21,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest e
 export declare class GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedBranchrestrictions?: shared.PaginatedBranchrestrictions;
 }

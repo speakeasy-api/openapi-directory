@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RunnerGroupsEnterprise = void 0;
+var utils_1 = require("../../../internal/utils");
 var RunnerGroupsEnterprise = /** @class */ (function (_super) {
     __extends(RunnerGroupsEnterprise, _super);
     function RunnerGroupsEnterprise() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allows_public_repositories" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allows_public_repositories" }),
         __metadata("design:type", Boolean)
     ], RunnerGroupsEnterprise.prototype, "allowsPublicRepositories", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=default" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=default" }),
         __metadata("design:type", Boolean)
     ], RunnerGroupsEnterprise.prototype, "default", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], RunnerGroupsEnterprise.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], RunnerGroupsEnterprise.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runners_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runners_url" }),
         __metadata("design:type", String)
     ], RunnerGroupsEnterprise.prototype, "runnersUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selected_organizations_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selected_organizations_url" }),
         __metadata("design:type", String)
     ], RunnerGroupsEnterprise.prototype, "selectedOrganizationsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=visibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=visibility" }),
         __metadata("design:type", String)
     ], RunnerGroupsEnterprise.prototype, "visibility", void 0);
     return RunnerGroupsEnterprise;
-}(SpeakeasyBase));
-export { RunnerGroupsEnterprise };
+}(utils_1.SpeakeasyBase));
+exports.RunnerGroupsEnterprise = RunnerGroupsEnterprise;

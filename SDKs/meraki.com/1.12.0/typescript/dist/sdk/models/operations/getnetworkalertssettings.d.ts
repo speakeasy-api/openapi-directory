@@ -8,5 +8,5 @@ export declare class GetNetworkAlertsSettingsRequest extends SpeakeasyBase {
 export declare class GetNetworkAlertsSettingsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkAlertsSettings200ApplicationJsonObject?: Map<string, any>;
+    getNetworkAlertsSettings200ApplicationJSONObject?: Record<string, any>;
 }

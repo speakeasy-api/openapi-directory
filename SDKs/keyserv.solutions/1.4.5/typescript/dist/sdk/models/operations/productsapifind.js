@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductsApiFindResponse = exports.ProductsApiFindRequest = exports.ProductsApiFindQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProductsApiFindQueryParams = /** @class */ (function (_super) {
     __extends(ProductsApiFindQueryParams, _super);
     function ProductsApiFindQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], ProductsApiFindQueryParams.prototype, "page", void 0);
     return ProductsApiFindQueryParams;
-}(SpeakeasyBase));
-export { ProductsApiFindQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ProductsApiFindQueryParams = ProductsApiFindQueryParams;
 var ProductsApiFindRequest = /** @class */ (function (_super) {
     __extends(ProductsApiFindRequest, _super);
     function ProductsApiFindRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProductsApiFindQueryParams)
     ], ProductsApiFindRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], ProductsApiFindRequest.prototype, "request", void 0);
     return ProductsApiFindRequest;
-}(SpeakeasyBase));
-export { ProductsApiFindRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProductsApiFindRequest = ProductsApiFindRequest;
 var ProductsApiFindResponse = /** @class */ (function (_super) {
     __extends(ProductsApiFindResponse, _super);
     function ProductsApiFindResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProductsApiFindResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], ProductsApiFindResponse.prototype, "productsApiFind200ApplicationJsonOneOf", void 0);
+    ], ProductsApiFindResponse.prototype, "productsApiFind200ApplicationJSONOneOf", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProductsApiFindResponse.prototype, "statusCode", void 0);
     return ProductsApiFindResponse;
-}(SpeakeasyBase));
-export { ProductsApiFindResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProductsApiFindResponse = ProductsApiFindResponse;

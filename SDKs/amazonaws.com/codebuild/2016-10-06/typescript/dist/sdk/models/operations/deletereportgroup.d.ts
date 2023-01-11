@@ -19,7 +19,7 @@ export declare class DeleteReportGroupRequest extends SpeakeasyBase {
 }
 export declare class DeleteReportGroupResponse extends SpeakeasyBase {
     contentType: string;
-    deleteReportGroupOutput?: Map<string, any>;
+    deleteReportGroupOutput?: Record<string, any>;
     invalidInputException?: any;
     statusCode: number;
 }

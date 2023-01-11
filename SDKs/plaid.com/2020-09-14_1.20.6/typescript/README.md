@@ -16,22 +16,21 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AccountsBalanceGetRequest, AccountsBalanceGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     plaidVersion: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     secret: {
       apiKey: "YOUR_API_KEY_HERE",
     },
@@ -40,17 +39,16 @@ const sdk = new SDK(WithSecurity(
     
 const req: AccountsBalanceGetRequest = {
   request: {
-    accessToken: "exercitationem",
-    clientId: "est",
+    accessToken: "sit",
+    clientId: "voluptas",
     options: {
       accountIds: [
-        "quos",
-        "voluptate",
-        "nihil",
+        "expedita",
+        "consequuntur",
       ],
-      minLastUpdatedDatetime: "2008-07-30T08:13:02Z",
+      minLastUpdatedDatetime: "2003-04-20T23:11:44Z",
     },
-    secret: "autem",
+    secret: "expedita",
   },
 };
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LoggingConfig } from "./loggingconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HadoopJob = void 0;
+var utils_1 = require("../../../internal/utils");
+var loggingconfig_1 = require("./loggingconfig");
 // HadoopJob
 /**
  * A Dataproc job for running Apache Hadoop MapReduce (https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html) jobs on Apache Hadoop YARN (https://hadoop.apache.org/docs/r2.7.1/hadoop-yarn/hadoop-yarn-site/YARN.html).
@@ -34,37 +37,37 @@ var HadoopJob = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=archiveUris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=archiveUris" }),
         __metadata("design:type", Array)
     ], HadoopJob.prototype, "archiveUris", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=args" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=args" }),
         __metadata("design:type", Array)
     ], HadoopJob.prototype, "args", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileUris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileUris" }),
         __metadata("design:type", Array)
     ], HadoopJob.prototype, "fileUris", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jarFileUris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jarFileUris" }),
         __metadata("design:type", Array)
     ], HadoopJob.prototype, "jarFileUris", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=loggingConfig" }),
-        __metadata("design:type", LoggingConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=loggingConfig" }),
+        __metadata("design:type", loggingconfig_1.LoggingConfig)
     ], HadoopJob.prototype, "loggingConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mainClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mainClass" }),
         __metadata("design:type", String)
     ], HadoopJob.prototype, "mainClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mainJarFileUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mainJarFileUri" }),
         __metadata("design:type", String)
     ], HadoopJob.prototype, "mainJarFileUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties" }),
+        __metadata("design:type", Object)
     ], HadoopJob.prototype, "properties", void 0);
     return HadoopJob;
-}(SpeakeasyBase));
-export { HadoopJob };
+}(utils_1.SpeakeasyBase));
+exports.HadoopJob = HadoopJob;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AnomalyReportedTimeRange } from "./anomalyreportedtimerange";
-import { AnomalyTimeRange } from "./anomalytimerange";
-import { ResourceCollection } from "./resourcecollection";
-import { AnomalySeverityEnum } from "./anomalyseverityenum";
-import { AnomalySourceDetails } from "./anomalysourcedetails";
-import { AnomalyStatusEnum } from "./anomalystatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReactiveAnomaly = void 0;
+var utils_1 = require("../../../internal/utils");
+var anomalyreportedtimerange_1 = require("./anomalyreportedtimerange");
+var anomalytimerange_1 = require("./anomalytimerange");
+var resourcecollection_1 = require("./resourcecollection");
+var anomalyseverityenum_1 = require("./anomalyseverityenum");
+var anomalysourcedetails_1 = require("./anomalysourcedetails");
+var anomalystatusenum_1 = require("./anomalystatusenum");
 // ReactiveAnomaly
 /**
  * Details about a reactive anomaly. This object is returned by <code>ListAnomalies</code>.
@@ -39,37 +42,37 @@ var ReactiveAnomaly = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AnomalyReportedTimeRange" }),
-        __metadata("design:type", AnomalyReportedTimeRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AnomalyReportedTimeRange" }),
+        __metadata("design:type", anomalyreportedtimerange_1.AnomalyReportedTimeRange)
     ], ReactiveAnomaly.prototype, "anomalyReportedTimeRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AnomalyTimeRange" }),
-        __metadata("design:type", AnomalyTimeRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AnomalyTimeRange" }),
+        __metadata("design:type", anomalytimerange_1.AnomalyTimeRange)
     ], ReactiveAnomaly.prototype, "anomalyTimeRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AssociatedInsightId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AssociatedInsightId" }),
         __metadata("design:type", String)
     ], ReactiveAnomaly.prototype, "associatedInsightId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], ReactiveAnomaly.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceCollection" }),
-        __metadata("design:type", ResourceCollection)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceCollection" }),
+        __metadata("design:type", resourcecollection_1.ResourceCollection)
     ], ReactiveAnomaly.prototype, "resourceCollection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Severity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Severity" }),
         __metadata("design:type", String)
     ], ReactiveAnomaly.prototype, "severity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceDetails" }),
-        __metadata("design:type", AnomalySourceDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceDetails" }),
+        __metadata("design:type", anomalysourcedetails_1.AnomalySourceDetails)
     ], ReactiveAnomaly.prototype, "sourceDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], ReactiveAnomaly.prototype, "status", void 0);
     return ReactiveAnomaly;
-}(SpeakeasyBase));
-export { ReactiveAnomaly };
+}(utils_1.SpeakeasyBase));
+exports.ReactiveAnomaly = ReactiveAnomaly;

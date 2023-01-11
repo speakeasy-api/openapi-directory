@@ -1,5 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class UntagResourcesInput extends SpeakeasyBase {
-    resourceArnList: string[];
+    resourceARNList: string[];
     tagKeys: string[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteIdentityActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteIdentityResponse = exports.GetDeleteIdentityRequest = exports.GetDeleteIdentityHeaders = exports.GetDeleteIdentityQueryParams = exports.GetDeleteIdentityVersionEnum = exports.GetDeleteIdentityActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteIdentityActionEnum;
 (function (GetDeleteIdentityActionEnum) {
     GetDeleteIdentityActionEnum["DeleteIdentity"] = "DeleteIdentity";
-})(GetDeleteIdentityActionEnum || (GetDeleteIdentityActionEnum = {}));
-export var GetDeleteIdentityVersionEnum;
+})(GetDeleteIdentityActionEnum = exports.GetDeleteIdentityActionEnum || (exports.GetDeleteIdentityActionEnum = {}));
+var GetDeleteIdentityVersionEnum;
 (function (GetDeleteIdentityVersionEnum) {
     GetDeleteIdentityVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetDeleteIdentityVersionEnum || (GetDeleteIdentityVersionEnum = {}));
+})(GetDeleteIdentityVersionEnum = exports.GetDeleteIdentityVersionEnum || (exports.GetDeleteIdentityVersionEnum = {}));
 var GetDeleteIdentityQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteIdentityQueryParams, _super);
     function GetDeleteIdentityQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteIdentityQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Identity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Identity" }),
         __metadata("design:type", String)
     ], GetDeleteIdentityQueryParams.prototype, "identity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteIdentityQueryParams.prototype, "version", void 0);
     return GetDeleteIdentityQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteIdentityQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteIdentityQueryParams = GetDeleteIdentityQueryParams;
 var GetDeleteIdentityHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteIdentityHeaders, _super);
     function GetDeleteIdentityHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteIdentityHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteIdentityHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteIdentityHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteIdentityHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteIdentityHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteIdentityHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteIdentityHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteIdentityHeaders;
-}(SpeakeasyBase));
-export { GetDeleteIdentityHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteIdentityHeaders = GetDeleteIdentityHeaders;
 var GetDeleteIdentityRequest = /** @class */ (function (_super) {
     __extends(GetDeleteIdentityRequest, _super);
     function GetDeleteIdentityRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteIdentityQueryParams)
     ], GetDeleteIdentityRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteIdentityHeaders)
     ], GetDeleteIdentityRequest.prototype, "headers", void 0);
     return GetDeleteIdentityRequest;
-}(SpeakeasyBase));
-export { GetDeleteIdentityRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteIdentityRequest = GetDeleteIdentityRequest;
 var GetDeleteIdentityResponse = /** @class */ (function (_super) {
     __extends(GetDeleteIdentityResponse, _super);
     function GetDeleteIdentityResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteIdentityResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteIdentityResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteIdentityResponse.prototype, "statusCode", void 0);
     return GetDeleteIdentityResponse;
-}(SpeakeasyBase));
-export { GetDeleteIdentityResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteIdentityResponse = GetDeleteIdentityResponse;

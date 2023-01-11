@@ -17,6 +17,6 @@ export declare class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdR
 export declare class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    participant?: Map<string, any>;
+    error?: Record<string, any>;
+    participant?: Record<string, any>;
 }

@@ -8,13 +8,13 @@ export class PrcptRequestBodyCertificateParameters extends SpeakeasyBase {
   fullName: string;
 
   @SpeakeasyMetadata({ data: "json, name=PI_DOB" })
-  piDob: string;
+  piDOB: string;
 
   @SpeakeasyMetadata({ data: "json, name=PI_FIN_YEAR" })
-  piFinYear: string;
+  piFINYEAR: string;
 
   @SpeakeasyMetadata({ data: "json, name=PI_POLICYNBR" })
-  piPolicynbr: string;
+  piPOLICYNBR: string;
 }
 
 export enum PrcptRequestBodyFormatEnum {
@@ -194,23 +194,23 @@ export class PrcptResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  prcpt400ApplicationJsonObject?: Prcpt400ApplicationJson;
+  prcpt400ApplicationJSONObject?: Prcpt400ApplicationJson;
 
   @SpeakeasyMetadata()
-  prcpt401ApplicationJsonObject?: Prcpt401ApplicationJson;
+  prcpt401ApplicationJSONObject?: Prcpt401ApplicationJson;
 
   @SpeakeasyMetadata()
-  prcpt404ApplicationJsonObject?: Prcpt404ApplicationJson;
+  prcpt404ApplicationJSONObject?: Prcpt404ApplicationJson;
 
   @SpeakeasyMetadata()
-  prcpt500ApplicationJsonObject?: Prcpt500ApplicationJson;
+  prcpt500ApplicationJSONObject?: Prcpt500ApplicationJson;
 
   @SpeakeasyMetadata()
-  prcpt502ApplicationJsonObject?: Prcpt502ApplicationJson;
+  prcpt502ApplicationJSONObject?: Prcpt502ApplicationJson;
 
   @SpeakeasyMetadata()
-  prcpt503ApplicationJsonObject?: Prcpt503ApplicationJson;
+  prcpt503ApplicationJSONObject?: Prcpt503ApplicationJson;
 
   @SpeakeasyMetadata()
-  prcpt504ApplicationJsonObject?: Prcpt504ApplicationJson;
+  prcpt504ApplicationJSONObject?: Prcpt504ApplicationJson;
 }

@@ -18,5 +18,5 @@ export declare class SupportingWorkResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    supportingWork200ApplicationJsonObject?: SupportingWork200ApplicationJson;
+    supportingWork200ApplicationJSONObject?: SupportingWork200ApplicationJson;
 }

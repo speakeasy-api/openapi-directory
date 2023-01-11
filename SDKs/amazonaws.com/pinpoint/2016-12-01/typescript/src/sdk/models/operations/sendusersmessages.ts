@@ -39,7 +39,7 @@ export class SendUsersMessagesHeaders extends SpeakeasyBase {
 **/
 export class SendUsersMessagesRequestBodySendUsersMessageRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Context" })
-  context?: Map<string, string>;
+  context?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=MessageConfiguration" })
   messageConfiguration?: shared.DirectMessageConfiguration;
@@ -51,7 +51,7 @@ export class SendUsersMessagesRequestBodySendUsersMessageRequest extends Speakea
   traceId?: string;
 
   @SpeakeasyMetadata({ data: "json, name=Users", elemType: shared.EndpointSendConfiguration })
-  users?: Map<string, shared.EndpointSendConfiguration>;
+  users?: Record<string, shared.EndpointSendConfiguration>;
 }
 
 

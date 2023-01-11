@@ -34,5 +34,5 @@ export declare class IpamIpAddressesListRequest extends SpeakeasyBase {
 export declare class IpamIpAddressesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ipamIpAddressesList200ApplicationJsonObject?: IpamIpAddressesList200ApplicationJson;
+    ipamIpAddressesList200ApplicationJSONObject?: IpamIpAddressesList200ApplicationJson;
 }

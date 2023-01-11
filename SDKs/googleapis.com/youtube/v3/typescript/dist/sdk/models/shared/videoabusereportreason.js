@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VideoAbuseReportReasonSnippet } from "./videoabusereportreasonsnippet";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoAbuseReportReason = void 0;
+var utils_1 = require("../../../internal/utils");
+var videoabusereportreasonsnippet_1 = require("./videoabusereportreasonsnippet");
 // VideoAbuseReportReason
 /**
  * A `__videoAbuseReportReason__` resource identifies a reason that a video could be reported as abusive. Video abuse report reasons are used with `video.ReportAbuse`.
@@ -34,21 +37,21 @@ var VideoAbuseReportReason = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], VideoAbuseReportReason.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], VideoAbuseReportReason.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], VideoAbuseReportReason.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snippet" }),
-        __metadata("design:type", VideoAbuseReportReasonSnippet)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snippet" }),
+        __metadata("design:type", videoabusereportreasonsnippet_1.VideoAbuseReportReasonSnippet)
     ], VideoAbuseReportReason.prototype, "snippet", void 0);
     return VideoAbuseReportReason;
-}(SpeakeasyBase));
-export { VideoAbuseReportReason };
+}(utils_1.SpeakeasyBase));
+exports.VideoAbuseReportReason = VideoAbuseReportReason;

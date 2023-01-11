@@ -53,5 +53,5 @@ export class GamesStoresListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  gamesStoresList200ApplicationJsonObject?: GamesStoresList200ApplicationJson;
+  gamesStoresList200ApplicationJSONObject?: GamesStoresList200ApplicationJson;
 }

@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Origin } from "./origin";
+import { OriginList } from "./originlist";
 /**
  * A complex type that contains information about origins and origin groups for this distribution.
 **/
 export declare class Origins extends SpeakeasyBase {
-    items: Origin[];
+    items: OriginList[];
     quantity: number;
 }

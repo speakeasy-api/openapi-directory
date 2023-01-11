@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ApiStatusAppVersion } from "./apistatusappversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var apistatusappversion_1 = require("./apistatusappversion");
 var ApiStatus = /** @class */ (function (_super) {
     __extends(ApiStatus, _super);
     function ApiStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=android" }),
-        __metadata("design:type", ApiStatusAppVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=android" }),
+        __metadata("design:type", apistatusappversion_1.ApiStatusAppVersion)
     ], ApiStatus.prototype, "android", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current_season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current_season" }),
         __metadata("design:type", Number)
     ], ApiStatus.prototype, "currentSeason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=down_events" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=down_events" }),
         __metadata("design:type", Array)
     ], ApiStatus.prototype, "downEvents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ios" }),
-        __metadata("design:type", ApiStatusAppVersion)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ios" }),
+        __metadata("design:type", apistatusappversion_1.ApiStatusAppVersion)
     ], ApiStatus.prototype, "ios", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_datafeed_down" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_datafeed_down" }),
         __metadata("design:type", Boolean)
     ], ApiStatus.prototype, "isDatafeedDown", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max_season" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max_season" }),
         __metadata("design:type", Number)
     ], ApiStatus.prototype, "maxSeason", void 0);
     return ApiStatus;
-}(SpeakeasyBase));
-export { ApiStatus };
+}(utils_1.SpeakeasyBase));
+exports.ApiStatus = ApiStatus;

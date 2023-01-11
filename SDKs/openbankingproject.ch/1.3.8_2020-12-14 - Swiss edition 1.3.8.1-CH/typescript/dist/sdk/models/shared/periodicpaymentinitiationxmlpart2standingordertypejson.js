@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DayOfExecutionEnum } from "./dayofexecutionenum";
-import { ExecutionRuleEnum } from "./executionruleenum";
-import { FrequencyCodeEnum } from "./frequencycodeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PeriodicPaymentInitiationXmlPart2StandingorderTypeJson = void 0;
+var utils_1 = require("../../../internal/utils");
+var dayofexecutionenum_1 = require("./dayofexecutionenum");
+var executionruleenum_1 = require("./executionruleenum");
+var frequencycodeenum_1 = require("./frequencycodeenum");
 // PeriodicPaymentInitiationXmlPart2StandingorderTypeJson
 /**
  * The body part 2 of a periodic payment initation request containes the execution related informations
@@ -38,25 +41,25 @@ var PeriodicPaymentInitiationXmlPart2StandingorderTypeJson = /** @class */ (func
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dayOfExecution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dayOfExecution" }),
         __metadata("design:type", String)
     ], PeriodicPaymentInitiationXmlPart2StandingorderTypeJson.prototype, "dayOfExecution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", Date)
     ], PeriodicPaymentInitiationXmlPart2StandingorderTypeJson.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionRule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionRule" }),
         __metadata("design:type", String)
     ], PeriodicPaymentInitiationXmlPart2StandingorderTypeJson.prototype, "executionRule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=frequency" }),
         __metadata("design:type", String)
     ], PeriodicPaymentInitiationXmlPart2StandingorderTypeJson.prototype, "frequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", Date)
     ], PeriodicPaymentInitiationXmlPart2StandingorderTypeJson.prototype, "startDate", void 0);
     return PeriodicPaymentInitiationXmlPart2StandingorderTypeJson;
-}(SpeakeasyBase));
-export { PeriodicPaymentInitiationXmlPart2StandingorderTypeJson };
+}(utils_1.SpeakeasyBase));
+exports.PeriodicPaymentInitiationXmlPart2StandingorderTypeJson = PeriodicPaymentInitiationXmlPart2StandingorderTypeJson;

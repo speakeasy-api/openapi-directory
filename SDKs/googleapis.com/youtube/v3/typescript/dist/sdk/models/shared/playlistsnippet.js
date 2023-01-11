@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PlaylistLocalization } from "./playlistlocalization";
-import { ThumbnailDetails } from "./thumbnaildetails";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlaylistSnippet = void 0;
+var utils_1 = require("../../../internal/utils");
+var playlistlocalization_1 = require("./playlistlocalization");
+var thumbnaildetails_1 = require("./thumbnaildetails");
 // PlaylistSnippet
 /**
  * Basic details about a playlist, including title, description and thumbnails.
@@ -35,45 +38,45 @@ var PlaylistSnippet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelId" }),
         __metadata("design:type", String)
     ], PlaylistSnippet.prototype, "channelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelTitle" }),
         __metadata("design:type", String)
     ], PlaylistSnippet.prototype, "channelTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultLanguage" }),
         __metadata("design:type", String)
     ], PlaylistSnippet.prototype, "defaultLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], PlaylistSnippet.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localized" }),
-        __metadata("design:type", PlaylistLocalization)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localized" }),
+        __metadata("design:type", playlistlocalization_1.PlaylistLocalization)
     ], PlaylistSnippet.prototype, "localized", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishedAt" }),
         __metadata("design:type", Date)
     ], PlaylistSnippet.prototype, "publishedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], PlaylistSnippet.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnailVideoId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnailVideoId" }),
         __metadata("design:type", String)
     ], PlaylistSnippet.prototype, "thumbnailVideoId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnails" }),
-        __metadata("design:type", ThumbnailDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnails" }),
+        __metadata("design:type", thumbnaildetails_1.ThumbnailDetails)
     ], PlaylistSnippet.prototype, "thumbnails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], PlaylistSnippet.prototype, "title", void 0);
     return PlaylistSnippet;
-}(SpeakeasyBase));
-export { PlaylistSnippet };
+}(utils_1.SpeakeasyBase));
+exports.PlaylistSnippet = PlaylistSnippet;

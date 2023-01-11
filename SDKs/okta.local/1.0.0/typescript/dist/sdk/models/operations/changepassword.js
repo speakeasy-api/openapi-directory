@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChangePasswordResponse = exports.ChangePasswordRequest = exports.ChangePasswordRequestBody = exports.ChangePasswordRequestBodyOldPassword = exports.ChangePasswordRequestBodyNewPassword = exports.ChangePasswordPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ChangePasswordPathParams = /** @class */ (function (_super) {
     __extends(ChangePasswordPathParams, _super);
     function ChangePasswordPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userId" }),
         __metadata("design:type", String)
     ], ChangePasswordPathParams.prototype, "userId", void 0);
     return ChangePasswordPathParams;
-}(SpeakeasyBase));
-export { ChangePasswordPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ChangePasswordPathParams = ChangePasswordPathParams;
 var ChangePasswordRequestBodyNewPassword = /** @class */ (function (_super) {
     __extends(ChangePasswordRequestBodyNewPassword, _super);
     function ChangePasswordRequestBodyNewPassword() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], ChangePasswordRequestBodyNewPassword.prototype, "value", void 0);
     return ChangePasswordRequestBodyNewPassword;
-}(SpeakeasyBase));
-export { ChangePasswordRequestBodyNewPassword };
+}(utils_1.SpeakeasyBase));
+exports.ChangePasswordRequestBodyNewPassword = ChangePasswordRequestBodyNewPassword;
 var ChangePasswordRequestBodyOldPassword = /** @class */ (function (_super) {
     __extends(ChangePasswordRequestBodyOldPassword, _super);
     function ChangePasswordRequestBodyOldPassword() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], ChangePasswordRequestBodyOldPassword.prototype, "value", void 0);
     return ChangePasswordRequestBodyOldPassword;
-}(SpeakeasyBase));
-export { ChangePasswordRequestBodyOldPassword };
+}(utils_1.SpeakeasyBase));
+exports.ChangePasswordRequestBodyOldPassword = ChangePasswordRequestBodyOldPassword;
 var ChangePasswordRequestBody = /** @class */ (function (_super) {
     __extends(ChangePasswordRequestBody, _super);
     function ChangePasswordRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newPassword" }),
         __metadata("design:type", ChangePasswordRequestBodyNewPassword)
     ], ChangePasswordRequestBody.prototype, "newPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=oldPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=oldPassword" }),
         __metadata("design:type", ChangePasswordRequestBodyOldPassword)
     ], ChangePasswordRequestBody.prototype, "oldPassword", void 0);
     return ChangePasswordRequestBody;
-}(SpeakeasyBase));
-export { ChangePasswordRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ChangePasswordRequestBody = ChangePasswordRequestBody;
 var ChangePasswordRequest = /** @class */ (function (_super) {
     __extends(ChangePasswordRequest, _super);
     function ChangePasswordRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ChangePasswordPathParams)
     ], ChangePasswordRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ChangePasswordRequestBody)
     ], ChangePasswordRequest.prototype, "request", void 0);
     return ChangePasswordRequest;
-}(SpeakeasyBase));
-export { ChangePasswordRequest };
+}(utils_1.SpeakeasyBase));
+exports.ChangePasswordRequest = ChangePasswordRequest;
 var ChangePasswordResponse = /** @class */ (function (_super) {
     __extends(ChangePasswordResponse, _super);
     function ChangePasswordResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ChangePasswordResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ChangePasswordResponse.prototype, "statusCode", void 0);
     return ChangePasswordResponse;
-}(SpeakeasyBase));
-export { ChangePasswordResponse };
+}(utils_1.SpeakeasyBase));
+exports.ChangePasswordResponse = ChangePasswordResponse;

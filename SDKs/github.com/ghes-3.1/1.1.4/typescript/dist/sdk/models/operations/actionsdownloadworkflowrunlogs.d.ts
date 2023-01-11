@@ -9,6 +9,6 @@ export declare class ActionsDownloadWorkflowRunLogsRequest extends SpeakeasyBase
 }
 export declare class ActionsDownloadWorkflowRunLogsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

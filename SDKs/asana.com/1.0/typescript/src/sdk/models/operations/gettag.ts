@@ -50,5 +50,5 @@ export class GetTagResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getTag200ApplicationJsonObject?: GetTag200ApplicationJson;
+  getTag200ApplicationJSONObject?: GetTag200ApplicationJson;
 }

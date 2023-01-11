@@ -15,10 +15,10 @@ export declare class BankTransferCreateRequest extends SpeakeasyBase {
     description: string;
     idempotencyKey: string;
     isoCurrencyCode: string;
-    metadata?: Map<string, string>;
+    metadata?: Record<string, string>;
     network: BankTransferNetworkEnum;
     originationAccountId?: string;
     secret?: string;
     type: BankTransferTypeEnum;
-    user: Map<string, any>;
+    user: Record<string, any>;
 }

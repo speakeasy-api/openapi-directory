@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CancelRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 // CancelRequest
 /**
  * This type contains information about a buyer request to cancel an order.
@@ -33,29 +36,29 @@ var CancelRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancelCompletedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancelCompletedDate" }),
         __metadata("design:type", String)
     ], CancelRequest.prototype, "cancelCompletedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancelInitiator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancelInitiator" }),
         __metadata("design:type", String)
     ], CancelRequest.prototype, "cancelInitiator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancelReason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancelReason" }),
         __metadata("design:type", String)
     ], CancelRequest.prototype, "cancelReason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancelRequestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancelRequestId" }),
         __metadata("design:type", String)
     ], CancelRequest.prototype, "cancelRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancelRequestState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancelRequestState" }),
         __metadata("design:type", String)
     ], CancelRequest.prototype, "cancelRequestState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cancelRequestedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cancelRequestedDate" }),
         __metadata("design:type", String)
     ], CancelRequest.prototype, "cancelRequestedDate", void 0);
     return CancelRequest;
-}(SpeakeasyBase));
-export { CancelRequest };
+}(utils_1.SpeakeasyBase));
+exports.CancelRequest = CancelRequest;

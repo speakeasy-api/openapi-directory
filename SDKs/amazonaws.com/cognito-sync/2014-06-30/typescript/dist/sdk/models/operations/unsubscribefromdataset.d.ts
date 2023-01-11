@@ -27,5 +27,5 @@ export declare class UnsubscribeFromDatasetResponse extends SpeakeasyBase {
     resourceNotFoundException?: any;
     statusCode: number;
     tooManyRequestsException?: any;
-    unsubscribeFromDatasetResponse?: Map<string, any>;
+    unsubscribeFromDatasetResponse?: Record<string, any>;
 }

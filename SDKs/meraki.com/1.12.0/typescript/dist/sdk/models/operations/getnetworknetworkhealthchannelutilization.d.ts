@@ -17,7 +17,7 @@ export declare class GetNetworkNetworkHealthChannelUtilizationRequest extends Sp
 }
 export declare class GetNetworkNetworkHealthChannelUtilizationResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getNetworkNetworkHealthChannelUtilization200ApplicationJsonObject?: Map<string, any>;
+    getNetworkNetworkHealthChannelUtilization200ApplicationJSONObject?: Record<string, any>;
 }

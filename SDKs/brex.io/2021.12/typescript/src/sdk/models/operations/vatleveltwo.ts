@@ -44,8 +44,8 @@ export class VatLevelTwoResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  vatLevelTwo200ApplicationJsonAny?: any;
+  vatLevelTwo200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  vatLevelTwoDefaultApplicationJsonAny?: any;
+  vatLevelTwoDefaultApplicationJSONAny?: any;
 }

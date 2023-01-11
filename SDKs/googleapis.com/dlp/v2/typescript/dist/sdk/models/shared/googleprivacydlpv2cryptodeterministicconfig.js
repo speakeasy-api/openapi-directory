@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2FieldId } from "./googleprivacydlpv2fieldid";
-import { GooglePrivacyDlpV2CryptoKey } from "./googleprivacydlpv2cryptokey";
-import { GooglePrivacyDlpV2InfoType } from "./googleprivacydlpv2infotype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2CryptoDeterministicConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2fieldid_1 = require("./googleprivacydlpv2fieldid");
+var googleprivacydlpv2cryptokey_1 = require("./googleprivacydlpv2cryptokey");
+var googleprivacydlpv2infotype_1 = require("./googleprivacydlpv2infotype");
 // GooglePrivacyDlpV2CryptoDeterministicConfig
 /**
  * Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC https://tools.ietf.org/html/rfc5297.
@@ -36,17 +39,17 @@ var GooglePrivacyDlpV2CryptoDeterministicConfig = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=context" }),
-        __metadata("design:type", GooglePrivacyDlpV2FieldId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=context" }),
+        __metadata("design:type", googleprivacydlpv2fieldid_1.GooglePrivacyDlpV2FieldId)
     ], GooglePrivacyDlpV2CryptoDeterministicConfig.prototype, "context", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cryptoKey" }),
-        __metadata("design:type", GooglePrivacyDlpV2CryptoKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cryptoKey" }),
+        __metadata("design:type", googleprivacydlpv2cryptokey_1.GooglePrivacyDlpV2CryptoKey)
     ], GooglePrivacyDlpV2CryptoDeterministicConfig.prototype, "cryptoKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=surrogateInfoType" }),
-        __metadata("design:type", GooglePrivacyDlpV2InfoType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=surrogateInfoType" }),
+        __metadata("design:type", googleprivacydlpv2infotype_1.GooglePrivacyDlpV2InfoType)
     ], GooglePrivacyDlpV2CryptoDeterministicConfig.prototype, "surrogateInfoType", void 0);
     return GooglePrivacyDlpV2CryptoDeterministicConfig;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2CryptoDeterministicConfig };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2CryptoDeterministicConfig = GooglePrivacyDlpV2CryptoDeterministicConfig;

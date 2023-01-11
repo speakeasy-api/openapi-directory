@@ -27,7 +27,7 @@ export class PostCharge200ApplicationJson extends SpeakeasyBase {
   ok?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=result" })
-  result?: Map<string, any>;
+  result?: Record<string, any>;
 }
 
 
@@ -48,5 +48,5 @@ export class PostChargeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  postCharge200ApplicationJsonObject?: PostCharge200ApplicationJson;
+  postCharge200ApplicationJSONObject?: PostCharge200ApplicationJson;
 }

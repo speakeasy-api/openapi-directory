@@ -185,23 +185,23 @@ export class AgcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  agcer400ApplicationJsonObject?: Agcer400ApplicationJson;
+  agcer400ApplicationJSONObject?: Agcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  agcer401ApplicationJsonObject?: Agcer401ApplicationJson;
+  agcer401ApplicationJSONObject?: Agcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  agcer404ApplicationJsonObject?: Agcer404ApplicationJson;
+  agcer404ApplicationJSONObject?: Agcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  agcer500ApplicationJsonObject?: Agcer500ApplicationJson;
+  agcer500ApplicationJSONObject?: Agcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  agcer502ApplicationJsonObject?: Agcer502ApplicationJson;
+  agcer502ApplicationJSONObject?: Agcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  agcer503ApplicationJsonObject?: Agcer503ApplicationJson;
+  agcer503ApplicationJSONObject?: Agcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  agcer504ApplicationJsonObject?: Agcer504ApplicationJson;
+  agcer504ApplicationJSONObject?: Agcer504ApplicationJson;
 }

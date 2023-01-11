@@ -53,5 +53,5 @@ export class UpdateEnumOptionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateEnumOption200ApplicationJsonObject?: UpdateEnumOption200ApplicationJson;
+  updateEnumOption200ApplicationJSONObject?: UpdateEnumOption200ApplicationJson;
 }

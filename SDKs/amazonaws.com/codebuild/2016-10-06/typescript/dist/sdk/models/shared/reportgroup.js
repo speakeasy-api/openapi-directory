@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReportExportConfig } from "./reportexportconfig";
-import { ReportGroupStatusTypeEnum } from "./reportgroupstatustypeenum";
-import { Tag } from "./tag";
-import { ReportTypeEnum } from "./reporttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var reportexportconfig_1 = require("./reportexportconfig");
+var reportgroupstatustypeenum_1 = require("./reportgroupstatustypeenum");
+var tag_1 = require("./tag");
+var reporttypeenum_1 = require("./reporttypeenum");
 // ReportGroup
 /**
  * A series of reports. Each report contains information about the results from running a series of test cases. You specify the test cases for a report group in the buildspec for a build project using one or more paths to the test case files.
@@ -37,37 +40,37 @@ var ReportGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], ReportGroup.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], ReportGroup.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exportConfig" }),
-        __metadata("design:type", ReportExportConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exportConfig" }),
+        __metadata("design:type", reportexportconfig_1.ReportExportConfig)
     ], ReportGroup.prototype, "exportConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastModified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastModified" }),
         __metadata("design:type", Date)
     ], ReportGroup.prototype, "lastModified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ReportGroup.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ReportGroup.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], ReportGroup.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], ReportGroup.prototype, "type", void 0);
     return ReportGroup;
-}(SpeakeasyBase));
-export { ReportGroup };
+}(utils_1.SpeakeasyBase));
+exports.ReportGroup = ReportGroup;

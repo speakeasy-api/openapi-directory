@@ -14,7 +14,7 @@ export declare class OrgsListMembershipsForAuthenticatedUserRequest extends Spea
 }
 export declare class OrgsListMembershipsForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     orgMemberships?: shared.OrgMembership[];

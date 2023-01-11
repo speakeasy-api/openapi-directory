@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Membership } from "./membership";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListMembershipsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var membership_1 = require("./membership");
 // ListMembershipsResponse
 /**
  * Response message for the `GkeHubMembershipService.ListMemberships` method.
@@ -34,17 +37,17 @@ var ListMembershipsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListMembershipsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: Membership }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: membership_1.Membership }),
         __metadata("design:type", Array)
     ], ListMembershipsResponse.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unreachable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unreachable" }),
         __metadata("design:type", Array)
     ], ListMembershipsResponse.prototype, "unreachable", void 0);
     return ListMembershipsResponse;
-}(SpeakeasyBase));
-export { ListMembershipsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListMembershipsResponse = ListMembershipsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FailedScheduledUpdateGroupActionRequest } from "./failedscheduledupdategroupactionrequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchPutScheduledUpdateGroupActionAnswer = void 0;
+var utils_1 = require("../../../internal/utils");
+var failedscheduledupdategroupactionrequest_1 = require("./failedscheduledupdategroupactionrequest");
 var BatchPutScheduledUpdateGroupActionAnswer = /** @class */ (function (_super) {
     __extends(BatchPutScheduledUpdateGroupActionAnswer, _super);
     function BatchPutScheduledUpdateGroupActionAnswer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: FailedScheduledUpdateGroupActionRequest }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: failedscheduledupdategroupactionrequest_1.FailedScheduledUpdateGroupActionRequest }),
         __metadata("design:type", Array)
     ], BatchPutScheduledUpdateGroupActionAnswer.prototype, "failedScheduledUpdateGroupActions", void 0);
     return BatchPutScheduledUpdateGroupActionAnswer;
-}(SpeakeasyBase));
-export { BatchPutScheduledUpdateGroupActionAnswer };
+}(utils_1.SpeakeasyBase));
+exports.BatchPutScheduledUpdateGroupActionAnswer = BatchPutScheduledUpdateGroupActionAnswer;

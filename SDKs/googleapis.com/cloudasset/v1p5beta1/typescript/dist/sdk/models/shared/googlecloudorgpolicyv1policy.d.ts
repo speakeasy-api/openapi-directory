@@ -9,7 +9,7 @@ export declare class GoogleCloudOrgpolicyV1Policy extends SpeakeasyBase {
     constraint?: string;
     etag?: string;
     listPolicy?: GoogleCloudOrgpolicyV1ListPolicy;
-    restoreDefault?: Map<string, any>;
+    restoreDefault?: Record<string, any>;
     updateTime?: string;
     version?: number;
 }

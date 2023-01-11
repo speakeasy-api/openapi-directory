@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,92 +23,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemoveRestrictionsV1Response = exports.RemoveRestrictionsV1Request = exports.RemoveRestrictionsV14XxApplicationProblemPlusJson = exports.RemoveRestrictionsV1RequestBody = exports.RemoveRestrictionsV1RequestBodyFile = void 0;
+var utils_1 = require("../../../internal/utils");
 var RemoveRestrictionsV1RequestBodyFile = /** @class */ (function (_super) {
     __extends(RemoveRestrictionsV1RequestBodyFile, _super);
     function RemoveRestrictionsV1RequestBodyFile() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, content=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
         __metadata("design:type", Uint8Array)
     ], RemoveRestrictionsV1RequestBodyFile.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=file" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=file" }),
         __metadata("design:type", String)
     ], RemoveRestrictionsV1RequestBodyFile.prototype, "file", void 0);
     return RemoveRestrictionsV1RequestBodyFile;
-}(SpeakeasyBase));
-export { RemoveRestrictionsV1RequestBodyFile };
+}(utils_1.SpeakeasyBase));
+exports.RemoveRestrictionsV1RequestBodyFile = RemoveRestrictionsV1RequestBodyFile;
 var RemoveRestrictionsV1RequestBody = /** @class */ (function (_super) {
     __extends(RemoveRestrictionsV1RequestBody, _super);
     function RemoveRestrictionsV1RequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, file=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
         __metadata("design:type", RemoveRestrictionsV1RequestBodyFile)
     ], RemoveRestrictionsV1RequestBody.prototype, "file", void 0);
     return RemoveRestrictionsV1RequestBody;
-}(SpeakeasyBase));
-export { RemoveRestrictionsV1RequestBody };
+}(utils_1.SpeakeasyBase));
+exports.RemoveRestrictionsV1RequestBody = RemoveRestrictionsV1RequestBody;
 var RemoveRestrictionsV14XxApplicationProblemPlusJson = /** @class */ (function (_super) {
     __extends(RemoveRestrictionsV14XxApplicationProblemPlusJson, _super);
     function RemoveRestrictionsV14XxApplicationProblemPlusJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors" }),
+        __metadata("design:type", Object)
     ], RemoveRestrictionsV14XxApplicationProblemPlusJson.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", Number)
     ], RemoveRestrictionsV14XxApplicationProblemPlusJson.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], RemoveRestrictionsV14XxApplicationProblemPlusJson.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], RemoveRestrictionsV14XxApplicationProblemPlusJson.prototype, "type", void 0);
     return RemoveRestrictionsV14XxApplicationProblemPlusJson;
-}(SpeakeasyBase));
-export { RemoveRestrictionsV14XxApplicationProblemPlusJson };
+}(utils_1.SpeakeasyBase));
+exports.RemoveRestrictionsV14XxApplicationProblemPlusJson = RemoveRestrictionsV14XxApplicationProblemPlusJson;
 var RemoveRestrictionsV1Request = /** @class */ (function (_super) {
     __extends(RemoveRestrictionsV1Request, _super);
     function RemoveRestrictionsV1Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", RemoveRestrictionsV1RequestBody)
     ], RemoveRestrictionsV1Request.prototype, "request", void 0);
     return RemoveRestrictionsV1Request;
-}(SpeakeasyBase));
-export { RemoveRestrictionsV1Request };
+}(utils_1.SpeakeasyBase));
+exports.RemoveRestrictionsV1Request = RemoveRestrictionsV1Request;
 var RemoveRestrictionsV1Response = /** @class */ (function (_super) {
     __extends(RemoveRestrictionsV1Response, _super);
     function RemoveRestrictionsV1Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], RemoveRestrictionsV1Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], RemoveRestrictionsV1Response.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], RemoveRestrictionsV1Response.prototype, "removeRestrictionsV1200ApplicationPdfBinaryString", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", RemoveRestrictionsV14XxApplicationProblemPlusJson)
-    ], RemoveRestrictionsV1Response.prototype, "removeRestrictionsV14XxApplicationProblemPlusJsonObject", void 0);
+    ], RemoveRestrictionsV1Response.prototype, "removeRestrictionsV14XXApplicationProblemPlusJsonObject", void 0);
     return RemoveRestrictionsV1Response;
-}(SpeakeasyBase));
-export { RemoveRestrictionsV1Response };
+}(utils_1.SpeakeasyBase));
+exports.RemoveRestrictionsV1Response = RemoveRestrictionsV1Response;

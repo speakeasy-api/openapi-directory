@@ -38,11 +38,11 @@ export declare class StorageObjectsPatchSecurity extends SpeakeasyBase {
 export declare class StorageObjectsPatchRequest extends SpeakeasyBase {
     pathParams: StorageObjectsPatchPathParams;
     queryParams: StorageObjectsPatchQueryParams;
-    request?: shared.Object;
+    request?: shared.ObjectT;
     security: StorageObjectsPatchSecurity;
 }
 export declare class StorageObjectsPatchResponse extends SpeakeasyBase {
     contentType: string;
-    object?: shared.Object;
+    object?: shared.ObjectT;
     statusCode: number;
 }

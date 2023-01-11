@@ -179,5 +179,5 @@ export class DcimConsolePortsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimConsolePortsList200ApplicationJsonObject?: DcimConsolePortsList200ApplicationJson;
+  dcimConsolePortsList200ApplicationJSONObject?: DcimConsolePortsList200ApplicationJson;
 }

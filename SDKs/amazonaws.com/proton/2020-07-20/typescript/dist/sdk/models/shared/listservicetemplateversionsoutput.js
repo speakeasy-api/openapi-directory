@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServiceTemplateVersionSummary } from "./servicetemplateversionsummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListServiceTemplateVersionsOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var servicetemplateversionsummary_1 = require("./servicetemplateversionsummary");
 var ListServiceTemplateVersionsOutput = /** @class */ (function (_super) {
     __extends(ListServiceTemplateVersionsOutput, _super);
     function ListServiceTemplateVersionsOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListServiceTemplateVersionsOutput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=templateVersions", elemType: ServiceTemplateVersionSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=templateVersions", elemType: servicetemplateversionsummary_1.ServiceTemplateVersionSummary }),
         __metadata("design:type", Array)
     ], ListServiceTemplateVersionsOutput.prototype, "templateVersions", void 0);
     return ListServiceTemplateVersionsOutput;
-}(SpeakeasyBase));
-export { ListServiceTemplateVersionsOutput };
+}(utils_1.SpeakeasyBase));
+exports.ListServiceTemplateVersionsOutput = ListServiceTemplateVersionsOutput;

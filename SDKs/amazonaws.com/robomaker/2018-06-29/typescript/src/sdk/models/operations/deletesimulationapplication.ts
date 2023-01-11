@@ -49,7 +49,7 @@ export class DeleteSimulationApplicationResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteSimulationApplicationResponse?: Map<string, any>;
+  deleteSimulationApplicationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServerException?: any;

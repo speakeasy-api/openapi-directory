@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServiceResourceCost } from "./serviceresourcecost";
-import { CostEstimationResourceCollectionFilter } from "./costestimationresourcecollectionfilter";
-import { CostEstimationStatusEnum } from "./costestimationstatusenum";
-import { CostEstimationTimeRange } from "./costestimationtimerange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCostEstimationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var serviceresourcecost_1 = require("./serviceresourcecost");
+var costestimationresourcecollectionfilter_1 = require("./costestimationresourcecollectionfilter");
+var costestimationstatusenum_1 = require("./costestimationstatusenum");
+var costestimationtimerange_1 = require("./costestimationtimerange");
 var GetCostEstimationResponse = /** @class */ (function (_super) {
     __extends(GetCostEstimationResponse, _super);
     function GetCostEstimationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Costs", elemType: ServiceResourceCost }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Costs", elemType: serviceresourcecost_1.ServiceResourceCost }),
         __metadata("design:type", Array)
     ], GetCostEstimationResponse.prototype, "costs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetCostEstimationResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceCollection" }),
-        __metadata("design:type", CostEstimationResourceCollectionFilter)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceCollection" }),
+        __metadata("design:type", costestimationresourcecollectionfilter_1.CostEstimationResourceCollectionFilter)
     ], GetCostEstimationResponse.prototype, "resourceCollection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], GetCostEstimationResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TimeRange" }),
-        __metadata("design:type", CostEstimationTimeRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TimeRange" }),
+        __metadata("design:type", costestimationtimerange_1.CostEstimationTimeRange)
     ], GetCostEstimationResponse.prototype, "timeRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalCost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalCost" }),
         __metadata("design:type", Number)
     ], GetCostEstimationResponse.prototype, "totalCost", void 0);
     return GetCostEstimationResponse;
-}(SpeakeasyBase));
-export { GetCostEstimationResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCostEstimationResponse = GetCostEstimationResponse;

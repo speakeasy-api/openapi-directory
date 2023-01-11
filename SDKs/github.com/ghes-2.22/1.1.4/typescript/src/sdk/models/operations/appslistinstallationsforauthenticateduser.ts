@@ -41,16 +41,16 @@ export class AppsListInstallationsForAuthenticatedUserResponse extends Speakeasy
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  appsListInstallationsForAuthenticatedUser200ApplicationJsonObject?: AppsListInstallationsForAuthenticatedUser200ApplicationJson;
+  appsListInstallationsForAuthenticatedUser200ApplicationJSONObject?: AppsListInstallationsForAuthenticatedUser200ApplicationJson;
 
   @SpeakeasyMetadata()
-  appsListInstallationsForAuthenticatedUser415ApplicationJsonObject?: AppsListInstallationsForAuthenticatedUser415ApplicationJson;
+  appsListInstallationsForAuthenticatedUser415ApplicationJSONObject?: AppsListInstallationsForAuthenticatedUser415ApplicationJson;
 
   @SpeakeasyMetadata()
   basicError?: shared.BasicError;

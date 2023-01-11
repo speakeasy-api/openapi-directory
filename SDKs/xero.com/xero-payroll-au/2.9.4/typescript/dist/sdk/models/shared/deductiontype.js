@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,94 +23,96 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DeductionTypeDeductionCategoryEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeductionTypeInput = exports.DeductionType = exports.DeductionTypeDeductionCategoryEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DeductionTypeDeductionCategoryEnum;
 (function (DeductionTypeDeductionCategoryEnum) {
     DeductionTypeDeductionCategoryEnum["None"] = "NONE";
     DeductionTypeDeductionCategoryEnum["Unionfees"] = "UNIONFEES";
     DeductionTypeDeductionCategoryEnum["Workplacegiving"] = "WORKPLACEGIVING";
-})(DeductionTypeDeductionCategoryEnum || (DeductionTypeDeductionCategoryEnum = {}));
-var DeductionTypeInput = /** @class */ (function (_super) {
-    __extends(DeductionTypeInput, _super);
-    function DeductionTypeInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountCode" }),
-        __metadata("design:type", String)
-    ], DeductionTypeInput.prototype, "accountCode", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=CurrentRecord" }),
-        __metadata("design:type", Boolean)
-    ], DeductionTypeInput.prototype, "currentRecord", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeductionCategory" }),
-        __metadata("design:type", String)
-    ], DeductionTypeInput.prototype, "deductionCategory", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeductionTypeID" }),
-        __metadata("design:type", String)
-    ], DeductionTypeInput.prototype, "deductionTypeId", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsExemptFromW1" }),
-        __metadata("design:type", Boolean)
-    ], DeductionTypeInput.prototype, "isExemptFromW1", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
-        __metadata("design:type", String)
-    ], DeductionTypeInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReducesSuper" }),
-        __metadata("design:type", Boolean)
-    ], DeductionTypeInput.prototype, "reducesSuper", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReducesTax" }),
-        __metadata("design:type", Boolean)
-    ], DeductionTypeInput.prototype, "reducesTax", void 0);
-    return DeductionTypeInput;
-}(SpeakeasyBase));
-export { DeductionTypeInput };
+})(DeductionTypeDeductionCategoryEnum = exports.DeductionTypeDeductionCategoryEnum || (exports.DeductionTypeDeductionCategoryEnum = {}));
 var DeductionType = /** @class */ (function (_super) {
     __extends(DeductionType, _super);
     function DeductionType() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountCode" }),
         __metadata("design:type", String)
     ], DeductionType.prototype, "accountCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CurrentRecord" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CurrentRecord" }),
         __metadata("design:type", Boolean)
     ], DeductionType.prototype, "currentRecord", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeductionCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeductionCategory" }),
         __metadata("design:type", String)
     ], DeductionType.prototype, "deductionCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DeductionTypeID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeductionTypeID" }),
         __metadata("design:type", String)
-    ], DeductionType.prototype, "deductionTypeId", void 0);
+    ], DeductionType.prototype, "deductionTypeID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsExemptFromW1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsExemptFromW1" }),
         __metadata("design:type", Boolean)
     ], DeductionType.prototype, "isExemptFromW1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], DeductionType.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReducesSuper" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReducesSuper" }),
         __metadata("design:type", Boolean)
     ], DeductionType.prototype, "reducesSuper", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReducesTax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReducesTax" }),
         __metadata("design:type", Boolean)
     ], DeductionType.prototype, "reducesTax", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdatedDateUTC" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdatedDateUTC" }),
         __metadata("design:type", String)
-    ], DeductionType.prototype, "updatedDateUtc", void 0);
+    ], DeductionType.prototype, "updatedDateUTC", void 0);
     return DeductionType;
-}(SpeakeasyBase));
-export { DeductionType };
+}(utils_1.SpeakeasyBase));
+exports.DeductionType = DeductionType;
+var DeductionTypeInput = /** @class */ (function (_super) {
+    __extends(DeductionTypeInput, _super);
+    function DeductionTypeInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountCode" }),
+        __metadata("design:type", String)
+    ], DeductionTypeInput.prototype, "accountCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CurrentRecord" }),
+        __metadata("design:type", Boolean)
+    ], DeductionTypeInput.prototype, "currentRecord", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeductionCategory" }),
+        __metadata("design:type", String)
+    ], DeductionTypeInput.prototype, "deductionCategory", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DeductionTypeID" }),
+        __metadata("design:type", String)
+    ], DeductionTypeInput.prototype, "deductionTypeID", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsExemptFromW1" }),
+        __metadata("design:type", Boolean)
+    ], DeductionTypeInput.prototype, "isExemptFromW1", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
+        __metadata("design:type", String)
+    ], DeductionTypeInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReducesSuper" }),
+        __metadata("design:type", Boolean)
+    ], DeductionTypeInput.prototype, "reducesSuper", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReducesTax" }),
+        __metadata("design:type", Boolean)
+    ], DeductionTypeInput.prototype, "reducesTax", void 0);
+    return DeductionTypeInput;
+}(utils_1.SpeakeasyBase));
+exports.DeductionTypeInput = DeductionTypeInput;

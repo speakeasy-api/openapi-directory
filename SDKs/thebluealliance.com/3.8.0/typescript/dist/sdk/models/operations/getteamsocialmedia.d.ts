@@ -16,7 +16,7 @@ export declare class GetTeamSocialMediaRequest extends SpeakeasyBase {
 }
 export declare class GetTeamSocialMediaResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     media?: shared.Media[];
     statusCode: number;
 }

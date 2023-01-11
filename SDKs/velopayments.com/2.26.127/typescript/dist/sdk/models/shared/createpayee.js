@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,54 +23,56 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CreatePayeeAddress } from "./createpayeeaddress";
-import { Challenge } from "./challenge";
-import { Company } from "./company";
-import { CreateIndividual } from "./createindividual";
-import { CreatePaymentChannel } from "./createpaymentchannel";
-import { PayeeTypeEnum } from "./payeetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePayeeInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var createpayeeaddress_1 = require("./createpayeeaddress");
+var challenge_1 = require("./challenge");
+var company_1 = require("./company");
+var createindividual_1 = require("./createindividual");
+var createpaymentchannel_1 = require("./createpaymentchannel");
+var payeetypeenum_1 = require("./payeetypeenum");
 var CreatePayeeInput = /** @class */ (function (_super) {
     __extends(CreatePayeeInput, _super);
     function CreatePayeeInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
-        __metadata("design:type", CreatePayeeAddress)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
+        __metadata("design:type", createpayeeaddress_1.CreatePayeeAddress)
     ], CreatePayeeInput.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=challenge" }),
-        __metadata("design:type", Challenge)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=challenge" }),
+        __metadata("design:type", challenge_1.Challenge)
     ], CreatePayeeInput.prototype, "challenge", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=company" }),
-        __metadata("design:type", Company)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company" }),
+        __metadata("design:type", company_1.Company)
     ], CreatePayeeInput.prototype, "company", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], CreatePayeeInput.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=individual" }),
-        __metadata("design:type", CreateIndividual)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=individual" }),
+        __metadata("design:type", createindividual_1.CreateIndividual)
     ], CreatePayeeInput.prototype, "individual", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], CreatePayeeInput.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentChannel" }),
-        __metadata("design:type", CreatePaymentChannel)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentChannel" }),
+        __metadata("design:type", createpaymentchannel_1.CreatePaymentChannel)
     ], CreatePayeeInput.prototype, "paymentChannel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remoteId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remoteId" }),
         __metadata("design:type", String)
     ], CreatePayeeInput.prototype, "remoteId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], CreatePayeeInput.prototype, "type", void 0);
     return CreatePayeeInput;
-}(SpeakeasyBase));
-export { CreatePayeeInput };
+}(utils_1.SpeakeasyBase));
+exports.CreatePayeeInput = CreatePayeeInput;

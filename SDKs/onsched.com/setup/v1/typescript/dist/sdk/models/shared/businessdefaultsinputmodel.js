@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BusinessDefaultsInputModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var BusinessDefaultsInputModel = /** @class */ (function (_super) {
     __extends(BusinessDefaultsInputModel, _super);
     function BusinessDefaultsInputModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoUpdateCustomer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoUpdateCustomer" }),
         __metadata("design:type", Boolean)
     ], BusinessDefaultsInputModel.prototype, "autoUpdateCustomer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessNotification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessNotification" }),
         __metadata("design:type", Boolean)
     ], BusinessDefaultsInputModel.prototype, "businessNotification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerCity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerCity" }),
         __metadata("design:type", Boolean)
     ], BusinessDefaultsInputModel.prototype, "customerCity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerState" }),
         __metadata("design:type", Boolean)
     ], BusinessDefaultsInputModel.prototype, "customerState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emailInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emailInfo" }),
         __metadata("design:type", Boolean)
     ], BusinessDefaultsInputModel.prototype, "emailInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableUtcTimezone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableUtcTimezone" }),
         __metadata("design:type", Boolean)
     ], BusinessDefaultsInputModel.prototype, "enableUtcTimezone", void 0);
     return BusinessDefaultsInputModel;
-}(SpeakeasyBase));
-export { BusinessDefaultsInputModel };
+}(utils_1.SpeakeasyBase));
+exports.BusinessDefaultsInputModel = BusinessDefaultsInputModel;

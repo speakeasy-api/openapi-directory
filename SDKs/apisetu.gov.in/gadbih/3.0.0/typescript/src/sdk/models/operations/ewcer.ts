@@ -188,23 +188,23 @@ export class EwcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  ewcer400ApplicationJsonObject?: Ewcer400ApplicationJson;
+  ewcer400ApplicationJSONObject?: Ewcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  ewcer401ApplicationJsonObject?: Ewcer401ApplicationJson;
+  ewcer401ApplicationJSONObject?: Ewcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  ewcer404ApplicationJsonObject?: Ewcer404ApplicationJson;
+  ewcer404ApplicationJSONObject?: Ewcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  ewcer500ApplicationJsonObject?: Ewcer500ApplicationJson;
+  ewcer500ApplicationJSONObject?: Ewcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  ewcer502ApplicationJsonObject?: Ewcer502ApplicationJson;
+  ewcer502ApplicationJSONObject?: Ewcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  ewcer503ApplicationJsonObject?: Ewcer503ApplicationJson;
+  ewcer503ApplicationJSONObject?: Ewcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  ewcer504ApplicationJsonObject?: Ewcer504ApplicationJson;
+  ewcer504ApplicationJSONObject?: Ewcer504ApplicationJson;
 }

@@ -27,6 +27,6 @@ export declare class ClassroomCoursesDeleteRequest extends SpeakeasyBase {
 }
 export declare class ClassroomCoursesDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

@@ -10,5 +10,5 @@ export declare enum SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEn
 **/
 export declare class SubscriptionTaxAndComplianceSettings extends SpeakeasyBase {
     eeaWithdrawalRightType?: SubscriptionTaxAndComplianceSettingsEeaWithdrawalRightTypeEnum;
-    taxRateInfoByRegionCode?: Map<string, RegionalTaxRateInfo>;
+    taxRateInfoByRegionCode?: Record<string, RegionalTaxRateInfo>;
 }

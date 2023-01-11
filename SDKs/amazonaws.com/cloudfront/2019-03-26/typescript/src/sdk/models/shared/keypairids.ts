@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class KeyPairIds extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  items?: string[];
+  items?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   quantity: number;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientCertificateRevocationListStatus } from "./clientcertificaterevocationliststatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExportClientVpnClientCertificateRevocationListResult = exports.ExportClientVpnClientCertificateRevocationListResultStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+// ExportClientVpnClientCertificateRevocationListResultStatus
+/**
+ * The current state of the client certificate revocation list.
+**/
+var ExportClientVpnClientCertificateRevocationListResultStatus = /** @class */ (function (_super) {
+    __extends(ExportClientVpnClientCertificateRevocationListResultStatus, _super);
+    function ExportClientVpnClientCertificateRevocationListResultStatus() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ExportClientVpnClientCertificateRevocationListResultStatus.prototype, "code", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ExportClientVpnClientCertificateRevocationListResultStatus.prototype, "message", void 0);
+    return ExportClientVpnClientCertificateRevocationListResultStatus;
+}(utils_1.SpeakeasyBase));
+exports.ExportClientVpnClientCertificateRevocationListResultStatus = ExportClientVpnClientCertificateRevocationListResultStatus;
 var ExportClientVpnClientCertificateRevocationListResult = /** @class */ (function (_super) {
     __extends(ExportClientVpnClientCertificateRevocationListResult, _super);
     function ExportClientVpnClientCertificateRevocationListResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ExportClientVpnClientCertificateRevocationListResult.prototype, "certificateRevocationList", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ClientCertificateRevocationListStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", ExportClientVpnClientCertificateRevocationListResultStatus)
     ], ExportClientVpnClientCertificateRevocationListResult.prototype, "status", void 0);
     return ExportClientVpnClientCertificateRevocationListResult;
-}(SpeakeasyBase));
-export { ExportClientVpnClientCertificateRevocationListResult };
+}(utils_1.SpeakeasyBase));
+exports.ExportClientVpnClientCertificateRevocationListResult = ExportClientVpnClientCertificateRevocationListResult;

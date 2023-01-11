@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SiprecEnumTrackEnum = void 0;
+var SiprecEnumTrackEnum;
+(function (SiprecEnumTrackEnum) {
+    SiprecEnumTrackEnum["InboundTrack"] = "inbound_track";
+    SiprecEnumTrackEnum["OutboundTrack"] = "outbound_track";
+    SiprecEnumTrackEnum["BothTracks"] = "both_tracks";
+})(SiprecEnumTrackEnum = exports.SiprecEnumTrackEnum || (exports.SiprecEnumTrackEnum = {}));

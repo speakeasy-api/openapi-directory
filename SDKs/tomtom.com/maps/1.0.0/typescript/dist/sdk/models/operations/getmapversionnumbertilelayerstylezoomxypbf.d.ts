@@ -1,34 +1,34 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare enum GetMapVersionNumberTileLayerStyleZoomXYPbfLayerEnum {
+export declare enum GetMapVersionNumberTileLayerStyleZoomXyPbfLayerEnum {
     Basic = "basic",
     Hybrid = "hybrid",
     Labels = "labels"
 }
-export declare enum GetMapVersionNumberTileLayerStyleZoomXYPbfStyleEnum {
+export declare enum GetMapVersionNumberTileLayerStyleZoomXyPbfStyleEnum {
     Main = "main"
 }
-export declare class GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams extends SpeakeasyBase {
+export declare class GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams extends SpeakeasyBase {
     x: number;
     y: number;
-    layer: GetMapVersionNumberTileLayerStyleZoomXYPbfLayerEnum;
-    style: GetMapVersionNumberTileLayerStyleZoomXYPbfStyleEnum;
+    layer: GetMapVersionNumberTileLayerStyleZoomXyPbfLayerEnum;
+    style: GetMapVersionNumberTileLayerStyleZoomXyPbfStyleEnum;
     versionNumber: number;
     zoom: number;
 }
-export declare enum GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum {
+export declare enum GetMapVersionNumberTileLayerStyleZoomXyPbfViewEnum {
     Unified = "Unified",
     Il = "IL",
     In = "IN"
 }
-export declare class GetMapVersionNumberTileLayerStyleZoomXYPbfQueryParams extends SpeakeasyBase {
+export declare class GetMapVersionNumberTileLayerStyleZoomXyPbfQueryParams extends SpeakeasyBase {
     language?: string;
-    view?: GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum;
+    view?: GetMapVersionNumberTileLayerStyleZoomXyPbfViewEnum;
 }
-export declare class GetMapVersionNumberTileLayerStyleZoomXYPbfRequest extends SpeakeasyBase {
-    pathParams: GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams;
-    queryParams: GetMapVersionNumberTileLayerStyleZoomXYPbfQueryParams;
+export declare class GetMapVersionNumberTileLayerStyleZoomXyPbfRequest extends SpeakeasyBase {
+    pathParams: GetMapVersionNumberTileLayerStyleZoomXyPbfPathParams;
+    queryParams: GetMapVersionNumberTileLayerStyleZoomXyPbfQueryParams;
 }
-export declare class GetMapVersionNumberTileLayerStyleZoomXYPbfResponse extends SpeakeasyBase {
+export declare class GetMapVersionNumberTileLayerStyleZoomXyPbfResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
 }

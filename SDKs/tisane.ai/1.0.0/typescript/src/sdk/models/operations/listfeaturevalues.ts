@@ -28,5 +28,5 @@ export class ListFeatureValuesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  listFeatureValues200ApplicationJsonStrings?: string[];
+  listFeatureValues200ApplicationJSONStrings?: string[];
 }

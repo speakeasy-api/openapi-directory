@@ -14,19 +14,6 @@ export declare enum BackupStateEnum {
 /**
  * Represents a request to perform a single point-in-time capture of some portion of the state of a GKE cluster, the record of the backup operation itself, and an anchor for the underlying artifacts that comprise the Backup (the config backup and VolumeBackups). Next id: 28
 **/
-export declare class BackupInput extends SpeakeasyBase {
-    clusterMetadata?: ClusterMetadata;
-    deleteLockDays?: number;
-    description?: string;
-    encryptionKey?: EncryptionKey;
-    labels?: Map<string, string>;
-    retainDays?: number;
-    selectedApplications?: NamespacedNames;
-    selectedNamespaces?: Namespaces;
-}
-/**
- * Represents a request to perform a single point-in-time capture of some portion of the state of a GKE cluster, the record of the backup operation itself, and an anchor for the underlying artifacts that comprise the Backup (the config backup and VolumeBackups). Next id: 28
-**/
 export declare class Backup extends SpeakeasyBase {
     allNamespaces?: boolean;
     clusterMetadata?: ClusterMetadata;
@@ -40,7 +27,7 @@ export declare class Backup extends SpeakeasyBase {
     description?: string;
     encryptionKey?: EncryptionKey;
     etag?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     manual?: boolean;
     name?: string;
     podCount?: number;
@@ -55,4 +42,17 @@ export declare class Backup extends SpeakeasyBase {
     uid?: string;
     updateTime?: string;
     volumeCount?: number;
+}
+/**
+ * Represents a request to perform a single point-in-time capture of some portion of the state of a GKE cluster, the record of the backup operation itself, and an anchor for the underlying artifacts that comprise the Backup (the config backup and VolumeBackups). Next id: 28
+**/
+export declare class BackupInput extends SpeakeasyBase {
+    clusterMetadata?: ClusterMetadata;
+    deleteLockDays?: number;
+    description?: string;
+    encryptionKey?: EncryptionKey;
+    labels?: Record<string, string>;
+    retainDays?: number;
+    selectedApplications?: NamespacedNames;
+    selectedNamespaces?: Namespaces;
 }

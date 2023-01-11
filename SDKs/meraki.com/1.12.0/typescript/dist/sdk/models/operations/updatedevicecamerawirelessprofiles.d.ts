@@ -20,5 +20,5 @@ export declare class UpdateDeviceCameraWirelessProfilesRequest extends Speakeasy
 export declare class UpdateDeviceCameraWirelessProfilesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateDeviceCameraWirelessProfiles200ApplicationJsonObject?: Map<string, any>;
+    updateDeviceCameraWirelessProfiles200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,4 +1,7 @@
-export var MetricNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricNameEnum = void 0;
+var MetricNameEnum;
 (function (MetricNameEnum) {
     MetricNameEnum["CpuUtilization"] = "CPUUtilization";
     MetricNameEnum["NetworkIn"] = "NetworkIn";
@@ -25,4 +28,4 @@ export var MetricNameEnum;
     MetricNameEnum["NetworkTransmitThroughput"] = "NetworkTransmitThroughput";
     MetricNameEnum["BurstCapacityTime"] = "BurstCapacityTime";
     MetricNameEnum["BurstCapacityPercentage"] = "BurstCapacityPercentage";
-})(MetricNameEnum || (MetricNameEnum = {}));
+})(MetricNameEnum = exports.MetricNameEnum || (exports.MetricNameEnum = {}));

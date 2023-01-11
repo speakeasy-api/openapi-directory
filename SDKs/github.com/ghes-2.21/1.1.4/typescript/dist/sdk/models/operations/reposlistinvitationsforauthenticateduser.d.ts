@@ -9,7 +9,7 @@ export declare class ReposListInvitationsForAuthenticatedUserRequest extends Spe
 }
 export declare class ReposListInvitationsForAuthenticatedUserResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     repositoryInvitations?: shared.RepositoryInvitation[];

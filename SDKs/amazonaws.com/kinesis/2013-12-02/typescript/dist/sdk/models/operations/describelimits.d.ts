@@ -15,7 +15,7 @@ export declare class DescribeLimitsHeaders extends SpeakeasyBase {
 }
 export declare class DescribeLimitsRequest extends SpeakeasyBase {
     headers: DescribeLimitsHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class DescribeLimitsResponse extends SpeakeasyBase {
     contentType: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SecretVersion } from "./secretversion";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListSecretVersionsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var secretversion_1 = require("./secretversion");
 // ListSecretVersionsResponse
 /**
  * Response message for SecretManagerService.ListSecretVersions.
@@ -34,17 +37,17 @@ var ListSecretVersionsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], ListSecretVersionsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalSize" }),
         __metadata("design:type", Number)
     ], ListSecretVersionsResponse.prototype, "totalSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versions", elemType: SecretVersion }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versions", elemType: secretversion_1.SecretVersion }),
         __metadata("design:type", Array)
     ], ListSecretVersionsResponse.prototype, "versions", void 0);
     return ListSecretVersionsResponse;
-}(SpeakeasyBase));
-export { ListSecretVersionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListSecretVersionsResponse = ListSecretVersionsResponse;

@@ -27,6 +27,6 @@ export declare class NetworkmanagementProjectsLocationsGlobalOperationsDeleteReq
 }
 export declare class NetworkmanagementProjectsLocationsGlobalOperationsDeleteResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

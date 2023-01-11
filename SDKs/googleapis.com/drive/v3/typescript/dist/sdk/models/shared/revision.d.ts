@@ -4,7 +4,7 @@ import { User } from "./user";
  * The metadata for a revision to a file.
 **/
 export declare class Revision extends SpeakeasyBase {
-    exportLinks?: Map<string, string>;
+    exportLinks?: Record<string, string>;
     id?: string;
     keepForever?: boolean;
     kind?: string;

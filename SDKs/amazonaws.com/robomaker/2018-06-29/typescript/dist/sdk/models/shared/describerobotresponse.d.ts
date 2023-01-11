@@ -11,5 +11,5 @@ export declare class DescribeRobotResponse extends SpeakeasyBase {
     lastDeploymentTime?: Date;
     name?: string;
     status?: RobotStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

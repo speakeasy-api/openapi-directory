@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IntroductoryPriceInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // IntroductoryPriceInfo
 /**
  * Contains the introductory price information for a subscription.
@@ -33,21 +36,21 @@ var IntroductoryPriceInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=introductoryPriceAmountMicros" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=introductoryPriceAmountMicros" }),
         __metadata("design:type", String)
     ], IntroductoryPriceInfo.prototype, "introductoryPriceAmountMicros", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=introductoryPriceCurrencyCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=introductoryPriceCurrencyCode" }),
         __metadata("design:type", String)
     ], IntroductoryPriceInfo.prototype, "introductoryPriceCurrencyCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=introductoryPriceCycles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=introductoryPriceCycles" }),
         __metadata("design:type", Number)
     ], IntroductoryPriceInfo.prototype, "introductoryPriceCycles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=introductoryPricePeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=introductoryPricePeriod" }),
         __metadata("design:type", String)
     ], IntroductoryPriceInfo.prototype, "introductoryPricePeriod", void 0);
     return IntroductoryPriceInfo;
-}(SpeakeasyBase));
-export { IntroductoryPriceInfo };
+}(utils_1.SpeakeasyBase));
+exports.IntroductoryPriceInfo = IntroductoryPriceInfo;

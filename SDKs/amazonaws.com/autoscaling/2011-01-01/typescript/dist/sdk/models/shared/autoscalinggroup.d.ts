@@ -10,7 +10,7 @@ import { WarmPoolConfiguration } from "./warmpoolconfiguration";
  * Describes an Auto Scaling group.
 **/
 export declare class AutoScalingGroup extends SpeakeasyBase {
-    autoScalingGroupArn?: string;
+    autoScalingGroupARN?: string;
     autoScalingGroupName: string;
     availabilityZones: string[];
     capacityRebalance?: boolean;
@@ -32,11 +32,11 @@ export declare class AutoScalingGroup extends SpeakeasyBase {
     newInstancesProtectedFromScaleIn?: boolean;
     placementGroup?: string;
     predictedCapacity?: number;
-    serviceLinkedRoleArn?: string;
+    serviceLinkedRoleARN?: string;
     status?: string;
     suspendedProcesses?: SuspendedProcess[];
     tags?: TagDescription[];
-    targetGroupArNs?: string[];
+    targetGroupARNs?: string[];
     terminationPolicies?: string[];
     vpcZoneIdentifier?: string;
     warmPoolConfiguration?: WarmPoolConfiguration;

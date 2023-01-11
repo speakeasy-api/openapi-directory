@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AnalyticsreportingReportsBatchGetRequest, AnalyticsreportingReportsBatchGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,24 +31,24 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "dolor",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
     alt: "media",
-    callback: "eius",
-    fields: "minus",
-    key: "eaque",
-    oauthToken: "ut",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
     prettyPrint: true,
-    quotaUser: "reiciendis",
-    uploadType: "doloribus",
-    uploadProtocol: "in",
+    quotaUser: "fugit",
+    uploadType: "et",
+    uploadProtocol: "nihil",
   },
   request: {
     reportRequests: [
@@ -58,26 +57,26 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
           cohorts: [
             {
               dateRange: {
-                endDate: "eius",
-                startDate: "ab",
+                endDate: "debitis",
+                startDate: "voluptatum",
               },
               name: "et",
-              type: "UNSPECIFIED_COHORT_TYPE",
+              type: "FIRST_VISIT_DATE",
             },
             {
               dateRange: {
-                endDate: "ut",
-                startDate: "ut",
-              },
-              name: "ea",
-              type: "UNSPECIFIED_COHORT_TYPE",
-            },
-            {
-              dateRange: {
-                endDate: "velit",
+                endDate: "dolorem",
                 startDate: "et",
               },
-              name: "doloribus",
+              name: "voluptate",
+              type: "FIRST_VISIT_DATE",
+            },
+            {
+              dateRange: {
+                endDate: "vitae",
+                startDate: "totam",
+              },
+              name: "dolores",
               type: "FIRST_VISIT_DATE",
             },
           ],
@@ -85,56 +84,67 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
         },
         dateRanges: [
           {
-            endDate: "voluptates",
-            startDate: "praesentium",
+            endDate: "odio",
+            startDate: "dolore",
+          },
+          {
+            endDate: "id",
+            startDate: "aspernatur",
           },
         ],
         dimensionFilterClauses: [
           {
             filters: [
               {
-                caseSensitive: true,
-                dimensionName: "consequatur",
-                expressions: [
-                  "quas",
-                ],
-                not: false,
-                operator: "ENDS_WITH",
-              },
-              {
                 caseSensitive: false,
-                dimensionName: "non",
+                dimensionName: "quis",
                 expressions: [
-                  "eum",
+                  "aut",
+                  "odit",
                 ],
                 not: true,
-                operator: "EXACT",
+                operator: "PARTIAL",
               },
               {
-                caseSensitive: false,
-                dimensionName: "minima",
+                caseSensitive: true,
+                dimensionName: "aut",
                 expressions: [
-                  "vel",
-                  "voluptatem",
-                  "repellendus",
+                  "sed",
                 ],
                 not: false,
-                operator: "ENDS_WITH",
+                operator: "NUMERIC_GREATER_THAN",
+              },
+              {
+                caseSensitive: true,
+                dimensionName: "nobis",
+                expressions: [
+                  "qui",
+                ],
+                not: true,
+                operator: "NUMERIC_LESS_THAN",
               },
             ],
-            operator: "AND",
+            operator: "OPERATOR_UNSPECIFIED",
           },
           {
             filters: [
               {
-                caseSensitive: true,
-                dimensionName: "modi",
+                caseSensitive: false,
+                dimensionName: "sint",
                 expressions: [
-                  "porro",
-                  "rerum",
+                  "ut",
                 ],
-                not: true,
-                operator: "NUMERIC_GREATER_THAN",
+                not: false,
+                operator: "PARTIAL",
+              },
+              {
+                caseSensitive: false,
+                dimensionName: "tempore",
+                expressions: [
+                  "incidunt",
+                ],
+                not: false,
+                operator: "ENDS_WITH",
               },
             ],
             operator: "OR",
@@ -142,31 +152,33 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
           {
             filters: [
               {
-                caseSensitive: true,
-                dimensionName: "natus",
-                expressions: [
-                  "error",
-                ],
-                not: true,
-                operator: "OPERATOR_UNSPECIFIED",
-              },
-              {
                 caseSensitive: false,
-                dimensionName: "provident",
+                dimensionName: "omnis",
                 expressions: [
-                  "ut",
+                  "ex",
                 ],
                 not: true,
                 operator: "NUMERIC_GREATER_THAN",
               },
               {
-                caseSensitive: false,
-                dimensionName: "voluptatem",
+                caseSensitive: true,
+                dimensionName: "rerum",
                 expressions: [
+                  "voluptas",
                   "quam",
                 ],
                 not: false,
-                operator: "REGEXP",
+                operator: "PARTIAL",
+              },
+              {
+                caseSensitive: false,
+                dimensionName: "unde",
+                expressions: [
+                  "autem",
+                  "qui",
+                ],
+                not: false,
+                operator: "NUMERIC_EQUAL",
               },
             ],
             operator: "OPERATOR_UNSPECIFIED",
@@ -175,97 +187,69 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
         dimensions: [
           {
             histogramBuckets: [
-              "maiores",
-              "qui",
+              "et",
+              "accusantium",
+              "esse",
             ],
-            name: "dolorum",
-          },
-          {
-            histogramBuckets: [
-              "sed",
-              "excepturi",
-            ],
-            name: "voluptatibus",
-          },
-          {
-            histogramBuckets: [
-              "consectetur",
-            ],
-            name: "aperiam",
+            name: "architecto",
           },
         ],
-        filtersExpression: "aspernatur",
+        filtersExpression: "quam",
         hideTotals: false,
         hideValueRanges: false,
-        includeEmptyRows: false,
+        includeEmptyRows: true,
         metricFilterClauses: [
           {
             filters: [
               {
-                comparisonValue: "unde",
-                metricName: "accusantium",
+                comparisonValue: "magni",
+                metricName: "et",
                 not: true,
-                operator: "GREATER_THAN",
-              },
-              {
-                comparisonValue: "repudiandae",
-                metricName: "voluptas",
-                not: true,
-                operator: "LESS_THAN",
-              },
-            ],
-            operator: "OPERATOR_UNSPECIFIED",
-          },
-          {
-            filters: [
-              {
-                comparisonValue: "eum",
-                metricName: "ut",
-                not: false,
                 operator: "OPERATOR_UNSPECIFIED",
               },
               {
-                comparisonValue: "doloribus",
-                metricName: "dolore",
+                comparisonValue: "earum",
+                metricName: "illo",
                 not: true,
-                operator: "GREATER_THAN",
-              },
-            ],
-            operator: "OR",
-          },
-          {
-            filters: [
-              {
-                comparisonValue: "occaecati",
-                metricName: "fugiat",
-                not: false,
-                operator: "GREATER_THAN",
+                operator: "IS_MISSING",
               },
             ],
             operator: "AND",
           },
+          {
+            filters: [
+              {
+                comparisonValue: "commodi",
+                metricName: "error",
+                not: false,
+                operator: "GREATER_THAN",
+              },
+              {
+                comparisonValue: "nostrum",
+                metricName: "ut",
+                not: false,
+                operator: "OPERATOR_UNSPECIFIED",
+              },
+            ],
+            operator: "OPERATOR_UNSPECIFIED",
+          },
         ],
         metrics: [
           {
-            alias: "harum",
-            expression: "aut",
-            formattingType: "CURRENCY",
+            alias: "aut",
+            expression: "quas",
+            formattingType: "FLOAT",
           },
         ],
         orderBys: [
           {
-            fieldName: "omnis",
-            orderType: "DIMENSION_AS_INTEGER",
-            sortOrder: "DESCENDING",
-          },
-          {
-            fieldName: "nemo",
-            orderType: "DELTA",
-            sortOrder: "DESCENDING",
+            fieldName: "autem",
+            orderType: "SMART",
+            sortOrder: "ASCENDING",
           },
         ],
-        pageSize: 8363872708664577317,
-        pageToken: "dolor",
+        pageSize: 8204648627352676445,
+        pageToken: "perferendis",
         pivots: [
           {
             dimensionFilterClauses: [
@@ -273,302 +257,239 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                 filters: [
                   {
                     caseSensitive: false,
-                    dimensionName: "iusto",
+                    dimensionName: "ea",
                     expressions: [
-                      "quos",
-                      "est",
-                      "similique",
-                    ],
-                    not: true,
-                    operator: "IN_LIST",
-                  },
-                  {
-                    caseSensitive: false,
-                    dimensionName: "officia",
-                    expressions: [
-                      "at",
+                      "eum",
                     ],
                     not: false,
-                    operator: "REGEXP",
-                  },
-                ],
-                operator: "OR",
-              },
-            ],
-            dimensions: [
-              {
-                histogramBuckets: [
-                  "atque",
-                  "tempore",
-                  "ex",
-                ],
-                name: "rem",
-              },
-              {
-                histogramBuckets: [
-                  "corrupti",
-                  "at",
-                ],
-                name: "natus",
-              },
-            ],
-            maxGroupCount: 1929143766071761731,
-            metrics: [
-              {
-                alias: "et",
-                expression: "deleniti",
-                formattingType: "CURRENCY",
-              },
-            ],
-            startGroup: 407870844475907848,
-          },
-          {
-            dimensionFilterClauses: [
-              {
-                filters: [
-                  {
-                    caseSensitive: false,
-                    dimensionName: "maiores",
-                    expressions: [
-                      "non",
-                      "quo",
-                    ],
-                    not: true,
                     operator: "NUMERIC_EQUAL",
                   },
-                ],
-                operator: "OPERATOR_UNSPECIFIED",
-              },
-              {
-                filters: [
                   {
                     caseSensitive: true,
-                    dimensionName: "accusamus",
+                    dimensionName: "reiciendis",
                     expressions: [
-                      "enim",
+                      "cumque",
+                      "minima",
+                      "necessitatibus",
                     ],
                     not: true,
-                    operator: "IN_LIST",
-                  },
-                ],
-                operator: "OPERATOR_UNSPECIFIED",
-              },
-            ],
-            dimensions: [
-              {
-                histogramBuckets: [
-                  "excepturi",
-                ],
-                name: "quia",
-              },
-              {
-                histogramBuckets: [
-                  "totam",
-                  "animi",
-                  "illum",
-                ],
-                name: "ea",
-              },
-            ],
-            maxGroupCount: 3468176560740997316,
-            metrics: [
-              {
-                alias: "repellat",
-                expression: "ea",
-                formattingType: "CURRENCY",
-              },
-            ],
-            startGroup: 7411902161399948188,
-          },
-          {
-            dimensionFilterClauses: [
-              {
-                filters: [
-                  {
-                    caseSensitive: true,
-                    dimensionName: "vero",
-                    expressions: [
-                      "atque",
-                      "placeat",
-                    ],
-                    not: false,
                     operator: "OPERATOR_UNSPECIFIED",
                   },
                   {
                     caseSensitive: true,
-                    dimensionName: "enim",
+                    dimensionName: "labore",
                     expressions: [
-                      "molestias",
+                      "impedit",
+                      "ad",
                     ],
                     not: true,
-                    operator: "PARTIAL",
-                  },
-                  {
-                    caseSensitive: false,
-                    dimensionName: "inventore",
-                    expressions: [
-                      "enim",
-                    ],
-                    not: false,
-                    operator: "PARTIAL",
-                  },
-                ],
-                operator: "OPERATOR_UNSPECIFIED",
-              },
-              {
-                filters: [
-                  {
-                    caseSensitive: true,
-                    dimensionName: "quia",
-                    expressions: [
-                      "porro",
-                    ],
-                    not: true,
-                    operator: "NUMERIC_LESS_THAN",
-                  },
-                  {
-                    caseSensitive: true,
-                    dimensionName: "placeat",
-                    expressions: [
-                      "quia",
-                      "et",
-                    ],
-                    not: false,
-                    operator: "NUMERIC_GREATER_THAN",
+                    operator: "OPERATOR_UNSPECIFIED",
                   },
                 ],
                 operator: "OR",
               },
-              {
-                filters: [
-                  {
-                    caseSensitive: true,
-                    dimensionName: "saepe",
-                    expressions: [
-                      "itaque",
-                      "dignissimos",
-                    ],
-                    not: true,
-                    operator: "PARTIAL",
-                  },
-                  {
-                    caseSensitive: true,
-                    dimensionName: "ut",
-                    expressions: [
-                      "et",
-                      "enim",
-                      "sapiente",
-                    ],
-                    not: true,
-                    operator: "OPERATOR_UNSPECIFIED",
-                  },
-                ],
-                operator: "AND",
-              },
             ],
             dimensions: [
               {
                 histogramBuckets: [
-                  "aut",
-                  "dolorem",
-                  "nisi",
+                  "tempora",
                 ],
-                name: "quod",
+                name: "deserunt",
+              },
+              {
+                histogramBuckets: [
+                  "sunt",
+                  "sit",
+                  "autem",
+                ],
+                name: "quis",
               },
             ],
-            maxGroupCount: 6215984325955635864,
+            maxGroupCount: 952897656927189675,
             metrics: [
               {
-                alias: "blanditiis",
-                expression: "et",
-                formattingType: "FLOAT",
+                alias: "placeat",
+                expression: "qui",
+                formattingType: "INTEGER",
               },
               {
-                alias: "facere",
-                expression: "et",
-                formattingType: "FLOAT",
+                alias: "quis",
+                expression: "adipisci",
+                formattingType: "TIME",
               },
             ],
-            startGroup: 7567746428576195883,
+            startGroup: 4230816687517220040,
           },
         ],
         samplingLevel: "SMALL",
         segments: [
           {
             dynamicSegment: {
-              name: "voluptatum",
+              name: "numquam",
               sessionSegment: {
                 segmentFilters: [
                   {
                     not: false,
                     sequenceSegment: {
-                      firstStepShouldMatchFirstHit: false,
+                      firstStepShouldMatchFirstHit: true,
                       segmentSequenceSteps: [
                         {
-                          matchType: "IMMEDIATELY_PRECEDES",
+                          matchType: "UNSPECIFIED_MATCH_TYPE",
                           orFiltersForSegment: [
                             {
                               segmentFilterClauses: [
                                 {
                                   dimensionFilter: {
                                     caseSensitive: false,
-                                    dimensionName: "suscipit",
+                                    dimensionName: "aperiam",
                                     expressions: [
-                                      "eaque",
-                                      "nihil",
+                                      "excepturi",
+                                      "mollitia",
+                                      "inventore",
                                     ],
-                                    maxComparisonValue: "sint",
-                                    minComparisonValue: "natus",
+                                    maxComparisonValue: "delectus",
+                                    minComparisonValue: "ipsa",
                                     operator: "OPERATOR_UNSPECIFIED",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "sunt",
-                                    maxComparisonValue: "quam",
-                                    metricName: "nesciunt",
-                                    operator: "EQUAL",
+                                    comparisonValue: "animi",
+                                    maxComparisonValue: "ut",
+                                    metricName: "aliquam",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "HIT",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "consequuntur",
+                                    expressions: [
+                                      "cupiditate",
+                                      "provident",
+                                      "molestiae",
+                                    ],
+                                    maxComparisonValue: "pariatur",
+                                    minComparisonValue: "quasi",
+                                    operator: "NUMERIC_GREATER_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "enim",
+                                    maxComparisonValue: "qui",
+                                    metricName: "sit",
+                                    operator: "BETWEEN",
                                     scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "et",
+                                    expressions: [
+                                      "occaecati",
+                                    ],
+                                    maxComparisonValue: "ex",
+                                    minComparisonValue: "voluptatem",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "temporibus",
+                                    maxComparisonValue: "velit",
+                                    metricName: "quae",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "possimus",
+                                    expressions: [
+                                      "dolorum",
+                                      "doloribus",
+                                      "saepe",
+                                    ],
+                                    maxComparisonValue: "sunt",
+                                    minComparisonValue: "earum",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "ut",
+                                    maxComparisonValue: "asperiores",
+                                    metricName: "et",
+                                    operator: "GREATER_THAN",
+                                    scope: "USER",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "nihil",
+                                    expressions: [
+                                      "suscipit",
+                                    ],
+                                    maxComparisonValue: "impedit",
+                                    minComparisonValue: "non",
+                                    operator: "NUMERIC_LESS_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "ut",
+                                    maxComparisonValue: "possimus",
+                                    metricName: "illo",
+                                    operator: "EQUAL",
+                                    scope: "USER",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "blanditiis",
+                                    expressions: [
+                                      "delectus",
+                                    ],
+                                    maxComparisonValue: "rerum",
+                                    minComparisonValue: "dolore",
+                                    operator: "PARTIAL",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "velit",
+                                    maxComparisonValue: "officia",
+                                    metricName: "modi",
+                                    operator: "BETWEEN",
+                                    scope: "UNSPECIFIED_SCOPE",
                                   },
                                   not: false,
                                 },
                                 {
                                   dimensionFilter: {
                                     caseSensitive: true,
-                                    dimensionName: "atque",
+                                    dimensionName: "a",
                                     expressions: [
-                                      "suscipit",
+                                      "excepturi",
+                                      "autem",
                                     ],
-                                    maxComparisonValue: "repudiandae",
-                                    minComparisonValue: "modi",
-                                    operator: "BEGINS_WITH",
+                                    maxComparisonValue: "corporis",
+                                    minComparisonValue: "dicta",
+                                    operator: "ENDS_WITH",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "expedita",
-                                    maxComparisonValue: "in",
-                                    metricName: "aut",
-                                    operator: "GREATER_THAN",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "ut",
-                                    expressions: [
-                                      "voluptas",
-                                      "facilis",
-                                      "quos",
-                                    ],
-                                    maxComparisonValue: "sapiente",
-                                    minComparisonValue: "beatae",
-                                    operator: "IN_LIST",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "vitae",
-                                    maxComparisonValue: "et",
-                                    metricName: "molestiae",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "HIT",
+                                    comparisonValue: "doloremque",
+                                    maxComparisonValue: "quae",
+                                    metricName: "nisi",
+                                    operator: "EQUAL",
+                                    scope: "SESSION",
                                   },
                                   not: false,
                                 },
@@ -583,21 +504,276 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                               segmentFilterClauses: [
                                 {
                                   dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "deleniti",
+                                    caseSensitive: true,
+                                    dimensionName: "eos",
                                     expressions: [
-                                      "consequuntur",
-                                      "officia",
+                                      "reiciendis",
                                     ],
+                                    maxComparisonValue: "aspernatur",
+                                    minComparisonValue: "praesentium",
+                                    operator: "EXACT",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "nihil",
+                                    maxComparisonValue: "adipisci",
+                                    metricName: "consequatur",
+                                    operator: "BETWEEN",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "nisi",
+                                    expressions: [
+                                      "est",
+                                      "quo",
+                                      "vero",
+                                    ],
+                                    maxComparisonValue: "alias",
+                                    minComparisonValue: "totam",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "eius",
                                     maxComparisonValue: "repellat",
-                                    minComparisonValue: "esse",
+                                    metricName: "beatae",
+                                    operator: "LESS_THAN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "necessitatibus",
+                                    expressions: [
+                                      "culpa",
+                                      "repellendus",
+                                    ],
+                                    maxComparisonValue: "voluptas",
+                                    minComparisonValue: "ut",
+                                    operator: "NUMERIC_BETWEEN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "architecto",
+                                    maxComparisonValue: "molestias",
+                                    metricName: "rerum",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "quibusdam",
+                                    expressions: [
+                                      "quo",
+                                    ],
+                                    maxComparisonValue: "ea",
+                                    minComparisonValue: "soluta",
+                                    operator: "NUMERIC_GREATER_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "commodi",
+                                    maxComparisonValue: "blanditiis",
+                                    metricName: "facere",
+                                    operator: "BETWEEN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "id",
+                                    expressions: [
+                                      "aut",
+                                    ],
+                                    maxComparisonValue: "perspiciatis",
+                                    minComparisonValue: "et",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "voluptatem",
+                                    maxComparisonValue: "ex",
+                                    metricName: "magni",
+                                    operator: "EQUAL",
+                                    scope: "HIT",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "beatae",
+                                    expressions: [
+                                      "qui",
+                                    ],
+                                    maxComparisonValue: "magni",
+                                    minComparisonValue: "minus",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "aut",
+                                    maxComparisonValue: "neque",
+                                    metricName: "iusto",
+                                    operator: "GREATER_THAN",
+                                    scope: "SESSION",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "odit",
+                                    expressions: [
+                                      "ut",
+                                      "non",
+                                      "nihil",
+                                    ],
+                                    maxComparisonValue: "laborum",
+                                    minComparisonValue: "recusandae",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "exercitationem",
+                                    maxComparisonValue: "iste",
+                                    metricName: "perferendis",
+                                    operator: "GREATER_THAN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "omnis",
+                                    expressions: [
+                                      "qui",
+                                      "omnis",
+                                      "minus",
+                                    ],
+                                    maxComparisonValue: "nostrum",
+                                    minComparisonValue: "non",
+                                    operator: "NUMERIC_LESS_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "repellat",
+                                    maxComparisonValue: "quo",
+                                    metricName: "dolorum",
+                                    operator: "BETWEEN",
+                                    scope: "USER",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "aut",
+                                    expressions: [
+                                      "aliquid",
+                                      "mollitia",
+                                      "non",
+                                    ],
+                                    maxComparisonValue: "magni",
+                                    minComparisonValue: "recusandae",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "consequatur",
+                                    maxComparisonValue: "dolores",
+                                    metricName: "hic",
+                                    operator: "GREATER_THAN",
+                                    scope: "USER",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "et",
+                                    expressions: [
+                                      "et",
+                                    ],
+                                    maxComparisonValue: "explicabo",
+                                    minComparisonValue: "necessitatibus",
+                                    operator: "PARTIAL",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "qui",
+                                    maxComparisonValue: "in",
+                                    metricName: "odit",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "USER",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "similique",
+                                    expressions: [
+                                      "id",
+                                      "laboriosam",
+                                    ],
+                                    maxComparisonValue: "quam",
+                                    minComparisonValue: "maiores",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "iusto",
+                                    maxComparisonValue: "aperiam",
+                                    metricName: "repellendus",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "aut",
+                                    expressions: [
+                                      "quia",
+                                      "quaerat",
+                                    ],
+                                    maxComparisonValue: "ea",
+                                    minComparisonValue: "et",
                                     operator: "ENDS_WITH",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "est",
-                                    maxComparisonValue: "et",
-                                    metricName: "ab",
-                                    operator: "EQUAL",
+                                    comparisonValue: "recusandae",
+                                    maxComparisonValue: "qui",
+                                    metricName: "qui",
+                                    operator: "LESS_THAN",
                                     scope: "SESSION",
                                   },
                                   not: true,
@@ -614,157 +790,708 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                           segmentFilterClauses: [
                             {
                               dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "rem",
-                                expressions: [
-                                  "quisquam",
-                                  "sunt",
-                                ],
-                                maxComparisonValue: "nam",
-                                minComparisonValue: "omnis",
-                                operator: "OPERATOR_UNSPECIFIED",
-                              },
-                              metricFilter: {
-                                comparisonValue: "cupiditate",
-                                maxComparisonValue: "omnis",
-                                metricName: "dolores",
-                                operator: "EQUAL",
-                                scope: "HIT",
-                              },
-                              not: false,
-                            },
-                          ],
-                        },
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
                                 caseSensitive: true,
-                                dimensionName: "quia",
+                                dimensionName: "voluptatem",
                                 expressions: [
-                                  "ipsum",
-                                  "vel",
-                                  "repellendus",
+                                  "fugiat",
+                                  "nesciunt",
                                 ],
-                                maxComparisonValue: "autem",
-                                minComparisonValue: "vel",
-                                operator: "BEGINS_WITH",
-                              },
-                              metricFilter: {
-                                comparisonValue: "repudiandae",
-                                maxComparisonValue: "voluptas",
-                                metricName: "omnis",
-                                operator: "EQUAL",
-                                scope: "USER",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "aspernatur",
-                                expressions: [
-                                  "occaecati",
-                                  "porro",
-                                ],
-                                maxComparisonValue: "dicta",
-                                minComparisonValue: "cupiditate",
-                                operator: "NUMERIC_GREATER_THAN",
-                              },
-                              metricFilter: {
-                                comparisonValue: "est",
-                                maxComparisonValue: "nemo",
-                                metricName: "eos",
-                                operator: "BETWEEN",
-                                scope: "HIT",
-                              },
-                              not: true,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "id",
-                                expressions: [
-                                  "ipsam",
-                                ],
-                                maxComparisonValue: "nihil",
-                                minComparisonValue: "vel",
-                                operator: "BEGINS_WITH",
-                              },
-                              metricFilter: {
-                                comparisonValue: "voluptas",
-                                maxComparisonValue: "ipsam",
-                                metricName: "est",
-                                operator: "BETWEEN",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: false,
-                            },
-                          ],
-                        },
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "sunt",
-                                expressions: [
-                                  "voluptate",
-                                  "omnis",
-                                  "hic",
-                                ],
-                                maxComparisonValue: "voluptatem",
-                                minComparisonValue: "eaque",
-                                operator: "PARTIAL",
-                              },
-                              metricFilter: {
-                                comparisonValue: "nesciunt",
-                                maxComparisonValue: "voluptas",
-                                metricName: "non",
-                                operator: "UNSPECIFIED_OPERATOR",
-                                scope: "HIT",
-                              },
-                              not: true,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "deleniti",
-                                expressions: [
-                                  "modi",
-                                ],
-                                maxComparisonValue: "quis",
-                                minComparisonValue: "id",
+                                maxComparisonValue: "et",
+                                minComparisonValue: "qui",
                                 operator: "ENDS_WITH",
                               },
                               metricFilter: {
-                                comparisonValue: "dolorum",
-                                maxComparisonValue: "repellat",
-                                metricName: "nihil",
+                                comparisonValue: "eligendi",
+                                maxComparisonValue: "velit",
+                                metricName: "fuga",
                                 operator: "EQUAL",
+                                scope: "SESSION",
+                              },
+                              not: false,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "voluptatem",
+                                expressions: [
+                                  "quae",
+                                ],
+                                maxComparisonValue: "placeat",
+                                minComparisonValue: "vitae",
+                                operator: "BEGINS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "officiis",
+                                maxComparisonValue: "commodi",
+                                metricName: "sed",
+                                operator: "UNSPECIFIED_OPERATOR",
                                 scope: "SESSION",
                               },
                               not: true,
                             },
                             {
                               dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "aut",
+                                caseSensitive: true,
+                                dimensionName: "cum",
                                 expressions: [
-                                  "porro",
-                                  "reprehenderit",
-                                  "magni",
+                                  "aut",
                                 ],
-                                maxComparisonValue: "ab",
-                                minComparisonValue: "eligendi",
-                                operator: "BEGINS_WITH",
+                                maxComparisonValue: "eaque",
+                                minComparisonValue: "facilis",
+                                operator: "NUMERIC_BETWEEN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "ut",
+                                maxComparisonValue: "et",
+                                metricName: "quam",
+                                operator: "BETWEEN",
+                                scope: "USER",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "amet",
+                                expressions: [
+                                  "in",
+                                ],
+                                maxComparisonValue: "consectetur",
+                                minComparisonValue: "minima",
+                                operator: "ENDS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "et",
+                                maxComparisonValue: "consequatur",
+                                metricName: "eum",
+                                operator: "EQUAL",
+                                scope: "USER",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "dolores",
+                                expressions: [
+                                  "ullam",
+                                ],
+                                maxComparisonValue: "architecto",
+                                minComparisonValue: "architecto",
+                                operator: "NUMERIC_GREATER_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "consequatur",
+                                maxComparisonValue: "veniam",
+                                metricName: "hic",
+                                operator: "EQUAL",
+                                scope: "PRODUCT",
+                              },
+                              not: false,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "voluptatibus",
+                                expressions: [
+                                  "consectetur",
+                                ],
+                                maxComparisonValue: "modi",
+                                minComparisonValue: "eos",
+                                operator: "REGEXP",
+                              },
+                              metricFilter: {
+                                comparisonValue: "itaque",
+                                maxComparisonValue: "ipsum",
+                                metricName: "natus",
+                                operator: "EQUAL",
+                                scope: "PRODUCT",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "eius",
+                                expressions: [
+                                  "amet",
+                                  "blanditiis",
+                                  "unde",
+                                ],
+                                maxComparisonValue: "nihil",
+                                minComparisonValue: "asperiores",
+                                operator: "OPERATOR_UNSPECIFIED",
+                              },
+                              metricFilter: {
+                                comparisonValue: "hic",
+                                maxComparisonValue: "quo",
+                                metricName: "est",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "HIT",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "possimus",
+                                expressions: [
+                                  "laborum",
+                                  "voluptas",
+                                  "modi",
+                                ],
+                                maxComparisonValue: "atque",
+                                minComparisonValue: "soluta",
+                                operator: "PARTIAL",
                               },
                               metricFilter: {
                                 comparisonValue: "qui",
-                                maxComparisonValue: "omnis",
-                                metricName: "ut",
+                                maxComparisonValue: "nihil",
+                                metricName: "quas",
+                                operator: "BETWEEN",
+                                scope: "HIT",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    not: true,
+                    sequenceSegment: {
+                      firstStepShouldMatchFirstHit: true,
+                      segmentSequenceSteps: [
+                        {
+                          matchType: "IMMEDIATELY_PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "voluptas",
+                                    expressions: [
+                                      "sit",
+                                      "saepe",
+                                      "est",
+                                    ],
+                                    maxComparisonValue: "odio",
+                                    minComparisonValue: "delectus",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "voluptatem",
+                                    maxComparisonValue: "et",
+                                    metricName: "et",
+                                    operator: "LESS_THAN",
+                                    scope: "SESSION",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "asperiores",
+                                    expressions: [
+                                      "hic",
+                                      "doloribus",
+                                    ],
+                                    maxComparisonValue: "corrupti",
+                                    minComparisonValue: "nemo",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "neque",
+                                    maxComparisonValue: "autem",
+                                    metricName: "saepe",
+                                    operator: "BETWEEN",
+                                    scope: "USER",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "autem",
+                                    expressions: [
+                                      "consequuntur",
+                                    ],
+                                    maxComparisonValue: "autem",
+                                    minComparisonValue: "vitae",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "non",
+                                    maxComparisonValue: "aut",
+                                    metricName: "autem",
+                                    operator: "LESS_THAN",
+                                    scope: "USER",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "quaerat",
+                                    expressions: [
+                                      "harum",
+                                      "laudantium",
+                                      "odio",
+                                    ],
+                                    maxComparisonValue: "deserunt",
+                                    minComparisonValue: "qui",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "omnis",
+                                    maxComparisonValue: "veritatis",
+                                    metricName: "minus",
+                                    operator: "EQUAL",
+                                    scope: "SESSION",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "doloribus",
+                                    expressions: [
+                                      "cupiditate",
+                                      "similique",
+                                    ],
+                                    maxComparisonValue: "omnis",
+                                    minComparisonValue: "voluptatem",
+                                    operator: "NUMERIC_LESS_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "maiores",
+                                    maxComparisonValue: "est",
+                                    metricName: "expedita",
+                                    operator: "BETWEEN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "et",
+                                    expressions: [
+                                      "itaque",
+                                      "provident",
+                                    ],
+                                    maxComparisonValue: "voluptatem",
+                                    minComparisonValue: "qui",
+                                    operator: "ENDS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "omnis",
+                                    maxComparisonValue: "corporis",
+                                    metricName: "quasi",
+                                    operator: "GREATER_THAN",
+                                    scope: "SESSION",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    simpleSegment: {
+                      orFiltersForSegment: [
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "iure",
+                                expressions: [
+                                  "occaecati",
+                                  "aut",
+                                  "repudiandae",
+                                ],
+                                maxComparisonValue: "voluptas",
+                                minComparisonValue: "eligendi",
+                                operator: "REGEXP",
+                              },
+                              metricFilter: {
+                                comparisonValue: "dolorem",
+                                maxComparisonValue: "similique",
+                                metricName: "ad",
                                 operator: "UNSPECIFIED_OPERATOR",
+                                scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "aut",
+                                expressions: [
+                                  "dolores",
+                                  "et",
+                                  "quos",
+                                ],
+                                maxComparisonValue: "est",
+                                minComparisonValue: "est",
+                                operator: "EXACT",
+                              },
+                              metricFilter: {
+                                comparisonValue: "explicabo",
+                                maxComparisonValue: "quis",
+                                metricName: "eius",
+                                operator: "BETWEEN",
+                                scope: "HIT",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "debitis",
+                                expressions: [
+                                  "mollitia",
+                                ],
+                                maxComparisonValue: "officiis",
+                                minComparisonValue: "repellendus",
+                                operator: "REGEXP",
+                              },
+                              metricFilter: {
+                                comparisonValue: "repellat",
+                                maxComparisonValue: "eveniet",
+                                metricName: "ad",
+                                operator: "EQUAL",
                                 scope: "UNSPECIFIED_SCOPE",
+                              },
+                              not: false,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "nostrum",
+                                expressions: [
+                                  "nemo",
+                                ],
+                                maxComparisonValue: "recusandae",
+                                minComparisonValue: "nostrum",
+                                operator: "ENDS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "aut",
+                                maxComparisonValue: "quo",
+                                metricName: "minus",
+                                operator: "EQUAL",
+                                scope: "PRODUCT",
+                              },
+                              not: false,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "magni",
+                                expressions: [
+                                  "ut",
+                                  "ut",
+                                  "distinctio",
+                                ],
+                                maxComparisonValue: "dolor",
+                                minComparisonValue: "nemo",
+                                operator: "EXACT",
+                              },
+                              metricFilter: {
+                                comparisonValue: "reiciendis",
+                                maxComparisonValue: "in",
+                                metricName: "voluptatem",
+                                operator: "GREATER_THAN",
+                                scope: "UNSPECIFIED_SCOPE",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    not: true,
+                    sequenceSegment: {
+                      firstStepShouldMatchFirstHit: true,
+                      segmentSequenceSteps: [
+                        {
+                          matchType: "IMMEDIATELY_PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "sit",
+                                    expressions: [
+                                      "aperiam",
+                                    ],
+                                    maxComparisonValue: "nulla",
+                                    minComparisonValue: "odit",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "ea",
+                                    maxComparisonValue: "mollitia",
+                                    metricName: "eveniet",
+                                    operator: "EQUAL",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "UNSPECIFIED_MATCH_TYPE",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "vel",
+                                    expressions: [
+                                      "nesciunt",
+                                    ],
+                                    maxComparisonValue: "tenetur",
+                                    minComparisonValue: "fugiat",
+                                    operator: "NUMERIC_LESS_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "dolor",
+                                    maxComparisonValue: "enim",
+                                    metricName: "animi",
+                                    operator: "GREATER_THAN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "est",
+                                    expressions: [
+                                      "ea",
+                                      "omnis",
+                                    ],
+                                    maxComparisonValue: "pariatur",
+                                    minComparisonValue: "id",
+                                    operator: "NUMERIC_GREATER_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "esse",
+                                    maxComparisonValue: "in",
+                                    metricName: "amet",
+                                    operator: "GREATER_THAN",
+                                    scope: "SESSION",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "sapiente",
+                                    expressions: [
+                                      "autem",
+                                      "placeat",
+                                      "velit",
+                                    ],
+                                    maxComparisonValue: "minus",
+                                    minComparisonValue: "praesentium",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "voluptas",
+                                    maxComparisonValue: "consequatur",
+                                    metricName: "aut",
+                                    operator: "EQUAL",
+                                    scope: "SESSION",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "UNSPECIFIED_MATCH_TYPE",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "minus",
+                                    expressions: [
+                                      "enim",
+                                      "eaque",
+                                      "qui",
+                                    ],
+                                    maxComparisonValue: "maxime",
+                                    minComparisonValue: "libero",
+                                    operator: "BEGINS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "ea",
+                                    maxComparisonValue: "porro",
+                                    metricName: "labore",
+                                    operator: "LESS_THAN",
+                                    scope: "USER",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "ut",
+                                    expressions: [
+                                      "hic",
+                                    ],
+                                    maxComparisonValue: "qui",
+                                    minComparisonValue: "cum",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "consequatur",
+                                    maxComparisonValue: "molestiae",
+                                    metricName: "laudantium",
+                                    operator: "GREATER_THAN",
+                                    scope: "SESSION",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    simpleSegment: {
+                      orFiltersForSegment: [
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "porro",
+                                expressions: [
+                                  "ipsa",
+                                ],
+                                maxComparisonValue: "ipsa",
+                                minComparisonValue: "rerum",
+                                operator: "PARTIAL",
+                              },
+                              metricFilter: {
+                                comparisonValue: "rem",
+                                maxComparisonValue: "dolore",
+                                metricName: "doloribus",
+                                operator: "EQUAL",
+                                scope: "UNSPECIFIED_SCOPE",
+                              },
+                              not: false,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "eos",
+                                expressions: [
+                                  "vitae",
+                                  "sit",
+                                  "asperiores",
+                                ],
+                                maxComparisonValue: "earum",
+                                minComparisonValue: "distinctio",
+                                operator: "NUMERIC_LESS_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "et",
+                                maxComparisonValue: "alias",
+                                metricName: "in",
+                                operator: "EQUAL",
+                                scope: "USER",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "cum",
+                                expressions: [
+                                  "odit",
+                                ],
+                                maxComparisonValue: "alias",
+                                minComparisonValue: "voluptas",
+                                operator: "PARTIAL",
+                              },
+                              metricFilter: {
+                                comparisonValue: "ratione",
+                                maxComparisonValue: "dolore",
+                                metricName: "est",
+                                operator: "BETWEEN",
+                                scope: "UNSPECIFIED_SCOPE",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "odit",
+                                expressions: [
+                                  "voluptate",
+                                  "ut",
+                                  "inventore",
+                                ],
+                                maxComparisonValue: "et",
+                                minComparisonValue: "enim",
+                                operator: "OPERATOR_UNSPECIFIED",
+                              },
+                              metricFilter: {
+                                comparisonValue: "hic",
+                                maxComparisonValue: "cumque",
+                                metricName: "quia",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "PRODUCT",
                               },
                               not: true,
                             },
@@ -778,7 +1505,7 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
               userSegment: {
                 segmentFilters: [
                   {
-                    not: true,
+                    not: false,
                     sequenceSegment: {
                       firstStepShouldMatchFirstHit: false,
                       segmentSequenceSteps: [
@@ -790,1045 +1517,62 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                                 {
                                   dimensionFilter: {
                                     caseSensitive: false,
-                                    dimensionName: "accusamus",
+                                    dimensionName: "non",
                                     expressions: [
-                                      "aut",
-                                      "ut",
+                                      "mollitia",
                                     ],
-                                    maxComparisonValue: "dicta",
-                                    minComparisonValue: "est",
-                                    operator: "NUMERIC_BETWEEN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "voluptatum",
-                                    maxComparisonValue: "qui",
-                                    metricName: "odit",
-                                    operator: "BETWEEN",
-                                    scope: "SESSION",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "sint",
-                                    expressions: [
-                                      "rem",
-                                      "quod",
-                                      "quia",
-                                    ],
-                                    maxComparisonValue: "magni",
-                                    minComparisonValue: "enim",
+                                    maxComparisonValue: "dolorum",
+                                    minComparisonValue: "at",
                                     operator: "NUMERIC_LESS_THAN",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "ut",
-                                    maxComparisonValue: "dicta",
-                                    metricName: "iusto",
-                                    operator: "EQUAL",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          matchType: "UNSPECIFIED_MATCH_TYPE",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "sint",
-                                    expressions: [
-                                      "omnis",
-                                      "ut",
-                                    ],
-                                    maxComparisonValue: "sed",
-                                    minComparisonValue: "exercitationem",
-                                    operator: "ENDS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "ipsa",
-                                    maxComparisonValue: "delectus",
-                                    metricName: "eos",
-                                    operator: "LESS_THAN",
+                                    comparisonValue: "aut",
+                                    maxComparisonValue: "voluptate",
+                                    metricName: "excepturi",
+                                    operator: "UNSPECIFIED_OPERATOR",
                                     scope: "USER",
                                   },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "est",
-                                    expressions: [
-                                      "saepe",
-                                    ],
-                                    maxComparisonValue: "voluptatem",
-                                    minComparisonValue: "corporis",
-                                    operator: "IN_LIST",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "inventore",
-                                    maxComparisonValue: "repellat",
-                                    metricName: "ullam",
-                                    operator: "BETWEEN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "nihil",
-                                    expressions: [
-                                      "esse",
-                                    ],
-                                    maxComparisonValue: "eum",
-                                    minComparisonValue: "pariatur",
-                                    operator: "NUMERIC_LESS_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "autem",
-                                    maxComparisonValue: "perferendis",
-                                    metricName: "aperiam",
-                                    operator: "GREATER_THAN",
-                                    scope: "HIT",
-                                  },
                                   not: false,
                                 },
                                 {
                                   dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "aspernatur",
+                                    caseSensitive: true,
+                                    dimensionName: "quo",
                                     expressions: [
                                       "maxime",
                                     ],
-                                    maxComparisonValue: "voluptas",
-                                    minComparisonValue: "facere",
-                                    operator: "REGEXP",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "sit",
-                                    maxComparisonValue: "eveniet",
-                                    metricName: "reiciendis",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "rerum",
-                                    expressions: [
-                                      "saepe",
-                                    ],
-                                    maxComparisonValue: "aut",
-                                    minComparisonValue: "quod",
-                                    operator: "NUMERIC_LESS_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "et",
-                                    maxComparisonValue: "quasi",
-                                    metricName: "dolores",
-                                    operator: "LESS_THAN",
-                                    scope: "USER",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    simpleSegment: {
-                      orFiltersForSegment: [
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "aliquam",
-                                expressions: [
-                                  "ut",
-                                  "id",
-                                  "dolore",
-                                ],
-                                maxComparisonValue: "qui",
-                                minComparisonValue: "voluptates",
-                                operator: "IN_LIST",
-                              },
-                              metricFilter: {
-                                comparisonValue: "ab",
-                                maxComparisonValue: "qui",
-                                metricName: "alias",
-                                operator: "GREATER_THAN",
-                                scope: "USER",
-                              },
-                              not: false,
-                            },
-                          ],
-                        },
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "voluptatem",
-                                expressions: [
-                                  "soluta",
-                                  "est",
-                                ],
-                                maxComparisonValue: "quam",
-                                minComparisonValue: "accusamus",
-                                operator: "PARTIAL",
-                              },
-                              metricFilter: {
-                                comparisonValue: "iure",
-                                maxComparisonValue: "quisquam",
-                                metricName: "cumque",
-                                operator: "LESS_THAN",
-                                scope: "USER",
-                              },
-                              not: true,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "in",
-                                expressions: [
-                                  "et",
-                                  "et",
-                                ],
-                                maxComparisonValue: "labore",
-                                minComparisonValue: "sed",
-                                operator: "REGEXP",
-                              },
-                              metricFilter: {
-                                comparisonValue: "sunt",
-                                maxComparisonValue: "et",
-                                metricName: "molestias",
-                                operator: "BETWEEN",
-                                scope: "USER",
-                              },
-                              not: false,
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  },
-                  {
-                    not: false,
-                    sequenceSegment: {
-                      firstStepShouldMatchFirstHit: false,
-                      segmentSequenceSteps: [
-                        {
-                          matchType: "IMMEDIATELY_PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "repellat",
-                                    expressions: [
-                                      "autem",
-                                      "repellat",
-                                    ],
-                                    maxComparisonValue: "libero",
-                                    minComparisonValue: "ad",
-                                    operator: "REGEXP",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "veritatis",
-                                    maxComparisonValue: "et",
-                                    metricName: "ab",
-                                    operator: "LESS_THAN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "repudiandae",
-                                    expressions: [
-                                      "ut",
-                                    ],
-                                    maxComparisonValue: "explicabo",
-                                    minComparisonValue: "recusandae",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "facilis",
-                                    maxComparisonValue: "sit",
-                                    metricName: "hic",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "SESSION",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "quis",
-                                    expressions: [
-                                      "voluptatibus",
-                                      "ipsa",
-                                    ],
-                                    maxComparisonValue: "corporis",
-                                    minComparisonValue: "et",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "laboriosam",
-                                    maxComparisonValue: "deserunt",
-                                    metricName: "dignissimos",
-                                    operator: "GREATER_THAN",
-                                    scope: "SESSION",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "voluptas",
-                                    expressions: [
-                                      "impedit",
-                                    ],
-                                    maxComparisonValue: "consequatur",
-                                    minComparisonValue: "et",
-                                    operator: "REGEXP",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "et",
-                                    maxComparisonValue: "fugit",
-                                    metricName: "aut",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "HIT",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    simpleSegment: {
-                      orFiltersForSegment: [
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "ratione",
-                                expressions: [
-                                  "exercitationem",
-                                ],
-                                maxComparisonValue: "facilis",
-                                minComparisonValue: "ratione",
-                                operator: "OPERATOR_UNSPECIFIED",
-                              },
-                              metricFilter: {
-                                comparisonValue: "repellendus",
-                                maxComparisonValue: "atque",
-                                metricName: "repellat",
-                                operator: "LESS_THAN",
-                                scope: "PRODUCT",
-                              },
-                              not: true,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "sed",
-                                expressions: [
-                                  "ut",
-                                  "accusantium",
-                                  "voluptas",
-                                ],
-                                maxComparisonValue: "placeat",
-                                minComparisonValue: "temporibus",
-                                operator: "BEGINS_WITH",
-                              },
-                              metricFilter: {
-                                comparisonValue: "odio",
-                                maxComparisonValue: "et",
-                                metricName: "omnis",
-                                operator: "LESS_THAN",
-                                scope: "USER",
-                              },
-                              not: true,
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  },
-                ],
-              },
-            },
-            segmentId: "nihil",
-          },
-        ],
-        viewId: "officia",
-      },
-      {
-        cohortGroup: {
-          cohorts: [
-            {
-              dateRange: {
-                endDate: "similique",
-                startDate: "aliquam",
-              },
-              name: "aut",
-              type: "FIRST_VISIT_DATE",
-            },
-            {
-              dateRange: {
-                endDate: "sint",
-                startDate: "earum",
-              },
-              name: "quia",
-              type: "UNSPECIFIED_COHORT_TYPE",
-            },
-            {
-              dateRange: {
-                endDate: "architecto",
-                startDate: "praesentium",
-              },
-              name: "et",
-              type: "UNSPECIFIED_COHORT_TYPE",
-            },
-          ],
-          lifetimeValue: false,
-        },
-        dateRanges: [
-          {
-            endDate: "rerum",
-            startDate: "magnam",
-          },
-        ],
-        dimensionFilterClauses: [
-          {
-            filters: [
-              {
-                caseSensitive: false,
-                dimensionName: "ullam",
-                expressions: [
-                  "nam",
-                  "in",
-                ],
-                not: true,
-                operator: "IN_LIST",
-              },
-            ],
-            operator: "OPERATOR_UNSPECIFIED",
-          },
-        ],
-        dimensions: [
-          {
-            histogramBuckets: [
-              "voluptates",
-              "molestias",
-            ],
-            name: "vel",
-          },
-        ],
-        filtersExpression: "numquam",
-        hideTotals: false,
-        hideValueRanges: false,
-        includeEmptyRows: true,
-        metricFilterClauses: [
-          {
-            filters: [
-              {
-                comparisonValue: "necessitatibus",
-                metricName: "quia",
-                not: true,
-                operator: "GREATER_THAN",
-              },
-              {
-                comparisonValue: "at",
-                metricName: "ut",
-                not: true,
-                operator: "EQUAL",
-              },
-              {
-                comparisonValue: "dignissimos",
-                metricName: "accusantium",
-                not: false,
-                operator: "IS_MISSING",
-              },
-            ],
-            operator: "AND",
-          },
-        ],
-        metrics: [
-          {
-            alias: "dolor",
-            expression: "dolorem",
-            formattingType: "METRIC_TYPE_UNSPECIFIED",
-          },
-        ],
-        orderBys: [
-          {
-            fieldName: "nulla",
-            orderType: "DIMENSION_AS_INTEGER",
-            sortOrder: "DESCENDING",
-          },
-          {
-            fieldName: "eligendi",
-            orderType: "VALUE",
-            sortOrder: "SORT_ORDER_UNSPECIFIED",
-          },
-          {
-            fieldName: "sed",
-            orderType: "SMART",
-            sortOrder: "DESCENDING",
-          },
-        ],
-        pageSize: 1298770911997810884,
-        pageToken: "commodi",
-        pivots: [
-          {
-            dimensionFilterClauses: [
-              {
-                filters: [
-                  {
-                    caseSensitive: false,
-                    dimensionName: "aut",
-                    expressions: [
-                      "eligendi",
-                      "et",
-                    ],
-                    not: true,
-                    operator: "PARTIAL",
-                  },
-                  {
-                    caseSensitive: true,
-                    dimensionName: "eligendi",
-                    expressions: [
-                      "beatae",
-                      "nostrum",
-                    ],
-                    not: true,
-                    operator: "IN_LIST",
-                  },
-                  {
-                    caseSensitive: true,
-                    dimensionName: "sequi",
-                    expressions: [
-                      "dolorem",
-                      "repudiandae",
-                      "est",
-                    ],
-                    not: true,
-                    operator: "EXACT",
-                  },
-                ],
-                operator: "OPERATOR_UNSPECIFIED",
-              },
-              {
-                filters: [
-                  {
-                    caseSensitive: true,
-                    dimensionName: "qui",
-                    expressions: [
-                      "quos",
-                      "nihil",
-                      "voluptas",
-                    ],
-                    not: false,
-                    operator: "PARTIAL",
-                  },
-                  {
-                    caseSensitive: false,
-                    dimensionName: "modi",
-                    expressions: [
-                      "inventore",
-                    ],
-                    not: false,
-                    operator: "OPERATOR_UNSPECIFIED",
-                  },
-                ],
-                operator: "OR",
-              },
-              {
-                filters: [
-                  {
-                    caseSensitive: true,
-                    dimensionName: "deserunt",
-                    expressions: [
-                      "aperiam",
-                      "et",
-                    ],
-                    not: false,
-                    operator: "ENDS_WITH",
-                  },
-                  {
-                    caseSensitive: false,
-                    dimensionName: "itaque",
-                    expressions: [
-                      "placeat",
-                    ],
-                    not: false,
-                    operator: "OPERATOR_UNSPECIFIED",
-                  },
-                ],
-                operator: "OPERATOR_UNSPECIFIED",
-              },
-            ],
-            dimensions: [
-              {
-                histogramBuckets: [
-                  "ut",
-                  "quisquam",
-                  "sit",
-                ],
-                name: "ratione",
-              },
-              {
-                histogramBuckets: [
-                  "tenetur",
-                  "quia",
-                ],
-                name: "ut",
-              },
-            ],
-            maxGroupCount: 2455040378979801340,
-            metrics: [
-              {
-                alias: "aut",
-                expression: "itaque",
-                formattingType: "INTEGER",
-              },
-              {
-                alias: "qui",
-                expression: "earum",
-                formattingType: "TIME",
-              },
-            ],
-            startGroup: 4532570297948078418,
-          },
-          {
-            dimensionFilterClauses: [
-              {
-                filters: [
-                  {
-                    caseSensitive: true,
-                    dimensionName: "quas",
-                    expressions: [
-                      "blanditiis",
-                      "eos",
-                      "ut",
-                    ],
-                    not: false,
-                    operator: "ENDS_WITH",
-                  },
-                  {
-                    caseSensitive: true,
-                    dimensionName: "dolores",
-                    expressions: [
-                      "itaque",
-                      "eligendi",
-                      "libero",
-                    ],
-                    not: false,
-                    operator: "REGEXP",
-                  },
-                ],
-                operator: "AND",
-              },
-              {
-                filters: [
-                  {
-                    caseSensitive: false,
-                    dimensionName: "nihil",
-                    expressions: [
-                      "quasi",
-                      "quia",
-                      "molestiae",
-                    ],
-                    not: true,
-                    operator: "PARTIAL",
-                  },
-                  {
-                    caseSensitive: false,
-                    dimensionName: "modi",
-                    expressions: [
-                      "dolorem",
-                      "ut",
-                    ],
-                    not: false,
-                    operator: "IN_LIST",
-                  },
-                ],
-                operator: "OPERATOR_UNSPECIFIED",
-              },
-              {
-                filters: [
-                  {
-                    caseSensitive: true,
-                    dimensionName: "culpa",
-                    expressions: [
-                      "sint",
-                      "est",
-                    ],
-                    not: true,
-                    operator: "BEGINS_WITH",
-                  },
-                  {
-                    caseSensitive: true,
-                    dimensionName: "tempora",
-                    expressions: [
-                      "eius",
-                      "aut",
-                    ],
-                    not: false,
-                    operator: "PARTIAL",
-                  },
-                  {
-                    caseSensitive: false,
-                    dimensionName: "non",
-                    expressions: [
-                      "nostrum",
-                      "sit",
-                    ],
-                    not: false,
-                    operator: "EXACT",
-                  },
-                ],
-                operator: "OPERATOR_UNSPECIFIED",
-              },
-            ],
-            dimensions: [
-              {
-                histogramBuckets: [
-                  "aut",
-                ],
-                name: "rerum",
-              },
-            ],
-            maxGroupCount: 5876915796809974624,
-            metrics: [
-              {
-                alias: "soluta",
-                expression: "accusantium",
-                formattingType: "FLOAT",
-              },
-            ],
-            startGroup: 5379839699936459243,
-          },
-          {
-            dimensionFilterClauses: [
-              {
-                filters: [
-                  {
-                    caseSensitive: false,
-                    dimensionName: "mollitia",
-                    expressions: [
-                      "a",
-                      "et",
-                      "omnis",
-                    ],
-                    not: false,
-                    operator: "NUMERIC_LESS_THAN",
-                  },
-                  {
-                    caseSensitive: false,
-                    dimensionName: "laboriosam",
-                    expressions: [
-                      "cumque",
-                      "quibusdam",
-                      "distinctio",
-                    ],
-                    not: true,
-                    operator: "EXACT",
-                  },
-                ],
-                operator: "AND",
-              },
-              {
-                filters: [
-                  {
-                    caseSensitive: true,
-                    dimensionName: "quos",
-                    expressions: [
-                      "quaerat",
-                      "vel",
-                      "tempora",
-                    ],
-                    not: true,
-                    operator: "NUMERIC_GREATER_THAN",
-                  },
-                  {
-                    caseSensitive: true,
-                    dimensionName: "quia",
-                    expressions: [
-                      "repellat",
-                      "accusantium",
-                      "et",
-                    ],
-                    not: true,
-                    operator: "EXACT",
-                  },
-                  {
-                    caseSensitive: true,
-                    dimensionName: "eaque",
-                    expressions: [
-                      "possimus",
-                      "consectetur",
-                      "quidem",
-                    ],
-                    not: false,
-                    operator: "EXACT",
-                  },
-                ],
-                operator: "OPERATOR_UNSPECIFIED",
-              },
-              {
-                filters: [
-                  {
-                    caseSensitive: false,
-                    dimensionName: "aspernatur",
-                    expressions: [
-                      "facilis",
-                      "tempore",
-                    ],
-                    not: false,
-                    operator: "BEGINS_WITH",
-                  },
-                  {
-                    caseSensitive: false,
-                    dimensionName: "modi",
-                    expressions: [
-                      "laudantium",
-                    ],
-                    not: false,
-                    operator: "OPERATOR_UNSPECIFIED",
-                  },
-                  {
-                    caseSensitive: false,
-                    dimensionName: "sint",
-                    expressions: [
-                      "laudantium",
-                      "aliquam",
-                      "fugit",
-                    ],
-                    not: false,
-                    operator: "NUMERIC_GREATER_THAN",
-                  },
-                ],
-                operator: "AND",
-              },
-            ],
-            dimensions: [
-              {
-                histogramBuckets: [
-                  "molestiae",
-                ],
-                name: "non",
-              },
-              {
-                histogramBuckets: [
-                  "rem",
-                  "ipsum",
-                  "quasi",
-                ],
-                name: "aut",
-              },
-              {
-                histogramBuckets: [
-                  "eos",
-                  "sint",
-                  "aliquid",
-                ],
-                name: "a",
-              },
-            ],
-            maxGroupCount: 8626443857861818200,
-            metrics: [
-              {
-                alias: "perferendis",
-                expression: "numquam",
-                formattingType: "TIME",
-              },
-              {
-                alias: "vitae",
-                expression: "et",
-                formattingType: "CURRENCY",
-              },
-            ],
-            startGroup: 1806218515051014113,
-          },
-        ],
-        samplingLevel: "DEFAULT",
-        segments: [
-          {
-            dynamicSegment: {
-              name: "repellat",
-              sessionSegment: {
-                segmentFilters: [
-                  {
-                    not: true,
-                    sequenceSegment: {
-                      firstStepShouldMatchFirstHit: true,
-                      segmentSequenceSteps: [
-                        {
-                          matchType: "PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "voluptatem",
-                                    expressions: [
-                                      "quasi",
-                                      "deleniti",
-                                      "qui",
-                                    ],
-                                    maxComparisonValue: "sit",
-                                    minComparisonValue: "assumenda",
+                                    maxComparisonValue: "ratione",
+                                    minComparisonValue: "voluptatem",
                                     operator: "NUMERIC_BETWEEN",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "ipsum",
-                                    maxComparisonValue: "consequuntur",
-                                    metricName: "laudantium",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "USER",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "quod",
-                                    expressions: [
-                                      "aliquam",
-                                      "aut",
-                                      "laborum",
-                                    ],
-                                    maxComparisonValue: "voluptatem",
-                                    minComparisonValue: "enim",
-                                    operator: "NUMERIC_BETWEEN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "non",
-                                    maxComparisonValue: "saepe",
-                                    metricName: "dolores",
-                                    operator: "GREATER_THAN",
-                                    scope: "PRODUCT",
+                                    comparisonValue: "eum",
+                                    maxComparisonValue: "sed",
+                                    metricName: "expedita",
+                                    operator: "LESS_THAN",
+                                    scope: "SESSION",
                                   },
                                   not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "omnis",
-                                    expressions: [
-                                      "ut",
-                                    ],
-                                    maxComparisonValue: "qui",
-                                    minComparisonValue: "deleniti",
-                                    operator: "EXACT",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "enim",
-                                    maxComparisonValue: "qui",
-                                    metricName: "explicabo",
-                                    operator: "BETWEEN",
-                                    scope: "HIT",
-                                  },
-                                  not: true,
                                 },
                               ],
                             },
                             {
                               segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "expedita",
-                                    expressions: [
-                                      "eligendi",
-                                      "est",
-                                    ],
-                                    maxComparisonValue: "similique",
-                                    minComparisonValue: "architecto",
-                                    operator: "BEGINS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "voluptatem",
-                                    maxComparisonValue: "fuga",
-                                    metricName: "reiciendis",
-                                    operator: "EQUAL",
-                                    scope: "SESSION",
-                                  },
-                                  not: false,
-                                },
                                 {
                                   dimensionFilter: {
                                     caseSensitive: true,
-                                    dimensionName: "corporis",
+                                    dimensionName: "ratione",
                                     expressions: [
-                                      "qui",
+                                      "ipsam",
                                     ],
-                                    maxComparisonValue: "quaerat",
-                                    minComparisonValue: "sed",
-                                    operator: "OPERATOR_UNSPECIFIED",
+                                    maxComparisonValue: "dolor",
+                                    minComparisonValue: "facilis",
+                                    operator: "ENDS_WITH",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "non",
-                                    maxComparisonValue: "quia",
-                                    metricName: "et",
-                                    operator: "BETWEEN",
-                                    scope: "USER",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "voluptas",
-                                    expressions: [
-                                      "minima",
-                                      "nihil",
-                                      "voluptas",
-                                    ],
-                                    maxComparisonValue: "impedit",
-                                    minComparisonValue: "ipsum",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "similique",
-                                    maxComparisonValue: "minima",
-                                    metricName: "ab",
+                                    comparisonValue: "sunt",
+                                    maxComparisonValue: "doloremque",
+                                    metricName: "minus",
                                     operator: "GREATER_THAN",
                                     scope: "UNSPECIFIED_SCOPE",
                                   },
@@ -1836,93 +1580,22 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                                 },
                                 {
                                   dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "dolor",
-                                    expressions: [
-                                      "voluptatem",
-                                      "nesciunt",
-                                    ],
-                                    maxComparisonValue: "porro",
-                                    minComparisonValue: "ut",
-                                    operator: "IN_LIST",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "commodi",
-                                    maxComparisonValue: "id",
-                                    metricName: "officiis",
-                                    operator: "EQUAL",
-                                    scope: "SESSION",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
                                     caseSensitive: false,
-                                    dimensionName: "dolores",
+                                    dimensionName: "harum",
                                     expressions: [
-                                      "delectus",
-                                      "sint",
+                                      "natus",
+                                      "quibusdam",
                                     ],
-                                    maxComparisonValue: "non",
-                                    minComparisonValue: "labore",
-                                    operator: "OPERATOR_UNSPECIFIED",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "ad",
-                                    maxComparisonValue: "magni",
-                                    metricName: "eveniet",
-                                    operator: "BETWEEN",
-                                    scope: "SESSION",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          matchType: "PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "quia",
-                                    expressions: [
-                                      "incidunt",
-                                      "modi",
-                                    ],
-                                    maxComparisonValue: "voluptas",
-                                    minComparisonValue: "ex",
-                                    operator: "IN_LIST",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "inventore",
-                                    maxComparisonValue: "quia",
-                                    metricName: "amet",
-                                    operator: "GREATER_THAN",
-                                    scope: "USER",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "sunt",
-                                    expressions: [
-                                      "aspernatur",
-                                    ],
-                                    maxComparisonValue: "quis",
+                                    maxComparisonValue: "ullam",
                                     minComparisonValue: "veniam",
-                                    operator: "NUMERIC_BETWEEN",
+                                    operator: "NUMERIC_GREATER_THAN",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "omnis",
-                                    maxComparisonValue: "sunt",
-                                    metricName: "eaque",
-                                    operator: "GREATER_THAN",
-                                    scope: "SESSION",
+                                    comparisonValue: "error",
+                                    maxComparisonValue: "omnis",
+                                    metricName: "aliquid",
+                                    operator: "LESS_THAN",
+                                    scope: "UNSPECIFIED_SCOPE",
                                   },
                                   not: false,
                                 },
@@ -1931,92 +1604,20 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                                     caseSensitive: true,
                                     dimensionName: "et",
                                     expressions: [
-                                      "laborum",
-                                      "ducimus",
-                                      "rerum",
+                                      "saepe",
+                                      "sit",
+                                      "esse",
                                     ],
-                                    maxComparisonValue: "autem",
-                                    minComparisonValue: "sint",
-                                    operator: "EXACT",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "blanditiis",
-                                    maxComparisonValue: "impedit",
-                                    metricName: "sunt",
-                                    operator: "BETWEEN",
-                                    scope: "USER",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "eaque",
-                                    expressions: [
-                                      "ut",
-                                      "sapiente",
-                                    ],
-                                    maxComparisonValue: "natus",
-                                    minComparisonValue: "nobis",
-                                    operator: "IN_LIST",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "esse",
-                                    maxComparisonValue: "ad",
-                                    metricName: "culpa",
-                                    operator: "EQUAL",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "est",
-                                    expressions: [
-                                      "blanditiis",
-                                      "enim",
-                                      "ut",
-                                    ],
-                                    maxComparisonValue: "odit",
-                                    minComparisonValue: "non",
+                                    maxComparisonValue: "voluptate",
+                                    minComparisonValue: "tenetur",
                                     operator: "BEGINS_WITH",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "sunt",
-                                    maxComparisonValue: "ea",
-                                    metricName: "id",
-                                    operator: "EQUAL",
-                                    scope: "HIT",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "modi",
-                                    expressions: [
-                                      "quia",
-                                      "maiores",
-                                    ],
-                                    maxComparisonValue: "nisi",
-                                    minComparisonValue: "omnis",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "praesentium",
-                                    maxComparisonValue: "totam",
-                                    metricName: "ut",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "UNSPECIFIED_SCOPE",
+                                    comparisonValue: "animi",
+                                    maxComparisonValue: "facere",
+                                    metricName: "consequatur",
+                                    operator: "GREATER_THAN",
+                                    scope: "PRODUCT",
                                   },
                                   not: false,
                                 },
@@ -2026,6 +1627,78 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                         },
                         {
                           matchType: "PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "aut",
+                                    expressions: [
+                                      "incidunt",
+                                      "est",
+                                      "a",
+                                    ],
+                                    maxComparisonValue: "quia",
+                                    minComparisonValue: "sit",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "pariatur",
+                                    maxComparisonValue: "sunt",
+                                    metricName: "nobis",
+                                    operator: "EQUAL",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "ex",
+                                    expressions: [
+                                      "eos",
+                                      "quas",
+                                    ],
+                                    maxComparisonValue: "et",
+                                    minComparisonValue: "temporibus",
+                                    operator: "NUMERIC_LESS_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "tempora",
+                                    maxComparisonValue: "voluptatem",
+                                    metricName: "deleniti",
+                                    operator: "GREATER_THAN",
+                                    scope: "USER",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "ab",
+                                    expressions: [
+                                      "exercitationem",
+                                    ],
+                                    maxComparisonValue: "voluptas",
+                                    minComparisonValue: "neque",
+                                    operator: "NUMERIC_GREATER_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "sit",
+                                    maxComparisonValue: "quibusdam",
+                                    metricName: "dolore",
+                                    operator: "GREATER_THAN",
+                                    scope: "HIT",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "IMMEDIATELY_PRECEDES",
                           orFiltersForSegment: [
                             {
                               segmentFilterClauses: [
@@ -2034,20 +1707,43 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                                     caseSensitive: false,
                                     dimensionName: "qui",
                                     expressions: [
-                                      "rerum",
+                                      "ad",
+                                      "minus",
                                     ],
-                                    maxComparisonValue: "qui",
-                                    minComparisonValue: "quis",
-                                    operator: "REGEXP",
+                                    maxComparisonValue: "sit",
+                                    minComparisonValue: "est",
+                                    operator: "EXACT",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "magni",
-                                    maxComparisonValue: "iure",
-                                    metricName: "culpa",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "SESSION",
+                                    comparisonValue: "quisquam",
+                                    maxComparisonValue: "ipsum",
+                                    metricName: "dolor",
+                                    operator: "EQUAL",
+                                    scope: "USER",
                                   },
-                                  not: true,
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "sed",
+                                    expressions: [
+                                      "quae",
+                                      "id",
+                                      "eaque",
+                                    ],
+                                    maxComparisonValue: "et",
+                                    minComparisonValue: "et",
+                                    operator: "NUMERIC_BETWEEN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "aliquid",
+                                    maxComparisonValue: "voluptate",
+                                    metricName: "beatae",
+                                    operator: "GREATER_THAN",
+                                    scope: "HIT",
+                                  },
+                                  not: false,
                                 },
                               ],
                             },
@@ -2055,66 +1751,21 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                               segmentFilterClauses: [
                                 {
                                   dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "quia",
-                                    expressions: [
-                                      "aut",
-                                      "qui",
-                                    ],
-                                    maxComparisonValue: "pariatur",
-                                    minComparisonValue: "dicta",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "eveniet",
-                                    maxComparisonValue: "corrupti",
-                                    metricName: "ut",
-                                    operator: "BETWEEN",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
                                     caseSensitive: true,
-                                    dimensionName: "sint",
+                                    dimensionName: "illo",
                                     expressions: [
-                                      "aut",
-                                      "et",
-                                      "eum",
+                                      "quis",
                                     ],
-                                    maxComparisonValue: "repellat",
-                                    minComparisonValue: "maiores",
-                                    operator: "ENDS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "ipsam",
-                                    maxComparisonValue: "odio",
-                                    metricName: "sit",
-                                    operator: "GREATER_THAN",
-                                    scope: "HIT",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "quia",
-                                    expressions: [
-                                      "placeat",
-                                      "magni",
-                                      "et",
-                                    ],
-                                    maxComparisonValue: "est",
-                                    minComparisonValue: "dolorum",
+                                    maxComparisonValue: "quia",
+                                    minComparisonValue: "ab",
                                     operator: "NUMERIC_GREATER_THAN",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "distinctio",
-                                    maxComparisonValue: "quaerat",
-                                    metricName: "sit",
+                                    comparisonValue: "eveniet",
+                                    maxComparisonValue: "id",
+                                    metricName: "placeat",
                                     operator: "BETWEEN",
-                                    scope: "SESSION",
+                                    scope: "HIT",
                                   },
                                   not: false,
                                 },
@@ -2131,20 +1782,62 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                             {
                               dimensionFilter: {
                                 caseSensitive: false,
-                                dimensionName: "sapiente",
+                                dimensionName: "nemo",
                                 expressions: [
-                                  "vero",
+                                  "animi",
                                 ],
-                                maxComparisonValue: "voluptatibus",
-                                minComparisonValue: "facere",
-                                operator: "IN_LIST",
+                                maxComparisonValue: "earum",
+                                minComparisonValue: "neque",
+                                operator: "NUMERIC_LESS_THAN",
                               },
                               metricFilter: {
-                                comparisonValue: "nobis",
-                                maxComparisonValue: "nulla",
-                                metricName: "nesciunt",
-                                operator: "LESS_THAN",
+                                comparisonValue: "et",
+                                maxComparisonValue: "quam",
+                                metricName: "iste",
+                                operator: "EQUAL",
                                 scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "enim",
+                                expressions: [
+                                  "cupiditate",
+                                ],
+                                maxComparisonValue: "aperiam",
+                                minComparisonValue: "id",
+                                operator: "BEGINS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "explicabo",
+                                maxComparisonValue: "cumque",
+                                metricName: "sint",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "HIT",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "placeat",
+                                expressions: [
+                                  "minima",
+                                  "exercitationem",
+                                  "est",
+                                ],
+                                maxComparisonValue: "unde",
+                                minComparisonValue: "modi",
+                                operator: "REGEXP",
+                              },
+                              metricFilter: {
+                                comparisonValue: "omnis",
+                                maxComparisonValue: "explicabo",
+                                metricName: "voluptatum",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "PRODUCT",
                               },
                               not: true,
                             },
@@ -2155,1796 +1848,64 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                             {
                               dimensionFilter: {
                                 caseSensitive: true,
-                                dimensionName: "quia",
+                                dimensionName: "velit",
                                 expressions: [
-                                  "suscipit",
+                                  "maxime",
+                                  "omnis",
                                 ],
-                                maxComparisonValue: "et",
-                                minComparisonValue: "consectetur",
-                                operator: "REGEXP",
+                                maxComparisonValue: "dolor",
+                                minComparisonValue: "non",
+                                operator: "NUMERIC_LESS_THAN",
                               },
                               metricFilter: {
-                                comparisonValue: "aperiam",
-                                maxComparisonValue: "distinctio",
-                                metricName: "ex",
-                                operator: "LESS_THAN",
-                                scope: "HIT",
+                                comparisonValue: "dolorem",
+                                maxComparisonValue: "minima",
+                                metricName: "sint",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "UNSPECIFIED_SCOPE",
                               },
-                              not: true,
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  },
-                  {
-                    not: true,
-                    sequenceSegment: {
-                      firstStepShouldMatchFirstHit: false,
-                      segmentSequenceSteps: [
-                        {
-                          matchType: "PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "vero",
-                                    expressions: [
-                                      "omnis",
-                                      "ducimus",
-                                    ],
-                                    maxComparisonValue: "nulla",
-                                    minComparisonValue: "non",
-                                    operator: "ENDS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "dolore",
-                                    maxComparisonValue: "cupiditate",
-                                    metricName: "non",
-                                    operator: "BETWEEN",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "quae",
-                                    expressions: [
-                                      "recusandae",
-                                      "nostrum",
-                                      "maxime",
-                                    ],
-                                    maxComparisonValue: "et",
-                                    minComparisonValue: "sunt",
-                                    operator: "IN_LIST",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "repudiandae",
-                                    maxComparisonValue: "similique",
-                                    metricName: "consequatur",
-                                    operator: "BETWEEN",
-                                    scope: "USER",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          matchType: "PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "rerum",
-                                    expressions: [
-                                      "voluptatem",
-                                    ],
-                                    maxComparisonValue: "dolor",
-                                    minComparisonValue: "nobis",
-                                    operator: "REGEXP",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "exercitationem",
-                                    maxComparisonValue: "provident",
-                                    metricName: "necessitatibus",
-                                    operator: "EQUAL",
-                                    scope: "HIT",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "accusamus",
-                                    expressions: [
-                                      "fuga",
-                                      "consequatur",
-                                    ],
-                                    maxComparisonValue: "dignissimos",
-                                    minComparisonValue: "ipsa",
-                                    operator: "OPERATOR_UNSPECIFIED",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "velit",
-                                    maxComparisonValue: "expedita",
-                                    metricName: "sit",
-                                    operator: "LESS_THAN",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "eos",
-                                    expressions: [
-                                      "similique",
-                                      "commodi",
-                                    ],
-                                    maxComparisonValue: "voluptatem",
-                                    minComparisonValue: "ut",
-                                    operator: "REGEXP",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "labore",
-                                    maxComparisonValue: "quasi",
-                                    metricName: "occaecati",
-                                    operator: "BETWEEN",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    simpleSegment: {
-                      orFiltersForSegment: [
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "eos",
-                                expressions: [
-                                  "sit",
-                                  "quos",
-                                  "numquam",
-                                ],
-                                maxComparisonValue: "neque",
-                                minComparisonValue: "ullam",
-                                operator: "OPERATOR_UNSPECIFIED",
-                              },
-                              metricFilter: {
-                                comparisonValue: "quia",
-                                maxComparisonValue: "vero",
-                                metricName: "ex",
-                                operator: "EQUAL",
-                                scope: "PRODUCT",
-                              },
-                              not: true,
+                              not: false,
                             },
                             {
                               dimensionFilter: {
                                 caseSensitive: false,
-                                dimensionName: "doloremque",
+                                dimensionName: "iste",
                                 expressions: [
-                                  "quis",
+                                  "adipisci",
+                                  "impedit",
+                                  "tempora",
                                 ],
-                                maxComparisonValue: "repellat",
+                                maxComparisonValue: "aut",
                                 minComparisonValue: "omnis",
                                 operator: "NUMERIC_LESS_THAN",
                               },
                               metricFilter: {
-                                comparisonValue: "aperiam",
-                                maxComparisonValue: "omnis",
-                                metricName: "impedit",
+                                comparisonValue: "animi",
+                                maxComparisonValue: "cum",
+                                metricName: "occaecati",
                                 operator: "EQUAL",
-                                scope: "USER",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "sed",
-                                expressions: [
-                                  "a",
-                                ],
-                                maxComparisonValue: "magni",
-                                minComparisonValue: "tenetur",
-                                operator: "NUMERIC_BETWEEN",
-                              },
-                              metricFilter: {
-                                comparisonValue: "incidunt",
-                                maxComparisonValue: "qui",
-                                metricName: "hic",
-                                operator: "EQUAL",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: false,
-                            },
-                          ],
-                        },
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "est",
-                                expressions: [
-                                  "voluptatem",
-                                  "vel",
-                                  "aut",
-                                ],
-                                maxComparisonValue: "in",
-                                minComparisonValue: "voluptas",
-                                operator: "ENDS_WITH",
-                              },
-                              metricFilter: {
-                                comparisonValue: "placeat",
-                                maxComparisonValue: "numquam",
-                                metricName: "quos",
-                                operator: "UNSPECIFIED_OPERATOR",
-                                scope: "HIT",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "rerum",
-                                expressions: [
-                                  "hic",
-                                ],
-                                maxComparisonValue: "eaque",
-                                minComparisonValue: "dolor",
-                                operator: "PARTIAL",
-                              },
-                              metricFilter: {
-                                comparisonValue: "dicta",
-                                maxComparisonValue: "quas",
-                                metricName: "temporibus",
-                                operator: "BETWEEN",
-                                scope: "SESSION",
-                              },
-                              not: true,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "nulla",
-                                expressions: [
-                                  "omnis",
-                                ],
-                                maxComparisonValue: "qui",
-                                minComparisonValue: "nulla",
-                                operator: "EXACT",
-                              },
-                              metricFilter: {
-                                comparisonValue: "consequatur",
-                                maxComparisonValue: "aliquam",
-                                metricName: "dolorum",
-                                operator: "BETWEEN",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: false,
-                            },
-                          ],
-                        },
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "est",
-                                expressions: [
-                                  "quos",
-                                  "blanditiis",
-                                ],
-                                maxComparisonValue: "fugit",
-                                minComparisonValue: "vel",
-                                operator: "EXACT",
-                              },
-                              metricFilter: {
-                                comparisonValue: "est",
-                                maxComparisonValue: "eius",
-                                metricName: "nostrum",
-                                operator: "GREATER_THAN",
-                                scope: "SESSION",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "nihil",
-                                expressions: [
-                                  "magni",
-                                  "et",
-                                  "consectetur",
-                                ],
-                                maxComparisonValue: "accusamus",
-                                minComparisonValue: "asperiores",
-                                operator: "PARTIAL",
-                              },
-                              metricFilter: {
-                                comparisonValue: "veritatis",
-                                maxComparisonValue: "et",
-                                metricName: "ullam",
-                                operator: "GREATER_THAN",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "qui",
-                                expressions: [
-                                  "nulla",
-                                  "modi",
-                                  "dignissimos",
-                                ],
-                                maxComparisonValue: "beatae",
-                                minComparisonValue: "esse",
-                                operator: "NUMERIC_LESS_THAN",
-                              },
-                              metricFilter: {
-                                comparisonValue: "eum",
-                                maxComparisonValue: "aspernatur",
-                                metricName: "molestiae",
-                                operator: "EQUAL",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: true,
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  },
-                  {
-                    not: false,
-                    sequenceSegment: {
-                      firstStepShouldMatchFirstHit: false,
-                      segmentSequenceSteps: [
-                        {
-                          matchType: "PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "hic",
-                                    expressions: [
-                                      "dolores",
-                                      "quae",
-                                      "aut",
-                                    ],
-                                    maxComparisonValue: "hic",
-                                    minComparisonValue: "reprehenderit",
-                                    operator: "EXACT",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "nesciunt",
-                                    maxComparisonValue: "quia",
-                                    metricName: "dolores",
-                                    operator: "GREATER_THAN",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "ducimus",
-                                    expressions: [
-                                      "ducimus",
-                                      "ea",
-                                      "ipsa",
-                                    ],
-                                    maxComparisonValue: "sed",
-                                    minComparisonValue: "voluptatem",
-                                    operator: "NUMERIC_GREATER_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "beatae",
-                                    maxComparisonValue: "cumque",
-                                    metricName: "pariatur",
-                                    operator: "LESS_THAN",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "voluptatum",
-                                    expressions: [
-                                      "pariatur",
-                                      "natus",
-                                    ],
-                                    maxComparisonValue: "et",
-                                    minComparisonValue: "earum",
-                                    operator: "NUMERIC_GREATER_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "ab",
-                                    maxComparisonValue: "ad",
-                                    metricName: "earum",
-                                    operator: "EQUAL",
-                                    scope: "USER",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "quia",
-                                    expressions: [
-                                      "nulla",
-                                    ],
-                                    maxComparisonValue: "aut",
-                                    minComparisonValue: "voluptatibus",
-                                    operator: "NUMERIC_BETWEEN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "deleniti",
-                                    maxComparisonValue: "libero",
-                                    metricName: "dolorum",
-                                    operator: "EQUAL",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "velit",
-                                    expressions: [
-                                      "iste",
-                                      "fugiat",
-                                      "minus",
-                                    ],
-                                    maxComparisonValue: "laborum",
-                                    minComparisonValue: "eos",
-                                    operator: "NUMERIC_GREATER_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "velit",
-                                    maxComparisonValue: "debitis",
-                                    metricName: "aut",
-                                    operator: "LESS_THAN",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          matchType: "IMMEDIATELY_PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "neque",
-                                    expressions: [
-                                      "libero",
-                                      "error",
-                                    ],
-                                    maxComparisonValue: "eos",
-                                    minComparisonValue: "ex",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "sunt",
-                                    maxComparisonValue: "dolorem",
-                                    metricName: "voluptas",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "USER",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "soluta",
-                                    expressions: [
-                                      "qui",
-                                      "doloremque",
-                                    ],
-                                    maxComparisonValue: "nisi",
-                                    minComparisonValue: "id",
-                                    operator: "OPERATOR_UNSPECIFIED",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "debitis",
-                                    maxComparisonValue: "voluptatem",
-                                    metricName: "magnam",
-                                    operator: "BETWEEN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "aut",
-                                    expressions: [
-                                      "libero",
-                                      "dolorem",
-                                    ],
-                                    maxComparisonValue: "illo",
-                                    minComparisonValue: "sunt",
-                                    operator: "IN_LIST",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "autem",
-                                    maxComparisonValue: "commodi",
-                                    metricName: "deleniti",
-                                    operator: "GREATER_THAN",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "sed",
-                                    expressions: [
-                                      "distinctio",
-                                      "occaecati",
-                                      "rem",
-                                    ],
-                                    maxComparisonValue: "est",
-                                    minComparisonValue: "quo",
-                                    operator: "NUMERIC_GREATER_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "veritatis",
-                                    maxComparisonValue: "et",
-                                    metricName: "sunt",
-                                    operator: "EQUAL",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "recusandae",
-                                    expressions: [
-                                      "voluptatem",
-                                    ],
-                                    maxComparisonValue: "sapiente",
-                                    minComparisonValue: "dolores",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "sit",
-                                    maxComparisonValue: "repellat",
-                                    metricName: "earum",
-                                    operator: "GREATER_THAN",
-                                    scope: "SESSION",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          matchType: "IMMEDIATELY_PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "in",
-                                    expressions: [
-                                      "ut",
-                                      "debitis",
-                                    ],
-                                    maxComparisonValue: "id",
-                                    minComparisonValue: "vel",
-                                    operator: "REGEXP",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "fuga",
-                                    maxComparisonValue: "velit",
-                                    metricName: "ullam",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "ut",
-                                    expressions: [
-                                      "repellendus",
-                                      "a",
-                                    ],
-                                    maxComparisonValue: "non",
-                                    minComparisonValue: "nesciunt",
-                                    operator: "IN_LIST",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "perspiciatis",
-                                    maxComparisonValue: "nihil",
-                                    metricName: "enim",
-                                    operator: "BETWEEN",
-                                    scope: "SESSION",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "minus",
-                                    expressions: [
-                                      "sequi",
-                                      "ut",
-                                      "corporis",
-                                    ],
-                                    maxComparisonValue: "ea",
-                                    minComparisonValue: "adipisci",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "sunt",
-                                    maxComparisonValue: "numquam",
-                                    metricName: "et",
-                                    operator: "LESS_THAN",
-                                    scope: "USER",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    simpleSegment: {
-                      orFiltersForSegment: [
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "impedit",
-                                expressions: [
-                                  "sint",
-                                  "quis",
-                                ],
-                                maxComparisonValue: "dolores",
-                                minComparisonValue: "sed",
-                                operator: "BEGINS_WITH",
-                              },
-                              metricFilter: {
-                                comparisonValue: "quidem",
-                                maxComparisonValue: "reiciendis",
-                                metricName: "velit",
-                                operator: "UNSPECIFIED_OPERATOR",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: true,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "dolor",
-                                expressions: [
-                                  "officiis",
-                                  "quo",
-                                ],
-                                maxComparisonValue: "aut",
-                                minComparisonValue: "et",
-                                operator: "NUMERIC_GREATER_THAN",
-                              },
-                              metricFilter: {
-                                comparisonValue: "aut",
-                                maxComparisonValue: "natus",
-                                metricName: "iste",
-                                operator: "LESS_THAN",
-                                scope: "USER",
-                              },
-                              not: false,
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  },
-                ],
-              },
-              userSegment: {
-                segmentFilters: [
-                  {
-                    not: false,
-                    sequenceSegment: {
-                      firstStepShouldMatchFirstHit: false,
-                      segmentSequenceSteps: [
-                        {
-                          matchType: "UNSPECIFIED_MATCH_TYPE",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "aspernatur",
-                                    expressions: [
-                                      "assumenda",
-                                    ],
-                                    maxComparisonValue: "minus",
-                                    minComparisonValue: "voluptatibus",
-                                    operator: "NUMERIC_GREATER_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "qui",
-                                    maxComparisonValue: "doloribus",
-                                    metricName: "est",
-                                    operator: "LESS_THAN",
-                                    scope: "USER",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "nulla",
-                                    expressions: [
-                                      "quas",
-                                      "culpa",
-                                    ],
-                                    maxComparisonValue: "maiores",
-                                    minComparisonValue: "consequatur",
-                                    operator: "NUMERIC_LESS_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "commodi",
-                                    maxComparisonValue: "tempore",
-                                    metricName: "nesciunt",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "et",
-                                    expressions: [
-                                      "vero",
-                                      "fuga",
-                                    ],
-                                    maxComparisonValue: "dolores",
-                                    minComparisonValue: "doloremque",
-                                    operator: "OPERATOR_UNSPECIFIED",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "dolores",
-                                    maxComparisonValue: "autem",
-                                    metricName: "enim",
-                                    operator: "LESS_THAN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "officia",
-                                    expressions: [
-                                      "neque",
-                                    ],
-                                    maxComparisonValue: "quia",
-                                    minComparisonValue: "alias",
-                                    operator: "EXACT",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "suscipit",
-                                    maxComparisonValue: "minus",
-                                    metricName: "aut",
-                                    operator: "BETWEEN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    simpleSegment: {
-                      orFiltersForSegment: [
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "ad",
-                                expressions: [
-                                  "labore",
-                                ],
-                                maxComparisonValue: "omnis",
-                                minComparisonValue: "sequi",
-                                operator: "REGEXP",
-                              },
-                              metricFilter: {
-                                comparisonValue: "ipsa",
-                                maxComparisonValue: "repellendus",
-                                metricName: "rerum",
-                                operator: "EQUAL",
-                                scope: "SESSION",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "neque",
-                                expressions: [
-                                  "mollitia",
-                                  "distinctio",
-                                ],
-                                maxComparisonValue: "culpa",
-                                minComparisonValue: "sunt",
-                                operator: "REGEXP",
-                              },
-                              metricFilter: {
-                                comparisonValue: "quo",
-                                maxComparisonValue: "sed",
-                                metricName: "est",
-                                operator: "UNSPECIFIED_OPERATOR",
-                                scope: "SESSION",
-                              },
-                              not: true,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "amet",
-                                expressions: [
-                                  "culpa",
-                                  "possimus",
-                                ],
-                                maxComparisonValue: "ex",
-                                minComparisonValue: "quod",
-                                operator: "PARTIAL",
-                              },
-                              metricFilter: {
-                                comparisonValue: "delectus",
-                                maxComparisonValue: "architecto",
-                                metricName: "aut",
-                                operator: "BETWEEN",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: true,
-                            },
-                          ],
-                        },
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "cupiditate",
-                                expressions: [
-                                  "sapiente",
-                                  "qui",
-                                  "laudantium",
-                                ],
-                                maxComparisonValue: "repellendus",
-                                minComparisonValue: "architecto",
-                                operator: "PARTIAL",
-                              },
-                              metricFilter: {
-                                comparisonValue: "excepturi",
-                                maxComparisonValue: "animi",
-                                metricName: "error",
-                                operator: "GREATER_THAN",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: true,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "magni",
-                                expressions: [
-                                  "consequatur",
-                                  "nulla",
-                                  "officia",
-                                ],
-                                maxComparisonValue: "sunt",
-                                minComparisonValue: "accusamus",
-                                operator: "REGEXP",
-                              },
-                              metricFilter: {
-                                comparisonValue: "deleniti",
-                                maxComparisonValue: "maiores",
-                                metricName: "quasi",
-                                operator: "GREATER_THAN",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: true,
-                            },
-                          ],
-                        },
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "sed",
-                                expressions: [
-                                  "veniam",
-                                  "qui",
-                                ],
-                                maxComparisonValue: "facere",
-                                minComparisonValue: "doloremque",
-                                operator: "NUMERIC_GREATER_THAN",
-                              },
-                              metricFilter: {
-                                comparisonValue: "distinctio",
-                                maxComparisonValue: "eos",
-                                metricName: "officia",
-                                operator: "GREATER_THAN",
-                                scope: "USER",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "nihil",
-                                expressions: [
-                                  "at",
-                                  "ut",
-                                  "ducimus",
-                                ],
-                                maxComparisonValue: "sit",
-                                minComparisonValue: "ut",
-                                operator: "EXACT",
-                              },
-                              metricFilter: {
-                                comparisonValue: "ea",
-                                maxComparisonValue: "officiis",
-                                metricName: "exercitationem",
-                                operator: "BETWEEN",
-                                scope: "HIT",
-                              },
-                              not: true,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "ea",
-                                expressions: [
-                                  "cumque",
-                                  "id",
-                                  "sint",
-                                ],
-                                maxComparisonValue: "libero",
-                                minComparisonValue: "eum",
-                                operator: "NUMERIC_GREATER_THAN",
-                              },
-                              metricFilter: {
-                                comparisonValue: "earum",
-                                maxComparisonValue: "aut",
-                                metricName: "nihil",
-                                operator: "GREATER_THAN",
                                 scope: "PRODUCT",
                               },
                               not: true,
                             },
-                          ],
-                        },
-                      ],
-                    },
-                  },
-                  {
-                    not: true,
-                    sequenceSegment: {
-                      firstStepShouldMatchFirstHit: true,
-                      segmentSequenceSteps: [
-                        {
-                          matchType: "PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "et",
-                                    expressions: [
-                                      "sunt",
-                                    ],
-                                    maxComparisonValue: "laborum",
-                                    minComparisonValue: "quis",
-                                    operator: "EXACT",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "recusandae",
-                                    maxComparisonValue: "placeat",
-                                    metricName: "dolorem",
-                                    operator: "BETWEEN",
-                                    scope: "USER",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "quod",
-                                    expressions: [
-                                      "dicta",
-                                    ],
-                                    maxComparisonValue: "eligendi",
-                                    minComparisonValue: "eum",
-                                    operator: "NUMERIC_LESS_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "labore",
-                                    maxComparisonValue: "a",
-                                    metricName: "laudantium",
-                                    operator: "GREATER_THAN",
-                                    scope: "HIT",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "aut",
-                                    expressions: [
-                                      "voluptatum",
-                                    ],
-                                    maxComparisonValue: "repudiandae",
-                                    minComparisonValue: "accusamus",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "officia",
-                                    maxComparisonValue: "ipsum",
-                                    metricName: "enim",
-                                    operator: "GREATER_THAN",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "quod",
-                                    expressions: [
-                                      "fugit",
-                                      "qui",
-                                      "beatae",
-                                    ],
-                                    maxComparisonValue: "impedit",
-                                    minComparisonValue: "natus",
-                                    operator: "REGEXP",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "non",
-                                    maxComparisonValue: "tempore",
-                                    metricName: "iusto",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "ad",
-                                    expressions: [
-                                      "ratione",
-                                      "ad",
-                                    ],
-                                    maxComparisonValue: "eaque",
-                                    minComparisonValue: "eos",
-                                    operator: "NUMERIC_LESS_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "quia",
-                                    maxComparisonValue: "nostrum",
-                                    metricName: "vel",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "sit",
-                                    expressions: [
-                                      "est",
-                                    ],
-                                    maxComparisonValue: "et",
-                                    minComparisonValue: "aliquam",
-                                    operator: "NUMERIC_LESS_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "pariatur",
-                                    maxComparisonValue: "tempora",
-                                    metricName: "aperiam",
-                                    operator: "GREATER_THAN",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "sunt",
-                                    expressions: [
-                                      "similique",
-                                      "aspernatur",
-                                    ],
-                                    maxComparisonValue: "placeat",
-                                    minComparisonValue: "nemo",
-                                    operator: "EXACT",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "et",
-                                    maxComparisonValue: "voluptas",
-                                    metricName: "sint",
-                                    operator: "BETWEEN",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "voluptas",
-                                    expressions: [
-                                      "ut",
-                                      "sapiente",
-                                      "numquam",
-                                    ],
-                                    maxComparisonValue: "est",
-                                    minComparisonValue: "voluptatem",
-                                    operator: "ENDS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "quaerat",
-                                    maxComparisonValue: "quia",
-                                    metricName: "atque",
-                                    operator: "GREATER_THAN",
-                                    scope: "USER",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          matchType: "IMMEDIATELY_PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "quia",
-                                    expressions: [
-                                      "non",
-                                      "porro",
-                                    ],
-                                    maxComparisonValue: "ut",
-                                    minComparisonValue: "eum",
-                                    operator: "BEGINS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "assumenda",
-                                    maxComparisonValue: "rerum",
-                                    metricName: "consequatur",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "dolorum",
-                                    expressions: [
-                                      "perspiciatis",
-                                      "repudiandae",
-                                      "non",
-                                    ],
-                                    maxComparisonValue: "veniam",
-                                    minComparisonValue: "earum",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "non",
-                                    maxComparisonValue: "quisquam",
-                                    metricName: "aspernatur",
-                                    operator: "GREATER_THAN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "ipsum",
-                                    expressions: [
-                                      "qui",
-                                      "quo",
-                                    ],
-                                    maxComparisonValue: "ut",
-                                    minComparisonValue: "dolorem",
-                                    operator: "ENDS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "vitae",
-                                    maxComparisonValue: "cupiditate",
-                                    metricName: "non",
-                                    operator: "LESS_THAN",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          matchType: "IMMEDIATELY_PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "ut",
-                                    expressions: [
-                                      "et",
-                                      "sint",
-                                    ],
-                                    maxComparisonValue: "reiciendis",
-                                    minComparisonValue: "possimus",
-                                    operator: "ENDS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "rerum",
-                                    maxComparisonValue: "dolore",
-                                    metricName: "placeat",
-                                    operator: "BETWEEN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    simpleSegment: {
-                      orFiltersForSegment: [
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "sint",
-                                expressions: [
-                                  "nihil",
-                                  "assumenda",
-                                  "esse",
-                                ],
-                                maxComparisonValue: "sint",
-                                minComparisonValue: "dolorem",
-                                operator: "ENDS_WITH",
-                              },
-                              metricFilter: {
-                                comparisonValue: "quo",
-                                maxComparisonValue: "esse",
-                                metricName: "nulla",
-                                operator: "EQUAL",
-                                scope: "USER",
-                              },
-                              not: true,
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  },
-                  {
-                    not: false,
-                    sequenceSegment: {
-                      firstStepShouldMatchFirstHit: true,
-                      segmentSequenceSteps: [
-                        {
-                          matchType: "UNSPECIFIED_MATCH_TYPE",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "aut",
-                                    expressions: [
-                                      "molestiae",
-                                      "ut",
-                                    ],
-                                    maxComparisonValue: "aut",
-                                    minComparisonValue: "eaque",
-                                    operator: "REGEXP",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "qui",
-                                    maxComparisonValue: "sapiente",
-                                    metricName: "est",
-                                    operator: "GREATER_THAN",
-                                    scope: "USER",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "voluptate",
-                                    expressions: [
-                                      "dolorem",
-                                      "quo",
-                                    ],
-                                    maxComparisonValue: "mollitia",
-                                    minComparisonValue: "quasi",
-                                    operator: "NUMERIC_LESS_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "accusantium",
-                                    maxComparisonValue: "aut",
-                                    metricName: "at",
-                                    operator: "EQUAL",
-                                    scope: "SESSION",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "exercitationem",
-                                    expressions: [
-                                      "animi",
-                                    ],
-                                    maxComparisonValue: "autem",
-                                    minComparisonValue: "voluptatibus",
-                                    operator: "EXACT",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "numquam",
-                                    maxComparisonValue: "voluptas",
-                                    metricName: "placeat",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "SESSION",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "sed",
-                                    expressions: [
-                                      "ut",
-                                    ],
-                                    maxComparisonValue: "consequatur",
-                                    minComparisonValue: "nulla",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "quia",
-                                    maxComparisonValue: "veniam",
-                                    metricName: "cumque",
-                                    operator: "EQUAL",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "dolore",
-                                    expressions: [
-                                      "ipsum",
-                                      "rem",
-                                    ],
-                                    maxComparisonValue: "alias",
-                                    minComparisonValue: "error",
-                                    operator: "NUMERIC_GREATER_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "laborum",
-                                    maxComparisonValue: "ipsum",
-                                    metricName: "quod",
-                                    operator: "LESS_THAN",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          matchType: "IMMEDIATELY_PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "reiciendis",
-                                    expressions: [
-                                      "illo",
-                                      "eveniet",
-                                      "velit",
-                                    ],
-                                    maxComparisonValue: "magni",
-                                    minComparisonValue: "quia",
-                                    operator: "ENDS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "minima",
-                                    maxComparisonValue: "qui",
-                                    metricName: "dolores",
-                                    operator: "LESS_THAN",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "magnam",
-                                    expressions: [
-                                      "aut",
-                                      "et",
-                                      "aut",
-                                    ],
-                                    maxComparisonValue: "necessitatibus",
-                                    minComparisonValue: "sunt",
-                                    operator: "BEGINS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "nobis",
-                                    maxComparisonValue: "id",
-                                    metricName: "reprehenderit",
-                                    operator: "BETWEEN",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "maxime",
-                                    expressions: [
-                                      "et",
-                                    ],
-                                    maxComparisonValue: "eveniet",
-                                    minComparisonValue: "soluta",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "esse",
-                                    maxComparisonValue: "vitae",
-                                    metricName: "ut",
-                                    operator: "EQUAL",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "iure",
-                                    expressions: [
-                                      "magni",
-                                      "architecto",
-                                    ],
-                                    maxComparisonValue: "alias",
-                                    minComparisonValue: "minus",
-                                    operator: "BEGINS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "eligendi",
-                                    maxComparisonValue: "quisquam",
-                                    metricName: "enim",
-                                    operator: "BETWEEN",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "velit",
-                                    expressions: [
-                                      "voluptates",
-                                    ],
-                                    maxComparisonValue: "sunt",
-                                    minComparisonValue: "neque",
-                                    operator: "BEGINS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "aut",
-                                    maxComparisonValue: "quae",
-                                    metricName: "fugit",
-                                    operator: "GREATER_THAN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "laboriosam",
-                                    expressions: [
-                                      "sed",
-                                    ],
-                                    maxComparisonValue: "reprehenderit",
-                                    minComparisonValue: "iusto",
-                                    operator: "NUMERIC_LESS_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "occaecati",
-                                    maxComparisonValue: "repellendus",
-                                    metricName: "rerum",
-                                    operator: "EQUAL",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "voluptas",
-                                    expressions: [
-                                      "atque",
-                                    ],
-                                    maxComparisonValue: "dolores",
-                                    minComparisonValue: "optio",
-                                    operator: "NUMERIC_BETWEEN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "aut",
-                                    maxComparisonValue: "asperiores",
-                                    metricName: "totam",
-                                    operator: "LESS_THAN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "maxime",
-                                    expressions: [
-                                      "et",
-                                      "sed",
-                                      "aut",
-                                    ],
-                                    maxComparisonValue: "ea",
-                                    minComparisonValue: "non",
-                                    operator: "OPERATOR_UNSPECIFIED",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "et",
-                                    maxComparisonValue: "et",
-                                    metricName: "quod",
-                                    operator: "EQUAL",
-                                    scope: "SESSION",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          matchType: "IMMEDIATELY_PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "ab",
-                                    expressions: [
-                                      "animi",
-                                    ],
-                                    maxComparisonValue: "asperiores",
-                                    minComparisonValue: "qui",
-                                    operator: "NUMERIC_GREATER_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "harum",
-                                    maxComparisonValue: "aut",
-                                    metricName: "eos",
-                                    operator: "LESS_THAN",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    simpleSegment: {
-                      orFiltersForSegment: [
-                        {
-                          segmentFilterClauses: [
                             {
                               dimensionFilter: {
                                 caseSensitive: false,
-                                dimensionName: "voluptatem",
+                                dimensionName: "distinctio",
                                 expressions: [
-                                  "ut",
+                                  "non",
+                                  "accusantium",
                                 ],
-                                maxComparisonValue: "est",
-                                minComparisonValue: "aut",
-                                operator: "ENDS_WITH",
+                                maxComparisonValue: "ut",
+                                minComparisonValue: "consequatur",
+                                operator: "IN_LIST",
                               },
                               metricFilter: {
-                                comparisonValue: "delectus",
-                                maxComparisonValue: "cum",
-                                metricName: "praesentium",
-                                operator: "GREATER_THAN",
-                                scope: "USER",
-                              },
-                              not: true,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "eos",
-                                expressions: [
-                                  "perferendis",
-                                  "quam",
-                                  "dolorem",
-                                ],
-                                maxComparisonValue: "et",
-                                minComparisonValue: "ea",
-                                operator: "BEGINS_WITH",
-                              },
-                              metricFilter: {
-                                comparisonValue: "recusandae",
-                                maxComparisonValue: "soluta",
-                                metricName: "eum",
-                                operator: "LESS_THAN",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: true,
-                            },
-                          ],
-                        },
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "enim",
-                                expressions: [
-                                  "aut",
-                                  "molestias",
-                                ],
-                                maxComparisonValue: "voluptas",
-                                minComparisonValue: "consectetur",
-                                operator: "REGEXP",
-                              },
-                              metricFilter: {
-                                comparisonValue: "iste",
-                                maxComparisonValue: "quibusdam",
-                                metricName: "architecto",
-                                operator: "GREATER_THAN",
+                                comparisonValue: "animi",
+                                maxComparisonValue: "exercitationem",
+                                metricName: "quia",
+                                operator: "BETWEEN",
                                 scope: "SESSION",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "omnis",
-                                expressions: [
-                                  "voluptatem",
-                                  "dicta",
-                                ],
-                                maxComparisonValue: "accusamus",
-                                minComparisonValue: "nostrum",
-                                operator: "ENDS_WITH",
-                              },
-                              metricFilter: {
-                                comparisonValue: "reiciendis",
-                                maxComparisonValue: "dolorem",
-                                metricName: "et",
-                                operator: "GREATER_THAN",
-                                scope: "USER",
                               },
                               not: true,
                             },
@@ -3956,11 +1917,11 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                 ],
               },
             },
-            segmentId: "facere",
+            segmentId: "et",
           },
           {
             dynamicSegment: {
-              name: "consequatur",
+              name: "ut",
               sessionSegment: {
                 segmentFilters: [
                   {
@@ -3976,42 +1937,64 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                                 {
                                   dimensionFilter: {
                                     caseSensitive: false,
-                                    dimensionName: "velit",
+                                    dimensionName: "quia",
                                     expressions: [
-                                      "nemo",
-                                      "impedit",
-                                      "ut",
+                                      "voluptates",
+                                      "consequatur",
                                     ],
-                                    maxComparisonValue: "consequatur",
-                                    minComparisonValue: "animi",
-                                    operator: "BEGINS_WITH",
+                                    maxComparisonValue: "explicabo",
+                                    minComparisonValue: "qui",
+                                    operator: "NUMERIC_GREATER_THAN",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "repellendus",
-                                    maxComparisonValue: "similique",
-                                    metricName: "quod",
-                                    operator: "GREATER_THAN",
-                                    scope: "UNSPECIFIED_SCOPE",
+                                    comparisonValue: "ipsum",
+                                    maxComparisonValue: "autem",
+                                    metricName: "perferendis",
+                                    operator: "LESS_THAN",
+                                    scope: "USER",
                                   },
-                                  not: false,
+                                  not: true,
                                 },
                                 {
                                   dimensionFilter: {
                                     caseSensitive: false,
-                                    dimensionName: "velit",
+                                    dimensionName: "ipsa",
                                     expressions: [
-                                      "deserunt",
+                                      "est",
+                                      "velit",
                                     ],
-                                    maxComparisonValue: "velit",
-                                    minComparisonValue: "sequi",
-                                    operator: "NUMERIC_BETWEEN",
+                                    maxComparisonValue: "eveniet",
+                                    minComparisonValue: "nam",
+                                    operator: "REGEXP",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "quam",
-                                    maxComparisonValue: "assumenda",
-                                    metricName: "optio",
+                                    comparisonValue: "omnis",
+                                    maxComparisonValue: "mollitia",
+                                    metricName: "velit",
                                     operator: "BETWEEN",
-                                    scope: "USER",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "non",
+                                    expressions: [
+                                      "tempora",
+                                      "aliquid",
+                                      "molestiae",
+                                    ],
+                                    maxComparisonValue: "fugit",
+                                    minComparisonValue: "quam",
+                                    operator: "ENDS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "a",
+                                    maxComparisonValue: "quo",
+                                    metricName: "delectus",
+                                    operator: "GREATER_THAN",
+                                    scope: "SESSION",
                                   },
                                   not: false,
                                 },
@@ -4022,24 +2005,2370 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                                 {
                                   dimensionFilter: {
                                     caseSensitive: true,
-                                    dimensionName: "ut",
+                                    dimensionName: "cupiditate",
                                     expressions: [
-                                      "dolores",
-                                      "dolore",
-                                      "sequi",
+                                      "praesentium",
+                                      "excepturi",
+                                      "aut",
                                     ],
-                                    maxComparisonValue: "dicta",
-                                    minComparisonValue: "voluptatem",
+                                    maxComparisonValue: "architecto",
+                                    minComparisonValue: "omnis",
+                                    operator: "NUMERIC_LESS_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "sunt",
+                                    maxComparisonValue: "modi",
+                                    metricName: "nisi",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "est",
+                                    expressions: [
+                                      "id",
+                                    ],
+                                    maxComparisonValue: "repellat",
+                                    minComparisonValue: "repellendus",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "aspernatur",
+                                    maxComparisonValue: "ad",
+                                    metricName: "velit",
+                                    operator: "LESS_THAN",
+                                    scope: "SESSION",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "enim",
+                                    expressions: [
+                                      "non",
+                                      "nam",
+                                    ],
+                                    maxComparisonValue: "in",
+                                    minComparisonValue: "eum",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "ut",
+                                    maxComparisonValue: "et",
+                                    metricName: "odio",
+                                    operator: "EQUAL",
+                                    scope: "USER",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "IMMEDIATELY_PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "odio",
+                                    expressions: [
+                                      "eligendi",
+                                    ],
+                                    maxComparisonValue: "animi",
+                                    minComparisonValue: "est",
+                                    operator: "EXACT",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "ea",
+                                    maxComparisonValue: "voluptas",
+                                    metricName: "necessitatibus",
+                                    operator: "LESS_THAN",
+                                    scope: "SESSION",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "ullam",
+                                    expressions: [
+                                      "debitis",
+                                      "nihil",
+                                      "magni",
+                                    ],
+                                    maxComparisonValue: "vitae",
+                                    minComparisonValue: "excepturi",
+                                    operator: "NUMERIC_LESS_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "totam",
+                                    maxComparisonValue: "blanditiis",
+                                    metricName: "voluptatibus",
+                                    operator: "EQUAL",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "asperiores",
+                                    expressions: [
+                                      "consectetur",
+                                    ],
+                                    maxComparisonValue: "sequi",
+                                    minComparisonValue: "reprehenderit",
                                     operator: "NUMERIC_BETWEEN",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "optio",
-                                    maxComparisonValue: "sapiente",
-                                    metricName: "vitae",
+                                    comparisonValue: "libero",
+                                    maxComparisonValue: "enim",
+                                    metricName: "sint",
+                                    operator: "BETWEEN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "quo",
+                                    expressions: [
+                                      "illo",
+                                      "enim",
+                                    ],
+                                    maxComparisonValue: "est",
+                                    minComparisonValue: "aut",
+                                    operator: "NUMERIC_BETWEEN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "mollitia",
+                                    maxComparisonValue: "praesentium",
+                                    metricName: "inventore",
+                                    operator: "EQUAL",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "IMMEDIATELY_PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "consequatur",
+                                    expressions: [
+                                      "vel",
+                                      "at",
+                                      "cumque",
+                                    ],
+                                    maxComparisonValue: "occaecati",
+                                    minComparisonValue: "iusto",
+                                    operator: "NUMERIC_LESS_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "deserunt",
+                                    maxComparisonValue: "maiores",
+                                    metricName: "error",
+                                    operator: "BETWEEN",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "voluptates",
+                                    expressions: [
+                                      "est",
+                                    ],
+                                    maxComparisonValue: "vel",
+                                    minComparisonValue: "optio",
+                                    operator: "NUMERIC_LESS_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "a",
+                                    maxComparisonValue: "rerum",
+                                    metricName: "repudiandae",
+                                    operator: "EQUAL",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "dignissimos",
+                                    expressions: [
+                                      "alias",
+                                      "vitae",
+                                      "ipsum",
+                                    ],
+                                    maxComparisonValue: "enim",
+                                    minComparisonValue: "magni",
+                                    operator: "PARTIAL",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "ea",
+                                    maxComparisonValue: "dolor",
+                                    metricName: "consequatur",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    simpleSegment: {
+                      orFiltersForSegment: [
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "explicabo",
+                                expressions: [
+                                  "ducimus",
+                                ],
+                                maxComparisonValue: "et",
+                                minComparisonValue: "explicabo",
+                                operator: "REGEXP",
+                              },
+                              metricFilter: {
+                                comparisonValue: "ut",
+                                maxComparisonValue: "libero",
+                                metricName: "consequatur",
+                                operator: "BETWEEN",
+                                scope: "HIT",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "ut",
+                                expressions: [
+                                  "sed",
+                                ],
+                                maxComparisonValue: "sint",
+                                minComparisonValue: "est",
+                                operator: "BEGINS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "omnis",
+                                maxComparisonValue: "reiciendis",
+                                metricName: "ipsam",
+                                operator: "EQUAL",
+                                scope: "PRODUCT",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "voluptatum",
+                                expressions: [
+                                  "rem",
+                                  "autem",
+                                  "enim",
+                                ],
+                                maxComparisonValue: "quia",
+                                minComparisonValue: "voluptas",
+                                operator: "ENDS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "numquam",
+                                maxComparisonValue: "et",
+                                metricName: "officiis",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "aliquid",
+                                expressions: [
+                                  "asperiores",
+                                  "tempora",
+                                ],
+                                maxComparisonValue: "voluptate",
+                                minComparisonValue: "est",
+                                operator: "BEGINS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "mollitia",
+                                maxComparisonValue: "aut",
+                                metricName: "recusandae",
+                                operator: "GREATER_THAN",
+                                scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    not: false,
+                    sequenceSegment: {
+                      firstStepShouldMatchFirstHit: true,
+                      segmentSequenceSteps: [
+                        {
+                          matchType: "PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "totam",
+                                    expressions: [
+                                      "veritatis",
+                                    ],
+                                    maxComparisonValue: "fuga",
+                                    minComparisonValue: "atque",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "consequatur",
+                                    maxComparisonValue: "qui",
+                                    metricName: "numquam",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "SESSION",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "fugit",
+                                    expressions: [
+                                      "et",
+                                      "autem",
+                                      "quod",
+                                    ],
+                                    maxComparisonValue: "ut",
+                                    minComparisonValue: "ut",
+                                    operator: "NUMERIC_BETWEEN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "quibusdam",
+                                    maxComparisonValue: "harum",
+                                    metricName: "repudiandae",
                                     operator: "BETWEEN",
                                     scope: "SESSION",
                                   },
                                   not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "rerum",
+                                    expressions: [
+                                      "libero",
+                                    ],
+                                    maxComparisonValue: "cumque",
+                                    minComparisonValue: "accusamus",
+                                    operator: "NUMERIC_LESS_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "est",
+                                    maxComparisonValue: "inventore",
+                                    metricName: "quibusdam",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    simpleSegment: {
+                      orFiltersForSegment: [
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "animi",
+                                expressions: [
+                                  "labore",
+                                  "est",
+                                  "quod",
+                                ],
+                                maxComparisonValue: "et",
+                                minComparisonValue: "sit",
+                                operator: "NUMERIC_GREATER_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "omnis",
+                                maxComparisonValue: "reprehenderit",
+                                metricName: "quod",
+                                operator: "LESS_THAN",
+                                scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "ipsum",
+                                expressions: [
+                                  "sunt",
+                                  "incidunt",
+                                  "sed",
+                                ],
+                                maxComparisonValue: "repellendus",
+                                minComparisonValue: "error",
+                                operator: "PARTIAL",
+                              },
+                              metricFilter: {
+                                comparisonValue: "non",
+                                maxComparisonValue: "nihil",
+                                metricName: "ipsa",
+                                operator: "EQUAL",
+                                scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "vitae",
+                                expressions: [
+                                  "assumenda",
+                                  "corrupti",
+                                ],
+                                maxComparisonValue: "ad",
+                                minComparisonValue: "eum",
+                                operator: "EXACT",
+                              },
+                              metricFilter: {
+                                comparisonValue: "optio",
+                                maxComparisonValue: "et",
+                                metricName: "consequatur",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "PRODUCT",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "eius",
+                                expressions: [
+                                  "nisi",
+                                  "sit",
+                                  "est",
+                                ],
+                                maxComparisonValue: "rerum",
+                                minComparisonValue: "quisquam",
+                                operator: "REGEXP",
+                              },
+                              metricFilter: {
+                                comparisonValue: "itaque",
+                                maxComparisonValue: "reiciendis",
+                                metricName: "expedita",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "UNSPECIFIED_SCOPE",
+                              },
+                              not: false,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "modi",
+                                expressions: [
+                                  "suscipit",
+                                  "tempora",
+                                ],
+                                maxComparisonValue: "illum",
+                                minComparisonValue: "quae",
+                                operator: "EXACT",
+                              },
+                              metricFilter: {
+                                comparisonValue: "consectetur",
+                                maxComparisonValue: "voluptatibus",
+                                metricName: "doloremque",
+                                operator: "GREATER_THAN",
+                                scope: "USER",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "explicabo",
+                                expressions: [
+                                  "rem",
+                                  "explicabo",
+                                  "veritatis",
+                                ],
+                                maxComparisonValue: "ducimus",
+                                minComparisonValue: "ut",
+                                operator: "BEGINS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "inventore",
+                                maxComparisonValue: "voluptatem",
+                                metricName: "voluptates",
+                                operator: "GREATER_THAN",
+                                scope: "PRODUCT",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+              userSegment: {
+                segmentFilters: [
+                  {
+                    not: false,
+                    sequenceSegment: {
+                      firstStepShouldMatchFirstHit: true,
+                      segmentSequenceSteps: [
+                        {
+                          matchType: "PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "et",
+                                    expressions: [
+                                      "impedit",
+                                    ],
+                                    maxComparisonValue: "molestiae",
+                                    minComparisonValue: "aut",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "consectetur",
+                                    maxComparisonValue: "repellendus",
+                                    metricName: "molestias",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "repellat",
+                                    expressions: [
+                                      "facilis",
+                                      "id",
+                                      "reprehenderit",
+                                    ],
+                                    maxComparisonValue: "sit",
+                                    minComparisonValue: "at",
+                                    operator: "NUMERIC_BETWEEN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "doloribus",
+                                    maxComparisonValue: "qui",
+                                    metricName: "eius",
+                                    operator: "EQUAL",
+                                    scope: "USER",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "quos",
+                                    expressions: [
+                                      "iusto",
+                                      "et",
+                                    ],
+                                    maxComparisonValue: "praesentium",
+                                    minComparisonValue: "consectetur",
+                                    operator: "NUMERIC_BETWEEN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "itaque",
+                                    maxComparisonValue: "corrupti",
+                                    metricName: "voluptatem",
+                                    operator: "BETWEEN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "est",
+                                    expressions: [
+                                      "laudantium",
+                                    ],
+                                    maxComparisonValue: "quia",
+                                    minComparisonValue: "eaque",
+                                    operator: "PARTIAL",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "cum",
+                                    maxComparisonValue: "vel",
+                                    metricName: "sunt",
+                                    operator: "BETWEEN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "dolores",
+                                    expressions: [
+                                      "perferendis",
+                                    ],
+                                    maxComparisonValue: "quas",
+                                    minComparisonValue: "aut",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "minima",
+                                    maxComparisonValue: "pariatur",
+                                    metricName: "nesciunt",
+                                    operator: "GREATER_THAN",
+                                    scope: "SESSION",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    simpleSegment: {
+                      orFiltersForSegment: [
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "accusantium",
+                                expressions: [
+                                  "rem",
+                                ],
+                                maxComparisonValue: "et",
+                                minComparisonValue: "ipsa",
+                                operator: "REGEXP",
+                              },
+                              metricFilter: {
+                                comparisonValue: "odit",
+                                maxComparisonValue: "repudiandae",
+                                metricName: "pariatur",
+                                operator: "GREATER_THAN",
+                                scope: "PRODUCT",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    not: true,
+                    sequenceSegment: {
+                      firstStepShouldMatchFirstHit: false,
+                      segmentSequenceSteps: [
+                        {
+                          matchType: "UNSPECIFIED_MATCH_TYPE",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "quas",
+                                    expressions: [
+                                      "ut",
+                                    ],
+                                    maxComparisonValue: "voluptas",
+                                    minComparisonValue: "quisquam",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "voluptas",
+                                    maxComparisonValue: "non",
+                                    metricName: "deleniti",
+                                    operator: "LESS_THAN",
+                                    scope: "SESSION",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "et",
+                                    expressions: [
+                                      "soluta",
+                                      "enim",
+                                    ],
+                                    maxComparisonValue: "commodi",
+                                    minComparisonValue: "quia",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "placeat",
+                                    maxComparisonValue: "rem",
+                                    metricName: "laudantium",
+                                    operator: "LESS_THAN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "minima",
+                                    expressions: [
+                                      "sit",
+                                      "dolorem",
+                                    ],
+                                    maxComparisonValue: "earum",
+                                    minComparisonValue: "fugiat",
+                                    operator: "EXACT",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "molestias",
+                                    maxComparisonValue: "asperiores",
+                                    metricName: "suscipit",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "IMMEDIATELY_PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "magnam",
+                                    expressions: [
+                                      "corporis",
+                                    ],
+                                    maxComparisonValue: "accusamus",
+                                    minComparisonValue: "fugit",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "vel",
+                                    maxComparisonValue: "veniam",
+                                    metricName: "quidem",
+                                    operator: "LESS_THAN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "consequatur",
+                                    expressions: [
+                                      "ullam",
+                                    ],
+                                    maxComparisonValue: "dolor",
+                                    minComparisonValue: "dolor",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "in",
+                                    maxComparisonValue: "enim",
+                                    metricName: "iusto",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "USER",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "voluptate",
+                                    expressions: [
+                                      "rerum",
+                                      "reiciendis",
+                                    ],
+                                    maxComparisonValue: "aut",
+                                    minComparisonValue: "unde",
+                                    operator: "ENDS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "ratione",
+                                    maxComparisonValue: "autem",
+                                    metricName: "a",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "iure",
+                                    expressions: [
+                                      "est",
+                                      "temporibus",
+                                    ],
+                                    maxComparisonValue: "consequatur",
+                                    minComparisonValue: "non",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "inventore",
+                                    maxComparisonValue: "reprehenderit",
+                                    metricName: "quos",
+                                    operator: "GREATER_THAN",
+                                    scope: "USER",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    simpleSegment: {
+                      orFiltersForSegment: [
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "voluptas",
+                                expressions: [
+                                  "nesciunt",
+                                  "nihil",
+                                ],
+                                maxComparisonValue: "aspernatur",
+                                minComparisonValue: "hic",
+                                operator: "NUMERIC_GREATER_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "libero",
+                                maxComparisonValue: "accusantium",
+                                metricName: "facere",
+                                operator: "BETWEEN",
+                                scope: "USER",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "temporibus",
+                                expressions: [
+                                  "rem",
+                                  "aut",
+                                  "voluptate",
+                                ],
+                                maxComparisonValue: "a",
+                                minComparisonValue: "consequatur",
+                                operator: "PARTIAL",
+                              },
+                              metricFilter: {
+                                comparisonValue: "assumenda",
+                                maxComparisonValue: "rerum",
+                                metricName: "non",
+                                operator: "GREATER_THAN",
+                                scope: "HIT",
+                              },
+                              not: false,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "iure",
+                                expressions: [
+                                  "quia",
+                                  "molestiae",
+                                  "dolor",
+                                ],
+                                maxComparisonValue: "nostrum",
+                                minComparisonValue: "aut",
+                                operator: "NUMERIC_BETWEEN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "neque",
+                                maxComparisonValue: "pariatur",
+                                metricName: "enim",
+                                operator: "EQUAL",
+                                scope: "UNSPECIFIED_SCOPE",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+            segmentId: "magnam",
+          },
+          {
+            dynamicSegment: {
+              name: "et",
+              sessionSegment: {
+                segmentFilters: [
+                  {
+                    not: true,
+                    sequenceSegment: {
+                      firstStepShouldMatchFirstHit: false,
+                      segmentSequenceSteps: [
+                        {
+                          matchType: "PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "et",
+                                    expressions: [
+                                      "praesentium",
+                                      "labore",
+                                      "accusamus",
+                                    ],
+                                    maxComparisonValue: "aut",
+                                    minComparisonValue: "alias",
+                                    operator: "NUMERIC_GREATER_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "aperiam",
+                                    maxComparisonValue: "voluptatem",
+                                    metricName: "dolorum",
+                                    operator: "LESS_THAN",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "laborum",
+                                    expressions: [
+                                      "delectus",
+                                    ],
+                                    maxComparisonValue: "tenetur",
+                                    minComparisonValue: "expedita",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "ut",
+                                    maxComparisonValue: "sed",
+                                    metricName: "qui",
+                                    operator: "LESS_THAN",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "aliquid",
+                                    expressions: [
+                                      "nihil",
+                                      "consequatur",
+                                      "quae",
+                                    ],
+                                    maxComparisonValue: "et",
+                                    minComparisonValue: "quae",
+                                    operator: "NUMERIC_BETWEEN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "et",
+                                    maxComparisonValue: "corrupti",
+                                    metricName: "ipsum",
+                                    operator: "EQUAL",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "UNSPECIFIED_MATCH_TYPE",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "eaque",
+                                    expressions: [
+                                      "dolore",
+                                    ],
+                                    maxComparisonValue: "sapiente",
+                                    minComparisonValue: "eum",
+                                    operator: "ENDS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "incidunt",
+                                    maxComparisonValue: "neque",
+                                    metricName: "quo",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "SESSION",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "eveniet",
+                                    expressions: [
+                                      "hic",
+                                      "porro",
+                                    ],
+                                    maxComparisonValue: "aut",
+                                    minComparisonValue: "minima",
+                                    operator: "BEGINS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "maiores",
+                                    maxComparisonValue: "rem",
+                                    metricName: "aperiam",
+                                    operator: "EQUAL",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "ea",
+                                    expressions: [
+                                      "voluptas",
+                                    ],
+                                    maxComparisonValue: "et",
+                                    minComparisonValue: "debitis",
+                                    operator: "EXACT",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "at",
+                                    maxComparisonValue: "vero",
+                                    metricName: "quis",
+                                    operator: "LESS_THAN",
+                                    scope: "USER",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "vitae",
+                                    expressions: [
+                                      "fugit",
+                                    ],
+                                    maxComparisonValue: "et",
+                                    minComparisonValue: "consequuntur",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "magni",
+                                    maxComparisonValue: "ipsum",
+                                    metricName: "voluptas",
+                                    operator: "BETWEEN",
+                                    scope: "SESSION",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "assumenda",
+                                    expressions: [
+                                      "sapiente",
+                                    ],
+                                    maxComparisonValue: "doloribus",
+                                    minComparisonValue: "accusantium",
+                                    operator: "NUMERIC_GREATER_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "rem",
+                                    maxComparisonValue: "corporis",
+                                    metricName: "pariatur",
+                                    operator: "BETWEEN",
+                                    scope: "HIT",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "iste",
+                                    expressions: [
+                                      "fuga",
+                                      "corporis",
+                                      "quo",
+                                    ],
+                                    maxComparisonValue: "laborum",
+                                    minComparisonValue: "ex",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "voluptatem",
+                                    maxComparisonValue: "accusantium",
+                                    metricName: "et",
+                                    operator: "BETWEEN",
+                                    scope: "HIT",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    simpleSegment: {
+                      orFiltersForSegment: [
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "iusto",
+                                expressions: [
+                                  "voluptates",
+                                ],
+                                maxComparisonValue: "quia",
+                                minComparisonValue: "tenetur",
+                                operator: "IN_LIST",
+                              },
+                              metricFilter: {
+                                comparisonValue: "rerum",
+                                maxComparisonValue: "accusamus",
+                                metricName: "aliquam",
+                                operator: "LESS_THAN",
+                                scope: "SESSION",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "ab",
+                                expressions: [
+                                  "commodi",
+                                  "fugiat",
+                                  "quis",
+                                ],
+                                maxComparisonValue: "saepe",
+                                minComparisonValue: "illo",
+                                operator: "EXACT",
+                              },
+                              metricFilter: {
+                                comparisonValue: "qui",
+                                maxComparisonValue: "quia",
+                                metricName: "aperiam",
+                                operator: "GREATER_THAN",
+                                scope: "UNSPECIFIED_SCOPE",
+                              },
+                              not: false,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "aliquam",
+                                expressions: [
+                                  "non",
+                                  "earum",
+                                  "voluptatem",
+                                ],
+                                maxComparisonValue: "impedit",
+                                minComparisonValue: "in",
+                                operator: "PARTIAL",
+                              },
+                              metricFilter: {
+                                comparisonValue: "ut",
+                                maxComparisonValue: "sint",
+                                metricName: "ab",
+                                operator: "LESS_THAN",
+                                scope: "UNSPECIFIED_SCOPE",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "neque",
+                                expressions: [
+                                  "est",
+                                  "non",
+                                ],
+                                maxComparisonValue: "sit",
+                                minComparisonValue: "est",
+                                operator: "IN_LIST",
+                              },
+                              metricFilter: {
+                                comparisonValue: "in",
+                                maxComparisonValue: "mollitia",
+                                metricName: "minima",
+                                operator: "BETWEEN",
+                                scope: "SESSION",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    not: false,
+                    sequenceSegment: {
+                      firstStepShouldMatchFirstHit: true,
+                      segmentSequenceSteps: [
+                        {
+                          matchType: "PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "dicta",
+                                    expressions: [
+                                      "ut",
+                                      "expedita",
+                                    ],
+                                    maxComparisonValue: "assumenda",
+                                    minComparisonValue: "autem",
+                                    operator: "BEGINS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "labore",
+                                    maxComparisonValue: "amet",
+                                    metricName: "in",
+                                    operator: "GREATER_THAN",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "omnis",
+                                    expressions: [
+                                      "possimus",
+                                      "quo",
+                                      "odio",
+                                    ],
+                                    maxComparisonValue: "eos",
+                                    minComparisonValue: "enim",
+                                    operator: "BEGINS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "exercitationem",
+                                    maxComparisonValue: "debitis",
+                                    metricName: "ut",
+                                    operator: "GREATER_THAN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "eum",
+                                    expressions: [
+                                      "illo",
+                                      "quas",
+                                    ],
+                                    maxComparisonValue: "in",
+                                    minComparisonValue: "ipsum",
+                                    operator: "NUMERIC_BETWEEN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "dolorem",
+                                    maxComparisonValue: "quas",
+                                    metricName: "eum",
+                                    operator: "LESS_THAN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "mollitia",
+                                    expressions: [
+                                      "sit",
+                                      "et",
+                                      "et",
+                                    ],
+                                    maxComparisonValue: "praesentium",
+                                    minComparisonValue: "voluptates",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "voluptatem",
+                                    maxComparisonValue: "deleniti",
+                                    metricName: "facere",
+                                    operator: "BETWEEN",
+                                    scope: "SESSION",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "exercitationem",
+                                    expressions: [
+                                      "qui",
+                                    ],
+                                    maxComparisonValue: "odit",
+                                    minComparisonValue: "qui",
+                                    operator: "NUMERIC_GREATER_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "aliquid",
+                                    maxComparisonValue: "repellendus",
+                                    metricName: "sint",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "SESSION",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "ipsam",
+                                    expressions: [
+                                      "cum",
+                                    ],
+                                    maxComparisonValue: "aut",
+                                    minComparisonValue: "modi",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "quia",
+                                    maxComparisonValue: "quis",
+                                    metricName: "in",
+                                    operator: "BETWEEN",
+                                    scope: "SESSION",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "dolorem",
+                                    expressions: [
+                                      "assumenda",
+                                    ],
+                                    maxComparisonValue: "labore",
+                                    minComparisonValue: "id",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "voluptates",
+                                    maxComparisonValue: "amet",
+                                    metricName: "sint",
+                                    operator: "GREATER_THAN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "ab",
+                                    expressions: [
+                                      "facilis",
+                                      "quis",
+                                      "sunt",
+                                    ],
+                                    maxComparisonValue: "quis",
+                                    minComparisonValue: "qui",
+                                    operator: "BEGINS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "temporibus",
+                                    maxComparisonValue: "nemo",
+                                    metricName: "ea",
+                                    operator: "BETWEEN",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "dolor",
+                                    expressions: [
+                                      "corrupti",
+                                    ],
+                                    maxComparisonValue: "iusto",
+                                    minComparisonValue: "necessitatibus",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "quod",
+                                    maxComparisonValue: "maxime",
+                                    metricName: "minima",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "nostrum",
+                                    expressions: [
+                                      "tenetur",
+                                    ],
+                                    maxComparisonValue: "numquam",
+                                    minComparisonValue: "quam",
+                                    operator: "ENDS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "aut",
+                                    maxComparisonValue: "fugiat",
+                                    metricName: "cumque",
+                                    operator: "EQUAL",
+                                    scope: "SESSION",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    simpleSegment: {
+                      orFiltersForSegment: [
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "ab",
+                                expressions: [
+                                  "delectus",
+                                ],
+                                maxComparisonValue: "recusandae",
+                                minComparisonValue: "voluptate",
+                                operator: "EXACT",
+                              },
+                              metricFilter: {
+                                comparisonValue: "autem",
+                                maxComparisonValue: "sed",
+                                metricName: "voluptas",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "HIT",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    not: false,
+                    sequenceSegment: {
+                      firstStepShouldMatchFirstHit: true,
+                      segmentSequenceSteps: [
+                        {
+                          matchType: "PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "vel",
+                                    expressions: [
+                                      "ipsum",
+                                    ],
+                                    maxComparisonValue: "in",
+                                    minComparisonValue: "dolorem",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "sint",
+                                    maxComparisonValue: "non",
+                                    metricName: "qui",
+                                    operator: "EQUAL",
+                                    scope: "SESSION",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "IMMEDIATELY_PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "adipisci",
+                                    expressions: [
+                                      "accusantium",
+                                      "exercitationem",
+                                      "doloremque",
+                                    ],
+                                    maxComparisonValue: "et",
+                                    minComparisonValue: "perspiciatis",
+                                    operator: "NUMERIC_LESS_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "inventore",
+                                    maxComparisonValue: "voluptatem",
+                                    metricName: "soluta",
+                                    operator: "GREATER_THAN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "est",
+                                    expressions: [
+                                      "dolor",
+                                    ],
+                                    maxComparisonValue: "nobis",
+                                    minComparisonValue: "ipsam",
+                                    operator: "NUMERIC_GREATER_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "nihil",
+                                    maxComparisonValue: "harum",
+                                    metricName: "quisquam",
+                                    operator: "BETWEEN",
+                                    scope: "HIT",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    simpleSegment: {
+                      orFiltersForSegment: [
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "vel",
+                                expressions: [
+                                  "nulla",
+                                ],
+                                maxComparisonValue: "voluptatem",
+                                minComparisonValue: "dolor",
+                                operator: "BEGINS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "ea",
+                                maxComparisonValue: "iure",
+                                metricName: "ratione",
+                                operator: "EQUAL",
+                                scope: "PRODUCT",
+                              },
+                              not: false,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "officia",
+                                expressions: [
+                                  "molestiae",
+                                  "voluptatem",
+                                ],
+                                maxComparisonValue: "impedit",
+                                minComparisonValue: "debitis",
+                                operator: "NUMERIC_GREATER_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "rerum",
+                                maxComparisonValue: "ut",
+                                metricName: "corrupti",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "SESSION",
+                              },
+                              not: false,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "perspiciatis",
+                                expressions: [
+                                  "voluptatem",
+                                ],
+                                maxComparisonValue: "quidem",
+                                minComparisonValue: "rerum",
+                                operator: "BEGINS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "facilis",
+                                maxComparisonValue: "cum",
+                                metricName: "occaecati",
+                                operator: "EQUAL",
+                                scope: "PRODUCT",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "nostrum",
+                                expressions: [
+                                  "eos",
+                                ],
+                                maxComparisonValue: "sit",
+                                minComparisonValue: "et",
+                                operator: "NUMERIC_LESS_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "ut",
+                                maxComparisonValue: "voluptatum",
+                                metricName: "dolor",
+                                operator: "BETWEEN",
+                                scope: "PRODUCT",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "est",
+                                expressions: [
+                                  "iure",
+                                  "provident",
+                                ],
+                                maxComparisonValue: "eum",
+                                minComparisonValue: "repellat",
+                                operator: "REGEXP",
+                              },
+                              metricFilter: {
+                                comparisonValue: "repellendus",
+                                maxComparisonValue: "cupiditate",
+                                metricName: "natus",
+                                operator: "GREATER_THAN",
+                                scope: "HIT",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "sit",
+                                expressions: [
+                                  "est",
+                                  "at",
+                                ],
+                                maxComparisonValue: "ut",
+                                minComparisonValue: "incidunt",
+                                operator: "BEGINS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "est",
+                                maxComparisonValue: "necessitatibus",
+                                metricName: "ut",
+                                operator: "GREATER_THAN",
+                                scope: "HIT",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+              userSegment: {
+                segmentFilters: [
+                  {
+                    not: false,
+                    sequenceSegment: {
+                      firstStepShouldMatchFirstHit: true,
+                      segmentSequenceSteps: [
+                        {
+                          matchType: "UNSPECIFIED_MATCH_TYPE",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "ut",
+                                    expressions: [
+                                      "sed",
+                                      "ducimus",
+                                    ],
+                                    maxComparisonValue: "vel",
+                                    minComparisonValue: "optio",
+                                    operator: "NUMERIC_BETWEEN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "sunt",
+                                    maxComparisonValue: "consequuntur",
+                                    metricName: "autem",
+                                    operator: "BETWEEN",
+                                    scope: "SESSION",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "modi",
+                                    expressions: [
+                                      "repellendus",
+                                      "asperiores",
+                                      "molestiae",
+                                    ],
+                                    maxComparisonValue: "laboriosam",
+                                    minComparisonValue: "reprehenderit",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "quis",
+                                    maxComparisonValue: "facilis",
+                                    metricName: "mollitia",
+                                    operator: "GREATER_THAN",
+                                    scope: "SESSION",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "ea",
+                                    expressions: [
+                                      "ut",
+                                      "sit",
+                                      "fuga",
+                                    ],
+                                    maxComparisonValue: "eveniet",
+                                    minComparisonValue: "culpa",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "repudiandae",
+                                    maxComparisonValue: "aspernatur",
+                                    metricName: "consequuntur",
+                                    operator: "BETWEEN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "est",
+                                    expressions: [
+                                      "neque",
+                                      "quia",
+                                      "qui",
+                                    ],
+                                    maxComparisonValue: "qui",
+                                    minComparisonValue: "dolores",
+                                    operator: "NUMERIC_LESS_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "quisquam",
+                                    maxComparisonValue: "iure",
+                                    metricName: "hic",
+                                    operator: "GREATER_THAN",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "est",
+                                    expressions: [
+                                      "ipsa",
+                                      "aut",
+                                    ],
+                                    maxComparisonValue: "quisquam",
+                                    minComparisonValue: "quibusdam",
+                                    operator: "NUMERIC_LESS_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "corporis",
+                                    maxComparisonValue: "laboriosam",
+                                    metricName: "hic",
+                                    operator: "BETWEEN",
+                                    scope: "USER",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "beatae",
+                                    expressions: [
+                                      "sunt",
+                                      "sequi",
+                                      "corrupti",
+                                    ],
+                                    maxComparisonValue: "porro",
+                                    minComparisonValue: "at",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "id",
+                                    maxComparisonValue: "consequatur",
+                                    metricName: "quis",
+                                    operator: "EQUAL",
+                                    scope: "HIT",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "neque",
+                                    expressions: [
+                                      "ab",
+                                    ],
+                                    maxComparisonValue: "earum",
+                                    minComparisonValue: "omnis",
+                                    operator: "NUMERIC_GREATER_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "aliquid",
+                                    maxComparisonValue: "quia",
+                                    metricName: "animi",
+                                    operator: "BETWEEN",
+                                    scope: "SESSION",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "maiores",
+                                    expressions: [
+                                      "autem",
+                                      "deleniti",
+                                      "quam",
+                                    ],
+                                    maxComparisonValue: "amet",
+                                    minComparisonValue: "consequuntur",
+                                    operator: "BEGINS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "sunt",
+                                    maxComparisonValue: "non",
+                                    metricName: "blanditiis",
+                                    operator: "EQUAL",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "UNSPECIFIED_MATCH_TYPE",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "est",
+                                    expressions: [
+                                      "in",
+                                    ],
+                                    maxComparisonValue: "est",
+                                    minComparisonValue: "omnis",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "omnis",
+                                    maxComparisonValue: "quidem",
+                                    metricName: "id",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "rerum",
+                                    expressions: [
+                                      "voluptas",
+                                      "molestiae",
+                                    ],
+                                    maxComparisonValue: "ut",
+                                    minComparisonValue: "qui",
+                                    operator: "NUMERIC_BETWEEN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "voluptatem",
+                                    maxComparisonValue: "sit",
+                                    metricName: "aspernatur",
+                                    operator: "BETWEEN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "sunt",
+                                    expressions: [
+                                      "voluptates",
+                                      "sit",
+                                      "nulla",
+                                    ],
+                                    maxComparisonValue: "non",
+                                    minComparisonValue: "est",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "maxime",
+                                    maxComparisonValue: "eum",
+                                    metricName: "sapiente",
+                                    operator: "GREATER_THAN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    simpleSegment: {
+                      orFiltersForSegment: [
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "quidem",
+                                expressions: [
+                                  "et",
+                                ],
+                                maxComparisonValue: "doloribus",
+                                minComparisonValue: "impedit",
+                                operator: "PARTIAL",
+                              },
+                              metricFilter: {
+                                comparisonValue: "impedit",
+                                maxComparisonValue: "voluptas",
+                                metricName: "eligendi",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "UNSPECIFIED_SCOPE",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "at",
+                                expressions: [
+                                  "qui",
+                                ],
+                                maxComparisonValue: "ducimus",
+                                minComparisonValue: "facere",
+                                operator: "ENDS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "sit",
+                                maxComparisonValue: "porro",
+                                metricName: "omnis",
+                                operator: "BETWEEN",
+                                scope: "UNSPECIFIED_SCOPE",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "qui",
+                                expressions: [
+                                  "qui",
+                                  "officia",
+                                  "quia",
+                                ],
+                                maxComparisonValue: "laborum",
+                                minComparisonValue: "recusandae",
+                                operator: "NUMERIC_GREATER_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "ut",
+                                maxComparisonValue: "qui",
+                                metricName: "aut",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "HIT",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "ut",
+                                expressions: [
+                                  "incidunt",
+                                  "amet",
+                                ],
+                                maxComparisonValue: "voluptatem",
+                                minComparisonValue: "dolorum",
+                                operator: "NUMERIC_BETWEEN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "et",
+                                maxComparisonValue: "maxime",
+                                metricName: "pariatur",
+                                operator: "EQUAL",
+                                scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "voluptatem",
+                                expressions: [
+                                  "aut",
+                                ],
+                                maxComparisonValue: "error",
+                                minComparisonValue: "excepturi",
+                                operator: "PARTIAL",
+                              },
+                              metricFilter: {
+                                comparisonValue: "quia",
+                                maxComparisonValue: "eveniet",
+                                metricName: "ut",
+                                operator: "EQUAL",
+                                scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "inventore",
+                                expressions: [
+                                  "iure",
+                                  "sed",
+                                ],
+                                maxComparisonValue: "dolores",
+                                minComparisonValue: "rem",
+                                operator: "NUMERIC_GREATER_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "molestias",
+                                maxComparisonValue: "repellendus",
+                                metricName: "doloremque",
+                                operator: "EQUAL",
+                                scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "eaque",
+                                expressions: [
+                                  "dolorem",
+                                  "nulla",
+                                ],
+                                maxComparisonValue: "nam",
+                                minComparisonValue: "velit",
+                                operator: "BEGINS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "culpa",
+                                maxComparisonValue: "in",
+                                metricName: "qui",
+                                operator: "BETWEEN",
+                                scope: "HIT",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    not: true,
+                    sequenceSegment: {
+                      firstStepShouldMatchFirstHit: false,
+                      segmentSequenceSteps: [
+                        {
+                          matchType: "PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "reiciendis",
+                                    expressions: [
+                                      "quas",
+                                      "pariatur",
+                                      "omnis",
+                                    ],
+                                    maxComparisonValue: "molestiae",
+                                    minComparisonValue: "soluta",
+                                    operator: "BEGINS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "aut",
+                                    maxComparisonValue: "et",
+                                    metricName: "omnis",
+                                    operator: "BETWEEN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "ab",
+                                    expressions: [
+                                      "ut",
+                                    ],
+                                    maxComparisonValue: "tempore",
+                                    minComparisonValue: "molestiae",
+                                    operator: "NUMERIC_LESS_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "aut",
+                                    maxComparisonValue: "sequi",
+                                    metricName: "eum",
+                                    operator: "LESS_THAN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "officiis",
+                                    expressions: [
+                                      "delectus",
+                                    ],
+                                    maxComparisonValue: "harum",
+                                    minComparisonValue: "esse",
+                                    operator: "NUMERIC_BETWEEN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "autem",
+                                    maxComparisonValue: "deserunt",
+                                    metricName: "ut",
+                                    operator: "GREATER_THAN",
+                                    scope: "HIT",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "cupiditate",
+                                    expressions: [
+                                      "id",
+                                    ],
+                                    maxComparisonValue: "suscipit",
+                                    minComparisonValue: "dicta",
+                                    operator: "ENDS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "facere",
+                                    maxComparisonValue: "architecto",
+                                    metricName: "voluptatem",
+                                    operator: "GREATER_THAN",
+                                    scope: "USER",
+                                  },
+                                  not: false,
                                 },
                               ],
                             },
@@ -4056,491 +4385,510 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                                 caseSensitive: false,
                                 dimensionName: "maiores",
                                 expressions: [
-                                  "rerum",
-                                  "tenetur",
+                                  "earum",
+                                  "alias",
                                 ],
-                                maxComparisonValue: "enim",
-                                minComparisonValue: "praesentium",
-                                operator: "BEGINS_WITH",
+                                maxComparisonValue: "quia",
+                                minComparisonValue: "ut",
+                                operator: "NUMERIC_LESS_THAN",
                               },
                               metricFilter: {
-                                comparisonValue: "aut",
-                                maxComparisonValue: "laboriosam",
-                                metricName: "nisi",
+                                comparisonValue: "quas",
+                                maxComparisonValue: "magni",
+                                metricName: "fuga",
                                 operator: "GREATER_THAN",
-                                scope: "USER",
-                              },
-                              not: true,
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  },
-                  {
-                    not: false,
-                    sequenceSegment: {
-                      firstStepShouldMatchFirstHit: false,
-                      segmentSequenceSteps: [
-                        {
-                          matchType: "UNSPECIFIED_MATCH_TYPE",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "atque",
-                                    expressions: [
-                                      "quidem",
-                                      "doloremque",
-                                    ],
-                                    maxComparisonValue: "quia",
-                                    minComparisonValue: "officia",
-                                    operator: "REGEXP",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "sapiente",
-                                    maxComparisonValue: "ipsum",
-                                    metricName: "consequatur",
-                                    operator: "BETWEEN",
-                                    scope: "USER",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "sunt",
-                                    expressions: [
-                                      "tempora",
-                                      "alias",
-                                      "aut",
-                                    ],
-                                    maxComparisonValue: "labore",
-                                    minComparisonValue: "reiciendis",
-                                    operator: "BEGINS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "dolorem",
-                                    maxComparisonValue: "rem",
-                                    metricName: "aliquid",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "quidem",
-                                    expressions: [
-                                      "hic",
-                                    ],
-                                    maxComparisonValue: "est",
-                                    minComparisonValue: "quis",
-                                    operator: "NUMERIC_BETWEEN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "et",
-                                    maxComparisonValue: "facere",
-                                    metricName: "enim",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "sed",
-                                    expressions: [
-                                      "eius",
-                                    ],
-                                    maxComparisonValue: "atque",
-                                    minComparisonValue: "ipsa",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "asperiores",
-                                    maxComparisonValue: "omnis",
-                                    metricName: "consequatur",
-                                    operator: "EQUAL",
-                                    scope: "SESSION",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          matchType: "PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "necessitatibus",
-                                    expressions: [
-                                      "ut",
-                                      "molestiae",
-                                      "et",
-                                    ],
-                                    maxComparisonValue: "voluptatum",
-                                    minComparisonValue: "inventore",
-                                    operator: "NUMERIC_GREATER_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "animi",
-                                    maxComparisonValue: "dolores",
-                                    metricName: "ratione",
-                                    operator: "BETWEEN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          matchType: "IMMEDIATELY_PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "non",
-                                    expressions: [
-                                      "eum",
-                                      "sed",
-                                      "placeat",
-                                    ],
-                                    maxComparisonValue: "quis",
-                                    minComparisonValue: "rerum",
-                                    operator: "ENDS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "et",
-                                    maxComparisonValue: "assumenda",
-                                    metricName: "voluptates",
-                                    operator: "LESS_THAN",
-                                    scope: "SESSION",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "quisquam",
-                                    expressions: [
-                                      "amet",
-                                      "reiciendis",
-                                      "repudiandae",
-                                    ],
-                                    maxComparisonValue: "rerum",
-                                    minComparisonValue: "illo",
-                                    operator: "EXACT",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "in",
-                                    maxComparisonValue: "at",
-                                    metricName: "rerum",
-                                    operator: "EQUAL",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "est",
-                                    expressions: [
-                                      "sapiente",
-                                    ],
-                                    maxComparisonValue: "quam",
-                                    minComparisonValue: "rerum",
-                                    operator: "OPERATOR_UNSPECIFIED",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "aut",
-                                    maxComparisonValue: "aspernatur",
-                                    metricName: "accusantium",
-                                    operator: "BETWEEN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "dolorem",
-                                    expressions: [
-                                      "omnis",
-                                      "eos",
-                                      "necessitatibus",
-                                    ],
-                                    maxComparisonValue: "eius",
-                                    minComparisonValue: "voluptas",
-                                    operator: "ENDS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "et",
-                                    maxComparisonValue: "rerum",
-                                    metricName: "libero",
-                                    operator: "GREATER_THAN",
-                                    scope: "SESSION",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "veniam",
-                                    expressions: [
-                                      "in",
-                                      "omnis",
-                                      "iusto",
-                                    ],
-                                    maxComparisonValue: "ullam",
-                                    minComparisonValue: "ducimus",
-                                    operator: "NUMERIC_GREATER_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "est",
-                                    maxComparisonValue: "amet",
-                                    metricName: "molestiae",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "USER",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "expedita",
-                                    expressions: [
-                                      "exercitationem",
-                                      "saepe",
-                                    ],
-                                    maxComparisonValue: "blanditiis",
-                                    minComparisonValue: "fugit",
-                                    operator: "NUMERIC_LESS_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "doloremque",
-                                    maxComparisonValue: "alias",
-                                    metricName: "est",
-                                    operator: "GREATER_THAN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "ut",
-                                    expressions: [
-                                      "omnis",
-                                      "labore",
-                                    ],
-                                    maxComparisonValue: "incidunt",
-                                    minComparisonValue: "optio",
-                                    operator: "IN_LIST",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "fuga",
-                                    maxComparisonValue: "velit",
-                                    metricName: "ea",
-                                    operator: "EQUAL",
-                                    scope: "HIT",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "dolor",
-                                    expressions: [
-                                      "est",
-                                      "quod",
-                                      "rerum",
-                                    ],
-                                    maxComparisonValue: "dolorem",
-                                    minComparisonValue: "sapiente",
-                                    operator: "REGEXP",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "occaecati",
-                                    maxComparisonValue: "aspernatur",
-                                    metricName: "vel",
-                                    operator: "EQUAL",
-                                    scope: "USER",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    simpleSegment: {
-                      orFiltersForSegment: [
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "aut",
-                                expressions: [
-                                  "nulla",
-                                  "soluta",
-                                  "nam",
-                                ],
-                                maxComparisonValue: "corrupti",
-                                minComparisonValue: "minima",
-                                operator: "IN_LIST",
-                              },
-                              metricFilter: {
-                                comparisonValue: "aperiam",
-                                maxComparisonValue: "excepturi",
-                                metricName: "debitis",
-                                operator: "EQUAL",
-                                scope: "USER",
-                              },
-                              not: true,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "laudantium",
-                                expressions: [
-                                  "recusandae",
-                                  "tempore",
-                                  "itaque",
-                                ],
-                                maxComparisonValue: "fugit",
-                                minComparisonValue: "consequatur",
-                                operator: "PARTIAL",
-                              },
-                              metricFilter: {
-                                comparisonValue: "aut",
-                                maxComparisonValue: "temporibus",
-                                metricName: "ea",
-                                operator: "UNSPECIFIED_OPERATOR",
-                                scope: "PRODUCT",
+                                scope: "SESSION",
                               },
                               not: true,
                             },
                             {
                               dimensionFilter: {
                                 caseSensitive: true,
-                                dimensionName: "ea",
+                                dimensionName: "facere",
                                 expressions: [
-                                  "sint",
-                                  "voluptatem",
+                                  "accusantium",
+                                  "repellat",
+                                  "quam",
                                 ],
-                                maxComparisonValue: "rerum",
-                                minComparisonValue: "in",
-                                operator: "ENDS_WITH",
+                                maxComparisonValue: "quo",
+                                minComparisonValue: "vero",
+                                operator: "BEGINS_WITH",
                               },
                               metricFilter: {
-                                comparisonValue: "ex",
-                                maxComparisonValue: "aut",
-                                metricName: "et",
-                                operator: "GREATER_THAN",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: false,
-                            },
-                          ],
-                        },
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "optio",
-                                expressions: [
-                                  "qui",
-                                ],
-                                maxComparisonValue: "est",
-                                minComparisonValue: "velit",
-                                operator: "NUMERIC_BETWEEN",
-                              },
-                              metricFilter: {
-                                comparisonValue: "vitae",
-                                maxComparisonValue: "nihil",
-                                metricName: "unde",
-                                operator: "UNSPECIFIED_OPERATOR",
-                                scope: "HIT",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "nemo",
-                                expressions: [
-                                  "et",
-                                  "qui",
-                                ],
-                                maxComparisonValue: "eaque",
-                                minComparisonValue: "minus",
-                                operator: "NUMERIC_BETWEEN",
-                              },
-                              metricFilter: {
-                                comparisonValue: "similique",
-                                maxComparisonValue: "consequatur",
-                                metricName: "sapiente",
-                                operator: "LESS_THAN",
+                                comparisonValue: "vel",
+                                maxComparisonValue: "exercitationem",
+                                metricName: "laudantium",
+                                operator: "EQUAL",
                                 scope: "SESSION",
                               },
                               not: false,
                             },
                             {
                               dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "reprehenderit",
+                                caseSensitive: false,
+                                dimensionName: "qui",
                                 expressions: [
-                                  "unde",
+                                  "modi",
+                                  "occaecati",
+                                  "dolor",
                                 ],
-                                maxComparisonValue: "in",
-                                minComparisonValue: "et",
-                                operator: "NUMERIC_LESS_THAN",
+                                maxComparisonValue: "et",
+                                minComparisonValue: "ea",
+                                operator: "OPERATOR_UNSPECIFIED",
                               },
                               metricFilter: {
-                                comparisonValue: "harum",
-                                maxComparisonValue: "qui",
-                                metricName: "accusantium",
-                                operator: "BETWEEN",
-                                scope: "USER",
+                                comparisonValue: "sed",
+                                maxComparisonValue: "dolorem",
+                                metricName: "accusamus",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "HIT",
                               },
-                              not: true,
+                              not: false,
                             },
                           ],
                         },
                       ],
                     },
                   },
+                ],
+              },
+            },
+            segmentId: "fuga",
+          },
+        ],
+        viewId: "accusamus",
+      },
+      {
+        cohortGroup: {
+          cohorts: [
+            {
+              dateRange: {
+                endDate: "similique",
+                startDate: "recusandae",
+              },
+              name: "error",
+              type: "FIRST_VISIT_DATE",
+            },
+            {
+              dateRange: {
+                endDate: "atque",
+                startDate: "rerum",
+              },
+              name: "voluptates",
+              type: "FIRST_VISIT_DATE",
+            },
+            {
+              dateRange: {
+                endDate: "reiciendis",
+                startDate: "ipsam",
+              },
+              name: "modi",
+              type: "UNSPECIFIED_COHORT_TYPE",
+            },
+          ],
+          lifetimeValue: false,
+        },
+        dateRanges: [
+          {
+            endDate: "quisquam",
+            startDate: "quis",
+          },
+        ],
+        dimensionFilterClauses: [
+          {
+            filters: [
+              {
+                caseSensitive: true,
+                dimensionName: "ducimus",
+                expressions: [
+                  "commodi",
+                  "ut",
+                  "molestias",
+                ],
+                not: false,
+                operator: "REGEXP",
+              },
+              {
+                caseSensitive: false,
+                dimensionName: "et",
+                expressions: [
+                  "ducimus",
+                  "nisi",
+                ],
+                not: true,
+                operator: "REGEXP",
+              },
+              {
+                caseSensitive: false,
+                dimensionName: "cum",
+                expressions: [
+                  "ab",
+                  "facere",
+                ],
+                not: true,
+                operator: "PARTIAL",
+              },
+            ],
+            operator: "AND",
+          },
+        ],
+        dimensions: [
+          {
+            histogramBuckets: [
+              "quidem",
+            ],
+            name: "fuga",
+          },
+        ],
+        filtersExpression: "officiis",
+        hideTotals: true,
+        hideValueRanges: true,
+        includeEmptyRows: false,
+        metricFilterClauses: [
+          {
+            filters: [
+              {
+                comparisonValue: "qui",
+                metricName: "debitis",
+                not: false,
+                operator: "GREATER_THAN",
+              },
+            ],
+            operator: "OPERATOR_UNSPECIFIED",
+          },
+        ],
+        metrics: [
+          {
+            alias: "iusto",
+            expression: "distinctio",
+            formattingType: "INTEGER",
+          },
+          {
+            alias: "ut",
+            expression: "expedita",
+            formattingType: "CURRENCY",
+          },
+          {
+            alias: "commodi",
+            expression: "exercitationem",
+            formattingType: "CURRENCY",
+          },
+        ],
+        orderBys: [
+          {
+            fieldName: "odit",
+            orderType: "HISTOGRAM_BUCKET",
+            sortOrder: "ASCENDING",
+          },
+          {
+            fieldName: "aliquam",
+            orderType: "SMART",
+            sortOrder: "DESCENDING",
+          },
+        ],
+        pageSize: 7824488412278888279,
+        pageToken: "aut",
+        pivots: [
+          {
+            dimensionFilterClauses: [
+              {
+                filters: [
                   {
+                    caseSensitive: true,
+                    dimensionName: "et",
+                    expressions: [
+                      "minima",
+                    ],
+                    not: false,
+                    operator: "OPERATOR_UNSPECIFIED",
+                  },
+                  {
+                    caseSensitive: false,
+                    dimensionName: "error",
+                    expressions: [
+                      "sed",
+                      "ipsa",
+                      "explicabo",
+                    ],
+                    not: false,
+                    operator: "NUMERIC_LESS_THAN",
+                  },
+                  {
+                    caseSensitive: true,
+                    dimensionName: "soluta",
+                    expressions: [
+                      "expedita",
+                    ],
                     not: true,
+                    operator: "OPERATOR_UNSPECIFIED",
+                  },
+                ],
+                operator: "AND",
+              },
+            ],
+            dimensions: [
+              {
+                histogramBuckets: [
+                  "delectus",
+                ],
+                name: "suscipit",
+              },
+              {
+                histogramBuckets: [
+                  "dolor",
+                  "ipsa",
+                ],
+                name: "quos",
+              },
+              {
+                histogramBuckets: [
+                  "laborum",
+                ],
+                name: "a",
+              },
+            ],
+            maxGroupCount: 7045185900456319079,
+            metrics: [
+              {
+                alias: "eos",
+                expression: "voluptas",
+                formattingType: "INTEGER",
+              },
+              {
+                alias: "quia",
+                expression: "voluptas",
+                formattingType: "CURRENCY",
+              },
+              {
+                alias: "omnis",
+                expression: "dolores",
+                formattingType: "PERCENT",
+              },
+            ],
+            startGroup: 4835771613389976289,
+          },
+          {
+            dimensionFilterClauses: [
+              {
+                filters: [
+                  {
+                    caseSensitive: true,
+                    dimensionName: "et",
+                    expressions: [
+                      "enim",
+                    ],
+                    not: true,
+                    operator: "ENDS_WITH",
+                  },
+                ],
+                operator: "AND",
+              },
+              {
+                filters: [
+                  {
+                    caseSensitive: true,
+                    dimensionName: "est",
+                    expressions: [
+                      "quo",
+                      "rerum",
+                    ],
+                    not: false,
+                    operator: "EXACT",
+                  },
+                  {
+                    caseSensitive: true,
+                    dimensionName: "minus",
+                    expressions: [
+                      "vero",
+                      "est",
+                      "et",
+                    ],
+                    not: true,
+                    operator: "IN_LIST",
+                  },
+                  {
+                    caseSensitive: true,
+                    dimensionName: "nobis",
+                    expressions: [
+                      "est",
+                    ],
+                    not: true,
+                    operator: "IN_LIST",
+                  },
+                ],
+                operator: "OPERATOR_UNSPECIFIED",
+              },
+              {
+                filters: [
+                  {
+                    caseSensitive: false,
+                    dimensionName: "ea",
+                    expressions: [
+                      "est",
+                    ],
+                    not: false,
+                    operator: "REGEXP",
+                  },
+                ],
+                operator: "OR",
+              },
+            ],
+            dimensions: [
+              {
+                histogramBuckets: [
+                  "et",
+                  "cumque",
+                  "aut",
+                ],
+                name: "deserunt",
+              },
+              {
+                histogramBuckets: [
+                  "provident",
+                  "aut",
+                ],
+                name: "ullam",
+              },
+            ],
+            maxGroupCount: 7948683775972459905,
+            metrics: [
+              {
+                alias: "aut",
+                expression: "possimus",
+                formattingType: "CURRENCY",
+              },
+            ],
+            startGroup: 4333862210572785286,
+          },
+          {
+            dimensionFilterClauses: [
+              {
+                filters: [
+                  {
+                    caseSensitive: false,
+                    dimensionName: "ut",
+                    expressions: [
+                      "nam",
+                    ],
+                    not: true,
+                    operator: "NUMERIC_LESS_THAN",
+                  },
+                  {
+                    caseSensitive: true,
+                    dimensionName: "possimus",
+                    expressions: [
+                      "deserunt",
+                    ],
+                    not: false,
+                    operator: "NUMERIC_EQUAL",
+                  },
+                  {
+                    caseSensitive: false,
+                    dimensionName: "tempore",
+                    expressions: [
+                      "cum",
+                      "ut",
+                    ],
+                    not: true,
+                    operator: "NUMERIC_EQUAL",
+                  },
+                ],
+                operator: "OPERATOR_UNSPECIFIED",
+              },
+              {
+                filters: [
+                  {
+                    caseSensitive: true,
+                    dimensionName: "hic",
+                    expressions: [
+                      "qui",
+                    ],
+                    not: false,
+                    operator: "ENDS_WITH",
+                  },
+                ],
+                operator: "OR",
+              },
+              {
+                filters: [
+                  {
+                    caseSensitive: true,
+                    dimensionName: "hic",
+                    expressions: [
+                      "iste",
+                      "qui",
+                      "veritatis",
+                    ],
+                    not: false,
+                    operator: "EXACT",
+                  },
+                  {
+                    caseSensitive: false,
+                    dimensionName: "iste",
+                    expressions: [
+                      "libero",
+                    ],
+                    not: true,
+                    operator: "NUMERIC_EQUAL",
+                  },
+                  {
+                    caseSensitive: false,
+                    dimensionName: "a",
+                    expressions: [
+                      "numquam",
+                      "dolores",
+                      "tempore",
+                    ],
+                    not: false,
+                    operator: "BEGINS_WITH",
+                  },
+                ],
+                operator: "OR",
+              },
+            ],
+            dimensions: [
+              {
+                histogramBuckets: [
+                  "omnis",
+                  "adipisci",
+                  "praesentium",
+                ],
+                name: "qui",
+              },
+              {
+                histogramBuckets: [
+                  "in",
+                  "et",
+                  "est",
+                ],
+                name: "eos",
+              },
+            ],
+            maxGroupCount: 2145358840908556445,
+            metrics: [
+              {
+                alias: "eum",
+                expression: "ex",
+                formattingType: "PERCENT",
+              },
+              {
+                alias: "deleniti",
+                expression: "quam",
+                formattingType: "TIME",
+              },
+            ],
+            startGroup: 5670313331134481218,
+          },
+        ],
+        samplingLevel: "DEFAULT",
+        segments: [
+          {
+            dynamicSegment: {
+              name: "molestias",
+              sessionSegment: {
+                segmentFilters: [
+                  {
+                    not: false,
                     sequenceSegment: {
                       firstStepShouldMatchFirstHit: true,
                       segmentSequenceSteps: [
@@ -4551,181 +4899,25 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                               segmentFilterClauses: [
                                 {
                                   dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "rerum",
-                                    expressions: [
-                                      "sit",
-                                      "deserunt",
-                                    ],
-                                    maxComparisonValue: "velit",
-                                    minComparisonValue: "ullam",
-                                    operator: "BEGINS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "amet",
-                                    maxComparisonValue: "est",
-                                    metricName: "cum",
-                                    operator: "GREATER_THAN",
-                                    scope: "USER",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
                                     caseSensitive: true,
-                                    dimensionName: "repellendus",
+                                    dimensionName: "ratione",
                                     expressions: [
-                                      "est",
-                                      "quidem",
-                                      "nihil",
+                                      "in",
+                                      "corporis",
+                                      "dolores",
                                     ],
-                                    maxComparisonValue: "corporis",
-                                    minComparisonValue: "odio",
-                                    operator: "NUMERIC_GREATER_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "eos",
-                                    maxComparisonValue: "aut",
-                                    metricName: "voluptas",
-                                    operator: "BETWEEN",
-                                    scope: "USER",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "ad",
-                                    expressions: [
-                                      "dicta",
-                                      "ratione",
-                                      "ipsam",
-                                    ],
-                                    maxComparisonValue: "magni",
-                                    minComparisonValue: "quibusdam",
-                                    operator: "OPERATOR_UNSPECIFIED",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "aut",
-                                    maxComparisonValue: "est",
-                                    metricName: "sit",
-                                    operator: "BETWEEN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "quo",
-                                    expressions: [
-                                      "quo",
-                                      "dolor",
-                                      "dolorem",
-                                    ],
-                                    maxComparisonValue: "enim",
-                                    minComparisonValue: "nemo",
-                                    operator: "OPERATOR_UNSPECIFIED",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "in",
-                                    maxComparisonValue: "maxime",
-                                    metricName: "rerum",
-                                    operator: "LESS_THAN",
-                                    scope: "USER",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "quibusdam",
-                                    expressions: [
-                                      "quidem",
-                                    ],
-                                    maxComparisonValue: "eum",
-                                    minComparisonValue: "natus",
-                                    operator: "REGEXP",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "et",
-                                    maxComparisonValue: "vero",
-                                    metricName: "voluptatibus",
-                                    operator: "EQUAL",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "fugit",
-                                    expressions: [
-                                      "inventore",
-                                    ],
-                                    maxComparisonValue: "a",
+                                    maxComparisonValue: "perferendis",
                                     minComparisonValue: "laboriosam",
-                                    operator: "NUMERIC_LESS_THAN",
+                                    operator: "OPERATOR_UNSPECIFIED",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "voluptates",
-                                    maxComparisonValue: "laborum",
-                                    metricName: "eligendi",
-                                    operator: "EQUAL",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "sapiente",
-                                    expressions: [
-                                      "aliquam",
-                                      "ad",
-                                    ],
-                                    maxComparisonValue: "dolores",
-                                    minComparisonValue: "vel",
-                                    operator: "EXACT",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "eos",
-                                    maxComparisonValue: "nihil",
-                                    metricName: "corrupti",
-                                    operator: "LESS_THAN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "perferendis",
-                                    expressions: [
-                                      "tenetur",
-                                      "laudantium",
-                                      "tenetur",
-                                    ],
-                                    maxComparisonValue: "iste",
-                                    minComparisonValue: "corrupti",
-                                    operator: "BEGINS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "non",
-                                    maxComparisonValue: "cumque",
-                                    metricName: "incidunt",
-                                    operator: "UNSPECIFIED_OPERATOR",
+                                    comparisonValue: "necessitatibus",
+                                    maxComparisonValue: "aperiam",
+                                    metricName: "veniam",
+                                    operator: "BETWEEN",
                                     scope: "USER",
                                   },
-                                  not: false,
+                                  not: true,
                                 },
                               ],
                             },
@@ -4740,63 +4932,93 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                             {
                               dimensionFilter: {
                                 caseSensitive: false,
-                                dimensionName: "debitis",
+                                dimensionName: "eveniet",
                                 expressions: [
-                                  "voluptatum",
-                                  "numquam",
-                                  "accusamus",
+                                  "reiciendis",
+                                  "non",
+                                  "dolor",
                                 ],
-                                maxComparisonValue: "est",
-                                minComparisonValue: "sed",
+                                maxComparisonValue: "maiores",
+                                minComparisonValue: "itaque",
+                                operator: "NUMERIC_LESS_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "ad",
+                                maxComparisonValue: "aperiam",
+                                metricName: "earum",
+                                operator: "LESS_THAN",
+                                scope: "SESSION",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "sint",
+                                expressions: [
+                                  "qui",
+                                  "mollitia",
+                                  "neque",
+                                ],
+                                maxComparisonValue: "autem",
+                                minComparisonValue: "ab",
                                 operator: "IN_LIST",
                               },
                               metricFilter: {
-                                comparisonValue: "exercitationem",
-                                maxComparisonValue: "corrupti",
-                                metricName: "architecto",
-                                operator: "GREATER_THAN",
-                                scope: "SESSION",
+                                comparisonValue: "fugit",
+                                maxComparisonValue: "saepe",
+                                metricName: "enim",
+                                operator: "BETWEEN",
+                                scope: "HIT",
                               },
                               not: true,
                             },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
                             {
                               dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "vero",
+                                caseSensitive: true,
+                                dimensionName: "eum",
                                 expressions: [
-                                  "commodi",
+                                  "assumenda",
+                                  "fuga",
                                 ],
-                                maxComparisonValue: "hic",
-                                minComparisonValue: "nemo",
-                                operator: "ENDS_WITH",
+                                maxComparisonValue: "aut",
+                                minComparisonValue: "corrupti",
+                                operator: "PARTIAL",
                               },
                               metricFilter: {
-                                comparisonValue: "enim",
-                                maxComparisonValue: "voluptates",
-                                metricName: "tempore",
-                                operator: "GREATER_THAN",
-                                scope: "HIT",
+                                comparisonValue: "et",
+                                maxComparisonValue: "iusto",
+                                metricName: "voluptatem",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "UNSPECIFIED_SCOPE",
                               },
                               not: false,
                             },
                             {
                               dimensionFilter: {
                                 caseSensitive: true,
-                                dimensionName: "voluptatem",
+                                dimensionName: "quod",
                                 expressions: [
-                                  "non",
-                                  "mollitia",
+                                  "quod",
                                 ],
-                                maxComparisonValue: "qui",
-                                minComparisonValue: "est",
-                                operator: "BEGINS_WITH",
+                                maxComparisonValue: "impedit",
+                                minComparisonValue: "nostrum",
+                                operator: "NUMERIC_GREATER_THAN",
                               },
                               metricFilter: {
-                                comparisonValue: "officiis",
-                                maxComparisonValue: "molestiae",
-                                metricName: "soluta",
-                                operator: "EQUAL",
-                                scope: "USER",
+                                comparisonValue: "dicta",
+                                maxComparisonValue: "vero",
+                                metricName: "ea",
+                                operator: "GREATER_THAN",
+                                scope: "PRODUCT",
                               },
                               not: true,
                             },
@@ -4822,133 +5044,90 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                                 {
                                   dimensionFilter: {
                                     caseSensitive: false,
-                                    dimensionName: "consequatur",
+                                    dimensionName: "facilis",
                                     expressions: [
-                                      "incidunt",
-                                      "qui",
+                                      "aut",
                                     ],
-                                    maxComparisonValue: "quo",
-                                    minComparisonValue: "est",
-                                    operator: "NUMERIC_BETWEEN",
+                                    maxComparisonValue: "id",
+                                    minComparisonValue: "sequi",
+                                    operator: "ENDS_WITH",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "minus",
-                                    maxComparisonValue: "voluptas",
-                                    metricName: "molestiae",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "qui",
-                                    expressions: [
-                                      "laudantium",
-                                      "est",
-                                    ],
-                                    maxComparisonValue: "et",
-                                    minComparisonValue: "nihil",
-                                    operator: "REGEXP",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "omnis",
-                                    maxComparisonValue: "excepturi",
-                                    metricName: "voluptas",
+                                    comparisonValue: "quis",
+                                    maxComparisonValue: "molestiae",
+                                    metricName: "aliquam",
                                     operator: "EQUAL",
                                     scope: "SESSION",
                                   },
-                                  not: true,
+                                  not: false,
                                 },
                                 {
                                   dimensionFilter: {
                                     caseSensitive: false,
-                                    dimensionName: "soluta",
+                                    dimensionName: "id",
                                     expressions: [
-                                      "tenetur",
-                                      "sit",
+                                      "possimus",
+                                      "eius",
                                     ],
-                                    maxComparisonValue: "ut",
-                                    minComparisonValue: "earum",
-                                    operator: "IN_LIST",
+                                    maxComparisonValue: "aut",
+                                    minComparisonValue: "adipisci",
+                                    operator: "OPERATOR_UNSPECIFIED",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "sed",
-                                    maxComparisonValue: "a",
-                                    metricName: "voluptatem",
+                                    comparisonValue: "illum",
+                                    maxComparisonValue: "in",
+                                    metricName: "fuga",
                                     operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "UNSPECIFIED_SCOPE",
+                                    scope: "USER",
                                   },
                                   not: false,
                                 },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "ratione",
+                                    expressions: [
+                                      "inventore",
+                                      "reprehenderit",
+                                      "autem",
+                                    ],
+                                    maxComparisonValue: "tenetur",
+                                    minComparisonValue: "facilis",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "est",
+                                    maxComparisonValue: "voluptatem",
+                                    metricName: "magnam",
+                                    operator: "EQUAL",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
                               ],
                             },
+                          ],
+                        },
+                        {
+                          matchType: "IMMEDIATELY_PRECEDES",
+                          orFiltersForSegment: [
                             {
                               segmentFilterClauses: [
                                 {
                                   dimensionFilter: {
                                     caseSensitive: true,
-                                    dimensionName: "repellendus",
+                                    dimensionName: "alias",
                                     expressions: [
-                                      "cum",
-                                      "saepe",
-                                      "earum",
+                                      "vel",
                                     ],
-                                    maxComparisonValue: "consectetur",
-                                    minComparisonValue: "vero",
-                                    operator: "NUMERIC_LESS_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "officiis",
-                                    maxComparisonValue: "facilis",
-                                    metricName: "id",
-                                    operator: "BETWEEN",
-                                    scope: "SESSION",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "aspernatur",
-                                    expressions: [
-                                      "ut",
-                                      "expedita",
-                                    ],
-                                    maxComparisonValue: "sequi",
-                                    minComparisonValue: "enim",
+                                    maxComparisonValue: "cumque",
+                                    minComparisonValue: "ea",
                                     operator: "NUMERIC_GREATER_THAN",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "cupiditate",
-                                    maxComparisonValue: "deleniti",
-                                    metricName: "consequatur",
-                                    operator: "LESS_THAN",
-                                    scope: "USER",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "atque",
-                                    expressions: [
-                                      "in",
-                                      "autem",
-                                    ],
-                                    maxComparisonValue: "ipsam",
-                                    minComparisonValue: "rerum",
-                                    operator: "NUMERIC_LESS_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "velit",
-                                    maxComparisonValue: "et",
-                                    metricName: "ullam",
+                                    comparisonValue: "quisquam",
+                                    maxComparisonValue: "explicabo",
+                                    metricName: "id",
                                     operator: "GREATER_THAN",
                                     scope: "USER",
                                   },
@@ -4956,42 +5135,21 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                                 },
                                 {
                                   dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "asperiores",
-                                    expressions: [
-                                      "necessitatibus",
-                                    ],
-                                    maxComparisonValue: "et",
-                                    minComparisonValue: "perspiciatis",
-                                    operator: "NUMERIC_BETWEEN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "non",
-                                    maxComparisonValue: "voluptas",
-                                    metricName: "velit",
-                                    operator: "LESS_THAN",
-                                    scope: "USER",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
                                     caseSensitive: true,
-                                    dimensionName: "excepturi",
+                                    dimensionName: "consequuntur",
                                     expressions: [
-                                      "soluta",
-                                      "similique",
-                                      "omnis",
+                                      "quia",
+                                      "cupiditate",
                                     ],
-                                    maxComparisonValue: "animi",
-                                    minComparisonValue: "quisquam",
-                                    operator: "IN_LIST",
+                                    maxComparisonValue: "sed",
+                                    minComparisonValue: "maxime",
+                                    operator: "NUMERIC_GREATER_THAN",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "incidunt",
-                                    maxComparisonValue: "consequatur",
-                                    metricName: "inventore",
-                                    operator: "LESS_THAN",
+                                    comparisonValue: "consequatur",
+                                    maxComparisonValue: "excepturi",
+                                    metricName: "ut",
+                                    operator: "UNSPECIFIED_OPERATOR",
                                     scope: "UNSPECIFIED_SCOPE",
                                   },
                                   not: false,
@@ -5007,107 +5165,47 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                               segmentFilterClauses: [
                                 {
                                   dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "necessitatibus",
-                                    expressions: [
-                                      "cum",
-                                      "fugiat",
-                                    ],
-                                    maxComparisonValue: "ut",
-                                    minComparisonValue: "incidunt",
-                                    operator: "OPERATOR_UNSPECIFIED",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "sint",
-                                    maxComparisonValue: "deleniti",
-                                    metricName: "vero",
-                                    operator: "LESS_THAN",
-                                    scope: "HIT",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "similique",
-                                    expressions: [
-                                      "aspernatur",
-                                    ],
-                                    maxComparisonValue: "rerum",
-                                    minComparisonValue: "voluptas",
-                                    operator: "REGEXP",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "molestias",
-                                    maxComparisonValue: "omnis",
-                                    metricName: "et",
-                                    operator: "LESS_THAN",
-                                    scope: "SESSION",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
                                     caseSensitive: false,
-                                    dimensionName: "occaecati",
+                                    dimensionName: "accusantium",
                                     expressions: [
-                                      "et",
-                                      "voluptatem",
+                                      "iusto",
+                                      "voluptatum",
                                     ],
-                                    maxComparisonValue: "nostrum",
-                                    minComparisonValue: "quaerat",
-                                    operator: "ENDS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "recusandae",
-                                    maxComparisonValue: "incidunt",
-                                    metricName: "eum",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "perspiciatis",
-                                    expressions: [
-                                      "impedit",
-                                    ],
-                                    maxComparisonValue: "rem",
-                                    minComparisonValue: "quam",
+                                    maxComparisonValue: "illo",
+                                    minComparisonValue: "exercitationem",
                                     operator: "BEGINS_WITH",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "ut",
-                                    maxComparisonValue: "et",
-                                    metricName: "praesentium",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "SESSION",
+                                    comparisonValue: "nemo",
+                                    maxComparisonValue: "voluptate",
+                                    metricName: "harum",
+                                    operator: "LESS_THAN",
+                                    scope: "UNSPECIFIED_SCOPE",
                                   },
                                   not: true,
                                 },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
                                 {
                                   dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "nam",
+                                    caseSensitive: true,
+                                    dimensionName: "quidem",
                                     expressions: [
-                                      "officia",
-                                      "in",
+                                      "dolores",
+                                      "cum",
+                                      "dicta",
                                     ],
-                                    maxComparisonValue: "commodi",
-                                    minComparisonValue: "quod",
-                                    operator: "EXACT",
+                                    maxComparisonValue: "cupiditate",
+                                    minComparisonValue: "impedit",
+                                    operator: "ENDS_WITH",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "vel",
-                                    maxComparisonValue: "reprehenderit",
-                                    metricName: "nihil",
-                                    operator: "EQUAL",
+                                    comparisonValue: "reprehenderit",
+                                    maxComparisonValue: "nesciunt",
+                                    metricName: "aut",
+                                    operator: "UNSPECIFIED_OPERATOR",
                                     scope: "HIT",
                                   },
                                   not: false,
@@ -5119,20 +5217,40 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                                 {
                                   dimensionFilter: {
                                     caseSensitive: true,
-                                    dimensionName: "magni",
+                                    dimensionName: "aut",
                                     expressions: [
-                                      "quibusdam",
-                                      "dolore",
+                                      "odit",
                                     ],
-                                    maxComparisonValue: "eveniet",
-                                    minComparisonValue: "pariatur",
+                                    maxComparisonValue: "et",
+                                    minComparisonValue: "debitis",
+                                    operator: "ENDS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "mollitia",
+                                    maxComparisonValue: "odio",
+                                    metricName: "molestiae",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "rem",
+                                    expressions: [
+                                      "eum",
+                                      "at",
+                                    ],
+                                    maxComparisonValue: "tempora",
+                                    minComparisonValue: "ut",
                                     operator: "PARTIAL",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "sapiente",
-                                    maxComparisonValue: "et",
-                                    metricName: "ut",
-                                    operator: "LESS_THAN",
+                                    comparisonValue: "sit",
+                                    maxComparisonValue: "maiores",
+                                    metricName: "aliquid",
+                                    operator: "BETWEEN",
                                     scope: "PRODUCT",
                                   },
                                   not: false,
@@ -5140,183 +5258,22 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                                 {
                                   dimensionFilter: {
                                     caseSensitive: false,
-                                    dimensionName: "cupiditate",
+                                    dimensionName: "in",
                                     expressions: [
-                                      "sint",
+                                      "velit",
+                                      "architecto",
+                                      "dolor",
                                     ],
-                                    maxComparisonValue: "minus",
-                                    minComparisonValue: "fugiat",
-                                    operator: "NUMERIC_BETWEEN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "rerum",
-                                    maxComparisonValue: "voluptatem",
-                                    metricName: "quo",
-                                    operator: "BETWEEN",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          matchType: "PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "tempora",
-                                    expressions: [
-                                      "earum",
-                                    ],
-                                    maxComparisonValue: "in",
-                                    minComparisonValue: "molestias",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "qui",
-                                    maxComparisonValue: "omnis",
-                                    metricName: "ipsa",
-                                    operator: "GREATER_THAN",
-                                    scope: "SESSION",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "velit",
-                                    expressions: [
-                                      "rem",
-                                    ],
-                                    maxComparisonValue: "sint",
-                                    minComparisonValue: "assumenda",
-                                    operator: "NUMERIC_GREATER_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "maxime",
-                                    maxComparisonValue: "in",
-                                    metricName: "quo",
-                                    operator: "EQUAL",
-                                    scope: "USER",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "dolor",
-                                    expressions: [
-                                      "consequatur",
-                                      "quo",
-                                      "ipsum",
-                                    ],
-                                    maxComparisonValue: "suscipit",
-                                    minComparisonValue: "cumque",
-                                    operator: "ENDS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "aspernatur",
-                                    maxComparisonValue: "animi",
-                                    metricName: "dolorum",
-                                    operator: "BETWEEN",
-                                    scope: "SESSION",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "ut",
-                                    expressions: [
-                                      "ut",
-                                    ],
-                                    maxComparisonValue: "autem",
-                                    minComparisonValue: "praesentium",
-                                    operator: "ENDS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "est",
-                                    maxComparisonValue: "et",
-                                    metricName: "et",
-                                    operator: "BETWEEN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "vel",
-                                    expressions: [
-                                      "qui",
-                                      "et",
-                                      "dignissimos",
-                                    ],
-                                    maxComparisonValue: "quasi",
-                                    minComparisonValue: "pariatur",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "soluta",
-                                    maxComparisonValue: "rerum",
-                                    metricName: "ex",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "autem",
-                                    expressions: [
-                                      "aut",
-                                      "ipsam",
-                                      "excepturi",
-                                    ],
-                                    maxComparisonValue: "temporibus",
-                                    minComparisonValue: "eum",
+                                    maxComparisonValue: "tempora",
+                                    minComparisonValue: "velit",
                                     operator: "EXACT",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "quidem",
-                                    maxComparisonValue: "eos",
-                                    metricName: "sint",
-                                    operator: "LESS_THAN",
-                                    scope: "SESSION",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "dolores",
-                                    expressions: [
-                                      "sit",
-                                    ],
-                                    maxComparisonValue: "corrupti",
-                                    minComparisonValue: "ea",
-                                    operator: "ENDS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "ad",
-                                    maxComparisonValue: "sapiente",
-                                    metricName: "quod",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "HIT",
+                                    comparisonValue: "aut",
+                                    maxComparisonValue: "nobis",
+                                    metricName: "iste",
+                                    operator: "GREATER_THAN",
+                                    scope: "UNSPECIFIED_SCOPE",
                                   },
                                   not: false,
                                 },
@@ -5332,428 +5289,42 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                           segmentFilterClauses: [
                             {
                               dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "magnam",
-                                expressions: [
-                                  "earum",
-                                  "ut",
-                                ],
-                                maxComparisonValue: "autem",
-                                minComparisonValue: "occaecati",
-                                operator: "NUMERIC_LESS_THAN",
-                              },
-                              metricFilter: {
-                                comparisonValue: "fugit",
-                                maxComparisonValue: "qui",
-                                metricName: "quis",
-                                operator: "LESS_THAN",
-                                scope: "PRODUCT",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "quod",
-                                expressions: [
-                                  "accusantium",
-                                  "impedit",
-                                ],
-                                maxComparisonValue: "nihil",
-                                minComparisonValue: "quis",
-                                operator: "BEGINS_WITH",
-                              },
-                              metricFilter: {
-                                comparisonValue: "sapiente",
-                                maxComparisonValue: "autem",
-                                metricName: "omnis",
-                                operator: "BETWEEN",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
                                 caseSensitive: false,
-                                dimensionName: "rem",
+                                dimensionName: "assumenda",
                                 expressions: [
-                                  "tempora",
-                                  "praesentium",
+                                  "quos",
+                                  "vel",
                                 ],
-                                maxComparisonValue: "ab",
-                                minComparisonValue: "alias",
-                                operator: "REGEXP",
-                              },
-                              metricFilter: {
-                                comparisonValue: "voluptatum",
-                                maxComparisonValue: "mollitia",
-                                metricName: "fugit",
-                                operator: "BETWEEN",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: true,
-                            },
-                          ],
-                        },
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "unde",
-                                expressions: [
-                                  "recusandae",
-                                  "consectetur",
-                                ],
-                                maxComparisonValue: "possimus",
-                                minComparisonValue: "et",
+                                maxComparisonValue: "aut",
+                                minComparisonValue: "beatae",
                                 operator: "NUMERIC_GREATER_THAN",
                               },
                               metricFilter: {
-                                comparisonValue: "ut",
-                                maxComparisonValue: "magnam",
-                                metricName: "ea",
-                                operator: "UNSPECIFIED_OPERATOR",
-                                scope: "USER",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "accusamus",
-                                expressions: [
-                                  "dolorem",
-                                ],
-                                maxComparisonValue: "similique",
-                                minComparisonValue: "est",
-                                operator: "NUMERIC_BETWEEN",
-                              },
-                              metricFilter: {
-                                comparisonValue: "harum",
-                                maxComparisonValue: "distinctio",
-                                metricName: "et",
-                                operator: "LESS_THAN",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: true,
-                            },
-                          ],
-                        },
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "aliquid",
-                                expressions: [
-                                  "et",
-                                ],
-                                maxComparisonValue: "molestiae",
-                                minComparisonValue: "id",
-                                operator: "REGEXP",
-                              },
-                              metricFilter: {
-                                comparisonValue: "consequatur",
-                                maxComparisonValue: "est",
-                                metricName: "nemo",
-                                operator: "BETWEEN",
-                                scope: "SESSION",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "eveniet",
-                                expressions: [
-                                  "consectetur",
-                                  "autem",
-                                ],
-                                maxComparisonValue: "quis",
-                                minComparisonValue: "et",
-                                operator: "IN_LIST",
-                              },
-                              metricFilter: {
-                                comparisonValue: "commodi",
-                                maxComparisonValue: "quis",
-                                metricName: "dicta",
+                                comparisonValue: "et",
+                                maxComparisonValue: "rem",
+                                metricName: "provident",
                                 operator: "EQUAL",
-                                scope: "UNSPECIFIED_SCOPE",
+                                scope: "HIT",
                               },
                               not: false,
                             },
-                          ],
-                        },
-                      ],
-                    },
-                  },
-                  {
-                    not: false,
-                    sequenceSegment: {
-                      firstStepShouldMatchFirstHit: true,
-                      segmentSequenceSteps: [
-                        {
-                          matchType: "PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "aspernatur",
-                                    expressions: [
-                                      "similique",
-                                      "rerum",
-                                    ],
-                                    maxComparisonValue: "eum",
-                                    minComparisonValue: "ea",
-                                    operator: "BEGINS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "vitae",
-                                    maxComparisonValue: "fuga",
-                                    metricName: "est",
-                                    operator: "LESS_THAN",
-                                    scope: "SESSION",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "tempora",
-                                    expressions: [
-                                      "et",
-                                    ],
-                                    maxComparisonValue: "odio",
-                                    minComparisonValue: "minima",
-                                    operator: "ENDS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "eum",
-                                    maxComparisonValue: "et",
-                                    metricName: "provident",
-                                    operator: "GREATER_THAN",
-                                    scope: "HIT",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "qui",
-                                    expressions: [
-                                      "tenetur",
-                                      "itaque",
-                                    ],
-                                    maxComparisonValue: "nam",
-                                    minComparisonValue: "repudiandae",
-                                    operator: "EXACT",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "est",
-                                    maxComparisonValue: "officia",
-                                    metricName: "est",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "ut",
-                                    expressions: [
-                                      "cumque",
-                                      "quo",
-                                      "qui",
-                                    ],
-                                    maxComparisonValue: "animi",
-                                    minComparisonValue: "repellendus",
-                                    operator: "IN_LIST",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "animi",
-                                    maxComparisonValue: "autem",
-                                    metricName: "eligendi",
-                                    operator: "GREATER_THAN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          matchType: "UNSPECIFIED_MATCH_TYPE",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "et",
-                                    expressions: [
-                                      "aut",
-                                      "officiis",
-                                    ],
-                                    maxComparisonValue: "perspiciatis",
-                                    minComparisonValue: "omnis",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "soluta",
-                                    maxComparisonValue: "et",
-                                    metricName: "amet",
-                                    operator: "LESS_THAN",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "omnis",
-                                    expressions: [
-                                      "eaque",
-                                    ],
-                                    maxComparisonValue: "recusandae",
-                                    minComparisonValue: "optio",
-                                    operator: "EXACT",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "sunt",
-                                    maxComparisonValue: "perspiciatis",
-                                    metricName: "cupiditate",
-                                    operator: "GREATER_THAN",
-                                    scope: "SESSION",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "voluptate",
-                                    expressions: [
-                                      "iure",
-                                      "quasi",
-                                      "ut",
-                                    ],
-                                    maxComparisonValue: "culpa",
-                                    minComparisonValue: "et",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "optio",
-                                    maxComparisonValue: "eos",
-                                    metricName: "et",
-                                    operator: "EQUAL",
-                                    scope: "USER",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "esse",
-                                    expressions: [
-                                      "deserunt",
-                                      "illum",
-                                      "nulla",
-                                    ],
-                                    maxComparisonValue: "iure",
-                                    minComparisonValue: "perferendis",
-                                    operator: "EXACT",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "quos",
-                                    maxComparisonValue: "atque",
-                                    metricName: "repudiandae",
-                                    operator: "BETWEEN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "ab",
-                                    expressions: [
-                                      "nobis",
-                                      "et",
-                                      "eveniet",
-                                    ],
-                                    maxComparisonValue: "dolore",
-                                    minComparisonValue: "voluptates",
-                                    operator: "NUMERIC_LESS_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "vel",
-                                    maxComparisonValue: "rerum",
-                                    metricName: "consequatur",
-                                    operator: "LESS_THAN",
-                                    scope: "USER",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    simpleSegment: {
-                      orFiltersForSegment: [
-                        {
-                          segmentFilterClauses: [
                             {
                               dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "et",
+                                caseSensitive: false,
+                                dimensionName: "aut",
                                 expressions: [
-                                  "et",
-                                  "occaecati",
+                                  "fugiat",
+                                  "doloribus",
                                 ],
-                                maxComparisonValue: "ratione",
-                                minComparisonValue: "in",
+                                maxComparisonValue: "saepe",
+                                minComparisonValue: "ut",
                                 operator: "OPERATOR_UNSPECIFIED",
                               },
                               metricFilter: {
-                                comparisonValue: "in",
-                                maxComparisonValue: "soluta",
-                                metricName: "ab",
-                                operator: "LESS_THAN",
-                                scope: "SESSION",
-                              },
-                              not: true,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "eos",
-                                expressions: [
-                                  "eos",
-                                  "hic",
-                                ],
-                                maxComparisonValue: "est",
-                                minComparisonValue: "voluptas",
-                                operator: "NUMERIC_GREATER_THAN",
-                              },
-                              metricFilter: {
-                                comparisonValue: "non",
-                                maxComparisonValue: "nemo",
-                                metricName: "dolor",
-                                operator: "LESS_THAN",
+                                comparisonValue: "minus",
+                                maxComparisonValue: "accusantium",
+                                metricName: "reiciendis",
+                                operator: "BETWEEN",
                                 scope: "USER",
                               },
                               not: false,
@@ -5761,21 +5332,67 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                             {
                               dimensionFilter: {
                                 caseSensitive: false,
-                                dimensionName: "ducimus",
+                                dimensionName: "aut",
                                 expressions: [
-                                  "tempore",
-                                  "ab",
+                                  "ea",
                                 ],
-                                maxComparisonValue: "et",
-                                minComparisonValue: "et",
-                                operator: "NUMERIC_BETWEEN",
+                                maxComparisonValue: "quis",
+                                minComparisonValue: "culpa",
+                                operator: "ENDS_WITH",
                               },
                               metricFilter: {
-                                comparisonValue: "aut",
-                                maxComparisonValue: "illum",
+                                comparisonValue: "rem",
+                                maxComparisonValue: "non",
                                 metricName: "aperiam",
-                                operator: "LESS_THAN",
-                                scope: "HIT",
+                                operator: "GREATER_THAN",
+                                scope: "UNSPECIFIED_SCOPE",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "quasi",
+                                expressions: [
+                                  "dolor",
+                                  "ut",
+                                ],
+                                maxComparisonValue: "sit",
+                                minComparisonValue: "ut",
+                                operator: "ENDS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "iusto",
+                                maxComparisonValue: "sed",
+                                metricName: "numquam",
+                                operator: "EQUAL",
+                                scope: "PRODUCT",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "molestiae",
+                                expressions: [
+                                  "eaque",
+                                  "voluptatum",
+                                  "debitis",
+                                ],
+                                maxComparisonValue: "perspiciatis",
+                                minComparisonValue: "aut",
+                                operator: "EXACT",
+                              },
+                              metricFilter: {
+                                comparisonValue: "est",
+                                maxComparisonValue: "nisi",
+                                metricName: "voluptatibus",
+                                operator: "EQUAL",
+                                scope: "SESSION",
                               },
                               not: false,
                             },
@@ -5790,156 +5407,6 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                       firstStepShouldMatchFirstHit: false,
                       segmentSequenceSteps: [
                         {
-                          matchType: "PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "et",
-                                    expressions: [
-                                      "at",
-                                      "qui",
-                                    ],
-                                    maxComparisonValue: "quia",
-                                    minComparisonValue: "officia",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "ratione",
-                                    maxComparisonValue: "labore",
-                                    metricName: "cupiditate",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "sit",
-                                    expressions: [
-                                      "voluptates",
-                                    ],
-                                    maxComparisonValue: "voluptate",
-                                    minComparisonValue: "qui",
-                                    operator: "NUMERIC_BETWEEN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "consequuntur",
-                                    maxComparisonValue: "illo",
-                                    metricName: "quia",
-                                    operator: "GREATER_THAN",
-                                    scope: "USER",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "explicabo",
-                                    expressions: [
-                                      "animi",
-                                      "omnis",
-                                      "eum",
-                                    ],
-                                    maxComparisonValue: "recusandae",
-                                    minComparisonValue: "doloribus",
-                                    operator: "OPERATOR_UNSPECIFIED",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "culpa",
-                                    maxComparisonValue: "non",
-                                    metricName: "magnam",
-                                    operator: "EQUAL",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "ut",
-                                    expressions: [
-                                      "officiis",
-                                      "quaerat",
-                                    ],
-                                    maxComparisonValue: "aut",
-                                    minComparisonValue: "quo",
-                                    operator: "NUMERIC_GREATER_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "enim",
-                                    maxComparisonValue: "et",
-                                    metricName: "quibusdam",
-                                    operator: "BETWEEN",
-                                    scope: "HIT",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "laudantium",
-                                    expressions: [
-                                      "vel",
-                                    ],
-                                    maxComparisonValue: "quibusdam",
-                                    minComparisonValue: "deleniti",
-                                    operator: "BEGINS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "sed",
-                                    maxComparisonValue: "hic",
-                                    metricName: "at",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "SESSION",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          matchType: "PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "omnis",
-                                    expressions: [
-                                      "eaque",
-                                    ],
-                                    maxComparisonValue: "nam",
-                                    minComparisonValue: "recusandae",
-                                    operator: "OPERATOR_UNSPECIFIED",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "nostrum",
-                                    maxComparisonValue: "repellat",
-                                    metricName: "dolor",
-                                    operator: "GREATER_THAN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
                           matchType: "IMMEDIATELY_PRECEDES",
                           orFiltersForSegment: [
                             {
@@ -5947,749 +5414,63 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                                 {
                                   dimensionFilter: {
                                     caseSensitive: false,
+                                    dimensionName: "ut",
+                                    expressions: [
+                                      "officia",
+                                      "optio",
+                                      "omnis",
+                                    ],
+                                    maxComparisonValue: "sit",
+                                    minComparisonValue: "quas",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "maxime",
+                                    maxComparisonValue: "quibusdam",
+                                    metricName: "asperiores",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "SESSION",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
                                     dimensionName: "beatae",
                                     expressions: [
-                                      "corrupti",
-                                      "id",
+                                      "blanditiis",
                                     ],
-                                    maxComparisonValue: "cum",
-                                    minComparisonValue: "voluptas",
-                                    operator: "REGEXP",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "sed",
-                                    maxComparisonValue: "laborum",
-                                    metricName: "voluptatem",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "rerum",
-                                    expressions: [
-                                      "illo",
-                                      "consequuntur",
-                                      "distinctio",
-                                    ],
-                                    maxComparisonValue: "sunt",
-                                    minComparisonValue: "qui",
-                                    operator: "NUMERIC_LESS_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "quo",
-                                    maxComparisonValue: "aut",
-                                    metricName: "et",
-                                    operator: "BETWEEN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "officiis",
-                                    expressions: [
-                                      "velit",
-                                      "dolorem",
-                                      "qui",
-                                    ],
-                                    maxComparisonValue: "ut",
-                                    minComparisonValue: "fugiat",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "optio",
-                                    maxComparisonValue: "totam",
-                                    metricName: "consequuntur",
-                                    operator: "LESS_THAN",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    simpleSegment: {
-                      orFiltersForSegment: [
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "modi",
-                                expressions: [
-                                  "qui",
-                                ],
-                                maxComparisonValue: "laborum",
-                                minComparisonValue: "atque",
-                                operator: "OPERATOR_UNSPECIFIED",
-                              },
-                              metricFilter: {
-                                comparisonValue: "fuga",
-                                maxComparisonValue: "dolores",
-                                metricName: "accusantium",
-                                operator: "EQUAL",
-                                scope: "HIT",
-                              },
-                              not: false,
-                            },
-                          ],
-                        },
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "laudantium",
-                                expressions: [
-                                  "veniam",
-                                  "voluptate",
-                                  "qui",
-                                ],
-                                maxComparisonValue: "in",
-                                minComparisonValue: "blanditiis",
-                                operator: "EXACT",
-                              },
-                              metricFilter: {
-                                comparisonValue: "et",
-                                maxComparisonValue: "eveniet",
-                                metricName: "aut",
-                                operator: "GREATER_THAN",
-                                scope: "USER",
-                              },
-                              not: true,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "inventore",
-                                expressions: [
-                                  "sit",
-                                ],
-                                maxComparisonValue: "aliquam",
-                                minComparisonValue: "dolores",
-                                operator: "PARTIAL",
-                              },
-                              metricFilter: {
-                                comparisonValue: "libero",
-                                maxComparisonValue: "voluptatum",
-                                metricName: "optio",
-                                operator: "GREATER_THAN",
-                                scope: "SESSION",
-                              },
-                              not: true,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "voluptatem",
-                                expressions: [
-                                  "quod",
-                                  "suscipit",
-                                ],
-                                maxComparisonValue: "error",
-                                minComparisonValue: "sit",
-                                operator: "ENDS_WITH",
-                              },
-                              metricFilter: {
-                                comparisonValue: "cum",
-                                maxComparisonValue: "commodi",
-                                metricName: "laudantium",
-                                operator: "UNSPECIFIED_OPERATOR",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: false,
-                            },
-                          ],
-                        },
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "sed",
-                                expressions: [
-                                  "explicabo",
-                                ],
-                                maxComparisonValue: "illo",
-                                minComparisonValue: "et",
-                                operator: "OPERATOR_UNSPECIFIED",
-                              },
-                              metricFilter: {
-                                comparisonValue: "vel",
-                                maxComparisonValue: "iste",
-                                metricName: "occaecati",
-                                operator: "EQUAL",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: true,
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  },
-                ],
-              },
-            },
-            segmentId: "quis",
-          },
-          {
-            dynamicSegment: {
-              name: "magnam",
-              sessionSegment: {
-                segmentFilters: [
-                  {
-                    not: false,
-                    sequenceSegment: {
-                      firstStepShouldMatchFirstHit: true,
-                      segmentSequenceSteps: [
-                        {
-                          matchType: "PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "rerum",
-                                    expressions: [
-                                      "est",
-                                      "quia",
-                                      "voluptatibus",
-                                    ],
-                                    maxComparisonValue: "quas",
-                                    minComparisonValue: "illum",
-                                    operator: "NUMERIC_BETWEEN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "accusantium",
-                                    maxComparisonValue: "quo",
-                                    metricName: "veritatis",
-                                    operator: "LESS_THAN",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "autem",
-                                    expressions: [
-                                      "sit",
-                                    ],
-                                    maxComparisonValue: "id",
-                                    minComparisonValue: "error",
-                                    operator: "OPERATOR_UNSPECIFIED",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "et",
                                     maxComparisonValue: "voluptatem",
-                                    metricName: "id",
-                                    operator: "LESS_THAN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "nisi",
-                                    expressions: [
-                                      "eius",
-                                      "quaerat",
-                                      "quaerat",
-                                    ],
-                                    maxComparisonValue: "et",
-                                    minComparisonValue: "officia",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "sint",
-                                    maxComparisonValue: "quo",
-                                    metricName: "ut",
-                                    operator: "LESS_THAN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "fuga",
-                                    expressions: [
-                                      "explicabo",
-                                      "adipisci",
-                                      "voluptas",
-                                    ],
-                                    maxComparisonValue: "quis",
-                                    minComparisonValue: "tenetur",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "natus",
-                                    maxComparisonValue: "molestiae",
-                                    metricName: "culpa",
-                                    operator: "LESS_THAN",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "ad",
-                                    expressions: [
-                                      "aut",
-                                      "odit",
-                                    ],
-                                    maxComparisonValue: "ex",
-                                    minComparisonValue: "cupiditate",
-                                    operator: "NUMERIC_BETWEEN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "aliquid",
-                                    maxComparisonValue: "et",
-                                    metricName: "adipisci",
-                                    operator: "EQUAL",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "voluptas",
-                                    expressions: [
-                                      "debitis",
-                                    ],
-                                    maxComparisonValue: "animi",
-                                    minComparisonValue: "molestiae",
-                                    operator: "IN_LIST",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "animi",
-                                    maxComparisonValue: "consectetur",
-                                    metricName: "aspernatur",
-                                    operator: "EQUAL",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "id",
-                                    expressions: [
-                                      "natus",
-                                    ],
-                                    maxComparisonValue: "repellat",
-                                    minComparisonValue: "excepturi",
-                                    operator: "OPERATOR_UNSPECIFIED",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "quo",
-                                    maxComparisonValue: "id",
-                                    metricName: "dolorum",
-                                    operator: "LESS_THAN",
-                                    scope: "USER",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    simpleSegment: {
-                      orFiltersForSegment: [
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "et",
-                                expressions: [
-                                  "vitae",
-                                  "ut",
-                                  "debitis",
-                                ],
-                                maxComparisonValue: "ea",
-                                minComparisonValue: "natus",
-                                operator: "NUMERIC_BETWEEN",
-                              },
-                              metricFilter: {
-                                comparisonValue: "deserunt",
-                                maxComparisonValue: "aliquid",
-                                metricName: "nihil",
-                                operator: "LESS_THAN",
-                                scope: "PRODUCT",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "ut",
-                                expressions: [
-                                  "illum",
-                                  "porro",
-                                ],
-                                maxComparisonValue: "eaque",
-                                minComparisonValue: "quis",
-                                operator: "BEGINS_WITH",
-                              },
-                              metricFilter: {
-                                comparisonValue: "qui",
-                                maxComparisonValue: "et",
-                                metricName: "blanditiis",
-                                operator: "BETWEEN",
-                                scope: "SESSION",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "cupiditate",
-                                expressions: [
-                                  "deserunt",
-                                  "dicta",
-                                  "assumenda",
-                                ],
-                                maxComparisonValue: "officiis",
-                                minComparisonValue: "et",
-                                operator: "IN_LIST",
-                              },
-                              metricFilter: {
-                                comparisonValue: "in",
-                                maxComparisonValue: "consequatur",
-                                metricName: "rerum",
-                                operator: "GREATER_THAN",
-                                scope: "HIT",
-                              },
-                              not: false,
-                            },
-                          ],
-                        },
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "vitae",
-                                expressions: [
-                                  "quia",
-                                ],
-                                maxComparisonValue: "consequuntur",
-                                minComparisonValue: "aspernatur",
-                                operator: "BEGINS_WITH",
-                              },
-                              metricFilter: {
-                                comparisonValue: "sed",
-                                maxComparisonValue: "vel",
-                                metricName: "aut",
-                                operator: "EQUAL",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "sequi",
-                                expressions: [
-                                  "consectetur",
-                                ],
-                                maxComparisonValue: "voluptatem",
-                                minComparisonValue: "fugit",
-                                operator: "NUMERIC_GREATER_THAN",
-                              },
-                              metricFilter: {
-                                comparisonValue: "in",
-                                maxComparisonValue: "iure",
-                                metricName: "ullam",
-                                operator: "UNSPECIFIED_OPERATOR",
-                                scope: "UNSPECIFIED_SCOPE",
-                              },
-                              not: true,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "esse",
-                                expressions: [
-                                  "voluptatem",
-                                ],
-                                maxComparisonValue: "numquam",
-                                minComparisonValue: "laudantium",
-                                operator: "EXACT",
-                              },
-                              metricFilter: {
-                                comparisonValue: "dicta",
-                                maxComparisonValue: "magnam",
-                                metricName: "id",
-                                operator: "UNSPECIFIED_OPERATOR",
-                                scope: "PRODUCT",
-                              },
-                              not: true,
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  },
-                  {
-                    not: true,
-                    sequenceSegment: {
-                      firstStepShouldMatchFirstHit: true,
-                      segmentSequenceSteps: [
-                        {
-                          matchType: "PRECEDES",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "porro",
-                                    expressions: [
-                                      "suscipit",
-                                    ],
-                                    maxComparisonValue: "accusamus",
-                                    minComparisonValue: "sit",
-                                    operator: "NUMERIC_LESS_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "sit",
-                                    maxComparisonValue: "magnam",
-                                    metricName: "dolores",
-                                    operator: "LESS_THAN",
-                                    scope: "SESSION",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "voluptatum",
-                                    expressions: [
-                                      "quaerat",
-                                      "deserunt",
-                                    ],
-                                    maxComparisonValue: "qui",
                                     minComparisonValue: "ea",
-                                    operator: "NUMERIC_LESS_THAN",
+                                    operator: "PARTIAL",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "omnis",
-                                    maxComparisonValue: "ut",
-                                    metricName: "blanditiis",
-                                    operator: "EQUAL",
-                                    scope: "SESSION",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "ut",
-                                    expressions: [
-                                      "autem",
-                                      "architecto",
-                                    ],
-                                    maxComparisonValue: "autem",
-                                    minComparisonValue: "nesciunt",
-                                    operator: "BEGINS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "aut",
-                                    maxComparisonValue: "aut",
-                                    metricName: "ducimus",
+                                    comparisonValue: "at",
+                                    maxComparisonValue: "fugit",
+                                    metricName: "dolore",
                                     operator: "UNSPECIFIED_OPERATOR",
                                     scope: "USER",
                                   },
                                   not: true,
                                 },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
                                 {
                                   dimensionFilter: {
-                                    caseSensitive: false,
+                                    caseSensitive: true,
                                     dimensionName: "vel",
                                     expressions: [
-                                      "debitis",
+                                      "atque",
+                                      "repellendus",
+                                      "ut",
                                     ],
-                                    maxComparisonValue: "voluptates",
-                                    minComparisonValue: "et",
+                                    maxComparisonValue: "possimus",
+                                    minComparisonValue: "cumque",
                                     operator: "OPERATOR_UNSPECIFIED",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "iste",
-                                    maxComparisonValue: "asperiores",
-                                    metricName: "ea",
-                                    operator: "BETWEEN",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "maiores",
-                                    expressions: [
-                                      "eos",
-                                    ],
-                                    maxComparisonValue: "assumenda",
-                                    minComparisonValue: "repellat",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "ut",
-                                    maxComparisonValue: "et",
-                                    metricName: "minima",
+                                    comparisonValue: "tempore",
+                                    maxComparisonValue: "maiores",
+                                    metricName: "dignissimos",
                                     operator: "LESS_THAN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "quos",
-                                    expressions: [
-                                      "accusamus",
-                                      "rerum",
-                                    ],
-                                    maxComparisonValue: "eos",
-                                    minComparisonValue: "est",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "enim",
-                                    maxComparisonValue: "illum",
-                                    metricName: "necessitatibus",
-                                    operator: "EQUAL",
-                                    scope: "HIT",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          matchType: "UNSPECIFIED_MATCH_TYPE",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "ut",
-                                    expressions: [
-                                      "numquam",
-                                      "culpa",
-                                      "et",
-                                    ],
-                                    maxComparisonValue: "provident",
-                                    minComparisonValue: "id",
-                                    operator: "NUMERIC_GREATER_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "rerum",
-                                    maxComparisonValue: "sed",
-                                    metricName: "assumenda",
-                                    operator: "GREATER_THAN",
-                                    scope: "HIT",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "culpa",
-                                    expressions: [
-                                      "enim",
-                                      "id",
-                                      "corporis",
-                                    ],
-                                    maxComparisonValue: "facere",
-                                    minComparisonValue: "eligendi",
-                                    operator: "NUMERIC_BETWEEN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "velit",
-                                    maxComparisonValue: "et",
-                                    metricName: "minus",
-                                    operator: "LESS_THAN",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "sunt",
-                                    expressions: [
-                                      "qui",
-                                    ],
-                                    maxComparisonValue: "occaecati",
-                                    minComparisonValue: "quaerat",
-                                    operator: "EXACT",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "eum",
-                                    maxComparisonValue: "voluptatem",
-                                    metricName: "quod",
-                                    operator: "GREATER_THAN",
-                                    scope: "SESSION",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "possimus",
-                                    expressions: [
-                                      "id",
-                                      "excepturi",
-                                      "rerum",
-                                    ],
-                                    maxComparisonValue: "labore",
-                                    minComparisonValue: "nesciunt",
-                                    operator: "EXACT",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "minus",
-                                    maxComparisonValue: "velit",
-                                    metricName: "est",
-                                    operator: "BETWEEN",
                                     scope: "UNSPECIFIED_SCOPE",
                                   },
                                   not: false,
@@ -6709,41 +5490,61 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                                 caseSensitive: false,
                                 dimensionName: "qui",
                                 expressions: [
-                                  "ea",
-                                  "ut",
-                                  "aspernatur",
+                                  "est",
+                                  "consequatur",
+                                  "quia",
                                 ],
-                                maxComparisonValue: "qui",
-                                minComparisonValue: "praesentium",
-                                operator: "BEGINS_WITH",
+                                maxComparisonValue: "ad",
+                                minComparisonValue: "nemo",
+                                operator: "EXACT",
                               },
                               metricFilter: {
-                                comparisonValue: "sit",
-                                maxComparisonValue: "sed",
-                                metricName: "in",
-                                operator: "UNSPECIFIED_OPERATOR",
-                                scope: "PRODUCT",
+                                comparisonValue: "neque",
+                                maxComparisonValue: "totam",
+                                metricName: "dolores",
+                                operator: "LESS_THAN",
+                                scope: "USER",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "odio",
+                                expressions: [
+                                  "placeat",
+                                ],
+                                maxComparisonValue: "nostrum",
+                                minComparisonValue: "repellat",
+                                operator: "NUMERIC_LESS_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "eum",
+                                maxComparisonValue: "impedit",
+                                metricName: "est",
+                                operator: "LESS_THAN",
+                                scope: "HIT",
                               },
                               not: false,
                             },
                             {
                               dimensionFilter: {
-                                caseSensitive: true,
-                                dimensionName: "odit",
+                                caseSensitive: false,
+                                dimensionName: "voluptatibus",
                                 expressions: [
-                                  "sequi",
-                                  "molestias",
+                                  "cupiditate",
+                                  "minus",
                                 ],
-                                maxComparisonValue: "ipsa",
-                                minComparisonValue: "quisquam",
-                                operator: "NUMERIC_LESS_THAN",
+                                maxComparisonValue: "in",
+                                minComparisonValue: "debitis",
+                                operator: "PARTIAL",
                               },
                               metricFilter: {
-                                comparisonValue: "quos",
-                                maxComparisonValue: "beatae",
-                                metricName: "repudiandae",
+                                comparisonValue: "animi",
+                                maxComparisonValue: "distinctio",
+                                metricName: "hic",
                                 operator: "GREATER_THAN",
-                                scope: "SESSION",
+                                scope: "UNSPECIFIED_SCOPE",
                               },
                               not: true,
                             },
@@ -6752,133 +5553,21 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                       ],
                     },
                   },
+                ],
+              },
+            },
+            segmentId: "labore",
+          },
+          {
+            dynamicSegment: {
+              name: "totam",
+              sessionSegment: {
+                segmentFilters: [
                   {
                     not: false,
                     sequenceSegment: {
-                      firstStepShouldMatchFirstHit: false,
+                      firstStepShouldMatchFirstHit: true,
                       segmentSequenceSteps: [
-                        {
-                          matchType: "UNSPECIFIED_MATCH_TYPE",
-                          orFiltersForSegment: [
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "voluptatem",
-                                    expressions: [
-                                      "qui",
-                                      "fuga",
-                                    ],
-                                    maxComparisonValue: "pariatur",
-                                    minComparisonValue: "voluptatibus",
-                                    operator: "NUMERIC_LESS_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "ipsum",
-                                    maxComparisonValue: "aut",
-                                    metricName: "quaerat",
-                                    operator: "BETWEEN",
-                                    scope: "HIT",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "saepe",
-                                    expressions: [
-                                      "tempora",
-                                      "voluptatibus",
-                                      "a",
-                                    ],
-                                    maxComparisonValue: "qui",
-                                    minComparisonValue: "numquam",
-                                    operator: "ENDS_WITH",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "placeat",
-                                    maxComparisonValue: "perspiciatis",
-                                    metricName: "porro",
-                                    operator: "EQUAL",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "sunt",
-                                    expressions: [
-                                      "aspernatur",
-                                      "iusto",
-                                    ],
-                                    maxComparisonValue: "quam",
-                                    minComparisonValue: "maiores",
-                                    operator: "EXACT",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "consequatur",
-                                    maxComparisonValue: "in",
-                                    metricName: "enim",
-                                    operator: "LESS_THAN",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "alias",
-                                    expressions: [
-                                      "ea",
-                                      "quia",
-                                    ],
-                                    maxComparisonValue: "labore",
-                                    minComparisonValue: "vitae",
-                                    operator: "OPERATOR_UNSPECIFIED",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "dicta",
-                                    maxComparisonValue: "aut",
-                                    metricName: "quam",
-                                    operator: "LESS_THAN",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "itaque",
-                                    expressions: [
-                                      "id",
-                                    ],
-                                    maxComparisonValue: "omnis",
-                                    minComparisonValue: "ratione",
-                                    operator: "EXACT",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "consequatur",
-                                    maxComparisonValue: "reprehenderit",
-                                    metricName: "molestiae",
-                                    operator: "EQUAL",
-                                    scope: "USER",
-                                  },
-                                  not: false,
-                                },
-                              ],
-                            },
-                          ],
-                        },
                         {
                           matchType: "IMMEDIATELY_PRECEDES",
                           orFiltersForSegment: [
@@ -6887,113 +5576,44 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                                 {
                                   dimensionFilter: {
                                     caseSensitive: false,
-                                    dimensionName: "ipsam",
+                                    dimensionName: "qui",
                                     expressions: [
-                                      "earum",
-                                      "hic",
-                                      "id",
+                                      "explicabo",
                                     ],
-                                    maxComparisonValue: "id",
-                                    minComparisonValue: "labore",
-                                    operator: "EXACT",
+                                    maxComparisonValue: "qui",
+                                    minComparisonValue: "maiores",
+                                    operator: "NUMERIC_LESS_THAN",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "eum",
-                                    maxComparisonValue: "exercitationem",
-                                    metricName: "quam",
-                                    operator: "GREATER_THAN",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "ut",
-                                    expressions: [
-                                      "voluptates",
-                                      "omnis",
-                                    ],
-                                    maxComparisonValue: "sint",
-                                    minComparisonValue: "officia",
-                                    operator: "REGEXP",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "laboriosam",
-                                    maxComparisonValue: "molestiae",
-                                    metricName: "ipsa",
-                                    operator: "BETWEEN",
-                                    scope: "SESSION",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: false,
-                                    dimensionName: "laborum",
-                                    expressions: [
-                                      "ab",
-                                      "impedit",
-                                      "ut",
-                                    ],
-                                    maxComparisonValue: "eum",
-                                    minComparisonValue: "reiciendis",
-                                    operator: "NUMERIC_GREATER_THAN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "soluta",
-                                    maxComparisonValue: "voluptatem",
-                                    metricName: "quis",
-                                    operator: "GREATER_THAN",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "atque",
-                                    expressions: [
-                                      "ex",
-                                      "odio",
-                                    ],
-                                    maxComparisonValue: "a",
-                                    minComparisonValue: "sed",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "quo",
-                                    maxComparisonValue: "laboriosam",
-                                    metricName: "facere",
+                                    comparisonValue: "molestiae",
+                                    maxComparisonValue: "voluptas",
+                                    metricName: "officia",
                                     operator: "LESS_THAN",
-                                    scope: "UNSPECIFIED_SCOPE",
+                                    scope: "USER",
                                   },
-                                  not: true,
+                                  not: false,
                                 },
                                 {
                                   dimensionFilter: {
                                     caseSensitive: true,
-                                    dimensionName: "dolorum",
+                                    dimensionName: "nemo",
                                     expressions: [
-                                      "voluptates",
-                                      "natus",
+                                      "quae",
+                                      "odit",
+                                      "expedita",
                                     ],
-                                    maxComparisonValue: "laboriosam",
-                                    minComparisonValue: "quibusdam",
-                                    operator: "EXACT",
+                                    maxComparisonValue: "ut",
+                                    minComparisonValue: "occaecati",
+                                    operator: "OPERATOR_UNSPECIFIED",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "error",
-                                    maxComparisonValue: "voluptates",
-                                    metricName: "dolores",
-                                    operator: "UNSPECIFIED_OPERATOR",
-                                    scope: "HIT",
+                                    comparisonValue: "itaque",
+                                    maxComparisonValue: "harum",
+                                    metricName: "nulla",
+                                    operator: "EQUAL",
+                                    scope: "UNSPECIFIED_SCOPE",
                                   },
-                                  not: true,
+                                  not: false,
                                 },
                               ],
                             },
@@ -7006,89 +5626,45 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                               segmentFilterClauses: [
                                 {
                                   dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "eos",
+                                    caseSensitive: false,
+                                    dimensionName: "doloribus",
                                     expressions: [
-                                      "unde",
-                                      "sint",
-                                      "voluptatem",
+                                      "quis",
+                                      "vel",
+                                      "magni",
                                     ],
-                                    maxComparisonValue: "possimus",
-                                    minComparisonValue: "id",
-                                    operator: "REGEXP",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "qui",
-                                    maxComparisonValue: "dolore",
-                                    metricName: "aut",
-                                    operator: "EQUAL",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: false,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "cum",
-                                    expressions: [
-                                      "iure",
-                                      "voluptatem",
-                                      "quae",
-                                    ],
-                                    maxComparisonValue: "non",
-                                    minComparisonValue: "consectetur",
-                                    operator: "OPERATOR_UNSPECIFIED",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "doloribus",
-                                    maxComparisonValue: "illum",
-                                    metricName: "aut",
-                                    operator: "GREATER_THAN",
-                                    scope: "HIT",
-                                  },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "aut",
-                                    expressions: [
-                                      "porro",
-                                    ],
-                                    maxComparisonValue: "ut",
-                                    minComparisonValue: "id",
+                                    maxComparisonValue: "architecto",
+                                    minComparisonValue: "est",
                                     operator: "IN_LIST",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "et",
-                                    maxComparisonValue: "distinctio",
-                                    metricName: "sint",
+                                    comparisonValue: "dolores",
+                                    maxComparisonValue: "in",
+                                    metricName: "aperiam",
                                     operator: "BETWEEN",
-                                    scope: "HIT",
+                                    scope: "UNSPECIFIED_SCOPE",
                                   },
-                                  not: false,
+                                  not: true,
                                 },
                                 {
                                   dimensionFilter: {
                                     caseSensitive: true,
-                                    dimensionName: "rerum",
+                                    dimensionName: "ut",
                                     expressions: [
-                                      "cum",
+                                      "ut",
+                                      "velit",
+                                      "velit",
                                     ],
-                                    maxComparisonValue: "ratione",
-                                    minComparisonValue: "eum",
-                                    operator: "NUMERIC_BETWEEN",
+                                    maxComparisonValue: "totam",
+                                    minComparisonValue: "doloribus",
+                                    operator: "BEGINS_WITH",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "aut",
-                                    maxComparisonValue: "nisi",
-                                    metricName: "velit",
-                                    operator: "LESS_THAN",
-                                    scope: "USER",
+                                    comparisonValue: "et",
+                                    maxComparisonValue: "voluptatem",
+                                    metricName: "quae",
+                                    operator: "GREATER_THAN",
+                                    scope: "HIT",
                                   },
                                   not: true,
                                 },
@@ -7104,155 +5680,64 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                           segmentFilterClauses: [
                             {
                               dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "consequatur",
+                                caseSensitive: true,
+                                dimensionName: "at",
                                 expressions: [
-                                  "sint",
-                                  "iusto",
+                                  "fugit",
+                                  "repellat",
+                                  "non",
                                 ],
-                                maxComparisonValue: "deleniti",
-                                minComparisonValue: "aperiam",
+                                maxComparisonValue: "blanditiis",
+                                minComparisonValue: "omnis",
                                 operator: "NUMERIC_LESS_THAN",
                               },
                               metricFilter: {
-                                comparisonValue: "eius",
-                                maxComparisonValue: "debitis",
-                                metricName: "sit",
-                                operator: "EQUAL",
+                                comparisonValue: "nemo",
+                                maxComparisonValue: "corporis",
+                                metricName: "cupiditate",
+                                operator: "LESS_THAN",
                                 scope: "PRODUCT",
-                              },
-                              not: false,
-                            },
-                          ],
-                        },
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "voluptate",
-                                expressions: [
-                                  "earum",
-                                  "vel",
-                                  "velit",
-                                ],
-                                maxComparisonValue: "assumenda",
-                                minComparisonValue: "nemo",
-                                operator: "NUMERIC_BETWEEN",
-                              },
-                              metricFilter: {
-                                comparisonValue: "sed",
-                                maxComparisonValue: "aut",
-                                metricName: "pariatur",
-                                operator: "BETWEEN",
-                                scope: "HIT",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "alias",
-                                expressions: [
-                                  "quasi",
-                                  "minus",
-                                  "optio",
-                                ],
-                                maxComparisonValue: "deserunt",
-                                minComparisonValue: "corporis",
-                                operator: "ENDS_WITH",
-                              },
-                              metricFilter: {
-                                comparisonValue: "recusandae",
-                                maxComparisonValue: "pariatur",
-                                metricName: "pariatur",
-                                operator: "UNSPECIFIED_OPERATOR",
-                                scope: "HIT",
-                              },
-                              not: true,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "officiis",
-                                expressions: [
-                                  "repudiandae",
-                                  "similique",
-                                ],
-                                maxComparisonValue: "et",
-                                minComparisonValue: "itaque",
-                                operator: "NUMERIC_GREATER_THAN",
-                              },
-                              metricFilter: {
-                                comparisonValue: "minima",
-                                maxComparisonValue: "placeat",
-                                metricName: "blanditiis",
-                                operator: "EQUAL",
-                                scope: "USER",
-                              },
-                              not: true,
-                            },
-                          ],
-                        },
-                        {
-                          segmentFilterClauses: [
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "et",
-                                expressions: [
-                                  "est",
-                                ],
-                                maxComparisonValue: "doloremque",
-                                minComparisonValue: "cumque",
-                                operator: "BEGINS_WITH",
-                              },
-                              metricFilter: {
-                                comparisonValue: "error",
-                                maxComparisonValue: "officia",
-                                metricName: "illo",
-                                operator: "GREATER_THAN",
-                                scope: "HIT",
-                              },
-                              not: false,
-                            },
-                            {
-                              dimensionFilter: {
-                                caseSensitive: false,
-                                dimensionName: "aut",
-                                expressions: [
-                                  "sit",
-                                  "dolorum",
-                                  "soluta",
-                                ],
-                                maxComparisonValue: "dicta",
-                                minComparisonValue: "perspiciatis",
-                                operator: "IN_LIST",
-                              },
-                              metricFilter: {
-                                comparisonValue: "tenetur",
-                                maxComparisonValue: "quasi",
-                                metricName: "consequuntur",
-                                operator: "EQUAL",
-                                scope: "SESSION",
                               },
                               not: false,
                             },
                             {
                               dimensionFilter: {
                                 caseSensitive: true,
-                                dimensionName: "soluta",
+                                dimensionName: "expedita",
                                 expressions: [
-                                  "iusto",
+                                  "quibusdam",
+                                  "magni",
                                 ],
-                                maxComparisonValue: "consequatur",
-                                minComparisonValue: "eum",
-                                operator: "OPERATOR_UNSPECIFIED",
+                                maxComparisonValue: "quia",
+                                minComparisonValue: "earum",
+                                operator: "PARTIAL",
                               },
                               metricFilter: {
-                                comparisonValue: "nihil",
-                                maxComparisonValue: "ut",
-                                metricName: "qui",
+                                comparisonValue: "alias",
+                                maxComparisonValue: "culpa",
+                                metricName: "rerum",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "iusto",
+                                expressions: [
+                                  "provident",
+                                  "voluptatem",
+                                  "veniam",
+                                ],
+                                maxComparisonValue: "aspernatur",
+                                minComparisonValue: "sed",
+                                operator: "NUMERIC_BETWEEN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "numquam",
+                                maxComparisonValue: "explicabo",
+                                metricName: "et",
                                 operator: "EQUAL",
                                 scope: "SESSION",
                               },
@@ -7268,123 +5753,74 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
               userSegment: {
                 segmentFilters: [
                   {
-                    not: false,
+                    not: true,
                     sequenceSegment: {
                       firstStepShouldMatchFirstHit: true,
                       segmentSequenceSteps: [
                         {
-                          matchType: "PRECEDES",
+                          matchType: "IMMEDIATELY_PRECEDES",
                           orFiltersForSegment: [
                             {
                               segmentFilterClauses: [
                                 {
                                   dimensionFilter: {
                                     caseSensitive: false,
-                                    dimensionName: "magnam",
+                                    dimensionName: "hic",
                                     expressions: [
-                                      "reiciendis",
-                                      "ut",
-                                      "adipisci",
+                                      "qui",
+                                      "qui",
                                     ],
-                                    maxComparisonValue: "repellat",
-                                    minComparisonValue: "quibusdam",
-                                    operator: "NUMERIC_GREATER_THAN",
+                                    maxComparisonValue: "eius",
+                                    minComparisonValue: "voluptas",
+                                    operator: "NUMERIC_LESS_THAN",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "cum",
-                                    maxComparisonValue: "aut",
-                                    metricName: "modi",
-                                    operator: "GREATER_THAN",
-                                    scope: "USER",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "temporibus",
-                                    expressions: [
-                                      "fugit",
-                                      "omnis",
-                                      "aperiam",
-                                    ],
-                                    maxComparisonValue: "ipsam",
-                                    minComparisonValue: "tenetur",
-                                    operator: "PARTIAL",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "rerum",
-                                    maxComparisonValue: "laborum",
-                                    metricName: "sapiente",
-                                    operator: "GREATER_THAN",
-                                    scope: "PRODUCT",
-                                  },
-                                  not: true,
-                                },
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "incidunt",
-                                    expressions: [
-                                      "adipisci",
-                                      "ut",
-                                      "blanditiis",
-                                    ],
-                                    maxComparisonValue: "saepe",
-                                    minComparisonValue: "nesciunt",
-                                    operator: "NUMERIC_BETWEEN",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "labore",
-                                    maxComparisonValue: "illum",
-                                    metricName: "omnis",
+                                    comparisonValue: "aut",
+                                    maxComparisonValue: "officiis",
+                                    metricName: "aliquid",
                                     operator: "EQUAL",
+                                    scope: "SESSION",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "voluptate",
+                                    expressions: [
+                                      "velit",
+                                    ],
+                                    maxComparisonValue: "maiores",
+                                    minComparisonValue: "sunt",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "est",
+                                    maxComparisonValue: "reprehenderit",
+                                    metricName: "totam",
+                                    operator: "BETWEEN",
                                     scope: "HIT",
                                   },
-                                  not: true,
-                                },
-                              ],
-                            },
-                            {
-                              segmentFilterClauses: [
-                                {
-                                  dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "eius",
-                                    expressions: [
-                                      "quisquam",
-                                      "possimus",
-                                      "sed",
-                                    ],
-                                    maxComparisonValue: "labore",
-                                    minComparisonValue: "nemo",
-                                    operator: "OPERATOR_UNSPECIFIED",
-                                  },
-                                  metricFilter: {
-                                    comparisonValue: "quam",
-                                    maxComparisonValue: "libero",
-                                    metricName: "voluptate",
-                                    operator: "EQUAL",
-                                    scope: "UNSPECIFIED_SCOPE",
-                                  },
-                                  not: true,
+                                  not: false,
                                 },
                                 {
                                   dimensionFilter: {
-                                    caseSensitive: true,
-                                    dimensionName: "numquam",
+                                    caseSensitive: false,
+                                    dimensionName: "veritatis",
                                     expressions: [
-                                      "cumque",
+                                      "et",
+                                      "nisi",
+                                      "cupiditate",
                                     ],
-                                    maxComparisonValue: "et",
-                                    minComparisonValue: "voluptatum",
-                                    operator: "OPERATOR_UNSPECIFIED",
+                                    maxComparisonValue: "vitae",
+                                    minComparisonValue: "quos",
+                                    operator: "IN_LIST",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "non",
-                                    maxComparisonValue: "totam",
-                                    metricName: "est",
-                                    operator: "GREATER_THAN",
+                                    comparisonValue: "perspiciatis",
+                                    maxComparisonValue: "quo",
+                                    metricName: "nulla",
+                                    operator: "UNSPECIFIED_OPERATOR",
                                     scope: "PRODUCT",
                                   },
                                   not: false,
@@ -7396,40 +5832,1732 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                                 {
                                   dimensionFilter: {
                                     caseSensitive: true,
-                                    dimensionName: "accusantium",
+                                    dimensionName: "ut",
                                     expressions: [
-                                      "voluptas",
+                                      "sunt",
+                                      "iusto",
+                                      "nihil",
                                     ],
-                                    maxComparisonValue: "voluptatem",
-                                    minComparisonValue: "maxime",
-                                    operator: "IN_LIST",
+                                    maxComparisonValue: "qui",
+                                    minComparisonValue: "a",
+                                    operator: "REGEXP",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "eum",
-                                    maxComparisonValue: "modi",
-                                    metricName: "quis",
-                                    operator: "EQUAL",
-                                    scope: "SESSION",
+                                    comparisonValue: "at",
+                                    maxComparisonValue: "aliquam",
+                                    metricName: "incidunt",
+                                    operator: "LESS_THAN",
+                                    scope: "PRODUCT",
                                   },
                                   not: true,
                                 },
                                 {
                                   dimensionFilter: {
                                     caseSensitive: true,
-                                    dimensionName: "neque",
+                                    dimensionName: "fugit",
                                     expressions: [
+                                      "quia",
+                                      "neque",
+                                      "incidunt",
+                                    ],
+                                    maxComparisonValue: "et",
+                                    minComparisonValue: "neque",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "tempore",
+                                    maxComparisonValue: "ipsum",
+                                    metricName: "omnis",
+                                    operator: "GREATER_THAN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "IMMEDIATELY_PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "labore",
+                                    expressions: [
+                                      "saepe",
+                                      "libero",
+                                    ],
+                                    maxComparisonValue: "nobis",
+                                    minComparisonValue: "ut",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "qui",
+                                    maxComparisonValue: "hic",
+                                    metricName: "sed",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "et",
+                                    expressions: [
+                                      "nisi",
                                       "et",
                                     ],
-                                    maxComparisonValue: "voluptas",
+                                    maxComparisonValue: "unde",
+                                    minComparisonValue: "in",
+                                    operator: "NUMERIC_LESS_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "vel",
+                                    maxComparisonValue: "rerum",
+                                    metricName: "minus",
+                                    operator: "GREATER_THAN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "sit",
+                                    expressions: [
+                                      "excepturi",
+                                    ],
+                                    maxComparisonValue: "quia",
+                                    minComparisonValue: "dolore",
+                                    operator: "NUMERIC_BETWEEN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "voluptas",
+                                    maxComparisonValue: "quis",
+                                    metricName: "dolor",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "voluptatem",
+                                    expressions: [
+                                      "est",
+                                    ],
+                                    maxComparisonValue: "ducimus",
+                                    minComparisonValue: "adipisci",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "et",
+                                    maxComparisonValue: "vel",
+                                    metricName: "dolores",
+                                    operator: "LESS_THAN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "UNSPECIFIED_MATCH_TYPE",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "voluptas",
+                                    expressions: [
+                                      "voluptates",
+                                    ],
+                                    maxComparisonValue: "repellat",
+                                    minComparisonValue: "eligendi",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "sit",
+                                    maxComparisonValue: "optio",
+                                    metricName: "atque",
+                                    operator: "LESS_THAN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "voluptas",
+                                    expressions: [
+                                      "aliquid",
+                                      "quasi",
+                                      "impedit",
+                                    ],
+                                    maxComparisonValue: "tempora",
+                                    minComparisonValue: "consequatur",
+                                    operator: "PARTIAL",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "non",
+                                    maxComparisonValue: "nesciunt",
+                                    metricName: "dolorem",
+                                    operator: "EQUAL",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "perferendis",
+                                    expressions: [
+                                      "ut",
+                                    ],
+                                    maxComparisonValue: "quas",
                                     minComparisonValue: "qui",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "ut",
+                                    maxComparisonValue: "qui",
+                                    metricName: "harum",
+                                    operator: "GREATER_THAN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "accusantium",
+                                    expressions: [
+                                      "veritatis",
+                                      "qui",
+                                      "facere",
+                                    ],
+                                    maxComparisonValue: "aut",
+                                    minComparisonValue: "nesciunt",
+                                    operator: "ENDS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "consequatur",
+                                    maxComparisonValue: "praesentium",
+                                    metricName: "temporibus",
+                                    operator: "EQUAL",
+                                    scope: "HIT",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "enim",
+                                    expressions: [
+                                      "impedit",
+                                      "ratione",
+                                      "adipisci",
+                                    ],
+                                    maxComparisonValue: "eius",
+                                    minComparisonValue: "quisquam",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "quia",
+                                    maxComparisonValue: "est",
+                                    metricName: "voluptatem",
+                                    operator: "LESS_THAN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "ipsum",
+                                    expressions: [
+                                      "iusto",
+                                      "quis",
+                                    ],
+                                    maxComparisonValue: "et",
+                                    minComparisonValue: "soluta",
+                                    operator: "NUMERIC_LESS_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "laborum",
+                                    maxComparisonValue: "quibusdam",
+                                    metricName: "eum",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    simpleSegment: {
+                      orFiltersForSegment: [
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "voluptatem",
+                                expressions: [
+                                  "est",
+                                  "natus",
+                                  "et",
+                                ],
+                                maxComparisonValue: "ea",
+                                minComparisonValue: "voluptas",
+                                operator: "PARTIAL",
+                              },
+                              metricFilter: {
+                                comparisonValue: "ipsa",
+                                maxComparisonValue: "in",
+                                metricName: "quibusdam",
+                                operator: "GREATER_THAN",
+                                scope: "PRODUCT",
+                              },
+                              not: false,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "nemo",
+                                expressions: [
+                                  "ut",
+                                  "dicta",
+                                ],
+                                maxComparisonValue: "inventore",
+                                minComparisonValue: "perspiciatis",
+                                operator: "ENDS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "esse",
+                                maxComparisonValue: "facere",
+                                metricName: "commodi",
+                                operator: "GREATER_THAN",
+                                scope: "SESSION",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "nisi",
+                                expressions: [
+                                  "dolorem",
+                                ],
+                                maxComparisonValue: "impedit",
+                                minComparisonValue: "laboriosam",
+                                operator: "NUMERIC_BETWEEN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "soluta",
+                                maxComparisonValue: "ut",
+                                metricName: "est",
+                                operator: "GREATER_THAN",
+                                scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "aut",
+                                expressions: [
+                                  "dolorum",
+                                ],
+                                maxComparisonValue: "nostrum",
+                                minComparisonValue: "laboriosam",
+                                operator: "EXACT",
+                              },
+                              metricFilter: {
+                                comparisonValue: "quidem",
+                                maxComparisonValue: "doloribus",
+                                metricName: "at",
+                                operator: "EQUAL",
+                                scope: "HIT",
+                              },
+                              not: false,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "quis",
+                                expressions: [
+                                  "tenetur",
+                                  "alias",
+                                ],
+                                maxComparisonValue: "similique",
+                                minComparisonValue: "iure",
+                                operator: "NUMERIC_LESS_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "et",
+                                maxComparisonValue: "deleniti",
+                                metricName: "laudantium",
+                                operator: "BETWEEN",
+                                scope: "USER",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "debitis",
+                                expressions: [
+                                  "minus",
+                                ],
+                                maxComparisonValue: "sed",
+                                minComparisonValue: "magnam",
+                                operator: "ENDS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "fuga",
+                                maxComparisonValue: "voluptatem",
+                                metricName: "officia",
+                                operator: "LESS_THAN",
+                                scope: "SESSION",
+                              },
+                              not: false,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "nobis",
+                                expressions: [
+                                  "aperiam",
+                                  "enim",
+                                ],
+                                maxComparisonValue: "sequi",
+                                minComparisonValue: "laborum",
+                                operator: "EXACT",
+                              },
+                              metricFilter: {
+                                comparisonValue: "aliquid",
+                                maxComparisonValue: "maiores",
+                                metricName: "velit",
+                                operator: "BETWEEN",
+                                scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+            segmentId: "doloremque",
+          },
+        ],
+        viewId: "cum",
+      },
+      {
+        cohortGroup: {
+          cohorts: [
+            {
+              dateRange: {
+                endDate: "illum",
+                startDate: "enim",
+              },
+              name: "aspernatur",
+              type: "UNSPECIFIED_COHORT_TYPE",
+            },
+            {
+              dateRange: {
+                endDate: "quasi",
+                startDate: "omnis",
+              },
+              name: "sapiente",
+              type: "UNSPECIFIED_COHORT_TYPE",
+            },
+          ],
+          lifetimeValue: false,
+        },
+        dateRanges: [
+          {
+            endDate: "et",
+            startDate: "accusamus",
+          },
+          {
+            endDate: "voluptatibus",
+            startDate: "enim",
+          },
+          {
+            endDate: "in",
+            startDate: "reiciendis",
+          },
+        ],
+        dimensionFilterClauses: [
+          {
+            filters: [
+              {
+                caseSensitive: false,
+                dimensionName: "fugit",
+                expressions: [
+                  "fugit",
+                ],
+                not: false,
+                operator: "PARTIAL",
+              },
+              {
+                caseSensitive: true,
+                dimensionName: "veritatis",
+                expressions: [
+                  "possimus",
+                  "ipsum",
+                ],
+                not: true,
+                operator: "ENDS_WITH",
+              },
+              {
+                caseSensitive: false,
+                dimensionName: "maiores",
+                expressions: [
+                  "qui",
+                ],
+                not: false,
+                operator: "ENDS_WITH",
+              },
+            ],
+            operator: "OR",
+          },
+          {
+            filters: [
+              {
+                caseSensitive: false,
+                dimensionName: "aut",
+                expressions: [
+                  "et",
+                ],
+                not: true,
+                operator: "ENDS_WITH",
+              },
+              {
+                caseSensitive: true,
+                dimensionName: "natus",
+                expressions: [
+                  "incidunt",
+                  "voluptatem",
+                ],
+                not: false,
+                operator: "PARTIAL",
+              },
+            ],
+            operator: "OR",
+          },
+          {
+            filters: [
+              {
+                caseSensitive: true,
+                dimensionName: "neque",
+                expressions: [
+                  "et",
+                  "aut",
+                ],
+                not: true,
+                operator: "BEGINS_WITH",
+              },
+              {
+                caseSensitive: true,
+                dimensionName: "minus",
+                expressions: [
+                  "tempora",
+                  "officia",
+                  "ducimus",
+                ],
+                not: false,
+                operator: "PARTIAL",
+              },
+              {
+                caseSensitive: false,
+                dimensionName: "nostrum",
+                expressions: [
+                  "qui",
+                  "enim",
+                  "corporis",
+                ],
+                not: true,
+                operator: "BEGINS_WITH",
+              },
+            ],
+            operator: "OR",
+          },
+        ],
+        dimensions: [
+          {
+            histogramBuckets: [
+              "consequatur",
+            ],
+            name: "laborum",
+          },
+          {
+            histogramBuckets: [
+              "laboriosam",
+              "fugiat",
+              "et",
+            ],
+            name: "nesciunt",
+          },
+        ],
+        filtersExpression: "tempore",
+        hideTotals: false,
+        hideValueRanges: false,
+        includeEmptyRows: true,
+        metricFilterClauses: [
+          {
+            filters: [
+              {
+                comparisonValue: "a",
+                metricName: "quis",
+                not: true,
+                operator: "LESS_THAN",
+              },
+            ],
+            operator: "OPERATOR_UNSPECIFIED",
+          },
+          {
+            filters: [
+              {
+                comparisonValue: "est",
+                metricName: "blanditiis",
+                not: false,
+                operator: "LESS_THAN",
+              },
+              {
+                comparisonValue: "tempore",
+                metricName: "tempore",
+                not: false,
+                operator: "OPERATOR_UNSPECIFIED",
+              },
+              {
+                comparisonValue: "ea",
+                metricName: "aut",
+                not: true,
+                operator: "EQUAL",
+              },
+            ],
+            operator: "OR",
+          },
+          {
+            filters: [
+              {
+                comparisonValue: "atque",
+                metricName: "vel",
+                not: false,
+                operator: "GREATER_THAN",
+              },
+              {
+                comparisonValue: "ut",
+                metricName: "unde",
+                not: false,
+                operator: "IS_MISSING",
+              },
+              {
+                comparisonValue: "maiores",
+                metricName: "repellendus",
+                not: false,
+                operator: "IS_MISSING",
+              },
+            ],
+            operator: "OR",
+          },
+        ],
+        metrics: [
+          {
+            alias: "rem",
+            expression: "quas",
+            formattingType: "PERCENT",
+          },
+          {
+            alias: "saepe",
+            expression: "harum",
+            formattingType: "PERCENT",
+          },
+        ],
+        orderBys: [
+          {
+            fieldName: "necessitatibus",
+            orderType: "DIMENSION_AS_INTEGER",
+            sortOrder: "DESCENDING",
+          },
+          {
+            fieldName: "eaque",
+            orderType: "SMART",
+            sortOrder: "ASCENDING",
+          },
+        ],
+        pageSize: 6642368765562709634,
+        pageToken: "adipisci",
+        pivots: [
+          {
+            dimensionFilterClauses: [
+              {
+                filters: [
+                  {
+                    caseSensitive: false,
+                    dimensionName: "sed",
+                    expressions: [
+                      "saepe",
+                    ],
+                    not: true,
+                    operator: "OPERATOR_UNSPECIFIED",
+                  },
+                  {
+                    caseSensitive: true,
+                    dimensionName: "facere",
+                    expressions: [
+                      "voluptate",
+                      "assumenda",
+                    ],
+                    not: true,
+                    operator: "ENDS_WITH",
+                  },
+                ],
+                operator: "OPERATOR_UNSPECIFIED",
+              },
+            ],
+            dimensions: [
+              {
+                histogramBuckets: [
+                  "aut",
+                ],
+                name: "ullam",
+              },
+              {
+                histogramBuckets: [
+                  "laudantium",
+                ],
+                name: "iure",
+              },
+              {
+                histogramBuckets: [
+                  "doloribus",
+                  "rem",
+                ],
+                name: "sit",
+              },
+            ],
+            maxGroupCount: 2527312800803801365,
+            metrics: [
+              {
+                alias: "quod",
+                expression: "ut",
+                formattingType: "TIME",
+              },
+              {
+                alias: "atque",
+                expression: "et",
+                formattingType: "METRIC_TYPE_UNSPECIFIED",
+              },
+              {
+                alias: "ipsum",
+                expression: "dolor",
+                formattingType: "INTEGER",
+              },
+            ],
+            startGroup: 7766695469374726972,
+          },
+        ],
+        samplingLevel: "DEFAULT",
+        segments: [
+          {
+            dynamicSegment: {
+              name: "fuga",
+              sessionSegment: {
+                segmentFilters: [
+                  {
+                    not: false,
+                    sequenceSegment: {
+                      firstStepShouldMatchFirstHit: false,
+                      segmentSequenceSteps: [
+                        {
+                          matchType: "IMMEDIATELY_PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "atque",
+                                    expressions: [
+                                      "qui",
+                                    ],
+                                    maxComparisonValue: "voluptas",
+                                    minComparisonValue: "sunt",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "est",
+                                    maxComparisonValue: "excepturi",
+                                    metricName: "vel",
+                                    operator: "EQUAL",
+                                    scope: "SESSION",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    simpleSegment: {
+                      orFiltersForSegment: [
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "voluptatibus",
+                                expressions: [
+                                  "nam",
+                                ],
+                                maxComparisonValue: "dolor",
+                                minComparisonValue: "itaque",
+                                operator: "NUMERIC_BETWEEN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "sapiente",
+                                maxComparisonValue: "molestiae",
+                                metricName: "aut",
+                                operator: "EQUAL",
+                                scope: "SESSION",
+                              },
+                              not: false,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "incidunt",
+                                expressions: [
+                                  "suscipit",
+                                  "officiis",
+                                ],
+                                maxComparisonValue: "cum",
+                                minComparisonValue: "totam",
+                                operator: "NUMERIC_GREATER_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "quo",
+                                maxComparisonValue: "quos",
+                                metricName: "beatae",
+                                operator: "EQUAL",
+                                scope: "PRODUCT",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "consequatur",
+                                expressions: [
+                                  "distinctio",
+                                  "ipsam",
+                                ],
+                                maxComparisonValue: "dolor",
+                                minComparisonValue: "aut",
+                                operator: "IN_LIST",
+                              },
+                              metricFilter: {
+                                comparisonValue: "ullam",
+                                maxComparisonValue: "assumenda",
+                                metricName: "blanditiis",
+                                operator: "EQUAL",
+                                scope: "PRODUCT",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "est",
+                                expressions: [
+                                  "consequatur",
+                                  "fugiat",
+                                ],
+                                maxComparisonValue: "tenetur",
+                                minComparisonValue: "nihil",
+                                operator: "EXACT",
+                              },
+                              metricFilter: {
+                                comparisonValue: "aspernatur",
+                                maxComparisonValue: "dignissimos",
+                                metricName: "inventore",
+                                operator: "BETWEEN",
+                                scope: "HIT",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "optio",
+                                expressions: [
+                                  "ut",
+                                  "est",
+                                  "a",
+                                ],
+                                maxComparisonValue: "id",
+                                minComparisonValue: "facere",
+                                operator: "EXACT",
+                              },
+                              metricFilter: {
+                                comparisonValue: "ut",
+                                maxComparisonValue: "voluptatum",
+                                metricName: "alias",
+                                operator: "BETWEEN",
+                                scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "magni",
+                                expressions: [
+                                  "omnis",
+                                ],
+                                maxComparisonValue: "velit",
+                                minComparisonValue: "molestiae",
+                                operator: "NUMERIC_BETWEEN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "quia",
+                                maxComparisonValue: "dolor",
+                                metricName: "sit",
+                                operator: "LESS_THAN",
+                                scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "non",
+                                expressions: [
+                                  "molestias",
+                                  "voluptas",
+                                  "deserunt",
+                                ],
+                                maxComparisonValue: "amet",
+                                minComparisonValue: "optio",
+                                operator: "IN_LIST",
+                              },
+                              metricFilter: {
+                                comparisonValue: "et",
+                                maxComparisonValue: "dolorem",
+                                metricName: "minus",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "PRODUCT",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "quia",
+                                expressions: [
+                                  "sint",
+                                  "distinctio",
+                                  "maiores",
+                                ],
+                                maxComparisonValue: "exercitationem",
+                                minComparisonValue: "sunt",
+                                operator: "NUMERIC_LESS_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "nobis",
+                                maxComparisonValue: "quos",
+                                metricName: "facilis",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "HIT",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    not: true,
+                    sequenceSegment: {
+                      firstStepShouldMatchFirstHit: false,
+                      segmentSequenceSteps: [
+                        {
+                          matchType: "PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "possimus",
+                                    expressions: [
+                                      "eveniet",
+                                      "alias",
+                                      "tenetur",
+                                    ],
+                                    maxComparisonValue: "dolorem",
+                                    minComparisonValue: "porro",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "sed",
+                                    maxComparisonValue: "cum",
+                                    metricName: "repellat",
+                                    operator: "BETWEEN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "quisquam",
+                                    expressions: [
+                                      "nihil",
+                                      "laudantium",
+                                    ],
+                                    maxComparisonValue: "magni",
+                                    minComparisonValue: "vel",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "incidunt",
+                                    maxComparisonValue: "qui",
+                                    metricName: "magnam",
+                                    operator: "BETWEEN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "omnis",
+                                    expressions: [
+                                      "labore",
+                                      "sapiente",
+                                      "accusamus",
+                                    ],
+                                    maxComparisonValue: "velit",
+                                    minComparisonValue: "amet",
+                                    operator: "EXACT",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "sunt",
+                                    maxComparisonValue: "molestias",
+                                    metricName: "quis",
+                                    operator: "GREATER_THAN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "culpa",
+                                    expressions: [
+                                      "nihil",
+                                    ],
+                                    maxComparisonValue: "aut",
+                                    minComparisonValue: "et",
+                                    operator: "EXACT",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "ut",
+                                    maxComparisonValue: "alias",
+                                    metricName: "qui",
+                                    operator: "LESS_THAN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "aliquam",
+                                    expressions: [
+                                      "repellat",
+                                      "ut",
+                                    ],
+                                    maxComparisonValue: "necessitatibus",
+                                    minComparisonValue: "deserunt",
+                                    operator: "BEGINS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "veritatis",
+                                    maxComparisonValue: "sed",
+                                    metricName: "praesentium",
+                                    operator: "LESS_THAN",
+                                    scope: "USER",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "et",
+                                    expressions: [
+                                      "eum",
+                                      "non",
+                                    ],
+                                    maxComparisonValue: "qui",
+                                    minComparisonValue: "eum",
+                                    operator: "PARTIAL",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "magni",
+                                    maxComparisonValue: "illum",
+                                    metricName: "occaecati",
+                                    operator: "LESS_THAN",
+                                    scope: "USER",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "laboriosam",
+                                    expressions: [
+                                      "distinctio",
+                                      "vel",
+                                      "est",
+                                    ],
+                                    maxComparisonValue: "incidunt",
+                                    minComparisonValue: "aut",
+                                    operator: "EXACT",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "molestiae",
+                                    maxComparisonValue: "tenetur",
+                                    metricName: "nemo",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "SESSION",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "voluptatem",
+                                    expressions: [
+                                      "excepturi",
+                                      "maxime",
+                                      "ipsa",
+                                    ],
+                                    maxComparisonValue: "est",
+                                    minComparisonValue: "autem",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "recusandae",
+                                    maxComparisonValue: "et",
+                                    metricName: "dolorem",
+                                    operator: "EQUAL",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "IMMEDIATELY_PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "sit",
+                                    expressions: [
+                                      "minima",
+                                      "eos",
+                                    ],
+                                    maxComparisonValue: "accusantium",
+                                    minComparisonValue: "minima",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "consectetur",
+                                    maxComparisonValue: "est",
+                                    metricName: "tempora",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "USER",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "est",
+                                    expressions: [
+                                      "omnis",
+                                    ],
+                                    maxComparisonValue: "sint",
+                                    minComparisonValue: "quidem",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "quae",
+                                    maxComparisonValue: "ut",
+                                    metricName: "labore",
+                                    operator: "EQUAL",
+                                    scope: "USER",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "modi",
+                                    expressions: [
+                                      "placeat",
+                                    ],
+                                    maxComparisonValue: "doloribus",
+                                    minComparisonValue: "quibusdam",
+                                    operator: "EXACT",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "sint",
+                                    maxComparisonValue: "ipsam",
+                                    metricName: "qui",
+                                    operator: "GREATER_THAN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    simpleSegment: {
+                      orFiltersForSegment: [
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "et",
+                                expressions: [
+                                  "sapiente",
+                                ],
+                                maxComparisonValue: "consequatur",
+                                minComparisonValue: "et",
+                                operator: "BEGINS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "dolore",
+                                maxComparisonValue: "dignissimos",
+                                metricName: "quia",
+                                operator: "GREATER_THAN",
+                                scope: "USER",
+                              },
+                              not: false,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "maxime",
+                                expressions: [
+                                  "aut",
+                                  "autem",
+                                ],
+                                maxComparisonValue: "deleniti",
+                                minComparisonValue: "impedit",
+                                operator: "ENDS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "omnis",
+                                maxComparisonValue: "velit",
+                                metricName: "commodi",
+                                operator: "BETWEEN",
+                                scope: "PRODUCT",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+              userSegment: {
+                segmentFilters: [
+                  {
+                    not: true,
+                    sequenceSegment: {
+                      firstStepShouldMatchFirstHit: true,
+                      segmentSequenceSteps: [
+                        {
+                          matchType: "IMMEDIATELY_PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "sed",
+                                    expressions: [
+                                      "soluta",
+                                      "vel",
+                                    ],
+                                    maxComparisonValue: "fuga",
+                                    minComparisonValue: "ut",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "nulla",
+                                    maxComparisonValue: "numquam",
+                                    metricName: "quia",
+                                    operator: "BETWEEN",
+                                    scope: "USER",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "delectus",
+                                    expressions: [
+                                      "incidunt",
+                                      "delectus",
+                                      "qui",
+                                    ],
+                                    maxComparisonValue: "iste",
+                                    minComparisonValue: "fuga",
+                                    operator: "EXACT",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "ex",
+                                    maxComparisonValue: "magnam",
+                                    metricName: "a",
+                                    operator: "GREATER_THAN",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "et",
+                                    expressions: [
+                                      "saepe",
+                                      "dolores",
+                                      "quasi",
+                                    ],
+                                    maxComparisonValue: "recusandae",
+                                    minComparisonValue: "numquam",
+                                    operator: "ENDS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "occaecati",
+                                    maxComparisonValue: "aut",
+                                    metricName: "est",
+                                    operator: "BETWEEN",
+                                    scope: "SESSION",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "aut",
+                                    expressions: [
+                                      "consequuntur",
+                                    ],
+                                    maxComparisonValue: "exercitationem",
+                                    minComparisonValue: "hic",
+                                    operator: "PARTIAL",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "porro",
+                                    maxComparisonValue: "est",
+                                    metricName: "deserunt",
+                                    operator: "LESS_THAN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "quam",
+                                    expressions: [
+                                      "omnis",
+                                      "qui",
+                                      "neque",
+                                    ],
+                                    maxComparisonValue: "officia",
+                                    minComparisonValue: "quo",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "reprehenderit",
+                                    maxComparisonValue: "non",
+                                    metricName: "quia",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "USER",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "aliquid",
+                                    expressions: [
+                                      "unde",
+                                      "ducimus",
+                                      "ut",
+                                    ],
+                                    maxComparisonValue: "dolor",
+                                    minComparisonValue: "quidem",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "dolores",
+                                    maxComparisonValue: "fuga",
+                                    metricName: "et",
+                                    operator: "LESS_THAN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "tenetur",
+                                    expressions: [
+                                      "cupiditate",
+                                      "quia",
+                                    ],
+                                    maxComparisonValue: "facere",
+                                    minComparisonValue: "sequi",
+                                    operator: "NUMERIC_BETWEEN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "enim",
+                                    maxComparisonValue: "qui",
+                                    metricName: "unde",
+                                    operator: "EQUAL",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    simpleSegment: {
+                      orFiltersForSegment: [
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "provident",
+                                expressions: [
+                                  "perspiciatis",
+                                ],
+                                maxComparisonValue: "dolorem",
+                                minComparisonValue: "magni",
+                                operator: "NUMERIC_BETWEEN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "non",
+                                maxComparisonValue: "a",
+                                metricName: "recusandae",
+                                operator: "LESS_THAN",
+                                scope: "UNSPECIFIED_SCOPE",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "et",
+                                expressions: [
+                                  "ratione",
+                                ],
+                                maxComparisonValue: "voluptas",
+                                minComparisonValue: "quas",
+                                operator: "NUMERIC_GREATER_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "incidunt",
+                                maxComparisonValue: "sapiente",
+                                metricName: "dolore",
+                                operator: "LESS_THAN",
+                                scope: "USER",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "amet",
+                                expressions: [
+                                  "quod",
+                                  "quisquam",
+                                ],
+                                maxComparisonValue: "ex",
+                                minComparisonValue: "id",
+                                operator: "EXACT",
+                              },
+                              metricFilter: {
+                                comparisonValue: "non",
+                                maxComparisonValue: "non",
+                                metricName: "quam",
+                                operator: "EQUAL",
+                                scope: "PRODUCT",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
+            segmentId: "nisi",
+          },
+          {
+            dynamicSegment: {
+              name: "repudiandae",
+              sessionSegment: {
+                segmentFilters: [
+                  {
+                    not: false,
+                    sequenceSegment: {
+                      firstStepShouldMatchFirstHit: false,
+                      segmentSequenceSteps: [
+                        {
+                          matchType: "UNSPECIFIED_MATCH_TYPE",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "nesciunt",
+                                    expressions: [
+                                      "quos",
+                                    ],
+                                    maxComparisonValue: "et",
+                                    minComparisonValue: "magni",
+                                    operator: "EXACT",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "ad",
+                                    maxComparisonValue: "sapiente",
+                                    metricName: "at",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "eum",
+                                    expressions: [
+                                      "non",
+                                    ],
+                                    maxComparisonValue: "corrupti",
+                                    minComparisonValue: "nam",
+                                    operator: "OPERATOR_UNSPECIFIED",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "adipisci",
+                                    maxComparisonValue: "enim",
+                                    metricName: "laborum",
+                                    operator: "LESS_THAN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "doloremque",
+                                    expressions: [
+                                      "quaerat",
+                                    ],
+                                    maxComparisonValue: "natus",
+                                    minComparisonValue: "illo",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "reprehenderit",
+                                    maxComparisonValue: "hic",
+                                    metricName: "commodi",
+                                    operator: "LESS_THAN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "nostrum",
+                                    expressions: [
+                                      "iusto",
+                                      "esse",
+                                      "architecto",
+                                    ],
+                                    maxComparisonValue: "est",
+                                    minComparisonValue: "aliquam",
+                                    operator: "EXACT",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "corporis",
+                                    maxComparisonValue: "tempora",
+                                    metricName: "quas",
+                                    operator: "EQUAL",
+                                    scope: "USER",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "UNSPECIFIED_MATCH_TYPE",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "doloremque",
+                                    expressions: [
+                                      "ut",
+                                      "omnis",
+                                    ],
+                                    maxComparisonValue: "qui",
+                                    minComparisonValue: "voluptate",
+                                    operator: "BEGINS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "numquam",
+                                    maxComparisonValue: "voluptates",
+                                    metricName: "voluptatem",
+                                    operator: "LESS_THAN",
+                                    scope: "SESSION",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "qui",
+                                    expressions: [
+                                      "sapiente",
+                                      "exercitationem",
+                                    ],
+                                    maxComparisonValue: "consequatur",
+                                    minComparisonValue: "ut",
                                     operator: "NUMERIC_GREATER_THAN",
                                   },
                                   metricFilter: {
-                                    comparisonValue: "accusamus",
-                                    maxComparisonValue: "necessitatibus",
-                                    metricName: "provident",
-                                    operator: "GREATER_THAN",
-                                    scope: "USER",
+                                    comparisonValue: "repellendus",
+                                    maxComparisonValue: "et",
+                                    metricName: "harum",
+                                    operator: "LESS_THAN",
+                                    scope: "PRODUCT",
                                   },
                                   not: true,
                                 },
@@ -7446,43 +7574,583 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                             {
                               dimensionFilter: {
                                 caseSensitive: true,
-                                dimensionName: "repudiandae",
+                                dimensionName: "amet",
                                 expressions: [
-                                  "eum",
-                                  "aut",
                                   "quia",
                                 ],
-                                maxComparisonValue: "velit",
-                                minComparisonValue: "unde",
+                                maxComparisonValue: "nihil",
+                                minComparisonValue: "voluptas",
+                                operator: "NUMERIC_BETWEEN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "quia",
+                                maxComparisonValue: "voluptas",
+                                metricName: "laboriosam",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "USER",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "soluta",
+                                expressions: [
+                                  "explicabo",
+                                  "corporis",
+                                ],
+                                maxComparisonValue: "quia",
+                                minComparisonValue: "sunt",
                                 operator: "ENDS_WITH",
                               },
                               metricFilter: {
-                                comparisonValue: "libero",
-                                maxComparisonValue: "enim",
-                                metricName: "exercitationem",
-                                operator: "LESS_THAN",
-                                scope: "PRODUCT",
+                                comparisonValue: "placeat",
+                                maxComparisonValue: "voluptatem",
+                                metricName: "voluptas",
+                                operator: "EQUAL",
+                                scope: "SESSION",
                               },
                               not: false,
                             },
                             {
                               dimensionFilter: {
                                 caseSensitive: true,
-                                dimensionName: "est",
+                                dimensionName: "totam",
                                 expressions: [
-                                  "commodi",
-                                  "impedit",
+                                  "rerum",
                                 ],
-                                maxComparisonValue: "ipsa",
-                                minComparisonValue: "ut",
+                                maxComparisonValue: "natus",
+                                minComparisonValue: "facilis",
+                                operator: "EXACT",
+                              },
+                              metricFilter: {
+                                comparisonValue: "odio",
+                                maxComparisonValue: "fuga",
+                                metricName: "aut",
+                                operator: "GREATER_THAN",
+                                scope: "PRODUCT",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "cupiditate",
+                                expressions: [
+                                  "et",
+                                ],
+                                maxComparisonValue: "et",
+                                minComparisonValue: "cupiditate",
+                                operator: "NUMERIC_BETWEEN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "vero",
+                                maxComparisonValue: "quis",
+                                metricName: "consequatur",
+                                operator: "EQUAL",
+                                scope: "UNSPECIFIED_SCOPE",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "ad",
+                                expressions: [
+                                  "molestias",
+                                  "perspiciatis",
+                                ],
+                                maxComparisonValue: "molestiae",
+                                minComparisonValue: "voluptatem",
+                                operator: "ENDS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "sit",
+                                maxComparisonValue: "aspernatur",
+                                metricName: "molestias",
+                                operator: "EQUAL",
+                                scope: "USER",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "magni",
+                                expressions: [
+                                  "itaque",
+                                  "tempora",
+                                ],
+                                maxComparisonValue: "vitae",
+                                minComparisonValue: "quo",
+                                operator: "NUMERIC_GREATER_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "iusto",
+                                maxComparisonValue: "dolores",
+                                metricName: "nobis",
+                                operator: "GREATER_THAN",
+                                scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    not: false,
+                    sequenceSegment: {
+                      firstStepShouldMatchFirstHit: true,
+                      segmentSequenceSteps: [
+                        {
+                          matchType: "UNSPECIFIED_MATCH_TYPE",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "ut",
+                                    expressions: [
+                                      "voluptatem",
+                                    ],
+                                    maxComparisonValue: "adipisci",
+                                    minComparisonValue: "nobis",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "necessitatibus",
+                                    maxComparisonValue: "sequi",
+                                    metricName: "velit",
+                                    operator: "BETWEEN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "qui",
+                                    expressions: [
+                                      "tempora",
+                                      "voluptatem",
+                                    ],
+                                    maxComparisonValue: "dignissimos",
+                                    minComparisonValue: "velit",
+                                    operator: "ENDS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "vitae",
+                                    maxComparisonValue: "quasi",
+                                    metricName: "ipsum",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "SESSION",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "aperiam",
+                                    expressions: [
+                                      "aut",
+                                      "in",
+                                    ],
+                                    maxComparisonValue: "eum",
+                                    minComparisonValue: "quibusdam",
+                                    operator: "NUMERIC_GREATER_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "totam",
+                                    maxComparisonValue: "similique",
+                                    metricName: "sunt",
+                                    operator: "LESS_THAN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "amet",
+                                    expressions: [
+                                      "perspiciatis",
+                                      "cupiditate",
+                                      "asperiores",
+                                    ],
+                                    maxComparisonValue: "quasi",
+                                    minComparisonValue: "eius",
+                                    operator: "PARTIAL",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "pariatur",
+                                    maxComparisonValue: "eligendi",
+                                    metricName: "sit",
+                                    operator: "GREATER_THAN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "quis",
+                                    expressions: [
+                                      "sint",
+                                      "enim",
+                                    ],
+                                    maxComparisonValue: "quia",
+                                    minComparisonValue: "voluptatem",
+                                    operator: "NUMERIC_BETWEEN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "dolorem",
+                                    maxComparisonValue: "beatae",
+                                    metricName: "at",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "HIT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "aliquam",
+                                    expressions: [
+                                      "laboriosam",
+                                      "totam",
+                                    ],
+                                    maxComparisonValue: "atque",
+                                    minComparisonValue: "corrupti",
+                                    operator: "EXACT",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "dolorum",
+                                    maxComparisonValue: "placeat",
+                                    metricName: "ut",
+                                    operator: "LESS_THAN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "autem",
+                                    expressions: [
+                                      "consequatur",
+                                    ],
+                                    maxComparisonValue: "delectus",
+                                    minComparisonValue: "qui",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "quaerat",
+                                    maxComparisonValue: "voluptatem",
+                                    metricName: "et",
+                                    operator: "GREATER_THAN",
+                                    scope: "HIT",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "illo",
+                                    expressions: [
+                                      "rerum",
+                                      "fugit",
+                                      "impedit",
+                                    ],
+                                    maxComparisonValue: "aut",
+                                    minComparisonValue: "modi",
+                                    operator: "BEGINS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "voluptatibus",
+                                    maxComparisonValue: "illo",
+                                    metricName: "aut",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "dolor",
+                                    expressions: [
+                                      "doloremque",
+                                    ],
+                                    maxComparisonValue: "sit",
+                                    minComparisonValue: "aspernatur",
+                                    operator: "ENDS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "voluptatibus",
+                                    maxComparisonValue: "ea",
+                                    metricName: "tempora",
+                                    operator: "LESS_THAN",
+                                    scope: "HIT",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "excepturi",
+                                    expressions: [
+                                      "animi",
+                                      "odio",
+                                    ],
+                                    maxComparisonValue: "officia",
+                                    minComparisonValue: "odio",
+                                    operator: "EXACT",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "sunt",
+                                    maxComparisonValue: "corrupti",
+                                    metricName: "perspiciatis",
+                                    operator: "BETWEEN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    simpleSegment: {
+                      orFiltersForSegment: [
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "aliquid",
+                                expressions: [
+                                  "atque",
+                                  "non",
+                                ],
+                                maxComparisonValue: "dicta",
+                                minComparisonValue: "recusandae",
                                 operator: "IN_LIST",
                               },
                               metricFilter: {
-                                comparisonValue: "aut",
+                                comparisonValue: "inventore",
+                                maxComparisonValue: "natus",
+                                metricName: "voluptatibus",
+                                operator: "LESS_THAN",
+                                scope: "USER",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "dolor",
+                                expressions: [
+                                  "in",
+                                ],
+                                maxComparisonValue: "dolore",
+                                minComparisonValue: "laudantium",
+                                operator: "REGEXP",
+                              },
+                              metricFilter: {
+                                comparisonValue: "repellendus",
+                                maxComparisonValue: "corrupti",
+                                metricName: "ex",
+                                operator: "LESS_THAN",
+                                scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  },
+                  {
+                    not: true,
+                    sequenceSegment: {
+                      firstStepShouldMatchFirstHit: false,
+                      segmentSequenceSteps: [
+                        {
+                          matchType: "UNSPECIFIED_MATCH_TYPE",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "eos",
+                                    expressions: [
+                                      "consectetur",
+                                      "rerum",
+                                    ],
+                                    maxComparisonValue: "magnam",
+                                    minComparisonValue: "dicta",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "accusantium",
+                                    maxComparisonValue: "architecto",
+                                    metricName: "omnis",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    simpleSegment: {
+                      orFiltersForSegment: [
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "laboriosam",
+                                expressions: [
+                                  "dolorem",
+                                  "et",
+                                ],
+                                maxComparisonValue: "quibusdam",
+                                minComparisonValue: "cupiditate",
+                                operator: "NUMERIC_LESS_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "dolorem",
+                                maxComparisonValue: "quos",
+                                metricName: "deleniti",
+                                operator: "GREATER_THAN",
+                                scope: "USER",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "aperiam",
+                                expressions: [
+                                  "accusantium",
+                                  "fuga",
+                                ],
+                                maxComparisonValue: "ut",
+                                minComparisonValue: "delectus",
+                                operator: "ENDS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "vitae",
+                                maxComparisonValue: "neque",
+                                metricName: "est",
+                                operator: "LESS_THAN",
+                                scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "consectetur",
+                                expressions: [
+                                  "ut",
+                                  "et",
+                                  "culpa",
+                                ],
+                                maxComparisonValue: "officia",
+                                minComparisonValue: "veritatis",
+                                operator: "NUMERIC_GREATER_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "ad",
                                 maxComparisonValue: "aut",
-                                metricName: "consequuntur",
+                                metricName: "esse",
+                                operator: "EQUAL",
+                                scope: "SESSION",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "rerum",
+                                expressions: [
+                                  "debitis",
+                                  "blanditiis",
+                                ],
+                                maxComparisonValue: "dolorum",
+                                minComparisonValue: "saepe",
+                                operator: "BEGINS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "eligendi",
+                                maxComparisonValue: "alias",
+                                metricName: "deleniti",
                                 operator: "BETWEEN",
-                                scope: "PRODUCT",
+                                scope: "HIT",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "veniam",
+                                expressions: [
+                                  "inventore",
+                                  "voluptas",
+                                ],
+                                maxComparisonValue: "minus",
+                                minComparisonValue: "dicta",
+                                operator: "PARTIAL",
+                              },
+                              metricFilter: {
+                                comparisonValue: "eum",
+                                maxComparisonValue: "nesciunt",
+                                metricName: "ea",
+                                operator: "GREATER_THAN",
+                                scope: "HIT",
                               },
                               not: true,
                             },
@@ -7493,11 +8161,473 @@ const req: AnalyticsreportingReportsBatchGetRequest = {
                   },
                 ],
               },
+              userSegment: {
+                segmentFilters: [
+                  {
+                    not: true,
+                    sequenceSegment: {
+                      firstStepShouldMatchFirstHit: false,
+                      segmentSequenceSteps: [
+                        {
+                          matchType: "PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "facere",
+                                    expressions: [
+                                      "accusamus",
+                                      "placeat",
+                                    ],
+                                    maxComparisonValue: "qui",
+                                    minComparisonValue: "natus",
+                                    operator: "NUMERIC_BETWEEN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "iure",
+                                    maxComparisonValue: "exercitationem",
+                                    metricName: "delectus",
+                                    operator: "GREATER_THAN",
+                                    scope: "HIT",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "ducimus",
+                                    expressions: [
+                                      "modi",
+                                    ],
+                                    maxComparisonValue: "amet",
+                                    minComparisonValue: "modi",
+                                    operator: "PARTIAL",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "incidunt",
+                                    maxComparisonValue: "ab",
+                                    metricName: "sequi",
+                                    operator: "GREATER_THAN",
+                                    scope: "SESSION",
+                                  },
+                                  not: true,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "hic",
+                                    expressions: [
+                                      "id",
+                                    ],
+                                    maxComparisonValue: "in",
+                                    minComparisonValue: "doloribus",
+                                    operator: "IN_LIST",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "occaecati",
+                                    maxComparisonValue: "iste",
+                                    metricName: "asperiores",
+                                    operator: "BETWEEN",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "sint",
+                                    expressions: [
+                                      "consequatur",
+                                      "adipisci",
+                                    ],
+                                    maxComparisonValue: "quod",
+                                    minComparisonValue: "sed",
+                                    operator: "NUMERIC_GREATER_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "ipsum",
+                                    maxComparisonValue: "saepe",
+                                    metricName: "velit",
+                                    operator: "EQUAL",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "rem",
+                                    expressions: [
+                                      "sint",
+                                      "quia",
+                                      "adipisci",
+                                    ],
+                                    maxComparisonValue: "ad",
+                                    minComparisonValue: "et",
+                                    operator: "BEGINS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "doloribus",
+                                    maxComparisonValue: "iste",
+                                    metricName: "distinctio",
+                                    operator: "BETWEEN",
+                                    scope: "HIT",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "voluptatum",
+                                    expressions: [
+                                      "consectetur",
+                                    ],
+                                    maxComparisonValue: "nihil",
+                                    minComparisonValue: "libero",
+                                    operator: "BEGINS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "possimus",
+                                    maxComparisonValue: "non",
+                                    metricName: "rerum",
+                                    operator: "UNSPECIFIED_OPERATOR",
+                                    scope: "PRODUCT",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "culpa",
+                                    expressions: [
+                                      "quae",
+                                      "incidunt",
+                                      "voluptas",
+                                    ],
+                                    maxComparisonValue: "nam",
+                                    minComparisonValue: "optio",
+                                    operator: "PARTIAL",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "ratione",
+                                    maxComparisonValue: "quaerat",
+                                    metricName: "qui",
+                                    operator: "BETWEEN",
+                                    scope: "SESSION",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "cum",
+                                    expressions: [
+                                      "maxime",
+                                      "sunt",
+                                      "et",
+                                    ],
+                                    maxComparisonValue: "dolore",
+                                    minComparisonValue: "placeat",
+                                    operator: "BEGINS_WITH",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "ut",
+                                    maxComparisonValue: "sapiente",
+                                    metricName: "laborum",
+                                    operator: "EQUAL",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "UNSPECIFIED_MATCH_TYPE",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "velit",
+                                    expressions: [
+                                      "quo",
+                                      "maiores",
+                                    ],
+                                    maxComparisonValue: "nesciunt",
+                                    minComparisonValue: "velit",
+                                    operator: "EXACT",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "repellat",
+                                    maxComparisonValue: "placeat",
+                                    metricName: "accusantium",
+                                    operator: "EQUAL",
+                                    scope: "USER",
+                                  },
+                                  not: true,
+                                },
+                              ],
+                            },
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "modi",
+                                    expressions: [
+                                      "quia",
+                                      "eaque",
+                                      "et",
+                                    ],
+                                    maxComparisonValue: "assumenda",
+                                    minComparisonValue: "incidunt",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "quia",
+                                    maxComparisonValue: "unde",
+                                    metricName: "ipsam",
+                                    operator: "EQUAL",
+                                    scope: "USER",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "error",
+                                    expressions: [
+                                      "sit",
+                                      "sapiente",
+                                      "et",
+                                    ],
+                                    maxComparisonValue: "nobis",
+                                    minComparisonValue: "possimus",
+                                    operator: "REGEXP",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "illum",
+                                    maxComparisonValue: "iusto",
+                                    metricName: "sunt",
+                                    operator: "EQUAL",
+                                    scope: "HIT",
+                                  },
+                                  not: false,
+                                },
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: true,
+                                    dimensionName: "esse",
+                                    expressions: [
+                                      "non",
+                                      "nam",
+                                    ],
+                                    maxComparisonValue: "enim",
+                                    minComparisonValue: "enim",
+                                    operator: "NUMERIC_GREATER_THAN",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "quo",
+                                    maxComparisonValue: "sint",
+                                    metricName: "quis",
+                                    operator: "BETWEEN",
+                                    scope: "UNSPECIFIED_SCOPE",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                        {
+                          matchType: "PRECEDES",
+                          orFiltersForSegment: [
+                            {
+                              segmentFilterClauses: [
+                                {
+                                  dimensionFilter: {
+                                    caseSensitive: false,
+                                    dimensionName: "aperiam",
+                                    expressions: [
+                                      "illum",
+                                      "hic",
+                                    ],
+                                    maxComparisonValue: "quisquam",
+                                    minComparisonValue: "sit",
+                                    operator: "PARTIAL",
+                                  },
+                                  metricFilter: {
+                                    comparisonValue: "sed",
+                                    maxComparisonValue: "itaque",
+                                    metricName: "qui",
+                                    operator: "BETWEEN",
+                                    scope: "USER",
+                                  },
+                                  not: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                    simpleSegment: {
+                      orFiltersForSegment: [
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "illum",
+                                expressions: [
+                                  "eos",
+                                ],
+                                maxComparisonValue: "asperiores",
+                                minComparisonValue: "dicta",
+                                operator: "NUMERIC_LESS_THAN",
+                              },
+                              metricFilter: {
+                                comparisonValue: "accusantium",
+                                maxComparisonValue: "omnis",
+                                metricName: "nobis",
+                                operator: "GREATER_THAN",
+                                scope: "USER",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "expedita",
+                                expressions: [
+                                  "soluta",
+                                ],
+                                maxComparisonValue: "ut",
+                                minComparisonValue: "aperiam",
+                                operator: "ENDS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "repellendus",
+                                maxComparisonValue: "officia",
+                                metricName: "in",
+                                operator: "UNSPECIFIED_OPERATOR",
+                                scope: "HIT",
+                              },
+                              not: false,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "et",
+                                expressions: [
+                                  "ea",
+                                  "magnam",
+                                  "a",
+                                ],
+                                maxComparisonValue: "nulla",
+                                minComparisonValue: "harum",
+                                operator: "ENDS_WITH",
+                              },
+                              metricFilter: {
+                                comparisonValue: "quaerat",
+                                maxComparisonValue: "ut",
+                                metricName: "sed",
+                                operator: "EQUAL",
+                                scope: "USER",
+                              },
+                              not: true,
+                            },
+                          ],
+                        },
+                        {
+                          segmentFilterClauses: [
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "labore",
+                                expressions: [
+                                  "magni",
+                                  "voluptatum",
+                                  "minima",
+                                ],
+                                maxComparisonValue: "necessitatibus",
+                                minComparisonValue: "totam",
+                                operator: "OPERATOR_UNSPECIFIED",
+                              },
+                              metricFilter: {
+                                comparisonValue: "ea",
+                                maxComparisonValue: "labore",
+                                metricName: "quasi",
+                                operator: "BETWEEN",
+                                scope: "HIT",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: false,
+                                dimensionName: "quibusdam",
+                                expressions: [
+                                  "quisquam",
+                                ],
+                                maxComparisonValue: "est",
+                                minComparisonValue: "necessitatibus",
+                                operator: "PARTIAL",
+                              },
+                              metricFilter: {
+                                comparisonValue: "dolores",
+                                maxComparisonValue: "perspiciatis",
+                                metricName: "ab",
+                                operator: "GREATER_THAN",
+                                scope: "UNSPECIFIED_SCOPE",
+                              },
+                              not: true,
+                            },
+                            {
+                              dimensionFilter: {
+                                caseSensitive: true,
+                                dimensionName: "possimus",
+                                expressions: [
+                                  "facere",
+                                ],
+                                maxComparisonValue: "accusamus",
+                                minComparisonValue: "veritatis",
+                                operator: "EXACT",
+                              },
+                              metricFilter: {
+                                comparisonValue: "praesentium",
+                                maxComparisonValue: "omnis",
+                                metricName: "qui",
+                                operator: "GREATER_THAN",
+                                scope: "PRODUCT",
+                              },
+                              not: false,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  },
+                ],
+              },
             },
-            segmentId: "voluptatem",
+            segmentId: "nam",
           },
         ],
-        viewId: "molestiae",
+        viewId: "quia",
       },
     ],
     useResourceQuotas: false,

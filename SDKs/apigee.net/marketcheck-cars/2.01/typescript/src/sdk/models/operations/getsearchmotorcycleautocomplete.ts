@@ -2,26 +2,6 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
-export enum GetSearchMotorcycleAutoCompleteFieldEnum {
-    Make = "make",
-    Model = "model",
-    Trim = "trim",
-    BodyType = "body_type",
-    VehicleType = "vehicle_type",
-    Transmission = "transmission",
-    Drivetrain = "drivetrain",
-    FuelType = "fuel_type",
-    Color = "color",
-    Engine = "engine",
-    State = "state",
-    City = "city"
-}
-
-export enum GetSearchMotorcycleAutoCompleteSortByEnum {
-    Index = "index",
-    Count = "count"
-}
-
 
 export class GetSearchMotorcycleAutoCompleteQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api_key" })
@@ -43,7 +23,7 @@ export class GetSearchMotorcycleAutoCompleteQueryParams extends SpeakeasyBase {
   engine?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=field" })
-  field: GetSearchMotorcycleAutoCompleteFieldEnum;
+  field: shared.ApiKeyEnum5;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fuel_type" })
   fuelType?: string;
@@ -64,7 +44,7 @@ export class GetSearchMotorcycleAutoCompleteQueryParams extends SpeakeasyBase {
   model?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort_by" })
-  sortBy?: GetSearchMotorcycleAutoCompleteSortByEnum;
+  sortBy?: shared.InventoryTypeEnum1;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=state" })
   state?: string;
@@ -97,7 +77,7 @@ export class GetSearchMotorcycleAutoCompleteResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   searchAutoCompleteResponse?: shared.SearchAutoCompleteResponse;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ErcerRequest, ErcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,23 +30,23 @@ const req: ErcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      fullName: "quibusdam",
-      registration: "consectetur",
+      fullName: "sit",
+      registration: "voluptas",
     },
-    consentArtifact: "aperiam",
+    consentArtifact: "culpa",
     format: "pdf",
-    txnId: "enim",
+    txnId: "consequuntur",
   },
 };
 
-sdk.sdk.ercer(req).then((res: ErcerResponse | AxiosError) => {
+sdk.apIs.ercer(req).then((res: ErcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -56,7 +55,7 @@ sdk.sdk.ercer(req).then((res: ErcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `ercer` - Registration Certificate of Establishment Employing Contract Labour
 * `pfdaw` - Permission/ Certificate for Well

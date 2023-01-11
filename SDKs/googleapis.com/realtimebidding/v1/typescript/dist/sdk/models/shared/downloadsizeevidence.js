@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UrlDownloadSize } from "./urldownloadsize";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DownloadSizeEvidence = void 0;
+var utils_1 = require("../../../internal/utils");
+var urldownloadsize_1 = require("./urldownloadsize");
 // DownloadSizeEvidence
 /**
  * Total download size and URL-level download size breakdown for resources in a creative.
@@ -34,13 +37,13 @@ var DownloadSizeEvidence = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topUrlDownloadSizeBreakdowns", elemType: UrlDownloadSize }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topUrlDownloadSizeBreakdowns", elemType: urldownloadsize_1.UrlDownloadSize }),
         __metadata("design:type", Array)
     ], DownloadSizeEvidence.prototype, "topUrlDownloadSizeBreakdowns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalDownloadSizeKb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalDownloadSizeKb" }),
         __metadata("design:type", Number)
     ], DownloadSizeEvidence.prototype, "totalDownloadSizeKb", void 0);
     return DownloadSizeEvidence;
-}(SpeakeasyBase));
-export { DownloadSizeEvidence };
+}(utils_1.SpeakeasyBase));
+exports.DownloadSizeEvidence = DownloadSizeEvidence;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResetFactorsResponse = exports.ResetFactorsRequest = exports.ResetFactorsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ResetFactorsPathParams = /** @class */ (function (_super) {
     __extends(ResetFactorsPathParams, _super);
     function ResetFactorsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=userId" }),
         __metadata("design:type", String)
     ], ResetFactorsPathParams.prototype, "userId", void 0);
     return ResetFactorsPathParams;
-}(SpeakeasyBase));
-export { ResetFactorsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ResetFactorsPathParams = ResetFactorsPathParams;
 var ResetFactorsRequest = /** @class */ (function (_super) {
     __extends(ResetFactorsRequest, _super);
     function ResetFactorsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ResetFactorsPathParams)
     ], ResetFactorsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/octet-stream" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/octet-stream" }),
         __metadata("design:type", Uint8Array)
     ], ResetFactorsRequest.prototype, "request", void 0);
     return ResetFactorsRequest;
-}(SpeakeasyBase));
-export { ResetFactorsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ResetFactorsRequest = ResetFactorsRequest;
 var ResetFactorsResponse = /** @class */ (function (_super) {
     __extends(ResetFactorsResponse, _super);
     function ResetFactorsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ResetFactorsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ResetFactorsResponse.prototype, "statusCode", void 0);
     return ResetFactorsResponse;
-}(SpeakeasyBase));
-export { ResetFactorsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ResetFactorsResponse = ResetFactorsResponse;

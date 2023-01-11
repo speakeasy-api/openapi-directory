@@ -13,7 +13,7 @@ export declare class UpdateGlobalRuleConfigRequest extends SpeakeasyBase {
 }
 export declare class UpdateGlobalRuleConfigResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     rule?: shared.Rule;
     statusCode: number;
 }

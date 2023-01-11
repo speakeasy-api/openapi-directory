@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContainerImage } from "./containerimage";
-import { VmImage } from "./vmimage";
-// EnvironmentInput
-/**
- * Definition of a software environment that is used to start a notebook instance.
-**/
-var EnvironmentInput = /** @class */ (function (_super) {
-    __extends(EnvironmentInput, _super);
-    function EnvironmentInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerImage" }),
-        __metadata("design:type", ContainerImage)
-    ], EnvironmentInput.prototype, "containerImage", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], EnvironmentInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
-        __metadata("design:type", String)
-    ], EnvironmentInput.prototype, "displayName", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=postStartupScript" }),
-        __metadata("design:type", String)
-    ], EnvironmentInput.prototype, "postStartupScript", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmImage" }),
-        __metadata("design:type", VmImage)
-    ], EnvironmentInput.prototype, "vmImage", void 0);
-    return EnvironmentInput;
-}(SpeakeasyBase));
-export { EnvironmentInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentInput = exports.Environment = void 0;
+var utils_1 = require("../../../internal/utils");
+var containerimage_1 = require("./containerimage");
+var vmimage_1 = require("./vmimage");
 // Environment
 /**
  * Definition of a software environment that is used to start a notebook instance.
@@ -67,33 +38,65 @@ var Environment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerImage" }),
-        __metadata("design:type", ContainerImage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerImage" }),
+        __metadata("design:type", containerimage_1.ContainerImage)
     ], Environment.prototype, "containerImage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Environment.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Environment.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Environment.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Environment.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postStartupScript" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postStartupScript" }),
         __metadata("design:type", String)
     ], Environment.prototype, "postStartupScript", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vmImage" }),
-        __metadata("design:type", VmImage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmImage" }),
+        __metadata("design:type", vmimage_1.VmImage)
     ], Environment.prototype, "vmImage", void 0);
     return Environment;
-}(SpeakeasyBase));
-export { Environment };
+}(utils_1.SpeakeasyBase));
+exports.Environment = Environment;
+// EnvironmentInput
+/**
+ * Definition of a software environment that is used to start a notebook instance.
+**/
+var EnvironmentInput = /** @class */ (function (_super) {
+    __extends(EnvironmentInput, _super);
+    function EnvironmentInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerImage" }),
+        __metadata("design:type", containerimage_1.ContainerImage)
+    ], EnvironmentInput.prototype, "containerImage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], EnvironmentInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
+        __metadata("design:type", String)
+    ], EnvironmentInput.prototype, "displayName", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postStartupScript" }),
+        __metadata("design:type", String)
+    ], EnvironmentInput.prototype, "postStartupScript", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vmImage" }),
+        __metadata("design:type", vmimage_1.VmImage)
+    ], EnvironmentInput.prototype, "vmImage", void 0);
+    return EnvironmentInput;
+}(utils_1.SpeakeasyBase));
+exports.EnvironmentInput = EnvironmentInput;

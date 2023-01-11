@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ConvertRequestBodyValidateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConvertResponse = exports.ConvertRequest = exports.ConvertRequestBody = exports.ConvertRequestBodyValidateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ConvertRequestBodyValidateEnum;
 (function (ConvertRequestBodyValidateEnum) {
     ConvertRequestBodyValidateEnum["On"] = "on";
-})(ConvertRequestBodyValidateEnum || (ConvertRequestBodyValidateEnum = {}));
+})(ConvertRequestBodyValidateEnum = exports.ConvertRequestBodyValidateEnum || (exports.ConvertRequestBodyValidateEnum = {}));
 var ConvertRequestBody = /** @class */ (function (_super) {
     __extends(ConvertRequestBody, _super);
     function ConvertRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=filename" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=filename" }),
         __metadata("design:type", String)
     ], ConvertRequestBody.prototype, "filename", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=source" }),
         __metadata("design:type", String)
     ], ConvertRequestBody.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=validate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=validate" }),
         __metadata("design:type", String)
     ], ConvertRequestBody.prototype, "validate", void 0);
     return ConvertRequestBody;
-}(SpeakeasyBase));
-export { ConvertRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ConvertRequestBody = ConvertRequestBody;
 var ConvertRequest = /** @class */ (function (_super) {
     __extends(ConvertRequest, _super);
     function ConvertRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", ConvertRequestBody)
     ], ConvertRequest.prototype, "request", void 0);
     return ConvertRequest;
-}(SpeakeasyBase));
-export { ConvertRequest };
+}(utils_1.SpeakeasyBase));
+exports.ConvertRequest = ConvertRequest;
 var ConvertResponse = /** @class */ (function (_super) {
     __extends(ConvertResponse, _super);
     function ConvertResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], ConvertResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ConvertResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ConvertResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], ConvertResponse.prototype, "convert200ApplicationJsonAny", void 0);
+    ], ConvertResponse.prototype, "convert200ApplicationJSONAny", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
-    ], ConvertResponse.prototype, "convert400ApplicationJsonAny", void 0);
+    ], ConvertResponse.prototype, "convert400ApplicationJSONAny", void 0);
     return ConvertResponse;
-}(SpeakeasyBase));
-export { ConvertResponse };
+}(utils_1.SpeakeasyBase));
+exports.ConvertResponse = ConvertResponse;

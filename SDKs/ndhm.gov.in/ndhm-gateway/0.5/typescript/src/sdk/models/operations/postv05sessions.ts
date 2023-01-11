@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class PostV05SessionsRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   sessionRequest?: shared.SessionRequest;

@@ -4,7 +4,7 @@ export declare class GetSettingValueBySdkkeyPathParams extends SpeakeasyBase {
     settingKeyOrId: string;
 }
 export declare class GetSettingValueBySdkkeyHeaders extends SpeakeasyBase {
-    xConfigcatSdkkey: string;
+    xCONFIGCATSDKKEY: string;
 }
 export declare class GetSettingValueBySdkkeyRequest extends SpeakeasyBase {
     pathParams: GetSettingValueBySdkkeyPathParams;

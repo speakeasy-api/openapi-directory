@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CreditDebitIndicatorEnum } from "./creditdebitindicatorenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndBalance = void 0;
+var utils_1 = require("../../../internal/utils");
+var creditdebitindicatorenum_1 = require("./creditdebitindicatorenum");
 // EndBalance
 /**
  * The StartBalance plus all the Statement Line Amounts should be equal to the EndBalance Amount.
@@ -34,13 +37,13 @@ var EndBalance = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], EndBalance.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creditDebitIndicator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditDebitIndicator" }),
         __metadata("design:type", String)
     ], EndBalance.prototype, "creditDebitIndicator", void 0);
     return EndBalance;
-}(SpeakeasyBase));
-export { EndBalance };
+}(utils_1.SpeakeasyBase));
+exports.EndBalance = EndBalance;

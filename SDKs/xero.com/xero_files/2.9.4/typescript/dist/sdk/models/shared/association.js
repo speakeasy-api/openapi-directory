@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObjectGroupEnum } from "./objectgroupenum";
-import { ObjectTypeEnum } from "./objecttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Association = void 0;
+var utils_1 = require("../../../internal/utils");
+var objectgroupenum_1 = require("./objectgroupenum");
+var objecttypeenum_1 = require("./objecttypeenum");
 var Association = /** @class */ (function (_super) {
     __extends(Association, _super);
     function Association() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FileId" }),
         __metadata("design:type", String)
     ], Association.prototype, "fileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ObjectGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ObjectGroup" }),
         __metadata("design:type", String)
     ], Association.prototype, "objectGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ObjectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ObjectId" }),
         __metadata("design:type", String)
     ], Association.prototype, "objectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ObjectType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ObjectType" }),
         __metadata("design:type", String)
     ], Association.prototype, "objectType", void 0);
     return Association;
-}(SpeakeasyBase));
-export { Association };
+}(utils_1.SpeakeasyBase));
+exports.Association = Association;

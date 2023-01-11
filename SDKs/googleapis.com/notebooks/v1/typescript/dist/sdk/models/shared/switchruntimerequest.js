@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuntimeAcceleratorConfig } from "./runtimeacceleratorconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SwitchRuntimeRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var runtimeacceleratorconfig_1 = require("./runtimeacceleratorconfig");
 // SwitchRuntimeRequest
 /**
  * Request for switching a Managed Notebook Runtime.
@@ -34,17 +37,17 @@ var SwitchRuntimeRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=acceleratorConfig" }),
-        __metadata("design:type", RuntimeAcceleratorConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=acceleratorConfig" }),
+        __metadata("design:type", runtimeacceleratorconfig_1.RuntimeAcceleratorConfig)
     ], SwitchRuntimeRequest.prototype, "acceleratorConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=machineType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=machineType" }),
         __metadata("design:type", String)
     ], SwitchRuntimeRequest.prototype, "machineType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], SwitchRuntimeRequest.prototype, "requestId", void 0);
     return SwitchRuntimeRequest;
-}(SpeakeasyBase));
-export { SwitchRuntimeRequest };
+}(utils_1.SpeakeasyBase));
+exports.SwitchRuntimeRequest = SwitchRuntimeRequest;

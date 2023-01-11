@@ -24,11 +24,11 @@ export declare class Video extends SpeakeasyBase {
     id?: string;
     kind?: string;
     liveStreamingDetails?: VideoLiveStreamingDetails;
-    localizations?: Map<string, VideoLocalization>;
+    localizations?: Record<string, VideoLocalization>;
     monetizationDetails?: VideoMonetizationDetails;
     player?: VideoPlayer;
     processingDetails?: VideoProcessingDetails;
-    projectDetails?: Map<string, any>;
+    projectDetails?: Record<string, any>;
     recordingDetails?: VideoRecordingDetails;
     snippet?: VideoSnippet;
     statistics?: VideoStatistics;

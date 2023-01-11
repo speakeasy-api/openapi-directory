@@ -14,7 +14,7 @@ export declare class ReposListWebhooksRequest extends SpeakeasyBase {
 }
 export declare class ReposListWebhooksResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     hooks?: shared.Hook[];

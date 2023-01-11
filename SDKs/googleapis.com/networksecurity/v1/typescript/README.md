@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest, NetworksecurityProjectsLocationsAuthorizationPoliciesCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,235 +30,121 @@ const req: NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest = 
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "sunt",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "odit",
-    alt: "proto",
-    authorizationPolicyId: "et",
-    callback: "vel",
-    fields: "quae",
-    key: "aspernatur",
-    oauthToken: "error",
+    accessToken: "culpa",
+    alt: "media",
+    authorizationPolicyId: "consequuntur",
+    callback: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
     prettyPrint: false,
-    quotaUser: "a",
-    uploadType: "omnis",
-    uploadProtocol: "nostrum",
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
-    action: "DENY",
-    description: "et",
+    action: "ACTION_UNSPECIFIED",
+    description: "voluptatum",
     labels: {
-      "aut": "animi",
-      "dolores": "placeat",
-      "occaecati": "doloribus",
+      "ut": "dolorem",
     },
-    name: "adipisci",
+    name: "et",
     rules: [
       {
         destinations: [
           {
             hosts: [
+              "totam",
+            ],
+            httpHeaderMatch: {
+              headerName: "dolores",
+              regexMatch: "illum",
+            },
+            methods: [
+              "vel",
+            ],
+            ports: [
+              6303220950515014660,
+            ],
+          },
+          {
+            hosts: [
+              "aspernatur",
               "accusantium",
-              "assumenda",
             ],
             httpHeaderMatch: {
-              headerName: "amet",
-              regexMatch: "culpa",
+              headerName: "totam",
+              regexMatch: "commodi",
             },
             methods: [
               "est",
-            ],
-            ports: [
-              3094887997718014353,
-            ],
-          },
-          {
-            hosts: [
-              "rem",
-            ],
-            httpHeaderMatch: {
-              headerName: "et",
-              regexMatch: "accusantium",
-            },
-            methods: [
-              "reprehenderit",
-              "neque",
-            ],
-            ports: [
-              2947460363222143838,
-              8830944403013891383,
-            ],
-          },
-          {
-            hosts: [
-              "dolorum",
-              "et",
-              "atque",
-            ],
-            httpHeaderMatch: {
-              headerName: "iure",
-              regexMatch: "repudiandae",
-            },
-            methods: [
-              "quae",
-              "eum",
-            ],
-            ports: [
-              5668318127090690829,
-            ],
-          },
-        ],
-        sources: [
-          {
-            ipBlocks: [
-              "vitae",
-              "repudiandae",
-              "facilis",
-            ],
-            principals: [
               "aut",
-              "quibusdam",
-              "delectus",
-            ],
-          },
-          {
-            ipBlocks: [
-              "enim",
-            ],
-            principals: [
-              "voluptates",
-              "nam",
-              "aut",
-            ],
-          },
-          {
-            ipBlocks: [
-              "omnis",
-              "possimus",
-            ],
-            principals: [
-              "quasi",
-            ],
-          },
-        ],
-      },
-      {
-        destinations: [
-          {
-            hosts: [
-              "praesentium",
-              "quas",
-              "consequatur",
-            ],
-            httpHeaderMatch: {
-              headerName: "nulla",
-              regexMatch: "ut",
-            },
-            methods: [
-              "voluptatem",
-              "ad",
-            ],
-            ports: [
-              1055283062987230859,
-              6260300121941604790,
-            ],
-          },
-          {
-            hosts: [
-              "architecto",
-              "est",
-              "et",
-            ],
-            httpHeaderMatch: {
-              headerName: "aliquam",
-              regexMatch: "praesentium",
-            },
-            methods: [
-              "maxime",
-              "ut",
-            ],
-            ports: [
-              2764710142788548971,
-            ],
-          },
-          {
-            hosts: [
-              "ipsa",
-            ],
-            httpHeaderMatch: {
-              headerName: "rem",
-              regexMatch: "inventore",
-            },
-            methods: [
-              "incidunt",
-            ],
-            ports: [
-              1236303082765211796,
-              1514040532654582993,
-              5574152755078767765,
-            ],
-          },
-        ],
-        sources: [
-          {
-            ipBlocks: [
-              "aut",
-              "unde",
-            ],
-            principals: [
-              "velit",
-              "voluptas",
-              "magnam",
-            ],
-          },
-          {
-            ipBlocks: [
-              "et",
-            ],
-            principals: [
-              "aperiam",
-              "iste",
-            ],
-          },
-        ],
-      },
-      {
-        destinations: [
-          {
-            hosts: [
-              "sint",
-            ],
-            httpHeaderMatch: {
-              headerName: "ratione",
-              regexMatch: "vero",
-            },
-            methods: [
               "odit",
             ],
             ports: [
-              3477566635643771654,
+              167566062957544642,
+              4778690082005258714,
+              1059542851699319360,
+            ],
+          },
+          {
+            hosts: [
+              "sed",
+            ],
+            httpHeaderMatch: {
+              headerName: "officiis",
+              regexMatch: "autem",
+            },
+            methods: [
+              "nobis",
+            ],
+            ports: [
+              7699391924090763411,
             ],
           },
         ],
         sources: [
           {
             ipBlocks: [
+              "ipsum",
               "eveniet",
-              "nam",
-              "minima",
             ],
             principals: [
+              "sint",
+              "inventore",
+            ],
+          },
+          {
+            ipBlocks: [
+              "exercitationem",
+              "aut",
+              "reprehenderit",
+            ],
+            principals: [
+              "maiores",
+              "incidunt",
+              "dolor",
+            ],
+          },
+          {
+            ipBlocks: [
+              "veritatis",
+              "in",
               "et",
-              "perferendis",
-              "ipsa",
+            ],
+            principals: [
+              "ipsum",
+              "ex",
             ],
           },
         ],

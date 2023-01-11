@@ -23,7 +23,7 @@ export declare class SavingsPlan extends SpeakeasyBase {
     savingsPlanType?: SavingsPlanTypeEnum;
     start?: string;
     state?: SavingsPlanStateEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     termDurationInSeconds?: number;
     upfrontPaymentAmount?: string;
 }

@@ -55,7 +55,7 @@ export class GetSetupV1AppointmentsRequest extends SpeakeasyBase {
 
 export class GetSetupV1AppointmentsResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  appointmentListViewModel?: Map<string, any>;
+  appointmentListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

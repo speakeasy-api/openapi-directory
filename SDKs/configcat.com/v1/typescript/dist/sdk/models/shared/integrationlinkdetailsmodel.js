@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IntegrationLinkDetail } from "./integrationlinkdetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IntegrationLinkDetailsModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var integrationlinkdetail_1 = require("./integrationlinkdetail");
 var IntegrationLinkDetailsModel = /** @class */ (function (_super) {
     __extends(IntegrationLinkDetailsModel, _super);
     function IntegrationLinkDetailsModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allIntegrationLinkCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allIntegrationLinkCount" }),
         __metadata("design:type", Number)
     ], IntegrationLinkDetailsModel.prototype, "allIntegrationLinkCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details", elemType: IntegrationLinkDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details", elemType: integrationlinkdetail_1.IntegrationLinkDetail }),
         __metadata("design:type", Array)
     ], IntegrationLinkDetailsModel.prototype, "details", void 0);
     return IntegrationLinkDetailsModel;
-}(SpeakeasyBase));
-export { IntegrationLinkDetailsModel };
+}(utils_1.SpeakeasyBase));
+exports.IntegrationLinkDetailsModel = IntegrationLinkDetailsModel;

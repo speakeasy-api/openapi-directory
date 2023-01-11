@@ -1,7 +1,7 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterRole } from "./dbclusterrole";
-import { DbClusterMember } from "./dbclustermember";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+import { DbClusterRoles } from "./dbclusterroles";
+import { DbClusterMemberList } from "./dbclustermemberlist";
+import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 
 
 
@@ -10,11 +10,11 @@ import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
  * Detailed information about a cluster. 
 **/
 export class DbCluster extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: DbClusterRole })
-  associatedRoles?: DbClusterRole[];
+  @SpeakeasyMetadata({ elemType: DbClusterRoles })
+  associatedRoles?: DbClusterRoles[];
 
   @SpeakeasyMetadata()
-  availabilityZones?: string[];
+  availabilityZones?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   backupRetentionPeriod?: number;
@@ -28,8 +28,8 @@ export class DbCluster extends SpeakeasyBase {
   @SpeakeasyMetadata()
   dbClusterIdentifier?: string;
 
-  @SpeakeasyMetadata({ elemType: DbClusterMember })
-  dbClusterMembers?: DbClusterMember[];
+  @SpeakeasyMetadata({ elemType: DbClusterMemberList })
+  dbClusterMembers?: DbClusterMemberList[];
 
   @SpeakeasyMetadata()
   dbClusterParameterGroup?: string;
@@ -71,7 +71,7 @@ export class DbCluster extends SpeakeasyBase {
   masterUsername?: string;
 
   @SpeakeasyMetadata()
-  multiAz?: boolean;
+  multiAZ?: boolean;
 
   @SpeakeasyMetadata()
   percentProgress?: string;
@@ -86,7 +86,7 @@ export class DbCluster extends SpeakeasyBase {
   preferredMaintenanceWindow?: string;
 
   @SpeakeasyMetadata()
-  readReplicaIdentifiers?: string[];
+  readReplicaIdentifiers?: Record<string, any>[];
 
   @SpeakeasyMetadata()
   readerEndpoint?: string;
@@ -100,6 +100,6 @@ export class DbCluster extends SpeakeasyBase {
   @SpeakeasyMetadata()
   storageEncrypted?: boolean;
 
-  @SpeakeasyMetadata({ elemType: VpcSecurityGroupMembership })
-  vpcSecurityGroups?: VpcSecurityGroupMembership[];
+  @SpeakeasyMetadata({ elemType: VpcSecurityGroupMembershipList })
+  vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

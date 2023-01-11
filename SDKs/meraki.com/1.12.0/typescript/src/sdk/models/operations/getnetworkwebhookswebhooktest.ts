@@ -25,5 +25,5 @@ export class GetNetworkWebhooksWebhookTestResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getNetworkWebhooksWebhookTest200ApplicationJsonObject?: Map<string, any>;
+  getNetworkWebhooksWebhookTest200ApplicationJSONObject?: Record<string, any>;
 }

@@ -1,4 +1,7 @@
-export var ExportableVolumeFieldEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExportableVolumeFieldEnum = void 0;
+var ExportableVolumeFieldEnum;
 (function (ExportableVolumeFieldEnum) {
     ExportableVolumeFieldEnum["AccountId"] = "AccountId";
     ExportableVolumeFieldEnum["VolumeArn"] = "VolumeArn";
@@ -24,4 +27,4 @@ export var ExportableVolumeFieldEnum;
     ExportableVolumeFieldEnum["RecommendationOptionsMonthlyPrice"] = "RecommendationOptionsMonthlyPrice";
     ExportableVolumeFieldEnum["RecommendationOptionsPerformanceRisk"] = "RecommendationOptionsPerformanceRisk";
     ExportableVolumeFieldEnum["LastRefreshTimestamp"] = "LastRefreshTimestamp";
-})(ExportableVolumeFieldEnum || (ExportableVolumeFieldEnum = {}));
+})(ExportableVolumeFieldEnum = exports.ExportableVolumeFieldEnum || (exports.ExportableVolumeFieldEnum = {}));

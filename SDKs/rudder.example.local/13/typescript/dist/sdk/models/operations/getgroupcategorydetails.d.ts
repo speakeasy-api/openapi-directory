@@ -23,6 +23,6 @@ export declare class GetGroupCategoryDetailsRequest extends SpeakeasyBase {
 }
 export declare class GetGroupCategoryDetailsResponse extends SpeakeasyBase {
     contentType: string;
-    getGroupCategoryDetails200ApplicationJsonObject?: GetGroupCategoryDetails200ApplicationJson;
+    getGroupCategoryDetails200ApplicationJSONObject?: GetGroupCategoryDetails200ApplicationJson;
     statusCode: number;
 }

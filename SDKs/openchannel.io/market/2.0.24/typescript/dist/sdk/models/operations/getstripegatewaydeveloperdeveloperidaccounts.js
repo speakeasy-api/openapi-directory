@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetStripeGatewayDeveloperDeveloperIdAccountsResponse = exports.GetStripeGatewayDeveloperDeveloperIdAccountsRequest = exports.GetStripeGatewayDeveloperDeveloperIdAccountsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetStripeGatewayDeveloperDeveloperIdAccountsPathParams = /** @class */ (function (_super) {
     __extends(GetStripeGatewayDeveloperDeveloperIdAccountsPathParams, _super);
     function GetStripeGatewayDeveloperDeveloperIdAccountsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=developerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=developerId" }),
         __metadata("design:type", String)
     ], GetStripeGatewayDeveloperDeveloperIdAccountsPathParams.prototype, "developerId", void 0);
     return GetStripeGatewayDeveloperDeveloperIdAccountsPathParams;
-}(SpeakeasyBase));
-export { GetStripeGatewayDeveloperDeveloperIdAccountsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetStripeGatewayDeveloperDeveloperIdAccountsPathParams = GetStripeGatewayDeveloperDeveloperIdAccountsPathParams;
 var GetStripeGatewayDeveloperDeveloperIdAccountsRequest = /** @class */ (function (_super) {
     __extends(GetStripeGatewayDeveloperDeveloperIdAccountsRequest, _super);
     function GetStripeGatewayDeveloperDeveloperIdAccountsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetStripeGatewayDeveloperDeveloperIdAccountsPathParams)
     ], GetStripeGatewayDeveloperDeveloperIdAccountsRequest.prototype, "pathParams", void 0);
     return GetStripeGatewayDeveloperDeveloperIdAccountsRequest;
-}(SpeakeasyBase));
-export { GetStripeGatewayDeveloperDeveloperIdAccountsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetStripeGatewayDeveloperDeveloperIdAccountsRequest = GetStripeGatewayDeveloperDeveloperIdAccountsRequest;
 var GetStripeGatewayDeveloperDeveloperIdAccountsResponse = /** @class */ (function (_super) {
     __extends(GetStripeGatewayDeveloperDeveloperIdAccountsResponse, _super);
     function GetStripeGatewayDeveloperDeveloperIdAccountsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetStripeGatewayDeveloperDeveloperIdAccountsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetStripeGatewayDeveloperDeveloperIdAccountsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetStripeGatewayDeveloperDeveloperIdAccountsResponse.prototype, "statusCode", void 0);
     return GetStripeGatewayDeveloperDeveloperIdAccountsResponse;
-}(SpeakeasyBase));
-export { GetStripeGatewayDeveloperDeveloperIdAccountsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetStripeGatewayDeveloperDeveloperIdAccountsResponse = GetStripeGatewayDeveloperDeveloperIdAccountsResponse;

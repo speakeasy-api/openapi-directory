@@ -31,5 +31,5 @@ export class AllMonitorsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  allMonitors200ApplicationJsonObject?: AllMonitors200ApplicationJson;
+  allMonitors200ApplicationJSONObject?: AllMonitors200ApplicationJson;
 }

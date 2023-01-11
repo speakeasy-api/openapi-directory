@@ -14,7 +14,7 @@ export declare class Certificate extends SpeakeasyBase {
     eligibleToRenew?: string;
     inUseResourceCount?: number;
     issuedAt?: Date;
-    issuerCa?: string;
+    issuerCA?: string;
     keyAlgorithm?: string;
     name?: string;
     notAfter?: Date;

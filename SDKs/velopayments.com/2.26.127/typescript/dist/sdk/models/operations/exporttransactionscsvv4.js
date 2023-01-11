@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ExportTransactionsCsvv4IncludeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExportTransactionsCsvv4Response = exports.ExportTransactionsCsvv4Request = exports.ExportTransactionsCsvv4QueryParams = exports.ExportTransactionsCsvv4IncludeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ExportTransactionsCsvv4IncludeEnum;
 (function (ExportTransactionsCsvv4IncludeEnum) {
     ExportTransactionsCsvv4IncludeEnum["PayorOnly"] = "payorOnly";
     ExportTransactionsCsvv4IncludeEnum["PayorAndDescendants"] = "payorAndDescendants";
-})(ExportTransactionsCsvv4IncludeEnum || (ExportTransactionsCsvv4IncludeEnum = {}));
+})(ExportTransactionsCsvv4IncludeEnum = exports.ExportTransactionsCsvv4IncludeEnum || (exports.ExportTransactionsCsvv4IncludeEnum = {}));
 var ExportTransactionsCsvv4QueryParams = /** @class */ (function (_super) {
     __extends(ExportTransactionsCsvv4QueryParams, _super);
     function ExportTransactionsCsvv4QueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endDate" }),
         __metadata("design:type", Date)
     ], ExportTransactionsCsvv4QueryParams.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include" }),
         __metadata("design:type", String)
     ], ExportTransactionsCsvv4QueryParams.prototype, "include", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=payorId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=payorId" }),
         __metadata("design:type", String)
     ], ExportTransactionsCsvv4QueryParams.prototype, "payorId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startDate" }),
         __metadata("design:type", Date)
     ], ExportTransactionsCsvv4QueryParams.prototype, "startDate", void 0);
     return ExportTransactionsCsvv4QueryParams;
-}(SpeakeasyBase));
-export { ExportTransactionsCsvv4QueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ExportTransactionsCsvv4QueryParams = ExportTransactionsCsvv4QueryParams;
 var ExportTransactionsCsvv4Request = /** @class */ (function (_super) {
     __extends(ExportTransactionsCsvv4Request, _super);
     function ExportTransactionsCsvv4Request() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ExportTransactionsCsvv4QueryParams)
     ], ExportTransactionsCsvv4Request.prototype, "queryParams", void 0);
     return ExportTransactionsCsvv4Request;
-}(SpeakeasyBase));
-export { ExportTransactionsCsvv4Request };
+}(utils_1.SpeakeasyBase));
+exports.ExportTransactionsCsvv4Request = ExportTransactionsCsvv4Request;
 var ExportTransactionsCsvv4Response = /** @class */ (function (_super) {
     __extends(ExportTransactionsCsvv4Response, _super);
     function ExportTransactionsCsvv4Response() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], ExportTransactionsCsvv4Response.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ExportTransactionsCsvv4Response.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ExportTransactionsCsvv4Response.prototype, "statusCode", void 0);
     return ExportTransactionsCsvv4Response;
-}(SpeakeasyBase));
-export { ExportTransactionsCsvv4Response };
+}(utils_1.SpeakeasyBase));
+exports.ExportTransactionsCsvv4Response = ExportTransactionsCsvv4Response;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCreateSpotDatafeedSubscriptionActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCreateSpotDatafeedSubscriptionResponse = exports.GetCreateSpotDatafeedSubscriptionRequest = exports.GetCreateSpotDatafeedSubscriptionHeaders = exports.GetCreateSpotDatafeedSubscriptionQueryParams = exports.GetCreateSpotDatafeedSubscriptionVersionEnum = exports.GetCreateSpotDatafeedSubscriptionActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCreateSpotDatafeedSubscriptionActionEnum;
 (function (GetCreateSpotDatafeedSubscriptionActionEnum) {
     GetCreateSpotDatafeedSubscriptionActionEnum["CreateSpotDatafeedSubscription"] = "CreateSpotDatafeedSubscription";
-})(GetCreateSpotDatafeedSubscriptionActionEnum || (GetCreateSpotDatafeedSubscriptionActionEnum = {}));
-export var GetCreateSpotDatafeedSubscriptionVersionEnum;
+})(GetCreateSpotDatafeedSubscriptionActionEnum = exports.GetCreateSpotDatafeedSubscriptionActionEnum || (exports.GetCreateSpotDatafeedSubscriptionActionEnum = {}));
+var GetCreateSpotDatafeedSubscriptionVersionEnum;
 (function (GetCreateSpotDatafeedSubscriptionVersionEnum) {
     GetCreateSpotDatafeedSubscriptionVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(GetCreateSpotDatafeedSubscriptionVersionEnum || (GetCreateSpotDatafeedSubscriptionVersionEnum = {}));
+})(GetCreateSpotDatafeedSubscriptionVersionEnum = exports.GetCreateSpotDatafeedSubscriptionVersionEnum || (exports.GetCreateSpotDatafeedSubscriptionVersionEnum = {}));
 var GetCreateSpotDatafeedSubscriptionQueryParams = /** @class */ (function (_super) {
     __extends(GetCreateSpotDatafeedSubscriptionQueryParams, _super);
     function GetCreateSpotDatafeedSubscriptionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetCreateSpotDatafeedSubscriptionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Bucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Bucket" }),
         __metadata("design:type", String)
     ], GetCreateSpotDatafeedSubscriptionQueryParams.prototype, "bucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=DryRun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=DryRun" }),
         __metadata("design:type", Boolean)
     ], GetCreateSpotDatafeedSubscriptionQueryParams.prototype, "dryRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Prefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Prefix" }),
         __metadata("design:type", String)
     ], GetCreateSpotDatafeedSubscriptionQueryParams.prototype, "prefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetCreateSpotDatafeedSubscriptionQueryParams.prototype, "version", void 0);
     return GetCreateSpotDatafeedSubscriptionQueryParams;
-}(SpeakeasyBase));
-export { GetCreateSpotDatafeedSubscriptionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateSpotDatafeedSubscriptionQueryParams = GetCreateSpotDatafeedSubscriptionQueryParams;
 var GetCreateSpotDatafeedSubscriptionHeaders = /** @class */ (function (_super) {
     __extends(GetCreateSpotDatafeedSubscriptionHeaders, _super);
     function GetCreateSpotDatafeedSubscriptionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetCreateSpotDatafeedSubscriptionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetCreateSpotDatafeedSubscriptionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetCreateSpotDatafeedSubscriptionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetCreateSpotDatafeedSubscriptionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetCreateSpotDatafeedSubscriptionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetCreateSpotDatafeedSubscriptionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetCreateSpotDatafeedSubscriptionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetCreateSpotDatafeedSubscriptionHeaders;
-}(SpeakeasyBase));
-export { GetCreateSpotDatafeedSubscriptionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateSpotDatafeedSubscriptionHeaders = GetCreateSpotDatafeedSubscriptionHeaders;
 var GetCreateSpotDatafeedSubscriptionRequest = /** @class */ (function (_super) {
     __extends(GetCreateSpotDatafeedSubscriptionRequest, _super);
     function GetCreateSpotDatafeedSubscriptionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateSpotDatafeedSubscriptionQueryParams)
     ], GetCreateSpotDatafeedSubscriptionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateSpotDatafeedSubscriptionHeaders)
     ], GetCreateSpotDatafeedSubscriptionRequest.prototype, "headers", void 0);
     return GetCreateSpotDatafeedSubscriptionRequest;
-}(SpeakeasyBase));
-export { GetCreateSpotDatafeedSubscriptionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateSpotDatafeedSubscriptionRequest = GetCreateSpotDatafeedSubscriptionRequest;
 var GetCreateSpotDatafeedSubscriptionResponse = /** @class */ (function (_super) {
     __extends(GetCreateSpotDatafeedSubscriptionResponse, _super);
     function GetCreateSpotDatafeedSubscriptionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetCreateSpotDatafeedSubscriptionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCreateSpotDatafeedSubscriptionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCreateSpotDatafeedSubscriptionResponse.prototype, "statusCode", void 0);
     return GetCreateSpotDatafeedSubscriptionResponse;
-}(SpeakeasyBase));
-export { GetCreateSpotDatafeedSubscriptionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateSpotDatafeedSubscriptionResponse = GetCreateSpotDatafeedSubscriptionResponse;

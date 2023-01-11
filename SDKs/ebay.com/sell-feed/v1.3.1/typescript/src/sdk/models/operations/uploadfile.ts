@@ -35,5 +35,5 @@ export class UploadFileResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  uploadFile200ApplicationJsonObject?: Map<string, any>;
+  uploadFile200ApplicationJSONObject?: Record<string, any>;
 }

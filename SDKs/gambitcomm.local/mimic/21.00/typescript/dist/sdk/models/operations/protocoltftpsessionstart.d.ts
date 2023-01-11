@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class ProtocolTftpSessionStartPathParams extends SpeakeasyBase {
     agentNum: number;
-    sessionId: string;
+    sessionID: string;
 }
 export declare class ProtocolTftpSessionStartRequest extends SpeakeasyBase {
     pathParams: ProtocolTftpSessionStartPathParams;
@@ -9,5 +9,5 @@ export declare class ProtocolTftpSessionStartRequest extends SpeakeasyBase {
 export declare class ProtocolTftpSessionStartResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolTftpSessionStart200ApplicationJsonString?: string;
+    protocolTftpSessionStart200ApplicationJSONString?: string;
 }

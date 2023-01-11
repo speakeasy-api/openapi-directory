@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudResourcesettingsV1Value } from "./googlecloudresourcesettingsv1value";
-export var GoogleCloudResourcesettingsV1SettingMetadataDataTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudResourcesettingsV1SettingMetadata = exports.GoogleCloudResourcesettingsV1SettingMetadataDataTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudresourcesettingsv1value_1 = require("./googlecloudresourcesettingsv1value");
+var GoogleCloudResourcesettingsV1SettingMetadataDataTypeEnum;
 (function (GoogleCloudResourcesettingsV1SettingMetadataDataTypeEnum) {
     GoogleCloudResourcesettingsV1SettingMetadataDataTypeEnum["DataTypeUnspecified"] = "DATA_TYPE_UNSPECIFIED";
     GoogleCloudResourcesettingsV1SettingMetadataDataTypeEnum["Boolean"] = "BOOLEAN";
@@ -33,7 +36,7 @@ export var GoogleCloudResourcesettingsV1SettingMetadataDataTypeEnum;
     GoogleCloudResourcesettingsV1SettingMetadataDataTypeEnum["EnumValue"] = "ENUM_VALUE";
     GoogleCloudResourcesettingsV1SettingMetadataDataTypeEnum["DurationValue"] = "DURATION_VALUE";
     GoogleCloudResourcesettingsV1SettingMetadataDataTypeEnum["StringMap"] = "STRING_MAP";
-})(GoogleCloudResourcesettingsV1SettingMetadataDataTypeEnum || (GoogleCloudResourcesettingsV1SettingMetadataDataTypeEnum = {}));
+})(GoogleCloudResourcesettingsV1SettingMetadataDataTypeEnum = exports.GoogleCloudResourcesettingsV1SettingMetadataDataTypeEnum || (exports.GoogleCloudResourcesettingsV1SettingMetadataDataTypeEnum = {}));
 // GoogleCloudResourcesettingsV1SettingMetadata
 /**
  * Metadata about a setting which is not editable by the end user.
@@ -44,25 +47,25 @@ var GoogleCloudResourcesettingsV1SettingMetadata = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataType" }),
         __metadata("design:type", String)
     ], GoogleCloudResourcesettingsV1SettingMetadata.prototype, "dataType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultValue" }),
-        __metadata("design:type", GoogleCloudResourcesettingsV1Value)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultValue" }),
+        __metadata("design:type", googlecloudresourcesettingsv1value_1.GoogleCloudResourcesettingsV1Value)
     ], GoogleCloudResourcesettingsV1SettingMetadata.prototype, "defaultValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GoogleCloudResourcesettingsV1SettingMetadata.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleCloudResourcesettingsV1SettingMetadata.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=readOnly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=readOnly" }),
         __metadata("design:type", Boolean)
     ], GoogleCloudResourcesettingsV1SettingMetadata.prototype, "readOnly", void 0);
     return GoogleCloudResourcesettingsV1SettingMetadata;
-}(SpeakeasyBase));
-export { GoogleCloudResourcesettingsV1SettingMetadata };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudResourcesettingsV1SettingMetadata = GoogleCloudResourcesettingsV1SettingMetadata;

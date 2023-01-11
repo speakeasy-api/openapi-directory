@@ -40,7 +40,7 @@ export class RouteResponsePath extends SpeakeasyBase {
   descend?: number;
 
   @SpeakeasyMetadata({ data: "json, name=details" })
-  details?: Map<string, any>;
+  details?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=distance" })
   distance?: number;
@@ -49,7 +49,7 @@ export class RouteResponsePath extends SpeakeasyBase {
   instructions?: RouteResponsePathInstructions[];
 
   @SpeakeasyMetadata({ data: "json, name=points" })
-  points?: Map<string, any>;
+  points?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=points_encoded" })
   pointsEncoded?: boolean;
@@ -58,7 +58,7 @@ export class RouteResponsePath extends SpeakeasyBase {
   pointsOrder?: number[];
 
   @SpeakeasyMetadata({ data: "json, name=snapped_waypoints" })
-  snappedWaypoints?: Map<string, any>;
+  snappedWaypoints?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=time" })
   time?: number;

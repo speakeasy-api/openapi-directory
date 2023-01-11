@@ -12,12 +12,9 @@ export class FileSection extends SpeakeasyBase {
 }
 
 
-export class File extends SpeakeasyBase {
+export class FileInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=content" })
   content?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=content_path" })
-  contentPath?: string;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
@@ -33,9 +30,12 @@ export class File extends SpeakeasyBase {
 }
 
 
-export class FileInput extends SpeakeasyBase {
+export class File extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=content" })
   content?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=content_path" })
+  contentPath?: string;
 
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;

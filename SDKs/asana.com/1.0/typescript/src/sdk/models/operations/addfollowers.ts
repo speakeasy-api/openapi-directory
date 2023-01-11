@@ -53,5 +53,5 @@ export class AddFollowersResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  addFollowers201ApplicationJsonObject?: AddFollowers201ApplicationJson;
+  addFollowers201ApplicationJSONObject?: AddFollowers201ApplicationJson;
 }

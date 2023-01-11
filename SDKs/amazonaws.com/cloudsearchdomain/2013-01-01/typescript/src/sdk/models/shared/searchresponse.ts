@@ -12,13 +12,13 @@ import { SearchStatus } from "./searchstatus";
 **/
 export class SearchResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=facets", elemType: BucketInfo })
-  facets?: Map<string, BucketInfo>;
+  facets?: Record<string, BucketInfo>;
 
   @SpeakeasyMetadata({ data: "json, name=hits" })
   hits?: Hits;
 
   @SpeakeasyMetadata({ data: "json, name=stats", elemType: FieldStats })
-  stats?: Map<string, FieldStats>;
+  stats?: Record<string, FieldStats>;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: SearchStatus;

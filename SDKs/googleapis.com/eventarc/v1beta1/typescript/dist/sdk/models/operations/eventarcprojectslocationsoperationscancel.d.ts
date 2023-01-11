@@ -23,11 +23,11 @@ export declare class EventarcProjectsLocationsOperationsCancelSecurity extends S
 export declare class EventarcProjectsLocationsOperationsCancelRequest extends SpeakeasyBase {
     pathParams: EventarcProjectsLocationsOperationsCancelPathParams;
     queryParams: EventarcProjectsLocationsOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: EventarcProjectsLocationsOperationsCancelSecurity;
 }
 export declare class EventarcProjectsLocationsOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

@@ -5,6 +5,6 @@ export declare class PostGraphQlRequest extends SpeakeasyBase {
 }
 export declare class PostGraphQlResponse extends SpeakeasyBase {
     contentType: string;
-    graphQlResponse?: shared.GraphQlResponse;
+    graphQLResponse?: shared.GraphQlResponse;
     statusCode: number;
 }

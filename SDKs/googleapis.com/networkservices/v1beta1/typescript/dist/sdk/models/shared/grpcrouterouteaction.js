@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GrpcRouteDestination } from "./grpcroutedestination";
-import { GrpcRouteFaultInjectionPolicy } from "./grpcroutefaultinjectionpolicy";
-import { GrpcRouteRetryPolicy } from "./grpcrouteretrypolicy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GrpcRouteRouteAction = void 0;
+var utils_1 = require("../../../internal/utils");
+var grpcroutedestination_1 = require("./grpcroutedestination");
+var grpcroutefaultinjectionpolicy_1 = require("./grpcroutefaultinjectionpolicy");
+var grpcrouteretrypolicy_1 = require("./grpcrouteretrypolicy");
 // GrpcRouteRouteAction
 /**
  * Specifies how to route matched traffic.
@@ -36,21 +39,21 @@ var GrpcRouteRouteAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinations", elemType: GrpcRouteDestination }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinations", elemType: grpcroutedestination_1.GrpcRouteDestination }),
         __metadata("design:type", Array)
     ], GrpcRouteRouteAction.prototype, "destinations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=faultInjectionPolicy" }),
-        __metadata("design:type", GrpcRouteFaultInjectionPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=faultInjectionPolicy" }),
+        __metadata("design:type", grpcroutefaultinjectionpolicy_1.GrpcRouteFaultInjectionPolicy)
     ], GrpcRouteRouteAction.prototype, "faultInjectionPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retryPolicy" }),
-        __metadata("design:type", GrpcRouteRetryPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retryPolicy" }),
+        __metadata("design:type", grpcrouteretrypolicy_1.GrpcRouteRetryPolicy)
     ], GrpcRouteRouteAction.prototype, "retryPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeout" }),
         __metadata("design:type", String)
     ], GrpcRouteRouteAction.prototype, "timeout", void 0);
     return GrpcRouteRouteAction;
-}(SpeakeasyBase));
-export { GrpcRouteRouteAction };
+}(utils_1.SpeakeasyBase));
+exports.GrpcRouteRouteAction = GrpcRouteRouteAction;

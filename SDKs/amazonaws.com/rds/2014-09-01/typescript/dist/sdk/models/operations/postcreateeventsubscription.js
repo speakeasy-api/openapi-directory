@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCreateEventSubscriptionActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCreateEventSubscriptionResponse = exports.PostCreateEventSubscriptionRequest = exports.PostCreateEventSubscriptionHeaders = exports.PostCreateEventSubscriptionQueryParams = exports.PostCreateEventSubscriptionVersionEnum = exports.PostCreateEventSubscriptionActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCreateEventSubscriptionActionEnum;
 (function (PostCreateEventSubscriptionActionEnum) {
     PostCreateEventSubscriptionActionEnum["CreateEventSubscription"] = "CreateEventSubscription";
-})(PostCreateEventSubscriptionActionEnum || (PostCreateEventSubscriptionActionEnum = {}));
-export var PostCreateEventSubscriptionVersionEnum;
+})(PostCreateEventSubscriptionActionEnum = exports.PostCreateEventSubscriptionActionEnum || (exports.PostCreateEventSubscriptionActionEnum = {}));
+var PostCreateEventSubscriptionVersionEnum;
 (function (PostCreateEventSubscriptionVersionEnum) {
     PostCreateEventSubscriptionVersionEnum["TwoThousandAndFourteen0901"] = "2014-09-01";
-})(PostCreateEventSubscriptionVersionEnum || (PostCreateEventSubscriptionVersionEnum = {}));
+})(PostCreateEventSubscriptionVersionEnum = exports.PostCreateEventSubscriptionVersionEnum || (exports.PostCreateEventSubscriptionVersionEnum = {}));
 var PostCreateEventSubscriptionQueryParams = /** @class */ (function (_super) {
     __extends(PostCreateEventSubscriptionQueryParams, _super);
     function PostCreateEventSubscriptionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCreateEventSubscriptionQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCreateEventSubscriptionQueryParams.prototype, "version", void 0);
     return PostCreateEventSubscriptionQueryParams;
-}(SpeakeasyBase));
-export { PostCreateEventSubscriptionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateEventSubscriptionQueryParams = PostCreateEventSubscriptionQueryParams;
 var PostCreateEventSubscriptionHeaders = /** @class */ (function (_super) {
     __extends(PostCreateEventSubscriptionHeaders, _super);
     function PostCreateEventSubscriptionHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCreateEventSubscriptionHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCreateEventSubscriptionHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCreateEventSubscriptionHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCreateEventSubscriptionHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCreateEventSubscriptionHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCreateEventSubscriptionHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCreateEventSubscriptionHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCreateEventSubscriptionHeaders;
-}(SpeakeasyBase));
-export { PostCreateEventSubscriptionHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateEventSubscriptionHeaders = PostCreateEventSubscriptionHeaders;
 var PostCreateEventSubscriptionRequest = /** @class */ (function (_super) {
     __extends(PostCreateEventSubscriptionRequest, _super);
     function PostCreateEventSubscriptionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateEventSubscriptionQueryParams)
     ], PostCreateEventSubscriptionRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateEventSubscriptionHeaders)
     ], PostCreateEventSubscriptionRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCreateEventSubscriptionRequest.prototype, "request", void 0);
     return PostCreateEventSubscriptionRequest;
-}(SpeakeasyBase));
-export { PostCreateEventSubscriptionRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateEventSubscriptionRequest = PostCreateEventSubscriptionRequest;
 var PostCreateEventSubscriptionResponse = /** @class */ (function (_super) {
     __extends(PostCreateEventSubscriptionResponse, _super);
     function PostCreateEventSubscriptionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCreateEventSubscriptionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCreateEventSubscriptionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCreateEventSubscriptionResponse.prototype, "statusCode", void 0);
     return PostCreateEventSubscriptionResponse;
-}(SpeakeasyBase));
-export { PostCreateEventSubscriptionResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateEventSubscriptionResponse = PostCreateEventSubscriptionResponse;

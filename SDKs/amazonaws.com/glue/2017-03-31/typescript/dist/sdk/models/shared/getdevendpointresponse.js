@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DevEndpoint } from "./devendpoint";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDevEndpointResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var devendpoint_1 = require("./devendpoint");
 var GetDevEndpointResponse = /** @class */ (function (_super) {
     __extends(GetDevEndpointResponse, _super);
     function GetDevEndpointResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DevEndpoint" }),
-        __metadata("design:type", DevEndpoint)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DevEndpoint" }),
+        __metadata("design:type", devendpoint_1.DevEndpoint)
     ], GetDevEndpointResponse.prototype, "devEndpoint", void 0);
     return GetDevEndpointResponse;
-}(SpeakeasyBase));
-export { GetDevEndpointResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDevEndpointResponse = GetDevEndpointResponse;

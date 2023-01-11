@@ -32,5 +32,5 @@ export declare class UpdateSchemaRequest extends SpeakeasyBase {
 export declare class UpdateSchemaResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateSchema200ApplicationJsonObject?: UpdateSchema200ApplicationJson;
+    updateSchema200ApplicationJSONObject?: UpdateSchema200ApplicationJson;
 }

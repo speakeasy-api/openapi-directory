@@ -19,7 +19,7 @@ export declare class DeleteMlTransformRequest extends SpeakeasyBase {
 }
 export declare class DeleteMlTransformResponse extends SpeakeasyBase {
     contentType: string;
-    deleteMlTransformResponse?: shared.DeleteMlTransformResponse;
+    deleteMLTransformResponse?: shared.DeleteMlTransformResponse;
     entityNotFoundException?: any;
     internalServiceException?: any;
     invalidInputException?: any;

@@ -10,6 +10,6 @@ export declare class GetRepositoryPipelineScheduleRequest extends SpeakeasyBase 
 export declare class GetRepositoryPipelineScheduleResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    pipelineSchedule?: Map<string, any>;
+    error?: Record<string, any>;
+    pipelineSchedule?: Record<string, any>;
 }

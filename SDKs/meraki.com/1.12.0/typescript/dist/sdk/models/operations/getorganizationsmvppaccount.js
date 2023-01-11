@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationSmVppAccountResponse = exports.GetOrganizationSmVppAccountRequest = exports.GetOrganizationSmVppAccountPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationSmVppAccountPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationSmVppAccountPathParams, _super);
     function GetOrganizationSmVppAccountPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationSmVppAccountPathParams.prototype, "organizationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=vppAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=vppAccountId" }),
         __metadata("design:type", String)
     ], GetOrganizationSmVppAccountPathParams.prototype, "vppAccountId", void 0);
     return GetOrganizationSmVppAccountPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationSmVppAccountPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationSmVppAccountPathParams = GetOrganizationSmVppAccountPathParams;
 var GetOrganizationSmVppAccountRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationSmVppAccountRequest, _super);
     function GetOrganizationSmVppAccountRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationSmVppAccountPathParams)
     ], GetOrganizationSmVppAccountRequest.prototype, "pathParams", void 0);
     return GetOrganizationSmVppAccountRequest;
-}(SpeakeasyBase));
-export { GetOrganizationSmVppAccountRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationSmVppAccountRequest = GetOrganizationSmVppAccountRequest;
 var GetOrganizationSmVppAccountResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationSmVppAccountResponse, _super);
     function GetOrganizationSmVppAccountResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationSmVppAccountResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationSmVppAccountResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationSmVppAccountResponse.prototype, "getOrganizationSmVppAccount200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationSmVppAccountResponse.prototype, "getOrganizationSmVppAccount200ApplicationJSONObject", void 0);
     return GetOrganizationSmVppAccountResponse;
-}(SpeakeasyBase));
-export { GetOrganizationSmVppAccountResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationSmVppAccountResponse = GetOrganizationSmVppAccountResponse;

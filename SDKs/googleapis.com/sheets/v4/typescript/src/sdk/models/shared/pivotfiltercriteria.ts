@@ -3,10 +3,6 @@ import { BooleanCondition } from "./booleancondition";
 
 
 
-// PivotFilterCriteria
-/** 
- * Criteria for showing/hiding rows in a pivot table.
-**/
 export class PivotFilterCriteria extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=condition" })
   condition?: BooleanCondition;

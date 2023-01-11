@@ -30,8 +30,8 @@ export class GetV1EmailDisposableResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getV1EmailDisposable200ApplicationJsonString?: string;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getV1EmailDisposable200ApplicationJSONString?: string;
 }

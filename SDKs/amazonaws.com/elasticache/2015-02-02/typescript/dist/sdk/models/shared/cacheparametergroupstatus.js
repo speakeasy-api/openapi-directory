@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CacheParameterGroupStatus = void 0;
+var utils_1 = require("../../../internal/utils");
 // CacheParameterGroupStatus
 /**
  * Status of the cache parameter group.
@@ -33,17 +36,17 @@ var CacheParameterGroupStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], CacheParameterGroupStatus.prototype, "cacheNodeIdsToReboot", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheParameterGroupStatus.prototype, "cacheParameterGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheParameterGroupStatus.prototype, "parameterApplyStatus", void 0);
     return CacheParameterGroupStatus;
-}(SpeakeasyBase));
-export { CacheParameterGroupStatus };
+}(utils_1.SpeakeasyBase));
+exports.CacheParameterGroupStatus = CacheParameterGroupStatus;

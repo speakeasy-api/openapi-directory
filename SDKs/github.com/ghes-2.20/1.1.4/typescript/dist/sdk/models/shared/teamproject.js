@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimpleUser } from "./simpleuser";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamProject = exports.TeamProjectPermissions = void 0;
+var utils_1 = require("../../../internal/utils");
+var simpleuser_1 = require("./simpleuser");
 var TeamProjectPermissions = /** @class */ (function (_super) {
     __extends(TeamProjectPermissions, _super);
     function TeamProjectPermissions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=admin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=admin" }),
         __metadata("design:type", Boolean)
     ], TeamProjectPermissions.prototype, "admin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=read" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=read" }),
         __metadata("design:type", Boolean)
     ], TeamProjectPermissions.prototype, "read", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=write" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=write" }),
         __metadata("design:type", Boolean)
     ], TeamProjectPermissions.prototype, "write", void 0);
     return TeamProjectPermissions;
-}(SpeakeasyBase));
-export { TeamProjectPermissions };
+}(utils_1.SpeakeasyBase));
+exports.TeamProjectPermissions = TeamProjectPermissions;
 // TeamProject
 /**
  * A team's access to a project.
@@ -54,69 +57,69 @@ var TeamProject = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], TeamProject.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columns_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columns_url" }),
         __metadata("design:type", String)
     ], TeamProject.prototype, "columnsUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", String)
     ], TeamProject.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creator" }),
-        __metadata("design:type", SimpleUser)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creator" }),
+        __metadata("design:type", simpleuser_1.SimpleUser)
     ], TeamProject.prototype, "creator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], TeamProject.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], TeamProject.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TeamProject.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], TeamProject.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number" }),
         __metadata("design:type", Number)
     ], TeamProject.prototype, "number", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization_permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization_permission" }),
         __metadata("design:type", String)
     ], TeamProject.prototype, "organizationPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner_url" }),
         __metadata("design:type", String)
     ], TeamProject.prototype, "ownerUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions" }),
         __metadata("design:type", TeamProjectPermissions)
     ], TeamProject.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=private" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=private" }),
         __metadata("design:type", Boolean)
     ], TeamProject.prototype, "private", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], TeamProject.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", String)
     ], TeamProject.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], TeamProject.prototype, "url", void 0);
     return TeamProject;
-}(SpeakeasyBase));
-export { TeamProject };
+}(utils_1.SpeakeasyBase));
+exports.TeamProject = TeamProject;

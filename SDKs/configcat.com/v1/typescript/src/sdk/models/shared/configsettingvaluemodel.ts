@@ -33,5 +33,5 @@ export class ConfigSettingValueModel extends SpeakeasyBase {
   updatedAt?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=value" })
-  value?: Map<string, any>;
+  value?: Record<string, any>;
 }

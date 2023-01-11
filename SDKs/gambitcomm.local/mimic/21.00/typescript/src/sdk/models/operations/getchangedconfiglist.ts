@@ -10,5 +10,5 @@ export class GetChangedConfigListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getChangedConfigList200ApplicationJsonInt32Integers?: number[];
+  getChangedConfigList200ApplicationJSONInt32Integers?: number[];
 }

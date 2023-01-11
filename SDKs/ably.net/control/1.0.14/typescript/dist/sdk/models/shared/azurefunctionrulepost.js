@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,99 +23,101 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSource } from "./rulesource";
-export var AzureFunctionRulePostRequestModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AzureFunctionRulePost = exports.AzureFunctionRulePostTarget = exports.AzureFunctionRulePostTargetHeaders = exports.AzureFunctionRulePostTargetFormatEnum = exports.AzureFunctionRulePostStatusEnum = exports.AzureFunctionRulePostRuleTypeEnum = exports.AzureFunctionRulePostRequestModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulesource_1 = require("./rulesource");
+var AzureFunctionRulePostRequestModeEnum;
 (function (AzureFunctionRulePostRequestModeEnum) {
     AzureFunctionRulePostRequestModeEnum["Single"] = "single";
     AzureFunctionRulePostRequestModeEnum["Batch"] = "batch";
-})(AzureFunctionRulePostRequestModeEnum || (AzureFunctionRulePostRequestModeEnum = {}));
-export var AzureFunctionRulePostRuleTypeEnum;
+})(AzureFunctionRulePostRequestModeEnum = exports.AzureFunctionRulePostRequestModeEnum || (exports.AzureFunctionRulePostRequestModeEnum = {}));
+var AzureFunctionRulePostRuleTypeEnum;
 (function (AzureFunctionRulePostRuleTypeEnum) {
     AzureFunctionRulePostRuleTypeEnum["HttpAzureFunction"] = "http/azure-function";
-})(AzureFunctionRulePostRuleTypeEnum || (AzureFunctionRulePostRuleTypeEnum = {}));
-export var AzureFunctionRulePostStatusEnum;
+})(AzureFunctionRulePostRuleTypeEnum = exports.AzureFunctionRulePostRuleTypeEnum || (exports.AzureFunctionRulePostRuleTypeEnum = {}));
+var AzureFunctionRulePostStatusEnum;
 (function (AzureFunctionRulePostStatusEnum) {
     AzureFunctionRulePostStatusEnum["Enabled"] = "enabled";
     AzureFunctionRulePostStatusEnum["Disabled"] = "disabled";
-})(AzureFunctionRulePostStatusEnum || (AzureFunctionRulePostStatusEnum = {}));
-export var AzureFunctionRulePostTargetFormatEnum;
+})(AzureFunctionRulePostStatusEnum = exports.AzureFunctionRulePostStatusEnum || (exports.AzureFunctionRulePostStatusEnum = {}));
+var AzureFunctionRulePostTargetFormatEnum;
 (function (AzureFunctionRulePostTargetFormatEnum) {
     AzureFunctionRulePostTargetFormatEnum["Json"] = "json";
-})(AzureFunctionRulePostTargetFormatEnum || (AzureFunctionRulePostTargetFormatEnum = {}));
+})(AzureFunctionRulePostTargetFormatEnum = exports.AzureFunctionRulePostTargetFormatEnum || (exports.AzureFunctionRulePostTargetFormatEnum = {}));
 var AzureFunctionRulePostTargetHeaders = /** @class */ (function (_super) {
     __extends(AzureFunctionRulePostTargetHeaders, _super);
     function AzureFunctionRulePostTargetHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AzureFunctionRulePostTargetHeaders.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], AzureFunctionRulePostTargetHeaders.prototype, "value", void 0);
     return AzureFunctionRulePostTargetHeaders;
-}(SpeakeasyBase));
-export { AzureFunctionRulePostTargetHeaders };
+}(utils_1.SpeakeasyBase));
+exports.AzureFunctionRulePostTargetHeaders = AzureFunctionRulePostTargetHeaders;
 var AzureFunctionRulePostTarget = /** @class */ (function (_super) {
     __extends(AzureFunctionRulePostTarget, _super);
     function AzureFunctionRulePostTarget() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=azureAppId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=azureAppId" }),
         __metadata("design:type", String)
     ], AzureFunctionRulePostTarget.prototype, "azureAppId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=azureFunctionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=azureFunctionName" }),
         __metadata("design:type", String)
     ], AzureFunctionRulePostTarget.prototype, "azureFunctionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enveloped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enveloped" }),
         __metadata("design:type", Boolean)
     ], AzureFunctionRulePostTarget.prototype, "enveloped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], AzureFunctionRulePostTarget.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers", elemType: AzureFunctionRulePostTargetHeaders }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers", elemType: AzureFunctionRulePostTargetHeaders }),
         __metadata("design:type", Array)
     ], AzureFunctionRulePostTarget.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signingKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signingKeyId" }),
         __metadata("design:type", String)
     ], AzureFunctionRulePostTarget.prototype, "signingKeyId", void 0);
     return AzureFunctionRulePostTarget;
-}(SpeakeasyBase));
-export { AzureFunctionRulePostTarget };
+}(utils_1.SpeakeasyBase));
+exports.AzureFunctionRulePostTarget = AzureFunctionRulePostTarget;
 var AzureFunctionRulePost = /** @class */ (function (_super) {
     __extends(AzureFunctionRulePost, _super);
     function AzureFunctionRulePost() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMode" }),
         __metadata("design:type", String)
     ], AzureFunctionRulePost.prototype, "requestMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleType" }),
         __metadata("design:type", String)
     ], AzureFunctionRulePost.prototype, "ruleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", RuleSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", rulesource_1.RuleSource)
     ], AzureFunctionRulePost.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], AzureFunctionRulePost.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", AzureFunctionRulePostTarget)
     ], AzureFunctionRulePost.prototype, "target", void 0);
     return AzureFunctionRulePost;
-}(SpeakeasyBase));
-export { AzureFunctionRulePost };
+}(utils_1.SpeakeasyBase));
+exports.AzureFunctionRulePost = AzureFunctionRulePost;

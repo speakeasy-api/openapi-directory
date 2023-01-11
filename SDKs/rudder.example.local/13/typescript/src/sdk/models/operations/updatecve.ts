@@ -56,5 +56,5 @@ export class UpdateCveResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateCve200ApplicationJsonObject?: UpdateCve200ApplicationJson;
+  updateCVE200ApplicationJSONObject?: UpdateCve200ApplicationJson;
 }

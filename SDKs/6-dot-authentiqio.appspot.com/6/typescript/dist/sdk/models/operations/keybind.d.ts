@@ -14,5 +14,5 @@ export declare class KeyBindResponse extends SpeakeasyBase {
     contentType: string;
     error?: any;
     statusCode: number;
-    keyBind200ApplicationJsonObject?: KeyBind200ApplicationJson;
+    keyBind200ApplicationJSONObject?: KeyBind200ApplicationJson;
 }

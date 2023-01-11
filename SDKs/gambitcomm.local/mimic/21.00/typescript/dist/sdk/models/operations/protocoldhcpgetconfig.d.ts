@@ -7,7 +7,7 @@ export declare class ProtocolDhcpGetConfigRequest extends SpeakeasyBase {
     pathParams: ProtocolDhcpGetConfigPathParams;
 }
 export declare class ProtocolDhcpGetConfigResponse extends SpeakeasyBase {
-    configDhcp?: shared.ConfigDhcp;
+    configDHCP?: shared.ConfigDhcp;
     contentType: string;
     statusCode: number;
 }

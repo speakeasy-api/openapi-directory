@@ -107,11 +107,11 @@ export declare class SsmgrRequest extends SpeakeasyBase {
 export declare class SsmgrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ssmgr400ApplicationJsonObject?: Ssmgr400ApplicationJson;
-    ssmgr401ApplicationJsonObject?: Ssmgr401ApplicationJson;
-    ssmgr404ApplicationJsonObject?: Ssmgr404ApplicationJson;
-    ssmgr500ApplicationJsonObject?: Ssmgr500ApplicationJson;
-    ssmgr502ApplicationJsonObject?: Ssmgr502ApplicationJson;
-    ssmgr503ApplicationJsonObject?: Ssmgr503ApplicationJson;
-    ssmgr504ApplicationJsonObject?: Ssmgr504ApplicationJson;
+    ssmgr400ApplicationJSONObject?: Ssmgr400ApplicationJson;
+    ssmgr401ApplicationJSONObject?: Ssmgr401ApplicationJson;
+    ssmgr404ApplicationJSONObject?: Ssmgr404ApplicationJson;
+    ssmgr500ApplicationJSONObject?: Ssmgr500ApplicationJson;
+    ssmgr502ApplicationJSONObject?: Ssmgr502ApplicationJson;
+    ssmgr503ApplicationJSONObject?: Ssmgr503ApplicationJson;
+    ssmgr504ApplicationJSONObject?: Ssmgr504ApplicationJson;
 }

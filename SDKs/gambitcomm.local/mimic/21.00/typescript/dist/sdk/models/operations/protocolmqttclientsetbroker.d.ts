@@ -9,5 +9,5 @@ export declare class ProtocolMqttClientSetBrokerRequest extends SpeakeasyBase {
 export declare class ProtocolMqttClientSetBrokerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolMqttClientSetBroker200ApplicationJsonInt32Integers?: number[];
+    protocolMqttClientSetBroker200ApplicationJSONInt32Integers?: number[];
 }

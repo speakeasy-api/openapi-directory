@@ -17,7 +17,7 @@ export declare class DeleteVpcLinkRequest extends SpeakeasyBase {
 }
 export declare class DeleteVpcLinkResponse extends SpeakeasyBase {
     contentType: string;
-    deleteVpcLinkResponse?: Map<string, any>;
+    deleteVpcLinkResponse?: Record<string, any>;
     notFoundException?: any;
     statusCode: number;
     tooManyRequestsException?: any;

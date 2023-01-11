@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomRoutingDestinationConfiguration } from "./customroutingdestinationconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateCustomRoutingEndpointGroupRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var customroutingdestinationconfiguration_1 = require("./customroutingdestinationconfiguration");
 var CreateCustomRoutingEndpointGroupRequest = /** @class */ (function (_super) {
     __extends(CreateCustomRoutingEndpointGroupRequest, _super);
     function CreateCustomRoutingEndpointGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationConfigurations", elemType: CustomRoutingDestinationConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationConfigurations", elemType: customroutingdestinationconfiguration_1.CustomRoutingDestinationConfiguration }),
         __metadata("design:type", Array)
     ], CreateCustomRoutingEndpointGroupRequest.prototype, "destinationConfigurations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointGroupRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointGroupRegion" }),
         __metadata("design:type", String)
     ], CreateCustomRoutingEndpointGroupRequest.prototype, "endpointGroupRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdempotencyToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdempotencyToken" }),
         __metadata("design:type", String)
     ], CreateCustomRoutingEndpointGroupRequest.prototype, "idempotencyToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListenerArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListenerArn" }),
         __metadata("design:type", String)
     ], CreateCustomRoutingEndpointGroupRequest.prototype, "listenerArn", void 0);
     return CreateCustomRoutingEndpointGroupRequest;
-}(SpeakeasyBase));
-export { CreateCustomRoutingEndpointGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateCustomRoutingEndpointGroupRequest = CreateCustomRoutingEndpointGroupRequest;

@@ -7,6 +7,6 @@ export declare class GoogleCloudDatalabelingV1beta1FeedbackMessage extends Speak
     createTime?: string;
     image?: string;
     name?: string;
-    operatorFeedbackMetadata?: Map<string, any>;
-    requesterFeedbackMetadata?: Map<string, any>;
+    operatorFeedbackMetadata?: Record<string, any>;
+    requesterFeedbackMetadata?: Record<string, any>;
 }

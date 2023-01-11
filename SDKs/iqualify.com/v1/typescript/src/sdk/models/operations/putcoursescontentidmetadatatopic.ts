@@ -32,7 +32,7 @@ export class PutCoursesContentIdMetadataTopicResponse extends SpeakeasyBase {
   courseMetaResponse?: shared.CourseMetaResponse;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;

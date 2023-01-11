@@ -37,5 +37,5 @@ export class PostAuthorizablesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  postAuthorizablesDefaultTextHtmlString?: string;
+  postAuthorizablesDefaultTextHTMLString?: string;
 }

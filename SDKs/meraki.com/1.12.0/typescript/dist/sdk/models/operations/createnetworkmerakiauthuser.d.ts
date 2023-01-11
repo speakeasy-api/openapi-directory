@@ -26,5 +26,5 @@ export declare class CreateNetworkMerakiAuthUserRequest extends SpeakeasyBase {
 export declare class CreateNetworkMerakiAuthUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    createNetworkMerakiAuthUser201ApplicationJsonObject?: Map<string, any>;
+    createNetworkMerakiAuthUser201ApplicationJSONObject?: Record<string, any>;
 }

@@ -52,7 +52,7 @@ export class DeleteEmailIdentityPolicyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteEmailIdentityPolicyResponse?: Map<string, any>;
+  deleteEmailIdentityPolicyResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   notFoundException?: any;

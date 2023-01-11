@@ -6,7 +6,7 @@ export declare enum PostFloatingIpsCreateFloatingIpRequestTypeEnum {
 export declare class PostFloatingIpsCreateFloatingIpRequest extends SpeakeasyBase {
     description?: string;
     homeLocation?: string;
-    labels?: Map<string, any>;
+    labels?: Record<string, any>;
     name?: string;
     server?: number;
     type: PostFloatingIpsCreateFloatingIpRequestTypeEnum;
@@ -72,7 +72,7 @@ export declare class PostFloatingIps201ApplicationJsonFloatingIp extends Speakea
     homeLocation: PostFloatingIps201ApplicationJsonFloatingIpHomeLocation;
     id: number;
     ip: string;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     protection: PostFloatingIps201ApplicationJsonFloatingIpProtection;
     server: number;
@@ -87,6 +87,6 @@ export declare class PostFloatingIpsRequest extends SpeakeasyBase {
 }
 export declare class PostFloatingIpsResponse extends SpeakeasyBase {
     contentType: string;
-    postFloatingIps201ApplicationJsonObject?: PostFloatingIps201ApplicationJson;
     statusCode: number;
+    postFloatingIps201ApplicationJSONObject?: PostFloatingIps201ApplicationJson;
 }

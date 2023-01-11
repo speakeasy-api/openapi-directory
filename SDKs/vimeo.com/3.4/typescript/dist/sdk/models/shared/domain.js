@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Domain = void 0;
+var utils_1 = require("../../../internal/utils");
 var Domain = /** @class */ (function (_super) {
     __extends(Domain, _super);
     function Domain() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allow_hd" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allow_hd" }),
         __metadata("design:type", Boolean)
     ], Domain.prototype, "allowHd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], Domain.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], Domain.prototype, "uri", void 0);
     return Domain;
-}(SpeakeasyBase));
-export { Domain };
+}(utils_1.SpeakeasyBase));
+exports.Domain = Domain;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolSnmpv3GroupDelResponse = exports.ProtocolSnmpv3GroupDelRequest = exports.ProtocolSnmpv3GroupDelPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolSnmpv3GroupDelPathParams = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3GroupDelPathParams, _super);
     function ProtocolSnmpv3GroupDelPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolSnmpv3GroupDelPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=groupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=groupName" }),
         __metadata("design:type", String)
     ], ProtocolSnmpv3GroupDelPathParams.prototype, "groupName", void 0);
     return ProtocolSnmpv3GroupDelPathParams;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3GroupDelPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3GroupDelPathParams = ProtocolSnmpv3GroupDelPathParams;
 var ProtocolSnmpv3GroupDelRequest = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3GroupDelRequest, _super);
     function ProtocolSnmpv3GroupDelRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolSnmpv3GroupDelPathParams)
     ], ProtocolSnmpv3GroupDelRequest.prototype, "pathParams", void 0);
     return ProtocolSnmpv3GroupDelRequest;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3GroupDelRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3GroupDelRequest = ProtocolSnmpv3GroupDelRequest;
 var ProtocolSnmpv3GroupDelResponse = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3GroupDelResponse, _super);
     function ProtocolSnmpv3GroupDelResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolSnmpv3GroupDelResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolSnmpv3GroupDelResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolSnmpv3GroupDelResponse.prototype, "protocolSnmpv3GroupDel200ApplicationJsonString", void 0);
+    ], ProtocolSnmpv3GroupDelResponse.prototype, "protocolSnmpv3GroupDel200ApplicationJSONString", void 0);
     return ProtocolSnmpv3GroupDelResponse;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3GroupDelResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3GroupDelResponse = ProtocolSnmpv3GroupDelResponse;

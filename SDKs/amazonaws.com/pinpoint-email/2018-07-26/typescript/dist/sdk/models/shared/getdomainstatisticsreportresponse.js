@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DailyVolume } from "./dailyvolume";
-import { OverallVolume } from "./overallvolume";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDomainStatisticsReportResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var dailyvolume_1 = require("./dailyvolume");
+var overallvolume_1 = require("./overallvolume");
 // GetDomainStatisticsReportResponse
 /**
  * An object that includes statistics that are related to the domain that you specified.
@@ -35,13 +38,13 @@ var GetDomainStatisticsReportResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DailyVolumes", elemType: DailyVolume }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DailyVolumes", elemType: dailyvolume_1.DailyVolume }),
         __metadata("design:type", Array)
     ], GetDomainStatisticsReportResponse.prototype, "dailyVolumes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OverallVolume" }),
-        __metadata("design:type", OverallVolume)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OverallVolume" }),
+        __metadata("design:type", overallvolume_1.OverallVolume)
     ], GetDomainStatisticsReportResponse.prototype, "overallVolume", void 0);
     return GetDomainStatisticsReportResponse;
-}(SpeakeasyBase));
-export { GetDomainStatisticsReportResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainStatisticsReportResponse = GetDomainStatisticsReportResponse;

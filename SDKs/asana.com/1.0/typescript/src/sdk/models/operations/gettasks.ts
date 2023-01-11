@@ -59,5 +59,5 @@ export class GetTasksResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getTasks200ApplicationJsonObject?: GetTasks200ApplicationJson;
+  getTasks200ApplicationJSONObject?: GetTasks200ApplicationJson;
 }

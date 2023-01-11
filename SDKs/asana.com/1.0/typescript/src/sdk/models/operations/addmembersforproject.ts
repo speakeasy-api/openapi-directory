@@ -26,7 +26,7 @@ export class AddMembersForProjectRequestBody extends SpeakeasyBase {
 
 export class AddMembersForProject200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -53,5 +53,5 @@ export class AddMembersForProjectResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  addMembersForProject200ApplicationJsonObject?: AddMembersForProject200ApplicationJson;
+  addMembersForProject200ApplicationJSONObject?: AddMembersForProject200ApplicationJson;
 }

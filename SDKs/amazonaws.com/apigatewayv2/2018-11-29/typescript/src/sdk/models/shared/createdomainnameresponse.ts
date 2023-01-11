@@ -1,22 +1,36 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DomainNameConfiguration } from "./domainnameconfiguration";
-import { MutualTlsAuthentication } from "./mutualtlsauthentication";
 
+
+
+// CreateDomainNameResponseMutualTlsAuthentication
+/** 
+ * The mutual TLS authentication configuration for a custom domain name.
+**/
+export class CreateDomainNameResponseMutualTlsAuthentication extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=TruststoreUri" })
+  truststoreUri?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=TruststoreVersion" })
+  truststoreVersion?: Record<string, any>;
+
+  @SpeakeasyMetadata({ data: "json, name=TruststoreWarnings" })
+  truststoreWarnings?: Record<string, any>;
+}
 
 
 export class CreateDomainNameResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=ApiMappingSelectionExpression" })
-  apiMappingSelectionExpression?: string;
+  apiMappingSelectionExpression?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=DomainName" })
-  domainName?: string;
+  domainName?: Record<string, any>;
 
-  @SpeakeasyMetadata({ data: "json, name=DomainNameConfigurations", elemType: DomainNameConfiguration })
-  domainNameConfigurations?: DomainNameConfiguration[];
+  @SpeakeasyMetadata({ data: "json, name=DomainNameConfigurations" })
+  domainNameConfigurations?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=MutualTlsAuthentication" })
-  mutualTlsAuthentication?: MutualTlsAuthentication;
+  mutualTlsAuthentication?: CreateDomainNameResponseMutualTlsAuthentication;
 
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SpecialHourPeriod } from "./specialhourperiod";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SpecialHours = void 0;
+var utils_1 = require("../../../internal/utils");
+var specialhourperiod_1 = require("./specialhourperiod");
 // SpecialHours
 /**
  * Represents a set of time periods when a location's operational hours differ from its normal business hours.
@@ -34,9 +37,9 @@ var SpecialHours = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=specialHourPeriods", elemType: SpecialHourPeriod }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=specialHourPeriods", elemType: specialhourperiod_1.SpecialHourPeriod }),
         __metadata("design:type", Array)
     ], SpecialHours.prototype, "specialHourPeriods", void 0);
     return SpecialHours;
-}(SpeakeasyBase));
-export { SpecialHours };
+}(utils_1.SpeakeasyBase));
+exports.SpecialHours = SpecialHours;

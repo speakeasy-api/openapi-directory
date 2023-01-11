@@ -19,7 +19,7 @@ export class ContinuousExportDescription extends SpeakeasyBase {
   s3Bucket?: string;
 
   @SpeakeasyMetadata({ data: "json, name=schemaStorageConfig" })
-  schemaStorageConfig?: Map<string, string>;
+  schemaStorageConfig?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=startTime" })
   startTime?: Date;

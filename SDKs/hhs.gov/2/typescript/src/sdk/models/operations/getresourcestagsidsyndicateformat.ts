@@ -31,8 +31,8 @@ export class GetResourcesTagsIdSyndicateFormatResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getResourcesTagsIdSyndicateFormat200ApplicationJsonString?: string;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getResourcesTagsIdSyndicateFormat200ApplicationJSONString?: string;
 }

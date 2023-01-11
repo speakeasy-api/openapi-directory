@@ -16,7 +16,7 @@ export class GooglePrivacyDlpV2HybridFindingDetails extends SpeakeasyBase {
   fileOffset?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=rowOffset" })
   rowOffset?: string;

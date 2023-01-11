@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DynamicGroupStatusStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DynamicGroupStatus = exports.DynamicGroupStatusStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DynamicGroupStatusStatusEnum;
 (function (DynamicGroupStatusStatusEnum) {
     DynamicGroupStatusStatusEnum["StatusUnspecified"] = "STATUS_UNSPECIFIED";
     DynamicGroupStatusStatusEnum["UpToDate"] = "UP_TO_DATE";
     DynamicGroupStatusStatusEnum["UpdatingMemberships"] = "UPDATING_MEMBERSHIPS";
     DynamicGroupStatusStatusEnum["InvalidQuery"] = "INVALID_QUERY";
-})(DynamicGroupStatusStatusEnum || (DynamicGroupStatusStatusEnum = {}));
+})(DynamicGroupStatusStatusEnum = exports.DynamicGroupStatusStatusEnum || (exports.DynamicGroupStatusStatusEnum = {}));
 // DynamicGroupStatus
 /**
  * The current status of a dynamic group along with timestamp.
@@ -40,13 +43,13 @@ var DynamicGroupStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], DynamicGroupStatus.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statusTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusTime" }),
         __metadata("design:type", String)
     ], DynamicGroupStatus.prototype, "statusTime", void 0);
     return DynamicGroupStatus;
-}(SpeakeasyBase));
-export { DynamicGroupStatus };
+}(utils_1.SpeakeasyBase));
+exports.DynamicGroupStatus = DynamicGroupStatus;

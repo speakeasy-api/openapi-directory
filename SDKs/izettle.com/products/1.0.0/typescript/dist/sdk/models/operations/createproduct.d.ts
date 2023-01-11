@@ -18,7 +18,7 @@ export declare class CreateProductRequest extends SpeakeasyBase {
 }
 export declare class CreateProductResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     productResponse?: shared.ProductResponse;
     statusCode: number;
 }

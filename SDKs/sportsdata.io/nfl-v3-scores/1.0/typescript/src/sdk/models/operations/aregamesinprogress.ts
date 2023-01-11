@@ -21,7 +21,7 @@ export class AreGamesInProgressRequest extends SpeakeasyBase {
 
 export class AreGamesInProgressResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  areGamesInProgress200ApplicationJsonBoolean?: boolean;
+  areGamesInProgress200ApplicationJSONBoolean?: boolean;
 
   @SpeakeasyMetadata()
   contentType: string;

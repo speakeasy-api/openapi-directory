@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleTypeLatLng } from "./googletypelatlng";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleMapsPlayablelocationsV3SamplePlayableLocation = void 0;
+var utils_1 = require("../../../internal/utils");
+var googletypelatlng_1 = require("./googletypelatlng");
 // GoogleMapsPlayablelocationsV3SamplePlayableLocation
 /**
  * A geographical point suitable for placing game objects in location-based games.
@@ -34,29 +37,29 @@ var GoogleMapsPlayablelocationsV3SamplePlayableLocation = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=centerPoint" }),
-        __metadata("design:type", GoogleTypeLatLng)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=centerPoint" }),
+        __metadata("design:type", googletypelatlng_1.GoogleTypeLatLng)
     ], GoogleMapsPlayablelocationsV3SamplePlayableLocation.prototype, "centerPoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleMapsPlayablelocationsV3SamplePlayableLocation.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placeId" }),
         __metadata("design:type", String)
     ], GoogleMapsPlayablelocationsV3SamplePlayableLocation.prototype, "placeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plusCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plusCode" }),
         __metadata("design:type", String)
     ], GoogleMapsPlayablelocationsV3SamplePlayableLocation.prototype, "plusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snappedPoint" }),
-        __metadata("design:type", GoogleTypeLatLng)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snappedPoint" }),
+        __metadata("design:type", googletypelatlng_1.GoogleTypeLatLng)
     ], GoogleMapsPlayablelocationsV3SamplePlayableLocation.prototype, "snappedPoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=types" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=types" }),
         __metadata("design:type", Array)
     ], GoogleMapsPlayablelocationsV3SamplePlayableLocation.prototype, "types", void 0);
     return GoogleMapsPlayablelocationsV3SamplePlayableLocation;
-}(SpeakeasyBase));
-export { GoogleMapsPlayablelocationsV3SamplePlayableLocation };
+}(utils_1.SpeakeasyBase));
+exports.GoogleMapsPlayablelocationsV3SamplePlayableLocation = GoogleMapsPlayablelocationsV3SamplePlayableLocation;

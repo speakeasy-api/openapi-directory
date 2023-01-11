@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllEnvironmentsResponse = exports.AllEnvironments200ApplicationJson = exports.AllEnvironments200ApplicationJsonEnvironments = void 0;
+var utils_1 = require("../../../internal/utils");
 var AllEnvironments200ApplicationJsonEnvironments = /** @class */ (function (_super) {
     __extends(AllEnvironments200ApplicationJsonEnvironments, _super);
     function AllEnvironments200ApplicationJsonEnvironments() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AllEnvironments200ApplicationJsonEnvironments.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AllEnvironments200ApplicationJsonEnvironments.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=owner" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
         __metadata("design:type", String)
     ], AllEnvironments200ApplicationJsonEnvironments.prototype, "owner", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], AllEnvironments200ApplicationJsonEnvironments.prototype, "uid", void 0);
     return AllEnvironments200ApplicationJsonEnvironments;
-}(SpeakeasyBase));
-export { AllEnvironments200ApplicationJsonEnvironments };
+}(utils_1.SpeakeasyBase));
+exports.AllEnvironments200ApplicationJsonEnvironments = AllEnvironments200ApplicationJsonEnvironments;
 var AllEnvironments200ApplicationJson = /** @class */ (function (_super) {
     __extends(AllEnvironments200ApplicationJson, _super);
     function AllEnvironments200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environments", elemType: AllEnvironments200ApplicationJsonEnvironments }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environments", elemType: AllEnvironments200ApplicationJsonEnvironments }),
         __metadata("design:type", Array)
     ], AllEnvironments200ApplicationJson.prototype, "environments", void 0);
     return AllEnvironments200ApplicationJson;
-}(SpeakeasyBase));
-export { AllEnvironments200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AllEnvironments200ApplicationJson = AllEnvironments200ApplicationJson;
 var AllEnvironmentsResponse = /** @class */ (function (_super) {
     __extends(AllEnvironmentsResponse, _super);
     function AllEnvironmentsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AllEnvironmentsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AllEnvironmentsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AllEnvironments200ApplicationJson)
-    ], AllEnvironmentsResponse.prototype, "allEnvironments200ApplicationJsonObject", void 0);
+    ], AllEnvironmentsResponse.prototype, "allEnvironments200ApplicationJSONObject", void 0);
     return AllEnvironmentsResponse;
-}(SpeakeasyBase));
-export { AllEnvironmentsResponse };
+}(utils_1.SpeakeasyBase));
+exports.AllEnvironmentsResponse = AllEnvironmentsResponse;

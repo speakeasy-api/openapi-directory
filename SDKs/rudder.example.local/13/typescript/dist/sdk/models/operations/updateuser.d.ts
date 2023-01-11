@@ -30,5 +30,5 @@ export declare class UpdateUserRequest extends SpeakeasyBase {
 export declare class UpdateUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateUser200ApplicationJsonObject?: UpdateUser200ApplicationJson;
+    updateUser200ApplicationJSONObject?: UpdateUser200ApplicationJson;
 }

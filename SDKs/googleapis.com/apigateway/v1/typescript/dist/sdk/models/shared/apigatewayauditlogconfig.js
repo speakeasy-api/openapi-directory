@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ApigatewayAuditLogConfigLogTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApigatewayAuditLogConfig = exports.ApigatewayAuditLogConfigLogTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ApigatewayAuditLogConfigLogTypeEnum;
 (function (ApigatewayAuditLogConfigLogTypeEnum) {
     ApigatewayAuditLogConfigLogTypeEnum["LogTypeUnspecified"] = "LOG_TYPE_UNSPECIFIED";
     ApigatewayAuditLogConfigLogTypeEnum["AdminRead"] = "ADMIN_READ";
     ApigatewayAuditLogConfigLogTypeEnum["DataWrite"] = "DATA_WRITE";
     ApigatewayAuditLogConfigLogTypeEnum["DataRead"] = "DATA_READ";
-})(ApigatewayAuditLogConfigLogTypeEnum || (ApigatewayAuditLogConfigLogTypeEnum = {}));
+})(ApigatewayAuditLogConfigLogTypeEnum = exports.ApigatewayAuditLogConfigLogTypeEnum || (exports.ApigatewayAuditLogConfigLogTypeEnum = {}));
 // ApigatewayAuditLogConfig
 /**
  * Provides the configuration for logging a type of permissions. Example: { "audit_log_configs": [ { "log_type": "DATA_READ", "exempted_members": [ "user:jose@example.com" ] }, { "log_type": "DATA_WRITE" } ] } This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting jose@example.com from DATA_READ logging.
@@ -40,13 +43,13 @@ var ApigatewayAuditLogConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exemptedMembers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exemptedMembers" }),
         __metadata("design:type", Array)
     ], ApigatewayAuditLogConfig.prototype, "exemptedMembers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logType" }),
         __metadata("design:type", String)
     ], ApigatewayAuditLogConfig.prototype, "logType", void 0);
     return ApigatewayAuditLogConfig;
-}(SpeakeasyBase));
-export { ApigatewayAuditLogConfig };
+}(utils_1.SpeakeasyBase));
+exports.ApigatewayAuditLogConfig = ApigatewayAuditLogConfig;

@@ -1,21 +1,39 @@
-export * from "./altenum";
-export * from "./googlecloudassuredworkloadsv1acknowledgeviolationrequest";
-export * from "./googlecloudassuredworkloadsv1listviolationsresponse";
-export * from "./googlecloudassuredworkloadsv1listworkloadsresponse";
-export * from "./googlecloudassuredworkloadsv1restrictallowedresourcesrequest";
-export * from "./googlecloudassuredworkloadsv1violation";
-export * from "./googlecloudassuredworkloadsv1violationremediation";
-export * from "./googlecloudassuredworkloadsv1violationremediationinstructions";
-export * from "./googlecloudassuredworkloadsv1violationremediationinstructionsconsole";
-export * from "./googlecloudassuredworkloadsv1violationremediationinstructionsgcloud";
-export * from "./googlecloudassuredworkloadsv1workload";
-export * from "./googlecloudassuredworkloadsv1workloadcompliancestatus";
-export * from "./googlecloudassuredworkloadsv1workloadkmssettings";
-export * from "./googlecloudassuredworkloadsv1workloadresourceinfo";
-export * from "./googlecloudassuredworkloadsv1workloadresourcesettings";
-export * from "./googlecloudassuredworkloadsv1workloadsaaenrollmentresponse";
-export * from "./googlelongrunninglistoperationsresponse";
-export * from "./googlelongrunningoperation";
-export * from "./googlerpcstatus";
-export * from "./security";
-export * from "./xgafvenum";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./altenum"), exports);
+__exportStar(require("./googlecloudassuredworkloadsv1acknowledgeviolationrequest"), exports);
+__exportStar(require("./googlecloudassuredworkloadsv1listviolationsresponse"), exports);
+__exportStar(require("./googlecloudassuredworkloadsv1listworkloadsresponse"), exports);
+__exportStar(require("./googlecloudassuredworkloadsv1mutatepartnerpermissionsrequest"), exports);
+__exportStar(require("./googlecloudassuredworkloadsv1restrictallowedresourcesrequest"), exports);
+__exportStar(require("./googlecloudassuredworkloadsv1violation"), exports);
+__exportStar(require("./googlecloudassuredworkloadsv1violationremediation"), exports);
+__exportStar(require("./googlecloudassuredworkloadsv1violationremediationinstructions"), exports);
+__exportStar(require("./googlecloudassuredworkloadsv1violationremediationinstructionsconsole"), exports);
+__exportStar(require("./googlecloudassuredworkloadsv1violationremediationinstructionsgcloud"), exports);
+__exportStar(require("./googlecloudassuredworkloadsv1workload"), exports);
+__exportStar(require("./googlecloudassuredworkloadsv1workloadcompliancestatus"), exports);
+__exportStar(require("./googlecloudassuredworkloadsv1workloadkmssettings"), exports);
+__exportStar(require("./googlecloudassuredworkloadsv1workloadpartnerpermissions"), exports);
+__exportStar(require("./googlecloudassuredworkloadsv1workloadresourceinfo"), exports);
+__exportStar(require("./googlecloudassuredworkloadsv1workloadresourcesettings"), exports);
+__exportStar(require("./googlecloudassuredworkloadsv1workloadsaaenrollmentresponse"), exports);
+__exportStar(require("./googlelongrunninglistoperationsresponse"), exports);
+__exportStar(require("./googlelongrunningoperation"), exports);
+__exportStar(require("./googlerpcstatus"), exports);
+__exportStar(require("./security"), exports);
+__exportStar(require("./xgafvenum"), exports);

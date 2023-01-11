@@ -16,6 +16,6 @@ export declare class GetFleetFleetnameRequest extends SpeakeasyBase {
 }
 export declare class GetFleetFleetnameResponse extends SpeakeasyBase {
     contentType: string;
-    getFleetFleetname200ApplicationJsonObject?: GetFleetFleetname200ApplicationJson;
     statusCode: number;
+    getFleetFleetname200ApplicationJSONObject?: GetFleetFleetname200ApplicationJson;
 }

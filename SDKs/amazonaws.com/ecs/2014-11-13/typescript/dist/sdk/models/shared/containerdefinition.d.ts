@@ -25,7 +25,7 @@ export declare class ContainerDefinition extends SpeakeasyBase {
     disableNetworking?: boolean;
     dnsSearchDomains?: string[];
     dnsServers?: string[];
-    dockerLabels?: Map<string, string>;
+    dockerLabels?: Record<string, string>;
     dockerSecurityOptions?: string[];
     entryPoint?: string[];
     environment?: KeyValuePair[];

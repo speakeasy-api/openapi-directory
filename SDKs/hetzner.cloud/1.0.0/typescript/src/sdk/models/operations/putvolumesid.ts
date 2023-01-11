@@ -84,7 +84,7 @@ export class PutVolumesId200ApplicationJsonVolume extends SpeakeasyBase {
   id: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=linux_device" })
   linuxDevice: string;
@@ -129,8 +129,8 @@ export class PutVolumesIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  putVolumesId200ApplicationJsonObject?: PutVolumesId200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  putVolumesId200ApplicationJSONObject?: PutVolumesId200ApplicationJson;
 }

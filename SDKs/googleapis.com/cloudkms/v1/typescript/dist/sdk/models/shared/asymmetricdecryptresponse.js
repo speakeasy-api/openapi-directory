@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AsymmetricDecryptResponseProtectionLevelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AsymmetricDecryptResponse = exports.AsymmetricDecryptResponseProtectionLevelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AsymmetricDecryptResponseProtectionLevelEnum;
 (function (AsymmetricDecryptResponseProtectionLevelEnum) {
     AsymmetricDecryptResponseProtectionLevelEnum["ProtectionLevelUnspecified"] = "PROTECTION_LEVEL_UNSPECIFIED";
     AsymmetricDecryptResponseProtectionLevelEnum["Software"] = "SOFTWARE";
     AsymmetricDecryptResponseProtectionLevelEnum["Hsm"] = "HSM";
     AsymmetricDecryptResponseProtectionLevelEnum["External"] = "EXTERNAL";
     AsymmetricDecryptResponseProtectionLevelEnum["ExternalVpc"] = "EXTERNAL_VPC";
-})(AsymmetricDecryptResponseProtectionLevelEnum || (AsymmetricDecryptResponseProtectionLevelEnum = {}));
+})(AsymmetricDecryptResponseProtectionLevelEnum = exports.AsymmetricDecryptResponseProtectionLevelEnum || (exports.AsymmetricDecryptResponseProtectionLevelEnum = {}));
 // AsymmetricDecryptResponse
 /**
  * Response message for KeyManagementService.AsymmetricDecrypt.
@@ -41,21 +44,21 @@ var AsymmetricDecryptResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plaintext" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plaintext" }),
         __metadata("design:type", String)
     ], AsymmetricDecryptResponse.prototype, "plaintext", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plaintextCrc32c" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plaintextCrc32c" }),
         __metadata("design:type", String)
     ], AsymmetricDecryptResponse.prototype, "plaintextCrc32c", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protectionLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protectionLevel" }),
         __metadata("design:type", String)
     ], AsymmetricDecryptResponse.prototype, "protectionLevel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verifiedCiphertextCrc32c" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verifiedCiphertextCrc32c" }),
         __metadata("design:type", Boolean)
     ], AsymmetricDecryptResponse.prototype, "verifiedCiphertextCrc32c", void 0);
     return AsymmetricDecryptResponse;
-}(SpeakeasyBase));
-export { AsymmetricDecryptResponse };
+}(utils_1.SpeakeasyBase));
+exports.AsymmetricDecryptResponse = AsymmetricDecryptResponse;

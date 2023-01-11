@@ -49,7 +49,7 @@ export class PutAccountDedicatedIpWarmupAttributesResponse extends SpeakeasyBase
   contentType: string;
 
   @SpeakeasyMetadata()
-  putAccountDedicatedIpWarmupAttributesResponse?: Map<string, any>;
+  putAccountDedicatedIpWarmupAttributesResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

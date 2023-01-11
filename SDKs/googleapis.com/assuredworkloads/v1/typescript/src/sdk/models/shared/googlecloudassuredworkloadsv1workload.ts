@@ -2,15 +2,9 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus } from "./googlecloudassuredworkloadsv1workloadcompliancestatus";
 import { GoogleCloudAssuredworkloadsV1WorkloadKmsSettings } from "./googlecloudassuredworkloadsv1workloadkmssettings";
 import { GoogleCloudAssuredworkloadsV1WorkloadResourceSettings } from "./googlecloudassuredworkloadsv1workloadresourcesettings";
-import { GoogleCloudAssuredworkloadsV1WorkloadResourceInfo } from "./googlecloudassuredworkloadsv1workloadresourceinfo";
 import { GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse } from "./googlecloudassuredworkloadsv1workloadsaaenrollmentresponse";
+import { GoogleCloudAssuredworkloadsV1WorkloadResourceInfo } from "./googlecloudassuredworkloadsv1workloadresourceinfo";
 
-
-export enum GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum {
-    KajEnrollmentStateUnspecified = "KAJ_ENROLLMENT_STATE_UNSPECIFIED",
-    KajEnrollmentStatePending = "KAJ_ENROLLMENT_STATE_PENDING",
-    KajEnrollmentStateComplete = "KAJ_ENROLLMENT_STATE_COMPLETE"
-}
 
 export enum GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum {
     ComplianceRegimeUnspecified = "COMPLIANCE_REGIME_UNSPECIFIED",
@@ -33,6 +27,58 @@ export enum GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum {
     PartnerUnspecified = "PARTNER_UNSPECIFIED",
     LocalControlsByS3Ns = "LOCAL_CONTROLS_BY_S3NS",
     SovereignControlsByTSystems = "SOVEREIGN_CONTROLS_BY_T_SYSTEMS"
+}
+
+export enum GoogleCloudAssuredworkloadsV1WorkloadKajEnrollmentStateEnum {
+    KajEnrollmentStateUnspecified = "KAJ_ENROLLMENT_STATE_UNSPECIFIED",
+    KajEnrollmentStatePending = "KAJ_ENROLLMENT_STATE_PENDING",
+    KajEnrollmentStateComplete = "KAJ_ENROLLMENT_STATE_COMPLETE"
+}
+
+
+// GoogleCloudAssuredworkloadsV1WorkloadInput
+/** 
+ * A Workload object for managing highly regulated workloads of cloud customers.
+**/
+export class GoogleCloudAssuredworkloadsV1WorkloadInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=billingAccount" })
+  billingAccount?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=complianceRegime" })
+  complianceRegime?: GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=complianceStatus" })
+  complianceStatus?: GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus;
+
+  @SpeakeasyMetadata({ data: "json, name=displayName" })
+  displayName?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=enableSovereignControls" })
+  enableSovereignControls?: boolean;
+
+  @SpeakeasyMetadata({ data: "json, name=etag" })
+  etag?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=kmsSettings" })
+  kmsSettings?: GoogleCloudAssuredworkloadsV1WorkloadKmsSettings;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=partner" })
+  partner?: GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=provisionedResourcesParent" })
+  provisionedResourcesParent?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=resourceSettings", elemType: GoogleCloudAssuredworkloadsV1WorkloadResourceSettings })
+  resourceSettings?: GoogleCloudAssuredworkloadsV1WorkloadResourceSettings[];
+
+  @SpeakeasyMetadata({ data: "json, name=saaEnrollmentResponse" })
+  saaEnrollmentResponse?: GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse;
 }
 
 
@@ -72,7 +118,7 @@ export class GoogleCloudAssuredworkloadsV1Workload extends SpeakeasyBase {
   kmsSettings?: GoogleCloudAssuredworkloadsV1WorkloadKmsSettings;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -88,52 +134,6 @@ export class GoogleCloudAssuredworkloadsV1Workload extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=resources", elemType: GoogleCloudAssuredworkloadsV1WorkloadResourceInfo })
   resources?: GoogleCloudAssuredworkloadsV1WorkloadResourceInfo[];
-
-  @SpeakeasyMetadata({ data: "json, name=saaEnrollmentResponse" })
-  saaEnrollmentResponse?: GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse;
-}
-
-
-// GoogleCloudAssuredworkloadsV1WorkloadInput
-/** 
- * A Workload object for managing highly regulated workloads of cloud customers.
-**/
-export class GoogleCloudAssuredworkloadsV1WorkloadInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=billingAccount" })
-  billingAccount?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=complianceRegime" })
-  complianceRegime?: GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=complianceStatus" })
-  complianceStatus?: GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus;
-
-  @SpeakeasyMetadata({ data: "json, name=displayName" })
-  displayName?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=enableSovereignControls" })
-  enableSovereignControls?: boolean;
-
-  @SpeakeasyMetadata({ data: "json, name=etag" })
-  etag?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=kmsSettings" })
-  kmsSettings?: GoogleCloudAssuredworkloadsV1WorkloadKmsSettings;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=partner" })
-  partner?: GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=provisionedResourcesParent" })
-  provisionedResourcesParent?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=resourceSettings", elemType: GoogleCloudAssuredworkloadsV1WorkloadResourceSettings })
-  resourceSettings?: GoogleCloudAssuredworkloadsV1WorkloadResourceSettings[];
 
   @SpeakeasyMetadata({ data: "json, name=saaEnrollmentResponse" })
   saaEnrollmentResponse?: GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse;

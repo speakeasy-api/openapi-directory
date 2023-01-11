@@ -1,4 +1,4 @@
-import { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse, ParamsSerializerOptions } from "axios";
 import * as operations from "./models/operations";
 import * as utils from "../internal/utils";
 
@@ -20,451 +20,6 @@ export class Media {
   }
   
   /**
-   * getResourcesMediaFeaturedJson - Get the list of featured content in the syndication system
-   *
-   * Get the list of featured content in the syndication system
-  **/
-  getResourcesMediaFeaturedJson(
-    req: operations.GetResourcesMediaFeaturedJsonRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetResourcesMediaFeaturedJsonResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetResourcesMediaFeaturedJsonRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = baseURL.replace(/\/$/, "") + "/resources/media/featured.json";
-    
-    const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetResourcesMediaFeaturedJsonResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.mediaItems = httpRes?.data;
-            }
-            break;
-          case httpRes?.status == 400:
-            break;
-          case httpRes?.status == 500:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getResourcesMediaIdContent - Get content for MediaItem
-   *
-   * The actual media content (html, image, etc...)
-  **/
-  getResourcesMediaIdContent(
-    req: operations.GetResourcesMediaIdContentRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetResourcesMediaIdContentResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetResourcesMediaIdContentRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/media/{id}/content", req.pathParams);
-    
-    const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetResourcesMediaIdContentResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getResourcesMediaIdContent200ApplicationJsonString = JSON.stringify(httpRes?.data);
-            }
-            break;
-          case httpRes?.status == 400:
-            break;
-          case httpRes?.status == 500:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getResourcesMediaIdEmbedJson - Get embed code for MediaItem
-   *
-   * Get the javascript or iframe embed code for this item (to embed it on a web page).
-  **/
-  getResourcesMediaIdEmbedJson(
-    req: operations.GetResourcesMediaIdEmbedJsonRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetResourcesMediaIdEmbedJsonResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetResourcesMediaIdEmbedJsonRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/media/{id}/embed.json", req.pathParams);
-    
-    const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetResourcesMediaIdEmbedJsonResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getResourcesMediaIdEmbedJson200ApplicationJsonString = JSON.stringify(httpRes?.data);
-            }
-            break;
-          case httpRes?.status == 400:
-            break;
-          case httpRes?.status == 500:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getResourcesMediaIdJson - Get MediaItem by ID
-   *
-   * Information about a specific media item
-  **/
-  getResourcesMediaIdJson(
-    req: operations.GetResourcesMediaIdJsonRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetResourcesMediaIdJsonResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetResourcesMediaIdJsonRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/media/{id}.json", req.pathParams);
-    
-    const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetResourcesMediaIdJsonResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.mediaItemWrappeds = httpRes?.data;
-            }
-            break;
-          case httpRes?.status == 400:
-            break;
-          case httpRes?.status == 500:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getResourcesMediaIdPreviewJpg - Get Tag by ID
-   *
-   * Get the jpg preview of the content item where applicable.
-  **/
-  getResourcesMediaIdPreviewJpg(
-    req: operations.GetResourcesMediaIdPreviewJpgRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetResourcesMediaIdPreviewJpgResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetResourcesMediaIdPreviewJpgRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/media/{id}/preview.jpg", req.pathParams);
-    
-    const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetResourcesMediaIdPreviewJpgResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getResourcesMediaIdPreviewJpg200ApplicationJsonObject = httpRes?.data;
-            }
-            break;
-          case httpRes?.status == 400:
-            break;
-          case httpRes?.status == 500:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getResourcesMediaIdRelatedMediaFormat - Get related MediaItems by ID
-   *
-   * Get the media related to the current media item.
-  **/
-  getResourcesMediaIdRelatedMediaFormat(
-    req: operations.GetResourcesMediaIdRelatedMediaFormatRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetResourcesMediaIdRelatedMediaFormatResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetResourcesMediaIdRelatedMediaFormatRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/media/{id}/relatedMedia.{format}", req.pathParams);
-    
-    const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetResourcesMediaIdRelatedMediaFormatResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.mediaItemWrappeds = httpRes?.data;
-            }
-            break;
-          case httpRes?.status == 400:
-            break;
-          case httpRes?.status == 500:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getResourcesMediaIdSyndicateFormat - Get syndicated content for MediaItem
-   *
-   * Get syndicated content.
-  **/
-  getResourcesMediaIdSyndicateFormat(
-    req: operations.GetResourcesMediaIdSyndicateFormatRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetResourcesMediaIdSyndicateFormatResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetResourcesMediaIdSyndicateFormatRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/media/{id}/syndicate.{format}", req.pathParams);
-    
-    const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
-
-    const requestConfig: AxiosRequestConfig = {
-      ...config,
-      params: req.queryParams,
-      paramsSerializer: qpSerializer,
-    };
-    
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetResourcesMediaIdSyndicateFormatResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.syndicateMarshallerWrapped = httpRes?.data;
-            }
-            break;
-          case httpRes?.status == 400:
-            break;
-          case httpRes?.status == 500:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getResourcesMediaIdThumbnailJpg - Get JPG thumbnail for MediaItem
-   *
-   * Get the jpg thumbnail of the content item where applicable.
-  **/
-  getResourcesMediaIdThumbnailJpg(
-    req: operations.GetResourcesMediaIdThumbnailJpgRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetResourcesMediaIdThumbnailJpgResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetResourcesMediaIdThumbnailJpgRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/media/{id}/thumbnail.jpg", req.pathParams);
-    
-    const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetResourcesMediaIdThumbnailJpgResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getResourcesMediaIdThumbnailJpg200ApplicationJsonObject = httpRes?.data;
-            }
-            break;
-          case httpRes?.status == 400:
-            break;
-          case httpRes?.status == 500:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
-   * getResourcesMediaIdYoutubeMetaDataJson - Get Youtube metadata for MediaItem
-   *
-   * Youtube meta-data for a video item.
-  **/
-  getResourcesMediaIdYoutubeMetaDataJson(
-    req: operations.GetResourcesMediaIdYoutubeMetaDataJsonRequest,
-    config?: AxiosRequestConfig
-  ): Promise<operations.GetResourcesMediaIdYoutubeMetaDataJsonResponse> {
-    if (!(req instanceof utils.SpeakeasyBase)) {
-      req = new operations.GetResourcesMediaIdYoutubeMetaDataJsonRequest(req);
-    }
-    
-    const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/media/{id}/youtubeMetaData.json", req.pathParams);
-    
-    const client: AxiosInstance = this._defaultClient!;
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...config,
-      }).then((httpRes: AxiosResponse) => {
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
-
-        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
-        const res: operations.GetResourcesMediaIdYoutubeMetaDataJsonResponse = {statusCode: httpRes.status, contentType: contentType};
-        switch (true) {
-          case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
-                res.getResourcesMediaIdYoutubeMetaDataJson200ApplicationJsonObject = httpRes?.data;
-            }
-            break;
-          case httpRes?.status == 400:
-            break;
-          case httpRes?.status == 500:
-            break;
-        }
-
-        return res;
-      })
-      .catch((error: AxiosError) => {throw error});
-  }
-
-  
-  /**
    * getResourcesMediaJson - Get MediaItems
    *
    * Media Items Listings
@@ -481,7 +36,7 @@ export class Media {
     const url: string = baseURL.replace(/\/$/, "") + "/resources/media.json";
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -489,19 +44,21 @@ export class Media {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetResourcesMediaJsonResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.mediaItemWrappeds = httpRes?.data;
             }
             break;
@@ -513,7 +70,60 @@ export class Media {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
+  }
+
+  
+  /**
+   * getResourcesMediaFeaturedJson - Get the list of featured content in the syndication system
+   *
+   * Get the list of featured content in the syndication system
+  **/
+  getResourcesMediaFeaturedJson(
+    req: operations.GetResourcesMediaFeaturedJsonRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetResourcesMediaFeaturedJsonResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetResourcesMediaFeaturedJsonRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/resources/media/featured.json";
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetResourcesMediaFeaturedJsonResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.mediaItems = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            break;
+          case httpRes?.status == 500:
+            break;
+        }
+
+        return res;
+      })
   }
 
   
@@ -531,10 +141,10 @@ export class Media {
     }
     
     const baseURL: string = this._serverURL;
-    const url: string = utils.GenerateURL(baseURL, "/resources/media/mostPopularMedia.{format}", req.pathParams);
+    const url: string = utils.generateURL(baseURL, "/resources/media/mostPopularMedia.{format}", req.pathParams);
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -542,19 +152,21 @@ export class Media {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetResourcesMediaMostPopularMediaFormatResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.mediaItemWrappeds = httpRes?.data;
             }
             break;
@@ -566,7 +178,6 @@ export class Media {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
   }
 
   
@@ -587,7 +198,7 @@ export class Media {
     const url: string = baseURL.replace(/\/$/, "") + "/resources/media/searchResults.json";
     
     const client: AxiosInstance = this._defaultClient!;
-    const qpSerializer: ParamsSerializerOptions = utils.GetQueryParamSerializer(req.queryParams);
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
 
     const requestConfig: AxiosRequestConfig = {
       ...config,
@@ -595,19 +206,21 @@ export class Media {
       paramsSerializer: qpSerializer,
     };
     
-    return client
-      .request({
-        url: url,
-        method: "get",
-        ...requestConfig,
-      }).then((httpRes: AxiosResponse) => {
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
         const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
         const res: operations.GetResourcesMediaSearchResultsJsonResponse = {statusCode: httpRes.status, contentType: contentType};
         switch (true) {
           case httpRes?.status == 200:
-            if (utils.MatchContentType(contentType, `application/json`)) {
+            if (utils.matchContentType(contentType, `application/json`)) {
                 res.mediaItemWrappeds = httpRes?.data;
             }
             break;
@@ -619,7 +232,406 @@ export class Media {
 
         return res;
       })
-      .catch((error: AxiosError) => {throw error});
+  }
+
+  
+  /**
+   * getResourcesMediaIdJson - Get MediaItem by ID
+   *
+   * Information about a specific media item
+  **/
+  getResourcesMediaIdJson(
+    req: operations.GetResourcesMediaIdJsonRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetResourcesMediaIdJsonResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetResourcesMediaIdJsonRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/resources/media/{id}.json", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetResourcesMediaIdJsonResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.mediaItemWrappeds = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            break;
+          case httpRes?.status == 500:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getResourcesMediaIdContent - Get content for MediaItem
+   *
+   * The actual media content (html, image, etc...)
+  **/
+  getResourcesMediaIdContent(
+    req: operations.GetResourcesMediaIdContentRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetResourcesMediaIdContentResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetResourcesMediaIdContentRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/resources/media/{id}/content", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetResourcesMediaIdContentResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getResourcesMediaIdContent200ApplicationJSONString = JSON.stringify(httpRes?.data);
+            }
+            break;
+          case httpRes?.status == 400:
+            break;
+          case httpRes?.status == 500:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getResourcesMediaIdEmbedJson - Get embed code for MediaItem
+   *
+   * Get the javascript or iframe embed code for this item (to embed it on a web page).
+  **/
+  getResourcesMediaIdEmbedJson(
+    req: operations.GetResourcesMediaIdEmbedJsonRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetResourcesMediaIdEmbedJsonResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetResourcesMediaIdEmbedJsonRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/resources/media/{id}/embed.json", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetResourcesMediaIdEmbedJsonResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getResourcesMediaIdEmbedJSON200ApplicationJSONString = JSON.stringify(httpRes?.data);
+            }
+            break;
+          case httpRes?.status == 400:
+            break;
+          case httpRes?.status == 500:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getResourcesMediaIdPreviewJpg - Get Tag by ID
+   *
+   * Get the jpg preview of the content item where applicable.
+  **/
+  getResourcesMediaIdPreviewJpg(
+    req: operations.GetResourcesMediaIdPreviewJpgRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetResourcesMediaIdPreviewJpgResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetResourcesMediaIdPreviewJpgRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/resources/media/{id}/preview.jpg", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetResourcesMediaIdPreviewJpgResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getResourcesMediaIdPreviewJpg200ApplicationJSONObject = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            break;
+          case httpRes?.status == 500:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getResourcesMediaIdRelatedMediaFormat - Get related MediaItems by ID
+   *
+   * Get the media related to the current media item.
+  **/
+  getResourcesMediaIdRelatedMediaFormat(
+    req: operations.GetResourcesMediaIdRelatedMediaFormatRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetResourcesMediaIdRelatedMediaFormatResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetResourcesMediaIdRelatedMediaFormatRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/resources/media/{id}/relatedMedia.{format}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetResourcesMediaIdRelatedMediaFormatResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.mediaItemWrappeds = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            break;
+          case httpRes?.status == 500:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getResourcesMediaIdSyndicateFormat - Get syndicated content for MediaItem
+   *
+   * Get syndicated content.
+  **/
+  getResourcesMediaIdSyndicateFormat(
+    req: operations.GetResourcesMediaIdSyndicateFormatRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetResourcesMediaIdSyndicateFormatResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetResourcesMediaIdSyndicateFormatRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/resources/media/{id}/syndicate.{format}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const qpSerializer: ParamsSerializerOptions = utils.getQueryParamSerializer(req.queryParams);
+
+    const requestConfig: AxiosRequestConfig = {
+      ...config,
+      params: req.queryParams,
+      paramsSerializer: qpSerializer,
+    };
+    
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...requestConfig,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetResourcesMediaIdSyndicateFormatResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.syndicateMarshallerWrapped = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            break;
+          case httpRes?.status == 500:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getResourcesMediaIdThumbnailJpg - Get JPG thumbnail for MediaItem
+   *
+   * Get the jpg thumbnail of the content item where applicable.
+  **/
+  getResourcesMediaIdThumbnailJpg(
+    req: operations.GetResourcesMediaIdThumbnailJpgRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetResourcesMediaIdThumbnailJpgResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetResourcesMediaIdThumbnailJpgRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/resources/media/{id}/thumbnail.jpg", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetResourcesMediaIdThumbnailJpgResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getResourcesMediaIdThumbnailJpg200ApplicationJSONObject = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            break;
+          case httpRes?.status == 500:
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getResourcesMediaIdYoutubeMetaDataJson - Get Youtube metadata for MediaItem
+   *
+   * Youtube meta-data for a video item.
+  **/
+  getResourcesMediaIdYoutubeMetaDataJson(
+    req: operations.GetResourcesMediaIdYoutubeMetaDataJsonRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetResourcesMediaIdYoutubeMetaDataJsonResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetResourcesMediaIdYoutubeMetaDataJsonRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/resources/media/{id}/youtubeMetaData.json", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetResourcesMediaIdYoutubeMetaDataJsonResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.getResourcesMediaIdYoutubeMetaDataJSON200ApplicationJSONObject = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 400:
+            break;
+          case httpRes?.status == 500:
+            break;
+        }
+
+        return res;
+      })
   }
 
 }

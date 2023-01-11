@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudContactcenterinsightsV1ExactMatchConfig } from "./googlecloudcontactcenterinsightsv1exactmatchconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudcontactcenterinsightsv1exactmatchconfig_1 = require("./googlecloudcontactcenterinsightsv1exactmatchconfig");
 // GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig
 /**
  * Configuration information of a phrase match rule.
@@ -34,9 +37,9 @@ var GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig = /** @class */ (fun
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exactMatchConfig" }),
-        __metadata("design:type", GoogleCloudContactcenterinsightsV1ExactMatchConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exactMatchConfig" }),
+        __metadata("design:type", googlecloudcontactcenterinsightsv1exactmatchconfig_1.GoogleCloudContactcenterinsightsV1ExactMatchConfig)
     ], GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig.prototype, "exactMatchConfig", void 0);
     return GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig;
-}(SpeakeasyBase));
-export { GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig = GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig;

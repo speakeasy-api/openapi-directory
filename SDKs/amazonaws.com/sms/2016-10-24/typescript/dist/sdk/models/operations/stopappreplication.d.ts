@@ -24,6 +24,6 @@ export declare class StopAppReplicationResponse extends SpeakeasyBase {
     missingRequiredParameterException?: any;
     operationNotPermittedException?: any;
     statusCode: number;
-    stopAppReplicationResponse?: Map<string, any>;
+    stopAppReplicationResponse?: Record<string, any>;
     unauthorizedOperationException?: any;
 }

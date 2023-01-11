@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceCameraWirelessProfilesResponse = exports.GetDeviceCameraWirelessProfilesRequest = exports.GetDeviceCameraWirelessProfilesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceCameraWirelessProfilesPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceCameraWirelessProfilesPathParams, _super);
     function GetDeviceCameraWirelessProfilesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceCameraWirelessProfilesPathParams.prototype, "serial", void 0);
     return GetDeviceCameraWirelessProfilesPathParams;
-}(SpeakeasyBase));
-export { GetDeviceCameraWirelessProfilesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCameraWirelessProfilesPathParams = GetDeviceCameraWirelessProfilesPathParams;
 var GetDeviceCameraWirelessProfilesRequest = /** @class */ (function (_super) {
     __extends(GetDeviceCameraWirelessProfilesRequest, _super);
     function GetDeviceCameraWirelessProfilesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceCameraWirelessProfilesPathParams)
     ], GetDeviceCameraWirelessProfilesRequest.prototype, "pathParams", void 0);
     return GetDeviceCameraWirelessProfilesRequest;
-}(SpeakeasyBase));
-export { GetDeviceCameraWirelessProfilesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCameraWirelessProfilesRequest = GetDeviceCameraWirelessProfilesRequest;
 var GetDeviceCameraWirelessProfilesResponse = /** @class */ (function (_super) {
     __extends(GetDeviceCameraWirelessProfilesResponse, _super);
     function GetDeviceCameraWirelessProfilesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceCameraWirelessProfilesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceCameraWirelessProfilesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceCameraWirelessProfilesResponse.prototype, "getDeviceCameraWirelessProfiles200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceCameraWirelessProfilesResponse.prototype, "getDeviceCameraWirelessProfiles200ApplicationJSONObject", void 0);
     return GetDeviceCameraWirelessProfilesResponse;
-}(SpeakeasyBase));
-export { GetDeviceCameraWirelessProfilesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCameraWirelessProfilesResponse = GetDeviceCameraWirelessProfilesResponse;

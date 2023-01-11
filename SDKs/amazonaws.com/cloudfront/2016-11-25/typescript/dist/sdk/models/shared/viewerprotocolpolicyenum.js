@@ -1,6 +1,9 @@
-export var ViewerProtocolPolicyEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ViewerProtocolPolicyEnum = void 0;
+var ViewerProtocolPolicyEnum;
 (function (ViewerProtocolPolicyEnum) {
     ViewerProtocolPolicyEnum["AllowAll"] = "allow-all";
     ViewerProtocolPolicyEnum["HttpsOnly"] = "https-only";
     ViewerProtocolPolicyEnum["RedirectToHttps"] = "redirect-to-https";
-})(ViewerProtocolPolicyEnum || (ViewerProtocolPolicyEnum = {}));
+})(ViewerProtocolPolicyEnum = exports.ViewerProtocolPolicyEnum || (exports.ViewerProtocolPolicyEnum = {}));

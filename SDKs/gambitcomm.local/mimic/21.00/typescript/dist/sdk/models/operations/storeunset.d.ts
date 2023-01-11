@@ -8,5 +8,5 @@ export declare class StoreUnsetRequest extends SpeakeasyBase {
 export declare class StoreUnsetResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    storeUnset200ApplicationJsonString?: string;
+    storeUnset200ApplicationJSONString?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutContainersQuotaResponse = exports.PutContainersQuotaRequest = exports.PutContainersQuotaHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
 var PutContainersQuotaHeaders = /** @class */ (function (_super) {
     __extends(PutContainersQuotaHeaders, _super);
     function PutContainersQuotaHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
         __metadata("design:type", String)
     ], PutContainersQuotaHeaders.prototype, "xAuthProjectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
         __metadata("design:type", String)
     ], PutContainersQuotaHeaders.prototype, "xAuthToken", void 0);
     return PutContainersQuotaHeaders;
-}(SpeakeasyBase));
-export { PutContainersQuotaHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PutContainersQuotaHeaders = PutContainersQuotaHeaders;
 var PutContainersQuotaRequest = /** @class */ (function (_super) {
     __extends(PutContainersQuotaRequest, _super);
     function PutContainersQuotaRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PutContainersQuotaHeaders)
     ], PutContainersQuotaRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], PutContainersQuotaRequest.prototype, "request", void 0);
     return PutContainersQuotaRequest;
-}(SpeakeasyBase));
-export { PutContainersQuotaRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutContainersQuotaRequest = PutContainersQuotaRequest;
 var PutContainersQuotaResponse = /** @class */ (function (_super) {
     __extends(PutContainersQuotaResponse, _super);
     function PutContainersQuotaResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PutContainersQuotaResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PutContainersQuotaResponse.prototype, "statusCode", void 0);
     return PutContainersQuotaResponse;
-}(SpeakeasyBase));
-export { PutContainersQuotaResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutContainersQuotaResponse = PutContainersQuotaResponse;

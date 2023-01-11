@@ -4,7 +4,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 export class GetLastEditedUsingPostQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -31,7 +31,7 @@ export class GetLastEditedUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -43,7 +43,7 @@ export class GetLastEditedUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -55,7 +55,7 @@ export class GetLastEditedUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -76,14 +76,14 @@ export class GetLastEditedUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getLastEditedUsingPost200ApplicationJsonObject?: GetLastEditedUsingPost200ApplicationJson;
+  getLastEditedUsingPOST200ApplicationJSONObject?: GetLastEditedUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  getLastEditedUsingPost400ApplicationJsonObject?: GetLastEditedUsingPost400ApplicationJson;
+  getLastEditedUsingPOST400ApplicationJSONObject?: GetLastEditedUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  getLastEditedUsingPost401ApplicationJsonObject?: GetLastEditedUsingPost401ApplicationJson;
+  getLastEditedUsingPOST401ApplicationJSONObject?: GetLastEditedUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  getLastEditedUsingPost500ApplicationJsonObject?: GetLastEditedUsingPost500ApplicationJson;
+  getLastEditedUsingPOST500ApplicationJSONObject?: GetLastEditedUsingPost500ApplicationJson;
 }

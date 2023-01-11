@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaWriteControl } from "./googleappsdrivelabelsv2betawritecontrol";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaPublishLabelRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betawritecontrol_1 = require("./googleappsdrivelabelsv2betawritecontrol");
 // GoogleAppsDriveLabelsV2betaPublishLabelRequest
 /**
  * Request to publish a label.
@@ -34,17 +37,17 @@ var GoogleAppsDriveLabelsV2betaPublishLabelRequest = /** @class */ (function (_s
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], GoogleAppsDriveLabelsV2betaPublishLabelRequest.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useAdminAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useAdminAccess" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2betaPublishLabelRequest.prototype, "useAdminAccess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=writeControl" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaWriteControl)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=writeControl" }),
+        __metadata("design:type", googleappsdrivelabelsv2betawritecontrol_1.GoogleAppsDriveLabelsV2betaWriteControl)
     ], GoogleAppsDriveLabelsV2betaPublishLabelRequest.prototype, "writeControl", void 0);
     return GoogleAppsDriveLabelsV2betaPublishLabelRequest;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaPublishLabelRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaPublishLabelRequest = GoogleAppsDriveLabelsV2betaPublishLabelRequest;

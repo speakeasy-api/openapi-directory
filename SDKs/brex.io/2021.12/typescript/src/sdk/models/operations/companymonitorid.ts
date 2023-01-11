@@ -26,10 +26,10 @@ export class CompanyMonitorIdRequest extends SpeakeasyBase {
 
 export class CompanyMonitorIdResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  companyMonitorId200ApplicationJsonAnies?: any[];
+  companyMonitorId200ApplicationJSONAnies?: any[];
 
   @SpeakeasyMetadata()
-  companyMonitorIdDefaultApplicationJsonAny?: any;
+  companyMonitorIdDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   contentType: string;

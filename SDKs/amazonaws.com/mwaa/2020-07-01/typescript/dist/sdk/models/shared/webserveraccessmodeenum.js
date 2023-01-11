@@ -1,5 +1,8 @@
-export var WebserverAccessModeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebserverAccessModeEnum = void 0;
+var WebserverAccessModeEnum;
 (function (WebserverAccessModeEnum) {
     WebserverAccessModeEnum["PrivateOnly"] = "PRIVATE_ONLY";
     WebserverAccessModeEnum["PublicOnly"] = "PUBLIC_ONLY";
-})(WebserverAccessModeEnum || (WebserverAccessModeEnum = {}));
+})(WebserverAccessModeEnum = exports.WebserverAccessModeEnum || (exports.WebserverAccessModeEnum = {}));

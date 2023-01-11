@@ -6,7 +6,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GoogleCloudPrivatecatalogV1beta1Product extends SpeakeasyBase {
     assetType?: string;
     createTime?: string;
-    displayMetadata?: Map<string, any>;
+    displayMetadata?: Record<string, any>;
     iconUri?: string;
     name?: string;
     updateTime?: string;

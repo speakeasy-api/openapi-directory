@@ -99,7 +99,7 @@ export declare class PostOrdersSecurity extends SpeakeasyBase {
     fdcAuth: shared.SchemeFdcAuth;
 }
 export declare class PostOrdersErrorStandardWithContextV2 extends SpeakeasyBase {
-    context?: Map<string, any>[];
+    context?: Record<string, any>[];
     message?: string;
 }
 /**

@@ -5,7 +5,7 @@ export declare class Team extends SpeakeasyBase {
     country?: string;
     gmapsPlaceId?: string;
     gmapsUrl?: string;
-    homeChampionship?: Map<string, any>;
+    homeChampionship?: Record<string, any>;
     key: string;
     lat?: number;
     lng?: number;

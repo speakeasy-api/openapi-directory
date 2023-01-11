@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArticleAndParentComment } from "./articleandparentcomment";
-import { TextEntry } from "./textentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Context = void 0;
+var utils_1 = require("../../../internal/utils");
+var articleandparentcomment_1 = require("./articleandparentcomment");
+var textentry_1 = require("./textentry");
 // Context
 /**
  * Context is typically something that a Comment is referencing or replying to (such as an article, or previous comment). Note: Populate only ONE OF the following fields. The oneof syntax cannot be used because that would require nesting entries inside another message and breaking backwards compatibility. The server will return an error if more than one of the following fields is present.
@@ -35,13 +38,13 @@ var Context = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=articleAndParentComment" }),
-        __metadata("design:type", ArticleAndParentComment)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=articleAndParentComment" }),
+        __metadata("design:type", articleandparentcomment_1.ArticleAndParentComment)
     ], Context.prototype, "articleAndParentComment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entries", elemType: TextEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entries", elemType: textentry_1.TextEntry }),
         __metadata("design:type", Array)
     ], Context.prototype, "entries", void 0);
     return Context;
-}(SpeakeasyBase));
-export { Context };
+}(utils_1.SpeakeasyBase));
+exports.Context = Context;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HistogramEntry } from "./histogramentry";
-import { Edge } from "./edge";
-import { ServiceStatistics } from "./servicestatistics";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Service = void 0;
+var utils_1 = require("../../../internal/utils");
+var histogramentry_1 = require("./histogramentry");
+var edge_1 = require("./edge");
+var servicestatistics_1 = require("./servicestatistics");
 // Service
 /**
  * Information about an application that processed requests, users that made requests, or downstream services, resources, and applications that an application used.
@@ -36,57 +39,57 @@ var Service = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountId" }),
         __metadata("design:type", String)
     ], Service.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DurationHistogram", elemType: HistogramEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DurationHistogram", elemType: histogramentry_1.HistogramEntry }),
         __metadata("design:type", Array)
     ], Service.prototype, "durationHistogram", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Edges", elemType: Edge }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Edges", elemType: edge_1.Edge }),
         __metadata("design:type", Array)
     ], Service.prototype, "edges", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndTime" }),
         __metadata("design:type", Date)
     ], Service.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], Service.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Names" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Names" }),
         __metadata("design:type", Array)
     ], Service.prototype, "names", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReferenceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReferenceId" }),
         __metadata("design:type", Number)
     ], Service.prototype, "referenceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResponseTimeHistogram", elemType: HistogramEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResponseTimeHistogram", elemType: histogramentry_1.HistogramEntry }),
         __metadata("design:type", Array)
     ], Service.prototype, "responseTimeHistogram", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Root" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Root" }),
         __metadata("design:type", Boolean)
     ], Service.prototype, "root", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartTime" }),
         __metadata("design:type", Date)
     ], Service.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], Service.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SummaryStatistics" }),
-        __metadata("design:type", ServiceStatistics)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SummaryStatistics" }),
+        __metadata("design:type", servicestatistics_1.ServiceStatistics)
     ], Service.prototype, "summaryStatistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], Service.prototype, "type", void 0);
     return Service;
-}(SpeakeasyBase));
-export { Service };
+}(utils_1.SpeakeasyBase));
+exports.Service = Service;

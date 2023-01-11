@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,53 +14,78 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMediaResponse = exports.GetMediaRequest = exports.GetMediaRequestBody = exports.GetMediaRequestBodyStartSelector = exports.GetMediaHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetMediaHeaders = /** @class */ (function (_super) {
     __extends(GetMediaHeaders, _super);
     function GetMediaHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetMediaHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetMediaHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetMediaHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetMediaHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetMediaHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetMediaHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetMediaHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetMediaHeaders;
-}(SpeakeasyBase));
-export { GetMediaHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetMediaHeaders = GetMediaHeaders;
 // GetMediaRequestBodyStartSelector
 /**
  * <p>Identifies the chunk on the Kinesis video stream where you want the <code>GetMedia</code> API to start returning media data. You have the following options to identify the starting chunk: </p> <ul> <li> <p>Choose the latest (or oldest) chunk.</p> </li> <li> <p>Identify a specific chunk. You can identify a specific chunk either by providing a fragment number or timestamp (server or producer). </p> </li> <li> <p>Each chunk's metadata includes a continuation token as a Matroska (MKV) tag (<code>AWS_KINESISVIDEO_CONTINUATION_TOKEN</code>). If your previous <code>GetMedia</code> request terminated, you can use this tag value in your next <code>GetMedia</code> request. The API then starts returning chunks starting where the last API ended.</p> </li> </ul>
@@ -70,101 +96,101 @@ var GetMediaRequestBodyStartSelector = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AfterFragmentNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AfterFragmentNumber" }),
         __metadata("design:type", String)
     ], GetMediaRequestBodyStartSelector.prototype, "afterFragmentNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ContinuationToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ContinuationToken" }),
         __metadata("design:type", String)
     ], GetMediaRequestBodyStartSelector.prototype, "continuationToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartSelectorType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartSelectorType" }),
         __metadata("design:type", String)
     ], GetMediaRequestBodyStartSelector.prototype, "startSelectorType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartTimestamp" }),
         __metadata("design:type", Date)
     ], GetMediaRequestBodyStartSelector.prototype, "startTimestamp", void 0);
     return GetMediaRequestBodyStartSelector;
-}(SpeakeasyBase));
-export { GetMediaRequestBodyStartSelector };
+}(utils_1.SpeakeasyBase));
+exports.GetMediaRequestBodyStartSelector = GetMediaRequestBodyStartSelector;
 var GetMediaRequestBody = /** @class */ (function (_super) {
     __extends(GetMediaRequestBody, _super);
     function GetMediaRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartSelector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartSelector" }),
         __metadata("design:type", GetMediaRequestBodyStartSelector)
     ], GetMediaRequestBody.prototype, "startSelector", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StreamARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StreamARN" }),
         __metadata("design:type", String)
-    ], GetMediaRequestBody.prototype, "streamArn", void 0);
+    ], GetMediaRequestBody.prototype, "streamARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StreamName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StreamName" }),
         __metadata("design:type", String)
     ], GetMediaRequestBody.prototype, "streamName", void 0);
     return GetMediaRequestBody;
-}(SpeakeasyBase));
-export { GetMediaRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.GetMediaRequestBody = GetMediaRequestBody;
 var GetMediaRequest = /** @class */ (function (_super) {
     __extends(GetMediaRequest, _super);
     function GetMediaRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMediaHeaders)
     ], GetMediaRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", GetMediaRequestBody)
     ], GetMediaRequest.prototype, "request", void 0);
     return GetMediaRequest;
-}(SpeakeasyBase));
-export { GetMediaRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMediaRequest = GetMediaRequest;
 var GetMediaResponse = /** @class */ (function (_super) {
     __extends(GetMediaResponse, _super);
     function GetMediaResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetMediaResponse.prototype, "clientLimitExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetMediaResponse.prototype, "connectionLimitExceededException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMediaResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.GetMediaOutput)
     ], GetMediaResponse.prototype, "getMediaOutput", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetMediaResponse.prototype, "invalidArgumentException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetMediaResponse.prototype, "invalidEndpointException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetMediaResponse.prototype, "notAuthorizedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetMediaResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMediaResponse.prototype, "statusCode", void 0);
     return GetMediaResponse;
-}(SpeakeasyBase));
-export { GetMediaResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMediaResponse = GetMediaResponse;

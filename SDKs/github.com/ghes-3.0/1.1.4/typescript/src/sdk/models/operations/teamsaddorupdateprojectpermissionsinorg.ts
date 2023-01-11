@@ -52,5 +52,5 @@ export class TeamsAddOrUpdateProjectPermissionsInOrgResponse extends SpeakeasyBa
   statusCode: number;
 
   @SpeakeasyMetadata()
-  teamsAddOrUpdateProjectPermissionsInOrg403ApplicationJsonObject?: TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJson;
+  teamsAddOrUpdateProjectPermissionsInOrg403ApplicationJSONObject?: TeamsAddOrUpdateProjectPermissionsInOrg403ApplicationJson;
 }

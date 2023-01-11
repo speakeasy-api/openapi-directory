@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ShowFollow = exports.ShowFollowEmbedded = void 0;
+var utils_1 = require("../../../internal/utils");
 var ShowFollowEmbedded = /** @class */ (function (_super) {
     __extends(ShowFollowEmbedded, _super);
     function ShowFollowEmbedded() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=show" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=show" }),
+        __metadata("design:type", Object)
     ], ShowFollowEmbedded.prototype, "show", void 0);
     return ShowFollowEmbedded;
-}(SpeakeasyBase));
-export { ShowFollowEmbedded };
+}(utils_1.SpeakeasyBase));
+exports.ShowFollowEmbedded = ShowFollowEmbedded;
 var ShowFollow = /** @class */ (function (_super) {
     __extends(ShowFollow, _super);
     function ShowFollow() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_embedded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_embedded" }),
         __metadata("design:type", ShowFollowEmbedded)
     ], ShowFollow.prototype, "embedded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=show_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=show_id" }),
         __metadata("design:type", Number)
     ], ShowFollow.prototype, "showId", void 0);
     return ShowFollow;
-}(SpeakeasyBase));
-export { ShowFollow };
+}(utils_1.SpeakeasyBase));
+exports.ShowFollow = ShowFollow;

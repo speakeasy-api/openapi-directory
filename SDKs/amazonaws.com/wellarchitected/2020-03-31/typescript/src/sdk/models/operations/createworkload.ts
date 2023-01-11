@@ -73,7 +73,7 @@ export class CreateWorkloadRequestBody extends SpeakeasyBase {
   reviewOwner: string;
 
   @SpeakeasyMetadata({ data: "json, name=Tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=WorkloadName" })
   workloadName: string;

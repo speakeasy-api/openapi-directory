@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LiveChatFanFundingEventDetails } from "./livechatfanfundingeventdetails";
-import { LiveChatGiftMembershipReceivedDetails } from "./livechatgiftmembershipreceiveddetails";
-import { LiveChatMemberMilestoneChatDetails } from "./livechatmembermilestonechatdetails";
-import { LiveChatMembershipGiftingDetails } from "./livechatmembershipgiftingdetails";
-import { LiveChatMessageDeletedDetails } from "./livechatmessagedeleteddetails";
-import { LiveChatMessageRetractedDetails } from "./livechatmessageretracteddetails";
-import { LiveChatNewSponsorDetails } from "./livechatnewsponsordetails";
-import { LiveChatSuperChatDetails } from "./livechatsuperchatdetails";
-import { LiveChatSuperStickerDetails } from "./livechatsuperstickerdetails";
-import { LiveChatTextMessageDetails } from "./livechattextmessagedetails";
-import { LiveChatUserBannedMessageDetails } from "./livechatuserbannedmessagedetails";
-export var LiveChatMessageSnippetTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiveChatMessageSnippet = exports.LiveChatMessageSnippetTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var livechatfanfundingeventdetails_1 = require("./livechatfanfundingeventdetails");
+var livechatgiftmembershipreceiveddetails_1 = require("./livechatgiftmembershipreceiveddetails");
+var livechatmembermilestonechatdetails_1 = require("./livechatmembermilestonechatdetails");
+var livechatmembershipgiftingdetails_1 = require("./livechatmembershipgiftingdetails");
+var livechatmessagedeleteddetails_1 = require("./livechatmessagedeleteddetails");
+var livechatmessageretracteddetails_1 = require("./livechatmessageretracteddetails");
+var livechatnewsponsordetails_1 = require("./livechatnewsponsordetails");
+var livechatsuperchatdetails_1 = require("./livechatsuperchatdetails");
+var livechatsuperstickerdetails_1 = require("./livechatsuperstickerdetails");
+var livechattextmessagedetails_1 = require("./livechattextmessagedetails");
+var livechatuserbannedmessagedetails_1 = require("./livechatuserbannedmessagedetails");
+var LiveChatMessageSnippetTypeEnum;
 (function (LiveChatMessageSnippetTypeEnum) {
     LiveChatMessageSnippetTypeEnum["InvalidType"] = "invalidType";
     LiveChatMessageSnippetTypeEnum["TextMessageEvent"] = "textMessageEvent";
@@ -52,7 +55,7 @@ export var LiveChatMessageSnippetTypeEnum;
     LiveChatMessageSnippetTypeEnum["UserBannedEvent"] = "userBannedEvent";
     LiveChatMessageSnippetTypeEnum["SuperChatEvent"] = "superChatEvent";
     LiveChatMessageSnippetTypeEnum["SuperStickerEvent"] = "superStickerEvent";
-})(LiveChatMessageSnippetTypeEnum || (LiveChatMessageSnippetTypeEnum = {}));
+})(LiveChatMessageSnippetTypeEnum = exports.LiveChatMessageSnippetTypeEnum || (exports.LiveChatMessageSnippetTypeEnum = {}));
 // LiveChatMessageSnippet
 /**
  * Next ID: 33
@@ -63,73 +66,73 @@ var LiveChatMessageSnippet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorChannelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorChannelId" }),
         __metadata("design:type", String)
     ], LiveChatMessageSnippet.prototype, "authorChannelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayMessage" }),
         __metadata("design:type", String)
     ], LiveChatMessageSnippet.prototype, "displayMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fanFundingEventDetails" }),
-        __metadata("design:type", LiveChatFanFundingEventDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fanFundingEventDetails" }),
+        __metadata("design:type", livechatfanfundingeventdetails_1.LiveChatFanFundingEventDetails)
     ], LiveChatMessageSnippet.prototype, "fanFundingEventDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=giftMembershipReceivedDetails" }),
-        __metadata("design:type", LiveChatGiftMembershipReceivedDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=giftMembershipReceivedDetails" }),
+        __metadata("design:type", livechatgiftmembershipreceiveddetails_1.LiveChatGiftMembershipReceivedDetails)
     ], LiveChatMessageSnippet.prototype, "giftMembershipReceivedDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasDisplayContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasDisplayContent" }),
         __metadata("design:type", Boolean)
     ], LiveChatMessageSnippet.prototype, "hasDisplayContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=liveChatId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=liveChatId" }),
         __metadata("design:type", String)
     ], LiveChatMessageSnippet.prototype, "liveChatId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memberMilestoneChatDetails" }),
-        __metadata("design:type", LiveChatMemberMilestoneChatDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memberMilestoneChatDetails" }),
+        __metadata("design:type", livechatmembermilestonechatdetails_1.LiveChatMemberMilestoneChatDetails)
     ], LiveChatMessageSnippet.prototype, "memberMilestoneChatDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membershipGiftingDetails" }),
-        __metadata("design:type", LiveChatMembershipGiftingDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membershipGiftingDetails" }),
+        __metadata("design:type", livechatmembershipgiftingdetails_1.LiveChatMembershipGiftingDetails)
     ], LiveChatMessageSnippet.prototype, "membershipGiftingDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageDeletedDetails" }),
-        __metadata("design:type", LiveChatMessageDeletedDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageDeletedDetails" }),
+        __metadata("design:type", livechatmessagedeleteddetails_1.LiveChatMessageDeletedDetails)
     ], LiveChatMessageSnippet.prototype, "messageDeletedDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messageRetractedDetails" }),
-        __metadata("design:type", LiveChatMessageRetractedDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messageRetractedDetails" }),
+        __metadata("design:type", livechatmessageretracteddetails_1.LiveChatMessageRetractedDetails)
     ], LiveChatMessageSnippet.prototype, "messageRetractedDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newSponsorDetails" }),
-        __metadata("design:type", LiveChatNewSponsorDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newSponsorDetails" }),
+        __metadata("design:type", livechatnewsponsordetails_1.LiveChatNewSponsorDetails)
     ], LiveChatMessageSnippet.prototype, "newSponsorDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishedAt" }),
         __metadata("design:type", Date)
     ], LiveChatMessageSnippet.prototype, "publishedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=superChatDetails" }),
-        __metadata("design:type", LiveChatSuperChatDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=superChatDetails" }),
+        __metadata("design:type", livechatsuperchatdetails_1.LiveChatSuperChatDetails)
     ], LiveChatMessageSnippet.prototype, "superChatDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=superStickerDetails" }),
-        __metadata("design:type", LiveChatSuperStickerDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=superStickerDetails" }),
+        __metadata("design:type", livechatsuperstickerdetails_1.LiveChatSuperStickerDetails)
     ], LiveChatMessageSnippet.prototype, "superStickerDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textMessageDetails" }),
-        __metadata("design:type", LiveChatTextMessageDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textMessageDetails" }),
+        __metadata("design:type", livechattextmessagedetails_1.LiveChatTextMessageDetails)
     ], LiveChatMessageSnippet.prototype, "textMessageDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], LiveChatMessageSnippet.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userBannedDetails" }),
-        __metadata("design:type", LiveChatUserBannedMessageDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userBannedDetails" }),
+        __metadata("design:type", livechatuserbannedmessagedetails_1.LiveChatUserBannedMessageDetails)
     ], LiveChatMessageSnippet.prototype, "userBannedDetails", void 0);
     return LiveChatMessageSnippet;
-}(SpeakeasyBase));
-export { LiveChatMessageSnippet };
+}(utils_1.SpeakeasyBase));
+exports.LiveChatMessageSnippet = LiveChatMessageSnippet;

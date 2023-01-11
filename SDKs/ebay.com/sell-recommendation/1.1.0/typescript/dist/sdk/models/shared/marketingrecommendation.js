@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Ad } from "./ad";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MarketingRecommendation = void 0;
+var utils_1 = require("../../../internal/utils");
+var ad_1 = require("./ad");
 // MarketingRecommendation
 /**
  * A complex type that contains information about how a seller can improve their listing configurations. The AD object contains Promoted Listings recommendations and information, which the seller can use to improve buyer conversions. The response can also contain an optional message about the returned data.
@@ -34,13 +37,13 @@ var MarketingRecommendation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ad" }),
-        __metadata("design:type", Ad)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ad" }),
+        __metadata("design:type", ad_1.Ad)
     ], MarketingRecommendation.prototype, "ad", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], MarketingRecommendation.prototype, "message", void 0);
     return MarketingRecommendation;
-}(SpeakeasyBase));
-export { MarketingRecommendation };
+}(utils_1.SpeakeasyBase));
+exports.MarketingRecommendation = MarketingRecommendation;

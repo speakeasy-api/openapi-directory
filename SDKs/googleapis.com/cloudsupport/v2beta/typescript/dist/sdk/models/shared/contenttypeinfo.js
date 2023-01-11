@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContentTypeInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // ContentTypeInfo
 /**
  * # gdata.* are outside protos with mising documentation
@@ -33,25 +36,25 @@ var ContentTypeInfo = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bestGuess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bestGuess" }),
         __metadata("design:type", String)
     ], ContentTypeInfo.prototype, "bestGuess", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromBytes" }),
         __metadata("design:type", String)
     ], ContentTypeInfo.prototype, "fromBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromFileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromFileName" }),
         __metadata("design:type", String)
     ], ContentTypeInfo.prototype, "fromFileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromHeader" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromHeader" }),
         __metadata("design:type", String)
     ], ContentTypeInfo.prototype, "fromHeader", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fromUrlPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fromUrlPath" }),
         __metadata("design:type", String)
     ], ContentTypeInfo.prototype, "fromUrlPath", void 0);
     return ContentTypeInfo;
-}(SpeakeasyBase));
-export { ContentTypeInfo };
+}(utils_1.SpeakeasyBase));
+exports.ContentTypeInfo = ContentTypeInfo;

@@ -5,6 +5,6 @@ export declare class ItemCreatePublicTokenRequest extends SpeakeasyBase {
 }
 export declare class ItemCreatePublicTokenResponse extends SpeakeasyBase {
     contentType: string;
-    itemPublicTokenCreateResponse?: Map<string, any>;
+    itemPublicTokenCreateResponse?: Record<string, any>;
     statusCode: number;
 }

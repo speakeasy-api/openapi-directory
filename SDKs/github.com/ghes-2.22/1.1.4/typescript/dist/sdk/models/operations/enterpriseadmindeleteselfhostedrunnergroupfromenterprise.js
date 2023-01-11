@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseResponse = exports.EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseRequest = exports.EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterprisePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterprisePathParams = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterprisePathParams, _super);
     function EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterprisePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=enterprise" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=enterprise" }),
         __metadata("design:type", String)
     ], EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterprisePathParams.prototype, "enterprise", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=runner_group_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=runner_group_id" }),
         __metadata("design:type", Number)
     ], EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterprisePathParams.prototype, "runnerGroupId", void 0);
     return EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterprisePathParams;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterprisePathParams };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterprisePathParams = EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterprisePathParams;
 var EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseRequest = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseRequest, _super);
     function EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterprisePathParams)
     ], EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseRequest.prototype, "pathParams", void 0);
     return EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseRequest;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseRequest };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseRequest = EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseRequest;
 var EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseResponse = /** @class */ (function (_super) {
     __extends(EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseResponse, _super);
     function EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseResponse.prototype, "statusCode", void 0);
     return EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseResponse;
-}(SpeakeasyBase));
-export { EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseResponse };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseResponse = EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseResponse;

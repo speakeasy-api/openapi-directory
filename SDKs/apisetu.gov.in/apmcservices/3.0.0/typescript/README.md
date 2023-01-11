@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ApmclRequest, ApmclResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,7 +30,7 @@ const req: ApmclRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
@@ -40,13 +39,13 @@ const req: ApmclRequest = {
     certificateParameters: {
       documentNumber: "sit",
     },
-    consentArtifact: "aut",
+    consentArtifact: "voluptas",
     format: "pdf",
-    txnId: "vitae",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.apmcl(req).then((res: ApmclResponse | AxiosError) => {
+sdk.apIs.apmcl(req).then((res: ApmclResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -55,7 +54,7 @@ sdk.sdk.apmcl(req).then((res: ApmclResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `apmcl` - Agriculture Produce Market Committee License
 

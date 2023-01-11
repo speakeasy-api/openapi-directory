@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChannelProfileDetails } from "./channelprofiledetails";
-export var LiveChatBanSnippetTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiveChatBanSnippet = exports.LiveChatBanSnippetTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var channelprofiledetails_1 = require("./channelprofiledetails");
+var LiveChatBanSnippetTypeEnum;
 (function (LiveChatBanSnippetTypeEnum) {
     LiveChatBanSnippetTypeEnum["LiveChatBanTypeUnspecified"] = "liveChatBanTypeUnspecified";
     LiveChatBanSnippetTypeEnum["Permanent"] = "permanent";
     LiveChatBanSnippetTypeEnum["Temporary"] = "temporary";
-})(LiveChatBanSnippetTypeEnum || (LiveChatBanSnippetTypeEnum = {}));
+})(LiveChatBanSnippetTypeEnum = exports.LiveChatBanSnippetTypeEnum || (exports.LiveChatBanSnippetTypeEnum = {}));
 var LiveChatBanSnippet = /** @class */ (function (_super) {
     __extends(LiveChatBanSnippet, _super);
     function LiveChatBanSnippet() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=banDurationSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=banDurationSeconds" }),
         __metadata("design:type", String)
     ], LiveChatBanSnippet.prototype, "banDurationSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bannedUserDetails" }),
-        __metadata("design:type", ChannelProfileDetails)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bannedUserDetails" }),
+        __metadata("design:type", channelprofiledetails_1.ChannelProfileDetails)
     ], LiveChatBanSnippet.prototype, "bannedUserDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=liveChatId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=liveChatId" }),
         __metadata("design:type", String)
     ], LiveChatBanSnippet.prototype, "liveChatId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], LiveChatBanSnippet.prototype, "type", void 0);
     return LiveChatBanSnippet;
-}(SpeakeasyBase));
-export { LiveChatBanSnippet };
+}(utils_1.SpeakeasyBase));
+exports.LiveChatBanSnippet = LiveChatBanSnippet;

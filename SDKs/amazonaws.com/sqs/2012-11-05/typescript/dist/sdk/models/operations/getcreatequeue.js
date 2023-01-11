@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetCreateQueueActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCreateQueueResponse = exports.GetCreateQueueRequest = exports.GetCreateQueueHeaders = exports.GetCreateQueueQueryParams = exports.GetCreateQueueVersionEnum = exports.GetCreateQueueActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetCreateQueueActionEnum;
 (function (GetCreateQueueActionEnum) {
     GetCreateQueueActionEnum["CreateQueue"] = "CreateQueue";
-})(GetCreateQueueActionEnum || (GetCreateQueueActionEnum = {}));
-export var GetCreateQueueVersionEnum;
+})(GetCreateQueueActionEnum = exports.GetCreateQueueActionEnum || (exports.GetCreateQueueActionEnum = {}));
+var GetCreateQueueVersionEnum;
 (function (GetCreateQueueVersionEnum) {
     GetCreateQueueVersionEnum["TwoThousandAndTwelve1105"] = "2012-11-05";
-})(GetCreateQueueVersionEnum || (GetCreateQueueVersionEnum = {}));
+})(GetCreateQueueVersionEnum = exports.GetCreateQueueVersionEnum || (exports.GetCreateQueueVersionEnum = {}));
 var GetCreateQueueQueryParams = /** @class */ (function (_super) {
     __extends(GetCreateQueueQueryParams, _super);
     function GetCreateQueueQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetCreateQueueQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Attribute" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Attribute" }),
+        __metadata("design:type", Object)
     ], GetCreateQueueQueryParams.prototype, "attribute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=QueueName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=QueueName" }),
         __metadata("design:type", String)
     ], GetCreateQueueQueryParams.prototype, "queueName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Tag" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Tag" }),
+        __metadata("design:type", Object)
     ], GetCreateQueueQueryParams.prototype, "tag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetCreateQueueQueryParams.prototype, "version", void 0);
     return GetCreateQueueQueryParams;
-}(SpeakeasyBase));
-export { GetCreateQueueQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateQueueQueryParams = GetCreateQueueQueryParams;
 var GetCreateQueueHeaders = /** @class */ (function (_super) {
     __extends(GetCreateQueueHeaders, _super);
     function GetCreateQueueHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetCreateQueueHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetCreateQueueHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetCreateQueueHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetCreateQueueHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetCreateQueueHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetCreateQueueHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetCreateQueueHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetCreateQueueHeaders;
-}(SpeakeasyBase));
-export { GetCreateQueueHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateQueueHeaders = GetCreateQueueHeaders;
 var GetCreateQueueRequest = /** @class */ (function (_super) {
     __extends(GetCreateQueueRequest, _super);
     function GetCreateQueueRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateQueueQueryParams)
     ], GetCreateQueueRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCreateQueueHeaders)
     ], GetCreateQueueRequest.prototype, "headers", void 0);
     return GetCreateQueueRequest;
-}(SpeakeasyBase));
-export { GetCreateQueueRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateQueueRequest = GetCreateQueueRequest;
 var GetCreateQueueResponse = /** @class */ (function (_super) {
     __extends(GetCreateQueueResponse, _super);
     function GetCreateQueueResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetCreateQueueResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCreateQueueResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCreateQueueResponse.prototype, "statusCode", void 0);
     return GetCreateQueueResponse;
-}(SpeakeasyBase));
-export { GetCreateQueueResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCreateQueueResponse = GetCreateQueueResponse;

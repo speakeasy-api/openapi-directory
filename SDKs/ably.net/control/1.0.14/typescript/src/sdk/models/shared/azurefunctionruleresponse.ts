@@ -53,7 +53,7 @@ export class AzureFunctionRuleResponseTarget extends SpeakeasyBase {
 
 export class AzureFunctionRuleResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=_links" })
-  links?: Map<string, any>;
+  links?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=appId" })
   appId?: string;

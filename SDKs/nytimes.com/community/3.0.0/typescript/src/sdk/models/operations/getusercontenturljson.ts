@@ -29,7 +29,7 @@ export class GetUserContentUrlJson200ApplicationJsonResultsComments extends Spea
   commentBody?: string;
 
   @SpeakeasyMetadata({ data: "json, name=commentID" })
-  commentId?: number;
+  commentID?: number;
 
   @SpeakeasyMetadata({ data: "json, name=commentSequence" })
   commentSequence?: number;
@@ -50,16 +50,16 @@ export class GetUserContentUrlJson200ApplicationJsonResultsComments extends Spea
   editorsSelection?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=parentID" })
-  parentId?: any;
+  parentID?: any;
 
   @SpeakeasyMetadata({ data: "json, name=parentUserDisplayName" })
   parentUserDisplayName?: any;
 
   @SpeakeasyMetadata({ data: "json, name=permID" })
-  permId?: string;
+  permID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=picURL" })
-  picUrl?: string;
+  picURL?: string;
 
   @SpeakeasyMetadata({ data: "json, name=recommendations" })
   recommendations?: number;
@@ -95,7 +95,7 @@ export class GetUserContentUrlJson200ApplicationJsonResultsComments extends Spea
   userDisplayName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=userID" })
-  userId?: number;
+  userID?: number;
 
   @SpeakeasyMetadata({ data: "json, name=userLocation" })
   userLocation?: string;
@@ -104,7 +104,7 @@ export class GetUserContentUrlJson200ApplicationJsonResultsComments extends Spea
   userTitle?: any;
 
   @SpeakeasyMetadata({ data: "json, name=userURL" })
-  userUrl?: any;
+  userURL?: any;
 }
 
 
@@ -113,7 +113,7 @@ export class GetUserContentUrlJson200ApplicationJsonResults extends SpeakeasyBas
   apiTimestamp?: string;
 
   @SpeakeasyMetadata({ data: "json, name=callerID" })
-  callerId?: any;
+  callerID?: any;
 
   @SpeakeasyMetadata({ data: "json, name=comments", elemType: GetUserContentUrlJson200ApplicationJsonResultsComments })
   comments?: GetUserContentUrlJson200ApplicationJsonResultsComments[];
@@ -200,7 +200,7 @@ export class GetUserContentUrlJsonResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getUserContentUrlJson200ApplicationJsonObject?: GetUserContentUrlJson200ApplicationJson;
+  getUserContentUrlJSON200ApplicationJSONObject?: GetUserContentUrlJson200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

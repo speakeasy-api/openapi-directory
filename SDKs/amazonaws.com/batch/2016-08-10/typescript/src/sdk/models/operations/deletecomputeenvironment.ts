@@ -49,7 +49,7 @@ export class DeleteComputeEnvironmentResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteComputeEnvironmentResponse?: Map<string, any>;
+  deleteComputeEnvironmentResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   serverException?: any;

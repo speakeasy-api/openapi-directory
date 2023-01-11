@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,142 +14,167 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostHistoryExportsResponse = exports.PostHistoryExportsRequest = exports.PostHistoryExportsRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var PostHistoryExportsRequestBody = /** @class */ (function (_super) {
     __extends(PostHistoryExportsRequestBody, _super);
     function PostHistoryExportsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=end_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=end_at" }),
         __metadata("design:type", Date)
     ], PostHistoryExportsRequestBody.prototype, "endAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_action" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_destination" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryDestination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_failure_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_failure_type" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryFailureType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_file_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_file_id" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryFileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_folder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_folder" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryFolder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_interface" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_interface" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryInterface", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_ip" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_parent_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_parent_id" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryParentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_path" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_src" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_src" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "querySrc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_target_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_target_id" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryTargetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_target_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_target_name" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryTargetName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_target_permission" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_target_permission" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryTargetPermission", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_target_permission_set" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_target_permission_set" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryTargetPermissionSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_target_platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_target_platform" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryTargetPlatform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_target_user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_target_user_id" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryTargetUserId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_target_username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_target_username" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryTargetUsername", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_user_id" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryUserId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=query_username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=query_username" }),
         __metadata("design:type", String)
     ], PostHistoryExportsRequestBody.prototype, "queryUsername", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=start_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=start_at" }),
         __metadata("design:type", Date)
     ], PostHistoryExportsRequestBody.prototype, "startAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=user_id" }),
         __metadata("design:type", Number)
     ], PostHistoryExportsRequestBody.prototype, "userId", void 0);
     return PostHistoryExportsRequestBody;
-}(SpeakeasyBase));
-export { PostHistoryExportsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostHistoryExportsRequestBody = PostHistoryExportsRequestBody;
 var PostHistoryExportsRequest = /** @class */ (function (_super) {
     __extends(PostHistoryExportsRequest, _super);
     function PostHistoryExportsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", PostHistoryExportsRequestBody)
     ], PostHistoryExportsRequest.prototype, "request", void 0);
     return PostHistoryExportsRequest;
-}(SpeakeasyBase));
-export { PostHistoryExportsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostHistoryExportsRequest = PostHistoryExportsRequest;
 var PostHistoryExportsResponse = /** @class */ (function (_super) {
     __extends(PostHistoryExportsResponse, _super);
     function PostHistoryExportsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostHistoryExportsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.HistoryExportEntity)
     ], PostHistoryExportsResponse.prototype, "historyExportEntity", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostHistoryExportsResponse.prototype, "statusCode", void 0);
     return PostHistoryExportsResponse;
-}(SpeakeasyBase));
-export { PostHistoryExportsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostHistoryExportsResponse = PostHistoryExportsResponse;

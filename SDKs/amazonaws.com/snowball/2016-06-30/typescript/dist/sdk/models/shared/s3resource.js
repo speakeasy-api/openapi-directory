@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { KeyRange } from "./keyrange";
-import { TargetOnDeviceService } from "./targetondeviceservice";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3Resource = void 0;
+var utils_1 = require("../../../internal/utils");
+var keyrange_1 = require("./keyrange");
+var targetondeviceservice_1 = require("./targetondeviceservice");
 // S3Resource
 /**
  * Each <code>S3Resource</code> object represents an Amazon S3 bucket that your transferred data will be exported from or imported into. For export jobs, this object can have an optional <code>KeyRange</code> value. The length of the range is defined at job creation, and has either an inclusive <code>BeginMarker</code>, an inclusive <code>EndMarker</code>, or both. Ranges are UTF-8 binary sorted.
@@ -35,17 +38,17 @@ var S3Resource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BucketArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BucketArn" }),
         __metadata("design:type", String)
     ], S3Resource.prototype, "bucketArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=KeyRange" }),
-        __metadata("design:type", KeyRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=KeyRange" }),
+        __metadata("design:type", keyrange_1.KeyRange)
     ], S3Resource.prototype, "keyRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetOnDeviceServices", elemType: TargetOnDeviceService }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetOnDeviceServices", elemType: targetondeviceservice_1.TargetOnDeviceService }),
         __metadata("design:type", Array)
     ], S3Resource.prototype, "targetOnDeviceServices", void 0);
     return S3Resource;
-}(SpeakeasyBase));
-export { S3Resource };
+}(utils_1.SpeakeasyBase));
+exports.S3Resource = S3Resource;

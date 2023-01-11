@@ -1,6 +1,9 @@
-export var HealthCheckProtocolEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HealthCheckProtocolEnum = void 0;
+var HealthCheckProtocolEnum;
 (function (HealthCheckProtocolEnum) {
     HealthCheckProtocolEnum["Tcp"] = "TCP";
     HealthCheckProtocolEnum["Http"] = "HTTP";
     HealthCheckProtocolEnum["Https"] = "HTTPS";
-})(HealthCheckProtocolEnum || (HealthCheckProtocolEnum = {}));
+})(HealthCheckProtocolEnum = exports.HealthCheckProtocolEnum || (exports.HealthCheckProtocolEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SessionContextAttributes } from "./sessioncontextattributes";
-import { SessionIssuer } from "./sessionissuer";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SessionContext = void 0;
+var utils_1 = require("../../../internal/utils");
+var sessioncontextattributes_1 = require("./sessioncontextattributes");
+var sessionissuer_1 = require("./sessionissuer");
 // SessionContext
 /**
  * Provides information about a session that was created for an entity that performed an action by using temporary security credentials.
@@ -35,13 +38,13 @@ var SessionContext = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attributes" }),
-        __metadata("design:type", SessionContextAttributes)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attributes" }),
+        __metadata("design:type", sessioncontextattributes_1.SessionContextAttributes)
     ], SessionContext.prototype, "attributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessionIssuer" }),
-        __metadata("design:type", SessionIssuer)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessionIssuer" }),
+        __metadata("design:type", sessionissuer_1.SessionIssuer)
     ], SessionContext.prototype, "sessionIssuer", void 0);
     return SessionContext;
-}(SpeakeasyBase));
-export { SessionContext };
+}(utils_1.SpeakeasyBase));
+exports.SessionContext = SessionContext;

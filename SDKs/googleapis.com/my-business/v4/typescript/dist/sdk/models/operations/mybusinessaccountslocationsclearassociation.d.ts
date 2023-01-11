@@ -19,10 +19,10 @@ export declare class MybusinessAccountsLocationsClearAssociationQueryParams exte
 export declare class MybusinessAccountsLocationsClearAssociationRequest extends SpeakeasyBase {
     pathParams: MybusinessAccountsLocationsClearAssociationPathParams;
     queryParams: MybusinessAccountsLocationsClearAssociationQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class MybusinessAccountsLocationsClearAssociationResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { HsmClientCertificate } from "./hsmclientcertificate";
+import { HsmClientCertificateList } from "./hsmclientcertificatelist";
 /**
  * <p/>
 **/
 export declare class HsmClientCertificateMessage extends SpeakeasyBase {
-    hsmClientCertificates?: HsmClientCertificate[];
+    hsmClientCertificates?: HsmClientCertificateList[];
     marker?: string;
 }

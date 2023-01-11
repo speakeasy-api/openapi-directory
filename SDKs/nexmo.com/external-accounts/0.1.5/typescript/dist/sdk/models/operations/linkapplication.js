@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,156 +14,181 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var LinkApplicationProviderEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LinkApplicationResponse = exports.LinkApplicationRequest = exports.LinkApplication409ApplicationJson = exports.LinkApplication403ApplicationJson = exports.LinkApplicationSecurity = exports.LinkApplicationRequestBody = exports.LinkApplicationPathParams = exports.LinkApplicationProviderEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var LinkApplicationProviderEnum;
 (function (LinkApplicationProviderEnum) {
     LinkApplicationProviderEnum["Messenger"] = "messenger";
     LinkApplicationProviderEnum["ViberServiceMsg"] = "viber_service_msg";
     LinkApplicationProviderEnum["Whatsapp"] = "whatsapp";
-})(LinkApplicationProviderEnum || (LinkApplicationProviderEnum = {}));
+})(LinkApplicationProviderEnum = exports.LinkApplicationProviderEnum || (exports.LinkApplicationProviderEnum = {}));
 var LinkApplicationPathParams = /** @class */ (function (_super) {
     __extends(LinkApplicationPathParams, _super);
     function LinkApplicationPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=external_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=external_id" }),
         __metadata("design:type", String)
     ], LinkApplicationPathParams.prototype, "externalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=provider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=provider" }),
         __metadata("design:type", String)
     ], LinkApplicationPathParams.prototype, "provider", void 0);
     return LinkApplicationPathParams;
-}(SpeakeasyBase));
-export { LinkApplicationPathParams };
+}(utils_1.SpeakeasyBase));
+exports.LinkApplicationPathParams = LinkApplicationPathParams;
 var LinkApplicationRequestBody = /** @class */ (function (_super) {
     __extends(LinkApplicationRequestBody, _super);
     function LinkApplicationRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=application" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=application" }),
         __metadata("design:type", String)
     ], LinkApplicationRequestBody.prototype, "application", void 0);
     return LinkApplicationRequestBody;
-}(SpeakeasyBase));
-export { LinkApplicationRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.LinkApplicationRequestBody = LinkApplicationRequestBody;
 var LinkApplicationSecurity = /** @class */ (function (_super) {
     __extends(LinkApplicationSecurity, _super);
     function LinkApplicationSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=http;subtype=bearer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=bearer" }),
         __metadata("design:type", shared.SchemeBearerAuth)
     ], LinkApplicationSecurity.prototype, "bearerAuth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=http;subtype=basic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=basic" }),
         __metadata("design:type", shared.SchemeBasicAuth)
     ], LinkApplicationSecurity.prototype, "basicAuth", void 0);
     return LinkApplicationSecurity;
-}(SpeakeasyBase));
-export { LinkApplicationSecurity };
+}(utils_1.SpeakeasyBase));
+exports.LinkApplicationSecurity = LinkApplicationSecurity;
 var LinkApplication403ApplicationJson = /** @class */ (function (_super) {
     __extends(LinkApplication403ApplicationJson, _super);
     function LinkApplication403ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
         __metadata("design:type", String)
     ], LinkApplication403ApplicationJson.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], LinkApplication403ApplicationJson.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], LinkApplication403ApplicationJson.prototype, "type", void 0);
     return LinkApplication403ApplicationJson;
-}(SpeakeasyBase));
-export { LinkApplication403ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.LinkApplication403ApplicationJson = LinkApplication403ApplicationJson;
 var LinkApplication409ApplicationJson = /** @class */ (function (_super) {
     __extends(LinkApplication409ApplicationJson, _super);
     function LinkApplication409ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detail" }),
         __metadata("design:type", String)
     ], LinkApplication409ApplicationJson.prototype, "detail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], LinkApplication409ApplicationJson.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], LinkApplication409ApplicationJson.prototype, "type", void 0);
     return LinkApplication409ApplicationJson;
-}(SpeakeasyBase));
-export { LinkApplication409ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.LinkApplication409ApplicationJson = LinkApplication409ApplicationJson;
 var LinkApplicationRequest = /** @class */ (function (_super) {
     __extends(LinkApplicationRequest, _super);
     function LinkApplicationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LinkApplicationPathParams)
     ], LinkApplicationRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", LinkApplicationRequestBody)
     ], LinkApplicationRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LinkApplicationSecurity)
     ], LinkApplicationRequest.prototype, "security", void 0);
     return LinkApplicationRequest;
-}(SpeakeasyBase));
-export { LinkApplicationRequest };
+}(utils_1.SpeakeasyBase));
+exports.LinkApplicationRequest = LinkApplicationRequest;
 var LinkApplicationResponse = /** @class */ (function (_super) {
     __extends(LinkApplicationResponse, _super);
     function LinkApplicationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.FourHundredAndOneResponse)
     ], LinkApplicationResponse.prototype, "fourHundredAndOneResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.AccountResponse)
     ], LinkApplicationResponse.prototype, "accountResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LinkApplicationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LinkApplication403ApplicationJson)
-    ], LinkApplicationResponse.prototype, "linkApplication403ApplicationJsonObject", void 0);
+    ], LinkApplicationResponse.prototype, "linkApplication403ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", LinkApplication409ApplicationJson)
-    ], LinkApplicationResponse.prototype, "linkApplication409ApplicationJsonObject", void 0);
+    ], LinkApplicationResponse.prototype, "linkApplication409ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], LinkApplicationResponse.prototype, "statusCode", void 0);
     return LinkApplicationResponse;
-}(SpeakeasyBase));
-export { LinkApplicationResponse };
+}(utils_1.SpeakeasyBase));
+exports.LinkApplicationResponse = LinkApplicationResponse;

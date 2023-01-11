@@ -12,7 +12,7 @@ export declare class PepMonitorUnregisterRequest extends SpeakeasyBase {
 }
 export declare class PepMonitorUnregisterResponse extends SpeakeasyBase {
     contentType: string;
-    pepMonitorUnregister200ApplicationJsonAny?: any;
-    pepMonitorUnregisterDefaultApplicationJsonAny?: any;
+    pepMonitorUnregister200ApplicationJSONAny?: any;
+    pepMonitorUnregisterDefaultApplicationJSONAny?: any;
     statusCode: number;
 }

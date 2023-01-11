@@ -18,7 +18,7 @@ import { TraceUser } from "./traceuser";
 **/
 export class TraceSummary extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Annotations", elemType: ValueWithServiceIds, elemDepth: 2 })
-  annotations?: Map<string, ValueWithServiceIds[]>;
+  annotations?: Record<string, ValueWithServiceIds[]>;
 
   @SpeakeasyMetadata({ data: "json, name=AvailabilityZones", elemType: AvailabilityZoneDetail })
   availabilityZones?: AvailabilityZoneDetail[];
@@ -60,7 +60,7 @@ export class TraceSummary extends SpeakeasyBase {
   matchedEventTime?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=ResourceARNs", elemType: ResourceArnDetail })
-  resourceArNs?: ResourceArnDetail[];
+  resourceARNs?: ResourceArnDetail[];
 
   @SpeakeasyMetadata({ data: "json, name=ResponseTime" })
   responseTime?: number;

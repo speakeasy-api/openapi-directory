@@ -7,7 +7,7 @@ export class ProtocolNetflowSetCollectorPathParams extends SpeakeasyBase {
   agentNum: number;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=collectorIP" })
-  collectorIp: string;
+  collectorIP: string;
 }
 
 
@@ -25,5 +25,5 @@ export class ProtocolNetflowSetCollectorResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolNetflowSetCollector200ApplicationJsonString?: string;
+  protocolNetflowSetCollector200ApplicationJSONString?: string;
 }

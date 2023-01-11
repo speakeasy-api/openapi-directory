@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CategoryType } from "./categorytype";
-import { Deposit } from "./deposit";
-import { TimeDuration } from "./timeduration";
-import { PaymentMethod } from "./paymentmethod";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var categorytype_1 = require("./categorytype");
+var deposit_1 = require("./deposit");
+var timeduration_1 = require("./timeduration");
+var paymentmethod_1 = require("./paymentmethod");
 // PaymentPolicy
 /**
  * Root container that defines the fields for a seller's payment policy. The paymentPolicy encapsulates a seller's payment terms and consists of payment details for the seller, the name and description of the policy, and the marketplace and category group(s) covered by the payment policy. While each seller must define at least one payment policy for every marketplace into which they sell, sellers can define multiple payment policies for a single marketplace by specifying different configurations for the unique policies.
@@ -37,45 +40,45 @@ var PaymentPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=categoryTypes", elemType: CategoryType }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=categoryTypes", elemType: categorytype_1.CategoryType }),
         __metadata("design:type", Array)
     ], PaymentPolicy.prototype, "categoryTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deposit" }),
-        __metadata("design:type", Deposit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deposit" }),
+        __metadata("design:type", deposit_1.Deposit)
     ], PaymentPolicy.prototype, "deposit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], PaymentPolicy.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fullPaymentDueIn" }),
-        __metadata("design:type", TimeDuration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fullPaymentDueIn" }),
+        __metadata("design:type", timeduration_1.TimeDuration)
     ], PaymentPolicy.prototype, "fullPaymentDueIn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=immediatePay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=immediatePay" }),
         __metadata("design:type", Boolean)
     ], PaymentPolicy.prototype, "immediatePay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=marketplaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=marketplaceId" }),
         __metadata("design:type", String)
     ], PaymentPolicy.prototype, "marketplaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], PaymentPolicy.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentInstructions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentInstructions" }),
         __metadata("design:type", String)
     ], PaymentPolicy.prototype, "paymentInstructions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentMethods", elemType: PaymentMethod }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentMethods", elemType: paymentmethod_1.PaymentMethod }),
         __metadata("design:type", Array)
     ], PaymentPolicy.prototype, "paymentMethods", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=paymentPolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=paymentPolicyId" }),
         __metadata("design:type", String)
     ], PaymentPolicy.prototype, "paymentPolicyId", void 0);
     return PaymentPolicy;
-}(SpeakeasyBase));
-export { PaymentPolicy };
+}(utils_1.SpeakeasyBase));
+exports.PaymentPolicy = PaymentPolicy;

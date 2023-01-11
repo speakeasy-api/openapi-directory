@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleTypeDateTime } from "./googletypedatetime";
-export var GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshnessAggregationPeriodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshness = exports.GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshnessAggregationPeriodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googletypedatetime_1 = require("./googletypedatetime");
+var GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshnessAggregationPeriodEnum;
 (function (GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshnessAggregationPeriodEnum) {
     GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshnessAggregationPeriodEnum["AggregationPeriodUnspecified"] = "AGGREGATION_PERIOD_UNSPECIFIED";
     GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshnessAggregationPeriodEnum["Hourly"] = "HOURLY";
     GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshnessAggregationPeriodEnum["Daily"] = "DAILY";
-})(GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshnessAggregationPeriodEnum || (GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshnessAggregationPeriodEnum = {}));
+})(GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshnessAggregationPeriodEnum = exports.GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshnessAggregationPeriodEnum || (exports.GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshnessAggregationPeriodEnum = {}));
 // GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshness
 /**
  * Information about data freshness for a single aggregation period.
@@ -40,13 +43,13 @@ var GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshness = /** @class */ (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aggregationPeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aggregationPeriod" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshness.prototype, "aggregationPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestEndTime" }),
-        __metadata("design:type", GoogleTypeDateTime)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestEndTime" }),
+        __metadata("design:type", googletypedatetime_1.GoogleTypeDateTime)
     ], GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshness.prototype, "latestEndTime", void 0);
     return GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshness;
-}(SpeakeasyBase));
-export { GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshness };
+}(utils_1.SpeakeasyBase));
+exports.GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshness = GooglePlayDeveloperReportingV1alpha1FreshnessInfoFreshness;

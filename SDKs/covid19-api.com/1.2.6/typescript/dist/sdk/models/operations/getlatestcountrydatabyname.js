@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,105 +23,107 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetLatestCountryDataByNameFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetLatestCountryDataByNameResponse = exports.GetLatestCountryDataByNameRequest = exports.GetLatestCountryDataByName200ApplicationJson = exports.GetLatestCountryDataByNameQueryParams = exports.GetLatestCountryDataByNameFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetLatestCountryDataByNameFormatEnum;
 (function (GetLatestCountryDataByNameFormatEnum) {
     GetLatestCountryDataByNameFormatEnum["Json"] = "json";
     GetLatestCountryDataByNameFormatEnum["Xml"] = "xml";
-})(GetLatestCountryDataByNameFormatEnum || (GetLatestCountryDataByNameFormatEnum = {}));
+})(GetLatestCountryDataByNameFormatEnum = exports.GetLatestCountryDataByNameFormatEnum || (exports.GetLatestCountryDataByNameFormatEnum = {}));
 var GetLatestCountryDataByNameQueryParams = /** @class */ (function (_super) {
     __extends(GetLatestCountryDataByNameQueryParams, _super);
     function GetLatestCountryDataByNameQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetLatestCountryDataByNameQueryParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], GetLatestCountryDataByNameQueryParams.prototype, "name", void 0);
     return GetLatestCountryDataByNameQueryParams;
-}(SpeakeasyBase));
-export { GetLatestCountryDataByNameQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetLatestCountryDataByNameQueryParams = GetLatestCountryDataByNameQueryParams;
 var GetLatestCountryDataByName200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetLatestCountryDataByName200ApplicationJson, _super);
     function GetLatestCountryDataByName200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=confirmed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=confirmed" }),
         __metadata("design:type", Number)
     ], GetLatestCountryDataByName200ApplicationJson.prototype, "confirmed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], GetLatestCountryDataByName200ApplicationJson.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=critical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=critical" }),
         __metadata("design:type", Number)
     ], GetLatestCountryDataByName200ApplicationJson.prototype, "critical", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deaths" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deaths" }),
         __metadata("design:type", Number)
     ], GetLatestCountryDataByName200ApplicationJson.prototype, "deaths", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastChange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastChange" }),
         __metadata("design:type", Date)
     ], GetLatestCountryDataByName200ApplicationJson.prototype, "lastChange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdate" }),
         __metadata("design:type", Date)
     ], GetLatestCountryDataByName200ApplicationJson.prototype, "lastUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], GetLatestCountryDataByName200ApplicationJson.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], GetLatestCountryDataByName200ApplicationJson.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recovered" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recovered" }),
         __metadata("design:type", Number)
     ], GetLatestCountryDataByName200ApplicationJson.prototype, "recovered", void 0);
     return GetLatestCountryDataByName200ApplicationJson;
-}(SpeakeasyBase));
-export { GetLatestCountryDataByName200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetLatestCountryDataByName200ApplicationJson = GetLatestCountryDataByName200ApplicationJson;
 var GetLatestCountryDataByNameRequest = /** @class */ (function (_super) {
     __extends(GetLatestCountryDataByNameRequest, _super);
     function GetLatestCountryDataByNameRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetLatestCountryDataByNameQueryParams)
     ], GetLatestCountryDataByNameRequest.prototype, "queryParams", void 0);
     return GetLatestCountryDataByNameRequest;
-}(SpeakeasyBase));
-export { GetLatestCountryDataByNameRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetLatestCountryDataByNameRequest = GetLatestCountryDataByNameRequest;
 var GetLatestCountryDataByNameResponse = /** @class */ (function (_super) {
     __extends(GetLatestCountryDataByNameResponse, _super);
     function GetLatestCountryDataByNameResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetLatestCountryDataByNameResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetLatestCountryDataByNameResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetLatestCountryDataByNameResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: GetLatestCountryDataByName200ApplicationJson }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: GetLatestCountryDataByName200ApplicationJson }),
         __metadata("design:type", Array)
-    ], GetLatestCountryDataByNameResponse.prototype, "getLatestCountryDataByName200ApplicationJsonObjects", void 0);
+    ], GetLatestCountryDataByNameResponse.prototype, "getLatestCountryDataByName200ApplicationJSONObjects", void 0);
     return GetLatestCountryDataByNameResponse;
-}(SpeakeasyBase));
-export { GetLatestCountryDataByNameResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetLatestCountryDataByNameResponse = GetLatestCountryDataByNameResponse;

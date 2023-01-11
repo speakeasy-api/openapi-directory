@@ -28,7 +28,7 @@ export class GetSetupV1BusinessusersRequest extends SpeakeasyBase {
 
 export class GetSetupV1BusinessusersResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  businessUserListViewModel?: Map<string, any>;
+  businessUserListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

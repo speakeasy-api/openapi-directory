@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,59 +23,61 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EndpointConfiguration } from "./endpointconfiguration";
-import { HealthCheckProtocolEnum } from "./healthcheckprotocolenum";
-import { PortOverride } from "./portoverride";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateEndpointGroupRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var endpointconfiguration_1 = require("./endpointconfiguration");
+var healthcheckprotocolenum_1 = require("./healthcheckprotocolenum");
+var portoverride_1 = require("./portoverride");
 var CreateEndpointGroupRequest = /** @class */ (function (_super) {
     __extends(CreateEndpointGroupRequest, _super);
     function CreateEndpointGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointConfigurations", elemType: EndpointConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointConfigurations", elemType: endpointconfiguration_1.EndpointConfiguration }),
         __metadata("design:type", Array)
     ], CreateEndpointGroupRequest.prototype, "endpointConfigurations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointGroupRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointGroupRegion" }),
         __metadata("design:type", String)
     ], CreateEndpointGroupRequest.prototype, "endpointGroupRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HealthCheckIntervalSeconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HealthCheckIntervalSeconds" }),
         __metadata("design:type", Number)
     ], CreateEndpointGroupRequest.prototype, "healthCheckIntervalSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HealthCheckPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HealthCheckPath" }),
         __metadata("design:type", String)
     ], CreateEndpointGroupRequest.prototype, "healthCheckPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HealthCheckPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HealthCheckPort" }),
         __metadata("design:type", Number)
     ], CreateEndpointGroupRequest.prototype, "healthCheckPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HealthCheckProtocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HealthCheckProtocol" }),
         __metadata("design:type", String)
     ], CreateEndpointGroupRequest.prototype, "healthCheckProtocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IdempotencyToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IdempotencyToken" }),
         __metadata("design:type", String)
     ], CreateEndpointGroupRequest.prototype, "idempotencyToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ListenerArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ListenerArn" }),
         __metadata("design:type", String)
     ], CreateEndpointGroupRequest.prototype, "listenerArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PortOverrides", elemType: PortOverride }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PortOverrides", elemType: portoverride_1.PortOverride }),
         __metadata("design:type", Array)
     ], CreateEndpointGroupRequest.prototype, "portOverrides", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ThresholdCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ThresholdCount" }),
         __metadata("design:type", Number)
     ], CreateEndpointGroupRequest.prototype, "thresholdCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TrafficDialPercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TrafficDialPercentage" }),
         __metadata("design:type", Number)
     ], CreateEndpointGroupRequest.prototype, "trafficDialPercentage", void 0);
     return CreateEndpointGroupRequest;
-}(SpeakeasyBase));
-export { CreateEndpointGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateEndpointGroupRequest = CreateEndpointGroupRequest;

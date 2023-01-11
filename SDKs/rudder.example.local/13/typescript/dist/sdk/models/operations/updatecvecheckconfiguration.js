@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateCveCheckConfigurationResponse = exports.UpdateCveCheckConfigurationRequest = exports.UpdateCveCheckConfiguration200ApplicationJson = exports.UpdateCveCheckConfiguration200ApplicationJsonResultEnum = exports.UpdateCveCheckConfiguration200ApplicationJsonData = exports.UpdateCveCheckConfiguration200ApplicationJsonActionEnum = exports.UpdateCveCheckConfigurationRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 // UpdateCveCheckConfigurationRequestBody
 /**
  * CVE check config
@@ -33,90 +36,90 @@ var UpdateCveCheckConfigurationRequestBody = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiKey" }),
         __metadata("design:type", String)
     ], UpdateCveCheckConfigurationRequestBody.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], UpdateCveCheckConfigurationRequestBody.prototype, "url", void 0);
     return UpdateCveCheckConfigurationRequestBody;
-}(SpeakeasyBase));
-export { UpdateCveCheckConfigurationRequestBody };
-export var UpdateCveCheckConfiguration200ApplicationJsonActionEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateCveCheckConfigurationRequestBody = UpdateCveCheckConfigurationRequestBody;
+var UpdateCveCheckConfiguration200ApplicationJsonActionEnum;
 (function (UpdateCveCheckConfiguration200ApplicationJsonActionEnum) {
     UpdateCveCheckConfiguration200ApplicationJsonActionEnum["UpdateCveCheckConfiguration"] = "updateCVECheckConfiguration";
-})(UpdateCveCheckConfiguration200ApplicationJsonActionEnum || (UpdateCveCheckConfiguration200ApplicationJsonActionEnum = {}));
+})(UpdateCveCheckConfiguration200ApplicationJsonActionEnum = exports.UpdateCveCheckConfiguration200ApplicationJsonActionEnum || (exports.UpdateCveCheckConfiguration200ApplicationJsonActionEnum = {}));
 var UpdateCveCheckConfiguration200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(UpdateCveCheckConfiguration200ApplicationJsonData, _super);
     function UpdateCveCheckConfiguration200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiKey" }),
         __metadata("design:type", String)
     ], UpdateCveCheckConfiguration200ApplicationJsonData.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], UpdateCveCheckConfiguration200ApplicationJsonData.prototype, "url", void 0);
     return UpdateCveCheckConfiguration200ApplicationJsonData;
-}(SpeakeasyBase));
-export { UpdateCveCheckConfiguration200ApplicationJsonData };
-export var UpdateCveCheckConfiguration200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateCveCheckConfiguration200ApplicationJsonData = UpdateCveCheckConfiguration200ApplicationJsonData;
+var UpdateCveCheckConfiguration200ApplicationJsonResultEnum;
 (function (UpdateCveCheckConfiguration200ApplicationJsonResultEnum) {
     UpdateCveCheckConfiguration200ApplicationJsonResultEnum["Success"] = "success";
     UpdateCveCheckConfiguration200ApplicationJsonResultEnum["Error"] = "error";
-})(UpdateCveCheckConfiguration200ApplicationJsonResultEnum || (UpdateCveCheckConfiguration200ApplicationJsonResultEnum = {}));
+})(UpdateCveCheckConfiguration200ApplicationJsonResultEnum = exports.UpdateCveCheckConfiguration200ApplicationJsonResultEnum || (exports.UpdateCveCheckConfiguration200ApplicationJsonResultEnum = {}));
 var UpdateCveCheckConfiguration200ApplicationJson = /** @class */ (function (_super) {
     __extends(UpdateCveCheckConfiguration200ApplicationJson, _super);
     function UpdateCveCheckConfiguration200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], UpdateCveCheckConfiguration200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", UpdateCveCheckConfiguration200ApplicationJsonData)
     ], UpdateCveCheckConfiguration200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], UpdateCveCheckConfiguration200ApplicationJson.prototype, "result", void 0);
     return UpdateCveCheckConfiguration200ApplicationJson;
-}(SpeakeasyBase));
-export { UpdateCveCheckConfiguration200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.UpdateCveCheckConfiguration200ApplicationJson = UpdateCveCheckConfiguration200ApplicationJson;
 var UpdateCveCheckConfigurationRequest = /** @class */ (function (_super) {
     __extends(UpdateCveCheckConfigurationRequest, _super);
     function UpdateCveCheckConfigurationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateCveCheckConfigurationRequestBody)
     ], UpdateCveCheckConfigurationRequest.prototype, "request", void 0);
     return UpdateCveCheckConfigurationRequest;
-}(SpeakeasyBase));
-export { UpdateCveCheckConfigurationRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateCveCheckConfigurationRequest = UpdateCveCheckConfigurationRequest;
 var UpdateCveCheckConfigurationResponse = /** @class */ (function (_super) {
     __extends(UpdateCveCheckConfigurationResponse, _super);
     function UpdateCveCheckConfigurationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateCveCheckConfigurationResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateCveCheckConfigurationResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateCveCheckConfiguration200ApplicationJson)
-    ], UpdateCveCheckConfigurationResponse.prototype, "updateCveCheckConfiguration200ApplicationJsonObject", void 0);
+    ], UpdateCveCheckConfigurationResponse.prototype, "updateCVECheckConfiguration200ApplicationJSONObject", void 0);
     return UpdateCveCheckConfigurationResponse;
-}(SpeakeasyBase));
-export { UpdateCveCheckConfigurationResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateCveCheckConfigurationResponse = UpdateCveCheckConfigurationResponse;

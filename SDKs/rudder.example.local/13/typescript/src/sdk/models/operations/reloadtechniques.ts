@@ -41,5 +41,5 @@ export class ReloadTechniquesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  reloadTechniques200ApplicationJsonObject?: ReloadTechniques200ApplicationJson;
+  reloadTechniques200ApplicationJSONObject?: ReloadTechniques200ApplicationJson;
 }

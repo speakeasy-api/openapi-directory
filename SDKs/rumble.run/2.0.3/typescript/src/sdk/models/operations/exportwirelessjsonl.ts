@@ -35,5 +35,5 @@ export class ExportWirelessJsonlResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  exportWirelessJsonl200ApplicationJsonBinaryString?: Uint8Array;
+  exportWirelessJSONL200ApplicationJSONBinaryString?: Uint8Array;
 }

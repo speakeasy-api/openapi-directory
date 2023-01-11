@@ -17,20 +17,20 @@ export class IngestionResult extends SpeakeasyBase {
   id?: string;
 
   @SpeakeasyMetadata()
-  ignoredProperties?: Map<string, Map<string, any>>;
+  ignoredProperties?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata()
-  invalidProperties?: Map<string, Map<string, any>>;
+  invalidProperties?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata()
-  invalidValues?: Map<string, Map<string, any>>;
+  invalidValues?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata()
-  missingProperties?: Map<string, Map<string, any>>;
+  missingProperties?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata()
   status: IngestionResultStatusEnum;
 
   @SpeakeasyMetadata()
-  unknownProperties?: Map<string, Map<string, any>>;
+  unknownProperties?: Record<string, Record<string, any>>;
 }

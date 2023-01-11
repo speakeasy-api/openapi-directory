@@ -107,5 +107,5 @@ export class GetLocationsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getLocations200ApplicationJsonObject?: GetLocations200ApplicationJson;
+  getLocations200ApplicationJSONObject?: GetLocations200ApplicationJson;
 }

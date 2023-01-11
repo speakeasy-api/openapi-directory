@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteIntegrationResponseResponse = exports.DeleteIntegrationResponseRequest = exports.DeleteIntegrationResponseHeaders = exports.DeleteIntegrationResponsePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteIntegrationResponsePathParams = /** @class */ (function (_super) {
     __extends(DeleteIntegrationResponsePathParams, _super);
     function DeleteIntegrationResponsePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=apiId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=apiId" }),
         __metadata("design:type", String)
     ], DeleteIntegrationResponsePathParams.prototype, "apiId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=integrationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=integrationId" }),
         __metadata("design:type", String)
     ], DeleteIntegrationResponsePathParams.prototype, "integrationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=integrationResponseId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=integrationResponseId" }),
         __metadata("design:type", String)
     ], DeleteIntegrationResponsePathParams.prototype, "integrationResponseId", void 0);
     return DeleteIntegrationResponsePathParams;
-}(SpeakeasyBase));
-export { DeleteIntegrationResponsePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteIntegrationResponsePathParams = DeleteIntegrationResponsePathParams;
 var DeleteIntegrationResponseHeaders = /** @class */ (function (_super) {
     __extends(DeleteIntegrationResponseHeaders, _super);
     function DeleteIntegrationResponseHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], DeleteIntegrationResponseHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], DeleteIntegrationResponseHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], DeleteIntegrationResponseHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], DeleteIntegrationResponseHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], DeleteIntegrationResponseHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], DeleteIntegrationResponseHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], DeleteIntegrationResponseHeaders.prototype, "xAmzSignedHeaders", void 0);
     return DeleteIntegrationResponseHeaders;
-}(SpeakeasyBase));
-export { DeleteIntegrationResponseHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteIntegrationResponseHeaders = DeleteIntegrationResponseHeaders;
 var DeleteIntegrationResponseRequest = /** @class */ (function (_super) {
     __extends(DeleteIntegrationResponseRequest, _super);
     function DeleteIntegrationResponseRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteIntegrationResponsePathParams)
     ], DeleteIntegrationResponseRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteIntegrationResponseHeaders)
     ], DeleteIntegrationResponseRequest.prototype, "headers", void 0);
     return DeleteIntegrationResponseRequest;
-}(SpeakeasyBase));
-export { DeleteIntegrationResponseRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteIntegrationResponseRequest = DeleteIntegrationResponseRequest;
 var DeleteIntegrationResponseResponse = /** @class */ (function (_super) {
     __extends(DeleteIntegrationResponseResponse, _super);
     function DeleteIntegrationResponseResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteIntegrationResponseResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteIntegrationResponseResponse.prototype, "notFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteIntegrationResponseResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], DeleteIntegrationResponseResponse.prototype, "tooManyRequestsException", void 0);
     return DeleteIntegrationResponseResponse;
-}(SpeakeasyBase));
-export { DeleteIntegrationResponseResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteIntegrationResponseResponse = DeleteIntegrationResponseResponse;

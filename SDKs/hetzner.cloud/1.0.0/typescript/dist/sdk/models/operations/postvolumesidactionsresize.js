@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostVolumesIdActionsResizeResponse = exports.PostVolumesIdActionsResizeRequest = exports.PostVolumesIdActionsResizeActionResponse = exports.PostVolumesIdActionsResizeActionResponseAction = exports.PostVolumesIdActionsResizeActionResponseActionStatusEnum = exports.PostVolumesIdActionsResizeActionResponseActionResources = exports.PostVolumesIdActionsResizeActionResponseActionError = exports.PostVolumesIdActionsResizeRequestBody = exports.PostVolumesIdActionsResizePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostVolumesIdActionsResizePathParams = /** @class */ (function (_super) {
     __extends(PostVolumesIdActionsResizePathParams, _super);
     function PostVolumesIdActionsResizePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], PostVolumesIdActionsResizePathParams.prototype, "id", void 0);
     return PostVolumesIdActionsResizePathParams;
-}(SpeakeasyBase));
-export { PostVolumesIdActionsResizePathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostVolumesIdActionsResizePathParams = PostVolumesIdActionsResizePathParams;
 var PostVolumesIdActionsResizeRequestBody = /** @class */ (function (_super) {
     __extends(PostVolumesIdActionsResizeRequestBody, _super);
     function PostVolumesIdActionsResizeRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], PostVolumesIdActionsResizeRequestBody.prototype, "size", void 0);
     return PostVolumesIdActionsResizeRequestBody;
-}(SpeakeasyBase));
-export { PostVolumesIdActionsResizeRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostVolumesIdActionsResizeRequestBody = PostVolumesIdActionsResizeRequestBody;
 // PostVolumesIdActionsResizeActionResponseActionError
 /**
  * Error message for the Action if error occurred, otherwise null
@@ -57,123 +60,123 @@ var PostVolumesIdActionsResizeActionResponseActionError = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], PostVolumesIdActionsResizeActionResponseActionError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], PostVolumesIdActionsResizeActionResponseActionError.prototype, "message", void 0);
     return PostVolumesIdActionsResizeActionResponseActionError;
-}(SpeakeasyBase));
-export { PostVolumesIdActionsResizeActionResponseActionError };
+}(utils_1.SpeakeasyBase));
+exports.PostVolumesIdActionsResizeActionResponseActionError = PostVolumesIdActionsResizeActionResponseActionError;
 var PostVolumesIdActionsResizeActionResponseActionResources = /** @class */ (function (_super) {
     __extends(PostVolumesIdActionsResizeActionResponseActionResources, _super);
     function PostVolumesIdActionsResizeActionResponseActionResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostVolumesIdActionsResizeActionResponseActionResources.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], PostVolumesIdActionsResizeActionResponseActionResources.prototype, "type", void 0);
     return PostVolumesIdActionsResizeActionResponseActionResources;
-}(SpeakeasyBase));
-export { PostVolumesIdActionsResizeActionResponseActionResources };
-export var PostVolumesIdActionsResizeActionResponseActionStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.PostVolumesIdActionsResizeActionResponseActionResources = PostVolumesIdActionsResizeActionResponseActionResources;
+var PostVolumesIdActionsResizeActionResponseActionStatusEnum;
 (function (PostVolumesIdActionsResizeActionResponseActionStatusEnum) {
     PostVolumesIdActionsResizeActionResponseActionStatusEnum["Success"] = "success";
     PostVolumesIdActionsResizeActionResponseActionStatusEnum["Running"] = "running";
     PostVolumesIdActionsResizeActionResponseActionStatusEnum["Error"] = "error";
-})(PostVolumesIdActionsResizeActionResponseActionStatusEnum || (PostVolumesIdActionsResizeActionResponseActionStatusEnum = {}));
+})(PostVolumesIdActionsResizeActionResponseActionStatusEnum = exports.PostVolumesIdActionsResizeActionResponseActionStatusEnum || (exports.PostVolumesIdActionsResizeActionResponseActionStatusEnum = {}));
 var PostVolumesIdActionsResizeActionResponseAction = /** @class */ (function (_super) {
     __extends(PostVolumesIdActionsResizeActionResponseAction, _super);
     function PostVolumesIdActionsResizeActionResponseAction() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=command" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=command" }),
         __metadata("design:type", String)
     ], PostVolumesIdActionsResizeActionResponseAction.prototype, "command", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", PostVolumesIdActionsResizeActionResponseActionError)
     ], PostVolumesIdActionsResizeActionResponseAction.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=finished" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=finished" }),
         __metadata("design:type", String)
     ], PostVolumesIdActionsResizeActionResponseAction.prototype, "finished", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], PostVolumesIdActionsResizeActionResponseAction.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], PostVolumesIdActionsResizeActionResponseAction.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources", elemType: PostVolumesIdActionsResizeActionResponseActionResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources", elemType: PostVolumesIdActionsResizeActionResponseActionResources }),
         __metadata("design:type", Array)
     ], PostVolumesIdActionsResizeActionResponseAction.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=started" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=started" }),
         __metadata("design:type", String)
     ], PostVolumesIdActionsResizeActionResponseAction.prototype, "started", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], PostVolumesIdActionsResizeActionResponseAction.prototype, "status", void 0);
     return PostVolumesIdActionsResizeActionResponseAction;
-}(SpeakeasyBase));
-export { PostVolumesIdActionsResizeActionResponseAction };
+}(utils_1.SpeakeasyBase));
+exports.PostVolumesIdActionsResizeActionResponseAction = PostVolumesIdActionsResizeActionResponseAction;
 var PostVolumesIdActionsResizeActionResponse = /** @class */ (function (_super) {
     __extends(PostVolumesIdActionsResizeActionResponse, _super);
     function PostVolumesIdActionsResizeActionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", PostVolumesIdActionsResizeActionResponseAction)
     ], PostVolumesIdActionsResizeActionResponse.prototype, "action", void 0);
     return PostVolumesIdActionsResizeActionResponse;
-}(SpeakeasyBase));
-export { PostVolumesIdActionsResizeActionResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostVolumesIdActionsResizeActionResponse = PostVolumesIdActionsResizeActionResponse;
 var PostVolumesIdActionsResizeRequest = /** @class */ (function (_super) {
     __extends(PostVolumesIdActionsResizeRequest, _super);
     function PostVolumesIdActionsResizeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostVolumesIdActionsResizePathParams)
     ], PostVolumesIdActionsResizeRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostVolumesIdActionsResizeRequestBody)
     ], PostVolumesIdActionsResizeRequest.prototype, "request", void 0);
     return PostVolumesIdActionsResizeRequest;
-}(SpeakeasyBase));
-export { PostVolumesIdActionsResizeRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostVolumesIdActionsResizeRequest = PostVolumesIdActionsResizeRequest;
 var PostVolumesIdActionsResizeResponse = /** @class */ (function (_super) {
     __extends(PostVolumesIdActionsResizeResponse, _super);
     function PostVolumesIdActionsResizeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostVolumesIdActionsResizeActionResponse)
     ], PostVolumesIdActionsResizeResponse.prototype, "actionResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostVolumesIdActionsResizeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostVolumesIdActionsResizeResponse.prototype, "statusCode", void 0);
     return PostVolumesIdActionsResizeResponse;
-}(SpeakeasyBase));
-export { PostVolumesIdActionsResizeResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostVolumesIdActionsResizeResponse = PostVolumesIdActionsResizeResponse;

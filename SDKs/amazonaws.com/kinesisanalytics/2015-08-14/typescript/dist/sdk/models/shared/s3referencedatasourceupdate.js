@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3ReferenceDataSourceUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
 // S3ReferenceDataSourceUpdate
 /**
  * Describes the S3 bucket name, object key name, and IAM role that Amazon Kinesis Analytics can assume to read the Amazon S3 object on your behalf and populate the in-application reference table.
@@ -33,17 +36,17 @@ var S3ReferenceDataSourceUpdate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BucketARNUpdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BucketARNUpdate" }),
         __metadata("design:type", String)
-    ], S3ReferenceDataSourceUpdate.prototype, "bucketArnUpdate", void 0);
+    ], S3ReferenceDataSourceUpdate.prototype, "bucketARNUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FileKeyUpdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FileKeyUpdate" }),
         __metadata("design:type", String)
     ], S3ReferenceDataSourceUpdate.prototype, "fileKeyUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ReferenceRoleARNUpdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ReferenceRoleARNUpdate" }),
         __metadata("design:type", String)
-    ], S3ReferenceDataSourceUpdate.prototype, "referenceRoleArnUpdate", void 0);
+    ], S3ReferenceDataSourceUpdate.prototype, "referenceRoleARNUpdate", void 0);
     return S3ReferenceDataSourceUpdate;
-}(SpeakeasyBase));
-export { S3ReferenceDataSourceUpdate };
+}(utils_1.SpeakeasyBase));
+exports.S3ReferenceDataSourceUpdate = S3ReferenceDataSourceUpdate;

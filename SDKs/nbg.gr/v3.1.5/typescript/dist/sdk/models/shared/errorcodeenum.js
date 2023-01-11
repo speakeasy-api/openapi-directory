@@ -1,4 +1,7 @@
-export var ErrorCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorCodeEnum = void 0;
+var ErrorCodeEnum;
 (function (ErrorCodeEnum) {
     ErrorCodeEnum["UkObieFieldExpected"] = "UK.OBIE.Field.Expected";
     ErrorCodeEnum["UkObieFieldInvalid"] = "UK.OBIE.Field.Invalid";
@@ -29,4 +32,4 @@ export var ErrorCodeEnum;
     ErrorCodeEnum["UkObieReauthenticate"] = "UK.OBIE.Reauthenticate";
     ErrorCodeEnum["UkObieRulesResourceAlreadyExists"] = "UK.OBIE.Rules.ResourceAlreadyExists";
     ErrorCodeEnum["UkObieUnexpectedError"] = "UK.OBIE.UnexpectedError";
-})(ErrorCodeEnum || (ErrorCodeEnum = {}));
+})(ErrorCodeEnum = exports.ErrorCodeEnum || (exports.ErrorCodeEnum = {}));

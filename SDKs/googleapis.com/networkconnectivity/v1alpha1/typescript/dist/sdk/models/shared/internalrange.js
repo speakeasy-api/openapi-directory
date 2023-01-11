@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,85 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var InternalRangeOverlapsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InternalRangeInput = exports.InternalRange = exports.InternalRangeUsageEnum = exports.InternalRangePeeringEnum = exports.InternalRangeOverlapsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var InternalRangeOverlapsEnum;
 (function (InternalRangeOverlapsEnum) {
     InternalRangeOverlapsEnum["OverlapUnspecified"] = "OVERLAP_UNSPECIFIED";
     InternalRangeOverlapsEnum["OverlapRouteRange"] = "OVERLAP_ROUTE_RANGE";
-})(InternalRangeOverlapsEnum || (InternalRangeOverlapsEnum = {}));
-export var InternalRangePeeringEnum;
+})(InternalRangeOverlapsEnum = exports.InternalRangeOverlapsEnum || (exports.InternalRangeOverlapsEnum = {}));
+var InternalRangePeeringEnum;
 (function (InternalRangePeeringEnum) {
     InternalRangePeeringEnum["PeeringUnspecified"] = "PEERING_UNSPECIFIED";
     InternalRangePeeringEnum["ForSelf"] = "FOR_SELF";
     InternalRangePeeringEnum["ForPeer"] = "FOR_PEER";
     InternalRangePeeringEnum["NotShared"] = "NOT_SHARED";
-})(InternalRangePeeringEnum || (InternalRangePeeringEnum = {}));
-export var InternalRangeUsageEnum;
+})(InternalRangePeeringEnum = exports.InternalRangePeeringEnum || (exports.InternalRangePeeringEnum = {}));
+var InternalRangeUsageEnum;
 (function (InternalRangeUsageEnum) {
     InternalRangeUsageEnum["UsageUnspecified"] = "USAGE_UNSPECIFIED";
     InternalRangeUsageEnum["ForVpc"] = "FOR_VPC";
     InternalRangeUsageEnum["ExternalToVpc"] = "EXTERNAL_TO_VPC";
-})(InternalRangeUsageEnum || (InternalRangeUsageEnum = {}));
-// InternalRangeInput
-/**
- * The InternalRange resource for IPAM operations within a VPC network. Used to represent a private address range along with behavioral characterstics of that range (it's usage and peering behavior). Networking resources can link to this range if they are created as belonging to it. Next id: 14
-**/
-var InternalRangeInput = /** @class */ (function (_super) {
-    __extends(InternalRangeInput, _super);
-    function InternalRangeInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
-        __metadata("design:type", String)
-    ], InternalRangeInput.prototype, "createTime", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], InternalRangeInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipCidrRange" }),
-        __metadata("design:type", String)
-    ], InternalRangeInput.prototype, "ipCidrRange", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], InternalRangeInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], InternalRangeInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
-        __metadata("design:type", String)
-    ], InternalRangeInput.prototype, "network", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=overlaps" }),
-        __metadata("design:type", Array)
-    ], InternalRangeInput.prototype, "overlaps", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=peering" }),
-        __metadata("design:type", String)
-    ], InternalRangeInput.prototype, "peering", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=prefixLength" }),
-        __metadata("design:type", Number)
-    ], InternalRangeInput.prototype, "prefixLength", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetCidrRange" }),
-        __metadata("design:type", Array)
-    ], InternalRangeInput.prototype, "targetCidrRange", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
-        __metadata("design:type", String)
-    ], InternalRangeInput.prototype, "updateTime", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=usage" }),
-        __metadata("design:type", String)
-    ], InternalRangeInput.prototype, "usage", void 0);
-    return InternalRangeInput;
-}(SpeakeasyBase));
-export { InternalRangeInput };
+})(InternalRangeUsageEnum = exports.InternalRangeUsageEnum || (exports.InternalRangeUsageEnum = {}));
 // InternalRange
 /**
  * The InternalRange resource for IPAM operations within a VPC network. Used to represent a private address range along with behavioral characterstics of that range (it's usage and peering behavior). Networking resources can link to this range if they are created as belonging to it. Next id: 14
@@ -111,57 +54,117 @@ var InternalRange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], InternalRange.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], InternalRange.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipCidrRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipCidrRange" }),
         __metadata("design:type", String)
     ], InternalRange.prototype, "ipCidrRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], InternalRange.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], InternalRange.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
         __metadata("design:type", String)
     ], InternalRange.prototype, "network", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overlaps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overlaps" }),
         __metadata("design:type", Array)
     ], InternalRange.prototype, "overlaps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=peering" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=peering" }),
         __metadata("design:type", String)
     ], InternalRange.prototype, "peering", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prefixLength" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prefixLength" }),
         __metadata("design:type", Number)
     ], InternalRange.prototype, "prefixLength", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targetCidrRange" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetCidrRange" }),
         __metadata("design:type", Array)
     ], InternalRange.prototype, "targetCidrRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], InternalRange.prototype, "updateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usage" }),
         __metadata("design:type", String)
     ], InternalRange.prototype, "usage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=users" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=users" }),
         __metadata("design:type", Array)
     ], InternalRange.prototype, "users", void 0);
     return InternalRange;
-}(SpeakeasyBase));
-export { InternalRange };
+}(utils_1.SpeakeasyBase));
+exports.InternalRange = InternalRange;
+// InternalRangeInput
+/**
+ * The InternalRange resource for IPAM operations within a VPC network. Used to represent a private address range along with behavioral characterstics of that range (it's usage and peering behavior). Networking resources can link to this range if they are created as belonging to it. Next id: 14
+**/
+var InternalRangeInput = /** @class */ (function (_super) {
+    __extends(InternalRangeInput, _super);
+    function InternalRangeInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
+        __metadata("design:type", String)
+    ], InternalRangeInput.prototype, "createTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], InternalRangeInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipCidrRange" }),
+        __metadata("design:type", String)
+    ], InternalRangeInput.prototype, "ipCidrRange", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], InternalRangeInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], InternalRangeInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
+        __metadata("design:type", String)
+    ], InternalRangeInput.prototype, "network", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overlaps" }),
+        __metadata("design:type", Array)
+    ], InternalRangeInput.prototype, "overlaps", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=peering" }),
+        __metadata("design:type", String)
+    ], InternalRangeInput.prototype, "peering", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prefixLength" }),
+        __metadata("design:type", Number)
+    ], InternalRangeInput.prototype, "prefixLength", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targetCidrRange" }),
+        __metadata("design:type", Array)
+    ], InternalRangeInput.prototype, "targetCidrRange", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
+        __metadata("design:type", String)
+    ], InternalRangeInput.prototype, "updateTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usage" }),
+        __metadata("design:type", String)
+    ], InternalRangeInput.prototype, "usage", void 0);
+    return InternalRangeInput;
+}(utils_1.SpeakeasyBase));
+exports.InternalRangeInput = InternalRangeInput;

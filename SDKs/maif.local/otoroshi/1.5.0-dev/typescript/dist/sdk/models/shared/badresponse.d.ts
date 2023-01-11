@@ -4,6 +4,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class BadResponse extends SpeakeasyBase {
     body: string;
-    headers: Map<string, string>;
+    headers: Record<string, string>;
     status: number;
 }

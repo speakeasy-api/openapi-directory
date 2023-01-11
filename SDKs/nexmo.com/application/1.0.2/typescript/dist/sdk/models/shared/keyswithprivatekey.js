@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KeysWithPrivateKey = void 0;
+var utils_1 = require("../../../internal/utils");
+// KeysWithPrivateKey
+/**
+ * The Nexmo product that you access with this application.
+**/
 var KeysWithPrivateKey = /** @class */ (function (_super) {
     __extends(KeysWithPrivateKey, _super);
     function KeysWithPrivateKey() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=private_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=private_key" }),
         __metadata("design:type", String)
     ], KeysWithPrivateKey.prototype, "privateKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public_key" }),
         __metadata("design:type", String)
     ], KeysWithPrivateKey.prototype, "publicKey", void 0);
     return KeysWithPrivateKey;
-}(SpeakeasyBase));
-export { KeysWithPrivateKey };
+}(utils_1.SpeakeasyBase));
+exports.KeysWithPrivateKey = KeysWithPrivateKey;

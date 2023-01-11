@@ -19,7 +19,7 @@ export declare class DeleteConfigurationSetEventDestinationRequest extends Speak
 export declare class DeleteConfigurationSetEventDestinationResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
-    deleteConfigurationSetEventDestinationResponse?: Map<string, any>;
+    deleteConfigurationSetEventDestinationResponse?: Record<string, any>;
     notFoundException?: any;
     statusCode: number;
     tooManyRequestsException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RegionalTaxRateInfoStreamingTaxTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegionalTaxRateInfo = exports.RegionalTaxRateInfoTaxTierEnum = exports.RegionalTaxRateInfoStreamingTaxTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RegionalTaxRateInfoStreamingTaxTypeEnum;
 (function (RegionalTaxRateInfoStreamingTaxTypeEnum) {
     RegionalTaxRateInfoStreamingTaxTypeEnum["StreamingTaxTypeUnspecified"] = "STREAMING_TAX_TYPE_UNSPECIFIED";
     RegionalTaxRateInfoStreamingTaxTypeEnum["StreamingTaxTypeTelcoVideoRental"] = "STREAMING_TAX_TYPE_TELCO_VIDEO_RENTAL";
@@ -32,8 +35,8 @@ export var RegionalTaxRateInfoStreamingTaxTypeEnum;
     RegionalTaxRateInfoStreamingTaxTypeEnum["StreamingTaxTypeTelcoAudioRental"] = "STREAMING_TAX_TYPE_TELCO_AUDIO_RENTAL";
     RegionalTaxRateInfoStreamingTaxTypeEnum["StreamingTaxTypeTelcoAudioSales"] = "STREAMING_TAX_TYPE_TELCO_AUDIO_SALES";
     RegionalTaxRateInfoStreamingTaxTypeEnum["StreamingTaxTypeTelcoAudioMultiChannel"] = "STREAMING_TAX_TYPE_TELCO_AUDIO_MULTI_CHANNEL";
-})(RegionalTaxRateInfoStreamingTaxTypeEnum || (RegionalTaxRateInfoStreamingTaxTypeEnum = {}));
-export var RegionalTaxRateInfoTaxTierEnum;
+})(RegionalTaxRateInfoStreamingTaxTypeEnum = exports.RegionalTaxRateInfoStreamingTaxTypeEnum || (exports.RegionalTaxRateInfoStreamingTaxTypeEnum = {}));
+var RegionalTaxRateInfoTaxTierEnum;
 (function (RegionalTaxRateInfoTaxTierEnum) {
     RegionalTaxRateInfoTaxTierEnum["TaxTierUnspecified"] = "TAX_TIER_UNSPECIFIED";
     RegionalTaxRateInfoTaxTierEnum["TaxTierBooks1"] = "TAX_TIER_BOOKS_1";
@@ -41,28 +44,24 @@ export var RegionalTaxRateInfoTaxTierEnum;
     RegionalTaxRateInfoTaxTierEnum["TaxTierNews2"] = "TAX_TIER_NEWS_2";
     RegionalTaxRateInfoTaxTierEnum["TaxTierMusicOrAudio1"] = "TAX_TIER_MUSIC_OR_AUDIO_1";
     RegionalTaxRateInfoTaxTierEnum["TaxTierLiveOrBroadcast1"] = "TAX_TIER_LIVE_OR_BROADCAST_1";
-})(RegionalTaxRateInfoTaxTierEnum || (RegionalTaxRateInfoTaxTierEnum = {}));
-// RegionalTaxRateInfo
-/**
- * Specified details about taxation in a given geographical region.
-**/
+})(RegionalTaxRateInfoTaxTierEnum = exports.RegionalTaxRateInfoTaxTierEnum || (exports.RegionalTaxRateInfoTaxTierEnum = {}));
 var RegionalTaxRateInfo = /** @class */ (function (_super) {
     __extends(RegionalTaxRateInfo, _super);
     function RegionalTaxRateInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=eligibleForStreamingServiceTaxRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eligibleForStreamingServiceTaxRate" }),
         __metadata("design:type", Boolean)
     ], RegionalTaxRateInfo.prototype, "eligibleForStreamingServiceTaxRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streamingTaxType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streamingTaxType" }),
         __metadata("design:type", String)
     ], RegionalTaxRateInfo.prototype, "streamingTaxType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taxTier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taxTier" }),
         __metadata("design:type", String)
     ], RegionalTaxRateInfo.prototype, "taxTier", void 0);
     return RegionalTaxRateInfo;
-}(SpeakeasyBase));
-export { RegionalTaxRateInfo };
+}(utils_1.SpeakeasyBase));
+exports.RegionalTaxRateInfo = RegionalTaxRateInfo;

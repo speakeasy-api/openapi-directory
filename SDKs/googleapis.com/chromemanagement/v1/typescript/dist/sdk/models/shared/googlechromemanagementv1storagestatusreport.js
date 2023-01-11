@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleChromeManagementV1DiskInfo } from "./googlechromemanagementv1diskinfo";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleChromeManagementV1StorageStatusReport = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlechromemanagementv1diskinfo_1 = require("./googlechromemanagementv1diskinfo");
 // GoogleChromeManagementV1StorageStatusReport
 /**
  * Status data for storage. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceStorageStatus](https://chromeenterprise.google/policies/#ReportDeviceStorageStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
@@ -34,13 +37,13 @@ var GoogleChromeManagementV1StorageStatusReport = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disk", elemType: GoogleChromeManagementV1DiskInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disk", elemType: googlechromemanagementv1diskinfo_1.GoogleChromeManagementV1DiskInfo }),
         __metadata("design:type", Array)
     ], GoogleChromeManagementV1StorageStatusReport.prototype, "disk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportTime" }),
         __metadata("design:type", String)
     ], GoogleChromeManagementV1StorageStatusReport.prototype, "reportTime", void 0);
     return GoogleChromeManagementV1StorageStatusReport;
-}(SpeakeasyBase));
-export { GoogleChromeManagementV1StorageStatusReport };
+}(utils_1.SpeakeasyBase));
+exports.GoogleChromeManagementV1StorageStatusReport = GoogleChromeManagementV1StorageStatusReport;

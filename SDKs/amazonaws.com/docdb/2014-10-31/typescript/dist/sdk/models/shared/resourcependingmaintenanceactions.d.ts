@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { PendingMaintenanceAction } from "./pendingmaintenanceaction";
+import { PendingMaintenanceActionDetails } from "./pendingmaintenanceactiondetails";
 /**
  * Represents the output of <a>ApplyPendingMaintenanceAction</a>.
 **/
 export declare class ResourcePendingMaintenanceActions extends SpeakeasyBase {
-    pendingMaintenanceActionDetails?: PendingMaintenanceAction[];
+    pendingMaintenanceActionDetails?: PendingMaintenanceActionDetails[];
     resourceIdentifier?: string;
 }

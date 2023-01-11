@@ -31,7 +31,7 @@ export declare class CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersion
 export declare class CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsDestroyRequest extends SpeakeasyBase {
     pathParams: CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsDestroyPathParams;
     queryParams: CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsDestroyQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsDestroySecurity;
 }
 export declare class CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsDestroyResponse extends SpeakeasyBase {

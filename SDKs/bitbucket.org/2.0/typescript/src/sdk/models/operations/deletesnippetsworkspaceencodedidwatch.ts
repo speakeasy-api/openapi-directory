@@ -41,7 +41,7 @@ export class DeleteSnippetsWorkspaceEncodedIdWatchResponse extends SpeakeasyBase
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   paginatedUsers?: shared.PaginatedUsers;

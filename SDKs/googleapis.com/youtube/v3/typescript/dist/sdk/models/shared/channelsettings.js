@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChannelSettings = void 0;
+var utils_1 = require("../../../internal/utils");
 // ChannelSettings
 /**
  * Branding properties for the channel view.
@@ -33,61 +36,61 @@ var ChannelSettings = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], ChannelSettings.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultLanguage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultLanguage" }),
         __metadata("design:type", String)
     ], ChannelSettings.prototype, "defaultLanguage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultTab" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultTab" }),
         __metadata("design:type", String)
     ], ChannelSettings.prototype, "defaultTab", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ChannelSettings.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=featuredChannelsTitle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=featuredChannelsTitle" }),
         __metadata("design:type", String)
     ], ChannelSettings.prototype, "featuredChannelsTitle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=featuredChannelsUrls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=featuredChannelsUrls" }),
         __metadata("design:type", Array)
     ], ChannelSettings.prototype, "featuredChannelsUrls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keywords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keywords" }),
         __metadata("design:type", String)
     ], ChannelSettings.prototype, "keywords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=moderateComments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=moderateComments" }),
         __metadata("design:type", Boolean)
     ], ChannelSettings.prototype, "moderateComments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileColor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileColor" }),
         __metadata("design:type", String)
     ], ChannelSettings.prototype, "profileColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=showBrowseView" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=showBrowseView" }),
         __metadata("design:type", Boolean)
     ], ChannelSettings.prototype, "showBrowseView", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=showRelatedChannels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=showRelatedChannels" }),
         __metadata("design:type", Boolean)
     ], ChannelSettings.prototype, "showRelatedChannels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], ChannelSettings.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trackingAnalyticsAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trackingAnalyticsAccountId" }),
         __metadata("design:type", String)
     ], ChannelSettings.prototype, "trackingAnalyticsAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unsubscribedTrailer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unsubscribedTrailer" }),
         __metadata("design:type", String)
     ], ChannelSettings.prototype, "unsubscribedTrailer", void 0);
     return ChannelSettings;
-}(SpeakeasyBase));
-export { ChannelSettings };
+}(utils_1.SpeakeasyBase));
+exports.ChannelSettings = ChannelSettings;

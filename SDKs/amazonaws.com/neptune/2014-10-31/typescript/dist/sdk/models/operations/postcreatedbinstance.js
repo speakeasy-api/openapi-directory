@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCreateDbInstanceActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCreateDbInstanceResponse = exports.PostCreateDbInstanceRequest = exports.PostCreateDbInstanceHeaders = exports.PostCreateDbInstanceQueryParams = exports.PostCreateDbInstanceVersionEnum = exports.PostCreateDbInstanceActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCreateDbInstanceActionEnum;
 (function (PostCreateDbInstanceActionEnum) {
     PostCreateDbInstanceActionEnum["CreateDbInstance"] = "CreateDBInstance";
-})(PostCreateDbInstanceActionEnum || (PostCreateDbInstanceActionEnum = {}));
-export var PostCreateDbInstanceVersionEnum;
+})(PostCreateDbInstanceActionEnum = exports.PostCreateDbInstanceActionEnum || (exports.PostCreateDbInstanceActionEnum = {}));
+var PostCreateDbInstanceVersionEnum;
 (function (PostCreateDbInstanceVersionEnum) {
     PostCreateDbInstanceVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostCreateDbInstanceVersionEnum || (PostCreateDbInstanceVersionEnum = {}));
+})(PostCreateDbInstanceVersionEnum = exports.PostCreateDbInstanceVersionEnum || (exports.PostCreateDbInstanceVersionEnum = {}));
 var PostCreateDbInstanceQueryParams = /** @class */ (function (_super) {
     __extends(PostCreateDbInstanceQueryParams, _super);
     function PostCreateDbInstanceQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCreateDbInstanceQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCreateDbInstanceQueryParams.prototype, "version", void 0);
     return PostCreateDbInstanceQueryParams;
-}(SpeakeasyBase));
-export { PostCreateDbInstanceQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateDbInstanceQueryParams = PostCreateDbInstanceQueryParams;
 var PostCreateDbInstanceHeaders = /** @class */ (function (_super) {
     __extends(PostCreateDbInstanceHeaders, _super);
     function PostCreateDbInstanceHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCreateDbInstanceHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCreateDbInstanceHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCreateDbInstanceHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCreateDbInstanceHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCreateDbInstanceHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCreateDbInstanceHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCreateDbInstanceHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCreateDbInstanceHeaders;
-}(SpeakeasyBase));
-export { PostCreateDbInstanceHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateDbInstanceHeaders = PostCreateDbInstanceHeaders;
 var PostCreateDbInstanceRequest = /** @class */ (function (_super) {
     __extends(PostCreateDbInstanceRequest, _super);
     function PostCreateDbInstanceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateDbInstanceQueryParams)
     ], PostCreateDbInstanceRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateDbInstanceHeaders)
     ], PostCreateDbInstanceRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCreateDbInstanceRequest.prototype, "request", void 0);
     return PostCreateDbInstanceRequest;
-}(SpeakeasyBase));
-export { PostCreateDbInstanceRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateDbInstanceRequest = PostCreateDbInstanceRequest;
 var PostCreateDbInstanceResponse = /** @class */ (function (_super) {
     __extends(PostCreateDbInstanceResponse, _super);
     function PostCreateDbInstanceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCreateDbInstanceResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCreateDbInstanceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCreateDbInstanceResponse.prototype, "statusCode", void 0);
     return PostCreateDbInstanceResponse;
-}(SpeakeasyBase));
-export { PostCreateDbInstanceResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateDbInstanceResponse = PostCreateDbInstanceResponse;

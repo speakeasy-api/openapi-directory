@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDiscoveryengineV1alphaDocumentInfo = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudDiscoveryengineV1alphaDocumentInfo
 /**
  * Detailed document information associated with a user event.
@@ -33,21 +36,21 @@ var GoogleCloudDiscoveryengineV1alphaDocumentInfo = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1alphaDocumentInfo.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudDiscoveryengineV1alphaDocumentInfo.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promotionIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promotionIds" }),
         __metadata("design:type", Array)
     ], GoogleCloudDiscoveryengineV1alphaDocumentInfo.prototype, "promotionIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quantity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quantity" }),
         __metadata("design:type", Number)
     ], GoogleCloudDiscoveryengineV1alphaDocumentInfo.prototype, "quantity", void 0);
     return GoogleCloudDiscoveryengineV1alphaDocumentInfo;
-}(SpeakeasyBase));
-export { GoogleCloudDiscoveryengineV1alphaDocumentInfo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDiscoveryengineV1alphaDocumentInfo = GoogleCloudDiscoveryengineV1alphaDocumentInfo;

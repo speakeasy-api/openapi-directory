@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HeroImageDisplaySize } from "./heroimagedisplaysize";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HeroImage = void 0;
+var utils_1 = require("../../../internal/utils");
+var heroimagedisplaysize_1 = require("./heroimagedisplaysize");
 var HeroImage = /** @class */ (function (_super) {
     __extends(HeroImage, _super);
     function HeroImage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_sizes", elemType: HeroImageDisplaySize }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_sizes", elemType: heroimagedisplaysize_1.HeroImageDisplaySize }),
         __metadata("design:type", Array)
     ], HeroImage.prototype, "displaySizes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], HeroImage.prototype, "id", void 0);
     return HeroImage;
-}(SpeakeasyBase));
-export { HeroImage };
+}(utils_1.SpeakeasyBase));
+exports.HeroImage = HeroImage;

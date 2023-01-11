@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ActionExecutionInput } from "./actionexecutioninput";
-import { ActionExecutionOutput } from "./actionexecutionoutput";
-import { ActionExecutionStatusEnum } from "./actionexecutionstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionExecutionDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var actionexecutioninput_1 = require("./actionexecutioninput");
+var actionexecutionoutput_1 = require("./actionexecutionoutput");
+var actionexecutionstatusenum_1 = require("./actionexecutionstatusenum");
 // ActionExecutionDetail
 /**
  * Returns information about an execution of an action, including the action execution ID, and the name, version, and timing of the action.
@@ -36,45 +39,45 @@ var ActionExecutionDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionExecutionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionExecutionId" }),
         __metadata("design:type", String)
     ], ActionExecutionDetail.prototype, "actionExecutionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionName" }),
         __metadata("design:type", String)
     ], ActionExecutionDetail.prototype, "actionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=input" }),
-        __metadata("design:type", ActionExecutionInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=input" }),
+        __metadata("design:type", actionexecutioninput_1.ActionExecutionInput)
     ], ActionExecutionDetail.prototype, "input", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastUpdateTime" }),
         __metadata("design:type", Date)
     ], ActionExecutionDetail.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=output" }),
-        __metadata("design:type", ActionExecutionOutput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=output" }),
+        __metadata("design:type", actionexecutionoutput_1.ActionExecutionOutput)
     ], ActionExecutionDetail.prototype, "output", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipelineExecutionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipelineExecutionId" }),
         __metadata("design:type", String)
     ], ActionExecutionDetail.prototype, "pipelineExecutionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipelineVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipelineVersion" }),
         __metadata("design:type", Number)
     ], ActionExecutionDetail.prototype, "pipelineVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stageName" }),
         __metadata("design:type", String)
     ], ActionExecutionDetail.prototype, "stageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startTime" }),
         __metadata("design:type", Date)
     ], ActionExecutionDetail.prototype, "startTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ActionExecutionDetail.prototype, "status", void 0);
     return ActionExecutionDetail;
-}(SpeakeasyBase));
-export { ActionExecutionDetail };
+}(utils_1.SpeakeasyBase));
+exports.ActionExecutionDetail = ActionExecutionDetail;

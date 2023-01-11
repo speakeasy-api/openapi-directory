@@ -8,5 +8,5 @@ export declare class GetOrganizationSamlIdpsRequest extends SpeakeasyBase {
 export declare class GetOrganizationSamlIdpsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getOrganizationSamlIdps200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationSamlIdps200ApplicationJSONObject?: Record<string, any>;
 }

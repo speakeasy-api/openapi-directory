@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Errors } from "./errors";
-import { GmbAccounts } from "./gmbaccounts";
-import { LiaSettings } from "./liasettings";
-import { PosDataProviders } from "./posdataproviders";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LiasettingsCustomBatchResponseEntry = void 0;
+var utils_1 = require("../../../internal/utils");
+var errors_1 = require("./errors");
+var gmbaccounts_1 = require("./gmbaccounts");
+var liasettings_1 = require("./liasettings");
+var posdataproviders_1 = require("./posdataproviders");
 var LiasettingsCustomBatchResponseEntry = /** @class */ (function (_super) {
     __extends(LiasettingsCustomBatchResponseEntry, _super);
     function LiasettingsCustomBatchResponseEntry() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchId" }),
         __metadata("design:type", Number)
     ], LiasettingsCustomBatchResponseEntry.prototype, "batchId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors" }),
-        __metadata("design:type", Errors)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors" }),
+        __metadata("design:type", errors_1.Errors)
     ], LiasettingsCustomBatchResponseEntry.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gmbAccounts" }),
-        __metadata("design:type", GmbAccounts)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gmbAccounts" }),
+        __metadata("design:type", gmbaccounts_1.GmbAccounts)
     ], LiasettingsCustomBatchResponseEntry.prototype, "gmbAccounts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], LiasettingsCustomBatchResponseEntry.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=liaSettings" }),
-        __metadata("design:type", LiaSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=liaSettings" }),
+        __metadata("design:type", liasettings_1.LiaSettings)
     ], LiasettingsCustomBatchResponseEntry.prototype, "liaSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=posDataProviders", elemType: PosDataProviders }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=posDataProviders", elemType: posdataproviders_1.PosDataProviders }),
         __metadata("design:type", Array)
     ], LiasettingsCustomBatchResponseEntry.prototype, "posDataProviders", void 0);
     return LiasettingsCustomBatchResponseEntry;
-}(SpeakeasyBase));
-export { LiasettingsCustomBatchResponseEntry };
+}(utils_1.SpeakeasyBase));
+exports.LiasettingsCustomBatchResponseEntry = LiasettingsCustomBatchResponseEntry;

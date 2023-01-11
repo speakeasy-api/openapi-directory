@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { MybusinessverificationsLocationsFetchVerificationOptionsRequest, MybusinessverificationsLocationsFetchVerificationOptionsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,43 +28,44 @@ const sdk = new SDK();
     
 const req: MybusinessverificationsLocationsFetchVerificationOptionsRequest = {
   pathParams: {
-    location: "enim",
+    location: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "voluptatibus",
+    dollarXgafv: "1",
+    accessToken: "culpa",
     alt: "media",
-    callback: "corrupti",
-    fields: "dignissimos",
-    key: "incidunt",
-    oauthToken: "neque",
-    prettyPrint: false,
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
     quotaUser: "et",
-    uploadType: "earum",
-    uploadProtocol: "tempora",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
     context: {
       address: {
         addressLines: [
-          "ab",
-          "quod",
+          "debitis",
+          "voluptatum",
+          "et",
         ],
-        administrativeArea: "nemo",
-        languageCode: "nisi",
-        locality: "est",
-        organization: "iste",
-        postalCode: "quia",
+        administrativeArea: "ut",
+        languageCode: "dolorem",
+        locality: "et",
+        organization: "voluptate",
+        postalCode: "iste",
         recipients: [
-          "ipsam",
+          "totam",
         ],
-        regionCode: "qui",
-        revision: 5011812006485200487,
-        sortingCode: "esse",
-        sublocality: "molestiae",
+        regionCode: "dolores",
+        revision: 1929546706668609706,
+        sortingCode: "debitis",
+        sublocality: "vel",
       },
     },
-    languageCode: "soluta",
+    languageCode: "odio",
   },
 };
 

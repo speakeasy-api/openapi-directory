@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AttachmentStatusEnum } from "./attachmentstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Attachment = void 0;
+var utils_1 = require("../../../internal/utils");
+var attachmentstatusenum_1 = require("./attachmentstatusenum");
 // Attachment
 /**
  * The configuration and status for a single subnet that you've specified for use by the AWS Network Firewall firewall. This is part of the <a>FirewallStatus</a>.
@@ -34,17 +37,17 @@ var Attachment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointId" }),
         __metadata("design:type", String)
     ], Attachment.prototype, "endpointId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], Attachment.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetId" }),
         __metadata("design:type", String)
     ], Attachment.prototype, "subnetId", void 0);
     return Attachment;
-}(SpeakeasyBase));
-export { Attachment };
+}(utils_1.SpeakeasyBase));
+exports.Attachment = Attachment;

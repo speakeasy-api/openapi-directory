@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PayoutCompanyV3 } from "./payoutcompanyv3";
-import { PayoutIndividualV3 } from "./payoutindividualv3";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayoutPayeeV3 = void 0;
+var utils_1 = require("../../../internal/utils");
+var payoutcompanyv3_1 = require("./payoutcompanyv3");
+var payoutindividualv3_1 = require("./payoutindividualv3");
 // PayoutPayeeV3
 /**
  * Payee data associated with a payment. Either individual or company must be populated
@@ -35,17 +38,17 @@ var PayoutPayeeV3 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=company" }),
-        __metadata("design:type", PayoutCompanyV3)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=company" }),
+        __metadata("design:type", payoutcompanyv3_1.PayoutCompanyV3)
     ], PayoutPayeeV3.prototype, "company", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=individual" }),
-        __metadata("design:type", PayoutIndividualV3)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=individual" }),
+        __metadata("design:type", payoutindividualv3_1.PayoutIndividualV3)
     ], PayoutPayeeV3.prototype, "individual", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payeeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payeeId" }),
         __metadata("design:type", String)
     ], PayoutPayeeV3.prototype, "payeeId", void 0);
     return PayoutPayeeV3;
-}(SpeakeasyBase));
-export { PayoutPayeeV3 };
+}(utils_1.SpeakeasyBase));
+exports.PayoutPayeeV3 = PayoutPayeeV3;

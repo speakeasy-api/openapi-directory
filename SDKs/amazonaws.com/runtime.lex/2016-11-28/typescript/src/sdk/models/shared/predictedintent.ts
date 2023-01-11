@@ -15,5 +15,5 @@ export class PredictedIntent extends SpeakeasyBase {
   nluIntentConfidence?: IntentConfidence;
 
   @SpeakeasyMetadata({ data: "json, name=slots" })
-  slots?: Map<string, string>;
+  slots?: Record<string, string>;
 }

@@ -8,7 +8,7 @@ export declare class AppsCreateFromManifestRequest extends SpeakeasyBase {
 }
 export declare class AppsCreateFromManifestResponse extends SpeakeasyBase {
     contentType: string;
-    gitHubApp?: Map<string, any>;
+    gitHubApp?: Record<string, any>;
     statusCode: number;
     basicError?: shared.BasicError;
     validationErrorSimple?: shared.ValidationErrorSimple;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WebpropertyInput = exports.Webproperty = exports.WebpropertyPermissions = exports.WebpropertyParentLink = exports.WebpropertyChildLink = void 0;
+var utils_1 = require("../../../internal/utils");
 // WebpropertyChildLink
 /**
  * Child link for this web property. Points to the list of views (profiles) for this web property.
@@ -33,16 +36,16 @@ var WebpropertyChildLink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], WebpropertyChildLink.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], WebpropertyChildLink.prototype, "type", void 0);
     return WebpropertyChildLink;
-}(SpeakeasyBase));
-export { WebpropertyChildLink };
+}(utils_1.SpeakeasyBase));
+exports.WebpropertyChildLink = WebpropertyChildLink;
 // WebpropertyParentLink
 /**
  * Parent link for this web property. Points to the account to which this web property belongs.
@@ -53,16 +56,16 @@ var WebpropertyParentLink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], WebpropertyParentLink.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], WebpropertyParentLink.prototype, "type", void 0);
     return WebpropertyParentLink;
-}(SpeakeasyBase));
-export { WebpropertyParentLink };
+}(utils_1.SpeakeasyBase));
+exports.WebpropertyParentLink = WebpropertyParentLink;
 // WebpropertyPermissions
 /**
  * Permissions the user has for this web property.
@@ -73,12 +76,12 @@ var WebpropertyPermissions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effective" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effective" }),
         __metadata("design:type", Array)
     ], WebpropertyPermissions.prototype, "effective", void 0);
     return WebpropertyPermissions;
-}(SpeakeasyBase));
-export { WebpropertyPermissions };
+}(utils_1.SpeakeasyBase));
+exports.WebpropertyPermissions = WebpropertyPermissions;
 // Webproperty
 /**
  * JSON template for an Analytics web property.
@@ -89,84 +92,84 @@ var Webproperty = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], Webproperty.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=childLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=childLink" }),
         __metadata("design:type", WebpropertyChildLink)
     ], Webproperty.prototype, "childLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", Date)
     ], Webproperty.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataRetentionResetOnNewActivity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataRetentionResetOnNewActivity" }),
         __metadata("design:type", Boolean)
     ], Webproperty.prototype, "dataRetentionResetOnNewActivity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataRetentionTtl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataRetentionTtl" }),
         __metadata("design:type", String)
     ], Webproperty.prototype, "dataRetentionTtl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultProfileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultProfileId" }),
         __metadata("design:type", String)
     ], Webproperty.prototype, "defaultProfileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Webproperty.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=industryVertical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=industryVertical" }),
         __metadata("design:type", String)
     ], Webproperty.prototype, "industryVertical", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=internalWebPropertyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=internalWebPropertyId" }),
         __metadata("design:type", String)
     ], Webproperty.prototype, "internalWebPropertyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], Webproperty.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=level" }),
         __metadata("design:type", String)
     ], Webproperty.prototype, "level", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Webproperty.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentLink" }),
         __metadata("design:type", WebpropertyParentLink)
     ], Webproperty.prototype, "parentLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions" }),
         __metadata("design:type", WebpropertyPermissions)
     ], Webproperty.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileCount" }),
         __metadata("design:type", Number)
     ], Webproperty.prototype, "profileCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], Webproperty.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=starred" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=starred" }),
         __metadata("design:type", Boolean)
     ], Webproperty.prototype, "starred", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", Date)
     ], Webproperty.prototype, "updated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=websiteUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=websiteUrl" }),
         __metadata("design:type", String)
     ], Webproperty.prototype, "websiteUrl", void 0);
     return Webproperty;
-}(SpeakeasyBase));
-export { Webproperty };
+}(utils_1.SpeakeasyBase));
+exports.Webproperty = Webproperty;
 // WebpropertyInput
 /**
  * JSON template for an Analytics web property.
@@ -177,49 +180,49 @@ var WebpropertyInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], WebpropertyInput.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=childLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=childLink" }),
         __metadata("design:type", WebpropertyChildLink)
     ], WebpropertyInput.prototype, "childLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataRetentionResetOnNewActivity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataRetentionResetOnNewActivity" }),
         __metadata("design:type", Boolean)
     ], WebpropertyInput.prototype, "dataRetentionResetOnNewActivity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataRetentionTtl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataRetentionTtl" }),
         __metadata("design:type", String)
     ], WebpropertyInput.prototype, "dataRetentionTtl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultProfileId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultProfileId" }),
         __metadata("design:type", String)
     ], WebpropertyInput.prototype, "defaultProfileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], WebpropertyInput.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=industryVertical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=industryVertical" }),
         __metadata("design:type", String)
     ], WebpropertyInput.prototype, "industryVertical", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WebpropertyInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentLink" }),
         __metadata("design:type", WebpropertyParentLink)
     ], WebpropertyInput.prototype, "parentLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=starred" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=starred" }),
         __metadata("design:type", Boolean)
     ], WebpropertyInput.prototype, "starred", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=websiteUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=websiteUrl" }),
         __metadata("design:type", String)
     ], WebpropertyInput.prototype, "websiteUrl", void 0);
     return WebpropertyInput;
-}(SpeakeasyBase));
-export { WebpropertyInput };
+}(utils_1.SpeakeasyBase));
+exports.WebpropertyInput = WebpropertyInput;

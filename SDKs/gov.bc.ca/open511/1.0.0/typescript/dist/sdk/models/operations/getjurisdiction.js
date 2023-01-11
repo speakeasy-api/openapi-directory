@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,49 +23,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetJurisdictionFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetJurisdictionResponse = exports.GetJurisdictionRequest = exports.GetJurisdictionQueryParams = exports.GetJurisdictionFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetJurisdictionFormatEnum;
 (function (GetJurisdictionFormatEnum) {
     GetJurisdictionFormatEnum["Json"] = "json";
     GetJurisdictionFormatEnum["Xml"] = "xml";
-})(GetJurisdictionFormatEnum || (GetJurisdictionFormatEnum = {}));
+})(GetJurisdictionFormatEnum = exports.GetJurisdictionFormatEnum || (exports.GetJurisdictionFormatEnum = {}));
 var GetJurisdictionQueryParams = /** @class */ (function (_super) {
     __extends(GetJurisdictionQueryParams, _super);
     function GetJurisdictionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=format" }),
         __metadata("design:type", String)
     ], GetJurisdictionQueryParams.prototype, "format", void 0);
     return GetJurisdictionQueryParams;
-}(SpeakeasyBase));
-export { GetJurisdictionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetJurisdictionQueryParams = GetJurisdictionQueryParams;
 var GetJurisdictionRequest = /** @class */ (function (_super) {
     __extends(GetJurisdictionRequest, _super);
     function GetJurisdictionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetJurisdictionQueryParams)
     ], GetJurisdictionRequest.prototype, "queryParams", void 0);
     return GetJurisdictionRequest;
-}(SpeakeasyBase));
-export { GetJurisdictionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetJurisdictionRequest = GetJurisdictionRequest;
 var GetJurisdictionResponse = /** @class */ (function (_super) {
     __extends(GetJurisdictionResponse, _super);
     function GetJurisdictionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetJurisdictionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetJurisdictionResponse.prototype, "statusCode", void 0);
     return GetJurisdictionResponse;
-}(SpeakeasyBase));
-export { GetJurisdictionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetJurisdictionResponse = GetJurisdictionResponse;

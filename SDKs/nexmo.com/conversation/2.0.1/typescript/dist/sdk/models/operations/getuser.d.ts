@@ -8,5 +8,5 @@ export declare class GetUserRequest extends SpeakeasyBase {
 export declare class GetUserResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getUser200ApplicationJsonAny?: any;
+    getUser200ApplicationJSONAny?: any;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating
 /**
  * Information about the claim rating.
@@ -33,29 +36,29 @@ var GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bestRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bestRating" }),
         __metadata("design:type", Number)
     ], GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating.prototype, "bestRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageUrl" }),
         __metadata("design:type", String)
     ], GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating.prototype, "imageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ratingExplanation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ratingExplanation" }),
         __metadata("design:type", String)
     ], GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating.prototype, "ratingExplanation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ratingValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ratingValue" }),
         __metadata("design:type", Number)
     ], GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating.prototype, "ratingValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textualRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textualRating" }),
         __metadata("design:type", String)
     ], GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating.prototype, "textualRating", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=worstRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=worstRating" }),
         __metadata("design:type", Number)
     ], GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating.prototype, "worstRating", void 0);
     return GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating;
-}(SpeakeasyBase));
-export { GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating };
+}(utils_1.SpeakeasyBase));
+exports.GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating = GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleGroup } from "./rulegroup";
-import { RuleGroupResponse } from "./rulegroupresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeRuleGroupResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulegroup_1 = require("./rulegroup");
+var rulegroupresponse_1 = require("./rulegroupresponse");
 var DescribeRuleGroupResponse = /** @class */ (function (_super) {
     __extends(DescribeRuleGroupResponse, _super);
     function DescribeRuleGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleGroup" }),
-        __metadata("design:type", RuleGroup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleGroup" }),
+        __metadata("design:type", rulegroup_1.RuleGroup)
     ], DescribeRuleGroupResponse.prototype, "ruleGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleGroupResponse" }),
-        __metadata("design:type", RuleGroupResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleGroupResponse" }),
+        __metadata("design:type", rulegroupresponse_1.RuleGroupResponse)
     ], DescribeRuleGroupResponse.prototype, "ruleGroupResponse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UpdateToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UpdateToken" }),
         __metadata("design:type", String)
     ], DescribeRuleGroupResponse.prototype, "updateToken", void 0);
     return DescribeRuleGroupResponse;
-}(SpeakeasyBase));
-export { DescribeRuleGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.DescribeRuleGroupResponse = DescribeRuleGroupResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ControllersSystemPackageInline = void 0;
+var utils_1 = require("../../../internal/utils");
 var ControllersSystemPackageInline = /** @class */ (function (_super) {
     __extends(ControllersSystemPackageInline, _super);
     function ControllersSystemPackageInline() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], ControllersSystemPackageInline.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evra" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evra" }),
         __metadata("design:type", String)
     ], ControllersSystemPackageInline.prototype, "evra", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latest_evra" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latest_evra" }),
         __metadata("design:type", String)
     ], ControllersSystemPackageInline.prototype, "latestEvra", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ControllersSystemPackageInline.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=summary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=summary" }),
         __metadata("design:type", String)
     ], ControllersSystemPackageInline.prototype, "summary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatable" }),
         __metadata("design:type", Boolean)
     ], ControllersSystemPackageInline.prototype, "updatable", void 0);
     return ControllersSystemPackageInline;
-}(SpeakeasyBase));
-export { ControllersSystemPackageInline };
+}(utils_1.SpeakeasyBase));
+exports.ControllersSystemPackageInline = ControllersSystemPackageInline;

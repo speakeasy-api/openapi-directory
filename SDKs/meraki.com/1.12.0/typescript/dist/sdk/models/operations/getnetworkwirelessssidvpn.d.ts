@@ -9,5 +9,5 @@ export declare class GetNetworkWirelessSsidVpnRequest extends SpeakeasyBase {
 export declare class GetNetworkWirelessSsidVpnResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkWirelessSsidVpn200ApplicationJsonObject?: Map<string, any>;
+    getNetworkWirelessSsidVpn200ApplicationJSONObject?: Record<string, any>;
 }

@@ -10,5 +10,5 @@ export declare class ReadmeGetV2SourcesReadmeSlugGetResponse extends SpeakeasyBa
     contentType: string;
     httpValidationError?: shared.HttpValidationError;
     statusCode: number;
-    readmeGetV2SourcesReadmeSlugGet200ApplicationJsonAny?: any;
+    readmeGetV2SourcesReadmeSlugGet200ApplicationJSONAny?: any;
 }

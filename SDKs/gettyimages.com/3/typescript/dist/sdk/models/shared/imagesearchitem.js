@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,143 +23,145 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AllowedUse } from "./alloweduse";
-import { ImageSearchItemDisplaySize } from "./imagesearchitemdisplaysize";
-import { IStockLicense } from "./istocklicense";
-import { Keyword } from "./keyword";
-import { Download } from "./download";
-import { MaxDimensions } from "./maxdimensions";
-import { ReferralDestination } from "./referraldestination";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageSearchItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var alloweduse_1 = require("./alloweduse");
+var imagesearchitemdisplaysize_1 = require("./imagesearchitemdisplaysize");
+var istocklicense_1 = require("./istocklicense");
+var keyword_1 = require("./keyword");
+var download_1 = require("./download");
+var maxdimensions_1 = require("./maxdimensions");
+var referraldestination_1 = require("./referraldestination");
 var ImageSearchItem = /** @class */ (function (_super) {
     __extends(ImageSearchItem, _super);
     function ImageSearchItem() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowed_use" }),
-        __metadata("design:type", AllowedUse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowed_use" }),
+        __metadata("design:type", alloweduse_1.AllowedUse)
     ], ImageSearchItem.prototype, "allowedUse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alternative_ids" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alternative_ids" }),
+        __metadata("design:type", Object)
     ], ImageSearchItem.prototype, "alternativeIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artist" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artist" }),
         __metadata("design:type", String)
     ], ImageSearchItem.prototype, "artist", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asset_family" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asset_family" }),
         __metadata("design:type", String)
     ], ImageSearchItem.prototype, "assetFamily", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=call_for_image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=call_for_image" }),
         __metadata("design:type", Boolean)
     ], ImageSearchItem.prototype, "callForImage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=caption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=caption" }),
         __metadata("design:type", String)
     ], ImageSearchItem.prototype, "caption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collection_code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collection_code" }),
         __metadata("design:type", String)
     ], ImageSearchItem.prototype, "collectionCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collection_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collection_id" }),
         __metadata("design:type", Number)
     ], ImageSearchItem.prototype, "collectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collection_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collection_name" }),
         __metadata("design:type", String)
     ], ImageSearchItem.prototype, "collectionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color_type" }),
         __metadata("design:type", String)
     ], ImageSearchItem.prototype, "colorType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=copyright" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=copyright" }),
         __metadata("design:type", String)
     ], ImageSearchItem.prototype, "copyright", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_camera_shot" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_camera_shot" }),
         __metadata("design:type", Date)
     ], ImageSearchItem.prototype, "dateCameraShot", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date_created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date_created" }),
         __metadata("design:type", Date)
     ], ImageSearchItem.prototype, "dateCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display_sizes", elemType: ImageSearchItemDisplaySize }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display_sizes", elemType: imagesearchitemdisplaysize_1.ImageSearchItemDisplaySize }),
         __metadata("design:type", Array)
     ], ImageSearchItem.prototype, "displaySizes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=download_product" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=download_product" }),
         __metadata("design:type", String)
     ], ImageSearchItem.prototype, "downloadProduct", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=editorial_segments" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=editorial_segments" }),
         __metadata("design:type", Array)
     ], ImageSearchItem.prototype, "editorialSegments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=event_ids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=event_ids" }),
         __metadata("design:type", Array)
     ], ImageSearchItem.prototype, "eventIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=graphical_style" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=graphical_style" }),
         __metadata("design:type", String)
     ], ImageSearchItem.prototype, "graphicalStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ImageSearchItem.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=istock_licenses", elemType: IStockLicense }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=istock_licenses", elemType: istocklicense_1.IStockLicense }),
         __metadata("design:type", Array)
     ], ImageSearchItem.prototype, "istockLicenses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keywords", elemType: Keyword }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keywords", elemType: keyword_1.Keyword }),
         __metadata("design:type", Array)
     ], ImageSearchItem.prototype, "keywords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=largest_downloads", elemType: Download }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=largest_downloads", elemType: download_1.Download }),
         __metadata("design:type", Array)
     ], ImageSearchItem.prototype, "largestDownloads", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=license_model" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=license_model" }),
         __metadata("design:type", String)
     ], ImageSearchItem.prototype, "licenseModel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max_dimensions" }),
-        __metadata("design:type", MaxDimensions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max_dimensions" }),
+        __metadata("design:type", maxdimensions_1.MaxDimensions)
     ], ImageSearchItem.prototype, "maxDimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=orientation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=orientation" }),
         __metadata("design:type", String)
     ], ImageSearchItem.prototype, "orientation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=people" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=people" }),
         __metadata("design:type", Array)
     ], ImageSearchItem.prototype, "people", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=product_types" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=product_types" }),
         __metadata("design:type", Array)
     ], ImageSearchItem.prototype, "productTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quality_rank" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quality_rank" }),
         __metadata("design:type", Number)
     ], ImageSearchItem.prototype, "qualityRank", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=referral_destinations", elemType: ReferralDestination }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=referral_destinations", elemType: referraldestination_1.ReferralDestination }),
         __metadata("design:type", Array)
     ], ImageSearchItem.prototype, "referralDestinations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], ImageSearchItem.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri_oembed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri_oembed" }),
         __metadata("design:type", String)
     ], ImageSearchItem.prototype, "uriOembed", void 0);
     return ImageSearchItem;
-}(SpeakeasyBase));
-export { ImageSearchItem };
+}(utils_1.SpeakeasyBase));
+exports.ImageSearchItem = ImageSearchItem;

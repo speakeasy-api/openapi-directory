@@ -39,22 +39,22 @@ export class UpdateApiHeaders extends SpeakeasyBase {
 **/
 export class UpdateApiRequestBodyCorsConfiguration extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=AllowCredentials" })
-  allowCredentials?: boolean;
+  allowCredentials?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=AllowHeaders" })
-  allowHeaders?: string[];
+  allowHeaders?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=AllowMethods" })
-  allowMethods?: string[];
+  allowMethods?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=AllowOrigins" })
-  allowOrigins?: string[];
+  allowOrigins?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=ExposeHeaders" })
-  exposeHeaders?: string[];
+  exposeHeaders?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=MaxAge" })
-  maxAge?: number;
+  maxAge?: Record<string, any>;
 }
 
 

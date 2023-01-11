@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TopDirectionSources } from "./topdirectionsources";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocationDrivingDirectionMetrics = void 0;
+var utils_1 = require("../../../internal/utils");
+var topdirectionsources_1 = require("./topdirectionsources");
 // LocationDrivingDirectionMetrics
 /**
  * A location indexed with the regions that people usually come from. This is captured by counting how many driving-direction requests to this location are from each region.
@@ -34,17 +37,17 @@ var LocationDrivingDirectionMetrics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locationName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locationName" }),
         __metadata("design:type", String)
     ], LocationDrivingDirectionMetrics.prototype, "locationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
         __metadata("design:type", String)
     ], LocationDrivingDirectionMetrics.prototype, "timeZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=topDirectionSources", elemType: TopDirectionSources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=topDirectionSources", elemType: topdirectionsources_1.TopDirectionSources }),
         __metadata("design:type", Array)
     ], LocationDrivingDirectionMetrics.prototype, "topDirectionSources", void 0);
     return LocationDrivingDirectionMetrics;
-}(SpeakeasyBase));
-export { LocationDrivingDirectionMetrics };
+}(utils_1.SpeakeasyBase));
+exports.LocationDrivingDirectionMetrics = LocationDrivingDirectionMetrics;

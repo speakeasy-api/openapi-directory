@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var QueryRequestFormFactorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryRequest = exports.QueryRequestFormFactorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var QueryRequestFormFactorEnum;
 (function (QueryRequestFormFactorEnum) {
     QueryRequestFormFactorEnum["AllFormFactors"] = "ALL_FORM_FACTORS";
     QueryRequestFormFactorEnum["Phone"] = "PHONE";
     QueryRequestFormFactorEnum["Desktop"] = "DESKTOP";
     QueryRequestFormFactorEnum["Tablet"] = "TABLET";
-})(QueryRequestFormFactorEnum || (QueryRequestFormFactorEnum = {}));
+})(QueryRequestFormFactorEnum = exports.QueryRequestFormFactorEnum || (exports.QueryRequestFormFactorEnum = {}));
 // QueryRequest
 /**
  * Request payload sent by a physical web client. This request includes all necessary context to load a particular user experience record.
@@ -40,25 +43,25 @@ var QueryRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effectiveConnectionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effectiveConnectionType" }),
         __metadata("design:type", String)
     ], QueryRequest.prototype, "effectiveConnectionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=formFactor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=formFactor" }),
         __metadata("design:type", String)
     ], QueryRequest.prototype, "formFactor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics" }),
         __metadata("design:type", Array)
     ], QueryRequest.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=origin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=origin" }),
         __metadata("design:type", String)
     ], QueryRequest.prototype, "origin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], QueryRequest.prototype, "url", void 0);
     return QueryRequest;
-}(SpeakeasyBase));
-export { QueryRequest };
+}(utils_1.SpeakeasyBase));
+exports.QueryRequest = QueryRequest;

@@ -20,7 +20,7 @@ export class GetPaymentDisputeSecurity extends SpeakeasyBase {
 
 export class GetPaymentDisputeRequest extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  serverUrl?: string;
+  serverURL?: string;
 
   @SpeakeasyMetadata()
   pathParams: GetPaymentDisputePathParams;

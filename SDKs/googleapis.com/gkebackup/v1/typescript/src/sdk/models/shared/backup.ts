@@ -15,37 +15,6 @@ export enum BackupStateEnum {
 }
 
 
-// BackupInput
-/** 
- * Represents a request to perform a single point-in-time capture of some portion of the state of a GKE cluster, the record of the backup operation itself, and an anchor for the underlying artifacts that comprise the Backup (the config backup and VolumeBackups). Next id: 28
-**/
-export class BackupInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=clusterMetadata" })
-  clusterMetadata?: ClusterMetadata;
-
-  @SpeakeasyMetadata({ data: "json, name=deleteLockDays" })
-  deleteLockDays?: number;
-
-  @SpeakeasyMetadata({ data: "json, name=description" })
-  description?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=encryptionKey" })
-  encryptionKey?: EncryptionKey;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=retainDays" })
-  retainDays?: number;
-
-  @SpeakeasyMetadata({ data: "json, name=selectedApplications" })
-  selectedApplications?: NamespacedNames;
-
-  @SpeakeasyMetadata({ data: "json, name=selectedNamespaces" })
-  selectedNamespaces?: Namespaces;
-}
-
-
 // Backup
 /** 
  * Represents a request to perform a single point-in-time capture of some portion of the state of a GKE cluster, the record of the backup operation itself, and an anchor for the underlying artifacts that comprise the Backup (the config backup and VolumeBackups). Next id: 28
@@ -88,7 +57,7 @@ export class Backup extends SpeakeasyBase {
   etag?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=manual" })
   manual?: boolean;
@@ -131,4 +100,35 @@ export class Backup extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=volumeCount" })
   volumeCount?: number;
+}
+
+
+// BackupInput
+/** 
+ * Represents a request to perform a single point-in-time capture of some portion of the state of a GKE cluster, the record of the backup operation itself, and an anchor for the underlying artifacts that comprise the Backup (the config backup and VolumeBackups). Next id: 28
+**/
+export class BackupInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=clusterMetadata" })
+  clusterMetadata?: ClusterMetadata;
+
+  @SpeakeasyMetadata({ data: "json, name=deleteLockDays" })
+  deleteLockDays?: number;
+
+  @SpeakeasyMetadata({ data: "json, name=description" })
+  description?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=encryptionKey" })
+  encryptionKey?: EncryptionKey;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=retainDays" })
+  retainDays?: number;
+
+  @SpeakeasyMetadata({ data: "json, name=selectedApplications" })
+  selectedApplications?: NamespacedNames;
+
+  @SpeakeasyMetadata({ data: "json, name=selectedNamespaces" })
+  selectedNamespaces?: Namespaces;
 }

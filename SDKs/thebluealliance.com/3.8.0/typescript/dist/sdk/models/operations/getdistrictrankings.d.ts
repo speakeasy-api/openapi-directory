@@ -17,6 +17,6 @@ export declare class GetDistrictRankingsRequest extends SpeakeasyBase {
 export declare class GetDistrictRankingsResponse extends SpeakeasyBase {
     contentType: string;
     districtRankings?: shared.DistrictRanking[];
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

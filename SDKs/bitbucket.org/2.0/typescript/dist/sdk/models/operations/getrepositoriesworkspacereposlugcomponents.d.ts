@@ -16,6 +16,6 @@ export declare class GetRepositoriesWorkspaceRepoSlugComponentsRequest extends S
 export declare class GetRepositoriesWorkspaceRepoSlugComponentsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedComponents?: shared.PaginatedComponents;
 }

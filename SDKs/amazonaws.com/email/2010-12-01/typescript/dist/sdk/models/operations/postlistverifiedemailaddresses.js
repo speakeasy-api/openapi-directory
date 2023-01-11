@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostListVerifiedEmailAddressesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostListVerifiedEmailAddressesResponse = exports.PostListVerifiedEmailAddressesRequest = exports.PostListVerifiedEmailAddressesHeaders = exports.PostListVerifiedEmailAddressesQueryParams = exports.PostListVerifiedEmailAddressesVersionEnum = exports.PostListVerifiedEmailAddressesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostListVerifiedEmailAddressesActionEnum;
 (function (PostListVerifiedEmailAddressesActionEnum) {
     PostListVerifiedEmailAddressesActionEnum["ListVerifiedEmailAddresses"] = "ListVerifiedEmailAddresses";
-})(PostListVerifiedEmailAddressesActionEnum || (PostListVerifiedEmailAddressesActionEnum = {}));
-export var PostListVerifiedEmailAddressesVersionEnum;
+})(PostListVerifiedEmailAddressesActionEnum = exports.PostListVerifiedEmailAddressesActionEnum || (exports.PostListVerifiedEmailAddressesActionEnum = {}));
+var PostListVerifiedEmailAddressesVersionEnum;
 (function (PostListVerifiedEmailAddressesVersionEnum) {
     PostListVerifiedEmailAddressesVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(PostListVerifiedEmailAddressesVersionEnum || (PostListVerifiedEmailAddressesVersionEnum = {}));
+})(PostListVerifiedEmailAddressesVersionEnum = exports.PostListVerifiedEmailAddressesVersionEnum || (exports.PostListVerifiedEmailAddressesVersionEnum = {}));
 var PostListVerifiedEmailAddressesQueryParams = /** @class */ (function (_super) {
     __extends(PostListVerifiedEmailAddressesQueryParams, _super);
     function PostListVerifiedEmailAddressesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostListVerifiedEmailAddressesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostListVerifiedEmailAddressesQueryParams.prototype, "version", void 0);
     return PostListVerifiedEmailAddressesQueryParams;
-}(SpeakeasyBase));
-export { PostListVerifiedEmailAddressesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostListVerifiedEmailAddressesQueryParams = PostListVerifiedEmailAddressesQueryParams;
 var PostListVerifiedEmailAddressesHeaders = /** @class */ (function (_super) {
     __extends(PostListVerifiedEmailAddressesHeaders, _super);
     function PostListVerifiedEmailAddressesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostListVerifiedEmailAddressesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostListVerifiedEmailAddressesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostListVerifiedEmailAddressesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostListVerifiedEmailAddressesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostListVerifiedEmailAddressesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostListVerifiedEmailAddressesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostListVerifiedEmailAddressesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostListVerifiedEmailAddressesHeaders;
-}(SpeakeasyBase));
-export { PostListVerifiedEmailAddressesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostListVerifiedEmailAddressesHeaders = PostListVerifiedEmailAddressesHeaders;
 var PostListVerifiedEmailAddressesRequest = /** @class */ (function (_super) {
     __extends(PostListVerifiedEmailAddressesRequest, _super);
     function PostListVerifiedEmailAddressesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostListVerifiedEmailAddressesQueryParams)
     ], PostListVerifiedEmailAddressesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostListVerifiedEmailAddressesHeaders)
     ], PostListVerifiedEmailAddressesRequest.prototype, "headers", void 0);
     return PostListVerifiedEmailAddressesRequest;
-}(SpeakeasyBase));
-export { PostListVerifiedEmailAddressesRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostListVerifiedEmailAddressesRequest = PostListVerifiedEmailAddressesRequest;
 var PostListVerifiedEmailAddressesResponse = /** @class */ (function (_super) {
     __extends(PostListVerifiedEmailAddressesResponse, _super);
     function PostListVerifiedEmailAddressesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostListVerifiedEmailAddressesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostListVerifiedEmailAddressesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostListVerifiedEmailAddressesResponse.prototype, "statusCode", void 0);
     return PostListVerifiedEmailAddressesResponse;
-}(SpeakeasyBase));
-export { PostListVerifiedEmailAddressesResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostListVerifiedEmailAddressesResponse = PostListVerifiedEmailAddressesResponse;

@@ -52,8 +52,8 @@ export class DeleteEnvironmentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteEnvironment200ApplicationJsonObject?: DeleteEnvironment200ApplicationJson;
+  deleteEnvironment200ApplicationJSONObject?: DeleteEnvironment200ApplicationJson;
 
   @SpeakeasyMetadata()
-  deleteEnvironment404ApplicationJsonObject?: DeleteEnvironment404ApplicationJson;
+  deleteEnvironment404ApplicationJSONObject?: DeleteEnvironment404ApplicationJson;
 }

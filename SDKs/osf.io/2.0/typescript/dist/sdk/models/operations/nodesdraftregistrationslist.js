@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NodesDraftRegistrationsListResponse = exports.NodesDraftRegistrationsListRequest = exports.NodesDraftRegistrationsListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var NodesDraftRegistrationsListPathParams = /** @class */ (function (_super) {
     __extends(NodesDraftRegistrationsListPathParams, _super);
     function NodesDraftRegistrationsListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=node_id" }),
         __metadata("design:type", String)
     ], NodesDraftRegistrationsListPathParams.prototype, "nodeId", void 0);
     return NodesDraftRegistrationsListPathParams;
-}(SpeakeasyBase));
-export { NodesDraftRegistrationsListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.NodesDraftRegistrationsListPathParams = NodesDraftRegistrationsListPathParams;
 var NodesDraftRegistrationsListRequest = /** @class */ (function (_super) {
     __extends(NodesDraftRegistrationsListRequest, _super);
     function NodesDraftRegistrationsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", NodesDraftRegistrationsListPathParams)
     ], NodesDraftRegistrationsListRequest.prototype, "pathParams", void 0);
     return NodesDraftRegistrationsListRequest;
-}(SpeakeasyBase));
-export { NodesDraftRegistrationsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.NodesDraftRegistrationsListRequest = NodesDraftRegistrationsListRequest;
 var NodesDraftRegistrationsListResponse = /** @class */ (function (_super) {
     __extends(NodesDraftRegistrationsListResponse, _super);
     function NodesDraftRegistrationsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], NodesDraftRegistrationsListResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], NodesDraftRegistrationsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], NodesDraftRegistrationsListResponse.prototype, "statusCode", void 0);
     return NodesDraftRegistrationsListResponse;
-}(SpeakeasyBase));
-export { NodesDraftRegistrationsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.NodesDraftRegistrationsListResponse = NodesDraftRegistrationsListResponse;

@@ -26,7 +26,7 @@ export declare class ExecutionTemplate extends SpeakeasyBase {
     inputNotebookFile?: string;
     jobType?: ExecutionTemplateJobTypeEnum;
     kernelSpec?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     masterType?: string;
     outputNotebookFolder?: string;
     parameters?: string;

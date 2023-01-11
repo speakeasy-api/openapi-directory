@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2KmsWrappedCryptoKey } from "./googleprivacydlpv2kmswrappedcryptokey";
-import { GooglePrivacyDlpV2TransientCryptoKey } from "./googleprivacydlpv2transientcryptokey";
-import { GooglePrivacyDlpV2UnwrappedCryptoKey } from "./googleprivacydlpv2unwrappedcryptokey";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2CryptoKey = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2kmswrappedcryptokey_1 = require("./googleprivacydlpv2kmswrappedcryptokey");
+var googleprivacydlpv2transientcryptokey_1 = require("./googleprivacydlpv2transientcryptokey");
+var googleprivacydlpv2unwrappedcryptokey_1 = require("./googleprivacydlpv2unwrappedcryptokey");
 // GooglePrivacyDlpV2CryptoKey
 /**
  * This is a data encryption key (DEK) (as opposed to a key encryption key (KEK) stored by Cloud Key Management Service (Cloud KMS). When using Cloud KMS to wrap or unwrap a DEK, be sure to set an appropriate IAM policy on the KEK to ensure an attacker cannot unwrap the DEK.
@@ -36,17 +39,17 @@ var GooglePrivacyDlpV2CryptoKey = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kmsWrapped" }),
-        __metadata("design:type", GooglePrivacyDlpV2KmsWrappedCryptoKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kmsWrapped" }),
+        __metadata("design:type", googleprivacydlpv2kmswrappedcryptokey_1.GooglePrivacyDlpV2KmsWrappedCryptoKey)
     ], GooglePrivacyDlpV2CryptoKey.prototype, "kmsWrapped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transient" }),
-        __metadata("design:type", GooglePrivacyDlpV2TransientCryptoKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transient" }),
+        __metadata("design:type", googleprivacydlpv2transientcryptokey_1.GooglePrivacyDlpV2TransientCryptoKey)
     ], GooglePrivacyDlpV2CryptoKey.prototype, "transient", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unwrapped" }),
-        __metadata("design:type", GooglePrivacyDlpV2UnwrappedCryptoKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unwrapped" }),
+        __metadata("design:type", googleprivacydlpv2unwrappedcryptokey_1.GooglePrivacyDlpV2UnwrappedCryptoKey)
     ], GooglePrivacyDlpV2CryptoKey.prototype, "unwrapped", void 0);
     return GooglePrivacyDlpV2CryptoKey;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2CryptoKey };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2CryptoKey = GooglePrivacyDlpV2CryptoKey;

@@ -1,1 +1,1 @@
-export declare function MatchContentType(contentType: string, pattern: string): boolean;
+export declare function matchContentType(contentType: string, pattern: string): boolean;

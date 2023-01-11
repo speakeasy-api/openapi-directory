@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataSourceRefreshDailySchedule } from "./datasourcerefreshdailyschedule";
-import { DataSourceRefreshMonthlySchedule } from "./datasourcerefreshmonthlyschedule";
-import { Interval } from "./interval";
-import { DataSourceRefreshWeeklySchedule } from "./datasourcerefreshweeklyschedule";
-export var DataSourceRefreshScheduleRefreshScopeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataSourceRefreshSchedule = exports.DataSourceRefreshScheduleRefreshScopeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var datasourcerefreshdailyschedule_1 = require("./datasourcerefreshdailyschedule");
+var datasourcerefreshmonthlyschedule_1 = require("./datasourcerefreshmonthlyschedule");
+var interval_1 = require("./interval");
+var datasourcerefreshweeklyschedule_1 = require("./datasourcerefreshweeklyschedule");
+var DataSourceRefreshScheduleRefreshScopeEnum;
 (function (DataSourceRefreshScheduleRefreshScopeEnum) {
     DataSourceRefreshScheduleRefreshScopeEnum["DataSourceRefreshScopeUnspecified"] = "DATA_SOURCE_REFRESH_SCOPE_UNSPECIFIED";
     DataSourceRefreshScheduleRefreshScopeEnum["AllDataSources"] = "ALL_DATA_SOURCES";
-})(DataSourceRefreshScheduleRefreshScopeEnum || (DataSourceRefreshScheduleRefreshScopeEnum = {}));
+})(DataSourceRefreshScheduleRefreshScopeEnum = exports.DataSourceRefreshScheduleRefreshScopeEnum || (exports.DataSourceRefreshScheduleRefreshScopeEnum = {}));
 // DataSourceRefreshSchedule
 /**
  * Schedule for refreshing the data source. Data sources in the spreadsheet are refreshed within a time interval. You can specify the start time by clicking the Scheduled Refresh button in the Sheets editor, but the interval is fixed at 4 hours. For example, if you specify a start time of 8am , the refresh will take place between 8am and 12pm every day.
@@ -42,29 +45,29 @@ var DataSourceRefreshSchedule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dailySchedule" }),
-        __metadata("design:type", DataSourceRefreshDailySchedule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dailySchedule" }),
+        __metadata("design:type", datasourcerefreshdailyschedule_1.DataSourceRefreshDailySchedule)
     ], DataSourceRefreshSchedule.prototype, "dailySchedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], DataSourceRefreshSchedule.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=monthlySchedule" }),
-        __metadata("design:type", DataSourceRefreshMonthlySchedule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=monthlySchedule" }),
+        __metadata("design:type", datasourcerefreshmonthlyschedule_1.DataSourceRefreshMonthlySchedule)
     ], DataSourceRefreshSchedule.prototype, "monthlySchedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextRun" }),
-        __metadata("design:type", Interval)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextRun" }),
+        __metadata("design:type", interval_1.Interval)
     ], DataSourceRefreshSchedule.prototype, "nextRun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refreshScope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refreshScope" }),
         __metadata("design:type", String)
     ], DataSourceRefreshSchedule.prototype, "refreshScope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=weeklySchedule" }),
-        __metadata("design:type", DataSourceRefreshWeeklySchedule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=weeklySchedule" }),
+        __metadata("design:type", datasourcerefreshweeklyschedule_1.DataSourceRefreshWeeklySchedule)
     ], DataSourceRefreshSchedule.prototype, "weeklySchedule", void 0);
     return DataSourceRefreshSchedule;
-}(SpeakeasyBase));
-export { DataSourceRefreshSchedule };
+}(utils_1.SpeakeasyBase));
+exports.DataSourceRefreshSchedule = DataSourceRefreshSchedule;

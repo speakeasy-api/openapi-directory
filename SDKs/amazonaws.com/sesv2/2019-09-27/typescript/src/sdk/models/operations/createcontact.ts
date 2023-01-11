@@ -71,7 +71,7 @@ export class CreateContactResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createContactResponse?: Map<string, any>;
+  createContactResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   notFoundException?: any;

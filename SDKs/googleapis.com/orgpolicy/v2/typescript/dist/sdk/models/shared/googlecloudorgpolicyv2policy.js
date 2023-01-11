@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudOrgpolicyV2AlternatePolicySpec } from "./googlecloudorgpolicyv2alternatepolicyspec";
-import { GoogleCloudOrgpolicyV2PolicySpec } from "./googlecloudorgpolicyv2policyspec";
-import { GoogleCloudOrgpolicyV2AlternatePolicySpecInput } from "./googlecloudorgpolicyv2alternatepolicyspec";
-import { GoogleCloudOrgpolicyV2PolicySpecInput } from "./googlecloudorgpolicyv2policyspec";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudOrgpolicyV2PolicyInput = exports.GoogleCloudOrgpolicyV2Policy = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudorgpolicyv2alternatepolicyspec_1 = require("./googlecloudorgpolicyv2alternatepolicyspec");
+var googlecloudorgpolicyv2policyspec_1 = require("./googlecloudorgpolicyv2policyspec");
+var googlecloudorgpolicyv2alternatepolicyspec_2 = require("./googlecloudorgpolicyv2alternatepolicyspec");
+var googlecloudorgpolicyv2policyspec_2 = require("./googlecloudorgpolicyv2policyspec");
 // GoogleCloudOrgpolicyV2Policy
 /**
  * Defines a Cloud Organization `Policy` which is used to specify `Constraints` for configurations of Cloud Platform resources.
@@ -37,20 +40,20 @@ var GoogleCloudOrgpolicyV2Policy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alternate" }),
-        __metadata("design:type", GoogleCloudOrgpolicyV2AlternatePolicySpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alternate" }),
+        __metadata("design:type", googlecloudorgpolicyv2alternatepolicyspec_1.GoogleCloudOrgpolicyV2AlternatePolicySpec)
     ], GoogleCloudOrgpolicyV2Policy.prototype, "alternate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudOrgpolicyV2Policy.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
-        __metadata("design:type", GoogleCloudOrgpolicyV2PolicySpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
+        __metadata("design:type", googlecloudorgpolicyv2policyspec_1.GoogleCloudOrgpolicyV2PolicySpec)
     ], GoogleCloudOrgpolicyV2Policy.prototype, "spec", void 0);
     return GoogleCloudOrgpolicyV2Policy;
-}(SpeakeasyBase));
-export { GoogleCloudOrgpolicyV2Policy };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudOrgpolicyV2Policy = GoogleCloudOrgpolicyV2Policy;
 // GoogleCloudOrgpolicyV2PolicyInput
 /**
  * Defines a Cloud Organization `Policy` which is used to specify `Constraints` for configurations of Cloud Platform resources.
@@ -61,17 +64,17 @@ var GoogleCloudOrgpolicyV2PolicyInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alternate" }),
-        __metadata("design:type", GoogleCloudOrgpolicyV2AlternatePolicySpecInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alternate" }),
+        __metadata("design:type", googlecloudorgpolicyv2alternatepolicyspec_2.GoogleCloudOrgpolicyV2AlternatePolicySpecInput)
     ], GoogleCloudOrgpolicyV2PolicyInput.prototype, "alternate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudOrgpolicyV2PolicyInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spec" }),
-        __metadata("design:type", GoogleCloudOrgpolicyV2PolicySpecInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spec" }),
+        __metadata("design:type", googlecloudorgpolicyv2policyspec_2.GoogleCloudOrgpolicyV2PolicySpecInput)
     ], GoogleCloudOrgpolicyV2PolicyInput.prototype, "spec", void 0);
     return GoogleCloudOrgpolicyV2PolicyInput;
-}(SpeakeasyBase));
-export { GoogleCloudOrgpolicyV2PolicyInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudOrgpolicyV2PolicyInput = GoogleCloudOrgpolicyV2PolicyInput;

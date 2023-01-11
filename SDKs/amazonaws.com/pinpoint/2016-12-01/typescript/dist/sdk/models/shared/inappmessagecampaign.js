@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { InAppMessage } from "./inappmessage";
-import { InAppCampaignSchedule } from "./inappcampaignschedule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InAppMessageCampaign = void 0;
+var utils_1 = require("../../../internal/utils");
+var inappmessage_1 = require("./inappmessage");
+var inappcampaignschedule_1 = require("./inappcampaignschedule");
 // InAppMessageCampaign
 /**
  * Targeted in-app message campaign.
@@ -35,37 +38,37 @@ var InAppMessageCampaign = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CampaignId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CampaignId" }),
         __metadata("design:type", String)
     ], InAppMessageCampaign.prototype, "campaignId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DailyCap" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DailyCap" }),
         __metadata("design:type", Number)
     ], InAppMessageCampaign.prototype, "dailyCap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=InAppMessage" }),
-        __metadata("design:type", InAppMessage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=InAppMessage" }),
+        __metadata("design:type", inappmessage_1.InAppMessage)
     ], InAppMessageCampaign.prototype, "inAppMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Priority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Priority" }),
         __metadata("design:type", Number)
     ], InAppMessageCampaign.prototype, "priority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Schedule" }),
-        __metadata("design:type", InAppCampaignSchedule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Schedule" }),
+        __metadata("design:type", inappcampaignschedule_1.InAppCampaignSchedule)
     ], InAppMessageCampaign.prototype, "schedule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SessionCap" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SessionCap" }),
         __metadata("design:type", Number)
     ], InAppMessageCampaign.prototype, "sessionCap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalCap" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalCap" }),
         __metadata("design:type", Number)
     ], InAppMessageCampaign.prototype, "totalCap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TreatmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TreatmentId" }),
         __metadata("design:type", String)
     ], InAppMessageCampaign.prototype, "treatmentId", void 0);
     return InAppMessageCampaign;
-}(SpeakeasyBase));
-export { InAppMessageCampaign };
+}(utils_1.SpeakeasyBase));
+exports.InAppMessageCampaign = InAppMessageCampaign;

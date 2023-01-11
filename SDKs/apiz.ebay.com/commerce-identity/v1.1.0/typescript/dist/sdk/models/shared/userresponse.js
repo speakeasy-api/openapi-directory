@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BusinessAccount } from "./businessaccount";
-import { IndividualAccount } from "./individualaccount";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var businessaccount_1 = require("./businessaccount");
+var individualaccount_1 = require("./individualaccount");
 // UserResponse
 /**
  * The type that defines the fields for the getUser method.
@@ -35,33 +38,33 @@ var UserResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountType" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "accountType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=businessAccount" }),
-        __metadata("design:type", BusinessAccount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=businessAccount" }),
+        __metadata("design:type", businessaccount_1.BusinessAccount)
     ], UserResponse.prototype, "businessAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=individualAccount" }),
-        __metadata("design:type", IndividualAccount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=individualAccount" }),
+        __metadata("design:type", individualaccount_1.IndividualAccount)
     ], UserResponse.prototype, "individualAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registrationMarketplaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registrationMarketplaceId" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "registrationMarketplaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userId" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "userId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], UserResponse.prototype, "username", void 0);
     return UserResponse;
-}(SpeakeasyBase));
-export { UserResponse };
+}(utils_1.SpeakeasyBase));
+exports.UserResponse = UserResponse;

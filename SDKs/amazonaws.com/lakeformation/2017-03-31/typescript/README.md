@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AddLfTagsToResourceRequest, AddLfTagsToResourceResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,121 +33,98 @@ const sdk = new SDK(WithSecurity(
     
 const req: AddLfTagsToResourceRequest = {
   headers: {
-    xAmzAlgorithm: "laudantium",
-    xAmzContentSha256: "fuga",
-    xAmzCredential: "doloribus",
-    xAmzDate: "quasi",
-    xAmzSecurityToken: "et",
-    xAmzSignature: "laboriosam",
-    xAmzSignedHeaders: "debitis",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "AWSLakeFormation.AddLFTagsToResource",
   },
   request: {
-    catalogId: "minus",
+    catalogId: "fugit",
     lfTags: [
       {
-        catalogId: "magnam",
-        tagKey: "similique",
+        catalogId: "nihil",
+        tagKey: "rerum",
         tagValues: [
-          "voluptatem",
-        ],
-      },
-      {
-        catalogId: "officia",
-        tagKey: "iure",
-        tagValues: [
-          "consequatur",
-          "aut",
-        ],
-      },
-      {
-        catalogId: "nobis",
-        tagKey: "vero",
-        tagValues: [
-          "enim",
-          "sequi",
+          "debitis",
+          "voluptatum",
+          "et",
         ],
       },
     ],
     resource: {
       catalog: {
-        "voluptas": "aliquid",
-        "maiores": "velit",
-        "modi": "voluptatem",
+        "dolorem": "et",
+        "voluptate": "iste",
+        "vitae": "totam",
       },
       dataLocation: {
-        catalogId: "optio",
-        resourceArn: "doloremque",
+        catalogId: "dolores",
+        resourceArn: "illum",
       },
       database: {
-        catalogId: "cum",
-        name: "necessitatibus",
+        catalogId: "debitis",
+        name: "vel",
       },
       lfTag: {
-        catalogId: "illum",
-        tagKey: "enim",
+        catalogId: "odio",
+        tagKey: "dolore",
         tagValues: [
-          "ratione",
+          "aspernatur",
+          "accusantium",
         ],
       },
       lfTagPolicy: {
-        catalogId: "quasi",
+        catalogId: "totam",
         expression: [
           {
-            tagKey: "sapiente",
+            tagKey: "quis",
+            tagValues: [
+              "aut",
+              "odit",
+            ],
+          },
+          {
+            tagKey: "non",
             tagValues: [
               "omnis",
-              "accusamus",
-              "et",
-            ],
-          },
-          {
-            tagKey: "accusamus",
-            tagValues: [
-              "enim",
-            ],
-          },
-          {
-            tagKey: "in",
-            tagValues: [
-              "rerum",
-              "in",
-              "perspiciatis",
             ],
           },
         ],
         resourceType: "DATABASE",
       },
       table: {
-        catalogId: "asperiores",
-        databaseName: "fugit",
-        name: "in",
+        catalogId: "illo",
+        databaseName: "sed",
+        name: "officiis",
         tableWildcard: {
-          "saepe": "veritatis",
+          "consectetur": "nobis",
+          "odio": "qui",
         },
       },
       tableWithColumns: {
-        catalogId: "nulla",
+        catalogId: "recusandae",
         columnNames: [
           "ipsum",
-          "aliquid",
-          "iure",
+          "eveniet",
         ],
         columnWildcard: {
           excludedColumnNames: [
-            "maiores",
-            "fugit",
-            "qui",
+            "sint",
+            "inventore",
           ],
         },
-        databaseName: "natus",
-        name: "molestiae",
+        databaseName: "ut",
+        name: "exercitationem",
       },
     },
   },
 };
 
-sdk.sdk.addLfTagsToResource(req).then((res: AddLfTagsToResourceResponse | AxiosError) => {
+sdk.addLfTagsToResource(req).then((res: AddLfTagsToResourceResponse | AxiosError) => {
    // handle response
 });
 ```

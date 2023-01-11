@@ -15,7 +15,7 @@ export declare class GetDistributionBundlesHeaders extends SpeakeasyBase {
 }
 export declare class GetDistributionBundlesRequest extends SpeakeasyBase {
     headers: GetDistributionBundlesHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class GetDistributionBundlesResponse extends SpeakeasyBase {
     accessDeniedException?: any;

@@ -15,6 +15,6 @@ export declare class GetWorkspacesWorkspaceSearchCodeRequest extends SpeakeasyBa
 export declare class GetWorkspacesWorkspaceSearchCodeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     searchResultPage?: shared.SearchResultPage;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ZebraTeam } from "./zebrateam";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Zebra = exports.ZebraAlliances = void 0;
+var utils_1 = require("../../../internal/utils");
+var zebrateam_1 = require("./zebrateam");
 var ZebraAlliances = /** @class */ (function (_super) {
     __extends(ZebraAlliances, _super);
     function ZebraAlliances() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blue", elemType: ZebraTeam }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blue", elemType: zebrateam_1.ZebraTeam }),
         __metadata("design:type", Array)
     ], ZebraAlliances.prototype, "blue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=red", elemType: ZebraTeam }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=red", elemType: zebrateam_1.ZebraTeam }),
         __metadata("design:type", Array)
     ], ZebraAlliances.prototype, "red", void 0);
     return ZebraAlliances;
-}(SpeakeasyBase));
-export { ZebraAlliances };
+}(utils_1.SpeakeasyBase));
+exports.ZebraAlliances = ZebraAlliances;
 var Zebra = /** @class */ (function (_super) {
     __extends(Zebra, _super);
     function Zebra() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alliances" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alliances" }),
         __metadata("design:type", ZebraAlliances)
     ], Zebra.prototype, "alliances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], Zebra.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=times" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=times" }),
         __metadata("design:type", Array)
     ], Zebra.prototype, "times", void 0);
     return Zebra;
-}(SpeakeasyBase));
-export { Zebra };
+}(utils_1.SpeakeasyBase));
+exports.Zebra = Zebra;

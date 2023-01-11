@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationGetResponse = exports.ApplicationGetRequest = exports.ApplicationGetHeaders = exports.ApplicationGetQueryParams = exports.ApplicationGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ApplicationGetPathParams = /** @class */ (function (_super) {
     __extends(ApplicationGetPathParams, _super);
     function ApplicationGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=applicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=applicationId" }),
         __metadata("design:type", String)
     ], ApplicationGetPathParams.prototype, "applicationId", void 0);
     return ApplicationGetPathParams;
-}(SpeakeasyBase));
-export { ApplicationGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationGetPathParams = ApplicationGetPathParams;
 var ApplicationGetQueryParams = /** @class */ (function (_super) {
     __extends(ApplicationGetQueryParams, _super);
     function ApplicationGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], ApplicationGetQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], ApplicationGetQueryParams.prototype, "timeout", void 0);
     return ApplicationGetQueryParams;
-}(SpeakeasyBase));
-export { ApplicationGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationGetQueryParams = ApplicationGetQueryParams;
 var ApplicationGetHeaders = /** @class */ (function (_super) {
     __extends(ApplicationGetHeaders, _super);
     function ApplicationGetHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], ApplicationGetHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], ApplicationGetHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], ApplicationGetHeaders.prototype, "returnClientRequestId", void 0);
     return ApplicationGetHeaders;
-}(SpeakeasyBase));
-export { ApplicationGetHeaders };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationGetHeaders = ApplicationGetHeaders;
 var ApplicationGetRequest = /** @class */ (function (_super) {
     __extends(ApplicationGetRequest, _super);
     function ApplicationGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ApplicationGetPathParams)
     ], ApplicationGetRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ApplicationGetQueryParams)
     ], ApplicationGetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ApplicationGetHeaders)
     ], ApplicationGetRequest.prototype, "headers", void 0);
     return ApplicationGetRequest;
-}(SpeakeasyBase));
-export { ApplicationGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationGetRequest = ApplicationGetRequest;
 var ApplicationGetResponse = /** @class */ (function (_super) {
     __extends(ApplicationGetResponse, _super);
     function ApplicationGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], ApplicationGetResponse.prototype, "applicationSummary", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], ApplicationGetResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ApplicationGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ApplicationGetResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ApplicationGetResponse.prototype, "statusCode", void 0);
     return ApplicationGetResponse;
-}(SpeakeasyBase));
-export { ApplicationGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationGetResponse = ApplicationGetResponse;

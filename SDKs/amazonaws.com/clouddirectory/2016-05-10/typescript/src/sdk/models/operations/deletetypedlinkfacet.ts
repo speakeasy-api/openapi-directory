@@ -53,7 +53,7 @@ export class DeleteTypedLinkFacetResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteTypedLinkFacetResponse?: Map<string, any>;
+  deleteTypedLinkFacetResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   facetNotFoundException?: shared.FacetNotFoundException;

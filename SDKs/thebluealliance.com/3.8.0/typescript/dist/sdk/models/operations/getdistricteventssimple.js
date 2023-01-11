@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,94 +14,119 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDistrictEventsSimpleResponse = exports.GetDistrictEventsSimpleRequest = exports.GetDistrictEventsSimpleSecurity = exports.GetDistrictEventsSimpleHeaders = exports.GetDistrictEventsSimplePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetDistrictEventsSimplePathParams = /** @class */ (function (_super) {
     __extends(GetDistrictEventsSimplePathParams, _super);
     function GetDistrictEventsSimplePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=district_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=district_key" }),
         __metadata("design:type", String)
     ], GetDistrictEventsSimplePathParams.prototype, "districtKey", void 0);
     return GetDistrictEventsSimplePathParams;
-}(SpeakeasyBase));
-export { GetDistrictEventsSimplePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDistrictEventsSimplePathParams = GetDistrictEventsSimplePathParams;
 var GetDistrictEventsSimpleHeaders = /** @class */ (function (_super) {
     __extends(GetDistrictEventsSimpleHeaders, _super);
     function GetDistrictEventsSimpleHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
         __metadata("design:type", String)
     ], GetDistrictEventsSimpleHeaders.prototype, "ifModifiedSince", void 0);
     return GetDistrictEventsSimpleHeaders;
-}(SpeakeasyBase));
-export { GetDistrictEventsSimpleHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDistrictEventsSimpleHeaders = GetDistrictEventsSimpleHeaders;
 var GetDistrictEventsSimpleSecurity = /** @class */ (function (_super) {
     __extends(GetDistrictEventsSimpleSecurity, _super);
     function GetDistrictEventsSimpleSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=apiKey;subtype=header" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=apiKey;subtype=header" }),
         __metadata("design:type", shared.SchemeApiKey)
     ], GetDistrictEventsSimpleSecurity.prototype, "apiKey", void 0);
     return GetDistrictEventsSimpleSecurity;
-}(SpeakeasyBase));
-export { GetDistrictEventsSimpleSecurity };
+}(utils_1.SpeakeasyBase));
+exports.GetDistrictEventsSimpleSecurity = GetDistrictEventsSimpleSecurity;
 var GetDistrictEventsSimpleRequest = /** @class */ (function (_super) {
     __extends(GetDistrictEventsSimpleRequest, _super);
     function GetDistrictEventsSimpleRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDistrictEventsSimplePathParams)
     ], GetDistrictEventsSimpleRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDistrictEventsSimpleHeaders)
     ], GetDistrictEventsSimpleRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDistrictEventsSimpleSecurity)
     ], GetDistrictEventsSimpleRequest.prototype, "security", void 0);
     return GetDistrictEventsSimpleRequest;
-}(SpeakeasyBase));
-export { GetDistrictEventsSimpleRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDistrictEventsSimpleRequest = GetDistrictEventsSimpleRequest;
 var GetDistrictEventsSimpleResponse = /** @class */ (function (_super) {
     __extends(GetDistrictEventsSimpleResponse, _super);
     function GetDistrictEventsSimpleResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDistrictEventsSimpleResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: shared.EventSimple }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: shared.EventSimple }),
         __metadata("design:type", Array)
     ], GetDistrictEventsSimpleResponse.prototype, "eventSimples", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetDistrictEventsSimpleResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDistrictEventsSimpleResponse.prototype, "statusCode", void 0);
     return GetDistrictEventsSimpleResponse;
-}(SpeakeasyBase));
-export { GetDistrictEventsSimpleResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDistrictEventsSimpleResponse = GetDistrictEventsSimpleResponse;

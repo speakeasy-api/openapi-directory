@@ -15,10 +15,10 @@ export class GoogleCloudRecommenderV1Operation extends SpeakeasyBase {
   path?: string;
 
   @SpeakeasyMetadata({ data: "json, name=pathFilters" })
-  pathFilters?: Map<string, any>;
+  pathFilters?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=pathValueMatchers", elemType: GoogleCloudRecommenderV1ValueMatcher })
-  pathValueMatchers?: Map<string, GoogleCloudRecommenderV1ValueMatcher>;
+  pathValueMatchers?: Record<string, GoogleCloudRecommenderV1ValueMatcher>;
 
   @SpeakeasyMetadata({ data: "json, name=resource" })
   resource?: string;

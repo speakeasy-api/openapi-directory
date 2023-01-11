@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TargetingRuleScope } from "./targetingrulescope";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AcquisitionTargetingRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var targetingrulescope_1 = require("./targetingrulescope");
 // AcquisitionTargetingRule
 /**
  * Represents a targeting rule of the form: User never had {scope} before.
@@ -34,9 +37,9 @@ var AcquisitionTargetingRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
-        __metadata("design:type", TargetingRuleScope)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
+        __metadata("design:type", targetingrulescope_1.TargetingRuleScope)
     ], AcquisitionTargetingRule.prototype, "scope", void 0);
     return AcquisitionTargetingRule;
-}(SpeakeasyBase));
-export { AcquisitionTargetingRule };
+}(utils_1.SpeakeasyBase));
+exports.AcquisitionTargetingRule = AcquisitionTargetingRule;

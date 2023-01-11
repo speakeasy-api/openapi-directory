@@ -11,7 +11,7 @@ import { Source } from "./source";
 **/
 export class BuildProvenance extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=buildOptions" })
-  buildOptions?: Map<string, string>;
+  buildOptions?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=builderVersion" })
   builderVersion?: string;

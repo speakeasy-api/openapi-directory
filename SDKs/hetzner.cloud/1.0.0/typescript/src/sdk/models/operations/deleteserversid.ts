@@ -80,8 +80,8 @@ export class DeleteServersIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteServersId200ApplicationJsonObject?: DeleteServersId200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  deleteServersId200ApplicationJSONObject?: DeleteServersId200ApplicationJson;
 }

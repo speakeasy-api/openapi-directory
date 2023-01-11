@@ -5,5 +5,5 @@ import { Alarm } from "./alarm";
 **/
 export declare class PolicyArnType extends SpeakeasyBase {
     alarms?: Alarm[];
-    policyArn?: string;
+    policyARN?: string;
 }

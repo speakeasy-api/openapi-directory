@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAppsAppIdVersionsVersionResponse = exports.GetAppsAppIdVersionsVersionRequest = exports.GetAppsAppIdVersionsVersionQueryParams = exports.GetAppsAppIdVersionsVersionPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAppsAppIdVersionsVersionPathParams = /** @class */ (function (_super) {
     __extends(GetAppsAppIdVersionsVersionPathParams, _super);
     function GetAppsAppIdVersionsVersionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=appId" }),
         __metadata("design:type", String)
     ], GetAppsAppIdVersionsVersionPathParams.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=version" }),
         __metadata("design:type", Number)
     ], GetAppsAppIdVersionsVersionPathParams.prototype, "version", void 0);
     return GetAppsAppIdVersionsVersionPathParams;
-}(SpeakeasyBase));
-export { GetAppsAppIdVersionsVersionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAppsAppIdVersionsVersionPathParams = GetAppsAppIdVersionsVersionPathParams;
 var GetAppsAppIdVersionsVersionQueryParams = /** @class */ (function (_super) {
     __extends(GetAppsAppIdVersionsVersionQueryParams, _super);
     function GetAppsAppIdVersionsVersionQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=developerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=developerId" }),
         __metadata("design:type", String)
     ], GetAppsAppIdVersionsVersionQueryParams.prototype, "developerId", void 0);
     return GetAppsAppIdVersionsVersionQueryParams;
-}(SpeakeasyBase));
-export { GetAppsAppIdVersionsVersionQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAppsAppIdVersionsVersionQueryParams = GetAppsAppIdVersionsVersionQueryParams;
 var GetAppsAppIdVersionsVersionRequest = /** @class */ (function (_super) {
     __extends(GetAppsAppIdVersionsVersionRequest, _super);
     function GetAppsAppIdVersionsVersionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAppsAppIdVersionsVersionPathParams)
     ], GetAppsAppIdVersionsVersionRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAppsAppIdVersionsVersionQueryParams)
     ], GetAppsAppIdVersionsVersionRequest.prototype, "queryParams", void 0);
     return GetAppsAppIdVersionsVersionRequest;
-}(SpeakeasyBase));
-export { GetAppsAppIdVersionsVersionRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAppsAppIdVersionsVersionRequest = GetAppsAppIdVersionsVersionRequest;
 var GetAppsAppIdVersionsVersionResponse = /** @class */ (function (_super) {
     __extends(GetAppsAppIdVersionsVersionResponse, _super);
     function GetAppsAppIdVersionsVersionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetAppsAppIdVersionsVersionResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAppsAppIdVersionsVersionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAppsAppIdVersionsVersionResponse.prototype, "statusCode", void 0);
     return GetAppsAppIdVersionsVersionResponse;
-}(SpeakeasyBase));
-export { GetAppsAppIdVersionsVersionResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAppsAppIdVersionsVersionResponse = GetAppsAppIdVersionsVersionResponse;

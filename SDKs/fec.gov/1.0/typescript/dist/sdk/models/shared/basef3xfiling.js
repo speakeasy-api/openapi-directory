@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,144 +23,146 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BaseF3XFiling = void 0;
+var utils_1 = require("../../../internal/utils");
 var BaseF3XFiling = /** @class */ (function (_super) {
     __extends(BaseF3XFiling, _super);
     function BaseF3XFiling() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amend_address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amend_address" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "amendAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amended_by" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amended_by" }),
         __metadata("design:type", Number)
     ], BaseF3XFiling.prototype, "amendedBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amendment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amendment" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "amendment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amendment_chain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amendment_chain" }),
         __metadata("design:type", Array)
     ], BaseF3XFiling.prototype, "amendmentChain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=beginning_image_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=beginning_image_number" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "beginningImageNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committee_id" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "committeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committee_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committee_name" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "committeeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coverage_end_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coverage_end_date" }),
         __metadata("design:type", Date)
     ], BaseF3XFiling.prototype, "coverageEndDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coverage_start_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coverage_start_date" }),
         __metadata("design:type", Date)
     ], BaseF3XFiling.prototype, "coverageStartDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=csv_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=csv_url" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "csvUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=document_description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=document_description" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "documentDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=election_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=election_date" }),
         __metadata("design:type", Date)
     ], BaseF3XFiling.prototype, "electionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=election_state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=election_state" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "electionState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fec_file_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fec_file_id" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "fecFileId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fec_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fec_url" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "fecUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=file_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=file_number" }),
         __metadata("design:type", Number)
     ], BaseF3XFiling.prototype, "fileNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_amended" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_amended" }),
         __metadata("design:type", Boolean)
     ], BaseF3XFiling.prototype, "isAmended", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=most_recent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=most_recent" }),
         __metadata("design:type", Boolean)
     ], BaseF3XFiling.prototype, "mostRecent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=most_recent_filing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=most_recent_filing" }),
         __metadata("design:type", Number)
     ], BaseF3XFiling.prototype, "mostRecentFiling", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pdf_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pdf_url" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "pdfUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=qualified_multicandidate_committee" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=qualified_multicandidate_committee" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "qualifiedMulticandidateCommittee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=receipt_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=receipt_date" }),
         __metadata("design:type", Date)
     ], BaseF3XFiling.prototype, "receiptDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=report" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=report" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "report", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=report_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=report_type" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "reportType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=report_year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=report_year" }),
         __metadata("design:type", Number)
     ], BaseF3XFiling.prototype, "reportYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rpt_pgi" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rpt_pgi" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "rptPgi", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sign_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sign_date" }),
         __metadata("design:type", Date)
     ], BaseF3XFiling.prototype, "signDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=street_1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=street_1" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "street1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=street_2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=street_2" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "street2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=summary_lines" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=summary_lines" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "summaryLines", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zip" }),
         __metadata("design:type", String)
     ], BaseF3XFiling.prototype, "zip", void 0);
     return BaseF3XFiling;
-}(SpeakeasyBase));
-export { BaseF3XFiling };
+}(utils_1.SpeakeasyBase));
+exports.BaseF3XFiling = BaseF3XFiling;

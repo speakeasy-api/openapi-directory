@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetObjectsWithRefSeqCountUsingGetResponse = exports.GetObjectsWithRefSeqCountUsingGetRequest = exports.GetObjectsWithRefSeqCountUsingGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetObjectsWithRefSeqCountUsingGetPathParams = /** @class */ (function (_super) {
     __extends(GetObjectsWithRefSeqCountUsingGetPathParams, _super);
     function GetObjectsWithRefSeqCountUsingGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=dateYYYYMMDD" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=dateYYYYMMDD" }),
         __metadata("design:type", String)
-    ], GetObjectsWithRefSeqCountUsingGetPathParams.prototype, "dateYyyymmdd", void 0);
+    ], GetObjectsWithRefSeqCountUsingGetPathParams.prototype, "dateYYYYMMDD", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=speciesTypeKey" }),
         __metadata("design:type", Number)
     ], GetObjectsWithRefSeqCountUsingGetPathParams.prototype, "speciesTypeKey", void 0);
     return GetObjectsWithRefSeqCountUsingGetPathParams;
-}(SpeakeasyBase));
-export { GetObjectsWithRefSeqCountUsingGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetObjectsWithRefSeqCountUsingGetPathParams = GetObjectsWithRefSeqCountUsingGetPathParams;
 var GetObjectsWithRefSeqCountUsingGetRequest = /** @class */ (function (_super) {
     __extends(GetObjectsWithRefSeqCountUsingGetRequest, _super);
     function GetObjectsWithRefSeqCountUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetObjectsWithRefSeqCountUsingGetPathParams)
     ], GetObjectsWithRefSeqCountUsingGetRequest.prototype, "pathParams", void 0);
     return GetObjectsWithRefSeqCountUsingGetRequest;
-}(SpeakeasyBase));
-export { GetObjectsWithRefSeqCountUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetObjectsWithRefSeqCountUsingGetRequest = GetObjectsWithRefSeqCountUsingGetRequest;
 var GetObjectsWithRefSeqCountUsingGetResponse = /** @class */ (function (_super) {
     __extends(GetObjectsWithRefSeqCountUsingGetResponse, _super);
     function GetObjectsWithRefSeqCountUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetObjectsWithRefSeqCountUsingGetResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetObjectsWithRefSeqCountUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetObjectsWithRefSeqCountUsingGetResponse.prototype, "statusCode", void 0);
     return GetObjectsWithRefSeqCountUsingGetResponse;
-}(SpeakeasyBase));
-export { GetObjectsWithRefSeqCountUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetObjectsWithRefSeqCountUsingGetResponse = GetObjectsWithRefSeqCountUsingGetResponse;

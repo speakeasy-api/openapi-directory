@@ -87,5 +87,5 @@ export class EndpointGetUsersTopArtistsAndTracksResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  endpointGetUsersTopArtistsAndTracks200ApplicationJsonObject?: EndpointGetUsersTopArtistsAndTracks200ApplicationJson;
+  endpointGetUsersTopArtistsAndTracks200ApplicationJSONObject?: EndpointGetUsersTopArtistsAndTracks200ApplicationJson;
 }

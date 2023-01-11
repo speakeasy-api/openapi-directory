@@ -23,6 +23,6 @@ export declare class PostPortfolioAnalysisDrawdownsRequest extends SpeakeasyBase
 }
 export declare class PostPortfolioAnalysisDrawdownsResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioAnalysisDrawdowns200ApplicationJsonObject?: PostPortfolioAnalysisDrawdowns200ApplicationJson;
     statusCode: number;
+    postPortfolioAnalysisDrawdowns200ApplicationJSONObject?: PostPortfolioAnalysisDrawdowns200ApplicationJson;
 }

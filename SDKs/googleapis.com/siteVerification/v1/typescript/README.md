@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { SiteVerificationWebResourceDeleteRequest, SiteVerificationWebResourceDeleteResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,22 +30,22 @@ const req: SiteVerificationWebResourceDeleteRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    id: "maiores",
+    id: "sit",
   },
   queryParams: {
     alt: "json",
-    fields: "impedit",
-    key: "modi",
-    oauthToken: "nihil",
-    prettyPrint: true,
-    quotaUser: "voluptates",
-    userIp: "esse",
+    fields: "culpa",
+    key: "expedita",
+    oauthToken: "consequuntur",
+    prettyPrint: false,
+    quotaUser: "expedita",
+    userIp: "voluptas",
   },
 };
 

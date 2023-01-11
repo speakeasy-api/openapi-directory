@@ -27,5 +27,5 @@ export declare class UpdateEnvironmentResponse extends SpeakeasyBase {
     notFoundException?: any;
     statusCode: number;
     tooManyRequestsException?: any;
-    updateEnvironmentResult?: Map<string, any>;
+    updateEnvironmentResult?: Record<string, any>;
 }

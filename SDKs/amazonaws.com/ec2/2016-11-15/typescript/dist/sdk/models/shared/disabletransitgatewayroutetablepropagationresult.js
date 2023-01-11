@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayPropagation } from "./transitgatewaypropagation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DisableTransitGatewayRouteTablePropagationResult = exports.DisableTransitGatewayRouteTablePropagationResultPropagation = void 0;
+var utils_1 = require("../../../internal/utils");
+// DisableTransitGatewayRouteTablePropagationResultPropagation
+/**
+ * Information about route propagation.
+**/
+var DisableTransitGatewayRouteTablePropagationResultPropagation = /** @class */ (function (_super) {
+    __extends(DisableTransitGatewayRouteTablePropagationResultPropagation, _super);
+    function DisableTransitGatewayRouteTablePropagationResultPropagation() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DisableTransitGatewayRouteTablePropagationResultPropagation.prototype, "resourceId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DisableTransitGatewayRouteTablePropagationResultPropagation.prototype, "resourceType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DisableTransitGatewayRouteTablePropagationResultPropagation.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DisableTransitGatewayRouteTablePropagationResultPropagation.prototype, "transitGatewayAttachmentId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DisableTransitGatewayRouteTablePropagationResultPropagation.prototype, "transitGatewayRouteTableId", void 0);
+    return DisableTransitGatewayRouteTablePropagationResultPropagation;
+}(utils_1.SpeakeasyBase));
+exports.DisableTransitGatewayRouteTablePropagationResultPropagation = DisableTransitGatewayRouteTablePropagationResultPropagation;
 var DisableTransitGatewayRouteTablePropagationResult = /** @class */ (function (_super) {
     __extends(DisableTransitGatewayRouteTablePropagationResult, _super);
     function DisableTransitGatewayRouteTablePropagationResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TransitGatewayPropagation)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DisableTransitGatewayRouteTablePropagationResultPropagation)
     ], DisableTransitGatewayRouteTablePropagationResult.prototype, "propagation", void 0);
     return DisableTransitGatewayRouteTablePropagationResult;
-}(SpeakeasyBase));
-export { DisableTransitGatewayRouteTablePropagationResult };
+}(utils_1.SpeakeasyBase));
+exports.DisableTransitGatewayRouteTablePropagationResult = DisableTransitGatewayRouteTablePropagationResult;

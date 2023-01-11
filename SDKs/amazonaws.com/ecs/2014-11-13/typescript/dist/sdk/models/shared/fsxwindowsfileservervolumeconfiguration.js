@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FSxWindowsFileServerAuthorizationConfig } from "./fsxwindowsfileserverauthorizationconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FSxWindowsFileServerVolumeConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var fsxwindowsfileserverauthorizationconfig_1 = require("./fsxwindowsfileserverauthorizationconfig");
 // FSxWindowsFileServerVolumeConfiguration
 /**
  * <p>This parameter is specified when you are using <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/what-is.html">Amazon FSx for Windows File Server</a> file system for task storage.</p> <p>For more information and the input format, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/wfsx-volumes.html">Amazon FSx for Windows File Server Volumes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
@@ -34,17 +37,17 @@ var FSxWindowsFileServerVolumeConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorizationConfig" }),
-        __metadata("design:type", FSxWindowsFileServerAuthorizationConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorizationConfig" }),
+        __metadata("design:type", fsxwindowsfileserverauthorizationconfig_1.FSxWindowsFileServerAuthorizationConfig)
     ], FSxWindowsFileServerVolumeConfiguration.prototype, "authorizationConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileSystemId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileSystemId" }),
         __metadata("design:type", String)
     ], FSxWindowsFileServerVolumeConfiguration.prototype, "fileSystemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rootDirectory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rootDirectory" }),
         __metadata("design:type", String)
     ], FSxWindowsFileServerVolumeConfiguration.prototype, "rootDirectory", void 0);
     return FSxWindowsFileServerVolumeConfiguration;
-}(SpeakeasyBase));
-export { FSxWindowsFileServerVolumeConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.FSxWindowsFileServerVolumeConfiguration = FSxWindowsFileServerVolumeConfiguration;

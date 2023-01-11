@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PortalStatus } from "./portalstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePortalResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var portalstatus_1 = require("./portalstatus");
 var CreatePortalResponse = /** @class */ (function (_super) {
     __extends(CreatePortalResponse, _super);
     function CreatePortalResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portalArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portalArn" }),
         __metadata("design:type", String)
     ], CreatePortalResponse.prototype, "portalArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portalId" }),
         __metadata("design:type", String)
     ], CreatePortalResponse.prototype, "portalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portalStartUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portalStartUrl" }),
         __metadata("design:type", String)
     ], CreatePortalResponse.prototype, "portalStartUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=portalStatus" }),
-        __metadata("design:type", PortalStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=portalStatus" }),
+        __metadata("design:type", portalstatus_1.PortalStatus)
     ], CreatePortalResponse.prototype, "portalStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssoApplicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssoApplicationId" }),
         __metadata("design:type", String)
     ], CreatePortalResponse.prototype, "ssoApplicationId", void 0);
     return CreatePortalResponse;
-}(SpeakeasyBase));
-export { CreatePortalResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreatePortalResponse = CreatePortalResponse;

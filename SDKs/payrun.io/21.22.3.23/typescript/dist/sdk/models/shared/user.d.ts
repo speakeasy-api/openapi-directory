@@ -12,7 +12,7 @@ export declare class UserUserRoles extends SpeakeasyBase {
     role?: string[];
 }
 export declare class UserUser extends SpeakeasyBase {
-    metaData?: Map<string, any>;
+    metaData?: Record<string, any>;
     permissions?: UserUserPermission;
     roles?: UserUserRoles;
     userIdentifier?: string;

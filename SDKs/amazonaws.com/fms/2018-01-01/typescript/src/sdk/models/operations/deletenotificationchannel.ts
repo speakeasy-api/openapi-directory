@@ -38,7 +38,7 @@ export class DeleteNotificationChannelRequest extends SpeakeasyBase {
   headers: DeleteNotificationChannelHeaders;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 

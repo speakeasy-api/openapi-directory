@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ErrorTemplate = void 0;
+var utils_1 = require("../../../internal/utils");
 // ErrorTemplate
 /**
  * Error templates for a service descriptor
@@ -33,29 +36,29 @@ var ErrorTemplate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=messages" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=messages" }),
+        __metadata("design:type", Object)
     ], ErrorTemplate.prototype, "messages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceId" }),
         __metadata("design:type", String)
     ], ErrorTemplate.prototype, "serviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=template40x" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=template40x" }),
         __metadata("design:type", String)
     ], ErrorTemplate.prototype, "template40x", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=template50x" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=template50x" }),
         __metadata("design:type", String)
     ], ErrorTemplate.prototype, "template50x", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=templateBuild" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=templateBuild" }),
         __metadata("design:type", String)
     ], ErrorTemplate.prototype, "templateBuild", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=templateMaintenance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=templateMaintenance" }),
         __metadata("design:type", String)
     ], ErrorTemplate.prototype, "templateMaintenance", void 0);
     return ErrorTemplate;
-}(SpeakeasyBase));
-export { ErrorTemplate };
+}(utils_1.SpeakeasyBase));
+exports.ErrorTemplate = ErrorTemplate;

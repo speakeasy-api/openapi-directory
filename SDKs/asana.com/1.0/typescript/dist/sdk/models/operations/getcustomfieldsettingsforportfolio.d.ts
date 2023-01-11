@@ -20,5 +20,5 @@ export declare class GetCustomFieldSettingsForPortfolioResponse extends Speakeas
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getCustomFieldSettingsForPortfolio200ApplicationJsonObject?: GetCustomFieldSettingsForPortfolio200ApplicationJson;
+    getCustomFieldSettingsForPortfolio200ApplicationJSONObject?: GetCustomFieldSettingsForPortfolio200ApplicationJson;
 }

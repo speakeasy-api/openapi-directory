@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FeedbackValueEnum } from "./feedbackvalueenum";
 import { SeverityLevelEnum } from "./severitylevelenum";
 import { StatusEnum } from "./statusenum";
 
@@ -17,7 +16,7 @@ export class Problem extends SpeakeasyBase {
   endTime?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=Feedback" })
-  feedback?: Map<string, FeedbackValueEnum>;
+  feedback?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=Id" })
   id?: string;

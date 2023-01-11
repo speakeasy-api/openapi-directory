@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CloudFormationTarget } from "./cloudformationtarget";
-import { DeploymentTargetTypeEnum } from "./deploymenttargettypeenum";
-import { EcsTarget } from "./ecstarget";
-import { InstanceTarget } from "./instancetarget";
-import { LambdaTarget } from "./lambdatarget";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeploymentTarget = void 0;
+var utils_1 = require("../../../internal/utils");
+var cloudformationtarget_1 = require("./cloudformationtarget");
+var deploymenttargettypeenum_1 = require("./deploymenttargettypeenum");
+var ecstarget_1 = require("./ecstarget");
+var instancetarget_1 = require("./instancetarget");
+var lambdatarget_1 = require("./lambdatarget");
 // DeploymentTarget
 /**
  *  Information about the deployment target.
@@ -38,25 +41,25 @@ var DeploymentTarget = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudFormationTarget" }),
-        __metadata("design:type", CloudFormationTarget)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudFormationTarget" }),
+        __metadata("design:type", cloudformationtarget_1.CloudFormationTarget)
     ], DeploymentTarget.prototype, "cloudFormationTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentTargetType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentTargetType" }),
         __metadata("design:type", String)
     ], DeploymentTarget.prototype, "deploymentTargetType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ecsTarget" }),
-        __metadata("design:type", EcsTarget)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ecsTarget" }),
+        __metadata("design:type", ecstarget_1.EcsTarget)
     ], DeploymentTarget.prototype, "ecsTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instanceTarget" }),
-        __metadata("design:type", InstanceTarget)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instanceTarget" }),
+        __metadata("design:type", instancetarget_1.InstanceTarget)
     ], DeploymentTarget.prototype, "instanceTarget", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lambdaTarget" }),
-        __metadata("design:type", LambdaTarget)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lambdaTarget" }),
+        __metadata("design:type", lambdatarget_1.LambdaTarget)
     ], DeploymentTarget.prototype, "lambdaTarget", void 0);
     return DeploymentTarget;
-}(SpeakeasyBase));
-export { DeploymentTarget };
+}(utils_1.SpeakeasyBase));
+exports.DeploymentTarget = DeploymentTarget;

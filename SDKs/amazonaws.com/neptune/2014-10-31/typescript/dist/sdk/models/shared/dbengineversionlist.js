@@ -1,0 +1,92 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DbEngineVersionList = void 0;
+var utils_1 = require("../../../internal/utils");
+var characterset_1 = require("./characterset");
+var supportedcharactersetslist_1 = require("./supportedcharactersetslist");
+var supportedtimezoneslist_1 = require("./supportedtimezoneslist");
+var validupgradetargetlist_1 = require("./validupgradetargetlist");
+// DbEngineVersionList
+/**
+ *  This data type is used as a response element in the action <a>DescribeDBEngineVersions</a>.
+**/
+var DbEngineVersionList = /** @class */ (function (_super) {
+    __extends(DbEngineVersionList, _super);
+    function DbEngineVersionList() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], DbEngineVersionList.prototype, "dbEngineDescription", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], DbEngineVersionList.prototype, "dbEngineVersionDescription", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], DbEngineVersionList.prototype, "dbParameterGroupFamily", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", characterset_1.CharacterSet)
+    ], DbEngineVersionList.prototype, "defaultCharacterSet", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], DbEngineVersionList.prototype, "engine", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], DbEngineVersionList.prototype, "engineVersion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Array)
+    ], DbEngineVersionList.prototype, "exportableLogTypes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ elemType: supportedcharactersetslist_1.SupportedCharacterSetsList }),
+        __metadata("design:type", Array)
+    ], DbEngineVersionList.prototype, "supportedCharacterSets", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ elemType: supportedtimezoneslist_1.SupportedTimezonesList }),
+        __metadata("design:type", Array)
+    ], DbEngineVersionList.prototype, "supportedTimezones", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Boolean)
+    ], DbEngineVersionList.prototype, "supportsLogExportsToCloudwatchLogs", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Boolean)
+    ], DbEngineVersionList.prototype, "supportsReadReplica", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ elemType: validupgradetargetlist_1.ValidUpgradeTargetList }),
+        __metadata("design:type", Array)
+    ], DbEngineVersionList.prototype, "validUpgradeTarget", void 0);
+    return DbEngineVersionList;
+}(utils_1.SpeakeasyBase));
+exports.DbEngineVersionList = DbEngineVersionList;

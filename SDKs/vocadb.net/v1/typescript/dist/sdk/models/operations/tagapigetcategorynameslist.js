@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TagApiGetCategoryNamesListNameMatchModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagApiGetCategoryNamesListResponse = exports.TagApiGetCategoryNamesListRequest = exports.TagApiGetCategoryNamesListQueryParams = exports.TagApiGetCategoryNamesListNameMatchModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TagApiGetCategoryNamesListNameMatchModeEnum;
 (function (TagApiGetCategoryNamesListNameMatchModeEnum) {
     TagApiGetCategoryNamesListNameMatchModeEnum["Auto"] = "Auto";
     TagApiGetCategoryNamesListNameMatchModeEnum["Partial"] = "Partial";
     TagApiGetCategoryNamesListNameMatchModeEnum["StartsWith"] = "StartsWith";
     TagApiGetCategoryNamesListNameMatchModeEnum["Exact"] = "Exact";
     TagApiGetCategoryNamesListNameMatchModeEnum["Words"] = "Words";
-})(TagApiGetCategoryNamesListNameMatchModeEnum || (TagApiGetCategoryNamesListNameMatchModeEnum = {}));
+})(TagApiGetCategoryNamesListNameMatchModeEnum = exports.TagApiGetCategoryNamesListNameMatchModeEnum || (exports.TagApiGetCategoryNamesListNameMatchModeEnum = {}));
 var TagApiGetCategoryNamesListQueryParams = /** @class */ (function (_super) {
     __extends(TagApiGetCategoryNamesListQueryParams, _super);
     function TagApiGetCategoryNamesListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=nameMatchMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=nameMatchMode" }),
         __metadata("design:type", String)
     ], TagApiGetCategoryNamesListQueryParams.prototype, "nameMatchMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], TagApiGetCategoryNamesListQueryParams.prototype, "query", void 0);
     return TagApiGetCategoryNamesListQueryParams;
-}(SpeakeasyBase));
-export { TagApiGetCategoryNamesListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.TagApiGetCategoryNamesListQueryParams = TagApiGetCategoryNamesListQueryParams;
 var TagApiGetCategoryNamesListRequest = /** @class */ (function (_super) {
     __extends(TagApiGetCategoryNamesListRequest, _super);
     function TagApiGetCategoryNamesListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TagApiGetCategoryNamesListQueryParams)
     ], TagApiGetCategoryNamesListRequest.prototype, "queryParams", void 0);
     return TagApiGetCategoryNamesListRequest;
-}(SpeakeasyBase));
-export { TagApiGetCategoryNamesListRequest };
+}(utils_1.SpeakeasyBase));
+exports.TagApiGetCategoryNamesListRequest = TagApiGetCategoryNamesListRequest;
 var TagApiGetCategoryNamesListResponse = /** @class */ (function (_super) {
     __extends(TagApiGetCategoryNamesListResponse, _super);
     function TagApiGetCategoryNamesListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], TagApiGetCategoryNamesListResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TagApiGetCategoryNamesListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TagApiGetCategoryNamesListResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], TagApiGetCategoryNamesListResponse.prototype, "tagApiGetCategoryNamesList200ApplicationJsonStrings", void 0);
+    ], TagApiGetCategoryNamesListResponse.prototype, "tagApiGetCategoryNamesList200ApplicationJSONStrings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], TagApiGetCategoryNamesListResponse.prototype, "tagApiGetCategoryNamesList200ApplicationJsonpStrings", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], TagApiGetCategoryNamesListResponse.prototype, "tagApiGetCategoryNamesList200TextJsonStrings", void 0);
+    ], TagApiGetCategoryNamesListResponse.prototype, "tagApiGetCategoryNamesList200TextJSONStrings", void 0);
     return TagApiGetCategoryNamesListResponse;
-}(SpeakeasyBase));
-export { TagApiGetCategoryNamesListResponse };
+}(utils_1.SpeakeasyBase));
+exports.TagApiGetCategoryNamesListResponse = TagApiGetCategoryNamesListResponse;

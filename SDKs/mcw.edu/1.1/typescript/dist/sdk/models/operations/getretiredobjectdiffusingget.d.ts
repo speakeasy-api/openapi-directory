@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetRetiredObjectDiffUsingGetPathParams extends SpeakeasyBase {
-    dateFromYyyymmdd: string;
-    dateToYyyymmdd: string;
+    dateFromYYYYMMDD: string;
+    dateToYYYYMMDD: string;
     speciesTypeKey: number;
 }
 export declare class GetRetiredObjectDiffUsingGetRequest extends SpeakeasyBase {

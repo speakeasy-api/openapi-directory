@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ApiKeyEntityPermissionSetEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiKeyEntity = exports.ApiKeyEntityPermissionSetEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ApiKeyEntityPermissionSetEnum;
 (function (ApiKeyEntityPermissionSetEnum) {
     ApiKeyEntityPermissionSetEnum["None"] = "none";
     ApiKeyEntityPermissionSetEnum["Full"] = "full";
@@ -31,7 +34,7 @@ export var ApiKeyEntityPermissionSetEnum;
     ApiKeyEntityPermissionSetEnum["SyncApp"] = "sync_app";
     ApiKeyEntityPermissionSetEnum["OfficeIntegration"] = "office_integration";
     ApiKeyEntityPermissionSetEnum["MobileApp"] = "mobile_app";
-})(ApiKeyEntityPermissionSetEnum || (ApiKeyEntityPermissionSetEnum = {}));
+})(ApiKeyEntityPermissionSetEnum = exports.ApiKeyEntityPermissionSetEnum || (exports.ApiKeyEntityPermissionSetEnum = {}));
 // ApiKeyEntity
 /**
  * List Api Keys
@@ -42,49 +45,49 @@ var ApiKeyEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], ApiKeyEntity.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=descriptive_label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=descriptive_label" }),
         __metadata("design:type", String)
     ], ApiKeyEntity.prototype, "descriptiveLabel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires_at" }),
         __metadata("design:type", Date)
     ], ApiKeyEntity.prototype, "expiresAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], ApiKeyEntity.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], ApiKeyEntity.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_use_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_use_at" }),
         __metadata("design:type", Date)
     ], ApiKeyEntity.prototype, "lastUseAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ApiKeyEntity.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], ApiKeyEntity.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permission_set" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permission_set" }),
         __metadata("design:type", String)
     ], ApiKeyEntity.prototype, "permissionSet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
         __metadata("design:type", String)
     ], ApiKeyEntity.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_id" }),
         __metadata("design:type", Number)
     ], ApiKeyEntity.prototype, "userId", void 0);
     return ApiKeyEntity;
-}(SpeakeasyBase));
-export { ApiKeyEntity };
+}(utils_1.SpeakeasyBase));
+exports.ApiKeyEntity = ApiKeyEntity;

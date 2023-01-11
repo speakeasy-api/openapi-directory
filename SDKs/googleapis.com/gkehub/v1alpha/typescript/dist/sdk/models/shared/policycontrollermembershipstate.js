@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PolicyControllerOnClusterState } from "./policycontrolleronclusterstate";
-export var PolicyControllerMembershipStateStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PolicyControllerMembershipState = exports.PolicyControllerMembershipStateStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var policycontrolleronclusterstate_1 = require("./policycontrolleronclusterstate");
+var PolicyControllerMembershipStateStateEnum;
 (function (PolicyControllerMembershipStateStateEnum) {
     PolicyControllerMembershipStateStateEnum["LifecycleStateUnspecified"] = "LIFECYCLE_STATE_UNSPECIFIED";
     PolicyControllerMembershipStateStateEnum["NotInstalled"] = "NOT_INSTALLED";
@@ -35,7 +38,7 @@ export var PolicyControllerMembershipStateStateEnum;
     PolicyControllerMembershipStateStateEnum["ClusterError"] = "CLUSTER_ERROR";
     PolicyControllerMembershipStateStateEnum["HubError"] = "HUB_ERROR";
     PolicyControllerMembershipStateStateEnum["Suspended"] = "SUSPENDED";
-})(PolicyControllerMembershipStateStateEnum || (PolicyControllerMembershipStateStateEnum = {}));
+})(PolicyControllerMembershipStateStateEnum = exports.PolicyControllerMembershipStateStateEnum || (exports.PolicyControllerMembershipStateStateEnum = {}));
 // PolicyControllerMembershipState
 /**
  * **Policy Controller**: State for a single cluster.
@@ -46,13 +49,13 @@ var PolicyControllerMembershipState = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=componentStates", elemType: PolicyControllerOnClusterState }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=componentStates", elemType: policycontrolleronclusterstate_1.PolicyControllerOnClusterState }),
+        __metadata("design:type", Object)
     ], PolicyControllerMembershipState.prototype, "componentStates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], PolicyControllerMembershipState.prototype, "state", void 0);
     return PolicyControllerMembershipState;
-}(SpeakeasyBase));
-export { PolicyControllerMembershipState };
+}(utils_1.SpeakeasyBase));
+exports.PolicyControllerMembershipState = PolicyControllerMembershipState;

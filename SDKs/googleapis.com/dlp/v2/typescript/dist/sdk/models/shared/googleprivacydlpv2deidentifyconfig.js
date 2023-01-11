@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2ImageTransformations } from "./googleprivacydlpv2imagetransformations";
-import { GooglePrivacyDlpV2InfoTypeTransformations } from "./googleprivacydlpv2infotypetransformations";
-import { GooglePrivacyDlpV2RecordTransformations } from "./googleprivacydlpv2recordtransformations";
-import { GooglePrivacyDlpV2TransformationErrorHandling } from "./googleprivacydlpv2transformationerrorhandling";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2DeidentifyConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2imagetransformations_1 = require("./googleprivacydlpv2imagetransformations");
+var googleprivacydlpv2infotypetransformations_1 = require("./googleprivacydlpv2infotypetransformations");
+var googleprivacydlpv2recordtransformations_1 = require("./googleprivacydlpv2recordtransformations");
+var googleprivacydlpv2transformationerrorhandling_1 = require("./googleprivacydlpv2transformationerrorhandling");
 // GooglePrivacyDlpV2DeidentifyConfig
 /**
  * The configuration that controls how the data will change.
@@ -37,21 +40,21 @@ var GooglePrivacyDlpV2DeidentifyConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageTransformations" }),
-        __metadata("design:type", GooglePrivacyDlpV2ImageTransformations)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageTransformations" }),
+        __metadata("design:type", googleprivacydlpv2imagetransformations_1.GooglePrivacyDlpV2ImageTransformations)
     ], GooglePrivacyDlpV2DeidentifyConfig.prototype, "imageTransformations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=infoTypeTransformations" }),
-        __metadata("design:type", GooglePrivacyDlpV2InfoTypeTransformations)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=infoTypeTransformations" }),
+        __metadata("design:type", googleprivacydlpv2infotypetransformations_1.GooglePrivacyDlpV2InfoTypeTransformations)
     ], GooglePrivacyDlpV2DeidentifyConfig.prototype, "infoTypeTransformations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recordTransformations" }),
-        __metadata("design:type", GooglePrivacyDlpV2RecordTransformations)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recordTransformations" }),
+        __metadata("design:type", googleprivacydlpv2recordtransformations_1.GooglePrivacyDlpV2RecordTransformations)
     ], GooglePrivacyDlpV2DeidentifyConfig.prototype, "recordTransformations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transformationErrorHandling" }),
-        __metadata("design:type", GooglePrivacyDlpV2TransformationErrorHandling)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transformationErrorHandling" }),
+        __metadata("design:type", googleprivacydlpv2transformationerrorhandling_1.GooglePrivacyDlpV2TransformationErrorHandling)
     ], GooglePrivacyDlpV2DeidentifyConfig.prototype, "transformationErrorHandling", void 0);
     return GooglePrivacyDlpV2DeidentifyConfig;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2DeidentifyConfig };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2DeidentifyConfig = GooglePrivacyDlpV2DeidentifyConfig;

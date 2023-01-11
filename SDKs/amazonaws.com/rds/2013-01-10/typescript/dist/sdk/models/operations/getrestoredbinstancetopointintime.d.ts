@@ -15,13 +15,13 @@ export declare class GetRestoreDbInstanceToPointInTimeQueryParams extends Speake
     engine?: string;
     iops?: number;
     licenseModel?: string;
-    multiAz?: boolean;
+    multiAZ?: boolean;
     optionGroupName?: string;
     port?: number;
     publiclyAccessible?: boolean;
     restoreTime?: Date;
-    sourceDbInstanceIdentifier: string;
-    targetDbInstanceIdentifier: string;
+    sourceDBInstanceIdentifier: string;
+    targetDBInstanceIdentifier: string;
     useLatestRestorableTime?: boolean;
     version: GetRestoreDbInstanceToPointInTimeVersionEnum;
 }

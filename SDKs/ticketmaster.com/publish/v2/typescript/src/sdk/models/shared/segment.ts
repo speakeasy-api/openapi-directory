@@ -11,5 +11,5 @@ export class Segment extends SpeakeasyBase {
   id?: string;
 
   @SpeakeasyMetadata({ data: "json, name=names" })
-  names?: Map<string, string>;
+  names?: Record<string, string>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PrivateIp } from "./privateip";
-import { SecurityGroup } from "./securitygroup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NetworkInterface = void 0;
+var utils_1 = require("../../../internal/utils");
+var privateip_1 = require("./privateip");
+var securitygroup_1 = require("./securitygroup");
 // NetworkInterface
 /**
  * Contains information about the network interfaces interacting with an EC2 instance. This data type is used as one of the elements of the <a>AssetAttributes</a> data type.
@@ -35,45 +38,45 @@ var NetworkInterface = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipv6Addresses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipv6Addresses" }),
         __metadata("design:type", Array)
     ], NetworkInterface.prototype, "ipv6Addresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkInterfaceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkInterfaceId" }),
         __metadata("design:type", String)
     ], NetworkInterface.prototype, "networkInterfaceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateDnsName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateDnsName" }),
         __metadata("design:type", String)
     ], NetworkInterface.prototype, "privateDnsName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateIpAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateIpAddress" }),
         __metadata("design:type", String)
     ], NetworkInterface.prototype, "privateIpAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=privateIpAddresses", elemType: PrivateIp }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=privateIpAddresses", elemType: privateip_1.PrivateIp }),
         __metadata("design:type", Array)
     ], NetworkInterface.prototype, "privateIpAddresses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicDnsName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicDnsName" }),
         __metadata("design:type", String)
     ], NetworkInterface.prototype, "publicDnsName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicIp" }),
         __metadata("design:type", String)
     ], NetworkInterface.prototype, "publicIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=securityGroups", elemType: SecurityGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=securityGroups", elemType: securitygroup_1.SecurityGroup }),
         __metadata("design:type", Array)
     ], NetworkInterface.prototype, "securityGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subnetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subnetId" }),
         __metadata("design:type", String)
     ], NetworkInterface.prototype, "subnetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpcId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpcId" }),
         __metadata("design:type", String)
     ], NetworkInterface.prototype, "vpcId", void 0);
     return NetworkInterface;
-}(SpeakeasyBase));
-export { NetworkInterface };
+}(utils_1.SpeakeasyBase));
+exports.NetworkInterface = NetworkInterface;

@@ -10,7 +10,7 @@ export declare class GetLaunchConfigurationHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class GetLaunchConfigurationRequestBody extends SpeakeasyBase {
-    sourceServerId: string;
+    sourceServerID: string;
 }
 export declare class GetLaunchConfigurationRequest extends SpeakeasyBase {
     headers: GetLaunchConfigurationHeaders;

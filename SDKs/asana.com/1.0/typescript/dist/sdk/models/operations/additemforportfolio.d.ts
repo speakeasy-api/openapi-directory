@@ -11,7 +11,7 @@ export declare class AddItemForPortfolioRequestBody extends SpeakeasyBase {
     data?: shared.PortfolioAddItemRequest;
 }
 export declare class AddItemForPortfolio200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class AddItemForPortfolioRequest extends SpeakeasyBase {
     pathParams: AddItemForPortfolioPathParams;
@@ -22,5 +22,5 @@ export declare class AddItemForPortfolioResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    addItemForPortfolio200ApplicationJsonObject?: AddItemForPortfolio200ApplicationJson;
+    addItemForPortfolio200ApplicationJSONObject?: AddItemForPortfolio200ApplicationJson;
 }

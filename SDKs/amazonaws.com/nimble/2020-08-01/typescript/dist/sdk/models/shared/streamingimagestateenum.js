@@ -1,4 +1,7 @@
-export var StreamingImageStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StreamingImageStateEnum = void 0;
+var StreamingImageStateEnum;
 (function (StreamingImageStateEnum) {
     StreamingImageStateEnum["CreateInProgress"] = "CREATE_IN_PROGRESS";
     StreamingImageStateEnum["Ready"] = "READY";
@@ -8,4 +11,4 @@ export var StreamingImageStateEnum;
     StreamingImageStateEnum["UpdateFailed"] = "UPDATE_FAILED";
     StreamingImageStateEnum["CreateFailed"] = "CREATE_FAILED";
     StreamingImageStateEnum["DeleteFailed"] = "DELETE_FAILED";
-})(StreamingImageStateEnum || (StreamingImageStateEnum = {}));
+})(StreamingImageStateEnum = exports.StreamingImageStateEnum || (exports.StreamingImageStateEnum = {}));

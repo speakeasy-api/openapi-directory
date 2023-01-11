@@ -3,7 +3,7 @@ export declare class LandlordControllerGetTenancyAgreementReportPathParams exten
     shortName: string;
 }
 export declare class LandlordControllerGetTenancyAgreementReportQueryParams extends SpeakeasyBase {
-    tenancyId: string;
+    tenancyID: string;
     token: string;
 }
 export declare class LandlordControllerGetTenancyAgreementReportRequest extends SpeakeasyBase {
@@ -13,6 +13,6 @@ export declare class LandlordControllerGetTenancyAgreementReportRequest extends 
 export declare class LandlordControllerGetTenancyAgreementReportResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    object?: Map<string, any>;
+    object?: Record<string, any>;
     statusCode: number;
 }

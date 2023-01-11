@@ -38,7 +38,7 @@ export class DisassociateAdminAccountRequest extends SpeakeasyBase {
   headers: DisassociateAdminAccountHeaders;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 

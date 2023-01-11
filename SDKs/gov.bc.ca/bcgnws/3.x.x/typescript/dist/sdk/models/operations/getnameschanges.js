@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,106 +23,108 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetNamesChangesOutputFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNamesChangesResponse = exports.GetNamesChangesRequest = exports.GetNamesChangesQueryParams = exports.GetNamesChangesSortByEnum = exports.GetNamesChangesOutputStyleEnum = exports.GetNamesChangesOutputFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetNamesChangesOutputFormatEnum;
 (function (GetNamesChangesOutputFormatEnum) {
     GetNamesChangesOutputFormatEnum["Json"] = "json";
     GetNamesChangesOutputFormatEnum["Xml"] = "xml";
     GetNamesChangesOutputFormatEnum["Kml"] = "kml";
     GetNamesChangesOutputFormatEnum["Csv"] = "csv";
-})(GetNamesChangesOutputFormatEnum || (GetNamesChangesOutputFormatEnum = {}));
-export var GetNamesChangesOutputStyleEnum;
+})(GetNamesChangesOutputFormatEnum = exports.GetNamesChangesOutputFormatEnum || (exports.GetNamesChangesOutputFormatEnum = {}));
+var GetNamesChangesOutputStyleEnum;
 (function (GetNamesChangesOutputStyleEnum) {
     GetNamesChangesOutputStyleEnum["Summary"] = "summary";
     GetNamesChangesOutputStyleEnum["Detail"] = "detail";
-})(GetNamesChangesOutputStyleEnum || (GetNamesChangesOutputStyleEnum = {}));
-export var GetNamesChangesSortByEnum;
+})(GetNamesChangesOutputStyleEnum = exports.GetNamesChangesOutputStyleEnum || (exports.GetNamesChangesOutputStyleEnum = {}));
+var GetNamesChangesSortByEnum;
 (function (GetNamesChangesSortByEnum) {
     GetNamesChangesSortByEnum["Name"] = "name";
     GetNamesChangesSortByEnum["FeatureType"] = "featureType";
     GetNamesChangesSortByEnum["DecisionDate"] = "decisionDate";
-})(GetNamesChangesSortByEnum || (GetNamesChangesSortByEnum = {}));
+})(GetNamesChangesSortByEnum = exports.GetNamesChangesSortByEnum || (exports.GetNamesChangesSortByEnum = {}));
 var GetNamesChangesQueryParams = /** @class */ (function (_super) {
     __extends(GetNamesChangesQueryParams, _super);
     function GetNamesChangesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=embed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=embed" }),
         __metadata("design:type", Number)
     ], GetNamesChangesQueryParams.prototype, "embed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=featureCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=featureCategory" }),
         __metadata("design:type", String)
     ], GetNamesChangesQueryParams.prototype, "featureCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=featureClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=featureClass" }),
         __metadata("design:type", String)
     ], GetNamesChangesQueryParams.prototype, "featureClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=featureType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=featureType" }),
         __metadata("design:type", String)
     ], GetNamesChangesQueryParams.prototype, "featureType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromDate" }),
         __metadata("design:type", Number)
     ], GetNamesChangesQueryParams.prototype, "fromDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=itemsPerPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=itemsPerPage" }),
         __metadata("design:type", Number)
     ], GetNamesChangesQueryParams.prototype, "itemsPerPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputFormat" }),
         __metadata("design:type", String)
     ], GetNamesChangesQueryParams.prototype, "outputFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputSRS" }),
         __metadata("design:type", Number)
-    ], GetNamesChangesQueryParams.prototype, "outputSrs", void 0);
+    ], GetNamesChangesQueryParams.prototype, "outputSRS", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=outputStyle" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=outputStyle" }),
         __metadata("design:type", String)
     ], GetNamesChangesQueryParams.prototype, "outputStyle", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sortBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sortBy" }),
         __metadata("design:type", String)
     ], GetNamesChangesQueryParams.prototype, "sortBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startIndex" }),
         __metadata("design:type", Number)
     ], GetNamesChangesQueryParams.prototype, "startIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=toDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=toDate" }),
         __metadata("design:type", Number)
     ], GetNamesChangesQueryParams.prototype, "toDate", void 0);
     return GetNamesChangesQueryParams;
-}(SpeakeasyBase));
-export { GetNamesChangesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNamesChangesQueryParams = GetNamesChangesQueryParams;
 var GetNamesChangesRequest = /** @class */ (function (_super) {
     __extends(GetNamesChangesRequest, _super);
     function GetNamesChangesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNamesChangesQueryParams)
     ], GetNamesChangesRequest.prototype, "queryParams", void 0);
     return GetNamesChangesRequest;
-}(SpeakeasyBase));
-export { GetNamesChangesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNamesChangesRequest = GetNamesChangesRequest;
 var GetNamesChangesResponse = /** @class */ (function (_super) {
     __extends(GetNamesChangesResponse, _super);
     function GetNamesChangesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNamesChangesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNamesChangesResponse.prototype, "statusCode", void 0);
     return GetNamesChangesResponse;
-}(SpeakeasyBase));
-export { GetNamesChangesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNamesChangesResponse = GetNamesChangesResponse;

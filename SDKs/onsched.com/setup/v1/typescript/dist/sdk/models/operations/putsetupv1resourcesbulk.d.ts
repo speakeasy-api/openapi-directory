@@ -5,10 +5,10 @@ export declare class PutSetupV1ResourcesBulkQueryParams extends SpeakeasyBase {
     outlookAuthReturnUrl?: string;
 }
 export declare class PutSetupV1ResourcesBulkRequests extends SpeakeasyBase {
-    resourcesUpdateModel?: Map<string, any>;
-    resourcesUpdateModel1?: Map<string, any>;
-    resourcesUpdateModel2?: Map<string, any>;
-    resourcesUpdateModel3?: Map<string, any>;
+    resourcesUpdateModel?: Record<string, any>;
+    resourcesUpdateModel1?: Record<string, any>;
+    resourcesUpdateModel2?: Record<string, any>;
+    resourcesUpdateModel3?: Record<string, any>;
 }
 export declare class PutSetupV1ResourcesBulkRequest extends SpeakeasyBase {
     queryParams: PutSetupV1ResourcesBulkQueryParams;

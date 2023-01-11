@@ -1,6 +1,0 @@
-import { SpeakeasyBase } from "../../../internal/utils";
-export declare class ListVocabularyFiltersRequest extends SpeakeasyBase {
-    maxResults?: number;
-    nameContains?: string;
-    nextToken?: string;
-}

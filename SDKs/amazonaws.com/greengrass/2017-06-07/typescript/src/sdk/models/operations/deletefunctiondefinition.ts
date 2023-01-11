@@ -49,7 +49,7 @@ export class DeleteFunctionDefinitionResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteFunctionDefinitionResponse?: Map<string, any>;
+  deleteFunctionDefinitionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

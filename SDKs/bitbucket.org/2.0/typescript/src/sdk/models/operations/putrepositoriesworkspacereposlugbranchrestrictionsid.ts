@@ -32,7 +32,7 @@ export class PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest extends
   pathParams: PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdSecurity;
@@ -47,8 +47,8 @@ export class PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse extend
   statusCode: number;
 
   @SpeakeasyMetadata()
-  branchrestriction?: Map<string, any>;
+  branchrestriction?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

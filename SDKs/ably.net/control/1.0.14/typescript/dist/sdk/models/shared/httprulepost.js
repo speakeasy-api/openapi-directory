@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,96 +23,98 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSource } from "./rulesource";
-export var HttpRulePostRequestModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpRulePost = exports.HttpRulePostTarget = exports.HttpRulePostTargetHeaders = exports.HttpRulePostTargetFormatEnum = exports.HttpRulePostStatusEnum = exports.HttpRulePostRuleTypeEnum = exports.HttpRulePostRequestModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulesource_1 = require("./rulesource");
+var HttpRulePostRequestModeEnum;
 (function (HttpRulePostRequestModeEnum) {
     HttpRulePostRequestModeEnum["Single"] = "single";
     HttpRulePostRequestModeEnum["Batch"] = "batch";
-})(HttpRulePostRequestModeEnum || (HttpRulePostRequestModeEnum = {}));
-export var HttpRulePostRuleTypeEnum;
+})(HttpRulePostRequestModeEnum = exports.HttpRulePostRequestModeEnum || (exports.HttpRulePostRequestModeEnum = {}));
+var HttpRulePostRuleTypeEnum;
 (function (HttpRulePostRuleTypeEnum) {
     HttpRulePostRuleTypeEnum["Http"] = "http";
-})(HttpRulePostRuleTypeEnum || (HttpRulePostRuleTypeEnum = {}));
-export var HttpRulePostStatusEnum;
+})(HttpRulePostRuleTypeEnum = exports.HttpRulePostRuleTypeEnum || (exports.HttpRulePostRuleTypeEnum = {}));
+var HttpRulePostStatusEnum;
 (function (HttpRulePostStatusEnum) {
     HttpRulePostStatusEnum["Enabled"] = "enabled";
     HttpRulePostStatusEnum["Disabled"] = "disabled";
-})(HttpRulePostStatusEnum || (HttpRulePostStatusEnum = {}));
-export var HttpRulePostTargetFormatEnum;
+})(HttpRulePostStatusEnum = exports.HttpRulePostStatusEnum || (exports.HttpRulePostStatusEnum = {}));
+var HttpRulePostTargetFormatEnum;
 (function (HttpRulePostTargetFormatEnum) {
     HttpRulePostTargetFormatEnum["Json"] = "json";
     HttpRulePostTargetFormatEnum["Msgpack"] = "msgpack";
-})(HttpRulePostTargetFormatEnum || (HttpRulePostTargetFormatEnum = {}));
+})(HttpRulePostTargetFormatEnum = exports.HttpRulePostTargetFormatEnum || (exports.HttpRulePostTargetFormatEnum = {}));
 var HttpRulePostTargetHeaders = /** @class */ (function (_super) {
     __extends(HttpRulePostTargetHeaders, _super);
     function HttpRulePostTargetHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], HttpRulePostTargetHeaders.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], HttpRulePostTargetHeaders.prototype, "value", void 0);
     return HttpRulePostTargetHeaders;
-}(SpeakeasyBase));
-export { HttpRulePostTargetHeaders };
+}(utils_1.SpeakeasyBase));
+exports.HttpRulePostTargetHeaders = HttpRulePostTargetHeaders;
 var HttpRulePostTarget = /** @class */ (function (_super) {
     __extends(HttpRulePostTarget, _super);
     function HttpRulePostTarget() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enveloped" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enveloped" }),
         __metadata("design:type", Boolean)
     ], HttpRulePostTarget.prototype, "enveloped", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], HttpRulePostTarget.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers", elemType: HttpRulePostTargetHeaders }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers", elemType: HttpRulePostTargetHeaders }),
         __metadata("design:type", Array)
     ], HttpRulePostTarget.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signingKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signingKeyId" }),
         __metadata("design:type", String)
     ], HttpRulePostTarget.prototype, "signingKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], HttpRulePostTarget.prototype, "url", void 0);
     return HttpRulePostTarget;
-}(SpeakeasyBase));
-export { HttpRulePostTarget };
+}(utils_1.SpeakeasyBase));
+exports.HttpRulePostTarget = HttpRulePostTarget;
 var HttpRulePost = /** @class */ (function (_super) {
     __extends(HttpRulePost, _super);
     function HttpRulePost() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMode" }),
         __metadata("design:type", String)
     ], HttpRulePost.prototype, "requestMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleType" }),
         __metadata("design:type", String)
     ], HttpRulePost.prototype, "ruleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", RuleSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", rulesource_1.RuleSource)
     ], HttpRulePost.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], HttpRulePost.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", HttpRulePostTarget)
     ], HttpRulePost.prototype, "target", void 0);
     return HttpRulePost;
-}(SpeakeasyBase));
-export { HttpRulePost };
+}(utils_1.SpeakeasyBase));
+exports.HttpRulePost = HttpRulePost;

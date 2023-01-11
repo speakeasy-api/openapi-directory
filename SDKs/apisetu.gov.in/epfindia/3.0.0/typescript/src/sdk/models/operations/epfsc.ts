@@ -191,23 +191,23 @@ export class EpfscResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  epfsc400ApplicationJsonObject?: Epfsc400ApplicationJson;
+  epfsc400ApplicationJSONObject?: Epfsc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  epfsc401ApplicationJsonObject?: Epfsc401ApplicationJson;
+  epfsc401ApplicationJSONObject?: Epfsc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  epfsc404ApplicationJsonObject?: Epfsc404ApplicationJson;
+  epfsc404ApplicationJSONObject?: Epfsc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  epfsc500ApplicationJsonObject?: Epfsc500ApplicationJson;
+  epfsc500ApplicationJSONObject?: Epfsc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  epfsc502ApplicationJsonObject?: Epfsc502ApplicationJson;
+  epfsc502ApplicationJSONObject?: Epfsc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  epfsc503ApplicationJsonObject?: Epfsc503ApplicationJson;
+  epfsc503ApplicationJSONObject?: Epfsc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  epfsc504ApplicationJsonObject?: Epfsc504ApplicationJson;
+  epfsc504ApplicationJSONObject?: Epfsc504ApplicationJson;
 }

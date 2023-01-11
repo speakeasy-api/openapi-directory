@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostClientResponse = exports.PostClientRequest = exports.PostClientRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostClientRequestBody = /** @class */ (function (_super) {
     __extends(PostClientRequestBody, _super);
     function PostClientRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@id" }),
         __metadata("design:type", String)
     ], PostClientRequestBody.prototype, "atId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], PostClientRequestBody.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_name" }),
         __metadata("design:type", String)
     ], PostClientRequestBody.prototype, "clientName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_secret" }),
         __metadata("design:type", String)
     ], PostClientRequestBody.prototype, "clientSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_uri" }),
         __metadata("design:type", String)
     ], PostClientRequestBody.prototype, "clientUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=contacts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=contacts" }),
         __metadata("design:type", Array)
     ], PostClientRequestBody.prototype, "contacts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=grant_types" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=grant_types" }),
         __metadata("design:type", Array)
     ], PostClientRequestBody.prototype, "grantTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jwks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jwks" }),
         __metadata("design:type", Array)
     ], PostClientRequestBody.prototype, "jwks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jwks_uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jwks_uri" }),
         __metadata("design:type", String)
     ], PostClientRequestBody.prototype, "jwksUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logo_email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logo_email" }),
         __metadata("design:type", String)
     ], PostClientRequestBody.prototype, "logoEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logo_uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logo_uri" }),
         __metadata("design:type", String)
     ], PostClientRequestBody.prototype, "logoUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policy_uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policy_uri" }),
         __metadata("design:type", String)
     ], PostClientRequestBody.prototype, "policyUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=redirect_uris" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=redirect_uris" }),
         __metadata("design:type", Array)
     ], PostClientRequestBody.prototype, "redirectUris", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=response_types" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=response_types" }),
         __metadata("design:type", Array)
     ], PostClientRequestBody.prototype, "responseTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scope" }),
         __metadata("design:type", String)
     ], PostClientRequestBody.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=software_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=software_id" }),
         __metadata("design:type", String)
     ], PostClientRequestBody.prototype, "softwareId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=software_version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=software_version" }),
         __metadata("design:type", String)
     ], PostClientRequestBody.prototype, "softwareVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token_endpoint_auth_method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token_endpoint_auth_method" }),
         __metadata("design:type", String)
     ], PostClientRequestBody.prototype, "tokenEndpointAuthMethod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tos_uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tos_uri" }),
         __metadata("design:type", String)
     ], PostClientRequestBody.prototype, "tosUri", void 0);
     return PostClientRequestBody;
-}(SpeakeasyBase));
-export { PostClientRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostClientRequestBody = PostClientRequestBody;
 var PostClientRequest = /** @class */ (function (_super) {
     __extends(PostClientRequest, _super);
     function PostClientRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostClientRequestBody)
     ], PostClientRequest.prototype, "request", void 0);
     return PostClientRequest;
-}(SpeakeasyBase));
-export { PostClientRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostClientRequest = PostClientRequest;
 var PostClientResponse = /** @class */ (function (_super) {
     __extends(PostClientResponse, _super);
     function PostClientResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostClientResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostClientResponse.prototype, "statusCode", void 0);
     return PostClientResponse;
-}(SpeakeasyBase));
-export { PostClientResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostClientResponse = PostClientResponse;

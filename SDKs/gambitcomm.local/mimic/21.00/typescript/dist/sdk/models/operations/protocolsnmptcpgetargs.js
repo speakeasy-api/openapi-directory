@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolSnmptcpGetArgsResponse = exports.ProtocolSnmptcpGetArgsRequest = exports.ProtocolSnmptcpGetArgsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolSnmptcpGetArgsPathParams = /** @class */ (function (_super) {
     __extends(ProtocolSnmptcpGetArgsPathParams, _super);
     function ProtocolSnmptcpGetArgsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolSnmptcpGetArgsPathParams.prototype, "agentNum", void 0);
     return ProtocolSnmptcpGetArgsPathParams;
-}(SpeakeasyBase));
-export { ProtocolSnmptcpGetArgsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmptcpGetArgsPathParams = ProtocolSnmptcpGetArgsPathParams;
 var ProtocolSnmptcpGetArgsRequest = /** @class */ (function (_super) {
     __extends(ProtocolSnmptcpGetArgsRequest, _super);
     function ProtocolSnmptcpGetArgsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolSnmptcpGetArgsPathParams)
     ], ProtocolSnmptcpGetArgsRequest.prototype, "pathParams", void 0);
     return ProtocolSnmptcpGetArgsRequest;
-}(SpeakeasyBase));
-export { ProtocolSnmptcpGetArgsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmptcpGetArgsRequest = ProtocolSnmptcpGetArgsRequest;
 var ProtocolSnmptcpGetArgsResponse = /** @class */ (function (_super) {
     __extends(ProtocolSnmptcpGetArgsResponse, _super);
     function ProtocolSnmptcpGetArgsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolSnmptcpGetArgsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolSnmptcpGetArgsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], ProtocolSnmptcpGetArgsResponse.prototype, "protocolSnmptcpGetArgs200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], ProtocolSnmptcpGetArgsResponse.prototype, "protocolSnmptcpGetArgs200ApplicationJSONObject", void 0);
     return ProtocolSnmptcpGetArgsResponse;
-}(SpeakeasyBase));
-export { ProtocolSnmptcpGetArgsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmptcpGetArgsResponse = ProtocolSnmptcpGetArgsResponse;

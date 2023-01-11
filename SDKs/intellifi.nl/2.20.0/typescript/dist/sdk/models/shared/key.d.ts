@@ -1,8 +1,4 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-export declare class KeyInput extends SpeakeasyBase {
-    isReadOnly?: boolean;
-    label?: string;
-}
 export declare class Key extends SpeakeasyBase {
     id?: string;
     isReadOnly?: boolean;
@@ -11,4 +7,8 @@ export declare class Key extends SpeakeasyBase {
     timeCreated?: string;
     timeUpdated?: string;
     url?: string;
+}
+export declare class KeyInput extends SpeakeasyBase {
+    isReadOnly?: boolean;
+    label?: string;
 }

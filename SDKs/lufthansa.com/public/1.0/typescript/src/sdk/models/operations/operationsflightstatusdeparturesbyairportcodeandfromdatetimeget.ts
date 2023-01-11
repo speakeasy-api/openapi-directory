@@ -53,7 +53,7 @@ export class OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetResp
   contentType: string;
 
   @SpeakeasyMetadata()
-  operationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGet200ApplicationJsonObject?: Map<string, any>;
+  operationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGet200ApplicationJSONObject?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

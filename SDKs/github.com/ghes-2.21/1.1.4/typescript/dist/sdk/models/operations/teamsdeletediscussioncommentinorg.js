@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsDeleteDiscussionCommentInOrgResponse = exports.TeamsDeleteDiscussionCommentInOrgRequest = exports.TeamsDeleteDiscussionCommentInOrgPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamsDeleteDiscussionCommentInOrgPathParams = /** @class */ (function (_super) {
     __extends(TeamsDeleteDiscussionCommentInOrgPathParams, _super);
     function TeamsDeleteDiscussionCommentInOrgPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=comment_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=comment_number" }),
         __metadata("design:type", Number)
     ], TeamsDeleteDiscussionCommentInOrgPathParams.prototype, "commentNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=discussion_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=discussion_number" }),
         __metadata("design:type", Number)
     ], TeamsDeleteDiscussionCommentInOrgPathParams.prototype, "discussionNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=org" }),
         __metadata("design:type", String)
     ], TeamsDeleteDiscussionCommentInOrgPathParams.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_slug" }),
         __metadata("design:type", String)
     ], TeamsDeleteDiscussionCommentInOrgPathParams.prototype, "teamSlug", void 0);
     return TeamsDeleteDiscussionCommentInOrgPathParams;
-}(SpeakeasyBase));
-export { TeamsDeleteDiscussionCommentInOrgPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamsDeleteDiscussionCommentInOrgPathParams = TeamsDeleteDiscussionCommentInOrgPathParams;
 var TeamsDeleteDiscussionCommentInOrgRequest = /** @class */ (function (_super) {
     __extends(TeamsDeleteDiscussionCommentInOrgRequest, _super);
     function TeamsDeleteDiscussionCommentInOrgRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsDeleteDiscussionCommentInOrgPathParams)
     ], TeamsDeleteDiscussionCommentInOrgRequest.prototype, "pathParams", void 0);
     return TeamsDeleteDiscussionCommentInOrgRequest;
-}(SpeakeasyBase));
-export { TeamsDeleteDiscussionCommentInOrgRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsDeleteDiscussionCommentInOrgRequest = TeamsDeleteDiscussionCommentInOrgRequest;
 var TeamsDeleteDiscussionCommentInOrgResponse = /** @class */ (function (_super) {
     __extends(TeamsDeleteDiscussionCommentInOrgResponse, _super);
     function TeamsDeleteDiscussionCommentInOrgResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsDeleteDiscussionCommentInOrgResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsDeleteDiscussionCommentInOrgResponse.prototype, "statusCode", void 0);
     return TeamsDeleteDiscussionCommentInOrgResponse;
-}(SpeakeasyBase));
-export { TeamsDeleteDiscussionCommentInOrgResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsDeleteDiscussionCommentInOrgResponse = TeamsDeleteDiscussionCommentInOrgResponse;

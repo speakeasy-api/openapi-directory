@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProductData } from "./productdata";
-import { TransactionData } from "./transactiondata";
-export var EcommerceDataActionTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EcommerceData = exports.EcommerceDataEcommerceTypeEnum = exports.EcommerceDataActionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var productdata_1 = require("./productdata");
+var transactiondata_1 = require("./transactiondata");
+var EcommerceDataActionTypeEnum;
 (function (EcommerceDataActionTypeEnum) {
     EcommerceDataActionTypeEnum["Unknown"] = "UNKNOWN";
     EcommerceDataActionTypeEnum["Click"] = "CLICK";
@@ -36,13 +39,13 @@ export var EcommerceDataActionTypeEnum;
     EcommerceDataActionTypeEnum["Payment"] = "PAYMENT";
     EcommerceDataActionTypeEnum["Refund"] = "REFUND";
     EcommerceDataActionTypeEnum["CheckoutOption"] = "CHECKOUT_OPTION";
-})(EcommerceDataActionTypeEnum || (EcommerceDataActionTypeEnum = {}));
-export var EcommerceDataEcommerceTypeEnum;
+})(EcommerceDataActionTypeEnum = exports.EcommerceDataActionTypeEnum || (exports.EcommerceDataActionTypeEnum = {}));
+var EcommerceDataEcommerceTypeEnum;
 (function (EcommerceDataEcommerceTypeEnum) {
     EcommerceDataEcommerceTypeEnum["EcommerceTypeUnspecified"] = "ECOMMERCE_TYPE_UNSPECIFIED";
     EcommerceDataEcommerceTypeEnum["Classic"] = "CLASSIC";
     EcommerceDataEcommerceTypeEnum["Enhanced"] = "ENHANCED";
-})(EcommerceDataEcommerceTypeEnum || (EcommerceDataEcommerceTypeEnum = {}));
+})(EcommerceDataEcommerceTypeEnum = exports.EcommerceDataEcommerceTypeEnum || (exports.EcommerceDataEcommerceTypeEnum = {}));
 // EcommerceData
 /**
  * E-commerce details associated with the user activity.
@@ -53,21 +56,21 @@ var EcommerceData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=actionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=actionType" }),
         __metadata("design:type", String)
     ], EcommerceData.prototype, "actionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ecommerceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ecommerceType" }),
         __metadata("design:type", String)
     ], EcommerceData.prototype, "ecommerceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=products", elemType: ProductData }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=products", elemType: productdata_1.ProductData }),
         __metadata("design:type", Array)
     ], EcommerceData.prototype, "products", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transaction" }),
-        __metadata("design:type", TransactionData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transaction" }),
+        __metadata("design:type", transactiondata_1.TransactionData)
     ], EcommerceData.prototype, "transaction", void 0);
     return EcommerceData;
-}(SpeakeasyBase));
-export { EcommerceData };
+}(utils_1.SpeakeasyBase));
+exports.EcommerceData = EcommerceData;

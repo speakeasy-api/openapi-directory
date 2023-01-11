@@ -112,5 +112,5 @@ export class MetaRootResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  metaRoot200ApplicationJsonObject?: MetaRoot200ApplicationJson;
+  metaRoot200ApplicationJSONObject?: MetaRoot200ApplicationJson;
 }

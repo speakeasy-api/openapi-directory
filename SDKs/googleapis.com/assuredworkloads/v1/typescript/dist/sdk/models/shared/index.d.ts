@@ -2,6 +2,7 @@ export * from "./altenum";
 export * from "./googlecloudassuredworkloadsv1acknowledgeviolationrequest";
 export * from "./googlecloudassuredworkloadsv1listviolationsresponse";
 export * from "./googlecloudassuredworkloadsv1listworkloadsresponse";
+export * from "./googlecloudassuredworkloadsv1mutatepartnerpermissionsrequest";
 export * from "./googlecloudassuredworkloadsv1restrictallowedresourcesrequest";
 export * from "./googlecloudassuredworkloadsv1violation";
 export * from "./googlecloudassuredworkloadsv1violationremediation";
@@ -11,6 +12,7 @@ export * from "./googlecloudassuredworkloadsv1violationremediationinstructionsgc
 export * from "./googlecloudassuredworkloadsv1workload";
 export * from "./googlecloudassuredworkloadsv1workloadcompliancestatus";
 export * from "./googlecloudassuredworkloadsv1workloadkmssettings";
+export * from "./googlecloudassuredworkloadsv1workloadpartnerpermissions";
 export * from "./googlecloudassuredworkloadsv1workloadresourceinfo";
 export * from "./googlecloudassuredworkloadsv1workloadresourcesettings";
 export * from "./googlecloudassuredworkloadsv1workloadsaaenrollmentresponse";

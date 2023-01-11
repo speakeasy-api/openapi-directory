@@ -21,7 +21,7 @@ export declare class UntagResourceResponse extends SpeakeasyBase {
     aclNotFoundFault?: any;
     clusterNotFoundFault?: any;
     contentType: string;
-    invalidArnFault?: any;
+    invalidARNFault?: any;
     invalidClusterStateFault?: any;
     parameterGroupNotFoundFault?: any;
     serviceLinkedRoleNotFoundFault?: any;

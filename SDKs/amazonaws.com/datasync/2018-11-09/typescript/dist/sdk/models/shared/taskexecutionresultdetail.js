@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PhaseStatusEnum } from "./phasestatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskExecutionResultDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var phasestatusenum_1 = require("./phasestatusenum");
 // TaskExecutionResultDetail
 /**
  * Describes the detailed result of a <code>TaskExecution</code> operation. This result includes the time in milliseconds spent in each phase, the status of the task execution, and the errors encountered.
@@ -34,41 +37,41 @@ var TaskExecutionResultDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorCode" }),
         __metadata("design:type", String)
     ], TaskExecutionResultDetail.prototype, "errorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorDetail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorDetail" }),
         __metadata("design:type", String)
     ], TaskExecutionResultDetail.prototype, "errorDetail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PrepareDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PrepareDuration" }),
         __metadata("design:type", Number)
     ], TaskExecutionResultDetail.prototype, "prepareDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PrepareStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PrepareStatus" }),
         __metadata("design:type", String)
     ], TaskExecutionResultDetail.prototype, "prepareStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalDuration" }),
         __metadata("design:type", Number)
     ], TaskExecutionResultDetail.prototype, "totalDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransferDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransferDuration" }),
         __metadata("design:type", Number)
     ], TaskExecutionResultDetail.prototype, "transferDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TransferStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TransferStatus" }),
         __metadata("design:type", String)
     ], TaskExecutionResultDetail.prototype, "transferStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VerifyDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VerifyDuration" }),
         __metadata("design:type", Number)
     ], TaskExecutionResultDetail.prototype, "verifyDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VerifyStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VerifyStatus" }),
         __metadata("design:type", String)
     ], TaskExecutionResultDetail.prototype, "verifyStatus", void 0);
     return TaskExecutionResultDetail;
-}(SpeakeasyBase));
-export { TaskExecutionResultDetail };
+}(utils_1.SpeakeasyBase));
+exports.TaskExecutionResultDetail = TaskExecutionResultDetail;

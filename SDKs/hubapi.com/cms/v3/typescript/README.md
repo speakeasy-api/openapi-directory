@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetCmsV3DomainsGetPageRequest, GetCmsV3DomainsGetPageResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,24 +28,24 @@ const sdk = new SDK();
     
 const req: GetCmsV3DomainsGetPageRequest = {
   security: {
-    hapikey: {
+    privateAppsLegacy: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   queryParams: {
-    after: "occaecati",
-    archived: true,
-    createdAfter: "2012-05-15T10:24:47Z",
-    createdAt: "2001-08-25T03:37:28Z",
-    createdBefore: "2008-07-28T01:17:58Z",
-    limit: 7094204514937110226,
+    after: "sit",
+    archived: false,
+    createdAfter: "1978-05-13T03:50:47Z",
+    createdAt: "2019-04-21T07:38:14Z",
+    createdBefore: "1997-12-26T13:41:25Z",
+    limit: 2669985732393126063,
     sort: [
-      "earum",
-      "quasi",
+      "voluptas",
+      "fugit",
     ],
-    updatedAfter: "1996-05-07T06:18:25Z",
-    updatedAt: "1971-08-13T14:19:32Z",
-    updatedBefore: "1999-02-27T09:39:32Z",
+    updatedAfter: "2011-08-12T10:11:12Z",
+    updatedAt: "2003-05-13T04:57:12Z",
+    updatedBefore: "2004-06-02T10:14:12Z",
   },
 };
 

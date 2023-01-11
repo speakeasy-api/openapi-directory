@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CodeCoverage = void 0;
+var utils_1 = require("../../../internal/utils");
 // CodeCoverage
 /**
  * <p>Contains code coverage report information.</p> <p>Line coverage measures how many statements your tests cover. A statement is a single instruction, not including comments, conditionals, etc.</p> <p>Branch coverage determines if your tests cover every possible branch of a control structure, such as an <code>if</code> or <code>case</code> statement.</p>
@@ -33,45 +36,45 @@ var CodeCoverage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=branchCoveragePercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=branchCoveragePercentage" }),
         __metadata("design:type", Number)
     ], CodeCoverage.prototype, "branchCoveragePercentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=branchesCovered" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=branchesCovered" }),
         __metadata("design:type", Number)
     ], CodeCoverage.prototype, "branchesCovered", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=branchesMissed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=branchesMissed" }),
         __metadata("design:type", Number)
     ], CodeCoverage.prototype, "branchesMissed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expired" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expired" }),
         __metadata("design:type", Date)
     ], CodeCoverage.prototype, "expired", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filePath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filePath" }),
         __metadata("design:type", String)
     ], CodeCoverage.prototype, "filePath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], CodeCoverage.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lineCoveragePercentage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lineCoveragePercentage" }),
         __metadata("design:type", Number)
     ], CodeCoverage.prototype, "lineCoveragePercentage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linesCovered" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linesCovered" }),
         __metadata("design:type", Number)
     ], CodeCoverage.prototype, "linesCovered", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linesMissed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linesMissed" }),
         __metadata("design:type", Number)
     ], CodeCoverage.prototype, "linesMissed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportARN" }),
         __metadata("design:type", String)
-    ], CodeCoverage.prototype, "reportArn", void 0);
+    ], CodeCoverage.prototype, "reportARN", void 0);
     return CodeCoverage;
-}(SpeakeasyBase));
-export { CodeCoverage };
+}(utils_1.SpeakeasyBase));
+exports.CodeCoverage = CodeCoverage;

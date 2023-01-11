@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,34 +14,59 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StorageObjectsUpdateResponse = exports.StorageObjectsUpdateRequest = exports.StorageObjectsUpdateSecurity = exports.StorageObjectsUpdateSecurityOption2 = exports.StorageObjectsUpdateSecurityOption1 = exports.StorageObjectsUpdateQueryParams = exports.StorageObjectsUpdateProjectionEnum = exports.StorageObjectsUpdatePredefinedAclEnum = exports.StorageObjectsUpdatePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var StorageObjectsUpdatePathParams = /** @class */ (function (_super) {
     __extends(StorageObjectsUpdatePathParams, _super);
     function StorageObjectsUpdatePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=bucket" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=bucket" }),
         __metadata("design:type", String)
     ], StorageObjectsUpdatePathParams.prototype, "bucket", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=object" }),
         __metadata("design:type", String)
     ], StorageObjectsUpdatePathParams.prototype, "object", void 0);
     return StorageObjectsUpdatePathParams;
-}(SpeakeasyBase));
-export { StorageObjectsUpdatePathParams };
-export var StorageObjectsUpdatePredefinedAclEnum;
+}(utils_1.SpeakeasyBase));
+exports.StorageObjectsUpdatePathParams = StorageObjectsUpdatePathParams;
+var StorageObjectsUpdatePredefinedAclEnum;
 (function (StorageObjectsUpdatePredefinedAclEnum) {
     StorageObjectsUpdatePredefinedAclEnum["AuthenticatedRead"] = "authenticatedRead";
     StorageObjectsUpdatePredefinedAclEnum["BucketOwnerFullControl"] = "bucketOwnerFullControl";
@@ -48,173 +74,173 @@ export var StorageObjectsUpdatePredefinedAclEnum;
     StorageObjectsUpdatePredefinedAclEnum["Private"] = "private";
     StorageObjectsUpdatePredefinedAclEnum["ProjectPrivate"] = "projectPrivate";
     StorageObjectsUpdatePredefinedAclEnum["PublicRead"] = "publicRead";
-})(StorageObjectsUpdatePredefinedAclEnum || (StorageObjectsUpdatePredefinedAclEnum = {}));
-export var StorageObjectsUpdateProjectionEnum;
+})(StorageObjectsUpdatePredefinedAclEnum = exports.StorageObjectsUpdatePredefinedAclEnum || (exports.StorageObjectsUpdatePredefinedAclEnum = {}));
+var StorageObjectsUpdateProjectionEnum;
 (function (StorageObjectsUpdateProjectionEnum) {
     StorageObjectsUpdateProjectionEnum["Full"] = "full";
     StorageObjectsUpdateProjectionEnum["NoAcl"] = "noAcl";
-})(StorageObjectsUpdateProjectionEnum || (StorageObjectsUpdateProjectionEnum = {}));
+})(StorageObjectsUpdateProjectionEnum = exports.StorageObjectsUpdateProjectionEnum || (exports.StorageObjectsUpdateProjectionEnum = {}));
 var StorageObjectsUpdateQueryParams = /** @class */ (function (_super) {
     __extends(StorageObjectsUpdateQueryParams, _super);
     function StorageObjectsUpdateQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], StorageObjectsUpdateQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], StorageObjectsUpdateQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=generation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=generation" }),
         __metadata("design:type", String)
     ], StorageObjectsUpdateQueryParams.prototype, "generation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ifGenerationMatch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ifGenerationMatch" }),
         __metadata("design:type", String)
     ], StorageObjectsUpdateQueryParams.prototype, "ifGenerationMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ifGenerationNotMatch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ifGenerationNotMatch" }),
         __metadata("design:type", String)
     ], StorageObjectsUpdateQueryParams.prototype, "ifGenerationNotMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ifMetagenerationMatch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ifMetagenerationMatch" }),
         __metadata("design:type", String)
     ], StorageObjectsUpdateQueryParams.prototype, "ifMetagenerationMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=ifMetagenerationNotMatch" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=ifMetagenerationNotMatch" }),
         __metadata("design:type", String)
     ], StorageObjectsUpdateQueryParams.prototype, "ifMetagenerationNotMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], StorageObjectsUpdateQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], StorageObjectsUpdateQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=predefinedAcl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=predefinedAcl" }),
         __metadata("design:type", String)
     ], StorageObjectsUpdateQueryParams.prototype, "predefinedAcl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], StorageObjectsUpdateQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=projection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=projection" }),
         __metadata("design:type", String)
     ], StorageObjectsUpdateQueryParams.prototype, "projection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], StorageObjectsUpdateQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], StorageObjectsUpdateQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], StorageObjectsUpdateQueryParams.prototype, "userIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userProject" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userProject" }),
         __metadata("design:type", String)
     ], StorageObjectsUpdateQueryParams.prototype, "userProject", void 0);
     return StorageObjectsUpdateQueryParams;
-}(SpeakeasyBase));
-export { StorageObjectsUpdateQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.StorageObjectsUpdateQueryParams = StorageObjectsUpdateQueryParams;
 var StorageObjectsUpdateSecurityOption1 = /** @class */ (function (_super) {
     __extends(StorageObjectsUpdateSecurityOption1, _super);
     function StorageObjectsUpdateSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageObjectsUpdateSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageObjectsUpdateSecurityOption1.prototype, "oauth2c", void 0);
     return StorageObjectsUpdateSecurityOption1;
-}(SpeakeasyBase));
-export { StorageObjectsUpdateSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.StorageObjectsUpdateSecurityOption1 = StorageObjectsUpdateSecurityOption1;
 var StorageObjectsUpdateSecurityOption2 = /** @class */ (function (_super) {
     __extends(StorageObjectsUpdateSecurityOption2, _super);
     function StorageObjectsUpdateSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], StorageObjectsUpdateSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], StorageObjectsUpdateSecurityOption2.prototype, "oauth2c", void 0);
     return StorageObjectsUpdateSecurityOption2;
-}(SpeakeasyBase));
-export { StorageObjectsUpdateSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.StorageObjectsUpdateSecurityOption2 = StorageObjectsUpdateSecurityOption2;
 var StorageObjectsUpdateSecurity = /** @class */ (function (_super) {
     __extends(StorageObjectsUpdateSecurity, _super);
     function StorageObjectsUpdateSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageObjectsUpdateSecurityOption1)
     ], StorageObjectsUpdateSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", StorageObjectsUpdateSecurityOption2)
     ], StorageObjectsUpdateSecurity.prototype, "option2", void 0);
     return StorageObjectsUpdateSecurity;
-}(SpeakeasyBase));
-export { StorageObjectsUpdateSecurity };
+}(utils_1.SpeakeasyBase));
+exports.StorageObjectsUpdateSecurity = StorageObjectsUpdateSecurity;
 var StorageObjectsUpdateRequest = /** @class */ (function (_super) {
     __extends(StorageObjectsUpdateRequest, _super);
     function StorageObjectsUpdateRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StorageObjectsUpdatePathParams)
     ], StorageObjectsUpdateRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StorageObjectsUpdateQueryParams)
     ], StorageObjectsUpdateRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", shared.Object)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", shared.ObjectT)
     ], StorageObjectsUpdateRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StorageObjectsUpdateSecurity)
     ], StorageObjectsUpdateRequest.prototype, "security", void 0);
     return StorageObjectsUpdateRequest;
-}(SpeakeasyBase));
-export { StorageObjectsUpdateRequest };
+}(utils_1.SpeakeasyBase));
+exports.StorageObjectsUpdateRequest = StorageObjectsUpdateRequest;
 var StorageObjectsUpdateResponse = /** @class */ (function (_super) {
     __extends(StorageObjectsUpdateResponse, _super);
     function StorageObjectsUpdateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StorageObjectsUpdateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", shared.Object)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", shared.ObjectT)
     ], StorageObjectsUpdateResponse.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StorageObjectsUpdateResponse.prototype, "statusCode", void 0);
     return StorageObjectsUpdateResponse;
-}(SpeakeasyBase));
-export { StorageObjectsUpdateResponse };
+}(utils_1.SpeakeasyBase));
+exports.StorageObjectsUpdateResponse = StorageObjectsUpdateResponse;

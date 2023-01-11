@@ -1,20 +1,20 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://circleci.com/api/v1"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * deleteProjectUsernameProjectBuildCache - Clears the cache for a project.
      *
@@ -41,23 +41,6 @@ export declare class SDK {
     **/
     getProjectUsernameProject(req: operations.GetProjectUsernameProjectRequest, config?: AxiosRequestConfig): Promise<operations.GetProjectUsernameProjectResponse>;
     /**
-     * getProjectUsernameProjectBuildNum - Full details for a single build. The response includes all of the fields from the build summary.
-     * This is also the payload for the [notification webhooks](/docs/configuration/#notify), in which case this object is the value to a key named 'payload'.
-     *
-    **/
-    getProjectUsernameProjectBuildNum(req: operations.GetProjectUsernameProjectBuildNumRequest, config?: AxiosRequestConfig): Promise<operations.GetProjectUsernameProjectBuildNumResponse>;
-    /**
-     * getProjectUsernameProjectBuildNumArtifacts - List the artifacts produced by a given build.
-     *
-    **/
-    getProjectUsernameProjectBuildNumArtifacts(req: operations.GetProjectUsernameProjectBuildNumArtifactsRequest, config?: AxiosRequestConfig): Promise<operations.GetProjectUsernameProjectBuildNumArtifactsResponse>;
-    /**
-     * getProjectUsernameProjectBuildNumTests - Provides test metadata for a build
-     * Note: [Learn how to set up your builds to collect test metadata](https://circleci.com/docs/test-metadata/)
-     *
-    **/
-    getProjectUsernameProjectBuildNumTests(req: operations.GetProjectUsernameProjectBuildNumTestsRequest, config?: AxiosRequestConfig): Promise<operations.GetProjectUsernameProjectBuildNumTestsResponse>;
-    /**
      * getProjectUsernameProjectCheckoutKey - Lists checkout keys.
      *
     **/
@@ -78,6 +61,23 @@ export declare class SDK {
     **/
     getProjectUsernameProjectEnvvarName(req: operations.GetProjectUsernameProjectEnvvarNameRequest, config?: AxiosRequestConfig): Promise<operations.GetProjectUsernameProjectEnvvarNameResponse>;
     /**
+     * getProjectUsernameProjectBuildNum - Full details for a single build. The response includes all of the fields from the build summary.
+     * This is also the payload for the [notification webhooks](/docs/configuration/#notify), in which case this object is the value to a key named 'payload'.
+     *
+    **/
+    getProjectUsernameProjectBuildNum(req: operations.GetProjectUsernameProjectBuildNumRequest, config?: AxiosRequestConfig): Promise<operations.GetProjectUsernameProjectBuildNumResponse>;
+    /**
+     * getProjectUsernameProjectBuildNumArtifacts - List the artifacts produced by a given build.
+     *
+    **/
+    getProjectUsernameProjectBuildNumArtifacts(req: operations.GetProjectUsernameProjectBuildNumArtifactsRequest, config?: AxiosRequestConfig): Promise<operations.GetProjectUsernameProjectBuildNumArtifactsResponse>;
+    /**
+     * getProjectUsernameProjectBuildNumTests - Provides test metadata for a build
+     * Note: [Learn how to set up your builds to collect test metadata](https://circleci.com/docs/test-metadata/)
+     *
+    **/
+    getProjectUsernameProjectBuildNumTests(req: operations.GetProjectUsernameProjectBuildNumTestsRequest, config?: AxiosRequestConfig): Promise<operations.GetProjectUsernameProjectBuildNumTestsResponse>;
+    /**
      * getProjects - List of all the projects you're following on CircleCI, with build information organized by branch.
      *
     **/
@@ -92,16 +92,6 @@ export declare class SDK {
      *
     **/
     postProjectUsernameProject(req: operations.PostProjectUsernameProjectRequest, config?: AxiosRequestConfig): Promise<operations.PostProjectUsernameProjectResponse>;
-    /**
-     * postProjectUsernameProjectBuildNumCancel - Cancels the build, returns a summary of the build.
-     *
-    **/
-    postProjectUsernameProjectBuildNumCancel(req: operations.PostProjectUsernameProjectBuildNumCancelRequest, config?: AxiosRequestConfig): Promise<operations.PostProjectUsernameProjectBuildNumCancelResponse>;
-    /**
-     * postProjectUsernameProjectBuildNumRetry - Retries the build, returns a summary of the new build.
-     *
-    **/
-    postProjectUsernameProjectBuildNumRetry(req: operations.PostProjectUsernameProjectBuildNumRetryRequest, config?: AxiosRequestConfig): Promise<operations.PostProjectUsernameProjectBuildNumRetryResponse>;
     /**
      * postProjectUsernameProjectCheckoutKey - Creates a new checkout key.
      * Only usable with a user API token.
@@ -127,9 +117,18 @@ export declare class SDK {
     **/
     postProjectUsernameProjectTreeBranch(req: operations.PostProjectUsernameProjectTreeBranchRequest, config?: AxiosRequestConfig): Promise<operations.PostProjectUsernameProjectTreeBranchResponse>;
     /**
+     * postProjectUsernameProjectBuildNumCancel - Cancels the build, returns a summary of the build.
+     *
+    **/
+    postProjectUsernameProjectBuildNumCancel(req: operations.PostProjectUsernameProjectBuildNumCancelRequest, config?: AxiosRequestConfig): Promise<operations.PostProjectUsernameProjectBuildNumCancelResponse>;
+    /**
+     * postProjectUsernameProjectBuildNumRetry - Retries the build, returns a summary of the new build.
+     *
+    **/
+    postProjectUsernameProjectBuildNumRetry(req: operations.PostProjectUsernameProjectBuildNumRetryRequest, config?: AxiosRequestConfig): Promise<operations.PostProjectUsernameProjectBuildNumRetryResponse>;
+    /**
      * postUserHerokuKey - Adds your Heroku API key to CircleCI, takes apikey as form param name.
      *
     **/
     postUserHerokuKey(config?: AxiosRequestConfig): Promise<operations.PostUserHerokuKeyResponse>;
 }
-export {};

@@ -4,7 +4,7 @@ export declare class PutFloatingIpsIdPathParams extends SpeakeasyBase {
 }
 export declare class PutFloatingIpsIdUpdateFloatingIpRequest extends SpeakeasyBase {
     description?: string;
-    labels?: Map<string, any>;
+    labels?: Record<string, any>;
     name?: string;
 }
 export declare class PutFloatingIpsId200ApplicationJsonFloatingIpDnsPtr extends SpeakeasyBase {
@@ -42,7 +42,7 @@ export declare class PutFloatingIpsId200ApplicationJsonFloatingIp extends Speake
     homeLocation: PutFloatingIpsId200ApplicationJsonFloatingIpHomeLocation;
     id: number;
     ip: string;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     protection: PutFloatingIpsId200ApplicationJsonFloatingIpProtection;
     server: number;
@@ -57,6 +57,6 @@ export declare class PutFloatingIpsIdRequest extends SpeakeasyBase {
 }
 export declare class PutFloatingIpsIdResponse extends SpeakeasyBase {
     contentType: string;
-    putFloatingIpsId200ApplicationJsonObject?: PutFloatingIpsId200ApplicationJson;
     statusCode: number;
+    putFloatingIpsId200ApplicationJSONObject?: PutFloatingIpsId200ApplicationJson;
 }

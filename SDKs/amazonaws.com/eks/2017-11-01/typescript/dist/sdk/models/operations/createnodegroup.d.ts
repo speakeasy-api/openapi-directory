@@ -58,7 +58,7 @@ export declare class CreateNodegroupRequestBody extends SpeakeasyBase {
     clientRequestToken?: string;
     diskSize?: number;
     instanceTypes?: string[];
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     launchTemplate?: CreateNodegroupRequestBodyLaunchTemplate;
     nodeRole: string;
     nodegroupName: string;
@@ -66,7 +66,7 @@ export declare class CreateNodegroupRequestBody extends SpeakeasyBase {
     remoteAccess?: CreateNodegroupRequestBodyRemoteAccess;
     scalingConfig?: CreateNodegroupRequestBodyScalingConfig;
     subnets: string[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     taints?: shared.Taint[];
     updateConfig?: CreateNodegroupRequestBodyUpdateConfig;
     version?: string;

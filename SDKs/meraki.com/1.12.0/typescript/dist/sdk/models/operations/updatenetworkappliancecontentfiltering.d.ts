@@ -19,5 +19,5 @@ export declare class UpdateNetworkApplianceContentFilteringRequest extends Speak
 export declare class UpdateNetworkApplianceContentFilteringResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateNetworkApplianceContentFiltering200ApplicationJsonObject?: Map<string, any>;
+    updateNetworkApplianceContentFiltering200ApplicationJSONObject?: Record<string, any>;
 }

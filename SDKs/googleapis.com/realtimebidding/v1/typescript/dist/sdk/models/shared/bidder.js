@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Bidder = void 0;
+var utils_1 = require("../../../internal/utils");
 // Bidder
 /**
  * Bidder settings.
@@ -33,25 +36,25 @@ var Bidder = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bypassNonguaranteedDealsPretargeting" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bypassNonguaranteedDealsPretargeting" }),
         __metadata("design:type", Boolean)
     ], Bidder.prototype, "bypassNonguaranteedDealsPretargeting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cookieMatchingNetworkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cookieMatchingNetworkId" }),
         __metadata("design:type", String)
     ], Bidder.prototype, "cookieMatchingNetworkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cookieMatchingUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cookieMatchingUrl" }),
         __metadata("design:type", String)
     ], Bidder.prototype, "cookieMatchingUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dealsBillingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dealsBillingId" }),
         __metadata("design:type", String)
     ], Bidder.prototype, "dealsBillingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Bidder.prototype, "name", void 0);
     return Bidder;
-}(SpeakeasyBase));
-export { Bidder };
+}(utils_1.SpeakeasyBase));
+exports.Bidder = Bidder;

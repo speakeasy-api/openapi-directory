@@ -11,5 +11,5 @@ export class KeysAndAttributes extends SpeakeasyBase {
   consistentRead?: boolean;
 
   @SpeakeasyMetadata({ data: "json, name=Keys", elemType: Key })
-  keys: Key[];
+  keys?: Key[];
 }

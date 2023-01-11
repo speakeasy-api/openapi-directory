@@ -44,5 +44,5 @@ export declare class ListAndSearchMediaItemsRequest extends SpeakeasyBase {
 export declare class ListAndSearchMediaItemsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listAndSearchMediaItems200ApplicationJsonObject?: ListAndSearchMediaItems200ApplicationJson;
+    listAndSearchMediaItems200ApplicationJSONObject?: ListAndSearchMediaItems200ApplicationJson;
 }

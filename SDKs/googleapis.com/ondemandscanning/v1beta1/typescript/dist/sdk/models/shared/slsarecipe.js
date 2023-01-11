@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SlsaRecipe = void 0;
+var utils_1 = require("../../../internal/utils");
 // SlsaRecipe
 /**
  * Steps taken to build the artifact. For a TaskRun, typically each container corresponds to one step in the recipe.
@@ -33,25 +36,25 @@ var SlsaRecipe = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arguments" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arguments" }),
+        __metadata("design:type", Object)
     ], SlsaRecipe.prototype, "arguments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=definedInMaterial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=definedInMaterial" }),
         __metadata("design:type", String)
     ], SlsaRecipe.prototype, "definedInMaterial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entryPoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entryPoint" }),
         __metadata("design:type", String)
     ], SlsaRecipe.prototype, "entryPoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=environment" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=environment" }),
+        __metadata("design:type", Object)
     ], SlsaRecipe.prototype, "environment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], SlsaRecipe.prototype, "type", void 0);
     return SlsaRecipe;
-}(SpeakeasyBase));
-export { SlsaRecipe };
+}(utils_1.SpeakeasyBase));
+exports.SlsaRecipe = SlsaRecipe;

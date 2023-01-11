@@ -9,14 +9,14 @@ import { GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateSelectionChoic
 export declare class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseResponse extends SpeakeasyBase {
     createField?: GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateFieldResponse;
     createSelectionChoice?: GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseCreateSelectionChoiceResponse;
-    deleteField?: Map<string, any>;
-    deleteSelectionChoice?: Map<string, any>;
-    disableField?: Map<string, any>;
-    disableSelectionChoice?: Map<string, any>;
-    enableField?: Map<string, any>;
-    enableSelectionChoice?: Map<string, any>;
+    deleteField?: Record<string, any>;
+    deleteSelectionChoice?: Record<string, any>;
+    disableField?: Record<string, any>;
+    disableSelectionChoice?: Record<string, any>;
+    enableField?: Record<string, any>;
+    enableSelectionChoice?: Record<string, any>;
     updateField?: GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateFieldPropertiesResponse;
-    updateFieldType?: Map<string, any>;
-    updateLabel?: Map<string, any>;
+    updateFieldType?: Record<string, any>;
+    updateLabel?: Record<string, any>;
     updateSelectionChoiceProperties?: GoogleAppsDriveLabelsV2betaDeltaUpdateLabelResponseUpdateSelectionChoicePropertiesResponse;
 }

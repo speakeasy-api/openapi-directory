@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Log } from "./log";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LogList = void 0;
+var utils_1 = require("../../../internal/utils");
+var log_1 = require("./log");
 // LogList
 /**
  * Logs List
@@ -34,9 +37,9 @@ var LogList = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logs", elemType: Log }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logs", elemType: log_1.Log }),
         __metadata("design:type", Array)
     ], LogList.prototype, "logs", void 0);
     return LogList;
-}(SpeakeasyBase));
-export { LogList };
+}(utils_1.SpeakeasyBase));
+exports.LogList = LogList;

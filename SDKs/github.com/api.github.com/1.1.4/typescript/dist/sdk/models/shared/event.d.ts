@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { Actor } from "./actor";
 import { IssueComment } from "./issuecomment";
 import { IssueSimple } from "./issuesimple";
+import { Actor } from "./actor";
 export declare class EventPayloadPages extends SpeakeasyBase {
     action?: string;
     htmlUrl?: string;

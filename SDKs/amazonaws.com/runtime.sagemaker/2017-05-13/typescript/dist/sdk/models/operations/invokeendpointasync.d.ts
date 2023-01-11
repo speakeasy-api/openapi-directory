@@ -16,7 +16,7 @@ export declare class InvokeEndpointAsyncHeaders extends SpeakeasyBase {
     xAmznSageMakerCustomAttributes?: string;
     xAmznSageMakerInferenceId?: string;
     xAmznSageMakerInputLocation: string;
-    xAmznSageMakerRequestTtlSeconds?: number;
+    xAmznSageMakerRequestTTLSeconds?: number;
 }
 export declare class InvokeEndpointAsyncRequest extends SpeakeasyBase {
     pathParams: InvokeEndpointAsyncPathParams;

@@ -143,7 +143,7 @@ export class GetSearchMotorcycleActiveResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   motorcycleSearchResponse?: shared.MotorcycleSearchResponse;

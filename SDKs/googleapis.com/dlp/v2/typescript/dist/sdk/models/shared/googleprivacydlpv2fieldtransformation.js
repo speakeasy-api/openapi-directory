@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2RecordCondition } from "./googleprivacydlpv2recordcondition";
-import { GooglePrivacyDlpV2FieldId } from "./googleprivacydlpv2fieldid";
-import { GooglePrivacyDlpV2InfoTypeTransformations } from "./googleprivacydlpv2infotypetransformations";
-import { GooglePrivacyDlpV2PrimitiveTransformation } from "./googleprivacydlpv2primitivetransformation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2FieldTransformation = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2recordcondition_1 = require("./googleprivacydlpv2recordcondition");
+var googleprivacydlpv2fieldid_1 = require("./googleprivacydlpv2fieldid");
+var googleprivacydlpv2infotypetransformations_1 = require("./googleprivacydlpv2infotypetransformations");
+var googleprivacydlpv2primitivetransformation_1 = require("./googleprivacydlpv2primitivetransformation");
 // GooglePrivacyDlpV2FieldTransformation
 /**
  * The transformation to apply to the field.
@@ -37,21 +40,21 @@ var GooglePrivacyDlpV2FieldTransformation = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=condition" }),
-        __metadata("design:type", GooglePrivacyDlpV2RecordCondition)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=condition" }),
+        __metadata("design:type", googleprivacydlpv2recordcondition_1.GooglePrivacyDlpV2RecordCondition)
     ], GooglePrivacyDlpV2FieldTransformation.prototype, "condition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fields", elemType: GooglePrivacyDlpV2FieldId }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fields", elemType: googleprivacydlpv2fieldid_1.GooglePrivacyDlpV2FieldId }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2FieldTransformation.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=infoTypeTransformations" }),
-        __metadata("design:type", GooglePrivacyDlpV2InfoTypeTransformations)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=infoTypeTransformations" }),
+        __metadata("design:type", googleprivacydlpv2infotypetransformations_1.GooglePrivacyDlpV2InfoTypeTransformations)
     ], GooglePrivacyDlpV2FieldTransformation.prototype, "infoTypeTransformations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primitiveTransformation" }),
-        __metadata("design:type", GooglePrivacyDlpV2PrimitiveTransformation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primitiveTransformation" }),
+        __metadata("design:type", googleprivacydlpv2primitivetransformation_1.GooglePrivacyDlpV2PrimitiveTransformation)
     ], GooglePrivacyDlpV2FieldTransformation.prototype, "primitiveTransformation", void 0);
     return GooglePrivacyDlpV2FieldTransformation;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2FieldTransformation };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2FieldTransformation = GooglePrivacyDlpV2FieldTransformation;

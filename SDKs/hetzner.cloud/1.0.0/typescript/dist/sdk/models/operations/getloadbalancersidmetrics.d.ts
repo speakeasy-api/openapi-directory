@@ -21,7 +21,7 @@ export declare class GetLoadBalancersIdMetrics200ApplicationJsonMetrics extends 
     end: string;
     start: string;
     step: number;
-    timeSeries: Map<string, GetLoadBalancersIdMetrics200ApplicationJsonMetricsTimeSeries>;
+    timeSeries: Record<string, GetLoadBalancersIdMetrics200ApplicationJsonMetricsTimeSeries>;
 }
 export declare class GetLoadBalancersIdMetrics200ApplicationJson extends SpeakeasyBase {
     metrics: GetLoadBalancersIdMetrics200ApplicationJsonMetrics;
@@ -32,6 +32,6 @@ export declare class GetLoadBalancersIdMetricsRequest extends SpeakeasyBase {
 }
 export declare class GetLoadBalancersIdMetricsResponse extends SpeakeasyBase {
     contentType: string;
-    getLoadBalancersIdMetrics200ApplicationJsonObject?: GetLoadBalancersIdMetrics200ApplicationJson;
     statusCode: number;
+    getLoadBalancersIdMetrics200ApplicationJSONObject?: GetLoadBalancersIdMetrics200ApplicationJson;
 }

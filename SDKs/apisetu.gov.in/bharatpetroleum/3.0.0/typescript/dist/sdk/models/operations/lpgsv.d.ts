@@ -106,11 +106,11 @@ export declare class LpgsvRequest extends SpeakeasyBase {
 export declare class LpgsvResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    lpgsv400ApplicationJsonObject?: Lpgsv400ApplicationJson;
-    lpgsv401ApplicationJsonObject?: Lpgsv401ApplicationJson;
-    lpgsv404ApplicationJsonObject?: Lpgsv404ApplicationJson;
-    lpgsv500ApplicationJsonObject?: Lpgsv500ApplicationJson;
-    lpgsv502ApplicationJsonObject?: Lpgsv502ApplicationJson;
-    lpgsv503ApplicationJsonObject?: Lpgsv503ApplicationJson;
-    lpgsv504ApplicationJsonObject?: Lpgsv504ApplicationJson;
+    lpgsv400ApplicationJSONObject?: Lpgsv400ApplicationJson;
+    lpgsv401ApplicationJSONObject?: Lpgsv401ApplicationJson;
+    lpgsv404ApplicationJSONObject?: Lpgsv404ApplicationJson;
+    lpgsv500ApplicationJSONObject?: Lpgsv500ApplicationJson;
+    lpgsv502ApplicationJSONObject?: Lpgsv502ApplicationJson;
+    lpgsv503ApplicationJSONObject?: Lpgsv503ApplicationJson;
+    lpgsv504ApplicationJSONObject?: Lpgsv504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,59 +23,61 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ChildPolicyEnum } from "./childpolicyenum";
-import { TaskList } from "./tasklist";
-import { WorkflowType } from "./workflowtype";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StartWorkflowExecutionInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var childpolicyenum_1 = require("./childpolicyenum");
+var tasklist_1 = require("./tasklist");
+var workflowtype_1 = require("./workflowtype");
 var StartWorkflowExecutionInput = /** @class */ (function (_super) {
     __extends(StartWorkflowExecutionInput, _super);
     function StartWorkflowExecutionInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=childPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=childPolicy" }),
         __metadata("design:type", String)
     ], StartWorkflowExecutionInput.prototype, "childPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], StartWorkflowExecutionInput.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionStartToCloseTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionStartToCloseTimeout" }),
         __metadata("design:type", String)
     ], StartWorkflowExecutionInput.prototype, "executionStartToCloseTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=input" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=input" }),
         __metadata("design:type", String)
     ], StartWorkflowExecutionInput.prototype, "input", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lambdaRole" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lambdaRole" }),
         __metadata("design:type", String)
     ], StartWorkflowExecutionInput.prototype, "lambdaRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tagList" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tagList" }),
         __metadata("design:type", Array)
     ], StartWorkflowExecutionInput.prototype, "tagList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskList" }),
-        __metadata("design:type", TaskList)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskList" }),
+        __metadata("design:type", tasklist_1.TaskList)
     ], StartWorkflowExecutionInput.prototype, "taskList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskPriority" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskPriority" }),
         __metadata("design:type", String)
     ], StartWorkflowExecutionInput.prototype, "taskPriority", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskStartToCloseTimeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskStartToCloseTimeout" }),
         __metadata("design:type", String)
     ], StartWorkflowExecutionInput.prototype, "taskStartToCloseTimeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workflowId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workflowId" }),
         __metadata("design:type", String)
     ], StartWorkflowExecutionInput.prototype, "workflowId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workflowType" }),
-        __metadata("design:type", WorkflowType)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workflowType" }),
+        __metadata("design:type", workflowtype_1.WorkflowType)
     ], StartWorkflowExecutionInput.prototype, "workflowType", void 0);
     return StartWorkflowExecutionInput;
-}(SpeakeasyBase));
-export { StartWorkflowExecutionInput };
+}(utils_1.SpeakeasyBase));
+exports.StartWorkflowExecutionInput = StartWorkflowExecutionInput;

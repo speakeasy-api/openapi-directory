@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FileObject } from "./fileobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Files = void 0;
+var utils_1 = require("../../../internal/utils");
+var fileobject_1 = require("./fileobject");
 var Files = /** @class */ (function (_super) {
     __extends(Files, _super);
     function Files() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Items", elemType: FileObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Items", elemType: fileobject_1.FileObject }),
         __metadata("design:type", Array)
     ], Files.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Page" }),
         __metadata("design:type", Number)
     ], Files.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PerPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PerPage" }),
         __metadata("design:type", Number)
     ], Files.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TotalCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TotalCount" }),
         __metadata("design:type", Number)
     ], Files.prototype, "totalCount", void 0);
     return Files;
-}(SpeakeasyBase));
-export { Files };
+}(utils_1.SpeakeasyBase));
+exports.Files = Files;

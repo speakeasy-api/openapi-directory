@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2Schedule } from "./googleprivacydlpv2schedule";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2Trigger = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2schedule_1 = require("./googleprivacydlpv2schedule");
 // GooglePrivacyDlpV2Trigger
 /**
  * What event needs to occur for a new job to be started.
@@ -34,13 +37,13 @@ var GooglePrivacyDlpV2Trigger = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manual" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manual" }),
+        __metadata("design:type", Object)
     ], GooglePrivacyDlpV2Trigger.prototype, "manual", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schedule" }),
-        __metadata("design:type", GooglePrivacyDlpV2Schedule)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schedule" }),
+        __metadata("design:type", googleprivacydlpv2schedule_1.GooglePrivacyDlpV2Schedule)
     ], GooglePrivacyDlpV2Trigger.prototype, "schedule", void 0);
     return GooglePrivacyDlpV2Trigger;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2Trigger };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2Trigger = GooglePrivacyDlpV2Trigger;

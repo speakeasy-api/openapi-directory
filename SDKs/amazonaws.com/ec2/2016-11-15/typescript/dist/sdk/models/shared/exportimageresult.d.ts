@@ -1,16 +1,20 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DiskImageFormatEnum } from "./diskimageformatenum";
-import { ExportTaskS3Location } from "./exporttasks3location";
-import { Tag } from "./tag";
+/**
+ * Information about the destination Amazon S3 bucket.
+**/
+export declare class ExportImageResultS3ExportLocation extends SpeakeasyBase {
+    s3Bucket?: Record<string, any>;
+    s3Prefix?: Record<string, any>;
+}
 export declare class ExportImageResult extends SpeakeasyBase {
-    description?: string;
-    diskImageFormat?: DiskImageFormatEnum;
-    exportImageTaskId?: string;
-    imageId?: string;
-    progress?: string;
-    roleName?: string;
-    s3ExportLocation?: ExportTaskS3Location;
-    status?: string;
-    statusMessage?: string;
-    tags?: Tag[];
+    description?: Record<string, any>;
+    diskImageFormat?: Record<string, any>;
+    exportImageTaskId?: Record<string, any>;
+    imageId?: Record<string, any>;
+    progress?: Record<string, any>;
+    roleName?: Record<string, any>;
+    s3ExportLocation?: ExportImageResultS3ExportLocation;
+    status?: Record<string, any>;
+    statusMessage?: Record<string, any>;
+    tags?: Record<string, any>;
 }

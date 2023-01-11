@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Hit } from "./hit";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateHitResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var hit_1 = require("./hit");
 var CreateHitResponse = /** @class */ (function (_super) {
     __extends(CreateHitResponse, _super);
     function CreateHitResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HIT" }),
-        __metadata("design:type", Hit)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HIT" }),
+        __metadata("design:type", hit_1.Hit)
     ], CreateHitResponse.prototype, "hit", void 0);
     return CreateHitResponse;
-}(SpeakeasyBase));
-export { CreateHitResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateHitResponse = CreateHitResponse;

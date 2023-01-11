@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Activity } from "./activity";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserActivitySession = void 0;
+var utils_1 = require("../../../internal/utils");
+var activity_1 = require("./activity");
 // UserActivitySession
 /**
  * This represents a user session performed on a specific device at a certain time over a period of time.
@@ -34,29 +37,29 @@ var UserActivitySession = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activities", elemType: Activity }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activities", elemType: activity_1.Activity }),
         __metadata("design:type", Array)
     ], UserActivitySession.prototype, "activities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSource" }),
         __metadata("design:type", String)
     ], UserActivitySession.prototype, "dataSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceCategory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceCategory" }),
         __metadata("design:type", String)
     ], UserActivitySession.prototype, "deviceCategory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
         __metadata("design:type", String)
     ], UserActivitySession.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessionDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessionDate" }),
         __metadata("design:type", String)
     ], UserActivitySession.prototype, "sessionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessionId" }),
         __metadata("design:type", String)
     ], UserActivitySession.prototype, "sessionId", void 0);
     return UserActivitySession;
-}(SpeakeasyBase));
-export { UserActivitySession };
+}(utils_1.SpeakeasyBase));
+exports.UserActivitySession = UserActivitySession;

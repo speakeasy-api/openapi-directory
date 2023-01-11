@@ -16,7 +16,7 @@ export declare class GetDistrictTeamsRequest extends SpeakeasyBase {
 }
 export declare class GetDistrictTeamsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     teams?: shared.Team[];
 }

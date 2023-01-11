@@ -17,5 +17,5 @@ export declare class GenresListRequest extends SpeakeasyBase {
 export declare class GenresListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    genresList200ApplicationJsonObject?: GenresList200ApplicationJson;
+    genresList200ApplicationJSONObject?: GenresList200ApplicationJson;
 }

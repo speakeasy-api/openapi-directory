@@ -19,7 +19,7 @@ export declare class DeleteTaskRequest extends SpeakeasyBase {
 }
 export declare class DeleteTaskResponse extends SpeakeasyBase {
     contentType: string;
-    deleteTaskResponse?: Map<string, any>;
+    deleteTaskResponse?: Record<string, any>;
     internalException?: any;
     invalidRequestException?: any;
     statusCode: number;

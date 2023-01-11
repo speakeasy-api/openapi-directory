@@ -6,11 +6,12 @@ import { Tags } from "./tags";
 import { Transactions } from "./transactions";
 import { UtilityEndpoints } from "./utilityendpoints";
 import { Webhooks } from "./webhooks";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://api.up.com.au/api/v1"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     accounts: Accounts;
     categories: Categories;
@@ -20,11 +21,9 @@ export declare class SDK {
     webhooks: Webhooks;
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
 }
-export {};

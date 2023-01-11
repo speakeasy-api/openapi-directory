@@ -16,7 +16,7 @@ export class PostPortfolioAnalysisBeta200ApplicationJson extends SpeakeasyBase {
 
 export class PostPortfolioAnalysisBetaRequest extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -25,8 +25,8 @@ export class PostPortfolioAnalysisBetaResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  postPortfolioAnalysisBeta200ApplicationJsonObject?: PostPortfolioAnalysisBeta200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  postPortfolioAnalysisBeta200ApplicationJSONObject?: PostPortfolioAnalysisBeta200ApplicationJson;
 }

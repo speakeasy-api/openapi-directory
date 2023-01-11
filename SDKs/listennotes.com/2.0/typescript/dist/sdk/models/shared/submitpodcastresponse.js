@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PodcastMinimum } from "./podcastminimum";
-export var SubmitPodcastResponseStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubmitPodcastResponse = exports.SubmitPodcastResponseStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var podcastminimum_1 = require("./podcastminimum");
+var SubmitPodcastResponseStatusEnum;
 (function (SubmitPodcastResponseStatusEnum) {
     SubmitPodcastResponseStatusEnum["Found"] = "found";
     SubmitPodcastResponseStatusEnum["InReview"] = "in review";
-})(SubmitPodcastResponseStatusEnum || (SubmitPodcastResponseStatusEnum = {}));
+})(SubmitPodcastResponseStatusEnum = exports.SubmitPodcastResponseStatusEnum || (exports.SubmitPodcastResponseStatusEnum = {}));
 var SubmitPodcastResponse = /** @class */ (function (_super) {
     __extends(SubmitPodcastResponse, _super);
     function SubmitPodcastResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=podcast" }),
-        __metadata("design:type", PodcastMinimum)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=podcast" }),
+        __metadata("design:type", podcastminimum_1.PodcastMinimum)
     ], SubmitPodcastResponse.prototype, "podcast", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], SubmitPodcastResponse.prototype, "status", void 0);
     return SubmitPodcastResponse;
-}(SpeakeasyBase));
-export { SubmitPodcastResponse };
+}(utils_1.SpeakeasyBase));
+exports.SubmitPodcastResponse = SubmitPodcastResponse;

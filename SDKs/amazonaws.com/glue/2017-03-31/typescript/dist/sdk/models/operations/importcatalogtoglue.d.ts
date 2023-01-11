@@ -19,7 +19,7 @@ export declare class ImportCatalogToGlueRequest extends SpeakeasyBase {
 }
 export declare class ImportCatalogToGlueResponse extends SpeakeasyBase {
     contentType: string;
-    importCatalogToGlueResponse?: Map<string, any>;
+    importCatalogToGlueResponse?: Record<string, any>;
     internalServiceException?: any;
     operationTimeoutException?: any;
     statusCode: number;

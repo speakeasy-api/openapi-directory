@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpRequestMethodConditionConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // HttpRequestMethodConditionConfig
 /**
  * <p>Information about an HTTP method condition.</p> <p>HTTP defines a set of request methods, also referred to as HTTP verbs. For more information, see the <a href="https://www.iana.org/assignments/http-methods/http-methods.xhtml">HTTP Method Registry</a>. You can also define custom HTTP methods.</p>
@@ -33,9 +36,9 @@ var HttpRequestMethodConditionConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], HttpRequestMethodConditionConfig.prototype, "values", void 0);
     return HttpRequestMethodConditionConfig;
-}(SpeakeasyBase));
-export { HttpRequestMethodConditionConfig };
+}(utils_1.SpeakeasyBase));
+exports.HttpRequestMethodConditionConfig = HttpRequestMethodConditionConfig;

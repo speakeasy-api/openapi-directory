@@ -20,7 +20,7 @@ export declare class AppsCreateContentAttachmentRequest extends SpeakeasyBase {
 export declare class AppsCreateContentAttachmentResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    appsCreateContentAttachment415ApplicationJsonObject?: AppsCreateContentAttachment415ApplicationJson;
+    appsCreateContentAttachment415ApplicationJSONObject?: AppsCreateContentAttachment415ApplicationJson;
     basicError?: shared.BasicError;
     contentReferenceAttachment?: shared.ContentReferenceAttachment;
     validationError?: shared.ValidationError;

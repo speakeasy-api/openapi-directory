@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class FileshareParam extends SpeakeasyBase {
-    fsIops: number;
+    fsIOPS: number;
     fsName: string;
     fsSize: number;
 }

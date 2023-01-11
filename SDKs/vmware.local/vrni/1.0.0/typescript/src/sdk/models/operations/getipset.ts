@@ -38,7 +38,7 @@ export class GetIpSetResponse extends SpeakeasyBase {
   apiError?: shared.ApiError;
 
   @SpeakeasyMetadata()
-  baseIpSet?: shared.BaseIpSet;
+  baseIPSet?: shared.BaseIpSet;
 
   @SpeakeasyMetadata()
   contentType: string;

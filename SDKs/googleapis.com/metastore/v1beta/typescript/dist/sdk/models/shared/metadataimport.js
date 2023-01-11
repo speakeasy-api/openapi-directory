@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DatabaseDump } from "./databasedump";
-export var MetadataImportStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetadataImportInput = exports.MetadataImport = exports.MetadataImportStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var databasedump_1 = require("./databasedump");
+var MetadataImportStateEnum;
 (function (MetadataImportStateEnum) {
     MetadataImportStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     MetadataImportStateEnum["Running"] = "RUNNING";
     MetadataImportStateEnum["Succeeded"] = "SUCCEEDED";
     MetadataImportStateEnum["Updating"] = "UPDATING";
     MetadataImportStateEnum["Failed"] = "FAILED";
-})(MetadataImportStateEnum || (MetadataImportStateEnum = {}));
-// MetadataImportInput
-/**
- * A metastore resource that imports metadata.
-**/
-var MetadataImportInput = /** @class */ (function (_super) {
-    __extends(MetadataImportInput, _super);
-    function MetadataImportInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=databaseDump" }),
-        __metadata("design:type", DatabaseDump)
-    ], MetadataImportInput.prototype, "databaseDump", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], MetadataImportInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], MetadataImportInput.prototype, "name", void 0);
-    return MetadataImportInput;
-}(SpeakeasyBase));
-export { MetadataImportInput };
+})(MetadataImportStateEnum = exports.MetadataImportStateEnum || (exports.MetadataImportStateEnum = {}));
 // MetadataImport
 /**
  * A metastore resource that imports metadata.
@@ -66,33 +45,57 @@ var MetadataImport = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], MetadataImport.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=databaseDump" }),
-        __metadata("design:type", DatabaseDump)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=databaseDump" }),
+        __metadata("design:type", databasedump_1.DatabaseDump)
     ], MetadataImport.prototype, "databaseDump", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], MetadataImport.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endTime" }),
         __metadata("design:type", String)
     ], MetadataImport.prototype, "endTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], MetadataImport.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], MetadataImport.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], MetadataImport.prototype, "updateTime", void 0);
     return MetadataImport;
-}(SpeakeasyBase));
-export { MetadataImport };
+}(utils_1.SpeakeasyBase));
+exports.MetadataImport = MetadataImport;
+// MetadataImportInput
+/**
+ * A metastore resource that imports metadata.
+**/
+var MetadataImportInput = /** @class */ (function (_super) {
+    __extends(MetadataImportInput, _super);
+    function MetadataImportInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=databaseDump" }),
+        __metadata("design:type", databasedump_1.DatabaseDump)
+    ], MetadataImportInput.prototype, "databaseDump", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], MetadataImportInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], MetadataImportInput.prototype, "name", void 0);
+    return MetadataImportInput;
+}(utils_1.SpeakeasyBase));
+exports.MetadataImportInput = MetadataImportInput;

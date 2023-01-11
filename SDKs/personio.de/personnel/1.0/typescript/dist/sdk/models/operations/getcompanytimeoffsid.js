@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCompanyTimeOffsIdResponse = exports.GetCompanyTimeOffsIdRequest = exports.GetCompanyTimeOffsIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetCompanyTimeOffsIdPathParams = /** @class */ (function (_super) {
     __extends(GetCompanyTimeOffsIdPathParams, _super);
     function GetCompanyTimeOffsIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetCompanyTimeOffsIdPathParams.prototype, "id", void 0);
     return GetCompanyTimeOffsIdPathParams;
-}(SpeakeasyBase));
-export { GetCompanyTimeOffsIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCompanyTimeOffsIdPathParams = GetCompanyTimeOffsIdPathParams;
 var GetCompanyTimeOffsIdRequest = /** @class */ (function (_super) {
     __extends(GetCompanyTimeOffsIdRequest, _super);
     function GetCompanyTimeOffsIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCompanyTimeOffsIdPathParams)
     ], GetCompanyTimeOffsIdRequest.prototype, "pathParams", void 0);
     return GetCompanyTimeOffsIdRequest;
-}(SpeakeasyBase));
-export { GetCompanyTimeOffsIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCompanyTimeOffsIdRequest = GetCompanyTimeOffsIdRequest;
 var GetCompanyTimeOffsIdResponse = /** @class */ (function (_super) {
     __extends(GetCompanyTimeOffsIdResponse, _super);
     function GetCompanyTimeOffsIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetCompanyTimeOffsIdResponse.prototype, "absencePeriodResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCompanyTimeOffsIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCompanyTimeOffsIdResponse.prototype, "statusCode", void 0);
     return GetCompanyTimeOffsIdResponse;
-}(SpeakeasyBase));
-export { GetCompanyTimeOffsIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCompanyTimeOffsIdResponse = GetCompanyTimeOffsIdResponse;

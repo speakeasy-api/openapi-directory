@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { MybusinessaccountmanagementAccountsCreateRequest, MybusinessaccountmanagementAccountsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,43 +28,44 @@ const sdk = new SDK();
     
 const req: MybusinessaccountmanagementAccountsCreateRequest = {
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "animi",
-    alt: "proto",
-    callback: "adipisci",
-    fields: "nam",
-    key: "hic",
-    oauthToken: "quia",
-    prettyPrint: false,
-    quotaUser: "dolor",
-    uploadType: "temporibus",
-    uploadProtocol: "quaerat",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
+    prettyPrint: true,
+    quotaUser: "fugit",
+    uploadType: "et",
+    uploadProtocol: "nihil",
   },
   request: {
-    accountName: "quo",
-    name: "suscipit",
+    accountName: "rerum",
+    name: "dicta",
     organizationInfo: {
       address: {
         addressLines: [
-          "autem",
+          "voluptatum",
         ],
-        administrativeArea: "autem",
+        administrativeArea: "et",
         languageCode: "ut",
-        locality: "quis",
-        organization: "alias",
-        postalCode: "enim",
+        locality: "dolorem",
+        organization: "et",
+        postalCode: "voluptate",
         recipients: [
-          "et",
-          "temporibus",
+          "vitae",
+          "totam",
+          "dolores",
         ],
-        regionCode: "fugit",
-        revision: 347043070683153108,
-        sortingCode: "officia",
-        sublocality: "illo",
+        regionCode: "illum",
+        revision: 6392442863481646880,
+        sortingCode: "vel",
+        sublocality: "odio",
       },
     },
-    primaryOwner: "consequuntur",
-    type: "PERSONAL",
+    primaryOwner: "dolore",
+    type: "LOCATION_GROUP",
   },
 };
 

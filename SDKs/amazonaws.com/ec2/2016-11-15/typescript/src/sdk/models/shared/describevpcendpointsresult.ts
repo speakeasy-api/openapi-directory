@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { VpcEndpoint } from "./vpcendpoint";
 
 
 
@@ -9,8 +8,8 @@ import { VpcEndpoint } from "./vpcendpoint";
 **/
 export class DescribeVpcEndpointsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: VpcEndpoint })
-  vpcEndpoints?: VpcEndpoint[];
+  @SpeakeasyMetadata()
+  vpcEndpoints?: Record<string, any>;
 }

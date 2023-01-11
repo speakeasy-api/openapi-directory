@@ -37,6 +37,6 @@ export class GetAllDirectDepositResponse extends SpeakeasyBase {
   @SpeakeasyMetadata({ elemType: shared.DirectDeposit })
   directDeposits?: shared.DirectDeposit[];
 
-  @SpeakeasyMetadata({ elemType: shared.Error })
-  errors?: shared.Error[];
+  @SpeakeasyMetadata({ elemType: shared.ErrorT })
+  errors?: shared.ErrorT[];
 }

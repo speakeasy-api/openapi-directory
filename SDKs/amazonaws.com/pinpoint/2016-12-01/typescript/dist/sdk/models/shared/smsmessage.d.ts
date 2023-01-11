@@ -11,6 +11,6 @@ export declare class SmsMessage extends SpeakeasyBase {
     messageType?: MessageTypeEnum;
     originationNumber?: string;
     senderId?: string;
-    substitutions?: Map<string, string[]>;
+    substitutions?: Record<string, string[]>;
     templateId?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Origin } from "./origin";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Origins = void 0;
+var utils_1 = require("../../../internal/utils");
+var originlist_1 = require("./originlist");
 // Origins
 /**
  * Contains information about the origins for this distribution.
@@ -34,13 +37,13 @@ var Origins = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ elemType: Origin }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: originlist_1.OriginList }),
         __metadata("design:type", Array)
     ], Origins.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], Origins.prototype, "quantity", void 0);
     return Origins;
-}(SpeakeasyBase));
-export { Origins };
+}(utils_1.SpeakeasyBase));
+exports.Origins = Origins;

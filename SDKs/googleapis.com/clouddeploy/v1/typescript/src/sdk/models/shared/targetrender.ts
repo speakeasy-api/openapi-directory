@@ -15,10 +15,6 @@ export enum TargetRenderRenderingStateEnum {
 }
 
 
-// TargetRender
-/** 
- * Details of rendering for a single target.
-**/
 export class TargetRender extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=failureCause" })
   failureCause?: TargetRenderFailureCauseEnum;

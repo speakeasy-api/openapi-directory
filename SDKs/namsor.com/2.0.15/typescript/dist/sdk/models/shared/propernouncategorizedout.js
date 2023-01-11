@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProperNounCategorizedOut = void 0;
+var utils_1 = require("../../../internal/utils");
 // ProperNounCategorizedOut
 /**
  * Classified typed proper names
@@ -33,29 +36,29 @@ var ProperNounCategorizedOut = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commonType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commonType" }),
         __metadata("design:type", String)
     ], ProperNounCategorizedOut.prototype, "commonType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commonTypeAlt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commonTypeAlt" }),
         __metadata("design:type", String)
     ], ProperNounCategorizedOut.prototype, "commonTypeAlt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ProperNounCategorizedOut.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ProperNounCategorizedOut.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=score" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=score" }),
         __metadata("design:type", Number)
     ], ProperNounCategorizedOut.prototype, "score", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=script" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=script" }),
         __metadata("design:type", String)
     ], ProperNounCategorizedOut.prototype, "script", void 0);
     return ProperNounCategorizedOut;
-}(SpeakeasyBase));
-export { ProperNounCategorizedOut };
+}(utils_1.SpeakeasyBase));
+exports.ProperNounCategorizedOut = ProperNounCategorizedOut;

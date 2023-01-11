@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RouteTable } from "./routetable";
 
 
 
@@ -9,8 +8,8 @@ import { RouteTable } from "./routetable";
 **/
 export class DescribeRouteTablesResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: RouteTable })
-  routeTables?: RouteTable[];
+  @SpeakeasyMetadata()
+  routeTables?: Record<string, any>;
 }

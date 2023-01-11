@@ -16,5 +16,5 @@ export declare class DeleteTeamsUsernameProjectsProjectKeyRequest extends Speake
 export declare class DeleteTeamsUsernameProjectsProjectKeyResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

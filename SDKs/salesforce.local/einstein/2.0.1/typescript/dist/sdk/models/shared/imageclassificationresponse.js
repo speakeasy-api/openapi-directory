@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LabelResult } from "./labelresult";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageClassificationResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var labelresult_1 = require("./labelresult");
 var ImageClassificationResponse = /** @class */ (function (_super) {
     __extends(ImageClassificationResponse, _super);
     function ImageClassificationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object" }),
         __metadata("design:type", String)
     ], ImageClassificationResponse.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=probabilities", elemType: LabelResult }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=probabilities", elemType: labelresult_1.LabelResult }),
         __metadata("design:type", Array)
     ], ImageClassificationResponse.prototype, "probabilities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleId" }),
         __metadata("design:type", String)
     ], ImageClassificationResponse.prototype, "sampleId", void 0);
     return ImageClassificationResponse;
-}(SpeakeasyBase));
-export { ImageClassificationResponse };
+}(utils_1.SpeakeasyBase));
+exports.ImageClassificationResponse = ImageClassificationResponse;

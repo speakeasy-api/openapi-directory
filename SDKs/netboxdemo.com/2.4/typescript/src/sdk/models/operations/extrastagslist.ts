@@ -50,5 +50,5 @@ export class ExtrasTagsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  extrasTagsList200ApplicationJsonObject?: ExtrasTagsList200ApplicationJson;
+  extrasTagsList200ApplicationJSONObject?: ExtrasTagsList200ApplicationJson;
 }

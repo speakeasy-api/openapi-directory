@@ -15,7 +15,7 @@ export enum GoogleCloudOrgpolicyV2ConstraintConstraintDefaultEnum {
 **/
 export class GoogleCloudOrgpolicyV2Constraint extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=booleanConstraint" })
-  booleanConstraint?: Map<string, any>;
+  booleanConstraint?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=constraintDefault" })
   constraintDefault?: GoogleCloudOrgpolicyV2ConstraintConstraintDefaultEnum;

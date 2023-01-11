@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BackupPolicyEnum } from "./backuppolicyenum";
-import { BackupRetentionPolicy } from "./backupretentionpolicy";
-import { Certificates } from "./certificates";
-import { Hsm } from "./hsm";
-import { ClusterStateEnum } from "./clusterstateenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Cluster = void 0;
+var utils_1 = require("../../../internal/utils");
+var backuppolicyenum_1 = require("./backuppolicyenum");
+var backupretentionpolicy_1 = require("./backupretentionpolicy");
+var certificates_1 = require("./certificates");
+var hsm_1 = require("./hsm");
+var clusterstateenum_1 = require("./clusterstateenum");
+var tag_1 = require("./tag");
 // Cluster
 /**
  * Contains information about an AWS CloudHSM cluster.
@@ -39,65 +42,65 @@ var Cluster = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BackupPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BackupPolicy" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "backupPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BackupRetentionPolicy" }),
-        __metadata("design:type", BackupRetentionPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BackupRetentionPolicy" }),
+        __metadata("design:type", backupretentionpolicy_1.BackupRetentionPolicy)
     ], Cluster.prototype, "backupRetentionPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Certificates" }),
-        __metadata("design:type", Certificates)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Certificates" }),
+        __metadata("design:type", certificates_1.Certificates)
     ], Cluster.prototype, "certificates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ClusterId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ClusterId" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "clusterId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreateTimestamp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreateTimestamp" }),
         __metadata("design:type", Date)
     ], Cluster.prototype, "createTimestamp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HsmType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HsmType" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "hsmType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Hsms", elemType: Hsm }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Hsms", elemType: hsm_1.Hsm }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "hsms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PreCoPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PreCoPassword" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "preCoPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityGroup" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "securityGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourceBackupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourceBackupId" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "sourceBackupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StateMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StateMessage" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "stateMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetMapping" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetMapping" }),
+        __metadata("design:type", Object)
     ], Cluster.prototype, "subnetMapping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TagList", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TagList", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "tagList", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VpcId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VpcId" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "vpcId", void 0);
     return Cluster;
-}(SpeakeasyBase));
-export { Cluster };
+}(utils_1.SpeakeasyBase));
+exports.Cluster = Cluster;

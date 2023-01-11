@@ -24,14 +24,14 @@ export declare class PutSessionRequestBodyDialogAction extends SpeakeasyBase {
     message?: string;
     messageFormat?: shared.MessageFormatTypeEnum;
     slotToElicit?: string;
-    slots?: Map<string, string>;
+    slots?: Record<string, string>;
     type?: shared.DialogActionTypeEnum;
 }
 export declare class PutSessionRequestBody extends SpeakeasyBase {
     activeContexts?: shared.ActiveContext[];
     dialogAction?: PutSessionRequestBodyDialogAction;
     recentIntentSummaryView?: shared.IntentSummary[];
-    sessionAttributes?: Map<string, string>;
+    sessionAttributes?: Record<string, string>;
 }
 export declare class PutSessionRequest extends SpeakeasyBase {
     pathParams: PutSessionPathParams;

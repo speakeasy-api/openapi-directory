@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MovieSearchReadResponse = exports.MovieSearchReadRequest = exports.MovieSearchReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var MovieSearchReadPathParams = /** @class */ (function (_super) {
     __extends(MovieSearchReadPathParams, _super);
     function MovieSearchReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=movie_title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=movie_title" }),
         __metadata("design:type", String)
     ], MovieSearchReadPathParams.prototype, "movieTitle", void 0);
     return MovieSearchReadPathParams;
-}(SpeakeasyBase));
-export { MovieSearchReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.MovieSearchReadPathParams = MovieSearchReadPathParams;
 var MovieSearchReadRequest = /** @class */ (function (_super) {
     __extends(MovieSearchReadRequest, _super);
     function MovieSearchReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MovieSearchReadPathParams)
     ], MovieSearchReadRequest.prototype, "pathParams", void 0);
     return MovieSearchReadRequest;
-}(SpeakeasyBase));
-export { MovieSearchReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.MovieSearchReadRequest = MovieSearchReadRequest;
 var MovieSearchReadResponse = /** @class */ (function (_super) {
     __extends(MovieSearchReadResponse, _super);
     function MovieSearchReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MovieSearchReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MovieSearchReadResponse.prototype, "statusCode", void 0);
     return MovieSearchReadResponse;
-}(SpeakeasyBase));
-export { MovieSearchReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.MovieSearchReadResponse = MovieSearchReadResponse;

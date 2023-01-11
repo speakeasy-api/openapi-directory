@@ -1,44 +1,45 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class AddRegistryRequestBody extends SpeakeasyBase {
-  @Metadata({ data: "json, name=cluster_uuids" })
+  @SpeakeasyMetadata({ data: "json, name=cluster_uuids" })
   clusterUuids?: string[];
 }
 
 
-export class AddRegistryRequest extends SpeakeasyBase {
-  @Metadata({ data: "request, media_type=application/json" })
-  request?: AddRegistryRequestBody;
-}
-
-
 export class AddRegistry401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class AddRegistryRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request?: AddRegistryRequestBody;
+}
+
+
 export class AddRegistryResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  addRegistry401ApplicationJsonObject?: AddRegistry401ApplicationJson;
+  @SpeakeasyMetadata()
+  addRegistry401ApplicationJSONObject?: AddRegistry401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

@@ -5,7 +5,7 @@ import { EvaluationResult } from "./evaluationresult";
 **/
 export declare class PolicyComplianceStatus extends SpeakeasyBase {
     evaluationResults?: EvaluationResult[];
-    issueInfoMap?: Map<string, string>;
+    issueInfoMap?: Record<string, string>;
     lastUpdated?: Date;
     memberAccount?: string;
     policyId?: string;

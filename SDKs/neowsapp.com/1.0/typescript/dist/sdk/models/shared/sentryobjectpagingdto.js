@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PageMetaData } from "./pagemetadata";
-import { SentryImpactRiskObject } from "./sentryimpactriskobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SentryObjectPagingDto = void 0;
+var utils_1 = require("../../../internal/utils");
+var pagemetadata_1 = require("./pagemetadata");
+var sentryimpactriskobject_1 = require("./sentryimpactriskobject");
 var SentryObjectPagingDto = /** @class */ (function (_super) {
     __extends(SentryObjectPagingDto, _super);
     function SentryObjectPagingDto() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
+        __metadata("design:type", Object)
     ], SentryObjectPagingDto.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
-        __metadata("design:type", PageMetaData)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
+        __metadata("design:type", pagemetadata_1.PageMetaData)
     ], SentryObjectPagingDto.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sentry_objects", elemType: SentryImpactRiskObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sentry_objects", elemType: sentryimpactriskobject_1.SentryImpactRiskObject }),
         __metadata("design:type", Array)
     ], SentryObjectPagingDto.prototype, "sentryObjects", void 0);
     return SentryObjectPagingDto;
-}(SpeakeasyBase));
-export { SentryObjectPagingDto };
+}(utils_1.SpeakeasyBase));
+exports.SentryObjectPagingDto = SentryObjectPagingDto;

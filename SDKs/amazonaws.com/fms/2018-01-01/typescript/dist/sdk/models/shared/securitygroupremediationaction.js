@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RemediationActionTypeEnum } from "./remediationactiontypeenum";
-import { SecurityGroupRuleDescription } from "./securitygroupruledescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SecurityGroupRemediationAction = void 0;
+var utils_1 = require("../../../internal/utils");
+var remediationactiontypeenum_1 = require("./remediationactiontypeenum");
+var securitygroupruledescription_1 = require("./securitygroupruledescription");
 // SecurityGroupRemediationAction
 /**
  * Remediation option for the rule specified in the <code>ViolationTarget</code>.
@@ -35,21 +38,21 @@ var SecurityGroupRemediationAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], SecurityGroupRemediationAction.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IsDefaultAction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IsDefaultAction" }),
         __metadata("design:type", Boolean)
     ], SecurityGroupRemediationAction.prototype, "isDefaultAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RemediationActionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RemediationActionType" }),
         __metadata("design:type", String)
     ], SecurityGroupRemediationAction.prototype, "remediationActionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RemediationResult" }),
-        __metadata("design:type", SecurityGroupRuleDescription)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RemediationResult" }),
+        __metadata("design:type", securitygroupruledescription_1.SecurityGroupRuleDescription)
     ], SecurityGroupRemediationAction.prototype, "remediationResult", void 0);
     return SecurityGroupRemediationAction;
-}(SpeakeasyBase));
-export { SecurityGroupRemediationAction };
+}(utils_1.SpeakeasyBase));
+exports.SecurityGroupRemediationAction = SecurityGroupRemediationAction;

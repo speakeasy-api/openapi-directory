@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudChannelV1EntitlementInput } from "./googlecloudchannelv1entitlement";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1TransferEntitlementsRequestInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudchannelv1entitlement_1 = require("./googlecloudchannelv1entitlement");
 // GoogleCloudChannelV1TransferEntitlementsRequestInput
 /**
  * Request message for CloudChannelService.TransferEntitlements.
@@ -34,17 +37,17 @@ var GoogleCloudChannelV1TransferEntitlementsRequestInput = /** @class */ (functi
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authToken" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1TransferEntitlementsRequestInput.prototype, "authToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entitlements", elemType: GoogleCloudChannelV1EntitlementInput }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entitlements", elemType: googlecloudchannelv1entitlement_1.GoogleCloudChannelV1EntitlementInput }),
         __metadata("design:type", Array)
     ], GoogleCloudChannelV1TransferEntitlementsRequestInput.prototype, "entitlements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1TransferEntitlementsRequestInput.prototype, "requestId", void 0);
     return GoogleCloudChannelV1TransferEntitlementsRequestInput;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1TransferEntitlementsRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1TransferEntitlementsRequestInput = GoogleCloudChannelV1TransferEntitlementsRequestInput;

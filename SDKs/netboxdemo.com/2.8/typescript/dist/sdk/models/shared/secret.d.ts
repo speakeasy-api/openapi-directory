@@ -3,7 +3,7 @@ import { NestedDevice } from "./nesteddevice";
 import { NestedSecretRole } from "./nestedsecretrole";
 export declare class Secret extends SpeakeasyBase {
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     device: NestedDevice;
     hash?: string;
     id?: number;

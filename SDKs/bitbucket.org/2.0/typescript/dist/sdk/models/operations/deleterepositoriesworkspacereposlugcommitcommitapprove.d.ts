@@ -17,5 +17,5 @@ export declare class DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveReque
 export declare class DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

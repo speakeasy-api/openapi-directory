@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,142 +14,167 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse = exports.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest = exports.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity = exports.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams = exports.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var BaremetalsolutionProjectsLocationsSubmitProvisioningConfigPathParams = /** @class */ (function (_super) {
     __extends(BaremetalsolutionProjectsLocationsSubmitProvisioningConfigPathParams, _super);
     function BaremetalsolutionProjectsLocationsSubmitProvisioningConfigPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=location" }),
         __metadata("design:type", String)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigPathParams.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project" }),
         __metadata("design:type", String)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigPathParams.prototype, "project", void 0);
     return BaremetalsolutionProjectsLocationsSubmitProvisioningConfigPathParams;
-}(SpeakeasyBase));
-export { BaremetalsolutionProjectsLocationsSubmitProvisioningConfigPathParams };
+}(utils_1.SpeakeasyBase));
+exports.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigPathParams = BaremetalsolutionProjectsLocationsSubmitProvisioningConfigPathParams;
 var BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams = /** @class */ (function (_super) {
     __extends(BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams, _super);
     function BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams.prototype, "uploadProtocol", void 0);
     return BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams;
-}(SpeakeasyBase));
-export { BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams = BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams;
 var BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity = /** @class */ (function (_super) {
     __extends(BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity, _super);
     function BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity.prototype, "oauth2c", void 0);
     return BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity;
-}(SpeakeasyBase));
-export { BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity };
+}(utils_1.SpeakeasyBase));
+exports.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity = BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity;
 var BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest = /** @class */ (function (_super) {
     __extends(BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest, _super);
     function BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BaremetalsolutionProjectsLocationsSubmitProvisioningConfigPathParams)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.SubmitProvisioningConfigRequest)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest.prototype, "security", void 0);
     return BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest;
-}(SpeakeasyBase));
-export { BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest };
+}(utils_1.SpeakeasyBase));
+exports.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest = BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest;
 var BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse = /** @class */ (function (_super) {
     __extends(BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse, _super);
     function BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ProvisioningConfig)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse.prototype, "provisioningConfig", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse.prototype, "statusCode", void 0);
     return BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse;
-}(SpeakeasyBase));
-export { BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse };
+}(utils_1.SpeakeasyBase));
+exports.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse = BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse;

@@ -58,10 +58,10 @@ export class PostAdminRequestsRemoveByMetadataRequestBodyXPathMatch extends Spea
   matchesXpath: string;
 
   @SpeakeasyMetadata({ data: "json, name=namespaces" })
-  namespaces?: Map<string, any>;
+  namespaces?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=valuePattern" })
-  valuePattern?: Map<string, any>;
+  valuePattern?: Record<string, any>;
 }
 
 

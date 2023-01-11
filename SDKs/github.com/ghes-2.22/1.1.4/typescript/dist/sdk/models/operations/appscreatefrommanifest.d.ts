@@ -5,11 +5,11 @@ export declare class AppsCreateFromManifestPathParams extends SpeakeasyBase {
 }
 export declare class AppsCreateFromManifestRequest extends SpeakeasyBase {
     pathParams: AppsCreateFromManifestPathParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
 }
 export declare class AppsCreateFromManifestResponse extends SpeakeasyBase {
     contentType: string;
-    gitHubApp?: Map<string, any>;
+    gitHubApp?: Record<string, any>;
     statusCode: number;
     basicError?: shared.BasicError;
     validationErrorSimple?: shared.ValidationErrorSimple;

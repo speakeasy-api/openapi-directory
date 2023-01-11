@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { CopyBackupToRegionRequest, CopyBackupToRegionResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,36 +33,28 @@ const sdk = new SDK(WithSecurity(
     
 const req: CopyBackupToRegionRequest = {
   headers: {
-    xAmzAlgorithm: "maxime",
-    xAmzContentSha256: "omnis",
-    xAmzCredential: "dolor",
-    xAmzDate: "non",
-    xAmzSecurityToken: "veniam",
-    xAmzSignature: "dolorem",
-    xAmzSignedHeaders: "minima",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "BaldrApiService.CopyBackupToRegion",
   },
   request: {
-    backupId: "iste",
-    destinationRegion: "magni",
+    backupId: "fugit",
+    destinationRegion: "et",
     tagList: [
       {
-        key: "omnis",
-        value: "iste",
-      },
-      {
-        key: "unde",
-        value: "adipisci",
-      },
-      {
-        key: "impedit",
-        value: "tempora",
+        key: "rerum",
+        value: "dicta",
       },
     ],
   },
 };
 
-sdk.sdk.copyBackupToRegion(req).then((res: CopyBackupToRegionResponse | AxiosError) => {
+sdk.copyBackupToRegion(req).then((res: CopyBackupToRegionResponse | AxiosError) => {
    // handle response
 });
 ```

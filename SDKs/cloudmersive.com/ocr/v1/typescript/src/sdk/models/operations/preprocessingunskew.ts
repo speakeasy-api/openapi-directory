@@ -38,16 +38,16 @@ export class PreprocessingUnskewResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  preprocessingUnskew200ApplicationJsonByteString?: string;
+  preprocessingUnskew200ApplicationJSONByteString?: string;
 
   @SpeakeasyMetadata()
-  preprocessingUnskew200ApplicationXmlByteString?: string;
+  preprocessingUnskew200ApplicationXMLByteString?: string;
 
   @SpeakeasyMetadata()
-  preprocessingUnskew200TextJsonByteString?: string;
+  preprocessingUnskew200TextJSONByteString?: string;
 
   @SpeakeasyMetadata()
-  preprocessingUnskew200TextXmlByteString?: string;
+  preprocessingUnskew200TextXMLByteString?: string;
 
   @SpeakeasyMetadata()
   statusCode: number;

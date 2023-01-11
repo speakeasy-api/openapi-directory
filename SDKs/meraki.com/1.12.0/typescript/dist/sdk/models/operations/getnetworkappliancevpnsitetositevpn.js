@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkApplianceVpnSiteToSiteVpnResponse = exports.GetNetworkApplianceVpnSiteToSiteVpnRequest = exports.GetNetworkApplianceVpnSiteToSiteVpnPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkApplianceVpnSiteToSiteVpnPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceVpnSiteToSiteVpnPathParams, _super);
     function GetNetworkApplianceVpnSiteToSiteVpnPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceVpnSiteToSiteVpnPathParams.prototype, "networkId", void 0);
     return GetNetworkApplianceVpnSiteToSiteVpnPathParams;
-}(SpeakeasyBase));
-export { GetNetworkApplianceVpnSiteToSiteVpnPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceVpnSiteToSiteVpnPathParams = GetNetworkApplianceVpnSiteToSiteVpnPathParams;
 var GetNetworkApplianceVpnSiteToSiteVpnRequest = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceVpnSiteToSiteVpnRequest, _super);
     function GetNetworkApplianceVpnSiteToSiteVpnRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkApplianceVpnSiteToSiteVpnPathParams)
     ], GetNetworkApplianceVpnSiteToSiteVpnRequest.prototype, "pathParams", void 0);
     return GetNetworkApplianceVpnSiteToSiteVpnRequest;
-}(SpeakeasyBase));
-export { GetNetworkApplianceVpnSiteToSiteVpnRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceVpnSiteToSiteVpnRequest = GetNetworkApplianceVpnSiteToSiteVpnRequest;
 var GetNetworkApplianceVpnSiteToSiteVpnResponse = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceVpnSiteToSiteVpnResponse, _super);
     function GetNetworkApplianceVpnSiteToSiteVpnResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkApplianceVpnSiteToSiteVpnResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkApplianceVpnSiteToSiteVpnResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkApplianceVpnSiteToSiteVpnResponse.prototype, "getNetworkApplianceVpnSiteToSiteVpn200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkApplianceVpnSiteToSiteVpnResponse.prototype, "getNetworkApplianceVpnSiteToSiteVpn200ApplicationJSONObject", void 0);
     return GetNetworkApplianceVpnSiteToSiteVpnResponse;
-}(SpeakeasyBase));
-export { GetNetworkApplianceVpnSiteToSiteVpnResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceVpnSiteToSiteVpnResponse = GetNetworkApplianceVpnSiteToSiteVpnResponse;

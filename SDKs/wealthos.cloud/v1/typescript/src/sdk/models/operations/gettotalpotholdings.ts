@@ -41,20 +41,20 @@ export class GetTotalPotHoldingsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getTotalPotHoldings200ApplicationJsonAny?: any;
+  getTotalPotHoldings200ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getTotalPotHoldings401ApplicationJsonAny?: any;
+  getTotalPotHoldings401ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getTotalPotHoldings403ApplicationJsonAny?: any;
+  getTotalPotHoldings403ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getTotalPotHoldings404ApplicationJsonAny?: any;
+  getTotalPotHoldings404ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getTotalPotHoldings429ApplicationJsonAny?: any;
+  getTotalPotHoldings429ApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
-  getTotalPotHoldings500ApplicationJsonAny?: any;
+  getTotalPotHoldings500ApplicationJSONAny?: any;
 }

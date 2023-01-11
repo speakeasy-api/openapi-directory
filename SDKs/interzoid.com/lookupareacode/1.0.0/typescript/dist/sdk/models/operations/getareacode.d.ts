@@ -17,5 +17,5 @@ export declare class GetareacodeRequest extends SpeakeasyBase {
 export declare class GetareacodeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getareacode200ApplicationJsonObject?: Getareacode200ApplicationJson;
+    getareacode200ApplicationJSONObject?: Getareacode200ApplicationJson;
 }

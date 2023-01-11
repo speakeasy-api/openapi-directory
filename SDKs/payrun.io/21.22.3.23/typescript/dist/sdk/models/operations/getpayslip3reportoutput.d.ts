@@ -21,6 +21,6 @@ export declare class GetPayslip3ReportOutputRequest extends SpeakeasyBase {
 export declare class GetPayslip3ReportOutputResponse extends SpeakeasyBase {
     contentType: string;
     errorModel?: shared.ErrorModel;
-    getPayslip3ReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+    getPayslip3ReportOutput200ApplicationJSONBinaryString?: Uint8Array;
     statusCode: number;
 }

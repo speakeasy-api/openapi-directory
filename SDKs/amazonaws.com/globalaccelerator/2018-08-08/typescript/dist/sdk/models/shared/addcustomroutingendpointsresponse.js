@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomRoutingEndpointDescription } from "./customroutingendpointdescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddCustomRoutingEndpointsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var customroutingendpointdescription_1 = require("./customroutingendpointdescription");
 var AddCustomRoutingEndpointsResponse = /** @class */ (function (_super) {
     __extends(AddCustomRoutingEndpointsResponse, _super);
     function AddCustomRoutingEndpointsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointDescriptions", elemType: CustomRoutingEndpointDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointDescriptions", elemType: customroutingendpointdescription_1.CustomRoutingEndpointDescription }),
         __metadata("design:type", Array)
     ], AddCustomRoutingEndpointsResponse.prototype, "endpointDescriptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointGroupArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointGroupArn" }),
         __metadata("design:type", String)
     ], AddCustomRoutingEndpointsResponse.prototype, "endpointGroupArn", void 0);
     return AddCustomRoutingEndpointsResponse;
-}(SpeakeasyBase));
-export { AddCustomRoutingEndpointsResponse };
+}(utils_1.SpeakeasyBase));
+exports.AddCustomRoutingEndpointsResponse = AddCustomRoutingEndpointsResponse;

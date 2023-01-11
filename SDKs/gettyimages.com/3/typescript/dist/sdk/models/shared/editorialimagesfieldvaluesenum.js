@@ -1,4 +1,7 @@
-export var EditorialImagesFieldValuesEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EditorialImagesFieldValuesEnum = void 0;
+var EditorialImagesFieldValuesEnum;
 (function (EditorialImagesFieldValuesEnum) {
     EditorialImagesFieldValuesEnum["AllowedUse"] = "allowed_use";
     EditorialImagesFieldValuesEnum["AlternativeIds"] = "alternative_ids";
@@ -39,4 +42,4 @@ export var EditorialImagesFieldValuesEnum;
     EditorialImagesFieldValuesEnum["Thumb"] = "thumb";
     EditorialImagesFieldValuesEnum["Title"] = "title";
     EditorialImagesFieldValuesEnum["UriOembed"] = "uri_oembed";
-})(EditorialImagesFieldValuesEnum || (EditorialImagesFieldValuesEnum = {}));
+})(EditorialImagesFieldValuesEnum = exports.EditorialImagesFieldValuesEnum || (exports.EditorialImagesFieldValuesEnum = {}));

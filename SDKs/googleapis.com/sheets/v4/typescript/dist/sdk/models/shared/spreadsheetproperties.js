@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CellFormat } from "./cellformat";
-import { IterativeCalculationSettings } from "./iterativecalculationsettings";
-import { SpreadsheetTheme } from "./spreadsheettheme";
-export var SpreadsheetPropertiesAutoRecalcEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SpreadsheetProperties = exports.SpreadsheetPropertiesAutoRecalcEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var cellformat_1 = require("./cellformat");
+var iterativecalculationsettings_1 = require("./iterativecalculationsettings");
+var spreadsheettheme_1 = require("./spreadsheettheme");
+var SpreadsheetPropertiesAutoRecalcEnum;
 (function (SpreadsheetPropertiesAutoRecalcEnum) {
     SpreadsheetPropertiesAutoRecalcEnum["RecalculationIntervalUnspecified"] = "RECALCULATION_INTERVAL_UNSPECIFIED";
     SpreadsheetPropertiesAutoRecalcEnum["OnChange"] = "ON_CHANGE";
     SpreadsheetPropertiesAutoRecalcEnum["Minute"] = "MINUTE";
     SpreadsheetPropertiesAutoRecalcEnum["Hour"] = "HOUR";
-})(SpreadsheetPropertiesAutoRecalcEnum || (SpreadsheetPropertiesAutoRecalcEnum = {}));
+})(SpreadsheetPropertiesAutoRecalcEnum = exports.SpreadsheetPropertiesAutoRecalcEnum || (exports.SpreadsheetPropertiesAutoRecalcEnum = {}));
 // SpreadsheetProperties
 /**
  * Properties of a spreadsheet.
@@ -43,33 +46,33 @@ var SpreadsheetProperties = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoRecalc" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoRecalc" }),
         __metadata("design:type", String)
     ], SpreadsheetProperties.prototype, "autoRecalc", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultFormat" }),
-        __metadata("design:type", CellFormat)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultFormat" }),
+        __metadata("design:type", cellformat_1.CellFormat)
     ], SpreadsheetProperties.prototype, "defaultFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iterativeCalculationSettings" }),
-        __metadata("design:type", IterativeCalculationSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iterativeCalculationSettings" }),
+        __metadata("design:type", iterativecalculationsettings_1.IterativeCalculationSettings)
     ], SpreadsheetProperties.prototype, "iterativeCalculationSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locale" }),
         __metadata("design:type", String)
     ], SpreadsheetProperties.prototype, "locale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spreadsheetTheme" }),
-        __metadata("design:type", SpreadsheetTheme)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spreadsheetTheme" }),
+        __metadata("design:type", spreadsheettheme_1.SpreadsheetTheme)
     ], SpreadsheetProperties.prototype, "spreadsheetTheme", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
         __metadata("design:type", String)
     ], SpreadsheetProperties.prototype, "timeZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], SpreadsheetProperties.prototype, "title", void 0);
     return SpreadsheetProperties;
-}(SpeakeasyBase));
-export { SpreadsheetProperties };
+}(utils_1.SpeakeasyBase));
+exports.SpreadsheetProperties = SpreadsheetProperties;

@@ -28,7 +28,7 @@ export class GetConsumerV1CustomersPlansResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  customerPlanListViewModel?: Map<string, any>;
+  customerPlanListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

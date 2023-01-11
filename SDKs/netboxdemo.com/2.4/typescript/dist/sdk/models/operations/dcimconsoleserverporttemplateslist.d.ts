@@ -18,5 +18,5 @@ export declare class DcimConsoleServerPortTemplatesListRequest extends Speakeasy
 export declare class DcimConsoleServerPortTemplatesListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    dcimConsoleServerPortTemplatesList200ApplicationJsonObject?: DcimConsoleServerPortTemplatesList200ApplicationJson;
+    dcimConsoleServerPortTemplatesList200ApplicationJSONObject?: DcimConsoleServerPortTemplatesList200ApplicationJson;
 }

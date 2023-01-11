@@ -105,11 +105,11 @@ export declare class LpgtvRequest extends SpeakeasyBase {
 export declare class LpgtvResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    lpgtv400ApplicationJsonObject?: Lpgtv400ApplicationJson;
-    lpgtv401ApplicationJsonObject?: Lpgtv401ApplicationJson;
-    lpgtv404ApplicationJsonObject?: Lpgtv404ApplicationJson;
-    lpgtv500ApplicationJsonObject?: Lpgtv500ApplicationJson;
-    lpgtv502ApplicationJsonObject?: Lpgtv502ApplicationJson;
-    lpgtv503ApplicationJsonObject?: Lpgtv503ApplicationJson;
-    lpgtv504ApplicationJsonObject?: Lpgtv504ApplicationJson;
+    lpgtv400ApplicationJSONObject?: Lpgtv400ApplicationJson;
+    lpgtv401ApplicationJSONObject?: Lpgtv401ApplicationJson;
+    lpgtv404ApplicationJSONObject?: Lpgtv404ApplicationJson;
+    lpgtv500ApplicationJSONObject?: Lpgtv500ApplicationJson;
+    lpgtv502ApplicationJSONObject?: Lpgtv502ApplicationJson;
+    lpgtv503ApplicationJSONObject?: Lpgtv503ApplicationJson;
+    lpgtv504ApplicationJSONObject?: Lpgtv504ApplicationJson;
 }

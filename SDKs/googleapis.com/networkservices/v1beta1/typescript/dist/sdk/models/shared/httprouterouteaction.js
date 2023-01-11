@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HttpRouteCorsPolicy } from "./httproutecorspolicy";
-import { HttpRouteDestination } from "./httproutedestination";
-import { HttpRouteFaultInjectionPolicy } from "./httproutefaultinjectionpolicy";
-import { HttpRouteRedirect } from "./httprouteredirect";
-import { HttpRouteHeaderModifier } from "./httprouteheadermodifier";
-import { HttpRouteRequestMirrorPolicy } from "./httprouterequestmirrorpolicy";
-import { HttpRouteRetryPolicy } from "./httprouteretrypolicy";
-import { HttpRouteUrlRewrite } from "./httprouteurlrewrite";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpRouteRouteAction = void 0;
+var utils_1 = require("../../../internal/utils");
+var httproutecorspolicy_1 = require("./httproutecorspolicy");
+var httproutedestination_1 = require("./httproutedestination");
+var httproutefaultinjectionpolicy_1 = require("./httproutefaultinjectionpolicy");
+var httprouteredirect_1 = require("./httprouteredirect");
+var httprouteheadermodifier_1 = require("./httprouteheadermodifier");
+var httprouterequestmirrorpolicy_1 = require("./httprouterequestmirrorpolicy");
+var httprouteretrypolicy_1 = require("./httprouteretrypolicy");
+var httprouteurlrewrite_1 = require("./httprouteurlrewrite");
 // HttpRouteRouteAction
 /**
  * The specifications for routing traffic and applying associated policies.
@@ -41,45 +44,45 @@ var HttpRouteRouteAction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=corsPolicy" }),
-        __metadata("design:type", HttpRouteCorsPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=corsPolicy" }),
+        __metadata("design:type", httproutecorspolicy_1.HttpRouteCorsPolicy)
     ], HttpRouteRouteAction.prototype, "corsPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinations", elemType: HttpRouteDestination }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinations", elemType: httproutedestination_1.HttpRouteDestination }),
         __metadata("design:type", Array)
     ], HttpRouteRouteAction.prototype, "destinations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=faultInjectionPolicy" }),
-        __metadata("design:type", HttpRouteFaultInjectionPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=faultInjectionPolicy" }),
+        __metadata("design:type", httproutefaultinjectionpolicy_1.HttpRouteFaultInjectionPolicy)
     ], HttpRouteRouteAction.prototype, "faultInjectionPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=redirect" }),
-        __metadata("design:type", HttpRouteRedirect)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=redirect" }),
+        __metadata("design:type", httprouteredirect_1.HttpRouteRedirect)
     ], HttpRouteRouteAction.prototype, "redirect", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestHeaderModifier" }),
-        __metadata("design:type", HttpRouteHeaderModifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestHeaderModifier" }),
+        __metadata("design:type", httprouteheadermodifier_1.HttpRouteHeaderModifier)
     ], HttpRouteRouteAction.prototype, "requestHeaderModifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMirrorPolicy" }),
-        __metadata("design:type", HttpRouteRequestMirrorPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMirrorPolicy" }),
+        __metadata("design:type", httprouterequestmirrorpolicy_1.HttpRouteRequestMirrorPolicy)
     ], HttpRouteRouteAction.prototype, "requestMirrorPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=responseHeaderModifier" }),
-        __metadata("design:type", HttpRouteHeaderModifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=responseHeaderModifier" }),
+        __metadata("design:type", httprouteheadermodifier_1.HttpRouteHeaderModifier)
     ], HttpRouteRouteAction.prototype, "responseHeaderModifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retryPolicy" }),
-        __metadata("design:type", HttpRouteRetryPolicy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retryPolicy" }),
+        __metadata("design:type", httprouteretrypolicy_1.HttpRouteRetryPolicy)
     ], HttpRouteRouteAction.prototype, "retryPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeout" }),
         __metadata("design:type", String)
     ], HttpRouteRouteAction.prototype, "timeout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=urlRewrite" }),
-        __metadata("design:type", HttpRouteUrlRewrite)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=urlRewrite" }),
+        __metadata("design:type", httprouteurlrewrite_1.HttpRouteUrlRewrite)
     ], HttpRouteRouteAction.prototype, "urlRewrite", void 0);
     return HttpRouteRouteAction;
-}(SpeakeasyBase));
-export { HttpRouteRouteAction };
+}(utils_1.SpeakeasyBase));
+exports.HttpRouteRouteAction = HttpRouteRouteAction;

@@ -58,5 +58,5 @@ export class SingleEnvironmentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  singleEnvironment200ApplicationJsonObject?: SingleEnvironment200ApplicationJson;
+  singleEnvironment200ApplicationJSONObject?: SingleEnvironment200ApplicationJson;
 }

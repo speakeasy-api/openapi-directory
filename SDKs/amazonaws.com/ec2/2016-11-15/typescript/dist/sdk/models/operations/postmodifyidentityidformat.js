@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostModifyIdentityIdFormatActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostModifyIdentityIdFormatResponse = exports.PostModifyIdentityIdFormatRequest = exports.PostModifyIdentityIdFormatHeaders = exports.PostModifyIdentityIdFormatQueryParams = exports.PostModifyIdentityIdFormatVersionEnum = exports.PostModifyIdentityIdFormatActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostModifyIdentityIdFormatActionEnum;
 (function (PostModifyIdentityIdFormatActionEnum) {
     PostModifyIdentityIdFormatActionEnum["ModifyIdentityIdFormat"] = "ModifyIdentityIdFormat";
-})(PostModifyIdentityIdFormatActionEnum || (PostModifyIdentityIdFormatActionEnum = {}));
-export var PostModifyIdentityIdFormatVersionEnum;
+})(PostModifyIdentityIdFormatActionEnum = exports.PostModifyIdentityIdFormatActionEnum || (exports.PostModifyIdentityIdFormatActionEnum = {}));
+var PostModifyIdentityIdFormatVersionEnum;
 (function (PostModifyIdentityIdFormatVersionEnum) {
     PostModifyIdentityIdFormatVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostModifyIdentityIdFormatVersionEnum || (PostModifyIdentityIdFormatVersionEnum = {}));
+})(PostModifyIdentityIdFormatVersionEnum = exports.PostModifyIdentityIdFormatVersionEnum || (exports.PostModifyIdentityIdFormatVersionEnum = {}));
 var PostModifyIdentityIdFormatQueryParams = /** @class */ (function (_super) {
     __extends(PostModifyIdentityIdFormatQueryParams, _super);
     function PostModifyIdentityIdFormatQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostModifyIdentityIdFormatQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostModifyIdentityIdFormatQueryParams.prototype, "version", void 0);
     return PostModifyIdentityIdFormatQueryParams;
-}(SpeakeasyBase));
-export { PostModifyIdentityIdFormatQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyIdentityIdFormatQueryParams = PostModifyIdentityIdFormatQueryParams;
 var PostModifyIdentityIdFormatHeaders = /** @class */ (function (_super) {
     __extends(PostModifyIdentityIdFormatHeaders, _super);
     function PostModifyIdentityIdFormatHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostModifyIdentityIdFormatHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostModifyIdentityIdFormatHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostModifyIdentityIdFormatHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostModifyIdentityIdFormatHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostModifyIdentityIdFormatHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostModifyIdentityIdFormatHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostModifyIdentityIdFormatHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostModifyIdentityIdFormatHeaders;
-}(SpeakeasyBase));
-export { PostModifyIdentityIdFormatHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyIdentityIdFormatHeaders = PostModifyIdentityIdFormatHeaders;
 var PostModifyIdentityIdFormatRequest = /** @class */ (function (_super) {
     __extends(PostModifyIdentityIdFormatRequest, _super);
     function PostModifyIdentityIdFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyIdentityIdFormatQueryParams)
     ], PostModifyIdentityIdFormatRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyIdentityIdFormatHeaders)
     ], PostModifyIdentityIdFormatRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostModifyIdentityIdFormatRequest.prototype, "request", void 0);
     return PostModifyIdentityIdFormatRequest;
-}(SpeakeasyBase));
-export { PostModifyIdentityIdFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyIdentityIdFormatRequest = PostModifyIdentityIdFormatRequest;
 var PostModifyIdentityIdFormatResponse = /** @class */ (function (_super) {
     __extends(PostModifyIdentityIdFormatResponse, _super);
     function PostModifyIdentityIdFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostModifyIdentityIdFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostModifyIdentityIdFormatResponse.prototype, "statusCode", void 0);
     return PostModifyIdentityIdFormatResponse;
-}(SpeakeasyBase));
-export { PostModifyIdentityIdFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyIdentityIdFormatResponse = PostModifyIdentityIdFormatResponse;

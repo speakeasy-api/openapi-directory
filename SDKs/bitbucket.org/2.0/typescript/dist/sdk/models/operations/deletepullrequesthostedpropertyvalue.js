@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeletePullRequestHostedPropertyValueResponse = exports.DeletePullRequestHostedPropertyValueRequest = exports.DeletePullRequestHostedPropertyValuePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeletePullRequestHostedPropertyValuePathParams = /** @class */ (function (_super) {
     __extends(DeletePullRequestHostedPropertyValuePathParams, _super);
     function DeletePullRequestHostedPropertyValuePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=app_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=app_key" }),
         __metadata("design:type", String)
     ], DeletePullRequestHostedPropertyValuePathParams.prototype, "appKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=property_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=property_name" }),
         __metadata("design:type", String)
     ], DeletePullRequestHostedPropertyValuePathParams.prototype, "propertyName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=pullrequest_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=pullrequest_id" }),
         __metadata("design:type", String)
     ], DeletePullRequestHostedPropertyValuePathParams.prototype, "pullrequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], DeletePullRequestHostedPropertyValuePathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], DeletePullRequestHostedPropertyValuePathParams.prototype, "workspace", void 0);
     return DeletePullRequestHostedPropertyValuePathParams;
-}(SpeakeasyBase));
-export { DeletePullRequestHostedPropertyValuePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeletePullRequestHostedPropertyValuePathParams = DeletePullRequestHostedPropertyValuePathParams;
 var DeletePullRequestHostedPropertyValueRequest = /** @class */ (function (_super) {
     __extends(DeletePullRequestHostedPropertyValueRequest, _super);
     function DeletePullRequestHostedPropertyValueRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeletePullRequestHostedPropertyValuePathParams)
     ], DeletePullRequestHostedPropertyValueRequest.prototype, "pathParams", void 0);
     return DeletePullRequestHostedPropertyValueRequest;
-}(SpeakeasyBase));
-export { DeletePullRequestHostedPropertyValueRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeletePullRequestHostedPropertyValueRequest = DeletePullRequestHostedPropertyValueRequest;
 var DeletePullRequestHostedPropertyValueResponse = /** @class */ (function (_super) {
     __extends(DeletePullRequestHostedPropertyValueResponse, _super);
     function DeletePullRequestHostedPropertyValueResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeletePullRequestHostedPropertyValueResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeletePullRequestHostedPropertyValueResponse.prototype, "statusCode", void 0);
     return DeletePullRequestHostedPropertyValueResponse;
-}(SpeakeasyBase));
-export { DeletePullRequestHostedPropertyValueResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeletePullRequestHostedPropertyValueResponse = DeletePullRequestHostedPropertyValueResponse;

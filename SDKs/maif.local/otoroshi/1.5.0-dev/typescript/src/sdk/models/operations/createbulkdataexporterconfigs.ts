@@ -46,5 +46,5 @@ export class CreateBulkDataExporterConfigsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata({ elemType: CreateBulkDataExporterConfigs200ApplicationJson })
-  createBulkDataExporterConfigs200ApplicationJsonObjects?: CreateBulkDataExporterConfigs200ApplicationJson[];
+  createBulkDataExporterConfigs200ApplicationJSONObjects?: CreateBulkDataExporterConfigs200ApplicationJson[];
 }

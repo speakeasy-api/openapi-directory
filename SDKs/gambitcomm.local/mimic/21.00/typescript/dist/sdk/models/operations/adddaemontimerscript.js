@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddDaemonTimerScriptResponse = exports.AddDaemonTimerScriptRequest = exports.AddDaemonTimerScriptPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var AddDaemonTimerScriptPathParams = /** @class */ (function (_super) {
     __extends(AddDaemonTimerScriptPathParams, _super);
     function AddDaemonTimerScriptPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=arg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=arg" }),
         __metadata("design:type", String)
     ], AddDaemonTimerScriptPathParams.prototype, "arg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=interval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=interval" }),
         __metadata("design:type", Number)
     ], AddDaemonTimerScriptPathParams.prototype, "interval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=script" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=script" }),
         __metadata("design:type", String)
     ], AddDaemonTimerScriptPathParams.prototype, "script", void 0);
     return AddDaemonTimerScriptPathParams;
-}(SpeakeasyBase));
-export { AddDaemonTimerScriptPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AddDaemonTimerScriptPathParams = AddDaemonTimerScriptPathParams;
 var AddDaemonTimerScriptRequest = /** @class */ (function (_super) {
     __extends(AddDaemonTimerScriptRequest, _super);
     function AddDaemonTimerScriptRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AddDaemonTimerScriptPathParams)
     ], AddDaemonTimerScriptRequest.prototype, "pathParams", void 0);
     return AddDaemonTimerScriptRequest;
-}(SpeakeasyBase));
-export { AddDaemonTimerScriptRequest };
+}(utils_1.SpeakeasyBase));
+exports.AddDaemonTimerScriptRequest = AddDaemonTimerScriptRequest;
 var AddDaemonTimerScriptResponse = /** @class */ (function (_super) {
     __extends(AddDaemonTimerScriptResponse, _super);
     function AddDaemonTimerScriptResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AddDaemonTimerScriptResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AddDaemonTimerScriptResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], AddDaemonTimerScriptResponse.prototype, "addDaemonTimerScript200ApplicationJsonString", void 0);
+    ], AddDaemonTimerScriptResponse.prototype, "addDaemonTimerScript200ApplicationJSONString", void 0);
     return AddDaemonTimerScriptResponse;
-}(SpeakeasyBase));
-export { AddDaemonTimerScriptResponse };
+}(utils_1.SpeakeasyBase));
+exports.AddDaemonTimerScriptResponse = AddDaemonTimerScriptResponse;

@@ -6,6 +6,6 @@ export declare class CreateConnectionRequest extends SpeakeasyBase {
     lagId?: string;
     location: string;
     providerName?: string;
-    requestMacSec?: boolean;
+    requestMACSec?: boolean;
     tags?: Tag[];
 }

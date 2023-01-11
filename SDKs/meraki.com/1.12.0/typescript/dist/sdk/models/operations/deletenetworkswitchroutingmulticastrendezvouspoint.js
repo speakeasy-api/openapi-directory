@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteNetworkSwitchRoutingMulticastRendezvousPointResponse = exports.DeleteNetworkSwitchRoutingMulticastRendezvousPointRequest = exports.DeleteNetworkSwitchRoutingMulticastRendezvousPointPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteNetworkSwitchRoutingMulticastRendezvousPointPathParams = /** @class */ (function (_super) {
     __extends(DeleteNetworkSwitchRoutingMulticastRendezvousPointPathParams, _super);
     function DeleteNetworkSwitchRoutingMulticastRendezvousPointPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], DeleteNetworkSwitchRoutingMulticastRendezvousPointPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=rendezvousPointId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=rendezvousPointId" }),
         __metadata("design:type", String)
     ], DeleteNetworkSwitchRoutingMulticastRendezvousPointPathParams.prototype, "rendezvousPointId", void 0);
     return DeleteNetworkSwitchRoutingMulticastRendezvousPointPathParams;
-}(SpeakeasyBase));
-export { DeleteNetworkSwitchRoutingMulticastRendezvousPointPathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkSwitchRoutingMulticastRendezvousPointPathParams = DeleteNetworkSwitchRoutingMulticastRendezvousPointPathParams;
 var DeleteNetworkSwitchRoutingMulticastRendezvousPointRequest = /** @class */ (function (_super) {
     __extends(DeleteNetworkSwitchRoutingMulticastRendezvousPointRequest, _super);
     function DeleteNetworkSwitchRoutingMulticastRendezvousPointRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteNetworkSwitchRoutingMulticastRendezvousPointPathParams)
     ], DeleteNetworkSwitchRoutingMulticastRendezvousPointRequest.prototype, "pathParams", void 0);
     return DeleteNetworkSwitchRoutingMulticastRendezvousPointRequest;
-}(SpeakeasyBase));
-export { DeleteNetworkSwitchRoutingMulticastRendezvousPointRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkSwitchRoutingMulticastRendezvousPointRequest = DeleteNetworkSwitchRoutingMulticastRendezvousPointRequest;
 var DeleteNetworkSwitchRoutingMulticastRendezvousPointResponse = /** @class */ (function (_super) {
     __extends(DeleteNetworkSwitchRoutingMulticastRendezvousPointResponse, _super);
     function DeleteNetworkSwitchRoutingMulticastRendezvousPointResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteNetworkSwitchRoutingMulticastRendezvousPointResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteNetworkSwitchRoutingMulticastRendezvousPointResponse.prototype, "statusCode", void 0);
     return DeleteNetworkSwitchRoutingMulticastRendezvousPointResponse;
-}(SpeakeasyBase));
-export { DeleteNetworkSwitchRoutingMulticastRendezvousPointResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNetworkSwitchRoutingMulticastRendezvousPointResponse = DeleteNetworkSwitchRoutingMulticastRendezvousPointResponse;

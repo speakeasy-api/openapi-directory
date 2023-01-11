@@ -37,7 +37,7 @@ export class AddImageWatermarkV1RequestBody extends SpeakeasyBase {
 
 export class AddImageWatermarkV14XxApplicationProblemPlusJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=errors" })
-  errors?: Map<string, any>;
+  errors?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=status" })
   status?: number;
@@ -67,5 +67,5 @@ export class AddImageWatermarkV1Response extends SpeakeasyBase {
   addImageWatermarkV1200ApplicationPdfBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
-  addImageWatermarkV14XxApplicationProblemPlusJsonObject?: AddImageWatermarkV14XxApplicationProblemPlusJson;
+  addImageWatermarkV14XXApplicationProblemPlusJsonObject?: AddImageWatermarkV14XxApplicationProblemPlusJson;
 }

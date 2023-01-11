@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ControllersAdvisoryItem } from "./controllersadvisoryitem";
-import { ControllersLinks } from "./controllerslinks";
-import { ControllersListMeta } from "./controllerslistmeta";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ControllersAdvisoriesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var controllersadvisoryitem_1 = require("./controllersadvisoryitem");
+var controllerslinks_1 = require("./controllerslinks");
+var controllerslistmeta_1 = require("./controllerslistmeta");
 var ControllersAdvisoriesResponse = /** @class */ (function (_super) {
     __extends(ControllersAdvisoriesResponse, _super);
     function ControllersAdvisoriesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: ControllersAdvisoryItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: controllersadvisoryitem_1.ControllersAdvisoryItem }),
         __metadata("design:type", Array)
     ], ControllersAdvisoriesResponse.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
-        __metadata("design:type", ControllersLinks)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
+        __metadata("design:type", controllerslinks_1.ControllersLinks)
     ], ControllersAdvisoriesResponse.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", ControllersListMeta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", controllerslistmeta_1.ControllersListMeta)
     ], ControllersAdvisoriesResponse.prototype, "meta", void 0);
     return ControllersAdvisoriesResponse;
-}(SpeakeasyBase));
-export { ControllersAdvisoriesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ControllersAdvisoriesResponse = ControllersAdvisoriesResponse;

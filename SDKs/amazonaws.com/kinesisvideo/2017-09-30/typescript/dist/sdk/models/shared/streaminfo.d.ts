@@ -10,7 +10,7 @@ export declare class StreamInfo extends SpeakeasyBase {
     kmsKeyId?: string;
     mediaType?: string;
     status?: StatusEnum;
-    streamArn?: string;
+    streamARN?: string;
     streamName?: string;
     version?: string;
 }

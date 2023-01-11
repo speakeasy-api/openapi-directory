@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MergeHunkDetail = void 0;
+var utils_1 = require("../../../internal/utils");
 // MergeHunkDetail
 /**
  * Information about the details of a merge hunk that contains a conflict in a merge or pull request operation.
@@ -33,17 +36,17 @@ var MergeHunkDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endLine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endLine" }),
         __metadata("design:type", Number)
     ], MergeHunkDetail.prototype, "endLine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hunkContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hunkContent" }),
         __metadata("design:type", String)
     ], MergeHunkDetail.prototype, "hunkContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startLine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startLine" }),
         __metadata("design:type", Number)
     ], MergeHunkDetail.prototype, "startLine", void 0);
     return MergeHunkDetail;
-}(SpeakeasyBase));
-export { MergeHunkDetail };
+}(utils_1.SpeakeasyBase));
+exports.MergeHunkDetail = MergeHunkDetail;

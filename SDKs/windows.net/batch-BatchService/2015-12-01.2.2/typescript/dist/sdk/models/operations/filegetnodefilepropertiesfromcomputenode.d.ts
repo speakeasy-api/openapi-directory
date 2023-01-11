@@ -23,6 +23,6 @@ export declare class FileGetNodeFilePropertiesFromComputeNodeRequest extends Spe
 export declare class FileGetNodeFilePropertiesFromComputeNodeResponse extends SpeakeasyBase {
     batchError?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

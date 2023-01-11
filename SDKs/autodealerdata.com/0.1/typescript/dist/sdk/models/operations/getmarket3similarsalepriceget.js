@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,78 +14,103 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetMarket3SimilarSalePriceGetResponse = exports.GetMarket3SimilarSalePriceGetRequest = exports.GetMarket3SimilarSalePriceGetQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var GetMarket3SimilarSalePriceGetQueryParams = /** @class */ (function (_super) {
     __extends(GetMarket3SimilarSalePriceGetQueryParams, _super);
     function GetMarket3SimilarSalePriceGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=daysBack" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=daysBack" }),
         __metadata("design:type", Number)
     ], GetMarket3SimilarSalePriceGetQueryParams.prototype, "daysBack", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=jwt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=jwt" }),
         __metadata("design:type", String)
     ], GetMarket3SimilarSalePriceGetQueryParams.prototype, "jwt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=regionName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=regionName" }),
         __metadata("design:type", String)
     ], GetMarket3SimilarSalePriceGetQueryParams.prototype, "regionName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sameYear" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sameYear" }),
         __metadata("design:type", Boolean)
     ], GetMarket3SimilarSalePriceGetQueryParams.prototype, "sameYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=vin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=vin" }),
         __metadata("design:type", String)
     ], GetMarket3SimilarSalePriceGetQueryParams.prototype, "vin", void 0);
     return GetMarket3SimilarSalePriceGetQueryParams;
-}(SpeakeasyBase));
-export { GetMarket3SimilarSalePriceGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetMarket3SimilarSalePriceGetQueryParams = GetMarket3SimilarSalePriceGetQueryParams;
 var GetMarket3SimilarSalePriceGetRequest = /** @class */ (function (_super) {
     __extends(GetMarket3SimilarSalePriceGetRequest, _super);
     function GetMarket3SimilarSalePriceGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetMarket3SimilarSalePriceGetQueryParams)
     ], GetMarket3SimilarSalePriceGetRequest.prototype, "queryParams", void 0);
     return GetMarket3SimilarSalePriceGetRequest;
-}(SpeakeasyBase));
-export { GetMarket3SimilarSalePriceGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetMarket3SimilarSalePriceGetRequest = GetMarket3SimilarSalePriceGetRequest;
 var GetMarket3SimilarSalePriceGetResponse = /** @class */ (function (_super) {
     __extends(GetMarket3SimilarSalePriceGetResponse, _super);
     function GetMarket3SimilarSalePriceGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetMarket3SimilarSalePriceGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.HttpValidationError)
     ], GetMarket3SimilarSalePriceGetResponse.prototype, "httpValidationError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.SimilarSalePriceResp)
     ], GetMarket3SimilarSalePriceGetResponse.prototype, "similarSalePriceResp", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetMarket3SimilarSalePriceGetResponse.prototype, "statusCode", void 0);
     return GetMarket3SimilarSalePriceGetResponse;
-}(SpeakeasyBase));
-export { GetMarket3SimilarSalePriceGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetMarket3SimilarSalePriceGetResponse = GetMarket3SimilarSalePriceGetResponse;

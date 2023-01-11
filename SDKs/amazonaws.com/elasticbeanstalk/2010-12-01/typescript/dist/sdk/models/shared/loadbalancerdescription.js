@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Listener } from "./listener";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadBalancerDescription = void 0;
+var utils_1 = require("../../../internal/utils");
+var listener_1 = require("./listener");
 // LoadBalancerDescription
 /**
  * Describes the details of a LoadBalancer.
@@ -34,17 +37,17 @@ var LoadBalancerDescription = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LoadBalancerDescription.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Listener }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: listener_1.Listener }),
         __metadata("design:type", Array)
     ], LoadBalancerDescription.prototype, "listeners", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], LoadBalancerDescription.prototype, "loadBalancerName", void 0);
     return LoadBalancerDescription;
-}(SpeakeasyBase));
-export { LoadBalancerDescription };
+}(utils_1.SpeakeasyBase));
+exports.LoadBalancerDescription = LoadBalancerDescription;

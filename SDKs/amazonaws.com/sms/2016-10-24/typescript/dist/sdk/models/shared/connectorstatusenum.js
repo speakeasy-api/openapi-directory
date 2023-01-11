@@ -1,5 +1,8 @@
-export var ConnectorStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConnectorStatusEnum = void 0;
+var ConnectorStatusEnum;
 (function (ConnectorStatusEnum) {
     ConnectorStatusEnum["Healthy"] = "HEALTHY";
     ConnectorStatusEnum["Unhealthy"] = "UNHEALTHY";
-})(ConnectorStatusEnum || (ConnectorStatusEnum = {}));
+})(ConnectorStatusEnum = exports.ConnectorStatusEnum || (exports.ConnectorStatusEnum = {}));

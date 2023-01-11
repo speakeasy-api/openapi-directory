@@ -100,7 +100,7 @@ export class PensionPension extends SpeakeasyBase {
   lowerThreshold?: number;
 
   @SpeakeasyMetadata({ data: "json, name=MetaData" })
-  metaData?: Map<string, any>;
+  metaData?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=PensionablePayCodes" })
   pensionablePayCodes?: PensionPensionPensionablePayCodes;
@@ -142,7 +142,7 @@ export class PensionPension extends SpeakeasyBase {
   upperThreshold?: number;
 
   @SpeakeasyMetadata({ data: "json, name=UseAEThresholds" })
-  useAeThresholds?: boolean;
+  useAEThresholds?: boolean;
 }
 
 

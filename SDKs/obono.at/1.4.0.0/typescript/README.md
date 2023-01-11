@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetAuthRequest, GetAuthResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     jwt: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -41,7 +40,7 @@ const req: GetAuthRequest = {
   },
 };
 
-sdk.sdk.getAuth(req).then((res: GetAuthResponse | AxiosError) => {
+sdk.auth.getAuth(req).then((res: GetAuthResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -50,10 +49,20 @@ sdk.sdk.getAuth(req).then((res: GetAuthResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### auth
 
 * `getAuth` - Request a JWT access token using your obono username and password.
+
+### beleg
+
+* `addBeleg` - Signs a receipt and stores it in the "Datenerfassungsprotokoll".
+* `createAbschluss` - Generates an `Abschlussbeleg`.
+* `getBeleg` - Retrieves a particular `Beleg` from the "Datenerfassungsprotokoll".
+* `getBelege` - Retrieves the `Beleg` collection from the "Datenerfassungsprotokoll".
 * `getBelegeBelegUuid` - Retrieves a particular `Beleg` from the "Datenerfassungsprotokoll".
+
+### export
+
 * `getExportCsvRegistrierkassenRegistrierkasseUuidBelege`
 * `getExportDep131RegistrierkassenRegistrierkasseUuidBelege`
 * `getExportDep7RegistrierkassenRegistrierkasseUuidBelege`
@@ -63,12 +72,14 @@ sdk.sdk.getAuth(req).then((res: GetAuthResponse | AxiosError) => {
 * `getExportQrBelegeBelegUuid`
 * `getExportThermalPrintBelegeBelegUuid`
 * `getExportXlsRegistrierkassenRegistrierkasseUuidBelege`
-* `addBeleg` - Signs a receipt and stores it in the "Datenerfassungsprotokoll".
-* `createAbschluss` - Generates an `Abschlussbeleg`.
-* `getBeleg` - Retrieves a particular `Beleg` from the "Datenerfassungsprotokoll".
-* `getBelege` - Retrieves the `Beleg` collection from the "Datenerfassungsprotokoll".
-* `getDep` - Generates a DEP file.
+
+### monatsbelege
+
 * `getMonatsbelege` - Returns a list of `Monatsbelege`.
+
+### registrierkasse
+
+* `getDep` - Generates a DEP file.
 * `getRegistrierkasse` - Returns information about a particular `Registrierkasse`.
 
 <!-- End SDK Available Operations -->

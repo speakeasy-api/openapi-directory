@@ -9,7 +9,7 @@ export declare class PatchUsersUserEmailRequest extends SpeakeasyBase {
 }
 export declare class PatchUsersUserEmailResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     userResponse?: shared.UserResponse;
 }

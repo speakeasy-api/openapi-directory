@@ -1,0 +1,121 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CashPayment = exports.CashPaymentPaymentTransactionTypeEnum = exports.CashPaymentPaymentMethodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var CashPaymentPaymentMethodEnum;
+(function (CashPaymentPaymentMethodEnum) {
+    CashPaymentPaymentMethodEnum["Cash"] = "CASH";
+    CashPaymentPaymentMethodEnum["Chck"] = "CHCK";
+    CashPaymentPaymentMethodEnum["Dbit"] = "DBIT";
+    CashPaymentPaymentMethodEnum["Crdt"] = "CRDT";
+    CashPaymentPaymentMethodEnum["Amex"] = "AMEX";
+    CashPaymentPaymentMethodEnum["Visa"] = "VISA";
+    CashPaymentPaymentMethodEnum["Mstr"] = "MSTR";
+    CashPaymentPaymentMethodEnum["Disc"] = "DISC";
+    CashPaymentPaymentMethodEnum["Sqr1"] = "SQR1";
+    CashPaymentPaymentMethodEnum["Sqre"] = "SQRE";
+    CashPaymentPaymentMethodEnum["Ptpa"] = "PTPA";
+    CashPaymentPaymentMethodEnum["Onpt"] = "ONPT";
+    CashPaymentPaymentMethodEnum["Othr"] = "OTHR";
+})(CashPaymentPaymentMethodEnum = exports.CashPaymentPaymentMethodEnum || (exports.CashPaymentPaymentMethodEnum = {}));
+var CashPaymentPaymentTransactionTypeEnum;
+(function (CashPaymentPaymentTransactionTypeEnum) {
+    CashPaymentPaymentTransactionTypeEnum["Unknown"] = "";
+    CashPaymentPaymentTransactionTypeEnum["Ref"] = "REF";
+    CashPaymentPaymentTransactionTypeEnum["Cor"] = "COR";
+    CashPaymentPaymentTransactionTypeEnum["Copay"] = "COPAY";
+    CashPaymentPaymentTransactionTypeEnum["Coinsr"] = "COINSR";
+    CashPaymentPaymentTransactionTypeEnum["Othr"] = "OTHR";
+})(CashPaymentPaymentTransactionTypeEnum = exports.CashPaymentPaymentTransactionTypeEnum || (exports.CashPaymentPaymentTransactionTypeEnum = {}));
+var CashPayment = /** @class */ (function (_super) {
+    __extends(CashPayment, _super);
+    function CashPayment() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
+        __metadata("design:type", Number)
+    ], CashPayment.prototype, "amount", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appointment" }),
+        __metadata("design:type", Number)
+    ], CashPayment.prototype, "appointment", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
+        __metadata("design:type", String)
+    ], CashPayment.prototype, "createdAt", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_by" }),
+        __metadata("design:type", String)
+    ], CashPayment.prototype, "createdBy", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=doctor" }),
+        __metadata("design:type", Number)
+    ], CashPayment.prototype, "doctor", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", Number)
+    ], CashPayment.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=line_item" }),
+        __metadata("design:type", Number)
+    ], CashPayment.prototype, "lineItem", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notes" }),
+        __metadata("design:type", String)
+    ], CashPayment.prototype, "notes", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=patient" }),
+        __metadata("design:type", Number)
+    ], CashPayment.prototype, "patient", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payment_method" }),
+        __metadata("design:type", String)
+    ], CashPayment.prototype, "paymentMethod", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payment_transaction_type" }),
+        __metadata("design:type", String)
+    ], CashPayment.prototype, "paymentTransactionType", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=posted_date" }),
+        __metadata("design:type", String)
+    ], CashPayment.prototype, "postedDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=received_date" }),
+        __metadata("design:type", String)
+    ], CashPayment.prototype, "receivedDate", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trace_number" }),
+        __metadata("design:type", String)
+    ], CashPayment.prototype, "traceNumber", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
+        __metadata("design:type", String)
+    ], CashPayment.prototype, "updatedAt", void 0);
+    return CashPayment;
+}(utils_1.SpeakeasyBase));
+exports.CashPayment = CashPayment;

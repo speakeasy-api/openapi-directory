@@ -23,11 +23,11 @@ export declare class DatafusionProjectsLocationsOperationsCancelSecurity extends
 export declare class DatafusionProjectsLocationsOperationsCancelRequest extends SpeakeasyBase {
     pathParams: DatafusionProjectsLocationsOperationsCancelPathParams;
     queryParams: DatafusionProjectsLocationsOperationsCancelQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: DatafusionProjectsLocationsOperationsCancelSecurity;
 }
 export declare class DatafusionProjectsLocationsOperationsCancelResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

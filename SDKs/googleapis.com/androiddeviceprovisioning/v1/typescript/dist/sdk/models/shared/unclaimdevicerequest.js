@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeviceIdentifier } from "./deviceidentifier";
-export var UnclaimDeviceRequestSectionTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UnclaimDeviceRequest = exports.UnclaimDeviceRequestSectionTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var deviceidentifier_1 = require("./deviceidentifier");
+var UnclaimDeviceRequestSectionTypeEnum;
 (function (UnclaimDeviceRequestSectionTypeEnum) {
     UnclaimDeviceRequestSectionTypeEnum["SectionTypeUnspecified"] = "SECTION_TYPE_UNSPECIFIED";
     UnclaimDeviceRequestSectionTypeEnum["SectionTypeSimLock"] = "SECTION_TYPE_SIM_LOCK";
     UnclaimDeviceRequestSectionTypeEnum["SectionTypeZeroTouch"] = "SECTION_TYPE_ZERO_TOUCH";
-})(UnclaimDeviceRequestSectionTypeEnum || (UnclaimDeviceRequestSectionTypeEnum = {}));
+})(UnclaimDeviceRequestSectionTypeEnum = exports.UnclaimDeviceRequestSectionTypeEnum || (exports.UnclaimDeviceRequestSectionTypeEnum = {}));
 // UnclaimDeviceRequest
 /**
  * Request message to unclaim a device.
@@ -40,25 +43,25 @@ var UnclaimDeviceRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceId" }),
         __metadata("design:type", String)
     ], UnclaimDeviceRequest.prototype, "deviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceIdentifier" }),
-        __metadata("design:type", DeviceIdentifier)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceIdentifier" }),
+        __metadata("design:type", deviceidentifier_1.DeviceIdentifier)
     ], UnclaimDeviceRequest.prototype, "deviceIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sectionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sectionType" }),
         __metadata("design:type", String)
     ], UnclaimDeviceRequest.prototype, "sectionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vacationModeDays" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vacationModeDays" }),
         __metadata("design:type", Number)
     ], UnclaimDeviceRequest.prototype, "vacationModeDays", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vacationModeExpireTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vacationModeExpireTime" }),
         __metadata("design:type", String)
     ], UnclaimDeviceRequest.prototype, "vacationModeExpireTime", void 0);
     return UnclaimDeviceRequest;
-}(SpeakeasyBase));
-export { UnclaimDeviceRequest };
+}(utils_1.SpeakeasyBase));
+exports.UnclaimDeviceRequest = UnclaimDeviceRequest;

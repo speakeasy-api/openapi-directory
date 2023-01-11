@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CrawlStateEnum } from "./crawlstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Crawl = void 0;
+var utils_1 = require("../../../internal/utils");
+var crawlstateenum_1 = require("./crawlstateenum");
 // Crawl
 /**
  * The details of a crawl in the workflow.
@@ -34,29 +37,29 @@ var Crawl = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CompletedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CompletedOn" }),
         __metadata("design:type", Date)
     ], Crawl.prototype, "completedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorMessage" }),
         __metadata("design:type", String)
     ], Crawl.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogGroup" }),
         __metadata("design:type", String)
     ], Crawl.prototype, "logGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LogStream" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LogStream" }),
         __metadata("design:type", String)
     ], Crawl.prototype, "logStream", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartedOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartedOn" }),
         __metadata("design:type", Date)
     ], Crawl.prototype, "startedOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], Crawl.prototype, "state", void 0);
     return Crawl;
-}(SpeakeasyBase));
-export { Crawl };
+}(utils_1.SpeakeasyBase));
+exports.Crawl = Crawl;

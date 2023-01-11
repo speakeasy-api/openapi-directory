@@ -12,6 +12,6 @@ export declare class GetContainersFloatingIpsRequest extends SpeakeasyBase {
 }
 export declare class GetContainersFloatingIpsResponse extends SpeakeasyBase {
     contentType: string;
-    floatingIps?: any[];
+    floatingIPS?: any[];
     statusCode: number;
 }

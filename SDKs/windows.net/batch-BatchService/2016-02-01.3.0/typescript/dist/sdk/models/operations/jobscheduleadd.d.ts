@@ -16,6 +16,6 @@ export declare class JobScheduleAddRequest extends SpeakeasyBase {
 export declare class JobScheduleAddResponse extends SpeakeasyBase {
     batchError?: any;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

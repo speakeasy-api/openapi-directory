@@ -16,16 +16,16 @@ export class UpdateBulkInventoryHeaders extends SpeakeasyBase {
   authorization: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_CONSUMER.CHANNEL.TYPE" })
-  wmConsumerChannelType: string;
+  wmCONSUMERCHANNELTYPE: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_QOS.CORRELATION_ID" })
-  wmQosCorrelationId: string;
+  wmQOSCORRELATIONID: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SEC.ACCESS_TOKEN" })
-  wmSecAccessToken: string;
+  wmSECACCESSTOKEN: string;
 
   @SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SVC.NAME" })
-  wmSvcName: string;
+  wmSVCNAME: string;
 }
 
 
@@ -46,10 +46,10 @@ export class UpdateBulkInventoryRequestBody extends SpeakeasyBase {
 
 export class UpdateBulkInventory200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=additionalAttributes" })
-  additionalAttributes?: Map<string, any>;
+  additionalAttributes?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=errors" })
-  errors?: Map<string, any>;
+  errors?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=feedId" })
   feedId?: string;
@@ -79,5 +79,5 @@ export class UpdateBulkInventoryResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateBulkInventory200ApplicationJsonObject?: UpdateBulkInventory200ApplicationJson;
+  updateBulkInventory200ApplicationJSONObject?: UpdateBulkInventory200ApplicationJson;
 }

@@ -57,5 +57,5 @@ export class UpdateNotificationSettingsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateNotificationSettingsResponse?: Map<string, any>;
+  updateNotificationSettingsResponse?: Record<string, any>;
 }

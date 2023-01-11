@@ -25,5 +25,5 @@ export class GetObjectsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getObjects200ApplicationJsonStrings?: string[];
+  getObjects200ApplicationJSONStrings?: string[];
 }

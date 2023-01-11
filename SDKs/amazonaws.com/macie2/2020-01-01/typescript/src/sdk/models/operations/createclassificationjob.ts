@@ -61,7 +61,7 @@ export class CreateClassificationJobRequestBodyS3JobDefinition extends Speakeasy
 **/
 export class CreateClassificationJobRequestBodyScheduleFrequency extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=dailySchedule" })
-  dailySchedule?: Map<string, any>;
+  dailySchedule?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=monthlySchedule" })
   monthlySchedule?: shared.MonthlySchedule;
@@ -106,7 +106,7 @@ export class CreateClassificationJobRequestBody extends SpeakeasyBase {
   scheduleFrequency?: CreateClassificationJobRequestBodyScheduleFrequency;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

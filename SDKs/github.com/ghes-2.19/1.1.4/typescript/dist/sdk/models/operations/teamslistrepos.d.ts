@@ -13,7 +13,7 @@ export declare class TeamsListReposRequest extends SpeakeasyBase {
 }
 export declare class TeamsListReposResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     minimalRepositories?: shared.MinimalRepository[];
 }

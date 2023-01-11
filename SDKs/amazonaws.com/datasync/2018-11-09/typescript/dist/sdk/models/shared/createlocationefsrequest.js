@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Ec2Config } from "./ec2config";
-import { TagListEntry } from "./taglistentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateLocationEfsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var ec2config_1 = require("./ec2config");
+var taglistentry_1 = require("./taglistentry");
 // CreateLocationEfsRequest
 /**
  * CreateLocationEfsRequest
@@ -35,21 +38,21 @@ var CreateLocationEfsRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Ec2Config" }),
-        __metadata("design:type", Ec2Config)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Ec2Config" }),
+        __metadata("design:type", ec2config_1.Ec2Config)
     ], CreateLocationEfsRequest.prototype, "ec2Config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EfsFilesystemArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EfsFilesystemArn" }),
         __metadata("design:type", String)
     ], CreateLocationEfsRequest.prototype, "efsFilesystemArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Subdirectory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Subdirectory" }),
         __metadata("design:type", String)
     ], CreateLocationEfsRequest.prototype, "subdirectory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: TagListEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: taglistentry_1.TagListEntry }),
         __metadata("design:type", Array)
     ], CreateLocationEfsRequest.prototype, "tags", void 0);
     return CreateLocationEfsRequest;
-}(SpeakeasyBase));
-export { CreateLocationEfsRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateLocationEfsRequest = CreateLocationEfsRequest;

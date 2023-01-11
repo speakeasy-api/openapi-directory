@@ -1,18 +1,18 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbClusterRole } from "./dbclusterrole";
-import { DbClusterMember } from "./dbclustermember";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+import { DbClusterRoles } from "./dbclusterroles";
+import { DbClusterMemberList } from "./dbclustermemberlist";
+import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 /**
  * Detailed information about a cluster.
 **/
 export declare class DbCluster extends SpeakeasyBase {
-    associatedRoles?: DbClusterRole[];
-    availabilityZones?: string[];
+    associatedRoles?: DbClusterRoles[];
+    availabilityZones?: Record<string, any>[];
     backupRetentionPeriod?: number;
     clusterCreateTime?: Date;
     dbClusterArn?: string;
     dbClusterIdentifier?: string;
-    dbClusterMembers?: DbClusterMember[];
+    dbClusterMembers?: DbClusterMemberList[];
     dbClusterParameterGroup?: string;
     dbSubnetGroup?: string;
     dbClusterResourceId?: string;
@@ -26,15 +26,15 @@ export declare class DbCluster extends SpeakeasyBase {
     kmsKeyId?: string;
     latestRestorableTime?: Date;
     masterUsername?: string;
-    multiAz?: boolean;
+    multiAZ?: boolean;
     percentProgress?: string;
     port?: number;
     preferredBackupWindow?: string;
     preferredMaintenanceWindow?: string;
-    readReplicaIdentifiers?: string[];
+    readReplicaIdentifiers?: Record<string, any>[];
     readerEndpoint?: string;
     replicationSourceIdentifier?: string;
     status?: string;
     storageEncrypted?: boolean;
-    vpcSecurityGroups?: VpcSecurityGroupMembership[];
+    vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

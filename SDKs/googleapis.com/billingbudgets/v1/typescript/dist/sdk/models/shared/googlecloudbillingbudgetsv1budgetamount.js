@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleTypeMoney } from "./googletypemoney";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudBillingBudgetsV1BudgetAmount = void 0;
+var utils_1 = require("../../../internal/utils");
+var googletypemoney_1 = require("./googletypemoney");
 // GoogleCloudBillingBudgetsV1BudgetAmount
 /**
  * The budgeted amount for each usage period.
@@ -34,13 +37,13 @@ var GoogleCloudBillingBudgetsV1BudgetAmount = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastPeriodAmount" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastPeriodAmount" }),
+        __metadata("design:type", Object)
     ], GoogleCloudBillingBudgetsV1BudgetAmount.prototype, "lastPeriodAmount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=specifiedAmount" }),
-        __metadata("design:type", GoogleTypeMoney)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=specifiedAmount" }),
+        __metadata("design:type", googletypemoney_1.GoogleTypeMoney)
     ], GoogleCloudBillingBudgetsV1BudgetAmount.prototype, "specifiedAmount", void 0);
     return GoogleCloudBillingBudgetsV1BudgetAmount;
-}(SpeakeasyBase));
-export { GoogleCloudBillingBudgetsV1BudgetAmount };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudBillingBudgetsV1BudgetAmount = GoogleCloudBillingBudgetsV1BudgetAmount;

@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetStrainTypeCountUsingGetPathParams extends SpeakeasyBase {
-    dateYyyymmdd: string;
+    dateYYYYMMDD: string;
     speciesTypeKey: number;
 }
 export declare class GetStrainTypeCountUsingGetRequest extends SpeakeasyBase {

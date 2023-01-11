@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreatePeppolIdentifierResponse = exports.CreatePeppolIdentifierRequest = exports.CreatePeppolIdentifierPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreatePeppolIdentifierPathParams = /** @class */ (function (_super) {
     __extends(CreatePeppolIdentifierPathParams, _super);
     function CreatePeppolIdentifierPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=legal_entity_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=legal_entity_id" }),
         __metadata("design:type", Number)
     ], CreatePeppolIdentifierPathParams.prototype, "legalEntityId", void 0);
     return CreatePeppolIdentifierPathParams;
-}(SpeakeasyBase));
-export { CreatePeppolIdentifierPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CreatePeppolIdentifierPathParams = CreatePeppolIdentifierPathParams;
 var CreatePeppolIdentifierRequest = /** @class */ (function (_super) {
     __extends(CreatePeppolIdentifierRequest, _super);
     function CreatePeppolIdentifierRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CreatePeppolIdentifierPathParams)
     ], CreatePeppolIdentifierRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", Object)
     ], CreatePeppolIdentifierRequest.prototype, "request", void 0);
     return CreatePeppolIdentifierRequest;
-}(SpeakeasyBase));
-export { CreatePeppolIdentifierRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreatePeppolIdentifierRequest = CreatePeppolIdentifierRequest;
 var CreatePeppolIdentifierResponse = /** @class */ (function (_super) {
     __extends(CreatePeppolIdentifierResponse, _super);
     function CreatePeppolIdentifierResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CreatePeppolIdentifierResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], CreatePeppolIdentifierResponse.prototype, "errorModels", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], CreatePeppolIdentifierResponse.prototype, "peppolIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CreatePeppolIdentifierResponse.prototype, "statusCode", void 0);
     return CreatePeppolIdentifierResponse;
-}(SpeakeasyBase));
-export { CreatePeppolIdentifierResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreatePeppolIdentifierResponse = CreatePeppolIdentifierResponse;

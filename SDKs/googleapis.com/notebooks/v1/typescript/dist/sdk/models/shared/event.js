@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var EventTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Event = exports.EventTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var EventTypeEnum;
 (function (EventTypeEnum) {
     EventTypeEnum["EventTypeUnspecified"] = "EVENT_TYPE_UNSPECIFIED";
     EventTypeEnum["Idle"] = "IDLE";
     EventTypeEnum["Heartbeat"] = "HEARTBEAT";
     EventTypeEnum["Health"] = "HEALTH";
     EventTypeEnum["Maintenance"] = "MAINTENANCE";
-})(EventTypeEnum || (EventTypeEnum = {}));
+})(EventTypeEnum = exports.EventTypeEnum || (exports.EventTypeEnum = {}));
 // Event
 /**
  * The definition of an Event for a managed / semi-managed notebook instance.
@@ -41,17 +44,17 @@ var Event = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details" }),
+        __metadata("design:type", Object)
     ], Event.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportTime" }),
         __metadata("design:type", String)
     ], Event.prototype, "reportTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Event.prototype, "type", void 0);
     return Event;
-}(SpeakeasyBase));
-export { Event };
+}(utils_1.SpeakeasyBase));
+exports.Event = Event;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,73 +23,75 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkerTypeEnum } from "./workertypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDevEndpointRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var workertypeenum_1 = require("./workertypeenum");
 var CreateDevEndpointRequest = /** @class */ (function (_super) {
     __extends(CreateDevEndpointRequest, _super);
     function CreateDevEndpointRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Arguments" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Arguments" }),
+        __metadata("design:type", Object)
     ], CreateDevEndpointRequest.prototype, "arguments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EndpointName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EndpointName" }),
         __metadata("design:type", String)
     ], CreateDevEndpointRequest.prototype, "endpointName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExtraJarsS3Path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExtraJarsS3Path" }),
         __metadata("design:type", String)
     ], CreateDevEndpointRequest.prototype, "extraJarsS3Path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExtraPythonLibsS3Path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExtraPythonLibsS3Path" }),
         __metadata("design:type", String)
     ], CreateDevEndpointRequest.prototype, "extraPythonLibsS3Path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GlueVersion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GlueVersion" }),
         __metadata("design:type", String)
     ], CreateDevEndpointRequest.prototype, "glueVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfNodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfNodes" }),
         __metadata("design:type", Number)
     ], CreateDevEndpointRequest.prototype, "numberOfNodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfWorkers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfWorkers" }),
         __metadata("design:type", Number)
     ], CreateDevEndpointRequest.prototype, "numberOfWorkers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PublicKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PublicKey" }),
         __metadata("design:type", String)
     ], CreateDevEndpointRequest.prototype, "publicKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PublicKeys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PublicKeys" }),
         __metadata("design:type", Array)
     ], CreateDevEndpointRequest.prototype, "publicKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RoleArn" }),
         __metadata("design:type", String)
     ], CreateDevEndpointRequest.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityConfiguration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityConfiguration" }),
         __metadata("design:type", String)
     ], CreateDevEndpointRequest.prototype, "securityConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SecurityGroupIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SecurityGroupIds" }),
         __metadata("design:type", Array)
     ], CreateDevEndpointRequest.prototype, "securityGroupIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SubnetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SubnetId" }),
         __metadata("design:type", String)
     ], CreateDevEndpointRequest.prototype, "subnetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags" }),
+        __metadata("design:type", Object)
     ], CreateDevEndpointRequest.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkerType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkerType" }),
         __metadata("design:type", String)
     ], CreateDevEndpointRequest.prototype, "workerType", void 0);
     return CreateDevEndpointRequest;
-}(SpeakeasyBase));
-export { CreateDevEndpointRequest };
+}(utils_1.SpeakeasyBase));
+exports.CreateDevEndpointRequest = CreateDevEndpointRequest;

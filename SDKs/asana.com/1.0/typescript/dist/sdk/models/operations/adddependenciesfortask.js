@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,110 +14,135 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddDependenciesForTaskResponse = exports.AddDependenciesForTaskRequest = exports.AddDependenciesForTask200ApplicationJson = exports.AddDependenciesForTaskRequestBody = exports.AddDependenciesForTaskQueryParams = exports.AddDependenciesForTaskPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var AddDependenciesForTaskPathParams = /** @class */ (function (_super) {
     __extends(AddDependenciesForTaskPathParams, _super);
     function AddDependenciesForTaskPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=task_gid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=task_gid" }),
         __metadata("design:type", String)
     ], AddDependenciesForTaskPathParams.prototype, "taskGid", void 0);
     return AddDependenciesForTaskPathParams;
-}(SpeakeasyBase));
-export { AddDependenciesForTaskPathParams };
+}(utils_1.SpeakeasyBase));
+exports.AddDependenciesForTaskPathParams = AddDependenciesForTaskPathParams;
 var AddDependenciesForTaskQueryParams = /** @class */ (function (_super) {
     __extends(AddDependenciesForTaskQueryParams, _super);
     function AddDependenciesForTaskQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=opt_fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=opt_fields" }),
         __metadata("design:type", Array)
     ], AddDependenciesForTaskQueryParams.prototype, "optFields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=opt_pretty" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=opt_pretty" }),
         __metadata("design:type", Boolean)
     ], AddDependenciesForTaskQueryParams.prototype, "optPretty", void 0);
     return AddDependenciesForTaskQueryParams;
-}(SpeakeasyBase));
-export { AddDependenciesForTaskQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.AddDependenciesForTaskQueryParams = AddDependenciesForTaskQueryParams;
 var AddDependenciesForTaskRequestBody = /** @class */ (function (_super) {
     __extends(AddDependenciesForTaskRequestBody, _super);
     function AddDependenciesForTaskRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", shared.ModifyDependenciesRequest)
     ], AddDependenciesForTaskRequestBody.prototype, "data", void 0);
     return AddDependenciesForTaskRequestBody;
-}(SpeakeasyBase));
-export { AddDependenciesForTaskRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.AddDependenciesForTaskRequestBody = AddDependenciesForTaskRequestBody;
 var AddDependenciesForTask200ApplicationJson = /** @class */ (function (_super) {
     __extends(AddDependenciesForTask200ApplicationJson, _super);
     function AddDependenciesForTask200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], AddDependenciesForTask200ApplicationJson.prototype, "data", void 0);
     return AddDependenciesForTask200ApplicationJson;
-}(SpeakeasyBase));
-export { AddDependenciesForTask200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.AddDependenciesForTask200ApplicationJson = AddDependenciesForTask200ApplicationJson;
 var AddDependenciesForTaskRequest = /** @class */ (function (_super) {
     __extends(AddDependenciesForTaskRequest, _super);
     function AddDependenciesForTaskRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AddDependenciesForTaskPathParams)
     ], AddDependenciesForTaskRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AddDependenciesForTaskQueryParams)
     ], AddDependenciesForTaskRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", AddDependenciesForTaskRequestBody)
     ], AddDependenciesForTaskRequest.prototype, "request", void 0);
     return AddDependenciesForTaskRequest;
-}(SpeakeasyBase));
-export { AddDependenciesForTaskRequest };
+}(utils_1.SpeakeasyBase));
+exports.AddDependenciesForTaskRequest = AddDependenciesForTaskRequest;
 var AddDependenciesForTaskResponse = /** @class */ (function (_super) {
     __extends(AddDependenciesForTaskResponse, _super);
     function AddDependenciesForTaskResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], AddDependenciesForTaskResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ErrorResponse)
     ], AddDependenciesForTaskResponse.prototype, "errorResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], AddDependenciesForTaskResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", AddDependenciesForTask200ApplicationJson)
-    ], AddDependenciesForTaskResponse.prototype, "addDependenciesForTask200ApplicationJsonObject", void 0);
+    ], AddDependenciesForTaskResponse.prototype, "addDependenciesForTask200ApplicationJSONObject", void 0);
     return AddDependenciesForTaskResponse;
-}(SpeakeasyBase));
-export { AddDependenciesForTaskResponse };
+}(utils_1.SpeakeasyBase));
+exports.AddDependenciesForTaskResponse = AddDependenciesForTaskResponse;

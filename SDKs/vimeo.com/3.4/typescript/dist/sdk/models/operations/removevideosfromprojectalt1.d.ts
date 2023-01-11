@@ -18,5 +18,5 @@ export declare class RemoveVideosFromProjectAlt1Request extends SpeakeasyBase {
 export declare class RemoveVideosFromProjectAlt1Response extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
 }

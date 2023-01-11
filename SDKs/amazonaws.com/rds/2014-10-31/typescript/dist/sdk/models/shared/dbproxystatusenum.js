@@ -1,4 +1,7 @@
-export var DbProxyStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DbProxyStatusEnum = void 0;
+var DbProxyStatusEnum;
 (function (DbProxyStatusEnum) {
     DbProxyStatusEnum["Available"] = "available";
     DbProxyStatusEnum["Modifying"] = "modifying";
@@ -9,4 +12,4 @@ export var DbProxyStatusEnum;
     DbProxyStatusEnum["Suspended"] = "suspended";
     DbProxyStatusEnum["Suspending"] = "suspending";
     DbProxyStatusEnum["Reactivating"] = "reactivating";
-})(DbProxyStatusEnum || (DbProxyStatusEnum = {}));
+})(DbProxyStatusEnum = exports.DbProxyStatusEnum || (exports.DbProxyStatusEnum = {}));

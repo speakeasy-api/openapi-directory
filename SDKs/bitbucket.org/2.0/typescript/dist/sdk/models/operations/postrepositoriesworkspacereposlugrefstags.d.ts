@@ -11,12 +11,12 @@ export declare class PostRepositoriesWorkspaceRepoSlugRefsTagsSecurity extends S
 }
 export declare class PostRepositoriesWorkspaceRepoSlugRefsTagsRequest extends SpeakeasyBase {
     pathParams: PostRepositoriesWorkspaceRepoSlugRefsTagsPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
     security: PostRepositoriesWorkspaceRepoSlugRefsTagsSecurity;
 }
 export declare class PostRepositoriesWorkspaceRepoSlugRefsTagsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    tag?: Map<string, any>;
+    error?: Record<string, any>;
+    tag?: Record<string, any>;
 }

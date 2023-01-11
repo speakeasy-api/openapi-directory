@@ -19,7 +19,7 @@ export declare class CreateWorkerBlockRequest extends SpeakeasyBase {
 }
 export declare class CreateWorkerBlockResponse extends SpeakeasyBase {
     contentType: string;
-    createWorkerBlockResponse?: Map<string, any>;
+    createWorkerBlockResponse?: Record<string, any>;
     requestError?: any;
     serviceFault?: any;
     statusCode: number;

@@ -1,14 +1,14 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class ListLegs200ApplicationJsonEmbeddedLegs extends SpeakeasyBase {
-    embedded?: Map<string, any>;
-    links?: Map<string, any>;
+    embedded?: Record<string, any>;
+    links?: Record<string, any>;
     conversationUuid?: string;
-    from?: Map<string, any>;
+    from?: Record<string, any>;
     startEnd?: string;
     startTime?: string;
     state?: shared.LegStateEnum;
-    to?: Map<string, any>;
+    to?: Record<string, any>;
     type?: shared.ChannelTypeEnum;
     uuid: string;
 }
@@ -37,5 +37,5 @@ export declare class ListLegs200ApplicationJson extends SpeakeasyBase {
 export declare class ListLegsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listLegs200ApplicationJsonObject?: ListLegs200ApplicationJson;
+    listLegs200ApplicationJSONObject?: ListLegs200ApplicationJson;
 }

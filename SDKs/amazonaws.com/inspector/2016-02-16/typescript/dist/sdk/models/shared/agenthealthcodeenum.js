@@ -1,4 +1,7 @@
-export var AgentHealthCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgentHealthCodeEnum = void 0;
+var AgentHealthCodeEnum;
 (function (AgentHealthCodeEnum) {
     AgentHealthCodeEnum["Idle"] = "IDLE";
     AgentHealthCodeEnum["Running"] = "RUNNING";
@@ -6,4 +9,4 @@ export var AgentHealthCodeEnum;
     AgentHealthCodeEnum["Unhealthy"] = "UNHEALTHY";
     AgentHealthCodeEnum["Throttled"] = "THROTTLED";
     AgentHealthCodeEnum["Unknown"] = "UNKNOWN";
-})(AgentHealthCodeEnum || (AgentHealthCodeEnum = {}));
+})(AgentHealthCodeEnum = exports.AgentHealthCodeEnum || (exports.AgentHealthCodeEnum = {}));

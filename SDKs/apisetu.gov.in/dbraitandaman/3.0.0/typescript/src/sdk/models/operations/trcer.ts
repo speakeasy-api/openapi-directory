@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class TrcerRequestBodyCertificateParameters extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=CERT_NO" })
-  certNo: string;
+  certNO: string;
 
   @SpeakeasyMetadata({ data: "json, name=DOB" })
   dob: string;
@@ -194,23 +194,23 @@ export class TrcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  trcer400ApplicationJsonObject?: Trcer400ApplicationJson;
+  trcer400ApplicationJSONObject?: Trcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  trcer401ApplicationJsonObject?: Trcer401ApplicationJson;
+  trcer401ApplicationJSONObject?: Trcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  trcer404ApplicationJsonObject?: Trcer404ApplicationJson;
+  trcer404ApplicationJSONObject?: Trcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  trcer500ApplicationJsonObject?: Trcer500ApplicationJson;
+  trcer500ApplicationJSONObject?: Trcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  trcer502ApplicationJsonObject?: Trcer502ApplicationJson;
+  trcer502ApplicationJSONObject?: Trcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  trcer503ApplicationJsonObject?: Trcer503ApplicationJson;
+  trcer503ApplicationJSONObject?: Trcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  trcer504ApplicationJsonObject?: Trcer504ApplicationJson;
+  trcer504ApplicationJSONObject?: Trcer504ApplicationJson;
 }

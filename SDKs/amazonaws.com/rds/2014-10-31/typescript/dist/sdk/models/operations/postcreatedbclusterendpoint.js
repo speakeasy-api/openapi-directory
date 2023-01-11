@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCreateDbClusterEndpointActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCreateDbClusterEndpointResponse = exports.PostCreateDbClusterEndpointRequest = exports.PostCreateDbClusterEndpointHeaders = exports.PostCreateDbClusterEndpointQueryParams = exports.PostCreateDbClusterEndpointVersionEnum = exports.PostCreateDbClusterEndpointActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCreateDbClusterEndpointActionEnum;
 (function (PostCreateDbClusterEndpointActionEnum) {
     PostCreateDbClusterEndpointActionEnum["CreateDbClusterEndpoint"] = "CreateDBClusterEndpoint";
-})(PostCreateDbClusterEndpointActionEnum || (PostCreateDbClusterEndpointActionEnum = {}));
-export var PostCreateDbClusterEndpointVersionEnum;
+})(PostCreateDbClusterEndpointActionEnum = exports.PostCreateDbClusterEndpointActionEnum || (exports.PostCreateDbClusterEndpointActionEnum = {}));
+var PostCreateDbClusterEndpointVersionEnum;
 (function (PostCreateDbClusterEndpointVersionEnum) {
     PostCreateDbClusterEndpointVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostCreateDbClusterEndpointVersionEnum || (PostCreateDbClusterEndpointVersionEnum = {}));
+})(PostCreateDbClusterEndpointVersionEnum = exports.PostCreateDbClusterEndpointVersionEnum || (exports.PostCreateDbClusterEndpointVersionEnum = {}));
 var PostCreateDbClusterEndpointQueryParams = /** @class */ (function (_super) {
     __extends(PostCreateDbClusterEndpointQueryParams, _super);
     function PostCreateDbClusterEndpointQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCreateDbClusterEndpointQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCreateDbClusterEndpointQueryParams.prototype, "version", void 0);
     return PostCreateDbClusterEndpointQueryParams;
-}(SpeakeasyBase));
-export { PostCreateDbClusterEndpointQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateDbClusterEndpointQueryParams = PostCreateDbClusterEndpointQueryParams;
 var PostCreateDbClusterEndpointHeaders = /** @class */ (function (_super) {
     __extends(PostCreateDbClusterEndpointHeaders, _super);
     function PostCreateDbClusterEndpointHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCreateDbClusterEndpointHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCreateDbClusterEndpointHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCreateDbClusterEndpointHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCreateDbClusterEndpointHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCreateDbClusterEndpointHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCreateDbClusterEndpointHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCreateDbClusterEndpointHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCreateDbClusterEndpointHeaders;
-}(SpeakeasyBase));
-export { PostCreateDbClusterEndpointHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateDbClusterEndpointHeaders = PostCreateDbClusterEndpointHeaders;
 var PostCreateDbClusterEndpointRequest = /** @class */ (function (_super) {
     __extends(PostCreateDbClusterEndpointRequest, _super);
     function PostCreateDbClusterEndpointRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateDbClusterEndpointQueryParams)
     ], PostCreateDbClusterEndpointRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateDbClusterEndpointHeaders)
     ], PostCreateDbClusterEndpointRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCreateDbClusterEndpointRequest.prototype, "request", void 0);
     return PostCreateDbClusterEndpointRequest;
-}(SpeakeasyBase));
-export { PostCreateDbClusterEndpointRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateDbClusterEndpointRequest = PostCreateDbClusterEndpointRequest;
 var PostCreateDbClusterEndpointResponse = /** @class */ (function (_super) {
     __extends(PostCreateDbClusterEndpointResponse, _super);
     function PostCreateDbClusterEndpointResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCreateDbClusterEndpointResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCreateDbClusterEndpointResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCreateDbClusterEndpointResponse.prototype, "statusCode", void 0);
     return PostCreateDbClusterEndpointResponse;
-}(SpeakeasyBase));
-export { PostCreateDbClusterEndpointResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateDbClusterEndpointResponse = PostCreateDbClusterEndpointResponse;

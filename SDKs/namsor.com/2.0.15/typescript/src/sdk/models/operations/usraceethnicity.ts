@@ -32,7 +32,7 @@ export class UsRaceEthnicityResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  firstLastNameUsRaceEthnicityOut?: shared.FirstLastNameUsRaceEthnicityOut;
+  firstLastNameUSRaceEthnicityOut?: shared.FirstLastNameUsRaceEthnicityOut;
 
   @SpeakeasyMetadata()
   statusCode: number;

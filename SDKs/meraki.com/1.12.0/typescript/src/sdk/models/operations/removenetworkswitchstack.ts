@@ -34,5 +34,5 @@ export class RemoveNetworkSwitchStackResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  removeNetworkSwitchStack200ApplicationJsonObject?: Map<string, any>;
+  removeNetworkSwitchStack200ApplicationJSONObject?: Record<string, any>;
 }

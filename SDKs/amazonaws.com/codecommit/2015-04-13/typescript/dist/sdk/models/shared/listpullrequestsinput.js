@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,33 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PullRequestStatusEnumEnum } from "./pullrequeststatusenumenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListPullRequestsInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var pullrequeststatusenumenum_1 = require("./pullrequeststatusenumenum");
 var ListPullRequestsInput = /** @class */ (function (_super) {
     __extends(ListPullRequestsInput, _super);
     function ListPullRequestsInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorArn" }),
         __metadata("design:type", String)
     ], ListPullRequestsInput.prototype, "authorArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxResults" }),
         __metadata("design:type", Number)
     ], ListPullRequestsInput.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListPullRequestsInput.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pullRequestStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pullRequestStatus" }),
         __metadata("design:type", String)
     ], ListPullRequestsInput.prototype, "pullRequestStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositoryName" }),
         __metadata("design:type", String)
     ], ListPullRequestsInput.prototype, "repositoryName", void 0);
     return ListPullRequestsInput;
-}(SpeakeasyBase));
-export { ListPullRequestsInput };
+}(utils_1.SpeakeasyBase));
+exports.ListPullRequestsInput = ListPullRequestsInput;

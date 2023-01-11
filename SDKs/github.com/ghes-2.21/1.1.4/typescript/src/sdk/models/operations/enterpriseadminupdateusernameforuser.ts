@@ -40,5 +40,5 @@ export class EnterpriseAdminUpdateUsernameForUserResponse extends SpeakeasyBase 
   statusCode: number;
 
   @SpeakeasyMetadata()
-  enterpriseAdminUpdateUsernameForUser202ApplicationJsonObject?: EnterpriseAdminUpdateUsernameForUser202ApplicationJson;
+  enterpriseAdminUpdateUsernameForUser202ApplicationJSONObject?: EnterpriseAdminUpdateUsernameForUser202ApplicationJson;
 }

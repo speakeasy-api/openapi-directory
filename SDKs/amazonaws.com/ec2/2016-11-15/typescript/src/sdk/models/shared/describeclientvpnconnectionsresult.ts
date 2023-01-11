@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientVpnConnection } from "./clientvpnconnection";
 
 
 
 export class DescribeClientVpnConnectionsResult extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: ClientVpnConnection })
-  connections?: ClientVpnConnection[];
+  @SpeakeasyMetadata()
+  connections?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 }

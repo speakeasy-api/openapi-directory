@@ -12,7 +12,7 @@ export declare class TestnetGetTokenMetadataRequest extends SpeakeasyBase {
 }
 export declare class TestnetGetTokenMetadataResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
     getTokenMetadataResponse?: shared.GetTokenMetadataResponse;
 }

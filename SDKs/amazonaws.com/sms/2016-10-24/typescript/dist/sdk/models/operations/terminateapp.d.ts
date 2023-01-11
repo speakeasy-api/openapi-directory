@@ -24,6 +24,6 @@ export declare class TerminateAppResponse extends SpeakeasyBase {
     missingRequiredParameterException?: any;
     operationNotPermittedException?: any;
     statusCode: number;
-    terminateAppResponse?: Map<string, any>;
+    terminateAppResponse?: Record<string, any>;
     unauthorizedOperationException?: any;
 }

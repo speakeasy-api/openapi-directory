@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HealthCheck } from "./healthcheck";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigureHealthCheckOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var healthcheck_1 = require("./healthcheck");
 // ConfigureHealthCheckOutput
 /**
  * Contains the output of ConfigureHealthCheck.
@@ -34,9 +37,9 @@ var ConfigureHealthCheckOutput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", HealthCheck)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", healthcheck_1.HealthCheck)
     ], ConfigureHealthCheckOutput.prototype, "healthCheck", void 0);
     return ConfigureHealthCheckOutput;
-}(SpeakeasyBase));
-export { ConfigureHealthCheckOutput };
+}(utils_1.SpeakeasyBase));
+exports.ConfigureHealthCheckOutput = ConfigureHealthCheckOutput;

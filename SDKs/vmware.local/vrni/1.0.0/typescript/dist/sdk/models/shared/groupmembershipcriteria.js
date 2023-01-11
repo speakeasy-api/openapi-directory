@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IpAddressMembershipCriteria } from "./ipaddressmembershipcriteria";
-import { SearchMembershipCriteria } from "./searchmembershipcriteria";
-export var GroupMembershipCriteriaMembershipTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GroupMembershipCriteria = exports.GroupMembershipCriteriaMembershipTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ipaddressmembershipcriteria_1 = require("./ipaddressmembershipcriteria");
+var searchmembershipcriteria_1 = require("./searchmembershipcriteria");
+var GroupMembershipCriteriaMembershipTypeEnum;
 (function (GroupMembershipCriteriaMembershipTypeEnum) {
     GroupMembershipCriteriaMembershipTypeEnum["SearchMembershipCriteria"] = "SearchMembershipCriteria";
     GroupMembershipCriteriaMembershipTypeEnum["IpAddressMembershipCriteria"] = "IPAddressMembershipCriteria";
-})(GroupMembershipCriteriaMembershipTypeEnum || (GroupMembershipCriteriaMembershipTypeEnum = {}));
+})(GroupMembershipCriteriaMembershipTypeEnum = exports.GroupMembershipCriteriaMembershipTypeEnum || (exports.GroupMembershipCriteriaMembershipTypeEnum = {}));
 // GroupMembershipCriteria
 /**
  * EntityType currently restricted to VirtualMachine
@@ -40,17 +43,17 @@ var GroupMembershipCriteria = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip_address_membership_criteria" }),
-        __metadata("design:type", IpAddressMembershipCriteria)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip_address_membership_criteria" }),
+        __metadata("design:type", ipaddressmembershipcriteria_1.IpAddressMembershipCriteria)
     ], GroupMembershipCriteria.prototype, "ipAddressMembershipCriteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=membership_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=membership_type" }),
         __metadata("design:type", String)
     ], GroupMembershipCriteria.prototype, "membershipType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=search_membership_criteria" }),
-        __metadata("design:type", SearchMembershipCriteria)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=search_membership_criteria" }),
+        __metadata("design:type", searchmembershipcriteria_1.SearchMembershipCriteria)
     ], GroupMembershipCriteria.prototype, "searchMembershipCriteria", void 0);
     return GroupMembershipCriteria;
-}(SpeakeasyBase));
-export { GroupMembershipCriteria };
+}(utils_1.SpeakeasyBase));
+exports.GroupMembershipCriteria = GroupMembershipCriteria;

@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetApplySecurityGroupsToLoadBalancerRequest, GetApplySecurityGroupsToLoadBalancerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -35,24 +34,25 @@ const sdk = new SDK(WithSecurity(
 const req: GetApplySecurityGroupsToLoadBalancerRequest = {
   queryParams: {
     action: "ApplySecurityGroupsToLoadBalancer",
-    loadBalancerName: "cumque",
+    loadBalancerName: "voluptas",
     securityGroups: [
-      "adipisci",
+      "expedita",
+      "consequuntur",
     ],
     version: "2012-06-01",
   },
   headers: {
-    xAmzAlgorithm: "accusantium",
-    xAmzContentSha256: "exercitationem",
-    xAmzCredential: "doloremque",
+    xAmzAlgorithm: "expedita",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "fugit",
     xAmzDate: "et",
-    xAmzSecurityToken: "perspiciatis",
-    xAmzSignature: "suscipit",
-    xAmzSignedHeaders: "inventore",
+    xAmzSecurityToken: "nihil",
+    xAmzSignature: "rerum",
+    xAmzSignedHeaders: "dicta",
   },
 };
 
-sdk.sdk.getApplySecurityGroupsToLoadBalancer(req).then((res: GetApplySecurityGroupsToLoadBalancerResponse | AxiosError) => {
+sdk.getApplySecurityGroupsToLoadBalancer(req).then((res: GetApplySecurityGroupsToLoadBalancerResponse | AxiosError) => {
    // handle response
 });
 ```

@@ -33,7 +33,7 @@ export declare enum UpdateEnvironmentRequestBodyWebserverAccessModeEnum {
     PublicOnly = "PUBLIC_ONLY"
 }
 export declare class UpdateEnvironmentRequestBody extends SpeakeasyBase {
-    airflowConfigurationOptions?: Map<string, string>;
+    airflowConfigurationOptions?: Record<string, string>;
     airflowVersion?: string;
     dagS3Path?: string;
     environmentClass?: string;

@@ -26,7 +26,7 @@ export class GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse ex
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata()
   statusCode: number;

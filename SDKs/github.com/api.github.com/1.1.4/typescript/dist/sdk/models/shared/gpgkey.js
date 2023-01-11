@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,83 +23,85 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GpgKey = exports.GpgKeySubkeys = exports.GpgKeyEmails = void 0;
+var utils_1 = require("../../../internal/utils");
 var GpgKeyEmails = /** @class */ (function (_super) {
     __extends(GpgKeyEmails, _super);
     function GpgKeyEmails() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], GpgKeyEmails.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verified" }),
         __metadata("design:type", Boolean)
     ], GpgKeyEmails.prototype, "verified", void 0);
     return GpgKeyEmails;
-}(SpeakeasyBase));
-export { GpgKeyEmails };
+}(utils_1.SpeakeasyBase));
+exports.GpgKeyEmails = GpgKeyEmails;
 var GpgKeySubkeys = /** @class */ (function (_super) {
     __extends(GpgKeySubkeys, _super);
     function GpgKeySubkeys() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=can_certify" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=can_certify" }),
         __metadata("design:type", Boolean)
     ], GpgKeySubkeys.prototype, "canCertify", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=can_encrypt_comms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=can_encrypt_comms" }),
         __metadata("design:type", Boolean)
     ], GpgKeySubkeys.prototype, "canEncryptComms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=can_encrypt_storage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=can_encrypt_storage" }),
         __metadata("design:type", Boolean)
     ], GpgKeySubkeys.prototype, "canEncryptStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=can_sign" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=can_sign" }),
         __metadata("design:type", Boolean)
     ], GpgKeySubkeys.prototype, "canSign", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", String)
     ], GpgKeySubkeys.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emails" }),
         __metadata("design:type", Array)
     ], GpgKeySubkeys.prototype, "emails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires_at" }),
         __metadata("design:type", String)
     ], GpgKeySubkeys.prototype, "expiresAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GpgKeySubkeys.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key_id" }),
         __metadata("design:type", String)
     ], GpgKeySubkeys.prototype, "keyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_key_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_key_id" }),
         __metadata("design:type", Number)
     ], GpgKeySubkeys.prototype, "primaryKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public_key" }),
         __metadata("design:type", String)
     ], GpgKeySubkeys.prototype, "publicKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=raw_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=raw_key" }),
         __metadata("design:type", String)
     ], GpgKeySubkeys.prototype, "rawKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subkeys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subkeys" }),
         __metadata("design:type", Array)
     ], GpgKeySubkeys.prototype, "subkeys", void 0);
     return GpgKeySubkeys;
-}(SpeakeasyBase));
-export { GpgKeySubkeys };
+}(utils_1.SpeakeasyBase));
+exports.GpgKeySubkeys = GpgKeySubkeys;
 // GpgKey
 /**
  * A unique encryption key
@@ -109,57 +112,57 @@ var GpgKey = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=can_certify" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=can_certify" }),
         __metadata("design:type", Boolean)
     ], GpgKey.prototype, "canCertify", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=can_encrypt_comms" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=can_encrypt_comms" }),
         __metadata("design:type", Boolean)
     ], GpgKey.prototype, "canEncryptComms", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=can_encrypt_storage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=can_encrypt_storage" }),
         __metadata("design:type", Boolean)
     ], GpgKey.prototype, "canEncryptStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=can_sign" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=can_sign" }),
         __metadata("design:type", Boolean)
     ], GpgKey.prototype, "canSign", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], GpgKey.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=emails", elemType: GpgKeyEmails }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=emails", elemType: GpgKeyEmails }),
         __metadata("design:type", Array)
     ], GpgKey.prototype, "emails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expires_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expires_at" }),
         __metadata("design:type", Date)
     ], GpgKey.prototype, "expiresAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GpgKey.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key_id" }),
         __metadata("design:type", String)
     ], GpgKey.prototype, "keyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_key_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_key_id" }),
         __metadata("design:type", Number)
     ], GpgKey.prototype, "primaryKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public_key" }),
         __metadata("design:type", String)
     ], GpgKey.prototype, "publicKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=raw_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=raw_key" }),
         __metadata("design:type", String)
     ], GpgKey.prototype, "rawKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subkeys", elemType: GpgKeySubkeys }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subkeys", elemType: GpgKeySubkeys }),
         __metadata("design:type", Array)
     ], GpgKey.prototype, "subkeys", void 0);
     return GpgKey;
-}(SpeakeasyBase));
-export { GpgKey };
+}(utils_1.SpeakeasyBase));
+exports.GpgKey = GpgKey;

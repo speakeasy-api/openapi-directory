@@ -38,5 +38,5 @@ export class DatabaseGetDocumentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  document?: Map<string, any>;
+  document?: Record<string, any>;
 }

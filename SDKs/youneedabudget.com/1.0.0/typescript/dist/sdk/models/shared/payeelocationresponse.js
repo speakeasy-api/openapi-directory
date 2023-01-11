@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PayeeLocation } from "./payeelocation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayeeLocationResponse = exports.PayeeLocationResponseData = void 0;
+var utils_1 = require("../../../internal/utils");
+var payeelocation_1 = require("./payeelocation");
 var PayeeLocationResponseData = /** @class */ (function (_super) {
     __extends(PayeeLocationResponseData, _super);
     function PayeeLocationResponseData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payee_location" }),
-        __metadata("design:type", PayeeLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payee_location" }),
+        __metadata("design:type", payeelocation_1.PayeeLocation)
     ], PayeeLocationResponseData.prototype, "payeeLocation", void 0);
     return PayeeLocationResponseData;
-}(SpeakeasyBase));
-export { PayeeLocationResponseData };
+}(utils_1.SpeakeasyBase));
+exports.PayeeLocationResponseData = PayeeLocationResponseData;
 var PayeeLocationResponse = /** @class */ (function (_super) {
     __extends(PayeeLocationResponse, _super);
     function PayeeLocationResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", PayeeLocationResponseData)
     ], PayeeLocationResponse.prototype, "data", void 0);
     return PayeeLocationResponse;
-}(SpeakeasyBase));
-export { PayeeLocationResponse };
+}(utils_1.SpeakeasyBase));
+exports.PayeeLocationResponse = PayeeLocationResponse;

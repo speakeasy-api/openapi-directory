@@ -27,6 +27,6 @@ export declare class LhDeepLinksFfpRequest extends SpeakeasyBase {
 }
 export declare class LhDeepLinksFfpResponse extends SpeakeasyBase {
     contentType: string;
-    lhDeepLinksFfp200ApplicationJsonString?: string;
+    lhDeepLinksFFP200ApplicationJSONString?: string;
     statusCode: number;
 }

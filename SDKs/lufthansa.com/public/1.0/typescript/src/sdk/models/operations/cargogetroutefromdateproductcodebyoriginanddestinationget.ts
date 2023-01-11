@@ -64,7 +64,7 @@ export class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest ex
 
 export class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  cargoGetRouteFromDateProductCodeByOriginAndDestinationGet200ApplicationJsonObject?: Map<string, any>;
+  cargoGetRouteFromDateProductCodeByOriginAndDestinationGet200ApplicationJSONObject?: Record<string, any>;
 
   @SpeakeasyMetadata()
   contentType: string;

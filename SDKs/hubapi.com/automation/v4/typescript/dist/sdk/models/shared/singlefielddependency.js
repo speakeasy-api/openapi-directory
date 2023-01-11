@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SingleFieldDependencyDependencyTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SingleFieldDependency = exports.SingleFieldDependencyDependencyTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SingleFieldDependencyDependencyTypeEnum;
 (function (SingleFieldDependencyDependencyTypeEnum) {
     SingleFieldDependencyDependencyTypeEnum["SingleField"] = "SINGLE_FIELD";
-})(SingleFieldDependencyDependencyTypeEnum || (SingleFieldDependencyDependencyTypeEnum = {}));
+})(SingleFieldDependencyDependencyTypeEnum = exports.SingleFieldDependencyDependencyTypeEnum || (exports.SingleFieldDependencyDependencyTypeEnum = {}));
 var SingleFieldDependency = /** @class */ (function (_super) {
     __extends(SingleFieldDependency, _super);
     function SingleFieldDependency() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=controllingFieldName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=controllingFieldName" }),
         __metadata("design:type", String)
     ], SingleFieldDependency.prototype, "controllingFieldName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dependencyType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dependencyType" }),
         __metadata("design:type", String)
     ], SingleFieldDependency.prototype, "dependencyType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dependentFieldNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dependentFieldNames" }),
         __metadata("design:type", Array)
     ], SingleFieldDependency.prototype, "dependentFieldNames", void 0);
     return SingleFieldDependency;
-}(SpeakeasyBase));
-export { SingleFieldDependency };
+}(utils_1.SpeakeasyBase));
+exports.SingleFieldDependency = SingleFieldDependency;

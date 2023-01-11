@@ -14,7 +14,7 @@ export declare class ReposListReleasesRequest extends SpeakeasyBase {
 }
 export declare class ReposListReleasesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     basicError?: shared.BasicError;
     releases?: shared.Release[];

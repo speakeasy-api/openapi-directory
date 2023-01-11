@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { UserRef } from "./userref";
-import { AccountRef } from "./accountref";
-import { ProfileRef } from "./profileref";
-import { WebPropertyRef } from "./webpropertyref";
-// EntityUserLinkPermissionsInput
-/**
- * Permissions the user has for this entity.
-**/
-var EntityUserLinkPermissionsInput = /** @class */ (function (_super) {
-    __extends(EntityUserLinkPermissionsInput, _super);
-    function EntityUserLinkPermissionsInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=local" }),
-        __metadata("design:type", Array)
-    ], EntityUserLinkPermissionsInput.prototype, "local", void 0);
-    return EntityUserLinkPermissionsInput;
-}(SpeakeasyBase));
-export { EntityUserLinkPermissionsInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EntityUserLinkInput = exports.EntityUserLink = exports.EntityUserLinkPermissionsInput = exports.EntityUserLinkPermissions = exports.EntityUserLinkEntity = void 0;
+var utils_1 = require("../../../internal/utils");
+var accountref_1 = require("./accountref");
+var profileref_1 = require("./profileref");
+var webpropertyref_1 = require("./webpropertyref");
+var userref_1 = require("./userref");
 // EntityUserLinkEntity
 /**
  * Entity for this link. It can be an account, a web property, or a view (profile).
@@ -53,20 +40,20 @@ var EntityUserLinkEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountRef" }),
-        __metadata("design:type", AccountRef)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountRef" }),
+        __metadata("design:type", accountref_1.AccountRef)
     ], EntityUserLinkEntity.prototype, "accountRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profileRef" }),
-        __metadata("design:type", ProfileRef)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profileRef" }),
+        __metadata("design:type", profileref_1.ProfileRef)
     ], EntityUserLinkEntity.prototype, "profileRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webPropertyRef" }),
-        __metadata("design:type", WebPropertyRef)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webPropertyRef" }),
+        __metadata("design:type", webpropertyref_1.WebPropertyRef)
     ], EntityUserLinkEntity.prototype, "webPropertyRef", void 0);
     return EntityUserLinkEntity;
-}(SpeakeasyBase));
-export { EntityUserLinkEntity };
+}(utils_1.SpeakeasyBase));
+exports.EntityUserLinkEntity = EntityUserLinkEntity;
 // EntityUserLinkPermissions
 /**
  * Permissions the user has for this entity.
@@ -77,52 +64,32 @@ var EntityUserLinkPermissions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effective" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effective" }),
         __metadata("design:type", Array)
     ], EntityUserLinkPermissions.prototype, "effective", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=local" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=local" }),
         __metadata("design:type", Array)
     ], EntityUserLinkPermissions.prototype, "local", void 0);
     return EntityUserLinkPermissions;
-}(SpeakeasyBase));
-export { EntityUserLinkPermissions };
-// EntityUserLinkInput
+}(utils_1.SpeakeasyBase));
+exports.EntityUserLinkPermissions = EntityUserLinkPermissions;
+// EntityUserLinkPermissionsInput
 /**
- * JSON template for an Analytics Entity-User Link. Returns permissions that a user has for an entity.
+ * Permissions the user has for this entity.
 **/
-var EntityUserLinkInput = /** @class */ (function (_super) {
-    __extends(EntityUserLinkInput, _super);
-    function EntityUserLinkInput() {
+var EntityUserLinkPermissionsInput = /** @class */ (function (_super) {
+    __extends(EntityUserLinkPermissionsInput, _super);
+    function EntityUserLinkPermissionsInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity" }),
-        __metadata("design:type", EntityUserLinkEntity)
-    ], EntityUserLinkInput.prototype, "entity", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
-        __metadata("design:type", String)
-    ], EntityUserLinkInput.prototype, "id", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
-        __metadata("design:type", String)
-    ], EntityUserLinkInput.prototype, "kind", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions" }),
-        __metadata("design:type", EntityUserLinkPermissionsInput)
-    ], EntityUserLinkInput.prototype, "permissions", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
-        __metadata("design:type", String)
-    ], EntityUserLinkInput.prototype, "selfLink", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=userRef" }),
-        __metadata("design:type", UserRef)
-    ], EntityUserLinkInput.prototype, "userRef", void 0);
-    return EntityUserLinkInput;
-}(SpeakeasyBase));
-export { EntityUserLinkInput };
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=local" }),
+        __metadata("design:type", Array)
+    ], EntityUserLinkPermissionsInput.prototype, "local", void 0);
+    return EntityUserLinkPermissionsInput;
+}(utils_1.SpeakeasyBase));
+exports.EntityUserLinkPermissionsInput = EntityUserLinkPermissionsInput;
 // EntityUserLink
 /**
  * JSON template for an Analytics Entity-User Link. Returns permissions that a user has for an entity.
@@ -133,29 +100,65 @@ var EntityUserLink = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity" }),
         __metadata("design:type", EntityUserLinkEntity)
     ], EntityUserLink.prototype, "entity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], EntityUserLink.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], EntityUserLink.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions" }),
         __metadata("design:type", EntityUserLinkPermissions)
     ], EntityUserLink.prototype, "permissions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], EntityUserLink.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=userRef" }),
-        __metadata("design:type", UserRef)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userRef" }),
+        __metadata("design:type", userref_1.UserRef)
     ], EntityUserLink.prototype, "userRef", void 0);
     return EntityUserLink;
-}(SpeakeasyBase));
-export { EntityUserLink };
+}(utils_1.SpeakeasyBase));
+exports.EntityUserLink = EntityUserLink;
+// EntityUserLinkInput
+/**
+ * JSON template for an Analytics Entity-User Link. Returns permissions that a user has for an entity.
+**/
+var EntityUserLinkInput = /** @class */ (function (_super) {
+    __extends(EntityUserLinkInput, _super);
+    function EntityUserLinkInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity" }),
+        __metadata("design:type", EntityUserLinkEntity)
+    ], EntityUserLinkInput.prototype, "entity", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
+        __metadata("design:type", String)
+    ], EntityUserLinkInput.prototype, "id", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
+        __metadata("design:type", String)
+    ], EntityUserLinkInput.prototype, "kind", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissions" }),
+        __metadata("design:type", EntityUserLinkPermissionsInput)
+    ], EntityUserLinkInput.prototype, "permissions", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
+        __metadata("design:type", String)
+    ], EntityUserLinkInput.prototype, "selfLink", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=userRef" }),
+        __metadata("design:type", userref_1.UserRef)
+    ], EntityUserLinkInput.prototype, "userRef", void 0);
+    return EntityUserLinkInput;
+}(utils_1.SpeakeasyBase));
+exports.EntityUserLinkInput = EntityUserLinkInput;

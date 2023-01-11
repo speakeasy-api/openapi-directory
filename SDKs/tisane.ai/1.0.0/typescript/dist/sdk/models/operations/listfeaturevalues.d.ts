@@ -10,5 +10,5 @@ export declare class ListFeatureValuesRequest extends SpeakeasyBase {
 export declare class ListFeatureValuesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    listFeatureValues200ApplicationJsonStrings?: string[];
+    listFeatureValues200ApplicationJSONStrings?: string[];
 }

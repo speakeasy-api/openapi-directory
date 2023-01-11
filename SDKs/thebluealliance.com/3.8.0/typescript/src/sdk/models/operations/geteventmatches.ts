@@ -38,7 +38,7 @@ export class GetEventMatchesResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata({ elemType: shared.Match })
   matches?: shared.Match[];

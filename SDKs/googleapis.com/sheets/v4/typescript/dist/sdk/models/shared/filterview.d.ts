@@ -7,7 +7,7 @@ import { SortSpec } from "./sortspec";
  * A filter view.
 **/
 export declare class FilterView extends SpeakeasyBase {
-    criteria?: Map<string, FilterCriteria>;
+    criteria?: Record<string, FilterCriteria>;
     filterSpecs?: FilterSpec[];
     filterViewId?: number;
     namedRangeId?: string;

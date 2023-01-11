@@ -92,7 +92,7 @@ export declare enum GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13P
 **/
 export declare class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroupBenefitItemBenefitDetail extends SpeakeasyBase {
     benefitDescription?: string;
-    benefitId?: string;
+    benefitID?: string;
     benefitName?: string;
     benefitType?: string;
     benefitValue?: string;
@@ -767,8 +767,8 @@ export declare enum GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13P
  * Brand
 **/
 export declare class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrand extends SpeakeasyBase {
-    trademarkId: string;
-    trademarkIpoCode: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum;
+    trademarkID: string;
+    trademarkIPOCode: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataOrganisationBrandTrademarkIpoCodeEnum;
 }
 /**
  * Organisation Name
@@ -830,7 +830,7 @@ export declare class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13
     productName: string;
     productSegment: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductSegmentEnum[];
     productTypeName: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataProductTypeNameEnum;
-    productUrl: string[];
+    productURL: string[];
     tsandCs: string[];
 }
 export declare enum GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaDataAgreementEnum {
@@ -864,7 +864,7 @@ export declare class GetUnsecuredSmeLoansResponse extends SpeakeasyBase {
     fiveHundredAndThreeErrorObject?: GetUnsecuredSmeLoans503ErrorObject;
     contentType: string;
     errorObject?: GetUnsecuredSmeLoansErrorObject;
-    getUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
+    getUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonObject?: GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson;
 }

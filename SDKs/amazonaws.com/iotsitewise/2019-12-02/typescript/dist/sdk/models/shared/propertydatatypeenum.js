@@ -1,8 +1,11 @@
-export var PropertyDataTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PropertyDataTypeEnum = void 0;
+var PropertyDataTypeEnum;
 (function (PropertyDataTypeEnum) {
     PropertyDataTypeEnum["String"] = "STRING";
     PropertyDataTypeEnum["Integer"] = "INTEGER";
     PropertyDataTypeEnum["Double"] = "DOUBLE";
     PropertyDataTypeEnum["Boolean"] = "BOOLEAN";
     PropertyDataTypeEnum["Struct"] = "STRUCT";
-})(PropertyDataTypeEnum || (PropertyDataTypeEnum = {}));
+})(PropertyDataTypeEnum = exports.PropertyDataTypeEnum || (exports.PropertyDataTypeEnum = {}));

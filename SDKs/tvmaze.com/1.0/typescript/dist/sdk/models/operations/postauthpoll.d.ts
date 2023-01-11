@@ -11,6 +11,6 @@ export declare class PostAuthPollRequest extends SpeakeasyBase {
 }
 export declare class PostAuthPollResponse extends SpeakeasyBase {
     contentType: string;
-    postAuthPoll200ApplicationJsonObject?: PostAuthPoll200ApplicationJson;
     statusCode: number;
+    postAuthPoll200ApplicationJSONObject?: PostAuthPoll200ApplicationJson;
 }

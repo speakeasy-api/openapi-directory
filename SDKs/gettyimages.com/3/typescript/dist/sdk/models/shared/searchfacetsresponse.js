@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Artist } from "./artist";
-import { Entertainment } from "./entertainment";
-import { FacetEvent } from "./facetevent";
-import { Location } from "./location";
-import { SpecificPeople } from "./specificpeople";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchFacetsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var artist_1 = require("./artist");
+var entertainment_1 = require("./entertainment");
+var facetevent_1 = require("./facetevent");
+var location_1 = require("./location");
+var specificpeople_1 = require("./specificpeople");
 var SearchFacetsResponse = /** @class */ (function (_super) {
     __extends(SearchFacetsResponse, _super);
     function SearchFacetsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artists", elemType: Artist }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artists", elemType: artist_1.Artist }),
         __metadata("design:type", Array)
     ], SearchFacetsResponse.prototype, "artists", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entertainment", elemType: Entertainment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entertainment", elemType: entertainment_1.Entertainment }),
         __metadata("design:type", Array)
     ], SearchFacetsResponse.prototype, "entertainment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=events", elemType: FacetEvent }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=events", elemType: facetevent_1.FacetEvent }),
         __metadata("design:type", Array)
     ], SearchFacetsResponse.prototype, "events", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locations", elemType: Location }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locations", elemType: location_1.Location }),
         __metadata("design:type", Array)
     ], SearchFacetsResponse.prototype, "locations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=specific_people", elemType: SpecificPeople }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=specific_people", elemType: specificpeople_1.SpecificPeople }),
         __metadata("design:type", Array)
     ], SearchFacetsResponse.prototype, "specificPeople", void 0);
     return SearchFacetsResponse;
-}(SpeakeasyBase));
-export { SearchFacetsResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchFacetsResponse = SearchFacetsResponse;

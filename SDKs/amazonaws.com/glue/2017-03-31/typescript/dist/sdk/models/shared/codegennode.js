@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CodeGenNodeArg } from "./codegennodearg";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CodeGenNode = void 0;
+var utils_1 = require("../../../internal/utils");
+var codegennodearg_1 = require("./codegennodearg");
 // CodeGenNode
 /**
  * Represents a node in a directed acyclic graph (DAG)
@@ -34,21 +37,21 @@ var CodeGenNode = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Args", elemType: CodeGenNodeArg }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Args", elemType: codegennodearg_1.CodeGenNodeArg }),
         __metadata("design:type", Array)
     ], CodeGenNode.prototype, "args", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], CodeGenNode.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LineNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LineNumber" }),
         __metadata("design:type", Number)
     ], CodeGenNode.prototype, "lineNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NodeType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NodeType" }),
         __metadata("design:type", String)
     ], CodeGenNode.prototype, "nodeType", void 0);
     return CodeGenNode;
-}(SpeakeasyBase));
-export { CodeGenNode };
+}(utils_1.SpeakeasyBase));
+exports.CodeGenNode = CodeGenNode;

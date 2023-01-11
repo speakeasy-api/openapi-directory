@@ -18,5 +18,5 @@ export declare class GetGoalResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getGoal200ApplicationJsonObject?: GetGoal200ApplicationJson;
+    getGoal200ApplicationJSONObject?: GetGoal200ApplicationJson;
 }

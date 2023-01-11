@@ -5,5 +5,5 @@ import { ValidDbInstanceModificationsMessage } from "./validdbinstancemodificati
 
 export class DescribeValidDbInstanceModificationsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  validDbInstanceModificationsMessage?: ValidDbInstanceModificationsMessage;
+  validDBInstanceModificationsMessage?: ValidDbInstanceModificationsMessage;
 }

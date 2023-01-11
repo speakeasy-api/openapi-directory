@@ -28,7 +28,7 @@ export declare class PutConfigurationSetDeliveryOptionsResponse extends Speakeas
     badRequestException?: any;
     contentType: string;
     notFoundException?: any;
-    putConfigurationSetDeliveryOptionsResponse?: Map<string, any>;
+    putConfigurationSetDeliveryOptionsResponse?: Record<string, any>;
     statusCode: number;
     tooManyRequestsException?: any;
 }

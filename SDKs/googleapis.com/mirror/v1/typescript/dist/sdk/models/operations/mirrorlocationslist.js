@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,134 +14,159 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MirrorLocationsListResponse = exports.MirrorLocationsListRequest = exports.MirrorLocationsListSecurity = exports.MirrorLocationsListSecurityOption2 = exports.MirrorLocationsListSecurityOption1 = exports.MirrorLocationsListQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var MirrorLocationsListQueryParams = /** @class */ (function (_super) {
     __extends(MirrorLocationsListQueryParams, _super);
     function MirrorLocationsListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], MirrorLocationsListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], MirrorLocationsListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], MirrorLocationsListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], MirrorLocationsListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], MirrorLocationsListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], MirrorLocationsListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userIp" }),
         __metadata("design:type", String)
     ], MirrorLocationsListQueryParams.prototype, "userIp", void 0);
     return MirrorLocationsListQueryParams;
-}(SpeakeasyBase));
-export { MirrorLocationsListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.MirrorLocationsListQueryParams = MirrorLocationsListQueryParams;
 var MirrorLocationsListSecurityOption1 = /** @class */ (function (_super) {
     __extends(MirrorLocationsListSecurityOption1, _super);
     function MirrorLocationsListSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], MirrorLocationsListSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], MirrorLocationsListSecurityOption1.prototype, "oauth2c", void 0);
     return MirrorLocationsListSecurityOption1;
-}(SpeakeasyBase));
-export { MirrorLocationsListSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.MirrorLocationsListSecurityOption1 = MirrorLocationsListSecurityOption1;
 var MirrorLocationsListSecurityOption2 = /** @class */ (function (_super) {
     __extends(MirrorLocationsListSecurityOption2, _super);
     function MirrorLocationsListSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], MirrorLocationsListSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], MirrorLocationsListSecurityOption2.prototype, "oauth2c", void 0);
     return MirrorLocationsListSecurityOption2;
-}(SpeakeasyBase));
-export { MirrorLocationsListSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.MirrorLocationsListSecurityOption2 = MirrorLocationsListSecurityOption2;
 var MirrorLocationsListSecurity = /** @class */ (function (_super) {
     __extends(MirrorLocationsListSecurity, _super);
     function MirrorLocationsListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", MirrorLocationsListSecurityOption1)
     ], MirrorLocationsListSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", MirrorLocationsListSecurityOption2)
     ], MirrorLocationsListSecurity.prototype, "option2", void 0);
     return MirrorLocationsListSecurity;
-}(SpeakeasyBase));
-export { MirrorLocationsListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.MirrorLocationsListSecurity = MirrorLocationsListSecurity;
 var MirrorLocationsListRequest = /** @class */ (function (_super) {
     __extends(MirrorLocationsListRequest, _super);
     function MirrorLocationsListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MirrorLocationsListQueryParams)
     ], MirrorLocationsListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", MirrorLocationsListSecurity)
     ], MirrorLocationsListRequest.prototype, "security", void 0);
     return MirrorLocationsListRequest;
-}(SpeakeasyBase));
-export { MirrorLocationsListRequest };
+}(utils_1.SpeakeasyBase));
+exports.MirrorLocationsListRequest = MirrorLocationsListRequest;
 var MirrorLocationsListResponse = /** @class */ (function (_super) {
     __extends(MirrorLocationsListResponse, _super);
     function MirrorLocationsListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], MirrorLocationsListResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], MirrorLocationsListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], MirrorLocationsListResponse.prototype, "statusCode", void 0);
     return MirrorLocationsListResponse;
-}(SpeakeasyBase));
-export { MirrorLocationsListResponse };
+}(utils_1.SpeakeasyBase));
+exports.MirrorLocationsListResponse = MirrorLocationsListResponse;

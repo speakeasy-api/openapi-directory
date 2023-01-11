@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SlotDefaultValueSpecification } from "./slotdefaultvaluespecification";
-import { PromptSpecification } from "./promptspecification";
-import { SampleUtterance } from "./sampleutterance";
-import { SlotConstraintEnum } from "./slotconstraintenum";
-import { WaitAndContinueSpecification } from "./waitandcontinuespecification";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SlotValueElicitationSetting = void 0;
+var utils_1 = require("../../../internal/utils");
+var slotdefaultvaluespecification_1 = require("./slotdefaultvaluespecification");
+var promptspecification_1 = require("./promptspecification");
+var sampleutterance_1 = require("./sampleutterance");
+var slotconstraintenum_1 = require("./slotconstraintenum");
+var waitandcontinuespecification_1 = require("./waitandcontinuespecification");
 // SlotValueElicitationSetting
 /**
  * Settings that you can use for eliciting a slot value.
@@ -38,25 +41,25 @@ var SlotValueElicitationSetting = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultValueSpecification" }),
-        __metadata("design:type", SlotDefaultValueSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultValueSpecification" }),
+        __metadata("design:type", slotdefaultvaluespecification_1.SlotDefaultValueSpecification)
     ], SlotValueElicitationSetting.prototype, "defaultValueSpecification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=promptSpecification" }),
-        __metadata("design:type", PromptSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=promptSpecification" }),
+        __metadata("design:type", promptspecification_1.PromptSpecification)
     ], SlotValueElicitationSetting.prototype, "promptSpecification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sampleUtterances", elemType: SampleUtterance }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sampleUtterances", elemType: sampleutterance_1.SampleUtterance }),
         __metadata("design:type", Array)
     ], SlotValueElicitationSetting.prototype, "sampleUtterances", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slotConstraint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slotConstraint" }),
         __metadata("design:type", String)
     ], SlotValueElicitationSetting.prototype, "slotConstraint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=waitAndContinueSpecification" }),
-        __metadata("design:type", WaitAndContinueSpecification)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=waitAndContinueSpecification" }),
+        __metadata("design:type", waitandcontinuespecification_1.WaitAndContinueSpecification)
     ], SlotValueElicitationSetting.prototype, "waitAndContinueSpecification", void 0);
     return SlotValueElicitationSetting;
-}(SpeakeasyBase));
-export { SlotValueElicitationSetting };
+}(utils_1.SpeakeasyBase));
+exports.SlotValueElicitationSetting = SlotValueElicitationSetting;

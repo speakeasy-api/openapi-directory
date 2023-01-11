@@ -31,5 +31,5 @@ export class GetDeviceCameraVideoLinkResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceCameraVideoLink200ApplicationJsonObject?: Map<string, any>;
+  getDeviceCameraVideoLink200ApplicationJSONObject?: Record<string, any>;
 }

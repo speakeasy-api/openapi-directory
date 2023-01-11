@@ -17,7 +17,7 @@ export declare class UpdateNodegroupConfigHeaders extends SpeakeasyBase {
  * An object representing a Kubernetes label change for a managed node group.
 **/
 export declare class UpdateNodegroupConfigRequestBodyLabels extends SpeakeasyBase {
-    addOrUpdateLabels?: Map<string, string>;
+    addOrUpdateLabels?: Record<string, string>;
     removeLabels?: string[];
 }
 /**

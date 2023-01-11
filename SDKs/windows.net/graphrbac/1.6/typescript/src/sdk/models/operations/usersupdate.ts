@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class UsersUpdatePathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" })
-  tenantId: string;
+  tenantID: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=upnOrObjectId" })
   upnOrObjectId: string;
@@ -20,10 +20,10 @@ export class UsersUpdateQueryParams extends SpeakeasyBase {
 
 export class UsersUpdateRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  userUpdateParameters?: Map<string, Map<string, any>>;
+  userUpdateParameters?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata({ data: "request, media_type=text/json" })
-  userUpdateParameters1?: Map<string, Map<string, any>>;
+  userUpdateParameters1?: Record<string, Record<string, any>>;
 }
 
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderAddress = void 0;
+var utils_1 = require("../../../internal/utils");
 var OrderAddress = /** @class */ (function (_super) {
     __extends(OrderAddress, _super);
     function OrderAddress() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], OrderAddress.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fullAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fullAddress" }),
         __metadata("design:type", Array)
     ], OrderAddress.prototype, "fullAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isPostOfficeBox" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isPostOfficeBox" }),
         __metadata("design:type", Boolean)
     ], OrderAddress.prototype, "isPostOfficeBox", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locality" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locality" }),
         __metadata("design:type", String)
     ], OrderAddress.prototype, "locality", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=postalCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=postalCode" }),
         __metadata("design:type", String)
     ], OrderAddress.prototype, "postalCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recipientName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recipientName" }),
         __metadata("design:type", String)
     ], OrderAddress.prototype, "recipientName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=region" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=region" }),
         __metadata("design:type", String)
     ], OrderAddress.prototype, "region", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streetAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streetAddress" }),
         __metadata("design:type", Array)
     ], OrderAddress.prototype, "streetAddress", void 0);
     return OrderAddress;
-}(SpeakeasyBase));
-export { OrderAddress };
+}(utils_1.SpeakeasyBase));
+exports.OrderAddress = OrderAddress;

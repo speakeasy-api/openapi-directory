@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ColumnMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
 // ColumnMetadata
 /**
  * The properties (metadata) of a column.
@@ -33,57 +36,57 @@ var ColumnMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columnDefault" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columnDefault" }),
         __metadata("design:type", String)
     ], ColumnMetadata.prototype, "columnDefault", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isCaseSensitive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isCaseSensitive" }),
         __metadata("design:type", Boolean)
     ], ColumnMetadata.prototype, "isCaseSensitive", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isCurrency" }),
         __metadata("design:type", Boolean)
     ], ColumnMetadata.prototype, "isCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isSigned" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isSigned" }),
         __metadata("design:type", Boolean)
     ], ColumnMetadata.prototype, "isSigned", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=label" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=label" }),
         __metadata("design:type", String)
     ], ColumnMetadata.prototype, "label", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=length" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=length" }),
         __metadata("design:type", Number)
     ], ColumnMetadata.prototype, "length", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ColumnMetadata.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nullable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nullable" }),
         __metadata("design:type", Number)
     ], ColumnMetadata.prototype, "nullable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=precision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=precision" }),
         __metadata("design:type", Number)
     ], ColumnMetadata.prototype, "precision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scale" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scale" }),
         __metadata("design:type", Number)
     ], ColumnMetadata.prototype, "scale", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemaName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemaName" }),
         __metadata("design:type", String)
     ], ColumnMetadata.prototype, "schemaName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tableName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tableName" }),
         __metadata("design:type", String)
     ], ColumnMetadata.prototype, "tableName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=typeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=typeName" }),
         __metadata("design:type", String)
     ], ColumnMetadata.prototype, "typeName", void 0);
     return ColumnMetadata;
-}(SpeakeasyBase));
-export { ColumnMetadata };
+}(utils_1.SpeakeasyBase));
+exports.ColumnMetadata = ColumnMetadata;

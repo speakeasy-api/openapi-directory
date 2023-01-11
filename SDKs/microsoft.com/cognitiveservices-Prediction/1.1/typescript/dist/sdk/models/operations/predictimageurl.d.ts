@@ -11,11 +11,11 @@ export declare class PredictImageUrlHeaders extends SpeakeasyBase {
     predictionKey: string;
 }
 export declare class PredictImageUrlRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     imageUrl?: shared.ImageUrl;
     imageUrl1?: shared.ImageUrl;
     imageUrl2?: shared.ImageUrl;
-    textXml: Uint8Array;
+    textXML: Uint8Array;
 }
 export declare class PredictImageUrlRequest extends SpeakeasyBase {
     pathParams: PredictImageUrlPathParams;

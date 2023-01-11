@@ -82,5 +82,5 @@ export class UpdateSchemaResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateSchema200ApplicationJsonObject?: UpdateSchema200ApplicationJson;
+  updateSchema200ApplicationJSONObject?: UpdateSchema200ApplicationJson;
 }

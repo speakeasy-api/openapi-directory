@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,19 +23,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetCertificatesIdResponse = exports.GetCertificatesIdRequest = exports.GetCertificatesIdCertificateResponse = exports.GetCertificatesIdCertificateResponseCertificate = exports.GetCertificatesIdCertificateResponseCertificateUsedBy = exports.GetCertificatesIdCertificateResponseCertificateTypeEnum = exports.GetCertificatesIdCertificateResponseCertificateStatus = exports.GetCertificatesIdCertificateResponseCertificateStatusRenewalEnum = exports.GetCertificatesIdCertificateResponseCertificateStatusIssuanceEnum = exports.GetCertificatesIdCertificateResponseCertificateStatusError = exports.GetCertificatesIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetCertificatesIdPathParams = /** @class */ (function (_super) {
     __extends(GetCertificatesIdPathParams, _super);
     function GetCertificatesIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetCertificatesIdPathParams.prototype, "id", void 0);
     return GetCertificatesIdPathParams;
-}(SpeakeasyBase));
-export { GetCertificatesIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetCertificatesIdPathParams = GetCertificatesIdPathParams;
 // GetCertificatesIdCertificateResponseCertificateStatusError
 /**
  * If issuance or renewal reports `failed`, this property contains information about what happened
@@ -45,29 +48,29 @@ var GetCertificatesIdCertificateResponseCertificateStatusError = /** @class */ (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", String)
     ], GetCertificatesIdCertificateResponseCertificateStatusError.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GetCertificatesIdCertificateResponseCertificateStatusError.prototype, "message", void 0);
     return GetCertificatesIdCertificateResponseCertificateStatusError;
-}(SpeakeasyBase));
-export { GetCertificatesIdCertificateResponseCertificateStatusError };
-export var GetCertificatesIdCertificateResponseCertificateStatusIssuanceEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetCertificatesIdCertificateResponseCertificateStatusError = GetCertificatesIdCertificateResponseCertificateStatusError;
+var GetCertificatesIdCertificateResponseCertificateStatusIssuanceEnum;
 (function (GetCertificatesIdCertificateResponseCertificateStatusIssuanceEnum) {
     GetCertificatesIdCertificateResponseCertificateStatusIssuanceEnum["Pending"] = "pending";
     GetCertificatesIdCertificateResponseCertificateStatusIssuanceEnum["Completed"] = "completed";
     GetCertificatesIdCertificateResponseCertificateStatusIssuanceEnum["Failed"] = "failed";
-})(GetCertificatesIdCertificateResponseCertificateStatusIssuanceEnum || (GetCertificatesIdCertificateResponseCertificateStatusIssuanceEnum = {}));
-export var GetCertificatesIdCertificateResponseCertificateStatusRenewalEnum;
+})(GetCertificatesIdCertificateResponseCertificateStatusIssuanceEnum = exports.GetCertificatesIdCertificateResponseCertificateStatusIssuanceEnum || (exports.GetCertificatesIdCertificateResponseCertificateStatusIssuanceEnum = {}));
+var GetCertificatesIdCertificateResponseCertificateStatusRenewalEnum;
 (function (GetCertificatesIdCertificateResponseCertificateStatusRenewalEnum) {
     GetCertificatesIdCertificateResponseCertificateStatusRenewalEnum["Scheduled"] = "scheduled";
     GetCertificatesIdCertificateResponseCertificateStatusRenewalEnum["Pending"] = "pending";
     GetCertificatesIdCertificateResponseCertificateStatusRenewalEnum["Failed"] = "failed";
     GetCertificatesIdCertificateResponseCertificateStatusRenewalEnum["Unavailable"] = "unavailable";
-})(GetCertificatesIdCertificateResponseCertificateStatusRenewalEnum || (GetCertificatesIdCertificateResponseCertificateStatusRenewalEnum = {}));
+})(GetCertificatesIdCertificateResponseCertificateStatusRenewalEnum = exports.GetCertificatesIdCertificateResponseCertificateStatusRenewalEnum || (exports.GetCertificatesIdCertificateResponseCertificateStatusRenewalEnum = {}));
 // GetCertificatesIdCertificateResponseCertificateStatus
 /**
  * Current status of a type `managed` Certificate, always *null* for type `uploaded` Certificates
@@ -78,138 +81,138 @@ var GetCertificatesIdCertificateResponseCertificateStatus = /** @class */ (funct
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
         __metadata("design:type", GetCertificatesIdCertificateResponseCertificateStatusError)
     ], GetCertificatesIdCertificateResponseCertificateStatus.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuance" }),
         __metadata("design:type", String)
     ], GetCertificatesIdCertificateResponseCertificateStatus.prototype, "issuance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=renewal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=renewal" }),
         __metadata("design:type", String)
     ], GetCertificatesIdCertificateResponseCertificateStatus.prototype, "renewal", void 0);
     return GetCertificatesIdCertificateResponseCertificateStatus;
-}(SpeakeasyBase));
-export { GetCertificatesIdCertificateResponseCertificateStatus };
-export var GetCertificatesIdCertificateResponseCertificateTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetCertificatesIdCertificateResponseCertificateStatus = GetCertificatesIdCertificateResponseCertificateStatus;
+var GetCertificatesIdCertificateResponseCertificateTypeEnum;
 (function (GetCertificatesIdCertificateResponseCertificateTypeEnum) {
     GetCertificatesIdCertificateResponseCertificateTypeEnum["Uploaded"] = "uploaded";
     GetCertificatesIdCertificateResponseCertificateTypeEnum["Managed"] = "managed";
-})(GetCertificatesIdCertificateResponseCertificateTypeEnum || (GetCertificatesIdCertificateResponseCertificateTypeEnum = {}));
+})(GetCertificatesIdCertificateResponseCertificateTypeEnum = exports.GetCertificatesIdCertificateResponseCertificateTypeEnum || (exports.GetCertificatesIdCertificateResponseCertificateTypeEnum = {}));
 var GetCertificatesIdCertificateResponseCertificateUsedBy = /** @class */ (function (_super) {
     __extends(GetCertificatesIdCertificateResponseCertificateUsedBy, _super);
     function GetCertificatesIdCertificateResponseCertificateUsedBy() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetCertificatesIdCertificateResponseCertificateUsedBy.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetCertificatesIdCertificateResponseCertificateUsedBy.prototype, "type", void 0);
     return GetCertificatesIdCertificateResponseCertificateUsedBy;
-}(SpeakeasyBase));
-export { GetCertificatesIdCertificateResponseCertificateUsedBy };
+}(utils_1.SpeakeasyBase));
+exports.GetCertificatesIdCertificateResponseCertificateUsedBy = GetCertificatesIdCertificateResponseCertificateUsedBy;
 var GetCertificatesIdCertificateResponseCertificate = /** @class */ (function (_super) {
     __extends(GetCertificatesIdCertificateResponseCertificate, _super);
     function GetCertificatesIdCertificateResponseCertificate() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificate" }),
         __metadata("design:type", String)
     ], GetCertificatesIdCertificateResponseCertificate.prototype, "certificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], GetCertificatesIdCertificateResponseCertificate.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain_names" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain_names" }),
         __metadata("design:type", Array)
     ], GetCertificatesIdCertificateResponseCertificate.prototype, "domainNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fingerprint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fingerprint" }),
         __metadata("design:type", String)
     ], GetCertificatesIdCertificateResponseCertificate.prototype, "fingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetCertificatesIdCertificateResponseCertificate.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], GetCertificatesIdCertificateResponseCertificate.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetCertificatesIdCertificateResponseCertificate.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=not_valid_after" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=not_valid_after" }),
         __metadata("design:type", String)
     ], GetCertificatesIdCertificateResponseCertificate.prototype, "notValidAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=not_valid_before" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=not_valid_before" }),
         __metadata("design:type", String)
     ], GetCertificatesIdCertificateResponseCertificate.prototype, "notValidBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", GetCertificatesIdCertificateResponseCertificateStatus)
     ], GetCertificatesIdCertificateResponseCertificate.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetCertificatesIdCertificateResponseCertificate.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=used_by", elemType: GetCertificatesIdCertificateResponseCertificateUsedBy }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=used_by", elemType: GetCertificatesIdCertificateResponseCertificateUsedBy }),
         __metadata("design:type", Array)
     ], GetCertificatesIdCertificateResponseCertificate.prototype, "usedBy", void 0);
     return GetCertificatesIdCertificateResponseCertificate;
-}(SpeakeasyBase));
-export { GetCertificatesIdCertificateResponseCertificate };
+}(utils_1.SpeakeasyBase));
+exports.GetCertificatesIdCertificateResponseCertificate = GetCertificatesIdCertificateResponseCertificate;
 var GetCertificatesIdCertificateResponse = /** @class */ (function (_super) {
     __extends(GetCertificatesIdCertificateResponse, _super);
     function GetCertificatesIdCertificateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificate" }),
         __metadata("design:type", GetCertificatesIdCertificateResponseCertificate)
     ], GetCertificatesIdCertificateResponse.prototype, "certificate", void 0);
     return GetCertificatesIdCertificateResponse;
-}(SpeakeasyBase));
-export { GetCertificatesIdCertificateResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCertificatesIdCertificateResponse = GetCertificatesIdCertificateResponse;
 var GetCertificatesIdRequest = /** @class */ (function (_super) {
     __extends(GetCertificatesIdRequest, _super);
     function GetCertificatesIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCertificatesIdPathParams)
     ], GetCertificatesIdRequest.prototype, "pathParams", void 0);
     return GetCertificatesIdRequest;
-}(SpeakeasyBase));
-export { GetCertificatesIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetCertificatesIdRequest = GetCertificatesIdRequest;
 var GetCertificatesIdResponse = /** @class */ (function (_super) {
     __extends(GetCertificatesIdResponse, _super);
     function GetCertificatesIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetCertificatesIdCertificateResponse)
     ], GetCertificatesIdResponse.prototype, "certificateResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetCertificatesIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetCertificatesIdResponse.prototype, "statusCode", void 0);
     return GetCertificatesIdResponse;
-}(SpeakeasyBase));
-export { GetCertificatesIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetCertificatesIdResponse = GetCertificatesIdResponse;

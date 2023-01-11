@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClusterSetting } from "./clustersetting";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateClusterSettingsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var clustersetting_1 = require("./clustersetting");
 var UpdateClusterSettingsRequest = /** @class */ (function (_super) {
     __extends(UpdateClusterSettingsRequest, _super);
     function UpdateClusterSettingsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster" }),
         __metadata("design:type", String)
     ], UpdateClusterSettingsRequest.prototype, "cluster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings", elemType: ClusterSetting }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings", elemType: clustersetting_1.ClusterSetting }),
         __metadata("design:type", Array)
     ], UpdateClusterSettingsRequest.prototype, "settings", void 0);
     return UpdateClusterSettingsRequest;
-}(SpeakeasyBase));
-export { UpdateClusterSettingsRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateClusterSettingsRequest = UpdateClusterSettingsRequest;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DimensionKeyDetail } from "./dimensionkeydetail";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDimensionKeyDetailsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var dimensionkeydetail_1 = require("./dimensionkeydetail");
 var GetDimensionKeyDetailsResponse = /** @class */ (function (_super) {
     __extends(GetDimensionKeyDetailsResponse, _super);
     function GetDimensionKeyDetailsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Dimensions", elemType: DimensionKeyDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Dimensions", elemType: dimensionkeydetail_1.DimensionKeyDetail }),
         __metadata("design:type", Array)
     ], GetDimensionKeyDetailsResponse.prototype, "dimensions", void 0);
     return GetDimensionKeyDetailsResponse;
-}(SpeakeasyBase));
-export { GetDimensionKeyDetailsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDimensionKeyDetailsResponse = GetDimensionKeyDetailsResponse;

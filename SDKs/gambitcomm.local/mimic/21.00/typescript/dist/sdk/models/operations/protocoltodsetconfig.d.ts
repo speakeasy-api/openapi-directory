@@ -10,5 +10,5 @@ export declare class ProtocolTodSetConfigRequest extends SpeakeasyBase {
 export declare class ProtocolTodSetConfigResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolTodSetConfig200ApplicationJsonString?: string;
+    protocolTodSetConfig200ApplicationJSONString?: string;
 }

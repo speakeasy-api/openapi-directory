@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleIdentityAccesscontextmanagerV1OsConstraint } from "./googleidentityaccesscontextmanagerv1osconstraint";
-export var GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleIdentityAccesscontextmanagerV1DevicePolicy = exports.GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum = exports.GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleidentityaccesscontextmanagerv1osconstraint_1 = require("./googleidentityaccesscontextmanagerv1osconstraint");
+var GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum;
 (function (GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum) {
     GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum["ManagementUnspecified"] = "MANAGEMENT_UNSPECIFIED";
     GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum["None"] = "NONE";
     GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum["Basic"] = "BASIC";
     GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum["Complete"] = "COMPLETE";
-})(GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum || (GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum = {}));
-export var GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum;
+})(GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum = exports.GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum || (exports.GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum = {}));
+var GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum;
 (function (GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum) {
     GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum["EncryptionUnspecified"] = "ENCRYPTION_UNSPECIFIED";
     GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum["EncryptionUnsupported"] = "ENCRYPTION_UNSUPPORTED";
     GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum["Unencrypted"] = "UNENCRYPTED";
     GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum["Encrypted"] = "ENCRYPTED";
-})(GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum || (GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum = {}));
+})(GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum = exports.GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum || (exports.GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum = {}));
 // GoogleIdentityAccesscontextmanagerV1DevicePolicy
 /**
  * `DevicePolicy` specifies device specific restrictions necessary to acquire a given access level. A `DevicePolicy` specifies requirements for requests from devices to be granted access levels, it does not do any enforcement on the device. `DevicePolicy` acts as an AND over all specified fields, and each repeated field is an OR over its elements. Any unset fields are ignored. For example, if the proto is { os_type : DESKTOP_WINDOWS, os_type : DESKTOP_LINUX, encryption_status: ENCRYPTED}, then the DevicePolicy will be true for requests originating from encrypted Linux desktops and encrypted Windows desktops.
@@ -48,29 +51,29 @@ var GoogleIdentityAccesscontextmanagerV1DevicePolicy = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedDeviceManagementLevels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedDeviceManagementLevels" }),
         __metadata("design:type", Array)
     ], GoogleIdentityAccesscontextmanagerV1DevicePolicy.prototype, "allowedDeviceManagementLevels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedEncryptionStatuses" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedEncryptionStatuses" }),
         __metadata("design:type", Array)
     ], GoogleIdentityAccesscontextmanagerV1DevicePolicy.prototype, "allowedEncryptionStatuses", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=osConstraints", elemType: GoogleIdentityAccesscontextmanagerV1OsConstraint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=osConstraints", elemType: googleidentityaccesscontextmanagerv1osconstraint_1.GoogleIdentityAccesscontextmanagerV1OsConstraint }),
         __metadata("design:type", Array)
     ], GoogleIdentityAccesscontextmanagerV1DevicePolicy.prototype, "osConstraints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requireAdminApproval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requireAdminApproval" }),
         __metadata("design:type", Boolean)
     ], GoogleIdentityAccesscontextmanagerV1DevicePolicy.prototype, "requireAdminApproval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requireCorpOwned" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requireCorpOwned" }),
         __metadata("design:type", Boolean)
     ], GoogleIdentityAccesscontextmanagerV1DevicePolicy.prototype, "requireCorpOwned", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requireScreenlock" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requireScreenlock" }),
         __metadata("design:type", Boolean)
     ], GoogleIdentityAccesscontextmanagerV1DevicePolicy.prototype, "requireScreenlock", void 0);
     return GoogleIdentityAccesscontextmanagerV1DevicePolicy;
-}(SpeakeasyBase));
-export { GoogleIdentityAccesscontextmanagerV1DevicePolicy };
+}(utils_1.SpeakeasyBase));
+exports.GoogleIdentityAccesscontextmanagerV1DevicePolicy = GoogleIdentityAccesscontextmanagerV1DevicePolicy;

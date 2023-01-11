@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Subject } from "./subject";
-import { SubjectAltNames } from "./subjectaltnames";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubjectConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var subject_1 = require("./subject");
+var subjectaltnames_1 = require("./subjectaltnames");
 // SubjectConfig
 /**
  * These values are used to create the distinguished name and subject alternative name fields in an X.509 certificate.
@@ -35,13 +38,13 @@ var SubjectConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subject" }),
-        __metadata("design:type", Subject)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subject" }),
+        __metadata("design:type", subject_1.Subject)
     ], SubjectConfig.prototype, "subject", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subjectAltName" }),
-        __metadata("design:type", SubjectAltNames)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subjectAltName" }),
+        __metadata("design:type", subjectaltnames_1.SubjectAltNames)
     ], SubjectConfig.prototype, "subjectAltName", void 0);
     return SubjectConfig;
-}(SpeakeasyBase));
-export { SubjectConfig };
+}(utils_1.SpeakeasyBase));
+exports.SubjectConfig = SubjectConfig;

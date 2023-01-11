@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,47 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var HubStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HubInput = exports.Hub = exports.HubStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var HubStateEnum;
 (function (HubStateEnum) {
     HubStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     HubStateEnum["Creating"] = "CREATING";
     HubStateEnum["Active"] = "ACTIVE";
     HubStateEnum["Deleting"] = "DELETING";
     HubStateEnum["Updating"] = "UPDATING";
-})(HubStateEnum || (HubStateEnum = {}));
-// HubInput
-/**
- * Network Connectivity Center is a hub-and-spoke abstraction for network connectivity management in Google Cloud. It reduces operational complexity through a simple, centralized connectivity management model. Following is the resource message of a hub.
-**/
-var HubInput = /** @class */ (function (_super) {
-    __extends(HubInput, _super);
-    function HubInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
-        __metadata("design:type", String)
-    ], HubInput.prototype, "createTime", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
-        __metadata("design:type", String)
-    ], HubInput.prototype, "description", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
-    ], HubInput.prototype, "labels", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], HubInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
-        __metadata("design:type", String)
-    ], HubInput.prototype, "updateTime", void 0);
-    return HubInput;
-}(SpeakeasyBase));
-export { HubInput };
+})(HubStateEnum = exports.HubStateEnum || (exports.HubStateEnum = {}));
 // Hub
 /**
  * Network Connectivity Center is a hub-and-spoke abstraction for network connectivity management in Google Cloud. It reduces operational complexity through a simple, centralized connectivity management model. Following is the resource message of a hub.
@@ -73,37 +44,69 @@ var Hub = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
         __metadata("design:type", String)
     ], Hub.prototype, "createTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Hub.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], Hub.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Hub.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=spokes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=spokes" }),
         __metadata("design:type", Array)
     ], Hub.prototype, "spokes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Hub.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uniqueId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uniqueId" }),
         __metadata("design:type", String)
     ], Hub.prototype, "uniqueId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
         __metadata("design:type", String)
     ], Hub.prototype, "updateTime", void 0);
     return Hub;
-}(SpeakeasyBase));
-export { Hub };
+}(utils_1.SpeakeasyBase));
+exports.Hub = Hub;
+// HubInput
+/**
+ * Network Connectivity Center is a hub-and-spoke abstraction for network connectivity management in Google Cloud. It reduces operational complexity through a simple, centralized connectivity management model. Following is the resource message of a hub.
+**/
+var HubInput = /** @class */ (function (_super) {
+    __extends(HubInput, _super);
+    function HubInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createTime" }),
+        __metadata("design:type", String)
+    ], HubInput.prototype, "createTime", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], HubInput.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
+    ], HubInput.prototype, "labels", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], HubInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateTime" }),
+        __metadata("design:type", String)
+    ], HubInput.prototype, "updateTime", void 0);
+    return HubInput;
+}(utils_1.SpeakeasyBase));
+exports.HubInput = HubInput;

@@ -36,6 +36,7 @@ export declare class Case extends SpeakeasyBase {
     description?: string;
     displayName?: string;
     escalated?: boolean;
+    languageCode?: string;
     name?: string;
     priority?: CasePriorityEnum;
     severity?: CaseSeverityEnum;
@@ -54,6 +55,7 @@ export declare class CaseInput extends SpeakeasyBase {
     description?: string;
     displayName?: string;
     escalated?: boolean;
+    languageCode?: string;
     name?: string;
     priority?: CasePriorityEnum;
     severity?: CaseSeverityEnum;

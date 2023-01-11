@@ -22,5 +22,5 @@ export declare class CreateProjectForTeamResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    createProjectForTeam201ApplicationJsonObject?: CreateProjectForTeam201ApplicationJson;
+    createProjectForTeam201ApplicationJSONObject?: CreateProjectForTeam201ApplicationJson;
 }

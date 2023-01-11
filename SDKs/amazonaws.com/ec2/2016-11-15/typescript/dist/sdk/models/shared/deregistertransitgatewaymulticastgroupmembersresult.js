@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayMulticastDeregisteredGroupMembers } from "./transitgatewaymulticastderegisteredgroupmembers";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeregisterTransitGatewayMulticastGroupMembersResult = exports.DeregisterTransitGatewayMulticastGroupMembersResultDeregisteredMulticastGroupMembers = void 0;
+var utils_1 = require("../../../internal/utils");
+// DeregisterTransitGatewayMulticastGroupMembersResultDeregisteredMulticastGroupMembers
+/**
+ * Information about the deregistered members.
+**/
+var DeregisterTransitGatewayMulticastGroupMembersResultDeregisteredMulticastGroupMembers = /** @class */ (function (_super) {
+    __extends(DeregisterTransitGatewayMulticastGroupMembersResultDeregisteredMulticastGroupMembers, _super);
+    function DeregisterTransitGatewayMulticastGroupMembersResultDeregisteredMulticastGroupMembers() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeregisterTransitGatewayMulticastGroupMembersResultDeregisteredMulticastGroupMembers.prototype, "deregisteredNetworkInterfaceIds", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeregisterTransitGatewayMulticastGroupMembersResultDeregisteredMulticastGroupMembers.prototype, "groupIpAddress", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeregisterTransitGatewayMulticastGroupMembersResultDeregisteredMulticastGroupMembers.prototype, "transitGatewayMulticastDomainId", void 0);
+    return DeregisterTransitGatewayMulticastGroupMembersResultDeregisteredMulticastGroupMembers;
+}(utils_1.SpeakeasyBase));
+exports.DeregisterTransitGatewayMulticastGroupMembersResultDeregisteredMulticastGroupMembers = DeregisterTransitGatewayMulticastGroupMembersResultDeregisteredMulticastGroupMembers;
 var DeregisterTransitGatewayMulticastGroupMembersResult = /** @class */ (function (_super) {
     __extends(DeregisterTransitGatewayMulticastGroupMembersResult, _super);
     function DeregisterTransitGatewayMulticastGroupMembersResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", TransitGatewayMulticastDeregisteredGroupMembers)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DeregisterTransitGatewayMulticastGroupMembersResultDeregisteredMulticastGroupMembers)
     ], DeregisterTransitGatewayMulticastGroupMembersResult.prototype, "deregisteredMulticastGroupMembers", void 0);
     return DeregisterTransitGatewayMulticastGroupMembersResult;
-}(SpeakeasyBase));
-export { DeregisterTransitGatewayMulticastGroupMembersResult };
+}(utils_1.SpeakeasyBase));
+exports.DeregisterTransitGatewayMulticastGroupMembersResult = DeregisterTransitGatewayMulticastGroupMembersResult;

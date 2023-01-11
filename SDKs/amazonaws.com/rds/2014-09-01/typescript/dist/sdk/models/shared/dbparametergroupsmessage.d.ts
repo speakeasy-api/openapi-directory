@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { DbParameterGroup } from "./dbparametergroup";
+import { DbParameterGroupList } from "./dbparametergrouplist";
 export declare class DbParameterGroupsMessage extends SpeakeasyBase {
-    dbParameterGroups?: DbParameterGroup[];
+    dbParameterGroups?: DbParameterGroupList[];
     marker?: string;
 }

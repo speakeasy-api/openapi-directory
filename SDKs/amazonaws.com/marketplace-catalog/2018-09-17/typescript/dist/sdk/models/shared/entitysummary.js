@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EntitySummary = void 0;
+var utils_1 = require("../../../internal/utils");
 // EntitySummary
 /**
  * This object is a container for common summary information about the entity. The summary doesn't contain the whole entity structure, but it does contain information common across all entities.
@@ -33,29 +36,29 @@ var EntitySummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EntityArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EntityArn" }),
         __metadata("design:type", String)
     ], EntitySummary.prototype, "entityArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EntityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EntityId" }),
         __metadata("design:type", String)
     ], EntitySummary.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EntityType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EntityType" }),
         __metadata("design:type", String)
     ], EntitySummary.prototype, "entityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedDate" }),
         __metadata("design:type", String)
     ], EntitySummary.prototype, "lastModifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], EntitySummary.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Visibility" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Visibility" }),
         __metadata("design:type", String)
     ], EntitySummary.prototype, "visibility", void 0);
     return EntitySummary;
-}(SpeakeasyBase));
-export { EntitySummary };
+}(utils_1.SpeakeasyBase));
+exports.EntitySummary = EntitySummary;

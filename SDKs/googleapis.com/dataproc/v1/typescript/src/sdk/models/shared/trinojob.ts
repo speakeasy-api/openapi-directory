@@ -22,7 +22,7 @@ export class TrinoJob extends SpeakeasyBase {
   outputFormat?: string;
 
   @SpeakeasyMetadata({ data: "json, name=properties" })
-  properties?: Map<string, string>;
+  properties?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=queryFileUri" })
   queryFileUri?: string;

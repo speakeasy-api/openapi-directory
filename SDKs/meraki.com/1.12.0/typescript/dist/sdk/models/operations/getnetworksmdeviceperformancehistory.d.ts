@@ -14,7 +14,7 @@ export declare class GetNetworkSmDevicePerformanceHistoryRequest extends Speakea
 }
 export declare class GetNetworkSmDevicePerformanceHistoryResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getNetworkSmDevicePerformanceHistory200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSmDevicePerformanceHistory200ApplicationJSONObject?: Record<string, any>;
 }

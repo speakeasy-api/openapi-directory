@@ -129,6 +129,6 @@ export declare class GetPricing200ApplicationJson extends SpeakeasyBase {
 }
 export declare class GetPricingResponse extends SpeakeasyBase {
     contentType: string;
-    getPricing200ApplicationJsonObject?: GetPricing200ApplicationJson;
     statusCode: number;
+    getPricing200ApplicationJSONObject?: GetPricing200ApplicationJson;
 }

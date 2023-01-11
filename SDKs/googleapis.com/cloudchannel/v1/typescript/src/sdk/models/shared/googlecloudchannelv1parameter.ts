@@ -3,14 +3,11 @@ import { GoogleCloudChannelV1Value } from "./googlecloudchannelv1value";
 
 
 
-// GoogleCloudChannelV1Parameter
+// GoogleCloudChannelV1ParameterInput
 /** 
  * Definition for extended entitlement parameters.
 **/
-export class GoogleCloudChannelV1Parameter extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=editable" })
-  editable?: boolean;
-
+export class GoogleCloudChannelV1ParameterInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 
@@ -19,11 +16,14 @@ export class GoogleCloudChannelV1Parameter extends SpeakeasyBase {
 }
 
 
-// GoogleCloudChannelV1ParameterInput
+// GoogleCloudChannelV1Parameter
 /** 
  * Definition for extended entitlement parameters.
 **/
-export class GoogleCloudChannelV1ParameterInput extends SpeakeasyBase {
+export class GoogleCloudChannelV1Parameter extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=editable" })
+  editable?: boolean;
+
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
 

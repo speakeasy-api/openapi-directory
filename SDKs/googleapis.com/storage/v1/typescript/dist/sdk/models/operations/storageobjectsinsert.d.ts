@@ -60,6 +60,6 @@ export declare class StorageObjectsInsertRequest extends SpeakeasyBase {
 }
 export declare class StorageObjectsInsertResponse extends SpeakeasyBase {
     contentType: string;
-    object?: shared.Object;
+    object?: shared.ObjectT;
     statusCode: number;
 }

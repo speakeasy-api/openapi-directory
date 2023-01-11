@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,206 +14,231 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlaydeveloperreportingVitalsErrorsReportsSearchResponse = exports.PlaydeveloperreportingVitalsErrorsReportsSearchRequest = exports.PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams = exports.PlaydeveloperreportingVitalsErrorsReportsSearchPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var PlaydeveloperreportingVitalsErrorsReportsSearchPathParams = /** @class */ (function (_super) {
     __extends(PlaydeveloperreportingVitalsErrorsReportsSearchPathParams, _super);
     function PlaydeveloperreportingVitalsErrorsReportsSearchPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=parent" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchPathParams.prototype, "parent", void 0);
     return PlaydeveloperreportingVitalsErrorsReportsSearchPathParams;
-}(SpeakeasyBase));
-export { PlaydeveloperreportingVitalsErrorsReportsSearchPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PlaydeveloperreportingVitalsErrorsReportsSearchPathParams = PlaydeveloperreportingVitalsErrorsReportsSearchPathParams;
 var PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams = /** @class */ (function (_super) {
     __extends(PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams, _super);
     function PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filter" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.endTime.day" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.endTime.day" }),
         __metadata("design:type", Number)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalEndTimeDay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.endTime.hours" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.endTime.hours" }),
         __metadata("design:type", Number)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalEndTimeHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.endTime.minutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.endTime.minutes" }),
         __metadata("design:type", Number)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalEndTimeMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.endTime.month" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.endTime.month" }),
         __metadata("design:type", Number)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalEndTimeMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.endTime.nanos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.endTime.nanos" }),
         __metadata("design:type", Number)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalEndTimeNanos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.endTime.seconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.endTime.seconds" }),
         __metadata("design:type", Number)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalEndTimeSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.endTime.timeZone.id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.endTime.timeZone.id" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalEndTimeTimeZoneId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.endTime.timeZone.version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.endTime.timeZone.version" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalEndTimeTimeZoneVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.endTime.utcOffset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.endTime.utcOffset" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalEndTimeUtcOffset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.endTime.year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.endTime.year" }),
         __metadata("design:type", Number)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalEndTimeYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.startTime.day" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.startTime.day" }),
         __metadata("design:type", Number)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalStartTimeDay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.startTime.hours" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.startTime.hours" }),
         __metadata("design:type", Number)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalStartTimeHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.startTime.minutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.startTime.minutes" }),
         __metadata("design:type", Number)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalStartTimeMinutes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.startTime.month" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.startTime.month" }),
         __metadata("design:type", Number)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalStartTimeMonth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.startTime.nanos" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.startTime.nanos" }),
         __metadata("design:type", Number)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalStartTimeNanos", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.startTime.seconds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.startTime.seconds" }),
         __metadata("design:type", Number)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalStartTimeSeconds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.startTime.timeZone.id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.startTime.timeZone.id" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalStartTimeTimeZoneId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.startTime.timeZone.version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.startTime.timeZone.version" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalStartTimeTimeZoneVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.startTime.utcOffset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.startTime.utcOffset" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalStartTimeUtcOffset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=interval.startTime.year" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=interval.startTime.year" }),
         __metadata("design:type", Number)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "intervalStartTimeYear", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageSize" }),
         __metadata("design:type", Number)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.prototype, "uploadProtocol", void 0);
     return PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams;
-}(SpeakeasyBase));
-export { PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams = PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams;
 var PlaydeveloperreportingVitalsErrorsReportsSearchRequest = /** @class */ (function (_super) {
     __extends(PlaydeveloperreportingVitalsErrorsReportsSearchRequest, _super);
     function PlaydeveloperreportingVitalsErrorsReportsSearchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlaydeveloperreportingVitalsErrorsReportsSearchPathParams)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchRequest.prototype, "queryParams", void 0);
     return PlaydeveloperreportingVitalsErrorsReportsSearchRequest;
-}(SpeakeasyBase));
-export { PlaydeveloperreportingVitalsErrorsReportsSearchRequest };
+}(utils_1.SpeakeasyBase));
+exports.PlaydeveloperreportingVitalsErrorsReportsSearchRequest = PlaydeveloperreportingVitalsErrorsReportsSearchRequest;
 var PlaydeveloperreportingVitalsErrorsReportsSearchResponse = /** @class */ (function (_super) {
     __extends(PlaydeveloperreportingVitalsErrorsReportsSearchResponse, _super);
     function PlaydeveloperreportingVitalsErrorsReportsSearchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.GooglePlayDeveloperReportingV1alpha1SearchErrorReportsResponse)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchResponse.prototype, "googlePlayDeveloperReportingV1alpha1SearchErrorReportsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PlaydeveloperreportingVitalsErrorsReportsSearchResponse.prototype, "statusCode", void 0);
     return PlaydeveloperreportingVitalsErrorsReportsSearchResponse;
-}(SpeakeasyBase));
-export { PlaydeveloperreportingVitalsErrorsReportsSearchResponse };
+}(utils_1.SpeakeasyBase));
+exports.PlaydeveloperreportingVitalsErrorsReportsSearchResponse = PlaydeveloperreportingVitalsErrorsReportsSearchResponse;

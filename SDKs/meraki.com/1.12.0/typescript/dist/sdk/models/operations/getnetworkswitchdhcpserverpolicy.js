@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkSwitchDhcpServerPolicyResponse = exports.GetNetworkSwitchDhcpServerPolicyRequest = exports.GetNetworkSwitchDhcpServerPolicyPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkSwitchDhcpServerPolicyPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkSwitchDhcpServerPolicyPathParams, _super);
     function GetNetworkSwitchDhcpServerPolicyPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkSwitchDhcpServerPolicyPathParams.prototype, "networkId", void 0);
     return GetNetworkSwitchDhcpServerPolicyPathParams;
-}(SpeakeasyBase));
-export { GetNetworkSwitchDhcpServerPolicyPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSwitchDhcpServerPolicyPathParams = GetNetworkSwitchDhcpServerPolicyPathParams;
 var GetNetworkSwitchDhcpServerPolicyRequest = /** @class */ (function (_super) {
     __extends(GetNetworkSwitchDhcpServerPolicyRequest, _super);
     function GetNetworkSwitchDhcpServerPolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkSwitchDhcpServerPolicyPathParams)
     ], GetNetworkSwitchDhcpServerPolicyRequest.prototype, "pathParams", void 0);
     return GetNetworkSwitchDhcpServerPolicyRequest;
-}(SpeakeasyBase));
-export { GetNetworkSwitchDhcpServerPolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSwitchDhcpServerPolicyRequest = GetNetworkSwitchDhcpServerPolicyRequest;
 var GetNetworkSwitchDhcpServerPolicyResponse = /** @class */ (function (_super) {
     __extends(GetNetworkSwitchDhcpServerPolicyResponse, _super);
     function GetNetworkSwitchDhcpServerPolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkSwitchDhcpServerPolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkSwitchDhcpServerPolicyResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkSwitchDhcpServerPolicyResponse.prototype, "getNetworkSwitchDhcpServerPolicy200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkSwitchDhcpServerPolicyResponse.prototype, "getNetworkSwitchDhcpServerPolicy200ApplicationJSONObject", void 0);
     return GetNetworkSwitchDhcpServerPolicyResponse;
-}(SpeakeasyBase));
-export { GetNetworkSwitchDhcpServerPolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkSwitchDhcpServerPolicyResponse = GetNetworkSwitchDhcpServerPolicyResponse;

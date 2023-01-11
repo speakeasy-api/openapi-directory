@@ -47,7 +47,7 @@ export class GetGroupCategoryDetailsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getGroupCategoryDetails200ApplicationJsonObject?: GetGroupCategoryDetails200ApplicationJson;
+  getGroupCategoryDetails200ApplicationJSONObject?: GetGroupCategoryDetails200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

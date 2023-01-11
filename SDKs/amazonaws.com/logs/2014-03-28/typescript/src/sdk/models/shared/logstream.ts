@@ -26,7 +26,7 @@ export class LogStream extends SpeakeasyBase {
   logStreamName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=storedBytes" })
-  storedBytes?: number;
+  storedBytes?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=uploadSequenceToken" })
   uploadSequenceToken?: string;

@@ -28,5 +28,5 @@ export class ProtocolTodSetConfigResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolTodSetConfig200ApplicationJsonString?: string;
+  protocolTodSetConfig200ApplicationJSONString?: string;
 }

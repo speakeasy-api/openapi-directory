@@ -1,5 +1,5 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EncryptionEntity } from "./encryptionentity";
+import { EncryptionEntityList } from "./encryptionentitylist";
 
 
 
@@ -8,8 +8,8 @@ import { EncryptionEntity } from "./encryptionentity";
  * Complex data type for field-level encryption profiles that includes all of the encryption entities. 
 **/
 export class EncryptionEntities extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: EncryptionEntity })
-  items?: EncryptionEntity[];
+  @SpeakeasyMetadata({ elemType: EncryptionEntityList })
+  items?: EncryptionEntityList[];
 
   @SpeakeasyMetadata()
   quantity: number;

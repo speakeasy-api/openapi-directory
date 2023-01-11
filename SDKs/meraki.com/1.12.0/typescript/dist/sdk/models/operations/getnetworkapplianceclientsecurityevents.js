@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,101 +23,103 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNetworkApplianceClientSecurityEventsResponse = exports.GetNetworkApplianceClientSecurityEventsRequest = exports.GetNetworkApplianceClientSecurityEventsQueryParams = exports.GetNetworkApplianceClientSecurityEventsSortOrderEnum = exports.GetNetworkApplianceClientSecurityEventsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetNetworkApplianceClientSecurityEventsPathParams = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceClientSecurityEventsPathParams, _super);
     function GetNetworkApplianceClientSecurityEventsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=clientId" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceClientSecurityEventsPathParams.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceClientSecurityEventsPathParams.prototype, "networkId", void 0);
     return GetNetworkApplianceClientSecurityEventsPathParams;
-}(SpeakeasyBase));
-export { GetNetworkApplianceClientSecurityEventsPathParams };
-export var GetNetworkApplianceClientSecurityEventsSortOrderEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceClientSecurityEventsPathParams = GetNetworkApplianceClientSecurityEventsPathParams;
+var GetNetworkApplianceClientSecurityEventsSortOrderEnum;
 (function (GetNetworkApplianceClientSecurityEventsSortOrderEnum) {
     GetNetworkApplianceClientSecurityEventsSortOrderEnum["Ascending"] = "ascending";
     GetNetworkApplianceClientSecurityEventsSortOrderEnum["Descending"] = "descending";
-})(GetNetworkApplianceClientSecurityEventsSortOrderEnum || (GetNetworkApplianceClientSecurityEventsSortOrderEnum = {}));
+})(GetNetworkApplianceClientSecurityEventsSortOrderEnum = exports.GetNetworkApplianceClientSecurityEventsSortOrderEnum || (exports.GetNetworkApplianceClientSecurityEventsSortOrderEnum = {}));
 var GetNetworkApplianceClientSecurityEventsQueryParams = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceClientSecurityEventsQueryParams, _super);
     function GetNetworkApplianceClientSecurityEventsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceClientSecurityEventsQueryParams.prototype, "endingBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=perPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=perPage" }),
         __metadata("design:type", Number)
     ], GetNetworkApplianceClientSecurityEventsQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sortOrder" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceClientSecurityEventsQueryParams.prototype, "sortOrder", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceClientSecurityEventsQueryParams.prototype, "startingAfter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t0" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t0" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceClientSecurityEventsQueryParams.prototype, "t0", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=t1" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=t1" }),
         __metadata("design:type", String)
     ], GetNetworkApplianceClientSecurityEventsQueryParams.prototype, "t1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timespan" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timespan" }),
         __metadata("design:type", Number)
     ], GetNetworkApplianceClientSecurityEventsQueryParams.prototype, "timespan", void 0);
     return GetNetworkApplianceClientSecurityEventsQueryParams;
-}(SpeakeasyBase));
-export { GetNetworkApplianceClientSecurityEventsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceClientSecurityEventsQueryParams = GetNetworkApplianceClientSecurityEventsQueryParams;
 var GetNetworkApplianceClientSecurityEventsRequest = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceClientSecurityEventsRequest, _super);
     function GetNetworkApplianceClientSecurityEventsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkApplianceClientSecurityEventsPathParams)
     ], GetNetworkApplianceClientSecurityEventsRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNetworkApplianceClientSecurityEventsQueryParams)
     ], GetNetworkApplianceClientSecurityEventsRequest.prototype, "queryParams", void 0);
     return GetNetworkApplianceClientSecurityEventsRequest;
-}(SpeakeasyBase));
-export { GetNetworkApplianceClientSecurityEventsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceClientSecurityEventsRequest = GetNetworkApplianceClientSecurityEventsRequest;
 var GetNetworkApplianceClientSecurityEventsResponse = /** @class */ (function (_super) {
     __extends(GetNetworkApplianceClientSecurityEventsResponse, _super);
     function GetNetworkApplianceClientSecurityEventsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNetworkApplianceClientSecurityEventsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetNetworkApplianceClientSecurityEventsResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNetworkApplianceClientSecurityEventsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetNetworkApplianceClientSecurityEventsResponse.prototype, "getNetworkApplianceClientSecurityEvents200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetNetworkApplianceClientSecurityEventsResponse.prototype, "getNetworkApplianceClientSecurityEvents200ApplicationJSONObject", void 0);
     return GetNetworkApplianceClientSecurityEventsResponse;
-}(SpeakeasyBase));
-export { GetNetworkApplianceClientSecurityEventsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNetworkApplianceClientSecurityEventsResponse = GetNetworkApplianceClientSecurityEventsResponse;

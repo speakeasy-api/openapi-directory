@@ -22,10 +22,10 @@ export class Algorithm extends SpeakeasyBase {
   defaultHyperParameterRanges?: DefaultHyperParameterRanges;
 
   @SpeakeasyMetadata({ data: "json, name=defaultHyperParameters" })
-  defaultHyperParameters?: Map<string, string>;
+  defaultHyperParameters?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=defaultResourceConfig" })
-  defaultResourceConfig?: Map<string, string>;
+  defaultResourceConfig?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=lastUpdatedDateTime" })
   lastUpdatedDateTime?: Date;

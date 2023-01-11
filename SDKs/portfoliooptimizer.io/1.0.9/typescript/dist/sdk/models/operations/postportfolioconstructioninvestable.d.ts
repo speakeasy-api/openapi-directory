@@ -20,6 +20,6 @@ export declare class PostPortfolioConstructionInvestableRequest extends Speakeas
 }
 export declare class PostPortfolioConstructionInvestableResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioConstructionInvestable200ApplicationJsonObject?: PostPortfolioConstructionInvestable200ApplicationJson;
     statusCode: number;
+    postPortfolioConstructionInvestable200ApplicationJSONObject?: PostPortfolioConstructionInvestable200ApplicationJson;
 }

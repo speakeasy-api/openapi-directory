@@ -23,7 +23,7 @@ export declare class AuthorizedbuyersmarketplaceBuyersClientsUsersDeactivateSecu
 export declare class AuthorizedbuyersmarketplaceBuyersClientsUsersDeactivateRequest extends SpeakeasyBase {
     pathParams: AuthorizedbuyersmarketplaceBuyersClientsUsersDeactivatePathParams;
     queryParams: AuthorizedbuyersmarketplaceBuyersClientsUsersDeactivateQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: AuthorizedbuyersmarketplaceBuyersClientsUsersDeactivateSecurity;
 }
 export declare class AuthorizedbuyersmarketplaceBuyersClientsUsersDeactivateResponse extends SpeakeasyBase {

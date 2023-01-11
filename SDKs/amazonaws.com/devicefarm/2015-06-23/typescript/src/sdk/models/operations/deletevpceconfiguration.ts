@@ -51,7 +51,7 @@ export class DeleteVpceConfigurationResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteVpceConfigurationResult?: Map<string, any>;
+  deleteVPCEConfigurationResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidOperationException?: any;

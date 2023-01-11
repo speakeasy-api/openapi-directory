@@ -107,11 +107,11 @@ export declare class PripcRequest extends SpeakeasyBase {
 export declare class PripcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    pripc400ApplicationJsonObject?: Pripc400ApplicationJson;
-    pripc401ApplicationJsonObject?: Pripc401ApplicationJson;
-    pripc404ApplicationJsonObject?: Pripc404ApplicationJson;
-    pripc500ApplicationJsonObject?: Pripc500ApplicationJson;
-    pripc502ApplicationJsonObject?: Pripc502ApplicationJson;
-    pripc503ApplicationJsonObject?: Pripc503ApplicationJson;
-    pripc504ApplicationJsonObject?: Pripc504ApplicationJson;
+    pripc400ApplicationJSONObject?: Pripc400ApplicationJson;
+    pripc401ApplicationJSONObject?: Pripc401ApplicationJson;
+    pripc404ApplicationJSONObject?: Pripc404ApplicationJson;
+    pripc500ApplicationJSONObject?: Pripc500ApplicationJson;
+    pripc502ApplicationJSONObject?: Pripc502ApplicationJson;
+    pripc503ApplicationJSONObject?: Pripc503ApplicationJson;
+    pripc504ApplicationJSONObject?: Pripc504ApplicationJson;
 }

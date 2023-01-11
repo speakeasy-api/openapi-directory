@@ -88,7 +88,7 @@ export class Result extends SpeakeasyBase {
   mime?: string;
 
   @SpeakeasyMetadata({ data: "json, name=pagemap" })
-  pagemap?: Map<string, any>;
+  pagemap?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=snippet" })
   snippet?: string;

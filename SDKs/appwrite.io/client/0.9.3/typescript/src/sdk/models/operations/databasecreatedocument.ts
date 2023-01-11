@@ -11,7 +11,7 @@ export class DatabaseCreateDocumentPathParams extends SpeakeasyBase {
 
 export class DatabaseCreateDocumentRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data: Map<string, any>;
+  data: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=parentDocument" })
   parentDocument?: string;
@@ -59,5 +59,5 @@ export class DatabaseCreateDocumentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  document?: Map<string, any>;
+  document?: Record<string, any>;
 }

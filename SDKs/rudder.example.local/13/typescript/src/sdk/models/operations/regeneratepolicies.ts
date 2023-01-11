@@ -41,5 +41,5 @@ export class RegeneratePoliciesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  regeneratePolicies200ApplicationJsonObject?: RegeneratePolicies200ApplicationJson;
+  regeneratePolicies200ApplicationJSONObject?: RegeneratePolicies200ApplicationJson;
 }

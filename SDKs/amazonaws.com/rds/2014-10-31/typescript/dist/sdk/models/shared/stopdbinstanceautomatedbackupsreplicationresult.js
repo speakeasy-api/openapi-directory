@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbInstanceAutomatedBackup } from "./dbinstanceautomatedbackup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StopDbInstanceAutomatedBackupsReplicationResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var dbinstanceautomatedbackup_1 = require("./dbinstanceautomatedbackup");
 var StopDbInstanceAutomatedBackupsReplicationResult = /** @class */ (function (_super) {
     __extends(StopDbInstanceAutomatedBackupsReplicationResult, _super);
     function StopDbInstanceAutomatedBackupsReplicationResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DbInstanceAutomatedBackup)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", dbinstanceautomatedbackup_1.DbInstanceAutomatedBackup)
     ], StopDbInstanceAutomatedBackupsReplicationResult.prototype, "dbInstanceAutomatedBackup", void 0);
     return StopDbInstanceAutomatedBackupsReplicationResult;
-}(SpeakeasyBase));
-export { StopDbInstanceAutomatedBackupsReplicationResult };
+}(utils_1.SpeakeasyBase));
+exports.StopDbInstanceAutomatedBackupsReplicationResult = StopDbInstanceAutomatedBackupsReplicationResult;

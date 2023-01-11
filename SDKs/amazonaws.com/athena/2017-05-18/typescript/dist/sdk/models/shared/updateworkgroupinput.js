@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WorkGroupConfigurationUpdates } from "./workgroupconfigurationupdates";
-import { WorkGroupStateEnum } from "./workgroupstateenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateWorkGroupInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var workgroupconfigurationupdates_1 = require("./workgroupconfigurationupdates");
+var workgroupstateenum_1 = require("./workgroupstateenum");
 var UpdateWorkGroupInput = /** @class */ (function (_super) {
     __extends(UpdateWorkGroupInput, _super);
     function UpdateWorkGroupInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigurationUpdates" }),
-        __metadata("design:type", WorkGroupConfigurationUpdates)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigurationUpdates" }),
+        __metadata("design:type", workgroupconfigurationupdates_1.WorkGroupConfigurationUpdates)
     ], UpdateWorkGroupInput.prototype, "configurationUpdates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Description" }),
         __metadata("design:type", String)
     ], UpdateWorkGroupInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=State" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=State" }),
         __metadata("design:type", String)
     ], UpdateWorkGroupInput.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WorkGroup" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WorkGroup" }),
         __metadata("design:type", String)
     ], UpdateWorkGroupInput.prototype, "workGroup", void 0);
     return UpdateWorkGroupInput;
-}(SpeakeasyBase));
-export { UpdateWorkGroupInput };
+}(utils_1.SpeakeasyBase));
+exports.UpdateWorkGroupInput = UpdateWorkGroupInput;

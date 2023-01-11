@@ -43,5 +43,5 @@ export class EnterpriseAdminDeletePreReceiveEnvironmentResponse extends Speakeas
   statusCode: number;
 
   @SpeakeasyMetadata()
-  enterpriseAdminDeletePreReceiveEnvironment422ApplicationJsonObject?: EnterpriseAdminDeletePreReceiveEnvironment422ApplicationJson;
+  enterpriseAdminDeletePreReceiveEnvironment422ApplicationJSONObject?: EnterpriseAdminDeletePreReceiveEnvironment422ApplicationJson;
 }

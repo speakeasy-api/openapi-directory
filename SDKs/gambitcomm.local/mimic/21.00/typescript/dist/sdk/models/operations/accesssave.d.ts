@@ -8,5 +8,5 @@ export declare class AccessSaveRequest extends SpeakeasyBase {
 export declare class AccessSaveResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    accessSave200ApplicationJsonStrings?: string[];
+    accessSave200ApplicationJSONStrings?: string[];
 }

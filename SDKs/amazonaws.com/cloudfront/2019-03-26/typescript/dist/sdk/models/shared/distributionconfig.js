@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Aliases } from "./aliases";
-import { CacheBehaviors } from "./cachebehaviors";
-import { CustomErrorResponses } from "./customerrorresponses";
-import { DefaultCacheBehavior } from "./defaultcachebehavior";
-import { HttpVersionEnum } from "./httpversionenum";
-import { LoggingConfig } from "./loggingconfig";
-import { OriginGroups } from "./origingroups";
-import { Origins } from "./origins";
-import { PriceClassEnum } from "./priceclassenum";
-import { Restrictions } from "./restrictions";
-import { ViewerCertificate } from "./viewercertificate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DistributionConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var aliases_1 = require("./aliases");
+var cachebehaviors_1 = require("./cachebehaviors");
+var customerrorresponses_1 = require("./customerrorresponses");
+var defaultcachebehavior_1 = require("./defaultcachebehavior");
+var httpversionenum_1 = require("./httpversionenum");
+var loggingconfig_1 = require("./loggingconfig");
+var origingroups_1 = require("./origingroups");
+var origins_1 = require("./origins");
+var priceclassenum_1 = require("./priceclassenum");
+var restrictions_1 = require("./restrictions");
+var viewercertificate_1 = require("./viewercertificate");
 // DistributionConfig
 /**
  * A distribution configuration.
@@ -44,73 +47,73 @@ var DistributionConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Aliases)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", aliases_1.Aliases)
     ], DistributionConfig.prototype, "aliases", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", CacheBehaviors)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", cachebehaviors_1.CacheBehaviors)
     ], DistributionConfig.prototype, "cacheBehaviors", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DistributionConfig.prototype, "callerReference", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DistributionConfig.prototype, "comment", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", CustomErrorResponses)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", customerrorresponses_1.CustomErrorResponses)
     ], DistributionConfig.prototype, "customErrorResponses", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", DefaultCacheBehavior)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", defaultcachebehavior_1.DefaultCacheBehavior)
     ], DistributionConfig.prototype, "defaultCacheBehavior", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DistributionConfig.prototype, "defaultRootObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DistributionConfig.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DistributionConfig.prototype, "httpVersion", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Boolean)
     ], DistributionConfig.prototype, "isIpv6Enabled", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", LoggingConfig)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", loggingconfig_1.LoggingConfig)
     ], DistributionConfig.prototype, "logging", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", OriginGroups)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", origingroups_1.OriginGroups)
     ], DistributionConfig.prototype, "originGroups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Origins)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", origins_1.Origins)
     ], DistributionConfig.prototype, "origins", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DistributionConfig.prototype, "priceClass", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Restrictions)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", restrictions_1.Restrictions)
     ], DistributionConfig.prototype, "restrictions", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ViewerCertificate)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", viewercertificate_1.ViewerCertificate)
     ], DistributionConfig.prototype, "viewerCertificate", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], DistributionConfig.prototype, "webAclId", void 0);
+    ], DistributionConfig.prototype, "webACLId", void 0);
     return DistributionConfig;
-}(SpeakeasyBase));
-export { DistributionConfig };
+}(utils_1.SpeakeasyBase));
+exports.DistributionConfig = DistributionConfig;

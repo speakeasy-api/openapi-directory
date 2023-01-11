@@ -10,6 +10,6 @@ export declare class CreateItemPromotionRequest extends SpeakeasyBase {
 export declare class CreateItemPromotionResponse extends SpeakeasyBase {
     baseResponse?: shared.BaseResponse;
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
 }

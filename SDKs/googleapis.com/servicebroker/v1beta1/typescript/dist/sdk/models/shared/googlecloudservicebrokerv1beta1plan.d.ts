@@ -7,7 +7,7 @@ export declare class GoogleCloudServicebrokerV1beta1Plan extends SpeakeasyBase {
     description?: string;
     free?: boolean;
     id?: string;
-    metadata?: Map<string, any>;
+    metadata?: Record<string, any>;
     name?: string;
-    schemas?: Map<string, any>;
+    schemas?: Record<string, any>;
 }

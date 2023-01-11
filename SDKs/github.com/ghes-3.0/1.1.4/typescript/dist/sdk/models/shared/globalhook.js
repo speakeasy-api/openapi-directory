@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GlobalHook = exports.GlobalHookConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 var GlobalHookConfig = /** @class */ (function (_super) {
     __extends(GlobalHookConfig, _super);
     function GlobalHookConfig() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content_type" }),
         __metadata("design:type", String)
     ], GlobalHookConfig.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=insecure_ssl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=insecure_ssl" }),
         __metadata("design:type", String)
     ], GlobalHookConfig.prototype, "insecureSsl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret" }),
         __metadata("design:type", String)
     ], GlobalHookConfig.prototype, "secret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GlobalHookConfig.prototype, "url", void 0);
     return GlobalHookConfig;
-}(SpeakeasyBase));
-export { GlobalHookConfig };
+}(utils_1.SpeakeasyBase));
+exports.GlobalHookConfig = GlobalHookConfig;
 var GlobalHook = /** @class */ (function (_super) {
     __extends(GlobalHook, _super);
     function GlobalHook() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=active" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=active" }),
         __metadata("design:type", Boolean)
     ], GlobalHook.prototype, "active", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=config" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=config" }),
         __metadata("design:type", GlobalHookConfig)
     ], GlobalHook.prototype, "config", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", String)
     ], GlobalHook.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=events" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=events" }),
         __metadata("design:type", Array)
     ], GlobalHook.prototype, "events", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GlobalHook.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GlobalHook.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ping_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ping_url" }),
         __metadata("design:type", String)
     ], GlobalHook.prototype, "pingUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GlobalHook.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", String)
     ], GlobalHook.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GlobalHook.prototype, "url", void 0);
     return GlobalHook;
-}(SpeakeasyBase));
-export { GlobalHook };
+}(utils_1.SpeakeasyBase));
+exports.GlobalHook = GlobalHook;

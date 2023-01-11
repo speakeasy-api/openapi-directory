@@ -12,9 +12,9 @@ import { Timing } from "./timing";
  * The Lighthouse result object.
 **/
 export declare class LighthouseResultV5 extends SpeakeasyBase {
-    audits?: Map<string, LighthouseAuditResultV5>;
+    audits?: Record<string, LighthouseAuditResultV5>;
     categories?: Categories;
-    categoryGroups?: Map<string, CategoryGroupV5>;
+    categoryGroups?: Record<string, CategoryGroupV5>;
     configSettings?: ConfigSettings;
     environment?: Environment;
     fetchTime?: string;

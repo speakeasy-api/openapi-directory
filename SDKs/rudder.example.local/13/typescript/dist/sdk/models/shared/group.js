@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Group = exports.GroupQuery = exports.GroupQueryWhere = exports.GroupQueryCompositionEnum = exports.GroupProperties = void 0;
+var utils_1 = require("../../../internal/utils");
 var GroupProperties = /** @class */ (function (_super) {
     __extends(GroupProperties, _super);
     function GroupProperties() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GroupProperties.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Object)
     ], GroupProperties.prototype, "value", void 0);
     return GroupProperties;
-}(SpeakeasyBase));
-export { GroupProperties };
-export var GroupQueryCompositionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GroupProperties = GroupProperties;
+var GroupQueryCompositionEnum;
 (function (GroupQueryCompositionEnum) {
     GroupQueryCompositionEnum["And"] = "and";
     GroupQueryCompositionEnum["Or"] = "or";
-})(GroupQueryCompositionEnum || (GroupQueryCompositionEnum = {}));
+})(GroupQueryCompositionEnum = exports.GroupQueryCompositionEnum || (exports.GroupQueryCompositionEnum = {}));
 var GroupQueryWhere = /** @class */ (function (_super) {
     __extends(GroupQueryWhere, _super);
     function GroupQueryWhere() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attribute" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attribute" }),
         __metadata("design:type", String)
     ], GroupQueryWhere.prototype, "attribute", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=comparator" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=comparator" }),
         __metadata("design:type", String)
     ], GroupQueryWhere.prototype, "comparator", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=objectType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=objectType" }),
         __metadata("design:type", String)
     ], GroupQueryWhere.prototype, "objectType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], GroupQueryWhere.prototype, "value", void 0);
     return GroupQueryWhere;
-}(SpeakeasyBase));
-export { GroupQueryWhere };
+}(utils_1.SpeakeasyBase));
+exports.GroupQueryWhere = GroupQueryWhere;
 // GroupQuery
 /**
  * The criteria defining the group
@@ -78,61 +81,61 @@ var GroupQuery = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=composition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=composition" }),
         __metadata("design:type", String)
     ], GroupQuery.prototype, "composition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=select" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=select" }),
         __metadata("design:type", String)
     ], GroupQuery.prototype, "select", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=where", elemType: GroupQueryWhere }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=where", elemType: GroupQueryWhere }),
         __metadata("design:type", Array)
     ], GroupQuery.prototype, "where", void 0);
     return GroupQuery;
-}(SpeakeasyBase));
-export { GroupQuery };
+}(utils_1.SpeakeasyBase));
+exports.GroupQuery = GroupQuery;
 var Group = /** @class */ (function (_super) {
     __extends(Group, _super);
     function Group() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], Group.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], Group.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dynamic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dynamic" }),
         __metadata("design:type", Boolean)
     ], Group.prototype, "dynamic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], Group.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupClass" }),
         __metadata("design:type", Array)
     ], Group.prototype, "groupClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], Group.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nodeIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nodeIds" }),
         __metadata("design:type", Array)
     ], Group.prototype, "nodeIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=properties", elemType: GroupProperties }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=properties", elemType: GroupProperties }),
         __metadata("design:type", Array)
     ], Group.prototype, "properties", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=query" }),
         __metadata("design:type", GroupQuery)
     ], Group.prototype, "query", void 0);
     return Group;
-}(SpeakeasyBase));
-export { Group };
+}(utils_1.SpeakeasyBase));
+exports.Group = Group;

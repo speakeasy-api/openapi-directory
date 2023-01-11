@@ -5,5 +5,5 @@ import { SpeakeasyBase } from "../../../internal/utils";
 export declare class CreateTemplateMessageBody extends SpeakeasyBase {
     arn?: string;
     message?: string;
-    requestId?: string;
+    requestID?: string;
 }

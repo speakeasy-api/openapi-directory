@@ -11,7 +11,7 @@ export class SongApiPostRatingPathParams extends SpeakeasyBase {
 
 export class SongApiPostRatingRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   songRatingContract?: shared.SongRatingContract;
@@ -23,7 +23,7 @@ export class SongApiPostRatingRequests extends SpeakeasyBase {
   songRatingContract2?: shared.SongRatingContract;
 
   @SpeakeasyMetadata({ data: "request, media_type=text/xml" })
-  textXml: Uint8Array;
+  textXML: Uint8Array;
 }
 
 

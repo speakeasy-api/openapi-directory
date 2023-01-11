@@ -1,71 +1,69 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class UpdateOnlineMigrationPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=database_cluster_uuid" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=database_cluster_uuid" })
   databaseClusterUuid: string;
 }
 
 
 export class UpdateOnlineMigrationRequestBody extends SpeakeasyBase {
-  @Metadata({ data: "json, name=disable_ssl" })
+  @SpeakeasyMetadata({ data: "json, name=disable_ssl" })
   disableSsl?: boolean;
-
-  @Metadata({ data: "json, name=source" })
-  source?: shared.Onev21databasesGetResponses200ContentApplication1jsonSchemaPropertiesDatabasesItemsPropertiesConnectionAllOf0;
-}
-
-
-export class UpdateOnlineMigrationRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: UpdateOnlineMigrationPathParams;
-
-  @Metadata({ data: "request, media_type=application/json" })
-  request: UpdateOnlineMigrationRequestBody;
 }
 
 
 export class UpdateOnlineMigration200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=created_at" })
+  @SpeakeasyMetadata({ data: "json, name=created_at" })
   createdAt?: string;
 
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
 
-  @Metadata({ data: "json, name=status" })
+  @SpeakeasyMetadata({ data: "json, name=status" })
   status?: string;
 }
 
 
 export class UpdateOnlineMigration401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class UpdateOnlineMigrationRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: UpdateOnlineMigrationPathParams;
+
+  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+  request: UpdateOnlineMigrationRequestBody;
+}
+
+
 export class UpdateOnlineMigrationResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  updateOnlineMigration200ApplicationJsonObject?: UpdateOnlineMigration200ApplicationJson;
+  @SpeakeasyMetadata()
+  updateOnlineMigration200ApplicationJSONObject?: UpdateOnlineMigration200ApplicationJson;
 
-  @Metadata()
-  updateOnlineMigration401ApplicationJsonObject?: UpdateOnlineMigration401ApplicationJson;
+  @SpeakeasyMetadata()
+  updateOnlineMigration401ApplicationJSONObject?: UpdateOnlineMigration401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

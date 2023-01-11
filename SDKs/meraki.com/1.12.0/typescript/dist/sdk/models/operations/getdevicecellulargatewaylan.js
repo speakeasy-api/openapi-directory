@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceCellularGatewayLanResponse = exports.GetDeviceCellularGatewayLanRequest = exports.GetDeviceCellularGatewayLanPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceCellularGatewayLanPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceCellularGatewayLanPathParams, _super);
     function GetDeviceCellularGatewayLanPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceCellularGatewayLanPathParams.prototype, "serial", void 0);
     return GetDeviceCellularGatewayLanPathParams;
-}(SpeakeasyBase));
-export { GetDeviceCellularGatewayLanPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCellularGatewayLanPathParams = GetDeviceCellularGatewayLanPathParams;
 var GetDeviceCellularGatewayLanRequest = /** @class */ (function (_super) {
     __extends(GetDeviceCellularGatewayLanRequest, _super);
     function GetDeviceCellularGatewayLanRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceCellularGatewayLanPathParams)
     ], GetDeviceCellularGatewayLanRequest.prototype, "pathParams", void 0);
     return GetDeviceCellularGatewayLanRequest;
-}(SpeakeasyBase));
-export { GetDeviceCellularGatewayLanRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCellularGatewayLanRequest = GetDeviceCellularGatewayLanRequest;
 var GetDeviceCellularGatewayLanResponse = /** @class */ (function (_super) {
     __extends(GetDeviceCellularGatewayLanResponse, _super);
     function GetDeviceCellularGatewayLanResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceCellularGatewayLanResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceCellularGatewayLanResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceCellularGatewayLanResponse.prototype, "getDeviceCellularGatewayLan200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceCellularGatewayLanResponse.prototype, "getDeviceCellularGatewayLan200ApplicationJSONObject", void 0);
     return GetDeviceCellularGatewayLanResponse;
-}(SpeakeasyBase));
-export { GetDeviceCellularGatewayLanResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceCellularGatewayLanResponse = GetDeviceCellularGatewayLanResponse;

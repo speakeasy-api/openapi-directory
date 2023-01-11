@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAppsTextSearchResponse = exports.GetAppsTextSearchRequest = exports.GetAppsTextSearchQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAppsTextSearchQueryParams = /** @class */ (function (_super) {
     __extends(GetAppsTextSearchQueryParams, _super);
     function GetAppsTextSearchQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], GetAppsTextSearchQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=isOwned" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=isOwned" }),
         __metadata("design:type", Boolean)
     ], GetAppsTextSearchQueryParams.prototype, "isOwned", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetAppsTextSearchQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageNumber" }),
         __metadata("design:type", Number)
     ], GetAppsTextSearchQueryParams.prototype, "pageNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=query" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=query" }),
         __metadata("design:type", String)
     ], GetAppsTextSearchQueryParams.prototype, "query", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], GetAppsTextSearchQueryParams.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=userId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=userId" }),
         __metadata("design:type", String)
     ], GetAppsTextSearchQueryParams.prototype, "userId", void 0);
     return GetAppsTextSearchQueryParams;
-}(SpeakeasyBase));
-export { GetAppsTextSearchQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAppsTextSearchQueryParams = GetAppsTextSearchQueryParams;
 var GetAppsTextSearchRequest = /** @class */ (function (_super) {
     __extends(GetAppsTextSearchRequest, _super);
     function GetAppsTextSearchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAppsTextSearchQueryParams)
     ], GetAppsTextSearchRequest.prototype, "queryParams", void 0);
     return GetAppsTextSearchRequest;
-}(SpeakeasyBase));
-export { GetAppsTextSearchRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAppsTextSearchRequest = GetAppsTextSearchRequest;
 var GetAppsTextSearchResponse = /** @class */ (function (_super) {
     __extends(GetAppsTextSearchResponse, _super);
     function GetAppsTextSearchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetAppsTextSearchResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAppsTextSearchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAppsTextSearchResponse.prototype, "statusCode", void 0);
     return GetAppsTextSearchResponse;
-}(SpeakeasyBase));
-export { GetAppsTextSearchResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAppsTextSearchResponse = GetAppsTextSearchResponse;

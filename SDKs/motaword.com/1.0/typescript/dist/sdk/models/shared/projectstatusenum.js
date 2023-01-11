@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProjectStatusEnum = void 0;
+var ProjectStatusEnum;
+(function (ProjectStatusEnum) {
+    ProjectStatusEnum["Pending"] = "pending";
+    ProjectStatusEnum["Started"] = "started";
+    ProjectStatusEnum["Completed"] = "completed";
+    ProjectStatusEnum["Translated"] = "translated";
+    ProjectStatusEnum["Proofread"] = "proofread";
+})(ProjectStatusEnum = exports.ProjectStatusEnum || (exports.ProjectStatusEnum = {}));

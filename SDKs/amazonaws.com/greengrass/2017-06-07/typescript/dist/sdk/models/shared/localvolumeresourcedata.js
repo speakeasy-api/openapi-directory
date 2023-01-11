@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GroupOwnerSetting } from "./groupownersetting";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocalVolumeResourceData = void 0;
+var utils_1 = require("../../../internal/utils");
+var groupownersetting_1 = require("./groupownersetting");
 // LocalVolumeResourceData
 /**
  * Attributes that define a local volume resource.
@@ -34,17 +37,17 @@ var LocalVolumeResourceData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DestinationPath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DestinationPath" }),
         __metadata("design:type", String)
     ], LocalVolumeResourceData.prototype, "destinationPath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GroupOwnerSetting" }),
-        __metadata("design:type", GroupOwnerSetting)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GroupOwnerSetting" }),
+        __metadata("design:type", groupownersetting_1.GroupOwnerSetting)
     ], LocalVolumeResourceData.prototype, "groupOwnerSetting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SourcePath" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SourcePath" }),
         __metadata("design:type", String)
     ], LocalVolumeResourceData.prototype, "sourcePath", void 0);
     return LocalVolumeResourceData;
-}(SpeakeasyBase));
-export { LocalVolumeResourceData };
+}(utils_1.SpeakeasyBase));
+exports.LocalVolumeResourceData = LocalVolumeResourceData;

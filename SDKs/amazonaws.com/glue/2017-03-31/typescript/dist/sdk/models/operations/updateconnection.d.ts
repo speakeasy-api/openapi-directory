@@ -24,5 +24,5 @@ export declare class UpdateConnectionResponse extends SpeakeasyBase {
     invalidInputException?: any;
     operationTimeoutException?: any;
     statusCode: number;
-    updateConnectionResponse?: Map<string, any>;
+    updateConnectionResponse?: Record<string, any>;
 }

@@ -11,7 +11,7 @@ export class PostV05HealthInformationOnRequestHeaders extends SpeakeasyBase {
 
 export class PostV05HealthInformationOnRequestRequests extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "request, media_type=application/xml" })
-  applicationXml: Uint8Array;
+  applicationXML: Uint8Array;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
   hipHealthInformationRequestAcknowledgement?: shared.HipHealthInformationRequestAcknowledgement;

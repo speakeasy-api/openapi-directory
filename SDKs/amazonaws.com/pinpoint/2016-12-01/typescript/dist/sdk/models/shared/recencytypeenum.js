@@ -1,5 +1,8 @@
-export var RecencyTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecencyTypeEnum = void 0;
+var RecencyTypeEnum;
 (function (RecencyTypeEnum) {
     RecencyTypeEnum["Active"] = "ACTIVE";
     RecencyTypeEnum["Inactive"] = "INACTIVE";
-})(RecencyTypeEnum || (RecencyTypeEnum = {}));
+})(RecencyTypeEnum = exports.RecencyTypeEnum || (exports.RecencyTypeEnum = {}));

@@ -38,10 +38,10 @@ export class CompanySearchNameRequest extends SpeakeasyBase {
 
 export class CompanySearchNameResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  companySearchName200ApplicationJsonAnies?: any[];
+  companySearchName200ApplicationJSONAnies?: any[];
 
   @SpeakeasyMetadata()
-  companySearchNameDefaultApplicationJsonAny?: any;
+  companySearchNameDefaultApplicationJSONAny?: any;
 
   @SpeakeasyMetadata()
   contentType: string;

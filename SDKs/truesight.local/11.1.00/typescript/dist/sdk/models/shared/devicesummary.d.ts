@@ -115,7 +115,7 @@ export declare class DeviceSummary extends SpeakeasyBase {
     agentName?: string;
     ambientTemperature?: number;
     collectTime?: string;
-    deviceTsmoKey?: string;
+    deviceTSMOKey?: string;
     deviceUrl?: string;
     heatingMargin?: number;
     heatingMarginUnit?: string;

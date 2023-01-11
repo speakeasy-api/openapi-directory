@@ -22,5 +22,5 @@ export class GetDeviceSwitchWarmSpareResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDeviceSwitchWarmSpare200ApplicationJsonObject?: Map<string, any>;
+  getDeviceSwitchWarmSpare200ApplicationJSONObject?: Record<string, any>;
 }

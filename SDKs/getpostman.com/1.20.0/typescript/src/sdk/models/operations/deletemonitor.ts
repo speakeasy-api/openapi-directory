@@ -52,8 +52,8 @@ export class DeleteMonitorResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deleteMonitor200ApplicationJsonObject?: DeleteMonitor200ApplicationJson;
+  deleteMonitor200ApplicationJSONObject?: DeleteMonitor200ApplicationJson;
 
   @SpeakeasyMetadata()
-  deleteMonitor404ApplicationJsonObject?: DeleteMonitor404ApplicationJson;
+  deleteMonitor404ApplicationJSONObject?: DeleteMonitor404ApplicationJson;
 }

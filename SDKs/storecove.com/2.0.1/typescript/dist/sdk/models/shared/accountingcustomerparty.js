@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Party } from "./party";
-import { PublicIdentifier } from "./publicidentifier";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountingCustomerParty = void 0;
+var utils_1 = require("../../../internal/utils");
+var party_1 = require("./party");
+var publicidentifier_1 = require("./publicidentifier");
 // AccountingCustomerParty
 /**
  * The customer receiving the invoice.
@@ -35,17 +38,17 @@ var AccountingCustomerParty = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], AccountingCustomerParty.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=party" }),
-        __metadata("design:type", Party)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=party" }),
+        __metadata("design:type", party_1.Party)
     ], AccountingCustomerParty.prototype, "party", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicIdentifiers", elemType: PublicIdentifier }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicIdentifiers", elemType: publicidentifier_1.PublicIdentifier }),
         __metadata("design:type", Array)
     ], AccountingCustomerParty.prototype, "publicIdentifiers", void 0);
     return AccountingCustomerParty;
-}(SpeakeasyBase));
-export { AccountingCustomerParty };
+}(utils_1.SpeakeasyBase));
+exports.AccountingCustomerParty = AccountingCustomerParty;

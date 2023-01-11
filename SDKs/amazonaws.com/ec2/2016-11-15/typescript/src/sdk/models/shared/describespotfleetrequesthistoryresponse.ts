@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { HistoryRecord } from "./historyrecord";
 
 
 
@@ -8,18 +7,18 @@ import { HistoryRecord } from "./historyrecord";
  * Contains the output of DescribeSpotFleetRequestHistory.
 **/
 export class DescribeSpotFleetRequestHistoryResponse extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: HistoryRecord })
-  historyRecords?: HistoryRecord[];
+  @SpeakeasyMetadata()
+  historyRecords?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  lastEvaluatedTime?: Date;
+  lastEvaluatedTime?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  spotFleetRequestId?: string;
+  spotFleetRequestId?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  startTime?: Date;
+  startTime?: Record<string, any>;
 }

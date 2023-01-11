@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LoginAuthConfigReqObj } from "./loginauthconfigreqobj";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateBackendConfigResponse = exports.UpdateBackendConfigResponseLoginAuthConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+// UpdateBackendConfigResponseLoginAuthConfig
+/**
+ * Describes the Amazon Cognito configurations for the Admin UI auth resource to log in with.
+**/
+var UpdateBackendConfigResponseLoginAuthConfig = /** @class */ (function (_super) {
+    __extends(UpdateBackendConfigResponseLoginAuthConfig, _super);
+    function UpdateBackendConfigResponseLoginAuthConfig() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AwsCognitoIdentityPoolId" }),
+        __metadata("design:type", Object)
+    ], UpdateBackendConfigResponseLoginAuthConfig.prototype, "awsCognitoIdentityPoolId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AwsCognitoRegion" }),
+        __metadata("design:type", Object)
+    ], UpdateBackendConfigResponseLoginAuthConfig.prototype, "awsCognitoRegion", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AwsUserPoolsId" }),
+        __metadata("design:type", Object)
+    ], UpdateBackendConfigResponseLoginAuthConfig.prototype, "awsUserPoolsId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AwsUserPoolsWebClientId" }),
+        __metadata("design:type", Object)
+    ], UpdateBackendConfigResponseLoginAuthConfig.prototype, "awsUserPoolsWebClientId", void 0);
+    return UpdateBackendConfigResponseLoginAuthConfig;
+}(utils_1.SpeakeasyBase));
+exports.UpdateBackendConfigResponseLoginAuthConfig = UpdateBackendConfigResponseLoginAuthConfig;
 var UpdateBackendConfigResponse = /** @class */ (function (_super) {
     __extends(UpdateBackendConfigResponse, _super);
     function UpdateBackendConfigResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AppId" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AppId" }),
+        __metadata("design:type", Object)
     ], UpdateBackendConfigResponse.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BackendManagerAppId" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BackendManagerAppId" }),
+        __metadata("design:type", Object)
     ], UpdateBackendConfigResponse.prototype, "backendManagerAppId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Error" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Error" }),
+        __metadata("design:type", Object)
     ], UpdateBackendConfigResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LoginAuthConfig" }),
-        __metadata("design:type", LoginAuthConfigReqObj)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LoginAuthConfig" }),
+        __metadata("design:type", UpdateBackendConfigResponseLoginAuthConfig)
     ], UpdateBackendConfigResponse.prototype, "loginAuthConfig", void 0);
     return UpdateBackendConfigResponse;
-}(SpeakeasyBase));
-export { UpdateBackendConfigResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateBackendConfigResponse = UpdateBackendConfigResponse;

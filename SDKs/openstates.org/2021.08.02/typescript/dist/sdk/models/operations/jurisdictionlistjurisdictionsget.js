@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,94 +14,119 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JurisdictionListJurisdictionsGetResponse = exports.JurisdictionListJurisdictionsGetRequest = exports.JurisdictionListJurisdictionsGetHeaders = exports.JurisdictionListJurisdictionsGetQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var JurisdictionListJurisdictionsGetQueryParams = /** @class */ (function (_super) {
     __extends(JurisdictionListJurisdictionsGetQueryParams, _super);
     function JurisdictionListJurisdictionsGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=apikey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=apikey" }),
         __metadata("design:type", String)
     ], JurisdictionListJurisdictionsGetQueryParams.prototype, "apikey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=classification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=classification" }),
         __metadata("design:type", String)
     ], JurisdictionListJurisdictionsGetQueryParams.prototype, "classification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=include" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=include" }),
         __metadata("design:type", Array)
     ], JurisdictionListJurisdictionsGetQueryParams.prototype, "include", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=page" }),
         __metadata("design:type", Number)
     ], JurisdictionListJurisdictionsGetQueryParams.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=per_page" }),
         __metadata("design:type", Number)
     ], JurisdictionListJurisdictionsGetQueryParams.prototype, "perPage", void 0);
     return JurisdictionListJurisdictionsGetQueryParams;
-}(SpeakeasyBase));
-export { JurisdictionListJurisdictionsGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.JurisdictionListJurisdictionsGetQueryParams = JurisdictionListJurisdictionsGetQueryParams;
 var JurisdictionListJurisdictionsGetHeaders = /** @class */ (function (_super) {
     __extends(JurisdictionListJurisdictionsGetHeaders, _super);
     function JurisdictionListJurisdictionsGetHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=x-api-key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=x-api-key" }),
         __metadata("design:type", String)
     ], JurisdictionListJurisdictionsGetHeaders.prototype, "xApiKey", void 0);
     return JurisdictionListJurisdictionsGetHeaders;
-}(SpeakeasyBase));
-export { JurisdictionListJurisdictionsGetHeaders };
+}(utils_1.SpeakeasyBase));
+exports.JurisdictionListJurisdictionsGetHeaders = JurisdictionListJurisdictionsGetHeaders;
 var JurisdictionListJurisdictionsGetRequest = /** @class */ (function (_super) {
     __extends(JurisdictionListJurisdictionsGetRequest, _super);
     function JurisdictionListJurisdictionsGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JurisdictionListJurisdictionsGetQueryParams)
     ], JurisdictionListJurisdictionsGetRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JurisdictionListJurisdictionsGetHeaders)
     ], JurisdictionListJurisdictionsGetRequest.prototype, "headers", void 0);
     return JurisdictionListJurisdictionsGetRequest;
-}(SpeakeasyBase));
-export { JurisdictionListJurisdictionsGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.JurisdictionListJurisdictionsGetRequest = JurisdictionListJurisdictionsGetRequest;
 var JurisdictionListJurisdictionsGetResponse = /** @class */ (function (_super) {
     __extends(JurisdictionListJurisdictionsGetResponse, _super);
     function JurisdictionListJurisdictionsGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], JurisdictionListJurisdictionsGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.HttpValidationError)
     ], JurisdictionListJurisdictionsGetResponse.prototype, "httpValidationError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.JurisdictionList)
     ], JurisdictionListJurisdictionsGetResponse.prototype, "jurisdictionList", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], JurisdictionListJurisdictionsGetResponse.prototype, "statusCode", void 0);
     return JurisdictionListJurisdictionsGetResponse;
-}(SpeakeasyBase));
-export { JurisdictionListJurisdictionsGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.JurisdictionListJurisdictionsGetResponse = JurisdictionListJurisdictionsGetResponse;

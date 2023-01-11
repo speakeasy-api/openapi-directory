@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Leg } from "./leg";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Bet = void 0;
+var utils_1 = require("../../../internal/utils");
+var leg_1 = require("./leg");
 var Bet = /** @class */ (function (_super) {
     __extends(Bet, _super);
     function Bet() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delayedBetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delayedBetId" }),
         __metadata("design:type", String)
     ], Bet.prototype, "delayedBetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=freeBetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=freeBetId" }),
         __metadata("design:type", String)
     ], Bet.prototype, "freeBetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=legs", elemType: Leg }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=legs", elemType: leg_1.Leg }),
         __metadata("design:type", Array)
     ], Bet.prototype, "legs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=number" }),
         __metadata("design:type", Number)
     ], Bet.prototype, "number", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stake" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stake" }),
         __metadata("design:type", Number)
     ], Bet.prototype, "stake", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=typeCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=typeCode" }),
         __metadata("design:type", String)
     ], Bet.prototype, "typeCode", void 0);
     return Bet;
-}(SpeakeasyBase));
-export { Bet };
+}(utils_1.SpeakeasyBase));
+exports.Bet = Bet;

@@ -30,7 +30,7 @@ export class DeviceType extends SpeakeasyBase {
   created?: Date;
 
   @SpeakeasyMetadata({ data: "json, name=custom_fields" })
-  customFields?: Map<string, any>;
+  customFields?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=device_count" })
   deviceCount?: number;

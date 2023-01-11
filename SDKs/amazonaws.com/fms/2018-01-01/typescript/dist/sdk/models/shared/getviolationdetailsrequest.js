@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetViolationDetailsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetViolationDetailsRequest = /** @class */ (function (_super) {
     __extends(GetViolationDetailsRequest, _super);
     function GetViolationDetailsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MemberAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MemberAccount" }),
         __metadata("design:type", String)
     ], GetViolationDetailsRequest.prototype, "memberAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=PolicyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=PolicyId" }),
         __metadata("design:type", String)
     ], GetViolationDetailsRequest.prototype, "policyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceId" }),
         __metadata("design:type", String)
     ], GetViolationDetailsRequest.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceType" }),
         __metadata("design:type", String)
     ], GetViolationDetailsRequest.prototype, "resourceType", void 0);
     return GetViolationDetailsRequest;
-}(SpeakeasyBase));
-export { GetViolationDetailsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetViolationDetailsRequest = GetViolationDetailsRequest;

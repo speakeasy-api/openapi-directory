@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResetParameterGroupRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var ResetParameterGroupRequest = /** @class */ (function (_super) {
     __extends(ResetParameterGroupRequest, _super);
     function ResetParameterGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AllParameters" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AllParameters" }),
         __metadata("design:type", Boolean)
     ], ResetParameterGroupRequest.prototype, "allParameters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParameterGroupName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParameterGroupName" }),
         __metadata("design:type", String)
     ], ResetParameterGroupRequest.prototype, "parameterGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ParameterNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ParameterNames" }),
         __metadata("design:type", Array)
     ], ResetParameterGroupRequest.prototype, "parameterNames", void 0);
     return ResetParameterGroupRequest;
-}(SpeakeasyBase));
-export { ResetParameterGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.ResetParameterGroupRequest = ResetParameterGroupRequest;

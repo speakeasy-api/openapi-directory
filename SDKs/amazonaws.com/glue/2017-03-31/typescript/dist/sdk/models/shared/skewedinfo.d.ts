@@ -4,6 +4,6 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class SkewedInfo extends SpeakeasyBase {
     skewedColumnNames?: string[];
-    skewedColumnValueLocationMaps?: Map<string, string>;
+    skewedColumnValueLocationMaps?: Record<string, string>;
     skewedColumnValues?: string[];
 }

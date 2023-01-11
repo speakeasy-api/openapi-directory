@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,23 +23,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSettingResponse = exports.GetSettingRequest = exports.GetSetting200ApplicationJson = exports.GetSetting200ApplicationJsonResultEnum = exports.GetSetting200ApplicationJsonData = exports.GetSetting200ApplicationJsonActionEnum = exports.GetSettingPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSettingPathParams = /** @class */ (function (_super) {
     __extends(GetSettingPathParams, _super);
     function GetSettingPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=settingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=settingId" }),
         __metadata("design:type", String)
     ], GetSettingPathParams.prototype, "settingId", void 0);
     return GetSettingPathParams;
-}(SpeakeasyBase));
-export { GetSettingPathParams };
-export var GetSetting200ApplicationJsonActionEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetSettingPathParams = GetSettingPathParams;
+var GetSetting200ApplicationJsonActionEnum;
 (function (GetSetting200ApplicationJsonActionEnum) {
     GetSetting200ApplicationJsonActionEnum["GetSetting"] = "getSetting";
-})(GetSetting200ApplicationJsonActionEnum || (GetSetting200ApplicationJsonActionEnum = {}));
+})(GetSetting200ApplicationJsonActionEnum = exports.GetSetting200ApplicationJsonActionEnum || (exports.GetSetting200ApplicationJsonActionEnum = {}));
 // GetSetting200ApplicationJsonData
 /**
  * Information about the setting
@@ -49,70 +52,70 @@ var GetSetting200ApplicationJsonData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settingId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settingId" }),
         __metadata("design:type", String)
     ], GetSetting200ApplicationJsonData.prototype, "settingId", void 0);
     return GetSetting200ApplicationJsonData;
-}(SpeakeasyBase));
-export { GetSetting200ApplicationJsonData };
-export var GetSetting200ApplicationJsonResultEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetSetting200ApplicationJsonData = GetSetting200ApplicationJsonData;
+var GetSetting200ApplicationJsonResultEnum;
 (function (GetSetting200ApplicationJsonResultEnum) {
     GetSetting200ApplicationJsonResultEnum["Success"] = "success";
     GetSetting200ApplicationJsonResultEnum["Error"] = "error";
-})(GetSetting200ApplicationJsonResultEnum || (GetSetting200ApplicationJsonResultEnum = {}));
+})(GetSetting200ApplicationJsonResultEnum = exports.GetSetting200ApplicationJsonResultEnum || (exports.GetSetting200ApplicationJsonResultEnum = {}));
 var GetSetting200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetSetting200ApplicationJson, _super);
     function GetSetting200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=action" }),
         __metadata("design:type", String)
     ], GetSetting200ApplicationJson.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", GetSetting200ApplicationJsonData)
     ], GetSetting200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], GetSetting200ApplicationJson.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], GetSetting200ApplicationJson.prototype, "result", void 0);
     return GetSetting200ApplicationJson;
-}(SpeakeasyBase));
-export { GetSetting200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetSetting200ApplicationJson = GetSetting200ApplicationJson;
 var GetSettingRequest = /** @class */ (function (_super) {
     __extends(GetSettingRequest, _super);
     function GetSettingRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSettingPathParams)
     ], GetSettingRequest.prototype, "pathParams", void 0);
     return GetSettingRequest;
-}(SpeakeasyBase));
-export { GetSettingRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSettingRequest = GetSettingRequest;
 var GetSettingResponse = /** @class */ (function (_super) {
     __extends(GetSettingResponse, _super);
     function GetSettingResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSettingResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSettingResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetting200ApplicationJson)
-    ], GetSettingResponse.prototype, "getSetting200ApplicationJsonObject", void 0);
+    ], GetSettingResponse.prototype, "getSetting200ApplicationJSONObject", void 0);
     return GetSettingResponse;
-}(SpeakeasyBase));
-export { GetSettingResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSettingResponse = GetSettingResponse;

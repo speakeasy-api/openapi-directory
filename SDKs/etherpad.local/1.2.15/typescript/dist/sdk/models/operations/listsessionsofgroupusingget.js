@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,176 +23,178 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListSessionsOfGroupUsingGetResponse = exports.ListSessionsOfGroupUsingGetRequest = exports.ListSessionsOfGroupUsingGet500ApplicationJson = exports.ListSessionsOfGroupUsingGet401ApplicationJson = exports.ListSessionsOfGroupUsingGet400ApplicationJson = exports.ListSessionsOfGroupUsingGet200ApplicationJson = exports.ListSessionsOfGroupUsingGet200ApplicationJsonData = exports.ListSessionsOfGroupUsingGet200ApplicationJsonDataSessions = exports.ListSessionsOfGroupUsingGetQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListSessionsOfGroupUsingGetQueryParams = /** @class */ (function (_super) {
     __extends(ListSessionsOfGroupUsingGetQueryParams, _super);
     function ListSessionsOfGroupUsingGetQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=groupID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=groupID" }),
         __metadata("design:type", String)
-    ], ListSessionsOfGroupUsingGetQueryParams.prototype, "groupId", void 0);
+    ], ListSessionsOfGroupUsingGetQueryParams.prototype, "groupID", void 0);
     return ListSessionsOfGroupUsingGetQueryParams;
-}(SpeakeasyBase));
-export { ListSessionsOfGroupUsingGetQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfGroupUsingGetQueryParams = ListSessionsOfGroupUsingGetQueryParams;
 var ListSessionsOfGroupUsingGet200ApplicationJsonDataSessions = /** @class */ (function (_super) {
     __extends(ListSessionsOfGroupUsingGet200ApplicationJsonDataSessions, _super);
     function ListSessionsOfGroupUsingGet200ApplicationJsonDataSessions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorID" }),
         __metadata("design:type", String)
-    ], ListSessionsOfGroupUsingGet200ApplicationJsonDataSessions.prototype, "authorId", void 0);
+    ], ListSessionsOfGroupUsingGet200ApplicationJsonDataSessions.prototype, "authorID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupID" }),
         __metadata("design:type", String)
-    ], ListSessionsOfGroupUsingGet200ApplicationJsonDataSessions.prototype, "groupId", void 0);
+    ], ListSessionsOfGroupUsingGet200ApplicationJsonDataSessions.prototype, "groupID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ListSessionsOfGroupUsingGet200ApplicationJsonDataSessions.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=validUntil" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=validUntil" }),
         __metadata("design:type", Number)
     ], ListSessionsOfGroupUsingGet200ApplicationJsonDataSessions.prototype, "validUntil", void 0);
     return ListSessionsOfGroupUsingGet200ApplicationJsonDataSessions;
-}(SpeakeasyBase));
-export { ListSessionsOfGroupUsingGet200ApplicationJsonDataSessions };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfGroupUsingGet200ApplicationJsonDataSessions = ListSessionsOfGroupUsingGet200ApplicationJsonDataSessions;
 var ListSessionsOfGroupUsingGet200ApplicationJsonData = /** @class */ (function (_super) {
     __extends(ListSessionsOfGroupUsingGet200ApplicationJsonData, _super);
     function ListSessionsOfGroupUsingGet200ApplicationJsonData() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessions", elemType: ListSessionsOfGroupUsingGet200ApplicationJsonDataSessions }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessions", elemType: ListSessionsOfGroupUsingGet200ApplicationJsonDataSessions }),
         __metadata("design:type", Array)
     ], ListSessionsOfGroupUsingGet200ApplicationJsonData.prototype, "sessions", void 0);
     return ListSessionsOfGroupUsingGet200ApplicationJsonData;
-}(SpeakeasyBase));
-export { ListSessionsOfGroupUsingGet200ApplicationJsonData };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfGroupUsingGet200ApplicationJsonData = ListSessionsOfGroupUsingGet200ApplicationJsonData;
 var ListSessionsOfGroupUsingGet200ApplicationJson = /** @class */ (function (_super) {
     __extends(ListSessionsOfGroupUsingGet200ApplicationJson, _super);
     function ListSessionsOfGroupUsingGet200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], ListSessionsOfGroupUsingGet200ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", ListSessionsOfGroupUsingGet200ApplicationJsonData)
     ], ListSessionsOfGroupUsingGet200ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ListSessionsOfGroupUsingGet200ApplicationJson.prototype, "message", void 0);
     return ListSessionsOfGroupUsingGet200ApplicationJson;
-}(SpeakeasyBase));
-export { ListSessionsOfGroupUsingGet200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfGroupUsingGet200ApplicationJson = ListSessionsOfGroupUsingGet200ApplicationJson;
 var ListSessionsOfGroupUsingGet400ApplicationJson = /** @class */ (function (_super) {
     __extends(ListSessionsOfGroupUsingGet400ApplicationJson, _super);
     function ListSessionsOfGroupUsingGet400ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], ListSessionsOfGroupUsingGet400ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], ListSessionsOfGroupUsingGet400ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ListSessionsOfGroupUsingGet400ApplicationJson.prototype, "message", void 0);
     return ListSessionsOfGroupUsingGet400ApplicationJson;
-}(SpeakeasyBase));
-export { ListSessionsOfGroupUsingGet400ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfGroupUsingGet400ApplicationJson = ListSessionsOfGroupUsingGet400ApplicationJson;
 var ListSessionsOfGroupUsingGet401ApplicationJson = /** @class */ (function (_super) {
     __extends(ListSessionsOfGroupUsingGet401ApplicationJson, _super);
     function ListSessionsOfGroupUsingGet401ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], ListSessionsOfGroupUsingGet401ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], ListSessionsOfGroupUsingGet401ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ListSessionsOfGroupUsingGet401ApplicationJson.prototype, "message", void 0);
     return ListSessionsOfGroupUsingGet401ApplicationJson;
-}(SpeakeasyBase));
-export { ListSessionsOfGroupUsingGet401ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfGroupUsingGet401ApplicationJson = ListSessionsOfGroupUsingGet401ApplicationJson;
 var ListSessionsOfGroupUsingGet500ApplicationJson = /** @class */ (function (_super) {
     __extends(ListSessionsOfGroupUsingGet500ApplicationJson, _super);
     function ListSessionsOfGroupUsingGet500ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=code" }),
         __metadata("design:type", Number)
     ], ListSessionsOfGroupUsingGet500ApplicationJson.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
+        __metadata("design:type", Object)
     ], ListSessionsOfGroupUsingGet500ApplicationJson.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], ListSessionsOfGroupUsingGet500ApplicationJson.prototype, "message", void 0);
     return ListSessionsOfGroupUsingGet500ApplicationJson;
-}(SpeakeasyBase));
-export { ListSessionsOfGroupUsingGet500ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfGroupUsingGet500ApplicationJson = ListSessionsOfGroupUsingGet500ApplicationJson;
 var ListSessionsOfGroupUsingGetRequest = /** @class */ (function (_super) {
     __extends(ListSessionsOfGroupUsingGetRequest, _super);
     function ListSessionsOfGroupUsingGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListSessionsOfGroupUsingGetQueryParams)
     ], ListSessionsOfGroupUsingGetRequest.prototype, "queryParams", void 0);
     return ListSessionsOfGroupUsingGetRequest;
-}(SpeakeasyBase));
-export { ListSessionsOfGroupUsingGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfGroupUsingGetRequest = ListSessionsOfGroupUsingGetRequest;
 var ListSessionsOfGroupUsingGetResponse = /** @class */ (function (_super) {
     __extends(ListSessionsOfGroupUsingGetResponse, _super);
     function ListSessionsOfGroupUsingGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ListSessionsOfGroupUsingGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ListSessionsOfGroupUsingGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListSessionsOfGroupUsingGet200ApplicationJson)
-    ], ListSessionsOfGroupUsingGetResponse.prototype, "listSessionsOfGroupUsingGet200ApplicationJsonObject", void 0);
+    ], ListSessionsOfGroupUsingGetResponse.prototype, "listSessionsOfGroupUsingGET200ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListSessionsOfGroupUsingGet400ApplicationJson)
-    ], ListSessionsOfGroupUsingGetResponse.prototype, "listSessionsOfGroupUsingGet400ApplicationJsonObject", void 0);
+    ], ListSessionsOfGroupUsingGetResponse.prototype, "listSessionsOfGroupUsingGET400ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListSessionsOfGroupUsingGet401ApplicationJson)
-    ], ListSessionsOfGroupUsingGetResponse.prototype, "listSessionsOfGroupUsingGet401ApplicationJsonObject", void 0);
+    ], ListSessionsOfGroupUsingGetResponse.prototype, "listSessionsOfGroupUsingGET401ApplicationJSONObject", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ListSessionsOfGroupUsingGet500ApplicationJson)
-    ], ListSessionsOfGroupUsingGetResponse.prototype, "listSessionsOfGroupUsingGet500ApplicationJsonObject", void 0);
+    ], ListSessionsOfGroupUsingGetResponse.prototype, "listSessionsOfGroupUsingGET500ApplicationJSONObject", void 0);
     return ListSessionsOfGroupUsingGetResponse;
-}(SpeakeasyBase));
-export { ListSessionsOfGroupUsingGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListSessionsOfGroupUsingGetResponse = ListSessionsOfGroupUsingGetResponse;

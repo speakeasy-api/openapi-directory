@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { IFrameActionBody } from "./iframeactionbody";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TopLevelActions = void 0;
+var utils_1 = require("../../../internal/utils");
+var iframeactionbody_1 = require("./iframeactionbody");
 var TopLevelActions = /** @class */ (function (_super) {
     __extends(TopLevelActions, _super);
     function TopLevelActions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary" }),
         __metadata("design:type", Object)
     ], TopLevelActions.prototype, "primary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondary" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondary" }),
         __metadata("design:type", Array)
     ], TopLevelActions.prototype, "secondary", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings" }),
-        __metadata("design:type", IFrameActionBody)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings" }),
+        __metadata("design:type", iframeactionbody_1.IFrameActionBody)
     ], TopLevelActions.prototype, "settings", void 0);
     return TopLevelActions;
-}(SpeakeasyBase));
-export { TopLevelActions };
+}(utils_1.SpeakeasyBase));
+exports.TopLevelActions = TopLevelActions;

@@ -13,10 +13,10 @@ export class DiscoverInputSchemaRequest extends SpeakeasyBase {
   inputStartingPositionConfiguration?: InputStartingPositionConfiguration;
 
   @SpeakeasyMetadata({ data: "json, name=ResourceARN" })
-  resourceArn?: string;
+  resourceARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=RoleARN" })
-  roleArn?: string;
+  roleARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=S3Configuration" })
   s3Configuration?: S3Configuration;

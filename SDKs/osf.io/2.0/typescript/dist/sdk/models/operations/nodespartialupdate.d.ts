@@ -4,7 +4,7 @@ export declare class NodesPartialUpdatePathParams extends SpeakeasyBase {
 }
 export declare class NodesPartialUpdateRequest extends SpeakeasyBase {
     pathParams: NodesPartialUpdatePathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class NodesPartialUpdateResponse extends SpeakeasyBase {
     contentType: string;

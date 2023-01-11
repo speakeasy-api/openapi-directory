@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DetectorDebugOption } from "./detectordebugoption";
-import { LoggingLevelEnum } from "./logginglevelenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoggingOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+var detectordebugoption_1 = require("./detectordebugoption");
+var logginglevelenum_1 = require("./logginglevelenum");
 // LoggingOptions
 /**
  * The values of the AWS IoT Events logging options.
@@ -35,21 +38,21 @@ var LoggingOptions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=detectorDebugOptions", elemType: DetectorDebugOption }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=detectorDebugOptions", elemType: detectordebugoption_1.DetectorDebugOption }),
         __metadata("design:type", Array)
     ], LoggingOptions.prototype, "detectorDebugOptions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], LoggingOptions.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=level" }),
         __metadata("design:type", String)
     ], LoggingOptions.prototype, "level", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleArn" }),
         __metadata("design:type", String)
     ], LoggingOptions.prototype, "roleArn", void 0);
     return LoggingOptions;
-}(SpeakeasyBase));
-export { LoggingOptions };
+}(utils_1.SpeakeasyBase));
+exports.LoggingOptions = LoggingOptions;

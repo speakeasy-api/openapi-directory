@@ -8,16 +8,10 @@ export class ProjectsListCollaboratorsPathParams extends SpeakeasyBase {
   projectId: number;
 }
 
-export enum ProjectsListCollaboratorsAffiliationEnum {
-    Outside = "outside",
-    Direct = "direct",
-    All = "all"
-}
-
 
 export class ProjectsListCollaboratorsQueryParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=affiliation" })
-  affiliation?: ProjectsListCollaboratorsAffiliationEnum;
+  affiliation?: shared.ProjectIdEnum;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=page" })
   page?: number;
@@ -50,7 +44,7 @@ export class ProjectsListCollaboratorsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
@@ -59,7 +53,7 @@ export class ProjectsListCollaboratorsResponse extends SpeakeasyBase {
   basicError?: shared.BasicError;
 
   @SpeakeasyMetadata()
-  projectsListCollaborators415ApplicationJsonObject?: ProjectsListCollaborators415ApplicationJson;
+  projectsListCollaborators415ApplicationJSONObject?: ProjectsListCollaborators415ApplicationJson;
 
   @SpeakeasyMetadata({ elemType: shared.SimpleUser })
   simpleUsers?: shared.SimpleUser[];

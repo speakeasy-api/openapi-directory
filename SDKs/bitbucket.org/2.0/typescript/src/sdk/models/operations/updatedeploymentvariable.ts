@@ -22,7 +22,7 @@ export class UpdateDeploymentVariableRequest extends SpeakeasyBase {
   pathParams: UpdateDeploymentVariablePathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -34,8 +34,8 @@ export class UpdateDeploymentVariableResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  deploymentVariable?: Map<string, any>;
+  deploymentVariable?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 }

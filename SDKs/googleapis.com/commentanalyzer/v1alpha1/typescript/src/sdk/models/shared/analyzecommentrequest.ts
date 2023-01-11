@@ -29,7 +29,7 @@ export class AnalyzeCommentRequest extends SpeakeasyBase {
   languages?: string[];
 
   @SpeakeasyMetadata({ data: "json, name=requestedAttributes", elemType: AttributeParameters })
-  requestedAttributes?: Map<string, AttributeParameters>;
+  requestedAttributes?: Record<string, AttributeParameters>;
 
   @SpeakeasyMetadata({ data: "json, name=sessionId" })
   sessionId?: string;

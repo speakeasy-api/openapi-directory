@@ -20,7 +20,7 @@ export declare class DeleteFacetRequest extends SpeakeasyBase {
 export declare class DeleteFacetResponse extends SpeakeasyBase {
     accessDeniedException?: shared.AccessDeniedException;
     contentType: string;
-    deleteFacetResponse?: Map<string, any>;
+    deleteFacetResponse?: Record<string, any>;
     facetInUseException?: shared.FacetInUseException;
     facetNotFoundException?: shared.FacetNotFoundException;
     internalServiceException?: shared.InternalServiceException;

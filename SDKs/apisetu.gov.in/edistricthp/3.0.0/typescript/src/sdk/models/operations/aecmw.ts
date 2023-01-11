@@ -185,23 +185,23 @@ export class AecmwResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  aecmw400ApplicationJsonObject?: Aecmw400ApplicationJson;
+  aecmw400ApplicationJSONObject?: Aecmw400ApplicationJson;
 
   @SpeakeasyMetadata()
-  aecmw401ApplicationJsonObject?: Aecmw401ApplicationJson;
+  aecmw401ApplicationJSONObject?: Aecmw401ApplicationJson;
 
   @SpeakeasyMetadata()
-  aecmw404ApplicationJsonObject?: Aecmw404ApplicationJson;
+  aecmw404ApplicationJSONObject?: Aecmw404ApplicationJson;
 
   @SpeakeasyMetadata()
-  aecmw500ApplicationJsonObject?: Aecmw500ApplicationJson;
+  aecmw500ApplicationJSONObject?: Aecmw500ApplicationJson;
 
   @SpeakeasyMetadata()
-  aecmw502ApplicationJsonObject?: Aecmw502ApplicationJson;
+  aecmw502ApplicationJSONObject?: Aecmw502ApplicationJson;
 
   @SpeakeasyMetadata()
-  aecmw503ApplicationJsonObject?: Aecmw503ApplicationJson;
+  aecmw503ApplicationJSONObject?: Aecmw503ApplicationJson;
 
   @SpeakeasyMetadata()
-  aecmw504ApplicationJsonObject?: Aecmw504ApplicationJson;
+  aecmw504ApplicationJSONObject?: Aecmw504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StageTransitionTypeEnum } from "./stagetransitiontypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DisableStageTransitionInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var stagetransitiontypeenum_1 = require("./stagetransitiontypeenum");
 // DisableStageTransitionInput
 /**
  * Represents the input of a <code>DisableStageTransition</code> action.
@@ -34,21 +37,21 @@ var DisableStageTransitionInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pipelineName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pipelineName" }),
         __metadata("design:type", String)
     ], DisableStageTransitionInput.prototype, "pipelineName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], DisableStageTransitionInput.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stageName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stageName" }),
         __metadata("design:type", String)
     ], DisableStageTransitionInput.prototype, "stageName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transitionType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transitionType" }),
         __metadata("design:type", String)
     ], DisableStageTransitionInput.prototype, "transitionType", void 0);
     return DisableStageTransitionInput;
-}(SpeakeasyBase));
-export { DisableStageTransitionInput };
+}(utils_1.SpeakeasyBase));
+exports.DisableStageTransitionInput = DisableStageTransitionInput;

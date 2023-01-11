@@ -53,5 +53,5 @@ export class UpdatePortfolioResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updatePortfolio200ApplicationJsonObject?: UpdatePortfolio200ApplicationJson;
+  updatePortfolio200ApplicationJSONObject?: UpdatePortfolio200ApplicationJson;
 }

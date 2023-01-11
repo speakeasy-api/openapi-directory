@@ -188,23 +188,23 @@ export class SmcerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  smcer400ApplicationJsonObject?: Smcer400ApplicationJson;
+  smcer400ApplicationJSONObject?: Smcer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  smcer401ApplicationJsonObject?: Smcer401ApplicationJson;
+  smcer401ApplicationJSONObject?: Smcer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  smcer404ApplicationJsonObject?: Smcer404ApplicationJson;
+  smcer404ApplicationJSONObject?: Smcer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  smcer500ApplicationJsonObject?: Smcer500ApplicationJson;
+  smcer500ApplicationJSONObject?: Smcer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  smcer502ApplicationJsonObject?: Smcer502ApplicationJson;
+  smcer502ApplicationJSONObject?: Smcer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  smcer503ApplicationJsonObject?: Smcer503ApplicationJson;
+  smcer503ApplicationJSONObject?: Smcer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  smcer504ApplicationJsonObject?: Smcer504ApplicationJson;
+  smcer504ApplicationJSONObject?: Smcer504ApplicationJson;
 }

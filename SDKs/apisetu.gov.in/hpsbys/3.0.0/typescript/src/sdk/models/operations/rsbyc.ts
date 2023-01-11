@@ -185,23 +185,23 @@ export class RsbycResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  rsbyc400ApplicationJsonObject?: Rsbyc400ApplicationJson;
+  rsbyc400ApplicationJSONObject?: Rsbyc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  rsbyc401ApplicationJsonObject?: Rsbyc401ApplicationJson;
+  rsbyc401ApplicationJSONObject?: Rsbyc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  rsbyc404ApplicationJsonObject?: Rsbyc404ApplicationJson;
+  rsbyc404ApplicationJSONObject?: Rsbyc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  rsbyc500ApplicationJsonObject?: Rsbyc500ApplicationJson;
+  rsbyc500ApplicationJSONObject?: Rsbyc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  rsbyc502ApplicationJsonObject?: Rsbyc502ApplicationJson;
+  rsbyc502ApplicationJSONObject?: Rsbyc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  rsbyc503ApplicationJsonObject?: Rsbyc503ApplicationJson;
+  rsbyc503ApplicationJSONObject?: Rsbyc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  rsbyc504ApplicationJsonObject?: Rsbyc504ApplicationJson;
+  rsbyc504ApplicationJSONObject?: Rsbyc504ApplicationJson;
 }

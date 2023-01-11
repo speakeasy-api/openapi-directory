@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DateRange } from "./daterange";
-import { MediationReportSpecDimensionFilter } from "./mediationreportspecdimensionfilter";
-import { LocalizationSettings } from "./localizationsettings";
-import { MediationReportSpecSortCondition } from "./mediationreportspecsortcondition";
-export var MediationReportSpecDimensionsEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MediationReportSpec = exports.MediationReportSpecMetricsEnum = exports.MediationReportSpecDimensionsEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var daterange_1 = require("./daterange");
+var mediationreportspecdimensionfilter_1 = require("./mediationreportspecdimensionfilter");
+var localizationsettings_1 = require("./localizationsettings");
+var mediationreportspecsortcondition_1 = require("./mediationreportspecsortcondition");
+var MediationReportSpecDimensionsEnum;
 (function (MediationReportSpecDimensionsEnum) {
     MediationReportSpecDimensionsEnum["DimensionUnspecified"] = "DIMENSION_UNSPECIFIED";
     MediationReportSpecDimensionsEnum["Date"] = "DATE";
@@ -45,8 +48,8 @@ export var MediationReportSpecDimensionsEnum;
     MediationReportSpecDimensionsEnum["GmaSdkVersion"] = "GMA_SDK_VERSION";
     MediationReportSpecDimensionsEnum["AppVersionName"] = "APP_VERSION_NAME";
     MediationReportSpecDimensionsEnum["ServingRestriction"] = "SERVING_RESTRICTION";
-})(MediationReportSpecDimensionsEnum || (MediationReportSpecDimensionsEnum = {}));
-export var MediationReportSpecMetricsEnum;
+})(MediationReportSpecDimensionsEnum = exports.MediationReportSpecDimensionsEnum || (exports.MediationReportSpecDimensionsEnum = {}));
+var MediationReportSpecMetricsEnum;
 (function (MediationReportSpecMetricsEnum) {
     MediationReportSpecMetricsEnum["MetricUnspecified"] = "METRIC_UNSPECIFIED";
     MediationReportSpecMetricsEnum["AdRequests"] = "AD_REQUESTS";
@@ -57,7 +60,7 @@ export var MediationReportSpecMetricsEnum;
     MediationReportSpecMetricsEnum["MatchedRequests"] = "MATCHED_REQUESTS";
     MediationReportSpecMetricsEnum["MatchRate"] = "MATCH_RATE";
     MediationReportSpecMetricsEnum["ObservedEcpm"] = "OBSERVED_ECPM";
-})(MediationReportSpecMetricsEnum || (MediationReportSpecMetricsEnum = {}));
+})(MediationReportSpecMetricsEnum = exports.MediationReportSpecMetricsEnum || (exports.MediationReportSpecMetricsEnum = {}));
 // MediationReportSpec
 /**
  * The specification for generating an AdMob Mediation report. For example, the specification to get observed ECPM sliced by ad source and app for the 'US' and 'CN' countries can look like the following example: { "date_range": { "start_date": {"year": 2021, "month": 9, "day": 1}, "end_date": {"year": 2021, "month": 9, "day": 30} }, "dimensions": ["AD_SOURCE", "APP", "COUNTRY"], "metrics": ["OBSERVED_ECPM"], "dimension_filters": [ { "dimension": "COUNTRY", "matches_any": {"values": [{"value": "US", "value": "CN"}]} } ], "sort_conditions": [ {"dimension":"APP", order: "ASCENDING"} ], "localization_settings": { "currency_code": "USD", "language_code": "en-US" } } For a better understanding, you can treat the preceding specification like the following pseudo SQL: SELECT AD_SOURCE, APP, COUNTRY, OBSERVED_ECPM FROM MEDIATION_REPORT WHERE DATE >= '2021-09-01' AND DATE <= '2021-09-30' AND COUNTRY IN ('US', 'CN') GROUP BY AD_SOURCE, APP, COUNTRY ORDER BY APP ASC;
@@ -68,37 +71,37 @@ var MediationReportSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dateRange" }),
-        __metadata("design:type", DateRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dateRange" }),
+        __metadata("design:type", daterange_1.DateRange)
     ], MediationReportSpec.prototype, "dateRange", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensionFilters", elemType: MediationReportSpecDimensionFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensionFilters", elemType: mediationreportspecdimensionfilter_1.MediationReportSpecDimensionFilter }),
         __metadata("design:type", Array)
     ], MediationReportSpec.prototype, "dimensionFilters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dimensions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dimensions" }),
         __metadata("design:type", Array)
     ], MediationReportSpec.prototype, "dimensions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localizationSettings" }),
-        __metadata("design:type", LocalizationSettings)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localizationSettings" }),
+        __metadata("design:type", localizationsettings_1.LocalizationSettings)
     ], MediationReportSpec.prototype, "localizationSettings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxReportRows" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxReportRows" }),
         __metadata("design:type", Number)
     ], MediationReportSpec.prototype, "maxReportRows", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metrics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metrics" }),
         __metadata("design:type", Array)
     ], MediationReportSpec.prototype, "metrics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortConditions", elemType: MediationReportSpecSortCondition }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortConditions", elemType: mediationreportspecsortcondition_1.MediationReportSpecSortCondition }),
         __metadata("design:type", Array)
     ], MediationReportSpec.prototype, "sortConditions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeZone" }),
         __metadata("design:type", String)
     ], MediationReportSpec.prototype, "timeZone", void 0);
     return MediationReportSpec;
-}(SpeakeasyBase));
-export { MediationReportSpec };
+}(utils_1.SpeakeasyBase));
+exports.MediationReportSpec = MediationReportSpec;

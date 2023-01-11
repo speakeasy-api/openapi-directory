@@ -1,6 +1,0 @@
-import { SpeakeasyBase } from "../../../internal/utils";
-import { ServiceSummary } from "./servicesummary";
-export declare class ListServicesResponse extends SpeakeasyBase {
-    nextToken?: string;
-    services?: ServiceSummary[];
-}

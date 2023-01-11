@@ -23,7 +23,7 @@ export declare class BaremetalsolutionProjectsLocationsInstancesStopSecurity ext
 export declare class BaremetalsolutionProjectsLocationsInstancesStopRequest extends SpeakeasyBase {
     pathParams: BaremetalsolutionProjectsLocationsInstancesStopPathParams;
     queryParams: BaremetalsolutionProjectsLocationsInstancesStopQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: BaremetalsolutionProjectsLocationsInstancesStopSecurity;
 }
 export declare class BaremetalsolutionProjectsLocationsInstancesStopResponse extends SpeakeasyBase {

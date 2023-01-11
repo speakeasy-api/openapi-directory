@@ -40,5 +40,5 @@ export class GetfullnameparsedmatchResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getfullnameparsedmatch200ApplicationJsonObject?: Getfullnameparsedmatch200ApplicationJson;
+  getfullnameparsedmatch200ApplicationJSONObject?: Getfullnameparsedmatch200ApplicationJson;
 }

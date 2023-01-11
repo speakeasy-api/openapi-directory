@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateRequest, PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,37 +30,35 @@ const req: PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateReques
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "tempora",
+    name: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "consequatur",
-    alt: "proto",
-    callback: "eveniet",
-    fields: "reiciendis",
-    key: "voluptatem",
-    oauthToken: "porro",
-    prettyPrint: false,
-    quotaUser: "dolores",
-    uploadType: "dicta",
-    uploadProtocol: "autem",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
+    prettyPrint: true,
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
   },
   request: {
-    pemCaCertificate: "ut",
-    requestId: "dignissimos",
+    pemCaCertificate: "dicta",
+    requestId: "debitis",
     subordinateConfig: {
-      certificateAuthority: "corporis",
+      certificateAuthority: "voluptatum",
       pemIssuerChain: {
         pemCertificates: [
-          "et",
-          "et",
-          "corporis",
+          "ut",
         ],
       },
     },

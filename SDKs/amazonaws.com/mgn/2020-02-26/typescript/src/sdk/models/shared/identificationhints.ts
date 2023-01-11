@@ -8,7 +8,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class IdentificationHints extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=awsInstanceID" })
-  awsInstanceId?: string;
+  awsInstanceID?: string;
 
   @SpeakeasyMetadata({ data: "json, name=fqdn" })
   fqdn?: string;

@@ -1,4 +1,7 @@
-export var ExecutionStateEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExecutionStateEnum = void 0;
+var ExecutionStateEnum;
 (function (ExecutionStateEnum) {
     ExecutionStateEnum["Queued"] = "QUEUED";
     ExecutionStateEnum["InProgress"] = "IN_PROGRESS";
@@ -7,4 +10,4 @@ export var ExecutionStateEnum;
     ExecutionStateEnum["Succeeded"] = "SUCCEEDED";
     ExecutionStateEnum["Rejected"] = "REJECTED";
     ExecutionStateEnum["TimedOut"] = "TIMED_OUT";
-})(ExecutionStateEnum || (ExecutionStateEnum = {}));
+})(ExecutionStateEnum = exports.ExecutionStateEnum || (exports.ExecutionStateEnum = {}));

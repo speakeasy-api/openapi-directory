@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePlayAnalytics = void 0;
+var utils_1 = require("../../../internal/utils");
 // GooglePlayAnalytics
 /**
  * Parameters for Google Play Campaign Measurements. [Learn more](https://developers.google.com/analytics/devguides/collection/android/v4/campaigns#campaign-params)
@@ -33,29 +36,29 @@ var GooglePlayAnalytics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gclid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gclid" }),
         __metadata("design:type", String)
     ], GooglePlayAnalytics.prototype, "gclid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=utmCampaign" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=utmCampaign" }),
         __metadata("design:type", String)
     ], GooglePlayAnalytics.prototype, "utmCampaign", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=utmContent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=utmContent" }),
         __metadata("design:type", String)
     ], GooglePlayAnalytics.prototype, "utmContent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=utmMedium" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=utmMedium" }),
         __metadata("design:type", String)
     ], GooglePlayAnalytics.prototype, "utmMedium", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=utmSource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=utmSource" }),
         __metadata("design:type", String)
     ], GooglePlayAnalytics.prototype, "utmSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=utmTerm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=utmTerm" }),
         __metadata("design:type", String)
     ], GooglePlayAnalytics.prototype, "utmTerm", void 0);
     return GooglePlayAnalytics;
-}(SpeakeasyBase));
-export { GooglePlayAnalytics };
+}(utils_1.SpeakeasyBase));
+exports.GooglePlayAnalytics = GooglePlayAnalytics;

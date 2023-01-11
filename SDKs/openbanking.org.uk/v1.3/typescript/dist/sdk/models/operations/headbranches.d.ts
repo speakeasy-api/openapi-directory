@@ -8,6 +8,6 @@ export declare class HeadBranchesRequest extends SpeakeasyBase {
 }
 export declare class HeadBranchesResponse extends SpeakeasyBase {
     contentType: string;
-    noResponse?: Map<string, any>;
+    noResponse?: Record<string, any>;
     statusCode: number;
 }

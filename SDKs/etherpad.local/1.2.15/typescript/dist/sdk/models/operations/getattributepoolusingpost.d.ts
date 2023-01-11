@@ -1,25 +1,25 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class GetAttributePoolUsingPostQueryParams extends SpeakeasyBase {
-    padId?: string;
+    padID?: string;
 }
 export declare class GetAttributePoolUsingPost200ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetAttributePoolUsingPost400ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetAttributePoolUsingPost401ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetAttributePoolUsingPost500ApplicationJson extends SpeakeasyBase {
     code?: number;
-    data?: Map<string, any>;
+    data?: Record<string, any>;
     message?: string;
 }
 export declare class GetAttributePoolUsingPostRequest extends SpeakeasyBase {
@@ -28,8 +28,8 @@ export declare class GetAttributePoolUsingPostRequest extends SpeakeasyBase {
 export declare class GetAttributePoolUsingPostResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getAttributePoolUsingPost200ApplicationJsonObject?: GetAttributePoolUsingPost200ApplicationJson;
-    getAttributePoolUsingPost400ApplicationJsonObject?: GetAttributePoolUsingPost400ApplicationJson;
-    getAttributePoolUsingPost401ApplicationJsonObject?: GetAttributePoolUsingPost401ApplicationJson;
-    getAttributePoolUsingPost500ApplicationJsonObject?: GetAttributePoolUsingPost500ApplicationJson;
+    getAttributePoolUsingPOST200ApplicationJSONObject?: GetAttributePoolUsingPost200ApplicationJson;
+    getAttributePoolUsingPOST400ApplicationJSONObject?: GetAttributePoolUsingPost400ApplicationJson;
+    getAttributePoolUsingPOST401ApplicationJSONObject?: GetAttributePoolUsingPost401ApplicationJson;
+    getAttributePoolUsingPOST500ApplicationJSONObject?: GetAttributePoolUsingPost500ApplicationJson;
 }

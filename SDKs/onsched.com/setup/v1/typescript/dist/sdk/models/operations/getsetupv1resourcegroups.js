@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSetupV1ResourcegroupsResponse = exports.GetSetupV1ResourcegroupsRequest = exports.GetSetupV1ResourcegroupsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetSetupV1ResourcegroupsQueryParams = /** @class */ (function (_super) {
     __extends(GetSetupV1ResourcegroupsQueryParams, _super);
     function GetSetupV1ResourcegroupsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=deleted" }),
         __metadata("design:type", Boolean)
     ], GetSetupV1ResourcegroupsQueryParams.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetSetupV1ResourcegroupsQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=locationId" }),
         __metadata("design:type", String)
     ], GetSetupV1ResourcegroupsQueryParams.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], GetSetupV1ResourcegroupsQueryParams.prototype, "offset", void 0);
     return GetSetupV1ResourcegroupsQueryParams;
-}(SpeakeasyBase));
-export { GetSetupV1ResourcegroupsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1ResourcegroupsQueryParams = GetSetupV1ResourcegroupsQueryParams;
 var GetSetupV1ResourcegroupsRequest = /** @class */ (function (_super) {
     __extends(GetSetupV1ResourcegroupsRequest, _super);
     function GetSetupV1ResourcegroupsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetSetupV1ResourcegroupsQueryParams)
     ], GetSetupV1ResourcegroupsRequest.prototype, "queryParams", void 0);
     return GetSetupV1ResourcegroupsRequest;
-}(SpeakeasyBase));
-export { GetSetupV1ResourcegroupsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1ResourcegroupsRequest = GetSetupV1ResourcegroupsRequest;
 var GetSetupV1ResourcegroupsResponse = /** @class */ (function (_super) {
     __extends(GetSetupV1ResourcegroupsResponse, _super);
     function GetSetupV1ResourcegroupsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetSetupV1ResourcegroupsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetSetupV1ResourcegroupsResponse.prototype, "resourceGroupListViewModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetSetupV1ResourcegroupsResponse.prototype, "statusCode", void 0);
     return GetSetupV1ResourcegroupsResponse;
-}(SpeakeasyBase));
-export { GetSetupV1ResourcegroupsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetSetupV1ResourcegroupsResponse = GetSetupV1ResourcegroupsResponse;

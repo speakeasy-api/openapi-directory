@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FundingStrategy } from "./fundingstrategy";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CloneCampaignRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var fundingstrategy_1 = require("./fundingstrategy");
 // CloneCampaignRequest
 /**
  * This type defines the fields needed for a clone-campaign request.
@@ -34,21 +37,21 @@ var CloneCampaignRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=campaignName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=campaignName" }),
         __metadata("design:type", String)
     ], CloneCampaignRequest.prototype, "campaignName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endDate" }),
         __metadata("design:type", String)
     ], CloneCampaignRequest.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fundingStrategy" }),
-        __metadata("design:type", FundingStrategy)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fundingStrategy" }),
+        __metadata("design:type", fundingstrategy_1.FundingStrategy)
     ], CloneCampaignRequest.prototype, "fundingStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startDate" }),
         __metadata("design:type", String)
     ], CloneCampaignRequest.prototype, "startDate", void 0);
     return CloneCampaignRequest;
-}(SpeakeasyBase));
-export { CloneCampaignRequest };
+}(utils_1.SpeakeasyBase));
+exports.CloneCampaignRequest = CloneCampaignRequest;

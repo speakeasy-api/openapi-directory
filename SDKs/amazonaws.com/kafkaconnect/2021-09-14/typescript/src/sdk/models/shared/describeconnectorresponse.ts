@@ -18,7 +18,7 @@ export class DescribeConnectorResponse extends SpeakeasyBase {
   connectorArn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=connectorConfiguration" })
-  connectorConfiguration?: Map<string, string>;
+  connectorConfiguration?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=connectorDescription" })
   connectorDescription?: string;

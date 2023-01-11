@@ -1,4 +1,7 @@
-export var ExportableLambdaFunctionFieldEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExportableLambdaFunctionFieldEnum = void 0;
+var ExportableLambdaFunctionFieldEnum;
 (function (ExportableLambdaFunctionFieldEnum) {
     ExportableLambdaFunctionFieldEnum["AccountId"] = "AccountId";
     ExportableLambdaFunctionFieldEnum["FunctionArn"] = "FunctionArn";
@@ -22,4 +25,4 @@ export var ExportableLambdaFunctionFieldEnum;
     ExportableLambdaFunctionFieldEnum["RecommendationOptionsProjectedUtilizationMetricsDurationUpperBound"] = "RecommendationOptionsProjectedUtilizationMetricsDurationUpperBound";
     ExportableLambdaFunctionFieldEnum["RecommendationOptionsProjectedUtilizationMetricsDurationExpected"] = "RecommendationOptionsProjectedUtilizationMetricsDurationExpected";
     ExportableLambdaFunctionFieldEnum["LastRefreshTimestamp"] = "LastRefreshTimestamp";
-})(ExportableLambdaFunctionFieldEnum || (ExportableLambdaFunctionFieldEnum = {}));
+})(ExportableLambdaFunctionFieldEnum = exports.ExportableLambdaFunctionFieldEnum || (exports.ExportableLambdaFunctionFieldEnum = {}));

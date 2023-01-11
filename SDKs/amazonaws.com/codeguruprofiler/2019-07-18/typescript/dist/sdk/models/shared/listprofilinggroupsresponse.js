@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProfilingGroupDescription } from "./profilinggroupdescription";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListProfilingGroupsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var profilinggroupdescription_1 = require("./profilinggroupdescription");
 // ListProfilingGroupsResponse
 /**
  * The structure representing the listProfilingGroupsResponse.
@@ -34,17 +37,17 @@ var ListProfilingGroupsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], ListProfilingGroupsResponse.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profilingGroupNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profilingGroupNames" }),
         __metadata("design:type", Array)
     ], ListProfilingGroupsResponse.prototype, "profilingGroupNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profilingGroups", elemType: ProfilingGroupDescription }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profilingGroups", elemType: profilinggroupdescription_1.ProfilingGroupDescription }),
         __metadata("design:type", Array)
     ], ListProfilingGroupsResponse.prototype, "profilingGroups", void 0);
     return ListProfilingGroupsResponse;
-}(SpeakeasyBase));
-export { ListProfilingGroupsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListProfilingGroupsResponse = ListProfilingGroupsResponse;

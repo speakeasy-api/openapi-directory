@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetServersSortEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetServersResponse = exports.GetServersRequest = exports.GetServers200ApplicationJson = exports.GetServers200ApplicationJsonServers = exports.GetServers200ApplicationJsonServersStatusEnum = exports.GetServers200ApplicationJsonServersServerType = exports.GetServers200ApplicationJsonServersServerTypeStorageTypeEnum = exports.GetServers200ApplicationJsonServersServerTypePrices = exports.GetServers200ApplicationJsonServersServerTypePricesPriceMonthly = exports.GetServers200ApplicationJsonServersServerTypePricesPriceHourly = exports.GetServers200ApplicationJsonServersServerTypeCpuTypeEnum = exports.GetServers200ApplicationJsonServersPublicNet = exports.GetServers200ApplicationJsonServersPublicNetIpv6 = exports.GetServers200ApplicationJsonServersPublicNetIpv6DnsPtr = exports.GetServers200ApplicationJsonServersPublicNetIpv4 = exports.GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewall = exports.GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewallStatusEnum = exports.GetServers200ApplicationJsonServersProtection = exports.GetServers200ApplicationJsonServersPrivateNet = exports.GetServers200ApplicationJsonServersPlacementGroupNullable = exports.GetServers200ApplicationJsonServersPlacementGroupNullableTypeEnum = exports.GetServers200ApplicationJsonServersIso = exports.GetServers200ApplicationJsonServersIsoTypeEnum = exports.GetServers200ApplicationJsonServersImage = exports.GetServers200ApplicationJsonServersImageTypeEnum = exports.GetServers200ApplicationJsonServersImageStatusEnum = exports.GetServers200ApplicationJsonServersImageProtection = exports.GetServers200ApplicationJsonServersImageOsFlavorEnum = exports.GetServers200ApplicationJsonServersImageCreatedFrom = exports.GetServers200ApplicationJsonServersDatacenter = exports.GetServers200ApplicationJsonServersDatacenterServerTypes = exports.GetServers200ApplicationJsonServersDatacenterLocation = exports.GetServers200ApplicationJsonMeta = exports.GetServers200ApplicationJsonMetaPagination = exports.GetServersQueryParams = exports.GetServersStatusEnum = exports.GetServersSortEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetServersSortEnum;
 (function (GetServersSortEnum) {
     GetServersSortEnum["Id"] = "id";
     GetServersSortEnum["IdAsc"] = "id:asc";
@@ -34,8 +37,8 @@ export var GetServersSortEnum;
     GetServersSortEnum["Created"] = "created";
     GetServersSortEnum["CreatedAsc"] = "created:asc";
     GetServersSortEnum["CreatedDesc"] = "created:desc";
-})(GetServersSortEnum || (GetServersSortEnum = {}));
-export var GetServersStatusEnum;
+})(GetServersSortEnum = exports.GetServersSortEnum || (exports.GetServersSortEnum = {}));
+var GetServersStatusEnum;
 (function (GetServersStatusEnum) {
     GetServersStatusEnum["Initializing"] = "initializing";
     GetServersStatusEnum["Starting"] = "starting";
@@ -46,115 +49,115 @@ export var GetServersStatusEnum;
     GetServersStatusEnum["Rebuilding"] = "rebuilding";
     GetServersStatusEnum["Migrating"] = "migrating";
     GetServersStatusEnum["Unknown"] = "unknown";
-})(GetServersStatusEnum || (GetServersStatusEnum = {}));
+})(GetServersStatusEnum = exports.GetServersStatusEnum || (exports.GetServersStatusEnum = {}));
 var GetServersQueryParams = /** @class */ (function (_super) {
     __extends(GetServersQueryParams, _super);
     function GetServersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=label_selector" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=label_selector" }),
         __metadata("design:type", String)
     ], GetServersQueryParams.prototype, "labelSelector", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], GetServersQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort" }),
         __metadata("design:type", String)
     ], GetServersQueryParams.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=status" }),
         __metadata("design:type", String)
     ], GetServersQueryParams.prototype, "status", void 0);
     return GetServersQueryParams;
-}(SpeakeasyBase));
-export { GetServersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetServersQueryParams = GetServersQueryParams;
 var GetServers200ApplicationJsonMetaPagination = /** @class */ (function (_super) {
     __extends(GetServers200ApplicationJsonMetaPagination, _super);
     function GetServers200ApplicationJsonMetaPagination() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_page" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonMetaPagination.prototype, "lastPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_page" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonMetaPagination.prototype, "nextPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=page" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonMetaPagination.prototype, "page", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=per_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=per_page" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonMetaPagination.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous_page" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous_page" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonMetaPagination.prototype, "previousPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total_entries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total_entries" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonMetaPagination.prototype, "totalEntries", void 0);
     return GetServers200ApplicationJsonMetaPagination;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonMetaPagination };
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonMetaPagination = GetServers200ApplicationJsonMetaPagination;
 var GetServers200ApplicationJsonMeta = /** @class */ (function (_super) {
     __extends(GetServers200ApplicationJsonMeta, _super);
     function GetServers200ApplicationJsonMeta() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pagination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pagination" }),
         __metadata("design:type", GetServers200ApplicationJsonMetaPagination)
     ], GetServers200ApplicationJsonMeta.prototype, "pagination", void 0);
     return GetServers200ApplicationJsonMeta;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonMeta };
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonMeta = GetServers200ApplicationJsonMeta;
 var GetServers200ApplicationJsonServersDatacenterLocation = /** @class */ (function (_super) {
     __extends(GetServers200ApplicationJsonServersDatacenterLocation, _super);
     function GetServers200ApplicationJsonServersDatacenterLocation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=city" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersDatacenterLocation.prototype, "city", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=country" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=country" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersDatacenterLocation.prototype, "country", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersDatacenterLocation.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServersDatacenterLocation.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latitude" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServersDatacenterLocation.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=longitude" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServersDatacenterLocation.prototype, "longitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersDatacenterLocation.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network_zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network_zone" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersDatacenterLocation.prototype, "networkZone", void 0);
     return GetServers200ApplicationJsonServersDatacenterLocation;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersDatacenterLocation };
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersDatacenterLocation = GetServers200ApplicationJsonServersDatacenterLocation;
 // GetServers200ApplicationJsonServersDatacenterServerTypes
 /**
  * The Server types the Datacenter can handle
@@ -165,20 +168,20 @@ var GetServers200ApplicationJsonServersDatacenterServerTypes = /** @class */ (fu
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=available" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=available" }),
         __metadata("design:type", Array)
     ], GetServers200ApplicationJsonServersDatacenterServerTypes.prototype, "available", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=available_for_migration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=available_for_migration" }),
         __metadata("design:type", Array)
     ], GetServers200ApplicationJsonServersDatacenterServerTypes.prototype, "availableForMigration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supported" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supported" }),
         __metadata("design:type", Array)
     ], GetServers200ApplicationJsonServersDatacenterServerTypes.prototype, "supported", void 0);
     return GetServers200ApplicationJsonServersDatacenterServerTypes;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersDatacenterServerTypes };
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersDatacenterServerTypes = GetServers200ApplicationJsonServersDatacenterServerTypes;
 // GetServers200ApplicationJsonServersDatacenter
 /**
  * Datacenter this Resource is located at
@@ -189,28 +192,28 @@ var GetServers200ApplicationJsonServersDatacenter = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersDatacenter.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServersDatacenter.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", GetServers200ApplicationJsonServersDatacenterLocation)
     ], GetServers200ApplicationJsonServersDatacenter.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersDatacenter.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server_types" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server_types" }),
         __metadata("design:type", GetServers200ApplicationJsonServersDatacenterServerTypes)
     ], GetServers200ApplicationJsonServersDatacenter.prototype, "serverTypes", void 0);
     return GetServers200ApplicationJsonServersDatacenter;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersDatacenter };
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersDatacenter = GetServers200ApplicationJsonServersDatacenter;
 // GetServers200ApplicationJsonServersImageCreatedFrom
 /**
  * Information about the Server the Image was created from
@@ -221,24 +224,24 @@ var GetServers200ApplicationJsonServersImageCreatedFrom = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServersImageCreatedFrom.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersImageCreatedFrom.prototype, "name", void 0);
     return GetServers200ApplicationJsonServersImageCreatedFrom;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersImageCreatedFrom };
-export var GetServers200ApplicationJsonServersImageOsFlavorEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersImageCreatedFrom = GetServers200ApplicationJsonServersImageCreatedFrom;
+var GetServers200ApplicationJsonServersImageOsFlavorEnum;
 (function (GetServers200ApplicationJsonServersImageOsFlavorEnum) {
     GetServers200ApplicationJsonServersImageOsFlavorEnum["Ubuntu"] = "ubuntu";
     GetServers200ApplicationJsonServersImageOsFlavorEnum["Centos"] = "centos";
     GetServers200ApplicationJsonServersImageOsFlavorEnum["Debian"] = "debian";
     GetServers200ApplicationJsonServersImageOsFlavorEnum["Fedora"] = "fedora";
     GetServers200ApplicationJsonServersImageOsFlavorEnum["Unknown"] = "unknown";
-})(GetServers200ApplicationJsonServersImageOsFlavorEnum || (GetServers200ApplicationJsonServersImageOsFlavorEnum = {}));
+})(GetServers200ApplicationJsonServersImageOsFlavorEnum = exports.GetServers200ApplicationJsonServersImageOsFlavorEnum || (exports.GetServers200ApplicationJsonServersImageOsFlavorEnum = {}));
 // GetServers200ApplicationJsonServersImageProtection
 /**
  * Protection configuration for the Resource
@@ -249,111 +252,111 @@ var GetServers200ApplicationJsonServersImageProtection = /** @class */ (function
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delete" }),
         __metadata("design:type", Boolean)
     ], GetServers200ApplicationJsonServersImageProtection.prototype, "delete", void 0);
     return GetServers200ApplicationJsonServersImageProtection;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersImageProtection };
-export var GetServers200ApplicationJsonServersImageStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersImageProtection = GetServers200ApplicationJsonServersImageProtection;
+var GetServers200ApplicationJsonServersImageStatusEnum;
 (function (GetServers200ApplicationJsonServersImageStatusEnum) {
     GetServers200ApplicationJsonServersImageStatusEnum["Available"] = "available";
     GetServers200ApplicationJsonServersImageStatusEnum["Creating"] = "creating";
     GetServers200ApplicationJsonServersImageStatusEnum["Unavailable"] = "unavailable";
-})(GetServers200ApplicationJsonServersImageStatusEnum || (GetServers200ApplicationJsonServersImageStatusEnum = {}));
-export var GetServers200ApplicationJsonServersImageTypeEnum;
+})(GetServers200ApplicationJsonServersImageStatusEnum = exports.GetServers200ApplicationJsonServersImageStatusEnum || (exports.GetServers200ApplicationJsonServersImageStatusEnum = {}));
+var GetServers200ApplicationJsonServersImageTypeEnum;
 (function (GetServers200ApplicationJsonServersImageTypeEnum) {
     GetServers200ApplicationJsonServersImageTypeEnum["System"] = "system";
     GetServers200ApplicationJsonServersImageTypeEnum["App"] = "app";
     GetServers200ApplicationJsonServersImageTypeEnum["Snapshot"] = "snapshot";
     GetServers200ApplicationJsonServersImageTypeEnum["Backup"] = "backup";
     GetServers200ApplicationJsonServersImageTypeEnum["Temporary"] = "temporary";
-})(GetServers200ApplicationJsonServersImageTypeEnum || (GetServers200ApplicationJsonServersImageTypeEnum = {}));
+})(GetServers200ApplicationJsonServersImageTypeEnum = exports.GetServers200ApplicationJsonServersImageTypeEnum || (exports.GetServers200ApplicationJsonServersImageTypeEnum = {}));
 var GetServers200ApplicationJsonServersImage = /** @class */ (function (_super) {
     __extends(GetServers200ApplicationJsonServersImage, _super);
     function GetServers200ApplicationJsonServersImage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bound_to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bound_to" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServersImage.prototype, "boundTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=build_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=build_id" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersImage.prototype, "buildId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersImage.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_from" }),
         __metadata("design:type", GetServers200ApplicationJsonServersImageCreatedFrom)
     ], GetServers200ApplicationJsonServersImage.prototype, "createdFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersImage.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deprecated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deprecated" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersImage.prototype, "deprecated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersImage.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disk_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disk_size" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServersImage.prototype, "diskSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServersImage.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image_size" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServersImage.prototype, "imageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], GetServers200ApplicationJsonServersImage.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersImage.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=os_flavor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=os_flavor" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersImage.prototype, "osFlavor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=os_version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=os_version" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersImage.prototype, "osVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protection" }),
         __metadata("design:type", GetServers200ApplicationJsonServersImageProtection)
     ], GetServers200ApplicationJsonServersImage.prototype, "protection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rapid_deploy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rapid_deploy" }),
         __metadata("design:type", Boolean)
     ], GetServers200ApplicationJsonServersImage.prototype, "rapidDeploy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersImage.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersImage.prototype, "type", void 0);
     return GetServers200ApplicationJsonServersImage;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersImage };
-export var GetServers200ApplicationJsonServersIsoTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersImage = GetServers200ApplicationJsonServersImage;
+var GetServers200ApplicationJsonServersIsoTypeEnum;
 (function (GetServers200ApplicationJsonServersIsoTypeEnum) {
     GetServers200ApplicationJsonServersIsoTypeEnum["Public"] = "public";
     GetServers200ApplicationJsonServersIsoTypeEnum["Private"] = "private";
-})(GetServers200ApplicationJsonServersIsoTypeEnum || (GetServers200ApplicationJsonServersIsoTypeEnum = {}));
+})(GetServers200ApplicationJsonServersIsoTypeEnum = exports.GetServers200ApplicationJsonServersIsoTypeEnum || (exports.GetServers200ApplicationJsonServersIsoTypeEnum = {}));
 // GetServers200ApplicationJsonServersIso
 /**
  * ISO Image that is attached to this Server. Null if no ISO is attached.
@@ -364,88 +367,88 @@ var GetServers200ApplicationJsonServersIso = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deprecated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deprecated" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersIso.prototype, "deprecated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersIso.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServersIso.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersIso.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersIso.prototype, "type", void 0);
     return GetServers200ApplicationJsonServersIso;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersIso };
-export var GetServers200ApplicationJsonServersPlacementGroupNullableTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersIso = GetServers200ApplicationJsonServersIso;
+var GetServers200ApplicationJsonServersPlacementGroupNullableTypeEnum;
 (function (GetServers200ApplicationJsonServersPlacementGroupNullableTypeEnum) {
     GetServers200ApplicationJsonServersPlacementGroupNullableTypeEnum["Spread"] = "spread";
-})(GetServers200ApplicationJsonServersPlacementGroupNullableTypeEnum || (GetServers200ApplicationJsonServersPlacementGroupNullableTypeEnum = {}));
+})(GetServers200ApplicationJsonServersPlacementGroupNullableTypeEnum = exports.GetServers200ApplicationJsonServersPlacementGroupNullableTypeEnum || (exports.GetServers200ApplicationJsonServersPlacementGroupNullableTypeEnum = {}));
 var GetServers200ApplicationJsonServersPlacementGroupNullable = /** @class */ (function (_super) {
     __extends(GetServers200ApplicationJsonServersPlacementGroupNullable, _super);
     function GetServers200ApplicationJsonServersPlacementGroupNullable() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersPlacementGroupNullable.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServersPlacementGroupNullable.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], GetServers200ApplicationJsonServersPlacementGroupNullable.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersPlacementGroupNullable.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servers" }),
         __metadata("design:type", Array)
     ], GetServers200ApplicationJsonServersPlacementGroupNullable.prototype, "servers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersPlacementGroupNullable.prototype, "type", void 0);
     return GetServers200ApplicationJsonServersPlacementGroupNullable;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersPlacementGroupNullable };
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersPlacementGroupNullable = GetServers200ApplicationJsonServersPlacementGroupNullable;
 var GetServers200ApplicationJsonServersPrivateNet = /** @class */ (function (_super) {
     __extends(GetServers200ApplicationJsonServersPrivateNet, _super);
     function GetServers200ApplicationJsonServersPrivateNet() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alias_ips" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alias_ips" }),
         __metadata("design:type", Array)
     ], GetServers200ApplicationJsonServersPrivateNet.prototype, "aliasIps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersPrivateNet.prototype, "ip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mac_address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mac_address" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersPrivateNet.prototype, "macAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=network" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=network" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServersPrivateNet.prototype, "network", void 0);
     return GetServers200ApplicationJsonServersPrivateNet;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersPrivateNet };
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersPrivateNet = GetServers200ApplicationJsonServersPrivateNet;
 // GetServers200ApplicationJsonServersProtection
 /**
  * Protection configuration for the Server
@@ -456,37 +459,37 @@ var GetServers200ApplicationJsonServersProtection = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=delete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=delete" }),
         __metadata("design:type", Boolean)
     ], GetServers200ApplicationJsonServersProtection.prototype, "delete", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rebuild" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rebuild" }),
         __metadata("design:type", Boolean)
     ], GetServers200ApplicationJsonServersProtection.prototype, "rebuild", void 0);
     return GetServers200ApplicationJsonServersProtection;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersProtection };
-export var GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewallStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersProtection = GetServers200ApplicationJsonServersProtection;
+var GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewallStatusEnum;
 (function (GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewallStatusEnum) {
     GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewallStatusEnum["Applied"] = "applied";
     GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewallStatusEnum["Pending"] = "pending";
-})(GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewallStatusEnum || (GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewallStatusEnum = {}));
+})(GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewallStatusEnum = exports.GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewallStatusEnum || (exports.GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewallStatusEnum = {}));
 var GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewall = /** @class */ (function (_super) {
     __extends(GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewall, _super);
     function GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewall() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewall.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewall.prototype, "status", void 0);
     return GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewall;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewall };
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewall = GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewall;
 // GetServers200ApplicationJsonServersPublicNetIpv4
 /**
  * IP address (v4) and its reverse DNS entry of this Server
@@ -497,36 +500,36 @@ var GetServers200ApplicationJsonServersPublicNetIpv4 = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blocked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blocked" }),
         __metadata("design:type", Boolean)
     ], GetServers200ApplicationJsonServersPublicNetIpv4.prototype, "blocked", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dns_ptr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dns_ptr" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersPublicNetIpv4.prototype, "dnsPtr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersPublicNetIpv4.prototype, "ip", void 0);
     return GetServers200ApplicationJsonServersPublicNetIpv4;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersPublicNetIpv4 };
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersPublicNetIpv4 = GetServers200ApplicationJsonServersPublicNetIpv4;
 var GetServers200ApplicationJsonServersPublicNetIpv6DnsPtr = /** @class */ (function (_super) {
     __extends(GetServers200ApplicationJsonServersPublicNetIpv6DnsPtr, _super);
     function GetServers200ApplicationJsonServersPublicNetIpv6DnsPtr() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dns_ptr" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dns_ptr" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersPublicNetIpv6DnsPtr.prototype, "dnsPtr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersPublicNetIpv6DnsPtr.prototype, "ip", void 0);
     return GetServers200ApplicationJsonServersPublicNetIpv6DnsPtr;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersPublicNetIpv6DnsPtr };
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersPublicNetIpv6DnsPtr = GetServers200ApplicationJsonServersPublicNetIpv6DnsPtr;
 // GetServers200ApplicationJsonServersPublicNetIpv6
 /**
  * IPv6 network assigned to this Server and its reverse DNS entry
@@ -537,20 +540,20 @@ var GetServers200ApplicationJsonServersPublicNetIpv6 = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blocked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blocked" }),
         __metadata("design:type", Boolean)
     ], GetServers200ApplicationJsonServersPublicNetIpv6.prototype, "blocked", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dns_ptr", elemType: GetServers200ApplicationJsonServersPublicNetIpv6DnsPtr }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dns_ptr", elemType: GetServers200ApplicationJsonServersPublicNetIpv6DnsPtr }),
         __metadata("design:type", Array)
     ], GetServers200ApplicationJsonServersPublicNetIpv6.prototype, "dnsPtr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ip" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersPublicNetIpv6.prototype, "ip", void 0);
     return GetServers200ApplicationJsonServersPublicNetIpv6;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersPublicNetIpv6 };
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersPublicNetIpv6 = GetServers200ApplicationJsonServersPublicNetIpv6;
 // GetServers200ApplicationJsonServersPublicNet
 /**
  * Public network information. The Server's IPv4 address can be found in `public_net->ipv4->ip`
@@ -561,29 +564,29 @@ var GetServers200ApplicationJsonServersPublicNet = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firewalls", elemType: GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewall }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firewalls", elemType: GetServers200ApplicationJsonServersPublicNetServerPublicNetFirewall }),
         __metadata("design:type", Array)
     ], GetServers200ApplicationJsonServersPublicNet.prototype, "firewalls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=floating_ips" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=floating_ips" }),
         __metadata("design:type", Array)
     ], GetServers200ApplicationJsonServersPublicNet.prototype, "floatingIps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipv4" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipv4" }),
         __metadata("design:type", GetServers200ApplicationJsonServersPublicNetIpv4)
     ], GetServers200ApplicationJsonServersPublicNet.prototype, "ipv4", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ipv6" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ipv6" }),
         __metadata("design:type", GetServers200ApplicationJsonServersPublicNetIpv6)
     ], GetServers200ApplicationJsonServersPublicNet.prototype, "ipv6", void 0);
     return GetServers200ApplicationJsonServersPublicNet;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersPublicNet };
-export var GetServers200ApplicationJsonServersServerTypeCpuTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersPublicNet = GetServers200ApplicationJsonServersPublicNet;
+var GetServers200ApplicationJsonServersServerTypeCpuTypeEnum;
 (function (GetServers200ApplicationJsonServersServerTypeCpuTypeEnum) {
     GetServers200ApplicationJsonServersServerTypeCpuTypeEnum["Shared"] = "shared";
     GetServers200ApplicationJsonServersServerTypeCpuTypeEnum["Dedicated"] = "dedicated";
-})(GetServers200ApplicationJsonServersServerTypeCpuTypeEnum || (GetServers200ApplicationJsonServersServerTypeCpuTypeEnum = {}));
+})(GetServers200ApplicationJsonServersServerTypeCpuTypeEnum = exports.GetServers200ApplicationJsonServersServerTypeCpuTypeEnum || (exports.GetServers200ApplicationJsonServersServerTypeCpuTypeEnum = {}));
 // GetServers200ApplicationJsonServersServerTypePricesPriceHourly
 /**
  * Hourly costs for a Server type in this Location
@@ -594,16 +597,16 @@ var GetServers200ApplicationJsonServersServerTypePricesPriceHourly = /** @class 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gross" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gross" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersServerTypePricesPriceHourly.prototype, "gross", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=net" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=net" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersServerTypePricesPriceHourly.prototype, "net", void 0);
     return GetServers200ApplicationJsonServersServerTypePricesPriceHourly;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersServerTypePricesPriceHourly };
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersServerTypePricesPriceHourly = GetServers200ApplicationJsonServersServerTypePricesPriceHourly;
 // GetServers200ApplicationJsonServersServerTypePricesPriceMonthly
 /**
  * Monthly costs for a Server type in this Location
@@ -614,41 +617,41 @@ var GetServers200ApplicationJsonServersServerTypePricesPriceMonthly = /** @class
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gross" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gross" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersServerTypePricesPriceMonthly.prototype, "gross", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=net" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=net" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersServerTypePricesPriceMonthly.prototype, "net", void 0);
     return GetServers200ApplicationJsonServersServerTypePricesPriceMonthly;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersServerTypePricesPriceMonthly };
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersServerTypePricesPriceMonthly = GetServers200ApplicationJsonServersServerTypePricesPriceMonthly;
 var GetServers200ApplicationJsonServersServerTypePrices = /** @class */ (function (_super) {
     __extends(GetServers200ApplicationJsonServersServerTypePrices, _super);
     function GetServers200ApplicationJsonServersServerTypePrices() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersServerTypePrices.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price_hourly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price_hourly" }),
         __metadata("design:type", GetServers200ApplicationJsonServersServerTypePricesPriceHourly)
     ], GetServers200ApplicationJsonServersServerTypePrices.prototype, "priceHourly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=price_monthly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=price_monthly" }),
         __metadata("design:type", GetServers200ApplicationJsonServersServerTypePricesPriceMonthly)
     ], GetServers200ApplicationJsonServersServerTypePrices.prototype, "priceMonthly", void 0);
     return GetServers200ApplicationJsonServersServerTypePrices;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersServerTypePrices };
-export var GetServers200ApplicationJsonServersServerTypeStorageTypeEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersServerTypePrices = GetServers200ApplicationJsonServersServerTypePrices;
+var GetServers200ApplicationJsonServersServerTypeStorageTypeEnum;
 (function (GetServers200ApplicationJsonServersServerTypeStorageTypeEnum) {
     GetServers200ApplicationJsonServersServerTypeStorageTypeEnum["Local"] = "local";
     GetServers200ApplicationJsonServersServerTypeStorageTypeEnum["Network"] = "network";
-})(GetServers200ApplicationJsonServersServerTypeStorageTypeEnum || (GetServers200ApplicationJsonServersServerTypeStorageTypeEnum = {}));
+})(GetServers200ApplicationJsonServersServerTypeStorageTypeEnum = exports.GetServers200ApplicationJsonServersServerTypeStorageTypeEnum || (exports.GetServers200ApplicationJsonServersServerTypeStorageTypeEnum = {}));
 // GetServers200ApplicationJsonServersServerType
 /**
  * Type of Server - determines how much ram, disk and cpu a Server has
@@ -659,49 +662,49 @@ var GetServers200ApplicationJsonServersServerType = /** @class */ (function (_su
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cores" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cores" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServersServerType.prototype, "cores", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpu_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpu_type" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersServerType.prototype, "cpuType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deprecated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deprecated" }),
         __metadata("design:type", Boolean)
     ], GetServers200ApplicationJsonServersServerType.prototype, "deprecated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersServerType.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disk" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServersServerType.prototype, "disk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServersServerType.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memory" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServersServerType.prototype, "memory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersServerType.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=prices", elemType: GetServers200ApplicationJsonServersServerTypePrices }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=prices", elemType: GetServers200ApplicationJsonServersServerTypePrices }),
         __metadata("design:type", Array)
     ], GetServers200ApplicationJsonServersServerType.prototype, "prices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=storage_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=storage_type" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServersServerType.prototype, "storageType", void 0);
     return GetServers200ApplicationJsonServersServerType;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServersServerType };
-export var GetServers200ApplicationJsonServersStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServersServerType = GetServers200ApplicationJsonServersServerType;
+var GetServers200ApplicationJsonServersStatusEnum;
 (function (GetServers200ApplicationJsonServersStatusEnum) {
     GetServers200ApplicationJsonServersStatusEnum["Running"] = "running";
     GetServers200ApplicationJsonServersStatusEnum["Initializing"] = "initializing";
@@ -712,152 +715,148 @@ export var GetServers200ApplicationJsonServersStatusEnum;
     GetServers200ApplicationJsonServersStatusEnum["Migrating"] = "migrating";
     GetServers200ApplicationJsonServersStatusEnum["Rebuilding"] = "rebuilding";
     GetServers200ApplicationJsonServersStatusEnum["Unknown"] = "unknown";
-})(GetServers200ApplicationJsonServersStatusEnum || (GetServers200ApplicationJsonServersStatusEnum = {}));
+})(GetServers200ApplicationJsonServersStatusEnum = exports.GetServers200ApplicationJsonServersStatusEnum || (exports.GetServers200ApplicationJsonServersStatusEnum = {}));
 var GetServers200ApplicationJsonServers = /** @class */ (function (_super) {
     __extends(GetServers200ApplicationJsonServers, _super);
     function GetServers200ApplicationJsonServers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backup_window" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backup_window" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServers.prototype, "backupWindow", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServers.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datacenter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datacenter" }),
         __metadata("design:type", GetServers200ApplicationJsonServersDatacenter)
     ], GetServers200ApplicationJsonServers.prototype, "datacenter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServers.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
         __metadata("design:type", GetServers200ApplicationJsonServersImage)
     ], GetServers200ApplicationJsonServers.prototype, "image", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=included_traffic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=included_traffic" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServers.prototype, "includedTraffic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ingoing_traffic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ingoing_traffic" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServers.prototype, "ingoingTraffic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iso" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iso" }),
         __metadata("design:type", GetServers200ApplicationJsonServersIso)
     ], GetServers200ApplicationJsonServers.prototype, "iso", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], GetServers200ApplicationJsonServers.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=load_balancers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=load_balancers" }),
         __metadata("design:type", Array)
     ], GetServers200ApplicationJsonServers.prototype, "loadBalancers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=locked" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=locked" }),
         __metadata("design:type", Boolean)
     ], GetServers200ApplicationJsonServers.prototype, "locked", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServers.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outgoing_traffic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outgoing_traffic" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServers.prototype, "outgoingTraffic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=placement_group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=placement_group" }),
         __metadata("design:type", GetServers200ApplicationJsonServersPlacementGroupNullable)
     ], GetServers200ApplicationJsonServers.prototype, "placementGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_disk_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_disk_size" }),
         __metadata("design:type", Number)
     ], GetServers200ApplicationJsonServers.prototype, "primaryDiskSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=private_net", elemType: GetServers200ApplicationJsonServersPrivateNet }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=private_net", elemType: GetServers200ApplicationJsonServersPrivateNet }),
         __metadata("design:type", Array)
     ], GetServers200ApplicationJsonServers.prototype, "privateNet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protection" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protection" }),
         __metadata("design:type", GetServers200ApplicationJsonServersProtection)
     ], GetServers200ApplicationJsonServers.prototype, "protection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public_net" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public_net" }),
         __metadata("design:type", GetServers200ApplicationJsonServersPublicNet)
     ], GetServers200ApplicationJsonServers.prototype, "publicNet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rescue_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rescue_enabled" }),
         __metadata("design:type", Boolean)
     ], GetServers200ApplicationJsonServers.prototype, "rescueEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server_type" }),
         __metadata("design:type", GetServers200ApplicationJsonServersServerType)
     ], GetServers200ApplicationJsonServers.prototype, "serverType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], GetServers200ApplicationJsonServers.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=volumes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=volumes" }),
         __metadata("design:type", Array)
     ], GetServers200ApplicationJsonServers.prototype, "volumes", void 0);
     return GetServers200ApplicationJsonServers;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJsonServers };
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJsonServers = GetServers200ApplicationJsonServers;
 var GetServers200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetServers200ApplicationJson, _super);
     function GetServers200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", GetServers200ApplicationJsonMeta)
     ], GetServers200ApplicationJson.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=servers", elemType: GetServers200ApplicationJsonServers }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=servers", elemType: GetServers200ApplicationJsonServers }),
         __metadata("design:type", Array)
     ], GetServers200ApplicationJson.prototype, "servers", void 0);
     return GetServers200ApplicationJson;
-}(SpeakeasyBase));
-export { GetServers200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetServers200ApplicationJson = GetServers200ApplicationJson;
 var GetServersRequest = /** @class */ (function (_super) {
     __extends(GetServersRequest, _super);
     function GetServersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetServersQueryParams)
     ], GetServersRequest.prototype, "queryParams", void 0);
     return GetServersRequest;
-}(SpeakeasyBase));
-export { GetServersRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetServersRequest = GetServersRequest;
 var GetServersResponse = /** @class */ (function (_super) {
     __extends(GetServersResponse, _super);
     function GetServersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetServersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetServers200ApplicationJson)
-    ], GetServersResponse.prototype, "getServers200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetServersResponse.prototype, "headers", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetServersResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetServers200ApplicationJson)
+    ], GetServersResponse.prototype, "getServers200ApplicationJSONObject", void 0);
     return GetServersResponse;
-}(SpeakeasyBase));
-export { GetServersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetServersResponse = GetServersResponse;

@@ -110,7 +110,7 @@ export class GetAllAccountsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getAllAccounts200ApplicationJsonObject?: GetAllAccounts200ApplicationJson;
+  getAllAccounts200ApplicationJSONObject?: GetAllAccounts200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

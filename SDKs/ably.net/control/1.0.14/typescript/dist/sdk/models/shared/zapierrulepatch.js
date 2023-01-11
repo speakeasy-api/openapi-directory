@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,83 +23,85 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleSource } from "./rulesource";
-export var ZapierRulePatchRequestModeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ZapierRulePatch = exports.ZapierRulePatchTarget = exports.ZapierRulePatchTargetHeaders = exports.ZapierRulePatchStatusEnum = exports.ZapierRulePatchRuleTypeEnum = exports.ZapierRulePatchRequestModeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var rulesource_1 = require("./rulesource");
+var ZapierRulePatchRequestModeEnum;
 (function (ZapierRulePatchRequestModeEnum) {
     ZapierRulePatchRequestModeEnum["Single"] = "single";
     ZapierRulePatchRequestModeEnum["Batch"] = "batch";
-})(ZapierRulePatchRequestModeEnum || (ZapierRulePatchRequestModeEnum = {}));
-export var ZapierRulePatchRuleTypeEnum;
+})(ZapierRulePatchRequestModeEnum = exports.ZapierRulePatchRequestModeEnum || (exports.ZapierRulePatchRequestModeEnum = {}));
+var ZapierRulePatchRuleTypeEnum;
 (function (ZapierRulePatchRuleTypeEnum) {
     ZapierRulePatchRuleTypeEnum["HttpZapier"] = "http/zapier";
-})(ZapierRulePatchRuleTypeEnum || (ZapierRulePatchRuleTypeEnum = {}));
-export var ZapierRulePatchStatusEnum;
+})(ZapierRulePatchRuleTypeEnum = exports.ZapierRulePatchRuleTypeEnum || (exports.ZapierRulePatchRuleTypeEnum = {}));
+var ZapierRulePatchStatusEnum;
 (function (ZapierRulePatchStatusEnum) {
     ZapierRulePatchStatusEnum["Enabled"] = "enabled";
     ZapierRulePatchStatusEnum["Disabled"] = "disabled";
-})(ZapierRulePatchStatusEnum || (ZapierRulePatchStatusEnum = {}));
+})(ZapierRulePatchStatusEnum = exports.ZapierRulePatchStatusEnum || (exports.ZapierRulePatchStatusEnum = {}));
 var ZapierRulePatchTargetHeaders = /** @class */ (function (_super) {
     __extends(ZapierRulePatchTargetHeaders, _super);
     function ZapierRulePatchTargetHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ZapierRulePatchTargetHeaders.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], ZapierRulePatchTargetHeaders.prototype, "value", void 0);
     return ZapierRulePatchTargetHeaders;
-}(SpeakeasyBase));
-export { ZapierRulePatchTargetHeaders };
+}(utils_1.SpeakeasyBase));
+exports.ZapierRulePatchTargetHeaders = ZapierRulePatchTargetHeaders;
 var ZapierRulePatchTarget = /** @class */ (function (_super) {
     __extends(ZapierRulePatchTarget, _super);
     function ZapierRulePatchTarget() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers", elemType: ZapierRulePatchTargetHeaders }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers", elemType: ZapierRulePatchTargetHeaders }),
         __metadata("design:type", Array)
     ], ZapierRulePatchTarget.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signingKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signingKeyId" }),
         __metadata("design:type", String)
     ], ZapierRulePatchTarget.prototype, "signingKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], ZapierRulePatchTarget.prototype, "url", void 0);
     return ZapierRulePatchTarget;
-}(SpeakeasyBase));
-export { ZapierRulePatchTarget };
+}(utils_1.SpeakeasyBase));
+exports.ZapierRulePatchTarget = ZapierRulePatchTarget;
 var ZapierRulePatch = /** @class */ (function (_super) {
     __extends(ZapierRulePatch, _super);
     function ZapierRulePatch() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestMode" }),
         __metadata("design:type", String)
     ], ZapierRulePatch.prototype, "requestMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ruleType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ruleType" }),
         __metadata("design:type", String)
     ], ZapierRulePatch.prototype, "ruleType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", RuleSource)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", rulesource_1.RuleSource)
     ], ZapierRulePatch.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], ZapierRulePatch.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=target" }),
         __metadata("design:type", ZapierRulePatchTarget)
     ], ZapierRulePatch.prototype, "target", void 0);
     return ZapierRulePatch;
-}(SpeakeasyBase));
-export { ZapierRulePatch };
+}(utils_1.SpeakeasyBase));
+exports.ZapierRulePatch = ZapierRulePatch;

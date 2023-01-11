@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolNetflowChangeDfsResponse = exports.ProtocolNetflowChangeDfsRequest = exports.ProtocolNetflowChangeDfsPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolNetflowChangeDfsPathParams = /** @class */ (function (_super) {
     __extends(ProtocolNetflowChangeDfsPathParams, _super);
     function ProtocolNetflowChangeDfsPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolNetflowChangeDfsPathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=interval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=interval" }),
         __metadata("design:type", Number)
     ], ProtocolNetflowChangeDfsPathParams.prototype, "interval", void 0);
     return ProtocolNetflowChangeDfsPathParams;
-}(SpeakeasyBase));
-export { ProtocolNetflowChangeDfsPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowChangeDfsPathParams = ProtocolNetflowChangeDfsPathParams;
 var ProtocolNetflowChangeDfsRequest = /** @class */ (function (_super) {
     __extends(ProtocolNetflowChangeDfsRequest, _super);
     function ProtocolNetflowChangeDfsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolNetflowChangeDfsPathParams)
     ], ProtocolNetflowChangeDfsRequest.prototype, "pathParams", void 0);
     return ProtocolNetflowChangeDfsRequest;
-}(SpeakeasyBase));
-export { ProtocolNetflowChangeDfsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowChangeDfsRequest = ProtocolNetflowChangeDfsRequest;
 var ProtocolNetflowChangeDfsResponse = /** @class */ (function (_super) {
     __extends(ProtocolNetflowChangeDfsResponse, _super);
     function ProtocolNetflowChangeDfsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolNetflowChangeDfsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolNetflowChangeDfsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolNetflowChangeDfsResponse.prototype, "protocolNetflowChangeDfs200ApplicationJsonString", void 0);
+    ], ProtocolNetflowChangeDfsResponse.prototype, "protocolNetflowChangeDfs200ApplicationJSONString", void 0);
     return ProtocolNetflowChangeDfsResponse;
-}(SpeakeasyBase));
-export { ProtocolNetflowChangeDfsResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolNetflowChangeDfsResponse = ProtocolNetflowChangeDfsResponse;

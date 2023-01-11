@@ -35,7 +35,7 @@ export class GetSchemaResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getSchema200ApplicationJsonBinaryString?: Uint8Array;
+  getSchema200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

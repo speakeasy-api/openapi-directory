@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetcountrymatchRequest, GetcountrymatchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: GetcountrymatchRequest = {
   queryParams: {
-    country: "eum",
-    license: "debitis",
+    country: "sit",
+    license: "voluptas",
   },
 };
 
-sdk.sdk.getcountrymatch(req).then((res: GetcountrymatchResponse | AxiosError) => {
+sdk.countryMatchSimilarityKey.getcountrymatch(req).then((res: GetcountrymatchResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -43,7 +42,7 @@ sdk.sdk.getcountrymatch(req).then((res: GetcountrymatchResponse | AxiosError) =>
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Country Match Similarity Key
 
 * `getcountrymatch` - Gets a similarity key for matching purposes for country name data
 

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceManagementInterfaceResponse = exports.GetDeviceManagementInterfaceRequest = exports.GetDeviceManagementInterfacePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceManagementInterfacePathParams = /** @class */ (function (_super) {
     __extends(GetDeviceManagementInterfacePathParams, _super);
     function GetDeviceManagementInterfacePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceManagementInterfacePathParams.prototype, "serial", void 0);
     return GetDeviceManagementInterfacePathParams;
-}(SpeakeasyBase));
-export { GetDeviceManagementInterfacePathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceManagementInterfacePathParams = GetDeviceManagementInterfacePathParams;
 var GetDeviceManagementInterfaceRequest = /** @class */ (function (_super) {
     __extends(GetDeviceManagementInterfaceRequest, _super);
     function GetDeviceManagementInterfaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceManagementInterfacePathParams)
     ], GetDeviceManagementInterfaceRequest.prototype, "pathParams", void 0);
     return GetDeviceManagementInterfaceRequest;
-}(SpeakeasyBase));
-export { GetDeviceManagementInterfaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceManagementInterfaceRequest = GetDeviceManagementInterfaceRequest;
 var GetDeviceManagementInterfaceResponse = /** @class */ (function (_super) {
     __extends(GetDeviceManagementInterfaceResponse, _super);
     function GetDeviceManagementInterfaceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceManagementInterfaceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceManagementInterfaceResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceManagementInterfaceResponse.prototype, "getDeviceManagementInterface200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceManagementInterfaceResponse.prototype, "getDeviceManagementInterface200ApplicationJSONObject", void 0);
     return GetDeviceManagementInterfaceResponse;
-}(SpeakeasyBase));
-export { GetDeviceManagementInterfaceResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceManagementInterfaceResponse = GetDeviceManagementInterfaceResponse;

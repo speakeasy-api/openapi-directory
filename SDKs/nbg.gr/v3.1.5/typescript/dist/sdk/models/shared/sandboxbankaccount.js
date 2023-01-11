@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SandboxBeneficiary } from "./sandboxbeneficiary";
-import { SandboxBankAccountInfo } from "./sandboxbankaccountinfo";
-import { SandboxParty } from "./sandboxparty";
-import { SandboxScheduledPayment } from "./sandboxscheduledpayment";
-import { SandboxStandingOrder } from "./sandboxstandingorder";
-import { SandboxStatement } from "./sandboxstatement";
-import { SandboxTransaction } from "./sandboxtransaction";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SandboxBankAccount = void 0;
+var utils_1 = require("../../../internal/utils");
+var sandboxbeneficiary_1 = require("./sandboxbeneficiary");
+var sandboxbankaccountinfo_1 = require("./sandboxbankaccountinfo");
+var sandboxparty_1 = require("./sandboxparty");
+var sandboxscheduledpayment_1 = require("./sandboxscheduledpayment");
+var sandboxstandingorder_1 = require("./sandboxstandingorder");
+var sandboxstatement_1 = require("./sandboxstatement");
+var sandboxtransaction_1 = require("./sandboxtransaction");
 // SandboxBankAccount
 /**
  * Sandbox bank account
@@ -40,33 +43,33 @@ var SandboxBankAccount = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=beneficiaries", elemType: SandboxBeneficiary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=beneficiaries", elemType: sandboxbeneficiary_1.SandboxBeneficiary }),
         __metadata("design:type", Array)
     ], SandboxBankAccount.prototype, "beneficiaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=info" }),
-        __metadata("design:type", SandboxBankAccountInfo)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=info" }),
+        __metadata("design:type", sandboxbankaccountinfo_1.SandboxBankAccountInfo)
     ], SandboxBankAccount.prototype, "info", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=party" }),
-        __metadata("design:type", SandboxParty)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=party" }),
+        __metadata("design:type", sandboxparty_1.SandboxParty)
     ], SandboxBankAccount.prototype, "party", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduledPayments", elemType: SandboxScheduledPayment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduledPayments", elemType: sandboxscheduledpayment_1.SandboxScheduledPayment }),
         __metadata("design:type", Array)
     ], SandboxBankAccount.prototype, "scheduledPayments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=standingOrders", elemType: SandboxStandingOrder }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=standingOrders", elemType: sandboxstandingorder_1.SandboxStandingOrder }),
         __metadata("design:type", Array)
     ], SandboxBankAccount.prototype, "standingOrders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statements", elemType: SandboxStatement }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statements", elemType: sandboxstatement_1.SandboxStatement }),
         __metadata("design:type", Array)
     ], SandboxBankAccount.prototype, "statements", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transactions", elemType: SandboxTransaction }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transactions", elemType: sandboxtransaction_1.SandboxTransaction }),
         __metadata("design:type", Array)
     ], SandboxBankAccount.prototype, "transactions", void 0);
     return SandboxBankAccount;
-}(SpeakeasyBase));
-export { SandboxBankAccount };
+}(utils_1.SpeakeasyBase));
+exports.SandboxBankAccount = SandboxBankAccount;

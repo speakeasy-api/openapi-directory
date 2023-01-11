@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PatientSatisfaction = void 0;
+var utils_1 = require("../../../internal/utils");
 // PatientSatisfaction
 /**
  * Veteran-reported satisfaction scores for health care services
@@ -33,21 +36,21 @@ var PatientSatisfaction = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_care_routine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_care_routine" }),
         __metadata("design:type", Number)
     ], PatientSatisfaction.prototype, "primaryCareRoutine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_care_urgent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_care_urgent" }),
         __metadata("design:type", Number)
     ], PatientSatisfaction.prototype, "primaryCareUrgent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=specialty_care_routine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=specialty_care_routine" }),
         __metadata("design:type", Number)
     ], PatientSatisfaction.prototype, "specialtyCareRoutine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=specialty_care_urgent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=specialty_care_urgent" }),
         __metadata("design:type", Number)
     ], PatientSatisfaction.prototype, "specialtyCareUrgent", void 0);
     return PatientSatisfaction;
-}(SpeakeasyBase));
-export { PatientSatisfaction };
+}(utils_1.SpeakeasyBase));
+exports.PatientSatisfaction = PatientSatisfaction;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomerManagedS3Storage } from "./customermanageds3storage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MultiLayerStorage = void 0;
+var utils_1 = require("../../../internal/utils");
+var customermanageds3storage_1 = require("./customermanageds3storage");
 // MultiLayerStorage
 /**
  * Contains information about the storage destination.
@@ -34,9 +37,9 @@ var MultiLayerStorage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customerManagedS3Storage" }),
-        __metadata("design:type", CustomerManagedS3Storage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customerManagedS3Storage" }),
+        __metadata("design:type", customermanageds3storage_1.CustomerManagedS3Storage)
     ], MultiLayerStorage.prototype, "customerManagedS3Storage", void 0);
     return MultiLayerStorage;
-}(SpeakeasyBase));
-export { MultiLayerStorage };
+}(utils_1.SpeakeasyBase));
+exports.MultiLayerStorage = MultiLayerStorage;

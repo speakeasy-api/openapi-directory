@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,142 +14,167 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse = exports.ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest = exports.ServicebrokerProjectsBrokersV2ServiceInstancesPatchSecurity = exports.ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams = exports.ServicebrokerProjectsBrokersV2ServiceInstancesPatchPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ServicebrokerProjectsBrokersV2ServiceInstancesPatchPathParams = /** @class */ (function (_super) {
     __extends(ServicebrokerProjectsBrokersV2ServiceInstancesPatchPathParams, _super);
     function ServicebrokerProjectsBrokersV2ServiceInstancesPatchPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchPathParams.prototype, "name", void 0);
     return ServicebrokerProjectsBrokersV2ServiceInstancesPatchPathParams;
-}(SpeakeasyBase));
-export { ServicebrokerProjectsBrokersV2ServiceInstancesPatchPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ServicebrokerProjectsBrokersV2ServiceInstancesPatchPathParams = ServicebrokerProjectsBrokersV2ServiceInstancesPatchPathParams;
 var ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams = /** @class */ (function (_super) {
     __extends(ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams, _super);
     function ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=acceptsIncomplete" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=acceptsIncomplete" }),
         __metadata("design:type", Boolean)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams.prototype, "acceptsIncomplete", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams.prototype, "uploadProtocol", void 0);
     return ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams;
-}(SpeakeasyBase));
-export { ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams = ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams;
 var ServicebrokerProjectsBrokersV2ServiceInstancesPatchSecurity = /** @class */ (function (_super) {
     __extends(ServicebrokerProjectsBrokersV2ServiceInstancesPatchSecurity, _super);
     function ServicebrokerProjectsBrokersV2ServiceInstancesPatchSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchSecurity.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchSecurity.prototype, "oauth2c", void 0);
     return ServicebrokerProjectsBrokersV2ServiceInstancesPatchSecurity;
-}(SpeakeasyBase));
-export { ServicebrokerProjectsBrokersV2ServiceInstancesPatchSecurity };
+}(utils_1.SpeakeasyBase));
+exports.ServicebrokerProjectsBrokersV2ServiceInstancesPatchSecurity = ServicebrokerProjectsBrokersV2ServiceInstancesPatchSecurity;
 var ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest = /** @class */ (function (_super) {
     __extends(ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest, _super);
     function ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ServicebrokerProjectsBrokersV2ServiceInstancesPatchPathParams)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ServicebrokerProjectsBrokersV2ServiceInstancesPatchQueryParams)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.GoogleCloudServicebrokerV1beta1ServiceInstance)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest.prototype, "request", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ServicebrokerProjectsBrokersV2ServiceInstancesPatchSecurity)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest.prototype, "security", void 0);
     return ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest;
-}(SpeakeasyBase));
-export { ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest };
+}(utils_1.SpeakeasyBase));
+exports.ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest = ServicebrokerProjectsBrokersV2ServiceInstancesPatchRequest;
 var ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse = /** @class */ (function (_super) {
     __extends(ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse, _super);
     function ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse.prototype, "statusCode", void 0);
     return ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse;
-}(SpeakeasyBase));
-export { ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse };
+}(utils_1.SpeakeasyBase));
+exports.ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse = ServicebrokerProjectsBrokersV2ServiceInstancesPatchResponse;

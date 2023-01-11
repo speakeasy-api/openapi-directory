@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAuthValidateResponse = exports.GetAuthValidate200ApplicationJson = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAuthValidate200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetAuthValidate200ApplicationJson, _super);
     function GetAuthValidate200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=premium" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=premium" }),
         __metadata("design:type", Number)
     ], GetAuthValidate200ApplicationJson.prototype, "premium", void 0);
     return GetAuthValidate200ApplicationJson;
-}(SpeakeasyBase));
-export { GetAuthValidate200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetAuthValidate200ApplicationJson = GetAuthValidate200ApplicationJson;
 var GetAuthValidateResponse = /** @class */ (function (_super) {
     __extends(GetAuthValidateResponse, _super);
     function GetAuthValidateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAuthValidateResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetAuthValidate200ApplicationJson)
-    ], GetAuthValidateResponse.prototype, "getAuthValidate200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAuthValidateResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetAuthValidate200ApplicationJson)
+    ], GetAuthValidateResponse.prototype, "getAuthValidate200ApplicationJSONObject", void 0);
     return GetAuthValidateResponse;
-}(SpeakeasyBase));
-export { GetAuthValidateResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAuthValidateResponse = GetAuthValidateResponse;

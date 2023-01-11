@@ -11,7 +11,7 @@ export declare class RemoveSupportingWorkForGoalRequestBody extends SpeakeasyBas
     data?: shared.GoalAddSupportingWorkRequest;
 }
 export declare class RemoveSupportingWorkForGoal200ApplicationJson extends SpeakeasyBase {
-    data?: Map<string, any>;
+    data?: Record<string, any>;
 }
 export declare class RemoveSupportingWorkForGoalRequest extends SpeakeasyBase {
     pathParams: RemoveSupportingWorkForGoalPathParams;
@@ -22,5 +22,5 @@ export declare class RemoveSupportingWorkForGoalResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    removeSupportingWorkForGoal200ApplicationJsonObject?: RemoveSupportingWorkForGoal200ApplicationJson;
+    removeSupportingWorkForGoal200ApplicationJSONObject?: RemoveSupportingWorkForGoal200ApplicationJson;
 }

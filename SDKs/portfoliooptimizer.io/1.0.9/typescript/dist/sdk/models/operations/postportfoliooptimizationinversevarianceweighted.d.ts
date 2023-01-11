@@ -11,6 +11,6 @@ export declare class PostPortfolioOptimizationInverseVarianceWeightedRequest ext
 }
 export declare class PostPortfolioOptimizationInverseVarianceWeightedResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioOptimizationInverseVarianceWeighted200ApplicationJsonObject?: PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJson;
     statusCode: number;
+    postPortfolioOptimizationInverseVarianceWeighted200ApplicationJSONObject?: PostPortfolioOptimizationInverseVarianceWeighted200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ScriptCompilationError } from "./scriptcompilationerror";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScriptCompilationResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var scriptcompilationerror_1 = require("./scriptcompilationerror");
 // ScriptCompilationResult
 /**
  * The result of the compilation of a Script
@@ -34,13 +37,13 @@ var ScriptCompilationResult = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=done" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=done" }),
         __metadata("design:type", Boolean)
     ], ScriptCompilationResult.prototype, "done", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=error" }),
-        __metadata("design:type", ScriptCompilationError)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=error" }),
+        __metadata("design:type", scriptcompilationerror_1.ScriptCompilationError)
     ], ScriptCompilationResult.prototype, "error", void 0);
     return ScriptCompilationResult;
-}(SpeakeasyBase));
-export { ScriptCompilationResult };
+}(utils_1.SpeakeasyBase));
+exports.ScriptCompilationResult = ScriptCompilationResult;

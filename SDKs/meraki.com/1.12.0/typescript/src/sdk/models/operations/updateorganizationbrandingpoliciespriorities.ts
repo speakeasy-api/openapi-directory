@@ -31,5 +31,5 @@ export class UpdateOrganizationBrandingPoliciesPrioritiesResponse extends Speake
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateOrganizationBrandingPoliciesPriorities200ApplicationJsonObject?: Map<string, any>;
+  updateOrganizationBrandingPoliciesPriorities200ApplicationJSONObject?: Record<string, any>;
 }

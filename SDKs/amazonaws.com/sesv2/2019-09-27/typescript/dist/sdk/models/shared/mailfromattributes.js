@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BehaviorOnMxFailureEnum } from "./behavioronmxfailureenum";
-import { MailFromDomainStatusEnum } from "./mailfromdomainstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MailFromAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
+var behavioronmxfailureenum_1 = require("./behavioronmxfailureenum");
+var mailfromdomainstatusenum_1 = require("./mailfromdomainstatusenum");
 // MailFromAttributes
 /**
  * A list of attributes that are associated with a MAIL FROM domain.
@@ -35,17 +38,17 @@ var MailFromAttributes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=BehaviorOnMxFailure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=BehaviorOnMxFailure" }),
         __metadata("design:type", String)
     ], MailFromAttributes.prototype, "behaviorOnMxFailure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MailFromDomain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MailFromDomain" }),
         __metadata("design:type", String)
     ], MailFromAttributes.prototype, "mailFromDomain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MailFromDomainStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MailFromDomainStatus" }),
         __metadata("design:type", String)
     ], MailFromAttributes.prototype, "mailFromDomainStatus", void 0);
     return MailFromAttributes;
-}(SpeakeasyBase));
-export { MailFromAttributes };
+}(utils_1.SpeakeasyBase));
+exports.MailFromAttributes = MailFromAttributes;

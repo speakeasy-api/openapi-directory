@@ -42,7 +42,7 @@ export declare class CreateSubAccountResponse extends SpeakeasyBase {
     statusCode: number;
     subaccountCreateResponse?: shared.SubaccountCreateResponse;
     unprovisionedErrorResponse?: shared.UnprovisionedErrorResponse;
-    createSubAccount401ApplicationJsonObject?: CreateSubAccount401ApplicationJson;
-    createSubAccount404ApplicationJsonObject?: CreateSubAccount404ApplicationJson;
-    createSubAccount422ApplicationJsonObject?: CreateSubAccount422ApplicationJson;
+    createSubAccount401ApplicationJSONObject?: CreateSubAccount401ApplicationJson;
+    createSubAccount404ApplicationJSONObject?: CreateSubAccount404ApplicationJson;
+    createSubAccount422ApplicationJSONObject?: CreateSubAccount422ApplicationJson;
 }

@@ -4,7 +4,7 @@ import { AuthenticateCognitoActionConditionalBehaviorEnumEnum } from "./authenti
  * Request parameters to use when integrating with Amazon Cognito to authenticate users.
 **/
 export declare class AuthenticateCognitoActionConfig extends SpeakeasyBase {
-    authenticationRequestExtraParams?: Map<string, string>;
+    authenticationRequestExtraParams?: Record<string, string>;
     onUnauthenticatedRequest?: AuthenticateCognitoActionConditionalBehaviorEnumEnum;
     scope?: string;
     sessionCookieName?: string;

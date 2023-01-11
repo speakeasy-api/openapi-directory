@@ -11,6 +11,6 @@ export declare class GetRepositoryPipelineCacheContentUriRequest extends Speakea
 export declare class GetRepositoryPipelineCacheContentUriResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     pipelineCacheContentUri?: shared.PipelineCacheContentUri;
 }

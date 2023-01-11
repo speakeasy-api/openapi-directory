@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,160 +23,162 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { User } from "./user";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.About = exports.AboutTeamDriveThemes = exports.AboutQuotaBytesByService = exports.AboutMaxUploadSizes = exports.AboutImportFormats = exports.AboutFeatures = exports.AboutExportFormats = exports.AboutDriveThemes = exports.AboutAdditionalRoleInfo = exports.AboutAdditionalRoleInfoRoleSets = void 0;
+var utils_1 = require("../../../internal/utils");
+var user_1 = require("./user");
 var AboutAdditionalRoleInfoRoleSets = /** @class */ (function (_super) {
     __extends(AboutAdditionalRoleInfoRoleSets, _super);
     function AboutAdditionalRoleInfoRoleSets() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalRoles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalRoles" }),
         __metadata("design:type", Array)
     ], AboutAdditionalRoleInfoRoleSets.prototype, "additionalRoles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primaryRole" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primaryRole" }),
         __metadata("design:type", String)
     ], AboutAdditionalRoleInfoRoleSets.prototype, "primaryRole", void 0);
     return AboutAdditionalRoleInfoRoleSets;
-}(SpeakeasyBase));
-export { AboutAdditionalRoleInfoRoleSets };
+}(utils_1.SpeakeasyBase));
+exports.AboutAdditionalRoleInfoRoleSets = AboutAdditionalRoleInfoRoleSets;
 var AboutAdditionalRoleInfo = /** @class */ (function (_super) {
     __extends(AboutAdditionalRoleInfo, _super);
     function AboutAdditionalRoleInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=roleSets", elemType: AboutAdditionalRoleInfoRoleSets }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=roleSets", elemType: AboutAdditionalRoleInfoRoleSets }),
         __metadata("design:type", Array)
     ], AboutAdditionalRoleInfo.prototype, "roleSets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], AboutAdditionalRoleInfo.prototype, "type", void 0);
     return AboutAdditionalRoleInfo;
-}(SpeakeasyBase));
-export { AboutAdditionalRoleInfo };
+}(utils_1.SpeakeasyBase));
+exports.AboutAdditionalRoleInfo = AboutAdditionalRoleInfo;
 var AboutDriveThemes = /** @class */ (function (_super) {
     __extends(AboutDriveThemes, _super);
     function AboutDriveThemes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backgroundImageLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backgroundImageLink" }),
         __metadata("design:type", String)
     ], AboutDriveThemes.prototype, "backgroundImageLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=colorRgb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=colorRgb" }),
         __metadata("design:type", String)
     ], AboutDriveThemes.prototype, "colorRgb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AboutDriveThemes.prototype, "id", void 0);
     return AboutDriveThemes;
-}(SpeakeasyBase));
-export { AboutDriveThemes };
+}(utils_1.SpeakeasyBase));
+exports.AboutDriveThemes = AboutDriveThemes;
 var AboutExportFormats = /** @class */ (function (_super) {
     __extends(AboutExportFormats, _super);
     function AboutExportFormats() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], AboutExportFormats.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targets" }),
         __metadata("design:type", Array)
     ], AboutExportFormats.prototype, "targets", void 0);
     return AboutExportFormats;
-}(SpeakeasyBase));
-export { AboutExportFormats };
+}(utils_1.SpeakeasyBase));
+exports.AboutExportFormats = AboutExportFormats;
 var AboutFeatures = /** @class */ (function (_super) {
     __extends(AboutFeatures, _super);
     function AboutFeatures() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=featureName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=featureName" }),
         __metadata("design:type", String)
     ], AboutFeatures.prototype, "featureName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=featureRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=featureRate" }),
         __metadata("design:type", Number)
     ], AboutFeatures.prototype, "featureRate", void 0);
     return AboutFeatures;
-}(SpeakeasyBase));
-export { AboutFeatures };
+}(utils_1.SpeakeasyBase));
+exports.AboutFeatures = AboutFeatures;
 var AboutImportFormats = /** @class */ (function (_super) {
     __extends(AboutImportFormats, _super);
     function AboutImportFormats() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
         __metadata("design:type", String)
     ], AboutImportFormats.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targets" }),
         __metadata("design:type", Array)
     ], AboutImportFormats.prototype, "targets", void 0);
     return AboutImportFormats;
-}(SpeakeasyBase));
-export { AboutImportFormats };
+}(utils_1.SpeakeasyBase));
+exports.AboutImportFormats = AboutImportFormats;
 var AboutMaxUploadSizes = /** @class */ (function (_super) {
     __extends(AboutMaxUploadSizes, _super);
     function AboutMaxUploadSizes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", String)
     ], AboutMaxUploadSizes.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], AboutMaxUploadSizes.prototype, "type", void 0);
     return AboutMaxUploadSizes;
-}(SpeakeasyBase));
-export { AboutMaxUploadSizes };
+}(utils_1.SpeakeasyBase));
+exports.AboutMaxUploadSizes = AboutMaxUploadSizes;
 var AboutQuotaBytesByService = /** @class */ (function (_super) {
     __extends(AboutQuotaBytesByService, _super);
     function AboutQuotaBytesByService() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bytesUsed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bytesUsed" }),
         __metadata("design:type", String)
     ], AboutQuotaBytesByService.prototype, "bytesUsed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceName" }),
         __metadata("design:type", String)
     ], AboutQuotaBytesByService.prototype, "serviceName", void 0);
     return AboutQuotaBytesByService;
-}(SpeakeasyBase));
-export { AboutQuotaBytesByService };
+}(utils_1.SpeakeasyBase));
+exports.AboutQuotaBytesByService = AboutQuotaBytesByService;
 var AboutTeamDriveThemes = /** @class */ (function (_super) {
     __extends(AboutTeamDriveThemes, _super);
     function AboutTeamDriveThemes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=backgroundImageLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=backgroundImageLink" }),
         __metadata("design:type", String)
     ], AboutTeamDriveThemes.prototype, "backgroundImageLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=colorRgb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=colorRgb" }),
         __metadata("design:type", String)
     ], AboutTeamDriveThemes.prototype, "colorRgb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], AboutTeamDriveThemes.prototype, "id", void 0);
     return AboutTeamDriveThemes;
-}(SpeakeasyBase));
-export { AboutTeamDriveThemes };
+}(utils_1.SpeakeasyBase));
+exports.AboutTeamDriveThemes = AboutTeamDriveThemes;
 // About
 /**
  * An item with user information and settings.
@@ -186,117 +189,117 @@ var About = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalRoleInfo", elemType: AboutAdditionalRoleInfo }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalRoleInfo", elemType: AboutAdditionalRoleInfo }),
         __metadata("design:type", Array)
     ], About.prototype, "additionalRoleInfo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canCreateDrives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canCreateDrives" }),
         __metadata("design:type", Boolean)
     ], About.prototype, "canCreateDrives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canCreateTeamDrives" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canCreateTeamDrives" }),
         __metadata("design:type", Boolean)
     ], About.prototype, "canCreateTeamDrives", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainSharingPolicy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainSharingPolicy" }),
         __metadata("design:type", String)
     ], About.prototype, "domainSharingPolicy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=driveThemes", elemType: AboutDriveThemes }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=driveThemes", elemType: AboutDriveThemes }),
         __metadata("design:type", Array)
     ], About.prototype, "driveThemes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], About.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=exportFormats", elemType: AboutExportFormats }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=exportFormats", elemType: AboutExportFormats }),
         __metadata("design:type", Array)
     ], About.prototype, "exportFormats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=features", elemType: AboutFeatures }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=features", elemType: AboutFeatures }),
         __metadata("design:type", Array)
     ], About.prototype, "features", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=folderColorPalette" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=folderColorPalette" }),
         __metadata("design:type", Array)
     ], About.prototype, "folderColorPalette", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=importFormats", elemType: AboutImportFormats }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=importFormats", elemType: AboutImportFormats }),
         __metadata("design:type", Array)
     ], About.prototype, "importFormats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isCurrentAppInstalled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isCurrentAppInstalled" }),
         __metadata("design:type", Boolean)
     ], About.prototype, "isCurrentAppInstalled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], About.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=languageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=languageCode" }),
         __metadata("design:type", String)
     ], About.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=largestChangeId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=largestChangeId" }),
         __metadata("design:type", String)
     ], About.prototype, "largestChangeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxUploadSizes", elemType: AboutMaxUploadSizes }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxUploadSizes", elemType: AboutMaxUploadSizes }),
         __metadata("design:type", Array)
     ], About.prototype, "maxUploadSizes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], About.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=permissionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=permissionId" }),
         __metadata("design:type", String)
     ], About.prototype, "permissionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quotaBytesByService", elemType: AboutQuotaBytesByService }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quotaBytesByService", elemType: AboutQuotaBytesByService }),
         __metadata("design:type", Array)
     ], About.prototype, "quotaBytesByService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quotaBytesTotal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quotaBytesTotal" }),
         __metadata("design:type", String)
     ], About.prototype, "quotaBytesTotal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quotaBytesUsed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quotaBytesUsed" }),
         __metadata("design:type", String)
     ], About.prototype, "quotaBytesUsed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quotaBytesUsedAggregate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quotaBytesUsedAggregate" }),
         __metadata("design:type", String)
     ], About.prototype, "quotaBytesUsedAggregate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quotaBytesUsedInTrash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quotaBytesUsedInTrash" }),
         __metadata("design:type", String)
     ], About.prototype, "quotaBytesUsedInTrash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quotaType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quotaType" }),
         __metadata("design:type", String)
     ], About.prototype, "quotaType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=remainingChangeIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=remainingChangeIds" }),
         __metadata("design:type", String)
     ], About.prototype, "remainingChangeIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rootFolderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rootFolderId" }),
         __metadata("design:type", String)
     ], About.prototype, "rootFolderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], About.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=teamDriveThemes", elemType: AboutTeamDriveThemes }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=teamDriveThemes", elemType: AboutTeamDriveThemes }),
         __metadata("design:type", Array)
     ], About.prototype, "teamDriveThemes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", User)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", user_1.User)
     ], About.prototype, "user", void 0);
     return About;
-}(SpeakeasyBase));
-export { About };
+}(utils_1.SpeakeasyBase));
+exports.About = About;

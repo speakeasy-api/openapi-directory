@@ -71,8 +71,8 @@ export class ProjectsCreateCardResponse extends SpeakeasyBase {
   projectCard?: shared.ProjectCard;
 
   @SpeakeasyMetadata()
-  projectsCreateCard422ApplicationJsonOneOf?: any;
+  projectsCreateCard422ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
-  projectsCreateCard503ApplicationJsonObject?: ProjectsCreateCard503ApplicationJson;
+  projectsCreateCard503ApplicationJSONObject?: ProjectsCreateCard503ApplicationJson;
 }

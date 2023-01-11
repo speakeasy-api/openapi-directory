@@ -48,7 +48,7 @@ export class GetWebAclResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getWebAclResponse?: shared.GetWebAclResponse;
+  getWebACLResponse?: shared.GetWebAclResponse;
 
   @SpeakeasyMetadata()
   statusCode: number;

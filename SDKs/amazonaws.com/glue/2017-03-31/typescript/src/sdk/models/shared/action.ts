@@ -9,7 +9,7 @@ import { NotificationProperty } from "./notificationproperty";
 **/
 export class Action extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=Arguments" })
-  arguments?: Map<string, string>;
+  arguments?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=CrawlerName" })
   crawlerName?: string;

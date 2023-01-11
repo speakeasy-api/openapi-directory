@@ -25,6 +25,6 @@ export declare class StartMlEvaluationTaskRunResponse extends SpeakeasyBase {
     invalidInputException?: any;
     mlTransformNotReadyException?: any;
     operationTimeoutException?: any;
-    startMlEvaluationTaskRunResponse?: shared.StartMlEvaluationTaskRunResponse;
+    startMLEvaluationTaskRunResponse?: shared.StartMlEvaluationTaskRunResponse;
     statusCode: number;
 }

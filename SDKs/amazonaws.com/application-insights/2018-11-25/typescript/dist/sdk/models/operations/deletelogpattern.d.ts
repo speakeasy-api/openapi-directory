@@ -20,7 +20,7 @@ export declare class DeleteLogPatternRequest extends SpeakeasyBase {
 export declare class DeleteLogPatternResponse extends SpeakeasyBase {
     badRequestException?: any;
     contentType: string;
-    deleteLogPatternResponse?: Map<string, any>;
+    deleteLogPatternResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     statusCode: number;

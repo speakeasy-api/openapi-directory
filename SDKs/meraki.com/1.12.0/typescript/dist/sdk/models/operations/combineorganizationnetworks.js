@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CombineOrganizationNetworksResponse = exports.CombineOrganizationNetworksRequest = exports.CombineOrganizationNetworksRequestBody = exports.CombineOrganizationNetworksPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CombineOrganizationNetworksPathParams = /** @class */ (function (_super) {
     __extends(CombineOrganizationNetworksPathParams, _super);
     function CombineOrganizationNetworksPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], CombineOrganizationNetworksPathParams.prototype, "organizationId", void 0);
     return CombineOrganizationNetworksPathParams;
-}(SpeakeasyBase));
-export { CombineOrganizationNetworksPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CombineOrganizationNetworksPathParams = CombineOrganizationNetworksPathParams;
 var CombineOrganizationNetworksRequestBody = /** @class */ (function (_super) {
     __extends(CombineOrganizationNetworksRequestBody, _super);
     function CombineOrganizationNetworksRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enrollmentString" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enrollmentString" }),
         __metadata("design:type", String)
     ], CombineOrganizationNetworksRequestBody.prototype, "enrollmentString", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CombineOrganizationNetworksRequestBody.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=networkIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=networkIds" }),
         __metadata("design:type", Array)
     ], CombineOrganizationNetworksRequestBody.prototype, "networkIds", void 0);
     return CombineOrganizationNetworksRequestBody;
-}(SpeakeasyBase));
-export { CombineOrganizationNetworksRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.CombineOrganizationNetworksRequestBody = CombineOrganizationNetworksRequestBody;
 var CombineOrganizationNetworksRequest = /** @class */ (function (_super) {
     __extends(CombineOrganizationNetworksRequest, _super);
     function CombineOrganizationNetworksRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CombineOrganizationNetworksPathParams)
     ], CombineOrganizationNetworksRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", CombineOrganizationNetworksRequestBody)
     ], CombineOrganizationNetworksRequest.prototype, "request", void 0);
     return CombineOrganizationNetworksRequest;
-}(SpeakeasyBase));
-export { CombineOrganizationNetworksRequest };
+}(utils_1.SpeakeasyBase));
+exports.CombineOrganizationNetworksRequest = CombineOrganizationNetworksRequest;
 var CombineOrganizationNetworksResponse = /** @class */ (function (_super) {
     __extends(CombineOrganizationNetworksResponse, _super);
     function CombineOrganizationNetworksResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CombineOrganizationNetworksResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CombineOrganizationNetworksResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], CombineOrganizationNetworksResponse.prototype, "combineOrganizationNetworks200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], CombineOrganizationNetworksResponse.prototype, "combineOrganizationNetworks200ApplicationJSONObject", void 0);
     return CombineOrganizationNetworksResponse;
-}(SpeakeasyBase));
-export { CombineOrganizationNetworksResponse };
+}(utils_1.SpeakeasyBase));
+exports.CombineOrganizationNetworksResponse = CombineOrganizationNetworksResponse;

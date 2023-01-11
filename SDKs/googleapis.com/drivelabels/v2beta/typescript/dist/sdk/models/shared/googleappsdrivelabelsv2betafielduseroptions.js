@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaFieldListOptions } from "./googleappsdrivelabelsv2betafieldlistoptions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaFieldUserOptions = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betafieldlistoptions_1 = require("./googleappsdrivelabelsv2betafieldlistoptions");
 // GoogleAppsDriveLabelsV2betaFieldUserOptions
 /**
  * Options for the user field type.
@@ -34,9 +37,9 @@ var GoogleAppsDriveLabelsV2betaFieldUserOptions = /** @class */ (function (_supe
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=listOptions" }),
-        __metadata("design:type", GoogleAppsDriveLabelsV2betaFieldListOptions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=listOptions" }),
+        __metadata("design:type", googleappsdrivelabelsv2betafieldlistoptions_1.GoogleAppsDriveLabelsV2betaFieldListOptions)
     ], GoogleAppsDriveLabelsV2betaFieldUserOptions.prototype, "listOptions", void 0);
     return GoogleAppsDriveLabelsV2betaFieldUserOptions;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaFieldUserOptions };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaFieldUserOptions = GoogleAppsDriveLabelsV2betaFieldUserOptions;

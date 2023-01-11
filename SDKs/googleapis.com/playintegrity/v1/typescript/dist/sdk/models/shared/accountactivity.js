@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var AccountActivityActivityLevelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountActivity = exports.AccountActivityActivityLevelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var AccountActivityActivityLevelEnum;
 (function (AccountActivityActivityLevelEnum) {
     AccountActivityActivityLevelEnum["ActivityLevelUnspecified"] = "ACTIVITY_LEVEL_UNSPECIFIED";
     AccountActivityActivityLevelEnum["Unevaluated"] = "UNEVALUATED";
@@ -31,7 +34,7 @@ export var AccountActivityActivityLevelEnum;
     AccountActivityActivityLevelEnum["Unknown"] = "UNKNOWN";
     AccountActivityActivityLevelEnum["TypicalBasic"] = "TYPICAL_BASIC";
     AccountActivityActivityLevelEnum["TypicalStrong"] = "TYPICAL_STRONG";
-})(AccountActivityActivityLevelEnum || (AccountActivityActivityLevelEnum = {}));
+})(AccountActivityActivityLevelEnum = exports.AccountActivityActivityLevelEnum || (exports.AccountActivityActivityLevelEnum = {}));
 // AccountActivity
 /**
  * Contains a signal helping apps differentiating between likely genuine users and likely non-genuine traffic (such as accounts being used for fraud, accounts used by automated traffic, or accounts used in device farms) based on the presence and volume of Play store activity.
@@ -42,9 +45,9 @@ var AccountActivity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activityLevel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activityLevel" }),
         __metadata("design:type", String)
     ], AccountActivity.prototype, "activityLevel", void 0);
     return AccountActivity;
-}(SpeakeasyBase));
-export { AccountActivity };
+}(utils_1.SpeakeasyBase));
+exports.AccountActivity = AccountActivity;

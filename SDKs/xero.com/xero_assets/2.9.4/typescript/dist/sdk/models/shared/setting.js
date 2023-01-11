@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Setting = void 0;
+var utils_1 = require("../../../internal/utils");
 var Setting = /** @class */ (function (_super) {
     __extends(Setting, _super);
     function Setting() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetNumberPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetNumberPrefix" }),
         __metadata("design:type", String)
     ], Setting.prototype, "assetNumberPrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetNumberSequence" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetNumberSequence" }),
         __metadata("design:type", String)
     ], Setting.prototype, "assetNumberSequence", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assetStartDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assetStartDate" }),
         __metadata("design:type", Date)
     ], Setting.prototype, "assetStartDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultCapitalGainOnDisposalAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultCapitalGainOnDisposalAccountId" }),
         __metadata("design:type", String)
     ], Setting.prototype, "defaultCapitalGainOnDisposalAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultGainOnDisposalAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultGainOnDisposalAccountId" }),
         __metadata("design:type", String)
     ], Setting.prototype, "defaultGainOnDisposalAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultLossOnDisposalAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultLossOnDisposalAccountId" }),
         __metadata("design:type", String)
     ], Setting.prototype, "defaultLossOnDisposalAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastDepreciationDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastDepreciationDate" }),
         __metadata("design:type", Date)
     ], Setting.prototype, "lastDepreciationDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=optInForTax" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=optInForTax" }),
         __metadata("design:type", Boolean)
     ], Setting.prototype, "optInForTax", void 0);
     return Setting;
-}(SpeakeasyBase));
-export { Setting };
+}(utils_1.SpeakeasyBase));
+exports.Setting = Setting;

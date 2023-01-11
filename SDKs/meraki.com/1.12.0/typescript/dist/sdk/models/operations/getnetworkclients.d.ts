@@ -31,7 +31,7 @@ export declare class GetNetworkClientsRequest extends SpeakeasyBase {
 }
 export declare class GetNetworkClientsResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getNetworkClients200ApplicationJsonObject?: Map<string, any>;
+    getNetworkClients200ApplicationJSONObject?: Record<string, any>;
 }

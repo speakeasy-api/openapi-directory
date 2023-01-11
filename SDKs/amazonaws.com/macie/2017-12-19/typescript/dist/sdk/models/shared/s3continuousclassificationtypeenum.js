@@ -1,4 +1,7 @@
-export var S3ContinuousClassificationTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3ContinuousClassificationTypeEnum = void 0;
+var S3ContinuousClassificationTypeEnum;
 (function (S3ContinuousClassificationTypeEnum) {
     S3ContinuousClassificationTypeEnum["Full"] = "FULL";
-})(S3ContinuousClassificationTypeEnum || (S3ContinuousClassificationTypeEnum = {}));
+})(S3ContinuousClassificationTypeEnum = exports.S3ContinuousClassificationTypeEnum || (exports.S3ContinuousClassificationTypeEnum = {}));

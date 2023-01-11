@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleIamV1Policy } from "./googleiamv1policy";
-export var GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudPolicysimulatorV1ReplayConfig = exports.GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleiamv1policy_1 = require("./googleiamv1policy");
+var GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum;
 (function (GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum) {
     GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum["LogSourceUnspecified"] = "LOG_SOURCE_UNSPECIFIED";
     GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum["RecentAccesses"] = "RECENT_ACCESSES";
-})(GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum || (GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum = {}));
+})(GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum = exports.GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum || (exports.GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum = {}));
 // GoogleCloudPolicysimulatorV1ReplayConfig
 /**
  * The configuration used for a Replay.
@@ -39,13 +42,13 @@ var GoogleCloudPolicysimulatorV1ReplayConfig = /** @class */ (function (_super) 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logSource" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logSource" }),
         __metadata("design:type", String)
     ], GoogleCloudPolicysimulatorV1ReplayConfig.prototype, "logSource", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=policyOverlay", elemType: GoogleIamV1Policy }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=policyOverlay", elemType: googleiamv1policy_1.GoogleIamV1Policy }),
+        __metadata("design:type", Object)
     ], GoogleCloudPolicysimulatorV1ReplayConfig.prototype, "policyOverlay", void 0);
     return GoogleCloudPolicysimulatorV1ReplayConfig;
-}(SpeakeasyBase));
-export { GoogleCloudPolicysimulatorV1ReplayConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudPolicysimulatorV1ReplayConfig = GoogleCloudPolicysimulatorV1ReplayConfig;

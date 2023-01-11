@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeLoadBalancerPoliciesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeLoadBalancerPoliciesResponse = exports.GetDescribeLoadBalancerPoliciesRequest = exports.GetDescribeLoadBalancerPoliciesHeaders = exports.GetDescribeLoadBalancerPoliciesQueryParams = exports.GetDescribeLoadBalancerPoliciesVersionEnum = exports.GetDescribeLoadBalancerPoliciesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeLoadBalancerPoliciesActionEnum;
 (function (GetDescribeLoadBalancerPoliciesActionEnum) {
     GetDescribeLoadBalancerPoliciesActionEnum["DescribeLoadBalancerPolicies"] = "DescribeLoadBalancerPolicies";
-})(GetDescribeLoadBalancerPoliciesActionEnum || (GetDescribeLoadBalancerPoliciesActionEnum = {}));
-export var GetDescribeLoadBalancerPoliciesVersionEnum;
+})(GetDescribeLoadBalancerPoliciesActionEnum = exports.GetDescribeLoadBalancerPoliciesActionEnum || (exports.GetDescribeLoadBalancerPoliciesActionEnum = {}));
+var GetDescribeLoadBalancerPoliciesVersionEnum;
 (function (GetDescribeLoadBalancerPoliciesVersionEnum) {
     GetDescribeLoadBalancerPoliciesVersionEnum["TwoThousandAndTwelve0601"] = "2012-06-01";
-})(GetDescribeLoadBalancerPoliciesVersionEnum || (GetDescribeLoadBalancerPoliciesVersionEnum = {}));
+})(GetDescribeLoadBalancerPoliciesVersionEnum = exports.GetDescribeLoadBalancerPoliciesVersionEnum || (exports.GetDescribeLoadBalancerPoliciesVersionEnum = {}));
 var GetDescribeLoadBalancerPoliciesQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeLoadBalancerPoliciesQueryParams, _super);
     function GetDescribeLoadBalancerPoliciesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancerPoliciesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=LoadBalancerName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=LoadBalancerName" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancerPoliciesQueryParams.prototype, "loadBalancerName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PolicyNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PolicyNames" }),
         __metadata("design:type", Array)
     ], GetDescribeLoadBalancerPoliciesQueryParams.prototype, "policyNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancerPoliciesQueryParams.prototype, "version", void 0);
     return GetDescribeLoadBalancerPoliciesQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeLoadBalancerPoliciesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeLoadBalancerPoliciesQueryParams = GetDescribeLoadBalancerPoliciesQueryParams;
 var GetDescribeLoadBalancerPoliciesHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeLoadBalancerPoliciesHeaders, _super);
     function GetDescribeLoadBalancerPoliciesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancerPoliciesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancerPoliciesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancerPoliciesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancerPoliciesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancerPoliciesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancerPoliciesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancerPoliciesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeLoadBalancerPoliciesHeaders;
-}(SpeakeasyBase));
-export { GetDescribeLoadBalancerPoliciesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeLoadBalancerPoliciesHeaders = GetDescribeLoadBalancerPoliciesHeaders;
 var GetDescribeLoadBalancerPoliciesRequest = /** @class */ (function (_super) {
     __extends(GetDescribeLoadBalancerPoliciesRequest, _super);
     function GetDescribeLoadBalancerPoliciesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeLoadBalancerPoliciesQueryParams)
     ], GetDescribeLoadBalancerPoliciesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeLoadBalancerPoliciesHeaders)
     ], GetDescribeLoadBalancerPoliciesRequest.prototype, "headers", void 0);
     return GetDescribeLoadBalancerPoliciesRequest;
-}(SpeakeasyBase));
-export { GetDescribeLoadBalancerPoliciesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeLoadBalancerPoliciesRequest = GetDescribeLoadBalancerPoliciesRequest;
 var GetDescribeLoadBalancerPoliciesResponse = /** @class */ (function (_super) {
     __extends(GetDescribeLoadBalancerPoliciesResponse, _super);
     function GetDescribeLoadBalancerPoliciesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeLoadBalancerPoliciesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancerPoliciesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeLoadBalancerPoliciesResponse.prototype, "statusCode", void 0);
     return GetDescribeLoadBalancerPoliciesResponse;
-}(SpeakeasyBase));
-export { GetDescribeLoadBalancerPoliciesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeLoadBalancerPoliciesResponse = GetDescribeLoadBalancerPoliciesResponse;

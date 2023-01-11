@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,72 +23,74 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3Outlet = void 0;
+var utils_1 = require("../../../internal/utils");
 var V3Outlet = /** @class */ (function (_super) {
     __extends(V3Outlet, _super);
     function V3Outlet() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outlet_business" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outlet_business" }),
         __metadata("design:type", String)
     ], V3Outlet.prototype, "outletBusiness", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outlet_business_hour_fri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outlet_business_hour_fri" }),
         __metadata("design:type", String)
     ], V3Outlet.prototype, "outletBusinessHourFri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outlet_business_hour_mon" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outlet_business_hour_mon" }),
         __metadata("design:type", String)
     ], V3Outlet.prototype, "outletBusinessHourMon", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outlet_business_hour_sat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outlet_business_hour_sat" }),
         __metadata("design:type", String)
     ], V3Outlet.prototype, "outletBusinessHourSat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outlet_business_hour_sun" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outlet_business_hour_sun" }),
         __metadata("design:type", String)
     ], V3Outlet.prototype, "outletBusinessHourSun", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outlet_business_hour_thur" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outlet_business_hour_thur" }),
         __metadata("design:type", String)
     ], V3Outlet.prototype, "outletBusinessHourThur", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outlet_business_hour_tue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outlet_business_hour_tue" }),
         __metadata("design:type", String)
     ], V3Outlet.prototype, "outletBusinessHourTue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outlet_business_hour_wed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outlet_business_hour_wed" }),
         __metadata("design:type", String)
     ], V3Outlet.prototype, "outletBusinessHourWed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outlet_latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outlet_latitude" }),
         __metadata("design:type", Number)
     ], V3Outlet.prototype, "outletLatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outlet_longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outlet_longitude" }),
         __metadata("design:type", Number)
     ], V3Outlet.prototype, "outletLongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outlet_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outlet_name" }),
         __metadata("design:type", String)
     ], V3Outlet.prototype, "outletName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outlet_notes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outlet_notes" }),
         __metadata("design:type", String)
     ], V3Outlet.prototype, "outletNotes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outlet_postcode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outlet_postcode" }),
         __metadata("design:type", Number)
     ], V3Outlet.prototype, "outletPostcode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outlet_slid_spid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outlet_slid_spid" }),
         __metadata("design:type", String)
     ], V3Outlet.prototype, "outletSlidSpid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outlet_suburb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outlet_suburb" }),
         __metadata("design:type", String)
     ], V3Outlet.prototype, "outletSuburb", void 0);
     return V3Outlet;
-}(SpeakeasyBase));
-export { V3Outlet };
+}(utils_1.SpeakeasyBase));
+exports.V3Outlet = V3Outlet;

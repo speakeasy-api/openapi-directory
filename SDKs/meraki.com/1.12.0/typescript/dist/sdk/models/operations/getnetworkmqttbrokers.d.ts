@@ -8,5 +8,5 @@ export declare class GetNetworkMqttBrokersRequest extends SpeakeasyBase {
 export declare class GetNetworkMqttBrokersResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkMqttBrokers200ApplicationJsonObject?: Map<string, any>;
+    getNetworkMqttBrokers200ApplicationJSONObject?: Record<string, any>;
 }

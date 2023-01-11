@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolMqttClientUnsubscribeResponse = exports.ProtocolMqttClientUnsubscribeRequest = exports.ProtocolMqttClientUnsubscribePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolMqttClientUnsubscribePathParams = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientUnsubscribePathParams, _super);
     function ProtocolMqttClientUnsubscribePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolMqttClientUnsubscribePathParams.prototype, "agentNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=subNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=subNum" }),
         __metadata("design:type", Number)
     ], ProtocolMqttClientUnsubscribePathParams.prototype, "subNum", void 0);
     return ProtocolMqttClientUnsubscribePathParams;
-}(SpeakeasyBase));
-export { ProtocolMqttClientUnsubscribePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientUnsubscribePathParams = ProtocolMqttClientUnsubscribePathParams;
 var ProtocolMqttClientUnsubscribeRequest = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientUnsubscribeRequest, _super);
     function ProtocolMqttClientUnsubscribeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolMqttClientUnsubscribePathParams)
     ], ProtocolMqttClientUnsubscribeRequest.prototype, "pathParams", void 0);
     return ProtocolMqttClientUnsubscribeRequest;
-}(SpeakeasyBase));
-export { ProtocolMqttClientUnsubscribeRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientUnsubscribeRequest = ProtocolMqttClientUnsubscribeRequest;
 var ProtocolMqttClientUnsubscribeResponse = /** @class */ (function (_super) {
     __extends(ProtocolMqttClientUnsubscribeResponse, _super);
     function ProtocolMqttClientUnsubscribeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolMqttClientUnsubscribeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolMqttClientUnsubscribeResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
-    ], ProtocolMqttClientUnsubscribeResponse.prototype, "protocolMqttClientUnsubscribe200ApplicationJsonString", void 0);
+    ], ProtocolMqttClientUnsubscribeResponse.prototype, "protocolMqttClientUnsubscribe200ApplicationJSONString", void 0);
     return ProtocolMqttClientUnsubscribeResponse;
-}(SpeakeasyBase));
-export { ProtocolMqttClientUnsubscribeResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolMqttClientUnsubscribeResponse = ProtocolMqttClientUnsubscribeResponse;

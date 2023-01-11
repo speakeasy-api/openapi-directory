@@ -15,6 +15,6 @@ export declare class DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest e
 }
 export declare class DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse extends SpeakeasyBase {
     contentType: string;
-    deleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJsonObject?: DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJson;
     statusCode: number;
+    deleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONObject?: DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJson;
 }

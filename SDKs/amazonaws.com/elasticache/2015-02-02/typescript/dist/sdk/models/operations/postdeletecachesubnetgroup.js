@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteCacheSubnetGroupActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteCacheSubnetGroupResponse = exports.PostDeleteCacheSubnetGroupRequest = exports.PostDeleteCacheSubnetGroupHeaders = exports.PostDeleteCacheSubnetGroupQueryParams = exports.PostDeleteCacheSubnetGroupVersionEnum = exports.PostDeleteCacheSubnetGroupActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteCacheSubnetGroupActionEnum;
 (function (PostDeleteCacheSubnetGroupActionEnum) {
     PostDeleteCacheSubnetGroupActionEnum["DeleteCacheSubnetGroup"] = "DeleteCacheSubnetGroup";
-})(PostDeleteCacheSubnetGroupActionEnum || (PostDeleteCacheSubnetGroupActionEnum = {}));
-export var PostDeleteCacheSubnetGroupVersionEnum;
+})(PostDeleteCacheSubnetGroupActionEnum = exports.PostDeleteCacheSubnetGroupActionEnum || (exports.PostDeleteCacheSubnetGroupActionEnum = {}));
+var PostDeleteCacheSubnetGroupVersionEnum;
 (function (PostDeleteCacheSubnetGroupVersionEnum) {
     PostDeleteCacheSubnetGroupVersionEnum["TwoThousandAndFifteen0202"] = "2015-02-02";
-})(PostDeleteCacheSubnetGroupVersionEnum || (PostDeleteCacheSubnetGroupVersionEnum = {}));
+})(PostDeleteCacheSubnetGroupVersionEnum = exports.PostDeleteCacheSubnetGroupVersionEnum || (exports.PostDeleteCacheSubnetGroupVersionEnum = {}));
 var PostDeleteCacheSubnetGroupQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteCacheSubnetGroupQueryParams, _super);
     function PostDeleteCacheSubnetGroupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteCacheSubnetGroupQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteCacheSubnetGroupQueryParams.prototype, "version", void 0);
     return PostDeleteCacheSubnetGroupQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteCacheSubnetGroupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteCacheSubnetGroupQueryParams = PostDeleteCacheSubnetGroupQueryParams;
 var PostDeleteCacheSubnetGroupHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteCacheSubnetGroupHeaders, _super);
     function PostDeleteCacheSubnetGroupHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteCacheSubnetGroupHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteCacheSubnetGroupHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteCacheSubnetGroupHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteCacheSubnetGroupHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteCacheSubnetGroupHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteCacheSubnetGroupHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteCacheSubnetGroupHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteCacheSubnetGroupHeaders;
-}(SpeakeasyBase));
-export { PostDeleteCacheSubnetGroupHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteCacheSubnetGroupHeaders = PostDeleteCacheSubnetGroupHeaders;
 var PostDeleteCacheSubnetGroupRequest = /** @class */ (function (_super) {
     __extends(PostDeleteCacheSubnetGroupRequest, _super);
     function PostDeleteCacheSubnetGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteCacheSubnetGroupQueryParams)
     ], PostDeleteCacheSubnetGroupRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteCacheSubnetGroupHeaders)
     ], PostDeleteCacheSubnetGroupRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteCacheSubnetGroupRequest.prototype, "request", void 0);
     return PostDeleteCacheSubnetGroupRequest;
-}(SpeakeasyBase));
-export { PostDeleteCacheSubnetGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteCacheSubnetGroupRequest = PostDeleteCacheSubnetGroupRequest;
 var PostDeleteCacheSubnetGroupResponse = /** @class */ (function (_super) {
     __extends(PostDeleteCacheSubnetGroupResponse, _super);
     function PostDeleteCacheSubnetGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteCacheSubnetGroupResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteCacheSubnetGroupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteCacheSubnetGroupResponse.prototype, "statusCode", void 0);
     return PostDeleteCacheSubnetGroupResponse;
-}(SpeakeasyBase));
-export { PostDeleteCacheSubnetGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteCacheSubnetGroupResponse = PostDeleteCacheSubnetGroupResponse;

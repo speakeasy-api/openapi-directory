@@ -9,5 +9,5 @@ export declare class GetNetworkSwitchStackRoutingInterfacesRequest extends Speak
 export declare class GetNetworkSwitchStackRoutingInterfacesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSwitchStackRoutingInterfaces200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSwitchStackRoutingInterfaces200ApplicationJSONObject?: Record<string, any>;
 }

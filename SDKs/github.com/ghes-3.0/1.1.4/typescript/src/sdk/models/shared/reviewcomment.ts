@@ -26,6 +26,10 @@ export enum ReviewCommentStartSideEnum {
 }
 
 
+// ReviewCommentSimpleUser
+/** 
+ * Simple User
+**/
 export class ReviewCommentSimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

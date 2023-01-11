@@ -1,6 +1,6 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { ShippingFulfillment } from "./shippingfulfillment";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 
 
 
@@ -15,6 +15,6 @@ export class ShippingFulfillmentPagedCollection extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=total" })
   total?: number;
 
-  @SpeakeasyMetadata({ data: "json, name=warnings", elemType: Error })
-  warnings?: Error[];
+  @SpeakeasyMetadata({ data: "json, name=warnings", elemType: ErrorT })
+  warnings?: ErrorT[];
 }

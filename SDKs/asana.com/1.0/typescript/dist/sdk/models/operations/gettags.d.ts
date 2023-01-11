@@ -17,5 +17,5 @@ export declare class GetTagsResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    getTags200ApplicationJsonObject?: GetTags200ApplicationJson;
+    getTags200ApplicationJSONObject?: GetTags200ApplicationJson;
 }

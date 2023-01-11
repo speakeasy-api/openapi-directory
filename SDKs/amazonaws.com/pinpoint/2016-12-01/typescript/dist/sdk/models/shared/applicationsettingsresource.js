@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CampaignHook } from "./campaignhook";
-import { CampaignLimits } from "./campaignlimits";
-import { QuietTime } from "./quiettime";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationSettingsResource = void 0;
+var utils_1 = require("../../../internal/utils");
+var campaignhook_1 = require("./campaignhook");
+var campaignlimits_1 = require("./campaignlimits");
+var quiettime_1 = require("./quiettime");
 // ApplicationSettingsResource
 /**
  * Provides information about an application, including the default settings for an application.
@@ -36,25 +39,25 @@ var ApplicationSettingsResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ApplicationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ApplicationId" }),
         __metadata("design:type", String)
     ], ApplicationSettingsResource.prototype, "applicationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CampaignHook" }),
-        __metadata("design:type", CampaignHook)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CampaignHook" }),
+        __metadata("design:type", campaignhook_1.CampaignHook)
     ], ApplicationSettingsResource.prototype, "campaignHook", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastModifiedDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastModifiedDate" }),
         __metadata("design:type", String)
     ], ApplicationSettingsResource.prototype, "lastModifiedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Limits" }),
-        __metadata("design:type", CampaignLimits)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Limits" }),
+        __metadata("design:type", campaignlimits_1.CampaignLimits)
     ], ApplicationSettingsResource.prototype, "limits", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=QuietTime" }),
-        __metadata("design:type", QuietTime)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=QuietTime" }),
+        __metadata("design:type", quiettime_1.QuietTime)
     ], ApplicationSettingsResource.prototype, "quietTime", void 0);
     return ApplicationSettingsResource;
-}(SpeakeasyBase));
-export { ApplicationSettingsResource };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationSettingsResource = ApplicationSettingsResource;

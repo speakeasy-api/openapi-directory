@@ -1,4 +1,7 @@
-export var EventDetailFieldValuesEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventDetailFieldValuesEnum = void 0;
+var EventDetailFieldValuesEnum;
 (function (EventDetailFieldValuesEnum) {
     EventDetailFieldValuesEnum["Id"] = "id";
     EventDetailFieldValuesEnum["ChildEventCount"] = "child_event_count";
@@ -9,4 +12,4 @@ export var EventDetailFieldValuesEnum;
     EventDetailFieldValuesEnum["Name"] = "name";
     EventDetailFieldValuesEnum["StartDate"] = "start_date";
     EventDetailFieldValuesEnum["Type"] = "type";
-})(EventDetailFieldValuesEnum || (EventDetailFieldValuesEnum = {}));
+})(EventDetailFieldValuesEnum = exports.EventDetailFieldValuesEnum || (exports.EventDetailFieldValuesEnum = {}));

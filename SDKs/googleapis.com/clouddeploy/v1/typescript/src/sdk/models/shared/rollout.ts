@@ -39,7 +39,7 @@ export enum RolloutStateEnum {
 **/
 export class Rollout extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=annotations" })
-  annotations?: Map<string, string>;
+  annotations?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=approvalState" })
   approvalState?: RolloutApprovalStateEnum;
@@ -75,7 +75,7 @@ export class Rollout extends SpeakeasyBase {
   failureReason?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
   metadata?: Metadata;
@@ -103,7 +103,7 @@ export class Rollout extends SpeakeasyBase {
 **/
 export class RolloutInput extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=annotations" })
-  annotations?: Map<string, string>;
+  annotations?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=description" })
   description?: string;
@@ -112,7 +112,7 @@ export class RolloutInput extends SpeakeasyBase {
   etag?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
   metadata?: Metadata;

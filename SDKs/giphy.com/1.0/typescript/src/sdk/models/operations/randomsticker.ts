@@ -35,5 +35,5 @@ export class RandomStickerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  randomSticker200ApplicationJsonObject?: RandomSticker200ApplicationJson;
+  randomSticker200ApplicationJSONObject?: RandomSticker200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReplicationConfigurationReplicatedDiskStagingDiskTypeEnum } from "./replicationconfigurationreplicateddiskstagingdisktypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReplicationConfigurationReplicatedDisk = void 0;
+var utils_1 = require("../../../internal/utils");
+var replicationconfigurationreplicateddiskstagingdisktypeenum_1 = require("./replicationconfigurationreplicateddiskstagingdisktypeenum");
 // ReplicationConfigurationReplicatedDisk
 /**
  * Replication Configuration replicated disk.
@@ -34,21 +37,21 @@ var ReplicationConfigurationReplicatedDisk = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deviceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deviceName" }),
         __metadata("design:type", String)
     ], ReplicationConfigurationReplicatedDisk.prototype, "deviceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iops" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iops" }),
         __metadata("design:type", Number)
     ], ReplicationConfigurationReplicatedDisk.prototype, "iops", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isBootDisk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isBootDisk" }),
         __metadata("design:type", Boolean)
     ], ReplicationConfigurationReplicatedDisk.prototype, "isBootDisk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=stagingDiskType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=stagingDiskType" }),
         __metadata("design:type", String)
     ], ReplicationConfigurationReplicatedDisk.prototype, "stagingDiskType", void 0);
     return ReplicationConfigurationReplicatedDisk;
-}(SpeakeasyBase));
-export { ReplicationConfigurationReplicatedDisk };
+}(utils_1.SpeakeasyBase));
+exports.ReplicationConfigurationReplicatedDisk = ReplicationConfigurationReplicatedDisk;

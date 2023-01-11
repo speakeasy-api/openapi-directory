@@ -107,11 +107,11 @@ export declare class IncerRequest extends SpeakeasyBase {
 export declare class IncerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    incer400ApplicationJsonObject?: Incer400ApplicationJson;
-    incer401ApplicationJsonObject?: Incer401ApplicationJson;
-    incer404ApplicationJsonObject?: Incer404ApplicationJson;
-    incer500ApplicationJsonObject?: Incer500ApplicationJson;
-    incer502ApplicationJsonObject?: Incer502ApplicationJson;
-    incer503ApplicationJsonObject?: Incer503ApplicationJson;
-    incer504ApplicationJsonObject?: Incer504ApplicationJson;
+    incer400ApplicationJSONObject?: Incer400ApplicationJson;
+    incer401ApplicationJSONObject?: Incer401ApplicationJson;
+    incer404ApplicationJSONObject?: Incer404ApplicationJson;
+    incer500ApplicationJSONObject?: Incer500ApplicationJson;
+    incer502ApplicationJSONObject?: Incer502ApplicationJson;
+    incer503ApplicationJSONObject?: Incer503ApplicationJson;
+    incer504ApplicationJSONObject?: Incer504ApplicationJson;
 }

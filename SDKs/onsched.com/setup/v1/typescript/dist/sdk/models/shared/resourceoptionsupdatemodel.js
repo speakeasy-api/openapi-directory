@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceOptionsUpdateModel = void 0;
+var utils_1 = require("../../../internal/utils");
 var ResourceOptionsUpdateModel = /** @class */ (function (_super) {
     __extends(ResourceOptionsUpdateModel, _super);
     function ResourceOptionsUpdateModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bioLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bioLink" }),
         __metadata("design:type", String)
     ], ResourceOptionsUpdateModel.prototype, "bioLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingNotification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingNotification" }),
         __metadata("design:type", Number)
     ], ResourceOptionsUpdateModel.prototype, "bookingNotification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=calendarAvailability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=calendarAvailability" }),
         __metadata("design:type", Number)
     ], ResourceOptionsUpdateModel.prototype, "calendarAvailability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayColor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayColor" }),
         __metadata("design:type", String)
     ], ResourceOptionsUpdateModel.prototype, "displayColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=effectiveDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=effectiveDate" }),
         __metadata("design:type", Date)
     ], ResourceOptionsUpdateModel.prototype, "effectiveDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gender" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gender" }),
         __metadata("design:type", String)
     ], ResourceOptionsUpdateModel.prototype, "gender", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=googleCalendarId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=googleCalendarId" }),
         __metadata("design:type", String)
     ], ResourceOptionsUpdateModel.prototype, "googleCalendarId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hourly" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hourly" }),
         __metadata("design:type", Number)
     ], ResourceOptionsUpdateModel.prototype, "hourly", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ignoreBusinessHours" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ignoreBusinessHours" }),
         __metadata("design:type", Boolean)
     ], ResourceOptionsUpdateModel.prototype, "ignoreBusinessHours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=notificationType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=notificationType" }),
         __metadata("design:type", Number)
     ], ResourceOptionsUpdateModel.prototype, "notificationType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outlookCalendarId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outlookCalendarId" }),
         __metadata("design:type", String)
     ], ResourceOptionsUpdateModel.prototype, "outlookCalendarId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sortKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sortKey" }),
         __metadata("design:type", Number)
     ], ResourceOptionsUpdateModel.prototype, "sortKey", void 0);
     return ResourceOptionsUpdateModel;
-}(SpeakeasyBase));
-export { ResourceOptionsUpdateModel };
+}(utils_1.SpeakeasyBase));
+exports.ResourceOptionsUpdateModel = ResourceOptionsUpdateModel;

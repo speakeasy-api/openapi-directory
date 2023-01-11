@@ -62,7 +62,7 @@ export class DomainsProjectsLocationsRegistrationsResetAuthorizationCodeRequest 
   queryParams: DomainsProjectsLocationsRegistrationsResetAuthorizationCodeQueryParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request?: Map<string, any>;
+  request?: Record<string, any>;
 
   @SpeakeasyMetadata()
   security: DomainsProjectsLocationsRegistrationsResetAuthorizationCodeSecurity;

@@ -106,11 +106,11 @@ export declare class HmipcRequest extends SpeakeasyBase {
 export declare class HmipcResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    hmipc400ApplicationJsonObject?: Hmipc400ApplicationJson;
-    hmipc401ApplicationJsonObject?: Hmipc401ApplicationJson;
-    hmipc404ApplicationJsonObject?: Hmipc404ApplicationJson;
-    hmipc500ApplicationJsonObject?: Hmipc500ApplicationJson;
-    hmipc502ApplicationJsonObject?: Hmipc502ApplicationJson;
-    hmipc503ApplicationJsonObject?: Hmipc503ApplicationJson;
-    hmipc504ApplicationJsonObject?: Hmipc504ApplicationJson;
+    hmipc400ApplicationJSONObject?: Hmipc400ApplicationJson;
+    hmipc401ApplicationJSONObject?: Hmipc401ApplicationJson;
+    hmipc404ApplicationJSONObject?: Hmipc404ApplicationJson;
+    hmipc500ApplicationJSONObject?: Hmipc500ApplicationJson;
+    hmipc502ApplicationJSONObject?: Hmipc502ApplicationJson;
+    hmipc503ApplicationJSONObject?: Hmipc503ApplicationJson;
+    hmipc504ApplicationJSONObject?: Hmipc504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportKeyPairResult = void 0;
+var utils_1 = require("../../../internal/utils");
 var ImportKeyPairResult = /** @class */ (function (_super) {
     __extends(ImportKeyPairResult, _super);
     function ImportKeyPairResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ImportKeyPairResult.prototype, "keyFingerprint", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ImportKeyPairResult.prototype, "keyName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ImportKeyPairResult.prototype, "keyPairId", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Tag }),
-        __metadata("design:type", Array)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], ImportKeyPairResult.prototype, "tags", void 0);
     return ImportKeyPairResult;
-}(SpeakeasyBase));
-export { ImportKeyPairResult };
+}(utils_1.SpeakeasyBase));
+exports.ImportKeyPairResult = ImportKeyPairResult;

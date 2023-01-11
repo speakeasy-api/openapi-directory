@@ -23,6 +23,6 @@ export declare class SearchArtifactsRequest extends SpeakeasyBase {
 export declare class SearchArtifactsResponse extends SpeakeasyBase {
     artifactSearchResults?: shared.ArtifactSearchResults;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

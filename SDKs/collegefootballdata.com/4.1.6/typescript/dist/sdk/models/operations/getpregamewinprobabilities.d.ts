@@ -11,6 +11,6 @@ export declare class GetPregameWinProbabilitiesRequest extends SpeakeasyBase {
 }
 export declare class GetPregameWinProbabilitiesResponse extends SpeakeasyBase {
     contentType: string;
-    pregameWps?: shared.PregameWp[];
+    pregameWPS?: shared.PregameWp[];
     statusCode: number;
 }

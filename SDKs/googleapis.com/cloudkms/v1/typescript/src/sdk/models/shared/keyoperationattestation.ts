@@ -9,16 +9,6 @@ export enum KeyOperationAttestationFormatEnum {
 }
 
 
-// KeyOperationAttestationInput
-/** 
- * Contains an HSM-generated attestation about a key operation. For more information, see [Verifying attestations] (https://cloud.google.com/kms/docs/attest-key).
-**/
-export class KeyOperationAttestationInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=certChains" })
-  certChains?: CertificateChains;
-}
-
-
 // KeyOperationAttestation
 /** 
  * Contains an HSM-generated attestation about a key operation. For more information, see [Verifying attestations] (https://cloud.google.com/kms/docs/attest-key).
@@ -32,4 +22,14 @@ export class KeyOperationAttestation extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=format" })
   format?: KeyOperationAttestationFormatEnum;
+}
+
+
+// KeyOperationAttestationInput
+/** 
+ * Contains an HSM-generated attestation about a key operation. For more information, see [Verifying attestations] (https://cloud.google.com/kms/docs/attest-key).
+**/
+export class KeyOperationAttestationInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=certChains" })
+  certChains?: CertificateChains;
 }

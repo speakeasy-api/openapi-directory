@@ -1,4 +1,7 @@
-export var AllowanceTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllowanceTypeEnum = void 0;
+var AllowanceTypeEnum;
 (function (AllowanceTypeEnum) {
     AllowanceTypeEnum["Car"] = "CAR";
     AllowanceTypeEnum["Transport"] = "TRANSPORT";
@@ -7,4 +10,4 @@ export var AllowanceTypeEnum;
     AllowanceTypeEnum["Meals"] = "MEALS";
     AllowanceTypeEnum["Jobkeeper"] = "JOBKEEPER";
     AllowanceTypeEnum["Other"] = "OTHER";
-})(AllowanceTypeEnum || (AllowanceTypeEnum = {}));
+})(AllowanceTypeEnum = exports.AllowanceTypeEnum || (exports.AllowanceTypeEnum = {}));

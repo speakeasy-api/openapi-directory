@@ -109,11 +109,11 @@ export declare class ObcerRequest extends SpeakeasyBase {
 export declare class ObcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    obcer400ApplicationJsonObject?: Obcer400ApplicationJson;
-    obcer401ApplicationJsonObject?: Obcer401ApplicationJson;
-    obcer404ApplicationJsonObject?: Obcer404ApplicationJson;
-    obcer500ApplicationJsonObject?: Obcer500ApplicationJson;
-    obcer502ApplicationJsonObject?: Obcer502ApplicationJson;
-    obcer503ApplicationJsonObject?: Obcer503ApplicationJson;
-    obcer504ApplicationJsonObject?: Obcer504ApplicationJson;
+    obcer400ApplicationJSONObject?: Obcer400ApplicationJson;
+    obcer401ApplicationJSONObject?: Obcer401ApplicationJson;
+    obcer404ApplicationJSONObject?: Obcer404ApplicationJson;
+    obcer500ApplicationJSONObject?: Obcer500ApplicationJson;
+    obcer502ApplicationJSONObject?: Obcer502ApplicationJson;
+    obcer503ApplicationJSONObject?: Obcer503ApplicationJson;
+    obcer504ApplicationJSONObject?: Obcer504ApplicationJson;
 }

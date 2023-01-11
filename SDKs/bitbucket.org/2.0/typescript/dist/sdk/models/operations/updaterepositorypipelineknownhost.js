@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateRepositoryPipelineKnownHostResponse = exports.UpdateRepositoryPipelineKnownHostRequest = exports.UpdateRepositoryPipelineKnownHostPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateRepositoryPipelineKnownHostPathParams = /** @class */ (function (_super) {
     __extends(UpdateRepositoryPipelineKnownHostPathParams, _super);
     function UpdateRepositoryPipelineKnownHostPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=known_host_uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=known_host_uuid" }),
         __metadata("design:type", String)
     ], UpdateRepositoryPipelineKnownHostPathParams.prototype, "knownHostUuid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=repo_slug" }),
         __metadata("design:type", String)
     ], UpdateRepositoryPipelineKnownHostPathParams.prototype, "repoSlug", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=workspace" }),
         __metadata("design:type", String)
     ], UpdateRepositoryPipelineKnownHostPathParams.prototype, "workspace", void 0);
     return UpdateRepositoryPipelineKnownHostPathParams;
-}(SpeakeasyBase));
-export { UpdateRepositoryPipelineKnownHostPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryPipelineKnownHostPathParams = UpdateRepositoryPipelineKnownHostPathParams;
 var UpdateRepositoryPipelineKnownHostRequest = /** @class */ (function (_super) {
     __extends(UpdateRepositoryPipelineKnownHostRequest, _super);
     function UpdateRepositoryPipelineKnownHostRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateRepositoryPipelineKnownHostPathParams)
     ], UpdateRepositoryPipelineKnownHostRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
+        __metadata("design:type", Object)
     ], UpdateRepositoryPipelineKnownHostRequest.prototype, "request", void 0);
     return UpdateRepositoryPipelineKnownHostRequest;
-}(SpeakeasyBase));
-export { UpdateRepositoryPipelineKnownHostRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryPipelineKnownHostRequest = UpdateRepositoryPipelineKnownHostRequest;
 var UpdateRepositoryPipelineKnownHostResponse = /** @class */ (function (_super) {
     __extends(UpdateRepositoryPipelineKnownHostResponse, _super);
     function UpdateRepositoryPipelineKnownHostResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateRepositoryPipelineKnownHostResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateRepositoryPipelineKnownHostResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdateRepositoryPipelineKnownHostResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], UpdateRepositoryPipelineKnownHostResponse.prototype, "pipelineKnownHost", void 0);
     return UpdateRepositoryPipelineKnownHostResponse;
-}(SpeakeasyBase));
-export { UpdateRepositoryPipelineKnownHostResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateRepositoryPipelineKnownHostResponse = UpdateRepositoryPipelineKnownHostResponse;

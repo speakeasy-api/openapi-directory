@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PersonFollow = exports.PersonFollowEmbedded = void 0;
+var utils_1 = require("../../../internal/utils");
 var PersonFollowEmbedded = /** @class */ (function (_super) {
     __extends(PersonFollowEmbedded, _super);
     function PersonFollowEmbedded() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=person" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=person" }),
+        __metadata("design:type", Object)
     ], PersonFollowEmbedded.prototype, "person", void 0);
     return PersonFollowEmbedded;
-}(SpeakeasyBase));
-export { PersonFollowEmbedded };
+}(utils_1.SpeakeasyBase));
+exports.PersonFollowEmbedded = PersonFollowEmbedded;
 var PersonFollow = /** @class */ (function (_super) {
     __extends(PersonFollow, _super);
     function PersonFollow() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=_embedded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=_embedded" }),
         __metadata("design:type", PersonFollowEmbedded)
     ], PersonFollow.prototype, "embedded", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=person_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=person_id" }),
         __metadata("design:type", Number)
     ], PersonFollow.prototype, "personId", void 0);
     return PersonFollow;
-}(SpeakeasyBase));
-export { PersonFollow };
+}(utils_1.SpeakeasyBase));
+exports.PersonFollow = PersonFollow;

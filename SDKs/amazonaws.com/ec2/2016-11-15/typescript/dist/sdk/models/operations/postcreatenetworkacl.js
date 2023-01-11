@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCreateNetworkAclActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCreateNetworkAclResponse = exports.PostCreateNetworkAclRequest = exports.PostCreateNetworkAclHeaders = exports.PostCreateNetworkAclQueryParams = exports.PostCreateNetworkAclVersionEnum = exports.PostCreateNetworkAclActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCreateNetworkAclActionEnum;
 (function (PostCreateNetworkAclActionEnum) {
     PostCreateNetworkAclActionEnum["CreateNetworkAcl"] = "CreateNetworkAcl";
-})(PostCreateNetworkAclActionEnum || (PostCreateNetworkAclActionEnum = {}));
-export var PostCreateNetworkAclVersionEnum;
+})(PostCreateNetworkAclActionEnum = exports.PostCreateNetworkAclActionEnum || (exports.PostCreateNetworkAclActionEnum = {}));
+var PostCreateNetworkAclVersionEnum;
 (function (PostCreateNetworkAclVersionEnum) {
     PostCreateNetworkAclVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostCreateNetworkAclVersionEnum || (PostCreateNetworkAclVersionEnum = {}));
+})(PostCreateNetworkAclVersionEnum = exports.PostCreateNetworkAclVersionEnum || (exports.PostCreateNetworkAclVersionEnum = {}));
 var PostCreateNetworkAclQueryParams = /** @class */ (function (_super) {
     __extends(PostCreateNetworkAclQueryParams, _super);
     function PostCreateNetworkAclQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCreateNetworkAclQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCreateNetworkAclQueryParams.prototype, "version", void 0);
     return PostCreateNetworkAclQueryParams;
-}(SpeakeasyBase));
-export { PostCreateNetworkAclQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateNetworkAclQueryParams = PostCreateNetworkAclQueryParams;
 var PostCreateNetworkAclHeaders = /** @class */ (function (_super) {
     __extends(PostCreateNetworkAclHeaders, _super);
     function PostCreateNetworkAclHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCreateNetworkAclHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCreateNetworkAclHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCreateNetworkAclHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCreateNetworkAclHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCreateNetworkAclHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCreateNetworkAclHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCreateNetworkAclHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCreateNetworkAclHeaders;
-}(SpeakeasyBase));
-export { PostCreateNetworkAclHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateNetworkAclHeaders = PostCreateNetworkAclHeaders;
 var PostCreateNetworkAclRequest = /** @class */ (function (_super) {
     __extends(PostCreateNetworkAclRequest, _super);
     function PostCreateNetworkAclRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateNetworkAclQueryParams)
     ], PostCreateNetworkAclRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateNetworkAclHeaders)
     ], PostCreateNetworkAclRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCreateNetworkAclRequest.prototype, "request", void 0);
     return PostCreateNetworkAclRequest;
-}(SpeakeasyBase));
-export { PostCreateNetworkAclRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateNetworkAclRequest = PostCreateNetworkAclRequest;
 var PostCreateNetworkAclResponse = /** @class */ (function (_super) {
     __extends(PostCreateNetworkAclResponse, _super);
     function PostCreateNetworkAclResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCreateNetworkAclResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCreateNetworkAclResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCreateNetworkAclResponse.prototype, "statusCode", void 0);
     return PostCreateNetworkAclResponse;
-}(SpeakeasyBase));
-export { PostCreateNetworkAclResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateNetworkAclResponse = PostCreateNetworkAclResponse;

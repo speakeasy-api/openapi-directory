@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,76 +23,78 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WipeNetworkSmDevicesResponse = exports.WipeNetworkSmDevicesRequest = exports.WipeNetworkSmDevicesRequestBody = exports.WipeNetworkSmDevicesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var WipeNetworkSmDevicesPathParams = /** @class */ (function (_super) {
     __extends(WipeNetworkSmDevicesPathParams, _super);
     function WipeNetworkSmDevicesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], WipeNetworkSmDevicesPathParams.prototype, "networkId", void 0);
     return WipeNetworkSmDevicesPathParams;
-}(SpeakeasyBase));
-export { WipeNetworkSmDevicesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.WipeNetworkSmDevicesPathParams = WipeNetworkSmDevicesPathParams;
 var WipeNetworkSmDevicesRequestBody = /** @class */ (function (_super) {
     __extends(WipeNetworkSmDevicesRequestBody, _super);
     function WipeNetworkSmDevicesRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], WipeNetworkSmDevicesRequestBody.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pin" }),
         __metadata("design:type", Number)
     ], WipeNetworkSmDevicesRequestBody.prototype, "pin", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serial" }),
         __metadata("design:type", String)
     ], WipeNetworkSmDevicesRequestBody.prototype, "serial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wifiMac" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wifiMac" }),
         __metadata("design:type", String)
     ], WipeNetworkSmDevicesRequestBody.prototype, "wifiMac", void 0);
     return WipeNetworkSmDevicesRequestBody;
-}(SpeakeasyBase));
-export { WipeNetworkSmDevicesRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.WipeNetworkSmDevicesRequestBody = WipeNetworkSmDevicesRequestBody;
 var WipeNetworkSmDevicesRequest = /** @class */ (function (_super) {
     __extends(WipeNetworkSmDevicesRequest, _super);
     function WipeNetworkSmDevicesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", WipeNetworkSmDevicesPathParams)
     ], WipeNetworkSmDevicesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", WipeNetworkSmDevicesRequestBody)
     ], WipeNetworkSmDevicesRequest.prototype, "request", void 0);
     return WipeNetworkSmDevicesRequest;
-}(SpeakeasyBase));
-export { WipeNetworkSmDevicesRequest };
+}(utils_1.SpeakeasyBase));
+exports.WipeNetworkSmDevicesRequest = WipeNetworkSmDevicesRequest;
 var WipeNetworkSmDevicesResponse = /** @class */ (function (_super) {
     __extends(WipeNetworkSmDevicesResponse, _super);
     function WipeNetworkSmDevicesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], WipeNetworkSmDevicesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], WipeNetworkSmDevicesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], WipeNetworkSmDevicesResponse.prototype, "wipeNetworkSmDevices200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], WipeNetworkSmDevicesResponse.prototype, "wipeNetworkSmDevices200ApplicationJSONObject", void 0);
     return WipeNetworkSmDevicesResponse;
-}(SpeakeasyBase));
-export { WipeNetworkSmDevicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.WipeNetworkSmDevicesResponse = WipeNetworkSmDevicesResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SchedulerAcceleratorConfigTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SchedulerAcceleratorConfig = exports.SchedulerAcceleratorConfigTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SchedulerAcceleratorConfigTypeEnum;
 (function (SchedulerAcceleratorConfigTypeEnum) {
     SchedulerAcceleratorConfigTypeEnum["SchedulerAcceleratorTypeUnspecified"] = "SCHEDULER_ACCELERATOR_TYPE_UNSPECIFIED";
     SchedulerAcceleratorConfigTypeEnum["NvidiaTeslaK80"] = "NVIDIA_TESLA_K80";
@@ -34,7 +37,7 @@ export var SchedulerAcceleratorConfigTypeEnum;
     SchedulerAcceleratorConfigTypeEnum["NvidiaTeslaA100"] = "NVIDIA_TESLA_A100";
     SchedulerAcceleratorConfigTypeEnum["TpuV2"] = "TPU_V2";
     SchedulerAcceleratorConfigTypeEnum["TpuV3"] = "TPU_V3";
-})(SchedulerAcceleratorConfigTypeEnum || (SchedulerAcceleratorConfigTypeEnum = {}));
+})(SchedulerAcceleratorConfigTypeEnum = exports.SchedulerAcceleratorConfigTypeEnum || (exports.SchedulerAcceleratorConfigTypeEnum = {}));
 // SchedulerAcceleratorConfig
 /**
  * Definition of a hardware accelerator. Note that not all combinations of `type` and `core_count` are valid. Check [GPUs on Compute Engine](https://cloud.google.com/compute/docs/gpus) to find a valid combination. TPUs are not supported.
@@ -45,13 +48,13 @@ var SchedulerAcceleratorConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coreCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coreCount" }),
         __metadata("design:type", String)
     ], SchedulerAcceleratorConfig.prototype, "coreCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], SchedulerAcceleratorConfig.prototype, "type", void 0);
     return SchedulerAcceleratorConfig;
-}(SpeakeasyBase));
-export { SchedulerAcceleratorConfig };
+}(utils_1.SpeakeasyBase));
+exports.SchedulerAcceleratorConfig = SchedulerAcceleratorConfig;

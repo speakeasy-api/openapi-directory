@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListingLease = void 0;
+var utils_1 = require("../../../internal/utils");
 var ListingLease = /** @class */ (function (_super) {
     __extends(ListingLease, _super);
     function ListingLease() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=down_payment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=down_payment" }),
         __metadata("design:type", Number)
     ], ListingLease.prototype, "downPayment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=estimated_monthly_payment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=estimated_monthly_payment" }),
         __metadata("design:type", Number)
     ], ListingLease.prototype, "estimatedMonthlyPayment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lease_term" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lease_term" }),
         __metadata("design:type", Number)
     ], ListingLease.prototype, "leaseTerm", void 0);
     return ListingLease;
-}(SpeakeasyBase));
-export { ListingLease };
+}(utils_1.SpeakeasyBase));
+exports.ListingLease = ListingLease;

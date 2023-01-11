@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Money } from "./money";
-export var DomainResourceStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Domain = exports.DomainResourceStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var money_1 = require("./money");
+var DomainResourceStateEnum;
 (function (DomainResourceStateEnum) {
     DomainResourceStateEnum["ResourceStateUnspecified"] = "RESOURCE_STATE_UNSPECIFIED";
     DomainResourceStateEnum["Importable"] = "IMPORTABLE";
@@ -32,7 +35,7 @@ export var DomainResourceStateEnum;
     DomainResourceStateEnum["Suspended"] = "SUSPENDED";
     DomainResourceStateEnum["Expired"] = "EXPIRED";
     DomainResourceStateEnum["Deleted"] = "DELETED";
-})(DomainResourceStateEnum || (DomainResourceStateEnum = {}));
+})(DomainResourceStateEnum = exports.DomainResourceStateEnum || (exports.DomainResourceStateEnum = {}));
 // Domain
 /**
  * A domain that the calling user manages in Google Domains.
@@ -43,17 +46,17 @@ var Domain = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainName" }),
         __metadata("design:type", String)
     ], Domain.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceState" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceState" }),
         __metadata("design:type", String)
     ], Domain.prototype, "resourceState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=yearlyPrice" }),
-        __metadata("design:type", Money)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=yearlyPrice" }),
+        __metadata("design:type", money_1.Money)
     ], Domain.prototype, "yearlyPrice", void 0);
     return Domain;
-}(SpeakeasyBase));
-export { Domain };
+}(utils_1.SpeakeasyBase));
+exports.Domain = Domain;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,116 +23,118 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDescribeLoadBalancersActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDescribeLoadBalancersResponse = exports.GetDescribeLoadBalancersRequest = exports.GetDescribeLoadBalancersHeaders = exports.GetDescribeLoadBalancersQueryParams = exports.GetDescribeLoadBalancersVersionEnum = exports.GetDescribeLoadBalancersActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDescribeLoadBalancersActionEnum;
 (function (GetDescribeLoadBalancersActionEnum) {
     GetDescribeLoadBalancersActionEnum["DescribeLoadBalancers"] = "DescribeLoadBalancers";
-})(GetDescribeLoadBalancersActionEnum || (GetDescribeLoadBalancersActionEnum = {}));
-export var GetDescribeLoadBalancersVersionEnum;
+})(GetDescribeLoadBalancersActionEnum = exports.GetDescribeLoadBalancersActionEnum || (exports.GetDescribeLoadBalancersActionEnum = {}));
+var GetDescribeLoadBalancersVersionEnum;
 (function (GetDescribeLoadBalancersVersionEnum) {
     GetDescribeLoadBalancersVersionEnum["TwoThousandAndFifteen1201"] = "2015-12-01";
-})(GetDescribeLoadBalancersVersionEnum || (GetDescribeLoadBalancersVersionEnum = {}));
+})(GetDescribeLoadBalancersVersionEnum = exports.GetDescribeLoadBalancersVersionEnum || (exports.GetDescribeLoadBalancersVersionEnum = {}));
 var GetDescribeLoadBalancersQueryParams = /** @class */ (function (_super) {
     __extends(GetDescribeLoadBalancersQueryParams, _super);
     function GetDescribeLoadBalancersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancersQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=LoadBalancerArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=LoadBalancerArns" }),
         __metadata("design:type", Array)
     ], GetDescribeLoadBalancersQueryParams.prototype, "loadBalancerArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancersQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Names" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Names" }),
         __metadata("design:type", Array)
     ], GetDescribeLoadBalancersQueryParams.prototype, "names", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=PageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=PageSize" }),
         __metadata("design:type", Number)
     ], GetDescribeLoadBalancersQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancersQueryParams.prototype, "version", void 0);
     return GetDescribeLoadBalancersQueryParams;
-}(SpeakeasyBase));
-export { GetDescribeLoadBalancersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeLoadBalancersQueryParams = GetDescribeLoadBalancersQueryParams;
 var GetDescribeLoadBalancersHeaders = /** @class */ (function (_super) {
     __extends(GetDescribeLoadBalancersHeaders, _super);
     function GetDescribeLoadBalancersHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancersHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancersHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancersHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancersHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancersHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancersHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancersHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDescribeLoadBalancersHeaders;
-}(SpeakeasyBase));
-export { GetDescribeLoadBalancersHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeLoadBalancersHeaders = GetDescribeLoadBalancersHeaders;
 var GetDescribeLoadBalancersRequest = /** @class */ (function (_super) {
     __extends(GetDescribeLoadBalancersRequest, _super);
     function GetDescribeLoadBalancersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeLoadBalancersQueryParams)
     ], GetDescribeLoadBalancersRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDescribeLoadBalancersHeaders)
     ], GetDescribeLoadBalancersRequest.prototype, "headers", void 0);
     return GetDescribeLoadBalancersRequest;
-}(SpeakeasyBase));
-export { GetDescribeLoadBalancersRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeLoadBalancersRequest = GetDescribeLoadBalancersRequest;
 var GetDescribeLoadBalancersResponse = /** @class */ (function (_super) {
     __extends(GetDescribeLoadBalancersResponse, _super);
     function GetDescribeLoadBalancersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDescribeLoadBalancersResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDescribeLoadBalancersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDescribeLoadBalancersResponse.prototype, "statusCode", void 0);
     return GetDescribeLoadBalancersResponse;
-}(SpeakeasyBase));
-export { GetDescribeLoadBalancersResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDescribeLoadBalancersResponse = GetDescribeLoadBalancersResponse;

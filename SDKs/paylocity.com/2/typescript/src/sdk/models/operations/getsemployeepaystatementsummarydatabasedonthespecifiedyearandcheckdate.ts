@@ -58,8 +58,8 @@ export class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckD
   @SpeakeasyMetadata()
   statusCode: number;
 
-  @SpeakeasyMetadata({ elemType: shared.Error })
-  errors?: shared.Error[];
+  @SpeakeasyMetadata({ elemType: shared.ErrorT })
+  errors?: shared.ErrorT[];
 
   @SpeakeasyMetadata({ elemType: shared.PayStatementSummary })
   payStatementSummaries?: shared.PayStatementSummary[];

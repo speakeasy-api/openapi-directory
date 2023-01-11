@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var FrequencyCapTimeUnitTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FrequencyCap = exports.FrequencyCapTimeUnitTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var FrequencyCapTimeUnitTypeEnum;
 (function (FrequencyCapTimeUnitTypeEnum) {
     FrequencyCapTimeUnitTypeEnum["TimeUnitTypeUnspecified"] = "TIME_UNIT_TYPE_UNSPECIFIED";
     FrequencyCapTimeUnitTypeEnum["Minute"] = "MINUTE";
@@ -34,7 +37,7 @@ export var FrequencyCapTimeUnitTypeEnum;
     FrequencyCapTimeUnitTypeEnum["Lifetime"] = "LIFETIME";
     FrequencyCapTimeUnitTypeEnum["Pod"] = "POD";
     FrequencyCapTimeUnitTypeEnum["Stream"] = "STREAM";
-})(FrequencyCapTimeUnitTypeEnum || (FrequencyCapTimeUnitTypeEnum = {}));
+})(FrequencyCapTimeUnitTypeEnum = exports.FrequencyCapTimeUnitTypeEnum || (exports.FrequencyCapTimeUnitTypeEnum = {}));
 // FrequencyCap
 /**
  * Message contains details about publisher-set frequency caps of the delivery.
@@ -45,17 +48,17 @@ var FrequencyCap = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=maxImpressions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=maxImpressions" }),
         __metadata("design:type", Number)
     ], FrequencyCap.prototype, "maxImpressions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeUnitType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeUnitType" }),
         __metadata("design:type", String)
     ], FrequencyCap.prototype, "timeUnitType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeUnitsCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeUnitsCount" }),
         __metadata("design:type", Number)
     ], FrequencyCap.prototype, "timeUnitsCount", void 0);
     return FrequencyCap;
-}(SpeakeasyBase));
-export { FrequencyCap };
+}(utils_1.SpeakeasyBase));
+exports.FrequencyCap = FrequencyCap;

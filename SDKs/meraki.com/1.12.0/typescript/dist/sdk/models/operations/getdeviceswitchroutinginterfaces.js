@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeviceSwitchRoutingInterfacesResponse = exports.GetDeviceSwitchRoutingInterfacesRequest = exports.GetDeviceSwitchRoutingInterfacesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDeviceSwitchRoutingInterfacesPathParams = /** @class */ (function (_super) {
     __extends(GetDeviceSwitchRoutingInterfacesPathParams, _super);
     function GetDeviceSwitchRoutingInterfacesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], GetDeviceSwitchRoutingInterfacesPathParams.prototype, "serial", void 0);
     return GetDeviceSwitchRoutingInterfacesPathParams;
-}(SpeakeasyBase));
-export { GetDeviceSwitchRoutingInterfacesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceSwitchRoutingInterfacesPathParams = GetDeviceSwitchRoutingInterfacesPathParams;
 var GetDeviceSwitchRoutingInterfacesRequest = /** @class */ (function (_super) {
     __extends(GetDeviceSwitchRoutingInterfacesRequest, _super);
     function GetDeviceSwitchRoutingInterfacesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeviceSwitchRoutingInterfacesPathParams)
     ], GetDeviceSwitchRoutingInterfacesRequest.prototype, "pathParams", void 0);
     return GetDeviceSwitchRoutingInterfacesRequest;
-}(SpeakeasyBase));
-export { GetDeviceSwitchRoutingInterfacesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceSwitchRoutingInterfacesRequest = GetDeviceSwitchRoutingInterfacesRequest;
 var GetDeviceSwitchRoutingInterfacesResponse = /** @class */ (function (_super) {
     __extends(GetDeviceSwitchRoutingInterfacesResponse, _super);
     function GetDeviceSwitchRoutingInterfacesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeviceSwitchRoutingInterfacesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeviceSwitchRoutingInterfacesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetDeviceSwitchRoutingInterfacesResponse.prototype, "getDeviceSwitchRoutingInterfaces200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetDeviceSwitchRoutingInterfacesResponse.prototype, "getDeviceSwitchRoutingInterfaces200ApplicationJSONObject", void 0);
     return GetDeviceSwitchRoutingInterfacesResponse;
-}(SpeakeasyBase));
-export { GetDeviceSwitchRoutingInterfacesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeviceSwitchRoutingInterfacesResponse = GetDeviceSwitchRoutingInterfacesResponse;

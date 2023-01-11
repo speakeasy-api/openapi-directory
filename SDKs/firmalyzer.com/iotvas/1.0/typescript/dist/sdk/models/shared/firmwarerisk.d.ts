@@ -1,7 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { RiskSummary } from "./risksummary";
 import { VulnerableComponent } from "./vulnerablecomponent";
+export declare class FirmwareRiskRiskSummary extends SpeakeasyBase {
+    clientToolsRisk?: string;
+    cryptoRisk?: string;
+    kernelRisk?: string;
+    netServicesRisk?: string;
+}
 export declare class FirmwareRisk extends SpeakeasyBase {
-    riskSummary?: RiskSummary;
+    riskSummary?: FirmwareRiskRiskSummary;
     vulnerableComponents?: VulnerableComponent[];
 }

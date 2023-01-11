@@ -15,5 +15,5 @@ export declare class UpdateEmployeeRequest extends SpeakeasyBase {
 export declare class UpdateEmployeeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    errors?: shared.Error[];
+    errors?: shared.ErrorT[];
 }

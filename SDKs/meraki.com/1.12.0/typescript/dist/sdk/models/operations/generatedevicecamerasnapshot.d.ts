@@ -13,5 +13,5 @@ export declare class GenerateDeviceCameraSnapshotRequest extends SpeakeasyBase {
 export declare class GenerateDeviceCameraSnapshotResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    generateDeviceCameraSnapshot202ApplicationJsonObject?: Map<string, any>;
+    generateDeviceCameraSnapshot202ApplicationJSONObject?: Record<string, any>;
 }

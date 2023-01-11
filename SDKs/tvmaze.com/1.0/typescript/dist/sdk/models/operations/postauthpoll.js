@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAuthPollResponse = exports.PostAuthPollRequest = exports.PostAuthPoll200ApplicationJson = exports.PostAuthPollRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAuthPollRequestBody = /** @class */ (function (_super) {
     __extends(PostAuthPollRequestBody, _super);
     function PostAuthPollRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], PostAuthPollRequestBody.prototype, "token", void 0);
     return PostAuthPollRequestBody;
-}(SpeakeasyBase));
-export { PostAuthPollRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthPollRequestBody = PostAuthPollRequestBody;
 var PostAuthPoll200ApplicationJson = /** @class */ (function (_super) {
     __extends(PostAuthPoll200ApplicationJson, _super);
     function PostAuthPoll200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apikey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apikey" }),
         __metadata("design:type", String)
     ], PostAuthPoll200ApplicationJson.prototype, "apikey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], PostAuthPoll200ApplicationJson.prototype, "username", void 0);
     return PostAuthPoll200ApplicationJson;
-}(SpeakeasyBase));
-export { PostAuthPoll200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthPoll200ApplicationJson = PostAuthPoll200ApplicationJson;
 var PostAuthPollRequest = /** @class */ (function (_super) {
     __extends(PostAuthPollRequest, _super);
     function PostAuthPollRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", PostAuthPollRequestBody)
     ], PostAuthPollRequest.prototype, "request", void 0);
     return PostAuthPollRequest;
-}(SpeakeasyBase));
-export { PostAuthPollRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthPollRequest = PostAuthPollRequest;
 var PostAuthPollResponse = /** @class */ (function (_super) {
     __extends(PostAuthPollResponse, _super);
     function PostAuthPollResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAuthPollResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", PostAuthPoll200ApplicationJson)
-    ], PostAuthPollResponse.prototype, "postAuthPoll200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAuthPollResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", PostAuthPoll200ApplicationJson)
+    ], PostAuthPollResponse.prototype, "postAuthPoll200ApplicationJSONObject", void 0);
     return PostAuthPollResponse;
-}(SpeakeasyBase));
-export { PostAuthPollResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAuthPollResponse = PostAuthPollResponse;

@@ -1,6 +1,9 @@
-export var LogDestinationTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LogDestinationTypeEnum = void 0;
+var LogDestinationTypeEnum;
 (function (LogDestinationTypeEnum) {
     LogDestinationTypeEnum["S3"] = "S3";
     LogDestinationTypeEnum["CloudWatchLogs"] = "CloudWatchLogs";
     LogDestinationTypeEnum["KinesisDataFirehose"] = "KinesisDataFirehose";
-})(LogDestinationTypeEnum || (LogDestinationTypeEnum = {}));
+})(LogDestinationTypeEnum = exports.LogDestinationTypeEnum || (exports.LogDestinationTypeEnum = {}));

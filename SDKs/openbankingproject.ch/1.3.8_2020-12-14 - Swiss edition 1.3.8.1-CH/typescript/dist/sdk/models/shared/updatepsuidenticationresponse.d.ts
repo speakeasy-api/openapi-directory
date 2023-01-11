@@ -7,7 +7,7 @@ import { ScaStatusEnum } from "./scastatusenum";
  * Body of the JSON response for a successful update PSU identification request.
 **/
 export declare class UpdatePsuIdenticationResponse extends SpeakeasyBase {
-    links: Map<string, HrefType>;
+    links: Record<string, HrefType>;
     currencyConversionFees?: Amount;
     estimatedInterbankSettlementAmount?: Amount;
     estimatedTotalAmount?: Amount;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScimGroupListEnterprise = exports.ScimGroupListEnterpriseResources = exports.ScimGroupListEnterpriseResourcesMeta = exports.ScimGroupListEnterpriseResourcesMembers = void 0;
+var utils_1 = require("../../../internal/utils");
 var ScimGroupListEnterpriseResourcesMembers = /** @class */ (function (_super) {
     __extends(ScimGroupListEnterpriseResourcesMembers, _super);
     function ScimGroupListEnterpriseResourcesMembers() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=$ref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=$ref" }),
         __metadata("design:type", String)
     ], ScimGroupListEnterpriseResourcesMembers.prototype, "dollarRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=display" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=display" }),
         __metadata("design:type", String)
     ], ScimGroupListEnterpriseResourcesMembers.prototype, "display", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", String)
     ], ScimGroupListEnterpriseResourcesMembers.prototype, "value", void 0);
     return ScimGroupListEnterpriseResourcesMembers;
-}(SpeakeasyBase));
-export { ScimGroupListEnterpriseResourcesMembers };
+}(utils_1.SpeakeasyBase));
+exports.ScimGroupListEnterpriseResourcesMembers = ScimGroupListEnterpriseResourcesMembers;
 var ScimGroupListEnterpriseResourcesMeta = /** @class */ (function (_super) {
     __extends(ScimGroupListEnterpriseResourcesMeta, _super);
     function ScimGroupListEnterpriseResourcesMeta() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created" }),
         __metadata("design:type", String)
     ], ScimGroupListEnterpriseResourcesMeta.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lastModified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lastModified" }),
         __metadata("design:type", String)
     ], ScimGroupListEnterpriseResourcesMeta.prototype, "lastModified", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
         __metadata("design:type", String)
     ], ScimGroupListEnterpriseResourcesMeta.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], ScimGroupListEnterpriseResourcesMeta.prototype, "resourceType", void 0);
     return ScimGroupListEnterpriseResourcesMeta;
-}(SpeakeasyBase));
-export { ScimGroupListEnterpriseResourcesMeta };
+}(utils_1.SpeakeasyBase));
+exports.ScimGroupListEnterpriseResourcesMeta = ScimGroupListEnterpriseResourcesMeta;
 var ScimGroupListEnterpriseResources = /** @class */ (function (_super) {
     __extends(ScimGroupListEnterpriseResources, _super);
     function ScimGroupListEnterpriseResources() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], ScimGroupListEnterpriseResources.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalId" }),
         __metadata("design:type", String)
     ], ScimGroupListEnterpriseResources.prototype, "externalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ScimGroupListEnterpriseResources.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=members", elemType: ScimGroupListEnterpriseResourcesMembers }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=members", elemType: ScimGroupListEnterpriseResourcesMembers }),
         __metadata("design:type", Array)
     ], ScimGroupListEnterpriseResources.prototype, "members", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
         __metadata("design:type", ScimGroupListEnterpriseResourcesMeta)
     ], ScimGroupListEnterpriseResources.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemas" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemas" }),
         __metadata("design:type", Array)
     ], ScimGroupListEnterpriseResources.prototype, "schemas", void 0);
     return ScimGroupListEnterpriseResources;
-}(SpeakeasyBase));
-export { ScimGroupListEnterpriseResources };
+}(utils_1.SpeakeasyBase));
+exports.ScimGroupListEnterpriseResources = ScimGroupListEnterpriseResources;
 var ScimGroupListEnterprise = /** @class */ (function (_super) {
     __extends(ScimGroupListEnterprise, _super);
     function ScimGroupListEnterprise() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Resources", elemType: ScimGroupListEnterpriseResources }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Resources", elemType: ScimGroupListEnterpriseResources }),
         __metadata("design:type", Array)
     ], ScimGroupListEnterprise.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=itemsPerPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=itemsPerPage" }),
         __metadata("design:type", Number)
     ], ScimGroupListEnterprise.prototype, "itemsPerPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=schemas" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=schemas" }),
         __metadata("design:type", Array)
     ], ScimGroupListEnterprise.prototype, "schemas", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startIndex" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startIndex" }),
         __metadata("design:type", Number)
     ], ScimGroupListEnterprise.prototype, "startIndex", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalResults" }),
         __metadata("design:type", Number)
     ], ScimGroupListEnterprise.prototype, "totalResults", void 0);
     return ScimGroupListEnterprise;
-}(SpeakeasyBase));
-export { ScimGroupListEnterprise };
+}(utils_1.SpeakeasyBase));
+exports.ScimGroupListEnterprise = ScimGroupListEnterprise;

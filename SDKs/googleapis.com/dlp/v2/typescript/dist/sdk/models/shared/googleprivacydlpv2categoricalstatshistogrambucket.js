@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2ValueFrequency } from "./googleprivacydlpv2valuefrequency";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2CategoricalStatsHistogramBucket = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2valuefrequency_1 = require("./googleprivacydlpv2valuefrequency");
 // GooglePrivacyDlpV2CategoricalStatsHistogramBucket
 /**
  * Histogram of value frequencies in the column.
@@ -34,25 +37,25 @@ var GooglePrivacyDlpV2CategoricalStatsHistogramBucket = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketSize" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2CategoricalStatsHistogramBucket.prototype, "bucketSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketValueCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketValueCount" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2CategoricalStatsHistogramBucket.prototype, "bucketValueCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bucketValues", elemType: GooglePrivacyDlpV2ValueFrequency }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bucketValues", elemType: googleprivacydlpv2valuefrequency_1.GooglePrivacyDlpV2ValueFrequency }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2CategoricalStatsHistogramBucket.prototype, "bucketValues", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueFrequencyLowerBound" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueFrequencyLowerBound" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2CategoricalStatsHistogramBucket.prototype, "valueFrequencyLowerBound", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueFrequencyUpperBound" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueFrequencyUpperBound" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2CategoricalStatsHistogramBucket.prototype, "valueFrequencyUpperBound", void 0);
     return GooglePrivacyDlpV2CategoricalStatsHistogramBucket;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2CategoricalStatsHistogramBucket };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2CategoricalStatsHistogramBucket = GooglePrivacyDlpV2CategoricalStatsHistogramBucket;

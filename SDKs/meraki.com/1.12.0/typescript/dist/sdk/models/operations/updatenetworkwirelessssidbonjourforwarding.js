@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateNetworkWirelessSsidBonjourForwardingResponse = exports.UpdateNetworkWirelessSsidBonjourForwardingRequest = exports.UpdateNetworkWirelessSsidBonjourForwardingRequestBody = exports.UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRules = exports.UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRulesServicesEnum = exports.UpdateNetworkWirelessSsidBonjourForwardingPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateNetworkWirelessSsidBonjourForwardingPathParams = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidBonjourForwardingPathParams, _super);
     function UpdateNetworkWirelessSsidBonjourForwardingPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidBonjourForwardingPathParams.prototype, "networkId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=number" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidBonjourForwardingPathParams.prototype, "number", void 0);
     return UpdateNetworkWirelessSsidBonjourForwardingPathParams;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidBonjourForwardingPathParams };
-export var UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRulesServicesEnum;
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidBonjourForwardingPathParams = UpdateNetworkWirelessSsidBonjourForwardingPathParams;
+var UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRulesServicesEnum;
 (function (UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRulesServicesEnum) {
     UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRulesServicesEnum["AllServices"] = "All Services";
     UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRulesServicesEnum["AirPlay"] = "AirPlay";
@@ -52,76 +55,76 @@ export var UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRulesServicesEnu
     UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRulesServicesEnum["Samba"] = "Samba";
     UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRulesServicesEnum["Scanners"] = "Scanners";
     UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRulesServicesEnum["Ssh"] = "SSH";
-})(UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRulesServicesEnum || (UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRulesServicesEnum = {}));
+})(UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRulesServicesEnum = exports.UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRulesServicesEnum || (exports.UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRulesServicesEnum = {}));
 var UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRules = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRules, _super);
     function UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRules() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRules.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=services" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=services" }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRules.prototype, "services", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vlanId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vlanId" }),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRules.prototype, "vlanId", void 0);
     return UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRules;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRules };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRules = UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRules;
 var UpdateNetworkWirelessSsidBonjourForwardingRequestBody = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidBonjourForwardingRequestBody, _super);
     function UpdateNetworkWirelessSsidBonjourForwardingRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], UpdateNetworkWirelessSsidBonjourForwardingRequestBody.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRules }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: UpdateNetworkWirelessSsidBonjourForwardingRequestBodyRules }),
         __metadata("design:type", Array)
     ], UpdateNetworkWirelessSsidBonjourForwardingRequestBody.prototype, "rules", void 0);
     return UpdateNetworkWirelessSsidBonjourForwardingRequestBody;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidBonjourForwardingRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidBonjourForwardingRequestBody = UpdateNetworkWirelessSsidBonjourForwardingRequestBody;
 var UpdateNetworkWirelessSsidBonjourForwardingRequest = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidBonjourForwardingRequest, _super);
     function UpdateNetworkWirelessSsidBonjourForwardingRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateNetworkWirelessSsidBonjourForwardingPathParams)
     ], UpdateNetworkWirelessSsidBonjourForwardingRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateNetworkWirelessSsidBonjourForwardingRequestBody)
     ], UpdateNetworkWirelessSsidBonjourForwardingRequest.prototype, "request", void 0);
     return UpdateNetworkWirelessSsidBonjourForwardingRequest;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidBonjourForwardingRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidBonjourForwardingRequest = UpdateNetworkWirelessSsidBonjourForwardingRequest;
 var UpdateNetworkWirelessSsidBonjourForwardingResponse = /** @class */ (function (_super) {
     __extends(UpdateNetworkWirelessSsidBonjourForwardingResponse, _super);
     function UpdateNetworkWirelessSsidBonjourForwardingResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateNetworkWirelessSsidBonjourForwardingResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateNetworkWirelessSsidBonjourForwardingResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateNetworkWirelessSsidBonjourForwardingResponse.prototype, "updateNetworkWirelessSsidBonjourForwarding200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateNetworkWirelessSsidBonjourForwardingResponse.prototype, "updateNetworkWirelessSsidBonjourForwarding200ApplicationJSONObject", void 0);
     return UpdateNetworkWirelessSsidBonjourForwardingResponse;
-}(SpeakeasyBase));
-export { UpdateNetworkWirelessSsidBonjourForwardingResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateNetworkWirelessSsidBonjourForwardingResponse = UpdateNetworkWirelessSsidBonjourForwardingResponse;

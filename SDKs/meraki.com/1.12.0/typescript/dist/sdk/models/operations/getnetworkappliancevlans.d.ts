@@ -8,5 +8,5 @@ export declare class GetNetworkApplianceVlansRequest extends SpeakeasyBase {
 export declare class GetNetworkApplianceVlansResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkApplianceVlans200ApplicationJsonObject?: Map<string, any>;
+    getNetworkApplianceVlans200ApplicationJSONObject?: Record<string, any>;
 }

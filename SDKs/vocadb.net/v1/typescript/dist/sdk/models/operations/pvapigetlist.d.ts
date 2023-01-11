@@ -32,6 +32,6 @@ export declare class PvApiGetListRequest extends SpeakeasyBase {
 export declare class PvApiGetListResponse extends SpeakeasyBase {
     body?: Uint8Array;
     contentType: string;
-    partialFindResultPvForSongContract?: shared.PartialFindResultPvForSongContract;
+    partialFindResultPVForSongContract?: shared.PartialFindResultPvForSongContract;
     statusCode: number;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,42 +23,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { JobConfigTypeEnum } from "./jobconfigtypeenum";
-import { LogRead } from "./logread";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SynchronousJobRead = void 0;
+var utils_1 = require("../../../internal/utils");
+var jobconfigtypeenum_1 = require("./jobconfigtypeenum");
+var logread_1 = require("./logread");
 var SynchronousJobRead = /** @class */ (function (_super) {
     __extends(SynchronousJobRead, _super);
     function SynchronousJobRead() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configId" }),
         __metadata("design:type", String)
     ], SynchronousJobRead.prototype, "configId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configType" }),
         __metadata("design:type", String)
     ], SynchronousJobRead.prototype, "configType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Number)
     ], SynchronousJobRead.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endedAt" }),
         __metadata("design:type", Number)
     ], SynchronousJobRead.prototype, "endedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], SynchronousJobRead.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=logs" }),
-        __metadata("design:type", LogRead)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=logs" }),
+        __metadata("design:type", logread_1.LogRead)
     ], SynchronousJobRead.prototype, "logs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=succeeded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=succeeded" }),
         __metadata("design:type", Boolean)
     ], SynchronousJobRead.prototype, "succeeded", void 0);
     return SynchronousJobRead;
-}(SpeakeasyBase));
-export { SynchronousJobRead };
+}(utils_1.SpeakeasyBase));
+exports.SynchronousJobRead = SynchronousJobRead;

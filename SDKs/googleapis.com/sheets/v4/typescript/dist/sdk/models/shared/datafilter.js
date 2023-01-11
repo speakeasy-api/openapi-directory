@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeveloperMetadataLookup } from "./developermetadatalookup";
-import { GridRange } from "./gridrange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataFilter = void 0;
+var utils_1 = require("../../../internal/utils");
+var developermetadatalookup_1 = require("./developermetadatalookup");
+var gridrange_1 = require("./gridrange");
 // DataFilter
 /**
  * Filter that describes what data should be selected or returned from a request.
@@ -35,17 +38,17 @@ var DataFilter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=a1Range" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=a1Range" }),
         __metadata("design:type", String)
     ], DataFilter.prototype, "a1Range", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=developerMetadataLookup" }),
-        __metadata("design:type", DeveloperMetadataLookup)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=developerMetadataLookup" }),
+        __metadata("design:type", developermetadatalookup_1.DeveloperMetadataLookup)
     ], DataFilter.prototype, "developerMetadataLookup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gridRange" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gridRange" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], DataFilter.prototype, "gridRange", void 0);
     return DataFilter;
-}(SpeakeasyBase));
-export { DataFilter };
+}(utils_1.SpeakeasyBase));
+exports.DataFilter = DataFilter;

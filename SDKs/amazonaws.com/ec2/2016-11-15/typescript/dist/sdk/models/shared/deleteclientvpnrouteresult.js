@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ClientVpnRouteStatus } from "./clientvpnroutestatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteClientVpnRouteResult = exports.DeleteClientVpnRouteResultStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+// DeleteClientVpnRouteResultStatus
+/**
+ * The current state of the route.
+**/
+var DeleteClientVpnRouteResultStatus = /** @class */ (function (_super) {
+    __extends(DeleteClientVpnRouteResultStatus, _super);
+    function DeleteClientVpnRouteResultStatus() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteClientVpnRouteResultStatus.prototype, "code", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], DeleteClientVpnRouteResultStatus.prototype, "message", void 0);
+    return DeleteClientVpnRouteResultStatus;
+}(utils_1.SpeakeasyBase));
+exports.DeleteClientVpnRouteResultStatus = DeleteClientVpnRouteResultStatus;
 var DeleteClientVpnRouteResult = /** @class */ (function (_super) {
     __extends(DeleteClientVpnRouteResult, _super);
     function DeleteClientVpnRouteResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", ClientVpnRouteStatus)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", DeleteClientVpnRouteResultStatus)
     ], DeleteClientVpnRouteResult.prototype, "status", void 0);
     return DeleteClientVpnRouteResult;
-}(SpeakeasyBase));
-export { DeleteClientVpnRouteResult };
+}(utils_1.SpeakeasyBase));
+exports.DeleteClientVpnRouteResult = DeleteClientVpnRouteResult;

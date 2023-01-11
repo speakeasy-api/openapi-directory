@@ -8,5 +8,5 @@ export declare class GetSuiteDefinitionResponse extends SpeakeasyBase {
     suiteDefinitionConfiguration?: SuiteDefinitionConfiguration;
     suiteDefinitionId?: string;
     suiteDefinitionVersion?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

@@ -18,7 +18,7 @@ export class AndroidConfig extends SpeakeasyBase {
   collapseKey?: string;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, string>;
+  data?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=directBootOk" })
   directBootOk?: boolean;

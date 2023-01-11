@@ -37,7 +37,7 @@ export declare class SheetsSpreadsheetsValuesClearSecurity extends SpeakeasyBase
 export declare class SheetsSpreadsheetsValuesClearRequest extends SpeakeasyBase {
     pathParams: SheetsSpreadsheetsValuesClearPathParams;
     queryParams: SheetsSpreadsheetsValuesClearQueryParams;
-    request?: Map<string, any>;
+    request?: Record<string, any>;
     security: SheetsSpreadsheetsValuesClearSecurity;
 }
 export declare class SheetsSpreadsheetsValuesClearResponse extends SpeakeasyBase {

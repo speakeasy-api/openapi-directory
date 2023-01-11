@@ -8,11 +8,11 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class S3ReferenceDataSourceUpdate extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=BucketARNUpdate" })
-  bucketArnUpdate?: string;
+  bucketARNUpdate?: string;
 
   @SpeakeasyMetadata({ data: "json, name=FileKeyUpdate" })
   fileKeyUpdate?: string;
 
   @SpeakeasyMetadata({ data: "json, name=ReferenceRoleARNUpdate" })
-  referenceRoleArnUpdate?: string;
+  referenceRoleARNUpdate?: string;
 }

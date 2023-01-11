@@ -25,7 +25,7 @@ export declare class JobDetail extends SpeakeasyBase {
     jobQueue: string;
     nodeDetails?: NodeDetails;
     nodeProperties?: NodeProperties;
-    parameters?: Map<string, string>;
+    parameters?: Record<string, string>;
     platformCapabilities?: PlatformCapabilityEnum[];
     propagateTags?: boolean;
     retryStrategy?: RetryStrategy;
@@ -33,6 +33,6 @@ export declare class JobDetail extends SpeakeasyBase {
     status: JobStatusEnum;
     statusReason?: string;
     stoppedAt?: number;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     timeout?: JobTimeout;
 }

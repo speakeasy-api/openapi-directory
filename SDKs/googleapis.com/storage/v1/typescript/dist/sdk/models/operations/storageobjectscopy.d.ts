@@ -61,11 +61,11 @@ export declare class StorageObjectsCopySecurity extends SpeakeasyBase {
 export declare class StorageObjectsCopyRequest extends SpeakeasyBase {
     pathParams: StorageObjectsCopyPathParams;
     queryParams: StorageObjectsCopyQueryParams;
-    request?: shared.Object;
+    request?: shared.ObjectT;
     security: StorageObjectsCopySecurity;
 }
 export declare class StorageObjectsCopyResponse extends SpeakeasyBase {
     contentType: string;
-    object?: shared.Object;
+    object?: shared.ObjectT;
     statusCode: number;
 }

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetCallLogsRequest, GetCallLogsResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,24 +33,24 @@ const req: GetCallLogsRequest = {
     },
   },
   pathParams: {
-    accountId: "error",
+    accountId: "sit",
   },
   queryParams: {
     destinationUser: "voluptas",
-    direction: "Inbound",
-    endGte: "vel",
-    endLte: "in",
-    from: "quia",
-    page: 6.200000,
-    pageSize: 63.200001,
-    sourceUser: "quasi",
-    startGte: "dolorum",
-    startLte: "voluptatem",
-    to: "enim",
+    direction: "Outbound",
+    endGte: "expedita",
+    endLte: "consequuntur",
+    from: "dolor",
+    page: 67.199997,
+    pageSize: 88.099998,
+    sourceUser: "nihil",
+    startGte: "rerum",
+    startLte: "dicta",
+    to: "debitis",
   },
 };
 
-sdk.sdk.getCallLogs(req).then((res: GetCallLogsResponse | AxiosError) => {
+sdk.getCallLogs(req).then((res: GetCallLogsResponse | AxiosError) => {
    // handle response
 });
 ```

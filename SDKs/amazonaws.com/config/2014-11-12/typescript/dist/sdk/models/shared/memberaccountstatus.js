@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MemberAccountRuleStatusEnum } from "./memberaccountrulestatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MemberAccountStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var memberaccountrulestatusenum_1 = require("./memberaccountrulestatusenum");
 // MemberAccountStatus
 /**
  * Organization config rule creation or deletion status in each member account. This includes the name of the rule, the status, error code and error message when the rule creation or deletion failed.
@@ -34,29 +37,29 @@ var MemberAccountStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AccountId" }),
         __metadata("design:type", String)
     ], MemberAccountStatus.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigRuleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigRuleName" }),
         __metadata("design:type", String)
     ], MemberAccountStatus.prototype, "configRuleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorCode" }),
         __metadata("design:type", String)
     ], MemberAccountStatus.prototype, "errorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ErrorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ErrorMessage" }),
         __metadata("design:type", String)
     ], MemberAccountStatus.prototype, "errorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdateTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdateTime" }),
         __metadata("design:type", Date)
     ], MemberAccountStatus.prototype, "lastUpdateTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MemberAccountRuleStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MemberAccountRuleStatus" }),
         __metadata("design:type", String)
     ], MemberAccountStatus.prototype, "memberAccountRuleStatus", void 0);
     return MemberAccountStatus;
-}(SpeakeasyBase));
-export { MemberAccountStatus };
+}(utils_1.SpeakeasyBase));
+exports.MemberAccountStatus = MemberAccountStatus;

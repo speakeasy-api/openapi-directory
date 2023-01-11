@@ -106,11 +106,11 @@ export declare class ApptuRequest extends SpeakeasyBase {
 export declare class ApptuResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    apptu400ApplicationJsonObject?: Apptu400ApplicationJson;
-    apptu401ApplicationJsonObject?: Apptu401ApplicationJson;
-    apptu404ApplicationJsonObject?: Apptu404ApplicationJson;
-    apptu500ApplicationJsonObject?: Apptu500ApplicationJson;
-    apptu502ApplicationJsonObject?: Apptu502ApplicationJson;
-    apptu503ApplicationJsonObject?: Apptu503ApplicationJson;
-    apptu504ApplicationJsonObject?: Apptu504ApplicationJson;
+    apptu400ApplicationJSONObject?: Apptu400ApplicationJson;
+    apptu401ApplicationJSONObject?: Apptu401ApplicationJson;
+    apptu404ApplicationJSONObject?: Apptu404ApplicationJson;
+    apptu500ApplicationJSONObject?: Apptu500ApplicationJson;
+    apptu502ApplicationJSONObject?: Apptu502ApplicationJson;
+    apptu503ApplicationJSONObject?: Apptu503ApplicationJson;
+    apptu504ApplicationJSONObject?: Apptu504ApplicationJson;
 }

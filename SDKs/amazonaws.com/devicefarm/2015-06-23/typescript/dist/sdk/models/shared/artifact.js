@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArtifactTypeEnum } from "./artifacttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Artifact = void 0;
+var utils_1 = require("../../../internal/utils");
+var artifacttypeenum_1 = require("./artifacttypeenum");
 // Artifact
 /**
  * Represents the output of a test. Examples of artifacts include logs and screenshots.
@@ -34,25 +37,25 @@ var Artifact = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], Artifact.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extension" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extension" }),
         __metadata("design:type", String)
     ], Artifact.prototype, "extension", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Artifact.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], Artifact.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Artifact.prototype, "url", void 0);
     return Artifact;
-}(SpeakeasyBase));
-export { Artifact };
+}(utils_1.SpeakeasyBase));
+exports.Artifact = Artifact;

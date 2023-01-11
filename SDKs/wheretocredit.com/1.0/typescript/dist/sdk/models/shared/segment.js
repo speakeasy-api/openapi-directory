@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Segment = void 0;
+var utils_1 = require("../../../internal/utils");
 var Segment = /** @class */ (function (_super) {
     __extends(Segment, _super);
     function Segment() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bookingClass" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bookingClass" }),
         __metadata("design:type", String)
     ], Segment.prototype, "bookingClass", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=carrier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=carrier" }),
         __metadata("design:type", String)
     ], Segment.prototype, "carrier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=departure" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=departure" }),
         __metadata("design:type", Date)
     ], Segment.prototype, "departure", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destination" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destination" }),
         __metadata("design:type", String)
     ], Segment.prototype, "destination", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=distance" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=distance" }),
         __metadata("design:type", Number)
     ], Segment.prototype, "distance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flightNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flightNumber" }),
         __metadata("design:type", Number)
     ], Segment.prototype, "flightNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operatingCarrier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operatingCarrier" }),
         __metadata("design:type", String)
     ], Segment.prototype, "operatingCarrier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=origin" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=origin" }),
         __metadata("design:type", String)
     ], Segment.prototype, "origin", void 0);
     return Segment;
-}(SpeakeasyBase));
-export { Segment };
+}(utils_1.SpeakeasyBase));
+exports.Segment = Segment;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Approval } from "./approval";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPullRequestApprovalStatesOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var approval_1 = require("./approval");
 var GetPullRequestApprovalStatesOutput = /** @class */ (function (_super) {
     __extends(GetPullRequestApprovalStatesOutput, _super);
     function GetPullRequestApprovalStatesOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approvals", elemType: Approval }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approvals", elemType: approval_1.Approval }),
         __metadata("design:type", Array)
     ], GetPullRequestApprovalStatesOutput.prototype, "approvals", void 0);
     return GetPullRequestApprovalStatesOutput;
-}(SpeakeasyBase));
-export { GetPullRequestApprovalStatesOutput };
+}(utils_1.SpeakeasyBase));
+exports.GetPullRequestApprovalStatesOutput = GetPullRequestApprovalStatesOutput;

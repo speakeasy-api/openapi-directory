@@ -1,4 +1,7 @@
-export var OrderStatusEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrderStatusEnum = void 0;
+var OrderStatusEnum;
 (function (OrderStatusEnum) {
     OrderStatusEnum["Minus1"] = "-1";
     OrderStatusEnum["Zero"] = "0";
@@ -16,4 +19,4 @@ export var OrderStatusEnum;
     OrderStatusEnum["C"] = "C";
     OrderStatusEnum["D"] = "D";
     OrderStatusEnum["E"] = "E";
-})(OrderStatusEnum || (OrderStatusEnum = {}));
+})(OrderStatusEnum = exports.OrderStatusEnum || (exports.OrderStatusEnum = {}));

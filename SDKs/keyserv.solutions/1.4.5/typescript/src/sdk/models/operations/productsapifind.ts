@@ -22,7 +22,7 @@ export class ProductsApiFindResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  productsApiFind200ApplicationJsonOneOf?: any;
+  productsApiFind200ApplicationJSONOneOf?: any;
 
   @SpeakeasyMetadata()
   statusCode: number;

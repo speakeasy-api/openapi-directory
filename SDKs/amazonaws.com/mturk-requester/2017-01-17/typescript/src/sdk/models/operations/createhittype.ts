@@ -48,7 +48,7 @@ export class CreateHitTypeResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createHitTypeResponse?: shared.CreateHitTypeResponse;
+  createHITTypeResponse?: shared.CreateHitTypeResponse;
 
   @SpeakeasyMetadata()
   requestError?: any;

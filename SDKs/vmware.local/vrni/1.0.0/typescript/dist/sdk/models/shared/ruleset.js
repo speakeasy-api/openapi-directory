@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,31 +23,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Reference } from "./reference";
-export var RuleSetRuleSetTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuleSet = exports.RuleSetRuleSetTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var reference_1 = require("./reference");
+var RuleSetRuleSetTypeEnum;
 (function (RuleSetRuleSetTypeEnum) {
     RuleSetRuleSetTypeEnum["NsxStandard"] = "NSX_STANDARD";
     RuleSetRuleSetTypeEnum["NsxRedirect"] = "NSX_REDIRECT";
     RuleSetRuleSetTypeEnum["AwsStandard"] = "AWS_STANDARD";
-})(RuleSetRuleSetTypeEnum || (RuleSetRuleSetTypeEnum = {}));
+})(RuleSetRuleSetTypeEnum = exports.RuleSetRuleSetTypeEnum || (exports.RuleSetRuleSetTypeEnum = {}));
 var RuleSet = /** @class */ (function (_super) {
     __extends(RuleSet, _super);
     function RuleSet() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=firewall" }),
-        __metadata("design:type", Reference)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=firewall" }),
+        __metadata("design:type", reference_1.Reference)
     ], RuleSet.prototype, "firewall", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rule_set_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rule_set_type" }),
         __metadata("design:type", String)
     ], RuleSet.prototype, "ruleSetType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: Reference }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: reference_1.Reference }),
         __metadata("design:type", Array)
     ], RuleSet.prototype, "rules", void 0);
     return RuleSet;
-}(SpeakeasyBase));
-export { RuleSet };
+}(utils_1.SpeakeasyBase));
+exports.RuleSet = RuleSet;

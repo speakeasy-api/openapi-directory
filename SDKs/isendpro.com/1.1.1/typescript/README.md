@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AddShortlinkRequest, AddShortlinkResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: AddShortlinkRequest = {
   request: {
-    keyid: "sunt",
-    shortlink: "est",
+    keyid: "sit",
+    shortlink: "voluptas",
   },
 };
 
-sdk.sdk.addShortlink(req).then((res: AddShortlinkResponse | AxiosError) => {
+sdk.addShortlink.addShortlink(req).then((res: AddShortlinkResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -43,22 +42,55 @@ sdk.sdk.addShortlink(req).then((res: AddShortlinkResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### add shortlink
 
 * `addShortlink` - add a shortlink
-* `comptage` - Compter le nombre de caractère 
-* `delListeNoire` - Ajoute un numero en liste noire
+
+### add subaccount
+
+* `subaccountAdd` - Ajoute un sous compte
+
+### campagne
+
 * `getCampagne` - Retourne les SMS envoyés sur une période donnée
+
+### comptage
+
+* `comptage` - Compter le nombre de caractère 
+
+### credit
+
 * `getCredit` - Interrogation credit
-* `getHlr` - Vérifier la validité d'un numéro
+
+### delListeNoire
+
+* `delListeNoire` - Ajoute un numero en liste noire
+
+### edit subaccount
+
+* `subaccountEdit` - Edit a subaccount
+
+### getListeNoire
+
 * `getListeNoire` - Retourne le liste noire
+
+### hlr
+
+* `getHlr` - Vérifier la validité d'un numéro
+
+### repertoire
+
 * `repertoire` - Gestion repertoire (modification)
 * `repertoireCrea` - Gestion repertoire (creation)
+
+### setListeNoire
+
+* `setListeNoire` - Ajoute un numero en liste noire
+
+### sms
+
 * `sendSms` - Envoyer un sms
 * `sendSmsMulti` - Envoyer des SMS
-* `setListeNoire` - Ajoute un numero en liste noire
-* `subaccountAdd` - Ajoute un sous compte
-* `subaccountEdit` - Edit a subaccount
 
 <!-- End SDK Available Operations -->
 

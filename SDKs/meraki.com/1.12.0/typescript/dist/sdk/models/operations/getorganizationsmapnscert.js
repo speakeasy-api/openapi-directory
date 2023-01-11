@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationSmApnsCertResponse = exports.GetOrganizationSmApnsCertRequest = exports.GetOrganizationSmApnsCertPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationSmApnsCertPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationSmApnsCertPathParams, _super);
     function GetOrganizationSmApnsCertPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationSmApnsCertPathParams.prototype, "organizationId", void 0);
     return GetOrganizationSmApnsCertPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationSmApnsCertPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationSmApnsCertPathParams = GetOrganizationSmApnsCertPathParams;
 var GetOrganizationSmApnsCertRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationSmApnsCertRequest, _super);
     function GetOrganizationSmApnsCertRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationSmApnsCertPathParams)
     ], GetOrganizationSmApnsCertRequest.prototype, "pathParams", void 0);
     return GetOrganizationSmApnsCertRequest;
-}(SpeakeasyBase));
-export { GetOrganizationSmApnsCertRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationSmApnsCertRequest = GetOrganizationSmApnsCertRequest;
 var GetOrganizationSmApnsCertResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationSmApnsCertResponse, _super);
     function GetOrganizationSmApnsCertResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationSmApnsCertResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationSmApnsCertResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationSmApnsCertResponse.prototype, "getOrganizationSmApnsCert200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationSmApnsCertResponse.prototype, "getOrganizationSmApnsCert200ApplicationJSONObject", void 0);
     return GetOrganizationSmApnsCertResponse;
-}(SpeakeasyBase));
-export { GetOrganizationSmApnsCertResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationSmApnsCertResponse = GetOrganizationSmApnsCertResponse;

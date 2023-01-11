@@ -1,20 +1,20 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://participant.connect.{region}.amazonaws.com", "https://participant.connect.{region}.amazonaws.com", "http://participant.connect.{region}.amazonaws.com.cn", "https://participant.connect.{region}.amazonaws.com.cn"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * completeAttachmentUpload - Allows you to confirm that the attachment has been uploaded using the pre-signed URL provided in StartAttachmentUpload API.
     **/
@@ -48,4 +48,3 @@ export declare class SDK {
     **/
     startAttachmentUpload(req: operations.StartAttachmentUploadRequest, config?: AxiosRequestConfig): Promise<operations.StartAttachmentUploadResponse>;
 }
-export {};

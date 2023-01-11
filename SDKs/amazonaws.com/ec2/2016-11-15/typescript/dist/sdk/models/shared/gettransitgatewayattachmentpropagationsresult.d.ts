@@ -1,6 +1,5 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { TransitGatewayAttachmentPropagation } from "./transitgatewayattachmentpropagation";
 export declare class GetTransitGatewayAttachmentPropagationsResult extends SpeakeasyBase {
-    nextToken?: string;
-    transitGatewayAttachmentPropagations?: TransitGatewayAttachmentPropagation[];
+    nextToken?: Record<string, any>;
+    transitGatewayAttachmentPropagations?: Record<string, any>;
 }

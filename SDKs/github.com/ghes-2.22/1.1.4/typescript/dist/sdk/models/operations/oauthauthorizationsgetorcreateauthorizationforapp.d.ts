@@ -16,7 +16,7 @@ export declare class OauthAuthorizationsGetOrCreateAuthorizationForAppRequest ex
 }
 export declare class OauthAuthorizationsGetOrCreateAuthorizationForAppResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     authorization?: shared.Authorization;
     basicError?: shared.BasicError;

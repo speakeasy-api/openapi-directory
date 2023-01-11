@@ -18,5 +18,5 @@ export declare class GetCveCheckConfiguration200ApplicationJson extends Speakeas
 export declare class GetCveCheckConfigurationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getCveCheckConfiguration200ApplicationJsonObject?: GetCveCheckConfiguration200ApplicationJson;
+    getCVECheckConfiguration200ApplicationJSONObject?: GetCveCheckConfiguration200ApplicationJson;
 }

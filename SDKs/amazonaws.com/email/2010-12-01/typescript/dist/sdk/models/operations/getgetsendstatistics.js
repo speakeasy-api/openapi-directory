@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetGetSendStatisticsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetGetSendStatisticsResponse = exports.GetGetSendStatisticsRequest = exports.GetGetSendStatisticsHeaders = exports.GetGetSendStatisticsQueryParams = exports.GetGetSendStatisticsVersionEnum = exports.GetGetSendStatisticsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetGetSendStatisticsActionEnum;
 (function (GetGetSendStatisticsActionEnum) {
     GetGetSendStatisticsActionEnum["GetSendStatistics"] = "GetSendStatistics";
-})(GetGetSendStatisticsActionEnum || (GetGetSendStatisticsActionEnum = {}));
-export var GetGetSendStatisticsVersionEnum;
+})(GetGetSendStatisticsActionEnum = exports.GetGetSendStatisticsActionEnum || (exports.GetGetSendStatisticsActionEnum = {}));
+var GetGetSendStatisticsVersionEnum;
 (function (GetGetSendStatisticsVersionEnum) {
     GetGetSendStatisticsVersionEnum["TwoThousandAndTen1201"] = "2010-12-01";
-})(GetGetSendStatisticsVersionEnum || (GetGetSendStatisticsVersionEnum = {}));
+})(GetGetSendStatisticsVersionEnum = exports.GetGetSendStatisticsVersionEnum || (exports.GetGetSendStatisticsVersionEnum = {}));
 var GetGetSendStatisticsQueryParams = /** @class */ (function (_super) {
     __extends(GetGetSendStatisticsQueryParams, _super);
     function GetGetSendStatisticsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetGetSendStatisticsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetGetSendStatisticsQueryParams.prototype, "version", void 0);
     return GetGetSendStatisticsQueryParams;
-}(SpeakeasyBase));
-export { GetGetSendStatisticsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetGetSendStatisticsQueryParams = GetGetSendStatisticsQueryParams;
 var GetGetSendStatisticsHeaders = /** @class */ (function (_super) {
     __extends(GetGetSendStatisticsHeaders, _super);
     function GetGetSendStatisticsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetGetSendStatisticsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetGetSendStatisticsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetGetSendStatisticsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetGetSendStatisticsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetGetSendStatisticsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetGetSendStatisticsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetGetSendStatisticsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetGetSendStatisticsHeaders;
-}(SpeakeasyBase));
-export { GetGetSendStatisticsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetGetSendStatisticsHeaders = GetGetSendStatisticsHeaders;
 var GetGetSendStatisticsRequest = /** @class */ (function (_super) {
     __extends(GetGetSendStatisticsRequest, _super);
     function GetGetSendStatisticsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetSendStatisticsQueryParams)
     ], GetGetSendStatisticsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetGetSendStatisticsHeaders)
     ], GetGetSendStatisticsRequest.prototype, "headers", void 0);
     return GetGetSendStatisticsRequest;
-}(SpeakeasyBase));
-export { GetGetSendStatisticsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetGetSendStatisticsRequest = GetGetSendStatisticsRequest;
 var GetGetSendStatisticsResponse = /** @class */ (function (_super) {
     __extends(GetGetSendStatisticsResponse, _super);
     function GetGetSendStatisticsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetGetSendStatisticsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetGetSendStatisticsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetGetSendStatisticsResponse.prototype, "statusCode", void 0);
     return GetGetSendStatisticsResponse;
-}(SpeakeasyBase));
-export { GetGetSendStatisticsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetGetSendStatisticsResponse = GetGetSendStatisticsResponse;

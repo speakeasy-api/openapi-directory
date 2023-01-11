@@ -48,7 +48,7 @@ export class ListResourcesForWebAclResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  listResourcesForWebAclResponse?: shared.ListResourcesForWebAclResponse;
+  listResourcesForWebACLResponse?: shared.ListResourcesForWebAclResponse;
 
   @SpeakeasyMetadata()
   statusCode: number;

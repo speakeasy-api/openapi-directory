@@ -45,5 +45,5 @@ export class UnloadServiceResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  unloadService200ApplicationJsonObject?: UnloadService200ApplicationJson;
+  unloadService200ApplicationJSONObject?: UnloadService200ApplicationJson;
 }

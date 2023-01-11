@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var RepertoirEcreaterequestRepertoireEditEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RepertoirEcreaterequest = exports.RepertoirEcreaterequestRepertoireEditEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var RepertoirEcreaterequestRepertoireEditEnum;
 (function (RepertoirEcreaterequestRepertoireEditEnum) {
     RepertoirEcreaterequestRepertoireEditEnum["Create"] = "create";
-})(RepertoirEcreaterequestRepertoireEditEnum || (RepertoirEcreaterequestRepertoireEditEnum = {}));
+})(RepertoirEcreaterequestRepertoireEditEnum = exports.RepertoirEcreaterequestRepertoireEditEnum || (exports.RepertoirEcreaterequestRepertoireEditEnum = {}));
 var RepertoirEcreaterequest = /** @class */ (function (_super) {
     __extends(RepertoirEcreaterequest, _super);
     function RepertoirEcreaterequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=keyid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=keyid" }),
         __metadata("design:type", String)
     ], RepertoirEcreaterequest.prototype, "keyid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repertoireEdit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repertoireEdit" }),
         __metadata("design:type", String)
     ], RepertoirEcreaterequest.prototype, "repertoireEdit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repertoireNom" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repertoireNom" }),
         __metadata("design:type", String)
     ], RepertoirEcreaterequest.prototype, "repertoireNom", void 0);
     return RepertoirEcreaterequest;
-}(SpeakeasyBase));
-export { RepertoirEcreaterequest };
+}(utils_1.SpeakeasyBase));
+exports.RepertoirEcreaterequest = RepertoirEcreaterequest;

@@ -85,13 +85,13 @@ export class RootV1ScoringsConsolidatedDailyRequest extends SpeakeasyBase {
 
 export class RootV1ScoringsConsolidatedDailyResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  rootV1ScoringsConsolidatedDaily200ApplicationJsonObject?: RootV1ScoringsConsolidatedDaily200ApplicationJson;
+  rootV1ScoringsConsolidatedDaily200ApplicationJSONObject?: RootV1ScoringsConsolidatedDaily200ApplicationJson;
 
   @SpeakeasyMetadata()
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;

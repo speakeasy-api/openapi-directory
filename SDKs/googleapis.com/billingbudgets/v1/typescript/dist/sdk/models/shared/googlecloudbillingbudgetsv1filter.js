@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudBillingBudgetsV1CustomPeriod } from "./googlecloudbillingbudgetsv1customperiod";
-export var GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudBillingBudgetsV1Filter = exports.GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum = exports.GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudbillingbudgetsv1customperiod_1 = require("./googlecloudbillingbudgetsv1customperiod");
+var GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum;
 (function (GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum) {
     GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum["CalendarPeriodUnspecified"] = "CALENDAR_PERIOD_UNSPECIFIED";
     GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum["Month"] = "MONTH";
     GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum["Quarter"] = "QUARTER";
     GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum["Year"] = "YEAR";
-})(GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum || (GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum = {}));
-export var GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum;
+})(GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum = exports.GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum || (exports.GoogleCloudBillingBudgetsV1FilterCalendarPeriodEnum = {}));
+var GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum;
 (function (GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum) {
     GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum["CreditTypesTreatmentUnspecified"] = "CREDIT_TYPES_TREATMENT_UNSPECIFIED";
     GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum["IncludeAllCredits"] = "INCLUDE_ALL_CREDITS";
     GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum["ExcludeAllCredits"] = "EXCLUDE_ALL_CREDITS";
     GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum["IncludeSpecifiedCredits"] = "INCLUDE_SPECIFIED_CREDITS";
-})(GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum || (GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum = {}));
+})(GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum = exports.GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum || (exports.GoogleCloudBillingBudgetsV1FilterCreditTypesTreatmentEnum = {}));
 // GoogleCloudBillingBudgetsV1Filter
 /**
  * A filter for a budget, limiting the scope of the cost to calculate.
@@ -48,37 +51,37 @@ var GoogleCloudBillingBudgetsV1Filter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=calendarPeriod" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=calendarPeriod" }),
         __metadata("design:type", String)
     ], GoogleCloudBillingBudgetsV1Filter.prototype, "calendarPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creditTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditTypes" }),
         __metadata("design:type", Array)
     ], GoogleCloudBillingBudgetsV1Filter.prototype, "creditTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=creditTypesTreatment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=creditTypesTreatment" }),
         __metadata("design:type", String)
     ], GoogleCloudBillingBudgetsV1Filter.prototype, "creditTypesTreatment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customPeriod" }),
-        __metadata("design:type", GoogleCloudBillingBudgetsV1CustomPeriod)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customPeriod" }),
+        __metadata("design:type", googlecloudbillingbudgetsv1customperiod_1.GoogleCloudBillingBudgetsV1CustomPeriod)
     ], GoogleCloudBillingBudgetsV1Filter.prototype, "customPeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
+        __metadata("design:type", Object)
     ], GoogleCloudBillingBudgetsV1Filter.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projects" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projects" }),
         __metadata("design:type", Array)
     ], GoogleCloudBillingBudgetsV1Filter.prototype, "projects", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=services" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=services" }),
         __metadata("design:type", Array)
     ], GoogleCloudBillingBudgetsV1Filter.prototype, "services", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subaccounts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subaccounts" }),
         __metadata("design:type", Array)
     ], GoogleCloudBillingBudgetsV1Filter.prototype, "subaccounts", void 0);
     return GoogleCloudBillingBudgetsV1Filter;
-}(SpeakeasyBase));
-export { GoogleCloudBillingBudgetsV1Filter };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudBillingBudgetsV1Filter = GoogleCloudBillingBudgetsV1Filter;

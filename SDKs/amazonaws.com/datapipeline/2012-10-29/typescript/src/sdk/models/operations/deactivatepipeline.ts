@@ -48,7 +48,7 @@ export class DeactivatePipelineResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deactivatePipelineOutput?: Map<string, any>;
+  deactivatePipelineOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   internalServiceError?: any;

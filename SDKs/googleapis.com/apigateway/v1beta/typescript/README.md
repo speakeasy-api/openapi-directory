@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ApigatewayProjectsLocationsApisConfigsCreateRequest, ApigatewayProjectsLocationsApisConfigsCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,98 +30,118 @@ const req: ApigatewayProjectsLocationsApisConfigsCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "illo",
+    parent: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "omnis",
+    accessToken: "culpa",
     alt: "media",
-    apiConfigId: "incidunt",
-    callback: "qui",
-    fields: "occaecati",
-    key: "exercitationem",
-    oauthToken: "et",
+    apiConfigId: "consequuntur",
+    callback: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
     prettyPrint: false,
-    quotaUser: "nam",
-    uploadType: "maxime",
-    uploadProtocol: "ut",
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
-    displayName: "quod",
+    displayName: "debitis",
     gatewayConfig: {
       backendConfig: {
-        googleServiceAccount: "velit",
+        googleServiceAccount: "voluptatum",
       },
     },
-    gatewayServiceAccount: "est",
+    gatewayServiceAccount: "et",
     grpcServices: [
       {
         fileDescriptorSet: {
-          contents: "omnis",
-          path: "est",
+          contents: "dolorem",
+          path: "et",
         },
         source: [
           {
-            contents: "molestias",
-            path: "voluptas",
+            contents: "iste",
+            path: "vitae",
           },
         ],
       },
       {
         fileDescriptorSet: {
-          contents: "doloribus",
-          path: "aspernatur",
+          contents: "totam",
+          path: "dolores",
         },
         source: [
           {
             contents: "debitis",
-            path: "optio",
+            path: "vel",
           },
           {
-            contents: "impedit",
-            path: "soluta",
+            contents: "odio",
+            path: "dolore",
           },
           {
-            contents: "rerum",
-            path: "quae",
+            contents: "id",
+            path: "aspernatur",
+          },
+        ],
+      },
+      {
+        fileDescriptorSet: {
+          contents: "accusantium",
+          path: "totam",
+        },
+        source: [
+          {
+            contents: "quis",
+            path: "est",
+          },
+          {
+            contents: "aut",
+            path: "odit",
           },
         ],
       },
     ],
     labels: {
-      "dolor": "voluptates",
+      "voluptas": "omnis",
+      "aut": "illo",
+      "sed": "officiis",
     },
     managedServiceConfigs: [
       {
-        contents: "ut",
-        path: "nam",
+        contents: "consectetur",
+        path: "nobis",
       },
       {
-        contents: "quo",
-        path: "pariatur",
-      },
-      {
-        contents: "qui",
-        path: "ipsum",
+        contents: "odio",
+        path: "qui",
       },
     ],
     openapiDocuments: [
       {
         document: {
-          contents: "quia",
-          path: "blanditiis",
+          contents: "at",
+          path: "ipsum",
         },
       },
       {
         document: {
-          contents: "qui",
-          path: "facere",
+          contents: "eveniet",
+          path: "modi",
+        },
+      },
+      {
+        document: {
+          contents: "sint",
+          path: "inventore",
         },
       },
     ],

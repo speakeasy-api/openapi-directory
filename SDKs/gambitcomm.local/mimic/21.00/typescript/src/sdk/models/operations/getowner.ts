@@ -22,5 +22,5 @@ export class GetOwnerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOwner200ApplicationJsonString?: string;
+  getOwner200ApplicationJSONString?: string;
 }

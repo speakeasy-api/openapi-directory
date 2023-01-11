@@ -9,7 +9,7 @@ export declare class DeploymentSimple extends SpeakeasyBase {
     id: number;
     nodeId: string;
     originalEnvironment?: string;
-    performedViaGithubApp?: Map<string, any>;
+    performedViaGithubApp?: Record<string, any>;
     productionEnvironment?: boolean;
     repositoryUrl: string;
     statusesUrl: string;

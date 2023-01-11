@@ -188,23 +188,23 @@ export class PalcsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  palcs400ApplicationJsonObject?: Palcs400ApplicationJson;
+  palcs400ApplicationJSONObject?: Palcs400ApplicationJson;
 
   @SpeakeasyMetadata()
-  palcs401ApplicationJsonObject?: Palcs401ApplicationJson;
+  palcs401ApplicationJSONObject?: Palcs401ApplicationJson;
 
   @SpeakeasyMetadata()
-  palcs404ApplicationJsonObject?: Palcs404ApplicationJson;
+  palcs404ApplicationJSONObject?: Palcs404ApplicationJson;
 
   @SpeakeasyMetadata()
-  palcs500ApplicationJsonObject?: Palcs500ApplicationJson;
+  palcs500ApplicationJSONObject?: Palcs500ApplicationJson;
 
   @SpeakeasyMetadata()
-  palcs502ApplicationJsonObject?: Palcs502ApplicationJson;
+  palcs502ApplicationJSONObject?: Palcs502ApplicationJson;
 
   @SpeakeasyMetadata()
-  palcs503ApplicationJsonObject?: Palcs503ApplicationJson;
+  palcs503ApplicationJSONObject?: Palcs503ApplicationJson;
 
   @SpeakeasyMetadata()
-  palcs504ApplicationJsonObject?: Palcs504ApplicationJson;
+  palcs504ApplicationJSONObject?: Palcs504ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RecordColumn } from "./recordcolumn";
-import { RecordFormat } from "./recordformat";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InputSchemaUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
+var recordcolumn_1 = require("./recordcolumn");
+var recordformat_1 = require("./recordformat");
 // InputSchemaUpdate
 /**
  * Describes updates for the application's input schema.
@@ -35,17 +38,17 @@ var InputSchemaUpdate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecordColumnUpdates", elemType: RecordColumn }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecordColumnUpdates", elemType: recordcolumn_1.RecordColumn }),
         __metadata("design:type", Array)
     ], InputSchemaUpdate.prototype, "recordColumnUpdates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecordEncodingUpdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecordEncodingUpdate" }),
         __metadata("design:type", String)
     ], InputSchemaUpdate.prototype, "recordEncodingUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RecordFormatUpdate" }),
-        __metadata("design:type", RecordFormat)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RecordFormatUpdate" }),
+        __metadata("design:type", recordformat_1.RecordFormat)
     ], InputSchemaUpdate.prototype, "recordFormatUpdate", void 0);
     return InputSchemaUpdate;
-}(SpeakeasyBase));
-export { InputSchemaUpdate };
+}(utils_1.SpeakeasyBase));
+exports.InputSchemaUpdate = InputSchemaUpdate;

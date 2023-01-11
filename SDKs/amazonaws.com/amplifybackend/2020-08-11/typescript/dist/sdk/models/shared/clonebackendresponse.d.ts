@@ -1,9 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class CloneBackendResponse extends SpeakeasyBase {
-    appId?: string;
-    backendEnvironmentName?: string;
-    error?: string;
-    jobId?: string;
-    operation?: string;
-    status?: string;
+    appId?: Record<string, any>;
+    backendEnvironmentName?: Record<string, any>;
+    error?: Record<string, any>;
+    jobId?: Record<string, any>;
+    operation?: Record<string, any>;
+    status?: Record<string, any>;
 }

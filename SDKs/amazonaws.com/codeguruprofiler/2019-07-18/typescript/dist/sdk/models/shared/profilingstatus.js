@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AggregatedProfileTime } from "./aggregatedprofiletime";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProfilingStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var aggregatedprofiletime_1 = require("./aggregatedprofiletime");
 // ProfilingStatus
 /**
  *  Profiling status includes information about the last time a profile agent pinged back, the last time a profile was received, and the aggregation period and start time for the most recent aggregated profile.
@@ -34,17 +37,17 @@ var ProfilingStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestAgentOrchestratedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestAgentOrchestratedAt" }),
         __metadata("design:type", Date)
     ], ProfilingStatus.prototype, "latestAgentOrchestratedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestAgentProfileReportedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestAgentProfileReportedAt" }),
         __metadata("design:type", Date)
     ], ProfilingStatus.prototype, "latestAgentProfileReportedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latestAggregatedProfile" }),
-        __metadata("design:type", AggregatedProfileTime)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latestAggregatedProfile" }),
+        __metadata("design:type", aggregatedprofiletime_1.AggregatedProfileTime)
     ], ProfilingStatus.prototype, "latestAggregatedProfile", void 0);
     return ProfilingStatus;
-}(SpeakeasyBase));
-export { ProfilingStatus };
+}(utils_1.SpeakeasyBase));
+exports.ProfilingStatus = ProfilingStatus;

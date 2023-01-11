@@ -28,6 +28,6 @@ export declare class DlpProjectsLocationsJobTriggersHybridInspectRequest extends
 }
 export declare class DlpProjectsLocationsJobTriggersHybridInspectResponse extends SpeakeasyBase {
     contentType: string;
-    googlePrivacyDlpV2HybridInspectResponse?: Map<string, any>;
+    googlePrivacyDlpV2HybridInspectResponse?: Record<string, any>;
     statusCode: number;
 }

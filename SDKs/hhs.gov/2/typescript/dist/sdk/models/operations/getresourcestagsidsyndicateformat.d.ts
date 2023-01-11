@@ -12,6 +12,6 @@ export declare class GetResourcesTagsIdSyndicateFormatRequest extends SpeakeasyB
 }
 export declare class GetResourcesTagsIdSyndicateFormatResponse extends SpeakeasyBase {
     contentType: string;
-    getResourcesTagsIdSyndicateFormat200ApplicationJsonString?: string;
     statusCode: number;
+    getResourcesTagsIdSyndicateFormat200ApplicationJSONString?: string;
 }

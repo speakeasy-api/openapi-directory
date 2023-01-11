@@ -2,7 +2,7 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import { StoryCollaborator } from "./storycollaborator";
 import { View } from "./view";
 /**
- * A user session with an open story
+ * Base model for all types
 **/
 export declare class Session extends SpeakeasyBase {
     collaborator?: StoryCollaborator;

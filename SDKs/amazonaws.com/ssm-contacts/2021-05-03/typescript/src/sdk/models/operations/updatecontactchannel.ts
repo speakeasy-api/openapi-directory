@@ -69,7 +69,7 @@ export class UpdateContactChannelResponse extends SpeakeasyBase {
   throttlingException?: any;
 
   @SpeakeasyMetadata()
-  updateContactChannelResult?: Map<string, any>;
+  updateContactChannelResult?: Record<string, any>;
 
   @SpeakeasyMetadata()
   validationException?: any;

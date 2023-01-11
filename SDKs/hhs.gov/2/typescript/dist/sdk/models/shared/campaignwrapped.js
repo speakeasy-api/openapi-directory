@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Meta } from "./meta";
-import { Campaign } from "./campaign";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CampaignWrapped = void 0;
+var utils_1 = require("../../../internal/utils");
+var meta_1 = require("./meta");
+var campaign_1 = require("./campaign");
 var CampaignWrapped = /** @class */ (function (_super) {
     __extends(CampaignWrapped, _super);
     function CampaignWrapped() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=callback" }),
         __metadata("design:type", String)
     ], CampaignWrapped.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", Meta)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", meta_1.Meta)
     ], CampaignWrapped.prototype, "meta", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=results", elemType: Campaign }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=results", elemType: campaign_1.Campaign }),
         __metadata("design:type", Array)
     ], CampaignWrapped.prototype, "results", void 0);
     return CampaignWrapped;
-}(SpeakeasyBase));
-export { CampaignWrapped };
+}(utils_1.SpeakeasyBase));
+exports.CampaignWrapped = CampaignWrapped;

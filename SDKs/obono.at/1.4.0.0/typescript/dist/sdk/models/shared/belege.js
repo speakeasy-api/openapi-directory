@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,41 +23,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Beleg } from "./beleg";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Belege = exports.BelegeBelegeGruppe = void 0;
+var utils_1 = require("../../../internal/utils");
+var beleg_1 = require("./beleg");
 var BelegeBelegeGruppe = /** @class */ (function (_super) {
     __extends(BelegeBelegeGruppe, _super);
     function BelegeBelegeGruppe() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Belege-kompakt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Belege-kompakt" }),
         __metadata("design:type", Array)
     ], BelegeBelegeGruppe.prototype, "belegeKompakt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Signaturzertifikat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Signaturzertifikat" }),
         __metadata("design:type", String)
     ], BelegeBelegeGruppe.prototype, "signaturzertifikat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Zertifizierungsstellen" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Zertifizierungsstellen" }),
         __metadata("design:type", Array)
     ], BelegeBelegeGruppe.prototype, "zertifizierungsstellen", void 0);
     return BelegeBelegeGruppe;
-}(SpeakeasyBase));
-export { BelegeBelegeGruppe };
+}(utils_1.SpeakeasyBase));
+exports.BelegeBelegeGruppe = BelegeBelegeGruppe;
 var Belege = /** @class */ (function (_super) {
     __extends(Belege, _super);
     function Belege() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Belege", elemType: Beleg }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Belege", elemType: beleg_1.Beleg }),
         __metadata("design:type", Array)
     ], Belege.prototype, "belege", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Belege-Gruppe", elemType: BelegeBelegeGruppe }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Belege-Gruppe", elemType: BelegeBelegeGruppe }),
         __metadata("design:type", Array)
     ], Belege.prototype, "belegeGruppe", void 0);
     return Belege;
-}(SpeakeasyBase));
-export { Belege };
+}(utils_1.SpeakeasyBase));
+exports.Belege = Belege;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudChannelV1MediaTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1Media = exports.GoogleCloudChannelV1MediaTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudChannelV1MediaTypeEnum;
 (function (GoogleCloudChannelV1MediaTypeEnum) {
     GoogleCloudChannelV1MediaTypeEnum["MediaTypeUnspecified"] = "MEDIA_TYPE_UNSPECIFIED";
     GoogleCloudChannelV1MediaTypeEnum["MediaTypeImage"] = "MEDIA_TYPE_IMAGE";
-})(GoogleCloudChannelV1MediaTypeEnum || (GoogleCloudChannelV1MediaTypeEnum = {}));
+})(GoogleCloudChannelV1MediaTypeEnum = exports.GoogleCloudChannelV1MediaTypeEnum || (exports.GoogleCloudChannelV1MediaTypeEnum = {}));
 // GoogleCloudChannelV1Media
 /**
  * Represents media information.
@@ -38,17 +41,17 @@ var GoogleCloudChannelV1Media = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=content" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=content" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Media.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=title" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Media.prototype, "title", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1Media.prototype, "type", void 0);
     return GoogleCloudChannelV1Media;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1Media };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1Media = GoogleCloudChannelV1Media;

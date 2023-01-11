@@ -7,7 +7,7 @@ export declare class ProtocolIpmiGetConfigRequest extends SpeakeasyBase {
     pathParams: ProtocolIpmiGetConfigPathParams;
 }
 export declare class ProtocolIpmiGetConfigResponse extends SpeakeasyBase {
-    configIpmi?: shared.ConfigIpmi;
+    configIPMI?: shared.ConfigIpmi;
     contentType: string;
     statusCode: number;
 }

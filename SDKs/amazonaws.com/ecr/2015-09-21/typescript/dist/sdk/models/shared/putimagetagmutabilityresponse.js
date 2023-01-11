@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImageTagMutabilityEnum } from "./imagetagmutabilityenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutImageTagMutabilityResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var imagetagmutabilityenum_1 = require("./imagetagmutabilityenum");
 var PutImageTagMutabilityResponse = /** @class */ (function (_super) {
     __extends(PutImageTagMutabilityResponse, _super);
     function PutImageTagMutabilityResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageTagMutability" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageTagMutability" }),
         __metadata("design:type", String)
     ], PutImageTagMutabilityResponse.prototype, "imageTagMutability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registryId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registryId" }),
         __metadata("design:type", String)
     ], PutImageTagMutabilityResponse.prototype, "registryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repositoryName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repositoryName" }),
         __metadata("design:type", String)
     ], PutImageTagMutabilityResponse.prototype, "repositoryName", void 0);
     return PutImageTagMutabilityResponse;
-}(SpeakeasyBase));
-export { PutImageTagMutabilityResponse };
+}(utils_1.SpeakeasyBase));
+exports.PutImageTagMutabilityResponse = PutImageTagMutabilityResponse;

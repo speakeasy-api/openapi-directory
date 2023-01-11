@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ArtifactStateEnum } from "./artifactstateenum";
-import { ArtifactTypeEnum } from "./artifacttypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchedVersion = void 0;
+var utils_1 = require("../../../internal/utils");
+var artifactstateenum_1 = require("./artifactstateenum");
+var artifacttypeenum_1 = require("./artifacttypeenum");
 // SearchedVersion
 /**
  * Models a single artifact from the result set returned when searching for artifacts.
@@ -35,41 +38,41 @@ var SearchedVersion = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdBy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdBy" }),
         __metadata("design:type", String)
     ], SearchedVersion.prototype, "createdBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdOn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdOn" }),
         __metadata("design:type", Date)
     ], SearchedVersion.prototype, "createdOn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], SearchedVersion.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=globalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=globalId" }),
         __metadata("design:type", Number)
     ], SearchedVersion.prototype, "globalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=labels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=labels" }),
         __metadata("design:type", Array)
     ], SearchedVersion.prototype, "labels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], SearchedVersion.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], SearchedVersion.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], SearchedVersion.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], SearchedVersion.prototype, "version", void 0);
     return SearchedVersion;
-}(SpeakeasyBase));
-export { SearchedVersion };
+}(utils_1.SpeakeasyBase));
+exports.SearchedVersion = SearchedVersion;

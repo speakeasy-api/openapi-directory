@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PersonResponse } from "./personresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchCreateContactsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var personresponse_1 = require("./personresponse");
 // BatchCreateContactsResponse
 /**
  * If not successful, returns BatchCreateContactsErrorDetails which contains a list of errors for each invalid contact. The response to a request to create a batch of contacts.
@@ -34,9 +37,9 @@ var BatchCreateContactsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdPeople", elemType: PersonResponse }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdPeople", elemType: personresponse_1.PersonResponse }),
         __metadata("design:type", Array)
     ], BatchCreateContactsResponse.prototype, "createdPeople", void 0);
     return BatchCreateContactsResponse;
-}(SpeakeasyBase));
-export { BatchCreateContactsResponse };
+}(utils_1.SpeakeasyBase));
+exports.BatchCreateContactsResponse = BatchCreateContactsResponse;

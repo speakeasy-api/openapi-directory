@@ -17,7 +17,7 @@ export class ProtocolWebGetConfigRequest extends SpeakeasyBase {
 
 export class ProtocolWebGetConfigResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configWeb?: shared.ConfigWeb;
+  configWEB?: shared.ConfigWeb;
 
   @SpeakeasyMetadata()
   contentType: string;

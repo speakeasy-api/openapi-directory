@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GitCommit = exports.GitCommitVerification = exports.GitCommitTree = exports.GitCommitParents = exports.GitCommitCommitter = exports.GitCommitAuthor = void 0;
+var utils_1 = require("../../../internal/utils");
 // GitCommitAuthor
 /**
  * Identifying information for the git-user
@@ -33,20 +36,20 @@ var GitCommitAuthor = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", Date)
     ], GitCommitAuthor.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], GitCommitAuthor.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GitCommitAuthor.prototype, "name", void 0);
     return GitCommitAuthor;
-}(SpeakeasyBase));
-export { GitCommitAuthor };
+}(utils_1.SpeakeasyBase));
+exports.GitCommitAuthor = GitCommitAuthor;
 // GitCommitCommitter
 /**
  * Identifying information for the git-user
@@ -57,80 +60,80 @@ var GitCommitCommitter = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", Date)
     ], GitCommitCommitter.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], GitCommitCommitter.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GitCommitCommitter.prototype, "name", void 0);
     return GitCommitCommitter;
-}(SpeakeasyBase));
-export { GitCommitCommitter };
+}(utils_1.SpeakeasyBase));
+exports.GitCommitCommitter = GitCommitCommitter;
 var GitCommitParents = /** @class */ (function (_super) {
     __extends(GitCommitParents, _super);
     function GitCommitParents() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], GitCommitParents.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha" }),
         __metadata("design:type", String)
     ], GitCommitParents.prototype, "sha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GitCommitParents.prototype, "url", void 0);
     return GitCommitParents;
-}(SpeakeasyBase));
-export { GitCommitParents };
+}(utils_1.SpeakeasyBase));
+exports.GitCommitParents = GitCommitParents;
 var GitCommitTree = /** @class */ (function (_super) {
     __extends(GitCommitTree, _super);
     function GitCommitTree() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha" }),
         __metadata("design:type", String)
     ], GitCommitTree.prototype, "sha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GitCommitTree.prototype, "url", void 0);
     return GitCommitTree;
-}(SpeakeasyBase));
-export { GitCommitTree };
+}(utils_1.SpeakeasyBase));
+exports.GitCommitTree = GitCommitTree;
 var GitCommitVerification = /** @class */ (function (_super) {
     __extends(GitCommitVerification, _super);
     function GitCommitVerification() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payload" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payload" }),
         __metadata("design:type", String)
     ], GitCommitVerification.prototype, "payload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reason" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reason" }),
         __metadata("design:type", String)
     ], GitCommitVerification.prototype, "reason", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signature" }),
         __metadata("design:type", String)
     ], GitCommitVerification.prototype, "signature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verified" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verified" }),
         __metadata("design:type", Boolean)
     ], GitCommitVerification.prototype, "verified", void 0);
     return GitCommitVerification;
-}(SpeakeasyBase));
-export { GitCommitVerification };
+}(utils_1.SpeakeasyBase));
+exports.GitCommitVerification = GitCommitVerification;
 // GitCommit
 /**
  * Low-level Git commit operations within a repository
@@ -141,45 +144,45 @@ var GitCommit = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=author" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=author" }),
         __metadata("design:type", GitCommitAuthor)
     ], GitCommit.prototype, "author", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=committer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=committer" }),
         __metadata("design:type", GitCommitCommitter)
     ], GitCommit.prototype, "committer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], GitCommit.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=message" }),
         __metadata("design:type", String)
     ], GitCommit.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node_id" }),
         __metadata("design:type", String)
     ], GitCommit.prototype, "nodeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parents", elemType: GitCommitParents }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parents", elemType: GitCommitParents }),
         __metadata("design:type", Array)
     ], GitCommit.prototype, "parents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha" }),
         __metadata("design:type", String)
     ], GitCommit.prototype, "sha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tree" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tree" }),
         __metadata("design:type", GitCommitTree)
     ], GitCommit.prototype, "tree", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GitCommit.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=verification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=verification" }),
         __metadata("design:type", GitCommitVerification)
     ], GitCommit.prototype, "verification", void 0);
     return GitCommit;
-}(SpeakeasyBase));
-export { GitCommit };
+}(utils_1.SpeakeasyBase));
+exports.GitCommit = GitCommit;

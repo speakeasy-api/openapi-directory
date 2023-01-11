@@ -22,5 +22,5 @@ export class GetOiddirResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOiddir200ApplicationJsonString?: string;
+  getOiddir200ApplicationJSONString?: string;
 }

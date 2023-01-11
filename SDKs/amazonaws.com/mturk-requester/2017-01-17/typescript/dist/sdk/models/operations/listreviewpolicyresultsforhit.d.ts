@@ -24,7 +24,7 @@ export declare class ListReviewPolicyResultsForHitRequest extends SpeakeasyBase 
 }
 export declare class ListReviewPolicyResultsForHitResponse extends SpeakeasyBase {
     contentType: string;
-    listReviewPolicyResultsForHitResponse?: shared.ListReviewPolicyResultsForHitResponse;
+    listReviewPolicyResultsForHITResponse?: shared.ListReviewPolicyResultsForHitResponse;
     requestError?: any;
     serviceFault?: any;
     statusCode: number;

@@ -5,18 +5,8 @@ export declare class ReactionsListForTeamDiscussionCommentLegacyPathParams exten
     discussionNumber: number;
     teamId: number;
 }
-export declare enum ReactionsListForTeamDiscussionCommentLegacyContentEnum {
-    Plus1 = "+1",
-    Minus1 = "-1",
-    Laugh = "laugh",
-    Confused = "confused",
-    Heart = "heart",
-    Hooray = "hooray",
-    Rocket = "rocket",
-    Eyes = "eyes"
-}
 export declare class ReactionsListForTeamDiscussionCommentLegacyQueryParams extends SpeakeasyBase {
-    content?: ReactionsListForTeamDiscussionCommentLegacyContentEnum;
+    content?: shared.CommentNumberEnum;
     page?: number;
     perPage?: number;
 }
@@ -26,7 +16,7 @@ export declare class ReactionsListForTeamDiscussionCommentLegacyRequest extends 
 }
 export declare class ReactionsListForTeamDiscussionCommentLegacyResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
     reactions?: shared.Reaction[];
 }

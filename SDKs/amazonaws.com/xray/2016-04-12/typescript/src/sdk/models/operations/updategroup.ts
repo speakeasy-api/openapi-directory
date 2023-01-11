@@ -45,7 +45,7 @@ export class UpdateGroupRequestBody extends SpeakeasyBase {
   filterExpression?: string;
 
   @SpeakeasyMetadata({ data: "json, name=GroupARN" })
-  groupArn?: string;
+  groupARN?: string;
 
   @SpeakeasyMetadata({ data: "json, name=GroupName" })
   groupName?: string;

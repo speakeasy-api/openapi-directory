@@ -9,7 +9,7 @@ import { AuthenticateOidcActionConditionalBehaviorEnumEnum } from "./authenticat
 **/
 export class AuthenticateOidcActionConfig extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  authenticationRequestExtraParams?: Map<string, string>;
+  authenticationRequestExtraParams?: Record<string, string>;
 
   @SpeakeasyMetadata()
   authorizationEndpoint: string;

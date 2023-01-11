@@ -8,7 +8,7 @@ export declare class HttpRoute extends SpeakeasyBase {
     description?: string;
     gateways?: string[];
     hostnames?: string[];
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     meshes?: string[];
     name?: string;
     rules?: HttpRouteRouteRule[];
@@ -22,7 +22,7 @@ export declare class HttpRouteInput extends SpeakeasyBase {
     description?: string;
     gateways?: string[];
     hostnames?: string[];
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     meshes?: string[];
     name?: string;
     rules?: HttpRouteRouteRule[];

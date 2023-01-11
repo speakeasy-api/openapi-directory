@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeleteTransitGatewayPrefixListReferenceActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeleteTransitGatewayPrefixListReferenceResponse = exports.PostDeleteTransitGatewayPrefixListReferenceRequest = exports.PostDeleteTransitGatewayPrefixListReferenceHeaders = exports.PostDeleteTransitGatewayPrefixListReferenceQueryParams = exports.PostDeleteTransitGatewayPrefixListReferenceVersionEnum = exports.PostDeleteTransitGatewayPrefixListReferenceActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeleteTransitGatewayPrefixListReferenceActionEnum;
 (function (PostDeleteTransitGatewayPrefixListReferenceActionEnum) {
     PostDeleteTransitGatewayPrefixListReferenceActionEnum["DeleteTransitGatewayPrefixListReference"] = "DeleteTransitGatewayPrefixListReference";
-})(PostDeleteTransitGatewayPrefixListReferenceActionEnum || (PostDeleteTransitGatewayPrefixListReferenceActionEnum = {}));
-export var PostDeleteTransitGatewayPrefixListReferenceVersionEnum;
+})(PostDeleteTransitGatewayPrefixListReferenceActionEnum = exports.PostDeleteTransitGatewayPrefixListReferenceActionEnum || (exports.PostDeleteTransitGatewayPrefixListReferenceActionEnum = {}));
+var PostDeleteTransitGatewayPrefixListReferenceVersionEnum;
 (function (PostDeleteTransitGatewayPrefixListReferenceVersionEnum) {
     PostDeleteTransitGatewayPrefixListReferenceVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostDeleteTransitGatewayPrefixListReferenceVersionEnum || (PostDeleteTransitGatewayPrefixListReferenceVersionEnum = {}));
+})(PostDeleteTransitGatewayPrefixListReferenceVersionEnum = exports.PostDeleteTransitGatewayPrefixListReferenceVersionEnum || (exports.PostDeleteTransitGatewayPrefixListReferenceVersionEnum = {}));
 var PostDeleteTransitGatewayPrefixListReferenceQueryParams = /** @class */ (function (_super) {
     __extends(PostDeleteTransitGatewayPrefixListReferenceQueryParams, _super);
     function PostDeleteTransitGatewayPrefixListReferenceQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPrefixListReferenceQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPrefixListReferenceQueryParams.prototype, "version", void 0);
     return PostDeleteTransitGatewayPrefixListReferenceQueryParams;
-}(SpeakeasyBase));
-export { PostDeleteTransitGatewayPrefixListReferenceQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteTransitGatewayPrefixListReferenceQueryParams = PostDeleteTransitGatewayPrefixListReferenceQueryParams;
 var PostDeleteTransitGatewayPrefixListReferenceHeaders = /** @class */ (function (_super) {
     __extends(PostDeleteTransitGatewayPrefixListReferenceHeaders, _super);
     function PostDeleteTransitGatewayPrefixListReferenceHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPrefixListReferenceHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPrefixListReferenceHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPrefixListReferenceHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPrefixListReferenceHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPrefixListReferenceHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPrefixListReferenceHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPrefixListReferenceHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeleteTransitGatewayPrefixListReferenceHeaders;
-}(SpeakeasyBase));
-export { PostDeleteTransitGatewayPrefixListReferenceHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteTransitGatewayPrefixListReferenceHeaders = PostDeleteTransitGatewayPrefixListReferenceHeaders;
 var PostDeleteTransitGatewayPrefixListReferenceRequest = /** @class */ (function (_super) {
     __extends(PostDeleteTransitGatewayPrefixListReferenceRequest, _super);
     function PostDeleteTransitGatewayPrefixListReferenceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteTransitGatewayPrefixListReferenceQueryParams)
     ], PostDeleteTransitGatewayPrefixListReferenceRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeleteTransitGatewayPrefixListReferenceHeaders)
     ], PostDeleteTransitGatewayPrefixListReferenceRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeleteTransitGatewayPrefixListReferenceRequest.prototype, "request", void 0);
     return PostDeleteTransitGatewayPrefixListReferenceRequest;
-}(SpeakeasyBase));
-export { PostDeleteTransitGatewayPrefixListReferenceRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteTransitGatewayPrefixListReferenceRequest = PostDeleteTransitGatewayPrefixListReferenceRequest;
 var PostDeleteTransitGatewayPrefixListReferenceResponse = /** @class */ (function (_super) {
     __extends(PostDeleteTransitGatewayPrefixListReferenceResponse, _super);
     function PostDeleteTransitGatewayPrefixListReferenceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeleteTransitGatewayPrefixListReferenceResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeleteTransitGatewayPrefixListReferenceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeleteTransitGatewayPrefixListReferenceResponse.prototype, "statusCode", void 0);
     return PostDeleteTransitGatewayPrefixListReferenceResponse;
-}(SpeakeasyBase));
-export { PostDeleteTransitGatewayPrefixListReferenceResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeleteTransitGatewayPrefixListReferenceResponse = PostDeleteTransitGatewayPrefixListReferenceResponse;

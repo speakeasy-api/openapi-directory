@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,73 +23,75 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAudioResponse = exports.GetAudioRequest = exports.GetAudioQueryParams = exports.GetAudioUseCanonicalEnum = exports.GetAudioPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAudioPathParams = /** @class */ (function (_super) {
     __extends(GetAudioPathParams, _super);
     function GetAudioPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=word" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=word" }),
         __metadata("design:type", String)
     ], GetAudioPathParams.prototype, "word", void 0);
     return GetAudioPathParams;
-}(SpeakeasyBase));
-export { GetAudioPathParams };
-export var GetAudioUseCanonicalEnum;
+}(utils_1.SpeakeasyBase));
+exports.GetAudioPathParams = GetAudioPathParams;
+var GetAudioUseCanonicalEnum;
 (function (GetAudioUseCanonicalEnum) {
     GetAudioUseCanonicalEnum["False"] = "false";
     GetAudioUseCanonicalEnum["True"] = "true";
-})(GetAudioUseCanonicalEnum || (GetAudioUseCanonicalEnum = {}));
+})(GetAudioUseCanonicalEnum = exports.GetAudioUseCanonicalEnum || (exports.GetAudioUseCanonicalEnum = {}));
 var GetAudioQueryParams = /** @class */ (function (_super) {
     __extends(GetAudioQueryParams, _super);
     function GetAudioQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetAudioQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=useCanonical" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=useCanonical" }),
         __metadata("design:type", String)
     ], GetAudioQueryParams.prototype, "useCanonical", void 0);
     return GetAudioQueryParams;
-}(SpeakeasyBase));
-export { GetAudioQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetAudioQueryParams = GetAudioQueryParams;
 var GetAudioRequest = /** @class */ (function (_super) {
     __extends(GetAudioRequest, _super);
     function GetAudioRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAudioPathParams)
     ], GetAudioRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetAudioQueryParams)
     ], GetAudioRequest.prototype, "queryParams", void 0);
     return GetAudioRequest;
-}(SpeakeasyBase));
-export { GetAudioRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetAudioRequest = GetAudioRequest;
 var GetAudioResponse = /** @class */ (function (_super) {
     __extends(GetAudioResponse, _super);
     function GetAudioResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetAudioResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAudioResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAudioResponse.prototype, "statusCode", void 0);
     return GetAudioResponse;
-}(SpeakeasyBase));
-export { GetAudioResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAudioResponse = GetAudioResponse;

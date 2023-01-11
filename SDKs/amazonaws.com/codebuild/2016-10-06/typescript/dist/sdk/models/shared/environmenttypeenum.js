@@ -1,8 +1,11 @@
-export var EnvironmentTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnvironmentTypeEnum = void 0;
+var EnvironmentTypeEnum;
 (function (EnvironmentTypeEnum) {
     EnvironmentTypeEnum["WindowsContainer"] = "WINDOWS_CONTAINER";
     EnvironmentTypeEnum["LinuxContainer"] = "LINUX_CONTAINER";
     EnvironmentTypeEnum["LinuxGpuContainer"] = "LINUX_GPU_CONTAINER";
     EnvironmentTypeEnum["ArmContainer"] = "ARM_CONTAINER";
     EnvironmentTypeEnum["WindowsServer2019Container"] = "WINDOWS_SERVER_2019_CONTAINER";
-})(EnvironmentTypeEnum || (EnvironmentTypeEnum = {}));
+})(EnvironmentTypeEnum = exports.EnvironmentTypeEnum || (exports.EnvironmentTypeEnum = {}));

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDeletePolicyActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDeletePolicyResponse = exports.PostDeletePolicyRequest = exports.PostDeletePolicyHeaders = exports.PostDeletePolicyQueryParams = exports.PostDeletePolicyVersionEnum = exports.PostDeletePolicyActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDeletePolicyActionEnum;
 (function (PostDeletePolicyActionEnum) {
     PostDeletePolicyActionEnum["DeletePolicy"] = "DeletePolicy";
-})(PostDeletePolicyActionEnum || (PostDeletePolicyActionEnum = {}));
-export var PostDeletePolicyVersionEnum;
+})(PostDeletePolicyActionEnum = exports.PostDeletePolicyActionEnum || (exports.PostDeletePolicyActionEnum = {}));
+var PostDeletePolicyVersionEnum;
 (function (PostDeletePolicyVersionEnum) {
     PostDeletePolicyVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostDeletePolicyVersionEnum || (PostDeletePolicyVersionEnum = {}));
+})(PostDeletePolicyVersionEnum = exports.PostDeletePolicyVersionEnum || (exports.PostDeletePolicyVersionEnum = {}));
 var PostDeletePolicyQueryParams = /** @class */ (function (_super) {
     __extends(PostDeletePolicyQueryParams, _super);
     function PostDeletePolicyQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDeletePolicyQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDeletePolicyQueryParams.prototype, "version", void 0);
     return PostDeletePolicyQueryParams;
-}(SpeakeasyBase));
-export { PostDeletePolicyQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDeletePolicyQueryParams = PostDeletePolicyQueryParams;
 var PostDeletePolicyHeaders = /** @class */ (function (_super) {
     __extends(PostDeletePolicyHeaders, _super);
     function PostDeletePolicyHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDeletePolicyHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDeletePolicyHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDeletePolicyHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDeletePolicyHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDeletePolicyHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDeletePolicyHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDeletePolicyHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDeletePolicyHeaders;
-}(SpeakeasyBase));
-export { PostDeletePolicyHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDeletePolicyHeaders = PostDeletePolicyHeaders;
 var PostDeletePolicyRequest = /** @class */ (function (_super) {
     __extends(PostDeletePolicyRequest, _super);
     function PostDeletePolicyRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeletePolicyQueryParams)
     ], PostDeletePolicyRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDeletePolicyHeaders)
     ], PostDeletePolicyRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDeletePolicyRequest.prototype, "request", void 0);
     return PostDeletePolicyRequest;
-}(SpeakeasyBase));
-export { PostDeletePolicyRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDeletePolicyRequest = PostDeletePolicyRequest;
 var PostDeletePolicyResponse = /** @class */ (function (_super) {
     __extends(PostDeletePolicyResponse, _super);
     function PostDeletePolicyResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDeletePolicyResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDeletePolicyResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDeletePolicyResponse.prototype, "statusCode", void 0);
     return PostDeletePolicyResponse;
-}(SpeakeasyBase));
-export { PostDeletePolicyResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDeletePolicyResponse = PostDeletePolicyResponse;

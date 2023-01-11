@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GooglePrivacyDlpV2Value } from "./googleprivacydlpv2value";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePrivacyDlpV2KAnonymityEquivalenceClass = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleprivacydlpv2value_1 = require("./googleprivacydlpv2value");
 // GooglePrivacyDlpV2KAnonymityEquivalenceClass
 /**
  * The set of columns' values that share the same ldiversity value
@@ -34,13 +37,13 @@ var GooglePrivacyDlpV2KAnonymityEquivalenceClass = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=equivalenceClassSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=equivalenceClassSize" }),
         __metadata("design:type", String)
     ], GooglePrivacyDlpV2KAnonymityEquivalenceClass.prototype, "equivalenceClassSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quasiIdsValues", elemType: GooglePrivacyDlpV2Value }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quasiIdsValues", elemType: googleprivacydlpv2value_1.GooglePrivacyDlpV2Value }),
         __metadata("design:type", Array)
     ], GooglePrivacyDlpV2KAnonymityEquivalenceClass.prototype, "quasiIdsValues", void 0);
     return GooglePrivacyDlpV2KAnonymityEquivalenceClass;
-}(SpeakeasyBase));
-export { GooglePrivacyDlpV2KAnonymityEquivalenceClass };
+}(utils_1.SpeakeasyBase));
+exports.GooglePrivacyDlpV2KAnonymityEquivalenceClass = GooglePrivacyDlpV2KAnonymityEquivalenceClass;

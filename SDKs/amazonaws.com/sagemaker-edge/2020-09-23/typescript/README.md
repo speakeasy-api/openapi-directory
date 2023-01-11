@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetDeviceRegistrationRequest, GetDeviceRegistrationResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,21 +33,21 @@ const sdk = new SDK(WithSecurity(
     
 const req: GetDeviceRegistrationRequest = {
   headers: {
-    xAmzAlgorithm: "aliquid",
-    xAmzContentSha256: "velit",
-    xAmzCredential: "atque",
-    xAmzDate: "non",
-    xAmzSecurityToken: "dicta",
-    xAmzSignature: "recusandae",
-    xAmzSignedHeaders: "sint",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
   },
   request: {
-    deviceFleetName: "inventore",
-    deviceName: "natus",
+    deviceFleetName: "voluptas",
+    deviceName: "fugit",
   },
 };
 
-sdk.sdk.getDeviceRegistration(req).then((res: GetDeviceRegistrationResponse | AxiosError) => {
+sdk.getDeviceRegistration(req).then((res: GetDeviceRegistrationResponse | AxiosError) => {
    // handle response
 });
 ```

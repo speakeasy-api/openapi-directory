@@ -1,5 +1,4 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ResourceShareAssociation } from "./resourceshareassociation";
 import { ResourceShareInvitationStatusEnum } from "./resourceshareinvitationstatusenum";
 
 
@@ -21,8 +20,8 @@ export class ResourceShareInvitation extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=resourceShareArn" })
   resourceShareArn?: string;
 
-  @SpeakeasyMetadata({ data: "json, name=resourceShareAssociations", elemType: ResourceShareAssociation })
-  resourceShareAssociations?: ResourceShareAssociation[];
+  @SpeakeasyMetadata({ data: "json, name=resourceShareAssociations" })
+  resourceShareAssociations?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=resourceShareInvitationArn" })
   resourceShareInvitationArn?: string;

@@ -53,7 +53,7 @@ export class GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse extends 
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
   paginatedBranchrestrictions?: shared.PaginatedBranchrestrictions;

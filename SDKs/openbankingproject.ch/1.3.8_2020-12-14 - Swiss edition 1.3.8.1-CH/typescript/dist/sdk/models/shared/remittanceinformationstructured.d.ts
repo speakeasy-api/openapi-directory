@@ -9,7 +9,7 @@ export declare enum RemittanceInformationStructuredScoRorQrRorIpiEnum {
  *
 **/
 export declare class RemittanceInformationStructured extends SpeakeasyBase {
-    scoRorQrRorIpi?: RemittanceInformationStructuredScoRorQrRorIpiEnum;
+    scoRorQRRorIPI?: RemittanceInformationStructuredScoRorQrRorIpiEnum;
     additionalRemittanceInformation?: string;
     reference: string;
     referenceIssuer?: string;

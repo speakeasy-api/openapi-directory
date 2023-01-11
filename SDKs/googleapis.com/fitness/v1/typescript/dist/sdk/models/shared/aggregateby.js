@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AggregateBy = void 0;
+var utils_1 = require("../../../internal/utils");
 // AggregateBy
 /**
  * The specification of which data to aggregate.
@@ -33,13 +36,13 @@ var AggregateBy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceId" }),
         __metadata("design:type", String)
     ], AggregateBy.prototype, "dataSourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataTypeName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataTypeName" }),
         __metadata("design:type", String)
     ], AggregateBy.prototype, "dataTypeName", void 0);
     return AggregateBy;
-}(SpeakeasyBase));
-export { AggregateBy };
+}(utils_1.SpeakeasyBase));
+exports.AggregateBy = AggregateBy;

@@ -5,6 +5,6 @@ export declare class ProcessorStripeBankAccountTokenCreateRequest extends Speake
 }
 export declare class ProcessorStripeBankAccountTokenCreateResponse extends SpeakeasyBase {
     contentType: string;
-    processorStripeBankAccountTokenCreateResponse?: Map<string, any>;
+    processorStripeBankAccountTokenCreateResponse?: Record<string, any>;
     statusCode: number;
 }

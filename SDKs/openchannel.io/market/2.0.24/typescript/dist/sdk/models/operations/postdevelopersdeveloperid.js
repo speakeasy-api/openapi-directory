@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDevelopersDeveloperIdResponse = exports.PostDevelopersDeveloperIdRequest = exports.PostDevelopersDeveloperIdQueryParams = exports.PostDevelopersDeveloperIdPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostDevelopersDeveloperIdPathParams = /** @class */ (function (_super) {
     __extends(PostDevelopersDeveloperIdPathParams, _super);
     function PostDevelopersDeveloperIdPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=developerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=developerId" }),
         __metadata("design:type", String)
     ], PostDevelopersDeveloperIdPathParams.prototype, "developerId", void 0);
     return PostDevelopersDeveloperIdPathParams;
-}(SpeakeasyBase));
-export { PostDevelopersDeveloperIdPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDevelopersDeveloperIdPathParams = PostDevelopersDeveloperIdPathParams;
 var PostDevelopersDeveloperIdQueryParams = /** @class */ (function (_super) {
     __extends(PostDevelopersDeveloperIdQueryParams, _super);
     function PostDevelopersDeveloperIdQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=customData" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=customData" }),
         __metadata("design:type", String)
     ], PostDevelopersDeveloperIdQueryParams.prototype, "customData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=email" }),
         __metadata("design:type", String)
     ], PostDevelopersDeveloperIdQueryParams.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], PostDevelopersDeveloperIdQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=type" }),
         __metadata("design:type", String)
     ], PostDevelopersDeveloperIdQueryParams.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=username" }),
         __metadata("design:type", String)
     ], PostDevelopersDeveloperIdQueryParams.prototype, "username", void 0);
     return PostDevelopersDeveloperIdQueryParams;
-}(SpeakeasyBase));
-export { PostDevelopersDeveloperIdQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDevelopersDeveloperIdQueryParams = PostDevelopersDeveloperIdQueryParams;
 var PostDevelopersDeveloperIdRequest = /** @class */ (function (_super) {
     __extends(PostDevelopersDeveloperIdRequest, _super);
     function PostDevelopersDeveloperIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDevelopersDeveloperIdPathParams)
     ], PostDevelopersDeveloperIdRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDevelopersDeveloperIdQueryParams)
     ], PostDevelopersDeveloperIdRequest.prototype, "queryParams", void 0);
     return PostDevelopersDeveloperIdRequest;
-}(SpeakeasyBase));
-export { PostDevelopersDeveloperIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDevelopersDeveloperIdRequest = PostDevelopersDeveloperIdRequest;
 var PostDevelopersDeveloperIdResponse = /** @class */ (function (_super) {
     __extends(PostDevelopersDeveloperIdResponse, _super);
     function PostDevelopersDeveloperIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDevelopersDeveloperIdResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDevelopersDeveloperIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDevelopersDeveloperIdResponse.prototype, "statusCode", void 0);
     return PostDevelopersDeveloperIdResponse;
-}(SpeakeasyBase));
-export { PostDevelopersDeveloperIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDevelopersDeveloperIdResponse = PostDevelopersDeveloperIdResponse;

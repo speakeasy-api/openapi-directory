@@ -17,7 +17,7 @@ export class ProtocolCoapGetTraceRequest extends SpeakeasyBase {
 
 export class ProtocolCoapGetTraceResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  configCoap?: shared.ConfigCoap;
+  configCOAP?: shared.ConfigCoap;
 
   @SpeakeasyMetadata()
   contentType: string;

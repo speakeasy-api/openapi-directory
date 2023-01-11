@@ -14,5 +14,5 @@ export class GetIdInput extends SpeakeasyBase {
   identityPoolId: string;
 
   @SpeakeasyMetadata({ data: "json, name=Logins" })
-  logins?: Map<string, string>;
+  logins?: Record<string, string>;
 }

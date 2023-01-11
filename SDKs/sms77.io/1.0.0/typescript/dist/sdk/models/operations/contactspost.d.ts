@@ -15,8 +15,8 @@ export declare class ContactsPostRequest extends SpeakeasyBase {
     queryParams: ContactsPostQueryParams;
 }
 export declare class ContactsPostResponse extends SpeakeasyBase {
-    contactsPost200ApplicationJsonString?: string;
-    contactsPost200TextPlainString?: string;
+    contactsPOST200ApplicationJSONString?: string;
+    contactsPOST200TextPlainString?: string;
     contentType: string;
     statusCode: number;
 }

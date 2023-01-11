@@ -1,15 +1,17 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { FieldMetadataInput } from "./fieldmetadata";
 import { FieldMetadata } from "./fieldmetadata";
+import { FieldMetadataInput } from "./fieldmetadata";
 /**
  * A person's name. If the name is a mononym, the family name is empty.
 **/
-export declare class NameInput extends SpeakeasyBase {
+export declare class Name extends SpeakeasyBase {
+    displayName?: string;
+    displayNameLastFirst?: string;
     familyName?: string;
     givenName?: string;
     honorificPrefix?: string;
     honorificSuffix?: string;
-    metadata?: FieldMetadataInput;
+    metadata?: FieldMetadata;
     middleName?: string;
     phoneticFamilyName?: string;
     phoneticFullName?: string;
@@ -22,14 +24,12 @@ export declare class NameInput extends SpeakeasyBase {
 /**
  * A person's name. If the name is a mononym, the family name is empty.
 **/
-export declare class Name extends SpeakeasyBase {
-    displayName?: string;
-    displayNameLastFirst?: string;
+export declare class NameInput extends SpeakeasyBase {
     familyName?: string;
     givenName?: string;
     honorificPrefix?: string;
     honorificSuffix?: string;
-    metadata?: FieldMetadata;
+    metadata?: FieldMetadataInput;
     middleName?: string;
     phoneticFamilyName?: string;
     phoneticFullName?: string;

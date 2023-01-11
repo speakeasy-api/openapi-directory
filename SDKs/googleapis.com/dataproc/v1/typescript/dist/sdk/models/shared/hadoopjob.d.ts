@@ -11,5 +11,5 @@ export declare class HadoopJob extends SpeakeasyBase {
     loggingConfig?: LoggingConfig;
     mainClass?: string;
     mainJarFileUri?: string;
-    properties?: Map<string, string>;
+    properties?: Record<string, string>;
 }

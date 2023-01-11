@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,100 +23,102 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateDeviceCellularGatewayPortForwardingRulesResponse = exports.UpdateDeviceCellularGatewayPortForwardingRulesRequest = exports.UpdateDeviceCellularGatewayPortForwardingRulesRequestBody = exports.UpdateDeviceCellularGatewayPortForwardingRulesRequestBodyRules = exports.UpdateDeviceCellularGatewayPortForwardingRulesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UpdateDeviceCellularGatewayPortForwardingRulesPathParams = /** @class */ (function (_super) {
     __extends(UpdateDeviceCellularGatewayPortForwardingRulesPathParams, _super);
     function UpdateDeviceCellularGatewayPortForwardingRulesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=serial" }),
         __metadata("design:type", String)
     ], UpdateDeviceCellularGatewayPortForwardingRulesPathParams.prototype, "serial", void 0);
     return UpdateDeviceCellularGatewayPortForwardingRulesPathParams;
-}(SpeakeasyBase));
-export { UpdateDeviceCellularGatewayPortForwardingRulesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceCellularGatewayPortForwardingRulesPathParams = UpdateDeviceCellularGatewayPortForwardingRulesPathParams;
 var UpdateDeviceCellularGatewayPortForwardingRulesRequestBodyRules = /** @class */ (function (_super) {
     __extends(UpdateDeviceCellularGatewayPortForwardingRulesRequestBodyRules, _super);
     function UpdateDeviceCellularGatewayPortForwardingRulesRequestBodyRules() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=access" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=access" }),
         __metadata("design:type", String)
     ], UpdateDeviceCellularGatewayPortForwardingRulesRequestBodyRules.prototype, "access", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedIps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedIps" }),
         __metadata("design:type", Array)
     ], UpdateDeviceCellularGatewayPortForwardingRulesRequestBodyRules.prototype, "allowedIps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=lanIp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=lanIp" }),
         __metadata("design:type", String)
     ], UpdateDeviceCellularGatewayPortForwardingRulesRequestBodyRules.prototype, "lanIp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=localPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=localPort" }),
         __metadata("design:type", String)
     ], UpdateDeviceCellularGatewayPortForwardingRulesRequestBodyRules.prototype, "localPort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], UpdateDeviceCellularGatewayPortForwardingRulesRequestBodyRules.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol" }),
         __metadata("design:type", String)
     ], UpdateDeviceCellularGatewayPortForwardingRulesRequestBodyRules.prototype, "protocol", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publicPort" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publicPort" }),
         __metadata("design:type", String)
     ], UpdateDeviceCellularGatewayPortForwardingRulesRequestBodyRules.prototype, "publicPort", void 0);
     return UpdateDeviceCellularGatewayPortForwardingRulesRequestBodyRules;
-}(SpeakeasyBase));
-export { UpdateDeviceCellularGatewayPortForwardingRulesRequestBodyRules };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceCellularGatewayPortForwardingRulesRequestBodyRules = UpdateDeviceCellularGatewayPortForwardingRulesRequestBodyRules;
 var UpdateDeviceCellularGatewayPortForwardingRulesRequestBody = /** @class */ (function (_super) {
     __extends(UpdateDeviceCellularGatewayPortForwardingRulesRequestBody, _super);
     function UpdateDeviceCellularGatewayPortForwardingRulesRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rules", elemType: UpdateDeviceCellularGatewayPortForwardingRulesRequestBodyRules }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rules", elemType: UpdateDeviceCellularGatewayPortForwardingRulesRequestBodyRules }),
         __metadata("design:type", Array)
     ], UpdateDeviceCellularGatewayPortForwardingRulesRequestBody.prototype, "rules", void 0);
     return UpdateDeviceCellularGatewayPortForwardingRulesRequestBody;
-}(SpeakeasyBase));
-export { UpdateDeviceCellularGatewayPortForwardingRulesRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceCellularGatewayPortForwardingRulesRequestBody = UpdateDeviceCellularGatewayPortForwardingRulesRequestBody;
 var UpdateDeviceCellularGatewayPortForwardingRulesRequest = /** @class */ (function (_super) {
     __extends(UpdateDeviceCellularGatewayPortForwardingRulesRequest, _super);
     function UpdateDeviceCellularGatewayPortForwardingRulesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UpdateDeviceCellularGatewayPortForwardingRulesPathParams)
     ], UpdateDeviceCellularGatewayPortForwardingRulesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", UpdateDeviceCellularGatewayPortForwardingRulesRequestBody)
     ], UpdateDeviceCellularGatewayPortForwardingRulesRequest.prototype, "request", void 0);
     return UpdateDeviceCellularGatewayPortForwardingRulesRequest;
-}(SpeakeasyBase));
-export { UpdateDeviceCellularGatewayPortForwardingRulesRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceCellularGatewayPortForwardingRulesRequest = UpdateDeviceCellularGatewayPortForwardingRulesRequest;
 var UpdateDeviceCellularGatewayPortForwardingRulesResponse = /** @class */ (function (_super) {
     __extends(UpdateDeviceCellularGatewayPortForwardingRulesResponse, _super);
     function UpdateDeviceCellularGatewayPortForwardingRulesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UpdateDeviceCellularGatewayPortForwardingRulesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UpdateDeviceCellularGatewayPortForwardingRulesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], UpdateDeviceCellularGatewayPortForwardingRulesResponse.prototype, "updateDeviceCellularGatewayPortForwardingRules200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], UpdateDeviceCellularGatewayPortForwardingRulesResponse.prototype, "updateDeviceCellularGatewayPortForwardingRules200ApplicationJSONObject", void 0);
     return UpdateDeviceCellularGatewayPortForwardingRulesResponse;
-}(SpeakeasyBase));
-export { UpdateDeviceCellularGatewayPortForwardingRulesResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateDeviceCellularGatewayPortForwardingRulesResponse = UpdateDeviceCellularGatewayPortForwardingRulesResponse;

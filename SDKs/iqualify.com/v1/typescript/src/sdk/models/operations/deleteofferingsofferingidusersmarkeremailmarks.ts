@@ -26,7 +26,7 @@ export class DeleteOfferingsOfferingIdUsersMarkerEmailMarksResponse extends Spea
   contentType: string;
 
   @SpeakeasyMetadata()
-  error?: shared.Error;
+  error?: shared.ErrorT;
 
   @SpeakeasyMetadata({ elemType: shared.OfferingUser })
   offeringUsers?: shared.OfferingUser[];

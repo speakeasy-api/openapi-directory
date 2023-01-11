@@ -32,5 +32,5 @@ export class ExportWirelessCsvResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  exportWirelessCsv200TextCsvBinaryString?: Uint8Array;
+  exportWirelessCSV200TextCSVBinaryString?: Uint8Array;
 }

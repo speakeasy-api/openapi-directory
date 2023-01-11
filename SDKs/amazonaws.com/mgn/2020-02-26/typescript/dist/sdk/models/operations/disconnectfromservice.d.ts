@@ -10,7 +10,7 @@ export declare class DisconnectFromServiceHeaders extends SpeakeasyBase {
     xAmzSignedHeaders?: string;
 }
 export declare class DisconnectFromServiceRequestBody extends SpeakeasyBase {
-    sourceServerId: string;
+    sourceServerID: string;
 }
 export declare class DisconnectFromServiceRequest extends SpeakeasyBase {
     headers: DisconnectFromServiceHeaders;

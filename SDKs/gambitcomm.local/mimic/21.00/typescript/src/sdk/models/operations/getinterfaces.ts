@@ -10,5 +10,5 @@ export class GetInterfacesResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getInterfaces200ApplicationJsonObject?: Map<string, number>;
+  getInterfaces200ApplicationJSONObject?: Record<string, number>;
 }

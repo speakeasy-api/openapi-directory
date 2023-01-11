@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,184 +23,186 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchBoulderCampaignContributionsResponse = exports.SearchBoulderCampaignContributionsRequest = exports.SearchBoulderCampaignContributionsQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var SearchBoulderCampaignContributionsQueryParams = /** @class */ (function (_super) {
     __extends(SearchBoulderCampaignContributionsQueryParams, _super);
     function SearchBoulderCampaignContributionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.from" }),
         __metadata("design:type", Date)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "changedateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=changedate.to" }),
         __metadata("design:type", Date)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "changedateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.from" }),
         __metadata("design:type", Date)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "createdateFrom", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=createdate.to" }),
         __metadata("design:type", Date)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "createdateTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=description" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=filesuffix" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "filesuffix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fromdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fromdate" }),
         __metadata("design:type", Date)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "fromdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=group" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "group", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=max" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=max" }),
         __metadata("design:type", Number)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "max", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlatitude" }),
         __metadata("design:type", Number)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "maxlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxlongitude" }),
         __metadata("design:type", Number)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "maxlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlatitude" }),
         __metadata("design:type", Number)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "minlatitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=minlongitude" }),
         __metadata("design:type", Number)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "minlongitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.amended_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.amended_date" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsAmendedDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.anonymous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.anonymous" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsAnonymous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.candidate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.candidate" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsCandidate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.city" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.city" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsCity", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.committee" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.committee" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsCommittee", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.committee_num" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.committee_num" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsCommitteeNum", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.contribution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.contribution" }),
         __metadata("design:type", Number)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsContribution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.contribution_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.contribution_type" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsContributionType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.filing_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.filing_date" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsFilingDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.first_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.first_name" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsFirstName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.from_candidate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.from_candidate" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsFromCandidate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.last_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.last_name" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsLastName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.match" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.match" }),
         __metadata("design:type", Number)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsMatch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.official_filing" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.official_filing" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsOfficialFiling", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.state" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.street" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.street" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsStreet", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.transaction_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.transaction_date" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsTransactionDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.type" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.zip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=search.db_boulder_campaign_contributions.zip" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "searchDbBoulderCampaignContributionsZip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=skip" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=skip" }),
         __metadata("design:type", Number)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "skip", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=text" }),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=todate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=todate" }),
         __metadata("design:type", Date)
     ], SearchBoulderCampaignContributionsQueryParams.prototype, "todate", void 0);
     return SearchBoulderCampaignContributionsQueryParams;
-}(SpeakeasyBase));
-export { SearchBoulderCampaignContributionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.SearchBoulderCampaignContributionsQueryParams = SearchBoulderCampaignContributionsQueryParams;
 var SearchBoulderCampaignContributionsRequest = /** @class */ (function (_super) {
     __extends(SearchBoulderCampaignContributionsRequest, _super);
     function SearchBoulderCampaignContributionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SearchBoulderCampaignContributionsQueryParams)
     ], SearchBoulderCampaignContributionsRequest.prototype, "queryParams", void 0);
     return SearchBoulderCampaignContributionsRequest;
-}(SpeakeasyBase));
-export { SearchBoulderCampaignContributionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.SearchBoulderCampaignContributionsRequest = SearchBoulderCampaignContributionsRequest;
 var SearchBoulderCampaignContributionsResponse = /** @class */ (function (_super) {
     __extends(SearchBoulderCampaignContributionsResponse, _super);
     function SearchBoulderCampaignContributionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SearchBoulderCampaignContributionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SearchBoulderCampaignContributionsResponse.prototype, "statusCode", void 0);
     return SearchBoulderCampaignContributionsResponse;
-}(SpeakeasyBase));
-export { SearchBoulderCampaignContributionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.SearchBoulderCampaignContributionsResponse = SearchBoulderCampaignContributionsResponse;

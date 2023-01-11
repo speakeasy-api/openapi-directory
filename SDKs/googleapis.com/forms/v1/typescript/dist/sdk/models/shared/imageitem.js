@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ImageInput } from "./image";
-import { Image } from "./image";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImageItem = exports.ImageItemInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var image_1 = require("./image");
+var image_2 = require("./image");
 // ImageItemInput
 /**
  * An item containing an image.
@@ -35,12 +38,12 @@ var ImageItemInput = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
-        __metadata("design:type", ImageInput)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
+        __metadata("design:type", image_1.ImageInput)
     ], ImageItemInput.prototype, "image", void 0);
     return ImageItemInput;
-}(SpeakeasyBase));
-export { ImageItemInput };
+}(utils_1.SpeakeasyBase));
+exports.ImageItemInput = ImageItemInput;
 // ImageItem
 /**
  * An item containing an image.
@@ -51,9 +54,9 @@ var ImageItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=image" }),
-        __metadata("design:type", Image)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=image" }),
+        __metadata("design:type", image_2.Image)
     ], ImageItem.prototype, "image", void 0);
     return ImageItem;
-}(SpeakeasyBase));
-export { ImageItem };
+}(utils_1.SpeakeasyBase));
+exports.ImageItem = ImageItem;

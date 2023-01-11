@@ -1,0 +1,33 @@
+import { SpeakeasyBase } from "../../../internal/utils";
+export declare class Invoice extends SpeakeasyBase {
+    accountId?: string;
+    adjustmentAmount?: number;
+    amount?: number;
+    amountWithoutTax?: number;
+    balance?: number;
+    billRunId?: string;
+    body?: string;
+    comments?: string;
+    createdById?: string;
+    createdDate?: Date;
+    creditBalanceAdjustmentAmount?: number;
+    dueDate?: Date;
+    includesOneTime?: boolean;
+    includesRecurring?: boolean;
+    includesUsage?: boolean;
+    invoiceDate?: Date;
+    invoiceNumber?: string;
+    lastEmailSentDate?: Date;
+    paymentAmount?: number;
+    postedBy?: string;
+    postedDate?: Date;
+    refundAmount?: number;
+    regenerateInvoicePDF?: boolean;
+    status?: string;
+    targetDate?: Date;
+    taxAmount?: number;
+    taxExemptAmount?: number;
+    transferredToAccounting?: string;
+    updatedById?: string;
+    updatedDate?: Date;
+}

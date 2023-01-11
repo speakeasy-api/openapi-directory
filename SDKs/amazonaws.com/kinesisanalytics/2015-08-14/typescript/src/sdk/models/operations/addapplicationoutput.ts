@@ -45,7 +45,7 @@ export class AddApplicationOutputRequest extends SpeakeasyBase {
 
 export class AddApplicationOutputResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  addApplicationOutputResponse?: Map<string, any>;
+  addApplicationOutputResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   concurrentModificationException?: any;

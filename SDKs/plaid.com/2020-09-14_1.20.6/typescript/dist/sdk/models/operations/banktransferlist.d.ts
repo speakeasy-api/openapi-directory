@@ -4,8 +4,8 @@ export declare class BankTransferListRequest extends SpeakeasyBase {
     request: shared.BankTransferListRequest;
 }
 export declare class BankTransferListResponse extends SpeakeasyBase {
-    bankTransferListResponse?: Map<string, any>;
+    bankTransferListResponse?: Record<string, any>;
     contentType: string;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     statusCode: number;
 }

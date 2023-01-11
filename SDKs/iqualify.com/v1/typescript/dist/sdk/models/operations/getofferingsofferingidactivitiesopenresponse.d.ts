@@ -8,7 +8,7 @@ export declare class GetOfferingsOfferingIdActivitiesOpenresponseRequest extends
 }
 export declare class GetOfferingsOfferingIdActivitiesOpenresponseResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     offeringActivitiesResponses?: shared.OfferingActivitiesResponse[];
     statusCode: number;
 }

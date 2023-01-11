@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddOnTypeEnum } from "./addontypeenum";
-import { AutoSnapshotAddOnRequest } from "./autosnapshotaddonrequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddOnRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var addontypeenum_1 = require("./addontypeenum");
+var autosnapshotaddonrequest_1 = require("./autosnapshotaddonrequest");
 // AddOnRequest
 /**
  * <p>Describes a request to enable, modify, or disable an add-on for an Amazon Lightsail resource.</p> <note> <p>An additional cost may be associated with enabling add-ons. For more information, see the <a href="https://aws.amazon.com/lightsail/pricing/">Lightsail pricing page</a>.</p> </note>
@@ -35,13 +38,13 @@ var AddOnRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addOnType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addOnType" }),
         __metadata("design:type", String)
     ], AddOnRequest.prototype, "addOnType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=autoSnapshotAddOnRequest" }),
-        __metadata("design:type", AutoSnapshotAddOnRequest)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=autoSnapshotAddOnRequest" }),
+        __metadata("design:type", autosnapshotaddonrequest_1.AutoSnapshotAddOnRequest)
     ], AddOnRequest.prototype, "autoSnapshotAddOnRequest", void 0);
     return AddOnRequest;
-}(SpeakeasyBase));
-export { AddOnRequest };
+}(utils_1.SpeakeasyBase));
+exports.AddOnRequest = AddOnRequest;

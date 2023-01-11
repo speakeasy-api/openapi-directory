@@ -64,5 +64,5 @@ export class UpdateOrganizationLoginSecurityResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateOrganizationLoginSecurity200ApplicationJsonObject?: Map<string, any>;
+  updateOrganizationLoginSecurity200ApplicationJSONObject?: Record<string, any>;
 }

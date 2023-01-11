@@ -1,9 +1,10 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["https://football-prediction-api.p.rapidapi.com"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
@@ -11,7 +12,7 @@ export declare class SDK {
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     /**
      * getApiV2ListFederations - Returns an array of all the available federations.
     **/
@@ -33,4 +34,3 @@ export declare class SDK {
     **/
     getApiV2PredictionsId(req: operations.GetApiV2PredictionsIdRequest, config?: AxiosRequestConfig): Promise<operations.GetApiV2PredictionsIdResponse>;
 }
-export {};

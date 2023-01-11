@@ -8,7 +8,7 @@ export class GroupsGetPathParams extends SpeakeasyBase {
   objectId: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tenantID" })
-  tenantId: string;
+  tenantID: string;
 }
 
 
@@ -29,7 +29,7 @@ export class GroupsGetRequest extends SpeakeasyBase {
 
 export class GroupsGetResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  adGroup?: Map<string, Map<string, any>>;
+  adGroup?: Record<string, Record<string, any>>;
 
   @SpeakeasyMetadata()
   contentType: string;

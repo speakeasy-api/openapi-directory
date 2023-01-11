@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,35 +23,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ProviderTypeEnum } from "./providertypeenum";
-import { Tag } from "./tag";
-import { VpcConfiguration } from "./vpcconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateHostInput = void 0;
+var utils_1 = require("../../../internal/utils");
+var providertypeenum_1 = require("./providertypeenum");
+var tag_1 = require("./tag");
+var vpcconfiguration_1 = require("./vpcconfiguration");
 var CreateHostInput = /** @class */ (function (_super) {
     __extends(CreateHostInput, _super);
     function CreateHostInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], CreateHostInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProviderEndpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProviderEndpoint" }),
         __metadata("design:type", String)
     ], CreateHostInput.prototype, "providerEndpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ProviderType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ProviderType" }),
         __metadata("design:type", String)
     ], CreateHostInput.prototype, "providerType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], CreateHostInput.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VpcConfiguration" }),
-        __metadata("design:type", VpcConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VpcConfiguration" }),
+        __metadata("design:type", vpcconfiguration_1.VpcConfiguration)
     ], CreateHostInput.prototype, "vpcConfiguration", void 0);
     return CreateHostInput;
-}(SpeakeasyBase));
-export { CreateHostInput };
+}(utils_1.SpeakeasyBase));
+exports.CreateHostInput = CreateHostInput;

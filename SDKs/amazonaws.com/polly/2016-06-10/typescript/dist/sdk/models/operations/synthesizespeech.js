@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,59 +14,84 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SynthesizeSpeechResponse = exports.SynthesizeSpeechRequest = exports.SynthesizeSpeechRequestBody = exports.SynthesizeSpeechRequestBodyVoiceIdEnum = exports.SynthesizeSpeechRequestBodyTextTypeEnum = exports.SynthesizeSpeechRequestBodyOutputFormatEnum = exports.SynthesizeSpeechRequestBodyLanguageCodeEnum = exports.SynthesizeSpeechRequestBodyEngineEnum = exports.SynthesizeSpeechHeaders = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var SynthesizeSpeechHeaders = /** @class */ (function (_super) {
     __extends(SynthesizeSpeechHeaders, _super);
     function SynthesizeSpeechHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], SynthesizeSpeechHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], SynthesizeSpeechHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], SynthesizeSpeechHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], SynthesizeSpeechHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], SynthesizeSpeechHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], SynthesizeSpeechHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], SynthesizeSpeechHeaders.prototype, "xAmzSignedHeaders", void 0);
     return SynthesizeSpeechHeaders;
-}(SpeakeasyBase));
-export { SynthesizeSpeechHeaders };
-export var SynthesizeSpeechRequestBodyEngineEnum;
+}(utils_1.SpeakeasyBase));
+exports.SynthesizeSpeechHeaders = SynthesizeSpeechHeaders;
+var SynthesizeSpeechRequestBodyEngineEnum;
 (function (SynthesizeSpeechRequestBodyEngineEnum) {
     SynthesizeSpeechRequestBodyEngineEnum["Standard"] = "standard";
     SynthesizeSpeechRequestBodyEngineEnum["Neural"] = "neural";
-})(SynthesizeSpeechRequestBodyEngineEnum || (SynthesizeSpeechRequestBodyEngineEnum = {}));
-export var SynthesizeSpeechRequestBodyLanguageCodeEnum;
+})(SynthesizeSpeechRequestBodyEngineEnum = exports.SynthesizeSpeechRequestBodyEngineEnum || (exports.SynthesizeSpeechRequestBodyEngineEnum = {}));
+var SynthesizeSpeechRequestBodyLanguageCodeEnum;
 (function (SynthesizeSpeechRequestBodyLanguageCodeEnum) {
     SynthesizeSpeechRequestBodyLanguageCodeEnum["Arb"] = "arb";
     SynthesizeSpeechRequestBodyLanguageCodeEnum["CmnCn"] = "cmn-CN";
@@ -98,20 +124,20 @@ export var SynthesizeSpeechRequestBodyLanguageCodeEnum;
     SynthesizeSpeechRequestBodyLanguageCodeEnum["TrTr"] = "tr-TR";
     SynthesizeSpeechRequestBodyLanguageCodeEnum["EnNz"] = "en-NZ";
     SynthesizeSpeechRequestBodyLanguageCodeEnum["EnZa"] = "en-ZA";
-})(SynthesizeSpeechRequestBodyLanguageCodeEnum || (SynthesizeSpeechRequestBodyLanguageCodeEnum = {}));
-export var SynthesizeSpeechRequestBodyOutputFormatEnum;
+})(SynthesizeSpeechRequestBodyLanguageCodeEnum = exports.SynthesizeSpeechRequestBodyLanguageCodeEnum || (exports.SynthesizeSpeechRequestBodyLanguageCodeEnum = {}));
+var SynthesizeSpeechRequestBodyOutputFormatEnum;
 (function (SynthesizeSpeechRequestBodyOutputFormatEnum) {
     SynthesizeSpeechRequestBodyOutputFormatEnum["Json"] = "json";
     SynthesizeSpeechRequestBodyOutputFormatEnum["Mp3"] = "mp3";
     SynthesizeSpeechRequestBodyOutputFormatEnum["OggVorbis"] = "ogg_vorbis";
     SynthesizeSpeechRequestBodyOutputFormatEnum["Pcm"] = "pcm";
-})(SynthesizeSpeechRequestBodyOutputFormatEnum || (SynthesizeSpeechRequestBodyOutputFormatEnum = {}));
-export var SynthesizeSpeechRequestBodyTextTypeEnum;
+})(SynthesizeSpeechRequestBodyOutputFormatEnum = exports.SynthesizeSpeechRequestBodyOutputFormatEnum || (exports.SynthesizeSpeechRequestBodyOutputFormatEnum = {}));
+var SynthesizeSpeechRequestBodyTextTypeEnum;
 (function (SynthesizeSpeechRequestBodyTextTypeEnum) {
     SynthesizeSpeechRequestBodyTextTypeEnum["Ssml"] = "ssml";
     SynthesizeSpeechRequestBodyTextTypeEnum["Text"] = "text";
-})(SynthesizeSpeechRequestBodyTextTypeEnum || (SynthesizeSpeechRequestBodyTextTypeEnum = {}));
-export var SynthesizeSpeechRequestBodyVoiceIdEnum;
+})(SynthesizeSpeechRequestBodyTextTypeEnum = exports.SynthesizeSpeechRequestBodyTextTypeEnum || (exports.SynthesizeSpeechRequestBodyTextTypeEnum = {}));
+var SynthesizeSpeechRequestBodyVoiceIdEnum;
 (function (SynthesizeSpeechRequestBodyVoiceIdEnum) {
     SynthesizeSpeechRequestBodyVoiceIdEnum["Aditi"] = "Aditi";
     SynthesizeSpeechRequestBodyVoiceIdEnum["Amy"] = "Amy";
@@ -178,120 +204,120 @@ export var SynthesizeSpeechRequestBodyVoiceIdEnum;
     SynthesizeSpeechRequestBodyVoiceIdEnum["Zhiyu"] = "Zhiyu";
     SynthesizeSpeechRequestBodyVoiceIdEnum["Aria"] = "Aria";
     SynthesizeSpeechRequestBodyVoiceIdEnum["Ayanda"] = "Ayanda";
-})(SynthesizeSpeechRequestBodyVoiceIdEnum || (SynthesizeSpeechRequestBodyVoiceIdEnum = {}));
+})(SynthesizeSpeechRequestBodyVoiceIdEnum = exports.SynthesizeSpeechRequestBodyVoiceIdEnum || (exports.SynthesizeSpeechRequestBodyVoiceIdEnum = {}));
 var SynthesizeSpeechRequestBody = /** @class */ (function (_super) {
     __extends(SynthesizeSpeechRequestBody, _super);
     function SynthesizeSpeechRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Engine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Engine" }),
         __metadata("design:type", String)
     ], SynthesizeSpeechRequestBody.prototype, "engine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LanguageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LanguageCode" }),
         __metadata("design:type", String)
     ], SynthesizeSpeechRequestBody.prototype, "languageCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LexiconNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LexiconNames" }),
         __metadata("design:type", Array)
     ], SynthesizeSpeechRequestBody.prototype, "lexiconNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OutputFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OutputFormat" }),
         __metadata("design:type", String)
     ], SynthesizeSpeechRequestBody.prototype, "outputFormat", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SampleRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SampleRate" }),
         __metadata("design:type", String)
     ], SynthesizeSpeechRequestBody.prototype, "sampleRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SpeechMarkTypes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SpeechMarkTypes" }),
         __metadata("design:type", Array)
     ], SynthesizeSpeechRequestBody.prototype, "speechMarkTypes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Text" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Text" }),
         __metadata("design:type", String)
     ], SynthesizeSpeechRequestBody.prototype, "text", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TextType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TextType" }),
         __metadata("design:type", String)
     ], SynthesizeSpeechRequestBody.prototype, "textType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=VoiceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=VoiceId" }),
         __metadata("design:type", String)
     ], SynthesizeSpeechRequestBody.prototype, "voiceId", void 0);
     return SynthesizeSpeechRequestBody;
-}(SpeakeasyBase));
-export { SynthesizeSpeechRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.SynthesizeSpeechRequestBody = SynthesizeSpeechRequestBody;
 var SynthesizeSpeechRequest = /** @class */ (function (_super) {
     __extends(SynthesizeSpeechRequest, _super);
     function SynthesizeSpeechRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SynthesizeSpeechHeaders)
     ], SynthesizeSpeechRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", SynthesizeSpeechRequestBody)
     ], SynthesizeSpeechRequest.prototype, "request", void 0);
     return SynthesizeSpeechRequest;
-}(SpeakeasyBase));
-export { SynthesizeSpeechRequest };
+}(utils_1.SpeakeasyBase));
+exports.SynthesizeSpeechRequest = SynthesizeSpeechRequest;
 var SynthesizeSpeechResponse = /** @class */ (function (_super) {
     __extends(SynthesizeSpeechResponse, _super);
     function SynthesizeSpeechResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SynthesizeSpeechResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SynthesizeSpeechResponse.prototype, "engineNotSupportedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SynthesizeSpeechResponse.prototype, "invalidSampleRateException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SynthesizeSpeechResponse.prototype, "invalidSsmlException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SynthesizeSpeechResponse.prototype, "languageNotSupportedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SynthesizeSpeechResponse.prototype, "lexiconNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SynthesizeSpeechResponse.prototype, "marksNotSupportedForFormatException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SynthesizeSpeechResponse.prototype, "serviceFailureException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SynthesizeSpeechResponse.prototype, "ssmlMarksNotSupportedForTextTypeException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SynthesizeSpeechResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.SynthesizeSpeechOutput)
     ], SynthesizeSpeechResponse.prototype, "synthesizeSpeechOutput", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], SynthesizeSpeechResponse.prototype, "textLengthExceededException", void 0);
     return SynthesizeSpeechResponse;
-}(SpeakeasyBase));
-export { SynthesizeSpeechResponse };
+}(utils_1.SpeakeasyBase));
+exports.SynthesizeSpeechResponse = SynthesizeSpeechResponse;

@@ -1,53 +1,54 @@
-import { Metadata, SpeakeasyBase } from "../../../internal/utils/utils";
+import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 
 
+
 export class GetTagPathParams extends SpeakeasyBase {
-  @Metadata({ data: "pathParam, style=simple;explode=false;name=tag_id" })
+  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=tag_id" })
   tagId: string;
 }
 
 
-export class GetTagRequest extends SpeakeasyBase {
-  @Metadata()
-  pathParams: GetTagPathParams;
-}
-
-
 export class GetTag200ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=tag" })
+  @SpeakeasyMetadata({ data: "json, name=tag" })
   tag?: shared.Onev21tagsGetResponses200ContentApplication1jsonSchemaAllOf0PropertiesTagsItems;
 }
 
 
 export class GetTag401ApplicationJson extends SpeakeasyBase {
-  @Metadata({ data: "json, name=id" })
+  @SpeakeasyMetadata({ data: "json, name=id" })
   id: string;
 
-  @Metadata({ data: "json, name=message" })
+  @SpeakeasyMetadata({ data: "json, name=message" })
   message: string;
 
-  @Metadata({ data: "json, name=request_id" })
+  @SpeakeasyMetadata({ data: "json, name=request_id" })
   requestId?: string;
 }
 
 
+export class GetTagRequest extends SpeakeasyBase {
+  @SpeakeasyMetadata()
+  pathParams: GetTagPathParams;
+}
+
+
 export class GetTagResponse extends SpeakeasyBase {
-  @Metadata()
+  @SpeakeasyMetadata()
   contentType: string;
 
-  @Metadata()
-  headers: Map<string, string[]>;
+  @SpeakeasyMetadata()
+  headers: Record<string, string[]>;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   statusCode: number;
 
-  @Metadata()
-  getTag200ApplicationJsonObject?: GetTag200ApplicationJson;
+  @SpeakeasyMetadata()
+  getTag200ApplicationJSONObject?: GetTag200ApplicationJson;
 
-  @Metadata()
-  getTag401ApplicationJsonObject?: GetTag401ApplicationJson;
+  @SpeakeasyMetadata()
+  getTag401ApplicationJSONObject?: GetTag401ApplicationJson;
 
-  @Metadata()
+  @SpeakeasyMetadata()
   onev211ClicksGetResponses401ContentApplication1jsonSchema?: shared.Onev211ClicksGetResponses401ContentApplication1jsonSchema;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ScalingTypeEnum } from "./scalingtypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IntegerParameterRange = void 0;
+var utils_1 = require("../../../internal/utils");
+var scalingtypeenum_1 = require("./scalingtypeenum");
 // IntegerParameterRange
 /**
  * Specifies an integer hyperparameter and it's range of tunable values. This object is part of the <a>ParameterRanges</a> object.
@@ -34,21 +37,21 @@ var IntegerParameterRange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxValue" }),
         __metadata("design:type", Number)
     ], IntegerParameterRange.prototype, "maxValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MinValue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MinValue" }),
         __metadata("design:type", Number)
     ], IntegerParameterRange.prototype, "minValue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], IntegerParameterRange.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ScalingType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ScalingType" }),
         __metadata("design:type", String)
     ], IntegerParameterRange.prototype, "scalingType", void 0);
     return IntegerParameterRange;
-}(SpeakeasyBase));
-export { IntegerParameterRange };
+}(utils_1.SpeakeasyBase));
+exports.IntegerParameterRange = IntegerParameterRange;

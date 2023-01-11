@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Ec2SecurityGroup } from "./ec2securitygroup";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CacheSecurityGroup = void 0;
+var utils_1 = require("../../../internal/utils");
+var ec2securitygrouplist_1 = require("./ec2securitygrouplist");
 // CacheSecurityGroup
 /**
  * <p>Represents the output of one of the following operations:</p> <ul> <li> <p> <code>AuthorizeCacheSecurityGroupIngress</code> </p> </li> <li> <p> <code>CreateCacheSecurityGroup</code> </p> </li> <li> <p> <code>RevokeCacheSecurityGroupIngress</code> </p> </li> </ul>
@@ -34,25 +37,25 @@ var CacheSecurityGroup = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheSecurityGroup.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheSecurityGroup.prototype, "cacheSecurityGroupName", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheSecurityGroup.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ elemType: Ec2SecurityGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ elemType: ec2securitygrouplist_1.Ec2SecurityGroupList }),
         __metadata("design:type", Array)
     ], CacheSecurityGroup.prototype, "ec2SecurityGroups", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CacheSecurityGroup.prototype, "ownerId", void 0);
     return CacheSecurityGroup;
-}(SpeakeasyBase));
-export { CacheSecurityGroup };
+}(utils_1.SpeakeasyBase));
+exports.CacheSecurityGroup = CacheSecurityGroup;

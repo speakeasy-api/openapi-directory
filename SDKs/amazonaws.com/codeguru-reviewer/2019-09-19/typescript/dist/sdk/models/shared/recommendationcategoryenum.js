@@ -1,4 +1,7 @@
-export var RecommendationCategoryEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RecommendationCategoryEnum = void 0;
+var RecommendationCategoryEnum;
 (function (RecommendationCategoryEnum) {
     RecommendationCategoryEnum["AwsBestPractices"] = "AWSBestPractices";
     RecommendationCategoryEnum["AwsCloudFormationIssues"] = "AWSCloudFormationIssues";
@@ -11,4 +14,4 @@ export var RecommendationCategoryEnum;
     RecommendationCategoryEnum["ResourceLeaks"] = "ResourceLeaks";
     RecommendationCategoryEnum["SecurityIssues"] = "SecurityIssues";
     RecommendationCategoryEnum["CodeInconsistencies"] = "CodeInconsistencies";
-})(RecommendationCategoryEnum || (RecommendationCategoryEnum = {}));
+})(RecommendationCategoryEnum = exports.RecommendationCategoryEnum || (exports.RecommendationCategoryEnum = {}));

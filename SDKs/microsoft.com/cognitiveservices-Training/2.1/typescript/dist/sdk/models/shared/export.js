@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,50 +23,52 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ExportFlavorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Export = exports.ExportStatusEnum = exports.ExportPlatformEnum = exports.ExportFlavorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ExportFlavorEnum;
 (function (ExportFlavorEnum) {
     ExportFlavorEnum["Linux"] = "Linux";
     ExportFlavorEnum["Windows"] = "Windows";
-})(ExportFlavorEnum || (ExportFlavorEnum = {}));
-export var ExportPlatformEnum;
+})(ExportFlavorEnum = exports.ExportFlavorEnum || (exports.ExportFlavorEnum = {}));
+var ExportPlatformEnum;
 (function (ExportPlatformEnum) {
     ExportPlatformEnum["CoreMl"] = "CoreML";
     ExportPlatformEnum["TensorFlow"] = "TensorFlow";
     ExportPlatformEnum["DockerFile"] = "DockerFile";
     ExportPlatformEnum["Onnx"] = "ONNX";
-})(ExportPlatformEnum || (ExportPlatformEnum = {}));
-export var ExportStatusEnum;
+})(ExportPlatformEnum = exports.ExportPlatformEnum || (exports.ExportPlatformEnum = {}));
+var ExportStatusEnum;
 (function (ExportStatusEnum) {
     ExportStatusEnum["Exporting"] = "Exporting";
     ExportStatusEnum["Failed"] = "Failed";
     ExportStatusEnum["Done"] = "Done";
-})(ExportStatusEnum || (ExportStatusEnum = {}));
+})(ExportStatusEnum = exports.ExportStatusEnum || (exports.ExportStatusEnum = {}));
 var Export = /** @class */ (function (_super) {
     __extends(Export, _super);
     function Export() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=downloadUri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=downloadUri" }),
         __metadata("design:type", String)
     ], Export.prototype, "downloadUri", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flavor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flavor" }),
         __metadata("design:type", String)
     ], Export.prototype, "flavor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newerVersionAvailable" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newerVersionAvailable" }),
         __metadata("design:type", Boolean)
     ], Export.prototype, "newerVersionAvailable", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platform" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
         __metadata("design:type", String)
     ], Export.prototype, "platform", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Export.prototype, "status", void 0);
     return Export;
-}(SpeakeasyBase));
-export { Export };
+}(utils_1.SpeakeasyBase));
+exports.Export = Export;

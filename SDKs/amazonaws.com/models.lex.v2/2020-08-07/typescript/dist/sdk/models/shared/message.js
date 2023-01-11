@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CustomPayload } from "./custompayload";
-import { ImageResponseCard } from "./imageresponsecard";
-import { PlainTextMessage } from "./plaintextmessage";
-import { SsmlMessage } from "./ssmlmessage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Message = void 0;
+var utils_1 = require("../../../internal/utils");
+var custompayload_1 = require("./custompayload");
+var imageresponsecard_1 = require("./imageresponsecard");
+var plaintextmessage_1 = require("./plaintextmessage");
+var ssmlmessage_1 = require("./ssmlmessage");
 // Message
 /**
  * The object that provides message text and it's type.
@@ -37,21 +40,21 @@ var Message = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customPayload" }),
-        __metadata("design:type", CustomPayload)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customPayload" }),
+        __metadata("design:type", custompayload_1.CustomPayload)
     ], Message.prototype, "customPayload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageResponseCard" }),
-        __metadata("design:type", ImageResponseCard)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageResponseCard" }),
+        __metadata("design:type", imageresponsecard_1.ImageResponseCard)
     ], Message.prototype, "imageResponseCard", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=plainTextMessage" }),
-        __metadata("design:type", PlainTextMessage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=plainTextMessage" }),
+        __metadata("design:type", plaintextmessage_1.PlainTextMessage)
     ], Message.prototype, "plainTextMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssmlMessage" }),
-        __metadata("design:type", SsmlMessage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssmlMessage" }),
+        __metadata("design:type", ssmlmessage_1.SsmlMessage)
     ], Message.prototype, "ssmlMessage", void 0);
     return Message;
-}(SpeakeasyBase));
-export { Message };
+}(utils_1.SpeakeasyBase));
+exports.Message = Message;

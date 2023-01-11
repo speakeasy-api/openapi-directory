@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,18 +23,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PivotGroup } from "./pivotgroup";
-import { PivotFilterCriteria } from "./pivotfiltercriteria";
-import { DataExecutionStatus } from "./dataexecutionstatus";
-import { PivotFilterSpec } from "./pivotfilterspec";
-import { GridRange } from "./gridrange";
-import { PivotValue } from "./pivotvalue";
-export var PivotTableValueLayoutEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PivotTable = exports.PivotTableValueLayoutEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var pivotgroup_1 = require("./pivotgroup");
+var pivotfiltercriteria_1 = require("./pivotfiltercriteria");
+var dataexecutionstatus_1 = require("./dataexecutionstatus");
+var pivotfilterspec_1 = require("./pivotfilterspec");
+var gridrange_1 = require("./gridrange");
+var pivotvalue_1 = require("./pivotvalue");
+var PivotTableValueLayoutEnum;
 (function (PivotTableValueLayoutEnum) {
     PivotTableValueLayoutEnum["Horizontal"] = "HORIZONTAL";
     PivotTableValueLayoutEnum["Vertical"] = "VERTICAL";
-})(PivotTableValueLayoutEnum || (PivotTableValueLayoutEnum = {}));
+})(PivotTableValueLayoutEnum = exports.PivotTableValueLayoutEnum || (exports.PivotTableValueLayoutEnum = {}));
 // PivotTable
 /**
  * A pivot table.
@@ -44,41 +47,41 @@ var PivotTable = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=columns", elemType: PivotGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=columns", elemType: pivotgroup_1.PivotGroup }),
         __metadata("design:type", Array)
     ], PivotTable.prototype, "columns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=criteria", elemType: PivotFilterCriteria }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=criteria", elemType: pivotfiltercriteria_1.PivotFilterCriteria }),
+        __metadata("design:type", Object)
     ], PivotTable.prototype, "criteria", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataExecutionStatus" }),
-        __metadata("design:type", DataExecutionStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataExecutionStatus" }),
+        __metadata("design:type", dataexecutionstatus_1.DataExecutionStatus)
     ], PivotTable.prototype, "dataExecutionStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataSourceId" }),
         __metadata("design:type", String)
     ], PivotTable.prototype, "dataSourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filterSpecs", elemType: PivotFilterSpec }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filterSpecs", elemType: pivotfilterspec_1.PivotFilterSpec }),
         __metadata("design:type", Array)
     ], PivotTable.prototype, "filterSpecs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rows", elemType: PivotGroup }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rows", elemType: pivotgroup_1.PivotGroup }),
         __metadata("design:type", Array)
     ], PivotTable.prototype, "rows", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source" }),
-        __metadata("design:type", GridRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source" }),
+        __metadata("design:type", gridrange_1.GridRange)
     ], PivotTable.prototype, "source", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueLayout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueLayout" }),
         __metadata("design:type", String)
     ], PivotTable.prototype, "valueLayout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=values", elemType: PivotValue }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=values", elemType: pivotvalue_1.PivotValue }),
         __metadata("design:type", Array)
     ], PivotTable.prototype, "values", void 0);
     return PivotTable;
-}(SpeakeasyBase));
-export { PivotTable };
+}(utils_1.SpeakeasyBase));
+exports.PivotTable = PivotTable;

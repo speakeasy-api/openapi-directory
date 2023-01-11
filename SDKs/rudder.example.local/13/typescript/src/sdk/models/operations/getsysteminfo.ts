@@ -41,5 +41,5 @@ export class GetSystemInfoResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getSystemInfo200ApplicationJsonObject?: GetSystemInfo200ApplicationJson;
+  getSystemInfo200ApplicationJSONObject?: GetSystemInfo200ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig = void 0;
+var utils_1 = require("../../../internal/utils");
 // GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig
 /**
  * Provides details for how an evaluation job sends email alerts based on the results of a run.
@@ -33,13 +36,13 @@ var GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig = /** @class */ (func
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=minAcceptableMeanAveragePrecision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=minAcceptableMeanAveragePrecision" }),
         __metadata("design:type", Number)
     ], GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig.prototype, "minAcceptableMeanAveragePrecision", void 0);
     return GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig = GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig;

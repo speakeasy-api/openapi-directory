@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Security = exports.SchemeBearerAuthOAuth = void 0;
+var utils_1 = require("../../../internal/utils");
 var SchemeBearerAuthOAuth = /** @class */ (function (_super) {
     __extends(SchemeBearerAuthOAuth, _super);
     function SchemeBearerAuthOAuth() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, name=Authorization" }),
         __metadata("design:type", String)
     ], SchemeBearerAuthOAuth.prototype, "authorization", void 0);
     return SchemeBearerAuthOAuth;
-}(SpeakeasyBase));
-export { SchemeBearerAuthOAuth };
+}(utils_1.SpeakeasyBase));
+exports.SchemeBearerAuthOAuth = SchemeBearerAuthOAuth;
 var Security = /** @class */ (function (_super) {
     __extends(Security, _super);
     function Security() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=http;subtype=bearer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=http;subtype=bearer" }),
         __metadata("design:type", SchemeBearerAuthOAuth)
     ], Security.prototype, "bearerAuthOAuth", void 0);
     return Security;
-}(SpeakeasyBase));
-export { Security };
+}(utils_1.SpeakeasyBase));
+exports.Security = Security;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudDatalabelingV1beta1AnnotationSpec } from "./googleclouddatalabelingv1beta1annotationspec";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudDatalabelingV1beta1AnnotationSpecSet = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleclouddatalabelingv1beta1annotationspec_1 = require("./googleclouddatalabelingv1beta1annotationspec");
 // GoogleCloudDatalabelingV1beta1AnnotationSpecSet
 /**
  * An AnnotationSpecSet is a collection of label definitions. For example, in image classification tasks, you define a set of possible labels for images as an AnnotationSpecSet. An AnnotationSpecSet is immutable upon creation.
@@ -34,25 +37,25 @@ var GoogleCloudDatalabelingV1beta1AnnotationSpecSet = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=annotationSpecs", elemType: GoogleCloudDatalabelingV1beta1AnnotationSpec }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=annotationSpecs", elemType: googleclouddatalabelingv1beta1annotationspec_1.GoogleCloudDatalabelingV1beta1AnnotationSpec }),
         __metadata("design:type", Array)
     ], GoogleCloudDatalabelingV1beta1AnnotationSpecSet.prototype, "annotationSpecs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=blockingResources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=blockingResources" }),
         __metadata("design:type", Array)
     ], GoogleCloudDatalabelingV1beta1AnnotationSpecSet.prototype, "blockingResources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1AnnotationSpecSet.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=displayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=displayName" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1AnnotationSpecSet.prototype, "displayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GoogleCloudDatalabelingV1beta1AnnotationSpecSet.prototype, "name", void 0);
     return GoogleCloudDatalabelingV1beta1AnnotationSpecSet;
-}(SpeakeasyBase));
-export { GoogleCloudDatalabelingV1beta1AnnotationSpecSet };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudDatalabelingV1beta1AnnotationSpecSet = GoogleCloudDatalabelingV1beta1AnnotationSpecSet;

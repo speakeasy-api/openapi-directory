@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeGlobalClustersActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeGlobalClustersResponse = exports.PostDescribeGlobalClustersRequest = exports.PostDescribeGlobalClustersHeaders = exports.PostDescribeGlobalClustersQueryParams = exports.PostDescribeGlobalClustersVersionEnum = exports.PostDescribeGlobalClustersActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeGlobalClustersActionEnum;
 (function (PostDescribeGlobalClustersActionEnum) {
     PostDescribeGlobalClustersActionEnum["DescribeGlobalClusters"] = "DescribeGlobalClusters";
-})(PostDescribeGlobalClustersActionEnum || (PostDescribeGlobalClustersActionEnum = {}));
-export var PostDescribeGlobalClustersVersionEnum;
+})(PostDescribeGlobalClustersActionEnum = exports.PostDescribeGlobalClustersActionEnum || (exports.PostDescribeGlobalClustersActionEnum = {}));
+var PostDescribeGlobalClustersVersionEnum;
 (function (PostDescribeGlobalClustersVersionEnum) {
     PostDescribeGlobalClustersVersionEnum["TwoThousandAndFourteen1031"] = "2014-10-31";
-})(PostDescribeGlobalClustersVersionEnum || (PostDescribeGlobalClustersVersionEnum = {}));
+})(PostDescribeGlobalClustersVersionEnum = exports.PostDescribeGlobalClustersVersionEnum || (exports.PostDescribeGlobalClustersVersionEnum = {}));
 var PostDescribeGlobalClustersQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeGlobalClustersQueryParams, _super);
     function PostDescribeGlobalClustersQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeGlobalClustersQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], PostDescribeGlobalClustersQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxRecords" }),
         __metadata("design:type", String)
     ], PostDescribeGlobalClustersQueryParams.prototype, "maxRecords", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeGlobalClustersQueryParams.prototype, "version", void 0);
     return PostDescribeGlobalClustersQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeGlobalClustersQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeGlobalClustersQueryParams = PostDescribeGlobalClustersQueryParams;
 var PostDescribeGlobalClustersHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeGlobalClustersHeaders, _super);
     function PostDescribeGlobalClustersHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeGlobalClustersHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeGlobalClustersHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeGlobalClustersHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeGlobalClustersHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeGlobalClustersHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeGlobalClustersHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeGlobalClustersHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeGlobalClustersHeaders;
-}(SpeakeasyBase));
-export { PostDescribeGlobalClustersHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeGlobalClustersHeaders = PostDescribeGlobalClustersHeaders;
 var PostDescribeGlobalClustersRequest = /** @class */ (function (_super) {
     __extends(PostDescribeGlobalClustersRequest, _super);
     function PostDescribeGlobalClustersRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeGlobalClustersQueryParams)
     ], PostDescribeGlobalClustersRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeGlobalClustersHeaders)
     ], PostDescribeGlobalClustersRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeGlobalClustersRequest.prototype, "request", void 0);
     return PostDescribeGlobalClustersRequest;
-}(SpeakeasyBase));
-export { PostDescribeGlobalClustersRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeGlobalClustersRequest = PostDescribeGlobalClustersRequest;
 var PostDescribeGlobalClustersResponse = /** @class */ (function (_super) {
     __extends(PostDescribeGlobalClustersResponse, _super);
     function PostDescribeGlobalClustersResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeGlobalClustersResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeGlobalClustersResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeGlobalClustersResponse.prototype, "statusCode", void 0);
     return PostDescribeGlobalClustersResponse;
-}(SpeakeasyBase));
-export { PostDescribeGlobalClustersResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeGlobalClustersResponse = PostDescribeGlobalClustersResponse;

@@ -1,12 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Snapshot } from "./snapshot";
 
 
 
 export class DescribeSnapshotsResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  nextToken?: string;
+  nextToken?: Record<string, any>;
 
-  @SpeakeasyMetadata({ elemType: Snapshot })
-  snapshots?: Snapshot[];
+  @SpeakeasyMetadata()
+  snapshots?: Record<string, any>;
 }

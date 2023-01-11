@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EbsMetricNameEnum } from "./ebsmetricnameenum";
-import { MetricStatisticEnum } from "./metricstatisticenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EbsUtilizationMetric = void 0;
+var utils_1 = require("../../../internal/utils");
+var ebsmetricnameenum_1 = require("./ebsmetricnameenum");
+var metricstatisticenum_1 = require("./metricstatisticenum");
 // EbsUtilizationMetric
 /**
  * <p>Describes a utilization metric of an Amazon Elastic Block Store (Amazon EBS) volume.</p> <p>Compare the utilization metric data of your resource against its projected utilization metric data to determine the performance difference between your current resource and the recommended option.</p>
@@ -35,17 +38,17 @@ var EbsUtilizationMetric = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], EbsUtilizationMetric.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statistic" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statistic" }),
         __metadata("design:type", String)
     ], EbsUtilizationMetric.prototype, "statistic", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], EbsUtilizationMetric.prototype, "value", void 0);
     return EbsUtilizationMetric;
-}(SpeakeasyBase));
-export { EbsUtilizationMetric };
+}(utils_1.SpeakeasyBase));
+exports.EbsUtilizationMetric = EbsUtilizationMetric;

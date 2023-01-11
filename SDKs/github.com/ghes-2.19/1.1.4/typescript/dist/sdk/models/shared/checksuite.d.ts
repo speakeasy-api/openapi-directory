@@ -21,7 +21,7 @@ export declare enum CheckSuiteStatusEnum {
 **/
 export declare class CheckSuite extends SpeakeasyBase {
     after: string;
-    app: Map<string, any>;
+    app: Record<string, any>;
     before: string;
     checkRunsUrl: string;
     conclusion: CheckSuiteConclusionEnum;

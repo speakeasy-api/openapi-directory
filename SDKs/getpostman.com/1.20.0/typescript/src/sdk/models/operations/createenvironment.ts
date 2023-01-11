@@ -73,8 +73,8 @@ export class CreateEnvironmentResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createEnvironment200ApplicationJsonObject?: CreateEnvironment200ApplicationJson;
+  createEnvironment200ApplicationJSONObject?: CreateEnvironment200ApplicationJson;
 
   @SpeakeasyMetadata()
-  createEnvironment400ApplicationJsonObject?: CreateEnvironment400ApplicationJson;
+  createEnvironment400ApplicationJSONObject?: CreateEnvironment400ApplicationJson;
 }

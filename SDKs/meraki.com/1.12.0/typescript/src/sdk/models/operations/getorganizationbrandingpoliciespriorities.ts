@@ -22,5 +22,5 @@ export class GetOrganizationBrandingPoliciesPrioritiesResponse extends Speakeasy
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationBrandingPoliciesPriorities200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationBrandingPoliciesPriorities200ApplicationJSONObject?: Record<string, any>;
 }

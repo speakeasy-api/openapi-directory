@@ -2,6 +2,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
+// TeamTeamSimple
+/** 
+ * Groups of organization members that gives permissions on specified repositories.
+**/
 export class TeamTeamSimple extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=description" })
   description: string;

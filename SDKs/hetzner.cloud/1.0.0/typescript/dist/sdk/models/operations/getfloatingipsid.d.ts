@@ -37,7 +37,7 @@ export declare class GetFloatingIpsId200ApplicationJsonFloatingIp extends Speake
     homeLocation: GetFloatingIpsId200ApplicationJsonFloatingIpHomeLocation;
     id: number;
     ip: string;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     protection: GetFloatingIpsId200ApplicationJsonFloatingIpProtection;
     server: number;
@@ -51,6 +51,6 @@ export declare class GetFloatingIpsIdRequest extends SpeakeasyBase {
 }
 export declare class GetFloatingIpsIdResponse extends SpeakeasyBase {
     contentType: string;
-    getFloatingIpsId200ApplicationJsonObject?: GetFloatingIpsId200ApplicationJson;
     statusCode: number;
+    getFloatingIpsId200ApplicationJSONObject?: GetFloatingIpsId200ApplicationJson;
 }

@@ -104,5 +104,5 @@ export class DcimFrontPortTemplatesListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  dcimFrontPortTemplatesList200ApplicationJsonObject?: DcimFrontPortTemplatesList200ApplicationJson;
+  dcimFrontPortTemplatesList200ApplicationJSONObject?: DcimFrontPortTemplatesList200ApplicationJson;
 }

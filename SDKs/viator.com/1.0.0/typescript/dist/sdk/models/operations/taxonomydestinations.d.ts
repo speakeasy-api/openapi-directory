@@ -27,8 +27,8 @@ export declare class TaxonomyDestinations200ApplicationJson extends SpeakeasyBas
     errorName?: string;
     errorReference?: string;
     errorType?: string;
-    extraInfo?: Map<string, any>;
-    extraObject?: Map<string, any>;
+    extraInfo?: Record<string, any>;
+    extraObject?: Record<string, any>;
     success?: boolean;
     totalCount?: number;
     vmid?: string;
@@ -39,5 +39,5 @@ export declare class TaxonomyDestinationsRequest extends SpeakeasyBase {
 export declare class TaxonomyDestinationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    taxonomyDestinations200ApplicationJsonObject?: TaxonomyDestinations200ApplicationJson;
+    taxonomyDestinations200ApplicationJSONObject?: TaxonomyDestinations200ApplicationJson;
 }

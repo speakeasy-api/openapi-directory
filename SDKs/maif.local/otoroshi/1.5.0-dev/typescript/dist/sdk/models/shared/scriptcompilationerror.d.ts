@@ -4,8 +4,8 @@ import { SpeakeasyBase } from "../../../internal/utils";
 **/
 export declare class ScriptCompilationError extends SpeakeasyBase {
     column: string;
-    file: Map<string, string>;
+    file: Record<string, string>;
     line: string;
-    message: Map<string, string>;
-    rawMessage: Map<string, string>;
+    message: Record<string, string>;
+    rawMessage: Record<string, string>;
 }

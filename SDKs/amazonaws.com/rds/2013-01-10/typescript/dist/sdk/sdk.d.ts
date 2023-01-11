@@ -1,30 +1,27 @@
 import { AxiosInstance, AxiosRequestConfig } from "axios";
 import * as operations from "./models/operations";
 import { Security } from "./models/shared";
-type OptsFunc = (sdk: SDK) => void;
 export declare const ServerList: readonly ["http://rds.{region}.amazonaws.com", "https://rds.{region}.amazonaws.com", "http://rds.amazonaws.com", "https://rds.amazonaws.com", "http://rds.{region}.amazonaws.com.cn", "https://rds.{region}.amazonaws.com.cn"];
-export declare function WithServerURL(serverURL: string, params?: Map<string, string>): OptsFunc;
-export declare function WithClient(client: AxiosInstance): OptsFunc;
-export declare function WithSecurity(security: Security): OptsFunc;
+export type SDKProps = {
+    defaultClient?: AxiosInstance;
+    security?: Security;
+    serverUrl?: string;
+};
 export declare class SDK {
     _defaultClient: AxiosInstance;
     _securityClient: AxiosInstance;
-    _security?: Security;
     _serverURL: string;
     private _language;
     private _sdkVersion;
     private _genVersion;
-    constructor(...opts: OptsFunc[]);
+    constructor(props: SDKProps);
     getAddSourceIdentifierToSubscription(req: operations.GetAddSourceIdentifierToSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.GetAddSourceIdentifierToSubscriptionResponse>;
     getAuthorizeDbSecurityGroupIngress(req: operations.GetAuthorizeDbSecurityGroupIngressRequest, config?: AxiosRequestConfig): Promise<operations.GetAuthorizeDbSecurityGroupIngressResponse>;
     getCopyDbSnapshot(req: operations.GetCopyDbSnapshotRequest, config?: AxiosRequestConfig): Promise<operations.GetCopyDbSnapshotResponse>;
-    getCreateDbInstance(req: operations.GetCreateDbInstanceRequest, config?: AxiosRequestConfig): Promise<operations.GetCreateDbInstanceResponse>;
     getCreateDbInstanceReadReplica(req: operations.GetCreateDbInstanceReadReplicaRequest, config?: AxiosRequestConfig): Promise<operations.GetCreateDbInstanceReadReplicaResponse>;
     getCreateDbParameterGroup(req: operations.GetCreateDbParameterGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetCreateDbParameterGroupResponse>;
     getCreateDbSecurityGroup(req: operations.GetCreateDbSecurityGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetCreateDbSecurityGroupResponse>;
     getCreateDbSnapshot(req: operations.GetCreateDbSnapshotRequest, config?: AxiosRequestConfig): Promise<operations.GetCreateDbSnapshotResponse>;
-    getCreateDbSubnetGroup(req: operations.GetCreateDbSubnetGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetCreateDbSubnetGroupResponse>;
-    getCreateEventSubscription(req: operations.GetCreateEventSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.GetCreateEventSubscriptionResponse>;
     getCreateOptionGroup(req: operations.GetCreateOptionGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetCreateOptionGroupResponse>;
     getDeleteDbInstance(req: operations.GetDeleteDbInstanceRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteDbInstanceResponse>;
     getDeleteDbParameterGroup(req: operations.GetDeleteDbParameterGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetDeleteDbParameterGroupResponse>;
@@ -43,16 +40,12 @@ export declare class SDK {
     getDescribeEngineDefaultParameters(req: operations.GetDescribeEngineDefaultParametersRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeEngineDefaultParametersResponse>;
     getDescribeEventCategories(req: operations.GetDescribeEventCategoriesRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeEventCategoriesResponse>;
     getDescribeEventSubscriptions(req: operations.GetDescribeEventSubscriptionsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeEventSubscriptionsResponse>;
-    getDescribeEvents(req: operations.GetDescribeEventsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeEventsResponse>;
     getDescribeOptionGroupOptions(req: operations.GetDescribeOptionGroupOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeOptionGroupOptionsResponse>;
     getDescribeOptionGroups(req: operations.GetDescribeOptionGroupsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeOptionGroupsResponse>;
     getDescribeOrderableDbInstanceOptions(req: operations.GetDescribeOrderableDbInstanceOptionsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeOrderableDbInstanceOptionsResponse>;
     getDescribeReservedDbInstances(req: operations.GetDescribeReservedDbInstancesRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeReservedDbInstancesResponse>;
     getDescribeReservedDbInstancesOfferings(req: operations.GetDescribeReservedDbInstancesOfferingsRequest, config?: AxiosRequestConfig): Promise<operations.GetDescribeReservedDbInstancesOfferingsResponse>;
     getListTagsForResource(req: operations.GetListTagsForResourceRequest, config?: AxiosRequestConfig): Promise<operations.GetListTagsForResourceResponse>;
-    getModifyDbInstance(req: operations.GetModifyDbInstanceRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyDbInstanceResponse>;
-    getModifyDbSubnetGroup(req: operations.GetModifyDbSubnetGroupRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyDbSubnetGroupResponse>;
-    getModifyEventSubscription(req: operations.GetModifyEventSubscriptionRequest, config?: AxiosRequestConfig): Promise<operations.GetModifyEventSubscriptionResponse>;
     getPromoteReadReplica(req: operations.GetPromoteReadReplicaRequest, config?: AxiosRequestConfig): Promise<operations.GetPromoteReadReplicaResponse>;
     getPurchaseReservedDbInstancesOffering(req: operations.GetPurchaseReservedDbInstancesOfferingRequest, config?: AxiosRequestConfig): Promise<operations.GetPurchaseReservedDbInstancesOfferingResponse>;
     getRebootDbInstance(req: operations.GetRebootDbInstanceRequest, config?: AxiosRequestConfig): Promise<operations.GetRebootDbInstanceResponse>;
@@ -112,4 +105,3 @@ export declare class SDK {
     postRestoreDbInstanceToPointInTime(req: operations.PostRestoreDbInstanceToPointInTimeRequest, config?: AxiosRequestConfig): Promise<operations.PostRestoreDbInstanceToPointInTimeResponse>;
     postRevokeDbSecurityGroupIngress(req: operations.PostRevokeDbSecurityGroupIngressRequest, config?: AxiosRequestConfig): Promise<operations.PostRevokeDbSecurityGroupIngressResponse>;
 }
-export {};

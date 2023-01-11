@@ -29,13 +29,13 @@ export declare class AutomationEntity extends SpeakeasyBase {
     interval?: string;
     nextProcessOn?: string;
     path?: string;
-    schedule?: Map<string, any>;
+    schedule?: Record<string, any>;
     source?: string;
     trigger?: AutomationEntityTriggerEnum;
     triggerActionPath?: string;
     triggerActions?: string;
     userId?: number;
     userIds?: number[];
-    value?: Map<string, any>;
+    value?: Record<string, any>;
     webhookUrl?: string;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DataFilter } from "./datafilter";
-import { ValueRange } from "./valuerange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MatchedValueRange = void 0;
+var utils_1 = require("../../../internal/utils");
+var datafilter_1 = require("./datafilter");
+var valuerange_1 = require("./valuerange");
 // MatchedValueRange
 /**
  * A value range that was matched by one or more data filers.
@@ -35,13 +38,13 @@ var MatchedValueRange = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dataFilters", elemType: DataFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dataFilters", elemType: datafilter_1.DataFilter }),
         __metadata("design:type", Array)
     ], MatchedValueRange.prototype, "dataFilters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=valueRange" }),
-        __metadata("design:type", ValueRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=valueRange" }),
+        __metadata("design:type", valuerange_1.ValueRange)
     ], MatchedValueRange.prototype, "valueRange", void 0);
     return MatchedValueRange;
-}(SpeakeasyBase));
-export { MatchedValueRange };
+}(utils_1.SpeakeasyBase));
+exports.MatchedValueRange = MatchedValueRange;

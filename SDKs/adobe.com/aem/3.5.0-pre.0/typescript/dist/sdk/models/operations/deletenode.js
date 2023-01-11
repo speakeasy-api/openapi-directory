@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteNodeResponse = exports.DeleteNodeRequest = exports.DeleteNodePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteNodePathParams = /** @class */ (function (_super) {
     __extends(DeleteNodePathParams, _super);
     function DeleteNodePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], DeleteNodePathParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=path" }),
         __metadata("design:type", String)
     ], DeleteNodePathParams.prototype, "path", void 0);
     return DeleteNodePathParams;
-}(SpeakeasyBase));
-export { DeleteNodePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNodePathParams = DeleteNodePathParams;
 var DeleteNodeRequest = /** @class */ (function (_super) {
     __extends(DeleteNodeRequest, _super);
     function DeleteNodeRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteNodePathParams)
     ], DeleteNodeRequest.prototype, "pathParams", void 0);
     return DeleteNodeRequest;
-}(SpeakeasyBase));
-export { DeleteNodeRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNodeRequest = DeleteNodeRequest;
 var DeleteNodeResponse = /** @class */ (function (_super) {
     __extends(DeleteNodeResponse, _super);
     function DeleteNodeResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteNodeResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteNodeResponse.prototype, "statusCode", void 0);
     return DeleteNodeResponse;
-}(SpeakeasyBase));
-export { DeleteNodeResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteNodeResponse = DeleteNodeResponse;

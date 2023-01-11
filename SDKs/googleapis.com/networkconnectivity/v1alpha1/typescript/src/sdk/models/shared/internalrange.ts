@@ -20,49 +20,6 @@ export enum InternalRangeUsageEnum {
 }
 
 
-// InternalRangeInput
-/** 
- * The InternalRange resource for IPAM operations within a VPC network. Used to represent a private address range along with behavioral characterstics of that range (it's usage and peering behavior). Networking resources can link to this range if they are created as belonging to it. Next id: 14
-**/
-export class InternalRangeInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=createTime" })
-  createTime?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=description" })
-  description?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=ipCidrRange" })
-  ipCidrRange?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
-
-  @SpeakeasyMetadata({ data: "json, name=name" })
-  name?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=network" })
-  network?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=overlaps" })
-  overlaps?: InternalRangeOverlapsEnum[];
-
-  @SpeakeasyMetadata({ data: "json, name=peering" })
-  peering?: InternalRangePeeringEnum;
-
-  @SpeakeasyMetadata({ data: "json, name=prefixLength" })
-  prefixLength?: number;
-
-  @SpeakeasyMetadata({ data: "json, name=targetCidrRange" })
-  targetCidrRange?: string[];
-
-  @SpeakeasyMetadata({ data: "json, name=updateTime" })
-  updateTime?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=usage" })
-  usage?: InternalRangeUsageEnum;
-}
-
-
 // InternalRange
 /** 
  * The InternalRange resource for IPAM operations within a VPC network. Used to represent a private address range along with behavioral characterstics of that range (it's usage and peering behavior). Networking resources can link to this range if they are created as belonging to it. Next id: 14
@@ -78,7 +35,7 @@ export class InternalRange extends SpeakeasyBase {
   ipCidrRange?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -106,4 +63,47 @@ export class InternalRange extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=users" })
   users?: string[];
+}
+
+
+// InternalRangeInput
+/** 
+ * The InternalRange resource for IPAM operations within a VPC network. Used to represent a private address range along with behavioral characterstics of that range (it's usage and peering behavior). Networking resources can link to this range if they are created as belonging to it. Next id: 14
+**/
+export class InternalRangeInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=createTime" })
+  createTime?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=description" })
+  description?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=ipCidrRange" })
+  ipCidrRange?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=labels" })
+  labels?: Record<string, string>;
+
+  @SpeakeasyMetadata({ data: "json, name=name" })
+  name?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=network" })
+  network?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=overlaps" })
+  overlaps?: InternalRangeOverlapsEnum[];
+
+  @SpeakeasyMetadata({ data: "json, name=peering" })
+  peering?: InternalRangePeeringEnum;
+
+  @SpeakeasyMetadata({ data: "json, name=prefixLength" })
+  prefixLength?: number;
+
+  @SpeakeasyMetadata({ data: "json, name=targetCidrRange" })
+  targetCidrRange?: string[];
+
+  @SpeakeasyMetadata({ data: "json, name=updateTime" })
+  updateTime?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=usage" })
+  usage?: InternalRangeUsageEnum;
 }

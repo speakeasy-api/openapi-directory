@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TelnetUser = void 0;
+var utils_1 = require("../../../internal/utils");
 var TelnetUser = /** @class */ (function (_super) {
     __extends(TelnetUser, _super);
     function TelnetUser() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groups" }),
         __metadata("design:type", Array)
     ], TelnetUser.prototype, "groups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=hasPassword" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=hasPassword" }),
         __metadata("design:type", Number)
     ], TelnetUser.prototype, "hasPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], TelnetUser.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], TelnetUser.prototype, "username", void 0);
     return TelnetUser;
-}(SpeakeasyBase));
-export { TelnetUser };
+}(utils_1.SpeakeasyBase));
+exports.TelnetUser = TelnetUser;

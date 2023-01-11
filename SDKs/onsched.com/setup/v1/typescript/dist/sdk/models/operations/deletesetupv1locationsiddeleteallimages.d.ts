@@ -11,6 +11,6 @@ export declare class DeleteSetupV1LocationsIdDeleteallimagesRequest extends Spea
 }
 export declare class DeleteSetupV1LocationsIdDeleteallimagesResponse extends SpeakeasyBase {
     contentType: string;
-    deleteSetupV1LocationsIdDeleteallimages200ApplicationJsonBoolean?: boolean;
     statusCode: number;
+    deleteSetupV1LocationsIdDeleteallimages200ApplicationJSONBoolean?: boolean;
 }

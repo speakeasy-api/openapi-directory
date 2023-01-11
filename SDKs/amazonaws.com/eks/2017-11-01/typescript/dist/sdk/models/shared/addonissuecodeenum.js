@@ -1,4 +1,7 @@
-export var AddonIssueCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddonIssueCodeEnum = void 0;
+var AddonIssueCodeEnum;
 (function (AddonIssueCodeEnum) {
     AddonIssueCodeEnum["AccessDenied"] = "AccessDenied";
     AddonIssueCodeEnum["InternalFailure"] = "InternalFailure";
@@ -8,4 +11,4 @@ export var AddonIssueCodeEnum;
     AddonIssueCodeEnum["AdmissionRequestDenied"] = "AdmissionRequestDenied";
     AddonIssueCodeEnum["UnsupportedAddonModification"] = "UnsupportedAddonModification";
     AddonIssueCodeEnum["K8sResourceNotFound"] = "K8sResourceNotFound";
-})(AddonIssueCodeEnum || (AddonIssueCodeEnum = {}));
+})(AddonIssueCodeEnum = exports.AddonIssueCodeEnum || (exports.AddonIssueCodeEnum = {}));

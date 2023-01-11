@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetConsumerV1ServicesResponse = exports.GetConsumerV1ServicesRequest = exports.GetConsumerV1ServicesQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetConsumerV1ServicesQueryParams = /** @class */ (function (_super) {
     __extends(GetConsumerV1ServicesQueryParams, _super);
     function GetConsumerV1ServicesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=allLocations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=allLocations" }),
         __metadata("design:type", Boolean)
     ], GetConsumerV1ServicesQueryParams.prototype, "allLocations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=defaultService" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=defaultService" }),
         __metadata("design:type", Boolean)
     ], GetConsumerV1ServicesQueryParams.prototype, "defaultService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", Number)
     ], GetConsumerV1ServicesQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=locationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=locationId" }),
         __metadata("design:type", String)
     ], GetConsumerV1ServicesQueryParams.prototype, "locationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=name" }),
         __metadata("design:type", String)
     ], GetConsumerV1ServicesQueryParams.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", Number)
     ], GetConsumerV1ServicesQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=scope" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=scope" }),
         __metadata("design:type", Number)
     ], GetConsumerV1ServicesQueryParams.prototype, "scope", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=serviceGroupId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=serviceGroupId" }),
         __metadata("design:type", Number)
     ], GetConsumerV1ServicesQueryParams.prototype, "serviceGroupId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=serviceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=serviceId" }),
         __metadata("design:type", String)
     ], GetConsumerV1ServicesQueryParams.prototype, "serviceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sortDescending" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sortDescending" }),
         __metadata("design:type", Boolean)
     ], GetConsumerV1ServicesQueryParams.prototype, "sortDescending", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sortOrder" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sortOrder" }),
         __metadata("design:type", Number)
     ], GetConsumerV1ServicesQueryParams.prototype, "sortOrder", void 0);
     return GetConsumerV1ServicesQueryParams;
-}(SpeakeasyBase));
-export { GetConsumerV1ServicesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetConsumerV1ServicesQueryParams = GetConsumerV1ServicesQueryParams;
 var GetConsumerV1ServicesRequest = /** @class */ (function (_super) {
     __extends(GetConsumerV1ServicesRequest, _super);
     function GetConsumerV1ServicesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetConsumerV1ServicesQueryParams)
     ], GetConsumerV1ServicesRequest.prototype, "queryParams", void 0);
     return GetConsumerV1ServicesRequest;
-}(SpeakeasyBase));
-export { GetConsumerV1ServicesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetConsumerV1ServicesRequest = GetConsumerV1ServicesRequest;
 var GetConsumerV1ServicesResponse = /** @class */ (function (_super) {
     __extends(GetConsumerV1ServicesResponse, _super);
     function GetConsumerV1ServicesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetConsumerV1ServicesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetConsumerV1ServicesResponse.prototype, "serviceListViewModel", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetConsumerV1ServicesResponse.prototype, "statusCode", void 0);
     return GetConsumerV1ServicesResponse;
-}(SpeakeasyBase));
-export { GetConsumerV1ServicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetConsumerV1ServicesResponse = GetConsumerV1ServicesResponse;

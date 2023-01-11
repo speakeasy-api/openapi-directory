@@ -3,6 +3,6 @@ import * as shared from "../shared";
 export declare class AccountResponse extends SpeakeasyBase {
     account?: shared.Account;
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     statusCode: number;
 }

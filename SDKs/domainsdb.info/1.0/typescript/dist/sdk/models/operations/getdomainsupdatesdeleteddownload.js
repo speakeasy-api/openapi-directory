@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDomainsUpdatesDeletedDownloadResponse = exports.GetDomainsUpdatesDeletedDownloadRequest = exports.GetDomainsUpdatesDeletedDownloadQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetDomainsUpdatesDeletedDownloadQueryParams = /** @class */ (function (_super) {
     __extends(GetDomainsUpdatesDeletedDownloadQueryParams, _super);
     function GetDomainsUpdatesDeletedDownloadQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api_key" }),
         __metadata("design:type", String)
     ], GetDomainsUpdatesDeletedDownloadQueryParams.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=date" }),
         __metadata("design:type", String)
     ], GetDomainsUpdatesDeletedDownloadQueryParams.prototype, "date", void 0);
     return GetDomainsUpdatesDeletedDownloadQueryParams;
-}(SpeakeasyBase));
-export { GetDomainsUpdatesDeletedDownloadQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainsUpdatesDeletedDownloadQueryParams = GetDomainsUpdatesDeletedDownloadQueryParams;
 var GetDomainsUpdatesDeletedDownloadRequest = /** @class */ (function (_super) {
     __extends(GetDomainsUpdatesDeletedDownloadRequest, _super);
     function GetDomainsUpdatesDeletedDownloadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDomainsUpdatesDeletedDownloadQueryParams)
     ], GetDomainsUpdatesDeletedDownloadRequest.prototype, "queryParams", void 0);
     return GetDomainsUpdatesDeletedDownloadRequest;
-}(SpeakeasyBase));
-export { GetDomainsUpdatesDeletedDownloadRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainsUpdatesDeletedDownloadRequest = GetDomainsUpdatesDeletedDownloadRequest;
 var GetDomainsUpdatesDeletedDownloadResponse = /** @class */ (function (_super) {
     __extends(GetDomainsUpdatesDeletedDownloadResponse, _super);
     function GetDomainsUpdatesDeletedDownloadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDomainsUpdatesDeletedDownloadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDomainsUpdatesDeletedDownloadResponse.prototype, "statusCode", void 0);
     return GetDomainsUpdatesDeletedDownloadResponse;
-}(SpeakeasyBase));
-export { GetDomainsUpdatesDeletedDownloadResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDomainsUpdatesDeletedDownloadResponse = GetDomainsUpdatesDeletedDownloadResponse;

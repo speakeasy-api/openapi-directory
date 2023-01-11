@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoStatistics = void 0;
+var utils_1 = require("../../../internal/utils");
 // VideoStatistics
 /**
  * Statistics about the video, such as the number of times the video was viewed or liked.
@@ -33,25 +36,25 @@ var VideoStatistics = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=commentCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=commentCount" }),
         __metadata("design:type", String)
     ], VideoStatistics.prototype, "commentCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dislikeCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dislikeCount" }),
         __metadata("design:type", String)
     ], VideoStatistics.prototype, "dislikeCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=favoriteCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=favoriteCount" }),
         __metadata("design:type", String)
     ], VideoStatistics.prototype, "favoriteCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=likeCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=likeCount" }),
         __metadata("design:type", String)
     ], VideoStatistics.prototype, "likeCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=viewCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=viewCount" }),
         __metadata("design:type", String)
     ], VideoStatistics.prototype, "viewCount", void 0);
     return VideoStatistics;
-}(SpeakeasyBase));
-export { VideoStatistics };
+}(utils_1.SpeakeasyBase));
+exports.VideoStatistics = VideoStatistics;

@@ -16,6 +16,6 @@ export declare class GetSimilarRequest extends SpeakeasyBase {
 }
 export declare class GetSimilarResponse extends SpeakeasyBase {
     contentType: string;
-    getSimilar200ApplicationJsonObject?: GetSimilar200ApplicationJson;
     statusCode: number;
+    getSimilar200ApplicationJSONObject?: GetSimilar200ApplicationJson;
 }

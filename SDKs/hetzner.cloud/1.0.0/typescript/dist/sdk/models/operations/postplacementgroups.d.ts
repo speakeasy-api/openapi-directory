@@ -3,7 +3,7 @@ export declare enum PostPlacementGroupsCreatePlacementGroupRequestTypeEnum {
     Spread = "spread"
 }
 export declare class PostPlacementGroupsCreatePlacementGroupRequest extends SpeakeasyBase {
-    labels?: Map<string, any>;
+    labels?: Record<string, any>;
     name: string;
     type: PostPlacementGroupsCreatePlacementGroupRequestTypeEnum;
 }
@@ -39,7 +39,7 @@ export declare enum PostPlacementGroupsCreatePlacementGroupResponsePlacementGrou
 export declare class PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup extends SpeakeasyBase {
     created: string;
     id: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     name: string;
     servers: number[];
     type: PostPlacementGroupsCreatePlacementGroupResponsePlacementGroupTypeEnum;

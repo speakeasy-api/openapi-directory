@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Attachment = void 0;
+var utils_1 = require("../../../internal/utils");
 // Attachment
 /**
  * An attachment to a case communication. The attachment consists of the file name and the content of the file.
@@ -33,13 +36,13 @@ var Attachment = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data" }),
         __metadata("design:type", String)
     ], Attachment.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileName" }),
         __metadata("design:type", String)
     ], Attachment.prototype, "fileName", void 0);
     return Attachment;
-}(SpeakeasyBase));
-export { Attachment };
+}(utils_1.SpeakeasyBase));
+exports.Attachment = Attachment;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,29 +23,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Interval } from "./interval";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IntervalCollection = void 0;
+var utils_1 = require("../../../internal/utils");
+var interval_1 = require("./interval");
 var IntervalCollection = /** @class */ (function (_super) {
     __extends(IntervalCollection, _super);
     function IntervalCollection() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=baseCurrency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=baseCurrency" }),
         __metadata("design:type", String)
     ], IntervalCollection.prototype, "baseCurrency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=intervals", elemType: Interval }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=intervals", elemType: interval_1.Interval }),
         __metadata("design:type", Array)
     ], IntervalCollection.prototype, "intervals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], IntervalCollection.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=symbol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=symbol" }),
         __metadata("design:type", String)
     ], IntervalCollection.prototype, "symbol", void 0);
     return IntervalCollection;
-}(SpeakeasyBase));
-export { IntervalCollection };
+}(utils_1.SpeakeasyBase));
+exports.IntervalCollection = IntervalCollection;

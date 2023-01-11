@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetForecastTimeSeriesWrfResponse = exports.GetForecastTimeSeriesWrfRequest = exports.GetForecastTimeSeriesWrfQueryParams = exports.GetForecastTimeSeriesWrfPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetForecastTimeSeriesWrfPathParams = /** @class */ (function (_super) {
     __extends(GetForecastTimeSeriesWrfPathParams, _super);
     function GetForecastTimeSeriesWrfPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=latitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=latitude" }),
         __metadata("design:type", Number)
     ], GetForecastTimeSeriesWrfPathParams.prototype, "latitude", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=longitude" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=longitude" }),
         __metadata("design:type", Number)
     ], GetForecastTimeSeriesWrfPathParams.prototype, "longitude", void 0);
     return GetForecastTimeSeriesWrfPathParams;
-}(SpeakeasyBase));
-export { GetForecastTimeSeriesWrfPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetForecastTimeSeriesWrfPathParams = GetForecastTimeSeriesWrfPathParams;
 var GetForecastTimeSeriesWrfQueryParams = /** @class */ (function (_super) {
     __extends(GetForecastTimeSeriesWrfQueryParams, _super);
     function GetForecastTimeSeriesWrfQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=days" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=days" }),
         __metadata("design:type", Number)
     ], GetForecastTimeSeriesWrfQueryParams.prototype, "days", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endtime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endtime" }),
         __metadata("design:type", String)
     ], GetForecastTimeSeriesWrfQueryParams.prototype, "endtime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=entryid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=entryid" }),
         __metadata("design:type", String)
     ], GetForecastTimeSeriesWrfQueryParams.prototype, "entryid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=hours" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=hours" }),
         __metadata("design:type", Number)
     ], GetForecastTimeSeriesWrfQueryParams.prototype, "hours", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=inittime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=inittime" }),
         __metadata("design:type", String)
     ], GetForecastTimeSeriesWrfQueryParams.prototype, "inittime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=wave" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=wave" }),
         __metadata("design:type", String)
     ], GetForecastTimeSeriesWrfQueryParams.prototype, "wave", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=weather" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=weather" }),
         __metadata("design:type", String)
     ], GetForecastTimeSeriesWrfQueryParams.prototype, "weather", void 0);
     return GetForecastTimeSeriesWrfQueryParams;
-}(SpeakeasyBase));
-export { GetForecastTimeSeriesWrfQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetForecastTimeSeriesWrfQueryParams = GetForecastTimeSeriesWrfQueryParams;
 var GetForecastTimeSeriesWrfRequest = /** @class */ (function (_super) {
     __extends(GetForecastTimeSeriesWrfRequest, _super);
     function GetForecastTimeSeriesWrfRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetForecastTimeSeriesWrfPathParams)
     ], GetForecastTimeSeriesWrfRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetForecastTimeSeriesWrfQueryParams)
     ], GetForecastTimeSeriesWrfRequest.prototype, "queryParams", void 0);
     return GetForecastTimeSeriesWrfRequest;
-}(SpeakeasyBase));
-export { GetForecastTimeSeriesWrfRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetForecastTimeSeriesWrfRequest = GetForecastTimeSeriesWrfRequest;
 var GetForecastTimeSeriesWrfResponse = /** @class */ (function (_super) {
     __extends(GetForecastTimeSeriesWrfResponse, _super);
     function GetForecastTimeSeriesWrfResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetForecastTimeSeriesWrfResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetForecastTimeSeriesWrfResponse.prototype, "statusCode", void 0);
     return GetForecastTimeSeriesWrfResponse;
-}(SpeakeasyBase));
-export { GetForecastTimeSeriesWrfResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetForecastTimeSeriesWrfResponse = GetForecastTimeSeriesWrfResponse;

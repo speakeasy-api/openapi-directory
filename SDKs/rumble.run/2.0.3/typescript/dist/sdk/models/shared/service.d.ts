@@ -4,10 +4,10 @@ export declare class Service extends SpeakeasyBase {
     addressesExtra?: string[];
     agentName?: string;
     alive?: boolean;
-    attributes?: Map<string, string>;
+    attributes?: Record<string, string>;
     comments?: string;
     createdAt?: number;
-    credentials?: Map<string, string>;
+    credentials?: Record<string, string>;
     detectedBy?: string;
     domains?: string[];
     firstSeen?: number;
@@ -28,7 +28,7 @@ export declare class Service extends SpeakeasyBase {
     organizationId?: string;
     os?: string;
     osVersion?: string;
-    rtts?: Map<string, any>;
+    rtts?: Record<string, any>;
     serviceAddress?: string;
     serviceAssetId?: string;
     serviceCount?: number;
@@ -37,7 +37,7 @@ export declare class Service extends SpeakeasyBase {
     serviceCountTcp?: number;
     serviceCountUdp?: number;
     serviceCreatedAt?: number;
-    serviceData?: Map<string, string>;
+    serviceData?: Record<string, string>;
     serviceId: string;
     serviceLink?: string;
     servicePort?: string;
@@ -51,10 +51,10 @@ export declare class Service extends SpeakeasyBase {
     serviceTransport?: string;
     serviceUpdatedAt?: number;
     serviceVhost?: string;
-    services?: Map<string, Map<string, string>>;
+    services?: Record<string, Record<string, string>>;
     siteId?: string;
     siteName?: string;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     type?: string;
     updatedAt?: number;
 }

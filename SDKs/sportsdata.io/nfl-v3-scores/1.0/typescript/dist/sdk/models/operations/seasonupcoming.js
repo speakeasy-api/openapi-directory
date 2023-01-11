@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,53 +23,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var SeasonUpcomingFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SeasonUpcomingResponse = exports.SeasonUpcomingRequest = exports.SeasonUpcomingPathParams = exports.SeasonUpcomingFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var SeasonUpcomingFormatEnum;
 (function (SeasonUpcomingFormatEnum) {
     SeasonUpcomingFormatEnum["Xml"] = "XML";
     SeasonUpcomingFormatEnum["Json"] = "JSON";
-})(SeasonUpcomingFormatEnum || (SeasonUpcomingFormatEnum = {}));
+})(SeasonUpcomingFormatEnum = exports.SeasonUpcomingFormatEnum || (exports.SeasonUpcomingFormatEnum = {}));
 var SeasonUpcomingPathParams = /** @class */ (function (_super) {
     __extends(SeasonUpcomingPathParams, _super);
     function SeasonUpcomingPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], SeasonUpcomingPathParams.prototype, "format", void 0);
     return SeasonUpcomingPathParams;
-}(SpeakeasyBase));
-export { SeasonUpcomingPathParams };
+}(utils_1.SpeakeasyBase));
+exports.SeasonUpcomingPathParams = SeasonUpcomingPathParams;
 var SeasonUpcomingRequest = /** @class */ (function (_super) {
     __extends(SeasonUpcomingRequest, _super);
     function SeasonUpcomingRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", SeasonUpcomingPathParams)
     ], SeasonUpcomingRequest.prototype, "pathParams", void 0);
     return SeasonUpcomingRequest;
-}(SpeakeasyBase));
-export { SeasonUpcomingRequest };
+}(utils_1.SpeakeasyBase));
+exports.SeasonUpcomingRequest = SeasonUpcomingRequest;
 var SeasonUpcomingResponse = /** @class */ (function (_super) {
     __extends(SeasonUpcomingResponse, _super);
     function SeasonUpcomingResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], SeasonUpcomingResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
-    ], SeasonUpcomingResponse.prototype, "seasonUpcoming200ApplicationJsonInteger", void 0);
+    ], SeasonUpcomingResponse.prototype, "seasonUpcoming200ApplicationJSONInteger", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], SeasonUpcomingResponse.prototype, "statusCode", void 0);
     return SeasonUpcomingResponse;
-}(SpeakeasyBase));
-export { SeasonUpcomingResponse };
+}(utils_1.SpeakeasyBase));
+exports.SeasonUpcomingResponse = SeasonUpcomingResponse;

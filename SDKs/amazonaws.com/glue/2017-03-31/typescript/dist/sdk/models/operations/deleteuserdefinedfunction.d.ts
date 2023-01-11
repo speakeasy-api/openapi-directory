@@ -19,7 +19,7 @@ export declare class DeleteUserDefinedFunctionRequest extends SpeakeasyBase {
 }
 export declare class DeleteUserDefinedFunctionResponse extends SpeakeasyBase {
     contentType: string;
-    deleteUserDefinedFunctionResponse?: Map<string, any>;
+    deleteUserDefinedFunctionResponse?: Record<string, any>;
     entityNotFoundException?: any;
     internalServiceException?: any;
     invalidInputException?: any;

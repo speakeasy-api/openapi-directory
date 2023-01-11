@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteVolumesFsNameResponse = exports.DeleteVolumesFsNameRequest = exports.DeleteVolumesFsNameHeaders = exports.DeleteVolumesFsNamePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteVolumesFsNamePathParams = /** @class */ (function (_super) {
     __extends(DeleteVolumesFsNamePathParams, _super);
     function DeleteVolumesFsNamePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=name" }),
         __metadata("design:type", String)
     ], DeleteVolumesFsNamePathParams.prototype, "name", void 0);
     return DeleteVolumesFsNamePathParams;
-}(SpeakeasyBase));
-export { DeleteVolumesFsNamePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteVolumesFsNamePathParams = DeleteVolumesFsNamePathParams;
 var DeleteVolumesFsNameHeaders = /** @class */ (function (_super) {
     __extends(DeleteVolumesFsNameHeaders, _super);
     function DeleteVolumesFsNameHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Project-Id" }),
         __metadata("design:type", String)
     ], DeleteVolumesFsNameHeaders.prototype, "xAuthProjectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Auth-Token" }),
         __metadata("design:type", String)
     ], DeleteVolumesFsNameHeaders.prototype, "xAuthToken", void 0);
     return DeleteVolumesFsNameHeaders;
-}(SpeakeasyBase));
-export { DeleteVolumesFsNameHeaders };
+}(utils_1.SpeakeasyBase));
+exports.DeleteVolumesFsNameHeaders = DeleteVolumesFsNameHeaders;
 var DeleteVolumesFsNameRequest = /** @class */ (function (_super) {
     __extends(DeleteVolumesFsNameRequest, _super);
     function DeleteVolumesFsNameRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteVolumesFsNamePathParams)
     ], DeleteVolumesFsNameRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteVolumesFsNameHeaders)
     ], DeleteVolumesFsNameRequest.prototype, "headers", void 0);
     return DeleteVolumesFsNameRequest;
-}(SpeakeasyBase));
-export { DeleteVolumesFsNameRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteVolumesFsNameRequest = DeleteVolumesFsNameRequest;
 var DeleteVolumesFsNameResponse = /** @class */ (function (_super) {
     __extends(DeleteVolumesFsNameResponse, _super);
     function DeleteVolumesFsNameResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteVolumesFsNameResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteVolumesFsNameResponse.prototype, "statusCode", void 0);
     return DeleteVolumesFsNameResponse;
-}(SpeakeasyBase));
-export { DeleteVolumesFsNameResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteVolumesFsNameResponse = DeleteVolumesFsNameResponse;

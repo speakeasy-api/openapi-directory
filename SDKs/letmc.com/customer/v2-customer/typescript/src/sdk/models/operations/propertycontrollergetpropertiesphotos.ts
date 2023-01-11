@@ -5,7 +5,7 @@ import * as shared from "../shared";
 
 export class PropertyControllerGetPropertiesPhotosPathParams extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=propertyID" })
-  propertyId: string;
+  propertyID: string;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=shortName" })
   shortName: string;

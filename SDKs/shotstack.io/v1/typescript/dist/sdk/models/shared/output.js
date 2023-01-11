@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Poster } from "./poster";
-import { Range } from "./range";
-import { Size } from "./size";
-import { Thumbnail } from "./thumbnail";
-export var OutputAspectRatioEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Output = exports.OutputScaleToEnum = exports.OutputResolutionEnum = exports.OutputQualityEnum = exports.OutputFormatEnum = exports.OutputAspectRatioEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var poster_1 = require("./poster");
+var range_1 = require("./range");
+var size_1 = require("./size");
+var thumbnail_1 = require("./thumbnail");
+var OutputAspectRatioEnum;
 (function (OutputAspectRatioEnum) {
     OutputAspectRatioEnum["Sixteen9"] = "16:9";
     OutputAspectRatioEnum["Nine16"] = "9:16";
     OutputAspectRatioEnum["One1"] = "1:1";
     OutputAspectRatioEnum["Four5"] = "4:5";
     OutputAspectRatioEnum["Four3"] = "4:3";
-})(OutputAspectRatioEnum || (OutputAspectRatioEnum = {}));
-export var OutputFormatEnum;
+})(OutputAspectRatioEnum = exports.OutputAspectRatioEnum || (exports.OutputAspectRatioEnum = {}));
+var OutputFormatEnum;
 (function (OutputFormatEnum) {
     OutputFormatEnum["Mp4"] = "mp4";
     OutputFormatEnum["Gif"] = "gif";
@@ -43,29 +46,29 @@ export var OutputFormatEnum;
     OutputFormatEnum["Jpg"] = "jpg";
     OutputFormatEnum["Png"] = "png";
     OutputFormatEnum["Bmp"] = "bmp";
-})(OutputFormatEnum || (OutputFormatEnum = {}));
-export var OutputQualityEnum;
+})(OutputFormatEnum = exports.OutputFormatEnum || (exports.OutputFormatEnum = {}));
+var OutputQualityEnum;
 (function (OutputQualityEnum) {
     OutputQualityEnum["Low"] = "low";
     OutputQualityEnum["Medium"] = "medium";
     OutputQualityEnum["High"] = "high";
-})(OutputQualityEnum || (OutputQualityEnum = {}));
-export var OutputResolutionEnum;
+})(OutputQualityEnum = exports.OutputQualityEnum || (exports.OutputQualityEnum = {}));
+var OutputResolutionEnum;
 (function (OutputResolutionEnum) {
     OutputResolutionEnum["Preview"] = "preview";
     OutputResolutionEnum["Mobile"] = "mobile";
     OutputResolutionEnum["Sd"] = "sd";
     OutputResolutionEnum["Hd"] = "hd";
     OutputResolutionEnum["OneThousandAndEighty"] = "1080";
-})(OutputResolutionEnum || (OutputResolutionEnum = {}));
-export var OutputScaleToEnum;
+})(OutputResolutionEnum = exports.OutputResolutionEnum || (exports.OutputResolutionEnum = {}));
+var OutputScaleToEnum;
 (function (OutputScaleToEnum) {
     OutputScaleToEnum["Preview"] = "preview";
     OutputScaleToEnum["Mobile"] = "mobile";
     OutputScaleToEnum["Sd"] = "sd";
     OutputScaleToEnum["Hd"] = "hd";
     OutputScaleToEnum["OneThousandAndEighty"] = "1080";
-})(OutputScaleToEnum || (OutputScaleToEnum = {}));
+})(OutputScaleToEnum = exports.OutputScaleToEnum || (exports.OutputScaleToEnum = {}));
 // Output
 /**
  * The output format, render range and type of media to generate.
@@ -76,49 +79,49 @@ var Output = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=aspectRatio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=aspectRatio" }),
         __metadata("design:type", String)
     ], Output.prototype, "aspectRatio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinations" }),
         __metadata("design:type", Array)
     ], Output.prototype, "destinations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=format" }),
         __metadata("design:type", String)
     ], Output.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fps" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fps" }),
         __metadata("design:type", Number)
     ], Output.prototype, "fps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=poster" }),
-        __metadata("design:type", Poster)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=poster" }),
+        __metadata("design:type", poster_1.Poster)
     ], Output.prototype, "poster", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=quality" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=quality" }),
         __metadata("design:type", String)
     ], Output.prototype, "quality", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=range" }),
-        __metadata("design:type", Range)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=range" }),
+        __metadata("design:type", range_1.Range)
     ], Output.prototype, "range", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resolution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resolution" }),
         __metadata("design:type", String)
     ], Output.prototype, "resolution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scaleTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scaleTo" }),
         __metadata("design:type", String)
     ], Output.prototype, "scaleTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
-        __metadata("design:type", Size)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
+        __metadata("design:type", size_1.Size)
     ], Output.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=thumbnail" }),
-        __metadata("design:type", Thumbnail)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=thumbnail" }),
+        __metadata("design:type", thumbnail_1.Thumbnail)
     ], Output.prototype, "thumbnail", void 0);
     return Output;
-}(SpeakeasyBase));
-export { Output };
+}(utils_1.SpeakeasyBase));
+exports.Output = Output;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { LanguageEnum } from "./languageenum";
-import { Location } from "./location";
-import { MappingEntry } from "./mappingentry";
-import { CatalogEntry } from "./catalogentry";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPlanRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var languageenum_1 = require("./languageenum");
+var location_1 = require("./location");
+var mappingentry_1 = require("./mappingentry");
+var catalogentry_1 = require("./catalogentry");
 var GetPlanRequest = /** @class */ (function (_super) {
     __extends(GetPlanRequest, _super);
     function GetPlanRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AdditionalPlanOptionsMap" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AdditionalPlanOptionsMap" }),
+        __metadata("design:type", Object)
     ], GetPlanRequest.prototype, "additionalPlanOptionsMap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Language" }),
         __metadata("design:type", String)
     ], GetPlanRequest.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Location" }),
-        __metadata("design:type", Location)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Location" }),
+        __metadata("design:type", location_1.Location)
     ], GetPlanRequest.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Mapping", elemType: MappingEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Mapping", elemType: mappingentry_1.MappingEntry }),
         __metadata("design:type", Array)
     ], GetPlanRequest.prototype, "mapping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Sinks", elemType: CatalogEntry }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Sinks", elemType: catalogentry_1.CatalogEntry }),
         __metadata("design:type", Array)
     ], GetPlanRequest.prototype, "sinks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Source" }),
-        __metadata("design:type", CatalogEntry)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Source" }),
+        __metadata("design:type", catalogentry_1.CatalogEntry)
     ], GetPlanRequest.prototype, "source", void 0);
     return GetPlanRequest;
-}(SpeakeasyBase));
-export { GetPlanRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetPlanRequest = GetPlanRequest;

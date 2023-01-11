@@ -37,6 +37,6 @@ export declare class GetElectionDatesRequest extends SpeakeasyBase {
 }
 export declare class GetElectionDatesResponse extends SpeakeasyBase {
     contentType: string;
-    getElectionDatesDefaultApplicationJsonObject?: GetElectionDatesDefaultApplicationJson;
     statusCode: number;
+    getElectionDatesDefaultApplicationJSONObject?: GetElectionDatesDefaultApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,108 +23,110 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetDeleteClusterSnapshotActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDeleteClusterSnapshotResponse = exports.GetDeleteClusterSnapshotRequest = exports.GetDeleteClusterSnapshotHeaders = exports.GetDeleteClusterSnapshotQueryParams = exports.GetDeleteClusterSnapshotVersionEnum = exports.GetDeleteClusterSnapshotActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetDeleteClusterSnapshotActionEnum;
 (function (GetDeleteClusterSnapshotActionEnum) {
     GetDeleteClusterSnapshotActionEnum["DeleteClusterSnapshot"] = "DeleteClusterSnapshot";
-})(GetDeleteClusterSnapshotActionEnum || (GetDeleteClusterSnapshotActionEnum = {}));
-export var GetDeleteClusterSnapshotVersionEnum;
+})(GetDeleteClusterSnapshotActionEnum = exports.GetDeleteClusterSnapshotActionEnum || (exports.GetDeleteClusterSnapshotActionEnum = {}));
+var GetDeleteClusterSnapshotVersionEnum;
 (function (GetDeleteClusterSnapshotVersionEnum) {
     GetDeleteClusterSnapshotVersionEnum["TwoThousandAndTwelve1201"] = "2012-12-01";
-})(GetDeleteClusterSnapshotVersionEnum || (GetDeleteClusterSnapshotVersionEnum = {}));
+})(GetDeleteClusterSnapshotVersionEnum = exports.GetDeleteClusterSnapshotVersionEnum || (exports.GetDeleteClusterSnapshotVersionEnum = {}));
 var GetDeleteClusterSnapshotQueryParams = /** @class */ (function (_super) {
     __extends(GetDeleteClusterSnapshotQueryParams, _super);
     function GetDeleteClusterSnapshotQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetDeleteClusterSnapshotQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SnapshotClusterIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SnapshotClusterIdentifier" }),
         __metadata("design:type", String)
     ], GetDeleteClusterSnapshotQueryParams.prototype, "snapshotClusterIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=SnapshotIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=SnapshotIdentifier" }),
         __metadata("design:type", String)
     ], GetDeleteClusterSnapshotQueryParams.prototype, "snapshotIdentifier", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetDeleteClusterSnapshotQueryParams.prototype, "version", void 0);
     return GetDeleteClusterSnapshotQueryParams;
-}(SpeakeasyBase));
-export { GetDeleteClusterSnapshotQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteClusterSnapshotQueryParams = GetDeleteClusterSnapshotQueryParams;
 var GetDeleteClusterSnapshotHeaders = /** @class */ (function (_super) {
     __extends(GetDeleteClusterSnapshotHeaders, _super);
     function GetDeleteClusterSnapshotHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetDeleteClusterSnapshotHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetDeleteClusterSnapshotHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetDeleteClusterSnapshotHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetDeleteClusterSnapshotHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetDeleteClusterSnapshotHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetDeleteClusterSnapshotHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetDeleteClusterSnapshotHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetDeleteClusterSnapshotHeaders;
-}(SpeakeasyBase));
-export { GetDeleteClusterSnapshotHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteClusterSnapshotHeaders = GetDeleteClusterSnapshotHeaders;
 var GetDeleteClusterSnapshotRequest = /** @class */ (function (_super) {
     __extends(GetDeleteClusterSnapshotRequest, _super);
     function GetDeleteClusterSnapshotRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteClusterSnapshotQueryParams)
     ], GetDeleteClusterSnapshotRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetDeleteClusterSnapshotHeaders)
     ], GetDeleteClusterSnapshotRequest.prototype, "headers", void 0);
     return GetDeleteClusterSnapshotRequest;
-}(SpeakeasyBase));
-export { GetDeleteClusterSnapshotRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteClusterSnapshotRequest = GetDeleteClusterSnapshotRequest;
 var GetDeleteClusterSnapshotResponse = /** @class */ (function (_super) {
     __extends(GetDeleteClusterSnapshotResponse, _super);
     function GetDeleteClusterSnapshotResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetDeleteClusterSnapshotResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetDeleteClusterSnapshotResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetDeleteClusterSnapshotResponse.prototype, "statusCode", void 0);
     return GetDeleteClusterSnapshotResponse;
-}(SpeakeasyBase));
-export { GetDeleteClusterSnapshotResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDeleteClusterSnapshotResponse = GetDeleteClusterSnapshotResponse;

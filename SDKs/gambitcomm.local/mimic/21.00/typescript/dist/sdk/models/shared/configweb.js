@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,36 +23,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigWeb = void 0;
+var utils_1 = require("../../../internal/utils");
 var ConfigWeb = /** @class */ (function (_super) {
     __extends(ConfigWeb, _super);
     function ConfigWeb() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_persistent_connections" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_persistent_connections" }),
         __metadata("design:type", Number)
     ], ConfigWeb.prototype, "isPersistentConnections", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], ConfigWeb.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], ConfigWeb.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rule" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rule" }),
         __metadata("design:type", String)
     ], ConfigWeb.prototype, "rule", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], ConfigWeb.prototype, "username", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=wsdl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=wsdl" }),
         __metadata("design:type", String)
     ], ConfigWeb.prototype, "wsdl", void 0);
     return ConfigWeb;
-}(SpeakeasyBase));
-export { ConfigWeb };
+}(utils_1.SpeakeasyBase));
+exports.ConfigWeb = ConfigWeb;

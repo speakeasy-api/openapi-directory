@@ -1,4 +1,7 @@
-export var CompatibilityEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompatibilityEnum = void 0;
+var CompatibilityEnum;
 (function (CompatibilityEnum) {
     CompatibilityEnum["None"] = "NONE";
     CompatibilityEnum["Disabled"] = "DISABLED";
@@ -8,4 +11,4 @@ export var CompatibilityEnum;
     CompatibilityEnum["ForwardAll"] = "FORWARD_ALL";
     CompatibilityEnum["Full"] = "FULL";
     CompatibilityEnum["FullAll"] = "FULL_ALL";
-})(CompatibilityEnum || (CompatibilityEnum = {}));
+})(CompatibilityEnum = exports.CompatibilityEnum || (exports.CompatibilityEnum = {}));

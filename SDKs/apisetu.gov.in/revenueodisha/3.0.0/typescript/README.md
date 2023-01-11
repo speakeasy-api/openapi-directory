@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { RdcerRequest, RdcerResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,25 +30,25 @@ const req: RdcerRequest = {
   security: {
     apiKey: {
       apiKey: "YOUR_API_KEY_HERE",
-    }
+    },
     clientId: {
       apiKey: "YOUR_API_KEY_HERE",
     },
   },
   request: {
     certificateParameters: {
-      dob: "velit",
-      fullName: "sit",
-      regdno: "non",
-      uid: "enim",
+      dob: "sit",
+      fullName: "voluptas",
+      regdno: "culpa",
+      uid: "expedita",
     },
-    consentArtifact: "reprehenderit",
+    consentArtifact: "consequuntur",
     format: "pdf",
-    txnId: "voluptates",
+    txnId: "expedita",
   },
 };
 
-sdk.sdk.rdcer(req).then((res: RdcerResponse | AxiosError) => {
+sdk.apIs.rdcer(req).then((res: RdcerResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -58,7 +57,7 @@ sdk.sdk.rdcer(req).then((res: RdcerResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### APIs
 
 * `rdcer` - Copy of Registered Deed
 * `ror1b` - Records of Rights

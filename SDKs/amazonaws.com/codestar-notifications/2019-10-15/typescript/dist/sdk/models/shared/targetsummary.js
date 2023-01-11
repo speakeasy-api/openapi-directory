@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TargetStatusEnum } from "./targetstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TargetSummary = void 0;
+var utils_1 = require("../../../internal/utils");
+var targetstatusenum_1 = require("./targetstatusenum");
 // TargetSummary
 /**
  * Information about the targets specified for a notification rule.
@@ -34,17 +37,17 @@ var TargetSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetAddress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetAddress" }),
         __metadata("design:type", String)
     ], TargetSummary.prototype, "targetAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetStatus" }),
         __metadata("design:type", String)
     ], TargetSummary.prototype, "targetStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetType" }),
         __metadata("design:type", String)
     ], TargetSummary.prototype, "targetType", void 0);
     return TargetSummary;
-}(SpeakeasyBase));
-export { TargetSummary };
+}(utils_1.SpeakeasyBase));
+exports.TargetSummary = TargetSummary;

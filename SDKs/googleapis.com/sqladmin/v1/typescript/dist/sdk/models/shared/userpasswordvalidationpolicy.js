@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PasswordStatus } from "./passwordstatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserPasswordValidationPolicy = void 0;
+var utils_1 = require("../../../internal/utils");
+var passwordstatus_1 = require("./passwordstatus");
 // UserPasswordValidationPolicy
 /**
  * User level password validation policy.
@@ -34,25 +37,25 @@ var UserPasswordValidationPolicy = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=allowedFailedAttempts" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=allowedFailedAttempts" }),
         __metadata("design:type", Number)
     ], UserPasswordValidationPolicy.prototype, "allowedFailedAttempts", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enableFailedAttemptsCheck" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enableFailedAttemptsCheck" }),
         __metadata("design:type", Boolean)
     ], UserPasswordValidationPolicy.prototype, "enableFailedAttemptsCheck", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enablePasswordVerification" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enablePasswordVerification" }),
         __metadata("design:type", Boolean)
     ], UserPasswordValidationPolicy.prototype, "enablePasswordVerification", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passwordExpirationDuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passwordExpirationDuration" }),
         __metadata("design:type", String)
     ], UserPasswordValidationPolicy.prototype, "passwordExpirationDuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
-        __metadata("design:type", PasswordStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
+        __metadata("design:type", passwordstatus_1.PasswordStatus)
     ], UserPasswordValidationPolicy.prototype, "status", void 0);
     return UserPasswordValidationPolicy;
-}(SpeakeasyBase));
-export { UserPasswordValidationPolicy };
+}(utils_1.SpeakeasyBase));
+exports.UserPasswordValidationPolicy = UserPasswordValidationPolicy;

@@ -16,7 +16,7 @@ export enum EventTypeEnum {
 **/
 export class Event extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=details" })
-  details?: Map<string, string>;
+  details?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=reportTime" })
   reportTime?: string;

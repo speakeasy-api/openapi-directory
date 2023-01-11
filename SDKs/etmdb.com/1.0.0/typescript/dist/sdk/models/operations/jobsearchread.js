@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobSearchReadResponse = exports.JobSearchReadRequest = exports.JobSearchReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var JobSearchReadPathParams = /** @class */ (function (_super) {
     __extends(JobSearchReadPathParams, _super);
     function JobSearchReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=job_title" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=job_title" }),
         __metadata("design:type", String)
     ], JobSearchReadPathParams.prototype, "jobTitle", void 0);
     return JobSearchReadPathParams;
-}(SpeakeasyBase));
-export { JobSearchReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.JobSearchReadPathParams = JobSearchReadPathParams;
 var JobSearchReadRequest = /** @class */ (function (_super) {
     __extends(JobSearchReadRequest, _super);
     function JobSearchReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", JobSearchReadPathParams)
     ], JobSearchReadRequest.prototype, "pathParams", void 0);
     return JobSearchReadRequest;
-}(SpeakeasyBase));
-export { JobSearchReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.JobSearchReadRequest = JobSearchReadRequest;
 var JobSearchReadResponse = /** @class */ (function (_super) {
     __extends(JobSearchReadResponse, _super);
     function JobSearchReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], JobSearchReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], JobSearchReadResponse.prototype, "statusCode", void 0);
     return JobSearchReadResponse;
-}(SpeakeasyBase));
-export { JobSearchReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.JobSearchReadResponse = JobSearchReadResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,16 +23,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PayorEmailOptOutRequest = void 0;
+var utils_1 = require("../../../internal/utils");
 var PayorEmailOptOutRequest = /** @class */ (function (_super) {
     __extends(PayorEmailOptOutRequest, _super);
     function PayorEmailOptOutRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reminderEmailsOptOut" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reminderEmailsOptOut" }),
         __metadata("design:type", Boolean)
     ], PayorEmailOptOutRequest.prototype, "reminderEmailsOptOut", void 0);
     return PayorEmailOptOutRequest;
-}(SpeakeasyBase));
-export { PayorEmailOptOutRequest };
+}(utils_1.SpeakeasyBase));
+exports.PayorEmailOptOutRequest = PayorEmailOptOutRequest;

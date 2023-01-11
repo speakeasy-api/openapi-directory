@@ -5,6 +5,6 @@ import { GoogleCloudRecommendationengineV1beta1FeatureMapFloatList } from "./goo
  * FeatureMap represents extra features that customers want to include in the recommendation model for catalogs/user events as categorical/numerical features.
 **/
 export declare class GoogleCloudRecommendationengineV1beta1FeatureMap extends SpeakeasyBase {
-    categoricalFeatures?: Map<string, GoogleCloudRecommendationengineV1beta1FeatureMapStringList>;
-    numericalFeatures?: Map<string, GoogleCloudRecommendationengineV1beta1FeatureMapFloatList>;
+    categoricalFeatures?: Record<string, GoogleCloudRecommendationengineV1beta1FeatureMapStringList>;
+    numericalFeatures?: Record<string, GoogleCloudRecommendationengineV1beta1FeatureMapFloatList>;
 }

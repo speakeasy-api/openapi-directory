@@ -46,11 +46,11 @@ export class GetOrganizationWebhooksLogsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationWebhooksLogs200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationWebhooksLogs200ApplicationJSONObject?: Record<string, any>;
 }

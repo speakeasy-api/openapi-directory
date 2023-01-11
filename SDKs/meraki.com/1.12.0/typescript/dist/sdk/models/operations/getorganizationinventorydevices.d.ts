@@ -19,7 +19,7 @@ export declare class GetOrganizationInventoryDevicesRequest extends SpeakeasyBas
 }
 export declare class GetOrganizationInventoryDevicesResponse extends SpeakeasyBase {
     contentType: string;
-    headers: Map<string, string[]>;
+    headers: Record<string, string[]>;
     statusCode: number;
-    getOrganizationInventoryDevices200ApplicationJsonObject?: Map<string, any>;
+    getOrganizationInventoryDevices200ApplicationJSONObject?: Record<string, any>;
 }

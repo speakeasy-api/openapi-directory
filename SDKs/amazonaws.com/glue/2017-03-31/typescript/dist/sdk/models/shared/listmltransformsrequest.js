@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,34 +23,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TransformFilterCriteria } from "./transformfiltercriteria";
-import { TransformSortCriteria } from "./transformsortcriteria";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListMlTransformsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var transformfiltercriteria_1 = require("./transformfiltercriteria");
+var transformsortcriteria_1 = require("./transformsortcriteria");
 var ListMlTransformsRequest = /** @class */ (function (_super) {
     __extends(ListMlTransformsRequest, _super);
     function ListMlTransformsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Filter" }),
-        __metadata("design:type", TransformFilterCriteria)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Filter" }),
+        __metadata("design:type", transformfiltercriteria_1.TransformFilterCriteria)
     ], ListMlTransformsRequest.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MaxResults" }),
         __metadata("design:type", Number)
     ], ListMlTransformsRequest.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], ListMlTransformsRequest.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Sort" }),
-        __metadata("design:type", TransformSortCriteria)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Sort" }),
+        __metadata("design:type", transformsortcriteria_1.TransformSortCriteria)
     ], ListMlTransformsRequest.prototype, "sort", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tags" }),
+        __metadata("design:type", Object)
     ], ListMlTransformsRequest.prototype, "tags", void 0);
     return ListMlTransformsRequest;
-}(SpeakeasyBase));
-export { ListMlTransformsRequest };
+}(utils_1.SpeakeasyBase));
+exports.ListMlTransformsRequest = ListMlTransformsRequest;

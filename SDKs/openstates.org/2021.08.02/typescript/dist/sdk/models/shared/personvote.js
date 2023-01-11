@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CompactPerson } from "./compactperson";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PersonVote = void 0;
+var utils_1 = require("../../../internal/utils");
+var compactperson_1 = require("./compactperson");
 var PersonVote = /** @class */ (function (_super) {
     __extends(PersonVote, _super);
     function PersonVote() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=option" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=option" }),
         __metadata("design:type", String)
     ], PersonVote.prototype, "option", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voter" }),
-        __metadata("design:type", CompactPerson)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voter" }),
+        __metadata("design:type", compactperson_1.CompactPerson)
     ], PersonVote.prototype, "voter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=voter_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=voter_name" }),
         __metadata("design:type", String)
     ], PersonVote.prototype, "voterName", void 0);
     return PersonVote;
-}(SpeakeasyBase));
-export { PersonVote };
+}(utils_1.SpeakeasyBase));
+exports.PersonVote = PersonVote;

@@ -25,11 +25,11 @@ export enum ErrorTypeEnum {
 }
 
 
-// Error
+// ErrorT
 /** 
  * On error, the API consumer will receive an HTTP response with a HTTP Status Code of 4xx or 5xx and a Content-Type of application/problem+json.
 **/
-export class Error extends SpeakeasyBase {
+export class ErrorT extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=detail" })
   detail?: string;
 

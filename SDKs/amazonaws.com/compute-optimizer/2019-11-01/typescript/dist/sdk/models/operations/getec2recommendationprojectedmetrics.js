@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,126 +14,151 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
-export var GetEc2RecommendationProjectedMetricsXAmzTargetEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetEc2RecommendationProjectedMetricsResponse = exports.GetEc2RecommendationProjectedMetricsRequest = exports.GetEc2RecommendationProjectedMetricsHeaders = exports.GetEc2RecommendationProjectedMetricsXAmzTargetEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
+var GetEc2RecommendationProjectedMetricsXAmzTargetEnum;
 (function (GetEc2RecommendationProjectedMetricsXAmzTargetEnum) {
     GetEc2RecommendationProjectedMetricsXAmzTargetEnum["ComputeOptimizerServiceGetEc2RecommendationProjectedMetrics"] = "ComputeOptimizerService.GetEC2RecommendationProjectedMetrics";
-})(GetEc2RecommendationProjectedMetricsXAmzTargetEnum || (GetEc2RecommendationProjectedMetricsXAmzTargetEnum = {}));
+})(GetEc2RecommendationProjectedMetricsXAmzTargetEnum = exports.GetEc2RecommendationProjectedMetricsXAmzTargetEnum || (exports.GetEc2RecommendationProjectedMetricsXAmzTargetEnum = {}));
 var GetEc2RecommendationProjectedMetricsHeaders = /** @class */ (function (_super) {
     __extends(GetEc2RecommendationProjectedMetricsHeaders, _super);
     function GetEc2RecommendationProjectedMetricsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetEc2RecommendationProjectedMetricsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetEc2RecommendationProjectedMetricsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetEc2RecommendationProjectedMetricsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetEc2RecommendationProjectedMetricsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetEc2RecommendationProjectedMetricsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetEc2RecommendationProjectedMetricsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetEc2RecommendationProjectedMetricsHeaders.prototype, "xAmzSignedHeaders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Target" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Target" }),
         __metadata("design:type", String)
     ], GetEc2RecommendationProjectedMetricsHeaders.prototype, "xAmzTarget", void 0);
     return GetEc2RecommendationProjectedMetricsHeaders;
-}(SpeakeasyBase));
-export { GetEc2RecommendationProjectedMetricsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetEc2RecommendationProjectedMetricsHeaders = GetEc2RecommendationProjectedMetricsHeaders;
 var GetEc2RecommendationProjectedMetricsRequest = /** @class */ (function (_super) {
     __extends(GetEc2RecommendationProjectedMetricsRequest, _super);
     function GetEc2RecommendationProjectedMetricsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetEc2RecommendationProjectedMetricsHeaders)
     ], GetEc2RecommendationProjectedMetricsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", shared.GetEc2RecommendationProjectedMetricsRequest)
     ], GetEc2RecommendationProjectedMetricsRequest.prototype, "request", void 0);
     return GetEc2RecommendationProjectedMetricsRequest;
-}(SpeakeasyBase));
-export { GetEc2RecommendationProjectedMetricsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetEc2RecommendationProjectedMetricsRequest = GetEc2RecommendationProjectedMetricsRequest;
 var GetEc2RecommendationProjectedMetricsResponse = /** @class */ (function (_super) {
     __extends(GetEc2RecommendationProjectedMetricsResponse, _super);
     function GetEc2RecommendationProjectedMetricsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetEc2RecommendationProjectedMetricsResponse.prototype, "accessDeniedException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetEc2RecommendationProjectedMetricsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.GetEc2RecommendationProjectedMetricsResponse)
     ], GetEc2RecommendationProjectedMetricsResponse.prototype, "getEc2RecommendationProjectedMetricsResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetEc2RecommendationProjectedMetricsResponse.prototype, "internalServerException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetEc2RecommendationProjectedMetricsResponse.prototype, "invalidParameterValueException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetEc2RecommendationProjectedMetricsResponse.prototype, "missingAuthenticationToken", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetEc2RecommendationProjectedMetricsResponse.prototype, "optInRequiredException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetEc2RecommendationProjectedMetricsResponse.prototype, "resourceNotFoundException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetEc2RecommendationProjectedMetricsResponse.prototype, "serviceUnavailableException", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetEc2RecommendationProjectedMetricsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], GetEc2RecommendationProjectedMetricsResponse.prototype, "throttlingException", void 0);
     return GetEc2RecommendationProjectedMetricsResponse;
-}(SpeakeasyBase));
-export { GetEc2RecommendationProjectedMetricsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetEc2RecommendationProjectedMetricsResponse = GetEc2RecommendationProjectedMetricsResponse;

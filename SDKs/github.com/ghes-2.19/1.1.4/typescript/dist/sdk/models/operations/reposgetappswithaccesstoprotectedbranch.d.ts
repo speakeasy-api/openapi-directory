@@ -12,5 +12,5 @@ export declare class ReposGetAppsWithAccessToProtectedBranchResponse extends Spe
     contentType: string;
     statusCode: number;
     basicError?: shared.BasicError;
-    integrations?: Map<string, any>[];
+    integrations?: Record<string, any>[];
 }

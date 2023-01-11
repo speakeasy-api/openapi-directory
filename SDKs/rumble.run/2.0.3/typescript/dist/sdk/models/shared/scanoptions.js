@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ScanOptionsScanFrequencyEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ScanOptions = exports.ScanOptionsScanFrequencyEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ScanOptionsScanFrequencyEnum;
 (function (ScanOptionsScanFrequencyEnum) {
     ScanOptionsScanFrequencyEnum["Once"] = "once";
     ScanOptionsScanFrequencyEnum["Hourly"] = "hourly";
@@ -31,84 +34,84 @@ export var ScanOptionsScanFrequencyEnum;
     ScanOptionsScanFrequencyEnum["Weekly"] = "weekly";
     ScanOptionsScanFrequencyEnum["Monthly"] = "monthly";
     ScanOptionsScanFrequencyEnum["Continuous"] = "continuous";
-})(ScanOptionsScanFrequencyEnum || (ScanOptionsScanFrequencyEnum = {}));
+})(ScanOptionsScanFrequencyEnum = exports.ScanOptionsScanFrequencyEnum || (exports.ScanOptionsScanFrequencyEnum = {}));
 var ScanOptions = /** @class */ (function (_super) {
     __extends(ScanOptions, _super);
     function ScanOptions() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=agent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=agent" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "agent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=excludes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=excludes" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "excludes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max-group-size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max-group-size" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "maxGroupSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max-host-rate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max-host-rate" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "maxHostRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=max-sockets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=max-sockets" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "maxSockets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nameservers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nameservers" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "nameservers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=passes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=passes" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "passes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=probes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=probes" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "probes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=rate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=rate" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "rate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scan-description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scan-description" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "scanDescription", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scan-frequency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scan-frequency" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "scanFrequency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scan-grace-period" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scan-grace-period" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "scanGracePeriod", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scan-name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scan-name" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "scanName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scan-start" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scan-start" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "scanStart", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scan-tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scan-tags" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "scanTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=screenshots" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=screenshots" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "screenshots", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=targets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=targets" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "targets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tcp-ports" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tcp-ports" }),
         __metadata("design:type", String)
     ], ScanOptions.prototype, "tcpPorts", void 0);
     return ScanOptions;
-}(SpeakeasyBase));
-export { ScanOptions };
+}(utils_1.SpeakeasyBase));
+exports.ScanOptions = ScanOptions;

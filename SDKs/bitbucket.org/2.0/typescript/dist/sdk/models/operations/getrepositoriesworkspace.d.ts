@@ -27,6 +27,6 @@ export declare class GetRepositoriesWorkspaceRequest extends SpeakeasyBase {
 export declare class GetRepositoriesWorkspaceResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
     paginatedRepositories?: shared.PaginatedRepositories;
 }

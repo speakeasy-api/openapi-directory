@@ -3,7 +3,6 @@ export * from "./gamesconfigurationachievementconfigurationsget";
 export * from "./gamesconfigurationachievementconfigurationsinsert";
 export * from "./gamesconfigurationachievementconfigurationslist";
 export * from "./gamesconfigurationachievementconfigurationsupdate";
-export * from "./gamesconfigurationimageconfigurationsupload";
 export * from "./gamesconfigurationleaderboardconfigurationsdelete";
 export * from "./gamesconfigurationleaderboardconfigurationsget";
 export * from "./gamesconfigurationleaderboardconfigurationsinsert";

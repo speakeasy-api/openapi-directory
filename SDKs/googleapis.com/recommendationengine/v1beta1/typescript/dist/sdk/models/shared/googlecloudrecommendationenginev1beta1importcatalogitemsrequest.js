@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudRecommendationengineV1beta1ImportErrorsConfig } from "./googlecloudrecommendationenginev1beta1importerrorsconfig";
-import { GoogleCloudRecommendationengineV1beta1InputConfig } from "./googlecloudrecommendationenginev1beta1inputconfig";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudrecommendationenginev1beta1importerrorsconfig_1 = require("./googlecloudrecommendationenginev1beta1importerrorsconfig");
+var googlecloudrecommendationenginev1beta1inputconfig_1 = require("./googlecloudrecommendationenginev1beta1inputconfig");
 // GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest
 /**
  * Request message for Import methods.
@@ -35,21 +38,21 @@ var GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest = /** @class
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errorsConfig" }),
-        __metadata("design:type", GoogleCloudRecommendationengineV1beta1ImportErrorsConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errorsConfig" }),
+        __metadata("design:type", googlecloudrecommendationenginev1beta1importerrorsconfig_1.GoogleCloudRecommendationengineV1beta1ImportErrorsConfig)
     ], GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest.prototype, "errorsConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputConfig" }),
-        __metadata("design:type", GoogleCloudRecommendationengineV1beta1InputConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputConfig" }),
+        __metadata("design:type", googlecloudrecommendationenginev1beta1inputconfig_1.GoogleCloudRecommendationengineV1beta1InputConfig)
     ], GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest.prototype, "inputConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requestId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requestId" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest.prototype, "requestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updateMask" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updateMask" }),
         __metadata("design:type", String)
     ], GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest.prototype, "updateMask", void 0);
     return GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest;
-}(SpeakeasyBase));
-export { GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest = GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest;

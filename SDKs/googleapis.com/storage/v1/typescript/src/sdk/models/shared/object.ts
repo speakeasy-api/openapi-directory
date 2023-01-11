@@ -29,11 +29,11 @@ export class ObjectOwner extends SpeakeasyBase {
 }
 
 
-// Object
+// ObjectT
 /** 
  * An object.
 **/
-export class Object extends SpeakeasyBase {
+export class ObjectT extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=acl", elemType: ObjectAccessControl })
   acl?: ObjectAccessControl[];
 
@@ -92,7 +92,7 @@ export class Object extends SpeakeasyBase {
   mediaLink?: string;
 
   @SpeakeasyMetadata({ data: "json, name=metadata" })
-  metadata?: Map<string, string>;
+  metadata?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=metageneration" })
   metageneration?: string;

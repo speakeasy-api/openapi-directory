@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var YarnApplicationStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.YarnApplication = exports.YarnApplicationStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var YarnApplicationStateEnum;
 (function (YarnApplicationStateEnum) {
     YarnApplicationStateEnum["StateUnspecified"] = "STATE_UNSPECIFIED";
     YarnApplicationStateEnum["New"] = "NEW";
@@ -34,7 +37,7 @@ export var YarnApplicationStateEnum;
     YarnApplicationStateEnum["Finished"] = "FINISHED";
     YarnApplicationStateEnum["Failed"] = "FAILED";
     YarnApplicationStateEnum["Killed"] = "KILLED";
-})(YarnApplicationStateEnum || (YarnApplicationStateEnum = {}));
+})(YarnApplicationStateEnum = exports.YarnApplicationStateEnum || (exports.YarnApplicationStateEnum = {}));
 // YarnApplication
 /**
  * A YARN application created by a job. Application information is a subset of org.apache.hadoop.yarn.proto.YarnProtos.ApplicationReportProto.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
@@ -45,21 +48,21 @@ var YarnApplication = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], YarnApplication.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], YarnApplication.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], YarnApplication.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trackingUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trackingUrl" }),
         __metadata("design:type", String)
     ], YarnApplication.prototype, "trackingUrl", void 0);
     return YarnApplication;
-}(SpeakeasyBase));
-export { YarnApplication };
+}(utils_1.SpeakeasyBase));
+exports.YarnApplication = YarnApplication;

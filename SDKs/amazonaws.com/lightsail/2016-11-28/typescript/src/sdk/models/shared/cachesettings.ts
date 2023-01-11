@@ -11,13 +11,13 @@ import { QueryStringObject } from "./querystringobject";
 **/
 export class CacheSettings extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=allowedHTTPMethods" })
-  allowedHttpMethods?: string;
+  allowedHTTPMethods?: string;
 
   @SpeakeasyMetadata({ data: "json, name=cachedHTTPMethods" })
-  cachedHttpMethods?: string;
+  cachedHTTPMethods?: string;
 
   @SpeakeasyMetadata({ data: "json, name=defaultTTL" })
-  defaultTtl?: number;
+  defaultTTL?: number;
 
   @SpeakeasyMetadata({ data: "json, name=forwardedCookies" })
   forwardedCookies?: CookieObject;
@@ -29,8 +29,8 @@ export class CacheSettings extends SpeakeasyBase {
   forwardedQueryStrings?: QueryStringObject;
 
   @SpeakeasyMetadata({ data: "json, name=maximumTTL" })
-  maximumTtl?: number;
+  maximumTTL?: number;
 
   @SpeakeasyMetadata({ data: "json, name=minimumTTL" })
-  minimumTtl?: number;
+  minimumTTL?: number;
 }

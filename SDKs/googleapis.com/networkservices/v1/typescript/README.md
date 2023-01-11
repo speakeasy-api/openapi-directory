@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest, NetworkservicesProjectsLocationsEndpointPoliciesCreateResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,63 +30,62 @@ const req: NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    parent: "voluptatem",
+    parent: "sit",
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "impedit",
-    alt: "json",
-    callback: "modi",
-    endpointPolicyId: "error",
-    fields: "voluptate",
-    key: "est",
-    oauthToken: "inventore",
+    dollarXgafv: "1",
+    accessToken: "culpa",
+    alt: "media",
+    callback: "consequuntur",
+    endpointPolicyId: "dolor",
+    fields: "expedita",
+    key: "voluptas",
+    oauthToken: "fugit",
     prettyPrint: false,
-    quotaUser: "voluptatibus",
-    uploadType: "ut",
-    uploadProtocol: "consequuntur",
+    quotaUser: "nihil",
+    uploadType: "rerum",
+    uploadProtocol: "dicta",
   },
   request: {
-    authorizationPolicy: "similique",
-    clientTlsPolicy: "praesentium",
-    description: "assumenda",
+    authorizationPolicy: "debitis",
+    clientTlsPolicy: "voluptatum",
+    description: "et",
     endpointMatcher: {
       metadataLabelMatcher: {
-        metadataLabelMatchCriteria: "MATCH_ANY",
+        metadataLabelMatchCriteria: "MATCH_ALL",
         metadataLabels: [
           {
-            labelName: "repellat",
-            labelValue: "ut",
+            labelName: "et",
+            labelValue: "voluptate",
           },
           {
-            labelName: "maiores",
-            labelValue: "odit",
+            labelName: "iste",
+            labelValue: "vitae",
           },
           {
-            labelName: "alias",
-            labelValue: "voluptatum",
+            labelName: "totam",
+            labelValue: "dolores",
           },
         ],
       },
     },
     labels: {
-      "voluptas": "ducimus",
-      "modi": "ducimus",
-      "voluptatem": "laborum",
+      "debitis": "vel",
+      "odio": "dolore",
+      "id": "aspernatur",
     },
-    name: "omnis",
-    serverTlsPolicy: "tempore",
+    name: "accusantium",
+    serverTlsPolicy: "totam",
     trafficPortSelector: {
       ports: [
-        "qui",
-        "ut",
-        "odio",
+        "quis",
+        "est",
       ],
     },
     type: "GRPC_SERVER",

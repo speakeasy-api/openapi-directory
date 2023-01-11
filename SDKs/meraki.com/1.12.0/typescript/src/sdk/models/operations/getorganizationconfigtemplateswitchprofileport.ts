@@ -31,5 +31,5 @@ export class GetOrganizationConfigTemplateSwitchProfilePortResponse extends Spea
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationConfigTemplateSwitchProfilePort200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationConfigTemplateSwitchProfilePort200ApplicationJSONObject?: Record<string, any>;
 }

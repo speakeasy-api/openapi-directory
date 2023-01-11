@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class MarkedEpisodeEmbedded extends SpeakeasyBase {
-    episode?: Map<string, any>;
+    episode?: Record<string, any>;
 }
 export declare class MarkedEpisodeInput extends SpeakeasyBase {
     embedded?: MarkedEpisodeEmbedded;

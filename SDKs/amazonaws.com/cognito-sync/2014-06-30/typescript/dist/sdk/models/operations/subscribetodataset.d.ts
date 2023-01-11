@@ -26,6 +26,6 @@ export declare class SubscribeToDatasetResponse extends SpeakeasyBase {
     notAuthorizedException?: any;
     resourceNotFoundException?: any;
     statusCode: number;
-    subscribeToDatasetResponse?: Map<string, any>;
+    subscribeToDatasetResponse?: Record<string, any>;
     tooManyRequestsException?: any;
 }

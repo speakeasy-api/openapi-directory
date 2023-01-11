@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DynamicCluster } from "./dynamiccluster";
-import { StaticCluster } from "./staticcluster";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClustersConfigDump = void 0;
+var utils_1 = require("../../../internal/utils");
+var dynamiccluster_1 = require("./dynamiccluster");
+var staticcluster_1 = require("./staticcluster");
 // ClustersConfigDump
 /**
  * Envoy's cluster manager fills this message with all currently known clusters. Cluster configuration information can be used to recreate an Envoy configuration by populating all clusters as static clusters or by returning them in a CDS response.
@@ -35,21 +38,21 @@ var ClustersConfigDump = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dynamicActiveClusters", elemType: DynamicCluster }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dynamicActiveClusters", elemType: dynamiccluster_1.DynamicCluster }),
         __metadata("design:type", Array)
     ], ClustersConfigDump.prototype, "dynamicActiveClusters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=dynamicWarmingClusters", elemType: DynamicCluster }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=dynamicWarmingClusters", elemType: dynamiccluster_1.DynamicCluster }),
         __metadata("design:type", Array)
     ], ClustersConfigDump.prototype, "dynamicWarmingClusters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=staticClusters", elemType: StaticCluster }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=staticClusters", elemType: staticcluster_1.StaticCluster }),
         __metadata("design:type", Array)
     ], ClustersConfigDump.prototype, "staticClusters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=versionInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=versionInfo" }),
         __metadata("design:type", String)
     ], ClustersConfigDump.prototype, "versionInfo", void 0);
     return ClustersConfigDump;
-}(SpeakeasyBase));
-export { ClustersConfigDump };
+}(utils_1.SpeakeasyBase));
+exports.ClustersConfigDump = ClustersConfigDump;

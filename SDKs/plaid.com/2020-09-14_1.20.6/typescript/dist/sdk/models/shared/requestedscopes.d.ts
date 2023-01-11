@@ -7,6 +7,6 @@ import { AccountSelectionCardinalityEnum } from "./accountselectioncardinalityen
 export declare class RequestedScopes extends SpeakeasyBase {
     accountFilters?: AccountFilter;
     accountSelectionCardinality: AccountSelectionCardinalityEnum;
-    optionalProductAccess: Map<string, any>;
-    requiredProductAccess: Map<string, any>;
+    optionalProductAccess: Record<string, any>;
+    requiredProductAccess: Record<string, any>;
 }

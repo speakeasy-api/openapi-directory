@@ -57,5 +57,5 @@ export class UpdateHitReviewStatusResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateHitReviewStatusResponse?: Map<string, any>;
+  updateHITReviewStatusResponse?: Record<string, any>;
 }

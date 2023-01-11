@@ -15,7 +15,7 @@ export declare class GetRegistryPolicyHeaders extends SpeakeasyBase {
 }
 export declare class GetRegistryPolicyRequest extends SpeakeasyBase {
     headers: GetRegistryPolicyHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class GetRegistryPolicyResponse extends SpeakeasyBase {
     contentType: string;

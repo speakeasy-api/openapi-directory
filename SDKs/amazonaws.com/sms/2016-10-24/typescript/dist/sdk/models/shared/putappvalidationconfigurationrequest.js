@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AppValidationConfiguration } from "./appvalidationconfiguration";
-import { ServerGroupValidationConfiguration } from "./servergroupvalidationconfiguration";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PutAppValidationConfigurationRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var appvalidationconfiguration_1 = require("./appvalidationconfiguration");
+var servergroupvalidationconfiguration_1 = require("./servergroupvalidationconfiguration");
 var PutAppValidationConfigurationRequest = /** @class */ (function (_super) {
     __extends(PutAppValidationConfigurationRequest, _super);
     function PutAppValidationConfigurationRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appId" }),
         __metadata("design:type", String)
     ], PutAppValidationConfigurationRequest.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appValidationConfigurations", elemType: AppValidationConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appValidationConfigurations", elemType: appvalidationconfiguration_1.AppValidationConfiguration }),
         __metadata("design:type", Array)
     ], PutAppValidationConfigurationRequest.prototype, "appValidationConfigurations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverGroupValidationConfigurations", elemType: ServerGroupValidationConfiguration }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverGroupValidationConfigurations", elemType: servergroupvalidationconfiguration_1.ServerGroupValidationConfiguration }),
         __metadata("design:type", Array)
     ], PutAppValidationConfigurationRequest.prototype, "serverGroupValidationConfigurations", void 0);
     return PutAppValidationConfigurationRequest;
-}(SpeakeasyBase));
-export { PutAppValidationConfigurationRequest };
+}(utils_1.SpeakeasyBase));
+exports.PutAppValidationConfigurationRequest = PutAppValidationConfigurationRequest;

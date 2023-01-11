@@ -10,5 +10,5 @@ export declare class ProtocolSshIpaliasEnableRequest extends SpeakeasyBase {
 export declare class ProtocolSshIpaliasEnableResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    protocolSshIpaliasEnable200ApplicationJsonString?: string;
+    protocolSshIpaliasEnable200ApplicationJSONString?: string;
 }

@@ -15,7 +15,7 @@ export declare class ListAvailableZonesHeaders extends SpeakeasyBase {
 }
 export declare class ListAvailableZonesRequest extends SpeakeasyBase {
     headers: ListAvailableZonesHeaders;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class ListAvailableZonesResponse extends SpeakeasyBase {
     cloudHsmInternalException?: any;

@@ -14,6 +14,6 @@ export declare class GetCriticsResourceTypeJsonRequest extends SpeakeasyBase {
 }
 export declare class GetCriticsResourceTypeJsonResponse extends SpeakeasyBase {
     contentType: string;
-    getCriticsResourceTypeJson200ApplicationJsonObject?: GetCriticsResourceTypeJson200ApplicationJson;
     statusCode: number;
+    getCriticsResourceTypeJSON200ApplicationJSONObject?: GetCriticsResourceTypeJson200ApplicationJson;
 }

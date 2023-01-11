@@ -61,7 +61,6 @@ export * from "./containerservicelogevent";
 export * from "./containerservicemetricnameenum";
 export * from "./containerservicepower";
 export * from "./containerservicepowernameenum";
-export * from "./containerserviceprotocolenum";
 export * from "./containerserviceregistrylogin";
 export * from "./containerserviceslistresult";
 export * from "./containerservicestatedetail";

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetListSigningCertificatesActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetListSigningCertificatesResponse = exports.GetListSigningCertificatesRequest = exports.GetListSigningCertificatesHeaders = exports.GetListSigningCertificatesQueryParams = exports.GetListSigningCertificatesVersionEnum = exports.GetListSigningCertificatesActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetListSigningCertificatesActionEnum;
 (function (GetListSigningCertificatesActionEnum) {
     GetListSigningCertificatesActionEnum["ListSigningCertificates"] = "ListSigningCertificates";
-})(GetListSigningCertificatesActionEnum || (GetListSigningCertificatesActionEnum = {}));
-export var GetListSigningCertificatesVersionEnum;
+})(GetListSigningCertificatesActionEnum = exports.GetListSigningCertificatesActionEnum || (exports.GetListSigningCertificatesActionEnum = {}));
+var GetListSigningCertificatesVersionEnum;
 (function (GetListSigningCertificatesVersionEnum) {
     GetListSigningCertificatesVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(GetListSigningCertificatesVersionEnum || (GetListSigningCertificatesVersionEnum = {}));
+})(GetListSigningCertificatesVersionEnum = exports.GetListSigningCertificatesVersionEnum || (exports.GetListSigningCertificatesVersionEnum = {}));
 var GetListSigningCertificatesQueryParams = /** @class */ (function (_super) {
     __extends(GetListSigningCertificatesQueryParams, _super);
     function GetListSigningCertificatesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], GetListSigningCertificatesQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], GetListSigningCertificatesQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
         __metadata("design:type", Number)
     ], GetListSigningCertificatesQueryParams.prototype, "maxItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=UserName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=UserName" }),
         __metadata("design:type", String)
     ], GetListSigningCertificatesQueryParams.prototype, "userName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], GetListSigningCertificatesQueryParams.prototype, "version", void 0);
     return GetListSigningCertificatesQueryParams;
-}(SpeakeasyBase));
-export { GetListSigningCertificatesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetListSigningCertificatesQueryParams = GetListSigningCertificatesQueryParams;
 var GetListSigningCertificatesHeaders = /** @class */ (function (_super) {
     __extends(GetListSigningCertificatesHeaders, _super);
     function GetListSigningCertificatesHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], GetListSigningCertificatesHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], GetListSigningCertificatesHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], GetListSigningCertificatesHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], GetListSigningCertificatesHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], GetListSigningCertificatesHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], GetListSigningCertificatesHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], GetListSigningCertificatesHeaders.prototype, "xAmzSignedHeaders", void 0);
     return GetListSigningCertificatesHeaders;
-}(SpeakeasyBase));
-export { GetListSigningCertificatesHeaders };
+}(utils_1.SpeakeasyBase));
+exports.GetListSigningCertificatesHeaders = GetListSigningCertificatesHeaders;
 var GetListSigningCertificatesRequest = /** @class */ (function (_super) {
     __extends(GetListSigningCertificatesRequest, _super);
     function GetListSigningCertificatesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListSigningCertificatesQueryParams)
     ], GetListSigningCertificatesRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetListSigningCertificatesHeaders)
     ], GetListSigningCertificatesRequest.prototype, "headers", void 0);
     return GetListSigningCertificatesRequest;
-}(SpeakeasyBase));
-export { GetListSigningCertificatesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetListSigningCertificatesRequest = GetListSigningCertificatesRequest;
 var GetListSigningCertificatesResponse = /** @class */ (function (_super) {
     __extends(GetListSigningCertificatesResponse, _super);
     function GetListSigningCertificatesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], GetListSigningCertificatesResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetListSigningCertificatesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetListSigningCertificatesResponse.prototype, "statusCode", void 0);
     return GetListSigningCertificatesResponse;
-}(SpeakeasyBase));
-export { GetListSigningCertificatesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetListSigningCertificatesResponse = GetListSigningCertificatesResponse;

@@ -23,7 +23,7 @@ export class AddCustomFieldSettingForPortfolioRequestBody extends SpeakeasyBase 
 
 export class AddCustomFieldSettingForPortfolio200ApplicationJson extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 }
 
 
@@ -50,5 +50,5 @@ export class AddCustomFieldSettingForPortfolioResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  addCustomFieldSettingForPortfolio200ApplicationJsonObject?: AddCustomFieldSettingForPortfolio200ApplicationJson;
+  addCustomFieldSettingForPortfolio200ApplicationJSONObject?: AddCustomFieldSettingForPortfolio200ApplicationJson;
 }

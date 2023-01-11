@@ -22,5 +22,5 @@ export class GetDropsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDrops200ApplicationJsonInt32Integer?: number;
+  getDrops200ApplicationJSONInt32Integer?: number;
 }

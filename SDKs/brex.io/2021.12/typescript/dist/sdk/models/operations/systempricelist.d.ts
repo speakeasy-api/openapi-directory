@@ -9,6 +9,6 @@ export declare class SystemPricelistRequest extends SpeakeasyBase {
 export declare class SystemPricelistResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    systemPricelist200ApplicationJsonAnies?: any[];
-    systemPricelistDefaultApplicationJsonAny?: any;
+    systemPricelist200ApplicationJSONAnies?: any[];
+    systemPricelistDefaultApplicationJSONAny?: any;
 }

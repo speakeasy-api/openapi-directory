@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TrustedAdvisorResourcesSummary = void 0;
+var utils_1 = require("../../../internal/utils");
 // TrustedAdvisorResourcesSummary
 /**
  * Details about AWS resources that were analyzed in a call to Trusted Advisor <a>DescribeTrustedAdvisorCheckSummaries</a>.
@@ -33,21 +36,21 @@ var TrustedAdvisorResourcesSummary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourcesFlagged" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourcesFlagged" }),
         __metadata("design:type", Number)
     ], TrustedAdvisorResourcesSummary.prototype, "resourcesFlagged", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourcesIgnored" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourcesIgnored" }),
         __metadata("design:type", Number)
     ], TrustedAdvisorResourcesSummary.prototype, "resourcesIgnored", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourcesProcessed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourcesProcessed" }),
         __metadata("design:type", Number)
     ], TrustedAdvisorResourcesSummary.prototype, "resourcesProcessed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourcesSuppressed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourcesSuppressed" }),
         __metadata("design:type", Number)
     ], TrustedAdvisorResourcesSummary.prototype, "resourcesSuppressed", void 0);
     return TrustedAdvisorResourcesSummary;
-}(SpeakeasyBase));
-export { TrustedAdvisorResourcesSummary };
+}(utils_1.SpeakeasyBase));
+exports.TrustedAdvisorResourcesSummary = TrustedAdvisorResourcesSummary;

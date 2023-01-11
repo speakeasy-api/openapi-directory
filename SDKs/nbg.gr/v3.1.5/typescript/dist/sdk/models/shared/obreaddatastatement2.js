@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObStatement2 } from "./obstatement2";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObReadDataStatement2 = void 0;
+var utils_1 = require("../../../internal/utils");
+var obstatement2_1 = require("./obstatement2");
 var ObReadDataStatement2 = /** @class */ (function (_super) {
     __extends(ObReadDataStatement2, _super);
     function ObReadDataStatement2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Statement", elemType: ObStatement2 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Statement", elemType: obstatement2_1.ObStatement2 }),
         __metadata("design:type", Array)
     ], ObReadDataStatement2.prototype, "statement", void 0);
     return ObReadDataStatement2;
-}(SpeakeasyBase));
-export { ObReadDataStatement2 };
+}(utils_1.SpeakeasyBase));
+exports.ObReadDataStatement2 = ObReadDataStatement2;

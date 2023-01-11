@@ -21,5 +21,5 @@ export declare class GetSnippetsWorkspaceEncodedIdRevisionDiffRequest extends Sp
 export declare class GetSnippetsWorkspaceEncodedIdRevisionDiffResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
+    error?: Record<string, any>;
 }

@@ -22,10 +22,10 @@ export declare class UpdateAclResponse extends SpeakeasyBase {
     contentType: string;
     defaultUserRequired?: any;
     duplicateUserNameFault?: any;
-    invalidAclStateFault?: any;
+    invalidACLStateFault?: any;
     invalidParameterCombinationException?: any;
     invalidParameterValueException?: any;
     statusCode: number;
-    updateAclResponse?: shared.UpdateAclResponse;
+    updateACLResponse?: shared.UpdateAclResponse;
     userNotFoundFault?: any;
 }

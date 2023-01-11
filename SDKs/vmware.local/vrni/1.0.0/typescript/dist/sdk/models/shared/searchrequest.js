@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,39 +23,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AllEntityTypeEnum } from "./allentitytypeenum";
-import { SortByClause } from "./sortbyclause";
-import { TimeRange } from "./timerange";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var allentitytypeenum_1 = require("./allentitytypeenum");
+var sortbyclause_1 = require("./sortbyclause");
+var timerange_1 = require("./timerange");
 var SearchRequest = /** @class */ (function (_super) {
     __extends(SearchRequest, _super);
     function SearchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cursor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cursor" }),
         __metadata("design:type", String)
     ], SearchRequest.prototype, "cursor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=entity_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=entity_type" }),
         __metadata("design:type", String)
     ], SearchRequest.prototype, "entityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filter" }),
         __metadata("design:type", String)
     ], SearchRequest.prototype, "filter", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=size" }),
         __metadata("design:type", Number)
     ], SearchRequest.prototype, "size", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sort_by" }),
-        __metadata("design:type", SortByClause)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sort_by" }),
+        __metadata("design:type", sortbyclause_1.SortByClause)
     ], SearchRequest.prototype, "sortBy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=time_range" }),
-        __metadata("design:type", TimeRange)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=time_range" }),
+        __metadata("design:type", timerange_1.TimeRange)
     ], SearchRequest.prototype, "timeRange", void 0);
     return SearchRequest;
-}(SpeakeasyBase));
-export { SearchRequest };
+}(utils_1.SpeakeasyBase));
+exports.SearchRequest = SearchRequest;

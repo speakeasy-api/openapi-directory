@@ -21,7 +21,7 @@ export declare class GetOptimalDirectionsOutputFormatQueryParams extends Speakea
     departure?: Date;
     disable?: string;
     distanceUnit?: GetOptimalDirectionsOutputFormatDistanceUnitEnum;
-    outputSrs?: number;
+    outputSRS?: number;
     points: string;
     roundTrip?: boolean;
     routeDescription?: string;

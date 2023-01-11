@@ -2,6 +2,10 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 
 
 
+// RepositoryLicenseSimple
+/** 
+ * License Simple
+**/
 export class RepositoryLicenseSimple extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=html_url" })
   htmlUrl?: string;
@@ -23,6 +27,10 @@ export class RepositoryLicenseSimple extends SpeakeasyBase {
 }
 
 
+// RepositorySimpleUser
+/** 
+ * Simple User
+**/
 export class RepositorySimpleUser extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=avatar_url" })
   avatarUrl: string;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SamplingRuleRecord } from "./samplingrulerecord";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateSamplingRuleResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var samplingrulerecord_1 = require("./samplingrulerecord");
 var UpdateSamplingRuleResult = /** @class */ (function (_super) {
     __extends(UpdateSamplingRuleResult, _super);
     function UpdateSamplingRuleResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SamplingRuleRecord" }),
-        __metadata("design:type", SamplingRuleRecord)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SamplingRuleRecord" }),
+        __metadata("design:type", samplingrulerecord_1.SamplingRuleRecord)
     ], UpdateSamplingRuleResult.prototype, "samplingRuleRecord", void 0);
     return UpdateSamplingRuleResult;
-}(SpeakeasyBase));
-export { UpdateSamplingRuleResult };
+}(utils_1.SpeakeasyBase));
+exports.UpdateSamplingRuleResult = UpdateSamplingRuleResult;

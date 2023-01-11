@@ -1,7 +1,7 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class UpdateApiMappingResponse extends SpeakeasyBase {
-    apiId?: string;
-    apiMappingId?: string;
-    apiMappingKey?: string;
-    stage?: string;
+    apiId?: Record<string, any>;
+    apiMappingId?: Record<string, any>;
+    apiMappingKey?: Record<string, any>;
+    stage?: Record<string, any>;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AddOn } from "./addon";
-import { ResourceLocation } from "./resourcelocation";
-import { ResourceTypeEnum } from "./resourcetypeenum";
-import { DiskStateEnum } from "./diskstateenum";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Disk = void 0;
+var utils_1 = require("../../../internal/utils");
+var addon_1 = require("./addon");
+var resourcelocation_1 = require("./resourcelocation");
+var resourcetypeenum_1 = require("./resourcetypeenum");
+var diskstateenum_1 = require("./diskstateenum");
+var tag_1 = require("./tag");
 // Disk
 /**
  * Describes a block storage disk.
@@ -38,73 +41,73 @@ var Disk = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addOns", elemType: AddOn }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addOns", elemType: addon_1.AddOn }),
         __metadata("design:type", Array)
     ], Disk.prototype, "addOns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], Disk.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attachedTo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attachedTo" }),
         __metadata("design:type", String)
     ], Disk.prototype, "attachedTo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attachmentState" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attachmentState" }),
+        __metadata("design:type", Object)
     ], Disk.prototype, "attachmentState", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], Disk.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gbInUse" }),
-        __metadata("design:type", Number)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gbInUse" }),
+        __metadata("design:type", Object)
     ], Disk.prototype, "gbInUse", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iops" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iops" }),
         __metadata("design:type", Number)
     ], Disk.prototype, "iops", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isAttached" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isAttached" }),
         __metadata("design:type", Boolean)
     ], Disk.prototype, "isAttached", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=isSystemDisk" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=isSystemDisk" }),
         __metadata("design:type", Boolean)
     ], Disk.prototype, "isSystemDisk", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=location" }),
-        __metadata("design:type", ResourceLocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=location" }),
+        __metadata("design:type", resourcelocation_1.ResourceLocation)
     ], Disk.prototype, "location", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Disk.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], Disk.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], Disk.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sizeInGb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sizeInGb" }),
         __metadata("design:type", Number)
     ], Disk.prototype, "sizeInGb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], Disk.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportCode" }),
         __metadata("design:type", String)
     ], Disk.prototype, "supportCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], Disk.prototype, "tags", void 0);
     return Disk;
-}(SpeakeasyBase));
-export { Disk };
+}(utils_1.SpeakeasyBase));
+exports.Disk = Disk;

@@ -29,6 +29,6 @@ export declare class ManufacturersAccountsProductsUpdateRequest extends Speakeas
 }
 export declare class ManufacturersAccountsProductsUpdateResponse extends SpeakeasyBase {
     contentType: string;
-    empty?: Map<string, any>;
+    empty?: Record<string, any>;
     statusCode: number;
 }

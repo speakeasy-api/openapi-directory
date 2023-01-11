@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3StopTicket = void 0;
+var utils_1 = require("../../../internal/utils");
 var V3StopTicket = /** @class */ (function (_super) {
     __extends(V3StopTicket, _super);
     function V3StopTicket() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=is_free_fare_zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=is_free_fare_zone" }),
         __metadata("design:type", Boolean)
     ], V3StopTicket.prototype, "isFreeFareZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ticket_checks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ticket_checks" }),
         __metadata("design:type", Boolean)
     ], V3StopTicket.prototype, "ticketChecks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ticket_machine" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ticket_machine" }),
         __metadata("design:type", Boolean)
     ], V3StopTicket.prototype, "ticketMachine", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ticket_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ticket_type" }),
         __metadata("design:type", String)
     ], V3StopTicket.prototype, "ticketType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ticket_zones" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ticket_zones" }),
         __metadata("design:type", Array)
     ], V3StopTicket.prototype, "ticketZones", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vline_reservation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vline_reservation" }),
         __metadata("design:type", Boolean)
     ], V3StopTicket.prototype, "vlineReservation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=zone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=zone" }),
         __metadata("design:type", String)
     ], V3StopTicket.prototype, "zone", void 0);
     return V3StopTicket;
-}(SpeakeasyBase));
-export { V3StopTicket };
+}(utils_1.SpeakeasyBase));
+exports.V3StopTicket = V3StopTicket;

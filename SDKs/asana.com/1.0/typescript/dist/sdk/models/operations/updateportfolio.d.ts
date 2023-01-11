@@ -22,5 +22,5 @@ export declare class UpdatePortfolioResponse extends SpeakeasyBase {
     contentType: string;
     errorResponse?: shared.ErrorResponse;
     statusCode: number;
-    updatePortfolio200ApplicationJsonObject?: UpdatePortfolio200ApplicationJson;
+    updatePortfolio200ApplicationJSONObject?: UpdatePortfolio200ApplicationJson;
 }

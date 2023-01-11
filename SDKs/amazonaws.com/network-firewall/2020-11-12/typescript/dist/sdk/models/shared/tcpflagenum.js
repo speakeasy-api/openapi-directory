@@ -1,4 +1,7 @@
-export var TcpFlagEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TcpFlagEnum = void 0;
+var TcpFlagEnum;
 (function (TcpFlagEnum) {
     TcpFlagEnum["Fin"] = "FIN";
     TcpFlagEnum["Syn"] = "SYN";
@@ -8,4 +11,4 @@ export var TcpFlagEnum;
     TcpFlagEnum["Urg"] = "URG";
     TcpFlagEnum["Ece"] = "ECE";
     TcpFlagEnum["Cwr"] = "CWR";
-})(TcpFlagEnum || (TcpFlagEnum = {}));
+})(TcpFlagEnum = exports.TcpFlagEnum || (exports.TcpFlagEnum = {}));

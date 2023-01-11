@@ -16,7 +16,7 @@ export declare class ServiceProtocol extends SpeakeasyBase {
 }
 export declare class Service extends SpeakeasyBase {
     created?: Date;
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     device?: NestedDevice;
     id?: number;

@@ -1,22 +1,38 @@
-export * from "./associatememberaccountrequest";
-export * from "./associates3resourcesrequest";
-export * from "./associates3resourcesresult";
-export * from "./classificationtype";
-export * from "./classificationtypeupdate";
-export * from "./disassociatememberaccountrequest";
-export * from "./disassociates3resourcesrequest";
-export * from "./disassociates3resourcesresult";
-export * from "./faileds3resource";
-export * from "./listmemberaccountsrequest";
-export * from "./listmemberaccountsresult";
-export * from "./lists3resourcesrequest";
-export * from "./lists3resourcesresult";
-export * from "./memberaccount";
-export * from "./s3continuousclassificationtypeenum";
-export * from "./s3onetimeclassificationtypeenum";
-export * from "./s3resource";
-export * from "./s3resourceclassification";
-export * from "./s3resourceclassificationupdate";
-export * from "./security";
-export * from "./updates3resourcesrequest";
-export * from "./updates3resourcesresult";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./associatememberaccountrequest"), exports);
+__exportStar(require("./associates3resourcesrequest"), exports);
+__exportStar(require("./associates3resourcesresult"), exports);
+__exportStar(require("./classificationtype"), exports);
+__exportStar(require("./classificationtypeupdate"), exports);
+__exportStar(require("./disassociatememberaccountrequest"), exports);
+__exportStar(require("./disassociates3resourcesrequest"), exports);
+__exportStar(require("./disassociates3resourcesresult"), exports);
+__exportStar(require("./faileds3resource"), exports);
+__exportStar(require("./listmemberaccountsrequest"), exports);
+__exportStar(require("./listmemberaccountsresult"), exports);
+__exportStar(require("./lists3resourcesrequest"), exports);
+__exportStar(require("./lists3resourcesresult"), exports);
+__exportStar(require("./memberaccount"), exports);
+__exportStar(require("./s3continuousclassificationtypeenum"), exports);
+__exportStar(require("./s3onetimeclassificationtypeenum"), exports);
+__exportStar(require("./s3resource"), exports);
+__exportStar(require("./s3resourceclassification"), exports);
+__exportStar(require("./s3resourceclassificationupdate"), exports);
+__exportStar(require("./security"), exports);
+__exportStar(require("./updates3resourcesrequest"), exports);
+__exportStar(require("./updates3resourcesresult"), exports);

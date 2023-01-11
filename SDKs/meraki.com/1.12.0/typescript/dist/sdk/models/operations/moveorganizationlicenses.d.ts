@@ -13,5 +13,5 @@ export declare class MoveOrganizationLicensesRequest extends SpeakeasyBase {
 export declare class MoveOrganizationLicensesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    moveOrganizationLicenses200ApplicationJsonObject?: Map<string, any>;
+    moveOrganizationLicenses200ApplicationJSONObject?: Record<string, any>;
 }

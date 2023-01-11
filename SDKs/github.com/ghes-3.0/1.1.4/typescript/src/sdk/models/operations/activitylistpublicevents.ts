@@ -38,7 +38,7 @@ export class ActivityListPublicEventsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  activityListPublicEvents503ApplicationJsonObject?: ActivityListPublicEvents503ApplicationJson;
+  activityListPublicEvents503ApplicationJSONObject?: ActivityListPublicEvents503ApplicationJson;
 
   @SpeakeasyMetadata()
   basicError?: shared.BasicError;

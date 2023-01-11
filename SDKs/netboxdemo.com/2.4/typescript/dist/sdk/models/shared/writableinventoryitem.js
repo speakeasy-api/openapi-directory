@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WritableInventoryItemInput = void 0;
+var utils_1 = require("../../../internal/utils");
 var WritableInventoryItemInput = /** @class */ (function (_super) {
     __extends(WritableInventoryItemInput, _super);
     function WritableInventoryItemInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=asset_tag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=asset_tag" }),
         __metadata("design:type", String)
     ], WritableInventoryItemInput.prototype, "assetTag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], WritableInventoryItemInput.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=device" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=device" }),
         __metadata("design:type", Number)
     ], WritableInventoryItemInput.prototype, "device", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discovered" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discovered" }),
         __metadata("design:type", Boolean)
     ], WritableInventoryItemInput.prototype, "discovered", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=manufacturer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=manufacturer" }),
         __metadata("design:type", Number)
     ], WritableInventoryItemInput.prototype, "manufacturer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], WritableInventoryItemInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parent" }),
         __metadata("design:type", Number)
     ], WritableInventoryItemInput.prototype, "parent", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=part_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=part_id" }),
         __metadata("design:type", String)
     ], WritableInventoryItemInput.prototype, "partId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serial" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serial" }),
         __metadata("design:type", String)
     ], WritableInventoryItemInput.prototype, "serial", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
         __metadata("design:type", Array)
     ], WritableInventoryItemInput.prototype, "tags", void 0);
     return WritableInventoryItemInput;
-}(SpeakeasyBase));
-export { WritableInventoryItemInput };
+}(utils_1.SpeakeasyBase));
+exports.WritableInventoryItemInput = WritableInventoryItemInput;

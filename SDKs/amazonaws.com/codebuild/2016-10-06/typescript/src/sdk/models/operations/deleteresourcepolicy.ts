@@ -48,7 +48,7 @@ export class DeleteResourcePolicyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  deleteResourcePolicyOutput?: Map<string, any>;
+  deleteResourcePolicyOutput?: Record<string, any>;
 
   @SpeakeasyMetadata()
   invalidInputException?: any;

@@ -12,5 +12,5 @@ export declare class IntentSummary extends SpeakeasyBase {
     fulfillmentState?: FulfillmentStateEnum;
     intentName?: string;
     slotToElicit?: string;
-    slots?: Map<string, string>;
+    slots?: Record<string, string>;
 }

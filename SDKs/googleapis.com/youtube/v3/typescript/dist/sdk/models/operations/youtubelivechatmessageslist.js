@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,194 +14,219 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.YoutubeLiveChatMessagesListResponse = exports.YoutubeLiveChatMessagesListRequest = exports.YoutubeLiveChatMessagesListSecurity = exports.YoutubeLiveChatMessagesListSecurityOption3 = exports.YoutubeLiveChatMessagesListSecurityOption2 = exports.YoutubeLiveChatMessagesListSecurityOption1 = exports.YoutubeLiveChatMessagesListQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var YoutubeLiveChatMessagesListQueryParams = /** @class */ (function (_super) {
     __extends(YoutubeLiveChatMessagesListQueryParams, _super);
     function YoutubeLiveChatMessagesListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], YoutubeLiveChatMessagesListQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], YoutubeLiveChatMessagesListQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], YoutubeLiveChatMessagesListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], YoutubeLiveChatMessagesListQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], YoutubeLiveChatMessagesListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=hl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=hl" }),
         __metadata("design:type", String)
     ], YoutubeLiveChatMessagesListQueryParams.prototype, "hl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], YoutubeLiveChatMessagesListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=liveChatId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=liveChatId" }),
         __metadata("design:type", String)
     ], YoutubeLiveChatMessagesListQueryParams.prototype, "liveChatId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=maxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=maxResults" }),
         __metadata("design:type", Number)
     ], YoutubeLiveChatMessagesListQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], YoutubeLiveChatMessagesListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], YoutubeLiveChatMessagesListQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=part" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=part" }),
         __metadata("design:type", Array)
     ], YoutubeLiveChatMessagesListQueryParams.prototype, "part", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], YoutubeLiveChatMessagesListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=profileImageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=profileImageSize" }),
         __metadata("design:type", Number)
     ], YoutubeLiveChatMessagesListQueryParams.prototype, "profileImageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], YoutubeLiveChatMessagesListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], YoutubeLiveChatMessagesListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], YoutubeLiveChatMessagesListQueryParams.prototype, "uploadProtocol", void 0);
     return YoutubeLiveChatMessagesListQueryParams;
-}(SpeakeasyBase));
-export { YoutubeLiveChatMessagesListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeLiveChatMessagesListQueryParams = YoutubeLiveChatMessagesListQueryParams;
 var YoutubeLiveChatMessagesListSecurityOption1 = /** @class */ (function (_super) {
     __extends(YoutubeLiveChatMessagesListSecurityOption1, _super);
     function YoutubeLiveChatMessagesListSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], YoutubeLiveChatMessagesListSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], YoutubeLiveChatMessagesListSecurityOption1.prototype, "oauth2c", void 0);
     return YoutubeLiveChatMessagesListSecurityOption1;
-}(SpeakeasyBase));
-export { YoutubeLiveChatMessagesListSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeLiveChatMessagesListSecurityOption1 = YoutubeLiveChatMessagesListSecurityOption1;
 var YoutubeLiveChatMessagesListSecurityOption2 = /** @class */ (function (_super) {
     __extends(YoutubeLiveChatMessagesListSecurityOption2, _super);
     function YoutubeLiveChatMessagesListSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], YoutubeLiveChatMessagesListSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], YoutubeLiveChatMessagesListSecurityOption2.prototype, "oauth2c", void 0);
     return YoutubeLiveChatMessagesListSecurityOption2;
-}(SpeakeasyBase));
-export { YoutubeLiveChatMessagesListSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeLiveChatMessagesListSecurityOption2 = YoutubeLiveChatMessagesListSecurityOption2;
 var YoutubeLiveChatMessagesListSecurityOption3 = /** @class */ (function (_super) {
     __extends(YoutubeLiveChatMessagesListSecurityOption3, _super);
     function YoutubeLiveChatMessagesListSecurityOption3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], YoutubeLiveChatMessagesListSecurityOption3.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], YoutubeLiveChatMessagesListSecurityOption3.prototype, "oauth2c", void 0);
     return YoutubeLiveChatMessagesListSecurityOption3;
-}(SpeakeasyBase));
-export { YoutubeLiveChatMessagesListSecurityOption3 };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeLiveChatMessagesListSecurityOption3 = YoutubeLiveChatMessagesListSecurityOption3;
 var YoutubeLiveChatMessagesListSecurity = /** @class */ (function (_super) {
     __extends(YoutubeLiveChatMessagesListSecurity, _super);
     function YoutubeLiveChatMessagesListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", YoutubeLiveChatMessagesListSecurityOption1)
     ], YoutubeLiveChatMessagesListSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", YoutubeLiveChatMessagesListSecurityOption2)
     ], YoutubeLiveChatMessagesListSecurity.prototype, "option2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", YoutubeLiveChatMessagesListSecurityOption3)
     ], YoutubeLiveChatMessagesListSecurity.prototype, "option3", void 0);
     return YoutubeLiveChatMessagesListSecurity;
-}(SpeakeasyBase));
-export { YoutubeLiveChatMessagesListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeLiveChatMessagesListSecurity = YoutubeLiveChatMessagesListSecurity;
 var YoutubeLiveChatMessagesListRequest = /** @class */ (function (_super) {
     __extends(YoutubeLiveChatMessagesListRequest, _super);
     function YoutubeLiveChatMessagesListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", YoutubeLiveChatMessagesListQueryParams)
     ], YoutubeLiveChatMessagesListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", YoutubeLiveChatMessagesListSecurity)
     ], YoutubeLiveChatMessagesListRequest.prototype, "security", void 0);
     return YoutubeLiveChatMessagesListRequest;
-}(SpeakeasyBase));
-export { YoutubeLiveChatMessagesListRequest };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeLiveChatMessagesListRequest = YoutubeLiveChatMessagesListRequest;
 var YoutubeLiveChatMessagesListResponse = /** @class */ (function (_super) {
     __extends(YoutubeLiveChatMessagesListResponse, _super);
     function YoutubeLiveChatMessagesListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], YoutubeLiveChatMessagesListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.LiveChatMessageListResponse)
     ], YoutubeLiveChatMessagesListResponse.prototype, "liveChatMessageListResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], YoutubeLiveChatMessagesListResponse.prototype, "statusCode", void 0);
     return YoutubeLiveChatMessagesListResponse;
-}(SpeakeasyBase));
-export { YoutubeLiveChatMessagesListResponse };
+}(utils_1.SpeakeasyBase));
+exports.YoutubeLiveChatMessagesListResponse = YoutubeLiveChatMessagesListResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OsTypeEnum } from "./ostypeenum";
-import { TierEnum } from "./tierenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApplicationComponent = void 0;
+var utils_1 = require("../../../internal/utils");
+var ostypeenum_1 = require("./ostypeenum");
+var tierenum_1 = require("./tierenum");
 // ApplicationComponent
 /**
  * Describes a standalone resource or similarly grouped resources that the application is made up of.
@@ -35,33 +38,33 @@ var ApplicationComponent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComponentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComponentName" }),
         __metadata("design:type", String)
     ], ApplicationComponent.prototype, "componentName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComponentRemarks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComponentRemarks" }),
         __metadata("design:type", String)
     ], ApplicationComponent.prototype, "componentRemarks", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DetectedWorkload" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DetectedWorkload" }),
+        __metadata("design:type", Object)
     ], ApplicationComponent.prototype, "detectedWorkload", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Monitor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Monitor" }),
         __metadata("design:type", Boolean)
     ], ApplicationComponent.prototype, "monitor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OsType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OsType" }),
         __metadata("design:type", String)
     ], ApplicationComponent.prototype, "osType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceType" }),
         __metadata("design:type", String)
     ], ApplicationComponent.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Tier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Tier" }),
         __metadata("design:type", String)
     ], ApplicationComponent.prototype, "tier", void 0);
     return ApplicationComponent;
-}(SpeakeasyBase));
-export { ApplicationComponent };
+}(utils_1.SpeakeasyBase));
+exports.ApplicationComponent = ApplicationComponent;

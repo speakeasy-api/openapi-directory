@@ -5,7 +5,7 @@ export declare class PostOfferingsRequest extends SpeakeasyBase {
 }
 export declare class PostOfferingsResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     offeringMetadataResponse?: shared.OfferingMetadataResponse;
     statusCode: number;
 }

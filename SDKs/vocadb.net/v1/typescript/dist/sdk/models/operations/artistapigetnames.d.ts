@@ -15,9 +15,9 @@ export declare class ArtistApiGetNamesRequest extends SpeakeasyBase {
     queryParams: ArtistApiGetNamesQueryParams;
 }
 export declare class ArtistApiGetNamesResponse extends SpeakeasyBase {
-    artistApiGetNames200ApplicationJsonStrings?: string[];
+    artistApiGetNames200ApplicationJSONStrings?: string[];
     artistApiGetNames200ApplicationJsonpStrings?: string[];
-    artistApiGetNames200TextJsonStrings?: string[];
+    artistApiGetNames200TextJSONStrings?: string[];
     body?: Uint8Array;
     contentType: string;
     statusCode: number;

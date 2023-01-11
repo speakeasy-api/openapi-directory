@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,56 +23,58 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GetNamesNameIdOutputFormatOutputFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetNamesNameIdOutputFormatResponse = exports.GetNamesNameIdOutputFormatRequest = exports.GetNamesNameIdOutputFormatPathParams = exports.GetNamesNameIdOutputFormatOutputFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GetNamesNameIdOutputFormatOutputFormatEnum;
 (function (GetNamesNameIdOutputFormatOutputFormatEnum) {
     GetNamesNameIdOutputFormatOutputFormatEnum["Json"] = "json";
     GetNamesNameIdOutputFormatOutputFormatEnum["Xml"] = "xml";
     GetNamesNameIdOutputFormatOutputFormatEnum["Kml"] = "kml";
     GetNamesNameIdOutputFormatOutputFormatEnum["Csv"] = "csv";
     GetNamesNameIdOutputFormatOutputFormatEnum["Html"] = "html";
-})(GetNamesNameIdOutputFormatOutputFormatEnum || (GetNamesNameIdOutputFormatOutputFormatEnum = {}));
+})(GetNamesNameIdOutputFormatOutputFormatEnum = exports.GetNamesNameIdOutputFormatOutputFormatEnum || (exports.GetNamesNameIdOutputFormatOutputFormatEnum = {}));
 var GetNamesNameIdOutputFormatPathParams = /** @class */ (function (_super) {
     __extends(GetNamesNameIdOutputFormatPathParams, _super);
     function GetNamesNameIdOutputFormatPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=nameId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=nameId" }),
         __metadata("design:type", Number)
     ], GetNamesNameIdOutputFormatPathParams.prototype, "nameId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=outputFormat" }),
         __metadata("design:type", String)
     ], GetNamesNameIdOutputFormatPathParams.prototype, "outputFormat", void 0);
     return GetNamesNameIdOutputFormatPathParams;
-}(SpeakeasyBase));
-export { GetNamesNameIdOutputFormatPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetNamesNameIdOutputFormatPathParams = GetNamesNameIdOutputFormatPathParams;
 var GetNamesNameIdOutputFormatRequest = /** @class */ (function (_super) {
     __extends(GetNamesNameIdOutputFormatRequest, _super);
     function GetNamesNameIdOutputFormatRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetNamesNameIdOutputFormatPathParams)
     ], GetNamesNameIdOutputFormatRequest.prototype, "pathParams", void 0);
     return GetNamesNameIdOutputFormatRequest;
-}(SpeakeasyBase));
-export { GetNamesNameIdOutputFormatRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetNamesNameIdOutputFormatRequest = GetNamesNameIdOutputFormatRequest;
 var GetNamesNameIdOutputFormatResponse = /** @class */ (function (_super) {
     __extends(GetNamesNameIdOutputFormatResponse, _super);
     function GetNamesNameIdOutputFormatResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetNamesNameIdOutputFormatResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetNamesNameIdOutputFormatResponse.prototype, "statusCode", void 0);
     return GetNamesNameIdOutputFormatResponse;
-}(SpeakeasyBase));
-export { GetNamesNameIdOutputFormatResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetNamesNameIdOutputFormatResponse = GetNamesNameIdOutputFormatResponse;

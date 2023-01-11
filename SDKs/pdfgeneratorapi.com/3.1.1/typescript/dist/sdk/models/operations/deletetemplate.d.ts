@@ -60,10 +60,10 @@ export declare class DeleteTemplateRequest extends SpeakeasyBase {
 export declare class DeleteTemplateResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    deleteTemplate200ApplicationJsonObject?: DeleteTemplate200ApplicationJson;
-    deleteTemplate401ApplicationJsonObject?: DeleteTemplate401ApplicationJson;
-    deleteTemplate403ApplicationJsonObject?: DeleteTemplate403ApplicationJson;
-    deleteTemplate404ApplicationJsonObject?: DeleteTemplate404ApplicationJson;
-    deleteTemplate422ApplicationJsonObject?: DeleteTemplate422ApplicationJson;
-    deleteTemplate500ApplicationJsonObject?: DeleteTemplate500ApplicationJson;
+    deleteTemplate200ApplicationJSONObject?: DeleteTemplate200ApplicationJson;
+    deleteTemplate401ApplicationJSONObject?: DeleteTemplate401ApplicationJson;
+    deleteTemplate403ApplicationJSONObject?: DeleteTemplate403ApplicationJson;
+    deleteTemplate404ApplicationJSONObject?: DeleteTemplate404ApplicationJson;
+    deleteTemplate422ApplicationJSONObject?: DeleteTemplate422ApplicationJson;
+    deleteTemplate500ApplicationJSONObject?: DeleteTemplate500ApplicationJson;
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,628 +23,630 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnterpriseSettings = exports.EnterpriseSettingsEnterprise = exports.EnterpriseSettingsEnterpriseSyslog = exports.EnterpriseSettingsEnterpriseSnmp = exports.EnterpriseSettingsEnterpriseSmtp = exports.EnterpriseSettingsEnterpriseSaml = exports.EnterpriseSettingsEnterprisePages = exports.EnterpriseSettingsEnterpriseNtp = exports.EnterpriseSettingsEnterpriseMapping = exports.EnterpriseSettingsEnterpriseLicense = exports.EnterpriseSettingsEnterpriseLdap = exports.EnterpriseSettingsEnterpriseLdapReconciliation = exports.EnterpriseSettingsEnterpriseLdapProfile = exports.EnterpriseSettingsEnterpriseGithubSsl = exports.EnterpriseSettingsEnterpriseGithubOauth = exports.EnterpriseSettingsEnterpriseCustomer = exports.EnterpriseSettingsEnterpriseCollectd = exports.EnterpriseSettingsEnterpriseCas = exports.EnterpriseSettingsEnterpriseAvatar = void 0;
+var utils_1 = require("../../../internal/utils");
 var EnterpriseSettingsEnterpriseAvatar = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterpriseAvatar, _super);
     function EnterpriseSettingsEnterpriseAvatar() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseAvatar.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uri" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uri" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseAvatar.prototype, "uri", void 0);
     return EnterpriseSettingsEnterpriseAvatar;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterpriseAvatar };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterpriseAvatar = EnterpriseSettingsEnterpriseAvatar;
 var EnterpriseSettingsEnterpriseCas = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterpriseCas, _super);
     function EnterpriseSettingsEnterpriseCas() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseCas.prototype, "url", void 0);
     return EnterpriseSettingsEnterpriseCas;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterpriseCas };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterpriseCas = EnterpriseSettingsEnterpriseCas;
 var EnterpriseSettingsEnterpriseCollectd = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterpriseCollectd, _super);
     function EnterpriseSettingsEnterpriseCollectd() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseCollectd.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=encryption" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryption" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseCollectd.prototype, "encryption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseCollectd.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], EnterpriseSettingsEnterpriseCollectd.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseCollectd.prototype, "server", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseCollectd.prototype, "username", void 0);
     return EnterpriseSettingsEnterpriseCollectd;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterpriseCollectd };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterpriseCollectd = EnterpriseSettingsEnterpriseCollectd;
 var EnterpriseSettingsEnterpriseCustomer = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterpriseCustomer, _super);
     function EnterpriseSettingsEnterpriseCustomer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=email" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseCustomer.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseCustomer.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public_key_data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public_key_data" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseCustomer.prototype, "publicKeyData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secret_key_data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secret_key_data" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseCustomer.prototype, "secretKeyData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uuid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uuid" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseCustomer.prototype, "uuid", void 0);
     return EnterpriseSettingsEnterpriseCustomer;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterpriseCustomer };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterpriseCustomer = EnterpriseSettingsEnterpriseCustomer;
 var EnterpriseSettingsEnterpriseGithubOauth = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterpriseGithubOauth, _super);
     function EnterpriseSettingsEnterpriseGithubOauth() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_id" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseGithubOauth.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=client_secret" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=client_secret" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseGithubOauth.prototype, "clientSecret", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization_name" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseGithubOauth.prototype, "organizationName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=organization_team" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=organization_team" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseGithubOauth.prototype, "organizationTeam", void 0);
     return EnterpriseSettingsEnterpriseGithubOauth;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterpriseGithubOauth };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterpriseGithubOauth = EnterpriseSettingsEnterpriseGithubOauth;
 var EnterpriseSettingsEnterpriseGithubSsl = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterpriseGithubSsl, _super);
     function EnterpriseSettingsEnterpriseGithubSsl() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cert" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cert" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseGithubSsl.prototype, "cert", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseGithubSsl.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseGithubSsl.prototype, "key", void 0);
     return EnterpriseSettingsEnterpriseGithubSsl;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterpriseGithubSsl };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterpriseGithubSsl = EnterpriseSettingsEnterpriseGithubSsl;
 var EnterpriseSettingsEnterpriseLdapProfile = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterpriseLdapProfile, _super);
     function EnterpriseSettingsEnterpriseLdapProfile() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseLdapProfile.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mail" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseLdapProfile.prototype, "mail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseLdapProfile.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseLdapProfile.prototype, "uid", void 0);
     return EnterpriseSettingsEnterpriseLdapProfile;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterpriseLdapProfile };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterpriseLdapProfile = EnterpriseSettingsEnterpriseLdapProfile;
 var EnterpriseSettingsEnterpriseLdapReconciliation = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterpriseLdapReconciliation, _super);
     function EnterpriseSettingsEnterpriseLdapReconciliation() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=org" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=org" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseLdapReconciliation.prototype, "org", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseLdapReconciliation.prototype, "user", void 0);
     return EnterpriseSettingsEnterpriseLdapReconciliation;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterpriseLdapReconciliation };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterpriseLdapReconciliation = EnterpriseSettingsEnterpriseLdapReconciliation;
 var EnterpriseSettingsEnterpriseLdap = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterpriseLdap, _super);
     function EnterpriseSettingsEnterpriseLdap() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=admin_group" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=admin_group" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "adminGroup", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=base" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=base" }),
         __metadata("design:type", Array)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "base", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=bind_dn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=bind_dn" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "bindDn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=host" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "host", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", Number)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=posix_support" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=posix_support" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "posixSupport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=profile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=profile" }),
         __metadata("design:type", EnterpriseSettingsEnterpriseLdapProfile)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "profile", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reconciliation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reconciliation" }),
         __metadata("design:type", EnterpriseSettingsEnterpriseLdapReconciliation)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "reconciliation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=recursive_group_search" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=recursive_group_search" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "recursiveGroupSearch", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=search_strategy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=search_strategy" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "searchStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sync_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sync_enabled" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "syncEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=team_sync_interval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=team_sync_interval" }),
         __metadata("design:type", Number)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "teamSyncInterval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=uid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=uid" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "uid", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_groups" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_groups" }),
         __metadata("design:type", Array)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "userGroups", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_sync_emails" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_sync_emails" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "userSyncEmails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_sync_interval" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_sync_interval" }),
         __metadata("design:type", Number)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "userSyncInterval", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_sync_keys" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_sync_keys" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "userSyncKeys", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=virtual_attribute_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=virtual_attribute_enabled" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseLdap.prototype, "virtualAttributeEnabled", void 0);
     return EnterpriseSettingsEnterpriseLdap;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterpriseLdap };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterpriseLdap = EnterpriseSettingsEnterpriseLdap;
 var EnterpriseSettingsEnterpriseLicense = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterpriseLicense, _super);
     function EnterpriseSettingsEnterpriseLicense() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cluster_support" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cluster_support" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseLicense.prototype, "clusterSupport", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=evaluation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=evaluation" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseLicense.prototype, "evaluation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expire_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expire_at" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseLicense.prototype, "expireAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=perpetual" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=perpetual" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseLicense.prototype, "perpetual", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=seats" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=seats" }),
         __metadata("design:type", Number)
     ], EnterpriseSettingsEnterpriseLicense.prototype, "seats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssh_allowed" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssh_allowed" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseLicense.prototype, "sshAllowed", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=support_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=support_key" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseLicense.prototype, "supportKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=unlimited_seating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=unlimited_seating" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseLicense.prototype, "unlimitedSeating", void 0);
     return EnterpriseSettingsEnterpriseLicense;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterpriseLicense };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterpriseLicense = EnterpriseSettingsEnterpriseLicense;
 var EnterpriseSettingsEnterpriseMapping = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterpriseMapping, _super);
     function EnterpriseSettingsEnterpriseMapping() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=basemap" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=basemap" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseMapping.prototype, "basemap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseMapping.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tileserver" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tileserver" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseMapping.prototype, "tileserver", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=token" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseMapping.prototype, "token", void 0);
     return EnterpriseSettingsEnterpriseMapping;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterpriseMapping };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterpriseMapping = EnterpriseSettingsEnterpriseMapping;
 var EnterpriseSettingsEnterpriseNtp = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterpriseNtp, _super);
     function EnterpriseSettingsEnterpriseNtp() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=primary_server" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=primary_server" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseNtp.prototype, "primaryServer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=secondary_server" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=secondary_server" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseNtp.prototype, "secondaryServer", void 0);
     return EnterpriseSettingsEnterpriseNtp;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterpriseNtp };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterpriseNtp = EnterpriseSettingsEnterpriseNtp;
 var EnterpriseSettingsEnterprisePages = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterprisePages, _super);
     function EnterpriseSettingsEnterprisePages() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterprisePages.prototype, "enabled", void 0);
     return EnterpriseSettingsEnterprisePages;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterprisePages };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterprisePages = EnterpriseSettingsEnterprisePages;
 var EnterpriseSettingsEnterpriseSaml = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterpriseSaml, _super);
     function EnterpriseSettingsEnterpriseSaml() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificate" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseSaml.prototype, "certificate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=certificate_path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=certificate_path" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseSaml.prototype, "certificatePath", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=disable_admin_demote" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=disable_admin_demote" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseSaml.prototype, "disableAdminDemote", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=idp_initiated_sso" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=idp_initiated_sso" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseSaml.prototype, "idpInitiatedSso", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuer" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseSaml.prototype, "issuer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sso_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sso_url" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseSaml.prototype, "ssoUrl", void 0);
     return EnterpriseSettingsEnterpriseSaml;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterpriseSaml };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterpriseSaml = EnterpriseSettingsEnterpriseSaml;
 var EnterpriseSettingsEnterpriseSmtp = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterpriseSmtp, _super);
     function EnterpriseSettingsEnterpriseSmtp() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseSmtp.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authentication" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authentication" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseSmtp.prototype, "authentication", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=discard-to-noreply-address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=discard-to-noreply-address" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseSmtp.prototype, "discardToNoreplyAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domain" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domain" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseSmtp.prototype, "domain", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enable_starttls_auto" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enable_starttls_auto" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseSmtp.prototype, "enableStarttlsAuto", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseSmtp.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=noreply_address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=noreply_address" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseSmtp.prototype, "noreplyAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=password" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseSmtp.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=port" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=port" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseSmtp.prototype, "port", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=support_address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=support_address" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseSmtp.prototype, "supportAddress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=support_address_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=support_address_type" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseSmtp.prototype, "supportAddressType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user_name" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseSmtp.prototype, "userName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=username" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseSmtp.prototype, "username", void 0);
     return EnterpriseSettingsEnterpriseSmtp;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterpriseSmtp };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterpriseSmtp = EnterpriseSettingsEnterpriseSmtp;
 var EnterpriseSettingsEnterpriseSnmp = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterpriseSnmp, _super);
     function EnterpriseSettingsEnterpriseSnmp() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=community" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=community" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseSnmp.prototype, "community", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseSnmp.prototype, "enabled", void 0);
     return EnterpriseSettingsEnterpriseSnmp;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterpriseSnmp };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterpriseSnmp = EnterpriseSettingsEnterpriseSnmp;
 var EnterpriseSettingsEnterpriseSyslog = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterpriseSyslog, _super);
     function EnterpriseSettingsEnterpriseSyslog() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabled" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterpriseSyslog.prototype, "enabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=protocol_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=protocol_name" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseSyslog.prototype, "protocolName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=server" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=server" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterpriseSyslog.prototype, "server", void 0);
     return EnterpriseSettingsEnterpriseSyslog;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterpriseSyslog };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterpriseSyslog = EnterpriseSettingsEnterpriseSyslog;
 var EnterpriseSettingsEnterprise = /** @class */ (function (_super) {
     __extends(EnterpriseSettingsEnterprise, _super);
     function EnterpriseSettingsEnterprise() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=admin_password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=admin_password" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterprise.prototype, "adminPassword", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assets" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assets" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterprise.prototype, "assets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=auth_mode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=auth_mode" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterprise.prototype, "authMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=avatar" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=avatar" }),
         __metadata("design:type", EnterpriseSettingsEnterpriseAvatar)
     ], EnterpriseSettingsEnterprise.prototype, "avatar", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cas" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cas" }),
         __metadata("design:type", EnterpriseSettingsEnterpriseCas)
     ], EnterpriseSettingsEnterprise.prototype, "cas", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=collectd" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=collectd" }),
         __metadata("design:type", EnterpriseSettingsEnterpriseCollectd)
     ], EnterpriseSettingsEnterprise.prototype, "collectd", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configuration_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configuration_id" }),
         __metadata("design:type", Number)
     ], EnterpriseSettingsEnterprise.prototype, "configurationId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configuration_run_count" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configuration_run_count" }),
         __metadata("design:type", Number)
     ], EnterpriseSettingsEnterprise.prototype, "configurationRunCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=customer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=customer" }),
         __metadata("design:type", EnterpriseSettingsEnterpriseCustomer)
     ], EnterpriseSettingsEnterprise.prototype, "customer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=expire_sessions" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=expire_sessions" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterprise.prototype, "expireSessions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=github_hostname" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=github_hostname" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterprise.prototype, "githubHostname", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=github_oauth" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=github_oauth" }),
         __metadata("design:type", EnterpriseSettingsEnterpriseGithubOauth)
     ], EnterpriseSettingsEnterprise.prototype, "githubOauth", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=github_ssl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=github_ssl" }),
         __metadata("design:type", EnterpriseSettingsEnterpriseGithubSsl)
     ], EnterpriseSettingsEnterprise.prototype, "githubSsl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=http_proxy" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=http_proxy" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterprise.prototype, "httpProxy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identicons_host" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identicons_host" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterprise.prototype, "identiconsHost", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ldap" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ldap" }),
         __metadata("design:type", EnterpriseSettingsEnterpriseLdap)
     ], EnterpriseSettingsEnterprise.prototype, "ldap", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=license" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=license" }),
         __metadata("design:type", EnterpriseSettingsEnterpriseLicense)
     ], EnterpriseSettingsEnterprise.prototype, "license", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=load_balancer" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=load_balancer" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterprise.prototype, "loadBalancer", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mapping" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mapping" }),
         __metadata("design:type", EnterpriseSettingsEnterpriseMapping)
     ], EnterpriseSettingsEnterprise.prototype, "mapping", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ntp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ntp" }),
         __metadata("design:type", EnterpriseSettingsEnterpriseNtp)
     ], EnterpriseSettingsEnterprise.prototype, "ntp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pages" }),
         __metadata("design:type", EnterpriseSettingsEnterprisePages)
     ], EnterpriseSettingsEnterprise.prototype, "pages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=private_mode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=private_mode" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterprise.prototype, "privateMode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=public_pages" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=public_pages" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterprise.prototype, "publicPages", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=saml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=saml" }),
         __metadata("design:type", EnterpriseSettingsEnterpriseSaml)
     ], EnterpriseSettingsEnterprise.prototype, "saml", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=signup_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=signup_enabled" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterprise.prototype, "signupEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=smtp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=smtp" }),
         __metadata("design:type", EnterpriseSettingsEnterpriseSmtp)
     ], EnterpriseSettingsEnterprise.prototype, "smtp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snmp" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snmp" }),
         __metadata("design:type", EnterpriseSettingsEnterpriseSnmp)
     ], EnterpriseSettingsEnterprise.prototype, "snmp", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=subdomain_isolation" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=subdomain_isolation" }),
         __metadata("design:type", Boolean)
     ], EnterpriseSettingsEnterprise.prototype, "subdomainIsolation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=syslog" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=syslog" }),
         __metadata("design:type", EnterpriseSettingsEnterpriseSyslog)
     ], EnterpriseSettingsEnterprise.prototype, "syslog", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timezone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timezone" }),
         __metadata("design:type", String)
     ], EnterpriseSettingsEnterprise.prototype, "timezone", void 0);
     return EnterpriseSettingsEnterprise;
-}(SpeakeasyBase));
-export { EnterpriseSettingsEnterprise };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettingsEnterprise = EnterpriseSettingsEnterprise;
 var EnterpriseSettings = /** @class */ (function (_super) {
     __extends(EnterpriseSettings, _super);
     function EnterpriseSettings() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enterprise" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enterprise" }),
         __metadata("design:type", EnterpriseSettingsEnterprise)
     ], EnterpriseSettings.prototype, "enterprise", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=run_list" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=run_list" }),
         __metadata("design:type", Array)
     ], EnterpriseSettings.prototype, "runList", void 0);
     return EnterpriseSettings;
-}(SpeakeasyBase));
-export { EnterpriseSettings };
+}(utils_1.SpeakeasyBase));
+exports.EnterpriseSettings = EnterpriseSettings;

@@ -50,7 +50,7 @@ export class UserApiPostAlbumStatusResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  userApiPostAlbumStatus200ApplicationJsonString?: string;
+  userApiPostAlbumStatus200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   userApiPostAlbumStatus200ApplicationJavascriptString?: string;
@@ -59,14 +59,14 @@ export class UserApiPostAlbumStatusResponse extends SpeakeasyBase {
   userApiPostAlbumStatus200ApplicationJsonpString?: string;
 
   @SpeakeasyMetadata()
-  userApiPostAlbumStatus200ApplicationXmlString?: string;
+  userApiPostAlbumStatus200ApplicationXMLString?: string;
 
   @SpeakeasyMetadata()
-  userApiPostAlbumStatus200TextJsonString?: string;
+  userApiPostAlbumStatus200TextJSONString?: string;
 
   @SpeakeasyMetadata()
   userApiPostAlbumStatus200TextJavascriptString?: string;
 
   @SpeakeasyMetadata()
-  userApiPostAlbumStatus200TextXmlString?: string;
+  userApiPostAlbumStatus200TextXMLString?: string;
 }

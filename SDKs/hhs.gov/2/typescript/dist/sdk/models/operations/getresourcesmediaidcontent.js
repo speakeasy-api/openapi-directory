@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetResourcesMediaIdContentResponse = exports.GetResourcesMediaIdContentRequest = exports.GetResourcesMediaIdContentQueryParams = exports.GetResourcesMediaIdContentPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetResourcesMediaIdContentPathParams = /** @class */ (function (_super) {
     __extends(GetResourcesMediaIdContentPathParams, _super);
     function GetResourcesMediaIdContentPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", Number)
     ], GetResourcesMediaIdContentPathParams.prototype, "id", void 0);
     return GetResourcesMediaIdContentPathParams;
-}(SpeakeasyBase));
-export { GetResourcesMediaIdContentPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesMediaIdContentPathParams = GetResourcesMediaIdContentPathParams;
 var GetResourcesMediaIdContentQueryParams = /** @class */ (function (_super) {
     __extends(GetResourcesMediaIdContentQueryParams, _super);
     function GetResourcesMediaIdContentQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=calledByBuild" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=calledByBuild" }),
         __metadata("design:type", Boolean)
     ], GetResourcesMediaIdContentQueryParams.prototype, "calledByBuild", void 0);
     return GetResourcesMediaIdContentQueryParams;
-}(SpeakeasyBase));
-export { GetResourcesMediaIdContentQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesMediaIdContentQueryParams = GetResourcesMediaIdContentQueryParams;
 var GetResourcesMediaIdContentRequest = /** @class */ (function (_super) {
     __extends(GetResourcesMediaIdContentRequest, _super);
     function GetResourcesMediaIdContentRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetResourcesMediaIdContentPathParams)
     ], GetResourcesMediaIdContentRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetResourcesMediaIdContentQueryParams)
     ], GetResourcesMediaIdContentRequest.prototype, "queryParams", void 0);
     return GetResourcesMediaIdContentRequest;
-}(SpeakeasyBase));
-export { GetResourcesMediaIdContentRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesMediaIdContentRequest = GetResourcesMediaIdContentRequest;
 var GetResourcesMediaIdContentResponse = /** @class */ (function (_super) {
     __extends(GetResourcesMediaIdContentResponse, _super);
     function GetResourcesMediaIdContentResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetResourcesMediaIdContentResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", String)
-    ], GetResourcesMediaIdContentResponse.prototype, "getResourcesMediaIdContent200ApplicationJsonString", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetResourcesMediaIdContentResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", String)
+    ], GetResourcesMediaIdContentResponse.prototype, "getResourcesMediaIdContent200ApplicationJSONString", void 0);
     return GetResourcesMediaIdContentResponse;
-}(SpeakeasyBase));
-export { GetResourcesMediaIdContentResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetResourcesMediaIdContentResponse = GetResourcesMediaIdContentResponse;

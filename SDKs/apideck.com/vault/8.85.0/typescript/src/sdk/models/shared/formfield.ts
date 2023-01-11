@@ -17,6 +17,9 @@ export class FormField extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=disabled" })
   disabled?: boolean;
 
+  @SpeakeasyMetadata({ data: "json, name=hidden" })
+  hidden?: boolean;
+
   @SpeakeasyMetadata({ data: "json, name=id" })
   id?: string;
 

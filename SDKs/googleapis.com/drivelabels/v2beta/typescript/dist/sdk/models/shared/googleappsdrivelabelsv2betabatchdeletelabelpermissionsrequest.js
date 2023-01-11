@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleAppsDriveLabelsV2betaDeleteLabelPermissionRequest } from "./googleappsdrivelabelsv2betadeletelabelpermissionrequest";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleappsdrivelabelsv2betadeletelabelpermissionrequest_1 = require("./googleappsdrivelabelsv2betadeletelabelpermissionrequest");
 // GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest
 /**
  * Deletes one of more Label Permissions.
@@ -34,13 +37,13 @@ var GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest = /** @class *
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requests", elemType: GoogleAppsDriveLabelsV2betaDeleteLabelPermissionRequest }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requests", elemType: googleappsdrivelabelsv2betadeletelabelpermissionrequest_1.GoogleAppsDriveLabelsV2betaDeleteLabelPermissionRequest }),
         __metadata("design:type", Array)
     ], GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest.prototype, "requests", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=useAdminAccess" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=useAdminAccess" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest.prototype, "useAdminAccess", void 0);
     return GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest;
-}(SpeakeasyBase));
-export { GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest = GoogleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest;

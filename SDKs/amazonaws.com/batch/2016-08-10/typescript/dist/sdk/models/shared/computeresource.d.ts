@@ -12,7 +12,7 @@ export declare class ComputeResource extends SpeakeasyBase {
     desiredvCpus?: number;
     ec2Configuration?: Ec2Configuration[];
     ec2KeyPair?: string;
-    imageId?: string;
+    imageId?: Record<string, any>;
     instanceRole?: string;
     instanceTypes?: string[];
     launchTemplate?: LaunchTemplateSpecification;
@@ -22,6 +22,6 @@ export declare class ComputeResource extends SpeakeasyBase {
     securityGroupIds?: string[];
     spotIamFleetRole?: string;
     subnets: string[];
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     type: CrTypeEnum;
 }

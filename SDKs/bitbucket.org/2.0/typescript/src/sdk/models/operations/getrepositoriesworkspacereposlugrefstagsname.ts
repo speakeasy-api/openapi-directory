@@ -44,8 +44,8 @@ export class GetRepositoriesWorkspaceRepoSlugRefsTagsNameResponse extends Speake
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  tag?: Map<string, any>;
+  tag?: Record<string, any>;
 }

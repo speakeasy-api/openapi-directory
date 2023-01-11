@@ -194,23 +194,23 @@ export class BknocResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  bknoc400ApplicationJsonObject?: Bknoc400ApplicationJson;
+  bknoc400ApplicationJSONObject?: Bknoc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  bknoc401ApplicationJsonObject?: Bknoc401ApplicationJson;
+  bknoc401ApplicationJSONObject?: Bknoc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  bknoc404ApplicationJsonObject?: Bknoc404ApplicationJson;
+  bknoc404ApplicationJSONObject?: Bknoc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  bknoc500ApplicationJsonObject?: Bknoc500ApplicationJson;
+  bknoc500ApplicationJSONObject?: Bknoc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  bknoc502ApplicationJsonObject?: Bknoc502ApplicationJson;
+  bknoc502ApplicationJSONObject?: Bknoc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  bknoc503ApplicationJsonObject?: Bknoc503ApplicationJson;
+  bknoc503ApplicationJSONObject?: Bknoc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  bknoc504ApplicationJsonObject?: Bknoc504ApplicationJson;
+  bknoc504ApplicationJSONObject?: Bknoc504ApplicationJson;
 }

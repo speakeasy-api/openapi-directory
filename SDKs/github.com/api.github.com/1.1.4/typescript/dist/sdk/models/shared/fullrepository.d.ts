@@ -1,6 +1,9 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 import { CodeOfConductSimple } from "./codeofconductsimple";
 import { Repository } from "./repository";
+/**
+ * License Simple
+**/
 export declare class FullRepositoryLicenseSimple extends SpeakeasyBase {
     htmlUrl?: string;
     key: string;
@@ -9,6 +12,9 @@ export declare class FullRepositoryLicenseSimple extends SpeakeasyBase {
     spdxId: string;
     url: string;
 }
+/**
+ * Simple User
+**/
 export declare class FullRepositorySimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -35,6 +41,9 @@ export declare class FullRepositoryPermissions extends SpeakeasyBase {
     pull: boolean;
     push: boolean;
 }
+/**
+ * License Simple
+**/
 export declare class FullRepositoryRepositoryLicenseSimple extends SpeakeasyBase {
     htmlUrl?: string;
     key: string;
@@ -43,6 +52,9 @@ export declare class FullRepositoryRepositoryLicenseSimple extends SpeakeasyBase
     spdxId: string;
     url: string;
 }
+/**
+ * Simple User
+**/
 export declare class FullRepositoryRepositorySimpleUser extends SpeakeasyBase {
     avatarUrl: string;
     eventsUrl: string;
@@ -178,6 +190,9 @@ export declare class FullRepositoryRepositoryTemplateRepository extends Speakeas
     visibility?: string;
     watchersCount?: number;
 }
+/**
+ * A git repository
+**/
 export declare class FullRepositoryRepository extends SpeakeasyBase {
     allowMergeCommit?: boolean;
     allowRebaseMerge?: boolean;

@@ -1,6 +1,12 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AssociationStatus } from "./associationstatus";
+/**
+ * The current state of the target network association.
+**/
+export declare class AssociateClientVpnTargetNetworkResultStatus extends SpeakeasyBase {
+    code?: Record<string, any>;
+    message?: Record<string, any>;
+}
 export declare class AssociateClientVpnTargetNetworkResult extends SpeakeasyBase {
-    associationId?: string;
-    status?: AssociationStatus;
+    associationId?: Record<string, any>;
+    status?: AssociateClientVpnTargetNetworkResultStatus;
 }

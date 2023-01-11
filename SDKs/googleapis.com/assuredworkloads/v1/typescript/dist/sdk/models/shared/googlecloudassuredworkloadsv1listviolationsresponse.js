@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleCloudAssuredworkloadsV1Violation } from "./googlecloudassuredworkloadsv1violation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudAssuredworkloadsV1ListViolationsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var googlecloudassuredworkloadsv1violation_1 = require("./googlecloudassuredworkloadsv1violation");
 // GoogleCloudAssuredworkloadsV1ListViolationsResponse
 /**
  * Response of ListViolations endpoint.
@@ -34,13 +37,13 @@ var GoogleCloudAssuredworkloadsV1ListViolationsResponse = /** @class */ (functio
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextPageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextPageToken" }),
         __metadata("design:type", String)
     ], GoogleCloudAssuredworkloadsV1ListViolationsResponse.prototype, "nextPageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=violations", elemType: GoogleCloudAssuredworkloadsV1Violation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=violations", elemType: googlecloudassuredworkloadsv1violation_1.GoogleCloudAssuredworkloadsV1Violation }),
         __metadata("design:type", Array)
     ], GoogleCloudAssuredworkloadsV1ListViolationsResponse.prototype, "violations", void 0);
     return GoogleCloudAssuredworkloadsV1ListViolationsResponse;
-}(SpeakeasyBase));
-export { GoogleCloudAssuredworkloadsV1ListViolationsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudAssuredworkloadsV1ListViolationsResponse = GoogleCloudAssuredworkloadsV1ListViolationsResponse;

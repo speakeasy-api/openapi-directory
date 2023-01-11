@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DedicatedIp } from "./dedicatedip";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetDedicatedIpsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var dedicatedip_1 = require("./dedicatedip");
 // GetDedicatedIpsResponse
 /**
  * Information about the dedicated IP addresses that are associated with your Amazon Pinpoint account.
@@ -34,13 +37,13 @@ var GetDedicatedIpsResponse = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DedicatedIps", elemType: DedicatedIp }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DedicatedIps", elemType: dedicatedip_1.DedicatedIp }),
         __metadata("design:type", Array)
     ], GetDedicatedIpsResponse.prototype, "dedicatedIps", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NextToken" }),
         __metadata("design:type", String)
     ], GetDedicatedIpsResponse.prototype, "nextToken", void 0);
     return GetDedicatedIpsResponse;
-}(SpeakeasyBase));
-export { GetDedicatedIpsResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetDedicatedIpsResponse = GetDedicatedIpsResponse;

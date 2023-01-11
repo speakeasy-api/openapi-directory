@@ -1,4 +1,7 @@
-export var LaunchProfileStatusCodeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LaunchProfileStatusCodeEnum = void 0;
+var LaunchProfileStatusCodeEnum;
 (function (LaunchProfileStatusCodeEnum) {
     LaunchProfileStatusCodeEnum["LaunchProfileCreated"] = "LAUNCH_PROFILE_CREATED";
     LaunchProfileStatusCodeEnum["LaunchProfileUpdated"] = "LAUNCH_PROFILE_UPDATED";
@@ -13,4 +16,4 @@ export var LaunchProfileStatusCodeEnum;
     LaunchProfileStatusCodeEnum["EncryptionKeyAccessDenied"] = "ENCRYPTION_KEY_ACCESS_DENIED";
     LaunchProfileStatusCodeEnum["EncryptionKeyNotFound"] = "ENCRYPTION_KEY_NOT_FOUND";
     LaunchProfileStatusCodeEnum["InvalidSubnetsProvided"] = "INVALID_SUBNETS_PROVIDED";
-})(LaunchProfileStatusCodeEnum || (LaunchProfileStatusCodeEnum = {}));
+})(LaunchProfileStatusCodeEnum = exports.LaunchProfileStatusCodeEnum || (exports.LaunchProfileStatusCodeEnum = {}));

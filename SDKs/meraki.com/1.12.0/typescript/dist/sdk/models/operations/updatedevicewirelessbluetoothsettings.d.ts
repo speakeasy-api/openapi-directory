@@ -14,5 +14,5 @@ export declare class UpdateDeviceWirelessBluetoothSettingsRequest extends Speake
 export declare class UpdateDeviceWirelessBluetoothSettingsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateDeviceWirelessBluetoothSettings200ApplicationJsonObject?: Map<string, any>;
+    updateDeviceWirelessBluetoothSettings200ApplicationJSONObject?: Record<string, any>;
 }

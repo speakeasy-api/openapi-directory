@@ -5,7 +5,7 @@ import { StandardUnitEnum } from "./standardunitenum";
 **/
 export declare class MetricTransformation extends SpeakeasyBase {
     defaultValue?: number;
-    dimensions?: Map<string, string>;
+    dimensions?: Record<string, string>;
     metricName: string;
     metricNamespace: string;
     metricValue: string;

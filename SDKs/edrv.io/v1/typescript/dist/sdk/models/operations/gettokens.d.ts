@@ -24,5 +24,5 @@ export declare class GetTokensRequest extends SpeakeasyBase {
 export declare class GetTokensResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getTokens200ApplicationJsonObject?: GetTokens200ApplicationJson;
+    getTokens200ApplicationJSONObject?: GetTokens200ApplicationJson;
 }

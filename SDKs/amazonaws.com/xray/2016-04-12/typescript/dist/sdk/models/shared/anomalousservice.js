@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServiceId } from "./serviceid";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AnomalousService = void 0;
+var utils_1 = require("../../../internal/utils");
+var serviceid_1 = require("./serviceid");
 // AnomalousService
 /**
  * The service within the service graph that has anomalously high fault rates.
@@ -34,9 +37,9 @@ var AnomalousService = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ServiceId" }),
-        __metadata("design:type", ServiceId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ServiceId" }),
+        __metadata("design:type", serviceid_1.ServiceId)
     ], AnomalousService.prototype, "serviceId", void 0);
     return AnomalousService;
-}(SpeakeasyBase));
-export { AnomalousService };
+}(utils_1.SpeakeasyBase));
+exports.AnomalousService = AnomalousService;

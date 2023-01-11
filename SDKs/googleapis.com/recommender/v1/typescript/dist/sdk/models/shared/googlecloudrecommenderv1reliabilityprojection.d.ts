@@ -9,6 +9,6 @@ export declare enum GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum {
  * Contains information on the impact of a reliability recommendation.
 **/
 export declare class GoogleCloudRecommenderV1ReliabilityProjection extends SpeakeasyBase {
-    details?: Map<string, any>;
+    details?: Record<string, any>;
     risks?: GoogleCloudRecommenderV1ReliabilityProjectionRisksEnum[];
 }

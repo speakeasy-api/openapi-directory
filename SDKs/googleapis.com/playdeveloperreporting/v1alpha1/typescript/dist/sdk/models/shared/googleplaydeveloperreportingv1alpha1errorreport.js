@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GooglePlayDeveloperReportingV1alpha1ErrorReportTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GooglePlayDeveloperReportingV1alpha1ErrorReport = exports.GooglePlayDeveloperReportingV1alpha1ErrorReportTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GooglePlayDeveloperReportingV1alpha1ErrorReportTypeEnum;
 (function (GooglePlayDeveloperReportingV1alpha1ErrorReportTypeEnum) {
     GooglePlayDeveloperReportingV1alpha1ErrorReportTypeEnum["ErrorTypeUnspecified"] = "ERROR_TYPE_UNSPECIFIED";
     GooglePlayDeveloperReportingV1alpha1ErrorReportTypeEnum["ApplicationNotResponding"] = "APPLICATION_NOT_RESPONDING";
     GooglePlayDeveloperReportingV1alpha1ErrorReportTypeEnum["Crash"] = "CRASH";
-})(GooglePlayDeveloperReportingV1alpha1ErrorReportTypeEnum || (GooglePlayDeveloperReportingV1alpha1ErrorReportTypeEnum = {}));
+})(GooglePlayDeveloperReportingV1alpha1ErrorReportTypeEnum = exports.GooglePlayDeveloperReportingV1alpha1ErrorReportTypeEnum || (exports.GooglePlayDeveloperReportingV1alpha1ErrorReportTypeEnum = {}));
 // GooglePlayDeveloperReportingV1alpha1ErrorReport
 /**
  * An error report received for an app. There reports are produced by the Android platform code when a (potentially fatal) error condition is detected. Identical reports from many users will be deduplicated and coalesced into a single ErrorReport. **Required permissions**: to access this resource, the calling user needs the _View app information (read-only)_ permission for the app.
@@ -39,21 +42,21 @@ var GooglePlayDeveloperReportingV1alpha1ErrorReport = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issue" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issue" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1alpha1ErrorReport.prototype, "issue", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1alpha1ErrorReport.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reportText" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reportText" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1alpha1ErrorReport.prototype, "reportText", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], GooglePlayDeveloperReportingV1alpha1ErrorReport.prototype, "type", void 0);
     return GooglePlayDeveloperReportingV1alpha1ErrorReport;
-}(SpeakeasyBase));
-export { GooglePlayDeveloperReportingV1alpha1ErrorReport };
+}(utils_1.SpeakeasyBase));
+exports.GooglePlayDeveloperReportingV1alpha1ErrorReport = GooglePlayDeveloperReportingV1alpha1ErrorReport;

@@ -3,6 +3,7 @@ export * from "./apiendpoints";
 export * from "./apiversion";
 export * from "./apiversions";
 export * from "./archivekindenum";
+export * from "./archivekindenum1";
 export * from "./brandingconf";
 export * from "./changerequest";
 export * from "./check";

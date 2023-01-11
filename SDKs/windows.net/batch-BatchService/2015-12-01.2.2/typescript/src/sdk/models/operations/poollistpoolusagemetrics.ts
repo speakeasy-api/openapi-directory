@@ -52,7 +52,7 @@ export class PoolListPoolUsageMetricsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  headers: Map<string, string[]>;
+  headers: Record<string, string[]>;
 
   @SpeakeasyMetadata()
   poolListPoolUsageMetricsResult?: any;

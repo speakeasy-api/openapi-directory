@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,32 +23,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemoveAllBackendsResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var RemoveAllBackendsResponse = /** @class */ (function (_super) {
     __extends(RemoveAllBackendsResponse, _super);
     function RemoveAllBackendsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AppId" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AppId" }),
+        __metadata("design:type", Object)
     ], RemoveAllBackendsResponse.prototype, "appId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Error" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Error" }),
+        __metadata("design:type", Object)
     ], RemoveAllBackendsResponse.prototype, "error", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobId" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobId" }),
+        __metadata("design:type", Object)
     ], RemoveAllBackendsResponse.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Operation" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Operation" }),
+        __metadata("design:type", Object)
     ], RemoveAllBackendsResponse.prototype, "operation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
-        __metadata("design:type", String)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
+        __metadata("design:type", Object)
     ], RemoveAllBackendsResponse.prototype, "status", void 0);
     return RemoveAllBackendsResponse;
-}(SpeakeasyBase));
-export { RemoveAllBackendsResponse };
+}(utils_1.SpeakeasyBase));
+exports.RemoveAllBackendsResponse = RemoveAllBackendsResponse;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostRestoreDbInstanceFromDbSnapshotActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostRestoreDbInstanceFromDbSnapshotResponse = exports.PostRestoreDbInstanceFromDbSnapshotRequest = exports.PostRestoreDbInstanceFromDbSnapshotHeaders = exports.PostRestoreDbInstanceFromDbSnapshotQueryParams = exports.PostRestoreDbInstanceFromDbSnapshotVersionEnum = exports.PostRestoreDbInstanceFromDbSnapshotActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostRestoreDbInstanceFromDbSnapshotActionEnum;
 (function (PostRestoreDbInstanceFromDbSnapshotActionEnum) {
     PostRestoreDbInstanceFromDbSnapshotActionEnum["RestoreDbInstanceFromDbSnapshot"] = "RestoreDBInstanceFromDBSnapshot";
-})(PostRestoreDbInstanceFromDbSnapshotActionEnum || (PostRestoreDbInstanceFromDbSnapshotActionEnum = {}));
-export var PostRestoreDbInstanceFromDbSnapshotVersionEnum;
+})(PostRestoreDbInstanceFromDbSnapshotActionEnum = exports.PostRestoreDbInstanceFromDbSnapshotActionEnum || (exports.PostRestoreDbInstanceFromDbSnapshotActionEnum = {}));
+var PostRestoreDbInstanceFromDbSnapshotVersionEnum;
 (function (PostRestoreDbInstanceFromDbSnapshotVersionEnum) {
     PostRestoreDbInstanceFromDbSnapshotVersionEnum["TwoThousandAndThirteen0212"] = "2013-02-12";
-})(PostRestoreDbInstanceFromDbSnapshotVersionEnum || (PostRestoreDbInstanceFromDbSnapshotVersionEnum = {}));
+})(PostRestoreDbInstanceFromDbSnapshotVersionEnum = exports.PostRestoreDbInstanceFromDbSnapshotVersionEnum || (exports.PostRestoreDbInstanceFromDbSnapshotVersionEnum = {}));
 var PostRestoreDbInstanceFromDbSnapshotQueryParams = /** @class */ (function (_super) {
     __extends(PostRestoreDbInstanceFromDbSnapshotQueryParams, _super);
     function PostRestoreDbInstanceFromDbSnapshotQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostRestoreDbInstanceFromDbSnapshotQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostRestoreDbInstanceFromDbSnapshotQueryParams.prototype, "version", void 0);
     return PostRestoreDbInstanceFromDbSnapshotQueryParams;
-}(SpeakeasyBase));
-export { PostRestoreDbInstanceFromDbSnapshotQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostRestoreDbInstanceFromDbSnapshotQueryParams = PostRestoreDbInstanceFromDbSnapshotQueryParams;
 var PostRestoreDbInstanceFromDbSnapshotHeaders = /** @class */ (function (_super) {
     __extends(PostRestoreDbInstanceFromDbSnapshotHeaders, _super);
     function PostRestoreDbInstanceFromDbSnapshotHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostRestoreDbInstanceFromDbSnapshotHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostRestoreDbInstanceFromDbSnapshotHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostRestoreDbInstanceFromDbSnapshotHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostRestoreDbInstanceFromDbSnapshotHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostRestoreDbInstanceFromDbSnapshotHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostRestoreDbInstanceFromDbSnapshotHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostRestoreDbInstanceFromDbSnapshotHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostRestoreDbInstanceFromDbSnapshotHeaders;
-}(SpeakeasyBase));
-export { PostRestoreDbInstanceFromDbSnapshotHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostRestoreDbInstanceFromDbSnapshotHeaders = PostRestoreDbInstanceFromDbSnapshotHeaders;
 var PostRestoreDbInstanceFromDbSnapshotRequest = /** @class */ (function (_super) {
     __extends(PostRestoreDbInstanceFromDbSnapshotRequest, _super);
     function PostRestoreDbInstanceFromDbSnapshotRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRestoreDbInstanceFromDbSnapshotQueryParams)
     ], PostRestoreDbInstanceFromDbSnapshotRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostRestoreDbInstanceFromDbSnapshotHeaders)
     ], PostRestoreDbInstanceFromDbSnapshotRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostRestoreDbInstanceFromDbSnapshotRequest.prototype, "request", void 0);
     return PostRestoreDbInstanceFromDbSnapshotRequest;
-}(SpeakeasyBase));
-export { PostRestoreDbInstanceFromDbSnapshotRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostRestoreDbInstanceFromDbSnapshotRequest = PostRestoreDbInstanceFromDbSnapshotRequest;
 var PostRestoreDbInstanceFromDbSnapshotResponse = /** @class */ (function (_super) {
     __extends(PostRestoreDbInstanceFromDbSnapshotResponse, _super);
     function PostRestoreDbInstanceFromDbSnapshotResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostRestoreDbInstanceFromDbSnapshotResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostRestoreDbInstanceFromDbSnapshotResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostRestoreDbInstanceFromDbSnapshotResponse.prototype, "statusCode", void 0);
     return PostRestoreDbInstanceFromDbSnapshotResponse;
-}(SpeakeasyBase));
-export { PostRestoreDbInstanceFromDbSnapshotResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostRestoreDbInstanceFromDbSnapshotResponse = PostRestoreDbInstanceFromDbSnapshotResponse;

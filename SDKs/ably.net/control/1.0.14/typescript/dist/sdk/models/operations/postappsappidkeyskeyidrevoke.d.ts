@@ -14,5 +14,5 @@ export declare class PostAppsAppIdKeysKeyIdRevokeRequest extends SpeakeasyBase {
 export declare class PostAppsAppIdKeysKeyIdRevokeResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: shared.Error;
+    error?: shared.ErrorT;
 }

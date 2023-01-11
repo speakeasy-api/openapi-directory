@@ -34,6 +34,6 @@ export declare class PostAccountsAccountOrderImpactRequest extends SpeakeasyBase
 }
 export declare class PostAccountsAccountOrderImpactResponse extends SpeakeasyBase {
     contentType: string;
-    postAccountsAccountOrderImpact200ApplicationJsonObject?: PostAccountsAccountOrderImpact200ApplicationJson;
     statusCode: number;
+    postAccountsAccountOrderImpact200ApplicationJSONObject?: PostAccountsAccountOrderImpact200ApplicationJson;
 }

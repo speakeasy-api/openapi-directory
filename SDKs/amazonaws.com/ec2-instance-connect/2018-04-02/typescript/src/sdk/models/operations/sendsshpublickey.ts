@@ -57,7 +57,7 @@ export class SendSshPublicKeyResponse extends SpeakeasyBase {
   invalidArgsException?: any;
 
   @SpeakeasyMetadata()
-  sendSshPublicKeyResponse?: shared.SendSshPublicKeyResponse;
+  sendSSHPublicKeyResponse?: shared.SendSshPublicKeyResponse;
 
   @SpeakeasyMetadata()
   serviceException?: any;

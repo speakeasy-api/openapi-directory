@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,174 +14,199 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import * as shared from "../shared";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArtifactregistryProjectsLocationsRepositoriesListResponse = exports.ArtifactregistryProjectsLocationsRepositoriesListRequest = exports.ArtifactregistryProjectsLocationsRepositoriesListSecurity = exports.ArtifactregistryProjectsLocationsRepositoriesListSecurityOption2 = exports.ArtifactregistryProjectsLocationsRepositoriesListSecurityOption1 = exports.ArtifactregistryProjectsLocationsRepositoriesListQueryParams = exports.ArtifactregistryProjectsLocationsRepositoriesListPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
+var shared = __importStar(require("../shared"));
 var ArtifactregistryProjectsLocationsRepositoriesListPathParams = /** @class */ (function (_super) {
     __extends(ArtifactregistryProjectsLocationsRepositoriesListPathParams, _super);
     function ArtifactregistryProjectsLocationsRepositoriesListPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=parent" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=parent" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesListPathParams.prototype, "parent", void 0);
     return ArtifactregistryProjectsLocationsRepositoriesListPathParams;
-}(SpeakeasyBase));
-export { ArtifactregistryProjectsLocationsRepositoriesListPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactregistryProjectsLocationsRepositoriesListPathParams = ArtifactregistryProjectsLocationsRepositoriesListPathParams;
 var ArtifactregistryProjectsLocationsRepositoriesListQueryParams = /** @class */ (function (_super) {
     __extends(ArtifactregistryProjectsLocationsRepositoriesListQueryParams, _super);
     function ArtifactregistryProjectsLocationsRepositoriesListQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=$.xgafv" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesListQueryParams.prototype, "dollarXgafv", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=access_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=access_token" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesListQueryParams.prototype, "accessToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=alt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=alt" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesListQueryParams.prototype, "alt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=callback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=callback" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesListQueryParams.prototype, "callback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=fields" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=fields" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesListQueryParams.prototype, "fields", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=key" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesListQueryParams.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=oauth_token" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesListQueryParams.prototype, "oauthToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageSize" }),
         __metadata("design:type", Number)
     ], ArtifactregistryProjectsLocationsRepositoriesListQueryParams.prototype, "pageSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=pageToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=pageToken" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesListQueryParams.prototype, "pageToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=prettyPrint" }),
         __metadata("design:type", Boolean)
     ], ArtifactregistryProjectsLocationsRepositoriesListQueryParams.prototype, "prettyPrint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=quotaUser" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesListQueryParams.prototype, "quotaUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=uploadType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=uploadType" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesListQueryParams.prototype, "uploadType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=upload_protocol" }),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesListQueryParams.prototype, "uploadProtocol", void 0);
     return ArtifactregistryProjectsLocationsRepositoriesListQueryParams;
-}(SpeakeasyBase));
-export { ArtifactregistryProjectsLocationsRepositoriesListQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactregistryProjectsLocationsRepositoriesListQueryParams = ArtifactregistryProjectsLocationsRepositoriesListQueryParams;
 var ArtifactregistryProjectsLocationsRepositoriesListSecurityOption1 = /** @class */ (function (_super) {
     __extends(ArtifactregistryProjectsLocationsRepositoriesListSecurityOption1, _super);
     function ArtifactregistryProjectsLocationsRepositoriesListSecurityOption1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], ArtifactregistryProjectsLocationsRepositoriesListSecurityOption1.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], ArtifactregistryProjectsLocationsRepositoriesListSecurityOption1.prototype, "oauth2c", void 0);
     return ArtifactregistryProjectsLocationsRepositoriesListSecurityOption1;
-}(SpeakeasyBase));
-export { ArtifactregistryProjectsLocationsRepositoriesListSecurityOption1 };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactregistryProjectsLocationsRepositoriesListSecurityOption1 = ArtifactregistryProjectsLocationsRepositoriesListSecurityOption1;
 var ArtifactregistryProjectsLocationsRepositoriesListSecurityOption2 = /** @class */ (function (_super) {
     __extends(ArtifactregistryProjectsLocationsRepositoriesListSecurityOption2, _super);
     function ArtifactregistryProjectsLocationsRepositoriesListSecurityOption2() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2)
     ], ArtifactregistryProjectsLocationsRepositoriesListSecurityOption2.prototype, "oauth2", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, scheme=true;type=oauth2" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, scheme=true;type=oauth2" }),
         __metadata("design:type", shared.SchemeOauth2c)
     ], ArtifactregistryProjectsLocationsRepositoriesListSecurityOption2.prototype, "oauth2c", void 0);
     return ArtifactregistryProjectsLocationsRepositoriesListSecurityOption2;
-}(SpeakeasyBase));
-export { ArtifactregistryProjectsLocationsRepositoriesListSecurityOption2 };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactregistryProjectsLocationsRepositoriesListSecurityOption2 = ArtifactregistryProjectsLocationsRepositoriesListSecurityOption2;
 var ArtifactregistryProjectsLocationsRepositoriesListSecurity = /** @class */ (function (_super) {
     __extends(ArtifactregistryProjectsLocationsRepositoriesListSecurity, _super);
     function ArtifactregistryProjectsLocationsRepositoriesListSecurity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", ArtifactregistryProjectsLocationsRepositoriesListSecurityOption1)
     ], ArtifactregistryProjectsLocationsRepositoriesListSecurity.prototype, "option1", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "security, option=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "security, option=true" }),
         __metadata("design:type", ArtifactregistryProjectsLocationsRepositoriesListSecurityOption2)
     ], ArtifactregistryProjectsLocationsRepositoriesListSecurity.prototype, "option2", void 0);
     return ArtifactregistryProjectsLocationsRepositoriesListSecurity;
-}(SpeakeasyBase));
-export { ArtifactregistryProjectsLocationsRepositoriesListSecurity };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactregistryProjectsLocationsRepositoriesListSecurity = ArtifactregistryProjectsLocationsRepositoriesListSecurity;
 var ArtifactregistryProjectsLocationsRepositoriesListRequest = /** @class */ (function (_super) {
     __extends(ArtifactregistryProjectsLocationsRepositoriesListRequest, _super);
     function ArtifactregistryProjectsLocationsRepositoriesListRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ArtifactregistryProjectsLocationsRepositoriesListPathParams)
     ], ArtifactregistryProjectsLocationsRepositoriesListRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ArtifactregistryProjectsLocationsRepositoriesListQueryParams)
     ], ArtifactregistryProjectsLocationsRepositoriesListRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ArtifactregistryProjectsLocationsRepositoriesListSecurity)
     ], ArtifactregistryProjectsLocationsRepositoriesListRequest.prototype, "security", void 0);
     return ArtifactregistryProjectsLocationsRepositoriesListRequest;
-}(SpeakeasyBase));
-export { ArtifactregistryProjectsLocationsRepositoriesListRequest };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactregistryProjectsLocationsRepositoriesListRequest = ArtifactregistryProjectsLocationsRepositoriesListRequest;
 var ArtifactregistryProjectsLocationsRepositoriesListResponse = /** @class */ (function (_super) {
     __extends(ArtifactregistryProjectsLocationsRepositoriesListResponse, _super);
     function ArtifactregistryProjectsLocationsRepositoriesListResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ArtifactregistryProjectsLocationsRepositoriesListResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", shared.ListRepositoriesResponse)
     ], ArtifactregistryProjectsLocationsRepositoriesListResponse.prototype, "listRepositoriesResponse", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ArtifactregistryProjectsLocationsRepositoriesListResponse.prototype, "statusCode", void 0);
     return ArtifactregistryProjectsLocationsRepositoriesListResponse;
-}(SpeakeasyBase));
-export { ArtifactregistryProjectsLocationsRepositoriesListResponse };
+}(utils_1.SpeakeasyBase));
+exports.ArtifactregistryProjectsLocationsRepositoriesListResponse = ArtifactregistryProjectsLocationsRepositoriesListResponse;

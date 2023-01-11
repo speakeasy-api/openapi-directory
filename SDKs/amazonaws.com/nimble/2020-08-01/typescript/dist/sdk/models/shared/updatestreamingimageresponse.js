@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,81 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { StreamingImage } from "./streamingimage";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateStreamingImageResponse = exports.UpdateStreamingImageResponseStreamingImage = void 0;
+var utils_1 = require("../../../internal/utils");
+var streamingimageencryptionconfiguration_1 = require("./streamingimageencryptionconfiguration");
+var streamingimagestateenum_1 = require("./streamingimagestateenum");
+var streamingimagestatuscodeenum_1 = require("./streamingimagestatuscodeenum");
+var UpdateStreamingImageResponseStreamingImage = /** @class */ (function (_super) {
+    __extends(UpdateStreamingImageResponseStreamingImage, _super);
+    function UpdateStreamingImageResponseStreamingImage() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
+        __metadata("design:type", String)
+    ], UpdateStreamingImageResponseStreamingImage.prototype, "arn", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
+        __metadata("design:type", String)
+    ], UpdateStreamingImageResponseStreamingImage.prototype, "description", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ec2ImageId" }),
+        __metadata("design:type", String)
+    ], UpdateStreamingImageResponseStreamingImage.prototype, "ec2ImageId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=encryptionConfiguration" }),
+        __metadata("design:type", streamingimageencryptionconfiguration_1.StreamingImageEncryptionConfiguration)
+    ], UpdateStreamingImageResponseStreamingImage.prototype, "encryptionConfiguration", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=eulaIds" }),
+        __metadata("design:type", Array)
+    ], UpdateStreamingImageResponseStreamingImage.prototype, "eulaIds", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], UpdateStreamingImageResponseStreamingImage.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=owner" }),
+        __metadata("design:type", String)
+    ], UpdateStreamingImageResponseStreamingImage.prototype, "owner", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platform" }),
+        __metadata("design:type", String)
+    ], UpdateStreamingImageResponseStreamingImage.prototype, "platform", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
+        __metadata("design:type", String)
+    ], UpdateStreamingImageResponseStreamingImage.prototype, "state", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusCode" }),
+        __metadata("design:type", String)
+    ], UpdateStreamingImageResponseStreamingImage.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statusMessage" }),
+        __metadata("design:type", String)
+    ], UpdateStreamingImageResponseStreamingImage.prototype, "statusMessage", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streamingImageId" }),
+        __metadata("design:type", String)
+    ], UpdateStreamingImageResponseStreamingImage.prototype, "streamingImageId", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
+    ], UpdateStreamingImageResponseStreamingImage.prototype, "tags", void 0);
+    return UpdateStreamingImageResponseStreamingImage;
+}(utils_1.SpeakeasyBase));
+exports.UpdateStreamingImageResponseStreamingImage = UpdateStreamingImageResponseStreamingImage;
 var UpdateStreamingImageResponse = /** @class */ (function (_super) {
     __extends(UpdateStreamingImageResponse, _super);
     function UpdateStreamingImageResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=streamingImage" }),
-        __metadata("design:type", StreamingImage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=streamingImage" }),
+        __metadata("design:type", UpdateStreamingImageResponseStreamingImage)
     ], UpdateStreamingImageResponse.prototype, "streamingImage", void 0);
     return UpdateStreamingImageResponse;
-}(SpeakeasyBase));
-export { UpdateStreamingImageResponse };
+}(utils_1.SpeakeasyBase));
+exports.UpdateStreamingImageResponse = UpdateStreamingImageResponse;

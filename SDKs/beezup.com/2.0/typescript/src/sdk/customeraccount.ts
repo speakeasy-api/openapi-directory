@@ -1,0 +1,687 @@
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import * as operations from "./models/operations";
+import * as utils from "../internal/utils";
+
+export class CustomerAccount {
+  _defaultClient: AxiosInstance;
+  _securityClient: AxiosInstance;
+  _serverURL: string;
+  _language: string;
+  _sdkVersion: string;
+  _genVersion: string;
+
+  constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string) {
+    this._defaultClient = defaultClient;
+    this._securityClient = securityClient;
+    this._serverURL = serverURL;
+    this._language = language;
+    this._sdkVersion = sdkVersion;
+    this._genVersion = genVersion;
+  }
+  
+  /**
+   * activateUserAccount - Activate the user account
+  **/
+  activateUserAccount(
+    req: operations.ActivateUserAccountRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.ActivateUserAccountResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.ActivateUserAccountRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/v2/user/customer/account/activate";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.ActivateUserAccountResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * changeEmail - Change user email
+  **/
+  changeEmail(
+    req: operations.ChangeEmailRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.ChangeEmailResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.ChangeEmailRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/v2/user/customer/account/changeEmail";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.ChangeEmailResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * changePassword - Change user password
+  **/
+  changePassword(
+    req: operations.ChangePasswordRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.ChangePasswordResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.ChangePasswordRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/v2/user/customer/account/changePassword";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.ChangePasswordResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getCreditCardInfo - Get credit card information
+  **/
+  getCreditCardInfo(
+    req: operations.GetCreditCardInfoRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetCreditCardInfoResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetCreditCardInfoRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/v2/user/customer/account/creditCardInfo";
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetCreditCardInfoResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.creditCardInfoResponse = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 304:
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 503:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getProfilePictureInfo - Get profile picture information
+  **/
+  getProfilePictureInfo(
+    req: operations.GetProfilePictureInfoRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetProfilePictureInfoResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetProfilePictureInfoRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/v2/user/customer/account/profilePictureInfo";
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetProfilePictureInfoResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.profilePictureInfoResponse = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 304:
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * getUserAccountInfo - Get user account information
+  **/
+  getUserAccountInfo(
+    req: operations.GetUserAccountInfoRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetUserAccountInfoResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetUserAccountInfoRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/v2/user/customer/account";
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetUserAccountInfoResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.accountInfo = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 304:
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * resendEmailActivation - Resend email activation
+  **/
+  resendEmailActivation(
+    config?: AxiosRequestConfig
+  ): Promise<operations.ResendEmailActivationResponse> {
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/v2/user/customer/account/resendEmailActivation";
+    
+    const client: AxiosInstance = this._defaultClient!;
+    
+    const r = client.request({
+      url: url,
+      method: "post",
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.ResendEmailActivationResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 409:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 429:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 502:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * saveCompanyInfo - Change company information
+  **/
+  saveCompanyInfo(
+    req: operations.SaveCompanyInfoRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.SaveCompanyInfoResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.SaveCompanyInfoRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/v2/user/customer/account/companyInfo";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.SaveCompanyInfoResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 403:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * saveCreditCardInfo - Save user credit card info
+  **/
+  saveCreditCardInfo(
+    req: operations.SaveCreditCardInfoRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.SaveCreditCardInfoResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.SaveCreditCardInfoRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/v2/user/customer/account/creditCardInfo";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.SaveCreditCardInfoResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 202:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 502:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * savePersonalInfo - Save user personal information
+  **/
+  savePersonalInfo(
+    req: operations.SavePersonalInfoRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.SavePersonalInfoResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.SavePersonalInfoRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/v2/user/customer/account/personalInfo";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.SavePersonalInfoResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+  
+  /**
+   * saveProfilePictureInfo - Change user picture information
+  **/
+  saveProfilePictureInfo(
+    req: operations.SaveProfilePictureInfoRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.SaveProfilePictureInfoResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.SaveProfilePictureInfoRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = baseURL.replace(/\/$/, "") + "/v2/user/customer/account/profilePictureInfo";
+
+    let [reqBodyHeaders, reqBody]: [object, any] = [{}, {}];
+
+    try {
+      [reqBodyHeaders, reqBody] = utils.serializeRequestBody(req);
+    } catch (e: unknown) {
+      if (e instanceof Error) {
+        throw new Error(`Error serializing request body, cause: ${e.message}`);
+      }
+    }
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...reqBodyHeaders, ...config?.headers};
+    if (reqBody == null || Object.keys(reqBody).length === 0) throw new Error("request body is required");
+    
+    const r = client.request({
+      url: url,
+      method: "put",
+      headers: headers,
+      data: reqBody, 
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.SaveProfilePictureInfoResponse = {statusCode: httpRes.status, contentType: contentType};
+        switch (true) {
+          case httpRes?.status == 204:
+            break;
+          case httpRes?.status == 400:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 413:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          case httpRes?.status == 415:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+          default:
+            if (utils.matchContentType(contentType, `application/json`)) {
+                res.beezUPCommonErrorResponseMessage = httpRes?.data;
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+}

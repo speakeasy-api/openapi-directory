@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Attachment } from "./attachment";
-import { ClusterConfiguration } from "./clusterconfiguration";
-import { CapacityProviderStrategyItem } from "./capacityproviderstrategyitem";
-import { ClusterSetting } from "./clustersetting";
-import { KeyValuePair } from "./keyvaluepair";
-import { Tag } from "./tag";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Cluster = void 0;
+var utils_1 = require("../../../internal/utils");
+var attachment_1 = require("./attachment");
+var clusterconfiguration_1 = require("./clusterconfiguration");
+var capacityproviderstrategyitem_1 = require("./capacityproviderstrategyitem");
+var clustersetting_1 = require("./clustersetting");
+var keyvaluepair_1 = require("./keyvaluepair");
+var tag_1 = require("./tag");
 // Cluster
 /**
  * A regional grouping of one or more container instances on which you can run task requests. Each account receives a default cluster the first time you use the Amazon ECS service, but you may also create other clusters. Clusters may contain more than one instance type simultaneously.
@@ -39,65 +42,65 @@ var Cluster = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=activeServicesCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=activeServicesCount" }),
         __metadata("design:type", Number)
     ], Cluster.prototype, "activeServicesCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attachments", elemType: Attachment }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attachments", elemType: attachment_1.Attachment }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "attachments", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attachmentsStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attachmentsStatus" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "attachmentsStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=capacityProviders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=capacityProviders" }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "capacityProviders", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterArn" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "clusterArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterName" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "clusterName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configuration" }),
-        __metadata("design:type", ClusterConfiguration)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configuration" }),
+        __metadata("design:type", clusterconfiguration_1.ClusterConfiguration)
     ], Cluster.prototype, "configuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultCapacityProviderStrategy", elemType: CapacityProviderStrategyItem }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultCapacityProviderStrategy", elemType: capacityproviderstrategyitem_1.CapacityProviderStrategyItem }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "defaultCapacityProviderStrategy", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=pendingTasksCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=pendingTasksCount" }),
         __metadata("design:type", Number)
     ], Cluster.prototype, "pendingTasksCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=registeredContainerInstancesCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=registeredContainerInstancesCount" }),
         __metadata("design:type", Number)
     ], Cluster.prototype, "registeredContainerInstancesCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=runningTasksCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=runningTasksCount" }),
         __metadata("design:type", Number)
     ], Cluster.prototype, "runningTasksCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=settings", elemType: ClusterSetting }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=settings", elemType: clustersetting_1.ClusterSetting }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "settings", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=statistics", elemType: KeyValuePair }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=statistics", elemType: keyvaluepair_1.KeyValuePair }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "statistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], Cluster.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags", elemType: Tag }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags", elemType: tag_1.Tag }),
         __metadata("design:type", Array)
     ], Cluster.prototype, "tags", void 0);
     return Cluster;
-}(SpeakeasyBase));
-export { Cluster };
+}(utils_1.SpeakeasyBase));
+exports.Cluster = Cluster;

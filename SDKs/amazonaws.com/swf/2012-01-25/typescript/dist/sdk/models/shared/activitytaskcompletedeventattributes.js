@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActivityTaskCompletedEventAttributes = void 0;
+var utils_1 = require("../../../internal/utils");
 // ActivityTaskCompletedEventAttributes
 /**
  * Provides the details of the <code>ActivityTaskCompleted</code> event.
@@ -33,17 +36,17 @@ var ActivityTaskCompletedEventAttributes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=result" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=result" }),
         __metadata("design:type", String)
     ], ActivityTaskCompletedEventAttributes.prototype, "result", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=scheduledEventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=scheduledEventId" }),
         __metadata("design:type", Number)
     ], ActivityTaskCompletedEventAttributes.prototype, "scheduledEventId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=startedEventId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=startedEventId" }),
         __metadata("design:type", Number)
     ], ActivityTaskCompletedEventAttributes.prototype, "startedEventId", void 0);
     return ActivityTaskCompletedEventAttributes;
-}(SpeakeasyBase));
-export { ActivityTaskCompletedEventAttributes };
+}(utils_1.SpeakeasyBase));
+exports.ActivityTaskCompletedEventAttributes = ActivityTaskCompletedEventAttributes;

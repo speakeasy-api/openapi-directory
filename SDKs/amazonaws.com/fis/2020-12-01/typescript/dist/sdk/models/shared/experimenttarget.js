@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ExperimentTargetFilter } from "./experimenttargetfilter";
-// ExperimentTarget
-/**
- * Describes a target for an experiment.
-**/
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExperimentTarget = void 0;
+var utils_1 = require("../../../internal/utils");
+var experimenttargetfilter_1 = require("./experimenttargetfilter");
 var ExperimentTarget = /** @class */ (function (_super) {
     __extends(ExperimentTarget, _super);
     function ExperimentTarget() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=filters", elemType: ExperimentTargetFilter }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=filters", elemType: experimenttargetfilter_1.ExperimentTargetFilter }),
         __metadata("design:type", Array)
     ], ExperimentTarget.prototype, "filters", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceArns" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceArns" }),
         __metadata("design:type", Array)
     ], ExperimentTarget.prototype, "resourceArns", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceTags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceTags" }),
+        __metadata("design:type", Object)
     ], ExperimentTarget.prototype, "resourceTags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], ExperimentTarget.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selectionMode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selectionMode" }),
         __metadata("design:type", String)
     ], ExperimentTarget.prototype, "selectionMode", void 0);
     return ExperimentTarget;
-}(SpeakeasyBase));
-export { ExperimentTarget };
+}(utils_1.SpeakeasyBase));
+exports.ExperimentTarget = ExperimentTarget;

@@ -7,11 +7,11 @@ export declare class CreateOrUpdateReportPathParams extends SpeakeasyBase {
 }
 export declare class CreateOrUpdateReportRequest extends SpeakeasyBase {
     pathParams: CreateOrUpdateReportPathParams;
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class CreateOrUpdateReportResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    error?: Map<string, any>;
-    report?: Map<string, any>;
+    error?: Record<string, any>;
+    report?: Record<string, any>;
 }

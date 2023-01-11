@@ -16,6 +16,6 @@ export declare class PostPortfolioOptimizationEqualRiskContributionsRequest exte
 }
 export declare class PostPortfolioOptimizationEqualRiskContributionsResponse extends SpeakeasyBase {
     contentType: string;
-    postPortfolioOptimizationEqualRiskContributions200ApplicationJsonObject?: PostPortfolioOptimizationEqualRiskContributions200ApplicationJson;
     statusCode: number;
+    postPortfolioOptimizationEqualRiskContributions200ApplicationJSONObject?: PostPortfolioOptimizationEqualRiskContributions200ApplicationJson;
 }

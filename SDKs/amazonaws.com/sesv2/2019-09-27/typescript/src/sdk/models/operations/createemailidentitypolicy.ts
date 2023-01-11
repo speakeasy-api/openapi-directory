@@ -64,7 +64,7 @@ export class CreateEmailIdentityPolicyResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  createEmailIdentityPolicyResponse?: Map<string, any>;
+  createEmailIdentityPolicyResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   limitExceededException?: any;

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Name = void 0;
+var utils_1 = require("../../../internal/utils");
 // Name
 /**
  * 2-letter ISO 639-1 language code for the corresponding item.
@@ -33,13 +36,13 @@ var Name = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=$" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=$" }),
         __metadata("design:type", String)
     ], Name.prototype, "dollar", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=@LanguageCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=@LanguageCode" }),
         __metadata("design:type", String)
     ], Name.prototype, "atLanguageCode", void 0);
     return Name;
-}(SpeakeasyBase));
-export { Name };
+}(utils_1.SpeakeasyBase));
+exports.Name = Name;

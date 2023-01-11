@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleIdentityAccesscontextmanagerV1ApiOperation } from "./googleidentityaccesscontextmanagerv1apioperation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleIdentityAccesscontextmanagerV1EgressTo = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleidentityaccesscontextmanagerv1apioperation_1 = require("./googleidentityaccesscontextmanagerv1apioperation");
 // GoogleIdentityAccesscontextmanagerV1EgressTo
 /**
  * Defines the conditions under which an EgressPolicy matches a request. Conditions are based on information about the ApiOperation intended to be performed on the `resources` specified. Note that if the destination of the request is also protected by a ServicePerimeter, then that ServicePerimeter must have an IngressPolicy which allows access in order for this request to succeed. The request must match `operations` AND `resources` fields in order to be allowed egress out of the perimeter.
@@ -34,17 +37,17 @@ var GoogleIdentityAccesscontextmanagerV1EgressTo = /** @class */ (function (_sup
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=externalResources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=externalResources" }),
         __metadata("design:type", Array)
     ], GoogleIdentityAccesscontextmanagerV1EgressTo.prototype, "externalResources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=operations", elemType: GoogleIdentityAccesscontextmanagerV1ApiOperation }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=operations", elemType: googleidentityaccesscontextmanagerv1apioperation_1.GoogleIdentityAccesscontextmanagerV1ApiOperation }),
         __metadata("design:type", Array)
     ], GoogleIdentityAccesscontextmanagerV1EgressTo.prototype, "operations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources" }),
         __metadata("design:type", Array)
     ], GoogleIdentityAccesscontextmanagerV1EgressTo.prototype, "resources", void 0);
     return GoogleIdentityAccesscontextmanagerV1EgressTo;
-}(SpeakeasyBase));
-export { GoogleIdentityAccesscontextmanagerV1EgressTo };
+}(utils_1.SpeakeasyBase));
+exports.GoogleIdentityAccesscontextmanagerV1EgressTo = GoogleIdentityAccesscontextmanagerV1EgressTo;

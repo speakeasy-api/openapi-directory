@@ -22,5 +22,5 @@ export class GetOrganizationSnmpResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getOrganizationSnmp200ApplicationJsonObject?: Map<string, any>;
+  getOrganizationSnmp200ApplicationJSONObject?: Record<string, any>;
 }

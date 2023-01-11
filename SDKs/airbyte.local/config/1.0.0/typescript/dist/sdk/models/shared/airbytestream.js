@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AirbyteStream = void 0;
+var utils_1 = require("../../../internal/utils");
 // AirbyteStream
 /**
  * the immutable schema defined by the source
@@ -33,33 +36,33 @@ var AirbyteStream = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=defaultCursorField" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=defaultCursorField" }),
         __metadata("design:type", Array)
     ], AirbyteStream.prototype, "defaultCursorField", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=jsonSchema" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=jsonSchema" }),
+        __metadata("design:type", Object)
     ], AirbyteStream.prototype, "jsonSchema", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AirbyteStream.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=namespace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=namespace" }),
         __metadata("design:type", String)
     ], AirbyteStream.prototype, "namespace", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceDefinedCursor" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceDefinedCursor" }),
         __metadata("design:type", Boolean)
     ], AirbyteStream.prototype, "sourceDefinedCursor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceDefinedPrimaryKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceDefinedPrimaryKey" }),
         __metadata("design:type", Array)
     ], AirbyteStream.prototype, "sourceDefinedPrimaryKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportedSyncModes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportedSyncModes" }),
         __metadata("design:type", Array)
     ], AirbyteStream.prototype, "supportedSyncModes", void 0);
     return AirbyteStream;
-}(SpeakeasyBase));
-export { AirbyteStream };
+}(utils_1.SpeakeasyBase));
+exports.AirbyteStream = AirbyteStream;

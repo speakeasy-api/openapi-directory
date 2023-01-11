@@ -1,1 +1,1 @@
-export declare function SerializeRequestBody(request: any): [object, any];
+export declare function serializeRequestBody(request: any): [object, any];

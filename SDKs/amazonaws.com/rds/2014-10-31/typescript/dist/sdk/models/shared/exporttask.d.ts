@@ -16,6 +16,6 @@ export declare class ExportTask extends SpeakeasyBase {
     status?: string;
     taskEndTime?: Date;
     taskStartTime?: Date;
-    totalExtractedDataInGb?: number;
+    totalExtractedDataInGB?: number;
     warningMessage?: string;
 }

@@ -16,7 +16,7 @@ export declare class GetUsersUserEmailOfferingsOfferingIdProgressRequest extends
 }
 export declare class GetUsersUserEmailOfferingsOfferingIdProgressResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
-    getUsersUserEmailOfferingsOfferingIdProgress200ApplicationJsonObject?: GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJson;
+    error?: shared.ErrorT;
     statusCode: number;
+    getUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSONObject?: GetUsersUserEmailOfferingsOfferingIdProgress200ApplicationJson;
 }

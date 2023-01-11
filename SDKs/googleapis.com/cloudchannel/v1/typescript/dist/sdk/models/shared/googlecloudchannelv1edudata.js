@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleCloudChannelV1EduDataInstituteSizeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleCloudChannelV1EduData = exports.GoogleCloudChannelV1EduDataInstituteTypeEnum = exports.GoogleCloudChannelV1EduDataInstituteSizeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleCloudChannelV1EduDataInstituteSizeEnum;
 (function (GoogleCloudChannelV1EduDataInstituteSizeEnum) {
     GoogleCloudChannelV1EduDataInstituteSizeEnum["InstituteSizeUnspecified"] = "INSTITUTE_SIZE_UNSPECIFIED";
     GoogleCloudChannelV1EduDataInstituteSizeEnum["Size1100"] = "SIZE_1_100";
@@ -33,13 +36,13 @@ export var GoogleCloudChannelV1EduDataInstituteSizeEnum;
     GoogleCloudChannelV1EduDataInstituteSizeEnum["Size20015000"] = "SIZE_2001_5000";
     GoogleCloudChannelV1EduDataInstituteSizeEnum["Size500110000"] = "SIZE_5001_10000";
     GoogleCloudChannelV1EduDataInstituteSizeEnum["Size10001OrMore"] = "SIZE_10001_OR_MORE";
-})(GoogleCloudChannelV1EduDataInstituteSizeEnum || (GoogleCloudChannelV1EduDataInstituteSizeEnum = {}));
-export var GoogleCloudChannelV1EduDataInstituteTypeEnum;
+})(GoogleCloudChannelV1EduDataInstituteSizeEnum = exports.GoogleCloudChannelV1EduDataInstituteSizeEnum || (exports.GoogleCloudChannelV1EduDataInstituteSizeEnum = {}));
+var GoogleCloudChannelV1EduDataInstituteTypeEnum;
 (function (GoogleCloudChannelV1EduDataInstituteTypeEnum) {
     GoogleCloudChannelV1EduDataInstituteTypeEnum["InstituteTypeUnspecified"] = "INSTITUTE_TYPE_UNSPECIFIED";
     GoogleCloudChannelV1EduDataInstituteTypeEnum["K12"] = "K12";
     GoogleCloudChannelV1EduDataInstituteTypeEnum["University"] = "UNIVERSITY";
-})(GoogleCloudChannelV1EduDataInstituteTypeEnum || (GoogleCloudChannelV1EduDataInstituteTypeEnum = {}));
+})(GoogleCloudChannelV1EduDataInstituteTypeEnum = exports.GoogleCloudChannelV1EduDataInstituteTypeEnum || (exports.GoogleCloudChannelV1EduDataInstituteTypeEnum = {}));
 // GoogleCloudChannelV1EduData
 /**
  * Required Edu Attributes
@@ -50,17 +53,17 @@ var GoogleCloudChannelV1EduData = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instituteSize" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instituteSize" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1EduData.prototype, "instituteSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=instituteType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=instituteType" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1EduData.prototype, "instituteType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=website" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=website" }),
         __metadata("design:type", String)
     ], GoogleCloudChannelV1EduData.prototype, "website", void 0);
     return GoogleCloudChannelV1EduData;
-}(SpeakeasyBase));
-export { GoogleCloudChannelV1EduData };
+}(utils_1.SpeakeasyBase));
+exports.GoogleCloudChannelV1EduData = GoogleCloudChannelV1EduData;

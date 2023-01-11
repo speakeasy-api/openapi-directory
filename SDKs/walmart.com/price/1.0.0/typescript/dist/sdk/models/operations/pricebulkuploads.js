@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,141 +23,143 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PriceBulkUploadsFeedTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PriceBulkUploadsResponse = exports.PriceBulkUploadsRequest = exports.PriceBulkUploads200ApplicationJson = exports.PriceBulkUploadsRequestBody = exports.PriceBulkUploadsRequestBodyFile = exports.PriceBulkUploadsHeaders = exports.PriceBulkUploadsQueryParams = exports.PriceBulkUploadsFeedTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PriceBulkUploadsFeedTypeEnum;
 (function (PriceBulkUploadsFeedTypeEnum) {
     PriceBulkUploadsFeedTypeEnum["Price"] = "price";
     PriceBulkUploadsFeedTypeEnum["CptSellerEligibility"] = "CPT_SELLER_ELIGIBILITY";
-})(PriceBulkUploadsFeedTypeEnum || (PriceBulkUploadsFeedTypeEnum = {}));
+})(PriceBulkUploadsFeedTypeEnum = exports.PriceBulkUploadsFeedTypeEnum || (exports.PriceBulkUploadsFeedTypeEnum = {}));
 var PriceBulkUploadsQueryParams = /** @class */ (function (_super) {
     __extends(PriceBulkUploadsQueryParams, _super);
     function PriceBulkUploadsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=feedType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=feedType" }),
         __metadata("design:type", String)
     ], PriceBulkUploadsQueryParams.prototype, "feedType", void 0);
     return PriceBulkUploadsQueryParams;
-}(SpeakeasyBase));
-export { PriceBulkUploadsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PriceBulkUploadsQueryParams = PriceBulkUploadsQueryParams;
 var PriceBulkUploadsHeaders = /** @class */ (function (_super) {
     __extends(PriceBulkUploadsHeaders, _super);
     function PriceBulkUploadsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=Authorization" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=Authorization" }),
         __metadata("design:type", String)
     ], PriceBulkUploadsHeaders.prototype, "authorization", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_CONSUMER.CHANNEL.TYPE" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=WM_CONSUMER.CHANNEL.TYPE" }),
         __metadata("design:type", String)
-    ], PriceBulkUploadsHeaders.prototype, "wmConsumerChannelType", void 0);
+    ], PriceBulkUploadsHeaders.prototype, "wmCONSUMERCHANNELTYPE", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_QOS.CORRELATION_ID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=WM_QOS.CORRELATION_ID" }),
         __metadata("design:type", String)
-    ], PriceBulkUploadsHeaders.prototype, "wmQosCorrelationId", void 0);
+    ], PriceBulkUploadsHeaders.prototype, "wmQOSCORRELATIONID", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SEC.ACCESS_TOKEN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=WM_SEC.ACCESS_TOKEN" }),
         __metadata("design:type", String)
-    ], PriceBulkUploadsHeaders.prototype, "wmSecAccessToken", void 0);
+    ], PriceBulkUploadsHeaders.prototype, "wmSECACCESSTOKEN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=WM_SVC.NAME" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=WM_SVC.NAME" }),
         __metadata("design:type", String)
-    ], PriceBulkUploadsHeaders.prototype, "wmSvcName", void 0);
+    ], PriceBulkUploadsHeaders.prototype, "wmSVCNAME", void 0);
     return PriceBulkUploadsHeaders;
-}(SpeakeasyBase));
-export { PriceBulkUploadsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PriceBulkUploadsHeaders = PriceBulkUploadsHeaders;
 var PriceBulkUploadsRequestBodyFile = /** @class */ (function (_super) {
     __extends(PriceBulkUploadsRequestBodyFile, _super);
     function PriceBulkUploadsRequestBodyFile() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, content=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, content=true" }),
         __metadata("design:type", Uint8Array)
     ], PriceBulkUploadsRequestBodyFile.prototype, "content", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, name=file" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, name=file" }),
         __metadata("design:type", String)
     ], PriceBulkUploadsRequestBodyFile.prototype, "file", void 0);
     return PriceBulkUploadsRequestBodyFile;
-}(SpeakeasyBase));
-export { PriceBulkUploadsRequestBodyFile };
+}(utils_1.SpeakeasyBase));
+exports.PriceBulkUploadsRequestBodyFile = PriceBulkUploadsRequestBodyFile;
 var PriceBulkUploadsRequestBody = /** @class */ (function (_super) {
     __extends(PriceBulkUploadsRequestBody, _super);
     function PriceBulkUploadsRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "multipart_form, file=true" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "multipart_form, file=true" }),
         __metadata("design:type", PriceBulkUploadsRequestBodyFile)
     ], PriceBulkUploadsRequestBody.prototype, "file", void 0);
     return PriceBulkUploadsRequestBody;
-}(SpeakeasyBase));
-export { PriceBulkUploadsRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.PriceBulkUploadsRequestBody = PriceBulkUploadsRequestBody;
 var PriceBulkUploads200ApplicationJson = /** @class */ (function (_super) {
     __extends(PriceBulkUploads200ApplicationJson, _super);
     function PriceBulkUploads200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalAttributes" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalAttributes" }),
+        __metadata("design:type", Object)
     ], PriceBulkUploads200ApplicationJson.prototype, "additionalAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=errors" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=errors" }),
+        __metadata("design:type", Object)
     ], PriceBulkUploads200ApplicationJson.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=feedId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=feedId" }),
         __metadata("design:type", String)
     ], PriceBulkUploads200ApplicationJson.prototype, "feedId", void 0);
     return PriceBulkUploads200ApplicationJson;
-}(SpeakeasyBase));
-export { PriceBulkUploads200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.PriceBulkUploads200ApplicationJson = PriceBulkUploads200ApplicationJson;
 var PriceBulkUploadsRequest = /** @class */ (function (_super) {
     __extends(PriceBulkUploadsRequest, _super);
     function PriceBulkUploadsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PriceBulkUploadsQueryParams)
     ], PriceBulkUploadsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PriceBulkUploadsHeaders)
     ], PriceBulkUploadsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=multipart/form-data" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=multipart/form-data" }),
         __metadata("design:type", PriceBulkUploadsRequestBody)
     ], PriceBulkUploadsRequest.prototype, "request", void 0);
     return PriceBulkUploadsRequest;
-}(SpeakeasyBase));
-export { PriceBulkUploadsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PriceBulkUploadsRequest = PriceBulkUploadsRequest;
 var PriceBulkUploadsResponse = /** @class */ (function (_super) {
     __extends(PriceBulkUploadsResponse, _super);
     function PriceBulkUploadsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PriceBulkUploadsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PriceBulkUploadsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PriceBulkUploadsResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PriceBulkUploads200ApplicationJson)
-    ], PriceBulkUploadsResponse.prototype, "priceBulkUploads200ApplicationJsonObject", void 0);
+    ], PriceBulkUploadsResponse.prototype, "priceBulkUploads200ApplicationJSONObject", void 0);
     return PriceBulkUploadsResponse;
-}(SpeakeasyBase));
-export { PriceBulkUploadsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PriceBulkUploadsResponse = PriceBulkUploadsResponse;

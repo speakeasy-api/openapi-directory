@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DeploymentReadyOption } from "./deploymentreadyoption";
-import { GreenFleetProvisioningOption } from "./greenfleetprovisioningoption";
-import { BlueInstanceTerminationOption } from "./blueinstanceterminationoption";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BlueGreenDeploymentConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
+var deploymentreadyoption_1 = require("./deploymentreadyoption");
+var greenfleetprovisioningoption_1 = require("./greenfleetprovisioningoption");
+var blueinstanceterminationoption_1 = require("./blueinstanceterminationoption");
 // BlueGreenDeploymentConfiguration
 /**
  * Information about blue/green deployment options for a deployment group.
@@ -36,17 +39,17 @@ var BlueGreenDeploymentConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deploymentReadyOption" }),
-        __metadata("design:type", DeploymentReadyOption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deploymentReadyOption" }),
+        __metadata("design:type", deploymentreadyoption_1.DeploymentReadyOption)
     ], BlueGreenDeploymentConfiguration.prototype, "deploymentReadyOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=greenFleetProvisioningOption" }),
-        __metadata("design:type", GreenFleetProvisioningOption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=greenFleetProvisioningOption" }),
+        __metadata("design:type", greenfleetprovisioningoption_1.GreenFleetProvisioningOption)
     ], BlueGreenDeploymentConfiguration.prototype, "greenFleetProvisioningOption", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=terminateBlueInstancesOnDeploymentSuccess" }),
-        __metadata("design:type", BlueInstanceTerminationOption)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=terminateBlueInstancesOnDeploymentSuccess" }),
+        __metadata("design:type", blueinstanceterminationoption_1.BlueInstanceTerminationOption)
     ], BlueGreenDeploymentConfiguration.prototype, "terminateBlueInstancesOnDeploymentSuccess", void 0);
     return BlueGreenDeploymentConfiguration;
-}(SpeakeasyBase));
-export { BlueGreenDeploymentConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.BlueGreenDeploymentConfiguration = BlueGreenDeploymentConfiguration;

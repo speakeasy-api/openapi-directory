@@ -188,23 +188,23 @@ export class RacerResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  racer400ApplicationJsonObject?: Racer400ApplicationJson;
+  racer400ApplicationJSONObject?: Racer400ApplicationJson;
 
   @SpeakeasyMetadata()
-  racer401ApplicationJsonObject?: Racer401ApplicationJson;
+  racer401ApplicationJSONObject?: Racer401ApplicationJson;
 
   @SpeakeasyMetadata()
-  racer404ApplicationJsonObject?: Racer404ApplicationJson;
+  racer404ApplicationJSONObject?: Racer404ApplicationJson;
 
   @SpeakeasyMetadata()
-  racer500ApplicationJsonObject?: Racer500ApplicationJson;
+  racer500ApplicationJSONObject?: Racer500ApplicationJson;
 
   @SpeakeasyMetadata()
-  racer502ApplicationJsonObject?: Racer502ApplicationJson;
+  racer502ApplicationJSONObject?: Racer502ApplicationJson;
 
   @SpeakeasyMetadata()
-  racer503ApplicationJsonObject?: Racer503ApplicationJson;
+  racer503ApplicationJSONObject?: Racer503ApplicationJson;
 
   @SpeakeasyMetadata()
-  racer504ApplicationJsonObject?: Racer504ApplicationJson;
+  racer504ApplicationJSONObject?: Racer504ApplicationJson;
 }

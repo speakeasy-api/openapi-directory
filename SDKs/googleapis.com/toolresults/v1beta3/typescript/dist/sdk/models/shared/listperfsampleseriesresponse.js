@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PerfSampleSeries } from "./perfsampleseries";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListPerfSampleSeriesResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var perfsampleseries_1 = require("./perfsampleseries");
 var ListPerfSampleSeriesResponse = /** @class */ (function (_super) {
     __extends(ListPerfSampleSeriesResponse, _super);
     function ListPerfSampleSeriesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=perfSampleSeries", elemType: PerfSampleSeries }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=perfSampleSeries", elemType: perfsampleseries_1.PerfSampleSeries }),
         __metadata("design:type", Array)
     ], ListPerfSampleSeriesResponse.prototype, "perfSampleSeries", void 0);
     return ListPerfSampleSeriesResponse;
-}(SpeakeasyBase));
-export { ListPerfSampleSeriesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ListPerfSampleSeriesResponse = ListPerfSampleSeriesResponse;

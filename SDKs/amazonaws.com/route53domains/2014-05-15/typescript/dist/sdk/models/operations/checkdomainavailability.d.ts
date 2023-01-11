@@ -22,5 +22,5 @@ export declare class CheckDomainAvailabilityResponse extends SpeakeasyBase {
     contentType: string;
     invalidInput?: any;
     statusCode: number;
-    unsupportedTld?: any;
+    unsupportedTLD?: any;
 }

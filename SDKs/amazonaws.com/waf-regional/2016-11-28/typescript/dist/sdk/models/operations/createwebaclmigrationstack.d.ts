@@ -19,7 +19,7 @@ export declare class CreateWebAclMigrationStackRequest extends SpeakeasyBase {
 }
 export declare class CreateWebAclMigrationStackResponse extends SpeakeasyBase {
     contentType: string;
-    createWebAclMigrationStackResponse?: shared.CreateWebAclMigrationStackResponse;
+    createWebACLMigrationStackResponse?: shared.CreateWebAclMigrationStackResponse;
     statusCode: number;
     wafEntityMigrationException?: any;
     wafInternalErrorException?: any;

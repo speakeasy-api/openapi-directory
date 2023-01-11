@@ -1,13 +1,13 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbParameterGroupStatus } from "./dbparametergroupstatus";
-import { DbSecurityGroupMembership } from "./dbsecuritygroupmembership";
+import { DbParameterGroupStatusList } from "./dbparametergroupstatuslist";
+import { DbSecurityGroupMembershipList } from "./dbsecuritygroupmembershiplist";
 import { DbSubnetGroup } from "./dbsubnetgroup";
-import { DomainMembership } from "./domainmembership";
+import { DomainMembershipList } from "./domainmembershiplist";
 import { Endpoint } from "./endpoint";
-import { OptionGroupMembership } from "./optiongroupmembership";
+import { OptionGroupMembershipList } from "./optiongroupmembershiplist";
 import { PendingModifiedValues } from "./pendingmodifiedvalues";
-import { DbInstanceStatusInfo } from "./dbinstancestatusinfo";
-import { VpcSecurityGroupMembership } from "./vpcsecuritygroupmembership";
+import { DbInstanceStatusInfoList } from "./dbinstancestatusinfolist";
+import { VpcSecurityGroupMembershipList } from "./vpcsecuritygroupmembershiplist";
 
 
 
@@ -55,11 +55,11 @@ export class DbInstance extends SpeakeasyBase {
   @SpeakeasyMetadata()
   dbName?: string;
 
-  @SpeakeasyMetadata({ elemType: DbParameterGroupStatus })
-  dbParameterGroups?: DbParameterGroupStatus[];
+  @SpeakeasyMetadata({ elemType: DbParameterGroupStatusList })
+  dbParameterGroups?: DbParameterGroupStatusList[];
 
-  @SpeakeasyMetadata({ elemType: DbSecurityGroupMembership })
-  dbSecurityGroups?: DbSecurityGroupMembership[];
+  @SpeakeasyMetadata({ elemType: DbSecurityGroupMembershipList })
+  dbSecurityGroups?: DbSecurityGroupMembershipList[];
 
   @SpeakeasyMetadata()
   dbSubnetGroup?: DbSubnetGroup;
@@ -73,8 +73,8 @@ export class DbInstance extends SpeakeasyBase {
   @SpeakeasyMetadata()
   deletionProtection?: boolean;
 
-  @SpeakeasyMetadata({ elemType: DomainMembership })
-  domainMemberships?: DomainMembership[];
+  @SpeakeasyMetadata({ elemType: DomainMembershipList })
+  domainMemberships?: DomainMembershipList[];
 
   @SpeakeasyMetadata()
   enabledCloudwatchLogsExports?: string[];
@@ -119,10 +119,10 @@ export class DbInstance extends SpeakeasyBase {
   monitoringRoleArn?: string;
 
   @SpeakeasyMetadata()
-  multiAz?: boolean;
+  multiAZ?: boolean;
 
-  @SpeakeasyMetadata({ elemType: OptionGroupMembership })
-  optionGroupMemberships?: OptionGroupMembership[];
+  @SpeakeasyMetadata({ elemType: OptionGroupMembershipList })
+  optionGroupMemberships?: OptionGroupMembershipList[];
 
   @SpeakeasyMetadata()
   pendingModifiedValues?: PendingModifiedValues;
@@ -131,7 +131,7 @@ export class DbInstance extends SpeakeasyBase {
   performanceInsightsEnabled?: boolean;
 
   @SpeakeasyMetadata()
-  performanceInsightsKmsKeyId?: string;
+  performanceInsightsKMSKeyId?: string;
 
   @SpeakeasyMetadata()
   preferredBackupWindow?: string;
@@ -143,22 +143,22 @@ export class DbInstance extends SpeakeasyBase {
   promotionTier?: number;
 
   @SpeakeasyMetadata()
-  publiclyAccessible?: boolean;
+  publiclyAccessible?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  readReplicaDbClusterIdentifiers?: string[];
+  readReplicaDBClusterIdentifiers?: Record<string, any>[];
 
   @SpeakeasyMetadata()
-  readReplicaDbInstanceIdentifiers?: string[];
+  readReplicaDBInstanceIdentifiers?: Record<string, any>[];
 
   @SpeakeasyMetadata()
-  readReplicaSourceDbInstanceIdentifier?: string;
+  readReplicaSourceDBInstanceIdentifier?: string;
 
   @SpeakeasyMetadata()
   secondaryAvailabilityZone?: string;
 
-  @SpeakeasyMetadata({ elemType: DbInstanceStatusInfo })
-  statusInfos?: DbInstanceStatusInfo[];
+  @SpeakeasyMetadata({ elemType: DbInstanceStatusInfoList })
+  statusInfos?: DbInstanceStatusInfoList[];
 
   @SpeakeasyMetadata()
   storageEncrypted?: boolean;
@@ -172,6 +172,6 @@ export class DbInstance extends SpeakeasyBase {
   @SpeakeasyMetadata()
   timezone?: string;
 
-  @SpeakeasyMetadata({ elemType: VpcSecurityGroupMembership })
-  vpcSecurityGroups?: VpcSecurityGroupMembership[];
+  @SpeakeasyMetadata({ elemType: VpcSecurityGroupMembershipList })
+  vpcSecurityGroups?: VpcSecurityGroupMembershipList[];
 }

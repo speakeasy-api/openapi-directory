@@ -6,6 +6,6 @@ export declare class ScanInput extends SpeakeasyBase {
     count?: boolean;
     exclusiveStartKey?: Key;
     limit?: number;
-    scanFilter?: Map<string, Condition>;
+    scanFilter?: Record<string, Condition>;
     tableName: string;
 }

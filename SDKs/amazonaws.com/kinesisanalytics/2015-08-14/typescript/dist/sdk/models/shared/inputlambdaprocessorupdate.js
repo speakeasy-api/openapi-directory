@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InputLambdaProcessorUpdate = void 0;
+var utils_1 = require("../../../internal/utils");
 // InputLambdaProcessorUpdate
 /**
  * Represents an update to the <a href="https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_InputLambdaProcessor.html">InputLambdaProcessor</a> that is used to preprocess the records in the stream.
@@ -33,13 +36,13 @@ var InputLambdaProcessorUpdate = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ResourceARNUpdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ResourceARNUpdate" }),
         __metadata("design:type", String)
-    ], InputLambdaProcessorUpdate.prototype, "resourceArnUpdate", void 0);
+    ], InputLambdaProcessorUpdate.prototype, "resourceARNUpdate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RoleARNUpdate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RoleARNUpdate" }),
         __metadata("design:type", String)
-    ], InputLambdaProcessorUpdate.prototype, "roleArnUpdate", void 0);
+    ], InputLambdaProcessorUpdate.prototype, "roleARNUpdate", void 0);
     return InputLambdaProcessorUpdate;
-}(SpeakeasyBase));
-export { InputLambdaProcessorUpdate };
+}(utils_1.SpeakeasyBase));
+exports.InputLambdaProcessorUpdate = InputLambdaProcessorUpdate;

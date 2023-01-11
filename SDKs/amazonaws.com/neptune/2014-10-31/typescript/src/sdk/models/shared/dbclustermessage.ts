@@ -1,11 +1,11 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DbCluster } from "./dbcluster";
+import { DbClusterList } from "./dbclusterlist";
 
 
 
 export class DbClusterMessage extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: DbCluster })
-  dbClusters?: DbCluster[];
+  @SpeakeasyMetadata({ elemType: DbClusterList })
+  dbClusters?: DbClusterList[];
 
   @SpeakeasyMetadata()
   marker?: string;

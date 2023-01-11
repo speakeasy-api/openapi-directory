@@ -14,7 +14,7 @@ export class ManageEvent extends SpeakeasyBase {
   action?: ManageEventActionEnum;
 
   @SpeakeasyMetadata({ data: "json, name=action_params" })
-  actionParams?: Map<string, any>;
+  actionParams?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

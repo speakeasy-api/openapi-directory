@@ -1,6 +1,6 @@
 import { SpeakeasyBase } from "../../../internal/utils";
-import { AllowedClientInput } from "./allowedclient";
 import { AllowedClient } from "./allowedclient";
+import { AllowedClientInput } from "./allowedclient";
 export declare enum NfsShareStateEnum {
     StateUnspecified = "STATE_UNSPECIFIED",
     Provisioned = "PROVISIONED",
@@ -16,24 +16,24 @@ export declare enum NfsShareStorageTypeEnum {
 /**
  * An NFS share.
 **/
-export declare class NfsShareInput extends SpeakeasyBase {
-    allowedClients?: AllowedClientInput[];
-    labels?: Map<string, string>;
-    name?: string;
-    requestedSizeGib?: string;
-    storageType?: NfsShareStorageTypeEnum;
-}
-/**
- * An NFS share.
-**/
 export declare class NfsShare extends SpeakeasyBase {
     allowedClients?: AllowedClient[];
     id?: string;
-    labels?: Map<string, string>;
+    labels?: Record<string, string>;
     name?: string;
     nfsShareId?: string;
     requestedSizeGib?: string;
     state?: NfsShareStateEnum;
     storageType?: NfsShareStorageTypeEnum;
     volume?: string;
+}
+/**
+ * An NFS share.
+**/
+export declare class NfsShareInput extends SpeakeasyBase {
+    allowedClients?: AllowedClientInput[];
+    labels?: Record<string, string>;
+    name?: string;
+    requestedSizeGib?: string;
+    storageType?: NfsShareStorageTypeEnum;
 }

@@ -15,8 +15,8 @@ export declare class AccountDetailApiIdRequest extends SpeakeasyBase {
     security: AccountDetailApiIdSecurity;
 }
 export declare class AccountDetailApiIdResponse extends SpeakeasyBase {
-    accountDetailApiId401ApplicationJsonObject?: AccountDetailApiId401ApplicationJson;
-    accountDetailApiId500ApplicationJsonObject?: AccountDetailApiId500ApplicationJson;
+    accountDetailAPIId401ApplicationJSONObject?: AccountDetailApiId401ApplicationJson;
+    accountDetailAPIId500ApplicationJSONObject?: AccountDetailApiId500ApplicationJson;
     contentType: string;
     sample?: any;
     statusCode: number;

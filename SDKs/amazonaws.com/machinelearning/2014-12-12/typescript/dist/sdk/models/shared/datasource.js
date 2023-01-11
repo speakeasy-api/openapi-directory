@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RdsMetadata } from "./rdsmetadata";
-import { RedshiftMetadata } from "./redshiftmetadata";
-import { EntityStatusEnum } from "./entitystatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataSource = void 0;
+var utils_1 = require("../../../internal/utils");
+var rdsmetadata_1 = require("./rdsmetadata");
+var redshiftmetadata_1 = require("./redshiftmetadata");
+var entitystatusenum_1 = require("./entitystatusenum");
 // DataSource
 /**
  * <p> Represents the output of the <code>GetDataSource</code> operation. </p> <p> The content consists of the detailed metadata and data file information and the current status of the <code>DataSource</code>. </p>
@@ -36,77 +39,77 @@ var DataSource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComputeStatistics" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComputeStatistics" }),
         __metadata("design:type", Boolean)
     ], DataSource.prototype, "computeStatistics", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ComputeTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ComputeTime" }),
         __metadata("design:type", Number)
     ], DataSource.prototype, "computeTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedAt" }),
         __metadata("design:type", Date)
     ], DataSource.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=CreatedByIamUser" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=CreatedByIamUser" }),
         __metadata("design:type", String)
     ], DataSource.prototype, "createdByIamUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataLocationS3" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataLocationS3" }),
         __metadata("design:type", String)
     ], DataSource.prototype, "dataLocationS3", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataRearrangement" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataRearrangement" }),
         __metadata("design:type", String)
     ], DataSource.prototype, "dataRearrangement", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataSizeInBytes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataSizeInBytes" }),
         __metadata("design:type", Number)
     ], DataSource.prototype, "dataSizeInBytes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DataSourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DataSourceId" }),
         __metadata("design:type", String)
     ], DataSource.prototype, "dataSourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FinishedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FinishedAt" }),
         __metadata("design:type", Date)
     ], DataSource.prototype, "finishedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdatedAt" }),
         __metadata("design:type", Date)
     ], DataSource.prototype, "lastUpdatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Message" }),
         __metadata("design:type", String)
     ], DataSource.prototype, "message", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], DataSource.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberOfFiles" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberOfFiles" }),
         __metadata("design:type", Number)
     ], DataSource.prototype, "numberOfFiles", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RDSMetadata" }),
-        __metadata("design:type", RdsMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RDSMetadata" }),
+        __metadata("design:type", rdsmetadata_1.RdsMetadata)
     ], DataSource.prototype, "rdsMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RedshiftMetadata" }),
-        __metadata("design:type", RedshiftMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RedshiftMetadata" }),
+        __metadata("design:type", redshiftmetadata_1.RedshiftMetadata)
     ], DataSource.prototype, "redshiftMetadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RoleARN" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RoleARN" }),
         __metadata("design:type", String)
-    ], DataSource.prototype, "roleArn", void 0);
+    ], DataSource.prototype, "roleARN", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=StartedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=StartedAt" }),
         __metadata("design:type", Date)
     ], DataSource.prototype, "startedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], DataSource.prototype, "status", void 0);
     return DataSource;
-}(SpeakeasyBase));
-export { DataSource };
+}(utils_1.SpeakeasyBase));
+exports.DataSource = DataSource;

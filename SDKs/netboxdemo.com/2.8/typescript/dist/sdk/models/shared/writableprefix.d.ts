@@ -6,7 +6,7 @@ export declare enum WritablePrefixStatusEnum {
     Deprecated = "deprecated"
 }
 export declare class WritablePrefixInput extends SpeakeasyBase {
-    customFields?: Map<string, any>;
+    customFields?: Record<string, any>;
     description?: string;
     isPool?: boolean;
     prefix: string;

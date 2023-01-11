@@ -106,11 +106,11 @@ export declare class EwcerRequest extends SpeakeasyBase {
 export declare class EwcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    ewcer400ApplicationJsonObject?: Ewcer400ApplicationJson;
-    ewcer401ApplicationJsonObject?: Ewcer401ApplicationJson;
-    ewcer404ApplicationJsonObject?: Ewcer404ApplicationJson;
-    ewcer500ApplicationJsonObject?: Ewcer500ApplicationJson;
-    ewcer502ApplicationJsonObject?: Ewcer502ApplicationJson;
-    ewcer503ApplicationJsonObject?: Ewcer503ApplicationJson;
-    ewcer504ApplicationJsonObject?: Ewcer504ApplicationJson;
+    ewcer400ApplicationJSONObject?: Ewcer400ApplicationJson;
+    ewcer401ApplicationJSONObject?: Ewcer401ApplicationJson;
+    ewcer404ApplicationJSONObject?: Ewcer404ApplicationJson;
+    ewcer500ApplicationJSONObject?: Ewcer500ApplicationJson;
+    ewcer502ApplicationJSONObject?: Ewcer502ApplicationJson;
+    ewcer503ApplicationJSONObject?: Ewcer503ApplicationJson;
+    ewcer504ApplicationJSONObject?: Ewcer504ApplicationJson;
 }

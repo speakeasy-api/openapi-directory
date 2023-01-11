@@ -45,7 +45,7 @@ export class AddApplicationCloudWatchLoggingOptionRequest extends SpeakeasyBase 
 
 export class AddApplicationCloudWatchLoggingOptionResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  addApplicationCloudWatchLoggingOptionResponse?: Map<string, any>;
+  addApplicationCloudWatchLoggingOptionResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   concurrentModificationException?: any;

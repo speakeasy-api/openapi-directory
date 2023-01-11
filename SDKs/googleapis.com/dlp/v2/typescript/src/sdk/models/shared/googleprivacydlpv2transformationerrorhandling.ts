@@ -8,8 +8,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class GooglePrivacyDlpV2TransformationErrorHandling extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=leaveUntransformed" })
-  leaveUntransformed?: Map<string, any>;
+  leaveUntransformed?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=throwError" })
-  throwError?: Map<string, any>;
+  throwError?: Record<string, any>;
 }

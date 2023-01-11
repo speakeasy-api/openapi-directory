@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ReportKey } from "./reportkey";
-import { ReportMetadata } from "./reportmetadata";
-import { Parameters } from "./parameters";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Report = void 0;
+var utils_1 = require("../../../internal/utils");
+var reportkey_1 = require("./reportkey");
+var reportmetadata_1 = require("./reportmetadata");
+var parameters_1 = require("./parameters");
 // Report
 /**
  * Represents a report.
@@ -36,17 +39,17 @@ var Report = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=key" }),
-        __metadata("design:type", ReportKey)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=key" }),
+        __metadata("design:type", reportkey_1.ReportKey)
     ], Report.prototype, "key", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metadata" }),
-        __metadata("design:type", ReportMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metadata" }),
+        __metadata("design:type", reportmetadata_1.ReportMetadata)
     ], Report.prototype, "metadata", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=params" }),
-        __metadata("design:type", Parameters)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=params" }),
+        __metadata("design:type", parameters_1.ParametersT)
     ], Report.prototype, "params", void 0);
     return Report;
-}(SpeakeasyBase));
-export { Report };
+}(utils_1.SpeakeasyBase));
+exports.Report = Report;

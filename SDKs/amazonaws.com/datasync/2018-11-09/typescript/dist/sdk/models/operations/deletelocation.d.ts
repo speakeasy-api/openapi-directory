@@ -19,7 +19,7 @@ export declare class DeleteLocationRequest extends SpeakeasyBase {
 }
 export declare class DeleteLocationResponse extends SpeakeasyBase {
     contentType: string;
-    deleteLocationResponse?: Map<string, any>;
+    deleteLocationResponse?: Record<string, any>;
     internalException?: any;
     invalidRequestException?: any;
     statusCode: number;

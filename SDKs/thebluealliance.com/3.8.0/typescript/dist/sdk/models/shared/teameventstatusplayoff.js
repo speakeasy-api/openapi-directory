@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WltRecord } from "./wltrecord";
-export var TeamEventStatusPlayoffLevelEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamEventStatusPlayoff = exports.TeamEventStatusPlayoffStatusEnum = exports.TeamEventStatusPlayoffLevelEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var wltrecord_1 = require("./wltrecord");
+var TeamEventStatusPlayoffLevelEnum;
 (function (TeamEventStatusPlayoffLevelEnum) {
     TeamEventStatusPlayoffLevelEnum["Qm"] = "qm";
     TeamEventStatusPlayoffLevelEnum["Ef"] = "ef";
     TeamEventStatusPlayoffLevelEnum["Qf"] = "qf";
     TeamEventStatusPlayoffLevelEnum["Sf"] = "sf";
     TeamEventStatusPlayoffLevelEnum["F"] = "f";
-})(TeamEventStatusPlayoffLevelEnum || (TeamEventStatusPlayoffLevelEnum = {}));
-export var TeamEventStatusPlayoffStatusEnum;
+})(TeamEventStatusPlayoffLevelEnum = exports.TeamEventStatusPlayoffLevelEnum || (exports.TeamEventStatusPlayoffLevelEnum = {}));
+var TeamEventStatusPlayoffStatusEnum;
 (function (TeamEventStatusPlayoffStatusEnum) {
     TeamEventStatusPlayoffStatusEnum["Won"] = "won";
     TeamEventStatusPlayoffStatusEnum["Eliminated"] = "eliminated";
     TeamEventStatusPlayoffStatusEnum["Playing"] = "playing";
-})(TeamEventStatusPlayoffStatusEnum || (TeamEventStatusPlayoffStatusEnum = {}));
+})(TeamEventStatusPlayoffStatusEnum = exports.TeamEventStatusPlayoffStatusEnum || (exports.TeamEventStatusPlayoffStatusEnum = {}));
 // TeamEventStatusPlayoff
 /**
  * Playoff status for this team, may be null if the team did not make playoffs, or playoffs have not begun.
@@ -48,25 +51,25 @@ var TeamEventStatusPlayoff = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=current_level_record" }),
-        __metadata("design:type", WltRecord)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=current_level_record" }),
+        __metadata("design:type", wltrecord_1.WltRecord)
     ], TeamEventStatusPlayoff.prototype, "currentLevelRecord", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=level" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=level" }),
         __metadata("design:type", String)
     ], TeamEventStatusPlayoff.prototype, "level", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=playoff_average" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=playoff_average" }),
         __metadata("design:type", Number)
     ], TeamEventStatusPlayoff.prototype, "playoffAverage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=record" }),
-        __metadata("design:type", WltRecord)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=record" }),
+        __metadata("design:type", wltrecord_1.WltRecord)
     ], TeamEventStatusPlayoff.prototype, "record", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], TeamEventStatusPlayoff.prototype, "status", void 0);
     return TeamEventStatusPlayoff;
-}(SpeakeasyBase));
-export { TeamEventStatusPlayoff };
+}(utils_1.SpeakeasyBase));
+exports.TeamEventStatusPlayoff = TeamEventStatusPlayoff;

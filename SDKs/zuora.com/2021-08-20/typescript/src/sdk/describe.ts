@@ -1,0 +1,115 @@
+import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import * as operations from "./models/operations";
+import * as utils from "../internal/utils";
+
+export class Describe {
+  _defaultClient: AxiosInstance;
+  _securityClient: AxiosInstance;
+  _serverURL: string;
+  _language: string;
+  _sdkVersion: string;
+  _genVersion: string;
+
+  constructor(defaultClient: AxiosInstance, securityClient: AxiosInstance, serverURL: string, language: string, sdkVersion: string, genVersion: string) {
+    this._defaultClient = defaultClient;
+    this._securityClient = securityClient;
+    this._serverURL = serverURL;
+    this._language = language;
+    this._sdkVersion = sdkVersion;
+    this._genVersion = genVersion;
+  }
+  
+  /**
+   * getDescribe - Describe an object
+   *
+   * Provides a reference listing of each object that is available in your Zuora tenant.
+   * 
+   * The information returned by this call is useful if you are using [CRUD: Create Export](https://www.zuora.com/developer/api-reference/#operation/Object_POSTExport) or the [AQuA API](https://knowledgecenter.zuora.com/DC_Developers/T_Aggregate_Query_API) to create a data source export. See [Export ZOQL](https://knowledgecenter.zuora.com/DC_Developers/M_Export_ZOQL) for more information.
+   * 
+   * ## Response
+   * The response contains an XML document that lists the fields of the specified object. Each of the object's fields is represented by a `<field>` element in the XML document.
+   *     
+   * Each `<field>` element contains the following elements:
+   * 
+   * | Element      | Description                                                                                                                                                                                                                                                                                  |
+   * |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+   * | `<name>`     | API name of the field.                                                                                                                                                                                                                                                                       |
+   * | `<label>`    | Name of the field in the Zuora user interface.                                                                                                                                                                                                                                               |
+   * | `<type>`     | Data type of the field. The possible data types are: `boolean`, `date`, `datetime`, `decimal`, `integer`, `picklist`, `text`, `timestamp`, and `ZOQL`. If the data type is `picklist`, the `<field>` element contains an `<options>` element that lists the possible values of the field.    |
+   * | `<contexts>` | Specifies the availability of the field. If the `<contexts>` element lists the `export` context, the field is available for use in data source exports.                                                                                                                                                |
+   * 
+   * The `<field>` element contains other elements that provide legacy information about the field. This information is not directly related to the REST API.
+   * 
+   * Response sample:
+   * ```xml
+   * <?xml version="1.0" encoding="UTF-8"?>
+   * <object>
+   *   <name>ProductRatePlanCharge</name>
+   *   <label>Product Rate Plan Charge</label>
+   *   <fields>
+   *     ...
+   *     <field>
+   *       <name>TaxMode</name>
+   *       <label>Tax Mode</label>
+   *       <type>picklist</type>
+   *       <options>
+   *         <option>TaxExclusive</option>
+   *         <option>TaxInclusive</option>
+   *       </options>
+   *       <contexts>
+   *         <context>export</context>
+   *       </contexts>
+   *       ...
+   *     </field>
+   *     ...
+   *   </fields>
+   * </object>
+   * ```
+   * 
+   * It is strongly recommended that your integration checks `<contexts>` elements in the response. If your integration does not check `<contexts>` elements, your integration may process fields that are not available for use in data source exports. See [Changes to the Describe API](https://knowledgecenter.zuora.com/DC_Developers/M_Export_ZOQL/Changes_to_the_Describe_API) for more information.
+   * 
+  **/
+  getDescribe(
+    req: operations.GetDescribeRequest,
+    config?: AxiosRequestConfig
+  ): Promise<operations.GetDescribeResponse> {
+    if (!(req instanceof utils.SpeakeasyBase)) {
+      req = new operations.GetDescribeRequest(req);
+    }
+    
+    const baseURL: string = this._serverURL;
+    const url: string = utils.generateURL(baseURL, "/v1/describe/{object}", req.pathParams);
+    
+    const client: AxiosInstance = this._defaultClient!;
+    const headers = {...utils.getHeadersFromRequest(req.headers), ...config?.headers};
+    
+    const r = client.request({
+      url: url,
+      method: "get",
+      headers: headers,
+      ...config,
+    });
+    
+    return r.then((httpRes: AxiosResponse) => {
+        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+
+        if (httpRes?.status == null) throw new Error(`status code not found in response: ${httpRes}`);
+        const res: operations.GetDescribeResponse = {statusCode: httpRes.status, contentType: contentType, headers: utils.getHeadersFromResponse(httpRes.headers)};
+        switch (true) {
+          case httpRes?.status == 200:
+            if (utils.matchContentType(contentType, `text/xml; charset=utf-8`)) {
+                res.getDescribe200TextXMLString = JSON.stringify(httpRes?.data);
+            }
+            break;
+          case httpRes?.status == 404:
+            if (utils.matchContentType(contentType, `text/xml; charset=utf-8`)) {
+                res.getDescribe404TextXMLString = JSON.stringify(httpRes?.data);
+            }
+            break;
+        }
+
+        return res;
+      })
+  }
+
+}

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UsersAddonsReadResponse = exports.UsersAddonsReadRequest = exports.UsersAddonsReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var UsersAddonsReadPathParams = /** @class */ (function (_super) {
     __extends(UsersAddonsReadPathParams, _super);
     function UsersAddonsReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=provider" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=provider" }),
         __metadata("design:type", String)
     ], UsersAddonsReadPathParams.prototype, "provider", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=user_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=user_id" }),
         __metadata("design:type", String)
     ], UsersAddonsReadPathParams.prototype, "userId", void 0);
     return UsersAddonsReadPathParams;
-}(SpeakeasyBase));
-export { UsersAddonsReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.UsersAddonsReadPathParams = UsersAddonsReadPathParams;
 var UsersAddonsReadRequest = /** @class */ (function (_super) {
     __extends(UsersAddonsReadRequest, _super);
     function UsersAddonsReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", UsersAddonsReadPathParams)
     ], UsersAddonsReadRequest.prototype, "pathParams", void 0);
     return UsersAddonsReadRequest;
-}(SpeakeasyBase));
-export { UsersAddonsReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.UsersAddonsReadRequest = UsersAddonsReadRequest;
 var UsersAddonsReadResponse = /** @class */ (function (_super) {
     __extends(UsersAddonsReadResponse, _super);
     function UsersAddonsReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], UsersAddonsReadResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], UsersAddonsReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], UsersAddonsReadResponse.prototype, "statusCode", void 0);
     return UsersAddonsReadResponse;
-}(SpeakeasyBase));
-export { UsersAddonsReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.UsersAddonsReadResponse = UsersAddonsReadResponse;

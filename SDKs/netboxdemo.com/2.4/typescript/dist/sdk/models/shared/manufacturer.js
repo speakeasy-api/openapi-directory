@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,40 +23,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-var ManufacturerInput = /** @class */ (function (_super) {
-    __extends(ManufacturerInput, _super);
-    function ManufacturerInput() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
-        __metadata("design:type", String)
-    ], ManufacturerInput.prototype, "name", void 0);
-    __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
-        __metadata("design:type", String)
-    ], ManufacturerInput.prototype, "slug", void 0);
-    return ManufacturerInput;
-}(SpeakeasyBase));
-export { ManufacturerInput };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ManufacturerInput = exports.Manufacturer = void 0;
+var utils_1 = require("../../../internal/utils");
 var Manufacturer = /** @class */ (function (_super) {
     __extends(Manufacturer, _super);
     function Manufacturer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], Manufacturer.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Manufacturer.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=slug" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
         __metadata("design:type", String)
     ], Manufacturer.prototype, "slug", void 0);
     return Manufacturer;
-}(SpeakeasyBase));
-export { Manufacturer };
+}(utils_1.SpeakeasyBase));
+exports.Manufacturer = Manufacturer;
+var ManufacturerInput = /** @class */ (function (_super) {
+    __extends(ManufacturerInput, _super);
+    function ManufacturerInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
+        __metadata("design:type", String)
+    ], ManufacturerInput.prototype, "name", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=slug" }),
+        __metadata("design:type", String)
+    ], ManufacturerInput.prototype, "slug", void 0);
+    return ManufacturerInput;
+}(utils_1.SpeakeasyBase));
+exports.ManufacturerInput = ManufacturerInput;

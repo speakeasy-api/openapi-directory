@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,20 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ColorDefinition = void 0;
+var utils_1 = require("../../../internal/utils");
+// ColorDefinition
+/**
+ * A calendar color definition.
+**/
 var ColorDefinition = /** @class */ (function (_super) {
     __extends(ColorDefinition, _super);
     function ColorDefinition() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=background" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=background" }),
         __metadata("design:type", String)
     ], ColorDefinition.prototype, "background", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=foreground" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=foreground" }),
         __metadata("design:type", String)
     ], ColorDefinition.prototype, "foreground", void 0);
     return ColorDefinition;
-}(SpeakeasyBase));
-export { ColorDefinition };
+}(utils_1.SpeakeasyBase));
+exports.ColorDefinition = ColorDefinition;

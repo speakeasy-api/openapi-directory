@@ -8,11 +8,11 @@ export declare class PostAdminNearMissesRequestPatternRequestBodyBasicAuthCreden
 }
 export declare class PostAdminNearMissesRequestPatternRequestBody extends SpeakeasyBase {
     basicAuthCredentials?: PostAdminNearMissesRequestPatternRequestBodyBasicAuthCredentials;
-    bodyPatterns?: Map<string, any>[];
-    cookies?: Map<string, any>;
-    headers?: Map<string, any>;
+    bodyPatterns?: Record<string, any>[];
+    cookies?: Record<string, any>;
+    headers?: Record<string, any>;
     method?: string;
-    queryParameters?: Map<string, any>;
+    queryParameters?: Record<string, any>;
     url?: string;
     urlPath?: string;
     urlPathPattern?: string;
@@ -21,8 +21,8 @@ export declare class PostAdminNearMissesRequestPatternRequestBody extends Speake
 export declare class PostAdminNearMissesRequestPattern200ApplicationJsonNearMisses extends SpeakeasyBase {
     absoluteUrl?: string;
     body?: string;
-    cookies?: Map<string, any>;
-    headers?: Map<string, any>;
+    cookies?: Record<string, any>;
+    headers?: Record<string, any>;
     method?: string;
     url?: string;
 }
@@ -34,6 +34,6 @@ export declare class PostAdminNearMissesRequestPatternRequest extends SpeakeasyB
 }
 export declare class PostAdminNearMissesRequestPatternResponse extends SpeakeasyBase {
     contentType: string;
-    postAdminNearMissesRequestPattern200ApplicationJsonObject?: PostAdminNearMissesRequestPattern200ApplicationJson;
     statusCode: number;
+    postAdminNearMissesRequestPattern200ApplicationJSONObject?: PostAdminNearMissesRequestPattern200ApplicationJson;
 }

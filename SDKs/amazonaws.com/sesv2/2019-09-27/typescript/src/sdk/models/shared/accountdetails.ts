@@ -26,5 +26,5 @@ export class AccountDetails extends SpeakeasyBase {
   useCaseDescription?: string;
 
   @SpeakeasyMetadata({ data: "json, name=WebsiteURL" })
-  websiteUrl?: string;
+  websiteURL?: string;
 }

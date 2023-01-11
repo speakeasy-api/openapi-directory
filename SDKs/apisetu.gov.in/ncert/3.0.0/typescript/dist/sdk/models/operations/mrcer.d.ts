@@ -108,11 +108,11 @@ export declare class MrcerRequest extends SpeakeasyBase {
 export declare class MrcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    mrcer400ApplicationJsonObject?: Mrcer400ApplicationJson;
-    mrcer401ApplicationJsonObject?: Mrcer401ApplicationJson;
-    mrcer404ApplicationJsonObject?: Mrcer404ApplicationJson;
-    mrcer500ApplicationJsonObject?: Mrcer500ApplicationJson;
-    mrcer502ApplicationJsonObject?: Mrcer502ApplicationJson;
-    mrcer503ApplicationJsonObject?: Mrcer503ApplicationJson;
-    mrcer504ApplicationJsonObject?: Mrcer504ApplicationJson;
+    mrcer400ApplicationJSONObject?: Mrcer400ApplicationJson;
+    mrcer401ApplicationJSONObject?: Mrcer401ApplicationJson;
+    mrcer404ApplicationJSONObject?: Mrcer404ApplicationJson;
+    mrcer500ApplicationJSONObject?: Mrcer500ApplicationJson;
+    mrcer502ApplicationJSONObject?: Mrcer502ApplicationJson;
+    mrcer503ApplicationJSONObject?: Mrcer503ApplicationJson;
+    mrcer504ApplicationJSONObject?: Mrcer504ApplicationJson;
 }

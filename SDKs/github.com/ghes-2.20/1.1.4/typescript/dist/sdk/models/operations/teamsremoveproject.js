@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamsRemoveProjectResponse = exports.TeamsRemoveProjectRequest = exports.TeamsRemoveProjectPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var TeamsRemoveProjectPathParams = /** @class */ (function (_super) {
     __extends(TeamsRemoveProjectPathParams, _super);
     function TeamsRemoveProjectPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=project_id" }),
         __metadata("design:type", Number)
     ], TeamsRemoveProjectPathParams.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=team_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=team_id" }),
         __metadata("design:type", Number)
     ], TeamsRemoveProjectPathParams.prototype, "teamId", void 0);
     return TeamsRemoveProjectPathParams;
-}(SpeakeasyBase));
-export { TeamsRemoveProjectPathParams };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveProjectPathParams = TeamsRemoveProjectPathParams;
 var TeamsRemoveProjectRequest = /** @class */ (function (_super) {
     __extends(TeamsRemoveProjectRequest, _super);
     function TeamsRemoveProjectRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", TeamsRemoveProjectPathParams)
     ], TeamsRemoveProjectRequest.prototype, "pathParams", void 0);
     return TeamsRemoveProjectRequest;
-}(SpeakeasyBase));
-export { TeamsRemoveProjectRequest };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveProjectRequest = TeamsRemoveProjectRequest;
 var TeamsRemoveProjectResponse = /** @class */ (function (_super) {
     __extends(TeamsRemoveProjectResponse, _super);
     function TeamsRemoveProjectResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], TeamsRemoveProjectResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], TeamsRemoveProjectResponse.prototype, "statusCode", void 0);
     return TeamsRemoveProjectResponse;
-}(SpeakeasyBase));
-export { TeamsRemoveProjectResponse };
+}(utils_1.SpeakeasyBase));
+exports.TeamsRemoveProjectResponse = TeamsRemoveProjectResponse;

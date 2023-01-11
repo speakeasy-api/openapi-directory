@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,43 +23,45 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DestinationModel } from "./destinationmodel";
-import { MetaTagModel } from "./metatagmodel";
-import { SnippetModel } from "./snippetmodel";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AliasModel = void 0;
+var utils_1 = require("../../../internal/utils");
+var destinationmodel_1 = require("./destinationmodel");
+var metatagmodel_1 = require("./metatagmodel");
+var snippetmodel_1 = require("./snippetmodel");
 var AliasModel = /** @class */ (function (_super) {
     __extends(AliasModel, _super);
     function AliasModel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Number)
     ], AliasModel.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinations", elemType: DestinationModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinations", elemType: destinationmodel_1.DestinationModel }),
         __metadata("design:type", Array)
     ], AliasModel.prototype, "destinations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domainName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domainName" }),
         __metadata("design:type", String)
     ], AliasModel.prototype, "domainName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metatags", elemType: MetaTagModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metatags", elemType: metatagmodel_1.MetaTagModel }),
         __metadata("design:type", Array)
     ], AliasModel.prototype, "metatags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], AliasModel.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=snippets", elemType: SnippetModel }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=snippets", elemType: snippetmodel_1.SnippetModel }),
         __metadata("design:type", Array)
     ], AliasModel.prototype, "snippets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Number)
     ], AliasModel.prototype, "updatedAt", void 0);
     return AliasModel;
-}(SpeakeasyBase));
-export { AliasModel };
+}(utils_1.SpeakeasyBase));
+exports.AliasModel = AliasModel;

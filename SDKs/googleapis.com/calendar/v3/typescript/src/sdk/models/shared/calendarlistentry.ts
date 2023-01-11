@@ -1,7 +1,7 @@
 import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+import { CalendarNotification } from "./calendarnotification";
 import { ConferenceProperties } from "./conferenceproperties";
 import { EventReminder } from "./eventreminder";
-import { CalendarNotification } from "./calendarnotification";
 
 
 

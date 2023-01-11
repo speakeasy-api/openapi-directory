@@ -107,11 +107,11 @@ export declare class OtcerRequest extends SpeakeasyBase {
 export declare class OtcerResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    otcer400ApplicationJsonObject?: Otcer400ApplicationJson;
-    otcer401ApplicationJsonObject?: Otcer401ApplicationJson;
-    otcer404ApplicationJsonObject?: Otcer404ApplicationJson;
-    otcer500ApplicationJsonObject?: Otcer500ApplicationJson;
-    otcer502ApplicationJsonObject?: Otcer502ApplicationJson;
-    otcer503ApplicationJsonObject?: Otcer503ApplicationJson;
-    otcer504ApplicationJsonObject?: Otcer504ApplicationJson;
+    otcer400ApplicationJSONObject?: Otcer400ApplicationJson;
+    otcer401ApplicationJSONObject?: Otcer401ApplicationJson;
+    otcer404ApplicationJSONObject?: Otcer404ApplicationJson;
+    otcer500ApplicationJSONObject?: Otcer500ApplicationJson;
+    otcer502ApplicationJSONObject?: Otcer502ApplicationJson;
+    otcer503ApplicationJSONObject?: Otcer503ApplicationJson;
+    otcer504ApplicationJSONObject?: Otcer504ApplicationJson;
 }

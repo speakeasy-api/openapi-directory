@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObError1 } from "./oberror1";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObErrorResponse1 = void 0;
+var utils_1 = require("../../../internal/utils");
+var oberror1_1 = require("./oberror1");
 // ObErrorResponse1
 /**
  * An array of detail error codes, and messages, and URLs to documentation to help remediation.
@@ -34,21 +37,21 @@ var ObErrorResponse1 = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Code" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Code" }),
         __metadata("design:type", String)
     ], ObErrorResponse1.prototype, "code", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Errors", elemType: ObError1 }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Errors", elemType: oberror1_1.ObError1 }),
         __metadata("design:type", Array)
     ], ObErrorResponse1.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Id" }),
         __metadata("design:type", String)
     ], ObErrorResponse1.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Message" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Message" }),
         __metadata("design:type", String)
     ], ObErrorResponse1.prototype, "message", void 0);
     return ObErrorResponse1;
-}(SpeakeasyBase));
-export { ObErrorResponse1 };
+}(utils_1.SpeakeasyBase));
+exports.ObErrorResponse1 = ObErrorResponse1;

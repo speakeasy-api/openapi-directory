@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,64 +23,66 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QueryListOfUnsubscribedEmailAddressesResponse = exports.QueryListOfUnsubscribedEmailAddressesRequest = exports.QueryListOfUnsubscribedEmailAddressesQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var QueryListOfUnsubscribedEmailAddressesQueryParams = /** @class */ (function (_super) {
     __extends(QueryListOfUnsubscribedEmailAddressesQueryParams, _super);
     function QueryListOfUnsubscribedEmailAddressesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=email" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=email" }),
         __metadata("design:type", String)
     ], QueryListOfUnsubscribedEmailAddressesQueryParams.prototype, "email", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=end_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=end_date" }),
         __metadata("design:type", String)
     ], QueryListOfUnsubscribedEmailAddressesQueryParams.prototype, "endDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=limit" }),
         __metadata("design:type", String)
     ], QueryListOfUnsubscribedEmailAddressesQueryParams.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=offset" }),
         __metadata("design:type", String)
     ], QueryListOfUnsubscribedEmailAddressesQueryParams.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=sort_direction" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=sort_direction" }),
         __metadata("design:type", String)
     ], QueryListOfUnsubscribedEmailAddressesQueryParams.prototype, "sortDirection", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=start_date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=start_date" }),
         __metadata("design:type", String)
     ], QueryListOfUnsubscribedEmailAddressesQueryParams.prototype, "startDate", void 0);
     return QueryListOfUnsubscribedEmailAddressesQueryParams;
-}(SpeakeasyBase));
-export { QueryListOfUnsubscribedEmailAddressesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.QueryListOfUnsubscribedEmailAddressesQueryParams = QueryListOfUnsubscribedEmailAddressesQueryParams;
 var QueryListOfUnsubscribedEmailAddressesRequest = /** @class */ (function (_super) {
     __extends(QueryListOfUnsubscribedEmailAddressesRequest, _super);
     function QueryListOfUnsubscribedEmailAddressesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", QueryListOfUnsubscribedEmailAddressesQueryParams)
     ], QueryListOfUnsubscribedEmailAddressesRequest.prototype, "queryParams", void 0);
     return QueryListOfUnsubscribedEmailAddressesRequest;
-}(SpeakeasyBase));
-export { QueryListOfUnsubscribedEmailAddressesRequest };
+}(utils_1.SpeakeasyBase));
+exports.QueryListOfUnsubscribedEmailAddressesRequest = QueryListOfUnsubscribedEmailAddressesRequest;
 var QueryListOfUnsubscribedEmailAddressesResponse = /** @class */ (function (_super) {
     __extends(QueryListOfUnsubscribedEmailAddressesResponse, _super);
     function QueryListOfUnsubscribedEmailAddressesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], QueryListOfUnsubscribedEmailAddressesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], QueryListOfUnsubscribedEmailAddressesResponse.prototype, "statusCode", void 0);
     return QueryListOfUnsubscribedEmailAddressesResponse;
-}(SpeakeasyBase));
-export { QueryListOfUnsubscribedEmailAddressesResponse };
+}(utils_1.SpeakeasyBase));
+exports.QueryListOfUnsubscribedEmailAddressesResponse = QueryListOfUnsubscribedEmailAddressesResponse;

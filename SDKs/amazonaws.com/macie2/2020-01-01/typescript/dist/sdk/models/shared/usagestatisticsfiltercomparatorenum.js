@@ -1,4 +1,7 @@
-export var UsageStatisticsFilterComparatorEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UsageStatisticsFilterComparatorEnum = void 0;
+var UsageStatisticsFilterComparatorEnum;
 (function (UsageStatisticsFilterComparatorEnum) {
     UsageStatisticsFilterComparatorEnum["Gt"] = "GT";
     UsageStatisticsFilterComparatorEnum["Gte"] = "GTE";
@@ -7,4 +10,4 @@ export var UsageStatisticsFilterComparatorEnum;
     UsageStatisticsFilterComparatorEnum["Eq"] = "EQ";
     UsageStatisticsFilterComparatorEnum["Ne"] = "NE";
     UsageStatisticsFilterComparatorEnum["Contains"] = "CONTAINS";
-})(UsageStatisticsFilterComparatorEnum || (UsageStatisticsFilterComparatorEnum = {}));
+})(UsageStatisticsFilterComparatorEnum = exports.UsageStatisticsFilterComparatorEnum || (exports.UsageStatisticsFilterComparatorEnum = {}));

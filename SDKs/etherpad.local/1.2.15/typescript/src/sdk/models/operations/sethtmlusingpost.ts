@@ -7,7 +7,7 @@ export class SetHtmlUsingPostQueryParams extends SpeakeasyBase {
   html?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=padID" })
-  padId?: string;
+  padID?: string;
 }
 
 
@@ -16,7 +16,7 @@ export class SetHtmlUsingPost200ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -28,7 +28,7 @@ export class SetHtmlUsingPost400ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -40,7 +40,7 @@ export class SetHtmlUsingPost401ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -52,7 +52,7 @@ export class SetHtmlUsingPost500ApplicationJson extends SpeakeasyBase {
   code?: number;
 
   @SpeakeasyMetadata({ data: "json, name=data" })
-  data?: Map<string, any>;
+  data?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=message" })
   message?: string;
@@ -73,14 +73,14 @@ export class SetHtmlUsingPostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setHtmlUsingPost200ApplicationJsonObject?: SetHtmlUsingPost200ApplicationJson;
+  setHTMLUsingPOST200ApplicationJSONObject?: SetHtmlUsingPost200ApplicationJson;
 
   @SpeakeasyMetadata()
-  setHtmlUsingPost400ApplicationJsonObject?: SetHtmlUsingPost400ApplicationJson;
+  setHTMLUsingPOST400ApplicationJSONObject?: SetHtmlUsingPost400ApplicationJson;
 
   @SpeakeasyMetadata()
-  setHtmlUsingPost401ApplicationJsonObject?: SetHtmlUsingPost401ApplicationJson;
+  setHTMLUsingPOST401ApplicationJSONObject?: SetHtmlUsingPost401ApplicationJson;
 
   @SpeakeasyMetadata()
-  setHtmlUsingPost500ApplicationJsonObject?: SetHtmlUsingPost500ApplicationJson;
+  setHTMLUsingPOST500ApplicationJSONObject?: SetHtmlUsingPost500ApplicationJson;
 }

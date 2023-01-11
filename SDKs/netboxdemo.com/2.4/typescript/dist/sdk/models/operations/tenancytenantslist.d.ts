@@ -22,5 +22,5 @@ export declare class TenancyTenantsListRequest extends SpeakeasyBase {
 export declare class TenancyTenantsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    tenancyTenantsList200ApplicationJsonObject?: TenancyTenantsList200ApplicationJson;
+    tenancyTenantsList200ApplicationJSONObject?: TenancyTenantsList200ApplicationJson;
 }

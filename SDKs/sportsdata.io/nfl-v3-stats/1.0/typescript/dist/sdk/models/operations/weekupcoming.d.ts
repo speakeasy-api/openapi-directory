@@ -8,5 +8,5 @@ export declare class WeekUpcomingRequest extends SpeakeasyBase {
 export declare class WeekUpcomingResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    weekUpcoming200ApplicationJsonInteger?: number;
+    weekUpcoming200ApplicationJSONInteger?: number;
 }

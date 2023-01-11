@@ -18,7 +18,7 @@ export declare class AddApplicationInputProcessingConfigurationRequest extends S
     request: shared.AddApplicationInputProcessingConfigurationRequest;
 }
 export declare class AddApplicationInputProcessingConfigurationResponse extends SpeakeasyBase {
-    addApplicationInputProcessingConfigurationResponse?: Map<string, any>;
+    addApplicationInputProcessingConfigurationResponse?: Record<string, any>;
     concurrentModificationException?: any;
     contentType: string;
     invalidArgumentException?: any;

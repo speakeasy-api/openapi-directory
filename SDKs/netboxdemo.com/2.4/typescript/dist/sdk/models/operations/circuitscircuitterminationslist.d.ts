@@ -24,5 +24,5 @@ export declare class CircuitsCircuitTerminationsListRequest extends SpeakeasyBas
 export declare class CircuitsCircuitTerminationsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    circuitsCircuitTerminationsList200ApplicationJsonObject?: CircuitsCircuitTerminationsList200ApplicationJson;
+    circuitsCircuitTerminationsList200ApplicationJSONObject?: CircuitsCircuitTerminationsList200ApplicationJson;
 }

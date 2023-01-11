@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,12 +23,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { V2AndroidKeyRestrictions } from "./v2androidkeyrestrictions";
-import { V2ApiTarget } from "./v2apitarget";
-import { V2BrowserKeyRestrictions } from "./v2browserkeyrestrictions";
-import { V2IosKeyRestrictions } from "./v2ioskeyrestrictions";
-import { V2ServerKeyRestrictions } from "./v2serverkeyrestrictions";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V2Restrictions = void 0;
+var utils_1 = require("../../../internal/utils");
+var v2androidkeyrestrictions_1 = require("./v2androidkeyrestrictions");
+var v2apitarget_1 = require("./v2apitarget");
+var v2browserkeyrestrictions_1 = require("./v2browserkeyrestrictions");
+var v2ioskeyrestrictions_1 = require("./v2ioskeyrestrictions");
+var v2serverkeyrestrictions_1 = require("./v2serverkeyrestrictions");
 // V2Restrictions
 /**
  * Describes the restrictions on the key.
@@ -38,25 +41,25 @@ var V2Restrictions = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=androidKeyRestrictions" }),
-        __metadata("design:type", V2AndroidKeyRestrictions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=androidKeyRestrictions" }),
+        __metadata("design:type", v2androidkeyrestrictions_1.V2AndroidKeyRestrictions)
     ], V2Restrictions.prototype, "androidKeyRestrictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=apiTargets", elemType: V2ApiTarget }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=apiTargets", elemType: v2apitarget_1.V2ApiTarget }),
         __metadata("design:type", Array)
     ], V2Restrictions.prototype, "apiTargets", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=browserKeyRestrictions" }),
-        __metadata("design:type", V2BrowserKeyRestrictions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=browserKeyRestrictions" }),
+        __metadata("design:type", v2browserkeyrestrictions_1.V2BrowserKeyRestrictions)
     ], V2Restrictions.prototype, "browserKeyRestrictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iosKeyRestrictions" }),
-        __metadata("design:type", V2IosKeyRestrictions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iosKeyRestrictions" }),
+        __metadata("design:type", v2ioskeyrestrictions_1.V2IosKeyRestrictions)
     ], V2Restrictions.prototype, "iosKeyRestrictions", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serverKeyRestrictions" }),
-        __metadata("design:type", V2ServerKeyRestrictions)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serverKeyRestrictions" }),
+        __metadata("design:type", v2serverkeyrestrictions_1.V2ServerKeyRestrictions)
     ], V2Restrictions.prototype, "serverKeyRestrictions", void 0);
     return V2Restrictions;
-}(SpeakeasyBase));
-export { V2Restrictions };
+}(utils_1.SpeakeasyBase));
+exports.V2Restrictions = V2Restrictions;

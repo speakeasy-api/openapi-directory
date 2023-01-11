@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MinimalRepository } from "./minimalrepository";
-import { SearchResultTextMatches } from "./searchresulttextmatches";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CodeSearchResultItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var minimalrepository_1 = require("./minimalrepository");
+var searchresulttextmatches_1 = require("./searchresulttextmatches");
 // CodeSearchResultItem
 /**
  * Code Search Result Item
@@ -35,57 +38,57 @@ var CodeSearchResultItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=file_size" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=file_size" }),
         __metadata("design:type", Number)
     ], CodeSearchResultItem.prototype, "fileSize", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=git_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=git_url" }),
         __metadata("design:type", String)
     ], CodeSearchResultItem.prototype, "gitUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=html_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=html_url" }),
         __metadata("design:type", String)
     ], CodeSearchResultItem.prototype, "htmlUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], CodeSearchResultItem.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_modified_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_modified_at" }),
         __metadata("design:type", Date)
     ], CodeSearchResultItem.prototype, "lastModifiedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=line_numbers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=line_numbers" }),
         __metadata("design:type", Array)
     ], CodeSearchResultItem.prototype, "lineNumbers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], CodeSearchResultItem.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=path" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=path" }),
         __metadata("design:type", String)
     ], CodeSearchResultItem.prototype, "path", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=repository" }),
-        __metadata("design:type", MinimalRepository)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=repository" }),
+        __metadata("design:type", minimalrepository_1.MinimalRepository)
     ], CodeSearchResultItem.prototype, "repository", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=score" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=score" }),
         __metadata("design:type", Number)
     ], CodeSearchResultItem.prototype, "score", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sha" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sha" }),
         __metadata("design:type", String)
     ], CodeSearchResultItem.prototype, "sha", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=text_matches", elemType: SearchResultTextMatches }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=text_matches", elemType: searchresulttextmatches_1.SearchResultTextMatches }),
         __metadata("design:type", Array)
     ], CodeSearchResultItem.prototype, "textMatches", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], CodeSearchResultItem.prototype, "url", void 0);
     return CodeSearchResultItem;
-}(SpeakeasyBase));
-export { CodeSearchResultItem };
+}(utils_1.SpeakeasyBase));
+exports.CodeSearchResultItem = CodeSearchResultItem;

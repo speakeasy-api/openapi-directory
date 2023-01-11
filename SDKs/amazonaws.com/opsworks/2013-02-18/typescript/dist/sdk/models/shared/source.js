@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SourceTypeEnum } from "./sourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Source = void 0;
+var utils_1 = require("../../../internal/utils");
+var sourcetypeenum_1 = require("./sourcetypeenum");
 // Source
 /**
  * Contains the information required to retrieve an app or cookbook from a repository. For more information, see <a href="https://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-creating.html">Creating Apps</a> or <a href="https://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook.html">Custom Recipes and Cookbooks</a>.
@@ -34,29 +37,29 @@ var Source = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Password" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Password" }),
         __metadata("design:type", String)
     ], Source.prototype, "password", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Revision" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Revision" }),
         __metadata("design:type", String)
     ], Source.prototype, "revision", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SshKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SshKey" }),
         __metadata("design:type", String)
     ], Source.prototype, "sshKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], Source.prototype, "type", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Url" }),
         __metadata("design:type", String)
     ], Source.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Username" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Username" }),
         __metadata("design:type", String)
     ], Source.prototype, "username", void 0);
     return Source;
-}(SpeakeasyBase));
-export { Source };
+}(utils_1.SpeakeasyBase));
+exports.Source = Source;

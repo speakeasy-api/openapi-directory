@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleSecuritySafebrowsingV4ThreatListDescriptor = exports.GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum = exports.GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum = exports.GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum;
 (function (GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum) {
     GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum["PlatformTypeUnspecified"] = "PLATFORM_TYPE_UNSPECIFIED";
     GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum["Windows"] = "WINDOWS";
@@ -34,8 +37,8 @@ export var GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum;
     GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum["AnyPlatform"] = "ANY_PLATFORM";
     GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum["AllPlatforms"] = "ALL_PLATFORMS";
     GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum["Chrome"] = "CHROME";
-})(GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum || (GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum = {}));
-export var GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum;
+})(GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum = exports.GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum || (exports.GoogleSecuritySafebrowsingV4ThreatListDescriptorPlatformTypeEnum = {}));
+var GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum;
 (function (GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum) {
     GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum["ThreatEntryTypeUnspecified"] = "THREAT_ENTRY_TYPE_UNSPECIFIED";
     GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum["Url"] = "URL";
@@ -44,8 +47,8 @@ export var GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum;
     GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum["ChromeExtension"] = "CHROME_EXTENSION";
     GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum["Filename"] = "FILENAME";
     GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum["Cert"] = "CERT";
-})(GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum || (GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum = {}));
-export var GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum;
+})(GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum = exports.GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum || (exports.GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatEntryTypeEnum = {}));
+var GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum;
 (function (GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum) {
     GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum["ThreatTypeUnspecified"] = "THREAT_TYPE_UNSPECIFIED";
     GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum["Malware"] = "MALWARE";
@@ -66,7 +69,7 @@ export var GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum;
     GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum["HighConfidenceAllowlist"] = "HIGH_CONFIDENCE_ALLOWLIST";
     GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum["AccuracyTips"] = "ACCURACY_TIPS";
     GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum["SocialEngineeringLowerPrecision"] = "SOCIAL_ENGINEERING_LOWER_PRECISION";
-})(GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum || (GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum = {}));
+})(GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum = exports.GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum || (exports.GoogleSecuritySafebrowsingV4ThreatListDescriptorThreatTypeEnum = {}));
 // GoogleSecuritySafebrowsingV4ThreatListDescriptor
 /**
  * Describes an individual threat list. A list is defined by three parameters: the type of threat posed, the type of platform targeted by the threat, and the type of entries in the list.
@@ -77,17 +80,17 @@ var GoogleSecuritySafebrowsingV4ThreatListDescriptor = /** @class */ (function (
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=platformType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=platformType" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4ThreatListDescriptor.prototype, "platformType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=threatEntryType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=threatEntryType" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4ThreatListDescriptor.prototype, "threatEntryType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=threatType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=threatType" }),
         __metadata("design:type", String)
     ], GoogleSecuritySafebrowsingV4ThreatListDescriptor.prototype, "threatType", void 0);
     return GoogleSecuritySafebrowsingV4ThreatListDescriptor;
-}(SpeakeasyBase));
-export { GoogleSecuritySafebrowsingV4ThreatListDescriptor };
+}(utils_1.SpeakeasyBase));
+exports.GoogleSecuritySafebrowsingV4ThreatListDescriptor = GoogleSecuritySafebrowsingV4ThreatListDescriptor;

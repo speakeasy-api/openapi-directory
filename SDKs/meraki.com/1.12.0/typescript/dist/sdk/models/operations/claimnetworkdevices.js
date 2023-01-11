@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,60 +23,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClaimNetworkDevicesResponse = exports.ClaimNetworkDevicesRequest = exports.ClaimNetworkDevicesRequestBody = exports.ClaimNetworkDevicesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ClaimNetworkDevicesPathParams = /** @class */ (function (_super) {
     __extends(ClaimNetworkDevicesPathParams, _super);
     function ClaimNetworkDevicesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=networkId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=networkId" }),
         __metadata("design:type", String)
     ], ClaimNetworkDevicesPathParams.prototype, "networkId", void 0);
     return ClaimNetworkDevicesPathParams;
-}(SpeakeasyBase));
-export { ClaimNetworkDevicesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.ClaimNetworkDevicesPathParams = ClaimNetworkDevicesPathParams;
 var ClaimNetworkDevicesRequestBody = /** @class */ (function (_super) {
     __extends(ClaimNetworkDevicesRequestBody, _super);
     function ClaimNetworkDevicesRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serials" }),
         __metadata("design:type", Array)
     ], ClaimNetworkDevicesRequestBody.prototype, "serials", void 0);
     return ClaimNetworkDevicesRequestBody;
-}(SpeakeasyBase));
-export { ClaimNetworkDevicesRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.ClaimNetworkDevicesRequestBody = ClaimNetworkDevicesRequestBody;
 var ClaimNetworkDevicesRequest = /** @class */ (function (_super) {
     __extends(ClaimNetworkDevicesRequest, _super);
     function ClaimNetworkDevicesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ClaimNetworkDevicesPathParams)
     ], ClaimNetworkDevicesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/json" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/json" }),
         __metadata("design:type", ClaimNetworkDevicesRequestBody)
     ], ClaimNetworkDevicesRequest.prototype, "request", void 0);
     return ClaimNetworkDevicesRequest;
-}(SpeakeasyBase));
-export { ClaimNetworkDevicesRequest };
+}(utils_1.SpeakeasyBase));
+exports.ClaimNetworkDevicesRequest = ClaimNetworkDevicesRequest;
 var ClaimNetworkDevicesResponse = /** @class */ (function (_super) {
     __extends(ClaimNetworkDevicesResponse, _super);
     function ClaimNetworkDevicesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ClaimNetworkDevicesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ClaimNetworkDevicesResponse.prototype, "statusCode", void 0);
     return ClaimNetworkDevicesResponse;
-}(SpeakeasyBase));
-export { ClaimNetworkDevicesResponse };
+}(utils_1.SpeakeasyBase));
+exports.ClaimNetworkDevicesResponse = ClaimNetworkDevicesResponse;

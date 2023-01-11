@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostDescribeTrafficMirrorSessionsActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostDescribeTrafficMirrorSessionsResponse = exports.PostDescribeTrafficMirrorSessionsRequest = exports.PostDescribeTrafficMirrorSessionsHeaders = exports.PostDescribeTrafficMirrorSessionsQueryParams = exports.PostDescribeTrafficMirrorSessionsVersionEnum = exports.PostDescribeTrafficMirrorSessionsActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostDescribeTrafficMirrorSessionsActionEnum;
 (function (PostDescribeTrafficMirrorSessionsActionEnum) {
     PostDescribeTrafficMirrorSessionsActionEnum["DescribeTrafficMirrorSessions"] = "DescribeTrafficMirrorSessions";
-})(PostDescribeTrafficMirrorSessionsActionEnum || (PostDescribeTrafficMirrorSessionsActionEnum = {}));
-export var PostDescribeTrafficMirrorSessionsVersionEnum;
+})(PostDescribeTrafficMirrorSessionsActionEnum = exports.PostDescribeTrafficMirrorSessionsActionEnum || (exports.PostDescribeTrafficMirrorSessionsActionEnum = {}));
+var PostDescribeTrafficMirrorSessionsVersionEnum;
 (function (PostDescribeTrafficMirrorSessionsVersionEnum) {
     PostDescribeTrafficMirrorSessionsVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostDescribeTrafficMirrorSessionsVersionEnum || (PostDescribeTrafficMirrorSessionsVersionEnum = {}));
+})(PostDescribeTrafficMirrorSessionsVersionEnum = exports.PostDescribeTrafficMirrorSessionsVersionEnum || (exports.PostDescribeTrafficMirrorSessionsVersionEnum = {}));
 var PostDescribeTrafficMirrorSessionsQueryParams = /** @class */ (function (_super) {
     __extends(PostDescribeTrafficMirrorSessionsQueryParams, _super);
     function PostDescribeTrafficMirrorSessionsQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostDescribeTrafficMirrorSessionsQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxResults" }),
         __metadata("design:type", String)
     ], PostDescribeTrafficMirrorSessionsQueryParams.prototype, "maxResults", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=NextToken" }),
         __metadata("design:type", String)
     ], PostDescribeTrafficMirrorSessionsQueryParams.prototype, "nextToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostDescribeTrafficMirrorSessionsQueryParams.prototype, "version", void 0);
     return PostDescribeTrafficMirrorSessionsQueryParams;
-}(SpeakeasyBase));
-export { PostDescribeTrafficMirrorSessionsQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeTrafficMirrorSessionsQueryParams = PostDescribeTrafficMirrorSessionsQueryParams;
 var PostDescribeTrafficMirrorSessionsHeaders = /** @class */ (function (_super) {
     __extends(PostDescribeTrafficMirrorSessionsHeaders, _super);
     function PostDescribeTrafficMirrorSessionsHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostDescribeTrafficMirrorSessionsHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostDescribeTrafficMirrorSessionsHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostDescribeTrafficMirrorSessionsHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostDescribeTrafficMirrorSessionsHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostDescribeTrafficMirrorSessionsHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostDescribeTrafficMirrorSessionsHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostDescribeTrafficMirrorSessionsHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostDescribeTrafficMirrorSessionsHeaders;
-}(SpeakeasyBase));
-export { PostDescribeTrafficMirrorSessionsHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeTrafficMirrorSessionsHeaders = PostDescribeTrafficMirrorSessionsHeaders;
 var PostDescribeTrafficMirrorSessionsRequest = /** @class */ (function (_super) {
     __extends(PostDescribeTrafficMirrorSessionsRequest, _super);
     function PostDescribeTrafficMirrorSessionsRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeTrafficMirrorSessionsQueryParams)
     ], PostDescribeTrafficMirrorSessionsRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostDescribeTrafficMirrorSessionsHeaders)
     ], PostDescribeTrafficMirrorSessionsRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostDescribeTrafficMirrorSessionsRequest.prototype, "request", void 0);
     return PostDescribeTrafficMirrorSessionsRequest;
-}(SpeakeasyBase));
-export { PostDescribeTrafficMirrorSessionsRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeTrafficMirrorSessionsRequest = PostDescribeTrafficMirrorSessionsRequest;
 var PostDescribeTrafficMirrorSessionsResponse = /** @class */ (function (_super) {
     __extends(PostDescribeTrafficMirrorSessionsResponse, _super);
     function PostDescribeTrafficMirrorSessionsResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostDescribeTrafficMirrorSessionsResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostDescribeTrafficMirrorSessionsResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostDescribeTrafficMirrorSessionsResponse.prototype, "statusCode", void 0);
     return PostDescribeTrafficMirrorSessionsResponse;
-}(SpeakeasyBase));
-export { PostDescribeTrafficMirrorSessionsResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostDescribeTrafficMirrorSessionsResponse = PostDescribeTrafficMirrorSessionsResponse;

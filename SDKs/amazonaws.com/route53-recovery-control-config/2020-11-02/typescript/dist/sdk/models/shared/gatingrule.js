@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { RuleConfig } from "./ruleconfig";
-import { StatusEnum } from "./statusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GatingRule = void 0;
+var utils_1 = require("../../../internal/utils");
+var ruleconfig_1 = require("./ruleconfig");
+var statusenum_1 = require("./statusenum");
 // GatingRule
 /**
  * A gating rule verifies that a set of gating controls evaluates as true, based on a rule configuration that you specify. If the gating rule evaluates to true, Amazon Route 53 Application Recovery Controller allows a set of routing control state changes to run and complete against the set of target controls.
@@ -35,37 +38,37 @@ var GatingRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ControlPanelArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ControlPanelArn" }),
         __metadata("design:type", String)
     ], GatingRule.prototype, "controlPanelArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=GatingControls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=GatingControls" }),
         __metadata("design:type", Array)
     ], GatingRule.prototype, "gatingControls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], GatingRule.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RuleConfig" }),
-        __metadata("design:type", RuleConfig)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RuleConfig" }),
+        __metadata("design:type", ruleconfig_1.RuleConfig)
     ], GatingRule.prototype, "ruleConfig", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SafetyRuleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SafetyRuleArn" }),
         __metadata("design:type", String)
     ], GatingRule.prototype, "safetyRuleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Status" }),
         __metadata("design:type", String)
     ], GatingRule.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TargetControls" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TargetControls" }),
         __metadata("design:type", Array)
     ], GatingRule.prototype, "targetControls", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WaitPeriodMs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WaitPeriodMs" }),
         __metadata("design:type", Number)
     ], GatingRule.prototype, "waitPeriodMs", void 0);
     return GatingRule;
-}(SpeakeasyBase));
-export { GatingRule };
+}(utils_1.SpeakeasyBase));
+exports.GatingRule = GatingRule;

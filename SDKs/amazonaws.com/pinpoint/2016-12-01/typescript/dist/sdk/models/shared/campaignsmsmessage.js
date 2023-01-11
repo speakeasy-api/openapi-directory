@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MessageTypeEnum } from "./messagetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CampaignSmsMessage = void 0;
+var utils_1 = require("../../../internal/utils");
+var messagetypeenum_1 = require("./messagetypeenum");
 // CampaignSmsMessage
 /**
  * Specifies the content and settings for an SMS message that's sent to recipients of a campaign.
@@ -34,29 +37,29 @@ var CampaignSmsMessage = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Body" }),
         __metadata("design:type", String)
     ], CampaignSmsMessage.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EntityId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EntityId" }),
         __metadata("design:type", String)
     ], CampaignSmsMessage.prototype, "entityId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=MessageType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=MessageType" }),
         __metadata("design:type", String)
     ], CampaignSmsMessage.prototype, "messageType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=OriginationNumber" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=OriginationNumber" }),
         __metadata("design:type", String)
     ], CampaignSmsMessage.prototype, "originationNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SenderId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SenderId" }),
         __metadata("design:type", String)
     ], CampaignSmsMessage.prototype, "senderId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=TemplateId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=TemplateId" }),
         __metadata("design:type", String)
     ], CampaignSmsMessage.prototype, "templateId", void 0);
     return CampaignSmsMessage;
-}(SpeakeasyBase));
-export { CampaignSmsMessage };
+}(utils_1.SpeakeasyBase));
+exports.CampaignSmsMessage = CampaignSmsMessage;

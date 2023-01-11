@@ -7,7 +7,7 @@ export class ProtocolMqttClientSetClientidPathParams extends SpeakeasyBase {
   agentNum: number;
 
   @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=clientID" })
-  clientId: string;
+  clientID: string;
 }
 
 
@@ -25,5 +25,5 @@ export class ProtocolMqttClientSetClientidResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  protocolMqttClientSetClientid200ApplicationJsonInt32Integers?: number[];
+  protocolMqttClientSetClientid200ApplicationJSONInt32Integers?: number[];
 }

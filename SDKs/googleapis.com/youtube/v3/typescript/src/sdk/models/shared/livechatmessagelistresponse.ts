@@ -30,7 +30,7 @@ export class LiveChatMessageListResponse extends SpeakeasyBase {
   pollingIntervalMillis?: number;
 
   @SpeakeasyMetadata({ data: "json, name=tokenPagination" })
-  tokenPagination?: Map<string, any>;
+  tokenPagination?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=visitorId" })
   visitorId?: string;

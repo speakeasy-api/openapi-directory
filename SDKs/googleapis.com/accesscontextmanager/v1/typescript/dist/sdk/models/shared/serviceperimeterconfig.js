@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EgressPolicy } from "./egresspolicy";
-import { IngressPolicy } from "./ingresspolicy";
-import { VpcAccessibleServices } from "./vpcaccessibleservices";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServicePerimeterConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var egresspolicy_1 = require("./egresspolicy");
+var ingresspolicy_1 = require("./ingresspolicy");
+var vpcaccessibleservices_1 = require("./vpcaccessibleservices");
 // ServicePerimeterConfig
 /**
  * `ServicePerimeterConfig` specifies a set of Google Cloud resources that describe specific Service Perimeter configuration.
@@ -36,29 +39,29 @@ var ServicePerimeterConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessLevels" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessLevels" }),
         __metadata("design:type", Array)
     ], ServicePerimeterConfig.prototype, "accessLevels", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=egressPolicies", elemType: EgressPolicy }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=egressPolicies", elemType: egresspolicy_1.EgressPolicy }),
         __metadata("design:type", Array)
     ], ServicePerimeterConfig.prototype, "egressPolicies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ingressPolicies", elemType: IngressPolicy }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ingressPolicies", elemType: ingresspolicy_1.IngressPolicy }),
         __metadata("design:type", Array)
     ], ServicePerimeterConfig.prototype, "ingressPolicies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resources" }),
         __metadata("design:type", Array)
     ], ServicePerimeterConfig.prototype, "resources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=restrictedServices" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=restrictedServices" }),
         __metadata("design:type", Array)
     ], ServicePerimeterConfig.prototype, "restrictedServices", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=vpcAccessibleServices" }),
-        __metadata("design:type", VpcAccessibleServices)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=vpcAccessibleServices" }),
+        __metadata("design:type", vpcaccessibleservices_1.VpcAccessibleServices)
     ], ServicePerimeterConfig.prototype, "vpcAccessibleServices", void 0);
     return ServicePerimeterConfig;
-}(SpeakeasyBase));
-export { ServicePerimeterConfig };
+}(utils_1.SpeakeasyBase));
+exports.ServicePerimeterConfig = ServicePerimeterConfig;

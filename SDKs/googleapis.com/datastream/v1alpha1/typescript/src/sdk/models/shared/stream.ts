@@ -2,7 +2,7 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 import { BackfillAllStrategy } from "./backfillallstrategy";
 import { DestinationConfig } from "./destinationconfig";
 import { SourceConfig } from "./sourceconfig";
-import { Error } from "./error";
+import { ErrorT } from "./error";
 
 
 export enum StreamStateEnum {
@@ -23,7 +23,7 @@ export class StreamInput extends SpeakeasyBase {
   backfillAll?: BackfillAllStrategy;
 
   @SpeakeasyMetadata({ data: "json, name=backfillNone" })
-  backfillNone?: Map<string, any>;
+  backfillNone?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=customerManagedEncryptionKey" })
   customerManagedEncryptionKey?: string;
@@ -35,7 +35,7 @@ export class StreamInput extends SpeakeasyBase {
   displayName?: string;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=sourceConfig" })
   sourceConfig?: SourceConfig;
@@ -50,7 +50,7 @@ export class Stream extends SpeakeasyBase {
   backfillAll?: BackfillAllStrategy;
 
   @SpeakeasyMetadata({ data: "json, name=backfillNone" })
-  backfillNone?: Map<string, any>;
+  backfillNone?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=createTime" })
   createTime?: string;
@@ -64,11 +64,11 @@ export class Stream extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=displayName" })
   displayName?: string;
 
-  @SpeakeasyMetadata({ data: "json, name=errors", elemType: Error })
-  errors?: Error[];
+  @SpeakeasyMetadata({ data: "json, name=errors", elemType: ErrorT })
+  errors?: ErrorT[];
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, string>;
+  labels?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;

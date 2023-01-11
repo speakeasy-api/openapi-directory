@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FindingEnum } from "./findingenum";
-import { ReasonCodeSummary } from "./reasoncodesummary";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Summary = void 0;
+var utils_1 = require("../../../internal/utils");
+var findingenum_1 = require("./findingenum");
+var reasoncodesummary_1 = require("./reasoncodesummary");
 // Summary
 /**
  * The summary of a recommendation.
@@ -35,17 +38,17 @@ var Summary = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], Summary.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=reasonCodeSummaries", elemType: ReasonCodeSummary }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=reasonCodeSummaries", elemType: reasoncodesummary_1.ReasonCodeSummary }),
         __metadata("design:type", Array)
     ], Summary.prototype, "reasonCodeSummaries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=value" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=value" }),
         __metadata("design:type", Number)
     ], Summary.prototype, "value", void 0);
     return Summary;
-}(SpeakeasyBase));
-export { Summary };
+}(utils_1.SpeakeasyBase));
+exports.Summary = Summary;

@@ -10,7 +10,7 @@ export class PutSshKeysIdPathParams extends SpeakeasyBase {
 
 export class PutSshKeysIdRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels?: Map<string, any>;
+  labels?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name?: string;
@@ -28,7 +28,7 @@ export class PutSshKeysId200ApplicationJsonSshKey extends SpeakeasyBase {
   id: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=name" })
   name: string;
@@ -58,8 +58,8 @@ export class PutSshKeysIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  putSshKeysId200ApplicationJsonObject?: PutSshKeysId200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  putSshKeysId200ApplicationJSONObject?: PutSshKeysId200ApplicationJson;
 }

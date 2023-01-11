@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TagRequestColorEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TagRequestInput = exports.TagRequestColorEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TagRequestColorEnum;
 (function (TagRequestColorEnum) {
     TagRequestColorEnum["DarkPink"] = "dark-pink";
     TagRequestColorEnum["DarkGreen"] = "dark-green";
@@ -43,28 +46,32 @@ export var TagRequestColorEnum;
     TagRequestColorEnum["LightOrange"] = "light-orange";
     TagRequestColorEnum["LightPurple"] = "light-purple";
     TagRequestColorEnum["LightWarmGray"] = "light-warm-gray";
-})(TagRequestColorEnum || (TagRequestColorEnum = {}));
+})(TagRequestColorEnum = exports.TagRequestColorEnum || (exports.TagRequestColorEnum = {}));
+// TagRequestInput
+/**
+ * A *tag* is a label that can be attached to any task in Asana. It exists in a single workspace or organization.
+**/
 var TagRequestInput = /** @class */ (function (_super) {
     __extends(TagRequestInput, _super);
     function TagRequestInput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=color" }),
         __metadata("design:type", String)
     ], TagRequestInput.prototype, "color", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=followers" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=followers" }),
         __metadata("design:type", Array)
     ], TagRequestInput.prototype, "followers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TagRequestInput.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workspace" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workspace" }),
         __metadata("design:type", String)
     ], TagRequestInput.prototype, "workspace", void 0);
     return TagRequestInput;
-}(SpeakeasyBase));
-export { TagRequestInput };
+}(utils_1.SpeakeasyBase));
+exports.TagRequestInput = TagRequestInput;

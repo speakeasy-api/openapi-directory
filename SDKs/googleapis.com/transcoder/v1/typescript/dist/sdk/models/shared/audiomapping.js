@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AudioMapping = void 0;
+var utils_1 = require("../../../internal/utils");
 // AudioMapping
 /**
  * The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
@@ -33,29 +36,29 @@ var AudioMapping = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=atomKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=atomKey" }),
         __metadata("design:type", String)
     ], AudioMapping.prototype, "atomKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=gainDb" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=gainDb" }),
         __metadata("design:type", Number)
     ], AudioMapping.prototype, "gainDb", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputChannel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputChannel" }),
         __metadata("design:type", Number)
     ], AudioMapping.prototype, "inputChannel", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputKey" }),
         __metadata("design:type", String)
     ], AudioMapping.prototype, "inputKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inputTrack" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inputTrack" }),
         __metadata("design:type", Number)
     ], AudioMapping.prototype, "inputTrack", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=outputChannel" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=outputChannel" }),
         __metadata("design:type", Number)
     ], AudioMapping.prototype, "outputChannel", void 0);
     return AudioMapping;
-}(SpeakeasyBase));
-export { AudioMapping };
+}(utils_1.SpeakeasyBase));
+exports.AudioMapping = AudioMapping;

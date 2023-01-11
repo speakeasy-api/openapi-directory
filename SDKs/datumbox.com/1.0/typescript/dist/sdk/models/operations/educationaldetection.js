@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EducationalDetectionResponse = exports.EducationalDetectionRequest = exports.EducationalDetectionRequestBody = void 0;
+var utils_1 = require("../../../internal/utils");
 var EducationalDetectionRequestBody = /** @class */ (function (_super) {
     __extends(EducationalDetectionRequestBody, _super);
     function EducationalDetectionRequestBody() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=api_key;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=api_key;" }),
         __metadata("design:type", String)
     ], EducationalDetectionRequestBody.prototype, "apiKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "form, name=text;" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "form, name=text;" }),
         __metadata("design:type", String)
     ], EducationalDetectionRequestBody.prototype, "text", void 0);
     return EducationalDetectionRequestBody;
-}(SpeakeasyBase));
-export { EducationalDetectionRequestBody };
+}(utils_1.SpeakeasyBase));
+exports.EducationalDetectionRequestBody = EducationalDetectionRequestBody;
 var EducationalDetectionRequest = /** @class */ (function (_super) {
     __extends(EducationalDetectionRequest, _super);
     function EducationalDetectionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=application/x-www-form-urlencoded" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=application/x-www-form-urlencoded" }),
         __metadata("design:type", EducationalDetectionRequestBody)
     ], EducationalDetectionRequest.prototype, "request", void 0);
     return EducationalDetectionRequest;
-}(SpeakeasyBase));
-export { EducationalDetectionRequest };
+}(utils_1.SpeakeasyBase));
+exports.EducationalDetectionRequest = EducationalDetectionRequest;
 var EducationalDetectionResponse = /** @class */ (function (_super) {
     __extends(EducationalDetectionResponse, _super);
     function EducationalDetectionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], EducationalDetectionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], EducationalDetectionResponse.prototype, "statusCode", void 0);
     return EducationalDetectionResponse;
-}(SpeakeasyBase));
-export { EducationalDetectionResponse };
+}(utils_1.SpeakeasyBase));
+exports.EducationalDetectionResponse = EducationalDetectionResponse;

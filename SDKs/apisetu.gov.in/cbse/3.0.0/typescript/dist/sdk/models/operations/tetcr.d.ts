@@ -107,11 +107,11 @@ export declare class TetcrRequest extends SpeakeasyBase {
 export declare class TetcrResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    tetcr400ApplicationJsonObject?: Tetcr400ApplicationJson;
-    tetcr401ApplicationJsonObject?: Tetcr401ApplicationJson;
-    tetcr404ApplicationJsonObject?: Tetcr404ApplicationJson;
-    tetcr500ApplicationJsonObject?: Tetcr500ApplicationJson;
-    tetcr502ApplicationJsonObject?: Tetcr502ApplicationJson;
-    tetcr503ApplicationJsonObject?: Tetcr503ApplicationJson;
-    tetcr504ApplicationJsonObject?: Tetcr504ApplicationJson;
+    tetcr400ApplicationJSONObject?: Tetcr400ApplicationJson;
+    tetcr401ApplicationJSONObject?: Tetcr401ApplicationJson;
+    tetcr404ApplicationJSONObject?: Tetcr404ApplicationJson;
+    tetcr500ApplicationJSONObject?: Tetcr500ApplicationJson;
+    tetcr502ApplicationJSONObject?: Tetcr502ApplicationJson;
+    tetcr503ApplicationJSONObject?: Tetcr503ApplicationJson;
+    tetcr504ApplicationJSONObject?: Tetcr504ApplicationJson;
 }

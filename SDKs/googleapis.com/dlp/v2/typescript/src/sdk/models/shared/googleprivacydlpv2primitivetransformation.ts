@@ -39,7 +39,7 @@ export class GooglePrivacyDlpV2PrimitiveTransformation extends SpeakeasyBase {
   fixedSizeBucketingConfig?: GooglePrivacyDlpV2FixedSizeBucketingConfig;
 
   @SpeakeasyMetadata({ data: "json, name=redactConfig" })
-  redactConfig?: Map<string, any>;
+  redactConfig?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=replaceConfig" })
   replaceConfig?: GooglePrivacyDlpV2ReplaceValueConfig;
@@ -48,7 +48,7 @@ export class GooglePrivacyDlpV2PrimitiveTransformation extends SpeakeasyBase {
   replaceDictionaryConfig?: GooglePrivacyDlpV2ReplaceDictionaryConfig;
 
   @SpeakeasyMetadata({ data: "json, name=replaceWithInfoTypeConfig" })
-  replaceWithInfoTypeConfig?: Map<string, any>;
+  replaceWithInfoTypeConfig?: Record<string, any>;
 
   @SpeakeasyMetadata({ data: "json, name=timePartConfig" })
   timePartConfig?: GooglePrivacyDlpV2TimePartConfig;

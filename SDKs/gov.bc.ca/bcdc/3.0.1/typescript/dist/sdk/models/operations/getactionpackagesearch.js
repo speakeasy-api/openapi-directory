@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetActionPackageSearchResponse = exports.GetActionPackageSearchRequest = exports.GetActionPackageSearchQueryParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetActionPackageSearchQueryParams = /** @class */ (function (_super) {
     __extends(GetActionPackageSearchQueryParams, _super);
     function GetActionPackageSearchQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=q" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=q" }),
         __metadata("design:type", String)
     ], GetActionPackageSearchQueryParams.prototype, "q", void 0);
     return GetActionPackageSearchQueryParams;
-}(SpeakeasyBase));
-export { GetActionPackageSearchQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetActionPackageSearchQueryParams = GetActionPackageSearchQueryParams;
 var GetActionPackageSearchRequest = /** @class */ (function (_super) {
     __extends(GetActionPackageSearchRequest, _super);
     function GetActionPackageSearchRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetActionPackageSearchQueryParams)
     ], GetActionPackageSearchRequest.prototype, "queryParams", void 0);
     return GetActionPackageSearchRequest;
-}(SpeakeasyBase));
-export { GetActionPackageSearchRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetActionPackageSearchRequest = GetActionPackageSearchRequest;
 var GetActionPackageSearchResponse = /** @class */ (function (_super) {
     __extends(GetActionPackageSearchResponse, _super);
     function GetActionPackageSearchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetActionPackageSearchResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetActionPackageSearchResponse.prototype, "statusCode", void 0);
     return GetActionPackageSearchResponse;
-}(SpeakeasyBase));
-export { GetActionPackageSearchResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetActionPackageSearchResponse = GetActionPackageSearchResponse;

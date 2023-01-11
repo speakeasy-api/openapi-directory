@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleAppsCloudidentityDevicesV1AndroidAttributes = exports.GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum;
 (function (GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum) {
     GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum["OwnershipPrivilegeUnspecified"] = "OWNERSHIP_PRIVILEGE_UNSPECIFIED";
     GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum["DeviceAdministrator"] = "DEVICE_ADMINISTRATOR";
     GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum["ProfileOwner"] = "PROFILE_OWNER";
     GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum["DeviceOwner"] = "DEVICE_OWNER";
-})(GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum || (GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum = {}));
+})(GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum = exports.GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum || (exports.GoogleAppsCloudidentityDevicesV1AndroidAttributesOwnershipPrivilegeEnum = {}));
 // GoogleAppsCloudidentityDevicesV1AndroidAttributes
 /**
  * Resource representing the Android specific attributes of a Device.
@@ -40,21 +43,21 @@ var GoogleAppsCloudidentityDevicesV1AndroidAttributes = /** @class */ (function 
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=enabledUnknownSources" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=enabledUnknownSources" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsCloudidentityDevicesV1AndroidAttributes.prototype, "enabledUnknownSources", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerProfileAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerProfileAccount" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsCloudidentityDevicesV1AndroidAttributes.prototype, "ownerProfileAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownershipPrivilege" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownershipPrivilege" }),
         __metadata("design:type", String)
     ], GoogleAppsCloudidentityDevicesV1AndroidAttributes.prototype, "ownershipPrivilege", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supportsWorkProfile" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supportsWorkProfile" }),
         __metadata("design:type", Boolean)
     ], GoogleAppsCloudidentityDevicesV1AndroidAttributes.prototype, "supportsWorkProfile", void 0);
     return GoogleAppsCloudidentityDevicesV1AndroidAttributes;
-}(SpeakeasyBase));
-export { GoogleAppsCloudidentityDevicesV1AndroidAttributes };
+}(utils_1.SpeakeasyBase));
+exports.GoogleAppsCloudidentityDevicesV1AndroidAttributes = GoogleAppsCloudidentityDevicesV1AndroidAttributes;

@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DriveactivityActivityQueryRequest, DriveactivityActivityQueryResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -32,41 +31,41 @@ const req: DriveactivityActivityQueryRequest = {
     option1: {
       oauth2: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
       oauth2c: {
         authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-      }
+      },
     },
   },
   queryParams: {
-    dollarXgafv: "2",
-    accessToken: "sunt",
-    alt: "json",
-    callback: "voluptas",
-    fields: "eos",
-    key: "deserunt",
-    oauthToken: "aperiam",
+    dollarXgafv: "1",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    fields: "consequuntur",
+    key: "dolor",
+    oauthToken: "expedita",
     prettyPrint: true,
-    quotaUser: "adipisci",
-    uploadType: "porro",
-    uploadProtocol: "enim",
+    quotaUser: "fugit",
+    uploadType: "et",
+    uploadProtocol: "nihil",
   },
   request: {
-    ancestorName: "pariatur",
+    ancestorName: "rerum",
     consolidationStrategy: {
       legacy: {
-        "veniam": "et",
+        "debitis": "voluptatum",
+        "et": "ut",
+        "dolorem": "et",
       },
       none: {
-        "consequatur": "sed",
-        "unde": "et",
-        "aut": "eveniet",
+        "iste": "vitae",
       },
     },
-    filter: "eaque",
-    itemName: "qui",
-    pageSize: 1123870035686130435,
-    pageToken: "officiis",
+    filter: "totam",
+    itemName: "dolores",
+    pageSize: 1929546706668609706,
+    pageToken: "debitis",
   },
 };
 

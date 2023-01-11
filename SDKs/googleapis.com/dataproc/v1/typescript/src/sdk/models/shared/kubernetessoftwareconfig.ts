@@ -8,8 +8,8 @@ import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
 **/
 export class KubernetesSoftwareConfig extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=componentVersion" })
-  componentVersion?: Map<string, string>;
+  componentVersion?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=properties" })
-  properties?: Map<string, string>;
+  properties?: Record<string, string>;
 }

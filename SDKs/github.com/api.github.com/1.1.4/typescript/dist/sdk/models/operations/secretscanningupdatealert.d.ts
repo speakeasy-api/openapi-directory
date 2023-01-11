@@ -22,5 +22,5 @@ export declare class SecretScanningUpdateAlertResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
     secretScanningAlert?: shared.SecretScanningAlert;
-    secretScanningUpdateAlert503ApplicationJsonObject?: SecretScanningUpdateAlert503ApplicationJson;
+    secretScanningUpdateAlert503ApplicationJSONObject?: SecretScanningUpdateAlert503ApplicationJson;
 }

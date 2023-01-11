@@ -19,7 +19,7 @@ export declare class PostLocationsRequestBody extends SpeakeasyBase {
 export declare class PostLocations200ApplicationJson extends SpeakeasyBase {
     message?: string;
     ok?: boolean;
-    result?: Map<string, any>;
+    result?: Record<string, any>;
 }
 export declare class PostLocationsRequest extends SpeakeasyBase {
     request: PostLocationsRequestBody;
@@ -27,5 +27,5 @@ export declare class PostLocationsRequest extends SpeakeasyBase {
 export declare class PostLocationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    postLocations200ApplicationJsonObject?: PostLocations200ApplicationJson;
+    postLocations200ApplicationJSONObject?: PostLocations200ApplicationJson;
 }

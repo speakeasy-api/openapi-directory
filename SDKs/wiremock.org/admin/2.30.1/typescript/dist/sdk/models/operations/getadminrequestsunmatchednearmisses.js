@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetAdminRequestsUnmatchedNearMissesResponse = exports.GetAdminRequestsUnmatchedNearMisses200ApplicationJson = exports.GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses = /** @class */ (function (_super) {
     __extends(GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses, _super);
     function GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=absoluteUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=absoluteUrl" }),
         __metadata("design:type", String)
     ], GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses.prototype, "absoluteUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=body" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=body" }),
         __metadata("design:type", String)
     ], GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cookies" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cookies" }),
+        __metadata("design:type", Object)
     ], GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses.prototype, "cookies", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=headers" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=headers" }),
+        __metadata("design:type", Object)
     ], GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses.prototype, "url", void 0);
     return GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses;
-}(SpeakeasyBase));
-export { GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses };
+}(utils_1.SpeakeasyBase));
+exports.GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses = GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses;
 var GetAdminRequestsUnmatchedNearMisses200ApplicationJson = /** @class */ (function (_super) {
     __extends(GetAdminRequestsUnmatchedNearMisses200ApplicationJson, _super);
     function GetAdminRequestsUnmatchedNearMisses200ApplicationJson() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nearMisses", elemType: GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nearMisses", elemType: GetAdminRequestsUnmatchedNearMisses200ApplicationJsonNearMisses }),
         __metadata("design:type", Array)
     ], GetAdminRequestsUnmatchedNearMisses200ApplicationJson.prototype, "nearMisses", void 0);
     return GetAdminRequestsUnmatchedNearMisses200ApplicationJson;
-}(SpeakeasyBase));
-export { GetAdminRequestsUnmatchedNearMisses200ApplicationJson };
+}(utils_1.SpeakeasyBase));
+exports.GetAdminRequestsUnmatchedNearMisses200ApplicationJson = GetAdminRequestsUnmatchedNearMisses200ApplicationJson;
 var GetAdminRequestsUnmatchedNearMissesResponse = /** @class */ (function (_super) {
     __extends(GetAdminRequestsUnmatchedNearMissesResponse, _super);
     function GetAdminRequestsUnmatchedNearMissesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetAdminRequestsUnmatchedNearMissesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", GetAdminRequestsUnmatchedNearMisses200ApplicationJson)
-    ], GetAdminRequestsUnmatchedNearMissesResponse.prototype, "getAdminRequestsUnmatchedNearMisses200ApplicationJsonObject", void 0);
-    __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetAdminRequestsUnmatchedNearMissesResponse.prototype, "statusCode", void 0);
+    __decorate([
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", GetAdminRequestsUnmatchedNearMisses200ApplicationJson)
+    ], GetAdminRequestsUnmatchedNearMissesResponse.prototype, "getAdminRequestsUnmatchedNearMisses200ApplicationJSONObject", void 0);
     return GetAdminRequestsUnmatchedNearMissesResponse;
-}(SpeakeasyBase));
-export { GetAdminRequestsUnmatchedNearMissesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetAdminRequestsUnmatchedNearMissesResponse = GetAdminRequestsUnmatchedNearMissesResponse;

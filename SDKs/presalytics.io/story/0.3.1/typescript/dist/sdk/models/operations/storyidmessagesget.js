@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,52 +23,54 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StoryIdMessagesGetResponse = exports.StoryIdMessagesGetRequest = exports.StoryIdMessagesGetPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var StoryIdMessagesGetPathParams = /** @class */ (function (_super) {
     __extends(StoryIdMessagesGetPathParams, _super);
     function StoryIdMessagesGetPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=id" }),
         __metadata("design:type", String)
     ], StoryIdMessagesGetPathParams.prototype, "id", void 0);
     return StoryIdMessagesGetPathParams;
-}(SpeakeasyBase));
-export { StoryIdMessagesGetPathParams };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdMessagesGetPathParams = StoryIdMessagesGetPathParams;
 var StoryIdMessagesGetRequest = /** @class */ (function (_super) {
     __extends(StoryIdMessagesGetRequest, _super);
     function StoryIdMessagesGetRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", StoryIdMessagesGetPathParams)
     ], StoryIdMessagesGetRequest.prototype, "pathParams", void 0);
     return StoryIdMessagesGetRequest;
-}(SpeakeasyBase));
-export { StoryIdMessagesGetRequest };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdMessagesGetRequest = StoryIdMessagesGetRequest;
 var StoryIdMessagesGetResponse = /** @class */ (function (_super) {
     __extends(StoryIdMessagesGetResponse, _super);
     function StoryIdMessagesGetResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], StoryIdMessagesGetResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], StoryIdMessagesGetResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], StoryIdMessagesGetResponse.prototype, "messages", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], StoryIdMessagesGetResponse.prototype, "problemDetail", void 0);
     return StoryIdMessagesGetResponse;
-}(SpeakeasyBase));
-export { StoryIdMessagesGetResponse };
+}(utils_1.SpeakeasyBase));
+exports.StoryIdMessagesGetResponse = StoryIdMessagesGetResponse;

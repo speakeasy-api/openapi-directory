@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FileGetNodeFilePropertiesFromTaskResponse = exports.FileGetNodeFilePropertiesFromTaskRequest = exports.FileGetNodeFilePropertiesFromTaskHeaders = exports.FileGetNodeFilePropertiesFromTaskQueryParams = exports.FileGetNodeFilePropertiesFromTaskPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var FileGetNodeFilePropertiesFromTaskPathParams = /** @class */ (function (_super) {
     __extends(FileGetNodeFilePropertiesFromTaskPathParams, _super);
     function FileGetNodeFilePropertiesFromTaskPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=fileName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=fileName" }),
         __metadata("design:type", String)
     ], FileGetNodeFilePropertiesFromTaskPathParams.prototype, "fileName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=jobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=jobId" }),
         __metadata("design:type", String)
     ], FileGetNodeFilePropertiesFromTaskPathParams.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=taskId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=taskId" }),
         __metadata("design:type", String)
     ], FileGetNodeFilePropertiesFromTaskPathParams.prototype, "taskId", void 0);
     return FileGetNodeFilePropertiesFromTaskPathParams;
-}(SpeakeasyBase));
-export { FileGetNodeFilePropertiesFromTaskPathParams };
+}(utils_1.SpeakeasyBase));
+exports.FileGetNodeFilePropertiesFromTaskPathParams = FileGetNodeFilePropertiesFromTaskPathParams;
 var FileGetNodeFilePropertiesFromTaskQueryParams = /** @class */ (function (_super) {
     __extends(FileGetNodeFilePropertiesFromTaskQueryParams, _super);
     function FileGetNodeFilePropertiesFromTaskQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=api-version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=api-version" }),
         __metadata("design:type", String)
     ], FileGetNodeFilePropertiesFromTaskQueryParams.prototype, "apiVersion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=timeout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=timeout" }),
         __metadata("design:type", Number)
     ], FileGetNodeFilePropertiesFromTaskQueryParams.prototype, "timeout", void 0);
     return FileGetNodeFilePropertiesFromTaskQueryParams;
-}(SpeakeasyBase));
-export { FileGetNodeFilePropertiesFromTaskQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.FileGetNodeFilePropertiesFromTaskQueryParams = FileGetNodeFilePropertiesFromTaskQueryParams;
 var FileGetNodeFilePropertiesFromTaskHeaders = /** @class */ (function (_super) {
     __extends(FileGetNodeFilePropertiesFromTaskHeaders, _super);
     function FileGetNodeFilePropertiesFromTaskHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Modified-Since" }),
         __metadata("design:type", String)
     ], FileGetNodeFilePropertiesFromTaskHeaders.prototype, "ifModifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=If-Unmodified-Since" }),
         __metadata("design:type", String)
     ], FileGetNodeFilePropertiesFromTaskHeaders.prototype, "ifUnmodifiedSince", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=client-request-id" }),
         __metadata("design:type", String)
     ], FileGetNodeFilePropertiesFromTaskHeaders.prototype, "clientRequestId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=ocp-date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=ocp-date" }),
         __metadata("design:type", String)
     ], FileGetNodeFilePropertiesFromTaskHeaders.prototype, "ocpDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=return-client-request-id" }),
         __metadata("design:type", Boolean)
     ], FileGetNodeFilePropertiesFromTaskHeaders.prototype, "returnClientRequestId", void 0);
     return FileGetNodeFilePropertiesFromTaskHeaders;
-}(SpeakeasyBase));
-export { FileGetNodeFilePropertiesFromTaskHeaders };
+}(utils_1.SpeakeasyBase));
+exports.FileGetNodeFilePropertiesFromTaskHeaders = FileGetNodeFilePropertiesFromTaskHeaders;
 var FileGetNodeFilePropertiesFromTaskRequest = /** @class */ (function (_super) {
     __extends(FileGetNodeFilePropertiesFromTaskRequest, _super);
     function FileGetNodeFilePropertiesFromTaskRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FileGetNodeFilePropertiesFromTaskPathParams)
     ], FileGetNodeFilePropertiesFromTaskRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FileGetNodeFilePropertiesFromTaskQueryParams)
     ], FileGetNodeFilePropertiesFromTaskRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", FileGetNodeFilePropertiesFromTaskHeaders)
     ], FileGetNodeFilePropertiesFromTaskRequest.prototype, "headers", void 0);
     return FileGetNodeFilePropertiesFromTaskRequest;
-}(SpeakeasyBase));
-export { FileGetNodeFilePropertiesFromTaskRequest };
+}(utils_1.SpeakeasyBase));
+exports.FileGetNodeFilePropertiesFromTaskRequest = FileGetNodeFilePropertiesFromTaskRequest;
 var FileGetNodeFilePropertiesFromTaskResponse = /** @class */ (function (_super) {
     __extends(FileGetNodeFilePropertiesFromTaskResponse, _super);
     function FileGetNodeFilePropertiesFromTaskResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Object)
     ], FileGetNodeFilePropertiesFromTaskResponse.prototype, "batchError", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], FileGetNodeFilePropertiesFromTaskResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], FileGetNodeFilePropertiesFromTaskResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], FileGetNodeFilePropertiesFromTaskResponse.prototype, "statusCode", void 0);
     return FileGetNodeFilePropertiesFromTaskResponse;
-}(SpeakeasyBase));
-export { FileGetNodeFilePropertiesFromTaskResponse };
+}(utils_1.SpeakeasyBase));
+exports.FileGetNodeFilePropertiesFromTaskResponse = FileGetNodeFilePropertiesFromTaskResponse;

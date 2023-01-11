@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CitationsStylesReadResponse = exports.CitationsStylesReadRequest = exports.CitationsStylesReadPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var CitationsStylesReadPathParams = /** @class */ (function (_super) {
     __extends(CitationsStylesReadPathParams, _super);
     function CitationsStylesReadPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=style_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=style_id" }),
         __metadata("design:type", String)
     ], CitationsStylesReadPathParams.prototype, "styleId", void 0);
     return CitationsStylesReadPathParams;
-}(SpeakeasyBase));
-export { CitationsStylesReadPathParams };
+}(utils_1.SpeakeasyBase));
+exports.CitationsStylesReadPathParams = CitationsStylesReadPathParams;
 var CitationsStylesReadRequest = /** @class */ (function (_super) {
     __extends(CitationsStylesReadRequest, _super);
     function CitationsStylesReadRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", CitationsStylesReadPathParams)
     ], CitationsStylesReadRequest.prototype, "pathParams", void 0);
     return CitationsStylesReadRequest;
-}(SpeakeasyBase));
-export { CitationsStylesReadRequest };
+}(utils_1.SpeakeasyBase));
+exports.CitationsStylesReadRequest = CitationsStylesReadRequest;
 var CitationsStylesReadResponse = /** @class */ (function (_super) {
     __extends(CitationsStylesReadResponse, _super);
     function CitationsStylesReadResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], CitationsStylesReadResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], CitationsStylesReadResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], CitationsStylesReadResponse.prototype, "statusCode", void 0);
     return CitationsStylesReadResponse;
-}(SpeakeasyBase));
-export { CitationsStylesReadResponse };
+}(utils_1.SpeakeasyBase));
+exports.CitationsStylesReadResponse = CitationsStylesReadResponse;

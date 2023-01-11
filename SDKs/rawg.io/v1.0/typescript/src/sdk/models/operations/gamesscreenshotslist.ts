@@ -53,5 +53,5 @@ export class GamesScreenshotsListResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  gamesScreenshotsList200ApplicationJsonObject?: GamesScreenshotsList200ApplicationJson;
+  gamesScreenshotsList200ApplicationJSONObject?: GamesScreenshotsList200ApplicationJson;
 }

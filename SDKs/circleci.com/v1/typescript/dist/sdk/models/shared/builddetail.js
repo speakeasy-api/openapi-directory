@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CommitDetail } from "./commitdetail";
-import { PreviousBuild } from "./previousbuild";
-import { User } from "./user";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BuildDetail = void 0;
+var utils_1 = require("../../../internal/utils");
+var commitdetail_1 = require("./commitdetail");
+var previousbuild_1 = require("./previousbuild");
+var user_1 = require("./user");
 // BuildDetail
 /**
  * previous build
@@ -36,45 +39,45 @@ var BuildDetail = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=all_commit_details", elemType: CommitDetail }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=all_commit_details", elemType: commitdetail_1.CommitDetail }),
         __metadata("design:type", Array)
     ], BuildDetail.prototype, "allCommitDetails", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=compare" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=compare" }),
         __metadata("design:type", String)
     ], BuildDetail.prototype, "compare", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=job_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=job_name" }),
         __metadata("design:type", String)
     ], BuildDetail.prototype, "jobName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=node" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=node" }),
         __metadata("design:type", Object)
     ], BuildDetail.prototype, "node", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous_successful_build" }),
-        __metadata("design:type", PreviousBuild)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous_successful_build" }),
+        __metadata("design:type", previousbuild_1.PreviousBuild)
     ], BuildDetail.prototype, "previousSuccessfulBuild", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=retries" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=retries" }),
         __metadata("design:type", Boolean)
     ], BuildDetail.prototype, "retries", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ssh_enabled" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ssh_enabled" }),
         __metadata("design:type", Boolean)
     ], BuildDetail.prototype, "sshEnabled", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timedout" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timedout" }),
         __metadata("design:type", Boolean)
     ], BuildDetail.prototype, "timedout", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usage_queued_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usage_queued_at" }),
         __metadata("design:type", Date)
     ], BuildDetail.prototype, "usageQueuedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=user" }),
-        __metadata("design:type", User)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=user" }),
+        __metadata("design:type", user_1.User)
     ], BuildDetail.prototype, "user", void 0);
     return BuildDetail;
-}(SpeakeasyBase));
-export { BuildDetail };
+}(utils_1.SpeakeasyBase));
+exports.BuildDetail = BuildDetail;

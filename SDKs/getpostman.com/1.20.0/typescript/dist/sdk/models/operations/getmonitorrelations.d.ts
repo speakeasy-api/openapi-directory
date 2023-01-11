@@ -18,5 +18,5 @@ export declare class GetMonitorRelationsRequest extends SpeakeasyBase {
 export declare class GetMonitorRelationsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getMonitorRelations200ApplicationJsonObject?: GetMonitorRelations200ApplicationJson;
+    getMonitorRelations200ApplicationJSONObject?: GetMonitorRelations200ApplicationJson;
 }

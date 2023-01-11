@@ -6,10 +6,10 @@ import { OutputConfig } from "./outputconfig";
  * The batch translation request.
 **/
 export declare class BatchTranslateTextRequest extends SpeakeasyBase {
-    glossaries?: Map<string, TranslateTextGlossaryConfig>;
+    glossaries?: Record<string, TranslateTextGlossaryConfig>;
     inputConfigs?: InputConfig[];
-    labels?: Map<string, string>;
-    models?: Map<string, string>;
+    labels?: Record<string, string>;
+    models?: Record<string, string>;
     outputConfig?: OutputConfig;
     sourceLanguageCode?: string;
     targetLanguageCodes?: string[];

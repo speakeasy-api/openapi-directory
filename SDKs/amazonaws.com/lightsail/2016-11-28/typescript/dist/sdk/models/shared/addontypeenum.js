@@ -1,4 +1,7 @@
-export var AddOnTypeEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddOnTypeEnum = void 0;
+var AddOnTypeEnum;
 (function (AddOnTypeEnum) {
     AddOnTypeEnum["AutoSnapshot"] = "AutoSnapshot";
-})(AddOnTypeEnum || (AddOnTypeEnum = {}));
+})(AddOnTypeEnum = exports.AddOnTypeEnum || (exports.AddOnTypeEnum = {}));

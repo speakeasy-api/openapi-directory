@@ -59,7 +59,7 @@ export class AllFaresRequest extends SpeakeasyBase {
 
 export class AllFaresResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
-  allFares200ApplicationJsonString?: string;
+  allFares200ApplicationJSONString?: string;
 
   @SpeakeasyMetadata()
   contentType: string;

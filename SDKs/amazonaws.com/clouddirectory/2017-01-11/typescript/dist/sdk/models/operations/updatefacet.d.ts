@@ -38,6 +38,6 @@ export declare class UpdateFacetResponse extends SpeakeasyBase {
     resourceNotFoundException?: any;
     retryableConflictException?: any;
     statusCode: number;
-    updateFacetResponse?: Map<string, any>;
+    updateFacetResponse?: Record<string, any>;
     validationException?: any;
 }

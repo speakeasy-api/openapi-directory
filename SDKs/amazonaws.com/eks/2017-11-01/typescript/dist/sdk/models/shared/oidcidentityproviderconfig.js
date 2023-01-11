@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigStatusEnum } from "./configstatusenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OidcIdentityProviderConfig = void 0;
+var utils_1 = require("../../../internal/utils");
+var configstatusenum_1 = require("./configstatusenum");
 // OidcIdentityProviderConfig
 /**
  * An object that represents the configuration for an OpenID Connect (OIDC) identity provider.
@@ -34,53 +37,53 @@ var OidcIdentityProviderConfig = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clientId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clientId" }),
         __metadata("design:type", String)
     ], OidcIdentityProviderConfig.prototype, "clientId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=clusterName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=clusterName" }),
         __metadata("design:type", String)
     ], OidcIdentityProviderConfig.prototype, "clusterName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupsClaim" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupsClaim" }),
         __metadata("design:type", String)
     ], OidcIdentityProviderConfig.prototype, "groupsClaim", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=groupsPrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=groupsPrefix" }),
         __metadata("design:type", String)
     ], OidcIdentityProviderConfig.prototype, "groupsPrefix", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identityProviderConfigArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identityProviderConfigArn" }),
         __metadata("design:type", String)
     ], OidcIdentityProviderConfig.prototype, "identityProviderConfigArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identityProviderConfigName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identityProviderConfigName" }),
         __metadata("design:type", String)
     ], OidcIdentityProviderConfig.prototype, "identityProviderConfigName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=issuerUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=issuerUrl" }),
         __metadata("design:type", String)
     ], OidcIdentityProviderConfig.prototype, "issuerUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=requiredClaims" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=requiredClaims" }),
+        __metadata("design:type", Object)
     ], OidcIdentityProviderConfig.prototype, "requiredClaims", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], OidcIdentityProviderConfig.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], OidcIdentityProviderConfig.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usernameClaim" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usernameClaim" }),
         __metadata("design:type", String)
     ], OidcIdentityProviderConfig.prototype, "usernameClaim", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=usernamePrefix" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=usernamePrefix" }),
         __metadata("design:type", String)
     ], OidcIdentityProviderConfig.prototype, "usernamePrefix", void 0);
     return OidcIdentityProviderConfig;
-}(SpeakeasyBase));
-export { OidcIdentityProviderConfig };
+}(utils_1.SpeakeasyBase));
+exports.OidcIdentityProviderConfig = OidcIdentityProviderConfig;

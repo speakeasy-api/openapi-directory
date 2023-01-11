@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TrainResponseStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TrainResponse = exports.TrainResponseStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TrainResponseStatusEnum;
 (function (TrainResponseStatusEnum) {
     TrainResponseStatusEnum["Queued"] = "QUEUED";
     TrainResponseStatusEnum["Running"] = "RUNNING";
@@ -31,84 +34,84 @@ export var TrainResponseStatusEnum;
     TrainResponseStatusEnum["Failed"] = "FAILED";
     TrainResponseStatusEnum["Killed"] = "KILLED";
     TrainResponseStatusEnum["FailedWithRetries"] = "FAILED_WITH_RETRIES";
-})(TrainResponseStatusEnum || (TrainResponseStatusEnum = {}));
+})(TrainResponseStatusEnum = exports.TrainResponseStatusEnum || (exports.TrainResponseStatusEnum = {}));
 var TrainResponse = /** @class */ (function (_super) {
     __extends(TrainResponse, _super);
     function TrainResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=algorithm" }),
         __metadata("design:type", String)
     ], TrainResponse.prototype, "algorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=createdAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=createdAt" }),
         __metadata("design:type", Date)
     ], TrainResponse.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasetId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasetId" }),
         __metadata("design:type", Number)
     ], TrainResponse.prototype, "datasetId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=datasetVersionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=datasetVersionId" }),
         __metadata("design:type", Number)
     ], TrainResponse.prototype, "datasetVersionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=epochs" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=epochs" }),
         __metadata("design:type", Number)
     ], TrainResponse.prototype, "epochs", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=failureMsg" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=failureMsg" }),
         __metadata("design:type", String)
     ], TrainResponse.prototype, "failureMsg", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=language" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=language" }),
         __metadata("design:type", String)
     ], TrainResponse.prototype, "language", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=learningRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=learningRate" }),
         __metadata("design:type", Number)
     ], TrainResponse.prototype, "learningRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modelId" }),
         __metadata("design:type", String)
     ], TrainResponse.prototype, "modelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=modelType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=modelType" }),
         __metadata("design:type", String)
     ], TrainResponse.prototype, "modelType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], TrainResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=object" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=object" }),
         __metadata("design:type", String)
     ], TrainResponse.prototype, "object", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=progress" }),
         __metadata("design:type", Number)
     ], TrainResponse.prototype, "progress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=queuePosition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=queuePosition" }),
         __metadata("design:type", Number)
     ], TrainResponse.prototype, "queuePosition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], TrainResponse.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trainParams" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trainParams" }),
         __metadata("design:type", String)
     ], TrainResponse.prototype, "trainParams", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=trainStats" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=trainStats" }),
         __metadata("design:type", String)
     ], TrainResponse.prototype, "trainStats", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], TrainResponse.prototype, "updatedAt", void 0);
     return TrainResponse;
-}(SpeakeasyBase));
-export { TrainResponse };
+}(utils_1.SpeakeasyBase));
+exports.TrainResponse = TrainResponse;

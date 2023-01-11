@@ -414,7 +414,7 @@ export class GetLoadBalancers200ApplicationJsonLoadBalancers extends SpeakeasyBa
   ingoingTraffic: number;
 
   @SpeakeasyMetadata({ data: "json, name=labels" })
-  labels: Map<string, string>;
+  labels: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=load_balancer_type" })
   loadBalancerType: GetLoadBalancers200ApplicationJsonLoadBalancersLoadBalancerType;
@@ -492,8 +492,8 @@ export class GetLoadBalancersResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  getLoadBalancers200ApplicationJsonObject?: GetLoadBalancers200ApplicationJson;
+  statusCode: number;
 
   @SpeakeasyMetadata()
-  statusCode: number;
+  getLoadBalancers200ApplicationJSONObject?: GetLoadBalancers200ApplicationJson;
 }

@@ -12,5 +12,5 @@ export class KmsKeyConfiguration extends SpeakeasyBase {
   grants?: KmsGrantConfiguration[];
 
   @SpeakeasyMetadata({ data: "json, name=keyPolicies" })
-  keyPolicies?: Map<string, string>;
+  keyPolicies?: Record<string, string>;
 }

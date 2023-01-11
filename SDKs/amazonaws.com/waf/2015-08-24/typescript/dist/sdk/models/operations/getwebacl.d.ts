@@ -19,7 +19,7 @@ export declare class GetWebAclRequest extends SpeakeasyBase {
 }
 export declare class GetWebAclResponse extends SpeakeasyBase {
     contentType: string;
-    getWebAclResponse?: shared.GetWebAclResponse;
+    getWebACLResponse?: shared.GetWebAclResponse;
     statusCode: number;
     wafInternalErrorException?: any;
     wafInvalidAccountException?: any;

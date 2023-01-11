@@ -44,8 +44,8 @@ export class GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse extends Speake
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  snippetCommit?: Map<string, any>;
+  snippetCommit?: Record<string, any>;
 }

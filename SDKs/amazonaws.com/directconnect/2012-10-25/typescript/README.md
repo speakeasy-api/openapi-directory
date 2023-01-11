@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { AcceptDirectConnectGatewayAssociationProposalRequest, AcceptDirectConnectGatewayAssociationProposalResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -34,31 +33,28 @@ const sdk = new SDK(WithSecurity(
     
 const req: AcceptDirectConnectGatewayAssociationProposalRequest = {
   headers: {
-    xAmzAlgorithm: "autem",
-    xAmzContentSha256: "est",
-    xAmzCredential: "soluta",
-    xAmzDate: "laudantium",
-    xAmzSecurityToken: "quia",
-    xAmzSignature: "eaque",
-    xAmzSignedHeaders: "ex",
+    xAmzAlgorithm: "sit",
+    xAmzContentSha256: "voluptas",
+    xAmzCredential: "culpa",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "consequuntur",
+    xAmzSignature: "dolor",
+    xAmzSignedHeaders: "expedita",
     xAmzTarget: "OvertureService.AcceptDirectConnectGatewayAssociationProposal",
   },
   request: {
-    associatedGatewayOwnerAccount: "vel",
-    directConnectGatewayId: "sunt",
+    associatedGatewayOwnerAccount: "fugit",
+    directConnectGatewayId: "et",
     overrideAllowedPrefixesToDirectConnectGateway: [
       {
-        cidr: "nulla",
-      },
-      {
-        cidr: "ipsa",
+        cidr: "rerum",
       },
     ],
-    proposalId: "ipsum",
+    proposalId: "dicta",
   },
 };
 
-sdk.sdk.acceptDirectConnectGatewayAssociationProposal(req).then((res: AcceptDirectConnectGatewayAssociationProposalResponse | AxiosError) => {
+sdk.acceptDirectConnectGatewayAssociationProposal(req).then((res: AcceptDirectConnectGatewayAssociationProposalResponse | AxiosError) => {
    // handle response
 });
 ```

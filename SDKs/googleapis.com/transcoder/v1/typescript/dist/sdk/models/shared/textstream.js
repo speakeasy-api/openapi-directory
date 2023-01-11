@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TextMapping } from "./textmapping";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TextStream = void 0;
+var utils_1 = require("../../../internal/utils");
+var textmapping_1 = require("./textmapping");
 // TextStream
 /**
  * Encoding of a text stream. For example, closed captions or subtitles.
@@ -34,13 +37,13 @@ var TextStream = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=codec" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=codec" }),
         __metadata("design:type", String)
     ], TextStream.prototype, "codec", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mapping", elemType: TextMapping }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mapping", elemType: textmapping_1.TextMapping }),
         __metadata("design:type", Array)
     ], TextStream.prototype, "mapping", void 0);
     return TextStream;
-}(SpeakeasyBase));
-export { TextStream };
+}(utils_1.SpeakeasyBase));
+exports.TextStream = TextStream;

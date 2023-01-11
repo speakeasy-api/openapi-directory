@@ -50,7 +50,7 @@ export class GetGrossToNetReportOutputResponse extends SpeakeasyBase {
   errorModel?: shared.ErrorModel;
 
   @SpeakeasyMetadata()
-  getGrossToNetReportOutput200ApplicationJsonBinaryString?: Uint8Array;
+  getGrossToNetReportOutput200ApplicationJSONBinaryString?: Uint8Array;
 
   @SpeakeasyMetadata()
   statusCode: number;

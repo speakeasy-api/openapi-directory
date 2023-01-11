@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,47 +23,49 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { TeamEventStatusAlliance } from "./teameventstatusalliance";
-import { TeamEventStatusPlayoff } from "./teameventstatusplayoff";
-import { TeamEventStatusRank } from "./teameventstatusrank";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TeamEventStatus = void 0;
+var utils_1 = require("../../../internal/utils");
+var teameventstatusalliance_1 = require("./teameventstatusalliance");
+var teameventstatusplayoff_1 = require("./teameventstatusplayoff");
+var teameventstatusrank_1 = require("./teameventstatusrank");
 var TeamEventStatus = /** @class */ (function (_super) {
     __extends(TeamEventStatus, _super);
     function TeamEventStatus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alliance" }),
-        __metadata("design:type", TeamEventStatusAlliance)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alliance" }),
+        __metadata("design:type", teameventstatusalliance_1.TeamEventStatusAlliance)
     ], TeamEventStatus.prototype, "alliance", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=alliance_status_str" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=alliance_status_str" }),
         __metadata("design:type", String)
     ], TeamEventStatus.prototype, "allianceStatusStr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_match_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_match_key" }),
         __metadata("design:type", String)
     ], TeamEventStatus.prototype, "lastMatchKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next_match_key" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next_match_key" }),
         __metadata("design:type", String)
     ], TeamEventStatus.prototype, "nextMatchKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=overall_status_str" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=overall_status_str" }),
         __metadata("design:type", String)
     ], TeamEventStatus.prototype, "overallStatusStr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=playoff" }),
-        __metadata("design:type", TeamEventStatusPlayoff)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=playoff" }),
+        __metadata("design:type", teameventstatusplayoff_1.TeamEventStatusPlayoff)
     ], TeamEventStatus.prototype, "playoff", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=playoff_status_str" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=playoff_status_str" }),
         __metadata("design:type", String)
     ], TeamEventStatus.prototype, "playoffStatusStr", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=qual" }),
-        __metadata("design:type", TeamEventStatusRank)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=qual" }),
+        __metadata("design:type", teameventstatusrank_1.TeamEventStatusRank)
     ], TeamEventStatus.prototype, "qual", void 0);
     return TeamEventStatus;
-}(SpeakeasyBase));
-export { TeamEventStatus };
+}(utils_1.SpeakeasyBase));
+exports.TeamEventStatus = TeamEventStatus;

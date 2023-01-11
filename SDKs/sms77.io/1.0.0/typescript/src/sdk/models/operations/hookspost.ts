@@ -58,7 +58,7 @@ export class HooksPostResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  hooksPost200ApplicationJsonObject?: HooksPost200ApplicationJson;
+  hooksPOST200ApplicationJSONObject?: HooksPost200ApplicationJson;
 
   @SpeakeasyMetadata()
   statusCode: number;

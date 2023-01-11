@@ -10,5 +10,5 @@ export class GetDaemonProtocolsResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getDaemonProtocols200ApplicationJsonObject?: Map<string, number>;
+  getDaemonProtocols200ApplicationJSONObject?: Record<string, number>;
 }

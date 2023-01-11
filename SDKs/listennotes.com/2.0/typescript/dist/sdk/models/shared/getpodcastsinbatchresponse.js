@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { EpisodeSimple } from "./episodesimple";
-import { PodcastSimple } from "./podcastsimple";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetPodcastsInBatchResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var episodesimple_1 = require("./episodesimple");
+var podcastsimple_1 = require("./podcastsimple");
 var GetPodcastsInBatchResponse = /** @class */ (function (_super) {
     __extends(GetPodcastsInBatchResponse, _super);
     function GetPodcastsInBatchResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=latest_episodes", elemType: EpisodeSimple }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=latest_episodes", elemType: episodesimple_1.EpisodeSimple }),
         __metadata("design:type", Array)
     ], GetPodcastsInBatchResponse.prototype, "latestEpisodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=podcasts", elemType: PodcastSimple }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=podcasts", elemType: podcastsimple_1.PodcastSimple }),
         __metadata("design:type", Array)
     ], GetPodcastsInBatchResponse.prototype, "podcasts", void 0);
     return GetPodcastsInBatchResponse;
-}(SpeakeasyBase));
-export { GetPodcastsInBatchResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetPodcastsInBatchResponse = GetPodcastsInBatchResponse;

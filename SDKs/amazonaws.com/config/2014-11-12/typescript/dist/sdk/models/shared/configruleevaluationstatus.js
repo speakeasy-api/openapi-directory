@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigRuleEvaluationStatus = void 0;
+var utils_1 = require("../../../internal/utils");
 // ConfigRuleEvaluationStatus
 /**
  * <p>Status information for your Config managed rules. The status includes information such as the last time the rule ran, the last time it failed, and the related error for the last failure.</p> <p>This action does not return status information about custom Config rules.</p>
@@ -33,53 +36,53 @@ var ConfigRuleEvaluationStatus = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigRuleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigRuleArn" }),
         __metadata("design:type", String)
     ], ConfigRuleEvaluationStatus.prototype, "configRuleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigRuleId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigRuleId" }),
         __metadata("design:type", String)
     ], ConfigRuleEvaluationStatus.prototype, "configRuleId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ConfigRuleName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ConfigRuleName" }),
         __metadata("design:type", String)
     ], ConfigRuleEvaluationStatus.prototype, "configRuleName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirstActivatedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirstActivatedTime" }),
         __metadata("design:type", Date)
     ], ConfigRuleEvaluationStatus.prototype, "firstActivatedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=FirstEvaluationStarted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=FirstEvaluationStarted" }),
         __metadata("design:type", Boolean)
     ], ConfigRuleEvaluationStatus.prototype, "firstEvaluationStarted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastDeactivatedTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastDeactivatedTime" }),
         __metadata("design:type", Date)
     ], ConfigRuleEvaluationStatus.prototype, "lastDeactivatedTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastErrorCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastErrorCode" }),
         __metadata("design:type", String)
     ], ConfigRuleEvaluationStatus.prototype, "lastErrorCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastErrorMessage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastErrorMessage" }),
         __metadata("design:type", String)
     ], ConfigRuleEvaluationStatus.prototype, "lastErrorMessage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastFailedEvaluationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastFailedEvaluationTime" }),
         __metadata("design:type", Date)
     ], ConfigRuleEvaluationStatus.prototype, "lastFailedEvaluationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastFailedInvocationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastFailedInvocationTime" }),
         __metadata("design:type", Date)
     ], ConfigRuleEvaluationStatus.prototype, "lastFailedInvocationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastSuccessfulEvaluationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastSuccessfulEvaluationTime" }),
         __metadata("design:type", Date)
     ], ConfigRuleEvaluationStatus.prototype, "lastSuccessfulEvaluationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastSuccessfulInvocationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastSuccessfulInvocationTime" }),
         __metadata("design:type", Date)
     ], ConfigRuleEvaluationStatus.prototype, "lastSuccessfulInvocationTime", void 0);
     return ConfigRuleEvaluationStatus;
-}(SpeakeasyBase));
-export { ConfigRuleEvaluationStatus };
+}(utils_1.SpeakeasyBase));
+exports.ConfigRuleEvaluationStatus = ConfigRuleEvaluationStatus;

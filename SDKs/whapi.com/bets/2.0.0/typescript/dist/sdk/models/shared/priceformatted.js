@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PriceFormatted = void 0;
+var utils_1 = require("../../../internal/utils");
 var PriceFormatted = /** @class */ (function (_super) {
     __extends(PriceFormatted, _super);
     function PriceFormatted() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=american" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=american" }),
         __metadata("design:type", String)
     ], PriceFormatted.prototype, "american", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=decimal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=decimal" }),
         __metadata("design:type", Number)
     ], PriceFormatted.prototype, "decimal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fractional" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fractional" }),
         __metadata("design:type", String)
     ], PriceFormatted.prototype, "fractional", void 0);
     return PriceFormatted;
-}(SpeakeasyBase));
-export { PriceFormatted };
+}(utils_1.SpeakeasyBase));
+exports.PriceFormatted = PriceFormatted;

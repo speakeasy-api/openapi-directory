@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NumericTargetingDimension } from "./numerictargetingdimension";
-import { StringTargetingDimension } from "./stringtargetingdimension";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppTargeting = void 0;
+var utils_1 = require("../../../internal/utils");
+var numerictargetingdimension_1 = require("./numerictargetingdimension");
+var stringtargetingdimension_1 = require("./stringtargetingdimension");
 // AppTargeting
 /**
  * A subset of app inventory to target. Bid requests that match criteria in at least one of the specified dimensions will be sent.
@@ -35,13 +38,13 @@ var AppTargeting = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobileAppCategoryTargeting" }),
-        __metadata("design:type", NumericTargetingDimension)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobileAppCategoryTargeting" }),
+        __metadata("design:type", numerictargetingdimension_1.NumericTargetingDimension)
     ], AppTargeting.prototype, "mobileAppCategoryTargeting", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=mobileAppTargeting" }),
-        __metadata("design:type", StringTargetingDimension)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=mobileAppTargeting" }),
+        __metadata("design:type", stringtargetingdimension_1.StringTargetingDimension)
     ], AppTargeting.prototype, "mobileAppTargeting", void 0);
     return AppTargeting;
-}(SpeakeasyBase));
-export { AppTargeting };
+}(utils_1.SpeakeasyBase));
+exports.AppTargeting = AppTargeting;

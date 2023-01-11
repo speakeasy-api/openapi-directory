@@ -26,6 +26,6 @@ export declare class RemoveLfTagsFromResourceResponse extends SpeakeasyBase {
     internalServiceException?: any;
     invalidInputException?: any;
     operationTimeoutException?: any;
-    removeLfTagsFromResourceResponse?: shared.RemoveLfTagsFromResourceResponse;
+    removeLFTagsFromResourceResponse?: shared.RemoveLfTagsFromResourceResponse;
     statusCode: number;
 }

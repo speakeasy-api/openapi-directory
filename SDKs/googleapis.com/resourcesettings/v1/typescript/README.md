@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { ResourcesettingsProjectsSettingsGetRequest, ResourcesettingsProjectsSettingsGetResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,26 +30,26 @@ const req: ResourcesettingsProjectsSettingsGetRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   pathParams: {
-    name: "quo",
+    name: "sit",
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "non",
+    accessToken: "culpa",
     alt: "media",
-    callback: "alias",
-    fields: "possimus",
-    key: "unde",
-    oauthToken: "aut",
+    callback: "consequuntur",
+    fields: "dolor",
+    key: "expedita",
+    oauthToken: "voluptas",
     prettyPrint: true,
-    quotaUser: "omnis",
-    uploadType: "corrupti",
-    uploadProtocol: "officiis",
+    quotaUser: "et",
+    uploadType: "nihil",
+    uploadProtocol: "rerum",
     view: "SETTING_VIEW_LOCAL_VALUE",
   },
 };

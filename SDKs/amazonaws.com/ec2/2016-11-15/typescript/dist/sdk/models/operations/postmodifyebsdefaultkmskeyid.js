@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostModifyEbsDefaultKmsKeyIdActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostModifyEbsDefaultKmsKeyIdResponse = exports.PostModifyEbsDefaultKmsKeyIdRequest = exports.PostModifyEbsDefaultKmsKeyIdHeaders = exports.PostModifyEbsDefaultKmsKeyIdQueryParams = exports.PostModifyEbsDefaultKmsKeyIdVersionEnum = exports.PostModifyEbsDefaultKmsKeyIdActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostModifyEbsDefaultKmsKeyIdActionEnum;
 (function (PostModifyEbsDefaultKmsKeyIdActionEnum) {
     PostModifyEbsDefaultKmsKeyIdActionEnum["ModifyEbsDefaultKmsKeyId"] = "ModifyEbsDefaultKmsKeyId";
-})(PostModifyEbsDefaultKmsKeyIdActionEnum || (PostModifyEbsDefaultKmsKeyIdActionEnum = {}));
-export var PostModifyEbsDefaultKmsKeyIdVersionEnum;
+})(PostModifyEbsDefaultKmsKeyIdActionEnum = exports.PostModifyEbsDefaultKmsKeyIdActionEnum || (exports.PostModifyEbsDefaultKmsKeyIdActionEnum = {}));
+var PostModifyEbsDefaultKmsKeyIdVersionEnum;
 (function (PostModifyEbsDefaultKmsKeyIdVersionEnum) {
     PostModifyEbsDefaultKmsKeyIdVersionEnum["TwoThousandAndSixteen1115"] = "2016-11-15";
-})(PostModifyEbsDefaultKmsKeyIdVersionEnum || (PostModifyEbsDefaultKmsKeyIdVersionEnum = {}));
+})(PostModifyEbsDefaultKmsKeyIdVersionEnum = exports.PostModifyEbsDefaultKmsKeyIdVersionEnum || (exports.PostModifyEbsDefaultKmsKeyIdVersionEnum = {}));
 var PostModifyEbsDefaultKmsKeyIdQueryParams = /** @class */ (function (_super) {
     __extends(PostModifyEbsDefaultKmsKeyIdQueryParams, _super);
     function PostModifyEbsDefaultKmsKeyIdQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostModifyEbsDefaultKmsKeyIdQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostModifyEbsDefaultKmsKeyIdQueryParams.prototype, "version", void 0);
     return PostModifyEbsDefaultKmsKeyIdQueryParams;
-}(SpeakeasyBase));
-export { PostModifyEbsDefaultKmsKeyIdQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyEbsDefaultKmsKeyIdQueryParams = PostModifyEbsDefaultKmsKeyIdQueryParams;
 var PostModifyEbsDefaultKmsKeyIdHeaders = /** @class */ (function (_super) {
     __extends(PostModifyEbsDefaultKmsKeyIdHeaders, _super);
     function PostModifyEbsDefaultKmsKeyIdHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostModifyEbsDefaultKmsKeyIdHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostModifyEbsDefaultKmsKeyIdHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostModifyEbsDefaultKmsKeyIdHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostModifyEbsDefaultKmsKeyIdHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostModifyEbsDefaultKmsKeyIdHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostModifyEbsDefaultKmsKeyIdHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostModifyEbsDefaultKmsKeyIdHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostModifyEbsDefaultKmsKeyIdHeaders;
-}(SpeakeasyBase));
-export { PostModifyEbsDefaultKmsKeyIdHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyEbsDefaultKmsKeyIdHeaders = PostModifyEbsDefaultKmsKeyIdHeaders;
 var PostModifyEbsDefaultKmsKeyIdRequest = /** @class */ (function (_super) {
     __extends(PostModifyEbsDefaultKmsKeyIdRequest, _super);
     function PostModifyEbsDefaultKmsKeyIdRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyEbsDefaultKmsKeyIdQueryParams)
     ], PostModifyEbsDefaultKmsKeyIdRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostModifyEbsDefaultKmsKeyIdHeaders)
     ], PostModifyEbsDefaultKmsKeyIdRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostModifyEbsDefaultKmsKeyIdRequest.prototype, "request", void 0);
     return PostModifyEbsDefaultKmsKeyIdRequest;
-}(SpeakeasyBase));
-export { PostModifyEbsDefaultKmsKeyIdRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyEbsDefaultKmsKeyIdRequest = PostModifyEbsDefaultKmsKeyIdRequest;
 var PostModifyEbsDefaultKmsKeyIdResponse = /** @class */ (function (_super) {
     __extends(PostModifyEbsDefaultKmsKeyIdResponse, _super);
     function PostModifyEbsDefaultKmsKeyIdResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostModifyEbsDefaultKmsKeyIdResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostModifyEbsDefaultKmsKeyIdResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostModifyEbsDefaultKmsKeyIdResponse.prototype, "statusCode", void 0);
     return PostModifyEbsDefaultKmsKeyIdResponse;
-}(SpeakeasyBase));
-export { PostModifyEbsDefaultKmsKeyIdResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostModifyEbsDefaultKmsKeyIdResponse = PostModifyEbsDefaultKmsKeyIdResponse;

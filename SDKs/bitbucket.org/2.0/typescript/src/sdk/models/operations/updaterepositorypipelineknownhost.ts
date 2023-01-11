@@ -19,7 +19,7 @@ export class UpdateRepositoryPipelineKnownHostRequest extends SpeakeasyBase {
   pathParams: UpdateRepositoryPipelineKnownHostPathParams;
 
   @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  request: Map<string, any>;
+  request: Record<string, any>;
 }
 
 
@@ -31,8 +31,8 @@ export class UpdateRepositoryPipelineKnownHostResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  error?: Map<string, any>;
+  error?: Record<string, any>;
 
   @SpeakeasyMetadata()
-  pipelineKnownHost?: Map<string, any>;
+  pipelineKnownHost?: Record<string, any>;
 }

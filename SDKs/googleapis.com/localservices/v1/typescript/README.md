@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { LocalservicesAccountReportsSearchRequest, LocalservicesAccountReportsSearchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -31,32 +30,32 @@ const req: LocalservicesAccountReportsSearchRequest = {
   security: {
     oauth2: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-    }
+    },
     oauth2c: {
       authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
     },
   },
   queryParams: {
     dollarXgafv: "1",
-    accessToken: "deserunt",
-    alt: "proto",
-    callback: "quae",
-    endDateDay: 9166176680105154158,
-    endDateMonth: 3700916382826329361,
-    endDateYear: 7949325261697935127,
-    fields: "qui",
-    key: "iste",
-    oauthToken: "aperiam",
-    pageSize: 180525446025806699,
-    pageToken: "sed",
-    prettyPrint: true,
-    query: "quis",
-    quotaUser: "amet",
-    startDateDay: 4461855726951911472,
-    startDateMonth: 3498328393978279083,
-    startDateYear: 4336138330598230696,
-    uploadType: "vitae",
-    uploadProtocol: "aperiam",
+    accessToken: "voluptas",
+    alt: "media",
+    callback: "expedita",
+    endDateDay: 3390393562759376202,
+    endDateMonth: 2669985732393126063,
+    endDateYear: 1774932891286980153,
+    fields: "voluptas",
+    key: "fugit",
+    oauthToken: "et",
+    pageSize: 2661732831099943416,
+    pageToken: "rerum",
+    prettyPrint: false,
+    query: "debitis",
+    quotaUser: "voluptatum",
+    startDateDay: 2339563716805116249,
+    startDateMonth: 7144924247938981575,
+    startDateYear: 161231572858529631,
+    uploadType: "et",
+    uploadProtocol: "voluptate",
   },
 };
 

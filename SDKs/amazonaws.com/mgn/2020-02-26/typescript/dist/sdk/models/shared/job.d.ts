@@ -11,9 +11,9 @@ export declare class Job extends SpeakeasyBase {
     creationDateTime?: string;
     endDateTime?: string;
     initiatedBy?: InitiatedByEnum;
-    jobId: string;
+    jobID: string;
     participatingServers?: ParticipatingServer[];
     status?: JobStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     type?: JobTypeEnum;
 }

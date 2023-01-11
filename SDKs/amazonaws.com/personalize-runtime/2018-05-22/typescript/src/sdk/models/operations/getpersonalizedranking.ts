@@ -32,13 +32,13 @@ export class GetPersonalizedRankingRequestBody extends SpeakeasyBase {
   campaignArn: string;
 
   @SpeakeasyMetadata({ data: "json, name=context" })
-  context?: Map<string, string>;
+  context?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=filterArn" })
   filterArn?: string;
 
   @SpeakeasyMetadata({ data: "json, name=filterValues" })
-  filterValues?: Map<string, string>;
+  filterValues?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=inputList" })
   inputList: string[];

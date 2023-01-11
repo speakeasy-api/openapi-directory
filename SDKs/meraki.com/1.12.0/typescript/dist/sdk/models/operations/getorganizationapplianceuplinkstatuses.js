@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,88 +23,90 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetOrganizationApplianceUplinkStatusesResponse = exports.GetOrganizationApplianceUplinkStatusesRequest = exports.GetOrganizationApplianceUplinkStatusesQueryParams = exports.GetOrganizationApplianceUplinkStatusesPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var GetOrganizationApplianceUplinkStatusesPathParams = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceUplinkStatusesPathParams, _super);
     function GetOrganizationApplianceUplinkStatusesPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=organizationId" }),
         __metadata("design:type", String)
     ], GetOrganizationApplianceUplinkStatusesPathParams.prototype, "organizationId", void 0);
     return GetOrganizationApplianceUplinkStatusesPathParams;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceUplinkStatusesPathParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceUplinkStatusesPathParams = GetOrganizationApplianceUplinkStatusesPathParams;
 var GetOrganizationApplianceUplinkStatusesQueryParams = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceUplinkStatusesQueryParams, _super);
     function GetOrganizationApplianceUplinkStatusesQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=endingBefore" }),
         __metadata("design:type", String)
     ], GetOrganizationApplianceUplinkStatusesQueryParams.prototype, "endingBefore", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=iccids" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=iccids" }),
         __metadata("design:type", Array)
     ], GetOrganizationApplianceUplinkStatusesQueryParams.prototype, "iccids", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=networkIds" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=networkIds" }),
         __metadata("design:type", Array)
     ], GetOrganizationApplianceUplinkStatusesQueryParams.prototype, "networkIds", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=perPage" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=perPage" }),
         __metadata("design:type", Number)
     ], GetOrganizationApplianceUplinkStatusesQueryParams.prototype, "perPage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=false;name=serials" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=false;name=serials" }),
         __metadata("design:type", Array)
     ], GetOrganizationApplianceUplinkStatusesQueryParams.prototype, "serials", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=startingAfter" }),
         __metadata("design:type", String)
     ], GetOrganizationApplianceUplinkStatusesQueryParams.prototype, "startingAfter", void 0);
     return GetOrganizationApplianceUplinkStatusesQueryParams;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceUplinkStatusesQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceUplinkStatusesQueryParams = GetOrganizationApplianceUplinkStatusesQueryParams;
 var GetOrganizationApplianceUplinkStatusesRequest = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceUplinkStatusesRequest, _super);
     function GetOrganizationApplianceUplinkStatusesRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationApplianceUplinkStatusesPathParams)
     ], GetOrganizationApplianceUplinkStatusesRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", GetOrganizationApplianceUplinkStatusesQueryParams)
     ], GetOrganizationApplianceUplinkStatusesRequest.prototype, "queryParams", void 0);
     return GetOrganizationApplianceUplinkStatusesRequest;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceUplinkStatusesRequest };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceUplinkStatusesRequest = GetOrganizationApplianceUplinkStatusesRequest;
 var GetOrganizationApplianceUplinkStatusesResponse = /** @class */ (function (_super) {
     __extends(GetOrganizationApplianceUplinkStatusesResponse, _super);
     function GetOrganizationApplianceUplinkStatusesResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], GetOrganizationApplianceUplinkStatusesResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
     ], GetOrganizationApplianceUplinkStatusesResponse.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], GetOrganizationApplianceUplinkStatusesResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
-        __metadata("design:type", Map)
-    ], GetOrganizationApplianceUplinkStatusesResponse.prototype, "getOrganizationApplianceUplinkStatuses200ApplicationJsonObject", void 0);
+        (0, utils_1.SpeakeasyMetadata)(),
+        __metadata("design:type", Object)
+    ], GetOrganizationApplianceUplinkStatusesResponse.prototype, "getOrganizationApplianceUplinkStatuses200ApplicationJSONObject", void 0);
     return GetOrganizationApplianceUplinkStatusesResponse;
-}(SpeakeasyBase));
-export { GetOrganizationApplianceUplinkStatusesResponse };
+}(utils_1.SpeakeasyBase));
+exports.GetOrganizationApplianceUplinkStatusesResponse = GetOrganizationApplianceUplinkStatusesResponse;

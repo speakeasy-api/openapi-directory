@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var MetricRequestMetricEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricRequest = exports.MetricRequestOptionsEnum = exports.MetricRequestMetricEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var MetricRequestMetricEnum;
 (function (MetricRequestMetricEnum) {
     MetricRequestMetricEnum["MetricUnspecified"] = "METRIC_UNSPECIFIED";
     MetricRequestMetricEnum["All"] = "ALL";
@@ -41,15 +44,15 @@ export var MetricRequestMetricEnum;
     MetricRequestMetricEnum["PhotosCountCustomers"] = "PHOTOS_COUNT_CUSTOMERS";
     MetricRequestMetricEnum["LocalPostViewsSearch"] = "LOCAL_POST_VIEWS_SEARCH";
     MetricRequestMetricEnum["LocalPostActionsCallToAction"] = "LOCAL_POST_ACTIONS_CALL_TO_ACTION";
-})(MetricRequestMetricEnum || (MetricRequestMetricEnum = {}));
-export var MetricRequestOptionsEnum;
+})(MetricRequestMetricEnum = exports.MetricRequestMetricEnum || (exports.MetricRequestMetricEnum = {}));
+var MetricRequestOptionsEnum;
 (function (MetricRequestOptionsEnum) {
     MetricRequestOptionsEnum["MetricOptionUnspecified"] = "METRIC_OPTION_UNSPECIFIED";
     MetricRequestOptionsEnum["AggregatedTotal"] = "AGGREGATED_TOTAL";
     MetricRequestOptionsEnum["AggregatedDaily"] = "AGGREGATED_DAILY";
     MetricRequestOptionsEnum["BreakdownDayOfWeek"] = "BREAKDOWN_DAY_OF_WEEK";
     MetricRequestOptionsEnum["BreakdownHourOfDay"] = "BREAKDOWN_HOUR_OF_DAY";
-})(MetricRequestOptionsEnum || (MetricRequestOptionsEnum = {}));
+})(MetricRequestOptionsEnum = exports.MetricRequestOptionsEnum || (exports.MetricRequestOptionsEnum = {}));
 // MetricRequest
 /**
  * A request to return values for one metric and the options for how those values should be returned.
@@ -60,13 +63,13 @@ var MetricRequest = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metric" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metric" }),
         __metadata("design:type", String)
     ], MetricRequest.prototype, "metric", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=options" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=options" }),
         __metadata("design:type", Array)
     ], MetricRequest.prototype, "options", void 0);
     return MetricRequest;
-}(SpeakeasyBase));
-export { MetricRequest };
+}(utils_1.SpeakeasyBase));
+exports.MetricRequest = MetricRequest;

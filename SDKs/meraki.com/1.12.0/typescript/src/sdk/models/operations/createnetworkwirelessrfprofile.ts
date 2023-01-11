@@ -128,5 +128,5 @@ export class CreateNetworkWirelessRfProfileResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  createNetworkWirelessRfProfile201ApplicationJsonObject?: Map<string, any>;
+  createNetworkWirelessRfProfile201ApplicationJSONObject?: Record<string, any>;
 }

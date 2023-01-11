@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.WorkerReservationEnumConferenceEventEnum = void 0;
+var WorkerReservationEnumConferenceEventEnum;
+(function (WorkerReservationEnumConferenceEventEnum) {
+    WorkerReservationEnumConferenceEventEnum["Start"] = "start";
+    WorkerReservationEnumConferenceEventEnum["End"] = "end";
+    WorkerReservationEnumConferenceEventEnum["Join"] = "join";
+    WorkerReservationEnumConferenceEventEnum["Leave"] = "leave";
+    WorkerReservationEnumConferenceEventEnum["Mute"] = "mute";
+    WorkerReservationEnumConferenceEventEnum["Hold"] = "hold";
+    WorkerReservationEnumConferenceEventEnum["Speaker"] = "speaker";
+})(WorkerReservationEnumConferenceEventEnum = exports.WorkerReservationEnumConferenceEventEnum || (exports.WorkerReservationEnumConferenceEventEnum = {}));

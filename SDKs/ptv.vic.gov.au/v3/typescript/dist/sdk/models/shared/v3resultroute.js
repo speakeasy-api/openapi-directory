@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,37 +23,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { V3RouteServiceStatus } from "./v3routeservicestatus";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3ResultRoute = void 0;
+var utils_1 = require("../../../internal/utils");
+var v3routeservicestatus_1 = require("./v3routeservicestatus");
 var V3ResultRoute = /** @class */ (function (_super) {
     __extends(V3ResultRoute, _super);
     function V3ResultRoute() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=route_gtfs_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=route_gtfs_id" }),
         __metadata("design:type", String)
     ], V3ResultRoute.prototype, "routeGtfsId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=route_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=route_id" }),
         __metadata("design:type", Number)
     ], V3ResultRoute.prototype, "routeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=route_name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=route_name" }),
         __metadata("design:type", String)
     ], V3ResultRoute.prototype, "routeName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=route_number" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=route_number" }),
         __metadata("design:type", String)
     ], V3ResultRoute.prototype, "routeNumber", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=route_service_status" }),
-        __metadata("design:type", V3RouteServiceStatus)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=route_service_status" }),
+        __metadata("design:type", v3routeservicestatus_1.V3RouteServiceStatus)
     ], V3ResultRoute.prototype, "routeServiceStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=route_type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=route_type" }),
         __metadata("design:type", Number)
     ], V3ResultRoute.prototype, "routeType", void 0);
     return V3ResultRoute;
-}(SpeakeasyBase));
-export { V3ResultRoute };
+}(utils_1.SpeakeasyBase));
+exports.V3ResultRoute = V3ResultRoute;

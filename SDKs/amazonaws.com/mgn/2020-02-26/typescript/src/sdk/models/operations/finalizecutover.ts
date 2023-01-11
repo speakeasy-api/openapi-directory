@@ -29,7 +29,7 @@ export class FinalizeCutoverHeaders extends SpeakeasyBase {
 
 export class FinalizeCutoverRequestBody extends SpeakeasyBase {
   @SpeakeasyMetadata({ data: "json, name=sourceServerID" })
-  sourceServerId: string;
+  sourceServerID: string;
 }
 
 

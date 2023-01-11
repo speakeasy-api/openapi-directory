@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,68 +23,70 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostAppsAppIdPublishResponse = exports.PostAppsAppIdPublishRequest = exports.PostAppsAppIdPublishQueryParams = exports.PostAppsAppIdPublishPathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var PostAppsAppIdPublishPathParams = /** @class */ (function (_super) {
     __extends(PostAppsAppIdPublishPathParams, _super);
     function PostAppsAppIdPublishPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=appId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=appId" }),
         __metadata("design:type", String)
     ], PostAppsAppIdPublishPathParams.prototype, "appId", void 0);
     return PostAppsAppIdPublishPathParams;
-}(SpeakeasyBase));
-export { PostAppsAppIdPublishPathParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAppsAppIdPublishPathParams = PostAppsAppIdPublishPathParams;
 var PostAppsAppIdPublishQueryParams = /** @class */ (function (_super) {
     __extends(PostAppsAppIdPublishQueryParams, _super);
     function PostAppsAppIdPublishQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=autoApprove" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=autoApprove" }),
         __metadata("design:type", Boolean)
     ], PostAppsAppIdPublishQueryParams.prototype, "autoApprove", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=developerId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=developerId" }),
         __metadata("design:type", String)
     ], PostAppsAppIdPublishQueryParams.prototype, "developerId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=version" }),
         __metadata("design:type", Number)
     ], PostAppsAppIdPublishQueryParams.prototype, "version", void 0);
     return PostAppsAppIdPublishQueryParams;
-}(SpeakeasyBase));
-export { PostAppsAppIdPublishQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostAppsAppIdPublishQueryParams = PostAppsAppIdPublishQueryParams;
 var PostAppsAppIdPublishRequest = /** @class */ (function (_super) {
     __extends(PostAppsAppIdPublishRequest, _super);
     function PostAppsAppIdPublishRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAppsAppIdPublishPathParams)
     ], PostAppsAppIdPublishRequest.prototype, "pathParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostAppsAppIdPublishQueryParams)
     ], PostAppsAppIdPublishRequest.prototype, "queryParams", void 0);
     return PostAppsAppIdPublishRequest;
-}(SpeakeasyBase));
-export { PostAppsAppIdPublishRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostAppsAppIdPublishRequest = PostAppsAppIdPublishRequest;
 var PostAppsAppIdPublishResponse = /** @class */ (function (_super) {
     __extends(PostAppsAppIdPublishResponse, _super);
     function PostAppsAppIdPublishResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostAppsAppIdPublishResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostAppsAppIdPublishResponse.prototype, "statusCode", void 0);
     return PostAppsAppIdPublishResponse;
-}(SpeakeasyBase));
-export { PostAppsAppIdPublishResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostAppsAppIdPublishResponse = PostAppsAppIdPublishResponse;

@@ -19,7 +19,7 @@ export declare class PutPermissionPolicyRequest extends SpeakeasyBase {
 }
 export declare class PutPermissionPolicyResponse extends SpeakeasyBase {
     contentType: string;
-    putPermissionPolicyResponse?: Map<string, any>;
+    putPermissionPolicyResponse?: Record<string, any>;
     statusCode: number;
     wafInternalErrorException?: any;
     wafInvalidPermissionPolicyException?: any;

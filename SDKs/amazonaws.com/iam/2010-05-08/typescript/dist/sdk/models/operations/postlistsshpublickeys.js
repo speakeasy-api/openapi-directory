@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,112 +23,114 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostListSshPublicKeysActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostListSshPublicKeysResponse = exports.PostListSshPublicKeysRequest = exports.PostListSshPublicKeysHeaders = exports.PostListSshPublicKeysQueryParams = exports.PostListSshPublicKeysVersionEnum = exports.PostListSshPublicKeysActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostListSshPublicKeysActionEnum;
 (function (PostListSshPublicKeysActionEnum) {
     PostListSshPublicKeysActionEnum["ListSshPublicKeys"] = "ListSSHPublicKeys";
-})(PostListSshPublicKeysActionEnum || (PostListSshPublicKeysActionEnum = {}));
-export var PostListSshPublicKeysVersionEnum;
+})(PostListSshPublicKeysActionEnum = exports.PostListSshPublicKeysActionEnum || (exports.PostListSshPublicKeysActionEnum = {}));
+var PostListSshPublicKeysVersionEnum;
 (function (PostListSshPublicKeysVersionEnum) {
     PostListSshPublicKeysVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostListSshPublicKeysVersionEnum || (PostListSshPublicKeysVersionEnum = {}));
+})(PostListSshPublicKeysVersionEnum = exports.PostListSshPublicKeysVersionEnum || (exports.PostListSshPublicKeysVersionEnum = {}));
 var PostListSshPublicKeysQueryParams = /** @class */ (function (_super) {
     __extends(PostListSshPublicKeysQueryParams, _super);
     function PostListSshPublicKeysQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostListSshPublicKeysQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Marker" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Marker" }),
         __metadata("design:type", String)
     ], PostListSshPublicKeysQueryParams.prototype, "marker", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=MaxItems" }),
         __metadata("design:type", String)
     ], PostListSshPublicKeysQueryParams.prototype, "maxItems", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostListSshPublicKeysQueryParams.prototype, "version", void 0);
     return PostListSshPublicKeysQueryParams;
-}(SpeakeasyBase));
-export { PostListSshPublicKeysQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostListSshPublicKeysQueryParams = PostListSshPublicKeysQueryParams;
 var PostListSshPublicKeysHeaders = /** @class */ (function (_super) {
     __extends(PostListSshPublicKeysHeaders, _super);
     function PostListSshPublicKeysHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostListSshPublicKeysHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostListSshPublicKeysHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostListSshPublicKeysHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostListSshPublicKeysHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostListSshPublicKeysHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostListSshPublicKeysHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostListSshPublicKeysHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostListSshPublicKeysHeaders;
-}(SpeakeasyBase));
-export { PostListSshPublicKeysHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostListSshPublicKeysHeaders = PostListSshPublicKeysHeaders;
 var PostListSshPublicKeysRequest = /** @class */ (function (_super) {
     __extends(PostListSshPublicKeysRequest, _super);
     function PostListSshPublicKeysRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostListSshPublicKeysQueryParams)
     ], PostListSshPublicKeysRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostListSshPublicKeysHeaders)
     ], PostListSshPublicKeysRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostListSshPublicKeysRequest.prototype, "request", void 0);
     return PostListSshPublicKeysRequest;
-}(SpeakeasyBase));
-export { PostListSshPublicKeysRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostListSshPublicKeysRequest = PostListSshPublicKeysRequest;
 var PostListSshPublicKeysResponse = /** @class */ (function (_super) {
     __extends(PostListSshPublicKeysResponse, _super);
     function PostListSshPublicKeysResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostListSshPublicKeysResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostListSshPublicKeysResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostListSshPublicKeysResponse.prototype, "statusCode", void 0);
     return PostListSshPublicKeysResponse;
-}(SpeakeasyBase));
-export { PostListSshPublicKeysResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostListSshPublicKeysResponse = PostListSshPublicKeysResponse;

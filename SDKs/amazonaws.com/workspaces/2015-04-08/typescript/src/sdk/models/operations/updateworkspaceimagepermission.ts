@@ -66,5 +66,5 @@ export class UpdateWorkspaceImagePermissionResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  updateWorkspaceImagePermissionResult?: Map<string, any>;
+  updateWorkspaceImagePermissionResult?: Record<string, any>;
 }

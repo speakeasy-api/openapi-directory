@@ -16,6 +16,6 @@ export declare class GetSetupV1ServicesIdAllocationsRequest extends SpeakeasyBas
 }
 export declare class GetSetupV1ServicesIdAllocationsResponse extends SpeakeasyBase {
     contentType: string;
-    serviceAllocationListViewModel?: Map<string, any>;
+    serviceAllocationListViewModel?: Record<string, any>;
     statusCode: number;
 }

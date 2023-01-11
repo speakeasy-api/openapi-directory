@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,30 +23,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { WafAction } from "./wafaction";
-import { WebAclUpdate } from "./webaclupdate";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UpdateWebAclRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var wafaction_1 = require("./wafaction");
+var webaclupdate_1 = require("./webaclupdate");
 var UpdateWebAclRequest = /** @class */ (function (_super) {
     __extends(UpdateWebAclRequest, _super);
     function UpdateWebAclRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ChangeToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ChangeToken" }),
         __metadata("design:type", String)
     ], UpdateWebAclRequest.prototype, "changeToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DefaultAction" }),
-        __metadata("design:type", WafAction)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DefaultAction" }),
+        __metadata("design:type", wafaction_1.WafAction)
     ], UpdateWebAclRequest.prototype, "defaultAction", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Updates", elemType: WebAclUpdate }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Updates", elemType: webaclupdate_1.WebAclUpdate }),
         __metadata("design:type", Array)
     ], UpdateWebAclRequest.prototype, "updates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=WebACLId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=WebACLId" }),
         __metadata("design:type", String)
-    ], UpdateWebAclRequest.prototype, "webAclId", void 0);
+    ], UpdateWebAclRequest.prototype, "webACLId", void 0);
     return UpdateWebAclRequest;
-}(SpeakeasyBase));
-export { UpdateWebAclRequest };
+}(utils_1.SpeakeasyBase));
+exports.UpdateWebAclRequest = UpdateWebAclRequest;

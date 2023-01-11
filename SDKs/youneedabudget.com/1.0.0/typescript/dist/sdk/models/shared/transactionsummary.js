@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var TransactionSummaryClearedEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TransactionSummary = exports.TransactionSummaryFlagColorEnum = exports.TransactionSummaryClearedEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var TransactionSummaryClearedEnum;
 (function (TransactionSummaryClearedEnum) {
     TransactionSummaryClearedEnum["Cleared"] = "cleared";
     TransactionSummaryClearedEnum["Uncleared"] = "uncleared";
     TransactionSummaryClearedEnum["Reconciled"] = "reconciled";
-})(TransactionSummaryClearedEnum || (TransactionSummaryClearedEnum = {}));
-export var TransactionSummaryFlagColorEnum;
+})(TransactionSummaryClearedEnum = exports.TransactionSummaryClearedEnum || (exports.TransactionSummaryClearedEnum = {}));
+var TransactionSummaryFlagColorEnum;
 (function (TransactionSummaryFlagColorEnum) {
     TransactionSummaryFlagColorEnum["Red"] = "red";
     TransactionSummaryFlagColorEnum["Orange"] = "orange";
@@ -37,72 +40,73 @@ export var TransactionSummaryFlagColorEnum;
     TransactionSummaryFlagColorEnum["Green"] = "green";
     TransactionSummaryFlagColorEnum["Blue"] = "blue";
     TransactionSummaryFlagColorEnum["Purple"] = "purple";
-})(TransactionSummaryFlagColorEnum || (TransactionSummaryFlagColorEnum = {}));
+    TransactionSummaryFlagColorEnum["Null"] = "null";
+})(TransactionSummaryFlagColorEnum = exports.TransactionSummaryFlagColorEnum || (exports.TransactionSummaryFlagColorEnum = {}));
 var TransactionSummary = /** @class */ (function (_super) {
     __extends(TransactionSummary, _super);
     function TransactionSummary() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=account_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=account_id" }),
         __metadata("design:type", String)
     ], TransactionSummary.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=amount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=amount" }),
         __metadata("design:type", Number)
     ], TransactionSummary.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=approved" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=approved" }),
         __metadata("design:type", Boolean)
     ], TransactionSummary.prototype, "approved", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=category_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=category_id" }),
         __metadata("design:type", String)
     ], TransactionSummary.prototype, "categoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cleared" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cleared" }),
         __metadata("design:type", String)
     ], TransactionSummary.prototype, "cleared", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=date" }),
         __metadata("design:type", Date)
     ], TransactionSummary.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], TransactionSummary.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=flag_color" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=flag_color" }),
         __metadata("design:type", String)
     ], TransactionSummary.prototype, "flagColor", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], TransactionSummary.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=import_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=import_id" }),
         __metadata("design:type", String)
     ], TransactionSummary.prototype, "importId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=matched_transaction_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=matched_transaction_id" }),
         __metadata("design:type", String)
     ], TransactionSummary.prototype, "matchedTransactionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memo" }),
         __metadata("design:type", String)
     ], TransactionSummary.prototype, "memo", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=payee_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=payee_id" }),
         __metadata("design:type", String)
     ], TransactionSummary.prototype, "payeeId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transfer_account_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transfer_account_id" }),
         __metadata("design:type", String)
     ], TransactionSummary.prototype, "transferAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=transfer_transaction_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=transfer_transaction_id" }),
         __metadata("design:type", String)
     ], TransactionSummary.prototype, "transferTransactionId", void 0);
     return TransactionSummary;
-}(SpeakeasyBase));
-export { TransactionSummary };
+}(utils_1.SpeakeasyBase));
+exports.TransactionSummary = TransactionSummary;

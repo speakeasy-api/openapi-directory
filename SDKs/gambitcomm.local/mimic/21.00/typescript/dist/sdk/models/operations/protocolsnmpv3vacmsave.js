@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,48 +23,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProtocolSnmpv3VacmSaveResponse = exports.ProtocolSnmpv3VacmSaveRequest = exports.ProtocolSnmpv3VacmSavePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var ProtocolSnmpv3VacmSavePathParams = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3VacmSavePathParams, _super);
     function ProtocolSnmpv3VacmSavePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=agentNum" }),
         __metadata("design:type", Number)
     ], ProtocolSnmpv3VacmSavePathParams.prototype, "agentNum", void 0);
     return ProtocolSnmpv3VacmSavePathParams;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3VacmSavePathParams };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3VacmSavePathParams = ProtocolSnmpv3VacmSavePathParams;
 var ProtocolSnmpv3VacmSaveRequest = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3VacmSaveRequest, _super);
     function ProtocolSnmpv3VacmSaveRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", ProtocolSnmpv3VacmSavePathParams)
     ], ProtocolSnmpv3VacmSaveRequest.prototype, "pathParams", void 0);
     return ProtocolSnmpv3VacmSaveRequest;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3VacmSaveRequest };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3VacmSaveRequest = ProtocolSnmpv3VacmSaveRequest;
 var ProtocolSnmpv3VacmSaveResponse = /** @class */ (function (_super) {
     __extends(ProtocolSnmpv3VacmSaveResponse, _super);
     function ProtocolSnmpv3VacmSaveResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], ProtocolSnmpv3VacmSaveResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], ProtocolSnmpv3VacmSaveResponse.prototype, "statusCode", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
-    ], ProtocolSnmpv3VacmSaveResponse.prototype, "protocolSnmpv3VacmSave200ApplicationJsonStrings", void 0);
+    ], ProtocolSnmpv3VacmSaveResponse.prototype, "protocolSnmpv3VacmSave200ApplicationJSONStrings", void 0);
     return ProtocolSnmpv3VacmSaveResponse;
-}(SpeakeasyBase));
-export { ProtocolSnmpv3VacmSaveResponse };
+}(utils_1.SpeakeasyBase));
+exports.ProtocolSnmpv3VacmSaveResponse = ProtocolSnmpv3VacmSaveResponse;

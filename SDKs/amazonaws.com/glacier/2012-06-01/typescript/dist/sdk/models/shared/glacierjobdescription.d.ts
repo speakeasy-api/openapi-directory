@@ -28,5 +28,5 @@ export declare class GlacierJobDescription extends SpeakeasyBase {
     statusCode?: StatusCodeEnum;
     statusMessage?: string;
     tier?: string;
-    vaultArn?: string;
+    vaultARN?: string;
 }

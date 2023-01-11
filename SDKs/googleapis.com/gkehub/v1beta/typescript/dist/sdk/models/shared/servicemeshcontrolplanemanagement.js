@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,9 +23,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ServiceMeshStatusDetails } from "./servicemeshstatusdetails";
-export var ServiceMeshControlPlaneManagementStateEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceMeshControlPlaneManagement = exports.ServiceMeshControlPlaneManagementStateEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var servicemeshstatusdetails_1 = require("./servicemeshstatusdetails");
+var ServiceMeshControlPlaneManagementStateEnum;
 (function (ServiceMeshControlPlaneManagementStateEnum) {
     ServiceMeshControlPlaneManagementStateEnum["LifecycleStateUnspecified"] = "LIFECYCLE_STATE_UNSPECIFIED";
     ServiceMeshControlPlaneManagementStateEnum["Disabled"] = "DISABLED";
@@ -34,7 +37,7 @@ export var ServiceMeshControlPlaneManagementStateEnum;
     ServiceMeshControlPlaneManagementStateEnum["Stalled"] = "STALLED";
     ServiceMeshControlPlaneManagementStateEnum["NeedsAttention"] = "NEEDS_ATTENTION";
     ServiceMeshControlPlaneManagementStateEnum["Degraded"] = "DEGRADED";
-})(ServiceMeshControlPlaneManagementStateEnum || (ServiceMeshControlPlaneManagementStateEnum = {}));
+})(ServiceMeshControlPlaneManagementStateEnum = exports.ServiceMeshControlPlaneManagementStateEnum || (exports.ServiceMeshControlPlaneManagementStateEnum = {}));
 // ServiceMeshControlPlaneManagement
 /**
  * Status of control plane management.
@@ -45,13 +48,13 @@ var ServiceMeshControlPlaneManagement = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=details", elemType: ServiceMeshStatusDetails }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=details", elemType: servicemeshstatusdetails_1.ServiceMeshStatusDetails }),
         __metadata("design:type", Array)
     ], ServiceMeshControlPlaneManagement.prototype, "details", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], ServiceMeshControlPlaneManagement.prototype, "state", void 0);
     return ServiceMeshControlPlaneManagement;
-}(SpeakeasyBase));
-export { ServiceMeshControlPlaneManagement };
+}(utils_1.SpeakeasyBase));
+exports.ServiceMeshControlPlaneManagement = ServiceMeshControlPlaneManagement;

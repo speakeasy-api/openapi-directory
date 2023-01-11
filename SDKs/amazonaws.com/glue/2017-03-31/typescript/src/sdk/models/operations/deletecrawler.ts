@@ -51,7 +51,7 @@ export class DeleteCrawlerResponse extends SpeakeasyBase {
   crawlerRunningException?: any;
 
   @SpeakeasyMetadata()
-  deleteCrawlerResponse?: Map<string, any>;
+  deleteCrawlerResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   entityNotFoundException?: any;

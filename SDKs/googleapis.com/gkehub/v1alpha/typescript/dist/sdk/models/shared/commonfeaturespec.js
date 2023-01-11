@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,11 +23,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AnthosObservabilityFeatureSpec } from "./anthosobservabilityfeaturespec";
-import { CloudAuditLoggingFeatureSpec } from "./cloudauditloggingfeaturespec";
-import { MultiClusterIngressFeatureSpec } from "./multiclusteringressfeaturespec";
-import { FeatureSpec } from "./featurespec";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommonFeatureSpec = void 0;
+var utils_1 = require("../../../internal/utils");
+var anthosobservabilityfeaturespec_1 = require("./anthosobservabilityfeaturespec");
+var cloudauditloggingfeaturespec_1 = require("./cloudauditloggingfeaturespec");
+var multiclusteringressfeaturespec_1 = require("./multiclusteringressfeaturespec");
+var featurespec_1 = require("./featurespec");
 // CommonFeatureSpec
 /**
  * CommonFeatureSpec contains Hub-wide configuration information
@@ -37,29 +40,29 @@ var CommonFeatureSpec = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=anthosobservability" }),
-        __metadata("design:type", AnthosObservabilityFeatureSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=anthosobservability" }),
+        __metadata("design:type", anthosobservabilityfeaturespec_1.AnthosObservabilityFeatureSpec)
     ], CommonFeatureSpec.prototype, "anthosobservability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=appdevexperience" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=appdevexperience" }),
+        __metadata("design:type", Object)
     ], CommonFeatureSpec.prototype, "appdevexperience", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cloudauditlogging" }),
-        __metadata("design:type", CloudAuditLoggingFeatureSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cloudauditlogging" }),
+        __metadata("design:type", cloudauditloggingfeaturespec_1.CloudAuditLoggingFeatureSpec)
     ], CommonFeatureSpec.prototype, "cloudauditlogging", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fleetobservability" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fleetobservability" }),
+        __metadata("design:type", Object)
     ], CommonFeatureSpec.prototype, "fleetobservability", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=multiclusteringress" }),
-        __metadata("design:type", MultiClusterIngressFeatureSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=multiclusteringress" }),
+        __metadata("design:type", multiclusteringressfeaturespec_1.MultiClusterIngressFeatureSpec)
     ], CommonFeatureSpec.prototype, "multiclusteringress", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=workloadcertificate" }),
-        __metadata("design:type", FeatureSpec)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=workloadcertificate" }),
+        __metadata("design:type", featurespec_1.FeatureSpec)
     ], CommonFeatureSpec.prototype, "workloadcertificate", void 0);
     return CommonFeatureSpec;
-}(SpeakeasyBase));
-export { CommonFeatureSpec };
+}(utils_1.SpeakeasyBase));
+exports.CommonFeatureSpec = CommonFeatureSpec;

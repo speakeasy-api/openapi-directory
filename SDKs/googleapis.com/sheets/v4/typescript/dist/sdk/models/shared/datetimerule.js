@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var DateTimeRuleTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DateTimeRule = exports.DateTimeRuleTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var DateTimeRuleTypeEnum;
 (function (DateTimeRuleTypeEnum) {
     DateTimeRuleTypeEnum["DateTimeRuleTypeUnspecified"] = "DATE_TIME_RULE_TYPE_UNSPECIFIED";
     DateTimeRuleTypeEnum["Second"] = "SECOND";
@@ -41,7 +44,7 @@ export var DateTimeRuleTypeEnum;
     DateTimeRuleTypeEnum["YearMonth"] = "YEAR_MONTH";
     DateTimeRuleTypeEnum["YearQuarter"] = "YEAR_QUARTER";
     DateTimeRuleTypeEnum["YearMonthDay"] = "YEAR_MONTH_DAY";
-})(DateTimeRuleTypeEnum || (DateTimeRuleTypeEnum = {}));
+})(DateTimeRuleTypeEnum = exports.DateTimeRuleTypeEnum || (exports.DateTimeRuleTypeEnum = {}));
 // DateTimeRule
 /**
  * Allows you to organize the date-time values in a source data column into buckets based on selected parts of their date or time values. For example, consider a pivot table showing sales transactions by date: +----------+--------------+ | Date | SUM of Sales | +----------+--------------+ | 1/1/2017 | $621.14 | | 2/3/2017 | $708.84 | | 5/8/2017 | $326.84 | ... +----------+--------------+ Applying a date-time group rule with a DateTimeRuleType of YEAR_MONTH results in the following pivot table. +--------------+--------------+ | Grouped Date | SUM of Sales | +--------------+--------------+ | 2017-Jan | $53,731.78 | | 2017-Feb | $83,475.32 | | 2017-Mar | $94,385.05 | ... +--------------+--------------+
@@ -52,9 +55,9 @@ var DateTimeRule = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], DateTimeRule.prototype, "type", void 0);
     return DateTimeRule;
-}(SpeakeasyBase));
-export { DateTimeRule };
+}(utils_1.SpeakeasyBase));
+exports.DateTimeRule = DateTimeRule;

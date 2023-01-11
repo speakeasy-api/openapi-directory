@@ -36,6 +36,6 @@ export declare class CloudiotProjectsLocationsRegistriesDevicesSendCommandToDevi
 }
 export declare class CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceResponse extends SpeakeasyBase {
     contentType: string;
-    sendCommandToDeviceResponse?: Map<string, any>;
+    sendCommandToDeviceResponse?: Record<string, any>;
     statusCode: number;
 }

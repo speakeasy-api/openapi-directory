@@ -47,7 +47,7 @@ export class GetSchedulesScheduleBByRecipientIdResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  scheduleBByRecipientIdPage?: shared.ScheduleBByRecipientIdPage;
+  scheduleBByRecipientIDPage?: shared.ScheduleBByRecipientIdPage;
 
   @SpeakeasyMetadata()
   statusCode: number;

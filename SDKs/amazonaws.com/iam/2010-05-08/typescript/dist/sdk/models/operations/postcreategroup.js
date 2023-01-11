@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,104 +23,106 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var PostCreateGroupActionEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PostCreateGroupResponse = exports.PostCreateGroupRequest = exports.PostCreateGroupHeaders = exports.PostCreateGroupQueryParams = exports.PostCreateGroupVersionEnum = exports.PostCreateGroupActionEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var PostCreateGroupActionEnum;
 (function (PostCreateGroupActionEnum) {
     PostCreateGroupActionEnum["CreateGroup"] = "CreateGroup";
-})(PostCreateGroupActionEnum || (PostCreateGroupActionEnum = {}));
-export var PostCreateGroupVersionEnum;
+})(PostCreateGroupActionEnum = exports.PostCreateGroupActionEnum || (exports.PostCreateGroupActionEnum = {}));
+var PostCreateGroupVersionEnum;
 (function (PostCreateGroupVersionEnum) {
     PostCreateGroupVersionEnum["TwoThousandAndTen0508"] = "2010-05-08";
-})(PostCreateGroupVersionEnum || (PostCreateGroupVersionEnum = {}));
+})(PostCreateGroupVersionEnum = exports.PostCreateGroupVersionEnum || (exports.PostCreateGroupVersionEnum = {}));
 var PostCreateGroupQueryParams = /** @class */ (function (_super) {
     __extends(PostCreateGroupQueryParams, _super);
     function PostCreateGroupQueryParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Action" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Action" }),
         __metadata("design:type", String)
     ], PostCreateGroupQueryParams.prototype, "action", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "queryParam, style=form;explode=true;name=Version" }),
         __metadata("design:type", String)
     ], PostCreateGroupQueryParams.prototype, "version", void 0);
     return PostCreateGroupQueryParams;
-}(SpeakeasyBase));
-export { PostCreateGroupQueryParams };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateGroupQueryParams = PostCreateGroupQueryParams;
 var PostCreateGroupHeaders = /** @class */ (function (_super) {
     __extends(PostCreateGroupHeaders, _super);
     function PostCreateGroupHeaders() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Algorithm" }),
         __metadata("design:type", String)
     ], PostCreateGroupHeaders.prototype, "xAmzAlgorithm", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Content-Sha256" }),
         __metadata("design:type", String)
     ], PostCreateGroupHeaders.prototype, "xAmzContentSha256", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Credential" }),
         __metadata("design:type", String)
     ], PostCreateGroupHeaders.prototype, "xAmzCredential", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Date" }),
         __metadata("design:type", String)
     ], PostCreateGroupHeaders.prototype, "xAmzDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Security-Token" }),
         __metadata("design:type", String)
     ], PostCreateGroupHeaders.prototype, "xAmzSecurityToken", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-Signature" }),
         __metadata("design:type", String)
     ], PostCreateGroupHeaders.prototype, "xAmzSignature", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "header, style=simple;explode=false;name=X-Amz-SignedHeaders" }),
         __metadata("design:type", String)
     ], PostCreateGroupHeaders.prototype, "xAmzSignedHeaders", void 0);
     return PostCreateGroupHeaders;
-}(SpeakeasyBase));
-export { PostCreateGroupHeaders };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateGroupHeaders = PostCreateGroupHeaders;
 var PostCreateGroupRequest = /** @class */ (function (_super) {
     __extends(PostCreateGroupRequest, _super);
     function PostCreateGroupRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateGroupQueryParams)
     ], PostCreateGroupRequest.prototype, "queryParams", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", PostCreateGroupHeaders)
     ], PostCreateGroupRequest.prototype, "headers", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "request, media_type=text/xml" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "request, media_type=text/xml" }),
         __metadata("design:type", Uint8Array)
     ], PostCreateGroupRequest.prototype, "request", void 0);
     return PostCreateGroupRequest;
-}(SpeakeasyBase));
-export { PostCreateGroupRequest };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateGroupRequest = PostCreateGroupRequest;
 var PostCreateGroupResponse = /** @class */ (function (_super) {
     __extends(PostCreateGroupResponse, _super);
     function PostCreateGroupResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Uint8Array)
     ], PostCreateGroupResponse.prototype, "body", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], PostCreateGroupResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], PostCreateGroupResponse.prototype, "statusCode", void 0);
     return PostCreateGroupResponse;
-}(SpeakeasyBase));
-export { PostCreateGroupResponse };
+}(utils_1.SpeakeasyBase));
+exports.PostCreateGroupResponse = PostCreateGroupResponse;

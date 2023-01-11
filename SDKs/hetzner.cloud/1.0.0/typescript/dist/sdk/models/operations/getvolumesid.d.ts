@@ -29,7 +29,7 @@ export declare class GetVolumesId200ApplicationJsonVolume extends SpeakeasyBase 
     created: string;
     format: string;
     id: number;
-    labels: Map<string, string>;
+    labels: Record<string, string>;
     linuxDevice: string;
     location: GetVolumesId200ApplicationJsonVolumeLocation;
     name: string;
@@ -46,6 +46,6 @@ export declare class GetVolumesIdRequest extends SpeakeasyBase {
 }
 export declare class GetVolumesIdResponse extends SpeakeasyBase {
     contentType: string;
-    getVolumesId200ApplicationJsonObject?: GetVolumesId200ApplicationJson;
     statusCode: number;
+    getVolumesId200ApplicationJSONObject?: GetVolumesId200ApplicationJson;
 }

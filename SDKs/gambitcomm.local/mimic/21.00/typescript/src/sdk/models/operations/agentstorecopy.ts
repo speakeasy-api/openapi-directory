@@ -25,5 +25,5 @@ export class AgentStoreCopyResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  agentStoreCopy200ApplicationJsonString?: string;
+  agentStoreCopy200ApplicationJSONString?: string;
 }

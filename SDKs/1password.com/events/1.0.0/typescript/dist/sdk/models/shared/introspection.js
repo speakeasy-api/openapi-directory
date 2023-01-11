@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,24 +23,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Introspection = void 0;
+var utils_1 = require("../../../internal/utils");
 var Introspection = /** @class */ (function (_super) {
     __extends(Introspection, _super);
     function Introspection() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Features" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Features" }),
         __metadata("design:type", Array)
     ], Introspection.prototype, "features", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=IssuedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=IssuedAt" }),
         __metadata("design:type", Date)
     ], Introspection.prototype, "issuedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=UUID" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=UUID" }),
         __metadata("design:type", String)
     ], Introspection.prototype, "uuid", void 0);
     return Introspection;
-}(SpeakeasyBase));
-export { Introspection };
+}(utils_1.SpeakeasyBase));
+exports.Introspection = Introspection;

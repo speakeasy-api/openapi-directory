@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var BoxScoresDeltaByDateByCompetitionFormatEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BoxScoresDeltaByDateByCompetitionResponse = exports.BoxScoresDeltaByDateByCompetitionRequest = exports.BoxScoresDeltaByDateByCompetitionPathParams = exports.BoxScoresDeltaByDateByCompetitionFormatEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var BoxScoresDeltaByDateByCompetitionFormatEnum;
 (function (BoxScoresDeltaByDateByCompetitionFormatEnum) {
     BoxScoresDeltaByDateByCompetitionFormatEnum["Xml"] = "xml";
     BoxScoresDeltaByDateByCompetitionFormatEnum["Json"] = "json";
-})(BoxScoresDeltaByDateByCompetitionFormatEnum || (BoxScoresDeltaByDateByCompetitionFormatEnum = {}));
+})(BoxScoresDeltaByDateByCompetitionFormatEnum = exports.BoxScoresDeltaByDateByCompetitionFormatEnum || (exports.BoxScoresDeltaByDateByCompetitionFormatEnum = {}));
 var BoxScoresDeltaByDateByCompetitionPathParams = /** @class */ (function (_super) {
     __extends(BoxScoresDeltaByDateByCompetitionPathParams, _super);
     function BoxScoresDeltaByDateByCompetitionPathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=competition" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=competition" }),
         __metadata("design:type", String)
     ], BoxScoresDeltaByDateByCompetitionPathParams.prototype, "competition", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=date" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=date" }),
         __metadata("design:type", String)
     ], BoxScoresDeltaByDateByCompetitionPathParams.prototype, "date", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=format" }),
         __metadata("design:type", String)
     ], BoxScoresDeltaByDateByCompetitionPathParams.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=minutes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=minutes" }),
         __metadata("design:type", String)
     ], BoxScoresDeltaByDateByCompetitionPathParams.prototype, "minutes", void 0);
     return BoxScoresDeltaByDateByCompetitionPathParams;
-}(SpeakeasyBase));
-export { BoxScoresDeltaByDateByCompetitionPathParams };
+}(utils_1.SpeakeasyBase));
+exports.BoxScoresDeltaByDateByCompetitionPathParams = BoxScoresDeltaByDateByCompetitionPathParams;
 var BoxScoresDeltaByDateByCompetitionRequest = /** @class */ (function (_super) {
     __extends(BoxScoresDeltaByDateByCompetitionRequest, _super);
     function BoxScoresDeltaByDateByCompetitionRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", BoxScoresDeltaByDateByCompetitionPathParams)
     ], BoxScoresDeltaByDateByCompetitionRequest.prototype, "pathParams", void 0);
     return BoxScoresDeltaByDateByCompetitionRequest;
-}(SpeakeasyBase));
-export { BoxScoresDeltaByDateByCompetitionRequest };
+}(utils_1.SpeakeasyBase));
+exports.BoxScoresDeltaByDateByCompetitionRequest = BoxScoresDeltaByDateByCompetitionRequest;
 var BoxScoresDeltaByDateByCompetitionResponse = /** @class */ (function (_super) {
     __extends(BoxScoresDeltaByDateByCompetitionResponse, _super);
     function BoxScoresDeltaByDateByCompetitionResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Array)
     ], BoxScoresDeltaByDateByCompetitionResponse.prototype, "boxScores", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], BoxScoresDeltaByDateByCompetitionResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], BoxScoresDeltaByDateByCompetitionResponse.prototype, "statusCode", void 0);
     return BoxScoresDeltaByDateByCompetitionResponse;
-}(SpeakeasyBase));
-export { BoxScoresDeltaByDateByCompetitionResponse };
+}(utils_1.SpeakeasyBase));
+exports.BoxScoresDeltaByDateByCompetitionResponse = BoxScoresDeltaByDateByCompetitionResponse;

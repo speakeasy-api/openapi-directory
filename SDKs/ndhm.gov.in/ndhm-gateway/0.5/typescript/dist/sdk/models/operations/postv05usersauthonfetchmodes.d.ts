@@ -2,11 +2,11 @@ import { SpeakeasyBase } from "../../../internal/utils";
 import * as shared from "../shared";
 export declare class PostV05UsersAuthOnFetchModesHeaders extends SpeakeasyBase {
     authorization: string;
-    xHipId: string;
-    xHiuId: string;
+    xHIPID: string;
+    xHIUID: string;
 }
 export declare class PostV05UsersAuthOnFetchModesRequests extends SpeakeasyBase {
-    applicationXml: Uint8Array;
+    applicationXML: Uint8Array;
     patientAuthModeQueryResponse?: shared.PatientAuthModeQueryResponse;
 }
 export declare class PostV05UsersAuthOnFetchModesRequest extends SpeakeasyBase {

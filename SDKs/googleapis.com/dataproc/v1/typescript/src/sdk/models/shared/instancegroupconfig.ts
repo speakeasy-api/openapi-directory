@@ -13,34 +13,6 @@ export enum InstanceGroupConfigPreemptibilityEnum {
 }
 
 
-// InstanceGroupConfigInput
-/** 
- * The config settings for Compute Engine resources in an instance group, such as a master or worker group.
-**/
-export class InstanceGroupConfigInput extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "json, name=accelerators", elemType: AcceleratorConfig })
-  accelerators?: AcceleratorConfig[];
-
-  @SpeakeasyMetadata({ data: "json, name=diskConfig" })
-  diskConfig?: DiskConfig;
-
-  @SpeakeasyMetadata({ data: "json, name=imageUri" })
-  imageUri?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=machineTypeUri" })
-  machineTypeUri?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=minCpuPlatform" })
-  minCpuPlatform?: string;
-
-  @SpeakeasyMetadata({ data: "json, name=numInstances" })
-  numInstances?: number;
-
-  @SpeakeasyMetadata({ data: "json, name=preemptibility" })
-  preemptibility?: InstanceGroupConfigPreemptibilityEnum;
-}
-
-
 // InstanceGroupConfig
 /** 
  * The config settings for Compute Engine resources in an instance group, such as a master or worker group.
@@ -69,6 +41,34 @@ export class InstanceGroupConfig extends SpeakeasyBase {
 
   @SpeakeasyMetadata({ data: "json, name=managedGroupConfig" })
   managedGroupConfig?: ManagedGroupConfig;
+
+  @SpeakeasyMetadata({ data: "json, name=minCpuPlatform" })
+  minCpuPlatform?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=numInstances" })
+  numInstances?: number;
+
+  @SpeakeasyMetadata({ data: "json, name=preemptibility" })
+  preemptibility?: InstanceGroupConfigPreemptibilityEnum;
+}
+
+
+// InstanceGroupConfigInput
+/** 
+ * The config settings for Compute Engine resources in an instance group, such as a master or worker group.
+**/
+export class InstanceGroupConfigInput extends SpeakeasyBase {
+  @SpeakeasyMetadata({ data: "json, name=accelerators", elemType: AcceleratorConfig })
+  accelerators?: AcceleratorConfig[];
+
+  @SpeakeasyMetadata({ data: "json, name=diskConfig" })
+  diskConfig?: DiskConfig;
+
+  @SpeakeasyMetadata({ data: "json, name=imageUri" })
+  imageUri?: string;
+
+  @SpeakeasyMetadata({ data: "json, name=machineTypeUri" })
+  machineTypeUri?: string;
 
   @SpeakeasyMetadata({ data: "json, name=minCpuPlatform" })
   minCpuPlatform?: string;

@@ -74,7 +74,7 @@ export class AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledg
   contentType: string;
 
   @SpeakeasyMetadata()
-  googleCloudAssuredworkloadsV1AcknowledgeViolationResponse?: Map<string, any>;
+  googleCloudAssuredworkloadsV1AcknowledgeViolationResponse?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

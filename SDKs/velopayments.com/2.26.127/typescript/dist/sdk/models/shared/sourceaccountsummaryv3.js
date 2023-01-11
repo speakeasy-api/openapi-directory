@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { PaymentAuditCurrencyV3Enum } from "./paymentauditcurrencyv3enum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SourceAccountSummaryV3 = void 0;
+var utils_1 = require("../../../internal/utils");
+var paymentauditcurrencyv3enum_1 = require("./paymentauditcurrencyv3enum");
 var SourceAccountSummaryV3 = /** @class */ (function (_super) {
     __extends(SourceAccountSummaryV3, _super);
     function SourceAccountSummaryV3() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=currency" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=currency" }),
         __metadata("design:type", String)
     ], SourceAccountSummaryV3.prototype, "currency", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sourceAccountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sourceAccountId" }),
         __metadata("design:type", String)
     ], SourceAccountSummaryV3.prototype, "sourceAccountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=totalCost" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=totalCost" }),
         __metadata("design:type", Number)
     ], SourceAccountSummaryV3.prototype, "totalCost", void 0);
     return SourceAccountSummaryV3;
-}(SpeakeasyBase));
-export { SourceAccountSummaryV3 };
+}(utils_1.SpeakeasyBase));
+exports.SourceAccountSummaryV3 = SourceAccountSummaryV3;

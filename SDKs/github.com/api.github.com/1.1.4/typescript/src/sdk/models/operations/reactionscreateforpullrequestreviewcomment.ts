@@ -61,7 +61,7 @@ export class ReactionsCreateForPullRequestReviewCommentResponse extends Speakeas
   reaction?: shared.Reaction;
 
   @SpeakeasyMetadata()
-  reactionsCreateForPullRequestReviewComment415ApplicationJsonObject?: ReactionsCreateForPullRequestReviewComment415ApplicationJson;
+  reactionsCreateForPullRequestReviewComment415ApplicationJSONObject?: ReactionsCreateForPullRequestReviewComment415ApplicationJson;
 
   @SpeakeasyMetadata()
   validationError?: shared.ValidationError;

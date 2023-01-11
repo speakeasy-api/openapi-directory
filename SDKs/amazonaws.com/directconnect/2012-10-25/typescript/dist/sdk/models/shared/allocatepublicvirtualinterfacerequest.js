@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,25 +23,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NewPublicVirtualInterfaceAllocation } from "./newpublicvirtualinterfaceallocation";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllocatePublicVirtualInterfaceRequest = void 0;
+var utils_1 = require("../../../internal/utils");
+var newpublicvirtualinterfaceallocation_1 = require("./newpublicvirtualinterfaceallocation");
 var AllocatePublicVirtualInterfaceRequest = /** @class */ (function (_super) {
     __extends(AllocatePublicVirtualInterfaceRequest, _super);
     function AllocatePublicVirtualInterfaceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=connectionId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=connectionId" }),
         __metadata("design:type", String)
     ], AllocatePublicVirtualInterfaceRequest.prototype, "connectionId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=newPublicVirtualInterfaceAllocation" }),
-        __metadata("design:type", NewPublicVirtualInterfaceAllocation)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=newPublicVirtualInterfaceAllocation" }),
+        __metadata("design:type", newpublicvirtualinterfaceallocation_1.NewPublicVirtualInterfaceAllocation)
     ], AllocatePublicVirtualInterfaceRequest.prototype, "newPublicVirtualInterfaceAllocation", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ownerAccount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ownerAccount" }),
         __metadata("design:type", String)
     ], AllocatePublicVirtualInterfaceRequest.prototype, "ownerAccount", void 0);
     return AllocatePublicVirtualInterfaceRequest;
-}(SpeakeasyBase));
-export { AllocatePublicVirtualInterfaceRequest };
+}(utils_1.SpeakeasyBase));
+exports.AllocatePublicVirtualInterfaceRequest = AllocatePublicVirtualInterfaceRequest;

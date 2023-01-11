@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { DirectConnectGatewayAssociationProposal } from "./directconnectgatewayassociationproposal";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DescribeDirectConnectGatewayAssociationProposalsResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var directconnectgatewayassociationproposal_1 = require("./directconnectgatewayassociationproposal");
 var DescribeDirectConnectGatewayAssociationProposalsResult = /** @class */ (function (_super) {
     __extends(DescribeDirectConnectGatewayAssociationProposalsResult, _super);
     function DescribeDirectConnectGatewayAssociationProposalsResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=directConnectGatewayAssociationProposals", elemType: DirectConnectGatewayAssociationProposal }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=directConnectGatewayAssociationProposals", elemType: directconnectgatewayassociationproposal_1.DirectConnectGatewayAssociationProposal }),
         __metadata("design:type", Array)
     ], DescribeDirectConnectGatewayAssociationProposalsResult.prototype, "directConnectGatewayAssociationProposals", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=nextToken" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=nextToken" }),
         __metadata("design:type", String)
     ], DescribeDirectConnectGatewayAssociationProposalsResult.prototype, "nextToken", void 0);
     return DescribeDirectConnectGatewayAssociationProposalsResult;
-}(SpeakeasyBase));
-export { DescribeDirectConnectGatewayAssociationProposalsResult };
+}(utils_1.SpeakeasyBase));
+exports.DescribeDirectConnectGatewayAssociationProposalsResult = DescribeDirectConnectGatewayAssociationProposalsResult;

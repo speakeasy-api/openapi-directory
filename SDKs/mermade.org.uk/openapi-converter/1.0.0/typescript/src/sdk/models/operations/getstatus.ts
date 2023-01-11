@@ -13,5 +13,5 @@ export class GetStatusResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  getStatus200ApplicationJsonAny?: any;
+  getStatus200ApplicationJSONAny?: any;
 }

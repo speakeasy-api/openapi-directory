@@ -25,5 +25,5 @@ export class SetPdusizeResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  setPdusize200ApplicationJsonInt32Integer?: number;
+  setPdusize200ApplicationJSONInt32Integer?: number;
 }

@@ -8,7 +8,7 @@ export declare class GetPaymentDisputeSecurity extends SpeakeasyBase {
     apiAuth: shared.SchemeApiAuth;
 }
 export declare class GetPaymentDisputeRequest extends SpeakeasyBase {
-    serverUrl?: string;
+    serverURL?: string;
     pathParams: GetPaymentDisputePathParams;
     security: GetPaymentDisputeSecurity;
 }

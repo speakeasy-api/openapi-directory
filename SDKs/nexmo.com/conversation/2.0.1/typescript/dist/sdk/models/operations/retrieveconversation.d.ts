@@ -24,7 +24,7 @@ export declare class RetrieveConversation200ApplicationJson extends SpeakeasyBas
     displayName?: string;
     members?: RetrieveConversation200ApplicationJsonMembers[];
     name?: string;
-    numbers?: Map<string, any>;
+    numbers?: Record<string, any>;
     properties?: RetrieveConversation200ApplicationJsonProperties;
     sequenceNumber?: string;
     timestamp?: shared.TimestampResConversation;
@@ -36,5 +36,5 @@ export declare class RetrieveConversationRequest extends SpeakeasyBase {
 export declare class RetrieveConversationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    retrieveConversation200ApplicationJsonObject?: RetrieveConversation200ApplicationJson;
+    retrieveConversation200ApplicationJSONObject?: RetrieveConversation200ApplicationJson;
 }

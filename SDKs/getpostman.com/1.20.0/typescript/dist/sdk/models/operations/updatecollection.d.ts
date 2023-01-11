@@ -79,8 +79,8 @@ export declare class UpdateCollectionRequest extends SpeakeasyBase {
 export declare class UpdateCollectionResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    updateCollection200ApplicationJsonObject?: UpdateCollection200ApplicationJson;
-    updateCollection400ApplicationJsonObject?: UpdateCollection400ApplicationJson;
-    updateCollection403ApplicationJsonObject?: UpdateCollection403ApplicationJson;
-    updateCollection404ApplicationJsonObject?: UpdateCollection404ApplicationJson;
+    updateCollection200ApplicationJSONObject?: UpdateCollection200ApplicationJson;
+    updateCollection400ApplicationJSONObject?: UpdateCollection400ApplicationJson;
+    updateCollection403ApplicationJSONObject?: UpdateCollection403ApplicationJson;
+    updateCollection404ApplicationJSONObject?: UpdateCollection404ApplicationJson;
 }

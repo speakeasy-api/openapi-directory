@@ -28,7 +28,7 @@ export class GetSetupV1CalendarsResponse extends SpeakeasyBase {
   contentType: string;
 
   @SpeakeasyMetadata()
-  scheduleListViewModel?: Map<string, any>;
+  scheduleListViewModel?: Record<string, any>;
 
   @SpeakeasyMetadata()
   statusCode: number;

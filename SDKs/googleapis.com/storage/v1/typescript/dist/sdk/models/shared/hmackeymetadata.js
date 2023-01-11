@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HmacKeyMetadata = void 0;
+var utils_1 = require("../../../internal/utils");
 // HmacKeyMetadata
 /**
  * JSON template to produce a JSON-style HMAC Key metadata resource.
@@ -33,45 +36,45 @@ var HmacKeyMetadata = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessId" }),
         __metadata("design:type", String)
     ], HmacKeyMetadata.prototype, "accessId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=etag" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=etag" }),
         __metadata("design:type", String)
     ], HmacKeyMetadata.prototype, "etag", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], HmacKeyMetadata.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=kind" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=kind" }),
         __metadata("design:type", String)
     ], HmacKeyMetadata.prototype, "kind", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=projectId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=projectId" }),
         __metadata("design:type", String)
     ], HmacKeyMetadata.prototype, "projectId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=selfLink" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=selfLink" }),
         __metadata("design:type", String)
     ], HmacKeyMetadata.prototype, "selfLink", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=serviceAccountEmail" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=serviceAccountEmail" }),
         __metadata("design:type", String)
     ], HmacKeyMetadata.prototype, "serviceAccountEmail", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=state" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=state" }),
         __metadata("design:type", String)
     ], HmacKeyMetadata.prototype, "state", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=timeCreated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=timeCreated" }),
         __metadata("design:type", Date)
     ], HmacKeyMetadata.prototype, "timeCreated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated" }),
         __metadata("design:type", Date)
     ], HmacKeyMetadata.prototype, "updated", void 0);
     return HmacKeyMetadata;
-}(SpeakeasyBase));
-export { HmacKeyMetadata };
+}(utils_1.SpeakeasyBase));
+exports.HmacKeyMetadata = HmacKeyMetadata;

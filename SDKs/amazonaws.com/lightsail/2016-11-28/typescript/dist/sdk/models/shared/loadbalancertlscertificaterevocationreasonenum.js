@@ -1,4 +1,7 @@
-export var LoadBalancerTlsCertificateRevocationReasonEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoadBalancerTlsCertificateRevocationReasonEnum = void 0;
+var LoadBalancerTlsCertificateRevocationReasonEnum;
 (function (LoadBalancerTlsCertificateRevocationReasonEnum) {
     LoadBalancerTlsCertificateRevocationReasonEnum["Unspecified"] = "UNSPECIFIED";
     LoadBalancerTlsCertificateRevocationReasonEnum["KeyCompromise"] = "KEY_COMPROMISE";
@@ -10,4 +13,4 @@ export var LoadBalancerTlsCertificateRevocationReasonEnum;
     LoadBalancerTlsCertificateRevocationReasonEnum["RemoveFromCrl"] = "REMOVE_FROM_CRL";
     LoadBalancerTlsCertificateRevocationReasonEnum["PrivilegeWithdrawn"] = "PRIVILEGE_WITHDRAWN";
     LoadBalancerTlsCertificateRevocationReasonEnum["AACompromise"] = "A_A_COMPROMISE";
-})(LoadBalancerTlsCertificateRevocationReasonEnum || (LoadBalancerTlsCertificateRevocationReasonEnum = {}));
+})(LoadBalancerTlsCertificateRevocationReasonEnum = exports.LoadBalancerTlsCertificateRevocationReasonEnum || (exports.LoadBalancerTlsCertificateRevocationReasonEnum = {}));

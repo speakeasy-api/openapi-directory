@@ -15,7 +15,7 @@ export declare class IftttRuleResponseTarget extends SpeakeasyBase {
     webhookKey: string;
 }
 export declare class IftttRuleResponse extends SpeakeasyBase {
-    links?: Map<string, any>;
+    links?: Record<string, any>;
     appId?: string;
     created?: number;
     id?: string;

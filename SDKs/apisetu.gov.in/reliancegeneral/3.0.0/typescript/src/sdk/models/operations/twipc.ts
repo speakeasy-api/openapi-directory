@@ -197,23 +197,23 @@ export class TwipcResponse extends SpeakeasyBase {
   statusCode: number;
 
   @SpeakeasyMetadata()
-  twipc400ApplicationJsonObject?: Twipc400ApplicationJson;
+  twipc400ApplicationJSONObject?: Twipc400ApplicationJson;
 
   @SpeakeasyMetadata()
-  twipc401ApplicationJsonObject?: Twipc401ApplicationJson;
+  twipc401ApplicationJSONObject?: Twipc401ApplicationJson;
 
   @SpeakeasyMetadata()
-  twipc404ApplicationJsonObject?: Twipc404ApplicationJson;
+  twipc404ApplicationJSONObject?: Twipc404ApplicationJson;
 
   @SpeakeasyMetadata()
-  twipc500ApplicationJsonObject?: Twipc500ApplicationJson;
+  twipc500ApplicationJSONObject?: Twipc500ApplicationJson;
 
   @SpeakeasyMetadata()
-  twipc502ApplicationJsonObject?: Twipc502ApplicationJson;
+  twipc502ApplicationJSONObject?: Twipc502ApplicationJson;
 
   @SpeakeasyMetadata()
-  twipc503ApplicationJsonObject?: Twipc503ApplicationJson;
+  twipc503ApplicationJSONObject?: Twipc503ApplicationJson;
 
   @SpeakeasyMetadata()
-  twipc504ApplicationJsonObject?: Twipc504ApplicationJson;
+  twipc504ApplicationJSONObject?: Twipc504ApplicationJson;
 }

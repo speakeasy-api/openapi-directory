@@ -106,11 +106,11 @@ export declare class DelcsRequest extends SpeakeasyBase {
 export declare class DelcsResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    delcs400ApplicationJsonObject?: Delcs400ApplicationJson;
-    delcs401ApplicationJsonObject?: Delcs401ApplicationJson;
-    delcs404ApplicationJsonObject?: Delcs404ApplicationJson;
-    delcs500ApplicationJsonObject?: Delcs500ApplicationJson;
-    delcs502ApplicationJsonObject?: Delcs502ApplicationJson;
-    delcs503ApplicationJsonObject?: Delcs503ApplicationJson;
-    delcs504ApplicationJsonObject?: Delcs504ApplicationJson;
+    delcs400ApplicationJSONObject?: Delcs400ApplicationJson;
+    delcs401ApplicationJSONObject?: Delcs401ApplicationJson;
+    delcs404ApplicationJSONObject?: Delcs404ApplicationJson;
+    delcs500ApplicationJSONObject?: Delcs500ApplicationJson;
+    delcs502ApplicationJSONObject?: Delcs502ApplicationJson;
+    delcs503ApplicationJSONObject?: Delcs503ApplicationJson;
+    delcs504ApplicationJSONObject?: Delcs504ApplicationJson;
 }

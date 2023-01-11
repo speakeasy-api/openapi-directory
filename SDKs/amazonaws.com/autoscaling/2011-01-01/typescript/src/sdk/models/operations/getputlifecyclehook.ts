@@ -33,10 +33,10 @@ export class GetPutLifecycleHookQueryParams extends SpeakeasyBase {
   notificationMetadata?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=NotificationTargetARN" })
-  notificationTargetArn?: string;
+  notificationTargetARN?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=RoleARN" })
-  roleArn?: string;
+  roleARN?: string;
 
   @SpeakeasyMetadata({ data: "queryParam, style=form;explode=true;name=Version" })
   version: GetPutLifecycleHookVersionEnum;

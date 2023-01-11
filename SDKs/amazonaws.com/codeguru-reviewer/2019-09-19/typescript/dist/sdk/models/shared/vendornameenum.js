@@ -1,6 +1,9 @@
-export var VendorNameEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VendorNameEnum = void 0;
+var VendorNameEnum;
 (function (VendorNameEnum) {
     VendorNameEnum["GitHub"] = "GitHub";
     VendorNameEnum["GitLab"] = "GitLab";
     VendorNameEnum["NativeS3"] = "NativeS3";
-})(VendorNameEnum || (VendorNameEnum = {}));
+})(VendorNameEnum = exports.VendorNameEnum || (exports.VendorNameEnum = {}));

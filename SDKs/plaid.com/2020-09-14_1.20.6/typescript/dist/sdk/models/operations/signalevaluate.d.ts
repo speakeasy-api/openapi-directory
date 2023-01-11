@@ -1,10 +1,10 @@
 import { SpeakeasyBase } from "../../../internal/utils";
 export declare class SignalEvaluateRequest extends SpeakeasyBase {
-    request: Map<string, any>;
+    request: Record<string, any>;
 }
 export declare class SignalEvaluateResponse extends SpeakeasyBase {
     contentType: string;
-    error?: Map<string, any>;
-    signalEvaluateResponse?: Map<string, any>;
+    error?: Record<string, any>;
+    signalEvaluateResponse?: Record<string, any>;
     statusCode: number;
 }

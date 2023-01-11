@@ -1,5 +1,8 @@
-export var FailWorkflowExecutionFailedCauseEnum;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FailWorkflowExecutionFailedCauseEnum = void 0;
+var FailWorkflowExecutionFailedCauseEnum;
 (function (FailWorkflowExecutionFailedCauseEnum) {
     FailWorkflowExecutionFailedCauseEnum["UnhandledDecision"] = "UNHANDLED_DECISION";
     FailWorkflowExecutionFailedCauseEnum["OperationNotPermitted"] = "OPERATION_NOT_PERMITTED";
-})(FailWorkflowExecutionFailedCauseEnum || (FailWorkflowExecutionFailedCauseEnum = {}));
+})(FailWorkflowExecutionFailedCauseEnum = exports.FailWorkflowExecutionFailedCauseEnum || (exports.FailWorkflowExecutionFailedCauseEnum = {}));

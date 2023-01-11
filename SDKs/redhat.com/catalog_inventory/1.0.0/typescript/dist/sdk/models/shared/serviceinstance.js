@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,80 +23,82 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceInstance = void 0;
+var utils_1 = require("../../../internal/utils");
 var ServiceInstance = /** @class */ (function (_super) {
     __extends(ServiceInstance, _super);
     function ServiceInstance() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=archived_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=archived_at" }),
         __metadata("design:type", Date)
     ], ServiceInstance.prototype, "archivedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=created_at" }),
         __metadata("design:type", Date)
     ], ServiceInstance.prototype, "createdAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=external_url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=external_url" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "externalUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=extra" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=extra" }),
+        __metadata("design:type", Object)
     ], ServiceInstance.prototype, "extra", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=last_seen_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=last_seen_at" }),
         __metadata("design:type", Date)
     ], ServiceInstance.prototype, "lastSeenAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=refresh_state_part_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=refresh_state_part_id" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "refreshStatePartId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=root_service_instance_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=root_service_instance_id" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "rootServiceInstanceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_inventory_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_inventory_id" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "serviceInventoryId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_offering_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_offering_id" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "serviceOfferingId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=service_plan_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=service_plan_id" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "servicePlanId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source_created_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_created_at" }),
         __metadata("design:type", Date)
     ], ServiceInstance.prototype, "sourceCreatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source_deleted_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_deleted_at" }),
         __metadata("design:type", Date)
     ], ServiceInstance.prototype, "sourceDeletedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source_id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_id" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "sourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=source_ref" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=source_ref" }),
         __metadata("design:type", String)
     ], ServiceInstance.prototype, "sourceRef", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updated_at" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updated_at" }),
         __metadata("design:type", Date)
     ], ServiceInstance.prototype, "updatedAt", void 0);
     return ServiceInstance;
-}(SpeakeasyBase));
-export { ServiceInstance };
+}(utils_1.SpeakeasyBase));
+exports.ServiceInstance = ServiceInstance;

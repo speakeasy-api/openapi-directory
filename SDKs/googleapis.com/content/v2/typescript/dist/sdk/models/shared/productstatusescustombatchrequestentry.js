@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductstatusesCustomBatchRequestEntry = void 0;
+var utils_1 = require("../../../internal/utils");
 // ProductstatusesCustomBatchRequestEntry
 /**
  * A batch entry encoding a single non-batch productstatuses request.
@@ -33,29 +36,29 @@ var ProductstatusesCustomBatchRequestEntry = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=batchId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=batchId" }),
         __metadata("design:type", Number)
     ], ProductstatusesCustomBatchRequestEntry.prototype, "batchId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=destinations" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=destinations" }),
         __metadata("design:type", Array)
     ], ProductstatusesCustomBatchRequestEntry.prototype, "destinations", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=includeAttributes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=includeAttributes" }),
         __metadata("design:type", Boolean)
     ], ProductstatusesCustomBatchRequestEntry.prototype, "includeAttributes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=merchantId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=merchantId" }),
         __metadata("design:type", String)
     ], ProductstatusesCustomBatchRequestEntry.prototype, "merchantId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=method" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=method" }),
         __metadata("design:type", String)
     ], ProductstatusesCustomBatchRequestEntry.prototype, "method", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=productId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=productId" }),
         __metadata("design:type", String)
     ], ProductstatusesCustomBatchRequestEntry.prototype, "productId", void 0);
     return ProductstatusesCustomBatchRequestEntry;
-}(SpeakeasyBase));
-export { ProductstatusesCustomBatchRequestEntry };
+}(utils_1.SpeakeasyBase));
+exports.ProductstatusesCustomBatchRequestEntry = ProductstatusesCustomBatchRequestEntry;

@@ -38,7 +38,7 @@ export class StartBulkDeploymentRequestBody extends SpeakeasyBase {
   inputFileUri: string;
 
   @SpeakeasyMetadata({ data: "json, name=tags" })
-  tags?: Map<string, string>;
+  tags?: Record<string, string>;
 }
 
 

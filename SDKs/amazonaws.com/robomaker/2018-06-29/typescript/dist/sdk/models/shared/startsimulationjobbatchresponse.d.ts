@@ -16,5 +16,5 @@ export declare class StartSimulationJobBatchResponse extends SpeakeasyBase {
     failureReason?: string;
     pendingRequests?: SimulationJobRequest[];
     status?: SimulationJobBatchStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
 }

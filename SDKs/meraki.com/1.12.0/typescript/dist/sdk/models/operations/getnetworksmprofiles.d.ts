@@ -8,5 +8,5 @@ export declare class GetNetworkSmProfilesRequest extends SpeakeasyBase {
 export declare class GetNetworkSmProfilesResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    getNetworkSmProfiles200ApplicationJsonObject?: Map<string, any>;
+    getNetworkSmProfiles200ApplicationJSONObject?: Record<string, any>;
 }

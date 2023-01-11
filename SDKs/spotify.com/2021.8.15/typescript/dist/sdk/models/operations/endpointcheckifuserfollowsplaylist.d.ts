@@ -22,5 +22,5 @@ export declare class EndpointCheckIfUserFollowsPlaylistResponse extends Speakeas
     contentType: string;
     errorResponseObject?: shared.ErrorResponseObject;
     statusCode: number;
-    endpointCheckIfUserFollowsPlaylist200ApplicationJsonBooleans?: boolean[];
+    endpointCheckIfUserFollowsPlaylist200ApplicationJSONBooleans?: boolean[];
 }

@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ContainerOverride } from "./containeroverride";
-import { EphemeralStorage } from "./ephemeralstorage";
-import { InferenceAcceleratorOverride } from "./inferenceacceleratoroverride";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskOverride = void 0;
+var utils_1 = require("../../../internal/utils");
+var containeroverride_1 = require("./containeroverride");
+var ephemeralstorage_1 = require("./ephemeralstorage");
+var inferenceacceleratoroverride_1 = require("./inferenceacceleratoroverride");
 // TaskOverride
 /**
  * The overrides associated with a task.
@@ -36,33 +39,33 @@ var TaskOverride = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=containerOverrides", elemType: ContainerOverride }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=containerOverrides", elemType: containeroverride_1.ContainerOverride }),
         __metadata("design:type", Array)
     ], TaskOverride.prototype, "containerOverrides", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=cpu" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=cpu" }),
         __metadata("design:type", String)
     ], TaskOverride.prototype, "cpu", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ephemeralStorage" }),
-        __metadata("design:type", EphemeralStorage)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ephemeralStorage" }),
+        __metadata("design:type", ephemeralstorage_1.EphemeralStorage)
     ], TaskOverride.prototype, "ephemeralStorage", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=executionRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=executionRoleArn" }),
         __metadata("design:type", String)
     ], TaskOverride.prototype, "executionRoleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=inferenceAcceleratorOverrides", elemType: InferenceAcceleratorOverride }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=inferenceAcceleratorOverrides", elemType: inferenceacceleratoroverride_1.InferenceAcceleratorOverride }),
         __metadata("design:type", Array)
     ], TaskOverride.prototype, "inferenceAcceleratorOverrides", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=memory" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=memory" }),
         __metadata("design:type", String)
     ], TaskOverride.prototype, "memory", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=taskRoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=taskRoleArn" }),
         __metadata("design:type", String)
     ], TaskOverride.prototype, "taskRoleArn", void 0);
     return TaskOverride;
-}(SpeakeasyBase));
-export { TaskOverride };
+}(utils_1.SpeakeasyBase));
+exports.TaskOverride = TaskOverride;

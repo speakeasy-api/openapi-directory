@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,27 +23,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { Task } from "./task";
-import { CollectionLinks } from "./collectionlinks";
-import { CollectionMetadata } from "./collectionmetadata";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TasksCollection = void 0;
+var utils_1 = require("../../../internal/utils");
+var task_1 = require("./task");
+var collectionlinks_1 = require("./collectionlinks");
+var collectionmetadata_1 = require("./collectionmetadata");
 var TasksCollection = /** @class */ (function (_super) {
     __extends(TasksCollection, _super);
     function TasksCollection() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=data", elemType: Task }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=data", elemType: task_1.Task }),
         __metadata("design:type", Array)
     ], TasksCollection.prototype, "data", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=links" }),
-        __metadata("design:type", CollectionLinks)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=links" }),
+        __metadata("design:type", collectionlinks_1.CollectionLinks)
     ], TasksCollection.prototype, "links", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=meta" }),
-        __metadata("design:type", CollectionMetadata)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=meta" }),
+        __metadata("design:type", collectionmetadata_1.CollectionMetadata)
     ], TasksCollection.prototype, "meta", void 0);
     return TasksCollection;
-}(SpeakeasyBase));
-export { TasksCollection };
+}(utils_1.SpeakeasyBase));
+exports.TasksCollection = TasksCollection;

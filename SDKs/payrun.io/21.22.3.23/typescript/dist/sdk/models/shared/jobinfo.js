@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JobInfo = exports.JobInfoJobInfo = exports.JobInfoJobInfoJobStatusEnum = exports.JobInfoJobInfoErrors = void 0;
+var utils_1 = require("../../../internal/utils");
 // JobInfoJobInfoErrors
 /**
  * The job infos' errors
@@ -33,13 +36,13 @@ var JobInfoJobInfoErrors = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Error" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Error" }),
         __metadata("design:type", Array)
     ], JobInfoJobInfoErrors.prototype, "error", void 0);
     return JobInfoJobInfoErrors;
-}(SpeakeasyBase));
-export { JobInfoJobInfoErrors };
-export var JobInfoJobInfoJobStatusEnum;
+}(utils_1.SpeakeasyBase));
+exports.JobInfoJobInfoErrors = JobInfoJobInfoErrors;
+var JobInfoJobInfoJobStatusEnum;
 (function (JobInfoJobInfoJobStatusEnum) {
     JobInfoJobInfoJobStatusEnum["New"] = "New";
     JobInfoJobInfoJobStatusEnum["Pending"] = "Pending";
@@ -47,60 +50,60 @@ export var JobInfoJobInfoJobStatusEnum;
     JobInfoJobInfoJobStatusEnum["Success"] = "Success";
     JobInfoJobInfoJobStatusEnum["Failed"] = "Failed";
     JobInfoJobInfoJobStatusEnum["OnHold"] = "OnHold";
-})(JobInfoJobInfoJobStatusEnum || (JobInfoJobInfoJobStatusEnum = {}));
+})(JobInfoJobInfoJobStatusEnum = exports.JobInfoJobInfoJobStatusEnum || (exports.JobInfoJobInfoJobStatusEnum = {}));
 var JobInfoJobInfo = /** @class */ (function (_super) {
     __extends(JobInfoJobInfo, _super);
     function JobInfoJobInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Created" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Created" }),
         __metadata("design:type", Date)
     ], JobInfoJobInfo.prototype, "created", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=EmployerKey" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=EmployerKey" }),
         __metadata("design:type", String)
     ], JobInfoJobInfo.prototype, "employerKey", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Errors" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Errors" }),
         __metadata("design:type", JobInfoJobInfoErrors)
     ], JobInfoJobInfo.prototype, "errors", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=HoldingDate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=HoldingDate" }),
         __metadata("design:type", Date)
     ], JobInfoJobInfo.prototype, "holdingDate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobId" }),
         __metadata("design:type", String)
     ], JobInfoJobInfo.prototype, "jobId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobStatus" }),
         __metadata("design:type", String)
     ], JobInfoJobInfo.prototype, "jobStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobType" }),
         __metadata("design:type", String)
     ], JobInfoJobInfo.prototype, "jobType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=LastUpdated" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=LastUpdated" }),
         __metadata("design:type", Date)
     ], JobInfoJobInfo.prototype, "lastUpdated", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Progress" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Progress" }),
         __metadata("design:type", Number)
     ], JobInfoJobInfo.prototype, "progress", void 0);
     return JobInfoJobInfo;
-}(SpeakeasyBase));
-export { JobInfoJobInfo };
+}(utils_1.SpeakeasyBase));
+exports.JobInfoJobInfo = JobInfoJobInfo;
 var JobInfo = /** @class */ (function (_super) {
     __extends(JobInfo, _super);
     function JobInfo() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=JobInfo" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=JobInfo" }),
         __metadata("design:type", JobInfoJobInfo)
     ], JobInfo.prototype, "jobInfo", void 0);
     return JobInfo;
-}(SpeakeasyBase));
-export { JobInfo };
+}(utils_1.SpeakeasyBase));
+exports.JobInfo = JobInfo;

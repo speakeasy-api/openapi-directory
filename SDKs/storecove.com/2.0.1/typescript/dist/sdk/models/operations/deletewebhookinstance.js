@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,44 +23,46 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeleteWebhookInstanceResponse = exports.DeleteWebhookInstanceRequest = exports.DeleteWebhookInstancePathParams = void 0;
+var utils_1 = require("../../../internal/utils");
 var DeleteWebhookInstancePathParams = /** @class */ (function (_super) {
     __extends(DeleteWebhookInstancePathParams, _super);
     function DeleteWebhookInstancePathParams() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=guid" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "pathParam, style=simple;explode=false;name=guid" }),
         __metadata("design:type", String)
     ], DeleteWebhookInstancePathParams.prototype, "guid", void 0);
     return DeleteWebhookInstancePathParams;
-}(SpeakeasyBase));
-export { DeleteWebhookInstancePathParams };
+}(utils_1.SpeakeasyBase));
+exports.DeleteWebhookInstancePathParams = DeleteWebhookInstancePathParams;
 var DeleteWebhookInstanceRequest = /** @class */ (function (_super) {
     __extends(DeleteWebhookInstanceRequest, _super);
     function DeleteWebhookInstanceRequest() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", DeleteWebhookInstancePathParams)
     ], DeleteWebhookInstanceRequest.prototype, "pathParams", void 0);
     return DeleteWebhookInstanceRequest;
-}(SpeakeasyBase));
-export { DeleteWebhookInstanceRequest };
+}(utils_1.SpeakeasyBase));
+exports.DeleteWebhookInstanceRequest = DeleteWebhookInstanceRequest;
 var DeleteWebhookInstanceResponse = /** @class */ (function (_super) {
     __extends(DeleteWebhookInstanceResponse, _super);
     function DeleteWebhookInstanceResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", String)
     ], DeleteWebhookInstanceResponse.prototype, "contentType", void 0);
     __decorate([
-        SpeakeasyMetadata(),
+        (0, utils_1.SpeakeasyMetadata)(),
         __metadata("design:type", Number)
     ], DeleteWebhookInstanceResponse.prototype, "statusCode", void 0);
     return DeleteWebhookInstanceResponse;
-}(SpeakeasyBase));
-export { DeleteWebhookInstanceResponse };
+}(utils_1.SpeakeasyBase));
+exports.DeleteWebhookInstanceResponse = DeleteWebhookInstanceResponse;

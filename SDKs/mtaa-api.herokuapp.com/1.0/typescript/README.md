@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { DistrictsInARegionRequest, DistrictsInARegionResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -29,12 +28,12 @@ const sdk = new SDK();
     
 const req: DistrictsInARegionRequest = {
   pathParams: {
-    country: "quibusdam",
-    region: "ab",
+    country: "sit",
+    region: "voluptas",
   },
 };
 
-sdk.sdk.districtsInARegion(req).then((res: DistrictsInARegionResponse | AxiosError) => {
+sdk.districtsInRegion.districtsInARegion(req).then((res: DistrictsInARegionResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -43,13 +42,25 @@ sdk.sdk.districtsInARegion(req).then((res: DistrictsInARegionResponse | AxiosErr
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### Districts in region
 
 * `districtsInARegion` - Returns all districts in region
-* `tanzaniaRegions` - Returns all regions present in Tanzania
-* `wardsInADistrict` - Returns all wards in a district
-* `neighborhoodInAStreet` - Returns all neighborhood in a street
+
+### Streets in a ward
+
 * `streetsInAWard` - Returns all streets in a ward
+
+### Tanzania regions
+
+* `tanzaniaRegions` - Returns all regions present in Tanzania
+
+### Wards in a district
+
+* `wardsInADistrict` - Returns all wards in a district
+
+### neighborhood in a street
+
+* `neighborhoodInAStreet` - Returns all neighborhood in a street
 
 <!-- End SDK Available Operations -->
 

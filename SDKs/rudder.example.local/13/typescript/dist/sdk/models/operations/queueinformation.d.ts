@@ -21,5 +21,5 @@ export declare class QueueInformation200ApplicationJson extends SpeakeasyBase {
 export declare class QueueInformationResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    queueInformation200ApplicationJsonObject?: QueueInformation200ApplicationJson;
+    queueInformation200ApplicationJSONObject?: QueueInformation200ApplicationJson;
 }

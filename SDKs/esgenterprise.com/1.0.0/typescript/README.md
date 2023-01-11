@@ -16,11 +16,10 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetSearchRequest, GetSearchResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
@@ -34,11 +33,11 @@ const req: GetSearchRequest = {
     },
   },
   queryParams: {
-    q: "dignissimos",
+    q: "sit",
   },
 };
 
-sdk.sdk.getSearch(req).then((res: GetSearchResponse | AxiosError) => {
+sdk.rating.getSearch(req).then((res: GetSearchResponse | AxiosError) => {
    // handle response
 });
 ```
@@ -47,7 +46,7 @@ sdk.sdk.getSearch(req).then((res: GetSearchResponse | AxiosError) => {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### SDK SDK
+### rating
 
 * `getSearch` - List all company ESG Ratings
 

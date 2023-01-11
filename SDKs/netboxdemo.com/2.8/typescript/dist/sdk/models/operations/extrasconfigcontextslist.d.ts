@@ -66,5 +66,5 @@ export declare class ExtrasConfigContextsListRequest extends SpeakeasyBase {
 export declare class ExtrasConfigContextsListResponse extends SpeakeasyBase {
     contentType: string;
     statusCode: number;
-    extrasConfigContextsList200ApplicationJsonObject?: ExtrasConfigContextsList200ApplicationJson;
+    extrasConfigContextsList200ApplicationJSONObject?: ExtrasConfigContextsList200ApplicationJson;
 }

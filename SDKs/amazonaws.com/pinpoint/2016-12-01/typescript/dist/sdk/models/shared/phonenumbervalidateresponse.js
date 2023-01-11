@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,17 +23,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { NumberValidateResponse } from "./numbervalidateresponse";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PhoneNumberValidateResponse = void 0;
+var utils_1 = require("../../../internal/utils");
+var numbervalidateresponse_1 = require("./numbervalidateresponse");
 var PhoneNumberValidateResponse = /** @class */ (function (_super) {
     __extends(PhoneNumberValidateResponse, _super);
     function PhoneNumberValidateResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=NumberValidateResponse" }),
-        __metadata("design:type", NumberValidateResponse)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=NumberValidateResponse" }),
+        __metadata("design:type", numbervalidateresponse_1.NumberValidateResponse)
     ], PhoneNumberValidateResponse.prototype, "numberValidateResponse", void 0);
     return PhoneNumberValidateResponse;
-}(SpeakeasyBase));
-export { PhoneNumberValidateResponse };
+}(utils_1.SpeakeasyBase));
+exports.PhoneNumberValidateResponse = PhoneNumberValidateResponse;

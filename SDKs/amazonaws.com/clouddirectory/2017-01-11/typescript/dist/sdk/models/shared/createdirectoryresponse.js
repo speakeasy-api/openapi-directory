@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,28 +23,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateDirectoryResponse = void 0;
+var utils_1 = require("../../../internal/utils");
 var CreateDirectoryResponse = /** @class */ (function (_super) {
     __extends(CreateDirectoryResponse, _super);
     function CreateDirectoryResponse() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=AppliedSchemaArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=AppliedSchemaArn" }),
         __metadata("design:type", String)
     ], CreateDirectoryResponse.prototype, "appliedSchemaArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DirectoryArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DirectoryArn" }),
         __metadata("design:type", String)
     ], CreateDirectoryResponse.prototype, "directoryArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Name" }),
         __metadata("design:type", String)
     ], CreateDirectoryResponse.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ObjectIdentifier" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ObjectIdentifier" }),
         __metadata("design:type", String)
     ], CreateDirectoryResponse.prototype, "objectIdentifier", void 0);
     return CreateDirectoryResponse;
-}(SpeakeasyBase));
-export { CreateDirectoryResponse };
+}(utils_1.SpeakeasyBase));
+exports.CreateDirectoryResponse = CreateDirectoryResponse;

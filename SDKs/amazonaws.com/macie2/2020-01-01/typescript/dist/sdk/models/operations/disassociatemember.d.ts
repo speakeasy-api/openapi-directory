@@ -19,7 +19,7 @@ export declare class DisassociateMemberResponse extends SpeakeasyBase {
     accessDeniedException?: any;
     conflictException?: any;
     contentType: string;
-    disassociateMemberResponse?: Map<string, any>;
+    disassociateMemberResponse?: Record<string, any>;
     internalServerException?: any;
     resourceNotFoundException?: any;
     serviceQuotaExceededException?: any;

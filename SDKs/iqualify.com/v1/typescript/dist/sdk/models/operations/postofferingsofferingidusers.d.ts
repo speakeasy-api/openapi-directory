@@ -9,8 +9,8 @@ export declare class PostOfferingsOfferingIdUsersRequest extends SpeakeasyBase {
 }
 export declare class PostOfferingsOfferingIdUsersResponse extends SpeakeasyBase {
     contentType: string;
-    error?: shared.Error;
+    error?: shared.ErrorT;
     offeringUserAddResponses?: shared.OfferingUserAddResponse[];
-    postOfferingsOfferingIdUsers207ApplicationJsonOneoves?: any[];
     statusCode: number;
+    postOfferingsOfferingIdUsers207ApplicationJSONOneoves?: any[];
 }

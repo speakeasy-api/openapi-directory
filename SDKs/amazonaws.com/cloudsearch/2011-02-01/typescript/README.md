@@ -16,15 +16,14 @@ yarn add openapi
 ```
 <!-- End SDK Installation -->
 
-<!-- Start SDK Example Usage -->
 ## SDK Example Usage
-
+<!-- Start SDK Example Usage -->
 ```typescript
-import { SDK, WithSecurity} from "openapi";
+import { SDK, withSecurity} from "openapi";
 import { GetCreateDomainRequest, GetCreateDomainResponse } from "openapi/src/sdk/models/operations";
 import { AxiosError } from "axios";
 
-const sdk = new SDK(WithSecurity(
+const sdk = new SDK(withSecurity(
   security: {
     hmac: {
       apiKey: "YOUR_API_KEY_HERE",
@@ -35,21 +34,21 @@ const sdk = new SDK(WithSecurity(
 const req: GetCreateDomainRequest = {
   queryParams: {
     action: "CreateDomain",
-    domainName: "omnis",
+    domainName: "voluptas",
     version: "2011-02-01",
   },
   headers: {
-    xAmzAlgorithm: "animi",
-    xAmzContentSha256: "cum",
-    xAmzCredential: "occaecati",
-    xAmzDate: "ea",
-    xAmzSecurityToken: "architecto",
-    xAmzSignature: "esse",
-    xAmzSignedHeaders: "explicabo",
+    xAmzAlgorithm: "expedita",
+    xAmzContentSha256: "consequuntur",
+    xAmzCredential: "dolor",
+    xAmzDate: "expedita",
+    xAmzSecurityToken: "voluptas",
+    xAmzSignature: "fugit",
+    xAmzSignedHeaders: "et",
   },
 };
 
-sdk.sdk.getCreateDomain(req).then((res: GetCreateDomainResponse | AxiosError) => {
+sdk.getCreateDomain(req).then((res: GetCreateDomainResponse | AxiosError) => {
    // handle response
 });
 ```

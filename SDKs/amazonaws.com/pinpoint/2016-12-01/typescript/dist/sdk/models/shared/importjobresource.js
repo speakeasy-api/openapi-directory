@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { FormatEnum } from "./formatenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImportJobResource = void 0;
+var utils_1 = require("../../../internal/utils");
+var formatenum_1 = require("./formatenum");
 // ImportJobResource
 /**
  * Provides information about the resource settings for a job that imports endpoint definitions from one or more files. The files can be stored in an Amazon Simple Storage Service (Amazon S3) bucket or uploaded directly from a computer by using the Amazon Pinpoint console.
@@ -34,37 +37,37 @@ var ImportJobResource = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=DefineSegment" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=DefineSegment" }),
         __metadata("design:type", Boolean)
     ], ImportJobResource.prototype, "defineSegment", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ExternalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ExternalId" }),
         __metadata("design:type", String)
     ], ImportJobResource.prototype, "externalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Format" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Format" }),
         __metadata("design:type", String)
     ], ImportJobResource.prototype, "format", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RegisterEndpoints" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RegisterEndpoints" }),
         __metadata("design:type", Boolean)
     ], ImportJobResource.prototype, "registerEndpoints", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=RoleArn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=RoleArn" }),
         __metadata("design:type", String)
     ], ImportJobResource.prototype, "roleArn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=S3Url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=S3Url" }),
         __metadata("design:type", String)
     ], ImportJobResource.prototype, "s3Url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SegmentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SegmentId" }),
         __metadata("design:type", String)
     ], ImportJobResource.prototype, "segmentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=SegmentName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=SegmentName" }),
         __metadata("design:type", String)
     ], ImportJobResource.prototype, "segmentName", void 0);
     return ImportJobResource;
-}(SpeakeasyBase));
-export { ImportJobResource };
+}(utils_1.SpeakeasyBase));
+exports.ImportJobResource = ImportJobResource;

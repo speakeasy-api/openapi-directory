@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Ec2Configuration = void 0;
+var utils_1 = require("../../../internal/utils");
 // Ec2Configuration
 /**
  * <p>Provides information used to select Amazon Machine Images (AMIs) for instances in the compute environment. If <code>Ec2Configuration</code> isn't specified, the default is currently <code>ECS_AL1</code> (<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#alami">Amazon Linux</a>) for non-GPU, non AWSGraviton instances. Starting on March 31, 2021, this default will be changing to <code>ECS_AL2</code> (<a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami">Amazon Linux 2</a>).</p> <note> <p>This object isn't applicable to jobs that are running on Fargate resources.</p> </note>
@@ -33,13 +36,13 @@ var Ec2Configuration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageIdOverride" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageIdOverride" }),
         __metadata("design:type", String)
     ], Ec2Configuration.prototype, "imageIdOverride", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=imageType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=imageType" }),
         __metadata("design:type", String)
     ], Ec2Configuration.prototype, "imageType", void 0);
     return Ec2Configuration;
-}(SpeakeasyBase));
-export { Ec2Configuration };
+}(utils_1.SpeakeasyBase));
+exports.Ec2Configuration = Ec2Configuration;

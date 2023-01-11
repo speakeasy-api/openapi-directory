@@ -11,8 +11,8 @@ export declare class DescribeWorldGenerationJobResponse extends SpeakeasyBase {
     failureReason?: string;
     finishedWorldsSummary?: FinishedWorldsSummary;
     status?: WorldGenerationJobStatusEnum;
-    tags?: Map<string, string>;
+    tags?: Record<string, string>;
     template?: string;
     worldCount?: WorldCount;
-    worldTags?: Map<string, string>;
+    worldTags?: Record<string, string>;
 }

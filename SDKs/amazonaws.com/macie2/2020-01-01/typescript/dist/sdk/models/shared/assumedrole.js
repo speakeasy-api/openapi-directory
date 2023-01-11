@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,8 +23,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SessionContext } from "./sessioncontext";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssumedRole = void 0;
+var utils_1 = require("../../../internal/utils");
+var sessioncontext_1 = require("./sessioncontext");
 // AssumedRole
 /**
  * Provides information about an identity that performed an action on an affected resource by using temporary security credentials. The credentials were obtained using the AssumeRole operation of the Security Token Service (STS) API.
@@ -34,25 +37,25 @@ var AssumedRole = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accessKeyId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accessKeyId" }),
         __metadata("design:type", String)
     ], AssumedRole.prototype, "accessKeyId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], AssumedRole.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], AssumedRole.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=principalId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=principalId" }),
         __metadata("design:type", String)
     ], AssumedRole.prototype, "principalId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sessionContext" }),
-        __metadata("design:type", SessionContext)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sessionContext" }),
+        __metadata("design:type", sessioncontext_1.SessionContext)
     ], AssumedRole.prototype, "sessionContext", void 0);
     return AssumedRole;
-}(SpeakeasyBase));
-export { AssumedRole };
+}(utils_1.SpeakeasyBase));
+exports.AssumedRole = AssumedRole;

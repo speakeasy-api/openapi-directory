@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,7 +23,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SharedFileSystemConfiguration = void 0;
+var utils_1 = require("../../../internal/utils");
 // SharedFileSystemConfiguration
 /**
  * The configuration for a shared file storage system that is associated with a studio resource.
@@ -33,25 +36,25 @@ var SharedFileSystemConfiguration = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=endpoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=endpoint" }),
         __metadata("design:type", String)
     ], SharedFileSystemConfiguration.prototype, "endpoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fileSystemId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fileSystemId" }),
         __metadata("design:type", String)
     ], SharedFileSystemConfiguration.prototype, "fileSystemId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=linuxMountPoint" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=linuxMountPoint" }),
         __metadata("design:type", String)
     ], SharedFileSystemConfiguration.prototype, "linuxMountPoint", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shareName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shareName" }),
         __metadata("design:type", String)
     ], SharedFileSystemConfiguration.prototype, "shareName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=windowsMountDrive" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=windowsMountDrive" }),
         __metadata("design:type", String)
     ], SharedFileSystemConfiguration.prototype, "windowsMountDrive", void 0);
     return SharedFileSystemConfiguration;
-}(SpeakeasyBase));
-export { SharedFileSystemConfiguration };
+}(utils_1.SpeakeasyBase));
+exports.SharedFileSystemConfiguration = SharedFileSystemConfiguration;

@@ -41,7 +41,7 @@ export class PostTextResponse extends SpeakeasyBase {
   sentimentResponse?: SentimentResponse;
 
   @SpeakeasyMetadata({ data: "json, name=sessionAttributes" })
-  sessionAttributes?: Map<string, string>;
+  sessionAttributes?: Record<string, string>;
 
   @SpeakeasyMetadata({ data: "json, name=sessionId" })
   sessionId?: string;
@@ -50,5 +50,5 @@ export class PostTextResponse extends SpeakeasyBase {
   slotToElicit?: string;
 
   @SpeakeasyMetadata({ data: "json, name=slots" })
-  slots?: Map<string, string>;
+  slots?: Record<string, string>;
 }

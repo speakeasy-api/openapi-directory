@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { CommentSnippetAuthorChannelId } from "./commentsnippetauthorchannelid";
-export var CommentSnippetModerationStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommentSnippet = exports.CommentSnippetViewerRatingEnum = exports.CommentSnippetModerationStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var commentsnippetauthorchannelid_1 = require("./commentsnippetauthorchannelid");
+var CommentSnippetModerationStatusEnum;
 (function (CommentSnippetModerationStatusEnum) {
     CommentSnippetModerationStatusEnum["Published"] = "published";
     CommentSnippetModerationStatusEnum["HeldForReview"] = "heldForReview";
     CommentSnippetModerationStatusEnum["LikelySpam"] = "likelySpam";
     CommentSnippetModerationStatusEnum["Rejected"] = "rejected";
-})(CommentSnippetModerationStatusEnum || (CommentSnippetModerationStatusEnum = {}));
-export var CommentSnippetViewerRatingEnum;
+})(CommentSnippetModerationStatusEnum = exports.CommentSnippetModerationStatusEnum || (exports.CommentSnippetModerationStatusEnum = {}));
+var CommentSnippetViewerRatingEnum;
 (function (CommentSnippetViewerRatingEnum) {
     CommentSnippetViewerRatingEnum["None"] = "none";
     CommentSnippetViewerRatingEnum["Like"] = "like";
     CommentSnippetViewerRatingEnum["Dislike"] = "dislike";
-})(CommentSnippetViewerRatingEnum || (CommentSnippetViewerRatingEnum = {}));
+})(CommentSnippetViewerRatingEnum = exports.CommentSnippetViewerRatingEnum || (exports.CommentSnippetViewerRatingEnum = {}));
 // CommentSnippet
 /**
  * Basic details about a comment, such as its author and text.
@@ -47,65 +50,65 @@ var CommentSnippet = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorChannelId" }),
-        __metadata("design:type", CommentSnippetAuthorChannelId)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorChannelId" }),
+        __metadata("design:type", commentsnippetauthorchannelid_1.CommentSnippetAuthorChannelId)
     ], CommentSnippet.prototype, "authorChannelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorChannelUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorChannelUrl" }),
         __metadata("design:type", String)
     ], CommentSnippet.prototype, "authorChannelUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorDisplayName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorDisplayName" }),
         __metadata("design:type", String)
     ], CommentSnippet.prototype, "authorDisplayName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=authorProfileImageUrl" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=authorProfileImageUrl" }),
         __metadata("design:type", String)
     ], CommentSnippet.prototype, "authorProfileImageUrl", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=canRate" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=canRate" }),
         __metadata("design:type", Boolean)
     ], CommentSnippet.prototype, "canRate", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=channelId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=channelId" }),
         __metadata("design:type", String)
     ], CommentSnippet.prototype, "channelId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=likeCount" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=likeCount" }),
         __metadata("design:type", Number)
     ], CommentSnippet.prototype, "likeCount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=moderationStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=moderationStatus" }),
         __metadata("design:type", String)
     ], CommentSnippet.prototype, "moderationStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=parentId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=parentId" }),
         __metadata("design:type", String)
     ], CommentSnippet.prototype, "parentId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=publishedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=publishedAt" }),
         __metadata("design:type", Date)
     ], CommentSnippet.prototype, "publishedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textDisplay" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textDisplay" }),
         __metadata("design:type", String)
     ], CommentSnippet.prototype, "textDisplay", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=textOriginal" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=textOriginal" }),
         __metadata("design:type", String)
     ], CommentSnippet.prototype, "textOriginal", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=updatedAt" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=updatedAt" }),
         __metadata("design:type", Date)
     ], CommentSnippet.prototype, "updatedAt", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=videoId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=videoId" }),
         __metadata("design:type", String)
     ], CommentSnippet.prototype, "videoId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=viewerRating" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=viewerRating" }),
         __metadata("design:type", String)
     ], CommentSnippet.prototype, "viewerRating", void 0);
     return CommentSnippet;
-}(SpeakeasyBase));
-export { CommentSnippet };
+}(utils_1.SpeakeasyBase));
+exports.CommentSnippet = CommentSnippet;

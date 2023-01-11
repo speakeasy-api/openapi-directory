@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { SimplifiedAlbumObject } from "./simplifiedalbumobject";
-import { ArtistObject } from "./artistobject";
-import { SimplifiedEpisodeObject } from "./simplifiedepisodeobject";
-import { SimplifiedPlaylistObject } from "./simplifiedplaylistobject";
-import { SimplifiedShowObject } from "./simplifiedshowobject";
-import { TrackObject } from "./trackobject";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchResponseObject = exports.SearchResponseObjectTracks = exports.SearchResponseObjectShows = exports.SearchResponseObjectPlaylists = exports.SearchResponseObjectEpisodes = exports.SearchResponseObjectArtists = exports.SearchResponseObjectAlbums = void 0;
+var utils_1 = require("../../../internal/utils");
+var simplifiedalbumobject_1 = require("./simplifiedalbumobject");
+var artistobject_1 = require("./artistobject");
+var simplifiedepisodeobject_1 = require("./simplifiedepisodeobject");
+var simplifiedplaylistobject_1 = require("./simplifiedplaylistobject");
+var simplifiedshowobject_1 = require("./simplifiedshowobject");
+var trackobject_1 = require("./trackobject");
 // SearchResponseObjectAlbums
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-pagingobject - Find more info on the official Spotify Web API Reference
@@ -39,36 +42,36 @@ var SearchResponseObjectAlbums = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], SearchResponseObjectAlbums.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: SimplifiedAlbumObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: simplifiedalbumobject_1.SimplifiedAlbumObject }),
         __metadata("design:type", Array)
     ], SearchResponseObjectAlbums.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectAlbums.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], SearchResponseObjectAlbums.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectAlbums.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], SearchResponseObjectAlbums.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectAlbums.prototype, "total", void 0);
     return SearchResponseObjectAlbums;
-}(SpeakeasyBase));
-export { SearchResponseObjectAlbums };
+}(utils_1.SpeakeasyBase));
+exports.SearchResponseObjectAlbums = SearchResponseObjectAlbums;
 // SearchResponseObjectArtists
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-pagingobject - Find more info on the official Spotify Web API Reference
@@ -79,36 +82,36 @@ var SearchResponseObjectArtists = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], SearchResponseObjectArtists.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: ArtistObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: artistobject_1.ArtistObject }),
         __metadata("design:type", Array)
     ], SearchResponseObjectArtists.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectArtists.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], SearchResponseObjectArtists.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectArtists.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], SearchResponseObjectArtists.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectArtists.prototype, "total", void 0);
     return SearchResponseObjectArtists;
-}(SpeakeasyBase));
-export { SearchResponseObjectArtists };
+}(utils_1.SpeakeasyBase));
+exports.SearchResponseObjectArtists = SearchResponseObjectArtists;
 // SearchResponseObjectEpisodes
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-pagingobject - Find more info on the official Spotify Web API Reference
@@ -119,36 +122,36 @@ var SearchResponseObjectEpisodes = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], SearchResponseObjectEpisodes.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: SimplifiedEpisodeObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: simplifiedepisodeobject_1.SimplifiedEpisodeObject }),
         __metadata("design:type", Array)
     ], SearchResponseObjectEpisodes.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectEpisodes.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], SearchResponseObjectEpisodes.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectEpisodes.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], SearchResponseObjectEpisodes.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectEpisodes.prototype, "total", void 0);
     return SearchResponseObjectEpisodes;
-}(SpeakeasyBase));
-export { SearchResponseObjectEpisodes };
+}(utils_1.SpeakeasyBase));
+exports.SearchResponseObjectEpisodes = SearchResponseObjectEpisodes;
 // SearchResponseObjectPlaylists
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-pagingobject - Find more info on the official Spotify Web API Reference
@@ -159,36 +162,36 @@ var SearchResponseObjectPlaylists = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], SearchResponseObjectPlaylists.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: SimplifiedPlaylistObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: simplifiedplaylistobject_1.SimplifiedPlaylistObject }),
         __metadata("design:type", Array)
     ], SearchResponseObjectPlaylists.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectPlaylists.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], SearchResponseObjectPlaylists.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectPlaylists.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], SearchResponseObjectPlaylists.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectPlaylists.prototype, "total", void 0);
     return SearchResponseObjectPlaylists;
-}(SpeakeasyBase));
-export { SearchResponseObjectPlaylists };
+}(utils_1.SpeakeasyBase));
+exports.SearchResponseObjectPlaylists = SearchResponseObjectPlaylists;
 // SearchResponseObjectShows
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-pagingobject - Find more info on the official Spotify Web API Reference
@@ -199,36 +202,36 @@ var SearchResponseObjectShows = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], SearchResponseObjectShows.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: SimplifiedShowObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: simplifiedshowobject_1.SimplifiedShowObject }),
         __metadata("design:type", Array)
     ], SearchResponseObjectShows.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectShows.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], SearchResponseObjectShows.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectShows.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], SearchResponseObjectShows.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectShows.prototype, "total", void 0);
     return SearchResponseObjectShows;
-}(SpeakeasyBase));
-export { SearchResponseObjectShows };
+}(utils_1.SpeakeasyBase));
+exports.SearchResponseObjectShows = SearchResponseObjectShows;
 // SearchResponseObjectTracks
 /**
  * https://developer.spotify.com/documentation/web-api/reference/#object-pagingobject - Find more info on the official Spotify Web API Reference
@@ -239,65 +242,65 @@ var SearchResponseObjectTracks = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=href" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=href" }),
         __metadata("design:type", String)
     ], SearchResponseObjectTracks.prototype, "href", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=items", elemType: TrackObject }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=items", elemType: trackobject_1.TrackObject }),
         __metadata("design:type", Array)
     ], SearchResponseObjectTracks.prototype, "items", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=limit" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=limit" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectTracks.prototype, "limit", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=next" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=next" }),
         __metadata("design:type", String)
     ], SearchResponseObjectTracks.prototype, "next", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=offset" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=offset" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectTracks.prototype, "offset", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=previous" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=previous" }),
         __metadata("design:type", String)
     ], SearchResponseObjectTracks.prototype, "previous", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=total" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=total" }),
         __metadata("design:type", Number)
     ], SearchResponseObjectTracks.prototype, "total", void 0);
     return SearchResponseObjectTracks;
-}(SpeakeasyBase));
-export { SearchResponseObjectTracks };
+}(utils_1.SpeakeasyBase));
+exports.SearchResponseObjectTracks = SearchResponseObjectTracks;
 var SearchResponseObject = /** @class */ (function (_super) {
     __extends(SearchResponseObject, _super);
     function SearchResponseObject() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=albums" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=albums" }),
         __metadata("design:type", SearchResponseObjectAlbums)
     ], SearchResponseObject.prototype, "albums", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=artists" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=artists" }),
         __metadata("design:type", SearchResponseObjectArtists)
     ], SearchResponseObject.prototype, "artists", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=episodes" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=episodes" }),
         __metadata("design:type", SearchResponseObjectEpisodes)
     ], SearchResponseObject.prototype, "episodes", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=playlists" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=playlists" }),
         __metadata("design:type", SearchResponseObjectPlaylists)
     ], SearchResponseObject.prototype, "playlists", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=shows" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=shows" }),
         __metadata("design:type", SearchResponseObjectShows)
     ], SearchResponseObject.prototype, "shows", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tracks" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tracks" }),
         __metadata("design:type", SearchResponseObjectTracks)
     ], SearchResponseObject.prototype, "tracks", void 0);
     return SearchResponseObject;
-}(SpeakeasyBase));
-export { SearchResponseObject };
+}(utils_1.SpeakeasyBase));
+exports.SearchResponseObject = SearchResponseObject;

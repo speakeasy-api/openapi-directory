@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,22 +23,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { MetricDatapoint } from "./metricdatapoint";
-import { RelationalDatabaseMetricNameEnum } from "./relationaldatabasemetricnameenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetRelationalDatabaseMetricDataResult = void 0;
+var utils_1 = require("../../../internal/utils");
+var metricdatapoint_1 = require("./metricdatapoint");
+var relationaldatabasemetricnameenum_1 = require("./relationaldatabasemetricnameenum");
 var GetRelationalDatabaseMetricDataResult = /** @class */ (function (_super) {
     __extends(GetRelationalDatabaseMetricDataResult, _super);
     function GetRelationalDatabaseMetricDataResult() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricData", elemType: MetricDatapoint }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricData", elemType: metricdatapoint_1.MetricDatapoint }),
         __metadata("design:type", Array)
     ], GetRelationalDatabaseMetricDataResult.prototype, "metricData", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=metricName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=metricName" }),
         __metadata("design:type", String)
     ], GetRelationalDatabaseMetricDataResult.prototype, "metricName", void 0);
     return GetRelationalDatabaseMetricDataResult;
-}(SpeakeasyBase));
-export { GetRelationalDatabaseMetricDataResult };
+}(utils_1.SpeakeasyBase));
+exports.GetRelationalDatabaseMetricDataResult = GetRelationalDatabaseMetricDataResult;

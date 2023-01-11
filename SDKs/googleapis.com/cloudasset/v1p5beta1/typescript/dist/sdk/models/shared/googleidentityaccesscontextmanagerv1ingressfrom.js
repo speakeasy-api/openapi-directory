@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,15 +23,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { GoogleIdentityAccesscontextmanagerV1IngressSource } from "./googleidentityaccesscontextmanagerv1ingresssource";
-export var GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoogleIdentityAccesscontextmanagerV1IngressFrom = exports.GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var googleidentityaccesscontextmanagerv1ingresssource_1 = require("./googleidentityaccesscontextmanagerv1ingresssource");
+var GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum;
 (function (GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum) {
     GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum["IdentityTypeUnspecified"] = "IDENTITY_TYPE_UNSPECIFIED";
     GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum["AnyIdentity"] = "ANY_IDENTITY";
     GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum["AnyUserAccount"] = "ANY_USER_ACCOUNT";
     GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum["AnyServiceAccount"] = "ANY_SERVICE_ACCOUNT";
-})(GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum || (GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum = {}));
+})(GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum = exports.GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum || (exports.GoogleIdentityAccesscontextmanagerV1IngressFromIdentityTypeEnum = {}));
 // GoogleIdentityAccesscontextmanagerV1IngressFrom
 /**
  * Defines the conditions under which an IngressPolicy matches a request. Conditions are based on information about the source of the request. The request must satisfy what is defined in `sources` AND identity related fields in order to match.
@@ -41,17 +44,17 @@ var GoogleIdentityAccesscontextmanagerV1IngressFrom = /** @class */ (function (_
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identities" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identities" }),
         __metadata("design:type", Array)
     ], GoogleIdentityAccesscontextmanagerV1IngressFrom.prototype, "identities", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=identityType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=identityType" }),
         __metadata("design:type", String)
     ], GoogleIdentityAccesscontextmanagerV1IngressFrom.prototype, "identityType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=sources", elemType: GoogleIdentityAccesscontextmanagerV1IngressSource }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=sources", elemType: googleidentityaccesscontextmanagerv1ingresssource_1.GoogleIdentityAccesscontextmanagerV1IngressSource }),
         __metadata("design:type", Array)
     ], GoogleIdentityAccesscontextmanagerV1IngressFrom.prototype, "sources", void 0);
     return GoogleIdentityAccesscontextmanagerV1IngressFrom;
-}(SpeakeasyBase));
-export { GoogleIdentityAccesscontextmanagerV1IngressFrom };
+}(utils_1.SpeakeasyBase));
+exports.GoogleIdentityAccesscontextmanagerV1IngressFrom = GoogleIdentityAccesscontextmanagerV1IngressFrom;

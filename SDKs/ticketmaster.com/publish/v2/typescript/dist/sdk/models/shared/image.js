@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,13 +23,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-export var ImageRatioEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Image = exports.ImageRatioEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var ImageRatioEnum;
 (function (ImageRatioEnum) {
-    ImageRatioEnum["OneHundredAndSixtyNine"] = "169";
-    ImageRatioEnum["ThirtyTwo"] = "32";
-    ImageRatioEnum["FortyThree"] = "43";
-})(ImageRatioEnum || (ImageRatioEnum = {}));
+    ImageRatioEnum["Sixteen9"] = "16_9";
+    ImageRatioEnum["Three2"] = "3_2";
+    ImageRatioEnum["Four3"] = "4_3";
+})(ImageRatioEnum = exports.ImageRatioEnum || (exports.ImageRatioEnum = {}));
 // Image
 /**
  * Image
@@ -39,33 +42,33 @@ var Image = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=attribution" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=attribution" }),
         __metadata("design:type", String)
     ], Image.prototype, "attribution", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=domains" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=domains" }),
         __metadata("design:type", Array)
     ], Image.prototype, "domains", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=fallback" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=fallback" }),
         __metadata("design:type", Boolean)
     ], Image.prototype, "fallback", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=height" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=height" }),
         __metadata("design:type", Number)
     ], Image.prototype, "height", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=ratio" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=ratio" }),
         __metadata("design:type", String)
     ], Image.prototype, "ratio", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=url" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=url" }),
         __metadata("design:type", String)
     ], Image.prototype, "url", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=width" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=width" }),
         __metadata("design:type", Number)
     ], Image.prototype, "width", void 0);
     return Image;
-}(SpeakeasyBase));
-export { Image };
+}(utils_1.SpeakeasyBase));
+exports.Image = Image;

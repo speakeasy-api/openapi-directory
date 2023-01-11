@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,26 +23,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ObActiveOrHistoricCurrencyAndAmount } from "./obactiveorhistoriccurrencyandamount";
-import { ObExternalLimitType1CodeEnum } from "./obexternallimittype1codeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObCreditLine1 = void 0;
+var utils_1 = require("../../../internal/utils");
+var obactiveorhistoriccurrencyandamount_1 = require("./obactiveorhistoriccurrencyandamount");
+var obexternallimittype1codeenum_1 = require("./obexternallimittype1codeenum");
 var ObCreditLine1 = /** @class */ (function (_super) {
     __extends(ObCreditLine1, _super);
     function ObCreditLine1() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Amount" }),
-        __metadata("design:type", ObActiveOrHistoricCurrencyAndAmount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Amount" }),
+        __metadata("design:type", obactiveorhistoriccurrencyandamount_1.ObActiveOrHistoricCurrencyAndAmount)
     ], ObCreditLine1.prototype, "amount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Included" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Included" }),
         __metadata("design:type", Boolean)
     ], ObCreditLine1.prototype, "included", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=Type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=Type" }),
         __metadata("design:type", String)
     ], ObCreditLine1.prototype, "type", void 0);
     return ObCreditLine1;
-}(SpeakeasyBase));
-export { ObCreditLine1 };
+}(utils_1.SpeakeasyBase));
+exports.ObCreditLine1 = ObCreditLine1;

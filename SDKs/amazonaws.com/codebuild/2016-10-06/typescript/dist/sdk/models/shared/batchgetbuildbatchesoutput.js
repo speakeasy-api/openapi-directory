@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,21 +23,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { BuildBatch } from "./buildbatch";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BatchGetBuildBatchesOutput = void 0;
+var utils_1 = require("../../../internal/utils");
+var buildbatch_1 = require("./buildbatch");
 var BatchGetBuildBatchesOutput = /** @class */ (function (_super) {
     __extends(BatchGetBuildBatchesOutput, _super);
     function BatchGetBuildBatchesOutput() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildBatches", elemType: BuildBatch }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildBatches", elemType: buildbatch_1.BuildBatch }),
         __metadata("design:type", Array)
     ], BatchGetBuildBatchesOutput.prototype, "buildBatches", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=buildBatchesNotFound" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=buildBatchesNotFound" }),
         __metadata("design:type", Array)
     ], BatchGetBuildBatchesOutput.prototype, "buildBatchesNotFound", void 0);
     return BatchGetBuildBatchesOutput;
-}(SpeakeasyBase));
-export { BatchGetBuildBatchesOutput };
+}(utils_1.SpeakeasyBase));
+exports.BatchGetBuildBatchesOutput = BatchGetBuildBatchesOutput;

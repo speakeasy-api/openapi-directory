@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,10 +23,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { ConfigurationItemStatusEnum } from "./configurationitemstatusenum";
-import { Relationship } from "./relationship";
-import { ResourceTypeEnum } from "./resourcetypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigurationItem = void 0;
+var utils_1 = require("../../../internal/utils");
+var configurationitemstatusenum_1 = require("./configurationitemstatusenum");
+var relationship_1 = require("./relationship");
+var resourcetypeenum_1 = require("./resourcetypeenum");
 // ConfigurationItem
 /**
  * A list that contains detailed configurations of a specified resource.
@@ -36,77 +39,77 @@ var ConfigurationItem = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=accountId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=accountId" }),
         __metadata("design:type", String)
     ], ConfigurationItem.prototype, "accountId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=arn" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=arn" }),
         __metadata("design:type", String)
     ], ConfigurationItem.prototype, "arn", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=availabilityZone" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=availabilityZone" }),
         __metadata("design:type", String)
     ], ConfigurationItem.prototype, "availabilityZone", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awsRegion" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awsRegion" }),
         __metadata("design:type", String)
     ], ConfigurationItem.prototype, "awsRegion", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configuration" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configuration" }),
         __metadata("design:type", String)
     ], ConfigurationItem.prototype, "configuration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configurationItemCaptureTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configurationItemCaptureTime" }),
         __metadata("design:type", Date)
     ], ConfigurationItem.prototype, "configurationItemCaptureTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configurationItemMD5Hash" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configurationItemMD5Hash" }),
         __metadata("design:type", String)
     ], ConfigurationItem.prototype, "configurationItemMd5Hash", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configurationItemStatus" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configurationItemStatus" }),
         __metadata("design:type", String)
     ], ConfigurationItem.prototype, "configurationItemStatus", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=configurationStateId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=configurationStateId" }),
         __metadata("design:type", String)
     ], ConfigurationItem.prototype, "configurationStateId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relatedEvents" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relatedEvents" }),
         __metadata("design:type", Array)
     ], ConfigurationItem.prototype, "relatedEvents", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=relationships", elemType: Relationship }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=relationships", elemType: relationship_1.Relationship }),
         __metadata("design:type", Array)
     ], ConfigurationItem.prototype, "relationships", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceCreationTime" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceCreationTime" }),
         __metadata("design:type", Date)
     ], ConfigurationItem.prototype, "resourceCreationTime", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceId" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceId" }),
         __metadata("design:type", String)
     ], ConfigurationItem.prototype, "resourceId", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceName" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceName" }),
         __metadata("design:type", String)
     ], ConfigurationItem.prototype, "resourceName", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=resourceType" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=resourceType" }),
         __metadata("design:type", String)
     ], ConfigurationItem.prototype, "resourceType", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=supplementaryConfiguration" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=supplementaryConfiguration" }),
+        __metadata("design:type", Object)
     ], ConfigurationItem.prototype, "supplementaryConfiguration", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=tags" }),
-        __metadata("design:type", Map)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=tags" }),
+        __metadata("design:type", Object)
     ], ConfigurationItem.prototype, "tags", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", String)
     ], ConfigurationItem.prototype, "version", void 0);
     return ConfigurationItem;
-}(SpeakeasyBase));
-export { ConfigurationItem };
+}(utils_1.SpeakeasyBase));
+exports.ConfigurationItem = ConfigurationItem;

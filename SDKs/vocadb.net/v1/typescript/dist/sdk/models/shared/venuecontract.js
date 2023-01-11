@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,65 +23,67 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { OptionalGeoPointContract } from "./optionalgeopointcontract";
-import { WebLinkContract } from "./weblinkcontract";
-export var VenueContractStatusEnum;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VenueContract = exports.VenueContractStatusEnum = void 0;
+var utils_1 = require("../../../internal/utils");
+var optionalgeopointcontract_1 = require("./optionalgeopointcontract");
+var weblinkcontract_1 = require("./weblinkcontract");
+var VenueContractStatusEnum;
 (function (VenueContractStatusEnum) {
     VenueContractStatusEnum["Draft"] = "Draft";
     VenueContractStatusEnum["Finished"] = "Finished";
     VenueContractStatusEnum["Approved"] = "Approved";
     VenueContractStatusEnum["Locked"] = "Locked";
-})(VenueContractStatusEnum || (VenueContractStatusEnum = {}));
+})(VenueContractStatusEnum = exports.VenueContractStatusEnum || (exports.VenueContractStatusEnum = {}));
 var VenueContract = /** @class */ (function (_super) {
     __extends(VenueContract, _super);
     function VenueContract() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=additionalNames" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=additionalNames" }),
         __metadata("design:type", String)
     ], VenueContract.prototype, "additionalNames", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=address" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=address" }),
         __metadata("design:type", String)
     ], VenueContract.prototype, "address", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=addressCountryCode" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=addressCountryCode" }),
         __metadata("design:type", String)
     ], VenueContract.prototype, "addressCountryCode", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=coordinates" }),
-        __metadata("design:type", OptionalGeoPointContract)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=coordinates" }),
+        __metadata("design:type", optionalgeopointcontract_1.OptionalGeoPointContract)
     ], VenueContract.prototype, "coordinates", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=deleted" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=deleted" }),
         __metadata("design:type", Boolean)
     ], VenueContract.prototype, "deleted", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=description" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=description" }),
         __metadata("design:type", String)
     ], VenueContract.prototype, "description", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=id" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=id" }),
         __metadata("design:type", Number)
     ], VenueContract.prototype, "id", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=name" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=name" }),
         __metadata("design:type", String)
     ], VenueContract.prototype, "name", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=status" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=status" }),
         __metadata("design:type", String)
     ], VenueContract.prototype, "status", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=version" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=version" }),
         __metadata("design:type", Number)
     ], VenueContract.prototype, "version", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=webLinks", elemType: WebLinkContract }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=webLinks", elemType: weblinkcontract_1.WebLinkContract }),
         __metadata("design:type", Array)
     ], VenueContract.prototype, "webLinks", void 0);
     return VenueContract;
-}(SpeakeasyBase));
-export { VenueContract };
+}(utils_1.SpeakeasyBase));
+exports.VenueContract = VenueContract;

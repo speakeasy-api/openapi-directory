@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -22,14 +23,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { SpeakeasyMetadata, SpeakeasyBase } from "../../../internal/utils";
-import { AssumedRole } from "./assumedrole";
-import { AwsAccount } from "./awsaccount";
-import { AwsService } from "./awsservice";
-import { FederatedUser } from "./federateduser";
-import { IamUser } from "./iamuser";
-import { UserIdentityRoot } from "./useridentityroot";
-import { UserIdentityTypeEnum } from "./useridentitytypeenum";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UserIdentity = void 0;
+var utils_1 = require("../../../internal/utils");
+var assumedrole_1 = require("./assumedrole");
+var awsaccount_1 = require("./awsaccount");
+var awsservice_1 = require("./awsservice");
+var federateduser_1 = require("./federateduser");
+var iamuser_1 = require("./iamuser");
+var useridentityroot_1 = require("./useridentityroot");
+var useridentitytypeenum_1 = require("./useridentitytypeenum");
 // UserIdentity
 /**
  * Provides information about the type and other characteristics of an entity that performed an action on an affected resource.
@@ -40,33 +43,33 @@ var UserIdentity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=assumedRole" }),
-        __metadata("design:type", AssumedRole)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=assumedRole" }),
+        __metadata("design:type", assumedrole_1.AssumedRole)
     ], UserIdentity.prototype, "assumedRole", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awsAccount" }),
-        __metadata("design:type", AwsAccount)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awsAccount" }),
+        __metadata("design:type", awsaccount_1.AwsAccount)
     ], UserIdentity.prototype, "awsAccount", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=awsService" }),
-        __metadata("design:type", AwsService)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=awsService" }),
+        __metadata("design:type", awsservice_1.AwsService)
     ], UserIdentity.prototype, "awsService", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=federatedUser" }),
-        __metadata("design:type", FederatedUser)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=federatedUser" }),
+        __metadata("design:type", federateduser_1.FederatedUser)
     ], UserIdentity.prototype, "federatedUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=iamUser" }),
-        __metadata("design:type", IamUser)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=iamUser" }),
+        __metadata("design:type", iamuser_1.IamUser)
     ], UserIdentity.prototype, "iamUser", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=root" }),
-        __metadata("design:type", UserIdentityRoot)
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=root" }),
+        __metadata("design:type", useridentityroot_1.UserIdentityRoot)
     ], UserIdentity.prototype, "root", void 0);
     __decorate([
-        SpeakeasyMetadata({ data: "json, name=type" }),
+        (0, utils_1.SpeakeasyMetadata)({ data: "json, name=type" }),
         __metadata("design:type", String)
     ], UserIdentity.prototype, "type", void 0);
     return UserIdentity;
-}(SpeakeasyBase));
-export { UserIdentity };
+}(utils_1.SpeakeasyBase));
+exports.UserIdentity = UserIdentity;
